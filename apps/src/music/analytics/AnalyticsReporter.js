@@ -104,17 +104,8 @@ export default class AnalyticsReporter {
         }
       }
 
-      if (
-        block.type === BlockTypes.PLAY_SOUND ||
-        block.type === BlockTypes.PLAY_SAMPLE
-      ) {
-        // Name of the sound is the third input
-        this.soundsUsed.add(
-          block
-            .getInput('sound')
-            .getFieldRow()[2]
-            .getValue()
-        );
+      if (block.type === BlockTypes.PLAY_SOUND) {
+        this.soundsUsed.add(block.getFieldValue('sound'));
       }
     });
 

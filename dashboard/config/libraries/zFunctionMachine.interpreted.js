@@ -146,7 +146,7 @@ addCriteria(function() {
 }, "noFunctionBlocks");
 */
 function checkNewFunctionBlockThisFrame() {
-  if(checkNewEventThisFrame()) {
+  if(checkNewEventThisFrame() || checkPromptUpdatedThisFrame()) {
     // If we're here: a new event happened this frame
     // Now check that the function block array also grew in size compared to the previous frame
     if(validationProps.functions.blocks.length > validationProps.functions.previous.blocks.length) {
@@ -195,5 +195,101 @@ function checkThisFunctionBlockThisFrame(blockName) {
 }
 
 
+/*
+HAND DRAWING HELPER FUNCTIONS
+*/
+function drawRings(x,y){
+  push();
+  stroke("rgba(0,0,0,0.5)");
+  noFill();
+  strokeWeight(3);
+  ellipse(x,y,Math.cos(World.frameCount/10)*30,Math.cos(World.frameCount/10)*30);
+  stroke("rgba(255,255,255,0.5)");
+  noFill();
+  strokeWeight(3);
+  ellipse(x,y,Math.sin(World.frameCount/10)*30,Math.sin(World.frameCount/10)*30);
+  pop();
+}
 
+function drawHand(x, y){
+  y+=5;
+  push();
+  var gray1=Math.cos(World.frameCount/10)*30;
+  var gray2=Math.sin(World.frameCount/10)*30+225;
+  //background(color);
+  noStroke();
+  fill(rgb(224, 224, 224));
+  //palm
+  shape(x-5.5,y+12,x+35.5,y+20,x+35.5,y+37,x-5.5,y+37);
+  //index finger
+  rect(x-5.5,y-5,10,30);
+  ellipse(x,y-5,10);
+  //middle
+  ellipse(x+10,y+15,10);
+  //ring
+  ellipse(x+20,y+17.5,10);
+  //pinky
+  ellipse(x+30,y+20,10);
+  //wrist
+  ellipse(x,y+37,10);
+  ellipse(x+30,y+37,10);
+  rect(x,y+32,30,15);
+  //thumb
+  shape(x-5.5,y+37,x-20.5,y+22,x-13.5,y+15,x-5.5,y+25);
+  ellipse(x-17,y+18.5,10);
+  stroke(rgb(96, 96, 96));
+  strokeWeight(3);
+  noFill();
+  //palm
+  line(x-5.5,y-5,x-5.5,y+25);
+  line(x+35,y+20,x+35,y+37);
+  //index finger
+  line(x+4.5,y-5,x+4.5,y+15);
+  arc(x,y-5,10,10,180,0);
+  //middle
+  arc(x+10,y+15,10,10,180,0);
+  //ring
+  arc(x+20,y+17.5,10,10,180,0);
+  //pinky
+  arc(x+30,y+20,10,10,180,0);
+  //wrist
+  arc(x,y+37,10,10,90,180);
+  arc(x+30,y+37,10,10,0,90);
+  line(x,y+42,x,y+47);
+  line(x+30,y+42,x+30,y+47);
+  line(x,y+47,x+30,y+47);
+  //thumb
+  line(x-5.5,y+37,x-20.5,y+22);
+  line(x-13.5,y+15,x-5.5,y+25);
+  arc(x-17,y+18.5,10,10,135,315);
+  pop();
+}
+
+//Call this to draw hands on all unclicked sprites.
+//Designed to be called after the world.frameCount if statement so it happens each tick of the draw loop
+//Dan Note: this doesn't actually check for CLICK events - technically this works for any type of event
+//And: doesn't actually use clickedSprites - do I need it?
+function drawHandsOnUnclickedSprites(spriteId){
+  if(World.seconds < 1){
+    return;
+  }
+  if(!validationProps.clickedSprites) {
+    validationProps.clickedSprites = [];
+  }
+  //for(var i=0;i<spriteIds.length;i++){
+    var foundClick=false;
+    for(var j=0;j<eventLog.length;j++){
+      if(eventLog[j].includes(spriteId)){
+        foundClick=true;
+        if(validationProps.clickedSprites.indexOf(spriteId)==-1){
+          validationProps.clickedSprites.push(spriteId);
+        }
+      }
+    }
+    if(!foundClick){
+      drawRings(getProp({id: spriteId}, "x"),400-getProp({id: spriteId}, "y"));
+      drawHand(getProp({id: spriteId}, "x"),400-getProp({id: spriteId}, "y"));
+    }
+  //}
+}
 

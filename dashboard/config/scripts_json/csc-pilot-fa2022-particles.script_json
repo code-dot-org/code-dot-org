@@ -12,7 +12,7 @@
     },
     "new_name": null,
     "family_name": "csc-pilot-fa2022-particles",
-    "serialized_at": "2022-11-09 00:07:31 UTC",
+    "serialized_at": "2022-11-09 18:37:13 UTC",
     "published_state": "pilot",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -475,7 +475,7 @@
       "key": "6a213db2-1c3e-4e7f-9c1d-4e672ee54179",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** What did you notice? What do you wonder?\n\n**Discussion Goal:** Students should notice two major things: \n1)  There was a physical change when the log was cut up into kindle (the wood got smaller) **but** \n2) the state of matter didn’t change at all. The wood and kindle are still solid matter under the microscope. ",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** What did you notice? What do you wonder?\n\n**Discussion Goal:** Students should notice two major things: \n1)  There was a physical change when the log was cut up into kindling (the wood got smaller) **but** \n2) the state of matter didn’t change at all. The log and kindling are still solid matter under the microscope. ",
         "tips": [
           {
             "type": "teachingTip",
@@ -530,7 +530,7 @@
       "position": 7,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** “Functions” slide",
-        "progression_name": "Lab Set Up"
+        "progression_name": "Lab Setup"
       },
       "seeding_key": {
         "activity_section.key": "bb313eea-95ea-4b93-bed6-57c6eaf51297",
@@ -682,7 +682,7 @@
       "key": "2ac0e404-f6c2-4f9d-acf5-a095a79d676f",
       "position": 4,
       "properties": {
-        "description": "**Discussion Goal:** Students should use the Word Bank to help them explain what happens in the magic box. Have students rephrase their explanations so they practice using the new vocabulary. "
+        "description": "**Discussion Goal:** Students should use the Word Bank to help them explain what happens in the magic box. Have students rephrase their explanations so they practice using the new vocabulary. Revisit the earlier discussion about how although the state of matter might change, the particles themselves do not change. "
       },
       "seeding_key": {
         "activity_section.key": "2ac0e404-f6c2-4f9d-acf5-a095a79d676f",
@@ -729,16 +729,10 @@
       "key": "851165bd-0ccc-49ab-b758-fbd606d5a3ad",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display** Slide “Level 2 - Wood” \n\n**Do This:** Show Level 2 to the class and either follow along with you on their own devices or engage the class in whole group observation. ",
-        "duration": "15",
-        "name": "Chemical Changes",
-        "progression_name": "Investigate: Burning Wood",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "**Misconception Alert:** Unlike Lesson 1 when students worked with a particle that showed the H2O molecules, they will not see the specific molecule in the particles for this lesson. For simplicity, we have represented the particles with simple colored \"dots\" in order to focus on the state of matter and the chemical change to the state rather than the specific molecules in the particles."
-          }
-        ]
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display** Slide “Level 1: Chemical Changes” \n\n**Do This:** Show Level 1 to the class and discuss the examples listed and ask for ideas for additional examples.",
+        "duration": "10",
+        "name": "Chemical Changes Intro",
+        "progression_name": "Chemical Changes Information"
       },
       "seeding_key": {
         "activity_section.key": "851165bd-0ccc-49ab-b758-fbd606d5a3ad",
@@ -749,7 +743,8 @@
       "key": "5976c055-ed3a-4a70-8cb8-587f422a65ee",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** What did you notice? What do you wonder?\n\n**Discussion Goal:** Students should notice two major things: \n1) There was a physical change when the wood touches the fire (the wood turned black) **and** \n2) The wood particles went through a chemical change that is **irreversible**. The color of the wood particle changes irreversibly to black."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** ‘Level 2: Investigate Wood Experiment’ Slide. Test out the experiment by dragging the wood to the microscope before and after burning it with the flame.",
+        "progression_name": "Chemical Changes Wood Experiment"
       },
       "seeding_key": {
         "activity_section.key": "5976c055-ed3a-4a70-8cb8-587f422a65ee",
@@ -760,8 +755,14 @@
       "key": "076faf94-e7d2-436e-b574-4e3848c584be",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display** ‘Other Chemical Changes’ Slides, or display Level 3 on Code Studio to the class.",
-        "progression_name": "Chemical Changes"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** What did you notice? What do you wonder?\n\n**Discussion Goal:** Students should notice two major things: \n1) There was a physical change when the wood touches the fire (the wood turned black) **and** \n2) The wood particles went through a chemical change that is **irreversible**. The color of the wood particle changes irreversibly to black.\n\n",
+        "progression_name": "Chemical Changes",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Misconception Alert:** Unlike Lesson 1 when students worked with a particle that showed the H2O molecules, they will not see the specific molecule in the particles for this lesson. For simplicity, we have represented the particles with simple colored \"dots\" in order to focus on the state of matter and the chemical change to the state rather than the specific molecules in the particles."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "076faf94-e7d2-436e-b574-4e3848c584be",
@@ -769,14 +770,15 @@
       }
     },
     {
-      "key": "6efe70ad-27cb-4ff8-93e4-c611fffb4f6e",
+      "key": "33196e43-e209-4a30-acfa-403edb6b0f7f",
       "position": 4,
       "properties": {
-        "description": "[Remarks about Other Chemical Changes and how the state of matter can also change]",
-        "remarks": true
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display** Level 3: Vanishing Act' Slide",
+        "name": "Vanishing Act 2 - Magic Bubbles",
+        "progression_name": "Vanishing Act 2"
       },
       "seeding_key": {
-        "activity_section.key": "6efe70ad-27cb-4ff8-93e4-c611fffb4f6e",
+        "activity_section.key": "33196e43-e209-4a30-acfa-403edb6b0f7f",
         "lesson_activity.key": "d6174e1b-4214-4203-b264-57ad9762b4d5"
       }
     },
@@ -784,7 +786,9 @@
       "key": "666a757e-acfa-4242-9c20-ec6a16c26d35",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** “Level 4 - Lemon Juice & Baking Soda” Slide.\n\n**Do This:** Show Level 4 on the board and follow the directions. Have students either follow along with you on their own devices or engage in whole-group observation. ",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** “Level 4 - Experiment Preview” Slide.\n\n**Do This:** Show Level 4 on the board and follow the directions. Have students either follow along with you on their own devices or engage in whole-group observation. ",
+        "duration": "25",
+        "name": "Code Your Own Experiment",
         "progression_name": "Investigate: Lemon Juice & Baking Soda"
       },
       "seeding_key": {
@@ -807,9 +811,9 @@
       "key": "ca4fbdd5-4ea8-4c02-9391-a0dc5ceef2b7",
       "position": 7,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** “Create Your Own Model\" Slide",
-        "duration": "20",
-        "name": "Create Your Own Model"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** “Level 5: Functions\" Slide",
+        "duration": "0",
+        "progression_name": "Lab Setup"
       },
       "seeding_key": {
         "activity_section.key": "ca4fbdd5-4ea8-4c02-9391-a0dc5ceef2b7",
@@ -817,19 +821,14 @@
       }
     },
     {
-      "key": "b3d42d4b-5ae0-40b3-aac0-95a648733063",
+      "key": "bf531b9f-397c-4f11-9847-eb8a6c96d7d1",
       "position": 8,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Read the directions on the slide and allow students independent time or pair programming time to complete the rest of the level progression. ",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "Here are a few tips that should help students regardless of the level they're working on:\n\n- **Collaborate with Neighbors**: Encourage students to check in with a neighbor when they're getting stuck. Depending on the age and ability of your students, you might consider formally breaking your class into pairs to complete the tutorial using [pair programming](https://youtu.be/vgkahOzFH2Q).\n- **Read the Instructions**: The instructions usually provide helpful tips on how to complete the level. Before giving students the answer, ensure they've carefully looked at the instructions, hints, videos, and any starter code carefully.\n- **Stuck? Look for hints**: Each level includes a hint with advice for how to pass a level, including which blocks of code to try out.\n- **Take your time and experiment**. The instructions tell students generally what to do, but they should also feel free to try out their own ideas.\n"
-          }
-        ]
+        "description": "Just as we did in Lesson 2, we will start coding our experiment by adding a function block that includes everything needed for a lab setup. Let’s talk about functions in code. You will be working with three functions today: `LabSetup` and `MicroscopeSetupBEFORE` and `MicroscopeSetupAFTER`.\n\nClick on the edit button on each function to see the blocks of code it's holding. You can see how functions make repetitive code much easier to work with.",
+        "remarks": true
       },
       "seeding_key": {
-        "activity_section.key": "b3d42d4b-5ae0-40b3-aac0-95a648733063",
+        "activity_section.key": "bf531b9f-397c-4f11-9847-eb8a6c96d7d1",
         "lesson_activity.key": "d6174e1b-4214-4203-b264-57ad9762b4d5"
       }
     },
@@ -851,20 +850,10 @@
       }
     },
     {
-      "key": "6075755d-4ea0-4533-a2b6-40501fb39c56",
+      "key": "adb4aee3-00b2-4920-99a5-17222be3e17a",
       "position": 10,
       "properties": {
-        "progression_name": "Video: Events in Sprite Lab"
-      },
-      "seeding_key": {
-        "activity_section.key": "6075755d-4ea0-4533-a2b6-40501fb39c56",
-        "lesson_activity.key": "d6174e1b-4214-4203-b264-57ad9762b4d5"
-      }
-    },
-    {
-      "key": "adb4aee3-00b2-4920-99a5-17222be3e17a",
-      "position": 11,
-      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Allow students independent time or pair programming time to complete the rest of the level progression. ",
         "progression_name": "Create Your Experiment"
       },
       "seeding_key": {
@@ -874,7 +863,7 @@
     },
     {
       "key": "76e3157b-b37b-4bea-b6d8-613988d72cee",
-      "position": 12,
+      "position": 11,
       "properties": {
         "progression_name": "Before & After Chemical Change",
         "tips": [
@@ -890,19 +879,24 @@
       }
     },
     {
-      "key": "f7600877-4807-4275-adda-403aa744b393",
-      "position": 13,
+      "key": "b3d42d4b-5ae0-40b3-aac0-95a648733063",
+      "position": 12,
       "properties": {
-        "progression_name": "Check In: Chemical Change"
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Here are a few tips that should help students regardless of the level they're working on:\n\n- **Collaborate with Neighbors**: Encourage students to check in with a neighbor when they're getting stuck. Depending on the age and ability of your students, you might consider formally breaking your class into pairs to complete the tutorial using [pair programming](https://youtu.be/vgkahOzFH2Q).\n- **Read the Instructions**: The instructions usually provide helpful tips on how to complete the level. Before giving students the answer, ensure they've carefully looked at the instructions, hints, videos, and any starter code carefully.\n- **Stuck? Look for hints**: Each level includes a hint with advice for how to pass a level, including which blocks of code to try out.\n- **Take your time and experiment**. The instructions tell students generally what to do, but they should also feel free to try out their own ideas.\n"
+          }
+        ]
       },
       "seeding_key": {
-        "activity_section.key": "f7600877-4807-4275-adda-403aa744b393",
+        "activity_section.key": "b3d42d4b-5ae0-40b3-aac0-95a648733063",
         "lesson_activity.key": "d6174e1b-4214-4203-b264-57ad9762b4d5"
       }
     },
     {
       "key": "d6c8b1bd-1519-42ef-859c-95aff775723f",
-      "position": 14,
+      "position": 13,
       "properties": {
         "progression_name": "Student Survey"
       },
@@ -1315,15 +1309,12 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "csc_particles_phys_observe2"
-        ],
         "progression": "Physical Changes Information"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "csc_particles_phys_observe2"
+          "csc_particles_physical change"
         ],
         "lesson.key": "Particles Lesson 2",
         "lesson_group.key": "",
@@ -1331,7 +1322,7 @@
         "activity_section.key": "993e4173-5c05-4bb9-b9bc-828d59da98f8"
       },
       "level_keys": [
-        "csc_particles_phys_observe2"
+        "csc_particles_physical change"
       ]
     },
     {
@@ -1345,7 +1336,7 @@
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "cdc_particles_physical_intro2"
+          "csc_particles_phys_observe2"
         ],
         "lesson.key": "Particles Lesson 2",
         "lesson_group.key": "",
@@ -1353,7 +1344,7 @@
         "activity_section.key": "6aca8b54-2485-41b2-be88-7aa65f237fcf"
       },
       "level_keys": [
-        "cdc_particles_physical_intro2"
+        "csc_particles_phys_observe2"
       ]
     },
     {
@@ -1367,7 +1358,7 @@
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "csc_particles_physical change"
+          "cdc_particles_physical_intro2"
         ],
         "lesson.key": "Particles Lesson 2",
         "lesson_group.key": "",
@@ -1375,7 +1366,7 @@
         "activity_section.key": "27f2f4b2-4590-4d35-8061-f64384de3079"
       },
       "level_keys": [
-        "csc_particles_physical change"
+        "cdc_particles_physical_intro2"
       ]
     },
     {
@@ -1409,7 +1400,54 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Lab Set Up"
+        "progression": "Lab Setup"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csc_particles_phys_setup1"
+        ],
+        "lesson.key": "Particles Lesson 2",
+        "lesson_group.key": "",
+        "script.name": "csc-pilot-fa2022-particles",
+        "activity_section.key": "bb313eea-95ea-4b93-bed6-57c6eaf51297"
+      },
+      "level_keys": [
+        "csc_particles_phys_setup1"
+      ]
+    },
+    {
+      "chapter": 20,
+      "position": 6,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseF_pilotVideo_events_-2022-2"
+        ],
+        "progression": "Create Your Experiment"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseF_pilotVideo_events_-2022-2"
+        ],
+        "lesson.key": "Particles Lesson 2",
+        "lesson_group.key": "",
+        "script.name": "csc-pilot-fa2022-particles",
+        "activity_section.key": "65d4af46-c122-4259-8c28-2a50953e8c86"
+      },
+      "level_keys": [
+        "courseF_pilotVideo_events_-2022-2"
+      ]
+    },
+    {
+      "chapter": 21,
+      "position": 7,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Create Your Experiment"
       },
       "bonus": false,
       "seeding_key": {
@@ -1419,16 +1457,16 @@
         "lesson.key": "Particles Lesson 2",
         "lesson_group.key": "",
         "script.name": "csc-pilot-fa2022-particles",
-        "activity_section.key": "bb313eea-95ea-4b93-bed6-57c6eaf51297"
+        "activity_section.key": "65d4af46-c122-4259-8c28-2a50953e8c86"
       },
       "level_keys": [
         "csc_particles_phys_experimentEvent"
       ]
     },
     {
-      "chapter": 20,
-      "position": 6,
-      "activity_section_position": 1,
+      "chapter": 22,
+      "position": 8,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1451,55 +1489,14 @@
       ]
     },
     {
-      "chapter": 21,
-      "position": 7,
-      "activity_section_position": 2,
-      "assessment": false,
-      "properties": {
-        "progression": "Create Your Experiment"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "csc_particles_phys_setup1"
-        ],
-        "lesson.key": "Particles Lesson 2",
-        "lesson_group.key": "",
-        "script.name": "csc-pilot-fa2022-particles",
-        "activity_section.key": "65d4af46-c122-4259-8c28-2a50953e8c86"
-      },
-      "level_keys": [
-        "csc_particles_phys_setup1"
-      ]
-    },
-    {
-      "chapter": 22,
-      "position": 8,
-      "activity_section_position": 3,
-      "assessment": false,
-      "properties": {
-        "progression": "Create Your Experiment"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "courseF_pilotVideo_events_-2022-2"
-        ],
-        "lesson.key": "Particles Lesson 2",
-        "lesson_group.key": "",
-        "script.name": "csc-pilot-fa2022-particles",
-        "activity_section.key": "65d4af46-c122-4259-8c28-2a50953e8c86"
-      },
-      "level_keys": [
-        "courseF_pilotVideo_events_-2022-2"
-      ]
-    },
-    {
       "chapter": 23,
       "position": 9,
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_particles_phys_beforeChange"
+        ],
         "progression": "Create Your Experiment"
       },
       "bonus": false,
@@ -1522,6 +1519,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_particles_phys_afterChange"
+        ],
         "progression": "Create Your Experiment"
       },
       "bonus": false,
@@ -1544,6 +1544,9 @@
       "activity_section_position": 6,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "csc_physical_change"
+        ],
         "progression": "Create Your Experiment"
       },
       "bonus": false,
@@ -1591,10 +1594,7 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "csc_particles_chemical change"
-        ],
-        "progression": "Vanishing Act Part 2"
+        "progression": "Chemical Changes Information"
       },
       "bonus": false,
       "seeding_key": {
@@ -1604,7 +1604,7 @@
         "lesson.key": "Chemical Changes",
         "lesson_group.key": "",
         "script.name": "csc-pilot-fa2022-particles",
-        "activity_section.key": "24d1ae62-dab7-4eba-8c30-88f6b36682b1"
+        "activity_section.key": "851165bd-0ccc-49ab-b758-fbd606d5a3ad"
       },
       "level_keys": [
         "csc_particles_chemical change"
@@ -1616,10 +1616,7 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "csc_particles_phys_observe2_chem"
-        ],
-        "progression": "Investigate: Burning Wood"
+        "progression": "Chemical Changes Wood Experiment"
       },
       "bonus": false,
       "seeding_key": {
@@ -1629,7 +1626,7 @@
         "lesson.key": "Chemical Changes",
         "lesson_group.key": "",
         "script.name": "csc-pilot-fa2022-particles",
-        "activity_section.key": "851165bd-0ccc-49ab-b758-fbd606d5a3ad"
+        "activity_section.key": "5976c055-ed3a-4a70-8cb8-587f422a65ee"
       },
       "level_keys": [
         "csc_particles_phys_observe2_chem"
@@ -1641,10 +1638,7 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "csc_particles_chemical_intro"
-        ],
-        "progression": "Chemical Changes"
+        "progression": "Vanishing Act 2"
       },
       "bonus": false,
       "seeding_key": {
@@ -1654,7 +1648,7 @@
         "lesson.key": "Chemical Changes",
         "lesson_group.key": "",
         "script.name": "csc-pilot-fa2022-particles",
-        "activity_section.key": "076faf94-e7d2-436e-b574-4e3848c584be"
+        "activity_section.key": "33196e43-e209-4a30-acfa-403edb6b0f7f"
       },
       "level_keys": [
         "csc_particles_chemical_intro"
@@ -1691,10 +1685,7 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "csc_particles_phys_setup1_chem"
-        ],
-        "progression": "Setup Your Experiment"
+        "progression": "Lab Setup"
       },
       "bonus": false,
       "seeding_key": {
@@ -1704,7 +1695,7 @@
         "lesson.key": "Chemical Changes",
         "lesson_group.key": "",
         "script.name": "csc-pilot-fa2022-particles",
-        "activity_section.key": "6b709814-fd30-4824-9e67-9229ee820cb8"
+        "activity_section.key": "ca4fbdd5-4ea8-4c02-9391-a0dc5ceef2b7"
       },
       "level_keys": [
         "csc_particles_phys_setup1_chem"
@@ -1716,10 +1707,7 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "courseF_pilotVideo_events_chem"
-        ],
-        "progression": "Video: Events in Sprite Lab"
+        "progression": "Create Your Experiment"
       },
       "bonus": false,
       "seeding_key": {
@@ -1729,7 +1717,7 @@
         "lesson.key": "Chemical Changes",
         "lesson_group.key": "",
         "script.name": "csc-pilot-fa2022-particles",
-        "activity_section.key": "6075755d-4ea0-4533-a2b6-40501fb39c56"
+        "activity_section.key": "adb4aee3-00b2-4920-99a5-17222be3e17a"
       },
       "level_keys": [
         "courseF_pilotVideo_events_chem"
@@ -1738,7 +1726,7 @@
     {
       "chapter": 33,
       "position": 7,
-      "activity_section_position": 1,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1763,7 +1751,7 @@
     {
       "chapter": 34,
       "position": 8,
-      "activity_section_position": 2,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1838,13 +1826,10 @@
     {
       "chapter": 37,
       "position": 11,
-      "activity_section_position": 1,
+      "activity_section_position": 3,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "csc_physical_change_chem"
-        ],
-        "progression": "Check In: Chemical Change"
+        "progression": "Before & After Chemical Change"
       },
       "bonus": false,
       "seeding_key": {
@@ -1854,7 +1839,7 @@
         "lesson.key": "Chemical Changes",
         "lesson_group.key": "",
         "script.name": "csc-pilot-fa2022-particles",
-        "activity_section.key": "f7600877-4807-4275-adda-403aa744b393"
+        "activity_section.key": "76e3157b-b37b-4bea-b6d8-613988d72cee"
       },
       "level_keys": [
         "csc_physical_change_chem"
@@ -2057,9 +2042,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "csc_particles_phys_observe2",
+        "level.key": "csc_particles_physical change",
         "script_level.level_keys": [
-          "csc_particles_phys_observe2"
+          "csc_particles_physical change"
         ],
         "lesson.key": "Particles Lesson 2",
         "lesson_group.key": "",
@@ -2069,9 +2054,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "cdc_particles_physical_intro2",
+        "level.key": "csc_particles_phys_observe2",
         "script_level.level_keys": [
-          "cdc_particles_physical_intro2"
+          "csc_particles_phys_observe2"
         ],
         "lesson.key": "Particles Lesson 2",
         "lesson_group.key": "",
@@ -2081,9 +2066,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "csc_particles_physical change",
+        "level.key": "cdc_particles_physical_intro2",
         "script_level.level_keys": [
-          "csc_particles_physical change"
+          "cdc_particles_physical_intro2"
         ],
         "lesson.key": "Particles Lesson 2",
         "lesson_group.key": "",
@@ -2105,9 +2090,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "csc_particles_phys_experimentEvent",
+        "level.key": "csc_particles_phys_setup1",
         "script_level.level_keys": [
-          "csc_particles_phys_experimentEvent"
+          "csc_particles_phys_setup1"
         ],
         "lesson.key": "Particles Lesson 2",
         "lesson_group.key": "",
@@ -2117,33 +2102,33 @@
     },
     {
       "seeding_key": {
-        "level.key": "csc_particles_phys_MicroscopeView",
-        "script_level.level_keys": [
-          "csc_particles_phys_MicroscopeView"
-        ],
-        "lesson.key": "Particles Lesson 2",
-        "lesson_group.key": "",
-        "script.name": "csc-pilot-fa2022-particles",
-        "activity_section.key": "65d4af46-c122-4259-8c28-2a50953e8c86"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "csc_particles_phys_setup1",
-        "script_level.level_keys": [
-          "csc_particles_phys_setup1"
-        ],
-        "lesson.key": "Particles Lesson 2",
-        "lesson_group.key": "",
-        "script.name": "csc-pilot-fa2022-particles",
-        "activity_section.key": "65d4af46-c122-4259-8c28-2a50953e8c86"
-      }
-    },
-    {
-      "seeding_key": {
         "level.key": "courseF_pilotVideo_events_-2022-2",
         "script_level.level_keys": [
           "courseF_pilotVideo_events_-2022-2"
+        ],
+        "lesson.key": "Particles Lesson 2",
+        "lesson_group.key": "",
+        "script.name": "csc-pilot-fa2022-particles",
+        "activity_section.key": "65d4af46-c122-4259-8c28-2a50953e8c86"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csc_particles_phys_experimentEvent",
+        "script_level.level_keys": [
+          "csc_particles_phys_experimentEvent"
+        ],
+        "lesson.key": "Particles Lesson 2",
+        "lesson_group.key": "",
+        "script.name": "csc-pilot-fa2022-particles",
+        "activity_section.key": "65d4af46-c122-4259-8c28-2a50953e8c86"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csc_particles_phys_MicroscopeView",
+        "script_level.level_keys": [
+          "csc_particles_phys_MicroscopeView"
         ],
         "lesson.key": "Particles Lesson 2",
         "lesson_group.key": "",
@@ -2208,7 +2193,7 @@
         "lesson.key": "Chemical Changes",
         "lesson_group.key": "",
         "script.name": "csc-pilot-fa2022-particles",
-        "activity_section.key": "24d1ae62-dab7-4eba-8c30-88f6b36682b1"
+        "activity_section.key": "851165bd-0ccc-49ab-b758-fbd606d5a3ad"
       }
     },
     {
@@ -2220,7 +2205,7 @@
         "lesson.key": "Chemical Changes",
         "lesson_group.key": "",
         "script.name": "csc-pilot-fa2022-particles",
-        "activity_section.key": "851165bd-0ccc-49ab-b758-fbd606d5a3ad"
+        "activity_section.key": "5976c055-ed3a-4a70-8cb8-587f422a65ee"
       }
     },
     {
@@ -2232,7 +2217,7 @@
         "lesson.key": "Chemical Changes",
         "lesson_group.key": "",
         "script.name": "csc-pilot-fa2022-particles",
-        "activity_section.key": "076faf94-e7d2-436e-b574-4e3848c584be"
+        "activity_section.key": "33196e43-e209-4a30-acfa-403edb6b0f7f"
       }
     },
     {
@@ -2256,7 +2241,7 @@
         "lesson.key": "Chemical Changes",
         "lesson_group.key": "",
         "script.name": "csc-pilot-fa2022-particles",
-        "activity_section.key": "6b709814-fd30-4824-9e67-9229ee820cb8"
+        "activity_section.key": "ca4fbdd5-4ea8-4c02-9391-a0dc5ceef2b7"
       }
     },
     {
@@ -2268,7 +2253,7 @@
         "lesson.key": "Chemical Changes",
         "lesson_group.key": "",
         "script.name": "csc-pilot-fa2022-particles",
-        "activity_section.key": "6075755d-4ea0-4533-a2b6-40501fb39c56"
+        "activity_section.key": "adb4aee3-00b2-4920-99a5-17222be3e17a"
       }
     },
     {
@@ -2328,7 +2313,7 @@
         "lesson.key": "Chemical Changes",
         "lesson_group.key": "",
         "script.name": "csc-pilot-fa2022-particles",
-        "activity_section.key": "f7600877-4807-4275-adda-403aa744b393"
+        "activity_section.key": "76e3157b-b37b-4bea-b6d8-613988d72cee"
       }
     },
     {

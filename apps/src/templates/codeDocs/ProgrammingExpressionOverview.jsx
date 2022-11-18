@@ -166,6 +166,10 @@ export default function ProgrammingExpressionOverview({
           />
         </div>
       )}
+      <div>
+        <p />
+        <EnhancedSafeMarkdown markdown={i18n.documentationBug()} />
+      </div>
     </div>
   );
 }

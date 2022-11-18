@@ -1,10 +1,10 @@
 name 'CSA U1L4-L5_2023'
 title 'Check for Understanding'
 
-wrong '![](https://images.code.org/54f444d911e9b6a97522d1cb418c0ee1-image-1665597145885.png)'
-wrong '![](https://images.code.org/5fc60aa06bb05908feae269d8d316e6a-image-1665597152776.png)'
-wrong '![](https://images.code.org/4c63c9054b4480e3e4e10e305b132fe9-image-1665597159073.png)'
-right '![](https://images.code.org/2d7310b880a7396cd30811187d61ff35-image-1665597165236.png)'
+wrong '![](https://images.code.org/44b51321d6b06d27b930ebfb3723047a-image-1668530208325.png)'
+wrong '![](https://images.code.org/26344a2f20b27d2f75c843203ff58463-image-1668530217356.png)'
+right '![](https://images.code.org/edc88165f14fca2997a8d9495757b6a0-image-1668530225156.png)'
+wrong '![](https://images.code.org/1b8b67f495324027c64a9cb113f97e3a-image-1668530232725.png)'
 wrong 'No code is needed.'
 
 markdown <<MARKDOWN
@@ -12,15 +12,7 @@ Which line(s) of code should replace `/* missing code*/` to produce the final st
 
 | Start | End |
 | :----: | :----: |
-|![](https://images.code.org/49f05f0986f9df635a60cd87efee42cf-image-1647620043449.jpg)| ![](https://images.code.org/f85629cf3adb6c9e6e22cbc4609eb61f-image-1647620012510.jpg) |
+|![](https://images.code.org/9bf970beeb66ad84e09a90c2847cf297-image-1668529920716.png)| ![](https://images.code.org/d8cdaa4636f5cd5b215d2356fedfdfa6-image-1668529931696.png) |
 
-![](https://images.code.org/d53bb9d09961dd6c66e8cc2d7221b4c6-image-1665595806181.png)
-MARKDOWN
-
-teacher_markdown <<MARKDOWN
-In this code segment, the `Painter` object turns right by turning left three times then moves forward. It then takes paint three times to get all of the paint from the paint bucket, paints once, then moves forward. At that point, the `Painter` object is in front of where the paint bucket was facing the traffic cone.
-
-The `Painter` object needs to paint the current space then turn left to face east. It then needs to move forward and paint again to paint the space above where the `Painter` object should stop. The `Painter` object would then need to turn right by turning left three times and move forward to reach the end state.
-
-The program is currently missing the code to paint, turn left to face east, and move forward before painting the last space and turning and moving to the final position.
+![](https://images.code.org/76e75d1340f9ea36f6e364828228f831-image-1668530033670.png)
 MARKDOWN

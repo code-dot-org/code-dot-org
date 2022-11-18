@@ -6,10 +6,12 @@
     "submittable": "false",
     "hide_share_and_remix": "true",
     "csa_view_mode": "neighborhood",
-    "display_name": "Down Then Up",
-    "long_instructions": "**Help the `Painter`(#e7e8ea) paint the path to the traffic cone!**\r\n\r\n✅ **TO DO:** Use the `move()`(#e7e8ea), `turnLeft()`(#e7e8ea), `takePaint()`(#e7e8ea), and `paint()`(#e7e8ea) methods to navigate and paint each square in the path to the traffic cone.\r\n\r\n💡 **TIP:** Check out the documentation for the `Painter`(#e7e8ea) class in the **Documentation** tab ⬆️ for colors to paint with. You can also look at the **Help & Tips** tab ⬆️ for help with instantiating objects and calling methods.\r\n\r\n📝 **COMMENT:** Be sure to add comments to note what your code does.\r\n\r\n🖥️ **TEST:** Test your program to check if your code achieves the expected result.\r\n\r\n🎉 **RUN:** Run your program to see the result of your code!\r\n\r\n## 🎯 Goal\r\n\r\n![](https://images.code.org/059e2dd7f8f590502c481d58ca83ed59-image-1665599151461.gif)",
-    "bubble_choice_description": "Use the methods in the `Painter` class to navigate and paint the path to the traffic cone.",
-    "thumbnail_url": "https://images.code.org/2b1e0d4fdda0c00cda888dfa4ca123d5-U1L4-L4c.gif",
+    "long_instructions": "**Help the `Painter`(#e7e8ea) navigate through The Neighborhood to reach the house!**\r\n\r\n✅ **TO DO:** Use the `move()`(#e7e8ea) and `turnLeft()`(#e7e8ea) methods to navigate through The Neighborhood to reach the house.\r\n\r\n💡 **TIP:** Check out the documentation for the `Painter`(#e7e8ea) class in the **Documentation** tab ⬆️ for colors to paint with. You can also look at the **Help & Tips** tab ⬆️ for help with instantiating objects and calling methods.\r\n\r\n📝 **COMMENT:** Be sure to add comments to note what your code does.\r\n\r\n🖥️ **TEST:** Test your program to check if your code achieves the expected result.\r\n\r\n🎉 **RUN:** Run your program to see the result of your code!\r\n\r\n## 🎯 Goal\r\n\r\n![](https://images.code.org/19a78c7d36787ee1cd0d00980601198d-image-1668553718013.gif)",
+    "encrypted_exemplar_sources": "kq0Pf5c4aweori7RVLPa2YdCHg6i+267r90rZwE5q3QjjBR/PpJw16UPErsZ\nOeh4vlrfW1vu2PkBdeRd22CCqZFUuy2P2NPY34UgqOzF+Kv6TrzTxnBxxeNA\nw5pEi0PBIsYgE3JV3y5wFybQwR+F7Zia0Nr4xkn+tTClOrnTy+n7leH7XG7j\nIf342q1N3yw/Ior8EoiZeSCetoW3zf2EzKFbHPruwqOz/hQeh4f8s9H3gRBA\nOXnY2oGrUlkjH1/Yx58mD1buL+v9lCwGy6dqqbvY+WxjoDv5LhuBGyVnazg+\nTx5Wxlu1a/8FkMbBoV8B9NCW1ZKvdK/+XYQn5Gtkz3ytrNUt6fi8o7gbtYIO\nvLOLTeqheAm7qi5K85y2bgA1HPZEc5yBw6Pu1h+gJsWwe4f/pNFg9aj8nVjQ\n2MC8Q8tRNB78vOIvljecxfrBAsibFvIR3cVDFKS1+Edj2n6+JbZMFr75CAeu\nDwExPIokHV5C+ZHne2o8WOiDCObTBJQcPp24F+grcjN+4TW+BOQXaacdE//w\nXAK0hVn9UTfFaNvXY9HA1mc7m56bc3/PzF/yAq3oK8WzZHc2WQo0dDgsqaY1\nbfGNu4HPp2rzqhDh7eDhJl7bqNIBqcsEanSjrmyKTaknEgovAiKMjpzTN6TU\n/ZpUiA+5xt6PInWx4nwetd/50mq4OGqE9FFmRCxCVnk57lTQsT+JPvxuoYxd\nD+MnBTJvMrwgJt6mDRV2GHJbaj+oW2b2LVhwJrqXosPOZ/2WmidZHIZeftoD\nxqJb4N98lZLiuBhMv+tajfIT0GeyeMWuy+vF1lbsaGV4NHX96Z4rV7eXYjlO\n/dT7HE2gO5Y3ls8EOHpPiB36O3N1Pg9pIPcZLdCqhQRi6RtqL+rLQcaHS2Q6\nvbLVhhBy2xwURDluu1P/XFoJHxQnsodYcJfPIwjwvV4dNzA3i1HqC5N2WBzB\nCocDRWkuU1h5VsKYGkhmAf0Z9vijrZNjO3vt1pt8ip4Frs13e1eeNQF7FZUH\nluQpOJ1+uTaoSaMZg9TM7x+FdZCfyZlby6e81LoFWKafwr7LL2m5KNdLZNRU\nLzBgsuUTob+WeI8NmvCI48WcU9yMVZoV3qk/crimi664lXH+m1Ng1ltbqwnO\nN5sSm2TwhHMXQm7EzSTuDvTLc2JTPOG3cVIIefXfcubXcJ6FCUOjEj+H7Db2\ndnhJE9DiVKecYkx8CyNLTSH+FmFyxfKVPi3j4TfurZy2M7Uq13iqP2THOo2v\nTu62p7SVND2yM0BpxNwY3a9d97Jcoi5v75xwSkg4vY8Os+L+V0p6ruZ9jKnr\nT2Ui97epO+4Yx+dQWhoiv7K9V0B7BmFHrqgSusKx4KlmDi9tN1AELe/Es87Q\naMDpY8khnD+tkd5IAlyLOiGjthqLZWkIgdt2ahhlQbCnnUy/eIpsfaWD27aG\nlSihuJ5n5NAHLGR9CLs8W+dfrYHxpPD4KOz+1kM6hW7Li64uNDct9R03561F\nbo5jd1VWEEy6oVAGzoD80DnB70d7LCcGRvkrW0j9z1Grz2UlVb7nmt/bNQ==\n",
+    "reference_links": [
+      "/courses/csa-2023/guides/instantiating-objects",
+      "/courses/csa-2023/guides/calling-a-method"
+    ],
     "serialized_maze": [
       [
         {
@@ -20,7 +22,7 @@
         {
           "tileType": 0,
           "value": 0,
-          "assetId": 82
+          "assetId": 285
         },
         {
           "tileType": 0,
@@ -31,38 +33,6 @@
           "tileType": 0,
           "value": 0,
           "assetId": 48
-        },
-        {
-          "tileType": 0,
-          "value": 0,
-          "assetId": 48
-        },
-        {
-          "tileType": 0,
-          "value": 0,
-          "assetId": 48
-        },
-        {
-          "tileType": 0,
-          "value": 0,
-          "assetId": 48
-        },
-        {
-          "tileType": 0,
-          "value": 0,
-          "assetId": 48
-        }
-      ],
-      [
-        {
-          "tileType": 1,
-          "value": 3,
-          "assetId": 303
-        },
-        {
-          "tileType": 0,
-          "value": 0,
-          "assetId": 83
         },
         {
           "tileType": 0,
@@ -104,7 +74,7 @@
         {
           "tileType": 0,
           "value": 0,
-          "assetId": 83
+          "assetId": 285
         },
         {
           "tileType": 0,
@@ -114,22 +84,136 @@
         {
           "tileType": 0,
           "value": 0,
-          "assetId": 76
+          "assetId": 48
         },
         {
           "tileType": 0,
           "value": 0,
-          "assetId": 77
+          "assetId": 48
         },
         {
           "tileType": 0,
           "value": 0,
-          "assetId": 77
+          "assetId": 48
         },
         {
           "tileType": 0,
           "value": 0,
-          "assetId": 78
+          "assetId": 48
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 48
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 48
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 48
+        }
+      ],
+      [
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 285
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 48
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 198
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 199
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 200
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 201
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 202
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 48
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 48
+        }
+      ],
+      [
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 285
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 48
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 206
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 207
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 208
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 209
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 210
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 48
         },
         {
           "tileType": 0,
@@ -146,7 +230,7 @@
         {
           "tileType": 0,
           "value": 0,
-          "assetId": 83
+          "assetId": 285
         },
         {
           "tileType": 0,
@@ -156,7 +240,64 @@
         {
           "tileType": 0,
           "value": 0,
-          "assetId": 81
+          "assetId": 214
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 215
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 216
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 217
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 218
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 48
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 48
+        }
+      ],
+      [
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 285
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 48
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 48
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 284
         },
         {
           "tileType": 1,
@@ -166,12 +307,17 @@
         {
           "tileType": 0,
           "value": 0,
-          "assetId": 46
+          "assetId": 285
         },
         {
           "tileType": 0,
           "value": 0,
-          "assetId": 81
+          "assetId": 48
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 48
         },
         {
           "tileType": 0,
@@ -188,17 +334,22 @@
         {
           "tileType": 0,
           "value": 0,
-          "assetId": 85
+          "assetId": 52
         },
         {
           "tileType": 0,
           "value": 0,
-          "assetId": 77
+          "assetId": 283
         },
         {
           "tileType": 0,
           "value": 0,
-          "assetId": 87
+          "assetId": 283
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 51
         },
         {
           "tileType": 1,
@@ -208,24 +359,39 @@
         {
           "tileType": 0,
           "value": 0,
-          "assetId": 76
+          "assetId": 52
         },
         {
           "tileType": 0,
           "value": 0,
-          "assetId": 87
+          "assetId": 283
         },
         {
           "tileType": 0,
           "value": 0,
-          "assetId": 48
+          "assetId": 283
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 283
         }
       ],
       [
         {
           "tileType": 1,
-          "value": 4,
-          "assetId": 303
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
         },
         {
           "tileType": 1,
@@ -243,130 +409,151 @@
           "assetId": 0
         },
         {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 10
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 8
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 6
+        },
+        {
           "tileType": 1,
-          "value": 3,
-          "assetId": 303
-        },
-        {
-          "tileType": 0,
           "value": 0,
-          "assetId": 80
-        },
-        {
-          "tileType": 0,
-          "value": 0,
-          "assetId": 48
-        },
-        {
-          "tileType": 0,
-          "value": 0,
-          "assetId": 48
-        }
-      ],
-      [
-        {
-          "tileType": 0,
-          "value": 0,
-          "assetId": 88
-        },
-        {
-          "tileType": 0,
-          "value": 0,
-          "assetId": 86
-        },
-        {
-          "tileType": 0,
-          "value": 0,
-          "assetId": 86
-        },
-        {
-          "tileType": 0,
-          "value": 0,
-          "assetId": 86
-        },
-        {
-          "tileType": 0,
-          "value": 0,
-          "assetId": 86
-        },
-        {
-          "tileType": 0,
-          "value": 0,
-          "assetId": 87
-        },
-        {
-          "tileType": 0,
-          "value": 0,
-          "assetId": 48
-        },
-        {
-          "tileType": 0,
-          "value": 0,
-          "assetId": 48
+          "assetId": 0
         }
       ],
       [
         {
           "tileType": 0,
           "value": 0,
-          "assetId": 48
+          "assetId": 10
         },
         {
           "tileType": 0,
           "value": 0,
-          "assetId": 48
+          "assetId": 8
         },
         {
           "tileType": 0,
           "value": 0,
-          "assetId": 48
+          "assetId": 6
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
         },
         {
           "tileType": 0,
           "value": 0,
-          "assetId": 48
+          "assetId": 11
         },
         {
           "tileType": 0,
           "value": 0,
-          "assetId": 48
+          "assetId": 9
         },
         {
           "tileType": 0,
           "value": 0,
-          "assetId": 48
+          "assetId": 7
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        }
+      ],
+      [
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 11
         },
         {
           "tileType": 0,
           "value": 0,
-          "assetId": 48
+          "assetId": 9
         },
         {
           "tileType": 0,
           "value": 0,
-          "assetId": 48
+          "assetId": 7
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
         }
       ]
     ],
+    "encrypted_validation": "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\n",
     "start_sources": {
       "NeighborhoodRunner.java": {
-        "text": "import org.code.neighborhood.*;\n\npublic class NeighborhoodRunner {\n  public static void main(String[] args) {\n\n    /* ----------------------------------- TO DO -----------------------------------\n     * ✅ Instantiate a Painter object, then use the methods in the Painter class\n     * to navigate and paint the path to the traffic cone.\n     * -----------------------------------------------------------------------------\n     */\n    \n\n\n\n    \n\n\n    \n  }\n}",
+        "text": "import org.code.neighborhood.*;\n\npublic class NeighborhoodRunner {\n  public static void main(String[] args) {\n\n    /* ----------------------------------- TO DO -----------------------------------\n     * ✅ Instantiate a Painter object, then use the methods in the Painter class\n     * to navigate through The Neighborhood to reach the house.\n     * -----------------------------------------------------------------------------\n     */\n    \n    \n    \n  }\n}",
         "isVisible": true,
         "tabOrder": 0
       }
     },
-    "encrypted_exemplar_sources": "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\nLGkOHA==\n",
-    "encrypted_validation": "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\n",
-    "reference_links": [
-      "/courses/csa-2023/guides/instantiating-objects",
-      "/courses/csa-2023/guides/calling-a-method"
-    ]
+    "encrypted_examples": [
+
+    ],
+    "display_name": "Reach the House",
+    "bubble_choice_description": "Help the `Painter` navigate through The Neighborhood to reach the house.",
+    "thumbnail_url": "https://images.code.org/188cc4430abc272e409b186e2d4395e3-U1L4-L4c.gif"
   },
   "game_id": 68,
+  "published": true,
   "created_at": "2022-10-12T16:06:08.000Z",
   "level_num": "custom",
   "user_id": 16889,
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2022-10-12T16:06:08.094+00:00\",\"changed\":[\"cloned from \\\"CSA U1L4-L4b_2023\\\"\"],\"cloned_from\":\"CSA U1L4-L4b_2023\"},{\"changed_at\":\"2022-10-12 16:06:09 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-10-12 18:23:41 +0000\",\"changed\":[\"csa_view_mode\",\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-10-12 18:25:56 +0000\",\"changed\":[\"encrypted_examples\",\"long_instructions\",\"serialized_maze\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-10-12 18:28:02 +0000\",\"changed\":[\"encrypted_examples\",\"long_instructions\",\"serialized_maze\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-10-12 18:33:36 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-10-12 18:33:36 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-10-12 18:37:20 +0000\",\"changed\":[\"long_instructions\",\"serialized_maze\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-10-12 18:47:45 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-10-12 20:02:02 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-10-12 20:02:08 +0000\",\"changed\":[\"long_instructions\",\"serialized_maze\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-10-12 20:06:19 +0000\",\"changed\":[\"encrypted_validation\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-10-13 18:31:01 +0000\",\"changed\":[\"long_instructions\",\"serialized_maze\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-10-13 18:39:38 +0000\",\"changed\":[\"long_instructions\",\"serialized_maze\",\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-10-17 23:33:37 +0000\",\"changed\":[\"encrypted_validation\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-10-20 19:29:32 +0000\",\"changed\":[\"long_instructions\",\"serialized_maze\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-10-25 15:49:47 +0000\",\"changed\":[\"bubble_choice_description\",\"serialized_maze\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-10-26 14:59:29 +0000\",\"changed\":[\"hide_share_and_remix\",\"serialized_maze\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-11-02 15:16:55 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-11-02 15:17:10 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-11-04 13:05:48 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-11-04 13:05:53 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-10-12T16:06:08.094+00:00\",\"changed\":[\"cloned from \\\"CSA U1L4-L4b_2023\\\"\"],\"cloned_from\":\"CSA U1L4-L4b_2023\"},{\"changed_at\":\"2022-10-12 16:06:09 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-10-12 18:23:41 +0000\",\"changed\":[\"csa_view_mode\",\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-10-12 18:25:56 +0000\",\"changed\":[\"encrypted_examples\",\"long_instructions\",\"serialized_maze\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-10-12 18:28:02 +0000\",\"changed\":[\"encrypted_examples\",\"long_instructions\",\"serialized_maze\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-10-12 18:33:36 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-10-12 18:33:36 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-10-12 18:37:20 +0000\",\"changed\":[\"long_instructions\",\"serialized_maze\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-10-12 18:47:45 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-10-12 20:02:02 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-10-12 20:02:08 +0000\",\"changed\":[\"long_instructions\",\"serialized_maze\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-10-12 20:06:19 +0000\",\"changed\":[\"encrypted_validation\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-10-13 18:31:01 +0000\",\"changed\":[\"long_instructions\",\"serialized_maze\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-10-13 18:39:38 +0000\",\"changed\":[\"long_instructions\",\"serialized_maze\",\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-10-17 23:33:37 +0000\",\"changed\":[\"encrypted_validation\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-10-20 19:29:32 +0000\",\"changed\":[\"long_instructions\",\"serialized_maze\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-10-25 15:49:47 +0000\",\"changed\":[\"bubble_choice_description\",\"serialized_maze\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-10-26 14:59:29 +0000\",\"changed\":[\"hide_share_and_remix\",\"serialized_maze\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-11-02 15:16:55 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-11-02 15:17:10 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-11-04 13:05:48 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-11-04 13:05:53 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-11-15 03:24:32 +0000\",\"changed\":[\"csa_view_mode\",\"display_name\",\"long_instructions\",\"bubble_choice_description\",\"thumbnail_url\",\"serialized_maze\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-11-15 03:25:19 +0000\",\"changed\":[\"start_sources\",\"encrypted_validation\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-11-15 04:08:48 +0000\",\"changed\":[\"csa_view_mode\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-11-15 16:55:09 +0000\",\"changed\":[\"long_instructions\",\"serialized_maze\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-11-15 18:19:38 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-11-15 18:19:48 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-11-15 18:20:17 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-11-15 18:20:30 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-11-15 18:21:06 +0000\",\"changed\":[\"long_instructions\",\"serialized_maze\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-11-15 23:08:52 +0000\",\"changed\":[\"long_instructions\",\"serialized_maze\",\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>
 </Javalab>
