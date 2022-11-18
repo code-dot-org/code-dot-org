@@ -6,7 +6,6 @@ import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 import {UnconnectedUnitOverviewTopRow as UnitOverviewTopRow} from '@cdo/apps/code-studio/components/progress/UnitOverviewTopRow';
 import Button from '@cdo/apps/templates/Button';
 import DropdownButton from '@cdo/apps/templates/DropdownButton';
-import SectionAssigner from '@cdo/apps/templates/teacherDashboard/SectionAssigner';
 import BulkLessonVisibilityToggle from '@cdo/apps/code-studio/components/progress/BulkLessonVisibilityToggle';
 import ProgressDetailToggle from '@cdo/apps/templates/progress/ProgressDetailToggle';
 import ResourcesDropdown from '@cdo/apps/code-studio/components/progress/ResourcesDropdown';
@@ -132,23 +131,6 @@ describe('UnitOverviewTopRow', () => {
         />
       )
     ).to.be.false;
-  });
-
-  it('renders SectionAssigner for instructor', () => {
-    const wrapper = shallow(
-      <UnitOverviewTopRow {...defaultProps} viewAs={ViewType.Instructor} />
-    );
-
-    expect(
-      wrapper.containsMatchingElement(
-        <SectionAssigner
-          sections={defaultProps.sectionsForDropdown}
-          courseId={defaultProps.currentCourseId}
-          scriptId={defaultProps.scriptId}
-          showAssignButton={defaultProps.showAssignButton}
-        />
-      )
-    ).to.be.true;
   });
 
   it('renders BulkLessonVisibilityToggle for instructor', () => {
