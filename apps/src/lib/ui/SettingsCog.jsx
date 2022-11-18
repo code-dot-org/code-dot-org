@@ -16,6 +16,7 @@ import {getStore} from '../../redux';
 // import ModelManagerDialog from '@cdo/apps/code-studio/components/ModelManagerDialog';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 import JavalabDropdown from '@cdo/apps/javalab/components/JavalabDropdown';
+import onClickOutside from 'react-onclickoutside';
 
 class SettingsCog extends Component {
   static propTypes = {
@@ -81,6 +82,7 @@ class SettingsCog extends Component {
   hideConfirmation = () => this.setState({confirmingEnableMaker: false});
   closeLibraryManager = () => this.setState({managingLibraries: false});
   closeModelManager = () => this.setState({managingModels: false});
+  handleClickOutside = () => this.close();
 
   setTargetPoint(icon) {
     if (!icon) {
@@ -162,7 +164,7 @@ class SettingsCog extends Component {
     );
   }
 }
-export default Radium(SettingsCog);
+export default onClickOutside(Radium(SettingsCog));
 
 export function ManageAssets(props) {
   return <PopUpMenu.Item {...props}>{msg.manageAssets()}</PopUpMenu.Item>;
