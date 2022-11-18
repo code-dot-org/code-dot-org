@@ -13,11 +13,11 @@ export default function ReferenceGuide({referenceGuide}) {
     <div>
       <EnhancedSafeMarkdown
         markdown={referenceGuide.content}
-        className="docs-table"
+        className="docs-pages"
       />
       <EnhancedSafeMarkdown
         markdown={i18n.documentationBug()}
-        className="docs-table"
+        className="docs-pages"
       />
       <CopyrightInfo />
     </div>
