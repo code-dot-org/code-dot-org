@@ -45,6 +45,20 @@ const CSTA_CONSENT_BODY = (
   </span>
 );
 
+const CSTA_PROFESSIONAL_ROLES = [
+  'K-12 Teacher',
+  'Pre-Service Teacher',
+  'School Administrator',
+  'District Administrator',
+  'State Department of Education',
+  'Higher Education Faculty',
+  'Non-Profit',
+  'Corporate',
+  'Other'
+];
+
+const CSTA_GRADE_BANDS = ['K-5', '6-8', '9-12'];
+
 export default class AmazonFutureEngineerEligibilityForm extends React.Component {
   static propTypes = {
     email: PropTypes.string,
@@ -62,7 +76,7 @@ export default class AmazonFutureEngineerEligibilityForm extends React.Component
       awsEducate: false,
       consentAFE: false,
       consentCSTA: false,
-      gradeBand: [false, false, false],
+      gradeBands: [false, false, false],
       professionalRole: '',
       errors: {}
     };
@@ -72,10 +86,14 @@ export default class AmazonFutureEngineerEligibilityForm extends React.Component
     this.setState(change);
   };
 
+  handleRoleChange = change => {
+    this.setState({professionalRole: change.target.value});
+  };
+
   handleMultiSelect = index => {
-    let gradeBand = this.state.gradeBand;
-    gradeBand[index] = !gradeBand[index];
-    this.setState(gradeBand);
+    let gradeBands = this.state.gradeBands;
+    gradeBands[index] = !gradeBands[index];
+    this.setState(gradeBands);
   };
 
   resetSchool = () =>
@@ -108,10 +126,25 @@ export default class AmazonFutureEngineerEligibilityForm extends React.Component
       consentCSTA = {consentCSTA: this.state.consentCSTA};
     }
 
+    let roleCSTA = {};
+    if (this.state.gradeBands || this.state.professionalRole) {
+      let gradeBands = '';
+      for (let i = 0; i < CSTA_GRADE_BANDS.length; i++) {
+        if (this.state.gradeBands[i]) {
+          gradeBands += CSTA_GRADE_BANDS[i];
+        }
+      }
+      roleCSTA = {
+        gradesTeaching: gradeBands,
+        primaryProfessionalRole: this.state.professionalRole
+      };
+    }
+
     let submitData = {
       ...requiredFormData,
       ...shippingAddress,
-      ...consentCSTA
+      ...consentCSTA,
+      ...roleCSTA
     };
 
     firehoseClient.putRecord({
@@ -268,8 +301,10 @@ export default class AmazonFutureEngineerEligibilityForm extends React.Component
           />
           {this.state.csta && (
             <div style={styles.consentIndent}>
-              Since you checked the box above, please consent to sharing your
-              information with the CSTA.
+              <p>
+                Since you checked the box above, please consent to sharing your
+                information with the CSTA.
+              </p>
               <SingleCheckbox
                 name="consentCSTA"
                 label={CSTA_CONSENT_BODY}
@@ -281,42 +316,44 @@ export default class AmazonFutureEngineerEligibilityForm extends React.Component
                     : null
                 }
               />
+              <p>Tell CSTA a little bit about yourself:</p>
+              <p>What is your current role?</p>
+              <select
+                style={styles.dropdownPadding}
+                name="professionalRole"
+                value={this.state.professionalRole}
+                onChange={this.handleRoleChange}
+              >
+                {CSTA_PROFESSIONAL_ROLES.map(role => (
+                  <option value={role} key={role}>
+                    {role}
+                  </option>
+                ))}
+              </select>
               <p>What grade bands do you teach?</p>
               <div>
                 <Checkbox
                   id={'gradeBand-k5'}
-                  checked={false}
+                  checked={this.state.gradeBands[0]}
                   onChange={() => this.handleMultiSelect(0)}
                 >
-                  K-5
+                  {CSTA_GRADE_BANDS[0]}
                 </Checkbox>
                 <Checkbox
                   id={'gradeBand-68'}
-                  checked={false}
+                  checked={this.state.gradeBands[1]}
                   onChange={() => this.handleMultiSelect(1)}
                 >
-                  6-8
+                  {CSTA_GRADE_BANDS[1]}
                 </Checkbox>
                 <Checkbox
                   id={'gradeBand-912'}
-                  checked={false}
+                  checked={this.state.gradeBands[2]}
                   onChange={() => this.handleMultiSelect(2)}
                 >
-                  9-12
+                  {CSTA_GRADE_BANDS[2]}
                 </Checkbox>
               </div>
-              <p>What is your current role?</p>
-              <select>
-                <option>K-12 Teacher</option>
-                <option>Pre-Service Teacher</option>
-                <option>School Administrator</option>
-                <option>District Administrator</option>
-                <option>State Department of Education</option>
-                <option>Higher Education Faculty</option>
-                <option>Non-Profit</option>
-                <option>Corporate</option>
-                <option>Other</option>
-              </select>
             </div>
           )}
           <SingleCheckbox
@@ -369,6 +406,9 @@ const styles = {
   button: {
     backgroundColor: color.orange,
     color: color.white
+  },
+  dropdownPadding: {
+    marginBottom: '10px'
   }
 };
 
