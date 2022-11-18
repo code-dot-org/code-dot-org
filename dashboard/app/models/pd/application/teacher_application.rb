@@ -78,6 +78,7 @@ module Pd::Application
     has_many :emails, class_name: 'Pd::Application::Email', foreign_key: 'pd_application_id'
 
     before_validation :set_course_from_program, if: -> {form_data_changed?}
+    before_validation :set_status_from_admin_approval, if: -> {properties_changed?}
     validates :status, exclusion: {in: ['interview'], message: '%{value} is reserved for facilitator applications.'}
     validates :course, presence: true, inclusion: {in: VALID_COURSES}, unless: -> {status == 'incomplete'}
     validate :workshop_present_if_required_for_status, if: -> {status_changed?}
@@ -133,6 +134,27 @@ module Pd::Application
 
     def set_course_from_program
       self.course = PROGRAMS.key(program)
+    end
+
+    def set_status_from_admin_approval
+      # Do not modify status is application is not incomplete.
+      return if status == 'incomplete'
+
+      # Do not modify status if admin approval status has not changed.
+      # Since principal_approval_not_required is a serialized attribute, we cannot use the Dirty
+      # API easily –– instead, use the Dirty API to look at the properties attribute.
+      return if properties_change.include?(nil)
+      return unless properties_change.map(&:keys)&.flatten&.include?('principal_approval_not_required')
+
+      # Do not modify status if the principal approval has already been completed.
+      return if principal_approval_state&.include?(PRINCIPAL_APPROVAL_STATE[:complete])
+
+      if !principal_approval_not_required && status != 'awaiting_admin_approval'
+        self.status = 'awaiting_admin_approval'
+        queue_email(:needs_admin_approval, deliver_now: true)
+      elsif principal_approval_not_required && status == 'awaiting_admin_approval'
+        self.status = 'unreviewed'
+      end
     end
 
     def save_partner
@@ -730,8 +752,8 @@ module Pd::Application
 
       # Do we allow manually sending/resending the principal email?
 
-      # Only if this teacher application is currently unreviewed, pending, or pending_space_availability.
-      return false unless unreviewed? || pending? || pending_space_availability?
+      # Only if this teacher application is currently awaiting_admin_approval, pending, or pending_space_availability.
+      return false unless awaiting_admin_approval? || pending? || pending_space_availability?
 
       # Only if the principal approval is required.
       return false if principal_approval_not_required
@@ -750,9 +772,9 @@ module Pd::Application
 
       # Do we allow the cron job to send a reminder email to the teacher?
 
-      # Only if this teacher application is currently unreviewed or pending.
+      # Only if this teacher application is currently awaiting_admin_approval or pending.
       # (Unlike allow_sending_principal_email?, don't allow for pending_space_availability.)
-      return false unless unreviewed? || pending?
+      return false unless awaiting_admin_approval? || pending?
 
       # Only if we haven't already sent one.
       return false if reminder_emails.any?
@@ -1090,12 +1112,13 @@ module Pd::Application
     end
 
     # Called after the application is created. Do any manipulation needed for the form data
-    # hash here, as well as send emails
+    # hash here, as well as send emails and set principal_approval_not_required state based on RP info
     def on_successful_create
       return if status == 'incomplete'
 
       queue_email :confirmation, deliver_now: true
       auto_score!
+      self.principal_approval_not_required = regional_partner&.applications_principal_approval == RegionalPartner::SELECTIVE_APPROVAL
       unless regional_partner&.applications_principal_approval == RegionalPartner::SELECTIVE_APPROVAL
         queue_email :principal_approval, deliver_now: true
       end
@@ -1150,6 +1173,7 @@ module Pd::Application
       auto_score!
       queue_email(:principal_approval_completed, deliver_now: true)
       queue_email(:principal_approval_completed_partner, deliver_now: true)
+      queue_email(:principal_approval_completed_teacher_receipt, deliver_now: true)
     end
 
     # @override

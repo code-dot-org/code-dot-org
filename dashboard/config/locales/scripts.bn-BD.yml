@@ -866,6 +866,10 @@ bn:
           lessons:
             lesson-6:
               name: চক্র
+        csa2-2023:
+          lessons:
+            lesson-4:
+              name: চলকগুলো
         csp1-2023:
           lesson_groups:
             csp_unit1_2020:

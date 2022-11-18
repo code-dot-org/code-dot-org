@@ -928,7 +928,7 @@
         "courseC_artist_prog_challenge12022": "Evcil Hayvan Evi",
         "courseC_artist_prog_challenge2a2022": "Yol",
         "courseD_artist_nestedLoops32022": "Windows",
-        "courseD_artist_nestedLoops52022": "Tünel",
+        "courseD_artist_nestedLoops52022": "Çemberler",
         "courseD_artist_nestedLoops72022": "Kareler",
         "courseD_artist_nestedLoops9_predict12022": "tahmin",
         "courseD_bee_nestedLoops22022": "Nektarı al",
@@ -1022,7 +1022,10 @@
         "helloworld_food_sizes_soccer-2022": "Boyut",
         "helloworld_food_sizes_space-2022": "Boyut",
         "helloworld_food_sounds_soccer-2022": "Sesler",
-        "helloworld_food_sounds_space-2022": "Sesler"
+        "helloworld_food_sounds_space-2022": "Sesler",
+        "helloworld_food_backgrounds": "Etkinliklere tıklayın",
+        "helloworld_food_backgrounds_soccer-2022": "Etkinliklere tıklayın",
+        "helloworld_food_backgrounds_space-2022": "Etkinliklere tıklayın"
       }
     }
   }

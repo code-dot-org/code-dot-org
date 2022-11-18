@@ -40,7 +40,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-10-28 17:14:58 UTC",
+    "serialized_at": "2022-11-18 00:39:40 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -2525,7 +2525,7 @@
       "key": "3a8658b4-b115-4a31-8093-9303fc1e4d98",
       "position": 5,
       "properties": {
-        "description": "**Levels 1-3 While Loop Practice:** Simple [`console.log`(#BB77C7)](/docs/applab/console.log/) levels in which students practice using while loops.\n\n* Level 1: Students use a while loop to print the numbers 0-99\n* Level 2: Students use a while loop to print a message 100 times\n* Level 3: Students use a while loop to fill an array and print the results"
+        "description": "**Levels 1-3 While Loop Practice:** Simple [`console.log`(#BB77C7)](/docs/applab/console.log/) levels in which students practice using while loops.\n\n* Level 1: Students use a while loop to print the numbers 0-99\n* Level 2: Students use a while loop to print a message 100 times\n* Level 3: Students use a while loop to fill an array and print the results\n* Level 4: Students complete a choice level."
       },
       "seeding_key": {
         "activity_section.key": "3a8658b4-b115-4a31-8093-9303fc1e4d98",
@@ -2558,7 +2558,7 @@
       "key": "19d0f5dd-ed06-4037-8e0d-202e4ea34111",
       "position": 8,
       "properties": {
-        "description": "\n**Levels 4-6 For Loop Practice:** Simple [`console.log`(#BB77C7)](/docs/applab/console.log/) levels to practice using for loops.\n\n* Level 4: Students use a for loop to print the numbers 0-99\n* Level 5: Students use a for loop to print a message 100 times\n* Level 6: Students use a for loop to fill an array and print the results"
+        "description": "\n**Levels 5-7 For Loop Practice:** Simple [`console.log`(#BB77C7)](/docs/applab/console.log/) levels to practice using for loops.\n\n* Level 5: Students use a for loop to print the numbers 0-99\n* Level 6: Students use a for loop to print a message 100 times\n* Level 7: Students use a for loop to fill an array and print the results"
       },
       "seeding_key": {
         "activity_section.key": "19d0f5dd-ed06-4037-8e0d-202e4ea34111",

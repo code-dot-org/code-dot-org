@@ -42,6 +42,8 @@ ky:
   hoc2022_codeorg_title: Celebrate Hour of Code with NASA and more
   hoc2022_codeorg_description: The 10th Hour of Code is out of this world! Come explore,
     play, and create with us.
+  social_hoc2022_dance: Featuring Beyoncé, Harry Styles, Lizzo, Lil Nas X, Selena
+    Gomez, music from Disney's "Encanto," and more!
   social_hoc2021_cse: 'During the #HourOfCode, we''re celebrating #CSEverywhere. Discover
     the connections!'
   hoc2020_header: Learn today, build a brighter tomorrow.
@@ -571,6 +573,7 @@ ky:
   signup_special_event_details_placeholder: Иш-чара эмнеси менен өзгөчө?
   signup_send_posters_address_placeholder: Бул адрес сиздин картаңызда бөлүшүлбөйт
   signup_event_type_in_school: Мектепте
+  signup_event_type_after_school: After school program
   signup_event_type_out_of_school: Мектептен тышкары
   signup_event_type_at_home: Home
   signup_submit_census_label: Кошуу
@@ -1015,11 +1018,6 @@ ky:
     же <a id=''teacher_banner_howto''>кантип өтүү жетектемесин окугула</a>'
   learn_banner_teachers_markdown: 'Teachers: [Host an hour](%{host_url}) or [read
     the How-To Guide](%{howto_url})'
-  learn_robotics_banner_heading: Роботикс жана схемалар
-  learn_robotics_banner_blurb: Роботтор же физикалык эсептөөчү жабдыктар барбы? Аларды
-    алдында берилген тапшырмаларда колдонуп, бардык курактардагы окуучуларга реалдуу
-    Код саатын өткөргүлө! Кээ бир тапшырмалар симуляцияны сунуш кылышат, ошондуктан
-    силер ишти куралсыз баштай аласыңар.
   tutorial_dance2019_name: Dance Party
   tutorial_danceparty_name: Dance Party
   tutorial_chibitronics_name: 'Chibitronics: Illuminated Story'
@@ -10550,7 +10548,7 @@ ky:
   tutorial_clbinary_name: Learn How Binary Works with Computers using Minecraft
   tutorial_sascollabcode_name: 'SAS CodeSnaps: Collaborative coding for blind, low
     vision and sighted students'
-  tutorial_codecombatgoblins_name: 'CodeCombat: Goblins nn'' Glory'
+  tutorial_codecombatgoblins_name: 'CodeCombat: Goblins ''n'' Glory'
   tutorial_scratchstorytelling_name: Anything is Possible! Storytelling with Scratch
   tutorial_crayolasymbols_name: 'Unplugged Coding from Crayola Education: Visual Symbols
     Convey Meaning'
@@ -11320,7 +11318,7 @@ ky:
   tutorial_googlesuperhero_string_detail_programming_languages: Блоктор
   tutorial_googlename _string_detail_programming_languages: Блоктор
   tutorial_carnegiezillah_string_detail_programming_languages: Блоктор
-  tutorial_nasachspacejam_string_detail_programming_languages: JavaScript, P5
+  tutorial_nasachspacejam_string_detail_programming_languages: Блоктор
   tutorial_hatchxrsolar_string_detail_programming_languages: Блоктор
   tutorial_hatchxrspace_string_detail_programming_languages: Блоктор
   tutorial_hatchxrtrex_string_detail_programming_languages: Блоктор
@@ -11355,6 +11353,29 @@ ky:
   tutorial_nasapackage_string_detail_programming_languages: Блоктор
   tutorial_nasalunar_string_detail_programming_languages: Блоктор, JavaScript
   tutorial_meeestate_string_detail_programming_languages: Блоктор, Python
+  tutorial_imagipixelart_longdescription: Learn Python and create your own colorful
+    animations in this 1 hour crash course!
+  tutorial_imagipixelart_name: Code your own pixel art!
+  tutorial_imagipixelart_string_detail_grades: 2-8-класстар
+  tutorial_imagipixelart_string_detail_platforms: ''
+  tutorial_imagipixelart_string_detail_programming_languages: typing
+  tutorial_imagipixelart_string_platforms: All modern browsers, iPad, Android tablets,
+    Windows phone, Android phone, iPhone
+  tutorial_kcjhealth_longdescription: 'Learn about data visualization, algorithmic
+    art and coding, while exploring SDG #3 ''Good Health and Well-Being''.'
+  tutorial_kcjhealth_name: The Health & Well-Being Challenge
+  tutorial_kcjhealth_string_detail_grades: 6+ класстар
+  tutorial_kcjhealth_string_detail_platforms: ''
+  tutorial_kcjhealth_string_detail_programming_languages: blocks
+  tutorial_kcjhealth_string_platforms: Бардык жаңы браузерлер
+  tutorial_msftwakanda_longdescription: 'Shuri, Okoye, and Riri must band together
+    to help Wakanda. Code your own action-packed activity inspired by Marvel Studios''
+    ''Black Panther: Wakanda Forever''!'
+  tutorial_msftwakanda_name: Long Live Wakanda
+  tutorial_msftwakanda_string_detail_grades: 6+ класстар
+  tutorial_msftwakanda_string_detail_platforms: ''
+  tutorial_msftwakanda_string_detail_programming_languages: blocks
+  tutorial_msftwakanda_string_platforms: Бардык жаңы браузерлер
   school_not_found_heading: Мектебиңерди таба алган жокпуз. Кошумча маалымат бериңиз.
   school_name: Мектептин аты
   school_name_error: Мектептин аты керек.
