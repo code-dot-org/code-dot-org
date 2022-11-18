@@ -89,6 +89,9 @@ export default class Timeline extends React.Component {
       ? (currentAudioElapsedTime * barWidth) / convertMeasureToSeconds(1)
       : null;
 
+    // Leave some vertical space between each event block.
+    const eventVerticalSpace = 2;
+
     return (
       <div
         id="timeline"
@@ -158,6 +161,7 @@ export default class Timeline extends React.Component {
                   style={{
                     width: barWidth * this.getLengthForId(eventData.id) - 4,
                     position: 'absolute',
+                    boxSizing: 'border-box',
                     left: barWidth * eventData.when,
                     top: 20 + this.getVerticalOffsetForEventId(eventData.id),
                     backgroundColor: this.getColorsForEventId(eventData.id)
@@ -166,7 +170,7 @@ export default class Timeline extends React.Component {
                       'solid 2px ' +
                       this.getColorsForEventId(eventData.id).border,
                     borderRadius: 8,
-                    height: this.getEventHeight() - 6
+                    height: this.getEventHeight() - eventVerticalSpace
                   }}
                 >
                   &nbsp;
