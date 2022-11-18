@@ -2,10 +2,8 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 
-import Radium from 'radium'; // eslint-disable-line no-restricted-imports
 import msg from '@cdo/locale';
 import FontAwesome from '../../templates/FontAwesome';
-import color from '../../util/color';
 import * as assets from '../../code-studio/assets';
 import project from '../../code-studio/initApp/project';
 import * as makerToolkitRedux from '../kits/maker/redux';
@@ -15,8 +13,10 @@ import LibraryManagerDialog from '@cdo/apps/code-studio/components/libraries/Lib
 import {getStore} from '../../redux';
 import ModelManagerDialog from '@cdo/apps/code-studio/components/ModelManagerDialog';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
+import classNames from 'classnames';
+import stylez from './settings-cog.module.scss';
 
-class SettingsCog extends Component {
+export default class SettingsCog extends Component {
   static propTypes = {
     isRunning: PropTypes.bool,
     runModeIndicators: PropTypes.bool,
@@ -116,19 +116,18 @@ class SettingsCog extends Component {
   render() {
     const {isRunning, runModeIndicators} = this.props;
 
-    // Adjust icon color when running
-    const rootStyle = {...styles.iconContainer};
-    if (runModeIndicators && isRunning) {
-      rootStyle.color = color.dark_charcoal;
-    }
-
     return (
-      <span style={rootStyle} ref={icon => this.setTargetPoint(icon)}>
-        <button type="button" onClick={this.open} style={styles.button}>
+      <span
+        className={classNames(
+          stylez.iconContainer,
+          runModeIndicators && isRunning && stylez.iconContainerRunning
+        )}
+        ref={icon => this.setTargetPoint(icon)}
+      >
+        <button type="button" onClick={this.open} className={stylez.button}>
           <FontAwesome
             className="settings-cog"
             icon="cog"
-            style={styles.assetsIcon}
             title={msg.settings()}
           />
         </button>
@@ -171,7 +170,6 @@ class SettingsCog extends Component {
     );
   }
 }
-export default Radium(SettingsCog);
 
 export function ManageAssets(props) {
   return <PopUpMenu.Item {...props}>{msg.manageAssets()}</PopUpMenu.Item>;
@@ -204,30 +202,3 @@ export function ToggleMaker(props) {
   );
 }
 ToggleMaker.propTypes = ManageAssets.propTypes;
-
-const styles = {
-  iconContainer: {
-    float: 'right',
-    marginRight: 10,
-    marginLeft: 10,
-    height: '100%',
-    cursor: 'pointer',
-    color: color.lighter_purple,
-    display: 'flex',
-    alignItems: 'center'
-  },
-  assetsIcon: {
-    fontSize: 18,
-    verticalAlign: 'middle'
-  },
-  button: {
-    margin: 0,
-    padding: 0,
-    backgroundColor: '#7665a0',
-    ':hover': {
-      boxShadow: 'none'
-    },
-    border: 0,
-    color: '#cfc9de'
-  }
-};
