@@ -4,14 +4,11 @@ import {connect} from 'react-redux';
 import i18n from '@cdo/locale';
 import {sectionForDropdownShape} from './shapes';
 import TeacherSectionSelector from './TeacherSectionSelector';
-import AssignButton from '@cdo/apps/templates/AssignButton';
-import UnassignSectionButton from '@cdo/apps/templates/UnassignSectionButton';
 import {selectSection} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 
 class SectionAssigner extends Component {
   static propTypes = {
     sections: PropTypes.arrayOf(sectionForDropdownShape).isRequired,
-    showAssignButton: PropTypes.bool,
     courseOfferingId: PropTypes.number,
     courseVersionId: PropTypes.number,
     courseId: PropTypes.number,
@@ -20,7 +17,6 @@ class SectionAssigner extends Component {
     buttonLocationAnalytics: PropTypes.string,
     // Redux provided
     selectSection: PropTypes.func.isRequired,
-    selectedSectionId: PropTypes.number,
     assignmentName: PropTypes.string
   };
 
@@ -31,19 +27,14 @@ class SectionAssigner extends Component {
   render() {
     const {
       sections,
-      showAssignButton,
       courseOfferingId,
       courseVersionId,
       courseId,
       scriptId,
-      selectedSectionId,
       forceReload,
       assignmentName,
       buttonLocationAnalytics
     } = this.props;
-    const selectedSection = sections.find(
-      section => section.id === selectedSectionId
-    );
 
     return (
       <div style={styles.section}>
@@ -57,27 +48,9 @@ class SectionAssigner extends Component {
             courseVersionId={courseVersionId}
             unitId={scriptId}
             courseId={courseId}
+            courseName={assignmentName}
+            buttonLocationAnalytics={buttonLocationAnalytics}
           />
-          {selectedSection && selectedSection.isAssigned && (
-            <UnassignSectionButton
-              courseName={assignmentName}
-              sectionId={selectedSection.id}
-              buttonLocationAnalytics={buttonLocationAnalytics}
-            />
-          )}
-          {selectedSection &&
-            !selectedSection.isAssigned &&
-            showAssignButton && (
-              <AssignButton
-                sectionId={selectedSection.id}
-                courseOfferingId={courseOfferingId}
-                courseVersionId={courseVersionId}
-                courseId={courseId}
-                scriptId={scriptId}
-                assignmentName={assignmentName}
-                sectionName={selectedSection.name}
-              />
-            )}
         </div>
       </div>
     );
@@ -104,9 +77,7 @@ const styles = {
 export const UnconnectedSectionAssigner = SectionAssigner;
 
 export default connect(
-  state => ({
-    selectedSectionId: state.teacherSections.selectedSectionId
-  }),
+  state => ({}),
   dispatch => ({
     selectSection(sectionId) {
       dispatch(selectSection(sectionId));

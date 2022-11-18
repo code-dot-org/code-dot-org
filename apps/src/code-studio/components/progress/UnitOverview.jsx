@@ -43,7 +43,6 @@ class UnitOverview extends React.Component {
     showRedirectWarning: PropTypes.bool,
     versions: PropTypes.objectOf(assignmentCourseVersionShape).isRequired,
     courseName: PropTypes.string,
-    showAssignButton: PropTypes.bool,
     assignedSectionId: PropTypes.number,
     unitCalendarLessons: PropTypes.arrayOf(unitCalendarLesson),
     weeklyInstructionalMinutes: PropTypes.number,
@@ -97,7 +96,6 @@ class UnitOverview extends React.Component {
       hiddenLessonState,
       selectedSectionId,
       courseName,
-      showAssignButton,
       userId,
       assignedSectionId,
       showCalendar,
@@ -171,7 +169,6 @@ class UnitOverview extends React.Component {
           <UnitOverviewTopRow
             teacherResources={teacherResources}
             studentResources={studentResources}
-            showAssignButton={showAssignButton}
             assignedSectionId={assignedSectionId}
             showCalendar={showCalendar}
             weeklyInstructionalMinutes={weeklyInstructionalMinutes}
