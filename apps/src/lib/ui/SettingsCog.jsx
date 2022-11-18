@@ -124,13 +124,14 @@ class SettingsCog extends Component {
 
     return (
       <span style={rootStyle} ref={icon => this.setTargetPoint(icon)}>
-        <FontAwesome
-          className="settings-cog"
-          icon="cog"
-          style={styles.assetsIcon}
-          title={msg.settings()}
-          onClick={this.open}
-        />
+        <button type="button" onClick={this.open} style={styles.button}>
+          <FontAwesome
+            className="settings-cog"
+            icon="cog"
+            style={styles.assetsIcon}
+            title={msg.settings()}
+          />
+        </button>
         <PopUpMenu
           className="settings-cog-menu"
           targetPoint={this.targetPoint}
@@ -212,12 +213,21 @@ const styles = {
     height: '100%',
     cursor: 'pointer',
     color: color.lighter_purple,
-    ':hover': {
-      color: color.white
-    }
+    display: 'flex',
+    alignItems: 'center'
   },
   assetsIcon: {
     fontSize: 18,
     verticalAlign: 'middle'
+  },
+  button: {
+    margin: 0,
+    padding: 0,
+    backgroundColor: '#7665a0',
+    ':hover': {
+      boxShadow: 'none'
+    },
+    border: 0,
+    color: '#cfc9de'
   }
 };
