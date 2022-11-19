@@ -131,7 +131,7 @@ export default class AmazonFutureEngineerEligibilityForm extends React.Component
       let gradeBands = '';
       for (let i = 0; i < CSTA_GRADE_BANDS.length; i++) {
         if (this.state.gradeBands[i]) {
-          gradeBands += CSTA_GRADE_BANDS[i];
+          gradeBands += CSTA_GRADE_BANDS[i] + ', ';
         }
       }
       roleCSTA = {
