@@ -332,27 +332,15 @@ export default class AmazonFutureEngineerEligibilityForm extends React.Component
               </select>
               <p>What grade bands do you teach?</p>
               <div>
-                <Checkbox
-                  id={'gradeBand-k5'}
-                  checked={this.state.gradeBands[0]}
-                  onChange={() => this.handleMultiSelect(0)}
-                >
-                  {CSTA_GRADE_BANDS[0]}
-                </Checkbox>
-                <Checkbox
-                  id={'gradeBand-68'}
-                  checked={this.state.gradeBands[1]}
-                  onChange={() => this.handleMultiSelect(1)}
-                >
-                  {CSTA_GRADE_BANDS[1]}
-                </Checkbox>
-                <Checkbox
-                  id={'gradeBand-912'}
-                  checked={this.state.gradeBands[2]}
-                  onChange={() => this.handleMultiSelect(2)}
-                >
-                  {CSTA_GRADE_BANDS[2]}
-                </Checkbox>
+                {CSTA_GRADE_BANDS.map((grade, index) => (
+                  <Checkbox
+                    key={index}
+                    checked={this.state.gradeBands[index]}
+                    onChange={() => this.handleMultiSelect(index)}
+                  >
+                    {grade}
+                  </Checkbox>
+                ))}
               </div>
             </div>
           )}
