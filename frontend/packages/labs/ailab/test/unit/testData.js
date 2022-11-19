@@ -149,7 +149,9 @@ export const allNumericalState = {
   }
 };
 
-export const premadeDatasetName = 'bats_eat_mozzies';
+export const premadeDatasetId = 'bats_eat_mozzies';
+export const premadeDatasetName = 'Bats Eat Mozzies';
+export const premadeDatasetNameLocalized = 'Localized Bats Eat Mozzies';
 export const batDatasetDescription = 'Count of bats and mosquitios';
 export const batDatasetDescriptionLocalized = 'Localized How many mosquitoes there are.';
 export const mosquitoDescription = 'How many mosquitoes there are.';
@@ -162,7 +164,7 @@ export const premadeDatasetState = {
   ...allNumericalState,
   csvfile: 'bats-eat-mozzies.csv',
   metadata: {
-    name: premadeDatasetName,
+    name: premadeDatasetId,
     card: {
       description: batDatasetDescription,
       context: {
@@ -189,6 +191,7 @@ export const premadeDatasetState = {
 export const premadeDatasetTranslations = new MessageFormat('en').compile({
   datasets: {
     bats_eat_mozzies: {
+      name: premadeDatasetNameLocalized,
       fields: {
         mosquitoCount: {
           description: "mosquitoCount description"
@@ -216,3 +219,11 @@ export const userUploadedDatasetState = {
     datasetDescription: playDatasetDescription
   }
 }
+export const premadeDataset = {
+    "id": premadeDatasetId,
+    "name": premadeDatasetName,
+    "path": "datasets/bats.csv",
+    "metadataPath": "datasets/bats.json",
+    "imagePath": "datasets/bats.jpg"
+};
+export const premadeDatasets = [premadeDataset];

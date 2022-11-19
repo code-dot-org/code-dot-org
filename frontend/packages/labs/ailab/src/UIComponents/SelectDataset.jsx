@@ -12,7 +12,7 @@ import {
 } from "../redux";
 import { parseCSV, MIN_CSV_ROWS, MIN_CSV_COLUMNS } from "../csvReaderWrapper";
 import { parseJSON } from "../jsonReaderWrapper";
-import { allDatasets, getAvailableDatasets } from "../datasetManifest";
+import { getDatasets, getAvailableDatasets } from "../datasetManifest";
 import { styles } from "../constants";
 import ScrollableContent from "./ScrollableContent";
 import I18n from "../i18n";
@@ -42,7 +42,7 @@ class SelectDataset extends Component {
 
   handleDatasetClick = id => {
     const assetPath = global.__ml_playground_asset_public_path__;
-    const dataset = allDatasets.find(dataset => dataset.id === id);
+    const dataset = getDatasets().find(dataset => dataset.id === id);
 
     // Don't process the click if we're just clicking the current
     // dataset again.

@@ -9,7 +9,7 @@ import {
   playDatasetDescription,
   batDatasetDescription,
   batDatasetDescriptionLocalized,
-  premadeDatasetName,
+  premadeDatasetId,
   premadeDatasetTranslations,
   batDatasetUses,
   batDatasetUsesLocalized,
@@ -66,7 +66,7 @@ describe("getDatasetDetails", () => {
 
   test("not user uploaded dataset", async () => {
     const details = getDatasetDetails(premadeDatasetState);
-    expect(details.name).toBe(premadeDatasetName);
+    expect(details.name).toBe(premadeDatasetId);
     expect(details.description).toBe(batDatasetDescription);
     expect(details.numRows).toBe(premadeDatasetState.data.length);
     expect(details.isUserUploaded).toBe(false);
