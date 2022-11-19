@@ -317,9 +317,15 @@ export default class AmazonFutureEngineerEligibilityForm extends React.Component
                 }
               />
               <p>Tell CSTA a little bit about yourself:</p>
-              <p>What is your current role?</p>
+              <label
+                style={styles.descriptiveText}
+                htmlFor="professionalRoleSelect"
+              >
+                What is your current role?
+              </label>
               <select
                 style={styles.dropdownPadding}
+                id="professionalRoleSelect"
                 name="professionalRole"
                 value={this.state.professionalRole}
                 onChange={this.handleRoleChange}
@@ -330,18 +336,23 @@ export default class AmazonFutureEngineerEligibilityForm extends React.Component
                   </option>
                 ))}
               </select>
-              <p>What grade bands do you teach?</p>
-              <div>
+              <fieldset className="gradebands-group">
+                <legend style={styles.descriptiveText}>
+                  What grade bands do you teach?
+                </legend>
                 {CSTA_GRADE_BANDS.map((grade, index) => (
                   <Checkbox
+                    style={styles.checkboxItem}
                     key={index}
                     checked={this.state.gradeBands[index]}
                     onChange={() => this.handleMultiSelect(index)}
                   >
-                    {grade}
+                    <label style={styles.checkboxLabel} htmlFor={grade}>
+                      {grade}
+                    </label>
                   </Checkbox>
                 ))}
-              </div>
+              </fieldset>
             </div>
           )}
           <SingleCheckbox
@@ -396,7 +407,22 @@ const styles = {
     color: color.white
   },
   dropdownPadding: {
-    marginBottom: '10px'
+    marginTop: 10,
+    marginBottom: 10
+  },
+  descriptiveText: {
+    display: 'block',
+    fontFamily: '"Gotham 4r", sans-serif',
+    fontSize: 14,
+    border: 'none',
+    color: color.dimgray,
+    margin: 0
+  },
+  checkboxItem: {
+    margin: 5
+  },
+  checkboxLabel: {
+    paddingLeft: 5
   }
 };
 
