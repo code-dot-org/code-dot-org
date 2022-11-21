@@ -1011,9 +1011,10 @@ export class DetailViewContents extends React.Component {
 
   renderDetailViewTableLayout = () => {
     const sectionsToRemove =
-      this.props.applicationData.application_type === ApplicationTypes.teacher
-        ? ['additionalDemographicInformation']
-        : ['submission'];
+      this.props.applicationData.application_type !== ApplicationTypes.teacher
+        ? ['submission']
+        : [];
+    const questionsToRemove = ['genderIdentity', 'race'];
 
     return (
       <div>
@@ -1023,7 +1024,10 @@ export class DetailViewContents extends React.Component {
               <h3>{this.sectionHeaders[header]}</h3>
               <Table style={styles.detailViewTable} striped bordered>
                 <tbody>
-                  {Object.keys(this.pageLabels[header]).map((key, j) => {
+                  {_.pull(
+                    Object.keys(this.pageLabels[header]),
+                    ...questionsToRemove
+                  ).map((key, j) => {
                     return (
                       // For most fields, render them only when they have values.
                       // For explicitly listed fields, render them regardless of their values.
