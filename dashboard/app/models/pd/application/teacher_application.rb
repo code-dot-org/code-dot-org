@@ -398,7 +398,7 @@ module Pd::Application
       response = Pd::Application::PrincipalApprovalApplication.find_by(application_guid: application_guid)
       return PRINCIPAL_APPROVAL_STATE[:complete] + response.full_answers[:do_you_approve] if response
 
-      principal_approval_email = emails.where(email_type: 'principal_approval').order(:created_at).last
+      principal_approval_email = emails.where(email_type: 'admin_approval').order(:created_at).last
       if principal_approval_email
         # Format sent date as short-month day, e.g. Oct 8
         return PRINCIPAL_APPROVAL_STATE[:in_progress] + principal_approval_email.sent_at&.strftime('%b %-d')
@@ -746,7 +746,7 @@ module Pd::Application
 
     def allow_sending_principal_email?
       response = Pd::Application::PrincipalApprovalApplication.find_by(application_guid: application_guid)
-      last_principal_approval_email = emails.where(email_type: 'principal_approval').order(:created_at).last
+      last_principal_approval_email = emails.where(email_type: 'admin_approval').order(:created_at).last
       last_principal_approval_email_created_at = last_principal_approval_email&.created_at
 
       # Do we allow manually sending/resending the principal email?
@@ -779,7 +779,7 @@ module Pd::Application
       return false if reminder_emails.any?
 
       # Only if we've sent at least one principal approval email before.
-      return false unless emails.where(email_type: 'principal_approval').exists?
+      return false unless emails.where(email_type: 'admin_approval').exists?
 
       # If it's valid to send another principal email at this time.
       return allow_sending_principal_email?
@@ -1119,7 +1119,7 @@ module Pd::Application
       auto_score!
       self.principal_approval_not_required = regional_partner&.applications_principal_approval == RegionalPartner::SELECTIVE_APPROVAL
       unless regional_partner&.applications_principal_approval == RegionalPartner::SELECTIVE_APPROVAL
-        queue_email :principal_approval, deliver_now: true
+        queue_email :admin_approval, deliver_now: true
       end
       save
     end

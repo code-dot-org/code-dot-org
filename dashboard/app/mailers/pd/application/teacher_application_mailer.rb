@@ -58,7 +58,7 @@ module Pd::Application
       end
     end
 
-    def principal_approval(teacher_application)
+    def admin_approval(teacher_application)
       @application = teacher_application
 
       mail(

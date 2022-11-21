@@ -6,7 +6,7 @@ class PdTeacherApplicationMailerPreview < ActionMailer::Preview
   %w(
     confirmation
     admin_approval_teacher_reminder
-    principal_approval
+    admin_approval
     admin_approval_completed
     admin_approval_completed_partner
     admin_approval_completed_teacher_receipt

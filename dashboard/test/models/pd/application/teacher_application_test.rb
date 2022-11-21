@@ -921,7 +921,7 @@ module Pd::Application
       incomplete = "Incomplete - Admin email sent on Oct 8"
       Timecop.freeze Date.new(2020, 10, 8) do
         application.stubs(:deliver_email)
-        application.queue_email :principal_approval, deliver_now: true
+        application.queue_email :admin_approval, deliver_now: true
         assert_equal incomplete, application.reload.principal_approval_state
       end
 
@@ -1106,13 +1106,13 @@ module Pd::Application
       # If we created a principal email < 5 days ago, we can't send.
       application = create :pd_teacher_application
       application.update!(status: 'awaiting_admin_approval')
-      create :pd_application_email, application: application, email_type: 'principal_approval', created_at: 1.day.ago
+      create :pd_application_email, application: application, email_type: 'admin_approval', created_at: 1.day.ago
       refute application.allow_sending_principal_email?
 
       # If we created a principal email >= 5 days ago, we can send.
       application = create :pd_teacher_application
       application.update!(status: 'awaiting_admin_approval')
-      create :pd_application_email, application: application, email_type: 'principal_approval', created_at: 6.days.ago
+      create :pd_application_email, application: application, email_type: 'admin_approval', created_at: 6.days.ago
       assert application.allow_sending_principal_email?
     end
 
@@ -1120,61 +1120,61 @@ module Pd::Application
       # If we are unreviewed, we cannot send.
       application = create :pd_teacher_application
       application.update!(status: 'unreviewed')
-      create :pd_application_email, application: application, email_type: 'principal_approval', created_at: 6.days.ago
+      create :pd_application_email, application: application, email_type: 'admin_approval', created_at: 6.days.ago
       refute application.allow_sending_admin_approval_teacher_reminder_email?
 
       # If we are awaiting_admin_approval, we can send.
       application = create :pd_teacher_application
       application.update!(status: 'awaiting_admin_approval')
-      create :pd_application_email, application: application, email_type: 'principal_approval', created_at: 6.days.ago
+      create :pd_application_email, application: application, email_type: 'admin_approval', created_at: 6.days.ago
       assert application.allow_sending_admin_approval_teacher_reminder_email?
 
       # If we are pending, we can send.
       application = create :pd_teacher_application
       application.update!(status: 'pending')
-      create :pd_application_email, application: application, email_type: 'principal_approval', created_at: 6.days.ago
+      create :pd_application_email, application: application, email_type: 'admin_approval', created_at: 6.days.ago
       assert application.allow_sending_admin_approval_teacher_reminder_email?
 
       # If we are pending_space_availability, we can't send.
       application = create :pd_teacher_application
       application.update!(status: 'pending_space_availability')
-      create :pd_application_email, application: application, email_type: 'principal_approval', created_at: 6.days.ago
+      create :pd_application_email, application: application, email_type: 'admin_approval', created_at: 6.days.ago
       refute application.allow_sending_admin_approval_teacher_reminder_email?
 
       # If we're no longer unreviewed/pending, we can't send.
       application = create :pd_teacher_application
       application.update!(status: 'accepted')
-      create :pd_application_email, application: application, email_type: 'principal_approval', created_at: 6.days.ago
+      create :pd_application_email, application: application, email_type: 'admin_approval', created_at: 6.days.ago
       refute application.allow_sending_admin_approval_teacher_reminder_email?
 
       # If we created a teacher reminder email any time before, we can't send.
       application = create :pd_teacher_application
       create :pd_application_email, application: application, email_type: 'admin_approval_teacher_reminder', created_at: 14.days.ago
-      create :pd_application_email, application: application, email_type: 'principal_approval', created_at: 6.days.ago
+      create :pd_application_email, application: application, email_type: 'admin_approval', created_at: 6.days.ago
       refute application.allow_sending_admin_approval_teacher_reminder_email?
 
       # If principal approval is not required, we can't send.
       application = create :pd_teacher_application
       application.update!(principal_approval_not_required: true)
-      create :pd_application_email, application: application, email_type: 'principal_approval', created_at: 6.days.ago
+      create :pd_application_email, application: application, email_type: 'admin_approval', created_at: 6.days.ago
       refute application.allow_sending_admin_approval_teacher_reminder_email?
 
       # If we already have a principal response, we can't send.
       application = create :pd_teacher_application
       create :pd_principal_approval_application, teacher_application: application
-      create :pd_application_email, application: application, email_type: 'principal_approval', created_at: 6.days.ago
+      create :pd_application_email, application: application, email_type: 'admin_approval', created_at: 6.days.ago
       refute application.allow_sending_admin_approval_teacher_reminder_email?
 
       # If we created a principal email < 5 days ago, we can't send.
       application = create :pd_teacher_application
       application.update!(status: 'awaiting_admin_approval')
-      create :pd_application_email, application: application, email_type: 'principal_approval', created_at: 1.day.ago
+      create :pd_application_email, application: application, email_type: 'admin_approval', created_at: 1.day.ago
       refute application.allow_sending_admin_approval_teacher_reminder_email?
 
       # If we created a principal email >= 5 days ago, we can send.
       application = create :pd_teacher_application
       application.update!(status: 'awaiting_admin_approval')
-      create :pd_application_email, application: application, email_type: 'principal_approval', created_at: 6.days.ago
+      create :pd_application_email, application: application, email_type: 'admin_approval', created_at: 6.days.ago
       assert application.allow_sending_admin_approval_teacher_reminder_email?
     end
 
