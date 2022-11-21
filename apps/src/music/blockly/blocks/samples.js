@@ -92,7 +92,7 @@ export const setCurrentLocationNextMeasure = {
     inputsInline: true,
     previousStatement: null,
     nextStatement: null,
-    colour: 230,
+    colour: 95,
     tooltip: 'play sound',
     helpUrl: ''
   },
