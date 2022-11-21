@@ -22,7 +22,7 @@ Unplugged lessons are particularly useful for building and maintaining a collabo
 
 ***
 ## שיעורים לא מחוברים ביסודות מדעי המחשב 2022-23
-את השיעורים הבאים ניתן למצוא ב- <a href="https://docs.google.com/document/d/12j5IkeGEWeAmWnZY9krbNSo8oKOKT5nIQGUH5J7Si80/preview" target="_blank" rel="noopener noreferrer"> יסודות מדעי המחשב 2022-23 </a>. <br><br>
+את השיעורים הבאים אפשר למצוא ב- <a href="https://docs.google.com/document/d/12j5IkeGEWeAmWnZY9krbNSo8oKOKT5nIQGUH5J7Si80/preview" target="_blank" rel="noopener noreferrer"> יסודות מדעי המחשב 2022-23 </a>. <br><br>
 
 <style>
 table, th, td {
@@ -104,30 +104,30 @@ Building on the initial "My Robotic Friends" activity, students tackle larger an
     <td><a href="https://studio.code.org/s/coursed-2022/lessons/4">D.4 - Relay Programming<br></a><small>This activity will begin with a short lesson on debugging and persistence, then will quickly move to a race against the clock as students break into teams and work together to write a program one instruction at a time.</td><td>Sequencing</td><td>{{ curriculum/unplugged/coursed_two_video_thumbnail }}</td>
       </tr>
   <tr>
-    <td><a href="https://studio.code.org/s/coursed-2022/lessons/12">D.12 - Conditionals with Cards</a><br><small>This lesson demonstrates how conditionals can be used to tailor a program to specific information. We don’t always have all of the information we need when writing a program. Sometimes you will want to do something different in one situation than in another, even if you don't know what situation will be true when your code runs. That is where conditionals come in. תנאים מאפשרים למחשב לקבל החלטה, בהתבסס על המידע שהוא נכון בכל פעם שמריצים את הקוד שלך. +</td><td> תנאים </td><td>{{ curriculum/unplugged/coursed_three_video_thumbnail }}</td>
+    <td><a href="https://studio.code.org/s/coursed-2022/lessons/12">D.12 - Conditionals with Cards</a><br><small>This lesson demonstrates how conditionals can be used to tailor a program to specific information. We don’t always have all of the information we need when writing a program. Sometimes you will want to do something different in one situation than in another, even if you don't know what situation will be true when your code runs. That is where conditionals come in. תנאים מאפשרים למחשב לקבל החלטה, בהתבסס על המידע הנכון בכל פעם שמריצים את הקוד שלך. +</td><td> תנאים </td><td>{{ curriculum/unplugged/coursed_three_video_thumbnail }}</td>
 
   </tr>
   <tr>
     <th rowspan="3" id="t05">Course E</th>
-    <td><a href="https://studio.code.org/s/coursee-2022/lessons/9"> כתיבת שיר </a><br><small> אחד מהמבנים המרשימים ביותר בעולם מדעי המחשב הוא הפונקציה. Functions (sometimes called procedures) are mini programs that you can use over and over inside of your bigger program. השיעור יעזור לתלמידים להבין באופן אינטואיטיבי מדוע שילוב של נתחי קוד לתוך פונקציות יכול להיות תרגול מועיל. </td><td>Functions</td><td>{{ curriculum/unplugged/coursee_two_video_thumbnail }}</td>
+    <td><a href="https://studio.code.org/s/coursee-2022/lessons/9"> כתיבת שיר </a><br><small> אחד מהמבנים המרשימים ביותר בעולם מדעי המחשב הוא הפונקציה. Functions (sometimes called procedures) are mini programs that you can use over and over inside of your bigger program. השיעור יעזור לתלמידים להבין אינטואיטיבית מדוע שילוב של פיסות קוד בתוך פונקציות יכול להיות תרגול מועיל. </td><td>Functions</td><td>{{ curriculum/unplugged/coursee_two_video_thumbnail }}</td>
   </tr>
   <tr>
     <td><a href="https://studio.code.org/s/coursee-2022/lessons/15">E.15
-עיצוב לצורך נגישות</a><br><small> בשיעור הזה, התלמידים ילמדו  אודות נגישות והערך של אמפתיה באמעות סיעור מוחות ועיצוב פתרונות נגישים לאפליציות היפוטתיות.</td><td> השפעות המחשוב </td><td><img src="/images/e18.png" width="90%"></td>
+עיצוב לצורך נגישות</a><br><small> בשיעור זה התלמידים ילמדו  על נגישות ועל ערך האמפתיה באמעות סיעור מוחות ועיצוב פתרונות נגישים לאפליקציות היפוטתיות.</td><td> השפעות המחשוב </td><td><img src="/images/e18.png" width="90%"></td>
   <tr>
-    <td><a href="https://studio.code.org/s/coursee-2022/lessons/16">  שיתוף דיגיטלי</a><br><i>*ציוד: סמארטפון או טאבלט</i><br><small> השיעור הזה, המושאל ליסודות מדעי המחשב על ידי הצוות בזכויות יוצרים ויצירתיות, קיים כדי לעזור לתלמידים להבין את האתגרים והתועלות שבכיבוד בעלות וזכויות יוצרים, במיוחד בסביבה דיגיטלית. יש לעודד תלמידים לכבד את הזכויות של האמנים כחלק חשוב של להיות אזרח דיגיטלי אתי. .</td><td> אזרחות דיגיטלית </td><td>{{ curriculum/unplugged/coursee_one_video_thumbnail }}</td>
+    <td><a href="https://studio.code.org/s/coursee-2022/lessons/16">  שיתוף דיגיטלי</a><br><i>*ציוד: סמארטפון או טאבלט</i><br><small> שיעור זה, המושאל ליסודות מדעי המחשב על ידי הצוות בזכויות יוצרים ויצירתיות, קיים כדי לעזור לתלמידים להבין את האתגרים והתועלת שבכיבוד בעלות וזכויות יוצרים, בייחוד בסביבה דיגיטלית. יש לעודד תלמידים לכבד את זכויות האומנים, כחלק חשוב מהיותם אזרחים דיגיטליים אתיים. .</td><td> אזרחות דיגיטלית </td><td>{{ curriculum/unplugged/coursee_one_video_thumbnail }}</td>
   </tr>
     </tr>
          <tr>
     <th rowspan="3" id="t06"> קורס ו </th>
-           <td><a href= "https://studio.code.org/s/coursef-2022/lessons/6"> ו.6 - סיפורי שטח ריק</a><br><i>*ציוד: 6 מעטפות (גם מתאים: נייר או כרטיסיות, מקופלים לחצי)</i><br><small> התלמידים ישתמשו בסיפורי "השלם את החסר" (בדומה למשחק MadLibs) כהקשר עבור הבנה של כיצד מחשבים לוקחים קלט ממשתמש ומאחסנים אותו, ולאחר מכן משתמשים בו בשלב מאוחר יותר כשתוכנה רצה.
+           <td><a href= "https://studio.code.org/s/coursef-2022/lessons/6"> ו.6 - סיפורי שטח ריק</a><br><i>*ציוד: 6 מעטפות (או: נייר או כרטיסיות, מקופלים לחצי)</i><br><small> התלמידים ישתמשו בסיפורי "השלם את החסר" (בדומה למשחק MadLibs) כהקשר, כדי להבין כיצד מחשבים לוקחים קלט ממשתמש ומאחסנים אותו, ולאחר מכן משתמשים בו בשלב מאוחר יותר כשתוכנה רצה.
    </td><td>Variables</td><td>{{ curriculum/unplugged/coursef_one_video_thumbnail }}</td>
   </tr>
         <tr>
     <td><a href="https://studio.code.org/s/coursef-2021/lessons/13">F.13 - For Loop Fun</a><br><i>*Supplies: Dice (3 dice/group of 2-4)</i><br><small>We know that loops allow us to do things over and over again, but now we’re going to learn how to use loops that have extra structures built right in. מבנים חדשים אלה יאפשרו לתלמידים ליצור קוד חזק ודינמי יותר. .</td><td>עבור לולאות</td><td>{{ curriculum/unplugged/coursef_three_video_thumbnail }}</td>
   </tr>
   <tr>
-    <td><a href="https://studio.code.org/s/coursef-2022/lessons/15"> ו.15 - האינטרנט</a><br><small> למרות שהרבה אנשים משתמשים באינטרנט באופן יומיומי, לא הרבה יודעים איך זה עובד. In this lesson, students will pretend to flow through the internet, all the while learning about connections, URLs, IP Addresses, and the DNS.</td><td>Data</td><td>{{ curriculum/unplugged/coursef_two_video_thumbnail }}</td>
+    <td><a href="https://studio.code.org/s/coursef-2022/lessons/15"> ו.15 - האינטרנט</a><br><small> אף שהרבה אנשים משתמשים באינטרנט באופן יום-יומי, לא הרבה יודעים כיצד הוא עובד. In this lesson, students will pretend to flow through the internet, all the while learning about connections, URLs, IP Addresses, and the DNS.</td><td>Data</td><td>{{ curriculum/unplugged/coursef_two_video_thumbnail }}</td>
   </tr>
 </table>
 
