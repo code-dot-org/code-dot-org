@@ -14,8 +14,7 @@ function tempLog(event, data = null) {
     {
       study: 'weblab_loading_investigation_2022',
       event: event,
-      data: data,
-      is_cros: /\bCrOS\b/.test(navigator.userAgent)
+      data_json: data === null ? null : JSON.stringify(data)
     },
     {includeUserId: true}
   );
