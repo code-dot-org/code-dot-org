@@ -50,9 +50,6 @@
         "GPE": {
           "description": "Həndəsi Xassələrin Tənliklərlə İfadə Edilməsi"
         },
-        "IC": {
-          "description": "Bir Şeydən Nəticə Çıxarma Prosesi və Nəticənin Əsaslandırılması"
-        },
         "ID": {
           "description": "Kateqorik və Kəmiyyət Məlumatlarının Şərh Edilməsi"
         },
@@ -115,6 +112,9 @@
         },
         "5": {
           "description": "Tələbələr insaniç mədəni və sosiolji şeyləri texnologiya ilə əlaqaləndirməyi anlayırlar və qanuni-etik davranışı praktika edirlər."
+        },
+        "IC": {
+          "description": "Bir Şeydən Nəticə Çıxarma Prosesi və Nəticənin Əsaslandırılması"
         }
       }
     }

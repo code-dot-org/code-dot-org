@@ -86,7 +86,7 @@ A new poster set is available featuring Malala, Stephen Curry, Shakira and more!
 
 Computers are everywhere, changing every industry on the planet. But only 51% of all high schools offer computer science. Good news is, we’re on our way to change this! If you've heard about the Hour of Code before, you might know it made history. More than 100 million students have tried an Hour of Code.
 
-With the Hour of Code, computer science has been on homepages of Google, MSN, Yahoo!, and Disney. Over 100 partners have joined together to support this movement. Every Apple Store in the world has hosted an Hour of Code, and leaders like President Obama and Canadian Prime Minister Justin Trudeau wrote their first lines of code as part of the campaign.
+Permes ores se kodit, shkenca kompjuterike ka qene ne faqen kryesore te Google, MSN, Yahoo!, dhe Disney. Mbi 100 partnerë morën pjesë për ta përkrahur këtë lëvizje. Every Apple Store in the world has hosted an Hour of Code, and leaders like President Obama and Canadian Prime Minister Justin Trudeau wrote their first lines of code as part of the campaign.
 
 This year, let's make it even bigger. I’m asking you to join the Hour of Code {{ campaign_date/year }}. Please get involved with an Hour of Code event during Computer Science Education Week, {{ campaign_date/full }}.
 
@@ -142,21 +142,21 @@ See http://hourofcode.com/{{ country_language }} for details, and help spread th
 
 #### [Check out our press kit for more information on inviting media to your event.]({{ promote/press_kit_url }})
 
-**Subject line**: Local school joins mission to introduce students to computer science
+**Subjekti:** Shkolla lokale i bashkohet synimit për të prezantuar studentët me shkencat kompjuterike
 
-Computers are everywhere, changing every industry on the planet, but only 51% of all high schools offer computer science. Young women and students from marginalized racial and ethnic groups are severely underrepresented in computer science classes, and in the tech industry. Lajmi i mirë është se jemi në rrugë a sipër për ta ndryshuar këtë.
+Computers are everywhere, changing every industry on the planet, but only 51% of all high schools offer computer science. Grate e reja dhe nxenesit nga grupet e margjinalizuara raciale dhe etnike jane shume te joperfaqesuar ne shkenca kompjuterike dhe poashtu ne industrine e teknologjise. Lajmi i mirë është se jemi në rrugë a sipër për ta ndryshuar këtë.
 
-With the Hour of Code, computer science has been on homepages of Google, MSN, Yahoo!, and Disney. Over 100 partners have joined together to support this movement. Every Apple Store in the world has hosted an Hour of Code. Even President Obama wrote his first line of code as part of the campaign.
+Permes ores se kodit, shkenca kompjuterike ka qene ne faqen kryesore te Google, MSN, Yahoo!, dhe Disney. Mbi 100 partnerë morën pjesë për ta përkrahur këtë lëvizje. Çdo dyqan apple në botë ka zhvilluar një orë kodimi. Presidenti Obama shkruajti rreshtin e tij të parë të kodit gjatë fushatës.
 
 That’s why every one of the [X number] students at [SCHOOL NAME] are joining in on the largest learning event in history: The Hour of Code, during Computer Science Education Week (December 6-12).
 
-I'm writing to invite you to attend our kickoff assembly and to see kids start the activity on [DATE].
+Po ju shkruaj për t'iu ftuar të bëheni pjesë e takimit lançues si dhe të ndiqni fëmijët teksa marrin pjesë në aktivitetin tonë më [DATE].
 
-The Hour of Code, organized by the nonprofit Code.org and over 100 others, is a global movement that believes the students of today are ready to learn critical skills for 21st-century success. Please join us.
+Ora e Kodimit, e organizuar nga organizata jofitimprurëse Code.org dhe me më shumë se 100 organizata të tjera, është dëshmi se gjenerata e sotme e nxënësve janë gati t'i mësojnë aftësitë kryesore për suksesin e shekullit 21. Të lutem bashkohu edhe ti.
 
-Contact: [YOUR NAME], [TITLE], cell: (212) 555-5555 When: [DATE and TIME of your event] Where: [ADDRESS and DIRECTIONS]
+Kontakti: (EMRI YT), (TITLE), Cell: (212) 555-5555 Kur: [data dhe koha e eventit) Ku: [Adresa dhe direksionet]
 
-I look forward to being in touch. <br />
+Shpresojmë të jemi në kontakt.<br />
 
 * * *
 

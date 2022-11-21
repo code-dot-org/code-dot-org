@@ -4,6 +4,8 @@ vi:
     blocks:
       AmysBlocks_setPromptWithChoices:
         text: nhắc người dùng {QUESTION} để lấy biến {VAR} có các lựa chọn {A}{B}{C}
+      AmysBlocks_spriteSayVar:
+        text: "{SPRITE}nói{TEXT1}"
       BadGuys_makeNewBadGuysSprite:
         text: tạo nhân vật {ANIMATION_NAME} mới tại {LOCATION}
       BadGuys_setSizeAll_dropdown:
@@ -988,6 +990,13 @@ vi:
         text: thiết lập
       Dancelab_whenSetup2:
         text: thiết lập
+      DansBlocks_getMicroscope:
+        text: Kính hiển vi có {INPUT1}
+        options:
+          INPUT1:
+            '1': nước chanh
+            '3': baking soda
+            '5': both
       DansBlocks_setForegroundEffect2:
         text: làm hiệu ứng {EFFECT}
         options:
@@ -1000,12 +1009,20 @@ vi:
             '"starburst"': Lóe sáng
             '"glass"': Kính vỡ
             '"twinkling"': Lấp lánh
-      FunctionBlocks_representManipulative:
+      DansBlocks_setMicroscope:
         options:
-          BEHAVIOR:
-            draggable(): có thể kéo được
-            wandering(): lang thang
-            shrinking(): thu nhỏ
+          INPUT1:
+            '1': nước chanh
+            '3': baking soda
+            '5': both
+      FunctionBlocks_communicate:
+        text: Giao tiếp {VAR1} với {SPRITE1COSTUME}
+      FunctionBlocks_makeManipulative2:
+        text: tạo {NUM} nhân vật {ANIMATION_NAME} mới {BEHAVIOR}
+      FunctionBlocks_representManipulative:
+        text: giới thiệu {NUM} nhân vật {ANIMATION_NAME} mới [BEHAVIOR][2]
+      FunctionBlocks_spriteSayVar:
+        text: "{SPRITE}nói{TEXT1}"
       gamelab_addBehaviorSimple:
         text: nhân vật {SPRITE} bắt đầu {BEHAVIOR}
       gamelab_addTarget:
@@ -1360,6 +1377,7 @@ vi:
             "'sound://category_space/Southern_ring_SFX.mp3'": tiếng tinh vân vòng
               phương nam
             "'sound://category_space/Supernova_SFX.mp3'": tiếng siêu tân tinh
+            "'sound://category_space/Tycho_SFX.mp3'": tiếng siêu tân tinh tycho
       gamelab_playSpeech:
         text: phát lời nói {SOUND}
       gamelab_playerBehaviors:
@@ -2001,8 +2019,39 @@ vi:
         text: bố trí quái vật ngẫu nhiên
       Outbreak_stopMoving:
         text: quái vật ngừng di chuyển
+      ParticlesBlocks_getMicroscope:
+        text: Kính hiển vi có {INPUT1}
+        options:
+          INPUT1:
+            '1': nước chanh
+            '3': baking soda
+            '5': both
+      ParticlesBlocks_setMicroscope:
+        options:
+          INPUT1:
+            '1': nước chanh
+            '3': baking soda
+            '5': both
       ParticlesBlocks_statesOfMatter:
         text: "{BEHAVIOR}"
+        options:
+          BEHAVIOR:
+            new Behavior(solid, []): rắn
+            new Behavior(liquid, []): lỏng
+            new Behavior(wandering, []): khí
+      ParticlesBlocks_statesOfMatter2:
+        text: Đặt {COSTUME} cho hành vi {BEHAVIOR}
+        options:
+          BEHAVIOR:
+            '"solid"': hạt rắn
+            '"liquid"': hạt lỏng
+            '"gas"': hạt khí
+      ParticlesBlocks_statesOfMatter_testing:
+        options:
+          BEHAVIOR:
+            '"solid"': hạt rắn
+            '"liquid"': hạt lỏng
+            '"gas"': hạt khí
       Poetry_addFrame:
         text: đặt khung thành {BRUSH}
         options:
@@ -2074,6 +2123,22 @@ vi:
             '"sound://category_explosion/vibrant_game_arcade_game_negative_hit.mp3"': Xoay
               tròn
             '"sound://category_achievements/peaceful_win_6.mp3"': Chuông gió
+      Poetry_playSoundOptionsSpace:
+        text: phát âm thanh {SOUND}
+        options:
+          SOUND:
+            "'sound://category_space/Blackhole_SFX.mp3'": tiếng hố đen
+            "'sound://category_space/Bullet_cluster_SFX.mp3'": tiếng thiên hà va chạm
+            "'sound://category_space/Carina_SFX.mp3'": tiếng tinh vân thuyền để
+            "'sound://category_space/Cassiopeia_SFX.mp3'": tiếng chòm sao thiên hậu
+            "'sound://category_space/Crab_nebula_SFX.mp3'": tiếng tinh vân con cua
+            "'sound://category_space/Launch_SFX.mp3'": tiếng phóng tàu
+            "'sound://category_space/Lift_Off.mp3'": tiếng cất cánh
+            "'sound://category_space/Pillars_SFX.mp3'": tiếng cột sáng tạo
+            "'sound://category_space/Southern_ring_SFX.mp3'": tiếng tinh vân vòng
+              phương nam
+            "'sound://category_space/Supernova_SFX.mp3'": tiếng siêu tân tinh
+            "'sound://category_space/Tycho_SFX.mp3'": tiếng siêu tân tinh tycho
       Poetry_setAuthor:
         text: đặt tác giả {AUTHOR}
       Poetry_setBackground:
@@ -2405,6 +2470,16 @@ vi:
           DIR:
             right: phải ↻
             left: trái ↺
+      storylab_setForegroundEffect2:
+        text: làm hiệu ứng {EFFECT}
+        options:
+          EFFECT:
+            '"bubbles"': Bong bóng
+            '"confetti"': Hoa giấy
+            '"hearts"': trái tim
+            '"rain"': mưa
+            '"starburst"': Lóe sáng
+            '"twinkling"': Lấp lánh
       storylab_setHeading:
         text: đặt tiêu đề {HEADING}
       storylab_setSubheading:

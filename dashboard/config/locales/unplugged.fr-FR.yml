@@ -110,7 +110,7 @@ fr:
           hauteur ou soutenir un certain poids), et les élèves discutent du fait de
           persévérer lorsque les choses se compliquent.
       GettingLoopy:
-        title: Tourner en Rond
+        title: Affaire bouclée
         desc: Cette leçon présente le concept de programmation des boucles (instructions
           répétées) par le biais d’une activité de danse. Les élèves apprendront une
           chorégraphie simple, puis devront la répéter.
@@ -273,25 +273,25 @@ fr:
         title: Boucles débranchées
         desc: Dans cette leçon, tu découvriras les boucles!
       courseB_unplugged_MRF:
-        title: Activité "Déconnectée"
+        title: Activité Déconnectée
         desc: Dans cette leçon, tu "programmeras" tes amis!
       courseB_unplugged_loopyMRF:
-        title: Activité "Déconnectée"
+        title: Activité Déconnectée
         desc: Tout comme dans « Mes Amis Robotisés », tu vas « programmer » tes amis
           mais, cette fois, avec des boucles !
       courseC_Unplugged_ScreenOutTheMean:
-        title: Activité "Déconnectée"
+        title: Activité Déconnectée
         desc: Aujourd'hui, tu apprendras ce qu’il faut faire si quelqu'un devient
           méchant en ligne.
       courseD_unplugged_digitalCitizenship:
-        title: Activité "Déconnectée"
+        title: Activité Déconnectée
         desc: Aujourd'hui, tu apprendras ce que veut dire être un Citoyen Numérique.
       courseE_unplugged_privateInformation:
         title: 'Common Sense Education : Information Privée et Personnelle '
         desc: Aujourd'hui, tu apprendras ce qu’il faut faire si quelqu'un devient
           méchant en ligne.
       courseF_unplugged_powerOfWords:
-        title: Activité "Déconnectée"
+        title: Activité Déconnectée
         desc: Aujourd'hui, tu apprendras ce qu’il faut faire si quelqu'un devient
           méchant en ligne.
       deeper learning description:
@@ -334,7 +334,7 @@ fr:
           en papier. Cette leçon se concentre également sur l'informatique, en général,
           et le rôle essentiel que jouent les algorithmes.
       courseC_unplugged_gettingLoopy:
-        title: Tourner en Rond
+        title: Affaire bouclée
         desc: Cette leçon présente le concept de programmation des boucles (instructions
           répétées) par le biais d’une activité de danse. Les élèves apprendront une
           chorégraphie simple, puis devront la répéter.
@@ -449,10 +449,10 @@ fr:
           un ensemble de commandes prédéfinies pour diriger leurs camarades dans la
           reproduction d’un dessin.
       courseD_unplugged_digitalCitizenship_2018:
-        title: Activité "Déconnectée"
+        title: Activité Déconnectée
         desc: Aujourd'hui, tu apprendras ce que veut dire être un Citoyen Numérique.
       courseC_Unplugged_ScreenOutTheMean_2018:
-        title: Activité "Déconnectée"
+        title: Activité Déconnectée
         desc: Aujourd'hui, tu apprendras ce qu’il faut faire si quelqu'un devient
           méchant en ligne.
       Conditionals_2018:
@@ -481,7 +481,7 @@ fr:
           en papier. Cette leçon se concentre également sur l'informatique, en général,
           et le rôle essentiel que jouent les algorithmes.
       GettingLoopy_2018:
-        title: Tourner en Rond
+        title: Affaire bouclée
         desc: Cette leçon présente le concept de programmation des boucles (instructions
           répétées) par le biais d’une activité de danse. Les élèves apprendront une
           chorégraphie simple, puis devront la répéter.
@@ -549,7 +549,7 @@ fr:
           les élèves formeront des équipes et travailleront ensemble à la rédaction
           d'un programme, instruction par instruction.
       courseD_unplugged_digitalCitizenship_2019:
-        title: Activité "Déconnectée"
+        title: Activité Déconnectée
         desc: Aujourd'hui, tu apprendras ce que veut dire être un Citoyen Numérique.
       BinaryImages_2019:
         title: Images Binaires
@@ -584,12 +584,12 @@ fr:
 '
         desc: 'traduction manquante : en-US.data.unplugged.Crowdsourcing_2018.desc'
       GettingLoopy_2019:
-        title: Tourner en Rond
+        title: Affaire bouclée
         desc: Cette leçon présente le concept de programmation des boucles (instructions
           répétées) par le biais d’une activité de danse. Les élèves apprendront une
           chorégraphie simple, puis devront la répéter.
       courseC_Unplugged_ScreenOutTheMean_2019:
-        title: Activité "Déconnectée"
+        title: Activité Déconnectée
         desc: Aujourd'hui, tu apprendras ce qu’il faut faire si quelqu'un devient
           méchant en ligne.
       BigEvent_2019:

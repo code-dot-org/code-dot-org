@@ -43,6 +43,8 @@ sv:
   hoc2022_codeorg_title: Celebrate Hour of Code with NASA and more
   hoc2022_codeorg_description: The 10th Hour of Code is out of this world! Come explore,
     play, and create with us.
+  social_hoc2022_dance: Featuring Beyoncé, Harry Styles, Lizzo, Lil Nas X, Selena
+    Gomez, music from Disney's "Encanto," and more!
   social_hoc2021_cse: 'During the #HourOfCode, we''re celebrating #CSEverywhere. Discover
     the connections!'
   hoc2020_header: "  Det du lär dig idag bygger en ljusare framtid.  "
@@ -563,6 +565,7 @@ sv:
     evenemang
   signup_send_posters_address_placeholder: Denna adress kommer inte att visas på kartan
   signup_event_type_in_school: I en skola
+  signup_event_type_after_school: After school program
   signup_event_type_out_of_school: Utanför skolan
   signup_event_type_at_home: Home
   signup_submit_census_label: Skicka in
@@ -1037,9 +1040,6 @@ sv:
     eller <a id=''teacher_banner_howto''>läs vår Så gör du-guide</a>'
   learn_banner_teachers_markdown: "  Lärare: [Host an hour](%{host_url}) eller [read
     the How-To Guide](%{howto_url})  "
-  learn_robotics_banner_heading: ROBOTTEKNIK
-  learn_robotics_banner_blurb: Har ni robotar? Använd dem i aktiviteterna nedan och
-    skapa en konkret Hour of Code för elever i alla åldrar!
   tutorial_dance2019_name: Dance Party 2019
   tutorial_danceparty_name: Dansparty
   tutorial_chibitronics_name: 'Chibitronics: Illuminated Story'
@@ -10517,7 +10517,7 @@ sv:
   tutorial_clbinary_name: Learn How Binary Works with Computers using Minecraft
   tutorial_sascollabcode_name: 'SAS CodeSnaps: Collaborative coding for blind, low
     vision and sighted students'
-  tutorial_codecombatgoblins_name: 'CodeCombat: Goblins nn'' Glory'
+  tutorial_codecombatgoblins_name: 'CodeCombat: Goblins ''n'' Glory'
   tutorial_scratchstorytelling_name: Anything is Possible! Storytelling with Scratch
   tutorial_crayolasymbols_name: 'Unplugged Coding from Crayola Education: Visual Symbols
     Convey Meaning'
@@ -11290,7 +11290,7 @@ sv:
   tutorial_googlesuperhero_string_detail_programming_languages: Block
   tutorial_googlename _string_detail_programming_languages: Block
   tutorial_carnegiezillah_string_detail_programming_languages: Block
-  tutorial_nasachspacejam_string_detail_programming_languages: JavaScript, P5
+  tutorial_nasachspacejam_string_detail_programming_languages: Block
   tutorial_hatchxrsolar_string_detail_programming_languages: Block
   tutorial_hatchxrspace_string_detail_programming_languages: Block
   tutorial_hatchxrtrex_string_detail_programming_languages: Block
@@ -11325,6 +11325,29 @@ sv:
   tutorial_nasapackage_string_detail_programming_languages: Block
   tutorial_nasalunar_string_detail_programming_languages: Block, JavaScript
   tutorial_meeestate_string_detail_programming_languages: Block, Python
+  tutorial_imagipixelart_longdescription: Learn Python and create your own colorful
+    animations in this 1 hour crash course!
+  tutorial_imagipixelart_name: Code your own pixel art!
+  tutorial_imagipixelart_string_detail_grades: Årskurs 2-8
+  tutorial_imagipixelart_string_detail_platforms: ''
+  tutorial_imagipixelart_string_detail_programming_languages: typing
+  tutorial_imagipixelart_string_platforms: All modern browsers, iPad, Android tablets,
+    Windows phone, Android phone, iPhone
+  tutorial_kcjhealth_longdescription: 'Learn about data visualization, algorithmic
+    art and coding, while exploring SDG #3 ''Good Health and Well-Being''.'
+  tutorial_kcjhealth_name: The Health & Well-Being Challenge
+  tutorial_kcjhealth_string_detail_grades: Klass 6+ (11 eller fler)
+  tutorial_kcjhealth_string_detail_platforms: ''
+  tutorial_kcjhealth_string_detail_programming_languages: blocks
+  tutorial_kcjhealth_string_platforms: Alla moderna webbläsare
+  tutorial_msftwakanda_longdescription: 'Shuri, Okoye, and Riri must band together
+    to help Wakanda. Code your own action-packed activity inspired by Marvel Studios''
+    ''Black Panther: Wakanda Forever''!'
+  tutorial_msftwakanda_name: Long Live Wakanda
+  tutorial_msftwakanda_string_detail_grades: Klass 6+ (11 eller fler)
+  tutorial_msftwakanda_string_detail_platforms: ''
+  tutorial_msftwakanda_string_detail_programming_languages: blocks
+  tutorial_msftwakanda_string_platforms: Alla moderna webbläsare
   school_not_found_heading: We couldn't find your school. Please enter more information.
   school_name: School name
   school_name_error: School name is required.
