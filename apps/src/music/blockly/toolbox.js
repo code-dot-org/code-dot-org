@@ -193,6 +193,22 @@ export const baseToolbox = {
           type: 'logic_compare'
         }
       ]
+    },
+
+    {
+      kind: 'category',
+      name: 'Simple',
+      cssConfig: baseCategoryCssConfig,
+      contents: [
+        {
+          kind: 'block',
+          type: BlockTypes.PLAY_SOUND_AT_CURRENT_LOCATION
+        },
+        {
+          kind: 'block',
+          type: BlockTypes.SET_CURRENT_LOCATION_NEXT_MEASURE
+        }
+      ]
     }
   ]
 };
