@@ -17,7 +17,7 @@ module Api::V1::Pd::Application
 
     PRINCIPAL_APPROVAL_EMAILS = [
       :principal_approval_completed,
-      :principal_approval_completed_partner,
+      :admin_approval_completed_partner,
       :admin_approval_completed_teacher_receipt
     ]
 
