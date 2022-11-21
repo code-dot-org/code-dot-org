@@ -94,6 +94,7 @@ export default class TeacherSectionSelector extends Component {
     return (
       <div>
         <div
+          className="ui-test-teacher-section-selector-dropdown"
           onClick={this.handleClick}
           onKeyDown={this.handleKeyDown}
           ref={div => (this.select = div)}

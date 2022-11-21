@@ -147,6 +147,7 @@ export function UnconnectedTeacherSectionSelectorMenuItem({
               ? `Unassign course from ${section.name}`
               : `Assign course to ${section.name}`
           }
+          className="ui-teacher-section-selector-menu-item"
         >
           {getIcon()}
         </span>
