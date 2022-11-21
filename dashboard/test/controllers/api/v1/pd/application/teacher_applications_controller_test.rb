@@ -329,7 +329,7 @@ module Api::V1::Pd::Application
       end
       email = Pd::Application::Email.last
       assert_equal @application, email.application
-      assert_equal 'principal_approval', email.email_type
+      assert_equal 'admin_approval', email.email_type
     end
 
     test 'send_principal_approval does nothing if an email has already been sent' do
