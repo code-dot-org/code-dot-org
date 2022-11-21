@@ -4,14 +4,13 @@ class Services::IncompleteReminder
     # for a reminder.  It is designed to be called repeatedly (e.g. from a cronjob).
     #
     # We send reminders to complete an application 7 days after an applicant has last saved their application,
-    # another one 14 days after an applicant has saved their application, and a final email shortly before
-    # applications close.
+    # another one 14 days after an applicant has last saved their application.
     def queue_incomplete_reminders!
-      applications_needing_first_reminder.each do |application|
+      applications_needing_soft_reminder.each do |application|
         application.queue_email 'complete_application_soft_reminder'
       end
 
-      applications_needing_second_reminder.each do |application|
+      applications_needing_final_reminder.each do |application|
         application.queue_email 'complete_application_final_reminder'
       end
     end
@@ -20,7 +19,7 @@ class Services::IncompleteReminder
     # reminder, which is if they last saved it at least 7 days ago.
     # They should not receive more than one reminder of this type.
     # @return [Enumerable<Pd::Application::ApplicationBase>]
-    def applications_needing_first_reminder
+    def applications_needing_soft_reminder
       incomplete_applications.select do |app|
         most_recent_update = most_recently_updated(app)
         most_recent_update.before?(Date.today - 6.days) && most_recent_update.after?(Date.today - 14.days) &&
@@ -32,7 +31,7 @@ class Services::IncompleteReminder
     # reminder, which is if they last saved at least 14 days ago.
     # They should not receive more than one reminder of this type.
     # @return [Enumerable<Pd::Application::ApplicationBase>]
-    def applications_needing_second_reminder
+    def applications_needing_final_reminder
       incomplete_applications.select do |app|
         most_recently_updated(app).before?(Date.today - 13.days) &&
           app.emails.where(email_type: 'complete_application_final_reminder').count == 0

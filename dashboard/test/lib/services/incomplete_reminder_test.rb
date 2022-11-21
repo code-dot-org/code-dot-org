@@ -62,9 +62,8 @@ class Services::IncompleteReminderTest < ActiveSupport::TestCase
   end
 
   test 'queue_registration_reminders! takes into account user updates' do
-    # The expected behavior of this method is to find applications needing incomplete reminder
-    # emails and queue up the emails to be sent at the appropriate times.  It runs on a cronjob.
-    # Here, we walk through the typical flow for an application and verify that emails are queued
+    # Here, we walk through a flow for an application where a teacher is frequently
+    # updating and saving their application and verify that emails are queued
     # at the appropriate moments.
     #
     Timecop.freeze do
