@@ -32,7 +32,7 @@ export default function Congrats(props) {
    */
   const renderExtraCertificateLinks = (language, tutorial) => {
     let extraLinkUrl, extraLinkText;
-
+    // If Adding extra links see this PR: https://github.com/code-dot-org/code-dot-org/pull/48515
     if (!extraLinkUrl || !extraLinkText) {
       // There are no extra links to render.
       return;
