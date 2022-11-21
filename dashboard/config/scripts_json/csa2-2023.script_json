@@ -15,7 +15,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-11-12 17:19:08 UTC",
+    "serialized_at": "2022-11-18 14:09:08 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -126,6 +126,9 @@
       "has_lesson_plan": true,
       "relative_position": 4,
       "properties": {
+        "overview": "**How can I reduce ambiguity and redundancies in my program?**\n\nStudents continue building on what they have learned about constructors and parameters to explore the functionality of local variables. Students realize that the scope of local variables is limited to the constructor in which it is declared and learn to use the `this` keyword to refer to the current object and its instance variables. Students also consider how the `this` keyword can be used to minimize redundancies in their code, then practice writing parameterized constructors using the `this` keyword in a class and write parameterized constructors in the `Dessert` class.",
+        "preparation": "* Print copies of the Anticipation Guide handout (one for each student)\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-unit-2-lesson-4-constructors/36394/2) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
+        "student_overview": "**How can I reduce ambiguity and redundancies in my program?**\n\nIn this lesson, you continue building on what you have learned about constructors and parameters to explore the functionality of local variables. You realize that the scope of local variables is limited to the constructor in which it is declared and learn to use the `this` keyword to refer to the current object and its instance variables. You also consider how the `this` keyword can be used to minimize redundancies in your code, then practice writing parameterized constructors using the `this` keyword in a class and write parameterized constructors in the `Dessert` class."
       },
       "seeding_key": {
         "lesson.key": "lesson-14",
@@ -407,6 +410,48 @@
       "seeding_key": {
         "lesson_activity.key": "b170c7df-de3a-429e-b09e-7d04f7f66103",
         "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa2-2023"
+      }
+    },
+    {
+      "key": "4e7f2a3e-5b49-4669-af38-81138232a76b",
+      "position": 1,
+      "properties": {
+        "duration": 5,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "4e7f2a3e-5b49-4669-af38-81138232a76b",
+        "lesson.key": "lesson-14",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa2-2023"
+      }
+    },
+    {
+      "key": "dbff71cb-1b0e-46f3-88fa-fdd8fab6579e",
+      "position": 2,
+      "properties": {
+        "duration": 35,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "dbff71cb-1b0e-46f3-88fa-fdd8fab6579e",
+        "lesson.key": "lesson-14",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa2-2023"
+      }
+    },
+    {
+      "key": "c41d7037-149d-4d64-a6de-9163d984485c",
+      "position": 3,
+      "properties": {
+        "duration": 5,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "c41d7037-149d-4d64-a6de-9163d984485c",
+        "lesson.key": "lesson-14",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csa2-2023"
       }
@@ -1295,6 +1340,281 @@
       }
     },
     {
+      "key": "880fca10-8bb4-41d8-a7a1-eb0df0779dde",
+      "position": 1,
+      "properties": {
+        "description": "We have learned a lot about constructors and parameters so far and how we can use these to instantiate objects with default values or specific values. Today, we will learn more about how parameters function in Java and explore ways we can minimize redundancies in our code.",
+        "name": "Anticipation Guide",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "880fca10-8bb4-41d8-a7a1-eb0df0779dde",
+        "lesson_activity.key": "4e7f2a3e-5b49-4669-af38-81138232a76b"
+      }
+    },
+    {
+      "key": "683e6774-59dc-45ed-bbdf-f93ee28639da",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Anticipation Guide handout.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to respond to the prompts in the Before column on the Anticipation Guide. Have students compare their responses with a neighbor.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Emphasize to students that the goal is to make a guess for each statement based on what they know about Java so far rather than to determine the correct answer. These are concepts students should look out for throughout the lesson, and they will revisit the Anticipation Guide at the end of the lesson to review and revise their responses."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "683e6774-59dc-45ed-bbdf-f93ee28639da",
+        "lesson_activity.key": "4e7f2a3e-5b49-4669-af38-81138232a76b"
+      }
+    },
+    {
+      "key": "501aa0e3-9c5d-4e21-971b-59d88f854707",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives and the Question of the Day.",
+        "duration": "5",
+        "name": "Introduction"
+      },
+      "seeding_key": {
+        "activity_section.key": "501aa0e3-9c5d-4e21-971b-59d88f854707",
+        "lesson_activity.key": "dbff71cb-1b0e-46f3-88fa-fdd8fab6579e"
+      }
+    },
+    {
+      "key": "629c0781-ab71-4e19-bf36-bd1ca607b56a",
+      "position": 2,
+      "properties": {
+        "description": "We previously learned that parameters are local variables. These variables exist only within the block of code in which they are declared. Let's take a closer look at how these parameters are used in Java.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "629c0781-ab71-4e19-bf36-bd1ca607b56a",
+        "lesson_activity.key": "dbff71cb-1b0e-46f3-88fa-fdd8fab6579e"
+      }
+    },
+    {
+      "key": "7ad4a463-1d93-4dc8-be71-7e414c7433ab",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to predict the program's outcome, then run the program to compare their predictions to the actual outcome.",
+        "progression_name": "Predict and Run: Constructors and Scope"
+      },
+      "seeding_key": {
+        "activity_section.key": "7ad4a463-1d93-4dc8-be71-7e414c7433ab",
+        "lesson_activity.key": "dbff71cb-1b0e-46f3-88fa-fdd8fab6579e"
+      }
+    },
+    {
+      "key": "a3dd5b9d-6f10-4fb8-a0fa-e11eda343bf2",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What did you notice about the code in this program?*\n* *What do you wonder about the code in this program?*\n\n**Discussion Goal:** Students notice that the instance variables are assigned default values based on their data types instead of the values specified in the constructor call. They also notice that the parameter names are the same as the instance variables. Students may wonder why the instance variables were assigned default values or how Java knows which variable to use when the names are the same."
+      },
+      "seeding_key": {
+        "activity_section.key": "a3dd5b9d-6f10-4fb8-a0fa-e11eda343bf2",
+        "lesson_activity.key": "dbff71cb-1b0e-46f3-88fa-fdd8fab6579e"
+      }
+    },
+    {
+      "key": "e95c7ea3-4bf0-4f08-826c-8dca8cbdfc16",
+      "position": 5,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Recall that the formal parameters are local variables and explain that these are referenced first instead of the instance variables.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 2 on Code Studio to complete Levels 2, 3, and 4. Students investigate the program, make changes to the program as prompted, and observe the results.",
+        "duration": "15",
+        "name": "The this Keyword",
+        "progression_name": "Investigate and Modify: The this Keyword"
+      },
+      "seeding_key": {
+        "activity_section.key": "e95c7ea3-4bf0-4f08-826c-8dca8cbdfc16",
+        "lesson_activity.key": "dbff71cb-1b0e-46f3-88fa-fdd8fab6579e"
+      }
+    },
+    {
+      "key": "06267b29-2bf1-4d1f-8f64-d61f06fa72dd",
+      "position": 6,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students share what they discovered from the modifications they made to the code.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What does the word \"scope\" mean to you?*\n\n**Discussion Goal:** Students share definitions of scope, such as how much of a topic or area is being covered or investigating something.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Use the Hold That Thought strategy to allow students to write down their thoughts on paper first. Emphasize that they do not need to write complete sentences – they can write a few words, bullet points, draw a quick sketch, or anything else that will help them gather and recall their thoughts when it is time to share with the class.\n\nHave students share examples of where they have heard or used the word \"scope\" before. Prompt students to consider how these definitions and examples might be related to its use in programming."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "06267b29-2bf1-4d1f-8f64-d61f06fa72dd",
+        "lesson_activity.key": "dbff71cb-1b0e-46f3-88fa-fdd8fab6579e"
+      }
+    },
+    {
+      "key": "2ef87beb-5385-4130-8de1-5d8d137fa68a",
+      "position": 7,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to define and explain ***scope***.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the `this` keyword and explain its functionality.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *How does using the `this` keyword make our code more efficient and minimize redundancies?*\n\n**Discussion Goal:** Students suggest that using the same names for the parameters as the instance variables makes it easier to identify the purpose of the parameters and associate them to the instance variables. Students also note that using the `this` keyword to call a different constructor in the class makes it easier to reuse existing code instead of rewriting the code to assign the values to the instance variables."
+      },
+      "seeding_key": {
+        "activity_section.key": "2ef87beb-5385-4130-8de1-5d8d137fa68a",
+        "lesson_activity.key": "dbff71cb-1b0e-46f3-88fa-fdd8fab6579e"
+      }
+    },
+    {
+      "key": "93576fc9-b2a4-4787-beee-cad93d69658c",
+      "position": 8,
+      "properties": {
+        "description": "We have learned a lot about writing constructors that we can use to instantiate objects in our programs! Let's practice putting what we have learned so far together to write constructors in our classes.",
+        "duration": "15",
+        "name": "Putting It All Together",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "93576fc9-b2a4-4787-beee-cad93d69658c",
+        "lesson_activity.key": "dbff71cb-1b0e-46f3-88fa-fdd8fab6579e"
+      }
+    },
+    {
+      "key": "c3107d0c-ae88-465b-9241-fac741ae7024",
+      "position": 9,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 5 on Code Studio to complete Levels 5, 6, and 7. On Level 5, students complete a Check for Understanding, then continue to Level 6 to practice writing no-argument and parameterized constructors in a class. On Level 7, students write parameterized constructors in the `Dessert` class.",
+        "progression_name": "Practice: The this Keyword",
+        "tips": [
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "The Check for Understanding and practice level can be used as a formative assessment to gauge understanding of the key terms and using the this keyword with parameterized constructors in a class."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "c3107d0c-ae88-465b-9241-fac741ae7024",
+        "lesson_activity.key": "dbff71cb-1b0e-46f3-88fa-fdd8fab6579e"
+      }
+    },
+    {
+      "key": "ea94a0ad-9acb-413f-b9dc-c7c153a47ec0",
+      "position": 10,
+      "properties": {
+        "description": "This is a good time to commit our code and save our `Dessert` class to the Backpack. We will be adding to the classes throughout the unit as we learn more about designing classes and their components.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "ea94a0ad-9acb-413f-b9dc-c7c153a47ec0",
+        "lesson_activity.key": "dbff71cb-1b0e-46f3-88fa-fdd8fab6579e"
+      }
+    },
+    {
+      "key": "e34072bc-7a02-400f-9dad-15f8b508a5cc",
+      "position": 11,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Play the music clip to cue committing their code and saving their `Dessert` class to the Backpack.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Using music to cue transitions helps create routines in the classroom. When students hear cues, they know it is time to transition to a specific activity. Emphasize to students what the music clip means, and be consistent with the use of the music clip to cue the activity.\n\nClick the blue play icon on the slide to play the music cue."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "e34072bc-7a02-400f-9dad-15f8b508a5cc",
+        "lesson_activity.key": "dbff71cb-1b0e-46f3-88fa-fdd8fab6579e"
+      }
+    },
+    {
+      "key": "6780f8df-920e-478b-b543-b61acd78cafd",
+      "position": 1,
+      "properties": {
+        "description": "Now that we have learned more about how parameters function in Java and explored ways to minimize redundancies in our code, let's revisit our Anticipation Guide from the beginning of the lesson.",
+        "name": "Revisiting the Anticipation Guide",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "6780f8df-920e-478b-b543-b61acd78cafd",
+        "lesson_activity.key": "c41d7037-149d-4d64-a6de-9163d984485c"
+      }
+    },
+    {
+      "key": "9195347f-7aab-4f3c-81ad-9000258200ba",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students respond to the prompts in the After column on the Anticipation Guide. Have students compare their responses with a neighbor.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "If time permits, have students share their Before and After responses as a class to recap what they learned."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "9195347f-7aab-4f3c-81ad-9000258200ba",
+        "lesson_activity.key": "c41d7037-149d-4d64-a6de-9163d984485c"
+      }
+    },
+    {
+      "key": "55a8e3b9-c07f-4e8b-8565-ba0c9ffadf34",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson and the Question of the Day.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "The Unit 2 Guide includes an end-of-lesson reflection prompt for students to reflect on the lesson and the progress they made in developing their software engineering skills and characteristics. Have students respond to the reflection prompt after reviewing the concepts covered in this lesson to help them process and reflect on their personal growth."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "55a8e3b9-c07f-4e8b-8565-ba0c9ffadf34",
+        "lesson_activity.key": "c41d7037-149d-4d64-a6de-9163d984485c"
+      }
+    },
+    {
+      "key": "68cf8bc8-d30d-4d6a-b9c8-e920718db5fc",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary"
+      },
+      "seeding_key": {
+        "activity_section.key": "68cf8bc8-d30d-4d6a-b9c8-e920718db5fc",
+        "lesson_activity.key": "c41d7037-149d-4d64-a6de-9163d984485c"
+      }
+    },
+    {
+      "key": "55279544-59ea-487f-9288-1b33a5be6c56",
+      "position": 5,
+      "properties": {
+        "description": "---"
+      },
+      "seeding_key": {
+        "activity_section.key": "55279544-59ea-487f-9288-1b33a5be6c56",
+        "lesson_activity.key": "c41d7037-149d-4d64-a6de-9163d984485c"
+      }
+    },
+    {
+      "key": "49475f0b-5f3f-4b11-8305-9cbc95671209",
+      "position": 6,
+      "properties": {
+        "description": "*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*",
+        "name": "Assessment: Check for Understanding",
+        "progression_name": "Check for Understanding"
+      },
+      "seeding_key": {
+        "activity_section.key": "49475f0b-5f3f-4b11-8305-9cbc95671209",
+        "lesson_activity.key": "c41d7037-149d-4d64-a6de-9163d984485c"
+      }
+    },
+    {
+      "key": "26b27411-a84f-424f-b1dd-16a1c0fa3f15",
+      "position": 7,
+      "properties": {
+        "description": "To assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\nThe following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 5.8\n* Topic Questions 5.9\n\n**Note:** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*",
+        "name": "AP Classroom Topic Questions"
+      },
+      "seeding_key": {
+        "activity_section.key": "26b27411-a84f-424f-b1dd-16a1c0fa3f15",
+        "lesson_activity.key": "c41d7037-149d-4d64-a6de-9163d984485c"
+      }
+    },
+    {
       "key": "f9d49b90-477e-4a3d-bafc-60c533935ade",
       "position": 1,
       "properties": {
@@ -1362,6 +1682,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L1-L2-2_2023"
+        ],
         "progression": "Investigate and Modify: Classes and Attributes"
       },
       "bonus": false,
@@ -1384,6 +1707,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L1-L2-3_2023"
+        ],
         "progression": "Investigate and Modify: Classes and Attributes"
       },
       "bonus": false,
@@ -1456,6 +1782,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L1-L4-2_2023"
+        ],
         "progression": "Investigate and Modify: Refactoring Code"
       },
       "bonus": false,
@@ -1478,6 +1807,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U2L1-L5_2023"
+        ],
         "progression": "Practice: The Food Truck"
       },
       "bonus": false,
@@ -1500,6 +1832,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L1-L6_2023"
+        ],
         "progression": "Practice: The Food Truck"
       },
       "bonus": false,
@@ -1522,6 +1857,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U2L1-L7_2023"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -1594,6 +1932,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L2-L2-2_2023"
+        ],
         "progression": "Investigate and Modify: Constructors"
       },
       "bonus": false,
@@ -1616,6 +1957,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L2-L2-3_2023"
+        ],
         "progression": "Investigate and Modify: Constructors"
       },
       "bonus": false,
@@ -1638,6 +1982,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L2-L3_2023"
+        ],
         "progression": "Skill Building: Writing a Constructor"
       },
       "bonus": false,
@@ -1660,6 +2007,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U2L2-L4_2023"
+        ],
         "progression": "Practice: Writing a Class"
       },
       "bonus": false,
@@ -1682,6 +2032,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L2-L5_2023"
+        ],
         "progression": "Practice: Writing a Class"
       },
       "bonus": false,
@@ -1704,6 +2057,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L2-L6_2023"
+        ],
         "progression": "Practice: The Food Truck"
       },
       "bonus": false,
@@ -1726,6 +2082,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U2L2-L7_2023"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -1798,6 +2157,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L3-L2-2_2023"
+        ],
         "progression": "Investigate and Modify: Parameterized Constructors"
       },
       "bonus": false,
@@ -1820,6 +2182,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L3-L2-3_2023"
+        ],
         "progression": "Investigate and Modify: Parameterized Constructors"
       },
       "bonus": false,
@@ -1842,6 +2207,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U2L3 CFU_2023"
+        ],
         "progression": "Practice: Parameterized Constructors"
       },
       "bonus": false,
@@ -1931,6 +2299,182 @@
       },
       "level_keys": [
         "CSA U2L3-L10_2023"
+      ]
+    },
+    {
+      "chapter": 28,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Predict and Run: Constructors and Scope"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U2L4-L1_2023"
+        ],
+        "lesson.key": "lesson-14",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa2-2023",
+        "activity_section.key": "7ad4a463-1d93-4dc8-be71-7e414c7433ab"
+      },
+      "level_keys": [
+        "CSA U2L4-L1_2023"
+      ]
+    },
+    {
+      "chapter": 29,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Investigate and Modify: The this Keyword"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U2L4-L2_2023"
+        ],
+        "lesson.key": "lesson-14",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa2-2023",
+        "activity_section.key": "e95c7ea3-4bf0-4f08-826c-8dca8cbdfc16"
+      },
+      "level_keys": [
+        "CSA U2L4-L2_2023"
+      ]
+    },
+    {
+      "chapter": 30,
+      "position": 3,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Investigate and Modify: The this Keyword"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U2L4-L3_2023"
+        ],
+        "lesson.key": "lesson-14",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa2-2023",
+        "activity_section.key": "e95c7ea3-4bf0-4f08-826c-8dca8cbdfc16"
+      },
+      "level_keys": [
+        "CSA U2L4-L3_2023"
+      ]
+    },
+    {
+      "chapter": 31,
+      "position": 4,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Investigate and Modify: The this Keyword"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U2L4-L4_2023"
+        ],
+        "lesson.key": "lesson-14",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa2-2023",
+        "activity_section.key": "e95c7ea3-4bf0-4f08-826c-8dca8cbdfc16"
+      },
+      "level_keys": [
+        "CSA U2L4-L4_2023"
+      ]
+    },
+    {
+      "chapter": 32,
+      "position": 5,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "progression": "Practice: The this Keyword"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U2L4-L5_2023"
+        ],
+        "lesson.key": "lesson-14",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa2-2023",
+        "activity_section.key": "c3107d0c-ae88-465b-9241-fac741ae7024"
+      },
+      "level_keys": [
+        "CSA U2L4-L5_2023"
+      ]
+    },
+    {
+      "chapter": 33,
+      "position": 6,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Practice: The this Keyword"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U2L4-L6_2023"
+        ],
+        "lesson.key": "lesson-14",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa2-2023",
+        "activity_section.key": "c3107d0c-ae88-465b-9241-fac741ae7024"
+      },
+      "level_keys": [
+        "CSA U2L4-L6_2023"
+      ]
+    },
+    {
+      "chapter": 34,
+      "position": 7,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Practice: The this Keyword"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U2L4-L7_2023"
+        ],
+        "lesson.key": "lesson-14",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa2-2023",
+        "activity_section.key": "c3107d0c-ae88-465b-9241-fac741ae7024"
+      },
+      "level_keys": [
+        "CSA U2L4-L7_2023"
+      ]
+    },
+    {
+      "chapter": 35,
+      "position": 8,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "progression": "Check for Understanding"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U2L4-L8_2023"
+        ],
+        "lesson.key": "lesson-14",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa2-2023",
+        "activity_section.key": "49475f0b-5f3f-4b11-8305-9cbc95671209"
+      },
+      "level_keys": [
+        "CSA U2L4-L8_2023"
       ]
     }
   ],
@@ -2258,9 +2802,117 @@
         "script.name": "csa2-2023",
         "activity_section.key": "d8fd9ad5-92d6-44ad-aae4-20d4e4cbeaf2"
       }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U2L4-L1_2023",
+        "script_level.level_keys": [
+          "CSA U2L4-L1_2023"
+        ],
+        "lesson.key": "lesson-14",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa2-2023",
+        "activity_section.key": "7ad4a463-1d93-4dc8-be71-7e414c7433ab"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U2L4-L2_2023",
+        "script_level.level_keys": [
+          "CSA U2L4-L2_2023"
+        ],
+        "lesson.key": "lesson-14",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa2-2023",
+        "activity_section.key": "e95c7ea3-4bf0-4f08-826c-8dca8cbdfc16"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U2L4-L3_2023",
+        "script_level.level_keys": [
+          "CSA U2L4-L3_2023"
+        ],
+        "lesson.key": "lesson-14",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa2-2023",
+        "activity_section.key": "e95c7ea3-4bf0-4f08-826c-8dca8cbdfc16"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U2L4-L4_2023",
+        "script_level.level_keys": [
+          "CSA U2L4-L4_2023"
+        ],
+        "lesson.key": "lesson-14",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa2-2023",
+        "activity_section.key": "e95c7ea3-4bf0-4f08-826c-8dca8cbdfc16"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U2L4-L5_2023",
+        "script_level.level_keys": [
+          "CSA U2L4-L5_2023"
+        ],
+        "lesson.key": "lesson-14",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa2-2023",
+        "activity_section.key": "c3107d0c-ae88-465b-9241-fac741ae7024"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U2L4-L6_2023",
+        "script_level.level_keys": [
+          "CSA U2L4-L6_2023"
+        ],
+        "lesson.key": "lesson-14",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa2-2023",
+        "activity_section.key": "c3107d0c-ae88-465b-9241-fac741ae7024"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U2L4-L7_2023",
+        "script_level.level_keys": [
+          "CSA U2L4-L7_2023"
+        ],
+        "lesson.key": "lesson-14",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa2-2023",
+        "activity_section.key": "c3107d0c-ae88-465b-9241-fac741ae7024"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U2L4-L8_2023",
+        "script_level.level_keys": [
+          "CSA U2L4-L8_2023"
+        ],
+        "lesson.key": "lesson-14",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa2-2023",
+        "activity_section.key": "49475f0b-5f3f-4b11-8305-9cbc95671209"
+      }
     }
   ],
   "resources": [
+    {
+      "name": "[KEY] Anticipation Guide",
+      "url": "https://docs.google.com/document/d/1pNBHHn3W7xYTXfnCr9unJ9dL7NfQ4AAkmNGJyFy9nOU/edit?usp=sharing",
+      "key": "_key_anticipation_guide",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "_key_anticipation_guide"
+      }
+    },
     {
       "name": "[KEY] U2L1 Extra Practice",
       "url": "https://docs.google.com/document/d/14yfuKXi8y0vL9JSJ6Bd0a1T5w6JSaQVez1xaqHdVA9k/edit?usp=sharing",
@@ -2295,6 +2947,31 @@
       },
       "seeding_key": {
         "resource.key": "_key_u2l3_extra_practice"
+      }
+    },
+    {
+      "name": "[KEY] U2L4 Extra Practice",
+      "url": "https://docs.google.com/document/d/1flZENjUuVQ7-U2pN6KrmVJOlWeOGB1wqtXNjAFXBpEQ/edit?usp=sharing",
+      "key": "_key_u2l4_extra_practice",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "_key_u2l4_extra_practice"
+      }
+    },
+    {
+      "name": "Anticipation Guide",
+      "url": "https://docs.google.com/document/d/1D5d1uUJGuYqAQP77kKeGDqLfDJIGhE434JGlxmmNhTM/edit?usp=sharing",
+      "key": "anticipation_guide",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "anticipation_guide"
       }
     },
     {
@@ -2370,6 +3047,18 @@
       }
     },
     {
+      "name": "The this Keyword",
+      "url": "https://docs.google.com/presentation/d/1t5Spp8xU2AT4z0tjofAIbqiU1UKpWbu0ZiL1cfkpX68/edit?usp=sharing",
+      "key": "the_this_keyword",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "the_this_keyword"
+      }
+    },
+    {
       "name": "U2L1 Extra Practice",
       "url": "https://docs.google.com/document/d/1xol1ugsQO8w330sOTKis3AB6r0vv0WVjVNBA09JPWtk/edit?usp=sharing",
       "key": "u2l1_extra_practice",
@@ -2407,6 +3096,19 @@
       "seeding_key": {
         "resource.key": "u2l3_extra_practice"
       }
+    },
+    {
+      "name": "U2L4 Extra Practice",
+      "url": "https://docs.google.com/document/d/1Y78NwHdU_x7GF9r2NTQLDJBwLvFWaCb5rdNDTEkwHbg/edit?usp=sharing",
+      "key": "u2l4_extra_practice",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "u2l4_extra_practice"
+      }
     }
   ],
   "lessons_resources": [
@@ -2432,6 +3134,36 @@
       "seeding_key": {
         "lesson.key": "lesson-1",
         "resource.key": "u2l1_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-14",
+        "resource.key": "_key_anticipation_guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-14",
+        "resource.key": "_key_u2l4_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-14",
+        "resource.key": "anticipation_guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-14",
+        "resource.key": "the_this_keyword"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-14",
+        "resource.key": "u2l4_extra_practice"
       }
     },
     {
@@ -2631,6 +3363,16 @@
       }
     },
     {
+      "key": "scope",
+      "word": "scope",
+      "definition": "where a variable can be used",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "scope"
+      }
+    },
+    {
       "key": "state",
       "word": "state",
       "definition": "the attributes of an object that are represented by its instance variables",
@@ -2670,6 +3412,12 @@
       "seeding_key": {
         "lesson.key": "lesson-1",
         "vocabulary.key": "refactor"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-14",
+        "vocabulary.key": "scope"
       }
     },
     {
@@ -2745,6 +3493,26 @@
       "seeding_key": {
         "lesson.key": "lesson-1",
         "objective.key": "0251d959-08e7-47c3-b0eb-ee1649979d38"
+      }
+    },
+    {
+      "key": "2ad8d674-18a2-4b7f-9aff-03eba4c29333",
+      "properties": {
+        "description": "Use the `this` keyword to refer to the current object"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-14",
+        "objective.key": "2ad8d674-18a2-4b7f-9aff-03eba4c29333"
+      }
+    },
+    {
+      "key": "4666925c-d85e-45d5-8d90-20ea2b5140d6",
+      "properties": {
+        "description": "Identify the scope of variables"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-14",
+        "objective.key": "4666925c-d85e-45d5-8d90-20ea2b5140d6"
       }
     },
     {
@@ -2842,6 +3610,13 @@
         "lesson.key": "lesson-1",
         "framework.shortcode": "csa",
         "standard.shortcode": "MOD-3.A.3"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-14",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "VAR-1.H.1"
       }
     },
     {
