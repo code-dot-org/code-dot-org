@@ -65,7 +65,6 @@ module Pd::Application
     AUTO_EMAIL_STATUSES = %w(
       accepted
       declined
-      pending_space_availability
     )
 
     # If the regional partner's emails are SENT_BY_SYSTEM, the application must
