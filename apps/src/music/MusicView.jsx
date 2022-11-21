@@ -4,26 +4,21 @@ import PropTypes from 'prop-types';
 import _ from 'lodash';
 import classNames from 'classnames';
 import {Provider, connect} from 'react-redux';
-import CustomMarshalingInterpreter from '../lib/tools/jsinterpreter/CustomMarshalingInterpreter';
 import queryString from 'query-string';
-import {baseToolbox} from './blockly/toolbox';
 import Instructions from './Instructions';
 import SharePlaceholder from './SharePlaceholder';
 import Controls from './Controls';
 import Timeline from './Timeline';
-import {MUSIC_BLOCKS} from './blockly/musicBlocks';
-import {BlockTypes} from './blockly/blockTypes';
 import MusicPlayer from './player/MusicPlayer';
 import {Triggers} from './constants';
-import {musicLabDarkTheme} from './blockly/themes';
 import AnalyticsReporter from './analytics/AnalyticsReporter';
 import {getStore} from '@cdo/apps/redux';
 import {SignInState} from '@cdo/apps/templates/currentUserRedux';
 import moduleStyles from './music.module.scss';
-import FieldSounds from './FieldSounds';
 import {AnalyticsContext} from './context';
 import TopButtons from './TopButtons';
 import Globals from './globals';
+import MusicBlocklyWorkspace from './blockly/MusicBlocklyWorkspace';
 
 const baseUrl = 'https://curriculum.code.org/media/musiclab/';
 
@@ -47,17 +42,6 @@ class UnconnectedMusicView extends React.Component {
     signInState: PropTypes.oneOf(Object.values(SignInState))
   };
 
-  callUserGeneratedCode = fn => {
-    try {
-      fn.call(MusicView, this.player);
-    } catch (e) {
-      // swallow error. should we also log this somewhere?
-      if (console) {
-        console.log(e);
-      }
-    }
-  };
-
   constructor(props) {
     super(props);
 
@@ -65,6 +49,7 @@ class UnconnectedMusicView extends React.Component {
     this.player = new MusicPlayer();
     this.analyticsReporter = new AnalyticsReporter();
     this.codeHooks = {};
+    this.musicBlocklyWorkspace = new MusicBlocklyWorkspace();
 
     // We have seen on Android devices that window.innerHeight will always be the
     // same whether in landscape or portrait orientation.  Given that we tell
@@ -131,7 +116,10 @@ class UnconnectedMusicView extends React.Component {
 
     this.loadLibrary().then(library => {
       this.setState({library});
-      this.initBlockly();
+      this.musicBlocklyWorkspace.init(
+        document.getElementById('blockly-div'),
+        this.onBlockSpaceChange
+      );
       this.player.initialize(library);
       setInterval(this.updateTimer, 1000 / 30);
 
@@ -145,7 +133,7 @@ class UnconnectedMusicView extends React.Component {
   }
 
   componentDidUpdate(prevProps) {
-    this.resizeBlockly();
+    this.musicBlocklyWorkspace.resizeBlockly();
     if (
       prevProps.userId !== this.props.userId ||
       prevProps.userType !== this.props.userType ||
@@ -184,68 +172,12 @@ class UnconnectedMusicView extends React.Component {
     return library;
   };
 
-  initBlockly = () => {
-    Blockly.blockly_.Extensions.register(
-      'dynamic_trigger_extension',
-      function() {
-        this.getInput('trigger').appendField(
-          new Blockly.FieldDropdown(function() {
-            return Triggers.map(trigger => [trigger.dropdownLabel, trigger.id]);
-          }),
-          'trigger'
-        );
-      }
-    );
-
-    for (let blockType of Object.keys(MUSIC_BLOCKS)) {
-      Blockly.Blocks[blockType] = {
-        init: function() {
-          this.jsonInit(MUSIC_BLOCKS[blockType].definition);
-        }
-      };
-
-      Blockly.JavaScript[blockType] = MUSIC_BLOCKS[blockType].generator;
-    }
-
-    Blockly.blockly_.fieldRegistry.register('field_sounds', FieldSounds);
-
-    const container = document.getElementById('blockly-div');
-
-    this.workspace = Blockly.inject(container, {
-      // Toolbox will be programmatically generated once music manifest is loaded
-      toolbox: baseToolbox,
-      grid: {spacing: 20, length: 0, colour: '#444', snap: true},
-      theme: musicLabDarkTheme,
-      renderer: 'cdo_renderer_zelos'
-    });
-
-    this.resizeBlockly();
-
-    // Set initial blocks.
-    this.loadCode();
-
-    Blockly.addChangeListener(Blockly.mainBlockSpace, this.onBlockSpaceChange);
-
-    this.workspace.registerButtonCallback('createVariableHandler', button => {
-      Blockly.Variables.createVariableButtonHandler(
-        button.getTargetWorkspace(),
-        null,
-        null
-      );
-    });
-  };
-
   clearCode = () => {
-    // Default code.
-    const defaultCode = require('@cdo/static/music/defaultCode.json');
-
-    Blockly.blockly_.serialization.workspaces.load(defaultCode, this.workspace);
+    this.musicBlocklyWorkspace.resetCode();
 
     this.setPlaying(false);
 
     this.player.clearAllSoundEvents();
-
-    this.saveCode();
   };
 
   onBlockSpaceChange = e => {
@@ -274,32 +206,15 @@ class UnconnectedMusicView extends React.Component {
 
     console.log('onBlockSpaceChange', Blockly.getWorkspaceCode());
 
-    this.analyticsReporter.onBlocksUpdated(this.workspace.getAllBlocks());
+    this.analyticsReporter.onBlocksUpdated(
+      this.musicBlocklyWorkspace.getAllBlocks()
+    );
 
     // This is a way to tell React to re-render the scene, notably
     // the timeline.
     this.setState({updateNumber: this.state.updateNumber + 1});
 
-    this.saveCode();
-  };
-
-  saveCode = () => {
-    const code = Blockly.blockly_.serialization.workspaces.save(this.workspace);
-    const codeJson = JSON.stringify(code);
-    localStorage.setItem('musicLabSavedCode', codeJson);
-  };
-
-  loadCode = () => {
-    const existingCode = localStorage.getItem('musicLabSavedCode');
-    if (existingCode) {
-      const exitingCodeJson = JSON.parse(existingCode);
-      Blockly.blockly_.serialization.workspaces.load(
-        exitingCodeJson,
-        this.workspace
-      );
-    } else {
-      this.clearCode();
-    }
+    this.musicBlocklyWorkspace.saveCode();
   };
 
   onResize = () => {
@@ -324,23 +239,6 @@ class UnconnectedMusicView extends React.Component {
     }
   };
 
-  resizeBlockly = () => {
-    if (!this.workspace) {
-      return;
-    }
-
-    const blocklyDiv = document.getElementById('blockly-div');
-
-    blocklyDiv.style.width = '100%';
-    blocklyDiv.style.height = '100%';
-    Blockly.svgResize(this.workspace);
-  };
-
-  choosePanel = panel => {
-    this.setState({currentPanel: panel});
-    this.resizeBlockly();
-  };
-
   setPlaying = play => {
     if (play) {
       this.playSong();
@@ -350,19 +248,12 @@ class UnconnectedMusicView extends React.Component {
     }
   };
 
-  setGroupPanel = panel => {
-    this.setState({groupPanel: panel});
-  };
-
   playTrigger = id => {
     if (!this.state.isPlaying) {
       return;
     }
     this.analyticsReporter.onButtonClicked('trigger', {id});
-    const hook = this.codeHooks[this.triggerIdToEvent(id)];
-    if (hook) {
-      this.callUserGeneratedCode(hook);
-    }
+    this.musicBlocklyWorkspace.executeTrigger(id);
   };
 
   toggleInstructions = fromKeyboardShortcut => {
@@ -376,35 +267,9 @@ class UnconnectedMusicView extends React.Component {
   };
 
   executeSong = () => {
-    Blockly.getGenerator().init(this.workspace);
-
-    const events = {};
-
-    this.workspace.getTopBlocks().forEach(block => {
-      if (block.type === BlockTypes.WHEN_RUN) {
-        events.whenRunButton = {
-          code: Blockly.JavaScript.blockToCode(block)
-        };
-      }
-
-      if (block.type === BlockTypes.TRIGGERED_AT) {
-        const id = block.getFieldValue('trigger');
-        events[this.triggerIdToEvent(id)] = {
-          code: Blockly.JavaScript.blockToCode(block)
-        };
-      }
+    this.musicBlocklyWorkspace.executeSong({
+      MusicPlayer: this.player
     });
-
-    this.codeHooks = {};
-
-    CustomMarshalingInterpreter.evalWithEvents(
-      {MusicPlayer: this.player},
-      events
-    ).hooks.forEach(hook => {
-      this.codeHooks[hook.name] = hook.func;
-    });
-
-    this.callUserGeneratedCode(this.codeHooks.whenRunButton);
   };
 
   triggerIdToEvent = id => `triggeredAtButton-${id}`;
