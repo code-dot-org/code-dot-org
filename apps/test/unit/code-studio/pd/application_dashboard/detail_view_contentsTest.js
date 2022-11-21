@@ -259,6 +259,30 @@ describe('DetailViewContents', () => {
           .find('[value="incomplete"]')
       ).to.have.lengthOf(1);
     });
+
+    it('changelog logs all possible status changes', () => {
+      let status_change_log = [];
+
+      // get logs for changing through possible status
+      Object.keys(
+        getSelectableApplicationStatuses(applicationType.toLowerCase())
+      ).forEach(status => {
+        status_change_log.push({
+          changing_user: 'Test use',
+          time: '2018-06-01 12:00 PDT',
+          title: status
+        });
+      });
+
+      // check that recorded change logs are rendered in ChangeLog element
+      const overrides = {
+        applicationData: {status_change_log: status_change_log}
+      };
+      const detailView = mountDetailView(applicationType, overrides);
+      expect(detailView.find('ChangeLog').props().changeLog).to.deep.equal(
+        status_change_log
+      );
+    });
   });
 
   const expectedTestData = ['Teacher', 'Facilitator'];
