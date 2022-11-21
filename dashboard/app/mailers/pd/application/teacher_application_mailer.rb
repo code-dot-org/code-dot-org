@@ -22,7 +22,7 @@ module Pd::Application
       end
     end
 
-    def principal_approval_teacher_reminder(teacher_application)
+    def admin_approval_teacher_reminder(teacher_application)
       @application = teacher_application
 
       if @application.regional_partner
