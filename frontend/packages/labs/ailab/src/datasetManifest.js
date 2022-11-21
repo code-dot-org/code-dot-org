@@ -21,7 +21,7 @@ export function getAvailableDatasets(specificDatasets) {
 export function getDatasets() {
   // Cache the localization since this shouldn't change.
   if (!allDatasets) {
-    allDatasets = localizeDatasets(require("../public/datasets/manifest.json").datasets);
+    allDatasets = localizeDatasets(require("../public/datasets-manifest.json").datasets);
   }
   return allDatasets;
 }
