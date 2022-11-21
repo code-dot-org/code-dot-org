@@ -61,7 +61,7 @@ it:
         error:
           future: non può essere in futuro
   beta: "versione provvisoria"
-  hello: "Ciao a tutti"
+  hello: "Ciao mondo"
   welcome_back: "Bentornato, %{name}"
   your_professional_learning_plan: "Your Professional Learning Plan"
   see_your_learning_plan: "Guarda il tuo piano di apprendimento"
@@ -673,7 +673,8 @@ it:
     dance-2019:
       title: 'Ballando col codice'
     hello-world:
-      title: 'Ciao Mondo'
+      title: 'Ciao mondo'
+      body: 'Scegli tra i seguenti quattro temi divertenti per programmare dei personaggi interattivi in un mondo creato da te.'
     poem-art:
       title: 'L''arte della poesia'
       body: 'Esprimiti! Usa il codice per animare le poesie.'

@@ -360,6 +360,7 @@ ar:
       educate_beyond: "ما بعد Code.org"
       educate_inspire: "ألهم طالب"
       educate_community: "المجتمع الإلكتروني"
+      educate_requirements: "المتطلبات التقنية"
       educate_tools: "الأدوات ومقاطع الفيديو"
       about_us: "نبذة عنا"
       about_leadership: "القيادة"
@@ -674,6 +675,7 @@ ar:
       title: 'حفلة الرقص'
     hello-world:
       title: 'مرحبًا أيها العالم'
+      body: 'اختر من بين أربعة موضوعات ممتعة لبرمجة شخصيات تفاعلية في عالم تقوم بإنشائه.'
     poem-art:
       title: 'فن القصيدة'
     hoc:

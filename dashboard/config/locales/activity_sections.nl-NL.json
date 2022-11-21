@@ -554,17 +554,44 @@
           "progression_name": "Tekstcompressie"
         },
         "8581ae5d-4d2a-4221-b820-5920dd449b6c": {
-          "name": "Introductie"
+          "name": "Introductie",
+          "description": ""
         },
         "d63c77c1-4167-4360-ab98-25610934beda": {
           "name": "Uitbraak",
+          "description": "",
           "progression_name": "Uitbraak"
+        },
+        "385c2c6a-f7e4-4c90-b081-7030d22193ed": {
+          "description": "",
+          "progression_name": ""
+        },
+        "60837b14-7f66-4848-9c51-1c6aa9a21ad9": {
+          "description": ""
+        },
+        "13a06294-2f2a-4661-9947-46ed5843913f": {
+          "description": ""
+        },
+        "df13fa93-37df-4188-837d-462c48179625": {
+          "description": "",
+          "progression_name": ""
+        },
+        "ae9fb00b-5b7e-4ecb-94c9-c778a2eba24e": {
+          "description": "",
+          "progression_name": ""
         },
         "0620e645-f84e-47ca-809b-3dcbe803d83e": {
           "progression_name": "Vrije Speelruimte"
         },
+        "3a53855f-2fc4-48f1-a05e-1bd8e2c265e0": {
+          "description": ""
+        },
+        "b3189fd8-5272-4de4-953a-f4848b2ddb5c": {
+          "description": ""
+        },
         "b8e884f1-eae0-4138-8778-0972f90e34d9": {
-          "name": "Reflectie"
+          "name": "Reflectie",
+          "description": ""
         },
         "21f43e64-dea3-4abc-8284-e055480370ce": {
           "name": "Introductie",
@@ -716,6 +743,10 @@
         "50216925-6742-400e-b45a-2de4cd3b63f2": {
           "name": "Afronden"
         },
+        "197fed33-dc42-4fc0-8d20-e84b09292caa": {
+          "name": "",
+          "description": ""
+        },
         "de7dca58-f7d8-448f-84cf-41d215d2bf11": {
           "description": "_Tijdens deze activiteit zult u het leuk vinden een interactieve wereld te creëren met leuke personages die we sprites noemen. U zult in staat zijn de sprites dingen te laten zeggen met tekstballonnetjes zoals u die kent uit stripboeken, en u zult leren hen automatisch te laten reageren als u of iemand anders op hen klikt._\n\n_Vandaag zult u \"code\" schrijven, wat niets anders inhoudt dan een set van instructies die een computer kan begrijpen. Als u een verhaal schrijft, dan moet u goed nadenken over de woorden die u gaat gebruiken. Als u code schrijft, dan dient u goed na te denken over de instructies die u geeft aan uw computer._",
           "tips": [
@@ -723,13 +754,14 @@
           ]
         },
         "7acfc985-03d8-4d14-b244-203f8cbf4843": {
-          "description": "Hier volgen enkele tips die studenten kunnen helpen ongeacht het niveau waarop ze werken:\n\n-   **Werk samen met de buren:** Moedig studenten aan samen te werken met een buurman of -vrouw als ze vast zitten. Afhankelijk van de leeftijd en de vaardigheden van uw studenten, kunt u overwegen om uw klas in koppels in te delen om de tutorial te voltooien met behulp van [programmeren in paren][0].   \n\n-   **Lees de instructies:** De instructies bevatten meestal nuttige tips over hoe een niveau te voltooien. Zorg ervoor dat ze de instructies, hints, video's en eventuele startcode<img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"><img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> grondig hebben gelezen of bekeken.\n\n-   <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> **Zit u vast? Ga op zoek naar hints:** Elk niveau bevat een hint met een advies over hoe een niveau te voltooien, waaronder de uit te proberen codeblokken. \n\n-   **Neem de tijd en experimenteer:** De instructies vetellen de studenten in het algemeen wat ze moeten doen, maar ze moeten tevens de vrijheidheid hebben hun eigen ideeën uit te proberen.  "
+          "name": "",
+          "description": "Hier volgen enkele tips die studenten kunnen helpen ongeacht het niveau waarop ze werken:\n\n- **Werk samen met de buren:** Moedig studenten aan samen te werken met een buurman of -vrouw als ze vast zitten. Afhankelijk van de leeftijd en de vaardigheden van uw studenten, kunt u overwegen om uw klas in koppels in te delen om de tutorial te voltooien met behulp van [programmeren in paren][0].   \n\n- **Lees de instructies:** De instructies bevatten meestal nuttige tips over hoe een niveau te voltooien. Zorg ervoor dat ze de instructies, hints, video's en eventuele startcode<img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"><img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> grondig hebben gelezen of bekeken.\n\n-   <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> **Zit u vast? Ga op zoek naar hints:** Elk niveau bevat een hint met een advies over hoe een niveau te voltooien, waaronder de uit te proberen codeblokken. \n\n- **Neem de tijd en experimenteer:** De instructies vetellen de studenten in het algemeen wat ze moeten doen, maar ze moeten tevens de vrijheidheid hebben hun eigen ideeën uit te proberen.  "
         },
         "1634ab74-919f-40fb-b2dc-8cd5701655a2": {
           "name": "Hallo Wereld"
         },
         "2edc03d3-b9a7-4c1b-a046-16fa43b3a7a3": {
-          "description": "Als een groep of individu vroeg eerder klaar is, moedig hen, hem of haar aan door te gaan met het bouwen van een project in het laatste niveau. Als studenten niet zeker weten wat ze moeten doen, dan kunt u vragen aan hen stellen:\n\n-   Welke ander sprites kun je toevoegen aan je project?\n-   Heb je in de kostuumbibliotheek gekeken of geprobeerd zelf een spritekostuum te tekenen?\n-   Wat kun je je sprites nog meer laten zeggen?\n-   Wat dienen je sprites te doen als er op ze wordt geklikt?\n-   Nodig studenten uit ideeën te delen en van elkaar te leren. Tevens kunnen ze een andere tutorial proberen door naar [code.org/leren][0] te gaan."
+          "description": "Als een groep of individu vroeg eerder klaar is, moedig hen, hem of haar aan door te gaan met het bouwen van een project in het laatste niveau. Als studenten niet zeker weten wat ze moeten doen, dan kunt u vragen aan hen stellen:\n\n-  Welke ander sprites kun je toevoegen aan je project?\n-  Heb je in de kostuumbibliotheek gekeken of geprobeerd zelf een spritekostuum te tekenen?\n-  Wat kun je je sprites nog meer laten zeggen?\n-  Wat dienen je sprites te doen als er op ze wordt geklikt?\n-  Nodig studenten uit ideeën te delen en van elkaar te leren. Tevens kunnen ze een andere tutorial proberen door naar [code.org/leren][0] te gaan."
         },
         "b68a11cc-930a-4803-beca-1d4f49ede378": {
           "name": "Reflectie",
@@ -7030,26 +7062,26 @@
           ]
         },
         "d99fc09e-a586-41df-84b2-e552cc4735e3": {
-          "description": "Vandaag gaan we onze creativiteit gebruiken terwijl we leren coderen. Er zijn veel manieren om creatief te zijn. Wat zijn jouw manieren om creatief te zijn?"
+          "description": "Vandaag gaan we onze creativiteit gebruiken terwijl we leren coderen. Er zijn veel manieren om creatief te zijn. Wat zijn jouw manieren om creatief te zijn?\n"
         },
         "b6c8c6a3-fe85-4d42-999e-a2ba13f6739a": {
           "description": "Moedig de leerlingen aan om te vertellen hoe zij hun creativiteit uiten, bijvoorbeeld met kunst, dans, muziek of schrijven. Vraag de leerlingen, als vervolgvraag, wat zij gebruiken om hun inspiratie te krijgen voor hun creativiteit. "
         },
         "6fba9dd0-6069-402c-a641-53899ae667e2": {
-          "description": "Wist je dat informatica heel creatief kan zijn? Je kunt zelfs kunst maken met code. Ter herinnering: code is een reeks instructies die een computer kan begrijpen. Net als het kiezen van verfkleuren kan ook de keuze van de code die je schrijft een mogelijkheid zijn om je creativiteit te uiten! \n\nWe gaan vandaag poëzie gebruiken om onze creatieve codering te inspireren. Weet iemand wat poëzie is? Heb je een favoriete gedicht of dichter? "
+          "description": "Wist je dat informatica heel creatief kan zijn? Je kunt zelfs kunst maken met code. Ter herinnering: code is een reeks instructies die een computer kan begrijpen. Net als het kiezen van verfkleuren kan ook de keuze van de code die je schrijft een mogelijkheid zijn om je creativiteit te uiten! \n\nWe gaan vandaag poëzie gebruiken om onze creatieve codering te inspireren. Weet iemand wat poëzie is? Heb je een favoriete gedicht of dichter? \n"
         },
         "21c585fc-7b80-4ab9-ba4c-8f4caa8ec102": {
           "description": "**Lees samen poëzie:** Lees samen als klas een [few poems][0] en oefen het benoemen van de stemming van elk gedicht. Moedig de leerlingen aan hun interpretatie te delen, zelfs als die verschilt van die van iemand anders. "
         },
         "a49bc6c2-1b76-476d-98cd-7f040e8853a7": {
           "name": "Poëzie",
-          "description": "#### Algemene ondersteuning\n\nAan het eind van deze activiteit hebben de leerlingen een geanimeerd gedicht dat hun visuele interpretatie weergeeft van het gekozen gedicht. Deze les is bedoeld om leerlingen de mogelijkheid te geven aan hun code te sleutelen en de visuele effecten te vinden die zij het leukst vinden. \n\nTerwijl je door de klas loopt moedig je de leerlingen aan om:\n\n-   **Neem de tijd:** Op de meeste niveaus moeten de leerlingen de perfecte effecten vinden die passen bij hun interpretatie van de stemming van het gedicht. Op niveau blijven en sleutelen aan de code wordt sterk aangemoedigd. \n\n-   **Vind een gedicht dat je bevalt:** Het gedicht dat op een nieuw niveau staat voor een leerling, is slechts een suggestie. Bovenaan de speelruimte is een keuzemenu met voorgeïnstalleerde gedichten. Vraag de leerlingen er een paar door te lezen en er een uit te kiezen die hen aanspreekt. Ze kunnen dan het gedicht dat ze gekozen hebben gaan animeren met code. \n\n-   **Laat een voltooid niveau zien:** Een volledig groene niveaulijst betekent dat de leerling met succes aan alle vereisten voor dat niveau heeft voldaan. Vraag een leerling op een groene bubbel te klikken om te laten zien wat hij gemaakt heeft. \n\nVoor de momenten dat een leerling vastzit: \n\n-   **Lees de instructies:** De instructies zijn opsommingstekens over hoe het niveau kan worden voltooid. Als een leerling het gevoel heeft dat hij niet verder komt, vraag hem dan de instructies hardop voor te lezen en vraag hem de instructies in zijn eigen woorden na te zeggen. \n    -   <img src=\"https://images.code.org/5b99c663ad6632fe64c9da69d6805c2b-text-to-speech.PNG\" style=\"height: 25px;\"> Leerlingen kunnen ook op dit tekst-naar-spraak-pictogram klikken om de instructies te horen voorlezen.\n-   <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> **Zoek hints**: De meeste niveaus bevatten minstens één hint met meer expliciete details over hoe je het niveau haalt. \n-   **Koester bugs:** Een bug in je code is een natuurlijk onderdeel van het codeerproces. Als het programma niet doet wat ze verwachtten, vraag de leerling dan eerst te vertellen wat hij wil dat er gebeurt. Klik op uitvoeren om te zien wat er werkelijk gebeurt, en zoek dan de plaats in zijn code die de afwijking veroorzaakt. Vergeet blij te zijn met de bugs die je vindt en repareert. Een bug krijgen betekent dat leerlingen goed werk leveren bij het bouwen van een complexer programma. "
+          "description": "#### Algemene ondersteuning\n\nAan het eind van deze activiteit hebben de leerlingen een geanimeerd gedicht dat hun visuele interpretatie weergeeft van het gekozen gedicht. Deze les is bedoeld om leerlingen de mogelijkheid te geven aan hun code te sleutelen en de visuele effecten te vinden die zij het leukst vinden. \n\nTerwijl je door de klas loopt moedig je de leerlingen aan om:\n\n-   **Neem de tijd:** Op de meeste niveaus moeten de leerlingen de perfecte effecten vinden die passen bij hun interpretatie van de stemming van het gedicht. Op niveau blijven en sleutelen aan de code wordt sterk aangemoedigd. \n\n- **Vind een gedicht dat je bevalt:** Het gedicht dat op een nieuw niveau staat voor een leerling, is slechts een suggestie. Bovenaan de speelruimte is een keuzemenu met voorgeïnstalleerde gedichten. Vraag de leerlingen er een paar door te lezen en er een uit te kiezen die hen aanspreekt. Ze kunnen dan het gedicht dat ze gekozen hebben gaan animeren met code. \n\n-   **Laat een voltooid niveau zien:** Een volledig groene niveaulijst betekent dat de leerling met succes aan alle vereisten voor dat niveau heeft voldaan. Vraag een leerling op een groene bubbel te klikken om te laten zien wat hij gemaakt heeft. \n\nVoor de momenten dat een leerling vastzit: \n\n- **Lees de instructies:** De instructies zijn opsommingstekens over hoe het niveau kan worden voltooid. Als een leerling het gevoel heeft dat hij niet verder komt, vraag hem dan de instructies hardop voor te lezen en vraag hem de instructies in zijn eigen woorden na te zeggen. \n    -   <img src=\"https://images.code.org/5b99c663ad6632fe64c9da69d6805c2b-text-to-speech.PNG\" style=\"height: 25px;\"> Leerlingen kunnen ook op dit tekst-naar-spraak-pictogram klikken om de instructies te horen voorlezen.\n-   <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> **Zoek hints**: De meeste niveaus bevatten minstens één hint met meer expliciete details over hoe je het niveau haalt. \n- **Koester bugs:** Een bug in je code is een natuurlijk onderdeel van het codeerproces. Als het programma niet doet wat ze verwachtten, vraag de leerling dan eerst te vertellen wat hij wil dat er gebeurt. Klik op uitvoeren om te zien wat er werkelijk gebeurt, en zoek dan de plaats in zijn code die de afwijking veroorzaakt. Vergeet blij te zijn met de bugs die je vindt en repareert. Een bug krijgen betekent dat leerlingen goed werk leveren bij het bouwen van een complexer programma. \n"
         },
         "065eda67-268c-4f91-9caf-efb2c34493fe": {
-          "description": "#### Niveau-voor-niveau ondersteuning\n\n**Niveau 1:** Moedig de leerlingen aan het gedicht door te lezen. Vraag de leerlingen dan een achtergrondkleur of -effect te vinden dat past bij de toon van het gedicht dat ze hebben gekozen. \n\n**Niveau 2:** In dit voorbeeld moeten de leerlingen het gedicht eerst zelf lezen en dan op Uitvoeren drukken. Je kunt de leerling vragen of het geluid en de effecten die de programmeur koos, pasten bij de stemming van het gedicht. Vraag de leerlingen hun antwoord uit te werken. \n\n**Niveau 3:** Dit niveau introduceert geluid. Leerlingen kunnen een koptelefoon gebruiken als ze die hebben. \n\n**Niveau 4:** Vraag de leerlingen het gedicht te lezen en de regel te vinden waar de stemming in het gedicht verandert of waar de dichter een nieuw beeld introduceert. Gebruik het gebeurtenissenblok om overeenkomstige effecten toe te voegen aan de geïdentificeerde regels van het gedicht. \n\n**Niveau 5:** In dit voorbeeld moeten de leerlingen het gedicht eerst zelf lezen en dan op Uitvoeren drukken. Vraag de leerling of de beelden overeenkomen met de woorden van het gedicht. Vraag ze hun antwoord uit te werken. \n\n**Niveau 6, 7, 8:** Zie \"Koester bugs\\*\\* onder het kopje Algemene ondersteuning. Moedig leerlingen aan om programma's met meer dan één overgang te bouwen met hun gebeurtenisblokken. \n\n**Niveau 9:** Moedig de leerlingen aan om alle gedichten in het keuzemenu door te lezen om er een te vinden die ze mooi vinden. Vertel de leerlingen dat ze wat ze in dit laatste niveau maken, kunnen delen met hun vrienden en familie. Nu is het tijd om alle codering en ELA-vaardigheden samen te voegen! "
+          "description": "#### Niveau-voor-niveau ondersteuning\n\n**Niveau 1:** Moedig de leerlingen aan het gedicht door te lezen. Vraag de leerlingen dan een achtergrondkleur of -effect te vinden dat past bij de toon van het gedicht dat ze hebben gekozen. \n\n**Niveau 2:** In dit voorbeeld moeten de leerlingen het gedicht eerst zelf lezen en dan op Uitvoeren drukken. Je kunt de leerling vragen of het geluid en de effecten die de programmeur koos, pasten bij de stemming van het gedicht. Vraag de leerlingen hun antwoord uit te werken. \n\n**Niveau 3:** Dit niveau introduceert geluid. Leerlingen kunnen een koptelefoon gebruiken als ze die hebben. \n\n**Niveau 4:** Vraag de leerlingen het gedicht te lezen en de regel te vinden waar de stemming in het gedicht verandert of waar de dichter een nieuw beeld introduceert. Gebruik het gebeurtenissenblok om overeenkomstige effecten toe te voegen aan de geïdentificeerde regels van het gedicht. \n\n**Niveau 5:** In dit voorbeeld moeten de leerlingen het gedicht eerst zelf lezen en dan op Uitvoeren drukken. Vraag de leerling of de beelden overeenkomen met de woorden van het gedicht. Vraag ze hun antwoord uit te werken. \n\n**Niveau 6, 7, 8:** Zie \"Koester bugs** onder het kopje Algemene ondersteuning. Moedig leerlingen aan om programma's met meer dan één overgang te bouwen met hun gebeurtenisblokken. \n\n**Niveau 9:** Moedig de leerlingen aan om alle gedichten in het keuzemenu door te lezen om er een te vinden die ze mooi vinden. Vertel de leerlingen dat ze wat ze in dit laatste niveau maken, kunnen delen met hun vrienden en familie. Nu is het tijd om alle codering en ELA-vaardigheden samen te voegen! "
         },
         "51a89a3e-a8c7-41d6-bbbf-2ce16fc7e033": {
-          "description": "Als je het leuk vond om vandaag te leren coderen, kun je verder leren door code.org/learn te bezoeken. Als je wat je gemaakt hebt wilt delen met je vrienden en familie, klik dan op de knop \"Delen\" en stuur de link naar wie je maar wilt!"
+          "description": "Als je het leuk vond om vandaag te leren coderen, kun je verder leren door code.org/learn te bezoeken. Als je wat je gemaakt hebt wilt delen met je vrienden en familie, klik dan op de knop \"Delen\" en stuur de link naar wie je maar wilt!\n"
         },
         "8630a813-1b6c-49c5-a58b-d2dc5dcccd0a": {
           "description": "#### (Optioneel) Beoordeling: Controle op begrip (4 minuten)\n\nDeel twee post-it’s uit per leerling. "

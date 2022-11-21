@@ -367,6 +367,7 @@
   "finish": "Lõpeta",
   "forTeachersOnly": "Ainult õpetajatele",
   "fromWhen": "(Alates {when}):",
+  "function": "Funktsioon",
   "gdprDialogHeaderUpdated": "Kas nõustute, et Code.org võib edastada andmeid (muu hulgas isikuandmeid) selle kohta, kuidas te seda saiti kasutate, Ameerika Ühendriikidesse, eesmärgiga neid andmeid säilitada ja töödelda?",
   "gdprDialogDetailsUpdated": "Code.org on Ameerika Ühendriikide mittetulunduslik veebisait ja Ameerika Ühendriikides kehtivad andmekaitseseadused võivad erineda teie koduriigis kehtivatest.",
   "gdprDialogVisitPrivacyPolicy": "Lisateavet leiab veebisaidi Code.org privaatsuspoliitikast.",

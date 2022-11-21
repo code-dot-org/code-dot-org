@@ -1,4 +1,25 @@
 {
-  "foo":"foo",
-  "fooTooltip":"do foo"
+  "dropletBlock_createSprite_param0_description": "Początkowa współrzędna x.",
+  "dropletBlock_createSprite_param1_description": "Początkowa współrzędna y.",
+  "dropletBlock_createSprite_param2": "szerokość",
+  "dropletBlock_createSprite_param3": "wysokość",
+  "dropletBlock_group.remove_signatureOverride": "[Group].remove (sprite)",
+  "dropletBlock_setCollider_param0": "typ",
+  "dropletBlock_setCollider_param4": "wysokość",
+  "dropletBlock_setColliderEach_param0": "typ",
+  "dropletBlock_setColliderEach_param4": "wysokość",
+  "dropletBlock_showMobileControls_param0": "spaceButtonVisible",
+  "dropletBlock_showMobileControls_param1": "dpadVisible",
+  "dropletBlock_sprite.height_signatureOverride": "[Sprite].height",
+  "dropletBlock_sprite.width_signatureOverride": "[Sprite].width",
+  "dropletBlock_sprite.width_description": "Szerokość duszka.",
+  "dropletBlock_Group_description": "Tworzy pustą grupę.",
+  "dropletBlock_add_description": "Dodaje danego duszka do grupy.",
+  "dropletBlock_add_param0_description": "Diuszek do dodania.",
+  "dropletBlock_remove_description": "Usuwa danego duszka z grupy.",
+  "dropletBlock_remove_param0_description": "Duszek do usunięcia.",
+  "dropletBlock_x_description": "Współrzędna X duszka.",
+  "errorLoadingAnimation": "Wygląda na to, że mamy problem z załadowaniem Twojej animacji \"{animationName}\". Upewnij się, że Twoje połączenie z internetem jest poprawne i spróbuj przeładować stronę. Jeżeli problem nadal występuje, możliwym jest, że animacja jest uszkodzona. W tym przypadku, aby kontynuować musisz usunąć animację.",
+  "reinfFeedbackMsg": "Zakończyłeś! Kliknij \"Kontynuuj\", aby przejść na kolejny poziom.",
+  "shareGame": "Udostępnij swoją grę:"
 }

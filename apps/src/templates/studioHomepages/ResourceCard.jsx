@@ -152,7 +152,8 @@ const styles = {
   },
   button: {
     marginLeft: 20,
-    marginRight: 20
+    marginRight: 20,
+    whiteSpace: 'inherit'
   },
   buttonAllowWrap: {
     position: 'absolute',

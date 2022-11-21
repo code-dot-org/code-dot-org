@@ -56,6 +56,7 @@
         "csa-self-paced-pl": "Navigieren in Code.org für Lehrer von CSA Pilot",
         "outbreak-csc": "Ausbruch",
         "poem-art": "Dichtkunst",
+        "hello-world-emoji": "Hallo Welt: Emoji",
         "k5-onlinepd": "Grundlagen der Informatik unterrichten",
         "peru": "Peru",
         "drafting": "entwerfen",
@@ -77,7 +78,10 @@
         "kodea-pd-2021": "kodea-pd-2021",
         "coursee-ramp": "coursee-ramp",
         "csa5-exemplars": "csa5-exemplare",
-        "soccer": "Fußball"
+        "soccer": "Fußball",
+        "hello-world-space": "Hello World: Weltraum",
+        "hello-world-soccer": "Hello World: Fußball",
+        "playground": "Spielplatz"
       }
     }
   }
