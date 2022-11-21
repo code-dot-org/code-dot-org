@@ -2,7 +2,7 @@
   <config><![CDATA[{
   "properties": {
     "encrypted": "false",
-    "long_instructions": "##Investigate and Modify\r\n\r\nExperiment with the program by making the following modifications, then run the program to observe the results.\r\n\r\n✅ **TO DO:** Overview of the steps to take.\r\n\r\n1. More specific step\r\n\r\n2. More specific step",
+    "long_instructions": "##Investigate and Modify\r\n\r\nExperiment with the program by making the following modifications, then run the program to observe the results.\r\n\r\n✅ **TO DO:** Reset the program by choosing **Start Over** from the **Version History**, then change the body of the parameterized constructor for the `Shoes`(#e7e8ea) class to the following:\r\n\r\n```\r\nthis.color = color;\r\nthis.size = size;\r\nthis.hasShoelaces = hasShoelaces;\r\n```\r\n\r\nRun the program to observe the results. Why do you think this happened?\r\n\r\nWhat do you think the `this`(#e7e8ea) keyword means?",
     "mini_rubric": "false",
     "submittable": "false",
     "hide_share_and_remix": "false",
@@ -24,6 +24,6 @@
   "created_at": "2022-11-17T23:05:10.000Z",
   "level_num": "custom",
   "user_id": 16889,
-  "audit_log": "[{\"changed_at\":\"2022-11-17T23:05:10.632+00:00\",\"changed\":[\"cloned from \\\"CSA U2L4-L2_2023\\\"\"],\"cloned_from\":\"CSA U2L4-L2_2023\"},{\"changed_at\":\"2022-11-17 23:05:16 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-11-17T23:05:10.632+00:00\",\"changed\":[\"cloned from \\\"CSA U2L4-L2_2023\\\"\"],\"cloned_from\":\"CSA U2L4-L2_2023\"},{\"changed_at\":\"2022-11-17 23:05:16 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-11-18 20:44:20 +0000\",\"changed\":[\"long_instructions\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>
 </Javalab>
