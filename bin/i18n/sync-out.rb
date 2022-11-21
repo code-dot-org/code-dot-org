@@ -395,7 +395,7 @@ def distribute_translations(upload_manifests)
     ### Merge ml-playground datasets into apps' ailab JSON
     Dir.glob("#{locale_dir}/external-sources/ml-playground/datasets/*.json") do |loc_file|
       ailab_path = "apps/i18n/ailab/#{js_locale}.json"
-      name = File.basename(loc_file, '.json')
+      dataset_id = File.basename(loc_file, '.json')
       relative_path = loc_file.delete_prefix(locale_dir)
       next unless file_changed?(locale, relative_path)
 
@@ -405,7 +405,7 @@ def distribute_translations(upload_manifests)
       # Merge new translations
       existing_translations = JSON.parse(File.read(ailab_path))
       existing_translations['datasets'] = existing_translations['datasets'] || Hash.new
-      existing_translations['datasets'][name] = external_translations
+      existing_translations['datasets'][dataset_id] = external_translations
       sanitize_data_and_write(existing_translations, ailab_path)
     end
 
