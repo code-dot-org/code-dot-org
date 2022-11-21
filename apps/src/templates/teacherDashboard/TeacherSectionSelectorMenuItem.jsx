@@ -97,10 +97,10 @@ export function UnconnectedTeacherSectionSelectorMenuItem({
   };
 
   const confirmUnassign = () => {
-    setIsPending(true);
-    unassignSection(section.id, buttonLocationAnalytics).then(() =>
-      setIsPending(false)
-    );
+    // We can't change state here because the dialog closes the menu and
+    // therefore unmounts this component. Ideally in the future,
+    // this menu would stay open when the dialog is open.
+    unassignSection(section.id, buttonLocationAnalytics);
   };
 
   const onAssignClick = e => {
