@@ -14,14 +14,15 @@ const publishDialogDefaultProps = {
   onClose: action('close')
 };
 
-const Template = args => <PublishDialog {...args} />;
+const Template = overrides => (
+  <PublishDialog {...publishDialogDefaultProps} {...overrides} />
+);
 
 export const DialogOpen = Template.bind({});
-DialogOpen.args = {...publishDialogDefaultProps};
+DialogOpen.args = {};
 
 export const DialogOpenPublishPending = Template.bind({});
 DialogOpenPublishPending.args = {
-  ...publishDialogDefaultProps,
   isPublishPending: true
 };
 

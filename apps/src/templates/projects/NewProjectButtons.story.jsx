@@ -31,6 +31,6 @@ MinecraftProjectButtons.args = {
 };
 
 export default {
-  title: 'New Project Buttons',
+  title: 'NewProjectButtons',
   component: NewProjectButtons
 };

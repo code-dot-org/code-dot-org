@@ -21,6 +21,6 @@ FeaturedProjectTableArchive.args = {
 };
 
 export default {
-  title: 'Featured Projects Table',
+  title: 'FeaturedProjectsTable',
   component: FeaturedProjectsTable
 };
