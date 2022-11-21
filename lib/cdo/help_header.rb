@@ -56,12 +56,6 @@ class HelpHeader
         url: "https://studio.code.org/docs/ide/weblab/",
         id: "weblab-docs"
       }
-
-      entries << {
-        title: I18n.t("#{loc_prefix}web_lab_tutorials"),
-        url: CDO.code_org_url('/educate/weblab'),
-        id: "weblab-tutorials"
-      }
     end
 
     entries << {
