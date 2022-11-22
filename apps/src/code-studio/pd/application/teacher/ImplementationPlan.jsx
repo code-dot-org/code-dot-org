@@ -166,12 +166,7 @@ ImplementationPlan.associatedFields = [
 const uniqueRequiredFields = {
   [PROGRAM_CSD]: ['csdWhichGrades'],
   [PROGRAM_CSP]: ['cspWhichGrades', 'cspHowOffer'],
-  [PROGRAM_CSA]: [
-    'csaWhichGrades',
-    'csaHowOffer',
-    'csaAlreadyKnow',
-    'csaPhoneScreen'
-  ]
+  [PROGRAM_CSA]: ['csaWhichGrades', 'csaHowOffer']
 };
 
 ImplementationPlan.getDynamicallyRequiredFields = data => {
