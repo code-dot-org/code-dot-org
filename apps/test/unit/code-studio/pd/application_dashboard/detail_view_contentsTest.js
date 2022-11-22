@@ -423,11 +423,12 @@ describe('DetailViewContents', () => {
           principal_approval_state: PrincipalApprovalState.inProgress
         }
       });
+      expect(detailView.text()).to.contain(`Incomplete`);
       expect(
         detailView.find('#principal-approval-url').props().href
       ).to.contain(`principal_approval/${guid}`);
     });
-    it(`Shows URL to principal approval if complete`, () => {
+    it(`Shows complete text for principal approval if complete`, () => {
       const guid = '1020304';
       const detailView = mountDetailView('Teacher', {
         applicationData: {
@@ -436,9 +437,7 @@ describe('DetailViewContents', () => {
           principal_approval_state: PrincipalApprovalState.complete
         }
       });
-      expect(
-        detailView.find('#principal-approval-url').props().href
-      ).to.contain(`principal_approval/${guid}`);
+      expect(detailView.text()).to.contain(`Complete`);
     });
     it(`Shows button to make principal approval required if not`, () => {
       const detailView = mountDetailView('Teacher', {
