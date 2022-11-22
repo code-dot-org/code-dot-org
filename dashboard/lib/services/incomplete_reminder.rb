@@ -6,7 +6,7 @@ class Services::IncompleteReminder
     # We send reminders to complete an application 7 days after an applicant has last saved their application,
     # another one 14 days after an applicant has last saved their application.
     def queue_incomplete_reminders!
-      applications_needing_soft_reminder.each do |application|
+      applications_needing_initial_reminder.each do |application|
         application.queue_email 'complete_application_initial_reminder'
       end
 
@@ -19,7 +19,7 @@ class Services::IncompleteReminder
     # reminder, which is if they last saved it at least 7 days ago.
     # They should not receive more than one reminder of this type.
     # @return [Enumerable<Pd::Application::ApplicationBase>]
-    def applications_needing_soft_reminder
+    def applications_needing_initial_reminder
       incomplete_applications.select do |app|
         most_recent_update = most_recently_updated(app)
         most_recent_update.before?(Date.today - 6.days) && most_recent_update.after?(Date.today - 14.days) &&
