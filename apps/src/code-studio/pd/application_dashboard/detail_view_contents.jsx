@@ -604,8 +604,8 @@ export class DetailViewContents extends React.Component {
 
   renderStatusSelect = () => {
     let statusesToHide = [];
-    // Hide "Awaiting Admin Approval" if it is not required
-    if (!this.state.principalApprovalIsRequired) {
+    // Hide "Awaiting Admin Approval" status if it is not currently "awaiting_admin_approval"
+    if (this.state.status !== 'awaiting_admin_approval') {
       statusesToHide.push('awaiting_admin_approval');
     }
     // Hide "Incomplete" if it is not currently "Incomplete"
@@ -624,10 +624,16 @@ export class DetailViewContents extends React.Component {
       <div>
         <FormControl
           componentClass="select"
-          disabled={this.state.locked || !this.state.editing}
+          disabled={
+            this.state.locked ||
+            !this.state.editing ||
+            this.state.status === 'awaiting_admin_approval'
+          }
           title={
             this.state.locked
               ? 'The status of this application has been locked'
+              : this.state.status === 'awaiting_admin_approval'
+              ? 'No status updates can be made while awaiting admin approval'
               : undefined
           }
           value={this.state.status}
@@ -1071,7 +1077,7 @@ export class DetailViewContents extends React.Component {
           )}
           {this.multiAnswerQuestionFields[key]['principal'] && (
             <p>
-              Principal Response:{' '}
+              Administrator Response:{' '}
               {this.formatAnswer(
                 key,
                 this.props.applicationData.form_data[
@@ -1104,7 +1110,7 @@ export class DetailViewContents extends React.Component {
   };
 
   renderModifyPrincipalApprovalSection = () => {
-    // principal_approval_state can be 'Not required', 'Incomplete - Principal email sent on ...', or 'Complete - ...'
+    // principal_approval_state can be 'Not required', 'Incomplete - Admin email sent on ...', or 'Complete - ...'
     // If 'Complete,' this function will not be run.
     // If 'Incomplete', we show a link to the application and a button to re-send the request,
     // and a button to change the principal approval requirement.
@@ -1123,10 +1129,10 @@ export class DetailViewContents extends React.Component {
 
       return (
         <div>
-          <h3>Principal Approval</h3>
+          <h3>Administrator Approval</h3>
           <h4>{this.props.applicationData.principal_approval_state}</h4>
           <p id="principal-approval-link">
-            Link to principal approval form:{' '}
+            Link to administrator approval form:{' '}
             <a
               id="principal-approval-url"
               href={principalApprovalUrl}
@@ -1152,14 +1158,14 @@ export class DetailViewContents extends React.Component {
     } else {
       return (
         <div>
-          <h3>Principal Approval</h3>
+          <h3>Administrator Approval</h3>
           {!this.state.principalApprovalIsRequired && (
             <p>
-              If you would like to require principal approval for this teacher,
-              please click “Make required." If this application is Unreviewed,
-              Pending, or Pending Space Availability, then clicking this button
-              will also send an email to the principal asking for approval,
-              given one hasn't been sent in the past 5 days.
+              If you would like to require administrator approval for this
+              teacher, please click “Make required." If this application is
+              Unreviewed, Pending, or Pending Space Availability, then clicking
+              will also send an email to the administrator asking for approval,
+              this button given one hasn't been sent in the past 5 days.
             </p>
           )}
           <PrincipalApprovalButtons
@@ -1258,7 +1264,7 @@ export class DetailViewContents extends React.Component {
       return (
         <div>
           <p>Teacher Response: {teacher_response}</p>
-          <p>Principal Presponse: {principal_response}</p>
+          <p>Administrator Presponse: {principal_response}</p>
         </div>
       );
     } else {

@@ -3020,7 +3020,7 @@
           "grade5_artist_variables_triangles1_c": "Sizning siklingiz ichida siz 50 piksel oldinga siljishni, so‘ng chapga 120 daraja burilishni xohlaysiz."
         },
         "OPD-K5-events-2": {
-          "courseC_flappy_events1_a": "\\[] [0]"
+          "courseC_flappy_events1_a": "[] [0]"
         },
         "OPD-K5-events-3": {
           "courseC_flappy_events2_a": "Siz qo‘shishingiz kerak bo‘lgan blok `set speed` deb nomalanadi. ",
@@ -3051,7 +3051,7 @@
         "OPD-K5-forloops-6": {
           "courseF_bee_for6_a": "O‘zingizning takroriy siklingiz ichida \"qarshi\" o‘zgaruvchini ishlatishni unutmang.",
           "courseF_bee_for6_b": "`for` sikli ichida siz `move forward` buyrug‘iga va nektar to‘plash uchun siklga ega bo‘lishni xohlaysiz.",
-          "courseF_bee_for6_c": "Sizning siklingiz \\*\\* 5 dan 1 \\*\\* gacha bo‘lishi kerak."
+          "courseF_bee_for6_c": "Sizning siklingiz ** 5 dan 1 ** gacha bo‘lishi kerak."
         },
         "OPD-K5-forloops-7": {
           "courseF_bee_for7_a": "Sizning `for` siklingiz 1 dan 7 gacha 2 gacha hisoblashingiz kerak bo‘ladi.",
@@ -3072,14 +3072,14 @@
           "courseF_artist_variables3_b": "50 qiymatiga ega raqamlar bloki faqat bitta joyda bo‘lishi kerak: \"belgilangan o‘zgaruvchan uzunlik\" blokidan keyin."
         },
         "OPD-K5-variables-6": {
-          "courseF_artist_variables4_c": "Rassomingiz mana shunday namunaga ega: \\[] [0]",
-          "courseF_artist_variables4_b": "<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"variables_set\">\n        <title name=\"VAR\">length</title>\n        <value name=\"VALUE\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">50</title>\n          </block>\n        </value>\n        <next>\n          <block type=\"controls_repeat_ext\">\n            <value name=\"TIMES\">\n              <block type=\"math_number\">\n                <title name=\"NUM\">3</title>\n              </block>\n            </value>\n            <statement name=\"DO\">\n              <block type=\"controls_repeat_ext\">\n                <value name=\"TIMES\">\n                  <block type=\"math_number\">\n                    <title name=\"NUM\">3</title>\n                  </block>\n                </value>\n                <statement name=\"DO\">\n                  <block type=\"draw_move\">\n                    <title name=\"DIR\">moveForward</title>\n                    <value name=\"VALUE\">\n                      <block type=\"variables_get\">\n                        <title name=\"VAR\">length</title>\n                      </block>\n                    </value>\n                    <next>\n                      <block type=\"draw_turn\">\n                        <title name=\"DIR\">turnLeft</title>\n                        <value name=\"VALUE\">\n                          <block type=\"math_number\">\n                            <title name=\"NUM\">120</title>\n                          </block>\n                        </value>\n                      </block>\n                    </next>\n                  </block>\n                </statement>\n                <next>\n                  <block type=\"jump\">\n                    <title name=\"DIR\">jumpForward</title>\n                    <value name=\"VALUE\">\n                      <block type=\"variables_get\">\n                        <title name=\"VAR\">length</title>\n                      </block>\n                    </value>\n                    <next>\n                      <block type=\"draw_turn\">\n                        <title name=\"DIR\">turnRight</title>\n                        <value name=\"VALUE\">\n                          <block type=\"math_number\">\n                            <title name=\"NUM\">90</title>\n                          </block>\n                        </value>\n                        <next>\n                          <block type=\"jump\">\n                            <title name=\"DIR\">jumpForward</title>\n                            <value name=\"VALUE\">\n                              <block type=\"variables_get\">\n                                <title name=\"VAR\">length</title>\n                              </block>\n                            </value>\n                            <next>\n                              <block type=\"draw_turn\">\n                                <title name=\"DIR\">turnLeft</title>\n                                <value name=\"VALUE\">\n                                  <block type=\"math_number\">\n                                    <title name=\"NUM\">90</title>\n                                  </block>\n                                </value>\n                              </block>\n                            </next>\n                          </block>\n                        </next>\n                      </block>\n                    </next>\n                  </block>\n                </next>\n              </block>\n            </statement>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+          "courseF_artist_variables4_c": "Rassomingiz mana shunday namunaga ega: [] [0]",
+          "courseF_artist_variables4_b": "[blockly block][0]"
         },
         "OPD-K5-variables-7": {
           "courseF_artist_variables5_a": "Sizning kodingizning ikkinchi yarmi deyarli birinchi yarimga o‘xshash bo‘lishi kerak, faqat siz _left_ ga burilib, sakrab, keyin _right_ ga burilasiz.",
           "courseF_artist_variables5_b": "Kodingizning birinchi yarmi uchta uchburchakni, ikkinchi yarmi qolgan uchtasini chizadi.",
           "courseF_artist_variables5_c": "Dasturingizning birinchi yarmida kodni nusxalashdan boshlang, so‘ngra uni ko‘rsatilgan dizaynga o‘zgartirish uchun o‘zgartiring.",
-          "courseF_artist_variables5_d": "Rassomingiz mana shu namunaga amal qiladi: \\[] [0]"
+          "courseF_artist_variables5_d": "Rassomingiz mana shu namunaga amal qiladi: [] [0]"
         },
         "course1_artist_loops_challenge1": {
           "courseA_artist_loops_challenge1_b": "\\[] [0]",
@@ -3888,7 +3888,7 @@
         "courseC_starWars_loops8_copy": {
           "course_starWars_loops8_a": "Ushbu muammoni kichik qismlarga bo‘lib o‘ylab ko‘ring. Shoshilmang. Buni birinchi urinishda hal qilishningiz shart emas!",
           "course_starWars_loops8_b": "Ushbu muammoning birinchi yarmini zinapoyalar muammosi sifatida tasavvur qiling. Buni oldin qanday hal qildingiz?",
-          "course_starWars_loops8_c": "Ushbu yo‘lni ko‘rib chiqing.\n\n![](https://images.code.org/7d696dd3b1e6984a1d6041f366d5c96b-image-1510198804955.37.04.png)"
+          "course_starWars_loops8_c": "Ushbu yo‘lni ko‘rib chiqing.\n\n[][0]"
         },
         "courseC_starWars_loops9": {
           "course_starWars_loops9_b": "Siz `repeat` sikli ichiga bir nechta blok qo‘yishingiz mumkin.",
@@ -3939,7 +3939,7 @@
           "courseD_bee_conditionals4_hintVid1": "Boshlashda yordam kerakmi? Videoni tomosha qiling!",
           "courseD_bee_conditionals4_a": "Hali ham har qanday bo‘shliqqa xuddi bulut bor kabi muomala qilishingiz mumkin, garchi butun yo‘lni ko‘rsangiz ham.",
           "courseD_bee_conditionals4_b": "Har bir bo‘sh joyni nektar uchun tekshirish uchun siklingiz ichidagi `if` ifodasidan foydalaning.",
-          "courseD_bee_conditionals4_c": "<xml><block type=\"maze_untilBlocked\"/></xml>  blokidan foydalanib, oldinga siljish va gul borligini tekshirish kerak. Agar gul bo'lsa, asalari nima qilishi kerak?",
+          "courseD_bee_conditionals4_c": "[blockly block][0]  blokidan foydalanib, oldinga siljish va gul borligini tekshirish kerak. Agar gul bo'lsa, asalari nima qilishi kerak?",
           "courseD_bee_conditionals4_hintVid2": "Ushbu jumboqni yechishda yordam olish uchun ushbu videoni tomosha qiling."
         },
         "courseD_bee_conditionals5": {
@@ -6427,12 +6427,12 @@
           "courseA_harvester_seq9_c": "Barcha makkajo'xorini yig'ish uchun siz ushbu yo'ldan yurishingiz kerak."
         },
         "OPD-K5-projects-2": {
-          "courseE_playLab_scaffold1_a": "`set actor 1 to ??? image` - \"1-aktyorni ??? rasmiga sozlang\\` blokidan aktyorni sahnaga qo'shish uchun foydalanish mumkin.",
+          "courseE_playLab_scaffold1_a": "`set actor 1 to ??? image` - \"1-aktyorni ??? rasmiga sozlang` blokidan aktyorni sahnaga qo'shish uchun foydalanish mumkin.",
           "courseE_playLab_scaffold1_b": "Dastur boshida aktyoringiz paydo bo'lishi uchun \"o'rnatilgan aktyor\" blokini \"ishga tushirilganda\" ostiga qo'ying.",
           "courseE_playLab_scaffold1_c": " Sahnaga fon tanlash uchun `set ??? background` dan foydalaning."
         },
         "OPD-K5-projects-3": {
-          "courseE_playLab_scaffold1_a": "Blok boshqaradigan yo'nalishni o'zgartirish uchun \" \\_\\_\\_\\_ o'q bo'lganda\" hodisasining ochiladigan menyusini torting.",
+          "courseE_playLab_scaffold1_a": "Blok boshqaradigan yo'nalishni o'zgartirish uchun \" ____ o'q bo'lganda\" hodisasining ochiladigan menyusini torting.",
           "courseE_playLab_scaffold1_b": "Sizda har biri ostida harakatlanish yo'nalishi bilan to'rtta \"o'q\" hodisa bloklari bo'lishi kerak.",
           "courseE_playLab_scaffold1_c": "Tugatgandan so'ng siz oqahramoningizni o'q tugmachalari bilan siljita olishingiz kerak!"
         },
@@ -6726,8 +6726,8 @@
         },
         "courseE_artist_functions2_copy": {
           "courseD_artist_functions2_b": "Siz yozadigan funksiya sizning butun dasturingizni o'z ichiga olmasligi kerak, faqat 100 piksel tomoni bilan kvadrat chizadigan qismini olishi kerak.",
-          "courseD_artist_functions2_c": "Yashil \"kvadrat chizish\" funksiyangizni \"chaqirish\" uchun uni \"Ishlayotgan paytda\" bloki ostiga joylang. Aks holda, sizning funksiyangizdagi kod ishlamaydi.\n\n<xml><block type=\"procedures_callnoreturn\" limit=\"2\"><mutation name=\"draw a square\"/></block></xml>",
-          "courseD_artist_functions2_a": "Sizning dasturingiz quyidagilarni qilish kerak:\n\n-   Funksiyadan foydalanish\n-   100 + 75 piksel oldinga siljitish\n-   Funksiyadan foydalanish"
+          "courseD_artist_functions2_c": "Yashil \"kvadrat chizish\" funksiyangizni \"chaqirish\" uchun uni \"Ishlayotgan paytda\" bloki ostiga joylang. Aks holda, sizning funksiyangizdagi kod ishlamaydi.\n\n[blockly block][0]",
+          "courseD_artist_functions2_a": "Sizning dasturingiz quyidagilarni qilish kerak:\n\n- Funksiyadan foydalanish\n- 100 + 75 piksel oldinga siljitish\n- Funksiyadan foydalanish"
         },
         "courseE_artist_functions3": {
           "courseD_artist_functions3_a": "Ushbu jumboqni hal qilish uchun siz boshlang'ich kodni 8 marta takrorlaydigan siklni qo'shishingiz kerak.\n\nAgar boshlang'ich kod nima ekanligini eslay olmasangiz, ish maydonining yuqori o'ng burchagidagi \"boshidan boshlash\" tugmasini bosing.",

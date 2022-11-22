@@ -52,9 +52,27 @@ module Pd::Application
       assert principal_application.valid?
     end
 
+    test 'teacher app status becomes "unreviewed" if previously "awaiting_admin_approval" upon admin submission' do
+      teacher_application = create :pd_teacher_application
+      teacher_application.update!(status: 'awaiting_admin_approval')
+
+      assert_equal 'awaiting_admin_approval', teacher_application.status
+      create :pd_principal_approval_application, teacher_application: teacher_application
+      assert_equal 'unreviewed', teacher_application.reload.status
+    end
+
+    test 'teacher application status does not change if not "awaiting_admin_approval" upon admin submission' do
+      teacher_application = create :pd_teacher_application
+      teacher_application.update!(status: 'pending')
+
+      assert_equal 'pending', teacher_application.status
+      create :pd_principal_approval_application, teacher_application: teacher_application
+      assert_equal 'pending', teacher_application.reload.status
+    end
+
     test 'create placeholder and send mail creates a placeholder and sends principal approval' do
       teacher_application = create :pd_teacher_application
-      Pd::Application::TeacherApplicationMailer.expects(:principal_approval).
+      Pd::Application::TeacherApplicationMailer.expects(:admin_approval).
         with(instance_of(Pd::Application::TeacherApplication)).
         returns(mock {|mail| mail.expects(:deliver_now)})
 
