@@ -1001,6 +1001,7 @@ module Pd::Application
           responses[:previous_yearlong_cdo_pd].include?('Computer Science A (CSA)') ? NO : YES
       end
 
+      meets_minimum_criteria_scores[:enough_course_hours] = responses[:enough_course_hours] == options[:enough_course_hours].first ? YES : NO
       meets_minimum_criteria_scores[:replace_existing] =
         if responses[:replace_existing] == YES
           NO
