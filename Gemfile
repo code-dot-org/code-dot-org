@@ -246,6 +246,7 @@ group :development, :staging, :levelbuilder do
   gem 'rubocop', '1.28', require: false
   gem 'rubocop-performance', require: false
   gem 'rubocop-rails', require: false
+  gem 'rubocop-rails-accessibility', require: false
   gem 'scss_lint', require: false
 end
 

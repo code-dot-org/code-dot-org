@@ -1,10 +1,10 @@
 import React from 'react';
-import ProjectCardGrid from './ProjectCardGrid';
 import _ from 'lodash';
-import projects, {selectGallery} from './projectsRedux';
-import {createStore, combineReducers} from 'redux';
+import projects from './projectsRedux';
+import {reduxStore} from '@cdo/storybook/decorators';
 import {Provider} from 'react-redux';
 import {Galleries} from './projectConstants';
+import ProjectCardGrid from './ProjectCardGrid';
 
 let projectTypes = ['applab', 'gamelab', 'artist', 'playlab'];
 
@@ -78,61 +78,41 @@ function generateFakePersonalProjects() {
   return personalProjects;
 }
 
-const createProjectsStore = function() {
-  return createStore(combineReducers({projects}));
+const createProjectsStore = function(galleryType) {
+  return reduxStore({projects}, {projects: {selectedGallery: galleryType}});
 };
 
-export default storybook => {
-  storybook.storiesOf('Projects/ProjectCardGrid', module).addStoryTable([
-    {
-      name: 'Public Gallery with student info',
-      description:
-        'Public gallery, with shortened student names and student age ranges.',
-      story: () => {
-        const store = createProjectsStore();
-        store.dispatch(selectGallery(Galleries.PUBlIC));
-        return (
-          <Provider store={store}>
-            <ProjectCardGrid
-              projectLists={generateFakePublicProjectsWithStudentInfo()}
-              galleryType="public"
-            />
-          </Provider>
-        );
-      }
-    },
-    {
-      name: 'Public Gallery without student info',
-      description: 'Public gallery, without student name and age.',
-      story: () => {
-        const store = createProjectsStore();
-        store.dispatch(selectGallery(Galleries.PUBlIC));
-        return (
-          <Provider store={store}>
-            <ProjectCardGrid
-              projectLists={generateFakePublicProjectsWithoutStudentInfo()}
-              galleryType="public"
-            />
-          </Provider>
-        );
-      }
-    },
-    {
-      name: 'Personal Gallery',
-      description:
-        'Personal gallery, showing full names and the "quick action" dropdowns',
-      story: () => {
-        const store = createProjectsStore();
-        store.dispatch(selectGallery(Galleries.PUBlIC));
-        return (
-          <Provider store={store}>
-            <ProjectCardGrid
-              projectLists={generateFakePersonalProjects()}
-              galleryType="personal"
-            />
-          </Provider>
-        );
-      }
-    }
-  ]);
+export default {
+  title: 'ProjectCardGrid',
+  component: ProjectCardGrid
+};
+
+const Template = args => (
+  <Provider store={createProjectsStore(args.selectedGallery)}>
+    <ProjectCardGrid
+      projectLists={args.projectLists}
+      galleryType={args.galleryType}
+    />
+  </Provider>
+);
+
+export const PublicGalleryWithStudentInfo = Template.bind({});
+PublicGalleryWithStudentInfo.args = {
+  selectedGallery: Galleries.PUBLIC,
+  projectLists: generateFakePublicProjectsWithStudentInfo(),
+  galleryType: 'public'
+};
+
+export const PublicGalleryWithoutStudentInfo = Template.bind({});
+PublicGalleryWithoutStudentInfo.args = {
+  selectedGallery: Galleries.PUBLIC,
+  projectLists: generateFakePublicProjectsWithoutStudentInfo(),
+  galleryType: 'public'
+};
+
+export const PersonalGallery = Template.bind({});
+PersonalGallery.args = {
+  selectedGallery: Galleries.PUBLIC,
+  projectLists: generateFakePersonalProjects(),
+  galleryType: 'personal'
 };

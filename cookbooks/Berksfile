@@ -3,11 +3,11 @@ Encoding.default_external = Encoding::UTF_8
 
 source "https://supermarket.chef.io"
 cookbook 'apt'
-cookbook 'ark', '< 6.0.0' # 6.0 0 requires Chef 15.3
+cookbook 'ark'
 cookbook 'build-essential'
 cookbook 'chef-client'
 cookbook 'ntp'
-cookbook 'seven_zip', '< 4.0.0' # 4.0.0 requires Chef 16
+cookbook 'seven_zip'
 cookbook 'chef_client_updater', '>= 3.3.2' # 3.3.2 fixed https://github.com/chef-cookbooks/chef_client_updater/pull/93
 
 # required for cdo-nginx. See that cookbook's Berksfile for details.

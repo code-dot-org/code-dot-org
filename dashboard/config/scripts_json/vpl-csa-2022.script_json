@@ -13,7 +13,7 @@
     },
     "new_name": null,
     "family_name": "vpl-csa",
-    "serialized_at": "2022-10-14 17:36:21 UTC",
+    "serialized_at": "2022-11-10 19:17:54 UTC",
     "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "facilitator",
@@ -95,6 +95,36 @@
         "lesson_group.key": "",
         "script.name": "vpl-csa-2022"
       }
+    },
+    {
+      "key": "lesson-5",
+      "name": "Module 5 post-work: The Unit 5 Project",
+      "absolute_position": 5,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 5,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "vpl-csa-2022"
+      }
+    },
+    {
+      "key": "lesson-6",
+      "name": "Module 6 post-work: String methods in Unit 6",
+      "absolute_position": 6,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 6,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "",
+        "script.name": "vpl-csa-2022"
+      }
     }
   ],
   "lesson_activities": [
@@ -142,6 +172,30 @@
       "seeding_key": {
         "lesson_activity.key": "46f71c3b-1aea-4d6d-baa1-6fa2da9d5a15",
         "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "vpl-csa-2022"
+      }
+    },
+    {
+      "key": "9745b375-4a9d-425c-99e3-66fb254d3b39",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "9745b375-4a9d-425c-99e3-66fb254d3b39",
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "vpl-csa-2022"
+      }
+    },
+    {
+      "key": "660b38a8-f7fe-497f-aa5a-e6041c05acec",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "660b38a8-f7fe-497f-aa5a-e6041c05acec",
+        "lesson.key": "lesson-6",
         "lesson_group.key": "",
         "script.name": "vpl-csa-2022"
       }
@@ -367,6 +421,83 @@
       "seeding_key": {
         "activity_section.key": "da7c2fd9-65ef-4c04-af13-1b928825b34a",
         "lesson_activity.key": "46f71c3b-1aea-4d6d-baa1-6fa2da9d5a15"
+      }
+    },
+    {
+      "key": "e97bc7a5-e4bf-4d04-b4ab-c88f0696e837",
+      "position": 1,
+      "properties": {
+        "progression_name": "Module 5 Overview (~5 minutes)"
+      },
+      "seeding_key": {
+        "activity_section.key": "e97bc7a5-e4bf-4d04-b4ab-c88f0696e837",
+        "lesson_activity.key": "9745b375-4a9d-425c-99e3-66fb254d3b39"
+      }
+    },
+    {
+      "key": "2a3272dd-4b79-474d-87f0-f651c875017e",
+      "position": 2,
+      "properties": {
+        "progression_name": "Image Filters in Unit 5 (~25 minutes)"
+      },
+      "seeding_key": {
+        "activity_section.key": "2a3272dd-4b79-474d-87f0-f651c875017e",
+        "lesson_activity.key": "9745b375-4a9d-425c-99e3-66fb254d3b39"
+      }
+    },
+    {
+      "key": "7e975aaf-2d9d-4c52-aee3-749fa532ca9b",
+      "position": 3,
+      "properties": {
+        "progression_name": "The Unit 5 Project (~25 minutes)"
+      },
+      "seeding_key": {
+        "activity_section.key": "7e975aaf-2d9d-4c52-aee3-749fa532ca9b",
+        "lesson_activity.key": "9745b375-4a9d-425c-99e3-66fb254d3b39"
+      }
+    },
+    {
+      "key": "68068edf-f14a-413d-88f6-2e8e5d4f9fbd",
+      "position": 4,
+      "properties": {
+        "progression_name": "Wrap-up (~5 minutes)"
+      },
+      "seeding_key": {
+        "activity_section.key": "68068edf-f14a-413d-88f6-2e8e5d4f9fbd",
+        "lesson_activity.key": "9745b375-4a9d-425c-99e3-66fb254d3b39"
+      }
+    },
+    {
+      "key": "6b5249ce-506f-4e1d-9af6-36e2bfe9f8d6",
+      "position": 1,
+      "properties": {
+        "progression_name": "Module 6 Overview (~5 minutes)"
+      },
+      "seeding_key": {
+        "activity_section.key": "6b5249ce-506f-4e1d-9af6-36e2bfe9f8d6",
+        "lesson_activity.key": "660b38a8-f7fe-497f-aa5a-e6041c05acec"
+      }
+    },
+    {
+      "key": "91d60770-26e3-4dc9-8ec1-ed35cc0d3849",
+      "position": 2,
+      "properties": {
+        "progression_name": "Strings in Unit 6 (~50 minutes)"
+      },
+      "seeding_key": {
+        "activity_section.key": "91d60770-26e3-4dc9-8ec1-ed35cc0d3849",
+        "lesson_activity.key": "660b38a8-f7fe-497f-aa5a-e6041c05acec"
+      }
+    },
+    {
+      "key": "ae8c1e6a-ec29-4003-a367-7f51effe8edd",
+      "position": 3,
+      "properties": {
+        "progression_name": "Wrap-up (~5 minutes)"
+      },
+      "seeding_key": {
+        "activity_section.key": "ae8c1e6a-ec29-4003-a367-7f51effe8edd",
+        "lesson_activity.key": "660b38a8-f7fe-497f-aa5a-e6041c05acec"
       }
     }
   ],
@@ -1127,6 +1258,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "vpl-csa-module-4-overview-2022"
+        ],
         "progression": "Module 4 Overview (~5 minutes)"
       },
       "bonus": false,
@@ -1149,6 +1283,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "vpl-csa-module-4-applying the rubric-2022"
+        ],
         "progression": "College Board FRQs (~25 minutes)"
       },
       "bonus": false,
@@ -1171,6 +1308,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "vpl-csa-2022-module-4-frq-reflection"
+        ],
         "progression": "College Board FRQs (~25 minutes)"
       },
       "bonus": false,
@@ -1193,6 +1333,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "vpl-csa-module-4-additional-FRQ-resources-2022"
+        ],
         "progression": "College Board FRQs (~25 minutes)"
       },
       "bonus": false,
@@ -1215,6 +1358,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "vpl-csa-module-4-unit-5-frq-2022"
+        ],
         "progression": "FRQ Day in Code.org's Unit 5 (~20 minutes)"
       },
       "bonus": false,
@@ -1237,6 +1383,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "vpl-csa-2022-module-4-frq-skills-reflection"
+        ],
         "progression": "FRQ Skills (~5 minutes)"
       },
       "bonus": false,
@@ -1259,6 +1408,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "vpl-csa-module-4-wrap-up-2022"
+        ],
         "progression": "Wrap-up (~5 minutes)"
       },
       "bonus": false,
@@ -1273,6 +1425,336 @@
       },
       "level_keys": [
         "vpl-csa-module-4-wrap-up-2022"
+      ]
+    },
+    {
+      "chapter": 38,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Module 5 Overview (~5 minutes)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "vpl-csa-module-5-overview-2022"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "vpl-csa-2022",
+        "activity_section.key": "e97bc7a5-e4bf-4d04-b4ab-c88f0696e837"
+      },
+      "level_keys": [
+        "vpl-csa-module-5-overview-2022"
+      ]
+    },
+    {
+      "chapter": 39,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Image Filters in Unit 5 (~25 minutes)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "vpl-csa-2022-module-5-filter-reflection"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "vpl-csa-2022",
+        "activity_section.key": "2a3272dd-4b79-474d-87f0-f651c875017e"
+      },
+      "level_keys": [
+        "vpl-csa-2022-module-5-filter-reflection"
+      ]
+    },
+    {
+      "chapter": 40,
+      "position": 3,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Image Filters in Unit 5 (~25 minutes)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "vpl-csa-2022-module-5-make-your-own-filter"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "vpl-csa-2022",
+        "activity_section.key": "2a3272dd-4b79-474d-87f0-f651c875017e"
+      },
+      "level_keys": [
+        "vpl-csa-2022-module-5-make-your-own-filter"
+      ]
+    },
+    {
+      "chapter": 41,
+      "position": 4,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "The Unit 5 Project (~25 minutes)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "vpl-csa-2022-module-5-project-reflection"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "vpl-csa-2022",
+        "activity_section.key": "7e975aaf-2d9d-4c52-aee3-749fa532ca9b"
+      },
+      "level_keys": [
+        "vpl-csa-2022-module-5-project-reflection"
+      ]
+    },
+    {
+      "chapter": 42,
+      "position": 5,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "The Unit 5 Project (~25 minutes)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "vpl-csa-module-5-2022-making-changes-to-u5-project"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "vpl-csa-2022",
+        "activity_section.key": "7e975aaf-2d9d-4c52-aee3-749fa532ca9b"
+      },
+      "level_keys": [
+        "vpl-csa-module-5-2022-making-changes-to-u5-project"
+      ]
+    },
+    {
+      "chapter": 43,
+      "position": 6,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Wrap-up (~5 minutes)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "vpl-csa-module-5-wrap-up-2022"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "vpl-csa-2022",
+        "activity_section.key": "68068edf-f14a-413d-88f6-2e8e5d4f9fbd"
+      },
+      "level_keys": [
+        "vpl-csa-module-5-wrap-up-2022"
+      ]
+    },
+    {
+      "chapter": 44,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Module 6 Overview (~5 minutes)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "vpl-csa-module-6-overview-2022"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "",
+        "script.name": "vpl-csa-2022",
+        "activity_section.key": "6b5249ce-506f-4e1d-9af6-36e2bfe9f8d6"
+      },
+      "level_keys": [
+        "vpl-csa-module-6-overview-2022"
+      ]
+    },
+    {
+      "chapter": 45,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Strings in Unit 6 (~50 minutes)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "vpl-csa-module-6-2022-ap-subset"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "",
+        "script.name": "vpl-csa-2022",
+        "activity_section.key": "91d60770-26e3-4dc9-8ec1-ed35cc0d3849"
+      },
+      "level_keys": [
+        "vpl-csa-module-6-2022-ap-subset"
+      ]
+    },
+    {
+      "chapter": 46,
+      "position": 3,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Strings in Unit 6 (~50 minutes)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "vpl-csa-module-6-2022-u6l7-level1-clone"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "",
+        "script.name": "vpl-csa-2022",
+        "activity_section.key": "91d60770-26e3-4dc9-8ec1-ed35cc0d3849"
+      },
+      "level_keys": [
+        "vpl-csa-module-6-2022-u6l7-level1-clone"
+      ]
+    },
+    {
+      "chapter": 47,
+      "position": 4,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Strings in Unit 6 (~50 minutes)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "vpl-csa-module-6-2022-notice-wonder-reflection"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "",
+        "script.name": "vpl-csa-2022",
+        "activity_section.key": "91d60770-26e3-4dc9-8ec1-ed35cc0d3849"
+      },
+      "level_keys": [
+        "vpl-csa-module-6-2022-notice-wonder-reflection"
+      ]
+    },
+    {
+      "chapter": 48,
+      "position": 5,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "Strings in Unit 6 (~50 minutes)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "vpl-csa-module-6-2022-substring-method-video"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "",
+        "script.name": "vpl-csa-2022",
+        "activity_section.key": "91d60770-26e3-4dc9-8ec1-ed35cc0d3849"
+      },
+      "level_keys": [
+        "vpl-csa-module-6-2022-substring-method-video"
+      ]
+    },
+    {
+      "chapter": 49,
+      "position": 6,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+        "progression": "Strings in Unit 6 (~50 minutes)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "vpl-csa-module-6-2022-u6l8-level1-clone"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "",
+        "script.name": "vpl-csa-2022",
+        "activity_section.key": "91d60770-26e3-4dc9-8ec1-ed35cc0d3849"
+      },
+      "level_keys": [
+        "vpl-csa-module-6-2022-u6l8-level1-clone"
+      ]
+    },
+    {
+      "chapter": 50,
+      "position": 7,
+      "activity_section_position": 6,
+      "assessment": false,
+      "properties": {
+        "progression": "Strings in Unit 6 (~50 minutes)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "vpl-csa-module-6-2022-compareto-method-video"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "",
+        "script.name": "vpl-csa-2022",
+        "activity_section.key": "91d60770-26e3-4dc9-8ec1-ed35cc0d3849"
+      },
+      "level_keys": [
+        "vpl-csa-module-6-2022-compareto-method-video"
+      ]
+    },
+    {
+      "chapter": 51,
+      "position": 8,
+      "activity_section_position": 7,
+      "assessment": false,
+      "properties": {
+        "progression": "Strings in Unit 6 (~50 minutes)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "vpl-csa-module-6-2022-notice-wonder-2-reflection"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "",
+        "script.name": "vpl-csa-2022",
+        "activity_section.key": "91d60770-26e3-4dc9-8ec1-ed35cc0d3849"
+      },
+      "level_keys": [
+        "vpl-csa-module-6-2022-notice-wonder-2-reflection"
+      ]
+    },
+    {
+      "chapter": 52,
+      "position": 9,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Wrap-up (~5 minutes)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "vpl-csa-module-6-wrap-up-2022"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "",
+        "script.name": "vpl-csa-2022",
+        "activity_section.key": "ae8c1e6a-ec29-4003-a367-7f51effe8edd"
+      },
+      "level_keys": [
+        "vpl-csa-module-6-wrap-up-2022"
       ]
     }
   ],
@@ -1719,6 +2201,186 @@
         "lesson_group.key": "",
         "script.name": "vpl-csa-2022",
         "activity_section.key": "da7c2fd9-65ef-4c04-af13-1b928825b34a"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "vpl-csa-module-5-overview-2022",
+        "script_level.level_keys": [
+          "vpl-csa-module-5-overview-2022"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "vpl-csa-2022",
+        "activity_section.key": "e97bc7a5-e4bf-4d04-b4ab-c88f0696e837"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "vpl-csa-2022-module-5-filter-reflection",
+        "script_level.level_keys": [
+          "vpl-csa-2022-module-5-filter-reflection"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "vpl-csa-2022",
+        "activity_section.key": "2a3272dd-4b79-474d-87f0-f651c875017e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "vpl-csa-2022-module-5-make-your-own-filter",
+        "script_level.level_keys": [
+          "vpl-csa-2022-module-5-make-your-own-filter"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "vpl-csa-2022",
+        "activity_section.key": "2a3272dd-4b79-474d-87f0-f651c875017e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "vpl-csa-2022-module-5-project-reflection",
+        "script_level.level_keys": [
+          "vpl-csa-2022-module-5-project-reflection"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "vpl-csa-2022",
+        "activity_section.key": "7e975aaf-2d9d-4c52-aee3-749fa532ca9b"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "vpl-csa-module-5-2022-making-changes-to-u5-project",
+        "script_level.level_keys": [
+          "vpl-csa-module-5-2022-making-changes-to-u5-project"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "vpl-csa-2022",
+        "activity_section.key": "7e975aaf-2d9d-4c52-aee3-749fa532ca9b"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "vpl-csa-module-5-wrap-up-2022",
+        "script_level.level_keys": [
+          "vpl-csa-module-5-wrap-up-2022"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "vpl-csa-2022",
+        "activity_section.key": "68068edf-f14a-413d-88f6-2e8e5d4f9fbd"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "vpl-csa-module-6-overview-2022",
+        "script_level.level_keys": [
+          "vpl-csa-module-6-overview-2022"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "",
+        "script.name": "vpl-csa-2022",
+        "activity_section.key": "6b5249ce-506f-4e1d-9af6-36e2bfe9f8d6"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "vpl-csa-module-6-2022-ap-subset",
+        "script_level.level_keys": [
+          "vpl-csa-module-6-2022-ap-subset"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "",
+        "script.name": "vpl-csa-2022",
+        "activity_section.key": "91d60770-26e3-4dc9-8ec1-ed35cc0d3849"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "vpl-csa-module-6-2022-u6l7-level1-clone",
+        "script_level.level_keys": [
+          "vpl-csa-module-6-2022-u6l7-level1-clone"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "",
+        "script.name": "vpl-csa-2022",
+        "activity_section.key": "91d60770-26e3-4dc9-8ec1-ed35cc0d3849"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "vpl-csa-module-6-2022-notice-wonder-reflection",
+        "script_level.level_keys": [
+          "vpl-csa-module-6-2022-notice-wonder-reflection"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "",
+        "script.name": "vpl-csa-2022",
+        "activity_section.key": "91d60770-26e3-4dc9-8ec1-ed35cc0d3849"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "vpl-csa-module-6-2022-substring-method-video",
+        "script_level.level_keys": [
+          "vpl-csa-module-6-2022-substring-method-video"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "",
+        "script.name": "vpl-csa-2022",
+        "activity_section.key": "91d60770-26e3-4dc9-8ec1-ed35cc0d3849"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "vpl-csa-module-6-2022-u6l8-level1-clone",
+        "script_level.level_keys": [
+          "vpl-csa-module-6-2022-u6l8-level1-clone"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "",
+        "script.name": "vpl-csa-2022",
+        "activity_section.key": "91d60770-26e3-4dc9-8ec1-ed35cc0d3849"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "vpl-csa-module-6-2022-compareto-method-video",
+        "script_level.level_keys": [
+          "vpl-csa-module-6-2022-compareto-method-video"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "",
+        "script.name": "vpl-csa-2022",
+        "activity_section.key": "91d60770-26e3-4dc9-8ec1-ed35cc0d3849"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "vpl-csa-module-6-2022-notice-wonder-2-reflection",
+        "script_level.level_keys": [
+          "vpl-csa-module-6-2022-notice-wonder-2-reflection"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "",
+        "script.name": "vpl-csa-2022",
+        "activity_section.key": "91d60770-26e3-4dc9-8ec1-ed35cc0d3849"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "vpl-csa-module-6-wrap-up-2022",
+        "script_level.level_keys": [
+          "vpl-csa-module-6-wrap-up-2022"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "",
+        "script.name": "vpl-csa-2022",
+        "activity_section.key": "ae8c1e6a-ec29-4003-a367-7f51effe8edd"
       }
     }
   ],
