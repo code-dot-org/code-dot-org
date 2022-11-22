@@ -7,7 +7,7 @@ class Services::IncompleteReminder
     # another one 14 days after an applicant has last saved their application.
     def queue_incomplete_reminders!
       applications_needing_soft_reminder.each do |application|
-        application.queue_email 'complete_application_soft_reminder'
+        application.queue_email 'complete_application_initial_reminder'
       end
 
       applications_needing_final_reminder.each do |application|
@@ -23,7 +23,7 @@ class Services::IncompleteReminder
       incomplete_applications.select do |app|
         most_recent_update = most_recently_updated(app)
         most_recent_update.before?(Date.today - 6.days) && most_recent_update.after?(Date.today - 14.days) &&
-          app.emails.where(email_type: 'complete_application_soft_reminder').count == 0
+          app.emails.where(email_type: 'complete_application_initial_reminder').count == 0
       end
     end
 

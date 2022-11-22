@@ -12,7 +12,7 @@ class PdTeacherApplicationMailerPreview < ActionMailer::Preview
     admin_approval_completed_teacher_receipt
     needs_admin_approval
     accepted
-    complete_application_soft_reminder
+    complete_application_initial_reminder
     complete_application_final_reminder
     registration_reminder
     declined

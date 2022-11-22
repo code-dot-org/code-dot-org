@@ -130,7 +130,7 @@ module Pd::Application
       )
     end
 
-    def complete_application_soft_reminder(teacher_application)
+    def complete_application_initial_reminder(teacher_application)
       @application = teacher_application
 
       mail(

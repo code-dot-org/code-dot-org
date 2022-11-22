@@ -11,38 +11,38 @@ class Services::IncompleteReminderTest < ActiveSupport::TestCase
       # Initial creation: No reminders
       application = create :pd_teacher_application, status: 'incomplete'
       Services::IncompleteReminder.queue_incomplete_reminders!
-      assert_empty application.emails.where(email_type: 'complete_application_soft_reminder')
+      assert_empty application.emails.where(email_type: 'complete_application_initial_reminder')
       assert_empty application.emails.where(email_type: 'complete_application_final_reminder')
 
       # First email is due in 7 days. At 6 days, no email yet:
       Timecop.travel 6.days
       Services::IncompleteReminder.queue_incomplete_reminders!
-      assert_empty application.emails.where(email_type: 'complete_application_soft_reminder')
+      assert_empty application.emails.where(email_type: 'complete_application_initial_reminder')
 
       # At 7 days, email is sent on schedule:
       Timecop.travel 1.day
       Services::IncompleteReminder.queue_incomplete_reminders!
-      assert_equal 1, application.emails.where(email_type: 'complete_application_soft_reminder').count
+      assert_equal 1, application.emails.where(email_type: 'complete_application_initial_reminder').count
 
       # Immediate re-run does not create another reminder
       Services::IncompleteReminder.queue_incomplete_reminders!
-      assert_equal 1, application.emails.where(email_type: 'complete_application_soft_reminder').count
+      assert_equal 1, application.emails.where(email_type: 'complete_application_initial_reminder').count
 
       # Fake sending the email from the queue
       application.emails.
-        where(email_type: 'complete_application_soft_reminder', sent_at: nil).
+        where(email_type: 'complete_application_initial_reminder', sent_at: nil).
         update(sent_at: DateTime.now)
 
       # Next email is due in 7 more days.  At 6 days, only the one reminder has been sent:
       Timecop.travel 6.days
       Services::IncompleteReminder.queue_incomplete_reminders!
-      assert_equal 1, application.emails.where(email_type: 'complete_application_soft_reminder').count
+      assert_equal 1, application.emails.where(email_type: 'complete_application_initial_reminder').count
 
       # At 7 days, the second reminder is sent on schedule and the first reminder is not sent again:
       Timecop.travel 1.day
       Services::IncompleteReminder.queue_incomplete_reminders!
       assert_equal 1, application.emails.where(email_type: 'complete_application_final_reminder').count
-      assert_equal 1, application.emails.where(email_type: 'complete_application_soft_reminder').count
+      assert_equal 1, application.emails.where(email_type: 'complete_application_initial_reminder').count
 
       # Immediate re-run does not create another reminder
       Services::IncompleteReminder.queue_incomplete_reminders!
@@ -57,7 +57,7 @@ class Services::IncompleteReminderTest < ActiveSupport::TestCase
       Timecop.travel 30.days
       Services::IncompleteReminder.queue_incomplete_reminders!
       assert_equal 1, application.emails.where(email_type: 'complete_application_final_reminder').count
-      assert_equal 1, application.emails.where(email_type: 'complete_application_soft_reminder').count
+      assert_equal 1, application.emails.where(email_type: 'complete_application_initial_reminder').count
     end
   end
 
@@ -70,7 +70,7 @@ class Services::IncompleteReminderTest < ActiveSupport::TestCase
       # Initial creation: No reminders
       application = create :pd_teacher_application, status: 'incomplete'
       Services::IncompleteReminder.queue_incomplete_reminders!
-      assert_empty application.emails.where(email_type: 'complete_application_soft_reminder')
+      assert_empty application.emails.where(email_type: 'complete_application_initial_reminder')
       assert_empty application.emails.where(email_type: 'complete_application_final_reminder')
 
       # 6 days later, a user updates their application and saves again, and no reminder is sent
@@ -78,43 +78,43 @@ class Services::IncompleteReminderTest < ActiveSupport::TestCase
       application.update!(form_data: application.form_data_hash.merge("firstName": 'Simon').to_json)
       application.reload
       Services::IncompleteReminder.queue_incomplete_reminders!
-      assert_empty application.emails.where(email_type: 'complete_application_soft_reminder')
+      assert_empty application.emails.where(email_type: 'complete_application_initial_reminder')
 
       # 7 days from creation, no reminder is sent because of the update
       Timecop.travel 1.day
       Services::IncompleteReminder.queue_incomplete_reminders!
-      assert_empty application.emails.where(email_type: 'complete_application_soft_reminder')
+      assert_empty application.emails.where(email_type: 'complete_application_initial_reminder')
 
       # 7 days after the update, email is sent on schedule:
       Timecop.travel 6.days
       Services::IncompleteReminder.queue_incomplete_reminders!
-      assert_equal 1, application.emails.where(email_type: 'complete_application_soft_reminder').count
+      assert_equal 1, application.emails.where(email_type: 'complete_application_initial_reminder').count
 
       # Immediate re-run does not create another reminder
       Services::IncompleteReminder.queue_incomplete_reminders!
-      assert_equal 1, application.emails.where(email_type: 'complete_application_soft_reminder').count
+      assert_equal 1, application.emails.where(email_type: 'complete_application_initial_reminder').count
 
       # Fake sending the email from the queue
       application.emails.
-        where(email_type: 'complete_application_soft_reminder', sent_at: nil).
+        where(email_type: 'complete_application_initial_reminder', sent_at: nil).
         update(sent_at: DateTime.now)
 
       # 3 days later, a user updates their application, and no new reminder is sent
       Timecop.travel 3.days
       application.update!(form_data: application.form_data_hash.merge("firstName": 'Garfunkel').to_json)
       Services::IncompleteReminder.queue_incomplete_reminders!
-      assert_equal 1, application.emails.where(email_type: 'complete_application_soft_reminder').count
+      assert_equal 1, application.emails.where(email_type: 'complete_application_initial_reminder').count
 
       # 7 days after original email was sent, no reminder is sent because of the update
       Timecop.travel 4.days
       Services::IncompleteReminder.queue_incomplete_reminders!
-      assert_equal 1, application.emails.where(email_type: 'complete_application_soft_reminder').count
+      assert_equal 1, application.emails.where(email_type: 'complete_application_initial_reminder').count
       assert_empty application.emails.where(email_type: 'complete_application_final_reminder')
 
       # 14 days after last update, a second reminder is sent
       Timecop.travel 10.days
       Services::IncompleteReminder.queue_incomplete_reminders!
-      assert_equal 1, application.emails.where(email_type: 'complete_application_soft_reminder').count
+      assert_equal 1, application.emails.where(email_type: 'complete_application_initial_reminder').count
       assert_equal 1, application.emails.where(email_type: 'complete_application_final_reminder').count
 
       # Fake sending the email from the queue
@@ -125,7 +125,7 @@ class Services::IncompleteReminderTest < ActiveSupport::TestCase
       # That's the last one - no more reminders are sent
       Timecop.travel 30.days
       Services::IncompleteReminder.queue_incomplete_reminders!
-      assert_equal 1, application.emails.where(email_type: 'complete_application_soft_reminder').count
+      assert_equal 1, application.emails.where(email_type: 'complete_application_initial_reminder').count
       assert_equal 1, application.emails.where(email_type: 'complete_application_final_reminder').count
     end
   end
