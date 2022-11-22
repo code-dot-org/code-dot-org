@@ -975,17 +975,28 @@ module Pd::Application
       meets_minimum_criteria_scores = {}
       meets_scholarship_criteria_scores = {}
 
-      # Section 2
+      # Section 4
+      if course == 'csa'
+        meets_minimum_criteria_scores[:csa_already_know] = responses[:csa_already_know] == options[:csa_already_know].first ? YES : NO
+      end
+
+      # Section 6
       if course == 'csd'
         meets_minimum_criteria_scores[:csd_which_grades] =
           (responses[:csd_which_grades] & options[:csd_which_grades].first(5)).any? ? YES : NO
+        took_csd_course =
+          responses[:previous_yearlong_cdo_pd].include?('CS Discoveries')
+        meets_minimum_criteria_scores[:previous_yearlong_cdo_pd] = took_csd_course ? NO : YES
       elsif course == 'csp'
         meets_minimum_criteria_scores[:csp_which_grades] =
           (responses[:csp_which_grades] & options[:csp_which_grades].first(4)).any? ? YES : NO
+        meets_minimum_criteria_scores[:previous_yearlong_cdo_pd] =
+          responses[:previous_yearlong_cdo_pd].include?('CS Principles') ? NO : YES
       elsif course == 'csa'
-        meets_minimum_criteria_scores[:csa_already_know] = responses[:csa_already_know] == options[:csa_already_know].first ? YES : NO
         meets_minimum_criteria_scores[:csa_which_grades] =
           (responses[:csa_which_grades] & options[:csa_which_grades].first(4)).any? ? YES : NO
+        meets_minimum_criteria_scores[:previous_yearlong_cdo_pd] =
+          responses[:previous_yearlong_cdo_pd].include?('Computer Science A (CSA)') ? NO : YES
       end
 
       meets_minimum_criteria_scores[:replace_existing] =
@@ -997,20 +1008,7 @@ module Pd::Application
           YES
         end
 
-      # Section 3
-      if course == 'csd'
-        took_csd_course =
-          responses[:previous_yearlong_cdo_pd].include?('CS Discoveries')
-        meets_minimum_criteria_scores[:previous_yearlong_cdo_pd] = took_csd_course ? NO : YES
-      elsif course == 'csp'
-        meets_minimum_criteria_scores[:previous_yearlong_cdo_pd] =
-          responses[:previous_yearlong_cdo_pd].include?('CS Principles') ? NO : YES
-      elsif course == 'csa'
-        meets_minimum_criteria_scores[:previous_yearlong_cdo_pd] =
-          responses[:previous_yearlong_cdo_pd].include?('Computer Science A (CSA)') ? NO : YES
-      end
-
-      # Section 4
+      # Section 7
       meets_minimum_criteria_scores[:committed] = responses[:committed] == options[:committed].first ? YES : NO
 
       # Principal Approval
