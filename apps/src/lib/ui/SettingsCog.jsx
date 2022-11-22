@@ -105,13 +105,13 @@ class SettingsCog extends Component {
     const {isRunning, runModeIndicators} = this.props;
 
     return (
-      <>
+      <div>
         <button
           type="button"
           onClick={this.toggleOpen}
           className={classNames(
             moduleStyles.button,
-            runModeIndicators && isRunning && moduleStyles.iconContainerRunning
+            runModeIndicators && isRunning && moduleStyles.buttonRunning
           )}
         >
           <FontAwesome
@@ -156,7 +156,7 @@ class SettingsCog extends Component {
           isOpen={this.state.managingLibraries}
           onClose={this.closeLibraryManager}
         />
-      </>
+      </div>
     );
   }
 }
