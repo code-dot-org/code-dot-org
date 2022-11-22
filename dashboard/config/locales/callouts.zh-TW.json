@@ -2849,6 +2849,9 @@
         },
         "helloworld_food_sounds_space-2022": {
           "hello_world_new": "新的程式積木！"
+        },
+        "helloworld_food_click_space-2022": {
+          "hw_Run": "請先點擊這裡！"
         }
       }
     }

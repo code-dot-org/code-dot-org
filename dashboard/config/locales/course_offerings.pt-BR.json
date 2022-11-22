@@ -49,6 +49,7 @@
         "csa-self-paced-pl": "Navegação pelo Code.org para professores-piloto do CSA",
         "outbreak-csc": "Epidemia",
         "poem-art": "Arte poética",
+        "hello-world-emoji": "Olá, Mundo: Emoji",
         "edit-code": "Edite o código",
         "tesstest921": "tesstest921",
         "poetry-hoc3": "poetry-hoc3",
@@ -62,7 +63,10 @@
         "coursee-ramp": "percurso",
         "csa5-exemplars": "csa5-exemplars",
         "katie-practice": "prática katie",
-        "soccer": "futebol"
+        "soccer": "futebol",
+        "hello-world-space": "Olá, Mundo: Espaço",
+        "hello-world-soccer": "Olá, Mundo: Futebol",
+        "playground": "Playground"
       }
     }
   }

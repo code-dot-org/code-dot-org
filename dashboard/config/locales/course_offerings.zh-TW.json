@@ -70,7 +70,10 @@
         "step": "點",
         "coursee-ramp": "coursee-ramp",
         "csa5-exemplars": "csa5-exemplars",
-        "soccer": "足球"
+        "soccer": "足球",
+        "hello-world-space": "你好世界：太空",
+        "hello-world-soccer": "你好世界：足球",
+        "playground": "游樂場"
       }
     }
   }

@@ -41,6 +41,8 @@ ko:
     많습니다.
   hoc2022_codeorg_title: NASA 등과 함께 Hour of Code를 기념하세요.
   hoc2022_codeorg_description: 제10회 Hour of Code가 시작되었습니다! 탐색하고, 즐기고 함께 창작해 보세요.
+  social_hoc2022_dance: Featuring Beyoncé, Harry Styles, Lizzo, Lil Nas X, Selena
+    Gomez, music from Disney's "Encanto," and more!
   social_hoc2021_cse: 'During the #HourOfCode, we''re celebrating #CSEverywhere. Discover
     the connections!'
   hoc2020_header: 지금 배워서, 보다 밝은 미래를 건설하세요.
@@ -512,6 +514,7 @@ ko:
   signup_special_event_details_placeholder: 이 스페셜 이벤트에 대해서 자세히 설명해주세요.
   signup_send_posters_address_placeholder: 이 주소가 지도에 나타나지는 않습니다.
   signup_event_type_in_school: 학교
+  signup_event_type_after_school: After school program
   signup_event_type_out_of_school: 기관/회사
   signup_event_type_at_home: 홈
   signup_submit_census_label: 제출
@@ -884,9 +887,6 @@ ko:
   learn_banner_teachers: '교사: <a id=''teacher_banner_host''>한 시간 수업</a> 혹은 <a id=''teacher_banner_howto''>하우
     투 가이드 읽기</a>'
   learn_banner_teachers_markdown: '교사: [한 시간 수업](%{host_url}) 또는 [하우 투 가이드 읽기](%{howto_url})'
-  learn_robotics_banner_heading: 로봇 공학 및 써킷
-  learn_robotics_banner_blurb: 로봇 또는 물리적 컴퓨팅 키트가 있어요? 그것들을 아래 활동에서 사용하여 모든 연령대 학생들을
-    위한 실재하는 아워오브코드를 만드세요!  일부 활동은 심지어 시뮬레이터를 제공하여 하드웨어 없이도 시작할 수 있습니다.
   tutorial_dance2019_name: 댄스 파티 2019
   tutorial_danceparty_name: 댄스 파티
   tutorial_chibitronics_name: '치비트로닉스: 일러스트 스토리'
@@ -8629,7 +8629,7 @@ ko:
   tutorial_clbinary_name: Learn How Binary Works with Computers using Minecraft
   tutorial_sascollabcode_name: 'SAS CodeSnaps: Collaborative coding for blind, low
     vision and sighted students'
-  tutorial_codecombatgoblins_name: 'CodeCombat: Goblins nn'' Glory'
+  tutorial_codecombatgoblins_name: 'CodeCombat: Goblins ''n'' Glory'
   tutorial_scratchstorytelling_name: Anything is Possible! Storytelling with Scratch
   tutorial_crayolasymbols_name: 'Unplugged Coding from Crayola Education: Visual Symbols
     Convey Meaning'
@@ -9395,7 +9395,7 @@ ko:
   tutorial_googlesuperhero_string_detail_programming_languages: 블록
   tutorial_googlename _string_detail_programming_languages: 블록
   tutorial_carnegiezillah_string_detail_programming_languages: 블록
-  tutorial_nasachspacejam_string_detail_programming_languages: JavaScript, P5
+  tutorial_nasachspacejam_string_detail_programming_languages: 블록
   tutorial_hatchxrsolar_string_detail_programming_languages: 블록
   tutorial_hatchxrspace_string_detail_programming_languages: 블록
   tutorial_hatchxrtrex_string_detail_programming_languages: 블록
@@ -9430,6 +9430,29 @@ ko:
   tutorial_nasapackage_string_detail_programming_languages: 블록
   tutorial_nasalunar_string_detail_programming_languages: 블록, 자바스크립트
   tutorial_meeestate_string_detail_programming_languages: 블록, 파이썬
+  tutorial_imagipixelart_longdescription: Learn Python and create your own colorful
+    animations in this 1 hour crash course!
+  tutorial_imagipixelart_name: Code your own pixel art!
+  tutorial_imagipixelart_string_detail_grades: 2-8 학년
+  tutorial_imagipixelart_string_detail_platforms: ''
+  tutorial_imagipixelart_string_detail_programming_languages: typing
+  tutorial_imagipixelart_string_platforms: All modern browsers, iPad, Android tablets,
+    Windows phone, Android phone, iPhone
+  tutorial_kcjhealth_longdescription: 'Learn about data visualization, algorithmic
+    art and coding, while exploring SDG #3 ''Good Health and Well-Being''.'
+  tutorial_kcjhealth_name: The Health & Well-Being Challenge
+  tutorial_kcjhealth_string_detail_grades: 6 학년 이상 (11 세 이상)
+  tutorial_kcjhealth_string_detail_platforms: ''
+  tutorial_kcjhealth_string_detail_programming_languages: blocks
+  tutorial_kcjhealth_string_platforms: 모든 최신 브라우저
+  tutorial_msftwakanda_longdescription: 'Shuri, Okoye, and Riri must band together
+    to help Wakanda. Code your own action-packed activity inspired by Marvel Studios''
+    ''Black Panther: Wakanda Forever''!'
+  tutorial_msftwakanda_name: Long Live Wakanda
+  tutorial_msftwakanda_string_detail_grades: 6 학년 이상 (11 세 이상)
+  tutorial_msftwakanda_string_detail_platforms: ''
+  tutorial_msftwakanda_string_detail_programming_languages: blocks
+  tutorial_msftwakanda_string_platforms: 모든 최신 브라우저
   school_not_found_heading: 귀하의 학교를 찾을 수 없습니다. 더 자세한 정보를 입력하시기 바랍니다.
   school_name: 학교 이름
   school_name_error: 학교 이름은 필수입력항목입니다.

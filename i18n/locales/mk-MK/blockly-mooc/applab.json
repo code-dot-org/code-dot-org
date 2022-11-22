@@ -1,0 +1,18 @@
+{
+  "catActions": "Акции",
+  "catControl": "Лупови",
+  "catLogic": "Логика",
+  "catMath": "Математика",
+  "catText": "Текст",
+  "catVariables": "Променливи",
+  "designWorkspaceHeader": "Работна површина: ",
+  "dropletBlock_console.log_param0": "порака",
+  "dropletBlock_getKeyValueSync_param0": "клуч",
+  "dropletBlock_setKeyValueSync_param0": "клуч",
+  "dropletBlock_setRGB_param3": "Црвена",
+  "dropletBlock_setRGB_param4": "Зелена",
+  "dropletBlock_setRGB_param5": "Сина",
+  "dropletBlock_substring_param0": "почеток",
+  "dropletBlock_substring_param1": "Крај",
+  "repeatDo": "изврши"
+}
