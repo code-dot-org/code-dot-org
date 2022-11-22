@@ -95,8 +95,7 @@ const embeddedIdeStyles = {
   gamelab: {
     width: 450,
     height: 781,
-    transform: 'scale(0.5)',
-    overflow: 'scroll'
+    transform: 'scale(0.5)'
   }
 };
 
@@ -109,7 +108,6 @@ const embeddedIdeContainerStyles = {
   gamelab: {
     width: '240px',
     height: '400px',
-    paddingTop: '20px',
-    overflow: 'scroll'
+    paddingTop: '20px'
   }
 };
