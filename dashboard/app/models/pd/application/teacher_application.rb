@@ -695,6 +695,7 @@ module Pd::Application
           required << :csa_which_grades
           required << :csa_how_offer
           required << :csa_already_know
+          required << :csa_phone_screen
         end
 
         if hash[:regional_partner_workshop_ids].presence
@@ -978,6 +979,7 @@ module Pd::Application
       # Section 4
       if course == 'csa'
         meets_minimum_criteria_scores[:csa_already_know] = responses[:csa_already_know] == options[:csa_already_know].first ? YES : NO
+        meets_minimum_criteria_scores[:csa_phone_screen] = responses[:csa_phone_screen] == options[:csa_phone_screen].first ? YES : NO
       end
 
       # Section 6
