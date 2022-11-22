@@ -15,7 +15,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-11-15 23:12:41 UTC",
+    "serialized_at": "2022-11-21 17:31:00 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -5012,7 +5012,13 @@
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to develop their Asphalt Art Project.",
         "duration": "15",
         "name": "Development",
-        "progression_name": "Asphalt Art Project"
+        "progression_name": "Asphalt Art Project",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "You can refer students back to the [**Decomposition and Design**](https://studio.code.org/s/csa1-2023/lessons/13) lesson to recall how they broke down the murals to create the designs. Students may also want to save the `MuralPainter` to their Backpacks or copy some of its methods to use in the Asphalt Art Project."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "98897942-24d3-4ede-97fc-0ae26d955b55",
@@ -5587,7 +5593,7 @@
       "key": "b466c467-a715-410d-8759-f72b71af1401",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Show the video – *Unity and Safety Through Street Art in Norfolk, VA*.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Show the examples of asphalt art.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Asphalt Art Project Planning Guide.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** As a class, read through the Project Description on the first page of the Asphalt Art Project Planning Guide and review the rubric on the last page.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What do you notice about the project requirements and rubric? What does success look like for this project?*\n\n**Discussion Goal:** Students share what they notice about the project requirements and rubric and identify the components to implement in their program.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What barriers do you anticipate to achieving success on this project?*\n\n**Discussion Goal:** Students identify barriers they anticipate and share any questions they have about the project.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Show the video – *Unity and Safety Through Street Art in Norfolk, VA*.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Show the examples of asphalt art.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Asphalt Art Project Planning Guide.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the project requirements.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to read the rubric on pages 2 and 3.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What do you notice about the project requirements and rubric? What does success look like for this project?*\n\n**Discussion Goal:** Students share what they notice about the project requirements and rubric and identify the components to implement in their program.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What barriers do you anticipate to achieving success on this project?*\n\n**Discussion Goal:** Students identify barriers they anticipate and share any questions they have about the project.",
         "tips": [
           {
             "type": "teachingTip",
@@ -5626,7 +5632,13 @@
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to develop their Asphalt Art Project.",
         "duration": "20",
         "name": "Development",
-        "progression_name": "Asphalt Art Project"
+        "progression_name": "Asphalt Art Project",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "You can refer students back to the [**Decomposition and Design**](https://studio.code.org/s/csa1-2023/lessons/13) lesson to recall how they broke down the murals to create the designs. Students may also want to save the `MuralPainter` to their Backpacks or copy some of its methods to use in the Asphalt Art Project."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "2bc505dc-26c4-4fce-8cdb-4939fd4147ef",
@@ -6086,6 +6098,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L4-L2-2_2023"
+        ],
         "progression": "Investigate and Modify: Painter Class Methods"
       },
       "bonus": false,
@@ -6108,6 +6123,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U1L4-L3_2023"
+        ],
         "progression": "Practice: Painter Class Methods"
       },
       "bonus": false,
@@ -6130,6 +6148,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L4-L4_2023"
+        ],
         "progression": "Practice: Painter Class Methods"
       },
       "bonus": false,
@@ -6152,6 +6173,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U1L4-L5_2023"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -8559,6 +8583,18 @@
       }
     },
     {
+      "name": "[EXEMPLAR] Asphalt Art Project Planning Guide",
+      "url": "https://docs.google.com/document/d/1Q-9U42pzn0GQf6lPtE8IJhXZJdWExEFTsgIUky3o6fU/edit?usp=sharing",
+      "key": "_exemplar_asphalt_art_project_planning_guide_1",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Exemplar"
+      },
+      "seeding_key": {
+        "resource.key": "_exemplar_asphalt_art_project_planning_guide_1"
+      }
+    },
+    {
       "name": "[KEY] Decomposition",
       "url": "https://docs.google.com/document/d/1cFr0Wp8FlWJf4dNnuRKjDT0U2bFEGavtpUtcPqF2hh0/edit?usp=sharing",
       "key": "_key_decomposition",
@@ -8835,6 +8871,18 @@
       }
     },
     {
+      "name": "Asphalt Art Project",
+      "url": "https://docs.google.com/presentation/d/1en1KGgye2ImrJ4DDZasD8jvkRuoTdrnMVw_H9bpGEFM/edit?usp=sharing",
+      "key": "asphalt_art_project_1",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "asphalt_art_project_1"
+      }
+    },
+    {
       "name": "Asphalt Art Project Planning Guide",
       "url": "https://docs.google.com/document/d/1BOjhftweorWxLnUW6WszrEkXfBVfYJyhONU-T0UnyRI/edit?usp=sharing",
       "key": "asphalt_art_project_planning_guide",
@@ -8845,6 +8893,19 @@
       },
       "seeding_key": {
         "resource.key": "asphalt_art_project_planning_guide"
+      }
+    },
+    {
+      "name": "Asphalt Art Project Planning Guide",
+      "url": "https://docs.google.com/document/d/1hU2dlTMBbOASb3qRK_oiKgH5oOWFNS3SEbuESTyeNxE/edit?usp=sharing",
+      "key": "asphalt_art_project_planning_guide_1",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "asphalt_art_project_planning_guide_1"
       }
     },
     {
@@ -9884,6 +9945,24 @@
       "seeding_key": {
         "lesson.key": "lesson-21",
         "resource.key": "unlocking_assessments"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "resource.key": "_exemplar_asphalt_art_project_planning_guide_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "resource.key": "asphalt_art_project_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "resource.key": "asphalt_art_project_planning_guide_1"
       }
     },
     {
