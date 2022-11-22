@@ -13,7 +13,7 @@ import {getStore} from '../../redux';
 import ModelManagerDialog from '@cdo/apps/code-studio/components/ModelManagerDialog';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 import classNames from 'classnames';
-import stylez from './settings-cog.module.scss';
+import moduleStyles from './settings-cog.module.scss';
 import JavalabDropdown from '@cdo/apps/javalab/components/JavalabDropdown';
 import onClickOutside from 'react-onclickoutside';
 
@@ -110,8 +110,8 @@ class SettingsCog extends Component {
           type="button"
           onClick={this.toggleOpen}
           className={classNames(
-            stylez.button,
-            runModeIndicators && isRunning && stylez.iconContainerRunning
+            moduleStyles.button,
+            runModeIndicators && isRunning && moduleStyles.iconContainerRunning
           )}
         >
           <FontAwesome
