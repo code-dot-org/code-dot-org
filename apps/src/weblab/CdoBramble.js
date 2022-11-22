@@ -759,7 +759,7 @@ export default class CdoBramble {
   }
 
   logAction(actionName, value = {}) {
-    logToCloud.addPageAction(actionName, value);
+    this.api.addPageAction(actionName, value);
   }
 
   isHtml(path) {
