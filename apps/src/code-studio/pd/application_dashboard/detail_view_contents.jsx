@@ -1021,6 +1021,8 @@ export class DetailViewContents extends React.Component {
           (header, i) => (
             <div key={i}>
               <h3>{this.sectionHeaders[header]}</h3>
+              {header === 'administratorInformation' &&
+                this.renderModifyPrincipalApprovalSection()}
               <Table style={styles.detailViewTable} striped bordered>
                 <tbody>
                   {Object.keys(this.pageLabels[header]).map((key, j) => {
@@ -1111,8 +1113,7 @@ export class DetailViewContents extends React.Component {
 
   renderModifyPrincipalApprovalSection = () => {
     // principal_approval_state can be 'Not required', 'Incomplete - Admin email sent on ...', or 'Complete - ...'
-    // If 'Complete,' this function will not be run.
-    // If 'Incomplete', we show a link to the application and a button to re-send the request,
+    // If 'Incomplete' or 'Complete', we show a link to the application and a button to re-send the request,
     // and a button to change the principal approval requirement.
     // If 'Not required', we show a button to make the principal approval required.
     // If none of these, then the principal approval is required, and we show a button to make it not required.
@@ -1120,7 +1121,10 @@ export class DetailViewContents extends React.Component {
     const principalApprovalStartsWith = state =>
       this.props.applicationData.principal_approval_state?.startsWith(state);
 
-    if (principalApprovalStartsWith(PrincipalApprovalState.inProgress)) {
+    if (
+      principalApprovalStartsWith(PrincipalApprovalState.inProgress) ||
+      principalApprovalStartsWith(PrincipalApprovalState.complete)
+    ) {
       const principalApprovalUrl = `${
         window.location.origin
       }/pd/application/principal_approval/${
@@ -1129,7 +1133,6 @@ export class DetailViewContents extends React.Component {
 
       return (
         <div>
-          <h3>Administrator Approval</h3>
           <h4>{this.props.applicationData.principal_approval_state}</h4>
           <p id="principal-approval-link">
             Link to administrator approval form:{' '}
@@ -1285,10 +1288,6 @@ export class DetailViewContents extends React.Component {
         <br />
         {this.renderTopTableLayout()}
         {this.renderDetailViewTableLayout()}
-        {this.props.applicationData.application_type ===
-          ApplicationTypes.teacher &&
-          !this.showPrincipalApprovalTable() &&
-          this.renderModifyPrincipalApprovalSection()}
         {this.props.applicationData.application_type ===
           ApplicationTypes.facilitator && this.renderInterview()}
         {this.renderNotes()}
