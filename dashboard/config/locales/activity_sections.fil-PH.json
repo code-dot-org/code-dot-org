@@ -600,7 +600,7 @@
         },
         "8581ae5d-4d2a-4221-b820-5920dd449b6c": {
           "name": "Panimula",
-          "description": "**Talakayin:**\n\n-   _Ano ang alam natin tungkol sa kung paano kumakalat ang isang virus?_\n-   _Ano ang maaaring maging sanhi ng pagkalat ng virus sa isang bayan nang mas mabilis?_\n-   _Ano ang makakatulong na mapabagal ang pagkalat ng virus?_\n\nAng layunin ng talakayang ito ay magkaroon ng pagkakataon ang mga mag-aaral na maisaaktibo ang dating kaalaman at makita ang kanilang mga ideya sa pisara. Isa rin itong pagkakataon upang siyasatin ang ilang maling kuru-kuro tungkol sa kung paano kumalat ang mga virus."
+          "description": "**Talakayin:**\n\n- _Ano ang alam natin tungkol sa kung paano kumakalat ang isang virus?_\n- _Ano ang maaaring maging sanhi ng pagkalat ng virus sa isang bayan nang mas mabilis?_\n- _Ano ang makakatulong na mapabagal ang pagkalat ng virus?_\n\nAng layunin ng talakayang ito ay magkaroon ng pagkakataon ang mga mag-aaral na maisaaktibo ang dating kaalaman at makita ang kanilang mga ideya sa pisara. Isa rin itong pagkakataon upang siyasatin ang ilang maling kuru-kuro tungkol sa kung paano kumalat ang mga virus."
         },
         "d63c77c1-4167-4360-ab98-25610934beda": {
           "name": "Pagsiklab",
@@ -632,11 +632,11 @@
           "description": "_Ang mga simulation ay isang mahusay na paraan upang matutunan ang mga bagay na maaaring mahirap obserbahan sa totoong mundo. Tinutulungan nila ang mga siyentipiko na malutas ang mga problema, mahulaan kung paano lutasin ang problema, at subukan ang mga bagong ideya nang ligtas at mahusay. Ang iyong simulation ay isang paraan upang ipakita kung ano ang hitsura ng isang virus outbreak sa Monster Town._"
         },
         "b3189fd8-5272-4de4-953a-f4848b2ddb5c": {
-          "description": "**Talakayin:**\n\n-   Paano makakatulong ang mga simulation sa totoong mundo?\n-   Paano tayo matutulungan ng mga simulation na maunawaan ang mundo natin?\n-   Paano mapapabuti ng mga simulation ang paraan ng pagsubok ng mga ideya?\n\nAng layunin ng talakayan ay para sa mga mag-aaral na maunawaan na ang mga simulation ay isang paraan upang magmodelo ng mga kumplikadong sistema sa isang interactive na paraan. Dapat din nilang makita kung paano hinahayaan ng mga simulation ang mga tao na subukan ang mga ideya nang mabilis, mura at ligtas."
+          "description": "**Talakayin:**\n\n- Paano makakatulong ang mga simulation sa totoong mundo?\n- Paano tayo matutulungan ng mga simulation na maunawaan ang mundo natin?\n- Paano mapapabuti ng mga simulation ang paraan ng pagsubok ng mga ideya?\n\nAng layunin ng talakayan ay para sa mga mag-aaral na maunawaan na ang mga simulation ay isang paraan upang magmodelo ng mga kumplikadong sistema sa isang interactive na paraan. Dapat din nilang makita kung paano hinahayaan ng mga simulation ang mga tao na subukan ang mga ideya nang mabilis, mura at ligtas.\n"
         },
         "b8e884f1-eae0-4138-8778-0972f90e34d9": {
           "name": "Pagmumuni-muni",
-          "description": "**Mga Prompt:**\n\n-   Paano ang simulation na ito ay katulad ng totoong mundo? Paano ito naiiba?\n-   Ano ang gusto mong baguhin/idagdag sa iyong simulation?"
+          "description": "**Mga Prompt:**\n\n- Paano ang simulation na ito ay katulad ng totoong mundo? Paano ito naiiba?\n- Ano ang gusto mong baguhin/idagdag sa iyong simulation?"
         },
         "21f43e64-dea3-4abc-8284-e055480370ce": {
           "name": "Panimula",
@@ -801,6 +801,10 @@
         "50216925-6742-400e-b45a-2de4cd3b63f2": {
           "name": "Tapusin Na"
         },
+        "197fed33-dc42-4fc0-8d20-e84b09292caa": {
+          "name": "",
+          "description": ""
+        },
         "de7dca58-f7d8-448f-84cf-41d215d2bf11": {
           "description": "_Sa aktibidad na ito, magiging masaya ka sa paggawa ng interactive na mundo na may mga nakakatuwang character na tinatawag na tiyanak. Magagawa mong pagsalitain ang mga tiyanak ng anuman gamit ang mga speech bubble gaya ng makikita mo sa isang komiks o graphic na nobela, at matututuhan mong gawin silang awtomatikong tumugon kapag nag-click ka o ang ibang tao sa kanila._\n\n_Magsusulat ka ngayon ng \"code\" na nangangahulugan lamang ng isang hanay ng mga tagubilin na mauunawaan ng isang computer. Kapag nagsusulat ka ng isang kuwento, kailangan mong pag-isipang mabuti ang mga salitang ginagamit mo. Kapag sumulat ka ng code, kakailanganin mong pag-isipang mabuti ang mga tagubiling ibinibigay mo sa computer._",
           "tips": [
@@ -808,13 +812,14 @@
           ]
         },
         "7acfc985-03d8-4d14-b244-203f8cbf4843": {
-          "description": "Narito ang ilang tip na makakatulong sa mga mag-aaral anuman ang level na ginagawa nila\n\n-   **Makipagtulungan sa mga Kasama:** Hikayatin ang mga mag-aaral na magtanong sa isang kasama kapag nahirapan sila. Depende sa edad at kakayahan ng mga mag-aaral mo, maaari mong pormal na paghahati-hatiin ang klase sa mga pares para makumpleto ang tutorial gamit ang [pair programming][0].\n\n-   **Basahin ang Mga Tagubilin:** Karaniwang nagbibigay ng mga kapaki-pakinabang na tip ang mga tagubilin sa kung paano kumpletuhin ang antas. Bago ibigay sa mga mag-aaral ang sagot, tiyaking maingat nilang tiningnan ang mga tagubilin, pahiwatig, video, at anumang starter code.\n\n-   <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\">\n    **Nahirapan? Maghanap ng mga hint:** May kasamang hint ang bawat antas na may payo sa kung paano makapasa sa isang antas, kasama kung aling mga block ng code ang susubukan.\n\n-   **Maglaan ng oras at mag-eksperimento.** Nagsasabi sa pangkalahatan sa mga mag-aaral ang mga tagubilin kung ano ang gagawin, ngunit dapat malaya din silang subukan ang kanilang sariling mga ideya."
+          "name": "",
+          "description": "Narito ang ilang tip na makakatulong sa mga mag-aaral anuman ang level na ginagawa nila\n\n- **Makipagtulungan sa mga Kasama:** Hikayatin ang mga mag-aaral na magtanong sa isang kasama kapag nahirapan sila. Depende sa edad at kakayahan ng mga mag-aaral mo, maaari mong pormal na paghahati-hatiin ang klase sa mga pares para makumpleto ang tutorial gamit ang [pair programming][0].\n\n- **Basahin ang Mga Tagubilin:** Karaniwang nagbibigay ng mga kapaki-pakinabang na tip ang mga tagubilin sa kung paano kumpletuhin ang antas. Bago ibigay sa mga mag-aaral ang sagot, tiyaking maingat nilang tiningnan ang mga tagubilin, pahiwatig, video, at anumang starter code.\n\n-   <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\">\n**Nahirapan? Maghanap ng mga hint:** May kasamang hint ang bawat antas na may payo sa kung paano makapasa sa isang antas, kasama kung aling mga block ng code ang susubukan.\n\n- **Maglaan ng oras at mag-eksperimento.** Nagsasabi sa pangkalahatan sa mga mag-aaral ang mga tagubilin kung ano ang gagawin, ngunit dapat malaya din silang subukan ang kanilang sariling mga ideya."
         },
         "1634ab74-919f-40fb-b2dc-8cd5701655a2": {
           "name": "Hello World"
         },
         "2edc03d3-b9a7-4c1b-a046-16fa43b3a7a3": {
-          "description": "Kung maagang natapos ang isang grupo o indibidwal, hikayatin silang ipagpatuloy ang pagbuo ng proyekto sa huling antas. Kung hindi sigurado ang mga mag-aaral kung ano pa ang gagawin, maaari mo silang i-prompt ng mga tanong: \n\n-   Anong iba pang mga tiyanak ang maaari mong idagdag sa proyekto mo?\n-   Tumingin ka na ba sa library ng kasuotan o sinubukan mong gumuhit ng sarili mong kasuotan ng tiyanak?\n-   Ano pa ang maaaring sabihin ng mga tiyanak mo?\n-   Ano ang dapat gawin ng mga tiyanak mo kapag na-click sila?\n-   Anyayahan ang mga estudyante na magbahagi ng mga ideya at matuto sa isa't isa. Maaari din nilang subukan ang isa pang tutorial sa pamamagitan ng pagbisita sa [code.org/learn][0]."
+          "description": "Kung maagang natapos ang isang grupo o indibidwal, hikayatin silang ipagpatuloy ang pagbuo ng proyekto sa huling antas. Kung hindi sigurado ang mga mag-aaral kung ano pa ang gagawin, maaari mo silang i-prompt ng mga tanong: \n\n- Anong iba pang mga tiyanak ang maaari mong idagdag sa proyekto mo?\n- Tumingin ka na ba sa library ng kasuotan o sinubukan mong gumuhit ng sarili mong kasuotan ng tiyanak?\n- Ano pa ang maaaring sabihin ng mga tiyanak mo?\n- Ano ang dapat gawin ng mga tiyanak mo kapag na-click sila?\n- Anyayahan ang mga estudyante na magbahagi ng mga ideya at matuto sa isa't isa. Maaari din nilang subukan ang isa pang tutorial sa pamamagitan ng pagbisita sa [code.org/learn][0]."
         },
         "b68a11cc-930a-4803-beca-1d4f49ede378": {
           "name": "Pagmumuni-muni",
@@ -1661,6 +1666,9 @@
             null
           ]
         },
+        "f26ccabe-2b34-481f-b142-b6227421df3e": {
+          "name": "Tumuklas"
+        },
         "f8419af8-d199-4cb6-b4dc-ea619a1ea802": {
           "progression_name": "Mga halimbawa ng proyekto"
         },
@@ -2034,6 +2042,9 @@
         },
         "26e345f8-d754-44a5-9197-e0554116562e": {
           "name": "Pagmumuni-muni"
+        },
+        "b032e6b2-4dfd-431c-a938-06a8bd4a8056": {
+          "name": "Tumuklas"
         },
         "8c2b4d58-a189-4531-bc7c-bfcb4bce7ca8": {
           "progression_name": "Mga Halimbawa ng Proyekto"
@@ -11385,12 +11396,38 @@
           "progression_name": "Pagmumuni-muni"
         },
         "b16d189d-d990-44c4-be49-8f81ac81a96e": {
+          "description": "",
           "tips": [
-            null
+            ""
           ]
         },
+        "d99fc09e-a586-41df-84b2-e552cc4735e3": {
+          "description": ""
+        },
+        "b6c8c6a3-fe85-4d42-999e-a2ba13f6739a": {
+          "description": ""
+        },
+        "6fba9dd0-6069-402c-a641-53899ae667e2": {
+          "description": ""
+        },
+        "21c585fc-7b80-4ab9-ba4c-8f4caa8ec102": {
+          "description": ""
+        },
         "a49bc6c2-1b76-476d-98cd-7f040e8853a7": {
-          "name": "Sining ng Tula"
+          "name": "Sining ng Tula",
+          "description": ""
+        },
+        "065eda67-268c-4f91-9caf-efb2c34493fe": {
+          "description": ""
+        },
+        "51a89a3e-a8c7-41d6-bbbf-2ce16fc7e033": {
+          "description": ""
+        },
+        "8630a813-1b6c-49c5-a58b-d2dc5dcccd0a": {
+          "description": ""
+        },
+        "901dbdcd-5c65-4f3d-8cb2-9c9e36a48c2f": {
+          "description": ""
         },
         "2da3fffb-160f-44a4-a9d1-3744407a6bf1": {
           "description": "#### Naihanda ang Kalagayan\n\nI-welcome ang mga mag-aaral sa klase at ipakilala ang aktibidad sa araw na iyon.\n\nSabihin: _Ngayon ay gumugugol tayo ng isang oras sa pagtatrabaho sa ilang mga online na puzzle at pag-aaral ng mga kaugalian sa computer lab._\nAng layunin ng talakayang ito ay turuan ang mga mag-aaral kung ano ang aasahan at kung paano kumilos kapag pumasok sila sa computer lab."

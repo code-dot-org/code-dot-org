@@ -1,0 +1,21 @@
+{
+  "catActions": "Actions",
+  "catControl": "Loops",
+  "catLogic": "Logic",
+  "catMath": "Mathematics",
+  "catText": "Text",
+  "catVariables": "Variables",
+  "designWorkspaceHeader": "Workspace: ",
+  "dropletBlock_drawImage_param1": "x",
+  "dropletBlock_drawImage_param4": "height",
+  "dropletBlock_setRGB_param3": "red",
+  "dropletBlock_setRGB_param4": "green",
+  "dropletBlock_setRGB_param5": "blue",
+  "dropletBlock_substring_param1": "sfârșit",
+  "finalLevel": "Congratulations! You have solved the final puzzle.",
+  "nextLevel": "Congratulations! You have completed this puzzle.",
+  "no": "No",
+  "numBlocksNeeded": "This puzzle can be solved with %1 blocks.",
+  "repeatDo": "do",
+  "yes": "Yes"
+}

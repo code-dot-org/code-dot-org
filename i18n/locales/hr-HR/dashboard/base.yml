@@ -439,6 +439,8 @@ hr:
       title: 'Laboratorij aplikacija'
       audience: 'Dob 13+'
       cta: 'Nauči kako'
+    hello-world:
+      body: 'Odaberite između četiri zabavne teme za kodiranje interaktivnih likova u svijetu koji stvorite.'
     hoc:
       title: 'Klasični labirint'
       body: 'Isprobajte osnove informatike. Milijuni su im dali šansu.'
@@ -725,5 +727,11 @@ hr:
     link_your_email: "Povežite svoj e-mail"
     not_now: "Ne sada"
   code_org_logo_alt: "Početna stranica Code.org"
+  lesson_lock:
+    error:
+      no_updates: "Nema ažuriranja za izvođenje"
+      missing_params: "Morate navesti ID korisnika, razine i jedinice"
+      cannot_view_locked_answers: "Ne možete vidjeti odgovore dok su zaključani"
+      forbidden: "Korisnik ne može ažurirati stanje zaključavanja učenika"
   pixelation:
     binary: "Binarno"

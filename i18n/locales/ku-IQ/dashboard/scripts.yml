@@ -392,6 +392,10 @@ ku:
           lessons:
             lesson-6:
               name: گرێکان
+        csa2-2023:
+          lessons:
+            lesson-4:
+              name: گۆڕاوەکان
         csp4-2023:
           lesson_groups:
             csp_variables:

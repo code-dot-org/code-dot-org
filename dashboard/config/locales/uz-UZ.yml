@@ -818,6 +818,9 @@ uz:
       title: Dance Party
     dance-2019:
       title: Dance Party
+    hello-world:
+      body: Siz yaratgan dunyoda interaktiv belgilarni dasturlash uchun to‘rtta qiziqarli
+        mavzularni tanlang.
     hoc:
       title: Klassik labirint
       body: Informatika asoslari bilan tanishib ko‘ring. Millionlar buni uddalashdi.
@@ -1445,5 +1448,11 @@ uz:
     this_sprite: bu sprayt
   unit_prefix: Bo'lim %{n}
   teacher_feedback: O‘qituvchilarning fikri
+  lesson_lock:
+    error:
+      no_updates: Amalga oshirish uchun yangilanishlar yo'q
+      missing_params: Foydalanuvchi, darajasi va birlik idlarini taqdim etishi kerak
+      cannot_view_locked_answers: Qulflangan paytda javoblarni ko'rib bo'lmaydi
+      forbidden: Foydalanuvchi talabaning qulflanadigan holatini yangilay olmaydi
   pixelation:
     binary: Binarli
