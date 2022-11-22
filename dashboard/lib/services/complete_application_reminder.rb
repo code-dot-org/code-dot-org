@@ -1,4 +1,4 @@
-class Services::IncompleteReminder
+class Services::CompleteApplicationReminder
   class << self
     # This method queues reminder emails for any incomplete applications that are eligible
     # for a reminder.  It is designed to be called repeatedly (e.g. from a cronjob).
