@@ -10,6 +10,7 @@ export default {
 export const ScrollableNavigation = () => {
   const links = [];
 
+  // Dynamically add a large number of labels so that it needs to scoll through them
   for (let i = 0; i < 20; i++) {
     links.push({label: `label${i}`, url: `/${i}`});
   }
