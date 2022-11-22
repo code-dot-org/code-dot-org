@@ -427,6 +427,19 @@ describe('DetailViewContents', () => {
         detailView.find('#principal-approval-url').props().href
       ).to.contain(`principal_approval/${guid}`);
     });
+    it(`Shows URL to principal approval if complete`, () => {
+      const guid = '1020304';
+      const detailView = mountDetailView('Teacher', {
+        applicationData: {
+          ...DEFAULT_APPLICATION_DATA,
+          application_guid: guid,
+          principal_approval_state: PrincipalApprovalState.complete
+        }
+      });
+      expect(
+        detailView.find('#principal-approval-url').props().href
+      ).to.contain(`principal_approval/${guid}`);
+    });
     it(`Shows button to make principal approval required if not`, () => {
       const detailView = mountDetailView('Teacher', {
         applicationData: {
