@@ -41,7 +41,7 @@ export default function ProgrammingExpressionOverview({
         titleRef.current,
         blocksDom,
         {
-          noScrolling: false,
+          noScrolling: true,
           inline: false
         }
       );
