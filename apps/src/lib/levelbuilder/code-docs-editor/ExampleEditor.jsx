@@ -10,7 +10,7 @@ const APP_DISPLAY_OPTIONS = {
   codeFromCodeField: 'Display app with code from code field above'
 };
 
-const DEFAULT_EMBED_HEIGHT = 310;
+const DEFAULT_EMBED_HEIGHT = 400;
 
 export default function ExampleEditor({example, updateExample}) {
   return (
