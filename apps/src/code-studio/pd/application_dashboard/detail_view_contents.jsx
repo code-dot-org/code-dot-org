@@ -1134,36 +1134,37 @@ export class DetailViewContents extends React.Component {
       return (
         <div>
           <h4>{this.props.applicationData.principal_approval_state}</h4>
-          (principalApprovalStartsWith(PrincipalApprovalState.complete) &&
-          <p id="principal-approval-link">
-            Link to administrator approval form:{' '}
-            <a
-              id="principal-approval-url"
-              href={principalApprovalUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              {principalApprovalUrl}
-            </a>
-          </p>
-          <PrincipalApprovalButtons
-            applicationId={this.props.applicationId}
-            showResendEmailButton={
-              this.props.applicationData.allow_sending_principal_email
-            }
-            onChange={this.handlePrincipalApprovalChange}
-            showChangeRequirementButton={true}
-            showSendEmailButton={false}
-            applicationStatus={this.props.applicationData.status}
-            approvalRequired={this.state.principalApprovalIsRequired}
-          />
-          )
+          {principalApprovalStartsWith(PrincipalApprovalState.complete) && (
+            <>
+              <p id="principal-approval-link">
+                Link to administrator approval form:{' '}
+                <a
+                  id="principal-approval-url"
+                  href={principalApprovalUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {principalApprovalUrl}
+                </a>
+              </p>
+              <PrincipalApprovalButtons
+                applicationId={this.props.applicationId}
+                showResendEmailButton={
+                  this.props.applicationData.allow_sending_principal_email
+                }
+                onChange={this.handlePrincipalApprovalChange}
+                showChangeRequirementButton={true}
+                showSendEmailButton={false}
+                applicationStatus={this.props.applicationData.status}
+                approvalRequired={this.state.principalApprovalIsRequired}
+              />
+            </>
+          )}
         </div>
       );
     } else {
       return (
         <div>
-          <h3>Administrator Approval</h3>
           {!this.state.principalApprovalIsRequired && (
             <p>
               If you would like to require administrator approval for this
