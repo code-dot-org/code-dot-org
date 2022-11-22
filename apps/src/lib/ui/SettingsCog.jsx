@@ -14,7 +14,7 @@ import {getStore} from '../../redux';
 import ModelManagerDialog from '@cdo/apps/code-studio/components/ModelManagerDialog';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 import classNames from 'classnames';
-import stylez from './settings-cog.module.scss';
+import moduleStyles from './settings-cog.module.scss';
 
 export default class SettingsCog extends Component {
   static propTypes = {
@@ -119,12 +119,16 @@ export default class SettingsCog extends Component {
     return (
       <span
         className={classNames(
-          stylez.iconContainer,
-          runModeIndicators && isRunning && stylez.iconContainerRunning
+          moduleStyles.iconContainer,
+          runModeIndicators && isRunning && moduleStyles.iconContainerRunning
         )}
         ref={icon => this.setTargetPoint(icon)}
       >
-        <button type="button" onClick={this.open} className={stylez.button}>
+        <button
+          type="button"
+          onClick={this.open}
+          className={moduleStyles.button}
+        >
           <FontAwesome
             className="settings-cog"
             icon="cog"

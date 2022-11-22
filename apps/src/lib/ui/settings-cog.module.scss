@@ -18,17 +18,11 @@
 .button {
   margin: 0;
   padding: 0;
-  background-color: #7665a0;
+  background-color: $purple;
   border: 0;
-  color: #cfc9de;
+  color: $lighter_purple;
 
   &:hover {
     box-shadow: none;
   }
 }
-
-// doesn't seem like it does anything
-// assetsIcon: {
-//   fontSize: 18,
-//   verticalAlign: 'middle'
-// }
