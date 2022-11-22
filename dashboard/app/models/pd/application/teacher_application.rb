@@ -397,7 +397,7 @@ module Pd::Application
     # Otherwise return nil.
     def principal_approval_state
       response = Pd::Application::PrincipalApprovalApplication.find_by(application_guid: application_guid)
-      return `#{PRINCIPAL_APPROVAL_STATE[:complete]}#{response.full_answers[:do_you_approve]} on #{response.applied_at&.strftime('%b %-d')}` if response
+      return "#{PRINCIPAL_APPROVAL_STATE[:complete]}Admin said #{response.full_answers[:do_you_approve]} on #{response.applied_at&.strftime('%b %-d')}" if response
 
       principal_approval_email = emails.where(email_type: 'principal_approval').order(:created_at).last
       if principal_approval_email
