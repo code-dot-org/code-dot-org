@@ -37,9 +37,9 @@ export default function Example({example, programmingEnvironmentName}) {
         ? example.app
         : example.app + '/embed_app_and_code';
       const enteredHeight =
-        Number(example.embed_app_with_code_height) > 400
+        Number(example.embed_app_with_code_height) > 310
           ? Number(example.embed_app_with_code_height)
-          : 400;
+          : Number(example.embed_app_with_code_height) * 1.4;
       return (
         <div style={{width: '100%'}}>
           <div>
@@ -49,7 +49,7 @@ export default function Example({example, programmingEnvironmentName}) {
                 src={embedUrl}
                 style={{
                   width: '100%',
-                  height: enteredHeight + 300,
+                  height: enteredHeight * 1.5,
                   overflow: 'scroll'
                 }}
               />
