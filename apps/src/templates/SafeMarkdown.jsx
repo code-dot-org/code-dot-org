@@ -17,7 +17,6 @@ import rehypeReact from 'rehype-react';
 import defaultSanitizationSchema from 'hast-util-sanitize/lib/github.json';
 
 import externalLinks from './plugins/externalLinks';
-import '../../style/curriculum/documentation_tables.scss';
 
 /**
  * Basic component for rendering a markdown string as HTML, with sanitization.

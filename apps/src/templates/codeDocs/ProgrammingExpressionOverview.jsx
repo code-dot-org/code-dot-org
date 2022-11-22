@@ -11,6 +11,7 @@ import {
   shrinkBlockSpaceContainer
 } from '@cdo/apps/templates/instructions/utils';
 import {parseElement} from '@cdo/apps/xml';
+import '../../../style/curriculum/documentation_tables.scss';
 
 const VIDEO_WIDTH = 560;
 const VIDEO_HEIGHT = 315;
