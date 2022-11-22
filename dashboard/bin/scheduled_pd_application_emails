@@ -21,7 +21,7 @@ def queue_pd_reminder_emails
 
   # Queue reminder emails for teachers who have started an application but
   # have not completed it
-  Services::RegistrationReminder.queue_incomplete_reminders!
+  Services::CompleteApplicationReminder.queue_complete_application_reminders!
 end
 
 # First, add PD reminder emails to the queue.
