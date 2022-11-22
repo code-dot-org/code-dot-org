@@ -69,7 +69,8 @@ export default function ExampleEditor({example, updateExample}) {
         Example App iframe Embed Height
         <HelpTip>
           The height of the iframe, in pixels, to use when displaying an app
-          with the "Embed app with code" display type
+          with the "Embed app with code" display type. Note that the minimum
+          height is 400px.
         </HelpTip>
         <input
           value={example.embed_app_with_code_height || DEFAULT_EMBED_HEIGHT}

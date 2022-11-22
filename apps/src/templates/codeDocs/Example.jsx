@@ -37,9 +37,9 @@ export default function Example({example, programmingEnvironmentName}) {
         ? example.app
         : example.app + '/embed_app_and_code';
       const enteredHeight =
-        Number(example.embed_app_with_code_height) > 310
+        Number(example.embed_app_with_code_height) > 400
           ? Number(example.embed_app_with_code_height)
-          : Number(example.embed_app_with_code_height) * 1.4;
+          : 400;
       return (
         <div style={{width: '100%'}}>
           <div>
