@@ -25,8 +25,7 @@ export default function Example({example, programmingEnvironmentName}) {
               src={embedUrl}
               style={{
                 ...styles.embeddedApp,
-                ...embeddedIdeStyles[programmingEnvironmentName],
-                overflow: 'scroll'
+                ...embeddedIdeStyles[programmingEnvironmentName]
               }}
             />
             {example.image && <img src={example.image} />}
