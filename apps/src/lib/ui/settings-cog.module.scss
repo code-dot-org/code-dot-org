@@ -1,11 +1,11 @@
 @import "color.scss";
 
-.iconContainer {
-  float: right;
-  margin-right: 10px;
-  margin-left: 10px;
+.button {
+  margin: 0 10px;
+  padding: 0;
+  border: 0;
   height: 100%;
-  cursor: pointer;
+  background-color: #7665a0;
   color: $lighter_purple;
   display: flex;
   align-items: center;
@@ -13,22 +13,8 @@
   &Running {
     color: $dark_charcoal;
   }
-}
-
-.button {
-  margin: 0;
-  padding: 0;
-  background-color: #7665a0;
-  border: 0;
-  color: #cfc9de;
 
   &:hover {
     box-shadow: none;
   }
 }
-
-// doesn't seem like it does anything
-// assetsIcon: {
-//   fontSize: 18,
-//   verticalAlign: 'middle'
-// }
