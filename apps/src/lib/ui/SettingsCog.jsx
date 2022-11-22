@@ -105,7 +105,7 @@ class SettingsCog extends Component {
     const {isRunning, runModeIndicators} = this.props;
 
     return (
-      <div>
+      <span>
         <button
           type="button"
           onClick={this.toggleOpen}
@@ -156,7 +156,7 @@ class SettingsCog extends Component {
           isOpen={this.state.managingLibraries}
           onClose={this.closeLibraryManager}
         />
-      </div>
+      </span>
     );
   }
 }
