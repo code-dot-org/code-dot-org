@@ -1134,6 +1134,7 @@ export class DetailViewContents extends React.Component {
       return (
         <div>
           <h4>{this.props.applicationData.principal_approval_state}</h4>
+          (principalApprovalStartsWith(PrincipalApprovalState.complete) &&
           <p id="principal-approval-link">
             Link to administrator approval form:{' '}
             <a
@@ -1156,6 +1157,7 @@ export class DetailViewContents extends React.Component {
             applicationStatus={this.props.applicationData.status}
             approvalRequired={this.state.principalApprovalIsRequired}
           />
+          )
         </div>
       );
     } else {
