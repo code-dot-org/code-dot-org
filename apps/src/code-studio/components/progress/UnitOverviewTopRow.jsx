@@ -44,7 +44,7 @@ class UnitOverviewTopRow extends React.Component {
     courseOfferingId: PropTypes.number,
     courseVersionId: PropTypes.number,
     isProfessionalLearningCourse: PropTypes.bool,
-    publishedState: PropTypes.string,
+    publishedState: PropTypes.oneOf(Object.values(PublishedState)),
 
     // redux provided
     sectionsForDropdown: PropTypes.arrayOf(sectionForDropdownShape).isRequired,
@@ -153,6 +153,11 @@ class UnitOverviewTopRow extends React.Component {
     let completedProfessionalLearningCourse =
       isProfessionalLearningCourse && unitProgress === COMPLETED;
 
+    let hasPrintingOptionsDropwdown =
+      pdfDropdownOptions.length > 0 &&
+      publishedState !== PublishedState.pilot &&
+      publishedState !== PublishedState.in_development;
+
     return (
       <div style={styles.buttonRow} className="unit-overview-top-row">
         {!deeperLearningCourse && viewAs === ViewType.Participant && (
@@ -195,36 +200,33 @@ class UnitOverviewTopRow extends React.Component {
                 unitId={scriptId}
               />
             )}
-          {pdfDropdownOptions.length > 0 &&
-            publishedState !== PublishedState.pilot &&
-            publishedState !== PublishedState.in_development &&
-            viewAs === ViewType.Instructor && (
-              <div style={{marginRight: 5}}>
-                <DropdownButton
-                  customText={
-                    <div>
-                      <FontAwesome icon="print" style={styles.icon} />
-                      <span style={styles.customText}>
-                        {i18n.printingOptions()}
-                      </span>
-                    </div>
-                  }
-                  color={Button.ButtonColor.blue}
-                >
-                  {pdfDropdownOptions.map(option => (
-                    <a
-                      key={option.key}
-                      href={option.url}
-                      onClick={e =>
-                        this.recordAndNavigateToPdf(e, option.key, option.url)
-                      }
-                    >
-                      {option.name}
-                    </a>
-                  ))}
-                </DropdownButton>
-              </div>
-            )}
+          {hasPrintingOptionsDropwdown && viewAs === ViewType.Instructor && (
+            <div style={{marginRight: 5}}>
+              <DropdownButton
+                customText={
+                  <div>
+                    <FontAwesome icon="print" style={styles.icon} />
+                    <span style={styles.customText}>
+                      {i18n.printingOptions()}
+                    </span>
+                  </div>
+                }
+                color={Button.ButtonColor.blue}
+              >
+                {pdfDropdownOptions.map(option => (
+                  <a
+                    key={option.key}
+                    href={option.url}
+                    onClick={e =>
+                      this.recordAndNavigateToPdf(e, option.key, option.url)
+                    }
+                  >
+                    {option.name}
+                  </a>
+                ))}
+              </DropdownButton>
+            </div>
+          )}
           {showCalendar && viewAs === ViewType.Instructor && (
             <UnitCalendarButton
               lessons={unitCalendarLessons}

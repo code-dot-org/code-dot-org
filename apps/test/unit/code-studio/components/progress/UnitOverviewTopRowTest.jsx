@@ -316,7 +316,7 @@ describe('UnitOverviewTopRow', () => {
     }).not.to.throw();
   });
 
-  it('does not render the printing options drop down if the coruse is in pilot', () => {
+  it('does not render the printing options drop down if the course is in pilot', () => {
     const wrapper = shallow(
       <UnitOverviewTopRow
         {...defaultProps}
@@ -329,7 +329,7 @@ describe('UnitOverviewTopRow', () => {
     expect(wrapper.find(DropdownButton).length).to.equal(0);
   });
 
-  it('does not render the printing options drop down if the coruse is in development', () => {
+  it('does not render the printing options drop down if the course is in development', () => {
     const wrapper = shallow(
       <UnitOverviewTopRow
         {...defaultProps}
