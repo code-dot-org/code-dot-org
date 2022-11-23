@@ -8,12 +8,7 @@ import {
   Row,
   Col
 } from 'react-bootstrap';
-import {
-  PROGRAM_CSD,
-  PROGRAM_CSP,
-  PROGRAM_CSA,
-  styles
-} from './TeacherApplicationConstants';
+import {styles} from './TeacherApplicationConstants';
 import {
   PageLabels,
   SectionHeaders
@@ -50,23 +45,6 @@ const FindYourRegion = props => {
       )
     });
   }, [regionalPartner, onChange]);
-
-  const getProgramInfo = program => {
-    switch (program) {
-      case PROGRAM_CSD:
-        return {name: 'CS Discoveries', shortName: 'CSD'};
-      case PROGRAM_CSP:
-        return {name: 'CS Principles', shortName: 'CSP'};
-      case PROGRAM_CSA:
-        return {name: 'CSA', shortName: 'CSA'};
-      default:
-        return {name: 'CS Program', shortName: null};
-    }
-  };
-  const programInfo = getProgramInfo(data.program);
-  const isOffered = regionalPartner?.pl_programs_offered?.includes(
-    programInfo.shortName
-  );
 
   const renderInternationalModal = () => {
     return (
@@ -109,35 +87,18 @@ const FindYourRegion = props => {
   const renderRegionalPartnerInfo = () => {
     let content;
     if (regionalPartner?.name) {
-      if (data.program === PROGRAM_CSA && regionalPartner && !isOffered) {
-        content = (
-          <p style={styles.error}>
-            <strong>
-              The Regional Partner in your region is not offering Computer
-              Science A at this time.{' '}
-            </strong>
-            Code.org will review your application and contact you with options
-            for joining a national cohort of Computer Science A teachers. If
-            accepted into the program, travel may be required to attend a
-            weeklong in-person summer workshop. If so, travel and accommodation
-            will be provided by Code.org. Academic year workshops for the
-            national cohort will be hosted virtually.
+      content = (
+        <>
+          <p>
+            Your Regional Partner will host the full professional learning
+            program and provide ongoing support as you implement what you’ve
+            learned in the classroom!
           </p>
-        );
-      } else {
-        content = (
-          <>
-            <p>
-              Your Regional Partner will host the full professional learning
-              program and provide ongoing support as you implement what you’ve
-              learned in the classroom!
-            </p>
-            <p>
-              <strong>Your Regional Partner is: {regionalPartner.name}</strong>
-            </p>
-          </>
-        );
-      }
+          <p>
+            <strong>Your Regional Partner is: {regionalPartner.name}</strong>
+          </p>
+        </>
+      );
     } else {
       content = (
         <>
