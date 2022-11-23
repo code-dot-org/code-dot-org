@@ -199,7 +199,6 @@ class UnitOverviewTopRow extends React.Component {
             publishedState !== PublishedState.pilot &&
             viewAs === ViewType.Instructor && (
               <div style={{marginRight: 5}}>
-                {console.log('publishedState is ' + publishedState + 'hi')}
                 <DropdownButton
                   customText={
                     <div>
