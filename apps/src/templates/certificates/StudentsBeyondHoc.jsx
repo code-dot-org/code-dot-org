@@ -8,7 +8,7 @@ import {tutorialTypes} from '../tutorialTypes.js';
 import {cardSets} from './congratsBeyondHocActivityCards';
 import {ResponsiveSize} from '@cdo/apps/code-studio/responsiveRedux';
 import CourseBlocksWrapper from '@cdo/apps/templates/studioHomepages/CourseBlocksWrapper';
-import {StudentGradeBandCards} from '@cdo/apps/util/CourseBlockCardsConstants';
+import {StudentGradeBandCards} from '@cdo/apps/util/courseBlockCardsConstants';
 
 class StudentsBeyondHoc extends Component {
   static propTypes = {

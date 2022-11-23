@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import {LocalClassActionBlock} from './TwoColumnActionBlock';
 import {CourseBlocksHoc} from './CourseBlocks';
 import CourseBlocksWrapper from '@cdo/apps/templates/studioHomepages/CourseBlocksWrapper';
-import {StudentGradeBandCards} from '@cdo/apps/util/CourseBlockCardsConstants';
+import {StudentGradeBandCards} from '@cdo/apps/util/courseBlockCardsConstants';
 import i18n from '@cdo/locale';
 
 /**

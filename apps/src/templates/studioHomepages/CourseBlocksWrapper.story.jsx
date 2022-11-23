@@ -6,7 +6,7 @@ import {
   TeacherGradeBandCards,
   ToolsCards,
   ToolsAIExtrasCard
-} from '@cdo/apps/util/CourseBlockCardsConstants';
+} from '@cdo/apps/util/courseBlockCardsConstants';
 
 export default {
   title: 'CourseBlocksWrapper',

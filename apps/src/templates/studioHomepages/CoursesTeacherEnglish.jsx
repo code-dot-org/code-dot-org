@@ -16,7 +16,7 @@ import {
   ToolsAIExtrasCard,
   ToolsWidgetsCard,
   ToolsCards
-} from '@cdo/apps/util/CourseBlockCardsConstants';
+} from '@cdo/apps/util/courseBlockCardsConstants';
 
 /**
  * This is the main content for the Courses page for a teacher using English,

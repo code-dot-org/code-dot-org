@@ -13,7 +13,7 @@ import {
   InternationalGradeBandCards,
   ToolsCards,
   ToolsWidgetsCard
-} from '@cdo/apps/util/CourseBlockCardsConstants';
+} from '@cdo/apps/util/courseBlockCardsConstants';
 
 class ModernCsfCourses extends Component {
   componentDidMount() {
