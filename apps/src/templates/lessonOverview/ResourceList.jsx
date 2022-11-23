@@ -107,15 +107,18 @@ export default class ResourceList extends Component {
         </span>
       )}
       {isGDocsUrl(resource.url) && (
-        <DropdownButton
-          text={i18n.makeACopy()}
-          color={Button.ButtonColor.gray}
-          size={Button.ButtonSize.small}
-        >
-          <a href={gDocsPdfUrl(resource.url)}>PDF</a>
-          <a href={gDocsMsOfficeUrl(resource.url)}>Microsoft Office</a>
-          <a href={gDocsCopyUrl(resource.url)}>Google Docs</a>
-        </DropdownButton>
+        <span>
+          {' '}
+          <DropdownButton
+            text={i18n.makeACopy()}
+            color={Button.ButtonColor.gray}
+            size={Button.ButtonSize.small}
+          >
+            <a href={gDocsPdfUrl(resource.url)}>PDF</a>
+            <a href={gDocsMsOfficeUrl(resource.url)}>Microsoft Office</a>
+            <a href={gDocsCopyUrl(resource.url)}>Google Docs</a>
+          </DropdownButton>
+        </span>
       )}
     </li>
   );
