@@ -992,13 +992,14 @@ module Pd::Application
       elsif course == 'csp'
         meets_minimum_criteria_scores[:csp_which_grades] =
           (responses[:csp_which_grades] & options[:csp_which_grades].first(4)).any? ? YES : NO
-        meets_minimum_criteria_scores[:previous_yearlong_cdo_pd] =
-          responses[:previous_yearlong_cdo_pd].include?('CS Principles') ? NO : YES
+        took_csp_course =
+          responses[:previous_yearlong_cdo_pd].include?('CS Principles')
+        meets_minimum_criteria_scores[:previous_yearlong_cdo_pd] = took_csp_course ? NO : YES
       elsif course == 'csa'
         meets_minimum_criteria_scores[:csa_which_grades] =
           (responses[:csa_which_grades] & options[:csa_which_grades].first(4)).any? ? YES : NO
-        meets_minimum_criteria_scores[:previous_yearlong_cdo_pd] =
-          responses[:previous_yearlong_cdo_pd].include?('Computer Science A (CSA)') ? NO : YES
+        took_csa_course = responses[:previous_yearlong_cdo_pd].include?('Computer Science A (CSA)')
+        meets_minimum_criteria_scores[:previous_yearlong_cdo_pd] = took_csa_course ? NO : YES
       end
 
       meets_minimum_criteria_scores[:enough_course_hours] = responses[:enough_course_hours] == options[:enough_course_hours].first ? YES : NO
