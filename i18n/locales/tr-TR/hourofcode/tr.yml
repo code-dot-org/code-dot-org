@@ -67,7 +67,7 @@ tr:
     yeni bir video serisinde keşfetmek, Okyanuslar için Yapay Zeka eğitimini 25'ten
     fazla dilde vermek, etik ve yapay zeka konularını tartışmak ve daha fazlası için
     bize katılın...
-  hoc2019_header: Bilgisayar Bilimlerini Öğren, Dünyayı değiştir.
+  hoc2019_header: Bilgisayar Bilimlerini Öğren. Dünyayı değiştir.
   hoc2019_header_line1_mobile: Bilgisayar Bilimlerini Öğren.
   hoc2019_header_line2_mobile: Dünyayı değiştir.
   social_hoc2019_every_sudent: 'Her öğrencinin dünyayı değiştirme potansiyeli vardır.
@@ -75,8 +75,8 @@ tr:
   social_hoc2019_learn_computer_science: 'Bilgisayar bilimini öğren. Dünyayı değiştir.
     #CSforGood #İyilikiçinBilgisayarBilimi #HourOfCode'
   social_hoc_is_coming: Hour of Code yaklaşıyor!
-  social_hoc2019_hoc_is_about_csforgood: "#HourOfCode #İyilikiçinBilgisayarBilimi
-    ile ilgilidir. Bilgisayar bilimini öğren. Dünyayı değiştir."
+  social_hoc2019_hoc_is_about_csforgood: "#HourOfCode #CSforGood ile ilgilidir. Bilgisayar
+    bilimini öğren. Dünyayı değiştir."
   social_hoc2019_coming_dates: 'Hour of Code geliyor: 9-15 Aralık 2019. Bilgisayar
     bilimi temeldir ve her öğrencinin öğrenmesi gerekir.'
   social_hoc2019_dance: Katy Perry, Shawn Mendes, Panic! At The Disco, Lil Nas X,
@@ -101,15 +101,15 @@ tr:
     ilk adımının keyfini çıkarın. Okyanuslar için Yapay Zeka aktivitesinde gerçek
     makine öğrenimi modellerini eğitirsiniz. [Daha fazlasını öğren](#behind-the-scenes).
   oceans_landing_teacher_resources: Öğretmen Kaynakları
-  oceans_landing_teacher_resources_desc: Etik meseleleri keşfederken, yapay zeka,
-    makine öğrenimi, eğitim verileri ve yanlılık konularını öğretmenize yardımcı ders
-    planları ve aktiviteler.
+  oceans_landing_teacher_resources_desc: Ders planları ve aktiviteler etik meseleleri
+    keşfederken, yapay zeka, makine öğrenimi, eğitim verileri ve yanlılık konularını
+    öğretmenize yardımcı olur.
   oceans_landing_resource_button: Kaynakları Gör
   oceans_landing_cs_for_good: İyilik için Bilgisayar Bilimi
   oceans_landing_cs_for_good_desc: Öğrencilerin bilgisayar biliminin daha eşit bir
     dünyaya ulaşmada oynayabileceği rolü anlamalarına yardımcı kaynaklar.
-  oceans_landing_videos: Yapay Akil hakkinda videolar ve Makine Ogrenimi
-  oceans_behind_the_scenes: 'Okyanuslar icin YA (yapay akil): Sahnelerin Arkasinda'
+  oceans_landing_videos: Yapay Zeka  ve Makine Ogrenimi hakkinda videolar
+  oceans_behind_the_scenes: 'Okyanuslar icin AI (Yapay Zeka): Sahnelerin Arkasinda'
   oceans_behind_the_scenes_1: 2. ila 4. Seviyeler,  <a href="https://www.tensorflow.org/"
     >TensorFlow</a> <a href="https://github.com/tensorflow/models/blob/master/research/slim/nets/mobilenet_v1.md">
     MobileNet </a> projesi tarafından sağlanan, önceden eğitilmiş bir model kullanır.
@@ -166,7 +166,7 @@ tr:
   hoc_live: Kodlama Saati Canlı Yayın
   hoc_live_sign_up_title: Kodlama Saati Canlı Yayın için kayıt ol
   hoc_live_learn_title: Canlı Kodlama Saati ile öğrenin
-  hoc_live_sign_up_message: "Özel misafirle birlikte gerçek zamanlı olarak öğrenin!
+  hoc_live_sign_up_message: "Özel misafirlerle birlikte gerçek zamanlı olarak öğrenin!
     Tüm yaştaki ve yetenekteki hatta bilgisayarı olmayan öğrenciler de davetlidir.
     \nEvde öğrenmeye devam etmek için bölümlerin ve kaynakların kayıtlarını almak
     için posta listemize katılın.  Geçmiş bölümlere göz atın [here](%{episodes_url})."
@@ -180,17 +180,18 @@ tr:
   hoc_overview_oceans_tutorial_desc: Etik meseleleri ve dünya problemlerini ele almada
     yapay zekanın nasıl kullanılabildiğini keşfederken, yapay zeka, makine öğrenimi,
     eğitim verileri ve yanlılık hakkında bilgi sahibi olun.
-  hoc_overview_csc_header: Bilgisayar Bağlantılarına Genel Bakış
+  hoc_overview_csc_header: Bilgisayar Bilimleri Bağlantılarına Genel Bakış
   hoc_overview_csc_desc: En yeni müfredatımız bilgisayar bilimi ile matematik, dil
     sanatları, bilim ve sosyal bilgiler gibi diğer dersler arasındaki bağlantıları
     vurgulamaktadır. Bu modüller, projeler ve dersler sayesinde sınıflar olağan konularını
     heyecan verici yeni yollarla keşfedebilir!
-  hoc_overview_csc_learn_more: Bilgisayar Bağlantıları hakkında daha fazla bilgi edinin
+  hoc_overview_csc_learn_more: Bilgisayar Bilimleri Bağlantıları hakkında daha fazla
+    bilgi edinin
   hoc_danceparty_alt_text: "'Kendi dans partinizi kodlayın' metninin altında müzik
     eşliğinde dans eden animasyonlu karakterler"
-  hoc_ai_alt_text: Anteni, altta tarayıcısı ve LED yüzü olan yüzen beyaz bir yapay
-    zeka karakteri
-  hoc_banner_alt_text: Hour of Code banner
+  hoc_ai_alt_text: Anteni, altta tarayıcısı ve LED yüzü olan yüzen beyaz, dalgalanan
+    bir yapay zeka karakteri
+  hoc_banner_alt_text: Kodlama Saati reklamı
   ai_video_title_what_is_ai: Yapay zeka nedir?
   ai_video_title_algorithm_bias: Algoritmalarda yanlılık ile mücadele
   ai_video_title_phone_knows_dog: Telefonunuz bunun köpek olduğunu nasıl anladı?
@@ -1108,7 +1109,7 @@ tr:
   tutorial_spritebox_name: Spritebox kodlama
   tutorial_tynkerch_name: Karşı Atak
   tutorial_lightbot_name: Lightbot
-  tutorial_hoc_name: Yeni code.org/hoc için placeholder
+  tutorial_hoc_name: Yeni code.org/hoc için yer tutucu
   tutorial_code_name: İlk bilgisayar programınızı yazın
   tutorial_tinspire_name: TI-Nspire CX için 10 dakika kodlama
   tutorial_itchbounceball_name: ITCH Zıplayan Top (Scratch'de)
@@ -1250,9 +1251,9 @@ tr:
   tutorial_introrobo_name: Robotik'e giriş
   tutorial_tlcinvis_name: Görünmezlik etkinliği
   tutorial_tlcjflap_name: 'JFLAP: Sonlu durum makinaları oluşturma'
-  tutorial_procolor_name: Renkler ile programlama
+  tutorial_procolor_name: Ozobot ile Okula Gidiş
   tutorial_spiralsfinch_name: Finch ile spiraller
-  tutorial_ozoi_name: Programlama ve Ozobot'a giriş
+  tutorial_ozoi_name: Ozobot ve OzoCodes'a giriş
   tutorial_ticklel_name: LEGO ustası
   tutorial_spiralsdash_name: Dash ile spiraller çiz
   tutorial_ghdebug_name: Grace Hopper, hata ayıklama
@@ -1261,15 +1262,15 @@ tr:
   tutorial_mazefinch_name: Finch Robot ile Labirentten çıkış
   tutorial_tlccc_name: Sıkışmış kod bulmacaları
   tutorial_tlcdoodle_name: Algoritmik Doodle
-  tutorial_tlcpunch_name: Delikli Kart
+  tutorial_tlcpunch_name: Delikli Kart Arama Aktivitesi
   tutorial_finchfract_name: Finch Fraktalları
-  tutorial_tlcmind_name: Kırmızı siyah akıllar
-  tutorial_tlctelebot_name: Teleporting Robot
-  tutorial_tlcaus_name: Avustralyalı Sihirbaz'ın Rüyası
-  tutorial_tlcmicro_name: mikrodalga yarışı, video içerik
-  tutorial_imathematician_name: Matematikçi
+  tutorial_tlcmind_name: Kırmızı Siyah Akıl Kaynaştırma Aktivitesi
+  tutorial_tlctelebot_name: Teleporting Robot Aktivitesi
+  tutorial_tlcaus_name: Avustralyalı Sihirbaz'ın Rüyası Aktivitesi
+  tutorial_tlcmicro_name: Mikrodalga Yarışı  Video Aktivitesi
+  tutorial_imathematician_name: iMatematikçi
   tutorial_tlcmagic_name: Tılsımlı Kitap Büyüsü
-  tutorial_scratchmus_name: Scratch ile müzik yapma
+  tutorial_scratchmus_name: Scratch ile Müzik Yapma
   tutorial_scratchanim_name: İsminizi Scratch ile Hareketlendirin
   tutorial_scratchfly_name: Onu Scratch ile Uçurun
   tutorial_tynkerarc_name: Denizaltı Arcade oyun seti
@@ -1278,7 +1279,7 @@ tr:
   tutorial_grokeliza_name: Eliza insan mı? (Python)
   tutorial_tynkercan_name: Fizik Cannon, 2 oyunculu oyun seti
   tutorial_grokflags_name: Ülke Bayrakları (Python Turtle)
-  tutorial_robomind_name: RoboMind ile sanal robot
+  tutorial_robomind_name: RoboMind ile sanal robot programlama
   tutorial_adventureq_name: Q ile macera
   tutorial_khan-es_name: JavaScript giriş
   tutorial_kpt_name: JavaScript giriş
@@ -1286,14 +1287,14 @@ tr:
   tutorial_khe_name: JavaScript giriş
   tutorial_kfr_name: JavaScript giriş
   tutorial_app-inventor_name: Hour of Code, AppInventor
-  tutorial_blockly_name: Blockly
+  tutorial_blockly_name: 'Blockly Çevrimdışı Oyunları '
   tutorial_tynker_name: Kendi oyununu yap
   tutorial_baypt_name: Kod Baymax
   tutorial_code-combat_name: CodeCombat
   tutorial_mky_name: KodMaymunu
   tutorial_pirates_name: Korsan kodlama
   tutorial_csfirst_name: ilk CS
-  tutorial_loopedy_name: Loopedy-loop
+  tutorial_loopedy_name: Loopedy-loop dans ettir
   tutorial_dsw_name: Disney yıldız savaşları
   tutorial_dswb_name: Disney yıldız savaşları
   tutorial_ssw_name: Disney yıldız savaşları
@@ -1301,7 +1302,7 @@ tr:
   tutorial_kodable-unplugged_name: fuzzFamily Frenzy
   tutorial_scratch_name: Kodlama ile yaratıcı ol
   tutorial_bayes_name: Grandes kahramanları
-  tutorial_gumball_name: Gumball Lab
+  tutorial_gumball_name: Gumball Oyun Laboratuarı
   tutorial_hrm_name: İnsan kaynakları makinesi
   tutorial_ice-age_name: Buz Devri Play Lab
   tutorial_koapp_name: Kodable (ziyaretçiler hoşgeldiniz)
@@ -1313,17 +1314,17 @@ tr:
   tutorial_pixie_name: PIXIE parkur
   tutorial_play_name: Play Lab
   tutorial_robomind-nl_name: Sanal bir robot programla
-  tutorial_spheroi_name: 'SPRK Lightning lab 1: giriş'
-  tutorial_spherol_name: 'SPRK Lightning laboratuvarı 3: ışıklar'
-  tutorial_spherov_name: 'SPRK Lightning lab3: Değişkenler'
+  tutorial_spheroi_name: 'Bloklar 1: Giriş'
+  tutorial_spherol_name: 'Bloklar 3: Işıklar'
+  tutorial_spherov_name: 'Bloklar 4: Değişkenler'
   tutorial_swb_name: 'Yıldız Savaşları: Kodla Bir Galaksi İnşa Etmek'
   tutorial_build-a-galaxy_name: 'Yıldız Savaşları: Kodla Bir Galaksi İnşa Etmek'
-  tutorial_alicesims_name: Alice ve Sims ile storyboard ve programlama uygulamaları
-  tutorial_tchr_name: Öğretmen ders planları
+  tutorial_alicesims_name: Alice ve Sims ile hikaye taslağı ve programlama uygulamaları
+  tutorial_tchr_name: Öğretmen  Led Ders Planları
   tutorial_robogame_name: Robot Oyunları
-  tutorial_tap_name: Tynker tablet
+  tutorial_tap_name: Tabletlerde Tynker
   tutorial_cintl_name: İlk bilgisayar programınızı yazın
-  tutorial_itchstop_name: Stop Frame animasyon (sıfırdan)
+  tutorial_itchstop_name: ITCH Stop Frame animasyon (sıfırdan)
   tutorial_tynkerpn_name: 'Peep: Doğa yürüyüşü'
   tutorial_tynkerpd_name: 'Peep: Arkadaşlarla dans'
   tutorial_persistence_name: 'Süreklilik: Bir Temel Oluşturma'
@@ -1334,9 +1335,9 @@ tr:
   tutorial_bigevent_name: Büyük Olay
   tutorial_gpp_name: Grafik Kağıdı Programlama
   tutorial_foosgame_name: Foos ile codeSpark Akademi - GameMaker
-  tutorial_solopython_name: Ilk Python kodum
+  tutorial_solopython_name: İlk Python kodum
   tutorial_kodableint_name: Programlamaya Giriş
-  tutorial_kodableadv_name: Ileri programlama kavramları
+  tutorial_kodableadv_name: İleri Programlama Kavramları
   tutorial_tynkertj_name: Toksik orman
   tutorial_wolframa_name: Kaç gün yaşındasın?
   tutorial_wolframm_name: Rasgele Melodiler
@@ -1347,30 +1348,30 @@ tr:
   tutorial_soloweb_name: Bir saat içinde ilk Web sayfası!
   tutorial_khanweb_name: 'Khan Akademi: Web sayfaları'
   tutorial_khandata_name: 'Khan Akademi: veritabanları'
-  tutorial_googlelogo_name: Kendi Google logonu oluştur
-  tutorial_playtune_name: Bu Tune App ile oyna
+  tutorial_googlelogo_name: Kendi Google Logom
+  tutorial_playtune_name: Bu Tune App'ı Çalıştır
   tutorial_computeit_name: Hesapla
   tutorial_codesterssj_name: Uzay şakaları
-  tutorial_cmchat_name: Python sohbeti
-  tutorial_tynkerdb_name: Dragon Dash
-  tutorial_cmbuild_name: Oyunu Oluşturucu
+  tutorial_cmchat_name: Trivia sohbet robotu
+  tutorial_tynkerdb_name: Dragon Üflemesi
+  tutorial_cmbuild_name: Oyun Oluşturucu
   tutorial_robotrattle_name: Robot Rattle
-  tutorial_codestersh_name: Kirpi tasarımlar
-  tutorial_codehsdigipixel_name: CodeHS ile dijital sanat, sanatın Piksel hali
+  tutorial_codestersh_name: Kirpi Tasarımları
+  tutorial_codehsdigipixel_name: CodeHS ile Piksellerle dijital sanat
   tutorial_ccbinary_name: İkili kahraman
-  tutorial_codehsturtle_name: Kaplumbağa Tracy ile Python programlama dili
+  tutorial_codehsturtle_name: Kaplumbağa Tracy ile Python'la programlama
   tutorial_grokhd_name: Tehlikeli Ortanca
   tutorial_grokem_name: Emoji Çılgınlığı
   tutorial_kodmaze_name: Labirent yapıcı zorluklar
-  tutorial_codestersa_name: Asteroitlerden(uzaydaki kaya parçacıkları) atlama
-  tutorial_cmdodo_name: Matematik öğrenmek
-  tutorial_tynkerspace_name: Uzay arayışı
-  tutorial_gfbloons_name: Baloların trigonometri savunması
+  tutorial_codestersa_name: Asteroit Dodge
+  tutorial_cmdodo_name: Dodo Matematik yapıyor
+  tutorial_tynkerspace_name: Uzay Konuğu
+  tutorial_gfbloons_name: Bloons trigonometri savunması
   tutorial_raspipong_name: HAT Gürültüsünü Hisset
   tutorial_codehsvr_name: CodeHS ile Sanal Dünyalar oluşturun
   tutorial_codesterstp_name: Dönüştürme bulmacaları
   tutorial_codestersbb_name: Basketbol
-  tutorial_gfcrossyroad_name: Crossy yolu ile kod öğrenin
+  tutorial_gfcrossyroad_name: Crossy Road ile kod öğrenin
   tutorial_googleww_name: Harika Kadın
   tutorial_codehsjsapp_name: JavaScript ile gerçek bir uygulama yapmak
   tutorial_gfmihi_name: Mihi Yapıcı
@@ -1380,10 +1381,10 @@ tr:
   tutorial_thunkable_name: 1 saat içinde 10 tane uygulamanın nasıl oluşturulacağını
     ögreneceksiniz.
   tutorial_hopcrossyroad_name: İPad/iPhone üzerinde çapraz yol oluşturun
-  tutorial_switchglitch_name: 'Değiştir&Aksa: Robot Macerası'
+  tutorial_switchglitch_name: 'Switch & Glitch: Robot Macerası'
   tutorial_codecar_name: Araba simülatörü kodu
   tutorial_codesterscp_name: Koordinat Düzlemi
-  tutorial_grokpetblock_name: Sanal Pet (mikro:bit Blockly)
+  tutorial_grokpetblock_name: Sanal Evcil Hayvan (mikro:bit Blockly)
   tutorial_techbim_name: Temel resim işleme
   tutorial_techfpp_name: Python ile Fonksiyonal Programlamaya Giriş
   tutorial_codesterscr_name: Tezahürat Rutinleri
@@ -1406,26 +1407,26 @@ tr:
   tutorial_stemcod_name: Video oyunları fiziği!
   tutorial_techikb_name: Etkileşimli Kotlin Temelleri
   tutorial_kanostreet_name: Sokak Sanatçısı
-  tutorial_codemojijs_name: JavaScript başlıyor
-  tutorial_techapf_name: Gelişmiş piton özellikleri
+  tutorial_codemojijs_name: JavaScript'e başlama
+  tutorial_techapf_name: Gelişmiş Python özellikleri
   tutorial_techfpjs_name: JS ile fonksiyonel programlamaya pratik giriş
   tutorial_techlinq_name: C# LINQ Kullanımı - Pratik Bir Genel Bakış
   tutorial_gpbcatapult_name: Mancınık inşaa et
   tutorial_quorumastro_name: Astronomide kodlama
   tutorial_alicewonder_name: Alice harikalar diyarında
-  tutorial_rginter_name: RoboGarden - Orta Seviye
+  tutorial_rginter_name: RoboGarden Kodlama - Orta Seviye
   tutorial_cssgrid_name: Kılavuz Bahçesi
   tutorial_jshero_name: JS kahraman
   tutorial_codemojipy_name: Python Lab
   tutorial_nclabdrone_name: Hadi bir dron inşa edelim!
   tutorial_gpbcircle_name: İnteraktif renk çemberi yapın
-  tutorial_gpbpaint_name: Kendinize boya editörü yapın
+  tutorial_gpbpaint_name: Kendi Boya Editörü'nü yap
   tutorial_cocomarcade_name: 'CodeCombat: Bir Arcade Oyun oluşturun!'
   tutorial_beetik_name: Franz Liszt'in müziğini kodlamak
   tutorial_codedj_name: Code DJ ile müzik bestelemek
-  tutorial_rgadvan_name: RoboGarden - Gelişmiş
+  tutorial_rgadvan_name: RoboGarden Kodlama - Gelişmiş
   tutorial_codehsrn_name: React Native ile uygulamalar oluşturmak
-  tutorial_codehswd_name: CodeHS ile ağ tasarımı
+  tutorial_codehswd_name: CodeHS ile Ağ Tasarımı
   tutorial_turtlerobot_name: Kaplumbağa Robot
   tutorial_ozoevo_name: 'Evo''ya Giriş: Evo''nun Güç Bölgesi'
   tutorial_ozoexped_name: Neptün'e Ozobot Seferleri
@@ -1436,25 +1437,25 @@ tr:
   tutorial_ozoalgorithm_name: Bir çarpma algoritması yapmak
   tutorial_ozotimer_name: Ozobot ikinci zamanlayıcı
   tutorial_ozohabits_name: Hayvanların alışkanlık ve yaşam alanlarını modelleme
-  tutorial_ozoprogram_name: Program robotları nasıl yapılır?
+  tutorial_ozoprogram_name: " Robotlar nasıl Programlanır?"
   tutorial_ozopair_name: Ozobot ile çift programlama
-  tutorial_codesnoopy_name: Meraklı Kar Topu Savaşı
+  tutorial_codesnoopy_name: Snoopy Kar Topu Savaşı
   tutorial_applabintro_name: Uygulama laboratuvarına giriş
-  tutorial_cslartist_name: Bilgisayarınızda küçük sanatçı etkinlik paketi
+  tutorial_cslartist_name: Bilgisayarınızda  etkinlik paketindeki Küçük Sanatçı
   tutorial_cslscratchjr_name: ScratchJr Kitten ile oynayalım! Etkinlik paketi
   tutorial_floevents_name: Yazma ve yorumlama olayları
   tutorial_florobot_name: Bir robot tasarlama
   tutorial_isavesanta_name: noel Baba 'yı kurtardım!
-  tutorial_iorder_name: ben sipariş
-  tutorial_ianimate_name: ben animasyon
-  tutorial_iloveada_name: ada 'yı seviyorum
+  tutorial_iorder_name: iOrder
+  tutorial_ianimate_name: iAnimate
+  tutorial_iloveada_name: iLove Ada
   tutorial_kodflash_name: Önce flaş, sonra alkış!
-  tutorial_kodchoose_name: Kendi (bulanık) maceranızı seçin!
+  tutorial_kodchoose_name: Kendi (Fuzzy) maceranızı seçin!
   tutorial_kodpizzapre_name: Pizza partisi! (Önokuyucu)
   tutorial_kodpizza_name: Pizza Partisi!
-  tutorial_kodwomen_name: Teknik kadınlar
-  tutorial_tfunplug_name: 'Robot tamir: robot beynini tamir edebilir miyim? (Fiş ile)'
-  tutorial_lbvariables_name: Biraz değişiklikler
+  tutorial_kodwomen_name: Teknolojide kadınlar
+  tutorial_tfunplug_name: 'Robot tamiri: robot beynini tamir edebilir misin? (bağlantısız)'
+  tutorial_lbvariables_name: Littlebits ile değişkenler
   tutorial_lbfunctions_name: Fonksiyonlar & LittleBits ile Eğlence
   tutorial_lblogic_name: littleBits ile mantık dersleri
   tutorial_lbworld_name: 'LittleBits: Dünyayı Değiştirme Mücadelesi'
@@ -1464,42 +1465,42 @@ tr:
   tutorial_lbguitar_name: 'littlebits: Rockstar Gitarı'
   tutorial_lbio_name: littleBits ile Girdiler ve Çıktılar
   tutorial_wonpuppy_name: Köpek yavrusu çizmek (E3)
-  tutorial_woncue_name: İşaretin Başlangıç Kılavuzu
+  tutorial_woncue_name: Cue'nin Başlangıç Kılavuzu
   tutorial_wonzoo_name: Küçük hayvanat bahçesi 'nde nokta (B2)
-  tutorial_wontrip_name: Yol gezi çizgisi (F2)
-  tutorial_woncollect_name: Toplayıcı çizgisi (B1)
-  tutorial_wonsecret_name: İşaretin Gizli Mesajı
+  tutorial_wontrip_name: Dash'ın Yolculuğu (F2)
+  tutorial_woncollect_name: Dash Kolleksiyoncu (B1)
+  tutorial_wonsecret_name: Cue'nin Gizli Mesajı
   tutorial_hsscience_name: 'Seksek: iPad/iPhone interaktif bilim modelleri oluşturalım!'
   tutorial_popculture_name: Pop kültür veri bilimi
-  tutorial_legorobust_name: Sağlam yapılar – LEGO ® Eğitim Wedo 2,0
-  tutorial_legoplants_name: Bitkiler ve polen – LEGO ® Eğitim Wedo 2,0
+  tutorial_legorobust_name: Sağlam yapılar – LEGO ® Eğitim Wedo 2.0
+  tutorial_legoplants_name: Bitkiler ve polen – LEGO ® Eğitim Wedo 2.0
   tutorial_legopark_name: Özerk otopark – LEGO ® MINDSTORMS ® eğitim EV3
   tutorial_legodetect_name: Nesne algılama – LEGO ® MINDSTORMS ® eğitim EV3
   tutorial_legolight_name: Otomatik farlar – LEGO ® MINDSTORMS ® eğitim EV3
   tutorial_alexa_name: 'Amazon ve Alexa beceri öğreticisi: okulumdaki gerçekler'
-  tutorial_grokpetmicro_name: 'Sanal Pet (mikro: bit Python)'
+  tutorial_grokpetmicro_name: Sanal Evcil Hayvan (micro:bit MicroPython)
   tutorial_pirateplunder_name: Korsan yağmalama
   tutorial_cadj_name: DR DJ Aygıtı
-  tutorial_cacrazy_name: Çılgın Yaratıklar Kodu
-  tutorial_cajump_name: Atlama reçeli
-  tutorial_carest_name: Robo-Restoran bilinemez
-  tutorial_accai_name: Zeki uzay keşfi
+  tutorial_cacrazy_name: COde Crazy Yaratıkları
+  tutorial_cajump_name: Jumping Jam
+  tutorial_carest_name: Robo-Restoran bulmacacısı
+  tutorial_accai_name: Accenture Zeki Uzay Keşfi
   tutorial_vceclipse_name: Kod tutulması
   tutorial_pmzero_name: Pac-Man ZERO
-  tutorial_hsela_name: 'Anlatılan hikayeler: ela + kodlama'
+  tutorial_hsela_name: 'Anlatılan hikayeler: ELA + kodlama'
   tutorial_ticklear_name: AR nedir?
   tutorial_bcrobot_name: BlocksCAD Robot
-  tutorial_bcsnow_name: BlocksCAD Snowflake
+  tutorial_bcsnow_name: BlocksCAD Kar Tanesi
   tutorial_ifly_name: iFly
-  tutorial_idowedo_name: BenYaparım BizYaparız iDo WeDo
-  tutorial_diggindwarf_name: Kazma cüce
-  tutorial_spheroit_name: 'Bloklar 2: Eğer/sonra başka'
-  tutorial_gameofcodes_name: Oyun Kodları
+  tutorial_idowedo_name: iDo WeDo
+  tutorial_diggindwarf_name: Diggin' Dwarf
+  tutorial_spheroit_name: 'Bloklar 2: Eğer/Öyleyse Değilse'
+  tutorial_gameofcodes_name: Kod Oyunu
   tutorial_blocklygames_name: Blockly Oyunları
   tutorial_spherohello_name: 'Metin 1: Merhaba Dünya'
   tutorial_spheroarcade_name: Sphero Arcade oyun alanı
   tutorial_bcpy1_name: Python dünyası
-  tutorial_bcpy2_name: Piton Dünyası 2
+  tutorial_bcpy2_name: Python Dünyası 2
   tutorial_bcjs1_name: JavaScript Dünyası
   tutorial_bcjs2_name: JavaScript Dünyası 2
   tutorial_3dbearmars_name: Mars Öncüleri
@@ -1544,32 +1545,32 @@ tr:
   tutorial_codehsbitcoin_name: 'Kripto Para: Bitcoin Defterini Keşfet'
   tutorial_codehsblockchain_name: 'Kripto Para: Blockchain Teknolojisini Keşfet'
   tutorial_codehscipher_name: Sezar Şifreleme Çarkı
-  tutorial_codehscollision_name: Çarpışma Simülasyonları Kodlama
-  tutorial_codehsmath_name: Matematiksel Modeller Kodlama
+  tutorial_codehscollision_name: Çarpışma Simülasyonları Kodlamak
+  tutorial_codehsmath_name: Matematiksel Modeller Kodlamak
   tutorial_codehsmusic_name: Müzikte Kodlama
   tutorial_codehssports_name: Sporda Kodlama
-  tutorial_codemojipizza_name: JavaScript ile Pizza Yapın
+  tutorial_codemojipizza_name: JavaScript ile Pizza Yap
   tutorial_moonlander_name: Aya İniş
   tutorial_sushicards_name: Başlangıç için Scratch Suşi Kartları
   tutorial_codesparkcreate_name: 'Foos ile codeSpark Akademisi: Oyunlar Üret'
-  tutorial_hardvsoft_name: Donanım Takımı karşısında Yazılım Takımı
+  tutorial_hardvsoft_name: Donanım Takımı  Yazılım Takımı'na karşı
   tutorial_codestersecard_name: Etkileşimli Kart Kodlayın
-  tutorial_codesterslogo_name: Kendi Logonu Tasarlayın
-  tutorial_codesterstshirt_name: Baş Harflerini Kodlayın
+  tutorial_codesterslogo_name: Kendi Logonu Tasarla
+  tutorial_codesterstshirt_name: Baş Harflerini Kodla
   tutorial_codewards_name: Sualtı şehrini kurtar!
   tutorial_olympics_name: 'Robot Olimpiyatları için C.A.T.S. '
   tutorial_codinismhero_name: Programlama Kahramanı
   tutorial_discovery_name: Sıradışı bir Keşif
-  tutorial_csfirstname_name: Bir İsmi Canlandırın
+  tutorial_csfirstname_name: Bir İsmi Canlandır
   tutorial_edisonmove_name: 'Edison ve EdPy: Edison''un hareket etmesini sağla'
   tutorial_edisonspider_name: Edison ve spiral örümcek kapanı
   tutorial_edisonspotlight_name: Edison ile sahne ışığı altında gösteri yapın
-  tutorial_firiapython_name: micro:bit ile Python öğrenin
-  tutorial_gamefrootsquid_name: Kendi den mürekkep balığı oyununuzu kodlayın
-  tutorial_duckpiano_name: Bir Örnek Piyanosu Yapın
+  tutorial_firiapython_name: micro:bit ile Python öğren
+  tutorial_gamefrootsquid_name: Kendi dev mürekkep balığı oyununuzu kodlayın
+  tutorial_duckpiano_name: Bir Ördek Piyanosu Yapın
   tutorial_gpsound_name: Ses Kaydedici Yapın
   tutorial_groklearningpython_name: 'Python + Biyoloji: Hayvan sınıflandırıcı yapın!'
-  tutorial_htmltimetravel_name: 'CSS Animasyonları: Zamanda Yolculuk Yapın'
+  tutorial_htmltimetravel_name: 'CSS Animasyonları: Zamanda Yolculuk'
   tutorial_hp_flappy_name: hyperPad ile bir Flappy Bird klonu yapın
   tutorial_appytappin_name: appy Tappin'
   tutorial_icipher_name: iCipher
@@ -1590,7 +1591,7 @@ tr:
   tutorial_meteor_name: BBC micro:bit için Düşen Meteorlar Oyunu Yapın
   tutorial_ballbounce_name: Ball Bounce Mobil Uygulaması
   tutorial_mitcodi_name: Arı Codi
-  tutorial_mitdoodle_name: Digital Doodle Mobile Uygulaması
+  tutorial_mitdoodle_name: Digital Doodle Mobil Uygulaması
   tutorial_talktome_name: Benimle Konuş Mobil Uygulaması
   tutorial_mobilecspmap_name: Harita Gezisi Uygulaması
   tutorial_ozorandom_name: Ozobot Rastgele Hikaye Üreteci
@@ -1602,10 +1603,10 @@ tr:
   tutorial_rgmath_name: RoboGarden STEAM - Matematik
   tutorial_rgscience_name: RoboGarden STEAM - Bilim
   tutorial_rgtech_name: RoboGarden STEAM - Teknoloji
-  tutorial_robotmagic3d_name: 3 Boyutlu bir Logo Canlandırın
+  tutorial_robotmagic3d_name: 3 Boyutlu bir Logo Canlandır
   tutorial_robotmagicflappy_name: 3D Flappy Bird
   tutorial_scratchadventure_name: Bir Macera Oyununu Canlandırın
-  tutorial_scratchtalk_name: Konuşan Animasyonlar Yaratın
+  tutorial_scratchtalk_name: Konuşan Animasyonlar Yarat
   tutorial_scratchjrstory_name: Birlikte Hikaye Yaratabiliriz!
   tutorial_scratchjrtwinkle_name: Parılda Küçük Yıldız Sınıf İşbirliği
   tutorial_spherocomm_name: İletişim
@@ -1618,7 +1619,7 @@ tr:
   tutorial_spherotext2_name: 'Metin 2: Koşullar'
   tutorial_spherotext3_name: 'Metin 3: Işıklar'
   tutorial_spherotext4_name: 'Metin 4: Değişkenler'
-  tutorial_spheroraptor_name: 'Jurassic Kodu: Spheroraptor Escape'
+  tutorial_spheroraptor_name: 'Jurassic Code: Spheroraptor Kaçışı'
   tutorial_stempiday_name: Pi günü!
   tutorial_stemplanetoids_name: Küçük Gezegenler ve Ayın İnişi
   tutorial_stempong_name: Pong ve Bonk.io
@@ -1662,17 +1663,17 @@ tr:
   tutorial_codespeakhappy_name: Mutlu Yer Meditasyon Uygulaması Kodlayın
   tutorial_grokimage_name: Python ile Resim Büyüsü
   tutorial_icomputelearn_name: İCompute ile Kodlamayı Öğrenin
-  tutorial_rpstress_name: Stres topu
+  tutorial_rpstress_name: 'Stres topu: ekrana tıklanabilir stres topu kodla'
   tutorial_bsdcause_name: Sebebimi Destekle
   tutorial_vidcodeanimoji_name: Animoji
   tutorial_vidcodeanimojies_name: Animoji
   tutorial_bsdinspire_name: Bana İlham Veren İnsanlar
-  tutorial_tttractor_name: Tractor Traversal
+  tutorial_tttractor_name: Traktör Geçişi
   tutorial_codeillusionmickey_name: 'Disney Codeillusion: Mickey ile Medya Sanatı
     Macerası'
-  tutorial_scigirlsquest_name: 'SciGirls: Code Quest'
+  tutorial_scigirlsquest_name: 'SciGirls: Kod Hedefi'
   tutorial_codespeakbreathe_name: Bir Meditasyon Nefes Uygulaması Kodlayın
-  tutorial_vidcodeface_name: Facetracking
+  tutorial_vidcodeface_name: Yüz tanımlama
   tutorial_educodemaze_name: Kendi Labirentinizi Tasarlayın!
   tutorial_educoderace_name: Kendi yarış oyununuzu kodlayın!
   tutorial_codespeakchatbot_name: B.B. Kadın Öncüleri ile bir Sohbet Robotu kodlayın
@@ -1680,25 +1681,25 @@ tr:
   tutorial_codespeakgrandparent_name: Scratch'te Büyükbaba Kartı Kodlayın
   tutorial_educodekingdom_name: Krallığı Savun!
   tutorial_codehsdata_name: Veri Görselleştirmeleriyle Kodlama
-  tutorial_educodecake_name: HTML ile Pasta Yapın!
+  tutorial_educodecake_name: HTML ile Kek Pişir!
   tutorial_ttsecond_name: İkinci Takım
-  tutorial_bsdtrivia_name: Trivia Game Maker
+  tutorial_bsdtrivia_name: Trivia Oyun Yapıcı
   tutorial_csfirstdialogue_name: Diyalog
-  tutorial_codemonkeybeaver_name: Beaver Achiever
-  tutorial_codestersdistance_name: 'Codesters: Social Distancing Sprites'
-  tutorial_itchspace_name: 'iTCHcode: Space Invaders - RokCoder'
-  tutorial_vidcodemagic_name: SFX Magic
-  tutorial_vidcodemagices_name: SFX Magic
+  tutorial_codemonkeybeaver_name: Başarılı Kunduz
+  tutorial_codestersdistance_name: 'Codesters: Sosyal Mesafeli Hareketli Nesneler'
+  tutorial_itchspace_name: 'iTCHcode: Uzay İstilacıları - RokCoder'
+  tutorial_vidcodemagic_name: SFX Büyü
+  tutorial_vidcodemagices_name: SFX Büyü
   tutorial_codespeakmeal_name: Sağlıklı Yemek Uygulaması Kodlayın
-  tutorial_itchfish_name: 'iTCHcode: Fish scratch game'
+  tutorial_itchfish_name: 'iTCHcode: Balık scratch oyunu'
   tutorial_bsdwebsite_name: Gözde İnternet Sitem
-  tutorial_codespeaktime_name: Code a Time Capsule in Scratch
-  tutorial_itchwebcam_name: 'iTCHcode: Webcam Augmented Reality'
-  tutorial_itchball_name: 'iTCHcode: Bouncing Ball'
-  tutorial_ttrace_name: Yarış kondisyonu
-  tutorial_plethora_name: 'Plethora: Cause and Effect'
+  tutorial_codespeaktime_name: Scrath ile Zaman Kapsülü Kodla
+  tutorial_itchwebcam_name: 'iTCHcode: Kamera Artırılmış Gerçeklik'
+  tutorial_itchball_name: 'iTCHcode: Zıplayan Top'
+  tutorial_ttrace_name: Yarış Durumu
+  tutorial_plethora_name: 'Plethora: Sebep ve Sonuç'
   tutorial_educodesecret_name: Ajansın Sırlarını Ortaya Çıkarın!
-  tutorial_itchshapes_name: 'iTCHcode: Shapes & Angles'
+  tutorial_itchshapes_name: 'iTCHcode: Şekiller ve Açılar'
   tutorial_codeguppytext_name: Metin tabanlı kodlamaya giriş
   tutorial_vidcodeplastiche_name: Plastik Kirliliği Kamu Spotu
   tutorial_educativechatbot_name: Python'da kendi sohbet robotunuzu oluşturun
@@ -1707,44 +1708,44 @@ tr:
   tutorial_htmlacademyphp_name: 'PHP''ye Giriş: Scratch ile Çevrimiçi Mağaza Oluşturun'
   tutorial_gamefrootdistance_name: 'COVID-19 Simülatörü: Bilgisayar bilimi yoluyla
     sosyal mesafe hakkında bilgi edinin.'
-  tutorial_codesterscovid_name: 'Codesters: We Can Stop COVID PSA'
-  tutorial_ttbunker_name: The Bunker
-  tutorial_cuttle_name: Hesaplamalı Düşünme ve Programlama Zorluğu
+  tutorial_codesterscovid_name: 'Codesters: COVID''i Durdurabiliriz Kamu Spotu'
+  tutorial_ttbunker_name: Sığınak
+  tutorial_cuttle_name: Hesaplamalı Düşünme ve Programlama Görevi
   tutorial_bsdjokes_name: Şakalar ve Bilmeceler
   tutorial_rptree_name: Ağaç yaşam simülatörü
-  tutorial_codestersunity_name: 'Codesters: Unity Mural'
-  tutorial_codesterssoccer_name: 'Codesters: Soccer Shot'
-  tutorial_breakoutlock_name: 'Haspy and Lockit: Code Buddies'
+  tutorial_codestersunity_name: 'Codesters: Birlik Duvarı'
+  tutorial_codesterssoccer_name: 'Codesters: Futbol Şutu'
+  tutorial_breakoutlock_name: 'Haspy ve Lockit: Kodlama Kankaları'
   tutorial_thunkablemask_name: Maskeli Kunduz
   tutorial_cafarming_name: Yaşlı MacDonald bir çiftliği hack'ledi. AI, AI drone!
-  tutorial_blocksmithyeti_name: Don't Yeet the Yeti
-  tutorial_codecapture_name: Learn Programming With JavaScript​ In A Jiffy​
-  tutorial_codehslitter_name: Coding for a Litter-Free Community
+  tutorial_blocksmithyeti_name: Yeti'yi Fırlatma
+  tutorial_codecapture_name: Jiffy'deki Javascript ile Kodlama Öğrenme
+  tutorial_codehslitter_name: Çöpsüz Toplum için Kodlama
   tutorial_bsdocean_name: Suyun Altındaki Yaşam
-  tutorial_itchplatformer_name: 'iTCHcode: Scratch 3.0 Platformer Tutorial'
-  tutorial_codejika_name: 'CodeJIKA: 5 Minute Website'
+  tutorial_itchplatformer_name: 'iTCHcode: Scratch 3.0 Platformcu Öğretici'
+  tutorial_codejika_name: 'CodeJIKA: 5 Dakikada Web Sitesi'
   tutorial_gamefrootclicker_name: Değişkenleri Öğrenin. Kendi Clicker Oyununuzu kodlayın.
-  tutorial_rmagicequity_name: Eşitlik vs Denklik
+  tutorial_rmagicequity_name: Eşitlik  Denkliğe Karşı
   tutorial_ttfreestyle_name: Fonksiyonel Serbest Stil
   tutorial_ozobotcolor2_name: 'Renk Kodlarına Giriş 02: Renk Kodlarının Çizilmesi'
   tutorial_ozobotcolor3_name: 'Renk Kodlarına Giriş 03: Yönlülük'
   tutorial_clcarbon_name: Kendi Karbon Hesaplayıcınızı Oluşturun
   tutorial_kodablebasics_name: 'Temel Kodlama: Bilgisayarsız'
-  tutorial_scigirlscc_name: 'SciGirls: Code Creators'
-  tutorial_irobotpicture_name: 'Seeing the Whole Picture: Coded Messages'
+  tutorial_scigirlscc_name: 'SciGirls: Kod Yaratıcıları'
+  tutorial_irobotpicture_name: 'Tüm Resimi Görmek: Kodlanmış Mesajlar'
   tutorial_kcjmyself_name: Kendimi tanıtayım!
   tutorial_nearpodalgorithms_name: 'Kodlama: Algoritmalar'
-  tutorial_kibodrop_name: KIBO Craft and Build Drop Test
+  tutorial_kibodrop_name: KIBO Düşme Testi Becer ve Yap
   tutorial_ozobotcolor1_name: 'Renk Kodlarına Giriş 01: Çizgi İzleme'
-  tutorial_scigirlspixels_name: 'SciGirls: Passion for Pixels'
+  tutorial_scigirlspixels_name: 'SciGirls: Pikseller için tutku'
   tutorial_kcjheroines_name: Kahramanlarımız
   tutorial_ozobotvalue_name: Değerim Nedir?
-  tutorial_icodebytes_name: 'A Byte of iCompute: Unplugged'
-  tutorial_clfashion2_name: Fashionistas of Data Science - Class 2
+  tutorial_icodebytes_name: 'iCompute ''in Biti: Bilgisayarsız'
+  tutorial_clfashion2_name: Veri Biliminin Moda Tutkunları - Sınıf 2
   tutorial_ai4all_name: Yapay Zeka & Çizim
   tutorial_cldata_name: Veri Süper Gücü'ne Hoşgeldiniz
   tutorial_spheroinputs_name: Giriş ve Çıkış Birimleri Bilgisayarsız
-  tutorial_edisoncount_name: Teach Edison to count to 9
+  tutorial_edisoncount_name: Edison'a 9'a kadar saymayı öğret
   tutorial_spheroloops_name: Bilgisayarsız Döngüler
   tutorial_kiboprogram_name: Birbirimizi Programlayalım
   tutorial_hellorubycsin60_name: 60 saniyede Bilgisayar Bilimi
@@ -1753,24 +1754,24 @@ tr:
   tutorial_edisonmystery_name: Edison ve gizemli çizgi
   tutorial_microbitseaturtles_name: Deniz Kaplumbağalarını Kurtarma
   tutorial_ozobotknow_name: 'Ozobot''a Giriş: Evo''yu Tanıyın'
-  tutorial_imagilabs_name: Hayal et. Kodla. Tak.
-  tutorial_irobotsimulator_name: Simulator Code Break
-  tutorial_irobotkind_name: 'Robot Feelings: The Kind Playground'
-  tutorial_firiavirtual_name: 'CodeSpace: Virtual Robotics with Python'
+  tutorial_imagilabs_name: Hayal et. Kodla. Giy.
+  tutorial_irobotsimulator_name: Kod Arası Simülatörü
+  tutorial_irobotkind_name: 'Robot Duyguları: Sevecen Oyun Alanı'
+  tutorial_firiavirtual_name: 'CodeSpace: Python''la Sanal Robotik'
   tutorial_irobotguesscode_name: Kodu tahmin et
-  tutorial_ozobotnouns_name: Picking Out Irregular Plural Nouns
-  tutorial_nasa3d_name: 'Universe in 3D:  modeling and printing cosmic objects'
-  tutorial_blupants_name: 'BluPants: Learn Coding with Real Robots'
-  tutorial_legodance_name: Break Dance
-  tutorial_nearpodcoding_name: 'Topic Spark: Coding '
-  tutorial_kcjplastic_name: "#kids2030 Plastics Challenge"
+  tutorial_ozobotnouns_name: Düzensiz Çoğul İsimleri Ayıklamak
+  tutorial_nasa3d_name: '3 Boyutlu Evren: kozmik objeleri modelleme ve çıktı alma'
+  tutorial_blupants_name: 'BluPants: Gerçek Robotlarla Kodlama Öğrenme'
+  tutorial_legodance_name: Brek Dansı
+  tutorial_nearpodcoding_name: 'Topic Spark: Kodlama'
+  tutorial_kcjplastic_name: "#kids2030 Plastikler Hedefi"
   tutorial_legojourney_name: LEGO Education ile Yolculuk Oluşturun
-  tutorial_legohopper_name: Hopper Race
+  tutorial_legohopper_name: Sıçrama Yarışı
   tutorial_catrobatembroidery_name: Kodlu Nakış
   tutorial_irobotphone_name: Telefon Çizimi
   tutorial_codeguppydraw_name: Kodla çizin
-  tutorial_codejumper_name: 'Bilgisayar Ağları: İyilik Mesajları'
-  tutorial_meeempathy_name: İki Köylü Bir Minecraft Masalı
+  tutorial_codejumper_name: 'Ağlar: İyilik Mesajları'
+  tutorial_meeempathy_name: İki Köyün Bir Minecraft Masalı
   tutorial_danceparty_shortdescription: Arkadaşlarınızla paylaşmak için bir Dans Partisi
     kodlayın. Katy Perry, Madonna, J. Balvin, Sia, Keith Urban, Ciara ve 25 kişi daha!
   tutorial_chibitronics_shortdescription: Kendi hikayenizi ışıklandırmak için bir
@@ -1782,40 +1783,42 @@ tr:
   tutorial_star-wars_shortdescription: Droid programlamayı öğrenin ve uzak bir galakside
     kendi Star Wars oyununuzu yazın.
   tutorial_gumadventure_shortdescription: Gumball'ın Harikalar Dünyası'nda bir bölüm
-    ilerlemek için biraz kod yazalım.
+    ilerlemek için  kod kullanalım.
   tutorial_mchoc_shortdescription: Minecraft Hour of Code için yepyeni bir faaliyetle
     geri döndü. Kodlamayla Minecraft’ta bir gezintiye çıkın
   tutorial_vidnews_shortdescription: Teknoloji, çeşitlilik, çocuklar ve kodlama hakkında
-    hikaye oluşturmak için kullanılabilcek kod efektleri ve grafikler.
+    haberler hikayesi oluşturmak için kullanılabilecek kod efektleri ve grafikler.
   tutorial_kodable-pre_shortdescription: Bilgisayar programlama kavramlarını öğretmek
     için eğlenceli bir oyun
   tutorial_highseas_shortdescription: Bu etkinlikte, açık denizlerde maceradan maceraya
     koşan iki kahramanın hikayesini yazacaksınız!
-  tutorial_capython_shortdescription: Eğlenceli çizimler için Python kullanın.
-  tutorial_frzn_shortdescription: Buzun sihrini ve güzelliğini keşfettikleri macerada
-    Anna ve Elsa’ya katılmak için kodu kullanalım!
-  tutorial_cocom_shortdescription: Python ve JavaScript öğrenmek bu programlama oyunu
-    ile çok zevkli!
+  tutorial_capython_shortdescription: Kaplumbağalar ile eğlenceli çizimler için Python
+    kodu kullanın.
+  tutorial_frzn_shortdescription: Buzun sihrini ve güzelliğini keşfederken Anna ve
+    Elsa’ya katılmak için kodu kullanalım!
+  tutorial_cocom_shortdescription: Kithgard Zindanın'da yolunu kodlarken Python ve
+    Javascript öğren!
   tutorial_play-lab_shortdescription: Play Lab ile bir hikaye yaratın ya da oyun yapın!
   tutorial_boxisland_shortdescription: Kutu adasında bir gezi yapın ve tüm yıldız
     toplayın!
-  tutorial_textcomp_shortdescription: Metin Sıkıştırma Widget’ıyla kayıpsız sıkıştırma
-    tekniklerini keşfedin
+  tutorial_textcomp_shortdescription: Metin Sıkıştırma Aygıtıyla kayıpsız sıkıştırma
+    tekniklerini araştırın
   tutorial_encryption_shortdescription: Şifrelemeye duyulan ihtiyacı ve gizli mesajları
     kırmanın basit yöntemlerini anlatır.
-  tutorial_kanopixel_shortdescription: Tetris'ten Minecraft'a, oyun geçmişi! ikonik
+  tutorial_kanopixel_shortdescription: Tetris'ten Minecraft'a, oyun geçmişindeki ikonik
     oyun görselleri ile kendin kodla!
   tutorial_foos_shortdescription: The Foos, programlamayı öğrenmek için oluşturulmuş
     eğlenceli ve okul öncesi arkadaşça bir oyundur.
-  tutorial_tynkerdd_shortdescription: Hazine Avı! öğretici bir macera.
+  tutorial_tynkerdd_shortdescription: Hazine için etkileyici maceraya devam.
   tutorial_tynkerana_shortdescription: Çalışan bir analog saat yap.
   tutorial_vidcard_shortdescription: Javascript ile tebrik kartı hazırlamayı öğren!
-  tutorial_spritebox_shortdescription: Üç farkı dünyadan yıldız toplayarak, Koş, atla
-    ve yolunu kodla ve bitiş çizgisine gel! Sıralamayı, hata ayaklamayı ve döngüleri
-    öğren, Swiftle, Java ile yada Iconlarla kodla.
-  tutorial_tynkerch_shortdescription: Virüs yenmek gibi Javascript öğrenin!
-  tutorial_lightbot_shortdescription: 'Bulmacalar: Program Lightbot'
-  tutorial_hoc_shortdescription: Yeni code.org/hoc için placeholder
+  tutorial_spritebox_shortdescription: 'Üç farkı dünyadan yıldız toplayarak, Koş,
+    atla ve yolunu kodla ve bitiş çizgisine gel! Swift, Java veya Icons ile sıralamayı,
+    hata ayaklamayı, döngüleri ve kodlamayı öğren. '
+  tutorial_tynkerch_shortdescription: Virüsleri yenerken Javascript öğrenin!
+  tutorial_lightbot_shortdescription: Lightbot'u süreçler ve döngüleri kullanarak
+    bulmacaları çözmek için programla!
+  tutorial_hoc_shortdescription: Yeni code.org/hoc için yer tutucu
   tutorial_code_shortdescription: Mark Zuckerberg ve Angry Birds ile kodlamayı öğrenin!
   tutorial_tinspire_shortdescription: Sadece 10 dakikada, öğrencilerin TI-Nspire CX
     cep bilgisayarları üzerinde kodlamaya başlamasını sağlayın.
@@ -1833,10 +1836,10 @@ tr:
     bir hikaye veya oyun yaratın.
   tutorial_tynkersol_shortdescription: Hareketli Güneş Sistemini programla.
   tutorial_itchg_shortdescription: Avustralya Devleti (Coğrafyası) için, Itch ( Öğretmenler
-    için Stratch programı) kullanarak interaktif isimlendirme oyun yarat
+    için Stratch programı) kullanarak bir interaktif isimlendirme oyunu yarat
   tutorial_como_shortdescription: 'CoffeScript, gerçek dünya programlama dili, ile
     kodlamayı öğren ve öğret. '
-  tutorial_processfound_shortdescription: 'Görsel Sanatlar bağlamında programlama
+  tutorial_processfound_shortdescription: 'Görsel sanatlar ortamında programlamaya
     bak. '
   tutorial_tynkerhomo_shortdescription: Sesdeşlerle ilgili hikaye anlatma oyunu yap!
   tutorial_art_shortdescription: Artist ile güzel resimler ve tasarımlar çizin!
@@ -1847,8 +1850,8 @@ tr:
   tutorial_itchj_shortdescription: ITCH ( Öğretmenler için Scratch) programı ile karakterleri
     platformda zıplatmayı ve indirmeyi öğren
   tutorial_tickleo_shortdescription: Tickle, kullanıcı dostu kodlama uygulaması ile
-    Orca'yı, onun takip etmesi için kodlama blokları yaratarak, sürükleyip bırakarak
-    çeşitli yollarla kolayca yüzdürebilirsin.
+    Orca'yı, onun takip etmesi için kodlama bloklarını sürükleyip bırakarak komut
+    yaratarak çeşitli yollarla kolayca yüzdürebilirsin.
   tutorial_hopgeo_shortdescription: Kendi Geometri Jumper oyunu oluştur. Sana uçarken
     engelleri atlat!
   tutorial_tynkermult_shortdescription: Eğlenceli bir çarpma oyunu yapın!
@@ -1858,8 +1861,8 @@ tr:
   tutorial_tynkerpup_shortdescription: Köpek yavrusu Pixel'in eve gelmesine yardım
     edin!
   tutorial_livecode_shortdescription: Biraz gürültü yapın!
-  tutorial_cocomgame_shortdescription: CodeCombat'ın kahramanları, canavarlar, pugicornlar
-    ve daha fazlasıyla kendi oyununuzu kodlayın!
+  tutorial_cocomgame_shortdescription: Python ve Javascript becerilerinizi geliştirerek
+    kendi oyununuzu yapın!
   tutorial_tynkerspin_shortdescription: Dönerek bir görüntü çizen eğlenceli bir kalem
     oluşturun.
   tutorial_code-avengers_shortdescription: Bir web tarayıcısında "JavaScript" programlamayı
@@ -2518,7 +2521,7 @@ tr:
   tutorial_vceclipse_shortdescription: JavaScript kullanarak güneş tutulması simülasyonunu
     kodlayın!
   tutorial_pmzero_shortdescription: 3B Pac-Man Maze Dünyası oluştur ve programla
-  tutorial_hsela_shortdescription: 'Anlatılan hikayeler: ela + kodlama'
+  tutorial_hsela_shortdescription: 'Anlatılan hikayeler: ELA + kodlama'
   tutorial_ticklear_shortdescription: Artık herkes sanal ve AR karakterleri kodlayıp,
     gerçek cihazları onlarla etkileşime sokabilir - hayal gücü ve gerçekliği kusursuzca
     buluşturan bir deneyim!
@@ -3075,9 +3078,9 @@ tr:
     Ayrıca, deneyiminizi kişiselleştirmek için kendi çekimlerinizi yükleyebilir ve kaydedebilirsiniz.
 
     GSGNY ile ortaklaşa yapılmıştır.
-  tutorial_spritebox_longdescription: Üç farkı dünyadan yıldız toplayarak, Koş, atla
-    ve yolunu kodla ve bitiş çizgisine gel! Sıralamayı, hata ayaklamayı ve döngüleri
-    öğren, Swiftle, Java ile yada Iconlarla kodla.
+  tutorial_spritebox_longdescription: 'Üç farkı dünyadan yıldız toplayarak, Koş, atla
+    ve yolunu kodla ve bitiş çizgisine gel! Swift, Java veya Icons ile sıralamayı,
+    hata ayaklamayı, döngüleri ve kodlamayı öğren. '
   tutorial_tynkerch_longdescription: Bilgisayarı kötü amaçlı bir virüsten kurtarın!
     Virüsleri silerek, kapıları açarak, labirentleri çözerek ve portallar arasında
     gezinerek sistemin içine girmeniz gerekecek. Virüslere ve aksaklıklara dikkat
@@ -3088,7 +3091,7 @@ tr:
     hakkında pratik bir anlayış kazanın. Bu kendinden kılavuzlu etkinlikte, talimatları
     nasıl sıralayacağınızı, prosedürleri yazacağınızı ve döngüleri nasıl kullanacağınızı
     öğrenin. Her yaş ve tüm beceri düzeyleri için harika.
-  tutorial_hoc_longdescription: Yeni code.org/hoc için placeholder
+  tutorial_hoc_longdescription: Yeni code.org/hoc için yer tutucu
   tutorial_code_longdescription: Sürükle-bırak programlama yöntemiyle Bilgisayar Biliminin
     temel kavramlarını öğrenin. Bu, oyun benzeri, kendi kendine yönlendirilen eğitimde
     Bil Gates, Mark Zuckerberg, Angry Birds ve Plants vs. Zombies tarafından verilen
@@ -9892,7 +9895,7 @@ tr:
   tutorial_robotical2_name: Hour of Code Activity 2 - the Marty Controller
   tutorial_robotical3_name: Hour of Code Activity 3 - Getting Started with Marty Blocks
     Jr
-  tutorial_blockscadvirus_name: Modeling a Virus with Code
+  tutorial_blockscadvirus_name: BlocksCAD Modeling a Virus with Code
   tutorial_robotical1_name: Hour of Code Activity 1 - Marty Unplugged
   tutorial_irobotshapes_name: 'Robotics for K-2: Robot Shapes'
   tutorial_irobotparts_name: 'Robotics for K-2: Robot Parts'
@@ -10760,13 +10763,13 @@ tr:
   tutorial_spheroincolor_name: indi Color Contest
   tutorial_kcjdominos_name: Simulating Dominos Using JavaScript
   tutorial_spherocolortheory_name: Additive Color Theory (RGB) with BOLT
-  tutorial_codecombatesports_name: 'Esports Bootcamp: AI League'
+  tutorial_codecombatesports_name: 'Esports Eğitim Kampı: AI Ligi'
   tutorial_spherodigdisplay_name: The Technology of Digital Displays with littleBits
   tutorial_spherorvrincolor_name: RVR+ in Color!
   tutorial_clbinary_name: Learn How Binary Works with Computers using Minecraft
   tutorial_sascollabcode_name: 'SAS CodeSnaps: Collaborative coding for blind, low
     vision and sighted students'
-  tutorial_codecombatgoblins_name: 'CodeCombat: Goblins ''n'' Glory'
+  tutorial_codecombatgoblins_name: Goblinler ve Zafer
   tutorial_scratchstorytelling_name: Anything is Possible! Storytelling with Scratch
   tutorial_crayolasymbols_name: 'Unplugged Coding from Crayola Education: Visual Symbols
     Convey Meaning'
@@ -10940,12 +10943,12 @@ tr:
     Sphero BOLT! Explore how additive color theory works by adding different values
     of red, green, and blue to make many different colors. Learn how you can use your
     BOLT's sensors to measure its orientation and change colors.
-  tutorial_codecombatesports_longdescription: Competitive coding has never been so
-    epic! Learn the skills you need to play like the pros in our Esports Bootcamp.
-    No coding experience needed. Start by training in the dungeon and discovering
-    the coding strategies and tactics you'll need to compete. After honing your skills,
-    put your code to the test in our esports arena against other players worldwide!
-    Are you our next AI League grand champion?
+  tutorial_codecombatesports_longdescription: Rekabetçi kodlama hiç bu kadar epik
+    olmamıştı! Esports Bootcamp'ımızda profesyoneller gibi oynamak için ihtiyaç duyduğunuz
+    becerileri öğrenin. Kodlama deneyimi gerekmez. Zindanda eğitim alarak ve rekabet
+    etmeniz gereken kodlama stratejilerini ve taktiklerini keşfederek başlayın. Becerilerinizi
+    geliştirdikten sonra, kodunuzu espor arenamızda dünya çapındaki diğer oyunculara
+    karşı test edin! Bir sonraki AI Ligi büyük şampiyonumuz musunuz?
   tutorial_spherodigdisplay_longdescription: Digital Displays are all around us, from
     phones to computer monitors to television to modern billboards. But how do they
     work? Dig into the graphic technology behind digital displays and get hands-on
@@ -10964,10 +10967,11 @@ tr:
     should have the opportunity to learn to code and aims to accomplish this using
     braille code blocks with SAS CodeSnaps - a collaborative coding environment that
     can get an entire classroom coding with just a single iPad and a Sphero robot.
-  tutorial_codecombatgoblins_longdescription: We need your help! Embark on an epic
-    quest where you take control of the game through your powers of programming. Become
-    the hero, unlock loot, and expand your arsenal of code to rescue the town. Then
-    use AI strategies to assemble a party for a final goblin boss battle!
+  tutorial_codecombatgoblins_longdescription: Yardımına ihtiyacımız var! Programlama
+    güçlerinizle oyunun kontrolünü elinize aldığınız destansı bir maceraya atılın.
+    Kahraman ol, ganimetlerin kilidini aç ve kasabayı kurtarmak için kod cephaneni
+    genişlet. Ardından, son bir goblin boss savaşı için bir grup oluşturmak için AI
+    stratejilerini kullanın!
   tutorial_scratchstorytelling_longdescription: Animate your own story with Scratch!
     Add sprites, backgrounds, and interactive graphic effects to bring your story
     to life. Includes an educator facilitation guide, Scratch project tutorial, and
