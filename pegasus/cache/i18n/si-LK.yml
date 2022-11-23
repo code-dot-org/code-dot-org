@@ -662,7 +662,7 @@ si-LK:
   dashboard_hoc_courses: සියලුම වයස් කාණ්ඩ සඳහා Hour of Code
   dashboard_hoc_courses_desc: ඔබේ සිසුන් සමග මෙම ඕනෑම පැයේ කෙටි පාඩමක් කරන්න!
   dashboard_hoc_courses_desc_and_cta: කෙටියෙන් උත්සහ කරන්න,පැයක නිබන්දන ඔබගේ ශිෂ්‍යයන්
-    සමග <ahref="https://hourofcode.com">එකතුවන්න Hour of Code movement</a> පරිගණක
+    සමග <a href="https://hourofcode.com">එකතුවන්න Hour of Code movement</a> පරිගණක
     විද්‍යා අධ්‍යාපන සතිය තුළ.
   dashboard_k5_courses: පෙරපාසල් සිට 5 ශ්‍රේණිය සඳහා පැය 20 පාඨමාලා
   dashboard_k5_courses_desc: මෙහි ඇති  අන්තර්ජාල පාඨමාලා, ස්වයං මඟ පෙන්වීමෙන් හා "එළිදැක්වූ"
