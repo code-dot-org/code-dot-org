@@ -197,6 +197,7 @@ class UnitOverviewTopRow extends React.Component {
             )}
           {pdfDropdownOptions.length > 0 &&
             publishedState !== PublishedState.pilot &&
+            publishedState !== PublishedState.in_development &&
             viewAs === ViewType.Instructor && (
               <div style={{marginRight: 5}}>
                 <DropdownButton

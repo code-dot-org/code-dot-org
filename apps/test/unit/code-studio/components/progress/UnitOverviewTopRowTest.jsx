@@ -281,7 +281,6 @@ describe('UnitOverviewTopRow', () => {
         scriptOverviewPdfUrl="/link/to/script_overview.pdf"
         scriptResourcesPdfUrl="/link/to/script_resources.pdf"
         viewAs={ViewType.Instructor}
-        publishedState="stable"
       />
     );
     expect(wrapper.find(DropdownButton).length).to.equal(1);
