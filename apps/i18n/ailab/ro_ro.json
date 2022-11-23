@@ -39,6 +39,13 @@
         }
       }
     },
+    "bike_sharing": {
+      "card": {
+        "context": {
+          "potentialMisuses": "[șir gol]"
+        }
+      }
+    },
     "poutine_toy": {
       "fields": {
         "mushrooms": {
@@ -76,6 +83,11 @@
         "age": {
           "id": "vârsta"
         }
+      },
+      "card": {
+        "context": {
+          "potentialMisuses": "[șir gol]"
+        }
       }
     },
     "nutrition": {
@@ -85,6 +97,11 @@
         },
         "Description": {
           "id": "Descriere"
+        }
+      },
+      "card": {
+        "context": {
+          "potentialMisuses": "[șir gol]"
         }
       }
     },
@@ -151,6 +168,12 @@
         "health": {
           "id": "sănătate"
         }
+      },
+      "card": {
+        "context": {
+          "potentialUses": "[șir gol]",
+          "potentialMisuses": "[șir gol]"
+        }
       }
     },
     "naan_toy": {
@@ -200,12 +223,22 @@
         "Star": {
           "id": "Stea"
         }
+      },
+      "card": {
+        "context": {
+          "potentialMisuses": "[șir gol]"
+        }
       }
     },
     "songs": {
       "fields": {
         "Artist": {
           "id": "Artist"
+        }
+      },
+      "card": {
+        "context": {
+          "potentialMisuses": "[șir gol]"
         }
       }
     },
@@ -235,6 +268,18 @@
         },
         "Height": {
           "id": "Înălțime"
+        }
+      },
+      "card": {
+        "context": {
+          "potentialMisuses": "[șir gol]"
+        }
+      }
+    },
+    "basketball_shots": {
+      "card": {
+        "context": {
+          "potentialMisuses": "[șir gol]"
         }
       }
     },
@@ -297,6 +342,11 @@
         "Age": {
           "id": "Vârsta"
         }
+      },
+      "card": {
+        "context": {
+          "potentialMisuses": "[șir gol]"
+        }
       }
     },
     "shapes_v1_toy": {
@@ -306,6 +356,13 @@
         },
         "size": {
           "id": "dimensiune"
+        }
+      }
+    },
+    "jeans": {
+      "card": {
+        "context": {
+          "potentialMisuses": "[șir gol]"
         }
       }
     },

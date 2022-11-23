@@ -953,7 +953,7 @@ module Pd::Application
       assert_equal 'Not required', application.reload.principal_approval_state
 
       create :pd_principal_approval_application, teacher_application: application, approved: 'Yes'
-      assert_equal 'Complete - Yes', application.reload.principal_approval_state
+      assert application.reload.principal_approval_state.include? 'Complete - Admin said Yes on'
     end
 
     test 'require assigned workshop for registration-related statuses when emails sent by system' do
