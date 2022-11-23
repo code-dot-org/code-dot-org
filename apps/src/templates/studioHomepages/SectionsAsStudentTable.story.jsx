@@ -1,6 +1,8 @@
 import React from 'react';
 import SectionsAsStudentTable from './SectionsAsStudentTable';
 import {action} from '@storybook/addon-actions';
+import {Provider} from 'react-redux';
+import {reduxStore} from '@cdo/storybook/decorators';
 
 const sections = [
   {
@@ -62,36 +64,28 @@ const sections = [
   }
 ];
 
-export default storybook => {
-  return storybook
-    .storiesOf('Homepages/SectionsAsStudentTable', module)
-    .withReduxStore()
-    .addStoryTable([
-      {
-        name: 'Section Table - three sections for students, can NOT leave',
-        description:
-          'This is an example of a basic Section Table when a student has three sections and does not have permission to leave those sections',
-        story: () => (
-          <SectionsAsStudentTable
-            sections={sections}
-            canLeave={false}
-            updateSections={action('updateSections')}
-            updateSectionsResult={action('updateSectionsResult')}
-          />
-        )
-      },
-      {
-        name: 'Section Table - three sections for students, can leave',
-        description:
-          'This is an example of a basic Section Table when a student has three sections and does not have permission to leave those sections',
-        story: () => (
-          <SectionsAsStudentTable
-            sections={sections}
-            canLeave={true}
-            updateSections={action('updateSections')}
-            updateSectionsResult={action('updateSectionsResult')}
-          />
-        )
-      }
-    ]);
+export default {
+  title: 'SectionAsStudentTable',
+  component: SectionsAsStudentTable
+};
+
+const Template = args => (
+  <Provider store={reduxStore()}>
+    <SectionsAsStudentTable
+      sections={sections}
+      updateSections={action('updateSections')}
+      updateSectionsResult={action('updateSectionsResult')}
+      {...args}
+    />
+  </Provider>
+);
+
+export const SectionCanLeave = Template.bind({});
+SectionCanLeave.args = {
+  canLeave: true
+};
+
+export const SectionCannotLeave = Template.bind({});
+SectionCannotLeave.args = {
+  canLeave: false
 };
