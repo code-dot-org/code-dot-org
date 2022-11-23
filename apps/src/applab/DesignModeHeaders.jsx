@@ -66,14 +66,16 @@ export default class DesignModeHeaders extends React.Component {
   render() {
     const styles = {
       toolboxHeader: {
-        display: this.props.isToolboxVisible ? 'block' : 'none',
+        display: this.props.isToolboxVisible ? 'flex' : 'none',
+        justifyContent: 'space-between',
         width: 270,
         borderRight: '1px solid gray',
         float: 'left'
       },
       showToolboxHeader: {
         float: 'left',
-        display: this.props.isToolboxVisible ? 'none' : 'block',
+        display: this.props.isToolboxVisible ? 'none' : 'flex',
+        justifyContent: 'space-between',
         paddingLeft: 10
       },
       showToolboxClickable: {
@@ -117,9 +119,9 @@ export default class DesignModeHeaders extends React.Component {
           className="workspace-header"
           style={styles.toolboxHeader}
         >
-          {this.hideToolboxIcon()}
-          {settingsCog}
+          <span>{this.hideToolboxIcon()}</span>
           <span>{applabMsg.designToolboxHeader()}</span>
+          <span>{settingsCog}</span>
         </PaneSection>
         <PaneSection
           className="workspace-header"
@@ -132,9 +134,9 @@ export default class DesignModeHeaders extends React.Component {
             onClick={this.onToggleToolbox}
           >
             {this.showToolboxIcon()}
-            {msg.showToolbox()}
           </span>
-          {settingsCog}
+          <span>{msg.showToolbox()}</span>
+          <span>{settingsCog}</span>
         </PaneSection>
         <PaneButton
           id="design-mode-versions-header"
