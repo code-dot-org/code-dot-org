@@ -1116,7 +1116,6 @@ export class DetailViewContents extends React.Component {
     // If 'Incomplete' or 'Complete', we show a link to the application and a button to re-send the request,
     // and a button to change the principal approval requirement.
     // If 'Not required', we show a button to make the principal approval required.
-    // If none of these, then the principal approval is required, and we show a button to make it not required.
 
     const principalApprovalStartsWith = state =>
       this.props.applicationData.principal_approval_state?.startsWith(state);
@@ -1170,8 +1169,8 @@ export class DetailViewContents extends React.Component {
               If you would like to require administrator approval for this
               teacher, please click “Make required." If this application is
               Unreviewed, Pending, or Pending Space Availability, then clicking
-              will also send an email to the administrator asking for approval,
-              this button given one hasn't been sent in the past 5 days.
+              this button will also send an email to the administrator asking
+              for approval, given one hasn't been sent in the past 5 days.
             </p>
           )}
           <PrincipalApprovalButtons
