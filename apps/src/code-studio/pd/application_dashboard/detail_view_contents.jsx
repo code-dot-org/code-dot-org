@@ -52,6 +52,12 @@ import PrincipalApprovalButtons from './principal_approval_buttons';
 import DetailViewWorkshopAssignmentResponse from './detail_view_workshop_assignment_response';
 import ChangeLog from './detail_view/change_log';
 import InlineMarkdown from '@cdo/apps/templates/InlineMarkdown';
+import {
+  PROGRAM_CSD,
+  PROGRAM_CSP,
+  PROGRAM_CSA,
+  getProgramInfo
+} from '../application/teacher/TeacherApplicationConstants';
 
 const NA = 'N/A';
 
@@ -61,6 +67,12 @@ const DEFAULT_NOTES =
 const WORKSHOP_REQUIRED = `Please assign a summer workshop to this applicant before setting this
                           applicant's status to "Accepted". This status will trigger an automated
                           email with a registration link to their assigned workshop.`;
+
+const PROGRAM_MAP = {
+  csd: PROGRAM_CSD,
+  csp: PROGRAM_CSP,
+  csa: PROGRAM_CSA
+};
 
 export class DetailViewContents extends React.Component {
   static propTypes = {
@@ -1011,9 +1023,10 @@ export class DetailViewContents extends React.Component {
 
   renderDetailViewTableLayout = () => {
     const sectionsToRemove =
-      this.props.applicationData.application_type === ApplicationTypes.teacher
-        ? ['additionalDemographicInformation']
-        : ['submission'];
+      this.props.applicationData.application_type !== ApplicationTypes.teacher
+        ? ['submission']
+        : [];
+    const questionsToRemove = ['genderIdentity', 'race'];
 
     return (
       <div>
@@ -1023,7 +1036,29 @@ export class DetailViewContents extends React.Component {
               <h3>{this.sectionHeaders[header]}</h3>
               <Table style={styles.detailViewTable} striped bordered>
                 <tbody>
-                  {Object.keys(this.pageLabels[header]).map((key, j) => {
+                  {_.pull(
+                    Object.keys(this.pageLabels[header]),
+                    ...questionsToRemove
+                  ).map((key, j) => {
+                    // If the enoughCourseHours question, insert variable values.
+                    // Otherwise, just show the question's label.
+                    const questionLabel =
+                      key === 'enoughCourseHours'
+                        ? this.labelOverrides[key]
+                            .replace(
+                              '{{CS program}}',
+                              getProgramInfo(
+                                PROGRAM_MAP[this.props.applicationData.course]
+                              ).name
+                            )
+                            .replace(
+                              '{{min hours}}',
+                              getProgramInfo(
+                                PROGRAM_MAP[this.props.applicationData.course]
+                              ).minCourseHours
+                            )
+                        : this.labelOverrides[key] ||
+                          this.pageLabels[header][key];
                     return (
                       // For most fields, render them only when they have values.
                       // For explicitly listed fields, render them regardless of their values.
@@ -1033,12 +1068,7 @@ export class DetailViewContents extends React.Component {
                           'schoolStatsAndPrincipalApprovalSection') && (
                         <tr key={j}>
                           <td style={styles.questionColumn}>
-                            <InlineMarkdown
-                              markdown={
-                                this.labelOverrides[key] ||
-                                this.pageLabels[header][key]
-                              }
-                            />
+                            <InlineMarkdown markdown={questionLabel} />
                           </td>
                           <td style={styles.answerColumn}>
                             {this.renderAnswer(
