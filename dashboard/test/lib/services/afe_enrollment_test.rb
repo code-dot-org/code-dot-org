@@ -32,6 +32,8 @@ class Services::AFEEnrollmentTest < ActiveSupport::TestCase
           'csta-plus' => '1',
           'aws-educate' => '1',
           'amazon-terms' => '1',
+          'primary-professional-role' => 'test role with space',
+          'grades-teaching' => 'K-5',
           'new-code-account' => '1',
           'registration-date-time' => Time.now.iso8601
         }
@@ -143,6 +145,8 @@ class Services::AFEEnrollmentTest < ActiveSupport::TestCase
       csta_plus: true,
       aws_educate: true,
       amazon_terms: true,
+      primary_professional_role: 'test role with space',
+      grades_teaching: 'K-5',
       new_code_account: true
     }
   end
