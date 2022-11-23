@@ -15,3 +15,7 @@ public boolean mystery()
 
 How many arguments are needed when calling the `mystery()` method?
 MARKDOWN
+
+teacher_markdown <<MARKDOWN
+The method does not specify any parameters, so no arguments are needed when calling the `mystery()` method. Calling the `mystery()` method with any arguments will result in a synax error.
+MARKDOWN
