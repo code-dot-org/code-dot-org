@@ -328,4 +328,17 @@ describe('UnitOverviewTopRow', () => {
     );
     expect(wrapper.find(DropdownButton).length).to.equal(0);
   });
+
+  it('does not render the printing options drop down if the coruse is in development', () => {
+    const wrapper = shallow(
+      <UnitOverviewTopRow
+        {...defaultProps}
+        publishedState="in_development"
+        scriptOverviewPdfUrl="/link/to/script_overview.pdf"
+        scriptResourcesPdfUrl="/link/to/script_resources.pdf"
+        viewAs={ViewType.Instructor}
+      />
+    );
+    expect(wrapper.find(DropdownButton).length).to.equal(0);
+  });
 });

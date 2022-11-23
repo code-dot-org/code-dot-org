@@ -195,7 +195,6 @@ class UnitOverviewTopRow extends React.Component {
                 unitId={scriptId}
               />
             )}
-          {console.log('published state is ' + publishedState)}
           {pdfDropdownOptions.length > 0 &&
             publishedState !== PublishedState.pilot &&
             publishedState !== PublishedState.in_development &&
