@@ -663,6 +663,18 @@ WebLab.prototype.addPageAction = function(...args) {
   logToCloud.addPageAction(...args);
 };
 
+// Some temporary logging to diagnose possible loading issues.
+WebLab.prototype.tempLog = function(event, data = null) {
+  firehoseClient.putRecord(
+    {
+      study: 'weblab_loading_investigation_2022',
+      event: event,
+      data_json: data === null ? null : JSON.stringify(data)
+    },
+    {includeUserId: true}
+  );
+};
+
 WebLab.prototype.syncBrambleFiles = function(callback = () => {}) {
   this.brambleHost?.syncFiles(
     this.getCurrentFileEntries(),
@@ -713,7 +725,8 @@ WebLab.prototype.brambleApi = function() {
     openFatalErrorDialog: this.openFatalErrorDialog.bind(this),
     registerBeforeFirstWriteHook: this.registerBeforeFirstWriteHook.bind(this),
     redux: this.redux.bind(this),
-    renameProjectFile: this.renameProjectFile.bind(this)
+    renameProjectFile: this.renameProjectFile.bind(this),
+    tempLog: this.tempLog.bind(this)
   };
 };
 
