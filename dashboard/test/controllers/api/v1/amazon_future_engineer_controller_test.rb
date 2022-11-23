@@ -78,6 +78,8 @@ class Api::V1::AmazonFutureEngineerControllerTest < ActionDispatch::IntegrationT
       csta_plus: '0',
       aws_educate: '0',
       amazon_terms: '1',
+      primary_professional_role: 'test role with space',
+      grades_teaching: 'K-5, 6-8, ',
       new_code_account: true
     )
 
@@ -146,6 +148,8 @@ class Api::V1::AmazonFutureEngineerControllerTest < ActionDispatch::IntegrationT
         city: 'seattle',
         state: 'Washington',
         zip: '98105',
+        primary_professional_role: 'test role with space',
+        grades_teaching: 'K-5, 6-8, ',
         privacy_permission: true
       },
       actual_args
@@ -325,6 +329,8 @@ class Api::V1::AmazonFutureEngineerControllerTest < ActionDispatch::IntegrationT
       'csta' => '0',
       'consentCSTA' => '0',
       'awsEducate' => '0',
+      'primaryProfessionalRole' => 'test role with space',
+      'gradesTeaching' => 'K-5, 6-8, ',
       'consentAFE' => '1'
     }
   end
