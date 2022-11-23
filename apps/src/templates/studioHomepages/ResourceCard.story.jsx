@@ -8,7 +8,6 @@ export default {
   component: ResourceCard
 };
 
-// Template
 const Template = args => (
   <Provider store={reduxStore()}>
     <ResourceCard

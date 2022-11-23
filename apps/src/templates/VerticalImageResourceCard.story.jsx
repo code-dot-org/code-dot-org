@@ -25,7 +25,6 @@ export default {
   component: VerticalImageResourceCard
 };
 
-// Template
 const Template = args => (
   <Provider store={reduxStore()}>
     <VerticalImageResourceCard {...args} />

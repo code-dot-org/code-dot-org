@@ -8,7 +8,6 @@ export default {
   component: ImageResourceCard
 };
 
-// Template
 const Template = args => (
   <Provider store={reduxStore()}>
     <ImageResourceCard {...args} />

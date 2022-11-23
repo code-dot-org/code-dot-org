@@ -21,7 +21,6 @@ export default {
   component: CourseCard
 };
 
-// Template
 const Template = args => (
   <Provider store={reduxStore()}>
     <CourseCard {...args} />
