@@ -9,7 +9,6 @@ import SharePlaceholder from './SharePlaceholder';
 import Controls from './Controls';
 import Timeline from './Timeline';
 import MusicPlayer from './player/MusicPlayer';
-import {Triggers} from './constants';
 import AnalyticsReporter from './analytics/AnalyticsReporter';
 import {getStore} from '@cdo/apps/redux';
 import {SignInState} from '@cdo/apps/templates/currentUserRedux';
@@ -18,6 +17,7 @@ import {AnalyticsContext} from './context';
 import TopButtons from './TopButtons';
 import Globals from './globals';
 import MusicBlocklyWorkspace from './blockly/MusicBlocklyWorkspace';
+import KeyHandler from './KeyHandler';
 
 const baseUrl = 'https://curriculum.code.org/media/musiclab/';
 
@@ -79,7 +79,7 @@ class UnconnectedMusicView extends React.Component {
       this.analyticsReporter.endSession()
     );
 
-    document.body.addEventListener('keyup', this.handleKeyUp);
+    // document.body.addEventListener('keyup', this.handleKeyUp);
 
     this.loadLibrary().then(library => {
       this.setState({library});
@@ -259,35 +259,35 @@ class UnconnectedMusicView extends React.Component {
     return this.getCurrentGroup()?.folders;
   };
 
-  handleKeyUp = event => {
-    // Don't handle a keyboard shortcut if the active element is an
-    // input field, since the user is probably trying to type something.
-    if (document.activeElement.tagName.toLowerCase() === 'input') {
-      return;
-    }
+  // handleKeyUp = event => {
+  //   // Don't handle a keyboard shortcut if the active element is an
+  //   // input field, since the user is probably trying to type something.
+  //   if (document.activeElement.tagName.toLowerCase() === 'input') {
+  //     return;
+  //   }
 
-    if (event.key === 't') {
-      this.setState({timelineAtTop: !this.state.timelineAtTop});
-    }
-    if (event.key === 'i') {
-      this.toggleInstructions(true);
-    }
-    if (event.key === 'n') {
-      this.setState({
-        instructionsPosIndex:
-          (this.state.instructionsPosIndex + 1) %
-          instructionPositionOrder.length
-      });
-    }
-    Triggers.map(trigger => {
-      if (event.key === trigger.keyboardKey) {
-        this.playTrigger(trigger.id);
-      }
-    });
-    if (event.code === 'Space') {
-      this.setPlaying(!this.state.isPlaying);
-    }
-  };
+  //   if (event.key === 't') {
+  //     this.setState({timelineAtTop: !this.state.timelineAtTop});
+  //   }
+  //   if (event.key === 'i') {
+  //     this.toggleInstructions(true);
+  //   }
+  //   if (event.key === 'n') {
+  //     this.setState({
+  //       instructionsPosIndex:
+  //         (this.state.instructionsPosIndex + 1) %
+  //         instructionPositionOrder.length
+  //     });
+  //   }
+  //   Triggers.map(trigger => {
+  //     if (event.key === trigger.keyboardKey) {
+  //       this.playTrigger(trigger.id);
+  //     }
+  //   });
+  //   if (event.code === 'Space') {
+  //     this.setPlaying(!this.state.isPlaying);
+  //   }
+  // };
 
   onFeedbackClicked = () => {
     this.analyticsReporter.onButtonClicked('feedback');
@@ -385,6 +385,10 @@ class UnconnectedMusicView extends React.Component {
 
     return (
       <AnalyticsContext.Provider value={this.analyticsReporter}>
+        <KeyHandler
+          setPlaying={this.setPlaying}
+          playTrigger={this.playTrigger}
+        />
         <div id="music-lab-container" className={moduleStyles.container}>
           {this.state.showInstructions &&
             instructionsPosition === InstructionsPositions.TOP &&
