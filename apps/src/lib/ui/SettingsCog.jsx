@@ -17,7 +17,8 @@ import moduleStyles from './settings-cog.module.scss';
 import JavalabDropdown from '@cdo/apps/javalab/components/JavalabDropdown';
 import onClickOutside from 'react-onclickoutside';
 
-class SettingsCog extends Component {
+// Exported for testing
+export class SettingsCog extends Component {
   static propTypes = {
     isRunning: PropTypes.bool,
     runModeIndicators: PropTypes.bool,
@@ -110,8 +111,8 @@ class SettingsCog extends Component {
           type="button"
           onClick={this.toggleOpen}
           className={classNames(
-            moduleStyles.button,
-            runModeIndicators && isRunning && moduleStyles.buttonRunning
+            moduleStyles.settingsButton,
+            runModeIndicators && isRunning && moduleStyles.settingsButtonRunning
           )}
         >
           <FontAwesome
