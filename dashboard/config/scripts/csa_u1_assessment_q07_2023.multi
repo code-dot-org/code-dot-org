@@ -9,3 +9,11 @@ wrong '`Painter daVinci = Painter;`'
 markdown <<MARKDOWN
 Which of the following correctly instantiates a new `Painter` object?
 MARKDOWN
+
+teacher_markdown <<MARKDOWN
+The syntax for instantiating an object is
+
+```
+ClassName nameOfObject = new ClassName();
+```
+MARKDOWN

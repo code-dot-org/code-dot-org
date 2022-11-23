@@ -15,7 +15,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-11-21 17:31:00 UTC",
+    "serialized_at": "2022-11-22 21:48:50 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -1427,10 +1427,6 @@
           {
             "type": "teachingTip",
             "markdown": "Collect the Software Engineering Skills handouts.\n\nStudents revisit these in Lesson 15 to reflect on their software engineering identity."
-          },
-          {
-            "type": "assessmentOpportunity",
-            "markdown": "The Software Engineering Skills handout can be used as a formative assessment to check that students can identify a software engineer's characteristics and skills and relate them to their own skills and identity."
           }
         ]
       },
@@ -1872,7 +1868,7 @@
       "key": "be1c173e-2b00-4d42-a0ff-5d532ab49848",
       "position": 6,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Do you think there is a limit to how many objects you can create from a class? Why or why not?*\n\n**Discussion Goal:** Students share their thoughts about whether or not they think there is a limit and justify their reasoning. Students should realize that they can create multiple objects from a class because the class is a blueprint for how objects should be created."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Explain the meaning of an instance of a class.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Do you think there is a limit to how many objects you can create from a class? Why or why not?*\n\n**Discussion Goal:** Students share their thoughts about whether or not they think there is a limit and justify their reasoning. Students should realize that they can create multiple objects from a class because the class is a blueprint for how objects should be created."
       },
       "seeding_key": {
         "activity_section.key": "be1c173e-2b00-4d42-a0ff-5d532ab49848",
