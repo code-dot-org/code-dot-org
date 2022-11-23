@@ -29,13 +29,11 @@ class Services::AFEEnrollment
   # @param aws_educate [Boolean] Whether the teacher opted in to a free AWS Educate membership
   # @param amazon_terms [Boolean] Whether the teacher agreed to AFE's privacy policy and terms
   #        of service.  Should always be true; we don't submit without this.
-  # @param primary_professional_role [String] Teacher's role at the school
-  # @param grades_teaching [String] Grades relevant to Teacher's role
   # @param new_code_account [Boolean] Whether the teacher signed up for code.org as part of the
   #        AFE process.
   def self.submit(first_name:, last_name:, email:, nces_id:, street_1:, street_2:,
     city:, state:, zip:, marketing_kit:, csta_plus:, aws_educate:,
-    amazon_terms:, primary_professional_role:, grades_teaching:, new_code_account:)
+    amazon_terms:, new_code_account:)
     submission_body = {
       'traffic-source' => 'AFE-code.org-2020',
       'first-name' => first_name,
@@ -51,8 +49,6 @@ class Services::AFEEnrollment
       'csta-plus' => booleanize(csta_plus),
       'aws-educate' => booleanize(aws_educate),
       'amazon-terms' => booleanize(amazon_terms),
-      'primary-professional-role' => primary_professional_role,
-      'grades-teaching' => grades_teaching,
       'new-code-account' => booleanize(new_code_account),
       'registration-date-time' => Time.now.iso8601
     }
