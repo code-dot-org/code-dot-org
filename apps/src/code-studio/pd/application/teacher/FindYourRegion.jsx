@@ -38,6 +38,7 @@ const US = 'United States';
 
 const FindYourRegion = props => {
   const {onChange, errors, data} = props;
+  const hasNoProgramSelected = data.program === undefined;
   const resetCountry = () => onChange({country: US});
   const [regionalPartner] = useRegionalPartner(data);
   useEffect(() => {
@@ -167,12 +168,19 @@ const FindYourRegion = props => {
     );
   };
 
-  return (
-    <FormContext.Provider value={props}>
-      <LabelsContext.Provider value={PageLabels.findYourRegion}>
-        <FormGroup>
-          <h3>Section 2: {SectionHeaders.findYourRegion}</h3>
-
+  const renderContents = () => {
+    if (hasNoProgramSelected) {
+      return (
+        <div style={styles.error}>
+          <p>
+            Please fill out Section 1 and select your program before completing
+            this section.
+          </p>
+        </div>
+      );
+    } else {
+      return (
+        <>
           <LabeledRadioButtons name="country" />
           {renderInternationalModal()}
 
@@ -218,6 +226,18 @@ const FindYourRegion = props => {
           )}
 
           {renderRegionalPartnerInfo()}
+        </>
+      );
+    }
+  };
+
+  return (
+    <FormContext.Provider value={props}>
+      <LabelsContext.Provider value={PageLabels.findYourRegion}>
+        <FormGroup>
+          <h3>Section 2: {SectionHeaders.findYourRegion}</h3>
+
+          {renderContents()}
         </FormGroup>
       </LabelsContext.Provider>
     </FormContext.Provider>
