@@ -49,8 +49,7 @@ export default function Example({example, programmingEnvironmentName}) {
                 src={embedUrl}
                 style={{
                   width: '100%',
-                  height: enteredHeight * 1.5,
-                  overflow: 'scroll'
+                  height: enteredHeight * 1.5
                 }}
               />
             </div>
