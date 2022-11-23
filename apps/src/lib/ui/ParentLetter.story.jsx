@@ -1,75 +1,81 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import {UnconnectedParentLetter as ParentLetter} from './ParentLetter';
 import {SectionLoginType} from '../../util/sharedConstants';
 import wizardPng from '../../../static/skins/studio/wizard_thumb.png';
 
-export default storybook => {
-  storybook = storybook.storiesOf('ParentLetter', module);
-
-  const sampleSection = {
-    id: 7,
-    code: 'ABCDEF'
-  };
-
-  const sampleStudents = [
-    {
-      id: 100,
-      name: 'Neville',
-      secret_picture_path: wizardPng,
-      secret_words: 'wizarding world'
-    },
-    {
-      id: 101,
-      name: 'Hermione',
-      secret_picture_path: wizardPng,
-      secret_words: 'wizarding world'
-    }
-  ];
-
-  // Make stories for generic letters and personalized letters
-  // Make a story for every login type
-  Object.values(SectionLoginType).forEach(loginType => {
-    storybook = storybook.add(`Generic / ${loginType}`, () => (
-      <Page>
-        <ParentLetter
-          section={{
-            ...sampleSection,
-            loginType: loginType
-          }}
-          teacherName="Minerva McGonagall"
-        />
-      </Page>
-    ));
-
-    storybook = storybook.add(`Personalized / ${loginType}`, () => (
-      <Page>
-        <ParentLetter
-          section={{
-            ...sampleSection,
-            loginType: loginType
-          }}
-          teacherName="Minerva McGonagall"
-          students={sampleStudents}
-          studentId={'101'}
-        />
-      </Page>
-    ));
-  });
+const sampleSection = {
+  id: 7,
+  code: 'ABCDEF'
 };
 
-const Page = ({children}) => (
-  <div
-    style={{
-      backgroundColor: 'white',
-      width: '8.5in',
-      height: '11in',
-      padding: '1in',
-      margin: '0.25in',
-      border: 'solid gray thin'
+const sampleStudents = [
+  {
+    id: 100,
+    name: 'Neville',
+    secret_picture_path: wizardPng,
+    secret_words: 'wizarding world'
+  },
+  {
+    id: 101,
+    name: 'Hermione',
+    secret_picture_path: wizardPng,
+    secret_words: 'wizarding world'
+  }
+];
+
+export default {
+  title: 'ParentLetter',
+  component: ParentLetter
+};
+
+const GenericTemplate = loginType => (
+  <ParentLetter
+    section={{
+      ...sampleSection,
+      loginType: loginType
     }}
-  >
-    {children}
-  </div>
+    teacherName="Minerva McGonagall"
+  />
 );
-Page.propTypes = {children: PropTypes.node};
+
+export const GenericPicture = GenericTemplate.bind({});
+GenericPicture.loginType = SectionLoginType.picture;
+
+export const GenericWord = GenericTemplate.bind({});
+GenericWord.loginType = SectionLoginType.word;
+
+export const GenericEmail = GenericTemplate.bind({});
+GenericEmail.loginType = SectionLoginType.email;
+
+export const GenericGoogleClassroom = GenericTemplate.bind({});
+GenericGoogleClassroom.loginType = SectionLoginType.google_classroom;
+
+export const GenericClever = GenericTemplate.bind({});
+GenericClever.loginType = SectionLoginType.clever;
+
+const PersonalizedTemplate = loginType => (
+  <ParentLetter
+    section={{
+      ...sampleSection,
+      loginType: loginType
+    }}
+    teacherName="Minerva McGonagall"
+    students={sampleStudents}
+    studentId={'101'}
+  />
+);
+
+export const PersonalizedPicture = PersonalizedTemplate.bind({});
+PersonalizedPicture.loginType = SectionLoginType.picture;
+
+export const PersonalizedWord = PersonalizedTemplate.bind({});
+PersonalizedWord.loginType = SectionLoginType.word;
+
+export const PersonalizedEmail = PersonalizedTemplate.bind({});
+PersonalizedEmail.loginType = SectionLoginType.email;
+
+export const PersonalizedGoogleClassroom = PersonalizedTemplate.bind({});
+PersonalizedGoogleClassroom.loginType = SectionLoginType.google_classroom;
+
+export const PersonalizedClever = PersonalizedTemplate.bind({});
+PersonalizedClever.loginType = SectionLoginType.clever;
