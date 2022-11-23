@@ -90,7 +90,7 @@ export default class AmazonFutureEngineerEligibilityForm extends React.Component
     this.setState({professionalRole: change.target.value});
   };
 
-  handleMultiSelect = index => {
+  handleMultiSelectGradeBands = index => {
     let gradeBands = this.state.gradeBands;
     gradeBands[index] = !gradeBands[index];
     this.setState(gradeBands);
@@ -345,7 +345,7 @@ export default class AmazonFutureEngineerEligibilityForm extends React.Component
                     style={styles.checkboxItem}
                     key={index}
                     checked={this.state.gradeBands[index]}
-                    onChange={() => this.handleMultiSelect(index)}
+                    onChange={() => this.handleMultiSelectGradeBands(index)}
                   >
                     <label style={styles.checkboxLabel} htmlFor={grade}>
                       {grade}
