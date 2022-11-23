@@ -539,6 +539,7 @@ module Pd::Application
       application_hash = build :pd_teacher_application_hash,
         program: Pd::Application::TeacherApplication::PROGRAMS[:csd],
         csd_which_grades: ['6'],
+        enough_course_hours: options[:enough_course_hours].first,
         previous_yearlong_cdo_pd: ['CS Principles'],
         replace_existing: options[:replace_existing].second,
         committed: options[:committed].first,
@@ -556,6 +557,7 @@ module Pd::Application
         {
           meets_minimum_criteria_scores: {
             csd_which_grades: YES,
+            enough_course_hours: YES,
             committed: YES,
             previous_yearlong_cdo_pd: YES,
             replace_existing: YES,
@@ -578,6 +580,7 @@ module Pd::Application
       application_hash = build :pd_teacher_application_hash,
         program: Pd::Application::TeacherApplication::PROGRAMS[:csp],
         csp_which_grades: ['12'],
+        enough_course_hours: options[:enough_course_hours].first,
         previous_yearlong_cdo_pd: ['CS Discoveries'],
         csp_how_offer: options[:csp_how_offer].last,
         replace_existing: options[:replace_existing].second,
@@ -596,6 +599,7 @@ module Pd::Application
         {
           meets_minimum_criteria_scores: {
             csp_which_grades: YES,
+            enough_course_hours: YES,
             committed: YES,
             previous_yearlong_cdo_pd: YES,
             replace_existing: YES,
@@ -618,7 +622,9 @@ module Pd::Application
       application_hash = build :pd_teacher_application_hash,
         program: Pd::Application::TeacherApplication::PROGRAMS[:csa],
         csa_already_know: options[:csa_already_know].first,
+        csa_phone_screen: options[:csa_phone_screen].first,
         csa_which_grades: ['12'],
+        enough_course_hours: options[:enough_course_hours].first,
         previous_yearlong_cdo_pd: ['CS Principles'],
         csa_how_offer: options[:csa_how_offer].last,
         replace_existing: options[:replace_existing].second,
@@ -637,7 +643,9 @@ module Pd::Application
         {
           meets_minimum_criteria_scores: {
             csa_already_know: YES,
+            csa_phone_screen: YES,
             csa_which_grades: YES,
+            enough_course_hours: YES,
             committed: YES,
             previous_yearlong_cdo_pd: YES,
             replace_existing: YES,
@@ -659,6 +667,7 @@ module Pd::Application
       application_hash = build :pd_teacher_application_hash,
         program: Pd::Application::TeacherApplication::PROGRAMS[:csp],
         csp_which_grades: ['12'],
+        enough_course_hours: options[:enough_course_hours].first,
         previous_yearlong_cdo_pd: ['CS Discoveries'],
         csp_how_offer: options[:csp_how_offer].last,
         replace_existing: options[:replace_existing].second,
@@ -672,6 +681,7 @@ module Pd::Application
         {
           meets_minimum_criteria_scores: {
             csp_which_grades: YES,
+            enough_course_hours: YES,
             committed: YES,
             previous_yearlong_cdo_pd: YES,
             replace_existing: YES,
@@ -689,6 +699,7 @@ module Pd::Application
       application_hash = build :pd_teacher_application_hash,
         program: Pd::Application::TeacherApplication::PROGRAMS[:csd],
         csd_which_grades: %w(11 12),
+        enough_course_hours: options[:enough_course_hours].last,
         previous_yearlong_cdo_pd: ['CS Discoveries'],
         replace_existing: options[:replace_existing].first,
         committed: options[:committed].last,
@@ -706,6 +717,7 @@ module Pd::Application
         {
           meets_minimum_criteria_scores: {
             csd_which_grades: NO,
+            enough_course_hours: NO,
             committed: NO,
             previous_yearlong_cdo_pd: NO,
             replace_existing: NO,
@@ -728,6 +740,7 @@ module Pd::Application
       application_hash = build :pd_teacher_application_hash,
         program: Pd::Application::TeacherApplication::PROGRAMS[:csp],
         csp_which_grades: [options[:csp_which_grades].last],
+        enough_course_hours: options[:enough_course_hours].last,
         previous_yearlong_cdo_pd: 'CS Principles',
         csp_how_offer: options[:csp_how_offer].first,
         replace_existing: options[:replace_existing].first,
@@ -746,6 +759,7 @@ module Pd::Application
         {
           meets_minimum_criteria_scores: {
             csp_which_grades: NO,
+            enough_course_hours: NO,
             committed: NO,
             previous_yearlong_cdo_pd: NO,
             replace_existing: NO,
@@ -768,7 +782,9 @@ module Pd::Application
       application_hash = build :pd_teacher_application_hash,
         program: Pd::Application::TeacherApplication::PROGRAMS[:csa],
         csa_already_know: options[:csa_already_know].last,
+        csa_phone_screen: options[:csa_phone_screen].last,
         csa_which_grades: [options[:csa_which_grades].last],
+        enough_course_hours: options[:enough_course_hours].last,
         previous_yearlong_cdo_pd: 'Computer Science A (CSA)',
         csa_how_offer: options[:csa_how_offer].first,
         replace_existing: options[:replace_existing].first,
@@ -788,6 +804,8 @@ module Pd::Application
           meets_minimum_criteria_scores: {
             csa_already_know: NO,
             csa_which_grades: NO,
+            csa_phone_screen: NO,
+            enough_course_hours: NO,
             committed: NO,
             previous_yearlong_cdo_pd: NO,
             replace_existing: NO,
