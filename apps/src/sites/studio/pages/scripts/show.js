@@ -97,8 +97,6 @@ function initPage() {
   // rendered on this page
   updateQueryParam('completedLessonNumber', undefined);
 
-  console.log(scriptData);
-
   ReactDOM.render(
     <Provider store={store}>
       <UnitOverview
