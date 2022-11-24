@@ -64,7 +64,8 @@ export default class EnhancedSafeMarkdown extends React.Component {
   static propTypes = {
     markdown: PropTypes.string.isRequired,
     openExternalLinksInNewTab: PropTypes.bool,
-    expandableImages: PropTypes.bool
+    expandableImages: PropTypes.bool,
+    className: PropTypes.string
   };
 
   render() {
@@ -81,6 +82,7 @@ export default class EnhancedSafeMarkdown extends React.Component {
       <SafeMarkdown
         markdown={this.props.markdown}
         openExternalLinksInNewTab={this.props.openExternalLinksInNewTab}
+        className={this.props.className}
       />
     );
 
