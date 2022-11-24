@@ -154,6 +154,7 @@ export default class AmazonFutureEngineerEligibilityForm extends React.Component
     });
 
     this.props.updateFormData(submitData);
+    this.props.updateFormData(submitData);
   };
 
   onContinue = () => {
@@ -413,6 +414,7 @@ const styles = {
   descriptiveText: {
     display: 'block',
     fontFamily: '"Gotham 4r", sans-serif',
+    fontWeight: 'bold',
     fontSize: 14,
     border: 'none',
     color: color.dimgray,
