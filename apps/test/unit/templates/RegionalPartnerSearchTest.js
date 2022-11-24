@@ -13,7 +13,9 @@ const MINIMUM_PROPS = {
 const createServerResponses = (server, hasRP, applicationsClosed) => {
   const responseWithRP = {
     application_state: {
-      state: WorkshopApplicationStates.currently_open
+      state: applicationsClosed
+        ? WorkshopApplicationStates.opening_at
+        : WorkshopApplicationStates.currently_open
     },
     summer_workshops: [],
     pl_programs_offered: ['CSD', 'CSP', 'CSA']
@@ -55,5 +57,23 @@ describe('RegionalPartnerSearch', () => {
     const wrapper = shallow(<RegionalPartnerSearch {...MINIMUM_PROPS} />);
     server.respond();
     expect(wrapper.find('StartApplicationButton')).not.to.be.null;
+  });
+  it('shows StartApplicationButton if no RP found and applications are open', () => {
+    createServerResponses(server, false, false);
+    const wrapper = shallow(<RegionalPartnerSearch {...MINIMUM_PROPS} />);
+    server.respond();
+    expect(wrapper.find('StartApplicationButton')).not.to.be.null;
+  });
+  it('shows notify button if RP found and applications are closed', () => {
+    createServerResponses(server, true, true);
+    const wrapper = shallow(<RegionalPartnerSearch {...MINIMUM_PROPS} />);
+    server.respond();
+    expect(wrapper.find('button').text()).to.contain('Notify me');
+  });
+  it('shows no button if no RP found and applications are closed', () => {
+    createServerResponses(server, false, true);
+    const wrapper = shallow(<RegionalPartnerSearch {...MINIMUM_PROPS} />);
+    server.respond();
+    expect(wrapper.find('button')).to.have.length(0);
   });
 });
