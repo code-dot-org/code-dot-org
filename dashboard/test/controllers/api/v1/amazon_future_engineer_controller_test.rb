@@ -78,8 +78,6 @@ class Api::V1::AmazonFutureEngineerControllerTest < ActionDispatch::IntegrationT
       csta_plus: '0',
       aws_educate: '0',
       amazon_terms: '1',
-      primary_professional_role: 'test role with space',
-      grades_teaching: 'K-5, 6-8, ',
       new_code_account: true
     )
 
