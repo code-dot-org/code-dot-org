@@ -8,7 +8,7 @@ export const TeacherGradeBandCards = [
     heading: i18n.courseBlocksGradeBandsElementary(),
     description: i18n.courseBlocksGradeBandsElementaryDescription(),
     buttonText: i18n.courseBlocksGradeBandsElementaryButton(),
-    path: '/educate/curriculum/elementary-school'
+    path: pegasus('/educate/curriculum/elementary-school')
   },
   {
     linkId: 'course-block-grade-band-middle',
@@ -16,7 +16,7 @@ export const TeacherGradeBandCards = [
     heading: i18n.courseBlocksGradeBandsMiddle(),
     description: i18n.courseBlocksGradeBandsMiddleDescription(),
     buttonText: i18n.courseBlocksGradeBandsMiddleButton(),
-    path: '/educate/curriculum/middle-school'
+    path: pegasus('/educate/curriculum/middle-school')
   },
   {
     linkId: 'course-block-grade-band-high',
@@ -24,7 +24,7 @@ export const TeacherGradeBandCards = [
     heading: i18n.courseBlocksGradeBandsHigh(),
     description: i18n.courseBlocksGradeBandsHighDescription(),
     buttonText: i18n.courseBlocksGradeBandsHighButton(),
-    path: '/educate/curriculum/high-school'
+    path: pegasus('/educate/curriculum/high-school')
   }
 ];
 
@@ -35,7 +35,7 @@ export const InternationalGradeBandCards = [
     heading: i18n.courseBlocksInternationalGradeBandsElementary(),
     description: i18n.courseBlocksInternationalGradeBandsElementaryDescription(),
     buttonText: i18n.courseBlocksInternationalGradeBandsElementaryButton(),
-    path: '/educate/curriculum/elementary-school'
+    path: pegasus('/educate/curriculum/elementary-school')
   },
   {
     linkId: 'course-block-international-grade-band-10-14',
@@ -43,7 +43,7 @@ export const InternationalGradeBandCards = [
     heading: i18n.courseBlocksInternationalGradeBandsMiddle(),
     description: i18n.courseBlocksInternationalGradeBandsMiddleDescription(),
     buttonText: i18n.courseBlocksInternationalGradeBandsMiddleButton(),
-    path: '/educate/curriculum/middle-school'
+    path: pegasus('/educate/curriculum/middle-school')
   },
   {
     linkId: 'course-block-international-grade-band-12-18',
@@ -51,7 +51,7 @@ export const InternationalGradeBandCards = [
     heading: i18n.courseBlocksInternationalGradeBandsHigh(),
     description: i18n.courseBlocksInternationalGradeBandsHighDescription(),
     buttonText: i18n.courseBlocksInternationalGradeBandsHighButton(),
-    path: '/educate/curriculum/high-school'
+    path: pegasus('/educate/curriculum/high-school')
   }
 ];
 
@@ -60,19 +60,19 @@ export const StudentGradeBandCards = [
     heading: i18n.courseBlocksGradeBandsK5(),
     description: i18n.courseBlocksGradeBandsK5Description(),
     buttonText: i18n.courseBlocksGradeBandsK5Button(),
-    path: '/student/elementary'
+    path: pegasus('/student/elementary')
   },
   {
     heading: i18n.courseBlocksGradeBands612(),
     description: i18n.courseBlocksGradeBands612Description(),
     buttonText: i18n.courseBlocksGradeBands612Button(),
-    path: '/student/middle-high'
+    path: pegasus('/student/middle-high')
   },
   {
     heading: i18n.courseBlocksGradeBandsUniversity(),
     description: i18n.courseBlocksGradeBandsUniversityDescription(),
     buttonText: i18n.courseBlocksGradeBandsUniversityButton(),
-    path: '/beyond'
+    path: pegasus('/beyond')
   }
 ];
 
@@ -81,32 +81,32 @@ export const ToolsCards = [
     heading: i18n.courseBlocksToolsAppLab(),
     description: i18n.courseBlocksToolsAppLabDescription(),
     buttonText: i18n.learnMoreApplab(),
-    link: pegasus('/applab')
+    path: pegasus('/applab')
   },
   {
     heading: i18n.courseBlocksToolsGameLab(),
     description: i18n.courseBlocksToolsGameLabDescription(),
     buttonText: i18n.learnMoreGamelab(),
-    link: pegasus('/gamelab')
+    path: pegasus('/gamelab')
   },
   {
     heading: i18n.courseBlocksToolsWebLab(),
     description: i18n.courseBlocksToolsWebLabDescription(),
     buttonText: i18n.learnMoreWeblab(),
-    link: pegasus('/weblab')
+    path: pegasus('/weblab')
   },
   {
     heading: i18n.csJourneys(),
     callout: i18n.newExclame(),
     description: i18n.csJourneysDescription(),
     buttonText: i18n.learnMoreCsJourneys(),
-    link: pegasus('/csjourneys')
+    path: pegasus('/csjourneys')
   },
   {
     heading: i18n.courseBlocksToolsVideo(),
     description: i18n.courseBlocksToolsVideoDescription(),
     buttonText: i18n.learnMoreToolsVideos(),
-    link: pegasus('/videos')
+    path: pegasus('/videos')
   }
 ];
 
@@ -116,7 +116,7 @@ export const ToolsAIExtrasCard = [
     callout: i18n.newExclame(),
     description: i18n.courseBlocksToolsAiDescription(),
     buttonText: i18n.learnMoreAilab(),
-    link: studio('/s/aiml')
+    path: studio('/s/aiml')
   }
 ];
 
@@ -125,6 +125,6 @@ export const ToolsWidgetsCard = [
     heading: i18n.courseBlocksToolsWidgets(),
     description: i18n.courseBlocksToolsWidgetsDescription(),
     buttonText: i18n.learnMoreWidgets(),
-    link: pegasus('/widgets')
+    path: pegasus('/widgets')
   }
 ];

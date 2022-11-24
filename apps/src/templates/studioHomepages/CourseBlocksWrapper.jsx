@@ -2,7 +2,6 @@ import React, {Component} from 'react';
 import ContentContainer from '../ContentContainer';
 import PropTypes from 'prop-types';
 import ResourceCard from '@cdo/apps/templates/studioHomepages/ResourceCard';
-import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
 import ResourceCardResponsiveContainer from '@cdo/apps/templates/studioHomepages/ResourceCardResponsiveContainer';
 
 class CourseBlocksWrapper extends Component {
@@ -33,7 +32,7 @@ class CourseBlocksWrapper extends Component {
               title={card.heading}
               description={card.description}
               buttonText={card.buttonText}
-              link={pegasus(card.path)}
+              link={card.path}
               callout={card.callout}
             />
           ))}
