@@ -414,28 +414,35 @@ module Pd::Application
     end
 
     test 'status changes are logged' do
-      application = build :pd_teacher_application
+      application = build :pd_teacher_application, status: 'incomplete'
       assert_nil application.status_log
 
       application.save!
       assert application.status_log.is_a? Array
-      assert_status_log [{status: 'unreviewed', at: Time.zone.now}], application
+      assert_status_log [{status: 'incomplete', at: Time.zone.now}], application
 
-      # update unrelated field
+      # update related field
       Timecop.freeze 1
-      application.update!(notes: 'some notes')
-      assert_equal Time.zone.now, application.updated_at
-      assert_equal 1, application.status_log.count
-
-      Timecop.freeze 1
-      application.update!(status: 'pending')
+      application.update!(form_data: application.form_data_hash.merge("firstName": 'Garfunkel').to_json)
       assert_status_log(
         [
-          {status: 'unreviewed', at: 2.seconds.ago},
-          {status: 'pending', at: Time.zone.now}
+          {status: 'incomplete', at: 1.second.ago},
+          {status: 'incomplete', at: Time.zone.now}
         ],
         application
       )
+
+      # update unrelated field
+      Timecop.freeze 2
+      application.update!(notes: 'some notes')
+      assert_equal Time.zone.now, application.updated_at
+      assert_equal 2, application.status_log.count
+
+      # update related field
+      Timecop.freeze 3
+      application.update!(status: 'unreviewed')
+      assert_equal Time.zone.now, application.updated_at
+      assert_equal 3, application.status_log.count
     end
 
     test 'setting an auto-email status queues up an email' do
