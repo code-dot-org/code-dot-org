@@ -11,14 +11,23 @@ const MINIMUM_PROPS = {
 };
 
 describe('RegionalPartnerSearch', () => {
+  let server;
+  beforeEach(() => {
+    sinon.stub(utils, 'currentLocation').returns({search: '?zip=11111'});
+    server = sinon.fakeServer.create();
+  });
+
+  afterEach(() => {
+    utils.currentLocation.restore();
+    server.restore();
+  });
+
   it('renders form for zip code', () => {
     const wrapper = shallow(<RegionalPartnerSearch {...MINIMUM_PROPS} />);
     expect(wrapper.find('form')).not.to.be.null;
     expect(wrapper.find('form').text()).to.contain('ZIP');
   });
-  it('shows StartApplicationButton once zip is entered and applications are open', () => {
-    sinon.stub(utils, 'currentLocation').returns({search: '?zip=11111'});
-
+  it('shows StartApplicationButton if RP found and applications are open', () => {
     const response = {
       application_state: {
         state: WorkshopApplicationStates.currently_open
@@ -26,8 +35,6 @@ describe('RegionalPartnerSearch', () => {
       summer_workshops: [],
       pl_programs_offered: ['CSD', 'CSP', 'CSA']
     };
-    let server;
-    server = sinon.fakeServer.create();
     server.respondWith(
       /.*regional_partners\/find\?zip_code.*/,
       JSON.stringify(response)
@@ -40,7 +47,5 @@ describe('RegionalPartnerSearch', () => {
     const wrapper = shallow(<RegionalPartnerSearch {...MINIMUM_PROPS} />);
     server.respond();
     expect(wrapper.find('StartApplicationButton')).not.to.be.null;
-    utils.currentLocation.restore();
-    server.restore();
   });
 });
