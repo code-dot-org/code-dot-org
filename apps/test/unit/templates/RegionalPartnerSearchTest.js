@@ -10,6 +10,29 @@ const MINIMUM_PROPS = {
   responsiveSize: 'md'
 };
 
+const createServerResponses = (server, hasRP, applicationsClosed) => {
+  const responseWithRP = {
+    application_state: {
+      state: WorkshopApplicationStates.currently_open
+    },
+    summer_workshops: [],
+    pl_programs_offered: ['CSD', 'CSP', 'CSA']
+  };
+
+  const responseWithoutRP = {
+    error: 'no_partner'
+  };
+
+  server.respondWith(
+    /.*regional_partners\/find\?zip_code.*/,
+    JSON.stringify(hasRP ? responseWithRP : responseWithoutRP)
+  );
+  server.respondWith(
+    /.*pd\/application\/applications_closed.*/,
+    JSON.stringify(applicationsClosed)
+  );
+};
+
 describe('RegionalPartnerSearch', () => {
   let server;
   beforeEach(() => {
@@ -28,22 +51,7 @@ describe('RegionalPartnerSearch', () => {
     expect(wrapper.find('form').text()).to.contain('ZIP');
   });
   it('shows StartApplicationButton if RP found and applications are open', () => {
-    const response = {
-      application_state: {
-        state: WorkshopApplicationStates.currently_open
-      },
-      summer_workshops: [],
-      pl_programs_offered: ['CSD', 'CSP', 'CSA']
-    };
-    server.respondWith(
-      /.*regional_partners\/find\?zip_code.*/,
-      JSON.stringify(response)
-    );
-    server.respondWith(
-      /.*pd\/application\/applications_closed.*/,
-      JSON.stringify(false)
-    );
-
+    createServerResponses(server, true, false);
     const wrapper = shallow(<RegionalPartnerSearch {...MINIMUM_PROPS} />);
     server.respond();
     expect(wrapper.find('StartApplicationButton')).not.to.be.null;
