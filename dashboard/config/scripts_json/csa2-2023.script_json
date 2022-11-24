@@ -15,7 +15,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-11-18 14:09:08 UTC",
+    "serialized_at": "2022-11-23 14:45:27 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -144,6 +144,9 @@
       "has_lesson_plan": true,
       "relative_position": 5,
       "properties": {
+        "overview": "**How can I assign values to the instance variables declared in a superclass from a subclass constructor?**\n\nStudents have learned how to write no-argument and parameterized constructors and used the `this` keyword to refer to the current object. In this lesson, students revisit inheritance and explore how to assign values to the instance variables declared in a superclass from a subclass constructor. Students learn how to use the `super` keyword to call the superclass constructor from a subclass and are introduced to the `Object` class. Students then practice writing no-argument and parameterized constructors in a subclass before applying these concepts to the `Dessert` subclasses they previously created.",
+        "preparation": "* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-unit-2-lesson-4-constructors/36394/2) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
+        "student_overview": "**How can I assign values to the instance variables declared in a superclass from a subclass constructor?**\n\nYou have learned how to write no-argument and parameterized constructors and use the `this` keyword to refer to the current object. In this lesson, you revisit inheritance and explore how to assign values to the instance variables declared in a superclass from a subclass constructor. You learn how to use the `super` keyword to call the superclass constructor from a subclass and are introduced to the `Object` class. You then practice writing no-argument and parameterized constructors in a subclass before applying these concepts to the `Dessert` subclass you previously created."
       },
       "seeding_key": {
         "lesson.key": "lesson-6",
@@ -460,9 +463,39 @@
       "key": "395e1ba4-946e-47ef-b9a8-82a999067589",
       "position": 1,
       "properties": {
+        "duration": 5,
+        "name": "Warm Up"
       },
       "seeding_key": {
         "lesson_activity.key": "395e1ba4-946e-47ef-b9a8-82a999067589",
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa2-2023"
+      }
+    },
+    {
+      "key": "9c2033ae-d7eb-4f89-9f51-f497826a0611",
+      "position": 2,
+      "properties": {
+        "duration": 30,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "9c2033ae-d7eb-4f89-9f51-f497826a0611",
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa2-2023"
+      }
+    },
+    {
+      "key": "79dee94f-ec7d-4d10-a03d-c45afaaceb65",
+      "position": 3,
+      "properties": {
+        "duration": 10,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "79dee94f-ec7d-4d10-a03d-c45afaaceb65",
         "lesson.key": "lesson-6",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csa2-2023"
@@ -1618,10 +1651,223 @@
       "key": "f9d49b90-477e-4a3d-bafc-60c533935ade",
       "position": 1,
       "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to recall how subclasses inherit the attributes and methods of the superclass and explain that constructors are not inherited.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *How do you think we could assign values to the instance variables declared in the superclass from a subclass constructor?*\n\n**Discussion Goal:** Students suggest ways to assign the values to the instance variables declared in the superclass and may wonder if there is a keyword similar to the `this` keyword that they can use to achieve this.",
+        "name": "Revisiting Inheritance",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Use the Hold That Thought strategy to allow students to write down their thoughts on paper first. Emphasize that they do not need to write complete sentences – they can write a few words, bullet points, draw a quick sketch, or anything else that will help them gather and recall their thoughts when it is time to share with the class.\n\nStudents might suggest making the instance variables in the superclass `public` instead of `private` so that the subclass can access them. Prompt students to recall why instance variables should be `private` and ask students to consider ways they could pass information from the subclass to the superclass based on what they have learned about Java so far."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "f9d49b90-477e-4a3d-bafc-60c533935ade",
         "lesson_activity.key": "395e1ba4-946e-47ef-b9a8-82a999067589"
+      }
+    },
+    {
+      "key": "53e34144-2d9b-4e4d-ade9-4f26ace37806",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives and the Question of the Day.",
+        "duration": "5",
+        "name": "Introduction"
+      },
+      "seeding_key": {
+        "activity_section.key": "53e34144-2d9b-4e4d-ade9-4f26ace37806",
+        "lesson_activity.key": "9c2033ae-d7eb-4f89-9f51-f497826a0611"
+      }
+    },
+    {
+      "key": "66f5279e-6e1a-45a3-96df-9fa9b16b1e61",
+      "position": 2,
+      "properties": {
+        "description": "We have seen how we can instantiate objects with no-argument and parameterized constructors and use the `this` keyword to minimize redundancies in a class. In the previous unit, we used inheritance to create subclasses that share the attributes and behaviors of a superclass. Today, we're going to explore how we can write constructors to assign values to the attributes that are declared in a superclass.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "66f5279e-6e1a-45a3-96df-9fa9b16b1e61",
+        "lesson_activity.key": "9c2033ae-d7eb-4f89-9f51-f497826a0611"
+      }
+    },
+    {
+      "key": "eae2eccc-7a0f-4c9d-9ce6-ad5953b758a0",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to predict the program's outcome, then run the program to compare their predictions to the actual outcome.",
+        "progression_name": "Predict and Run: Constructors and Inheritance"
+      },
+      "seeding_key": {
+        "activity_section.key": "eae2eccc-7a0f-4c9d-9ce6-ad5953b758a0",
+        "lesson_activity.key": "9c2033ae-d7eb-4f89-9f51-f497826a0611"
+      }
+    },
+    {
+      "key": "0d106765-3455-4f27-b9b7-7cb055814fa6",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What did you notice about the code in this program?*\n* *What do you wonder about the code in this program?*\n\n**Discussion Goal:** Students notice that the constructor in the subclass uses the keyword `super` to pass the values of the parameters to the superclass constructor. Students might also identify some similarities between the `super` keyword and the `this` keyword. Students may wonder if the `super` keyword works similarly to the `this` keyword or what might happen if they do not use the `super` keyword in a subclass constructor."
+      },
+      "seeding_key": {
+        "activity_section.key": "0d106765-3455-4f27-b9b7-7cb055814fa6",
+        "lesson_activity.key": "9c2033ae-d7eb-4f89-9f51-f497826a0611"
+      }
+    },
+    {
+      "key": "9fe25355-6357-48c1-9a37-a40f2a12aaa3",
+      "position": 5,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Recall that superclasses inherit the instance variables of a superclass and explain that superclasses cannot access them because they are `private`.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 2 on Code Studio to complete Levels 2, 3, and 4. Students investigate the program, make changes to the program as prompted, and observe the results.",
+        "duration": "10",
+        "name": "Calling the Superclass Constructor",
+        "progression_name": "Investigate and Modify: The super Keyword"
+      },
+      "seeding_key": {
+        "activity_section.key": "9fe25355-6357-48c1-9a37-a40f2a12aaa3",
+        "lesson_activity.key": "9c2033ae-d7eb-4f89-9f51-f497826a0611"
+      }
+    },
+    {
+      "key": "f414c148-9118-4a90-a7f0-f2c223f347a4",
+      "position": 6,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students share what they discovered from the modifications they made to the code.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Ask students to share what happened when the subclass constructor did not call the superclass constructor or when the call to superclass constructor was not the first line in the body. Have students suggest why they think this happened and what they might conclude based on their findings."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "f414c148-9118-4a90-a7f0-f2c223f347a4",
+        "lesson_activity.key": "9c2033ae-d7eb-4f89-9f51-f497826a0611"
+      }
+    },
+    {
+      "key": "aeeaa88b-e3d4-44a0-9aa3-9cc97d8f9022",
+      "position": 7,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the `super` keyword and explain how it is used to call the superclass constructor.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to explain that when a subclass constructor does not explicitly call a superclass constructor using `super`, Java inserts a call to the superclass no-argument constructor.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the `Object` class.\n\n**Do This:** Demonstrate the process of calling superclass constructors:\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> The process continues until the `Object` constructor is called\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> All constructors in the hierarchy execute beginning with the `Object` constructor"
+      },
+      "seeding_key": {
+        "activity_section.key": "aeeaa88b-e3d4-44a0-9aa3-9cc97d8f9022",
+        "lesson_activity.key": "9c2033ae-d7eb-4f89-9f51-f497826a0611"
+      }
+    },
+    {
+      "key": "edcb8916-249c-46e7-b222-86c0581945ad",
+      "position": 8,
+      "properties": {
+        "description": "We now have all the tools we need to write no-argument and parameterized constructors in a class and in subclasses. Let's practice putting all of these concepts together!",
+        "duration": "15",
+        "name": "Putting It All Together",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "edcb8916-249c-46e7-b222-86c0581945ad",
+        "lesson_activity.key": "9c2033ae-d7eb-4f89-9f51-f497826a0611"
+      }
+    },
+    {
+      "key": "662a6024-a28b-4533-ad81-d94a258c8eb6",
+      "position": 9,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 5 on Code Studio to complete Levels 5, 6, and 7. On Level 5, students complete a Check for Understanding, then continue to Level 6 to write a parameterized constructor in a subclass using the `super` keyword. On Level 7, students write no-argument and parameterized constructors in their `Dessert` subclass.",
+        "progression_name": "Practice: The super Keyword",
+        "tips": [
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "The Check for Understanding and practice level can be used as a formative assessment to gauge understanding of the key terms and using the `super` keyword with parameterized constructors in a class."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "662a6024-a28b-4533-ad81-d94a258c8eb6",
+        "lesson_activity.key": "9c2033ae-d7eb-4f89-9f51-f497826a0611"
+      }
+    },
+    {
+      "key": "d247041c-0ed4-4b39-a608-8f5a5b9168b3",
+      "position": 10,
+      "properties": {
+        "description": "This is a good time to commit our code and save our `Dessert` subclass to the Backpack. We will be adding to the classes throughout the unit as we learn more about designing classes and their components.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "d247041c-0ed4-4b39-a608-8f5a5b9168b3",
+        "lesson_activity.key": "9c2033ae-d7eb-4f89-9f51-f497826a0611"
+      }
+    },
+    {
+      "key": "e8c19874-17b2-4f12-a628-156928e4d43e",
+      "position": 11,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Play the music clip to cue committing their code and saving their `Dessert` subclass to the Backpack.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Using music to cue transitions helps create routines in the classroom. When students hear cues, they know it is time to transition to a specific activity. Emphasize to students what the music clip means, and be consistent with the use of the music clip to cue the activity.\n\nClick the blue play icon on the slide to play the music cue."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "e8c19874-17b2-4f12-a628-156928e4d43e",
+        "lesson_activity.key": "9c2033ae-d7eb-4f89-9f51-f497826a0611"
+      }
+    },
+    {
+      "key": "adb4cbae-e597-4302-baca-bb4704ed4c8c",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Designate four corners or areas in the classroom for each constructor signature. Have students go to the corner they think is the correct constructor for the constructor call.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Explain the correct constructor signature. Have students work with the students at their corner to develop an explanation for why their corner is correct or incorrect. Ask students to share their explanations with the class.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson and the Question of the Day.",
+        "name": "Constructor Corners",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "The Unit 2 Guide includes an end-of-lesson reflection prompt for students to reflect on the lesson and the progress they made in developing their software engineering skills and characteristics. Have students respond to the reflection prompt after reviewing the concepts covered in this lesson to help them process and reflect on their personal growth."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "adb4cbae-e597-4302-baca-bb4704ed4c8c",
+        "lesson_activity.key": "79dee94f-ec7d-4d10-a03d-c45afaaceb65"
+      }
+    },
+    {
+      "key": "1ae3f789-3441-4076-b1e0-d80a6d57f7f2",
+      "position": 2,
+      "properties": {
+        "description": "---"
+      },
+      "seeding_key": {
+        "activity_section.key": "1ae3f789-3441-4076-b1e0-d80a6d57f7f2",
+        "lesson_activity.key": "79dee94f-ec7d-4d10-a03d-c45afaaceb65"
+      }
+    },
+    {
+      "key": "6cbc5a60-73ac-4506-b419-9e3b2c4606e2",
+      "position": 3,
+      "properties": {
+        "description": "*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*",
+        "name": "Assessment: Check for Understanding",
+        "progression_name": "Check for Understanding"
+      },
+      "seeding_key": {
+        "activity_section.key": "6cbc5a60-73ac-4506-b419-9e3b2c4606e2",
+        "lesson_activity.key": "79dee94f-ec7d-4d10-a03d-c45afaaceb65"
+      }
+    },
+    {
+      "key": "f28b886b-3c70-426f-9657-6dc677ac962a",
+      "position": 4,
+      "properties": {
+        "description": "To assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\nThe following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 2.2\n* Topic Questions 5.2\n\n**Note:** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*",
+        "name": "AP Classroom Topic Questions"
+      },
+      "seeding_key": {
+        "activity_section.key": "f28b886b-3c70-426f-9657-6dc677ac962a",
+        "lesson_activity.key": "79dee94f-ec7d-4d10-a03d-c45afaaceb65"
       }
     }
   ],
@@ -2307,6 +2553,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L4-L1_2023"
+        ],
         "progression": "Predict and Run: Constructors and Scope"
       },
       "bonus": false,
@@ -2329,6 +2578,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L4-L2_2023"
+        ],
         "progression": "Investigate and Modify: The this Keyword"
       },
       "bonus": false,
@@ -2351,6 +2603,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L4-L3_2023"
+        ],
         "progression": "Investigate and Modify: The this Keyword"
       },
       "bonus": false,
@@ -2373,6 +2628,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L4-L4_2023"
+        ],
         "progression": "Investigate and Modify: The this Keyword"
       },
       "bonus": false,
@@ -2395,6 +2653,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U2L4-L5_2023"
+        ],
         "progression": "Practice: The this Keyword"
       },
       "bonus": false,
@@ -2417,6 +2678,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L4-L6_2023"
+        ],
         "progression": "Practice: The this Keyword"
       },
       "bonus": false,
@@ -2439,6 +2703,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L4-L7_2023"
+        ],
         "progression": "Practice: The this Keyword"
       },
       "bonus": false,
@@ -2461,6 +2728,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U2L4-L8_2023"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -2475,6 +2745,182 @@
       },
       "level_keys": [
         "CSA U2L4-L8_2023"
+      ]
+    },
+    {
+      "chapter": 36,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Predict and Run: Constructors and Inheritance"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U2L5-L1_2023"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa2-2023",
+        "activity_section.key": "eae2eccc-7a0f-4c9d-9ce6-ad5953b758a0"
+      },
+      "level_keys": [
+        "CSA U2L5-L1_2023"
+      ]
+    },
+    {
+      "chapter": 37,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Investigate and Modify: The super Keyword"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U2L5-L2_2023"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa2-2023",
+        "activity_section.key": "9fe25355-6357-48c1-9a37-a40f2a12aaa3"
+      },
+      "level_keys": [
+        "CSA U2L5-L2_2023"
+      ]
+    },
+    {
+      "chapter": 38,
+      "position": 3,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Investigate and Modify: The super Keyword"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U2L5-L3_2023"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa2-2023",
+        "activity_section.key": "9fe25355-6357-48c1-9a37-a40f2a12aaa3"
+      },
+      "level_keys": [
+        "CSA U2L5-L3_2023"
+      ]
+    },
+    {
+      "chapter": 39,
+      "position": 4,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Investigate and Modify: The super Keyword"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U2L5-L4_2023"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa2-2023",
+        "activity_section.key": "9fe25355-6357-48c1-9a37-a40f2a12aaa3"
+      },
+      "level_keys": [
+        "CSA U2L5-L4_2023"
+      ]
+    },
+    {
+      "chapter": 40,
+      "position": 5,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "progression": "Practice: The super Keyword"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U2L5-L5_2023"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa2-2023",
+        "activity_section.key": "662a6024-a28b-4533-ad81-d94a258c8eb6"
+      },
+      "level_keys": [
+        "CSA U2L5-L5_2023"
+      ]
+    },
+    {
+      "chapter": 41,
+      "position": 6,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Practice: The super Keyword"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U2L5-L6_2023"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa2-2023",
+        "activity_section.key": "662a6024-a28b-4533-ad81-d94a258c8eb6"
+      },
+      "level_keys": [
+        "CSA U2L5-L6_2023"
+      ]
+    },
+    {
+      "chapter": 42,
+      "position": 7,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Practice: The super Keyword"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U2L5-L7_2023"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa2-2023",
+        "activity_section.key": "662a6024-a28b-4533-ad81-d94a258c8eb6"
+      },
+      "level_keys": [
+        "CSA U2L5-L7_2023"
+      ]
+    },
+    {
+      "chapter": 43,
+      "position": 8,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "progression": "Check for Understanding"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U2L5-L8_2023"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa2-2023",
+        "activity_section.key": "6cbc5a60-73ac-4506-b419-9e3b2c4606e2"
+      },
+      "level_keys": [
+        "CSA U2L5-L8_2023"
       ]
     }
   ],
@@ -2898,6 +3344,102 @@
         "script.name": "csa2-2023",
         "activity_section.key": "49475f0b-5f3f-4b11-8305-9cbc95671209"
       }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U2L5-L1_2023",
+        "script_level.level_keys": [
+          "CSA U2L5-L1_2023"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa2-2023",
+        "activity_section.key": "eae2eccc-7a0f-4c9d-9ce6-ad5953b758a0"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U2L5-L2_2023",
+        "script_level.level_keys": [
+          "CSA U2L5-L2_2023"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa2-2023",
+        "activity_section.key": "9fe25355-6357-48c1-9a37-a40f2a12aaa3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U2L5-L3_2023",
+        "script_level.level_keys": [
+          "CSA U2L5-L3_2023"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa2-2023",
+        "activity_section.key": "9fe25355-6357-48c1-9a37-a40f2a12aaa3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U2L5-L4_2023",
+        "script_level.level_keys": [
+          "CSA U2L5-L4_2023"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa2-2023",
+        "activity_section.key": "9fe25355-6357-48c1-9a37-a40f2a12aaa3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U2L5-L5_2023",
+        "script_level.level_keys": [
+          "CSA U2L5-L5_2023"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa2-2023",
+        "activity_section.key": "662a6024-a28b-4533-ad81-d94a258c8eb6"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U2L5-L6_2023",
+        "script_level.level_keys": [
+          "CSA U2L5-L6_2023"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa2-2023",
+        "activity_section.key": "662a6024-a28b-4533-ad81-d94a258c8eb6"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U2L5-L7_2023",
+        "script_level.level_keys": [
+          "CSA U2L5-L7_2023"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa2-2023",
+        "activity_section.key": "662a6024-a28b-4533-ad81-d94a258c8eb6"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U2L5-L8_2023",
+        "script_level.level_keys": [
+          "CSA U2L5-L8_2023"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa2-2023",
+        "activity_section.key": "6cbc5a60-73ac-4506-b419-9e3b2c4606e2"
+      }
     }
   ],
   "resources": [
@@ -2962,6 +3504,18 @@
       }
     },
     {
+      "name": "[KEY] U2L5 Extra Practice",
+      "url": "https://docs.google.com/document/d/16fHuByG_xZsEchb8fI3mklU4fm4-EDIZp0enUOABDq0/edit?usp=sharing",
+      "key": "_key_u2l5_extra_practice",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "_key_u2l5_extra_practice"
+      }
+    },
+    {
       "name": "Anticipation Guide",
       "url": "https://docs.google.com/document/d/1D5d1uUJGuYqAQP77kKeGDqLfDJIGhE434JGlxmmNhTM/edit?usp=sharing",
       "key": "anticipation_guide",
@@ -2996,6 +3550,18 @@
       },
       "seeding_key": {
         "resource.key": "constructors"
+      }
+    },
+    {
+      "name": "Constructors and Inheritance",
+      "url": "https://docs.google.com/presentation/d/1AG3dZ85l3CdkKpqQt7jpaEPYZnKzBjWsa48NBmhk6Eo/edit?usp=sharing",
+      "key": "constructors_and_inheritance",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "constructors_and_inheritance"
       }
     },
     {
@@ -3109,6 +3675,19 @@
       "seeding_key": {
         "resource.key": "u2l4_extra_practice"
       }
+    },
+    {
+      "name": "U2L5 Extra Practice",
+      "url": "https://docs.google.com/document/d/10U-0aKiKWWWncQy19YbQgtfTNSGoTNNWitIJ3cHyPIo/edit?usp=sharing",
+      "key": "u2l5_extra_practice",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "u2l5_extra_practice"
+      }
     }
   ],
   "lessons_resources": [
@@ -3212,6 +3791,24 @@
       "seeding_key": {
         "lesson.key": "lesson-3",
         "resource.key": "u2l3_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "resource.key": "_key_u2l5_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "resource.key": "constructors_and_inheritance"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "resource.key": "u2l5_extra_practice"
       }
     }
   ],
@@ -3516,6 +4113,16 @@
       }
     },
     {
+      "key": "4a8cc0e1-3756-4b2b-b1e4-6665aa81d19f",
+      "properties": {
+        "description": "Explain the purpose of the `Object` class"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "objective.key": "4a8cc0e1-3756-4b2b-b1e4-6665aa81d19f"
+      }
+    },
+    {
       "key": "7cab091a-6a9d-4548-8ce9-2eac4d69f823",
       "properties": {
         "description": "Declare instance variables to represent attributes of an object"
@@ -3533,6 +4140,16 @@
       "seeding_key": {
         "lesson.key": "lesson-2",
         "objective.key": "7f0ffaa3-dee2-4fcf-b960-c03bb541e7cb"
+      }
+    },
+    {
+      "key": "bb7743fd-e1b0-47c3-88dd-8b7eabf2339f",
+      "properties": {
+        "description": "Write a parameterized constructor in a subclass that calls the superclass constructor"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "objective.key": "bb7743fd-e1b0-47c3-88dd-8b7eabf2339f"
       }
     },
     {
@@ -3694,6 +4311,62 @@
         "lesson.key": "lesson-3",
         "framework.shortcode": "csa",
         "standard.shortcode": "MOD-2.B.3"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "MOD-3.B.14"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "MOD-3.B.5"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "MOD-3.B.6"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "MOD-3.B.7"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "MOD-3.B.8"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "MOD-3.B.9"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "MOD-3.E.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "MOD-3.E.2"
       }
     }
   ],
