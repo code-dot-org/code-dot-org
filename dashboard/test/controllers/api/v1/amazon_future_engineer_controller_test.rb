@@ -146,7 +146,7 @@ class Api::V1::AmazonFutureEngineerControllerTest < ActionDispatch::IntegrationT
         city: 'seattle',
         state: 'Washington',
         zip: '98105',
-        primary_professional_role: 'test role with space',
+        professional_role: 'test role with space',
         grades_teaching: 'K-5, 6-8, ',
         privacy_permission: true
       },
