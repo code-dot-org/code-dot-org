@@ -10,6 +10,7 @@ import SingleCheckbox from '../../code-studio/pd/form_components/SingleCheckbox'
 import color from '@cdo/apps/util/color';
 import {isEmail} from '@cdo/apps/util/formatValidation';
 import {STATES} from '@cdo/apps/geographyConstants';
+import DCDO from '@cdo/apps/dcdo';
 
 const VALIDATION_STATE_ERROR = 'error';
 
@@ -317,43 +318,47 @@ export default class AmazonFutureEngineerEligibilityForm extends React.Component
                     : null
                 }
               />
-              <p>Tell CSTA a little bit about yourself:</p>
-              <label
-                style={styles.descriptiveText}
-                htmlFor="professionalRoleSelect"
-              >
-                What is your current role?
-              </label>
-              <select
-                style={styles.dropdownPadding}
-                id="professionalRoleSelect"
-                name="professionalRole"
-                value={this.state.professionalRole}
-                onChange={this.handleRoleChange}
-              >
-                {CSTA_PROFESSIONAL_ROLES.map(role => (
-                  <option value={role} key={role}>
-                    {role}
-                  </option>
-                ))}
-              </select>
-              <fieldset className="gradebands-group">
-                <legend style={styles.descriptiveText}>
-                  What grade bands do you teach?
-                </legend>
-                {CSTA_GRADE_BANDS.map((grade, index) => (
-                  <Checkbox
-                    style={styles.checkboxItem}
-                    key={index}
-                    checked={this.state.gradeBands[index]}
-                    onChange={() => this.handleMultiSelectGradeBands(index)}
+              {!!DCDO.get('csta-form-extension', true) && (
+                <div>
+                  <p>Tell CSTA a little bit about yourself:</p>
+                  <label
+                    style={styles.descriptiveText}
+                    htmlFor="professionalRoleSelect"
                   >
-                    <label style={styles.checkboxLabel} htmlFor={grade}>
-                      {grade}
-                    </label>
-                  </Checkbox>
-                ))}
-              </fieldset>
+                    What is your current role?
+                  </label>
+                  <select
+                    style={styles.dropdownPadding}
+                    id="professionalRoleSelect"
+                    name="professionalRole"
+                    value={this.state.professionalRole}
+                    onChange={this.handleRoleChange}
+                  >
+                    {CSTA_PROFESSIONAL_ROLES.map(role => (
+                      <option value={role} key={role}>
+                        {role}
+                      </option>
+                    ))}
+                  </select>
+                  <fieldset className="gradebands-group">
+                    <legend style={styles.descriptiveText}>
+                      What grade bands do you teach?
+                    </legend>
+                    {CSTA_GRADE_BANDS.map((grade, index) => (
+                      <Checkbox
+                        style={styles.checkboxItem}
+                        key={index}
+                        checked={this.state.gradeBands[index]}
+                        onChange={() => this.handleMultiSelectGradeBands(index)}
+                      >
+                        <label style={styles.checkboxLabel} htmlFor={grade}>
+                          {grade}
+                        </label>
+                      </Checkbox>
+                    ))}
+                  </fieldset>
+                </div>
+              )}
             </div>
           )}
           <SingleCheckbox
