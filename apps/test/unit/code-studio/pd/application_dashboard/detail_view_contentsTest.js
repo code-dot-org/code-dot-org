@@ -1,7 +1,6 @@
 import {DetailViewContents} from '@cdo/apps/code-studio/pd/application_dashboard/detail_view_contents';
 import {
   getApplicationStatuses,
-  ApplicationFinalStatuses,
   ScholarshipStatusRequiredStatuses
 } from '@cdo/apps/code-studio/pd/application_dashboard/constants';
 import {PrincipalApprovalState} from '@cdo/apps/generated/pd/teacherApplicationConstants';
@@ -106,107 +105,11 @@ describe('DetailViewContents', () => {
   };
 
   describe('Notes', () => {
-    it('Uses default value for facilitator applications with no notes', () => {
-      const facilitatorDetailView = mountDetailView('Facilitator', {
-        applicationData: {notes: ''}
-      });
-      expect(facilitatorDetailView.state().notes).to.eql(
-        'Strengths:\nWeaknesses:\nPotential red flags to follow-up on:\nOther notes:'
-      );
-    });
-
-    it('Uses entered value for facilitator applications with notes', () => {
-      const facilitatorDetailView = mountDetailView('Facilitator', {
-        applicationData: {notes: 'actual notes'}
-      });
-      expect(facilitatorDetailView.state().notes).to.eql('actual notes');
-    });
-
     it('Does not supply value for teacher applications with no notes', () => {
       const teacherDetailView = mountDetailView('Teacher', {
         applicationData: {notes: ''}
       });
       expect(teacherDetailView.state().notes).to.eql('');
-    });
-  });
-
-  const applicationType = 'Facilitator';
-
-  describe('Edit controls in Facilitator', () => {
-    it(`allows for a subset of statuses to be locked`, () => {
-      const detailView = mountDetailView(applicationType);
-
-      // click edit
-      detailView
-        .find('button#edit')
-        .first()
-        .simulate('click');
-
-      // lock button is disabled for all statuses except "finalized"
-      // statuses in the constant are an object {value: label}
-      Object.keys(
-        getSelectableApplicationStatuses(applicationType.toLowerCase())
-      ).forEach(status => {
-        const statusIsFinal = ApplicationFinalStatuses.includes(status);
-        detailView
-          .find('#DetailViewHeader select')
-          .simulate('change', {target: {value: status}});
-        expect(
-          detailView
-            .find('#DetailViewHeader Button')
-            .first()
-            .prop('disabled')
-        ).to.equal(!statusIsFinal);
-      });
-    });
-
-    it(`disables status dropdown when locked`, () => {
-      const detailView = mountDetailView(applicationType);
-
-      // click edit
-      detailView
-        .find('button#edit')
-        .first()
-        .simulate('click');
-
-      // change status to approved
-      detailView
-        .find('#DetailViewHeader select')
-        .simulate('change', {target: {value: 'accepted'}});
-
-      // lock status
-      expect(
-        detailView
-          .find('#DetailViewHeader Button')
-          .first()
-          .text()
-      ).to.equal('Lock');
-      detailView
-        .find('#DetailViewHeader Button')
-        .first()
-        .simulate('click');
-      expect(detailView.find('#DetailViewHeader select').prop('disabled')).to.be
-        .true;
-      expect(
-        detailView
-          .find('#DetailViewHeader Button')
-          .first()
-          .text()
-      ).to.equal('Unlock');
-
-      // unlock status
-      detailView
-        .find('#DetailViewHeader Button')
-        .first()
-        .simulate('click');
-      expect(detailView.find('#DetailViewHeader select').prop('disabled')).to.be
-        .false;
-      expect(
-        detailView
-          .find('#DetailViewHeader Button')
-          .first()
-          .text()
-      ).to.equal('Lock');
     });
   });
 
@@ -264,28 +167,28 @@ describe('DetailViewContents', () => {
       let status_change_log = [];
 
       // get logs for changing through possible status
-      Object.keys(
-        getSelectableApplicationStatuses(applicationType.toLowerCase())
-      ).forEach(status => {
-        status_change_log.push({
-          changing_user: 'Test use',
-          time: '2018-06-01 12:00 PDT',
-          title: status
-        });
-      });
+      Object.keys(getSelectableApplicationStatuses('teacher')).forEach(
+        status => {
+          status_change_log.push({
+            changing_user: 'Test use',
+            time: '2018-06-01 12:00 PDT',
+            title: status
+          });
+        }
+      );
 
       // check that recorded change logs are rendered in ChangeLog element
       const overrides = {
         applicationData: {status_change_log: status_change_log}
       };
-      const detailView = mountDetailView(applicationType, overrides);
+      const detailView = mountDetailView('Teacher', overrides);
       expect(detailView.find('ChangeLog').props().changeLog).to.deep.equal(
         status_change_log
       );
     });
   });
 
-  const expectedTestData = ['Teacher', 'Facilitator'];
+  const expectedTestData = ['Teacher'];
 
   for (const applicationType of expectedTestData) {
     describe('Admin edit dropdown', () => {
@@ -383,10 +286,7 @@ describe('DetailViewContents', () => {
       it(`the dropdown is disabled until the Edit button is clicked in ${applicationType}`, () => {
         const detailView = mountDetailView(applicationType);
 
-        let expectedButtons =
-          applicationType === 'Facilitator'
-            ? ['Lock', 'Edit', 'Delete']
-            : ['Edit', 'Delete'];
+        let expectedButtons = ['Edit', 'Delete'];
         expect(
           detailView.find('#DetailViewHeader Button').map(button => {
             return button.text();
@@ -398,10 +298,7 @@ describe('DetailViewContents', () => {
         expect(detailView.find('textarea#notes').prop('disabled')).to.be.true;
         expect(detailView.find('textarea#notes_2').prop('disabled')).to.be.true;
 
-        expectedButtons =
-          applicationType === 'Facilitator'
-            ? ['Lock', 'Save', 'Cancel']
-            : ['Save', 'Cancel'];
+        expectedButtons = ['Save', 'Cancel'];
         detailView
           .find('button#edit')
           .first()
