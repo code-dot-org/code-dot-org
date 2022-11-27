@@ -52,8 +52,7 @@ export const ApplicationFinalStatuses = [
 ];
 
 export const ApplicationTypes = {
-  teacher: 'Teacher',
-  facilitator: 'Facilitator'
+  teacher: 'Teacher'
 };
 
 /**
