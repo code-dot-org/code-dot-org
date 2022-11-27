@@ -35,7 +35,6 @@ describe('DetailViewContents', () => {
     district_name: 'District Name',
     email: 'email',
     application_year: '2019-2020',
-    application_type: 'Teacher',
     course_name: 'CS Discoveries',
     course: 'csd',
     registered_fit_weekend: false,

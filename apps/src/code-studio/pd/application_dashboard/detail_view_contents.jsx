@@ -36,7 +36,6 @@ import _ from 'lodash';
 import {
   getApplicationStatuses,
   ApplicationFinalStatuses,
-  ApplicationTypes,
   ScholarshipStatusRequiredStatuses
 } from './constants';
 import PrincipalApprovalButtons from './principal_approval_buttons';
@@ -91,7 +90,6 @@ export class DetailViewContents extends React.Component {
       email: PropTypes.string,
       form_data: PropTypes.object,
       application_year: PropTypes.string,
-      application_type: PropTypes.oneOf(['Teacher']),
       response_scores: PropTypes.object,
       meets_criteria: PropTypes.string,
       meets_scholarship_criteria: PropTypes.string,
@@ -202,8 +200,6 @@ export class DetailViewContents extends React.Component {
       this.props.applicationData.pd_workshop_id ||
       this.props.applicationData.fit_workshop_id;
     if (
-      this.props.applicationData.application_type ===
-        ApplicationTypes.teacher &&
       !this.state.scholarship_status &&
       ScholarshipStatusRequiredStatuses.includes(event.target.value)
     ) {
@@ -309,11 +305,7 @@ export class DetailViewContents extends React.Component {
       'pd_workshop_id'
     ];
 
-    if (
-      this.props.applicationData.application_type === ApplicationTypes.teacher
-    ) {
-      stateValues.push('scholarship_status');
-    }
+    stateValues.push('scholarship_status');
 
     const data = {
       ..._.pick(this.state, stateValues),
@@ -656,9 +648,7 @@ export class DetailViewContents extends React.Component {
 
   renderHeader = () => {
     const rubricURL =
-      this.props.applicationData.application_type === ApplicationTypes.teacher
-        ? 'https://docs.google.com/document/d/19oolyeensn9oX8JAnIeT2M6HbNZQkZqlPhwcaIDx-Us/view'
-        : 'https://docs.google.com/document/u/1/d/e/2PACX-1vTqUgsTTGeGMH0N1FTH2qPzQs1pVb8OWPf3lr1A0hzO9LyGLa27J9_Fsg4RG43ok1xbrCfQqKxBjNsk/pub';
+      'https://docs.google.com/document/d/19oolyeensn9oX8JAnIeT2M6HbNZQkZqlPhwcaIDx-Us/view';
 
     return (
       <div style={styles.headerWrapper}>
@@ -669,13 +659,10 @@ export class DetailViewContents extends React.Component {
             }`}
           </h1>
           <h4>Meets Guidelines? {this.props.applicationData.meets_criteria}</h4>
-          {this.props.applicationData.application_type ===
-            ApplicationTypes.teacher && (
-            <h4>
-              Meets scholarship requirements?{' '}
-              {this.props.applicationData.meets_scholarship_criteria}
-            </h4>
-          )}
+          <h4>
+            Meets scholarship requirements?{' '}
+            {this.props.applicationData.meets_scholarship_criteria}
+          </h4>
 
           <h4>
             <a target="_blank" rel="noopener noreferrer" href={rubricURL}>
@@ -776,7 +763,6 @@ export class DetailViewContents extends React.Component {
     }
 
     if (
-      this.props.applicationData.application_type === 'Teacher' &&
       this.scoreableQuestions['scholarshipQuestions'].includes(snakeCaseKey)
     ) {
       if (scoringDropdowns.length) {
@@ -834,10 +820,7 @@ export class DetailViewContents extends React.Component {
   };
 
   renderDetailViewTableLayout = () => {
-    const sectionsToRemove =
-      this.props.applicationData.application_type !== ApplicationTypes.teacher
-        ? ['submission']
-        : [];
+    const sectionsToRemove = ['additionalDemographicInformation'];
     const questionsToRemove = ['genderIdentity', 'race'];
 
     return (
@@ -1039,34 +1022,28 @@ export class DetailViewContents extends React.Component {
             </td>
             <td style={styles.scoringColumn} />
           </tr>
-          {this.props.applicationData.application_type ===
-            ApplicationTypes.teacher && (
-            <tr>
-              <td style={styles.questionColumn}>School Name</td>
-              <td style={styles.answerColumn}>
-                {this.renderSchoolTrait(
-                  this.props.applicationData.school_name,
-                  this.props.applicationData.form_data['principal_school']
-                )}
-              </td>
-              <td style={styles.scoringColumn} />
-            </tr>
-          )}
-          {this.props.applicationData.application_type ===
-            ApplicationTypes.teacher && (
-            <tr>
-              <td style={styles.questionColumn}>School District</td>
-              <td style={styles.answerColumn}>
-                {this.renderSchoolTrait(
-                  this.props.applicationData.district_name,
-                  this.props.applicationData.form_data[
-                    'principal_school_district'
-                  ]
-                )}
-              </td>
-              <td style={styles.scoringColumn} />
-            </tr>
-          )}
+          <tr>
+            <td style={styles.questionColumn}>School Name</td>
+            <td style={styles.answerColumn}>
+              {this.renderSchoolTrait(
+                this.props.applicationData.school_name,
+                this.props.applicationData.form_data['principal_school']
+              )}
+            </td>
+            <td style={styles.scoringColumn} />
+          </tr>
+          <tr>
+            <td style={styles.questionColumn}>School District</td>
+            <td style={styles.answerColumn}>
+              {this.renderSchoolTrait(
+                this.props.applicationData.district_name,
+                this.props.applicationData.form_data[
+                  'principal_school_district'
+                ]
+              )}
+            </td>
+            <td style={styles.scoringColumn} />
+          </tr>
           {!(this.props.applicationData.course === 'csf') && (
             <tr>
               <td style={styles.questionColumn}>Summer Workshop</td>
@@ -1081,16 +1058,13 @@ export class DetailViewContents extends React.Component {
             </td>
             <td style={styles.scoringColumn} />
           </tr>
-          {this.props.applicationData.application_type ===
-            ApplicationTypes.teacher && (
-            <tr>
-              <td style={styles.questionColumn}>Scholarship Teacher?</td>
-              <td style={styles.answerColumn}>
-                {this.renderScholarshipStatusAnswer()}
-              </td>
-              <td style={styles.scoringColumn} />
-            </tr>
-          )}
+          <tr>
+            <td style={styles.questionColumn}>Scholarship Teacher?</td>
+            <td style={styles.answerColumn}>
+              {this.renderScholarshipStatusAnswer()}
+            </td>
+            <td style={styles.scoringColumn} />
+          </tr>
         </tbody>
       </Table>
     );
