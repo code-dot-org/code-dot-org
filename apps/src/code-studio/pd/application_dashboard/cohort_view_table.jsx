@@ -21,7 +21,7 @@ export class CohortViewTable extends React.Component {
   static propTypes = {
     data: PropTypes.array.isRequired,
     path: PropTypes.string.isRequired,
-    viewType: PropTypes.oneOf(['facilitator', 'teacher']).isRequired,
+    viewType: PropTypes.oneOf(['teacher']).isRequired,
     regionalPartnerGroup: PropTypes.number,
     isWorkshopAdmin: PropTypes.bool,
     regionalPartnerFilter: RegionalPartnerPropType,
@@ -58,8 +58,6 @@ export class CohortViewTable extends React.Component {
   UNSAFE_componentWillUpdate() {
     this.constructColumns();
   }
-
-  showLocked = () => this.props.viewType === 'facilitator';
 
   constructColumns() {
     if (
@@ -152,37 +150,6 @@ export class CohortViewTable extends React.Component {
           transforms: [sortable]
         }
       });
-    }
-
-    if (this.showLocked()) {
-      columns.push({
-        property: 'locked',
-        header: {
-          label: 'Locked'
-        },
-        cell: {
-          formatters: [this.formatBoolean]
-        }
-      });
-    }
-
-    if (this.props.viewType === 'facilitator') {
-      columns.push(
-        {
-          property: 'assigned_fit',
-          header: {
-            label: 'Assigned FIT',
-            transforms: [sortable]
-          }
-        },
-        {
-          property: 'registered_fit',
-          header: {
-            label: 'Registered FIT',
-            transforms: [sortable]
-          }
-        }
-      );
     }
 
     columns.push({

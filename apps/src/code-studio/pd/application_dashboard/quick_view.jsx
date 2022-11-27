@@ -30,7 +30,7 @@ export class QuickView extends React.Component {
     route: PropTypes.shape({
       path: PropTypes.string.isRequired,
       applicationType: PropTypes.string.isRequired,
-      viewType: PropTypes.oneOf(['teacher', 'facilitator']).isRequired,
+      viewType: PropTypes.oneOf(['teacher']).isRequired,
       role: PropTypes.string.isRequired
     })
   };
