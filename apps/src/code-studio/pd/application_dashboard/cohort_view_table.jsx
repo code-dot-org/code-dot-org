@@ -131,7 +131,9 @@ export class CohortViewTable extends React.Component {
           transforms: [sortable]
         },
         cell: {
-          formatters: [() => getApplicationStatuses()],
+          formatters: [
+            status => getApplicationStatuses()[status] || _.upperFirst(status)
+          ],
           transforms: [
             status => ({
               style: {...styles.statusCellCommon, ...styles.statusCell[status]}
