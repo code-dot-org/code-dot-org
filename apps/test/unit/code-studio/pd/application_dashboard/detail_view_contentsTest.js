@@ -73,22 +73,21 @@ describe('DetailViewContents', () => {
   };
 
   // Nobody is able to set an application status to incomplete or to awaiting_admin_approval from detail view
-  const getSelectableApplicationStatuses = (type, addAutoEmail = true) =>
-    _.omit(getApplicationStatuses(type, addAutoEmail), [
+  const getSelectableApplicationStatuses = (addAutoEmail = true) =>
+    _.omit(getApplicationStatuses(addAutoEmail), [
       'incomplete',
       'awaiting_admin_approval'
     ]);
 
-  const mountDetailView = (applicationType, overrides = {}) => {
+  const mountDetailView = (overrides = {}) => {
     const defaultApplicationData = {
-      ...DEFAULT_APPLICATION_DATA,
-      application_type: applicationType
+      ...DEFAULT_APPLICATION_DATA
     };
     const defaultProps = {
       canLock: true,
       applicationId: '1',
       applicationData: defaultApplicationData,
-      viewType: defaultApplicationData.application_type.toLowerCase(),
+      viewType: 'teacher',
       isWorkshopAdmin: false
     };
 
@@ -106,7 +105,7 @@ describe('DetailViewContents', () => {
 
   describe('Notes', () => {
     it('Does not supply value for teacher applications with no notes', () => {
-      const teacherDetailView = mountDetailView('Teacher', {
+      const teacherDetailView = mountDetailView({
         applicationData: {notes: ''}
       });
       expect(teacherDetailView.state().notes).to.eql('');
@@ -115,7 +114,7 @@ describe('DetailViewContents', () => {
 
   describe('Edit controls in Teacher', () => {
     it("cannot change status if application is currently in 'Awaiting Admin Approval'", () => {
-      const detailView = mountDetailView('Teacher', {
+      const detailView = mountDetailView({
         applicationData: {
           ...DEFAULT_APPLICATION_DATA,
           status: 'awaiting_admin_approval'
@@ -127,7 +126,7 @@ describe('DetailViewContents', () => {
     });
 
     it("cannot make status 'Awaiting Admin Approval' from dropdown", () => {
-      const detailView = mountDetailView('Teacher');
+      const detailView = mountDetailView();
       expect(
         detailView
           .find('#DetailViewHeader select')
@@ -137,7 +136,7 @@ describe('DetailViewContents', () => {
     });
 
     it("cannot make status 'Incomplete' from dropdown", () => {
-      const detailView = mountDetailView('Teacher');
+      const detailView = mountDetailView();
       expect(
         detailView
           .find('#DetailViewHeader select')
@@ -147,7 +146,7 @@ describe('DetailViewContents', () => {
     });
 
     it('incomplete status is in dropdown if teacher application is incomplete', () => {
-      const detailView = mountDetailView('Teacher', {
+      const detailView = mountDetailView({
         applicationData: {
           ...DEFAULT_APPLICATION_DATA,
           status: 'incomplete',
@@ -167,177 +166,167 @@ describe('DetailViewContents', () => {
       let status_change_log = [];
 
       // get logs for changing through possible status
-      Object.keys(getSelectableApplicationStatuses('teacher')).forEach(
-        status => {
-          status_change_log.push({
-            changing_user: 'Test use',
-            time: '2018-06-01 12:00 PDT',
-            title: status
-          });
-        }
-      );
+      Object.keys(getSelectableApplicationStatuses()).forEach(status => {
+        status_change_log.push({
+          changing_user: 'Test use',
+          time: '2018-06-01 12:00 PDT',
+          title: status
+        });
+      });
 
       // check that recorded change logs are rendered in ChangeLog element
       const overrides = {
         applicationData: {status_change_log: status_change_log}
       };
-      const detailView = mountDetailView('Teacher', overrides);
+      const detailView = mountDetailView(overrides);
       expect(detailView.find('ChangeLog').props().changeLog).to.deep.equal(
         status_change_log
       );
     });
   });
 
-  const expectedTestData = ['Teacher'];
-
-  for (const applicationType of expectedTestData) {
-    describe('Admin edit dropdown', () => {
-      it('Is not visible to regional partners', () => {
-        const detailView = mountDetailView(applicationType, {
-          isWorkshopAdmin: false
-        });
-        expect(detailView.find('button#admin-edit')).to.have.length(0);
+  describe('Admin edit dropdown', () => {
+    it('Is not visible to regional partners', () => {
+      const detailView = mountDetailView({
+        isWorkshopAdmin: false
       });
-
-      it('Is visible to admins', () => {
-        const detailView = mountDetailView(applicationType, {
-          isWorkshopAdmin: true
-        });
-        expect(detailView.find('button#admin-edit')).to.have.length(2);
-      });
-
-      it('Edit redirects to edit page', () => {
-        const detailView = mountDetailView(applicationType, {
-          isWorkshopAdmin: true
-        });
-        const mockRouter = sinon.mock(context.router);
-
-        detailView
-          .find('button#admin-edit')
-          .first()
-          .simulate('click');
-        const adminEditMenuitem = detailView
-          .find('.dropdown.open a')
-          .findWhere(a => a.text() === '(Admin) Edit Form Data')
-          .first();
-
-        mockRouter.expects('push').withExactArgs('/1/edit');
-        adminEditMenuitem.simulate('click');
-        mockRouter.verify();
-      });
-
-      it('Has Delete Application menu item', () => {
-        const detailView = mountDetailView(applicationType, {
-          isWorkshopAdmin: true
-        });
-        detailView
-          .find('button#admin-edit')
-          .first()
-          .simulate('click');
-        const deleteApplicationMenuitem = detailView
-          .find('.dropdown.open a')
-          .findWhere(a => a.text() === 'Delete Application')
-          .first();
-
-        expect(deleteApplicationMenuitem).to.have.length(1);
-      });
-
-      it('Has Delete FiT Weekend Registration menu item if there is a FiT weekend registration', () => {
-        const overrides = {
-          isWorkshopAdmin: true,
-          applicationData: {registered_fit_weekend: true}
-        };
-        const detailView = mountDetailView(applicationType, overrides);
-        detailView
-          .find('button#admin-edit')
-          .first()
-          .simulate('click');
-        const deleteFitWeekendRegistrationMenuitem = detailView
-          .find('.dropdown.open a')
-          .findWhere(a => a.text() === 'Delete FiT Weekend Registration')
-          .first();
-
-        expect(deleteFitWeekendRegistrationMenuitem).to.have.length(1);
-      });
-
-      it('Does not have delete registration menu items if there are not registrations', () => {
-        const detailView = mountDetailView(applicationType, {
-          isWorkshopAdmin: true
-        });
-        detailView
-          .find('button#admin-edit')
-          .first()
-          .simulate('click');
-        const deleteTeacherconRegistrationMenuitem = detailView
-          .find('.dropdown.open a')
-          .findWhere(a => a.text() === 'Delete Teachercon Registration')
-          .first();
-        const deleteFitWeekendRegistrationMenuitem = detailView
-          .find('.dropdown.open a')
-          .findWhere(a => a.text() === 'Delete FiT Weekend Registration')
-          .first();
-
-        expect(deleteTeacherconRegistrationMenuitem).to.have.length(0);
-        expect(deleteFitWeekendRegistrationMenuitem).to.have.length(0);
-      });
+      expect(detailView.find('button#admin-edit')).to.have.length(0);
     });
 
-    describe('Edit controls behavior', () => {
-      it(`the dropdown is disabled until the Edit button is clicked in ${applicationType}`, () => {
-        const detailView = mountDetailView(applicationType);
-
-        let expectedButtons = ['Edit', 'Delete'];
-        expect(
-          detailView.find('#DetailViewHeader Button').map(button => {
-            return button.text();
-          })
-        ).to.deep.equal(expectedButtons);
-        expect(
-          detailView.find('#DetailViewHeader FormControl').prop('disabled')
-        ).to.be.true;
-        expect(detailView.find('textarea#notes').prop('disabled')).to.be.true;
-        expect(detailView.find('textarea#notes_2').prop('disabled')).to.be.true;
-
-        expectedButtons = ['Save', 'Cancel'];
-        detailView
-          .find('button#edit')
-          .first()
-          .simulate('click');
-        expect(
-          detailView.find('#DetailViewHeader Button').map(button => {
-            return button.text();
-          })
-        ).to.deep.equal(expectedButtons);
-        expect(
-          detailView.find('#DetailViewHeader FormControl').prop('disabled')
-        ).to.be.false;
-        expect(detailView.find('textarea#notes').prop('disabled')).to.be.false;
-        expect(detailView.find('textarea#notes_2').prop('disabled')).to.be
-          .false;
-
-        detailView
-          .find('#DetailViewHeader Button')
-          .last()
-          .simulate('click');
-        expect(
-          detailView.find('#DetailViewHeader FormControl').prop('disabled')
-        ).to.be.true;
-        expect(detailView.find('textarea#notes').prop('disabled')).to.be.true;
-        expect(detailView.find('textarea#notes_2').prop('disabled')).to.be.true;
+    it('Is visible to admins', () => {
+      const detailView = mountDetailView({
+        isWorkshopAdmin: true
       });
+      expect(detailView.find('button#admin-edit')).to.have.length(2);
     });
-  }
+
+    it('Edit redirects to edit page', () => {
+      const detailView = mountDetailView({
+        isWorkshopAdmin: true
+      });
+      const mockRouter = sinon.mock(context.router);
+
+      detailView
+        .find('button#admin-edit')
+        .first()
+        .simulate('click');
+      const adminEditMenuitem = detailView
+        .find('.dropdown.open a')
+        .findWhere(a => a.text() === '(Admin) Edit Form Data')
+        .first();
+
+      mockRouter.expects('push').withExactArgs('/1/edit');
+      adminEditMenuitem.simulate('click');
+      mockRouter.verify();
+    });
+
+    it('Has Delete Application menu item', () => {
+      const detailView = mountDetailView({
+        isWorkshopAdmin: true
+      });
+      detailView
+        .find('button#admin-edit')
+        .first()
+        .simulate('click');
+      const deleteApplicationMenuitem = detailView
+        .find('.dropdown.open a')
+        .findWhere(a => a.text() === 'Delete Application')
+        .first();
+
+      expect(deleteApplicationMenuitem).to.have.length(1);
+    });
+
+    it('Has Delete FiT Weekend Registration menu item if there is a FiT weekend registration', () => {
+      const overrides = {
+        isWorkshopAdmin: true,
+        applicationData: {registered_fit_weekend: true}
+      };
+      const detailView = mountDetailView(overrides);
+      detailView
+        .find('button#admin-edit')
+        .first()
+        .simulate('click');
+      const deleteFitWeekendRegistrationMenuitem = detailView
+        .find('.dropdown.open a')
+        .findWhere(a => a.text() === 'Delete FiT Weekend Registration')
+        .first();
+
+      expect(deleteFitWeekendRegistrationMenuitem).to.have.length(1);
+    });
+
+    it('Does not have delete registration menu items if there are not registrations', () => {
+      const detailView = mountDetailView({
+        isWorkshopAdmin: true
+      });
+      detailView
+        .find('button#admin-edit')
+        .first()
+        .simulate('click');
+      const deleteTeacherconRegistrationMenuitem = detailView
+        .find('.dropdown.open a')
+        .findWhere(a => a.text() === 'Delete Teachercon Registration')
+        .first();
+      const deleteFitWeekendRegistrationMenuitem = detailView
+        .find('.dropdown.open a')
+        .findWhere(a => a.text() === 'Delete FiT Weekend Registration')
+        .first();
+
+      expect(deleteTeacherconRegistrationMenuitem).to.have.length(0);
+      expect(deleteFitWeekendRegistrationMenuitem).to.have.length(0);
+    });
+  });
+
+  describe('Edit controls behavior', () => {
+    it('the dropdown is disabled until the Edit button is clicked in Teacher Application', () => {
+      const detailView = mountDetailView();
+
+      let expectedButtons = ['Edit', 'Delete'];
+      expect(
+        detailView.find('#DetailViewHeader Button').map(button => {
+          return button.text();
+        })
+      ).to.deep.equal(expectedButtons);
+      expect(detailView.find('#DetailViewHeader FormControl').prop('disabled'))
+        .to.be.true;
+      expect(detailView.find('textarea#notes').prop('disabled')).to.be.true;
+      expect(detailView.find('textarea#notes_2').prop('disabled')).to.be.true;
+
+      expectedButtons = ['Save', 'Cancel'];
+      detailView
+        .find('button#edit')
+        .first()
+        .simulate('click');
+      expect(
+        detailView.find('#DetailViewHeader Button').map(button => {
+          return button.text();
+        })
+      ).to.deep.equal(expectedButtons);
+      expect(detailView.find('#DetailViewHeader FormControl').prop('disabled'))
+        .to.be.false;
+      expect(detailView.find('textarea#notes').prop('disabled')).to.be.false;
+      expect(detailView.find('textarea#notes_2').prop('disabled')).to.be.false;
+
+      detailView
+        .find('#DetailViewHeader Button')
+        .last()
+        .simulate('click');
+      expect(detailView.find('#DetailViewHeader FormControl').prop('disabled'))
+        .to.be.true;
+      expect(detailView.find('textarea#notes').prop('disabled')).to.be.true;
+      expect(detailView.find('textarea#notes_2').prop('disabled')).to.be.true;
+    });
+  });
 
   describe('Principal Approvals', () => {
     it(`Shows principal responses if approval is complete`, () => {
-      const detailView = mountDetailView('Teacher');
+      const detailView = mountDetailView();
       expect(detailView.text()).to.contain(
         'Administrator Approval and School Information'
       );
     });
     it(`Shows URL to principal approval if sent and incomplete`, () => {
       const guid = '1020304';
-      const detailView = mountDetailView('Teacher', {
+      const detailView = mountDetailView({
         applicationData: {
           ...DEFAULT_APPLICATION_DATA,
           application_guid: guid,
@@ -361,7 +350,7 @@ describe('DetailViewContents', () => {
       expect(detailView.text()).to.contain(`Complete`);
     });
     it(`Shows button to make principal approval required if not`, () => {
-      const detailView = mountDetailView('Teacher', {
+      const detailView = mountDetailView({
         applicationData: {
           ...DEFAULT_APPLICATION_DATA,
           principal_approval_not_required: true
@@ -372,7 +361,7 @@ describe('DetailViewContents', () => {
       );
     });
     it(`Shows button to make principal approval not required if it is`, () => {
-      const detailView = mountDetailView('Teacher', {
+      const detailView = mountDetailView({
         applicationData: {
           ...DEFAULT_APPLICATION_DATA,
           principal_approval_not_required: null // principal approval is required
@@ -386,7 +375,7 @@ describe('DetailViewContents', () => {
 
   describe('Regional Partner View', () => {
     it('has delete button', () => {
-      const detailView = mountDetailView('Teacher', {
+      const detailView = mountDetailView({
         isWorkshopAdmin: false
       });
       const deleteButton = detailView.find('button#delete');
@@ -396,7 +385,7 @@ describe('DetailViewContents', () => {
 
   describe('Scholarship Teacher? row', () => {
     it('on teacher applications', () => {
-      const detailView = mountDetailView('Teacher', {
+      const detailView = mountDetailView({
         isWorkshopAdmin: true,
         regionalPartners: [{id: 1, name: 'test'}]
       });
@@ -450,7 +439,7 @@ describe('DetailViewContents', () => {
 
     for (const applicationStatus of ScholarshipStatusRequiredStatuses) {
       it(`is required in order to set application status to ${applicationStatus}`, () => {
-        detailView = mountDetailView('Teacher', {
+        detailView = mountDetailView({
           applicationData: {
             ...DEFAULT_APPLICATION_DATA,
             status: 'unreviewed',
@@ -481,11 +470,11 @@ describe('DetailViewContents', () => {
     }
 
     for (const applicationStatus of _.difference(
-      Object.keys(getSelectableApplicationStatuses('teacher')),
+      Object.keys(getSelectableApplicationStatuses()),
       ScholarshipStatusRequiredStatuses
     )) {
       it(`is not required to set application status to ${applicationStatus}`, () => {
-        detailView = mountDetailView('Teacher', {
+        detailView = mountDetailView({
           applicationData: {
             ...DEFAULT_APPLICATION_DATA,
             status: 'unreviewed',
@@ -503,7 +492,7 @@ describe('DetailViewContents', () => {
     }
 
     it('appends auto email text if set to true', () => {
-      detailView = mountDetailView('Teacher', {
+      detailView = mountDetailView({
         applicationData: {
           ...DEFAULT_APPLICATION_DATA,
           status: 'unreviewed',
@@ -514,7 +503,7 @@ describe('DetailViewContents', () => {
       });
       let options = detailView.find('#DetailViewHeader select').find('option');
       let applicationStatuses = Object.values(
-        getSelectableApplicationStatuses('teacher', true)
+        getSelectableApplicationStatuses(true)
       );
       var i = 0;
       options.forEach(option => {
@@ -524,7 +513,7 @@ describe('DetailViewContents', () => {
     });
 
     it('does not append auto email text if set to false', () => {
-      detailView = mountDetailView('Teacher', {
+      detailView = mountDetailView({
         applicationData: {
           ...DEFAULT_APPLICATION_DATA,
           status: 'unreviewed',
@@ -535,7 +524,7 @@ describe('DetailViewContents', () => {
       });
       let options = detailView.find('#DetailViewHeader select').find('option');
       let applicationStatuses = Object.values(
-        getSelectableApplicationStatuses('teacher', false)
+        getSelectableApplicationStatuses(false)
       );
       var i = 0;
       options.forEach(option => {

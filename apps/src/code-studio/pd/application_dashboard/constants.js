@@ -65,33 +65,19 @@ export const ScholarshipStatusRequiredStatuses = ['accepted'];
  * Valid statuses for this year's applications.
  * Format per application type is {value: label}
  */
-export function getApplicationStatuses(type, addAutoEmail = false) {
-  if (type === 'teacher') {
-    return {
-      incomplete: 'Incomplete',
-      awaiting_admin_approval: `Awaiting Admin Approval${autoEmailText(
-        addAutoEmail
-      )}`,
-      unreviewed: 'Unreviewed',
-      reopened: 'Reopened',
-      pending: 'Pending',
-      pending_space_availability: `Pending Space Availability`,
-      accepted: `Accepted${autoEmailText(addAutoEmail)}`,
-      declined: `Declined${autoEmailText(addAutoEmail)}`,
-      withdrawn: 'Withdrawn'
-    };
-  } else if (type === 'facilitator') {
-    return {
-      unreviewed: 'Unreviewed',
-      pending: 'Pending',
-      interview: 'Interview',
-      waitlisted: 'Waitlisted',
-      accepted: 'Accepted',
-      declined: 'Declined',
-      withdrawn: 'Withdrawn'
-    };
-  }
-}
+export const getApplicationStatuses = (addAutoEmail = false) => ({
+  incomplete: 'Incomplete',
+  awaiting_admin_approval: `Awaiting Admin Approval${autoEmailText(
+    addAutoEmail
+  )}`,
+  unreviewed: 'Unreviewed',
+  reopened: 'Reopened',
+  pending: 'Pending',
+  pending_space_availability: `Pending Space Availability`,
+  accepted: `Accepted${autoEmailText(addAutoEmail)}`,
+  declined: `Declined${autoEmailText(addAutoEmail)}`,
+  withdrawn: 'Withdrawn'
+});
 
 function autoEmailText(addAutoEmail) {
   if (addAutoEmail) {

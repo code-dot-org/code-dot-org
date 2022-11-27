@@ -212,7 +212,6 @@ export class DetailViewContents extends React.Component {
         cantSaveStatusReason: `Please assign a scholarship status to this applicant before setting this
                               applicant's status to ${
                                 getApplicationStatuses(
-                                  this.props.viewType,
                                   this.props.applicationData
                                     .update_emails_sent_by_system
                                 )[event.target.value]
@@ -580,7 +579,6 @@ export class DetailViewContents extends React.Component {
 
     const statuses = _.omit(
       getApplicationStatuses(
-        this.props.viewType,
         this.props.applicationData.update_emails_sent_by_system
       ),
       statusesToHide

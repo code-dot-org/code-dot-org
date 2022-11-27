@@ -129,11 +129,7 @@ export class QuickViewTable extends React.Component {
           transforms: [sortable]
         },
         cell: {
-          formatters: [
-            status =>
-              getApplicationStatuses(this.props.viewType)[status] ||
-              _.upperFirst(status)
-          ],
+          formatters: [() => getApplicationStatuses()],
           transforms: [
             status => ({
               style: {...styles.statusCellCommon, ...styles.statusCell[status]}
