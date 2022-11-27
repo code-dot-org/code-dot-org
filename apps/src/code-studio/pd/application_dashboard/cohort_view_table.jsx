@@ -21,7 +21,6 @@ export class CohortViewTable extends React.Component {
   static propTypes = {
     data: PropTypes.array.isRequired,
     path: PropTypes.string.isRequired,
-    viewType: PropTypes.oneOf(['teacher']).isRequired,
     regionalPartnerGroup: PropTypes.number,
     isWorkshopAdmin: PropTypes.bool,
     regionalPartnerFilter: RegionalPartnerPropType,
@@ -142,15 +141,13 @@ export class CohortViewTable extends React.Component {
       }
     ];
 
-    if (this.props.viewType === 'teacher') {
-      columns.push({
-        property: 'friendly_scholarship_status',
-        header: {
-          label: 'Scholarship Teacher?',
-          transforms: [sortable]
-        }
-      });
-    }
+    columns.push({
+      property: 'friendly_scholarship_status',
+      header: {
+        label: 'Scholarship Teacher?',
+        transforms: [sortable]
+      }
+    });
 
     columns.push({
       property: 'assigned_workshop',
