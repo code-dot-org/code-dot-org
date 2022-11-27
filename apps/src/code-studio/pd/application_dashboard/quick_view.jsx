@@ -57,7 +57,7 @@ export class QuickView extends React.Component {
   }
 
   UNSAFE_componentWillMount() {
-    const statusList = getApplicationStatuses(this.props.route.viewType);
+    const statusList = getApplicationStatuses();
     this.statuses = Object.keys(statusList).map(v => ({
       value: v,
       label: statusList[v]
