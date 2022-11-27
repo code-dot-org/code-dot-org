@@ -51,10 +51,6 @@ export const ApplicationFinalStatuses = [
   'withdrawn'
 ];
 
-export const ApplicationTypes = {
-  teacher: 'Teacher'
-};
-
 /**
  * Application statuses for which we require a scholarship status
  */
