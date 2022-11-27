@@ -43,7 +43,6 @@ describe('SummaryTable', () => {
 const DEFAULT_PROPS = {
   caption: 'Test summary table',
   path: 'foo',
-  applicationType: 'teacher',
   data: {
     unreviewed: {
       total: 10

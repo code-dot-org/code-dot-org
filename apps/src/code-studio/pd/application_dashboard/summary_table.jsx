@@ -20,8 +20,7 @@ export class SummaryTable extends React.Component {
     // keys are available statuses: {status: ApplicationDataPropType}
     data: PropTypes.objectOf(ApplicationDataPropType),
     path: PropTypes.string.isRequired,
-    id: PropTypes.string,
-    applicationType: PropTypes.oneOf(['teacher']).isRequired
+    id: PropTypes.string
   };
 
   static contextTypes = {
