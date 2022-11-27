@@ -21,7 +21,7 @@ export class SummaryTable extends React.Component {
     data: PropTypes.objectOf(ApplicationDataPropType),
     path: PropTypes.string.isRequired,
     id: PropTypes.string,
-    applicationType: PropTypes.oneOf(['teacher', 'facilitator']).isRequired
+    applicationType: PropTypes.oneOf(['teacher']).isRequired
   };
 
   static contextTypes = {
