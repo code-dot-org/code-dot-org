@@ -115,7 +115,6 @@ export class DetailViewContents extends React.Component {
       principal_approval_not_required: PropTypes.bool,
       allow_sending_principal_email: PropTypes.bool
     }).isRequired,
-    viewType: PropTypes.oneOf(['teacher']).isRequired,
     onUpdate: PropTypes.func,
     isWorkshopAdmin: PropTypes.bool,
     regionalPartnerGroup: PropTypes.number,
