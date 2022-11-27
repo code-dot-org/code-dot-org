@@ -135,7 +135,6 @@ export default class ApplicationDashboard extends React.Component {
                           ]
                     }
                     component={DetailView}
-                    viewType={DASHBOARD_COURSES[path].type}
                     course={DASHBOARD_COURSES[path].course}
                   />,
                   path !== 'incomplete_applications' && (
