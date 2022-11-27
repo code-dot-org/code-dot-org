@@ -49,7 +49,6 @@ export default class DetailView extends React.Component {
   renderApplication = ({applicationData, handleUpdate}) => (
     <DetailViewContents
       applicationId={this.props.params.applicationId}
-      viewType={this.props.route.viewType}
       applicationData={applicationData}
       onUpdate={handleUpdate}
     />

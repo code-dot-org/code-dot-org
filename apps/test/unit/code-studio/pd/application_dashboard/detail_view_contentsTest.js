@@ -87,7 +87,6 @@ describe('DetailViewContents', () => {
       canLock: true,
       applicationId: '1',
       applicationData: defaultApplicationData,
-      viewType: 'teacher',
       isWorkshopAdmin: false
     };
 
@@ -498,8 +497,7 @@ describe('DetailViewContents', () => {
           status: 'unreviewed',
           scholarship_status: null,
           update_emails_sent_by_system: true
-        },
-        viewType: 'teacher'
+        }
       });
       let options = detailView.find('#DetailViewHeader select').find('option');
       let applicationStatuses = Object.values(
@@ -519,8 +517,7 @@ describe('DetailViewContents', () => {
           status: 'unreviewed',
           scholarship_status: null,
           update_emails_sent_by_system: false
-        },
-        viewType: 'teacher'
+        }
       });
       let options = detailView.find('#DetailViewHeader select').find('option');
       let applicationStatuses = Object.values(
