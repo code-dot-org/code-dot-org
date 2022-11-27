@@ -18,7 +18,6 @@ export class QuickViewTable extends React.Component {
     applications: PropTypes.array.isRequired,
     statusFilter: PropTypes.string,
     regionalPartnerName: PropTypes.string,
-    viewType: PropTypes.oneOf(['teacher']).isRequired,
     regionalPartnerGroup: PropTypes.number,
     isWorkshopAdmin: PropTypes.bool
   };
