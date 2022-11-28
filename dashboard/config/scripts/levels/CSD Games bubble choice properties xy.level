@@ -92,7 +92,7 @@
     "bubble_choice_description": "Use the x and y coordinates to place the curtains around the singer",
     "encrypted_examples": "T+VesoOy/l6WsJHkmEfCoY8kG+gDDU1BmLqzuupGxdC3eUXjAo8YpCdBrBko\nSdPe1KgYgB/eAKUBGPceMB2xKQ==\n",
     "preload_asset_list": null,
-    "map_reference": "/docs/concepts/game-lab/sprites/sprite-properties/"
+    "map_reference": "/courses/csd-2022/guides/sprite-properties"
   },
   "published": true,
   "notes": "",
