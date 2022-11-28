@@ -60,7 +60,7 @@
     "ai_enabled": "false",
     "reference_links": [
       "/docs/concepts/maker-toolkit/physical-input/",
-      "/docs/concepts/javascript/variables/",
+      "/courses/csd-2022/guides/variables",
       "/docs/concepts/patterns/counter-patterns-with-event/"
     ],
     "start_blocks": "var value = 0;\r\n\r\nonBoardEvent(buttonL, \"down\", function() {\r\n  value = value + 1;\r\n  setText(\"valueLabel\", value);\r\n});\r\n\r\nonBoardEvent(buttonR, \"down\", function() {\r\n  //Add your code here!\r\n  \r\n  setText(\"valueLabel\", value);\r\n});\r\n",
