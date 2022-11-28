@@ -737,7 +737,7 @@
           "student_overview": "Écris des algorithmes qui aideront _Laurel l'Aventurière_ à ramasser plein de gemmes !"
         },
         "express-2022/Creating Art with Code": {
-          "name": "Faire de l'Art avec le Code",
+          "name": "Faire de l'Art avec du Code",
           "overview": "Dans cette leçon, les élèves prendront le contrôle de l'Artiste pour réaliser les dessins à l'écran. Cette phase d'Artiste permettra aux élèves de créer des images de complexité croissante, en utilisant de nouveaux blocs tels que `avancer de 100 pixels` et `tourner à droite de 90 degrés`.",
           "preparation": "-   Résolvez les énigmes pour trouver les problèmes potentiels pour votre classe.\n-   (Facultatif) Obtenez des rapporteurs pour votre classe afin de visualiser les angles qu'ils doivent utiliser pour compléter les énigmes.\n-   Imprimez un **\\*Document de l'élève** pour chaque élève. ",
           "purpose": "S'appuyant sur l'expérience précédente des élèves avec le séquençage, cette leçon est destinée à inspirer plus de créativité avec le codage. Le but de cette leçon est de consolider les connaissances en séquençage, en introduisant de nouveaux blocs et objectifs. Dans le cas présent, les élèves en élargissent leurs connaissances sur les pixels et les angles, en utilisant les nouveaux blocs, tout en mettant en pratique leurs compétences de séquençage. Aussi, les étudiants seront en mesure de visualiser de nouveaux objectifs tels que le codage de l'Artiste pour dessiner un carré.",
@@ -1069,7 +1069,7 @@
         },
         "coursec-2022/Programming with Angry Birds": {
           "name": "Programmer avec Angry Birds",
-          "overview": "En utilisant des personnages du jeu Angry Birds, les élèves développeront des algorithmes séquentiels pour déplacer un oiseau d'un côté d'un labyrinthe au cochon, de l'autre côté. Pour ce faire, ils empileront des blocs de code ensemble, dans une séquence linéaire, les faisant se déplacer tout droit, tourner à gauche ou tourner à droite.",
+          "overview": "Dans cette leçon de **développement des compétences**, les élèves développeront des algorithmes séquentiels afin de déplacer l'oiseau d'un côté du labyrinthe vers le cochon qui se trouve de l'autre côté. Pour ce faire, ils empileront des blocs de code ensemble, dans une séquence linéaire, qui feront avancer, tourner à gauche ou tourner à droite les personnages.",
           "purpose": "Dans cette leçon, les élèves développeront des compétences de programmation et de débogage sur une plate-forme informatique. Le format de ces énigmes, basé sur des blocs, aide les élèves à apprendre la séquence et les concepts, sans avoir à se soucier de perfectionner la syntaxe.",
           "student_overview": "Apprends tout sur les séquences et les algorithmes avec _Angry Birds_."
         },
@@ -1083,48 +1083,48 @@
           "name": "Collectionner du Trésor avec Laurel",
           "overview": "Dans cette leçon de **développement des compétences**, les élèves continueront à développer leur compréhension des algorithmes et du débogage. Les élève créeront des algorithmes séquentiels avec un nouveau personnage, _Laurel l'Aventurière_, pour l'aider à ramasser du trésor en marchant le long d'un chemin.",
           "purpose": "Dans cette leçon, les élèves mettront en pratique leurs compétences en programmation à l'aide d'un nouveau personnage, Laurel l'aventurier. Lorsque quelqu'un commence à programmer, il assemble des instructions dans un ordre bien précis, avec quelque chose qui peut être lu par une machine. Grâce à l'utilisation de la programmation, les élèves développeront une compréhension de la façon dont un ordinateur parcourt les instructions et l'ordre. L'utilisation d'un nouveau personnage avec un objectif de puzzle différent les aidera à élargir leur champ d'expérience avec le séquençage et les algorithmes en programmation. ",
-          "student_overview": "Ecris des algorithmes pour aider Laurel l'Aventurière à collecter beaucoup de joyaux !"
+          "student_overview": "Écris des algorithmes pour aider Laurel l'Aventurière à faire la collection de plein de pierres précieuses !"
         },
         "coursec-2022/Creating Art with Code": {
-          "name": "Faire de l'Art avec le Code",
+          "name": "Faire de l'Art avec du Code",
           "overview": "Dans cette leçon, les élèves prendront le contrôle de l'Artiste pour réaliser les dessins à l'écran. Cette phase d'Artiste permettra aux élèves de créer des images de complexité croissante, en utilisant de nouveaux blocs tels que `avancer de 100 pixels` et `tourner à droite de 90 degrés`.",
           "preparation": "-   Résolvez les énigmes pour trouver les problèmes potentiels pour votre classe.\n-   (Facultatif) Obtenez des rapporteurs pour votre classe afin de visualiser les angles qu'ils doivent utiliser pour compléter les énigmes.\n-   Imprimez un **\\*Document de l'élève** pour chaque élève. ",
           "purpose": "S'appuyant sur l'expérience précédente des élèves avec le séquençage, cette leçon est destinée à inspirer plus de créativité avec le codage. Le but de cette leçon est de consolider les connaissances en séquençage, en introduisant de nouveaux blocs et objectifs. Dans le cas présent, les élèves en élargissent leurs connaissances sur les pixels et les angles, en utilisant les nouveaux blocs, tout en mettant en pratique leurs compétences de séquençage. Aussi, les étudiants seront en mesure de visualiser de nouveaux objectifs tels que le codage de l'Artiste pour dessiner un carré.",
           "student_overview": "Crée de belles images en programmant l'Artiste."
         },
         "coursec-2022/My Loopy Robotic Friends Jr": {
-          "name": "Mes Amis Robotiques Jr. qui Tournent en Rond",
-          "overview": "En s'appuyant sur l'activité initiale \"Mes Amis Robotiques\", les élèves abordent des conceptions plus grandes et plus compliquées. Afin de programmer leurs \"robots\" pour compléter ces conceptions plus grandes, les étudiants devront identifier des modèles répétés dans leurs instructions qui pourraient être remplacés par une boucle.",
+          "name": "Mes Amis Robotiques Maboul Jr.",
+          "overview": "Cette **leçon de mise en contexte** s'appuie sur la première activité « Mes Amis Robotiques », avec des motifs plus grands et plus compliqués. ",
           "purpose": "Cette leçon sert de réintroduction aux boucles, en utilisant l'ensemble, désormais familier, des instructions de programmation \"robot\". Les élèves développeront des compétences de pensée critique en recherchant des modèles de répétition dans les mouvements des camarades de classe et en déterminant comment simplifier ces modèles répétés en utilisant des boucles.",
-          "student_overview": "Dans cette leçon, tu programmeras à nouveau tes camarades de classe mais, en utilisant des boucles, tu seras en mesure de résoudre des problèmes plus importants et plus compliqués."
+          "student_overview": "Dans cette leçon, tu programmeras à nouveau tes camarades de classe mais, en utilisant des boucles, tu pourras résoudre des problèmes plus gros et plus compliqués."
         },
         "coursec-2022/Loops with Rey and BB-8": {
           "name": "Les Boucles avec Rey et BB-8",
-          "overview": "En s'appuyant sur le concept de répéter les instructions de « Tourner en Rond », les élèves utiliseront des boucles pour aider BB-8 à traverser un labyrinthe plus efficacement qu'auparavant.",
+          "overview": "Cette leçon de **développement des compétences** fait utiliser des boucles aux élèves pour aider BB-8 à traverser un labyrinthe de manière efficace.",
           "purpose": "Dans cette leçon, les élèves en apprendront davantage sur les boucles et comment les implémenter dans le code Blockly. L'utilisation de boucles est une compétence importante en programmation car la répétition manuelle des commandes est fastidieuse et inefficace. Avec les puzzles Code.org, les élèves apprendront à ajouter des instructions aux boucles existantes, à rassembler le code répété en boucles et à reconnaître les modèles qui doivent être bouclés. Il convient de noter que les élèves seront confrontés à des énigmes avec de nombreuses solutions différentes. Cela ouvrira des discussions sur les différentes façons de résoudre des énigmes avec des avantages et des inconvénients à chaque approche. ",
           "student_overview": "Aide BB-8 à traverser des labyrinthes en utilisant des boucles ! "
         },
         "coursec-2022/Harvesting Crops with Loops": {
-          "name": "Récolter des Cultures avec des Boucles",
-          "overview": "Les élèves font de nouvelles boucles pour que l'agricultrice récolte plusieurs légumes poussant en gros bouquets dans cette leçon de **renforcement des compétences**. ",
+          "name": "Récolter des Cultures avec les Boucles",
+          "overview": "Les élèves mettront de nouvelles actions en boucle pour permettre à l'agricultrice de récolter plusieurs légumes poussant au sein de grosses cultures dans cette leçon de **développement des compétences**. ",
           "purpose": "Dans cette leçon, les élèves utiliseront des boucles pour répéter des actions telles que la récolte de citrouilles. De nouveaux modèles émergeront et ils pourront utiliser leur créativité et leur raisonnement logique pour déterminer quel code doit être répété et combien de fois. ",
-          "student_overview": "Utilisons des boucles pour aider l'Agricultrice à ramasser des légumes !"
+          "student_overview": "On va utiliser des boucles pour aider l'agricultrice à récolter des légumes !"
         },
         "coursec-2022/Mini-Project: Sticker Art": {
           "name": "Mini-projet : Design à base d'autocollants ",
-          "overview": "Cette leçon **mini-projet** s'appuie sur la compréhension des boucles des leçons précédentes. Les élèves créeront des œuvres d'art uniques avec l'Artiste.",
+          "overview": "Cette leçon **mini-projet** s'appuie sur la compréhension des boucles acquise lors des leçons précédentes. Les élèves créeront des œuvres d'art uniques avec l'Artiste.",
           "purpose": "Cette série met en valeur la puissance des boucles avec des motifs créatifs et personnels.  Présentée comme une séquence soutenue par un projet, cette progression permettra aux étudiants de construire sur leur propre travail et de créer des artefacts étonnants.",
           "student_overview": "Dans cette leçon, les boucles facilitent la création d'images encore plus stylées avec l'Artiste !"
         },
         "coursec-2022/The Big Event": {
           "name": "Le Grand Événement",
-          "overview": "Les élèves apprendront bientôt que les événements sont un excellent moyen d'ajouter de la flexibilité à un algorithme pré-écrit. Parfois, vous voulez que votre programme soit en mesure de répondre à l'utilisateur exactement quand l'utilisateur le souhaite. Les événements peuvent rendre votre programme plus intéressant et interactif.",
+          "overview": "Dans cette leçon de **mise en contexte**, les élèves apprendront que les événements constituent un excellent moyen de rendre plus flexible un algorithme écrit au préalable.",
           "purpose": "Aujourd'hui, les élèves apprendront à distinguer les événements des actions. Les élèves verront des activités interrompues par un \"bouton\" enfoncé sur une télécommande papier. En voyant cet événement, la classe réagira avec une action unique. Les événements sont largement utilisés dans la programmation et devraient être facilement reconnaissables après cette leçon.",
-          "student_overview": "Jouer un jeu amusant pour découvrir les événements. "
+          "student_overview": "Joue à un jeu amusant pour découvrir les événements. "
         },
         "coursec-2022/Build a Flappy Game": {
           "name": "Construire un Jeu Flappy",
-          "overview": "Dans cette étape spéciale, les élèves peuvent créer leur propre jeu d'Oiseaux Flappy en utilisant des gestionnaires d'événements pour détecter les clics de souris et les collisions d'objets. À la fin du niveau, les élèves seront capables de personnaliser leur jeu en changeant les visuels ou les règles.",
+          "overview": "Cette leçon associe **le renforcement des compétences** autour des événements à un **mini-projet** dans le cadre duquel les élèves peuvent créer leur propre jeu Flappy Bird. À la fin de la leçon, les élèves pourront personnaliser leur jeu en modifiant les visuels ou les règles.",
           "purpose": "Les événements sont très fréquents dans les programmes informatiques. Dans cette leçon, les élèves développeront leur compréhension des événements en créant un jeu_d_'Oiseaux Flappy. Les élèves apprendront à faire bouger leur personnage à travers l'écran, à créer des bruits et à réagir aux obstacles, en fonction des événements initiés par l'utilisateur.",
           "student_overview": "Construis ton propre jeu d'Oiseaux Flappy, comme te le souhaites, puis partage-le avec tes amis !"
         },
@@ -1576,7 +1576,7 @@
           "name": "Programmer avec Rey et BB-8"
         },
         "courseb-2018/Loops: My Loopy Robotic Friends": {
-          "name": "Mes Amis Robotiques Jr. qui Tournent en Rond"
+          "name": "Mes Amis Robotiques Maboul Jr."
         },
         "courseb-2018/Loops in Ice Age": {
           "name": "Les Boucles avec Scrat"
@@ -1705,7 +1705,7 @@
           "name": "Déboguer avec Scrat"
         },
         "coursef-2018/Programming in Artist": {
-          "name": "Faire de l'Art avec le Code"
+          "name": "Faire de l'Art avec du Code"
         },
         "coursef-2018/Loops: My Loopy Robotic Friends": {
           "name": "traduction manquante : en-US.data.unplugged.courseB_unplugged_loopyMRF\\_2018.title"
@@ -1792,7 +1792,7 @@
           "name": "Collectionner du Trésor avec Laurel"
         },
         "express-2018/Programming in Artist": {
-          "name": "Faire de l'Art avec le Code"
+          "name": "Faire de l'Art avec du Code"
         },
         "express-2018/Loops: Getting Loopy": {
           "name": "Affaire bouclée"
@@ -1930,7 +1930,7 @@
           "name": "Déboguer avec Scrat"
         },
         "coursee-2018/Programming in Artist": {
-          "name": "Faire de l'Art avec le Code"
+          "name": "Faire de l'Art avec du Code"
         },
         "coursee-2018/Loops: My Loopy Robotic Friends": {
           "name": "traduction manquante : en-US.data.unplugged.courseB_unplugged_loopyMRF\\_2018.title"
@@ -2017,7 +2017,7 @@
           "name": "Collectionner du Trésor avec Laurel"
         },
         "coursec-2018/Programming in Artist": {
-          "name": "Faire de l'Art avec le Code"
+          "name": "Faire de l'Art avec du Code"
         },
         "coursec-2018/Loops: Getting Loopy": {
           "name": "Affaire bouclée"
@@ -2029,7 +2029,7 @@
           "name": "L'Art de l'Autocollant avec les Boucles"
         },
         "coursec-2018/Loops in Harvester": {
-          "name": "Récolter des Cultures avec des Boucles"
+          "name": "Récolter des Cultures avec les Boucles"
         },
         "coursec-2018/Events: The Big Event": {
           "name": "Le Grand Événement"
@@ -2077,7 +2077,7 @@
           "name": "Programmer avec Rey et BB-8"
         },
         "pre-express-2018/Loops: My Loopy Robotic Friends": {
-          "name": "Mes Amis Robotiques Jr. qui Tournent en Rond"
+          "name": "Mes Amis Robotiques Maboul Jr."
         },
         "pre-express-2018/Loops in Ice Age": {
           "name": "Les Boucles avec Scrat"
@@ -2641,7 +2641,7 @@
           "name": "Collectionner du Trésor avec Laurel"
         },
         "express-2019/Programming in Artist": {
-          "name": "Faire de l'Art avec le Code"
+          "name": "Faire de l'Art avec du Code"
         },
         "express-2019/Loops with Rey and BB-8": {
           "name": "Les Boucles avec Rey et BB-8"
@@ -2731,19 +2731,19 @@
           "name": "Collectionner du Trésor avec Laurel"
         },
         "coursec-2019/Programming in Artist": {
-          "name": "Faire de l'Art avec le Code"
+          "name": "Faire de l'Art avec du Code"
         },
         "coursec-2019/Binary Bracelets": {
           "name": "Les bracelets binaires"
         },
         "coursec-2019/Loops: My Loopy Robotic Friends": {
-          "name": "Mes Amis Robotiques Jr. qui Tournent en Rond"
+          "name": "Mes Amis Robotiques Maboul Jr."
         },
         "coursec-2019/Loops with Rey and BB-8": {
           "name": "Les Boucles avec Rey et BB-8"
         },
         "coursec-2019/Loops in Harvester": {
-          "name": "Récolter des Cultures avec des Boucles"
+          "name": "Récolter des Cultures avec les Boucles"
         },
         "coursec-2019/Looking Ahead": {
           "name": "Anticiper l'avenir avec Minecraft"
@@ -4631,7 +4631,7 @@
         },
         "coursec-2021/Programming in Maze": {
           "name": "Programmer avec Angry Birds",
-          "overview": "En utilisant des personnages du jeu Angry Birds, les élèves développeront des algorithmes séquentiels pour déplacer un oiseau d'un côté d'un labyrinthe au cochon, de l'autre côté. Pour ce faire, ils empileront des blocs de code ensemble, dans une séquence linéaire, les faisant se déplacer tout droit, tourner à gauche ou tourner à droite.",
+          "overview": "Dans cette leçon de **développement des compétences**, les élèves développeront des algorithmes séquentiels afin de déplacer l'oiseau d'un côté du labyrinthe vers le cochon qui se trouve de l'autre côté. Pour ce faire, ils empileront des blocs de code ensemble, dans une séquence linéaire, qui feront avancer, tourner à gauche ou tourner à droite les personnages.",
           "preparation": "-   Résolvez les énigmes pour trouver les problèmes potentiels pour votre classe.\n-   (Facultatif) Choisissez quelques énigmes à faire en groupe avec votre classe.\n-   Assurez-vous que chaque élève ait bien un journal de réflexion. ",
           "purpose": "Dans cette leçon, les élèves développeront des compétences de programmation et de débogage sur une plate-forme informatique. Le format de ces énigmes, basé sur des blocs, aide les élèves à apprendre la séquence et les concepts, sans avoir à se soucier de perfectionner la syntaxe.",
           "student_overview": "Apprends tout sur les séquences et les algorithmes avec _Angry Birds_."
@@ -4648,53 +4648,53 @@
           "overview": "Dans cette leçon de **développement des compétences**, les élèves continueront à développer leur compréhension des algorithmes et du débogage. Les élève créeront des algorithmes séquentiels avec un nouveau personnage, _Laurel l'Aventurière_, pour l'aider à ramasser du trésor en marchant le long d'un chemin.",
           "preparation": "-   Résolvez les énigmes pour trouver les problèmes potentiels pour votre classe.\n-   Assurez-vous que chaque élève ait bien un journal de réflexion. ",
           "purpose": "Dans cette leçon, les élèves mettront en pratique leurs compétences en programmation à l'aide d'un nouveau personnage, Laurel l'aventurier. Lorsque quelqu'un commence à programmer, il assemble des instructions dans un ordre bien précis, avec quelque chose qui peut être lu par une machine. Grâce à l'utilisation de la programmation, les élèves développeront une compréhension de la façon dont un ordinateur parcourt les instructions et l'ordre. L'utilisation d'un nouveau personnage avec un objectif de puzzle différent les aidera à élargir leur champ d'expérience avec le séquençage et les algorithmes en programmation. ",
-          "student_overview": "Ecris des algorithmes pour aider Laurel l'Aventurière à collecter beaucoup de joyaux !"
+          "student_overview": "Écris des algorithmes pour aider Laurel l'Aventurière à faire la collection de plein de pierres précieuses !"
         },
         "coursec-2021/Programming in Artist": {
-          "name": "Faire de l'Art avec le Code",
+          "name": "Faire de l'Art avec du Code",
           "overview": "Dans cette leçon, les élèves prendront le contrôle de l'Artiste pour réaliser les dessins à l'écran. Cette phase d'Artiste permettra aux élèves de créer des images de complexité croissante, en utilisant de nouveaux blocs tels que `avancer de 100 pixels` et `tourner à droite de 90 degrés`.",
           "preparation": "-   Résolvez les énigmes pour trouver les problèmes potentiels pour votre classe.\n-   (Facultatif) Obtenez des rapporteurs pour votre classe afin de visualiser les angles qu'ils doivent utiliser pour compléter les énigmes.\n-   Imprimez un **\\*Document de l'élève** pour chaque élève. ",
           "purpose": "S'appuyant sur l'expérience précédente des élèves avec le séquençage, cette leçon est destinée à inspirer plus de créativité avec le codage. Le but de cette leçon est de consolider les connaissances en séquençage, en introduisant de nouveaux blocs et objectifs. Dans le cas présent, les élèves en élargissent leurs connaissances sur les pixels et les angles, en utilisant les nouveaux blocs, tout en mettant en pratique leurs compétences de séquençage. Aussi, les étudiants seront en mesure de visualiser de nouveaux objectifs tels que le codage de l'Artiste pour dessiner un carré.",
           "student_overview": "Crée de belles images en programmant l'Artiste."
         },
         "coursec-2021/Loops: My Loopy Robotic Friends": {
-          "name": "Mes Amis Robotiques Jr. qui Tournent en Rond",
-          "overview": "En s'appuyant sur l'activité initiale \"Mes Amis Robotiques\", les élèves abordent des conceptions plus grandes et plus compliquées. Afin de programmer leurs \"robots\" pour compléter ces conceptions plus grandes, les étudiants devront identifier des modèles répétés dans leurs instructions qui pourraient être remplacés par une boucle.",
+          "name": "Mes Amis Robotiques Maboul Jr.",
+          "overview": "Cette **leçon de mise en contexte** s'appuie sur la première activité « Mes Amis Robotiques », avec des motifs plus grands et plus compliqués. ",
           "preparation": "-   Assurez-vous que chaque élève ait bien un journal.\n-   Préparez une pile de 20 gobelets en papier (ou **\\*trapèzes en papier**) pour chaque groupe de 4 élèves.\n-   Affichez les **\\*symboles** auxquels les élèves peuvent se référer tout au long de la leçon.\n-   (Facultatif) Imprimez une **\\*Idées d'empilage de tasses** par groupe de 4 élèves. ",
           "purpose": "Cette leçon sert de réintroduction aux boucles, en utilisant l'ensemble, désormais familier, des instructions de programmation \"robot\". Les élèves développeront des compétences de pensée critique en recherchant des modèles de répétition dans les mouvements des camarades de classe et en déterminant comment simplifier ces modèles répétés en utilisant des boucles.",
-          "student_overview": "Dans cette leçon, tu programmeras à nouveau tes camarades de classe mais, en utilisant des boucles, tu seras en mesure de résoudre des problèmes plus importants et plus compliqués."
+          "student_overview": "Dans cette leçon, tu programmeras à nouveau tes camarades de classe mais, en utilisant des boucles, tu pourras résoudre des problèmes plus gros et plus compliqués."
         },
         "coursec-2021/Loops with Rey and BB-8": {
           "name": "Les Boucles avec Rey et BB-8",
-          "overview": "En s'appuyant sur le concept de répéter les instructions de « Tourner en Rond », les élèves utiliseront des boucles pour aider BB-8 à traverser un labyrinthe plus efficacement qu'auparavant.",
+          "overview": "Cette leçon de **développement des compétences** fait utiliser des boucles aux élèves pour aider BB-8 à traverser un labyrinthe de manière efficace.",
           "preparation": "-   Résolvez les énigmes pour voir s'il y aura des problèmes avec votre classe.\n-   Assurez-vous que chaque élève ait bien un journal de réflexion. ",
           "purpose": "Dans cette leçon, les élèves en apprendront davantage sur les boucles et comment les implémenter dans le code Blockly. L'utilisation de boucles est une compétence importante en programmation car la répétition manuelle des commandes est fastidieuse et inefficace. Avec les puzzles Code.org, les élèves apprendront à ajouter des instructions aux boucles existantes, à rassembler le code répété en boucles et à reconnaître les modèles qui doivent être bouclés. Il convient de noter que les élèves seront confrontés à des énigmes avec de nombreuses solutions différentes. Cela ouvrira des discussions sur les différentes façons de résoudre des énigmes avec des avantages et des inconvénients à chaque approche. ",
           "student_overview": "Aide BB-8 à traverser des labyrinthes en utilisant des boucles ! "
         },
         "coursec-2021/Loops in Harvester": {
-          "name": "Récolter des Cultures avec des Boucles",
-          "overview": "Les élèves font de nouvelles boucles pour que l'agricultrice récolte plusieurs légumes poussant en gros bouquets dans cette leçon de **renforcement des compétences**. ",
+          "name": "Récolter des Cultures avec les Boucles",
+          "overview": "Les élèves mettront de nouvelles actions en boucle pour permettre à l'agricultrice de récolter plusieurs légumes poussant au sein de grosses cultures dans cette leçon de **développement des compétences**. ",
           "preparation": "-   Parcourez les énigmes pour trouver des problèmes potentiels pour votre groupe scolaire.\n-   Assurez-vous que chaque élève ait bien un journal de réflexion. ",
           "purpose": "Dans cette leçon, les élèves utiliseront des boucles pour répéter des actions telles que la récolte de citrouilles. De nouveaux modèles émergeront et ils pourront utiliser leur créativité et leur raisonnement logique pour déterminer quel code doit être répété et combien de fois. ",
-          "student_overview": "Utilisons des boucles pour aider l'Agricultrice à ramasser des légumes !"
+          "student_overview": "On va utiliser des boucles pour aider l'agricultrice à récolter des légumes !"
         },
         "coursec-2021/Sticker Art with Loops": {
           "name": "Mini-projet : Design à base d'autocollants ",
-          "overview": "Cette leçon **mini-projet** s'appuie sur la compréhension des boucles des leçons précédentes. Les élèves créeront des œuvres d'art uniques avec l'Artiste.",
+          "overview": "Cette leçon **mini-projet** s'appuie sur la compréhension des boucles acquise lors des leçons précédentes. Les élèves créeront des œuvres d'art uniques avec l'Artiste.",
           "preparation": "-   Entraînez-vous à créer votre propre design. Notez à quel point ces niveaux sont différents de tout ce qui a précédé.\n-   Assurez-vous que chaque élève ait bien un journal de réflexion. ",
           "purpose": "Cette série met en valeur la puissance des boucles avec des motifs créatifs et personnels.  Présentée comme une séquence soutenue par un projet, cette progression permettra aux étudiants de construire sur leur propre travail et de créer des artefacts étonnants.",
           "student_overview": "Dans cette leçon, les boucles facilitent la création d'images encore plus stylées avec l'Artiste !"
         },
         "coursec-2021/Events: The Big Event": {
           "name": "Le Grand Événement",
-          "overview": "Les élèves apprendront bientôt que les événements sont un excellent moyen d'ajouter de la flexibilité à un algorithme pré-écrit. Parfois, vous voulez que votre programme soit en mesure de répondre à l'utilisateur exactement quand l'utilisateur le souhaite. Les événements peuvent rendre votre programme plus intéressant et interactif.",
+          "overview": "Dans cette leçon de **mise en contexte**, les élèves apprendront que les événements constituent un excellent moyen de rendre plus flexible un algorithme écrit au préalable.",
           "preparation": "-   Imprimer ou afficher le **\\*Event Controller**.\n-   Imprimez une **\\*Évaluation** par élève.\n-   Assurez-vous que chaque élève ait bien un journal de réflexion.",
           "purpose": "Aujourd'hui, les élèves apprendront à distinguer les événements des actions. Les élèves verront des activités interrompues par un \"bouton\" enfoncé sur une télécommande papier. En voyant cet événement, la classe réagira avec une action unique. Les événements sont largement utilisés dans la programmation et devraient être facilement reconnaissables après cette leçon.",
-          "student_overview": "Jouer un jeu amusant pour découvrir les événements. "
+          "student_overview": "Joue à un jeu amusant pour découvrir les événements. "
         },
         "coursec-2021/Build a Flappy Game": {
           "name": "Construire un Jeu Flappy",
-          "overview": "Dans cette étape spéciale, les élèves peuvent créer leur propre jeu d'Oiseaux Flappy en utilisant des gestionnaires d'événements pour détecter les clics de souris et les collisions d'objets. À la fin du niveau, les élèves seront capables de personnaliser leur jeu en changeant les visuels ou les règles.",
+          "overview": "Cette leçon associe **le renforcement des compétences** autour des événements à un **mini-projet** dans le cadre duquel les élèves peuvent créer leur propre jeu Flappy Bird. À la fin de la leçon, les élèves pourront personnaliser leur jeu en modifiant les visuels ou les règles.",
           "preparation": "-   Parcourez les énigmes pour trouver des problèmes potentiels pour votre groupe scolaire.\n-   Assurez-vous que chaque élève ait bien un journal de réflexion. ",
           "purpose": "Les événements sont très fréquents dans les programmes informatiques. Dans cette leçon, les élèves développeront leur compréhension des événements en créant un jeu_d_'Oiseaux Flappy. Les élèves apprendront à faire bouger leur personnage à travers l'écran, à créer des bruits et à réagir aux obstacles, en fonction des événements initiés par l'utilisateur.",
           "student_overview": "Construis ton propre jeu d'Oiseaux Flappy, comme te le souhaites, puis partage-le avec tes amis !"
@@ -5591,7 +5591,7 @@
           "name": "Collectionner du Trésor avec Laurel"
         },
         "express-2020/Creating Art with Code": {
-          "name": "Faire de l'Art avec le Code"
+          "name": "Faire de l'Art avec du Code"
         },
         "express-2020/Loops with Rey and BB-8": {
           "name": "Les Boucles avec Rey et BB-8"
@@ -5765,19 +5765,19 @@
           "name": "Collectionner du Trésor avec Laurel"
         },
         "coursec-2020/Programming in Artist": {
-          "name": "Faire de l'Art avec le Code"
+          "name": "Faire de l'Art avec du Code"
         },
         "coursec-2020/Binary Bracelets": {
           "name": "Les bracelets binaires"
         },
         "coursec-2020/Loops: My Loopy Robotic Friends": {
-          "name": "Mes Amis Robotiques Jr. qui Tournent en Rond"
+          "name": "Mes Amis Robotiques Maboul Jr."
         },
         "coursec-2020/Loops with Rey and BB-8": {
           "name": "Les Boucles avec Rey et BB-8"
         },
         "coursec-2020/Loops in Harvester": {
-          "name": "Récolter des Cultures avec des Boucles"
+          "name": "Récolter des Cultures avec les Boucles"
         },
         "coursec-2020/Looking Ahead": {
           "name": "Anticiper l'avenir avec Minecraft"

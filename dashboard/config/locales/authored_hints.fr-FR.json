@@ -887,8 +887,8 @@
           "courseC_flappy_events1_a": "[][0]"
         },
         "OPD-K5-events-3": {
-          "courseC_flappy_events2_a": "Le bloc que tu dois ajouter s’appelle ˋdéfinis une vitesse`. ",
-          "courseC_flappy_events2_b": "Connecte le bloc ˋdéfinis une vitesse` au bloc ˋquand l’exécution commenceˋ pour résoudre ce casse-tête."
+          "courseC_flappy_events2_a": "Le bloc que tu as besoin d'ajouter s’appelle ˋdéfinir la vitesse`. ",
+          "courseC_flappy_events2_b": "Connecte le bloc ˋdéfinir la vitesse` au bloc ˋquand l’exécution commenceˋ pour résoudre ce casse-tête."
         },
         "OPD-K5-events-4": {
           "courseC_flappy_events3_a": "Si quelque chose ne fonctionne pas correctement, assure-toi que tes blocs sont connectés aux bons événements dans l’espace de travail."
@@ -4158,20 +4158,20 @@
           "courseC_flappy_events1_a": "![](https://images.code.org/5f1d0edf6ebb44d98ffdce623cfe0ad4-image-1501192487040.gif)"
         },
         "courseC_flappy_events2": {
-          "courseC_flappy_events2_a": "Le bloc que tu dois ajouter s’appelle ˋdéfinis une vitesse\\`. ",
-          "courseC_flappy_events2_b": "Connecte le bloc ˋdéfinis une vitesse\\` au bloc ˋquand l’exécution commenceˋ pour résoudre ce casse-tête."
+          "courseC_flappy_events2_a": "Le bloc que tu as besoin d'ajouter s’appelle ˋdéfinir la vitesse\\`. ",
+          "courseC_flappy_events2_b": "Connecte le bloc ˋdéfinir la vitesse\\` au bloc ˋquand l’exécution commenceˋ pour résoudre ce casse-tête."
         },
         "courseC_flappy_events2_2018": {
-          "courseC_flappy_events2_a": "Le bloc que tu dois ajouter s’appelle ˋdéfinis une vitesse\\`. ",
-          "courseC_flappy_events2_b": "Connecte le bloc ˋdéfinis une vitesse\\` au bloc ˋquand l’exécution commenceˋ pour résoudre ce casse-tête."
+          "courseC_flappy_events2_a": "Le bloc que tu as besoin d'ajouter s’appelle ˋdéfinir la vitesse\\`. ",
+          "courseC_flappy_events2_b": "Connecte le bloc ˋdéfinir la vitesse\\` au bloc ˋquand l’exécution commenceˋ pour résoudre ce casse-tête."
         },
         "courseC_flappy_events2_2019": {
-          "courseC_flappy_events2_a": "Le bloc que tu dois ajouter s’appelle ˋdéfinis une vitesse\\`. ",
-          "courseC_flappy_events2_b": "Connecte le bloc ˋdéfinis une vitesse\\` au bloc ˋquand l’exécution commenceˋ pour résoudre ce casse-tête."
+          "courseC_flappy_events2_a": "Le bloc que tu as besoin d'ajouter s’appelle ˋdéfinir la vitesse\\`. ",
+          "courseC_flappy_events2_b": "Connecte le bloc ˋdéfinir la vitesse\\` au bloc ˋquand l’exécution commenceˋ pour résoudre ce casse-tête."
         },
         "courseC_flappy_events2_2020": {
-          "courseC_flappy_events2_a": "Le bloc que tu dois ajouter s’appelle ˋdéfinis une vitesse\\`. ",
-          "courseC_flappy_events2_b": "Connecte le bloc ˋdéfinis une vitesse\\` au bloc ˋquand l’exécution commenceˋ pour résoudre ce casse-tête."
+          "courseC_flappy_events2_a": "Le bloc que tu as besoin d'ajouter s’appelle ˋdéfinir la vitesse\\`. ",
+          "courseC_flappy_events2_b": "Connecte le bloc ˋdéfinir la vitesse\\` au bloc ˋquand l’exécution commenceˋ pour résoudre ce casse-tête."
         },
         "courseC_flappy_events3": {
           "courseC_flappy_events3_a": "Si quelque chose ne fonctionne pas correctement, assure-toi que tes blocs sont connectés aux bons événements dans l’espace de travail."
@@ -4259,79 +4259,79 @@
         },
         "courseC_harvester_loops1": {
           "courseC_harvester_loops1_a": "Une fois que tu t’es déplacé vers une citrouille, utilise <xml><block type=\"harvester_pumpkin\"/></xml> pour la récolter.",
-          "courseC_harvester_loops1_b": "Tu peux utiliser une boucle avec le bloc <xml><block type=\"harvester_pumpkin\"/></xml> pour récolter plus d’une citrouille dans une case."
+          "courseC_harvester_loops1_b": "Tu peux utiliser une boucle avec le bloc <xml><block type=\"harvester_pumpkin\"/></xml> pour récolter plus d’une citrouille se trouvant dans une même case."
         },
         "courseC_harvester_loops1_2018": {
           "courseC_harvester_loops1_a": "Une fois que tu t’es déplacé vers une citrouille, utilise <xml><block type=\"harvester_pumpkin\"/></xml> pour la récolter.",
-          "courseC_harvester_loops1_b": "Tu peux utiliser une boucle avec le bloc <xml><block type=\"harvester_pumpkin\"/></xml> pour récolter plus d’une citrouille dans une case."
+          "courseC_harvester_loops1_b": "Tu peux utiliser une boucle avec le bloc <xml><block type=\"harvester_pumpkin\"/></xml> pour récolter plus d’une citrouille se trouvant dans une même case."
         },
         "courseC_harvester_loops1_2019": {
           "courseC_harvester_loops1_a": "Une fois que tu t’es déplacé vers une citrouille, utilise <xml><block type=\"harvester_pumpkin\"/></xml> pour la récolter.",
-          "courseC_harvester_loops1_b": "Tu peux utiliser une boucle avec le bloc <xml><block type=\"harvester_pumpkin\"/></xml> pour récolter plus d’une citrouille dans une case."
+          "courseC_harvester_loops1_b": "Tu peux utiliser une boucle avec le bloc <xml><block type=\"harvester_pumpkin\"/></xml> pour récolter plus d’une citrouille se trouvant dans une même case."
         },
         "courseC_harvester_loops1_2020": {
           "courseC_harvester_loops1_a": "Une fois que tu t’es déplacé vers une citrouille, utilise <xml><block type=\"harvester_pumpkin\"/></xml> pour la récolter.",
-          "courseC_harvester_loops1_b": "Tu peux utiliser une boucle avec le bloc <xml><block type=\"harvester_pumpkin\"/></xml> pour récolter plus d’une citrouille dans une case."
+          "courseC_harvester_loops1_b": "Tu peux utiliser une boucle avec le bloc <xml><block type=\"harvester_pumpkin\"/></xml> pour récolter plus d’une citrouille se trouvant dans une même case."
         },
         "courseC_harvester_loops2": {
           "courseC_harvester_loops2_a": "Si tu te retrouves coincé, essaie d'écrire les étapes sur une feuille de papier et de trouver des schémas récurrents.",
-          "courseC_harvester_loops2_b": "Tu auras besoin d'une boucle `Répéter` après une autre.",
-          "courseC_harvester_loops2_c": "Une boucle répétera la commande `Avancer`, et l'autre répétera la commande `Récolter la citrouille`."
+          "courseC_harvester_loops2_b": "Tu auras besoin de mettre une boucle `répéter` à la suite d'une autre.",
+          "courseC_harvester_loops2_c": "Une boucle répétera la commande `avancer`, et l'autre répétera la commande 'récolter la citrouille\\`."
         },
         "courseC_harvester_loops2_2018": {
           "courseC_harvester_loops2_a": "Si tu te retrouves coincé, essaie d'écrire les étapes sur une feuille de papier et de trouver des schémas récurrents.",
-          "courseC_harvester_loops2_b": "Tu auras besoin d'une boucle `Répéter` après une autre.",
-          "courseC_harvester_loops2_c": "Une boucle répétera la commande `Avancer`, et l'autre répétera la commande `Récolter la citrouille`."
+          "courseC_harvester_loops2_b": "Tu auras besoin de mettre une boucle `répéter` à la suite d'une autre.",
+          "courseC_harvester_loops2_c": "Une boucle répétera la commande `avancer`, et l'autre répétera la commande 'récolter la citrouille\\`."
         },
         "courseC_harvester_loops2_2019": {
           "courseC_harvester_loops2_a": "Si tu te retrouves coincé, essaie d'écrire les étapes sur une feuille de papier et de trouver des schémas récurrents.",
-          "courseC_harvester_loops2_b": "Tu auras besoin d'une boucle `Répéter` après une autre.",
-          "courseC_harvester_loops2_c": "Une boucle répétera la commande `Avancer`, et l'autre répétera la commande `Récolter la citrouille`."
+          "courseC_harvester_loops2_b": "Tu auras besoin de mettre une boucle `répéter` à la suite d'une autre.",
+          "courseC_harvester_loops2_c": "Une boucle répétera la commande `avancer`, et l'autre répétera la commande 'récolter la citrouille\\`."
         },
         "courseC_harvester_loops2_2020": {
           "courseC_harvester_loops2_a": "Si tu te retrouves coincé, essaie d'écrire les étapes sur une feuille de papier et de trouver des schémas récurrents.",
-          "courseC_harvester_loops2_b": "Tu auras besoin d'une boucle `Répéter` après une autre.",
-          "courseC_harvester_loops2_c": "Une boucle répétera la commande `Avancer`, et l'autre répétera la commande `Récolter la citrouille`."
+          "courseC_harvester_loops2_b": "Tu auras besoin de mettre une boucle `répéter` à la suite d'une autre.",
+          "courseC_harvester_loops2_c": "Une boucle répétera la commande `avancer`, et l'autre répétera la commande 'récolter la citrouille\\`."
         },
         "courseC_harvester_loops3": {
           "courseC_harvester_loops3_a": "N'aie pas peur de faire des erreurs ! Essaie d'ajouter des blocs et d'exécuter ton code, pour voir ce qui se passe, même si tu ne penses pas avoir encore résolu le casse-tête.",
-          "courseC_harvester_loops3_b": "Pour les premières citrouilles, tu peux utiliser un code très similaire au puzzle précédent. De quel côté tu dois tourner ensuite ?",
-          "courseC_harvester_loops3_c": "Si tu souhaites simplifier ton code, tu peux mettre une boucle dans une autre!\nCela s'appelle une **boucle imbriquée**."
+          "courseC_harvester_loops3_b": "Pour les premières citrouilles, tu peux utiliser un code très similaire au casse-tête précédent. Dans quel sens dois-tu ensuite tourner ?",
+          "courseC_harvester_loops3_c": "Si tu veux simplifier ton code, tu peux carrément placer une boucle au sein d'une autre !\nÇa s'appelle une **boucle imbriquée**."
         },
         "courseC_harvester_loops3_2018": {
           "courseC_harvester_loops3_a": "N'aie pas peur de faire des erreurs ! Essaie d'ajouter des blocs et d'exécuter ton code, pour voir ce qui se passe, même si tu ne penses pas avoir encore résolu le casse-tête.",
-          "courseC_harvester_loops3_b": "Pour les premières citrouilles, tu peux utiliser un code très similaire au puzzle précédent. De quel côté tu dois tourner ensuite ?",
-          "courseC_harvester_loops3_c": "Si tu souhaites simplifier ton code, tu peux mettre une boucle dans une autre!\nCela s'appelle une **boucle imbriquée**."
+          "courseC_harvester_loops3_b": "Pour les premières citrouilles, tu peux utiliser un code très similaire au casse-tête précédent. Dans quel sens dois-tu ensuite tourner ?",
+          "courseC_harvester_loops3_c": "Si tu veux simplifier ton code, tu peux carrément placer une boucle au sein d'une autre !\nÇa s'appelle une **boucle imbriquée**."
         },
         "courseC_harvester_loops3_2019": {
           "courseC_harvester_loops3_a": "N'aie pas peur de faire des erreurs ! Essaie d'ajouter des blocs et d'exécuter ton code, pour voir ce qui se passe, même si tu ne penses pas avoir encore résolu le casse-tête.",
-          "courseC_harvester_loops3_b": "Pour les premières citrouilles, tu peux utiliser un code très similaire au puzzle précédent. De quel côté tu dois tourner ensuite ?",
-          "courseC_harvester_loops3_c": "Si tu souhaites simplifier ton code, tu peux mettre une boucle dans une autre!\nCela s'appelle une **boucle imbriquée**."
+          "courseC_harvester_loops3_b": "Pour les premières citrouilles, tu peux utiliser un code très similaire au casse-tête précédent. Dans quel sens dois-tu ensuite tourner ?",
+          "courseC_harvester_loops3_c": "Si tu veux simplifier ton code, tu peux carrément placer une boucle au sein d'une autre !\nÇa s'appelle une **boucle imbriquée**."
         },
         "courseC_harvester_loops3_2020": {
           "courseC_harvester_loops3_a": "N'aie pas peur de faire des erreurs ! Essaie d'ajouter des blocs et d'exécuter ton code, pour voir ce qui se passe, même si tu ne penses pas avoir encore résolu le casse-tête.",
-          "courseC_harvester_loops3_b": "Pour les premières citrouilles, tu peux utiliser un code très similaire au puzzle précédent. De quel côté tu dois tourner ensuite ?",
-          "courseC_harvester_loops3_c": "Si tu souhaites simplifier ton code, tu peux mettre une boucle dans une autre!\nCela s'appelle une **boucle imbriquée**."
+          "courseC_harvester_loops3_b": "Pour les premières citrouilles, tu peux utiliser un code très similaire au casse-tête précédent. Dans quel sens dois-tu ensuite tourner ?",
+          "courseC_harvester_loops3_c": "Si tu veux simplifier ton code, tu peux carrément placer une boucle au sein d'une autre !\nÇa s'appelle une **boucle imbriquée**."
         },
         "courseC_harvester_loops4": {
-          "courseC_harvester_loops4_a": "Utilise le nouveau bloc `Récolter le maïs` pour ramasser le maïs.",
-          "courseC_harvester_loops4_b": "Tu peux utiliser plusieurs boucles dans ton code, pour ramasser le maïs et pour ramasser les citrouilles.",
-          "courseC_harvester_loops4_c": "Si tu souhaites simplifier ton code, tu peux mettre une boucle dans une autre!\nCela s'appelle une **boucle imbriquée**."
+          "courseC_harvester_loops4_a": "Utilise le nouveau bloc `récolter le maïs` pour ramasser le maïs.",
+          "courseC_harvester_loops4_b": "Tu peux utiliser plusieurs boucles répéter dans ton code ; certaines pour ramasser le maïs et d'autres pour ramasser les citrouilles.",
+          "courseC_harvester_loops4_c": "Si tu veux simplifier ton code, tu peux carrément placer une boucle au sein d'une autre !\nÇa s'appelle une **boucle imbriquée**."
         },
         "courseC_harvester_loops4_2018": {
-          "courseC_harvester_loops4_a": "Utilise le nouveau bloc `Récolter le maïs` pour ramasser le maïs.",
-          "courseC_harvester_loops4_b": "Tu peux utiliser plusieurs boucles dans ton code, pour ramasser le maïs et pour ramasser les citrouilles.",
-          "courseC_harvester_loops4_c": "Si tu souhaites simplifier ton code, tu peux mettre une boucle dans une autre!\nCela s'appelle une **boucle imbriquée**."
+          "courseC_harvester_loops4_a": "Utilise le nouveau bloc `récolter le maïs` pour ramasser le maïs.",
+          "courseC_harvester_loops4_b": "Tu peux utiliser plusieurs boucles répéter dans ton code ; certaines pour ramasser le maïs et d'autres pour ramasser les citrouilles.",
+          "courseC_harvester_loops4_c": "Si tu veux simplifier ton code, tu peux carrément placer une boucle au sein d'une autre !\nÇa s'appelle une **boucle imbriquée**."
         },
         "courseC_harvester_loops4_2019": {
-          "courseC_harvester_loops4_a": "Utilise le nouveau bloc `Récolter le maïs` pour ramasser le maïs.",
-          "courseC_harvester_loops4_b": "Tu peux utiliser plusieurs boucles dans ton code, pour ramasser le maïs et pour ramasser les citrouilles.",
-          "courseC_harvester_loops4_c": "Si tu souhaites simplifier ton code, tu peux mettre une boucle dans une autre!\nCela s'appelle une **boucle imbriquée**."
+          "courseC_harvester_loops4_a": "Utilise le nouveau bloc `récolter le maïs` pour ramasser le maïs.",
+          "courseC_harvester_loops4_b": "Tu peux utiliser plusieurs boucles répéter dans ton code ; certaines pour ramasser le maïs et d'autres pour ramasser les citrouilles.",
+          "courseC_harvester_loops4_c": "Si tu veux simplifier ton code, tu peux carrément placer une boucle au sein d'une autre !\nÇa s'appelle une **boucle imbriquée**."
         },
         "courseC_harvester_loops4_2020": {
-          "courseC_harvester_loops4_a": "Utilise le nouveau bloc `Récolter le maïs` pour ramasser le maïs.",
-          "courseC_harvester_loops4_b": "Tu peux utiliser plusieurs boucles dans ton code, pour ramasser le maïs et pour ramasser les citrouilles.",
-          "courseC_harvester_loops4_c": "Si tu souhaites simplifier ton code, tu peux mettre une boucle dans une autre!\nCela s'appelle une **boucle imbriquée**."
+          "courseC_harvester_loops4_a": "Utilise le nouveau bloc `récolter le maïs` pour ramasser le maïs.",
+          "courseC_harvester_loops4_b": "Tu peux utiliser plusieurs boucles répéter dans ton code ; certaines pour ramasser le maïs et d'autres pour ramasser les citrouilles.",
+          "courseC_harvester_loops4_c": "Si tu veux simplifier ton code, tu peux carrément placer une boucle au sein d'une autre !\nÇa s'appelle une **boucle imbriquée**."
         },
         "courseC_harvester_loops5": {
           "courseC_harvester_loops5_a": "Si tu es bloqué, essaie d'écrire tout les programme sur une feuille de papier et de trouver des motifs qui se répètent.",
@@ -4350,52 +4350,52 @@
           "courseC_harvester_loops5_b": "Est-ce que ces marches d'escalier ressemblent à celles d'autres puzzles ? Les mouvements devraient être similaires, souviens-toi juste de ramasser les cultures sur le chemin."
         },
         "courseC_harvester_loops6": {
-          "courseC_harvester_loops6_a": "Rappelle toi que tu peux mettre plusieurs blocs dans une même boucle.",
+          "courseC_harvester_loops6_a": "N'oublie pas que tu peux placer plusieurs blocs au sein d'une même boucle.",
           "courseC_harvester_loops6_b": "N'oublie pas de tourner à la fin de la rangée de maïs."
         },
         "courseC_harvester_loops6_2018": {
-          "courseC_harvester_loops6_a": "Rappelle toi que tu peux mettre plusieurs blocs dans une même boucle.",
+          "courseC_harvester_loops6_a": "N'oublie pas que tu peux placer plusieurs blocs au sein d'une même boucle.",
           "courseC_harvester_loops6_b": "N'oublie pas de tourner à la fin de la rangée de maïs."
         },
         "courseC_harvester_loops6_2019": {
-          "courseC_harvester_loops6_a": "Rappelle toi que tu peux mettre plusieurs blocs dans une même boucle.",
+          "courseC_harvester_loops6_a": "N'oublie pas que tu peux placer plusieurs blocs au sein d'une même boucle.",
           "courseC_harvester_loops6_b": "N'oublie pas de tourner à la fin de la rangée de maïs."
         },
         "courseC_harvester_loops6_2020": {
-          "courseC_harvester_loops6_a": "Rappelle toi que tu peux mettre plusieurs blocs dans une même boucle.",
+          "courseC_harvester_loops6_a": "N'oublie pas que tu peux placer plusieurs blocs au sein d'une même boucle.",
           "courseC_harvester_loops6_b": "N'oublie pas de tourner à la fin de la rangée de maïs."
         },
         "courseC_harvester_loops7": {
-          "courseC_harvester_loops7_a": "Tu peux résoudre ce puzzle de 2 manières, en ramassant d'abord le maïs ou d'abord les citrouilles.",
-          "courseC_harvester_loops7_b": "Tu auras besoin d’utiliser plusieurs boucles ˋrépéter\\` pour résoudre ce puzzle."
+          "courseC_harvester_loops7_a": "Tu peux résoudre ce casse-tête de deux façons, en ramassant d'abord le maïs ou d'abord les citrouilles.",
+          "courseC_harvester_loops7_b": "Tu auras besoin de plusieurs boucles ˋrépéter\\` pour résoudre ce casse-tête."
         },
         "courseC_harvester_loops7_2018": {
-          "courseC_harvester_loops7_a": "Tu peux résoudre ce puzzle de 2 manières, en ramassant d'abord le maïs ou d'abord les citrouilles.",
-          "courseC_harvester_loops7_b": "Tu auras besoin d’utiliser plusieurs boucles ˋrépéter\\` pour résoudre ce puzzle."
+          "courseC_harvester_loops7_a": "Tu peux résoudre ce casse-tête de deux façons, en ramassant d'abord le maïs ou d'abord les citrouilles.",
+          "courseC_harvester_loops7_b": "Tu auras besoin de plusieurs boucles ˋrépéter\\` pour résoudre ce casse-tête."
         },
         "courseC_harvester_loops7_2019": {
-          "courseC_harvester_loops7_a": "Tu peux résoudre ce puzzle de 2 manières, en ramassant d'abord le maïs ou d'abord les citrouilles.",
-          "courseC_harvester_loops7_b": "Tu auras besoin d’utiliser plusieurs boucles ˋrépéter\\` pour résoudre ce puzzle."
+          "courseC_harvester_loops7_a": "Tu peux résoudre ce casse-tête de deux façons, en ramassant d'abord le maïs ou d'abord les citrouilles.",
+          "courseC_harvester_loops7_b": "Tu auras besoin de plusieurs boucles ˋrépéter\\` pour résoudre ce casse-tête."
         },
         "courseC_harvester_loops7_2020": {
-          "courseC_harvester_loops7_a": "Tu peux résoudre ce puzzle de 2 manières, en ramassant d'abord le maïs ou d'abord les citrouilles.",
-          "courseC_harvester_loops7_b": "Tu auras besoin d’utiliser plusieurs boucles ˋrépéter\\` pour résoudre ce puzzle."
+          "courseC_harvester_loops7_a": "Tu peux résoudre ce casse-tête de deux façons, en ramassant d'abord le maïs ou d'abord les citrouilles.",
+          "courseC_harvester_loops7_b": "Tu auras besoin de plusieurs boucles ˋrépéter\\` pour résoudre ce casse-tête."
         },
         "courseC_harvester_loops8": {
-          "courseC_harvester_loops8_a": "Est-ce que ces marches d'escalier ressemblent à celles du puzzle précédent ? Les mouvements devraient être similaires, souviens-toi juste de ramasser les cultures sur le chemin.",
-          "courseC_harvester_loops8_b": "Si tu souhaites simplifier ton code, tu peux mettre une boucle dans une autre!\nCela s'appelle une **boucle imbriquée**."
+          "courseC_harvester_loops8_a": "Est-ce que ce motif en marche d'escalier ressemble à celui d'autres casse-têtes ? Les déplacements devraient être similaires aussi, mais surtout n'oublie pas de ramasser les cultures en chemin.",
+          "courseC_harvester_loops8_b": "Si tu veux simplifier ton code encore plus, tu peux placer une boucle au sein d'une autre !\nCela s'appelle une **boucle imbriquée**."
         },
         "courseC_harvester_loops8_2018": {
-          "courseC_harvester_loops8_a": "Est-ce que ces marches d'escalier ressemblent à celles du puzzle précédent ? Les mouvements devraient être similaires, souviens-toi juste de ramasser les cultures sur le chemin.",
-          "courseC_harvester_loops8_b": "Si tu souhaites simplifier ton code, tu peux mettre une boucle dans une autre!\nCela s'appelle une **boucle imbriquée**."
+          "courseC_harvester_loops8_a": "Est-ce que ce motif en marche d'escalier ressemble à celui d'autres casse-têtes ? Les déplacements devraient être similaires aussi, mais surtout n'oublie pas de ramasser les cultures en chemin.",
+          "courseC_harvester_loops8_b": "Si tu veux simplifier ton code encore plus, tu peux placer une boucle au sein d'une autre !\nCela s'appelle une **boucle imbriquée**."
         },
         "courseC_harvester_loops8_2019": {
-          "courseC_harvester_loops8_a": "Est-ce que ces marches d'escalier ressemblent à celles du puzzle précédent ? Les mouvements devraient être similaires, souviens-toi juste de ramasser les cultures sur le chemin.",
-          "courseC_harvester_loops8_b": "Si tu souhaites simplifier ton code, tu peux mettre une boucle dans une autre!\nCela s'appelle une **boucle imbriquée**."
+          "courseC_harvester_loops8_a": "Est-ce que ce motif en marche d'escalier ressemble à celui d'autres casse-têtes ? Les déplacements devraient être similaires aussi, mais surtout n'oublie pas de ramasser les cultures en chemin.",
+          "courseC_harvester_loops8_b": "Si tu veux simplifier ton code encore plus, tu peux placer une boucle au sein d'une autre !\nCela s'appelle une **boucle imbriquée**."
         },
         "courseC_harvester_loops8_2020": {
-          "courseC_harvester_loops8_a": "Est-ce que ces marches d'escalier ressemblent à celles du puzzle précédent ? Les mouvements devraient être similaires, souviens-toi juste de ramasser les cultures sur le chemin.",
-          "courseC_harvester_loops8_b": "Si tu souhaites simplifier ton code, tu peux mettre une boucle dans une autre!\nCela s'appelle une **boucle imbriquée**."
+          "courseC_harvester_loops8_a": "Est-ce que ce motif en marche d'escalier ressemble à celui d'autres casse-têtes ? Les déplacements devraient être similaires aussi, mais surtout n'oublie pas de ramasser les cultures en chemin.",
+          "courseC_harvester_loops8_b": "Si tu veux simplifier ton code encore plus, tu peux placer une boucle au sein d'une autre !\nCela s'appelle une **boucle imbriquée**."
         },
         "courseC_harvester_loops_challenge1a": {
           "courseC_harvester_loops_challenge1_a": "C'est trop compliqué sans boucles!",
@@ -4781,44 +4781,44 @@
           "courseC_maze_programming_challenge2_b": "La solution la plus rapide n'utilise que 5 blocs, mais elle comprend ce bloc : \n\n<xml><block type=\"controls_repeat_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>"
         },
         "courseC_starWars_loops1": {
-          "courseC_starWars_loops1_a": "Lorsque BB-8 roule sur la ferraille, il la ramasse automatiquement.",
+          "courseC_starWars_loops1_a": "Lorsque BB-8 roule par-dessus la ferraille, il la ramasse automatiquement.",
           "courseC_starWars_loops1_b": "N’aie pas peur de faire des erreurs ! Exécute le code pour voir ce qui se passe, même si tu n’as pas encore résolu le casse-tête.",
-          "courseC_starWars_loops1_c": "Tu voudras `Avancer` 5 fois pour résoudre ce puzzle."
+          "courseC_starWars_loops1_c": "Il va te falloir `avancer` 5 fois pour résoudre ce casse-tête."
         },
         "courseC_starWars_loops10": {
           "courseC_starWars_loops10_a": "N'y a-t-il pas une espèce de schéma récurrent ici sous forme d'un énorme escalier ? Vois si tu peux utiliser ce que tu as appris dans les casse-têtes précédents pour t'occuper de tous les tournants.",
-          "courseC_starWars_loops10_b": "Si tu veux utiliser moins de code, tu peux ajouter une boucle « répéter » à l'intérieur d'une autre !\\\nCela s'appelle une **boucle emboîtée**.",
+          "courseC_starWars_loops10_b": "Si tu veux utiliser moins de code, tu peux ajouter une boucle « répéter » à l'intérieur d'une autre !\\\nCela s'appelle une **boucle emboîtée**.",
           "courseC_starWars_loops10_c": "N’aie pas peur de faire des erreurs ! Exécute le code pour voir ce qui se passe, même si tu n’as pas encore résolu le casse-tête."
         },
         "courseC_starWars_loops10_2018": {
           "courseC_starWars_loops10_a": "N'y a-t-il pas une espèce de schéma récurrent ici sous forme d'un énorme escalier ? Vois si tu peux utiliser ce que tu as appris dans les casse-têtes précédents pour t'occuper de tous les tournants.",
-          "courseC_starWars_loops10_b": "Si tu veux utiliser moins de code, tu peux ajouter une boucle « répéter » à l'intérieur d'une autre !\\\nCela s'appelle une **boucle emboîtée**.",
+          "courseC_starWars_loops10_b": "Si tu veux utiliser moins de code, tu peux ajouter une boucle « répéter » à l'intérieur d'une autre !\\\nCela s'appelle une **boucle emboîtée**.",
           "courseC_starWars_loops10_c": "N’aie pas peur de faire des erreurs ! Exécute le code pour voir ce qui se passe, même si tu n’as pas encore résolu le casse-tête."
         },
         "courseC_starWars_loops10_2019": {
           "courseC_starWars_loops10_a": "N'y a-t-il pas une espèce de schéma récurrent ici sous forme d'un énorme escalier ? Vois si tu peux utiliser ce que tu as appris dans les casse-têtes précédents pour t'occuper de tous les tournants.",
-          "courseC_starWars_loops10_b": "Si tu veux utiliser moins de code, tu peux ajouter une boucle « répéter » à l'intérieur d'une autre !\\\nCela s'appelle une **boucle emboîtée**.",
+          "courseC_starWars_loops10_b": "Si tu veux utiliser moins de code, tu peux ajouter une boucle « répéter » à l'intérieur d'une autre !\\\nCela s'appelle une **boucle emboîtée**.",
           "courseC_starWars_loops10_c": "N’aie pas peur de faire des erreurs ! Exécute le code pour voir ce qui se passe, même si tu n’as pas encore résolu le casse-tête."
         },
         "courseC_starWars_loops10_2020": {
           "courseC_starWars_loops10_a": "N'y a-t-il pas une espèce de schéma récurrent ici sous forme d'un énorme escalier ? Vois si tu peux utiliser ce que tu as appris dans les casse-têtes précédents pour t'occuper de tous les tournants.",
-          "courseC_starWars_loops10_b": "Si tu veux utiliser moins de code, tu peux ajouter une boucle « répéter » à l'intérieur d'une autre !\\\nCela s'appelle une **boucle emboîtée**.",
+          "courseC_starWars_loops10_b": "Si tu veux utiliser moins de code, tu peux ajouter une boucle « répéter » à l'intérieur d'une autre !\\\nCela s'appelle une **boucle emboîtée**.",
           "courseC_starWars_loops10_c": "N’aie pas peur de faire des erreurs ! Exécute le code pour voir ce qui se passe, même si tu n’as pas encore résolu le casse-tête."
         },
         "courseC_starWars_loops1_2018": {
-          "courseC_starWars_loops1_a": "Lorsque BB-8 roule sur la ferraille, il la ramasse automatiquement.",
+          "courseC_starWars_loops1_a": "Lorsque BB-8 roule par-dessus la ferraille, il la ramasse automatiquement.",
           "courseC_starWars_loops1_b": "N’aie pas peur de faire des erreurs ! Exécute le code pour voir ce qui se passe, même si tu n’as pas encore résolu le casse-tête.",
-          "courseC_starWars_loops1_c": "Tu voudras `Avancer` 5 fois pour résoudre ce puzzle."
+          "courseC_starWars_loops1_c": "Il va te falloir `avancer` 5 fois pour résoudre ce casse-tête."
         },
         "courseC_starWars_loops1_2019": {
-          "courseC_starWars_loops1_a": "Lorsque BB-8 roule sur la ferraille, il la ramasse automatiquement.",
+          "courseC_starWars_loops1_a": "Lorsque BB-8 roule par-dessus la ferraille, il la ramasse automatiquement.",
           "courseC_starWars_loops1_b": "N’aie pas peur de faire des erreurs ! Exécute le code pour voir ce qui se passe, même si tu n’as pas encore résolu le casse-tête.",
-          "courseC_starWars_loops1_c": "Tu voudras `Avancer` 5 fois pour résoudre ce puzzle."
+          "courseC_starWars_loops1_c": "Il va te falloir `avancer` 5 fois pour résoudre ce casse-tête."
         },
         "courseC_starWars_loops1_2020": {
-          "courseC_starWars_loops1_a": "Lorsque BB-8 roule sur la ferraille, il la ramasse automatiquement.",
+          "courseC_starWars_loops1_a": "Lorsque BB-8 roule par-dessus la ferraille, il la ramasse automatiquement.",
           "courseC_starWars_loops1_b": "N’aie pas peur de faire des erreurs ! Exécute le code pour voir ce qui se passe, même si tu n’as pas encore résolu le casse-tête.",
-          "courseC_starWars_loops1_c": "Tu voudras `Avancer` 5 fois pour résoudre ce puzzle."
+          "courseC_starWars_loops1_c": "Il va te falloir `avancer` 5 fois pour résoudre ce casse-tête."
         },
         "courseC_starWars_loops2": {
           "courseC_starWars_loops2_a": "Pour répéter le code, sors une boucle « répéter », puis mets le bloc que tu veux à l’intérieur."
@@ -4879,23 +4879,23 @@
         },
         "courseC_starWars_loops6": {
           "courseC_starWars_loops6_a": "Essaie d'écrire tous les pas sur une feuille de papier et de trouver un schéma récurrent.",
-          "courseC_starWars_loops6_b": "Si tu veux utiliser moins de code, tu peux ajouter une boucle « répéter » à l'intérieur d'une autre !\\\nCela s'appelle une **boucle emboîtée**."
+          "courseC_starWars_loops6_b": "Si tu veux utiliser moins de code, tu peux ajouter une boucle « répéter » à l'intérieur d'une autre !\\\nCela s'appelle une **boucle emboîtée**."
         },
         "courseC_starWars_loops6_2018": {
           "courseC_starWars_loops6_a": "Essaie d'écrire tous les pas sur une feuille de papier et de trouver un schéma récurrent.",
-          "courseC_starWars_loops6_b": "Si tu veux utiliser moins de code, tu peux ajouter une boucle « répéter » à l'intérieur d'une autre !\\\nCela s'appelle une **boucle emboîtée**."
+          "courseC_starWars_loops6_b": "Si tu veux utiliser moins de code, tu peux ajouter une boucle « répéter » à l'intérieur d'une autre !\\\nCela s'appelle une **boucle emboîtée**."
         },
         "courseC_starWars_loops6_2019": {
           "courseC_starWars_loops6_a": "Essaie d'écrire tous les pas sur une feuille de papier et de trouver un schéma récurrent.",
-          "courseC_starWars_loops6_b": "Si tu veux utiliser moins de code, tu peux ajouter une boucle « répéter » à l'intérieur d'une autre !\\\nCela s'appelle une **boucle emboîtée**."
+          "courseC_starWars_loops6_b": "Si tu veux utiliser moins de code, tu peux ajouter une boucle « répéter » à l'intérieur d'une autre !\\\nCela s'appelle une **boucle emboîtée**."
         },
         "courseC_starWars_loops6_2020": {
           "courseC_starWars_loops6_a": "Essaie d'écrire tous les pas sur une feuille de papier et de trouver un schéma récurrent.",
-          "courseC_starWars_loops6_b": "Si tu veux utiliser moins de code, tu peux ajouter une boucle « répéter » à l'intérieur d'une autre !\\\nCela s'appelle une **boucle emboîtée**."
+          "courseC_starWars_loops6_b": "Si tu veux utiliser moins de code, tu peux ajouter une boucle « répéter » à l'intérieur d'une autre !\\\nCela s'appelle une **boucle emboîtée**."
         },
         "courseC_starWars_loops6_copy": {
           "courseC_starWars_loops6_a": "Essaie d'écrire tous les pas sur une feuille de papier et de trouver un schéma récurrent.",
-          "courseC_starWars_loops6_b": "Si tu veux utiliser moins de code, tu peux ajouter une boucle « répéter » à l'intérieur d'une autre !\\\nCela s'appelle une **boucle emboîtée**."
+          "courseC_starWars_loops6_b": "Si tu veux utiliser moins de code, tu peux ajouter une boucle « répéter » à l'intérieur d'une autre !\\\nCela s'appelle une **boucle emboîtée**."
         },
         "courseC_starWars_loops7": {
           "courseC_starWars_loops7_a": "Ce schéma récurrent à l'air plus compliqué qu'il ne l'est réellement ! Commence avec un simple schéma en escalier. Est-ce que ça s'occupe de toute la ferraille ?",
@@ -6098,7 +6098,7 @@
         },
         "courseD_collector_ramp8": {
           "courseD_collector_ramp8_a": "Lorsque tu arrives sur une case avec un diamant, utilise `ramasser` pour le ramasser. Pour ce puzzle, tu devra ramasser des diamants plus d'une fois!",
-          "courseD_collector_ramp8_b": "Si tu souhaites simplifier ton code, tu peux mettre une boucle dans une autre!\nCela s'appelle une **boucle imbriquée**."
+          "courseD_collector_ramp8_b": "Si tu veux simplifier ton code encore plus, tu peux placer une boucle au sein d'une autre !\nCela s'appelle une **boucle imbriquée**."
         },
         "courseD_collector_ramp9": {
           "courseD_collector_ramp9_a": "Commence par déplacer Laurel jusqu'au premier diamant, puis ramasse-le. Peux-tu répéter cette séquence pour ramasser le second tas?",
@@ -9665,8 +9665,8 @@
           "courseC_flappy_events1_a": "![](https://images.code.org/5f1d0edf6ebb44d98ffdce623cfe0ad4-image-1501192487040.gif)"
         },
         "courseC_flappy_events2_2021": {
-          "courseC_flappy_events2_a": "Le bloc que tu dois ajouter s’appelle ˋdéfinis une vitesse\\`. ",
-          "courseC_flappy_events2_b": "Connecte le bloc ˋdéfinis une vitesse\\` au bloc ˋquand l’exécution commenceˋ pour résoudre ce casse-tête."
+          "courseC_flappy_events2_a": "Le bloc que tu as besoin d'ajouter s’appelle ˋdéfinir la vitesse\\`. ",
+          "courseC_flappy_events2_b": "Connecte le bloc ˋdéfinir la vitesse\\` au bloc ˋquand l’exécution commenceˋ pour résoudre ce casse-tête."
         },
         "courseC_flappy_events3_2021": {
           "courseC_flappy_events3_a": "Si quelque chose ne fonctionne pas correctement, assure-toi que tes blocs sont connectés aux bons événements dans l’espace de travail."
@@ -9691,38 +9691,38 @@
         },
         "courseC_harvester_loops1_2021": {
           "courseC_harvester_loops1_a": "Une fois que tu t’es déplacé vers une citrouille, utilise <xml><block type=\"harvester_pumpkin\"/></xml> pour la récolter.",
-          "courseC_harvester_loops1_b": "Tu peux utiliser une boucle avec le bloc <xml><block type=\"harvester_pumpkin\"/></xml> pour récolter plus d’une citrouille dans une case."
+          "courseC_harvester_loops1_b": "Tu peux utiliser une boucle avec le bloc <xml><block type=\"harvester_pumpkin\"/></xml> pour récolter plus d’une citrouille se trouvant dans une même case."
         },
         "courseC_harvester_loops2_2021": {
           "courseC_harvester_loops2_a": "Si tu te retrouves coincé, essaie d'écrire les étapes sur une feuille de papier et de trouver des schémas récurrents.",
-          "courseC_harvester_loops2_b": "Tu auras besoin d'une boucle `Répéter` après une autre.",
-          "courseC_harvester_loops2_c": "Une boucle répétera la commande `Avancer`, et l'autre répétera la commande `Récolter la citrouille`."
+          "courseC_harvester_loops2_b": "Tu auras besoin de mettre une boucle `répéter` à la suite d'une autre.",
+          "courseC_harvester_loops2_c": "Une boucle répétera la commande `avancer`, et l'autre répétera la commande 'récolter la citrouille\\`."
         },
         "courseC_harvester_loops3_2021": {
-          "courseC_harvester_loops3_a": "N'aie pas peur de faire une erreur ! Essaie d'ajouter des blocs et d'exécuter le code pour voir ce qu'il se passe, même si tu n'as pas encore résolu l'énigme.",
-          "courseC_harvester_loops3_b": "Pour les premières citrouilles, tu peux utiliser un code très similaire au puzzle précédent. De quel côté tu dois tourner ensuite ?",
-          "courseC_harvester_loops3_c": "Si tu souhaites simplifier ton code, tu peux mettre une boucle dans une autre!\nCela s'appelle une **boucle imbriquée**."
+          "courseC_harvester_loops3_a": "N'aie pas peur de faire des erreurs ! Essaie d'ajouter des blocs et d'exécuter ton code, pour voir ce qui se passe, même si tu ne penses pas avoir encore résolu le casse-tête.",
+          "courseC_harvester_loops3_b": "Pour les premières citrouilles, tu peux utiliser un code très similaire au casse-tête précédent. Dans quel sens dois-tu ensuite tourner ?",
+          "courseC_harvester_loops3_c": "Si tu veux simplifier ton code, tu peux carrément placer une boucle au sein d'une autre !\nÇa s'appelle une **boucle imbriquée**."
         },
         "courseC_harvester_loops4_2021": {
-          "courseC_harvester_loops4_a": "Utilise le nouveau bloc `Récolter le maïs` pour ramasser le maïs.",
-          "courseC_harvester_loops4_b": "Tu peux utiliser plusieurs boucles dans ton code, pour ramasser le maïs et pour ramasser les citrouilles.",
-          "courseC_harvester_loops4_c": "Si tu souhaites simplifier ton code, tu peux mettre une boucle dans une autre!\nCela s'appelle une **boucle imbriquée**."
+          "courseC_harvester_loops4_a": "Utilise le nouveau bloc `récolter le maïs` pour ramasser le maïs.",
+          "courseC_harvester_loops4_b": "Tu peux utiliser plusieurs boucles répéter dans ton code ; certaines pour ramasser le maïs et d'autres pour ramasser les citrouilles.",
+          "courseC_harvester_loops4_c": "Si tu veux simplifier ton code, tu peux carrément placer une boucle au sein d'une autre !\nÇa s'appelle une **boucle imbriquée**."
         },
         "courseC_harvester_loops5_2021": {
-          "courseC_harvester_loops5_a": "Si tu es bloqué, essaie d'écrire tout les programme sur une feuille de papier et de trouver des motifs qui se répètent.",
-          "courseC_harvester_loops5_b": "Est-ce que ces marches d'escalier ressemblent à celles d'autres puzzles ? Les mouvements devraient être similaires, souviens-toi juste de ramasser les cultures sur le chemin."
+          "courseC_harvester_loops5_a": "Si tu te retrouves coincé, essaie de dessiner tout le programme sur une feuille de papier et de chercher des motifs récurrents. ",
+          "courseC_harvester_loops5_b": "Est-ce que ce motif en marche d'escalier ressemble à celui d'autres casse-têtes ? Les déplacements devraient être similaires aussi, mais surtout n'oublie pas de ramasser les cultures en chemin."
         },
         "courseC_harvester_loops6_2021": {
-          "courseC_harvester_loops6_a": "Rappelle toi que tu peux mettre plusieurs blocs dans une même boucle.",
+          "courseC_harvester_loops6_a": "N'oublie pas que tu peux placer plusieurs blocs au sein d'une même boucle.",
           "courseC_harvester_loops6_b": "N'oublie pas de tourner à la fin de la rangée de maïs."
         },
         "courseC_harvester_loops7_2021": {
-          "courseC_harvester_loops7_a": "Tu peux résoudre ce puzzle de 2 manières, en ramassant d'abord le maïs ou d'abord les citrouilles.",
-          "courseC_harvester_loops7_b": "Tu auras besoin d’utiliser plusieurs boucles ˋrépéter\\` pour résoudre ce puzzle."
+          "courseC_harvester_loops7_a": "Tu peux résoudre ce casse-tête de deux façons, en ramassant d'abord le maïs ou d'abord les citrouilles.",
+          "courseC_harvester_loops7_b": "Tu auras besoin de plusieurs boucles ˋrépéter\\` pour résoudre ce casse-tête."
         },
         "courseC_harvester_loops8_2021": {
-          "courseC_harvester_loops8_a": "Est-ce que ces marches d'escalier ressemblent à celles du puzzle précédent ? Les mouvements devraient être similaires, souviens-toi juste de ramasser les cultures sur le chemin.",
-          "courseC_harvester_loops8_b": "Si tu souhaites simplifier ton code, tu peux mettre une boucle dans une autre!\nCela s'appelle une **boucle imbriquée**."
+          "courseC_harvester_loops8_a": "Est-ce que ce motif en marche d'escalier ressemble à celui d'autres casse-têtes ? Les déplacements devraient être similaires aussi, mais surtout n'oublie pas de ramasser les cultures en chemin.",
+          "courseC_harvester_loops8_b": "Si tu veux simplifier ton code encore plus, tu peux placer une boucle au sein d'une autre !\nCela s'appelle une **boucle imbriquée**."
         },
         "courseC_harvester_loops_challenge1a_2021": {
           "courseC_harvester_loops_challenge1_a": "C'est trop compliqué sans boucles!",
@@ -9822,13 +9822,13 @@
         },
         "courseC_starWars_loops10_2021": {
           "courseC_starWars_loops10_a": "N'y a-t-il pas une espèce de schéma récurrent ici sous forme d'un énorme escalier ? Vois si tu peux utiliser ce que tu as appris dans les casse-têtes précédents pour t'occuper de tous les tournants.",
-          "courseC_starWars_loops10_b": "Si tu veux utiliser moins de code, tu peux ajouter une boucle « répéter » à l'intérieur d'une autre !\\\nCela s'appelle une **boucle emboîtée**.",
+          "courseC_starWars_loops10_b": "Si tu veux utiliser moins de code, tu peux ajouter une boucle « répéter » à l'intérieur d'une autre !\\\nCela s'appelle une **boucle emboîtée**.",
           "courseC_starWars_loops10_c": "N’aie pas peur de faire des erreurs ! Exécute le code pour voir ce qui se passe, même si tu n’as pas encore résolu le casse-tête."
         },
         "courseC_starWars_loops1_2021": {
-          "courseC_starWars_loops1_a": "Lorsque BB-8 roule sur la ferraille, il la ramasse automatiquement.",
+          "courseC_starWars_loops1_a": "Lorsque BB-8 roule par-dessus la ferraille, il la ramasse automatiquement.",
           "courseC_starWars_loops1_b": "N’aie pas peur de faire des erreurs ! Exécute le code pour voir ce qui se passe, même si tu n’as pas encore résolu le casse-tête.",
-          "courseC_starWars_loops1_c": "Tu voudras `Avancer` 5 fois pour résoudre ce puzzle."
+          "courseC_starWars_loops1_c": "Il va te falloir `avancer` 5 fois pour résoudre ce casse-tête."
         },
         "courseC_starWars_loops2_2021": {
           "courseC_starWars_loops2_a": "Pour répéter le code, sors une boucle « répéter », puis mets le bloc que tu veux à l’intérieur."
@@ -9855,11 +9855,11 @@
         },
         "courseC_starWars_loops6_2021": {
           "courseC_starWars_loops6_a": "Essaie d'écrire tous les pas sur une feuille de papier et de trouver un schéma récurrent.",
-          "courseC_starWars_loops6_b": "Si tu veux utiliser moins de code, tu peux ajouter une boucle « répéter » à l'intérieur d'une autre !\\\nCela s'appelle une **boucle emboîtée**."
+          "courseC_starWars_loops6_b": "Si tu veux utiliser moins de code, tu peux ajouter une boucle « répéter » à l'intérieur d'une autre !\\\nCela s'appelle une **boucle emboîtée**."
         },
         "courseC_starWars_loops6_dani": {
           "courseC_starWars_loops6_a": "Essaie d'écrire tous les pas sur une feuille de papier et de trouver un schéma récurrent.",
-          "courseC_starWars_loops6_b": "Si tu veux utiliser moins de code, tu peux ajouter une boucle « répéter » à l'intérieur d'une autre !\\\nCela s'appelle une **boucle emboîtée**."
+          "courseC_starWars_loops6_b": "Si tu veux utiliser moins de code, tu peux ajouter une boucle « répéter » à l'intérieur d'une autre !\\\nCela s'appelle une **boucle emboîtée**."
         },
         "courseC_starWars_loops7_2021": {
           "courseC_starWars_loops7_a": "Ce schéma récurrent à l'air plus compliqué qu'il ne l'est réellement ! Commence avec un simple schéma en escalier. Est-ce que ça s'occupe de toute la ferraille ?",
@@ -11741,8 +11741,8 @@
           "courseC_flappy_events1_a": "![](https://images.code.org/5f1d0edf6ebb44d98ffdce623cfe0ad4-image-1501192487040.gif)"
         },
         "courseC_flappy_events22022": {
-          "courseC_flappy_events2_a": "Le bloc que tu dois ajouter s’appelle ˋdéfinis une vitesse\\`. ",
-          "courseC_flappy_events2_b": "Connecte le bloc ˋdéfinis une vitesse\\` au bloc ˋquand l’exécution commenceˋ pour résoudre ce casse-tête."
+          "courseC_flappy_events2_a": "Le bloc que tu as besoin d'ajouter s’appelle ˋdéfinir la vitesse\\`. ",
+          "courseC_flappy_events2_b": "Connecte le bloc ˋdéfinir la vitesse\\` au bloc ˋquand l’exécution commenceˋ pour résoudre ce casse-tête."
         },
         "courseC_flappy_events32022": {
           "courseC_flappy_events3_a": "Si quelque chose ne fonctionne pas correctement, assure-toi que tes blocs sont connectés aux bons événements dans l’espace de travail."
@@ -11767,38 +11767,38 @@
         },
         "courseC_harvester_loops12022": {
           "courseC_harvester_loops1_a": "Une fois que tu t’es déplacé vers une citrouille, utilise <xml><block type=\"harvester_pumpkin\"/></xml> pour la récolter.",
-          "courseC_harvester_loops1_b": "Tu peux utiliser une boucle avec le bloc <xml><block type=\"harvester_pumpkin\"/></xml> pour récolter plus d’une citrouille dans une case."
+          "courseC_harvester_loops1_b": "Tu peux utiliser une boucle avec le bloc <xml><block type=\"harvester_pumpkin\"/></xml> pour récolter plus d’une citrouille se trouvant dans une même case."
         },
         "courseC_harvester_loops22022": {
           "courseC_harvester_loops2_a": "Si tu te retrouves coincé, essaie d'écrire les étapes sur une feuille de papier et de trouver des schémas récurrents.",
-          "courseC_harvester_loops2_b": "Tu auras besoin d'une boucle `Répéter` après une autre.",
-          "courseC_harvester_loops2_c": "Une boucle répétera la commande `Avancer`, et l'autre répétera la commande `Récolter la citrouille`."
+          "courseC_harvester_loops2_b": "Tu auras besoin de mettre une boucle `répéter` à la suite d'une autre.",
+          "courseC_harvester_loops2_c": "Une boucle répétera la commande `avancer`, et l'autre répétera la commande 'récolter la citrouille\\`."
         },
         "courseC_harvester_loops32022": {
           "courseC_harvester_loops3_a": "N'aie pas peur de faire des erreurs ! Essaie d'ajouter des blocs et d'exécuter ton code, pour voir ce qui se passe, même si tu ne penses pas avoir encore résolu le casse-tête.",
-          "courseC_harvester_loops3_b": "Pour les premières citrouilles, tu peux utiliser un code très similaire au puzzle précédent. De quel côté tu dois tourner ensuite ?",
-          "courseC_harvester_loops3_c": "Si tu souhaites simplifier ton code, tu peux mettre une boucle dans une autre!\nCela s'appelle une **boucle imbriquée**."
+          "courseC_harvester_loops3_b": "Pour les premières citrouilles, tu peux utiliser un code très similaire au casse-tête précédent. Dans quel sens dois-tu ensuite tourner ?",
+          "courseC_harvester_loops3_c": "Si tu veux simplifier ton code, tu peux carrément placer une boucle au sein d'une autre !\nÇa s'appelle une **boucle imbriquée**."
         },
         "courseC_harvester_loops42022": {
-          "courseC_harvester_loops4_a": "Utilise le nouveau bloc `Récolter le maïs` pour ramasser le maïs.",
-          "courseC_harvester_loops4_b": "Tu peux utiliser plusieurs boucles dans ton code, pour ramasser le maïs et pour ramasser les citrouilles.",
-          "courseC_harvester_loops4_c": "Si tu souhaites simplifier ton code, tu peux mettre une boucle dans une autre!\nCela s'appelle une **boucle imbriquée**."
+          "courseC_harvester_loops4_a": "Utilise le nouveau bloc `récolter le maïs` pour ramasser le maïs.",
+          "courseC_harvester_loops4_b": "Tu peux utiliser plusieurs boucles répéter dans ton code ; certaines pour ramasser le maïs et d'autres pour ramasser les citrouilles.",
+          "courseC_harvester_loops4_c": "Si tu veux simplifier ton code, tu peux carrément placer une boucle au sein d'une autre !\nÇa s'appelle une **boucle imbriquée**."
         },
         "courseC_harvester_loops52022": {
           "courseC_harvester_loops5_a": "Si tu es bloqué, essaie d'écrire tout les programme sur une feuille de papier et de trouver des motifs qui se répètent.",
           "courseC_harvester_loops5_b": "Est-ce que ces marches d'escalier ressemblent à celles d'autres puzzles ? Les mouvements devraient être similaires, souviens-toi juste de ramasser les cultures sur le chemin."
         },
         "courseC_harvester_loops62022": {
-          "courseC_harvester_loops6_a": "Rappelle toi que tu peux mettre plusieurs blocs dans une même boucle.",
+          "courseC_harvester_loops6_a": "N'oublie pas que tu peux placer plusieurs blocs au sein d'une même boucle.",
           "courseC_harvester_loops6_b": "N'oublie pas de tourner à la fin de la rangée de maïs."
         },
         "courseC_harvester_loops72022": {
-          "courseC_harvester_loops7_a": "Tu peux résoudre ce puzzle de 2 manières, en ramassant d'abord le maïs ou d'abord les citrouilles.",
-          "courseC_harvester_loops7_b": "Tu auras besoin d’utiliser plusieurs boucles ˋrépéter\\` pour résoudre ce puzzle."
+          "courseC_harvester_loops7_a": "Tu peux résoudre ce casse-tête de deux façons, en ramassant d'abord le maïs ou d'abord les citrouilles.",
+          "courseC_harvester_loops7_b": "Tu auras besoin de plusieurs boucles ˋrépéter\\` pour résoudre ce casse-tête."
         },
         "courseC_harvester_loops82022": {
-          "courseC_harvester_loops8_a": "Est-ce que ces marches d'escalier ressemblent à celles du puzzle précédent ? Les mouvements devraient être similaires, souviens-toi juste de ramasser les cultures sur le chemin.",
-          "courseC_harvester_loops8_b": "Si tu souhaites simplifier ton code, tu peux mettre une boucle dans une autre!\nCela s'appelle une **boucle imbriquée**."
+          "courseC_harvester_loops8_a": "Est-ce que ce motif en marche d'escalier ressemble à celui d'autres casse-têtes ? Les déplacements devraient être similaires aussi, mais surtout n'oublie pas de ramasser les cultures en chemin.",
+          "courseC_harvester_loops8_b": "Si tu veux simplifier ton code encore plus, tu peux placer une boucle au sein d'une autre !\nCela s'appelle une **boucle imbriquée**."
         },
         "courseC_harvester_loops_challenge1a2022": {
           "courseC_harvester_loops_challenge1_a": "C'est trop compliqué sans boucles!",
@@ -11898,13 +11898,13 @@
         },
         "courseC_starWars_loops102022": {
           "courseC_starWars_loops10_a": "N'y a-t-il pas une espèce de schéma récurrent ici sous forme d'un énorme escalier ? Vois si tu peux utiliser ce que tu as appris dans les casse-têtes précédents pour t'occuper de tous les tournants.",
-          "courseC_starWars_loops10_b": "Si tu veux utiliser moins de code, tu peux ajouter une boucle « répéter » à l'intérieur d'une autre !\\\nCela s'appelle une **boucle emboîtée**.",
+          "courseC_starWars_loops10_b": "Si tu veux utiliser moins de code, tu peux ajouter une boucle « répéter » à l'intérieur d'une autre !\\\nCela s'appelle une **boucle emboîtée**.",
           "courseC_starWars_loops10_c": "N’aie pas peur de faire des erreurs ! Exécute le code pour voir ce qui se passe, même si tu n’as pas encore résolu le casse-tête."
         },
         "courseC_starWars_loops12022": {
-          "courseC_starWars_loops1_a": "Lorsque BB-8 roule sur la ferraille, il la ramasse automatiquement.",
+          "courseC_starWars_loops1_a": "Lorsque BB-8 roule par-dessus la ferraille, il la ramasse automatiquement.",
           "courseC_starWars_loops1_b": "N’aie pas peur de faire des erreurs ! Exécute le code pour voir ce qui se passe, même si tu n’as pas encore résolu le casse-tête.",
-          "courseC_starWars_loops1_c": "Tu voudras `Avancer` 5 fois pour résoudre ce puzzle."
+          "courseC_starWars_loops1_c": "Il va te falloir `avancer` 5 fois pour résoudre ce casse-tête."
         },
         "courseC_starWars_loops22022": {
           "courseC_starWars_loops2_a": "Pour répéter le code, sors une boucle « répéter », puis mets le bloc que tu veux à l’intérieur."
@@ -11919,7 +11919,7 @@
         },
         "courseC_starWars_loops62022": {
           "courseC_starWars_loops6_a": "Essaie d'écrire tous les pas sur une feuille de papier et de trouver un schéma récurrent.",
-          "courseC_starWars_loops6_b": "Si tu veux utiliser moins de code, tu peux ajouter une boucle « répéter » à l'intérieur d'une autre !\\\nCela s'appelle une **boucle emboîtée**."
+          "courseC_starWars_loops6_b": "Si tu veux utiliser moins de code, tu peux ajouter une boucle « répéter » à l'intérieur d'une autre !\\\nCela s'appelle une **boucle emboîtée**."
         },
         "courseC_starWars_loops72022": {
           "courseC_starWars_loops7_a": "Ce schéma récurrent à l'air plus compliqué qu'il ne l'est réellement ! Commence avec un simple schéma en escalier. Est-ce que ça s'occupe de toute la ferraille ?",

@@ -1110,6 +1110,7 @@ th:
               display_name: ภาพรวม
         dance-2019:
           title: Dance Party
+          description_short: เขียนโค้ดงานเต้นรำเพื่อแบ่งปันกับเพื่อนของคุณ พร้อมกับ Beyoncé, Harry Styles, Lizzo, Lil Nas X, Selena Gomez, เพลงจาก "Encanto" ของดิสนีย์และอีกมากมาย!
           description: เขียนโค้ดสำหรับปาร์ตี้เต้นรำของคุณเอง เพื่อแชร์กับเพื่อนๆ ของคุณ!
           student_description: เขียนโค้ดสำหรับปาร์ตี้เต้นรำของคุณเอง เพื่อแชร์กับเพื่อนๆ ของคุณ!
         dance-extras-2019:

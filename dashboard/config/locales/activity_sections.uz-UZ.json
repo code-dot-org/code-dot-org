@@ -2291,13 +2291,21 @@
           "name": "Reflection"
         },
         "3c242de5-2944-4439-a772-10f0e2bfd48a": {
-          "name": "Exploring Apps"
+          "name": "Exploring Apps",
+          "description": "**Buni bajaring:** Talabalarga taqdim etilgan kodni o‘qib chiqing va nima bo‘lishini bashorat qiling. “Ishga tushirish” tugmasini bosgandan so‘ng, o‘quvchilarga o‘zlari qiziq bo‘lgan yoki ularni hayratda qoldirgan narsa haqida mulohaza yuritishlari uchun vaqt bering."
+        },
+        "3d069458-2202-468d-8728-9bfafa300eb7": {
+          "description": "\\*Muhokama qiling:\\*\\* Ushbu ilovalar yordamida siz qanday eng qiziqarli tanlovlarni amalga oshirgansiz? Ilovada biror narsani o'zgartirishni hohlagan, lekin tanlash huquqi berilmagan paytingiz bo'lganmi?\n\n**Ilova:** Foydalanilgan ilova haqida o‘ylab ko‘ring va foydalanuvchiga ko‘proq tanlash imkoniyatini berish orqali uni yaxshilash yo‘lini o‘ylab ko‘ring.\n\nVaqt imkon bersa, talabalardan quyidagi usullardan biri yoki bir nechtasi orqali yuqoridagi taklifni ko'rib chiqishlarini so'rang:\n\n-   Ko'ngillilar butun guruh muhokamasida g'oyalarni taklif qilishlari kerak.\n-   Juftlik yoki kichik guruhlar bilan kichik munozarada qatnashing"
         },
         "25d0dd9f-5a89-4a91-a3de-aba0e507aac8": {
+          "description": "#### Ko'nikmalarni shakllantirish va amaliyot (20 daqiqa)\n\nUshbu mashg'ulotlar mustaqil o'rganish yoki juftlik bilan dasturlash uchun javob beradi.\n\nTalabalar malaka oshirish darajalarini to'ldirishlari va keyin qolgan vaqtlarini turli Amaliy mashg'ulotlardan tanlashga sarflashlari kerak.",
           "progression_name": "Malaka orttirish"
         },
         "64fbbaf2-d24b-46f6-8f7c-d31e4c26abc6": {
           "progression_name": "Amaliyot"
+        },
+        "727a30c1-2256-4e3c-aeff-c9a9cf427974": {
+          "description": "#### Bepul o'yin (10 daqiqa)\n\nDarsning yakuniy bosqichida o'quvchilar o'z loyihasini tuzishlari mumkin."
         },
         "84be2102-875d-40ee-af17-903a1eb15736": {
           "name": "Reflection"
@@ -2817,54 +2825,88 @@
         },
         "de1b7224-82b6-4f1e-aa81-b9aebc78c6b1": {
           "name": "Kirish",
+          "description": "### Kompyuter laboratoriyasida o'zini tutish\n\n**Maqsad:** Ushbu munozara talabalarga kompyuter laboratoriyasiga kirganlarida nimani kutishlari va o'zlarini qanday tutishlari kerakligini o'rgatadi.",
           "tips": [
-            null
+            "### Ushbu kursni sinf sifatida o'rgatasizmi?\n\nBizning sinflarga moslashtirilgan CS Fundamentals kurslarimiz hamjamiyatni yaratish va kompyuter fanlari bo‘yicha murakkab tushunchalarni, jumladan **raqamli fuqarolik**ni joriy qilish uchun ajratilmagan darslardan foydalanadi. [A kursidan](https://curriculum.code.org/csf-19/coursea/) [Going Places Safely](https://curriculum.code.org/csf-19/coursea/1/) darsini tekshiring!"
           ]
         },
         "f1cf91eb-60a1-478e-a6e8-926270f90a9c": {
           "tips": [
-            null
+            "Laboratoriyada tinch jismlardan foydalaning\n\n-   Esingizda bo'lsin, saqich yoki konfet chaynamaslik kerak\n-   Qo'llaringizni tozalang\n-   Hamkoringiz bilan bitta kompyuterda o'tiring\n-   Birinchi \"haydovchi\" sichqonchaga etib borishiga ishonch hosil qiling\n-   Hafsalangiz pir bo'lganda, kompyuter yoki monitorni urmang yoki silkitmang\n-   **\\*20/20/20 qoidasiga rioya qiling.**\n-   Har 20-30 daqiqada **\\*Wiggles** bilan qanday kurashish mumkin (GoNoodle-ga bepul kirishni talab qiladi).\n-   O'qituvchidan so'rashdan oldin sherigingizdan so'rang\n-   Hamma hamkorlarini eshitishi uchun ovoz balandligini pasaytiring\n-   Tuyg'ular va echimlarni kuzatib borish uchun jurnalingizdan foydalaning"
           ]
+        },
+        "daf617ff-a3a7-4eb0-bede-08a0d1526a52": {
+          "description": "**Muhokama:**\n\nTalabalar qoidalarni tushunishlariga ishonch hosil qilish uchun kompyuter laboratoriyasida kutilayotgan narsalar atrofida yaxshi muhokama qiling. Ba'zi muhokama mavzulari quyidagilarni o'z ichiga olishi mumkin:\n\n-   Kompyuter laboratoriyasida ishlash yaxshimi?\n-   Kompyuter laboratoriyasida bo'lganimizda qanchalik baland ovozda yurishimiz kerak?\n-   Agar jumboqda qolib ketsangiz nima qilish kerak?\n-   Agar hafsalangiz pir bo'lsa, bu kompyuterni urishga yordam beradimi?\n-   Kompyuter laboratoriyasiga bormoqchi bo'lganimizda, qanday tayyorlanishimiz kerak?"
+        },
+        "d5094792-babe-40db-9c52-2a413ad1345a": {
+          "description": "### Onlayn boshqotirmalarni oldindan ko'rish (5 daqiqa)\n\n1-darsdan boshqotirmani loyihalash. Sinfga rasmni qanday bosish va uni sudrab tashlash orqali kerakli joyga joylashtirishni ko'rsating. Kerakli joyga tushmasdan oldin fonni bosish yoki rasmni tashlab yuborish kabi xatolarga yo'l qo'ying. Bunday muammolarga duch kelganingizda sinfdagi ko'ngillilardan yordam so'rang"
         },
         "55fe1e9d-bf0e-4294-88b0-9f43918c4407": {
-          "name": "Drag&Drop - Olib ko‘chirishni o‘rganish"
+          "name": "Drag&Drop - Olib ko‘chirishni o‘rganish",
+          "description": "**Maqsad:** Bu talabalarga onlayn boshqotirmalarni bajarish uchun Code.org’dan qanday foydalanishni o‘rgatadi.\n\nUshbu bosqich talabalarga qo'l-ko'zni muvofiqlashtirish, bosish va sudrab tashlash ko'nikmalarini mashq qilish imkoniyatini berish uchun mo'ljallangan. Talabalar ham ketma-ketlik bilan o'ynaydilar"
         },
         "749e673c-fb7b-4101-9308-78d14af34b57": {
+          "description": "Qanday qilib bosish, sudrab tashlash va tushirishni aniq o'rgatish uchun biroz vaqt ajrating. Talabalar boshqotirma ustida ishlashda foydalanadigan qurilmalar atrofidagi tilni tanishtirishga vaqt ajrating. Agar sizda planshetlar bo'lsa, talabalar _sensorli ekrandan_ foydalanadilar. Agar sizda noutbuklar bo'lsa, ular _trackpad_ dan foydalanishi mumkin. Laboratoriyada topishingiz mumkin bo'lgan ish stoli kompyuterlari _sichqonchani_ ishlatishga tayanadi.",
           "tips": [
-            null
+            "Talabalar sudrab tushirish bosqichlarini parchalab, doskaga yozib qo'yishlarini hisobga olgan holda. Masalan:\n\n1.  O'qni blokga o'tkazing.\n2.  Sichqoncha tugmasini bosing va ushlab turing.\n3.  Sichqonchani harakatlantiring.\n4.  Tugmani qo'yib yuboring.\n\nBuni amalga oshirish talabalarga _algoritm_ yaratish bo'yicha amaliyot beradi, bu tushuncha kelgusi darslarda o'rganiladi."
           ]
         },
+        "a7aaca22-48bd-4605-bd09-d6a0c6b4beae": {
+          "description": "Bolalarni juftlikka joylashtiring va ularni sinf sifatida yoki o'z stantsiyalarida juftlik bilan dasturlash videosini tomosha qiling. Bu talabalarga to'g'ri yo'nalishda boshlashga yordam berishi kerak."
+        },
         "e7ff4d51-6bd2-4e1b-9da4-71c9c010c069": {
+          "description": "O'qituvchilar informatika ta'limida muhim rol o'ynaydi va birgalikdagi va jonli sinf muhitini qo'llab-quvvatlaydi. Onlayn boshqotirmalar paytida o'qituvchining roli birinchi navbatda rag'batlantirish va qo'llab-quvvatlashdir. Onlayn boshqotirmalar talabalarga qaratilgan bo'lishi kerak, shuning uchun o'quvchilar tiqilib qolganda o'qituvchilar aralashmasliklari kerak. Buni qanday qilish haqida ba'zi fikrlar:",
           "tips": [
-            null
+            "Talabalarga sinfdoshlariga yordam berishning to'g'ri yo'lini ko'rsating:\n\n-   Sinfdoshingizning kursiga o'tirmang\n-   Sinfdoshingizning klaviaturasidan foydalanmang\n-   Sinfdoshingizning sichqonchasiga tegmang\n-   Ketishdan oldin sinfdoshingiz sizga yechimni ovoz chiqarib aytib berishiga ishonch hosil qiling"
           ]
+        },
+        "99491ad7-d0e6-4752-9f6b-01236e762005": {
+          "description": "Faoliyat davomida iloji boricha juftlik dasturlashdan foydalaning.\n\n-   Talabalarni savollar/qiyinchiliklar bilan sherigidan so'rashdan boshlashga undash.\n-   Javobsiz savollar yaqin atrofdagi guruhga yuborilishi mumkin, ular yechimni allaqachon bilishi mumkin.\n-   Talabalarga yaqinlashishdan oldin disk raskadrovka jarayonidan foydalanishni eslating.\n-   Talabalardan o'zlari ko'rayotgan muammoni tasvirlab bering. Bu nima qilishi kerak? Bu nima qiladi? Bu sizga nima deyapti?\n-   Hafsalasi pir bo‘lgan o‘quvchilarga umidsizlik o‘rganish yo‘lidagi qadam ekanligini va qat’iyatlilik o‘z samarasini berishini eslating.\n-   Agar talaba bularning barchasidan keyin ham tiqilib qolgan bo'lsa, talaba xatoni o'zi aniqlashi uchun etakchi savollarni bering."
         },
         "282e9e32-5912-4b7b-b154-daceab2b09db": {
           "progression_name": "Malaka orttirish"
         },
         "9374c17f-89e9-405d-9c08-996fbf90e971": {
-          "name": "Reflection"
+          "name": "Reflection",
+          "description": "Talabalarga o'zlari o'rganganlari, nima uchun foydali ekanligi va bunga qanday munosabatda bo'lishlari haqida yozishlari bugungi kunda olgan bilimlarini mustahkamlashga yordam beradi va kelajakda ular uchun ko'rib chiqish varaqasi tuzadi.\n\n**Ko'rsatmalar:**\n\n-   Jurnal sahifangiz burchagida bugungi darsga qanday munosabatda bo'lganingizni ko'rsatadigan his-tuyg'ulardan birini chizing.\n-   Kompyuter laboratoriyasiga borishga tayyorlanish ketma-ketligini chiza olasizmi?\n-   “Qilish” va “Qilmang” kompyuter laboratoriyasini chizish.\n-   -   Boshqotirmalarni bosish va sudrab borishda foydalanilgan kompyuter qismi nomini chizing va belgilang. (sichqoncha tugmasi, sensorli ekran, trek paneli)"
+        },
+        "486abca7-e486-4acf-bb53-98c8c9cbbf12": {
+          "description": "Agar talabalar 4-bosqichdagi boshqotirmalarni erta tugatsalar, ularga oʻz mulohaza yurituvchi jurnallarida oʻz jumboqlarini oʻylab topishga vaqt ajrating."
         },
         "f1441fec-0659-46e7-b4a8-e5faada350e9": {
+          "name": "Kompyuter laboratoriyasida o'zini tutish",
+          "description": "Kompyuter laboratoriyasiga kirganlarida kutish va o'zini qanday tutish kerakligini ko'rib chiqing.\n\n**Muhokama:**\n\nTalabalar qoidalarni tushunishlariga ishonch hosil qilish uchun kompyuter laboratoriyangizning taxminlari atrofida yaxshi muhokama qiling. Ba'zi muhokama mavzulari quyidagilarni o'z ichiga olishi mumkin:\n\n-   Kompyuter laboratoriyasida ishlash yaxshimi?\n-   Kompyuter laboratoriyasida bo'lganimizda qanchalik baland ovozda yurishimiz kerak?\n-   Agar jumboqda qolib ketsangiz nima qilish kerak?\n-   Agar hafsalangiz pir bo'lsa, bu kompyuterni urishga yordam beradimi?\n-   Kompyuter laboratoriyasiga bormoqchi bo'lganimizda, qanday tayyorlanishimiz kerak?",
           "tips": [
-            null
+            "Laboratoriyada tinch jismlardan foydalaning\n\n-   Esingizda bo'lsin, saqich yoki konfet chaynamaslik kerak\n-   Qo'llaringizni tozalang\n-   Hamkoringiz bilan bitta kompyuterda o'tiring\n-   Birinchi \"haydovchi\" sichqonchaga etib borishiga ishonch hosil qiling\n-   Hafsalangiz pir bo'lganda, kompyuter yoki monitorni urmang yoki silkitmang\n-   **\\*20/20/20 qoidasiga** rioya qiling.\n-   Har 20-30 daqiqada **\\*Wiggles** bilan qanday kurashish mumkin (GoNoodle-ga bepul kirishni talab qiladi).\n-   O'qituvchidan so'rashdan oldin sherigingizdan so'rang\n-   Hamma hamkorlarini eshitishi uchun ovoz balandligini pasaytiring\n-   Tuyg'ular va echimlarni kuzatib borish uchun jurnalingizdan foydalaning"
           ]
         },
         "638a5ac0-e923-4fd6-8665-22fc3dadc820": {
+          "description": "Darsdan boshqotirmani loyihalash. Sinfga qanday qilib blokni bosish va uni sudrab tashlash orqali to'g'ri joyga qo'yishni ko'rsating. Kerakli joyga tushmasdan oldin fonni bosish yoki rasmni tashlab yuborish kabi xatolarga yo'l qo'ying. Bunday muammolarga duch kelganingizda sinfdagi ko‘ngillilardan yordam so‘rang va ularga so‘nggi uzilgan darsda o‘zlashtirgan ko‘nikmalarini to‘g‘ri yo‘lga qo‘yishga yordam bering.",
           "tips": [
-            null
+            "### Ushbu kursni sinf sifatida o'rgatasizmi?\n\nSinflarga moslashtirilgan CS Fundamentals kurslarimiz hamjamiyatni yaratish va murakkab informatika tushunchalarini, jumladan **ketmalash**ni joriy qilish uchun ajratilmagan darslardan foydalanadi. [A kursidan](https://curriculum.code.org/csf-19/coursea/) [Happy Maps](https://curriculum.code.org/csf-19/coursea/3/) yoki [B kursidan](https://curriculum.code.org/csf-19/courseb/) [Move It, Move It!](https://curriculum.code.org/csf-19/courseb/2/) darsini tekshiring!"
           ]
         },
         "eb919624-2302-4134-8c74-8b0dbf96bd33": {
+          "name": "Bloklar bilan dasturlash",
           "tips": [
-            null
+            "Talabalarga sinfdoshlariga yordam berishning to'g'ri yo'lini ko'rsating:\n\n-   Sinfdoshingizning kursiga o'tirmang\n-   Sinfdoshingizning klaviaturasidan foydalanmang\n-   Sinfdoshingizning sichqonchasiga tegmang\n-   Ketishdan oldin sinfdoshingiz sizga yechimni ovoz chiqarib aytib berishiga ishonch hosil qiling"
           ]
+        },
+        "3e42b388-9f08-4d81-bbaa-9add431d3de6": {
+          "description": "Bu talabalarga Code.org dan onlayn jumboqlarni bajarish uchun qanday foydalanishni o'rgatadi.\n\nUshbu bosqich talabalarga qo'l-ko'zni muvofiqlashtirish, bosish va sudrab tashlash ko'nikmalarini mashq qilish imkoniyatini berish uchun mo'ljallangan. Talabalar ham ketma-ketlik bilan o'ynaydilar.\n\nUshbu darsda kiritilgan lug'at ushbu faoliyat davomida dolzarb bo'lib qoladi. Bosish, ikki marta bosish, sudrab tashlash va tushirishni aniq o'rgatish uchun biroz vaqt ajrating. Sinf muhitida bu soʻzlarni misol qilib keltirish mumkin boʻlgan sharoitda yoritganingiz yaxshiroq boʻlishi mumkin yoki talabalar laboratoriyada oʻz jumboqlari ustida ishlayotganda soʻzlarni alohida oʻrgatish mantiqiyroq boʻlishi mumkin. Sizning sinfingiz uchun eng yaxshi deb hisoblagan narsangizni hal qilishingiz kerak bo'ladi.\n\nO‘quvchilaringiz bilan **\\*Pair Programming** videosini tomosha qiling, so‘ng ularni juftliklarga ajrating. Bu talabalarga to'g'ri yo'nalishda boshlashga yordam berishi kerak.\n\nO'qituvchilar informatika ta'limida muhim rol o'ynaydi va birgalikdagi va jonli sinf muhitini qo'llab-quvvatlaydi. Onlayn faoliyat davomida o'qituvchining roli birinchi navbatda rag'batlantirish va qo'llab-quvvatlashdir. Onlayn darslar talabalarga yo'naltirilgan bo'lishi uchun mo'ljallangan, shuning uchun o'qituvchilar talabalar tiqilib qolganda qadam qo'ymasliklari kerak. Buni qanday qilish haqida ba'zi fikrlar:\n\n-   Faoliyat davomida iloji boricha juftlik dasturlashdan foydalaning.\n-   Talabalarni savollar/qiyinchiliklar bilan sherigidan so'rashdan boshlashga undash.\n-   Javobsiz savollar yaqin atrofdagi guruhga yuborilishi mumkin, ular yechimni allaqachon bilishi mumkin.\n-   Talabalarga yaqinlashishdan oldin disk raskadrovka jarayonidan foydalanishni eslating.\n-   Talabalardan o'zlari ko'rayotgan muammoni tasvirlab bering. Bu nima qilishi kerak? Bu nima qiladi? Bu sizga nima deyapti?\n-   Hafsalasi pir bo‘lgan o‘quvchilarga umidsizlik o‘rganish yo‘lidagi qadam ekanligini va qat’iyatlilik o‘z samarasini berishini eslating.\n-   Agar talaba bularning barchasidan keyin ham tiqilib qolgan bo'lsa, talaba xatoni o'zi aniqlashi uchun etakchi savollarni bering."
+        },
+        "6b2f9929-2d06-4934-824f-0cc91cce6b30": {
+          "progression_name": "Video: Bloklar bilan dasturlash"
         },
         "bc9ddb65-4298-403d-b9b4-d8c7ad98b760": {
           "progression_name": "Malaka orttirish"
         },
         "025d52e0-f429-4572-9ee1-af893e4208ae": {
-          "name": "Reflection"
+          "name": "Reflection",
+          "description": "Talabalarga o'zlari o'rganganlari, nima uchun foydali ekanligi va bunga qanday munosabatda bo'lishlari haqida yozishlari bugungi kunda olgan bilimlarini mustahkamlashga yordam beradi va kelajakda ular uchun ko'rib chiqish varaqasi tuzadi.\n\n**Ko'rsatmalar:**\n\n-   Kompyuter laboratoriyasiga borishga tayyorlanish ketma-ketligini chiza olasizmi?\n-   “Qilish” va “Qilmang” kompyuter laboratoriyasini chizish.\n-   Jurnal sahifangiz burchagiga bugungi darsga qanday munosabatda bo'lganingizni ko'rsatadigan **\\*Feeding Faces**-dan birini chizing."
+        },
+        "393ab79f-8029-4279-9ff9-460a35620f76": {
+          "description": "Agar talabalar ushbu darsdagi boshqotirmalarni erta tugatsalar, ularga o'zlarining aks ettirish jurnallarida o'zlarining boshqotirmalarini o'ylab topishga vaqt ajrating."
         },
         "4550b8ab-1ea2-4e3b-8dfb-d6802a707b93": {
           "description": "Ulanishni tugatish uchun onlayn jumboqni (yoki ikkitasini) sinf bilan ko‘rib chiqing.\n\n\\*\\* Model: \\*\\* Butun onlayn jumboqni ochib bering. 5-jumboqni tavsiya qilamiz. Ular hozirgina bajargan mashqlariga o‘xshashliklarini ko‘rishadimi? Qanday katta farqlar mavjud?\n\nKodni ish maydoniga qush (oxir-oqibat) cho‘chqaga yetib boradigan tarzda qo‘yish uchun o‘zingizning sinfingiz bilan ishlang. \n\n \\*\\* O‘tish: \\*\\* Endi talabalar o‘zlari onlayn jumboqlarni bajarish uchun kompyuterlarga o‘tishga tayyor bo‘lishlari kerak."
@@ -2945,13 +2987,19 @@
             null
           ]
         },
+        "b61843f7-1a7d-4391-9181-620eb45aa1b9": {
+          "description": "Talabalar boshqotirmalar ustida ishlayotganda, ular halqa bilan va halqasiz qancha blokdan foydalanishlarini aniqlay oladimi yoki yo‘qligini bilib oling."
+        },
         "11413c79-9a85-4bc9-8f69-4880828b1218": {
           "tips": [
-            null
+            "Talabalarga sinfdoshlariga yordam berishning to'g'ri yo'lini ko'rsating:\n\n-   Sinfdoshingizning kursiga o'tirmang\n-   Sinfdoshingizning klaviaturasidan foydalanmang\n-   Sinfdoshingizning sichqonchasiga tegmang\n-   Ketishdan oldin sinfdoshingiz sizga yechimni ovoz chiqarib aytib berishiga ishonch hosil qiling"
           ]
         },
         "b7cac6ab-1f77-4f85-8049-a0f88b26e2d1": {
           "progression_name": "Malaka orttirish"
+        },
+        "50fc91cc-37b2-4079-9643-f2e08ec07312": {
+          "progression_name": "Video: muzlik davri halqalari"
         },
         "b28b1ad5-4cd6-44ce-b3b9-7dcdebbf95ff": {
           "progression_name": "Malaka orttirish"
@@ -2962,17 +3010,39 @@
         "eca56e55-c71d-40a8-8e0b-05ee293c5a86": {
           "progression_name": "Amaliyot"
         },
+        "e6e1ca05-385e-4c97-9585-ae49e325211c": {
+          "description": "**Tilovat:** O'qituvchilar informatika bo'yicha ta'lim berishda va birgalikdagi va jonli sinf muhitini qo'llab-quvvatlashda muhim rol o'ynaydi. Onlayn faoliyat davomida o'qituvchining roli birinchi navbatda rag'batlantirish va qo'llab-quvvatlashdir. Onlayn darslar talabalarga yo'naltirilgan bo'lishi uchun mo'ljallangan, shuning uchun o'qituvchilar talabalar tiqilib qolganda qadam qo'ymasliklari kerak. Buni qanday qilish haqida ba'zi fikrlar:\n\n-   Imkon qadar **\\*Pair Programming** videosidan foydalaning.\n-   Talabalarni savollar/qiyinchiliklar bilan sherigidan so'rashdan boshlashga undash.\n-   Javobsiz savollar yaqin atrofdagi guruhga yuborilishi mumkin, ular yechimni allaqachon bilishi mumkin.\n-   Talabalarga yaqinlashishdan oldin disk raskadrovka jarayonidan foydalanishni eslating.\n-   Talabalardan o'zlari ko'rayotgan muammoni tasvirlab bering. Bu nima qilishi kerak? Bu nima qiladi? Bu sizga nima deyapti?\n-   Hafsalasi pir bo‘lgan o‘quvchilarga umidsizlik o‘rganish yo‘lidagi qadam ekanligini va qat’iyatlilik o‘z samarasini berishini eslating.\n-   Agar talaba bularning barchasidan keyin ham tiqilib qolgan bo'lsa, talaba xatoni o'zi aniqlashi uchun etakchi savollarni bering."
+        },
         "40e8bdb1-49b6-4e8a-88ec-fd980627ed4e": {
-          "name": "Reflection"
+          "name": "Reflection",
+          "description": "Talabalarga o'zlari o'rganganlari, nima uchun foydali ekanligi va bunga qanday munosabatda bo'lishlari haqida yozishlari bugungi kunda olgan bilimlarini mustahkamlashga yordam beradi va kelajakda ular uchun ko'rib chiqish varaqasi tuzadi.\n\n**Ko'rsatmalar:**\n\n-   Bugungi dars nima haqida edi?\n-   Jurnal sahifangiz burchagiga bugungi darsga qanday munosabatda bo'lganingizni ko'rsatadigan **\\*Feeding Faces**-dan birini chizing.\n-   _Scrat_ va akkordonni chizing.\n-   Tish cho'tkasi kabi kundalik mashg'ulotlarni bajarish uchun ilmoq yordamida o'zingizni chizing."
+        },
+        "12ee3779-01c0-437a-b9d1-cbec9615ad1d": {
+          "description": "Talabalarning bilimini oshirish uchun ushbu tadbirlardan foydalaning. Ular sinfdan tashqari mashg'ulotlar yoki boshqa boyitish sifatida ishlatilishi mumkin.\n\n**Shunday harakat**\n\n-   Talabalarga ular qila oladigan harakatlar yoki raqs harakatlarining rasmlarini bering.\n    -   Talabalarga harakatlarni tartibga soling va o'z raqslarini xoreografiya qilish uchun halqalar qo'shing.\n-   Raqslarni sinfning qolgan a'zolari bilan baham ko'ring.\n\n**Uni qayta ulaning**\n\n-   O'zini takrorlaydigan mashhur raqslarning ba'zi YouTube videolarini toping.\n-   Sizning sinfingiz ilmoqlarni topa oladimi?\n-   Qo'shiqlar bilan bir xil narsani sinab ko'ring!"
         },
         "ea1b43fd-047d-4ed2-a8f6-9c639ec26416": {
-          "name": "Kirish"
+          "name": "Kirish",
+          "description": "Loopning ta'rifini, biror narsani qayta-qayta bajarish harakatini tezda ko'rib chiqing.\n\n-   Looplar nima?\n-   Nega biz ulardan foydalanamiz?"
+        },
+        "c496fef5-aff1-4bbf-b50a-2e79da6a9388": {
+          "description": "Laurel the Collector bilan tanishish uchun onlayn jumboqni (yoki ikkitasini) sinf sifatida ko'rib chiqing.\n\n**Model:** Kelgusi bosqichdan boshlab butun onlayn boshqotirmani ochib bering. Biz boshqotirma 8 ni tavsiya qilamiz. Talabalar o‘zlari bajargan oxirgi mashqlar to‘plamiga o‘xshashlikni ko‘rishadimi? Katta farqlar qanday? \"Xazinani olish\" blokidan qachon foydalanish kerak?\n\nLaurel (oxir-oqibat) barcha xazinani to'plashi uchun kodni ish maydoniga sudrab borish uchun sinfingiz bilan ishlang.\n\n**O'tish:** Talabalar endi onlayn boshqotirmalarni mustaqil bajarish uchun kompyuterlarga o'tishga tayyor bo'lishlari kerak"
         },
         "7976932c-a4b6-489f-baf4-bfe75e9f6e73": {
-          "name": "Laurel bilan sikllar"
+          "name": "Laurel bilan sikllar",
+          "description": "### O'qituvchi namoyishi\n\nBiz oʻqimaganlar uchun qiyin boʻlgan bir necha tanlovli bashorat darajalarini kiritdik. Kelgusi jumboqlarga tayyorgarlik ko'rish uchun sinfingiz bilan ko'rib chiqishingiz uchun bu darajalar ixtiyoriydir. Shu bilan bir qatorda, ular bosqichni tugatgandan so'ng sinf uchun sharh sifatida ishlatilishi mumkin.\n\nPrognoz darajalari:\n\n-   [Kollektordagi tsikllar](https://studio.code.org/levels/8746)"
+        },
+        "124093f2-48f1-4381-ab48-53d9d9b05577": {
+          "name": "Onlayn boshqotirmalar",
+          "description": "Talabalar boshqotirmalar ustida ishlayotganda, ular halqa bilan va halqasiz qancha blokdan foydalanishlarini aniqlay oladimi yoki yo‘qligini bilib oling."
+        },
+        "6976e6de-38fa-42aa-b538-606a39e4ab91": {
+          "progression_name": "Video: Kollektor"
         },
         "0c5c0b74-df51-44ca-9b65-78e14fff2a73": {
           "progression_name": "Malaka orttirish"
+        },
+        "59143cde-2005-4d1d-97e3-c53102f1ff17": {
+          "progression_name": "Video: Takrorlash blokidan foydalanish"
         },
         "e371ebd3-968f-49a0-a5dd-c464cdd9e1f0": {
           "progression_name": "Malaka orttirish"
@@ -2987,21 +3057,33 @@
           "progression_name": "Dars qo‘shimchalari"
         },
         "944b3c69-e65e-4051-9002-fb0900103e22": {
-          "name": "Reflection"
+          "name": "Reflection",
+          "description": "Talabalarga o'zlari o'rganganlari, nima uchun foydali ekanligi va bunga qanday munosabatda bo'lishlari haqida yozishlari bugungi kunda olgan bilimlarini mustahkamlashga yordam beradi va kelajakda ular uchun ko'rib chiqish varaqasi tuzadi.\n\n**Ko'rsatmalar:**\n\n-   Bugungi dars nima haqida edi?\n-   Jurnal sahifangiz burchagiga bugungi darsga qanday munosabatda bo'lganingizni ko'rsatadigan **\\*Feeding Faces**-dan birini chizing.\n-   Laurel to'plashi mumkin bo'lgan xazina chizig'ini chizing.\n-   Ilmoqlardan foydalanadigan narsalarni chizish"
         },
         "524c769b-ceae-4bde-906e-c73bde2ce3e9": {
-          "name": "Kirish"
+          "name": "Kirish",
+          "description": "Loopning ta'rifini, biror narsani qayta-qayta bajarish harakatini tezda ko'rib chiqing.\n\n-   Zigzaglar va zinapoyalar kabi turli naqshlarni muhokama qiling.\n    -   _Bu naqshni qanday chizish kerakligini birovga qanday tushuntirgan bo'lardingiz?_\n    -   _Buni qanday qilib halqa yordamida chizishingiz mumkin?_\n\n![](https://cdo-curriculum.s3.amazonaws.com/media/uploads/s1hLHCasuv0ndccCRC50Qig.png)\n\nRassom darajalarida talabalar shimoli-g'arbiy, shimoli-sharqiy, janubi-g'arbiy, janubi-sharqiy sifatida tasvirlangan 45 daraja burchaklardan foydalanadilar. Ushbu yo'nalishlarni sinf bilan qisqacha muhokama qilishni va o'quvchilarga murojaat qilishlari uchun rasm chizishni tavsiya qilamiz."
         },
         "10437aa7-8a7f-4c9d-ad68-eb015cd57156": {
-          "name": "Sikllar bilan okean manzarasi"
+          "name": "Sikllar bilan okean manzarasi",
+          "description": "#### O'qituvchining namoyishi"
         },
         "58f96f9e-2ea8-433e-a770-1eec5ead2f83": {
           "tips": [
-            null
+            "Talabalarga o'z ishlarini faqat yaqin do'stlari yoki oilalari bilan baham ko'rishlarini eslatib turing. Qo'shimcha ma'lumot olish uchun darsni **\\*To'xtatib turing va Onlayn o'ylab ko'ring** videosini tomosha qiling yoki ko'rsating."
           ]
+        },
+        "592723df-2532-4e9a-8021-35d01bf4a755": {
+          "description": "Biz oʻqimaganlar uchun qiyin boʻlgan bir necha tanlovli bashorat darajalarini kiritdik. Kelgusi jumboqlarga tayyorgarlik ko'rish uchun sinfingiz bilan ko'rib chiqishingiz uchun bu darajalar ixtiyoriydir. Shu bilan bir qatorda, ular bosqichni tugatgandan so'ng sinf uchun sharh sifatida ishlatilishi mumkin.\n\nPrognoz darajalari:\n\n-   [Ijrochidagi tsikllar](https://studio.code.org/levels/8726)"
+        },
+        "9ef7b3af-9635-401c-9c3b-edb314aeab10": {
+          "progression_name": "Video: Code Studiodagi rassom"
         },
         "a3ae6601-d988-4211-bd0f-1a29739732c7": {
           "progression_name": "Malaka orttirish"
+        },
+        "8b343c8e-4adc-4bf6-aa3a-a574d8a9953e": {
+          "progression_name": "Video: Ijrochidagi looplar"
         },
         "f6fd7485-d7ca-40e8-9a20-d1f6236db0a4": {
           "progression_name": "Malaka orttirish"
@@ -3012,19 +3094,27 @@
         "7ba89248-c1c2-4bb2-a72e-18f406424ee6": {
           "progression_name": "Amaliyot"
         },
+        "45027086-96db-45ba-baa9-2983b677e8c9": {
+          "progression_name": "Bepul o'yin"
+        },
         "ac9f4b18-ea6f-4e24-bcfc-07ae916db178": {
           "progression_name": "Dars qo‘shimchalari"
         },
         "1ab77e7d-e239-43a3-a293-b142e9dd5950": {
-          "name": "Reflection"
+          "name": "Reflection",
+          "description": "Talabalarga o'zlari o'rganganlari, nima uchun foydali ekanligi va bunga qanday munosabatda bo'lishlari haqida yozishlari bugungi kunda olgan bilimlarini mustahkamlashga yordam beradi va kelajakda ular uchun ko'rib chiqish varaqasi tuzadi.\n\n**Ko'rsatmalar:**\n\n-   Bugungi dars nima haqida edi?\n-   Jurnal sahifangiz burchagiga bugungi darsga qanday munosabatda bo'lganingizni ko'rsatadigan **\\*Feeding Faces**-dan birini chizing.\n-   Bir necha zinapoyani chizing. Buni chizish uchun zarur bo'lgan pastadirni tasavvur qiling.\n-   Hayotingizda halqalardan foydalanadigan yana bir narsani chizing."
         },
         "1e964e3a-33dc-4a31-b893-44e0b55c0ad6": {
-          "name": "Kirish"
+          "name": "Kirish",
+          "description": "Loopning ta'rifini, biror narsani qayta-qayta bajarish harakatini tezda ko'rib chiqing.\n\n-   Zigzaglar va zinapoyalar kabi turli naqshlarni muhokama qiling.\n    -   _Bu naqshni qanday chizish kerakligini birovga qanday tushuntirgan bo'lardingiz?_\n    -   _Buni qanday qilib halqa yordamida chizishingiz mumkin?_"
+        },
+        "3d333a97-9393-41ec-a526-35869d585e3f": {
+          "description": "Biz oʻqimaganlar uchun qiyin boʻlgan koʻp tanlovli bashorat darajasini kiritdik. Kelgusi jumboqlarga tayyorgarlik ko'rish uchun sinfingiz bilan ko'rib chiqishingiz uchun bu daraja ixtiyoriydir. Shu bilan bir qatorda, bu bosqichni tugatgandan so'ng sinf uchun sharh sifatida ishlatilishi mumkin.\n\nPrognoz darajalari:\n\n-   [Ijrochidagi tsikllar](https://studio.code.org/levels/8745)"
         },
         "4e80fb44-708d-420f-8ae7-c36bfdd20075": {
           "name": "Drawing Gardens with Loops",
           "tips": [
-            null
+            "Talabalarga o'z ishlarini faqat yaqin do'stlari yoki oilalari bilan baham ko'rishlarini eslatib turing. Qo'shimcha ma'lumot olish uchun sinfni tomosha qiling yoki ko'rsating **\\*To'xtatib turing va Onlayn o'ylab ko'ring**."
           ]
         },
         "5a79f620-d679-4a68-9d90-91f8e5f311c9": {
@@ -3036,23 +3126,36 @@
         "8e20449d-c692-4cac-861a-d8e19fd768a8": {
           "progression_name": "Amaliyot"
         },
+        "1c1d446d-d36d-4429-9aa9-c043841d460a": {
+          "progression_name": "Bepul o'yin"
+        },
         "74ab6d31-39e4-4ccf-941d-819c20c60c91": {
           "progression_name": "Dars qo‘shimchalari"
         },
         "98e68d36-87f1-4cfe-b988-63f9b3b51882": {
-          "name": "Reflection"
+          "name": "Reflection",
+          "description": "Talabalarga o'zlari o'rganganlari, nima uchun foydali ekanligi va bunga qanday munosabatda bo'lishlari haqida yozishlari bugungi kunda olgan bilimlarini mustahkamlashga yordam beradi va kelajakda ular uchun ko'rib chiqish varaqasi tuzadi.\n\n**Ko'rsatmalar:**\n\n-   Bugungi dars nima haqida edi?\n-   Jurnal sahifangiz burchagiga bugungi darsga qanday munosabatda bo'lganingizni ko'rsatadigan **\\*Feeding Faces**-dan birini chizing.\n-   Halqa bilan yasagan naqshlarni chizing.\n-   Ilgak bilan yasamoqchi bo'lgan naqshni chizing."
         },
         "44c1a7f9-c83d-4be4-a263-05383ae1eadb": {
           "name": "Kirish",
+          "description": "Endi biz kodimizga voqealar qo'shamiz. Xususan, biz ikkita belgi bir-biriga tegishi uchun tadbir o'tkazamiz.",
           "tips": [
-            null
+            "### Ushbu kursni sinf sifatida o'rgatasizmi?\n\nBizning sinflarga moslashtirilgan CS Fundamentals kurslarimiz hamjamiyat yaratish va kompyuter fanlari bo‘yicha murakkab tushunchalarni, jumladan **hodisalar** bilan tanishtirish uchun ajratilmagan darslardan foydalanadi. [A kursidan](https://curriculum.code.org/csf-19/coursea/) [The Big Event Jr.](https://curriculum.code.org/csf-19/coursea/11/) darsini tomosha qiling!"
           ]
         },
         "2aee3299-5be5-46cf-8424-17eab91ae9e9": {
-          "name": "Onlayn boshqotirmalarni sinf bilan ko‘rib chiqish"
+          "name": "Onlayn boshqotirmalarni sinf bilan ko‘rib chiqish",
+          "description": "Onlaynda mos keladigan jumboqlardan jumboqni torting. Biz jumboqni tavsiya qilamiz 7. Xorxeni bosganingizda kulgili shovqin qilish uchun turli talabalarni chaqiring. Bu ular munosabat bildirayotgan voqea ekanligini tushuntiring va Xorxe uni bosganingizda shovqin qilish uchun kodlanishi mumkin."
         },
         "d14782c7-0b0d-47ca-bf31-c0c699ad2af6": {
-          "name": "Hodisalar bilan harakatda"
+          "name": "Hodisalar bilan harakatda",
+          "description": "Yakuniy bosqichda talabalar o'zlarining hikoyalarini yaratish erkinligiga ega. Siz qanday hikoya yozish bo'yicha tuzilgan ko'rsatmalar berishni xohlashingiz mumkin, ayniqsa variantlar juda ko'p bo'lgan talabalar uchun."
+        },
+        "a57f507a-be21-4b13-b6dd-8e23220b2e85": {
+          "progression_name": "Video: Play Laboratoriyasiga kirish"
+        },
+        "2e28db00-9470-4dcb-9a9b-7098dbf5c12b": {
+          "progression_name": "Bepul o'yin"
         },
         "55e22a45-8561-4471-a957-13667be5a15c": {
           "progression_name": "Amaliyot"
@@ -3124,42 +3227,88 @@
           ]
         },
         "6b3b5eca-1657-4a57-a9d4-883dc76a29cb": {
-          "name": "Kirish"
+          "name": "Kirish",
+          "description": "Bu mashq sinfdagi katta muammolarni alohida qadamlar ro'yxatiga qanday ajratish haqida o'ylash uchun mo'ljallangan.\n\n**Model:** Doskaga chiqish bo'yicha bosqichma-bosqich ko'rsatmalarni sinfdan so'rashdan boshlang. Talabalardan “Qora doskaga kel” kabi katta koʻrsatmalarni “Oldinga qadam” kabi kichikroq koʻrsatmalarga ajratishni soʻrang.\n\nDoskaga yaqinlashganingizda, tabassum chizishni instruktordan so'rang va ularning ko'rsatmalarini iloji boricha kichikroq saqlashga harakat qiling."
         },
         "faec25bb-b1b4-4747-8e97-f0c41662b482": {
+          "description": "\\*\\* Ayting:\\*\\* _Barakallai! Siz menga vazifani bajarish uchun qadamlar ro'yxatini berdingiz. Informatikada bu **Algoritm** deb ataladi!_\n(Odatiy lug'atga kirish usulidan foydalaning: so'zlar devori, mendan keyin takrorlang va hokazo.)",
           "tips": [
-            null
+            "Agar sinf  baqirishni boshlasa, bir vaqtning o'zida faqat bitta ko'rsatmani eshitishingiz mumkinligini tushuntiring. Agar bu yordam bersa, talabalarga alohida qo'ng'iroq qiling."
           ]
+        },
+        "025dd978-5154-4bab-ae59-60537c40fe9d": {
+          "name": "Quvnoq xaritalarni dasturlash",
+          "progression_name": "Video: Quvnoq xaritalar - Unplugged Faoliyat"
+        },
+        "c0c3f787-1bdf-4d94-8727-baa1f58abc9a": {
+          "description": "Ushbu mashqda sinf oldindan belgilangan etakchi boshliqlar (flurb) va bosh joy (meva) bilan kartalarni olishadi.Talabalar berilgan strelkalar yordamida har bir kartochkadagi mevalarga o'tishlari kerak bo'ladi.\n**Model:** Happy Maps Cards ish varag‘idan oraliq xaritalardan birini tanlang (masalan, №3). Uni sinf ga ko'rsating va birgalikda boshqotirma ustida ishlang.\nTalabalar jumboqni korib chiqishini  taklif qiling, so'ngra juft bo'lib o'ylab ko'rib va mevani qanday olishlari haqida o'z yechimlaringiz bilan o'rtoqlashing.\n**O'ylab ko'ring:**  Flurb mevaga erishish uchun ikki qadam tashlashi kerak. Ushbu ikki bosqichga qanday munosabatda bo'lishingizni hal qilish uchun  sherigingiz bilan ishlang.\n\n**Juftlik:** O‘quvchilarni sheriklari bilan taxminan 90 soniya davomida muhokama qilishlarini ayting.\n**Ulashish:** Ko‘ngillilardan doskaga streklalarni  chizishlarini so‘rang. Agar manba kodi ishlamasa, sinfda nosozliklar uchun biroz vaqt sarflang. Talabalar oldingi darslardan \"nosozliklarni tuzatish\" g'oyasi bilan tanish bo'lishi kerak, shuning uchun ular o'zlarini qulay his qilishlari uchun lug'atdan foydalaning.\n\nKod doskaga muvaffaqiyatli yozilgandan so'ng, sinfni birinchi qo'shma dasturini yozish bilan tabriklang!"
         },
         "db8c80aa-92a2-47be-bd6e-ccb990be20d4": {
           "description": "Ushbu mashg‘ulotlardan o‘quvchilar bilimini oshirish uchun foydalaning. Ular sinfdan tashqarida ishlatilishi mumkin.\n\n\\*\\* Stuffie Maps \\*\\*\n\n-   Skotch bilan gilamchada katak yarating va o‘quvchiga o‘yinchoq hayvonlarni maktabga olib kelishni ayting. \n\n-   Endi talabalar do‘stlariga dasturlarda ko‘rsatilgandek, o‘zlarining haqiqiy narsalarini ko‘chirish uchun dasturlashlari mumkin. \n\n    \\*\\* O‘zingiznikini yarating \\*\\* \n\n-   Talabalardan o‘z xaritalarini tuzishlarini so‘rang. \n\n-   Boshqa talabalar ularni dasturlardan foydalanib yechishlarini so‘rang."
         },
+        "1964e6ad-ac9f-4fc0-a2d8-34a13405ab42": {
+          "name": "Kompyuter laboratoriyasida o'zini tutish",
+          "description": "Kompyuter labaratoriyasiga kirganlarida taxminan ozlarini qanday tutishlari kerakligini korib chiqing"
+        },
         "e5dabc9f-6cc6-4b50-a17c-0a5123f9ac88": {
+          "description": "**Muhokama:**\nTalabalar qoidalarni tushunishlariga ishonch hosil qilish uchun kompyuter laboratoriyasidan kutilayotgan narsalar haqida  muhokama qiling. Muhokama uchun ba'zi mavzular quyidagilarni o'z ichiga olishi mumkin:\n\n-   Kompyuter sinfida yugurish normalmi?\n-   Kompyuter xonasida bo'lganimizda qanchalik baland ovozda yurishimiz kerak?\n-   Agar jumboqda qotib qolsangiz-chi?\n-   Xafa bo'lganingizda, kompyuterni urish sizga yordam beradimi?\n-   Kompyuter sinfiga bormoqchi bo'lganimizda, qanday tayyorgarlik ko'rishimiz kerak?",
           "tips": [
-            null
+            "-   Laboratoriyada tinch jismlardan foydalaning\n-   Esingizda bo'lsin, saqich yoki konfet chaynamaslik kerak\n-   Qo'llaringizni tozalang\n-   Hamkoringiz bilan bitta kompyuterda o'tiring\n-   Birinchi \"haydovchi\" sichqonchaga etib borishiga ishonch hosil qiling\n-   Hafsalangiz pir bo'lganda, kompyuter yoki monitorni urmang yoki silkitmang\n-   **\\*20/20/20 qoidasiga rioya qiling**\n-   Har 20-30 daqiqada **\\*Wiggles** bilan qanday kurashish mumkin (GoNoodle-ga bepul kirishni talab qiladi)\n-   O'qituvchidan so'rashdan oldin sherigingizdan so'rang\n-   Har-kim  sheriklarini eshitishi uchun ovoz balandligini pasaytiring\n-   His-tuyg'ular va echimlarni kuzatib borish uchun jurnalingizdan foydalaning"
           ]
         },
+        "55c15726-7da2-47a4-8160-a5b6ee712777": {
+          "description": "Ushbu tadbirlar Looping-dan o'quvchilar o'tayotgan onlayn dunyoga bog'lanmagan tushunchalarni olib kirishga yordam beradi. Sinfingiz bilan ishlash uchun quyidagilardan \\_ birini\\_ tanlang:"
+        },
+        "49e92efb-ec64-4434-bd96-6971946ecdfd": {
+          "name": "Algoritmlarni sudrab olib tashlash",
+          "description": "Omadli kartalar faoliyatidagi kartalardan birini loyihalashtiring va talabalarga ko'rsating. Proyektorda yoki sinf da **\\*Manipulyatorlarning** bir nechta yo'nalish bloklarini tasodifiy tartibda joylashtiring va barmog'ingizni qog'oz bo'laklaridan biriga bosib, uni ekran bo'ylab harakatlantirish orqali \"tortish\" mashqini bajaring. Ushbu blokni barmog'ingiz bilan tegizish orqali tanlash uchun \"bosish\" mumkinligini yoki  uni harakatlantirish orqali \"tortib tashlashingiz\" mumkinligini tushuntiring. Blokni \"pastga tushirish\" uchun barmog'ingizni qo'yib yuboring.\n\nBuni sinfga ko'rsatgandan so'ng, ko'ngillilardan bloklarni sudrab olib tashlash orqali Baxt xaritasi uchun algoritm yaratishni so'rang."
+        },
         "ac0e4935-f5f1-49b7-8ce3-02b24e08547d": {
-          "name": "Onlayn boshqotirmalarni sinf bilan ko‘rib chiqish"
+          "name": "Onlayn boshqotirmalarni sinf bilan ko‘rib chiqish",
+          "description": "Darsdan rebusni loyihalashtiring. Sinfga blokni qanday bosish va uni kerakli joyga sudrab borishni ko'rsating. Ataylab xatolarga yo'l qo'ying, masalan, fonni bosish yoki rasmni kerakli joyga sudrab borish. Ushbu muammolarga duch kelganingizda sinfdagi ko'ngillilardan yordam so'rang va ularga o'zlarining so'nggi tarmoqdan tashqari darslarida o'rgangan ko'nikmalarini narsalarni tuzatish uchun ishlatishlariga yordam bering."
+        },
+        "44154694-26ea-4ee0-8438-2b9d3afacf86": {
+          "name": "Bloklar bilan dasturlash",
+          "progression_name": "Video: Bloklar bilan dasturlash"
         },
         "8c2933b9-50b1-4afc-a874-66dc23214d4b": {
+          "description": "  O‘qituvchilar informatika ta’limida va hamkorlikdagi  jonli sinf muhitini qo‘llab-quvvatlashda muhim rol o‘ynaydi. Onlayn faoliyat davomida o‘qituvchining roli birinchi navbatda rag‘batlantirish va qo‘llab-quvvatlashdan iborat. Onlayn darslar o‘quvchilarga yo‘naltirilgan bo‘lishi kerak, shuning uchun o‘qituvchilar talabalar qiynalganda, ularga mashq javobini aytmasligi kerak. Buni qanday qilish haqida ba‘zi fikrlar: \n\n-   Mashg‘ulot davomida iloji boricha juft dasturlashdan foydalaning. \n-   Talabalarni sheriklaridan so‘rab boshlash uchun savollar / misollar bilan rag‘batlantiring. \n-   Javob berilmagan savollar yondagi guruhga yetkazilishi mumkin, ular yechimini allaqachon bilishadi. O‘quvchilarni, siz kelishingizdan avval debug jarayonidan foydanalishga undang. \n-   Talabalar ko‘rayotgan muammolarini aytib berishsin. Nima qilish kerak? Bu nima qiladi? Bu sizga nimani aytadi? \n-   Siqilayotgan o‘quvchilarga umidsizlik o‘rganish yo‘lidagi qadam ekanligini va qat’iyat o‘z samarasini berishini eslatib qo‘ying.Agar talaba bularning barchasidan keyin ham qiynalsa, talabani o‘zi xatoni tuzatish yo‘lini topishi uchun yetakchi savollarni bering. ",
           "tips": [
-            null
+            "\\*\\*Talabalarga sinfdoshlarga yordam berishning to'g'ri yo'lini ko'rsating:\n\n-   Sinfdoshingiz kreslosida o'tirmang\n-   Sinfdoshning klaviaturasidan foydalanmang\n-   Sinfdoshning sichqonchasiga tegmang\n-   Sinfdoshingiz sizga echimni baland ovozda tasvirlab bera olishiga ishonch hosil qiling."
           ]
         },
         "26f5ae92-053e-41b6-986f-2000c544fdf1": {
           "progression_name": "Malaka orttirish"
         },
         "d07a1c3b-33e7-48f9-8d4a-0e4faecf0780": {
-          "name": "Reflection"
+          "name": "Reflection",
+          "description": "**Ko'rsatmalar:**\n\n-   Kompyuter laboratoriyasiga borishga tayyorlanish ketma-ketligini chiza olasizmi?\n-   Kompyuter laboratoriyasini “Qilish” va “Qilmang” chizmalarini chizing.\n-   Jurnal sahifangiz burchagida bugungi darsga qanday munosabatda bo'lganingizni ko'rsatadigan yuzni chizing"
+        },
+        "c0a07ec0-67b2-4f50-8f57-e76bb50aac0b": {
+          "description": "Talabalarning bilimini yaxshilash uchun ushbu tadbirlarni qollang. Ulardan darsdan tashqari mashg'ulotlar yoki boshqa boyitish mashqlar  sifatida foydalanish mumkin.\n\nAgar talabalar ushbu darsdagi boshqotirmalarni erta hal qilsalar, ulardan jurnallarida o'zlarining boshqotirmalarini o'ylab topishga vaqt ajratishlarini so'rang"
         },
         "312dff10-c9dd-416d-8ef0-210bcb685fa8": {
+          "name": "Unplugged Foundation",
+          "description": "### Ushbu dars da talabalar  birinchi onlayn faoliyatga qadar bo'lgan haftalarda o'rgangan ko'plab ulanmagan g'oyalarga tayanadi. Sizning sinfingiz onlayn ishlarida ulardan foyda olishlari uchun ushbu tushunchalarni (masalan, qat'iylik, algoritmlar va dasturlar) to'liq doira atrofida olib kelishingiz muhimdir.",
           "tips": [
-            null
+            "Agar sizning sinfingiz asosiy yo'nalishlarni allaqachon o'rgangan bo'lsa, \"yuqoriga\" va \"pastga\" ni \"Shimol\" va \"Janub\" ga o'zgartirish muammo bo'lmasligi kerak. Agar unday bolmasa, biz o'quvchilarni jalb qilish uchun foydalanishingiz mumkin bo'lgan qulay Code.org kompas gul ish varag'ini taqdim etdik. Ushbu transformatsiya bolalar bog'chasi va birinchi sinf uchun mo'ljallangan deyarli barcha onlayn jumboqlar uchun foydali bo'ladi.\n\n<img style=\"-webkit-user-select: none;margin: auto;kursor: zoom-in;background-color: hsl(0, 0%, 90%);o'tish: fon rangi 300ms;\" src=\"https://curriculum.code.org/media/uploads/Screenshot-2018-03-13-13.46.03.png\" kengligi=\"250\" balandligi=\"300\">\n\nTalabalarga ushbu harflarni o'zlarining onlayn dasturlarida yo'nalish strelkalari yonida ko'rishlari ga ruxsat bering."
           ]
+        },
+        "9fe2312a-b3f7-41ea-9cf4-8ddef8fbab45": {
+          "description": "**Ko‘rgazma.** O‘quvchilarga avvalgi darslarda bajargan “Happy maps” mashg‘ulotidan kartani ko‘rsating.\n\n**Muhokama qiling:** Talabalarga Happy Maps-da qo‘llanilgan belgilarni eslab qolishlarini sorang.\n\n-   _Flurb shimoliy strelkani o'qisa nima bo'ladi?_\n-   _Furb Sharq  strelkani oqisa  nima bo'ladi?_\n-   _Flurbni dasturlashda xato qilsak nima bo'ladi? Agar dasturimizda \"xato\" bo'lsa-chi? Hammasini tashlab, qaytadan boshlay olamizmi?_\n\nTalabalarga nosozliklarni tuzatish bo'yicha maslahatlar haqida o'ylang:\n\n-   _Birinchi bosqichda hammasi yaxshi bo'ldimi?_\n-   _Ikkinchisi-chi?_\n-   _Qaerda nimadir noto'g'ri ketdi mi?_\n    **O‘tish.** Talabalaringiz Quvnoq kartalarni i eslab qolishlariga ishonchingiz komil bo‘lsa, oraliq mashqlarga  o‘tishingiz mumkin.\n\n### Onlayn asos: labirint dasturlarini oldindan ko'rish (3 daqiqa)\n\nTalabalarni tayyorlash uchun onlayn jumboqni (yoki ikkitasini) sinf da ko'rib chiqing.\n**Model:** Kelajakdagi taraqqiyotning butun onlayn jumboqini oching. 5-dars, boshqotirma 5-ni tavsiya qilamiz. _Scrat_ bilan \"Oʻyin maydoni\" ni va Blockly bilan \"Ish maydoni\" ni belgilang. Ushbu blokli kod endi o'quvchilar _Scrat_ ni boshoqqa olish uchun foydalanadigan til ekanligini tushuntiring. Ular hozirgina bajargan mashqlarga o'xshashlikni ko'rishadimi? Katta farqlar qanday?\nKodni ish stoliga sudrab olib kirish uchun sinfingiz bilan ishlang, shunda _Scrat_ (oxir-oqibat) boshoqqa yetib boradi.\n\n**O‘tish.** Talabalar endi onlayn boshqotirmalarni mustaqil hal qilish uchun kompyuterlarga o‘tishga tayyor bo‘lishlari kerak."
+        },
+        "a217cce3-b61b-4a68-9609-6c63193b0eb1": {
+          "name": "Scrat bilan dasturlash",
+          "description": "Agar siz sinfingiz bilan hal qilish uchun qoʻshimcha jumboqlarni izlayotgan boʻlsangiz, bu yerda _Scrat_ nima qilishini bashorat qilish uchun oʻquvchilaringiz bilan mavjud kodni oʻrganish imkonini beruvchi baʼzi “bashorat” jumboqlari mavjud. Talabalarga o‘z kompyuterlarida bemalol ishlashga ruxsat berishdan oldin ularni bir joyga to‘plash maqsadga muvofiqdir.\n\n#### Bashorat darajalari:\n\n-   [B kursi, Labirintda dasturlash №1](https://studio.code.org/levels/12607)\n-   [B kursi, Labirintda dasturlash №2](https://studio.code.org/levels/12608)"
+        },
+        "5a6e89f3-31fc-40a6-8fb3-75b80d302373": {
+          "progression_name": "Video: Juft dasturlash "
         },
         "12694952-dd7c-472d-a1e5-a328dbe61d45": {
           "progression_name": "Malaka orttirish"
+        },
+        "9c7bd507-3aa6-41eb-a20e-8c13be793ea3": {
+          "progression_name": "Video: Qadam tugmasi bilan debbuging"
         },
         "d37d8cc9-677b-4872-90aa-c0d034c56046": {
           "progression_name": "Malaka orttirish"
@@ -3175,17 +3324,29 @@
         },
         "398d751a-0d3a-4a34-8467-cf803d7a6281": {
           "tips": [
-            null
+            "Talabalarga sinfdoshlarga yordam berishning to'g'ri yo'lini ko'rsating:\n\n-   Sinfdoshingiz kreslosida o'tirmang\n-   Sinfdoshning klaviaturasidan foydalanmang\n-   Sinfdoshning sichqonchasiga tegmang\n-   Sinfdoshingiz sizga echimni baland ovozda tasvirlab bera olishiga ishonch hosil qiling."
           ]
         },
+        "f6821b7d-e6f7-42c4-acae-bd10a00f9be4": {
+          "description": "**Tarqatma:** O'qituvchilar informatika ta'limida muhim rol o'ynaydi va sinfda hamkorlik, jonli muhitni saqlaydi. Onlayn faoliyat davomida o'qituvchining roli birinchi navbatda rag'batlantirish va qo'llab-quvvatlashdir. Onlayn darslar talabalarga yo'naltirilgan bo'lishi kerak, shuning uchun o'quvchilar toxtab qolganda o'qituvchilar aralashmasligi kerak. Buni qanday qilish haqida ba'zi fikrlar:\n\n-   Iloji bo'lsa, **\\*juft dasturlash** - talaba videosidan foydalaning.\n-   Savollari/muammolari bo'lgan talabalarni ragbatlantirib, sherigidan so'rashni boshlashga undang.\n-   Javobsiz savollarni eng yaqin guruhga yuborish mumkin, ular yechimini allaqachon bilishlari kerak.\n-   Talabalarni oldiga borishdan oldin  oldin debbuging jarayonidan foydalanishni eslating.\n-   Talabalardan o'zlari ko'rgan muammoni tasvirlab berishlarini so'rang. U nima qilishi kerak? Bu nima qiladi? Bu sizga nima deyapti?\n-   Hafsalasi pir bo'lgan o'quvchilarga umidsizlik o'rganish sari qadam ekanligini va qat'iyatlilik o'z samarasini berishini eslating.\n-   Agar talaba bularning barchasidan keyin hamon toxtab qolgan bo'lsa, talaba xatosini o'zi aniqlashi uchun etakchi savollarni bering."
+        },
         "68748ea0-ad5d-4640-8995-bbff7bfb6773": {
-          "name": "Reflection"
+          "name": "Reflection",
+          "description": "#### Jurnal yozish\n\nTalabalarni o'zlari o'rganganlari, nima uchun foydaliyligi va u haqida nima deb o'ylashlarini  yozishga taklif qiling, ular bugun olgan bilimlarini mustahkamlashga yordam beradi va kelajakda ular murojaat qiladigan nazorat ro'yxatini yaratadi.\n\n#### Jurnalga takliflar:\n\n-   Kundalik sahifangiz burchagiga bugungi darsga munosabatingizni ko'rsatadigan **\\*His-Tuyg'u yuzlaridan** birini chizing.\n-   Qog'ozga bir joyga _Scrates_ va akkordonni chizing. Skratni boshoqqa olib boradigan dastur tuza olasizmi?"
+        },
+        "a4e265d2-8e6d-4dc9-9578-67cefc0462ac": {
+          "description": "Talabalarning bilimini yaxshilash uchun ushbu harakatlardan foydalaning. Ulardan darsdan tashqari mashg'ulotlar yoki boshqa boyitish sifatida foydalanish mumkin.\n\nKichik guruhlarda o‘quvchilarga qog‘oz labirintlarini o‘zlari ishlab chiqishlariga va boshqa talabalarga yoki guruhlarga ularni hal qilish uchun dasturlar yozishga ruxsat bering. Qo‘shimcha zavq olish uchun talabalar bilan Skrat va akkorn kabi haqiqiy o‘lchamdagi labirintlar yarating."
+        },
+        "2bc1a6d2-b482-481f-b69c-de3f065150c5": {
+          "description": "### Skratning Acorn qutqarishi (70-90 daqiqa)\n\n![](https://curriculum.code.org/media/uploads/elaSmall.png) ![](https://curriculum.code.org/media/uploads/mathSmall.png) [2] **Informatika + ingliz tili + matematika +  ilm fan**\n\n[\\*\\*Scrat's Acorns Saving\\*\\*](https://docs.google.com/document/d/1Xb7HjnkbOkOKbN56GDNzgpxL87TtLO7nygtNVP0UwX8/edit#) - bu o'qituvchilar hamjamiyatimiz tomonidan ishlab chiqilgan ixtiyoriy Common Core ELA, Common Core Math va Next Generation Science Standards faoliyati. Talabalar Skratga donni yig‘ish uchun muz bo‘ylab yurganida hisoblash, solishtirish, aniqlash, loyihalash va chodir qurishda yordam berishadi.\n\n_Standartlar quyidagilarga qaratilgan:_\n\n-   **CCSS.ELA-LITERACY.RI.K.2:** Yordam berish va qo'llab-quvvatlash orqali  asosiy mavzuni aniqlang va matnning  tafsilotlarini qayta aytib bering.\n-   **CCSS.MATH.CONTENT.K.CC.A.3:** 0 dan 20 gacha raqamlarni yozing. 0 dan 20 gacha yozma raqami bo'lgan ob'ektlar sonini ko'rsating (bu erda 0 ob'ektlar sonini bildiradi).\n-   **CCSS.MATH.CONTENT.K.CC.C.6:** Bir guruhdagi ob'ektlar soni boshqa guruhdagi ob'ektlar sonidan ko'p, kamr yoki teng ekanligini aniqlang, masalan, mos keladigan va hisoblaydigan strategiyasi.\n-   **CCSS.MATH.CONTENT.K.CC.B.5:** \"qancha?\" deb javob berish uchun sanang. bir chiziq, to'rtburchaklar qator yoki aylana bo'ylab joylashtirilgan 20 ta narsa yoki tarqoq konfiguratsiyadagi 10 ga yaqin narsalar haqida savollar; 1 dan 20 gacha raqam berilgan bo'lsa, shuncha narsalarni sanang.\n-   **NGSS.K-PS3-2:** Asboblar va materiallardan xonaning quyosh nuridan isitilishini kamaytiradigan strukturani loyihalash va qurish uchun foydalaning."
         },
         "bcfc82a8-7ed5-47c7-8184-f0aa05afeddf": {
-          "name": "Kirish"
+          "name": "Kirish",
+          "description": "Talabalardan oxirgi dars haqida qanday fikrda ekanligini so'rang.\n\n-   _Qaysi jumboqlar juda qiyin yoki juda oson edi?_\n-   _Qaysi jumboqlarda zerikishdi yoki juda qiziqarli edi?_\n    Agar ular do'stlariga dars berishsa, darsning qaysi qismini takrorlashni xohlashadi?\n\nDasturlash va debbuging haqida umumiy fikrni shakllantirish uchun ushbu savollardan foydalaning. Agar sinf bundan foyda oladi deb o'ylasangiz, oldingi darsdagi lug'at so'zlari va ta'riflarini ko'rib chiqishingiz mumkin.\n\nAgar o'zingizni qulay his qilsangiz, _Yulduzli urushlar_ filmidagi _BB-8_ haqida ham qisqacha gapiring. Ko'pgina talabalar yoqimli robot bilan allaqachon tanish bo'lishi mumkin, ammo u bilan tanishish, albatta, qiziqish uyg'otadi."
         },
         "516ebda2-8206-4d7f-b613-9e39338fa563": {
-          "name": "Rey va BB-8 bilan dasturlash"
+          "name": "Rey va BB-8 bilan dasturlash",
+          "progression_name": "Video: Rey va BB-8 bilan dasturlash"
         },
         "370d17c8-578a-49d9-ab3f-052a436d0217": {
           "progression_name": "Malaka orttirish"
@@ -3196,8 +3357,12 @@
         "7a0f7d49-b40f-4055-bbbc-25e96b4213c7": {
           "progression_name": "Amaliyot"
         },
+        "42d70466-643c-4ae2-b56e-6a649cf690bb": {
+          "description": "O'tgan darsda aytib o'tganimizdek, sinfda **\\*Pair Programming** - Talabalar videolarini ko'rish va foydalanishni tavsiya qilamiz. Juftlik bilan dasturlash savollarga javob berish mumkin bo‘lgan munozaralarni, asosiy tushunchalarni yoritib berishni va mavzuga ishonchni mustahkamlashni rag‘batlantiradi."
+        },
         "5113fd38-2355-414d-a7dd-788095e60406": {
-          "name": "Reflection"
+          "name": "Reflection",
+          "description": "**Ko'rsatmalar:**\n\n-   Bugungi dars nima haqida edi?\n-   Jurnal sahifangiz burchagida bugungi darsga qanday munosabatda bo'lganingizni ko'rsatadigan yuzni chizing.\n-   Bugun _BB-8_ ni labirintda qanday boshqarganingizning rasmini chizing va foydalangan buyruqlar ro'yxatini qo'shing."
         },
         "dad2daad-3c3c-4b68-9796-dce5981083a9": {
           "name": "Kirish"

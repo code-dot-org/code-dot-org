@@ -675,6 +675,12 @@ es-MX:
         csa-pl-equals-book: Escribir el método equals() para la clase Libro
         csa-multi-select-pl: Sentencias de selección múltiple en Java
         csc_timecapsule_intro: Introducción a la Cápsula del Tiempo
+        PL_Equity_in_CS_Education: Igualdad en la Enseñanza de la Informática
+        csc_fm_pilot: Máquinas Funcionales (Piloto)
+        csc_fm_pilot_v2: 'Máquinas Funcionales (Introducción)'
+        csc-sprite-lab-pixel-editor: Dibuja tu Propio Sprite
+        csa-pl-intro-to-strings: Introducción a las Cadenas en Java
+        csa-pl-compareTo: El método compareTo()
     callout:
       text:
         drag_blocks: Arrastra un bloque "mover" y colócalo debajo del otro bloque
