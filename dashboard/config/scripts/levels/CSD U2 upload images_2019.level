@@ -13,13 +13,13 @@
     "name_suffix": "_2019",
     "long_instructions": "# Upload Images\r\n\r\nNext, you'll need to upload all of your images into your project.\r\n\r\n# Do This\r\n* Download all the images you want onto your computer. Visit <a href=\"../../../lessons/7/levels/5\" target=\"_new\">Lesson 7 Level 5</a> for help if you need it.\r\n  * Make sure you have the right to use these images.\r\n  * Write down all of the attribution information that you need.\r\n  * Upload all of the images into your project.  Visit <a href=\"../../../lessons/7/levels/5\" target=\"_new\">Lesson 7 Level 5</a> if you've forgotten how.\r\n",
     "reference_links": [
-      "/docs/concepts/html/html-tags/",
-      "/docs/concepts/html/headings-and-paragraphs/",
-      "/docs/concepts/html/lists/",
-      "/docs/concepts/html/images-in-html/",
-      "/docs/concepts/html/formatting-html/"
+      "/courses/csd-2022/guides/html-tags/",
+      "/courses/csd-2022/guides/headings-and-paragraphs/",
+      "/courses/csd-2022/guides/lists/",
+      "/courses/csd-2022/guides/images-in-html/",
+      "/courses/csd-2022/guides/formatting-html/"
     ],
-    "map_reference": "/docs/concepts/html/hyperlinks/"
+    "map_reference": "/courses/csd-2022/guides/hyperlinks/"
   },
   "published": true,
   "notes": "",

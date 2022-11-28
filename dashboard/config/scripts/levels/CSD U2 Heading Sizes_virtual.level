@@ -15,9 +15,9 @@
     "parent_level_id": 20008,
     "name_suffix": "_virtual",
     "reference_links": [
-      "/docs/concepts/html/html-tags/index.html"
+      "/courses/csd-2022/guides/html-tags/index.html"
     ],
-    "map_reference": "/docs/concepts/html/headings-and-paragraphs/index.html",
+    "map_reference": "/courses/csd-2022/guides/headings-and-paragraphs/index.html",
     "encrypted": "false",
     "mini_rubric": "false"
   },
