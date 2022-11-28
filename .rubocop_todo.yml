@@ -76,10 +76,6 @@ Lint/ConstantDefinitionInBlock:
 Lint/DuplicateBranch:
   Enabled: false
 
-# Offense count: 5
-Lint/DuplicateMethods:
-  Enabled: false
-
 # Offense count: 120
 # Configuration parameters: AllowComments, AllowEmptyLambdas.
 Lint/EmptyBlock:
