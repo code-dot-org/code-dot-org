@@ -634,25 +634,6 @@ export default class TutorialExplorer extends React.Component {
                   />
                 )}
               </div>
-
-              <div style={bottomLinksContainerStyle}>
-                <div style={styles.bottomLinksLinkFirst}>
-                  <a
-                    style={styles.bottomLinksLink}
-                    href="https://hourofcode.com/activity-guidelines"
-                  >
-                    {i18n.bottomGuidelinesLink()}
-                  </a>
-                </div>
-                <div>
-                  <a
-                    style={styles.bottomLinksLink}
-                    href="https://support.code.org/hc/en-us/articles/115001306531-How-can-students-with-special-needs-or-disabilities-participate-"
-                  >
-                    {i18n.bottomSpecialNeedsLink()}
-                  </a>
-                </div>
-              </div>
             </div>
           </StickyContainer>
         )}
@@ -833,6 +814,13 @@ function getUrlParameters(filters) {
 
 window.TutorialExplorerManager = function(options) {
   options.mobile = mobileCheck();
+  options.tutorials.forEach(tutorial => {
+    if (
+      ['Code.org', 'Mojang, Microsoft and Code.org'].includes(tutorial.orgname)
+    ) {
+      tutorial.tags = 'do-not-show';
+    }
+  });
   let {filters, initialFilters, hideFilters} = getFilters(options);
 
   // Check for URL-based override of initialFilters.

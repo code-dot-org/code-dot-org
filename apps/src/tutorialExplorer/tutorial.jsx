@@ -28,9 +28,7 @@ export default class Tutorial extends React.Component {
       width: getResponsiveValue({lg: 33.3333333, sm: 50, xs: 100})
     };
 
-    const imageSrc = this.props.item.image
-      .replace('/images/', '/images/fill-480x360/')
-      .replace('.png', '.jpg');
+    const imageSrc = this.props.item.image.replace('.png', '.jpg');
 
     return (
       <div
