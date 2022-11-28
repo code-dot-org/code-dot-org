@@ -77,8 +77,8 @@
     "encrypted": "false",
     "start_blocks": "// Call function\r\ncompliment(\"Jesse\");\r\n\r\n// Call the function with two more names\r\n\r\n// Declare function\r\nfunction compliment(name){\r\n  console.log(name + \", you're the best!\");\r\n}",
     "reference_links": [
-      "/docs/concepts/patterns/list-filter-pattern/",
-      "/docs/concepts/patterns/list-reduce-pattern/"
+      "/courses/csp-2022/guides/list-filter-pattern/",
+      "/courses/csp-2022/guides/list-reduce-pattern/"
     ],
     "widget_mode": "false",
     "libraries_enabled": "false",
