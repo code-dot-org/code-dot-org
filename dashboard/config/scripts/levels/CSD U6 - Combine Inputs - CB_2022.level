@@ -75,7 +75,7 @@
     "reference_links": [
       "/docs/concepts/app-lab/taking-input-with-getproperty/"
     ],
-    "map_reference": "/docs/concepts/maker-toolkit/physical-input/",
+    "map_reference": "/courses/csd-2022/guides/physical-input/",
     "mini_rubric": "false",
     "encrypted": "false",
     "start_blocks": "// Move the motorcycle left when the left button is clicked\r\nonBoardEvent( buttonL, \"press\", function() {\r\n  var motorX = getProperty(\"motorcycle\", \"x\");\r\n  motorX = motorX - 10;\r\n  setProperty(\"motorcycle\", \"x\", motorX);\r\n});\r\n\r\n// Move the motorcycle right when right button is clicked\r\n",

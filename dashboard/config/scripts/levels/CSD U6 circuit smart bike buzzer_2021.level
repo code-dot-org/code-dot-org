@@ -231,9 +231,9 @@
     "parent_level_id": 20604,
     "name_suffix": "_2021",
     "reference_links": [
-      "/docs/concepts/maker-toolkit/circuits-and-leds/"
+      "/courses/csd-2022/guides/circuits-and-leds/"
     ],
-    "map_reference": "/docs/concepts/maker-toolkit/circuits-and-buttons/",
+    "map_reference": "/courses/csd-2022/guides/circuits-and-buttons/",
     "mini_rubric": "false",
     "text_mode_at_start": "false",
     "preload_asset_list": null
