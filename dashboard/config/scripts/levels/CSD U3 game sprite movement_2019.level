@@ -55,10 +55,10 @@
       "/courses/csd-2022/guides/velocity-and-the-counter-pattern/",
       "/courses/csd-2022/guides/variables",
       "/courses/csd-2022/guides/naming-variables",
-      "/docs/concepts/javascript/booleans-and-comparison-operators/",
+      "/courses/csd-2022/guides/booleans-and-comparison-operators/",
       "/courses/csd-2022/guides/if-statements",
-      "/docs/concepts/javascript/if-else-statements/",
-      "/docs/concepts/javascript/functions/"
+      "/courses/csd-2022/guides/if-else-statements/",
+      "/courses/csd-2022/guides/functions/"
     ],
     "mini_rubric": "false",
     "preload_asset_list": null,

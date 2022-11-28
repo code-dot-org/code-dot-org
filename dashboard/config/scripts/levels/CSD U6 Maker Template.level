@@ -127,11 +127,11 @@
       "/courses/csd-2022/guides/the-accelerometer/",
       "/courses/csd-2022/guides/board-events/",
       "/courses/csd-2022/guides/data-and-change-events/",
-      "/docs/concepts/javascript/booleans-and-comparison-operators/",
+      "/courses/csd-2022/guides/booleans-and-comparison-operators/",
       "/courses/csd-2022/guides/if-statements",
       "/courses/csd-2022/guides/variables",
       "/courses/csd-2022/guides/random-numbers",
-      "/docs/concepts/javascript/functions/"
+      "/courses/csd-2022/guides/functions/"
     ],
     "preload_asset_list": null,
     "encrypted_examples": [

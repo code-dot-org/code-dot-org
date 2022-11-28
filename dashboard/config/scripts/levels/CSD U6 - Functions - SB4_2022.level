@@ -77,7 +77,7 @@
       "/courses/csd-2022/guides/variables",
       "/courses/csd-2022/guides/random-numbers"
     ],
-    "map_reference": "/docs/concepts/javascript/functions/",
+    "map_reference": "/courses/csd-2022/guides/functions/",
     "starter_assets": {
       "BG-Landscape25.png": "eafc61c0-093d-4d84-9f76-a784aae033d8.png",
       "Alien_02.png": "0a11cf75-00e2-4722-8f39-13e00f420f43.png",
