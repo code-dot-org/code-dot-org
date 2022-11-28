@@ -6,27 +6,25 @@ title: Hour of Code ev sahipliği için kaydolduğunuz için teşekkürler!
 
 <br /> **Hour of Code projesi {{ campaign_date/full }} tarihine kadar sürecektir. Yeni uygulamalar ve diğer güncellemeler hakkında sizinle irtibat halinde olacağız. Bu arada, şimdi neler yapabilirsiniz?**
 
-Hour of Code düzenleyicilerine özel bir teşekkür olarak, Malala, Stephen Curry, Shakira ve daha fazlasını içeren yeni poster setimiz [Amazon'dan %50 indirimle](https://www.amazon.com/promocode/A3QAYNZUZTSSNQ) sipariş edilebilir. Bu yıl her sette 6 poster ve 126 adet "I did the Hour of Code" çıkartması var. İndirim sayesinde bizim üretim maliyetimizden daha ucuza almış olacaksınız. Sınırlı sayıda satış sunuldu, posterleri sipariş etmek için acele edin. Amerika Birleşik Devletleri'nde değilseniz [tüm posterleri indirip bastırabilirsiniz]({{ promote/promote_posters_url }}).
-
 ## 1. Okuldakilere ve tanıdıklarınıza Kod Saati'ni duyurun
 
-Hour of Code hareketine katıldınız. Arkadaşlarınıza **#HourOfCode** etiketi ile haber verin!
+You just joined the Hour of Code movement. Tell your friends with **#HourOfCode**!
 
-{{ social_media_hoc }} <br /> Başkalarını, [örnek e-postalarımızla]({{ promote/sample_emails }}) katılmaya teşvik edin. Okul müdürünüzle iletişime geçin ve okuldaki tüm sınıfları kaydolmaya davet edin. Yakın çevrenizdeki gruplara haber verin: öğrenci/izci kulüpleri, kiliseler, üniversiteler, sendikalar ve hatta arkadaş gruplarınız. Yeni beceriler öğrenmek için okulda olmana gerek yok. Yerel bir politikacı veya politika yapıcıyı, Hour of Code için okulunuzu ziyaret etmeye davet edin. Bu, bilgisayar bilimlerini bir saatlik mesafede desteklemene yardım eder.
+{{ social_media_hoc }} <br /> Encourage others to participate [with our sample emails.]({{ promote/sample_emails }}) Contact your principal and challenge every classroom at your school to sign up. Recruit a local group — boy/girl scouts club, church, university, veterans group, labor union, or even some friends. Yeni beceriler öğrenmek için okulda olmana gerek yok. Invite a local politician or policy maker to visit your school for the Hour of Code. Bu, bilgisayar bilimlerini bir saatlik mesafede desteklemene yardım eder.
 
-Bu [poster, afiş, çıkartma, video ve daha fazlasını]({{ promote/resources }}) etkinlik için kullanın.
+Use these [posters, banners, stickers, videos and more]({{ promote/resources }}) for your own event.
 
 ## 1. Size yardımcı olacak kendi dilinizde konuşan yerel gönüllüler bulun.
 
-Öğrencilerinize bilgisayar bilimindeki tüm olasılıklar hakkında ilham verebilecek, sınıfınızı ziyaret edebilecek veya uzaktan görüntülü katılabilecek gönüllüleri bulmak için [gönüllü haritamızda arama yapın]({{ urls/volunteer_local }}).
+[Search our volunteer map]({{ urls/volunteer_local }}) for volunteers who can visit your classroom or video chat remotely to inspire your students about the breadth of possibilities with computer science.
 
 ## 3. Kendi Hour of Code etkinliğinizi planlayın
 
-Sınıfınız için bir [Hour of Code aktivitesi](https://hourofcode.com/learn) seçin ve [bu Nasıl Yapılır? rehberini inceleyin]({{ urls/how_to_guide }}).
+Choose an [Hour of Code activity](https://hourofcode.com/learn) for your classroom and [review this how-to guide]({{ urls/how_to_guide }}).
 
 ### 4. Promosyon ürünü stoklayın
 
-Öğrencilerin etkinliğiniz için heyecan duymasına yardımcı olabilecek materyalleri Code.org [Amazon mağazasından](https://www.amazon.com/stores/page/8557B2A6-EBF2-4C9F-95C5-C3256FBA0220) sipariş edin. [Posterler](https://www.amazon.com/promocode/A3QAYNZUZTSSNQ) (ek %50 indirimle), Hour of Code kitleri, çıkartmalar ve daha fazlasını sipariş edin! Ama sınırlı sayıda satışa sunulduğu için acele edin.
+Order materials to help get students excited about your event by heading to the Code.org [Amazon store](https://www.amazon.com/stores/page/8557B2A6-EBF2-4C9F-95C5-C3256FBA0220). Order posters, Hour of Code kits, stickers, and more! But hurry, supplies are limited.
 
 # Kod saatinin ötesine gidin
 
