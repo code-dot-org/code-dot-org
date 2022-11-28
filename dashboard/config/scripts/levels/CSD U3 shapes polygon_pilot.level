@@ -68,7 +68,7 @@
     "encrypted_examples": "6mT6EL2Hwvxcx8dLar5rZUQe5zifMpZowCiXZFfgUqmv77tFtxghibW9C377\nuY7D+eUiFpPamPY7pGAYivpz/g==\n",
     "libraries_enabled": "false",
     "reference_links": [
-      "/docs/concepts/game-lab/drawing-shapes/"
+      "/courses/csd-2022/guides/drawing-shapes"
     ],
     "preload_asset_list": null,
     "bubble_choice_description": "Learn how to create polygons with any number of sides."
