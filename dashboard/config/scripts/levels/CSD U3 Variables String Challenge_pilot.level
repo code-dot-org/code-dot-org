@@ -75,7 +75,7 @@
     "encrypted_examples": "XH8A0FdybfV5+BGUR3BJxzALV31tk3T923YFgX8FDwCXeKRDaO2QBAgxteZ2\n+ri/HpvJaVmoYPn9jQtwz205vw==\n",
     "libraries_enabled": "false",
     "reference_links": [
-      "/docs/concepts/javascript/variables/",
+      "/courses/csd-2022/guides/variables",
       "/docs/concepts/game-lab/drawing-shapes/",
       "/docs/concepts/game-lab/shapes-and-parameters/"
     ],

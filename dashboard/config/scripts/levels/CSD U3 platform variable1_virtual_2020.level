@@ -46,7 +46,7 @@
     "parent_level_id": 20902,
     "name_suffix": "_virtual_2020",
     "reference_links": [
-      "/docs/concepts/javascript/variables/",
+      "/courses/csd-2022/guides/variables",
       "/docs/concepts/javascript/naming-variables/",
       "/docs/concepts/game-lab/drawing-shapes/",
       "/docs/concepts/game-lab/shapes-and-parameters/",

@@ -76,7 +76,7 @@
     "bubble_choice_description": "Keep the rectangles stacked on top of each other by changing the way random numbers are used.",
     "libraries_enabled": "false",
     "reference_links": [
-      "/docs/concepts/javascript/variables/",
+      "/courses/csd-2022/guides/variables",
       "/docs/concepts/javascript/naming-variables/",
       "/docs/concepts/game-lab/drawing-shapes/",
       "/docs/concepts/game-lab/shapes-and-parameters/"
