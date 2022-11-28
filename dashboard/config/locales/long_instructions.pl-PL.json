@@ -475,7 +475,7 @@
         "courseA_maze_ramp2_2019": "Podłącz oba <xml><block type=\"maze_moveEast\" block-text=\"move east\"/></xml> bloki do bloku <xml><block type=\"when_run\" block-text=\"when run\"/></xml>, aby ukończyć swój kod, a potem kliknij \"Uruchom\".",
         "courseA_maze_ramp2_2020": "Podłącz oba <xml><block type=\"maze_moveEast\" block-text=\"move east\"/></xml> bloki do bloku <xml><block type=\"when_run\" block-text=\"when run\"/></xml>, aby ukończyć swój kod, a potem kliknij \"Uruchom\".",
         "courseA_maze_seq1": "_\"Użyj tych bloków i spróbuj doprowadzić mnie do złej świnki!\"_",
-        "courseA_maze_seq10": "**Wyzwanie:** Obejdź TNT, aby doprowadzić ptaka do świnki!\n\n![expandable](https://images.code.org/a656e421bc90e530a7e1ce636e507752-image-1497996976195.gif)",
+        "courseA_maze_seq10": "**Wyzwanie:** Obejdź TNT, aby doprowadzić ptaka do świnki!\n\n[expandable][0]",
         "courseA_maze_seq10_copy": "**Wyzwanie:** Obejdź TNT, aby doprowadzić ptaka do świnki!\n\n[expandable][0]",
         "courseA_maze_seq11": "Czas na krótszą łamigłówkę! Idź w jedną stronę, a później w drugą, by doprowadzić ptaka do świnki!\n\n![expandable](https://images.code.org/bb4571384fc56702704a0c9395ee3695-image-1497996380902.gif)",
         "courseA_maze_seq12": "Schwytaj tę świnkę!\n\n![expandable](https://images.code.org/c6ae5024441e2305db82d06679e5a281-image-1497997160569.gif)",
@@ -487,16 +487,16 @@
         "courseA_maze_seq2": "_\"Błąd! Napraw kod, aby doprowadzić mnie do świnki.\"_\n\n![expandable](https://images.code.org/4af4959874b3ca1fdd3008dc4f77add4-image-1497994904322.gif)",
         "courseA_maze_seq3": "_\"Napraw kod, aby doprowadzić mnie do świnki!\"_\n\n![expandable](https://images.code.org/4adca88dc6df7378846a91d0fb0e59d1-image-1497995239069.gif)",
         "courseA_maze_seq4": "_\"Coś tutaj nie gra.\"_\n\nUSUŃ blok, aby doprowadzić ptaka do świnki!\n\n![expandable](https://images.code.org/6af44fb0ba5ac5dd5502e2538f51fb9c-image-1497996162453.gif)",
-        "courseA_maze_seq5": "Na początek wypróbuj ten.\n\n![expandable](https://images.code.org/e4ef591b4580db478330c298d1af756f-image-1497997080163.gif)",
+        "courseA_maze_seq5": "Na początek wypróbuj ten.\n\n[expandable][0]",
         "courseA_maze_seq5_copy": "Na początek wypróbuj ten.\n\n[expandable][0]",
-        "courseA_maze_seq6": "Idź w jedną stronę, a później w drugą, by doprowadzić ptaka do świnki!\n\n![expandable](https://images.code.org/8f71c406afa60c6898937d950c670205-image-1497996506419.gif)",
+        "courseA_maze_seq6": "Idź w jedną stronę, a później w drugą, by doprowadzić ptaka do świnki!\n\n[expandable][0]",
         "courseA_maze_seq6_2018": "Idź w jedną stronę, a później w drugą, by doprowadzić ptaka do świnki!",
         "courseA_maze_seq6_2019": "Idź w jedną stronę, a później w drugą, by doprowadzić ptaka do świnki!",
         "courseA_maze_seq6_2020": "Idź w jedną stronę, a później w drugą, by doprowadzić ptaka do świnki!",
         "courseA_maze_seq6_copy": "Idź w jedną stronę, a później w drugą, by doprowadzić ptaka do świnki!\n\n[expandable][0]",
-        "courseA_maze_seq7": "Zorientuj się, czego brakuje, a następnie dodaj bloki, by doprowadzić ptaka do świnki!\n\n![expandable](https://images.code.org/35bdb628dabd4259b581286b071c02f3-image-1497996651260.gif)",
+        "courseA_maze_seq7": "Zorientuj się, czego brakuje, a następnie dodaj bloki, by doprowadzić ptaka do świnki!\n\n[expandable][0]",
         "courseA_maze_seq7_copy": "Zorientuj się, czego brakuje, a następnie dodaj bloki, by doprowadzić ptaka do świnki!\n\n[expandable][0]",
-        "courseA_maze_seq8": "Przejdź ten poziom i doprowadź ptaka do świnki!\n\n![expandable](https://images.code.org/fb4735244f74a4e001d1fa7b5c6028f9-image-1497998330218.gif)",
+        "courseA_maze_seq8": "Przejdź ten poziom i doprowadź ptaka do świnki!\n\n[expandable][0]",
         "courseA_maze_seq8_2018": "Przejdź ten poziom i doprowadź ptaka do świnki!",
         "courseA_maze_seq8_2019": "Przejdź ten poziom i doprowadź ptaka do świnki!",
         "courseA_maze_seq8_2020": "Przejdź ten poziom i doprowadź ptaka do świnki!",
@@ -1383,7 +1383,7 @@
         "courseE_artist_concept_challenge1_2018": "<img src=\"https://images.code.org/6cac10470af71bbb5d75bf5e2669046f-image-1439939145211.png\" width=\"200px\"/>\n\nCzas na wyzwanie! \n\nOto wzór, w którym używa się tylko tych bloków, które Ci już pokazano. Czy możesz wymyślić,  jak go odtworzyć? Nie bój się popełniać błędów i próbować. Nie musisz narysować tego perfekcyjnie za pierwszym razem.",
         "courseE_artist_concept_challenge2": "Utwórz pięć wiatraczków przy pomocy poniższego kodu.",
         "courseE_artist_concept_challenge2_2018": "Utwórz pięć wiatraczków przy pomocy poniższego kodu.",
-        "courseE_artist_functions1": "\\_\"Ja jest artysta zombie. Kochać rysować ja!\" \nPomóż zombie narysować okulary używając kwadratów o bokach 100 pikseli.  \\\nPołączenie między szkłami okularów ma 75 pikseli.",
+        "courseE_artist_functions1": "_\"Ja jest artysta zombie. Kochać rysować ja!\" \nPomóż zombie narysować okulary używając kwadratów o bokach 100 pikseli.  \\\nPołączenie między szkłami okularów ma 75 pikseli.",
         "courseE_artist_functions10": "Tym razem użyj rzędów 8 sześciokątów o bokach 25 pikseli. \n\n-   Aby utworzyć każdy sześciokąt, powtórz bok sześć razy, wykonując obrót o 60 stopni.  \n-   Skocz 25 pikseli miedzy sześciokątami.\n-   Aby narysować romb, musisz zmieniać obrót między 60 a 120 stopni.",
         "courseE_artist_functions10_2018": "Tym razem użyj rzędów 8 sześciokątów o bokach 25 pikseli. \n\n-   Aby utworzyć każdy sześciokąt, powtórz bok sześć razy, wykonując obrót o 60 stopni.  \n-   Skocz 25 pikseli miedzy sześciokątami.\n-   Aby narysować romb, musisz zmieniać obrót między 60 a 120 stopni.",
         "courseE_artist_functions10_2019": "Tym razem użyj rzędów 8 sześciokątów o bokach 25 pikseli. \n\n-   Aby utworzyć każdy sześciokąt, powtórz bok sześć razy, wykonując obrót o 60 stopni.  \n-   Skocz 25 pikseli miedzy sześciokątami.\n-   Aby narysować romb, musisz zmieniać obrót między 60 a 120 stopni.",
@@ -3898,7 +3898,8 @@
         "helloworld_food_freeplay_space-2022": "_Czas zacząć tworzyć, co tylko chcesz! Kiedy skończysz, udostępnij swój projekt i powiedz „Cześć!” do ludzi w swoim świecie!_\n\n<div style=\"float:right;padding:20px\">\n<img src=\"https://studio.code.org/api/v1/animation-library/spritelab/BwBMSmcRhyFJcNQdvbF4EQNr6iBqqJcE/category_space/space_astronaut_unicorn.png\" style=\"height:60px; border-width:0px; border-style:solid; border-color:black; border-radius:10px\"><img src=\"https://studio.code.org/api/v1/animation-library/spritelab/M_zpaCXNfxKB4uMuFuKFKuOudo4mNZ.S/category_space/space_astronaut_4.png\" style=\"height:60px; border-width:0px; border-style:solid; border-color:black; border-radius:10px\"><img src=\"https://studio.code.org/api/v1/animation-library/spritelab/hjsJUEMDi_KtdrHYBbTAE6352QGi.bQ8/category_space/space_sun.png\" style=\"height:60px; border-width:0px; border-style:solid; border-color:black; border-radius:10px\"><img src=\"https://studio.code.org/api/v1/animation-library/spritelab/zfJDL4rdROZ999p.U5.8sOu8zP5VkSVb/category_space/space_rover.png\" style=\"height:60px; border-width:0px; border-style:solid; border-color:black; border-radius:10px\">\n</div>\n\n-   Dodaj więcej _kostiumów_ duszków do swojego projektu, klikając zakładkę _kostiumy_.\n-   Dodaj _kod_ do obszaru roboczego, aby pojawiły się duszki.\n-   Spróbuj dodać więcej funkcji do swojego projektu, aby uczynić go jeszcze lepszym.\n-   Naciśnij przycisk _Udostępnij_ powyżej, aby wysłać swój projekt do znajomych!\n\nAby mieć dodatkową zabawę, sprawdź zupełnie nowy blok „stwórz efekt” w kategorii **Duszki**!\n\n<xml>\n  <block type=\"gamelab_makeBurst\">\n    <title name=\"ANIMATION_NAME\">\"face_burger_1\"</title>\n    <value name=\"NUM\">\n      <block type=\"math_number\">\n        <title name=\"NUM\">10</title>\n      </block>\n    </value>\n  </block>\n</xml>",
         "helloworld_food_click_space-2022": "Czy potrafisz skłonić te duszki do mówienia?\\_\n\n-   Przeczytaj kod. Co zauważasz?\n-   Kliknij przycisk _Uruchom_.\n-   Kliknij lub dotknij duszków.",
         "poetry_modal_function_editor": "Jest to poziom Poezji, który obejmuje automatycznie wypełnioną kategorię `PROCEDURES` i używa modalnego edytora funkcji.",
-        "poetry_no_modal_function_editor": "Jest to poziom poezji, który obejmuje automatycznie wypełnianą kategorię `PROCEDURES` i brak edytora funkcji modalnych."
+        "poetry_no_modal_function_editor": "Jest to poziom poezji, który obejmuje automatycznie wypełnianą kategorię `PROCEDURES` i brak edytora funkcji modalnych.",
+        "ramp_artist_loops62022": "Te schody są dużo większe, ale wymaga takiej samej ilości kodu, jak w ostatniej łamigłówce!\n\nNapraw tę pętle, aby ukończyć łamigłówkę."
       }
     }
   }
