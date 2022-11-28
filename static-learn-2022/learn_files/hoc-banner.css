@@ -1,0 +1,124 @@
+#bars {
+  height: 450px;
+  position: relative; }
+  @media screen and (max-width: 992px) {
+    #bars {
+      height: 400px; } }
+  #bars > div.col-33 {
+    position: absolute; }
+    #bars > div.col-33:nth-of-type(1) {
+      height: inherit;
+      max-width: 500px;
+      left: 0;
+      bottom: 0; }
+      @media screen and (max-width: 992px) {
+        #bars > div.col-33:nth-of-type(1) {
+          width: 45%;
+          left: -6%; } }
+    #bars > div.col-33:nth-of-type(2) {
+      width: 700px;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%); }
+      @media screen and (max-width: 1024px) {
+        #bars > div.col-33:nth-of-type(2) {
+          width: 570px; } }
+      @media screen and (max-width: 640px) {
+        #bars > div.col-33:nth-of-type(2) {
+          width: 100%; } }
+    #bars > div.col-33:nth-of-type(3) {
+      height: inherit;
+      max-width: 500px;
+      right: 0;
+      bottom: 0; }
+      @media screen and (max-width: 992px) {
+        #bars > div.col-33:nth-of-type(3) {
+          width: 45%;
+          right: -5%; } }
+
+.hoc-banner.homepage {
+  text-align: center;
+  color: #fff;
+  line-height: 1.4;
+  text-shadow: 0px 0px 8px #5d1582; }
+  .hoc-banner.homepage h1, .hoc-banner.homepage h2 {
+    color: #fff; }
+  .hoc-banner.homepage h1 {
+    font-size: 4.5em;
+    font-family: "Gotham 7r", sans-serif;
+    margin: 0 auto 0.5em; }
+    @media screen and (max-width: 1024px) {
+      .hoc-banner.homepage h1 {
+        font-size: 3.75em; } }
+    @media screen and (max-width: 992px) {
+      .hoc-banner.homepage h1 {
+        font-size: 3.5em; } }
+    @media screen and (max-width: 640px) {
+      .hoc-banner.homepage h1 {
+        font-size: 2.75em; } }
+  .hoc-banner.homepage h2 {
+    margin-top: 0;
+    font-family: "Gotham 4r", sans-serif; }
+    @media screen and (max-width: 992px) {
+      .hoc-banner.homepage h2 {
+        font-size: 1.25em;
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto; } }
+  .hoc-banner.homepage p {
+    font-size: 2em;
+    font-family: "Gotham 5r", sans-serif; }
+    @media screen and (max-width: 992px) {
+      .hoc-banner.homepage p {
+        font-size: 1.75em; } }
+    @media screen and (max-width: 640px) {
+      .hoc-banner.homepage p {
+        font-size: 1.35em; } }
+
+#fullwidth.hoc-banner {
+  background: url("/images/hoc2022-codeorg-hero-banner-01.svg") no-repeat center center;
+  background-size: cover; }
+  @media screen and (max-width: 640px) {
+    #fullwidth.hoc-banner {
+      background: url("/images/hoc2022-codeorg-hero-banner-mobile-01.svg") no-repeat center center;
+      background-size: cover; } }
+
+section.banner {
+  text-align: center;
+  color: #272822; }
+  section.banner h1, section.banner h2 {
+    color: #272822;
+    margin: 0; }
+  section.banner h1 {
+    font-size: 3em; }
+    @media screen and (max-width: 992px) {
+      section.banner h1 {
+        font-size: 2.5em; } }
+  section.banner h2 {
+    font-family: "Gotham 4r", sans-serif;
+    font-size: 1.2em;
+    line-height: 1.4;
+    margin: 1em auto 2em; }
+    @media screen and (max-width: 992px) {
+      section.banner h2 {
+        font-size: 1em; } }
+  section.banner .wrapper {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 5.75em 0 6.5em; }
+    @media screen and (max-width: 992px) {
+      section.banner .wrapper {
+        padding: 6em 0 6.5em;
+        width: 80%; } }
+    @media screen and (max-width: 640px) {
+      section.banner .wrapper {
+        padding: 4.5em 1em 6em;
+        width: 88%; } }
+  section.banner a {
+    color: #272822;
+    text-decoration: underline;
+    font-family: "Gotham 5r", sans-serif; }
+  section.banner p:last-child {
+    margin-bottom: 0; }
+
+/*# sourceMappingURL=hoc-banner.css.map */
