@@ -14,10 +14,10 @@
     "name_suffix": "_2018",
     "submittable": "false",
     "reference_links": [
-      "/docs/concepts/css/style-sheets/",
-      "/docs/concepts/css/text-properties/"
+      "/courses/csd-2022/guides/style-sheets/",
+      "/courses/csd-2022/guides/text-properties/"
     ],
-    "map_reference": "/docs/concepts/css/classes/",
+    "map_reference": "/courses/csd-2022/guides/classes/",
     "mini_rubric": "false"
   },
   "published": true,
