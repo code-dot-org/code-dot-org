@@ -19,8 +19,8 @@ const Template = args => (
   </Provider>
 );
 
-export const SummaryTrueNoGroups = Template.bind({});
-SummaryTrueNoGroups.args = {
+export const YesSummaryNoGroups = Template.bind({});
+YesSummaryNoGroups.args = {
   isSummaryView: true,
   hasGroups: false
 };
@@ -31,8 +31,8 @@ NoSummaryNoGroups.args = {
   hasGroups: false
 };
 
-export const SummaryAndGroups = Template.bind({});
-SummaryAndGroups.args = {
+export const YesSummaryYesGroups = Template.bind({});
+YesSummaryYesGroups.args = {
   isSummaryView: true,
   hasGroups: true
 };
