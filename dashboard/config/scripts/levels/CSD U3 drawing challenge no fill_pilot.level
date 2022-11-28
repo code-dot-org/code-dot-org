@@ -70,7 +70,7 @@
     "long_instructions": "<img src=\"https://images.code.org/5293d165d4a9161b75df43128863f315-image-1566856378596.PNG\" style=\"float:right;width:200px;\">\r\n\r\n# No Fill\r\n\r\nThe `noFill` block makes it so created shapes have no fill. We can use it to make cool patterns.\r\n\r\n# Do This\r\n\r\n* Read the code that makes the picture.\r\n* Use the `noFill` block to finish the code so it matches the picture.\r\n",
     "parent_level_id": 18779,
     "name_suffix": "_pilot",
-    "map_reference": "/docs/concepts/game-lab/drawing-shapes/",
+    "map_reference": "/courses/csd-2022/guides/drawing-shapes",
     "video_key": "csd_gamelab_draw_2",
     "disable_procedure_autopopulate": "false",
     "top_level_procedure_autopopulate": "false",
