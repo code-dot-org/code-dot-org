@@ -11,13 +11,13 @@
     "parent_level_id": 15927,
     "name_suffix": "_pilot",
     "reference_links": [
-      "/docs/concepts/css/text-properties/",
+      "/courses/csd-2022/guides/text-properties/",
       "/docs/concepts/html/formatting-html/",
       "/docs/concepts/html/lists/",
       "/docs/concepts/html/headings-and-paragraphs/",
       "/docs/concepts/html/html-tags/"
     ],
-    "map_reference": "/docs/concepts/css/style-sheets/",
+    "map_reference": "/courses/csd-2022/guides/style-sheets/",
     "video_key": "csd_weblab_css_2",
     "submittable": "false",
     "encrypted": "false",
