@@ -45,7 +45,7 @@
     "parent_level_id": 18704,
     "name_suffix": "_2020",
     "reference_links": [
-      "/docs/concepts/game-lab/drawing-shapes/",
+      "/courses/csd-2022/guides/drawing-shapes",
       "/docs/concepts/game-lab/shapes-and-parameters/",
       "/docs/concepts/javascript/functions/",
       "/docs/concepts/game-lab/animation-tab/multi-frame-animations/"
