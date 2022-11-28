@@ -57,7 +57,7 @@
     "parent_level_id": 11317,
     "name_suffix": "_2019",
     "reference_links": [
-      "/docs/concepts/game-lab/the-counter-pattern/"
+      "/courses/csd-2022/guides/the-counter-pattern-2"
     ],
     "map_reference": "/docs/concepts/game-lab/sprites/velocity/",
     "video_key": "csd_gamelab_velocity",
