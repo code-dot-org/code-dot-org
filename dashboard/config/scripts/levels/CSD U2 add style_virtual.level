@@ -14,11 +14,11 @@
     "parent_level_id": 20049,
     "name_suffix": "_virtual",
     "reference_links": [
-      "/docs/concepts/css/body-styling/",
-      "/docs/concepts/css/style-sheets/",
-      "/docs/concepts/css/text-properties/"
+      "/courses/csd-2022/guides/body-styling/",
+      "/courses/csd-2022/guides/style-sheets/",
+      "/courses/csd-2022/guides/text-properties/"
     ],
-    "map_reference": "/docs/concepts/css/layout-properties/",
+    "map_reference": "/courses/csd-2022/guides/layout-properties/",
     "encrypted": "false",
     "mini_rubric": "true",
     "rubric_key_concept": "Create rules that affect entire groups of elements; apply formatting in a web page using CSS.",

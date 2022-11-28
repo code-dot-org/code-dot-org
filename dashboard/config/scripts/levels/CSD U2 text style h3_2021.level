@@ -14,13 +14,13 @@
     "parent_level_id": 20021,
     "name_suffix": "_2021",
     "reference_links": [
-      "/docs/concepts/css/text-properties/",
+      "/courses/csd-2022/guides/text-properties/",
       "/docs/concepts/html/formatting-html/",
       "/docs/concepts/html/lists/",
       "/docs/concepts/html/headings-and-paragraphs/",
       "/docs/concepts/html/html-tags/"
     ],
-    "map_reference": "/docs/concepts/css/style-sheets/",
+    "map_reference": "/courses/csd-2022/guides/style-sheets/",
     "video_key": "csd_weblab_css_1",
     "encrypted": "false",
     "rubric_key_concept": "Apply formatting in a web page using CSS",
