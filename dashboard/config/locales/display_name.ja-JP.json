@@ -595,7 +595,10 @@
         "helloworld_food_sizes_soccer-2022": "サイズ",
         "helloworld_food_sizes_space-2022": "サイズ",
         "helloworld_food_sounds_soccer-2022": "サウンド",
-        "helloworld_food_sounds_space-2022": "サウンド"
+        "helloworld_food_sounds_space-2022": "サウンド",
+        "helloworld_food_backgrounds": "「イベント」をクリックします",
+        "helloworld_food_backgrounds_soccer-2022": "「イベント」をクリックします",
+        "helloworld_food_backgrounds_space-2022": "「イベント」をクリックします"
       }
     }
   }

@@ -653,9 +653,12 @@ ca:
             required:
               display_name: Vista general
         dance-2019:
+          title: Festa de ball
+          description_short: Codi d'una festa de ball per compartir amb els vostres amics i familiars. Amb Beyoncé, Harry Styles, Lizzo, Lil Nas X, Selena Gomez, música de “Encanto” de Disney i molt més!
           description: Crea un codi amb la teva pròpia festa amb ball i comparteix-la amb els teus amics!
           student_description: Crea un codi amb la teva pròpia festa amb ball i comparteix-la amb els teus amics!
         dance-extras-2019:
+          title: Seguir ballant
           description: Anar més enllà de la primera hora amb idees desenvolupades del projecte.
           student_description: Anar més enllà de la primera hora amb idees desenvolupades del projecte.
         csp4-preview:
@@ -962,6 +965,8 @@ ca:
               description: prova
         spelling-bee:
           title: Abella ortogràfica
+        ai-ethics-2021:
+          description_audience: Qualificacions 6-12
         2022drafting:
           lesson_groups:
             lessonGroup-8:
@@ -1092,6 +1097,12 @@ ca:
           lessons:
             lesson-6:
               name: Bucles
+        csa2-2023:
+          lessons:
+            lesson-4:
+              name: Variables
+        hello-world-space-2022:
+          title: 'Hola Món: Espai'
         csc-function-machines-pilot:
           lessons:
             lesson-1:

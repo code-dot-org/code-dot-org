@@ -4,6 +4,8 @@ ko:
     blocks:
       AmysBlocks_setPromptWithChoices:
         text: 선택항목 {A}{B}{C}으로 변수 {VAR}를 위한 사용자 {QUESTION} 유도
+      AmysBlocks_spriteSayVar:
+        text: "{SPRITE}이(가) {TEXT1}을(를) 말함"
       BadGuys_makeNewBadGuysSprite:
         text: 새로운 만들기 {ANIMATION_NAME} 스프라이트 에서 {LOCATION}
       BadGuys_setSizeAll_dropdown:
@@ -989,6 +991,13 @@ ko:
         text: 설정
       Dancelab_whenSetup2:
         text: 설정
+      DansBlocks_getMicroscope:
+        text: 현미경에 {INPUT1}이(가) 있습니다
+        options:
+          INPUT1:
+            '1': 레몬 주스
+            '3': baking soda
+            '5': both
       DansBlocks_setForegroundEffect2:
         text: "{EFFECT} 효과 연출"
         options:
@@ -1001,12 +1010,20 @@ ko:
             '"starburst"': 스타버스트
             '"glass"': 산산조각나는 유리
             '"twinkling"': 반짝거림
-      FunctionBlocks_representManipulative:
+      DansBlocks_setMicroscope:
         options:
-          BEHAVIOR:
-            draggable(): 드래그 가능
-            wandering(): 배회
-            shrinking(): 축소
+          INPUT1:
+            '1': 레몬 주스
+            '3': baking soda
+            '5': both
+      FunctionBlocks_communicate:
+        text: "{SPRITE1COSTUME}(으)로 {VAR1}와(과) 소통"
+      FunctionBlocks_makeManipulative2:
+        text: "{NUM}을(를) 새로운 {ANIMATION_NAME} 스프라이트 {BEHAVIOR}(으)로 만들기"
+      FunctionBlocks_representManipulative:
+        text: "{NUM}을(를) 새로운 {ANIMATION_NAME} 스프라이트 [BEHAVIOR][2](으)로 나타내기"
+      FunctionBlocks_spriteSayVar:
+        text: "{SPRITE}이(가) {TEXT1}을(를) 말함"
       gamelab_addBehaviorSimple:
         text: 스프라이트 {SPRITE} 시작 {BEHAVIOR}
       gamelab_addTarget:
@@ -1354,6 +1371,7 @@ ko:
             "'sound://category_space/Pillars_SFX.mp3'": 기둥
             "'sound://category_space/Southern_ring_SFX.mp3'": 남부 고리
             "'sound://category_space/Supernova_SFX.mp3'": 초신성
+            "'sound://category_space/Tycho_SFX.mp3'": 타이코
       gamelab_playSpeech:
         text: 스피치 {SOUND} 재생
       gamelab_playerBehaviors:
@@ -1938,8 +1956,39 @@ ko:
         text: x 좌표 {SPRITE}
       Mikelab_yLocationOf:
         text: y 좌표 {SPRITE}
+      ParticlesBlocks_getMicroscope:
+        text: 현미경에 {INPUT1}이(가) 있습니다
+        options:
+          INPUT1:
+            '1': 레몬 주스
+            '3': baking soda
+            '5': both
+      ParticlesBlocks_setMicroscope:
+        options:
+          INPUT1:
+            '1': 레몬 주스
+            '3': baking soda
+            '5': both
       ParticlesBlocks_statesOfMatter:
         text: "{BEHAVIOR}"
+        options:
+          BEHAVIOR:
+            new Behavior(solid, []): 고체
+            new Behavior(liquid, []): 액체
+            new Behavior(wandering, []): 기체
+      ParticlesBlocks_statesOfMatter2:
+        text: "{COSTUME}을(를) {BEHAVIOR} 행동으로 설정"
+        options:
+          BEHAVIOR:
+            '"solid"': '고체 입자 '
+            '"liquid"': 액체 입자
+            '"gas"': 기체 입자
+      ParticlesBlocks_statesOfMatter_testing:
+        options:
+          BEHAVIOR:
+            '"solid"': '고체 입자 '
+            '"liquid"': 액체 입자
+            '"gas"': 기체 입자
       Poetry_addFrame:
         options:
           BRUSH:
@@ -2007,6 +2056,21 @@ ko:
             '"sound://category_achievements/peaceful_win_1.mp3"': 승리
             '"sound://category_explosion/vibrant_game_arcade_game_negative_hit.mp3"': 빙빙
             '"sound://category_achievements/peaceful_win_6.mp3"': 풍경
+      Poetry_playSoundOptionsSpace:
+        text: Playsound {SOUND}
+        options:
+          SOUND:
+            "'sound://category_space/Blackhole_SFX.mp3'": 블랙 홀
+            "'sound://category_space/Bullet_cluster_SFX.mp3'": 총알 클러스터
+            "'sound://category_space/Carina_SFX.mp3'": 용골자리
+            "'sound://category_space/Cassiopeia_SFX.mp3'": 카시오페아
+            "'sound://category_space/Crab_nebula_SFX.mp3'": 게자리
+            "'sound://category_space/Launch_SFX.mp3'": 출시
+            "'sound://category_space/Lift_Off.mp3'": 이륙
+            "'sound://category_space/Pillars_SFX.mp3'": 기둥
+            "'sound://category_space/Southern_ring_SFX.mp3'": 남부 고리
+            "'sound://category_space/Supernova_SFX.mp3'": 초신성
+            "'sound://category_space/Tycho_SFX.mp3'": 타이코
       Poetry_setAuthor:
         text: 작가 {AUTHOR} 설정
       Poetry_setBackground:
@@ -2311,6 +2375,16 @@ ko:
           DIR:
             right: 우측 윙어
             left: 왼쪽
+      storylab_setForegroundEffect2:
+        text: "{EFFECT} 효과 연출"
+        options:
+          EFFECT:
+            '"bubbles"': 거품
+            '"confetti"': 색종이
+            '"hearts"': 하트
+            '"rain"': 비
+            '"starburst"': 스타버스트
+            '"twinkling"': 반짝거림
       storylab_setHeading:
         text: "{HEADING} 헤딩 설정"
       storylab_setSubheading:

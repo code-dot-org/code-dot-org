@@ -985,10 +985,6 @@ nl:
             '"starburst"': Sterrenvorming
             '"glass"': Brekend glas
             '"twinkling"': Fonkeling
-      FunctionBlocks_representManipulative:
-        options:
-          BEHAVIOR:
-            draggable(): slepbaar
       gamelab_addBehaviorSimple:
         text: sprite {SPRITE} begint {BEHAVIOR}
       gamelab_addTarget:
@@ -1922,6 +1918,8 @@ nl:
             '"sound://category_achievements/peaceful_win_1.mp3"': Win
             '"sound://category_explosion/vibrant_game_arcade_game_negative_hit.mp3"': Kolk
             '"sound://category_achievements/peaceful_win_6.mp3"': Windklokken
+      Poetry_playSoundOptionsSpace:
+        text: PlaySound {SOUND}
       Poetry_setAuthor:
         text: Auteur {AUTHOR} instellen
       Poetry_setBackground:
@@ -2236,5 +2234,15 @@ nl:
           DIR:
             right: rechtsom ↻
             left: linksom ↺
+      storylab_setForegroundEffect2:
+        text: Effect {EFFECT} uitvoeren
+        options:
+          EFFECT:
+            '"bubbles"': Bubbels
+            '"confetti"': Confetti
+            '"hearts"': hartjes
+            '"rain"': regen
+            '"starburst"': Sterrenvorming
+            '"twinkling"': Fonkeling
       validation_validatedBackground:
         text: set achtergrond naar {IMG}

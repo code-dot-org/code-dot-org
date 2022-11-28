@@ -993,11 +993,6 @@ sv:
             '"hearts"': hjärtan
             '"rain"': regn
             '"starburst"': Stjärnfall
-      FunctionBlocks_representManipulative:
-        options:
-          BEHAVIOR:
-            draggable(): vara dragbar
-            shrinking(): krymper
       gamelab_addBehaviorSimple:
         text: sprite {SPRITE} börjar {BEHAVIOR}
       gamelab_addTarget:
@@ -1938,6 +1933,8 @@ sv:
             '"sound://category_achievements/peaceful_win_1.mp3"': Vinna
             '"sound://category_explosion/vibrant_game_arcade_game_negative_hit.mp3"': Virvla
             '"sound://category_achievements/peaceful_win_6.mp3"': Vindspel
+      Poetry_playSoundOptionsSpace:
+        text: spelljud {SOUND}
       Poetry_setBackground:
         text: ange bakgrundsfärg {COLOR}
       Poetry_setBackgroundEffect:
@@ -2231,5 +2228,13 @@ sv:
           DIR:
             right: höger ↻
             left: vänster ↺
+      storylab_setForegroundEffect2:
+        options:
+          EFFECT:
+            '"bubbles"': Bubblor
+            '"confetti"': Konfetti
+            '"hearts"': hjärtan
+            '"rain"': regn
+            '"starburst"': Stjärnfall
       validation_validatedBackground:
         text: ställa in bakgrunden till {IMG}

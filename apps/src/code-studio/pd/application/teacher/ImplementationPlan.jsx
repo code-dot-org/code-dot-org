@@ -4,7 +4,8 @@ import color from '@cdo/apps/util/color';
 import {
   PROGRAM_CSD,
   PROGRAM_CSP,
-  PROGRAM_CSA
+  PROGRAM_CSA,
+  getProgramInfo
 } from './TeacherApplicationConstants';
 import {
   PageLabels,
@@ -20,19 +21,6 @@ import {
   LabeledRadioButtons,
   LabeledRadioButtonsWithAdditionalTextFields
 } from '../../form_components_func/labeled/LabeledRadioButtons';
-
-const getProgramInfo = program => {
-  switch (program) {
-    case PROGRAM_CSD:
-      return {name: 'CS Discoveries', shortName: 'CSD', minCourseHours: 25};
-    case PROGRAM_CSP:
-      return {name: 'CS Principles', shortName: 'CSP', minCourseHours: 100};
-    case PROGRAM_CSA:
-      return {name: 'CSA', shortName: 'CSA', minCourseHours: 140};
-    default:
-      return {name: 'CS Program', shortName: null, minCourseHours: 0};
-  }
-};
 
 const WhichGradesSelector = props => {
   return (
@@ -166,12 +154,7 @@ ImplementationPlan.associatedFields = [
 const uniqueRequiredFields = {
   [PROGRAM_CSD]: ['csdWhichGrades'],
   [PROGRAM_CSP]: ['cspWhichGrades', 'cspHowOffer'],
-  [PROGRAM_CSA]: [
-    'csaWhichGrades',
-    'csaHowOffer',
-    'csaAlreadyKnow',
-    'csaPhoneScreen'
-  ]
+  [PROGRAM_CSA]: ['csaWhichGrades', 'csaHowOffer']
 };
 
 ImplementationPlan.getDynamicallyRequiredFields = data => {

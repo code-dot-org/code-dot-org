@@ -65,7 +65,6 @@ module Pd::Application
     AUTO_EMAIL_STATUSES = %w(
       accepted
       declined
-      pending_space_availability
     )
 
     # If the regional partner's emails are SENT_BY_SYSTEM, the application must
@@ -85,7 +84,7 @@ module Pd::Application
 
     before_save :save_partner, if: -> {form_data_changed? && regional_partner_id.nil? && !deleted?}
     before_save :update_user_school_info!, if: -> {form_data_changed?}
-    before_save :log_status, if: -> {status_changed?}
+    before_save :log_status, if: -> {status_changed? || form_data_changed?}
 
     serialized_attrs %w(
       pd_workshop_id
@@ -397,9 +396,9 @@ module Pd::Application
     # Otherwise return nil.
     def principal_approval_state
       response = Pd::Application::PrincipalApprovalApplication.find_by(application_guid: application_guid)
-      return PRINCIPAL_APPROVAL_STATE[:complete] + response.full_answers[:do_you_approve] if response
+      return "#{PRINCIPAL_APPROVAL_STATE[:complete]}Admin said #{response.full_answers[:do_you_approve]} on #{response.applied_at&.strftime('%b %-d')}" if response
 
-      principal_approval_email = emails.where(email_type: 'principal_approval').order(:created_at).last
+      principal_approval_email = emails.where(email_type: 'admin_approval').order(:created_at).last
       if principal_approval_email
         # Format sent date as short-month day, e.g. Oct 8
         return PRINCIPAL_APPROVAL_STATE[:in_progress] + principal_approval_email.sent_at&.strftime('%b %-d')
@@ -695,6 +694,7 @@ module Pd::Application
           required << :csa_which_grades
           required << :csa_how_offer
           required << :csa_already_know
+          required << :csa_phone_screen
         end
 
         if hash[:regional_partner_workshop_ids].presence
@@ -747,7 +747,7 @@ module Pd::Application
 
     def allow_sending_principal_email?
       response = Pd::Application::PrincipalApprovalApplication.find_by(application_guid: application_guid)
-      last_principal_approval_email = emails.where(email_type: 'principal_approval').order(:created_at).last
+      last_principal_approval_email = emails.where(email_type: 'admin_approval').order(:created_at).last
       last_principal_approval_email_created_at = last_principal_approval_email&.created_at
 
       # Do we allow manually sending/resending the principal email?
@@ -767,8 +767,8 @@ module Pd::Application
       true
     end
 
-    def allow_sending_principal_approval_teacher_reminder_email?
-      reminder_emails = emails.where(email_type: 'principal_approval_teacher_reminder')
+    def allow_sending_admin_approval_teacher_reminder_email?
+      reminder_emails = emails.where(email_type: 'admin_approval_teacher_reminder')
 
       # Do we allow the cron job to send a reminder email to the teacher?
 
@@ -780,7 +780,7 @@ module Pd::Application
       return false if reminder_emails.any?
 
       # Only if we've sent at least one principal approval email before.
-      return false unless emails.where(email_type: 'principal_approval').exists?
+      return false unless emails.where(email_type: 'admin_approval').exists?
 
       # If it's valid to send another principal email at this time.
       return allow_sending_principal_email?
@@ -975,19 +975,33 @@ module Pd::Application
       meets_minimum_criteria_scores = {}
       meets_scholarship_criteria_scores = {}
 
-      # Section 2
+      # Section 4
+      if course == 'csa'
+        meets_minimum_criteria_scores[:csa_already_know] = responses[:csa_already_know] == options[:csa_already_know].first ? YES : NO
+        meets_minimum_criteria_scores[:csa_phone_screen] = responses[:csa_phone_screen] == options[:csa_phone_screen].first ? YES : NO
+      end
+
+      # Section 6
       if course == 'csd'
         meets_minimum_criteria_scores[:csd_which_grades] =
           (responses[:csd_which_grades] & options[:csd_which_grades].first(5)).any? ? YES : NO
+        took_csd_course =
+          responses[:previous_yearlong_cdo_pd].include?('CS Discoveries')
+        meets_minimum_criteria_scores[:previous_yearlong_cdo_pd] = took_csd_course ? NO : YES
       elsif course == 'csp'
         meets_minimum_criteria_scores[:csp_which_grades] =
           (responses[:csp_which_grades] & options[:csp_which_grades].first(4)).any? ? YES : NO
+        took_csp_course =
+          responses[:previous_yearlong_cdo_pd].include?('CS Principles')
+        meets_minimum_criteria_scores[:previous_yearlong_cdo_pd] = took_csp_course ? NO : YES
       elsif course == 'csa'
-        meets_minimum_criteria_scores[:csa_already_know] = responses[:csa_already_know] == options[:csa_already_know].first ? YES : NO
         meets_minimum_criteria_scores[:csa_which_grades] =
           (responses[:csa_which_grades] & options[:csa_which_grades].first(4)).any? ? YES : NO
+        took_csa_course = responses[:previous_yearlong_cdo_pd].include?('Computer Science A (CSA)')
+        meets_minimum_criteria_scores[:previous_yearlong_cdo_pd] = took_csa_course ? NO : YES
       end
 
+      meets_minimum_criteria_scores[:enough_course_hours] = responses[:enough_course_hours] == options[:enough_course_hours].first ? YES : NO
       meets_minimum_criteria_scores[:replace_existing] =
         if responses[:replace_existing] == YES
           NO
@@ -997,20 +1011,7 @@ module Pd::Application
           YES
         end
 
-      # Section 3
-      if course == 'csd'
-        took_csd_course =
-          responses[:previous_yearlong_cdo_pd].include?('CS Discoveries')
-        meets_minimum_criteria_scores[:previous_yearlong_cdo_pd] = took_csd_course ? NO : YES
-      elsif course == 'csp'
-        meets_minimum_criteria_scores[:previous_yearlong_cdo_pd] =
-          responses[:previous_yearlong_cdo_pd].include?('CS Principles') ? NO : YES
-      elsif course == 'csa'
-        meets_minimum_criteria_scores[:previous_yearlong_cdo_pd] =
-          responses[:previous_yearlong_cdo_pd].include?('Computer Science A (CSA)') ? NO : YES
-      end
-
-      # Section 4
+      # Section 7
       meets_minimum_criteria_scores[:committed] = responses[:committed] == options[:committed].first ? YES : NO
 
       # Principal Approval
@@ -1120,7 +1121,7 @@ module Pd::Application
       auto_score!
       self.principal_approval_not_required = regional_partner&.applications_principal_approval == RegionalPartner::SELECTIVE_APPROVAL
       unless regional_partner&.applications_principal_approval == RegionalPartner::SELECTIVE_APPROVAL
-        queue_email :principal_approval, deliver_now: true
+        queue_email :admin_approval, deliver_now: true
       end
       save
     end
@@ -1171,8 +1172,9 @@ module Pd::Application
       )
       save!
       auto_score!
-      queue_email(:principal_approval_completed, deliver_now: true)
-      queue_email(:principal_approval_completed_partner, deliver_now: true)
+      queue_email(:admin_approval_completed, deliver_now: true)
+      queue_email(:admin_approval_completed_partner, deliver_now: true)
+      queue_email(:admin_approval_completed_teacher_receipt, deliver_now: true)
     end
 
     # @override

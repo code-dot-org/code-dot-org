@@ -2326,6 +2326,7 @@ pl:
           title: Wykrywacz kolizji
         dance-2019:
           title: Potańcówka (2019)
+          description_short: Koduj imprezę taneczną, aby podzielić się nią ze znajomymi. Z udziałem Beyoncé, Harry Styles, Lizzo, Lil Nas X, Selena Gomez, muzyka z filmu Disneya „Encanto,” i więcej!
           description: Stwórz kod swojej własnej imprezy tanecznej i udostępnij ją swoim znajomym.
           student_description: Stwórz kod swojej własnej imprezy tanecznej i udostępnij ją swoim znajomym.
         k5-onlinepd-2019:
@@ -4908,6 +4909,11 @@ pl:
         vpl-csa-2022:
           name: vpl-csa-2022
           title: CSA Wirtualne profesjonalne uczenie się
+          lessons:
+            lesson-4:
+              name: 'Moduł 4 po pracy: Tablice 2D w Jednostce 5 i FRQ'
+            lesson-6:
+              name: 'Moduł 6 po pracy: Metody łańcuchowe w Jednostce 6'
         csa-labs-2022:
           lesson_groups:
             lessonGroup-2:
@@ -4938,6 +4944,13 @@ pl:
             lesson-20:
               name: Aktywność otwarta
         csa-draft-pl:
+          lessons:
+            lesson-3:
+              name: 'Moduł 4 po pracy: FRQ i Jednostka 5'
+            lesson-4:
+              name: 'Moduł 5 po pracy: Jednostka 5 Projekt'
+            lesson-5:
+              name: 'Moduł 6 po pracy: Metody łańcuchowe w Jednostce 6'
           name: csa-draft-pl
         vpl-csd2-ayw-pilot-2022:
           lessons:
@@ -5023,10 +5036,20 @@ pl:
               name: Ankieta wstępna CSA
             lesson-2:
               name: Java Lab
+            lesson-4:
+              name: Sąsiedztwo
+            lesson-5:
+              name: Nawigacja i malowanie
             lesson-6:
               name: Pętle
+            lesson-7:
+              name: Dziedziczenie
             lesson-8:
               name: Metody pisania
+            lesson-9:
+              name: Styl programowania i opinie
+            lesson-10:
+              name: Instrukcje wyboru
             lesson-11:
               name: Strategie debugowania
             lesson-12:
@@ -5053,6 +5076,40 @@ pl:
           name: csa1-2023
           title: Programowanie obiektowe
         csa2-2023:
+          lessons:
+            lesson-1:
+              name: Atrybuty
+            lesson-2:
+              name: Konstruktory bez argumentów
+            lesson-3:
+              name: Sparametryzowane konstruktory
+            lesson-4:
+              name: Zmienne
+            lesson-5:
+              name: Metody Accessor
+            lesson-6:
+              name: Dane użytkownika
+            lesson-7:
+              name: Operatory i wyrażenia
+            lesson-8:
+              name: Metody mutatorów
+            lesson-9:
+              name: Drukowanie obiektów
+            lesson-10:
+              name: Projekt zarządzania sklepem
+            lesson-11:
+              name: Praktyka FRQ
+            lesson-12:
+              name: Jednostka 2 Sprawdzian
+            lesson-13:
+              name: Projekt zarządzania sklepem [wersja 1-dniowa]
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Treści
+            lessonGroup-3:
+              display_name: Pokaż, co wiesz
+            lessonGroup-4:
+              display_name: Lekcje alternatywne
           name: csa2-2023
           title: Struktura klas i Projekt
         csa3-2023:
@@ -5075,12 +5132,20 @@ pl:
           title: Wyszukiwanie i porządkowanie
         vpl-csd3-ayw-pilot-2022:
           lessons:
+            lesson-3:
+              name: Ocena kształtujący w Odkrycia Informatyki
             lesson-4:
               name: Równość i dane
+            lesson-6:
+              name: Moduł 3 Praca asynchroniczna
+            lesson-7:
+              name: Cykle zapytań o dane
           name: vpl-csd3-ayw-pilot-2022
           title: Odkrycia informatyki wirtualny moduł 3
         vpl-csd4-ayw-pilot-2022:
           lessons:
+            lesson-3:
+              name: Definiowanie sukcesu ucznia w ocenie podsumowującej
             lesson-5:
               name: Moduł 4 Praca asynchroniczna
           name: vpl-csd4-ayw-pilot-2022
@@ -5104,8 +5169,13 @@ pl:
               name: ćwiczenia
         csa-consumer-review-lab:
           lessons:
+            lesson-1:
+              name: Recenzje i wartość nastrojów
+            lesson-2:
+              name: Wartość nastrojów i oceny w gwiazdkach
             lesson-5:
               name: Aktywność otwarta
+          title: Laboratorium przeglądu konsumentów AP CSA
         csa-data-lab:
           lessons:
             lesson-1:
@@ -5116,6 +5186,9 @@ pl:
               name: Zbierając to wszystko razem...
             lesson-4:
               name: Aktywność otwarta
+          title: AP CSA Data Lab
+          description: "Uczniowie są zmotywowani, jeśli czują się związani z materiałem, który studiują. Jednym ze sposobów, aby treści informatyczne były odpowiednie, znaczące, relatywne, a ekscytujące jest włączenie rzeczywistych zestawów danych do praktycznych zadań programistycznych.\n\nDane są wartościami. Wartości same w sobie nie są wiedzą, wiedza jest tym, co zyskujesz dzięki badaniu danych. To ćwiczenie ma na celu zachęcenie uczniów do czerpania wiedzy na interesujący ich temat poprzez zbadanie zestawu dostępnych danych z sieci. Aby zdobyć wiedzę z danych w tym laboratorium, uczniowie zadadzą pytanie, wyszukają zestawu danych na ten temat, a następnie przetworzą te dane, aby znaleźć odpowiedź na ich pytanie.\n\n### Połączenie w świecie rzeczywistym\n\nMożliwość dostępu i przetwarzania danych jest ważną częścią wielu branż. Niezależnie od tego, czy chodzi o ustalenie najlepszej alokacji zasobów, czy podjęcie decyzji, jaki nowy produkt stworzyć, analizowanie danych jest niezbędnym elementem tych dociekań. Na szczęście dostępne są narzędzia ułatwiające odczyt i przetwarzanie danych, a to laboratorium przybliży uczniom jedno z takich narzędzi i poprosi ich o wykorzystanie istniejących danych ze świata rzeczywistego, aby odpowiedzieli na pytanie, które ich interesuje."
+          student_description: Dane są wartościami. Wartości same w sobie nie są wiedzą, wiedza jest tym, co zyskujesz dzięki badaniu danych. To ćwiczenie ma na celu zachęcenie Cię do czerpania wiedzy na interesujący Cię temat poprzez zbadanie zestawu swobodnie dostępnych danych z sieci. Aby zdobyć wiedzę z danych w tym laboratorium, zadasz pytanie, wyszukaj zestaw danych na ten temat, a następnie przetwórz te dane, aby odpowiedzieć na swoje pytanie.
         hello-world-space-2022:
           title: 'Witaj świecie: kosmos'
         hello-world-soccer-2022:
@@ -5191,9 +5264,21 @@ pl:
               name: Zabytki USA
             lesson-3:
               name: Lokalni gawędziarze
+            lesson-5:
+              name: Lokalni gawędziarze
           name: csc-landmarks-pilot
-          description: Moduł pilotażowy zima 2022 r. – Moduł historycznych zabytków i punktów orientacyjnych na mapie
         csc-playground:
+          lessons:
+            lesson-2:
+              name: Lekcja cząstek 1
+            lesson-3:
+              name: Lekcja cząstek 2
+            lesson-4:
+              name: Lekcja cząstek 3
+            lesson-5:
+              name: Lekcja cząstek 4
+            lesson-6:
+              name: Testowanie Katie
           name: csd-playground
           title: Plac Zabaw CSP
         self-paced-pl-physical-computing1:
@@ -5204,11 +5289,21 @@ pl:
               name: Ta lekcja wymaga nazwy
           name: self-paced-pl-physical-computing2
         emmas-playground:
+          lessons:
+            lesson-1:
+              name: Rzeczy Emmy
           name: emmas-playground
+        amys-playground:
+          lessons:
+            lesson-1:
+              name: Pęczek rzeczy
         csc-function-machines-pilot:
           lessons:
             lesson-1:
               name: Co to za dźwięk?
+            lesson-4:
+              name: Sekretna wiadomość
+          title: Moduł pilotażowy funkcjonowania maszyn
         csp1-2023:
           lesson_groups:
             cspSurvey:
@@ -5302,3 +5397,31 @@ pl:
               name: Jednostka 7 Projekty
             lesson-8:
               name: Jednostka 8 Projekty
+          title: Przykłady projektów Jednostki CSA [2022-2023]
+        amy-playground:
+          lessons:
+            lesson-1:
+              name: Cząstki
+        angelina-playground:
+          lessons:
+            lesson-1:
+              name: Stany rzeczy
+            lesson-2:
+              name: OG Stany rzeczy
+          name: angelina-playground
+          title: Miejsce Angeliny do robienia rzeczy
+        csc-pilot-fa2022-timecapsule:
+          name: csc-pilot-fa2022-timecapsule
+          title: Kapsuły czasu (jesień 2022 pilotaż)
+        csc-pilot-fa2022-ecosystem:
+          name: csc-pilot-fa2022-ecosystem
+          title: Ekosystemy (jesień 2022 pilotaż)
+        csp-playground:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Zmienne EIPM (Erik)
+          name: csd-playground
+          title: Plac Zabaw CSP
+        csc-pilot-fa2022-particles:
+          name: csc-pilot-fa2022-particles
+          title: 'Cząstki '

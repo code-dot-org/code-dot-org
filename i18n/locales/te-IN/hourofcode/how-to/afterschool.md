@@ -6,9 +6,9 @@ title: Hour of Code How-to Guide for After-school
 
 # స్కూల్ తరువాత క్లాసులు మరియు క్లబ్బుల్లో Hour of Code ఎలా నేరుపలి
 
-### Join the movement and introduce your students to computer science with these steps.
+### ఉద్యమంలో చేరండి మరియు ఈ దశలతో మీ విద్యార్థుల్ని కంప్యూటర్ సైన్స్ కి పరిచయం చేయండి.
 
-Computational thinking helps nurture problem-solving skills, logic, and creativity. And technology is transforming every industry on the planet. Students today should learn how to create technology, not just use it. By starting early, they’ll have a foundation for success in any 21st-century career path.
+కంప్యూటేషనల్ నైపుణ్యాలు సమస్య-పరిష్కార నైపుణ్యాలు, తార్కికత, మరియు సృజనాత్మకతను పెంచడానికి సహాయపడతాయి. మరియు టెక్నాలజీ అనేది ఈ భూమిపై ప్రతి పరిశ్రమనూ పరివర్తన చేస్తున్నది. ఈరోజు విద్యార్థులు టెక్నాలజీని ఎలా క్రియేట్ చేయాలో నేర్చుకోవాలి, కేవలం దాన్ని ఉపయోగించుకోవడం మాత్రమే కాదు. త్వరగా మొదలుపెట్టడం ద్వారా, ఏదేని 21వ-శతాబ్దపు కెరీర్ మార్గంలో విజయానికి వాళ్ళు పునాది వేసుకోగలుగుతారు.
 
 Trying an Hour of Code is a simple and fun way to introduce students to computer science, perhaps for the very first time. If you'd like an extra set of hands to help out, you can find a [local volunteer]({{ urls/volunteer_local }}) to help run an Hour of Code in your after-school class or club.
 
@@ -65,7 +65,7 @@ Kick off your Hour of Code by inspiring participants and discussing how computer
 
 **Direct participants to the activity** - Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial]({{ urls/learn }}) under the number of participants.
 
-**When someone comes across difficulties it's okay to respond:** - “I don’t know. Let’s figure this out together.” - “Technology doesn’t always work out the way we want.” - “Learning to program is like learning a new language; you won’t be fluent right away.”
+**When someone comes across difficulties it's okay to respond:** - “I don’t know. మనం కలిసి దీన్ని సరిచేసుకుందాం.” - “టెక్నాలజీ ఎల్లప్పుడూ మనం కోరుకున్న విధంగా పనిచేయదు.” - “ప్రోగ్రామును నేర్చుకోవడమనేది ఒక కొత్త భాషను నేర్చుకోవడం వంటిది; ఇప్పటికిప్పుడే మీరు ప్రావీణ్యులు కాకపోవచ్చు.”
 
 **What to do if someone finishes early?** - Encourage participants to try another Hour of Code activity at [hourofcode.com/learn]({{ urls/learn }}) - Or, ask those who finish early to help others who are having trouble.
 
