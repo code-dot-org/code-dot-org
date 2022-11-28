@@ -142,7 +142,7 @@
     "parent_level_id": 16216,
     "name_suffix": "_pilot",
     "reference_links": [
-      "/docs/concepts/game-lab/sprites/"
+      "/courses/csd-2022/guides/sprites/"
     ],
     "mini_rubric": "false",
     "preload_asset_list": null

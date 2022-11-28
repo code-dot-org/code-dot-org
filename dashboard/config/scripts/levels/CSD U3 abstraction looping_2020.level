@@ -85,17 +85,17 @@
     "parent_level_id": 18615,
     "name_suffix": "_2020",
     "reference_links": [
-      "/docs/concepts/game-lab/sprites/velocity/",
+      "/courses/csd-2022/guides/sprites/velocity/",
       "/docs/concepts/javascript/booleans-and-comparison-operators/",
       "/courses/csd-2022/guides/if-statements",
       "/docs/concepts/javascript/if-else-statements/",
       "/courses/csd-2022/guides/the-counter-pattern-2",
       "/courses/csd-2022/guides/the-draw-loop",
-      "/docs/concepts/game-lab/sprites/",
+      "/courses/csd-2022/guides/sprites/",
       "/courses/csd-2022/guides/animation-tab",
       "/courses/csd-2022/guides/sprite-properties",
       "/courses/csd-2022/guides/random-numbers",
-      "/docs/concepts/game-lab/animation-tab/multi-frame-animations/"
+      "/courses/csd-2022/guides/animation-tab/multi-frame-animations/"
     ],
     "video_key": "csd_gamelab_velocity",
     "mini_rubric": "false",
