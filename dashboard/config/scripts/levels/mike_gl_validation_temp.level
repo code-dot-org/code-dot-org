@@ -100,7 +100,7 @@
       "/docs/concepts/javascript/variables/",
       "/docs/concepts/javascript/naming-variables/"
     ],
-    "map_reference": "/docs/concepts/javascript/if-statements/",
+    "map_reference": "/courses/csd-2022/guides/if-statements",
     "show_type_hints": "false",
     "include_shared_functions": "false",
     "long_instructions": "# Changing Fruit\r\n\r\nNow that we know how to use _if_ statements, you can do more than just check if the apple has reached a scale of 2. You turn it into a pear once it happens.\r\n\r\n# Do This\r\n\r\nUse a conditional in the draw loop to check whether `fruit.scale` is greater than 2.  If it is, change the fruit's animation to \"pear\".",

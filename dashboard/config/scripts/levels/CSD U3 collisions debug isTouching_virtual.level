@@ -65,7 +65,7 @@
     "parent_level_id": 16157,
     "name_suffix": "_virtual",
     "reference_links": [
-      "/docs/concepts/javascript/if-statements/",
+      "/courses/csd-2022/guides/if-statements",
       "/docs/concepts/game-lab/sprites/"
     ],
     "map_reference": "/docs/concepts/game-lab/sprites/collision-detection/",

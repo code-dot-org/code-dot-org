@@ -116,7 +116,7 @@
     "long_instructions": "# Fix the Program\r\n\r\nThis program should only shake the creature when the mouse is pressed, and only show directions when the mouse is **not** pressed.\r\n\r\n# Do This\r\n\r\n* Change the code so that the creature only shakes when the mouse is pressed.\r\n* Change the code so the directions (\"Press the mouse to shake the creature.\") **only show** when the user is **not** pressing the mouse.",
     "reference_links": [
       "/docs/concepts/javascript/booleans-and-comparison-operators/",
-      "/docs/concepts/javascript/if-statements/",
+      "/courses/csd-2022/guides/if-statements",
       "/docs/concepts/game-lab/the-counter-pattern/",
       "/docs/concepts/game-lab/the-draw-loop/",
       "/docs/concepts/game-lab/sprites/",

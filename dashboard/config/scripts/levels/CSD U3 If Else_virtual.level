@@ -112,7 +112,7 @@
     "name_suffix": "_virtual",
     "long_instructions": "# When to Provide an \"Else\"\r\n\r\nThe else clause is useful when you want the program to do one thing when your condition is true, and a *different* thing when your condition is false.\r\n\r\n<img src=\"https://images.code.org/730a895b50375781e72c95f5fa21d09d-image-1477681109870.gif\" style=\"float:right;\">\r\n\r\n# Do This\r\nClick \"Run\" to see the swarm of bees created for you and a flower on the left side of the screen. Make the swarm of bees **appear when the mouse is near the flower** (on the left side of the screen) and **disappear when the mouse is away from the flower** (on the right side of the screen). Look at the example on the right.\r\n\r\n* Add an `if else` statement after the code that updates the position of the bees\r\n* In the input of the if use a boolean to check if the x position of the mouse is on the side of the screen with the flower.\r\n* Set the `visible` property of each bee inside both the if and else statements appropriately to make the bees only show near the flower.",
     "reference_links": [
-      "/docs/concepts/javascript/if-statements/",
+      "/courses/csd-2022/guides/if-statements",
       "/docs/concepts/javascript/booleans-and-comparison-operators/"
     ],
     "map_reference": "/docs/concepts/javascript/if-else-statements/",
