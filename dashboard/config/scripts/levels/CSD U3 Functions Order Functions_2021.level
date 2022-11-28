@@ -66,7 +66,7 @@
     "video_key": "csd_gamelab_functions",
     "reference_links": [
       "/courses/csd-2022/guides/drawing-shapes",
-      "/docs/concepts/game-lab/shapes-and-parameters/"
+      "/courses/csd-2022/guides/shapes-and-parameters"
     ],
     "libraries_enabled": "false",
     "preload_asset_list": null
