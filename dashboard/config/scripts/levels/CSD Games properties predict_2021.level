@@ -90,7 +90,7 @@
       "CSD Games Properties multi predict_2021"
     ],
     "display_name": "Sprite Properties: Predict",
-    "map_reference": "/docs/concepts/game-lab/sprites/sprite-properties/",
+    "map_reference": "/courses/csd-2022/guides/sprite-properties",
     "libraries_enabled": "false",
     "preload_asset_list": null
   },

@@ -46,7 +46,7 @@
     "name_suffix": "_virtual",
     "reference_links": [
       "/docs/concepts/game-lab/sprites/",
-      "/docs/concepts/game-lab/sprites/sprite-properties/",
+      "/courses/csd-2022/guides/sprite-properties",
       "/docs/concepts/game-lab/sprites/velocity/",
       "/courses/csd-2022/guides/animation-tab",
       "/docs/concepts/game-lab/animation-tab/editing-images/"

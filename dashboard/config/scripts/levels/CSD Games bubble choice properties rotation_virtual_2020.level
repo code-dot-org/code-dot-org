@@ -93,7 +93,7 @@
     "display_name": "Rotation Property",
     "bubble_choice_description": "Rotate the cars so they fit in the traffic lanes.",
     "thumbnail_url": "https://images.code.org/90bb6cb660f77100a378532d42d8e9a2-image-1592417215602.png",
-    "map_reference": "/docs/concepts/game-lab/sprites/sprite-properties/",
+    "map_reference": "/courses/csd-2022/guides/sprite-properties",
     "preload_asset_list": null
   },
   "published": true,
