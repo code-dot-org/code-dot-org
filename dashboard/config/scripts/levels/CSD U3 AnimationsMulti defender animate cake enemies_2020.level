@@ -46,7 +46,7 @@
     "long_instructions": "# Getting Started: Set Animations\r\n\r\nBefore you get started, you'll want some better animations for each of your sprites.\r\n\r\n# Do This\r\n\r\n* In the Animation Tab are animations for each of your sprites. Go look at what they are.\r\n* In your code give each sprite its appropriate animation. **Use the ones provided for now** but later you'll be able to go change them.",
     "reference_links": [
       "/docs/concepts/game-lab/sprites/",
-      "/docs/concepts/game-lab/animation-tab/",
+      "/courses/csd-2022/guides/animation-tab",
       "/docs/concepts/game-lab/animation-tab/editing-images/",
       "/docs/concepts/game-lab/animation-tab/multi-frame-animations/"
     ],
