@@ -26,6 +26,7 @@ import {queryParams} from '@cdo/apps/code-studio/utils';
 import {reload} from '../utils';
 import firehoseClient from '../lib/util/firehose';
 import {getCurrentId} from '../code-studio/initApp/project';
+import logToCloud from '../logToCloud';
 
 export const WEBLAB_FOOTER_HEIGHT = 30;
 
@@ -653,6 +654,27 @@ WebLab.prototype.redux = function() {
   };
 };
 
+/**
+ * Expose New Relic page action hook for use by the enclosed Bramble application.
+ * Defined here instead of in CdoBramble.js because logToCloud relies on window.newrelic
+ * being set. Bramble is hosted within an iframe, so window is different in that context.
+ */
+WebLab.prototype.addPageAction = function(...args) {
+  logToCloud.addPageAction(...args);
+};
+
+// Some temporary logging to diagnose possible loading issues.
+WebLab.prototype.tempLog = function(event, data = null) {
+  firehoseClient.putRecord(
+    {
+      study: 'weblab_loading_investigation_2022',
+      event: event,
+      data_json: data === null ? null : JSON.stringify(data)
+    },
+    {includeUserId: true}
+  );
+};
+
 WebLab.prototype.syncBrambleFiles = function(callback = () => {}) {
   this.brambleHost?.syncFiles(
     this.getCurrentFileEntries(),
@@ -689,6 +711,7 @@ WebLab.prototype.onBrambleReady = function() {
 
 WebLab.prototype.brambleApi = function() {
   return {
+    addPageAction: this.addPageAction.bind(this),
     changeProjectFile: this.changeProjectFile.bind(this),
     deleteProjectFile: this.deleteProjectFile.bind(this),
     getCurrentFileEntries: this.getCurrentFileEntries.bind(this),
@@ -702,7 +725,8 @@ WebLab.prototype.brambleApi = function() {
     openFatalErrorDialog: this.openFatalErrorDialog.bind(this),
     registerBeforeFirstWriteHook: this.registerBeforeFirstWriteHook.bind(this),
     redux: this.redux.bind(this),
-    renameProjectFile: this.renameProjectFile.bind(this)
+    renameProjectFile: this.renameProjectFile.bind(this),
+    tempLog: this.tempLog.bind(this)
   };
 };
 

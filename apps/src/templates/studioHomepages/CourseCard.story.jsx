@@ -1,5 +1,7 @@
 import React from 'react';
 import CourseCard from './CourseCard';
+import {Provider} from 'react-redux';
+import {reduxStore} from '@cdo/storybook/decorators';
 
 const exampleCard = {
   title: 'CSP Unit 2 - Digital Information',
@@ -14,33 +16,24 @@ const examplePLCard = {
   link: 'studio.code.org/s/self-paced-pl-csd1-2021'
 };
 
-export default storybook => {
-  return storybook
-    .storiesOf('Cards/CourseCard', module)
-    .withReduxStore()
-    .addStoryTable([
-      {
-        name: 'Course Card - Student Course',
-        description: `This is an example course card that can show information about a course or unit.`,
-        story: () => (
-          <CourseCard
-            title={exampleCard.title}
-            description={exampleCard.description}
-            link={exampleCard.link}
-          />
-        )
-      },
-      {
-        name: 'Course Card - Professional Learning Course',
-        description: `This is an example course card for a professional learning course that can show information about a course or unit.`,
-        story: () => (
-          <CourseCard
-            title={examplePLCard.title}
-            description={examplePLCard.description}
-            link={examplePLCard.link}
-            isProfessionalLearningCourse={true}
-          />
-        )
-      }
-    ]);
+export default {
+  title: 'CourseCard',
+  component: CourseCard
+};
+
+const Template = args => (
+  <Provider store={reduxStore()}>
+    <CourseCard {...args} />
+  </Provider>
+);
+
+export const StudentCourseCard = Template.bind({});
+StudentCourseCard.args = {
+  ...exampleCard
+};
+
+export const PLCourseCard = Template.bind({});
+PLCourseCard.args = {
+  ...examplePLCard,
+  isProfessionalLearningCourse: true
 };
