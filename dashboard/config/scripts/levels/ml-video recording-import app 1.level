@@ -84,11 +84,11 @@
     "ai_model_id": "s90oMNbjDJEF",
     "ai_model_name": "Breakfast Recommender",
     "reference_links": [
-      "/docs/concepts/app-lab/design-mode/",
-      "/docs/concepts/app-lab/multi-screen-apps/",
-      "/docs/concepts/app-lab/design-mode/design-mode-elements/",
-      "/docs/concepts/app-lab/changing-screens/",
-      "/docs/concepts/app-lab/if-statements/"
+      "/courses/csd-2022/guides/design-mode/",
+      "/courses/csd-2022/guides/multi-screen-apps/",
+      "/courses/csd-2022/guides/design-mode/design-mode-elements/",
+      "/courses/csd-2022/guides/changing-screens/",
+      "/courses/csd-2022/guides/if-statements/"
     ],
     "preload_asset_list": null
   },

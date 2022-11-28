@@ -35,7 +35,7 @@
     "project_template_level_name": "Science earthquake project_copy",
     "parent_level_id": 19051,
     "name_suffix": "_copy",
-    "map_reference": "/docs/concepts/app-lab/design-mode/index.html",
+    "map_reference": "/courses/csd-2022/guides/design-mode/index.html",
     "video_key": "csd_applab_designmode_short",
     "libraries_enabled": "false",
     "code_functions": {
