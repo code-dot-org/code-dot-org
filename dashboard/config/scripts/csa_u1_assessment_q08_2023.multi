@@ -11,17 +11,19 @@ Consider the following code segment.
 
 ```
 public class PainterPlus extends Painter {
-  public PainterPlus(){
-    super();
-  }
    
   public void turnRight() {
     turnLeft();
     turnLeft();
     turnLeft();
   }
+  
 }
 ```
 
 What is the name of the superclass?
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+The name of the superclass is indicated after the `extends` keyword. In this example, the superclass is `Painter`.
 MARKDOWN

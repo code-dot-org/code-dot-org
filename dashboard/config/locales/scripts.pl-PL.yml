@@ -3641,6 +3641,9 @@ pl:
           title: Wykrywacz kolizji
         dance-2019:
           title: Potańcówka (2019)
+          description_short: Koduj imprezę taneczną, aby podzielić się nią ze znajomymi.
+            Z udziałem Beyoncé, Harry Styles, Lizzo, Lil Nas X, Selena Gomez, muzyka
+            z filmu Disneya „Encanto,” i więcej!
           description: Stwórz kod swojej własnej imprezy tanecznej i udostępnij ją
             swoim znajomym.
           student_description: Stwórz kod swojej własnej imprezy tanecznej i udostępnij
@@ -7068,16 +7071,24 @@ pl:
               name: Sparametryzowane konstruktory
             lesson-4:
               name: Zmienne
+            lesson-5:
+              name: Metody Accessor
             lesson-6:
               name: Dane użytkownika
             lesson-7:
               name: Operatory i wyrażenia
+            lesson-8:
+              name: Metody mutatorów
             lesson-9:
               name: Drukowanie obiektów
+            lesson-10:
+              name: Projekt zarządzania sklepem
             lesson-11:
               name: Praktyka FRQ
             lesson-12:
               name: Jednostka 2 Sprawdzian
+            lesson-13:
+              name: Projekt zarządzania sklepem [wersja 1-dniowa]
           lesson_groups:
             lessonGroup-2:
               display_name: Treści
@@ -7265,6 +7276,8 @@ pl:
               name: Lekcja cząstek 3
             lesson-5:
               name: Lekcja cząstek 4
+            lesson-6:
+              name: Testowanie Katie
           name: csd-playground
           title: Plac Zabaw CSP
         self-paced-pl-physical-computing1:
@@ -7390,7 +7403,13 @@ pl:
             lesson-1:
               name: Cząstki
         angelina-playground:
+          lessons:
+            lesson-1:
+              name: Stany rzeczy
+            lesson-2:
+              name: OG Stany rzeczy
           name: angelina-playground
+          title: Miejsce Angeliny do robienia rzeczy
         csc-pilot-fa2022-timecapsule:
           name: csc-pilot-fa2022-timecapsule
           title: Kapsuły czasu (jesień 2022 pilotaż)

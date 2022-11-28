@@ -414,28 +414,35 @@ module Pd::Application
     end
 
     test 'status changes are logged' do
-      application = build :pd_teacher_application
+      application = build :pd_teacher_application, status: 'incomplete'
       assert_nil application.status_log
 
       application.save!
       assert application.status_log.is_a? Array
-      assert_status_log [{status: 'unreviewed', at: Time.zone.now}], application
+      assert_status_log [{status: 'incomplete', at: Time.zone.now}], application
 
-      # update unrelated field
+      # update related field
       Timecop.freeze 1
-      application.update!(notes: 'some notes')
-      assert_equal Time.zone.now, application.updated_at
-      assert_equal 1, application.status_log.count
-
-      Timecop.freeze 1
-      application.update!(status: 'pending')
+      application.update!(form_data: application.form_data_hash.merge("firstName": 'Garfunkel').to_json)
       assert_status_log(
         [
-          {status: 'unreviewed', at: 2.seconds.ago},
-          {status: 'pending', at: Time.zone.now}
+          {status: 'incomplete', at: 1.second.ago},
+          {status: 'incomplete', at: Time.zone.now}
         ],
         application
       )
+
+      # update unrelated field
+      Timecop.freeze 2
+      application.update!(notes: 'some notes')
+      assert_equal Time.zone.now, application.updated_at
+      assert_equal 2, application.status_log.count
+
+      # update related field
+      Timecop.freeze 3
+      application.update!(status: 'unreviewed')
+      assert_equal Time.zone.now, application.updated_at
+      assert_equal 3, application.status_log.count
     end
 
     test 'setting an auto-email status queues up an email' do
@@ -539,6 +546,7 @@ module Pd::Application
       application_hash = build :pd_teacher_application_hash,
         program: Pd::Application::TeacherApplication::PROGRAMS[:csd],
         csd_which_grades: ['6'],
+        enough_course_hours: options[:enough_course_hours].first,
         previous_yearlong_cdo_pd: ['CS Principles'],
         replace_existing: options[:replace_existing].second,
         committed: options[:committed].first,
@@ -556,6 +564,7 @@ module Pd::Application
         {
           meets_minimum_criteria_scores: {
             csd_which_grades: YES,
+            enough_course_hours: YES,
             committed: YES,
             previous_yearlong_cdo_pd: YES,
             replace_existing: YES,
@@ -578,6 +587,7 @@ module Pd::Application
       application_hash = build :pd_teacher_application_hash,
         program: Pd::Application::TeacherApplication::PROGRAMS[:csp],
         csp_which_grades: ['12'],
+        enough_course_hours: options[:enough_course_hours].first,
         previous_yearlong_cdo_pd: ['CS Discoveries'],
         csp_how_offer: options[:csp_how_offer].last,
         replace_existing: options[:replace_existing].second,
@@ -596,6 +606,7 @@ module Pd::Application
         {
           meets_minimum_criteria_scores: {
             csp_which_grades: YES,
+            enough_course_hours: YES,
             committed: YES,
             previous_yearlong_cdo_pd: YES,
             replace_existing: YES,
@@ -618,7 +629,9 @@ module Pd::Application
       application_hash = build :pd_teacher_application_hash,
         program: Pd::Application::TeacherApplication::PROGRAMS[:csa],
         csa_already_know: options[:csa_already_know].first,
+        csa_phone_screen: options[:csa_phone_screen].first,
         csa_which_grades: ['12'],
+        enough_course_hours: options[:enough_course_hours].first,
         previous_yearlong_cdo_pd: ['CS Principles'],
         csa_how_offer: options[:csa_how_offer].last,
         replace_existing: options[:replace_existing].second,
@@ -637,7 +650,9 @@ module Pd::Application
         {
           meets_minimum_criteria_scores: {
             csa_already_know: YES,
+            csa_phone_screen: YES,
             csa_which_grades: YES,
+            enough_course_hours: YES,
             committed: YES,
             previous_yearlong_cdo_pd: YES,
             replace_existing: YES,
@@ -659,6 +674,7 @@ module Pd::Application
       application_hash = build :pd_teacher_application_hash,
         program: Pd::Application::TeacherApplication::PROGRAMS[:csp],
         csp_which_grades: ['12'],
+        enough_course_hours: options[:enough_course_hours].first,
         previous_yearlong_cdo_pd: ['CS Discoveries'],
         csp_how_offer: options[:csp_how_offer].last,
         replace_existing: options[:replace_existing].second,
@@ -672,6 +688,7 @@ module Pd::Application
         {
           meets_minimum_criteria_scores: {
             csp_which_grades: YES,
+            enough_course_hours: YES,
             committed: YES,
             previous_yearlong_cdo_pd: YES,
             replace_existing: YES,
@@ -689,6 +706,7 @@ module Pd::Application
       application_hash = build :pd_teacher_application_hash,
         program: Pd::Application::TeacherApplication::PROGRAMS[:csd],
         csd_which_grades: %w(11 12),
+        enough_course_hours: options[:enough_course_hours].last,
         previous_yearlong_cdo_pd: ['CS Discoveries'],
         replace_existing: options[:replace_existing].first,
         committed: options[:committed].last,
@@ -706,6 +724,7 @@ module Pd::Application
         {
           meets_minimum_criteria_scores: {
             csd_which_grades: NO,
+            enough_course_hours: NO,
             committed: NO,
             previous_yearlong_cdo_pd: NO,
             replace_existing: NO,
@@ -728,6 +747,7 @@ module Pd::Application
       application_hash = build :pd_teacher_application_hash,
         program: Pd::Application::TeacherApplication::PROGRAMS[:csp],
         csp_which_grades: [options[:csp_which_grades].last],
+        enough_course_hours: options[:enough_course_hours].last,
         previous_yearlong_cdo_pd: 'CS Principles',
         csp_how_offer: options[:csp_how_offer].first,
         replace_existing: options[:replace_existing].first,
@@ -746,6 +766,7 @@ module Pd::Application
         {
           meets_minimum_criteria_scores: {
             csp_which_grades: NO,
+            enough_course_hours: NO,
             committed: NO,
             previous_yearlong_cdo_pd: NO,
             replace_existing: NO,
@@ -768,7 +789,9 @@ module Pd::Application
       application_hash = build :pd_teacher_application_hash,
         program: Pd::Application::TeacherApplication::PROGRAMS[:csa],
         csa_already_know: options[:csa_already_know].last,
+        csa_phone_screen: options[:csa_phone_screen].last,
         csa_which_grades: [options[:csa_which_grades].last],
+        enough_course_hours: options[:enough_course_hours].last,
         previous_yearlong_cdo_pd: 'Computer Science A (CSA)',
         csa_how_offer: options[:csa_how_offer].first,
         replace_existing: options[:replace_existing].first,
@@ -788,6 +811,8 @@ module Pd::Application
           meets_minimum_criteria_scores: {
             csa_already_know: NO,
             csa_which_grades: NO,
+            csa_phone_screen: NO,
+            enough_course_hours: NO,
             committed: NO,
             previous_yearlong_cdo_pd: NO,
             replace_existing: NO,
@@ -935,7 +960,7 @@ module Pd::Application
       assert_equal 'Not required', application.reload.principal_approval_state
 
       create :pd_principal_approval_application, teacher_application: application, approved: 'Yes'
-      assert_equal 'Complete - Yes', application.reload.principal_approval_state
+      assert application.reload.principal_approval_state.include? 'Complete - Admin said Yes on'
     end
 
     test 'require assigned workshop for registration-related statuses when emails sent by system' do
