@@ -112,7 +112,7 @@
     "long_instructions": "<img src=\"https://images.code.org/72204458c0cf4a0e314e5a86218cb227-image-1588101492100.gif\" style=\"float:right\" width=\"25%\">\r\n\r\n# Ghost Moving with the Mouse\r\n\r\nIn this level, you'll make the ghost move either left or right depending on the position of the mouse pointer. In the example shown, if the mouse pointer is on the left, the ghost moves right. The opposite is also true.\r\n\r\n# Do This\r\n\r\n* Write at least two if-statements to check for the location of the mouse.\r\n* Make the ghost move in a different direction for each mouse location.\r\n\r\n\r\n",
     "reference_links": [
       "/docs/concepts/javascript/booleans-and-comparison-operators/",
-      "/docs/concepts/javascript/if-statements/",
+      "/courses/csd-2022/guides/if-statements",
       "/docs/concepts/game-lab/the-counter-pattern/",
       "/docs/concepts/game-lab/the-draw-loop/",
       "/docs/concepts/game-lab/sprites/",

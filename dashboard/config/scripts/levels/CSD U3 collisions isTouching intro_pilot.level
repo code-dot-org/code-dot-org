@@ -68,7 +68,7 @@
     "parent_level_id": 16152,
     "name_suffix": "_pilot",
     "reference_links": [
-      "/docs/concepts/javascript/if-statements/"
+      "/courses/csd-2022/guides/if-statements"
     ],
     "map_reference": "/docs/concepts/game-lab/sprites/collision-detection/",
     "mini_rubric": "false",
