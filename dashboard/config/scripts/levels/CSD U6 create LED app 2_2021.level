@@ -203,7 +203,7 @@
       "/docs/concepts/app-lab/design-mode/",
       "/docs/concepts/app-lab/design-mode/design-mode-elements/"
     ],
-    "map_reference": "/docs/concepts/maker-toolkit/circuit-playground/",
+    "map_reference": "/courses/csd-2022/guides/circuit-playground/",
     "mini_rubric": "true",
     "text_mode_at_start": "false",
     "encrypted": "false",

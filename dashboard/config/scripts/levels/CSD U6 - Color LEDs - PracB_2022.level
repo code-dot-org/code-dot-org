@@ -80,13 +80,13 @@
     "widget_mode": "false",
     "ai_enabled": "false",
     "reference_links": [
-      "/docs/concepts/maker-toolkit/color-lights/",
+      "/courses/csd-2022/guides/color-lights/",
       "/courses/csd-2022/guides/if-statements",
       "/courses/csd-2022/guides/variables",
       "/docs/concepts/javascript/booleans-and-comparison-operators/",
-      "/docs/concepts/maker-toolkit/physical-input/",
-      "/docs/concepts/maker-toolkit/producing-output/",
-      "/docs/concepts/maker-toolkit/board-events/"
+      "/courses/csd-2022/guides/physical-input/",
+      "/courses/csd-2022/guides/producing-output/",
+      "/courses/csd-2022/guides/board-events/"
     ],
     "callout_json": "[]",
     "start_blocks": "onEvent(\"led0Button\", \"click\", function( ) {\n\t//Toggle LED 0\n});\n\nonEvent(\"led1Button\", \"click\", function( ) {\n  //Toggle LED 1\n  \n});\n\nonEvent(\"led2Button\", \"click\", function( ) {\n\t//Toggle LED 2\n  \n});\n\nonEvent(\"led3Button\", \"click\", function( ) {\n  //Toggle LED 3\n  \n});\n\nonEvent(\"led4Button\", \"click\", function( ) {\n  //Toggle LED 4\n  \n});\n\nonEvent(\"led5Button\", \"click\", function( ) {\n  //Toggle LED 5\n  \n});\n\nonEvent(\"led6Button\", \"click\", function( ) {\n  //Toggle LED 6\n  \n});\n\nonEvent(\"led7Button\", \"click\", function( ) {\n  //Toggle LED 7\n  \n});\n\nonEvent(\"led8Button\", \"click\", function( ) {\n  //Toggle LED 8\n  \n});\n\nonEvent(\"led9Button\", \"click\", function( ) {\n  //Toggle LED 9\n  \n});\n",

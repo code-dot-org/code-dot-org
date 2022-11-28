@@ -99,8 +99,8 @@
     "name_suffix": "_2019",
     "preload_asset_list": null,
     "reference_links": [
-      "/docs/concepts/maker-toolkit/the-accelerometer/",
-      "/docs/concepts/maker-toolkit/accelerometer-events/"
+      "/courses/csd-2022/guides/the-accelerometer/",
+      "/courses/csd-2022/guides/accelerometer-events/"
     ],
     "map_reference": "/docs/concepts/app-lab/the-counter-pattern/",
     "mini_rubric": "false",
