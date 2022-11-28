@@ -97,14 +97,14 @@
     "encrypted_examples": "VEwU/cGOv4ZIRa3cIYLkbPlA1kAEc6x3kU/TFMduSI9a8Vfxb4Sn++EgpkRl\nLnVAeyaOywqv6dOqxuYMM84ofg==\n",
     "libraries_enabled": "false",
     "reference_links": [
-      "/docs/concepts/game-lab/sprites/",
+      "/courses/csd-2022/guides/sprites/",
       "/courses/csd-2022/guides/animation-tab",
       "/courses/csd-2022/guides/random-numbers",
       "/courses/csd-2022/guides/variables",
       "/courses/csd-2022/guides/naming-variables",
       "/courses/csd-2022/guides/drawing-shapes",
       "/courses/csd-2022/guides/shapes-and-parameters",
-      "/docs/concepts/game-lab/sprites/sprite-interactions/"
+      "/courses/csd-2022/guides/sprites/sprite-interactions/"
     ],
     "bubble_choice_description": "Stretch your sprite horizontally or vertically.",
     "preload_asset_list": null

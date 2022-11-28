@@ -66,8 +66,8 @@
     "parent_level_id": 16182,
     "name_suffix": "_virtual",
     "reference_links": [
-      "/docs/concepts/game-lab/sprites/collision-detection/",
-      "/docs/concepts/game-lab/sprites/velocity/"
+      "/courses/csd-2022/guides/sprites/collision-detection/",
+      "/courses/csd-2022/guides/sprites/velocity/"
     ],
     "mini_rubric": "false",
     "encrypted": "false",
