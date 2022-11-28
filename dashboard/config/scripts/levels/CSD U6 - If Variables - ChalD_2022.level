@@ -82,7 +82,7 @@
     "ai_enabled": "false",
     "reference_links": [
       "/docs/concepts/patterns/counter-patterns-with-event/",
-      "/docs/concepts/javascript/if-statements/",
+      "/courses/csd-2022/guides/if-statements",
       "/docs/concepts/javascript/variables/",
       "/docs/concepts/javascript/booleans-and-comparison-operators/",
       "/docs/concepts/maker-toolkit/physical-input/",

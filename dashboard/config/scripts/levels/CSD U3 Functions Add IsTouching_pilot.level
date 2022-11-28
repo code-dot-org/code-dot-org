@@ -49,7 +49,7 @@
     "top_level_procedure_autopopulate": "false",
     "reference_links": [
       "/docs/concepts/game-lab/sprites/collision-detection/",
-      "/docs/concepts/javascript/if-statements/"
+      "/courses/csd-2022/guides/if-statements"
     ],
     "map_reference": "/docs/concepts/javascript/functions/",
     "mini_rubric": "false",

@@ -100,7 +100,7 @@
       "/docs/concepts/javascript/variables/",
       "/docs/concepts/javascript/naming-variables/"
     ],
-    "map_reference": "/docs/concepts/javascript/if-statements/",
+    "map_reference": "/courses/csd-2022/guides/if-statements",
     "disable_procedure_autopopulate": "false",
     "top_level_procedure_autopopulate": "false",
     "show_type_hints": "false",

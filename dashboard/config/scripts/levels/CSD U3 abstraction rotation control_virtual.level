@@ -77,7 +77,7 @@
     "name_suffix": "_virtual",
     "reference_links": [
       "/docs/concepts/game-lab/the-counter-pattern/",
-      "/docs/concepts/javascript/if-statements/"
+      "/courses/csd-2022/guides/if-statements"
     ],
     "map_reference": "/docs/concepts/game-lab/sprites/velocity/",
     "video_key": "csd_gamelab_velocity",
