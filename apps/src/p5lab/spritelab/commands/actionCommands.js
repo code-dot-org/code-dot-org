@@ -48,11 +48,13 @@ export const commands = {
       targets.forEach(target => {
         if (sprite.isTouching(target)) {
           sprite.direction = (sprite.direction + 180) % 360;
-          target.direction = (target.direction + 180) % 360;
-          sprite.x += 1 * Math.cos((sprite.direction * Math.PI) / 180);
-          sprite.y += 1 * Math.sin((sprite.direction * Math.PI) / 180);
-          target.x += 1 * Math.cos((target.direction * Math.PI) / 180);
-          target.y += 1 * Math.sin((target.direction * Math.PI) / 180);
+          let angle = Math.atan2(target.y - sprite.y, target.x - sprite.x);
+          if (!isNaN(angle)) {
+            let dy = Math.sin(angle) * -(sprite.speed + 1);
+            let dx = Math.cos(angle) * -(sprite.speed + 1);
+            sprite.x += dx;
+            sprite.y += dy;
+          }
         }
       });
     });
