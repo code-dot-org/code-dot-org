@@ -114,7 +114,7 @@
     "show_type_hints": "false",
     "long_instructions": "# Reverse the Gears\r\n\r\nThese gears already spin one direction when you press the space bar, now you'll want them to spin the other direction when the space bar isn't pressed.\r\n\r\n# Do This\r\n\r\n* Make the gears spin the opposite way when the space bar is **not** being pressed.",
     "reference_links": [
-      "/docs/concepts/javascript/booleans-and-comparison-operators/",
+      "/courses/csd-2022/guides/booleans-and-comparison-operators/",
       "/courses/csd-2022/guides/if-statements",
       "/courses/csd-2022/guides/the-counter-pattern-2",
       "/courses/csd-2022/guides/the-draw-loop",
@@ -125,7 +125,7 @@
       "/courses/csd-2022/guides/variables",
       "/courses/csd-2022/guides/naming-variables"
     ],
-    "map_reference": "/docs/concepts/javascript/if-else-statements/",
+    "map_reference": "/courses/csd-2022/guides/if-else-statements/",
     "video_key": "csd_gamelab_if_else",
     "mini_rubric": "true",
     "encrypted": "false",

@@ -113,7 +113,7 @@
     "show_type_hints": "false",
     "long_instructions": "# Control the Gears\r\n\r\nHere is the same program, but with one small difference.\r\n\r\n# Do This\r\n\r\n* Read the program carefully, especially Line 13, to figure out how to control the gears.\r\n* Run the program and test whether you were correct.\r\n* Make the gears spin the opposite way when there is no user input.",
     "reference_links": [
-      "/docs/concepts/javascript/booleans-and-comparison-operators/",
+      "/courses/csd-2022/guides/booleans-and-comparison-operators/",
       "/courses/csd-2022/guides/if-statements",
       "/courses/csd-2022/guides/the-counter-pattern-2",
       "/courses/csd-2022/guides/the-draw-loop",
@@ -124,7 +124,7 @@
       "/courses/csd-2022/guides/variables",
       "/courses/csd-2022/guides/naming-variables"
     ],
-    "map_reference": "/docs/concepts/javascript/if-else-statements/",
+    "map_reference": "/courses/csd-2022/guides/if-else-statements/",
     "video_key": "csd_gamelab_if_else",
     "mini_rubric": "true",
     "encrypted": "false",

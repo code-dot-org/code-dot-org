@@ -50,7 +50,7 @@
       "/courses/csd-2022/guides/sprites/collision-detection/",
       "/courses/csd-2022/guides/sprites/velocity/",
       "/courses/csd-2022/guides/if-statements",
-      "/docs/concepts/javascript/if-else-statements/",
+      "/courses/csd-2022/guides/if-else-statements/",
       "/courses/csd-2022/guides/the-counter-pattern-2",
       "/courses/csd-2022/guides/the-draw-loop",
       "/courses/csd-2022/guides/sprites/",
@@ -60,7 +60,7 @@
       "/courses/csd-2022/guides/drawing-shapes",
       "/courses/csd-2022/guides/shapes-and-parameters"
     ],
-    "map_reference": "/docs/concepts/javascript/functions/",
+    "map_reference": "/courses/csd-2022/guides/functions/",
     "mini_rubric": "true",
     "encrypted": "false",
     "rubric_key_concept": "Define and call functions to organize code and make it easier to reuse.",

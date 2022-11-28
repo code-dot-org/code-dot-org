@@ -130,7 +130,7 @@
     "name_suffix": "_2021",
     "show_type_hints": "false",
     "reference_links": [
-      "/docs/concepts/javascript/arrays/",
+      "/courses/csd-2022/guides/arrays/",
       "/courses/csd-2022/guides/circuits-and-leds/"
     ],
     "map_reference": "/courses/csd-2022/guides/color-lights/",
