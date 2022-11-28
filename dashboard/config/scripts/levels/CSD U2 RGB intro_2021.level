@@ -195,13 +195,13 @@
     "thumbnail_url": "https://images.code.org/c602af8d87fa94808ac0fb3fc6f972b0-image-1588266212376.02.44 AM.png",
     "libraries_enabled": "false",
     "reference_links": [
-      "/docs/concepts/css/text-properties/",
+      "/courses/csd-2022/guides/text-properties/",
       "/docs/concepts/html/formatting-html/",
       "/docs/concepts/html/lists/",
       "/docs/concepts/html/headings-and-paragraphs/",
       "/docs/concepts/html/html-tags/"
     ],
-    "map_reference": "/docs/concepts/css/style-sheets/",
+    "map_reference": "/courses/csd-2022/guides/style-sheets/",
     "preload_asset_list": null
   },
   "published": true,

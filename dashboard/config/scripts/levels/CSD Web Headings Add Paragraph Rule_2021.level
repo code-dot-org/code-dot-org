@@ -16,13 +16,13 @@
     "bubble_choice_description": "Add a rule-set for the paragraph of this ad.",
     "encrypted_examples": "Cm6B3+kEFvc+5AMaRjwp0tq4j1mGrZBS7zmCPBznz9xXltCxa2Vb6douDWoZ\n4bIpKadBJF0pwON5LOtoHBlKTg==\n",
     "reference_links": [
-      "/docs/concepts/css/text-properties/",
+      "/courses/csd-2022/guides/text-properties/",
       "/docs/concepts/html/formatting-html/",
       "/docs/concepts/html/lists/",
       "/docs/concepts/html/headings-and-paragraphs/",
       "/docs/concepts/html/html-tags/"
     ],
-    "map_reference": "/docs/concepts/css/style-sheets/",
+    "map_reference": "/courses/csd-2022/guides/style-sheets/",
     "parent_level_id": 18893,
     "thumbnail_url": "https://images.code.org/2246aec20c27a12fb9995cc3dd18bb34-image-1563995423363.JPG",
     "name_suffix": "_2021"

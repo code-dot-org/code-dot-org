@@ -14,10 +14,10 @@
     "parent_level_id": 11571,
     "name_suffix": "_2019",
     "reference_links": [
-      "/docs/concepts/css/style-sheets/",
-      "/docs/concepts/css/text-properties/"
+      "/courses/csd-2022/guides/style-sheets/",
+      "/courses/csd-2022/guides/text-properties/"
     ],
-    "map_reference": "/docs/concepts/css/classes/",
+    "map_reference": "/courses/csd-2022/guides/classes/",
     "encrypted": "false",
     "rubric_key_concept": "Create classes that can be referenced and affected as a group.",
     "mini_rubric": "true",
