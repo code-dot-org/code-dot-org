@@ -68,14 +68,14 @@
     "parent_level_id": 19019,
     "name_suffix": "_pilot",
     "reference_links": [
-      "/docs/concepts/game-lab/sprites/",
+      "/courses/csd-2022/guides/sprites/",
       "/courses/csd-2022/guides/animation-tab",
       "/courses/csd-2022/guides/random-numbers",
       "/courses/csd-2022/guides/variables",
       "/courses/csd-2022/guides/naming-variables",
       "/courses/csd-2022/guides/drawing-shapes",
       "/courses/csd-2022/guides/shapes-and-parameters",
-      "/docs/concepts/game-lab/sprites/sprite-interactions/"
+      "/courses/csd-2022/guides/sprites/sprite-interactions/"
     ],
     "video_key": "csd_gamelab_animation_tab",
     "disable_procedure_autopopulate": "false",

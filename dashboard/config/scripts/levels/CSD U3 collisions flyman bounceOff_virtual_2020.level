@@ -84,13 +84,13 @@
     "parent_level_id": 20856,
     "name_suffix": "_virtual_2020",
     "reference_links": [
-      "/docs/concepts/game-lab/velocity-and-the-counter-pattern/",
-      "/docs/concepts/game-lab/sprites/collision-detection/",
-      "/docs/concepts/game-lab/sprites/velocity/",
+      "/courses/csd-2022/guides/velocity-and-the-counter-pattern/",
+      "/courses/csd-2022/guides/sprites/collision-detection/",
+      "/courses/csd-2022/guides/sprites/velocity/",
       "/courses/csd-2022/guides/if-statements",
       "/docs/concepts/javascript/if-else-statements/",
       "/courses/csd-2022/guides/the-draw-loop",
-      "/docs/concepts/game-lab/sprites/",
+      "/courses/csd-2022/guides/sprites/",
       "/courses/csd-2022/guides/animation-tab",
       "/courses/csd-2022/guides/sprite-properties"
     ],

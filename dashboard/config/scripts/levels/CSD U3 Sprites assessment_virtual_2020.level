@@ -82,7 +82,7 @@
     "mini_rubric": "true",
     "encrypted_examples": "KbJcNu2JypEU/UT0j5q95UVjZP0LAL4qOOI24gQCvAwP4RbNRvqwNpnBRr20\n4pSMIr3HD4NnLe0wxQ1xyz6jkg==\n",
     "libraries_enabled": "false",
-    "map_reference": "/docs/concepts/game-lab/sprites/",
+    "map_reference": "/courses/csd-2022/guides/sprites/",
     "preload_asset_list": null,
     "rubric_key_concept": "Create and use sprites.",
     "rubric_performance_level_1": "More than two sprites have been created with different animations that are drawn to the canvas at different locations.",

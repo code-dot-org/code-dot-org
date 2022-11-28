@@ -58,7 +58,7 @@
       "/courses/csd-2022/guides/drawing-shapes",
       "/courses/csd-2022/guides/shapes-and-parameters"
     ],
-    "map_reference": "/docs/concepts/game-lab/sprites/",
+    "map_reference": "/courses/csd-2022/guides/sprites/",
     "video_key": "csd_gamelab_sprites_1",
     "disable_procedure_autopopulate": "false",
     "top_level_procedure_autopopulate": "false",
