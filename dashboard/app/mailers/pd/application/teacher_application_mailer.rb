@@ -22,7 +22,7 @@ module Pd::Application
       end
     end
 
-    def principal_approval_teacher_reminder(teacher_application)
+    def admin_approval_teacher_reminder(teacher_application)
       @application = teacher_application
 
       if @application.regional_partner
@@ -58,7 +58,7 @@ module Pd::Application
       end
     end
 
-    def principal_approval(teacher_application)
+    def admin_approval(teacher_application)
       @application = teacher_application
 
       mail(
@@ -69,7 +69,7 @@ module Pd::Application
       )
     end
 
-    def principal_approval_completed(teacher_application)
+    def admin_approval_completed(teacher_application)
       @application = teacher_application
 
       mail(
@@ -79,7 +79,7 @@ module Pd::Application
       )
     end
 
-    def principal_approval_completed_partner(teacher_application)
+    def admin_approval_completed_partner(teacher_application)
       @application = teacher_application
 
       mail(
@@ -89,7 +89,7 @@ module Pd::Application
       )
     end
 
-    def principal_approval_completed_teacher_receipt(teacher_application)
+    def admin_approval_completed_teacher_receipt(teacher_application)
       @application = teacher_application
 
       if @application.regional_partner
@@ -127,6 +127,24 @@ module Pd::Application
         to: @application.formatted_applicant_email,
         reply_to: @application.formatted_partner_contact_email,
         subject: "Register for the #{@application.effective_regional_partner_name} #{@application.course_name} Summer Workshop"
+      )
+    end
+
+    def complete_application_initial_reminder(teacher_application)
+      @application = teacher_application
+
+      mail(
+        to: @application.formatted_applicant_email,
+        subject: "Reminder: Complete your application for Code.org’s Professional Learning Program"
+      )
+    end
+
+    def complete_application_final_reminder(teacher_application)
+      @application = teacher_application
+
+      mail(
+        to: @application.formatted_applicant_email,
+        subject: "Follow Up: Complete your application for Code.org’s Professional Learning Program"
       )
     end
 

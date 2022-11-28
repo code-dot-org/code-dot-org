@@ -1764,6 +1764,9 @@ ro:
               display_name: Prezentare generală
         dance-2019:
           title: Petrecere dansantă
+          description_short: Codifică o Petrecere Dansantă pe care să le-o trimiți
+            prietenilor. Cu participarea artiștilor Beyoncé, Harry Styles, Lizzo,
+            Lil Nas X, Selena Gomez, muzică de la Disney „Encanto” și multe altele!
         k5-onlinepd-2019:
           lesson_groups:
             k5_next_steps:

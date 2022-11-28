@@ -842,6 +842,7 @@ FactoryGirl.define do
       csa_which_grades ['11', '12']
       csa_how_offer 'As an AP course'
       csa_already_know 'Yes'
+      csa_phone_screen 'Yes'
     end
   end
 
