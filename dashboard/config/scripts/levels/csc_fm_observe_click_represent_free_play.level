@@ -20,7 +20,7 @@
     "use_modal_function_editor": "true",
     "embed": "false",
     "instructions_important": "false",
-    "long_instructions": "##Free Play\r\n\r\nNow you can use what you've learned and choose whatever function you want! Create an interactive function machine with lots of sprites!",
+    "long_instructions": "##Free Play\r\n\r\nNow you can use what you've learned and choose whatever function you want! Create an interactive function machine with lots of sprites!\r\n\r\n_Pause: Fill out Level 11 in your Note Catcher._",
     "submittable": "false",
     "hide_share_and_remix": "false",
     "never_autoplay_video": "false",
@@ -46,7 +46,7 @@
   "created_at": "2022-10-27T21:58:23.000Z",
   "level_num": "custom",
   "user_id": 1196,
-  "audit_log": "[{\"changed_at\":\"2022-10-27T21:58:23.094+00:00\",\"changed\":[\"cloned from \\\"csc_fm_observe_click_represent\\\"\"],\"cloned_from\":\"csc_fm_observe_click_represent\"},{\"changed_at\":\"2022-10-27 21:59:35 +0000\",\"changed\":[\"start_blocks\",\"long_instructions\",\"toolbox_blocks\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2022-10-27 22:06:26 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2022-10-28 14:09:26 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2022-10-28 14:11:21 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2022-10-28 14:23:48 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2022-11-03 17:49:38 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2022-11-03 17:52:38 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2022-11-03 18:54:36 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"use_default_sprites\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2022-11-03 19:02:29 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2022-11-03 22:00:11 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-11-03 23:19:46 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-11-03 23:21:31 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-11-10 00:27:29 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2022-10-27T21:58:23.094+00:00\",\"changed\":[\"cloned from \\\"csc_fm_observe_click_represent\\\"\"],\"cloned_from\":\"csc_fm_observe_click_represent\"},{\"changed_at\":\"2022-10-27 21:59:35 +0000\",\"changed\":[\"start_blocks\",\"long_instructions\",\"toolbox_blocks\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2022-10-27 22:06:26 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2022-10-28 14:09:26 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2022-10-28 14:11:21 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2022-10-28 14:23:48 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2022-11-03 17:49:38 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2022-11-03 17:52:38 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2022-11-03 18:54:36 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"use_default_sprites\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2022-11-03 19:02:29 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2022-11-03 22:00:11 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-11-03 23:19:46 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-11-03 23:21:31 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-11-10 00:27:29 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2022-11-23 16:40:26 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2022-11-23 16:40:44 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2022-11-23 21:37:08 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
@@ -1574,7 +1574,7 @@
         <block type="variables_set">
           <field name="VAR">input</field>
           <value name="VALUE">
-            <block type="math_number">
+            <block type="math_number" movable="false">
               <field name="NUM">0</field>
             </block>
           </value>
@@ -1590,12 +1590,12 @@
         <block type="FunctionBlocks_addNineBlock"/>
         <block type="FunctionBlocks_spriteSayVar">
           <value name="SPRITE">
-            <block type="gamelab_allSpritesWithAnimation">
+            <block type="gamelab_allSpritesWithAnimation" movable="false">
               <field name="ANIMATION">"space_rover"</field>
             </block>
           </value>
           <value name="TEXT1">
-            <block type="variables_get">
+            <block type="variables_get" movable="false">
               <field name="VAR">output</field>
             </block>
           </value>
@@ -1603,7 +1603,7 @@
         <block type="FunctionBlocks_representManipulative">
           <field name="ANIMATION_NAME">"blue alien"</field>
           <value name="NUM">
-            <block type="variables_get">
+            <block type="variables_get" movable="false">
               <field name="VAR">input</field>
             </block>
           </value>
@@ -1611,7 +1611,7 @@
         <block type="FunctionBlocks_representManipulative">
           <field name="ANIMATION_NAME">"green alien"</field>
           <value name="NUM">
-            <block type="variables_get">
+            <block type="variables_get" movable="false">
               <field name="VAR">output</field>
             </block>
           </value>
