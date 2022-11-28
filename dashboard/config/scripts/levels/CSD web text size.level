@@ -80,7 +80,7 @@
       "/courses/csd-2022/guides/variables",
       "/courses/csd-2022/guides/naming-variables",
       "/courses/csd-2022/guides/drawing-shapes",
-      "/docs/concepts/game-lab/shapes-and-parameters/"
+      "/courses/csd-2022/guides/shapes-and-parameters"
     ],
     "long_instructions": "# Text Size\r\n\r\nYou can change the size of the text using the `textSize()` block.\r\n\r\n# Do This\r\n* Read the code to see how it works.\r\n* Add a new `textSize` block to make the word \"large\" the biggest.",
     "encrypted": "false",
