@@ -1,5 +1,6 @@
-// Custom CloudFormation Resource that dynamically retrieves the current instance min, max and desired capacity counts
-// in an Auto Scaling Group, returning the outputs for use elsewhere in the stack.
+// Custom CloudFormation Resource that dynamically retrieves the current
+// instance min, max and desired capacity counts in an Auto Scaling Group,
+// returning the outputs for use elsewhere in the stack.
 
 var response = require('cfn-response');
 var AWS = require('aws-sdk');
@@ -7,6 +8,7 @@ var autoscaling = new AWS.AutoScaling();
 
 exports.handler = function (event, context) {
   console.log('REQUEST RECEIVED:\n', JSON.stringify(event));
+
   if (event.RequestType == 'Delete') {
     response.send(event, context, response.SUCCESS);
     return;
