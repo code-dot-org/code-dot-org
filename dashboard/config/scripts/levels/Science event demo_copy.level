@@ -45,7 +45,7 @@
     "start_blocks": "onBoardEvent(buttonL, \"down\", function(event) {\r\n  setScreen(\"leftScreen\");\r\n});\r\nonBoardEvent(buttonR, \"down\", function(event) {\r\n  setScreen(\"rightScreen\");\r\n});",
     "parent_level_id": 19057,
     "name_suffix": "_copy",
-    "map_reference": "/docs/concepts/maker-toolkit/board-events/index.html",
+    "map_reference": "/courses/csd-2022/guides/board-events/index.html",
     "libraries_enabled": "false",
     "preload_asset_list": null,
     "encrypted_examples": [

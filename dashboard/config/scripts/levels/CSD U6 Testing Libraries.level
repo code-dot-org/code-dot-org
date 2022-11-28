@@ -92,8 +92,8 @@
     "disable_procedure_autopopulate": "false",
     "top_level_procedure_autopopulate": "false",
     "reference_links": [
-      "/docs/concepts/maker-toolkit/the-accelerometer/",
-      "/docs/concepts/maker-toolkit/accelerometer-events/"
+      "/courses/csd-2022/guides/the-accelerometer/",
+      "/courses/csd-2022/guides/accelerometer-events/"
     ],
     "preload_asset_list": null,
     "encrypted": "false",

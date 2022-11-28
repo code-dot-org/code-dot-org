@@ -54,9 +54,9 @@
     "parent_level_id": 20524,
     "name_suffix": "_2222",
     "reference_links": [
-      "/docs/concepts/maker-toolkit/producing-output/"
+      "/courses/csd-2022/guides/producing-output/"
     ],
-    "map_reference": "/docs/concepts/maker-toolkit/playing-notes/",
+    "map_reference": "/courses/csd-2022/guides/playing-notes/",
     "mini_rubric": "false",
     "text_mode_at_start": "false",
     "encrypted": "false",

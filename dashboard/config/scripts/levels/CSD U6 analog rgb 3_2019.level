@@ -217,10 +217,10 @@
     "parent_level_id": 12395,
     "name_suffix": "_2019",
     "reference_links": [
-      "/docs/concepts/maker-toolkit/data-and-change-events/",
-      "/docs/concepts/maker-toolkit/analog-sensors/"
+      "/courses/csd-2022/guides/data-and-change-events/",
+      "/courses/csd-2022/guides/analog-sensors/"
     ],
-    "map_reference": "/docs/concepts/maker-toolkit/changing-sensor-scale/",
+    "map_reference": "/courses/csd-2022/guides/changing-sensor-scale/",
     "mini_rubric": "true",
     "encrypted": "false",
     "rubric_key_concept": "Develop a program that responds to a variety of hardware input, including those the user does and doesn’t actively control.  Recognize the need for various types of input, both analog and digital, and represent the values of those inputs in various ways.",

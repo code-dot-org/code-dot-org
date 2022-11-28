@@ -81,13 +81,13 @@
     "widget_mode": "false",
     "ai_enabled": "false",
     "reference_links": [
-      "/docs/concepts/maker-toolkit/color-lights/",
+      "/courses/csd-2022/guides/color-lights/",
       "/courses/csd-2022/guides/if-statements",
       "/courses/csd-2022/guides/variables",
       "/docs/concepts/javascript/booleans-and-comparison-operators/",
-      "/docs/concepts/maker-toolkit/physical-input/",
-      "/docs/concepts/maker-toolkit/producing-output/",
-      "/docs/concepts/maker-toolkit/board-events/"
+      "/courses/csd-2022/guides/physical-input/",
+      "/courses/csd-2022/guides/producing-output/",
+      "/courses/csd-2022/guides/board-events/"
     ],
     "callout_json": "[]",
     "start_blocks": "onEvent(\"onButton\", \"click\", function( ) {\r\n  //1) When you press the onButton, the alarm turns on with lights and sound\r\n  \r\n});\r\n\r\nonEvent(\"offButton\", \"click\", function( ) {\r\n  //2) When you press the offButton, all lights and sound turn off\r\n  \r\n});\r\n\r\n",

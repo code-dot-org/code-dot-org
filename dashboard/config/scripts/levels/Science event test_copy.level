@@ -46,7 +46,7 @@
     "name_suffix": "_copy",
     "reference_links": [
       "/docs/concepts/app-lab/changing-screens/index.html",
-      "/docs/concepts/maker-toolkit/board-events/index.html"
+      "/courses/csd-2022/guides/board-events/index.html"
     ],
     "libraries_enabled": "false",
     "preload_asset_list": null,
