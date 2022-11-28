@@ -75,7 +75,7 @@
     "reference_links": [
       "/docs/concepts/patterns/list-scrolling-pattern/",
       "/docs/concepts/patterns/when-to-make-a-function",
-      "/docs/concepts/patterns/update-screen-pattern/"
+      "/courses/csd-2022/guides/update-screen-pattern"
     ],
     "libraries_enabled": "false",
     "preload_asset_list": null

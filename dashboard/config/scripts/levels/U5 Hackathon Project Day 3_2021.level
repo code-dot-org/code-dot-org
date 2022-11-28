@@ -33,7 +33,7 @@
     "encrypted": "false",
     "project_template_level_name": "CSP U5 Hackathon Template_2021",
     "reference_links": [
-      "/docs/concepts/patterns/update-screen-pattern/",
+      "/courses/csd-2022/guides/update-screen-pattern",
       "/docs/concepts/patterns/when-to-make-a-function/",
       "/courses/csp-2022/guides/random-list-access"
     ],
