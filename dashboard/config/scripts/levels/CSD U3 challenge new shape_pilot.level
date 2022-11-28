@@ -77,7 +77,7 @@
     "bubble_choice_description": "Make a triangle out of circles.",
     "libraries_enabled": "false",
     "preload_asset_list": null,
-    "map_reference": "/docs/concepts/game-lab/drawing-shapes/"
+    "map_reference": "/courses/csd-2022/guides/drawing-shapes"
   },
   "published": true,
   "notes": "",

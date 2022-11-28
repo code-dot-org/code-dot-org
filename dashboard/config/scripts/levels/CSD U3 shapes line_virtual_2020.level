@@ -68,7 +68,7 @@
     "encrypted_examples": "FqKWYDFk3OYE0Ibj27BnhCxhP0Vpg410h61ZT9Uai4BIgOb3G6kXoTzJQHiV\nXztGd+vqy5HF9mf8nlhy0y+SUg==\n",
     "libraries_enabled": "false",
     "reference_links": [
-      "/docs/concepts/game-lab/drawing-shapes/"
+      "/courses/csd-2022/guides/drawing-shapes"
     ],
     "bubble_choice_description": "Learn how to draw lines.",
     "preload_asset_list": null
