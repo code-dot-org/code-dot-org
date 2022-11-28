@@ -13,13 +13,13 @@
     "name_suffix": "_2019",
     "long_instructions": "# Navigation Bar and Footer\r\n\r\nEach of your pages needs a navigation bar and a footer.\r\n\r\n# Do This\r\n* For each page, make sure it has a navigation bar that links to other pages in your site.  For a review of the navigation bar, go to <a href=\"4\" target=\"_new\">Lesson 9 Level 4</a>.\r\n* For each page, make sure it has a footer at the bottom that explains the copyright information for your page. (Go to <a href=\"https://creativecommons.org/choose/\" target=\"_new\">Creative Commons</a> for help in creating this HTML.)",
     "reference_links": [
-      "/docs/concepts/html/html-tags/",
-      "/docs/concepts/html/headings-and-paragraphs/",
-      "/docs/concepts/html/lists/",
-      "/docs/concepts/html/images-in-html/",
-      "/docs/concepts/html/formatting-html/"
+      "/courses/csd-2022/guides/html-tags/",
+      "/courses/csd-2022/guides/headings-and-paragraphs/",
+      "/courses/csd-2022/guides/lists/",
+      "/courses/csd-2022/guides/images-in-html/",
+      "/courses/csd-2022/guides/formatting-html/"
     ],
-    "map_reference": "/docs/concepts/html/hyperlinks/"
+    "map_reference": "/courses/csd-2022/guides/hyperlinks/"
   },
   "published": true,
   "notes": "",

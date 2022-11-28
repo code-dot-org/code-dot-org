@@ -13,10 +13,10 @@
     "encrypted_examples": "iOp75sqX5yuJKvU+wHs4fRNzUYFCksGEAvnvOwqWKabQL8Et9dMhJs2J6wax\nMBqLlqg4cRvhRk/G32qgdl/V8b5q+dz5RZ+v5ijuNYF5OK1eyjiLxEGhWFTS\nRcYXZfpwiPo6Sr2aWpF4O7Z1iNna/w==\n",
     "reference_links": [
       "/courses/csd-2022/guides/text-properties/",
-      "/docs/concepts/html/formatting-html/",
-      "/docs/concepts/html/lists/",
-      "/docs/concepts/html/headings-and-paragraphs/",
-      "/docs/concepts/html/html-tags/"
+      "/courses/csd-2022/guides/formatting-html/",
+      "/courses/csd-2022/guides/lists/",
+      "/courses/csd-2022/guides/headings-and-paragraphs/",
+      "/courses/csd-2022/guides/html-tags/"
     ],
     "map_reference": "/courses/csd-2022/guides/style-sheets/",
     "parent_level_id": 18893,

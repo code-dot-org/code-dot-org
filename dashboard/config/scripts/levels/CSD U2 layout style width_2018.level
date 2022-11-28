@@ -17,10 +17,10 @@
       "/courses/csd-2022/guides/style-sheets/",
       "/courses/csd-2022/guides/body-styling/",
       "/courses/csd-2022/guides/text-properties/",
-      "/docs/concepts/html/html-tags/",
-      "/docs/concepts/html/images-in-html/",
-      "/docs/concepts/html/headings-and-paragraphs/",
-      "/docs/concepts/html/formatting-html/"
+      "/courses/csd-2022/guides/html-tags/",
+      "/courses/csd-2022/guides/images-in-html/",
+      "/courses/csd-2022/guides/headings-and-paragraphs/",
+      "/courses/csd-2022/guides/formatting-html/"
     ],
     "map_reference": "/courses/csd-2022/guides/layout-properties/"
   },
