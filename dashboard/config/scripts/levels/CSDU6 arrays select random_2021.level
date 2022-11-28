@@ -130,7 +130,7 @@
     "top_level_procedure_autopopulate": "false",
     "parent_level_id": 20504,
     "name_suffix": "_2021",
-    "map_reference": "/docs/concepts/javascript/arrays/",
+    "map_reference": "/courses/csd-2022/guides/arrays/",
     "video_key": "csd_applab_arrays",
     "mini_rubric": "false",
     "preload_asset_list": null

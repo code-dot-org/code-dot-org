@@ -228,10 +228,10 @@
     "parent_level_id": 20586,
     "name_suffix": "_2021",
     "reference_links": [
-      "/docs/concepts/javascript/for-loops/",
-      "/docs/concepts/javascript/arrays/"
+      "/courses/csd-2022/guides/for-loops/",
+      "/courses/csd-2022/guides/arrays/"
     ],
-    "map_reference": "/docs/concepts/javascript/functions/",
+    "map_reference": "/courses/csd-2022/guides/functions/",
     "mini_rubric": "false",
     "text_mode_at_start": "false",
     "preload_asset_list": null
