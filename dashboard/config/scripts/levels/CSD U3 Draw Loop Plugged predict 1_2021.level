@@ -52,7 +52,7 @@
     "long_instructions": "# Draw Loop\r\n\r\nHere's an example of the draw loop at work.\r\n\r\n# Do this\r\n* Run the code and see how it works.\r\n* Discuss with your partner whether this looks like the flip book you saw in the video.  Why or why not?",
     "parent_level_id": 20710,
     "name_suffix": "_2021",
-    "map_reference": "/docs/concepts/game-lab/the-draw-loop/",
+    "map_reference": "/courses/csd-2022/guides/the-draw-loop",
     "video_key": "csd_gamelab_drawloop",
     "disable_procedure_autopopulate": "false",
     "top_level_procedure_autopopulate": "false",

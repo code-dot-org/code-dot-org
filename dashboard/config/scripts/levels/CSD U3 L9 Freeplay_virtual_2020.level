@@ -82,7 +82,7 @@
     "thumbnail_url": "https://images.code.org/24787af85b3c7025376fac6c3b2fa260-image-1594143754231.2020-07-07 13_41_16.gif",
     "encrypted": "false",
     "reference_links": [
-      "/docs/concepts/game-lab/the-draw-loop/",
+      "/courses/csd-2022/guides/the-draw-loop",
       "/docs/concepts/game-lab/sprites/",
       "/courses/csd-2022/guides/animation-tab",
       "/courses/csd-2022/guides/sprite-properties",
