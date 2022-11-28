@@ -119,8 +119,8 @@
     "parent_level_id": 20553,
     "name_suffix": "_2021",
     "reference_links": [
-      "/docs/concepts/maker-toolkit/color-lights/",
-      "/docs/concepts/maker-toolkit/circuits-and-leds/",
+      "/courses/csd-2022/guides/color-lights/",
+      "/courses/csd-2022/guides/circuits-and-leds/",
       "/docs/concepts/javascript/arrays/",
       "/docs/concepts/javascript/modifying-arrays/"
     ],
