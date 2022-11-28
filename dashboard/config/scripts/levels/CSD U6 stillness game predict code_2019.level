@@ -62,9 +62,9 @@
     "long_instructions": "# Change with the Accelerometer\r\n\r\nThis program uses the change event to increase a movement meter every time the board moves. When the movement meter reaches 100, the alarm will sound.\r\n\r\n\r\n# Do This\r\nThis program has two bugs that you need to fix:\r\n\r\n* The movement meter is being triggered by a button press, instead of the accelerometer's `change` event.\r\n* The programmer forgot how to use the counter pattern to increase the movement variable.\r\n\r\nOnce you have found the bugs, run the program and try to pass the board to your partner without setting off the alarm.",
     "preload_asset_list": null,
     "reference_links": [
-      "/docs/concepts/maker-toolkit/the-accelerometer/"
+      "/courses/csd-2022/guides/the-accelerometer/"
     ],
-    "map_reference": "/docs/concepts/maker-toolkit/accelerometer-events/",
+    "map_reference": "/courses/csd-2022/guides/accelerometer-events/",
     "mini_rubric": "false"
   },
   "published": true,

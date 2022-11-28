@@ -227,9 +227,9 @@
     "parent_level_id": 16535,
     "name_suffix": "_2020",
     "reference_links": [
-      "/docs/concepts/maker-toolkit/data-and-change-events/"
+      "/courses/csd-2022/guides/data-and-change-events/"
     ],
-    "map_reference": "/docs/concepts/maker-toolkit/board-events/",
+    "map_reference": "/courses/csd-2022/guides/board-events/",
     "mini_rubric": "false",
     "text_mode_at_start": "false",
     "preload_asset_list": null

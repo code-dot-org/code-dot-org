@@ -113,10 +113,10 @@
     "parent_level_id": 16663,
     "name_suffix": "_2020",
     "reference_links": [
-      "/docs/concepts/maker-toolkit/producing-output/",
-      "/docs/concepts/maker-toolkit/color-lights/",
-      "/docs/concepts/maker-toolkit/playing-notes/",
-      "/docs/concepts/maker-toolkit/circuits-and-leds/"
+      "/courses/csd-2022/guides/producing-output/",
+      "/courses/csd-2022/guides/color-lights/",
+      "/courses/csd-2022/guides/playing-notes/",
+      "/courses/csd-2022/guides/circuits-and-leds/"
     ],
     "mini_rubric": "false",
     "preload_asset_list": null

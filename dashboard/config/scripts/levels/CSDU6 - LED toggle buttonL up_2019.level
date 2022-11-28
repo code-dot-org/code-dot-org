@@ -70,9 +70,9 @@
     "parent_level_id": 12347,
     "name_suffix": "_2019",
     "reference_links": [
-      "/docs/concepts/maker-toolkit/circuit-playground/"
+      "/courses/csd-2022/guides/circuit-playground/"
     ],
-    "map_reference": "/docs/concepts/maker-toolkit/board-events/",
+    "map_reference": "/courses/csd-2022/guides/board-events/",
     "mini_rubric": "true",
     "encrypted": "false",
     "rubric_key_concept": "Develop a program that responds to a variety of hardware input.",

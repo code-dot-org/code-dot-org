@@ -104,7 +104,7 @@
     "reference_links": [
       "/docs/concepts/app-lab/taking-input-with-getproperty/"
     ],
-    "map_reference": "/docs/concepts/maker-toolkit/physical-input/",
+    "map_reference": "/courses/csd-2022/guides/physical-input/",
     "mini_rubric": "false",
     "text_mode_at_start": "false",
     "preload_asset_list": null,

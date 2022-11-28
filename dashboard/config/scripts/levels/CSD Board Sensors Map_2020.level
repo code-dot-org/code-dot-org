@@ -7,7 +7,7 @@
   "properties": {
     "instructions_important": "false",
     "display_name": "Analog Sensors",
-    "reference": "/docs/concepts/maker-toolkit/analog-sensors/index.html",
+    "reference": "/courses/csd-2022/guides/analog-sensors/index.html",
     "parent_level_id": 16498,
     "name_suffix": "_2020"
   },
