@@ -102,9 +102,7 @@ export default class TutorialDetail extends React.Component {
       // Reserve key 8 for the optional standards.
     ];
 
-    const imageSrc = this.props.item.image
-      .replace('/images/', '/images/fill-480x360/')
-      .replace('.png', '.jpg');
+    const imageSrc = this.props.item.image.replace('.png', '.jpg');
 
     const imageComponent = (
       <div
@@ -230,29 +228,6 @@ export default class TutorialDetail extends React.Component {
                         </td>
                       </tr>
                     )}
-                    {!this.props.disabledTutorial &&
-                      this.props.item.tags_activity_type
-                        .split(',')
-                        .indexOf('online-tutorial') !== -1 && (
-                        <tr key={1}>
-                          <td style={styles.tutorialDetailsTableTitle}>
-                            {i18n.tutorialDetailsShortLink()}
-                          </td>
-                          <td style={styles.tutorialDetailsTableBody}>
-                            <a
-                              href={`https://hourofcode.com/${
-                                this.props.item.short_code
-                              }`}
-                              target="_blank"
-                              rel="noopener noreferrer"
-                            >
-                              {`https://hourofcode.com/${
-                                this.props.item.short_code
-                              }`}
-                            </a>
-                          </td>
-                        </tr>
-                      )}
                     {tableEntries.map(item => (
                       <tr key={item.key}>
                         <td style={styles.tutorialDetailsTableTitle}>
