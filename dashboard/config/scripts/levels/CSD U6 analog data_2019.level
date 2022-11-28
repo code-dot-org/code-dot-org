@@ -96,9 +96,9 @@
     "parent_level_id": 12388,
     "name_suffix": "_2019",
     "reference_links": [
-      "/docs/concepts/maker-toolkit/analog-sensors/"
+      "/courses/csd-2022/guides/analog-sensors/"
     ],
-    "map_reference": "/docs/concepts/maker-toolkit/data-and-change-events/",
+    "map_reference": "/courses/csd-2022/guides/data-and-change-events/",
     "mini_rubric": "false",
     "preload_asset_list": null,
     "encrypted": "false"

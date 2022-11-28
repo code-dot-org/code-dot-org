@@ -80,13 +80,13 @@
     "widget_mode": "false",
     "ai_enabled": "false",
     "reference_links": [
-      "/docs/concepts/maker-toolkit/color-lights/",
+      "/courses/csd-2022/guides/color-lights/",
       "/courses/csd-2022/guides/if-statements",
       "/courses/csd-2022/guides/variables",
       "/docs/concepts/javascript/booleans-and-comparison-operators/",
-      "/docs/concepts/maker-toolkit/physical-input/",
-      "/docs/concepts/maker-toolkit/producing-output/",
-      "/docs/concepts/maker-toolkit/board-events/"
+      "/courses/csd-2022/guides/physical-input/",
+      "/courses/csd-2022/guides/producing-output/",
+      "/courses/csd-2022/guides/board-events/"
     ],
     "callout_json": "[]",
     "preload_asset_list": null,

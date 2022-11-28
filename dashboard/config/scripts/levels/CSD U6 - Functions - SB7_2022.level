@@ -68,9 +68,9 @@
     "widget_mode": "false",
     "ai_enabled": "false",
     "reference_links": [
-      "/docs/concepts/maker-toolkit/the-accelerometer/",
-      "/docs/concepts/maker-toolkit/board-events/",
-      "/docs/concepts/maker-toolkit/data-and-change-events/",
+      "/courses/csd-2022/guides/the-accelerometer/",
+      "/courses/csd-2022/guides/board-events/",
+      "/courses/csd-2022/guides/data-and-change-events/",
       "/courses/csd-2022/guides/variables",
       "/courses/csd-2022/guides/random-numbers"
     ],

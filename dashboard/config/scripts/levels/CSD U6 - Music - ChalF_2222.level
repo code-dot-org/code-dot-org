@@ -109,7 +109,7 @@
     "libraries_enabled": "false",
     "ai_enabled": "false",
     "reference_links": [
-      "/docs/concepts/maker-toolkit/playing-notes/",
+      "/courses/csd-2022/guides/playing-notes/",
       "/docs/concepts/javascript/arrays/"
     ],
     "preload_asset_list": null

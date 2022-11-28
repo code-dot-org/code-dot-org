@@ -98,8 +98,8 @@
     "parent_level_id": 20534,
     "name_suffix": "_2021",
     "reference_links": [
-      "/docs/concepts/maker-toolkit/playing-notes/",
-      "/docs/concepts/maker-toolkit/producing-output/",
+      "/courses/csd-2022/guides/playing-notes/",
+      "/courses/csd-2022/guides/producing-output/",
       "/docs/concepts/javascript/arrays/"
     ],
     "map_reference": "/docs/concepts/javascript/modifying-arrays/",

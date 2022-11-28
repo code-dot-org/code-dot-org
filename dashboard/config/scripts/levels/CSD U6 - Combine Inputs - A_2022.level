@@ -80,8 +80,8 @@
     "widget_mode": "false",
     "ai_enabled": "false",
     "reference_links": [
-      "/docs/concepts/maker-toolkit/circuit-playground/",
-      "/docs/concepts/maker-toolkit/color-lights/",
+      "/courses/csd-2022/guides/circuit-playground/",
+      "/courses/csd-2022/guides/color-lights/",
       "/docs/concepts/javascript/booleans-and-comparison-operators/",
       "/courses/csd-2022/guides/if-statements",
       "/courses/csd-2022/guides/variables"
