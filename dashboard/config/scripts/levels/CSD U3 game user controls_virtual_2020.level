@@ -46,7 +46,7 @@
     "long_instructions": "# User Controls\r\n\r\nNext, you'll want to make sure your user controls are working.  Create a function that makes your sprites respond to user controls as defined in your project guide. \r\n\r\nFor example, in a game where the player sprite can move left and right, you might write this function:\r\n\r\n```\r\nfunction movePlayer(){\r\n  if (keyDown(\"right\")) {\r\n    player.x = player.x + 1;\r\n  }\r\n  if (keyDown(\"left\")) {\r\n    player.x = player.x - 1;\r\n  }\r\n}\r\n```\r\n\r\nDon't forget to then call `movePlayer()` somewhere in your draw loop!",
     "reference_links": [
       "/courses/csd-2022/guides/drawing-shapes",
-      "/docs/concepts/game-lab/shapes-and-parameters/",
+      "/courses/csd-2022/guides/shapes-and-parameters",
       "/docs/concepts/game-lab/sprites/",
       "/courses/csd-2022/guides/sprite-properties",
       "/courses/csd-2022/guides/animation-tab",
