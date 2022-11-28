@@ -21,11 +21,11 @@
       "/docs/concepts/other/creative-commons-search/",
       "/docs/concepts/html/formatting-html/",
       "/docs/concepts/html/hyperlinks/",
-      "/docs/concepts/css/style-sheets/",
-      "/docs/concepts/css/style-sheets/",
-      "/docs/concepts/css/text-properties/",
-      "/docs/concepts/css/body-styling/",
-      "/docs/concepts/css/layout-properties/"
+      "/courses/csd-2022/guides/style-sheets/",
+      "/courses/csd-2022/guides/style-sheets/",
+      "/courses/csd-2022/guides/text-properties/",
+      "/courses/csd-2022/guides/body-styling/",
+      "/courses/csd-2022/guides/layout-properties/"
     ],
     "encrypted": "false",
     "mini_rubric": "false"

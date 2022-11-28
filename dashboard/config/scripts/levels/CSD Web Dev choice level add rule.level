@@ -16,13 +16,13 @@
     "bubble_choice_description": "Add a rule-set for the heading of this article.",
     "encrypted_examples": "Lr7+jYdYNMz8QqN1N1YwEaGNYZCraj5G31EAIedGM9IA9RxAC1nwdm9pYnzA\nwz7tEIEVnSH74FScSEvZXS6nUg==\n",
     "reference_links": [
-      "/docs/concepts/css/text-properties/",
+      "/courses/csd-2022/guides/text-properties/",
       "/docs/concepts/html/formatting-html/",
       "/docs/concepts/html/lists/",
       "/docs/concepts/html/headings-and-paragraphs/",
       "/docs/concepts/html/html-tags/"
     ],
-    "map_reference": "/docs/concepts/css/style-sheets/",
+    "map_reference": "/courses/csd-2022/guides/style-sheets/",
     "parent_level_id": 18860,
     "thumbnail_url": "https://images.code.org/90085ed44cc9b516bff3c50ffb1e7e87-image-1564006558581.JPG"
   },
