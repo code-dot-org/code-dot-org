@@ -210,7 +210,7 @@
     "name_suffix": "_virtual",
     "reference_links": [
       "/docs/concepts/game-lab/sprites/",
-      "/docs/concepts/game-lab/sprites/sprite-properties/"
+      "/courses/csd-2022/guides/sprite-properties"
     ],
     "mini_rubric": "false",
     "hide_share_and_remix": "false",

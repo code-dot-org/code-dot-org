@@ -82,7 +82,7 @@
     "long_instructions": "# Point To\r\n\r\nThe pointTo block can point your sprite to particular elements on a screen.\r\n\r\n# Do This\r\n\r\n* Run the code to see where the spaceship is pointing.\r\n* Change the code to make the spaceship point somewhere else.\r\n* Add a new sprite, and point it in a different direction.\r\n\r\n",
     "parent_level_id": 19235,
     "name_suffix": "_pilot",
-    "map_reference": "/docs/concepts/game-lab/sprites/sprite-properties/",
+    "map_reference": "/courses/csd-2022/guides/sprite-properties",
     "video_key": "csd_gamelab_draw_2",
     "disable_procedure_autopopulate": "false",
     "top_level_procedure_autopopulate": "false",

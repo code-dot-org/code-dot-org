@@ -86,7 +86,7 @@
     "start_blocks": "var bee = createSprite(200,200);\r\nbee.setAnimation(\"bee\");\r\nbee.x = 350;\r\nbee.y = 350;\r\ndrawSprites();",
     "start_animations": "{\r\n  \"orderedKeys\": [\r\n    \"3b12495c-d82e-409f-b969-09a5a41585ca\"\r\n  ],\r\n  \"propsByKey\": {\r\n    \"3b12495c-d82e-409f-b969-09a5a41585ca\": {\r\n      \"name\": \"bee\",\r\n      \"sourceUrl\": \"https://levelbuilder-studio.code.org/api/v1/animation-library/Cjcw5kJ4JMlZgeyhfWNDnFnLbrFmrEwR/category_animals/bee.png\",\r\n      \"frameSize\": {\r\n        \"x\": 63,\r\n        \"y\": 50\r\n      },\r\n      \"frameCount\": 2,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"Cjcw5kJ4JMlZgeyhfWNDnFnLbrFmrEwR\"\r\n    }\r\n  }\r\n}",
     "display_name": "Sprite Properties: Predict",
-    "map_reference": "/docs/concepts/game-lab/sprites/sprite-properties/",
+    "map_reference": "/courses/csd-2022/guides/sprite-properties",
     "libraries_enabled": "false",
     "preload_asset_list": null,
     "encrypted_examples": [
