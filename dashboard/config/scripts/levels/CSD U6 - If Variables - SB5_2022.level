@@ -60,7 +60,7 @@
     "ai_enabled": "false",
     "reference_links": [
       "/docs/concepts/maker-toolkit/physical-input/",
-      "/docs/concepts/javascript/variables/",
+      "/courses/csd-2022/guides/variables",
       "/docs/concepts/patterns/counter-patterns-with-event/"
     ],
     "start_blocks": "var yPosition = 170;\r\n\r\nonBoardEvent(buttonL, \"down\", function() {\r\n  //1) Subtract one from the `yPosition` variable\r\n  \r\n  setProperty(\"birdIcon\", \"y\", yPosition);\r\n});\r\n\r\nonBoardEvent(buttonR, \"down\", function() {\r\n  //2) Add one to the `yPosition` variable\r\n  \r\n  setProperty(\"birdIcon\", \"y\", yPosition);\r\n});\r\n",
