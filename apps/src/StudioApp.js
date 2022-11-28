@@ -2444,10 +2444,9 @@ StudioApp.prototype.handleEditCode_ = function(config) {
         showToolboxHeader.style.display = this.editor.session.paletteEnabled
           ? 'none'
           : 'flex';
-        // remove?
         hideToolboxIcon.style.display = !this.editor.session.paletteEnabled
           ? 'none'
-          : 'flex';
+          : 'inline-block';
         this.resizeToolboxHeader();
       }
     };
