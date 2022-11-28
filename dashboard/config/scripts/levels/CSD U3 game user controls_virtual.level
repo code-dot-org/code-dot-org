@@ -45,7 +45,7 @@
     "name_suffix": "_virtual",
     "long_instructions": "# User Controls\r\n\r\nNext, you'll want to make sure your user controls are working.  Create a function that makes your sprites respond to user controls as defined in your project guide.  You can use the function in in [Lesson 20 Puzzle 13](../../20/levels/13) as an example.",
     "reference_links": [
-      "/docs/concepts/game-lab/drawing-shapes/",
+      "/courses/csd-2022/guides/drawing-shapes",
       "/docs/concepts/game-lab/shapes-and-parameters/",
       "/docs/concepts/game-lab/sprites/",
       "/courses/csd-2022/guides/sprite-properties",

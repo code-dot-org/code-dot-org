@@ -68,7 +68,7 @@
     "encrypted_examples": "S/9iVmiqaOpZqZ9KEtDdquTEixGFiyEVqWopy2y7zblxvAYkrZeYLRwxefTm\n8nTDQNvIfcs7t3FZoXybN4u1/Q==\n",
     "libraries_enabled": "false",
     "reference_links": [
-      "/docs/concepts/game-lab/drawing-shapes/"
+      "/courses/csd-2022/guides/drawing-shapes"
     ],
     "preload_asset_list": null,
     "bubble_choice_description": "Learn how to create any shape you want."
