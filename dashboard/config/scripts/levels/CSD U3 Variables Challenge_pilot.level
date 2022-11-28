@@ -67,7 +67,7 @@
     "thumbnail_url": "https://images.code.org/c52d84260d74ec1b938f877f0c5ddd88-image-1528744566060.47.48 PM.png",
     "encrypted": "false",
     "reference_links": [
-      "/docs/concepts/javascript/variables/",
+      "/courses/csd-2022/guides/variables",
       "/docs/concepts/game-lab/drawing-shapes/",
       "/docs/concepts/game-lab/shapes-and-parameters/"
     ],
