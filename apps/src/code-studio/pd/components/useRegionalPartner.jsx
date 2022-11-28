@@ -3,7 +3,8 @@ import $ from 'jquery';
 import {
   PROGRAM_CSD,
   PROGRAM_CSP,
-  PROGRAM_CSA
+  PROGRAM_CSA,
+  getProgramInfo
 } from '../application/teacher/TeacherApplicationConstants';
 import {SubjectNames} from '@cdo/apps/generated/pd/sharedWorkshopConstants';
 import {debounce} from 'lodash';
@@ -49,6 +50,7 @@ const fetchRegionalPartner = ({
 // takes {program, school, schoolZipCode, schoolState}
 // returns undefined if loading or null if error, otherwise: {id, name, group, workshops, has_csf, pl_programs_offered}
 // if the request succeeds but regional partner is not found, the returned rp will have nil for all values
+// if the request succeeds but regional partner not offering program, the returned rp will have nil for all values
 // see regional_partner_workshops_serializer.rb
 export const useRegionalPartner = data => {
   const {program, schoolZipCode, schoolState, school} = data;
@@ -84,7 +86,13 @@ export const useRegionalPartner = data => {
           setLoadingPartner(false);
           setLoadError(false);
           // the api returns an object with all fields set to null if not found
-          setPartner(partner.id === null ? null : partner);
+          // or if the partner is not offering the selected program
+          const partnerIsOfferingCourse = partner.pl_programs_offered?.includes(
+            getProgramInfo(program).shortName
+          );
+          setPartner(
+            partner.id === null || !partnerIsOfferingCourse ? null : partner
+          );
         }
       })
       .catch(() => {
@@ -96,7 +104,7 @@ export const useRegionalPartner = data => {
     return () => {
       cancelled = true;
     };
-  }, [searchTerm]);
+  }, [program, searchTerm]);
 
   return [loadingPartner ? undefined : partner, loadError];
 };
