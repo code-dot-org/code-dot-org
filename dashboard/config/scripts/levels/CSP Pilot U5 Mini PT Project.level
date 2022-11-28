@@ -187,7 +187,7 @@
     "reference_links": [
       "/docs/concepts/patterns/list-filter-pattern/",
       "/docs/concepts/patterns/list-scrolling-pattern/",
-      "/docs/concepts/patterns/random-list-access/",
+      "/courses/csp-2022/guides/random-list-access",
       "/docs/concepts/patterns/update-screen-pattern/",
       "/docs/concepts/patterns/when-to-make-a-function"
     ]

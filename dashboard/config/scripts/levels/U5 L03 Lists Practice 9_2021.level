@@ -45,7 +45,7 @@
     "palette_category_at_start": "variables",
     "reference_links": [
       "/docs/concepts/patterns/list-scrolling-pattern/",
-      "/docs/concepts/patterns/random-list-access/"
+      "/courses/csp-2022/guides/random-list-access"
     ],
     "widget_mode": "false",
     "libraries_enabled": "false",
