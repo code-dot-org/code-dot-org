@@ -81,7 +81,7 @@
     "parent_level_id": 16146,
     "name_suffix": "_pilot",
     "reference_links": [
-      "/docs/concepts/game-lab/the-counter-pattern/",
+      "/courses/csd-2022/guides/the-counter-pattern-2",
       "/courses/csd-2022/guides/if-statements",
       "/docs/concepts/javascript/booleans-and-comparison-operators/"
     ],
