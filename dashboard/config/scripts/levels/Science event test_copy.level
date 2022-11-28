@@ -45,7 +45,7 @@
     "project_template_level_name": "Science earthquake project_copy",
     "name_suffix": "_copy",
     "reference_links": [
-      "/docs/concepts/app-lab/changing-screens/index.html",
+      "/courses/csd-2022/guides/changing-screens/index.html",
       "/courses/csd-2022/guides/board-events/index.html"
     ],
     "libraries_enabled": "false",
