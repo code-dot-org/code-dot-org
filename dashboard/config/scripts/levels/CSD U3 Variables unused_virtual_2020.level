@@ -78,7 +78,7 @@
     "reference_links": [
       "/courses/csd-2022/guides/variables",
       "/courses/csd-2022/guides/drawing-shapes",
-      "/docs/concepts/game-lab/shapes-and-parameters/"
+      "/courses/csd-2022/guides/shapes-and-parameters"
     ],
     "map_reference": " /docs/concepts/javascript/naming-variables/",
     "preload_asset_list": null
