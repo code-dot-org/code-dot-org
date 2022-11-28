@@ -7,7 +7,7 @@
   "properties": {
     "instructions_important": "false",
     "display_name": "Creating Sprites",
-    "reference": "/docs/concepts/game-lab/sprites/index.html",
+    "reference": "/courses/csd-2022/guides/sprites/index.html",
     "parent_level_id": 16013,
     "name_suffix": "_virtual"
   },

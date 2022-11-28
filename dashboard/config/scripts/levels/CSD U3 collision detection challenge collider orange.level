@@ -81,7 +81,7 @@
     "reference_links": [
       "/courses/csd-2022/guides/if-statements"
     ],
-    "map_reference": "/docs/concepts/game-lab/sprites/collision-detection/",
+    "map_reference": "/courses/csd-2022/guides/sprites/collision-detection/",
     "mini_rubric": "false",
     "encrypted": "false",
     "start_blocks": "var cucumber = createSprite(200, 200);\r\ncucumber.scale = 2;\r\ncucumber.setAnimation(\"cucumber_1\");\r\n// Use .setCollider() with 5 parameters\r\ncucumber.debug = true;\r\ndrawSprites();",

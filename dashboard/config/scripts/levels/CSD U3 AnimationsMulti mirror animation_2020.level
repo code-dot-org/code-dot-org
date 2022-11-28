@@ -141,9 +141,9 @@
     "parent_level_id": 18688,
     "name_suffix": "_2020",
     "reference_links": [
-      "/docs/concepts/game-lab/sprites/",
+      "/courses/csd-2022/guides/sprites/",
       "/courses/csd-2022/guides/animation-tab",
-      "/docs/concepts/game-lab/animation-tab/editing-images/"
+      "/courses/csd-2022/guides/animation-tab/editing-images/"
     ],
     "mini_rubric": "false",
     "preload_asset_list": null
