@@ -78,7 +78,7 @@
       "/courses/csd-2022/guides/variables",
       "/courses/csd-2022/guides/naming-variables",
       "/courses/csd-2022/guides/drawing-shapes",
-      "/docs/concepts/game-lab/shapes-and-parameters/"
+      "/courses/csd-2022/guides/shapes-and-parameters"
     ],
     "long_instructions": "# White Text on White Background\r\n\r\nYou can add a border to your text using the `stroke()` command, shown below. Like other shapes, you can also use the `strokeWeight()` command to change the thickness of the stroke. By running the code below, you'll notice that the normal stroke weight for text doesn't give it much contrast when the background is the same color.\r\n\r\n# Do This\r\n\r\n* Read the code to see how it works.\r\n* Add a `strokeWeight()` command to make the text stand out more.\r\n",
     "encrypted": "false",

@@ -79,7 +79,7 @@
       "/courses/csd-2022/guides/variables",
       "/courses/csd-2022/guides/naming-variables",
       "/courses/csd-2022/guides/drawing-shapes",
-      "/docs/concepts/game-lab/shapes-and-parameters/"
+      "/courses/csd-2022/guides/shapes-and-parameters"
     ],
     "long_instructions": "# Text\r\n\r\nYou can put text anywhere you'd like on the screen using the new `text` block. Remember that you can learn more about a block by clicking \"See examples\" when hovering over it in the toolbox.\r\n\r\n![](https://images.code.org/8cbce5bd36e64d6b61c36476640fdd17-image-1594047778734.02.48 AM.png)\r\n\r\n# Do This\r\n* Read the examples of the `text()` command and learn how to change the size and color of your text.\r\n* Change the displayed text in the provided code.\r\n* Add a second `text` block to write in a different part of the screen.\r\n\r\n",
     "encrypted": "false",
