@@ -52,7 +52,7 @@
     "top_level_procedure_autopopulate": "false",
     "show_type_hints": "false",
     "reference_links": [
-      "/docs/concepts/javascript/variables/",
+      "/courses/csd-2022/guides/variables",
       "/docs/concepts/game-lab/drawing-shapes/",
       "/docs/concepts/game-lab/shapes-and-parameters/"
     ],

@@ -52,7 +52,7 @@
     "ai_enabled": "false",
     "reference_links": [
       "/docs/concepts/maker-toolkit/physical-input/",
-      "/docs/concepts/javascript/variables/",
+      "/courses/csd-2022/guides/variables",
       "/docs/concepts/patterns/counter-patterns-with-event/",
       "/docs/concepts/app-lab/if-statements/"
     ],
