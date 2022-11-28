@@ -1640,11 +1640,15 @@ fr-FR:
       Multi-Screen Apps:
         content1: description ici
       MyLoopyRoboticFriends-Unplugged:
-        markdown: "# Mes Amis Robotiques Loufoques    Raccourcis tes programmes en
-          utilisant des boucles !\n"
+        markdown: |
+          # Mes Amis Robotiques Maboul
+
+          Rends tes programmes plus courts en utilisant des boucles !
       MyLoopyRoboticFriends-Unplugged_2020:
-        markdown: "# Mes Amis Robotiques Loufoques    Raccourcis tes programmes en
-          utilisant des boucles !\n"
+        markdown: |
+          # Mes Amis Robotiques Maboul
+
+          Rends tes programmes plus courts en utilisant des boucles !
       MyRoboticFriends-Unplugged:
         markdown: |
           # Mes amis robotiques
@@ -2602,71 +2606,71 @@ fr-FR:
       courseC_multi_harvester_loops11_predict1:
         answers:
         - text: '4'
-          feedback: Incorrect. Le fermier ramassera 4 citrouilles dans chacune des
-            3 boucles. 4 fois 3 égal 12!
+          feedback: Incorrect. L'agricultrice ramassera 4 citrouilles dans chacune
+            des 3 boucles. 4 fois 3, ça fait 12 !
         - text: '12'
           correct: true
           feedback: Correct !
         - text: '15'
-          feedback: Incorrect. Le fermier ramassera 4 citrouilles dans chacune des
-            3 boucles. 4 fois 3 égal 12!
+          feedback: Incorrect. L'agricultrice ramassera 4 citrouilles dans chacune
+            des 3 boucles. 4 fois 3, ça fait 12 !
         - text: Je ne sais pas.
           feedback: Le fermier ramassera 4 citrouilles dans chacune des 3 boucles.
             4 fois 3 égal 12!
         questions:
-        - text: Regarde attentivement le code ci-dessous. Combien de citrouilles le
-            fermier ramassera-t-il après avoir cliqué sur "Démarrer" ?
+        - text: Regarde attentivement le code ci-dessous. Combien de citrouilles l'agricultrice
+            ramassera-t-elle une fois que tu as cliqué sur « Démarrer » ?
       courseC_multi_harvester_loops11_predict1_2018:
         answers:
         - text: '4'
-          feedback: Incorrect. Le fermier ramassera 4 citrouilles dans chacune des
-            3 boucles. 4 fois 3 égal 12!
+          feedback: Incorrect. L'agricultrice ramassera 4 citrouilles dans chacune
+            des 3 boucles. 4 fois 3, ça fait 12 !
         - text: '12'
           correct: true
           feedback: Correct !
         - text: '15'
-          feedback: Incorrect. Le fermier ramassera 4 citrouilles dans chacune des
-            3 boucles. 4 fois 3 égal 12!
+          feedback: Incorrect. L'agricultrice ramassera 4 citrouilles dans chacune
+            des 3 boucles. 4 fois 3, ça fait 12 !
         - text: Je ne sais pas.
           feedback: Le fermier ramassera 4 citrouilles dans chacune des 3 boucles.
             4 fois 3 égal 12!
         questions:
-        - text: Regarde attentivement le code ci-dessous. Combien de citrouilles le
-            fermier ramassera-t-il après avoir cliqué sur "Démarrer" ?
+        - text: Regarde attentivement le code ci-dessous. Combien de citrouilles l'agricultrice
+            ramassera-t-elle une fois que tu as cliqué sur « Démarrer » ?
       courseC_multi_harvester_loops11_predict1_2018_2019:
         answers:
         - text: '4'
-          feedback: Incorrect. Le fermier ramassera 4 citrouilles dans chacune des
-            3 boucles. 4 fois 3 égal 12!
+          feedback: Incorrect. L'agricultrice ramassera 4 citrouilles dans chacune
+            des 3 boucles. 4 fois 3, ça fait 12 !
         - text: '12'
           correct: true
           feedback: Correct !
         - text: '15'
-          feedback: Incorrect. Le fermier ramassera 4 citrouilles dans chacune des
-            3 boucles. 4 fois 3 égal 12!
+          feedback: Incorrect. L'agricultrice ramassera 4 citrouilles dans chacune
+            des 3 boucles. 4 fois 3, ça fait 12 !
         - text: Je ne sais pas.
           feedback: Le fermier ramassera 4 citrouilles dans chacune des 3 boucles.
             4 fois 3 égal 12!
         questions:
-        - text: Regarde attentivement le code ci-dessous. Combien de citrouilles le
-            fermier ramassera-t-il après avoir cliqué sur "Démarrer" ?
+        - text: Regarde attentivement le code ci-dessous. Combien de citrouilles l'agricultrice
+            ramassera-t-elle une fois que tu as cliqué sur « Démarrer » ?
       courseC_multi_harvester_loops11_predict1_2018_2019_2020:
         answers:
         - text: '4'
-          feedback: Incorrect. Le fermier ramassera 4 citrouilles dans chacune des
-            3 boucles. 4 fois 3 égal 12!
+          feedback: Incorrect. L'agricultrice ramassera 4 citrouilles dans chacune
+            des 3 boucles. 4 fois 3, ça fait 12 !
         - text: '12'
           correct: true
           feedback: Correct !
         - text: '15'
-          feedback: Incorrect. Le fermier ramassera 4 citrouilles dans chacune des
-            3 boucles. 4 fois 3 égal 12!
+          feedback: Incorrect. L'agricultrice ramassera 4 citrouilles dans chacune
+            des 3 boucles. 4 fois 3, ça fait 12 !
         - text: Je ne sais pas.
           feedback: Le fermier ramassera 4 citrouilles dans chacune des 3 boucles.
             4 fois 3 égal 12!
         questions:
-        - text: Regarde attentivement le code ci-dessous. Combien de citrouilles le
-            fermier ramassera-t-il après avoir cliqué sur "Démarrer" ?
+        - text: Regarde attentivement le code ci-dessous. Combien de citrouilles l'agricultrice
+            ramassera-t-elle une fois que tu as cliqué sur « Démarrer » ?
       courseC_multi_maze_debugging8_predict1:
         answers:
         - text: Le programme n'échouera pas. Scrat va atteindre le gland.
@@ -2790,7 +2794,7 @@ fr-FR:
             tu vas cliquer sur "Démarrer"?
       courseC_multi_starWars_predict1:
         answers:
-        - text: BB-8 ne bougera pas.
+        - text: BB-8 ne se déplacera pas
           feedback: Incorrect. Le bloc « répéter » fera avancer BB-8 5 fois.
         - text: BB-8 ne se déplacera que d'une seule case
           feedback: Incorrect. Le bloc « répéter » fera avancer BB-8 5 fois.
@@ -2803,7 +2807,7 @@ fr-FR:
         - text: Que penses-tu qu'il se passera quand tu appuies sur « Démarrer » ?
       courseC_multi_starWars_predict1_2018:
         answers:
-        - text: BB-8 ne bougera pas.
+        - text: BB-8 ne se déplacera pas
           feedback: Incorrect. Le bloc « répéter » fera avancer BB-8 5 fois.
         - text: BB-8 ne se déplacera que d'une seule case
           feedback: Incorrect. Le bloc « répéter » fera avancer BB-8 5 fois.
@@ -2816,7 +2820,7 @@ fr-FR:
         - text: Que penses-tu qu'il se passera quand tu appuies sur « Démarrer » ?
       courseC_multi_starWars_predict1_2018_2019:
         answers:
-        - text: BB-8 ne bougera pas.
+        - text: BB-8 ne se déplacera pas
           feedback: Incorrect. Le bloc « répéter » fera avancer BB-8 5 fois.
         - text: BB-8 ne se déplacera que d'une seule case
           feedback: Incorrect. Le bloc « répéter » fera avancer BB-8 5 fois.
@@ -2829,7 +2833,7 @@ fr-FR:
         - text: Que penses-tu qu'il se passera quand tu appuies sur « Démarrer » ?
       courseC_multi_starWars_predict1_2018_2019_2020:
         answers:
-        - text: BB-8 ne bougera pas.
+        - text: BB-8 ne se déplacera pas
           feedback: Incorrect. Le bloc « répéter » fera avancer BB-8 5 fois.
         - text: BB-8 ne se déplacera que d'une seule case
           feedback: Incorrect. Le bloc « répéter » fera avancer BB-8 5 fois.
@@ -5306,7 +5310,7 @@ fr-FR:
 
           Utilise une carte et donne les commandes pour atteindre l'objectif.
       MyLoopyRoboticFriends-Unplugged_2021:
-        markdown: "# Mes Amis Robotiques Loufoques \n   \nRaccourcis tes programmes
+        markdown: "# Mes Amis Robotiques Maboul\n   \nRends tes programmes plus courts
           en utilisant des boucles !\n"
       MyRoboticFriends-Unplugged_2021:
         markdown: |
@@ -5412,20 +5416,20 @@ fr-FR:
       courseC_multi_harvester_loops11_predict1_2021:
         answers:
         - text: '4'
-          feedback: Incorrect. Le fermier ramassera 4 citrouilles dans chacune des
-            3 boucles. 4 fois 3 égal 12!
+          feedback: Incorrect. L'agricultrice ramassera 4 citrouilles dans chacune
+            des 3 boucles. 4 fois 3, ça fait 12 !
         - text: '12'
           correct: true
           feedback: Correct !
         - text: '15'
-          feedback: Incorrect. Le fermier ramassera 4 citrouilles dans chacune des
-            3 boucles. 4 fois 3 égal 12!
+          feedback: Incorrect. L'agricultrice ramassera 4 citrouilles dans chacune
+            des 3 boucles. 4 fois 3, ça fait 12 !
         - text: '20'
-          feedback: Incorrect. Le fermier ramassera 4 citrouilles dans chacune des
-            3 boucles. 4 fois 3 égal 12!
+          feedback: Incorrect. L'agricultrice ramassera 4 citrouilles dans chacune
+            des 3 boucles. 4 fois 3, ça fait 12 !
         questions:
-        - text: Regarde attentivement le code ci-dessous. Combien de citrouilles le
-            fermier ramassera-t-il après avoir cliqué sur "Démarrer" ?
+        - text: Regarde attentivement le code ci-dessous. Combien de citrouilles l'agricultrice
+            ramassera-t-elle une fois que tu as cliqué sur « Démarrer » ?
       courseC_multi_maze_debugging8_predict1_2021:
         answers:
         - text: Scrat va atteindre le gland. Il n'y a pas de bugs dans le code.
@@ -5462,7 +5466,7 @@ fr-FR:
             tu vas cliquer sur "Démarrer"?
       courseC_multi_starWars_predict1_2021:
         answers:
-        - text: BB-8 ne bougera pas.
+        - text: BB-8 ne se déplacera pas
           feedback: Incorrect. Le bloc « répéter » fera avancer BB-8 5 fois.
         - text: BB-8 ne se déplacera que d'une seule case
           feedback: Incorrect. Le bloc « répéter » fera avancer BB-8 5 fois.
@@ -16242,8 +16246,10 @@ fr-FR:
 
           Utilise une carte et donne les commandes pour atteindre l'objectif.
       MyLoopyRoboticFriends-Unplugged2022:
-        markdown: "# Mes Amis Robotiques Loufoques    Raccourcis tes programmes en
-          utilisant des boucles !\n"
+        markdown: |
+          # Mes Amis Robotiques Maboul
+
+          Rends tes programmes plus courts en utilisant des boucles !
       MyRoboticFriends-Unplugged2022:
         markdown: |
           # Mes amis robotiques
@@ -16295,20 +16301,20 @@ fr-FR:
       courseC_multi_harvester_loops11_predict12022:
         answers:
         - text: '4'
-          feedback: Incorrect. Le fermier ramassera 4 citrouilles dans chacune des
-            3 boucles. 4 fois 3 égal 12!
+          feedback: Incorrect. L'agricultrice ramassera 4 citrouilles dans chacune
+            des 3 boucles. 4 fois 3, ça fait 12 !
         - text: '12'
           correct: true
           feedback: Correct !
         - text: '15'
-          feedback: Incorrect. Le fermier ramassera 4 citrouilles dans chacune des
-            3 boucles. 4 fois 3 égal 12!
+          feedback: Incorrect. L'agricultrice ramassera 4 citrouilles dans chacune
+            des 3 boucles. 4 fois 3, ça fait 12 !
         - text: '20'
-          feedback: Incorrect. Le fermier ramassera 4 citrouilles dans chacune des
-            3 boucles. 4 fois 3 égal 12!
+          feedback: Incorrect. L'agricultrice ramassera 4 citrouilles dans chacune
+            des 3 boucles. 4 fois 3, ça fait 12 !
         questions:
-        - text: Regarde attentivement le code ci-dessous. Combien de citrouilles le
-            fermier ramassera-t-il après avoir cliqué sur "Démarrer" ?
+        - text: Regarde attentivement le code ci-dessous. Combien de citrouilles l'agricultrice
+            ramassera-t-elle une fois que tu as cliqué sur « Démarrer » ?
       courseC_multi_maze_debugging8_predict12022:
         answers:
         - text: Scrat va atteindre le gland. Il n'y a pas de bugs dans le code.
@@ -16345,7 +16351,7 @@ fr-FR:
             tu vas cliquer sur "Démarrer"?
       courseC_multi_starWars_predict12022:
         answers:
-        - text: BB-8 ne bougera pas.
+        - text: BB-8 ne se déplacera pas
           feedback: Incorrect. Le bloc « répéter » fera avancer BB-8 5 fois.
         - text: BB-8 ne se déplacera que d'une seule case
           feedback: Incorrect. Le bloc « répéter » fera avancer BB-8 5 fois.

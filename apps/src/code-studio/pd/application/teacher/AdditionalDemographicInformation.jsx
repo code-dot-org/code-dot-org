@@ -99,6 +99,16 @@ AdditionalDemographicInformation.associatedFields = [
   ...Object.keys(PageLabels.additionalDemographicInformation)
 ];
 
+AdditionalDemographicInformation.getDynamicallyRequiredFields = data => {
+  const requiredFields = [];
+
+  if (data.program === PROGRAM_CSA) {
+    requiredFields.push(['csaAlreadyKnow', 'csaPhoneScreen']);
+  }
+
+  return requiredFields;
+};
+
 export default AdditionalDemographicInformation;
 
 const styles = {

@@ -77,52 +77,52 @@ fr:
     flappy_intro:
       1:
         image: notes/flappy01.jpg
-        text: Salut, je suis Katie ! Une des choses les plus excitantes à propos de
-          l'informatique est qu'un programme informatique peut être interactif.
+        text: Salut ! Moi, c'est Katie. L'un des aspects les plus passionnants de
+          l'informatique, c'est qu'un programme informatique peut être interactif.
       2:
         image: notes/flappy02.jpg
-        text: Chaque fois que quelqu'un clique ou appuie ou tapote sur un ordinateur
-          ou un téléphone, ça génère un ÉVÈNEMENT, et il y a un code qui décide quoi
-          faire quand un ÉVÈNEMENT a lieu.
+        text: À chaque fois que quelqu'un clique ou appuie ou tape sur un ordinateur
+          ou un téléphone, ça génère un ÉVÈNEMENT, et il y a du code qui décide quoi
+          faire lorsqu'un ÉVÈNEMENT a lieu.
       3:
         image: notes/flappy03.jpg
-        text: 'Par exemple, tu pourrais avoir un GESTIONNAIRE D’ÉVÉNEMENTS qui dit
-          «quand on clique sur la souris, joue un son.» '
+        text: 'Par exemple, on pourrait avoir un GESTIONNAIRE D’ÉVÉNEMENTS qui indique
+          « quand on clique sur la souris, jouer un son ». '
       4:
         image: notes/flappy04.jpg
-        text: As-tu déjà entendu parler du jeu Flappy l’oiseau? En utilisant les Gestionnaires
-          d'événements, nous allons apprendre à programmer notre version personnalisée
-          de Flappy l’oiseau!
+        text: As-tu déjà entendu parler du jeu FlappyBird ? En utilisant les Gestionnaires
+          d'Événements, on va apprendre à programmer notre version personnalisée de
+          FlappyBird !
       5:
         image: notes/flappy05.jpg
-        text: Le code que tu vas écrire implique de glisser et de déposer des blocs
-          qui représentent des commandes pour l'ordinateur. Mais en fait, chacun de
-          ces blocs est représenté par du code réel.
+        text: Pour écrire ton code, on va te demander de faire glisser et de déposer
+          des blocs qui représentent des commandes pour l'ordinateur. Mais sous l'envers
+          du décor, chacun de ces blocs représente en fait du vrai code.
       6:
         image: notes/flappy06.jpg
         text: 'Si tu regardes dans l''espace de travail, il y a quelques blocs verts
-          qui sont déjà remplis pour toi - ce sont des «Gestionnaires d''événements.» '
+          qui sont déjà remplis pour toi - ce sont les « gestionnaires d''événements
+          ». '
       7:
         image: notes/flappy07.jpg
-        text: Si tu veux que l'oiseau BATTE DES AILES quand tu CLIQUES sur la souris,
-          tu peux le faire en attachant le bloc «BATTRE DES AILES» au gestionnaire
-          d'événements approprié; et maintenant dans ton jeu, chaque fois que tu cliqueras
+        text: Si tu veux que l'oiseau BATTE DES AILES quand on CLIQUE sur la souris,
+          tu peux ce faire en attachant le bloc « BATTRE DES AILES » au gestionnaire
+          d'événement adapté ; désormais, dans ton jeu, à chaque fois qu'on clique
           sur la souris, l'oiseau battra des ailes.
       8:
         image: notes/flappy08.jpg
-        text: Dans chaque puzzle de cette activité, nous allons introduire des nouveaux
-          types d'événements sous la forme de blocs verts sur l'espace de travail,
-          et tu pourras décider quel est le bloc approprié à ajouter en réponse à
-          ces événements.
+        text: Dans chaque casse-tête de cette activité, on va introduire des nouveaux
+          types d'événements sous forme de blocs verts dans l'espace de travail, et
+          tu pourras décider quel est le bloc adapté à ajouter en réponse à ces événements.
       9:
         image: notes/flappy09.jpg
-        text: Quand tu vois une flèche déroulante comme ça, cela veut dire que tu
-          peux changer les paramètres - comme par exemple, quel son jouer quand Flappy
-          l’oiseau touche le sol.
+        text: Quand tu vois une flèche ouvrant un menu déroulant comme ceci, cela
+          veut dire que tu peux changer les paramètres – comme quel son jouer quand
+          Flappy l’oiseau touche le sol.
       10:
         image: notes/flappy10.jpg
-        text: Dans le puzzle final, tu seras capable de créer ton propre jeu et de
-          le partager avec tes amis. Amuse-toi bien!
+        text: Lors du casse-tête final, tu seras à même de créer ton propre jeu et
+          de le partager avec tes amis. Amuse-toi bien !
     loop_times:
       1:
         text: Salut, je suis Mark ! Découvrons les boucles. En utilisant les boucles,

@@ -30,6 +30,13 @@
         }
       }
     },
+    "bike_sharing": {
+      "card": {
+        "context": {
+          "potentialMisuses": " "
+        }
+      }
+    },
     "poutine_toy": {
       "fields": {
         "mushrooms": {
@@ -55,12 +62,22 @@
         "age": {
           "id": "גיל"
         }
+      },
+      "card": {
+        "context": {
+          "potentialMisuses": " "
+        }
       }
     },
     "nutrition": {
       "fields": {
         "Description": {
           "id": "תיאור"
+        }
+      },
+      "card": {
+        "context": {
+          "potentialMisuses": " "
         }
       }
     },
@@ -106,6 +123,12 @@
         "age": {
           "id": "גיל"
         }
+      },
+      "card": {
+        "context": {
+          "potentialUses": " ",
+          "potentialMisuses": " "
+        }
       }
     },
     "naan_toy": {
@@ -146,12 +169,22 @@
         "Star": {
           "id": "כוכב"
         }
+      },
+      "card": {
+        "context": {
+          "potentialMisuses": " "
+        }
       }
     },
     "songs": {
       "fields": {
         "Artist": {
           "id": "אומן"
+        }
+      },
+      "card": {
+        "context": {
+          "potentialMisuses": " "
         }
       }
     },
@@ -166,6 +199,18 @@
       "fields": {
         "Length": {
           "id": "אורך"
+        }
+      },
+      "card": {
+        "context": {
+          "potentialMisuses": " "
+        }
+      }
+    },
+    "basketball_shots": {
+      "card": {
+        "context": {
+          "potentialMisuses": " "
         }
       }
     },
@@ -212,12 +257,24 @@
         "Age": {
           "id": "גיל"
         }
+      },
+      "card": {
+        "context": {
+          "potentialMisuses": " "
+        }
       }
     },
     "shapes_v1_toy": {
       "fields": {
         "size": {
           "id": "גודל"
+        }
+      }
+    },
+    "jeans": {
+      "card": {
+        "context": {
+          "potentialMisuses": " "
         }
       }
     },
