@@ -28,6 +28,7 @@ zh-CN:
         personal_email_markdown: 个人电子邮箱地址 [（没有电子邮箱请点击这里）](%{url})
         username: 用户名
         password: '密码:'
+        verified_teacher: 经过验证的老师
         password_confirmation: 密码确认：
         current_password: 当前密码
         locale: 语言
@@ -259,6 +260,7 @@ zh-CN:
   teacher_mailer:
     new_teacher_subject: 欢迎来到 Code.org ！
     delete_teacher_subject: Code.org 通知：你的帐户已被删除
+    verified_teacher_subject: Code.org 教师验证 - 成功
   section:
     your_section:
       one: 你的小组：
@@ -592,6 +594,7 @@ zh-CN:
       电子艺界，保留所有权利。<br />阿甘妙世界&copy; %{current_year} 梦工厂动画公司，保留所有权利。
     code_from_html: Code.org 使用 p5.play 游戏资源库，根据 <a href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html">GNU
       LGPL 2.1</a> 之许可。
+    powered_by_aws: 亚马逊网络服务（Amazon Web Services）和“由AWS提供支持”徽标是Amazon.com，Inc.，或者其在美国/其他国家内的附属公司的商标。
     built_on_github: 在微软的 GitHub 上构建
     google_copyright: "© Google Inc，授权使用。谷歌课堂是 Google Inc 的一个商标。"
     trademark: "&copy; Code.org, %{current_year}. Code.org&reg;, CODE Logo 和 Hour
@@ -614,6 +617,7 @@ zh-CN:
     try_hour_of_code: 试试《编程一小时》！
     store: 商店
     cookie_notice: Cookie通知
+    view_code: 查看代码
   reference_area:
     title: 需要帮助吗？
     subtitle: 看看这些视频和提示
@@ -1064,12 +1068,15 @@ zh-CN:
         not_listed: 期望的术语未列出
         none: 不愿回答
       school_country:
+        barbados: 巴巴多斯
+        belize: 伯利兹
         canada: 加拿大
         chile: 智利
         colombia: 哥伦比亚
         israel: 以色列
         malaysia: 马来西亚
         mexico: 墨西哥
+        paraguay: 巴拉圭
         thailand: 泰国
         uzbekistan: 乌兹别克斯坦
       ages:
@@ -1178,4 +1185,6 @@ zh-CN:
       forbidden: 用户无法更新学生的可锁定状态
   reset_predict_progress_button: 删除答案
   pixelation:
+    raw_format: 原始格式
+    raw_format_alt: 查看清除格式的比特
     binary: 二进制
