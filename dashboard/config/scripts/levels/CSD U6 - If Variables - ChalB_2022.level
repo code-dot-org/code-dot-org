@@ -78,7 +78,7 @@
     "widget_mode": "false",
     "ai_enabled": "false",
     "reference_links": [
-      "/docs/concepts/patterns/counter-patterns-with-event/",
+      "/courses/csp-2022/guides/counter-patterns-with-event/",
       "/courses/csd-2022/guides/if-statements",
       "/courses/csd-2022/guides/variables",
       "/courses/csd-2022/guides/booleans-and-comparison-operators/",
