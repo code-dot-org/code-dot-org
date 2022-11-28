@@ -51,10 +51,10 @@
     "ai_enabled": "true",
     "encrypted_examples": "CDw6nJlpcfNHhNz5DfatZUX72bOk/VgbrMHRd5DCPJtBhxv2PxiAU+lFajj5\n56Dw50POG8Qc5Ak/wk5xxSgfdg==\n",
     "reference_links": [
-      "/docs/concepts/app-lab/multi-screen-apps/",
-      "/docs/concepts/app-lab/design-mode/design-mode-elements/"
+      "/courses/csd-2022/guides/multi-screen-apps/",
+      "/courses/csd-2022/guides/design-mode/design-mode-elements/"
     ],
-    "map_reference": "/docs/concepts/app-lab/design-mode/",
+    "map_reference": "/courses/csd-2022/guides/design-mode/",
     "video_key": "applab_intro_designmode",
     "ai_model_id": "fEbMbo2S3bqe",
     "ai_model_name": "Quiz - Where Should You Take a Vacation",
