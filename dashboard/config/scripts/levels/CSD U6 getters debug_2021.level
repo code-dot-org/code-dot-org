@@ -71,7 +71,7 @@
     "encrypted_examples": "EG/gPkvX5wEE+4EKhnfN6kCQOfNvQwsfblRzjpi/ZdD5dYySEs+0riH9A+0D\nmotYzzcwaqfrM+waRRlVK8nmWw==\n",
     "text_mode_at_start": "false",
     "reference_links": [
-      "/docs/concepts/app-lab/taking-input-with-getproperty/"
+      "/courses/csd-2022/guides/taking-input-with-getproperty/"
     ],
     "map_reference": "/courses/csd-2022/guides/physical-input/",
     "mini_rubric": "false",
