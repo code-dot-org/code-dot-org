@@ -45,11 +45,11 @@
     "parent_level_id": 20887,
     "name_suffix": "_virtual_2020",
     "reference_links": [
-      "/docs/concepts/game-lab/sprites/",
+      "/courses/csd-2022/guides/sprites/",
       "/courses/csd-2022/guides/sprite-properties",
-      "/docs/concepts/game-lab/sprites/velocity/",
+      "/courses/csd-2022/guides/sprites/velocity/",
       "/courses/csd-2022/guides/animation-tab",
-      "/docs/concepts/game-lab/animation-tab/editing-images/"
+      "/courses/csd-2022/guides/animation-tab/editing-images/"
     ],
     "mini_rubric": "false",
     "encrypted": "false",

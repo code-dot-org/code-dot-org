@@ -80,12 +80,12 @@
     "parent_level_id": 20840,
     "name_suffix": "_virtual_2020",
     "reference_links": [
-      "/docs/concepts/game-lab/sprites/velocity/",
+      "/courses/csd-2022/guides/sprites/velocity/",
       "/courses/csd-2022/guides/the-counter-pattern-2",
       "/courses/csd-2022/guides/if-statements",
-      "/docs/concepts/game-lab/sprites/"
+      "/courses/csd-2022/guides/sprites/"
     ],
-    "map_reference": "/docs/concepts/game-lab/velocity-and-the-counter-pattern/",
+    "map_reference": "/courses/csd-2022/guides/velocity-and-the-counter-pattern/",
     "mini_rubric": "false",
     "encrypted": "false",
     "libraries_enabled": "false",

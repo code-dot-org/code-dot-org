@@ -71,14 +71,14 @@
     "parent_level_id": 23230,
     "name_suffix": "_2020",
     "reference_links": [
-      "/docs/concepts/game-lab/sprites/collision-detection/",
-      "/docs/concepts/game-lab/sprites/velocity/",
+      "/courses/csd-2022/guides/sprites/collision-detection/",
+      "/courses/csd-2022/guides/sprites/velocity/",
       "/docs/concepts/javascript/booleans-and-comparison-operators/",
       "/courses/csd-2022/guides/if-statements",
       "/docs/concepts/javascript/if-else-statements/",
-      "/docs/concepts/game-lab/animation-tab/multi-frame-animations/"
+      "/courses/csd-2022/guides/animation-tab/multi-frame-animations/"
     ],
-    "map_reference": "/docs/concepts/game-lab/velocity-and-the-counter-pattern/",
+    "map_reference": "/courses/csd-2022/guides/velocity-and-the-counter-pattern/",
     "mini_rubric": "false",
     "encrypted": "false",
     "display_name": "Slow down and reverse",
