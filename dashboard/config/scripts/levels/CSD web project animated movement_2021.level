@@ -70,7 +70,7 @@
     "name_suffix": "_2021",
     "reference_links": [
       "/courses/csd-2022/guides/the-counter-pattern-2",
-      "/docs/concepts/javascript/random-numbers/"
+      "/courses/csd-2022/guides/random-numbers"
     ],
     "disable_procedure_autopopulate": "false",
     "top_level_procedure_autopopulate": "false",
