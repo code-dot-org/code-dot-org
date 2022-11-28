@@ -15,7 +15,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-11-22 21:48:50 UTC",
+    "serialized_at": "2022-11-28 01:02:24 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -4813,40 +4813,11 @@
       }
     },
     {
-      "key": "f3b0ecd7-0fbe-4203-b262-3a435c8cf5bb",
+      "key": "4d37ee8a-5db0-4a8d-aafd-1c26eeaa0aac",
       "position": 1,
       "properties": {
-        "description": "We have made a lot of progress writing algorithms using sequencing, selection, and iteration to help the Painter solve a variety of problems in The Neighborhood! We now also have multiple subclasses of our PainterPlus class to create specialized versions using inheritance.",
-        "name": "Glows, Grows, Want-to-Knows",
-        "remarks": true
-      },
-      "seeding_key": {
-        "activity_section.key": "f3b0ecd7-0fbe-4203-b262-3a435c8cf5bb",
-        "lesson_activity.key": "fb4d8d1c-972e-4336-ab2d-9f79dd1238c7"
-      }
-    },
-    {
-      "key": "bc5652d6-62d6-43ce-b4ab-d2a247247ed2",
-      "position": 2,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What was awesome about writing your code?*\n* *What is one action you can take to improve your code?*\n* *What questions do you have about today?*\n\n**Discussion Goal:** Students share aspects of their program they enjoyed or how they solved the problem and identify areas of improvement to strengthen their programming skills. Students also share any questions or misconceptions they may have.",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "Glows, Grows, Want-to-Knows is a strategy to help students identify their strengths and areas of improvement and share any questions or misconceptions."
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "bc5652d6-62d6-43ce-b4ab-d2a247247ed2",
-        "lesson_activity.key": "fb4d8d1c-972e-4336-ab2d-9f79dd1238c7"
-      }
-    },
-    {
-      "key": "4d37ee8a-5db0-4a8d-aafd-1c26eeaa0aac",
-      "position": 3,
-      "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson and the Question of the Day.",
+        "name": "Show What You Know Week",
         "tips": [
           {
             "type": "teachingTip",
@@ -4860,10 +4831,22 @@
       }
     },
     {
-      "key": "f391d056-4ded-43ab-9ab2-9fdeedc65d1d",
-      "position": 4,
+      "key": "ac69c3b8-2b6f-4a87-a4ad-89b0d11c5570",
+      "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary"
+        "description": "The next five lessons are an opportunity to Show What You Know! We begin with the unit project, then spend a day practicing answering AP-style free-response questions and wrapping up the unit with a multiple-choice assessment. You've learned so much in this unit, and now you're ready to show what you know!",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "ac69c3b8-2b6f-4a87-a4ad-89b0d11c5570",
+        "lesson_activity.key": "fb4d8d1c-972e-4336-ab2d-9f79dd1238c7"
+      }
+    },
+    {
+      "key": "f391d056-4ded-43ab-9ab2-9fdeedc65d1d",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Unit 1 Study Guide.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the Show What You Know Week.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the Asphalt Art Project.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary"
       },
       "seeding_key": {
         "activity_section.key": "f391d056-4ded-43ab-9ab2-9fdeedc65d1d",
@@ -4872,7 +4855,7 @@
     },
     {
       "key": "69edf532-31ae-4405-99b8-e9726e77204e",
-      "position": 5,
+      "position": 4,
       "properties": {
         "description": "---"
       },
@@ -4883,7 +4866,7 @@
     },
     {
       "key": "3d660461-9548-4fe9-ab0d-9c72a21c1f64",
-      "position": 6,
+      "position": 5,
       "properties": {
         "description": "*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*",
         "name": "Assessment: Check for Understanding",
