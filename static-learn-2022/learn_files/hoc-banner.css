@@ -76,11 +76,11 @@
         font-size: 1.35em; } }
 
 #fullwidth.hoc-banner {
-  background: url("/images/hoc2022-codeorg-hero-banner-01.svg") no-repeat center center;
+  background: url("hoc2022-codeorg-hero-banner-01.svg") no-repeat center center;
   background-size: cover; }
   @media screen and (max-width: 640px) {
     #fullwidth.hoc-banner {
-      background: url("/images/hoc2022-codeorg-hero-banner-mobile-01.svg") no-repeat center center;
+      background: url("hoc2022-codeorg-hero-banner-mobile-01.svg") no-repeat center center;
       background-size: cover; } }
 
 section.banner {
