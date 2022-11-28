@@ -76,7 +76,7 @@
     "thumbnail_url": "https://images.code.org/d87817a188c2a1af9bd83bfc375201e9-image-1589320354526.gif",
     "libraries_enabled": "false",
     "reference_links": [
-      "/docs/concepts/game-lab/drawing-shapes/",
+      "/courses/csd-2022/guides/drawing-shapes",
       "/docs/concepts/game-lab/shapes-and-parameters/"
     ],
     "preload_asset_list": null
