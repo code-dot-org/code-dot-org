@@ -100,9 +100,9 @@
     "reference_links": [
       "/courses/csd-2022/guides/playing-notes/",
       "/courses/csd-2022/guides/producing-output/",
-      "/docs/concepts/javascript/arrays/"
+      "/courses/csd-2022/guides/arrays/"
     ],
-    "map_reference": "/docs/concepts/javascript/modifying-arrays/",
+    "map_reference": "/courses/csd-2022/guides/modifying-arrays/",
     "mini_rubric": "false",
     "text_mode_at_start": "false"
   },

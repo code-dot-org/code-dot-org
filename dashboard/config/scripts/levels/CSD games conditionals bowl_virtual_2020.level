@@ -104,7 +104,7 @@
     "start_blocks": "var soup =  createSprite(200,200);\r\nsoup.setAnimation(\"stew\");\r\n\r\nfunction draw() {\r\n  background(\"lightgreen\");\r\n  soup.rotation = soup.rotation + 3;\r\n  drawSprites();\r\n}",
     "encrypted_examples": "r8oEsGpMqW/nPxmLuCsbzRp2WYgjk82EiFaPBD9ogU1wKIw8OK/eOrchLMry\n6tHDCiUhiKTsIg7+yzPgvvdqmQ==\n",
     "reference_links": [
-      "/docs/concepts/javascript/booleans-and-comparison-operators/",
+      "/courses/csd-2022/guides/booleans-and-comparison-operators/",
       "/courses/csd-2022/guides/the-counter-pattern-2",
       "/courses/csd-2022/guides/the-draw-loop",
       "/courses/csd-2022/guides/sprites/",

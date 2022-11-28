@@ -7,7 +7,7 @@
   "properties": {
     "instructions_important": "false",
     "display_name": "Variables",
-    "reference": "/docs/concepts/javascript/variables/index.html",
+    "reference": "/courses/csd-2022/guides/variables/index.html",
     "parent_level_id": 16000,
     "name_suffix": "_pilot"
   },

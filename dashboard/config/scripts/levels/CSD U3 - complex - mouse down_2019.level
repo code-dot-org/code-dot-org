@@ -113,9 +113,9 @@
       "/docs/gamelab/keyDown/",
       "/docs/gamelab/keyWentDown/",
       "/docs/gamelab/keyWentUp/",
-      "/docs/concepts/javascript/if-else-statements/",
+      "/courses/csd-2022/guides/if-else-statements/",
       "/courses/csd-2022/guides/if-statements",
-      "/docs/concepts/javascript/booleans-and-comparison-operators/"
+      "/courses/csd-2022/guides/booleans-and-comparison-operators/"
     ],
     "map_reference": "/docs/gamelab/mouseDown/",
     "video_key": "csd_gamelab_if_else",

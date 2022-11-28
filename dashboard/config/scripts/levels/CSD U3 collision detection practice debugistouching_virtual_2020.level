@@ -67,9 +67,9 @@
     "name_suffix": "_virtual_2020",
     "reference_links": [
       "/courses/csd-2022/guides/sprites/velocity/",
-      "/docs/concepts/javascript/booleans-and-comparison-operators/",
+      "/courses/csd-2022/guides/booleans-and-comparison-operators/",
       "/courses/csd-2022/guides/if-statements",
-      "/docs/concepts/javascript/if-else-statements/",
+      "/courses/csd-2022/guides/if-else-statements/",
       "/courses/csd-2022/guides/the-draw-loop"
     ],
     "map_reference": "/courses/csd-2022/guides/sprites/collision-detection/",

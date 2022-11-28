@@ -58,7 +58,7 @@
     "widget_mode": "false",
     "ai_enabled": "false",
     "reference_links": [
-      "/docs/concepts/javascript/functions/",
+      "/courses/csd-2022/guides/functions/",
       "/courses/csd-2022/guides/the-accelerometer/",
       "/courses/csd-2022/guides/board-events/",
       "/courses/csd-2022/guides/data-and-change-events/",

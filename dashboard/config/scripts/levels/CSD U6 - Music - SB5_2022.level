@@ -57,8 +57,8 @@
     "ai_enabled": "false",
     "reference_links": [
       "/courses/csd-2022/guides/playing-notes/",
-      "/docs/concepts/javascript/arrays/",
-      "/docs/concepts/javascript/modifying-arrays/"
+      "/courses/csd-2022/guides/arrays/",
+      "/courses/csd-2022/guides/modifying-arrays/"
     ],
     "starter_assets": {
       "PurpleUI-17.png": "2969915f-0b92-4ad8-b89f-0879ad8f1f2f.png"

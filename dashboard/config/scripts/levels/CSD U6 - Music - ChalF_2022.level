@@ -106,7 +106,7 @@
     "ai_enabled": "false",
     "reference_links": [
       "/courses/csd-2022/guides/playing-notes/",
-      "/docs/concepts/javascript/arrays/"
+      "/courses/csd-2022/guides/arrays/"
     ],
     "preload_asset_list": null,
     "encrypted_examples": [
