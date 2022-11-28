@@ -32,6 +32,9 @@ const styles = {
   },
   red: {
     color: color.red
+  },
+  error: {
+    color: color.red
   }
 };
 
