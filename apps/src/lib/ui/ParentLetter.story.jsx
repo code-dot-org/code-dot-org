@@ -28,36 +28,36 @@ export default {
   component: ParentLetter
 };
 
-const GenericTemplate = loginType => (
+const GenericTemplate = args => (
   <ParentLetter
     section={{
       ...sampleSection,
-      loginType: loginType
+      loginType: args.loginType
     }}
     teacherName="Minerva McGonagall"
   />
 );
 
 export const GenericPicture = GenericTemplate.bind({});
-GenericPicture.loginType = SectionLoginType.picture;
+GenericPicture.args = {loginType: SectionLoginType.picture};
 
 export const GenericWord = GenericTemplate.bind({});
-GenericWord.loginType = SectionLoginType.word;
+GenericWord.args = {loginType: SectionLoginType.word};
 
 export const GenericEmail = GenericTemplate.bind({});
-GenericEmail.loginType = SectionLoginType.email;
+GenericEmail.args = {loginType: SectionLoginType.email};
 
 export const GenericGoogleClassroom = GenericTemplate.bind({});
-GenericGoogleClassroom.loginType = SectionLoginType.google_classroom;
+GenericGoogleClassroom.args = {loginType: SectionLoginType.google_classroom};
 
 export const GenericClever = GenericTemplate.bind({});
-GenericClever.loginType = SectionLoginType.clever;
+GenericClever.args = {loginType: SectionLoginType.clever};
 
-const PersonalizedTemplate = loginType => (
+const PersonalizedTemplate = args => (
   <ParentLetter
     section={{
       ...sampleSection,
-      loginType: loginType
+      loginType: args.loginType
     }}
     teacherName="Minerva McGonagall"
     students={sampleStudents}
@@ -66,16 +66,18 @@ const PersonalizedTemplate = loginType => (
 );
 
 export const PersonalizedPicture = PersonalizedTemplate.bind({});
-PersonalizedPicture.loginType = SectionLoginType.picture;
+PersonalizedPicture.args = {loginType: SectionLoginType.picture};
 
 export const PersonalizedWord = PersonalizedTemplate.bind({});
-PersonalizedWord.loginType = SectionLoginType.word;
+PersonalizedWord.args = {loginType: SectionLoginType.word};
 
 export const PersonalizedEmail = PersonalizedTemplate.bind({});
-PersonalizedEmail.loginType = SectionLoginType.email;
+PersonalizedEmail.args = {loginType: SectionLoginType.email};
 
 export const PersonalizedGoogleClassroom = PersonalizedTemplate.bind({});
-PersonalizedGoogleClassroom.loginType = SectionLoginType.google_classroom;
+PersonalizedGoogleClassroom.args = {
+  loginType: SectionLoginType.google_classroom
+};
 
 export const PersonalizedClever = PersonalizedTemplate.bind({});
-PersonalizedClever.loginType = SectionLoginType.clever;
+PersonalizedClever.args = {loginType: SectionLoginType.clever};
