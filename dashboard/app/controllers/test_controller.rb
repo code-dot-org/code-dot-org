@@ -192,13 +192,55 @@ class TestController < ApplicationController
     head :ok
   end
 
+  # Use the same data from pd_teacher_application_hash_common
+  # We can't use the factory directly because FactoryGirl is not available on prod
+  def teacher_form_data
+    {
+      'school': School.first.id,
+      'country': 'United States',
+      'first_name': 'First',
+      'last_name': 'Last',
+      'alternate_email': 'ilovepotions@gmail.com',
+      'phone': '5558675309',
+      'gender_identity': 'Male',
+      'race': ['Other'],
+      'street_address': '333 Hogwarts Place',
+      'city': 'Magic City',
+      'state': 'Washington',
+      'zip_code': '98101',
+      'principal_role': 'Headmaster',
+      'principal_first_name': 'Albus',
+      'principal_last_name': 'Dumbledore',
+      'principal_title': 'Dr.',
+      'principal_email': 'socks@hogwarts.edu',
+      'principal_confirm_email': 'socks@hogwarts.edu',
+      'principal_phone_number': '5555882300',
+      'current_role': 'Teacher',
+      'committed': 'Yes',
+      'willing_to_travel': 'Up to 50 miles',
+      'agree': 'Yes',
+      'completing_on_behalf_of_someone_else': 'No',
+      'previous_yearlong_cdo_pd': ['CS in Science'],
+      'enough_course_hours': Pd::Application::TeacherApplication.options[:enough_course_hours].first,
+      'program': 'csp',
+      'csp_which_grades': ['11', '12'],
+      'csp_how_offer': 'As an AP course',
+      'csd_which_grades': ['6', '7'],
+      'csa_which_grades': ['11', '12'],
+      'csa_how_offer': 'As an AP course',
+      'csa_phone_screen': 'Yes',
+      'csa_already_know': 'Yes',
+      'replace_existing': 'No, this course will be added to the schedule in addition to an existing computer science course'
+    }
+  end
+
   def create_teacher_application
     return unless (user = current_user)
     regional_partner = RegionalPartner.create!(name: "regional-partner#{Time.now.to_i}-#{rand(1_000_000)}")
 
     RegionalPartnerProgramManager.create!(program_manager_id: user.id, regional_partner_id: regional_partner.id)
 
-    teacher_name = "teacher#{Time.now.to_i}-{rand(1_000_000)}"
+    teacher_name = "teacher#{Time.now.to_i}-#{rand(1_000_000)}"
     teacher_email = "teacher#{Time.now.to_i}-#{rand(1_000_000)}@test.xx"
     password = teacher_name + "password"
     attributes = {
@@ -210,7 +252,11 @@ class TestController < ApplicationController
     }
     teacher = User.create!(attributes)
 
-    form_data = FactoryGirl.build(:pd_teacher_application_hash_common, :csp).to_json
+    form_data = teacher_form_data.merge(
+      first_name: course,
+      last_name: status,
+      program: Pd::Application::TeacherApplication::PROGRAMS[:csp]
+    ).to_json
     application = Pd::Application::TeacherApplication.create!(
       user: teacher,
       form_data: form_data,
@@ -234,45 +280,11 @@ class TestController < ApplicationController
           user_id: teacher.id
         )
 
-        # Use the same data from pd_teacher_application_hash_common
-        # We can't use the factory directly because FactoryGirl is not available on prod
-        form_data = {
-          'school': School.first.id,
-          'country': 'United States',
-          'first_name': course,
-          'last_name': status,
-          'alternate_email': 'ilovepotions@gmail.com',
-          'phone': '5558675309',
-          'gender_identity': 'Male',
-          'race': ['Other'],
-          'street_address': '333 Hogwarts Place',
-          'city': 'Magic City',
-          'state': 'Washington',
-          'zip_code': '98101',
-          'principal_role': 'Headmaster',
-          'principal_first_name': 'Albus',
-          'principal_last_name': 'Dumbledore',
-          'principal_title': 'Dr.',
-          'principal_email': 'socks@hogwarts.edu',
-          'principal_confirm_email': 'socks@hogwarts.edu',
-          'principal_phone_number': '5555882300',
-          'current_role': 'Teacher',
-          'committed': 'Yes',
-          'willing_to_travel': 'Up to 50 miles',
-          'agree': 'Yes',
-          'completing_on_behalf_of_someone_else': 'No',
-          'previous_yearlong_cdo_pd': ['CS in Science'],
-          'enough_course_hours': Pd::Application::TeacherApplication.options[:enough_course_hours].first,
-          'program': Pd::Application::TeacherApplication::PROGRAMS[course.to_sym],
-          'csp_which_grades': ['11', '12'],
-          'csp_how_offer': 'As an AP course',
-          'csd_which_grades': ['6', '7'],
-          'csa_which_grades': ['11', '12'],
-          'csa_how_offer': 'As an AP course',
-          'csa_phone_screen': 'Yes',
-          'csa_already_know': 'Yes',
-          'replace_existing': 'No, this course will be added to the schedule in addition to an existing computer science course'
-        }.to_json
+        form_data = teacher_form_data.merge(
+          first_name: course,
+          last_name: status,
+          program: Pd::Application::TeacherApplication::PROGRAMS[course.to_sym]
+        ).to_json
 
         if status == 'incomplete'
           Pd::Application::TeacherApplication.create!(
