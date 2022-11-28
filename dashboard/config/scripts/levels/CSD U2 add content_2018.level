@@ -15,13 +15,13 @@
 
     ],
     "reference_links": [
-      "/docs/concepts/html/html-tags/",
-      "/docs/concepts/html/headings-and-paragraphs/",
-      "/docs/concepts/html/lists/",
-      "/docs/concepts/html/images-in-html/",
-      "/docs/concepts/html/formatting-html/"
+      "/courses/csd-2022/guides/html-tags/",
+      "/courses/csd-2022/guides/headings-and-paragraphs/",
+      "/courses/csd-2022/guides/lists/",
+      "/courses/csd-2022/guides/images-in-html/",
+      "/courses/csd-2022/guides/formatting-html/"
     ],
-    "map_reference": "/docs/concepts/html/hyperlinks/",
+    "map_reference": "/courses/csd-2022/guides/hyperlinks/",
     "submittable": "false"
   },
   "published": true,

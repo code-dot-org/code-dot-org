@@ -13,13 +13,13 @@
     "name_suffix": "_2019",
     "long_instructions": "# Create and Name Your New Page\r\n\r\nBefore you start coding, you should make sure that you have all the pages that you need in your project.\r\n\r\n# Do This\r\n* Create a new HTML page and rename it. (Look at <a href=\"../../../lessons/6/levels/8\" target=\"_new\">Lesson 6 Level 8</a> if you've forgotten how.)\r\n* Repeat this process for any other pages you want to add.\r\n\r\n",
     "reference_links": [
-      "/docs/concepts/html/html-tags/",
-      "/docs/concepts/html/headings-and-paragraphs/",
-      "/docs/concepts/html/lists/",
-      "/docs/concepts/html/images-in-html/",
-      "/docs/concepts/html/formatting-html/"
+      "/courses/csd-2022/guides/html-tags/",
+      "/courses/csd-2022/guides/headings-and-paragraphs/",
+      "/courses/csd-2022/guides/lists/",
+      "/courses/csd-2022/guides/images-in-html/",
+      "/courses/csd-2022/guides/formatting-html/"
     ],
-    "map_reference": "/docs/concepts/html/hyperlinks/"
+    "map_reference": "/courses/csd-2022/guides/hyperlinks/"
   },
   "published": true,
   "notes": "",

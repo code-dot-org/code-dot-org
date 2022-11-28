@@ -7,7 +7,7 @@
   "properties": {
     "instructions_important": "false",
     "display_name": "Headings in HTML",
-    "reference": "/docs/concepts/html/headings-and-paragraphs/index.html",
+    "reference": "/courses/csd-2022/guides/headings-and-paragraphs/index.html",
     "teacher_markdown": "# Updating the Tags List\r\n\r\nThis map level recaps the tags that students learned throughout this lesson.  Encourage students to use this resource to update their HTML tags list or poster.",
     "parent_level_id": 11488,
     "name_suffix": "_2019"
