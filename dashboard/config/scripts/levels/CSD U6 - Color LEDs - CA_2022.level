@@ -77,7 +77,7 @@
     "parent_level_id": 20541,
     "name_suffix": "_2021",
     "reference_links": [
-      "/docs/concepts/javascript/if-statements/",
+      "/courses/csd-2022/guides/if-statements",
       "/docs/concepts/javascript/booleans-and-comparison-operators/"
     ],
     "mini_rubric": "false",

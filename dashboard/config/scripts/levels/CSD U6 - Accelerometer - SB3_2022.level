@@ -67,7 +67,7 @@
     "ai_enabled": "false",
     "reference_links": [
       "/docs/concepts/maker-toolkit/data-and-change-events/",
-      "/docs/concepts/javascript/if-statements/",
+      "/courses/csd-2022/guides/if-statements",
       "/docs/concepts/javascript/variables/"
     ],
     "preload_asset_list": null

@@ -7,7 +7,7 @@
   "properties": {
     "instructions_important": "false",
     "display_name": "If Statements",
-    "reference": "/docs/concepts/javascript/if-statements/index.html",
+    "reference": "/courses/csd-2022/guides/if-statements",
     "parent_level_id": 8884,
     "name_suffix": "_2018"
   },
