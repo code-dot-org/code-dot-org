@@ -56,8 +56,8 @@
     "ai_enabled": "false",
     "reference_links": [
       "/courses/csd-2022/guides/playing-notes/",
-      "/docs/concepts/javascript/arrays/",
-      "/docs/concepts/javascript/modifying-arrays/"
+      "/courses/csd-2022/guides/arrays/",
+      "/courses/csd-2022/guides/modifying-arrays/"
     ],
     "encrypted_examples": "ft/AgHIwIcZgrWMeBrfNaSYricOAqVWPK5nn42EQDkNVxD/Mwz6BETa6dzr1\nbcAgJZaUAPG67yttQ52zEASgMQ==\n",
     "start_html": "<div id=\"designModeViz\" class=\"appModern\" tabindex=\"1\" data-radium=\"true\" style=\"display: none; width: 320px; height: 450px;\"><div class=\"screen\" tabindex=\"1\" data-theme=\"default\" id=\"screen1\" style=\"display: block; height: 450px; width: 320px; left: 0px; top: 0px; position: absolute; z-index: 0; background-color: rgb(255, 255, 255);\"></div></div>",

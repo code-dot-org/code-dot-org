@@ -111,7 +111,7 @@
     "parent_level_id": 18577,
     "name_suffix": "_2020",
     "reference_links": [
-      "/docs/concepts/javascript/booleans-and-comparison-operators/",
+      "/courses/csd-2022/guides/booleans-and-comparison-operators/",
       "/courses/csd-2022/guides/if-statements",
       "/courses/csd-2022/guides/the-counter-pattern-2",
       "/courses/csd-2022/guides/the-draw-loop",
@@ -130,7 +130,7 @@
     "mini_rubric": "false",
     "thumbnail_url": "https://images.code.org/d124946bb9e01a3623078c2a87beea8c-image-1477681483067.gif",
     "libraries_enabled": "false",
-    "map_reference": "/docs/concepts/javascript/if-else-statements/",
+    "map_reference": "/courses/csd-2022/guides/if-else-statements/",
     "bubble_choice_description": "Make the bee buzz randomly around the mouse.",
     "preload_asset_list": null,
     "validation_enabled": "false"

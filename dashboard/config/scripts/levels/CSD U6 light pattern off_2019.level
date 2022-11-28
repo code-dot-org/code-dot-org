@@ -128,7 +128,7 @@
     "parent_level_id": 12448,
     "name_suffix": "_2019",
     "reference_links": [
-      "/docs/concepts/javascript/arrays/",
+      "/courses/csd-2022/guides/arrays/",
       "/courses/csd-2022/guides/circuits-and-leds/"
     ],
     "map_reference": "/courses/csd-2022/guides/color-lights/",

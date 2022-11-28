@@ -111,7 +111,7 @@
     "parent_level_id": 18581,
     "name_suffix": "_2020",
     "reference_links": [
-      "/docs/concepts/javascript/booleans-and-comparison-operators/",
+      "/courses/csd-2022/guides/booleans-and-comparison-operators/",
       "/courses/csd-2022/guides/if-statements",
       "/courses/csd-2022/guides/the-counter-pattern-2",
       "/courses/csd-2022/guides/the-draw-loop",
@@ -122,7 +122,7 @@
       "/courses/csd-2022/guides/variables",
       "/courses/csd-2022/guides/naming-variables"
     ],
-    "map_reference": "/docs/concepts/javascript/if-else-statements/",
+    "map_reference": "/courses/csd-2022/guides/if-else-statements/",
     "video_key": "csd_gamelab_if_else",
     "mini_rubric": "false",
     "encrypted": "false",

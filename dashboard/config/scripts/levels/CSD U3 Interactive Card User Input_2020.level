@@ -210,9 +210,9 @@
     "parent_level_id": 18592,
     "name_suffix": "_2020",
     "reference_links": [
-      "/docs/concepts/javascript/booleans-and-comparison-operators/",
+      "/courses/csd-2022/guides/booleans-and-comparison-operators/",
       "/courses/csd-2022/guides/if-statements",
-      "/docs/concepts/javascript/if-else-statements/"
+      "/courses/csd-2022/guides/if-else-statements/"
     ],
     "mini_rubric": "false",
     "hide_share_and_remix": "false",
