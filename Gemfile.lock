@@ -368,7 +368,7 @@ GEM
     cucumber-tag_expressions (1.1.1)
     cucumber-wire (0.0.1)
     daemons (1.4.1)
-    dalli (2.7.6)
+    dalli (3.2.3)
     dalli-elasticache (0.2.0)
       dalli (>= 1.0.0)
     datapackage (0.0.4)
