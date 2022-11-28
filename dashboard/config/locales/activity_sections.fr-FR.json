@@ -3314,7 +3314,7 @@
           "description": "Montrez aux élèves une, voire les deux vidéos suivantes, comme introduction aux angles :\n\n**\\*Introduction à l'Artiste** (durée 1,5 minute)\n\n**\\*Courbes et Angles**  (durée 2 minutes)\n\nUtilisez le **\\*document de l'élève** pour leur montrer les angles intérieurs et extérieurs pour différentes formes. Ce document peut être utilisé comme document ou bien, vous pouvez choisir de l'imprimer sous forme d'affiche à laquelle ils pourront se référer.\n\n**Discutez** des formes carrées et triangulaires du document.\n\n-   _Comment coderiez-vous un ordinateur pour dessiner cette forme ?_\n-   _Dans quel ordre les instructions doivent-elles être ?_\n\nDites aux élèves que dans ces énigmes, ils déplaceront un personnage qui laisse une ligne partout où il va. Les élèves écriront un code qui amène le personnage à dessiner diverses formes, y compris un carré. "
         },
         "a87f5d31-b7cb-48e5-b7c7-06f8a43e329f": {
-          "name": "Faire de l'Art avec le Code",
+          "name": "Faire de l'Art avec du Code",
           "description": "Dans cet ensemble de puzzles, l'artiste ne sera plus contraint à des angles de 90 degrés. Disposer de rapporteurs physiques peut aider les élèves à mieux visualiser les angles dont ils ont besoin. Sinon, la scène fournit des images des angles au fur et à mesure que l'élève sélectionne l'angle à utiliser. (Veuillez noter : les choix d'angle sont limités à deux dans le menu déroulant, ce qui réduit le nombre d'options que les étudiants doivent parcourir.)\n\nAvant d'envoyer les élèves aux ordinateurs pour travailler sur les énigmes, il peut être utile de faire une brève présentation de la façon d'utiliser les outils de ce niveau. Nous recommandons le puzzle 5 comme un bon puzzle pour montrer comment utiliser le rapporteur en ligne. "
         },
         "c2639856-d143-4f85-ae32-262da1af5808": {
@@ -5031,7 +5031,7 @@
           ]
         },
         "41ceab11-c3ad-4289-a806-f178063736d8": {
-          "progression_name": "Vidéo - Intro Maze : Programmation avec des blocs "
+          "progression_name": "Vidéo - Intro au Labyrinthe : La programmation avec les blocs "
         },
         "a0390c7b-253b-4729-bda9-791ef82df43b": {
           "progression_name": "Développement des Compétences"
@@ -5072,6 +5072,9 @@
         "1df7d894-eea7-4874-8ae7-b88b4503b76b": {
           "name": "Le Débogage dans le Labyrinthe",
           "description": "Avant de laisser les élèves commencer sur l'ordinateur, rappelez-leur les avantages de la programmation en binôme et de demander de l'aide à leurs camarades. Asseyez-les deux par deux et dites-leur de demander de l'aide à au moins deux camarades avant de venir voir un enseignant. "
+        },
+        "c3172960-9aa5-4221-b1ab-2d35fb80653e": {
+          "progression_name": "Vidéo : Le débogage avec le bouton Étape"
         },
         "2029eb81-02c4-400f-9c31-585c5a3f2118": {
           "progression_name": "Développement des Compétences"
@@ -5147,7 +5150,7 @@
           "name": "Introduction"
         },
         "285edd36-99af-46e6-ba3a-91300c2ef572": {
-          "name": "Faire de l'Art avec le Code"
+          "name": "Faire de l'Art avec du Code"
         },
         "0b1b669c-1acf-42de-9f59-8182f34db782": {
           "progression_name": "Vidéo : Intro à l'Artiste avec JR Hildebrand"
@@ -5190,7 +5193,7 @@
         },
         "3ff8ec4d-fe12-413a-975d-69e143845e37": {
           "name": "traduction manquante : en-US.data.unplugged.courseB_unplugged_loopyMRF\\_2018.title",
-          "progression_name": "Mes amis robotiques Loopy - Activité hors ligne"
+          "progression_name": "Mes Amis Robotiques Maboul - Activité déconnectée"
         },
         "b1974523-e458-4364-aeb2-80f00e6de4bd": {
           "tips": [
@@ -5267,7 +5270,7 @@
           "name": "Vocabulaire"
         },
         "d9c07104-b142-42fc-abf8-4b34d8429b7a": {
-          "name": "Récolter des Cultures avec des Boucles",
+          "name": "Récolter des Cultures avec les Boucles",
           "progression_name": "Vidéo : L'Agricultrice"
         },
         "38b1f726-8881-479b-a9e5-7fd354aacf31": {
@@ -5378,7 +5381,7 @@
         },
         "afa7c923-ac99-4097-b70d-c27072b62bcc": {
           "name": "Construire un Jeu Flappy",
-          "progression_name": "Vidéo : Codez votre propre jeu Flappy"
+          "progression_name": "Vidéo : Code ton propre jeu Flappy"
         },
         "70706f4c-ac33-422e-86fd-6f20f63e4438": {
           "progression_name": "Développement des Compétences"
@@ -15838,7 +15841,7 @@
           ]
         },
         "1141cba9-b65b-47c7-ac7d-59d2f06b5318": {
-          "progression_name": "Vidéo - Intro Maze : Programmation avec des blocs "
+          "progression_name": "Vidéo - Intro au Labyrinthe : La programmation avec les blocs "
         },
         "1ebd42df-a302-418a-be1e-6bbca930cedf": {
           "progression_name": "Développement des Compétences"
@@ -15881,6 +15884,9 @@
         "7b8e1781-6014-4299-b635-4dfc5639acb7": {
           "name": "Le Débogage dans le Labyrinthe",
           "description": "Avant de laisser les élèves commencer sur l'ordinateur, rappelez-leur les avantages de la programmation en binôme et de demander de l'aide à leurs camarades. Asseyez-les deux par deux et dites-leur de demander de l'aide à au moins deux camarades avant de venir voir un enseignant. "
+        },
+        "572ba4a8-86d4-4aca-9398-b1d9c44ae669": {
+          "progression_name": "Vidéo : Le débogage avec le bouton Étape"
         },
         "9b6832e5-f80f-4baa-9049-48d9526443ba": {
           "progression_name": "Développement des Compétences"
@@ -15949,7 +15955,7 @@
           "description": "Montrez aux élèves une, voire les deux vidéos suivantes, comme introduction aux angles :\n\n**\\*Introduction à l'Artiste** - vidéo élève (durée 1,5 minutes)\n\n**\\*Courbes et Angles** - vidéo élève (durée 2 minutes)\n\nUtilisez le **\\*document de l'élève** pour leur montrer les angles intérieurs et extérieurs pour différentes formes. Ce document peut être utilisé comme document ou bien, vous pouvez choisir de l'imprimer sous forme d'affiche à laquelle ils pourront se référer.\n\n**Discutez** des formes carrées et triangulaires du document.\n\n-   _Comment coderiez-vous un ordinateur pour dessiner cette forme ?_\n-   _Dans quel ordre les instructions doivent-elles être ?_\n\nDites aux élèves que dans ces énigmes, ils déplaceront un personnage qui laisse une ligne partout où il va. Les élèves écriront un code qui amène le personnage à dessiner diverses formes, y compris un carré. "
         },
         "3861a12f-7e0f-43bf-8d29-1d526a2c90b2": {
-          "name": "Faire de l'Art avec le Code",
+          "name": "Faire de l'Art avec du Code",
           "description": "Dans cet ensemble de puzzles, l'artiste ne sera plus contraint à des angles de 90 degrés. Disposer de rapporteurs physiques peut aider les élèves à mieux visualiser les angles dont ils ont besoin. Sinon, la scène fournit des images des angles au fur et à mesure que l'élève sélectionne l'angle à utiliser. (Veuillez noter : les choix d'angle sont limités à deux dans le menu déroulant, ce qui réduit le nombre d'options que les étudiants doivent parcourir.)\n\nAvant d'envoyer les élèves aux ordinateurs pour travailler sur les énigmes, il peut être utile de faire une brève présentation de la façon d'utiliser les outils de ce niveau. Nous recommandons le puzzle 5 comme un bon puzzle pour montrer comment utiliser le rapporteur en ligne. "
         },
         "e054a7d9-9c28-49d4-886f-e9fd771d378e": {
@@ -15989,7 +15995,7 @@
         },
         "8896c62b-c73c-43f8-89c3-3def6c89d7bf": {
           "name": "traduction manquante : en-US.data.unplugged.courseB_unplugged_loopyMRF\\_2018.title",
-          "progression_name": "Mes amis robotiques Loopy - Activité hors ligne"
+          "progression_name": "Mes Amis Robotiques Maboul - Activité déconnectée"
         },
         "76533bba-6245-4429-b8ef-a406d2dd250b": {
           "description": "#### Introduction et modélisation\n\n**Configuration :** Disposez des piles de tasses ou de trapèzes en papier découpé pour les groupes.\n\n**Affichage :** Prenez le programme de l'une de vos précédentes piles de tasses et affichez-le pour la classe, ou utilisez celui ci-dessous.\n\n![3 cup solution](https://curriculum.code.org/media/uploads/image_xmBkoQZa.png)\n\n**Réfléchissez :** Demandez aux élèves de réfléchir calmement à l'endroit où, dans ce programme, ils peuvent trouver un modèle d'instructions qui se répètent sans interruption (une répétition après l'autre).\n\n**Camarade :** Tournez-vous vers un voisin et partagez l'un des modèles répétitifs que vous avez trouvés.\n\n**Partagez :** Demandez à quelques élèves de partager les régularités qu'ils ont identifiées. Essayez de dégager différentes approches pour regrouper les modèles. Pour chaque régularité, demandez aux élèves d'identifier combien de fois la régularité se répète.\n\n**Modèle :** À l'aide de l'une des régularités répétitives identifiées par la classe, modélisez comment Encercler l'instruction ou la régularité qui se répète, écrivez le nombre de boucles près de ce cercle, puis barrez le reste des flèches.\n\n![looped code](https://curriculum.code.org/media/uploads/codeloop_EVpjnMz.png)\n\nRépétez cette opération jusqu'à ce que tout le programme ait été raccourci, puis réécrivez le programme de manière à ce que les élèves puissent voir à quel point les instructions résultantes sont plus simples. "
@@ -16074,7 +16080,7 @@
           "description": "À ce stade, les élèves n'ont utilisé que des boucles dans les énigmes du labyrinthe. Ces énigmes se concentraient sur les instructions de mouvement en boucle. Cette étape utilisera des boucles pour ramasser plusieurs objets au même endroit.\n\n**Demandez-leur :**\n\n-   _Quels sont les autres éléments de nos programmes où on pourrait se servir des boucles ?_\n-   Les puzzles _Harvester peuvent contenir de nombreux objets au même endroit. Comment pouvons-nous utiliser des boucles pour en récupérer un certain nombre avec seulement deux blocs ?_ "
         },
         "61416522-3272-4f4f-9fa9-6ab21de140ad": {
-          "name": "Récolter des Cultures avec des Boucles",
+          "name": "Récolter des Cultures avec les Boucles",
           "progression_name": "Vidéo : L'Agricultrice"
         },
         "2f87a826-1460-4d5c-9db3-47911c77a56a": {
@@ -16116,7 +16122,7 @@
         },
         "0e769463-817e-4432-be93-87047256d015": {
           "description": "#### Mini-projet : Conception d'autocollants",
-          "progression_name": "Mini-projet : l'art de l'autocollant "
+          "progression_name": "Mini-projet : Design à base d'autocollants "
         },
         "9af30f82-82cd-4807-9609-900519e17c43": {
           "progression_name": "Jeu libre"
@@ -16189,7 +16195,7 @@
         "64988ef3-1287-4486-9d41-cd475637575b": {
           "name": "Construire un Jeu Flappy",
           "description": "#### Puzzles en ligne et jeu libre\n\nToute cette leçon est conçue pour que les élèves créent leur propre jeu Flappy, mais la seconde moitié des niveaux sont tous liés. Cela signifie que les élèves verront leur propre code lorsqu'ils se déplaceront entre les bulles 6 à 10, permettant une personnalisation plus personnelle qui se poursuivra jusqu'au produit final.\n\nDans la dernière étape de cette leçon, les élèves seront capables de peaufiner leur jeu pour le rendre unique - encouragez-les à voir à quel point ils peuvent rendre chaque jeu différent dans les contraintes fournies. Si la classe n'utilise pas la programmation en binôme, dites aux élèves de faire le tour et de regarder les jeux des autres élèves. Sinon, demandez-leur de discuter et d'essayer différentes façons d'organiser leur jeu avec leur camarade.",
-          "progression_name": "Vidéo : Codez votre propre jeu Flappy"
+          "progression_name": "Vidéo : Code ton propre jeu Flappy"
         },
         "3344bb9f-6bfa-40f1-b21a-26a077f975a5": {
           "progression_name": "Développement des Compétences"
@@ -17101,7 +17107,7 @@
           "description": "Montrez aux élèves une, voire les deux vidéos suivantes, comme introduction aux angles :\n\n**\\*Introduction à l'Artiste** (durée 1,5 minute)\n\n**\\*Courbes et Angles**  (durée 2 minutes)\n\nUtilisez le **\\*document de l'élève** pour leur montrer les angles intérieurs et extérieurs pour différentes formes. Ce document peut être utilisé comme document ou bien, vous pouvez choisir de l'imprimer sous forme d'affiche à laquelle ils pourront se référer.\n\n**Discutez** des formes carrées et triangulaires du document.\n\n-   _Comment coderiez-vous un ordinateur pour dessiner cette forme ?_\n-   _Dans quel ordre les instructions doivent-elles être ?_\n\nDites aux élèves que dans ces énigmes, ils déplaceront un personnage qui laisse une ligne partout où il va. Les élèves écriront un code qui amène le personnage à dessiner diverses formes, y compris un carré. "
         },
         "9594ae73-93bc-4660-aa85-9346451fdf4a": {
-          "name": "Faire de l'Art avec le Code",
+          "name": "Faire de l'Art avec du Code",
           "description": "Dans cet ensemble de puzzles, l'artiste ne sera plus contraint à des angles de 90 degrés. Disposer de rapporteurs physiques peut aider les élèves à mieux visualiser les angles dont ils ont besoin. Sinon, la scène fournit des images des angles au fur et à mesure que l'élève sélectionne l'angle à utiliser. (Veuillez noter : les choix d'angle sont limités à deux dans le menu déroulant, ce qui réduit le nombre d'options que les étudiants doivent parcourir.)\n\nAvant d'envoyer les élèves aux ordinateurs pour travailler sur les énigmes, il peut être utile de faire une brève présentation de la façon d'utiliser les outils de ce niveau. Nous recommandons le puzzle 5 comme un bon puzzle pour montrer comment utiliser le rapporteur en ligne. "
         },
         "c01e356b-bb48-45a6-bf67-5bcb3d959cc1": {
