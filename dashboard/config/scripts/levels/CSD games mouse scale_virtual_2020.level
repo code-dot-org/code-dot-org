@@ -111,7 +111,7 @@
     "long_instructions": "<img src=\"https://images.code.org/36b8c4f797b3aa62f74948caf0457086-image-1585833223868.gif\" style=\"float:right\">\r\n\r\n# Twin Spirals\r\n\r\nThese spirals turn and change size in opposite ways.\r\n\r\n# Do This\r\n\r\n* Run the code to see what is making the spirals shrink, grow, and turn.\r\n* Add code so that the spirals switch what they are doing when the mouse is pressed down.\r\n",
     "reference_links": [
       "/docs/concepts/javascript/booleans-and-comparison-operators/",
-      "/docs/concepts/javascript/if-statements/",
+      "/courses/csd-2022/guides/if-statements",
       "/docs/concepts/game-lab/the-counter-pattern/",
       "/docs/concepts/game-lab/the-draw-loop/",
       "/docs/concepts/game-lab/sprites/",
