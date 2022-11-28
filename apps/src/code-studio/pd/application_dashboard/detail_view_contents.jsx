@@ -52,6 +52,12 @@ import PrincipalApprovalButtons from './principal_approval_buttons';
 import DetailViewWorkshopAssignmentResponse from './detail_view_workshop_assignment_response';
 import ChangeLog from './detail_view/change_log';
 import InlineMarkdown from '@cdo/apps/templates/InlineMarkdown';
+import {
+  PROGRAM_CSD,
+  PROGRAM_CSP,
+  PROGRAM_CSA,
+  getProgramInfo
+} from '../application/teacher/TeacherApplicationConstants';
 
 const NA = 'N/A';
 
@@ -61,6 +67,12 @@ const DEFAULT_NOTES =
 const WORKSHOP_REQUIRED = `Please assign a summer workshop to this applicant before setting this
                           applicant's status to "Accepted". This status will trigger an automated
                           email with a registration link to their assigned workshop.`;
+
+const PROGRAM_MAP = {
+  csd: PROGRAM_CSD,
+  csp: PROGRAM_CSP,
+  csa: PROGRAM_CSA
+};
 
 export class DetailViewContents extends React.Component {
   static propTypes = {
@@ -1011,9 +1023,10 @@ export class DetailViewContents extends React.Component {
 
   renderDetailViewTableLayout = () => {
     const sectionsToRemove =
-      this.props.applicationData.application_type === ApplicationTypes.teacher
-        ? ['additionalDemographicInformation']
-        : ['submission'];
+      this.props.applicationData.application_type !== ApplicationTypes.teacher
+        ? ['submission']
+        : [];
+    const questionsToRemove = ['genderIdentity', 'race'];
 
     return (
       <div>
@@ -1021,9 +1034,33 @@ export class DetailViewContents extends React.Component {
           (header, i) => (
             <div key={i}>
               <h3>{this.sectionHeaders[header]}</h3>
+              {header === 'administratorInformation' &&
+                this.renderModifyPrincipalApprovalSection()}
               <Table style={styles.detailViewTable} striped bordered>
                 <tbody>
-                  {Object.keys(this.pageLabels[header]).map((key, j) => {
+                  {_.pull(
+                    Object.keys(this.pageLabels[header]),
+                    ...questionsToRemove
+                  ).map((key, j) => {
+                    // If the enoughCourseHours question, insert variable values.
+                    // Otherwise, just show the question's label.
+                    const questionLabel =
+                      key === 'enoughCourseHours'
+                        ? this.labelOverrides[key]
+                            .replace(
+                              '{{CS program}}',
+                              getProgramInfo(
+                                PROGRAM_MAP[this.props.applicationData.course]
+                              ).name
+                            )
+                            .replace(
+                              '{{min hours}}',
+                              getProgramInfo(
+                                PROGRAM_MAP[this.props.applicationData.course]
+                              ).minCourseHours
+                            )
+                        : this.labelOverrides[key] ||
+                          this.pageLabels[header][key];
                     return (
                       // For most fields, render them only when they have values.
                       // For explicitly listed fields, render them regardless of their values.
@@ -1033,12 +1070,7 @@ export class DetailViewContents extends React.Component {
                           'schoolStatsAndPrincipalApprovalSection') && (
                         <tr key={j}>
                           <td style={styles.questionColumn}>
-                            <InlineMarkdown
-                              markdown={
-                                this.labelOverrides[key] ||
-                                this.pageLabels[header][key]
-                              }
-                            />
+                            <InlineMarkdown markdown={questionLabel} />
                           </td>
                           <td style={styles.answerColumn}>
                             {this.renderAnswer(
@@ -1111,16 +1143,17 @@ export class DetailViewContents extends React.Component {
 
   renderModifyPrincipalApprovalSection = () => {
     // principal_approval_state can be 'Not required', 'Incomplete - Admin email sent on ...', or 'Complete - ...'
-    // If 'Complete,' this function will not be run.
-    // If 'Incomplete', we show a link to the application and a button to re-send the request,
+    // If 'Incomplete' or 'Complete', we show a link to the application and a button to re-send the request,
     // and a button to change the principal approval requirement.
     // If 'Not required', we show a button to make the principal approval required.
-    // If none of these, then the principal approval is required, and we show a button to make it not required.
 
     const principalApprovalStartsWith = state =>
       this.props.applicationData.principal_approval_state?.startsWith(state);
 
-    if (principalApprovalStartsWith(PrincipalApprovalState.inProgress)) {
+    if (
+      principalApprovalStartsWith(PrincipalApprovalState.inProgress) ||
+      principalApprovalStartsWith(PrincipalApprovalState.complete)
+    ) {
       const principalApprovalUrl = `${
         window.location.origin
       }/pd/application/principal_approval/${
@@ -1129,43 +1162,45 @@ export class DetailViewContents extends React.Component {
 
       return (
         <div>
-          <h3>Administrator Approval</h3>
           <h4>{this.props.applicationData.principal_approval_state}</h4>
-          <p id="principal-approval-link">
-            Link to administrator approval form:{' '}
-            <a
-              id="principal-approval-url"
-              href={principalApprovalUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              {principalApprovalUrl}
-            </a>
-          </p>
-          <PrincipalApprovalButtons
-            applicationId={this.props.applicationId}
-            showResendEmailButton={
-              this.props.applicationData.allow_sending_principal_email
-            }
-            onChange={this.handlePrincipalApprovalChange}
-            showChangeRequirementButton={true}
-            showSendEmailButton={false}
-            applicationStatus={this.props.applicationData.status}
-            approvalRequired={this.state.principalApprovalIsRequired}
-          />
+          {principalApprovalStartsWith(PrincipalApprovalState.inProgress) && (
+            <>
+              <p id="principal-approval-link">
+                Link to administrator approval form:{' '}
+                <a
+                  id="principal-approval-url"
+                  href={principalApprovalUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {principalApprovalUrl}
+                </a>
+              </p>
+              <PrincipalApprovalButtons
+                applicationId={this.props.applicationId}
+                showResendEmailButton={
+                  this.props.applicationData.allow_sending_principal_email
+                }
+                onChange={this.handlePrincipalApprovalChange}
+                showChangeRequirementButton={true}
+                showSendEmailButton={false}
+                applicationStatus={this.props.applicationData.status}
+                approvalRequired={this.state.principalApprovalIsRequired}
+              />
+            </>
+          )}
         </div>
       );
     } else {
       return (
         <div>
-          <h3>Administrator Approval</h3>
           {!this.state.principalApprovalIsRequired && (
             <p>
               If you would like to require administrator approval for this
               teacher, please click “Make required." If this application is
               Unreviewed, Pending, or Pending Space Availability, then clicking
-              will also send an email to the administrator asking for approval,
-              this button given one hasn't been sent in the past 5 days.
+              this button will also send an email to the administrator asking
+              for approval, given one hasn't been sent in the past 5 days.
             </p>
           )}
           <PrincipalApprovalButtons
@@ -1285,10 +1320,6 @@ export class DetailViewContents extends React.Component {
         <br />
         {this.renderTopTableLayout()}
         {this.renderDetailViewTableLayout()}
-        {this.props.applicationData.application_type ===
-          ApplicationTypes.teacher &&
-          !this.showPrincipalApprovalTable() &&
-          this.renderModifyPrincipalApprovalSection()}
         {this.props.applicationData.application_type ===
           ApplicationTypes.facilitator && this.renderInterview()}
         {this.renderNotes()}
