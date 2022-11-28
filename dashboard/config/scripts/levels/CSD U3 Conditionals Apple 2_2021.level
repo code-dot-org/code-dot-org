@@ -102,7 +102,7 @@
       "/courses/csd-2022/guides/sprite-properties",
       "/courses/csd-2022/guides/random-numbers",
       "/courses/csd-2022/guides/variables",
-      "/docs/concepts/javascript/naming-variables/"
+      "/courses/csd-2022/guides/naming-variables"
     ],
     "map_reference": "/courses/csd-2022/guides/if-statements",
     "show_type_hints": "false",
