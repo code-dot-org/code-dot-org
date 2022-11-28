@@ -193,11 +193,11 @@
     "encrypted": "false",
     "mini_rubric": "false",
     "reference_links": [
-      "/docs/concepts/patterns/list-filter-pattern/",
-      "/docs/concepts/patterns/list-scrolling-pattern/",
+      "/courses/csp-2022/guides/list-filter-pattern/",
+      "/courses/csp-2022/guides/list-scrolling-pattern/",
       "/courses/csp-2022/guides/random-list-access",
       "/courses/csd-2022/guides/update-screen-pattern",
-      "/docs/concepts/patterns/when-to-make-a-function"
+      "/courses/csp-2022/guides/when-to-make-a-function"
     ],
     "preload_asset_list": null
   },

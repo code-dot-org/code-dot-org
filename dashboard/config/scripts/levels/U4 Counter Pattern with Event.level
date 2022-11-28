@@ -7,7 +7,7 @@
   "properties": {
     "instructions_important": "false",
     "display_name": "Counter Pattern with Event",
-    "reference": "/docs/concepts/patterns/counter-patterns-with-event/"
+    "reference": "/courses/csp-2022/guides/counter-patterns-with-event/"
   },
   "published": true,
   "notes": "",
