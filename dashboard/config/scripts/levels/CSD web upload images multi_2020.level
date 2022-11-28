@@ -13,7 +13,7 @@
     "name_suffix": "_2020",
     "long_instructions": "# Upload Images\r\n\r\nUpload all of your team's images into your project.\r\n\r\n# Do This\r\n  * Upload all of the images listed in your team's web site plan into your project.\r\n  * Double check that each image file name uses good naming conventions.\r\n  * Double check that everyone on the team has the exact same images with the exact same names.\r\n",
     "reference_links": [
-      "/docs/concepts/other/creative-commons-search/"
+      "/courses/csd-2022/guides/creative-commons-search/"
     ],
     "encrypted": "false",
     "mini_rubric": "false",
