@@ -90,7 +90,7 @@
     "expand_debugger": "false",
     "parent_level_id": 23245,
     "name_suffix": "_2021",
-    "map_reference": "/docs/concepts/javascript/if-statements/",
+    "map_reference": "/courses/csd-2022/guides/if-statements",
     "disable_procedure_autopopulate": "false",
     "top_level_procedure_autopopulate": "false",
     "show_type_hints": "false",

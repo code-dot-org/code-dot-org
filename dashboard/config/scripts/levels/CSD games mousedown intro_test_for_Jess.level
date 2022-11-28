@@ -111,7 +111,7 @@
     "long_instructions": "# Control the Gears\r\n\r\nHere is the same program, but with one small difference.\r\n\r\n# Do This\r\n\r\n* Read the program carefully, especially Line 13, to figure out how to control the gears.\r\n* Run the program and test whether you were correct.\r\n* Make the gears spin the opposite way when there is no user input.",
     "reference_links": [
       "/docs/concepts/javascript/booleans-and-comparison-operators/",
-      "/docs/concepts/javascript/if-statements/",
+      "/courses/csd-2022/guides/if-statements",
       "/docs/concepts/game-lab/the-counter-pattern/",
       "/docs/concepts/game-lab/the-draw-loop/",
       "/docs/concepts/game-lab/sprites/",
