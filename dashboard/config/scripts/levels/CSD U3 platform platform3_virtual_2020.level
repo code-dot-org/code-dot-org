@@ -44,9 +44,9 @@
     "parent_level_id": 20907,
     "name_suffix": "_virtual_2020",
     "reference_links": [
-      "/docs/concepts/game-lab/sprites/",
+      "/courses/csd-2022/guides/sprites/",
       "/courses/csd-2022/guides/sprite-properties",
-      "/docs/concepts/game-lab/sprites/velocity/",
+      "/courses/csd-2022/guides/sprites/velocity/",
       "/docs/concepts/javascript/booleans-and-comparison-operators/",
       "/courses/csd-2022/guides/if-statements",
       "/docs/concepts/javascript/if-else-statements/",

@@ -101,10 +101,10 @@
     "encrypted_examples": "n3axKNOp0RkuHD3JgGj79poBemIid1N0yTXcJwNF4jHlVAsYjuFfPktgfH6R\nZU6wkWgr40AQ9dqhbWuWpG1Hxw==\n",
     "reference_links": [
       "/docs/concepts/javascript/booleans-and-comparison-operators/",
-      "/docs/concepts/game-lab/animation-tab/multi-frame-animations/",
+      "/courses/csd-2022/guides/animation-tab/multi-frame-animations/",
       "/courses/csd-2022/guides/the-counter-pattern-2",
       "/courses/csd-2022/guides/the-draw-loop",
-      "/docs/concepts/game-lab/sprites/",
+      "/courses/csd-2022/guides/sprites/",
       "/courses/csd-2022/guides/animation-tab",
       "/courses/csd-2022/guides/sprite-properties",
       "/courses/csd-2022/guides/random-numbers",
