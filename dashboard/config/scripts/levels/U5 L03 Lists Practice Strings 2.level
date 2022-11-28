@@ -52,7 +52,7 @@
     "mini_rubric": "false",
     "map_reference": "/courses/csp-2022/guides/random-list-access",
     "reference_links": [
-      "/docs/concepts/patterns/list-scrolling-pattern/",
+      "/courses/csp-2022/guides/list-scrolling-pattern/",
       "/courses/csp-2022/guides/random-list-access"
     ],
     "widget_mode": "false",

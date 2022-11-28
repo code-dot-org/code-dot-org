@@ -78,8 +78,8 @@
 
     ],
     "reference_links": [
-      "/docs/concepts/patterns/list-filter-pattern/",
-      "/docs/concepts/patterns/list-reduce-pattern/"
+      "/courses/csp-2022/guides/list-filter-pattern/",
+      "/courses/csp-2022/guides/list-reduce-pattern/"
     ],
     "libraries_enabled": "false"
   },
