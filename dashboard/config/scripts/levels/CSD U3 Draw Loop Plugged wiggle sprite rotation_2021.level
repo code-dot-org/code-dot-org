@@ -73,7 +73,7 @@
       "/courses/csd-2022/guides/drawing-shapes",
       "/courses/csd-2022/guides/shapes-and-parameters"
     ],
-    "map_reference": "/docs/concepts/game-lab/the-draw-loop/",
+    "map_reference": "/courses/csd-2022/guides/the-draw-loop",
     "video_key": "csd_gamelab_drawloop",
     "show_type_hints": "false",
     "encrypted": "false",
