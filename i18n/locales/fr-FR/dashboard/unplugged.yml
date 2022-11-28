@@ -68,7 +68,7 @@ fr:
         title: 'Algorithmes du Monde Réel : Avions en Papier'
         desc: Cette leçon fait appel aux façons dont nous utilisons des algorithmes dans notre vie quotidienne, et s’appuie, pour cela, sur la fabrication d’avions en papier. Cette leçon se concentre également sur l'informatique, en général, et le rôle essentiel que jouent les algorithmes.
       BinaryBracelets:
-        title: Les bracelets binaires
+        title: Bracelets binaires
         desc: Les élèves créent des bracelets comme des représentations binaires de la première lettre de leur nom. Les élèves apprennent que les données peuvent être représentées et stockées de plus d’une façon.
       DigitalFootprint:
         title: Ton Empreinte Numérique
@@ -178,7 +178,7 @@ fr:
         title: Affaire bouclée
         desc: Cette leçon présente le concept de programmation des boucles (instructions répétées) par le biais d’une activité de danse. Les élèves apprendront une chorégraphie simple, puis devront la répéter.
       courseC_unplugged_binaryBracelets:
-        title: Les bracelets binaires
+        title: Bracelets binaires
         desc: Les élèves créent des bracelets comme des représentations binaires de la première lettre de leur nom. Les élèves apprennent que les données peuvent être représentées et stockées de plus d’une façon.
       courseD_unplugged_graphPaperProgramming:
         title: Programmation sur papier quadrillé
@@ -187,7 +187,7 @@ fr:
         title: Programmation de relais
         desc: Les élèves effectuent une course de relais, où ils traversent rapidement le jardin pour aller écrire un algorithme, basé sur une image de « Programmation sur Papier Millimétré». Ils ne peuvent écrire qu’une seule instruction à la fois et, s'il y a une erreur quelque part, ils doivent tout effacer pour retourner à ce point.
       courseD_unplugged_conditionalsCards:
-        title: Instructions conditionnelles avec des cartes
+        title: Les instructions conditionnelles avec des cartes
         desc: Pour mieux comprendre les déclarations conditionnelles, les élèves jouent à un jeu de cartes et créent des règles comme « Si je tire une carte rouge, je gagne un point », et « Si je tire une carte noire, tu gagnes un point ».
       courseD_unplugged_binaryImages:
         title: Images Binaires
@@ -262,7 +262,7 @@ fr:
         title: Affaire bouclée
         desc: Cette leçon présente le concept de programmation des boucles (instructions répétées) par le biais d’une activité de danse. Les élèves apprendront une chorégraphie simple, puis devront la répéter.
       BinaryBracelets_2018:
-        title: Les bracelets binaires
+        title: Bracelets binaires
         desc: Les élèves créent des bracelets comme des représentations binaires de la première lettre de leur nom. Les élèves apprennent que les données peuvent être représentées et stockées de plus d’une façon.
       MoveItMoveIt_2018:
         title: Bouge, Bouge ton corps
@@ -333,7 +333,7 @@ fr:
         title: Le Grand Événement
         desc: Les élèves découvrent le concept de la programmation d’«événements», qui sont des actions qu’un ordinateur surveille en permanence. L'enseignant appuiera sur les boutons d’une télécommande en papier, et les élèves réagiront en fonction du bouton choisi.
       BinaryBracelets_2019:
-        title: Les bracelets binaires
+        title: Bracelets binaires
         desc: Les élèves créent des bracelets comme des représentations binaires de la première lettre de leur nom. Les élèves apprennent que les données peuvent être représentées et stockées de plus d’une façon.
       PaperPlanes_2019:
         title: 'Algorithmes du Monde Réel : Avions en Papier'
@@ -359,7 +359,7 @@ fr:
         title: C'est Super de Créer et de Jouer Équitablement
         desc: Prêtée aux Notions Fondamentales de l’Informatique par l'équipe de Copyright and Creativity, cette leçon a pour but d'aider les élèves à comprendre le processus créatif de partage et d'inspiration. Parallèlement à cela vient la promotion de l'expression créative et le besoin d'être juste avec le travail créatif.
       GraphingData_2019:
-        title: Représenter les Données
+        title: Se représenter les Données
         desc: Dans cette leçon, les élèves collecteront des données à partir d’un projet du Labo du Jeu ou d’un scénario réel, et les utiliseront pour faire des prédictions.
       courseE_unplugged_accessAbility_2019:
         title: "Capacité d'Accès\n"
