@@ -4,4 +4,4 @@
 
 {{ featured_tutorial, title: "Artista", body: "¡Dibuja imágenes y diseños geniales con el Artista!", image: "/shared/images/courses/logo_tall_artist.jpg", url: "https://studio.code.org/s/artist/reset" }}
 
-{{ featured_tutorial, title: "Laboratorio de Juegos: Infinity", body: "Usa el Laboratorio de Juegos para animar una historia o crear un juego con personajes de Disney's Infinity.", image: "/shared/images/courses/logo_tall_infinity.jpg ", url: "https://studio.code.org/s/infinity/reset" }}
+{{ featured_tutorial, title: "Laboratorio de Juegos: Infinity", body: "Usa el Laboratorio de Juegos para animar una historia o crear un juego con personajes de Disney's Infinity.", image: "/shared/images/courses/logo_tall_infinity.jpg", url: "https://studio.code.org/s/infinity/reset" }}
