@@ -7,6 +7,7 @@ import color from '../util/color';
 import PaneHeader, {PaneButton, PaneSection} from '../templates/PaneHeader';
 import SettingsCog from '../lib/ui/SettingsCog';
 import ProjectTemplateWorkspaceIcon from '../templates/ProjectTemplateWorkspaceIcon';
+import classNames from 'classnames';
 
 export default class DesignModeHeaders extends React.Component {
   static propTypes = {
@@ -93,6 +94,9 @@ export default class DesignModeHeaders extends React.Component {
       assetsIcon: {
         fontSize: 18,
         verticalAlign: 'middle'
+      },
+      runningVersionHistoryButton: {
+        color: color.dark_charcoal
       }
     };
 
@@ -116,7 +120,10 @@ export default class DesignModeHeaders extends React.Component {
       >
         <PaneSection
           id="design-toolbox-header"
-          className="workspace-header"
+          className={classNames(
+            'workspace-header',
+            this.props.isRunning && 'is-running'
+          )}
           style={styles.toolboxHeader}
         >
           <span>{this.hideToolboxIcon()}</span>
@@ -124,7 +131,10 @@ export default class DesignModeHeaders extends React.Component {
           <span>{settingsCog}</span>
         </PaneSection>
         <PaneSection
-          className="workspace-header"
+          className={classNames(
+            'workspace-header',
+            this.props.isRunning && 'is-running'
+          )}
           style={styles.showToolboxHeader}
         >
           <span
@@ -140,13 +150,20 @@ export default class DesignModeHeaders extends React.Component {
         </PaneSection>
         <PaneButton
           id="design-mode-versions-header"
+          style={this.props.isRunning ? styles.runningVersionHistoryButton : {}}
           iconClass="fa fa-clock-o"
           label={msg.showVersionsHeader()}
           headerHasFocus={hasFocus}
           isRtl={this.props.isRtl}
           onClick={this.props.handleVersionHistory}
         />
-        <PaneSection id="design-workspace-header" className="workspace-header">
+        <PaneSection
+          id="design-workspace-header"
+          className={classNames(
+            'workspace-header',
+            this.props.isRunning && 'is-running'
+          )}
+        >
           {this.props.showProjectTemplateWorkspaceIcon && (
             <ProjectTemplateWorkspaceIcon />
           )}

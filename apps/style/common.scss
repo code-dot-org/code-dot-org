@@ -982,6 +982,11 @@ html[dir="RTL"] .prompt-icon-cell {
       font-size: 12px;
     }
   }
+
+  &.is-running {
+    background-color: $lighter-purple;
+    color: $dark-charcoal;
+  }
 }
 
 $workspace-header-button-height: 24px;
@@ -1018,7 +1023,6 @@ $workspace-header-button-margin: ($workspace-headers-height - $workspace-header-
 
 #design-headers {
   height: $workspace-headers-height;
-  background-color: $purple;
   overflow-y: hidden;
   -webkit-user-select: none;
   -moz-user-select: none;
