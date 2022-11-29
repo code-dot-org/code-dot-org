@@ -13,12 +13,12 @@ remote_file '/tmp/awscli-bundle.zip' do
 end
 
 archive_file '/tmp/awscli-bundle.zip' do
-  destination '/tmp/awscli-bundle'
+  destination '/tmp/'
 end
 
 execute 'install AWS CLI' do
   cwd '/tmp/awscli-bundle'
-  command '/usr/bin/python2.7 awscli-bundle/install -i /usr/local/aws -b /usr/local/bin/aws'
+  command '/usr/bin/python2.7 install -i /usr/local/aws -b /usr/local/bin/aws'
 end
 
 # Configure AWS CLI after installation
