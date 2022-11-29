@@ -542,13 +542,6 @@ class Homepage
     false
   end
 
-  def self.professional_learning_banner_text
-    teacher_apps_closing_soon = DCDO.get("teacher_application_mode", CDO.default_teacher_application_mode) == "closing-soon"
-    closing_soon_text = "2021 Professional Learning applications are closing soon! Sign up now."
-    sign_up_text = "Sign up for Professional Learning! Middle and High School applications now open."
-    teacher_apps_closing_soon ? closing_soon_text : sign_up_text
-  end
-
   def self.show_courses_banner(request)
     false
   end
