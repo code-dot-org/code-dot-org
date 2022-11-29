@@ -47,7 +47,7 @@ fr:
         title: Construire une Fondation
         desc: Les élèves construisent une structure en utilisant uniquement les éléments fournis. Les structures doivent accomplir une tâche (atteindre une certaine hauteur ou soutenir un certain poids), et les élèves discutent du fait de persévérer lorsque les choses se compliquent.
       GettingLoopy:
-        title: Tourner en Rond
+        title: Affaire bouclée
         desc: Cette leçon présente le concept de programmation des boucles (instructions répétées) par le biais d’une activité de danse. Les élèves apprendront une chorégraphie simple, puis devront la répéter.
       RelayProgramming:
         title: Programmation de relais
@@ -134,22 +134,22 @@ fr:
         title: Boucles débranchées
         desc: Dans cette leçon, tu découvriras les boucles!
       courseB_unplugged_MRF:
-        title: Activité "Déconnectée"
+        title: Activité Déconnectée
         desc: Dans cette leçon, tu "programmeras" tes amis!
       courseB_unplugged_loopyMRF:
-        title: Activité "Déconnectée"
+        title: Activité Déconnectée
         desc: Tout comme dans « Mes Amis Robotisés », tu vas « programmer » tes amis mais, cette fois, avec des boucles !
       courseC_Unplugged_ScreenOutTheMean:
-        title: Activité "Déconnectée"
+        title: Activité Déconnectée
         desc: Aujourd'hui, tu apprendras ce qu’il faut faire si quelqu'un devient méchant en ligne.
       courseD_unplugged_digitalCitizenship:
-        title: Activité "Déconnectée"
+        title: Activité Déconnectée
         desc: Aujourd'hui, tu apprendras ce que veut dire être un Citoyen Numérique.
       courseE_unplugged_privateInformation:
         title: 'Common Sense Education : Information Privée et Personnelle '
         desc: Aujourd'hui, tu apprendras ce qu’il faut faire si quelqu'un devient méchant en ligne.
       courseF_unplugged_powerOfWords:
-        title: Activité "Déconnectée"
+        title: Activité Déconnectée
         desc: Aujourd'hui, tu apprendras ce qu’il faut faire si quelqu'un devient méchant en ligne.
       deeper learning description:
         desc: 'traduction manquante : en-US.data.unplugged.desc'
@@ -175,7 +175,7 @@ fr:
         title: 'Algorithmes du Monde Réel : Avions en Papier'
         desc: Cette leçon fait appel aux façons dont nous utilisons des algorithmes dans notre vie quotidienne, et s’appuie, pour cela, sur la fabrication d’avions en papier. Cette leçon se concentre également sur l'informatique, en général, et le rôle essentiel que jouent les algorithmes.
       courseC_unplugged_gettingLoopy:
-        title: Tourner en Rond
+        title: Affaire bouclée
         desc: Cette leçon présente le concept de programmation des boucles (instructions répétées) par le biais d’une activité de danse. Les élèves apprendront une chorégraphie simple, puis devront la répéter.
       courseC_unplugged_binaryBracelets:
         title: Les bracelets binaires
@@ -241,10 +241,10 @@ fr:
         title: Programmation sur papier quadrillé
         desc: Les élèves écrivent un algorithme (un ensemble d'instructions) utilisant un ensemble de commandes prédéfinies pour diriger leurs camarades dans la reproduction d’un dessin.
       courseD_unplugged_digitalCitizenship_2018:
-        title: Activité "Déconnectée"
+        title: Activité Déconnectée
         desc: Aujourd'hui, tu apprendras ce que veut dire être un Citoyen Numérique.
       courseC_Unplugged_ScreenOutTheMean_2018:
-        title: Activité "Déconnectée"
+        title: Activité Déconnectée
         desc: Aujourd'hui, tu apprendras ce qu’il faut faire si quelqu'un devient méchant en ligne.
       Conditionals_2018:
         title: Instructions conditionnelles
@@ -259,7 +259,7 @@ fr:
         title: 'Algorithmes du Monde Réel : Avions en Papier'
         desc: Cette leçon fait appel aux façons dont nous utilisons des algorithmes dans notre vie quotidienne, et s’appuie, pour cela, sur la fabrication d’avions en papier. Cette leçon se concentre également sur l'informatique, en général, et le rôle essentiel que jouent les algorithmes.
       GettingLoopy_2018:
-        title: Tourner en Rond
+        title: Affaire bouclée
         desc: Cette leçon présente le concept de programmation des boucles (instructions répétées) par le biais d’une activité de danse. Les élèves apprendront une chorégraphie simple, puis devront la répéter.
       BinaryBracelets_2018:
         title: Les bracelets binaires
@@ -303,7 +303,7 @@ fr:
         title: Programmation de relais
         desc: Cette activité débutera par une brève leçon sur le débogage et la persévérance, puis passera rapidement à une course contre la montre, pendant laquelle les élèves formeront des équipes et travailleront ensemble à la rédaction d'un programme, instruction par instruction.
       courseD_unplugged_digitalCitizenship_2019:
-        title: Activité "Déconnectée"
+        title: Activité Déconnectée
         desc: Aujourd'hui, tu apprendras ce que veut dire être un Citoyen Numérique.
       BinaryImages_2019:
         title: Images Binaires
@@ -324,10 +324,10 @@ fr:
         title: "traduction manquante : en-US.data.unplugged.Crowdsourcing_2018.title\n"
         desc: 'traduction manquante : en-US.data.unplugged.Crowdsourcing_2018.desc'
       GettingLoopy_2019:
-        title: Tourner en Rond
+        title: Affaire bouclée
         desc: Cette leçon présente le concept de programmation des boucles (instructions répétées) par le biais d’une activité de danse. Les élèves apprendront une chorégraphie simple, puis devront la répéter.
       courseC_Unplugged_ScreenOutTheMean_2019:
-        title: Activité "Déconnectée"
+        title: Activité Déconnectée
         desc: Aujourd'hui, tu apprendras ce qu’il faut faire si quelqu'un devient méchant en ligne.
       BigEvent_2019:
         title: Le Grand Événement

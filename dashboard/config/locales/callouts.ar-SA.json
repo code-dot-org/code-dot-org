@@ -2361,6 +2361,9 @@
         },
         "helloworld_food_sounds_space-2022": {
           "hello_world_new": "قطعة برمجية جديدة!"
+        },
+        "helloworld_food_click_space-2022": {
+          "hw_Run": "انقر هنا أولاً!"
         }
       }
     }

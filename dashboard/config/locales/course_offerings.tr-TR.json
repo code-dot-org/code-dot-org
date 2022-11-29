@@ -49,12 +49,13 @@
         "pixelation": "Pikselleşme",
         "playlab": "Oyun Laboratuvarı",
         "sports": "Kendi Spor Oyununu Kodla",
-        "starwars": "Star Wars: Galaksiyi Kod ile Yapmak (Javascript)",
+        "starwars": "Yıldız Savaşları: Kod İle Bir Galaksiyi İnşa Etmek (JavaScript)",
         "starwarsblocks": "Star Wars: Galaksiyi Kod ile Yapmak (Blockly)",
         "text-compression": "Metin Sıkıştırma",
         "csa-self-paced-pl": "BBA Pilot Öğretmenleri için Code.org'da Gezinme",
         "outbreak-csc": "Salgın",
         "poem-art": "Şiir Sanatı",
+        "hello-world-food": "Merhaba dünya: Gıda",
         "vpl-csp": "Bilgisayar Bilimi İlkeleri Sanal Profesyonel Öğrenim",
         "edit-code": "Kodu Düzenle",
         "tesstest921": "tesstest921",
@@ -71,7 +72,10 @@
         "coursee-ramp": "kursiyer-hızlan",
         "frozen-2018-test-b": "frozen-2018-test-b",
         "csa5-exemplars": "bba5-örnekler",
-        "soccer": "futbol"
+        "soccer": "futbol",
+        "hello-world-space": "Merhaba dünya: Evren",
+        "hello-world-soccer": "Merhaba Dünya: Futbol",
+        "playground": "oyun bahçesi"
       }
     }
   }

@@ -52,6 +52,13 @@
         }
       }
     },
+    "bike_sharing": {
+      "card": {
+        "context": {
+          "potentialMisuses": " "
+        }
+      }
+    },
     "poutine_toy": {
       "fields": {
         "mushrooms": {
@@ -89,6 +96,11 @@
         "age": {
           "id": "Alter"
         }
+      },
+      "card": {
+        "context": {
+          "potentialMisuses": " "
+        }
       }
     },
     "nutrition": {
@@ -98,6 +110,11 @@
         },
         "Description": {
           "id": "Beschreibung"
+        }
+      },
+      "card": {
+        "context": {
+          "potentialMisuses": " "
         }
       }
     },
@@ -164,6 +181,12 @@
         "health": {
           "id": "Gesundheit"
         }
+      },
+      "card": {
+        "context": {
+          "potentialUses": " ",
+          "potentialMisuses": " "
+        }
       }
     },
     "naan_toy": {
@@ -213,12 +236,22 @@
         "Star": {
           "id": "Stern"
         }
+      },
+      "card": {
+        "context": {
+          "potentialMisuses": " "
+        }
       }
     },
     "songs": {
       "fields": {
         "Artist": {
           "id": "Künstler"
+        }
+      },
+      "card": {
+        "context": {
+          "potentialMisuses": " "
         }
       }
     },
@@ -248,6 +281,18 @@
         },
         "Height": {
           "id": "Höhe"
+        }
+      },
+      "card": {
+        "context": {
+          "potentialMisuses": " "
+        }
+      }
+    },
+    "basketball_shots": {
+      "card": {
+        "context": {
+          "potentialMisuses": " "
         }
       }
     },
@@ -317,6 +362,11 @@
         "Age": {
           "id": "Alter"
         }
+      },
+      "card": {
+        "context": {
+          "potentialMisuses": " "
+        }
       }
     },
     "shapes_v1_toy": {
@@ -326,6 +376,13 @@
         },
         "size": {
           "id": "Größe"
+        }
+      }
+    },
+    "jeans": {
+      "card": {
+        "context": {
+          "potentialMisuses": " "
         }
       }
     },

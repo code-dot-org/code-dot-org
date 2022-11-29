@@ -23,9 +23,6 @@
         "gumball/Gumball Play Lab": {
           "name": "Taiwhanga Tākaro Gumball"
         },
-        "dance/Dance Party": {
-          "name": "Te Pāti Kanikani"
-        },
         "aquatic/Aquatic": {
           "name": "Toihuke: Rerenga Moana"
         },
@@ -38,11 +35,20 @@
         "playlab/Play Lab": {
           "name": "Taiwhanga Tākaro"
         },
+        "outbreak/Outbreak": {
+          "overview": "",
+          "preparation": "",
+          "purpose": "",
+          "student_overview": ""
+        },
         "infinity/Infinity": {
           "name": "Taiwhanga Tākaro Disney Infinity"
         },
         "Hour of Code/Hour of Code 2013": {
           "name": "Hour of Code 2013"
+        },
+        "dance-2019/Dance Party": {
+          "name": "Te Pāti Kanikani"
         },
         "k5-onlinepd-2019/Loops": {
           "name": "Ngā Koromeke"

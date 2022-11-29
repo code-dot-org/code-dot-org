@@ -235,6 +235,10 @@
           "word": "Hodisa",
           "definition": "Biror narsa sodir bo‘lishiga olib keladigan harakat."
         },
+        "models_and_simulations/outbreak/unversioned": {
+          "word": "",
+          "definition": ""
+        },
         "code/sports/unversioned": {
           "word": "Kod"
         },
@@ -844,14 +848,24 @@
           "word": "Etika"
         },
         "code/poem-art/unversioned": {
-          "word": "Kod"
+          "word": "Kod",
+          "definition": ""
         },
         "event/poem-art/unversioned": {
           "word": "Hodisa",
           "definition": "Biror narsa sodir bo‘lishiga olib keladigan harakat."
         },
         "program/poem-art/unversioned": {
-          "word": "Dastur"
+          "word": "Dastur",
+          "definition": ""
+        },
+        "mood/poem-art/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "line/poem-art/unversioned": {
+          "word": "",
+          "definition": ""
         },
         "sprite/coursef/2021": {
           "word": "Sprait",

@@ -825,10 +825,6 @@ ku:
           EFFECT:
             '"bubbles"': بڵق
             '"confetti"': بڕشتی کاغەز
-      FunctionBlocks_representManipulative:
-        options:
-          BEHAVIOR:
-            draggable(): دەتوانرێ بجوڵێنرێ
       gamelab_addBehaviorSimple:
         text: سپڕایت {SPRITE} دەستپێدەکات {BEHAVIOR}
       gamelab_allSpritesWithAnimation:
@@ -1321,6 +1317,8 @@ ku:
             '"sound://category_loops/stabilizing_breath_loop1.mp3"': خاو
       Poetry_playSound:
         text: دەنگ هەڵکەر {SOUND}
+      Poetry_playSoundOptionsSpace:
+        text: دەنگ هەڵکەر {SOUND}
       Poetry_setBackground:
         text: ڕەنگی پاشبنەما دیاریبکە {COLOR}
       Poetry_setBackgroundEffect:
@@ -1519,5 +1517,10 @@ ku:
           DIR:
             right: بۆ لای ڕاست ↻
             left: بۆ لای چەپ ↺
+      storylab_setForegroundEffect2:
+        options:
+          EFFECT:
+            '"bubbles"': بڵق
+            '"confetti"': بڕشتی کاغەز
       validation_validatedBackground:
         text: پاشبنەما دابنێ {IMG}

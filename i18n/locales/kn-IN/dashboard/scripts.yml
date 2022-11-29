@@ -612,7 +612,11 @@ kn:
           lesson_groups:
             required:
               display_name: ಮುನ್ನೋಟ
+        dance-2019:
+          title: ಡ್ಯಾನ್ಸ್ ಪಾರ್ಟಿ
+          description_short: ನಿಮ್ಮ ಸ್ನೇಹಿತರೊಂದಿಗೆ ಹಂಚಿಕೊಳ್ಳಲು ಡ್ಯಾನ್ಸ್ ಪಾರ್ಟಿಯನ್ನು ಕೋಡ್ ಮಾಡಿ. ಬಿಯಾನ್ಸೆ, ಹ್ಯಾರಿ ಸ್ಟೈಲ್ಸ್, ಲಿಝೋ, ಲಿಲ್ ನಾಸ್ ಎಕ್ಸ್, ಸೆಲೆನಾ ಗೊಮೆಜ್, ಡಿಸ್ನಿಯ “ಎನ್ಕಾಂಟೊ” ನ ಸಂಗೀತ ಮತ್ತು ಹೆಚ್ಚಿನದನ್ನು ಒಳಗೊಂಡಿದೆ!
         dance-extras-2019:
+          title: ಡ್ಯಾನ್ಸ್‌ ಮಾಡುತ್ತಿರಿ
           description: ವಿಸ್ತರಿಸಿದ ಪ್ರಾಜೆಕ್ಟ್ ಐಡಿಯಾಗಳ ಜೊತೆಗೆ ಮೊದಲ ಗಂಟೆಯಾಚೆಗೂ ಹೋಗಿ.
           student_description: ವಿಸ್ತರಿಸಿದ ಪ್ರಾಜೆಕ್ಟ್ ಐಡಿಯಾಗಳ ಜೊತೆಗೆ ಮೊದಲ ಗಂಟೆಯಾಚೆಗೂ ಹೋಗಿ.
         csp4-preview:
@@ -859,6 +863,7 @@ kn:
             lessonGroup-9:
               display_name: ಈವೆಂಟ್‌ಗಳು
         pre-express-2021:
+          title: ಪ್ರೀ-ರೀಡರ್ ಎಕ್ಸ್‌ಪ್ರೆಸ್ ಕೋರ್ಸ್ (2021)
           lesson_groups:
             csf_loops:
               display_name: ಲೂಪ್‌ಗಳು
@@ -1279,6 +1284,14 @@ kn:
               name: ಜಾವಾ ಲ್ಯಾಬ್
             lesson-6:
               name: ಲೂಪ್‌ಗಳು
+        csa2-2023:
+          lessons:
+            lesson-4:
+              name: ವೇರಿಯಬಲ್‌ಗಳು
+        hello-world-space-2022:
+          title: 'ಹಲೋ ವರ್ಲ್ಡ್: ಬಾಹ್ಯಾಕಾಶ'
+        hello-world-soccer-2022:
+          title: 'ಹಲೋ ವರ್ಲ್ಡ್: ಸಾಕರ್'
         csd1-2023:
           lesson_groups:
             lessonGroup-2:
@@ -1315,3 +1328,6 @@ kn:
               display_name: ಪಟ್ಟಿಗಳು
             csp_loops:
               display_name: ಲೂಪ್‌ಗಳು
+        csp-playground:
+          description_audience: ಪಠ್ಯಕ್ರಮ ಬರಹಗಾರರು
+          description_short: ಪಠ್ಯಕ್ರಮ ಆವೃತ್ತಿಗಳ ಮಧ್ಯೆ ಅಧ್ಯಾಯಗಳು ಅಥವಾ ಹಂತಗಳಿಗೆ ಸ್ಟೇಜಿಂಗ್‌ ಅಪ್‌ಡೇಟ್‌ಗಳಿಗಾಗಿ

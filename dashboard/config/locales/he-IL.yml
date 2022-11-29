@@ -649,6 +649,9 @@ he:
       title: מסיבת ריקודים
     dance-2019:
       title: מסיבת ריקודים
+    hello-world:
+      body: בחרו מבין ארבעה נושאים כיפיים כדי לקודד דמויות אינטראקטיביות בעולם שאתם
+        יוצרים.
     poem-art:
       title: אומנות השירה
     hoc:
@@ -1092,7 +1095,7 @@ he:
       no_updates: אין עדכונים לבצע
       missing_params: יש להכניס משתמש, רמה וזיהוי יחידות
       cannot_view_locked_answers: לא ניתן לצפות בתשובות כאשר נעול
-      forbidden: המשתמש אינו יכול לעדכן מצב נעילה של הסטודנט
+      forbidden: המשתמש אינו יכול לעדכן מצב נעילה של התלמיד
   reset_predict_progress_button: מחק תשובה
   pixelation:
     binary: בינארי

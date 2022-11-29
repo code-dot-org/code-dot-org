@@ -14,11 +14,11 @@
         "artist/Artist": {
           "name": "Artista"
         },
-        "dance/Dance Party": {
-          "name": "Festa de ball"
-        },
         "aquatic/Aquatic": {
           "name": "Minecraft: Viatge aquàtic"
+        },
+        "hello-world-space-2022/Hello World: Food": {
+          "name": "Hola Món: Espai"
         },
         "mc/Hour of Code 2015": {
           "name": "Hora del Codi de Minecraft"
@@ -26,11 +26,20 @@
         "playlab/Play Lab": {
           "name": "Play Lab"
         },
+        "outbreak/Outbreak": {
+          "overview": "",
+          "preparation": "",
+          "purpose": "",
+          "student_overview": ""
+        },
         "infinity/Infinity": {
           "name": "Disney infinit Play Lab"
         },
         "Hour of Code/Hour of Code 2013": {
           "name": "Hora de codi 2013"
+        },
+        "dance-2019/Dance Party": {
+          "name": "Festa de ball"
         },
         "k5-onlinepd-2019/Loops": {
           "name": "Bucles"

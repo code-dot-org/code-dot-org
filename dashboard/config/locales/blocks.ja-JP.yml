@@ -4,6 +4,8 @@ ja:
     blocks:
       AmysBlocks_setPromptWithChoices:
         text: ユーザーに変数 {VAR} について選択肢 {A}{B}{C} を使って {QUESTION} をプロンプト表示する
+      AmysBlocks_spriteSayVar:
+        text: "{SPRITE} が {TEXT1} と言う"
       BadGuys_makeNewBadGuysSprite:
         text: 新しくする {ANIMATION_NAME} スプライト {LOCATION}
       BadGuys_setSizeAll_dropdown:
@@ -1001,6 +1003,13 @@ ja:
             '"macklemore90"': マックルモアー - Can't Hold Us
             '"hammer"': MC ハマー - U Can't Touch This
             '"peas"': ブラック・アイド・ピーズ - I Got a Feeling
+      DansBlocks_getMicroscope:
+        text: 顕微鏡には{INPUT1}があります
+        options:
+          INPUT1:
+            '1': レモンジュース
+            '3': baking soda
+            '5': both
       DansBlocks_setForegroundEffect2:
         text: "{EFFECT} 前景エフェクトを実行する"
         options:
@@ -1013,12 +1022,20 @@ ja:
             '"starburst"': スターバースト
             '"glass"': ガラス割れ
             '"twinkling"': キラキラ
-      FunctionBlocks_representManipulative:
+      DansBlocks_setMicroscope:
         options:
-          BEHAVIOR:
-            draggable(): ドラッグ可能
-            wandering(): あちこちに動かす
-            shrinking(): 小さくする
+          INPUT1:
+            '1': レモンジュース
+            '3': baking soda
+            '5': both
+      FunctionBlocks_communicate:
+        text: "{VAR1}を{SPRITE1COSTUME}と通信します"
+      FunctionBlocks_makeManipulative2:
+        text: "{ANIMATION_NAME}スプライト{BEHAVIOR}の{NUM}新規作成"
+      FunctionBlocks_representManipulative:
+        text: "{NUM}新しい{ANIMATION_NAME}スプライト[BEHAVIOR][2]を表す"
+      FunctionBlocks_spriteSayVar:
+        text: "{SPRITE} が {TEXT1} と言う"
       gamelab_addBehaviorSimple:
         text: スプライト {SPRITE} 開始 {BEHAVIOR}
       gamelab_addTarget:
@@ -1367,6 +1384,7 @@ ja:
             "'sound://category_space/Pillars_SFX.mp3'": 柱
             "'sound://category_space/Southern_ring_SFX.mp3'": 南環
             "'sound://category_space/Supernova_SFX.mp3'": 超新星
+            "'sound://category_space/Tycho_SFX.mp3'": ティーチョ
       gamelab_playSpeech:
         text: ピーチを再生する {SOUND}
       gamelab_playerBehaviors:
@@ -2012,8 +2030,39 @@ ja:
         text: モンスタータウンに{COUNT}人のモンスターをセットアップ
       Outbreak_stopMoving:
         text: モンスターが動くのをやめる
+      ParticlesBlocks_getMicroscope:
+        text: 顕微鏡には{INPUT1}があります
+        options:
+          INPUT1:
+            '1': レモンジュース
+            '3': baking soda
+            '5': both
+      ParticlesBlocks_setMicroscope:
+        options:
+          INPUT1:
+            '1': レモンジュース
+            '3': baking soda
+            '5': both
       ParticlesBlocks_statesOfMatter:
         text: "{BEHAVIOR}"
+        options:
+          BEHAVIOR:
+            new Behavior(solid, []): 単色
+            new Behavior(liquid, []): 液体
+            new Behavior(wandering, []): ガス
+      ParticlesBlocks_statesOfMatter2:
+        text: "{COSTUME}を{BEHAVIOR}動作に設定します"
+        options:
+          BEHAVIOR:
+            '"solid"': 固体粒子
+            '"liquid"': 液体粒子
+            '"gas"': ガス粒子
+      ParticlesBlocks_statesOfMatter_testing:
+        options:
+          BEHAVIOR:
+            '"solid"': 固体粒子
+            '"liquid"': 液体粒子
+            '"gas"': ガス粒子
       Poetry_addFrame:
         options:
           BRUSH:
@@ -2084,6 +2133,21 @@ ja:
             '"sound://category_achievements/peaceful_win_1.mp3"': 勝つ
             '"sound://category_explosion/vibrant_game_arcade_game_negative_hit.mp3"': 旋回
             '"sound://category_achievements/peaceful_win_6.mp3"': 風鈴
+      Poetry_playSoundOptionsSpace:
+        text: Playsound {SOUND}
+        options:
+          SOUND:
+            "'sound://category_space/Blackhole_SFX.mp3'": ブラックホール
+            "'sound://category_space/Bullet_cluster_SFX.mp3'": 弾丸クラスタ
+            "'sound://category_space/Carina_SFX.mp3'": カリナ
+            "'sound://category_space/Cassiopeia_SFX.mp3'": カシオペア
+            "'sound://category_space/Crab_nebula_SFX.mp3'": カニ星雲
+            "'sound://category_space/Launch_SFX.mp3'": 発射音
+            "'sound://category_space/Lift_Off.mp3'": リフトオフ
+            "'sound://category_space/Pillars_SFX.mp3'": 柱
+            "'sound://category_space/Southern_ring_SFX.mp3'": 南環
+            "'sound://category_space/Supernova_SFX.mp3'": 超新星
+            "'sound://category_space/Tycho_SFX.mp3'": ティーチョ
       Poetry_setAuthor:
         text: 詩の書き手を {AUTHOR} にセット
       Poetry_setBackground:
@@ -2476,6 +2540,16 @@ ja:
           DIR:
             right: 右↻
             left: 左↺
+      storylab_setForegroundEffect2:
+        text: "{EFFECT} 前景エフェクトを実行する"
+        options:
+          EFFECT:
+            '"bubbles"': 泡
+            '"confetti"': 紙吹雪
+            '"hearts"': ハーツ
+            '"rain"': 雨
+            '"starburst"': スターバースト
+            '"twinkling"': キラキラ
       storylab_setHeading:
         text: 見出し{HEADING}を設定
       storylab_setSubheading:
