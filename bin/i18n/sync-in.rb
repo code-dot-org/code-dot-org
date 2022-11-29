@@ -243,6 +243,18 @@ def get_i18n_strings(level)
       i18n_strings['placeholder_texts'].merge! get_all_placeholder_text_types(processed_doc)
     end
 
+    # start_html
+    if level.start_html
+      start_html = Nokogiri::XML(level.start_html, &:noblanks)
+      i18n_strings['start_html'] = Hash.new unless level.start_html.empty?
+
+      # match any element that contains text
+      start_html.xpath('//*[text()[normalize-space()]]').each do |element|
+        puts "element: " + element.text
+        i18n_strings['start_html'][element.text] = element.text
+      end
+    end
+
     level_xml = Nokogiri::XML(level.to_xml, &:noblanks)
     blocks = level_xml.xpath('//blocks').first
     if blocks
