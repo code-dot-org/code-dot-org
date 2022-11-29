@@ -1,5 +1,4 @@
 @no_mobile
-
 Feature: Teacher Application Detail View
 
   Scenario: Regional Partner can set Principal Approval as Not Required and Required
