@@ -56,7 +56,7 @@
     "long_instructions": "# New Block: Line\r\n\r\nAs of now you have just been drawing ellipses and rectangles. But now there is a new block to help draw just lines!\r\n<img src=\"https://images.code.org/095a9251e533c63411f87f4e57ebe919-image-1567026036725.PNG\" style=\"float:right;width:150px;\">\r\n\r\n# Do This\r\n\r\n* Read the code that makes the picture.\r\n* Use the `line` block to finish the code so it matches the picture (it only uses straight lines!).\r\n* Play around some more with the `line` block and see what you can make.\r\n",
     "parent_level_id": 19162,
     "name_suffix": "_virtual_2020",
-    "map_reference": " /courses/csd-2022/guides/shapes-and-parameters/",
+    "map_reference": "/courses/csd-2022/guides/shapes-and-parameters/",
     "video_key": "csd_gamelab_draw_2",
     "disable_procedure_autopopulate": "false",
     "top_level_procedure_autopopulate": "false",
