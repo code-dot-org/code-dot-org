@@ -31,7 +31,7 @@ module Api::V1::Pd::Application
         mock {|mail| mail.stubs(:deliver_now)}
       )
 
-      Pd::Application::TeacherApplicationMailer.stubs(:principal_approval).returns(
+      Pd::Application::TeacherApplicationMailer.stubs(:admin_approval).returns(
         mock {|mail| mail.stubs(:deliver_now)}
       )
     end
@@ -96,7 +96,7 @@ module Api::V1::Pd::Application
         returns(mock {|mail| mail.expects(:deliver_now)})
 
       # TODO: This expectation passes in all tests regardless of regional partner settings.
-      Pd::Application::TeacherApplicationMailer.expects(:principal_approval).never
+      Pd::Application::TeacherApplicationMailer.expects(:admin_approval).never
 
       sign_in @applicant
 
@@ -105,7 +105,7 @@ module Api::V1::Pd::Application
     end
 
     test 'does not send confirmation mail on unsuccessful create' do
-      Pd::Application::TeacherApplicationMailer.expects(:principal_approval).never
+      Pd::Application::TeacherApplicationMailer.expects(:admin_approval).never
       Pd::Application::TeacherApplicationMailer.expects(:confirmation).never
       PRINCIPAL_APPROVAL_APPLICATION_CLASS.expects(:create_placeholder_and_send_mail).never
 
@@ -138,6 +138,21 @@ module Api::V1::Pd::Application
       assert_equal 'awaiting_admin_approval', TEACHER_APPLICATION_CLASS.last.status
     end
 
+    test 'updating an application with RP requiring admin approval is \'unreviewed\' if the principal approval is complete'  do
+      sign_in @applicant
+      application = create TEACHER_APPLICATION_FACTORY, form_data_hash: @hash_with_admin_approval, user: @applicant, status: 'awaiting_admin_approval'
+      assert_equal 'awaiting_admin_approval', TEACHER_APPLICATION_CLASS.last.status
+
+      application.update!(status: 'reopened')
+      assert_equal 'reopened', TEACHER_APPLICATION_CLASS.last.status
+
+      # while the application is reopened, the principal approval gets submitted
+      create :pd_principal_approval_application, teacher_application: application
+      put :update, params: {id: application.id}
+      assert_response :success
+      assert_equal 'unreviewed', TEACHER_APPLICATION_CLASS.last.status
+    end
+
     test 'creating an application on an existing form renders conflict' do
       sign_in @applicant
       application = create TEACHER_APPLICATION_FACTORY, user: @applicant
@@ -164,7 +179,7 @@ module Api::V1::Pd::Application
 
     test 'does not send emails or autoscore on successful create if application status is incomplete' do
       Pd::Application::TeacherApplicationMailer.expects(:confirmation).never
-      Pd::Application::TeacherApplicationMailer.expects(:principal_approval).never
+      Pd::Application::TeacherApplicationMailer.expects(:admin_approval).never
 
       sign_in @applicant
       put :create, params: {form_data_hash: @test_params, isSaving: true}
@@ -176,7 +191,7 @@ module Api::V1::Pd::Application
       Pd::Application::TeacherApplicationMailer.expects(:confirmation).once.
         with(instance_of(TEACHER_APPLICATION_CLASS)).
         returns(mock {|mail| mail.expects(:deliver_now)})
-      Pd::Application::TeacherApplicationMailer.expects(:principal_approval).once.
+      Pd::Application::TeacherApplicationMailer.expects(:admin_approval).once.
         with(instance_of(TEACHER_APPLICATION_CLASS)).
         returns(mock {|mail| mail.expects(:deliver_now)})
 
@@ -191,7 +206,7 @@ module Api::V1::Pd::Application
       Pd::Application::TeacherApplicationMailer.expects(:confirmation).once.
         with(instance_of(TEACHER_APPLICATION_CLASS)).
         returns(mock {|mail| mail.expects(:deliver_now)})
-      Pd::Application::TeacherApplicationMailer.expects(:principal_approval).never
+      Pd::Application::TeacherApplicationMailer.expects(:admin_approval).never
 
       sign_in @applicant
       put :create, params: {form_data: @hash_without_admin_approval, isSaving: false}
@@ -206,7 +221,7 @@ module Api::V1::Pd::Application
       Pd::Application::TeacherApplicationMailer.expects(:confirmation).once.
         with(instance_of(TEACHER_APPLICATION_CLASS)).
         returns(mock {|mail| mail.expects(:deliver_now)})
-      Pd::Application::TeacherApplicationMailer.expects(:principal_approval).once.
+      Pd::Application::TeacherApplicationMailer.expects(:admin_approval).once.
         with(instance_of(TEACHER_APPLICATION_CLASS)).
         returns(mock {|mail| mail.expects(:deliver_now)})
 
@@ -223,7 +238,7 @@ module Api::V1::Pd::Application
       Pd::Application::TeacherApplicationMailer.expects(:confirmation).once.
         with(instance_of(TEACHER_APPLICATION_CLASS)).
         returns(mock {|mail| mail.expects(:deliver_now)})
-      Pd::Application::TeacherApplicationMailer.expects(:principal_approval).never
+      Pd::Application::TeacherApplicationMailer.expects(:admin_approval).never
 
       sign_in @applicant
       put :update, params: {id: application.id, form_data: @hash_without_admin_approval, isSaving: false}
@@ -253,9 +268,13 @@ module Api::V1::Pd::Application
       assert_response :ok
     end
 
-    test 'making principal approval required updates status to \'awaiting_admin_approval\'' do
+    test 'making principal approval required updates status to \'awaiting_admin_approval\' and queues email' do
       application = create TEACHER_APPLICATION_FACTORY, form_data_hash: @hash_without_admin_approval, user: @applicant, status: 'unreviewed'
       sign_in @program_manager_without_admin_approval
+
+      Pd::Application::TeacherApplicationMailer.expects(:needs_admin_approval).
+        with(instance_of(TEACHER_APPLICATION_CLASS)).
+        returns(mock {|mail| mail.expects(:deliver_now)})
 
       post :change_principal_approval_requirement, params: {id: application.id, principal_approval_not_required: false}
       assert_response :success
@@ -310,14 +329,14 @@ module Api::V1::Pd::Application
       end
       email = Pd::Application::Email.last
       assert_equal @application, email.application
-      assert_equal 'principal_approval', email.email_type
+      assert_equal 'admin_approval', email.email_type
     end
 
     test 'send_principal_approval does nothing if an email has already been sent' do
       Pd::Application::Email.create!(
         application: @application,
         application_status: @application.status,
-        email_type: 'principal_approval',
+        email_type: 'admin_approval',
         to: 'principal@ex.net',
         created_at: Time.now,
         sent_at: Time.now

@@ -868,17 +868,17 @@
           "NEW_Course_4_Bee_For_Loops_8_a": "Jika loop anda sedang menghitung, penambahan tersebut akan ditambahkan ke variabel counter setiap saat. \nApa yang perlu anda tambahkan ke setiap nomor untuk mendapatkan nomor setelah itu?"
         },
         "OPD-K5-events-2": {
-          "courseC_flappy_events1_a": "![](https://images.code.org/5f1d0edf6ebb44d98ffdce623cfe0ad4-image-1501192487040.gif)"
+          "courseC_flappy_events1_a": "[][0]"
         },
         "OPD-K5-events-3": {
-          "courseC_flappy_events2_a": "Blok yang perlu ditambah Anda disebut `set speed`. ",
-          "courseC_flappy_events2_b": "Hubungkan blok `set speed` ke blok`when run` untuk memecahkan puzzle ini."
+          "courseC_flappy_events2_a": "Blok yang perlu ditambah Anda disebut ` set speed`. ",
+          "courseC_flappy_events2_b": "Hubungkan blok `set speed` ke blok` when run` untuk memecahkan puzzle ini."
         },
         "OPD-K5-events-4": {
           "courseC_flappy_events3_a": "Jika sesuatu tidak bekerja dengan benar, pastikan blok anda terhubung ke event yang benar di ruang kerja."
         },
         "OPD-K5-events-5": {
-          "courseC_flappy_events4_a": "Hubungkan blok `end game` ke`when hit an obstacle` untuk memecahkan puzzle ini."
+          "courseC_flappy_events4_a": "Hubungkan blok `end game` ke` when hit an obstacle` untuk memecahkan puzzle ini."
         },
         "OPD-K5-events-6": {
           "courseC_flappy_events5_a": "Anda perlu menggunakan blok `score a point` untuk melewati level ini."
@@ -912,7 +912,7 @@
           "courseE_playLab_scaffold1_c": "Gunakan `set ??? background` untuk memilih latar belakang bagi adegan Anda."
         },
         "OPD-K5-projects-3": {
-          "courseE_playLab_scaffold1_a": "Tarik menu dropdown pada event `when____ arrow` untuk mengubah arah yang dikontrol oleh blok.",
+          "courseE_playLab_scaffold1_a": "\nTarik menu dropdown pada event `when____ arrow` untuk mengubah arah yang dikontrol oleh blok.",
           "courseE_playLab_scaffold1_b": "Anda mestinya memiliki empat blok event `when arrow`, dengan arah untuk bergerak di bawah masing-masing blok.",
           "courseE_playLab_scaffold1_c": "Ketika sudah selesai, Anda mestinya dapat menggerakkan pahlawan Anda dengan tombol panah!"
         },
@@ -934,14 +934,14 @@
         },
         "OPD-K5-variables-6": {
           "courseF_artist_variables4_a": "Kode Anda tidak akan jauh berbeda dengan yang ada di puzzle terakhir, kecuali Anda perlu memutar artis untuk melompat ke bawah, lalu memutar balik untuk bersiap menggambar segitiga berikutnya.",
-          "courseF_artist_variables4_c": "Ini adalah pola yang artis Anda akan ikuti:\n\n![](https://images.code.org/41ae98c1633755cf4553f90a80e125cf-image-1500325529204.6_hint.gif)",
-          "courseF_artist_variables4_b": "<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"variables_set\">\n        <title name=\"VAR\">length</title>\n        <value name=\"VALUE\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">50</title>\n          </block>\n        </value>\n        <next>\n          <block type=\"controls_repeat_ext\">\n            <value name=\"TIMES\">\n              <block type=\"math_number\">\n                <title name=\"NUM\">3</title>\n              </block>\n            </value>\n            <statement name=\"DO\">\n              <block type=\"controls_repeat_ext\">\n                <value name=\"TIMES\">\n                  <block type=\"math_number\">\n                    <title name=\"NUM\">3</title>\n                  </block>\n                </value>\n                <statement name=\"DO\">\n                  <block type=\"draw_move\">\n                    <title name=\"DIR\">moveForward</title>\n                    <value name=\"VALUE\">\n                      <block type=\"variables_get\">\n                        <title name=\"VAR\">length</title>\n                      </block>\n                    </value>\n                    <next>\n                      <block type=\"draw_turn\">\n                        <title name=\"DIR\">turnLeft</title>\n                        <value name=\"VALUE\">\n                          <block type=\"math_number\">\n                            <title name=\"NUM\">120</title>\n                          </block>\n                        </value>\n                      </block>\n                    </next>\n                  </block>\n                </statement>\n                <next>\n                  <block type=\"jump\">\n                    <title name=\"DIR\">jumpForward</title>\n                    <value name=\"VALUE\">\n                      <block type=\"variables_get\">\n                        <title name=\"VAR\">length</title>\n                      </block>\n                    </value>\n                    <next>\n                      <block type=\"draw_turn\">\n                        <title name=\"DIR\">turnRight</title>\n                        <value name=\"VALUE\">\n                          <block type=\"math_number\">\n                            <title name=\"NUM\">90</title>\n                          </block>\n                        </value>\n                        <next>\n                          <block type=\"jump\">\n                            <title name=\"DIR\">jumpForward</title>\n                            <value name=\"VALUE\">\n                              <block type=\"variables_get\">\n                                <title name=\"VAR\">length</title>\n                              </block>\n                            </value>\n                            <next>\n                              <block type=\"draw_turn\">\n                                <title name=\"DIR\">turnLeft</title>\n                                <value name=\"VALUE\">\n                                  <block type=\"math_number\">\n                                    <title name=\"NUM\">90</title>\n                                  </block>\n                                </value>\n                              </block>\n                            </next>\n                          </block>\n                        </next>\n                      </block>\n                    </next>\n                  </block>\n                </next>\n              </block>\n            </statement>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+          "courseF_artist_variables4_c": "Ini adalah pola yang artis Anda akan ikuti:\n\n[][0]",
+          "courseF_artist_variables4_b": "[blockly block][0]"
         },
         "OPD-K5-variables-7": {
           "courseF_artist_variables5_a": "Separuh kedua dari kode Anda mestinya tampak nyaris sama dengan separuh pertama, kecuali Anda akan belok ke _left_, meloncat, lalu belok _right_.",
           "courseF_artist_variables5_b": "Separuh pertama dari kode Anda akan menggambar tiga segitiga, dan separuh kedua akan menggambar tiga segitiga lainnya.",
           "courseF_artist_variables5_c": "Mulai dengan menduplikasi kode pada setengah pertama program Anda, lalu ubahlah untuk membuat desain yang diperlihatkan.",
-          "courseF_artist_variables5_d": "Ini adalah pola yang artis Anda akan ikuti:\n\n![](https://images.code.org/e4ac66f8e9a4503e49c4fad1e4fafc1d-image-1500326800109.7_hint.gif)"
+          "courseF_artist_variables5_d": "Ini adalah pola yang artis Anda akan ikuti:\n\n[][0]"
         },
         "Overworld Avoid Monsters": {
           "mc_8_a": "Terdapat beberapa jalan yang dapat anda ambil. Yang mana yang paling pendek?",
@@ -4830,7 +4830,7 @@
         "courseC_starWars_loops4_copy": {
           "courseC_starWars_loops4_c": "Mengklik panah kecil di samping \"kiri\" di blok putar akan membiarkan Anda mengubahnya menjadi \"benar\".",
           "courseC_starWars_loops4_a": "Gunakan dua blok `repeat`.",
-          "courseC_starWars_loops4_b": "Setiap loop `repeat` akan memilih satu perintah di dalamnya: `move forward`."
+          "courseC_starWars_loops4_b": "Setiap loop ` repeat ` akan memilih satu perintah di dalamnya: ` move forward `."
         },
         "courseC_starWars_loops5": {
           "courseC_starWars_loops5_b": "Untuk bergerak ke bawah, Anda harus berbalik dan kemudian bergerak maju.",
@@ -4847,7 +4847,7 @@
         },
         "courseC_starWars_loops5_copy": {
           "courseC_starWars_loops5_b": "Untuk bergerak ke bawah, Anda harus berbalik dan kemudian bergerak maju.",
-          "courseC_starWars_loops5_a": "Solusi terbaik menggunakan sebuah putaran, kemudian satu blok `move forward`, putaran lain, lalu sebuah loop."
+          "courseC_starWars_loops5_a": "Solusi terbaik menggunakan sebuah putaran, kemudian satu blok ` move forward `, putaran lain, lalu sebuah loop."
         },
         "courseC_starWars_loops6": {
           "courseC_starWars_loops6_a": "Cobalah menulis semua gerakan di atas sebuah kertas dan mencari sebuah pola.",
@@ -4867,7 +4867,7 @@
         },
         "courseC_starWars_loops6_copy": {
           "courseC_starWars_loops6_a": "Cobalah menulis semua gerakan di atas sebuah kertas dan mencari sebuah pola.",
-          "courseC_starWars_loops6_b": "Jika Anda ingin mengurangi jumlah kode, Anda dapat menempatkan satu loop `repeat` dalam yang lain! \\\\\\\nIni adalah \\*\\* nested loop \\*\\*."
+          "courseC_starWars_loops6_b": "Jika Anda ingin mengurangi jumlah kode, Anda dapat menempatkan satu loop ` repeat ` dalam yang lain! \\   \nIni adalah ** nested loop **."
         },
         "courseC_starWars_loops7": {
           "courseC_starWars_loops7_a": "Pola ini terlihat lebih sulit dari sebenarnya! Mulailah dengan sebuah langkah tangga sederhana. Apakah itu mencakup semua logam bekas?",
@@ -4917,7 +4917,7 @@
         "courseC_starWars_loops8_copy": {
           "course_starWars_loops8_a": "Coba pikirkan tentang masalah ini di bagian kecil. Ambillah waktu secukupnya. Anda tidak perlu menyelesaikannya pada percobaan pertama!",
           "course_starWars_loops8_b": "Pikirkan bagian pertama dari masalah ini sebagai masalah langkah tangga. Bagaimana anda mengatasinya sebelumnya?",
-          "course_starWars_loops8_c": "Perhatikan jalur ini.\n\n![](https://images.code.org/7d696dd3b1e6984a1d6041f366d5c96b-image-1510198804955.37.04.png)"
+          "course_starWars_loops8_c": "Perhatikan jalur ini.\n\n[][0]"
         },
         "courseC_starWars_loops9": {
           "course_starWars_loops9_b": "Anda bisa memasukkan lebih dari satu blok ke dalam loop `repeat`.",
@@ -5552,7 +5552,7 @@
         "courseD_bee_conditionals2_copy": {
           "courseD_bee_conditionals2_hintVid1": "Butuh bantuan untuk memulai? Tonton videonya!",
           "courseD_bee_conditionals2_a": "Terkadang ada bunga, terkadang tidak. Jika Anda ingin kodenya berlaku dalam kedua kasus, pastikan menggunakan pernyataan `if`.",
-          "courseD_bee_conditionals2_b": "Anda dapat menggunakan sebuah loop `repeat` atau `while path ahead` untuk bergerak melalui labirin ini.",
+          "courseD_bee_conditionals2_b": "Anda dapat menggunakan sebuah loop `repeat` atau ` while path ahead` untuk bergerak melalui labirin ini.",
           "courseD_bee_conditionals2_c": "Anda tidak perlu memeriksa sarang lebah, hanya ada bunga atau ruang kosong di bawah awan.",
           "courseD_bee_conditionals2_hintVid2": "Tonton video ini untuk membantu memecahkan puzzle ini."
         },
@@ -5581,7 +5581,7 @@
         "courseD_bee_conditionals3_copy": {
           "courseD_bee_conditionals3_hintVid1": "Butuh bantuan untuk memulai? Tonton videonya!",
           "courseD_bee_conditionals3_a": "Pastikan menggunakan pernyataan `if` untuk memeriksa setiap ruang agar diketahui ada tidaknya bunga.",
-          "courseD_bee_conditionals3_b": "Anda dapat menggunakan sebuah `ulangi` loop atau suatu `sementara` loop untuk menjaga lebah bergerak maju. Gunakan yang mana saja yang kamu suka!",
+          "courseD_bee_conditionals3_b": "Anda dapat menggunakan sebuah `ulangi` loop atau suatu ` sementara ` loop untuk menjaga lebah bergerak maju. Gunakan yang mana saja yang kamu suka!",
           "courseD_bee_conditionals3_c": "Jangan takut melakukan kesalahan! Coba tambahkan blok dan jalankan kode untuk melihat hasil yang muncul, meskipun Anda belum memecahkan puzzle itu.",
           "courseD_bee_conditionals3_hintVid2": "Tonton video ini untuk membantu memecahkan puzzle ini."
         },
@@ -5611,7 +5611,7 @@
           "courseD_bee_conditionals4_hintVid1": "Butuh bantuan untuk memulai? Tonton videonya!",
           "courseD_bee_conditionals4_a": "Anda masih bisa memperlakukan setiap ruangan seolah ada awan di atasnya, walaupun anda bisa melihat keseluruhan jalan.",
           "courseD_bee_conditionals4_b": "Gunakan pernyataan `if` di dalam loop untuk memeriksa keberadaan nektar di setiap ruang. ",
-          "courseD_bee_conditionals4_c": "Menggunakan blok <xml><block type=\"maze_untilBlocked\"/></xml>, Anda harus bergerak maju dan memeriksa bunga. Jika ada bunga, apa yang perlu dilakukan lebah?",
+          "courseD_bee_conditionals4_c": "Menggunakan blok [blockly block][0], Anda harus bergerak maju dan memeriksa bunga. Jika ada bunga, apa yang perlu dilakukan lebah?",
           "courseD_bee_conditionals4_hintVid2": "Tonton video ini untuk membantu memecahkan puzzle ini."
         },
         "courseD_bee_conditionals5": {
@@ -5638,9 +5638,9 @@
         },
         "courseD_bee_conditionals5_copy": {
           "courseD_bee_conditionals5_hintVid1": "Butuh bantuan untuk memulai? Tonton videonya!",
-          "courseD_bee_conditionals5_a": "Pikirkan setiap sisi jalan segi empat sebagai jalan dengan sendirinya. Atur loop bersarang dengan blok `repeat` di bagian luar dan sebuah loop`while there is a path ahead` di bagian dalam. Berapa banyak jalan yang dibutuhkan lebah untuk mereda jika lebah perlu menggulingkan setiap sisi dengan bunga?",
-          "courseD_bee_conditionals5_c": "Ada 3 sisi dari persegi panjang dengan bunga, sehingga kode perlu `mengulang 3 waktu`. Dalam setiap ulangi, lebah akan perlu untuk terus sepanjang jalan, `sementara ada sebuah jalan di depan`. Untuk terus menyusuri jalan setapak, lebah perlu `bergerak maju`. Sementara di jalan, lebah perlu memeriksa sebuah bunga. `Jika ada sebuah bunga`, lebah harus`mendapatkan nektar`.",
-          "courseD_bee_conditionals5_b": "Di dalam `sementara ada sebuah jalan di depan` blok Anda akan perlu untuk bergerak maju dan memeriksa sebuah bunga. Bagaimana cara Anda memeriksa jika ada sebuah bunga? Apa yang Anda lakukan jika ada sebuah bunga?",
+          "courseD_bee_conditionals5_a": "Pikirkan setiap sisi jalan segi empat sebagai jalan dengan sendirinya. Atur loop bersarang dengan blok `repeat` di bagian luar dan sebuah loop` while there is a path ahead ` di bagian dalam. Berapa banyak jalan yang dibutuhkan lebah untuk mereda jika lebah perlu menggulingkan setiap sisi dengan bunga?",
+          "courseD_bee_conditionals5_c": "Ada 3 sisi dari persegi panjang dengan bunga, sehingga kode perlu `mengulang 3 waktu`. Dalam setiap ulangi, lebah akan perlu untuk terus sepanjang jalan, ` sementara ada sebuah jalan di depan`. Untuk terus menyusuri jalan setapak, lebah perlu ` bergerak maju`. Sementara di jalan, lebah perlu memeriksa sebuah bunga. ` Jika ada sebuah bunga`, lebah harus` mendapatkan nektar`.",
+          "courseD_bee_conditionals5_b": "Di dalam ` sementara ada sebuah jalan di depan` blok Anda akan perlu untuk bergerak maju dan memeriksa sebuah bunga. Bagaimana cara Anda memeriksa jika ada sebuah bunga? Apa yang Anda lakukan jika ada sebuah bunga?",
           "courseD_bee_conditionals5_hintVid2": "Tonton video ini untuk membantu memecahkan puzzle ini."
         },
         "courseD_bee_conditionals6": {
@@ -7071,8 +7071,8 @@
         },
         "courseE_artist_functions2_copy": {
           "courseD_artist_functions2_b": "Function yang Anda tulis sebaiknya tidak berisi seluruh program, cukup bagian yang menggambar persegi empat dengan sisi 100 piksel.",
-          "courseD_artist_functions2_c": "Gunakan blok `menggambar persegi empat` untuk \"memanggil\" function di dalam blok `when run`. Jika tidak, kode di dalam fungsi tidak akan berjalan.\n\n<xml><block type=\"procedures_callnoreturn\" limit=\"2\"><mutation name=\"draw a square\"/></block></xml>",
-          "courseD_artist_functions2_a": "Program anda harus:\n\n-   Menggunakan function\n-   Bergerak maju 100 + 75 piksel\n-   Menggunakan function"
+          "courseD_artist_functions2_c": "Gunakan blok `menggambar persegi empat` untuk \"memanggil\" function di dalam blok `when run`. Jika tidak, kode di dalam fungsi tidak akan berjalan.\n\n[blockly block][0]",
+          "courseD_artist_functions2_a": "Program anda harus:\n- Menggunakan function\n- Bergerak maju 100 + 75 piksel\n- Menggunakan function"
         },
         "courseE_artist_functions3": {
           "courseD_artist_functions3_a": "Untuk mengatasi puzzle ini, anda hanya perlu menambahkan satu loop yang mengulangi kode starter 8 kali.\nJika anda tidak ingat kode starternya, klik \"start over\" di sudut kanan atas ruang kerja.",
@@ -10683,8 +10683,8 @@
           "hw_retro_changePropBy": "Jika kamu ingin mengubah ukuran sprite berulang kali (dengan event), gunakan blok ini:\n\n<xml><block type=\"gamelab_changePropBy\">\n      <title name=\"PROPERTY\">\"scale\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"retrocreature_11_1\"</title>\n        </block>\n      </value>\n      <value name=\"VAL\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">10</title>\n        </block>\n      </value>\n    </block></xml>"
         },
         "poetry_hoc_addSprites": {
-          "location_hint": "Tiap sprite memiliki **lokasi**. Kamu dapat mengatur lokasi dengan mengklik pin di blok ini:\n\n<xml><block type=\"Poetry_makeNewSpriteAnon\"><title name=\"ANIMATION_NAME\">\"twinkling\\_star\"</title><title name=\"LOCATION\">{\"x\":200,\"y\":225}</title></block></xml>\n\n-   Klik pin ![](<https://images.code.org/e9531e292b034feef0f176d4f97ac47f-image-1634932451913.54.05 PM.png>) pada blok lokasi lalu pilih posisi baru untuk sprite kamu di layar.\n-   Tekan tombol \"Jalankan\" ketika kode kamu sudah selesai.",
-          "remove_hint": "Kamu dapat menghapus sprite pada nomor baris tertentu. Kamu dapat menambahkan sprite baru untuk menggantikannya:\n\n<xml><block type=\"Poetry_whenLineShows\"><title name=\"N\">3</title><next><block type=\"Poetry_destroy\"><title name=\"ANIMATION_NAME\">\"twinkling_star\"</title><next>\\<block type=\"Poetry_makeNewSpriteAnon\"><title name=\"ANIMATION_NAME\">\"night\\_moon\"</title><title name=\"LOCATION\">{\"x\":200,\"y\":225}</title></block></next></block></next></block></xml>"
+          "location_hint": "Tiap sprite memiliki **lokasi**. Kamu dapat mengatur lokasi dengan mengklik pin di blok ini:\n\n<xml><block type=\"Poetry_makeNewSpriteAnon\"><title name=\"ANIMATION_NAME\">\"twinkling_star\"</title><title name=\"LOCATION\">{\"x\":200,\"y\":225}</title></block></xml>\n\n-   Klik pin ![](<https://images.code.org/e9531e292b034feef0f176d4f97ac47f-image-1634932451913.54.05 PM.png>) pada blok lokasi lalu pilih posisi baru untuk sprite kamu di layar.\n-   Tekan tombol \"Jalankan\" ketika kode kamu sudah selesai.",
+          "remove_hint": "Kamu dapat menghapus sprite pada nomor baris tertentu. Kamu dapat menambahkan sprite baru untuk menggantikannya:\n\n<xml><block type=\"Poetry_whenLineShows\"><title name=\"N\">3</title><next><block type=\"Poetry_destroy\"><title name=\"ANIMATION_NAME\">\"twinkling_star\"</title><next><block type=\"Poetry_makeNewSpriteAnon\"><title name=\"ANIMATION_NAME\">\"night_moon\"</title><title name=\"LOCATION\">{\"x\":200,\"y\":225}</title></block></next></block></next></block></xml>"
         },
         "poetry_hoc_backgroundEffects": {
           "add_background_effect": "Temukan blok latar belakang seperti ini:\n<xml><block type=\"Poetry_setBackgroundEffect\"><title name=\"EFFECT\">\"colors\"</title><title name=\"PALETTE\">\"sunrise\"</title></block></xml>\n\ndan temukan blok efek teks seperti ini:\n\n<xml><block type=\"Poetry_setFontColor\"><value name=\"FILL\"><block type=\"colour_picker\"><title name=\"COLOUR\">#000099</title></block></value></block></xml>\n\nHubungkan blok-blok ini di bawah `ketika dijalankan` di Ruang Kerjamu.",
@@ -10696,14 +10696,14 @@
           "more_events_hint": "Anda dapat menggunakan lebih dari satu event dalam program kamu. Coba gunakan dua event dengan efek berbeda untuk mencocokkan baris baru dalam puisinya.\n\n<xml><block type=\"Poetry_whenLineShows\"><title name=\"N\">2</title><next><block type=\"Poetry_setForegroundEffect\"><title name=\"EFFECT\">\"starburst\"</title></block></next></block></xml>\n\n<xml><block type=\"Poetry_whenLineShows\"><title name=\"N\">4</title><next><block type=\"Poetry_setForegroundEffect\"><title name=\"EFFECT\">\"bubbles\"</title></block></next></block></xml>"
         },
         "poetry_hoc_sounds": {
-          "poetry_sound_hint": "Temukan blok ini:\n<xml><block type=\"Poetry_playSound\"><title name=\"SOUND\">\"sound://category\\_background/typewriter.mp3\"</title></block></next></block></xml>\natau blok ini: \n\n<xml><block type=\"Poetry_playMusic\"><title name=\"SOUND\">\"sound://category_background/fire_burning.mp3\"</title></block></xml>\n\nHubungkan di bawah `ketika dijalankan` di Ruang Kerjamu.",
-          "more_code": "Tambahkan lebih banyak efek dan warna agar sesuai dengan suara yang kamu pilih.\n<xml><block type=\"when_run\" movable=\"false\"><next><block type=\"Poetry_playSound\"><title name=\"SOUND\">\"sound://category_loops/vibrant_game_welcome_to_heaven_loop_1.mp3\"</title><next>\\<block type=\"Poetry_setBackgroundEffect\"><title name=\"EFFECT\">\"blooming\"</title><title name=\"PALETTE\">\"sunrise\"</title><next><block type=\"Poetry_setFontColor\"><value name=\"FILL\"><block type=\"colour_picker\"><title name=\"COLOUR\">#996633</title></block></value><next><block type=\"Poetry_setTextEffect\"><title name=\"EFFECT\">\"fade\"</title></block></next></block></next></block></next></block></next></block></xml>"
+          "poetry_sound_hint": "Temukan blok ini:\n<xml><block type=\"Poetry_playSound\"><title name=\"SOUND\">\"sound://category_background/typewriter.mp3\"</title></block></next></block></xml>\natau blok ini: \n\n<xml><block type=\"Poetry_playMusic\"><title name=\"SOUND\">\"sound://category_background/fire_burning.mp3\"</title></block></xml>\n\nHubungkan di bawah `ketika dijalankan` di Ruang Kerjamu.",
+          "more_code": "Tambahkan lebih banyak efek dan warna agar sesuai dengan suara yang kamu pilih.\n<xml><block type=\"when_run\" movable=\"false\"><next><block type=\"Poetry_playSound\"><title name=\"SOUND\">\"sound://category_loops/vibrant_game_welcome_to_heaven_loop_1.mp3\"</title><next><block type=\"Poetry_setBackgroundEffect\"><title name=\"EFFECT\">\"blooming\"</title><title name=\"PALETTE\">\"sunrise\"</title><next><block type=\"Poetry_setFontColor\"><value name=\"FILL\"><block type=\"colour_picker\"><title name=\"COLOUR\">#996633</title></block></value><next><block type=\"Poetry_setTextEffect\"><title name=\"EFFECT\">\"fade\"</title></block></next></block></next></block></next></block></next></block></xml>"
         },
         "poetry_hoc_spriteBehaviors": {
-          "add_behavior": "Tambahkan blok `sprite mulai` ke kode kamu. Pastikan kamu sudah membuat sprite yang diberi perilaku.\n\n<xml><block type=\"when_run\"><next><block type=\"Poetry_makeNewSpriteAnon\"><title name=\"ANIMATION_NAME\">\"smiling_sun\"</title><title name=\"LOCATION\">{\"x\":65,\"y\":105}</title><next>\\<block type=\"Poetry_startBehavior\"><title name=\"ANIMATION_NAME\">\"smiling_sun\"</title><title name=\"BEHAVIOR\">spinning_right</title></block></next></block></next></block></xml>"
+          "add_behavior": "Tambahkan blok `sprite mulai` ke kode kamu. Pastikan kamu sudah membuat sprite yang diberi perilaku.\n\n<xml><block type=\"when_run\"><next><block type=\"Poetry_makeNewSpriteAnon\"><title name=\"ANIMATION_NAME\">\"smiling_sun\"</title><title name=\"LOCATION\">{\"x\":65,\"y\":105}</title><next><block type=\"Poetry_startBehavior\"><title name=\"ANIMATION_NAME\">\"smiling_sun\"</title><title name=\"BEHAVIOR\">spinning_right</title></block></next></block></next></block></xml>"
         },
         "poetry_hoc_spriteSizes": {
-          "size hint": "Temukan blok ini dan klik `150`.\n<xml><block type=\"Poetry_setSize\"><title name=\"SPRITE\">\"ocean\\_wave\"</title><title name=\"VAL\">150</title></block></xml>\n\nApa yang terjadi saat nomornya adalah `25`? \n<xml><block type=\"Poetry_setSize\"><title name=\"SPRITE\">\"ocean\\_wave\"</title><title name=\"VAL\">25</title></block></xml>"
+          "size hint": "Temukan blok ini dan klik `150`.\n<xml><block type=\"Poetry_setSize\"><title name=\"SPRITE\">\"ocean_wave\"</title><title name=\"VAL\">150</title></block></xml>\n\nApa yang terjadi saat nomornya adalah `25`? \n<xml><block type=\"Poetry_setSize\"><title name=\"SPRITE\">\"ocean_wave\"</title><title name=\"VAL\">25</title></block></xml>"
         },
         "courseF_artist_variablesFP_2021": {
           "polygon_table": "Ingin mencoba poligon (bentuk-bentuk dengan banyak sisi) lain? Gunakan jumlah sisi di dalam `repeat` dan sudut di dalam blok `turn` Anda.Coba ini:|   Bentuk| Sisi | Sudut || :------: | :---: | :---: || segitiga|   3   |  120° ||  persegi|   4   |  90°  || pentagon |   5   |  72°  ||  heksagon |   6   |  60°  ||  oktagon |   8   |  45°  ||  nonagon |   9   |  40°  ||  dekagon |   10  |  36°  |"
@@ -12653,6 +12653,12 @@
         "helloworld_food_sizes_space-2022": {
           "storyboard_setProp": "Untuk mengatur ukuran sprite hanya satu kali, kamu dapat menggunakan blok ini:\n\n<xml><block type=\"gamelab_spriteClicked\">\n  <field name=\"CONDITION\">\"when\"</field>\n  <value name=\"SPRITE\">\n    <block type=\"gamelab_allSpritesWithAnimation\" can_disconnect_from_parent=\"false\">\n      <field name=\"ANIMATION\">\"space_astronaut_1\"</field>\n    </block>\n  </value>\n  <next>\n    <block type=\"gamelab_setProp\">\n      <field name=\"PROPERTY\">\"scale\"</field>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\" can_disconnect_from_parent=\"false\">\n          <field name=\"ANIMATION\">\"space_astronaut_1\"</field>\n        </block>\n      </value>\n      <value name=\"VAL\">\n        <block type=\"math_number\" can_disconnect_from_parent=\"false\">\n          <field name=\"NUM\">50</field>\n        </block>\n      </value>\n    </block>\n  </next>\n</block></xml>",
           "storyboard_changePropBy": "Jika kamu ingin mengubah ukuran sprite berulang kali (dengan event), gunakan blok ini:\n\n<xml><block type=\"gamelab_spriteClicked\">\n  <field name=\"CONDITION\">\"when\"</field>\n  <value name=\"SPRITE\">\n    <block type=\"gamelab_allSpritesWithAnimation\" can_disconnect_from_parent=\"false\">\n      <field name=\"ANIMATION\">\"space_satellite\"</field>\n    </block>\n  </value>\n  <next>\n    <block type=\"gamelab_changePropBy\">\n      <field name=\"PROPERTY\">\"scale\"</field>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\" can_disconnect_from_parent=\"false\">\n          <field name=\"ANIMATION\">\"space_satellite\"</field>\n        </block>\n      </value>\n      <value name=\"VAL\">\n        <block type=\"math_number\" can_disconnect_from_parent=\"false\">\n          <field name=\"NUM\">10</field>\n        </block>\n      </value>\n    </block>\n  </next>\n</block></xml>"
+        },
+        "helloworld_food_say_soccer-2022": {
+          "hello-world-first-solution-pizza": "Untuk membuat sprite mengatakan sesuatu, hubungkan blok kode seperti ini:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\"><next>  <block type=\"gamelab_makeNewSpriteAnon\">\n    <title name=\"ANIMATION_NAME\">\"soccer_player_1\"</title>\n    <value name=\"LOCATION\">\n      <block type=\"gamelab_location_picker\">\n        <title name=\"LOCATION\">{\"x\":200,\"y\":200}</title>\n      </block>\n    </value><next>  <block type=\"gamelab_spriteSay\">\n    <title name=\"SPEECH\">Hello, world!</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"soccer_player_1\"</title>\n      </block>\n    </value>\n  </block></next>\n  </block></next></block>\n</xml>"
+        },
+        "helloworld_food_say_space-2022": {
+          "hello-world-first-solution-pizza": "Untuk membuat sprite mengatakan sesuatu, hubungkan blok kode seperti ini:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\"><next>  <block type=\"gamelab_makeNewSpriteAnon\">\n    <title name=\"ANIMATION_NAME\">\"face_pizza_1\"</title>\n    <value name=\"LOCATION\">\n      <block type=\"gamelab_location_picker\">\n        <title name=\"LOCATION\">{\"x\":200,\"y\":200}</title>\n      </block>\n    </value><next>  <block type=\"gamelab_spriteSay\">\n    <title name=\"SPEECH\">Hello, world!</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"face_pizza_1\"</title>\n      </block>\n    </value>\n  </block></next>\n  </block></next></block>\n</xml>"
         }
       }
     }

@@ -1346,7 +1346,8 @@ he-IL:
         answers:
         - correct: true
         - correct: true
-        - correct: true
+        - text: דרום
+          correct: true
         questions:
         - text: איזה מהמילים הבאות מאויתת ע"י הדבורה?
         title: בחירה ממספר אפשרויות

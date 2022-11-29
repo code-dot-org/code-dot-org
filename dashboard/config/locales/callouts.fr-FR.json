@@ -524,16 +524,16 @@
           "courseC_maze_programming2_1": "Voici la boîte à outils. C'est ici que tu trouveras des blocs en plus pour t'aider à terminer tes casse-têtes."
         },
         "courseA_maze_seq1": {
-          "courseA_maze_seq1_1": "Clique sur l'ampoule si tu as besoin d'une astuce!"
+          "courseA_maze_seq1_1": "Clique sur l'ampoule si tu as besoin d'un indice !"
         },
         "courseA_maze_seq1_2018": {
-          "courseA_maze_seq1_1": "Clique sur l'ampoule si tu as besoin d'une astuce!"
+          "courseA_maze_seq1_1": "Clique sur l'ampoule si tu as besoin d'un indice !"
         },
         "courseA_maze_seq1_2019": {
-          "courseA_maze_seq1_1": "Clique sur l'ampoule si tu as besoin d'une astuce!"
+          "courseA_maze_seq1_1": "Clique sur l'ampoule si tu as besoin d'un indice !"
         },
         "courseA_maze_seq1_2020": {
-          "courseA_maze_seq1_1": "Clique sur l'ampoule si tu as besoin d'une astuce!"
+          "courseA_maze_seq1_1": "Clique sur l'ampoule si tu as besoin d'un indice !"
         },
         "courseA_maze_seq2": {
           "courseA_maze_seqA_callout1": "Utilise le bouton \"Étape\" pour avancer pas-à-pas dans le programme. Cela t'aidera à trouver le bug!"
@@ -620,16 +620,16 @@
           "courseB_collector_loops1_1": "Utilise ce bloc pour collecter le trésor."
         },
         "courseB_maze_seq1": {
-          "courseB_maze_seq1": "Clique sur l'ampoule si tu as besoin d'une astuce!"
+          "courseB_maze_seq1": "Clique sur l'ampoule si tu as besoin d'un indice !"
         },
         "courseB_maze_seq1_2018": {
-          "courseB_maze_seq1": "Clique sur l'ampoule si tu as besoin d'une astuce!"
+          "courseB_maze_seq1": "Clique sur l'ampoule si tu as besoin d'un indice !"
         },
         "courseB_maze_seq1_2019": {
-          "courseB_maze_seq1": "Clique sur l'ampoule si tu as besoin d'une astuce!"
+          "courseB_maze_seq1": "Clique sur l'ampoule si tu as besoin d'un indice !"
         },
         "courseB_maze_seq1_2020": {
-          "courseB_maze_seq1": "Clique sur l'ampoule si tu as besoin d'une astuce!"
+          "courseB_maze_seq1": "Clique sur l'ampoule si tu as besoin d'un indice !"
         },
         "courseB_maze_seq2": {
           "courseB_maze_seq2_callout1": "Utilise le bouton \"Étape\" pour avancer pas-à-pas dans le programme. Cela t'aidera à trouver le bug!"
@@ -680,10 +680,10 @@
           "courseC_PlayLab_events_challenge1_1": "Ce bloc te laisse bouger les acteurs vers différentes parties de l'espace de jeu."
         },
         "courseC_artist_loops1a_2019": {
-          "jumpto_callout": "Ce bloc est très important pour ce projet. Assure-toi de l'utiliser !\n"
+          "jumpto_callout": "Ce bloc est très important pour ce projet. Assure-toi de l'utiliser !"
         },
         "courseC_artist_loops1a_2020": {
-          "jumpto_callout": "Ce bloc est très important pour ce projet. Assure-toi de l'utiliser !\n"
+          "jumpto_callout": "Ce bloc est très important pour ce projet. Assure-toi de l'utiliser !"
         },
         "courseC_artist_loops1b_2019": {
           "sticker2": "Ajoute ceci au milieu de ton programme.\n"
@@ -728,16 +728,16 @@
           "courseC_collector_prog7_1": "Tu peux prendre plus de blocs de la boite à outils si tu en as besoin !"
         },
         "courseC_harvester_loops1": {
-          "courseC_harvester_loops1_callout1": "Le chiffre 4 sur la citrouille indique qu'il y a 4 citrouilles que tu peux ramasser."
+          "courseC_harvester_loops1_callout1": "Le chiffre 'quatre' sur la citrouille indique qu'il y a quatre citrouilles prêtes à récolter."
         },
         "courseC_harvester_loops1_2018": {
-          "courseC_harvester_loops1_callout1": "Le chiffre 4 sur la citrouille indique qu'il y a 4 citrouilles que tu peux ramasser."
+          "courseC_harvester_loops1_callout1": "Le chiffre 'quatre' sur la citrouille indique qu'il y a quatre citrouilles prêtes à récolter."
         },
         "courseC_harvester_loops1_2019": {
-          "courseC_harvester_loops1_callout1": "Le chiffre 4 sur la citrouille indique qu'il y a 4 citrouilles que tu peux ramasser."
+          "courseC_harvester_loops1_callout1": "Le chiffre 'quatre' sur la citrouille indique qu'il y a quatre citrouilles prêtes à récolter."
         },
         "courseC_harvester_loops1_2020": {
-          "courseC_harvester_loops1_callout1": "Le chiffre 4 sur la citrouille indique qu'il y a 4 citrouilles que tu peux ramasser."
+          "courseC_harvester_loops1_callout1": "Le chiffre 'quatre' sur la citrouille indique qu'il y a quatre citrouilles prêtes à récolter."
         },
         "courseC_maze_debugging5": {
           "courseC_maze_debugging5_1": "Les blocs gris ne peuvent pas être effacés!"
@@ -1482,7 +1482,7 @@
           "courseC_maze_programming2_1": "Voici la boîte à outils. C'est ici que tu trouveras des blocs en plus pour t'aider à terminer tes casse-têtes."
         },
         "courseA_maze_seq1_2021": {
-          "courseA_maze_seq1_1": "Clique sur l'ampoule si tu as besoin d'une astuce!"
+          "courseA_maze_seq1_1": "Clique sur l'ampoule si tu as besoin d'un indice !"
         },
         "courseA_playLab_events4_2021": {
           "courseA_playlab_events4_callout1": "Ceci est un appel"
@@ -1521,7 +1521,7 @@
           "courseC_PlayLab_events_challenge1_1": "Ce bloc te laisse bouger les acteurs vers différentes parties de l'espace de jeu."
         },
         "courseC_artist_loops1a_2021": {
-          "jumpto_callout": "Ce bloc est très important pour ce projet. Assure-toi de l'utiliser !"
+          "jumpto_callout": "Ce bloc est très important pour ce projet. Assure-toi de l'utiliser !"
         },
         "courseC_artist_loops1b_2021": {
           "sticker2": "Ajoute ceci au milieu de ton programme.\n"
@@ -1533,13 +1533,13 @@
           "courseC_collector_prog7_1": "Tu peux prendre plus de blocs de la boite à outils si tu en as besoin !"
         },
         "courseC_harvester_loops1_2021": {
-          "courseC_harvester_loops1_callout1": "Le chiffre 4 sur la citrouille indique qu'il y a 4 citrouilles que tu peux ramasser."
+          "courseC_harvester_loops1_callout1": "Le chiffre 'quatre' sur la citrouille indique qu'il y a quatre citrouilles prêtes à récolter."
         },
         "courseC_maze_debugging5_2021": {
           "courseC_maze_debugging5_1": "Ces blocs sont verrouillés et ne peuvent pas être supprimés !\n"
         },
         "courseC_maze_debugging9_2021": {
-          "courseC_maze_debugging9_2019_1": "Glisse les blocs de la boîte à outils dans ton espace de travail."
+          "courseC_maze_debugging9_2019_1": "Fais glisser les blocs de la boîte à outils jusqu'à ton espace de travail."
         },
         "courseC_maze_programming1_2021": {
           "grade2_CaringForNewPet_0_1": "Après avoir connecté tous les blocs, appuie sur « Démarrer » pour lancer ton programme."
@@ -1833,19 +1833,19 @@
           "poetry_remove_sprite": "Nouveau bloc !"
         },
         "helloworld_animals_backgrounds": {
-          "hw_background_location": "Utilisez ce bloc pour définir un nouvel arrière-plan."
+          "hw_background_location": "Utilises ce bloc pour établir un nouvel arrière-plan."
         },
         "helloworld_animals_behaviors": {
-          "hello_world_behavior_blocks": "Utilisez ce bloc associé à l'un des comportements ci-dessous."
+          "hello_world_behavior_blocks": "Utilises ce bloc associé à l'un des comportements ci-dessous."
         },
         "helloworld_animals_click": {
-          "hw_Run": "Cliquez ici pour valider le code."
+          "hw_Run": "Cliques ici pour valider le code."
         },
         "helloworld_animals_events": {
-          "hello_world_click_hint": "Ajoutez ce bloc d'événements à votre espace de travail."
+          "hello_world_click_hint": "Ajoutes ce bloc d'événements à votre espace de travail."
         },
         "helloworld_animals_freeplay": {
-          "costumes_tab": "Cliquez ici pour ajouter de nouveaux déguisements à votre projet ! "
+          "costumes_tab": "Cliques ici pour ajouter de nouveaux déguisements à ton projet ! "
         },
         "helloworld_animals_location": {
           "pin": "épingle"
@@ -1854,23 +1854,23 @@
           "pin": "épingle"
         },
         "helloworld_animals_say": {
-          "hello_world_say": "Utilisez ce bloc pour faire parler les sprites.",
-          "hello_world_make_sprite": "Utilisez ce bloc pour créer un sprite."
+          "hello_world_say": "Utilises ce bloc pour faire parler les sprites.",
+          "hello_world_make_sprite": "Utilises ce bloc pour créer un sprite."
         },
         "helloworld_emoji_backgrounds": {
-          "hw_background_location": "Utilisez ce bloc pour définir un nouvel arrière-plan."
+          "hw_background_location": "Utilises ce bloc pour établir un nouvel arrière-plan."
         },
         "helloworld_emoji_behaviors": {
-          "hello_world_behavior_blocks": "Utilisez ce bloc associé à l'un des comportements ci-dessous."
+          "hello_world_behavior_blocks": "Utilises ce bloc associé à l'un des comportements ci-dessous."
         },
         "helloworld_emoji_click": {
-          "hw_Run": "Cliquez ici pour valider le code."
+          "hw_Run": "Cliques ici pour valider le code."
         },
         "helloworld_emoji_events": {
-          "hello_world_click_hint": "Ajoutez ce bloc d'événements à votre espace de travail."
+          "hello_world_click_hint": "Ajoutes ce bloc d'événements à votre espace de travail."
         },
         "helloworld_emoji_freeplay": {
-          "costumes_tab": "Cliquez ici pour ajouter de nouveaux déguisements à votre projet ! "
+          "costumes_tab": "Cliques ici pour ajouter de nouveaux déguisements à ton projet ! "
         },
         "helloworld_emoji_location": {
           "pin": "épingle"
@@ -1879,23 +1879,23 @@
           "pin": "épingle"
         },
         "helloworld_emoji_say": {
-          "hello_world_say": "Utilisez ce bloc pour faire parler les sprites.",
-          "hello_world_make_sprite": "Utilisez ce bloc pour créer un sprite."
+          "hello_world_say": "Utilises ce bloc pour faire parler les sprites.",
+          "hello_world_make_sprite": "Utilises ce bloc pour créer un sprite."
         },
         "helloworld_food_backgrounds": {
-          "hw_background_location": "Utilisez ce bloc pour définir un nouvel arrière-plan."
+          "hw_background_location": "Utilises ce bloc pour établir un nouvel arrière-plan."
         },
         "helloworld_food_behaviors": {
-          "hello_world_behavior_blocks": "Utilisez ce bloc associé à l'un des comportements ci-dessous."
+          "hello_world_behavior_blocks": "Utilises ce bloc associé à l'un des comportements ci-dessous."
         },
         "helloworld_food_click": {
-          "hw_Run": "Cliquez ici pour valider le code."
+          "hw_Run": "Cliques ici pour valider le code."
         },
         "helloworld_food_events": {
-          "hello_world_click_hint": "Ajoutez ce bloc d'événements à votre espace de travail."
+          "hello_world_click_hint": "Ajoutes ce bloc d'événements à votre espace de travail."
         },
         "helloworld_food_freeplay": {
-          "costumes_tab": "Cliquez ici pour ajouter de nouveaux déguisements à votre projet ! "
+          "costumes_tab": "Cliques ici pour ajouter de nouveaux déguisements à ton projet ! "
         },
         "helloworld_food_location": {
           "pin": "épingle"
@@ -1904,23 +1904,23 @@
           "pin": "épingle"
         },
         "helloworld_food_say": {
-          "hello_world_say": "Utilisez ce bloc pour faire parler les sprites.",
-          "hello_world_make_sprite": "Utilisez ce bloc pour créer un sprite."
+          "hello_world_say": "Utilises ce bloc pour faire parler les sprites.",
+          "hello_world_make_sprite": "Utilises ce bloc pour créer un sprite."
         },
         "helloworld_retro_backgrounds": {
-          "hw_background_location": "Utilisez ce bloc pour définir un nouvel arrière-plan."
+          "hw_background_location": "Utilises ce bloc pour établir un nouvel arrière-plan."
         },
         "helloworld_retro_behaviors": {
-          "hello_world_behavior_blocks": "Utilisez ce bloc associé à l'un des comportements ci-dessous."
+          "hello_world_behavior_blocks": "Utilises ce bloc associé à l'un des comportements ci-dessous."
         },
         "helloworld_retro_click": {
-          "hw_Run": "Cliquez ici pour valider le code."
+          "hw_Run": "Cliques ici pour valider le code."
         },
         "helloworld_retro_events": {
-          "hello_world_click_hint": "Ajoutez ce bloc d'événements à votre espace de travail."
+          "hello_world_click_hint": "Ajoutes ce bloc d'événements à votre espace de travail."
         },
         "helloworld_retro_freeplay": {
-          "costumes_tab": "Cliquez ici pour ajouter de nouveaux déguisements à votre projet ! "
+          "costumes_tab": "Cliques ici pour ajouter de nouveaux déguisements à ton projet ! "
         },
         "helloworld_retro_location": {
           "pin": "épingle"
@@ -1929,8 +1929,8 @@
           "pin": "épingle"
         },
         "helloworld_retro_say": {
-          "hello_world_say": "Utilisez ce bloc pour faire parler les sprites.",
-          "hello_world_make_sprite": "Utilisez ce bloc pour créer un sprite."
+          "hello_world_say": "Utilises ce bloc pour faire parler les sprites.",
+          "hello_world_make_sprite": "Utilises ce bloc pour créer un sprite."
         },
         "poetry_hoc_backgroundEffects": {
           "poetry_background": "Trouvez les blocs de code ici. ",
@@ -1953,7 +1953,7 @@
           "CSD_U6_checkWin": "Vérifie si un joueur a gagné"
         },
         "New Sprite Lab Project": {
-          "costumes_tab": "Cliquez ici pour ajouter de nouveaux déguisements à votre projet ! ",
+          "costumes_tab": "Cliques ici pour ajouter de nouveaux déguisements à ton projet ! ",
           "make_sprite": "Utilisez les blocs ici pour créer un lutin !"
         },
         "CSD U6 - Color LEDs - SB4_2222": {
@@ -1987,7 +1987,7 @@
           "pointerlocation": "Fais glisser un bloc sujet ici."
         },
         "CourseF_outbreak7_-2022-2": {
-          "costumes_tab": "Cliquez ici pour ajouter de nouveaux déguisements à votre projet ! "
+          "costumes_tab": "Cliques ici pour ajouter de nouveaux déguisements à ton projet ! "
         },
         "Fish Tank 3-validated2022": {
           "spritelab_comment": "Utilise ce bloc pour laisser des notes sur le fonctionnement de ton code pour toi-même ou pour ton enseignant.\n"
@@ -2060,7 +2060,7 @@
           "courseC_maze_programming2_1": "Voici la boîte à outils. C'est ici que tu trouveras des blocs en plus pour t'aider à terminer tes casse-têtes."
         },
         "courseA_maze_seq12022": {
-          "courseA_maze_seq1_1": "Clique sur l'ampoule si tu as besoin d'une astuce!"
+          "courseA_maze_seq1_1": "Clique sur l'ampoule si tu as besoin d'un indice !"
         },
         "courseA_playLab_events42022": {
           "courseA_playlab_events4_callout1": "Ceci est un appel"
@@ -2084,7 +2084,7 @@
           "courseB_collector_loops1_1": "Utilise ce bloc pour collecter le trésor."
         },
         "courseB_maze_seq12022": {
-          "courseB_maze_seq1": "Clique sur l'ampoule si tu as besoin d'une astuce!"
+          "courseB_maze_seq1": "Clique sur l'ampoule si tu as besoin d'un indice !"
         },
         "courseB_playlab_events62022": {
           "courseB_playlab_events6_a": "Utilise la flèche déroulante verte pour changer la direction."
@@ -2102,7 +2102,7 @@
           "courseC_PlayLab_events_challenge1_1": "Ce bloc te laisse bouger les acteurs vers différentes parties de l'espace de jeu."
         },
         "courseC_artist_loops1a2022": {
-          "jumpto_callout": "Ce bloc est très important pour ce projet. Assure-toi de l'utiliser !\n"
+          "jumpto_callout": "Ce bloc est très important pour ce projet. Assure-toi de l'utiliser !"
         },
         "courseC_artist_loops1b2022": {
           "sticker2": "Ajoute ceci au milieu de ton programme.\n"
@@ -2117,7 +2117,7 @@
           "courseC_collector_prog7_1": "Tu peux prendre plus de blocs de la boite à outils si tu en as besoin !"
         },
         "courseC_harvester_loops12022": {
-          "courseC_harvester_loops1_callout1": "Le chiffre 4 sur la citrouille indique qu'il y a 4 citrouilles que tu peux ramasser."
+          "courseC_harvester_loops1_callout1": "Le chiffre 'quatre' sur la citrouille indique qu'il y a quatre citrouilles prêtes à récolter."
         },
         "courseC_maze_debugging52022": {
           "courseC_maze_debugging5_1": "Ces blocs sont verrouillés et ne peuvent pas être supprimés !\n"
@@ -2183,7 +2183,7 @@
           "": "Ces blocs n'ont pas de nombres sur eux. Tu peux en utiliser autant que tu veux !"
         },
         "courseE_aboutme_22022": {
-          "": "Cliquez ici pour ajouter de nouveaux déguisements à votre projet ! "
+          "": "Cliques ici pour ajouter de nouveaux déguisements à ton projet ! "
         },
         "courseE_artist_functions22022": {
           "courseD_artist_functions2_1": "Lorsque ce bloc vert s'exécute, tout le code dans la fonction sera exécuté. Qu'est ce que l'artiste doit faire après avoir dessiné le premier carré?"
@@ -2357,32 +2357,32 @@
           "grade2_CaringForNewPet_0_1": "Après avoir enclenché tous les blocs ensemble, appuie sur « Exécuter » pour lancer ton programme."
         },
         "coursee_helloworld_events": {
-          "hello_world_click_hint": "Ajoutez ce bloc d'événements à votre espace de travail."
+          "hello_world_click_hint": "Ajoutes ce bloc d'événements à votre espace de travail."
         },
         "coursee_helloworld_freeplay": {
-          "costumes_tab": "Cliquez ici pour ajouter de nouveaux déguisements à votre projet ! "
+          "costumes_tab": "Cliques ici pour ajouter de nouveaux déguisements à ton projet ! "
         },
         "coursee_helloworld_say": {
-          "hello_world_say": "Utilisez ce bloc pour faire parler les sprites.",
-          "hello_world_make_sprite": "Utilisez ce bloc pour créer un sprite."
+          "hello_world_say": "Utilises ce bloc pour faire parler les sprites.",
+          "hello_world_make_sprite": "Utilises ce bloc pour créer un sprite."
         },
         "express_maze_debugging92022": {
           "express_maze_debugging9_2019_1": "Fais glisser les blocs de la boîte à outils jusqu'à ton espace de travail."
         },
         "helloworld_food_backgrounds_soccer-2022": {
-          "hw_background_location": "Utilisez ce bloc pour définir un nouvel arrière-plan."
+          "hw_background_location": "Utilises ce bloc pour établir un nouvel arrière-plan."
         },
         "helloworld_food_backgrounds_space-2022": {
-          "hw_background_location": "Utilisez ce bloc pour définir un nouvel arrière-plan."
+          "hw_background_location": "Utilises ce bloc pour établir un nouvel arrière-plan."
         },
         "helloworld_food_behaviors_soccer-2022": {
-          "hello_world_behavior_blocks": "Utilisez ce bloc associé à l'un des comportements ci-dessous."
+          "hello_world_behavior_blocks": "Utilises ce bloc associé à l'un des comportements ci-dessous."
         },
         "helloworld_food_behaviors_space-2022": {
-          "hello_world_behavior_blocks": "Utilisez ce bloc associé à l'un des comportements ci-dessous."
+          "hello_world_behavior_blocks": "Utilises ce bloc associé à l'un des comportements ci-dessous."
         },
         "helloworld_food_click_soccer-2022": {
-          "hw_Run": "Cliquez ici pour valider le code."
+          "hw_Run": "Cliques ici pour valider le code."
         },
         "helloworld_food_costumes_soccer-2022": {
           "hello_world_new": "Nouveau bloc !"
@@ -2391,16 +2391,16 @@
           "hello_world_new": "Nouveau bloc !"
         },
         "helloworld_food_events_soccer-2022": {
-          "hello_world_click_hint": "Ajoutez ce bloc d'événements à votre espace de travail."
+          "hello_world_click_hint": "Ajoutes ce bloc d'événements à votre espace de travail."
         },
         "helloworld_food_events_space-2022": {
-          "hello_world_click_hint": "Ajoutez ce bloc d'événements à votre espace de travail."
+          "hello_world_click_hint": "Ajoutes ce bloc d'événements à votre espace de travail."
         },
         "helloworld_food_freeplay_soccer-2022": {
-          "costumes_tab": "Cliquez ici pour ajouter de nouveaux déguisements à votre projet ! "
+          "costumes_tab": "Cliques ici pour ajouter de nouveaux déguisements à ton projet ! "
         },
         "helloworld_food_freeplay_space-2022": {
-          "costumes_tab": "Cliquez ici pour ajouter de nouveaux déguisements à votre projet ! "
+          "costumes_tab": "Cliques ici pour ajouter de nouveaux déguisements à ton projet ! "
         },
         "helloworld_food_location_soccer-2022": {
           "pin": "épingle"
@@ -2415,12 +2415,12 @@
           "pin": "épingle"
         },
         "helloworld_food_say_soccer-2022": {
-          "hello_world_say": "Utilisez ce bloc pour faire parler les sprites.",
-          "hello_world_make_sprite": "Utilisez ce bloc pour créer un sprite."
+          "hello_world_say": "Utilises ce bloc pour faire parler les sprites.",
+          "hello_world_make_sprite": "Utilises ce bloc pour créer un sprite."
         },
         "helloworld_food_say_space-2022": {
-          "hello_world_say": "Utilisez ce bloc pour faire parler les sprites.",
-          "hello_world_make_sprite": "Utilisez ce bloc pour créer un sprite."
+          "hello_world_say": "Utilises ce bloc pour faire parler les sprites.",
+          "hello_world_make_sprite": "Utilises ce bloc pour créer un sprite."
         },
         "helloworld_food_sizes_soccer-2022": {
           "hello_world_new": "Nouveau bloc !",
@@ -2435,6 +2435,9 @@
         },
         "helloworld_food_sounds_space-2022": {
           "hello_world_new": "Nouveau bloc !"
+        },
+        "helloworld_food_click_space-2022": {
+          "hw_Run": "Cliques d'abord ici !"
         }
       }
     }

@@ -2,60 +2,39 @@ import React from 'react';
 import {UnconnectedLoginTypePicker as LoginTypePicker} from './LoginTypePicker';
 import {action} from '@storybook/addon-actions';
 
-export default storybook =>
-  storybook
-    .storiesOf('LoginTypePicker', module)
-    .add('Basic options', () => {
-      return (
-        <LoginTypePicker
-          title="New section"
-          handleImportOpen={action('handleImportOpen')}
-          setLoginType={action('setLoginType')}
-          handleCancel={action('handleCancel')}
-        />
-      );
-    })
-    .add('With Google Classroom import', () => {
-      return (
-        <LoginTypePicker
-          title="New section"
-          providers={['google_classroom']}
-          handleImportOpen={action('handleImportOpen')}
-          setLoginType={action('setLoginType')}
-          handleCancel={action('handleCancel')}
-        />
-      );
-    })
-    .add('With Clever import', () => {
-      return (
-        <LoginTypePicker
-          title="New section"
-          providers={['clever']}
-          handleImportOpen={action('handleImportOpen')}
-          setLoginType={action('setLoginType')}
-          handleCancel={action('handleCancel')}
-        />
-      );
-    })
-    .add('With Microsoft Classroom import', () => {
-      return (
-        <LoginTypePicker
-          title="New section"
-          providers={['microsoft_classroom']}
-          handleImportOpen={action('handleImportOpen')}
-          setLoginType={action('setLoginType')}
-          handleCancel={action('handleCancel')}
-        />
-      );
-    })
-    .add('With multiple OAuth imports', () => {
-      return (
-        <LoginTypePicker
-          title="New section"
-          providers={['google_classroom', 'clever']}
-          handleImportOpen={action('handleImportOpen')}
-          setLoginType={action('setLoginType')}
-          handleCancel={action('handleCancel')}
-        />
-      );
-    });
+export default {
+  title: 'LoginTypePicker',
+  component: LoginTypePicker
+};
+
+const Template = args => (
+  <LoginTypePicker
+    title="New section"
+    handleImportOpen={action('handleImportOpen')}
+    setLoginType={action('setLoginType')}
+    handleCancel={action('handleCancel')}
+    {...args}
+  />
+);
+
+export const Basic = Template.bind({});
+
+export const Google = Template.bind({});
+Google.args = {
+  providers: ['google_classroom']
+};
+
+export const Clever = Template.bind({});
+Clever.args = {
+  providers: ['clever']
+};
+
+export const Microsoft = Template.bind({});
+Microsoft.args = {
+  providers: ['microsoft_classroom']
+};
+
+export const Multiple = Template.bind({});
+Multiple.args = {
+  providers: ['google_classroom', 'clever']
+};

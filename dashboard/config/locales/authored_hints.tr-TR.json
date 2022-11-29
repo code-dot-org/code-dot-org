@@ -507,76 +507,76 @@
         },
         "CourseD_Dance_2020_01": {
           "validation": "**Bu seviyeyi nasıl geçerim?**\n\n-   Ekranda bir dansçının göründüğünden emin olun.\n\n_Bu seviye 4 ölçüden sonra biter._",
-          "challenges": "**İsteğe Bağlı Zorluks**  -   Choose a different song to play. -   Move your dancer to a new location. -   Make more than one dancer."
+          "challenges": "**İsteğe Bağlı Zorluklar** \n\n-   Çalmak için farklı bir şarkı seçin.\n-   Dansçınızı yeni bir yere yerleştirin\n-   Birden fazla dansçı yarat."
         },
         "CourseD_Dance_2020_02": {
-          "validation": "**Bu seviyeyi nasıl geçerim?** - Dansçı bir hareket yapmak zorundadır. - Bir ok tuşuna basmalısınız. _Bu seviye 4 ölçütten sonra sona erer._",
-          "challenges": "**İsteğe Bağlı Zorluk**  Birden fazla <xml><block type=\"Dancelab_whenKey\"><title name=\"KEY\"></title></block></xml> bloğu kullanın."
+          "validation": "**Bu seviyeyi nasıl geçerim?**\n\n-   Dansçı bir hareket yapmak zorundadır.\n-   Bir ok tuşuna basmalısınız. \n\n_Bu seviye 4 ölçütten sonra sona erer._",
+          "challenges": "**İsteğe Bağlı Zorluk** \n\n Birden fazla <xml><block type=\"Dancelab_whenKey\"><title name=\"KEY\"></title></block></xml> bloğu kullanın."
         },
         "CourseD_Dance_2020_03": {
-          "validation": "**Bu seviyeyi nasıl geçerim?**  -   Her iki dansçı bir hareket yapmak zorundadır. -   Ok tuşlarına basmalısınız.  _Bu seviye 4 ölçütten sonra sona erer._",
+          "validation": "**Bu seviyeyi nasıl geçerim?**\n\n-   Her iki dansçı bir hareket yapmak zorundadır. \n-   Ok tuşlarına basmalısınız.\\\n    _Bu seviye 6 ölçütten sonra sona erer._",
           "challenges": "**İsteğe Bağlı Zorluk**  -   Bir dansçının sol ve sağ ok tuşlarına tepki vermesini sağlayın."
         },
         "CourseD_Dance_2020_04": {
-          "validation": "**Bu seviyeyi nasıl geçerim?**\n\n-   Dansçının 4 ölçü sonra yeni bir harekete geçmesi gerekiyor.\n\n_Seviye 8 ölçüden sonra biter._"
+          "validation": "**Bu seviyeyi nasıl geçerim?**\n\n-   Dansçının 4 ölçü sonra yeni bir harekete geçmesi gerekiyor.\n\n_Seviye 7 ölçüden sonra biter._"
         },
         "CourseD_Dance_2020_05": {
-          "validation": "**Bu seviyeyi nasıl geçerim?**\n\n-   Dansçınızın 6 ölçü sonra, 4 ölçü sonraki dansından farklı dans etmesi gerekiyor.\n\n_Seviye 12 ölçüden sonra biter._",
-          "challenges": "**İsteğe Bağlı Zorluk**  -   Dansçılar her hareket ettiğinde arka planı değiştirin."
+          "validation": "**Bu seviyeyi nasıl geçerim?**\n\n-   Dansçınızın 6 ölçü sonra, 4 ölçü sonraki dansından farklı dans etmesi gerekiyor.\n\n_Seviye 11 ölçüden sonra biter._",
+          "challenges": "**İsteğe Bağlı Zorluk**  -   Dansçılar hareketler arasınde geçiş yaptığında arka planı değiştirin."
         },
         "CourseD_Dance_2020_06": {
           "validation": "**Bu seviyeyi nasıl geçerim?**  -   Şarkının ilk 4 ölçütünde bir baş dansçı ve bir grup yedek dansçı oluşturun.  _Bu seviye 7 ölçütten sonra sona erer._",
           "challenges": "**İsteğe Bağlı Zorluk**  -   Birden fazla yedek dansçı grubu oluşturun."
         },
         "CourseD_Dance_2020_07": {
-          "validation": "**Bu seviyeyi nasıl geçerim?**  -   Müzik başladıktan sonra en az bir dansçının boyutunu değiştirin.  _Bu seviye 6 ölçütten sonra sona erer._",
-          "challenges": "**İsteğe Bağlı Zorluk**  -   Genişlik veya döndürme gibi diğer özellikleri değiştirerek deneme yapın."
+          "validation": "**Bu seviyeyi nasıl geçerim?**  -   En az bir dansçının boyutunu değiştirin.  _Bu seviye 6 ölçütten sonra sona erer._",
+          "challenges": "**İsteğe Bağlı Zorluk**  -   Genişlik veya dönüş gibi diğer özellikleri değiştirerek deneme yapın."
         },
         "CourseD_Dance_2020_08": {
           "validation": "**Bu seviyeyi nasıl geçerim?**  -   En az bir dansçının renk tonunu değiştirin. _Bu seviye 6 ölçütten sonra sona erer._",
-          "tint_hint": "Dansçılarınızın seçtiğiniz tam renge değişmediğini fark ettiniz mi? Bunun nedeni **renk tonlarının** seçtiğiniz rengin dansçının renkleri ile karıştırmasıdır."
+          "tint_hint": "Dansçılarınızın seçtiğiniz tam renge değişmediğini fark ettiniz mi? Bunun nedeni **renk tonları**  ile seçtiğiniz rengin dansçının renkleri ile karıştırmasıdır."
         },
         "CourseD_Dance_2020_09": {
           "validation": "**Bu seviyeyi nasıl geçerim?**  -   Sadece \"Son\" düğmesine basın!",
-          "repeat_every_ideas": "**Bazı fikirlere mi ihtiyacınız var?**  -   Büyümesini sağlamak için dansçının boyutunu tekrar tekrar değiştirin. -   Bir dansçının dönüşünü sağlamak için art arda bir dansçının dönüşünü değiştirin. -   Bir dansçının ekran boyunca hareket etmesi için art arda bir dansçının yatay veya dikey konumunu değiştirin.  _Ters etki yaratmak için negatif sayıları da kullanabilirsiniz!_",
-          "next_previous": "**İsteğe Bağlı Zorluk**  -   Bu yeni etkinlik bloğunu, dansı `(Rastgele)`, `(Sonraki)` ya da `(Önceki)` olarak ayarlayarak bir dans hareketleri listesinde dolaşmak için de kullanabilirsiniz..     <xml><block type=\"Dancelab_changeMoveEachLR\">     <title name=\"GROUP\">???</title>     <title name=\"MOVE\">\"rand\"</title>     <title name=\"DIR\">-1</title>     </block></xml>"
+          "repeat_every_ideas": "**Bazı fikirlere mi ihtiyacınız var?**  -   Büyümesini sağlamak için dansçının boyutunu tekrar tekrar değiştirin. -   Bir dansçının dönüşünü sağlamak için art arda bir dansçının dönüşünü değiştirin. \n\n _Ters etki yaratmak için negatif sayıları da kullanabilirsiniz!_",
+          "next_previous": "**İsteğe Bağlı Zorluk**  -   Bu yeni etkinlik bloğunu, dans hareketlerini `(Rastgele)`, `(Sonraki)` ya da `(Önceki)` olarak ayarlayarak bir dans hareketleri listesinde dolaşmak için de kullanabilirsiniz..     <xml><block type=\"Dancelab_changeMoveEachLR\">     <title name=\"GROUP\">???</title>     <title name=\"MOVE\">\"rand\"</title>     <title name=\"DIR\">-1</title>     </block></xml>"
         },
         "CourseD_Dance_2020_bonus1": {
           "alternate": "Alternatif blok \"Dansçılar\" kategorisindedir."
         },
         "CourseD_Dance_Party_01": {
           "validation": "**Bu seviyeyi nasıl geçerim?**\n\n-   Ekranda bir dansçının göründüğünden emin olun.\n\n_Bu seviye 4 ölçüden sonra biter._",
-          "challenges": "**İsteğe Bağlı Görevler**\n\n-   Çalmak için başka şarkı seçin.\n-   Geyik gibi görünen başka bir şey seçin!\n-   Dansçınızı yeniden adlandırın."
+          "challenges": "**İsteğe Bağlı Görevler**\n\n-   Çalmak için başka şarkı seçin.\n-   Dansçınızı yeniden adlandırın."
         },
         "CourseD_Dance_Party_02": {
-          "validation": "**Bu seviyeyi nasıl geçerim?**\n\n-   Dansçının 4 ölçü sonra yeni bir harekete geçmesi gerekiyor.\n\n_Seviye 8 ölçüden sonra biter._"
+          "validation": "**Bu seviyeyi nasıl geçerim?**\n\n-   Dansçının 4 ölçü sonra yeni bir harekete geçmesi gerekiyor.\n\n_Seviye 7 ölçüden sonra biter._"
         },
         "CourseD_Dance_Party_03": {
-          "validation": "**Bu seviyeyi nasıl geçerim?**\n\n-   Dansçınızın 6 ölçü sonra, 4 ölçü sonraki dansından farklı dans etmesi gerekiyor.\n\n_Seviye 12 ölçüden sonra biter._"
+          "validation": "**Bu seviyeyi nasıl geçerim?**\n\n-   Dansçınızın 6 ölçü sonra, 4 ölçü sonraki dansından farklı dans etmesi gerekiyor.\n\n_Seviye 11 ölçüden sonra biter._"
         },
         "CourseD_Dance_Party_04": {
-          "validation": "**Bu seviyeyi nasıl geçerim?**\n\n-   Şarkının yedinci ölçüsünden sonra arka plan efektini değiştirmeniz gerekiyor.\n\n_Bu seviye 10 ölçüden sonra biter._",
-          "challenges": "**İsteğe Bağlı Görev**\n\nŞarkının farklı yerlerinde <xml><block type=\"Dancelab_atTimestamp\"><title name=\"TIMESTAMP\">???</title><title name=\"UNIT\">\"measures\"</title></block></xml> etkinliklerinin altına yeni blok ekleyerek arka plan efektini değiştirin."
+          "validation": "**Bu seviyeyi nasıl geçerim?**\n\n-   Şarkının yedinci ölçüsünden sonra arka plan efektini değiştirmeniz gerekiyor.\n\n_Bu seviye 9 ölçüden sonra biter._",
+          "challenges": "**İsteğe Bağlı Görev**\n\nŞarkının farklı yerlerinde  <xml><block type=\"Dancelab_atTimestamp\"><title name=\"TIMESTAMP\">???</title><title name=\"UNIT\">\"measures\"</title></block></xml>  etkinliklerinin altına yeni blok ekleyerek arka plan efektini değiştirin."
         },
         "CourseD_Dance_Party_06": {
-          "validation": "**Bu seviyeyi nasıl geçerim?**\n\n-   En az iki dansçınız olması gerekli.\n\n_Bu seviye 6 ölçüden sonra biter._",
-          "challenges": "**İsteğe Bağlı Görev**\n\n-   Üçüncü bir dansçı ekleyin (daha fazla da ekleyebilirsiniz!)\n-   Tüm dansçılarınıza şarkının farklı yerlerinde farklı hareketler yaptırın."
+          "validation": "**Bu seviyeyi nasıl geçerim?**\n\n-   En az iki dansçınız olması gerekli.\n\n_Bu seviye 5 ölçüden sonra biter._",
+          "challenges": "**İsteğe Bağlı Görev**\n\n-   Üçüncü bir dansçı ekleyin (veya istediğiniz kadar ekleyebilirsiniz!)\n-   Tüm dansçılarınıza şarkının farklı yerlerinde farklı hareketler yaptırın."
         },
         "CourseD_Dance_Party_08": {
-          "validation": "**Bu seviyeyi nasıl geçerim?**\n\n-   İki dansçının 100 dışında bir boyuta sahip olması gerekiyor.\n\n_Bu seviye 6 ölçüden sonra biter._",
+          "validation": "**Bu seviyeyi nasıl geçerim?**\n\n-   İki dansçının 100 dışında bir boyuta sahip olması gerekiyor.\n\n_Bu seviye 5 ölçüden sonra biter._",
           "challenges": "**İsteğe Bağlı Görev**\n\n-   Diğer özellikleri değiştirerek denemeler yapın (genişlik, yükseklik, yön vb.)"
         },
         "CourseD_Dance_Party_09": {
-          "validation": "**Bu seviyeyi nasıl geçerim?**\n\n-   En az bir dansçının renk tonunu değiştirin.\n\n_Bu seviye 8 ölçüden sonra biter._"
+          "validation": "**Bu seviyeyi nasıl geçerim?**\n\n-   En az bir dansçının renk tonunu değiştirin.\n\n_Bu seviye 7 ölçüden sonra biter._"
         },
         "CourseD_Dance_Party_10": {
-          "validation": "**Bu seviyeyi nasıl geçerim?**\n\n-   İki veya daha fazla dansçının özellikleri değişmelidir.\n\n_Bu seviye 8 ölçüden sonra biter._"
+          "validation": "**Bu seviyeyi nasıl geçerim?**\n\n-   İki veya daha fazla dansçının özellikleri değişmelidir.\n\n_Bu seviye 7 ölçüden sonra biter._"
         },
         "CourseD_Dance_Party_11": {
-          "validation": "**Bu seviyeyi nasıl geçerim?**\n\n-   Yaratıcı olmanız yeterli!\n\n_Bu seviye 8 ölçüden sonra biter._"
+          "validation": "**Bu seviyeyi nasıl geçerim?**\n\n-   Yaratıcı olmanız yeterli!\n\n_Bu seviye 7 ölçüden sonra biter._"
         },
         "CourseD_Dance_Party_11_5": {
-          "validation": "**Bu seviyeyi nasıl geçerim?**\n\n-   Yaratıcı olmanız yeterli!\n\n_Bu seviye 8 ölçüden sonra biter._"
+          "validation": "**Bu seviyeyi nasıl geçerim?**\n\n-   Yaratıcı olmanız yeterli!\n\n_Bu seviye 7 ölçüden sonra biter._"
         },
         "CourseD_Dance_Party_11b": {
           "validation": "**Bu seviyeyi nasıl geçerim?**\n\n-   Sol oka bastığınızda Robota bir dans hareketi yaptırmak için `sol oka basıldığında` bloğunu kullanın.\n\n_Bu seviye 8 ölçüden sonra biter._"
@@ -588,92 +588,92 @@
           "voyage_aquatic_10a": "**Deniz Işıklarını** ![](https://images.code.org/471b33234222ddffb463aeb65de6b371-image-1539183353423.net-resizeimage.png) görüyor musun? Okyanus Anıtını geçmek için bunları bir koşulla birlikte nasıl kullanabilirsin?"
         },
         "CourseE_HOC 2018 Level_7a": {
-          "aquatic7": "Sağa dönüşler için \"Eğer\" bloğunu kullanabilirsiniz."
+          "aquatic7": "Sağa dönüşlerde yardım için \"Eğer\" bloğunu kullanabilirsiniz."
         },
         "CourseE_HOC 2018 Level_7a_2020": {
-          "aquatic7": "Sağa dönüşler için \"Eğer\" bloğunu kullanabilirsiniz."
+          "aquatic7": "Sağa dönüşlerde yardım için \"Eğer\" bloğunu kullanabilirsiniz."
         },
         "CourseE_HOC 2018 Level_9b": {
-          "voyage_aquatic_9a": "Ne kadar güzel bir mercan resifi! Mavi mercan gidilecek **sağ** yoldur, kırmızı mercanın **solda** olmadığına emin ol!"
+          "voyage_aquatic_9a": "Kırmızı ve mavi mercan bloklarını gördün mü?  Mercan bloklarını sağa ve sola dönmek için sana yol gösterici olarak kullan."
         },
         "CourseE_HOC 2018 Level_9b_2020": {
-          "voyage_aquatic_9a": "Ne kadar güzel bir mercan resifi! Mavi mercan gidilecek **sağ** yoldur, kırmızı mercanın **solda** olmadığına emin ol!"
+          "voyage_aquatic_9a": "Kırmızı ve mavi mercan bloklarını gördün mü?  Mercan bloklarını sağa ve sola dönmek için sana yol gösterici olarak kullan."
         },
         "Dance_2019_01": {
           "validation": "**Bu seviyeyi nasıl geçerim?**\n\n-   Ekranda bir dansçının göründüğünden emin olun.\n\n_Bu seviye 4 ölçüden sonra biter._",
-          "challenges": "**İsteğe Bağlı Zorluks**  -   Choose a different song to play. -   Move your dancer to a new location. -   Make more than one dancer."
+          "challenges": "**İsteğe Bağlı Zorluklar** \n\n-   Çalmak için farklı bir şarkı seçin.\n-   Dansçınızı yeni bir yere yerleştirin\n-   Birden fazla dansçı yarat."
         },
         "Dance_2019_02": {
-          "validation": "**Bu seviyeyi nasıl geçerim?** - Dansçı bir hareket yapmak zorundadır. - Bir ok tuşuna basmalısınız. _Bu seviye 4 ölçütten sonra sona erer._",
-          "challenges": "**İsteğe Bağlı Zorluk**  Birden fazla <xml><block type=\"Dancelab_whenKey\"><title name=\"KEY\"></title></block></xml> bloğu kullanın."
+          "validation": "**Bu seviyeyi nasıl geçerim?**\n\n-   Dansçı bir hareket yapmak zorundadır.\n-   Bir ok tuşuna basmalısınız. \n\n_Bu seviye 4 ölçütten sonra sona erer._",
+          "challenges": "**İsteğe Bağlı Zorluk** \n\n Birden fazla <xml><block type=\"Dancelab_whenKey\"><title name=\"KEY\"></title></block></xml> bloğu kullanın."
         },
         "Dance_2019_03": {
-          "validation": "**Bu seviyeyi nasıl geçerim?**  -   Her iki dansçı bir hareket yapmak zorundadır. -   Ok tuşlarına basmalısınız.  _Bu seviye 4 ölçütten sonra sona erer._",
+          "validation": "**Bu seviyeyi nasıl geçerim?**\n\n-   Her iki dansçı bir hareket yapmak zorundadır. \n-   Ok tuşlarına basmalısınız.\\\n    _Bu seviye 6 ölçütten sonra sona erer._",
           "challenges": "**İsteğe Bağlı Zorluk**  -   Bir dansçının sol ve sağ ok tuşlarına tepki vermesini sağlayın."
         },
         "Dance_2019_04": {
-          "validation": "**Bu seviyeyi nasıl geçerim?**\n\n-   Dansçının 4 ölçü sonra yeni bir harekete geçmesi gerekiyor.\n\n_Seviye 8 ölçüden sonra biter._"
+          "validation": "**Bu seviyeyi nasıl geçerim?**\n\n-   Dansçının 4 ölçü sonra yeni bir harekete geçmesi gerekiyor.\n\n_Seviye 7 ölçüden sonra biter._"
         },
         "Dance_2019_05": {
-          "validation": "**Bu seviyeyi nasıl geçerim?**\n\n-   Dansçınızın 6 ölçü sonra, 4 ölçü sonraki dansından farklı dans etmesi gerekiyor.\n\n_Seviye 12 ölçüden sonra biter._",
-          "challenges": "**İsteğe Bağlı Zorluk**  -   Dansçılar her hareket ettiğinde arka planı değiştirin."
+          "validation": "**Bu seviyeyi nasıl geçerim?**\n\n-   Dansçınızın 6 ölçü sonra, 4 ölçü sonraki dansından farklı dans etmesi gerekiyor.\n\n_Seviye 11 ölçüden sonra biter._",
+          "challenges": "**İsteğe Bağlı Zorluk**  -   Dansçılar hareketler arasınde geçiş yaptığında arka planı değiştirin."
         },
         "Dance_2019_06": {
           "validation": "**Bu seviyeyi nasıl geçerim?**  -   Şarkının ilk 4 ölçütünde bir baş dansçı ve bir grup yedek dansçı oluşturun.  _Bu seviye 7 ölçütten sonra sona erer._",
           "challenges": "**İsteğe Bağlı Zorluk**  -   Birden fazla yedek dansçı grubu oluşturun."
         },
         "Dance_2019_07": {
-          "validation": "**Bu seviyeyi nasıl geçerim?**  -   Müzik başladıktan sonra en az bir dansçının boyutunu değiştirin.  _Bu seviye 6 ölçütten sonra sona erer._",
-          "challenges": "**İsteğe Bağlı Zorluk**  -   Genişlik veya döndürme gibi diğer özellikleri değiştirerek deneme yapın."
+          "validation": "**Bu seviyeyi nasıl geçerim?**  -   En az bir dansçının boyutunu değiştirin.  _Bu seviye 6 ölçütten sonra sona erer._",
+          "challenges": "**İsteğe Bağlı Zorluk**  -   Genişlik veya dönüş gibi diğer özellikleri değiştirerek deneme yapın."
         },
         "Dance_2019_08": {
           "validation": "**Bu seviyeyi nasıl geçerim?**  -   En az bir dansçının renk tonunu değiştirin. _Bu seviye 6 ölçütten sonra sona erer._",
-          "tint_hint": "Dansçılarınızın seçtiğiniz tam renge değişmediğini fark ettiniz mi? Bunun nedeni **renk tonlarının** seçtiğiniz rengin dansçının renkleri ile karıştırmasıdır."
+          "tint_hint": "Dansçılarınızın seçtiğiniz tam renge değişmediğini fark ettiniz mi? Bunun nedeni **renk tonları**  ile seçtiğiniz rengin dansçının renkleri ile karıştırmasıdır."
         },
         "Dance_2019_09": {
           "validation": "**Bu seviyeyi nasıl geçerim?**  -   Sadece \"Son\" düğmesine basın!",
-          "repeat_every_ideas": "**Bazı fikirlere mi ihtiyacınız var?**  -   Büyümesini sağlamak için dansçının boyutunu tekrar tekrar değiştirin. -   Bir dansçının dönüşünü sağlamak için art arda bir dansçının dönüşünü değiştirin. -   Bir dansçının ekran boyunca hareket etmesi için art arda bir dansçının yatay veya dikey konumunu değiştirin.  _Ters etki yaratmak için negatif sayıları da kullanabilirsiniz!_",
-          "next_previous": "**İsteğe Bağlı Zorluk**  -   Bu yeni etkinlik bloğunu, dansı `(Rastgele)`, `(Sonraki)` ya da `(Önceki)` olarak ayarlayarak bir dans hareketleri listesinde dolaşmak için de kullanabilirsiniz..     <xml><block type=\"Dancelab_changeMoveEachLR\">     <title name=\"GROUP\">???</title>     <title name=\"MOVE\">\"rand\"</title>     <title name=\"DIR\">-1</title>     </block></xml>"
+          "repeat_every_ideas": "**Bazı fikirlere mi ihtiyacınız var?**  -   Büyümesini sağlamak için dansçının boyutunu tekrar tekrar değiştirin. -   Bir dansçının dönüşünü sağlamak için art arda bir dansçının dönüşünü değiştirin. \n\n _Ters etki yaratmak için negatif sayıları da kullanabilirsiniz!_",
+          "next_previous": "**İsteğe Bağlı Zorluk**  -   Bu yeni etkinlik bloğunu, dans hareketlerini `(Rastgele)`, `(Sonraki)` ya da `(Önceki)` olarak ayarlayarak bir dans hareketleri listesinde dolaşmak için de kullanabilirsiniz..     <xml><block type=\"Dancelab_changeMoveEachLR\">     <title name=\"GROUP\">???</title>     <title name=\"MOVE\">\"rand\"</title>     <title name=\"DIR\">-1</title>     </block></xml>"
         },
         "Dance_Party_01": {
           "validation": "**Bu seviyeyi nasıl geçerim?**\n\n-   Ekranda bir dansçının göründüğünden emin olun.\n\n_Bu seviye 4 ölçüden sonra biter._",
-          "challenges": "**İsteğe Bağlı Görevler**\n\n-   Çalmak için başka şarkı seçin.\n-   Geyik gibi görünen başka bir şey seçin!\n-   Dansçınızı yeniden adlandırın."
+          "challenges": "**İsteğe Bağlı Görevler**\n\n-   Çalmak için başka şarkı seçin.\n-   Dansçınızı yeniden adlandırın."
         },
         "Dance_Party_02": {
-          "validation": "**Bu seviyeyi nasıl geçerim?**\n\n-   Dansçının 4 ölçü sonra yeni bir harekete geçmesi gerekiyor.\n\n_Seviye 8 ölçüden sonra biter._"
+          "validation": "**Bu seviyeyi nasıl geçerim?**\n\n-   Dansçının 4 ölçü sonra yeni bir harekete geçmesi gerekiyor.\n\n_Seviye 7 ölçüden sonra biter._"
         },
         "Dance_Party_03": {
-          "validation": "**Bu seviyeyi nasıl geçerim?**\n\n-   Dansçınızın 6 ölçü sonra, 4 ölçü sonraki dansından farklı dans etmesi gerekiyor.\n\n_Seviye 12 ölçüden sonra biter._"
+          "validation": "**Bu seviyeyi nasıl geçerim?**\n\n-   Dansçınızın 6 ölçü sonra, 4 ölçü sonraki dansından farklı dans etmesi gerekiyor.\n\n_Seviye 11 ölçüden sonra biter._"
         },
         "Dance_Party_04": {
-          "validation": "**Bu seviyeyi nasıl geçerim?**\n\n-   Şarkının yedinci ölçüsünden sonra arka plan efektini değiştirmeniz gerekiyor.\n\n_Bu seviye 10 ölçüden sonra biter._",
-          "challenges": "**İsteğe Bağlı Görev**\n\nŞarkının farklı yerlerinde <xml><block type=\"Dancelab_atTimestamp\"><title name=\"TIMESTAMP\">???</title><title name=\"UNIT\">\"measures\"</title></block></xml> etkinliklerinin altına yeni blok ekleyerek arka plan efektini değiştirin."
+          "validation": "**Bu seviyeyi nasıl geçerim?**\n\n-   Şarkının yedinci ölçüsünden sonra arka plan efektini değiştirmeniz gerekiyor.\n\n_Bu seviye 9 ölçüden sonra biter._",
+          "challenges": "**İsteğe Bağlı Görev**\n\nŞarkının farklı yerlerinde  <xml><block type=\"Dancelab_atTimestamp\"><title name=\"TIMESTAMP\">???</title><title name=\"UNIT\">\"measures\"</title></block></xml>  etkinliklerinin altına yeni blok ekleyerek arka plan efektini değiştirin."
         },
         "Dance_Party_05": {
           "validation": "**Bu seviyeyi nasıl geçerim?**\n\n-   Dansçınızın, seviye sona ermeden en az 4 farklı dans hareketi boyunca hareket etmesi gerekir.\n\n_Bu seviye 12 ölçütten sonra biter._"
         },
         "Dance_Party_06": {
-          "validation": "**Bu seviyeyi nasıl geçerim?**\n\n-   En az iki dansçınız olması gerekli.\n\n_Bu seviye 6 ölçüden sonra biter._",
-          "challenges": "**İsteğe Bağlı Görev**\n\n-   Üçüncü bir dansçı ekleyin (daha fazla da ekleyebilirsiniz!)\n-   Tüm dansçılarınıza şarkının farklı yerlerinde farklı hareketler yaptırın."
+          "validation": "**Bu seviyeyi nasıl geçerim?**\n\n-   En az iki dansçınız olması gerekli.\n\n_Bu seviye 5 ölçüden sonra biter._",
+          "challenges": "**İsteğe Bağlı Görev**\n\n-   Üçüncü bir dansçı ekleyin (veya istediğiniz kadar ekleyebilirsiniz!)\n-   Tüm dansçılarınıza şarkının farklı yerlerinde farklı hareketler yaptırın."
         },
         "Dance_Party_08": {
-          "validation": "**Bu seviyeyi nasıl geçerim?**\n\n-   İki dansçının 100 dışında bir boyuta sahip olması gerekiyor.\n\n_Bu seviye 6 ölçüden sonra biter._",
+          "validation": "**Bu seviyeyi nasıl geçerim?**\n\n-   İki dansçının 100 dışında bir boyuta sahip olması gerekiyor.\n\n_Bu seviye 5 ölçüden sonra biter._",
           "challenges": "**İsteğe Bağlı Görev**\n\n-   Diğer özellikleri değiştirerek denemeler yapın (genişlik, yükseklik, yön vb.)"
         },
         "Dance_Party_09": {
-          "validation": "**Bu seviyeyi nasıl geçerim?**\n\n-   En az bir dansçının renk tonunu değiştirin.\n\n_Bu seviye 8 ölçüden sonra biter._"
+          "validation": "**Bu seviyeyi nasıl geçerim?**\n\n-   En az bir dansçının renk tonunu değiştirin.\n\n_Bu seviye 7 ölçüden sonra biter._"
         },
         "Dance_Party_10": {
-          "validation": "**Bu seviyeyi nasıl geçerim?**\n\n-   İki veya daha fazla dansçının özellikleri değişmelidir.\n\n_Bu seviye 8 ölçüden sonra biter._"
+          "validation": "**Bu seviyeyi nasıl geçerim?**\n\n-   İki veya daha fazla dansçının özellikleri değişmelidir.\n\n_Bu seviye 7 ölçüden sonra biter._"
         },
         "Dance_Party_11": {
-          "validation": "**Bu seviyeyi nasıl geçerim?**\n\n-   Yaratıcı olmanız yeterli!\n\n_Bu seviye 8 ölçüden sonra biter._"
+          "validation": "**Bu seviyeyi nasıl geçerim?**\n\n-   Yaratıcı olmanız yeterli!\n\n_Bu seviye 7 ölçüden sonra biter._"
         },
         "Dance_Party_11_5": {
-          "validation": "**Bu seviyeyi nasıl geçerim?**\n\n-   Yaratıcı olmanız yeterli!\n\n_Bu seviye 8 ölçüden sonra biter._"
+          "validation": "**Bu seviyeyi nasıl geçerim?**\n\n-   Yaratıcı olmanız yeterli!\n\n_Bu seviye 7 ölçüden sonra biter._"
         },
         "Dance_Party_11b": {
-          "validation": "**Bu seviyeyi nasıl geçerim?**\n\n-   Sol oka bastığınızda Robota bir dans hareketi yaptırmak için `sol oka basıldığında` bloğunu kullanın.\n\n_Bu seviye 8 ölçüden sonra biter._"
+          "validation": "**Bu seviyeyi nasıl geçerim?**\n\n-   `sol oka basıldığında` bloğunu kullanarak Robota bir dans hareketi yaptırmak için sol oku kullanın.\n\n_Bu seviye 7 ölçüden sonra biter._"
         },
         "Dance_Party_extras_alternate_2019": {
           "alternate": "Alternatif blok \"Dansçılar\" kategorisindedir."
@@ -694,10 +694,10 @@
           "voyage_aquatic_10a": "**Deniz Işıklarını** ![](https://images.code.org/471b33234222ddffb463aeb65de6b371-image-1539183353423.net-resizeimage.png) görüyor musun? Okyanus Anıtını geçmek için bunları bir koşulla birlikte nasıl kullanabilirsin?"
         },
         "HOC 2018 Level_7a": {
-          "aquatic7": "Sağa dönüşler için \"Eğer\" bloğunu kullanabilirsiniz."
+          "aquatic7": "Sağa dönüşlerde yardım için \"Eğer\" bloğunu kullanabilirsiniz."
         },
         "HOC 2018 Level_9b": {
-          "voyage_aquatic_9a": "Ne kadar güzel bir mercan resifi! Mavi mercan gidilecek **sağ** yoldur, kırmızı mercanın **solda** olmadığına emin ol!"
+          "voyage_aquatic_9a": "Kırmızı ve mavi mercan bloklarını gördün mü?  Mercan bloklarını sağa ve sola dönmek için sana yol gösterici olarak kullan."
         },
         "MC_HOC_2017_01_RETRY": {
           "MC_HOC_2017_01_RETRY_a": "Bir `ileri taşı` bloğunu araç kutusundan çalışma alanına sürükle ve `çalıştığında` bloğuna tuttur.",
@@ -927,8 +927,8 @@
           "courseE_playLab_scaffold1_c": "Sahnenizin arka planını seçmek için \"??? arka planı ayarla\" bloğunu kullanın."
         },
         "OPD-K5-projects-3": {
-          "courseE_playLab_scaffold1_a": "Bloğun kontrol ettiği yönü değiştirmek için \"\\_\\_\\_\\_ oka basıldığında\" olayının açılır menüsünü kullanın.",
-          "courseE_playLab_scaffold1_b": "Her birinin altında taşıyacakları yön olan dört \"\\_\\_\\_\\_ oka basıldığında\" olay bloğunuz olmalı.",
+          "courseE_playLab_scaffold1_a": "Bloğun kontrol ettiği yönü değiştirmek için \"____ oka basıldığında\" olayının açılır menüsünü kullanın.",
+          "courseE_playLab_scaffold1_b": "Her birinin altında taşıyacakları yön olan dört \"____ oka basıldığında\" olay bloğunuz olmalı.",
           "courseE_playLab_scaffold1_c": "Tamamladığınızda kahramanınızı ok tuşlarıyla hareket ettirebilmelisiniz!"
         },
         "OPD-K5-projects-5": {
@@ -949,7 +949,7 @@
         },
         "OPD-K5-variables-6": {
           "courseF_artist_variables4_c": "Sanatçınızın takip edeceği desen bu:\n\n![](https://images.code.org/41ae98c1633755cf4553f90a80e125cf-image-1500325529204.6_hint.gif)",
-          "courseF_artist_variables4_b": "<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"variables_set\">\n        <title name=\"VAR\">length</title>\n        <value name=\"VALUE\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">50</title>\n          </block>\n        </value>\n        <next>\n          <block type=\"controls_repeat_ext\">\n            <value name=\"TIMES\">\n              <block type=\"math_number\">\n                <title name=\"NUM\">3</title>\n              </block>\n            </value>\n            <statement name=\"DO\">\n              <block type=\"controls_repeat_ext\">\n                <value name=\"TIMES\">\n                  <block type=\"math_number\">\n                    <title name=\"NUM\">3</title>\n                  </block>\n                </value>\n                <statement name=\"DO\">\n                  <block type=\"draw_move\">\n                    <title name=\"DIR\">moveForward</title>\n                    <value name=\"VALUE\">\n                      <block type=\"variables_get\">\n                        <title name=\"VAR\">length</title>\n                      </block>\n                    </value>\n                    <next>\n                      <block type=\"draw_turn\">\n                        <title name=\"DIR\">turnLeft</title>\n                        <value name=\"VALUE\">\n                          <block type=\"math_number\">\n                            <title name=\"NUM\">120</title>\n                          </block>\n                        </value>\n                      </block>\n                    </next>\n                  </block>\n                </statement>\n                <next>\n                  <block type=\"jump\">\n                    <title name=\"DIR\">jumpForward</title>\n                    <value name=\"VALUE\">\n                      <block type=\"variables_get\">\n                        <title name=\"VAR\">length</title>\n                      </block>\n                    </value>\n                    <next>\n                      <block type=\"draw_turn\">\n                        <title name=\"DIR\">turnRight</title>\n                        <value name=\"VALUE\">\n                          <block type=\"math_number\">\n                            <title name=\"NUM\">90</title>\n                          </block>\n                        </value>\n                        <next>\n                          <block type=\"jump\">\n                            <title name=\"DIR\">jumpForward</title>\n                            <value name=\"VALUE\">\n                              <block type=\"variables_get\">\n                                <title name=\"VAR\">length</title>\n                              </block>\n                            </value>\n                            <next>\n                              <block type=\"draw_turn\">\n                                <title name=\"DIR\">turnLeft</title>\n                                <value name=\"VALUE\">\n                                  <block type=\"math_number\">\n                                    <title name=\"NUM\">90</title>\n                                  </block>\n                                </value>\n                              </block>\n                            </next>\n                          </block>\n                        </next>\n                      </block>\n                    </next>\n                  </block>\n                </next>\n              </block>\n            </statement>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>",
+          "courseF_artist_variables4_b": "[blockly block][0]",
           "courseF_artist_variables4_a": "Aşağı atlaması için oyuncuyu döndürmeniz, sonrasında ise sonraki üçgeni çizmeye hazır olması için geri döndürmeniz gerekmesi dışında, kodunuz son bulmacadakinden çok da farklı olmayacak."
         },
         "OPD-K5-variables-7": {
@@ -1013,15 +1013,15 @@
           "mc_6_c": "'Tekrarla' döngüsü içine birden fazla blok ekleyebilirsin."
         },
         "Overworld Move to Sheep": {
-          "mc_1_a": "'İlerle' bloğu araç kutusunun üstünde yer alır.",
+          "mc_1_a": "'İlerle' bloğu araç kutusunun en üstünde yer alır.",
           "mc_1_b": "'İlerle' bloklarının ikisinin de 'çalıştığı zaman' bloğuna takıldığından emin olun."
         },
         "Overworld Move to Sheep_2019": {
-          "mc_1_a": "'İlerle' bloğu araç kutusunun üstünde yer alır.",
+          "mc_1_a": "'İlerle' bloğu araç kutusunun en üstünde yer alır.",
           "mc_1_b": "'İlerle' bloklarının ikisinin de 'çalıştığı zaman' bloğuna takıldığından emin olun."
         },
         "Overworld Move to Sheep_2020": {
-          "mc_1_a": "'İlerle' bloğu araç kutusunun üstünde yer alır.",
+          "mc_1_a": "'İlerle' bloğu araç kutusunun en üstünde yer alır.",
           "mc_1_b": "'İlerle' bloklarının ikisinin de 'çalıştığı zaman' bloğuna takıldığından emin olun."
         },
         "Overworld Place Wall": {
@@ -1067,17 +1067,17 @@
           "mc_13_b": "Kodunuzu daha kısaltmak için 'tekrarla' döngülerini kullanın."
         },
         "Overworld Shear Sheep": {
-          "mc_3_a": "'Kırkma' bloğunu kullanmak için kuzu önünde olmalı. Kuzunun önünde misin?",
+          "mc_3_a": "'kırpma' bloğu kuzuyu önünüze getirir. Kuzunun önünde misin?",
           "mc_3_b": "Bakmakta olduğunuz yönü değiştirmen gerekirse, 'dönüş' bloğunu kullan.",
           "mc_3_c": "Hata yapmaktan korkma! Bulmacayı çözmemiş olsan bile neler olduğunu görmek için kodu çalıştır."
         },
         "Overworld Shear Sheep_2019": {
-          "mc_3_a": "'Kırkma' bloğunu kullanmak için kuzu önünde olmalı. Kuzunun önünde misin?",
+          "mc_3_a": "'kırpma' bloğu kuzuyu önünüze getirir. Kuzunun önünde misin?",
           "mc_3_b": "Bakmakta olduğunuz yönü değiştirmen gerekirse, 'dönüş' bloğunu kullan.",
           "mc_3_c": "Hata yapmaktan korkma! Bulmacayı çözmemiş olsan bile neler olduğunu görmek için kodu çalıştır."
         },
         "Overworld Shear Sheep_2020": {
-          "mc_3_a": "'Kırkma' bloğunu kullanmak için kuzu önünde olmalı. Kuzunun önünde misin?",
+          "mc_3_a": "'kırpma' bloğu kuzuyu önünüze getirir. Kuzunun önünde misin?",
           "mc_3_b": "Bakmakta olduğunuz yönü değiştirmen gerekirse, 'dönüş' bloğunu kullan.",
           "mc_3_c": "Hata yapmaktan korkma! Bulmacayı çözmemiş olsan bile neler olduğunu görmek için kodu çalıştır."
         },
@@ -4471,7 +4471,7 @@
         "courseC_starWars_loops8_copy": {
           "course_starWars_loops8_a": "Bu problemi en ufak detaylarına kadar düşünün. Acele etmeyin. İlk denemede çözmek zorunda değilsiniz!",
           "course_starWars_loops8_b": "Bu problemin ilk yarısını bir merdiven basamağı olarak düşünün. Bunu daha önce nasıl çözdün?",
-          "course_starWars_loops8_c": "Bu yolu bir inceleyin.\n\n![](https://images.code.org/7d696dd3b1e6984a1d6041f366d5c96b-image-1510198804955.37.04.png)"
+          "course_starWars_loops8_c": "Bu yolu bir inceleyin.\n\n[][0]"
         },
         "courseC_starWars_loops9": {
           "course_starWars_loops9_b": "Tekrar eden bir döngüye birden fazla blok yerleştirebileceğinizi unutmayın.",
@@ -5156,7 +5156,7 @@
           "courseD_bee_conditionals4_hintVid1": "Başlangıçta yardıma ihtiyacınız mı var? Videoyu izleyin!",
           "courseD_bee_conditionals4_a": "Tüm yolu görebilseniz de, her boşluk üzerinde bir bulut varmış gibi düşünebilirsiniz.",
           "courseD_bee_conditionals4_b": "Her boşluğu nektar için kontrol etmek amacıyla, döngünüzün içerisinde bir 'eğer' ifadesi kullanın.",
-          "courseD_bee_conditionals4_c": "<xml><block type=\"maze_untilBlocked\"/></xml> bloğunu kullanarak ilerleyip çiçek aramalısınız. Çiçek varsa arı ne yapmalıdır?",
+          "courseD_bee_conditionals4_c": "[blockly block][0] bloğunu kullanarak ilerleyip çiçek aramalısınız. Çiçek varsa arı ne yapmalıdır?",
           "courseD_bee_conditionals4_hintVid2": "Bu bulmacayı çözerken yardım almak için bu videoyu izleyin."
         },
         "courseD_bee_conditionals5": {
@@ -6471,7 +6471,7 @@
         },
         "courseE_artist_functions2_copy": {
           "courseD_artist_functions2_b": "Yazdığınız fonksiyon bütün programı değil, sadece kenarları 100 piksel olan bir kare çizme kısmını kapsamalı.",
-          "courseD_artist_functions2_c": "Fonksiyonu, \"çalıştığı zaman\" bloğuna \"çağırmak\" için yeşil \"bir kare çiz\" bloğunu kullanın. Aksi takdirde, fonksiyonunuzdaki kod çalışmayacak.\n\n<xml><block type=\"procedures_callnoreturn\" limit=\"2\"><mutation name=\"draw a square\"/></block></xml>",
+          "courseD_artist_functions2_c": "Fonksiyonu, \"çalıştığı zaman\" bloğuna \"çağırmak\" için yeşil \"bir kare çiz\" bloğunu kullanın. Aksi takdirde, fonksiyonunuzdaki kod çalışmayacak.\n\n[blockly block][0]",
           "courseD_artist_functions2_a": "Programınız şunları yapmalı:\n\n-   Fonksiyon kullan\n-   100 + 75 piksel ilerle\n-   Fonksiyon kullan"
         },
         "courseE_artist_functions3": {
@@ -8750,39 +8750,39 @@
         },
         "CourseD_Dance_2020_01_2021": {
           "validation": "**Bu seviyeyi nasıl geçerim?**\n\n-   Ekranda bir dansçının göründüğünden emin olun.\n\n_Bu seviye 4 ölçüden sonra biter._",
-          "challenges": "**İsteğe Bağlı Zorluks**  -   Choose a different song to play. -   Move your dancer to a new location. -   Make more than one dancer."
+          "challenges": "**İsteğe Bağlı Zorluklar** \n\n-   Çalmak için farklı bir şarkı seçin.\n-   Dansçınızı yeni bir yere yerleştirin\n-   Birden fazla dansçı yarat."
         },
         "CourseD_Dance_2020_02_2021": {
-          "validation": "**Bu seviyeyi nasıl geçerim?** - Dansçı bir hareket yapmak zorundadır. - Bir ok tuşuna basmalısınız. _Bu seviye 4 ölçütten sonra sona erer._",
-          "challenges": "**İsteğe Bağlı Zorluk**  Birden fazla <xml><block type=\"Dancelab_whenKey\"><title name=\"KEY\"></title></block></xml> bloğu kullanın."
+          "validation": "**Bu seviyeyi nasıl geçerim?**\n\n-   Dansçı bir hareket yapmak zorundadır.\n-   Bir ok tuşuna basmalısınız. \n\n_Bu seviye 4 ölçütten sonra sona erer._",
+          "challenges": "**İsteğe Bağlı Zorluk** \n\n Birden fazla <xml><block type=\"Dancelab_whenKey\"><title name=\"KEY\"></title></block></xml> bloğu kullanın."
         },
         "CourseD_Dance_2020_03_2021": {
-          "validation": "**Bu seviyeyi nasıl geçerim?**  -   Her iki dansçı bir hareket yapmak zorundadır. -   Ok tuşlarına basmalısınız.  _Bu seviye 4 ölçütten sonra sona erer._",
+          "validation": "**Bu seviyeyi nasıl geçerim?**\n\n-   Her iki dansçı bir hareket yapmak zorundadır. \n-   Ok tuşlarına basmalısınız.\\\n    _Bu seviye 6 ölçütten sonra sona erer._",
           "challenges": "**İsteğe Bağlı Zorluk**  -   Bir dansçının sol ve sağ ok tuşlarına tepki vermesini sağlayın."
         },
         "CourseD_Dance_2020_04_2021": {
-          "validation": "**Bu seviyeyi nasıl geçerim?**\n\n-   Dansçının 4 ölçü sonra yeni bir harekete geçmesi gerekiyor.\n\n_Seviye 8 ölçüden sonra biter._"
+          "validation": "**Bu seviyeyi nasıl geçerim?**\n\n-   Dansçının 4 ölçü sonra yeni bir harekete geçmesi gerekiyor.\n\n_Seviye 7 ölçüden sonra biter._"
         },
         "CourseD_Dance_2020_05_2021": {
-          "validation": "**Bu seviyeyi nasıl geçerim?**\n\n-   Dansçınızın 6 ölçü sonra, 4 ölçü sonraki dansından farklı dans etmesi gerekiyor.\n\n_Seviye 12 ölçüden sonra biter._",
-          "challenges": "**İsteğe Bağlı Zorluk**  -   Dansçılar her hareket ettiğinde arka planı değiştirin."
+          "validation": "**Bu seviyeyi nasıl geçerim?**\n\n-   Dansçınızın 6 ölçü sonra, 4 ölçü sonraki dansından farklı dans etmesi gerekiyor.\n\n_Seviye 11 ölçüden sonra biter._",
+          "challenges": "**İsteğe Bağlı Zorluk**  -   Dansçılar hareketler arasınde geçiş yaptığında arka planı değiştirin."
         },
         "CourseD_Dance_2020_06_2021": {
           "validation": "**Bu seviyeyi nasıl geçerim?**  -   Şarkının ilk 4 ölçütünde bir baş dansçı ve bir grup yedek dansçı oluşturun.  _Bu seviye 7 ölçütten sonra sona erer._",
           "challenges": "**İsteğe Bağlı Zorluk**  -   Birden fazla yedek dansçı grubu oluşturun."
         },
         "CourseD_Dance_2020_07_2021": {
-          "validation": "**Bu seviyeyi nasıl geçerim?**  -   Müzik başladıktan sonra en az bir dansçının boyutunu değiştirin.  _Bu seviye 6 ölçütten sonra sona erer._",
-          "challenges": "**İsteğe Bağlı Zorluk**  -   Genişlik veya döndürme gibi diğer özellikleri değiştirerek deneme yapın."
+          "validation": "**Bu seviyeyi nasıl geçerim?**  -   En az bir dansçının boyutunu değiştirin.  _Bu seviye 6 ölçütten sonra sona erer._",
+          "challenges": "**İsteğe Bağlı Zorluk**  -   Genişlik veya dönüş gibi diğer özellikleri değiştirerek deneme yapın."
         },
         "CourseD_Dance_2020_08_2021": {
           "validation": "**Bu seviyeyi nasıl geçerim?**  -   En az bir dansçının renk tonunu değiştirin. _Bu seviye 6 ölçütten sonra sona erer._",
-          "tint_hint": "Dansçılarınızın seçtiğiniz tam renge değişmediğini fark ettiniz mi? Bunun nedeni **renk tonlarının** seçtiğiniz rengin dansçının renkleri ile karıştırmasıdır."
+          "tint_hint": "Dansçılarınızın seçtiğiniz tam renge değişmediğini fark ettiniz mi? Bunun nedeni **renk tonları**  ile seçtiğiniz rengin dansçının renkleri ile karıştırmasıdır."
         },
         "CourseD_Dance_2020_09_2021": {
           "validation": "**Bu seviyeyi nasıl geçerim?**  -   Sadece \"Son\" düğmesine basın!",
-          "repeat_every_ideas": "**Bazı fikirlere mi ihtiyacınız var?**  -   Büyümesini sağlamak için dansçının boyutunu tekrar tekrar değiştirin. -   Bir dansçının dönüşünü sağlamak için art arda bir dansçının dönüşünü değiştirin. -   Bir dansçının ekran boyunca hareket etmesi için art arda bir dansçının yatay veya dikey konumunu değiştirin.  _Ters etki yaratmak için negatif sayıları da kullanabilirsiniz!_",
-          "next_previous": "**İsteğe Bağlı Zorluk**  -   Bu yeni etkinlik bloğunu, dansı `(Rastgele)`, `(Sonraki)` ya da `(Önceki)` olarak ayarlayarak bir dans hareketleri listesinde dolaşmak için de kullanabilirsiniz..     <xml><block type=\"Dancelab_changeMoveEachLR\">     <title name=\"GROUP\">???</title>     <title name=\"MOVE\">\"rand\"</title>     <title name=\"DIR\">-1</title>     </block></xml>"
+          "repeat_every_ideas": "**Bazı fikirlere mi ihtiyacınız var?**  -   Büyümesini sağlamak için dansçının boyutunu tekrar tekrar değiştirin. -   Bir dansçının dönüşünü sağlamak için art arda bir dansçının dönüşünü değiştirin. \n\n _Ters etki yaratmak için negatif sayıları da kullanabilirsiniz!_",
+          "next_previous": "**İsteğe Bağlı Zorluk**  -   Bu yeni etkinlik bloğunu, dans hareketlerini `(Rastgele)`, `(Sonraki)` ya da `(Önceki)` olarak ayarlayarak bir dans hareketleri listesinde dolaşmak için de kullanabilirsiniz..     <xml><block type=\"Dancelab_changeMoveEachLR\">     <title name=\"GROUP\">???</title>     <title name=\"MOVE\">\"rand\"</title>     <title name=\"DIR\">-1</title>     </block></xml>"
         },
         "CourseD_Dance_2020_bonus1_2021": {
           "alternate": "Alternatif blok \"Dansçılar\" kategorisindedir."
@@ -8791,10 +8791,10 @@
           "voyage_aquatic_10a": "**Deniz Işıklarını** ![](https://images.code.org/471b33234222ddffb463aeb65de6b371-image-1539183353423.net-resizeimage.png) görüyor musun? Okyanus Anıtını geçmek için bunları bir koşulla birlikte nasıl kullanabilirsin?"
         },
         "CourseE_HOC 2018 Level_7a_2021": {
-          "aquatic7": "Sağa dönüşler için \"Eğer\" bloğunu kullanabilirsiniz."
+          "aquatic7": "Sağa dönüşlerde yardım için \"Eğer\" bloğunu kullanabilirsiniz."
         },
         "CourseE_HOC 2018 Level_9b_2021": {
-          "voyage_aquatic_9a": "Ne kadar güzel bir mercan resifi! Mavi mercan gidilecek **sağ** yoldur, kırmızı mercanın **solda** olmadığına emin ol!"
+          "voyage_aquatic_9a": "Kırmızı ve mavi mercan bloklarını gördün mü?  Mercan bloklarını sağa ve sola dönmek için sana yol gösterici olarak kullan."
         },
         "CourseF_outbreak1": {
           "step1": "Hareketli nesnelerinizi oluşturmak için aşağıdaki blokları kullanın:\n\n<xml><block type=\"gamelab_makeNumSprites\">\n      <title name=\"ANIMATION_NAME\">\"healthy\"</title>\n      <value name=\"NUM\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">10</title>\n        </block>\n      </value>\n    </block></xml>\n\n<xml><block type=\"gamelab_makeNumSprites\">\n      <title name=\"ANIMATION_NAME\">\"sick\"</title>\n      <value name=\"NUM\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">1</title>\n        </block>\n      </value>\n    </block></xml>\n\nBu blok, araç kutunuzun **Hareketli Nesneler** kategorisinde yer alır.",
@@ -8891,7 +8891,7 @@
           "mc_6_c": "'Tekrarla' döngüsü içine birden fazla blok ekleyebilirsin."
         },
         "Overworld Move to Sheep_2021": {
-          "mc_1_a": "'İlerle' bloğu araç kutusunun üstünde yer alır.",
+          "mc_1_a": "'İlerle' bloğu araç kutusunun en üstünde yer alır.",
           "mc_1_b": "'İlerle' bloklarının ikisinin de 'çalıştığı zaman' bloğuna takıldığından emin olun."
         },
         "Overworld Place Wall_2021": {
@@ -8909,7 +8909,7 @@
           "mc_13_b": "Kodunuzu daha kısaltmak için 'tekrarla' döngülerini kullanın."
         },
         "Overworld Shear Sheep_2021": {
-          "mc_3_a": "'Kırkma' bloğunu kullanmak için kuzu önünde olmalı. Kuzunun önünde misin?",
+          "mc_3_a": "'kırpma' bloğu kuzuyu önünüze getirir. Kuzunun önünde misin?",
           "mc_3_b": "Bakmakta olduğunuz yönü değiştirmen gerekirse, 'dönüş' bloğunu kullan.",
           "mc_3_c": "Hata yapmaktan korkma! Bulmacayı çözmemiş olsan bile neler olduğunu görmek için kodu çalıştır."
         },
@@ -10647,7 +10647,8 @@
           "storyboard_behavior_example": "_Not:_ Bir hareketli nesneye bir davranış vermek için, yeşil davranış bloklarından biri ile bir \"hareketli nesne başlar\" bloğu kullanmanız gerekir, örneğin \"sağa dönme\".\n\n<xml><block type=\"gamelab_addBehaviorSimple\">\n            <value name=\"SPRITE\">\n              <block type=\"gamelab_allSpritesWithAnimation\">\n                <title name=\"ANIMATION\">\"cuteanimals_rooster_hello\"</title>\n              </block>\n            </value>\n            <value name=\"BEHAVIOR\">\n              <block type=\"gamelab_behavior_get\">\n                <mutation></mutation>\n                <title name=\"VAR\" id=\"spinning right\">spinning right</title>\n              </block>\n              </value></block></xml>"
         },
         "helloworld_animals_click": {
-          "hw_no_changes": "Bu seviyede kodun hiçbir kısmını değiştirmenize gerek yok."
+          "hw_no_changes": "Bu seviyede kodun hiçbir kısmını değiştirmenize gerek yok.",
+          "hw_click_sprites": "Program çalışırken hareketli nesnelere tıklayın."
         },
         "helloworld_animals_costumes": {
           "hello_world_costumes": "\"Tıklandığı zaman\" olay bloğunun altına bir \"kostüm değiştir\" bloğu bağlamayı deneyin.\n\n<xml><block type=\"gamelab_spriteClicked\" deletable=\"false\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\" can_disconnect_from_parent=\"false\">\n        <title name=\"ANIMATION\">\"\"cuteanimals_sheep\"</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_setAnimation\">\n        <title name=\"ANIMATION\">\"\"cuteanimals_sheep\"</title>\n        <value name=\"THIS\">\n          <block type=\"gamelab_allSpritesWithAnimation\">\n            <title name=\"ANIMATION\">\"\"cuteanimals_goat_hello\"</title>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block>\n</xml>"
@@ -10675,7 +10676,8 @@
           "storyboard_behavior_example": "_Not:_ Bir hareketli nesneye bir davranış vermek için, yeşil davranış bloklarından biri ile bir \"hareketli nesne başlar\" bloğu kullanmanız gerekir, örneğin \"sağa dönme\".\n\n<xml><block type=\"gamelab_addBehaviorSimple\">\n            <value name=\"SPRITE\">\n              <block type=\"gamelab_allSpritesWithAnimation\">\n                <title name=\"ANIMATION\">\"emoji_05_1\"</title>\n              </block>\n            </value>\n            <value name=\"BEHAVIOR\">\n              <block type=\"gamelab_behavior_get\">\n                <mutation></mutation>\n                <title name=\"VAR\" id=\"spinning right\">spinning right</title>\n              </block>\n              </value></block></xml>"
         },
         "helloworld_emoji_click": {
-          "hw_no_changes": "Bu seviyede kodun hiçbir kısmını değiştirmenize gerek yok."
+          "hw_no_changes": "Bu seviyede kodun hiçbir kısmını değiştirmenize gerek yok.",
+          "hw_click_sprites": "Program çalışırken hareketli nesnelere tıklayın."
         },
         "helloworld_emoji_costumes": {
           "hello_world_costumes": "\"Tıklandığı zaman\" olay bloğunun altına bir \"kostüm değiştir\" bloğu bağlamayı deneyin.\n\n<xml><block type=\"gamelab_spriteClicked\" deletable=\"false\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\" can_disconnect_from_parent=\"false\">\n        <title name=\"ANIMATION\">\"emoji_18_1\"</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_setAnimation\">\n        <title name=\"ANIMATION\">\"emoji_25_1\"</title>\n        <value name=\"THIS\">\n          <block type=\"gamelab_allSpritesWithAnimation\">\n            <title name=\"ANIMATION\">\"emoji_18_1\"</title>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block>\n</xml>"
@@ -10703,7 +10705,8 @@
           "storyboard_behavior_example": "_Not:_ Bir hareketli nesneye bir davranış vermek için, yeşil davranış bloklarından biri ile bir \"hareketli nesne başlar\" bloğu kullanmanız gerekir, örneğin \"sağa dönme\".\n\n<xml><block type=\"gamelab_addBehaviorSimple\">\n            <value name=\"SPRITE\">\n              <block type=\"gamelab_allSpritesWithAnimation\">\n                <title name=\"ANIMATION\">\"face_burger_1\"</title>\n              </block>\n            </value>\n            <value name=\"BEHAVIOR\">\n              <block type=\"gamelab_behavior_get\">\n                <mutation></mutation>\n                <title name=\"VAR\" id=\"spinning right\">spinning right</title>\n              </block>\n              </value></block></xml>"
         },
         "helloworld_food_click": {
-          "hw_no_changes": "Bu seviyede kodun hiçbir kısmını değiştirmenize gerek yok."
+          "hw_no_changes": "Bu seviyede kodun hiçbir kısmını değiştirmenize gerek yok.",
+          "hw_click_sprites": "Program çalışırken hareketli nesnelere tıklayın."
         },
         "helloworld_food_costumes": {
           "hello_world_costumes": "\"Tıklandığı zaman\" olay bloğunun altına bir \"kostüm değiştir\" bloğu bağlamayı deneyin.\n\n<xml><block type=\"gamelab_spriteClicked\" deletable=\"false\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\" can_disconnect_from_parent=\"false\">\n        <title name=\"ANIMATION\">\"face_burger_1\"</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_setAnimation\">\n        <title name=\"ANIMATION\">\"face_taco_1\"</title>\n        <value name=\"THIS\">\n          <block type=\"gamelab_allSpritesWithAnimation\">\n            <title name=\"ANIMATION\">\"face_burger_1\"</title>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block>\n</xml>"
@@ -10731,7 +10734,8 @@
           "storyboard_behavior_example": "_Not:_ Bir hareketli nesneye bir davranış vermek için, yeşil davranış bloklarından biri ile bir \"hareketli nesne başlar\" bloğu kullanmanız gerekir, örneğin \"sağa dönme\".\n\n<xml><block type=\"gamelab_addBehaviorSimple\">\n            <value name=\"SPRITE\">\n              <block type=\"gamelab_allSpritesWithAnimation\">\n                <title name=\"ANIMATION\">\"retrocreature_09_1\"</title>\n              </block>\n            </value>\n            <value name=\"BEHAVIOR\">\n              <block type=\"gamelab_behavior_get\">\n                <mutation></mutation>\n                <title name=\"VAR\" id=\"spinning right\">spinning right</title>\n              </block>\n              </value></block></xml>"
         },
         "helloworld_retro_click": {
-          "hw_no_changes": "Bu seviyede kodun hiçbir kısmını değiştirmenize gerek yok."
+          "hw_no_changes": "Bu seviyede kodun hiçbir kısmını değiştirmenize gerek yok.",
+          "hw_click_sprites": "Program çalışırken hareketli nesnelere tıklayın."
         },
         "helloworld_retro_costumes": {
           "hello_world_costumes": "\"Tıklandığı zaman\" olay bloğunun altına bir \"kostüm değiştir\" bloğu bağlamayı deneyin.\n\n<xml><block type=\"gamelab_spriteClicked\" deletable=\"false\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\" can_disconnect_from_parent=\"false\">\n        <title name=\"ANIMATION\">\"retrocreature_07_1\"</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_setAnimation\">\n        <title name=\"ANIMATION\">\"retrocreature_20_1\"</title>\n        <value name=\"THIS\">\n          <block type=\"gamelab_allSpritesWithAnimation\">\n            <title name=\"ANIMATION\">\"retrocreature_07_1\"</title>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block>\n</xml>"
@@ -10822,39 +10826,39 @@
         },
         "CourseD_Dance_2020_012022": {
           "validation": "**Bu seviyeyi nasıl geçerim?**\n\n-   Ekranda bir dansçının göründüğünden emin olun.\n\n_Bu seviye 4 ölçüden sonra biter._",
-          "challenges": "**İsteğe Bağlı Zorluks**  -   Choose a different song to play. -   Move your dancer to a new location. -   Make more than one dancer."
+          "challenges": "**İsteğe Bağlı Zorluklar** \n\n-   Çalmak için farklı bir şarkı seçin.\n-   Dansçınızı yeni bir yere yerleştirin\n-   Birden fazla dansçı yarat."
         },
         "CourseD_Dance_2020_022022": {
-          "validation": "**Bu seviyeyi nasıl geçerim?** - Dansçı bir hareket yapmak zorundadır. - Bir ok tuşuna basmalısınız. _Bu seviye 4 ölçütten sonra sona erer._",
-          "challenges": "**İsteğe Bağlı Zorluk**  Birden fazla <xml><block type=\"Dancelab_whenKey\"><title name=\"KEY\"></title></block></xml> bloğu kullanın."
+          "validation": "**Bu seviyeyi nasıl geçerim?**\n\n-   Dansçı bir hareket yapmak zorundadır.\n-   Bir ok tuşuna basmalısınız. \n\n_Bu seviye 4 ölçütten sonra sona erer._",
+          "challenges": "**İsteğe Bağlı Zorluk** \n\n Birden fazla <xml><block type=\"Dancelab_whenKey\"><title name=\"KEY\"></title></block></xml> bloğu kullanın."
         },
         "CourseD_Dance_2020_032022": {
-          "validation": "**Bu seviyeyi nasıl geçerim?**  -   Her iki dansçı bir hareket yapmak zorundadır. -   Ok tuşlarına basmalısınız.  _Bu seviye 4 ölçütten sonra sona erer._",
+          "validation": "**Bu seviyeyi nasıl geçerim?**\n\n-   Her iki dansçı bir hareket yapmak zorundadır. \n-   Ok tuşlarına basmalısınız.\\\n    _Bu seviye 6 ölçütten sonra sona erer._",
           "challenges": "**İsteğe Bağlı Zorluk**  -   Bir dansçının sol ve sağ ok tuşlarına tepki vermesini sağlayın."
         },
         "CourseD_Dance_2020_042022": {
-          "validation": "**Bu seviyeyi nasıl geçerim?**\n\n-   Dansçının 4 ölçü sonra yeni bir harekete geçmesi gerekiyor.\n\n_Seviye 8 ölçüden sonra biter._"
+          "validation": "**Bu seviyeyi nasıl geçerim?**\n\n-   Dansçının 4 ölçü sonra yeni bir harekete geçmesi gerekiyor.\n\n_Seviye 7 ölçüden sonra biter._"
         },
         "CourseD_Dance_2020_052022": {
-          "validation": "**Bu seviyeyi nasıl geçerim?**\n\n-   Dansçınızın 6 ölçü sonra, 4 ölçü sonraki dansından farklı dans etmesi gerekiyor.\n\n_Seviye 12 ölçüden sonra biter._",
-          "challenges": "**İsteğe Bağlı Zorluk**  -   Dansçılar her hareket ettiğinde arka planı değiştirin."
+          "validation": "**Bu seviyeyi nasıl geçerim?**\n\n-   Dansçınızın 6 ölçü sonra, 4 ölçü sonraki dansından farklı dans etmesi gerekiyor.\n\n_Seviye 11 ölçüden sonra biter._",
+          "challenges": "**İsteğe Bağlı Zorluk**  -   Dansçılar hareketler arasınde geçiş yaptığında arka planı değiştirin."
         },
         "CourseD_Dance_2020_062022": {
           "validation": "**Bu seviyeyi nasıl geçerim?**  -   Şarkının ilk 4 ölçütünde bir baş dansçı ve bir grup yedek dansçı oluşturun.  _Bu seviye 7 ölçütten sonra sona erer._",
           "challenges": "**İsteğe Bağlı Zorluk**  -   Birden fazla yedek dansçı grubu oluşturun."
         },
         "CourseD_Dance_2020_072022": {
-          "validation": "**Bu seviyeyi nasıl geçerim?**  -   Müzik başladıktan sonra en az bir dansçının boyutunu değiştirin.  _Bu seviye 6 ölçütten sonra sona erer._",
-          "challenges": "**İsteğe Bağlı Zorluk**  -   Genişlik veya döndürme gibi diğer özellikleri değiştirerek deneme yapın."
+          "validation": "**Bu seviyeyi nasıl geçerim?**  -   En az bir dansçının boyutunu değiştirin.  _Bu seviye 6 ölçütten sonra sona erer._",
+          "challenges": "**İsteğe Bağlı Zorluk**  -   Genişlik veya dönüş gibi diğer özellikleri değiştirerek deneme yapın."
         },
         "CourseD_Dance_2020_082022": {
           "validation": "**Bu seviyeyi nasıl geçerim?**  -   En az bir dansçının renk tonunu değiştirin. _Bu seviye 6 ölçütten sonra sona erer._",
-          "tint_hint": "Dansçılarınızın seçtiğiniz tam renge değişmediğini fark ettiniz mi? Bunun nedeni **renk tonlarının** seçtiğiniz rengin dansçının renkleri ile karıştırmasıdır."
+          "tint_hint": "Dansçılarınızın seçtiğiniz tam renge değişmediğini fark ettiniz mi? Bunun nedeni **renk tonları**  ile seçtiğiniz rengin dansçının renkleri ile karıştırmasıdır."
         },
         "CourseD_Dance_2020_092022": {
           "validation": "**Bu seviyeyi nasıl geçerim?**  -   Sadece \"Son\" düğmesine basın!",
-          "repeat_every_ideas": "**Bazı fikirlere mi ihtiyacınız var?**  -   Büyümesini sağlamak için dansçının boyutunu tekrar tekrar değiştirin. -   Bir dansçının dönüşünü sağlamak için art arda bir dansçının dönüşünü değiştirin. -   Bir dansçının ekran boyunca hareket etmesi için art arda bir dansçının yatay veya dikey konumunu değiştirin.  _Ters etki yaratmak için negatif sayıları da kullanabilirsiniz!_",
-          "next_previous": "**İsteğe Bağlı Zorluk**  -   Bu yeni etkinlik bloğunu, dansı `(Rastgele)`, `(Sonraki)` ya da `(Önceki)` olarak ayarlayarak bir dans hareketleri listesinde dolaşmak için de kullanabilirsiniz..     <xml><block type=\"Dancelab_changeMoveEachLR\">     <title name=\"GROUP\">???</title>     <title name=\"MOVE\">\"rand\"</title>     <title name=\"DIR\">-1</title>     </block></xml>"
+          "repeat_every_ideas": "**Bazı fikirlere mi ihtiyacınız var?**  -   Büyümesini sağlamak için dansçının boyutunu tekrar tekrar değiştirin. -   Bir dansçının dönüşünü sağlamak için art arda bir dansçının dönüşünü değiştirin. \n\n _Ters etki yaratmak için negatif sayıları da kullanabilirsiniz!_",
+          "next_previous": "**İsteğe Bağlı Zorluk**  -   Bu yeni etkinlik bloğunu, dans hareketlerini `(Rastgele)`, `(Sonraki)` ya da `(Önceki)` olarak ayarlayarak bir dans hareketleri listesinde dolaşmak için de kullanabilirsiniz..     <xml><block type=\"Dancelab_changeMoveEachLR\">     <title name=\"GROUP\">???</title>     <title name=\"MOVE\">\"rand\"</title>     <title name=\"DIR\">-1</title>     </block></xml>"
         },
         "CourseD_Dance_2020_bonus12022": {
           "alternate": "Alternatif blok \"Dansçılar\" kategorisindedir."
@@ -10880,10 +10884,10 @@
           "voyage_aquatic_10a": "**Deniz Işıklarını** ![](https://images.code.org/471b33234222ddffb463aeb65de6b371-image-1539183353423.net-resizeimage.png) görüyor musun? Okyanus Anıtını geçmek için bunları bir koşulla birlikte nasıl kullanabilirsin?"
         },
         "CourseE_HOC 2018 Level_7a2022": {
-          "aquatic7": "Sağa dönüşler için \"Eğer\" bloğunu kullanabilirsiniz."
+          "aquatic7": "Sağa dönüşlerde yardım için \"Eğer\" bloğunu kullanabilirsiniz."
         },
         "CourseE_HOC 2018 Level_9b2022": {
-          "voyage_aquatic_9a": "Ne kadar güzel bir mercan resifi! Mavi mercan gidilecek **sağ** yoldur, kırmızı mercanın **solda** olmadığına emin ol!"
+          "voyage_aquatic_9a": "Kırmızı ve mavi mercan bloklarını gördün mü?  Mercan bloklarını sağa ve sola dönmek için sana yol gösterici olarak kullan."
         },
         "CourseF_outbreak1_-2022-2": {
           "step1": "Hareketli nesnelerinizi oluşturmak için aşağıdaki blokları kullanın:\n\n<xml><block type=\"gamelab_makeNumSprites\">\n      <title name=\"ANIMATION_NAME\">\"healthy\"</title>\n      <value name=\"NUM\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">10</title>\n        </block>\n      </value>\n    </block></xml>\n\n<xml><block type=\"gamelab_makeNumSprites\">\n      <title name=\"ANIMATION_NAME\">\"sick\"</title>\n      <value name=\"NUM\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">1</title>\n        </block>\n      </value>\n    </block></xml>\n\nBu blok, araç kutunuzun **Hareketli Nesneler** kategorisinde yer alır.",
@@ -10980,7 +10984,7 @@
           "mc_6_c": "'Tekrarla' döngüsü içine birden fazla blok ekleyebilirsin."
         },
         "Overworld Move to Sheep2022": {
-          "mc_1_a": "'İlerle' bloğu araç kutusunun üstünde yer alır.",
+          "mc_1_a": "'İlerle' bloğu araç kutusunun en üstünde yer alır.",
           "mc_1_b": "'İlerle' bloklarının ikisinin de 'çalıştığı zaman' bloğuna takıldığından emin olun."
         },
         "Overworld Place Wall2022": {
@@ -10998,7 +11002,7 @@
           "mc_13_b": "Kodunuzu daha kısaltmak için 'tekrarla' döngülerini kullanın."
         },
         "Overworld Shear Sheep2022": {
-          "mc_3_a": "'Kırkma' bloğunu kullanmak için kuzu önünde olmalı. Kuzunun önünde misin?",
+          "mc_3_a": "'kırpma' bloğu kuzuyu önünüze getirir. Kuzunun önünde misin?",
           "mc_3_b": "Bakmakta olduğunuz yönü değiştirmen gerekirse, 'dönüş' bloğunu kullan.",
           "mc_3_c": "Hata yapmaktan korkma! Bulmacayı çözmemiş olsan bile neler olduğunu görmek için kodu çalıştır."
         },
@@ -12635,10 +12639,12 @@
           "storyboard_behavior_example": "_Not:_ Bir hareketli nesneye bir davranış vermek için, yeşil davranış bloklarından biri ile bir \"hareketli nesne başlar\" bloğu kullanmanız gerekir, örneğin \"sağa dönme\".\n\n<xml><block type=\"gamelab_addBehaviorSimple\">\n            <value name=\"SPRITE\">\n              <block type=\"gamelab_allSpritesWithAnimation\">\n                <title name=\"ANIMATION\">\"space_astronaut_cat\"</title>\n              </block>\n            </value>\n            <value name=\"BEHAVIOR\">\n              <block type=\"gamelab_behavior_get\">\n                <mutation></mutation>\n                <title name=\"VAR\" id=\"spinning right\">spinning right</title>\n              </block>\n              </value></block></xml>"
         },
         "helloworld_food_click_soccer-2022": {
-          "hw_no_changes": "Bu seviyede kodun hiçbir kısmını değiştirmenize gerek yok."
+          "hw_no_changes": "Bu seviyede kodun hiçbir kısmını değiştirmenize gerek yok.",
+          "hw_click_sprites": "Program çalışırken hareketli nesnelere tıklayın."
         },
         "helloworld_food_click_space-2022": {
-          "hw_no_changes": "Bu seviyede kodun hiçbir kısmını değiştirmenize gerek yok."
+          "hw_no_changes": "Bu seviyede kodun hiçbir kısmını değiştirmenize gerek yok.",
+          "hw_click_sprites": "Program çalışırken hareketli nesnelere tıklayın."
         },
         "helloworld_food_costumes_soccer-2022": {
           "hello_world_costumes": "\"Tıklandığı zaman\" olay bloğunun altına bir \"kostüm değiştir\" bloğu bağlamayı deneyin.\n\n<xml><block type=\"gamelab_spriteClicked\" deletable=\"false\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\" can_disconnect_from_parent=\"false\">\n        <title name=\"ANIMATION\">\"soccer_player_2\"</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_setAnimation\">\n        <title name=\"ANIMATION\">\"soccer_player_3\"</title>\n        <value name=\"THIS\">\n          <block type=\"gamelab_allSpritesWithAnimation\">\n            <title name=\"ANIMATION\">\"soccer_player_2\"</title>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block>\n</xml>"
@@ -12671,6 +12677,12 @@
         "helloworld_food_sizes_space-2022": {
           "storyboard_setProp": "Bir hareketli nesnenin boyutunu bir kez ayarlamak için bu bloğu kullanabilirsiniz:\n\n<xml><block type=\"gamelab_spriteClicked\">\n  <field name=\"CONDITION\">\"when\"</field>\n  <value name=\"SPRITE\">\n    <block type=\"gamelab_allSpritesWithAnimation\" can_disconnect_from_parent=\"false\">\n      <field name=\"ANIMATION\">\"space_astronaut_1\"</field>\n    </block>\n  </value>\n  <next>\n    <block type=\"gamelab_setProp\">\n      <field name=\"PROPERTY\">\"scale\"</field>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\" can_disconnect_from_parent=\"false\">\n          <field name=\"ANIMATION\">\"space_astronaut_1\"</field>\n        </block>\n      </value>\n      <value name=\"VAL\">\n        <block type=\"math_number\" can_disconnect_from_parent=\"false\">\n          <field name=\"NUM\">50</field>\n        </block>\n      </value>\n    </block>\n  </next>\n</block></xml>",
           "storyboard_changePropBy": "Hareketli nesnenin boyutunu tekrar tekrar değiştirmek isterseniz (olaylarla) bu bloğu kullanın:\n\n<xml><block type=\"gamelab_spriteClicked\">\n  <field name=\"CONDITION\">\"when\"</field>\n  <value name=\"SPRITE\">\n    <block type=\"gamelab_allSpritesWithAnimation\" can_disconnect_from_parent=\"false\">\n      <field name=\"ANIMATION\">\"space_satellite\"</field>\n    </block>\n  </value>\n  <next>\n    <block type=\"gamelab_changePropBy\">\n      <field name=\"PROPERTY\">\"scale\"</field>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\" can_disconnect_from_parent=\"false\">\n          <field name=\"ANIMATION\">\"space_satellite\"</field>\n        </block>\n      </value>\n      <value name=\"VAL\">\n        <block type=\"math_number\" can_disconnect_from_parent=\"false\">\n          <field name=\"NUM\">10</field>\n        </block>\n      </value>\n    </block>\n  </next>\n</block></xml>"
+        },
+        "helloworld_food_say_soccer-2022": {
+          "hello-world-first-solution-pizza": "Sprite'ın bir şey söylemesini sağlamak için kod bloklarını şu şekilde bağlayın:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\"><next>  <block type=\"gamelab_makeNewSpriteAnon\">\n    <title name=\"ANIMATION_NAME\">\"soccer_player_1\"</title>\n    <value name=\"LOCATION\">\n      <block type=\"gamelab_location_picker\">\n        <title name=\"LOCATION\">{\"x\":200,\"y\":200}</title>\n      </block>\n    </value><next>  <block type=\"gamelab_spriteSay\">\n    <title name=\"SPEECH\">Hello, world!</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"soccer_player_1\"</title>\n      </block>\n    </value>\n  </block></next>\n  </block></next></block>\n</xml>"
+        },
+        "helloworld_food_say_space-2022": {
+          "hello-world-first-solution-pizza": "Sprite'ın bir şey söylemesini sağlamak için kod bloklarını şu şekilde bağlayın:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\"><next>  <block type=\"gamelab_makeNewSpriteAnon\">\n    <title name=\"ANIMATION_NAME\">\"face_pizza_1\"</title>\n    <value name=\"LOCATION\">\n      <block type=\"gamelab_location_picker\">\n        <title name=\"LOCATION\">{\"x\":200,\"y\":200}</title>\n      </block>\n    </value><next>  <block type=\"gamelab_spriteSay\">\n    <title name=\"SPEECH\">Hello, world!</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"face_pizza_1\"</title>\n      </block>\n    </value>\n  </block></next>\n  </block></next></block>\n</xml>"
         }
       }
     }

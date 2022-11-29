@@ -753,9 +753,7 @@
           "type": "Emoticon"
         },
         "how_to_make_a_class_section_on_code_org/courseb/2022": {
-          "name": "Come creare una classe su Code.org",
-          "url": "https://www.youtube.com/watch?v=ebQY8fb2OV4",
-          "type": "Video per l'insegnante"
+          "name": "Come creare una classe su Code.org"
         },
         "pair_programming/courseb/2022": {
           "name": "Programmazione in coppia",
@@ -1520,7 +1518,7 @@
           "type": "Video"
         },
         "video_machine_learning/csd/2022": {
-          "name": "Video: Cos'è l'Apprendimento Automatico (Machine Learning)",
+          "name": "Video - Cos'è l'Apprendimento Automatico (Machine Learning)",
           "url": "https://www.youtube.com/watch?v=OeU5m6vRyCk",
           "type": "Video"
         },
@@ -5279,7 +5277,7 @@
           "type": "Video"
         },
         "video_machine_learning/csd/2021": {
-          "name": "Video: Cos'è l'Apprendimento Automatico (Machine Learning)",
+          "name": "Video - Cos'è l'Apprendimento Automatico (Machine Learning)",
           "url": "https://www.youtube.com/watch?v=OeU5m6vRyCk",
           "type": "Video"
         },

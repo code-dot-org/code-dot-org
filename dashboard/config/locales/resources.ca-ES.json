@@ -254,8 +254,14 @@
         "lesson_plans/coursec/2018": {
           "name": "Plans d'estudi"
         },
+        "code_introduced_1/csd/2018": {
+          "name": "Codi introduït"
+        },
         "lesson_plans_2/csd/2018": {
           "name": "Plans d'estudi"
+        },
+        "code_introduced_3/csd/2018": {
+          "name": "Codi introduït"
         },
         "lesson_plans_5/csd/2018": {
           "name": "Plans d'estudi"
@@ -263,8 +269,14 @@
         "lesson_plans_4/csd/2018": {
           "name": "Plans d'estudi"
         },
+        "code_introduced_2/csd/2018": {
+          "name": "Codi introduït"
+        },
         "lesson_plans_3/csd/2018": {
           "name": "Plans d'estudi"
+        },
+        "code_introduced/csd/2018": {
+          "name": "Codi introduït"
         },
         "lesson_plans_1/csd/2018": {
           "name": "Plans d'estudi"
@@ -293,11 +305,20 @@
         "lesson_plans/coursec/2019": {
           "name": "Plans d'estudi"
         },
+        "code_introduced_1/csd/2019": {
+          "name": "Codi introduït"
+        },
         "lesson_plans_2/csd/2019": {
           "name": "Plans d'estudi"
         },
+        "code_introduced_3/csd/2019": {
+          "name": "Codi introduït"
+        },
         "lesson_plans_5/csd/2019": {
           "name": "Plans d'estudi"
+        },
+        "code_introduced_2/csd/2019": {
+          "name": "Codi introduït"
         },
         "lesson_plans_3/csd/2019": {
           "name": "Plans d'estudi"
@@ -308,14 +329,26 @@
         "lesson_plans/csd/2019": {
           "name": "Plans d'estudi"
         },
+        "code_introduced/csd/2019": {
+          "name": "Codi introduït"
+        },
         "lesson_plans_1/csd/2019": {
           "name": "Plans d'estudi"
+        },
+        "code_introduced_1/csd/2017": {
+          "name": "Codi introduït"
         },
         "lesson_plans_2/csd/2017": {
           "name": "Plans d'estudi"
         },
+        "code_introduced_3/csd/2017": {
+          "name": "Codi introduït"
+        },
         "lesson_plans_5/csd/2017": {
           "name": "Plans d'estudi"
+        },
+        "code_introduced/csd/2017": {
+          "name": "Codi introduït"
         },
         "lesson_plans_1/csd/2017": {
           "name": "Plans d'estudi"
@@ -326,8 +359,16 @@
         "lesson_plans_4/csd/2017": {
           "name": "Plans d'estudi"
         },
+        "code_introduced_2/csd/2017": {
+          "name": "Codi introduït"
+        },
         "lesson_plans_3/csd/2017": {
           "name": "Plans d'estudi"
+        },
+        "list_of_poems_1/poem-art/unversioned": {
+          "name": "",
+          "url": "",
+          "type": ""
         },
         "implementation_guide/coursef/2021": {
           "name": "Guia d'implementació"

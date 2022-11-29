@@ -19,8 +19,27 @@
     },
     "salsa_toy": {
       "fields": {
+        "avocado": {
+          "id": "ავოკადო"
+        },
         "corn": {
           "id": "სიმინდი"
+        },
+        "lime": {
+          "id": "ლაიმი"
+        }
+      }
+    },
+    "poutine_toy": {
+      "fields": {
+        "lobster": {
+          "id": "ომარი"
+        },
+        "bacon": {
+          "id": "ბეკონი"
+        },
+        "meat": {
+          "id": "ხორცი"
         }
       }
     },
@@ -28,6 +47,9 @@
       "fields": {
         "color": {
           "id": "ფერი"
+        },
+        "food": {
+          "id": "საჭმელი"
         }
       }
     },
@@ -40,8 +62,21 @@
     },
     "nutrition": {
       "fields": {
+        "Category": {
+          "id": "კატეგორია"
+        },
         "Description": {
           "id": "აღწერა"
+        }
+      }
+    },
+    "raspado_toy": {
+      "fields": {
+        "strawberry": {
+          "id": "მარწყვი"
+        },
+        "lime": {
+          "id": "ლაიმი"
         }
       }
     },
@@ -54,6 +89,9 @@
     },
     "salad_toy": {
       "fields": {
+        "avocado": {
+          "id": "ავოკადო"
+        },
         "chicken": {
           "id": "ქათამი"
         }
@@ -71,8 +109,14 @@
     },
     "student_alcohol_consumption": {
       "fields": {
+        "school": {
+          "id": "სკოლა"
+        },
         "age": {
           "id": "ასაკი"
+        },
+        "health": {
+          "id": "ჯანმრთელობა"
         }
       }
     },
@@ -117,10 +161,33 @@
         }
       }
     },
+    "safari_toy": {
+      "fields": {
+        "people": {
+          "id": "ადამიანები"
+        },
+        "rhino": {
+          "id": "მარტორქა"
+        },
+        "alligator": {
+          "id": "ალიგატორი"
+        },
+        "trees": {
+          "id": "ხეები"
+        }
+      }
+    },
     "abalone": {
       "fields": {
         "Length": {
           "id": "სიგრძე"
+        }
+      }
+    },
+    "poke_toy": {
+      "fields": {
+        "avocado": {
+          "id": "ავოკადო"
         }
       }
     },
