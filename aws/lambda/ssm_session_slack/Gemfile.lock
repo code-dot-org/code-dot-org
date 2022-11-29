@@ -20,7 +20,7 @@ GEM
     geocoder (1.6.3)
     gli (2.19.2)
     hashie (4.1.0)
-    jmespath (1.4.0)
+    jmespath (1.6.2)
     multipart-post (2.1.1)
     slack-ruby-client (0.15.1)
       faraday (>= 1.0)
