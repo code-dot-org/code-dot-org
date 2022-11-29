@@ -8331,6 +8331,7 @@ en:
           description_audience: ''
           lesson_groups: {}
           name: dlp-csd-overview-2022
+          lessons: {}
         dlp-csd-mod1-2022:
           title: 2022 CS Discoveries Deeper Learning FiT Module
           description: ''
