@@ -2098,7 +2098,7 @@
           "courseE_artist_functions1_b": "זה בסדר שהאמן יחזור על עצמו בציור הקווים כדי לייצר משקפיים."
         },
         "courseE_artist_functions2": {
-          "courseD_artist_functions2_a": "התוכנית שלך זקוקה:\n\n-   להשתמש בפונקציה\n-   לזוז קידמה 100 + 75 פיקסלים\n-   להשתמש בפונקציה"
+          "courseD_artist_functions2_a": "התוכנית שלך זקוקה:\n- להשתמש בפונקציה\n- לזוז קידמה 100 + 75 פיקסלים\n- להשתמש בפונקציה"
         },
         "courseE_artist_functions2_copy": {
           "courseD_artist_functions2_a": "התוכנית שלך זקוקה:\n- להשתמש בפונקציה\n- לזוז קידמה 100 + 75 פיקסלים\n- להשתמש בפונקציה"
@@ -2344,7 +2344,7 @@
           "hint1": "הוסיפו עוד 3 אירועי `כאשר נוגע` כדי לבדוק את כל השילובים האפשריים של מגעים בין דמויות בריאות ובין דמויות נגועות."
         },
         "MC_HOC_2017_01_RETRY_2021": {
-          "MC_HOC_2017_01_RETRY_a": "גררו בלוק \"זוז קדימה\" מארגז הכלים אל סביבת העבודה, וחברו אותו למקומו מתחת לבלוק \"כשהריצה מתחילה\".",
+          "MC_HOC_2017_01_RETRY_a": "גררו בלוק `זוז קדימה` מארגז הכלים אל סביבת העבודה, וחברו אותו למקומו מתחת לבלוק `כשהריצה מתחילה`.",
           "MC_HOC_2017_01_RETRY_b": "אל תשכחו ללחוץ על ״הרץ״ כדי להפעיל את הקוד עבור הסוכן.",
           "MC_HOC_2017_01_RETRY_c": "אחרי שהסוכן יסיים להריץ את הקוד שלו, תוכלו להזיז את השחקן עם מקשי החיצים!"
         },
@@ -3514,10 +3514,10 @@
           "storyboard_changePropBy": "אם תרצו לשנות את גודל הדמות שוב ושוב (דרך אירועים), השתמשו בבלוק הזה:\n\n<xml><block type=\"gamelab_spriteClicked\">\n  <field name=\"CONDITION\">\"when\"</field>\n  <value name=\"SPRITE\">\n    <block type=\"gamelab_allSpritesWithAnimation\" can_disconnect_from_parent=\"false\">\n      <field name=\"ANIMATION\">\"space_satellite\"</field>\n    </block>\n  </value>\n  <next>\n    <block type=\"gamelab_changePropBy\">\n      <field name=\"PROPERTY\">\"scale\"</field>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\" can_disconnect_from_parent=\"false\">\n          <field name=\"ANIMATION\">\"space_satellite\"</field>\n        </block>\n      </value>\n      <value name=\"VAL\">\n        <block type=\"math_number\" can_disconnect_from_parent=\"false\">\n          <field name=\"NUM\">10</field>\n        </block>\n      </value>\n    </block>\n  </next>\n</block></xml>"
         },
         "helloworld_food_say_soccer-2022": {
-          "hello-world-first-solution-pizza": "כדי לגרום לספרייט לומר משהו, חבר את גושי הקוד כך:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\"><next>  <block type=\"gamelab_makeNewSpriteAnon\">\n    <title name=\"ANIMATION_NAME\">\"soccer_player_1\"</title>\n    <value name=\"LOCATION\">\n      <block type=\"gamelab_location_picker\">\n        <title name=\"LOCATION\">{\"x\":200,\"y\":200}</title>\n      </block>\n    </value><next>  <block type=\"gamelab_spriteSay\">\n    <title name=\"SPEECH\">Hello, world!</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"soccer_player_1\"</title>\n      </block>\n    </value>\n  </block></next>\n  </block></next></block>\n</xml>"
+          "hello-world-first-solution-pizza": "כדי לגרום לדמות לומר משהו, חבר את הבלוקים של הקוד כך:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\"><next>  <block type=\"gamelab_makeNewSpriteAnon\">\n    <title name=\"ANIMATION_NAME\">\"soccer_player_1\"</title>\n    <value name=\"LOCATION\">\n      <block type=\"gamelab_location_picker\">\n        <title name=\"LOCATION\">{\"x\":200,\"y\":200}</title>\n      </block>\n    </value><next>  <block type=\"gamelab_spriteSay\">\n    <title name=\"SPEECH\">Hello, world!</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"soccer_player_1\"</title>\n      </block>\n    </value>\n  </block></next>\n  </block></next></block>\n</xml>"
         },
         "helloworld_food_say_space-2022": {
-          "hello-world-first-solution-pizza": "כדי לגרום לספרייט לומר משהו, חבר את גושי הקוד כך:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\"><next>  <block type=\"gamelab_makeNewSpriteAnon\">\n    <title name=\"ANIMATION_NAME\">\"face_pizza_1\"</title>\n    <value name=\"LOCATION\">\n      <block type=\"gamelab_location_picker\">\n        <title name=\"LOCATION\">{\"x\":200,\"y\":200}</title>\n      </block>\n    </value><next>  <block type=\"gamelab_spriteSay\">\n    <title name=\"SPEECH\">Hello, world!</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"face_pizza_1\"</title>\n      </block>\n    </value>\n  </block></next>\n  </block></next></block>\n</xml>"
+          "hello-world-first-solution-pizza": "כדי לגרום לדמות לומר משהו, חבר את הבלוקים של הקוד כך:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\"><next>  <block type=\"gamelab_makeNewSpriteAnon\">\n    <title name=\"ANIMATION_NAME\">\"face_pizza_1\"</title>\n    <value name=\"LOCATION\">\n      <block type=\"gamelab_location_picker\">\n        <title name=\"LOCATION\">{\"x\":200,\"y\":200}</title>\n      </block>\n    </value><next>  <block type=\"gamelab_spriteSay\">\n    <title name=\"SPEECH\">Hello, world!</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"face_pizza_1\"</title>\n      </block>\n    </value>\n  </block></next>\n  </block></next></block>\n</xml>"
         }
       }
     }

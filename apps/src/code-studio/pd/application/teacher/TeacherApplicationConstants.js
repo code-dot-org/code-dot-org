@@ -32,7 +32,23 @@ const styles = {
   },
   red: {
     color: color.red
+  },
+  error: {
+    color: color.red
   }
 };
 
-export {PROGRAM_CSD, PROGRAM_CSP, PROGRAM_CSA, styles};
+function getProgramInfo(program) {
+  switch (program) {
+    case PROGRAM_CSD:
+      return {name: 'CS Discoveries', shortName: 'CSD', minCourseHours: 25};
+    case PROGRAM_CSP:
+      return {name: 'CS Principles', shortName: 'CSP', minCourseHours: 100};
+    case PROGRAM_CSA:
+      return {name: 'CSA', shortName: 'CSA', minCourseHours: 140};
+    default:
+      return {name: 'CS Program', shortName: null, minCourseHours: 0};
+  }
+}
+
+export {PROGRAM_CSD, PROGRAM_CSP, PROGRAM_CSA, styles, getProgramInfo};

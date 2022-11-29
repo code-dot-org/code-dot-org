@@ -1818,7 +1818,7 @@
           "courseE_artist_functions1_b": "Rajzolhatsz egymást fedő vonalakat, hogy elkészítsd a szemüveged."
         },
         "courseE_artist_functions2": {
-          "courseD_artist_functions2_a": "A programodnak kell:\n\n-   függvényt használni\n-   előrehaladni 100 + 75 pixelt\n-   függvényt használni"
+          "courseD_artist_functions2_a": "A programodnak kell:\n- függvényt használni\n- előrehaladni 100 + 75 pixelt\n- függvényt használni"
         },
         "courseE_artist_functions2_2018": {
           "courseD_artist_functions2_a": "A programodnak kell:\n\n-   függvényt használni\n-   előrehaladni 100 + 75 pixelt\n-   függvényt használni"
@@ -3091,7 +3091,7 @@
           "voyage_aquatic_9a": "Micsoda gyönyörű korallzátony! A kék korall jelzi a **jobb** utat, de nehogy **balszerencsét** hozzon az itt hagyott vörös korall!"
         },
         "Function intro Ryan_2021": {
-          "Function_intro_Ryan_a": "A programodon belül többször is meghívhatsz egy függvényt.  A kirakós megoldásához próbáld kétszer meghívni."
+          "Function_intro_Ryan_a": "A programodon belül többször is meghívhatsz egy függvényt.  A feladat megoldásához próbáld kétszer meghívni."
         },
         "MC_HOC_2017_01_RETRY_2021": {
           "MC_HOC_2017_01_RETRY_a": "Húzz egy \"előrelépni\" blokkot az eszköztárból a munkaterületre, és illeszd a helyére az \"futtatáskor\" blokk mögé.",
@@ -3105,33 +3105,33 @@
         },
         "MC_HOC_2017_03_Cole_2021": {
           "MC_HOC_2017_03_Cole_a": "Miután az Agentet a nyomólapra vitted, a nyílgombokkal a játékost az iránytűhöz irányíthatod.",
-          "MC_HOC_2017_03_Cole_b": "Úgy érzed, túl sokáig tart a kódolás?  Próbáld ki az \"ismétlés\" ciklust, és találd ki, hogyan rövidítheted le a folyamatot!"
+          "MC_HOC_2017_03_Cole_b": "Úgy érzed, túl sokáig tart a kódolás?  Próbáld ki az \"ismétleld\" ciklust, és találd ki, hogyan rövidítheted le a folyamatot!"
         },
         "MC_HOC_2017_04POINT5_RYAN_2021": {
-          "MC_HOC_2017_04POINT5_RYAN_b": "Az Agent irányának módosításához használd a \"fordulás jobbra\" blokkot ",
+          "MC_HOC_2017_04POINT5_RYAN_b": "Az Agent irányának módosításához használd a \"fordulj jobbra\" blokkot ",
           "MC_HOC_2017_04POINT5_RYAN_a": "Az Agentnek csak az első nyomólapra kell eljutnia ahhoz, hogy keresztülengedje a baltához Alexet vagy Steve-et."
         },
         "MC_HOC_2017_04_Cole_2021": {
-          "MC_HOC_2017_04_Cole_a": "Az Agentnek 7-szer kell \"előrelépni\" parancsot végrehajtania.  Hogyan használhatsz egy \"ismétlés\" ciklust ennek programozásához?",
+          "MC_HOC_2017_04_Cole_a": "Az Agentnek 7-szer kell az \"előrelépni\" parancsot végrehajtania.  Hogyan kell használnod az \"ismételd\" ciklust ennek programozásához?",
           "MC_HOC_2017_04_Cole_c": "Nyomd meg a \"Futtatás\" gombot. \nA kódot akkor is futtathatod, ha nem helyes.  Futtasd és állítsd vissza a kódot újra és újra, amíg rá nem jössz a hibájára.",
           "MC_HOC_2017_04_Cole_b": "Amikor az Agent eljut a nyomólapra, kinyitja az ajtót a játékos előtt."
         },
         "MC_HOC_2017_05_Cole_2021": {
-          "MC_HOC_2017_05_Cole_a": "Tudtad, hogy egy ciklusba több kóddarabot is helyezhetsz?  A kirakós megoldásához próbálj egy deszkát elhelyezni **és** előremenni egy \"ismétlés\" ciklusban."
+          "MC_HOC_2017_05_Cole_a": "Tudtad, hogy egy ciklusba több kóddarabot is helyezhetsz?  A feladat megoldásához próbálj egy deszkát elhelyezni **és** előremenni egy \"ismételd\" ciklusban."
         },
         "MC_HOC_2017_06_Cole_2021": {
           "MC_HOC_2017_06_Cole_a": "Hányszor fut ez a ciklus?  És hányszor _kellene_ futnia?"
         },
         "MC_HOC_2017_07_Cole_2021": {
-          "MC_HOC_2017_07_Cole_a": "A kirakós megoldásához találd ki, hogy mit csinál az \"út szabaddá tétele\" függvény, és hívd meg annyiszor, amennyiszer szükséges az eszköztár kis zöld \"út szabaddá tétele\" blokkjával.",
-          "MC_HOC_2017_07_Cole_b": "A kirakós megoldásához próbáld keverni a függvénykblokkokat az eszköztár más blokkjaival."
+          "MC_HOC_2017_07_Cole_a": "A feladat megoldásához találd ki, hogy mit csinál a \"tisztítsd meg az ösvényt\" függvény, és hívd meg annyiszor, amennyiszer szükséges az eszköztár kis zöld \"tisztítsd meg az ösvényt\" blokkjával.",
+          "MC_HOC_2017_07_Cole_b": "A feladat megoldásához próbáld keverni a függvénykblokkokat az eszköztár más blokkjaival."
         },
         "MC_HOC_2017_10_RETRY_2021": {
-          "MC_HOC_2017_10_Cole_a": "A kirakós megoldásának megkönnyítéséhez használd a függvényeket!"
+          "MC_HOC_2017_10_Cole_a": "A feladat megoldását a függvények használata nagyon megkönnyíti!"
         },
         "MC_HOC_2017_Ali_2021": {
           "MC_HOC_2017_08_RY_a": "Nyomd meg a \"Futtatás\" gombot. \nA kódot akkor is futtathatod, ha nem helyes.  Futtasd és állítsd vissza a kódot újra és újra, amíg rá nem jössz a hibájára.",
-          "MC_HOC_2017_08_RY_b": "Ezt a kirakóst RENGETEG módon meg lehet oldani.  Próbálj ki néhányat!"
+          "MC_HOC_2017_08_RY_b": "Ezt a feladatot RENGETEG módon meg lehet oldani.  Próbálj ki néhányat!"
         },
         "MC_HOC_2017_FP20x20_2021": {
           "MC_HOC_2017_13_Cole_a": "Próbálj az Agenttel hidakat építtetni, hogy Alex vagy Steve túl tudjanak jutni a térkép szélein."
@@ -3375,8 +3375,8 @@
           "courseC_artist_loops5b_b": "Hogy a fenti mintához hasonlót csinálj, ugyanannyit kell visszafelé menned, mint amennyit előre mész. "
         },
         "courseC_artist_prog2_2021": {
-          "courseC_artist_prog2_a": "Ha használod a 'lépj előre 100 pixelt' blokkot, automatikusan rajzolok egy vonalat.",
-          "courseC_artist_prog2_b": "Baj van a bekanyarodással a sarkon? Használd a 'fordulj jobbra 90 fokot' blokkot!"
+          "courseC_artist_prog2_a": "*\"Ha használod a <xml><block type=\"draw_move_by_constant\"><title name=\"DIR\">moveForward</title><title name=\"VALUE\">100</title></block></xml> blokkot, rajzolok egy vonalat.\"*",
+          "courseC_artist_prog2_b": "Baj van a bekanyarodással a sarkon? Használd a <xml><block type=\"draw_turn_by_constant_dropdown\"><title name=\"DIR\">turnRight</title><title name=\"VALUE\" config=\"45,60,90,120,180\">90</title></block></xml> blokkot!"
         },
         "courseC_artist_prog3_2021": {
           "courseC_artist_prog3_a": "Hogy megrajzold az ablakot, rajzolj egy négyzetet, aminek minden oldala 100 képpont\n\n-   menj előre\n-   fordulj\n-   menj előre\n-   fordulj\n-   menj előre\n-   fordulj\n-   menj előre",

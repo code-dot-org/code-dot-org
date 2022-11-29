@@ -324,6 +324,165 @@
         "helloworld_retro_sizes": {
           "hw_retro_setProp": "Per establir la mida d'un sprite només una vegada, podeu utilitzar aquest bloc:\n\n<xml><block type=\"gamelab_setProp\">\n    <title name=\"PROPERTY\">\"scale\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"retro_purple_burst\"</title>\n      </block>\n    </value>\n    <value name=\"VAL\">\n      <block type=\"math_number\">\n        <title name=\"NUM\">50</title>\n      </block>\n    </value>\n  </block></xml>",
           "hw_retro_changePropBy": "Si voleu canviar la mida d'un sprite una vegada i una altra (amb esdeveniments), utilitzeu aquest bloc:\n\n<xml><block type=\"gamelab_changePropBy\">\n      <title name=\"PROPERTY\">\"scale\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"retrocreature_11_1\"</title>\n        </block>\n      </value>\n      <value name=\"VAL\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">10</title>\n        </block>\n      </value>\n    </block></xml>"
+        },
+        "courseA_artist_loops_challenge2a_2021": {
+          "courseA_artist_loops_challenge2_b": "Quan acabis de muntar una tenda de campanya, `salta` dues vegades per arribar a la següent.",
+          "courseA_artist_loops_challenge2_c": "Hauràs de posar tots els blocs dins d'un bucle per acabar aquest trencaclosques."
+        },
+        "courseA_harvester_seq10_2021": {
+          "courseA_harvester_seq10_a": "No te'n surts? Prova d'escriure primer els passos en un full.",
+          "courseA_harvester_seq10_b": "Has de \"Moure't cap a l'est\" i després \"Moure't cap al nord\". Fes-ho dues vegates. I no t'oblidis de recollir tot el blat!",
+          "courseA_harvester_seq10_c": "Segueix aquest camí per recollir tot el blat."
+        },
+        "courseA_harvester_seq13_2021": {
+          "courseA_bee_seq1_a": "Fes servir aquest bloc per recollir el blat quan la segadora hi arribi.\n\n<xml>\n  <block type=\"harvester_corn\"/>\n</xml>"
+        },
+        "courseA_harvester_seq1_2021": {
+          "courseA_harvester_seq1_a": "Fes servir aquest bloc per recollir el blat quan la segadora el trobi!\n\n<xml>\n  <block type=\"harvester_corn\"/>\n</xml>",
+          "courseA_harvester_seq1_b": "La segadora s'haurà de moure cap a l'est tres vegades per arribar fins el blat. Fes servir aquest bloc:\n\n<xml>\n  <block type=\"maze_moveEast\"/>\n</xml>"
+        },
+        "courseA_harvester_seq2_2021": {
+          "courseA_harvester_seq2_a": "No t'oblidis de fer servir <xml><block type=\"harvester_corn\"/></xml> per recollir el blat!",
+          "courseA_harvester_seq2_b": "Prova d'escriure els passos en un full per trobar la solució."
+        },
+        "courseA_harvester_seq3_2021": {
+          "courseA_harvester_seq3_a": "Has pensat a fer servir aquest bloc?\n\n<xml><block type=\"harvester_corn\"/></xml>",
+          "courseA_harvester_seq3_b": "Digues els passo en veu alta, a veure si t'ajuda a trobar la resposta."
+        },
+        "courseA_harvester_seq4_2021": {
+          "courseA_harvester_seq4_a": "Quants espais hi ha entre la segadora i el blat? Quants blocs hi ha al teu espai de treball?",
+          "courseA_harvester_seq4_b": "Necessites cinc blocs de \"Moure's a l'est\" i un bloc de \"Recollir blat\":\n\n<xml><block type=\"harvester_corn\"/></xml>"
+        },
+        "courseA_harvester_seq5_2021": {
+          "courseA_harvester_seq5_a": "Quin bloc fa que la segadora es mogui en la direcció equivocada?",
+          "courseA_harvester_seq5_b": "Has d'eliminar un bloc.",
+          "courseA_harvester_seq5_c": "Llença aquest bloc a les escombraries!\n\n<xml><block type=\"maze_moveNorth\"/></xml>"
+        },
+        "courseA_harvester_seq6_2021": {
+          "courseA_harvester_seq6_a": "Si no te'n surts, prova de dir els passos en veu alta. Potser t'ajudarà a trobar el camí correcte."
+        },
+        "courseA_harvester_seq7_2021": {
+          "courseA_harvester_seq7_a": "Prova de resoldre el trencaclosques en 2 parts, una part abans de la cantonada i una part després de la cantonada.",
+          "courseA_harvester_seq7_b": "No te'n surts? La segadora ha de seguir aquest camí."
+        },
+        "courseA_harvester_seq8_2021": {
+          "courseA_harvester_seq8_a": "El codi final hauria de tenir **4** blocs de moviment i **2** blocs de recollir."
+        },
+        "courseA_harvester_seq9_2021": {
+          "courseA_harvester_seq9_a": "Executa el codi unes quantes vegades, a veure què passa. On s'atura la segadora?",
+          "courseA_harvester_seq9_b": "No t'oblidis de recollir tot el blat! Necessitaràs **3** blocs de recollir blat.",
+          "courseA_harvester_seq9_c": "Per recollir tot el blat, has de seguir aquest camí."
+        },
+        "courseA_maze_seq10_2021": {
+          "courseA_maze_seq10_a": "Si no et surt, prova d'escriure primer els passos en un full.",
+          "courseA_maze_seq10_b": "T'hauràs de moure en 3 direccions diferents per resoldre aquest trencaclosques."
+        },
+        "courseA_maze_seq1_2021": {
+          "courseA_maze_seq1_a": "Si no aconsegueixes que l'ocell es mogui, assegura't que els blocs estiguin ben encaixats sota <xml>\n  <block type=\"when_run\"/>\n</xml>",
+          "courseA_maze_seq1_b": "L'ocell s'haurà de moure cap a l'oest 3 vegades per arribar al porc. Fes servir aquest bloc:\n\n<xml><block type=\"maze_moveWest\"/></xml>"
+        },
+        "courseA_maze_seq5_2021": {
+          "1": "Prova d'escriure els passos en un full per trobar la solució.",
+          "2": "Hauràs de fer servir aquest bloc:\n\n<xml><block type=\"maze_moveSouth\"/></xml>"
+        },
+        "courseA_maze_seq5a_2021": {
+          "1": "Digues els passos en veu alta, a veure si t'ajuda a trobar la resposta."
+        },
+        "courseA_maze_seq6_2021": {
+          "courseA_maze_seq6_a": "El codi final ha de tenir 3 blocs de moviment.",
+          "courseA_maze_seq6_b": "Si veus que t'encalles, intenta resoldre el trencaclosques en 2 parts, una part abans de la cantonada i una altra després de la cantonada."
+        },
+        "courseA_maze_seq8_2021": {
+          "courseA_maze_seq8_a": "Si veus que t'encalles, prova de dibuixar la imatge en un full per veure com s'ha de moure l'ocell."
+        },
+        "courseB_Scrat_ramp1_2021": {
+          "1": "Si l'Scrat no fa el que vols, assegura't que els dos blocs s'han unit completament i torna a fer clic en \"Executar\".",
+          "2": "No tinguis por d'equivocar-te! Intenta-ho i, si no funciona, prova-ho d'una altra manera!"
+        },
+        "courseB_Scrat_ramp2_2021": {
+          "1": "El teu codi haria de quedar així:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveEast\">\n        <next>\n          <block type=\"maze_moveEast\">\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseB_Scrat_ramp3a_2021": {
+          "1": "El teu codi hauria de quedar així:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveEast\">\n        <next>\n          <block type=\"maze_moveEast\">\n            <next>\n              <block type=\"maze_moveNorth\"/>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseB_Scrat_ramp3b_2021": {
+          "1": "El teu codi hauria de quedar així:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveSouth\">\n        <next>\n          <block type=\"maze_moveEast\">\n            <next>\n              <block type=\"maze_moveEast\"/>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseB_Scrat_ramp4a_2021": {
+          "1": "El teu codi hauria de quedar així:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveEast\">\n        <next>\n          <block type=\"maze_moveEast\">\n            <next>\n              <block type=\"maze_moveSouth\"/>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseB_Scrat_ramp5a_2021": {
+          "1": "El teu codi hauria de quedar així:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveWest\">\n        <next>\n          <block type=\"maze_moveWest\">\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseB_artist_loops2_2021": {
+          "courseB_artist_loops2_a": "Si vols que el bucle es repeteixi més de 4 vegades, pots canviar el número que hi ha a la part superior del bloc.",
+          "courseB_artist_loops2_b": "Primer pova d'executar el codi per veure on acaba l'artista."
+        },
+        "courseB_artist_loops3_2021": {
+          "courseB_artist_loops3_a": "Recorda fer servir un bucle de `repetició` <xml><block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">???</title>\n  </block></xml> per millorar el codi!",
+          "courseB_artist_loops3_b": "L'artista voldrà anar cap al sud per dibuixar aquesta línia."
+        },
+        "courseB_artist_loops4_2021": {
+          "courseB_artist_loops4_a": "El bloc de salt et permet avançar sense dibuixar una línia.",
+          "courseB_artist_loops4_b": "Hauràs d'afegir un bloc dins del bucle de repetició per resoldre aquest trencaclosques.",
+          "courseB_artist_loops4_c": "No t'oblidis de canbiar el número de vegades que es repeteix el bucle."
+        },
+        "courseB_artist_loops5_2021": {
+          "courseB_artist_loops5_a": "Arrossega un bloc de `repetició` <xml><block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">???</title>\n  </block></xml> i després fica-hi altres blocs a dins. Quants cops ho has de repetir?"
+        },
+        "courseB_artist_loops6_2021": {
+          "courseB_artist_loops6_b": "Prova a escriure els moviments en un full i busca-hi un patró."
+        },
+        "courseB_artist_loops7_2021": {
+          "courseB_artist_loops7_a": "Aquest repte fa servir **4** bucles, un darrere l'altre!"
+        },
+        "courseB_collector_loops10_2021": {
+          "courseB_collector_loops10_a": "Si no tens clar on has de col·locar els bucles de `repetició`, escriu el codi pas per pas i busca un patró.",
+          "courseB_collector_loops10_b": "Prova a escriure els moviments en un full i busca-hi un patró."
+        },
+        "courseB_collector_loops2_2021": {
+          "courseB_collector_loops2_a": "Per poder recollir els tresors, t'hauràs de moure.",
+          "courseB_collector_loops2_b": "Quan arribis a un lloc on hi ha un tresor, fes servir el bloc <xml><block type=\"collector_collect\"/></xml> per recollir-lo."
+        },
+        "courseB_collector_loops3_2021": {
+          "courseB_collector_prog3_a": "Fes servir un bloc <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">5</title></block></xml> per recollir el tresor.",
+          "courseB_collector_prog3_b": "Recorda que pots posar més d'un bloc dins d'un bucle de repetició."
+        },
+        "courseB_collector_loops4_2021": {
+          "courseB_collector_loops4_a": "Fes servir el botó de pas per descobrir on no funcionen les coses.",
+          "courseB_collector_loops4_b": "Per canviar la distància que recorre la Laurel, canvia el número de vegades que es repeteix el bucle.",
+          "courseB_collector_loops4_c": "La Laurel ha de caminar cap abaix i recollir el tresor un cop acabi el bucle de \"repetir\" <xml><block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">???</title>\n  </block></xml>!"
+        },
+        "courseB_collector_loops5_2021": {
+          "courseB_collector_loops5_a": "Fes servir més d'un bucle per acabar la missió.",
+          "courseB_collector_loops5_b": "Executa el codi un parell de vegades per veure què passa."
+        },
+        "courseB_collector_loops6_2021": {
+          "courseB_collector_loops6_a": "No tens clar on comencen a anar malament les coses? Fes servir el botó de \"Pas\" per executar el programa bloc per bloc.",
+          "courseB_collector_loops6_b": "Pots canviar quantes vegades s'executa el bucle de repetició fent clic en el \"3· i escollint un altre número.",
+          "courseB_collector_loops6_c": "Per resoldre aquest trencaclosques, et hauràs de fer servir 3 bucles de \"repetició\" <xml><block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">???</title>\n  </block></xml>.",
+          "courseB_collector_loops6_d": "Si no te'n surts, prova de dividir el trencaclosques en 3 peces."
+        },
+        "courseB_collector_loops7_2021": {
+          "courseB_collector_loops7_a": "Si estàs tenint problemes per resoldre el trencaclosques, prova de dibuixar-lo en un full per trobar la solució.",
+          "courseB_collector_loops7_b": "Et faran falta 3 bucles de repetició per resoldre aquest trencaclosques, i no t'oblidis del tresor addicional que hi ha al final!"
+        },
+        "courseB_collector_loops8_2021": {
+          "courseB_collector_loops8_challenge_a": "Si no tens clar on has de col·locar els bucles de repetició, escriu el codi pas per pas i busca un patró."
+        },
+        "courseB_collector_loops9_2021": {
+          "courseB_collector_loops9_a": "Et sembla massa difícil? Divideix-lo en 3 problemes petits per fer-ho més fàcil.",
+          "courseB_collector_loops9_b": "Per aquesta solució necessitaràs 3 bucles de repetició, un darrere de l'altre."
+        },
+        "courseB_collector_loops_challenge1_2021": {
+          "courseB_collector_loops_challenge1_b": "Comença fent bucles amb les ordres següents:\n\n<xml>\n  <block type=\"maze_moveSouth\">\n    <next>\n    <block type=\"collector_collect\"></block>\n    </next>\n    </block>\n</xml>",
+          "courseB_collector_loops_challenge1_c": "Mou-te cap a l'est dues vegades entre cada camí.\n\n<xml>\n  <block type=\"maze_moveEast\"><next>\n  <block type=\"maze_moveEast\"></block></next></block>\n  </xml>\n\nNomés necessitaràs 14 blocs per fer-ho. Fes clic per aconseguir una pista més i veure la solució.",
+          "courseB_collector_loops_challenge1_d": "Prova amb això!\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"controls_repeat_simplified\">\n        <title name=\"TIMES\">5</title>\n        <statement name=\"DO\">\n          <block type=\"maze_moveSouth\">\n            <next>\n              <block type=\"collector_collect\"/>\n            </next>\n          </block>\n        </statement>\n        <next>\n          <block type=\"maze_moveEast\">\n            <next>\n              <block type=\"maze_moveEast\">\n                <next>\n                  <block type=\"controls_repeat_simplified\">\n                    <title name=\"TIMES\">5</title>\n                    <statement name=\"DO\">\n                      <block type=\"collector_collect\">\n                        <next>\n                          <block type=\"maze_moveNorth\"/>\n                        </next>\n                      </block>\n                    </statement>\n                    <next>\n                      <block type=\"maze_moveEast\">\n                        <next>\n                          <block type=\"maze_moveEast\">\n                            <next>\n                              <block type=\"controls_repeat_simplified\">\n                                <title name=\"TIMES\">5</title>\n                                <statement name=\"DO\">\n                                  <block type=\"maze_moveSouth\">\n                                    <next>\n                                      <block type=\"collector_collect\"/>\n                                    </next>\n                                  </block>\n                                </statement>\n                              </block>\n                            </next>\n                          </block>\n                        </next>\n                      </block>\n                    </next>\n                  </block>\n                </next>\n              </block>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseB_collector_loops_challenge2a_2021": {
+          "courseB_collector_loops_challenge2a_a": "Si alguna cosa falla, intenta depurar-ho. No et rendeixis!",
+          "courseB_collector_loops_challenge2a_b": "Fixa't en aquesta opció per sortir del laberint. Hi veus algun patró que puguis repetir?",
+          "courseB_collector_loops_challenge2a_c": "Per recollir tot el tresor, necessitaràs afegir dos blocs <xml> <block type=\"collector_collect\"/></xml> dins del bucle, o posar el bloc dins del seu propi bloc de `repetició`."
         }
       }
     }

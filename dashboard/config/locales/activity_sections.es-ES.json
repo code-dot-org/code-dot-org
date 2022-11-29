@@ -5830,19 +5830,23 @@
           "name": "Reflexionar"
         },
         "7e073b00-f336-4d89-a848-f79ee9a8bc23": {
-          "name": "Vocabulario"
+          "name": "Vocabulario",
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Mostrar**: Mostrar diapositiva \"Vocabulario\".\n\n-   **Algoritmo** - Una lista de pasos para terminar una tarea.\n-   **Programa** - Un algoritmo que ha sido codificado en algo que puede ser ejecutado por una máquina.\n-   **Programación** - El arte de crear un programa."
         },
         "505c83de-b318-4a7d-9a4b-9da377a5b0d8": {
-          "name": "Introducción"
+          "name": "Introducción",
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Mostrar**: Mostrar diapositiva \"Nuevo Bloque\"\n\n**Comenta:** \\_Laurel la Aventurera necesitará recoger el tesoro sobre el que se encuentra. Nuestro nuevo bloque, \"recoger \", le permitirá hacerlo. \n\nEste nuevo bloque se analizará más a fondo en la actividad puente."
         },
         "f6bf2eb5-a621-45b5-a038-0dbbb36152ee": {
-          "name": "Previsualizar desafíos online como clase"
+          "name": "Previsualizar desafíos online como clase",
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Mostrar**: Mostrar la diapositiva \"Actividad Puente\".\n\n**Comenta:** _Describe el algoritmo que crees que conseguirá que Laurel la Aventurera recoja todo el tesoro._\n\nPide a los alumnos que lo compartan. Observa cuántos alumnos tienen la misma respuesta.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Mostrar**: Mostrar la diapositiva \"Ejemplo de Respuesta\"\n\n![](<https://images.code.org/8e1740662bab87a9e82b3ccd8f44b5ab-code collect.png>)"
         },
         "2780e63f-ba52-459a-9176-4208568b6163": {
           "name": "Recoger tesoros con Laurel",
           "description": "_Laurel la Aventurera_ busca recoger todo el tesoro que pueda. Indica a los alumnos que recorran el rompecabezas para recoger todo lo que puedan. En algunos niveles sólo tendrán que recoger una pieza del tesoro, pero en otros tendrán que recoger todas las piezas del tesoro. ¡Presta atención a las instrucciones para saber qué hacer!"
         },
         "f3c465c8-b7b0-4b73-8afc-5f30c132f35b": {
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Mostrar**: Muestra el vídeo \"La Coleccionista \"",
           "progression_name": "Vídeo: El Coleccionista"
         },
         "581b9960-a83f-4bdd-87d8-7007977e087c": {
@@ -5852,22 +5856,28 @@
           "progression_name": "Desafío"
         },
         "c6479440-7f5b-4d91-829d-92cc5daff4fc": {
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Mostrar**: Muestra la diapositiva \"Nivel 9-11 - Práctica\"",
           "progression_name": "Practica"
         },
         "c6a14661-c9e0-4aab-bf9f-5f90e7210276": {
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Mostrar**: Muestra la diapositiva \"Nivel 12 - Predicción\"",
           "progression_name": "Predicción"
         },
         "c6cca796-344f-48df-a35f-3b1e0613ee0c": {
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Mostrar**: Muestra la diapositiva \"Nivel 13 - Práctica\"",
           "progression_name": "Practica"
         },
         "520f7482-b58c-4d37-94b7-fa8c4d83314b": {
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Mostrar**: Muestra la \"diapositiva Extras de la Lección\".",
           "progression_name": "Lecciones adicionales"
         },
         "4ab4040a-556d-4dfd-9d56-8730be8041ac": {
-          "name": "Reflexión"
+          "name": "Reflexión",
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Mostrar**: Muestra la diapositiva \"Reflexionar\"\n\n**Reflexionar:** _¿Cuándo utilizaste la persistencia en la resolución de los rompecabezas de hoy?_"
         },
         "ea8d0dcc-28b3-440d-b100-c036b74d9499": {
-          "name": "Reflexionar"
+          "name": "Reflexionar",
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Mostrar**: Muestra la diapositiva \"Reflexionar \"\n\n**Reflexión:** _¿Por qué es importante recorrer el código, bloque a bloque, cuando se depura?_"
         },
         "7e945f73-76d3-4b83-817d-2b9af9789dd7": {
           "name": "Vocabulario"
@@ -7188,7 +7198,7 @@
         "f58f45ec-972c-4cfc-80d5-b3fb88621914": {
           "description": "## Ejemplo de Aplicaciones\n\n**Transición:** Envia parejas a Code Studio.",
           "tips": [
-            null
+            "**Opciones para convertir Texto en Voz:** El panel de instrucciones incluye dos opciones que pueden ayudar a la comprensión de los estudiantes.\n\n-   **Texto a Voz** que lee en voz alta las instrucciones para los estudiantes\n-   **Microsoft Immersive Reader** que abre un nuevo panel para las instrucciones y ofrece controles para cambiar el tamaño del texto, el contraste o traducirlo a otro idioma.\n\n[Pulsa aquí para saber más sobre estas opciones](https://support.code.org/hc/en-us/articles/360058843692-How-to-automatically-play-Read-Aloud-instructions-for-students)"
           ]
         },
         "63718979-8aa6-4a18-9058-b3d98348c21a": {
@@ -7964,9 +7974,13 @@
           "description": "Ya sea el cine, la música, el arte, los juegos o cualquier otra opción, tenemos muchos tipos de entretenimiento a nuestro alcance. Hoy vamos a ver cómo la informática desempeña un papel en algunos de estos campos diferentes."
         },
         "56d3bbbd-9eec-4102-8e92-91724e9cdf52": {
+          "description": "**Agrupar:** Coloca a los estudiantes en grupos de tres. Considera la posibilidad de que los estudiantes se agrupen en función de sus intereses comunes, ya que cada grupo explorará un campo de entretenimiento en conjunto.\n\n**Distribuir:** Entrega a cada grupo una copia de la guía de actividad.",
           "tips": [
             null
           ]
+        },
+        "a6630e9d-312a-4f4d-8674-ff84ae43cd2c": {
+          "description": "#### Exploración del Entretenimiento\n\nDurante esta actividad, los grupos de estudiantes realizarán una ligera investigación sobre el papel que desempeñan la informática y la programación en diversos campos del entretenimiento. El objetivo principal de esta actividad es ampliar las perspectivas de los alumnos sobre cómo se puede utilizar la programación para hacer cosas divertidas o entretenidas. Algunos de los campos que los alumnos podrían investigar (como el arte, la animación y los juegos) pueden conectarse directamente con los programas que escribirán más adelante en esta unidad, mientras que otros pueden servir más como inspiración para ver cómo los conocimientos que adquieren aquí pueden aplicarse en diferentes ámbitos.\n\n#### Temas\n\nEn la guía de actividade hay una serie de posibles campos de investigación. Estos campos específicos fueron elegidos de acuerdo con los recursos que se proporcionan en Code Studio, pero puedes hacer que los alumnos busquen en otros campos si lo desean."
         },
         "ed04f320-0cda-418a-a633-200cc4862c9f": {
           "name": "Investigando tu Asunto",
@@ -8077,8 +8091,11 @@
         "11eec8ff-c9ac-49fd-ab5a-816ead35f2f6": {
           "description": "**Compartir:** Deja un tiempo a los alumnos para que piensen individualmente y comenten con un compañero, luego reúne a la clase y escribe sus ideas en la pizarra.",
           "tips": [
-            null
+            "**Objetivo** Ayudar a los alumnos a darse cuenta de que la forma en que nos comunicamos entre nosotros puede ser más informal que la forma en que nos comunicamos con un ordenador. Por ejemplo, la comunicación con un asistente digital requiere un lenguaje y unos comandos precisos, que suelen empezar con \"Hey\" y luego el nombre del dispositivo. Del mismo modo, cuando empecemos a codificar en esta unidad, los alumnos tendrán que utilizar un conjunto preciso de comandos para comunicarse con un ordenador."
           ]
+        },
+        "08c1a6f2-0d76-4eae-95c1-c8e09765d720": {
+          "description": "Para dar instrucciones a un ordenador, necesitamos utilizar un lenguaje que éste entienda. Para hacer nuestras animaciones y juegos, utilizaremos una versión de Javascript que utiliza bloques.  El entorno en el que programaremos se llama Laboratorio de Juegos."
         },
         "c2e73c7f-1d65-41e5-a478-5d92d706d525": {
           "description": "\\*\\*Pregunta del Día: ¿Cómo podemos indicar a un ordenador la manera de dibujar figuras en la pantalla?"
@@ -8087,7 +8104,7 @@
           "name": "Dibujo Sencillo en Laboratorio de Juegos",
           "description": "**Agrupar:** Coloca a los alumnos en parejas para que programen juntos.",
           "tips": [
-            null
+            "La programación en parejas es una gran manera de aumentar la confianza de los estudiantes y fomentar las prácticas de colaboración y comunicación. Puedes leer más sobre la programación por parejas en la [Guía del Plan de Estudios de CSD](https://docs.google.com/document/d/1VUbXHxXqHj5QCb4eSb756KKc7NDzbOLZUE5bPPQmJR8/edit)."
           ]
         },
         "66e1f7f4-3bf6-4450-9e10-3b578599b664": {
@@ -8095,7 +8112,7 @@
         },
         "3639ace8-523d-473d-aa8c-f86d30d7bac4": {
           "tips": [
-            null
+            "**Utilizando los Recursos:** A continuación encontrarás recomendaciones para utilizar los numerosos recursos que se presentan a los alumnos en la lección. Podrías valorar la posibilidad de crear un \"Gráfico de Recursos\" para hacer un seguimiento de estas opciones y ayudar a los alumnos a ser autosuficientes a medida que avanzan en los niveles. \n\n-   **Vídeos:** Se ven en clase, pero los alumnos siempre pueden volver a ellos.\n-   **Pestaña de Ayuda y Consejos:** Esta pestaña contiene todos los vídeos y guías de referencia relevantes para un nivel concreto.\n-   **Guías de Referencia:** Contienen texto y diagramas que explican el contenido. Están pensadas como recursos útiles para los estudiantes, no como lecturas de clase. Son un buen lugar para repasar después de aprender el contenido o cuando los estudiantes se atascan en los niveles. Puedes decidir imprimirlos y tenerlos a disposición de los estudiantes mientras trabajan en los niveles.\n-   **Documentación y Ejemplos:** Al pasar el ratón por encima de un bloque se muestra una breve descripción de lo que hace el bloque. Al pulsar sobre el enlace \"Ver Ejemplos\" se abrirá la documentación de ese bloque. \n-   **Instrucciones de Nivel:** Las instrucciones pueden introducir pequeñas piezas de contenido nuevo. Cada nivel cuenta con una sección \"Haz esto\" que explica lo que los alumnos deben hacer en ese nivel. Conviene establecer desde el principio que es importante leer estas instrucciones, y no sólo la sección \"Haz esto\"."
           ],
           "progression_name": "Introducción al Laboratorio de juegos"
         },
@@ -8108,7 +8125,7 @@
         },
         "5e3a3411-6b46-44fc-aeeb-d8949db8bcfd": {
           "tips": [
-            null
+            "**Opciones para convertir Texto en Voz:** El panel de instrucciones incluye dos opciones que pueden ayudar a la comprensión de los estudiantes.\n\n-   **Texto a Voz** que lee en voz alta las instrucciones para los estudiantes\n-   **Microsoft Immersive Reader** que abre un nuevo panel para las instrucciones y ofrece controles para cambiar el tamaño del texto, el contraste o traducirlo a otro idioma.\n\n[Pulsa aquí para saber más sobre estas opciones](https://support.code.org/hc/en-us/articles/360058843692-How-to-automatically-play-Read-Aloud-instructions-for-students)"
           ],
           "progression_name": "Usar la cuadrícula"
         },
@@ -8121,25 +8138,25 @@
         },
         "7ac34d77-29c1-48f2-83f9-2958ace257d6": {
           "tips": [
-            null
+            "**Facilitando los Niveles de Desarrollo de Conocimientos:** Los niveles de Desarrollo de Conocimientos están diseñados para continuar enseñando nuevos conocimientos y bloques a través de la exploración, el ensayo, el error y el uso de ejemplos trabajados a partir de código pre-suministrado. Los alumnos todavía se están familiarizando con los conceptos de la lección y necesitarán un fuerte apoyo a lo largo de estos niveles para construir confianza, depurar su código y consolidar su comprensión. \n\nConsidera la posibilidad de que los estudiantes completen los niveles de construcción de conocimientos en parejas utilizando **Programación en Parejas**, que hace que los estudiantes utilicen un ordenador e intercambien entre ser un Conductor o un Navegador. Este proceso se destaca en [este vídeo](https://www.youtube.com/watch?v=q7d_JtyCq1A), que puedes mostrar a la clase. Puedes hacer que los alumnos cambien de rol en función de un temporizador, o que cambien cada vez que completen un nivel.\n\n**Profundizando en el Tema:** Para obtener más consejos sobre la programación de niveles, consulta la [Guía de Niveles de Programación de CSD](https://docs.google.com/document/d/1WGywQ25khB6-FB20x6wO9dGVO9_qJlWkuLVLREJS4Jo/preview). Este documento incluye estrategias y mejores prácticas para facilitar los niveles de programación con los estudiantes."
           ],
           "progression_name": "Desarrollo de Habilidades"
         },
         "39e245a3-6023-4437-9b2d-be1302738dcf": {
           "tips": [
-            null
+            "**Facilitando los Niveles de Práctica:** Los niveles de práctica están diseñados para que los alumnos apliquen sus conocimientos de los niveles anteriores y desarrollen fluidez en el uso de los nuevos bloques de código para resolver problemas. Los estudiantes pueden elegir qué niveles de práctica quieren completar, y no es necesario que un estudiante complete cada nivel de práctica antes de continuar.\n\nLos alumnos tienden a estar más comprometidos y a responder mejor cuando tienen una opción auténtica sobre cómo continuar su aprendizaje. Permite que los estudiantes elijan los niveles de práctica según sus intereses y su nivel de comodidad, y considera la posibilidad de ofrecer oportunidades para que los estudiantes demuestren y expliquen sus soluciones a los niveles de práctica que eligieron a toda la clase.\n\n**Profundizando en el Tema:** Para obtener más consejos sobre los niveles de programación, consulta la [Guía de Niveles de Programación de CSD](https://docs.google.com/document/d/1WGywQ25khB6-FB20x6wO9dGVO9_qJlWkuLVLREJS4Jo/preview). Este documento incluye estrategias y mejores prácticas para facilitar los niveles de programación con los alumnos."
           ],
           "progression_name": "Practica"
         },
         "598a2627-2915-46fd-849b-409a7702f66b": {
           "tips": [
-            null
+            "**Facilitando los Niveles de Evaluación:** Los niveles de evaluación contienen una única tarea que requiere la aplicación de los conocimientos y conceptos del nivel para su resolución. Los estudiantes deben completar estos niveles individualmente y puedes usar tu criterio sobre cuánta ayuda externa deben tener los alumnos. Los niveles de evaluación también contienen una rúbrica que se puede utilizar para la evaluación formativa y un cuadro para proporcionar comentarios a los estudiantes - [haga clic aquí para obtener más información sobre el uso de rúbricas y dar retroalimentación a los estudiantes](https://support.code.org/hc/en-us/articles/360035582612-How-do-I-leave-feedback-for-my-students-).\n\n\\*\\*Para obtener más consejos sobre la evaluación del trabajo de los estudiantes, consulte la [Guía de Evaluación del CSD](https://docs.google.com/document/d/1PdGi9HCStRVDoIMKg2p5E4V4i_eN-CVqKgS-1VrZK18/preview)."
           ],
           "progression_name": "Evaluación"
         },
         "d9ef6c27-268b-4f69-83c3-19fb2d607d28": {
           "tips": [
-            null
+            "**Facilitando los Niveles de Desafío:** Los niveles de desafío están diseñados como extensiones de los conceptos y conocimientos que los alumnos adquieren a lo largo de una lección. Los niveles de desafío tienden a centrarse en tareas más abiertas para que los estudiantes las completen, o en oportunidades para combinar varias habilidades de lecciones anteriores en un solo programa.\n\nLos niveles de desafío **no** necesitan ser completados para que los estudiantes cumplan los objetivos principales de una lección. En cambio, todas las tareas de un nivel de desafío están pensadas para complementar y enriquecer los objetivos de aprendizaje de una lección, pero no son necesarias para futuras lecciones. Los alumnos pueden demostrar el dominio de los objetivos de una lección sin completar ninguno de los niveles de desafío.\n\n**Profundizando en el Tema:** Para obtener más consejos sobre los niveles de programación, consulta la [Guía de Niveles de Programación de CSD](https://docs.google.com/document/d/1WGywQ25khB6-FB20x6wO9dGVO9_qJlWkuLVLREJS4Jo/preview). Este documento incluye estrategias y mejores prácticas para facilitar los niveles de programación con los alumnos."
           ],
           "progression_name": "Desafíos"
         },
@@ -9634,11 +9651,13 @@
           "description": "La mayoría de las páginas web que visitamos son creadas por grandes organizaciones que tienen mucha gente trabajando en ellas.  Pero cualquiera puede crear su propia página web personal y publicarla en Internet.  Hoy vamos a ver algunas páginas web personales.  Estas páginas fueron creadas por una sola persona que tenía algo que quería compartir con el mundo."
         },
         "d43801bf-efbb-477d-8bdc-4365121344d0": {
+          "description": "**Agrupar:** Coloca a los alumnos en parejas.\n\n**Distribuir:** Reparte una copia de la guía de actividad a cada alumno.",
           "tips": [
             null
           ]
         },
         "6f6470cd-6589-428d-b3fc-30fbdd935e19": {
+          "description": "**Code Studio:** Pide a los estudiantes que pasen al nivel \"Páginas Web de Ejemplo\" en Code Studio.",
           "progression_name": "Ejemplos de Páginas Web Personales"
         },
         "cd25afa1-2718-46ab-870d-64e47ec1e98f": {
@@ -9696,7 +9715,7 @@
         "77f5dec3-feb5-4b0d-8ced-9dc5e6baf7e6": {
           "description": "**Exponer:** En la parte delantera del aula, escribe el título \"Recursos\" en la pizarra o en un papel de cartel en blanco, dejando espacio para enumerar los distintos recursos que aparecen en la lección.",
           "tips": [
-            null
+            "**Utilización de los Recursos:** A continuación puedes encontrar recomendaciones para utilizar los numerosos recursos que se presentan a los alumnos en la lección. Espera a que los alumnos hayan visto todos estos recursos para repasarlos al final de la lección, pero añádelos a la lista y enseña el uso correcto cuando aparezcan.\n\n-   **Vídeos:** Se ven en clase, pero los alumnos siempre pueden volver a ellos.\n-   **Pestaña de Ayuda y Consejos** Esta pestaña contiene todos los vídeos y guías de referencia relevantes para un nivel concreto.\n-   **Guías de Referencia:** Contienen texto y diagramas que explican el contenido. Están pensadas como recursos útiles para los alumnos, no como lecturas de clase. Son un buen lugar para repasar después de aprender el contenido o cuando los estudiantes se atascan en los niveles. Puedes decidir imprimirlos y tenerlos a disposición de los alumnos mientras trabajan en los niveles.\n-   **Documentación** En la esquina superior derecha del panel de instrucciones hay un enlace a la documentación de Laboratorio Web. Los estudiantes pueden utilizarla para refrescar su memoria sobre las etiquetas importantes introducidas en la unidad.\n-   **Instrucciones de nivel:** Las instrucciones pueden introducir pequeñas partes de contenido nuevo. Cada nivel cuenta con una sección \"Haz esto\" que explica lo que los alumnos deben hacer en ese nivel. Establece desde el principio la idea de que es importante leer estas instrucciones, no sólo la sección \"Haz esto\".\n-   **Consejos Desplegables de Nivel:** Los estudiantes pueden pulsar sobre estos consejos en las áreas de instrucción de las lecciones.\n-   **Herramienta Inspector:** Resalta el código correspondiente a un elemento de la página web cuando se pasa por encima en el Área de Vista Previa."
           ]
         },
         "87f8c6ae-da83-425a-a565-66ffd284b9c8": {
@@ -9714,11 +9733,15 @@
         },
         "c11f205a-d1a7-40e5-a4fc-e47e3a1698a6": {
           "tips": [
-            null
+            "**Utilización de la Herramienta**\nA medida que los alumnos exploran el sitio, asegúrate de que entienden cómo utilizar la herramienta del inspector, los consejos desplegables en la parte derecha del panel de instrucciones y la pestaña \"Ayuda y Consejos\", que les dará acceso al vídeo anterior.\n\n**Opciones de Texto a Voz:** El panel de instrucciones incluye dos opciones que pueden ayudar a la comprensión de los alumnos.\n\n-   **Texto a voz** que lee en voz alta las instrucciones para los alumnos\n-   **Microsoft Immersive Reader**, que abre un nuevo panel para las instrucciones y ofrece controles para cambiar el tamaño del texto, el contraste o traducirlo a otro idioma.\n\n[Pulsa aquí para saber más sobre estas opciones](https://support.code.org/hc/en-us/articles/360058843692-How-to-automatically-play-Read-Aloud-instructions-for-students)"
           ],
           "progression_name": "Explorar HTML"
         },
+        "eb5a7696-af19-4552-bb1b-d937fa3a4d18": {
+          "description": "**Debate sobre HTML**\nDeberías reunir a los alumnos una vez que hayan pasado un par de minutos mirando este nivel. Los temas de debate que aparecen en el nivel deben utilizarse en una estructura estándar de Pensar-Pareja-Compartir.\n\n-   ¿Qué texto aparece tanto en el código como en la página web?\n-   ¿Cómo está comunicando este lenguaje información adicional sobre la forma de representar el texto?\n\nEl objetivo del debate es señalar las características del HTML que los alumnos están observando. Las dos principales conclusiones (reforzadas también en el vídeo posterior) son que HTML utiliza un sistema de etiquetas para enmarcar el contenido e indicar qué es y cómo debe mostrarse."
+        },
         "deb0583d-27f9-418c-84c6-b51da846f056": {
+          "description": "**Vídeo:** Muestra a los alumnos el siguiente vídeo\n\n**Preguntas a tener en cuenta con el vídeo:**\n\n-   ¿Por qué son útiles las etiquetas HTML?\n-   ¿Qué hace la etiqueta de párrafo?",
           "tips": [
             "**Objetivos del Debate**\n\n**Vocabulario Clave:**\n\n-   HTML - Lenguaje de Marcado de Hipertexto, un lenguaje utilizado para crear páginas web\n-   Elemento HTML - Parte de una página web, marcada por una etiqueta de inicio y a menudo cerrada con una etiqueta de fin\n-   Etiqueta HTML - Conjunto especial de caracteres que indica el comienzo y el final de un elemento HTML y el tipo de ese elemento\n\nCuando los alumnos hablen de las etiquetas HTML, asegúrate de que entienden que éstas se utilizan para estructurar, u organizar, el contenido en la pantalla. Hablar de la organización, la estructura o el papel del contenido en la página (título, párrafo, lista, etc.) es más preciso que hablar de aspectos concretos de su apariencia (como el tamaño o el espaciado).\n\nAunque ciertas funciones estructurales pueden asociarse a la apariencia (los títulos son más grandes), HTML no especifica nada en particular sobre la apariencia. Esto permite a los usuarios con diferentes necesidades, como los discapacitados visuales, interactuar con el contenido estructurado de la manera que tenga más sentido para ellos. Más adelante en la unidad, los alumnos aprenderán sobre estilos y CSS, que les permite especificar el tamaño, el color y el espaciado exactos de sus elementos HTML.\n\nLa etiqueta de párrafo separa el texto en párrafos. Puedes seguir esta cuestión preguntando a los alumnos cómo creen que un navegador web para ciegos podría tratar los párrafos. Por ejemplo, mientras que las personas videntes pueden utilizar el espaciado y las nuevas líneas para separar los párrafos, ¿qué debería hacer un lector de pantalla?"
           ],
@@ -9821,7 +9844,7 @@
         },
         "f07ea960-3ec3-4d96-86e0-cc073c17b228": {
           "tips": [
-            null
+            "**Facilitando los Niveles de Desarrollo de Conocimientos:** Los niveles de Desarrollo de Conocimientos están diseñados para continuar enseñando nuevos conocimientos y bloques a través de la exploración, el ensayo, el error y el uso de ejemplos trabajados a partir de código pre-suministrado. Los alumnos todavía se están familiarizando con los conceptos de la lección y necesitarán un fuerte apoyo a lo largo de estos niveles para construir confianza, depurar su código y consolidar su comprensión. "
           ],
           "progression_name": "Desarrollo de Habilidades"
         },
@@ -9840,19 +9863,19 @@
         },
         "91162ef9-2afa-4ddc-b382-2d5bd220fdfb": {
           "tips": [
-            null
+            "**Facilitando los Niveles de Práctica:** Los niveles de práctica están diseñados para que los alumnos apliquen sus conocimientos de los niveles anteriores y desarrollen fluidez en el uso de los nuevos bloques de código para resolver problemas. Los estudiantes pueden elegir qué niveles de práctica quieren completar, y no es necesario que un estudiante complete cada nivel de práctica antes de continuar.\n\nLos alumnos tienden a estar más comprometidos y a responder mejor cuando tienen una opción auténtica sobre cómo continuar su aprendizaje. Permite que los estudiantes elijan los niveles de práctica según sus intereses y su nivel de comodidad, y considera la posibilidad de ofrecer oportunidades para que los estudiantes demuestren y expliquen sus soluciones a los niveles de práctica que eligieron a toda la clase.\n\n**Profundizando en el Tema:** Para obtener más consejos sobre los niveles de programación, consulta la [Guía de Niveles de Programación de CSD](https://docs.google.com/document/d/1WGywQ25khB6-FB20x6wO9dGVO9_qJlWkuLVLREJS4Jo/preview). Este documento incluye estrategias y mejores prácticas para facilitar los niveles de programación con los alumnos."
           ],
           "progression_name": "Practica"
         },
         "20649a32-e25a-48d4-b642-5c62900f9a2b": {
           "tips": [
-            null
+            "**Facilitando los Niveles de Evaluación:** Los niveles de evaluación contienen una única tarea que requiere la aplicación de los conocimientos y conceptos del nivel para su resolución. Los estudiantes deben completar estos niveles individualmente y puedes usar tu criterio sobre cuánta ayuda externa deben tener los alumnos. Los niveles de evaluación también contienen una rúbrica que se puede utilizar para la evaluación formativa y un cuadro para proporcionar comentarios a los estudiantes - [haga clic aquí para obtener más información sobre el uso de rúbricas y dar retroalimentación a los estudiantes](https://support.code.org/hc/en-us/articles/360035582612-How-do-I-leave-feedback-for-my-students-).\n\n\\*\\*Para obtener más consejos sobre la evaluación del trabajo de los estudiantes, consulte la [Guía de Evaluación del CSD](https://docs.google.com/document/d/1PdGi9HCStRVDoIMKg2p5E4V4i_eN-CVqKgS-1VrZK18/preview)."
           ],
           "progression_name": "Evaluación"
         },
         "6c97c37a-209b-4258-84ea-d3dbeecdd625": {
           "tips": [
-            null
+            "**Facilitando los Niveles de Desafío:** Los niveles de desafío están diseñados como extensiones de los conceptos y conocimientos que los alumnos adquieren a lo largo de una lección. Los niveles de desafío tienden a centrarse en tareas más abiertas para que los estudiantes las completen, o en oportunidades para combinar varias habilidades de lecciones anteriores en un solo programa.\n\nLos niveles de desafío **no** necesitan ser completados para que los estudiantes cumplan los objetivos principales de una lección. En cambio, todas las tareas de un nivel de desafío están pensadas para complementar y enriquecer los objetivos de aprendizaje de una lección, pero no son necesarias para futuras lecciones. Los alumnos pueden demostrar el dominio de los objetivos de una lección sin completar ninguno de los niveles de desafío.\n\n**Profundizando en el Tema:** Para obtener más consejos sobre los niveles de programación, consulta la [Guía de Niveles de Programación de CSD](https://docs.google.com/document/d/1WGywQ25khB6-FB20x6wO9dGVO9_qJlWkuLVLREJS4Jo/preview). Este documento incluye estrategias y mejores prácticas para facilitar los niveles de programación con los alumnos."
           ],
           "progression_name": "Desafíos"
         },
@@ -9923,6 +9946,7 @@
           "description": "Los alumnos deben tener la oportunidad de pensar en lo que más les ha gustado de sus páginas.  También puedes permitir que los alumnos muestren formal o informalmente su trabajo al resto de la clase."
         },
         "473ecda6-e252-46f2-a88e-ca95cc87be54": {
+          "name": "Comentarios de Compañeros",
           "description": "Como parte de este proyecto, puedes dar a los estudiantes la oportunidad de hacer comentarios a sus compañeros utilizando el formulario de revisión por pares.  Esto probablemente prolongará el proyecto al menos un día."
         },
         "a767d863-a783-4146-820b-de7958203ba6": {
@@ -10108,7 +10132,7 @@
         "bc957d4e-fb61-42e3-baf0-98aca6e96cf3": {
           "description": "**Distribuir:** Entrega a cada alumno un ejemplar de la Guía del Proyecto.",
           "tips": [
-            null
+            "**Lluvia de Ideas en la Clase:** Antes de iniciar los proyectos individuales, valora la posibilidad de dirigir una lluvia de ideas en la clase sobre cómo podrían ser algunos proyectos de ejemplo que se ajusten a estos criterios. También puedes mostrar uno o dos sitios web de ejemplo para ayudar a inspirar la lluvia de ideas. A partir de estas ideas, los alumnos pueden encontrar más fácil la idea inicial de su proyecto."
           ]
         },
         "62c9aa67-3055-4f6f-a9de-36d3571c1f76": {
@@ -10723,6 +10747,7 @@
         },
         "6d498025-ef17-49e7-ad51-0d964c7bd4ce": {
           "name": "Cómo Funciona la Búsqueda",
+          "description": "**Mostrar:** Ver con la clase el [r video_how_search_works/csd/2022].",
           "progression_name": "Vídeo: Cómo Funciona la Búsqueda"
         },
         "d10dc778-4998-41f7-8121-8d199e21f2f7": {
@@ -10846,9 +10871,13 @@
           "description": "**Agrupar:** Coloca a los alumnos en parejas.  No es necesario que estén en sus grupos de proyecto."
         },
         "ffda900a-8bdf-48b8-a840-e6372047c0b1": {
+          "description": "\\*\\* Mostrar:\\*\\* Muestra las dos preguntas siguientes en la pizarra y pide a los alumnos que encuentren las respuestas en Internet utilizando un motor de búsqueda de su elección o cualquier otro método que utilicen normalmente para investigar.\n\n1.  ¿Cuál fue la primera página web que se creó?\n2.  ¿Cuál es la característica que tiene y que aún no hemos aprendido a hacer?",
           "tips": [
             "Aunque hay muchos lugares a los que los estudiantes podrían acudir para encontrar la respuesta a esta pregunta, lo más probable es que una búsqueda en Google les lleve a un artículo que describe la página que Tim Berners-Lee creó el 6 de agosto de 1991.  La página se compone de un texto sencillo con algunos hipervínculos.\n\n![](https://curriculum.code.org/media/uploads/Screen-Shot-2019-10-18-at-11.58.45-AM.png)"
           ]
+        },
+        "6b9eb1e8-4a21-47a5-ba81-b7fe9615bfe2": {
+          "description": "**Compartir:** Después de dar a los alumnos un tiempo para buscar en Internet, deja que compartan sus respuestas."
         },
         "24046dc9-fcc2-421a-836d-4f984fa7768e": {
           "description": "Aunque la primera página web parece sencilla, tenía algo que nunca se había hecho antes: los enlaces. Los enlaces son lo que hizo especial a la web, porque permiten a la gente moverse fácilmente por Internet. Hoy aprenderás a poner enlaces en tus propias páginas web, para que tu equipo pueda combinar todas tus páginas en un solo sitio web."
@@ -10969,6 +10998,7 @@
         },
         "02053aac-92d9-4d70-a1fa-9e82cbb76686": {
           "name": "Reflexionar: Reflexión final",
+          "description": "**Distribuir:** Entrega una copia de la reflexión del proyecto **a cada estudiante**.\n\nEn la reflexión, los alumnos analizarán tanto el proceso como el producto. Deben identificar los aspectos de la página en sí de los que se sientan orgullosos, así como la forma en que el grupo trabajó en conjunto.  También describirán lo que han aprendido en el transcurso del proyecto.\n\nPide a los estudiantes que vayan a Code Studio para completar una breve encuesta al final de la unidad. Aunque sus respuestas son anónimas, los datos agregados estarán disponibles para ti una vez que al menos cinco estudiantes hayan completado la encuesta.",
           "progression_name": "Encuesta Final de la Unidad"
         },
         "45d6560e-cf16-40cc-b076-b9f90a091668": {
@@ -10983,6 +11013,7 @@
           "name": "Prueba posterior al proyecto"
         },
         "6dcffd20-f9fd-45a2-b864-237a4b513b91": {
+          "name": "Encuesta Fin de Curso",
           "description": "Si esta es la última unidad de Descubrimientos de Informática que está enseñando, pide también a los estudiantes que realicen la encuesta de fin de curso. Consulta el [recurso Instrucciones de CSD](https://docs.google.com/document/d/170NdiEBwcLEsLHQqgPy_zdNKFZfO-rS9aCAFCcEYhzY/edit?usp=sharing) para obtener más información sobre la encuesta de fin de curso y cómo asignar y ver los resultados. "
         },
         "801caf59-c280-4c39-bc79-d24845df960b": {
@@ -11466,13 +11497,13 @@
         },
         "0244527b-aac8-48c8-8c0f-02f3c490b4be": {
           "tips": [
-            null
+            "**Opciones para convertir Texto en Voz:** El panel de instrucciones incluye dos opciones que pueden ayudar a la comprensión de los estudiantes.\n\n-   **Texto a Voz** que lee en voz alta las instrucciones para los estudiantes\n-   **Microsoft Immersive Reader** que abre un nuevo panel para las instrucciones y ofrece controles para cambiar el tamaño del texto, el contraste o traducirlo a otro idioma.\n\n[Pulsa aquí para saber más sobre estas opciones](https://support.code.org/hc/en-us/articles/360058843692-How-to-automatically-play-Read-Aloud-instructions-for-students)"
           ],
           "progression_name": "Crear una Pantalla"
         },
         "73c9926c-51c3-4b0f-969c-b4120379004b": {
           "tips": [
-            null
+            "**Utilizando los Recursos:** A continuación encontrarás recomendaciones para utilizar los numerosos recursos que se presentan a los alumnos en la lección. Podrías valorar la posibilidad de crear un \"Gráfico de Recursos\" para hacer un seguimiento de estas opciones y ayudar a los alumnos a ser autosuficientes a medida que avanzan en los niveles. \n\n-   **Vídeos:** Se ven en clase, pero los alumnos siempre pueden volver a ellos.\n-   **Pestaña de Ayuda y Consejos:** Esta pestaña contiene todos los vídeos y guías de referencia relevantes para un nivel concreto.\n-   **Guías de Referencia:** Contienen texto y diagramas que explican el contenido. Están pensadas como recursos útiles para los estudiantes, no como lecturas de clase. Son un buen lugar para repasar después de aprender el contenido o cuando los estudiantes se atascan en los niveles. Puedes decidir imprimirlos y tenerlos a disposición de los estudiantes mientras trabajan en los niveles.\n-   **Documentación y Ejemplos:** Al pasar el ratón por encima de un bloque se muestra una breve descripción de lo que hace el bloque. Al pulsar sobre el enlace \"Ver Ejemplos\" se abrirá la documentación de ese bloque. \n-   **Instrucciones de Nivel:** Las instrucciones pueden introducir pequeñas piezas de contenido nuevo. Cada nivel cuenta con una sección \"Haz esto\" que explica lo que los alumnos deben hacer en ese nivel. Conviene establecer desde el principio que es importante leer estas instrucciones, y no sólo la sección \"Haz esto\"."
           ],
           "progression_name": "Terminar una pantalla"
         },
@@ -11740,7 +11771,7 @@
         },
         "29b1832f-4872-46da-a270-a41592f155ae": {
           "tips": [
-            null
+            "**Opciones para convertir Texto en Voz:** El panel de instrucciones incluye dos opciones que pueden ayudar a la comprensión de los estudiantes.\n\n-   **Texto a Voz** que lee en voz alta las instrucciones para los estudiantes\n-   **Microsoft Immersive Reader** que abre un nuevo panel para las instrucciones y ofrece controles para cambiar el tamaño del texto, el contraste o traducirlo a otro idioma.\n\n[Pulsa aquí para saber más sobre estas opciones](https://support.code.org/hc/en-us/articles/360058843692-How-to-automatically-play-Read-Aloud-instructions-for-students)"
           ],
           "progression_name": "Configuración"
         },
@@ -11753,7 +11784,7 @@
         },
         "8521baa9-94ef-4752-ad13-09bacfd132d6": {
           "tips": [
-            null
+            "**Facilitando los Niveles de Desarrollo de Conocimientos:** Los niveles de Desarrollo de Conocimientos están diseñados para continuar enseñando nuevos conocimientos y bloques a través de la exploración, el ensayo, el error y el uso de ejemplos trabajados a partir de código pre-suministrado. Los alumnos todavía se están familiarizando con los conceptos de la lección y necesitarán un fuerte apoyo a lo largo de estos niveles para construir confianza, depurar su código y consolidar su comprensión. \n\nConsidera la posibilidad de que los estudiantes completen los niveles de construcción de conocimientos en parejas utilizando **Programación en Parejas**, que hace que los estudiantes utilicen un ordenador e intercambien entre ser un Conductor o un Navegador. Este proceso se destaca en [este vídeo](https://www.youtube.com/watch?v=q7d_JtyCq1A), que puedes mostrar a la clase. Puedes hacer que los alumnos cambien de rol en función de un temporizador, o que cambien cada vez que completen un nivel.\n\n**Profundizando en el Tema:** Para obtener más consejos sobre la programación de niveles, consulta la [Guía de Niveles de Programación de CSD](https://docs.google.com/document/d/1WGywQ25khB6-FB20x6wO9dGVO9_qJlWkuLVLREJS4Jo/preview). Este documento incluye estrategias y mejores prácticas para facilitar los niveles de programación con los estudiantes."
           ],
           "progression_name": "Desarrollo de Habilidades"
         },
@@ -11765,25 +11796,25 @@
         },
         "010e456f-614d-48fe-a5bc-05ba548140ba": {
           "tips": [
-            null
+            "**Utilizando los Recursos:** A continuación encontrarás recomendaciones para utilizar los numerosos recursos que se presentan a los alumnos en la lección. Podrías valorar la posibilidad de crear un \"Gráfico de Recursos\" para hacer un seguimiento de estas opciones y ayudar a los alumnos a ser autosuficientes a medida que avanzan en los niveles. \n\n-   **Vídeos:** Se ven en clase, pero los alumnos siempre pueden volver a ellos.\n-   **Pestaña de Ayuda y Consejos:** Esta pestaña contiene todos los vídeos y guías de referencia relevantes para un nivel concreto.\n-   **Guías de Referencia:** Contienen texto y diagramas que explican el contenido. Están pensadas como recursos útiles para los estudiantes, no como lecturas de clase. Son un buen lugar para repasar después de aprender el contenido o cuando los estudiantes se atascan en los niveles. Puedes decidir imprimirlos y tenerlos a disposición de los estudiantes mientras trabajan en los niveles.\n-   **Documentación y Ejemplos:** Al pasar el ratón por encima de un bloque se muestra una breve descripción de lo que hace el bloque. Al pulsar sobre el enlace \"Ver Ejemplos\" se abrirá la documentación de ese bloque. \n-   **Instrucciones de Nivel:** Las instrucciones pueden introducir pequeñas piezas de contenido nuevo. Cada nivel cuenta con una sección \"Haz esto\" que explica lo que los alumnos deben hacer en ese nivel. Conviene establecer desde el principio que es importante leer estas instrucciones, y no sólo la sección \"Haz esto\"."
           ],
           "progression_name": "Desarrollo de Habilidades"
         },
         "e8a29551-e19b-47bd-9263-f1c1a08575ff": {
           "tips": [
-            null
+            "**Facilitando los Niveles de Práctica:** Los niveles de práctica están diseñados para que los alumnos apliquen sus conocimientos de los niveles anteriores y desarrollen fluidez en el uso de los nuevos bloques de código para resolver problemas. Los estudiantes pueden elegir qué niveles de práctica quieren completar, y no es necesario que un estudiante complete cada nivel de práctica antes de continuar.\n\nLos alumnos tienden a estar más comprometidos y a responder mejor cuando tienen una opción auténtica sobre cómo continuar su aprendizaje. Permite que los estudiantes elijan los niveles de práctica según sus intereses y su nivel de comodidad, y considera la posibilidad de ofrecer oportunidades para que los estudiantes demuestren y expliquen sus soluciones a los niveles de práctica que eligieron a toda la clase.\n\n**Profundizando en el Tema:** Para obtener más consejos sobre los niveles de programación, consulta la [Guía de Niveles de Programación de CSD](https://docs.google.com/document/d/1WGywQ25khB6-FB20x6wO9dGVO9_qJlWkuLVLREJS4Jo/preview). Este documento incluye estrategias y mejores prácticas para facilitar los niveles de programación con los alumnos."
           ],
           "progression_name": "Practica"
         },
         "287099bd-5275-4c84-88bc-f7c5d93e99c8": {
           "tips": [
-            null
+            "**Facilitando los Niveles de Evaluación:** Los niveles de evaluación contienen una única tarea que requiere la aplicación de los conocimientos y conceptos del nivel para su resolución. Los estudiantes deben completar estos niveles individualmente y puedes usar tu criterio sobre cuánta ayuda externa deben tener los alumnos. Los niveles de evaluación también contienen una rúbrica que se puede utilizar para la evaluación formativa y un cuadro para proporcionar comentarios a los estudiantes - [haga clic aquí para obtener más información sobre el uso de rúbricas y dar retroalimentación a los estudiantes](https://support.code.org/hc/en-us/articles/360035582612-How-do-I-leave-feedback-for-my-students-).\n\n\\*\\*Para obtener más consejos sobre la evaluación del trabajo de los estudiantes, consulte la [Guía de Evaluación del CSD](https://docs.google.com/document/d/1PdGi9HCStRVDoIMKg2p5E4V4i_eN-CVqKgS-1VrZK18/preview)."
           ],
           "progression_name": "Evaluación"
         },
         "6b3acaa2-c6c8-40b4-ad1c-f764207be9a2": {
           "tips": [
-            null
+            "**Facilitando los Niveles de Desafío:** Los niveles de desafío están diseñados como extensiones de los conceptos y conocimientos que los alumnos adquieren a lo largo de una lección. Los niveles de desafío tienden a centrarse en tareas más abiertas para que los estudiantes las completen, o en oportunidades para combinar varias habilidades de lecciones anteriores en un solo programa.\n\nLos niveles de desafío **no** necesitan ser completados para que los estudiantes cumplan los objetivos principales de una lección. En cambio, todas las tareas de un nivel de desafío están pensadas para complementar y enriquecer los objetivos de aprendizaje de una lección, pero no son necesarias para futuras lecciones. Los alumnos pueden demostrar el dominio de los objetivos de una lección sin completar ninguno de los niveles de desafío.\n\n**Profundizando en el Tema:** Para obtener más consejos sobre los niveles de programación, consulta la [Guía de Niveles de Programación de CSD](https://docs.google.com/document/d/1WGywQ25khB6-FB20x6wO9dGVO9_qJlWkuLVLREJS4Jo/preview). Este documento incluye estrategias y mejores prácticas para facilitar los niveles de programación con los alumnos."
           ],
           "progression_name": "Desafío"
         },
@@ -12729,7 +12760,7 @@
         },
         "4b1c5fe5-6544-41f1-8b12-60761bb08d95": {
           "tips": [
-            null
+            "**Utilizando los Recursos:** A continuación encontrarás recomendaciones para utilizar los numerosos recursos que se presentan a los alumnos en la lección. Podrías valorar la posibilidad de crear un \"Gráfico de Recursos\" para hacer un seguimiento de estas opciones y ayudar a los alumnos a ser autosuficientes a medida que avanzan en los niveles. \n\n-   **Vídeos:** Se ven en clase, pero los alumnos siempre pueden volver a ellos.\n-   **Pestaña de Ayuda y Consejos:** Esta pestaña contiene todos los vídeos y guías de referencia relevantes para un nivel concreto.\n-   **Guías de Referencia:** Contienen texto y diagramas que explican el contenido. Están pensadas como recursos útiles para los estudiantes, no como lecturas de clase. Son un buen lugar para repasar después de aprender el contenido o cuando los estudiantes se atascan en los niveles. Puedes decidir imprimirlos y tenerlos a disposición de los estudiantes mientras trabajan en los niveles.\n-   **Documentación y Ejemplos:** Al pasar el ratón por encima de un bloque se muestra una breve descripción de lo que hace el bloque. Al pulsar sobre el enlace \"Ver Ejemplos\" se abrirá la documentación de ese bloque. \n-   **Instrucciones de Nivel:** Las instrucciones pueden introducir pequeñas piezas de contenido nuevo. Cada nivel cuenta con una sección \"Haz esto\" que explica lo que los alumnos deben hacer en ese nivel. Conviene establecer desde el principio que es importante leer estas instrucciones, y no sólo la sección \"Haz esto\"."
           ],
           "progression_name": "Personaliza tu Aplicación"
         },
