@@ -250,7 +250,6 @@ def get_i18n_strings(level)
 
       # match any element that contains text
       start_html.xpath('//*[text()[normalize-space()]]').each do |element|
-        puts "element: " + element.text
         i18n_strings['start_html'][element.text] = element.text
       end
     end
