@@ -56,7 +56,7 @@
     "long_instructions": "\r\n# Regular Polygons\r\n\r\nAs of now you have just been drawing ellipses and rectangles. But now there is a new block to help draw other shapes!\r\n<img src=\"https://images.code.org/d1a93722806f1dab50a897dee280b107-image-1566945343071.PNG\" style=\"float:right;width:150px;\">\r\n\r\n# Do This\r\n\r\n* Read the code that makes the the current image.\r\n* Use the `regularPolygon` block to finish the code so it matches the picture on the right.\r\n\r\n",
     "parent_level_id": 19160,
     "name_suffix": "_2021",
-    "map_reference": " /courses/csd-2022/guides/shapes-and-parameters/",
+    "map_reference": "/courses/csd-2022/guides/shapes-and-parameters/",
     "video_key": "csd_gamelab_draw_2",
     "disable_procedure_autopopulate": "false",
     "top_level_procedure_autopopulate": "false",
