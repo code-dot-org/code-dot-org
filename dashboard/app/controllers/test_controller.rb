@@ -253,8 +253,8 @@ class TestController < ApplicationController
     teacher = User.create!(attributes)
 
     form_data = teacher_form_data.merge(
-      first_name: course,
-      last_name: status,
+      first_name: teacher_name,
+      last_name: 'Test',
       program: Pd::Application::TeacherApplication::PROGRAMS[:csp]
     ).to_json
     application = Pd::Application::TeacherApplication.create!(
