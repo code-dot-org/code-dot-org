@@ -414,28 +414,35 @@ module Pd::Application
     end
 
     test 'status changes are logged' do
-      application = build :pd_teacher_application
+      application = build :pd_teacher_application, status: 'incomplete'
       assert_nil application.status_log
 
       application.save!
       assert application.status_log.is_a? Array
-      assert_status_log [{status: 'unreviewed', at: Time.zone.now}], application
+      assert_status_log [{status: 'incomplete', at: Time.zone.now}], application
 
-      # update unrelated field
+      # update related field
       Timecop.freeze 1
-      application.update!(notes: 'some notes')
-      assert_equal Time.zone.now, application.updated_at
-      assert_equal 1, application.status_log.count
-
-      Timecop.freeze 1
-      application.update!(status: 'pending')
+      application.update!(form_data: application.form_data_hash.merge("firstName": 'Garfunkel').to_json)
       assert_status_log(
         [
-          {status: 'unreviewed', at: 2.seconds.ago},
-          {status: 'pending', at: Time.zone.now}
+          {status: 'incomplete', at: 1.second.ago},
+          {status: 'incomplete', at: Time.zone.now}
         ],
         application
       )
+
+      # update unrelated field
+      Timecop.freeze 2
+      application.update!(notes: 'some notes')
+      assert_equal Time.zone.now, application.updated_at
+      assert_equal 2, application.status_log.count
+
+      # update related field
+      Timecop.freeze 3
+      application.update!(status: 'unreviewed')
+      assert_equal Time.zone.now, application.updated_at
+      assert_equal 3, application.status_log.count
     end
 
     test 'setting an auto-email status queues up an email' do
@@ -539,6 +546,7 @@ module Pd::Application
       application_hash = build :pd_teacher_application_hash,
         program: Pd::Application::TeacherApplication::PROGRAMS[:csd],
         csd_which_grades: ['6'],
+        enough_course_hours: options[:enough_course_hours].first,
         previous_yearlong_cdo_pd: ['CS Principles'],
         replace_existing: options[:replace_existing].second,
         committed: options[:committed].first,
@@ -556,6 +564,7 @@ module Pd::Application
         {
           meets_minimum_criteria_scores: {
             csd_which_grades: YES,
+            enough_course_hours: YES,
             committed: YES,
             previous_yearlong_cdo_pd: YES,
             replace_existing: YES,
@@ -578,6 +587,7 @@ module Pd::Application
       application_hash = build :pd_teacher_application_hash,
         program: Pd::Application::TeacherApplication::PROGRAMS[:csp],
         csp_which_grades: ['12'],
+        enough_course_hours: options[:enough_course_hours].first,
         previous_yearlong_cdo_pd: ['CS Discoveries'],
         csp_how_offer: options[:csp_how_offer].last,
         replace_existing: options[:replace_existing].second,
@@ -596,6 +606,7 @@ module Pd::Application
         {
           meets_minimum_criteria_scores: {
             csp_which_grades: YES,
+            enough_course_hours: YES,
             committed: YES,
             previous_yearlong_cdo_pd: YES,
             replace_existing: YES,
@@ -618,7 +629,9 @@ module Pd::Application
       application_hash = build :pd_teacher_application_hash,
         program: Pd::Application::TeacherApplication::PROGRAMS[:csa],
         csa_already_know: options[:csa_already_know].first,
+        csa_phone_screen: options[:csa_phone_screen].first,
         csa_which_grades: ['12'],
+        enough_course_hours: options[:enough_course_hours].first,
         previous_yearlong_cdo_pd: ['CS Principles'],
         csa_how_offer: options[:csa_how_offer].last,
         replace_existing: options[:replace_existing].second,
@@ -637,7 +650,9 @@ module Pd::Application
         {
           meets_minimum_criteria_scores: {
             csa_already_know: YES,
+            csa_phone_screen: YES,
             csa_which_grades: YES,
+            enough_course_hours: YES,
             committed: YES,
             previous_yearlong_cdo_pd: YES,
             replace_existing: YES,
@@ -659,6 +674,7 @@ module Pd::Application
       application_hash = build :pd_teacher_application_hash,
         program: Pd::Application::TeacherApplication::PROGRAMS[:csp],
         csp_which_grades: ['12'],
+        enough_course_hours: options[:enough_course_hours].first,
         previous_yearlong_cdo_pd: ['CS Discoveries'],
         csp_how_offer: options[:csp_how_offer].last,
         replace_existing: options[:replace_existing].second,
@@ -672,6 +688,7 @@ module Pd::Application
         {
           meets_minimum_criteria_scores: {
             csp_which_grades: YES,
+            enough_course_hours: YES,
             committed: YES,
             previous_yearlong_cdo_pd: YES,
             replace_existing: YES,
@@ -689,6 +706,7 @@ module Pd::Application
       application_hash = build :pd_teacher_application_hash,
         program: Pd::Application::TeacherApplication::PROGRAMS[:csd],
         csd_which_grades: %w(11 12),
+        enough_course_hours: options[:enough_course_hours].last,
         previous_yearlong_cdo_pd: ['CS Discoveries'],
         replace_existing: options[:replace_existing].first,
         committed: options[:committed].last,
@@ -706,6 +724,7 @@ module Pd::Application
         {
           meets_minimum_criteria_scores: {
             csd_which_grades: NO,
+            enough_course_hours: NO,
             committed: NO,
             previous_yearlong_cdo_pd: NO,
             replace_existing: NO,
@@ -728,6 +747,7 @@ module Pd::Application
       application_hash = build :pd_teacher_application_hash,
         program: Pd::Application::TeacherApplication::PROGRAMS[:csp],
         csp_which_grades: [options[:csp_which_grades].last],
+        enough_course_hours: options[:enough_course_hours].last,
         previous_yearlong_cdo_pd: 'CS Principles',
         csp_how_offer: options[:csp_how_offer].first,
         replace_existing: options[:replace_existing].first,
@@ -746,6 +766,7 @@ module Pd::Application
         {
           meets_minimum_criteria_scores: {
             csp_which_grades: NO,
+            enough_course_hours: NO,
             committed: NO,
             previous_yearlong_cdo_pd: NO,
             replace_existing: NO,
@@ -768,7 +789,9 @@ module Pd::Application
       application_hash = build :pd_teacher_application_hash,
         program: Pd::Application::TeacherApplication::PROGRAMS[:csa],
         csa_already_know: options[:csa_already_know].last,
+        csa_phone_screen: options[:csa_phone_screen].last,
         csa_which_grades: [options[:csa_which_grades].last],
+        enough_course_hours: options[:enough_course_hours].last,
         previous_yearlong_cdo_pd: 'Computer Science A (CSA)',
         csa_how_offer: options[:csa_how_offer].first,
         replace_existing: options[:replace_existing].first,
@@ -788,6 +811,8 @@ module Pd::Application
           meets_minimum_criteria_scores: {
             csa_already_know: NO,
             csa_which_grades: NO,
+            csa_phone_screen: NO,
+            enough_course_hours: NO,
             committed: NO,
             previous_yearlong_cdo_pd: NO,
             replace_existing: NO,
@@ -921,7 +946,7 @@ module Pd::Application
       incomplete = "Incomplete - Admin email sent on Oct 8"
       Timecop.freeze Date.new(2020, 10, 8) do
         application.stubs(:deliver_email)
-        application.queue_email :principal_approval, deliver_now: true
+        application.queue_email :admin_approval, deliver_now: true
         assert_equal incomplete, application.reload.principal_approval_state
       end
 
@@ -935,7 +960,7 @@ module Pd::Application
       assert_equal 'Not required', application.reload.principal_approval_state
 
       create :pd_principal_approval_application, teacher_application: application, approved: 'Yes'
-      assert_equal 'Complete - Yes', application.reload.principal_approval_state
+      assert application.reload.principal_approval_state.include? 'Complete - Admin said Yes on'
     end
 
     test 'require assigned workshop for registration-related statuses when emails sent by system' do
@@ -1106,76 +1131,76 @@ module Pd::Application
       # If we created a principal email < 5 days ago, we can't send.
       application = create :pd_teacher_application
       application.update!(status: 'awaiting_admin_approval')
-      create :pd_application_email, application: application, email_type: 'principal_approval', created_at: 1.day.ago
+      create :pd_application_email, application: application, email_type: 'admin_approval', created_at: 1.day.ago
       refute application.allow_sending_principal_email?
 
       # If we created a principal email >= 5 days ago, we can send.
       application = create :pd_teacher_application
       application.update!(status: 'awaiting_admin_approval')
-      create :pd_application_email, application: application, email_type: 'principal_approval', created_at: 6.days.ago
+      create :pd_application_email, application: application, email_type: 'admin_approval', created_at: 6.days.ago
       assert application.allow_sending_principal_email?
     end
 
-    test 'test allow_sending_principal_approval_teacher_reminder_email?' do
+    test 'test allow_sending_admin_approval_teacher_reminder_email?' do
       # If we are unreviewed, we cannot send.
       application = create :pd_teacher_application
       application.update!(status: 'unreviewed')
-      create :pd_application_email, application: application, email_type: 'principal_approval', created_at: 6.days.ago
-      refute application.allow_sending_principal_approval_teacher_reminder_email?
+      create :pd_application_email, application: application, email_type: 'admin_approval', created_at: 6.days.ago
+      refute application.allow_sending_admin_approval_teacher_reminder_email?
 
       # If we are awaiting_admin_approval, we can send.
       application = create :pd_teacher_application
       application.update!(status: 'awaiting_admin_approval')
-      create :pd_application_email, application: application, email_type: 'principal_approval', created_at: 6.days.ago
-      assert application.allow_sending_principal_approval_teacher_reminder_email?
+      create :pd_application_email, application: application, email_type: 'admin_approval', created_at: 6.days.ago
+      assert application.allow_sending_admin_approval_teacher_reminder_email?
 
       # If we are pending, we can send.
       application = create :pd_teacher_application
       application.update!(status: 'pending')
-      create :pd_application_email, application: application, email_type: 'principal_approval', created_at: 6.days.ago
-      assert application.allow_sending_principal_approval_teacher_reminder_email?
+      create :pd_application_email, application: application, email_type: 'admin_approval', created_at: 6.days.ago
+      assert application.allow_sending_admin_approval_teacher_reminder_email?
 
       # If we are pending_space_availability, we can't send.
       application = create :pd_teacher_application
       application.update!(status: 'pending_space_availability')
-      create :pd_application_email, application: application, email_type: 'principal_approval', created_at: 6.days.ago
-      refute application.allow_sending_principal_approval_teacher_reminder_email?
+      create :pd_application_email, application: application, email_type: 'admin_approval', created_at: 6.days.ago
+      refute application.allow_sending_admin_approval_teacher_reminder_email?
 
       # If we're no longer unreviewed/pending, we can't send.
       application = create :pd_teacher_application
       application.update!(status: 'accepted')
-      create :pd_application_email, application: application, email_type: 'principal_approval', created_at: 6.days.ago
-      refute application.allow_sending_principal_approval_teacher_reminder_email?
+      create :pd_application_email, application: application, email_type: 'admin_approval', created_at: 6.days.ago
+      refute application.allow_sending_admin_approval_teacher_reminder_email?
 
       # If we created a teacher reminder email any time before, we can't send.
       application = create :pd_teacher_application
-      create :pd_application_email, application: application, email_type: 'principal_approval_teacher_reminder', created_at: 14.days.ago
-      create :pd_application_email, application: application, email_type: 'principal_approval', created_at: 6.days.ago
-      refute application.allow_sending_principal_approval_teacher_reminder_email?
+      create :pd_application_email, application: application, email_type: 'admin_approval_teacher_reminder', created_at: 14.days.ago
+      create :pd_application_email, application: application, email_type: 'admin_approval', created_at: 6.days.ago
+      refute application.allow_sending_admin_approval_teacher_reminder_email?
 
       # If principal approval is not required, we can't send.
       application = create :pd_teacher_application
       application.update!(principal_approval_not_required: true)
-      create :pd_application_email, application: application, email_type: 'principal_approval', created_at: 6.days.ago
-      refute application.allow_sending_principal_approval_teacher_reminder_email?
+      create :pd_application_email, application: application, email_type: 'admin_approval', created_at: 6.days.ago
+      refute application.allow_sending_admin_approval_teacher_reminder_email?
 
       # If we already have a principal response, we can't send.
       application = create :pd_teacher_application
       create :pd_principal_approval_application, teacher_application: application
-      create :pd_application_email, application: application, email_type: 'principal_approval', created_at: 6.days.ago
-      refute application.allow_sending_principal_approval_teacher_reminder_email?
+      create :pd_application_email, application: application, email_type: 'admin_approval', created_at: 6.days.ago
+      refute application.allow_sending_admin_approval_teacher_reminder_email?
 
       # If we created a principal email < 5 days ago, we can't send.
       application = create :pd_teacher_application
       application.update!(status: 'awaiting_admin_approval')
-      create :pd_application_email, application: application, email_type: 'principal_approval', created_at: 1.day.ago
-      refute application.allow_sending_principal_approval_teacher_reminder_email?
+      create :pd_application_email, application: application, email_type: 'admin_approval', created_at: 1.day.ago
+      refute application.allow_sending_admin_approval_teacher_reminder_email?
 
       # If we created a principal email >= 5 days ago, we can send.
       application = create :pd_teacher_application
       application.update!(status: 'awaiting_admin_approval')
-      create :pd_application_email, application: application, email_type: 'principal_approval', created_at: 6.days.ago
-      assert application.allow_sending_principal_approval_teacher_reminder_email?
+      create :pd_application_email, application: application, email_type: 'admin_approval', created_at: 6.days.ago
+      assert application.allow_sending_admin_approval_teacher_reminder_email?
     end
 
     def assert_status_log(expected, application)

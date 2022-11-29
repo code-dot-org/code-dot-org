@@ -915,6 +915,25 @@ VARIABLE & FUNCTION VALIDATION
 /**
  * Updates value of a student variable. Meant to be called every frame, similar to getHelperVars()
  @see [Click here for example level](https://levelbuilder-studio.code.org/levels/42308/)
+ @param {string} variableName - the name of the variable we want to track
+ @example
+ if(World.frameCount == 1) {
+  setFailTime(250);
+  setDelayTime(150);
+  setupPrevious();
+
+  addCriteria(function() {
+    //Check we clicked the sprite and the output variable changed
+    return checkThisSpriteClickedThisFrame(spriteIds[0]) && checkStudentVariableChangedThisFrame("output");
+  }, "cscFunctionsNoFunctionBlock");
+
+}
+getHelperVars();
+drawHandsOnUnclickedSprites(0);
+trackStudentVariable("output"); // <--------
+check();
+updateStudentVariable("output");
+updatePrevious();
  */
 function trackStudentVariable(variableName) {
   if(!validationProps.variableValues) {
@@ -958,6 +977,25 @@ function trackStudentVariable(variableName) {
 /**
  * Keeps track of previous frame variable. Meant to be called just before the end of the validation loop, similar to updatePrevious();
  @see [Click here for example level](https://levelbuilder-studio.code.org/levels/42308/)
+ @param {string} variableName - the name of the variable we want to update
+ @example
+ if(World.frameCount == 1) {
+  setFailTime(250);
+  setDelayTime(150);
+  setupPrevious();
+
+  addCriteria(function() {
+    //Check we clicked the sprite and the output variable changed
+    return checkThisSpriteClickedThisFrame(spriteIds[0]) && checkStudentVariableChangedThisFrame("output");
+  }, "cscFunctionsNoFunctionBlock");
+
+}
+getHelperVars();
+drawHandsOnUnclickedSprites(0);
+trackStudentVariable("output"); 
+check();
+updateStudentVariable("output"); // <--------
+updatePrevious();
  */
 function updateStudentVariable(variableName) {
   if(!validationProps.variableValues) {
@@ -974,6 +1012,27 @@ function updateStudentVariable(variableName) {
 /**
  * Checks if the variable changed this frame
  @see [Click here for example level](https://levelbuilder-studio.code.org/levels/42308/)
+ @param {string} variableName - the name of the variable we want to check
+ @return {boolean} true if the variable changed this frame; false if it didn't.
+ @example
+ if(World.frameCount == 1) {
+  setFailTime(250);
+  setDelayTime(150);
+  setupPrevious();
+
+  addCriteria(function() {
+    //Check we clicked the sprite and the output variable changed
+    return checkThisSpriteClickedThisFrame(spriteIds[0]) && checkStudentVariableChangedThisFrame("output"); // <--------
+  }, "cscFunctionsNoFunctionBlock");
+
+}
+getHelperVars();
+drawHandsOnUnclickedSprites(0);
+trackStudentVariable("output");
+check();
+updateStudentVariable("output");
+updatePrevious();
+ 
  */
 function checkStudentVariableChangedThisFrame(variableName) {
   if(!validationProps.variableValues) {

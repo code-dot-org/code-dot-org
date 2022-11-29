@@ -2,10 +2,10 @@
   <config><![CDATA[{
   "properties": {
     "encrypted": "false",
-    "long_instructions": "**Short one-sentence description of problem to solve.**\r\n\r\n🎒 **IMPORT:** Import your `PainterPlus`(#e7e8ea) class from your **Backpack**.\r\n\r\n*Don't have it, or it doesn't work? That's ok! Copy the code from* ***here*** *and paste it into a new file in your project.*\r\n\r\n✅ **TO DO:** Overview of the steps to take.\r\n\r\n1. More specific step\r\n\r\n2. More specific step\r\n\r\n::: details [**🔦 Need help with your algorithm?**]\r\n  \r\nHere is one approach to solving this problem.\r\n\r\n```\r\nalgorithm for method to write\r\n```\r\n:::\r\n&nbsp;\r\n\r\n💡 **TIP:** Check out the documentation for the `ClassName`(#e7e8ea) class in the **Documentation** tab ⬆️ for a thing to look for!\r\n\r\n📝 **COMMENT:** Be sure to add comments to note what your code does.\r\n\r\n🖥️ **TEST:** Test your program to check if your code achieves the expected result.\r\n\r\n🎉 **RUN:** Run your program to see the result of your code!\r\n\r\n## 🎯 Goal\r\n\r\nimage/gif or console output",
+    "long_instructions": "##Investigate and Modify\r\n\r\nRun the program to observe the results.\r\n\r\n✅ **TO DO:** Experiment with the program and answer the questions on the <a href=\"https://docs.google.com/document/d/1UGniYBRf3lqzT9I1SCgHOU5dXiJAC9HkSoXhYKlrTLw/edit?usp=sharing\" target=\"_blank\">**The Painter**</a> activity guide.",
     "mini_rubric": "false",
     "submittable": "false",
-    "hide_share_and_remix": "false",
+    "hide_share_and_remix": "true",
     "csa_view_mode": "console",
     "start_sources": {
       "Runner.java": {
@@ -14,6 +14,7 @@
         "tabOrder": 0
       }
     },
+    "project_template_level_name": "CSA U1L3 Classes PBT_2023",
     "encrypted_examples": [
 
     ]
@@ -23,6 +24,6 @@
   "created_at": "2022-11-08T14:38:06.000Z",
   "level_num": "custom",
   "user_id": 16889,
-  "audit_log": "[{\"changed_at\":\"2022-11-08T14:38:06.863+00:00\",\"changed\":[\"cloned from \\\"CSA Practice Level Template\\\"\"],\"cloned_from\":\"CSA Practice Level Template\"},{\"changed_at\":\"2022-11-08 14:38:09 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-11-08T14:38:06.863+00:00\",\"changed\":[\"cloned from \\\"CSA Practice Level Template\\\"\"],\"cloned_from\":\"CSA Practice Level Template\"},{\"changed_at\":\"2022-11-08 14:38:09 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-11-14 14:36:15 +0000\",\"changed\":[\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-11-14 14:55:00 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-11-15 23:14:15 +0000\",\"changed\":[\"hide_share_and_remix\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>
 </Javalab>

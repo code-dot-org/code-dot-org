@@ -169,6 +169,18 @@ social:
 <div style="clear:both"></div>
 <br>
 
+<a class="linktag" id="outlier" href="https://www.outlier.org/products/computer-science-i" target="_blank">
+  <img style="width: 12%; float: left; margin-top: 1%; margin-right: 2%" src="/images/beyond/outlier.png" alt="Outlier.org logo">
+</a>
+<div style="width: 85%; float: left">
+  <a class="linktag" id="outlier" href="https://www.outlier.org/products/computer-science-i" target="_blank"><h3 style="margin-top:0; color:#7665a0"><strong>Computer Science I</strong></h3></a>
+  <p><strong>Outlier.org | For Grades 9+ | For beginners and advanced students</strong></p>
+  <p>In this groundbreaking, cinematic course taught by world-class instructors, you’ll learn about essential concepts in the Java programming language, and apply them as you analyze, write, and test real code. You’ll create your own Sudoku puzzle-solver, as well as a riveting survival game. From the basic “Hello, World!” program to recursion, you’ll develop practical skills for in-demand tech careers, such as debugging, error handling, and defensive programming. Plus, you’ll earn transferable college credits from the University of Pittsburgh, a top 50 global school.</p>
+  <p><i>Registration period: Start anytime</i></p>
+</div>
+<div style="clear:both"></div>
+<br>
+
 <a class="linktag" id="udemy" href="https://www.udemy.com/courses/development/programming-languages/" target="_blank">
   <img style="width: 12%; float: left; margin-top: 1%; margin-right: 2%" src="/images/beyond/udemy.png" alt="Udemy logo">
 </a>
