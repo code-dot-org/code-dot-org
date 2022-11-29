@@ -37,111 +37,6 @@ import {FUNCTION_BLOCK} from './addons/functionBlocks.js';
 import {flyoutCategory as functionsFlyoutCategory} from './addons/functionEditor.js';
 
 const BLOCK_PADDING = 7; // Calculated from difference between block height and text height
-const BLOCKLY_WRAPPER_READ_ONLY_PROPERTIES = [
-  'ALIGN_CENTRE',
-  'ALIGN_LEFT',
-  'ALIGN_RIGHT',
-  'applab_locale',
-  'blockRendering',
-  'Block',
-  'BlockFieldHelper',
-  'Blocks',
-  'BlockSvg',
-  'browserEvents',
-  'common_locale',
-  'ComponentManager',
-  'Connection',
-  'ContextMenu',
-  'contractEditor',
-  'createSvgElement',
-  'Css',
-  'DropDownDiv',
-  'disableVariableEditing',
-  'Events',
-  'FieldAngleDropdown',
-  'FieldAngleInput',
-  'FieldAngleTextInput',
-  'FieldColour',
-  'FieldColourDropdown',
-  'FieldIcon',
-  'FieldImage',
-  'FieldLabel',
-  'FieldParameter',
-  'FieldRectangularDropdown',
-  'fish_locale',
-  'Flyout',
-  'FunctionalBlockUtils',
-  'FunctionalTypeColors',
-  'FunctionEditor',
-  'functionEditor',
-  'gamelab_locale',
-  'getMainWorkspace',
-  'Generator',
-  'geras',
-  'zelos',
-  'getRelativeXY',
-  'googlecode',
-  'hasCategories',
-  'html',
-  'Input',
-  'INPUT_VALUE',
-  'js',
-  'MenuItem',
-  'MetricsManager',
-  'modalBlockSpace',
-  'Msg',
-  'Names',
-  'netsim_locale',
-  'Procedures',
-  'registry',
-  'removeChangeListener',
-  'RTL',
-  'Scrollbar',
-  'selected',
-  'SPRITE',
-  'svgResize',
-  'tutorialExplorer_locale',
-  'useContractEditor',
-  'useModalFunctionEditor',
-  'utils',
-  'Toolbox',
-  'Touch',
-  'Trashcan',
-  'VARIABLE_CATEGORY_NAME',
-  'Variables',
-  'VariableMap',
-  'VariableModel',
-  'weblab_locale',
-  'WidgetDiv',
-  'Workspace',
-  'WorkspaceSvg',
-  'Xml'
-];
-const BLOCKLY_WRAPPER_SETTABLE_PROPERTIES = [
-  'assetUrl',
-  'behaviorEditor',
-  'customSimpleDialog',
-  'BROKEN_CONTROL_POINTS',
-  'BUMP_UNCONNECTED',
-  'HSV_SATURATION',
-  'JavaScript',
-  'readOnly',
-  'showUnusedBlocks',
-  'typeHints',
-  'valueTypeTabShapeMap'
-];
-// elements in this list should be structured as follows:
-// [field registry name for field, class name of field being overridden, class to use as override]
-const BLOCKLY_WRAPPER_FIELD_OVERRIDES = [
-  ['field_variable', 'FieldVariable', CdoFieldVariable],
-  ['field_dropdown', 'FieldDropdown', CdoFieldDropdown],
-  // Overrides required for a customization of FieldTextInput
-  // and its child classes.
-  ['field_input', 'FieldTextInput', CdoFieldTextInput],
-  ['field_number', 'FieldNumber', CdoFieldNumber],
-  ['field_angle', 'FieldAngle', CdoFieldAngle],
-  ['field_multilinetext', 'FieldMultilineInput', CdoFieldMultilineInput]
-];
 
 /**
  * Wrapper class for https://github.com/google/blockly
@@ -154,6 +49,112 @@ const BLOCKLY_WRAPPER_FIELD_OVERRIDES = [
 const BlocklyWrapper = function(blocklyInstance) {
   this.version = BlocklyVersion.GOOGLE;
   this.blockly_ = blocklyInstance;
+
+  this.readOnlyProperties = [
+    'ALIGN_CENTRE',
+    'ALIGN_LEFT',
+    'ALIGN_RIGHT',
+    'applab_locale',
+    'blockRendering',
+    'Block',
+    'BlockFieldHelper',
+    'Blocks',
+    'BlockSvg',
+    'browserEvents',
+    'common_locale',
+    'ComponentManager',
+    'Connection',
+    'ContextMenu',
+    'contractEditor',
+    'createSvgElement',
+    'Css',
+    'DropDownDiv',
+    'disableVariableEditing',
+    'Events',
+    'FieldAngleDropdown',
+    'FieldAngleInput',
+    'FieldAngleTextInput',
+    'FieldColour',
+    'FieldColourDropdown',
+    'FieldIcon',
+    'FieldImage',
+    'FieldLabel',
+    'FieldParameter',
+    'FieldRectangularDropdown',
+    'fish_locale',
+    'Flyout',
+    'FunctionalBlockUtils',
+    'FunctionalTypeColors',
+    'FunctionEditor',
+    'functionEditor',
+    'gamelab_locale',
+    'getMainWorkspace',
+    'Generator',
+    'geras',
+    'zelos',
+    'getRelativeXY',
+    'googlecode',
+    'hasCategories',
+    'html',
+    'Input',
+    'INPUT_VALUE',
+    'js',
+    'MenuItem',
+    'MetricsManager',
+    'modalBlockSpace',
+    'Msg',
+    'Names',
+    'netsim_locale',
+    'Procedures',
+    'registry',
+    'removeChangeListener',
+    'RTL',
+    'Scrollbar',
+    'selected',
+    'SPRITE',
+    'svgResize',
+    'tutorialExplorer_locale',
+    'useContractEditor',
+    'useModalFunctionEditor',
+    'utils',
+    'Toolbox',
+    'Touch',
+    'Trashcan',
+    'VARIABLE_CATEGORY_NAME',
+    'Variables',
+    'VariableMap',
+    'VariableModel',
+    'weblab_locale',
+    'WidgetDiv',
+    'Workspace',
+    'WorkspaceSvg',
+    'Xml'
+  ];
+  this.settableProperties = [
+    'assetUrl',
+    'behaviorEditor',
+    'customSimpleDialog',
+    'BROKEN_CONTROL_POINTS',
+    'BUMP_UNCONNECTED',
+    'HSV_SATURATION',
+    'JavaScript',
+    'readOnly',
+    'showUnusedBlocks',
+    'typeHints',
+    'valueTypeTabShapeMap'
+  ];
+  // elements in this list should be structured as follows:
+  // [field registry name for field, class name of field being overridden, class to use as override]
+  this.fieldOverrides = [
+    ['field_variable', 'FieldVariable', CdoFieldVariable],
+    ['field_dropdown', 'FieldDropdown', CdoFieldDropdown],
+    // Overrides required for a customization of FieldTextInput
+    // and its child classes.
+    ['field_input', 'FieldTextInput', CdoFieldTextInput],
+    ['field_number', 'FieldNumber', CdoFieldNumber],
+    ['field_angle', 'FieldAngle', CdoFieldAngle],
+    ['field_multilinetext', 'FieldMultilineInput', CdoFieldMultilineInput]
+  ];
 
   this.wrapReadOnlyProperties = function(propertyNames) {
     propertyNames.forEach(propertyName =>
@@ -201,14 +202,43 @@ const BlocklyWrapper = function(blocklyInstance) {
 
 function initializeBlocklyWrapper(blocklyInstance) {
   const blocklyWrapper = new BlocklyWrapper(blocklyInstance);
-  blocklyWrapper.wrapReadOnlyProperties(BLOCKLY_WRAPPER_READ_ONLY_PROPERTIES);
-  blocklyWrapper.wrapSettableProperties(BLOCKLY_WRAPPER_SETTABLE_PROPERTIES);
-  blocklyWrapper.overrideFields(BLOCKLY_WRAPPER_FIELD_OVERRIDES);
+  blocklyWrapper.wrapReadOnlyProperties(blocklyInstance.readOnlyProperties);
+  blocklyWrapper.wrapSettableProperties(blocklyInstance.settableProperties);
+  blocklyWrapper.overrideFields(blocklyInstance.fieldOverrides);
 
-  blocklyWrapper.setInfiniteLoopTrap = function() {}; // TODO
+  // Code.org custom fields
+  blocklyWrapper.Blocks.unknown = UNKNOWN_BLOCK;
+  blocklyWrapper.cdoUtils = cdoUtils;
+  blocklyWrapper.FieldButton = CdoFieldButton;
+  blocklyWrapper.FieldImageDropdown = CdoFieldImageDropdown;
+  blocklyWrapper.JavaScript = javascriptGenerator;
+  blocklyWrapper.JavaScript.unknown = () => '/* unknown block */\n';
+
+  // TODO: Add comment about why these no-op functions exist
+  // TODO - used for spritelab behavior blocks
+  blocklyWrapper.Block.createProcedureDefinitionBlock = function(config) {};
   blocklyWrapper.clearInfiniteLoopTrap = function() {}; // TODO
+  // TODO - used for validation in CS in Algebra.
+  blocklyWrapper.findEmptyContainerBlock = function() {};
+  // TODO - used to add "create a behavior" button to the toolbox
+  blocklyWrapper.Flyout.configure = function(type, config) {};
   blocklyWrapper.getInfiniteLoopTrap = function() {}; // TODO
   blocklyWrapper.loopHighlight = function() {}; // TODO
+  blocklyWrapper.setInfiniteLoopTrap = function() {}; // TODO
+
+  // TODO: Add comments about these functions
+  blocklyWrapper.addChangeListener = function(blockspace, handler) {
+    blockspace.addChangeListener(handler);
+  };
+  // Used by StudioApp to tell Blockly to resize for Mobile Safari.
+  blocklyWrapper.fireUiEvent = function(element, eventName, opt_properties) {
+    if (eventName === 'resize') {
+      blocklyWrapper.svgResize(blocklyWrapper.getMainWorkspace());
+    }
+  };
+  blocklyWrapper.getGenerator = function() {
+    return this.JavaScript;
+  };
   blocklyWrapper.getWorkspaceCode = function() {
     return this.JavaScript.workspaceToCode(this.mainBlockSpace);
   };
@@ -216,18 +246,12 @@ function initializeBlocklyWrapper(blocklyInstance) {
   // Overrides applied directly to core blockly
   blocklyWrapper.blockly_.FunctionEditor = FunctionEditor;
   blocklyWrapper.blockly_.Trashcan = CdoTrashcan;
-
-  // Code.org custom fields
-  blocklyWrapper.FieldButton = CdoFieldButton;
-  blocklyWrapper.FieldImageDropdown = CdoFieldImageDropdown;
-
   blocklyWrapper.blockly_.registry.register(
     blocklyWrapper.blockly_.registry.Type.FLYOUTS_VERTICAL_TOOLBOX,
     blocklyWrapper.blockly_.registry.DEFAULT,
     CdoVerticalFlyout,
     true /* opt_allowOverrides */
   );
-
   blocklyWrapper.blockly_.registry.register(
     blocklyWrapper.blockly_.registry.Type.RENDERER,
     'cdo_renderer',
@@ -242,6 +266,7 @@ function initializeBlocklyWrapper(blocklyInstance) {
   );
   registerAllContextMenuItems();
   registerAllShortcutItems();
+
   // These are also wrapping read only properties, but can't use wrapReadOnlyProperty
   // because the alias name is not the same as the underlying property name.
   Object.defineProperty(blocklyWrapper, 'mainBlockSpace', {
@@ -259,10 +284,6 @@ function initializeBlocklyWrapper(blocklyInstance) {
       return this.blockly_.utils.dom.SVG_NS;
     }
   });
-
-  // Properties cannot be modified until wrapSettableProperty has been called
-  blocklyWrapper.JavaScript = javascriptGenerator;
-
   // Wrap SNAP_RADIUS property, and in the setter make sure we keep SNAP_RADIUS and CONNECTING_SNAP_RADIUS in sync.
   // See https://github.com/google/blockly/issues/2217
   Object.defineProperty(blocklyWrapper, 'SNAP_RADIUS', {
@@ -275,10 +296,7 @@ function initializeBlocklyWrapper(blocklyInstance) {
     }
   });
 
-  blocklyWrapper.addChangeListener = function(blockspace, handler) {
-    blockspace.addChangeListener(handler);
-  };
-
+  // Overrides for prototype methods
   const googleBlocklyMixin = blocklyWrapper.BlockSvg.prototype.mixin;
   blocklyWrapper.BlockSvg.prototype.mixin = function(
     mixinObj,
@@ -418,18 +436,7 @@ function initializeBlocklyWrapper(blocklyInstance) {
     variableList.forEach(varName => this.createVariable(varName));
   };
 
-  // TODO - used for spritelab behavior blocks
-  blocklyWrapper.Block.createProcedureDefinitionBlock = function(config) {};
-
-  // TODO - used to add "create a behavior" button to the toolbox
-  blocklyWrapper.Flyout.configure = function(type, config) {};
-
-  blocklyWrapper.getGenerator = function() {
-    return this.JavaScript;
-  };
-
-  // TODO - used for validation in CS in Algebra.
-  blocklyWrapper.findEmptyContainerBlock = function() {};
+  // TODO: Are these giant functions so big I should leave them at the bottom?
   blocklyWrapper.BlockSpace = {
     EVENTS: {
       MAIN_BLOCK_SPACE_CREATED: 'mainBlockSpaceCreated',
@@ -448,7 +455,6 @@ function initializeBlocklyWrapper(blocklyInstance) {
         );
       }
     },
-
     createReadOnlyBlockSpace: (container, xml, options) => {
       const workspace = new this.WorkspaceSvg({
         readOnly: true,
@@ -501,8 +507,7 @@ function initializeBlocklyWrapper(blocklyInstance) {
       return workspace;
     }
   };
-
-  blocklyWrapper.inject = function(container, opt_options, opt_audioPlayer) {
+  blocklyWrapper.inject = function(container, opt_options) {
     const options = {
       ...opt_options,
       theme: opt_options.theme || CdoTheme,
@@ -564,24 +569,12 @@ function initializeBlocklyWrapper(blocklyInstance) {
     return workspace;
   };
 
-  // Used by StudioApp to tell Blockly to resize for Mobile Safari.
-  blocklyWrapper.fireUiEvent = function(element, eventName, opt_properties) {
-    if (eventName === 'resize') {
-      blocklyWrapper.svgResize(blocklyWrapper.getMainWorkspace());
-    }
-  };
-
   initializeBlocklyXml(blocklyWrapper);
   initializeGenerator(blocklyWrapper);
   initializeTouch(blocklyWrapper);
   initializeVariables(blocklyWrapper);
   initializeCdoConstants(blocklyWrapper);
   initializeCss(blocklyWrapper);
-
-  blocklyWrapper.Blocks.unknown = UNKNOWN_BLOCK;
-  blocklyWrapper.JavaScript.unknown = () => '/* unknown block */\n';
-
-  blocklyWrapper.cdoUtils = cdoUtils;
 
   return blocklyWrapper;
 }
