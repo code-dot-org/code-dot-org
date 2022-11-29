@@ -347,6 +347,9 @@
         "netsim/Internet Simulator Freeplay": {
           "name": "Internet simülatörü serbest oyun"
         },
+        "odometer/Odometer Widget": {
+          "name": "Kilometre Sayacı Widget'ı"
+        },
         "applab-1hour/Room Escape": {
           "name": "Kaçış odası"
         },
@@ -1508,8 +1511,14 @@
         "csd6-2022/CS Discoveries Post-Course Survey": {
           "name": "Bilgisayar Bilimi Keşifleri Kurs Sonrası Anketi"
         },
+        "csd7-2022/Introduction to AI Lab": {
+          "name": "AI (Artırılmış Gerçeklik) Laboratuarı'na Giriş "
+        },
         "csd7-2022/Numerical Models": {
           "overview": "Bu derste öğrenciler, bir zombi salgınını simüle eden bilgisayarsız bir etkinliğe katılırlar. Öğrenciler, komşu kasabadaki verileri kullanarak şehrin hangi bölgelerinde en az sayıda zombi olduğunu tahmin etmelidir. Öğrenciler, belirli bir yerdeki zombilerin sayısı hakkında tahminlerde bulunmak için benzerlik derecelerini ve ortalamaları kullanacaklardır. Ardından, öğrenciler, sayısal veriler için doğruluğun kategorik verilere kıyasla ne kadar farklı olduğunu tartışmak amacıyla tahminlerini gerçek sayılarla karşılaştırma imkanı elde ederler.\n\n**Günün Sorusu:** Bilgisayarlar sayısal verilerle tahmin yapmayı nasıl öğrenir?"
+        },
+        "csd7-2022/Numerical Data in AI Lab": {
+          "name": "AI Laboratuvarında Sayısal Veriler"
         },
         "csd7-2022/Survey Planning": {
           "name": "Veri toplama tasarımı"
@@ -5163,8 +5172,14 @@
           "purpose": "Öğrenciler doğrudan projelerini inşa etmeye hazır olabilirler, ancak bu ders fikirlerini planlara dönüştürmeye yardımcı olacaktır. Bu yapı hayalperestleri topraklanmış tutacak ve karanlıkta kalan hisler için bir yol aydınlatacak. Öğrencilere projelerini oluşturmak ve revize etmek için yeterli zaman sağlayın. Bu derste kaçınılmaz olarak yer alan deneme yanılma, problem çözme ve kalıcılık öğretilecektir.",
           "student_overview": "Bu kadar büyük projeler zaman alır ve bir sürü planlama gerektirir. İlhamını bul, bir plan geliştir ve yaratıcılığını serbest bırak!"
         },
+        "csd7-2021/Introduction to AI Lab": {
+          "name": "AI (Artırılmış Gerçeklik) Laboratuarı'na Giriş "
+        },
         "csd7-2021/Similarity Models": {
           "overview": "Bu derste öğrenciler, bir zombi salgınını simüle eden bilgisayarsız bir etkinliğe katılırlar. Öğrenciler, komşu kasabadaki verileri kullanarak şehrin hangi bölgelerinde en az sayıda zombi olduğunu tahmin etmelidir. Öğrenciler, belirli bir yerdeki zombilerin sayısı hakkında tahminlerde bulunmak için benzerlik derecelerini ve ortalamaları kullanacaklardır. Ardından, öğrenciler, sayısal veriler için doğruluğun kategorik verilere kıyasla ne kadar farklı olduğunu tartışmak amacıyla tahminlerini gerçek sayılarla karşılaştırma imkanı elde ederler.\n\n**Günün Sorusu:** Bilgisayarlar sayısal verilerle tahmin yapmayı nasıl öğrenir?"
+        },
+        "csd7-2021/Numerical Data in AI Lab": {
+          "name": "AI Laboratuvarında Sayısal Veriler"
         },
         "csd7-2021/Survey Planning": {
           "name": "Veri toplama tasarımı"

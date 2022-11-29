@@ -539,6 +539,18 @@
         "helloworld_retro_say": {
           "hello_world_say": "Utilitzeu aquest bloc per fer que els sprites parlin.",
           "hello_world_make_sprite": "Utilitzeu aquest bloc per crear un sprite."
+        },
+        "courseA_maze_seq1_2021": {
+          "courseA_maze_seq1_1": "Fes clic en la bombeta quan necessitis una pista!"
+        },
+        "courseB_Scrat_ramp1_2021": {
+          "grade2_CaringForNewPet_0_1": "Després de connectar tots els blocs, prem \"Executar\" per iniciar el programa."
+        },
+        "courseB_Scrat_ramp3a_2021": {
+          "courseC_maze_programming2_1": "Aquesta és la caixa d'eines. Aquí hi trobaràs blocs addicionals per completar els trencaclosques."
+        },
+        "courseB_artist_loops3_2021": {
+          "courseB_artist_loops3_1": "Només tens un d'aquests blocs a la caixa d'eines. Com el vols fer servir?"
         }
       }
     }

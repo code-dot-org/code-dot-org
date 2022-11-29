@@ -568,6 +568,7 @@ zh-CN:
         csd_ml_intro_ai_lab_july2021: 人工智能实验室的介绍
         csd_ml_training_testing_ai_lan: 人工智能实验室中的训练和测试
         csd_ml_model_cards_july2021: 人工智能实验室中的模型卡
+        csd_ml_numerical_ai_lab: 人工智能实验室中的数值数据
         Gettting_Started_Progress: 进度、反馈和评估
         Gettting_Started_ClassSection: 创建类部件
         Gettting_Started_StudentExperience: 学生体验
@@ -610,6 +611,7 @@ zh-CN:
         CSA-PL-debugging-temp: 在 Java 实验室中调试简介—temp
         csd_app_lab_design_mode: CSD 应用程序实验室设计模式
         csd_app_lab_events: CSD 应用程序实验室活动
+        PL_CSD_Unit4_AppTesting: 纸质原型测试
         csd_u6_circuit_playground: 物理计算
         csd_u6_input_output: 输入和输出
         CSA-PL-for-loops: Java 中的 For 循环
@@ -630,7 +632,31 @@ zh-CN:
         CSA-PL-two-way-selection: 双向选择
         CSA-PL-Printing-in-Java: Java中的打印
         CSA-PL-multi-selection-statements: 多重选择语句
+        PL_CSP_TeacherTips_Advice: '老师小贴士：给计算机科学新老师的建议'
+        PL_CSP_TeacherTips_IntroToCSP: '老师小贴士：计算机科学原理简介'
+        PL_CSP_TeacherTips_Debugging: '老师小贴士：帮助排错'
+        PL_CSP_TeacherTips_LeadLearner: '老师小贴士：如何成为领导学习者'
+        PL_CSP_TeacherTips_APExam: '老师小贴士：为AP考试做准备'
+        PL_CSP_TeacherTips_EIPM: '老师小贴士：EIPM学习模式的过程'
+        PL_CSD_CircuitPlayground_Overview: 电路游戏板概述
+        CSA-PL-debugging-22: 在Java实验室中排错
+        CSD_Unit6_InteractiveArtExemplar: 互动艺术形式
         CS_Changing_Everything: 计算机科学正在改变一切
+        csa-alias-video: 相等关系和别名
+        csa-equals-video: equals() 方法
+        csa-user-stories: 软件工程中的用户故事
+        csa-pl-vpl-m1-unit-3: 第三单元中的软件工程
+        csa-pl-intro-to-equality: 相等关系的介绍
+        csa-pl-intro-to-equals-method: .equals() 方法的介绍
+        csa-pl-equals-book: 为 Book 类编写 equals()方法
+        csa-multi-select-pl: Java 中的多重选择语句
+        csc_timecapsule_intro: 时光胶囊简介
+        PL_Equity_in_CS_Education: 计算机科学教育中的平等
+        csc_fm_pilot: 功能机器（指引）
+        csc_fm_pilot_v2: '功能机器简介'
+        csc-sprite-lab-pixel-editor: 画自己的精灵图
+        csa-pl-intro-to-strings: Java 中的字符串简介
+        csa-pl-compareTo: compareTo() 方法
     callout:
       text:
         drag_blocks: 拖动一个"移动"的块，并将它吸到别的模块下面

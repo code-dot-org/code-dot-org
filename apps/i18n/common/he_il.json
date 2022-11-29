@@ -164,6 +164,7 @@
   "autolock": "שימו לב - שלב ננעל אוטומטית אחרי 24 שעות.",
   "availableLessons": " זמין ב{numLessons, plural, one {שיעור אחד}other {שיעורים}}:",
   "back": "חזור",
+  "background": "רקע",
   "backgroundMode": "רקעים",
   "backToActivity": "חזרה לפעילות",
   "backToPreviousLevel": "חזרה לשלב הקודם",

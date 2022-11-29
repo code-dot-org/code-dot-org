@@ -12015,7 +12015,7 @@ es-MX:
           feedback: Incorrecto. La cosechadora avanza hasta el final del camino, luego
             da la vuelta y retrocede hasta que recoge la lechuga.
         - text: La cosechadora recogerá todas las calabazas.
-          feedback: Incorrecto. La cosechadora avanza hasta el final del camino, luego
+          feedback: Incorrecto. La granjera avanza hasta el final del camino, luego
             da la vuelta y retrocede hasta que recoge la lechuga.
         - text: La cosechadora recogerá la lechuga.
           correct: true
@@ -12030,13 +12030,14 @@ es-MX:
         - text: Nada. No se usa la función en el programa.
           feedback: Incorrecto. En realidad, se usa la función dos veces en el programa.
         - text: El artista dibujará un solo cuadrado.
-          feedback: Incorrecto. En realidad, se usa la función dos veces en el programa.
+          feedback: Incorrecto. En realidad, se llama a la función dos veces en el
+            programa.
         - text: El artista dibujará dos cuadrados que se superponen.
           feedback: Incorrecto. La longitud de cada lado del cuadrado es de solo 100
             pixeles, pero el artista salta a 175 pixeles entre funciones.
         - text: El artista dibujará dos cuadrados con un pequeño espacio en el medio.
           correct: true
-          feedback: "¡Correcto! La función se activa dos veces en el programa, con
+          feedback: "¡Correcto! La función se llama dos veces en el programa, con
             un salto en el medio de ambas."
         questions:
         - text: ¿Qué sucederá cuando presiones "Ejecutar"?
@@ -12060,14 +12061,14 @@ es-MX:
       courseE_swim_fish_behavior_predict1_2021:
         answers:
         - text: No sucederá nada.
-          feedback: Incorrecto. El pez dorado comenzará a dar vueltas
+          feedback: Incorrecto. La planta rodadora comenzará a dar vueltas
         - text: La planta rodadora flotará hasta la parte superior de la pantalla
-          feedback: Incorrecto. El pez dorado comenzará a dar vueltas
-        - text: La planta rodadora comenzará a caer
+          feedback: Incorrecto. La planta rodadora comenzará a dar vueltas
+        - text: " La planta rodadora comenzará a dar vueltas"
           correct: true
           feedback: "¡Correcto!"
         - text: La planta rodadora se encenderá y apagará.
-          feedback: Incorrecto. El pez dorado comenzará a dar vueltas
+          feedback: Incorrecto. La planta rodadora comenzará a dar vueltas
         questions:
         - text: Mira el siguiente código con atención. ¿Qué sucederá cuando hagas
             clic en "Ejecutar"?
