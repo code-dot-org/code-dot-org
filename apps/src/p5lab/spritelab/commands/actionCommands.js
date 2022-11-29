@@ -47,9 +47,12 @@ export const commands = {
     sprites.forEach(sprite => {
       targets.forEach(target => {
         if (sprite.isTouching(target)) {
+          // Reverse the movement direction of the sprite
           sprite.direction = (sprite.direction + 180) % 360;
+          // Calculate the angle between x axis and a line between the sprites.
           let angle = Math.atan2(target.y - sprite.y, target.x - sprite.x);
           if (!isNaN(angle)) {
+            // Move the sprite back from the target, based on the calculated angle.
             let dy = Math.sin(angle) * -(sprite.speed + 1);
             let dx = Math.cos(angle) * -(sprite.speed + 1);
             sprite.x += dx;
