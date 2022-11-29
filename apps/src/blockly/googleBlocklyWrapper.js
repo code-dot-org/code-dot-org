@@ -1,3 +1,4 @@
+import {javascriptGenerator} from 'blockly/javascript';
 import {
   ScrollBlockDragger,
   ScrollOptions
@@ -91,6 +92,9 @@ const BlocklyWrapper = function(blocklyInstance) {
 
 function initializeBlocklyWrapper(blocklyInstance) {
   const blocklyWrapper = new BlocklyWrapper(blocklyInstance);
+  // TODO: Add comment here
+  blocklyWrapper.JavaScript = javascriptGenerator;
+  blocklyWrapper.JavaScript.unknown = () => '/* unknown block */\n';
 
   blocklyWrapper.setInfiniteLoopTrap = function() {}; // TODO
   blocklyWrapper.clearInfiniteLoopTrap = function() {}; // TODO
@@ -573,7 +577,6 @@ function initializeBlocklyWrapper(blocklyInstance) {
   initializeCss(blocklyWrapper);
 
   blocklyWrapper.Blocks.unknown = UNKNOWN_BLOCK;
-  blocklyWrapper.JavaScript.unknown = () => '/* unknown block */\n';
 
   blocklyWrapper.cdoUtils = cdoUtils;
 
