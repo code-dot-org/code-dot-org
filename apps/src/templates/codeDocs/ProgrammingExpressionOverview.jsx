@@ -11,6 +11,7 @@ import {
   shrinkBlockSpaceContainer
 } from '@cdo/apps/templates/instructions/utils';
 import {parseElement} from '@cdo/apps/xml';
+import '../../../style/curriculum/documentation_tables.scss';
 
 const VIDEO_WIDTH = 560;
 const VIDEO_HEIGHT = 315;
@@ -108,6 +109,7 @@ export default function ProgrammingExpressionOverview({
           <EnhancedSafeMarkdown
             markdown={programmingExpression.content.trim()}
             expandableImages
+            className="docs-pages"
           />
         </div>
       )}
@@ -129,6 +131,7 @@ export default function ProgrammingExpressionOverview({
           <EnhancedSafeMarkdown
             markdown={`\`${programmingExpression.syntax}\``}
             expandableImages
+            className="docs-pages"
           />
         </div>
       )}
@@ -153,6 +156,7 @@ export default function ProgrammingExpressionOverview({
           <EnhancedSafeMarkdown
             markdown={programmingExpression.tips.trim()}
             expandableImages
+            className="docs-pages"
           />
         </div>
       )}
@@ -163,9 +167,14 @@ export default function ProgrammingExpressionOverview({
             markdown={i18n.additionalInformationText({
               externalDocumentationUrl: programmingExpression.externalDocumentation.trim()
             })}
+            className="docs-pages"
           />
         </div>
       )}
+      <div>
+        <p />
+        <EnhancedSafeMarkdown markdown={i18n.documentationBug()} />
+      </div>
     </div>
   );
 }

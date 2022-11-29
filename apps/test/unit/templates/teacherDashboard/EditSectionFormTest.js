@@ -19,10 +19,7 @@ describe('EditSectionForm', () => {
         editSectionProperties={() => {}}
         courseOfferings={courseOfferings}
         sections={{}}
-        section={{
-          ...testSection,
-          participantType: 'student'
-        }}
+        section={testSection}
         isSaveInProgress={false}
         hiddenLessonState={{}}
         updateHiddenScript={() => {}}
@@ -58,10 +55,7 @@ describe('EditSectionForm', () => {
         editSectionProperties={() => {}}
         courseOfferings={courseOfferings}
         sections={{}}
-        section={{
-          ...noStudentsSection,
-          participantType: 'student'
-        }}
+        section={noStudentsSection}
         isSaveInProgress={false}
         hiddenLessonState={{}}
         updateHiddenScript={() => {}}
@@ -99,8 +93,7 @@ describe('EditSectionForm', () => {
         sections={{}}
         section={{
           ...testSection,
-          loginType: SectionLoginType.picture,
-          participantType: 'student'
+          loginType: SectionLoginType.picture
         }}
         isSaveInProgress={false}
         hiddenLessonState={{}}
@@ -139,8 +132,7 @@ describe('EditSectionForm', () => {
         sections={{}}
         section={{
           ...noStudentsSection,
-          loginType: SectionLoginType.picture,
-          participantType: 'student'
+          loginType: SectionLoginType.picture
         }}
         isSaveInProgress={false}
         hiddenLessonState={{}}
@@ -179,8 +171,7 @@ describe('EditSectionForm', () => {
         sections={{}}
         section={{
           ...testSection,
-          loginType: SectionLoginType.email,
-          participantType: 'student'
+          loginType: SectionLoginType.email
         }}
         isSaveInProgress={false}
         hiddenLessonState={{}}
@@ -204,8 +195,7 @@ describe('EditSectionForm', () => {
         sections={{}}
         section={{
           ...noStudentsSection,
-          loginType: SectionLoginType.email,
-          participantType: 'student'
+          loginType: SectionLoginType.email
         }}
         isSaveInProgress={false}
         hiddenLessonState={{}}
@@ -229,8 +219,7 @@ describe('EditSectionForm', () => {
         sections={{}}
         section={{
           ...testSection,
-          loginType: SectionLoginType.google_classroom,
-          participantType: 'student'
+          loginType: SectionLoginType.google_classroom
         }}
         isSaveInProgress={false}
         hiddenLessonState={{}}
@@ -254,8 +243,7 @@ describe('EditSectionForm', () => {
         sections={{}}
         section={{
           ...noStudentsSection,
-          loginType: SectionLoginType.google_classroom,
-          participantType: 'student'
+          loginType: SectionLoginType.google_classroom
         }}
         isSaveInProgress={false}
         hiddenLessonState={{}}
@@ -279,8 +267,7 @@ describe('EditSectionForm', () => {
         sections={{}}
         section={{
           ...testSection,
-          loginType: SectionLoginType.clever,
-          participantType: 'student'
+          loginType: SectionLoginType.clever
         }}
         isSaveInProgress={false}
         hiddenLessonState={{}}
@@ -304,8 +291,7 @@ describe('EditSectionForm', () => {
         sections={{}}
         section={{
           ...noStudentsSection,
-          loginType: SectionLoginType.clever,
-          participantType: 'student'
+          loginType: SectionLoginType.clever
         }}
         isSaveInProgress={false}
         hiddenLessonState={{}}
@@ -331,8 +317,7 @@ describe('EditSectionForm', () => {
         sections={{}}
         section={{
           ...noStudentsSection,
-          loginType: SectionLoginType.clever,
-          participantType: 'student'
+          loginType: SectionLoginType.clever
         }}
         isSaveInProgress={false}
         hiddenLessonState={{}}
@@ -358,8 +343,7 @@ describe('EditSectionForm', () => {
         sections={{}}
         section={{
           ...noStudentsSection,
-          loginType: SectionLoginType.clever,
-          participantType: 'student'
+          loginType: SectionLoginType.clever
         }}
         isSaveInProgress={false}
         hiddenLessonState={{}}
@@ -384,8 +368,7 @@ describe('EditSectionForm', () => {
         sections={{}}
         section={{
           ...noStudentsSection,
-          loginType: SectionLoginType.clever,
-          participantType: 'student'
+          loginType: SectionLoginType.clever
         }}
         isSaveInProgress={false}
         hiddenLessonState={{}}
@@ -410,8 +393,7 @@ describe('EditSectionForm', () => {
         sections={{}}
         section={{
           ...noStudentsSection,
-          loginType: SectionLoginType.clever,
-          participantType: 'student'
+          loginType: SectionLoginType.clever
         }}
         isSaveInProgress={false}
         hiddenLessonState={{}}

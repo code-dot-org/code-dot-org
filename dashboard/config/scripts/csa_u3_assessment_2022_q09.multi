@@ -18,6 +18,7 @@ public String[] reverse(String[] names) {
 
   return newArr;
 }
- 
+```
+
 Which code segment should replace `/* missing statement */`?
 MARKDOWN
