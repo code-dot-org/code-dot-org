@@ -1042,15 +1042,15 @@ fr:
           une feuille de route pour effectuer des choses.
     C2_artist_loops:
       1:
-        text: Ici nous allons utiliser le bloc « Répéter » pour nous aider à sauter
-          des étapes lorsque nous programmons notre artiste. Nous avons déjà quelques
-          blocs dehors sur notre scène, mais ils sont juste là pour nous aider à démarrer.
+        text: 'Ici on va utiliser le bloc « répéter » pour nous aider à sauter des
+          étapes en programmant notre artiste. On a déjà quelques blocs en jeu, mais
+          ils sont juste là pour permettre qu''on s''y mette. '
       2:
-        text: Pour faire boucler 4 fois ces blocs afin de dessiner le carré complet,
-          nous devons juste faire glisser le bloc «Répéter» et mettre les blocs «Avancer»
-          et «Tourner à droite» à l'intérieur du bloc «Répéter». Lorsque nous appuyons
-          sur « Exécuter », l'artiste répète ces étapes quatre fois pour compléter
-          le carré.
+        text: Pour mettre en boucle quatre fois ces blocs afin de dessiner le carré
+          complet, on à just juste à sortir le bloc « répéter » et mettre les blocs
+          « avancer » et « tourner à droite » à l'intérieur du bloc « répéter ». Quand
+          on appuie sur « Démarrer », l'artiste répètera ces étapes quatre fois pour
+          compléter le carré.
     C2_bee_loops:
       1:
         text: Une boucle est une répétition de l'activité. En entrant dans une ruche
@@ -2470,33 +2470,33 @@ fr:
           pour le déplacer sur l'écran. Étape par étape, ton jeu devient plus interactif.
     starwars_congrats:
       1:
-        text: Salut, mon nom est Alice et je dirige les équipes produits et ingénierie
-          ici chez Code.org. J'ai travaillé sur ce tutoriel avec lequel tu joues en
-          ce moment.
+        text: Salut, moi, c'est Alice et je dirige les équipes produits et ingénierie
+          ici chez Code.org. J'ai travaillé sur le tutoriel auquel tu es en train
+          de jouer en ce moment.
       2:
-        text: Tu viens de terminer le dernier niveau. Félicitations ! Tu as appris
-          tout ce qu'il faut savoir pour créer ton propre jeu Star Wars. Maintenant,
-          il n’y a plus d'instructions, plus de puzzles à résoudre. Tu peux créer
-          ton propre jeu et tu choisiras comment celui-ci va fonctionner. Une dernière
-          chose, tu as déverrouillé de nouveaux sons et de nouvelles commandes pour
-          faire encore plus de choses.
+        text: 'Tu viens d''arriver au dernier niveau. Félicitations ! Tu viens d''apprendre
+          tout ce qu''il faut savoir pour créer ton propre jeu Star Wars. Maintenant,
+          il n’y a plus d''instructions, plus de casse-têtes à résoudre. Tu peux créer
+          ton propre jeu et décider comment il va fonctionner. Encore une chose :
+          tu as déverrouillé de nouveaux sons et de nouvelles commandes pour pouvoir
+          faire encore plus de choses.'
       3:
-        text: "[élèves parlant] Donc nous avons fait un jeu où, essentiellement, tu
-          obtiens des points lorsque tu attrapes des cochons globes. La subtilité
-          est que chaque fois que tu attrapes un cochon globe un Stormtrooper apparaît.
-          En fait, l'écran entier est rempli de cochons globes et quand tu en touches
-          10 000, tu gagnes."
+        text: "[élèves parlant] Donc on a fait un jeu où, en gros, on obtient des
+          points en attrapant des cochons globes. Le truc, c'est qu'à chaque fois
+          qu'on attrape un cochon globe, un Stormtrooper apparaît. Au bout d'un moment,
+          l'écran devient complètement rempli de cochons globes. Quand on en touche
+          10 000, on gagne."
       4:
-        text: "[élèves parlant] Nous avons fait un jeu où tu ne peux pas perdre et
-          tout que tu tues te donne des points. Pour mon programme, j'ai inversé les
-          clés afin que chaque fois que tu cliques sur monter, ton personnage descende,
-          et quand tu vas à droite, ton personnage va à gauche. C'est vraiment difficile
-          ! Parfois, tu obtiens juste un avantage, un avantage inéquitable si tu es
-          le développeur du jeu. Est-ce que j’ai réussi ? Ouais !"
+        text: "[élèves parlant] Nous, on a fait un jeu où on ne peut pas perdre et
+          tout ce qu'on tue donne des points. Pour mon programme, j'ai inversé les
+          touches ; du coup à chaque fois que tu cliques sur monter, ton personnage
+          descend, et quand tu vas à droite, ton personnage va à gauche. Dont c'est
+          vraiment galère ! Des fois on a juste un avantage, un avantage intrinsèque
+          en étant le développeur du jeu. Est-ce que l'ai eu ? Ouais !"
       5:
-        text: Lorsque tu as terminé de créer ton jeu, choisis «Partager» pour obtenir
+        text: Quand tu as finis de créer ton jeu, sélectionne « partager » pour obtenir
           un lien à partager avec tes amis, ou pour jouer à ton jeu sur ton téléphone.
-          Amuse-toi bien!
+          Amuse-toi bien !
     starwars_blocks_intro:
       1:
         text: 'Salut, je suis Kathleen Kennedy et je suis la productrice de Star Wars
@@ -2584,33 +2584,33 @@ fr:
         text: Étape par étape, ton jeu devient plus interactif.
     starwars_blocks_congrats:
       1:
-        text: Salut, mon nom est Alice et je dirige les équipes produits et ingénierie
-          ici chez Code.org. J'ai travaillé sur ce tutoriel avec lequel tu joues en
-          ce moment.
+        text: Salut, moi, c'est Alice et je dirige les équipes produits et ingénierie
+          ici chez Code.org. J'ai travaillé sur le tutoriel auquel tu es en train
+          de jouer en ce moment.
       2:
-        text: Tu viens de terminer le dernier niveau. Félicitations ! Tu as appris
-          tout ce qu'il faut savoir pour créer ton propre jeu Star Wars. Maintenant,
-          il n’y a plus d'instructions, plus de puzzles à résoudre. Tu peux créer
-          ton propre jeu et tu choisiras comment celui-ci va fonctionner. Une dernière
-          chose, tu as déverrouillé de nouveaux sons et de nouvelles commandes pour
-          faire encore plus de choses.
+        text: 'Tu viens d''arriver au dernier niveau. Félicitations ! Tu viens d''apprendre
+          tout ce qu''il faut savoir pour créer ton propre jeu Star Wars. Maintenant,
+          il n’y a plus d''instructions, plus de casse-têtes à résoudre. Tu peux créer
+          ton propre jeu et décider comment il va fonctionner. Encore une chose :
+          tu as déverrouillé de nouveaux sons et de nouvelles commandes pour pouvoir
+          faire encore plus de choses.'
       3:
-        text: "[élèves parlant] Donc nous avons fait un jeu où, essentiellement, tu
-          obtiens des points lorsque tu attrapes des cochons globes. La subtilité
-          est que chaque fois que tu attrapes un cochon globe un Stormtrooper apparaît.
-          En fait, l'écran entier est rempli de cochons globes et quand tu en touches
-          10 000, tu gagnes."
+        text: "[élèves parlant] Donc on a fait un jeu où, en gros, on obtient des
+          points en attrapant des cochons globes. Le truc, c'est qu'à chaque fois
+          qu'on attrape un cochon globe, un Stormtrooper apparaît. Au bout d'un moment,
+          l'écran devient complètement rempli de cochons globes. Quand on en touche
+          10 000, on gagne."
       4:
-        text: "[élèves parlant] Nous avons fait un jeu où tu ne peux pas perdre et
-          tout que tu tues te donne des points. Pour mon programme, j'ai inversé les
-          clés afin que chaque fois que tu cliques sur monter, ton personnage descende,
-          et quand tu vas à droite, ton personnage va à gauche. C'est vraiment difficile
-          ! Parfois, tu obtiens juste un avantage, un avantage inéquitable si tu es
-          le développeur du jeu. Est-ce que j’ai réussi ? Ouais !"
+        text: "[élèves parlant] Nous, on a fait un jeu où on ne peut pas perdre et
+          tout ce qu'on tue donne des points. Pour mon programme, j'ai inversé les
+          touches ; du coup à chaque fois que tu cliques sur monter, ton personnage
+          descend, et quand tu vas à droite, ton personnage va à gauche. Dont c'est
+          vraiment galère ! Des fois on a juste un avantage, un avantage intrinsèque
+          en étant le développeur du jeu. Est-ce que l'ai eu ? Ouais !"
       5:
-        text: Lorsque tu as terminé de créer ton jeu, choisis «Partager» pour obtenir
+        text: Quand tu as finis de créer ton jeu, sélectionne « partager » pour obtenir
           un lien à partager avec tes amis, ou pour jouer à ton jeu sur ton téléphone.
-          Amuse-toi bien!
+          Amuse-toi bien !
     mc_intro:
       1:
         text: Je m'appelle Jens Bergensten, mais je suis mieux connu sous le nom de
@@ -2728,35 +2728,33 @@ fr:
           où tu marches.
     mc_congrats_share:
       1:
-        text: Félicitations ! Tu viens juste d'apprendre les blocs de construction
-          de base de l'informatique.
+        text: Félicitations ! Tu viens d'apprendre les composantes de base de l'informatique.
       2:
-        text: Maintenant, tu peux utiliser ces blocs pour construire ta propre création.
-          Il n’y a plus d'instructions et plus de puzzles à résoudre. Tu peux construire
-          tout ce que tu veux. Tu dois choisir.
+        text: Maintenant, tu peux utiliser ces blocs pour faire ta propre création.
+          Il n’y a plus d'instructions et plus de casse-têtes à résoudre. Tu peux
+          construire tout ce que tu veux. C'est à toi de choisir.
       3:
-        text: "[élèves parlant] C' est sur le point de se réaliser. Cisaillement.
-          J'ai fait un L avec des torches. J'ai fait un A en planches de bouleau.
-          Cela a fonctionné, cela a fonctionné. Nous avons construit une maison avec
-          de la laine !"
+        text: "[élèves parlant] OK, on va se mettre aux choses sérieuses, là. On met
+          un « tondre ». J'ai fait un « L » avec des torches. J'ai fait un « A » en
+          planches de bouleau. Ça a marché ! Ça a marché ! On a construit une maison
+          en laine !"
       4:
         text: Lorsque tu as terminé ta création, sélectionne «Partager» pour obtenir
           un lien et partager tes créations avec tes amis. Amuse-toi bien!
     mc_congrats_no_share:
       1:
-        text: Félicitations ! Tu viens juste d'apprendre les blocs de construction
-          de base de l'informatique.
+        text: Félicitations ! Tu viens d'apprendre les composantes de base de l'informatique.
       2:
-        text: Maintenant, tu peux utiliser ces blocs pour construire ta propre création.
-          Il n’y a plus d'instructions et plus de puzzles à résoudre. Tu peux construire
-          tout ce que tu veux. Tu dois choisir.
+        text: Maintenant, tu peux utiliser ces blocs pour faire ta propre création.
+          Il n’y a plus d'instructions et plus de casse-têtes à résoudre. Tu peux
+          construire tout ce que tu veux. C'est à toi de choisir.
       3:
-        text: "[élèves parlant] C' est sur le point de se réaliser. Cisaillement.
-          J'ai fait un L avec des torches. J'ai fait un A en planches de bouleau.
-          Cela a fonctionné, cela a fonctionné. Nous avons construit une maison avec
-          de la laine !"
+        text: "[élèves parlant] OK, on va se mettre aux choses sérieuses, là. On met
+          un « tondre ». J'ai fait un « L » avec des torches. J'ai fait un « A » en
+          planches de bouleau. Ça a marché ! Ça a marché ! On a construit une maison
+          en laine !"
       4:
-        text: Maintenant tu peux construire tout ce que tu veux. Amuse-toi bien!
+        text: Maintenant, tu peux construire tout ce que tu veux. Amuse-toi bien !
     gumball_intro:
       1:
         text: Si tu souhaites faire ton propre jeu, c’est vraiment facile. Tu as simplement
