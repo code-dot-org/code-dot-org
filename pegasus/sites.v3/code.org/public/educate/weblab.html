@@ -1,0 +1,274 @@
+<div id="main-content" class="container">
+  <div class="row">
+    <div class="col-md-6">
+      <div class="form-group">
+        <h1>Web Lab Network Support Check</h1>
+        <p>
+          Use this page to test your school's network support for our Web Lab
+          modules. Web Lab communicates with domains which may be blocked by
+          some school systems’ networks or device policies. If the network check
+          is unsuccessful, you will need to reach out to your school's IT
+          department to update your school's firewall settings or device
+          policies.
+        </p>
+        <p>
+          When checking network support, try to meet as many of these criteria
+          as possible:
+        </p>
+        <li>Use your school's internet connection</li>
+        <li>Use a student computer</li>
+        <li>Log into the computer with a student account</li>
+        <br />
+        <p>
+          Note: You do not need to be logged in to Code.org for this test to be
+          successful.
+        </p>
+        <label for="connect"
+          >Click "Connect" to check whether your school's network supports the
+          Web Lab tool</label
+        >
+        <div id="status-table">
+          <table>
+            <tbody>
+              <tr>
+                <th>Check</th>
+                <th>Status</th>
+              </tr>
+              <tr>
+                <td>
+                  Connected to
+                  <code>https://downloads.computinginthecore.org</code>
+                </td>
+                <td class="incomplete">Not complete</td>
+                <td class="computinginthecore loading" style="display: none">
+                  Connecting...
+                </td>
+                <td class="computinginthecore passed" style="display: none">
+                  Passed
+                </td>
+                <td class="computinginthecore failed" style="display: none">
+                  Failed
+                </td>
+                <td class="computinginthecore error" style="display: none">
+                  Error
+                </td>
+              </tr>
+              <tr>
+                <td>Connected to <code>https://codeprojects.org</code></td>
+                <td class="incomplete">Not complete</td>
+                <td class="codeprojects loading" style="display: none">
+                  Connecting...
+                </td>
+                <td class="codeprojects passed" style="display: none">
+                  Passed
+                </td>
+                <td class="codeprojects failed" style="display: none">
+                  Failed
+                </td>
+                <td class="codeprojects error" style="display: none">Error</td>
+              </tr>
+              <tr>
+                <td>Able to load an iFrame</td>
+                <td class="incomplete">Not complete</td>
+                <td class="iframe loading" style="display: none">
+                  Connecting...
+                </td>
+                <td class="iframe passed" style="display: none">Passed</td>
+                <td class="iframe failed" style="display: none">Failed</td>
+                <td class="iframe error" style="display: none">Error</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div>
+          <button id="connect" class="btn btn-primary">Connect</button>
+        </div>
+        <p id="response-ok" class="text-success" style="display: none">
+          <strong
+            >You successfully connected! No further action is needed.</strong
+          >
+        </p>
+        <div id="request-failed" style="display: none">
+          <p class="text-danger">
+            <strong>Error. Connection unsuccessful.</strong>
+          </p>
+          <p>
+            <strong>Action required: </strong>
+            Please contact your IT department to update your school’s firewall
+            settings or device policies. Specifically, our CSA tools need to be
+            able to initiate an Upgrade request on *.code.org domains on the
+            HTTPS port 443 and could maintain a secure WebSocket (WSS)
+            connection for up to 5 minutes. Let us know as soon as possible if
+            this will be impossible for your school.
+          </p>
+          <p>
+            Contact our Support Team (<a href="mailto:support@code.org"
+              >support@code.org</a
+            >) if you have any questions.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+  function testImageAccess(
+    url,
+    successCallback = () => {},
+    failureCallback = () => {},
+    timeoutMs = 5000,
+    videoElement = false
+  ) {
+    var element;
+    if (videoElement) {
+      element = document.createElement("video");
+    } else {
+      element = new Image();
+    }
+    var called = false;
+    function finish(callback) {
+      return function () {
+        if (called) {
+          return;
+        }
+        called = true;
+        window.clearTimeout(timeout);
+        callback();
+      };
+    }
+    var timeout = window.setTimeout(finish(failureCallback), timeoutMs);
+    element.onerror = finish(failureCallback);
+    if (videoElement) {
+      element.ondurationchange = finish(successCallback);
+    } else {
+      element.onload = finish(successCallback);
+    }
+    element.src = url;
+    // store a reference to the element so it doesn't get collected
+    window.testImages = window.testImages || [];
+    window.testImages.push(element);
+  }
+
+  function connect() {
+    function modifyAllElementsWithClassName(className, attribute, value) {
+      Array.from(document.getElementsByClassName(className)).forEach(
+        (element) => element.setAttribute(attribute, value)
+      );
+    }
+    function displayState(state) {
+      Array.from(document.getElementsByClassName(state)).forEach(
+        (element) => (element.style.display = "block")
+      );
+    }
+
+    modifyAllElementsWithClassName("loading", "style", "display: block");
+    modifyAllElementsWithClassName("incomplete", "style", "display: none");
+    modifyAllElementsWithClassName("failed", "style", "display: none");
+
+    // const options = {
+    //   referrerPolicy: "strict-origin-when-cross-origin",
+    //   body: null,
+    //   method: "GET",
+    //   mode: "cors",
+    //   credentials: "omit",
+    // };
+
+    const options = {
+      headers: {
+        accept: "*/*",
+        "accept-language": "en-US,en;q=0.9",
+        "sec-ch-ua":
+          '"Google Chrome";v="107", "Chromium";v="107", "Not=A?Brand";v="24"',
+        "sec-ch-ua-mobile": "?0",
+        "sec-ch-ua-platform": '"macOS"',
+        "sec-fetch-dest": "empty",
+        "sec-fetch-mode": "cors",
+        "sec-fetch-site": "cross-site",
+      },
+      referrer: "http://localhost:3000/",
+      referrerPolicy: "strict-origin-when-cross-origin",
+      body: null,
+      method: "GET",
+      mode: "cors",
+      credentials: "omit",
+    };
+    // fetch("https://codeprojects.org/favicon.ico?1669678901938", {
+    //   headers: {
+    //     accept: "*/*",
+    //     "accept-language": "en-US,en;q=0.9",
+    //     "sec-ch-ua":
+    //       '"Google Chrome";v="107", "Chromium";v="107", "Not=A?Brand";v="24"',
+    //     "sec-ch-ua-mobile": "?0",
+    //     "sec-ch-ua-platform": '"macOS"',
+    //     "sec-fetch-dest": "empty",
+    //     "sec-fetch-mode": "cors",
+    //     "sec-fetch-site": "cross-site",
+    //   },
+    //   referrer: "http://localhost:3000/",
+    //   referrerPolicy: "strict-origin-when-cross-origin",
+    //   body: null,
+    //   method: "GET",
+    //   mode: "cors",
+    //   credentials: "omit",
+    // });
+
+    testImageAccess(
+      "https://codeprojects.org/favicon.ico?1669678901938",
+      () => console.log("got it!"),
+      () => console.log("oopsie doopsie!")
+    );
+
+    const requests = [
+      {
+        url:
+          "https://downloads.computinginthecore.org/favicon.ico?" + Date.now(),
+        id: "computinginthecore",
+      },
+      {
+        url: "https://codeprojects.org/favicon.ico?" + Date.now(),
+        id: "codeprojects",
+      },
+    ];
+
+    const promises = requests.map((request) =>
+      fetch(request.url, options).catch((error) => {
+        console.log(`i got an error in the ${request.id} request!`, error);
+        modifyAllElementsWithClassName(
+          `${request.id} loading`,
+          "style",
+          "display: none"
+        );
+        modifyAllElementsWithClassName(
+          `${requests.id} error`,
+          "style",
+          "display: block"
+        );
+      })
+    );
+
+    Promise.all(promises)
+      .then((responses) => {
+        modifyAllElementsWithClassName("loading", "style", "display: none");
+        responses.forEach((response, i) => {
+          const result = !response.okay ? "failed" : "passed";
+          console.log(`result of ${requests[i].id}:` + result);
+          console.log("response: ", response);
+          modifyAllElementsWithClassName(
+            `${requests[i].id} ${result}`,
+            "style",
+            "display: block"
+          );
+        });
+      })
+      .catch((error) => {
+        console.log("i got a general error!", error);
+        // document.querySelector(".loading").style.display = "none";
+        // document.querySelector(".error").style.display = "block";
+      });
+  }
+  $(function () {
+    $("#connect").click(function () {
+      connect();
+    });
+  });
+</script>
