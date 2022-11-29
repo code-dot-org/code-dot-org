@@ -68,8 +68,7 @@
           "rubric_key_concept": "Estructurar el contenido de una página web utilizando HTML (añadir una imagen a una página web).  Mencionar con precisión a otros cuando se utiliza su trabajo.",
           "rubric_performance_level_1": "La imagen se muestra correctamente y el atributo `alt` ofrece una descripción de prueba razonable de la imagen.  No se incluye código innecesario en la etiqueta `img`.  La mención de la imagen es correcta y su nombre es adecuado.",
           "rubric_performance_level_2": "La imagen se muestra correctamente y se utiliza de acuerdo con la descripción de su licencia de copyright.",
-          "rubric_performance_level_3": "Se utiliza la etiqueta `img` y se proporciona una dirección de origen para la imagen, pero puede haber pequeños errores de sintaxis o faltas de ortografía que impiden que la imagen se muestre correctamente.  La imagen puede no estar disponible para su uso legal en la página web.",
-          "rubric_performance_level_4": "La etiqueta `img` no se utiliza o no se indica una dirección de origen para la imagen."
+          "rubric_performance_level_3": "Se utiliza la etiqueta `img` y se proporciona una dirección de origen para la imagen, pero puede haber pequeños errores de sintaxis o faltas de ortografía que impiden que la imagen se muestre correctamente.  La imagen puede no estar disponible para su uso legal en la página web."
         },
         "CSD U2 adding pages_2021": {
           "rubric_key_concept": "Creación de un artefacto digital, con enlaces dentro de un sitio de varias páginas\n",

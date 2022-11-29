@@ -110,6 +110,7 @@ tr:
           description: Cebir Yoluyla Fonksiyonel Programlamayı Öğren.
           description_short: Cebir Yoluyla Fonksiyonel Programlamayı Öğren.
           student_description: Cebir Yoluyla Fonksiyonel Programlamayı Öğren.
+          name: cebir
         infinity:
           title: Disney Infinity Play Laboratuarı
           description: Bir hikaye ya da Disney Infinity karakteriyle bir oyun yaratmak
@@ -129,6 +130,10 @@ tr:
             biliminde kullanılan programlama dilini göstermek için kullanışlı bulmacalar
         K5PD:
           title: K5 Profesyönel Gelişim (eski)
+          description: 'İlkokul öğretmenlerine yönelik en son çevrimiçi Mesleki Gelişim
+            kaynakları burada: <https://studio.code.org/s/k5-onlinepd>'
+          student_description: 'İlkokul öğretmenlerine yönelik en son çevrimiçi Mesleki
+            Gelişim kaynakları burada: <https://studio.code.org/s/k5-onlinepd>'
         netsim:
           title: İnternet Simülatörü
           description: İnternetin nasıl çalıştığını öğren.
@@ -189,46 +194,164 @@ tr:
             Devrinden sincap Scrat ile birlikte bilgisayar biliminin temel yapısını
             dene!
         CodeStudioPuzzleChallenge:
+          title: Code Studio Bulmaca Yarışması
           description: Bu eğlenceli kod puzzlelarını dene! Yapabildiğin en iyisini
             yapmayı dene!
           description_short: Kendinle yarış!
           student_description: Bu eğlenceli kod puzzlelarını dene! Yapabildiğin en
             iyisini yapmayı dene!
         Tutorial Video - Code Studio Puzzle Challenge:
+          title: Öğretici - Code Studio Bulmaca Mücadelesi
           description: Bu eğlenceli kod puzzlelarını dene! Yapabildiğin en iyisini
             yapmayı dene!
           description_short: Kendinle yarış!
           student_description: Bu eğlenceli kod puzzlelarını dene! Yapabildiğin en
             iyisini yapmayı dene!
+        cspunit1:
+          title: "(eski) BB İlkeleri Ünite 1 - Dijital Bilgi"
+          description: Bu ünite, dijital bilgileri bilgisayarlarda temsil etme ve
+            insanlar ile hesaplama cihazları arasında aktarma ihtiyacından kaynaklanan
+            teknik zorlukları ve soruları araştırır. Bu birim bir pilot sürümdür ve
+            artık desteklenmemekte veya güncellenmemektedir. Yeni birimleri code.org/educate/csp
+            adresinde bulabilirsiniz.
+          description_short: Bu birim bir pilot sürümdür ve artık desteklenmemekte
+            veya güncellenmemektedir. Yeni birimleri code.org/educate/csp adresinde
+            bulabilirsiniz.
+          student_description: Bu ünite, dijital bilgileri bilgisayarlarda temsil
+            etme ve insanlar ile hesaplama cihazları arasında aktarma ihtiyacından
+            kaynaklanan teknik zorlukları ve soruları araştırır. Bu birim bir pilot
+            sürümdür ve artık desteklenmemekte veya güncellenmemektedir. Yeni birimleri
+            code.org/educate/csp adresinde bulabilirsiniz.
         algebraPD:
           title: Algebra PD'de Bilgisayar Bilimi
+          description: 'Aşama 1: Çevrimiçi Giriş'
+          description_short: 'Aşama 1: Çevrimiçi Giriş'
+          student_description: 'Aşama 1: Çevrimiçi Giriş'
         algPDmiami:
           title: Algebra PD'de Bilgisayar Bilimi
+          description: Fonksiyonel Programlama ile Cebir Öğretmek
+          description_short: Fonksiyonel Programlama ile Cebir Öğretmek
+          student_description: Fonksiyonel Programlama ile Cebir Öğretmek
         text-compression:
           title: Metin Sıkıştırma
+          description: Tekrarlanan kalıpları belirleyerek metni sıkıştırın.
+          description_short: Tekrarlanan kalıpları belirleyerek metni sıkıştırın.
+          student_description: Tekrarlanan kalıpları belirleyerek metni sıkıştırın.
+        CSPPD:
+          title: Bilgisayar Bilimi İlkeleri PD
+          description: 'Aşama 1: CSP için Çevrimiçi Giriş'
+          description_short: 'Aşama 1: CSP için Çevrimiçi Giriş'
+          student_description: 'Aşama 1: CSP için Çevrimiçi Giriş'
+        CSPLessonSamples:
+          title: CSP Ders Örnekleri
+          description: CSP için ders örnekleri
+          description_short: CSP için ders örnekleri
+          student_description: CSP için ders örnekleri
+        ECSPD:
+          title: Bilgisayar Bilimleri PD'yi Keşfedin
+          description: 'Aşama 1: Çevrimiçi Giriş'
+          description_short: 'Aşama 1: Çevrimiçi Giriş'
+          student_description: 'Aşama 1: Çevrimiçi Giriş'
+          name: ECSPD
+        sciencePD:
+          title: Fen Bilimlerinde Bilgisayar Bilimleri
+          description: 'Aşama 1: Çevrimiçi Giriş'
+          description_short: 'Aşama 1: Çevrimiçi Giriş'
+          student_description: 'Aşama 1: Çevrimiçi Giriş'
+        rbo-reference:
+          title: rbo-referans
+          description: rbo-referans
+          description_short: rbo-referans
+          student_description: rbo-referans
         Test Wednesday:
           title: Deneme Çarşamba
           description: Deneme Çarşamba
+          description_short: Deneme Çarşamba
           student_description: Deneme Çarşamba
+        cspunit3:
+          title: "(eski) BB İlkeleri Ünite 3 - Programlama"
+          description: Bu ünite, zengin, etkileşimli uygulamalar yapma yeteneğinin
+            kilidini açan bilgisayar programlamanın temel kavramlarını tanıtır. Bu
+            kurs, programlama dili olarak JavaScript'i ve uygulamalar oluşturmak için
+            programlama ortamı olarak App Lab'ı kullanır, ancak bu derslerde öğrenilen
+            kavramlar tüm programlama dillerini ve araçlarını kapsar.
+          description_short: Bu birim bir pilot sürümdür ve artık desteklenmemekte
+            veya güncellenmemektedir. Yeni birimleri code.org/educate/csp adresinde
+            bulabilirsiniz.
+          student_description: Bu ünite, zengin, etkileşimli uygulamalar yapma yeteneğinin
+            kilidini açan bilgisayar programlamanın temel kavramlarını tanıtır. Bu
+            kurs, programlama dili olarak JavaScript'i ve uygulamalar oluşturmak için
+            programlama ortamı olarak App Lab'ı kullanır, ancak bu derslerde öğrenilen
+            kavramlar tüm programlama dillerini ve araçlarını kapsar.
+        algebraPD3:
+          title: Faz 3 PD
+          description: Cebiri Blok Tabanlı İşlevsel Programlama Yoluyla Öğretin
+          description_short: Cebiri Blok Tabanlı İşlevsel Programlama Yoluyla Öğretin
+          student_description: Cebiri Blok Tabanlı İşlevsel Programlama Yoluyla Öğretin
         ECSPD-NexTech:
+          title: Bilgisayar Bilimleri PD'yi Keşfedin
+          description: 'Aşama 1: Çevrimiçi Giriş'
+          description_short: 'Aşama 1: Çevrimiçi Giriş'
           logo_image: nextech\_logo.png
+          student_description: 'Aşama 1: Çevrimiçi Giriş'
         ECSPD-iZone:
+          title: Bilgisayar Bilimleri PD'yi Keşfedin
+          description: 'Aşama 1: Çevrimiçi Giriş'
+          description_short: 'Aşama 1: Çevrimiçi Giriş'
           logo_image: izone\_logo.png
+          student_description: 'Aşama 1: Çevrimiçi Giriş'
         algebraPD-NexTech:
           title: Algebra PD'de Bilgisayar Bilimi
+          description: 'Aşama 1: Çevrimiçi Giriş'
+          description_short: 'Aşama 1: Çevrimiçi Giriş'
           logo_image: nextech\_logo.png
+          student_description: 'Aşama 1: Çevrimiçi Giriş'
         algebraPD-iZone:
           title: Algebra PD'de Bilgisayar Bilimi
+          description: 'Aşama 1: Çevrimiçi Giriş'
+          description_short: 'Aşama 1: Çevrimiçi Giriş'
           logo_image: izone\_logo.png
+          student_description: 'Aşama 1: Çevrimiçi Giriş'
         sciencePD-NexTech:
+          title: Fen Bilimlerinde Bilgisayar Bilimleri
+          description: 'Aşama 1: Çevrimiçi Giriş'
+          description_short: 'Aşama 1: Çevrimiçi Giriş'
           logo_image: nextech\_logo.png
+          student_description: 'Aşama 1: Çevrimiçi Giriş'
         sciencePD-iZone:
+          title: Fen Bilimlerinde Bilgisayar Bilimleri
+          description: 'Aşama 1: Çevrimiçi Giriş'
+          description_short: 'Aşama 1: Çevrimiçi Giriş'
           logo_image: izone\_logo.png
+          student_description: 'Aşama 1: Çevrimiçi Giriş'
+        sciencePD2:
+          title: 'Fende BB: Bölüm 2'
+          description: Aşama 2 Çevrimiçi Karma Yaz Eğitimi
+          description_short: Aşama 2 Çevrimiçi Karma Yaz Eğitimi
+          student_description: Aşama 2 Çevrimiçi Karma Yaz Eğitimi
+        sciencePD3:
+          title: 'Fende BB: Bölüm 3'
+          description: Akademik Yıl Desteği - 1. Dönem
+          description_short: Akademik Yıl Desteği - 1. Dönem
+          student_description: Akademik Yıl Desteği - 1. Dönem
         Testing:
           title: Deneniyor
           description: Deneniyor
           description_short: Deneniyor
           student_description: Deneniyor
+        cspunit2:
+          title: "(eski) BB İlkeleri Ünite 2 - İnternet"
+          description: Bu ünitede öğrenciler, Ünite 1'de bit gönderirken öğrendikleri
+            kavramları geliştirerek internet ve nasıl çalıştığı konusundaki anlayışlarını
+            genişletirler. Bu ünite bir pilot sürümdür ve artık desteklenmemekte veya
+            güncellenmemektedir. Yeni birimleri code.org/educate/csp adresinde bulabilirsiniz.
+          description_short: Bu birim bir pilot sürümdür ve artık desteklenmemekte
+            veya güncellenmemektedir. Yeni birimleri code.org/educate/csp adresinde
+            bulabilirsiniz.
+          student_description: Bu ünitede öğrenciler, Ünite 1'de bit gönderirken öğrendikleri
+            kavramları geliştirerek internet ve nasıl çalıştığı konusundaki anlayışlarını
+            genişletirler. Bu ünite bir pilot sürümdür ve artık desteklenmemekte veya
+            güncellenmemektedir. Yeni birimleri code.org/educate/csp adresinde bulabilirsiniz.
         algebraPD2a:
           title: Algebra PD'de Bilgisayar Bilimi
           description: 'Aşama 2 Çevrimiçi: Karma Yaz Eğitimi'
@@ -239,12 +362,19 @@ tr:
           description: Kulanıcı arayüzü testi için tüm seviye tipleri
           description_short: Kulanıcı arayüzü testi için tüm seviye tipleri
           student_description: Kulanıcı arayüzü testi için tüm seviye tipleri
+          name: herşey
         algebraPD2b:
           title: Algebra PD'de Bilgisayar Bilimi
           description: 'Aşama 2 Çevrimiçi: Karma Yaz Eğitimi'
           description_short: 'Aşama 2 Çevrimiçi: Karma Yaz Eğitimi'
           student_description: 'Aşama 2 Çevrimiçi: Karma Yaz Eğitimi'
+        cspfacilitator:
+          title: 'Bilgisayar Bilimi İlkeleri Eğitimde Kolaylaştırıcılar '
+          description: PD atölyesi için çevrimiçi seviyeler
+          description_short: PD atölyesi için çevrimiçi seviyeler
+          student_description: PD atölyesi için çevrimiçi seviyeler
         K5-OnlinePD:
+          title: Bilgisayar Bilimi Temellerinin Öğretimi (2017)
           description: Kişiye özel ücretsiz çevrimiçi kurs ile Code.org'un Bilgisayar
             Bilimi Temellerini kullanarak bilgisayar biliminin nasıl öğretileceğini
             öğrenin.
@@ -254,36 +384,108 @@ tr:
           student_description: Kişiye özel ücretsiz çevrimiçi kurs ile Code.org'un
             Bilgisayar Bilimi Temellerini kullanarak bilgisayar biliminin nasıl öğretileceğini
             öğrenin.
+          name: K5-çevrimiçiPD
         ECSPD2:
+          title: 'Bilgisayar Bilimi PD"si Keşfetmek: Karışık Yaz Çalışması'
           description: 'Aşama 2 Çevrimiçi: Karma Yaz Eğitimi'
           description_short: 'Aşama 2 Çevrimiçi: Karma Yaz Eğitimi'
           student_description: 'Aşama 2 Çevrimiçi: Karma Yaz Eğitimi'
+        equityPD:
+          title: Eşitlik Üzerine Tartışmaya Liderlik
+          description: Bir Code.org PD'de eşitlik üzerine bir tartışma nasıl yönetilir
+          description_short: Bir Code.org PD'de eşitlik üzerine bir tartışma nasıl
+            yönetilir
+          student_description: Bir Code.org PD'de eşitlik üzerine bir tartışma nasıl
+            yönetilir
         algebraPD2:
+          title: Bilgisayar biliminde Cebir Bölüm 2
           description: Akademik Yıl Yardımı
           description_short: Akademik Yıl Yardımı
           student_description: Akademik Yıl Yardımı
         sciencePD2b:
+          title: Fen Bilimlerinde Bilgisayar Bilimleri Faz 2b
           description: 'Aşama 2 Çevrimiçi: Karma Yaz Eğitimi'
           description_short: 'Aşama 2 Çevrimiçi: Karma Yaz Eğitimi'
           student_description: 'Aşama 2 Çevrimiçi: Karma Yaz Eğitimi'
+        equity-pd:
+          title: Eşitlik Üzerine Tartışmaya Liderlik
+          description: Bir Code.org PD'de eşitlik üzerine bir tartışma nasıl yönetilir
+          description_short: Bir Code.org PD'de eşitlik üzerine bir tartışma nasıl
+            yönetilir
+          student_description: Bir Code.org PD'de eşitlik üzerine bir tartışma nasıl
+            yönetilir
+        science-PD2:
+          title: Fen Bilimlerinde Bilgisayar Bilimleri Faz 2b
+          description: Aşama 2 Çevrimiçi Karma Yaz Eğitimi
+          description_short: Aşama 2 Çevrimiçi Karma Yaz Eğitimi
+          student_description: Aşama 2 Çevrimiçi Karma Yaz Eğitimi
+        Equity-OnlinePD:
+          title: Daha Adil Bilgisayar Bilimi Sınıfları Oluşturma
+          description: Bu ücretsiz, kendi kendine ilerleyen çevrimiçi kursla sınıfınızda
+            eşitlik yaratmak için stratejiler geliştirin.
+          description_short: Bu ücretsiz, kendi kendine ilerleyen çevrimiçi kursla
+            eşitlikçi öğretim stratejileri geliştirin.
+          student_description: Bu ücretsiz, kendi kendine ilerleyen çevrimiçi kursla
+            sınıfınızda eşitlik yaratmak için stratejiler geliştirin.
         sciencePD2b-iZone:
+          title: Fen Bilimlerinde Bilgisayar Bilimleri Faz 2b
           description: 'Aşama 2 Çevrimiçi: Karma Yaz Eğitimi'
           description_short: 'Aşama 2 Çevrimiçi: Karma Yaz Eğitimi'
           student_description: 'Aşama 2 Çevrimiçi: Karma Yaz Eğitimi'
         ECSPD2-iZone:
+          title: 'Bilgisayar Bilimi PD"si Keşfetmek: Karışık Yaz Çalışması'
           description: 'Aşama 2 Çevrimiçi: Karma Yaz Eğitimi'
           description_short: 'Aşama 2 Çevrimiçi: Karma Yaz Eğitimi'
           student_description: 'Aşama 2 Çevrimiçi: Karma Yaz Eğitimi'
         ECSPD2-NexTech:
+          title: 'Bilgisayar Bilimi PD"si Keşfetmek: Karışık Yaz Çalışması'
           description: 'Aşama 2 Çevrimiçi: Karma Yaz Eğitimi'
           description_short: 'Aşama 2 Çevrimiçi: Karma Yaz Eğitimi'
           student_description: 'Aşama 2 Çevrimiçi: Karma Yaz Eğitimi'
+        CSPPD2:
+          title: 'Bilgisayar Bilimi İlkeleri PD: Karışık Yaz Çalışması'
+          description: 5 günlük yüz yüze deneyimi temel alan ve öğretmenlerin dönem
+            başlangıcına hazırlanmasına yardımcı olan 8 saatlik çevrimiçi PD(Program
+            director)
+          description_short: 'Karışık Yaz Çalışması: 8 saat çevrimiçi'
+          student_description: 5 günlük yüz yüze deneyimi temel alan ve öğretmenlerin
+            dönem başlangıcına hazırlanmasına yardımcı olan 8 saatlik çevrimiçi PD(Program
+            director)
+        odometer:
+          title: Kilometre Sayacı Widget'ı
+          description: Çeşitli sayı tabanlarına sahip kilometre sayaçlarını kontrol
+            etmek için Kilometre Sayacı widget'ını kullanın. İkili, Ondalık ve Onaltılık
+            bilgisayar bilimlerinde en sık görülen sayı sistemleridir.
+          description_short: Çeşitli sayı tabanlarına sahip kilometre sayaçlarını
+            kontrol etmek için Kilometre Sayacı widget'ını kullanın.
+          student_description: Çeşitli sayı tabanlarına sahip kilometre sayaçlarını
+            kontrol etmek için Kilometre Sayacı widget'ını kullanın. İkili, Ondalık
+            ve Onaltılık bilgisayar bilimlerinde en sık görülen sayı sistemleridir.
         asUnplugged:
+          title: Okul Sonrası Bağlantısız
+          description: Okul sonrası Bağlantısız, çevrim dışı oyunlar ve el işleri
+            yoluyla bilişimsel düşünmeyi ve bilgisayar bilimi fikirlerini öğretmek
+            için tasarlanmıştır. Resmi olmayan sınıflar düşünülerek oluşturulan bu
+            dersler, kendi başlarına veya Okul Sonrası 1 ile birlikte harika. Bu kurs
+            eğlence yoluyla öğrenmeye odaklanır. K-8 sınıfları için önerilir.
+          description_short: Gayriresmi öğrenim için tasarlanmış bağlantısız kurs
           description_audience: 6-13 yaş grubu
+          student_description: Okul sonrası Bağlantısız, çevrim dışı oyunlar ve el
+            işleri yoluyla bilişimsel düşünmeyi ve bilgisayar bilimi fikirlerini öğretmek
+            için tasarlanmıştır. Resmi olmayan sınıflar düşünülerek oluşturulan bu
+            dersler, kendi başlarına veya Okul Sonrası 1 ile birlikte harika. Bu kurs
+            eğlence yoluyla öğrenmeye odaklanır. K-8 sınıfları için önerilir.
         afterschool1:
           title: Okulsonrası 1
+          description: Okul Sonrası 1, öğrencilerin yaşlarının farklılık gösterdiği
+            ve değerlendirmenin gerekli olmadığı resmi olmayan sınıflar için tasarlanmıştır.
+            Bu kurs, tümü 10 veya daha kısa oturumlarda, çeşitli uygulama seçenekleriyle
+            eğlence yoluyla öğrenmeye odaklanır. Tek başına veya Okul sonrası Bağlantısız
+            ile birlikte kullanın. 3-8. sınıflar için önerilir.
+          description_short: Gayriresmi öğrenim için tasarlanmış kısa kurs
           description_audience: 7-13 yaş grubu
         vigenere:
+          title: Vigenere Cipher Widget'ı
           description: Vigenere Cipher Widget uygulamasını şifrelenmiş ve çözülmüş
             mesajları keşfetmek için kullanın.
           description_short: Vigenere Cipher Widget uygulamasını şifrelenmiş ve çözülmüş
@@ -292,6 +494,12 @@ tr:
             çözülmüş mesajları keşfetmek için kullanın.
         algebraPD3a:
           title: Algebra PD'de Bilgisayar Bilimi
+          description: 'Aşama 3 (Bölüm 2): BB''nin Cebir harmanlanmış çevrimiçi okul
+            yılı çalışması'
+          description_short: 'Aşama 3 (Bölüm 1): BB''nin Cebir harmanlanmış çevrimiçi
+            okul yılı çalışması'
+          student_description: 'Aşama 3 (Bölüm 2): BB''nin Cebir harmanlanmış çevrimiçi
+            okul yılı çalışması'
         frequency_analysis:
           description_short: Frekans Analiz Aracını şifreli metindeki harflerin frekansını
             beklenen frekanslarla karşılaştırarak çözümlemek için kullanın. Yer değiştirmeleri
@@ -313,6 +521,21 @@ tr:
           student_description: Buz devri Oyun Laboratuvarı ile hikaye yarat veya oyun
             yap!
           name: buz devri
+        cspunit3temp:
+          title: "(eski) BB İlkeleri Ünite 3 - Programlama"
+          description: Bu ünite, zengin, etkileşimli uygulamalar yapma yeteneğinin
+            kilidini açan bilgisayar programlamanın temel kavramlarını tanıtır. Bu
+            kurs, programlama dili olarak JavaScript'i ve uygulamalar oluşturmak için
+            programlama ortamı olarak App Lab'ı kullanır, ancak bu derslerde öğrenilen
+            kavramlar tüm programlama dillerini ve araçlarını kapsar.
+          description_short: Bu birim bir pilot sürümdür ve artık desteklenmemekte
+            veya güncellenmemektedir. Yeni birimleri code.org/educate/csp adresinde
+            bulabilirsiniz.
+          student_description: Bu ünite, zengin, etkileşimli uygulamalar yapma yeteneğinin
+            kilidini açan bilgisayar programlamanın temel kavramlarını tanıtır. Bu
+            kurs, programlama dili olarak JavaScript'i ve uygulamalar oluşturmak için
+            programlama ortamı olarak App Lab'ı kullanır, ancak bu derslerde öğrenilen
+            kavramlar tüm programlama dillerini ve araçlarını kapsar.
         gumball:
           title: Gumball oyun Labaratuarı
           description: Bir hikaye oluşturmak veya bir oyun yaratmak için Gumball Lab
@@ -353,6 +576,14 @@ tr:
           student_description: Yapay zekâ ve makine öğreniminin dünyanın sorunlarını
             yönlendirmek için nasıl kullanılabileceğini öğrenin.
           name: okyanuslar
+        cspunit5:
+          description_short: Bu birim bir pilot sürümdür ve artık desteklenmemekte
+            veya güncellenmemektedir. Yeni birimleri code.org/educate/csp adresinde
+            bulabilirsiniz.
+        cspunit4:
+          description_short: Bu birim bir pilot sürümdür ve artık desteklenmemekte
+            veya güncellenmemektedir. Yeni birimleri code.org/educate/csp adresinde
+            bulabilirsiniz.
         CSPPD3-Unit4:
           description: CSP Unit 4 için Çevrim içi Yardım
           description_short: CSP Unit 4 için Yardım
@@ -367,6 +598,10 @@ tr:
           description: Cebir Yoluyla Fonksiyonel Programlamayı Öğren
           description_short: Cebir Yoluyla Fonksiyonel Programlamayı Öğren
           student_description: Cebir Yoluyla Fonksiyonel Programlamayı Öğren
+        algebraPD1:
+          description: Fonksiyonel Programlama ile Cebir Öğretmek
+          description_short: 'Aşama 1: Çevrimiçi Giriş'
+          student_description: Fonksiyonel Programlama ile Cebir Öğretmek
         algebraPD3c:
           title: Algebra PD'de Bilgisayar Bilimi
         csp1-2017:
@@ -426,6 +661,10 @@ tr:
               display_name: Anket
         csp4-2017:
           title: CSP Ünite 4 - Büyük Veri ve Gizlilik ('17-'18)
+          description: |-
+            İçinde yaşadığımız veri açısından zengin dünya, kamu politikası, hukuk, etik ve toplumsal etki ile ilgili birçok karmaşık soruyu gündeme getiriyor. Bu ünitenin hedefleri, olumlu ve olumsuz etkileri de dahil olmak üzere dünyadaki veriler hakkında çok yönlü ve dengeli bir görüş geliştirmek ve modern şifrelemenin nasıl ve neden çalıştığının temellerini anlamaktır.
+
+            Bu birim en son Kasım 2017'de güncellenmiştir. Müfredat güncellemeleri hakkında daha fazla bilgiyi forum.code.org/c/csp/updates adresinde bulabilirsiniz.
           description_short: Yaşadığımız veri bakımından zengin dünyayı, ve verilerin,
             kamu politikasını, kişisel gizliliği, güvenliği, hukuku ve etiği nasıl
             etkilediğini keşfedin.
@@ -436,6 +675,10 @@ tr:
               display_name: Bölüm Değerlendirme
             cspSurvey:
               display_name: Anket
+          student_description: |-
+            İçinde yaşadığımız veri açısından zengin dünya, kamu politikası, hukuk, etik ve toplumsal etki ile ilgili birçok karmaşık soruyu gündeme getiriyor. Bu ünitenin hedefleri, olumlu ve olumsuz etkileri de dahil olmak üzere dünyadaki veriler hakkında çok yönlü ve dengeli bir görüş geliştirmek ve modern şifrelemenin nasıl ve neden çalıştığının temellerini anlamaktır.
+
+            Bu birim en son Kasım 2017'de güncellenmiştir. Müfredat güncellemeleri hakkında daha fazla bilgiyi forum.code.org/c/csp/updates adresinde bulabilirsiniz.
         csp5-2017:
           title: CSP Ünite 5 - Uygulama Oluşturma ('17-'18)
           description: Bu ünite, zengin içerikli etkileşimli uygulamalar yapma yeteneğini
@@ -459,15 +702,59 @@ tr:
             yapmak için programlama ortamı olarak Uygulama Laboratuvarını kullanır
             ancak bu derslerde öğrenilen kavramlar tüm programlama dilleri ve araçları
             için geçerlidir.
+        csp6:
+          title: CSP Ünite 6 - AP Performans Görevleri
+          description: Bu ünite, Oluşturma ve Keşfetme Performans Görevlerinin hazırlanmasını
+            ve tamamlanmasını kapsar.
+          description_short: Dersler, öğrencilere AP Performans Görevlerine hazırlanmaları
+            ve bunları tamamlamaları için rehberlik eder.
+          student_description: Bu ünite, Oluşturma ve Keşfetme Performans Görevlerinin
+            hazırlanmasını ve tamamlanmasını kapsar.
         CSDU3-Draft:
+          title: " TEMP CSD Ünite 3 - İnteraktif Oyunlar ve Animasyonlar"
+          description: Disco U3 üzerinde çalışmak için geçici yer
           description_short: Programlama
+        2016_sciencePD_phase1:
+          title: 'Bilimde CS: Bölüm 1'
+          description: GUTS Projesi ile Ortaklık
+          description_short: GUTS Projesi ile Ortaklık
+          student_description: GUTS Projesi ile Ortaklık
         TEMP CSD Unit 3:
+          title: " TEMP CSD Ünite 3 - İnteraktif Oyunlar ve Animasyonlar"
           description_short: Programlama
         CSF_Secret_Sample:
+          title: Gizli Örnek
+          description: Yeni eğitim felsefesinin testi
+          description_short: Bu bir sır... shhhhh
           description_audience: 8 yaş ve üstü (Ders 2 sonrası)
+          student_description: Yeni eğitim felsefesinin testi
+        ECSPD1:
+          title: ECS Bölüm 1
+          description: ECS Sürüm 5 müfredatı için Profesyonel Öğrenme Programınıza
+            iki saatlik giriş
+          description_short: 'Aşama 1: Çevrimiçi Giriş'
+          student_description: ECS Sürüm 5 müfredatı için Profesyonel Öğrenme Programınıza
+            iki saatlik giriş
+        algebraFacilitator:
+          title: Cebirde  Kolaylaştırıcı Ön Çalışma'da Bilgisayar Bilimi
+          description: Fonksiyonel Programlama ile Cebir Öğretmek
+          description_short: Fonksiyonel Programlama ile Cebir Öğretmek
+          student_description: Fonksiyonel Programlama ile Cebir Öğretmek
+        sciencePD1:
+          title: 'Bilimde CS: Bölüm 1'
+          description: GUTS Projesi ile Ortaklık
+          description_short: 'Aşama 1: Çevrimiçi Giriş'
+          student_description: GUTS Projesi ile Ortaklık
         cspoptional:
+          title: BB İlkeleri Opsiyonel Dersler
+          description: Tüm BB İlkeleri birimlerindeki isteğe bağlı dersler ve içerik
+            burada listelenmiştir
           description_short: İsteğe bağlı
+          student_description: Tüm BB İlkeleri birimlerindeki isteğe bağlı dersler
+            ve içerik burada listelenmiştir
         cspunit1-support:
+          title: CSP Ünite 1 için Çevrim içi Yardım
+          description: Bu bir testtir Profesyonel Öğrenme Kursu testidir
           lesson_groups:
             required:
               display_name: Genel Bakış
@@ -475,7 +762,9 @@ tr:
               display_name: İçerik
             practice:
               display_name: Öğretmen Uygulamaları
+          student_description: Bu bir testtir Profesyonel Öğrenme Kursu testidir
         test-teaching-ap-cs-unit-1:
+          title: CPS PD'yi test edin
           lesson_groups:
             required:
               display_name: Genel Bakış
@@ -483,22 +772,99 @@ tr:
               display_name: İçerik
             practice:
               display_name: Öğretmen Uygulamaları
+        allthehiddenthings:
+          title: Tüm Gizli Şeyler!
+          description: Yönetici olarak UI testi için yayınlanmamış seviye türleri
+          description_short: Yönetici olarak UI testi için yayınlanmamış seviye türleri
+          student_description: Yönetici olarak UI testi için yayınlanmamış seviye
+            türleri
+        cspunit1-support-test:
+          title: CSP Ünite 1 öğretmen desteği
+          description: CSP Ünite 1 için Çevrimiçi Destekler
+          student_description: CSP Ünite 1 için Çevrimiçi Destekler
+        cspunit1-tools:
+          title: netsim görev tamamlama
+          description: internet simülatörüne giriş ve interneti öğretmek için onu
+            nasıl kullandığımızın tartışılması
+          student_description: internet simülatörüne giriş ve interneti öğretmek için
+            onu nasıl kullandığımızın tartışılması
+        csp-facilitators:
+          title: CSP Aracına Genel Bakış
+          description: BB İlkeleri kursundan bir araç koleksiyonu. Bu seviyeler, müfredat
+            boyunca kullandığımız araçlara bir bakış sağlar.
+          description_short: Yeni Kolaylaştırıcılar için BB İlkelerine Giriş
+          student_description: BB İlkeleri kursundan bir araç koleksiyonu. Bu seviyeler,
+            müfredat boyunca kullandığımız araçlara bir bakış sağlar.
+        cspassessment:
+          title: "[Deprecated] BB İlkeleri Nihai Değerlendirme"
+          description: 'Bu değerlendirme kullanımdan kaldırıldı ve 2017 Yazında kaldırılması
+            planlanıyor. Öğrenciler testi tamamlayabilir ve kendi sonuçlarını görebilir,
+            ancak öğretmen bir bölümdeki öğrencilerin sonuçlarını göremez. Lütfen
+            College Board''un resmi CSP uygulama sınavını kullanın. [Bu 55 soruluk
+            çoktan seçmeli değerlendirme, bilgisayar biliminin 7 büyük fikriyle ilgili
+            soruları kapsar: Yaratıcılık, Soyutlama, Veri, Algoritmalar, Programlama,
+            İnternet ve Küresel Etki.]'
+          description_short: Bu değerlendirme kullanımdan kaldırıldı ve 2017 Yazında
+            kaldırılması planlanıyor.
+          student_description: 'Bu değerlendirme kullanımdan kaldırıldı ve 2017 Yazında
+            kaldırılması planlanıyor. Öğrenciler testi tamamlayabilir ve kendi sonuçlarını
+            görebilir, ancak öğretmen bir bölümdeki öğrencilerin sonuçlarını göremez.
+            Lütfen College Board''un resmi CSP uygulama sınavını kullanın. [Bu 55
+            soruluk çoktan seçmeli değerlendirme, bilgisayar biliminin 7 büyük fikriyle
+            ilgili soruları kapsar: Yaratıcılık, Soyutlama, Veri, Algoritmalar, Programlama,
+            İnternet ve Küresel Etki.]'
         cspexam1-mWU7ilDYM9:
+          title: BB İlkeleri Sonuç Değerlendirmesi - Bölüm 1
+          description: 'This 25 question multiple choice assessment covers questions
+            across 7 big ideas of computer science: Creativity, Abstraction, Data,
+            Algorithms, Programming, The Internet, and Global Impact.'
           description_short: Bu çoktan seçmeli değerlendirme aracı, bilgisayar bilimi
             ile ilgili 7 önemli fikri içermektedir. Bu araç, 50 sorudan oluşan iki
             parçalık sınavın birinci parçasıdır.
+          student_description: 'This 25 question multiple choice assessment covers
+            questions across 7 big ideas of computer science: Creativity, Abstraction,
+            Data, Algorithms, Programming, The Internet, and Global Impact.'
         cspexam2-AKwgAh1ac5:
+          title: BB İlkeleri Sonuç Değerlendirmesi - Bölüm 2
+          description: 'Bu 25 soruluk çoktan seçmeli değerlendirme, bilgisayar biliminin
+            7 büyük fikriyle ilgili soruları kapsar: Yaratıcılık, Soyutlama, Veri,
+            Algoritmalar, Programlama, İnternet ve Küresel Etki. İki bölümden oluşan
+            50 soruluk bir sınavın 2. bölümüdür.'
           description_short: Bu çoktan seçmeli değerlendirme aracı, bilgisayar bilimi
             ile ilgili 7 önemli fikri içermektedir. Bu araç, 50 sorudan oluşan iki
             parçalık sınavın birinci parçasıdır.
+          student_description: 'Bu 25 soruluk çoktan seçmeli değerlendirme, bilgisayar
+            biliminin 7 büyük fikriyle ilgili soruları kapsar: Yaratıcılık, Soyutlama,
+            Veri, Algoritmalar, Programlama, İnternet ve Küresel Etki. İki bölümden
+            oluşan 50 soruluk bir sınavın 2. bölümüdür.'
+        CSDU4-Draft:
+          title: " TEMP CSD Ünite 4 - Tasarım Süreci"
+          description: Disco U4 üzerinde çalışmak için geçici yer
+          description_short: Tasarım Süreci ve Uygulama Laboratuvarı
         CSDU1-Draft:
+          description: Disco U1 üzerinde çalışmak için geçici yer
           description_short: Problem Çözme
+        CSDU2-Draft:
+          description: Disco U2 üzerinde çalışmak için geçici yer
+          description_short: Web Geliştirme
         CSDU5-Draft:
+          description: Disco U5 üzerinde çalışmak için geçici yer
           description_short: Veri
+        CSDU6-Draft:
+          description: Disco U6 üzerinde çalışmak için geçici yer
+          description_short: Makerlab
         CSF_Secret_Sample_Story:
+          title: Hikaye ile Gizli Örnek
+          description: Yol gösterici hikaye ile yeni eğitim felsefesinin testi
+          description_short: Bu bir sır... shhhhh
           description_audience: 8 - 18 + Yaşlar
+          student_description: Yol gösterici hikaye ile yeni eğitim felsefesinin testi
         MikeTest:
+          title: MikeTest
+          description: Hiçbir şeyi kırmamaya çalışmak
+          description_short: Dolaşmak için sadece bir senaryo
           description_audience: 8-98 yaş grubu
+          student_description: Hiçbir şeyi kırmamaya çalışmak
         artistExemplar:
           title: Sanatçı Örnek
           description_audience: 8 yaş ve üstü (Ders 2 sonrası)
@@ -557,6 +923,9 @@ tr:
             kişiselleştirilmiş, etkileşimli bir program geliştireceksiniz."
         grade2:
           description_audience: 5 yaş ve üstü (okuma becerisi gerekir)
+        algebrapdnext:
+          description: Fonksiyonel Programlama ile Cebir Öğretmek
+          student_description: Fonksiyonel Programlama ile Cebir Öğretmek
         csd1-2017:
           title: CSD Ünite 1 - Problem Çözme ('17-'18)
           description_short: "  İnsanların problemleri çözmek için bilgisayarlarla
@@ -664,13 +1033,29 @@ tr:
         coursec-draft:
           description_short: Bilgisayar biliminin temellerini öğrenin ve kendi oyunlarınızı,
             hikayelerinizi ve sanatınızı oluşturun.
+          description: Bu derste öğrenciler sorunları çözmek için programlar oluşturacak
+            ve paylaşabilecekleri etkileşimli oyunlar veya hikayeler geliştireceklerdir.
+            2. sınıf için önerilir.
+          student_description: Bu derste öğrenciler sorunları çözmek için programlar
+            oluşturacak ve paylaşabilecekleri etkileşimli oyunlar veya hikayeler geliştireceklerdir.
+            2. sınıf için önerilir.
         coursed-draft:
           title: 'CS Temelleri: Ders D'
           description_short: Bilgisayar biliminin temellerini öğrenin ve kendi oyunlarınızı,
             hikayelerinizi ve sanatınızı oluşturun.
+          description: Bu derste öğrenciler sorunları çözmek için programlar oluşturacak
+            ve paylaşabilecekleri etkileşimli oyunlar veya hikayeler geliştireceklerdir.
+            3. sınıf için önerilir.
+          student_description: Bu derste öğrenciler sorunları çözmek için programlar
+            oluşturacak ve paylaşabilecekleri etkileşimli oyunlar veya hikayeler geliştireceklerdir.
+            3. sınıf için önerilir.
         coursee-draft:
+          title: 'BB Temelleri: Ders E'
           description_short: Bilgisayar biliminin temellerini öğrenin ve kendi oyunlarınızı,
             hikayelerinizi ve sanatınızı oluşturun.
+          description: Bu derste öğrenciler sorunları çözmek için programlar oluşturacak
+            ve paylaşabilecekleri etkileşimli oyunlar veya hikayeler geliştireceklerdir.
+            4. sınıf için önerilir.
           lesson_groups:
             content:
               display_name: İçerik
@@ -678,21 +1063,44 @@ tr:
               display_name: Ders Projesinin Sonu
             extra_course_content:
               display_name: İlave kurs içeriği
+          student_description: Bu derste öğrenciler sorunları çözmek için programlar
+            oluşturacak ve paylaşabilecekleri etkileşimli oyunlar veya hikayeler geliştireceklerdir.
+            4. sınıf için önerilir.
         coursef-draft:
+          title: 'BB Temelleri: Ders F'
           description_short: Bilgisayar biliminin temellerini öğrenin ve kendi oyunlarınızı,
             hikayelerinizi ve sanatınızı oluşturun.
+          description: Bu derste öğrenciler sorunları çözmek için programlar oluşturacak
+            ve paylaşabilecekleri etkileşimli oyunlar veya hikayeler geliştireceklerdir.
+            5. sınıf için önerilir.
           lesson_groups:
             content:
               display_name: İçerik
             end_of_course_project:
               display_name: Ders Projesinin Sonu
+          student_description: Bu derste öğrenciler sorunları çözmek için programlar
+            oluşturacak ve paylaşabilecekleri etkileşimli oyunlar veya hikayeler geliştireceklerdir.
+            5. sınıf için önerilir.
         classic-hoc-impact-study:
+          title: Anket ile  Hour of Code
           description_short: Birçok eğlenceli karakterler ile birlikte bilgisayar
             biliminin temel öğelerini dene!
+          description: Angry Birds and Plants vs. Zombies karakterleriyle bilgisayar
+            biliminin temellerini deneyin! Bu sürüm, Hour of Code'u iyileştirmeye
+            devam etmemize yardımcı olacak ön ve son anketleri içerir. Sınıfınızdan,
+            ders bitmeden 10 dakika önce son ankete geçmesini isteyin.
         hoc-impact-study:
           title: Anketli Klasik Labirent
           description_short: Birçok eğlenceli karakterler ile birlikte bilgisayar
             biliminin temel öğelerini dene!
+          description: Angry Birds and Plants vs. Zombies karakterleriyle bilgisayar
+            biliminin temellerini deneyin! Bu sürüm, Hour of Code'u iyileştirmeye
+            devam etmemize yardımcı olacak ön ve son anketleri içerir. Sınıfınızdan,
+            ders bitmeden 10 dakika önce son ankete geçmesini isteyin.
+          student_description: Angry Birds and Plants vs. Zombies karakterleriyle
+            bilgisayar biliminin temellerini deneyin! Bu sürüm, Hour of Code'u iyileştirmeye
+            devam etmemize yardımcı olacak ön ve son anketleri içerir. Sınıfınızdan,
+            ders bitmeden 10 dakika önce son ankete geçmesini isteyin.
         sports:
           title: Kendi Spor Oyununu Kodla
           description_short: Kendi sporunu kodla
@@ -700,7 +1108,10 @@ tr:
           student_description: Kendi sporunu kodla
           name: spor dalları
         csp3-support:
+          title: Ünite 3 Çevrimiçi Profesyonel Öğrenme Kursu
           description_short: CSP ünite 3 dersi için Öğretmen eğitimi
+          description: Bu, Ünite 3'ü öğretmeye hazırlanan CSP öğretmenleri için Profesyonel
+            Öğrenim Kursunda düzenlenen bir dizi çevrimiçi destektir.
           lesson_groups:
             required:
               display_name: Genel Bakış
@@ -708,8 +1119,13 @@ tr:
               display_name: İçerik
             practice:
               display_name: Öğretmen Uygulamaları
+          student_description: Bu, Ünite 3'ü öğretmeye hazırlanan CSP öğretmenleri
+            için Profesyonel Öğrenim Kursunda düzenlenen bir dizi çevrimiçi destektir.
         csp4-support:
+          title: Ünite 4 Çevrimiçi Profesyonel Öğrenme Kursu
           description_short: CSP ünite 4 dersi için Öğretmen eğitimi
+          description: Bu, Ünite 4'ü öğretmeye hazırlanan CSP öğretmenleri için Profesyonel
+            Öğrenim Kursunda düzenlenen bir dizi çevrimiçi destektir.
           lesson_groups:
             required:
               display_name: Genel Bakış
@@ -717,14 +1133,34 @@ tr:
               display_name: İçerik
             practice:
               display_name: Öğretmen Uygulamaları
+          student_description: Bu, Ünite 4'ü öğretmeye hazırlanan CSP öğretmenleri
+            için Profesyonel Öğrenim Kursunda düzenlenen bir dizi çevrimiçi destektir.
+        sciencepd4:
+          title: 'Bilimde BB: Bölüm 4'
+          description_short: 'Aşama 3: Dönem 1 atölyesi üzerine düşünün'
+          description: 'Aşama 3: Dönem 1 atölyesi üzerine düşünün'
+          student_description: 'Aşama 3: Dönem 1 atölyesi üzerine düşünün'
         csf2harvey:
+          title: Bay Harvey'in Sınıfı
+          description: Sadece sınıfımız için özel baloncuklar!
           lesson_groups:
             end_of_course_project:
               display_name: Ders Projesinin Sonu
             content:
               display_name: İçerik
+          student_description: Sadece sınıfımız için özel baloncuklar!
+        sciencepd5:
+          title: 'Bilimde BB: Bölüm 5'
+          description_short: 'Aşama 3: Dönem 2 atölyesi üzerine düşünün'
+          description: 'Aşama 3: Dönem 2 atölyesi üzerine düşünün'
+          student_description: 'Aşama 3: Dönem 2 atölyesi üzerine düşünün'
         csp5-support:
+          title: Ünite 5 Çevrimiçi Profesyonel Öğrenme Kursu
           description_short: CSP ünite 5 dersi için Öğretmen eğitimi
+          description: |-
+            #### **Bu kurs, kursun artık desteklenmeyen bir sürümüyle ilişkilendirilmiştir. En güncel müfredatımızı görmek için lütfen Kurslara Genel Bakış sayfamızı (<https://studio.code.org/courses>) ziyaret edin.**
+
+            Bu, Ünite 5'i öğretmeye hazırlanan CSP öğretmenleri için Profesyonel Öğrenim Kursunda düzenlenen bir dizi çevrimiçi destektir.
           lesson_groups:
             required:
               display_name: Genel Bakış
@@ -732,6 +1168,15 @@ tr:
               display_name: İçerik
             practice:
               display_name: Öğretmen Uygulamaları
+          student_description: Bu, Ünite 5'i öğretmeye hazırlanan CSP öğretmenleri
+            için Profesyonel Öğrenim Kursunda düzenlenen bir dizi çevrimiçi destektir.
+          name: csp5-desteği
+        csp6-support:
+          title: Öğretmenler için AP Hazırlığı ve Kaynakları
+          description: 'YAKINDA: Bu sayfa AP sınavına hazırlanan öğretmenler için
+            bir dizi kaynağa yakında ev sahipliği yapacak'
+          student_description: 'YAKINDA: Bu sayfa AP sınavına hazırlanan öğretmenler
+            için bir dizi kaynağa yakında ev sahipliği yapacak'
         csppostap-2017:
           title: CSP AP Sonrası - Uygulamalarınızdaki Veritabanları ve Veri Kullanımı
             ('17-'18)
@@ -748,6 +1193,18 @@ tr:
               display_name: 'Bölüm 1: Donanım çıktısı'
             csd6_2:
               display_name: 'Bölüm 1: Donanım girdisi'
+        workshop-gamelab:
+          title: Oyun Laboratuvarı Atölyesi
+          description_audience: Yüz yüze Oyun Laboratuvarı Atölyesine katılan öğretmenler
+          description_short: Yüz yüze Game Lab Workshop'a eşlik edecek seviye ilerlemesi
+          description: Bu seviye ilerlemesinin, yüz yüze bir Game Lab Workshop'a eşlik
+            etmesi amaçlanmıştır. Bu, aracı veya CS kavramlarını öğretmek için değil,
+            daha çok Game Lab'in genişliğini katılımcılara tanıtmada bir atölye kolaylaştırıcısını
+            desteklemek içindir.
+          student_description: Bu seviye ilerlemesinin, yüz yüze bir Game Lab Workshop'a
+            eşlik etmesi amaçlanmıştır. Bu, aracı veya CS kavramlarını öğretmek için
+            değil, daha çok Game Lab'in genişliğini katılımcılara tanıtmada bir atölye
+            kolaylaştırıcısını desteklemek içindir.
         csd5-draft:
           title: CSD5 Taslağı
           lesson_groups:
@@ -792,6 +1249,16 @@ tr:
         coursee-ramp:
           title: kursiyer-hızlan
         csd6-2017:
+          title: CSD Ünite 6 - Fiziksel Hesaplama ('17-'18)
+          description_short: Fiziksel cihazlarla programlamayı öğrenin.
+          description: Ünite 6, bilgi işlemde donanım platformlarının rolünü ve farklı
+            sensörlerin geleneksel klavye, fare ve monitörden nasıl daha etkili giriş
+            ve çıkış sağlayabileceğini araştırıyor. App Lab ve Adafruit's Circuit
+            Playground'u kullanarak, basit bir kaba prototipin bitmiş bir ürüne nasıl
+            yol açabileceğine bakarak, akıllı cihazlarda gördüğünüzle aynı donanım
+            girişlerini ve çıkışlarını kullanan programlar geliştireceksiniz. Ünite,
+            Circuit Playground'u kendi tasarımınız olan bir yeniliğin temeli olarak
+            kullanmak için bir tasarım mücadelesiyle sona erer.
           lesson_groups:
             csd6_1:
               display_name: 'Bölüm 1: Donanım çıktısı'
@@ -799,10 +1266,19 @@ tr:
               display_name: 'Bölüm 1: Donanım girdisi'
             csd_survey:
               display_name: Kurs-Sonrası Anketi
+          student_description: Ünite 6, bilgi işlemde donanım platformlarının rolünü
+            ve farklı sensörlerin geleneksel klavye, fare ve monitörden nasıl daha
+            etkili giriş ve çıkış sağlayabileceğini araştırıyor. App Lab ve Adafruit's
+            Circuit Playground'u kullanarak, basit bir kaba prototipin bitmiş bir
+            ürüne nasıl yol açabileceğine bakarak, akıllı cihazlarda gördüğünüzle
+            aynı donanım girişlerini ve çıkışlarını kullanan programlar geliştireceksiniz.
+            Ünite, Circuit Playground'u kendi tasarımınız olan bir yeniliğin temeli
+            olarak kullanmak için bir tasarım mücadelesiyle sona erer.
         csd3-draft:
           title: 'CSD ünite 3 - programlama: Animasyonlar ve Oyunlar'
           description_short: Animasyonlar ve Oyunlar
         csd5-2017:
+          title: CSD Ünite 5 - Veri ve Toplum ('17-'18)
           description_short: İnsanların veri problemlerini çözmek için bilgisayarı
             nasıl kullandıklarını öğrenin.
           description: 5.  ünite problem çözmede verilerin önemi hakkındadır ve bilgisayarların
@@ -864,13 +1340,25 @@ tr:
           title: CSP Öğrenci Kurs Sonrası Anketi ('17-'18)
           description_audience: CSP Öğrencileri
           description_short: CSP Öğrenci Kurs Sonu Anketi
+          description: Code.org BB İlkeleri Kurs Sonrası Anketine hoş geldiniz. Bu
+            anketin tamamlanması yaklaşık 15 dakika sürer. Yanıtlarınız gizli ve anonimdir
+            -- öğretmeniniz tüm sınıf için anonim toplu sonuçları görebilir. Sonuçlar,
+            hem öğretmeniniz hem de Code.org'un kursu sürdürmesi ve geliştirmesi için
+            hayati önem taşır. Zaman ayırdığınız ve katıldığınız için teşekkürler.
           lesson_groups:
             cspSurvey:
               display_name: Anket
+          student_description: Code.org BB İlkeleri Kurs Sonrası Anketine hoş geldiniz.
+            Bu anketin tamamlanması yaklaşık 15 dakika sürer. Yanıtlarınız gizli ve
+            anonimdir -- öğretmeniniz tüm sınıf için anonim toplu sonuçları görebilir.
+            Sonuçlar, hem öğretmeniniz hem de Code.org'un kursu sürdürmesi ve geliştirmesi
+            için hayati önem taşır. Zaman ayırdığınız ve katıldığınız için teşekkürler.
+          name: csp-anket sonrası
         public-key-cryptography:
           title: Açık Anahtarlı Şifreleme Araçları
         csd2-old:
           title: CSD ünite 2 (kullanım dışı)
+          description_short: Web Geliştirme
         coursea-2017:
           title: Kurs A
           assignment_family_title: Kurs A
@@ -882,6 +1370,7 @@ tr:
           student_description: Bilgisayar bilimi ve internet güvenliğinin temellerini
             öğren. Kursun sonunda, kendine ait ve paylaşabileceğin bir oyun ya da
             hikaye oluştur.
+          name: kursa-2017
         courseb-2017:
           title: Kurs B
           assignment_family_title: Kurs B
@@ -893,6 +1382,7 @@ tr:
           student_description: Bilgisayar bilimi ve internet güvenliğinin temellerini
             öğren. Kursun sonunda, kendine ait ve paylaşabileceğin bir oyun ya da
             hikaye oluştur.
+          name: kursb-2017
         coursec-2017:
           title: Kurs C
           assignment_family_title: Kurs C
@@ -908,12 +1398,22 @@ tr:
             tekniklerini araştır ve siber zorbalığa nasıl yanıt vereceğini öğren.
             Kursun sonunda, kendine ait ve paylaşabileceğin bir oyun ya da hikaye
             oluştur.
+          name: kursc-2017
         coursed-2017:
           title: Kurs D
           assignment_family_title: Kurs D
           description_audience: 'Yaş: 7-11'
           description_short: Bilgisayar biliminin temellerini öğrenin ve kendi oyunlarınızı,
             hikayelerinizi ve sanatınızı oluşturun.
+          description: Algoritmalar, iç içe döngüler, while (iken) döngüleri, koşullu
+            ifadeler ve olaylar dahil olmak üzere yeni kodlama kavramlarını öğrenin.
+            Paylaşabileceğiniz kendi oyununuzu veya hikayenizi yaratmadan önce dijital
+            vatandaşlığa giriş yapın.
+          student_description: Algoritmalar, iç içe döngüler, while (iken) döngüleri,
+            koşullu ifadeler ve olaylar dahil olmak üzere yeni kodlama kavramlarını
+            öğrenin. Paylaşabileceğiniz kendi oyununuzu veya hikayenizi yaratmadan
+            önce dijital vatandaşlığa giriş yapın.
+          name: kursd-2017
         coursee-2017:
           title: Kurs E
           assignment_family_title: Kurs E
@@ -936,6 +1436,7 @@ tr:
             başlayın ve daha sonra fonksiyonlara geçin. Bu kursun ikinci kısmında,
             arkadaşlarınız ve ailenizle paylaşabileceğiniz bir bitirme projesi tasarlayın
             ve oluşturun.
+          name: kurse-2017
         coursef-2017:
           title: Kurs F
           assignment_family_title: Kurs F
@@ -959,8 +1460,10 @@ tr:
             ve bilgisayarın ve internetin toplumsal etkilerini tartışmak. Bu dersin
             ikinci bölümünde, arkadaşlarınız ve ailenizle paylaşabileceğiniz bir kaptanlık
             projesi tasarlayınız ve oluşturunuz.
+          name: kursf-2017
         csdnovice:
           title: Bilgisayar Bilimi Keşifleri TeacherCon Acemi Kolaylaştırıcılar
+          description_audience: CSP Acemi Kolaylaştırıcılar
           description_short: TeacherCon'da acemi kolaylaştırıcılar için yansıma soruları.
           description: Bir acemi kolaylaştırıcı olarak TeacherCon'dan yansımanızın
             kaydını tutacak bir yer.
@@ -1035,6 +1538,7 @@ tr:
             göstermesi için yansıma istemleri ve kılavuzlarını bulacaksınız. Akran
             gözden geçirme nesneleri, ünite için kendi yansımalarınızı teslim ettiğinizde
             bu sayfanın altında bulunacaktır.
+          name: csp1-dlp
         csp2-dlp:
           title: CSP Ünite 2 Derinlemesine Öğrenim
           description_audience: CS İlkeleri Eğitimde Kolaylaştırıcılar
@@ -1264,6 +1768,7 @@ tr:
           student_description: Bilgisayar bilimi ve internet güvenliğinin temellerini
             öğren. Kursun sonunda, kendine ait ve paylaşabileceğin bir oyun ya da
             hikaye oluştur.
+          name: express-2017
         pre-express-2017:
           title: Okul Öncesi Çocuklar için Hızlandırılmış
           assignment_family_title: Okul Öncesi Çocuklar için Hızlandırılmış
@@ -1276,10 +1781,16 @@ tr:
           student_description: Bilgisayar bilimi ve internet güvenliğinin temellerini
             öğren. Kursun sonunda, kendine ait ve paylaşabileceğin bir oyun ya da
             hikaye oluştur.
+          name: ekspres-2017 öncesi
         subgoal-labels-opt-in:
           title: AltHedef Etiketleri Çalışması Kapsamına Dahil Olma
         csp3-research-mxghyt:
           title: 'CSP Ünite 3: Programlamaya Giriş (alt hedefler)'
+          description: Bu ünite, zengin, etkileşimli uygulamalar yapma yeteneğinin
+            kilidini açan bilgisayar programlamanın temel kavramlarını tanıtır. Bu
+            kurs, programlama dili olarak JavaScript'i ve uygulamalar oluşturmak için
+            programlama ortamı olarak App Lab'ı kullanır, ancak bu derslerde öğrenilen
+            kavramlar tüm programlama dillerini ve araçlarını kapsar.
           lesson_groups:
             csp3_1:
               display_name: 'Bölüm 1: Programlama Dilleri ve Algoritmalar'
@@ -1287,6 +1798,11 @@ tr:
               display_name: Bölüm Değerlendirme
             cspSurvey:
               display_name: Anket
+          student_description: Bu ünite, zengin, etkileşimli uygulamalar yapma yeteneğinin
+            kilidini açan bilgisayar programlamanın temel kavramlarını tanıtır. Bu
+            kurs, programlama dili olarak JavaScript'i ve uygulamalar oluşturmak için
+            programlama ortamı olarak App Lab'ı kullanır, ancak bu derslerde öğrenilen
+            kavramlar tüm programlama dillerini ve araçlarını kapsar.
         csd4-draft:
           title: CSD Ünite 4 Revizyon Taslağı
           lesson_groups:
@@ -1399,11 +1915,15 @@ tr:
           title: CSP 3 Önerilen Değişiklikleri Geçici Sahneleme Zemini
           description_short: Csp3'e Ekim değişikliklerine yönelik geçici sahneleme
             zemini
+          description: Bu, eklenen yeni ve değiştirilmiş aşamalarla /s/csp3-2017'deki
+            canlı seviyelerin bir kopyasıdır. CANLI SEVİYELERİ DÜZENLEMEYİN.
           lesson_groups:
             csp3_1:
               display_name: 'Bölüm 1: Programlama Dilleri ve Algoritmalar'
             cspAssessment:
               display_name: Bölüm Değerlendirme
+          student_description: Bu, eklenen yeni ve değiştirilmiş aşamalarla /s/csp3-2017'deki
+            canlı seviyelerin bir kopyasıdır. CANLI SEVİYELERİ DÜZENLEMEYİN.
         pwc:
           title: Potansiyel Müfredatınıza PwC Erişimi
           description: PwC'de, tüm öğrencilerin yarının liderleri ve teknoloji odaklı
@@ -1423,6 +1943,7 @@ tr:
         allthesurveys:
           title: Tüm anketler
           description_short: Code.org anketlerini sahneleme ve deneme yeri
+          name: tüm anketler
         k1hoc2017:
           title: K-1 Kod Saati 2017
         hero:
@@ -1439,20 +1960,42 @@ tr:
           title: Keşfet - AP Performans Görev Hazırlığı ('17-'18)
           description_short: Öğrencilere yardım etmeye yönelik dersler ve kaynaklar,
             AP Performans Görevlerini Keşfetmeye kendini hazırlar ve bunu tamamlar.
+          description: |-
+            Bu dersler, AP Keşfetme Performans Görevini anlamanıza, hazırlanmanıza ve yapmanıza yardımcı olmak için buradadır. Her "ders", öğretmeninizin size yol göstermesine yardımcı olabileceği faydalı belgelere bağlantılar içerir. NOT: İlk dersteki ikinci öğe, Keşfetme PT ile doğrudan ilgili değildir, genel teknik kurulumu ve hem Keşfetme hem de Oluşturma görevlerinin çeşitli öğelerini yapmak için ihtiyaç duyduğunuz araçları kapsar.
+
+            Bu birim en son Kasım 2017'de güncellenmiştir. Müfredat güncellemeleri hakkında daha fazla bilgiyi forum.code.org/c/csp/updates adresinde bulabilirsiniz.
           lesson_groups:
             csp_ap_2:
               display_name: 'Bölüm 2: AP performans görevini keşfet'
             cspSurvey:
               display_name: Anket
+          student_description: |-
+            Bu dersler, AP Keşfetme Performans Görevini anlamanıza, hazırlanmanıza ve yapmanıza yardımcı olmak için buradadır. Her "ders", öğretmeninizin size yol göstermesine yardımcı olabileceği faydalı belgelere bağlantılar içerir. NOT: İlk dersteki ikinci öğe, Keşfetme PT ile doğrudan ilgili değildir, genel teknik kurulumu ve hem Keşfetme hem de Oluşturma görevlerinin çeşitli öğelerini yapmak için ihtiyaç duyduğunuz araçları kapsar.
+
+            Bu birim en son Kasım 2017'de güncellenmiştir. Müfredat güncellemeleri hakkında daha fazla bilgiyi forum.code.org/c/csp/updates adresinde bulabilirsiniz.
         csp-create-2017:
           title: Oluştur - AP Performans Görev Hazırlığı ('17-'18)
           description_short: Öğrencilere yardım etmeye yönelik dersler ve kaynaklar,
             AP Performans Görevlerini Oluşturmaya kendini hazırlar ve bunu tamamlar.
+          description: 'Bu dersler, AP Oluşturma Performansı Görevini anlamanıza,
+            hazırlanmanıza ve yapmanıza yardımcı olmak için buradadır. Her "ders",
+            öğretmeninizin size yol göstermesine yardımcı olabileceği faydalı belgelere
+            bağlantılar içerir. NOT: ilk dersteki ilk öğe, PT Oluşturma ile doğrudan
+            ilgili değildir, genel teknik kurulumu ve hem Keşfetme hem de Oluşturma
+            görevlerinin çeşitli öğelerini yapmak için ihtiyaç duyduğunuz araçları
+            kapsar.'
           lesson_groups:
             csp_ap_3:
               display_name: 'Bölüm 2: AP performans görevini yarat'
             cspSurvey:
               display_name: Anket
+          student_description: 'Bu dersler, AP Oluşturma Performansı Görevini anlamanıza,
+            hazırlanmanıza ve yapmanıza yardımcı olmak için buradadır. Her "ders",
+            öğretmeninizin size yol göstermesine yardımcı olabileceği faydalı belgelere
+            bağlantılar içerir. NOT: ilk dersteki ilk öğe, PT Oluşturma ile doğrudan
+            ilgili değildir, genel teknik kurulumu ve hem Keşfetme hem de Oluşturma
+            görevlerinin çeşitli öğelerini yapmak için ihtiyaç duyduğunuz araçları
+            kapsar.'
         csp3-reovery:
           title: 'deniz kurtarma öğrenci çalışması altında csp3 '
         csp3-recovery:
@@ -1495,6 +2038,8 @@ tr:
           title: Gömülü Olmayan Seviyeler
         csd3-1819draft:
           title: CSD Ünite 3 - Animasyonlar ve Oyunlar
+          description_short: " Animasyonlar, interaktif sanat, ve Game Lab'de oyunlar
+            programlamayı öğrenin."
           description: " Ünite 3'te Oyun Laboratuvarında animasyonlar, etkileşimli
             sanat ve oyunlar programladığından dolayı kodlama deneyimini arttıracaksın.
             Ünite, basit şekiller ile başlar ve bilgisayar bilim insanlarının günlük
@@ -1526,6 +2071,8 @@ tr:
             kullandığı ile aynı programlama kavramları ve tasarım süreci kullanılarak
             daha karmaşık hareketli nesne tabanlı oyunlara doğru ilerler. Final projesinde
             kişiselleştirilmiş, etkileşimli bir program geliştireceksiniz."
+          description_short: " Animasyonlar, interaktif sanat, ve Game Lab'de oyunlar
+            programlamayı öğrenin."
           lesson_groups:
             csd3_1:
               display_name: 'Bölüm 1: Resim ve animasyon'
@@ -1637,6 +2184,15 @@ tr:
             Kursun sonunda, kendine ait ve paylaşabileceğin bir oyun ya da hikaye
             oluştur.
         csd6-2018:
+          description: Ünite 6, bilgi işlemde donanım platformlarının rolünü ve farklı
+            sensörlerin geleneksel klavye, fare ve monitörden nasıl daha etkili giriş
+            ve çıkış sağlayabileceğini araştırıyor. App Lab ve Adafruit's Circuit
+            Playground'u kullanarak, basit bir kaba prototipin bitmiş bir ürüne nasıl
+            yol açabileceğine bakarak, akıllı cihazlarda gördüğünüzle aynı donanım
+            girişlerini ve çıkışlarını kullanan programlar geliştireceksiniz. Ünite,
+            Circuit Playground'u kendi tasarımınız olan bir yeniliğin temeli olarak
+            kullanmak için bir tasarım mücadelesiyle sona erer.
+          description_short: Fiziksel cihazlarla programlamayı öğrenin.
           lesson_groups:
             csd6_1:
               display_name: 'Bölüm 1: Donanım çıktısı'
@@ -1644,6 +2200,14 @@ tr:
               display_name: 'Bölüm 1: Donanım girdisi'
             cspSurvey:
               display_name: Anket
+          student_description: Ünite 6, bilgi işlemde donanım platformlarının rolünü
+            ve farklı sensörlerin geleneksel klavye, fare ve monitörden nasıl daha
+            etkili giriş ve çıkış sağlayabileceğini araştırıyor. App Lab ve Adafruit's
+            Circuit Playground'u kullanarak, basit bir kaba prototipin bitmiş bir
+            ürüne nasıl yol açabileceğine bakarak, akıllı cihazlarda gördüğünüzle
+            aynı donanım girişlerini ve çıkışlarını kullanan programlar geliştireceksiniz.
+            Ünite, Circuit Playground'u kendi tasarımınız olan bir yeniliğin temeli
+            olarak kullanmak için bir tasarım mücadelesiyle sona erer.
         coursee-2018:
           title: Kurs E (2018)
           assignment_family_title: Kurs E
@@ -1797,6 +2361,11 @@ tr:
             ünitede yönlendirilen başlıca becerilerdir.
         csp3-2018:
           title: 'CSP Ünite 3: Programlamaya Giriş (''18-''19)'
+          description: Bu ünite, zengin, etkileşimli uygulamalar yapma yeteneğinin
+            kilidini açan bilgisayar programlamanın temel kavramlarını tanıtır. Bu
+            kurs, programlama dili olarak JavaScript'i ve uygulamalar oluşturmak için
+            programlama ortamı olarak App Lab'ı kullanır, ancak bu derslerde öğrenilen
+            kavramlar tüm programlama dillerini ve araçlarını kapsar.
           lesson_groups:
             csp3_1_2018:
               display_name: 'Ünite 3: Programlamaya Giriş'
@@ -1804,6 +2373,11 @@ tr:
               display_name: Bölüm Değerlendirme
             cspSurvey:
               display_name: Anket
+          student_description: Bu ünite, zengin, etkileşimli uygulamalar yapma yeteneğinin
+            kilidini açan bilgisayar programlamanın temel kavramlarını tanıtır. Bu
+            kurs, programlama dili olarak JavaScript'i ve uygulamalar oluşturmak için
+            programlama ortamı olarak App Lab'ı kullanır, ancak bu derslerde öğrenilen
+            kavramlar tüm programlama dillerini ve araçlarını kapsar.
         csp-explore-2018:
           title: Keşfet - AP Performans Görev Hazırlığı ('18-'19)
           description_short: Öğrencilere yardım etmeye yönelik dersler ve kaynaklar,
@@ -2650,6 +3224,8 @@ tr:
             kullandığı ile aynı programlama kavramları ve tasarım süreci kullanılarak
             daha karmaşık hareketli nesne tabanlı oyunlara doğru ilerler. Final projesinde
             kişiselleştirilmiş, etkileşimli bir program geliştireceksiniz."
+          description_short: " Animasyonlar, interaktif sanat, ve Game Lab'de oyunlar
+            programlamayı öğrenin."
           lesson_groups:
             csd3_1:
               display_name: 'Bölüm 1: Resim ve animasyon'
@@ -2717,6 +3293,15 @@ tr:
             nasıl yardımcı olduklarını öğreneceksiniz. Bölüm, verilerin problem çözmede
             seçtiğiniz bir alana nasıl uygulanabileceğini dikkate alarak sonuçlandırılır.
         csd6-2019:
+          description: Ünite 6, bilgi işlemde donanım platformlarının rolünü ve farklı
+            sensörlerin geleneksel klavye, fare ve monitörden nasıl daha etkili giriş
+            ve çıkış sağlayabileceğini araştırıyor. App Lab ve Adafruit's Circuit
+            Playground'u kullanarak, basit bir kaba prototipin bitmiş bir ürüne nasıl
+            yol açabileceğine bakarak, akıllı cihazlarda gördüğünüzle aynı donanım
+            girişlerini ve çıkışlarını kullanan programlar geliştireceksiniz. Ünite,
+            Circuit Playground'u kendi tasarımınız olan bir yeniliğin temeli olarak
+            kullanmak için bir tasarım mücadelesiyle sona erer.
+          description_short: Fiziksel cihazlarla programlamayı öğrenin.
           lesson_groups:
             csd6_1:
               display_name: 'Bölüm 1: Donanım çıktısı'
@@ -2724,6 +3309,14 @@ tr:
               display_name: 'Bölüm 1: Donanım girdisi'
             cspSurvey:
               display_name: Anket
+          student_description: Ünite 6, bilgi işlemde donanım platformlarının rolünü
+            ve farklı sensörlerin geleneksel klavye, fare ve monitörden nasıl daha
+            etkili giriş ve çıkış sağlayabileceğini araştırıyor. App Lab ve Adafruit's
+            Circuit Playground'u kullanarak, basit bir kaba prototipin bitmiş bir
+            ürüne nasıl yol açabileceğine bakarak, akıllı cihazlarda gördüğünüzle
+            aynı donanım girişlerini ve çıkışlarını kullanan programlar geliştireceksiniz.
+            Ünite, Circuit Playground'u kendi tasarımınız olan bir yeniliğin temeli
+            olarak kullanmak için bir tasarım mücadelesiyle sona erer.
         csp4-pilot:
           title: 'CSP Ünite 4 Pilot: Değişkenler, Koşullar ve Fonksiyonlar'
           lesson_groups:
@@ -2787,6 +3380,11 @@ tr:
             ünitede yönlendirilen başlıca becerilerdir.
         csp3-2019:
           title: CSP Ünite 3 - Programlamaya Giriş ('19-'20)
+          description: Bu ünite, zengin, etkileşimli uygulamalar yapma yeteneğinin
+            kilidini açan bilgisayar programlamanın temel kavramlarını tanıtır. Bu
+            kurs, programlama dili olarak JavaScript'i ve uygulamalar oluşturmak için
+            programlama ortamı olarak App Lab'ı kullanır, ancak bu derslerde öğrenilen
+            kavramlar tüm programlama dillerini ve araçlarını kapsar.
           lesson_groups:
             csp3_1_2018:
               display_name: 'Ünite 3: Programlamaya Giriş'
@@ -2794,6 +3392,11 @@ tr:
               display_name: Bölüm Değerlendirme
             cspSurvey:
               display_name: Anket
+          student_description: Bu ünite, zengin, etkileşimli uygulamalar yapma yeteneğinin
+            kilidini açan bilgisayar programlamanın temel kavramlarını tanıtır. Bu
+            kurs, programlama dili olarak JavaScript'i ve uygulamalar oluşturmak için
+            programlama ortamı olarak App Lab'ı kullanır, ancak bu derslerde öğrenilen
+            kavramlar tüm programlama dillerini ve araçlarını kapsar.
         csp4-2019:
           title: CSP Ünite 4 - Büyük Veri ve Gizlilik ('19-'20)
           description: Yaşadığımız veri bakımından zengin dünya, kamu politikası,
@@ -3028,9 +3631,19 @@ tr:
           title: CSP Öğrenci Kurs Sonrası Anketi ('18-'19)
           description_audience: CSP Öğrencileri
           description_short: CSP Öğrenci Kurs Sonu Anketi
+          description: Code.org BB İlkeleri Kurs Sonrası Anketine hoş geldiniz. Bu
+            anketin tamamlanması yaklaşık 15 dakika sürer. Yanıtlarınız gizli ve anonimdir
+            -- öğretmeniniz tüm sınıf için anonim toplu sonuçları görebilir. Sonuçlar,
+            hem öğretmeniniz hem de Code.org'un kursu sürdürmesi ve geliştirmesi için
+            hayati önem taşır. Zaman ayırdığınız ve katıldığınız için teşekkürler.
           lesson_groups:
             cspSurvey:
               display_name: Anket
+          student_description: Code.org BB İlkeleri Kurs Sonrası Anketine hoş geldiniz.
+            Bu anketin tamamlanması yaklaşık 15 dakika sürer. Yanıtlarınız gizli ve
+            anonimdir -- öğretmeniniz tüm sınıf için anonim toplu sonuçları görebilir.
+            Sonuçlar, hem öğretmeniniz hem de Code.org'un kursu sürdürmesi ve geliştirmesi
+            için hayati önem taşır. Zaman ayırdığınız ve katıldığınız için teşekkürler.
         csp5-pilot:
           title: CSP Ünite 5 Pilot - Listeler, Döngüler ve Gezinmeler
           lesson_groups:
@@ -3127,6 +3740,8 @@ tr:
             kullandığı ile aynı programlama kavramları ve tasarım süreci kullanılarak
             daha karmaşık hareketli nesne tabanlı oyunlara doğru ilerler. Final projesinde
             kişiselleştirilmiş, etkileşimli bir program geliştireceksiniz."
+          description_short: " Animasyonlar, interaktif sanat, ve Game Lab'de oyunlar
+            programlamayı öğrenin."
           lesson_groups:
             csd3_1:
               display_name: 'Bölüm 1: Resim ve animasyon'
@@ -3529,6 +4144,15 @@ tr:
             nasıl yardımcı olduklarını öğreneceksiniz. Bölüm, verilerin problem çözmede
             seçtiğiniz bir alana nasıl uygulanabileceğini dikkate alarak sonuçlandırılır.
         csd6-2020:
+          description: Ünite 6, bilgi işlemde donanım platformlarının rolünü ve farklı
+            sensörlerin geleneksel klavye, fare ve monitörden nasıl daha etkili giriş
+            ve çıkış sağlayabileceğini araştırıyor. App Lab ve Adafruit's Circuit
+            Playground'u kullanarak, basit bir kaba prototipin bitmiş bir ürüne nasıl
+            yol açabileceğine bakarak, akıllı cihazlarda gördüğünüzle aynı donanım
+            girişlerini ve çıkışlarını kullanan programlar geliştireceksiniz. Ünite,
+            Circuit Playground'u kendi tasarımınız olan bir yeniliğin temeli olarak
+            kullanmak için bir tasarım mücadelesiyle sona erer.
+          description_short: Fiziksel cihazlarla programlamayı öğrenin.
           lesson_groups:
             csd6_1:
               display_name: 'Bölüm 1: Donanım çıktısı'
@@ -3536,6 +4160,14 @@ tr:
               display_name: 'Bölüm 1: Donanım girdisi'
             cspSurvey:
               display_name: Anket
+          student_description: Ünite 6, bilgi işlemde donanım platformlarının rolünü
+            ve farklı sensörlerin geleneksel klavye, fare ve monitörden nasıl daha
+            etkili giriş ve çıkış sağlayabileceğini araştırıyor. App Lab ve Adafruit's
+            Circuit Playground'u kullanarak, basit bir kaba prototipin bitmiş bir
+            ürüne nasıl yol açabileceğine bakarak, akıllı cihazlarda gördüğünüzle
+            aynı donanım girişlerini ve çıkışlarını kullanan programlar geliştireceksiniz.
+            Ünite, Circuit Playground'u kendi tasarımınız olan bir yeniliğin temeli
+            olarak kullanmak için bir tasarım mücadelesiyle sona erer.
         csd3-2020:
           title: CSD Ünite 3 - Etkileşimli Animasyonlar ve Oyunlar ('20-'21)
           description: " Ünite 3'te Oyun Laboratuvarında animasyonlar, etkileşimli
@@ -3544,6 +4176,8 @@ tr:
             kullandığı ile aynı programlama kavramları ve tasarım süreci kullanılarak
             daha karmaşık hareketli nesne tabanlı oyunlara doğru ilerler. Final projesinde
             kişiselleştirilmiş, etkileşimli bir program geliştireceksiniz."
+          description_short: " Animasyonlar, interaktif sanat, ve Game Lab'de oyunlar
+            programlamayı öğrenin."
           lesson_groups:
             csd3_1:
               display_name: 'Bölüm 1: Resim ve animasyon'
@@ -3551,6 +4185,7 @@ tr:
               display_name: 'Bölüm 2: Oyun geliştirme'
             cspSurvey:
               display_name: Anket
+          name: csd3-2020
           student_description: " Ünite 3'te Oyun Laboratuvarında animasyonlar, etkileşimli
             sanat ve oyunlar programladığından dolayı kodlama deneyimini arttıracaksın.
             Ünite, basit şekiller ile başlar ve bilgisayar bilim insanlarının günlük
@@ -3710,6 +4345,7 @@ tr:
             ve bilgisayarın ve internetin toplumsal etkilerini tartışmak. Bu dersin
             ikinci bölümünde, arkadaşlarınız ve ailenizle paylaşabileceğiniz bir kaptanlık
             projesi tasarlayınız ve oluşturunuz.
+          name: kursf-2020
         express-2020:
           title: Hızlandırılmış Kurs (2020)
           description_short: 'Bilgisayar bilimlerine giriş: ilköğretim müfredatımızın
@@ -3748,6 +4384,13 @@ tr:
               display_name: Olaylar
         csp1-2020:
           title: CSP Ünite 1 - Dijital Bilgi ('20-'21)
+          description_short: Çevrenizdeki dünya hakkındaki bilgileri bitlerle temsil
+            etmenin zorluklarını ve etkilerini keşfedin.
+          description: Bu ünite, bilgisayarlarda dijital bilgileri temsil etme ihtiyacından
+            kaynaklanan teknik zorlukları ve soruları araştırır. Sayılar, metin, resimler
+            ve ses gibi karmaşık bilgilerin metinde nasıl temsil edildiğini, sıkıştırmanın
+            nasıl çalıştığını ve dünyadaki bilgileri dijitalleştirmenin daha geniş
+            sosyal etkilerini öğrenin.
           lesson_groups:
             csp_unit1_2020:
               display_name: 'Ünite 1: Sayısal bilgi'
@@ -3755,52 +4398,165 @@ tr:
               display_name: Anket
             cspSurvey2020:
               display_name: Kurs-Sonrası Anketi
+          student_description: Bu ünite, bilgisayarlarda dijital bilgileri temsil
+            etme ihtiyacından kaynaklanan teknik zorlukları ve soruları araştırır.
+            Sayılar, metin, resimler ve ses gibi karmaşık bilgilerin metinde nasıl
+            temsil edildiğini, sıkıştırmanın nasıl çalıştığını ve dünyadaki bilgileri
+            dijitalleştirmenin daha geniş sosyal etkilerini öğrenin.
+          name: csp1-2020
         csp2-2020:
           title: CSP Ünite 2 - İnternet ('20-'21)
+          description_short: İnternet Simülatörünü kullanarak interneti sıfırdan oluşturun.
+          description: Bu birim, İnternet'in milyarlarca cihazı ve insanı birbirine
+            bağlamak için nasıl tasarlandığını ortaya koyuyor. İnternetin farklı protokollerinin
+            nasıl çalıştığını öğrenin ve İnternet Simülatörünü kullanarak bunları
+            kendiniz oluşturun. Ardından, İnternet'in modern yaşam üzerindeki hem
+            iyi hem de kötü etkilerini düşünün.
           lesson_groups:
             csp_unit2_2020:
               display_name: 'Ünite 2: Internet'
             cspSurvey2020:
               display_name: Kurs-Sonrası Anketi
+          student_description: Bu birim, İnternet'in milyarlarca cihazı ve insanı
+            birbirine bağlamak için nasıl tasarlandığını ortaya koyuyor. İnternetin
+            farklı protokollerinin nasıl çalıştığını öğrenin ve İnternet Simülatörünü
+            kullanarak bunları kendiniz oluşturun. Ardından, İnternet'in modern yaşam
+            üzerindeki hem iyi hem de kötü etkilerini düşünün.
+          name: csp2-2020
         csp3-2020:
           title: CSP Ünite 3 - Uygulama Tasarımına Giriş ('20-'21)
+          description_short: İlk uygulamanızı tasarlayın ve programcıların sorunlara
+            olası en iyi çözümleri oluşturmak için kullanıcılarla nasıl işbirliği
+            yaptığını ve etkileşim kurduğunu öğrenin.
+          description: Bu ünite, hata ayıklama, ikili programlama ve kullanıcı testi
+            gibi önemli becerilere yoğun bir şekilde odaklanan programlama ve uygulama
+            tasarımına bir giriş niteliğindedir. App Lab'de kullanıcı arayüzleri tasarlamayı
+            ve olay odaklı programlar yazmayı öğrenin ve ardından sınıf arkadaşlarınıza
+            seçtiğiniz bir konuyu öğreten bir proje tasarlayın.
           lesson_groups:
             csp_unit3_2020:
               display_name: 'Ünite 3: Uygulama Tasarımına Giriş'
             cspSurvey2020:
               display_name: Kurs-Sonrası Anketi
+          name: csp3-2020
+          student_description: Bu ünite, hata ayıklama, ikili programlama ve kullanıcı
+            testi gibi önemli becerilere yoğun bir şekilde odaklanan programlama ve
+            uygulama tasarımına bir giriş niteliğindedir. App Lab'de kullanıcı arayüzleri
+            tasarlamayı ve olay odaklı programlar yazmayı öğrenin ve ardından sınıf
+            arkadaşlarınıza seçtiğiniz bir konuyu öğreten bir proje tasarlayın.
         csp6-2020:
           title: CSP Ünite 6 -Algoritmalar ('20-'21)
+          description_short: Nasıl çalıştıklarını ve neden bazılarının diğerlerinden
+            daha iyi kabul edildiğini anlamak için algoritmalar tasarlayın ve analiz
+            edin.
+          description: Bu ünite, bilgisayar bilimcilerinin sorunları çözmek için algoritmaları
+            nasıl tasarladıklarına ve farklı algoritmaların hızlarını nasıl analiz
+            ettiklerine dair hızlı bir keşiftir. Çeşitli uygulamalı etkinlikler aracılığıyla
+            algoritmik verimlilik kavramı hakkında bilgi edinin ve bunun modern bilgi
+            işlemde nasıl uygulandığını öğrenin.
           lesson_groups:
             csp_unit6_2020:
               display_name: 'Ünite 6: Algoritmalar'
             cspSurvey2020:
               display_name: Kurs-Sonrası Anketi
+          student_description: Bu ünite, bilgisayar bilimcilerinin sorunları çözmek
+            için algoritmaları nasıl tasarladıklarına ve farklı algoritmaların hızlarını
+            nasıl analiz ettiklerine dair hızlı bir keşiftir. Çeşitli uygulamalı etkinlikler
+            aracılığıyla algoritmik verimlilik kavramı hakkında bilgi edinin ve bunun
+            modern bilgi işlemde nasıl uygulandığını öğrenin.
+          name: csp6-2020
         csp8-2020:
           title: CSP Ünite 8 - Performans Görevi Hazırlığı Oluşturma ('20-'21)
+          description_short: Performans Görevi Oluştur (PT) alıştırması yapın ve tamamlayın.
+          description: Bu ünitede AP Oluşturma Performansı Görevine hazırlanın ve
+            gerçekleştirin. Her ders, görevi anlamanıza ve görevi tamamlamak için
+            bir plan geliştirmenize yardımcı olacak faydalı belgelere ve etkinliklere
+            bağlantılar içerir.
+          student_description: Bu ünitede AP Oluşturma Performansı Görevine hazırlanın
+            ve gerçekleştirin. Her ders, görevi anlamanıza ve görevi tamamlamak için
+            bir plan geliştirmenize yardımcı olacak faydalı belgelere ve etkinliklere
+            bağlantılar içerir.
+          name: csp8-2020
         csp9-2020:
           title: CSP Ünite 9 -Veriler ('20-'21)
+          description_short: Kalıpları ararken ve çevrenizdeki dünya hakkında daha
+            fazla şey öğrenmeye çalışırken çok çeşitli konulardaki veri kümelerini
+            keşfedin ve görselleştirin.
+          description: Bu ünitede, veri analizinin ham verilerini dünya hakkında yararlı
+            bilgilere dönüştürmeye nasıl yardımcı olduğunu öğrenin. Veri kümelerinin
+            içindeki kalıpları bulmak için veri görselleştirmeyi nasıl kullanacağınızı
+            öğrenin ve bu veri analizi sürecinin, karar vermeye yardımcı olmak veya
+            dünyamız hakkında daha fazla bilgi edinmek için açık veri veya makine
+            öğrenimi gibi bağlamlarda nasıl kullanıldığını öğrenin. Ünite projesinde,
+            seçtiğiniz bir veri setini analiz edecek ve bulgularınızı sunacaksınız.
           lesson_groups:
             csp_unit9_2020:
               display_name: 'Ünite 9: Veriler'
             cspSurvey2020:
               display_name: Kurs-Sonrası Anketi
+          student_description: Bu ünitede, veri analizinin ham verilerini dünya hakkında
+            yararlı bilgilere dönüştürmeye nasıl yardımcı olduğunu öğrenin. Veri kümelerinin
+            içindeki kalıpları bulmak için veri görselleştirmeyi nasıl kullanacağınızı
+            öğrenin ve bu veri analizi sürecinin, karar vermeye yardımcı olmak veya
+            dünyamız hakkında daha fazla bilgi edinmek için açık veri veya makine
+            öğrenimi gibi bağlamlarda nasıl kullanıldığını öğrenin. Ünite projesinde,
+            seçtiğiniz bir veri setini analiz edecek ve bulgularınızı sunacaksınız.
+          name: csp9-2020
         csp10-2020:
           title: CSP Ünite 10 - Siber güvenlik ve Küresel Etkiler ('20-'21)
+          description_short: Veri, kamu politikası, hukuk, etik ve toplumsal etkinin
+            kesiştiği noktada güncel olayları araştırın ve tartışın.
+          description: Bu ünitede bilgi işlem yeniliklerinin dünyamızı nasıl yararlı
+            ve zararlı şekillerde etkilediğini öğrenin. Verilerin gizliliğimize ve
+            güvenliğimize nasıl tehdit oluşturabileceğini ve bunları tamamlamak için
+            şifreleme ve diğer tekniklerin nasıl kullanıldığını öğrenin. Ünite boyunca,
+            sizin ve bir ekibin bilgi işlem yenilikleriyle okul yaşamını en iyi şekilde
+            nasıl geliştirebileceğinize dair bir öneride bulunduğunuz bir "geleceğin
+            okulu" konferansına katılın.
           lesson_groups:
             csp_unit10_2020:
               display_name: Ünite 10 - Siber güvenlik ve Küresel Etkiler
             cspSurvey2020:
               display_name: Kurs-Sonrası Anketi
+          student_description: Bu ünitede bilgi işlem yeniliklerinin dünyamızı nasıl
+            yararlı ve zararlı şekillerde etkilediğini öğrenin. Verilerin gizliliğimize
+            ve güvenliğimize nasıl tehdit oluşturabileceğini ve bunları tamamlamak
+            için şifreleme ve diğer tekniklerin nasıl kullanıldığını öğrenin. Ünite
+            boyunca, sizin ve bir ekibin bilgi işlem yenilikleriyle okul yaşamını
+            en iyi şekilde nasıl geliştirebileceğinize dair bir öneride bulunduğunuz
+            bir "geleceğin okulu" konferansına katılın.
+          name: csp10-2020
         csp-march-virtual:
           title: Bilgisayar Bilimi İlkeler 20-21 Kolaylaştırıcılar için Müfredat Eğitimi
+          description_audience: BB İlkeleri Kolaylaştırıcıları
+          description: Nisan çağrısı için CSP Kolaylaştırıcı Ön Çalışmasına hoş geldiniz!
+            Bu, EIPM anlayışını, Ünite 5'teki içeriği ve kursta mevcut olan yeni veri
+            kümelerini derinleştirmeye odaklanacaktır. Görüşmede işi birlikte işleyip
+            tartışacağımız için bu çalışmanın Nisan çağrısından önce tamamlanması
+            çok önemlidir.
+          student_description: Nisan çağrısı için CSP Kolaylaştırıcı Ön Çalışmasına
+            hoş geldiniz! Bu, EIPM anlayışını, Ünite 5'teki içeriği ve kursta mevcut
+            olan yeni veri kümelerini derinleştirmeye odaklanacaktır. Görüşmede işi
+            birlikte işleyip tartışacağımız için bu çalışmanın Nisan çağrısından önce
+            tamamlanması çok önemlidir.
         csp3-virtual:
           title: Uygulama Laboratuvarında Kaplumbağa Programlamaya Kişiye Özel Giriş
+          description: Bu ünite, zengin, etkileşimli uygulamalar yapma yeteneğinin
+            kilidini açan bilgisayar programlamanın temel kavramlarını tanıtır. Bu
+            kurs, programlama dili olarak JavaScript'i ve uygulamalar oluşturmak için
+            programlama ortamı olarak App Lab'ı kullanır, ancak bu derslerde öğrenilen
+            kavramlar tüm programlama dillerini ve araçlarını kapsar.
           lesson_groups:
             csp3_1_2018:
               display_name: 'Ünite 3: Programlamaya Giriş'
+          student_description: Bu ünite, zengin, etkileşimli uygulamalar yapma yeteneğinin
+            kilidini açan bilgisayar programlamanın temel kavramlarını tanıtır. Bu
+            kurs, programlama dili olarak JavaScript'i ve uygulamalar oluşturmak için
+            programlama ortamı olarak App Lab'ı kullanır, ancak bu derslerde öğrenilen
+            kavramlar tüm programlama dillerini ve araçlarını kapsar.
         jess-test-script:
           title: Jess'in Komut Dosyası
+          name: jess-test-komut
         csd2-virtual:
           title: Web Laboratuvarına Kişiye Özel Giriş
           description: Kendi web sayfanızda nasıl içerik oluşturacağınızı ve paylaşacağınızı
@@ -3845,6 +4601,16 @@ tr:
               display_name: 'Bölüm 2: Oyun geliştirme'
         code-break:
           title: Kod Kırma
+          description: Okullar kapalı ve evde on milyonlarca öğrenci varken Code.org,
+            ekibimizin okul kapalıyken çocuklarınıza evde eğitim vereceği haftalık
+            canlı etkileşimli bir sınıf ve her seviyeden öğrencinin ilgisini çekecek
+            haftalık bir yarışma olan Code Break'i bilgisayarı olmayanlar için bile
+            başlatıyor. Daha fazla bilgi için Code.org/break . 13+ yaş.
+          student_description: Okullar kapalı ve evde on milyonlarca öğrenci varken
+            Code.org, ekibimizin okul kapalıyken çocuklarınıza evde eğitim vereceği
+            haftalık canlı etkileşimli bir sınıf ve her seviyeden öğrencinin ilgisini
+            çekecek haftalık bir yarışma olan Code Break'i bilgisayarı olmayanlar
+            için bile başlatıyor. Daha fazla bilgi için Code.org/break . 13+ yaş.
         code-break-staging:
           title: Kod Kırma Aşaması
         code-break-younger-staging:
@@ -3884,6 +4650,7 @@ tr:
             bu derslerde öğrenilen kavramlar tüm programlama dilleri ve araçları için
             geçerlidir.
         k5-onlinepd-2020:
+          title: Bilgisayar Bilimi Temellerinin Öğretimi (2020)
           description: Kişiye özel ücretsiz çevrimiçi kurs ile Code.org'un Bilgisayar
             Bilimi Temellerini kullanarak bilgisayar biliminin nasıl öğretileceğini
             öğrenin!
@@ -3902,6 +4669,7 @@ tr:
           student_description: Kişiye özel ücretsiz çevrimiçi kurs ile Code.org'un
             Bilgisayar Bilimi Temellerini kullanarak bilgisayar biliminin nasıl öğretileceğini
             öğrenin!
+          name: k5-onlinepd-2020
         dani-test-2020:
           lesson_groups:
             lesson group:
@@ -3925,6 +4693,8 @@ tr:
             günlük kullandığı ile aynı programlama kavramları ve tasarım sürecini
             kullanarak daha karmaşık hareketli nesne tabanlı oyunları oluşturun. Final
             projesinde kişiselleştirilmiş, etkileşimli bir program geliştireceksiniz.
+          description_short: " Animasyonlar, interaktif sanat, ve Game Lab'de oyunlar
+            programlamayı öğrenin."
           lesson_groups:
             csd3_1:
               display_name: İçerik
@@ -3958,18 +4728,49 @@ tr:
           lesson_groups:
             lesson group:
               display_name: görünen isim
+          name: kaitie-test-komut
         vpl-csd-2020:
           title: Bilgisayar Bilimi Keşifleri Sanal Profesyonel Öğrenim 2020 - 21
+          name: vpl-csd-2020
         vpl-csp-2020:
           title: Bilgisayar Bilimi İlkeleri Sanal Profesyonel Öğrenim
+          name: vpl-csp-2020
         curriculum-sandbox-levels:
+          lesson_groups:
+            lesson group:
+              display_name: Öğretmen Seviyeleri
+              description: Bunlar, ders planlarıyla bağlantılı öğretime dönük düzeylerdir.
+                Seviyeler diğer komut dosyalarında görünmez.
+            slides:
+              display_name: Çevirmen Seviyeleri
+              description: Bu düzeyler, müfredat slayt destelerine hizalanan düzenlenebilir
+                başlangıç ​​kodunu içerir.
+            video:
+              display_name: Video Yakalama Seviyeleri
+              description: Bu seviyeler video oluşturucular tarafından kullanılmak
+                içindir.
           title: Sandbox Müfredat Seviyeleri
+          description_audience: Dahili - Silmeyin. Bu komut dosyası, senaryosu olmayan
+            bile önemli müfredat seviyelerini barındırır.
           description_short: 'Doğrudan ders planları ile bağlantılı olan ancak diğer
             komut dosyalarında görünmeyen seviyeler. '
+          name: müfredat-korumalı alan-düzeyler
         virustest:
+          lesson_groups:
+            csf_data:
+              display_name: Kod Baytları için Virüs Simülasyonu
           title: Salgın Simülasyonu Yapmak
           description_short: Bir virüs salgınının simülasyonunu yapmak için Sprite
             Lab'ı kullanın.
+        ml-playground:
+          title: ML/AI Ünitesi - CSD
+          description_short: ML/AI Ünitesi
+          description: Beyin fırtınası/CSD için ML/AI Birim Geliştirme için oyun alanı.
+            Bununla ilgili ortaya çıkabilecek soruları Dan Schneider'a sor.
+          name: ml-oyun alanı
+          student_description: Beyin fırtınası/CSD için ML/AI Birim Geliştirme için
+            oyun alanı. Bununla ilgili ortaya çıkabilecek soruları Dan Schneider'a
+            sor.
         outbreak:
           lesson_groups:
             outbreak:
@@ -3982,14 +4783,25 @@ tr:
           name: salgın
           student_description: Bir virüs salgınının simülasyonunu programlamak için
             Sprite Lab'ı kullanın.
+        apps-for-good:
+          title: İyilik için Uygulamalar
         2021drafting:
           lesson_groups:
+            Toolbox Levels:
+              display_name: Araç Kutusu Seviyeleri
             introduction:
               display_name: Giriş
+              description: Sprite Lab ile oluşturulan projeleri keşfedin. Hareketli
+                nesneler ve etkinliklerle kodlamanın temellerini öğrenin!
             lessonGroup-3:
               display_name: Değişkenler
+              description: Değerleri değişkenlerde saklayın ve daha sonra programınızda
+                alın. Heyecan verici etkileşimli projeler oluşturmak için değişkenlerde
+                saklanan değerleri değiştirin!
             outbreak:
               display_name: Salgın Simülatörü
+            Loom Levels:
+              display_name: Tezgah Seviyeleri
             debugging:
               display_name: Hata Ayıklama
           description_audience: Dahili
@@ -4016,6 +4828,8 @@ tr:
             cspSurvey:
               display_name: Anket
         csd3-2021:
+          description_short: " Animasyonlar, interaktif sanat, ve Game Lab'de oyunlar
+            programlamayı öğrenin."
           lesson_groups:
             csd3_1:
               display_name: 'Bölüm 1: Resim ve animasyon'
@@ -4067,6 +4881,7 @@ tr:
             nasıl yardımcı olduklarını öğreneceksiniz. Bölüm, verilerin problem çözmede
             seçtiğiniz bir alana nasıl uygulanabileceğini dikkate alarak sonuçlandırılır.
         csd6-2021:
+          description_short: Fiziksel cihazlarla programlamayı öğrenin.
           lesson_groups:
             csd6_1:
               display_name: 'Bölüm 1: Donanım çıktısı'
@@ -4074,22 +4889,90 @@ tr:
               display_name: 'Bölüm 1: Donanım girdisi'
             cspSurvey:
               display_name: Anket
+          student_description: Ünite 6, bilgi işlemde donanım platformlarının rolünü
+            ve farklı sensörlerin geleneksel klavye, fare ve monitörden nasıl daha
+            etkili giriş ve çıkış sağlayabileceğini araştırıyor. App Lab ve Adafruit's
+            Circuit Playground'u kullanarak, basit bir kaba prototipin bitmiş bir
+            ürüne nasıl yol açabileceğine bakarak, akıllı cihazlarda gördüğünüzle
+            aynı donanım girişlerini ve çıkışlarını kullanan programlar geliştireceksiniz.
+            Ünite, Circuit Playground'u kendi tasarımınız olan bir yeniliğin temeli
+            olarak kullanmak için bir tasarım mücadelesiyle sona erer.
         csp1-2021:
+          title: Dijital Bilgi ('21-'22)
+          description: Bu ünite, bilgisayarlarda dijital bilgileri temsil etme ihtiyacından
+            kaynaklanan teknik zorlukları ve soruları araştırır. Sayılar, metin, resimler
+            ve ses gibi karmaşık bilgilerin metinde nasıl temsil edildiğini, sıkıştırmanın
+            nasıl çalıştığını ve dünyadaki bilgileri dijitalleştirmenin daha geniş
+            sosyal etkilerini öğrenin.
+          description_short: Çevrenizdeki dünya hakkındaki bilgileri bitlerle temsil
+            etmenin zorluklarını ve etkilerini keşfedin.
           lesson_groups:
             cspSurvey:
               display_name: Anket
             csp_unit1_2020:
               display_name: 'Ünite 1: Sayısal bilgi'
+              description: |-
+                ### Ünite Felsefesi ve Pedagoji
+
+                -   **Güçlü Bir Sınıf Kültürü Oluşturma:** Bu ünite uygulamalı, işbirlikçi ve keşfedici olacak şekilde tasarlanmıştır. Ünitenin ana odak noktası, öğrencilerin birlikte çalıştıkları, sorunları keşfettikleri ve düşünceleri hakkında iletişim kurdukları olumlu bir sınıf kültürü oluşturmaktır. Derslerin çoğunda ya fiziksel manipülatifler ya da dijital bir pencere öğesi bulunur ve ders süresinin büyük bir kısmı, vurguladıkları kavramların anlaşılmasını geliştirmek için öğrencilerin bu araçları birlikte keşfetmesiyle geçirilmelidir. Pek çok sınıfta bazı öğrencilerin programlama deneyimi olduğu, bazılarının ise olmadığı için, kurs kasıtlı olarak programlama ile başlamaz. Dijital bilgi ve internet ile başlamayı seçmek, muhtemelen tüm öğrencilerin erişebileceği bir konuyu keşfederken odada bir topluluk oluşturmanıza olanak tanır. Bu ünitede inşa edilen destekleyici ve kapsayıcı sınıf ortamı, okul yılı boyunca taşınabilecek olumlu bir hava oluşturmaya yardımcı olmalıdır.
+
+                -   **"Karar Vericileri" Güçlendirmek:** Kursun önemli bir amacı, öğrencilere yalnızca teknik bilgi öğretmek değil, bu becerileri anlamlı şekillerde kullanmaktır. Bu ünite, öğrencilere bilgisayar kullanımının modern yaşam üzerindeki etkileri hakkında "karar verici" olma fırsatı sağlayan ünite projesine doğru inşa edilir. Diğer birimler, birimleri "yaratıcı" olarak güçlendirmeyi vurgulayacaktır.
+
+                ### Büyük Değerlendirme ve Projeler
+
+                Ünite projesi, öğrencilerden bilginin sayısallaştırılması nedeniyle modern toplumda ortaya çıkan sorunları düşünmelerini ve tartışmalarını ister. Öğrenciler, dijitalleşen bilgiler ile güncel olayların kesişimini ele alan bir makaleyi analiz edecekler. Hangi verilerin dijitalleştirildiğini değerlendirecek ve bu bilgileri dijitalleştirmenin yararlarını ve zararlarını değerlendirecekler. Öğrenciler ayrıca bu ünitede ele alınan CS İlkeleri çerçevesi hedefleriyle uyumlu bir ünite sonu değerlendirmesi yapacaklardır.
+
+                ### AP Bağlantıları
+
+                Bu birim ve ilgili projesi, aşağıda listelenen kalıcı anlayışlara doğru ilerlemeye yardımcı olur. Ünitelerin Öğrenme Hedefleri ve EK'lerle ayrıntılı eşlemesi için lütfen bu ünitenin "Standartlar" sayfasına bakın.
+
+                -   DAT-1: Bir bilgisayarın verileri dahili olarak temsil etme şekli, verilerin kullanıcı için yorumlanma ve görüntülenme şeklinden farklıdır. Programlar, verileri insanlar tarafından daha kolay anlaşılabilecek bir temsile çevirmek için kullanılır.
+                -   IOC-1: bilgi işlem yenilikleri tipik olarak belirli bir amaca ulaşmak için tasarlanırken, istenmeyen sonuçlara yol açabilir
+
+                Bu birim, AP CS İlkeleri Çerçevesinden aşağıdaki konulardan içerik içerir. Kurs incelemesinde konu kapsamı hakkında daha ayrıntılı bilgi için [Code.org CSP Konu Kapsamı](https://docs.google.com/document/d/1dqYF5u0AULjw049gaCwAP34ZSe0VuEWbAjWoH1-YMW0/edit?usp=sharing).
+
+                -   2.1 İkili Sayılar
+                -   2.2 Veri Sıkıştırma
+                -   5.5 Yasal ve Etik Kaygılar.
+          student_description: Bu ünite, bilgisayarlarda dijital bilgileri temsil
+            etme ihtiyacından kaynaklanan teknik zorlukları ve soruları araştırır.
+            Sayılar, metin, resimler ve ses gibi karmaşık bilgilerin metinde nasıl
+            temsil edildiğini, sıkıştırmanın nasıl çalıştığını ve dünyadaki bilgileri
+            dijitalleştirmenin daha geniş sosyal etkilerini öğrenin.
         csp2-2021:
+          description: Bu birim, İnternet'in milyarlarca cihazı ve insanı birbirine
+            bağlamak için nasıl tasarlandığını ortaya koyuyor. İnternetin farklı protokollerinin
+            nasıl çalıştığını öğrenin ve İnternet Simülatörünü kullanarak bunları
+            kendiniz oluşturun. Ardından, İnternet'in modern yaşam üzerindeki hem
+            iyi hem de kötü etkilerini düşünün.
+          description_short: İnternet Simülatörünü kullanarak interneti sıfırdan oluşturun.
           lesson_groups:
             csp_unit2_2020:
               display_name: 'Ünite 2: Internet'
             lessonGroup-2:
               display_name: Anket
+          student_description: Bu birim, İnternet'in milyarlarca cihazı ve insanı
+            birbirine bağlamak için nasıl tasarlandığını ortaya koyuyor. İnternetin
+            farklı protokollerinin nasıl çalıştığını öğrenin ve İnternet Simülatörünü
+            kullanarak bunları kendiniz oluşturun. Ardından, İnternet'in modern yaşam
+            üzerindeki hem iyi hem de kötü etkilerini düşünün.
         csp3-2021:
+          description: Bu ünite, hata ayıklama, ikili programlama ve kullanıcı testi
+            gibi önemli becerilere yoğun bir şekilde odaklanan programlama ve uygulama
+            tasarımına bir giriş niteliğindedir. App Lab'de kullanıcı arayüzleri tasarlamayı
+            ve olay odaklı programlar yazmayı öğrenin ve ardından sınıf arkadaşlarınıza
+            seçtiğiniz bir konuyu öğreten bir proje tasarlayın.
+          description_short: İlk uygulamanızı tasarlayın ve programcıların sorunlara
+            olası en iyi çözümleri oluşturmak için kullanıcılarla nasıl işbirliği
+            yaptığını ve etkileşim kurduğunu öğrenin.
           lesson_groups:
             csp_unit3_2020:
               display_name: 'Ünite 3: Uygulama Tasarımına Giriş'
+          student_description: Bu ünite, hata ayıklama, ikili programlama ve kullanıcı
+            testi gibi önemli becerilere yoğun bir şekilde odaklanan programlama ve
+            uygulama tasarımına bir giriş niteliğindedir. App Lab'de kullanıcı arayüzleri
+            tasarlamayı ve olay odaklı programlar yazmayı öğrenin ve ardından sınıf
+            arkadaşlarınıza seçtiğiniz bir konuyu öğreten bir proje tasarlayın.
         csp4-2021:
           lesson_groups:
             csp_variables:
@@ -4113,11 +4996,24 @@ tr:
             lessonGroup-5:
               display_name: Kurs-Sonrası Anketi
         csp6-2021:
+          description: Bu ünite, bilgisayar bilimcilerinin sorunları çözmek için algoritmaları
+            nasıl tasarladıklarına ve farklı algoritmaların hızlarını nasıl analiz
+            ettiklerine dair hızlı bir keşiftir. Çeşitli uygulamalı etkinlikler aracılığıyla
+            algoritmik verimlilik kavramı hakkında bilgi edinin ve bunun modern bilgi
+            işlemde nasıl uygulandığını öğrenin.
+          description_short: Nasıl çalıştıklarını ve neden bazılarının diğerlerinden
+            daha iyi kabul edildiğini anlamak için algoritmalar tasarlayın ve analiz
+            edin.
           lesson_groups:
             csp_unit6_2020:
               display_name: Algoritmalar
             lessonGroup-2:
               display_name: Kurs-Sonrası Anketi
+          student_description: Bu ünite, bilgisayar bilimcilerinin sorunları çözmek
+            için algoritmaları nasıl tasarladıklarına ve farklı algoritmaların hızlarını
+            nasıl analiz ettiklerine dair hızlı bir keşiftir. Çeşitli uygulamalı etkinlikler
+            aracılığıyla algoritmik verimlilik kavramı hakkında bilgi edinin ve bunun
+            modern bilgi işlemde nasıl uygulandığını öğrenin.
         csp7-2021:
           lesson_groups:
             csp_parameters_return_values:
@@ -4127,18 +5023,32 @@ tr:
             lessonGroup-3:
               display_name: Anket
         csp8-2021:
+          description: Bu ünitede AP Oluşturma Performansı Görevine hazırlanın ve
+            gerçekleştirin. Her ders, görevi anlamanıza ve görevi tamamlamak için
+            bir plan geliştirmenize yardımcı olacak faydalı belgelere ve etkinliklere
+            bağlantılar içerir.
+          description_short: Performans Görevi Oluştur (PT) alıştırması yapın ve tamamlayın.
           lesson_groups:
             lessonGroup-2:
               display_name: Performans Görevi Oluştur
             lessonGroup-3:
               display_name: Anket
+          student_description: Bu ünitede AP Oluşturma Performansı Görevine hazırlanın
+            ve gerçekleştirin. Her ders, görevi anlamanıza ve görevi tamamlamak için
+            bir plan geliştirmenize yardımcı olacak faydalı belgelere ve etkinliklere
+            bağlantılar içerir.
         csp9-2021:
+          description_short: Kalıpları ararken ve çevrenizdeki dünya hakkında daha
+            fazla şey öğrenmeye çalışırken çok çeşitli konulardaki veri kümelerini
+            keşfedin ve görselleştirin.
           lesson_groups:
             csp_unit9_2020:
               display_name: 'Ünite 9: Veriler'
             lessonGroup-2:
               display_name: Anket
         csp10-2021:
+          description_short: Veri, kamu politikası, hukuk, etik ve toplumsal etkinin
+            kesiştiği noktada güncel olayları araştırın ve tartışın.
           lesson_groups:
             csp_unit10_2020:
               display_name: Ünite 10 - Siber güvenlik ve Küresel Etkiler
@@ -4311,12 +5221,21 @@ tr:
               display_name: Giriş
             outbreak:
               display_name: Salgın Simülasyonu
+            introduction:
+              description: Sprite Lab ile oluşturulan projeleri keşfedin. Hareketli
+                nesneler ve etkinliklerle kodlamanın temellerini öğrenin!
             lessonGroup-3:
               display_name: Değişkenler
+              description: Değerleri değişkenlerde saklayın ve daha sonra programınızda
+                alın. Heyecan verici etkileşimli projeler oluşturmak için değişkenlerde
+                saklanan değerleri değiştirin!
             Sprites:
               display_name: Hareketli Nesneler
             variables:
               display_name: Değişkenler
+              description: Değerleri değişkenlerde saklayın ve daha sonra programınızda
+                alın. Heyecan verici etkileşimli projeler oluşturmak için değişkenlerde
+                saklanan değerleri değiştirin!
         csd4-preview-2021:
           description: Ünite 4, bilgi işlemin daha geniş toplumsal etkilerini tanıtmaktadır.
             Bir dizi tasarım zorluğuyla, bir probleme bir çözüm geliştirirken diğerlerinin
@@ -4458,6 +5377,16 @@ tr:
               display_name: Anket
           description_audience: CSP Öğrencileri
           description_short: CSP Öğrenci Kurs Sonu Anketi
+          description: Code.org BB İlkeleri Kurs Sonrası Anketine hoş geldiniz. Bu
+            anketin tamamlanması yaklaşık 15 dakika sürer. Yanıtlarınız gizli ve anonimdir
+            -- öğretmeniniz tüm sınıf için anonim toplu sonuçları görebilir. Sonuçlar,
+            hem öğretmeniniz hem de Code.org'un kursu sürdürmesi ve geliştirmesi için
+            hayati önem taşır. Zaman ayırdığınız ve katıldığınız için teşekkürler.
+          student_description: Code.org BB İlkeleri Kurs Sonrası Anketine hoş geldiniz.
+            Bu anketin tamamlanması yaklaşık 15 dakika sürer. Yanıtlarınız gizli ve
+            anonimdir -- öğretmeniniz tüm sınıf için anonim toplu sonuçları görebilir.
+            Sonuçlar, hem öğretmeniniz hem de Code.org'un kursu sürdürmesi ve geliştirmesi
+            için hayati önem taşır. Zaman ayırdığınız ve katıldığınız için teşekkürler.
         aiml-2021:
           lesson_groups:
             lessonGroup-4:
@@ -4816,14 +5745,50 @@ tr:
               display_name: Anket
             csp_unit1_2020:
               display_name: 'Ünite 1: Sayısal bilgi'
+          description: Bu ünite, bilgisayarlarda dijital bilgileri temsil etme ihtiyacından
+            kaynaklanan teknik zorlukları ve soruları araştırır. Sayılar, metin, resimler
+            ve ses gibi karmaşık bilgilerin metinde nasıl temsil edildiğini, sıkıştırmanın
+            nasıl çalıştığını ve dünyadaki bilgileri dijitalleştirmenin daha geniş
+            sosyal etkilerini öğrenin.
+          student_description: Bu ünite, bilgisayarlarda dijital bilgileri temsil
+            etme ihtiyacından kaynaklanan teknik zorlukları ve soruları araştırır.
+            Sayılar, metin, resimler ve ses gibi karmaşık bilgilerin metinde nasıl
+            temsil edildiğini, sıkıştırmanın nasıl çalıştığını ve dünyadaki bilgileri
+            dijitalleştirmenin daha geniş sosyal etkilerini öğrenin.
+          description_short: Çevrenizdeki dünya hakkındaki bilgileri bitlerle temsil
+            etmenin zorluklarını ve etkilerini keşfedin.
         csp2-2022:
           lesson_groups:
             csp_unit2_2020:
               display_name: 'Ünite 2: Internet'
+          description: Bu birim, İnternet'in milyarlarca cihazı ve insanı birbirine
+            bağlamak için nasıl tasarlandığını ortaya koyuyor. İnternetin farklı protokollerinin
+            nasıl çalıştığını öğrenin ve İnternet Simülatörünü kullanarak bunları
+            kendiniz oluşturun. Ardından, İnternet'in modern yaşam üzerindeki hem
+            iyi hem de kötü etkilerini düşünün.
+          student_description: Bu birim, İnternet'in milyarlarca cihazı ve insanı
+            birbirine bağlamak için nasıl tasarlandığını ortaya koyuyor. İnternetin
+            farklı protokollerinin nasıl çalıştığını öğrenin ve İnternet Simülatörünü
+            kullanarak bunları kendiniz oluşturun. Ardından, İnternet'in modern yaşam
+            üzerindeki hem iyi hem de kötü etkilerini düşünün.
+          description_short: İnternet Simülatörünü kullanarak interneti sıfırdan oluşturun.
         csp3-2022:
           lesson_groups:
             csp_unit3_2020:
               display_name: 'Ünite 3: Uygulama Tasarımına Giriş'
+          description: Bu ünite, hata ayıklama, ikili programlama ve kullanıcı testi
+            gibi önemli becerilere yoğun bir şekilde odaklanan programlama ve uygulama
+            tasarımına bir giriş niteliğindedir. App Lab'de kullanıcı arayüzleri tasarlamayı
+            ve olay odaklı programlar yazmayı öğrenin ve ardından sınıf arkadaşlarınıza
+            seçtiğiniz bir konuyu öğreten bir proje tasarlayın.
+          student_description: Bu ünite, hata ayıklama, ikili programlama ve kullanıcı
+            testi gibi önemli becerilere yoğun bir şekilde odaklanan programlama ve
+            uygulama tasarımına bir giriş niteliğindedir. App Lab'de kullanıcı arayüzleri
+            tasarlamayı ve olay odaklı programlar yazmayı öğrenin ve ardından sınıf
+            arkadaşlarınıza seçtiğiniz bir konuyu öğreten bir proje tasarlayın.
+          description_short: İlk uygulamanızı tasarlayın ve programcıların sorunlara
+            olası en iyi çözümleri oluşturmak için kullanıcılarla nasıl işbirliği
+            yaptığını ve etkileşim kurduğunu öğrenin.
         csp4-2022:
           lesson_groups:
             csp_variables:
@@ -4894,6 +5859,19 @@ tr:
               display_name: 'Ünite 6: Algoritmalar'
             lessonGroup-2:
               display_name: Kurs-Sonrası Anketi
+          description: Bu ünite, bilgisayar bilimcilerinin sorunları çözmek için algoritmaları
+            nasıl tasarladıklarına ve farklı algoritmaların hızlarını nasıl analiz
+            ettiklerine dair hızlı bir keşiftir. Çeşitli uygulamalı etkinlikler aracılığıyla
+            algoritmik verimlilik kavramı hakkında bilgi edinin ve bunun modern bilgi
+            işlemde nasıl uygulandığını öğrenin.
+          student_description: Bu ünite, bilgisayar bilimcilerinin sorunları çözmek
+            için algoritmaları nasıl tasarladıklarına ve farklı algoritmaların hızlarını
+            nasıl analiz ettiklerine dair hızlı bir keşiftir. Çeşitli uygulamalı etkinlikler
+            aracılığıyla algoritmik verimlilik kavramı hakkında bilgi edinin ve bunun
+            modern bilgi işlemde nasıl uygulandığını öğrenin.
+          description_short: Nasıl çalıştıklarını ve neden bazılarının diğerlerinden
+            daha iyi kabul edildiğini anlamak için algoritmalar tasarlayın ve analiz
+            edin.
         csp7-2022:
           lesson_groups:
             csp_parameters_return_values:
@@ -4903,6 +5881,15 @@ tr:
             lessonGroup-3:
               display_name: Kurs-Sonrası Anketi
         csp8-2022:
+          description: Bu ünitede AP Oluşturma Performansı Görevine hazırlanın ve
+            gerçekleştirin. Her ders, görevi anlamanıza ve görevi tamamlamak için
+            bir plan geliştirmenize yardımcı olacak faydalı belgelere ve etkinliklere
+            bağlantılar içerir.
+          student_description: Bu ünitede AP Oluşturma Performansı Görevine hazırlanın
+            ve gerçekleştirin. Her ders, görevi anlamanıza ve görevi tamamlamak için
+            bir plan geliştirmenize yardımcı olacak faydalı belgelere ve etkinliklere
+            bağlantılar içerir.
+          description_short: Performans Görevi Oluştur (PT) alıştırması yapın ve tamamlayın.
           lesson_groups:
             lessonGroup-2:
               display_name: Performans Görevi Oluştur
@@ -4914,12 +5901,17 @@ tr:
               display_name: 'Ünite 9: Veriler'
             lessonGroup-2:
               display_name: Kurs-Sonrası Anketi
+          description_short: Kalıpları ararken ve çevrenizdeki dünya hakkında daha
+            fazla şey öğrenmeye çalışırken çok çeşitli konulardaki veri kümelerini
+            keşfedin ve görselleştirin.
         csp10-2022:
           lesson_groups:
             csp_unit10_2020:
               display_name: Ünite 10 - Siber güvenlik ve Küresel Etkiler
             lessonGroup-2:
               display_name: Kurs-Sonrası Anketi
+          description_short: Veri, kamu politikası, hukuk, etik ve toplumsal etkinin
+            kesiştiği noktada güncel olayları araştırın ve tartışın.
         coursed-2022:
           lesson_groups:
             lessonGroup-6:
@@ -5281,6 +6273,8 @@ tr:
             kullandığı ile aynı programlama kavramları ve tasarım süreci kullanılarak
             daha karmaşık hareketli nesne tabanlı oyunlara doğru ilerler. Final projesinde
             kişiselleştirilmiş, etkileşimli bir program geliştireceksiniz."
+          description_short: " Animasyonlar, interaktif sanat, ve Game Lab'de oyunlar
+            programlamayı öğrenin."
         csd4-2022:
           lesson_groups:
             csd4_1:
@@ -5326,6 +6320,7 @@ tr:
               display_name: 'Bölüm 1: Donanım girdisi'
             lessonGroup-4:
               display_name: Anket
+          description_short: Fiziksel cihazlarla programlamayı öğrenin.
         csd-post-survey-2022:
           title: Bilgisayar Bilimi Keşifleri Kurs Sonrası Anketi
           description: Bu ünite, CS Keşifleri Kurs Sonrası Anketini içerir. Bu ünite,
@@ -5434,6 +6429,7 @@ tr:
               display_name: 'Bölüm 1: Web sayfası oluşturma'
             lessonGroup-3:
               display_name: 'Bölüm 2: Çok sayfalı Web siteleri'
+          title: Web Geliştirme
         csd4-2023:
           lesson_groups:
             lessonGroup-2:
@@ -5480,14 +6476,50 @@ tr:
               display_name: Anket
             csp_unit1_2020:
               display_name: 'Ünite 1: Sayısal bilgi'
+          description: Bu ünite, bilgisayarlarda dijital bilgileri temsil etme ihtiyacından
+            kaynaklanan teknik zorlukları ve soruları araştırır. Sayılar, metin, resimler
+            ve ses gibi karmaşık bilgilerin metinde nasıl temsil edildiğini, sıkıştırmanın
+            nasıl çalıştığını ve dünyadaki bilgileri dijitalleştirmenin daha geniş
+            sosyal etkilerini öğrenin.
+          student_description: Bu ünite, bilgisayarlarda dijital bilgileri temsil
+            etme ihtiyacından kaynaklanan teknik zorlukları ve soruları araştırır.
+            Sayılar, metin, resimler ve ses gibi karmaşık bilgilerin metinde nasıl
+            temsil edildiğini, sıkıştırmanın nasıl çalıştığını ve dünyadaki bilgileri
+            dijitalleştirmenin daha geniş sosyal etkilerini öğrenin.
+          description_short: Çevrenizdeki dünya hakkındaki bilgileri bitlerle temsil
+            etmenin zorluklarını ve etkilerini keşfedin.
         csp2-2023:
           lesson_groups:
             csp_unit2_2020:
               display_name: 'Ünite 2: Internet'
+          description: Bu birim, İnternet'in milyarlarca cihazı ve insanı birbirine
+            bağlamak için nasıl tasarlandığını ortaya koyuyor. İnternetin farklı protokollerinin
+            nasıl çalıştığını öğrenin ve İnternet Simülatörünü kullanarak bunları
+            kendiniz oluşturun. Ardından, İnternet'in modern yaşam üzerindeki hem
+            iyi hem de kötü etkilerini düşünün.
+          student_description: Bu birim, İnternet'in milyarlarca cihazı ve insanı
+            birbirine bağlamak için nasıl tasarlandığını ortaya koyuyor. İnternetin
+            farklı protokollerinin nasıl çalıştığını öğrenin ve İnternet Simülatörünü
+            kullanarak bunları kendiniz oluşturun. Ardından, İnternet'in modern yaşam
+            üzerindeki hem iyi hem de kötü etkilerini düşünün.
+          description_short: İnternet Simülatörünü kullanarak interneti sıfırdan oluşturun.
         csp3-2023:
           lesson_groups:
             csp_unit3_2020:
               display_name: 'Ünite 3: Uygulama Tasarımına Giriş'
+          description: Bu ünite, hata ayıklama, ikili programlama ve kullanıcı testi
+            gibi önemli becerilere yoğun bir şekilde odaklanan programlama ve uygulama
+            tasarımına bir giriş niteliğindedir. App Lab'de kullanıcı arayüzleri tasarlamayı
+            ve olay odaklı programlar yazmayı öğrenin ve ardından sınıf arkadaşlarınıza
+            seçtiğiniz bir konuyu öğreten bir proje tasarlayın.
+          student_description: Bu ünite, hata ayıklama, ikili programlama ve kullanıcı
+            testi gibi önemli becerilere yoğun bir şekilde odaklanan programlama ve
+            uygulama tasarımına bir giriş niteliğindedir. App Lab'de kullanıcı arayüzleri
+            tasarlamayı ve olay odaklı programlar yazmayı öğrenin ve ardından sınıf
+            arkadaşlarınıza seçtiğiniz bir konuyu öğreten bir proje tasarlayın.
+          description_short: İlk uygulamanızı tasarlayın ve programcıların sorunlara
+            olası en iyi çözümleri oluşturmak için kullanıcılarla nasıl işbirliği
+            yaptığını ve etkileşim kurduğunu öğrenin.
         csp4-2023:
           lesson_groups:
             csp_variables:
@@ -5516,6 +6548,19 @@ tr:
               display_name: 'Ünite 6: Algoritmalar'
             lessonGroup-2:
               display_name: Kurs-Sonrası Anketi
+          description: Bu ünite, bilgisayar bilimcilerinin sorunları çözmek için algoritmaları
+            nasıl tasarladıklarına ve farklı algoritmaların hızlarını nasıl analiz
+            ettiklerine dair hızlı bir keşiftir. Çeşitli uygulamalı etkinlikler aracılığıyla
+            algoritmik verimlilik kavramı hakkında bilgi edinin ve bunun modern bilgi
+            işlemde nasıl uygulandığını öğrenin.
+          student_description: Bu ünite, bilgisayar bilimcilerinin sorunları çözmek
+            için algoritmaları nasıl tasarladıklarına ve farklı algoritmaların hızlarını
+            nasıl analiz ettiklerine dair hızlı bir keşiftir. Çeşitli uygulamalı etkinlikler
+            aracılığıyla algoritmik verimlilik kavramı hakkında bilgi edinin ve bunun
+            modern bilgi işlemde nasıl uygulandığını öğrenin.
+          description_short: Nasıl çalıştıklarını ve neden bazılarının diğerlerinden
+            daha iyi kabul edildiğini anlamak için algoritmalar tasarlayın ve analiz
+            edin.
         csp7-2023:
           lesson_groups:
             csp_parameters_return_values:
@@ -5530,18 +6575,32 @@ tr:
               display_name: Performans Görevi Oluştur
             lessonGroup-3:
               display_name: Kurs-Sonrası Anketi
+          description: Bu ünitede AP Oluşturma Performansı Görevine hazırlanın ve
+            gerçekleştirin. Her ders, görevi anlamanıza ve görevi tamamlamak için
+            bir plan geliştirmenize yardımcı olacak faydalı belgelere ve etkinliklere
+            bağlantılar içerir.
+          student_description: Bu ünitede AP Oluşturma Performansı Görevine hazırlanın
+            ve gerçekleştirin. Her ders, görevi anlamanıza ve görevi tamamlamak için
+            bir plan geliştirmenize yardımcı olacak faydalı belgelere ve etkinliklere
+            bağlantılar içerir.
+          description_short: Performans Görevi Oluştur (PT) alıştırması yapın ve tamamlayın.
         csp9-2023:
           lesson_groups:
             csp_unit9_2020:
               display_name: 'Ünite 9: Veriler'
             lessonGroup-2:
               display_name: Kurs-Sonrası Anketi
+          description_short: Kalıpları ararken ve çevrenizdeki dünya hakkında daha
+            fazla şey öğrenmeye çalışırken çok çeşitli konulardaki veri kümelerini
+            keşfedin ve görselleştirin.
         csp10-2023:
           lesson_groups:
             csp_unit10_2020:
               display_name: Ünite 10 - Siber güvenlik ve Küresel Etkiler
             lessonGroup-2:
               display_name: Kurs-Sonrası Anketi
+          description_short: Veri, kamu politikası, hukuk, etik ve toplumsal etkinin
+            kesiştiği noktada güncel olayları araştırın ve tartışın.
         csp-post-survey-2023:
           title: Bilgisayar Bilimi İlkeleri Kurs Sonrası Anketi
         csp-playground:

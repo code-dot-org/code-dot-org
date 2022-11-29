@@ -897,7 +897,7 @@
           "courseC_flappy_events4_a": "Connecte le bloc ˋterminer le jeuˋ à ˋau contact d’un obstacle` pour résoudre ce casse-tête."
         },
         "OPD-K5-events-6": {
-          "courseC_flappy_events5_a": "Tu devras utiliser le bloc ˋmarquer un point` pour réussir ce niveau."
+          "courseC_flappy_events5_a": "Il va te falloir utiliser le bloc ˋmarquer un point` pour réussir ce niveau."
         },
         "OPD-K5-forloops-1": {
           "courseF_bee_for1_a": "Fais glisser un bloc nombre violet dans l'espace vide de la boucle `répéter` pour lui indiquer combien de fois répéter.",
@@ -3438,198 +3438,198 @@
           "courseE_playLab_scaffold4_a": "Utiliser `marquer 1 point` pour ajouter un point, et `enlever 1 point` pour en retirer un."
         },
         "courseC_PlayLab_events1": {
-          "courseC_PlayLab_events1_a": "Attache ce bloc au bloc ˋquand l’exécution commence\\` :\n\n<xml>\n  <block type=\"studio_saySpriteChoices\">\n    <title name=\"SPRITE\">0</title>\n    <title name=\"VALUE\">Hi there.</title>\n  </block>\n</xml>"
+          "courseC_PlayLab_events1_a": "Attache ce bloc au bloc ˋquand l’exécution commence\\` :\n\n<xml>\n  <block type=\"studio_saySpriteChoices\">\n    <title name=\"SPRITE\">0</title>\n    <title name=\"VALUE\">Hi there.</title>\n  </block>\n</xml>"
         },
         "courseC_PlayLab_events1_2018": {
-          "courseC_PlayLab_events1_a": "Attache ce bloc au bloc ˋquand l’exécution commence\\` :\n\n<xml>\n  <block type=\"studio_saySpriteChoices\">\n    <title name=\"SPRITE\">0</title>\n    <title name=\"VALUE\">Hi there.</title>\n  </block>\n</xml>"
+          "courseC_PlayLab_events1_a": "Attache ce bloc au bloc ˋquand l’exécution commence\\` :\n\n<xml>\n  <block type=\"studio_saySpriteChoices\">\n    <title name=\"SPRITE\">0</title>\n    <title name=\"VALUE\">Hi there.</title>\n  </block>\n</xml>"
         },
         "courseC_PlayLab_events1_2019": {
-          "courseC_PlayLab_events1_a": "Attache ce bloc au bloc ˋquand l’exécution commence\\` :\n\n<xml>\n  <block type=\"studio_saySpriteChoices\">\n    <title name=\"SPRITE\">0</title>\n    <title name=\"VALUE\">Hi there.</title>\n  </block>\n</xml>"
+          "courseC_PlayLab_events1_a": "Attache ce bloc au bloc ˋquand l’exécution commence\\` :\n\n<xml>\n  <block type=\"studio_saySpriteChoices\">\n    <title name=\"SPRITE\">0</title>\n    <title name=\"VALUE\">Hi there.</title>\n  </block>\n</xml>"
         },
         "courseC_PlayLab_events1_2020": {
-          "courseC_PlayLab_events1_a": "Attache ce bloc au bloc ˋquand l’exécution commence\\` :\n\n<xml>\n  <block type=\"studio_saySpriteChoices\">\n    <title name=\"SPRITE\">0</title>\n    <title name=\"VALUE\">Hi there.</title>\n  </block>\n</xml>"
+          "courseC_PlayLab_events1_a": "Attache ce bloc au bloc ˋquand l’exécution commence\\` :\n\n<xml>\n  <block type=\"studio_saySpriteChoices\">\n    <title name=\"SPRITE\">0</title>\n    <title name=\"VALUE\">Hi there.</title>\n  </block>\n</xml>"
         },
         "courseC_PlayLab_events2": {
-          "courseC_PlayLab_events2_a": "Attache deux de ces blocs au bloc ˋquand l’exécution commence\\` :\n\n<xml>\n  <block type=\"studio_saySpriteChoices\">\n    <title name=\"SPRITE\">0</title>\n    <title name=\"VALUE\">Hi there.</title>\n  </block>\n</xml>",
-          "courseC_PlayLab_events2_b": "Utilise le menu déroulant du deuxième bloc ˋl’acteur \\_\\_ dit\\` pour modifier quel acteur parle."
+          "courseC_PlayLab_events2_a": "Attache deux de ces blocs au bloc ˋquand l’exécution commence\\` :\n\n<xml>\n  <block type=\"studio_saySpriteChoices\">\n    <title name=\"SPRITE\">0</title>\n    <title name=\"VALUE\">Hi there.</title>\n  </block>\n</xml>",
+          "courseC_PlayLab_events2_b": "Utilise le menu déroulant du deuxième bloc ˋl’acteur \\_\\_ dit\\` pour changer l'acteur qui parle."
         },
         "courseC_PlayLab_events2_2018": {
-          "courseC_PlayLab_events2_a": "Attache deux de ces blocs au bloc ˋquand l’exécution commence\\` :\n\n<xml>\n  <block type=\"studio_saySpriteChoices\">\n    <title name=\"SPRITE\">0</title>\n    <title name=\"VALUE\">Hi there.</title>\n  </block>\n</xml>",
-          "courseC_PlayLab_events2_b": "Utilise le menu déroulant du deuxième bloc ˋl’acteur \\_\\_ dit\\` pour modifier quel acteur parle."
+          "courseC_PlayLab_events2_a": "Attache deux de ces blocs au bloc ˋquand l’exécution commence\\` :\n\n<xml>\n  <block type=\"studio_saySpriteChoices\">\n    <title name=\"SPRITE\">0</title>\n    <title name=\"VALUE\">Hi there.</title>\n  </block>\n</xml>",
+          "courseC_PlayLab_events2_b": "Utilise le menu déroulant du deuxième bloc ˋl’acteur \\_\\_ dit\\` pour changer l'acteur qui parle."
         },
         "courseC_PlayLab_events2_2019": {
-          "courseC_PlayLab_events2_a": "Attache deux de ces blocs au bloc ˋquand l’exécution commence\\` :\n\n<xml>\n  <block type=\"studio_saySpriteChoices\">\n    <title name=\"SPRITE\">0</title>\n    <title name=\"VALUE\">Hi there.</title>\n  </block>\n</xml>",
-          "courseC_PlayLab_events2_b": "Utilise le menu déroulant du deuxième bloc ˋl’acteur \\_\\_ dit\\` pour modifier quel acteur parle."
+          "courseC_PlayLab_events2_a": "Attache deux de ces blocs au bloc ˋquand l’exécution commence\\` :\n\n<xml>\n  <block type=\"studio_saySpriteChoices\">\n    <title name=\"SPRITE\">0</title>\n    <title name=\"VALUE\">Hi there.</title>\n  </block>\n</xml>",
+          "courseC_PlayLab_events2_b": "Utilise le menu déroulant du deuxième bloc ˋl’acteur \\_\\_ dit\\` pour changer l'acteur qui parle."
         },
         "courseC_PlayLab_events2_2020": {
-          "courseC_PlayLab_events2_a": "Attache deux de ces blocs au bloc ˋquand l’exécution commence\\` :\n\n<xml>\n  <block type=\"studio_saySpriteChoices\">\n    <title name=\"SPRITE\">0</title>\n    <title name=\"VALUE\">Hi there.</title>\n  </block>\n</xml>",
-          "courseC_PlayLab_events2_b": "Utilise le menu déroulant du deuxième bloc ˋl’acteur \\_\\_ dit\\` pour modifier quel acteur parle."
+          "courseC_PlayLab_events2_a": "Attache deux de ces blocs au bloc ˋquand l’exécution commence\\` :\n\n<xml>\n  <block type=\"studio_saySpriteChoices\">\n    <title name=\"SPRITE\">0</title>\n    <title name=\"VALUE\">Hi there.</title>\n  </block>\n</xml>",
+          "courseC_PlayLab_events2_b": "Utilise le menu déroulant du deuxième bloc ˋl’acteur \\_\\_ dit\\` pour changer l'acteur qui parle."
         },
         "courseC_PlayLab_events3": {
-          "courseC_PlayLab_events3_a": "Tu dois seulement déplacer Jorge d’environ 25 pixels vers la droite pour résoudre ce puzzle.",
-          "courseC_PlayLab_events3_b": "Y a-t-il un bloc dans la boîte à outils qui semble pouvoir déplacer un acteur ?",
-          "courseC_PlayLab_events3_c": "Attache ce bloc au bloc ˋquand l’exécution commence\\` :\n\n<xml>\n<block type=\"studio_moveDistance\">\n    <title name=\"SPRITE\">0</title>\n    <title name=\"DIR\">2</title>\n    <title name=\"DISTANCE\">25</title>\n  </block>\n</xml>"
+          "courseC_PlayLab_events3_a": "Tu n'as besoin de déplacer Jorge que d’environ 25 pixels vers la droite pour résoudre ce casse-tête.",
+          "courseC_PlayLab_events3_b": "Y a-t-il un bloc dans la boîte à outils qui semble pouvoir déplacer un acteur ?",
+          "courseC_PlayLab_events3_c": "Attache ce bloc au bloc ˋquand l’exécution commence\\` :\n\n<xml>\n<block type=\"studio_moveDistance\">\n    <title name=\"SPRITE\">0</title>\n    <title name=\"DIR\">2</title>\n    <title name=\"DISTANCE\">25</title>\n  </block>\n</xml>"
         },
         "courseC_PlayLab_events3_2018": {
-          "courseC_PlayLab_events3_a": "Tu dois seulement déplacer Jorge d’environ 25 pixels vers la droite pour résoudre ce puzzle.",
-          "courseC_PlayLab_events3_b": "Y a-t-il un bloc dans la boîte à outils qui semble pouvoir déplacer un acteur ?",
-          "courseC_PlayLab_events3_c": "Attache ce bloc au bloc ˋquand l’exécution commence\\` :\n\n<xml>\n<block type=\"studio_moveDistance\">\n    <title name=\"SPRITE\">0</title>\n    <title name=\"DIR\">2</title>\n    <title name=\"DISTANCE\">25</title>\n  </block>\n</xml>"
+          "courseC_PlayLab_events3_a": "Tu n'as besoin de déplacer Jorge que d’environ 25 pixels vers la droite pour résoudre ce casse-tête.",
+          "courseC_PlayLab_events3_b": "Y a-t-il un bloc dans la boîte à outils qui semble pouvoir déplacer un acteur ?",
+          "courseC_PlayLab_events3_c": "Attache ce bloc au bloc ˋquand l’exécution commence\\` :\n\n<xml>\n<block type=\"studio_moveDistance\">\n    <title name=\"SPRITE\">0</title>\n    <title name=\"DIR\">2</title>\n    <title name=\"DISTANCE\">25</title>\n  </block>\n</xml>"
         },
         "courseC_PlayLab_events3_2019": {
-          "courseC_PlayLab_events3_a": "Tu dois seulement déplacer Jorge d’environ 25 pixels vers la droite pour résoudre ce puzzle.",
-          "courseC_PlayLab_events3_b": "Y a-t-il un bloc dans la boîte à outils qui semble pouvoir déplacer un acteur ?",
-          "courseC_PlayLab_events3_c": "Attache ce bloc au bloc ˋquand l’exécution commence\\` :\n\n<xml>\n<block type=\"studio_moveDistance\">\n    <title name=\"SPRITE\">0</title>\n    <title name=\"DIR\">2</title>\n    <title name=\"DISTANCE\">25</title>\n  </block>\n</xml>"
+          "courseC_PlayLab_events3_a": "Tu n'as besoin de déplacer Jorge que d’environ 25 pixels vers la droite pour résoudre ce casse-tête.",
+          "courseC_PlayLab_events3_b": "Y a-t-il un bloc dans la boîte à outils qui semble pouvoir déplacer un acteur ?",
+          "courseC_PlayLab_events3_c": "Attache ce bloc au bloc ˋquand l’exécution commence\\` :\n\n<xml>\n<block type=\"studio_moveDistance\">\n    <title name=\"SPRITE\">0</title>\n    <title name=\"DIR\">2</title>\n    <title name=\"DISTANCE\">25</title>\n  </block>\n</xml>"
         },
         "courseC_PlayLab_events3_2020": {
-          "courseC_PlayLab_events3_a": "Tu dois seulement déplacer Jorge d’environ 25 pixels vers la droite pour résoudre ce puzzle.",
-          "courseC_PlayLab_events3_b": "Y a-t-il un bloc dans la boîte à outils qui semble pouvoir déplacer un acteur ?",
-          "courseC_PlayLab_events3_c": "Attache ce bloc au bloc ˋquand l’exécution commence\\` :\n\n<xml>\n<block type=\"studio_moveDistance\">\n    <title name=\"SPRITE\">0</title>\n    <title name=\"DIR\">2</title>\n    <title name=\"DISTANCE\">25</title>\n  </block>\n</xml>"
+          "courseC_PlayLab_events3_a": "Tu n'as besoin de déplacer Jorge que d’environ 25 pixels vers la droite pour résoudre ce casse-tête.",
+          "courseC_PlayLab_events3_b": "Y a-t-il un bloc dans la boîte à outils qui semble pouvoir déplacer un acteur ?",
+          "courseC_PlayLab_events3_c": "Attache ce bloc au bloc ˋquand l’exécution commence\\` :\n\n<xml>\n<block type=\"studio_moveDistance\">\n    <title name=\"SPRITE\">0</title>\n    <title name=\"DIR\">2</title>\n    <title name=\"DISTANCE\">25</title>\n  </block>\n</xml>"
         },
         "courseC_PlayLab_events4": {
-          "courseC_PlayLab_events4_b": "Quand on clique sur « Exécuter », Jorge doit se déplacer de **100** pixels vers la droite pour atteindre Olive le chat.",
-          "courseC_PlayLab_events4_a": "Tu devras connecter un bloc ˋl’acteur \\_\\_ dit`à l’événement ˋlorsque l’acteur touche` pour résoudre ce casse-tête."
+          "courseC_PlayLab_events4_b": "Quand on clique sur « Démarrer », il faut que Jorge se déplace de **100** pixels vers la droite pour atteindre Olive la chatte.",
+          "courseC_PlayLab_events4_a": "Il va te falloir connecter un bloc ˋl’acteur \\_\\_ dit`à l’événement ˋlorsque l’acteur touche` pour résoudre ce casse-tête."
         },
         "courseC_PlayLab_events4_2018": {
-          "courseC_PlayLab_events4_b": "Quand on clique sur « Exécuter », Jorge doit se déplacer de **100** pixels vers la droite pour atteindre Olive le chat.",
-          "courseC_PlayLab_events4_a": "Tu devras connecter un bloc ˋl’acteur \\_\\_ dit`à l’événement ˋlorsque l’acteur touche` pour résoudre ce casse-tête."
+          "courseC_PlayLab_events4_b": "Quand on clique sur « Démarrer », il faut que Jorge se déplace de **100** pixels vers la droite pour atteindre Olive la chatte.",
+          "courseC_PlayLab_events4_a": "Il va te falloir connecter un bloc ˋl’acteur \\_\\_ dit`à l’événement ˋlorsque l’acteur touche` pour résoudre ce casse-tête."
         },
         "courseC_PlayLab_events4_2019": {
-          "courseC_PlayLab_events4_b": "Quand on clique sur « Exécuter », Jorge doit se déplacer de **100** pixels vers la droite pour atteindre Olive le chat.",
-          "courseC_PlayLab_events4_a": "Tu devras connecter un bloc ˋl’acteur \\_\\_ dit`à l’événement ˋlorsque l’acteur touche` pour résoudre ce casse-tête."
+          "courseC_PlayLab_events4_b": "Quand on clique sur « Démarrer », il faut que Jorge se déplace de **100** pixels vers la droite pour atteindre Olive la chatte.",
+          "courseC_PlayLab_events4_a": "Il va te falloir connecter un bloc ˋl’acteur \\_\\_ dit`à l’événement ˋlorsque l’acteur touche` pour résoudre ce casse-tête."
         },
         "courseC_PlayLab_events4_2020": {
-          "courseC_PlayLab_events4_b": "Quand on clique sur « Exécuter », Jorge doit se déplacer de **100** pixels vers la droite pour atteindre Olive le chat.",
-          "courseC_PlayLab_events4_a": "Tu devras connecter un bloc ˋl’acteur \\_\\_ dit`à l’événement ˋlorsque l’acteur touche` pour résoudre ce casse-tête."
+          "courseC_PlayLab_events4_b": "Quand on clique sur « Démarrer », il faut que Jorge se déplace de **100** pixels vers la droite pour atteindre Olive la chatte.",
+          "courseC_PlayLab_events4_a": "Il va te falloir connecter un bloc ˋl’acteur \\_\\_ dit`à l’événement ˋlorsque l’acteur touche` pour résoudre ce casse-tête."
         },
         "courseC_PlayLab_events5": {
-          "courseC_PlayLab_events5_a": "Tu devras cliquer sur le menu déroulant dans le bloc ˋl’acteur dit\\` pour trouver le texte « Quoi de neuf ? »",
-          "courseC_PlayLab_events5_b": "Clique sur Octavia quand tu exécutes ton programme pour vérifier qu’il fonctionne !"
+          "courseC_PlayLab_events5_a": "Il va te falloir cliquer sur le menu déroulant dans le bloc ˋl’acteur dit\\` pour trouver le texte « Quoi de neuf ? ». ",
+          "courseC_PlayLab_events5_b": "Clique sur Octavia quand tu exécutes ton programme pour vérifier qu’il fonctionne bien !"
         },
         "courseC_PlayLab_events5_2018": {
-          "courseC_PlayLab_events5_a": "Tu devras cliquer sur le menu déroulant dans le bloc ˋl’acteur dit\\` pour trouver le texte « Quoi de neuf ? »",
-          "courseC_PlayLab_events5_b": "Clique sur Octavia quand tu exécutes ton programme pour vérifier qu’il fonctionne !"
+          "courseC_PlayLab_events5_a": "Il va te falloir cliquer sur le menu déroulant dans le bloc ˋl’acteur dit\\` pour trouver le texte « Quoi de neuf ? ». ",
+          "courseC_PlayLab_events5_b": "Clique sur Octavia quand tu exécutes ton programme pour vérifier qu’il fonctionne bien !"
         },
         "courseC_PlayLab_events5_2019": {
-          "courseC_PlayLab_events5_a": "Tu devras cliquer sur le menu déroulant dans le bloc ˋl’acteur dit\\` pour trouver le texte « Quoi de neuf ? »",
-          "courseC_PlayLab_events5_b": "Clique sur Octavia quand tu exécutes ton programme pour vérifier qu’il fonctionne !"
+          "courseC_PlayLab_events5_a": "Il va te falloir cliquer sur le menu déroulant dans le bloc ˋl’acteur dit\\` pour trouver le texte « Quoi de neuf ? ». ",
+          "courseC_PlayLab_events5_b": "Clique sur Octavia quand tu exécutes ton programme pour vérifier qu’il fonctionne bien !"
         },
         "courseC_PlayLab_events5_2020": {
-          "courseC_PlayLab_events5_a": "Tu devras cliquer sur le menu déroulant dans le bloc ˋl’acteur dit\\` pour trouver le texte « Quoi de neuf ? »",
-          "courseC_PlayLab_events5_b": "Clique sur Octavia quand tu exécutes ton programme pour vérifier qu’il fonctionne !"
+          "courseC_PlayLab_events5_a": "Il va te falloir cliquer sur le menu déroulant dans le bloc ˋl’acteur dit\\` pour trouver le texte « Quoi de neuf ? ». ",
+          "courseC_PlayLab_events5_b": "Clique sur Octavia quand tu exécutes ton programme pour vérifier qu’il fonctionne bien !"
         },
         "courseC_PlayLab_events6": {
-          "courseC_PlayLab_events6_a": "Chaque bloc vert `flèche quand` devrait contenir une action.",
-          "courseC_PlayLab_events6_b": "Utilise le menu déroulant du bloc ˋdéplacer l’acteur 1\\` pour modifier la direction dans laquelle Waddles se déplace.",
-          "courseC_PlayLab_events6_c": "Quand tu auras fini, tu devrais pouvoir déplacer Waddles en utilisant les touches directionnelles de ton clavier !"
+          "courseC_PlayLab_events6_a": "Chaque bloc vert `quand flèche` devrait avoir une action qui s'y rattache en-dessous de lui.",
+          "courseC_PlayLab_events6_b": "Utilise le menu déroulant du bloc ˋdéplacer l’acteur 1\\` pour modifier le sens dans lequel Waddles se déplace.",
+          "courseC_PlayLab_events6_c": "Quand tu as fini, tu devrais pouvoir déplacer Waddles en utilisant les touches fléchées sur ton clavier !"
         },
         "courseC_PlayLab_events6_2018": {
-          "courseC_PlayLab_events6_a": "Chaque bloc vert `flèche quand` devrait contenir une action.",
-          "courseC_PlayLab_events6_b": "Utilise le menu déroulant du bloc ˋdéplacer l’acteur 1\\` pour modifier la direction dans laquelle Waddles se déplace.",
-          "courseC_PlayLab_events6_c": "Quand tu auras fini, tu devrais pouvoir déplacer Waddles en utilisant les touches directionnelles de ton clavier !"
+          "courseC_PlayLab_events6_a": "Chaque bloc vert `quand flèche` devrait avoir une action qui s'y rattache en-dessous de lui.",
+          "courseC_PlayLab_events6_b": "Utilise le menu déroulant du bloc ˋdéplacer l’acteur 1\\` pour modifier le sens dans lequel Waddles se déplace.",
+          "courseC_PlayLab_events6_c": "Quand tu as fini, tu devrais pouvoir déplacer Waddles en utilisant les touches fléchées sur ton clavier !"
         },
         "courseC_PlayLab_events6_2019": {
-          "courseC_PlayLab_events6_a": "Chaque bloc vert `flèche quand` devrait contenir une action.",
-          "courseC_PlayLab_events6_b": "Utilise le menu déroulant du bloc ˋdéplacer l’acteur 1\\` pour modifier la direction dans laquelle Waddles se déplace.",
-          "courseC_PlayLab_events6_c": "Quand tu auras fini, tu devrais pouvoir déplacer Waddles en utilisant les touches directionnelles de ton clavier !"
+          "courseC_PlayLab_events6_a": "Chaque bloc vert `quand flèche` devrait avoir une action qui s'y rattache en-dessous de lui.",
+          "courseC_PlayLab_events6_b": "Utilise le menu déroulant du bloc ˋdéplacer l’acteur 1\\` pour modifier le sens dans lequel Waddles se déplace.",
+          "courseC_PlayLab_events6_c": "Quand tu as fini, tu devrais pouvoir déplacer Waddles en utilisant les touches fléchées sur ton clavier !"
         },
         "courseC_PlayLab_events6_2020": {
-          "courseC_PlayLab_events6_a": "Chaque bloc vert `flèche quand` devrait contenir une action.",
-          "courseC_PlayLab_events6_b": "Utilise le menu déroulant du bloc ˋdéplacer l’acteur 1\\` pour modifier la direction dans laquelle Waddles se déplace.",
-          "courseC_PlayLab_events6_c": "Quand tu auras fini, tu devrais pouvoir déplacer Waddles en utilisant les touches directionnelles de ton clavier !"
+          "courseC_PlayLab_events6_a": "Chaque bloc vert `quand flèche` devrait avoir une action qui s'y rattache en-dessous de lui.",
+          "courseC_PlayLab_events6_b": "Utilise le menu déroulant du bloc ˋdéplacer l’acteur 1\\` pour modifier le sens dans lequel Waddles se déplace.",
+          "courseC_PlayLab_events6_c": "Quand tu as fini, tu devrais pouvoir déplacer Waddles en utilisant les touches fléchées sur ton clavier !"
         },
         "courseC_PlayLab_events7": {
-          "courseC_PlayLab_events7_a": "Utilise à la fois le bloc ˋdéplacer l’acteur 2 vers le haut 400 pixels`et le bloc ˋdéplacer l’acteur 2 vers le bas 400 pixels` à l’intérieur de la boucle ˋrépéter à l’infini\\` pour résoudre ce casse-tête. ",
-          "courseC_PlayLab_events7_b": "La boucle ˋrépéter à l’infiniˋ n’a pas besoin d’être connectée à d’autres blocs événement ; elle s’exécutera toute seule."
+          "courseC_PlayLab_events7_a": "Utilise et le bloc ˋdéplacer l’acteur 2 vers le haut de 400 pixels`et le bloc ˋdéplacer l’acteur 2 vers le bas de 400 pixels` au sein de la boucle ˋrépéter à l’infini\\` pour résoudre ce casse-tête. ",
+          "courseC_PlayLab_events7_b": "La boucle ˋrépéter à l’infiniˋ n’a pas besoin d’être connectée à d’autres blocs événement ; elle s’exécutera toute seule."
         },
         "courseC_PlayLab_events7_2018": {
-          "courseC_PlayLab_events7_a": "Utilise à la fois le bloc ˋdéplacer l’acteur 2 vers le haut 400 pixels`et le bloc ˋdéplacer l’acteur 2 vers le bas 400 pixels` à l’intérieur de la boucle ˋrépéter à l’infini\\` pour résoudre ce casse-tête. ",
-          "courseC_PlayLab_events7_b": "La boucle ˋrépéter à l’infiniˋ n’a pas besoin d’être connectée à d’autres blocs événement ; elle s’exécutera toute seule."
+          "courseC_PlayLab_events7_a": "Utilise et le bloc ˋdéplacer l’acteur 2 vers le haut de 400 pixels`et le bloc ˋdéplacer l’acteur 2 vers le bas de 400 pixels` au sein de la boucle ˋrépéter à l’infini\\` pour résoudre ce casse-tête. ",
+          "courseC_PlayLab_events7_b": "La boucle ˋrépéter à l’infiniˋ n’a pas besoin d’être connectée à d’autres blocs événement ; elle s’exécutera toute seule."
         },
         "courseC_PlayLab_events7_2019": {
-          "courseC_PlayLab_events7_a": "Utilise à la fois le bloc ˋdéplacer l’acteur 2 vers le haut 400 pixels`et le bloc ˋdéplacer l’acteur 2 vers le bas 400 pixels` à l’intérieur de la boucle ˋrépéter à l’infini\\` pour résoudre ce casse-tête. ",
-          "courseC_PlayLab_events7_b": "La boucle ˋrépéter à l’infiniˋ n’a pas besoin d’être connectée à d’autres blocs événement ; elle s’exécutera toute seule."
+          "courseC_PlayLab_events7_a": "Utilise et le bloc ˋdéplacer l’acteur 2 vers le haut de 400 pixels`et le bloc ˋdéplacer l’acteur 2 vers le bas de 400 pixels` au sein de la boucle ˋrépéter à l’infini\\` pour résoudre ce casse-tête. ",
+          "courseC_PlayLab_events7_b": "La boucle ˋrépéter à l’infiniˋ n’a pas besoin d’être connectée à d’autres blocs événement ; elle s’exécutera toute seule."
         },
         "courseC_PlayLab_events7_2020": {
-          "courseC_PlayLab_events7_a": "Utilise à la fois le bloc ˋdéplacer l’acteur 2 vers le haut 400 pixels`et le bloc ˋdéplacer l’acteur 2 vers le bas 400 pixels` à l’intérieur de la boucle ˋrépéter à l’infini\\` pour résoudre ce casse-tête. ",
-          "courseC_PlayLab_events7_b": "La boucle ˋrépéter à l’infiniˋ n’a pas besoin d’être connectée à d’autres blocs événement ; elle s’exécutera toute seule."
+          "courseC_PlayLab_events7_a": "Utilise et le bloc ˋdéplacer l’acteur 2 vers le haut de 400 pixels`et le bloc ˋdéplacer l’acteur 2 vers le bas de 400 pixels` au sein de la boucle ˋrépéter à l’infini\\` pour résoudre ce casse-tête. ",
+          "courseC_PlayLab_events7_b": "La boucle ˋrépéter à l’infiniˋ n’a pas besoin d’être connectée à d’autres blocs événement ; elle s’exécutera toute seule."
         },
         "courseC_PlayLab_events8": {
-          "courseC_PlayLab_events8_a": "Tu devras connecter des blocs au bloc ˋlorsque l’acteur touche\\` pour faire fonctionner cela correctement.",
-          "courseC_PlayLab_events8_b": "Les blocs ˋl’acteur dit`et ˋjouer un son` dans la boîte à outils devraient t’aider !"
+          "courseC_PlayLab_events8_a": "Tu devras connecter des blocs au bloc ˋlorsque l’acteur touche\\` pour que tout marche correctement.",
+          "courseC_PlayLab_events8_b": "Les blocs ˋl’acteur dit`et ˋjouer un son` dans la boîte à outils devraient t’aider !"
         },
         "courseC_PlayLab_events8_2018": {
-          "courseC_PlayLab_events8_a": "Tu devras connecter des blocs au bloc ˋlorsque l’acteur touche\\` pour faire fonctionner cela correctement.",
-          "courseC_PlayLab_events8_b": "Les blocs ˋl’acteur dit`et ˋjouer un son` dans la boîte à outils devraient t’aider !"
+          "courseC_PlayLab_events8_a": "Tu devras connecter des blocs au bloc ˋlorsque l’acteur touche\\` pour que tout marche correctement.",
+          "courseC_PlayLab_events8_b": "Les blocs ˋl’acteur dit`et ˋjouer un son` dans la boîte à outils devraient t’aider !"
         },
         "courseC_PlayLab_events8_2019": {
-          "courseC_PlayLab_events8_a": "Tu devras connecter des blocs au bloc ˋlorsque l’acteur touche\\` pour faire fonctionner cela correctement.",
-          "courseC_PlayLab_events8_b": "Les blocs ˋl’acteur dit`et ˋjouer un son` dans la boîte à outils devraient t’aider !"
+          "courseC_PlayLab_events8_a": "Tu devras connecter des blocs au bloc ˋlorsque l’acteur touche\\` pour que tout marche correctement.",
+          "courseC_PlayLab_events8_b": "Les blocs ˋl’acteur dit`et ˋjouer un son` dans la boîte à outils devraient t’aider !"
         },
         "courseC_PlayLab_events8_2020": {
-          "courseC_PlayLab_events8_a": "Tu devras connecter des blocs au bloc ˋlorsque l’acteur touche\\` pour faire fonctionner cela correctement.",
-          "courseC_PlayLab_events8_b": "Les blocs ˋl’acteur dit`et ˋjouer un son` dans la boîte à outils devraient t’aider !"
+          "courseC_PlayLab_events8_a": "Tu devras connecter des blocs au bloc ˋlorsque l’acteur touche\\` pour que tout marche correctement.",
+          "courseC_PlayLab_events8_b": "Les blocs ˋl’acteur dit`et ˋjouer un son` dans la boîte à outils devraient t’aider !"
         },
         "courseC_PlayLab_events9": {
           "courseC_PlayLab_events9_a": "Le bloc ˋmarquer un point\\` t’aidera à résoudre ce casse-tête.",
           "courseC_PlayLab_events9_b": "Assure-toi que ton nouveau bloc ˋlorsque l’acteur touche\\` désigne l’acteur **1** et l’acteur **3**.",
-          "courseC_PlayLab_events9_c": "Tu peux avoir plus d’un événement ˋquand l’acteur touche\\` à la fois dans ton espace de travail, donc tu n’as pas besoin de supprimer le premier !"
+          "courseC_PlayLab_events9_c": "Tu peux avoir plus d’un événement ˋquand l’acteur touche\\` à la fois dans ton espace de travail, donc tu n’as pas besoin de supprimer le premier !"
         },
         "courseC_PlayLab_events9_2018": {
           "courseC_PlayLab_events9_a": "Le bloc ˋmarquer un point\\` t’aidera à résoudre ce casse-tête.",
           "courseC_PlayLab_events9_b": "Assure-toi que ton nouveau bloc ˋlorsque l’acteur touche\\` désigne l’acteur **1** et l’acteur **3**.",
-          "courseC_PlayLab_events9_c": "Tu peux avoir plus d’un événement ˋquand l’acteur touche\\` à la fois dans ton espace de travail, donc tu n’as pas besoin de supprimer le premier !"
+          "courseC_PlayLab_events9_c": "Tu peux avoir plus d’un événement ˋquand l’acteur touche\\` à la fois dans ton espace de travail, donc tu n’as pas besoin de supprimer le premier !"
         },
         "courseC_PlayLab_events9_2019": {
           "courseC_PlayLab_events9_a": "Le bloc ˋmarquer un point\\` t’aidera à résoudre ce casse-tête.",
           "courseC_PlayLab_events9_b": "Assure-toi que ton nouveau bloc ˋlorsque l’acteur touche\\` désigne l’acteur **1** et l’acteur **3**.",
-          "courseC_PlayLab_events9_c": "Tu peux avoir plus d’un événement ˋquand l’acteur touche\\` à la fois dans ton espace de travail, donc tu n’as pas besoin de supprimer le premier !"
+          "courseC_PlayLab_events9_c": "Tu peux avoir plus d’un événement ˋquand l’acteur touche\\` à la fois dans ton espace de travail, donc tu n’as pas besoin de supprimer le premier !"
         },
         "courseC_PlayLab_events9_2020": {
           "courseC_PlayLab_events9_a": "Le bloc ˋmarquer un point\\` t’aidera à résoudre ce casse-tête.",
           "courseC_PlayLab_events9_b": "Assure-toi que ton nouveau bloc ˋlorsque l’acteur touche\\` désigne l’acteur **1** et l’acteur **3**.",
-          "courseC_PlayLab_events9_c": "Tu peux avoir plus d’un événement ˋquand l’acteur touche\\` à la fois dans ton espace de travail, donc tu n’as pas besoin de supprimer le premier !"
+          "courseC_PlayLab_events9_c": "Tu peux avoir plus d’un événement ˋquand l’acteur touche\\` à la fois dans ton espace de travail, donc tu n’as pas besoin de supprimer le premier !"
         },
         "courseC_PlayLab_eventsA": {
           "courseC_PlayLab_eventsA_a": "Utilise le bloc ˋdéfinir un arrière-plan`et le bloc ˋaffecter à l’acteur une vitesse ____` pour résoudre ce casse-tête.",
-          "courseC_PlayLab_eventsA_b": "Tu devras faire glisser un bloc ˋquand l’exécution commence\\` sur l’espace de travail pour résoudre ce casse-tête."
+          "courseC_PlayLab_eventsA_b": "Il va notamment te falloir faire glisser un bloc ˋquand l’exécution commence\\` dans ton espace de travail pour résoudre ce casse-tête."
         },
         "courseC_PlayLab_eventsA_2018": {
           "courseC_PlayLab_eventsA_a": "Utilise le bloc ˋdéfinir un arrière-plan`et le bloc ˋaffecter à l’acteur une vitesse ____` pour résoudre ce casse-tête.",
-          "courseC_PlayLab_eventsA_b": "Tu devras faire glisser un bloc ˋquand l’exécution commence\\` sur l’espace de travail pour résoudre ce casse-tête."
+          "courseC_PlayLab_eventsA_b": "Il va notamment te falloir faire glisser un bloc ˋquand l’exécution commence\\` dans ton espace de travail pour résoudre ce casse-tête."
         },
         "courseC_PlayLab_eventsA_2019": {
           "courseC_PlayLab_eventsA_a": "Utilise le bloc ˋdéfinir un arrière-plan`et le bloc ˋaffecter à l’acteur une vitesse ____` pour résoudre ce casse-tête.",
-          "courseC_PlayLab_eventsA_b": "Tu devras faire glisser un bloc ˋquand l’exécution commence\\` sur l’espace de travail pour résoudre ce casse-tête."
+          "courseC_PlayLab_eventsA_b": "Il va notamment te falloir faire glisser un bloc ˋquand l’exécution commence\\` dans ton espace de travail pour résoudre ce casse-tête."
         },
         "courseC_PlayLab_eventsA_2020": {
           "courseC_PlayLab_eventsA_a": "Utilise le bloc ˋdéfinir un arrière-plan`et le bloc ˋaffecter à l’acteur une vitesse ____` pour résoudre ce casse-tête.",
-          "courseC_PlayLab_eventsA_b": "Tu devras faire glisser un bloc ˋquand l’exécution commence\\` sur l’espace de travail pour résoudre ce casse-tête."
+          "courseC_PlayLab_eventsA_b": "Il va notamment te falloir faire glisser un bloc ˋquand l’exécution commence\\` dans ton espace de travail pour résoudre ce casse-tête."
         },
         "courseC_PlayLab_eventsA_embed_2019": {
-          "courseC_PlayLab_eventsA_a": "Utilise les touches fléchées pour déplacer le pingouin. Tu n'as pas besoin d'écrire de code pour finir ce niveau."
+          "courseC_PlayLab_eventsA_a": "Utilise les touches fléchées pour déplacer le pingouin. Tu n'as pas besoin d'écrire de code pour terminer ce niveau."
         },
         "courseC_PlayLab_eventsA_embed_2020": {
-          "courseC_PlayLab_eventsA_a": "Utilise les touches fléchées pour déplacer le pingouin. Tu n'as pas besoin d'écrire de code pour finir ce niveau."
+          "courseC_PlayLab_eventsA_a": "Utilise les touches fléchées pour déplacer le pingouin. Tu n'as pas besoin d'écrire de code pour terminer ce niveau."
         },
         "courseC_PlayLab_eventsFP": {
           "idea1": "_Besoin d’une idée ?_\n\n**Qui est là ?** Fait apparaître des personnages avec des images aléatoires, comme ça personne ne sait qui apparaîtra ensuite.\n\n![](https://images.code.org/a56e03479801995d93ad5a4e4384a79e-image-1475340154498.gif)",
           "idea2": "_Besoin d’une idée ?_\n\n**Partis pour l’aventure** - Modifie le fond, puis fais parler les personnages de l’endroit où ils sont à présent.\n\n![](https://images.code.org/010c4d919f841d6049caf9211ab65ccc-image-1475340583052.gif)",
-          "idea3": "_Besoin d’une idée ?_\n\n**Pinball** - Déplace un personnage en utilisant les touches directionnelles (utilise des blocs ˋquand flèche vers le haut`, ˋquand flèche vers le bas`), puis joue des sons aléatoires quand il entre en collision avec d’autres personnages sur l’écran."
+          "idea3": "_Besoin d’une idée ?_\n\n**Pinball** - Fais se déplacer un personnage en utilisant les touches fléchées (utilise des blocs ˋquand flèche vers le haut`, ˋquand flèche vers le bas`), puis fais jouer des sons aléatoires quand il rentre dans d’autres personnages sur l’écran."
         },
         "courseC_PlayLab_eventsFP_2018": {
           "idea1": "_Besoin d’une idée ?_\n\n**Qui est là ?** Fait apparaître des personnages avec des images aléatoires, comme ça personne ne sait qui apparaîtra ensuite.\n\n![](https://images.code.org/a56e03479801995d93ad5a4e4384a79e-image-1475340154498.gif)",
           "idea2": "_Besoin d’une idée ?_\n\n**Partis pour l’aventure** - Modifie le fond, puis fais parler les personnages de l’endroit où ils sont à présent.\n\n![](https://images.code.org/010c4d919f841d6049caf9211ab65ccc-image-1475340583052.gif)",
-          "idea3": "_Besoin d’une idée ?_\n\n**Pinball** - Déplace un personnage en utilisant les touches directionnelles (utilise des blocs ˋquand flèche vers le haut`, ˋquand flèche vers le bas`), puis joue des sons aléatoires quand il entre en collision avec d’autres personnages sur l’écran."
+          "idea3": "_Besoin d’une idée ?_\n\n**Pinball** - Fais se déplacer un personnage en utilisant les touches fléchées (utilise des blocs ˋquand flèche vers le haut`, ˋquand flèche vers le bas`), puis fais jouer des sons aléatoires quand il rentre dans d’autres personnages sur l’écran."
         },
         "courseC_PlayLab_eventsFP_2019": {
-          "idea1": "_Besoin d'une idée ?_    **Qui est là ?** Fais apparaître des personnages avec des images aléatoires, de sorte que personne ne sait qui apparaîtra ensuite.    \\< img src =\" <https://images.code.org/dbd6ece9d0fb213039ea5dccb91fc425-image-1563577859889.gif\"style=>\" largeur: 200px\">",
-          "idea2": "_Besoin d'une idée ?_   **partir pour une Aventure** - Change l'arrière-plan, puis fais dire aux caractères où ils se trouvent, maintenant.    \\< img src =\" <https://images.code.org/a7f740d73074deb128cdc2826abda9e6-image-1563576781779.gif\"style=>\" largeur: 200px\">",
-          "idea3": "_Besoin d’une idée ?_\n\n**Pinball** - Déplace un personnage en utilisant les touches directionnelles (utilise des blocs ˋquand flèche vers le haut`, ˋquand flèche vers le bas`), puis joue des sons aléatoires quand il entre en collision avec d’autres personnages sur l’écran."
+          "idea1": "_Besoin d'une idée ?_   \n\n **Qui est là ?** Fais apparaître des personnages avec des images aléatoires, pour que personne ne puisse savoir qui va apparaître ensuite.    \n\n<img src= \"https://images.code.org/dbd6ece9d0fb213039ea5dccb91fc425-image-1563577859889.gif\" style=\"width: 200px\">",
+          "idea2": "_Besoin d'une idée ?_   \n\n**Partir à l'Aventure** - Change l'arrière-plan, puis fais parler les personnages de l'endroit où ils se trouvent désormais.\n\n<img src= \"https://images.code.org/a7f740d73074deb128cdc2826abda9e6-image-1563576781779.gif\" style=\"width: 200px\">",
+          "idea3": "_Besoin d’une idée ?_\n\n**Pinball** - Fais se déplacer un personnage en utilisant les touches fléchées (utilise des blocs ˋquand flèche vers le haut`, ˋquand flèche vers le bas`), puis fais jouer des sons aléatoires quand il rentre dans d’autres personnages sur l’écran."
         },
         "courseC_PlayLab_eventsFP_2020": {
-          "idea1": "_Besoin d'une idée ?_    **Qui est là ?** Fais apparaître des personnages avec des images aléatoires, de sorte que personne ne sait qui apparaîtra ensuite.    \\< img src =\" <https://images.code.org/dbd6ece9d0fb213039ea5dccb91fc425-image-1563577859889.gif\"style=>\" largeur: 200px\">",
-          "idea2": "_Besoin d'une idée ?_   **partir pour une Aventure** - Change l'arrière-plan, puis fais dire aux caractères où ils se trouvent, maintenant.    \\< img src =\" <https://images.code.org/a7f740d73074deb128cdc2826abda9e6-image-1563576781779.gif\"style=>\" largeur: 200px\">",
-          "idea3": "_Besoin d’une idée ?_\n\n**Pinball** - Déplace un personnage en utilisant les touches directionnelles (utilise des blocs ˋquand flèche vers le haut`, ˋquand flèche vers le bas`), puis joue des sons aléatoires quand il entre en collision avec d’autres personnages sur l’écran."
+          "idea1": "_Besoin d'une idée ?_   \n\n **Qui est là ?** Fais apparaître des personnages avec des images aléatoires, pour que personne ne puisse savoir qui va apparaître ensuite.    \n\n<img src= \"https://images.code.org/dbd6ece9d0fb213039ea5dccb91fc425-image-1563577859889.gif\" style=\"width: 200px\">",
+          "idea2": "_Besoin d'une idée ?_   \n\n**Partir à l'Aventure** - Change l'arrière-plan, puis fais parler les personnages de l'endroit où ils se trouvent désormais.\n\n<img src= \"https://images.code.org/a7f740d73074deb128cdc2826abda9e6-image-1563576781779.gif\" style=\"width: 200px\">",
+          "idea3": "_Besoin d’une idée ?_\n\n**Pinball** - Fais se déplacer un personnage en utilisant les touches fléchées (utilise des blocs ˋquand flèche vers le haut`, ˋquand flèche vers le bas`), puis fais jouer des sons aléatoires quand il rentre dans d’autres personnages sur l’écran."
         },
         "courseC_PlayLab_events_challenge1": {
           "courseC_PlayLab_events_challenge_a": "Tu peux utiliser ce bloc pour déplacer les acteurs à différents endroits de l’espace de jeu.\n\n<xml> <block type=\"studio_setSpritePosition\">\n    <title name=\"SPRITE\">0</title>\n    <title name=\"VALUE\">12</title>\n  </block></xml>",
@@ -4198,16 +4198,16 @@
           "courseC_flappy_events4_a": "Connecte le bloc ˋterminer le jeuˋ à ˋau contact d’un obstacle\\` pour résoudre ce casse-tête."
         },
         "courseC_flappy_events5": {
-          "courseC_flappy_events5_a": "Tu devras utiliser le bloc ˋmarquer un point\\` pour réussir ce niveau."
+          "courseC_flappy_events5_a": "Il va te falloir utiliser le bloc ˋmarquer un point\\` pour réussir ce niveau."
         },
         "courseC_flappy_events5_2018": {
-          "courseC_flappy_events5_a": "Tu devras utiliser le bloc ˋmarquer un point\\` pour réussir ce niveau."
+          "courseC_flappy_events5_a": "Il va te falloir utiliser le bloc ˋmarquer un point\\` pour réussir ce niveau."
         },
         "courseC_flappy_events5_2019": {
-          "courseC_flappy_events5_a": "Tu devras utiliser le bloc ˋmarquer un point\\` pour réussir ce niveau."
+          "courseC_flappy_events5_a": "Il va te falloir utiliser le bloc ˋmarquer un point\\` pour réussir ce niveau."
         },
         "courseC_flappy_events5_2020": {
-          "courseC_flappy_events5_a": "Tu devras utiliser le bloc ˋmarquer un point\\` pour réussir ce niveau."
+          "courseC_flappy_events5_a": "Il va te falloir utiliser le bloc ˋmarquer un point\\` pour réussir ce niveau."
         },
         "courseC_flappy_events6": {
           "courseC_flappy_events6_a": "Essaie de connecter le bloc ˋfaire une \\_\\_\\_\\_ de battements d’ailesˋ à l’événement ˋlors d’un clic\\`."
@@ -4222,40 +4222,40 @@
           "courseC_flappy_events6_a": "Essaie de connecter le bloc ˋfaire une \\_\\_\\_\\_ de battements d’ailesˋ à l’événement ˋlors d’un clic\\`."
         },
         "courseC_flappy_events7": {
-          "courseC_flappy_events7_a": "Tu peux modifier le fond en utilisant le bloc ˋdéfinir un arrière-plan\\`. "
+          "courseC_flappy_events7_a": "Tu peux modifier le fond d'écran en utilisant le bloc ˋdéfinir un arrière-plan\\`. "
         },
         "courseC_flappy_events7_2018": {
-          "courseC_flappy_events7_a": "Tu peux modifier le fond en utilisant le bloc ˋdéfinir un arrière-plan\\`. "
+          "courseC_flappy_events7_a": "Tu peux modifier le fond d'écran en utilisant le bloc ˋdéfinir un arrière-plan\\`. "
         },
         "courseC_flappy_events7_2019": {
-          "courseC_flappy_events7_a": "Tu peux modifier le fond en utilisant le bloc ˋdéfinir un arrière-plan\\`. "
+          "courseC_flappy_events7_a": "Tu peux modifier le fond d'écran en utilisant le bloc ˋdéfinir un arrière-plan\\`. "
         },
         "courseC_flappy_events7_2020": {
-          "courseC_flappy_events7_a": "Tu peux modifier le fond en utilisant le bloc ˋdéfinir un arrière-plan\\`. "
+          "courseC_flappy_events7_a": "Tu peux modifier le fond d'écran en utilisant le bloc ˋdéfinir un arrière-plan\\`. "
         },
         "courseC_flappy_events8": {
-          "courseC_flappy_events8_a": "Essaie de connecter un second bloc `définir la scène` sous l'évènement `au passage d'un obstacle` pour passer ce niveau."
+          "courseC_flappy_events8_a": "Essaie de connecter un deuxième bloc `définir l'arrière-plan` sous l'évènement `au passage d'un obstacle` pour réussir ce niveau."
         },
         "courseC_flappy_events8_2018": {
-          "courseC_flappy_events8_a": "Essaie de connecter un second bloc `définir la scène` sous l'évènement `au passage d'un obstacle` pour passer ce niveau."
+          "courseC_flappy_events8_a": "Essaie de connecter un deuxième bloc `définir l'arrière-plan` sous l'évènement `au passage d'un obstacle` pour réussir ce niveau."
         },
         "courseC_flappy_events8_2019": {
-          "courseC_flappy_events8_a": "Essaie de connecter un second bloc `définir la scène` sous l'évènement `au passage d'un obstacle` pour passer ce niveau."
+          "courseC_flappy_events8_a": "Essaie de connecter un deuxième bloc `définir l'arrière-plan` sous l'évènement `au passage d'un obstacle` pour réussir ce niveau."
         },
         "courseC_flappy_events8_2020": {
-          "courseC_flappy_events8_a": "Essaie de connecter un second bloc `définir la scène` sous l'évènement `au passage d'un obstacle` pour passer ce niveau."
+          "courseC_flappy_events8_a": "Essaie de connecter un deuxième bloc `définir l'arrière-plan` sous l'évènement `au passage d'un obstacle` pour réussir ce niveau."
         },
         "courseC_flappy_events9": {
-          "courseC_flappy_events9_a": "Connecte le bloc `mettre le score à 0` à l'évènement `au contact d'un obstacle` pour passer ce niveau."
+          "courseC_flappy_events9_a": "Connecte le bloc `mettre le score à 0` à l'évènement `au contact d'un obstacle` pour réussir ce niveau."
         },
         "courseC_flappy_events9_2018": {
-          "courseC_flappy_events9_a": "Connecte le bloc `mettre le score à 0` à l'évènement `au contact d'un obstacle` pour passer ce niveau."
+          "courseC_flappy_events9_a": "Connecte le bloc `mettre le score à 0` à l'évènement `au contact d'un obstacle` pour réussir ce niveau."
         },
         "courseC_flappy_events9_2019": {
-          "courseC_flappy_events9_a": "Connecte le bloc `mettre le score à 0` à l'évènement `au contact d'un obstacle` pour passer ce niveau."
+          "courseC_flappy_events9_a": "Connecte le bloc `mettre le score à 0` à l'évènement `au contact d'un obstacle` pour réussir ce niveau."
         },
         "courseC_flappy_events9_2020": {
-          "courseC_flappy_events9_a": "Connecte le bloc `mettre le score à 0` à l'évènement `au contact d'un obstacle` pour passer ce niveau."
+          "courseC_flappy_events9_a": "Connecte le bloc `mettre le score à 0` à l'évènement `au contact d'un obstacle` pour réussir ce niveau."
         },
         "courseC_harvester_loops1": {
           "courseC_harvester_loops1_a": "Une fois que tu t’es déplacé vers une citrouille, utilise <xml><block type=\"harvester_pumpkin\"/></xml> pour la récolter.",
@@ -5617,7 +5617,7 @@
           "courseD_bee_conditionals4_hintVid1": "Besoin d'aide pour démarrer? Regarde la vidéo!",
           "courseD_bee_conditionals4_a": "Tu peux toujours traiter chaque case comme s'il y avait un nuage par-dessus, même si tu peux voir tout le chemin.",
           "courseD_bee_conditionals4_b": "Utilise une indication « si » à l'intérieur de ta boucle pour voir dans chaque case s'il n'y a pas du nectar.",
-          "courseD_bee_conditionals4_c": "En utilisant le bloc <xml><block type=\"maze_untilBlocked\"/></xml>, tu dois pouvoir avancer et vérifier si une fleur est présente. S'il y a une fleur, qu'est ce que l'abeille doit faire?",
+          "courseD_bee_conditionals4_c": "En utilisant le bloc [blockly block][0], tu dois pouvoir avancer et vérifier si une fleur est présente. S'il y a une fleur, qu'est ce que l'abeille doit faire?",
           "courseD_bee_conditionals4_hintVid2": "Regarde cette vidéo pour t'aider à résoudre ce puzzle."
         },
         "courseD_bee_conditionals4_2018": {
@@ -5646,7 +5646,7 @@
           "courseD_bee_conditionals5_hintVid1": "Besoin d'aide pour démarrer? Regarde la vidéo!",
           "courseD_bee_conditionals5_a": "Imagine chaque côté du rectangle en étant comme un chemin. Configure une boucle imbriquée avec un bloc `répéter` à l’extérieur et une boucle `tant qu'il y a chemin devant` à l'intérieur. De combien de chemins l'abeille a-t-elle besoin si elle doit bourdonner de chaque côté où il y a une fleur ?",
           "courseD_bee_conditionals5_c": "Il y a 3 côtés du rectangle avec des fleurs, donc le code a besoin de `Répéter 3 fois`. À chaque répétition, l'abeille devra continuer sur le chemin, `tant qu’il y a un chemin devant`. Pour continuer le long du chemin, l'abeille devra `avancer`. Tant qu’elle est sur le chemin, l’abeille doit vérifier s'il y a une fleur. `si il y a une fleur`, l'abeille doit `obtenir du nectar`.",
-          "courseD_bee_conditionals5_b": "A l'intérieur du bloc `tant qu’il y a un chemin devant`, tu devras avancer et vérifier qu'il y a une fleur. Comment vérifier qu'il y a une fleur ? Que faire s'il y a une fleur ?",
+          "courseD_bee_conditionals5_b": "A l'intérieur du bloc ` tant qu’il y a un chemin devant `, tu devras avancer et vérifier qu'il y a une fleur. Comment vérifier qu'il y a une fleur ? Que faire s'il y a une fleur ?",
           "courseD_bee_conditionals5_hintVid2": "Regarde cette vidéo pour t'aider à résoudre ce puzzle."
         },
         "courseD_bee_conditionals5_2018": {
@@ -5657,12 +5657,12 @@
           "courseD_bee_conditionals5_hintVid2": "Regarde cette vidéo pour t'aider à résoudre ce puzzle."
         },
         "courseD_bee_conditionals5_2019": {
-          "courseD_bee_conditionals5_a": "Si tu utilises un bloc `si à la fleur`, tu peux résoudre ceci, en utilisant une boucle imbriquée. Écris un programme pour les chemins de gauche et du bas, puis répète le tout deux fois !",
-          "courseD_bee_conditionals5_c": "Pour continuer sur le chemin, l'abeille devra `avancer`. Tout en se déplaçant, l'abeille doit vérifier la présence d'une fleur. `si il y a une fleur, l'abeille doit`recueillir nectar\\`."
+          "courseD_bee_conditionals5_a": "En te servant d'un bloc « si au niveau de la fleur », tu peux résoudre ce casse-tête avec une boucle imbriquée. Écris un programme pour les chemins de gauche et du bas, puis répète le tout deux fois !",
+          "courseD_bee_conditionals5_c": "Pour poursuivre son chemin, l'abeille aura besoin « d'avancer ». Tout en se déplaçant, l'abeille doit vérifier s'il y a une fleur. « S'il y a une fleur »,  l'abeille doit « récolter le nectar »."
         },
         "courseD_bee_conditionals5_2020": {
-          "courseD_bee_conditionals5_a": "Si tu utilises un bloc `si à la fleur`, tu peux résoudre ceci, en utilisant une boucle imbriquée. Écris un programme pour les chemins de gauche et du bas, puis répète le tout deux fois !",
-          "courseD_bee_conditionals5_c": "Pour continuer sur le chemin, l'abeille devra `avancer`. Tout en se déplaçant, l'abeille doit vérifier la présence d'une fleur. `si il y a une fleur, l'abeille doit`recueillir nectar\\`."
+          "courseD_bee_conditionals5_a": "En te servant d'un bloc « si au niveau de la fleur », tu peux résoudre ce casse-tête avec une boucle imbriquée. Écris un programme pour les chemins de gauche et du bas, puis répète le tout deux fois !",
+          "courseD_bee_conditionals5_c": "Pour poursuivre son chemin, l'abeille aura besoin « d'avancer ». Tout en se déplaçant, l'abeille doit vérifier s'il y a une fleur. « S'il y a une fleur »,  l'abeille doit « récolter le nectar »."
         },
         "courseD_bee_conditionals5_copy": {
           "courseD_bee_conditionals5_hintVid1": "Besoin d'aide pour démarrer? Regarde la vidéo!",
@@ -5866,88 +5866,88 @@
           "courseD_bee_nestedLoops7_c": "Imbrique à trois reprises tes blocs dans les autres, comme ceci :\n\n-   répéter 4 fois\n      \\- répéter 3 fois\n        \\- répéter 12 fois\n          \\- recueillir le nectar\n        \\- avancer\n      \\- tourner à droite"
         },
         "courseD_bounce_events10s_2018": {
-          "courseD_bounce_events10s_a": "Tu dois avoir ces deux événements dans ton code :    <xml><block type=\"bounce_whenBallInGoal\" deletable=\"false\"><next><block type=\"bounce_playSound\"><title name=\"SOUND\">swish</title><next><block type=\"bounce_incrementPlayerScore\"></block></next></block></next></block><block type=\"bounce_whenBallMissesPaddle\" deletable=\"false\"><next><block type=\"bounce_playSound\"><title name=\"SOUND\">whistle</title><next><block type=\"bounce_incrementOpponentScore\"></block></next></block></next></block></xml>"
+          "courseD_bounce_events10s_a": "Il va te falloir avoir ces deux événements dans ton code :    \n\n<xml><block type=\"bounce_whenBallInGoal\" deletable=\"false\"><next><block type=\"bounce_playSound\"><title name=\"SOUND\">swish</title><next><block type=\"bounce_incrementPlayerScore\"></block></next></block></next></block><block type=\"bounce_whenBallMissesPaddle\" deletable=\"false\"><next><block type=\"bounce_playSound\"><title name=\"SOUND\">whistle</title><next><block type=\"bounce_incrementOpponentScore\"></block></next></block></next></block></xml>"
         },
         "courseD_bounce_events10s_2019": {
-          "courseD_bounce_events10s_a": "Tu dois avoir ces deux événements dans ton code :    <xml><block type=\"bounce_whenBallInGoal\" deletable=\"false\"><next><block type=\"bounce_playSound\"><title name=\"SOUND\">swish</title><next><block type=\"bounce_incrementPlayerScore\"></block></next></block></next></block><block type=\"bounce_whenBallMissesPaddle\" deletable=\"false\"><next><block type=\"bounce_playSound\"><title name=\"SOUND\">whistle</title><next><block type=\"bounce_incrementOpponentScore\"></block></next></block></next></block></xml>"
+          "courseD_bounce_events10s_a": "Il va te falloir avoir ces deux événements dans ton code :    \n\n<xml><block type=\"bounce_whenBallInGoal\" deletable=\"false\"><next><block type=\"bounce_playSound\"><title name=\"SOUND\">swish</title><next><block type=\"bounce_incrementPlayerScore\"></block></next></block></next></block><block type=\"bounce_whenBallMissesPaddle\" deletable=\"false\"><next><block type=\"bounce_playSound\"><title name=\"SOUND\">whistle</title><next><block type=\"bounce_incrementOpponentScore\"></block></next></block></next></block></xml>"
         },
         "courseD_bounce_events10s_2020": {
-          "courseD_bounce_events10s_a": "Tu dois avoir ces deux événements dans ton code :    <xml><block type=\"bounce_whenBallInGoal\" deletable=\"false\"><next><block type=\"bounce_playSound\"><title name=\"SOUND\">swish</title><next><block type=\"bounce_incrementPlayerScore\"></block></next></block></next></block><block type=\"bounce_whenBallMissesPaddle\" deletable=\"false\"><next><block type=\"bounce_playSound\"><title name=\"SOUND\">whistle</title><next><block type=\"bounce_incrementOpponentScore\"></block></next></block></next></block></xml>"
+          "courseD_bounce_events10s_a": "Il va te falloir avoir ces deux événements dans ton code :    \n\n<xml><block type=\"bounce_whenBallInGoal\" deletable=\"false\"><next><block type=\"bounce_playSound\"><title name=\"SOUND\">swish</title><next><block type=\"bounce_incrementPlayerScore\"></block></next></block></next></block><block type=\"bounce_whenBallMissesPaddle\" deletable=\"false\"><next><block type=\"bounce_playSound\"><title name=\"SOUND\">whistle</title><next><block type=\"bounce_incrementOpponentScore\"></block></next></block></next></block></xml>"
         },
         "courseD_bounce_events11s_2018": {
-          "courseD_bounce_events11s_a": "Tu auras besoin de lancer une balle quand le jeu démarre, quand on frappe le panier, et quand la main manque la balle."
+          "courseD_bounce_events11s_a": "Il va te falloir de lancer un ballon quand le jeu démarre, quand on touche le panier et quand la main rate la balle."
         },
         "courseD_bounce_events11s_2019": {
-          "courseD_bounce_events11s_a": "Tu auras besoin de lancer une balle quand le jeu démarre, quand on frappe le panier, et quand la main manque la balle."
+          "courseD_bounce_events11s_a": "Il va te falloir de lancer un ballon quand le jeu démarre, quand on touche le panier et quand la main rate la balle."
         },
         "courseD_bounce_events11s_2020": {
-          "courseD_bounce_events11s_a": "Tu auras besoin de lancer une balle quand le jeu démarre, quand on frappe le panier, et quand la main manque la balle."
+          "courseD_bounce_events11s_a": "Il va te falloir de lancer un ballon quand le jeu démarre, quand on touche le panier et quand la main rate la balle."
         },
         "courseD_bounce_events12s_2018": {
-          "courseD_bounce_events12s_a": "Tu peux accélérer le ballon ou la main en attachant ces blocs à l'événement `quand court`.",
-          "courseD_bounce_events12s_b": "Essaie de donner la valeur de 2 points à chaque tir, et d'échanger le logo de l'équipe avec celui de ta ville natale !"
+          "courseD_bounce_events12s_a": "Tu peux faire accélérer le ballon ou la main en attachant ces blocs à l'événement `quand l'exécution commence`.",
+          "courseD_bounce_events12s_b": "Essaie de faire valoir 2 points à chaque tir, et de remplacer le logo de l'équipe par celui de ta ville de résidence !"
         },
         "courseD_bounce_events12s_2019": {
-          "courseD_bounce_events12s_a": "Tu peux accélérer le ballon ou la main en attachant ces blocs à l'événement `quand court`.",
-          "courseD_bounce_events12s_b": "Essaie de donner la valeur de 2 points à chaque tir, et d'échanger le logo de l'équipe avec celui de ta ville natale !"
+          "courseD_bounce_events12s_a": "Tu peux faire accélérer le ballon ou la main en attachant ces blocs à l'événement `quand l'exécution commence`.",
+          "courseD_bounce_events12s_b": "Essaie de faire valoir 2 points à chaque tir, et de remplacer le logo de l'équipe par celui de ta ville de résidence !"
         },
         "courseD_bounce_events12s_2020": {
-          "courseD_bounce_events12s_a": "Tu peux accélérer le ballon ou la main en attachant ces blocs à l'événement `quand court`.",
-          "courseD_bounce_events12s_b": "Essaie de donner la valeur de 2 points à chaque tir, et d'échanger le logo de l'équipe avec celui de ta ville natale !"
+          "courseD_bounce_events12s_a": "Tu peux faire accélérer le ballon ou la main en attachant ces blocs à l'événement `quand l'exécution commence`.",
+          "courseD_bounce_events12s_b": "Essaie de faire valoir 2 points à chaque tir, et de remplacer le logo de l'équipe par celui de ta ville de résidence !"
         },
         "courseD_bounce_events1s_2018": {
-          "courseD_bounce_events1s_a": "Tu dois ajouter le bloc `déplacer à gauche` à l'événement `quand la flèche gauche` pour que ce jeu fonctione:    <xml> <block type=\"bounce_whenLeft\" deletable=\"false\" x=\"20\" y=\"20\">    <next>      <block type=\"bounce_moveLeft\"/>    </next>  </block>   </xml>",
-          "courseD_bounce_events1s_b": "N'oublie pas d'appuyer sur « Exécuter » et de mettre la main sur le panier afin de résoudre cette énigme."
+          "courseD_bounce_events1s_a": "Il te faut ajouter le bloc `déplacer vers la gauche` à l'événement `quand flèche gauche` pour faire fonctionner ce jeu :   \n\n <xml> <block type=\"bounce_whenLeft\" deletable=\"false\" x=\"20\" y=\"20\">    <next>      <block type=\"bounce_moveLeft\"/>    </next>  </block>   </xml>",
+          "courseD_bounce_events1s_b": "N'oublie pas d'appuyer sur « Démarrer » et de mettre la main sur le panier pour résoudre ce casse-tête."
         },
         "courseD_bounce_events1s_2019": {
           "courseD_bounce_events1s_a": "Tu dois ajouter le bloc `déplacer à gauche` à l'événement `quand la flèche gauche` pour que ce jeu fonctione:    <xml> <block type=\"bounce_whenLeft\" deletable=\"false\" x=\"20\" y=\"20\">    <next>      <block type=\"bounce_moveLeft\"/>    </next>  </block>   </xml>",
-          "courseD_bounce_events1s_b": "N'oublie pas d'appuyer sur « Exécuter » et de mettre la main sur le panier afin de résoudre cette énigme."
+          "courseD_bounce_events1s_b": "N'oublie pas d'appuyer sur « Démarrer » et de mettre la main sur le panier pour résoudre ce casse-tête."
         },
         "courseD_bounce_events1s_2020": {
-          "courseD_bounce_events1s_a": "Tu dois ajouter le bloc `déplacer à gauche` à l'événement `quand la flèche gauche` pour que ce jeu fonctione:    <xml> <block type=\"bounce_whenLeft\" deletable=\"false\" x=\"20\" y=\"20\">    <next>      <block type=\"bounce_moveLeft\"/>    </next>  </block>   </xml>",
-          "courseD_bounce_events1s_b": "N'oublie pas d'appuyer sur « Exécuter » et de mettre la main sur le panier afin de résoudre cette énigme."
+          "courseD_bounce_events1s_a": "Il te faut ajouter le bloc `déplacer vers la gauche` à l'événement `quand flèche gauche` pour faire fonctionner ce jeu :   \n\n <xml> <block type=\"bounce_whenLeft\" deletable=\"false\" x=\"20\" y=\"20\">    <next>      <block type=\"bounce_moveLeft\"/>    </next>  </block>   </xml>",
+          "courseD_bounce_events1s_b": "N'oublie pas d'appuyer sur « Démarrer » et de mettre la main sur le panier pour résoudre ce casse-tête."
         },
         "courseD_bounce_events2s_2018": {
-          "courseD_bounce_events2s_a": "Tu auras besoin de deux ensembles d'événements `déplacer` codés pour que cela fonctionne:    [Blockly block] [0]"
+          "courseD_bounce_events2s_a": "Tu vas avoir besoin de deux ensembles d'événements `déplacer` codés pour que tout fonctionne bien :   \n\n[blockly block] [0]"
         },
         "courseD_bounce_events2s_2019": {
-          "courseD_bounce_events2s_a": "Tu auras besoin de deux ensembles d'événements `déplacer` codés pour que cela fonctionne:    [Blockly block] [0]"
+          "courseD_bounce_events2s_a": "Tu vas avoir besoin de deux ensembles d'événements `déplacer` codés pour que tout fonctionne bien :   \n\n[blockly block] [0]"
         },
         "courseD_bounce_events2s_2020": {
-          "courseD_bounce_events2s_a": "Tu auras besoin de deux ensembles d'événements `déplacer` codés pour que cela fonctionne:    [Blockly block] [0]"
+          "courseD_bounce_events2s_a": "Tu vas avoir besoin de deux ensembles d'événements `déplacer` codés pour que tout fonctionne bien :   \n\n[blockly block] [0]"
         },
         "courseD_bounce_events5s_2018": {
-          "courseD_bounce_events5s_a": "Tu n'as pas besoin de déplacer la main pour résoudre cette énigme.",
-          "courseD_bounce_events5s_b": "Assure-toi d'avoir ajouté ce code à ton espace de travail :    <xml>  <block type=\"bounce_whenPaddleCollided\" deletable=\"false\"> <next> <block type=\"bounce_bounceBall\"/></next></block></xml>"
+          "courseD_bounce_events5s_a": "Tu n'as pas besoin de déplacer la main pour résoudre ce casse-tête.",
+          "courseD_bounce_events5s_b": "Assure-toi que tu as bien ajouté ce code à ton espace de travail :  \n\n<xml>  <block type=\"bounce_whenPaddleCollided\" deletable=\"false\"> <next> <block type=\"bounce_bounceBall\"/></next></block></xml>"
         },
         "courseD_bounce_events5s_2019": {
-          "courseD_bounce_events5s_a": "Tu n'as pas besoin de déplacer la main pour résoudre cette énigme.",
-          "courseD_bounce_events5s_b": "Assure-toi d'avoir ajouté ce code à ton espace de travail :    <xml>  <block type=\"bounce_whenPaddleCollided\" deletable=\"false\"> <next> <block type=\"bounce_bounceBall\"/></next></block></xml>"
+          "courseD_bounce_events5s_a": "Tu n'as pas besoin de déplacer la main pour résoudre ce casse-tête.",
+          "courseD_bounce_events5s_b": "Assure-toi que tu as bien ajouté ce code à ton espace de travail :  \n\n<xml>  <block type=\"bounce_whenPaddleCollided\" deletable=\"false\"> <next> <block type=\"bounce_bounceBall\"/></next></block></xml>"
         },
         "courseD_bounce_events5s_2020": {
-          "courseD_bounce_events5s_a": "Tu n'as pas besoin de déplacer la main pour résoudre cette énigme.",
-          "courseD_bounce_events5s_b": "Assure-toi d'avoir ajouté ce code à ton espace de travail :    <xml>  <block type=\"bounce_whenPaddleCollided\" deletable=\"false\"> <next> <block type=\"bounce_bounceBall\"/></next></block></xml>"
+          "courseD_bounce_events5s_a": "Tu n'as pas besoin de déplacer la main pour résoudre ce casse-tête.",
+          "courseD_bounce_events5s_b": "Assure-toi que tu as bien ajouté ce code à ton espace de travail :  \n\n<xml>  <block type=\"bounce_whenPaddleCollided\" deletable=\"false\"> <next> <block type=\"bounce_bounceBall\"/></next></block></xml>"
         },
         "courseD_bounce_events6s_2018": {
-          "courseD_bounce_events6s_a": "As-tu un événement qui ressemble à ceci ?    <xml><block type=\"bounce_whenWallCollided\" deletable=\"false\"><next><block type=\"bounce_bounceBall\"></block></next></block></block></xml>",
-          "courseD_bounce_events6s_b": "Si tu as écrit le code correctement, tu n'as pas besoin de déplacer la main pour gagner."
+          "courseD_bounce_events6s_a": "Disposes-tu d'un événement qui ressemble à ceci ?   \n\n<xml><block type=\"bounce_whenWallCollided\" deletable=\"false\"><next><block type=\"bounce_bounceBall\"></block></next></block></block></xml>",
+          "courseD_bounce_events6s_b": "Si tu as bien écrit le code, tu n'auras pas besoin de déplacer la main pour gagner."
         },
         "courseD_bounce_events6s_2019": {
-          "courseD_bounce_events6s_a": "As-tu un événement qui ressemble à ceci ?    <xml><block type=\"bounce_whenWallCollided\" deletable=\"false\"><next><block type=\"bounce_bounceBall\"></block></next></block></block></xml>",
-          "courseD_bounce_events6s_b": "Si tu as écrit le code correctement, tu n'as pas besoin de déplacer la main pour gagner."
+          "courseD_bounce_events6s_a": "Disposes-tu d'un événement qui ressemble à ceci ?   \n\n<xml><block type=\"bounce_whenWallCollided\" deletable=\"false\"><next><block type=\"bounce_bounceBall\"></block></next></block></block></xml>",
+          "courseD_bounce_events6s_b": "Si tu as bien écrit le code, tu n'auras pas besoin de déplacer la main pour gagner."
         },
         "courseD_bounce_events6s_2020": {
-          "courseD_bounce_events6s_a": "As-tu un événement qui ressemble à ceci ?    <xml><block type=\"bounce_whenWallCollided\" deletable=\"false\"><next><block type=\"bounce_bounceBall\"></block></next></block></block></xml>",
-          "courseD_bounce_events6s_b": "Si tu as écrit le code correctement, tu n'as pas besoin de déplacer la main pour gagner."
+          "courseD_bounce_events6s_a": "Disposes-tu d'un événement qui ressemble à ceci ?   \n\n<xml><block type=\"bounce_whenWallCollided\" deletable=\"false\"><next><block type=\"bounce_bounceBall\"></block></next></block></block></xml>",
+          "courseD_bounce_events6s_b": "Si tu as bien écrit le code, tu n'auras pas besoin de déplacer la main pour gagner."
         },
         "courseD_bounce_events7s_2018": {
-          "courseD_bounce_events7s_a": "Tu peux ajouter des sons dans plus d'endroits, si tu en as envie !"
+          "courseD_bounce_events7s_a": "Tu peux ajouter des sons à d'autres moments si tu veux !"
         },
         "courseD_bounce_events7s_2019": {
-          "courseD_bounce_events7s_a": "Tu peux ajouter des sons dans plus d'endroits, si tu en as envie !"
+          "courseD_bounce_events7s_a": "Tu peux ajouter des sons à d'autres moments si tu veux !"
         },
         "courseD_bounce_events7s_2020": {
-          "courseD_bounce_events7s_a": "Tu peux ajouter des sons dans plus d'endroits, si tu en as envie !"
+          "courseD_bounce_events7s_a": "Tu peux ajouter des sons à d'autres moments si tu veux !"
         },
         "courseD_collector_debugging1": {
           "courseD_collector_debugging1_a": "Utilise le bouton \"Etape\" pour voir si tout est bon à la première étape,\n\nEt à la deuxième ?\n\nOù cela va mal ?",
@@ -5959,16 +5959,16 @@
           "courseD_collector_debugging9_b": "Trouve comment tu résoudrais ce problème, puis va étape par étape pour essayer de faire correspondre le code avec ta pensée."
         },
         "courseD_collector_debugging1a_2018": {
-          "courseD_collector_debugging1_a": "Utilise le bouton \"Etape\" pour voir si tout est bon à la première étape,\n\nEt à la deuxième ?\n\nOù cela va mal ?",
-          "courseD_collector_debugging1_c": "Souviens toi d'utiliser le bloc `ramasser` pour ramasser les diamants une fois que tu as bougé vers eux."
+          "courseD_collector_debugging1_a": "Utilise le bouton « Étape » pour voir si tout va bien au niveau de la première étape. \n\nEt qu'en est-il de la deuxième ?\n\nOù est-ce que ça tourne mal ?",
+          "courseD_collector_debugging1_c": "N'oublie pas d'utiliser le bloc `ramasser` pour ramasser le trésor une fois que tu t'es déplacé jusqu'à celui-ci. "
         },
         "courseD_collector_debugging1a_2019": {
-          "courseD_collector_debugging1_a": "Utilise le bouton \"Etape\" pour voir si tout est bon à la première étape,\n\nEt à la deuxième ?\n\nOù cela va mal ?",
-          "courseD_collector_debugging1_c": "Souviens toi d'utiliser le bloc `ramasser` pour ramasser les diamants une fois que tu as bougé vers eux."
+          "courseD_collector_debugging1_a": "Utilise le bouton « Étape » pour voir si tout va bien au niveau de la première étape. \n\nEt qu'en est-il de la deuxième ?\n\nOù est-ce que ça tourne mal ?",
+          "courseD_collector_debugging1_c": "N'oublie pas d'utiliser le bloc `ramasser` pour ramasser le trésor une fois que tu t'es déplacé jusqu'à celui-ci. "
         },
         "courseD_collector_debugging1a_2020": {
-          "courseD_collector_debugging1_a": "Utilise le bouton \"Etape\" pour voir si tout est bon à la première étape,\n\nEt à la deuxième ?\n\nOù cela va mal ?",
-          "courseD_collector_debugging1_c": "Souviens toi d'utiliser le bloc `ramasser` pour ramasser les diamants une fois que tu as bougé vers eux."
+          "courseD_collector_debugging1_a": "Utilise le bouton « Étape » pour voir si tout va bien au niveau de la première étape. \n\nEt qu'en est-il de la deuxième ?\n\nOù est-ce que ça tourne mal ?",
+          "courseD_collector_debugging1_c": "N'oublie pas d'utiliser le bloc `ramasser` pour ramasser le trésor une fois que tu t'es déplacé jusqu'à celui-ci. "
         },
         "courseD_collector_debugging2": {
           "courseD_collector_debugging2_a": "Utilise le bouton \"Etape\" pour voir si tout est bon à la première étape,\n\nEt à la deuxième ?\n\nOù cela va mal ?",
@@ -5976,29 +5976,29 @@
           "courseD_collector_debugging2_c": "Essaie de ramasser les diamants d'un côté du modèle. Est ce que tu peux le répéter pour ramasser les diamants des deux autres côtés?"
         },
         "courseD_collector_debugging2a_2018": {
-          "courseD_collector_debugging2a_a": "Utilise le bouton \"Etape\" pour voir si tout est bon à la première étape,\n\nEt à la deuxième ?\n\nOù cela va mal ?",
-          "courseD_collector_debugging2a_c": "Que se passe-t-il ?   Que doit-il se passer ?   Qu'est-ce que cela signifie ?"
+          "courseD_collector_debugging2a_a": "Utilise le bouton « Étape » pour voir si tout va bien au niveau de la première étape. \n\nEt qu'en est-il de la deuxième ?\n\nOù est-ce que ça tourne mal ?",
+          "courseD_collector_debugging2a_c": "Que se passe-t-il ?   \n\nQue devrait-il se passer ?   \n\nQu'est-ce que cela t'indique ?"
         },
         "courseD_collector_debugging2a_2019": {
-          "courseD_collector_debugging2a_a": "Utilise le bouton \"Etape\" pour voir si tout est bon à la première étape,\n\nEt à la deuxième ?\n\nOù cela va mal ?",
-          "courseD_collector_debugging2a_c": "Que se passe-t-il ?   Que doit-il se passer ?   Qu'est-ce que cela signifie ?"
+          "courseD_collector_debugging2a_a": "Utilise le bouton « Étape » pour voir si tout va bien au niveau de la première étape. \n\nEt qu'en est-il de la deuxième ?\n\nOù est-ce que ça tourne mal ?",
+          "courseD_collector_debugging2a_c": "Que se passe-t-il ?   \n\nQue devrait-il se passer ?   \n\nQu'est-ce que cela t'indique ?"
         },
         "courseD_collector_debugging2a_2020": {
-          "courseD_collector_debugging2a_a": "Utilise le bouton \"Etape\" pour voir si tout est bon à la première étape,\n\nEt à la deuxième ?\n\nOù cela va mal ?",
-          "courseD_collector_debugging2a_c": "Que se passe-t-il ?   Que doit-il se passer ?   Qu'est-ce que cela signifie ?"
+          "courseD_collector_debugging2a_a": "Utilise le bouton « Étape » pour voir si tout va bien au niveau de la première étape. \n\nEt qu'en est-il de la deuxième ?\n\nOù est-ce que ça tourne mal ?",
+          "courseD_collector_debugging2a_c": "Que se passe-t-il ?   \n\nQue devrait-il se passer ?   \n\nQu'est-ce que cela t'indique ?"
         },
         "courseD_collector_debugging3": {
           "courseD_collector_debugging3_a": "Est-ce qu'il y a un endroit où Laurel fais quelque chose qui n'a pas de sens? Que se passe-t-il lorsque tu changes ces blocs ?",
           "courseD_collector_debugging3_b": "Essaie de simplifier le code en utilisant des boucles imbriquées."
         },
         "courseD_collector_debugging3a_2018": {
-          "courseD_collector_debugging3_a": "Est-ce qu'il y a un endroit où Laurel fais quelque chose qui n'a pas de sens? Que se passe-t-il lorsque tu changes ces blocs ?"
+          "courseD_collector_debugging3_a": "Est-ce qu'il y a un endroit où Laurel fait quelque chose qui n'est pas logique ? Que se passe-t-il lorsque tu changes ces blocs ?"
         },
         "courseD_collector_debugging3a_2019": {
-          "courseD_collector_debugging3_a": "Est-ce qu'il y a un endroit où Laurel fais quelque chose qui n'a pas de sens? Que se passe-t-il lorsque tu changes ces blocs ?"
+          "courseD_collector_debugging3_a": "Est-ce qu'il y a un endroit où Laurel fait quelque chose qui n'est pas logique ? Que se passe-t-il lorsque tu changes ces blocs ?"
         },
         "courseD_collector_debugging3a_2020": {
-          "courseD_collector_debugging3_a": "Est-ce qu'il y a un endroit où Laurel fais quelque chose qui n'a pas de sens? Que se passe-t-il lorsque tu changes ces blocs ?"
+          "courseD_collector_debugging3_a": "Est-ce qu'il y a un endroit où Laurel fait quelque chose qui n'est pas logique ? Que se passe-t-il lorsque tu changes ces blocs ?"
         },
         "courseD_collector_debugging4": {
           "courseD_collector_debugging4_a": "Essaie d'utiliser le processus de debuggage plusieurs fois sur une rangée.\n\nQu'est-ce qui cause le premier problème?\n\nUne fois ce problème résolu, qu'est ce qui ne va pas ?",
@@ -6006,48 +6006,48 @@
           "courseD_collector_debugging4_c": "Il manque seulement un bloc dans cette boucle. Peux-tu trouver lequel?"
         },
         "courseD_collector_debugging4a_2018": {
-          "courseD_collector_debugging4_a": "Essaie d'utiliser le processus de debuggage plusieurs fois sur une rangée.\n\nQu'est-ce qui cause le premier problème?\n\nUne fois ce problème résolu, qu'est ce qui ne va pas ?",
-          "courseD_collector_debugging4_b": "Si c'est difficile pour toi de trouver comment faire le motif des marches d'escalier, essaie de le tracer avec ton doigt en répétant les commandes à voix haute.\n\nN'oublie pas de remarquer les directions des tournants!"
+          "courseD_collector_debugging4_a": "Essaie d'utiliser le processus de débogage plusieurs fois à la suite.\n\nQu'est-ce qui cause le premier problème ?\n\nUne fois ce là problème résolu, qu'est-ce qui tourne mal ?",
+          "courseD_collector_debugging4_b": "Si tu as du mal à voir comment faire le schéma récurrent en escalier, essaie de le tracer avec ton doigt en répétant les commandes à voix haute.\n\nN'oublie pas de faire remarquer les directions des tournants !"
         },
         "courseD_collector_debugging4a_2019": {
-          "courseD_collector_debugging4_a": "Essaie d'utiliser le processus de debuggage plusieurs fois sur une rangée.\n\nQu'est-ce qui cause le premier problème?\n\nUne fois ce problème résolu, qu'est ce qui ne va pas ?",
-          "courseD_collector_debugging4_b": "Si c'est difficile pour toi de trouver comment faire le motif des marches d'escalier, essaie de le tracer avec ton doigt en répétant les commandes à voix haute.\n\nN'oublie pas de remarquer les directions des tournants!"
+          "courseD_collector_debugging4_a": "Essaie d'utiliser le processus de débogage plusieurs fois à la suite.\n\nQu'est-ce qui cause le premier problème ?\n\nUne fois ce là problème résolu, qu'est-ce qui tourne mal ?",
+          "courseD_collector_debugging4_b": "Si tu as du mal à voir comment faire le schéma récurrent en escalier, essaie de le tracer avec ton doigt en répétant les commandes à voix haute.\n\nN'oublie pas de faire remarquer les directions des tournants !"
         },
         "courseD_collector_debugging4a_2020": {
-          "courseD_collector_debugging4_a": "Essaie d'utiliser le processus de debuggage plusieurs fois sur une rangée.\n\nQu'est-ce qui cause le premier problème?\n\nUne fois ce problème résolu, qu'est ce qui ne va pas ?",
-          "courseD_collector_debugging4_b": "Si c'est difficile pour toi de trouver comment faire le motif des marches d'escalier, essaie de le tracer avec ton doigt en répétant les commandes à voix haute.\n\nN'oublie pas de remarquer les directions des tournants!"
+          "courseD_collector_debugging4_a": "Essaie d'utiliser le processus de débogage plusieurs fois à la suite.\n\nQu'est-ce qui cause le premier problème ?\n\nUne fois ce là problème résolu, qu'est-ce qui tourne mal ?",
+          "courseD_collector_debugging4_b": "Si tu as du mal à voir comment faire le schéma récurrent en escalier, essaie de le tracer avec ton doigt en répétant les commandes à voix haute.\n\nN'oublie pas de faire remarquer les directions des tournants !"
         },
         "courseD_collector_debugging5": {
           "courseD_collector_debugging5_a": "Commence par regarde la première boucle.\n\nQu'est ce qu'elle fait?\n\nQu'est ce qu'elle est sensée faire?\n\nA quoi cela te fait il penser?",
           "courseD_collector_debugging5_b": "Une fois que tu as la première boucle comme tu la souhaites, que reste-t-il dans ton code ?"
         },
         "courseD_collector_debugging5a_2018": {
-          "courseD_collector_debugging5a_a": "Que fait-il ? Qu'est-il censé faire ? Qu'est-ce que cela signifie ?",
-          "courseD_collector_debugging5a_b": "Une fois que tu as collecté la première ligne de trésors, que reste-t-il, dans ton code ?"
+          "courseD_collector_debugging5a_a": "Que fait-il ?\n\nQu’est-il censé faire ? \n\nQu’est-ce que cela t'indique ? ",
+          "courseD_collector_debugging5a_b": "Une fois que tu as ramassé la première rangée de trésor, que reste-t-il dans ton code ?"
         },
         "courseD_collector_debugging5a_2019": {
-          "courseD_collector_debugging5a_a": "Que fait-il ? Qu'est-il censé faire ? Qu'est-ce que cela signifie ?",
-          "courseD_collector_debugging5a_b": "Une fois que tu as collecté la première ligne de trésors, que reste-t-il, dans ton code ?"
+          "courseD_collector_debugging5a_a": "Que fait-il ?\n\nQu’est-il censé faire ? \n\nQu’est-ce que cela t'indique ? ",
+          "courseD_collector_debugging5a_b": "Une fois que tu as ramassé la première rangée de trésor, que reste-t-il dans ton code ?"
         },
         "courseD_collector_debugging5a_2020": {
-          "courseD_collector_debugging5a_a": "Que fait-il ? Qu'est-il censé faire ? Qu'est-ce que cela signifie ?",
-          "courseD_collector_debugging5a_b": "Une fois que tu as collecté la première ligne de trésors, que reste-t-il, dans ton code ?"
+          "courseD_collector_debugging5a_a": "Que fait-il ?\n\nQu’est-il censé faire ? \n\nQu’est-ce que cela t'indique ? ",
+          "courseD_collector_debugging5a_b": "Une fois que tu as ramassé la première rangée de trésor, que reste-t-il dans ton code ?"
         },
         "courseD_collector_debugging6": {
           "courseD_collector_debugging6_a": "Essaie de faire fonctionner ce code avec le bouton \"Etape\". Est-ce que tout est bon à la première étape?\n\nEt à la seconde?\n\nQuand les choses tournent-elles mal?",
           "courseD_collector_debugging6_b": "Il semble que toutes les bonnes étapes soient la, tu en as juste besoin de plus. Comment peux-tu répéter l'action `ramasser` plusieurs fois?"
         },
         "courseD_collector_debugging6a_2018": {
-          "courseD_collector_debugging6_a": "Essaie de faire fonctionner ce code avec le bouton \"Etape\". Est-ce que tout est bon à la première étape?\n\nEt à la seconde?\n\nQuand les choses tournent-elles mal?",
-          "courseD_collector_debugging6_b": "On dirait que tous les blocs dont tu as besoin se trouvent dans l'espace de travail. Essaie de cliquer sur « recommencer », si les choses deviennent trop confuses."
+          "courseD_collector_debugging6_a": "Essaie de regarder s'exécuter ce code en utilisant le bouton « Étape ». Est-ce que tout va bien lors de la première étape ?\n\nEt lors de la deuxième ?\n\nQuand est-ce que les choses tournent mal ?",
+          "courseD_collector_debugging6_b": "On dirait que tous les blocs dont tu as besoin se trouvent dans l'espace de travail. Essaie en cliquant sur « réinitialiser » tu commences à trop t'embrouiller."
         },
         "courseD_collector_debugging6a_2019": {
-          "courseD_collector_debugging6_a": "Essaie de faire fonctionner ce code avec le bouton \"Etape\". Est-ce que tout est bon à la première étape?\n\nEt à la seconde?\n\nQuand les choses tournent-elles mal?",
-          "courseD_collector_debugging6_b": "On dirait que tous les blocs dont tu as besoin se trouvent dans l'espace de travail. Essaie de cliquer sur « recommencer », si les choses deviennent trop confuses."
+          "courseD_collector_debugging6_a": "Essaie de regarder s'exécuter ce code en utilisant le bouton « Étape ». Est-ce que tout va bien lors de la première étape ?\n\nEt lors de la deuxième ?\n\nQuand est-ce que les choses tournent mal ?",
+          "courseD_collector_debugging6_b": "On dirait que tous les blocs dont tu as besoin se trouvent dans l'espace de travail. Essaie en cliquant sur « réinitialiser » tu commences à trop t'embrouiller."
         },
         "courseD_collector_debugging6a_2020": {
-          "courseD_collector_debugging6_a": "Essaie de faire fonctionner ce code avec le bouton \"Etape\". Est-ce que tout est bon à la première étape?\n\nEt à la seconde?\n\nQuand les choses tournent-elles mal?",
-          "courseD_collector_debugging6_b": "On dirait que tous les blocs dont tu as besoin se trouvent dans l'espace de travail. Essaie de cliquer sur « recommencer », si les choses deviennent trop confuses."
+          "courseD_collector_debugging6_a": "Essaie de regarder s'exécuter ce code en utilisant le bouton « Étape ». Est-ce que tout va bien lors de la première étape ?\n\nEt lors de la deuxième ?\n\nQuand est-ce que les choses tournent mal ?",
+          "courseD_collector_debugging6_b": "On dirait que tous les blocs dont tu as besoin se trouvent dans l'espace de travail. Essaie en cliquant sur « réinitialiser » tu commences à trop t'embrouiller."
         },
         "courseD_collector_debugging8": {
           "courseD_collector_debugging8_a": "Est-ce que tu vois un motif que tu peux simplifier avec une boucle?",
@@ -6485,43 +6485,43 @@
         },
         "courseD_iceage_loops3": {
           "courseB_iceage_loops3_a": "Utilise ce nouveau bloc !\n<xml><block type=\"controls_repeat_simplified_dropdown\">\n\n<title name=\"TIMES\" config=\"3-10\">5</title>\n</block></xml>",
-          "courseB_iceage_loops3_b": "Pour répéter du code, va prendre une boucle ˋrépéter\\` en la glissant, puis mets le bloc que tu veux répéter à l’intérieur."
+          "courseB_iceage_loops3_b": "Pour répéter du code, sors une boucle ˋrépéter\\`, puis mets le bloc que tu veux répéter dedans."
         },
         "courseD_iceage_loops3_2019": {
-          "courseB_iceage_loops3_a": "Utilise ce nouveau bloc !\n <xml><block type=\"controls_repeat_dropdown\">\n    <title name=\"TIMES\" config=\"2-10\">5</title>\n  </block></xml>",
-          "courseB_iceage_loops3_b": "Pour répéter du code, va prendre une boucle ˋrépéter\\` en la glissant, puis mets le bloc que tu veux répéter à l’intérieur."
+          "courseB_iceage_loops3_a": "Utilise ce nouveau bloc !\n\n <xml><block type=\"controls_repeat_dropdown\">\n    <title name=\"TIMES\" config=\"2-10\">5</title>\n  </block></xml>",
+          "courseB_iceage_loops3_b": "Pour répéter du code, sors une boucle ˋrépéter\\`, puis mets le bloc que tu veux répéter dedans."
         },
         "courseD_iceage_loops3_2020": {
-          "courseB_iceage_loops3_a": "Utilise ce nouveau bloc !\n <xml><block type=\"controls_repeat_dropdown\">\n    <title name=\"TIMES\" config=\"2-10\">5</title>\n  </block></xml>",
-          "courseB_iceage_loops3_b": "Pour répéter du code, va prendre une boucle ˋrépéter\\` en la glissant, puis mets le bloc que tu veux répéter à l’intérieur."
+          "courseB_iceage_loops3_a": "Utilise ce nouveau bloc !\n\n <xml><block type=\"controls_repeat_dropdown\">\n    <title name=\"TIMES\" config=\"2-10\">5</title>\n  </block></xml>",
+          "courseB_iceage_loops3_b": "Pour répéter du code, sors une boucle ˋrépéter\\`, puis mets le bloc que tu veux répéter dedans."
         },
         "courseD_iceage_loops4": {
           "courseD_iceage_loops4_a": "N’aie pas peur d’exécuter ton code pour voir ce qui se passe !",
-          "courseD_iceage_loops4_b": "Essaie d’écrire les étapes que Scrat devrait suivre pour arriver au gland. Vois-tu un motif ?",
+          "courseD_iceage_loops4_b": "Essaie d’écrire les étapes qu'il faudrait que Scrat suive pour arriver au gland. Y vois-tu un schéma récurrent ?",
           "courseD_iceage_loops4_c": "Voici le chemin qu'il faudrait que Scrat emprunte."
         },
         "courseD_iceage_loops4_2019": {
           "courseD_iceage_loops4_a": "N’aie pas peur d’exécuter ton code pour voir ce qui se passe !",
-          "courseD_iceage_loops4_b": "Essaie d’écrire les étapes que Scrat devrait suivre pour arriver au gland. Vois-tu un motif ?",
+          "courseD_iceage_loops4_b": "Essaie d’écrire les étapes qu'il faudrait que Scrat suive pour arriver au gland. Y vois-tu un schéma récurrent ?",
           "courseD_iceage_loops4_c": "Voici le chemin qu'il faudrait que Scrat emprunte."
         },
         "courseD_iceage_loops4_2020": {
           "courseD_iceage_loops4_a": "N’aie pas peur d’exécuter ton code pour voir ce qui se passe !",
-          "courseD_iceage_loops4_b": "Essaie d’écrire les étapes que Scrat devrait suivre pour arriver au gland. Vois-tu un motif ?",
+          "courseD_iceage_loops4_b": "Essaie d’écrire les étapes qu'il faudrait que Scrat suive pour arriver au gland. Y vois-tu un schéma récurrent ?",
           "courseD_iceage_loops4_c": "Voici le chemin qu'il faudrait que Scrat emprunte."
         },
         "courseD_iceage_loops6": {
-          "courseD_iceage_loops6_a": "Ton code final devra avoir **trois** blocs 'avancer\\`.",
+          "courseD_iceage_loops6_a": "Ton code final contiendra **trois** blocs 'avancer\\`.",
           "courseD_iceage_loops6_b": "Tu n’as besoin d’ajouter qu’encore **une** boucle !",
           "courseD_iceage_loops6_c": "Ton parcours final devrait ressembler à ceci."
         },
         "courseD_iceage_loops6_2019": {
-          "courseD_iceage_loops6_a": "Ton code final devra avoir **trois** blocs 'avancer\\`.",
+          "courseD_iceage_loops6_a": "Ton code final contiendra **trois** blocs 'avancer\\`.",
           "courseD_iceage_loops6_b": "Tu n’as besoin d’ajouter qu’encore **une** boucle !",
           "courseD_iceage_loops6_c": "Ton parcours final devrait ressembler à ceci."
         },
         "courseD_iceage_loops6_2020": {
-          "courseD_iceage_loops6_a": "Ton code final devra avoir **trois** blocs 'avancer\\`.",
+          "courseD_iceage_loops6_a": "Ton code final contiendra **trois** blocs 'avancer\\`.",
           "courseD_iceage_loops6_b": "Tu n’as besoin d’ajouter qu’encore **une** boucle !",
           "courseD_iceage_loops6_c": "Ton parcours final devrait ressembler à ceci."
         },
@@ -6538,17 +6538,17 @@
           "courseB_iceage_loops7_b": "Voici le chemin que Scrat devrait emprunter pour arriver jusqu’au gland."
         },
         "courseD_iceage_loops8": {
-          "courseD_iceage_loops8_a": "Est-ce que les blocs `tourner` sont corrects ? Que peux-tu changer d'autre ?",
+          "courseD_iceage_loops8_a": "Est-ce que tout va bien avec les blocs `tourner` ? Qu'est-ce que tu peux changer d'autre ?",
           "courseD_iceage_loops8_b": "La première boucle devrait se répéter **3** fois, la deuxième devrait se répéter **5** fois, la troisième boucle devrait se répéter **4** fois et la dernière boucle devrait se répéter **4** fois.",
           "courseD_iceage_loops8_c": "Utilise des boucles pour aider Scrat à emprunter ce chemin."
         },
         "courseD_iceage_loops8_2019": {
-          "courseD_iceage_loops8_a": "Est-ce que les blocs `tourner` sont corrects ? Que peux-tu changer d'autre ?",
+          "courseD_iceage_loops8_a": "Est-ce que tout va bien avec les blocs `tourner` ? Qu'est-ce que tu peux changer d'autre ?",
           "courseD_iceage_loops8_b": "La première boucle devrait se répéter **3** fois, la deuxième devrait se répéter **5** fois, la troisième boucle devrait se répéter **4** fois et la dernière boucle devrait se répéter **4** fois.",
           "courseD_iceage_loops8_c": "Utilise des boucles pour aider Scrat à emprunter ce chemin."
         },
         "courseD_iceage_loops8_2020": {
-          "courseD_iceage_loops8_a": "Est-ce que les blocs `tourner` sont corrects ? Que peux-tu changer d'autre ?",
+          "courseD_iceage_loops8_a": "Est-ce que tout va bien avec les blocs `tourner` ? Qu'est-ce que tu peux changer d'autre ?",
           "courseD_iceage_loops8_b": "La première boucle devrait se répéter **3** fois, la deuxième devrait se répéter **5** fois, la troisième boucle devrait se répéter **4** fois et la dernière boucle devrait se répéter **4** fois.",
           "courseD_iceage_loops8_c": "Utilise des boucles pour aider Scrat à emprunter ce chemin."
         },
@@ -6568,21 +6568,21 @@
           "courseD_iceage_loops9_c": "Il faut que Scrat emprunte ce chemin pour obtenir le gland."
         },
         "courseD_maze_intro4_2019": {
-          "courseC_maze_programming4_a": "Tu peux tourner à gauche ou à droite du point de vue de l'oiseau. Si tu te diriges à droite, tourner à droite te fera aller vers le bas.",
-          "courseC_maze_programming4_b": "Pour suive le chemin, avance et tourne dans un sens, puis avance à nouveau et tourne dans le sens opposé. Avance une fois de plus pour atteindre le cochon."
+          "courseC_maze_programming4_a": "Tu peux tourner à gauche ou à droite du point de vue de l'oiseau. S'il regarde vers la droite, le fait de tourner à droite se diriger vers le bas.",
+          "courseC_maze_programming4_b": "Pour suivre le chemin, avance et tourne dans un sens, puis avance à nouveau et tourne dans le sens contraire. Avance une fois de plus pour atteindre le cochon."
         },
         "courseD_maze_intro4_2020": {
-          "courseC_maze_programming4_a": "Tu peux tourner à gauche ou à droite du point de vue de l'oiseau. Si tu te diriges à droite, tourner à droite te fera aller vers le bas.",
-          "courseC_maze_programming4_b": "Pour suive le chemin, avance et tourne dans un sens, puis avance à nouveau et tourne dans le sens opposé. Avance une fois de plus pour atteindre le cochon."
+          "courseC_maze_programming4_a": "Tu peux tourner à gauche ou à droite du point de vue de l'oiseau. S'il regarde vers la droite, le fait de tourner à droite se diriger vers le bas.",
+          "courseC_maze_programming4_b": "Pour suivre le chemin, avance et tourne dans un sens, puis avance à nouveau et tourne dans le sens contraire. Avance une fois de plus pour atteindre le cochon."
         },
         "courseD_maze_intro5a_2019": {
           "courseC_maze_programming5_a": "Essaie d'utiliser le bouton « Étape » pour exécuter ton code ligne par ligne. Peux-tu deviner ce qu'il faut faire à chaque étape ?",
-          "courseC_maze_programming5_b": "Souviens-toi que les virages sont du point de vue de Red.",
+          "courseC_maze_programming5_b": "N'oublie pas que l'on tourne du point de vue de Red.",
           "courseC_maze_programming5_c": "N'aie pas peur de faire des erreurs ! Essaie d'ajouter des blocs et d'exécuter ton code, pour voir ce qui se passe, même si tu ne penses pas avoir encore résolu le casse-tête."
         },
         "courseD_maze_intro5a_2020": {
           "courseC_maze_programming5_a": "Essaie d'utiliser le bouton « Étape » pour exécuter ton code ligne par ligne. Peux-tu deviner ce qu'il faut faire à chaque étape ?",
-          "courseC_maze_programming5_b": "Souviens-toi que les virages sont du point de vue de Red.",
+          "courseC_maze_programming5_b": "N'oublie pas que l'on tourne du point de vue de Red.",
           "courseC_maze_programming5_c": "N'aie pas peur de faire des erreurs ! Essaie d'ajouter des blocs et d'exécuter ton code, pour voir ce qui se passe, même si tu ne penses pas avoir encore résolu le casse-tête."
         },
         "courseD_maze_nestedLoops3": {
@@ -6662,36 +6662,36 @@
           "courseD_maze_nestedLoops6_c": "Il va te falloir utiliser deux ensembles de boucles imbriquées « répéter » pour résoudre ce casse-tête."
         },
         "courseD_maze_ramp1": {
-          "courseC_maze_programming1_a": "Si l'oiseau ne va pas ver le cochon, assure toi que les 3 blocs sont bien assemblés ensemble, puis clique à nouveau sur \"Démarrer\".",
+          "courseC_maze_programming1_a": "Si l'oiseau n'arrive pas jusqu'au cochon, assure-toi que les 3 blocs sont bien reliés ensemble, puis clique à nouveau sur « Démarrer ».",
           "courseC_maze_programming1_b": "N'aie pas peur de faire des erreurs ! Essaie d'ajouter des blocs et d'exécuter ton code, pour voir ce qui se passe, même si tu ne penses pas avoir encore résolu le casse-tête."
         },
         "courseD_maze_ramp1_2018": {
-          "courseC_maze_programming1_a": "Si l'oiseau ne va pas ver le cochon, assure toi que les 3 blocs sont bien assemblés ensemble, puis clique à nouveau sur \"Démarrer\".",
+          "courseC_maze_programming1_a": "Si l'oiseau n'arrive pas jusqu'au cochon, assure-toi que les 3 blocs sont bien reliés ensemble, puis clique à nouveau sur « Démarrer ».",
           "courseC_maze_programming1_b": "N'aie pas peur de faire des erreurs ! Essaie d'ajouter des blocs et d'exécuter ton code, pour voir ce qui se passe, même si tu ne penses pas avoir encore résolu le casse-tête."
         },
         "courseD_maze_ramp1_2019": {
-          "courseC_maze_programming1_a": "Si l'oiseau ne va pas ver le cochon, assure toi que les 3 blocs sont bien assemblés ensemble, puis clique à nouveau sur \"Démarrer\".",
+          "courseC_maze_programming1_a": "Si l'oiseau n'arrive pas jusqu'au cochon, assure-toi que les 3 blocs sont bien reliés ensemble, puis clique à nouveau sur « Démarrer ».",
           "courseC_maze_programming1_b": "N'aie pas peur de faire des erreurs ! Essaie d'ajouter des blocs et d'exécuter ton code, pour voir ce qui se passe, même si tu ne penses pas avoir encore résolu le casse-tête."
         },
         "courseD_maze_ramp1_2020": {
-          "courseC_maze_programming1_a": "Si l'oiseau ne va pas ver le cochon, assure toi que les 3 blocs sont bien assemblés ensemble, puis clique à nouveau sur \"Démarrer\".",
+          "courseC_maze_programming1_a": "Si l'oiseau n'arrive pas jusqu'au cochon, assure-toi que les 3 blocs sont bien reliés ensemble, puis clique à nouveau sur « Démarrer ».",
           "courseC_maze_programming1_b": "N'aie pas peur de faire des erreurs ! Essaie d'ajouter des blocs et d'exécuter ton code, pour voir ce qui se passe, même si tu ne penses pas avoir encore résolu le casse-tête."
         },
         "courseD_maze_ramp2": {
-          "courseC_maze_programming2_a": "Pour utiliser un bloc ˋavancerˋ, fais-le glisser depuis la barre d'outils jusqu'à l'espace de travail et connecte-le au bloc ˋquand exécutéˋ.",
-          "courseC_maze_programming2_b": "Assure toi que les 3 blocs sont attachés et aussi au bloc `quand l'exécution commence`."
+          "courseC_maze_programming2_a": "Pour utiliser un bloc ˋavancerˋ, fais-le glisser de la boite à outils jusqu'à l'espace de travail et connecte-le au bloc ˋquand l'exécution commenceˋ.",
+          "courseC_maze_programming2_b": "Assure-toi que les 3 blocs sont bien connectés entre eux et rattachés au bloc `quand l'exécution commence`."
         },
         "courseD_maze_ramp2_2018": {
-          "courseC_maze_programming2_a": "Pour utiliser un bloc ˋavancerˋ, fais-le glisser depuis la barre d'outils jusqu'à l'espace de travail et connecte-le au bloc ˋquand exécutéˋ.",
-          "courseC_maze_programming2_b": "Assure toi que les 3 blocs sont attachés et aussi au bloc `quand l'exécution commence`."
+          "courseC_maze_programming2_a": "Pour utiliser un bloc ˋavancerˋ, fais-le glisser de la boite à outils jusqu'à l'espace de travail et connecte-le au bloc ˋquand l'exécution commenceˋ.",
+          "courseC_maze_programming2_b": "Assure-toi que les 3 blocs sont bien connectés entre eux et rattachés au bloc `quand l'exécution commence`."
         },
         "courseD_maze_ramp2_2019": {
-          "courseC_maze_programming2_a": "Pour utiliser un bloc ˋavancerˋ, fais-le glisser depuis la barre d'outils jusqu'à l'espace de travail et connecte-le au bloc ˋquand exécutéˋ.",
-          "courseC_maze_programming2_b": "Assure toi que les 3 blocs sont attachés et aussi au bloc `quand l'exécution commence`."
+          "courseC_maze_programming2_a": "Pour utiliser un bloc ˋavancerˋ, fais-le glisser de la boite à outils jusqu'à l'espace de travail et connecte-le au bloc ˋquand l'exécution commenceˋ.",
+          "courseC_maze_programming2_b": "Assure-toi que les 3 blocs sont bien connectés entre eux et rattachés au bloc `quand l'exécution commence`."
         },
         "courseD_maze_ramp2_2020": {
-          "courseC_maze_programming2_a": "Pour utiliser un bloc ˋavancerˋ, fais-le glisser depuis la barre d'outils jusqu'à l'espace de travail et connecte-le au bloc ˋquand exécutéˋ.",
-          "courseC_maze_programming2_b": "Assure toi que les 3 blocs sont attachés et aussi au bloc `quand l'exécution commence`."
+          "courseC_maze_programming2_a": "Pour utiliser un bloc ˋavancerˋ, fais-le glisser de la boite à outils jusqu'à l'espace de travail et connecte-le au bloc ˋquand l'exécution commenceˋ.",
+          "courseC_maze_programming2_b": "Assure-toi que les 3 blocs sont bien connectés entre eux et rattachés au bloc `quand l'exécution commence`."
         },
         "courseD_maze_ramp3": {
           "courseC_maze_programming3_a": "![](https://images.code.org/afddde0e99d5d270c658de0c03dd6e2c-image-1481174000309.gif) \n\nPour supprimer un bloc du milieu de ton code, fais glisser tous les blocs situés en-dessous vers la droite, et laisse-les de côté, dans l'espace de travail, pendant quelques instants.  \n\nClique sur le bloc que tu souhaites supprimer, et fais-le glisser vers la boîte à outils. \n\nPour finir, remets tes autres blocs bien à leur place."
@@ -6715,40 +6715,40 @@
         },
         "courseD_maze_ramp4_2019": {
           "courseC_maze_programming4_a": "Tu peux tourner à droite ou à gauche du point de vue de Scrat. Si tu es orienté à droite, tourner à droite te fera aller vers le bas.",
-          "courseC_maze_programming4_b": "Pour suive le chemin, avance et tourne dans un sens, puis avance à nouveau et tourne dans le sens opposé. Avance une fois de plus pour atteindre le cochon."
+          "courseC_maze_programming4_b": "Pour suivre le chemin, avance et tourne dans un sens, puis avance à nouveau et tourne dans le sens contraire. Avance une fois de plus pour atteindre le cochon."
         },
         "courseD_maze_ramp4_2020": {
           "courseC_maze_programming4_a": "Tu peux tourner à droite ou à gauche du point de vue de Scrat. Si tu es orienté à droite, tourner à droite te fera aller vers le bas.",
-          "courseC_maze_programming4_b": "Pour suive le chemin, avance et tourne dans un sens, puis avance à nouveau et tourne dans le sens opposé. Avance une fois de plus pour atteindre le cochon."
+          "courseC_maze_programming4_b": "Pour suivre le chemin, avance et tourne dans un sens, puis avance à nouveau et tourne dans le sens contraire. Avance une fois de plus pour atteindre le cochon."
         },
         "courseD_maze_ramp5": {
           "courseC_maze_programming5_a": "Essaie d'utiliser le bouton « Étape » pour exécuter ton code ligne par ligne. Peux-tu deviner ce qu'il faut faire à chaque étape ?",
-          "courseC_maze_programming5_b": "Souviens toi que tourner se fait du point de vue de l'oiseau.",
+          "courseC_maze_programming5_b": "N'oublie pas que l'on tourne du point de vue de l'oiseau.",
           "courseC_maze_programming5_c": "N'aie pas peur de faire des erreurs ! Essaie d'ajouter des blocs et d'exécuter ton code, pour voir ce qui se passe, même si tu ne penses pas avoir encore résolu le casse-tête."
         },
         "courseD_maze_ramp5_2018": {
           "courseC_maze_programming5_a": "Essaie d'utiliser le bouton « Étape » pour exécuter ton code ligne par ligne. Peux-tu deviner ce qu'il faut faire à chaque étape ?",
-          "courseC_maze_programming5_b": "Souviens toi que tourner se fait du point de vue de l'oiseau.",
+          "courseC_maze_programming5_b": "N'oublie pas que l'on tourne du point de vue de l'oiseau.",
           "courseC_maze_programming5_c": "N'aie pas peur de faire des erreurs ! Essaie d'ajouter des blocs et d'exécuter ton code, pour voir ce qui se passe, même si tu ne penses pas avoir encore résolu le casse-tête."
         },
         "courseD_maze_ramp5_2019": {
           "courseC_maze_programming5_a": "Essaie d'utiliser le bouton « Étape » pour exécuter ton code ligne par ligne. Peux-tu deviner ce qu'il faut faire à chaque étape ?",
-          "courseC_maze_programming5_b": "Souviens toi que tourner se fait du point de vue de l'oiseau.",
+          "courseC_maze_programming5_b": "N'oublie pas que l'on tourne du point de vue de l'oiseau.",
           "courseC_maze_programming5_c": "N'aie pas peur de faire des erreurs ! Essaie d'ajouter des blocs et d'exécuter ton code, pour voir ce qui se passe, même si tu ne penses pas avoir encore résolu le casse-tête."
         },
         "courseD_maze_ramp5_2020": {
           "courseC_maze_programming5_a": "Essaie d'utiliser le bouton « Étape » pour exécuter ton code ligne par ligne. Peux-tu deviner ce qu'il faut faire à chaque étape ?",
-          "courseC_maze_programming5_b": "Souviens toi que tourner se fait du point de vue de l'oiseau.",
+          "courseC_maze_programming5_b": "N'oublie pas que l'on tourne du point de vue de l'oiseau.",
           "courseC_maze_programming5_c": "N'aie pas peur de faire des erreurs ! Essaie d'ajouter des blocs et d'exécuter ton code, pour voir ce qui se passe, même si tu ne penses pas avoir encore résolu le casse-tête."
         },
         "courseD_maze_ramp5a": {
           "courseC_maze_programming5_a": "Essaie d'utiliser le bouton « Étape » pour exécuter ton code ligne par ligne. Peux-tu deviner ce qu'il faut faire à chaque étape ?",
-          "courseC_maze_programming5_b": "Souviens toi que tourner se fait du point de vue de l'oiseau.",
+          "courseC_maze_programming5_b": "N'oublie pas que l'on tourne du point de vue de l'oiseau.",
           "courseC_maze_programming5_c": "N'aie pas peur de faire des erreurs ! Essaie d'ajouter des blocs et d'exécuter ton code, pour voir ce qui se passe, même si tu ne penses pas avoir encore résolu le casse-tête."
         },
         "courseD_maze_ramp5a_2018": {
           "courseC_maze_programming5_a": "Essaie d'utiliser le bouton « Étape » pour exécuter ton code ligne par ligne. Peux-tu deviner ce qu'il faut faire à chaque étape ?",
-          "courseC_maze_programming5_b": "Souviens toi que tourner se fait du point de vue de l'oiseau.",
+          "courseC_maze_programming5_b": "N'oublie pas que l'on tourne du point de vue de l'oiseau.",
           "courseC_maze_programming5_c": "N'aie pas peur de faire des erreurs ! Essaie d'ajouter des blocs et d'exécuter ton code, pour voir ce qui se passe, même si tu ne penses pas avoir encore résolu le casse-tête."
         },
         "courseD_maze_ramp5a_2019": {
@@ -6763,22 +6763,22 @@
         },
         "courseD_maze_ramp5b": {
           "courseC_maze_programming5_a": "Essaie d'utiliser le bouton « Étape » pour exécuter ton code ligne par ligne. Peux-tu deviner ce qu'il faut faire à chaque étape ?",
-          "courseC_maze_programming5_b": "Souviens toi que tourner se fait du point de vue de l'oiseau.",
+          "courseC_maze_programming5_b": "N'oublie pas que l'on tourne du point de vue de l'oiseau.",
           "courseC_maze_programming5_c": "N'aie pas peur de faire des erreurs ! Essaie d'ajouter des blocs et d'exécuter ton code, pour voir ce qui se passe, même si tu ne penses pas avoir encore résolu le casse-tête."
         },
         "courseD_maze_ramp5b_2018": {
           "courseC_maze_programming5_a": "Essaie d'utiliser le bouton « Étape » pour exécuter ton code ligne par ligne. Peux-tu deviner ce qu'il faut faire à chaque étape ?",
-          "courseC_maze_programming5_b": "Souviens toi que tourner se fait du point de vue de l'oiseau.",
+          "courseC_maze_programming5_b": "N'oublie pas que l'on tourne du point de vue de l'oiseau.",
           "courseC_maze_programming5_c": "N'aie pas peur de faire des erreurs ! Essaie d'ajouter des blocs et d'exécuter ton code, pour voir ce qui se passe, même si tu ne penses pas avoir encore résolu le casse-tête."
         },
         "courseD_maze_ramp5b_2019": {
           "courseC_maze_programming5_a": "Essaie d'utiliser le bouton « Étape » pour exécuter ton code ligne par ligne. Peux-tu deviner ce qu'il faut faire à chaque étape ?",
-          "courseC_maze_programming5_b": "Souviens toi que tourner se fait du point de vue de l'oiseau.",
+          "courseC_maze_programming5_b": "N'oublie pas que l'on tourne du point de vue de l'oiseau.",
           "courseC_maze_programming5_c": "N'aie pas peur de faire des erreurs ! Essaie d'ajouter des blocs et d'exécuter ton code, pour voir ce qui se passe, même si tu ne penses pas avoir encore résolu le casse-tête."
         },
         "courseD_maze_ramp5b_2020": {
           "courseC_maze_programming5_a": "Essaie d'utiliser le bouton « Étape » pour exécuter ton code ligne par ligne. Peux-tu deviner ce qu'il faut faire à chaque étape ?",
-          "courseC_maze_programming5_b": "Souviens toi que tourner se fait du point de vue de l'oiseau.",
+          "courseC_maze_programming5_b": "N'oublie pas que l'on tourne du point de vue de l'oiseau.",
           "courseC_maze_programming5_c": "N'aie pas peur de faire des erreurs ! Essaie d'ajouter des blocs et d'exécuter ton code, pour voir ce qui se passe, même si tu ne penses pas avoir encore résolu le casse-tête."
         },
         "courseD_maze_ramp6": {
@@ -6980,7 +6980,7 @@
           "courseC_maze_programming1_b": "N'aie pas peur de faire des erreurs ! Essaie d'ajouter des blocs et d'exécuter ton code, pour voir ce qui se passe, même si tu ne penses pas avoir encore résolu le casse-tête."
         },
         "courseD_scrat_ramp2": {
-          "courseC_maze_programming2_a": "Pour utiliser un bloc ˋavancerˋ, fais-le glisser depuis la barre d'outils jusqu'à l'espace de travail et connecte-le au bloc ˋquand exécutéˋ.",
+          "courseC_maze_programming2_a": "Pour utiliser un bloc ˋavancerˋ, fais-le glisser de la boite à outils jusqu'à l'espace de travail et connecte-le au bloc ˋquand l'exécution commenceˋ.",
           "courseC_maze_programming2_b": "Assure-toi que les trois blocs `avancer` soient connectés au bloc ˋquand exécuté\\`."
         },
         "courseD_scrat_ramp3": {
@@ -6989,7 +6989,7 @@
         },
         "courseD_scrat_ramp4": {
           "courseC_maze_programming4_a": "Tu peux tourner à droite ou à gauche du point de vue de Scrat. Si tu es orienté à droite, tourner à droite te fera aller vers le bas.",
-          "courseC_maze_programming4_b": "Pour suive le chemin, avance et tourne dans un sens, puis avance à nouveau et tourne dans le sens opposé. Avance une fois de plus pour atteindre le cochon.",
+          "courseC_maze_programming4_b": "Pour suivre le chemin, avance et tourne dans un sens, puis avance à nouveau et tourne dans le sens contraire. Avance une fois de plus pour atteindre le cochon.",
           "courseC_maze_programming4_c": "N'aie pas peur de faire des erreurs ! Essaie d'ajouter des blocs et d'exécuter ton code, pour voir ce qui se passe, même si tu ne penses pas avoir encore résolu le casse-tête."
         },
         "courseD_scrat_ramp5": {
@@ -8779,7 +8779,7 @@
         "CourseD_Dance_2020_09_2021": {
           "validation": "**Comment est-ce que je réussis ce niveau ?**\n\n-   Appuie simplement sur le bouton \"Terminer\" !",
           "repeat_every_ideas": "**Besoin d'idées ?**\n\n-   Change à plusieurs reprises la taille d'un danseur pour le faire grandir.\n-   Change à plusieurs reprises l'angle d'un danseur pour le faire tourner.\n\n_Tu peux aussi utiliser des nombres négatifs pour créer un effet opposé !_",
-          "next_previous": "**Défi facultatif**\n\n-   Tu peux également utiliser ce nouveau bloc événement pour passer en boucle une série de mouvements de danse en définissant le mouvement sur « (Aléatoire) », « (Suivant)» ou « (Précédent) ».\n    <xml><block type=\"Dancelab_changeMoveEachLR\">\n    <title name=\"GROUP\" config=\"sprites, &quot;BEAR&quot;, &quot;CAT&quot;, &quot;DOG&quot;, &quot;DUCK&quot;, &quot;FROG&quot;, &quot;PINEAPPLE&quot;, &quot;ROBOT&quot;, &quot;SHARK&quot;, &quot;UNICORN&quot;\">???</title>\n    <title name=\"MOVE\">\"rand\"</title>\n    <title name=\"DIR\">-1</title>\n    </block></xml>"
+          "next_previous": "**Défi facultatif**\n\n-   Tu peux également utiliser ce nouveau bloc événement pour passer en boucle une série de mouvements de danse en définissant le mouvement sur « (Aléatoire) », « (Suivant) » ou « (Précédent) ».\n    <xml><block type=\"Dancelab_changeMoveEachLR\">\n    <title name=\"GROUP\" config=\"sprites, &quot;BEAR&quot;, &quot;CAT&quot;, &quot;DOG&quot;, &quot;DUCK&quot;, &quot;FROG&quot;, &quot;PINEAPPLE&quot;, &quot;ROBOT&quot;, &quot;SHARK&quot;, &quot;UNICORN&quot;\">???</title>\n    <title name=\"MOVE\">\"rand\"</title>\n    <title name=\"DIR\">-1</title>\n    </block></xml>"
         },
         "CourseD_Dance_2020_bonus1_2021": {
           "alternate": "Le bloc « alterner » est dans la catégorie « Danseurs »."
@@ -9480,13 +9480,13 @@
           "courseB_starWars_prog9_c": "Est-ce qu'une boucle « repeat » <xml><block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">3</title>\n  </block></xml> pourrait t'aider ici ?"
         },
         "courseC19_playLab_EOC1_2021": {
-          "courseE_playLab_scaffold1_a": "Le bloc `affecter à l'acteur 1 une image de ???` peut-être utilisé pour ajouter un acteur à cette étape.",
-          "courseE_playLab_scaffold1_b": "Mets le bloc `Affecter l'acteur` sous `quand l'exécution commence` pour que ton acteur apparaisse au début du jeu.",
-          "courseE_playLab_scaffold1_c": "Utilise `définir un arrière plan ???` pour choisir l'arrière plan de ta scène."
+          "courseE_playLab_scaffold1_a": "On peut utiliser le bloc `donner à l'acteur 1 une image de ???` pour mettre en scène un acteur.",
+          "courseE_playLab_scaffold1_b": "Mets le bloc `donner à l'acteur` sous `quand l'exécution commence` pour que ton acteur apparaisse au début du jeu.",
+          "courseE_playLab_scaffold1_c": "Utilise `définir un arrière-plan ???` pour choisir l'arrière plan de ta scène."
         },
         "courseC19_playLab_EOC2_2021": {
           "courseE_playLab_scaffold1_b": "Tu devrais avoir 4 blocs d'évènements `Lorsque flêche`, avec une direction pour bouger sous chacun d'eux.",
-          "courseE_playLab_scaffold1_c": "Lorsque tu as terminé, tu devrais pouvoir bouger ton héros avec les flèches!",
+          "courseE_playLab_scaffold1_c": "Une fois que tu as terminé, tu devrais pouvoir déplacer ton héros avec les touches fléchées !",
           "playlab_up": "Pour déplacer ton acteur vers le haut, tu peux connecter ces blocs : \n<xml>\n  <block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">up</title>\n    <next>\n      <block type=\"studio_move\">\n        <title name=\"SPRITE\">0</title>\n        <title name=\"DIR\">1</title>\n      </block>\n    </next>\n  </block>\n  </xml>",
           "playlab_down": "Pour déplacer ton acteur vers le bas, tu peux connecter ces blocs : \n<xml>\n  <block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">down</title>\n    <next>\n      <block type=\"studio_move\">\n        <title name=\"SPRITE\">0</title>\n        <title name=\"DIR\">4</title>\n      </block>\n    </next>\n  </block>\n  </xml>",
           "playlab_left": "Pour déplacer ton acteur vers la gauche, tu peux connecter ces blocs : \n<xml>\n  <block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">left</title>\n    <next>\n      <block type=\"studio_move\">\n        <title name=\"SPRITE\">0</title>\n        <title name=\"DIR\">8</title>\n      </block>\n    </next>\n  </block>\n  </xml>",
@@ -9496,54 +9496,54 @@
           "courseE_playLab_scaffold4_a": "Utiliser `marquer 1 point` pour ajouter un point, et `enlever 1 point` pour en retirer un."
         },
         "courseC_PlayLab_events1_2021": {
-          "courseC_PlayLab_events1_a": "Attache ce bloc au bloc ˋquand l’exécution commence\\` :\n\n<xml>\n  <block type=\"studio_saySpriteChoices\">\n    <title name=\"SPRITE\">0</title>\n    <title name=\"VALUE\">Hi there.</title>\n  </block>\n</xml>"
+          "courseC_PlayLab_events1_a": "Attache ce bloc au bloc ˋquand l’exécution commence\\` :\n\n<xml>\n  <block type=\"studio_saySpriteChoices\">\n    <title name=\"SPRITE\">0</title>\n    <title name=\"VALUE\">Hi there.</title>\n  </block>\n</xml>"
         },
         "courseC_PlayLab_events2_2021": {
-          "courseC_PlayLab_events2_a": "Attache deux de ces blocs au bloc ˋquand l’exécution commence\\` :\n\n<xml>\n  <block type=\"studio_saySpriteChoices\">\n    <title name=\"SPRITE\">0</title>\n    <title name=\"VALUE\">Hi there.</title>\n  </block>\n</xml>",
-          "courseC_PlayLab_events2_b": "Utilise le menu déroulant du deuxième bloc ˋl’acteur \\_\\_ dit\\` pour modifier quel acteur parle."
+          "courseC_PlayLab_events2_a": "Attache deux de ces blocs au bloc ˋquand l’exécution commence\\` :\n\n<xml>\n  <block type=\"studio_saySpriteChoices\">\n    <title name=\"SPRITE\">0</title>\n    <title name=\"VALUE\">Hi there.</title>\n  </block>\n</xml>",
+          "courseC_PlayLab_events2_b": "Utilise le menu déroulant du deuxième bloc ˋl’acteur \\_\\_ dit\\` pour changer l'acteur qui parle."
         },
         "courseC_PlayLab_events3_2021": {
-          "courseC_PlayLab_events3_a": "Tu dois seulement déplacer Jorge d’environ 25 pixels vers la droite pour résoudre ce puzzle.",
-          "courseC_PlayLab_events3_b": "Y a-t-il un bloc dans la boîte à outils qui semble pouvoir déplacer un acteur ?",
-          "courseC_PlayLab_events3_c": "Attache ce bloc au bloc ˋquand l’exécution commence\\` :\n\n<xml>\n<block type=\"studio_moveDistance\">\n    <title name=\"SPRITE\">0</title>\n    <title name=\"DIR\">2</title>\n    <title name=\"DISTANCE\">25</title>\n  </block>\n</xml>"
+          "courseC_PlayLab_events3_a": "Tu n'as besoin de déplacer Jorge que d’environ 25 pixels vers la droite pour résoudre ce casse-tête.",
+          "courseC_PlayLab_events3_b": "Y a-t-il un bloc dans la boîte à outils qui semble pouvoir déplacer un acteur ?",
+          "courseC_PlayLab_events3_c": "Attache ce bloc au bloc ˋquand l’exécution commence\\` :\n\n<xml>\n<block type=\"studio_moveDistance\">\n    <title name=\"SPRITE\">0</title>\n    <title name=\"DIR\">2</title>\n    <title name=\"DISTANCE\">25</title>\n  </block>\n</xml>"
         },
         "courseC_PlayLab_events4_2021": {
-          "courseC_PlayLab_events4_b": "Quand on clique sur « Exécuter », Jorge doit se déplacer de **100** pixels vers la droite pour atteindre Olive le chat.",
-          "courseC_PlayLab_events4_a": "Tu devras connecter un bloc ˋl’acteur \\_\\_ dit`à l’événement ˋlorsque l’acteur touche` pour résoudre ce casse-tête."
+          "courseC_PlayLab_events4_b": "Quand on clique sur « Démarrer », il faut que Jorge se déplace de **100** pixels vers la droite pour atteindre Olive la chatte.",
+          "courseC_PlayLab_events4_a": "Il va te falloir connecter un bloc ˋl’acteur \\_\\_ dit`à l’événement ˋlorsque l’acteur touche` pour résoudre ce casse-tête."
         },
         "courseC_PlayLab_events5_2021": {
-          "courseC_PlayLab_events5_a": "Tu devras cliquer sur le menu déroulant dans le bloc ˋl’acteur dit\\` pour trouver le texte « Quoi de neuf ? »",
-          "courseC_PlayLab_events5_b": "Clique sur Octavia quand tu exécutes ton programme pour vérifier qu’il fonctionne !"
+          "courseC_PlayLab_events5_a": "Il va te falloir cliquer sur le menu déroulant dans le bloc ˋl’acteur dit\\` pour trouver le texte « Quoi de neuf ? ». ",
+          "courseC_PlayLab_events5_b": "Clique sur Octavia quand tu exécutes ton programme pour vérifier qu’il fonctionne bien !"
         },
         "courseC_PlayLab_events6_2021": {
-          "courseC_PlayLab_events6_a": "Chaque bloc vert `flèche quand` devrait contenir une action.",
-          "courseC_PlayLab_events6_b": "Utilise le menu déroulant du bloc ˋdéplacer l’acteur 1\\` pour modifier la direction dans laquelle Waddles se déplace.",
-          "courseC_PlayLab_events6_c": "Quand tu auras fini, tu devrais pouvoir déplacer Waddles en utilisant les touches directionnelles de ton clavier !"
+          "courseC_PlayLab_events6_a": "Chaque bloc vert `quand flèche` devrait avoir une action qui s'y rattache en-dessous de lui.",
+          "courseC_PlayLab_events6_b": "Utilise le menu déroulant du bloc ˋdéplacer l’acteur 1\\` pour modifier le sens dans lequel Waddles se déplace.",
+          "courseC_PlayLab_events6_c": "Quand tu as fini, tu devrais pouvoir déplacer Waddles en utilisant les touches fléchées sur ton clavier !"
         },
         "courseC_PlayLab_events7_2021": {
-          "courseC_PlayLab_events7_a": "Utilise à la fois le bloc ˋdéplacer l’acteur 2 vers le haut 400 pixels`et le bloc ˋdéplacer l’acteur 2 vers le bas 400 pixels` à l’intérieur de la boucle ˋrépéter à l’infini\\` pour résoudre ce casse-tête. ",
-          "courseC_PlayLab_events7_b": "La boucle ˋrépéter à l’infiniˋ n’a pas besoin d’être connectée à d’autres blocs événement ; elle s’exécutera toute seule."
+          "courseC_PlayLab_events7_a": "Utilise et le bloc ˋdéplacer l’acteur 2 vers le haut de 400 pixels`et le bloc ˋdéplacer l’acteur 2 vers le bas de 400 pixels` au sein de la boucle ˋrépéter à l’infini\\` pour résoudre ce casse-tête. ",
+          "courseC_PlayLab_events7_b": "La boucle ˋrépéter à l’infiniˋ n’a pas besoin d’être connectée à d’autres blocs événement ; elle s’exécutera toute seule."
         },
         "courseC_PlayLab_events8_2021": {
-          "courseC_PlayLab_events8_a": "Tu devras connecter des blocs au bloc ˋlorsque l’acteur touche\\` pour faire fonctionner cela correctement.",
-          "courseC_PlayLab_events8_b": "Les blocs ˋl’acteur dit`et ˋjouer un son` dans la boîte à outils devraient t’aider !"
+          "courseC_PlayLab_events8_a": "Tu devras connecter des blocs au bloc ˋlorsque l’acteur touche\\` pour que tout marche correctement.",
+          "courseC_PlayLab_events8_b": "Les blocs ˋl’acteur dit`et ˋjouer un son` dans la boîte à outils devraient t’aider !"
         },
         "courseC_PlayLab_events9_2021": {
           "courseC_PlayLab_events9_a": "Le bloc ˋmarquer un point\\` t’aidera à résoudre ce casse-tête.",
           "courseC_PlayLab_events9_b": "Assure-toi que ton nouveau bloc ˋlorsque l’acteur touche\\` désigne l’acteur **1** et l’acteur **3**.",
-          "courseC_PlayLab_events9_c": "Tu peux avoir plus d’un événement ˋquand l’acteur touche\\` à la fois dans ton espace de travail, donc tu n’as pas besoin de supprimer le premier !"
+          "courseC_PlayLab_events9_c": "Tu peux avoir plus d’un événement ˋquand l’acteur touche\\` à la fois dans ton espace de travail, donc tu n’as pas besoin de supprimer le premier !"
         },
         "courseC_PlayLab_eventsA_2021": {
           "courseC_PlayLab_eventsA_a": "Utilise le bloc ˋdéfinir un arrière-plan`et le bloc ˋaffecter à l’acteur une vitesse ____` pour résoudre ce casse-tête.",
-          "courseC_PlayLab_eventsA_b": "Tu devras faire glisser un bloc ˋquand l’exécution commence\\` sur l’espace de travail pour résoudre ce casse-tête."
+          "courseC_PlayLab_eventsA_b": "Il va notamment te falloir faire glisser un bloc ˋquand l’exécution commence\\` dans ton espace de travail pour résoudre ce casse-tête."
         },
         "courseC_PlayLab_eventsA_embed_2021": {
-          "courseC_PlayLab_eventsA_a": "Utilise les touches fléchées pour déplacer le pingouin. Tu n'as pas besoin d'écrire de code pour finir ce niveau."
+          "courseC_PlayLab_eventsA_a": "Utilise les touches fléchées pour déplacer le pingouin. Tu n'as pas besoin d'écrire de code pour terminer ce niveau."
         },
         "courseC_PlayLab_eventsFP_2021": {
-          "idea1": "_Besoin d'une idée ?_    \n\n**Qui est là ?** Fais apparaître des personnages avec des images aléatoires, de sorte que personne ne sait qui apparaîtra ensuite.    \n\n<img src= \"https://images.code.org/dbd6ece9d0fb213039ea5dccb91fc425-image-1563577859889.gif\" style=\"width: 200px\">",
-          "idea2": "_Besoin d'une idée ?_\\\n**Partir pour une aventure** - Change l'arrière-plan, puis fais dire aux personnages où ils se trouvent, maintenant.  \n\n<img src= \"https://images.code.org/a7f740d73074deb128cdc2826abda9e6-image-1563576781779.gif\" style=\"width: 200px\">",
-          "idea3": "_Besoin d’une idée ?_\n\n**Pinball** - Déplace un personnage en utilisant les touches directionnelles (utilise des blocs ˋquand flèche vers le haut`, ˋquand flèche vers le bas`), puis joue des sons aléatoires quand il entre en collision avec d’autres personnages sur l’écran."
+          "idea1": "_Besoin d'une idée ?_   \n\n **Qui est là ?** Fais apparaître des personnages avec des images aléatoires, pour que personne ne puisse savoir qui va apparaître ensuite.    \n\n<img src= \"https://images.code.org/dbd6ece9d0fb213039ea5dccb91fc425-image-1563577859889.gif\" style=\"width: 200px\">",
+          "idea2": "_Besoin d'une idée ?_   \n\n**Partir à l'Aventure** - Change l'arrière-plan, puis fais parler les personnages de l'endroit où ils se trouvent désormais.\n\n<img src= \"https://images.code.org/a7f740d73074deb128cdc2826abda9e6-image-1563576781779.gif\" style=\"width: 200px\">",
+          "idea3": "_Besoin d’une idée ?_\n\n**Pinball** - Fais se déplacer un personnage en utilisant les touches fléchées (utilise des blocs ˋquand flèche vers le haut`, ˋquand flèche vers le bas`), puis fais jouer des sons aléatoires quand il rentre dans d’autres personnages sur l’écran."
         },
         "courseC_PlayLab_events_challenge1_2021": {
           "courseC_PlayLab_events_challenge_a": "Tu peux utiliser ce bloc pour déplacer les acteurs à différents endroits de l’espace de jeu.\n\n<xml> <block type=\"studio_setSpritePosition\">\n    <title name=\"SPRITE\">0</title>\n    <title name=\"VALUE\">12</title>\n  </block></xml>",
@@ -9672,22 +9672,22 @@
           "courseC_flappy_events3_a": "Si quelque chose ne fonctionne pas correctement, assure-toi que tes blocs sont connectés aux bons événements dans l’espace de travail."
         },
         "courseC_flappy_events4_2021": {
-          "courseC_flappy_events4_a": "Connecte le bloc ˋterminer le jeuˋ à ˋau contact d’un obstacle\\` pour résoudre ce casse-tête."
+          "courseC_flappy_events4_a": "Connecte le bloc « terminer le jeu » à « au contact d’un obstacle » pour résoudre ce casse-tête."
         },
         "courseC_flappy_events5_2021": {
-          "courseC_flappy_events5_a": "Tu devras utiliser le bloc ˋmarquer un point\\` pour réussir ce niveau."
+          "courseC_flappy_events5_a": "Il va te falloir utiliser le bloc ˋmarquer un point\\` pour réussir ce niveau."
         },
         "courseC_flappy_events6_2021": {
           "courseC_flappy_events6_a": "Essaie de connecter le bloc ˋfaire une \\_\\_\\_\\_ de battements d’ailesˋ à l’événement ˋlors d’un clic\\`."
         },
         "courseC_flappy_events7_2021": {
-          "courseC_flappy_events7_a": "Tu peux modifier le fond en utilisant le bloc ˋdéfinir un arrière-plan\\`. "
+          "courseC_flappy_events7_a": "Tu peux modifier le fond d'écran en utilisant le bloc ˋdéfinir un arrière-plan\\`. "
         },
         "courseC_flappy_events8_2021": {
-          "courseC_flappy_events8_a": "Essaie de connecter un second bloc `définir la scène` sous l'évènement `au passage d'un obstacle` pour passer ce niveau."
+          "courseC_flappy_events8_a": "Essaie de connecter un deuxième bloc `définir l'arrière-plan` sous l'évènement `au passage d'un obstacle` pour réussir ce niveau."
         },
         "courseC_flappy_events9_2021": {
-          "courseC_flappy_events9_a": "Connecte le bloc `mettre le score à 0` à l'évènement `au contact d'un obstacle` pour passer ce niveau."
+          "courseC_flappy_events9_a": "Connecte le bloc `mettre le score à 0` à l'évènement `au contact d'un obstacle` pour réussir ce niveau."
         },
         "courseC_harvester_loops1_2021": {
           "courseC_harvester_loops1_a": "Une fois que tu t’es déplacé vers une citrouille, utilise <xml><block type=\"harvester_pumpkin\"/></xml> pour la récolter.",
@@ -10079,55 +10079,55 @@
           "courseD_bee_nestedLoops7_c": "Imbrique à trois reprises tes blocs dans les autres, comme ceci :\n\n-   répéter 4 fois\n      \\- répéter 3 fois\n        \\- répéter 12 fois\n          \\- recueillir le nectar\n        \\- avancer\n      \\- tourner à droite"
         },
         "courseD_bounce_events10s_2021": {
-          "courseD_bounce_events10s_a": "Tu dois avoir ces deux événements dans ton code :   \n\n <xml><block type=\"bounce_whenBallInGoal\" deletable=\"false\"><next><block type=\"bounce_playSound\"><title name=\"SOUND\">swish</title><next><block type=\"bounce_incrementPlayerScore\"></block></next></block></next></block><block type=\"bounce_whenBallMissesPaddle\" deletable=\"false\"><next><block type=\"bounce_playSound\"><title name=\"SOUND\">whistle</title><next><block type=\"bounce_incrementOpponentScore\"></block></next></block></next></block></xml>"
+          "courseD_bounce_events10s_a": "Il va te falloir avoir ces deux événements dans ton code :   \n\n <xml><block type=\"bounce_whenBallInGoal\" deletable=\"false\"><next><block type=\"bounce_playSound\"><title name=\"SOUND\">swish</title><next><block type=\"bounce_incrementPlayerScore\"></block></next></block></next></block><block type=\"bounce_whenBallMissesPaddle\" deletable=\"false\"><next><block type=\"bounce_playSound\"><title name=\"SOUND\">whistle</title><next><block type=\"bounce_incrementOpponentScore\"></block></next></block></next></block></xml>"
         },
         "courseD_bounce_events11s_2021": {
-          "courseD_bounce_events11s_a": "Tu auras besoin de lancer une balle quand le jeu démarrera, quand on frappera le panier et quand la main manquera la balle."
+          "courseD_bounce_events11s_a": "Il va te falloir de lancer un ballon quand le jeu démarre, quand on touche le panier et quand la main rate la balle."
         },
         "courseD_bounce_events12s_2021": {
-          "courseD_bounce_events12s_a": "Tu peux accélérer le ballon ou la main en attachant ces blocs à l'événement `quand on court`.",
-          "courseD_bounce_events12s_b": "Essaie de donner la valeur de 2 points à chaque tir et d'échanger le logo de l'équipe avec celui de ta ville natale !"
+          "courseD_bounce_events12s_a": "Tu peux faire accélérer le ballon ou la main en attachant ces blocs à l'événement `quand l'exécution commence`.",
+          "courseD_bounce_events12s_b": "Essaie de faire valoir 2 points à chaque tir, et de remplacer le logo de l'équipe par celui de ta ville de résidence !"
         },
         "courseD_bounce_events1s_2021": {
-          "courseD_bounce_events1s_a": "Tu dois ajouter le bloc `déplacer à gauche` à l'événement `quand la flèche gauche` pour que ce jeu fonctionne : \n\n <xml> <block type=\"bounce_whenLeft\" deletable=\"false\" x=\"20\" y=\"20\">\n    <next>\n      <block type=\"bounce_moveLeft\"/>\n    </next>\n  </block>\n\n   </xml>",
-          "courseD_bounce_events1s_b": "N'oublie pas d'appuyer sur « Exécuter » et de mettre la main sur le panier afin de résoudre cette énigme."
+          "courseD_bounce_events1s_a": "Il te faut ajouter le bloc `déplacer vers la gauche` à l'événement `quand flèche gauche` pour faire fonctionner ce jeu :   \n\n <xml> <block type=\"bounce_whenLeft\" deletable=\"false\" x=\"20\" y=\"20\">    <next>      <block type=\"bounce_moveLeft\"/>    </next>  </block>   </xml>",
+          "courseD_bounce_events1s_b": "N'oublie pas d'appuyer sur « Démarrer » et de mettre la main sur le panier pour résoudre ce casse-tête."
         },
         "courseD_bounce_events2s_2021": {
-          "courseD_bounce_events2s_a": "Tu auras besoin de deux ensembles d'événements `déplacer` codés pour que cela fonctionne :   \n\n [Blockly block] [0]"
+          "courseD_bounce_events2s_a": "Tu vas avoir besoin de deux ensembles d'événements `déplacer` codés pour que tout fonctionne bien :   \n\n[blockly block] [0]"
         },
         "courseD_bounce_events5s_2021": {
-          "courseD_bounce_events5s_a": "Tu n'as pas besoin de déplacer la main pour résoudre cette énigme.",
-          "courseD_bounce_events5s_b": "Assure-toi d'avoir ajouté ce code à ton espace de travail :   \n\n <xml>  <block type=\"bounce_whenPaddleCollided\" deletable=\"false\"> <next> <block type=\"bounce_bounceBall\"/></next></block></xml>"
+          "courseD_bounce_events5s_a": "Tu n'as pas besoin de déplacer la main pour résoudre ce casse-tête.",
+          "courseD_bounce_events5s_b": "Assure-toi que tu as bien ajouté ce code à ton espace de travail :  \n\n<xml>  <block type=\"bounce_whenPaddleCollided\" deletable=\"false\"> <next> <block type=\"bounce_bounceBall\"/></next></block></xml>"
         },
         "courseD_bounce_events6s_2021": {
-          "courseD_bounce_events6s_a": "As-tu un événement qui ressemble à ceci ?   \n\n <xml><block type=\"bounce_whenWallCollided\" deletable=\"false\"><next><block type=\"bounce_bounceBall\"></block></next></block></block></xml>",
+          "courseD_bounce_events6s_a": "Disposes-tu d'un événement qui ressemble à ceci ?   \n\n<xml><block type=\"bounce_whenWallCollided\" deletable=\"false\"><next><block type=\"bounce_bounceBall\"></block></next></block></block></xml>",
           "courseD_bounce_events6s_b": "Si tu as bien écrit le code, tu n'as pas besoin de déplacer la main pour gagner."
         },
         "courseD_bounce_events7s_2021": {
-          "courseD_bounce_events7s_a": "Tu peux ajouter des sons dans plus d'endroits, si tu veux !"
+          "courseD_bounce_events7s_a": "Tu peux ajouter des sons à d'autres moments si tu veux !"
         },
         "courseD_collector_debugging1a_2021": {
-          "courseD_collector_debugging1_a": "Utilise le bouton \"Etape\" pour voir si tout est bon à la première étape,\n\nEt à la deuxième ?\n\nOù cela va mal ?",
-          "courseD_collector_debugging1_c": "Souviens toi d'utiliser le bloc `ramasser` pour ramasser les diamants une fois que tu as bougé vers eux."
+          "courseD_collector_debugging1_a": "Utilise le bouton « Étape » pour voir si tout va bien au niveau de la première étape. \n\nEt qu'en est-il de la deuxième ?\n\nOù est-ce que ça tourne mal ?",
+          "courseD_collector_debugging1_c": "N'oublie pas d'utiliser le bloc `ramasser` pour ramasser le trésor une fois que tu t'es déplacé jusqu'à celui-ci. "
         },
         "courseD_collector_debugging2a_2021": {
-          "courseD_collector_debugging2a_a": "Utilise le bouton \"Etape\" pour voir si tout est bon à la première étape,\n\nEt à la deuxième ?\n\nOù cela va mal ?",
-          "courseD_collector_debugging2a_c": "Que se passe-t-il ?   \n\nQue doit-il se passer ?  \n\n Qu'est-ce que cela signifie ?"
+          "courseD_collector_debugging2a_a": "Utilise le bouton « Étape » pour voir si tout va bien au niveau de la première étape. \n\nEt qu'en est-il de la deuxième ?\n\nOù est-ce que ça tourne mal ?",
+          "courseD_collector_debugging2a_c": "Que se passe-t-il ?   \n\nQue devrait-il se passer ?   \n\nQu'est-ce que cela t'indique ?"
         },
         "courseD_collector_debugging3a_2021": {
-          "courseD_collector_debugging3_a": "Est-ce qu'il y a un endroit où Laurel fais quelque chose qui n'a pas de sens? Que se passe-t-il lorsque tu changes ces blocs ?"
+          "courseD_collector_debugging3_a": "Est-ce qu'il y a un endroit où Laurel fait quelque chose qui n'est pas logique ? Que se passe-t-il lorsque tu changes ces blocs ?"
         },
         "courseD_collector_debugging4a_2021": {
-          "courseD_collector_debugging4_a": "Essaie d'utiliser le processus de debuggage plusieurs fois sur une rangée.\n\nQu'est-ce qui cause le premier problème?\n\nUne fois ce problème résolu, qu'est ce qui ne va pas ?",
-          "courseD_collector_debugging4_b": "Si c'est difficile pour toi de trouver comment faire le motif des marches d'escalier, essaie de le tracer avec ton doigt en répétant les commandes à voix haute.\n\nN'oublie pas de remarquer les directions des tournants!"
+          "courseD_collector_debugging4_a": "Essaie d'utiliser le processus de débogage plusieurs fois à la suite.\n\nQu'est-ce qui cause le premier problème ?\n\nUne fois ce là problème résolu, qu'est-ce qui tourne mal ?",
+          "courseD_collector_debugging4_b": "Si tu as du mal à voir comment faire le schéma récurrent en escalier, essaie de le tracer avec ton doigt en répétant les commandes à voix haute.\n\nN'oublie pas de faire remarquer les directions des tournants !"
         },
         "courseD_collector_debugging5a_2021": {
-          "courseD_collector_debugging5a_a": "Qu'est-ce que cela fait ? \n\nQu'est-ce que c'est censé faire ? \n\nQu'est-ce que cela signifie ?",
-          "courseD_collector_debugging5a_b": "Une fois que tu auras ramassé la première ligne de trésors, que restera-t-il, dans ton code ?"
+          "courseD_collector_debugging5a_a": "Que fait-il ?\n\nQu’est-il censé faire ? \n\nQu’est-ce que cela t'indique ? ",
+          "courseD_collector_debugging5a_b": "Une fois que tu as ramassé la première rangée de trésor, que reste-t-il dans ton code ?"
         },
         "courseD_collector_debugging6a_2021": {
-          "courseD_collector_debugging6_a": "Essaie de faire fonctionner ce code avec le bouton \"Etape\". Est-ce que tout est bon à la première étape?\n\nEt à la seconde?\n\nQuand les choses tournent-elles mal?",
-          "courseD_collector_debugging6_b": "On dirait que tous les blocs dont tu as besoin se trouvent dans l'espace de travail. Essaie de cliquer sur « recommencer », si les choses deviennent trop confuses."
+          "courseD_collector_debugging6_a": "Essaie de regarder s'exécuter ce code en utilisant le bouton « Étape ». Est-ce que tout va bien lors de la première étape ?\n\nEt lors de la deuxième ?\n\nQuand est-ce que les choses tournent mal ?",
+          "courseD_collector_debugging6_b": "On dirait que tous les blocs dont tu as besoin se trouvent dans l'espace de travail. Essaie en cliquant sur « réinitialiser » tu commences à trop t'embrouiller."
         },
         "courseD_collector_nested_loops_challenge2_2021": {
           "courseD_bee_nested_loops_challenge2_a": "N'oublie pas que tu peux `répéter` une simple commande ou un modèle plus long. Tu peux même `répéter` un bloc `repeat`!",
@@ -10219,13 +10219,13 @@
           "courseD_harvester_nested_loops_challenge1_c": "Tu devras mettre une petite boucle à l'intérieur de ta boucle principale pour résoudre cette énigme !"
         },
         "courseD_iceage_loops10_2021": {
-          "courseB_iceage_loops10_a": "Attention à la glace brisée ! Scrat va tomber dans l’eau !",
+          "courseB_iceage_loops10_a": "Attention à la glace brisée ! Elle fera tomber Scrat directement dans l'eau !",
           "courseB_iceage_loops10_b": "Essaie de dire les étapes à voix haute ou de les écrire sur papier. Vois-tu des choses qui se répètent ?",
           "courseB_iceage_loops10_c": "Ce casse-tête est long ! Emprunte ce chemin."
         },
         "courseD_iceage_loops1_2021": {
-          "courseD_iceage_loops1_a": "Attention à la glace brisée ! Scrat va tomber à travers !",
-          "courseD_iceage_loops1_b": "Tu devras utiliser ce bloc :\n\n<xml><block type=\"maze_moveForward\"/></xml>"
+          "courseD_iceage_loops1_a": "Attention à la glace brisée ! Scrat tombera directement à travers !",
+          "courseD_iceage_loops1_b": "Il va te falloir utiliser ce bloc :\n\n<xml><block type=\"maze_moveForward\"/></xml>"
         },
         "courseD_iceage_loops2_2021": {
           "courseD_iceage_loops2_a": "Essaye de résoudre ce casse-tête en deux temps : avant le tournant et après celui-ci.",
@@ -10237,36 +10237,36 @@
           "courseB_iceage_loops3_b": "Pour répéter du code, prends une boucle ˋrepeat\\` en la glissant, puis mets le bloc que tu veux répéter à l’intérieur."
         },
         "courseD_iceage_loops4_2021": {
-          "courseD_iceage_loops4_a": "N’aie pas peur d’exécuter ton code pour voir ce qu'il se passe !",
-          "courseD_iceage_loops4_b": "Essaie d’écrire les étapes que Scrat devrait suivre pour arriver au gland. Vois-tu un modèle ?",
-          "courseD_iceage_loops4_c": "Voici le chemin que Scrat doit prendre."
+          "courseD_iceage_loops4_a": "N’aie pas peur d’exécuter ton code pour voir ce qui se passe !",
+          "courseD_iceage_loops4_b": "Essaie d’écrire les étapes qu'il faudrait que Scrat suive pour arriver au gland. Y vois-tu un schéma récurrent ?",
+          "courseD_iceage_loops4_c": "Voici le chemin qu'il faudrait que Scrat emprunte."
         },
         "courseD_iceage_loops6_2021": {
-          "courseD_iceage_loops6_a": "Ton code final devra avoir **trois** blocs 'avancer\\`.",
-          "courseD_iceage_loops6_b": "Tu n’as besoin d’ajouter qu’**une** seule boucle de plus !",
+          "courseD_iceage_loops6_a": "Ton code final contiendra **trois** blocs 'avancer\\`.",
+          "courseD_iceage_loops6_b": "Tu n’as besoin d’ajouter qu’encore **une** seule boucle !",
           "courseD_iceage_loops6_c": "Ton parcours final devrait ressembler à ceci."
         },
         "courseD_iceage_loops7_2021": {
-          "courseB_iceage_loops7_a": "Si tu es bloqué, essaie d’écrire les étapes sur du papier. Vois-tu un modèle ?",
+          "courseB_iceage_loops7_a": "Si tu te retrouves coincé, essaie d’écrire les étapes sur papier. Y vois-tu un schéma récurrent ?",
           "courseB_iceage_loops7_b": "Voici le chemin que Scrat devrait emprunter pour arriver jusqu’au gland."
         },
         "courseD_iceage_loops8_2021": {
-          "courseD_iceage_loops8_a": "Est-ce que les blocs `tourner` sont corrects ? Que peux-tu changer d'autre ?",
+          "courseD_iceage_loops8_a": "Est-ce que tout va bien avec les blocs `tourner` ? Qu'est-ce que tu peux changer d'autre ?",
           "courseD_iceage_loops8_b": "La première boucle devrait se répéter **3** fois, la deuxième devrait se répéter **5** fois, la troisième boucle devrait se répéter **4** fois et la dernière boucle devrait se répéter **4** fois.",
           "courseD_iceage_loops8_c": "Utilise des boucles pour aider Scrat à emprunter ce chemin."
         },
         "courseD_iceage_loops9_2021": {
           "courseD_iceage_loops9_a": "Tu as du mal ? Essaie de résoudre ce problème en plusieurs temps. N’aie pas peur d’exécuter ton programme au long du processus !",
           "courseD_iceage_loops9_b": "Ton code final devrait avoir **4** boucles.",
-          "courseD_iceage_loops9_c": "Scrat devrait suivre ce chemin pour avoir le gland."
+          "courseD_iceage_loops9_c": "Il faudrait que Scrat emprunte ce chemin pour avoir le gland."
         },
         "courseD_maze_intro4_2021": {
-          "courseC_maze_programming4_a": "Tu peux tourner à gauche ou à droite à partir de là où se trouve Red. Si es tourné vers la droite, tourner à droite te fera aller vers le bas.",
-          "courseC_maze_programming4_b": "Pour suive le chemin, avance et tourne dans un sens, puis avance à nouveau et tourne dans l'autre sens. Avance une fois de plus pour atteindre le cochon."
+          "courseC_maze_programming4_a": "Tu peux tourner à gauche ou à droite du point de vue de Red. Si tu es tourné vers la droite, aller à droite te fera te diriger vers le bas.",
+          "courseC_maze_programming4_b": "Pour suivre le chemin, avance et tourne dans un sens, puis avance à nouveau et tourne dans le sens contraire. Avance une fois de plus pour atteindre le cochon."
         },
         "courseD_maze_intro5a_2021": {
           "courseC_maze_programming5_a": "Essaie d'utiliser le bouton « Étape » pour exécuter ton code ligne par ligne. Peux-tu deviner ce qu'il faut faire à chaque étape ?",
-          "courseC_maze_programming5_b": "Souviens-toi que les virages partent de là où est Red.",
+          "courseC_maze_programming5_b": "N'oublie pas que l'on tourne du point de vue de Red.",
           "courseC_maze_programming5_c": "N'aie pas peur de faire des erreurs ! Essaie d'ajouter des blocs et d'exécuter ton code, pour voir ce qui se passe, même si tu ne penses pas avoir encore résolu le casse-tête."
         },
         "courseD_maze_nestedLoops3_2021": {
@@ -10289,24 +10289,24 @@
           "courseD_maze_nestedLoops6_c": "Il va te falloir utiliser deux ensembles de boucles imbriquées « répéter » pour résoudre ce casse-tête."
         },
         "courseD_maze_ramp1_2021": {
-          "courseC_maze_programming1_a": "Si l'oiseau ne va pas ver le cochon, assure toi que les 3 blocs sont bien assemblés ensemble, puis clique à nouveau sur \"Démarrer\".",
+          "courseC_maze_programming1_a": "Si l'oiseau n'arrive pas jusqu'au cochon, assure-toi que les 3 blocs sont bien reliés ensemble, puis clique à nouveau sur « Démarrer ».",
           "courseC_maze_programming1_b": "N'aie pas peur de faire des erreurs ! Essaie d'ajouter des blocs et d'exécuter ton code, pour voir ce qui se passe, même si tu ne penses pas avoir encore résolu le casse-tête."
         },
         "courseD_maze_ramp2_2021": {
-          "courseC_maze_programming2_a": "Pour utiliser un bloc ˋavancerˋ, fais-le glisser depuis la barre d'outils jusqu'à l'espace de travail et connecte-le au bloc ˋquand exécutéˋ.",
-          "courseC_maze_programming2_b": "Assure toi que les 3 blocs sont attachés et aussi au bloc `quand l'exécution commence`."
+          "courseC_maze_programming2_a": "Pour utiliser un bloc ˋavancerˋ, fais-le glisser de la boite à outils jusqu'à l'espace de travail et connecte-le au bloc ˋquand l'exécution commenceˋ.",
+          "courseC_maze_programming2_b": "Assure-toi que les 3 blocs sont bien connectés entre eux et rattachés au bloc `quand l'exécution commence`."
         },
         "courseD_maze_ramp3_2021": {
           "courseC_maze_programming3_a": "![](https://images.code.org/afddde0e99d5d270c658de0c03dd6e2c-image-1481174000309.gif) \n\nPour supprimer un bloc du milieu de ton code, fais glisser tous les blocs situés en-dessous vers la droite, et laisse-les de côté, dans l'espace de travail, pendant quelques instants.  \n\nClique sur le bloc que tu souhaites supprimer, et fais-le glisser vers la boîte à outils. \n\nPour finir, remets tes autres blocs bien à leur place."
         },
         "courseD_maze_ramp5_2021": {
           "courseC_maze_programming5_a": "Essaie d'utiliser le bouton « Étape » pour exécuter ton code ligne par ligne. Peux-tu deviner ce qu'il faut faire à chaque étape ?",
-          "courseC_maze_programming5_b": "Souviens toi que tourner se fait du point de vue de l'oiseau.",
+          "courseC_maze_programming5_b": "N'oublie pas que l'on tourne du point de vue de l'oiseau.",
           "courseC_maze_programming5_c": "N'aie pas peur de faire des erreurs ! Essaie d'ajouter des blocs et d'exécuter ton code, pour voir ce qui se passe, même si tu ne penses pas avoir encore résolu le casse-tête."
         },
         "courseD_maze_ramp5b_2021": {
           "courseC_maze_programming5_a": "Essaie d'utiliser le bouton « Étape » pour exécuter ton code ligne par ligne. Peux-tu deviner ce qu'il faut faire à chaque étape ?",
-          "courseC_maze_programming5_b": "Souviens toi que tourner se fait du point de vue de l'oiseau.",
+          "courseC_maze_programming5_b": "N'oublie pas que l'on tourne du point de vue de l'oiseau.",
           "courseC_maze_programming5_c": "N'aie pas peur de faire des erreurs ! Essaie d'ajouter des blocs et d'exécuter ton code, pour voir ce qui se passe, même si tu ne penses pas avoir encore résolu le casse-tête."
         },
         "courseD_maze_until1_2021": {
@@ -11570,54 +11570,54 @@
           "courseE_playLab_scaffold4_a": "Utiliser `marquer 1 point` pour ajouter un point, et `enlever 1 point` pour en retirer un."
         },
         "courseC_PlayLab_events12022": {
-          "courseC_PlayLab_events1_a": "Attache ce bloc au bloc ˋquand l’exécution commence\\` :\n\n<xml>\n  <block type=\"studio_saySpriteChoices\">\n    <title name=\"SPRITE\">0</title>\n    <title name=\"VALUE\">Hi there.</title>\n  </block>\n</xml>"
+          "courseC_PlayLab_events1_a": "Attache ce bloc au bloc ˋquand l’exécution commence\\` :\n\n<xml>\n  <block type=\"studio_saySpriteChoices\">\n    <title name=\"SPRITE\">0</title>\n    <title name=\"VALUE\">Hi there.</title>\n  </block>\n</xml>"
         },
         "courseC_PlayLab_events22022": {
-          "courseC_PlayLab_events2_a": "Attache deux de ces blocs au bloc ˋquand l’exécution commence\\` :\n\n<xml>\n  <block type=\"studio_saySpriteChoices\">\n    <title name=\"SPRITE\">0</title>\n    <title name=\"VALUE\">Hi there.</title>\n  </block>\n</xml>",
-          "courseC_PlayLab_events2_b": "Utilise le menu déroulant du deuxième bloc ˋl’acteur \\_\\_ dit\\` pour modifier quel acteur parle."
+          "courseC_PlayLab_events2_a": "Attache deux de ces blocs au bloc ˋquand l’exécution commence\\` :\n\n<xml>\n  <block type=\"studio_saySpriteChoices\">\n    <title name=\"SPRITE\">0</title>\n    <title name=\"VALUE\">Hi there.</title>\n  </block>\n</xml>",
+          "courseC_PlayLab_events2_b": "Utilise le menu déroulant du deuxième bloc ˋl’acteur \\_\\_ dit\\` pour changer l'acteur qui parle."
         },
         "courseC_PlayLab_events32022": {
-          "courseC_PlayLab_events3_a": "Tu dois seulement déplacer Jorge d’environ 25 pixels vers la droite pour résoudre ce puzzle.",
-          "courseC_PlayLab_events3_b": "Y a-t-il un bloc dans la boîte à outils qui semble pouvoir déplacer un acteur ?",
-          "courseC_PlayLab_events3_c": "Attache ce bloc au bloc ˋquand l’exécution commence\\` :\n\n<xml>\n<block type=\"studio_moveDistance\">\n    <title name=\"SPRITE\">0</title>\n    <title name=\"DIR\">2</title>\n    <title name=\"DISTANCE\">25</title>\n  </block>\n</xml>"
+          "courseC_PlayLab_events3_a": "Tu n'as besoin de déplacer Jorge que d’environ 25 pixels vers la droite pour résoudre ce casse-tête.",
+          "courseC_PlayLab_events3_b": "Y a-t-il un bloc dans la boîte à outils qui semble pouvoir déplacer un acteur ?",
+          "courseC_PlayLab_events3_c": "Attache ce bloc au bloc ˋquand l’exécution commence\\` :\n\n<xml>\n<block type=\"studio_moveDistance\">\n    <title name=\"SPRITE\">0</title>\n    <title name=\"DIR\">2</title>\n    <title name=\"DISTANCE\">25</title>\n  </block>\n</xml>"
         },
         "courseC_PlayLab_events42022": {
-          "courseC_PlayLab_events4_b": "Quand on clique sur « Exécuter », Jorge doit se déplacer de **100** pixels vers la droite pour atteindre Olive le chat.",
-          "courseC_PlayLab_events4_a": "Tu devras connecter un bloc ˋl’acteur \\_\\_ dit`à l’événement ˋlorsque l’acteur touche` pour résoudre ce casse-tête."
+          "courseC_PlayLab_events4_b": "Quand on clique sur « Démarrer », il faut que Jorge se déplace de **100** pixels vers la droite pour atteindre Olive la chatte.",
+          "courseC_PlayLab_events4_a": "Il va te falloir connecter un bloc ˋl’acteur \\_\\_ dit`à l’événement ˋlorsque l’acteur touche` pour résoudre ce casse-tête."
         },
         "courseC_PlayLab_events52022": {
-          "courseC_PlayLab_events5_a": "Tu devras cliquer sur le menu déroulant dans le bloc ˋl’acteur dit\\` pour trouver le texte « Quoi de neuf ? »",
-          "courseC_PlayLab_events5_b": "Clique sur Octavia quand tu exécutes ton programme pour vérifier qu’il fonctionne !"
+          "courseC_PlayLab_events5_a": "Il va te falloir cliquer sur le menu déroulant dans le bloc ˋl’acteur dit\\` pour trouver le texte « Quoi de neuf ? ». ",
+          "courseC_PlayLab_events5_b": "Clique sur Octavia quand tu exécutes ton programme pour vérifier qu’il fonctionne bien !"
         },
         "courseC_PlayLab_events62022": {
-          "courseC_PlayLab_events6_a": "Chaque bloc vert `flèche quand` devrait contenir une action.",
-          "courseC_PlayLab_events6_b": "Utilise le menu déroulant du bloc ˋdéplacer l’acteur 1\\` pour modifier la direction dans laquelle Waddles se déplace.",
-          "courseC_PlayLab_events6_c": "Quand tu auras fini, tu devrais pouvoir déplacer Waddles en utilisant les touches directionnelles de ton clavier !"
+          "courseC_PlayLab_events6_a": "Chaque bloc vert `quand flèche` devrait avoir une action qui s'y rattache en-dessous de lui.",
+          "courseC_PlayLab_events6_b": "Utilise le menu déroulant du bloc ˋdéplacer l’acteur 1\\` pour modifier le sens dans lequel Waddles se déplace.",
+          "courseC_PlayLab_events6_c": "Quand tu as fini, tu devrais pouvoir déplacer Waddles en utilisant les touches fléchées sur ton clavier !"
         },
         "courseC_PlayLab_events72022": {
-          "courseC_PlayLab_events7_a": "Utilise à la fois le bloc ˋdéplacer l’acteur 2 vers le haut 400 pixels`et le bloc ˋdéplacer l’acteur 2 vers le bas 400 pixels` à l’intérieur de la boucle ˋrépéter à l’infini\\` pour résoudre ce casse-tête. ",
-          "courseC_PlayLab_events7_b": "La boucle ˋrépéter à l’infiniˋ n’a pas besoin d’être connectée à d’autres blocs événement ; elle s’exécutera toute seule."
+          "courseC_PlayLab_events7_a": "Utilise et le bloc ˋdéplacer l’acteur 2 vers le haut de 400 pixels`et le bloc ˋdéplacer l’acteur 2 vers le bas de 400 pixels` au sein de la boucle ˋrépéter à l’infini\\` pour résoudre ce casse-tête. ",
+          "courseC_PlayLab_events7_b": "La boucle ˋrépéter à l’infiniˋ n’a pas besoin d’être connectée à d’autres blocs événement ; elle s’exécutera toute seule."
         },
         "courseC_PlayLab_events82022": {
-          "courseC_PlayLab_events8_a": "Tu devras connecter des blocs au bloc ˋlorsque l’acteur touche\\` pour faire fonctionner cela correctement.",
-          "courseC_PlayLab_events8_b": "Les blocs ˋl’acteur dit`et ˋjouer un son` dans la boîte à outils devraient t’aider !"
+          "courseC_PlayLab_events8_a": "Tu devras connecter des blocs au bloc ˋlorsque l’acteur touche\\` pour que tout marche correctement.",
+          "courseC_PlayLab_events8_b": "Les blocs ˋl’acteur dit`et ˋjouer un son` dans la boîte à outils devraient t’aider !"
         },
         "courseC_PlayLab_events92022": {
           "courseC_PlayLab_events9_a": "Le bloc ˋmarquer un point\\` t’aidera à résoudre ce casse-tête.",
           "courseC_PlayLab_events9_b": "Assure-toi que ton nouveau bloc ˋlorsque l’acteur touche\\` désigne l’acteur **1** et l’acteur **3**.",
-          "courseC_PlayLab_events9_c": "Tu peux avoir plus d’un événement ˋquand l’acteur touche\\` à la fois dans ton espace de travail, donc tu n’as pas besoin de supprimer le premier !"
+          "courseC_PlayLab_events9_c": "Tu peux avoir plus d’un événement ˋquand l’acteur touche\\` à la fois dans ton espace de travail, donc tu n’as pas besoin de supprimer le premier !"
         },
         "courseC_PlayLab_eventsA2022": {
           "courseC_PlayLab_eventsA_a": "Utilise le bloc ˋdéfinir un arrière-plan`et le bloc ˋaffecter à l’acteur une vitesse ____` pour résoudre ce casse-tête.",
-          "courseC_PlayLab_eventsA_b": "Tu devras faire glisser un bloc ˋquand l’exécution commence\\` sur l’espace de travail pour résoudre ce casse-tête."
+          "courseC_PlayLab_eventsA_b": "Il va notamment te falloir faire glisser un bloc ˋquand l’exécution commence\\` dans ton espace de travail pour résoudre ce casse-tête."
         },
         "courseC_PlayLab_eventsA_embed2022": {
-          "courseC_PlayLab_eventsA_a": "Utilise les touches fléchées pour déplacer le pingouin. Tu n'as pas besoin d'écrire de code pour finir ce niveau."
+          "courseC_PlayLab_eventsA_a": "Utilise les touches fléchées pour déplacer le pingouin. Tu n'as pas besoin d'écrire de code pour terminer ce niveau."
         },
         "courseC_PlayLab_eventsFP2022": {
-          "idea1": "_Besoin d'une idée ?_    **Qui est là ?** Fais apparaître des personnages avec des images aléatoires, de sorte que personne ne sait qui apparaîtra ensuite.    \\< img src =\" <https://images.code.org/dbd6ece9d0fb213039ea5dccb91fc425-image-1563577859889.gif\"style=>\" largeur: 200px\">",
-          "idea2": "_Besoin d'une idée ?_   **partir pour une Aventure** - Change l'arrière-plan, puis fais dire aux caractères où ils se trouvent, maintenant.    \\< img src =\" <https://images.code.org/a7f740d73074deb128cdc2826abda9e6-image-1563576781779.gif\"style=>\" largeur: 200px\">",
-          "idea3": "_Besoin d’une idée ?_\n\n**Pinball** - Déplace un personnage en utilisant les touches directionnelles (utilise des blocs ˋquand flèche vers le haut`, ˋquand flèche vers le bas`), puis joue des sons aléatoires quand il entre en collision avec d’autres personnages sur l’écran."
+          "idea1": "_Besoin d'une idée ?_   \n\n **Qui est là ?** Fais apparaître des personnages avec des images aléatoires, pour que personne ne puisse savoir qui va apparaître ensuite.    \n\n<img src= \"https://images.code.org/dbd6ece9d0fb213039ea5dccb91fc425-image-1563577859889.gif\" style=\"width: 200px\">",
+          "idea2": "_Besoin d'une idée ?_   \n\n**Partir à l'Aventure** - Change l'arrière-plan, puis fais parler les personnages de l'endroit où ils se trouvent désormais.\n\n<img src= \"https://images.code.org/a7f740d73074deb128cdc2826abda9e6-image-1563576781779.gif\" style=\"width: 200px\">",
+          "idea3": "_Besoin d’une idée ?_\n\n**Pinball** - Fais se déplacer un personnage en utilisant les touches fléchées (utilise des blocs ˋquand flèche vers le haut`, ˋquand flèche vers le bas`), puis fais jouer des sons aléatoires quand il rentre dans d’autres personnages sur l’écran."
         },
         "courseC_PlayLab_events_challenge12022": {
           "courseC_PlayLab_events_challenge_a": "Tu peux utiliser ce bloc pour déplacer les acteurs à différents endroits de l’espace de jeu.\n\n<xml> <block type=\"studio_setSpritePosition\">\n    <title name=\"SPRITE\">0</title>\n    <title name=\"VALUE\">12</title>\n  </block></xml>",
@@ -11751,19 +11751,19 @@
           "courseC_flappy_events4_a": "Connecte le bloc ˋterminer le jeuˋ à ˋau contact d’un obstacle\\` pour résoudre ce casse-tête."
         },
         "courseC_flappy_events52022": {
-          "courseC_flappy_events5_a": "Tu devras utiliser le bloc ˋmarquer un point\\` pour réussir ce niveau."
+          "courseC_flappy_events5_a": "Il va te falloir utiliser le bloc ˋmarquer un point\\` pour réussir ce niveau."
         },
         "courseC_flappy_events62022": {
           "courseC_flappy_events6_a": "Essaie de connecter le bloc ˋfaire une \\_\\_\\_\\_ de battements d’ailesˋ à l’événement ˋlors d’un clic\\`."
         },
         "courseC_flappy_events72022": {
-          "courseC_flappy_events7_a": "Tu peux modifier le fond en utilisant le bloc ˋdéfinir un arrière-plan\\`. "
+          "courseC_flappy_events7_a": "Tu peux modifier le fond d'écran en utilisant le bloc ˋdéfinir un arrière-plan\\`. "
         },
         "courseC_flappy_events82022": {
-          "courseC_flappy_events8_a": "Essaie de connecter un second bloc `définir la scène` sous l'évènement `au passage d'un obstacle` pour passer ce niveau."
+          "courseC_flappy_events8_a": "Essaie de connecter un deuxième bloc `définir l'arrière-plan` sous l'évènement `au passage d'un obstacle` pour réussir ce niveau."
         },
         "courseC_flappy_events92022": {
-          "courseC_flappy_events9_a": "Connecte le bloc `mettre le score à 0` à l'évènement `au contact d'un obstacle` pour passer ce niveau."
+          "courseC_flappy_events9_a": "Connecte le bloc `mettre le score à 0` à l'évènement `au contact d'un obstacle` pour réussir ce niveau."
         },
         "courseC_harvester_loops12022": {
           "courseC_harvester_loops1_a": "Une fois que tu t’es déplacé vers une citrouille, utilise <xml><block type=\"harvester_pumpkin\"/></xml> pour la récolter.",
@@ -12048,8 +12048,8 @@
           "courseD_bee_conditionals4_b": "Utilise une indication « si » à l'intérieur de ta boucle pour voir dans chaque case s'il n'y a pas du nectar."
         },
         "courseD_bee_conditionals52022": {
-          "courseD_bee_conditionals5_a": "Si tu utilises un bloc `si à la fleur`, tu peux résoudre ceci, en utilisant une boucle imbriquée. Écris un programme pour les chemins de gauche et du bas, puis répète le tout deux fois !",
-          "courseD_bee_conditionals5_c": "Pour continuer sur le chemin, l'abeille devra `avancer`. Tout en se déplaçant, l'abeille doit vérifier la présence d'une fleur. `si il y a une fleur, l'abeille doit`recueillir nectar\\`."
+          "courseD_bee_conditionals5_a": "En te servant d'un bloc « si au niveau de la fleur », tu peux résoudre ce casse-tête avec une boucle imbriquée. Écris un programme pour les chemins de gauche et du bas, puis répète le tout deux fois !",
+          "courseD_bee_conditionals5_c": "Pour poursuivre son chemin, l'abeille aura besoin « d'avancer ». Tout en se déplaçant, l'abeille doit vérifier s'il y a une fleur. « S'il y a une fleur »,  l'abeille doit « récolter le nectar »."
         },
         "courseD_bee_conditionals62022": {
           "courseD_bee_conditionals6_a": "Assure-toi d'utiliser une indication « si » pour voir s'il y a des rayons de miel sous chaque nuage.",
@@ -12094,55 +12094,55 @@
           "courseD_bee_nestedLoops7_c": "Imbrique à trois reprises tes blocs dans les autres, comme ceci :\n\n-   répéter 4 fois\n      \\- répéter 3 fois\n        \\- répéter 12 fois\n          \\- recueillir le nectar\n        \\- avancer\n      \\- tourner à droite"
         },
         "courseD_bounce_events10s2022": {
-          "courseD_bounce_events10s_a": "Tu dois avoir ces deux événements dans ton code :    <xml><block type=\"bounce_whenBallInGoal\" deletable=\"false\"><next><block type=\"bounce_playSound\"><title name=\"SOUND\">swish</title><next><block type=\"bounce_incrementPlayerScore\"></block></next></block></next></block><block type=\"bounce_whenBallMissesPaddle\" deletable=\"false\"><next><block type=\"bounce_playSound\"><title name=\"SOUND\">whistle</title><next><block type=\"bounce_incrementOpponentScore\"></block></next></block></next></block></xml>"
+          "courseD_bounce_events10s_a": "Il va te falloir avoir ces deux événements dans ton code :    \n\n<xml><block type=\"bounce_whenBallInGoal\" deletable=\"false\"><next><block type=\"bounce_playSound\"><title name=\"SOUND\">swish</title><next><block type=\"bounce_incrementPlayerScore\"></block></next></block></next></block><block type=\"bounce_whenBallMissesPaddle\" deletable=\"false\"><next><block type=\"bounce_playSound\"><title name=\"SOUND\">whistle</title><next><block type=\"bounce_incrementOpponentScore\"></block></next></block></next></block></xml>"
         },
         "courseD_bounce_events11s2022": {
-          "courseD_bounce_events11s_a": "Tu auras besoin de lancer une balle quand le jeu démarre, quand on frappe le panier, et quand la main manque la balle."
+          "courseD_bounce_events11s_a": "Il va te falloir de lancer un ballon quand le jeu démarre, quand on touche le panier et quand la main rate la balle."
         },
         "courseD_bounce_events12s2022": {
-          "courseD_bounce_events12s_a": "Tu peux accélérer le ballon ou la main en attachant ces blocs à l'événement `quand court`.",
-          "courseD_bounce_events12s_b": "Essaie de donner la valeur de 2 points à chaque tir, et d'échanger le logo de l'équipe avec celui de ta ville natale !"
+          "courseD_bounce_events12s_a": "Tu peux faire accélérer le ballon ou la main en attachant ces blocs à l'événement `quand l'exécution commence`.",
+          "courseD_bounce_events12s_b": "Essaie de faire valoir 2 points à chaque tir, et de remplacer le logo de l'équipe par celui de ta ville de résidence !"
         },
         "courseD_bounce_events1s2022": {
-          "courseD_bounce_events1s_a": "Tu dois ajouter le bloc `déplacer à gauche` à l'événement `quand la flèche gauche` pour que ce jeu fonctione:    <xml> <block type=\"bounce_whenLeft\" deletable=\"false\" x=\"20\" y=\"20\">    <next>      <block type=\"bounce_moveLeft\"/>    </next>  </block>   </xml>",
-          "courseD_bounce_events1s_b": "N'oublie pas d'appuyer sur « Exécuter » et de mettre la main sur le panier afin de résoudre cette énigme."
+          "courseD_bounce_events1s_a": "Il te faut ajouter le bloc `déplacer vers la gauche` à l'événement `quand flèche gauche` pour faire fonctionner ce jeu :   \n\n <xml> <block type=\"bounce_whenLeft\" deletable=\"false\" x=\"20\" y=\"20\">    <next>      <block type=\"bounce_moveLeft\"/>    </next>  </block>   </xml>",
+          "courseD_bounce_events1s_b": "N'oublie pas d'appuyer sur « Démarrer » et de mettre la main sur le panier pour résoudre ce casse-tête."
         },
         "courseD_bounce_events2s2022": {
-          "courseD_bounce_events2s_a": "Tu auras besoin de deux ensembles d'événements `déplacer` codés pour que cela fonctionne:    [Blockly block] [0]"
+          "courseD_bounce_events2s_a": "Tu vas avoir besoin de deux ensembles d'événements `déplacer` codés pour que tout fonctionne bien :   \n\n[blockly block] [0]"
         },
         "courseD_bounce_events5s2022": {
-          "courseD_bounce_events5s_a": "Tu n'as pas besoin de déplacer la main pour résoudre cette énigme.",
-          "courseD_bounce_events5s_b": "Assure-toi d'avoir ajouté ce code à ton espace de travail :    <xml>  <block type=\"bounce_whenPaddleCollided\" deletable=\"false\"> <next> <block type=\"bounce_bounceBall\"/></next></block></xml>"
+          "courseD_bounce_events5s_a": "Tu n'as pas besoin de déplacer la main pour résoudre ce casse-tête.",
+          "courseD_bounce_events5s_b": "Assure-toi que tu as bien ajouté ce code à ton espace de travail :  \n\n<xml>  <block type=\"bounce_whenPaddleCollided\" deletable=\"false\"> <next> <block type=\"bounce_bounceBall\"/></next></block></xml>"
         },
         "courseD_bounce_events6s2022": {
-          "courseD_bounce_events6s_a": "As-tu un événement qui ressemble à ceci ?    <xml><block type=\"bounce_whenWallCollided\" deletable=\"false\"><next><block type=\"bounce_bounceBall\"></block></next></block></block></xml>",
-          "courseD_bounce_events6s_b": "Si tu as écrit le code correctement, tu n'as pas besoin de déplacer la main pour gagner."
+          "courseD_bounce_events6s_a": "Disposes-tu d'un événement qui ressemble à ceci ?   \n\n<xml><block type=\"bounce_whenWallCollided\" deletable=\"false\"><next><block type=\"bounce_bounceBall\"></block></next></block></block></xml>",
+          "courseD_bounce_events6s_b": "Si tu as bien écrit le code, tu n'auras pas besoin de déplacer la main pour gagner."
         },
         "courseD_bounce_events7s2022": {
-          "courseD_bounce_events7s_a": "Tu peux ajouter des sons dans plus d'endroits, si tu en as envie !"
+          "courseD_bounce_events7s_a": "Tu peux ajouter des sons à d'autres moments si tu veux !"
         },
         "courseD_collector_debugging1a2022": {
-          "courseD_collector_debugging1_a": "Utilise le bouton \"Etape\" pour voir si tout est bon à la première étape,\n\nEt à la deuxième ?\n\nOù cela va mal ?",
-          "courseD_collector_debugging1_c": "Souviens toi d'utiliser le bloc `ramasser` pour ramasser les diamants une fois que tu as bougé vers eux."
+          "courseD_collector_debugging1_a": "Utilise le bouton « Étape » pour voir si tout va bien au niveau de la première étape. \n\nEt qu'en est-il de la deuxième ?\n\nOù est-ce que ça tourne mal ?",
+          "courseD_collector_debugging1_c": "N'oublie pas d'utiliser le bloc `ramasser` pour ramasser le trésor une fois que tu t'es déplacé jusqu'à celui-ci. "
         },
         "courseD_collector_debugging2a2022": {
-          "courseD_collector_debugging2a_a": "Utilise le bouton \"Etape\" pour voir si tout est bon à la première étape,\n\nEt à la deuxième ?\n\nOù cela va mal ?",
-          "courseD_collector_debugging2a_c": "Que se passe-t-il ?   Que doit-il se passer ?   Qu'est-ce que cela signifie ?"
+          "courseD_collector_debugging2a_a": "Utilise le bouton « Étape » pour voir si tout va bien au niveau de la première étape. \n\nEt qu'en est-il de la deuxième ?\n\nOù est-ce que ça tourne mal ?",
+          "courseD_collector_debugging2a_c": "Que se passe-t-il ?   \n\nQue devrait-il se passer ?   \n\nQu'est-ce que cela t'indique ?"
         },
         "courseD_collector_debugging3a2022": {
-          "courseD_collector_debugging3_a": "Est-ce qu'il y a un endroit où Laurel fais quelque chose qui n'a pas de sens? Que se passe-t-il lorsque tu changes ces blocs ?"
+          "courseD_collector_debugging3_a": "Est-ce qu'il y a un endroit où Laurel fait quelque chose qui n'est pas logique ? Que se passe-t-il lorsque tu changes ces blocs ?"
         },
         "courseD_collector_debugging4a2022": {
-          "courseD_collector_debugging4_a": "Essaie d'utiliser le processus de debuggage plusieurs fois sur une rangée.\n\nQu'est-ce qui cause le premier problème?\n\nUne fois ce problème résolu, qu'est ce qui ne va pas ?",
-          "courseD_collector_debugging4_b": "Si c'est difficile pour toi de trouver comment faire le motif des marches d'escalier, essaie de le tracer avec ton doigt en répétant les commandes à voix haute.\n\nN'oublie pas de remarquer les directions des tournants!"
+          "courseD_collector_debugging4_a": "Essaie d'utiliser le processus de débogage plusieurs fois à la suite.\n\nQu'est-ce qui cause le premier problème ?\n\nUne fois ce là problème résolu, qu'est-ce qui tourne mal ?",
+          "courseD_collector_debugging4_b": "Si tu as du mal à voir comment faire le schéma récurrent en escalier, essaie de le tracer avec ton doigt en répétant les commandes à voix haute.\n\nN'oublie pas de faire remarquer les directions des tournants !"
         },
         "courseD_collector_debugging5a2022": {
-          "courseD_collector_debugging5a_a": "Que fait-il ? Qu'est-il censé faire ? Qu'est-ce que cela signifie ?",
-          "courseD_collector_debugging5a_b": "Une fois que tu as collecté la première ligne de trésors, que reste-t-il, dans ton code ?"
+          "courseD_collector_debugging5a_a": "Que fait-il ?\n\nQu’est-il censé faire ? \n\nQu’est-ce que cela t'indique ? ",
+          "courseD_collector_debugging5a_b": "Une fois que tu as ramassé la première rangée de trésor, que reste-t-il dans ton code ?"
         },
         "courseD_collector_debugging6a2022": {
-          "courseD_collector_debugging6_a": "Essaie de faire fonctionner ce code avec le bouton \"Etape\". Est-ce que tout est bon à la première étape?\n\nEt à la seconde?\n\nQuand les choses tournent-elles mal?",
-          "courseD_collector_debugging6_b": "On dirait que tous les blocs dont tu as besoin se trouvent dans l'espace de travail. Essaie de cliquer sur « recommencer », si les choses deviennent trop confuses."
+          "courseD_collector_debugging6_a": "Essaie de regarder s'exécuter ce code en utilisant le bouton « Étape ». Est-ce que tout va bien lors de la première étape ?\n\nEt lors de la deuxième ?\n\nQuand est-ce que les choses tournent mal ?",
+          "courseD_collector_debugging6_b": "On dirait que tous les blocs dont tu as besoin se trouvent dans l'espace de travail. Essaie en cliquant sur « réinitialiser » tu commences à trop t'embrouiller."
         },
         "courseD_collector_nested_loops_challenge22022": {
           "courseD_bee_nested_loops_challenge2_a": "N'oublie pas que tu peux `répéter` une simple commande ou un modèle plus long. Tu peux même `répéter` un bloc `répéter`!",
@@ -12248,16 +12248,16 @@
           "courseD_iceage_loops2_c": "Suis ce chemin pour amener Scrat jusqu’au gland."
         },
         "courseD_iceage_loops32022": {
-          "courseB_iceage_loops3_a": "Utilise ce nouveau bloc !\n <xml><block type=\"controls_repeat_dropdown\">\n    <title name=\"TIMES\" config=\"2-10\">5</title>\n  </block></xml>",
-          "courseB_iceage_loops3_b": "Pour répéter du code, va prendre une boucle ˋrépéter\\` en la glissant, puis mets le bloc que tu veux répéter à l’intérieur."
+          "courseB_iceage_loops3_a": "Utilise ce nouveau bloc !\n\n <xml><block type=\"controls_repeat_dropdown\">\n    <title name=\"TIMES\" config=\"2-10\">5</title>\n  </block></xml>",
+          "courseB_iceage_loops3_b": "Pour répéter du code, sors une boucle ˋrépéter\\`, puis mets le bloc que tu veux répéter dedans."
         },
         "courseD_iceage_loops42022": {
           "courseD_iceage_loops4_a": "N’aie pas peur d’exécuter ton code pour voir ce qui se passe !",
-          "courseD_iceage_loops4_b": "Essaie d’écrire les étapes que Scrat devrait suivre pour arriver au gland. Vois-tu un motif ?",
+          "courseD_iceage_loops4_b": "Essaie d’écrire les étapes qu'il faudrait que Scrat suive pour arriver au gland. Y vois-tu un schéma récurrent ?",
           "courseD_iceage_loops4_c": "Voici le chemin qu'il faudrait que Scrat emprunte."
         },
         "courseD_iceage_loops62022": {
-          "courseD_iceage_loops6_a": "Ton code final devra avoir **trois** blocs 'avancer\\`.",
+          "courseD_iceage_loops6_a": "Ton code final contiendra **trois** blocs 'avancer\\`.",
           "courseD_iceage_loops6_b": "Tu n’as besoin d’ajouter qu’encore **une** boucle !",
           "courseD_iceage_loops6_c": "Ton parcours final devrait ressembler à ceci."
         },
@@ -12266,7 +12266,7 @@
           "courseB_iceage_loops7_b": "Voici le chemin que Scrat devrait emprunter pour arriver jusqu’au gland."
         },
         "courseD_iceage_loops82022": {
-          "courseD_iceage_loops8_a": "Est-ce que les blocs `tourner` sont corrects ? Que peux-tu changer d'autre ?",
+          "courseD_iceage_loops8_a": "Est-ce que tout va bien avec les blocs `tourner` ? Qu'est-ce que tu peux changer d'autre ?",
           "courseD_iceage_loops8_b": "La première boucle devrait se répéter **3** fois, la deuxième devrait se répéter **5** fois, la troisième boucle devrait se répéter **4** fois et la dernière boucle devrait se répéter **4** fois.",
           "courseD_iceage_loops8_c": "Utilise des boucles pour aider Scrat à emprunter ce chemin."
         },
@@ -12276,12 +12276,12 @@
           "courseD_iceage_loops9_c": "Il faut que Scrat emprunte ce chemin pour obtenir le gland."
         },
         "courseD_maze_intro42022": {
-          "courseC_maze_programming4_a": "Tu peux tourner à gauche ou à droite du point de vue de l'oiseau. Si tu te diriges à droite, tourner à droite te fera aller vers le bas.",
-          "courseC_maze_programming4_b": "Pour suive le chemin, avance et tourne dans un sens, puis avance à nouveau et tourne dans le sens opposé. Avance une fois de plus pour atteindre le cochon."
+          "courseC_maze_programming4_a": "Tu peux tourner à gauche ou à droite du point de vue de l'oiseau. S'il regarde vers la droite, le fait de tourner à droite se diriger vers le bas.",
+          "courseC_maze_programming4_b": "Pour suivre le chemin, avance et tourne dans un sens, puis avance à nouveau et tourne dans le sens contraire. Avance une fois de plus pour atteindre le cochon."
         },
         "courseD_maze_intro5a2022": {
           "courseC_maze_programming5_a": "Essaie d'utiliser le bouton « Étape » pour exécuter ton code ligne par ligne. Peux-tu deviner ce qu'il faut faire à chaque étape ?",
-          "courseC_maze_programming5_b": "Souviens-toi que les virages sont du point de vue de Red.",
+          "courseC_maze_programming5_b": "N'oublie pas que l'on tourne du point de vue de Red.",
           "courseC_maze_programming5_c": "N'aie pas peur de faire des erreurs ! Essaie d'ajouter des blocs et d'exécuter ton code, pour voir ce qui se passe, même si tu ne penses pas avoir encore résolu le casse-tête."
         },
         "courseD_maze_nestedLoops32022": {
@@ -12304,24 +12304,24 @@
           "courseD_maze_nestedLoops6_c": "Il va te falloir utiliser deux ensembles de boucles imbriquées « répéter » pour résoudre ce casse-tête."
         },
         "courseD_maze_ramp12022": {
-          "courseC_maze_programming1_a": "Si l'oiseau ne va pas ver le cochon, assure toi que les 3 blocs sont bien assemblés ensemble, puis clique à nouveau sur \"Démarrer\".",
+          "courseC_maze_programming1_a": "Si l'oiseau n'arrive pas jusqu'au cochon, assure-toi que les 3 blocs sont bien reliés ensemble, puis clique à nouveau sur « Démarrer ».",
           "courseC_maze_programming1_b": "N'aie pas peur de faire des erreurs ! Essaie d'ajouter des blocs et d'exécuter ton code, pour voir ce qui se passe, même si tu ne penses pas avoir encore résolu le casse-tête."
         },
         "courseD_maze_ramp22022": {
-          "courseC_maze_programming2_a": "Pour utiliser un bloc ˋavancerˋ, fais-le glisser depuis la barre d'outils jusqu'à l'espace de travail et connecte-le au bloc ˋquand exécutéˋ.",
-          "courseC_maze_programming2_b": "Assure toi que les 3 blocs sont attachés et aussi au bloc `quand l'exécution commence`."
+          "courseC_maze_programming2_a": "Pour utiliser un bloc ˋavancerˋ, fais-le glisser de la boite à outils jusqu'à l'espace de travail et connecte-le au bloc ˋquand l'exécution commenceˋ.",
+          "courseC_maze_programming2_b": "Assure-toi que les 3 blocs sont bien connectés entre eux et rattachés au bloc `quand l'exécution commence`."
         },
         "courseD_maze_ramp32022": {
           "courseC_maze_programming3_a": "![](https://images.code.org/afddde0e99d5d270c658de0c03dd6e2c-image-1481174000309.gif) \n\nPour supprimer un bloc du milieu de ton code, fais glisser tous les blocs situés en-dessous vers la droite, et laisse-les de côté, dans l'espace de travail, pendant quelques instants.  \n\nClique sur le bloc que tu souhaites supprimer, et fais-le glisser vers la boîte à outils. \n\nPour finir, remets tes autres blocs bien à leur place."
         },
         "courseD_maze_ramp52022": {
           "courseC_maze_programming5_a": "Essaie d'utiliser le bouton « Étape » pour exécuter ton code ligne par ligne. Peux-tu deviner ce qu'il faut faire à chaque étape ?",
-          "courseC_maze_programming5_b": "Souviens toi que tourner se fait du point de vue de l'oiseau.",
+          "courseC_maze_programming5_b": "N'oublie pas que l'on tourne du point de vue de l'oiseau.",
           "courseC_maze_programming5_c": "N'aie pas peur de faire des erreurs ! Essaie d'ajouter des blocs et d'exécuter ton code, pour voir ce qui se passe, même si tu ne penses pas avoir encore résolu le casse-tête."
         },
         "courseD_maze_ramp5b2022": {
           "courseC_maze_programming5_a": "Essaie d'utiliser le bouton « Étape » pour exécuter ton code ligne par ligne. Peux-tu deviner ce qu'il faut faire à chaque étape ?",
-          "courseC_maze_programming5_b": "Souviens toi que tourner se fait du point de vue de l'oiseau.",
+          "courseC_maze_programming5_b": "N'oublie pas que l'on tourne du point de vue de l'oiseau.",
           "courseC_maze_programming5_c": "N'aie pas peur de faire des erreurs ! Essaie d'ajouter des blocs et d'exécuter ton code, pour voir ce qui se passe, même si tu ne penses pas avoir encore résolu le casse-tête."
         },
         "courseD_maze_until12022": {

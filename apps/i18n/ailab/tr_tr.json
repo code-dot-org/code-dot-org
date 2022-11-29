@@ -1,12 +1,12 @@
 {
+  "selectDataset": "Kullanmak istediğiniz veri kümesini seçin. ",
+  "uploadedDataset": "Veri kümesini yüklediniz. ",
+  "selectedDataset": "Veri kümesini seçtiniz. ",
+  "dataDisplayLabel": "Tahmin etmek için bir sütun seçin.",
+  "dataDisplayFeatures": "Tahminin yapılmasına yardımcı olması için girdi olarak bir veya daha fazla sütun seçin.",
+  "selectedFeatureNumerical": "Az önce sayısal bir özellik seçtiniz.",
+  "selectedFeatureCategorical": "Az önce kategorik bir özellik seçtiniz.",
   "datasets": {
-    "medical_priority": {
-      "fields": {
-        "age": {
-          "id": "yaş"
-        }
-      }
-    },
     "shoe_survey_toy": {
       "fields": {
         "weather": {
@@ -32,7 +32,7 @@
           "id": "mısır"
         },
         "beans": {
-          "id": "fasülye"
+          "id": "fasulye"
         },
         "lime": {
           "id": "Misket limonu"
@@ -64,27 +64,10 @@
           "id": "renk"
         },
         "music": {
-          "id": "Müzik"
+          "id": "müzik"
         },
         "food": {
           "id": "yiyecek"
-        }
-      }
-    },
-    "insurance_cost": {
-      "fields": {
-        "age": {
-          "id": "yaş"
-        }
-      }
-    },
-    "nutrition": {
-      "fields": {
-        "Category": {
-          "id": "Kategori"
-        },
-        "Description": {
-          "id": "Tanım"
         }
       }
     },
@@ -95,16 +78,6 @@
         },
         "lime": {
           "id": "Misket limonu"
-        }
-      }
-    },
-    "shapes_v2_toy": {
-      "fields": {
-        "sides": {
-          "id": "kenarlar"
-        },
-        "size": {
-          "id": "boyut"
         }
       }
     },
@@ -123,20 +96,10 @@
           "id": "meyve"
         },
         "beans": {
-          "id": "fasülye"
+          "id": "fasulye"
         },
         "cheese": {
           "id": "peynir\n"
-        }
-      }
-    },
-    "billionaires": {
-      "fields": {
-        "Age": {
-          "id": "Yaş"
-        },
-        "Gender": {
-          "id": "Cinsiyet"
         }
       }
     },
@@ -159,53 +122,13 @@
           "id": "tavuk"
         },
         "lamb": {
-          "id": "Kuzu"
+          "id": "kuzu"
         },
         "onion": {
           "id": "soğan"
         },
         "cheese": {
           "id": "peynir\n"
-        }
-      }
-    },
-    "census_part": {
-      "fields": {
-        "age": {
-          "id": "yaş"
-        }
-      }
-    },
-    "loneliness_interests": {
-      "fields": {
-        "Internet": {
-          "id": "İnternet"
-        },
-        "Writing": {
-          "id": "Yazma"
-        }
-      }
-    },
-    "movies": {
-      "fields": {
-        "Score": {
-          "id": "Puan"
-        },
-        "Country": {
-          "id": "Ülke"
-        },
-        "Name": {
-          "id": "İsim"
-        },
-        "Star": {
-          "id": "Yıldız"
-        }
-      }
-    },
-    "songs": {
-      "fields": {
-        "Artist": {
-          "id": "Sanatçı"
         }
       }
     },
@@ -224,24 +147,7 @@
           "id": "Timsah"
         },
         "trees": {
-          "id": "ağaç"
-        }
-      }
-    },
-    "abalone": {
-      "fields": {
-        "Length": {
-          "id": "Boy"
-        },
-        "Height": {
-          "id": "Yükseklik"
-        }
-      }
-    },
-    "zoo": {
-      "fields": {
-        "Aquatic": {
-          "id": "Su"
+          "id": "ağaçlar "
         }
       }
     },
@@ -255,77 +161,6 @@
         },
         "ginger": {
           "id": "zencefil"
-        }
-      }
-    },
-    "student_survey": {
-      "fields": {
-        "Music": {
-          "id": "Müzik"
-        },
-        "Dance": {
-          "id": "Dans et"
-        },
-        "Country": {
-          "id": "Ülke"
-        },
-        "Internet": {
-          "id": "İnternet"
-        },
-        "Writing": {
-          "id": "Yazma"
-        },
-        "Achievements": {
-          "id": "Başarılar"
-        },
-        "Age": {
-          "id": "Yaş",
-          "description": "Yaş"
-        },
-        "Height": {
-          "id": "Yükseklik",
-          "description": "Yükseklik"
-        },
-        "Gender": {
-          "id": "Cinsiyet",
-          "description": "Cinsiyet"
-        }
-      }
-    },
-    "boba_toy": {
-      "fields": {
-        "banana": {
-          "id": "muz"
-        }
-      }
-    },
-    "heart": {
-      "fields": {
-        "Age": {
-          "id": "Yaş"
-        }
-      }
-    },
-    "shapes_v1_toy": {
-      "fields": {
-        "sides": {
-          "id": "kenarlar"
-        },
-        "size": {
-          "id": "boyut"
-        }
-      }
-    },
-    "loneliness_music": {
-      "fields": {
-        "Music": {
-          "id": "Müzik"
-        },
-        "Dance": {
-          "id": "Dans et"
-        },
-        "Country": {
-          "id": "Ülke"
         }
       }
     }

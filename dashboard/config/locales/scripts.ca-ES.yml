@@ -1006,6 +1006,8 @@ ca:
             del nostre currículum d''educació primària per alumnes més grans.'
           description_audience: De 9 a 18 anys
           lesson_groups:
+            csf_warmup:
+              display_name: Recapitulació
             csf_loops:
               display_name: Bucles
             csf_conditionals:
@@ -1019,6 +1021,7 @@ ca:
             lessonGroup-9:
               display_name: Esdeveniments
         pre-express-2021:
+          title: Curs Exprés per pre-lectors (2021)
           description_short: 'Una introducció a la informàtica per a prelectors: combina
             el millor dels cursos de parvulari i primer.'
           description_audience: De 4 a 8 anys
