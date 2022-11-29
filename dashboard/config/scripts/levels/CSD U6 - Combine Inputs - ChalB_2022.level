@@ -73,7 +73,7 @@
     "fail_on_lint_errors": "false",
     "debugger_disabled": "false",
     "makerlab_enabled": "true",
-    "long_instructions": "# Motorcycle Movement\r\n\r\nCreate an app that moves a motorcycle left and right on the screen using the buttons on the circuit playground. The app has already been started for you: pressing the left button will move the motorcycle to the left by 10 units. This app uses the [Counter Pattern](/docs/concepts/app-lab/the-counter-pattern/) to move the motorcycle.\r\n\r\n# Do This\r\n\r\n* Using the working left button as an example, program the right button to make the motorcycle go to the right.",
+    "long_instructions": "# Motorcycle Movement\r\n\r\nCreate an app that moves a motorcycle left and right on the screen using the buttons on the circuit playground. The app has already been started for you: pressing the left button will move the motorcycle to the left by 10 units. This app uses the [Counter Pattern](/courses/csd-2022/guides/counter-patterns-with-event) to move the motorcycle.\r\n\r\n# Do This\r\n\r\n* Using the working left button as an example, program the right button to make the motorcycle go to the right.",
     "parent_level_id": 20595,
     "name_suffix": "_2021",
     "mini_rubric": "false",
