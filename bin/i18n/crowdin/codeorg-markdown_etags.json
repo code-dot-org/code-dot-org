@@ -1156,9 +1156,9 @@
     "/coldplay.md": "b6e4e8f3c40eb35964e7e2cf199fe485",
     "/educate/it.md": "b6e4e8f3c40eb35964e7e2cf199fe485",
     "/farsi.md": "W/\"06f5a2167926f62569d6b65300d4d68d\"",
-    "/views/hoc2022_explore_activities.md": "6433fdb6a872278b50fb144838a1aa06",
-    "/views/hoc2022_play_activities.md": "0dc549f3d685942cc9b8f2dd3e861bd5",
-    "/views/hoc2022_create_activities.md": "6433fdb6a872278b50fb144838a1aa06"
+    "/views/hoc2022_explore_activities.md": "d26b40fa1e05dfbc26ab427059615b08",
+    "/views/hoc2022_play_activities.md": "a3119e2217d1bb21c2be02bbfae2bda2",
+    "/views/hoc2022_create_activities.md": "dd6ffaf6669e4ebae80cc99838c811ae"
   },
   "ja": {
     "/educate/curriculum/csf-transition-guide.md": "b6e4e8f3c40eb35964e7e2cf199fe485",
@@ -2103,7 +2103,7 @@
     "/farsi.md": "W/\"51841b6b3708260448b0367a27bf7301\"",
     "/views/hoc2022_explore_activities.md": "9a4f462c7b3b97dfbd0865a1d50cb65e",
     "/views/hoc2022_play_activities.md": "0dc549f3d685942cc9b8f2dd3e861bd5",
-    "/views/hoc2022_create_activities.md": "6433fdb6a872278b50fb144838a1aa06"
+    "/views/hoc2022_create_activities.md": "956354b96684ae3800ef2f2799fd899c"
   },
   "sv-SE": {
     "/educate/curriculum/csf-transition-guide.md": "12a2b95b1e1e4b01b39c116dc310e136",
@@ -2270,7 +2270,7 @@
   "tr": {
     "/educate/curriculum/csf-transition-guide.md": "ed44ba6bf63f9e91311fbaf83026d77c",
     "/educate/csc.md": "ed44ba6bf63f9e91311fbaf83026d77c",
-    "/international/about.md": "ed44ba6bf63f9e91311fbaf83026d77c",
+    "/international/about.md": "ad9f5f12a16ca3f8efe1c26e7e021da2",
     "/csforgood.md": "ed44ba6bf63f9e91311fbaf83026d77c",
     "/break.md": "ed44ba6bf63f9e91311fbaf83026d77c",
     "/athome.md": "e570f4aee7f86c5971c49e629b4d18ba",
@@ -2290,9 +2290,9 @@
     "/coldplay.md": "ed44ba6bf63f9e91311fbaf83026d77c",
     "/educate/it.md": "ed44ba6bf63f9e91311fbaf83026d77c",
     "/farsi.md": "W/\"9d972eed1b3cb52308c183c12694138a\"",
-    "/views/hoc2022_explore_activities.md": "9a4f462c7b3b97dfbd0865a1d50cb65e",
-    "/views/hoc2022_play_activities.md": "0dc549f3d685942cc9b8f2dd3e861bd5",
-    "/views/hoc2022_create_activities.md": "6433fdb6a872278b50fb144838a1aa06"
+    "/views/hoc2022_explore_activities.md": "e8ec28b05b68eb9d713908877487b9bf",
+    "/views/hoc2022_play_activities.md": "ce5864c1e50887b24283138f41803c0c",
+    "/views/hoc2022_create_activities.md": "ac24d36d673a7b82d01ce7dc632e6b0f"
   },
   "uk": {
     "/educate/curriculum/csf-transition-guide.md": "ed44ba6bf63f9e91311fbaf83026d77c",
