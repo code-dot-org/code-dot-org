@@ -2977,7 +2977,7 @@ Studio.getStudioExampleFailure = function(exampleBlock) {
  */
 // XXX This is the only method used by the templates!
 Studio.runButtonClick = function() {
-  if (level.edit_blocks || level.freePlay) {
+  if (level.edit_blocks) {
     Studio.onPuzzleComplete();
   }
   var runButton = document.getElementById('runButton');
@@ -3001,6 +3001,13 @@ Studio.runButtonClick = function() {
   Studio.startTime = new Date();
   Studio.execute();
   Studio.gameState = Studio.GameStates.ACTIVE;
+
+  if (!level.edit_blocks && level.freePlay) {
+    // Save progress. Don't display feedback.
+    setTimeout(() => {
+      Studio.sendPuzzleReport(Studio.onReportCompleteNoFeedback);
+    }, 2500);
+  }
 
   if (
     level.freePlay &&
@@ -3097,6 +3104,17 @@ Studio.onReportComplete = function(response) {
   Studio.waitingForReport = false;
   studioApp().onReportComplete(response);
   Studio.displayFeedback();
+};
+
+/**
+ * Function to be called when the service report call is complete
+ * if you don't want to show the feedback dialog.
+ * @param {MilestoneResponse} response - JSON response (if available)
+ */
+Studio.onReportCompleteNoFeedback = function(response) {
+  Studio.response = response;
+  Studio.waitingForReport = false;
+  studioApp().onReportComplete(response);
 };
 
 var registerEventHandler = function(handlers, name, func) {
@@ -3728,7 +3746,7 @@ Studio.resumeExecution = function() {
 Studio.feedbackImage = '';
 Studio.encodedFeedbackImage = '';
 
-Studio.onPuzzleComplete = function() {
+Studio.sendPuzzleReport = function(onComplete = Studio.onReportComplete) {
   if (Studio.executionError) {
     Studio.result = ResultType.ERROR;
   } else if (
@@ -3737,10 +3755,6 @@ Studio.onPuzzleComplete = function() {
   ) {
     Studio.result = ResultType.SUCCESS;
   }
-
-  // Stop everything on screen
-  Studio.clearEventHandlersKillTickLoop();
-  Studio.movementAudioOff();
 
   if (skin.gridAlignedMovement && Studio.JSInterpreter) {
     // If we've been selecting code as we run, we need to call selectCurrentCode()
@@ -3802,7 +3816,7 @@ Studio.onPuzzleComplete = function() {
       testResult: Studio.testResults,
       program: encodeURIComponent(program),
       image: Studio.encodedFeedbackImage,
-      onComplete: Studio.onReportComplete
+      onComplete: onComplete
     });
   };
 
@@ -3822,6 +3836,14 @@ Studio.onPuzzleComplete = function() {
       }
     });
   }
+};
+
+Studio.onPuzzleComplete = function() {
+  // Stop everything on screen
+  Studio.clearEventHandlersKillTickLoop();
+  Studio.movementAudioOff();
+
+  Studio.sendPuzzleReport();
 };
 
 /* Return the frame count for items or projectiles
