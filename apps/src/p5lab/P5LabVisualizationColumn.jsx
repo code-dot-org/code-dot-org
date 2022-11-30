@@ -139,11 +139,12 @@ class P5LabVisualizationColumn extends React.Component {
   renderGridCheckbox() {
     return (
       <div>
-        <label>
+        <label style={styles.checkboxLabel}>
           <input
             id="grid-checkbox"
             type="checkbox"
             onChange={() => this.props.toggleShowGrid(!this.props.showGrid)}
+            style={styles.checkbox}
           />
           {i18n.showGrid()}
         </label>
@@ -246,6 +247,16 @@ const styles = {
   },
   selectStyle: {
     width: APP_WIDTH
+  },
+  checkbox: {
+    flex: 'none',
+    marginBottom: 3,
+    marginRight: 4
+  },
+  checkboxLabel: {
+    display: 'flex',
+    alignItems: 'center',
+    fontSize: 13
   }
 };
 
