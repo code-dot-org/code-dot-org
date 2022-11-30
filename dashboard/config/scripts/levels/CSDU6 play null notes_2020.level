@@ -98,11 +98,11 @@
     "parent_level_id": 16580,
     "name_suffix": "_2020",
     "reference_links": [
-      "/courses/csd-2022/guides/playing-notes/",
-      "/courses/csd-2022/guides/producing-output/",
-      "/courses/csd-2022/guides/arrays/"
+      "/courses/csd/guides/playing-notes/",
+      "/courses/csd/guides/producing-output/",
+      "/courses/csd/guides/arrays/"
     ],
-    "map_reference": "/courses/csd-2022/guides/modifying-arrays/",
+    "map_reference": "/courses/csd/guides/modifying-arrays/",
     "mini_rubric": "false",
     "text_mode_at_start": "false",
     "preload_asset_list": null

@@ -62,12 +62,12 @@
     "bubble_choice_description": "Randomize the location of items in the scene using random numbers.",
     "libraries_enabled": "false",
     "reference_links": [
-      "/courses/csd-2022/guides/variables",
-      "/courses/csd-2022/guides/naming-variables",
-      "/courses/csd-2022/guides/drawing-shapes",
-      "/courses/csd-2022/guides/shapes-and-parameters"
+      "/courses/csd/guides/variables",
+      "/courses/csd/guides/naming-variables",
+      "/courses/csd/guides/drawing-shapes",
+      "/courses/csd/guides/shapes-and-parameters"
     ],
-    "map_reference": "/courses/csd-2022/guides/random-numbers",
+    "map_reference": "/courses/csd/guides/random-numbers",
     "validation_enabled": "true",
     "start_blocks": "background(\"lightblue\");\r\n//1) Randomize the x position of the sun\r\nfill(\"yellow\");\r\nellipse(80, 50);\r\n//2) Randomize the x position of the mountains\r\nfill(\"brown\");\r\nregularPolygon(100, 300, 3, 200);\r\nregularPolygon(300, 300, 3, 200);\r\nregularPolygon(200, 300, 3, 250);\r\nregularPolygon(10, 300, 3, 250);\r\nregularPolygon(390, 300, 3, 250);\r\nfill(\"lightgreen\");\r\nrect(0, 300, 400, 100);\r\n\r\n\r\n\r\n\r\n",
     "encrypted_examples": "w7dN16e3g/Bo9WD3sdg2FSDVv9Hr4UvyFWqf8fszrc9jrxwQY8RZGl8IB3Pe\nXqdZ6SOv6EmDua1N1zk0J7JUfg==\n",

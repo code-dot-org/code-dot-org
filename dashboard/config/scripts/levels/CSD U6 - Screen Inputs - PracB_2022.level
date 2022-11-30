@@ -74,11 +74,11 @@
     "widget_mode": "false",
     "ai_enabled": "false",
     "reference_links": [
-      "/courses/csd-2022/guides/variables",
-      "/courses/csd-2022/guides/taking-input-with-getproperty/",
-      "/courses/csd-2022/guides/designing-screens-with-code/",
-      "/courses/csd-2022/guides/if-statements",
-      "/courses/csd-2022/guides/booleans-and-comparison-operators/"
+      "/courses/csd/guides/variables",
+      "/courses/csd/guides/taking-input-with-getproperty/",
+      "/courses/csd/guides/designing-screens-with-code/",
+      "/courses/csd/guides/if-statements",
+      "/courses/csd/guides/booleans-and-comparison-operators/"
     ],
     "starter_assets": {
       "menu.jpg": "85e3c75f-5277-496c-9e17-cf9e7e7f2f19.jpg",

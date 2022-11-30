@@ -57,9 +57,9 @@
     "parent_level_id": 20510,
     "name_suffix": "_2222",
     "reference_links": [
-      "/courses/csd-2022/guides/circuits-and-leds"
+      "/courses/csd/guides/circuits-and-leds"
     ],
-    "map_reference": "/courses/csd-2022/guides/color-lights",
+    "map_reference": "/courses/csd/guides/color-lights",
     "mini_rubric": "false",
     "encrypted": "false",
     "widget_mode": "false",

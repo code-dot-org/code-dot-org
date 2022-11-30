@@ -72,12 +72,12 @@
     "libraries_enabled": "false",
     "encrypted_examples": "LoghZI+X6OWYEBDAdai+5xkbwQP5K86+OpuHUuLh9eC4m+RirdQC0zxChGn7\nuN637SGCdvIn79toeXa9PMjXEw==\n",
     "reference_links": [
-      "/courses/csd-2022/guides/variables",
-      "/courses/csd-2022/guides/naming-variables",
-      "/courses/csd-2022/guides/drawing-shapes",
-      "/courses/csd-2022/guides/shapes-and-parameters"
+      "/courses/csd/guides/variables",
+      "/courses/csd/guides/naming-variables",
+      "/courses/csd/guides/drawing-shapes",
+      "/courses/csd/guides/shapes-and-parameters"
     ],
-    "map_reference": "/courses/csd-2022/guides/random-numbers",
+    "map_reference": "/courses/csd/guides/random-numbers",
     "validation_enabled": "false",
     "start_blocks": "background(\"lightblue\");\nfill(\"yellow\");\nellipse(80, 50);\nfill(\"brown\");\nregularPolygon(100, 300, 3, 200);\nregularPolygon(300, 300, 3, 200);\nregularPolygon(200, 300, 3, 250);\nregularPolygon(10, 300, 3, 250);\nregularPolygon(390, 300, 3, 250);\n/*fill(\"white\");\nregularPolygon(100, 125, 3, 25);\nregularPolygon(300, 125, 3, 25);\nregularPolygon(10, 100, 3, 50);\nregularPolygon(200, 100, 3, 50);\nregularPolygon(390, 100, 3, 50);*/\n\nfill(\"lightgreen\");\nrect(0, 300, 400, 100);\n\n\n\n\n",
     "preload_asset_list": null

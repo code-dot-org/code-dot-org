@@ -116,10 +116,10 @@
 
     ],
     "reference_links": [
-      "/courses/csd-2022/guides/producing-output/",
-      "/courses/csd-2022/guides/color-lights/",
-      "/courses/csd-2022/guides/playing-notes/",
-      "/courses/csd-2022/guides/circuits-and-leds/"
+      "/courses/csd/guides/producing-output/",
+      "/courses/csd/guides/color-lights/",
+      "/courses/csd/guides/playing-notes/",
+      "/courses/csd/guides/circuits-and-leds/"
     ],
     "mini_rubric": "false"
   },

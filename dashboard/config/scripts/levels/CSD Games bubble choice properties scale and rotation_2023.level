@@ -66,14 +66,14 @@
     "parent_level_id": 20956,
     "name_suffix": "_2023",
     "reference_links": [
-      "/courses/csd-2022/guides/sprites",
-      "/courses/csd-2022/guides/animation-tab",
-      "/courses/csd-2022/guides/random-numbers",
-      "/courses/csd-2022/guides/variables",
-      "/courses/csd-2022/guides/naming-variables",
-      "/courses/csd-2022/guides/drawing-shapes",
-      "/courses/csd-2022/guides/shapes-and-parameters",
-      "/courses/csd-2022/guides/sprite-interactions"
+      "/courses/csd/guides/sprites",
+      "/courses/csd/guides/animation-tab",
+      "/courses/csd/guides/random-numbers",
+      "/courses/csd/guides/variables",
+      "/courses/csd/guides/naming-variables",
+      "/courses/csd/guides/drawing-shapes",
+      "/courses/csd/guides/shapes-and-parameters",
+      "/courses/csd/guides/sprite-interactions"
     ],
     "video_key": "csd_gamelab_animation_tab",
     "disable_procedure_autopopulate": "false",
@@ -89,7 +89,7 @@
     "display_name": "Multiple Properties",
     "bubble_choice_description": "Rotate and scale the sprites so they look like they are floating in space.",
     "thumbnail_url": "https://images.code.org/9bf5f0d72a21159a8af80971b6e022d6-csd3 scale and rotation.png",
-    "map_reference": "/courses/csd-2022/guides/sprite-properties",
+    "map_reference": "/courses/csd/guides/sprite-properties",
     "preload_asset_list": null,
     "validation_enabled": "false"
   },

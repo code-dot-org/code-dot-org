@@ -55,13 +55,13 @@
     "ai_model_id": "z5SZPaoHHIvF",
     "ai_model_name": "Club Recommender",
     "reference_links": [
-      "/courses/csd-2022/guides/design-mode",
-      "/courses/csd-2022/guides/multi-screen-apps",
-      "/courses/csd-2022/guides/design-mode-elements",
-      "/courses/csd-2022/guides/changing-screens",
-      "/courses/csd-2022/guides/responding-to-user-input"
+      "/courses/csd/guides/design-mode",
+      "/courses/csd/guides/multi-screen-apps",
+      "/courses/csd/guides/design-mode-elements",
+      "/courses/csd/guides/changing-screens",
+      "/courses/csd/guides/responding-to-user-input"
     ],
-    "map_reference": "/courses/csd-2022/guides/if-statements-2",
+    "map_reference": "/courses/csd/guides/if-statements-2",
     "video_key": "csp_applab_conditionals_2A",
     "name_suffix": "_2022",
     "teacher_markdown": "**Supporting Students:** These levels are similar to similar customizations students completed in previous lessons. If students get stuck, consider referring them to these previous lessons:\r\n- Adding multiple screens for the resulting prediction: [Lesson 10 - Model Cards in App Lab](../../../../10/levels/5)",

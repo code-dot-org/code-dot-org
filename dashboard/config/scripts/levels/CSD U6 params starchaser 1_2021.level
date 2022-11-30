@@ -131,10 +131,10 @@
     "parent_level_id": 20582,
     "name_suffix": "_2021",
     "reference_links": [
-      "/courses/csd-2022/guides/for-loops/",
-      "/courses/csd-2022/guides/arrays/"
+      "/courses/csd/guides/for-loops/",
+      "/courses/csd/guides/arrays/"
     ],
-    "map_reference": "/courses/csd-2022/guides/functions/",
+    "map_reference": "/courses/csd/guides/functions/",
     "mini_rubric": "false",
     "text_mode_at_start": "false",
     "preload_asset_list": null

@@ -97,10 +97,10 @@
     "name_suffix": "_2222",
     "show_type_hints": "false",
     "reference_links": [
-      "/courses/csd-2022/guides/arrays",
-      "/courses/csd-2022/guides/circuits-and-leds"
+      "/courses/csd/guides/arrays",
+      "/courses/csd/guides/circuits-and-leds"
     ],
-    "map_reference": "/courses/csd-2022/guides/color-lights",
+    "map_reference": "/courses/csd/guides/color-lights",
     "mini_rubric": "false",
     "encrypted": "false",
     "libraries_enabled": "false",

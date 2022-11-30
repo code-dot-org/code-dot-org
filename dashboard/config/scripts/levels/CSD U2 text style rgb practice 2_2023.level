@@ -9,13 +9,13 @@
     "name_suffix": "_2023",
     "submittable": "false",
     "reference_links": [
-      "/courses/csd-2022/guides/text-properties",
-      "/courses/csd-2022/guides/formatting-html",
-      "/courses/csd-2022/guides/lists",
-      "/courses/csd-2022/guides/headings-and-paragraphs",
-      "/courses/csd-2022/guides/html-tags"
+      "/courses/csd/guides/text-properties",
+      "/courses/csd/guides/formatting-html",
+      "/courses/csd/guides/lists",
+      "/courses/csd/guides/headings-and-paragraphs",
+      "/courses/csd/guides/html-tags"
     ],
-    "map_reference": "/courses/csd-2022/guides/style-sheets",
+    "map_reference": "/courses/csd/guides/style-sheets",
     "encrypted": "false",
     "mini_rubric": "false",
     "start_sources": "{\r\n  \"files\": [\r\n    {\"name\": \"style.css\",\r\n      \"data\": \"body {\\r\\n  background: white;\\r\\n}\\r\\nh1{\\r\\n  color: rgb( 0 , 0, 0);\\r\\n}\\r\\n  h3 {\\r\\n  color: rgb( 0 , 0 , 0);\\r\\n}\\r\\n  p {\\r\\n  color: rgb( 0 , 0, 0);\\r\\n  }\"\r\n    },\r\n    {\r\n      \"name\": \"index.html\",\r\n      \"data\": \"<!DOCTYPE html>\\r\\n<html>\\r\\n  <head>\\r\\n    <link rel=\\\"stylesheet\\\" href=\\\"style.css\\\">\\r\\n  <\\/head>\\r\\n  <body>\\r\\n            <h1>Fun Facts About Color<\\/h1>\\r\\n    <h3>Pink soothes the nerves and is often used for anger management.<\\/h3>\\r\\n    <p>Pink has been known to suppress anger and anxiety and have an overall calming effect.<\\/p>\\r\\n    <h3>Worldwide blue is the most common favorite color.<\\/h3>\\r\\n    <p>Studies conducted by various global marketing firms show that blue is the most common favorite color worldwide, followed by purple.<\\/p>\\r\\n    <h3>Some people have a phobia of color.<\\/h3>\\r\\n    <p>Chromophobia, or chromatophobia, is an ongoing and irrational fear of colors that can have a negative impact on a person’s daily activities.<\\/p>\\r\\n    <h3>Yellow and red together make you hungry.<\\/h3>\\r\\n    <p>Fast food chains figured this out years ago and use this color combination over and over in branding, advertising and restaurant decor.<\\/p>\\r\\n    <h3>The color wheel was invented by Isaac Newton.<\\/h3>\\r\\n    <p>Around 1665 Isaac Newton used a prism to turn white light into a rainbow and identified seven colors. He felt the last color, indigo, was a recurrence of the first color, red and decided to arrange the colors in a circle.<\\/p> \\r\\n  <\\/body>\\r\\n<\\/html>\"\r\n    }\r\n  ]\r\n}",

@@ -102,14 +102,14 @@
     "parent_level_id": 23454,
     "name_suffix": "_virtual_2020",
     "reference_links": [
-      "/courses/csd-2022/guides/booleans-and-comparison-operators/",
-      "/courses/csd-2022/guides/if-statements",
-      "/courses/csd-2022/guides/if-else-statements/",
-      "/courses/csd-2022/guides/the-counter-pattern-2",
-      "/courses/csd-2022/guides/the-draw-loop",
-      "/courses/csd-2022/guides/sprite-properties"
+      "/courses/csd/guides/booleans-and-comparison-operators/",
+      "/courses/csd/guides/if-statements",
+      "/courses/csd/guides/if-else-statements/",
+      "/courses/csd/guides/the-counter-pattern-2",
+      "/courses/csd/guides/the-draw-loop",
+      "/courses/csd/guides/sprite-properties"
     ],
-    "map_reference": "/courses/csd-2022/guides/sprites/velocity/",
+    "map_reference": "/courses/csd/guides/sprites/velocity/",
     "video_key": "csd_gamelab_velocity",
     "mini_rubric": "false",
     "encrypted": "false",

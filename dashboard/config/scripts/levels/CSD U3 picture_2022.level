@@ -71,7 +71,7 @@
     "mini_rubric": "false",
     "bubble_choice_description": "Recreate an image from last lesson.",
     "libraries_enabled": "false",
-    "map_reference": "/courses/csd-2022/guides/drawing-shapes",
+    "map_reference": "/courses/csd/guides/drawing-shapes",
     "preload_asset_list": null
   },
   "level_num": "custom",

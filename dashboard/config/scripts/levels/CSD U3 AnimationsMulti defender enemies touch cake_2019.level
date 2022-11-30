@@ -45,13 +45,13 @@
     "parent_level_id": 11400,
     "name_suffix": "_2019",
     "reference_links": [
-      "/courses/csd-2022/guides/if-statements",
-      "/courses/csd-2022/guides/sprites/collision-detection/",
-      "/courses/csd-2022/guides/sprites/",
-      "/courses/csd-2022/guides/sprite-properties",
-      "/courses/csd-2022/guides/sprites/velocity/",
-      "/courses/csd-2022/guides/animation-tab",
-      "/courses/csd-2022/guides/animation-tab/editing-images/"
+      "/courses/csd/guides/if-statements",
+      "/courses/csd/guides/sprites/collision-detection/",
+      "/courses/csd/guides/sprites/",
+      "/courses/csd/guides/sprite-properties",
+      "/courses/csd/guides/sprites/velocity/",
+      "/courses/csd/guides/animation-tab",
+      "/courses/csd/guides/animation-tab/editing-images/"
     ],
     "mini_rubric": "false",
     "preload_asset_list": null,

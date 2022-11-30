@@ -58,11 +58,11 @@
     "widget_mode": "false",
     "ai_enabled": "false",
     "reference_links": [
-      "/courses/csd-2022/guides/variables",
-      "/courses/csd-2022/guides/taking-input-with-getproperty",
-      "/courses/csd-2022/guides/designing-screens-with-code",
-      "/courses/csd-2022/guides/if-statements",
-      "/courses/csd-2022/guides/booleans-and-comparison-operators"
+      "/courses/csd/guides/variables",
+      "/courses/csd/guides/taking-input-with-getproperty",
+      "/courses/csd/guides/designing-screens-with-code",
+      "/courses/csd/guides/if-statements",
+      "/courses/csd/guides/booleans-and-comparison-operators"
     ],
     "display_name": "Debugging",
     "thumbnail_url": "https://images.code.org/f87aa16429422001fc3f6c0e9216f7be-image-1650646971636.gif",

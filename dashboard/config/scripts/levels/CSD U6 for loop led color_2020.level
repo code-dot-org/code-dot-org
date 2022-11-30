@@ -119,12 +119,12 @@
     "parent_level_id": 18148,
     "name_suffix": "_2020",
     "reference_links": [
-      "/courses/csd-2022/guides/color-lights/",
-      "/courses/csd-2022/guides/circuits-and-leds/",
-      "/courses/csd-2022/guides/arrays/",
-      "/courses/csd-2022/guides/modifying-arrays/"
+      "/courses/csd/guides/color-lights/",
+      "/courses/csd/guides/circuits-and-leds/",
+      "/courses/csd/guides/arrays/",
+      "/courses/csd/guides/modifying-arrays/"
     ],
-    "map_reference": "/courses/csd-2022/guides/for-loops/",
+    "map_reference": "/courses/csd/guides/for-loops/",
     "mini_rubric": "true",
     "text_mode_at_start": "false",
     "encrypted": "false",

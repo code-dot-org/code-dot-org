@@ -98,10 +98,10 @@
     "parent_level_id": 20567,
     "name_suffix": "_2021",
     "reference_links": [
-      "/courses/csd-2022/guides/the-accelerometer/",
-      "/courses/csd-2022/guides/accelerometer-events/"
+      "/courses/csd/guides/the-accelerometer/",
+      "/courses/csd/guides/accelerometer-events/"
     ],
-    "map_reference": "/courses/csd-2022/guides/the-counter-pattern/",
+    "map_reference": "/courses/csd/guides/the-counter-pattern/",
     "mini_rubric": "false",
     "text_mode_at_start": "false",
     "encrypted": "false",

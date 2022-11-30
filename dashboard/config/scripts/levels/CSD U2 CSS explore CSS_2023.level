@@ -18,10 +18,10 @@
     "mini_rubric": "false",
     "validation_enabled": "false",
     "reference_links": [
-      "/courses/csd-2022/guides/formatting-html",
-      "/courses/csd-2022/guides/lists",
-      "/courses/csd-2022/guides/headings-and-paragraphs",
-      "/courses/csd-2022/guides/html-tags"
+      "/courses/csd/guides/formatting-html",
+      "/courses/csd/guides/lists",
+      "/courses/csd/guides/headings-and-paragraphs",
+      "/courses/csd/guides/html-tags"
     ]
   },
   "published": true,

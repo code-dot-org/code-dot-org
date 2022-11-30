@@ -23,7 +23,7 @@
   "resources": [
     {
       "name": "All Code",
-      "url": "/courses/csd-2022/code",
+      "url": "/courses/csd/code",
       "key": "all_code_5",
       "properties": {
         "is_rollup": true
@@ -34,7 +34,7 @@
     },
     {
       "name": "All Resources",
-      "url": "/courses/csd-2022/resources",
+      "url": "/courses/csd/resources",
       "key": "all_resources_7",
       "properties": {
         "is_rollup": true
@@ -45,7 +45,7 @@
     },
     {
       "name": "All Standards",
-      "url": "/courses/csd-2022/standards",
+      "url": "/courses/csd/standards",
       "key": "all_standards_7",
       "properties": {
         "is_rollup": true
@@ -56,7 +56,7 @@
     },
     {
       "name": "All Vocabulary",
-      "url": "/courses/csd-2022/vocab",
+      "url": "/courses/csd/vocab",
       "key": "all_vocabulary_7",
       "properties": {
         "is_rollup": true

@@ -62,10 +62,10 @@
     "parent_level_id": 23460,
     "name_suffix": "_2022",
     "reference_links": [
-      "/courses/csd-2022/guides/collision-detection",
-      "/courses/csd-2022/guides/velocity"
+      "/courses/csd/guides/collision-detection",
+      "/courses/csd/guides/velocity"
     ],
-    "map_reference": "/courses/csd-2022/guides/sprite-interactions",
+    "map_reference": "/courses/csd/guides/sprite-interactions",
     "mini_rubric": "false",
     "encrypted": "false",
     "display_name": "Collision Types",

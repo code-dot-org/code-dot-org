@@ -15,13 +15,13 @@
     "display_name": "Debug the missing heading style",
     "bubble_choice_description": "Use your debugging skills to figure out why the heading style is not being applied.",
     "reference_links": [
-      "/courses/csd-2022/guides/text-properties/",
-      "/courses/csd-2022/guides/formatting-html/",
-      "/courses/csd-2022/guides/lists/",
-      "/courses/csd-2022/guides/headings-and-paragraphs/",
-      "/courses/csd-2022/guides/html-tags/"
+      "/courses/csd/guides/text-properties/",
+      "/courses/csd/guides/formatting-html/",
+      "/courses/csd/guides/lists/",
+      "/courses/csd/guides/headings-and-paragraphs/",
+      "/courses/csd/guides/html-tags/"
     ],
-    "map_reference": "/courses/csd-2022/guides/style-sheets/",
+    "map_reference": "/courses/csd/guides/style-sheets/",
     "parent_level_id": 18855,
     "thumbnail_url": "https://images.code.org/7d9ca9e7fbe74bd10f77529cf7dd1c3b-image-1563297084071.JPG",
     "encrypted_examples": "us78lUakcIAHHgdlM5Ey69KzMneVGQPDQsuV9d9OW5b/JjNEQH9hu5qn20ZQ\nn6jY6GZ6YLjPjKbnJH/aPENKKQ==\n",

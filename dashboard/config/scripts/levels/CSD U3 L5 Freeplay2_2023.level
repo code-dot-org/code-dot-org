@@ -63,11 +63,11 @@
     "thumbnail_url": "https://images.code.org/f8f41593bc58e43cd6e61446f522535c-forest.png",
     "encrypted": "false",
     "reference_links": [
-      "/courses/csd-2022/guides/variables",
-      "/courses/csd-2022/guides/drawing-shapes",
-      "/courses/csd-2022/guides/shapes-and-parameters"
+      "/courses/csd/guides/variables",
+      "/courses/csd/guides/drawing-shapes",
+      "/courses/csd/guides/shapes-and-parameters"
     ],
-    "map_reference": "/courses/csd-2022/guides/naming-variables",
+    "map_reference": "/courses/csd/guides/naming-variables",
     "mini_rubric": "false",
     "libraries_enabled": "false",
     "bubble_choice_description": "Use what you've learned so far to create a drawing of nature. ",

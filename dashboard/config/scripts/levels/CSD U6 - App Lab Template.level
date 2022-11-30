@@ -93,12 +93,12 @@
     "preload_asset_list": null,
     "encrypted": "false",
     "reference_links": [
-      "/courses/csd-2022/guides/taking-input-with-getproperty/",
-      "/courses/csd-2022/guides/changing-screens/",
-      "/courses/csd-2022/guides/designing-screens-with-code/",
-      "/courses/csd-2022/guides/design-mode/",
-      "/courses/csd-2022/guides/design-mode/design-mode-elements/",
-      "/courses/csd-2022/guides/if-statements/"
+      "/courses/csd/guides/taking-input-with-getproperty/",
+      "/courses/csd/guides/changing-screens/",
+      "/courses/csd/guides/designing-screens-with-code/",
+      "/courses/csd/guides/design-mode/",
+      "/courses/csd/guides/design-mode/design-mode-elements/",
+      "/courses/csd/guides/if-statements/"
     ],
     "widget_mode": "false",
     "libraries_enabled": "true",

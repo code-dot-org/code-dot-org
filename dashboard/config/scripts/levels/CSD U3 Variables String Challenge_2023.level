@@ -66,11 +66,11 @@
     "encrypted_examples": "XH8A0FdybfV5+BGUR3BJxzALV31tk3T923YFgX8FDwCXeKRDaO2QBAgxteZ2\n+ri/HpvJaVmoYPn9jQtwz205vw==\n",
     "libraries_enabled": "false",
     "reference_links": [
-      "/courses/csd-2022/guides/variables",
-      "/courses/csd-2022/guides/drawing-shapes",
-      "/courses/csd-2022/guides/shapes-and-parameters"
+      "/courses/csd/guides/variables",
+      "/courses/csd/guides/drawing-shapes",
+      "/courses/csd/guides/shapes-and-parameters"
     ],
-    "map_reference": "/courses/csd-2022/guides/naming-variables",
+    "map_reference": "/courses/csd/guides/naming-variables",
     "bubble_choice_description": "Use variables with colors!",
     "preload_asset_list": null,
     "validation_enabled": "true"

@@ -228,11 +228,11 @@
     "parent_level_id": 16637,
     "name_suffix": "_2020",
     "reference_links": [
-      "/courses/csd-2022/guides/design-mode/",
-      "/courses/csd-2022/guides/for-loops/",
-      "/courses/csd-2022/guides/arrays/"
+      "/courses/csd/guides/design-mode/",
+      "/courses/csd/guides/for-loops/",
+      "/courses/csd/guides/arrays/"
     ],
-    "map_reference": "/courses/csd-2022/guides/functions/",
+    "map_reference": "/courses/csd/guides/functions/",
     "mini_rubric": "true",
     "text_mode_at_start": "false",
     "encrypted": "false",

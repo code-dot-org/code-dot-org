@@ -98,9 +98,9 @@
     "thumbnail_url": "https://images.code.org/0db6bb16d146712de1c1472ff868c163-image-1648868077754.png",
     "encrypted_examples": "ab3qS9owPQhNFFMfa1qW6X48oyTRh8lT85dAwJFWVFcnAXVeDUazYRliWTCY\n4zpaHvq004z42rpl1VjHTM+Nzg==\n",
     "reference_links": [
-      "/courses/csd-2022/guides/accelerometer-events",
-      "/courses/csd-2022/guides/the-accelerometer",
-      "/courses/csd-2022/guides/board-events"
+      "/courses/csd/guides/accelerometer-events",
+      "/courses/csd/guides/the-accelerometer",
+      "/courses/csd/guides/board-events"
     ],
     "preload_asset_list": null
   },

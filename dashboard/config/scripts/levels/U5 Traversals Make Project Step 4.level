@@ -72,11 +72,11 @@
     "encrypted": "false",
     "project_template_level_name": "U5 Traversals Make Project Template",
     "reference_links": [
-      "/courses/csd-2022/guides/update-screen-pattern",
-      "/courses/csp-2022/guides/when-to-make-a-function/",
-      "/courses/csp-2022/guides/random-list-access",
-      "/courses/csp-2022/guides/list-filter-pattern/",
-      "/courses/csp-2022/guides/list-reduce-pattern/"
+      "/courses/csd/guides/update-screen-pattern",
+      "/courses/csp/guides/when-to-make-a-function/",
+      "/courses/csp/guides/random-list-access",
+      "/courses/csp/guides/list-filter-pattern/",
+      "/courses/csp/guides/list-reduce-pattern/"
     ],
     "widget_mode": "false",
     "libraries_enabled": "false",

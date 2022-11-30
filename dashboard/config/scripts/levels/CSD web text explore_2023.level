@@ -51,11 +51,11 @@
     "parent_level_id": 23035,
     "name_suffix": "_2023",
     "reference_links": [
-      "/courses/csd-2022/guides/drawing-shapes",
-      "/courses/csd-2022/guides/shapes-and-parameters",
-      "/courses/csd-2022/guides/random-numbers"
+      "/courses/csd/guides/drawing-shapes",
+      "/courses/csd/guides/shapes-and-parameters",
+      "/courses/csd/guides/random-numbers"
     ],
-    "map_reference": "/courses/csd-2022/guides/variables",
+    "map_reference": "/courses/csd/guides/variables",
     "video_key": "csd_gamelab_variables_1",
     "disable_procedure_autopopulate": "false",
     "top_level_procedure_autopopulate": "false",

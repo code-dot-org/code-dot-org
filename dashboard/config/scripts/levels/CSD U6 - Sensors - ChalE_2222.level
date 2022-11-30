@@ -93,10 +93,10 @@
     "widget_mode": "false",
     "ai_enabled": "false",
     "reference_links": [
-      "/courses/csd-2022/guides/analog-sensors",
-      "/courses/csd-2022/guides/changing-sensor-scale",
-      "/courses/csd-2022/guides/board-events",
-      "/courses/csd-2022/guides/data-and-change-events"
+      "/courses/csd/guides/analog-sensors",
+      "/courses/csd/guides/changing-sensor-scale",
+      "/courses/csd/guides/board-events",
+      "/courses/csd/guides/data-and-change-events"
     ],
     "display_name": "Automatic Windows",
     "thumbnail_url": "https://images.code.org/b9fd0d16ad4a323a25c6fe2ec609a90c-image-1649457779121.png",

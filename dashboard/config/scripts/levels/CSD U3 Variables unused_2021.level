@@ -76,11 +76,11 @@
     "libraries_enabled": "false",
     "encrypted_examples": "WbOC0O13uiDDkoM8aohvnT77p3iTwgdpFf6m3kqyo63bPEk1d3StOWFHbB5B\nsywuteuzRsR6j1t/99tEEsByIg==\n",
     "reference_links": [
-      "/courses/csd-2022/guides/variables",
-      "/courses/csd-2022/guides/drawing-shapes",
-      "/courses/csd-2022/guides/shapes-and-parameters"
+      "/courses/csd/guides/variables",
+      "/courses/csd/guides/drawing-shapes",
+      "/courses/csd/guides/shapes-and-parameters"
     ],
-    "map_reference": "/courses/csd-2022/guides/naming-variables/",
+    "map_reference": "/courses/csd/guides/naming-variables/",
     "preload_asset_list": null
   },
   "published": true,

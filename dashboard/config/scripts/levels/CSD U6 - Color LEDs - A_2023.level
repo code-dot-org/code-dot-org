@@ -60,7 +60,7 @@
     "parent_level_id": 20515,
     "name_suffix": "_2023",
     "show_type_hints": "false",
-    "map_reference": "/courses/csd-2022/guides/color-lights",
+    "map_reference": "/courses/csd/guides/color-lights",
     "mini_rubric": "true",
     "encrypted": "false",
     "start_blocks": "//When \"rgbButton\" is clicked, turn on the redGreenBlue pattern\r\nonEvent(\"rgbButton\", \"click\", function() {\r\n  colorLeds[0].color(\"red\");\r\n  colorLeds[0].intensity(5);\r\n  colorLeds[1].color(\"green\");\r\n  colorLeds[1].intensity(30);\r\n  colorLeds[2].color(\"blue\");\r\n  colorLeds[2].intensity(55);\r\n  colorLeds[3].color(\"red\");\r\n  colorLeds[3].intensity(80);\r\n  colorLeds[4].color(\"green\");\r\n  colorLeds[4].intensity(100);\r\n  colorLeds[5].color(\"blue\");\r\n  colorLeds[5].intensity(100);\r\n  colorLeds[6].color(\"red\");\r\n  colorLeds[6].intensity(80);\r\n  colorLeds[7].color(\"green\");\r\n  colorLeds[7].intensity(55);\r\n  colorLeds[8].color(\"blue\");\r\n  colorLeds[8].intensity(30);\r\n  colorLeds[9].color(\"red\");\r\n  colorLeds[9].intensity(5);\r\n});\r\n//2) When the user clicks the button, a light pattern appears\r\n//Add your code here\r\n",
@@ -75,8 +75,8 @@
     "rubric_performance_level_4": "No pattern is used",
     "encrypted_examples": "uumlJUD2djBpdOGJpvd7CMTIIpuMvOJvLiz0xrFUwYaRTehUqZdHG6UdEx69\nc2XAHB/n35z0ewD8vd6zIunz0w==\n",
     "reference_links": [
-      "/courses/csd-2022/guides/design-mode",
-      "/courses/csd-2022/guides/responding-to-user-input"
+      "/courses/csd/guides/design-mode",
+      "/courses/csd/guides/responding-to-user-input"
     ],
     "preload_asset_list": null
   },

@@ -195,13 +195,13 @@
     "thumbnail_url": "https://images.code.org/c602af8d87fa94808ac0fb3fc6f972b0-image-1588266212376.02.44 AM.png",
     "libraries_enabled": "false",
     "reference_links": [
-      "/courses/csd-2022/guides/text-properties/",
-      "/courses/csd-2022/guides/formatting-html/",
-      "/courses/csd-2022/guides/lists/",
-      "/courses/csd-2022/guides/headings-and-paragraphs/",
-      "/courses/csd-2022/guides/html-tags/"
+      "/courses/csd/guides/text-properties/",
+      "/courses/csd/guides/formatting-html/",
+      "/courses/csd/guides/lists/",
+      "/courses/csd/guides/headings-and-paragraphs/",
+      "/courses/csd/guides/html-tags/"
     ],
-    "map_reference": "/courses/csd-2022/guides/style-sheets/",
+    "map_reference": "/courses/csd/guides/style-sheets/",
     "preload_asset_list": null
   },
   "published": true,

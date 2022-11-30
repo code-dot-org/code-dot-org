@@ -50,11 +50,11 @@
     "parent_level_id": 12903,
     "name_suffix": "_2019",
     "reference_links": [
-      "/courses/csd-2022/guides/multi-screen-apps/",
-      "/courses/csd-2022/guides/design-mode/",
-      "/courses/csd-2022/guides/design-mode/design-mode-elements/"
+      "/courses/csd/guides/multi-screen-apps/",
+      "/courses/csd/guides/design-mode/",
+      "/courses/csd/guides/design-mode/design-mode-elements/"
     ],
-    "map_reference": "/courses/csd-2022/guides/design-mode/importing-screens/",
+    "map_reference": "/courses/csd/guides/design-mode/importing-screens/",
     "mini_rubric": "false",
     "preload_asset_list": null,
     "encrypted": "false"

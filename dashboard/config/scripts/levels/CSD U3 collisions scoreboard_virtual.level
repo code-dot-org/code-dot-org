@@ -79,11 +79,11 @@
     "parent_level_id": 16158,
     "name_suffix": "_virtual",
     "reference_links": [
-      "/courses/csd-2022/guides/if-statements",
-      "/courses/csd-2022/guides/sprites/",
-      "/courses/csd-2022/guides/sprite-properties"
+      "/courses/csd/guides/if-statements",
+      "/courses/csd/guides/sprites/",
+      "/courses/csd/guides/sprite-properties"
     ],
-    "map_reference": "/courses/csd-2022/guides/sprites/collision-detection/",
+    "map_reference": "/courses/csd/guides/sprites/collision-detection/",
     "mini_rubric": "false",
     "encrypted": "false",
     "preload_asset_list": null

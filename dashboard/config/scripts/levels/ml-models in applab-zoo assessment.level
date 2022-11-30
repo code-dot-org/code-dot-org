@@ -50,10 +50,10 @@
     "ai_enabled": "true",
     "callout_json": "[]",
     "reference_links": [
-      "/courses/csd-2022/guides/changing-screens/",
-      "/courses/csd-2022/guides/if-statements/",
-      "/courses/csd-2022/guides/design-mode/",
-      "/courses/csd-2022/guides/multi-screen-apps/"
+      "/courses/csd/guides/changing-screens/",
+      "/courses/csd/guides/if-statements/",
+      "/courses/csd/guides/design-mode/",
+      "/courses/csd/guides/multi-screen-apps/"
     ],
     "video_key": "csp_applab_conditionals_2A",
     "ai_model_id": "8Tyv0p3Hfl19",

@@ -82,14 +82,14 @@
     "parent_level_id": 20834,
     "name_suffix": "_2022",
     "reference_links": [
-      "/courses/csd-2022/guides/collision-detection",
-      "/courses/csd-2022/guides/velocity",
-      "/courses/csd-2022/guides/booleans-and-comparison-operators",
-      "/courses/csd-2022/guides/if-statements",
-      "/courses/csd-2022/guides/if-else-statements",
-      "/courses/csd-2022/guides/multi-frame-animations"
+      "/courses/csd/guides/collision-detection",
+      "/courses/csd/guides/velocity",
+      "/courses/csd/guides/booleans-and-comparison-operators",
+      "/courses/csd/guides/if-statements",
+      "/courses/csd/guides/if-else-statements",
+      "/courses/csd/guides/multi-frame-animations"
     ],
-    "map_reference": "/courses/csd-2022/guides/velocity-and-the-counter-pattern",
+    "map_reference": "/courses/csd/guides/velocity-and-the-counter-pattern",
     "mini_rubric": "false",
     "encrypted": "false",
     "libraries_enabled": "false",
