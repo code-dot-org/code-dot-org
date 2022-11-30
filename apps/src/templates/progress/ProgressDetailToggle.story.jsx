@@ -1,58 +1,44 @@
 import React from 'react';
 import {action} from '@storybook/addon-actions';
 import {UnconnectedProgressDetailToggle as ProgressDetailToggle} from './ProgressDetailToggle';
-import progress from '@cdo/apps/code-studio/progressRedux';
+import {reduxStore} from '@cdo/storybook/decorators';
+import {Provider} from 'react-redux';
 
-export default storybook => {
-  storybook
-    .storiesOf('Progress/ProgressDetailToggle', module)
-    .withReduxStore({progress})
-    .addStoryTable([
-      {
-        name: 'isSummary is true',
-        story: () => {
-          return (
-            <ProgressDetailToggle
-              isPlc={false}
-              isSummaryView
-              hasGroups={false}
-              setIsSummaryView={action('setIsSummaryView')}
-            />
-          );
-        }
-      },
-      {
-        name: 'isSummary is false',
-        story: () => (
-          <ProgressDetailToggle
-            isPlc={false}
-            isSummaryView={false}
-            hasGroups={false}
-            setIsSummaryView={action('setIsSummaryView')}
-          />
-        )
-      },
-      {
-        name: 'isSummary is true with groups',
-        story: () => (
-          <ProgressDetailToggle
-            isPlc={false}
-            isSummaryView
-            hasGroups
-            setIsSummaryView={action('setIsSummaryView')}
-          />
-        )
-      },
-      {
-        name: 'isSummary is false with groups',
-        story: () => (
-          <ProgressDetailToggle
-            isPlc={false}
-            isSummaryView={false}
-            hasGroups
-            setIsSummaryView={action('setIsSummaryView')}
-          />
-        )
-      }
-    ]);
+export default {
+  title: 'ProgressDetailToggle',
+  component: ProgressDetailToggle
+};
+
+const Template = args => (
+  <Provider store={reduxStore()}>
+    <ProgressDetailToggle
+      setIsSummaryView={action('setIsSummaryView')}
+      isPlc={false}
+      {...args}
+    />
+  </Provider>
+);
+
+export const YesSummaryNoGroups = Template.bind({});
+YesSummaryNoGroups.args = {
+  isSummaryView: true,
+  hasGroups: false
+};
+
+export const NoSummaryNoGroups = Template.bind({});
+NoSummaryNoGroups.args = {
+  isSummaryView: false,
+  hasGroups: false
+};
+
+export const YesSummaryYesGroups = Template.bind({});
+YesSummaryYesGroups.args = {
+  isSummaryView: true,
+  hasGroups: true
+};
+
+export const NoSummaryYesGroups = Template.bind({});
+NoSummaryYesGroups.args = {
+  isSummaryView: false,
+  hasGroups: true
 };

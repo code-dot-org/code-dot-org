@@ -7,7 +7,7 @@
   - user_course_enrollments.each do |user_course_enrollment|
     %h3.course_title
       = user_course_enrollment.plc_course.name
-    -# Lame that we have to do this but Firefox doesn't support multiline flexboxes
+    -# Adjust because Firefox doesn't support multiline flexboxes
     - user_course_enrollment.plc_unit_assignments.each_slice(2).to_a.each do |unit_group|
       .course_unit_sections
         - unit_group.each do |unit_enrollment|
