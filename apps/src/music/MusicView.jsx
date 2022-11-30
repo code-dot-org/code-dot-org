@@ -18,20 +18,14 @@ import TopButtons from './TopButtons';
 import Globals from './globals';
 import MusicBlocklyWorkspace from './blockly/MusicBlocklyWorkspace';
 import KeyHandler from './KeyHandler';
+import {
+  InstructionsPositions,
+  setCurrentAudioElapsedTime,
+  setSoundEvents,
+  toggleInstructions
+} from './musiclabRedux';
 
 const baseUrl = 'https://curriculum.code.org/media/musiclab/';
-
-const InstructionsPositions = {
-  TOP: 'TOP',
-  LEFT: 'LEFT',
-  RIGHT: 'RIGHT'
-};
-
-const instructionPositionOrder = [
-  InstructionsPositions.TOP,
-  InstructionsPositions.LEFT,
-  InstructionsPositions.RIGHT
-];
 
 const DEFAULT_GROUP_NAME = 'all';
 
@@ -40,7 +34,14 @@ class UnconnectedMusicView extends React.Component {
     // populated by Redux
     userId: PropTypes.number,
     userType: PropTypes.string,
-    signInState: PropTypes.oneOf(Object.values(SignInState))
+    signInState: PropTypes.oneOf(Object.values(SignInState)),
+    timelineAtTop: PropTypes.bool.isRequired,
+    showInstructions: PropTypes.bool.isRequired,
+    instructionsPosition: PropTypes.oneOf(Object.values(InstructionsPositions))
+      .isRequired,
+    toggleInstructions: PropTypes.func.isRequired,
+    setCurrentAudioElapsedTime: PropTypes.func.isRequired,
+    setSoundEvents: PropTypes.func.isRequired
   };
 
   constructor(props) {
@@ -48,19 +49,14 @@ class UnconnectedMusicView extends React.Component {
 
     this.player = new MusicPlayer();
     this.analyticsReporter = new AnalyticsReporter();
-    this.codeHooks = {};
     this.musicBlocklyWorkspace = new MusicBlocklyWorkspace();
 
     this.state = {
       library: null,
       instructions: null,
-      isPlaying: false,
-      startPlayingAudioTime: null,
-      currentAudioElapsedTime: 0,
-      updateNumber: 0,
-      timelineAtTop: false,
-      showInstructions: true,
-      instructionsPosIndex: 1
+      isPlaying: false
+      // currentAudioElapsedTime: 0,
+      // updateNumber: 0
     };
   }
 
@@ -78,8 +74,6 @@ class UnconnectedMusicView extends React.Component {
     window.addEventListener('beforeunload', () =>
       this.analyticsReporter.endSession()
     );
-
-    // document.body.addEventListener('keyup', this.handleKeyUp);
 
     this.loadLibrary().then(library => {
       this.setState({library});
@@ -116,9 +110,9 @@ class UnconnectedMusicView extends React.Component {
 
   updateTimer = () => {
     if (this.state.isPlaying) {
-      this.setState({
-        currentAudioElapsedTime: this.player.getCurrentAudioElapsedTime()
-      });
+      this.props.setCurrentAudioElapsedTime(
+        this.player.getCurrentAudioElapsedTime()
+      );
     }
   };
 
@@ -179,7 +173,7 @@ class UnconnectedMusicView extends React.Component {
 
     // This is a way to tell React to re-render the scene, notably
     // the timeline.
-    this.setState({updateNumber: this.state.updateNumber + 1});
+    // this.setState({updateNumber: this.state.updateNumber + 1});
 
     this.musicBlocklyWorkspace.saveCode();
   };
@@ -199,22 +193,22 @@ class UnconnectedMusicView extends React.Component {
     }
     this.analyticsReporter.onButtonClicked('trigger', {id});
     this.musicBlocklyWorkspace.executeTrigger(id);
+    // this.props.setSoundEvents([...this.player.getSoundEvents()]);
   };
 
   toggleInstructions = fromKeyboardShortcut => {
     this.analyticsReporter.onButtonClicked('show-hide-instructions', {
-      showing: !this.state.showInstructions,
+      showing: !this.props.showInstructions,
       fromKeyboardShortcut
     });
-    this.setState({
-      showInstructions: !this.state.showInstructions
-    });
+    this.props.toggleInstructions();
   };
 
   executeSong = () => {
     this.musicBlocklyWorkspace.executeSong({
       MusicPlayer: this.player
     });
+    // this.props.setSoundEvents([...this.player.getSoundEvents()]);
   };
 
   playSong = () => {
@@ -241,6 +235,7 @@ class UnconnectedMusicView extends React.Component {
     this.player.clearTriggeredEvents();
 
     this.setState({isPlaying: false});
+    this.props.setCurrentAudioElapsedTime(0);
   };
 
   stopAllSoundsStillToPlay = () => {
@@ -257,44 +252,6 @@ class UnconnectedMusicView extends React.Component {
 
   getCurrentGroupSounds = () => {
     return this.getCurrentGroup()?.folders;
-  };
-
-  // handleKeyUp = event => {
-  //   // Don't handle a keyboard shortcut if the active element is an
-  //   // input field, since the user is probably trying to type something.
-  //   if (document.activeElement.tagName.toLowerCase() === 'input') {
-  //     return;
-  //   }
-
-  //   if (event.key === 't') {
-  //     this.setState({timelineAtTop: !this.state.timelineAtTop});
-  //   }
-  //   if (event.key === 'i') {
-  //     this.toggleInstructions(true);
-  //   }
-  //   if (event.key === 'n') {
-  //     this.setState({
-  //       instructionsPosIndex:
-  //         (this.state.instructionsPosIndex + 1) %
-  //         instructionPositionOrder.length
-  //     });
-  //   }
-  //   Triggers.map(trigger => {
-  //     if (event.key === trigger.keyboardKey) {
-  //       this.playTrigger(trigger.id);
-  //     }
-  //   });
-  //   if (event.code === 'Space') {
-  //     this.setPlaying(!this.state.isPlaying);
-  //   }
-  // };
-
-  onFeedbackClicked = () => {
-    this.analyticsReporter.onButtonClicked('feedback');
-    window.open(
-      'https://docs.google.com/forms/d/e/1FAIpQLScnUgehPPNjhSNIcCpRMcHFgtE72TlfTOh6GkER6aJ-FtIwTQ/viewform?usp=sf_link',
-      '_blank'
-    );
   };
 
   renderInstructions(position) {
@@ -345,10 +302,6 @@ class UnconnectedMusicView extends React.Component {
   }
 
   renderTimelineArea(timelineAtTop, instructionsOnRight) {
-    const songData = {
-      events: this.player.getSoundEvents()
-    };
-
     return (
       <div
         id="timeline-area"
@@ -367,8 +320,6 @@ class UnconnectedMusicView extends React.Component {
         />
         <Timeline
           isPlaying={this.state.isPlaying}
-          songData={songData}
-          currentAudioElapsedTime={this.state.currentAudioElapsedTime}
           convertMeasureToSeconds={measure =>
             this.player.convertMeasureToSeconds(measure)
           }
@@ -380,28 +331,27 @@ class UnconnectedMusicView extends React.Component {
   }
 
   render() {
-    const instructionsPosition =
-      instructionPositionOrder[this.state.instructionsPosIndex];
+    const {showInstructions, timelineAtTop, instructionsPosition} = this.props;
 
     return (
       <AnalyticsContext.Provider value={this.analyticsReporter}>
         <KeyHandler
-          setPlaying={this.setPlaying}
+          togglePlaying={() => this.setPlaying(!this.state.isPlaying)}
           playTrigger={this.playTrigger}
         />
         <div id="music-lab-container" className={moduleStyles.container}>
-          {this.state.showInstructions &&
+          {showInstructions &&
             instructionsPosition === InstructionsPositions.TOP &&
             this.renderInstructions(InstructionsPositions.TOP)}
 
-          {this.state.timelineAtTop &&
+          {timelineAtTop &&
             this.renderTimelineArea(
               true,
               instructionsPosition === InstructionsPositions.RIGHT
             )}
 
           <div className={moduleStyles.middleArea}>
-            {this.state.showInstructions &&
+            {showInstructions &&
               instructionsPosition === InstructionsPositions.LEFT &&
               this.renderInstructions(InstructionsPositions.LEFT)}
 
@@ -412,12 +362,12 @@ class UnconnectedMusicView extends React.Component {
               <div id="blockly-div" />
             </div>
 
-            {this.state.showInstructions &&
+            {showInstructions &&
               instructionsPosition === InstructionsPositions.RIGHT &&
               this.renderInstructions(InstructionsPositions.RIGHT)}
           </div>
 
-          {!this.state.timelineAtTop &&
+          {!timelineAtTop &&
             this.renderTimelineArea(
               false,
               instructionsPosition === InstructionsPositions.RIGHT
@@ -428,11 +378,22 @@ class UnconnectedMusicView extends React.Component {
   }
 }
 
-const MusicView = connect(state => ({
-  userId: state.currentUser.userId,
-  userType: state.currentUser.userType,
-  signInState: state.currentUser.signInState
-}))(UnconnectedMusicView);
+const MusicView = connect(
+  state => ({
+    userId: state.currentUser.userId,
+    userType: state.currentUser.userType,
+    signInState: state.currentUser.signInState,
+    timelineAtTop: state.music.timelineAtTop,
+    showInstructions: state.music.showInstructions,
+    instructionsPosition: state.music.instructionsPosition
+  }),
+  dispatch => ({
+    toggleInstructions: () => dispatch(toggleInstructions()),
+    setCurrentAudioElapsedTime: time =>
+      dispatch(setCurrentAudioElapsedTime(time)),
+    setSoundEvents: events => dispatch(setSoundEvents(events))
+  })
+)(UnconnectedMusicView);
 
 const MusicLabView = () => {
   return (

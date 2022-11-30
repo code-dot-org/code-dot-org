@@ -6,7 +6,7 @@ import {Triggers} from '@cdo/apps/music/constants';
 import moduleStyles from './controls.module.scss';
 import BeatPad from './BeatPad';
 import {AnalyticsContext} from './context';
-import {useDispatch, useSelector} from 'react-redux';
+import {connect} from 'react-redux';
 import {setBeatPadShowing, toggleBeatPad} from './musiclabRedux';
 
 const Controls = ({
@@ -15,17 +15,17 @@ const Controls = ({
   playTrigger,
   top,
   toggleInstructions,
-  instructionsOnRight
+  instructionsOnRight,
+  // populated by Redux
+  showBeatPad,
+  setBeatPadShowing,
+  toggleBeatPad
 }) => {
-  const showBeatPad = useSelector(state => state.music.showBeatPad);
-  const dispatch = useDispatch();
-
-  // const [isShowingBeatPad, setBeatPadShowing] = useState(false);
   useEffect(() => {
     if (isPlaying) {
-      dispatch(setBeatPadShowing(true));
+      setBeatPadShowing(true);
     }
-  }, [isPlaying, dispatch]);
+  }, [isPlaying]);
 
   const analyticsReporter = useContext(AnalyticsContext);
 
@@ -42,7 +42,7 @@ const Controls = ({
           triggers={Triggers}
           playTrigger={playTrigger}
           onClose={() => {
-            dispatch(setBeatPadShowing(false));
+            setBeatPadShowing(false);
             analyticsReporter.onButtonClicked('show-hide-beatpad', {
               showing: false
             });
@@ -67,7 +67,7 @@ const Controls = ({
     analyticsReporter.onButtonClicked('show-hide-beatpad', {
       showing: !showBeatPad
     });
-    dispatch(toggleBeatPad());
+    toggleBeatPad();
   });
   const infoIconSection = renderIconButton('info-circle', toggleInstructions);
 
@@ -99,7 +99,18 @@ Controls.propTypes = {
   playTrigger: PropTypes.func.isRequired,
   top: PropTypes.bool.isRequired,
   toggleInstructions: PropTypes.func.isRequired,
-  instructionsOnRight: PropTypes.bool.isRequired
+  instructionsOnRight: PropTypes.bool.isRequired,
+  showBeatPad: PropTypes.bool.isRequired,
+  setBeatPadShowing: PropTypes.func.isRequired,
+  toggleBeatPad: PropTypes.func.isRequired
 };
 
-export default Controls;
+export default connect(
+  state => ({
+    showBeatPad: state.music.showBeatPad
+  }),
+  dispatch => ({
+    setBeatPadShowing: showing => dispatch(setBeatPadShowing(showing)),
+    toggleBeatPad: () => dispatch(toggleBeatPad())
+  })
+)(Controls);

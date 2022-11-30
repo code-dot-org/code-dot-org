@@ -1,6 +1,6 @@
 import {useEffect} from 'react';
 import PropTypes from 'prop-types';
-import {useDispatch} from 'react-redux';
+import {connect} from 'react-redux';
 import {
   shiftInstructionsPosition,
   toggleBeatPad,
@@ -9,9 +9,15 @@ import {
 } from './musiclabRedux';
 import {Triggers} from './constants';
 
-const KeyHandler = ({playTrigger, setPlaying}) => {
-  const dispatch = useDispatch();
-
+const KeyHandler = ({
+  playTrigger,
+  togglePlaying,
+  // populated by Redux
+  toggleTimelinePosition,
+  toggleInstructions,
+  shiftInstructionsPosition,
+  toggleBeatPad
+}) => {
   const handleKeyUp = event => {
     // Don't handle a keyboard shortcut if the active element is an
     // input field, since the user is probably trying to type something.
@@ -20,16 +26,16 @@ const KeyHandler = ({playTrigger, setPlaying}) => {
     }
 
     if (event.key === 't') {
-      dispatch(toggleTimelinePosition());
+      toggleTimelinePosition();
     }
     if (event.key === 'i') {
-      dispatch(toggleInstructions());
+      toggleInstructions();
     }
     if (event.key === 'n') {
-      dispatch(shiftInstructionsPosition());
+      shiftInstructionsPosition();
     }
     if (event.key === 'b') {
-      dispatch(toggleBeatPad());
+      toggleBeatPad();
     }
     Triggers.map(trigger => {
       if (event.key === trigger.keyboardKey) {
@@ -37,7 +43,7 @@ const KeyHandler = ({playTrigger, setPlaying}) => {
       }
     });
     if (event.code === 'Space') {
-      setPlaying(!this.state.isPlaying);
+      togglePlaying();
     }
   };
 
@@ -50,7 +56,19 @@ const KeyHandler = ({playTrigger, setPlaying}) => {
 
 KeyHandler.propTypes = {
   playTrigger: PropTypes.func.isRequired,
-  setPlaying: PropTypes.func.isRequired
+  togglePlaying: PropTypes.func.isRequired,
+  toggleTimelinePosition: PropTypes.func.isRequired,
+  toggleInstructions: PropTypes.func.isRequired,
+  shiftInstructionsPosition: PropTypes.func.isRequired,
+  toggleBeatPad: PropTypes.func.isRequired
 };
 
-export default KeyHandler;
+export default connect(
+  state => ({}),
+  dispatch => ({
+    toggleTimelinePosition: () => dispatch(toggleTimelinePosition()),
+    toggleInstructions: () => dispatch(toggleInstructions()),
+    shiftInstructionsPosition: () => dispatch(shiftInstructionsPosition()),
+    toggleBeatPad: () => dispatch(toggleBeatPad())
+  })
+)(KeyHandler);
