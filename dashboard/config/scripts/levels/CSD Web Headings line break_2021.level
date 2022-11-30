@@ -16,9 +16,9 @@
     "bubble_choice_description": "Learn how to make new lines without starting a new paragraph.  You can use this code to add poems or lists to your page.",
     "encrypted_examples": "f+QYaDua/xyX9rh6RrPEhegK/k90GOrtZGW8VELgCboNkRv+aOqFCzcUZNzm\nFcZ07zYNbzDulbsfhQE/Q3vRxw==\n",
     "reference_links": [
-      "/courses/csd-2022/guides/html-tags/"
+      "/docs/concepts/html/html-tags/"
     ],
-    "map_reference": "/courses/csd-2022/guides/headings-and-paragraphs/",
+    "map_reference": "/docs/concepts/html/headings-and-paragraphs/",
     "thumbnail_url": "https://images.code.org/c1fb2198202517b8ddfe3ccb9865ca3e-image-1562863985170.JPG",
     "parent_level_id": 18817,
     "name_suffix": "_2021"

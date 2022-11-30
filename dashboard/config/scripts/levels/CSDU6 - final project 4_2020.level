@@ -115,7 +115,7 @@
     "parent_level_id": 16664,
     "name_suffix": "_2020",
     "reference_links": [
-      "/courses/csd-2022/guides/functions/"
+      "/docs/concepts/javascript/functions/"
     ],
     "mini_rubric": "false",
     "preload_asset_list": null

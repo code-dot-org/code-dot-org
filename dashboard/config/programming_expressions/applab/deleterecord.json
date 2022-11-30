@@ -3,7 +3,7 @@
   "name": "deleteRecord(table, record, callback)",
   "category": "Data",
   "category_key": "data",
-  "content": "Adding permanent data storage to your apps is the last step to making them real-world. The apps you use everyday are driven by data \"in the cloud\".\n\n**First time using App Lab table data storage?** Read a short overview of what it is and how to use it [here](/courses/csd-2022/guides/tableDataStorage/).\n\nThe *record* parameter must be a javascript object variable or a javascript object defined using curly brace and colon notation AND must contain the *id* property (see examples below). Data is only accessible to the app that created the table. \n\nTo View your app's table data, click 'View data' in App Lab and click the table name you want to view.",
+  "content": "Adding permanent data storage to your apps is the last step to making them real-world. The apps you use everyday are driven by data \"in the cloud\".\n\n**First time using App Lab table data storage?** Read a short overview of what it is and how to use it [here](/docs/concepts/tableDataStorage/).\n\nThe *record* parameter must be a javascript object variable or a javascript object defined using curly brace and colon notation AND must contain the *id* property (see examples below). Data is only accessible to the app that created the table. \n\nTo View your app's table data, click 'View data' in App Lab and click the table name you want to view.",
   "examples": [
     {
       "name": "Example: Delete Most Recent Record",

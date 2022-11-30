@@ -52,8 +52,8 @@
     "ai_model_id": "z5SZPaoHHIvF",
     "ai_model_name": "Club Recommender",
     "reference_links": [
-      "/courses/csd-2022/guides/design-mode/",
-      "/courses/csd-2022/guides/design-mode/design-mode-elements/"
+      "/docs/concepts/app-lab/design-mode/",
+      "/docs/concepts/app-lab/design-mode/design-mode-elements/"
     ],
     "video_key": "csd_ml_model_cards_july2021",
     "preload_asset_list": null,

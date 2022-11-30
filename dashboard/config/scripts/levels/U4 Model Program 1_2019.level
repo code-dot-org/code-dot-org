@@ -52,10 +52,10 @@
     "name_suffix": "_2019",
     "mini_rubric": "false",
     "reference_links": [
-      "/courses/csd-2022/guides/design-mode/",
-      "/courses/csd-2022/guides/design-mode/design-mode-elements/"
+      "/docs/concepts/app-lab/design-mode/",
+      "/docs/concepts/app-lab/design-mode/design-mode-elements/"
     ],
-    "map_reference": "/courses/csd-2022/guides/multi-screen-apps/",
+    "map_reference": "/docs/concepts/app-lab/multi-screen-apps/",
     "preload_asset_list": null,
     "encrypted": "false"
   },

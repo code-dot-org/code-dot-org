@@ -113,8 +113,8 @@
     "parent_level_id": 20609,
     "name_suffix": "_2021",
     "reference_links": [
-      "/courses/csd-2022/guides/design-mode/",
-      "/courses/csd-2022/guides/design-mode/design-mode-elements/"
+      "/docs/concepts/app-lab/design-mode/",
+      "/docs/concepts/app-lab/design-mode/design-mode-elements/"
     ],
     "mini_rubric": "false",
     "preload_asset_list": null

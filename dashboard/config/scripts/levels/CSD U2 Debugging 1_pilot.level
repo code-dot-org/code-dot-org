@@ -14,12 +14,12 @@
     "parent_level_id": 15888,
     "name_suffix": "_pilot",
     "reference_links": [
-      "/courses/csd-2022/guides/html-tags/",
-      "/courses/csd-2022/guides/headings-and-paragraphs/",
-      "/courses/csd-2022/guides/lists/",
-      "/courses/csd-2022/guides/images-in-html/"
+      "/docs/concepts/html/html-tags/",
+      "/docs/concepts/html/headings-and-paragraphs/",
+      "/docs/concepts/html/lists/",
+      "/docs/concepts/html/images-in-html/"
     ],
-    "map_reference": "/courses/csd-2022/guides/formatting-html/"
+    "map_reference": "/docs/concepts/html/formatting-html/"
   },
   "published": true,
   "notes": "",

@@ -77,10 +77,10 @@
     "widget_mode": "false",
     "ai_enabled": "false",
     "reference_links": [
-      "/courses/csd-2022/guides/analog-sensors/",
-      "/courses/csd-2022/guides/the-accelerometer/",
-      "/courses/csd-2022/guides/board-events/",
-      "/courses/csd-2022/guides/data-and-change-events/"
+      "/docs/concepts/maker-toolkit/analog-sensors/",
+      "/docs/concepts/maker-toolkit/the-accelerometer/",
+      "/docs/concepts/maker-toolkit/board-events/",
+      "/docs/concepts/maker-toolkit/data-and-change-events/"
     ],
     "rubric_key_concept": "Use the accelerometer in an event and with data to create an app",
     "rubric_performance_level_1": "The app matches the description, using an onBoardEvent to detect accelerometer movement and uses variables and getOrientation blocks to make changes to the x and y positions",

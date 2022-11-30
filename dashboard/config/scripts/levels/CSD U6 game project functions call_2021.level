@@ -226,7 +226,7 @@
     "makerlab_enabled": "true",
     "parent_level_id": 20490,
     "name_suffix": "_2021",
-    "map_reference": "/courses/csd-2022/guides/functions/",
+    "map_reference": "/docs/concepts/javascript/functions/",
     "mini_rubric": "false",
     "text_mode_at_start": "false",
     "preload_asset_list": null

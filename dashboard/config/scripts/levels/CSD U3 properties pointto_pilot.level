@@ -82,7 +82,7 @@
     "long_instructions": "# Point To\r\n\r\nThe pointTo block can point your sprite to particular elements on a screen.\r\n\r\n# Do This\r\n\r\n* Run the code to see where the spaceship is pointing.\r\n* Change the code to make the spaceship point somewhere else.\r\n* Add a new sprite, and point it in a different direction.\r\n\r\n",
     "parent_level_id": 19235,
     "name_suffix": "_pilot",
-    "map_reference": "/courses/csd-2022/guides/sprite-properties",
+    "map_reference": "/docs/concepts/game-lab/sprites/sprite-properties/",
     "video_key": "csd_gamelab_draw_2",
     "disable_procedure_autopopulate": "false",
     "top_level_procedure_autopopulate": "false",
@@ -95,14 +95,14 @@
     "encrypted_examples": "lPBzOuO2aFHwOrQG/ylOCecmwrA1BwVi4vhdXwCSJTHvEfKgVxCFwPCTBdk0\nCT0OPdRzozI8P5XpofocnDjzGg==\n",
     "libraries_enabled": "false",
     "reference_links": [
-      "/courses/csd-2022/guides/sprites/",
-      "/courses/csd-2022/guides/animation-tab",
-      "/courses/csd-2022/guides/random-numbers",
-      "/courses/csd-2022/guides/variables",
-      "/courses/csd-2022/guides/naming-variables",
-      "/courses/csd-2022/guides/drawing-shapes",
-      "/courses/csd-2022/guides/shapes-and-parameters",
-      "/courses/csd-2022/guides/sprites/sprite-interactions/"
+      "/docs/concepts/game-lab/sprites/",
+      "/docs/concepts/game-lab/animation-tab/",
+      "/docs/concepts/javascript/random-numbers/",
+      "/docs/concepts/javascript/variables/",
+      "/docs/concepts/javascript/naming-variables/",
+      "/docs/concepts/game-lab/drawing-shapes/",
+      "/docs/concepts/game-lab/shapes-and-parameters/",
+      "/docs/concepts/game-lab/sprites/sprite-interactions/"
     ],
     "preload_asset_list": null,
     "bubble_choice_description": "Make your sprite automatically rotate towards a point on screen."

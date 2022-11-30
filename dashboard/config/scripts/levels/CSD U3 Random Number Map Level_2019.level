@@ -7,7 +7,7 @@
   "properties": {
     "instructions_important": "false",
     "display_name": "Random Numbers",
-    "reference": "/courses/csd-2022/guides/random-numbers/index.html",
+    "reference": "/docs/concepts/javascript/random-numbers/index.html",
     "parent_level_id": 11197,
     "name_suffix": "_2019"
   },

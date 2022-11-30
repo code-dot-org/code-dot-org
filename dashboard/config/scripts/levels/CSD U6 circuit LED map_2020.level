@@ -8,7 +8,7 @@
     "instructions_important": "false",
     "display_name": "Circuits and LEDs",
     "teacher_markdown": "#### Learning More About LEDs\r\n\r\nWe include LED sequins in the Circuit Playground classroom pack, but if you're careful you can use just about any LEDs you like. To learn more about pairing LEDs with the proper resistor, check out [Adafruit's LED primer](https://learn.adafruit.com/all-about-leds/overview).",
-    "reference": "/courses/csd-2022/guides/circuits-and-leds/index.html",
+    "reference": "/docs/concepts/maker-toolkit/circuits-and-leds/index.html",
     "parent_level_id": 16644,
     "name_suffix": "_2020"
   },

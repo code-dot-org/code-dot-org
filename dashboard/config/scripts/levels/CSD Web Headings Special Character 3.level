@@ -12,9 +12,9 @@
     "bubble_choice_description": "Learn the code for the special character \"&\" and practice using it.",
     "encrypted_examples": "C7kfJEzqC2VNgvlQnRIZJp6fiN8of+lCMjmRUQL/CzFIx6M3hWvbfq9q++7h\n1cfKMBB0ioHgDDUPfa4wq4aMfQ==\n",
     "reference_links": [
-      "/courses/csd-2022/guides/html-tags/"
+      "/docs/concepts/html/html-tags/"
     ],
-    "map_reference": "/courses/csd-2022/guides/headings-and-paragraphs/",
+    "map_reference": "/docs/concepts/html/headings-and-paragraphs/",
     "parent_level_id": 18834,
     "thumbnail_url": "https://images.code.org/61b027dce3170fcf559f5fe70431a0bc-image-1562804529117.JPG",
     "validation_enabled": "false"

@@ -46,10 +46,10 @@
     "parent_level_id": 16210,
     "name_suffix": "_virtual",
     "reference_links": [
-      "/courses/csd-2022/guides/if-statements",
-      "/courses/csd-2022/guides/if-else-statements/"
+      "/docs/concepts/javascript/if-statements/",
+      "/docs/concepts/javascript/if-else-statements/"
     ],
-    "map_reference": "/courses/csd-2022/guides/functions/",
+    "map_reference": "/docs/concepts/javascript/functions/",
     "mini_rubric": "true",
     "encrypted": "false",
     "rubric_key_concept": "Define and call functions to organize code and make it easier to reuse.",

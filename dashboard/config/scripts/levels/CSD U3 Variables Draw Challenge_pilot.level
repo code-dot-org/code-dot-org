@@ -65,11 +65,11 @@
     "thumbnail_url": "https://images.code.org/c15b896b427cb3fd95d46e8d4440625b-image-1528744515265.14.42 PM.png",
     "encrypted": "false",
     "reference_links": [
-      "/courses/csd-2022/guides/variables",
-      "/courses/csd-2022/guides/drawing-shapes",
-      "/courses/csd-2022/guides/shapes-and-parameters"
+      "/docs/concepts/javascript/variables/",
+      "/docs/concepts/game-lab/drawing-shapes/",
+      "/docs/concepts/game-lab/shapes-and-parameters/"
     ],
-    "map_reference": "/courses/csd-2022/guides/naming-variables/",
+    "map_reference": " /docs/concepts/javascript/naming-variables/",
     "mini_rubric": "false",
     "text_mode_at_start": "false",
     "libraries_enabled": "false",

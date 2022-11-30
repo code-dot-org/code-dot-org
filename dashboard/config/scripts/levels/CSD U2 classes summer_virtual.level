@@ -14,10 +14,10 @@
     "parent_level_id": 20077,
     "name_suffix": "_virtual",
     "reference_links": [
-      "/courses/csd-2022/guides/style-sheets/",
-      "/courses/csd-2022/guides/text-properties/"
+      "/docs/concepts/css/style-sheets/",
+      "/docs/concepts/css/text-properties/"
     ],
-    "map_reference": "/courses/csd-2022/guides/classes/",
+    "map_reference": "/docs/concepts/css/classes/",
     "encrypted": "false",
     "rubric_key_concept": "Create classes that can be referenced and affected as a group.",
     "mini_rubric": "true",

@@ -72,11 +72,11 @@
     "libraries_enabled": "false",
     "encrypted_examples": "sP8TbxN7jBIzpMS0lIf2f1E3695EnkIvnGBBJHQAM5c4DmJqd7N7aIpV3r/p\nHjVaLWZwEcdUYiF7vsMZIW+Vxw==\n",
     "reference_links": [
-      "/courses/csd-2022/guides/variables",
-      "/courses/csd-2022/guides/drawing-shapes",
-      "/courses/csd-2022/guides/shapes-and-parameters"
+      "/docs/concepts/javascript/variables/",
+      "/docs/concepts/game-lab/drawing-shapes/",
+      "/docs/concepts/game-lab/shapes-and-parameters/"
     ],
-    "map_reference": "/courses/csd-2022/guides/naming-variables/",
+    "map_reference": " /docs/concepts/javascript/naming-variables/",
     "preload_asset_list": null
   },
   "published": true,

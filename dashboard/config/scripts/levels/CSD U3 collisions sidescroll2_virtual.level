@@ -88,11 +88,11 @@
     "parent_level_id": 16159,
     "name_suffix": "_virtual",
     "reference_links": [
-      "/courses/csd-2022/guides/if-statements",
-      "/courses/csd-2022/guides/sprites/",
-      "/courses/csd-2022/guides/sprite-properties"
+      "/docs/concepts/javascript/if-statements/",
+      "/docs/concepts/game-lab/sprites/",
+      "/docs/concepts/game-lab/sprites/sprite-properties/"
     ],
-    "map_reference": "/courses/csd-2022/guides/sprites/collision-detection/",
+    "map_reference": "/docs/concepts/game-lab/sprites/collision-detection/",
     "mini_rubric": "false",
     "encrypted": "false",
     "encrypted_examples": "fLQ43pOrRbAUuKcx46IY8W8nPS5jDlVM/8HRD7SdUq1BFPib5AALgPTw0TOn\nPPGX9FhNlwcgn6xc3/yItrPGQIPGLK08rwv1sBzgg1PvVVap8gA78VF1N9Op\nmgKzDrXS2m0kdKvT/QYai6XMvjxzMQ==\n",

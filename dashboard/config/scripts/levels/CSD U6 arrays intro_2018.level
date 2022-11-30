@@ -7,7 +7,7 @@
   "properties": {
     "instructions_important": "false",
     "display_name": "Introduction to Arrays",
-    "reference": "/courses/csd-2022/guides/arrays/index.html",
+    "reference": "/docs/concepts/javascript/arrays/index.html",
     "parent_level_id": 10595,
     "name_suffix": "_2018"
   },

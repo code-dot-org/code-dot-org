@@ -19,7 +19,7 @@
     "encrypted_solution": "JROyPViVE98N7ndoLXEAC/cMyWKhcJXnbdGBL2azhWM3q2HO+i8hhXiWJzMd\nb+7Ue8BP0dWilB/kRnWBN5ZDWGXerbin8ygPAIXywq07ecZ8YsKm4lNVDFh4\nAViBPqVQ8dDTlTR53SmnAi+fsaVHLQ1CewAyjp+JMWGfFBq17eOIJOuyqUG5\nh/dKE4C4BQZrc7ZYhsDv3tYxCcJ2fY1ItZVAooC0C605CWIke5r0L5uqHXwH\n8/XU68+MNgXwWmwgmh/eUDAZpPwUX6Ck+iyBpomvXkSene7+aByOqA1XBg9N\nr28GszyagEgkjUVwfWnYKLtSrdqRfe8zqZnuXw1T+PZ5ITQd7OVEuSPfTwRc\nHUTcxve1zAJiMyO0ew+vYYjygWmxczvcj4dui/DgMumbAqwuIbR+mcVM/ztT\ngs/XXPcpgQUQw4JRj0CnRnSLsxH1XEhm/0Nol6bc1AlEZ1aixxbYIb6oli4N\nwgMqlzqpbDnL1iND7qO44ebUe/F0KyXoNkvFO/sKX0NmoB+p8ex8ftCH3AXt\nr8sXiVPtlKG3QL7SuRlqiCBF155Xpb8T+12eMtVR4YisjF6tWqT1FHXe6zpm\nr5mIsim9VujQ0ZMV3Yc=\n",
     "optional": "false",
     "encrypted": "false",
-    "teacher_markdown": "* Select the most limiting Boolean expression and put that first in the `If-Else-If` statement\r\n* Then select the next most limiting and add that to the next statement, etc.\r\n* An example may be the easiest way to understand how this works. The [If-Else-If Statements](https://studio.code.org/courses/csd-2022/guides/checking-multiple-conditions-with-if-else-if) pattern explains the process of selecting the most specific case first."
+    "teacher_markdown": "* Select the most limiting Boolean expression and put that first in the `If-Else-If` statement\r\n* Then select the next most limiting and add that to the next statement, etc.\r\n* An example may be the easiest way to understand how this works. The [If-Else-If Statements](https://curriculum.code.org/docs/concepts/patterns/checking-multiple-conditions-with-if-else-if/) pattern explains the process of selecting the most specific case first."
   },
   "published": true,
   "notes": "",

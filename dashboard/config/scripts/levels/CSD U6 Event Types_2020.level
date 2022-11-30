@@ -7,7 +7,7 @@
   "properties": {
     "instructions_important": "false",
     "display_name": "Event Types",
-    "reference": "/courses/csd-2022/guides/physical-input/index.html",
+    "reference": "/docs/concepts/maker-toolkit/physical-input/index.html",
     "parent_level_id": 16488,
     "name_suffix": "_2020"
   },

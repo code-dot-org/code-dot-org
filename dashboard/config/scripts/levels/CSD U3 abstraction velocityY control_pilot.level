@@ -77,10 +77,10 @@
     "parent_level_id": 16140,
     "name_suffix": "_pilot",
     "reference_links": [
-      "/courses/csd-2022/guides/the-counter-pattern-2",
-      "/courses/csd-2022/guides/if-statements"
+      "/docs/concepts/game-lab/the-counter-pattern/",
+      "/docs/concepts/javascript/if-statements/"
     ],
-    "map_reference": "/courses/csd-2022/guides/sprites/velocity/",
+    "map_reference": "/docs/concepts/game-lab/sprites/velocity/",
     "video_key": "csd_gamelab_velocity",
     "mini_rubric": "false",
     "preload_asset_list": null
