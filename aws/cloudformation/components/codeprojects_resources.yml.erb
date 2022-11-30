@@ -27,7 +27,6 @@ CodeprojectsCertificate:
     <%- if rack_env?(:production) -%>
     SubjectAlternativeNames:
       - www.<%= CDO.codeprojects_hostname %>
-      - static.<%= CDO.codeprojects_hostname %>
     <%- end -%>
     ValidationMethod: DNS
     DomainValidationOptions:
@@ -37,6 +36,29 @@ CodeprojectsCertificate:
       - DomainName: www.<%= CDO.codeprojects_hostname %>
         HostedZoneId: <%= CDO.codeprojects_hostedzone_id %>
       - DomainName: static.<%= CDO.codeprojects_hostname %>
+        HostedZoneId: <%= CDO.codeprojects_hostedzone_id %>
+      <%- end -%>
+
+CodeprojectsSSLCertificate:
+  Type: AWS::CertificateManager::Certificate
+  Properties:
+    DomainName: <%= CDO.codeprojects_hostname %>
+    <%- if rack_env?(:production) -%>
+    SubjectAlternativeNames:
+      - www.<%= CDO.codeprojects_hostname %>
+      - static.<%= CDO.codeprojects_hostname %>
+      - bramble-download.<%= CDO.codeprojects_hostname %>
+    <%- end -%>
+    ValidationMethod: DNS
+    DomainValidationOptions:
+      - DomainName: <%= CDO.codeprojects_hostname %>
+        HostedZoneId: <%= CDO.codeprojects_hostedzone_id %>
+      <%- if rack_env?(:production) -%>
+      - DomainName: www.<%= CDO.codeprojects_hostname %>
+        HostedZoneId: <%= CDO.codeprojects_hostedzone_id %>
+      - DomainName: static.<%= CDO.codeprojects_hostname %>
+        HostedZoneId: <%= CDO.codeprojects_hostedzone_id %>
+      - DomainName: bramble-download.<%= CDO.codeprojects_hostname %>
         HostedZoneId: <%= CDO.codeprojects_hostedzone_id %>
       <%- end -%>
 
