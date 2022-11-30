@@ -9,12 +9,11 @@ import {
 
 const API_KEY = '12345';
 
-export default class AnalyticsReporter {
+class AnalyticsReporter {
   constructor() {
     // TODO: API Key
     init(API_KEY);
     this.sessionStartTime = null;
-    this.blockStats = {};
   }
 
   setUserProperties(userId, userType, signInState) {
@@ -60,3 +59,7 @@ export default class AnalyticsReporter {
     console.log(`[AMPLITUDE ANALYTICS EVENT]: ${message}`);
   }
 }
+
+const analyticsReporter = new AnalyticsReporter();
+
+export default analyticsReporter;
