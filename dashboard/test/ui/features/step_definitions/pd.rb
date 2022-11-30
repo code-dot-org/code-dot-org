@@ -1,8 +1,9 @@
 Given(/^I am a workshop administrator with some applications of each type and status$/) do
+  require_rails_env
   random_name = "TestWorkshopAdmin" + SecureRandom.hex(10)
   steps %Q{
     And I create a teacher named "#{random_name}"
-    And I make the teacher a workshop admin
+    And I make the teacher named "#{random_name}" a workshop admin
     And I create some fake applications of each type and status
   }
 end
@@ -11,7 +12,7 @@ Given(/^I am a workshop administrator$/) do
   random_name = "TestWorkshopAdmin" + SecureRandom.hex(10)
   steps %Q{
     And I create a teacher named "#{random_name}"
-    And I make the teacher a workshop admin
+    And I make the teacher named "#{random_name}" a workshop admin
   }
 end
 
@@ -41,34 +42,6 @@ Given /^I am a program manager named "([^"]*)" for regional partner "([^"]*)"$/ 
   steps %Q{
     And I sign in as "#{pm_name}"
   }
-end
-
-And(/^I get program manager access$/) do
-  browser_request(url: '/api/test/program_manager_access', method: 'POST')
-end
-
-Given(/^I am a program manager$/) do
-  @pm_name = "Program Manager#{Time.now.to_i}_#{rand(1_000_000)}"
-  steps %{
-    Given I create a teacher named "#{@pm_name}"
-    And I get program manager access
-  }
-end
-
-Given(/^I have a regional partner with a teacher application$/) do
-  response = browser_request(url: '/api/test/create_teacher_application', method: 'POST')
-  data = JSON.parse(response)
-  @rp_id = data['rp_id']
-  @teacher_id = data['teacher_id']
-  @application_id = data['application_id']
-end
-
-Given(/^I delete the program manager, regional partner, teacher, and application$/) do
-  browser_request(
-    url: '/api/test/create_teacher_application',
-    method: 'POST',
-    body: {pm_name: @pm_name, rp_id: @rp_id, teacher_id: @teacher_id, application_id: @application_id}
-  )
 end
 
 Given /^there is a facilitator named "([^"]+)" for course "([^"]+)"$/ do |name, course|
@@ -172,8 +145,11 @@ And(/^I make the teacher named "([^"]*)" a workshop organizer$/) do |name|
   user.permission = UserPermission::WORKSHOP_ORGANIZER
 end
 
-And(/^I make the teacher a workshop admin$/) do
-  browser_request(url: '/api/test/workshop_admin_access', method: 'POST')
+And(/^I make the teacher named "([^"]*)" a workshop admin$/) do |name|
+  require_rails_env
+
+  user = find_test_user_by_name(name)
+  user.permission = UserPermission::WORKSHOP_ADMIN
 end
 
 And(/^I complete Section 2 of the teacher PD application$/) do
@@ -243,7 +219,37 @@ And(/^I complete Section 7 of the teacher PD application$/) do
 end
 
 And(/^I create some fake applications of each type and status$/) do
-  browser_request(url: '/api/test/create_applications', method: 'POST')
+  require_rails_env
+  time_start = Time.now
+
+  %w(csd csp).each do |course|
+    (Pd::Application::TeacherApplication.statuses).each do |status|
+      teacher_email = "#{course}_#{status}@code.org"
+      teacher = User.find_or_create_teacher(
+        {name: "#{course} #{status}", email: teacher_email}, nil, nil
+      )
+      next if Pd::Application::TeacherApplication.find_by(user_id: teacher.id)
+      form_data_hash = FactoryGirl.build(:pd_teacher_application_hash_common, course.to_sym, first_name: course, last_name: status)
+      if status == 'incomplete'
+        FactoryGirl.create(
+          :pd_teacher_application,
+          form_data_hash: form_data_hash,
+          user: teacher,
+          status: 'incomplete'
+        )
+      else
+        application = FactoryGirl.create(
+          :pd_teacher_application,
+          form_data_hash: form_data_hash,
+          user: teacher,
+          status: 'unreviewed'
+        )
+        application.update!(status: status)
+      end
+    end
+  end
+  time_end = Time.now
+  puts "Creating applications took #{time_end - time_start} seconds"
 end
 
 And(/^I am viewing a workshop with fake survey results$/) do
