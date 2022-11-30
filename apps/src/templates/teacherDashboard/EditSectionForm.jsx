@@ -69,7 +69,7 @@ class EditSectionForm extends Component {
   };
 
   onSaveClick = () => {
-    analyticsReporter.onButtonClicked(SAVE);
+    analyticsReporter.sendEvent('Button clicked', {buttonName: SAVE});
     const {section, hiddenLessonState} = this.props;
     const sectionId = section.id;
     const scriptId = section.unitId;
