@@ -21,8 +21,7 @@ import KeyHandler from './KeyHandler';
 import {
   InstructionsPositions,
   setCurrentAudioElapsedTime,
-  setSoundEvents,
-  toggleInstructions
+  setSoundEvents
 } from './musiclabRedux';
 
 const baseUrl = 'https://curriculum.code.org/media/musiclab/';
@@ -39,7 +38,6 @@ class UnconnectedMusicView extends React.Component {
     showInstructions: PropTypes.bool.isRequired,
     instructionsPosition: PropTypes.oneOf(Object.values(InstructionsPositions))
       .isRequired,
-    toggleInstructions: PropTypes.func.isRequired,
     setCurrentAudioElapsedTime: PropTypes.func.isRequired,
     setSoundEvents: PropTypes.func.isRequired
   };
@@ -194,14 +192,6 @@ class UnconnectedMusicView extends React.Component {
     this.props.setSoundEvents(this.player.getSoundEvents());
   };
 
-  toggleInstructions = fromKeyboardShortcut => {
-    this.analyticsReporter.onButtonClicked('show-hide-instructions', {
-      showing: !this.props.showInstructions,
-      fromKeyboardShortcut
-    });
-    this.props.toggleInstructions();
-  };
-
   executeSong = () => {
     this.musicBlocklyWorkspace.executeSong({
       MusicPlayer: this.player
@@ -314,7 +304,6 @@ class UnconnectedMusicView extends React.Component {
           setPlaying={this.setPlaying}
           playTrigger={this.playTrigger}
           top={timelineAtTop}
-          toggleInstructions={() => this.toggleInstructions(false)}
           instructionsOnRight={instructionsOnRight}
         />
         <Timeline
@@ -387,7 +376,6 @@ const MusicView = connect(
     instructionsPosition: state.music.instructionsPosition
   }),
   dispatch => ({
-    toggleInstructions: () => dispatch(toggleInstructions()),
     setCurrentAudioElapsedTime: time =>
       dispatch(setCurrentAudioElapsedTime(time)),
     setSoundEvents: events => dispatch(setSoundEvents(events))
