@@ -18,7 +18,9 @@ const initialState = {
   timelineAtTop: false,
   showInstructions: true,
   showBeatPad: false,
-  instructionsPosition: InstructionsPositions.LEFT
+  instructionsPosition: InstructionsPositions.LEFT,
+  currentAudioElapsedTime: 0,
+  soundEvents: []
 };
 
 const musicSlice = createSlice({
@@ -46,6 +48,12 @@ const musicSlice = createSlice({
     },
     toggleBeatPad: state => {
       state.showBeatPad = !state.showBeatPad;
+    },
+    setCurrentAudioElapsedTime: (state, action) => {
+      state.currentAudioElapsedTime = action.payload;
+    },
+    setSoundEvents: (state, action) => {
+      state.soundEvents = action.payload;
     }
   }
 });
@@ -56,7 +64,9 @@ export const {
   toggleTimelinePosition,
   shiftInstructionsPosition,
   setBeatPadShowing,
-  toggleBeatPad
+  toggleBeatPad,
+  setCurrentAudioElapsedTime,
+  setSoundEvents
 } = musicSlice.actions;
 
 registerReducers({music: musicSlice.reducer});
