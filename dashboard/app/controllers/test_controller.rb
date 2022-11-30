@@ -307,10 +307,10 @@ class TestController < ApplicationController
   end
 
   def delete_rp_pm_teacher_application
-    User.find_by(username: params[:pm_name]).destroy
-    RegionalPartner.find(params[:rp_id]).destroy
-    User.find(params[:teacher_id]).destroy
-    Pd::Application::TeacherApplication.find(params[:application_id]).destroy
+    RegionalPartner.find(params[:rp_id].to_i).destroy
+    Pd::Application::TeacherApplication.find(params[:application_id].to_i).destroy
+    User.find(params[:teacher_id].to_i).destroy
+    User.find_by(name: params[:pm_name]).destroy
     head :ok
   end
 end
