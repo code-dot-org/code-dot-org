@@ -14,7 +14,7 @@
     },
     "new_name": null,
     "family_name": "csd4",
-    "serialized_at": "2022-10-20 23:28:54 UTC",
+    "serialized_at": "2022-11-29 22:00:38 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -1536,13 +1536,7 @@
       "key": "6ec09e7a-34a8-4691-9fcc-f9a63cf90286",
       "position": 2,
       "properties": {
-        "description": "**Discuss:** Students should write their responses in their journal first, then share their ideas with a partner before discussing as a full class. Eventually, direct conversation towards the fact that to empathize with other people means to consider their wants, needs, or concerns.",
-        "tips": [
-          {
-            "type": "discussionGoal",
-            "markdown": "**Goal:** This discussion can be fairly free-flowing and open-ended. While you want to eventually arrive at a shared understanding of what it means to empathize, students will be working on their understanding of the word over the entire unit. There's no need to settle on a single fixed definition, so treat this discussion as an introduction to a theme of the unit.\n"
-          }
-        ]
+        "description": "**Discuss:** Students should write their responses in their journal first, then share their ideas with a partner before discussing as a full class. Eventually, direct conversation towards the fact that to empathize with other people means to consider their wants, needs, or concerns.\n\n**Discussion Goal**: This discussion can be fairly free-flowing and open-ended. While you want to eventually arrive at a shared understanding of what it means to empathize, students will be working on their understanding of the word over the entire unit. There's no need to settle on a single fixed definition, so treat this discussion as an introduction to a theme of the unit."
       },
       "seeding_key": {
         "activity_section.key": "6ec09e7a-34a8-4691-9fcc-f9a63cf90286",

@@ -15,7 +15,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-11-28 01:02:24 UTC",
+    "serialized_at": "2022-11-29 14:17:34 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -9509,6 +9509,19 @@
       }
     },
     {
+      "name": "Unit 1 Study Guide",
+      "url": "https://docs.google.com/document/d/1zu0zO0eRx602yY0-cTZK-cP0vEv6iXs9lcLkAGknNpQ/edit?usp=sharing",
+      "key": "unit_1_study_guide",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "unit_1_study_guide"
+      }
+    },
+    {
       "name": "Unity and Safety Through Street Art in Norfolk, VA",
       "url": "https://youtu.be/-gnXVMcg0yk",
       "key": "unity_and_safety_through_street_art_in_norfolk_va",
@@ -9792,6 +9805,12 @@
       "seeding_key": {
         "lesson.key": "lesson-13",
         "resource.key": "u1l14_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-13",
+        "resource.key": "unit_1_study_guide"
       }
     },
     {
