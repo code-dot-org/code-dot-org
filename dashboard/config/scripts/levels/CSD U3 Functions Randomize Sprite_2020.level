@@ -67,7 +67,7 @@
     "expand_debugger": "false",
     "parent_level_id": 18674,
     "name_suffix": "_2020",
-    "map_reference": "/courses/csd-2022/guides/functions/",
+    "map_reference": "/docs/concepts/javascript/functions/",
     "mini_rubric": "false",
     "encrypted": "false",
     "video_key": "csd_gamelab_functions",
@@ -76,8 +76,8 @@
     "thumbnail_url": "https://images.code.org/d87817a188c2a1af9bd83bfc375201e9-image-1589320354526.gif",
     "libraries_enabled": "false",
     "reference_links": [
-      "/courses/csd-2022/guides/drawing-shapes",
-      "/courses/csd-2022/guides/shapes-and-parameters"
+      "/docs/concepts/game-lab/drawing-shapes/",
+      "/docs/concepts/game-lab/shapes-and-parameters/"
     ],
     "preload_asset_list": null
   },

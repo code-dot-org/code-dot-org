@@ -68,7 +68,7 @@
     "encrypted_examples": "fPbJfItzOSrn2pExfbhlK1nfvWCYaXs7q4zjr97NdRHK30wFMPtl1S9PzJgG\n6RGVmgHle8sI5oYgV56xPkAA6A==\n",
     "parent_level_id": 18773,
     "name_suffix": "_2021",
-    "map_reference": "/courses/csd-2022/guides/drawing-shapes",
+    "map_reference": "/docs/concepts/game-lab/drawing-shapes/",
     "video_key": "csd_gamelab_draw_2",
     "disable_procedure_autopopulate": "false",
     "top_level_procedure_autopopulate": "false",

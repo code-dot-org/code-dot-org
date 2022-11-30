@@ -13,11 +13,11 @@
     "parent_level_id": 7615,
     "name_suffix": "_2018",
     "reference_links": [
-      "/courses/csd-2022/guides/body-styling/",
-      "/courses/csd-2022/guides/style-sheets/",
-      "/courses/csd-2022/guides/text-properties/"
+      "/docs/concepts/css/body-styling/",
+      "/docs/concepts/css/style-sheets/",
+      "/docs/concepts/css/text-properties/"
     ],
-    "map_reference": "/courses/csd-2022/guides/layout-properties/",
+    "map_reference": "/docs/concepts/css/layout-properties/",
     "encrypted_examples": [
 
     ],

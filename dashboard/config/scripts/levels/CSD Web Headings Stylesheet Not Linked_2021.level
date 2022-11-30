@@ -16,13 +16,13 @@
     "bubble_choice_description": "Use your debugging skills to figure out why none of the styles are being applied.",
     "encrypted_examples": "H9wGwp0L3dZjBffG4f77XiRQ5RhayaAlL/hYSYP0erve8hsYphwIRV/hmkZl\nimW76i7mExOuNVxyenddsNS8Tg==\n",
     "reference_links": [
-      "/courses/csd-2022/guides/text-properties/",
-      "/courses/csd-2022/guides/formatting-html/",
-      "/courses/csd-2022/guides/lists/",
-      "/courses/csd-2022/guides/headings-and-paragraphs/",
-      "/courses/csd-2022/guides/html-tags/"
+      "/docs/concepts/css/text-properties/",
+      "/docs/concepts/html/formatting-html/",
+      "/docs/concepts/html/lists/",
+      "/docs/concepts/html/headings-and-paragraphs/",
+      "/docs/concepts/html/html-tags/"
     ],
-    "map_reference": "/courses/csd-2022/guides/style-sheets/",
+    "map_reference": "/docs/concepts/css/style-sheets/",
     "parent_level_id": 18856,
     "thumbnail_url": "https://images.code.org/184256137c9e35cf179bbeeb3e3d9ee9-image-1563315505750.JPG",
     "name_suffix": "_2021"

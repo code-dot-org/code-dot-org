@@ -80,13 +80,13 @@
     "parent_level_id": 23249,
     "name_suffix": "_virtual_2020",
     "reference_links": [
-      "/courses/csd-2022/guides/sprites/velocity/",
-      "/courses/csd-2022/guides/booleans-and-comparison-operators/",
-      "/courses/csd-2022/guides/if-statements",
-      "/courses/csd-2022/guides/if-else-statements/",
-      "/courses/csd-2022/guides/the-draw-loop"
+      "/docs/concepts/game-lab/sprites/velocity/",
+      "/docs/concepts/javascript/booleans-and-comparison-operators/",
+      "/docs/concepts/javascript/if-statements/",
+      "/docs/concepts/javascript/if-else-statements/",
+      "/docs/concepts/game-lab/the-draw-loop/"
     ],
-    "map_reference": "/courses/csd-2022/guides/sprites/collision-detection/",
+    "map_reference": "/docs/concepts/game-lab/sprites/collision-detection/",
     "mini_rubric": "false",
     "encrypted": "false",
     "start_blocks": "var coin1 = createSprite(100, 100);\r\ncoin1.setAnimation(\"bronze_coin\");\r\ncoin1.velocityX = 1;\r\ncoin1.velocityY = 1;\r\n//Change coin1 collider here.\r\n\r\ncoin1.debug=true;\r\nvar coin2 = createSprite(300, 300);\r\ncoin2.setAnimation(\"bronze_coin\");\r\ncoin2.velocityX = -1;\r\ncoin2.velocityY = -1;\r\n//Change coin2 collider here.\r\n\r\ncoin2.debug=true;\r\nfunction draw() {\r\n  background(\"teal\");\r\n  if (coin1.isTouching(coin2)) {\r\n    coin1.velocityX = 0;\r\n    coin1.velocityY = 0;\r\n    coin2.velocityX = 0;\r\n    coin2.velocityY = 0;\r\n  }\r\n  drawSprites();\r\n}\r\n",

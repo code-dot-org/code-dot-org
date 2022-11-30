@@ -21,10 +21,10 @@
 
     ],
     "reference_links": [
-      "/courses/csd-2022/guides/formatting-html/",
-      "/courses/csd-2022/guides/lists/",
-      "/courses/csd-2022/guides/headings-and-paragraphs/",
-      "/courses/csd-2022/guides/html-tags/"
+      "/docs/concepts/html/formatting-html/",
+      "/docs/concepts/html/lists/",
+      "/docs/concepts/html/headings-and-paragraphs/",
+      "/docs/concepts/html/html-tags/"
     ]
   },
   "published": true,

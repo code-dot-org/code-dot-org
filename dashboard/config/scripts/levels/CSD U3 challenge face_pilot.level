@@ -77,7 +77,7 @@
     "bubble_choice_description": "Make a face out of shapes.",
     "libraries_enabled": "false",
     "preload_asset_list": null,
-    "map_reference": "/courses/csd-2022/guides/drawing-shapes"
+    "map_reference": "/docs/concepts/game-lab/drawing-shapes/"
   },
   "published": true,
   "notes": "",

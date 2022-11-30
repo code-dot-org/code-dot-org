@@ -70,10 +70,10 @@
     "widget_mode": "false",
     "ai_enabled": "false",
     "reference_links": [
-      "/courses/csd-2022/guides/circuit-playground/",
-      "/courses/csd-2022/guides/physical-input/",
-      "/courses/csd-2022/guides/producing-output/",
-      "/courses/csd-2022/guides/board-events/"
+      "/docs/concepts/maker-toolkit/circuit-playground/",
+      "/docs/concepts/maker-toolkit/physical-input/",
+      "/docs/concepts/maker-toolkit/producing-output/",
+      "/docs/concepts/maker-toolkit/board-events/"
     ],
     "palette_category_at_start": "Circuit",
     "display_name": "Day and Night",

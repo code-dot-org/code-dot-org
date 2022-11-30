@@ -74,7 +74,7 @@
       "SP-VPL-21-mod2-progress-c4u"
     ],
     "display_name": "Sprite Properties: Predict",
-    "map_reference": "/courses/csd-2022/guides/sprite-properties",
+    "map_reference": "/docs/concepts/game-lab/sprites/sprite-properties/",
     "libraries_enabled": "false",
     "preload_asset_list": null,
     "encrypted_examples": [

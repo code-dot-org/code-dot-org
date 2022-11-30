@@ -50,8 +50,8 @@
     "ai_enabled": "true",
     "callout_json": "[]",
     "reference_links": [
-      "/courses/csd-2022/guides/changing-screens/",
-      "/courses/csd-2022/guides/if-statements/"
+      "/docs/concepts/app-lab/changing-screens/",
+      "/docs/concepts/app-lab/if-statements/"
     ],
     "video_key": "csp_applab_conditionals_2A",
     "ai_model_id": "j5MH8AtyV1sw",

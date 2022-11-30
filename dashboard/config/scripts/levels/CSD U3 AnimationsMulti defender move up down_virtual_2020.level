@@ -45,14 +45,14 @@
     "name_suffix": "_virtual_2020",
     "long_instructions": "# Moving Up and Down\r\n\r\nYou'll want your player sprite to move up and down as well.\r\n\r\n# Do This\r\n\r\n* Inside the `movePlayer` function...\r\n  * Use a conditional to detect when the \"up\" arrow is pressed.\r\n  * If it is, move the player sprite up by 3.\r\n  * Use another conditional to move the player down when the \"down\" arrow is pressed.\r\n* Test your code. Your character should now move in all four directions.",
     "reference_links": [
-      "/courses/csd-2022/guides/functions/",
-      "/courses/csd-2022/guides/if-statements",
-      "/courses/csd-2022/guides/sprites/collision-detection/",
-      "/courses/csd-2022/guides/sprites/",
-      "/courses/csd-2022/guides/sprite-properties",
-      "/courses/csd-2022/guides/sprites/velocity/",
-      "/courses/csd-2022/guides/animation-tab",
-      "/courses/csd-2022/guides/animation-tab/editing-images/"
+      "/docs/concepts/javascript/functions/",
+      "/docs/concepts/javascript/if-statements/",
+      "/docs/concepts/game-lab/sprites/collision-detection/",
+      "/docs/concepts/game-lab/sprites/",
+      "/docs/concepts/game-lab/sprites/sprite-properties/",
+      "/docs/concepts/game-lab/sprites/velocity/",
+      "/docs/concepts/game-lab/animation-tab/",
+      "/docs/concepts/game-lab/animation-tab/editing-images/"
     ],
     "mini_rubric": "false",
     "encrypted": "false",

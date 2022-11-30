@@ -7,7 +7,7 @@
   "properties": {
     "instructions_important": "false",
     "display_name": "For Loops",
-    "reference": "/courses/csd-2022/guides/for-loops/index.html",
+    "reference": "/docs/concepts/javascript/for-loops/index.html",
     "parent_level_id": 12473,
     "name_suffix": "_2019"
   },

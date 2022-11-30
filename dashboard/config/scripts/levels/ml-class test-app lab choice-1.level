@@ -50,7 +50,7 @@
     "project_template_level_name": "ml-class test-app lab template",
     "ai_enabled": "true",
     "reference_links": [
-      "/courses/csd-2022/guides/design-mode/"
+      "/docs/concepts/app-lab/design-mode/"
     ],
     "preload_asset_list": null,
     "encrypted_examples": [

@@ -87,9 +87,9 @@
     "text_mode_at_start": "false",
     "long_instructions": "# Accelerometer Challenge",
     "reference_links": [
-      "/courses/csd-2022/guides/accelerometer-events/",
-      "/courses/csd-2022/guides/the-accelerometer/",
-      "/courses/csd-2022/guides/board-events/"
+      "/docs/concepts/maker-toolkit/accelerometer-events/",
+      "/docs/concepts/maker-toolkit/the-accelerometer/",
+      "/docs/concepts/maker-toolkit/board-events/"
     ],
     "mini_rubric": "false",
     "encrypted": "false",

@@ -69,7 +69,7 @@
     "top_level_procedure_autopopulate": "false",
     "show_type_hints": "false",
     "encrypted": "false",
-    "map_reference": "/courses/csd-2022/guides/drawing-shapes",
+    "map_reference": "/docs/concepts/game-lab/drawing-shapes/",
     "mini_rubric": "false",
     "libraries_enabled": "false",
     "preload_asset_list": null,

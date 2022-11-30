@@ -56,9 +56,9 @@
     "top_level_procedure_autopopulate": "false",
     "show_type_hints": "false",
     "reference_links": [
-      "/courses/csd-2022/guides/variables",
-      "/courses/csd-2022/guides/drawing-shapes",
-      "/courses/csd-2022/guides/shapes-and-parameters"
+      "/docs/concepts/javascript/variables/",
+      "/docs/concepts/game-lab/drawing-shapes/",
+      "/docs/concepts/game-lab/shapes-and-parameters/"
     ],
     "preload_asset_list": null,
     "encrypted": "false",

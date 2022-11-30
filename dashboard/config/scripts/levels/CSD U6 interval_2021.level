@@ -65,7 +65,7 @@
     ],
     "parent_level_id": 20439,
     "name_suffix": "_2021",
-    "map_reference": "/courses/csd-2022/guides/taking-input-with-getproperty/",
+    "map_reference": "/docs/concepts/app-lab/taking-input-with-getproperty/",
     "mini_rubric": "false",
     "text_mode_at_start": "false",
     "preload_asset_list": null,

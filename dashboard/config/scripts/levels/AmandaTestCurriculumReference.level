@@ -9,7 +9,7 @@
     "video_key": "applab_intro_welcome",
     "instructions_important": "false",
     "teacher_markdown": "Test - does this work on this level?",
-    "reference": "/courses/csd-2022/guides/html-tags/index.html"
+    "reference": "/docs/concepts/html/html-tags/index.html"
   },
   "published": true,
   "notes": "Here is a note to myself"

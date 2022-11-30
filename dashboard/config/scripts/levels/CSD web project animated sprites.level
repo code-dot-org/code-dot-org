@@ -70,9 +70,9 @@
     "parent_level_id": 20705,
     "name_suffix": "_2020",
     "reference_links": [
-      "/courses/csd-2022/guides/sprites/",
-      "/courses/csd-2022/guides/animation-tab",
-      "/courses/csd-2022/guides/sprite-properties"
+      "/docs/concepts/game-lab/sprites/",
+      "/docs/concepts/game-lab/animation-tab/",
+      "/docs/concepts/game-lab/sprites/sprite-properties/"
     ],
     "disable_procedure_autopopulate": "false",
     "top_level_procedure_autopopulate": "false",

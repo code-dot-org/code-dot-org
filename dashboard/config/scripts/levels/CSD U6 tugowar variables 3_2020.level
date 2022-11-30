@@ -229,7 +229,7 @@
     "name_suffix": "_2020",
     "encrypted_examples": "pofn6XP05bdqiKGVMVq1eHbHo/RGz4JnqfgBl8qKspy723Y0a7e+GB1/wh5h\nCAuFkCyYtYEwqsutUtOeOsZfpw==\n",
     "text_mode_at_start": "false",
-    "map_reference": "/courses/csd-2022/guides/functions/",
+    "map_reference": "/docs/concepts/javascript/functions/",
     "mini_rubric": "false",
     "encrypted": "false",
     "preload_asset_list": null

@@ -99,9 +99,9 @@
     "preload_asset_list": null,
     "encrypted_examples": "ab3qS9owPQhNFFMfa1qW6X48oyTRh8lT85dAwJFWVFcnAXVeDUazYRliWTCY\n4zpaHvq004z42rpl1VjHTM+Nzg==\n",
     "reference_links": [
-      "/courses/csd-2022/guides/accelerometer-events/",
-      "/courses/csd-2022/guides/the-accelerometer/",
-      "/courses/csd-2022/guides/board-events/"
+      "/docs/concepts/maker-toolkit/accelerometer-events/",
+      "/docs/concepts/maker-toolkit/the-accelerometer/",
+      "/docs/concepts/maker-toolkit/board-events/"
     ]
   },
   "game_id": 41,

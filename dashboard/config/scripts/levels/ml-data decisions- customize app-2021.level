@@ -54,11 +54,11 @@
 
     ],
     "reference_links": [
-      "/courses/csd-2022/guides/design-mode/",
-      "/courses/csd-2022/guides/multi-screen-apps/",
-      "/courses/csd-2022/guides/design-mode/design-mode-elements/",
-      "/courses/csd-2022/guides/changing-screens/",
-      "/courses/csd-2022/guides/responding-to-user-input/"
+      "/docs/concepts/app-lab/design-mode/",
+      "/docs/concepts/app-lab/multi-screen-apps/",
+      "/docs/concepts/app-lab/design-mode/design-mode-elements/",
+      "/docs/concepts/app-lab/changing-screens/",
+      "/docs/concepts/app-lab/responding-to-user-input/"
     ],
     "video_key": "applab_intro_events"
   },

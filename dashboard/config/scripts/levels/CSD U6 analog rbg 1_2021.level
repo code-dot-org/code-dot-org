@@ -224,10 +224,10 @@
     "parent_level_id": 20462,
     "name_suffix": "_2021",
     "reference_links": [
-      "/courses/csd-2022/guides/data-and-change-events/",
-      "/courses/csd-2022/guides/analog-sensors/"
+      "/docs/concepts/maker-toolkit/data-and-change-events/",
+      "/docs/concepts/maker-toolkit/analog-sensors/"
     ],
-    "map_reference": "/courses/csd-2022/guides/changing-sensor-scale/",
+    "map_reference": "/docs/concepts/maker-toolkit/changing-sensor-scale/",
     "mini_rubric": "false",
     "preload_asset_list": null
   },

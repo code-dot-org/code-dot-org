@@ -72,14 +72,14 @@
     "top_level_procedure_autopopulate": "false",
     "show_type_hints": "false",
     "reference_links": [
-      "/courses/csd-2022/guides/sprites/",
-      "/courses/csd-2022/guides/animation-tab",
-      "/courses/csd-2022/guides/sprite-properties",
-      "/courses/csd-2022/guides/random-numbers",
-      "/courses/csd-2022/guides/variables",
-      "/courses/csd-2022/guides/naming-variables",
-      "/courses/csd-2022/guides/drawing-shapes",
-      "/courses/csd-2022/guides/shapes-and-parameters"
+      "/docs/concepts/game-lab/sprites/",
+      "/docs/concepts/game-lab/animation-tab/",
+      "/docs/concepts/game-lab/sprites/sprite-properties/",
+      "/docs/concepts/javascript/random-numbers/",
+      "/docs/concepts/javascript/variables/",
+      "/docs/concepts/javascript/naming-variables/",
+      "/docs/concepts/game-lab/drawing-shapes/",
+      "/docs/concepts/game-lab/shapes-and-parameters/"
     ],
     "long_instructions": "# Text Size\r\n\r\nYou can change the size of the text using the `textSize()` block.\r\n\r\n# Do This\r\n* Read the code to see how it works.\r\n* Add a new `textSize` block to make the word \"large\" the biggest.",
     "encrypted": "false",
