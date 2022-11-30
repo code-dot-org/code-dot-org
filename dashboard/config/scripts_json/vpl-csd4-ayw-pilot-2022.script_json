@@ -13,7 +13,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-11-28 19:04:10 UTC",
+    "serialized_at": "2022-11-29 21:42:03 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -220,9 +220,20 @@
       "key": "864feac0-cb5c-483d-a4dc-ff6ccf29020e",
       "position": 1,
       "properties": {
+        "progression_name": "Rubric Warm Up Sample"
       },
       "seeding_key": {
         "activity_section.key": "864feac0-cb5c-483d-a4dc-ff6ccf29020e",
+        "lesson_activity.key": "1c16e2d7-5f7d-44eb-8dc0-b0f84cbda813"
+      }
+    },
+    {
+      "key": "2d2f6539-1176-4edd-a3e0-be59d2a86021",
+      "position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "2d2f6539-1176-4edd-a3e0-be59d2a86021",
         "lesson_activity.key": "1c16e2d7-5f7d-44eb-8dc0-b0f84cbda813"
       }
     },
@@ -288,6 +299,28 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "progression": "Rubric Warm Up Sample"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-AYW-M4-GroupSample"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "vpl-csd4-ayw-pilot-2022",
+        "activity_section.key": "864feac0-cb5c-483d-a4dc-ff6ccf29020e"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-AYW-M4-GroupSample"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
         "level_keys": [
           "VPL-CSD-PILOT-S22-AYW-M4-Module 4 Overview"
         ],
@@ -308,7 +341,7 @@
       ]
     },
     {
-      "chapter": 2,
+      "chapter": 3,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -333,7 +366,7 @@
       ]
     },
     {
-      "chapter": 3,
+      "chapter": 4,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -358,7 +391,7 @@
       ]
     },
     {
-      "chapter": 4,
+      "chapter": 5,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -383,7 +416,7 @@
       ]
     },
     {
-      "chapter": 5,
+      "chapter": 6,
       "position": 5,
       "activity_section_position": 2,
       "assessment": false,
@@ -408,7 +441,7 @@
       ]
     },
     {
-      "chapter": 6,
+      "chapter": 7,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -434,6 +467,18 @@
     }
   ],
   "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-AYW-M4-GroupSample",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-AYW-M4-GroupSample"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "vpl-csd4-ayw-pilot-2022",
+        "activity_section.key": "864feac0-cb5c-483d-a4dc-ff6ccf29020e"
+      }
+    },
     {
       "seeding_key": {
         "level.key": "VPL-CSD-PILOT-S22-AYW-M4-Module 4 Overview",
