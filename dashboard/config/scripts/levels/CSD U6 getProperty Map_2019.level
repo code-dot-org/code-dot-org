@@ -7,7 +7,7 @@
   "properties": {
     "instructions_important": "false",
     "display_name": "getProperty",
-    "reference": "/courses/csd-2022/guides/taking-input-with-getproperty/index.html",
+    "reference": "/docs/concepts/app-lab/taking-input-with-getproperty/index.html",
     "parent_level_id": 12360,
     "name_suffix": "_2019"
   },

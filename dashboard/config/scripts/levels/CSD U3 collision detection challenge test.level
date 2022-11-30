@@ -79,9 +79,9 @@
     "parent_level_id": 23143,
     "name_suffix": "_2020",
     "reference_links": [
-      "/courses/csd-2022/guides/if-statements"
+      "/docs/concepts/javascript/if-statements/"
     ],
-    "map_reference": "/courses/csd-2022/guides/sprites/collision-detection/",
+    "map_reference": "/docs/concepts/game-lab/sprites/collision-detection/",
     "mini_rubric": "false",
     "encrypted": "false",
     "start_blocks": "var apple1 = createSprite(100, 200);\r\nvar apple2 = createSprite(300, 200);\r\nvar apples = createGroup();\r\n\r\napple1.setAnimation(\"apple\");\r\napple2.setAnimation(\"apple\");\r\n\r\napple1.setVelocity(randomNumber(-2, 2), randomNumber(-2, 2));\r\napple2.setVelocity(randomNumber(-2, 2), randomNumber(-2, 2));\r\nfunction draw() {\r\n  background(\"green\");\r\n  drawSprites();\r\n}\r\n",

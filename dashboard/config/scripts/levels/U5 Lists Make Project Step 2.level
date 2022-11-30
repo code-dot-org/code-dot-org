@@ -74,9 +74,9 @@
     "project_template_level_name": "U5 Lists Make Project Template",
     "widget_mode": "false",
     "reference_links": [
-      "/courses/csp-2022/guides/list-scrolling-pattern/",
-      "/courses/csp-2022/guides/when-to-make-a-function/",
-      "/courses/csd-2022/guides/update-screen-pattern"
+      "/docs/concepts/patterns/list-scrolling-pattern/",
+      "/docs/concepts/patterns/when-to-make-a-function/",
+      "/docs/concepts/patterns/update-screen-pattern/"
     ],
     "preload_asset_list": null,
     "encrypted_examples": [

@@ -15,9 +15,9 @@
     "display_name": "Debug the missing heading style",
     "bubble_choice_description": "Use your debugging skills to figure out why the heading style is not being applied.",
     "reference_links": [
-      "/courses/csd-2022/guides/html-tags/index.html"
+      "/docs/concepts/html/html-tags/index.html"
     ],
-    "map_reference": "/courses/csd-2022/guides/headings-and-paragraphs/index.html",
+    "map_reference": "/docs/concepts/html/headings-and-paragraphs/index.html",
     "parent_level_id": 18855,
     "thumbnail_url": "https://images.code.org/7d9ca9e7fbe74bd10f77529cf7dd1c3b-image-1563297084071.JPG",
     "encrypted_examples": [

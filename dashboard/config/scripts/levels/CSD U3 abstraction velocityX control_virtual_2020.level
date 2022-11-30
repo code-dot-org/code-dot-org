@@ -78,15 +78,15 @@
     "name_suffix": "_virtual_2020",
     "long_instructions": "# Swimming Right and Left\r\n\r\nThe code below should make the fish start moving right as soon as you press \"Run\". Using conditional statements and the `.velocity` block, you can make it continually swim back and forth.\r\n\r\n# Do This\r\n* Look at the three `if` statements inside the draw loop.\r\n\r\n* Use a `sprite.velocityX` block inside each `if` statement to make the three following movements:\r\n  * If the user presses the right arrow key, move the fish to the right.\r\n  * If the fish gets to the right-hand side of the screen, move the fish to the left.\r\n  * If the fish gets to the left-hand side of the screen, stop the fish.",
     "reference_links": [
-      "/courses/csd-2022/guides/sprites/velocity/",
-      "/courses/csd-2022/guides/booleans-and-comparison-operators/",
-      "/courses/csd-2022/guides/if-statements",
-      "/courses/csd-2022/guides/if-else-statements/",
-      "/courses/csd-2022/guides/the-counter-pattern-2",
-      "/courses/csd-2022/guides/the-draw-loop",
-      "/courses/csd-2022/guides/sprite-properties"
+      "/docs/concepts/game-lab/sprites/velocity/",
+      "/docs/concepts/javascript/booleans-and-comparison-operators/",
+      "/docs/concepts/javascript/if-statements/",
+      "/docs/concepts/javascript/if-else-statements/",
+      "/docs/concepts/game-lab/the-counter-pattern/",
+      "/docs/concepts/game-lab/the-draw-loop/",
+      "/docs/concepts/game-lab/sprites/sprite-properties/"
     ],
-    "map_reference": "/courses/csd-2022/guides/sprites/velocity/",
+    "map_reference": "/docs/concepts/game-lab/sprites/velocity/",
     "video_key": "csd_gamelab_velocity",
     "mini_rubric": "true",
     "encrypted": "false",

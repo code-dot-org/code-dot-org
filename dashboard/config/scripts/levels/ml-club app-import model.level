@@ -52,7 +52,7 @@
     "ai_model_id": "z5SZPaoHHIvF",
     "ai_model_name": "Club Survey",
     "reference_links": [
-      "/courses/csd-2022/guides/importing-a-model-in-app-lab/"
+      "/docs/concepts/ai-lab/importing-a-model-in-app-lab/"
     ],
     "video_key": "csd_ml_model_cards_july2021",
     "preload_asset_list": null,

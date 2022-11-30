@@ -108,9 +108,9 @@
 
     ],
     "reference_links": [
-      "/courses/csp-2022/guides/when-to-make-a-function/"
+      "/docs/concepts/patterns/when-to-make-a-function/"
     ],
-    "map_reference": "/courses/csd-2022/guides/update-screen-pattern"
+    "map_reference": "/docs/concepts/patterns/update-screen-pattern/"
   },
   "published": true,
   "notes": "",

@@ -29,11 +29,11 @@
     "encrypted": "false",
     "project_template_level_name": "CSP U5 Hackathon Template_2021",
     "reference_links": [
-      "/courses/csd-2022/guides/update-screen-pattern",
-      "/courses/csp-2022/guides/when-to-make-a-function/",
-      "/courses/csp-2022/guides/random-list-access"
+      "/docs/concepts/patterns/update-screen-pattern/",
+      "/docs/concepts/patterns/when-to-make-a-function/",
+      "/docs/concepts/patterns/random-list-access/"
     ],
-    "map_reference": "/courses/csp-2022/guides/list-filter-pattern/",
+    "map_reference": "/docs/concepts/patterns/list-filter-pattern/",
     "widget_mode": "false",
     "libraries_enabled": "false",
     "encrypted_examples": "EVXDkWlPq9vyVV+efJidj4ZXb4IR1rAO97fy7tazqJ/lwBArP/B3jg+PMzss\nfXO7o6knFasyYfV1/89qhLjFv2/buTs7bHoBVTuYDPyn2ExVbiMVIYopZYrK\n6ZaefGxx3eRZpDxDp0o4ePZDpYFAmw==\n",

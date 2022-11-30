@@ -76,12 +76,12 @@
     "bubble_choice_description": "Keep the rectangles stacked on top of each other by changing the way random numbers are used.",
     "libraries_enabled": "false",
     "reference_links": [
-      "/courses/csd-2022/guides/variables",
-      "/courses/csd-2022/guides/naming-variables",
-      "/courses/csd-2022/guides/drawing-shapes",
-      "/courses/csd-2022/guides/shapes-and-parameters"
+      "/docs/concepts/javascript/variables/",
+      "/docs/concepts/javascript/naming-variables/",
+      "/docs/concepts/game-lab/drawing-shapes/",
+      "/docs/concepts/game-lab/shapes-and-parameters/"
     ],
-    "map_reference": "/courses/csd-2022/guides/random-numbers",
+    "map_reference": "/docs/concepts/javascript/random-numbers/",
     "preload_asset_list": null
   },
   "published": true,

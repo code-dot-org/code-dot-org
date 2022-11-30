@@ -6,7 +6,7 @@
   "user_id": 106,
   "properties": {
     "instructions_important": "false",
-    "reference": "/courses/csp-2022/guides/list-filter-pattern/",
+    "reference": "/docs/concepts/patterns/list-filter-pattern/",
     "parent_level_id": 27749,
     "encrypted": "false",
     "name_suffix": "_2021"

@@ -52,7 +52,7 @@
     "ai_model_id": "OV8kuQzp3Yuh",
     "ai_model_name": "Class Book Recommender",
     "reference_links": [
-      "/courses/csd-2022/guides/importing-a-model-in-app-lab/"
+      "/docs/concepts/ai-lab/importing-a-model-in-app-lab/"
     ],
     "preload_asset_list": null,
     "encrypted_examples": "Il4qMYOAAnGWvsS6ZLOIN7n6S6prSiOZu0/gCQ5hUgXpyTWetYvZ1Jz+yzxs\nJZiGjcSMA11eJTySc8JLoU3xZA==\n"

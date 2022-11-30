@@ -117,7 +117,7 @@
     "encrypted_examples": "CDkF7yiWyurVf2McDtfkX0oryaKXlfCjyDTheEwUXRpUiXJY4st2AKYOcRVK\nTGwWlswRZsSfkevSmvYtizmpgg==\n",
     "parent_level_id": 20574,
     "name_suffix": "_2021",
-    "map_reference": "/courses/csd-2022/guides/functions/",
+    "map_reference": "/docs/concepts/javascript/functions/",
     "long_instructions": "# Clouds\r\n\r\nThis program makes the clouds move when you blow on the sound sensor. It has two primary behaviors: _moveCloud()_ and _loopCloud()_. Originally, there needed to be a function for every cloud. However, we can simplify our program and just write one function that uses a parameter to decide which cloud to move. \r\n\r\n_loopCloud()_ has already been updated to use parameters. However, _moveCloud()_ still needs to updated using the steps below.\r\n\r\n# Do This\r\n* Create a new function `moveCloud(name)` that will move any cloud.\r\n  * (Hint: you will use almost all the same code as the `moveCloud0` function)\r\n* Call your new `moveCloud(name)` function inside the event block, once for each cloud name.\r\n  * (Hint: this is similar to how the `loopCloud(name)` function is called many times.)",
     "mini_rubric": "false",
     "text_mode_at_start": "false",

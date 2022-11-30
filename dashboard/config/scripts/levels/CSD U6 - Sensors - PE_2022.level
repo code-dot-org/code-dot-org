@@ -91,10 +91,10 @@
     "widget_mode": "false",
     "ai_enabled": "false",
     "reference_links": [
-      "/courses/csd-2022/guides/analog-sensors/",
-      "/courses/csd-2022/guides/changing-sensor-scale/",
-      "/courses/csd-2022/guides/board-events/",
-      "/courses/csd-2022/guides/data-and-change-events/"
+      "/docs/concepts/maker-toolkit/analog-sensors/",
+      "/docs/concepts/maker-toolkit/changing-sensor-scale/",
+      "/docs/concepts/maker-toolkit/board-events/",
+      "/docs/concepts/maker-toolkit/data-and-change-events/"
     ],
     "preload_asset_list": null,
     "encrypted_examples": [

@@ -6,7 +6,7 @@
   "user_id": 324,
   "properties": {
     "instructions_important": "false",
-    "reference": "/courses/csd-2022/guides/naming-variables/index.html",
+    "reference": "/docs/concepts/javascript/naming-variables/index.html",
     "display_name": "Naming Variables",
     "parent_level_id": 16005,
     "name_suffix": "_virtual"

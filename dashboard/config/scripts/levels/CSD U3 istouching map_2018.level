@@ -7,7 +7,7 @@
   "properties": {
     "instructions_important": "false",
     "display_name": "Collision Detection Review",
-    "reference": "/courses/csd-2022/guides/sprites/collision-detection/index.html",
+    "reference": "/docs/concepts/game-lab/sprites/collision-detection/index.html",
     "parent_level_id": 9349,
     "name_suffix": "_2018"
   },

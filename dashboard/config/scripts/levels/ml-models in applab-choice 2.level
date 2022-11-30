@@ -82,11 +82,11 @@
     "display_name": "Ideal Drink",
     "bubble_choice_description": "Help design an app that can determine your ideal drink from quiz questions",
     "reference_links": [
-      "/courses/csd-2022/guides/design-mode/",
-      "/courses/csd-2022/guides/multi-screen-apps/",
-      "/courses/csd-2022/guides/design-mode/design-mode-elements/",
-      "/courses/csd-2022/guides/changing-screens/",
-      "/courses/csd-2022/guides/if-statements/"
+      "/docs/concepts/app-lab/design-mode/",
+      "/docs/concepts/app-lab/multi-screen-apps/",
+      "/docs/concepts/app-lab/design-mode/design-mode-elements/",
+      "/docs/concepts/app-lab/changing-screens/",
+      "/docs/concepts/app-lab/if-statements/"
     ],
     "video_key": "csp_applab_conditionals_2B",
     "thumbnail_url": "https://images.code.org/f18638c1bf678bdd8b1ab486ff6d0a0d-image-1617372057039.png",

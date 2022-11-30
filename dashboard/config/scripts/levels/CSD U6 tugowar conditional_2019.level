@@ -228,9 +228,9 @@
     "encrypted_examples": "2aDk6Ht8hIPyBH1mDB03ER8VCoB8Wc3+1rTJEY2f3in8pHkZvUvJQ1SyrHZK\n4sZ2G0PJXy9ZL8YM4H/CfZjS2w==\n",
     "text_mode_at_start": "false",
     "reference_links": [
-      "/courses/csd-2022/guides/booleans-and-comparison-operators/"
+      "/docs/concepts/javascript/booleans-and-comparison-operators/"
     ],
-    "map_reference": "/courses/csd-2022/guides/if-statements",
+    "map_reference": "/docs/concepts/javascript/if-statements/",
     "mini_rubric": "false",
     "preload_asset_list": null,
     "encrypted": "false"

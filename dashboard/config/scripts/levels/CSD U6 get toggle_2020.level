@@ -73,9 +73,9 @@
     "encrypted_examples": "yIaZli6t8KlhrFQHBFPTN/m3OV0Bcov62ztJnAWUV8bMRg6XW9drCkKvQooV\nOlrMdkqzEyt7D9Ylnv4g9X7wmw==\n",
     "text_mode_at_start": "false",
     "reference_links": [
-      "/courses/csd-2022/guides/taking-input-with-getproperty/"
+      "/docs/concepts/app-lab/taking-input-with-getproperty/"
     ],
-    "map_reference": "/courses/csd-2022/guides/physical-input/",
+    "map_reference": "/docs/concepts/maker-toolkit/physical-input/",
     "mini_rubric": "false",
     "encrypted": "false",
     "preload_asset_list": null
