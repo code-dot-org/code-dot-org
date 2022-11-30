@@ -7,16 +7,21 @@ import moduleStyles from './controls.module.scss';
 import BeatPad from './BeatPad';
 import {AnalyticsContext} from './context';
 import {connect} from 'react-redux';
-import {setBeatPadShowing, toggleBeatPad} from './musiclabRedux';
+import {
+  setBeatPadShowing,
+  toggleBeatPad,
+  toggleInstructions
+} from './musiclabRedux';
 
 const Controls = ({
   isPlaying,
   setPlaying,
   playTrigger,
   top,
-  toggleInstructions,
   instructionsOnRight,
   // populated by Redux
+  toggleInstructions,
+  showInstructions,
   showBeatPad,
   setBeatPadShowing,
   toggleBeatPad
@@ -69,7 +74,13 @@ const Controls = ({
     });
     toggleBeatPad();
   });
-  const infoIconSection = renderIconButton('info-circle', toggleInstructions);
+
+  const infoIconSection = renderIconButton('info-circle', () => {
+    analyticsReporter.onButtonClicked('instructions', {
+      showing: !showInstructions
+    });
+    toggleInstructions();
+  });
 
   const [leftIcon, rightIcon] = instructionsOnRight
     ? [beatPadIconSection, infoIconSection]
@@ -101,16 +112,19 @@ Controls.propTypes = {
   toggleInstructions: PropTypes.func.isRequired,
   instructionsOnRight: PropTypes.bool.isRequired,
   showBeatPad: PropTypes.bool.isRequired,
+  showInstructions: PropTypes.bool.isRequired,
   setBeatPadShowing: PropTypes.func.isRequired,
   toggleBeatPad: PropTypes.func.isRequired
 };
 
 export default connect(
   state => ({
-    showBeatPad: state.music.showBeatPad
+    showBeatPad: state.music.showBeatPad,
+    showInstructions: state.music.showInstructions
   }),
   dispatch => ({
     setBeatPadShowing: showing => dispatch(setBeatPadShowing(showing)),
-    toggleBeatPad: () => dispatch(toggleBeatPad())
+    toggleBeatPad: () => dispatch(toggleBeatPad()),
+    toggleInstructions: () => dispatch(toggleInstructions())
   })
 )(Controls);
