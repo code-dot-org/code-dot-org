@@ -1,6 +1,5 @@
 # Controller actions used only to facilitate UI tests.
 class TestController < ApplicationController
-  include FactoryGirl::Syntax::Methods
   include Pd::Application::ActiveApplicationModels
   layout false
 

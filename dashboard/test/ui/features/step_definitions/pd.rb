@@ -1,8 +1,6 @@
 Given(/^I am a workshop administrator with some applications of each type and status$/) do
-  random_name = "TestWorkshopAdmin" + SecureRandom.hex(10)
   steps %Q{
-    And I create a teacher named "#{random_name}"
-    And I make the teacher a workshop admin
+    And I am a workshop administrator
     And I create some fake applications of each type and status
   }
 end
