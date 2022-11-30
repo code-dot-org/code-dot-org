@@ -14,18 +14,18 @@
     "parent_level_id": 11572,
     "name_suffix": "_2019",
     "reference_links": [
-      "/courses/csd-2022/guides/style-sheets/",
-      "/courses/csd-2022/guides/body-styling/",
-      "/courses/csd-2022/guides/text-properties/",
-      "/courses/csd-2022/guides/layout-properties/",
-      "/courses/csd-2022/guides/html-tags/",
-      "/courses/csd-2022/guides/headings-and-paragraphs/",
-      "/courses/csd-2022/guides/lists/",
-      "/courses/csd-2022/guides/images-in-html/",
-      "/courses/csd-2022/guides/formatting-html/",
-      "/courses/csd-2022/guides/creative-commons-search/"
+      "/docs/concepts/css/style-sheets/",
+      "/docs/concepts/css/body-styling/",
+      "/docs/concepts/css/text-properties/",
+      "/docs/concepts/css/layout-properties/",
+      "/docs/concepts/html/html-tags/",
+      "/docs/concepts/html/headings-and-paragraphs/",
+      "/docs/concepts/html/lists/",
+      "/docs/concepts/html/images-in-html/",
+      "/docs/concepts/html/formatting-html/",
+      "/docs/concepts/other/creative-commons-search/"
     ],
-    "map_reference": "/courses/csd-2022/guides/classes/"
+    "map_reference": "/docs/concepts/css/classes/"
   },
   "published": true,
   "notes": "",

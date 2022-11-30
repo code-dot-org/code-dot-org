@@ -62,7 +62,7 @@
     "top_level_procedure_autopopulate": "false",
     "parent_level_id": 16199,
     "name_suffix": "_virtual",
-    "map_reference": "/courses/csd-2022/guides/functions/",
+    "map_reference": "/docs/concepts/javascript/functions/",
     "mini_rubric": "false",
     "encrypted": "false",
     "video_key": "csd_gamelab_functions",

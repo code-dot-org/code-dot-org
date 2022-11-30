@@ -16,9 +16,9 @@
     "bubble_choice_description": "Learn the code for the special character \"<\" and practice using it.",
     "encrypted_examples": "Ua07k2xhRvIxJtXHrEcUa/MqSEZjwQzqvkHj8rK7ppf6k3o05x77+pnCZN3w\nfAYxv5XwxYPTswqjnO+rSYmZog==\n",
     "reference_links": [
-      "/courses/csd-2022/guides/html-tags/"
+      "/docs/concepts/html/html-tags/"
     ],
-    "map_reference": "/courses/csd-2022/guides/headings-and-paragraphs/",
+    "map_reference": "/docs/concepts/html/headings-and-paragraphs/",
     "parent_level_id": 18834,
     "thumbnail_url": "https://images.code.org/197182fc53bcd78addd1704aa4d55ce5-image-1562024704836.JPG"
   },

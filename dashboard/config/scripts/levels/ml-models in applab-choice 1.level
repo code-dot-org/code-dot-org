@@ -86,11 +86,11 @@
     "ai_model_id": "INEus5suMhG1",
     "ai_model_name": "Breakfast Quiz",
     "reference_links": [
-      "/courses/csd-2022/guides/design-mode/",
-      "/courses/csd-2022/guides/multi-screen-apps/",
-      "/courses/csd-2022/guides/design-mode/design-mode-elements/",
-      "/courses/csd-2022/guides/changing-screens/",
-      "/courses/csd-2022/guides/if-statements/"
+      "/docs/concepts/app-lab/design-mode/",
+      "/docs/concepts/app-lab/multi-screen-apps/",
+      "/docs/concepts/app-lab/design-mode/design-mode-elements/",
+      "/docs/concepts/app-lab/changing-screens/",
+      "/docs/concepts/app-lab/if-statements/"
     ],
     "preload_asset_list": null,
     "encrypted_examples": [

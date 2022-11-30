@@ -45,11 +45,11 @@
     "parent_level_id": 16222,
     "name_suffix": "_pilot",
     "reference_links": [
-      "/courses/csd-2022/guides/sprites/",
-      "/courses/csd-2022/guides/sprite-properties",
-      "/courses/csd-2022/guides/sprites/velocity/",
-      "/courses/csd-2022/guides/animation-tab",
-      "/courses/csd-2022/guides/animation-tab/editing-images/"
+      "/docs/concepts/game-lab/sprites/",
+      "/docs/concepts/game-lab/sprites/sprite-properties/",
+      "/docs/concepts/game-lab/sprites/velocity/",
+      "/docs/concepts/game-lab/animation-tab/",
+      "/docs/concepts/game-lab/animation-tab/editing-images/"
     ],
     "mini_rubric": "false",
     "preload_asset_list": null

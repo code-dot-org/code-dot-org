@@ -106,8 +106,8 @@
     "libraries_enabled": "false",
     "ai_enabled": "false",
     "reference_links": [
-      "/courses/csd-2022/guides/playing-notes/",
-      "/courses/csd-2022/guides/arrays/"
+      "/docs/concepts/maker-toolkit/playing-notes/",
+      "/docs/concepts/javascript/arrays/"
     ],
     "start_html": "<div id=\"designModeViz\" class=\"appModern clip-content\" tabindex=\"1\" data-radium=\"true\" style=\"width: 320px; height: 450px; display: none;\"><div class=\"screen\" tabindex=\"1\" data-theme=\"default\" id=\"screen1\" style=\"display: block; height: 450px; width: 320px; left: 0px; top: 0px; position: absolute; z-index: 0; background-color: rgb(255, 255, 255);\"><button id=\"happyBirthdayButton\" style=\"padding: 0px; margin: 0px; border-style: solid; height: 45px; width: 165px; background-color: rgb(255, 164, 0); color: rgb(255, 255, 255); border-color: rgb(77, 87, 95); border-radius: 4px; border-width: 1px; font-family: &quot;Arial Black&quot;, Gadget, sans-serif; font-size: 15px; position: absolute; left: 75px; top: 90px;\">Happy Birthday</button><button id=\"mySongButton\" style=\"padding: 0px; margin: 0px; border-style: solid; height: 45px; width: 165px; background-color: rgb(255, 164, 0); color: rgb(255, 255, 255); border-color: rgb(77, 87, 95); border-radius: 4px; border-width: 1px; font-family: &quot;Arial Black&quot;, Gadget, sans-serif; font-size: 15px; position: absolute; left: 75px; top: 260px;\">My Song</button></div></div>",
     "start_blocks": "onEvent(\"happyBirthdayButton\", \"click\", function( ) {\r\n  buzzer.playSong([[\"D4\", 0.5], [\"D4\", 0.5], [\"E4\", 1], [\"D4\", 1], [\"G4\", 1], [\"F#4\", 2]], 120);\r\n});\r\n",

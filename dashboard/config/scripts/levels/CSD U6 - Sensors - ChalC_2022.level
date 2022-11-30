@@ -91,10 +91,10 @@
     "widget_mode": "false",
     "ai_enabled": "false",
     "reference_links": [
-      "/courses/csd-2022/guides/analog-sensors/",
-      "/courses/csd-2022/guides/changing-sensor-scale/",
-      "/courses/csd-2022/guides/board-events/",
-      "/courses/csd-2022/guides/data-and-change-events/"
+      "/docs/concepts/maker-toolkit/analog-sensors/",
+      "/docs/concepts/maker-toolkit/changing-sensor-scale/",
+      "/docs/concepts/maker-toolkit/board-events/",
+      "/docs/concepts/maker-toolkit/data-and-change-events/"
     ],
     "display_name": "Volume Meter Version 2",
     "thumbnail_url": "https://images.code.org/216acd62d1a2b5472b9e2dd35169d0f7-image-1648854040759.gif",

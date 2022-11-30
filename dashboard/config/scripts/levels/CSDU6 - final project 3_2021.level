@@ -113,14 +113,14 @@
     "parent_level_id": 20612,
     "name_suffix": "_2021",
     "reference_links": [
-      "/courses/csd-2022/guides/physical-input/",
-      "/courses/csd-2022/guides/board-events/",
-      "/courses/csd-2022/guides/analog-sensors/",
-      "/courses/csd-2022/guides/data-and-change-events/",
-      "/courses/csd-2022/guides/changing-sensor-scale/",
-      "/courses/csd-2022/guides/the-accelerometer/",
-      "/courses/csd-2022/guides/accelerometer-events/",
-      "/courses/csd-2022/guides/circuits-and-buttons/"
+      "/docs/concepts/maker-toolkit/physical-input/",
+      "/docs/concepts/maker-toolkit/board-events/",
+      "/docs/concepts/maker-toolkit/analog-sensors/",
+      "/docs/concepts/maker-toolkit/data-and-change-events/",
+      "/docs/concepts/maker-toolkit/changing-sensor-scale/",
+      "/docs/concepts/maker-toolkit/the-accelerometer/",
+      "/docs/concepts/maker-toolkit/accelerometer-events/",
+      "/docs/concepts/maker-toolkit/circuits-and-buttons/"
     ],
     "mini_rubric": "false",
     "preload_asset_list": null

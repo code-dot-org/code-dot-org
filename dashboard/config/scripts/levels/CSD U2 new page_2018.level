@@ -17,10 +17,10 @@
 
     ],
     "reference_links": [
-      "/courses/csd-2022/guides/html-tags/",
-      "/courses/csd-2022/guides/headings-and-paragraphs/"
+      "/docs/concepts/html/html-tags/",
+      "/docs/concepts/html/headings-and-paragraphs/"
     ],
-    "map_reference": "/courses/csd-2022/guides/lists/"
+    "map_reference": "/docs/concepts/html/lists/"
   },
   "published": true,
   "notes": "",

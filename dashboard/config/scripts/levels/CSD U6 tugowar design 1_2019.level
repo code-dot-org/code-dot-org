@@ -229,9 +229,9 @@
     "encrypted_examples": "J81NV+uEjExySda61PYhYlcyQ4M4mgaLgwcjzhHpGy0Yyo5oMgnjPm0+GHhO\nnnEnHGVAF82DVbCIGnAJ9uz6yw==\n",
     "text_mode_at_start": "false",
     "reference_links": [
-      "/courses/csd-2022/guides/design-mode/design-mode-elements/"
+      "/docs/concepts/app-lab/design-mode/design-mode-elements/"
     ],
-    "map_reference": "/courses/csd-2022/guides/design-mode/",
+    "map_reference": "/docs/concepts/app-lab/design-mode/",
     "mini_rubric": "false",
     "preload_asset_list": null,
     "encrypted": "false"

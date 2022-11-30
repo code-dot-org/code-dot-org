@@ -76,13 +76,13 @@
     "parent_level_id": 20840,
     "name_suffix": "_2021",
     "reference_links": [
-      "/courses/csd-2022/guides/sprites/velocity/",
-      "/courses/csd-2022/guides/the-counter-pattern-2",
-      "/courses/csd-2022/guides/if-statements",
-      "/courses/csd-2022/guides/sprites/",
-      "/courses/csd-2022/guides/animation-tab/multi-frame-animations/"
+      "/docs/concepts/game-lab/sprites/velocity/",
+      "/docs/concepts/game-lab/the-counter-pattern/",
+      "/docs/concepts/javascript/if-statements/",
+      "/docs/concepts/game-lab/sprites/",
+      "/docs/concepts/game-lab/animation-tab/multi-frame-animations/"
     ],
-    "map_reference": "/courses/csd-2022/guides/velocity-and-the-counter-pattern/",
+    "map_reference": "/docs/concepts/game-lab/velocity-and-the-counter-pattern/",
     "mini_rubric": "false",
     "encrypted": "false",
     "libraries_enabled": "false",

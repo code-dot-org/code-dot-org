@@ -73,10 +73,10 @@
     "name_suffix": "_2020",
     "long_instructions": "# velocityX\r\n\r\nOne way to move sprites in Game Lab is with the counter pattern. For example `sprite1.x = sprite1.x + 1` moves a sprite by 1 pixel each frame of the draw loop. This pattern is so common that sprites have a `velocityX` property that does this for you.\r\n\r\n# Do This\r\n\r\n* Drag a `sprite.velocityX` block directly below where your sprite is created. &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ( [Show me where](#triggercallout=code_triggered) )\r\n* Write the name of your sprite in the block.\r\n* Assign the `velocityX` property a value of 1.\r\n* Run the code. What happens?\r\n* Re-run the code giving the `velocityX` property a different value. What's changing?",
     "reference_links": [
-      "/courses/csd-2022/guides/the-counter-pattern-2",
-      "/courses/csd-2022/guides/animation-tab/multi-frame-animations/"
+      "/docs/concepts/game-lab/the-counter-pattern/",
+      "/docs/concepts/game-lab/animation-tab/multi-frame-animations/"
     ],
-    "map_reference": "/courses/csd-2022/guides/sprites/velocity/",
+    "map_reference": "/docs/concepts/game-lab/sprites/velocity/",
     "video_key": "csd_gamelab_velocity",
     "mini_rubric": "false",
     "preload_asset_list": null,

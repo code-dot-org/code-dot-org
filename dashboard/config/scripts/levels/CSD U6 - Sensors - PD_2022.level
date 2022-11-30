@@ -91,10 +91,10 @@
     "widget_mode": "false",
     "ai_enabled": "false",
     "reference_links": [
-      "/courses/csd-2022/guides/analog-sensors/",
-      "/courses/csd-2022/guides/changing-sensor-scale/",
-      "/courses/csd-2022/guides/board-events/",
-      "/courses/csd-2022/guides/data-and-change-events/"
+      "/docs/concepts/maker-toolkit/analog-sensors/",
+      "/docs/concepts/maker-toolkit/changing-sensor-scale/",
+      "/docs/concepts/maker-toolkit/board-events/",
+      "/docs/concepts/maker-toolkit/data-and-change-events/"
     ],
     "start_html": "<div id=\"designModeViz\" class=\"appModern\" tabindex=\"1\" data-radium=\"true\" style=\"display: none; width: 320px; height: 450px;\"><div class=\"screen\" tabindex=\"1\" id=\"screen1\" style=\"display: block; height: 450px; width: 320px; left: 0px; top: 0px; position: absolute; z-index: 0; background-color: rgb(255, 255, 255);\" data-theme=\"classic\"><button id=\"volumeButton\" style=\"padding: 0px; margin: 0px; width: 275px; font-size: 23px; color: rgb(255, 255, 255); background-color: rgb(23, 0, 255); position: absolute; left: 20px; top: 5px; height: 30px; border-style: solid; border-width: 0px; border-color: rgb(0, 0, 0); border-radius: 0px; font-family: Arial, Helvetica, sans-serif;\">Volume Meter!</button></div></div>",
     "display_name": "Volume Meter",

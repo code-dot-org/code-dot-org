@@ -231,7 +231,7 @@
     "makerlab_enabled": "true",
     "parent_level_id": 16642,
     "name_suffix": "_2020",
-    "map_reference": "/courses/csd-2022/guides/circuits-and-leds/",
+    "map_reference": "/docs/concepts/maker-toolkit/circuits-and-leds/",
     "mini_rubric": "false",
     "text_mode_at_start": "false",
     "preload_asset_list": null

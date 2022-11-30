@@ -75,11 +75,11 @@
     "encrypted_examples": "XH8A0FdybfV5+BGUR3BJxzALV31tk3T923YFgX8FDwCXeKRDaO2QBAgxteZ2\n+ri/HpvJaVmoYPn9jQtwz205vw==\n",
     "libraries_enabled": "false",
     "reference_links": [
-      "/courses/csd-2022/guides/variables",
-      "/courses/csd-2022/guides/drawing-shapes",
-      "/courses/csd-2022/guides/shapes-and-parameters"
+      "/docs/concepts/javascript/variables/",
+      "/docs/concepts/game-lab/drawing-shapes/",
+      "/docs/concepts/game-lab/shapes-and-parameters/"
     ],
-    "map_reference": "/courses/csd-2022/guides/naming-variables/",
+    "map_reference": " /docs/concepts/javascript/naming-variables/",
     "bubble_choice_description": "Use variables with colors!",
     "preload_asset_list": null
   },

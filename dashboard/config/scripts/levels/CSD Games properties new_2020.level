@@ -71,14 +71,14 @@
     "parent_level_id": 19020,
     "name_suffix": "_2020",
     "reference_links": [
-      "/courses/csd-2022/guides/sprites/",
-      "/courses/csd-2022/guides/animation-tab",
-      "/courses/csd-2022/guides/random-numbers",
-      "/courses/csd-2022/guides/variables",
-      "/courses/csd-2022/guides/naming-variables",
-      "/courses/csd-2022/guides/drawing-shapes",
-      "/courses/csd-2022/guides/shapes-and-parameters",
-      "/courses/csd-2022/guides/sprites/sprite-interactions/"
+      "/docs/concepts/game-lab/sprites/",
+      "/docs/concepts/game-lab/animation-tab/",
+      "/docs/concepts/javascript/random-numbers/",
+      "/docs/concepts/javascript/variables/",
+      "/docs/concepts/javascript/naming-variables/",
+      "/docs/concepts/game-lab/drawing-shapes/",
+      "/docs/concepts/game-lab/shapes-and-parameters/",
+      "/docs/concepts/game-lab/sprites/sprite-interactions/"
     ],
     "video_key": "csd_gamelab_animation_tab",
     "disable_procedure_autopopulate": "false",
@@ -92,7 +92,7 @@
     "encrypted_examples": "9mw1uOwn6CoQ6omMD7FAMVEacLcuseLWu3IU3D/XGE2vHUOlpbQGz8F32pcN\nNJa2Gcvpqv3jYvf+WXGPqmjtCw==\n",
     "libraries_enabled": "false",
     "preload_asset_list": null,
-    "map_reference": "/courses/csd-2022/guides/sprite-properties"
+    "map_reference": "/docs/concepts/game-lab/sprites/sprite-properties/"
   },
   "published": true,
   "notes": "",

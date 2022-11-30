@@ -123,7 +123,7 @@
     "encrypted_examples": "RGFz5gN7LJVF/0woN4tgHTCyF/48wyhXjZ4Re6TPOKuWZeSQ140IXV1T6dOX\neMRQbZXEv88s/3UJdcd+2lS0ElF1KmNZd8PHwy25IwPmH5MigIHwZvIM3Cfe\nzFALmJtj0sERqB1LcPW3gBLDlU+IHQ==\n",
     "parent_level_id": 12510,
     "name_suffix": "_2019",
-    "map_reference": "/courses/csd-2022/guides/functions/",
+    "map_reference": "/docs/concepts/javascript/functions/",
     "mini_rubric": "false",
     "text_mode_at_start": "false",
     "preload_asset_list": null,

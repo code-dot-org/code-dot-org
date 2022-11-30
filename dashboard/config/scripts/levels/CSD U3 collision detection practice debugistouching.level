@@ -66,13 +66,13 @@
     "parent_level_id": 20822,
     "name_suffix": "_2020",
     "reference_links": [
-      "/courses/csd-2022/guides/sprites/velocity/",
-      "/courses/csd-2022/guides/booleans-and-comparison-operators/",
-      "/courses/csd-2022/guides/if-statements",
-      "/courses/csd-2022/guides/if-else-statements/",
-      "/courses/csd-2022/guides/the-draw-loop"
+      "/docs/concepts/game-lab/sprites/velocity/",
+      "/docs/concepts/javascript/booleans-and-comparison-operators/",
+      "/docs/concepts/javascript/if-statements/",
+      "/docs/concepts/javascript/if-else-statements/",
+      "/docs/concepts/game-lab/the-draw-loop/"
     ],
-    "map_reference": "/courses/csd-2022/guides/sprites/collision-detection/",
+    "map_reference": "/docs/concepts/game-lab/sprites/collision-detection/",
     "mini_rubric": "false",
     "encrypted": "false",
     "start_blocks": "var sun = createSprite(200, 0);\r\nsun.setAnimation(\"sun\");\r\nvar bunny = createSprite(200, 300);\r\nbunny.setAnimation(\"bunny_sad\");\r\nif (sun.isTouching(bunny)) {\r\n  bunny.setAnimation(\"bunny_happy\");\r\n}\r\nfunction draw() {\r\n  background(\"lightblue\");\r\n  sun.velocityY = 2;\r\n  drawSprites();\r\n}\r\n",

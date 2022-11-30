@@ -69,8 +69,8 @@
     "parent_level_id": 23050,
     "name_suffix": "_virtual_2020",
     "reference_links": [
-      "/courses/csd-2022/guides/the-counter-pattern-2",
-      "/courses/csd-2022/guides/random-numbers"
+      "/docs/concepts/game-lab/the-counter-pattern/",
+      "/docs/concepts/javascript/random-numbers/"
     ],
     "disable_procedure_autopopulate": "false",
     "top_level_procedure_autopopulate": "false",

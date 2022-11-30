@@ -121,7 +121,7 @@
     "parent_level_id": 12509,
     "name_suffix": "_2019",
     "preload_asset_list": null,
-    "map_reference": "/courses/csd-2022/guides/functions/",
+    "map_reference": "/docs/concepts/javascript/functions/",
     "long_instructions": "# Clouds\r\n\r\nThis program makes the clouds move when you blow on the sound sensor, but it's not finished.\r\n\r\n# Do This\r\n* Create a new function `moveCloud(name)` that will move any cloud.\r\n  * (Hint: you will use almost all the same code as the `moveCloud0` function)\r\n* Call your new `moveCloud(name)` function inside the event block, once for each cloud name.\r\n  * (Hint: this is similar to how the `loopCloud(name)` function is called many times.)",
     "mini_rubric": "false",
     "text_mode_at_start": "false"
