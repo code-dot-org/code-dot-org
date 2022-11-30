@@ -1,18 +1,19 @@
 import PropTypes from 'prop-types';
-import React from 'react';
+import React, {useContext} from 'react';
 import {connect} from 'react-redux';
+import {PlayerUtilsContext} from './context';
 
 const barWidth = 60;
 
 const Timeline = ({
   isPlaying,
-  convertMeasureToSeconds,
-  currentMeasure,
   sounds,
   // populated by Redux
   soundEvents,
   currentAudioElapsedTime
 }) => {
+  const playerUtils = useContext(PlayerUtilsContext);
+
   const getEventHeight = () => {
     const numUniqueSounds = getUniqueSounds().length;
     const actualHeight = 110;
@@ -77,11 +78,14 @@ const Timeline = ({
   };
 
   const playHeadOffset = isPlaying
-    ? (currentAudioElapsedTime * barWidth) / convertMeasureToSeconds(1)
+    ? (currentAudioElapsedTime * barWidth) /
+      playerUtils.convertMeasureToSeconds(1)
     : null;
 
   // Leave some vertical space between each event block.
   const eventVerticalSpace = 2;
+
+  const currentMeasure = playerUtils.getCurrentMeasure();
 
   return (
     <div
@@ -199,11 +203,9 @@ const Timeline = ({
 
 Timeline.propTypes = {
   isPlaying: PropTypes.bool.isRequired,
+  sounds: PropTypes.array,
   currentAudioElapsedTime: PropTypes.number.isRequired,
-  convertMeasureToSeconds: PropTypes.func.isRequired,
-  currentMeasure: PropTypes.number.isRequired,
-  soundEvents: PropTypes.array.isRequired,
-  sounds: PropTypes.array
+  soundEvents: PropTypes.array.isRequired
 };
 
 export default connect(state => ({

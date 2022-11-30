@@ -2,9 +2,16 @@ import PropTypes from 'prop-types';
 import React, {useContext, useEffect, useState} from 'react';
 import classNames from 'classnames';
 import moduleStyles from './instructions.module.scss';
-import {AnalyticsContext} from './context';
+import {AnalyticsContext, BaseUrlContext} from './context';
+import {useFetch} from '../util/useFetch';
 
-const Instructions = ({instructions, baseUrl, vertical, right}) => {
+const Instructions = ({vertical, right}) => {
+  const baseUrl = useContext(BaseUrlContext);
+
+  const {data} = useFetch(baseUrl + 'music-instructions.json', null, []);
+
+  const instructions = data;
+
   const [currentPanel, setCurrentPanel] = useState(0);
   const [showBigImage, setShowBigImage] = useState(false);
 
@@ -141,7 +148,6 @@ const Instructions = ({instructions, baseUrl, vertical, right}) => {
 
 Instructions.propTypes = {
   instructions: PropTypes.object,
-  baseUrl: PropTypes.string.isRequired,
   vertical: PropTypes.bool,
   right: PropTypes.bool
 };

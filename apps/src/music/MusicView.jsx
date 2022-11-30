@@ -17,7 +17,6 @@ import {AnalyticsContext} from './context';
 import TopButtons from './TopButtons';
 import Globals from './globals';
 import MusicBlocklyWorkspace from './blockly/MusicBlocklyWorkspace';
-import KeyHandler from './KeyHandler';
 import {
   InstructionsPositions,
   setCurrentAudioElapsedTime,
@@ -166,10 +165,6 @@ class UnconnectedMusicView extends React.Component {
     this.analyticsReporter.onBlocksUpdated(
       this.musicBlocklyWorkspace.getAllBlocks()
     );
-
-    // This is a way to tell React to re-render the scene, notably
-    // the timeline.
-    // this.setState({updateNumber: this.state.updateNumber + 1});
 
     this.musicBlocklyWorkspace.saveCode();
   };
@@ -323,10 +318,6 @@ class UnconnectedMusicView extends React.Component {
 
     return (
       <AnalyticsContext.Provider value={this.analyticsReporter}>
-        <KeyHandler
-          togglePlaying={() => this.setPlaying(!this.state.isPlaying)}
-          playTrigger={this.playTrigger}
-        />
         <div id="music-lab-container" className={moduleStyles.container}>
           {showInstructions &&
             instructionsPosition === InstructionsPositions.TOP &&
