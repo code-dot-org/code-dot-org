@@ -128,7 +128,7 @@ module Pd::Application
     # @override
     def set_type_and_year
       self.application_type = TEACHER_APPLICATION
-      self.application_year = Pd::Application::ActiveApplicationModels::APPLICATION_CURRENT_YEAR unless application_year
+      self.application_year = ActiveApplicationModels::APPLICATION_CURRENT_YEAR unless application_year
     end
 
     def set_course_from_program
