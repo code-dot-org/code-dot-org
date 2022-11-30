@@ -76,10 +76,6 @@ Lint/ConstantDefinitionInBlock:
 Lint/DuplicateBranch:
   Enabled: false
 
-# Offense count: 5
-Lint/DuplicateMethods:
-  Enabled: false
-
 # Offense count: 120
 # Configuration parameters: AllowComments, AllowEmptyLambdas.
 Lint/EmptyBlock:
@@ -133,10 +129,6 @@ Lint/RescueException:
 # Offense count: 95
 # This cop supports safe auto-correction (--auto-correct).
 Lint/ScriptPermission:
-  Enabled: false
-
-# Offense count: 1
-Lint/StructNewOverride:
   Enabled: false
 
 # Offense count: 696
