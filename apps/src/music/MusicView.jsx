@@ -55,8 +55,6 @@ class UnconnectedMusicView extends React.Component {
       library: null,
       instructions: null,
       isPlaying: false
-      // currentAudioElapsedTime: 0,
-      // updateNumber: 0
     };
   }
 
@@ -193,7 +191,7 @@ class UnconnectedMusicView extends React.Component {
     }
     this.analyticsReporter.onButtonClicked('trigger', {id});
     this.musicBlocklyWorkspace.executeTrigger(id);
-    // this.props.setSoundEvents([...this.player.getSoundEvents()]);
+    this.props.setSoundEvents(this.player.getSoundEvents());
   };
 
   toggleInstructions = fromKeyboardShortcut => {
@@ -208,7 +206,7 @@ class UnconnectedMusicView extends React.Component {
     this.musicBlocklyWorkspace.executeSong({
       MusicPlayer: this.player
     });
-    // this.props.setSoundEvents([...this.player.getSoundEvents()]);
+    this.props.setSoundEvents(this.player.getSoundEvents());
   };
 
   playSong = () => {
@@ -235,6 +233,7 @@ class UnconnectedMusicView extends React.Component {
     this.player.clearTriggeredEvents();
 
     this.setState({isPlaying: false});
+    this.props.setSoundEvents(this.player.getSoundEvents());
     this.props.setCurrentAudioElapsedTime(0);
   };
 

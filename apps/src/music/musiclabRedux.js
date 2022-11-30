@@ -53,7 +53,11 @@ const musicSlice = createSlice({
       state.currentAudioElapsedTime = action.payload;
     },
     setSoundEvents: (state, action) => {
-      state.soundEvents = action.payload;
+      // Re-map sound events to strip unneeded data and avoid issues with invariance
+      state.soundEvents = action.payload.map(event => ({
+        id: event.id,
+        when: event.when
+      }));
     }
   }
 });
