@@ -15,9 +15,9 @@
     "parent_level_id": 20008,
     "name_suffix": "_2023",
     "reference_links": [
-      "/courses/csd-2022/guides/html-tags"
+      "/courses/csd/guides/html-tags"
     ],
-    "map_reference": "/courses/csd-2022/guides/headings-and-paragraphs",
+    "map_reference": "/courses/csd/guides/headings-and-paragraphs",
     "encrypted": "false",
     "validation_enabled": "true",
     "mini_rubric": "false"

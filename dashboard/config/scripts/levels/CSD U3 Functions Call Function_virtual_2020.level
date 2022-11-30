@@ -66,11 +66,11 @@
     "video_key": "csd_gamelab_functions",
     "display_name": "Video: Calling and Defining Functions",
     "reference_links": [
-      "/courses/csd-2022/guides/drawing-shapes",
-      "/courses/csd-2022/guides/shapes-and-parameters"
+      "/courses/csd/guides/drawing-shapes",
+      "/courses/csd/guides/shapes-and-parameters"
     ],
     "libraries_enabled": "false",
-    "map_reference": "/courses/csd-2022/guides/functions/",
+    "map_reference": "/courses/csd/guides/functions/",
     "preload_asset_list": null
   },
   "published": true,

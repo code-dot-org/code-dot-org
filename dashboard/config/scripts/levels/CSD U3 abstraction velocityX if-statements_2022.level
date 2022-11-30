@@ -76,14 +76,14 @@
     "name_suffix": "_2022",
     "encrypted": "false",
     "reference_links": [
-      "/courses/csd-2022/guides/booleans-and-comparison-operators",
-      "/courses/csd-2022/guides/if-statements",
-      "/courses/csd-2022/guides/if-else-statements",
-      "/courses/csd-2022/guides/the-counter-pattern-2",
-      "/courses/csd-2022/guides/the-draw-loop",
-      "/courses/csd-2022/guides/sprite-properties"
+      "/courses/csd/guides/booleans-and-comparison-operators",
+      "/courses/csd/guides/if-statements",
+      "/courses/csd/guides/if-else-statements",
+      "/courses/csd/guides/the-counter-pattern-2",
+      "/courses/csd/guides/the-draw-loop",
+      "/courses/csd/guides/sprite-properties"
     ],
-    "map_reference": "/courses/csd-2022/guides/velocity",
+    "map_reference": "/courses/csd/guides/velocity",
     "mini_rubric": "false",
     "libraries_enabled": "false",
     "preload_asset_list": null

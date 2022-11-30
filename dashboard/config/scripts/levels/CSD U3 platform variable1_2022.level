@@ -43,11 +43,11 @@
     "parent_level_id": 20902,
     "name_suffix": "_2022",
     "reference_links": [
-      "/courses/csd-2022/guides/variables",
-      "/courses/csd-2022/guides/naming-variables",
-      "/courses/csd-2022/guides/drawing-shapes",
-      "/courses/csd-2022/guides/shapes-and-parameters",
-      "/courses/csd-2022/guides/functions"
+      "/courses/csd/guides/variables",
+      "/courses/csd/guides/naming-variables",
+      "/courses/csd/guides/drawing-shapes",
+      "/courses/csd/guides/shapes-and-parameters",
+      "/courses/csd/guides/functions"
     ],
     "mini_rubric": "false",
     "preload_asset_list": null

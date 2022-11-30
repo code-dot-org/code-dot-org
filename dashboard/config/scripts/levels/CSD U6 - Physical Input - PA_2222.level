@@ -78,9 +78,9 @@
     "parent_level_id": 20603,
     "name_suffix": "_2222",
     "reference_links": [
-      "/courses/csd-2022/guides/circuits-and-leds"
+      "/courses/csd/guides/circuits-and-leds"
     ],
-    "map_reference": "/courses/csd-2022/guides/circuits-and-buttons",
+    "map_reference": "/courses/csd/guides/circuits-and-buttons",
     "mini_rubric": "false",
     "encrypted": "false",
     "widget_mode": "false",

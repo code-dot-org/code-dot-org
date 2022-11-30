@@ -81,12 +81,12 @@
     "parent_level_id": 20813,
     "name_suffix": "_2021",
     "reference_links": [
-      "/courses/csd-2022/guides/sprites/velocity/",
-      "/courses/csd-2022/guides/the-draw-loop",
-      "/courses/csd-2022/guides/sprites/",
-      "/courses/csd-2022/guides/animation-tab",
-      "/courses/csd-2022/guides/sprite-properties",
-      "/courses/csd-2022/guides/random-numbers"
+      "/courses/csd/guides/sprites/velocity/",
+      "/courses/csd/guides/the-draw-loop",
+      "/courses/csd/guides/sprites/",
+      "/courses/csd/guides/animation-tab",
+      "/courses/csd/guides/sprite-properties",
+      "/courses/csd/guides/random-numbers"
     ],
     "video_key": "csd_gamelab_velocity",
     "mini_rubric": "false",

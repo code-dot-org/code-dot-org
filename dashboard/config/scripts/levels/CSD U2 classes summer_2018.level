@@ -14,10 +14,10 @@
     "parent_level_id": 7753,
     "name_suffix": "_2018",
     "reference_links": [
-      "/courses/csd-2022/guides/style-sheets/",
-      "/courses/csd-2022/guides/text-properties/"
+      "/courses/csd/guides/style-sheets/",
+      "/courses/csd/guides/text-properties/"
     ],
-    "map_reference": "/courses/csd-2022/guides/classes/",
+    "map_reference": "/courses/csd/guides/classes/",
     "mini_rubric": "false"
   },
   "published": true,

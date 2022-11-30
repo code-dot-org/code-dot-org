@@ -98,10 +98,10 @@
     "parent_level_id": 12390,
     "name_suffix": "_2019",
     "reference_links": [
-      "/courses/csd-2022/guides/data-and-change-events/",
-      "/courses/csd-2022/guides/analog-sensors/"
+      "/courses/csd/guides/data-and-change-events/",
+      "/courses/csd/guides/analog-sensors/"
     ],
-    "map_reference": "/courses/csd-2022/guides/changing-sensor-scale/",
+    "map_reference": "/courses/csd/guides/changing-sensor-scale/",
     "mini_rubric": "false",
     "preload_asset_list": null,
     "encrypted": "false"

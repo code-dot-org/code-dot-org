@@ -64,8 +64,8 @@
     "parent_level_id": 20846,
     "name_suffix": "_virtual_2020",
     "reference_links": [
-      "/courses/csd-2022/guides/sprites/collision-detection/",
-      "/courses/csd-2022/guides/sprites/velocity/"
+      "/courses/csd/guides/sprites/collision-detection/",
+      "/courses/csd/guides/sprites/velocity/"
     ],
     "mini_rubric": "false",
     "encrypted": "false",

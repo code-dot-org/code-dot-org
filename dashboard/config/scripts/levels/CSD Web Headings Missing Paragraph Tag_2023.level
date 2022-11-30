@@ -16,13 +16,13 @@
     "bubble_choice_description": "Use your debugging skills to figure out why the paragraph style is not being applied.",
     "encrypted_examples": "payYAvJNZERx/AgOQ9xV0pLxJiF7SbmFoJTlX/m9y/BoX9kpUNCD/fsI1jES\nC5JjYfQORvcpwKT8zSHXqrOZGg==\n",
     "reference_links": [
-      "/courses/csd-2022/guides/text-properties",
-      "/courses/csd-2022/guides/formatting-html",
-      "/courses/csd-2022/guides/lists",
-      "/courses/csd-2022/guides/headings-and-paragraphs",
-      "/courses/csd-2022/guides/html-tags"
+      "/courses/csd/guides/text-properties",
+      "/courses/csd/guides/formatting-html",
+      "/courses/csd/guides/lists",
+      "/courses/csd/guides/headings-and-paragraphs",
+      "/courses/csd/guides/html-tags"
     ],
-    "map_reference": "/courses/csd-2022/guides/style-sheets",
+    "map_reference": "/courses/csd/guides/style-sheets",
     "parent_level_id": 18858,
     "thumbnail_url": "https://images.code.org/c9fb8291dfd318fad3ead66ee342724b-image-1563405036911.JPG",
     "name_suffix": "_2023"

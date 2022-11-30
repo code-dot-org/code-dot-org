@@ -210,11 +210,11 @@
     "parent_level_id": 18591,
     "name_suffix": "_2020",
     "reference_links": [
-      "/courses/csd-2022/guides/the-counter-pattern-2",
-      "/courses/csd-2022/guides/the-draw-loop",
-      "/courses/csd-2022/guides/sprites/",
-      "/courses/csd-2022/guides/animation-tab",
-      "/courses/csd-2022/guides/sprite-properties"
+      "/courses/csd/guides/the-counter-pattern-2",
+      "/courses/csd/guides/the-draw-loop",
+      "/courses/csd/guides/sprites/",
+      "/courses/csd/guides/animation-tab",
+      "/courses/csd/guides/sprite-properties"
     ],
     "mini_rubric": "false",
     "hide_share_and_remix": "false",

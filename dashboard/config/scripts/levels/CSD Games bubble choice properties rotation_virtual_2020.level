@@ -70,14 +70,14 @@
     "parent_level_id": 20956,
     "name_suffix": "_virtual_2020",
     "reference_links": [
-      "/courses/csd-2022/guides/sprites/",
-      "/courses/csd-2022/guides/animation-tab",
-      "/courses/csd-2022/guides/random-numbers",
-      "/courses/csd-2022/guides/variables",
-      "/courses/csd-2022/guides/naming-variables",
-      "/courses/csd-2022/guides/drawing-shapes",
-      "/courses/csd-2022/guides/shapes-and-parameters",
-      "/courses/csd-2022/guides/sprites/sprite-interactions/"
+      "/courses/csd/guides/sprites/",
+      "/courses/csd/guides/animation-tab",
+      "/courses/csd/guides/random-numbers",
+      "/courses/csd/guides/variables",
+      "/courses/csd/guides/naming-variables",
+      "/courses/csd/guides/drawing-shapes",
+      "/courses/csd/guides/shapes-and-parameters",
+      "/courses/csd/guides/sprites/sprite-interactions/"
     ],
     "video_key": "csd_gamelab_animation_tab",
     "disable_procedure_autopopulate": "false",
@@ -93,7 +93,7 @@
     "display_name": "Rotation Property",
     "bubble_choice_description": "Rotate the cars so they fit in the traffic lanes.",
     "thumbnail_url": "https://images.code.org/90bb6cb660f77100a378532d42d8e9a2-image-1592417215602.png",
-    "map_reference": "/courses/csd-2022/guides/sprite-properties",
+    "map_reference": "/courses/csd/guides/sprite-properties",
     "preload_asset_list": null
   },
   "published": true,

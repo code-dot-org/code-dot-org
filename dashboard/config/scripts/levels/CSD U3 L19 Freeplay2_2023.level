@@ -104,13 +104,13 @@
     "thumbnail_url": "https://images.code.org/7806a5cfa2a5fbd4741e7151a74dfaa9-balls-sports.png",
     "encrypted": "false",
     "reference_links": [
-      "/courses/csd-2022/guides/velocity",
-      "/courses/csd-2022/guides/booleans-and-comparison-operators",
-      "/courses/csd-2022/guides/if-statements",
-      "/courses/csd-2022/guides/if-else-statements",
-      "/courses/csd-2022/guides/the-draw-loop"
+      "/courses/csd/guides/velocity",
+      "/courses/csd/guides/booleans-and-comparison-operators",
+      "/courses/csd/guides/if-statements",
+      "/courses/csd/guides/if-else-statements",
+      "/courses/csd/guides/the-draw-loop"
     ],
-    "map_reference": "/courses/csd-2022/guides/collision-detection",
+    "map_reference": "/courses/csd/guides/collision-detection",
     "mini_rubric": "false",
     "libraries_enabled": "false",
     "teacher_markdown": "This level does not contain an exemplar because of how open-ended the directions are. Instead, we encourage you to consider this as a focused free-play level: students are free to design a scene based on their own interests and creative expression, but focused in a particular area to give some initial guidance. This can be an opportunity to gain insights and offer feedback on the skills students demonstrate while building their scene, even if they do not finish the level completely. This type of level can also reinforce the Problem Solving Process as students ideate and develop a web page of their own choosing (Define - Prepare - Try - Reflect).\r\n\r\nAs students develop more skills throughout the unit, they may decide to use an idea from this level as the basis for one of their projects or to continue developing on their own time.",

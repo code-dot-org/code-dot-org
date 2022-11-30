@@ -80,13 +80,13 @@
     "widget_mode": "false",
     "ai_enabled": "false",
     "reference_links": [
-      "/courses/csd-2022/guides/color-lights/",
-      "/courses/csd-2022/guides/if-statements",
-      "/courses/csd-2022/guides/variables",
-      "/courses/csd-2022/guides/booleans-and-comparison-operators/",
-      "/courses/csd-2022/guides/physical-input/",
-      "/courses/csd-2022/guides/producing-output/",
-      "/courses/csd-2022/guides/board-events/"
+      "/courses/csd/guides/color-lights/",
+      "/courses/csd/guides/if-statements",
+      "/courses/csd/guides/variables",
+      "/courses/csd/guides/booleans-and-comparison-operators/",
+      "/courses/csd/guides/physical-input/",
+      "/courses/csd/guides/producing-output/",
+      "/courses/csd/guides/board-events/"
     ],
     "callout_json": "[]",
     "display_name": "Change Colors with Toggle",

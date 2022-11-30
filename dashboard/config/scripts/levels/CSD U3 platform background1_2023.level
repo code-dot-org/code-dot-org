@@ -45,10 +45,10 @@
     "parent_level_id": 20900,
     "name_suffix": "_2023",
     "reference_links": [
-      "/courses/csd-2022/guides/drawing-shapes",
-      "/courses/csd-2022/guides/shapes-and-parameters",
-      "/courses/csd-2022/guides/functions",
-      "/courses/csd-2022/guides/multi-frame-animations"
+      "/courses/csd/guides/drawing-shapes",
+      "/courses/csd/guides/shapes-and-parameters",
+      "/courses/csd/guides/functions",
+      "/courses/csd/guides/multi-frame-animations"
     ],
     "mini_rubric": "false",
     "encrypted": "false",

@@ -64,10 +64,10 @@
     "widget_mode": "false",
     "ai_enabled": "false",
     "reference_links": [
-      "/courses/csd-2022/guides/circuit-playground/",
-      "/courses/csd-2022/guides/physical-input/",
-      "/courses/csd-2022/guides/producing-output/",
-      "/courses/csd-2022/guides/board-events/"
+      "/courses/csd/guides/circuit-playground/",
+      "/courses/csd/guides/physical-input/",
+      "/courses/csd/guides/producing-output/",
+      "/courses/csd/guides/board-events/"
     ],
     "palette_category_at_start": "Circuit",
     "start_blocks": "onBoardEvent(buttonL, \"down\", function() {\r\n  setText(\"thisLabel\", \"The toggle switch is open\");\r\n});\r\nonBoardEvent(buttonL, \"up\", function() {\r\n  setText(\"thisLabel\", \"The right button is down\");\r\n});\r\nonBoardEvent(buttonR, \"down\", function() {\r\n  setText(\"thisLabel\", \"The right button is up\");\r\n});\r\nonBoardEvent(buttonR, \"up\", function() {\r\n  setText(\"thisLabel\", \"The left button is up\");\r\n});\r\nonBoardEvent(toggleSwitch, \"open\", function() {\r\n  setText(\"thisLabel\", \"The left button is down\");\r\n});\r\nonBoardEvent(toggleSwitch, \"close\", function() {\r\n  setText(\"thisLabel\", \"The toggle switch is close\");\r\n});\r\n",

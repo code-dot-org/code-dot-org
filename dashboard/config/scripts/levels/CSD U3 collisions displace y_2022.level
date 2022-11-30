@@ -63,8 +63,8 @@
     "parent_level_id": 20847,
     "name_suffix": "_2022",
     "reference_links": [
-      "/courses/csd-2022/guides/collision-detection",
-      "/courses/csd-2022/guides/velocity"
+      "/courses/csd/guides/collision-detection",
+      "/courses/csd/guides/velocity"
     ],
     "mini_rubric": "false",
     "encrypted": "false",

@@ -63,11 +63,11 @@
     "parent_level_id": 20426,
     "name_suffix": "_2021",
     "reference_links": [
-      "/courses/csd-2022/guides/physical-input/",
-      "/courses/csd-2022/guides/circuit-playground/",
-      "/courses/csd-2022/guides/board-events/"
+      "/courses/csd/guides/physical-input/",
+      "/courses/csd/guides/circuit-playground/",
+      "/courses/csd/guides/board-events/"
     ],
-    "map_reference": "/courses/csd-2022/guides/producing-output/",
+    "map_reference": "/courses/csd/guides/producing-output/",
     "mini_rubric": "false",
     "encrypted": "false",
     "preload_asset_list": null,

@@ -113,14 +113,14 @@
     "parent_level_id": 16662,
     "name_suffix": "_2020",
     "reference_links": [
-      "/courses/csd-2022/guides/physical-input/",
-      "/courses/csd-2022/guides/board-events/",
-      "/courses/csd-2022/guides/analog-sensors/",
-      "/courses/csd-2022/guides/data-and-change-events/",
-      "/courses/csd-2022/guides/changing-sensor-scale/",
-      "/courses/csd-2022/guides/the-accelerometer/",
-      "/courses/csd-2022/guides/accelerometer-events/",
-      "/courses/csd-2022/guides/circuits-and-buttons/"
+      "/courses/csd/guides/physical-input/",
+      "/courses/csd/guides/board-events/",
+      "/courses/csd/guides/analog-sensors/",
+      "/courses/csd/guides/data-and-change-events/",
+      "/courses/csd/guides/changing-sensor-scale/",
+      "/courses/csd/guides/the-accelerometer/",
+      "/courses/csd/guides/accelerometer-events/",
+      "/courses/csd/guides/circuits-and-buttons/"
     ],
     "mini_rubric": "false",
     "preload_asset_list": null

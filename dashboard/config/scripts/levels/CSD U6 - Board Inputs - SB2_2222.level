@@ -67,9 +67,9 @@
     "parent_level_id": 20416,
     "name_suffix": "_2222",
     "reference_links": [
-      "/courses/csd-2022/guides/circuit-playground"
+      "/courses/csd/guides/circuit-playground"
     ],
-    "map_reference": "/courses/csd-2022/guides/board-events",
+    "map_reference": "/courses/csd/guides/board-events",
     "mini_rubric": "false",
     "encrypted": "false",
     "widget_mode": "false",

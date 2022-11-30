@@ -64,9 +64,9 @@
 
     ],
     "reference_links": [
-      "/courses/csd-2022/guides/circuits-and-leds/"
+      "/courses/csd/guides/circuits-and-leds/"
     ],
-    "map_reference": "/courses/csd-2022/guides/circuits-and-buttons/",
+    "map_reference": "/courses/csd/guides/circuits-and-buttons/",
     "mini_rubric": "false"
   },
   "published": true,

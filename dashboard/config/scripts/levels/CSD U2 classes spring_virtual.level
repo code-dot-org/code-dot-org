@@ -14,10 +14,10 @@
     "name_suffix": "_virtual",
     "submittable": "false",
     "reference_links": [
-      "/courses/csd-2022/guides/style-sheets/",
-      "/courses/csd-2022/guides/text-properties/"
+      "/courses/csd/guides/style-sheets/",
+      "/courses/csd/guides/text-properties/"
     ],
-    "map_reference": "/courses/csd-2022/guides/classes/",
+    "map_reference": "/courses/csd/guides/classes/",
     "encrypted": "false",
     "mini_rubric": "false"
   },

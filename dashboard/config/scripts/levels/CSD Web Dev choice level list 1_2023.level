@@ -21,10 +21,10 @@
     "thumbnail_url": "https://images.code.org/0ebf696af68df01fdc20b3eed5631d41-debug list.png",
     "encrypted_examples": "oaKCaZIcq8DS45Hm5bVovsIfl+uZXbvBSFavlzMlkzaKyBexlAYzuDCdLix+\nH1db2sUYLauZmTwl3e9vq+pHSg==\n",
     "reference_links": [
-      "/courses/csd-2022/guides/headings-and-paragraphs",
-      "/courses/csd-2022/guides/html-tags"
+      "/courses/csd/guides/headings-and-paragraphs",
+      "/courses/csd/guides/html-tags"
     ],
-    "map_reference": "/courses/csd-2022/guides/lists",
+    "map_reference": "/courses/csd/guides/lists",
     "validation_enabled": "false"
   },
   "game_id": 58,

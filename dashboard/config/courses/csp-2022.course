@@ -26,7 +26,7 @@
   "resources": [
     {
       "name": "All Resources",
-      "url": "/courses/csp-2022/resources",
+      "url": "/courses/csp/resources",
       "key": "all_resources_10",
       "properties": {
         "is_rollup": true
@@ -37,7 +37,7 @@
     },
     {
       "name": "All Standards",
-      "url": "/courses/csp-2022/standards",
+      "url": "/courses/csp/standards",
       "key": "all_standards_10",
       "properties": {
         "is_rollup": true

@@ -53,10 +53,10 @@
     "name_suffix": "_2023",
     "mini_rubric": "false",
     "reference_links": [
-      "/courses/csd-2022/guides/design-mode",
-      "/courses/csd-2022/guides/design-mode-elements"
+      "/courses/csd/guides/design-mode",
+      "/courses/csd/guides/design-mode-elements"
     ],
-    "map_reference": "/courses/csd-2022/guides/multi-screen-apps",
+    "map_reference": "/courses/csd/guides/multi-screen-apps",
     "encrypted": "false",
     "libraries_enabled": "false",
     "widget_mode": "false",

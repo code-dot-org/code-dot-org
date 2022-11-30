@@ -80,13 +80,13 @@
     "widget_mode": "false",
     "ai_enabled": "false",
     "reference_links": [
-      "/courses/csd-2022/guides/color-lights",
-      "/courses/csd-2022/guides/if-statements",
-      "/courses/csd-2022/guides/variables",
-      "/courses/csd-2022/guides/booleans-and-comparison-operators",
-      "/courses/csd-2022/guides/physical-input",
-      "/courses/csd-2022/guides/producing-output",
-      "/courses/csd-2022/guides/board-events"
+      "/courses/csd/guides/color-lights",
+      "/courses/csd/guides/if-statements",
+      "/courses/csd/guides/variables",
+      "/courses/csd/guides/booleans-and-comparison-operators",
+      "/courses/csd/guides/physical-input",
+      "/courses/csd/guides/producing-output",
+      "/courses/csd/guides/board-events"
     ],
     "callout_json": "[]",
     "start_blocks": "onEvent(\"led0Button\", \"click\", function( ) {\r\n\t//Toggle LED 0\r\n});\r\n\r\nonEvent(\"led1Button\", \"click\", function( ) {\r\n  //Toggle LED 1\r\n  \r\n});\r\n\r\nonEvent(\"led2Button\", \"click\", function( ) {\r\n\t//Toggle LED 2\r\n  \r\n});\r\n\r\nonEvent(\"led3Button\", \"click\", function( ) {\r\n  //Toggle LED 3\r\n  \r\n});\r\n\r\nonEvent(\"led4Button\", \"click\", function( ) {\r\n  //Toggle LED 4\r\n  \r\n});\r\n\r\nonEvent(\"led5Button\", \"click\", function( ) {\r\n  //Toggle LED 5\r\n  \r\n});\r\n\r\nonEvent(\"led6Button\", \"click\", function( ) {\r\n  //Toggle LED 6\r\n  \r\n});\r\n\r\nonEvent(\"led7Button\", \"click\", function( ) {\r\n  //Toggle LED 7\r\n  \r\n});\r\n\r\nonEvent(\"led8Button\", \"click\", function( ) {\r\n  //Toggle LED 8\r\n  \r\n});\r\n\r\nonEvent(\"led9Button\", \"click\", function( ) {\r\n  //Toggle LED 9\r\n  \r\n});\r\n",
