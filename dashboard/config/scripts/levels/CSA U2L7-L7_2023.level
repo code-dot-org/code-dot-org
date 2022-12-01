@@ -1,0 +1,32 @@
+<Javalab>
+  <config><![CDATA[{
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "🎒 **IMPORT:** Import your `Dessert`(#e7e8ea) **subclass** (`Cookie`(#e7e8ea), `Cupcake`(#e7e8ea), `Pie`(#e7e8ea), or `Donut`(#e7e8ea)) from your **Backpack**.\r\n\r\n*Don't have it, or it doesn't work? That's ok! Copy the code from* ***here*** *and paste it into a new file in your project.*\r\n\r\n✅ **TO DO #1:** Write accessor methods for the instance variables in the `Dessert`(#e7e8ea) **subclass**.\r\n\r\n✅ **TO DO #2:** In `FoodTruckRunner.java`(#e7e8ea), create an instance of the `Dessert`(#e7e8ea) subclass.\r\n\r\n✅ **TO DO #3:** Call the accessor methods for each instance variable and print the results.\r\n\r\n💡 **TIP:** Check out the **Help & Tips** tab ⬆️ for help with writing accessor methods.\r\n\r\n## ***Don't forget to . . .***\r\n\r\n![](https://images.code.org/eb2c8910ae2e150019b8e2177405d4af-image-1668191576873.png)",
+    "mini_rubric": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "csa_view_mode": "console",
+    "start_sources": {
+      "Runner.java": {
+        "text": "public class Runner {\n  public static void main(String[] args) {\n\n    /* ----------------------------------- TO DO -----------------------------------\n     * ✅ instructions for the student to complete\n     * -----------------------------------------------------------------------------\n     */\n\n\n\n    /* ----------------------------------- TO DO -----------------------------------\n     * ✅ instructions for the student to complete\n     * -----------------------------------------------------------------------------\n     *\n     * description of method to write\n     */\n\n    \n\n    \n    /* ---- 🔎 ADD YOUR CODE BELOW THIS LINE ---- */\n\n\n    \n    \n    \n  }\n}",
+        "isVisible": true,
+        "tabOrder": 0
+      }
+    },
+    "project_template_level_name": "CSA U2L7-Dessert PBT_2023",
+    "encrypted_examples": [
+
+    ],
+    "reference_links": [
+      "/courses/csa-2023/guides/accessor-methods"
+    ]
+  },
+  "game_id": 68,
+  "published": true,
+  "created_at": "2022-11-30T19:45:39.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
+  "audit_log": "[{\"changed_at\":\"2022-11-30T19:45:39.197+00:00\",\"changed\":[\"cloned from \\\"CSA U2L7-L6_2023\\\"\"],\"cloned_from\":\"CSA U2L7-L6_2023\"},{\"changed_at\":\"2022-11-30 19:45:40 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-12-01 02:07:48 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+}]]></config>
+</Javalab>
