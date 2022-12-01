@@ -68,16 +68,16 @@
     "thumbnail_url": "https://images.code.org/a61f638ee2ea76dc54236483324d7fbc-image-1648496940150.48.45 PM.png",
     "project_template_level_name": "csc_ecosystems_whale_template_1",
     "encrypted_examples": "jJsBztnRYqeS2g/r8q93aR9csPvH+QRsmFRe21knJ3V4DFlStukr32xYnkTK\nZQx8nlw9jrgHq66UpNL4xEVo9g==\n",
-    "preload_asset_list": null,
-    "validation_code": "//Make sure [CSC Module Helper Library] is included as a library in this level\r\nif (World.frameCount == 1) {\r\n  //Everything in this if-statement will just run once, during the first frame of your level\r\n  README(); //uncomment this to see the README for the helper library in the console of this level\r\n  //turnOnDebugging(); //uncomment this to use a DEBUG global variable to control console.log statements in your code\r\n  \r\n  setFailTime(400); // Frames to wait before failing student\r\n  setDelayTime(90); // Frames to wait after success before stopping program\r\n  setupPrevious(); //Defines the validationProps.previous{} object. To use it, call updatePrevious() at the end of this box\r\n  \r\n  //use addCriteria to setup the validation logic.\r\n  //You can use criterion commands as helper functions: \r\n  //https://github.com/code-dot-org/code-dot-org/blob/staging/apps/src/p5lab/spritelab/commands/criterionCommands.js\r\n  addCriteria(function() {\r\n    return spriteIds.length >= 1 && checkMovedSpriteUp(spriteIds[0]) && anySpriteSpeaks();\r\n  }, \"saySpriteUp\");  // include i18n feedback string\r\n\r\n  addCriteria(function() {\r\n    return spriteIds.length >= 1 && checkMovedSpriteDown(spriteIds[0]) && anySpriteSpeaks();\r\n  }, \"spriteSayDown\");  // include i18n feedback string\r\n}\r\n//Everything after this will run during each 'tick' of the draw loop in your level\r\n//Be careful about putting console.log statements here\r\n\r\n//Always have this first to get most up-to-date helper variables\r\ngetHelperVars();\r\n\r\n//This is what calls updateValidation in \r\n//https://github.com/code-dot-org/code-dot-org/blob/staging/apps/src/p5lab/spritelab/commands/validationCommands.js\r\n//To check the validation criteria\r\ncheck();\r\n\r\n//Always have this at end to store previous state in validationProps.previous\r\nupdatePrevious();"
+    "validation_code": "//Make sure [CSC Module Helper Library] is included as a library in this level\r\nif (World.frameCount == 1) {\r\n  //Everything in this if-statement will just run once, during the first frame of your level\r\n  README(); //uncomment this to see the README for the helper library in the console of this level\r\n  //turnOnDebugging(); //uncomment this to use a DEBUG global variable to control console.log statements in your code\r\n  \r\n  setFailTime(400); // Frames to wait before failing student\r\n  setDelayTime(90); // Frames to wait after success before stopping program\r\n  setupPrevious(); //Defines the validationProps.previous{} object. To use it, call updatePrevious() at the end of this box\r\n  \r\n  //use addCriteria to setup the validation logic.\r\n  //You can use criterion commands as helper functions: \r\n  //https://github.com/code-dot-org/code-dot-org/blob/staging/apps/src/p5lab/spritelab/commands/criterionCommands.js\r\n  addCriteria(function() {\r\n    return spriteIds.length >= 1 && checkMovedSpriteUp(spriteIds[0]) && anySpriteSpeaks();\r\n  }, \"saySpriteUp\");  // include i18n feedback string\r\n\r\n  addCriteria(function() {\r\n    return spriteIds.length >= 1 && checkMovedSpriteDown(spriteIds[0]) && anySpriteSpeaks();\r\n  }, \"spriteSayDown\");  // include i18n feedback string\r\n}\r\n//Everything after this will run during each 'tick' of the draw loop in your level\r\n//Be careful about putting console.log statements here\r\n\r\n//Always have this first to get most up-to-date helper variables\r\ngetHelperVars();\r\n\r\n//This is what calls updateValidation in \r\n//https://github.com/code-dot-org/code-dot-org/blob/staging/apps/src/p5lab/spritelab/commands/validationCommands.js\r\n//To check the validation criteria\r\ncheck();\r\n\r\n//Always have this at end to store previous state in validationProps.previous\r\nupdatePrevious();",
+    "preload_asset_list": null
   },
-  "game_id": 64,
-  "published": true,
-  "created_at": "2022-11-01T23:04:47.000Z",
   "level_num": "custom",
+  "game_id": 64,
+  "created_at": "2022-11-01T23:04:47.000Z",
   "user_id": 182,
+  "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-11-01T23:04:47.001+00:00\",\"changed\":[\"cloned from \\\"csc_ecosystems_whale_explain_2022\\\"\"],\"cloned_from\":\"csc_ecosystems_whale_explain_2022\"},{\"changed_at\":\"2022-11-12 02:03:05 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"helper_libraries\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-11-12 02:04:20 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"encrypted_examples\",\"preload_asset_list\",\"validation_code\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2022-11-01T23:04:47.001+00:00\",\"changed\":[\"cloned from \\\"csc_ecosystems_whale_explain_2022\\\"\"],\"cloned_from\":\"csc_ecosystems_whale_explain_2022\"},{\"changed_at\":\"2022-11-12 02:03:05 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"helper_libraries\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-11-12 02:04:20 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"encrypted_examples\",\"preload_asset_list\",\"validation_code\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-11-30 17:45:57 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
@@ -161,12 +161,12 @@
         <block type="gamelab_moveInDirection">
           <field name="DIRECTION">"North"</field>
           <value name="SPRITE">
-            <block type="gamelab_allSpritesWithAnimation">
+            <block type="gamelab_allSpritesWithAnimation" can_disconnect_from_parent="false">
               <field name="ANIMATION">"whale-4"</field>
             </block>
           </value>
           <value name="DISTANCE">
-            <block type="math_number">
+            <block type="math_number" can_disconnect_from_parent="false">
               <field name="NUM">10</field>
             </block>
           </value>
@@ -174,7 +174,7 @@
         <block type="gamelab_spriteSay">
           <field name="SPEECH">In the summer we swim north to cooler waters</field>
           <value name="SPRITE">
-            <block type="gamelab_allSpritesWithAnimation">
+            <block type="gamelab_allSpritesWithAnimation" can_disconnect_from_parent="false">
               <field name="ANIMATION">"whale-4"</field>
             </block>
           </value>
@@ -182,7 +182,7 @@
         <block type="gamelab_spriteSay">
           <field name="SPEECH">In the winter we swim south to warmer waters</field>
           <value name="SPRITE">
-            <block type="gamelab_allSpritesWithAnimation">
+            <block type="gamelab_allSpritesWithAnimation" can_disconnect_from_parent="false">
               <field name="ANIMATION">"whale-4"</field>
             </block>
           </value>

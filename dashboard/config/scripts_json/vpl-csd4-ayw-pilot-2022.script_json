@@ -13,7 +13,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-11-29 21:42:03 UTC",
+    "serialized_at": "2022-12-01 01:11:55 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -231,6 +231,7 @@
       "key": "2d2f6539-1176-4edd-a3e0-be59d2a86021",
       "position": 2,
       "properties": {
+        "progression_name": "Sample Student Projects"
       },
       "seeding_key": {
         "activity_section.key": "2d2f6539-1176-4edd-a3e0-be59d2a86021",
@@ -317,6 +318,72 @@
     },
     {
       "chapter": 2,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Sample Student Projects"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-AYW-M4-WebDevSample"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "vpl-csd4-ayw-pilot-2022",
+        "activity_section.key": "2d2f6539-1176-4edd-a3e0-be59d2a86021"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-AYW-M4-WebDevSample"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 3,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Sample Student Projects"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-AYW-M4-GameAnimSample"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "vpl-csd4-ayw-pilot-2022",
+        "activity_section.key": "2d2f6539-1176-4edd-a3e0-be59d2a86021"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-AYW-M4-GameAnimSample"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 4,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Sample Student Projects"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-AYW-M4-PhysCompSample1"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "vpl-csd4-ayw-pilot-2022",
+        "activity_section.key": "2d2f6539-1176-4edd-a3e0-be59d2a86021"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-AYW-M4-PhysCompSample1"
+      ]
+    },
+    {
+      "chapter": 5,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -341,7 +408,7 @@
       ]
     },
     {
-      "chapter": 3,
+      "chapter": 6,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -366,7 +433,7 @@
       ]
     },
     {
-      "chapter": 4,
+      "chapter": 7,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -391,7 +458,7 @@
       ]
     },
     {
-      "chapter": 5,
+      "chapter": 8,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -416,7 +483,7 @@
       ]
     },
     {
-      "chapter": 6,
+      "chapter": 9,
       "position": 5,
       "activity_section_position": 2,
       "assessment": false,
@@ -441,7 +508,7 @@
       ]
     },
     {
-      "chapter": 7,
+      "chapter": 10,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -477,6 +544,42 @@
         "lesson_group.key": "lessonGroup-2",
         "script.name": "vpl-csd4-ayw-pilot-2022",
         "activity_section.key": "864feac0-cb5c-483d-a4dc-ff6ccf29020e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-AYW-M4-WebDevSample",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-AYW-M4-WebDevSample"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "vpl-csd4-ayw-pilot-2022",
+        "activity_section.key": "2d2f6539-1176-4edd-a3e0-be59d2a86021"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-AYW-M4-GameAnimSample",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-AYW-M4-GameAnimSample"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "vpl-csd4-ayw-pilot-2022",
+        "activity_section.key": "2d2f6539-1176-4edd-a3e0-be59d2a86021"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-AYW-M4-PhysCompSample1",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-AYW-M4-PhysCompSample1"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "vpl-csd4-ayw-pilot-2022",
+        "activity_section.key": "2d2f6539-1176-4edd-a3e0-be59d2a86021"
       }
     },
     {
