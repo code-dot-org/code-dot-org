@@ -3004,9 +3004,7 @@ Studio.runButtonClick = function() {
 
   if (!level.edit_blocks && level.freePlay) {
     // Save progress. Don't display feedback.
-    setTimeout(() => {
-      Studio.sendPuzzleReport(Studio.onReportCompleteNoFeedback);
-    }, 2500);
+    Studio.sendPuzzleReport(Studio.onReportCompleteNoFeedback);
   }
 
   if (

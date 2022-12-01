@@ -60,7 +60,7 @@ module.exports = function(testCollection, testData, dataItem, done) {
   var validationCallCount = 0;
 
   // Validate successful solution.
-  var validateResult = function(report) {
+  var validateResult = async function(report) {
     try {
       assert(testData.expected, 'Have expectations');
       var expected;
@@ -83,7 +83,14 @@ module.exports = function(testCollection, testData, dataItem, done) {
       // StudioApp.report gets called. Allows us to access some things that
       // aren't on the options object passed into report
       if (testData.customValidator) {
-        assert(testData.customValidator(assert), 'Custom validator failed');
+        // Wait some amount of time for long-running code to complete. (E.g. k1_6.js).
+        // Increase the timer below if things start failing here.
+        await new Promise(resolve =>
+          setTimeout(() => {
+            assert(testData.customValidator(assert), 'Custom validator failed');
+            resolve();
+          }, 2500)
+        );
       }
 
       // Notify the app that the report operation is complete
