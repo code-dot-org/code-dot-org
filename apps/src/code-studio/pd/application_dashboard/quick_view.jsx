@@ -30,7 +30,6 @@ export class QuickView extends React.Component {
     route: PropTypes.shape({
       path: PropTypes.string.isRequired,
       applicationType: PropTypes.string.isRequired,
-      viewType: PropTypes.oneOf(['teacher', 'facilitator']).isRequired,
       role: PropTypes.string.isRequired
     })
   };
@@ -57,7 +56,7 @@ export class QuickView extends React.Component {
   }
 
   UNSAFE_componentWillMount() {
-    const statusList = getApplicationStatuses(this.props.route.viewType);
+    const statusList = getApplicationStatuses();
     this.statuses = Object.keys(statusList).map(v => ({
       value: v,
       label: statusList[v]
@@ -170,7 +169,6 @@ export class QuickView extends React.Component {
         applications={this.state.applications}
         statusFilter={this.state.filter}
         regionalPartnerName={this.props.regionalPartnerFilter.label}
-        viewType={this.props.route.viewType}
       />
     );
   }

@@ -135,7 +135,6 @@ export default class ApplicationDashboard extends React.Component {
                           ]
                     }
                     component={DetailView}
-                    viewType={DASHBOARD_COURSES[path].type}
                     course={DASHBOARD_COURSES[path].course}
                   />,
                   path !== 'incomplete_applications' && (
@@ -145,7 +144,6 @@ export default class ApplicationDashboard extends React.Component {
                       breadcrumbs={DASHBOARD_COURSES[path].name}
                       component={QuickView}
                       applicationType={DASHBOARD_COURSES[path].name}
-                      viewType={DASHBOARD_COURSES[path].type}
                       role={path}
                     />
                   ),
@@ -156,7 +154,6 @@ export default class ApplicationDashboard extends React.Component {
                       breadcrumbs={cohort_path_name}
                       component={CohortView}
                       applicationType={cohort_path_name}
-                      viewType={DASHBOARD_COURSES[path].type}
                       role={path}
                     />
                   )
