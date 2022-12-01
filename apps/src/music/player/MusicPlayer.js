@@ -12,13 +12,15 @@ const DEFAULT_BPM = 120;
 const GROUP_TAG = 'mainaudio';
 const EventType = {
   PLAY: 'play',
-  PREVIEW: 'preview'
+  PREVIEW: 'preview',
+  TRACK: 'track'
 };
 
 export default class MusicPlayer {
   constructor(bpm) {
     this.bpm = bpm || DEFAULT_BPM;
     this.soundEvents = [];
+    this.tracks = [];
     this.playingPreviews = [];
     this.isPlaying = false;
     this.startPlayingAudioTime = -1;
@@ -26,6 +28,8 @@ export default class MusicPlayer {
     this.library = {};
     this.groupPrefix = 'all';
     this.isInitialized = false;
+
+    this.currentTrack = null;
   }
 
   initialize(library) {
@@ -43,7 +47,7 @@ export default class MusicPlayer {
     this.isInitialized = true;
   }
 
-  playSoundAtMeasureById(id, measure, insideWhenRun) {
+  playSoundAtMeasureById(id, measure, insideWhenRun, trackName) {
     if (!this.isInitialized) {
       console.log('MusicPlayer not initialized');
       return;
@@ -61,7 +65,8 @@ export default class MusicPlayer {
       type: EventType.PLAY,
       id,
       insideWhenRun,
-      when: measure - 1
+      when: measure - 1,
+      trackName
     };
 
     this.soundEvents.push(soundEvent);
@@ -95,6 +100,67 @@ export default class MusicPlayer {
     };
 
     this.playSoundEvent(previewEvent, onStop);
+  }
+
+  playTrack(trackName, measure, insideWhenRun, sounds) {
+    let when = measure;
+    for (const sound of sounds) {
+      this.playSoundAtMeasureById(sound, when, insideWhenRun);
+      when += this.getLengthForId(sound);
+    }
+  }
+
+  startTrack(trackName, measure, insideWhenRun) {
+    if (this.currentTrack !== null) {
+      console.warn('track creation already in progress. Ignoring');
+      return;
+    }
+
+    this.currentTrack = {trackName, measure, insideWhenRun, sounds: []};
+  }
+
+  addSoundToCurrentTrack(sound) {
+    if (!this.currentTrack) {
+      console.warn('no track in progress. Ignoring.');
+      return;
+    }
+
+    this.currentTrack.sounds.push(sound);
+  }
+
+  finishTrack() {
+    if (!this.currentTrack) {
+      console.warn('no track in progress. Ignoring');
+      return;
+    }
+
+    const {trackName, measure, insideWhenRun, sounds} = this.currentTrack;
+
+    let when = measure;
+    for (const sound of sounds) {
+      this.playSoundAtMeasureById(sound, when, insideWhenRun, trackName);
+      when += this.getLengthForId(sound);
+    }
+
+    this.currentTrack = null;
+  }
+
+  getLengthForId(id) {
+    const splitId = id.split('/');
+    const path = splitId[0];
+    const src = splitId[1];
+
+    for (let group of this.library.groups) {
+      const folder = group.folders.find(folder => folder.path === path);
+      if (folder) {
+        const sound = folder.sounds.find(sound => sound.src === src);
+        if (sound) {
+          return sound.length;
+        }
+      }
+    }
+
+    return 0;
   }
 
   isPreviewPlaying(id) {

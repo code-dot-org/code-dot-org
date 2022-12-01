@@ -28,6 +28,32 @@ export const baseToolbox = {
               }
             }
           }
+        },
+        {
+          kind: 'block',
+          type: BlockTypes.PLAY_SOUND_IN_TRACK
+        },
+        {
+          kind: 'block',
+          type: BlockTypes.NEW_TRACK,
+          inputs: {
+            trackName: {
+              shadow: {
+                type: 'text',
+                fields: {
+                  TEXT: 'new track'
+                }
+              }
+            },
+            measure: {
+              shadow: {
+                type: 'math_number',
+                fields: {
+                  NUM: 1
+                }
+              }
+            }
+          }
         }
       ]
     },
@@ -72,6 +98,20 @@ export const baseToolbox = {
                 type: 'math_number',
                 fields: {
                   NUM: 2
+                }
+              }
+            }
+          }
+        },
+        {
+          kind: 'block',
+          type: 'controls_repeat_ext',
+          inputs: {
+            TIMES: {
+              shadow: {
+                type: 'math_number',
+                fields: {
+                  NUM: 4
                 }
               }
             }
