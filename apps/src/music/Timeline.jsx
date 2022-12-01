@@ -46,15 +46,32 @@ export default class Timeline extends React.Component {
     return uniqueSounds;
   };
 
-  getUniqueIndexForEventId = id => {
+  getUniqueTracks = () => {
+    const uniqueTracks = [];
+    for (const songEvent of this.props.songData.events) {
+      const trackName = songEvent.trackName;
+      if (trackName && uniqueTracks.indexOf(trackName) === -1) {
+        uniqueTracks.push(trackName);
+      }
+    }
+    return uniqueTracks;
+  };
+
+  getUniqueIndexForEventId = (id, trackName) => {
+    if (trackName) {
+      return this.getUniqueTracks().indexOf(trackName);
+    }
     return this.getUniqueSounds().indexOf(id);
   };
 
-  getVerticalOffsetForEventId = id => {
-    return this.getUniqueIndexForEventId(id) * this.getEventHeight();
+  getVerticalOffsetForEventId = (id, trackName) => {
+    return (
+      this.getUniqueIndexForEventId(id, trackName) *
+      (this.getEventHeight() + 15)
+    );
   };
 
-  getColorsForEventId = id => {
+  getColorsForEventId = (id, trackName) => {
     const colors = [
       {background: 'purple', border: 'lightpink'},
       {background: 'blue', border: 'lightblue'},
@@ -62,7 +79,7 @@ export default class Timeline extends React.Component {
       {background: 'yellow', border: 'brown'}
     ];
 
-    return colors[this.getUniqueIndexForEventId(id) % 4];
+    return colors[this.getUniqueIndexForEventId(id, trackName) % 4];
   };
 
   getLengthForId = id => {
@@ -163,17 +180,41 @@ export default class Timeline extends React.Component {
                     position: 'absolute',
                     boxSizing: 'border-box',
                     left: barWidth * eventData.when,
-                    top: 20 + this.getVerticalOffsetForEventId(eventData.id),
+                    top:
+                      35 +
+                      this.getVerticalOffsetForEventId(
+                        eventData.id,
+                        eventData.trackName
+                      ),
                     backgroundColor: this.getColorsForEventId(eventData.id)
                       .background,
                     border:
                       'solid 2px ' +
-                      this.getColorsForEventId(eventData.id).border,
+                      this.getColorsForEventId(
+                        eventData.id,
+                        eventData.trackName
+                      ).border,
                     borderRadius: 8,
                     height: this.getEventHeight() - eventVerticalSpace
                   }}
                 >
                   &nbsp;
+                </div>
+              );
+            })}
+            {this.getUniqueTracks().map((track, i) => {
+              return (
+                <div
+                  key={i}
+                  style={{
+                    position: 'absolute',
+                    left: 0,
+                    top: 20 + (this.getEventHeight() + 15) * i,
+                    fontSize: '12px',
+                    fontStyle: 'italic'
+                  }}
+                >
+                  {track}
                 </div>
               );
             })}
