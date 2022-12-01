@@ -337,8 +337,8 @@ describe('DetailViewContents', () => {
       ).to.contain(`principal_approval/${guid}`);
     });
     it(`Shows complete text for principal approval if complete`, () => {
-      const guid = '1020304';
-      const detailView = mountDetailView('Teacher', {
+      const guid = '1020305';
+      const detailView = mountDetailView({
         applicationData: {
           ...DEFAULT_APPLICATION_DATA,
           application_guid: guid,
