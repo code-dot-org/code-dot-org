@@ -271,7 +271,6 @@ module Pd
       committed: YES_NO,
       enough_course_hours: YES_NO,
       previous_yearlong_cdo_pd: YES_NO,
-      replace_existing: YES_NO,
       principal_approval: YES_NO,
       principal_schedule_confirmed: YES_NO,
       # Scholarship requirements
@@ -290,7 +289,6 @@ module Pd
         :enough_course_hours,
         :committed,
         :previous_yearlong_cdo_pd,
-        :replace_existing,
         :principal_approval,
         :principal_schedule_confirmed,
       ],
@@ -299,7 +297,6 @@ module Pd
         :enough_course_hours,
         :committed,
         :previous_yearlong_cdo_pd,
-        :replace_existing,
         :principal_approval,
         :principal_schedule_confirmed,
       ],
@@ -310,7 +307,6 @@ module Pd
         :enough_course_hours,
         :committed,
         :previous_yearlong_cdo_pd,
-        :replace_existing,
         :principal_approval,
         :principal_schedule_confirmed,
       ]

@@ -4,6 +4,6 @@ title: Pjesëmarrje nga gjithë Shkolla
 
 {{ signup_button }}
 
-# Get your whole school to participate
+# Merr pjesë bashkë me shkollen tënde!
 
-Information about getting whole schools to participate in the Hour of Code will go here.
+Informatat për t'i përfshirë të gjitha shkollat ne Orën e Kodit i gjeni këtu.

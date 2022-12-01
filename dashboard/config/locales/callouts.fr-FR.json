@@ -309,7 +309,7 @@
           "courseF_bee_for4_1": "Tu trouveras la boucle `pour` ici !"
         },
         "OPD-K5-projects-4": {
-          "courseE_playLab_scaffold3_1": "Amène l'acteur jusqu'au drapeau pour passer au niveau suivant."
+          "courseE_playLab_scaffold3_1": "Amène l'acteur jusqu'à ce drapeau pour passer au niveau suivant."
         },
         "OPD-K5-spritelab-3": {
           "spritelab_comment": "Utilise ce bloc pour laisser des notes sur le fonctionnement de ton code pour toi-même ou pour ton enseignant.\n"
@@ -650,22 +650,22 @@
           "courseB_playlab_events6_a": "Utilise la flèche déroulante verte pour changer la direction."
         },
         "courseC19_playLab_EOC3": {
-          "courseE_playLab_scaffold3_1": "Amène l'acteur jusqu'au drapeau pour passer au niveau suivant."
+          "courseE_playLab_scaffold3_1": "Amène l'acteur jusqu'à ce drapeau pour passer au niveau suivant."
         },
         "courseC19_playLab_EOC3_2020": {
-          "courseE_playLab_scaffold3_1": "Amène l'acteur jusqu'au drapeau pour passer au niveau suivant."
+          "courseE_playLab_scaffold3_1": "Amène l'acteur jusqu'à ce drapeau pour passer au niveau suivant."
         },
         "courseC_PlayLab_events8": {
-          "courseC_PlayLab_events8_callout1": "Utilise ce bloc lorsque Waddles et Chomp se percutent !"
+          "courseC_PlayLab_events8_callout1": "Utilise ce bloc pour quand Waddles et Chomp se rentrent dedans !"
         },
         "courseC_PlayLab_events8_2018": {
-          "courseC_PlayLab_events8_callout1": "Utilise ce bloc lorsque Waddles et Chomp se percutent !"
+          "courseC_PlayLab_events8_callout1": "Utilise ce bloc pour quand Waddles et Chomp se rentrent dedans !"
         },
         "courseC_PlayLab_events8_2019": {
-          "courseC_PlayLab_events8_callout1": "Utilise ce bloc lorsque Waddles et Chomp se percutent !"
+          "courseC_PlayLab_events8_callout1": "Utilise ce bloc pour quand Waddles et Chomp se rentrent dedans !"
         },
         "courseC_PlayLab_events8_2020": {
-          "courseC_PlayLab_events8_callout1": "Utilise ce bloc lorsque Waddles et Chomp se percutent !"
+          "courseC_PlayLab_events8_callout1": "Utilise ce bloc pour quand Waddles et Chomp se rentrent dedans !"
         },
         "courseC_PlayLab_events_challenge1": {
           "courseC_PlayLab_events_challenge1_1": "Ce bloc te laisse bouger les acteurs vers différentes parties de l'espace de jeu."
@@ -1167,7 +1167,7 @@
           "courseC_PlayLab_events_challenge1_1": "Ce bloc te laisse bouger les acteurs vers différentes parties de l'espace de jeu."
         },
         "courseE_playLab_scaffold3": {
-          "courseE_playLab_scaffold3_1": "Amène l'acteur jusqu'au drapeau pour passer au niveau suivant."
+          "courseE_playLab_scaffold3_1": "Amène l'acteur jusqu'à ce drapeau pour passer au niveau suivant."
         },
         "courseF_artist_for1": {
           "courseF_artist_for1_1": "La boîte à outils est en mode « catégories » pour laisser plus de place à ton code. Les boucles « pour » se trouvent ici."
@@ -1512,10 +1512,10 @@
           "courseB_playlab_events6_a": "Utilise la flèche déroulante verte pour changer la direction."
         },
         "courseC19_playLab_EOC3_2021": {
-          "courseE_playLab_scaffold3_1": "Amène l'acteur jusqu'au drapeau pour passer au niveau suivant."
+          "courseE_playLab_scaffold3_1": "Amène l'acteur jusqu'à ce drapeau pour passer au niveau suivant."
         },
         "courseC_PlayLab_events8_2021": {
-          "courseC_PlayLab_events8_callout1": "Utilise ce bloc lorsque Waddles et Chomp se percutent !"
+          "courseC_PlayLab_events8_callout1": "Utilise ce bloc pour quand Waddles et Chomp se rentrent dedans !"
         },
         "courseC_PlayLab_events_challenge1_2021": {
           "courseC_PlayLab_events_challenge1_1": "Ce bloc te laisse bouger les acteurs vers différentes parties de l'espace de jeu."
@@ -2090,10 +2090,10 @@
           "courseB_playlab_events6_a": "Utilise la flèche déroulante verte pour changer la direction."
         },
         "courseC19_playLab_EOC32022": {
-          "courseE_playLab_scaffold3_1": "Amène l'acteur jusqu'au drapeau pour passer au niveau suivant."
+          "courseE_playLab_scaffold3_1": "Amène l'acteur jusqu'à ce drapeau pour passer au niveau suivant."
         },
         "courseC_PlayLab_events82022": {
-          "courseC_PlayLab_events8_callout1": "Utilise ce bloc lorsque Waddles et Chomp se percutent !"
+          "courseC_PlayLab_events8_callout1": "Utilise ce bloc pour quand Waddles et Chomp se rentrent dedans !"
         },
         "courseC_PlayLab_events_challenge12022": {
           "courseC_PlayLab_events_challenge1_1": "Ce bloc te laisse bouger les acteurs vers différentes parties de l'espace de jeu."
