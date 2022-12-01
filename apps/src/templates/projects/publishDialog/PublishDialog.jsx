@@ -56,20 +56,20 @@ class PublishDialog extends Component {
         </div>
         <DialogFooter>
           <Button
-            __useDeprecatedTag
             text={i18n.dialogCancel()}
             onClick={this.close}
             color={Button.ButtonColor.gray}
             className="no-mc"
+            style={{boxShadow: 'none'}}
           />
           <Button
-            __useDeprecatedTag
             text={i18n.publish()}
             onClick={this.confirm}
             color={Button.ButtonColor.orange}
             className="no-mc"
             isPending={this.props.isPublishPending}
             pendingText={i18n.publishPending()}
+            style={{boxShadow: 'none'}}
             id="publish-dialog-publish-button"
           />
         </DialogFooter>
