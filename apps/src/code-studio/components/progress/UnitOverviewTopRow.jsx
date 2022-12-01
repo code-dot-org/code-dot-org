@@ -153,7 +153,7 @@ class UnitOverviewTopRow extends React.Component {
     let completedProfessionalLearningCourse =
       isProfessionalLearningCourse && unitProgress === COMPLETED;
 
-    let hasPrintingOptionsDropwdown =
+    const displayPrintingOptionsDropwdown =
       pdfDropdownOptions.length > 0 &&
       publishedState !== PublishedState.pilot &&
       publishedState !== PublishedState.in_development;
@@ -200,7 +200,7 @@ class UnitOverviewTopRow extends React.Component {
                 unitId={scriptId}
               />
             )}
-          {hasPrintingOptionsDropwdown && viewAs === ViewType.Instructor && (
+          {displayPrintingOptionsDropwdown && viewAs === ViewType.Instructor && (
             <div style={{marginRight: 5}}>
               <DropdownButton
                 customText={

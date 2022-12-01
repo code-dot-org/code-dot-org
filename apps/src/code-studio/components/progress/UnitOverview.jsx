@@ -22,6 +22,7 @@ import GoogleClassroomAttributionLabel from '@cdo/apps/templates/progress/Google
 import UnitCalendar from './UnitCalendar';
 import color from '@cdo/apps/util/color';
 import EndOfLessonDialog from '@cdo/apps/templates/EndOfLessonDialog';
+import {PublishedState} from '@cdo/apps/generated/curriculum/sharedCourseConstants';
 
 /**
  * Lesson progress component used in level header and script overview.
@@ -55,7 +56,7 @@ class UnitOverview extends React.Component {
     isCsdOrCsp: PropTypes.bool,
     completedLessonNumber: PropTypes.string,
     isProfessionalLearningCourse: PropTypes.bool,
-    publishedState: PropTypes.string,
+    publishedState: PropTypes.oneOf(Object.values(PublishedState)),
 
     // redux provided
     scriptId: PropTypes.number.isRequired,
