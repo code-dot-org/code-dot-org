@@ -1002,14 +1002,6 @@ module Pd::Application
       end
 
       meets_minimum_criteria_scores[:enough_course_hours] = responses[:enough_course_hours] == options[:enough_course_hours].first ? YES : NO
-      meets_minimum_criteria_scores[:replace_existing] =
-        if responses[:replace_existing] == YES
-          NO
-        elsif responses[:replace_existing] == TEXT_FIELDS[:i_dont_know_explain]
-          nil
-        else
-          YES
-        end
 
       # Section 7
       meets_minimum_criteria_scores[:committed] = responses[:committed] == options[:committed].first ? YES : NO
@@ -1026,15 +1018,6 @@ module Pd::Application
             NO
           else
             nil
-          end
-
-        meets_minimum_criteria_scores[:replace_existing] =
-          if responses[:principal_wont_replace_existing_course].start_with?(YES)
-            NO
-          elsif responses[:principal_wont_replace_existing_course] == TEXT_FIELDS[:i_dont_know_explain]
-            nil
-          else
-            YES
           end
 
         school_stats = get_latest_school_stats(school_id)
