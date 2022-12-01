@@ -69,22 +69,27 @@ export default class HeaderPopup extends Component {
     return (
       <div style={styles.container}>
         {!this.state.open && (
-          <div
+          <button
+            type="button"
             style={styles.headerItem}
             className="header_popup_link"
             onClick={this.handleClickOpen}
           >
             <i className="fa fa-caret-down" style={styles.caret} />
             <div style={styles.more}>{i18n.moreAllCaps()}</div>
-          </div>
+          </button>
         )}
 
         {this.state.open && (
           <div>
-            <div style={styles.headerItem} onClick={this.handleClickClose}>
+            <button
+              type="button"
+              style={styles.headerItem}
+              onClick={this.handleClickClose}
+            >
               <i className="fa fa-caret-up" style={styles.caret} />
               <div style={styles.more}>{i18n.lessAllCaps()}</div>
-            </div>
+            </button>
 
             <div className="header_popup" ref="headerPopup">
               <div
@@ -108,7 +113,14 @@ export default class HeaderPopup extends Component {
 const styles = {
   headerItem: {
     textAlign: 'center',
-    cursor: 'pointer'
+    cursor: 'pointer',
+    backgroundColor: 'transparent',
+    border: 'none',
+    padding: 0,
+    ':hover': {
+      cursor: 'pointer',
+      boxShadow: 'none'
+    }
   },
   caret: {
     fontSize: 40,
@@ -117,6 +129,7 @@ const styles = {
   },
   more: {
     fontSize: 10,
-    lineHeight: '10px'
+    lineHeight: '10px',
+    color: color.white
   }
 };
