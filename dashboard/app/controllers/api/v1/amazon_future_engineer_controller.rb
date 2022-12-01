@@ -62,6 +62,8 @@ class Api::V1::AmazonFutureEngineerController < ApplicationController
         city: afe_params['city'] || school&.city || '',
         state: afe_params['state'] || school&.state || '',
         zip: afe_params['zip'] || school&.zip || '',
+        professional_role: afe_params['primaryProfessionalRole'] || '',
+        grades_teaching: afe_params['gradesTeaching'] || '',
         privacy_permission: to_bool(afe_params['consentCSTA'])
       )
     end
@@ -91,6 +93,8 @@ class Api::V1::AmazonFutureEngineerController < ApplicationController
     'city',
     'state',
     'zip',
+    'primaryProfessionalRole',
+    'gradesTeaching',
     'consentCSTA'
   ]
 
