@@ -126,7 +126,9 @@ export class QuickViewTable extends React.Component {
           transforms: [sortable]
         },
         cell: {
-          formatters: [() => getApplicationStatuses()],
+          formatters: [
+            status => getApplicationStatuses()[status] || _.upperFirst(status)
+          ],
           transforms: [
             status => ({
               style: {...styles.statusCellCommon, ...styles.statusCell[status]}
