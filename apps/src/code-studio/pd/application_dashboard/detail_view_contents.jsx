@@ -806,12 +806,6 @@ export class DetailViewContents extends React.Component {
     );
   }
 
-  showPrincipalApprovalTable = () => {
-    return this.props.applicationData.principal_approval_state?.startsWith(
-      PrincipalApprovalState.complete
-    );
-  };
-
   handlePrincipalApprovalChange = (_id, principalApproval) => {
     this.setState({principalApproval});
     this.setState({
