@@ -1,2 +1,9 @@
 {
+  "ca-ES": {
+    "data": {
+      "teacher_markdown": {
+        "courseA_artist_loops_challenge1_2021": "Aquesta lliçó extra és un \"joc lliure\". Aquests nivells tenen algunes característiques que potser aniria bé explorar abans de començar.\n\n-   Aquests nivells no **es comproven per veure si són correctes** per tal de deixar espai per una creativitat més lliure. Animeu els alumnes a que determinin per si mateixos quan han creat alguna cosa que els agrada. No hi ha una única resposta correcta!\n-   Si voleu veure les solucions d'exemple disponibles per aquest nivell, obriu el panell del professor a la dreta."
+      }
+    }
+  }
 }

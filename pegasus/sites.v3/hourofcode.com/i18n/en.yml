@@ -7189,6 +7189,12 @@
   tutorial_msftwakanda_string_detail_platforms: ""
   tutorial_msftwakanda_string_detail_programming_languages: blocks
   tutorial_msftwakanda_string_platforms: "All modern browsers"
+  tutorial_carnegieslime_name: "Super Slime Battle"
+  tutorial_carnegieslime_longdescription: "Every year the Minions of Scarecorp try to steal your candy crops. Booville High's Baddest Slimeball crew have come together to protect the candy crops with slime weapons. Players play as teen monsters who program their collaborative robot (aka 'cobot') pets to help take down the Minions of Scarecorp who are after their town's candy harvest. Choose between four characters and their cobotic pets."
+  tutorial_carnegieslime_string_detail_grades: "Grades 2-8"
+  tutorial_carnegieslime_string_platforms: "All modern browsers"
+  tutorial_carnegieslime_name: "Super Slime Battle"
+  tutorial_carnegieslime_string_detail_programming_languages: "blocks"
 
   school_not_found_heading: "We couldn't find your school. Please enter more information."
   school_name: "School name"
