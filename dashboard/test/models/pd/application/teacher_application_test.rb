@@ -849,7 +849,7 @@ module Pd::Application
       assert application.reload.principal_approval_state.include? 'Complete - Admin said Yes on'
     end
 
-    test 'scholarship criteria for rp guardrail percents rp set fields' do
+    test 'scholarship criteria uses regional partner set fields when specified' do
       regional_partner = build :regional_partner, frl_guardrail_percent: 52, urg_guardrail_percent: 48
 
       # Does not meet Free and Reduced Lunch criteria but does meet Underrepresented Group criteria
@@ -869,7 +869,7 @@ module Pd::Application
       assert_equal(YES, application.response_scores_hash[:meets_scholarship_criteria_scores][:underrepresented_minority_percent])
     end
 
-    test 'scholarship criteria for rp guardrail percents rp did not specify guardrails' do
+    test 'scholarship criteria uses default guardrails when regaionl partner does not specify' do
       regional_partner = build :regional_partner
 
       # Meets Free and Reduced Lunch criteria but not Underrepresented Group criteria
@@ -878,8 +878,8 @@ module Pd::Application
         principal_approval: principal_options[:do_you_approve].first,
         principal_schedule_confirmed: principal_options[:committed_to_master_schedule].first,
         principal_wont_replace_existing_course: principal_options[:replace_course].first,
-        principal_free_lunch_percent: 50,
-        principal_underrepresented_minority_percent: 49
+        principal_free_lunch_percent: REGIONAL_PARTNER_DEFAULT_GUARDRAILS[:frl_not_rural],
+        principal_underrepresented_minority_percent: REGIONAL_PARTNER_DEFAULT_GUARDRAILS[:urg] - 1
 
       application = create :pd_teacher_application, regional_partner: regional_partner, form_data_hash: application_hash
       application.auto_score!
@@ -889,15 +889,15 @@ module Pd::Application
       assert_equal(NO, application.response_scores_hash[:meets_scholarship_criteria_scores][:underrepresented_minority_percent])
     end
 
-    test 'scholarship criteria for rp guardrail percents no partner' do
+    test 'scholarship criteria uses default guardrails when matched to No Partner' do
       # Meets Free and Reduced Lunch criteria but not Underrepresented Group criteria
       principal_options = Pd::Application::PrincipalApprovalApplication.options
       application_hash = build :pd_teacher_application_hash,
         principal_approval: principal_options[:do_you_approve].first,
         principal_schedule_confirmed: principal_options[:committed_to_master_schedule].first,
         principal_wont_replace_existing_course: principal_options[:replace_course].first,
-        principal_free_lunch_percent: 50,
-        principal_underrepresented_minority_percent: 49
+        principal_free_lunch_percent: REGIONAL_PARTNER_DEFAULT_GUARDRAILS[:frl_not_rural],
+        principal_underrepresented_minority_percent: REGIONAL_PARTNER_DEFAULT_GUARDRAILS[:urg] - 1
 
       application = create :pd_teacher_application, regional_partner: nil, form_data_hash: application_hash
       application.auto_score!
