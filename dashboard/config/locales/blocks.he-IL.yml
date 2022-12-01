@@ -1453,7 +1453,7 @@ he:
             '"when"': כאשר
             '"while"': כל עוד
       gamelab_spriteSay:
-        text: אמור
+        text: "{SPRITE} אמור {SPEECH}"
       gamelab_subjectSpritePointer:
         text: "{SPRITE}"
       gamelab_turn:
