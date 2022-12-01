@@ -1042,7 +1042,14 @@ module Pd::Application
         free_lunch_percent = responses[:principal_free_lunch_percent].present? ?
                                responses[:principal_free_lunch_percent].to_i :
                                school_stats&.frl_eligible_percent
-        free_lunch_percent_cutoff = school_stats&.rural_school? ? 40 : 50
+        free_lunch_percent_cutoff =
+          if regional_partner&.frl_guardrail_percent
+            regional_partner&.frl_guardrail_percent.to_i
+          elsif school_stats&.rural_school?
+            40
+          else
+            50
+          end
 
         meets_scholarship_criteria_scores[:free_lunch_percent] =
           if free_lunch_percent
@@ -1054,10 +1061,13 @@ module Pd::Application
         urg_percent = responses[:principal_underrepresented_minority_percent].present? ?
                         responses[:principal_underrepresented_minority_percent].to_i :
                         school_stats&.urm_percent
+        urg_percent_cutoff = regional_partner&.urg_guardrail_percent ?
+                              regional_partner&.urg_guardrail_percent.to_i :
+                              50
 
         meets_scholarship_criteria_scores[:underrepresented_minority_percent] =
           if urg_percent
-            urg_percent >= 50 ? YES : NO
+            urg_percent >= urg_percent_cutoff ? YES : NO
           else
             nil
           end
