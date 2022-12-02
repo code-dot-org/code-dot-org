@@ -102,7 +102,7 @@
           "2-3_Artist_Nested_Loops_3_a": "Besoin d’aide avec les angles ?\\\n**360 ÷ 12 = 30**"
         },
         "2-3 Artist Nested Loops 5": {
-          "2-3_Artist_Nested_Loops_5_a": "Essaie d'utiliser le bloc ˋsauter en avantˋ pour aller du sommet d'un carré à l'endroit où tu veux commencer le suivant. \n\nSi tes carrés font 20 pixels de haut et sont séparés de 20 pixels, de combien dois-tu sauter ?"
+          "2-3_Artist_Nested_Loops_5_a": "Essaie d'utiliser le bloc ˋsauter en avantˋ pour aller du haut d'un carré à l'endroit où tu veux commencer le suivant. \n\nSi tes carrés font 20 pixels de haut et sont séparés de 20 pixels, de combien dois-tu sauter ?"
         },
         "2-3 Artist Nested Loops 7": {
           "2-3_Artist_Nested_Loops_7_a": "De combien faut-il tourner à chaque boucle?\n\nCombien font 360/10?"
@@ -5142,196 +5142,196 @@
           "courseD_artist_binary_challenge2_a": "Il n'y a que quelques lignes incorrectes dans le programme original."
         },
         "courseD_artist_nestedLoops1": {
-          "courseD_artist_nestedLoops1_a": "Le moyen le plus simple pour le dessiner c'est d'avancer et de tourner à droite.",
-          "courseD_artist_nestedLoops1_b": "Tu peux dessiner ce triangle avec une boucle `Répéter` et 2 blocs à l'intérieur. De quels blocs as tu besoin?",
-          "courseD_artist_nestedLoops1_c": "Essaie d'écrire les étapes sur une feuille de papier et de chercher des motifs qui peuvent être simplifiés avec des boucles."
+          "courseD_artist_nestedLoops1_a": "La manière la plus simple de le dessiner, c'est d'avancer et de tourner à droite.",
+          "courseD_artist_nestedLoops1_b": "Tu peux dessiner ce triangle en utilisant une boucle `répéter` avec deux blocs placés à l'intérieur. De quels blocs as tu besoin ?",
+          "courseD_artist_nestedLoops1_c": "Essaie d'écrire les étapes sur une feuille de papier et de chercher des motifs qui peuvent être simplifiés par des boucles."
         },
         "courseD_artist_nestedLoops1_2018": {
-          "courseD_artist_nestedLoops1_a": "Le moyen le plus simple pour le dessiner c'est d'avancer et de tourner à droite.",
-          "courseD_artist_nestedLoops1_b": "Tu peux dessiner ce triangle avec une boucle `Répéter` et 2 blocs à l'intérieur. De quels blocs as tu besoin?",
-          "courseD_artist_nestedLoops1_c": "Essaie d'écrire les étapes sur une feuille de papier et de chercher des motifs qui peuvent être simplifiés avec des boucles."
+          "courseD_artist_nestedLoops1_a": "La manière la plus simple de le dessiner, c'est d'avancer et de tourner à droite.",
+          "courseD_artist_nestedLoops1_b": "Tu peux dessiner ce triangle en utilisant une boucle `répéter` avec deux blocs placés à l'intérieur. De quels blocs as tu besoin ?",
+          "courseD_artist_nestedLoops1_c": "Essaie d'écrire les étapes sur une feuille de papier et de chercher des motifs qui peuvent être simplifiés par des boucles."
         },
         "courseD_artist_nestedLoops1_2019": {
-          "courseD_artist_nestedLoops1_a": "Le moyen le plus simple pour le dessiner c'est d'avancer et de tourner à droite.",
-          "courseD_artist_nestedLoops1_b": "Tu peux dessiner ce triangle avec une boucle `Répéter` et 2 blocs à l'intérieur. De quels blocs as tu besoin?",
-          "courseD_artist_nestedLoops1_c": "Essaie d'écrire les étapes sur une feuille de papier et de chercher des motifs qui peuvent être simplifiés avec des boucles."
+          "courseD_artist_nestedLoops1_a": "La manière la plus simple de le dessiner, c'est d'avancer et de tourner à droite.",
+          "courseD_artist_nestedLoops1_b": "Tu peux dessiner ce triangle en utilisant une boucle `répéter` avec deux blocs placés à l'intérieur. De quels blocs as tu besoin ?",
+          "courseD_artist_nestedLoops1_c": "Essaie d'écrire les étapes sur une feuille de papier et de chercher des motifs qui peuvent être simplifiés par des boucles."
         },
         "courseD_artist_nestedLoops1_2020": {
-          "courseD_artist_nestedLoops1_a": "Le moyen le plus simple pour le dessiner c'est d'avancer et de tourner à droite.",
-          "courseD_artist_nestedLoops1_b": "Tu peux dessiner ce triangle avec une boucle `Répéter` et 2 blocs à l'intérieur. De quels blocs as tu besoin?",
-          "courseD_artist_nestedLoops1_c": "Essaie d'écrire les étapes sur une feuille de papier et de chercher des motifs qui peuvent être simplifiés avec des boucles."
+          "courseD_artist_nestedLoops1_a": "La manière la plus simple de le dessiner, c'est d'avancer et de tourner à droite.",
+          "courseD_artist_nestedLoops1_b": "Tu peux dessiner ce triangle en utilisant une boucle `répéter` avec deux blocs placés à l'intérieur. De quels blocs as tu besoin ?",
+          "courseD_artist_nestedLoops1_c": "Essaie d'écrire les étapes sur une feuille de papier et de chercher des motifs qui peuvent être simplifiés par des boucles."
         },
         "courseD_artist_nestedLoops1a": {
-          "courseD_artist_nestedLoops1a_a": "Tu devras dessiner au total 6 triangles. Après avoir terminé chaque triangle, tourne de 60 degrés et avance pour commencer le triangle suivant.\n\n![](https://images.code.org/ad6c6d98298df9f4e3cea5bbe5ec776e-image-1497476332024.2_solution2.gif)",
-          "courseD_artist_nestedLoops1a_b": "Si tu crées ton triangle avec une boucle, l'artiste doit être dans la même position à chaque départ. Cela rendra la rotation à 60 degrés plus facile à gérer.",
-          "courseD_artist_nestedLoops1a_c": "Si tu veux des couleurs, utilise le bloc `Définir la couleur` dans ton code. Tu n'as pas besoin de faire correspondre les couleurs avec le modèle de l'image."
+          "courseD_artist_nestedLoops1a_a": "Il va te falloir dessiner 6 triangles en tout. Après avoir terminé chaque triangle, tourne de 60 degrés et déplace-toi pour commencer le triangle suivant.\n\n![](https://images.code.org/ad6c6d98298df9f4e3cea5bbe5ec776e-image-1497476332024.2_solution2.gif)",
+          "courseD_artist_nestedLoops1a_b": "Si tu crées ton triangle en utilisant une boucle, l'artiste devrait se retrouver dans la même position que celle dans laquelle il a commencé. Cela rendra la rotation à 60 degrés bien plus facile à gérer.",
+          "courseD_artist_nestedLoops1a_c": "Si tu veux des couleurs, utilise le bloc `définir la couleur` dans ton code. Tu n'as pas besoin de faire correspondre les couleurs avec celles dans l'image modèle."
         },
         "courseD_artist_nestedLoops1a_2018": {
           "courseD_artist_nestedLoops1a_a": "Tu devras dessiner un total de 6 triangles (conseil : utilisee ton code de la dernière énigme pour commencer). Après avoir terminé un triangle, pivote de 60 degrés et déplace-toi pour commencer le triangle suivant.    ![](https://images.code.org/ad6c6d98298df9f4e3cea5bbe5ec776e-image-1497476332024.2_solution2.gif)",
-          "courseD_artist_nestedLoops1a_b": "Si tu crées ton triangle avec une boucle, l'artiste doit être dans la même position à chaque départ. Cela rendra la rotation à 60 degrés plus facile à gérer.",
-          "courseD_artist_nestedLoops1a_c": "Si tu veux des couleurs, utilise le bloc `Définir la couleur` dans ton code. Tu n'as pas besoin de faire correspondre les couleurs avec le modèle de l'image."
+          "courseD_artist_nestedLoops1a_b": "Si tu crées ton triangle en utilisant une boucle, l'artiste devrait se retrouver dans la même position que celle dans laquelle il a commencé. Cela rendra la rotation à 60 degrés bien plus facile à gérer.",
+          "courseD_artist_nestedLoops1a_c": "Si tu veux des couleurs, utilise le bloc `définir la couleur` dans ton code. Tu n'as pas besoin de faire correspondre les couleurs avec celles dans l'image modèle."
         },
         "courseD_artist_nestedLoops1a_2019": {
-          "courseD_artist_nestedLoops1a_a": "Tu devras dessiner au total 6 triangles. Après avoir terminé chaque triangle, tourne de 60 degrés et avance pour commencer le triangle suivant.\n\n![](https://images.code.org/ad6c6d98298df9f4e3cea5bbe5ec776e-image-1497476332024.2_solution2.gif)",
-          "courseD_artist_nestedLoops1a_b": "Si tu crées ton triangle avec une boucle, l'artiste doit être dans la même position à chaque départ. Cela rendra la rotation à 60 degrés plus facile à gérer.",
-          "courseD_artist_nestedLoops1a_c": "Si tu veux des couleurs, utilise le bloc `Définir la couleur` dans ton code. Tu n'as pas besoin de faire correspondre les couleurs avec le modèle de l'image."
+          "courseD_artist_nestedLoops1a_a": "Il va te falloir dessiner 6 triangles en tout. Après avoir terminé chaque triangle, tourne de 60 degrés et déplace-toi pour commencer le triangle suivant.\n\n![](https://images.code.org/ad6c6d98298df9f4e3cea5bbe5ec776e-image-1497476332024.2_solution2.gif)",
+          "courseD_artist_nestedLoops1a_b": "Si tu crées ton triangle en utilisant une boucle, l'artiste devrait se retrouver dans la même position que celle dans laquelle il a commencé. Cela rendra la rotation à 60 degrés bien plus facile à gérer.",
+          "courseD_artist_nestedLoops1a_c": "Si tu veux des couleurs, utilise le bloc `définir la couleur` dans ton code. Tu n'as pas besoin de faire correspondre les couleurs avec celles dans l'image modèle."
         },
         "courseD_artist_nestedLoops1a_2020": {
-          "courseD_artist_nestedLoops1a_a": "Tu devras dessiner au total 6 triangles. Après avoir terminé chaque triangle, tourne de 60 degrés et avance pour commencer le triangle suivant.\n\n![](https://images.code.org/ad6c6d98298df9f4e3cea5bbe5ec776e-image-1497476332024.2_solution2.gif)",
-          "courseD_artist_nestedLoops1a_b": "Si tu crées ton triangle avec une boucle, l'artiste doit être dans la même position à chaque départ. Cela rendra la rotation à 60 degrés plus facile à gérer.",
-          "courseD_artist_nestedLoops1a_c": "Si tu veux des couleurs, utilise le bloc `Définir la couleur` dans ton code. Tu n'as pas besoin de faire correspondre les couleurs avec le modèle de l'image."
+          "courseD_artist_nestedLoops1a_a": "Il va te falloir dessiner 6 triangles en tout. Après avoir terminé chaque triangle, tourne de 60 degrés et déplace-toi pour commencer le triangle suivant.\n\n![](https://images.code.org/ad6c6d98298df9f4e3cea5bbe5ec776e-image-1497476332024.2_solution2.gif)",
+          "courseD_artist_nestedLoops1a_b": "Si tu crées ton triangle en utilisant une boucle, l'artiste devrait se retrouver dans la même position que celle dans laquelle il a commencé. Cela rendra la rotation à 60 degrés bien plus facile à gérer.",
+          "courseD_artist_nestedLoops1a_c": "Si tu veux des couleurs, utilise le bloc `définir la couleur` dans ton code. Tu n'as pas besoin de faire correspondre les couleurs avec celles dans l'image modèle."
         },
         "courseD_artist_nestedLoops2": {
-          "courseD_artist_nestedLoops2_a": "Emboîte ta boucle en entourant le code du triangle avec une autre boucle `Répéter`.",
-          "courseD_artist_nestedLoops2_b": "Souviens toi de mettre le bloc `Tourner` à l'intérieur de la boucle afin que l'artiste tourne après chaque triangle."
+          "courseD_artist_nestedLoops2_a": "Imbrique tes boucles en entourant le code du triangle avec une autre boucle `répéter`.",
+          "courseD_artist_nestedLoops2_b": "N'oublie pas de mettre le bloc `tourner` à l'intérieur de la boucle pour faire tourner l'artiste après chaque triangle."
         },
         "courseD_artist_nestedLoops2_2018": {
-          "courseD_artist_nestedLoops2_a": "Emboîte ta boucle en entourant le code du triangle avec une autre boucle `Répéter`.",
-          "courseD_artist_nestedLoops2_b": "Souviens toi de mettre le bloc `Tourner` à l'intérieur de la boucle afin que l'artiste tourne après chaque triangle."
+          "courseD_artist_nestedLoops2_a": "Imbrique tes boucles en entourant le code du triangle avec une autre boucle `répéter`.",
+          "courseD_artist_nestedLoops2_b": "N'oublie pas de mettre le bloc `tourner` à l'intérieur de la boucle pour faire tourner l'artiste après chaque triangle."
         },
         "courseD_artist_nestedLoops2_2019": {
-          "courseD_artist_nestedLoops2_a": "Emboîte ta boucle en entourant le code du triangle avec une autre boucle `Répéter`.",
-          "courseD_artist_nestedLoops2_b": "Souviens toi de mettre le bloc `Tourner` à l'intérieur de la boucle afin que l'artiste tourne après chaque triangle."
+          "courseD_artist_nestedLoops2_a": "Imbrique tes boucles en entourant le code du triangle avec une autre boucle `répéter`.",
+          "courseD_artist_nestedLoops2_b": "N'oublie pas de mettre le bloc `tourner` à l'intérieur de la boucle pour faire tourner l'artiste après chaque triangle."
         },
         "courseD_artist_nestedLoops2_2020": {
-          "courseD_artist_nestedLoops2_a": "Emboîte ta boucle en entourant le code du triangle avec une autre boucle `Répéter`.",
-          "courseD_artist_nestedLoops2_b": "Souviens toi de mettre le bloc `Tourner` à l'intérieur de la boucle afin que l'artiste tourne après chaque triangle."
+          "courseD_artist_nestedLoops2_a": "Imbrique tes boucles en entourant le code du triangle avec une autre boucle `répéter`.",
+          "courseD_artist_nestedLoops2_b": "N'oublie pas de mettre le bloc `tourner` à l'intérieur de la boucle pour faire tourner l'artiste après chaque triangle."
         },
         "courseD_artist_nestedLoops3": {
-          "courseD_artist_nestedLoops3_a": "Essaie d'utiliser le bloc ˋsauter en avantˋ pour aller du sommet d'un carré à l'endroit où tu veux commencer le suivant. \n\nSi tes carrés font 20 pixels de haut et sont séparés de 20 pixels, de combien dois-tu sauter ?",
-          "courseD_artist_nestedLoops3_b": "N'oublie pas d'utiliser une boucle imbriquée pour résoudre ce puzzle rapidement. ",
-          "courseD_artist_nestedLoops3_c": "Commence par utiliser une boucle `Répéter` pour faire un carré. Ensuite, répète ce carré 8 fois, en sautant de 40 pixels entre chaque carré. "
+          "courseD_artist_nestedLoops3_a": "Essaie d'utiliser le bloc ˋsauter en avantˋ pour aller du haut d'un carré à l'endroit où tu veux commencer le suivant. \n\nSi tes carrés font 20 pixels de haut et sont séparés de 20 pixels, de combien dois-tu sauter ?",
+          "courseD_artist_nestedLoops3_b": "N'oublie pas d'utiliser une boucle imbriquée pour résoudre ce casse-tête rapidement. ",
+          "courseD_artist_nestedLoops3_c": "Commence par utiliser une boucle `répéter` pour faire un carré. Ensuite, répète ce carré 8 fois, en sautant de 40 pixels entre chaque carré. "
         },
         "courseD_artist_nestedLoops3_2018": {
-          "courseD_artist_nestedLoops3_a": "Essaie d'utiliser le bloc ˋsauter en avantˋ pour aller du sommet d'un carré à l'endroit où tu veux commencer le suivant. \n\nSi tes carrés font 20 pixels de haut et sont séparés de 20 pixels, de combien dois-tu sauter ?",
-          "courseD_artist_nestedLoops3_b": "N'oublie pas d'utiliser une boucle imbriquée pour résoudre ce puzzle rapidement. ",
-          "courseD_artist_nestedLoops3_c": "Commence par utiliser une boucle `Répéter` pour faire un carré. Ensuite, répète ce carré 8 fois, en sautant de 40 pixels entre chaque carré. "
+          "courseD_artist_nestedLoops3_a": "Essaie d'utiliser le bloc ˋsauter en avantˋ pour aller du haut d'un carré à l'endroit où tu veux commencer le suivant. \n\nSi tes carrés font 20 pixels de haut et sont séparés de 20 pixels, de combien dois-tu sauter ?",
+          "courseD_artist_nestedLoops3_b": "N'oublie pas d'utiliser une boucle imbriquée pour résoudre ce casse-tête rapidement. ",
+          "courseD_artist_nestedLoops3_c": "Commence par utiliser une boucle `répéter` pour faire un carré. Ensuite, répète ce carré 8 fois, en sautant de 40 pixels entre chaque carré. "
         },
         "courseD_artist_nestedLoops3_2019": {
-          "courseD_artist_nestedLoops3_a": "Essaie d'utiliser le bloc ˋsauter en avantˋ pour aller du sommet d'un carré à l'endroit où tu veux commencer le suivant. \n\nSi tes carrés font 20 pixels de haut et sont séparés de 20 pixels, de combien dois-tu sauter ?",
-          "courseD_artist_nestedLoops3_b": "N'oublie pas d'utiliser une boucle imbriquée pour résoudre ce puzzle rapidement. ",
-          "courseD_artist_nestedLoops3_c": "Commence par utiliser une boucle `Répéter` pour faire un carré. Ensuite, répète ce carré 8 fois, en sautant de 40 pixels entre chaque carré. "
+          "courseD_artist_nestedLoops3_a": "Essaie d'utiliser le bloc ˋsauter en avantˋ pour aller du haut d'un carré à l'endroit où tu veux commencer le suivant. \n\nSi tes carrés font 20 pixels de haut et sont séparés de 20 pixels, de combien dois-tu sauter ?",
+          "courseD_artist_nestedLoops3_b": "N'oublie pas d'utiliser une boucle imbriquée pour résoudre ce casse-tête rapidement. ",
+          "courseD_artist_nestedLoops3_c": "Commence par utiliser une boucle `répéter` pour faire un carré. Ensuite, répète ce carré 8 fois, en sautant de 40 pixels entre chaque carré. "
         },
         "courseD_artist_nestedLoops3_2020": {
-          "courseD_artist_nestedLoops3_a": "Essaie d'utiliser le bloc ˋsauter en avantˋ pour aller du sommet d'un carré à l'endroit où tu veux commencer le suivant. \n\nSi tes carrés font 20 pixels de haut et sont séparés de 20 pixels, de combien dois-tu sauter ?",
-          "courseD_artist_nestedLoops3_b": "N'oublie pas d'utiliser une boucle imbriquée pour résoudre ce puzzle rapidement. ",
-          "courseD_artist_nestedLoops3_c": "Commence par utiliser une boucle `Répéter` pour faire un carré. Ensuite, répète ce carré 8 fois, en sautant de 40 pixels entre chaque carré. "
+          "courseD_artist_nestedLoops3_a": "Essaie d'utiliser le bloc ˋsauter en avantˋ pour aller du haut d'un carré à l'endroit où tu veux commencer le suivant. \n\nSi tes carrés font 20 pixels de haut et sont séparés de 20 pixels, de combien dois-tu sauter ?",
+          "courseD_artist_nestedLoops3_b": "N'oublie pas d'utiliser une boucle imbriquée pour résoudre ce casse-tête rapidement. ",
+          "courseD_artist_nestedLoops3_c": "Commence par utiliser une boucle `répéter` pour faire un carré. Ensuite, répète ce carré 8 fois, en sautant de 40 pixels entre chaque carré. "
         },
         "courseD_artist_nestedLoops4": {
-          "courseD_artist_nestedLoops4_d": "Pour résoudre ce problème correctement, tu dois avancer **avant** de tourner, sinon tes cercles seront un peu décoiffés!",
-          "courseD_artist_nestedLoops4_a": "Pour faire un cercle:\n\n-   Répéter 360 fois\n    -   Avance d'1 pixel\n    -   Tourne à gauche d'1 degré",
+          "courseD_artist_nestedLoops4_d": "Pour résoudre ce problème correctement, tu dois avancer **avant** de tourner, sinon tes cercles seront un tant soit peu décoiffés !",
+          "courseD_artist_nestedLoops4_a": "Pour faire un cercle :\n\n-   Répéter 360 fois :\n    -   Avancer d'1 pixel\n    -   Tourner à gauche d'1 degré",
           "courseD_artist_nestedLoops4_b": "N'oublie pas de sauter en avant de 50 pixels entre chaque cercle.",
           "courseD_artist_nestedLoops4_c": "Utilise une boucle imbriquée pour dessiner ton cercle 4 fois."
         },
         "courseD_artist_nestedLoops4_2018": {
-          "courseD_artist_nestedLoops4_d": "Pour résoudre ce problème correctement, tu dois avancer **avant** de tourner, sinon tes cercles seront un peu décoiffés!",
-          "courseD_artist_nestedLoops4_a": "Pour faire un cercle:\n\n-   Répéter 360 fois\n    -   Avance d'1 pixel\n    -   Tourne à gauche d'1 degré",
+          "courseD_artist_nestedLoops4_d": "Pour résoudre ce problème correctement, tu dois avancer **avant** de tourner, sinon tes cercles seront un tant soit peu décoiffés !",
+          "courseD_artist_nestedLoops4_a": "Pour faire un cercle :\n\n-   Répéter 360 fois :\n    -   Avancer d'1 pixel\n    -   Tourner à gauche d'1 degré",
           "courseD_artist_nestedLoops4_b": "N'oublie pas de sauter en avant de 50 pixels entre chaque cercle.",
           "courseD_artist_nestedLoops4_c": "Utilise une boucle imbriquée pour dessiner ton cercle 4 fois."
         },
         "courseD_artist_nestedLoops4_2019": {
-          "courseD_artist_nestedLoops4_d": "Pour résoudre ce problème correctement, tu dois avancer **avant** de tourner, sinon tes cercles seront un peu décoiffés!",
-          "courseD_artist_nestedLoops4_a": "Pour faire un cercle:\n\n-   Répéter 360 fois\n    -   Avance d'1 pixel\n    -   Tourne à gauche d'1 degré",
+          "courseD_artist_nestedLoops4_d": "Pour résoudre ce problème correctement, tu dois avancer **avant** de tourner, sinon tes cercles seront un tant soit peu décoiffés !",
+          "courseD_artist_nestedLoops4_a": "Pour faire un cercle :\n\n-   Répéter 360 fois :\n    -   Avancer d'1 pixel\n    -   Tourner à gauche d'1 degré",
           "courseD_artist_nestedLoops4_b": "N'oublie pas de sauter en avant de 50 pixels entre chaque cercle.",
           "courseD_artist_nestedLoops4_c": "Utilise une boucle imbriquée pour dessiner ton cercle 4 fois."
         },
         "courseD_artist_nestedLoops4_2020": {
-          "courseD_artist_nestedLoops4_d": "Pour résoudre ce problème correctement, tu dois avancer **avant** de tourner, sinon tes cercles seront un peu décoiffés!",
-          "courseD_artist_nestedLoops4_a": "Pour faire un cercle:\n\n-   Répéter 360 fois\n    -   Avance d'1 pixel\n    -   Tourne à gauche d'1 degré",
+          "courseD_artist_nestedLoops4_d": "Pour résoudre ce problème correctement, tu dois avancer **avant** de tourner, sinon tes cercles seront un tant soit peu décoiffés !",
+          "courseD_artist_nestedLoops4_a": "Pour faire un cercle :\n\n-   Répéter 360 fois :\n    -   Avancer d'1 pixel\n    -   Tourner à gauche d'1 degré",
           "courseD_artist_nestedLoops4_b": "N'oublie pas de sauter en avant de 50 pixels entre chaque cercle.",
           "courseD_artist_nestedLoops4_c": "Utilise une boucle imbriquée pour dessiner ton cercle 4 fois."
         },
         "courseD_artist_nestedLoops5": {
-          "courseD_artist_nestedLoops5_a": "Pour faire ça facilement:\n\n-   Répète 4 fois\n    -   Faire un cercle\n    -   Saute en avant de 50 pixels\n    -   Tourne à droite de 90 degrés",
-          "courseD_artist_nestedLoops5_b": "Pour faire un cercle, tu dois configurer une boucle qui se répète 360 fois. Dans la boucle, avance de 1 pixel et tourne de 1 degré."
+          "courseD_artist_nestedLoops5_a": "Pour faire facilement ceci :\n\n-   Répète 4 fois :\n    -   Faire un cercle\n    -   Sauter en avant de 50 pixels\n    -   Tourner à droite de 90 degrés",
+          "courseD_artist_nestedLoops5_b": "Pour faire un cercle, tu dois configurer une boucle répéter qui se répète 360 fois. Au sein de la boucle, avance de 1 pixel et tourne de 1 degré."
         },
         "courseD_artist_nestedLoops5_2018": {
-          "courseD_artist_nestedLoops5_a": "Pour faire ça facilement:\n\n-   Répète 4 fois\n    -   Faire un cercle\n    -   Saute en avant de 50 pixels\n    -   Tourne à droite de 90 degrés",
-          "courseD_artist_nestedLoops5_b": "Pour faire un cercle, tu dois configurer une boucle qui se répète 360 fois. Dans la boucle, avance de 1 pixel et tourne de 1 degré."
+          "courseD_artist_nestedLoops5_a": "Pour faire facilement ceci :\n\n-   Répète 4 fois :\n    -   Faire un cercle\n    -   Sauter en avant de 50 pixels\n    -   Tourner à droite de 90 degrés",
+          "courseD_artist_nestedLoops5_b": "Pour faire un cercle, tu dois configurer une boucle répéter qui se répète 360 fois. Au sein de la boucle, avance de 1 pixel et tourne de 1 degré."
         },
         "courseD_artist_nestedLoops5_2019": {
-          "courseD_artist_nestedLoops5_a": "Pour faire ça facilement:\n\n-   Répète 4 fois\n    -   Faire un cercle\n    -   Saute en avant de 50 pixels\n    -   Tourne à droite de 90 degrés",
-          "courseD_artist_nestedLoops5_b": "Pour faire un cercle, tu dois configurer une boucle qui se répète 360 fois. Dans la boucle, avance de 1 pixel et tourne de 1 degré."
+          "courseD_artist_nestedLoops5_a": "Pour faire facilement ceci :\n\n-   Répète 4 fois :\n    -   Faire un cercle\n    -   Sauter en avant de 50 pixels\n    -   Tourner à droite de 90 degrés",
+          "courseD_artist_nestedLoops5_b": "Pour faire un cercle, tu dois configurer une boucle répéter qui se répète 360 fois. Au sein de la boucle, avance de 1 pixel et tourne de 1 degré."
         },
         "courseD_artist_nestedLoops5_2020": {
-          "courseD_artist_nestedLoops5_a": "Pour faire ça facilement:\n\n-   Répète 4 fois\n    -   Faire un cercle\n    -   Saute en avant de 50 pixels\n    -   Tourne à droite de 90 degrés",
-          "courseD_artist_nestedLoops5_b": "Pour faire un cercle, tu dois configurer une boucle qui se répète 360 fois. Dans la boucle, avance de 1 pixel et tourne de 1 degré."
+          "courseD_artist_nestedLoops5_a": "Pour faire facilement ceci :\n\n-   Répète 4 fois :\n    -   Faire un cercle\n    -   Sauter en avant de 50 pixels\n    -   Tourner à droite de 90 degrés",
+          "courseD_artist_nestedLoops5_b": "Pour faire un cercle, tu dois configurer une boucle répéter qui se répète 360 fois. Au sein de la boucle, avance de 1 pixel et tourne de 1 degré."
         },
         "courseD_artist_nestedLoops7": {
-          "courseD_artist_nestedLoops7_a": "Tu dois utiliser les boucles imbriquées ici. D'abord utilise une boucle pour dessiner un carré. Qu'est ce que fait l'extérieur de la boucle si l'intérieur dessine un carré ?",
-          "courseD_artist_nestedLoops7_b": "Utilise une boucle imbriquée, où l'intérieure de la boucle est le code pour un carré.\n\n-   Répète 6 fois\n    -   Fait un carré\n    -   Saute en avant de **50 pixels**\n    -   Tourne de **60 degrés**"
+          "courseD_artist_nestedLoops7_a": "Il va te falloir utiliser des boucles imbriquées ici. D'abord, utilise une boucle pour dessiner un carré. Que fera la boucle extérieur si la boucle intérieur dessine un carré ?",
+          "courseD_artist_nestedLoops7_b": "Utilise une boucle imbriquée, où la boucle intérieure contient le code pour un carré.\n\n-   Répète 6 fois :\n    -   Faire un carré\n    -   Sauter en avant de **50 pixels**\n    -   Tourner de **60 degrés**"
         },
         "courseD_artist_nestedLoops7_2018": {
-          "courseD_artist_nestedLoops7_a": "Tu dois utiliser les boucles imbriquées ici. D'abord utilise une boucle pour dessiner un carré. Qu'est ce que fait l'extérieur de la boucle si l'intérieur dessine un carré ?",
-          "courseD_artist_nestedLoops7_b": "Utilise une boucle imbriquée, où l'intérieure de la boucle est le code pour un carré.\n\n-   Répète 6 fois\n    -   Fait un carré\n    -   Saute en avant de **50 pixels**\n    -   Tourne de **60 degrés**"
+          "courseD_artist_nestedLoops7_a": "Il va te falloir utiliser des boucles imbriquées ici. D'abord, utilise une boucle pour dessiner un carré. Que fera la boucle extérieur si la boucle intérieur dessine un carré ?",
+          "courseD_artist_nestedLoops7_b": "Utilise une boucle imbriquée, où la boucle intérieure contient le code pour un carré.\n\n-   Répète 6 fois :\n    -   Faire un carré\n    -   Sauter en avant de **50 pixels**\n    -   Tourner de **60 degrés**"
         },
         "courseD_artist_nestedLoops7_2019": {
-          "courseD_artist_nestedLoops7_a": "Tu dois utiliser les boucles imbriquées ici. D'abord utilise une boucle pour dessiner un carré. Qu'est ce que fait l'extérieur de la boucle si l'intérieur dessine un carré ?",
-          "courseD_artist_nestedLoops7_b": "Utilise une boucle imbriquée, où l'intérieure de la boucle est le code pour un carré.\n\n-   Répète 6 fois\n    -   Fait un carré\n    -   Saute en avant de **50 pixels**\n    -   Tourne de **60 degrés**"
+          "courseD_artist_nestedLoops7_a": "Il va te falloir utiliser des boucles imbriquées ici. D'abord, utilise une boucle pour dessiner un carré. Que fera la boucle extérieur si la boucle intérieur dessine un carré ?",
+          "courseD_artist_nestedLoops7_b": "Utilise une boucle imbriquée, où la boucle intérieure contient le code pour un carré.\n\n-   Répète 6 fois :\n    -   Faire un carré\n    -   Sauter en avant de **50 pixels**\n    -   Tourner de **60 degrés**"
         },
         "courseD_artist_nestedLoops7_2020": {
-          "courseD_artist_nestedLoops7_a": "Tu dois utiliser les boucles imbriquées ici. D'abord utilise une boucle pour dessiner un carré. Qu'est ce que fait l'extérieur de la boucle si l'intérieur dessine un carré ?",
-          "courseD_artist_nestedLoops7_b": "Utilise une boucle imbriquée, où l'intérieure de la boucle est le code pour un carré.\n\n-   Répète 6 fois\n    -   Fait un carré\n    -   Saute en avant de **50 pixels**\n    -   Tourne de **60 degrés**"
+          "courseD_artist_nestedLoops7_a": "Il va te falloir utiliser des boucles imbriquées ici. D'abord, utilise une boucle pour dessiner un carré. Que fera la boucle extérieur si la boucle intérieur dessine un carré ?",
+          "courseD_artist_nestedLoops7_b": "Utilise une boucle imbriquée, où la boucle intérieure contient le code pour un carré.\n\n-   Répète 6 fois :\n    -   Faire un carré\n    -   Sauter en avant de **50 pixels**\n    -   Tourner de **60 degrés**"
         },
         "courseD_artist_nestedLoops8": {
-          "courseD_artist_nestedLoops8_a": "Pour avoir 8 hexagones dans ton dessin, tu as besoin de tourner de **45 degrés** entre chacun d'eux. Pourquoi? Parce que 360 degrés (un tour complet) divisé par 8 (le nombre d'hexagones) fait 45 degrés.",
-          "courseD_artist_nestedLoops8_b": "Si tu es bloqué, commence par regarder le dernier puzzle, puis change les choses qui sont différentes.",
-          "courseD_artist_nestedLoops8_c": "Utilise une boucle imbriquée:\n\n-   Répète 8 fois\n    -   Dessine un hexagone\n    -   Saute en avant de 50 pixels\n    -   Tourne à droite de 45 degrés"
+          "courseD_artist_nestedLoops8_a": "Pour avoir 8 hexagones dans ton dessin, il va te falloir tourner de **45 degrés** entre chacun d'eux. Pourquoi ? Parce que 360 degrés (un tour complet) divisé par 8 (le nombre d'hexagones), ça fait 45 degrés.",
+          "courseD_artist_nestedLoops8_b": "Si tu es coincé, commence par regarder le dernier casse-tête puis change les choses qui sont différentes.",
+          "courseD_artist_nestedLoops8_c": "Utilise une boucle imbriquée :\n\n-   Répète 8 fois :\n    -   Dessiner un hexagone\n    -   Sauter en avant de 50 pixels\n    -   Tourner à droite de 45 degrés"
         },
         "courseD_artist_nestedLoops8_2018": {
-          "courseD_artist_nestedLoops8_a": "Pour avoir 8 hexagones dans ton dessin, tu as besoin de tourner de **45 degrés** entre chacun d'eux. Pourquoi? Parce que 360 degrés (un tour complet) divisé par 8 (le nombre d'hexagones) fait 45 degrés.",
-          "courseD_artist_nestedLoops8_b": "Si tu es bloqué, commence par regarder le dernier puzzle, puis change les choses qui sont différentes.",
-          "courseD_artist_nestedLoops8_c": "Utilise une boucle imbriquée:\n\n-   Répète 8 fois\n    -   Dessine un hexagone\n    -   Saute en avant de 50 pixels\n    -   Tourne à droite de 45 degrés"
+          "courseD_artist_nestedLoops8_a": "Pour avoir 8 hexagones dans ton dessin, il va te falloir tourner de **45 degrés** entre chacun d'eux. Pourquoi ? Parce que 360 degrés (un tour complet) divisé par 8 (le nombre d'hexagones), ça fait 45 degrés.",
+          "courseD_artist_nestedLoops8_b": "Si tu es coincé, commence par regarder le dernier casse-tête puis change les choses qui sont différentes.",
+          "courseD_artist_nestedLoops8_c": "Utilise une boucle imbriquée :\n\n-   Répète 8 fois :\n    -   Dessiner un hexagone\n    -   Sauter en avant de 50 pixels\n    -   Tourner à droite de 45 degrés"
         },
         "courseD_artist_nestedLoops8_2019": {
-          "courseD_artist_nestedLoops8_a": "Pour avoir 8 hexagones dans ton dessin, tu as besoin de tourner de **45 degrés** entre chacun d'eux. Pourquoi? Parce que 360 degrés (un tour complet) divisé par 8 (le nombre d'hexagones) fait 45 degrés.",
-          "courseD_artist_nestedLoops8_b": "Si tu es bloqué, commence par regarder le dernier puzzle, puis change les choses qui sont différentes.",
-          "courseD_artist_nestedLoops8_c": "Utilise une boucle imbriquée:\n\n-   Répète 8 fois\n    -   Dessine un hexagone\n    -   Saute en avant de 50 pixels\n    -   Tourne à droite de 45 degrés"
+          "courseD_artist_nestedLoops8_a": "Pour avoir 8 hexagones dans ton dessin, il va te falloir tourner de **45 degrés** entre chacun d'eux. Pourquoi ? Parce que 360 degrés (un tour complet) divisé par 8 (le nombre d'hexagones), ça fait 45 degrés.",
+          "courseD_artist_nestedLoops8_b": "Si tu es coincé, commence par regarder le dernier casse-tête puis change les choses qui sont différentes.",
+          "courseD_artist_nestedLoops8_c": "Utilise une boucle imbriquée :\n\n-   Répète 8 fois :\n    -   Dessiner un hexagone\n    -   Sauter en avant de 50 pixels\n    -   Tourner à droite de 45 degrés"
         },
         "courseD_artist_nestedLoops8_2020": {
-          "courseD_artist_nestedLoops8_a": "Pour avoir 8 hexagones dans ton dessin, tu as besoin de tourner de **45 degrés** entre chacun d'eux. Pourquoi? Parce que 360 degrés (un tour complet) divisé par 8 (le nombre d'hexagones) fait 45 degrés.",
-          "courseD_artist_nestedLoops8_b": "Si tu es bloqué, commence par regarder le dernier puzzle, puis change les choses qui sont différentes.",
-          "courseD_artist_nestedLoops8_c": "Utilise une boucle imbriquée:\n\n-   Répète 8 fois\n    -   Dessine un hexagone\n    -   Saute en avant de 50 pixels\n    -   Tourne à droite de 45 degrés"
+          "courseD_artist_nestedLoops8_a": "Pour avoir 8 hexagones dans ton dessin, il va te falloir tourner de **45 degrés** entre chacun d'eux. Pourquoi ? Parce que 360 degrés (un tour complet) divisé par 8 (le nombre d'hexagones), ça fait 45 degrés.",
+          "courseD_artist_nestedLoops8_b": "Si tu es coincé, commence par regarder le dernier casse-tête puis change les choses qui sont différentes.",
+          "courseD_artist_nestedLoops8_c": "Utilise une boucle imbriquée :\n\n-   Répète 8 fois :\n    -   Dessiner un hexagone\n    -   Sauter en avant de 50 pixels\n    -   Tourner à droite de 45 degrés"
         },
         "courseD_artist_nestedLoops9": {
-          "courseD_artist_nestedLoops9_a": "Commence par utiliser une boucle imbriquée comme auparavant, mais cette fois, fais le avec des carrés.",
-          "courseD_artist_nestedLoops9_b": "Ajoute une seconde boucle imbriquée à la fin de la première, mais cette fois utilise des triangles.",
-          "courseD_artist_nestedLoops9_c": "Utilise 2 boucles imbriquées:\n\n-   Répète 8 fois\n    -   dessine un carré\n    -   Saute en avant de 50 pixels\n    -   Tourne à droite de 45 degrés\n-   Répète 8 fois\n    -   Dessine un triangle\n    -   Saute en avant de 50 pixels\n    -   Tourne à droite de 45 degrés"
+          "courseD_artist_nestedLoops9_a": "Commence en utilisant une boucle imbriquée comme tu l'as fait auparavant, mais cette fois-ci, fais des carrés avec. ",
+          "courseD_artist_nestedLoops9_b": "Ajoute une deuxième boucle imbriquée à la fin de la première, mais cette fois-ci utilise des triangles.",
+          "courseD_artist_nestedLoops9_c": "Utilise 2 boucles imbriquées :\n\n-   Répète 8 fois :\n    -   Dessiner un carré\n    -   Sauter en avant de 50 pixels\n    -   Tourner à droite de 45 degrés\n-   Répète 8 fois :\n    -   Dessiner un triangle\n    -   Sauter en avant de 50 pixels\n    -   Tourner à droite de 45 degrés"
         },
         "courseD_artist_nestedLoops9_2018": {
-          "courseD_artist_nestedLoops9_a": "Commence par utiliser une boucle imbriquée comme auparavant, mais cette fois, fais le avec des carrés.",
-          "courseD_artist_nestedLoops9_b": "Ajoute une seconde boucle imbriquée à la fin de la première, mais cette fois utilise des triangles.",
-          "courseD_artist_nestedLoops9_c": "Utilise 2 boucles imbriquées:\n\n-   Répète 8 fois\n    -   dessine un carré\n    -   Saute en avant de 50 pixels\n    -   Tourne à droite de 45 degrés\n-   Répète 8 fois\n    -   Dessine un triangle\n    -   Saute en avant de 50 pixels\n    -   Tourne à droite de 45 degrés"
+          "courseD_artist_nestedLoops9_a": "Commence en utilisant une boucle imbriquée comme tu l'as fait auparavant, mais cette fois-ci, fais des carrés avec. ",
+          "courseD_artist_nestedLoops9_b": "Ajoute une deuxième boucle imbriquée à la fin de la première, mais cette fois-ci utilise des triangles.",
+          "courseD_artist_nestedLoops9_c": "Utilise 2 boucles imbriquées :\n\n-   Répète 8 fois :\n    -   Dessiner un carré\n    -   Sauter en avant de 50 pixels\n    -   Tourner à droite de 45 degrés\n-   Répète 8 fois :\n    -   Dessiner un triangle\n    -   Sauter en avant de 50 pixels\n    -   Tourner à droite de 45 degrés"
         },
         "courseD_artist_nestedLoops9_2019": {
-          "courseD_artist_nestedLoops9_a": "Commence par utiliser une boucle imbriquée comme auparavant, mais cette fois, fais le avec des carrés.",
-          "courseD_artist_nestedLoops9_b": "Ajoute une seconde boucle imbriquée à la fin de la première, mais cette fois utilise des triangles.",
-          "courseD_artist_nestedLoops9_c": "Utilise 2 boucles imbriquées:\n\n-   Répète 8 fois\n    -   dessine un carré\n    -   Saute en avant de 50 pixels\n    -   Tourne à droite de 45 degrés\n-   Répète 8 fois\n    -   Dessine un triangle\n    -   Saute en avant de 50 pixels\n    -   Tourne à droite de 45 degrés"
+          "courseD_artist_nestedLoops9_a": "Commence en utilisant une boucle imbriquée comme tu l'as fait auparavant, mais cette fois-ci, fais des carrés avec. ",
+          "courseD_artist_nestedLoops9_b": "Ajoute une deuxième boucle imbriquée à la fin de la première, mais cette fois-ci utilise des triangles.",
+          "courseD_artist_nestedLoops9_c": "Utilise 2 boucles imbriquées :\n\n-   Répète 8 fois :\n    -   Dessiner un carré\n    -   Sauter en avant de 50 pixels\n    -   Tourner à droite de 45 degrés\n-   Répète 8 fois :\n    -   Dessiner un triangle\n    -   Sauter en avant de 50 pixels\n    -   Tourner à droite de 45 degrés"
         },
         "courseD_artist_nestedLoops9_2020": {
-          "courseD_artist_nestedLoops9_a": "Commence par utiliser une boucle imbriquée comme auparavant, mais cette fois, fais le avec des carrés.",
-          "courseD_artist_nestedLoops9_b": "Ajoute une seconde boucle imbriquée à la fin de la première, mais cette fois utilise des triangles.",
-          "courseD_artist_nestedLoops9_c": "Utilise 2 boucles imbriquées:\n\n-   Répète 8 fois\n    -   dessine un carré\n    -   Saute en avant de 50 pixels\n    -   Tourne à droite de 45 degrés\n-   Répète 8 fois\n    -   Dessine un triangle\n    -   Saute en avant de 50 pixels\n    -   Tourne à droite de 45 degrés"
+          "courseD_artist_nestedLoops9_a": "Commence en utilisant une boucle imbriquée comme tu l'as fait auparavant, mais cette fois-ci, fais des carrés avec. ",
+          "courseD_artist_nestedLoops9_b": "Ajoute une deuxième boucle imbriquée à la fin de la première, mais cette fois-ci utilise des triangles.",
+          "courseD_artist_nestedLoops9_c": "Utilise 2 boucles imbriquées :\n\n-   Répète 8 fois :\n    -   Dessiner un carré\n    -   Sauter en avant de 50 pixels\n    -   Tourner à droite de 45 degrés\n-   Répète 8 fois :\n    -   Dessiner un triangle\n    -   Sauter en avant de 50 pixels\n    -   Tourner à droite de 45 degrés"
         },
         "courseD_artist_nestedLoopsFP": {
-          "courseD_artist_nestedLoopsFP_a": "<img src=\"https://images.code.org/9257cbf61f238f5a749a949059731934-image-1478732674615.02.25.png\" width=\"200px\"/>\n\nCette image a été faite avec une simple boucle imbriquée qui répète un hexagon (de 50px de côté) 15 fois avec un tournant de 48 degrés.",
-          "courseD_artist_nestedLoopsFP_b": "<img src=\"https://images.code.org/31a85d4e5be5209240195d34b17a177b-image-1478732674613.32.53.png\" width=\"200px\"/>\n\nCette image a été faite en utilisant un code similaire aux autres niveaux que tu as déjà fait, mais avec des cercles (Répète 360 fois: avance de 1, tourne de 1 degré).",
-          "courseD_artist_nestedLoopsFP_c": "<img src=\"https://images.code.org/f654f1512860c6c8cf6795c961a8959c-image-1478732674616.02.58.png\" width=\"200px\"/>\n\nCette image a été faite en utilisant une boucle imprimée qui répète un pentagone (de 50 px de côté) 15 fois en utilisant un tournant de 48 degrés."
+          "courseD_artist_nestedLoopsFP_a": "<img src=\"https://images.code.org/9257cbf61f238f5a749a949059731934-image-1478732674615.02.25.png\" width=\"200px\"/>\n\nCette image a été faite avec une seules boucle imbriquée qui répète un hexagone (de 50 px de côté) 15 fois en utilisant un tournant de 48 degrés.",
+          "courseD_artist_nestedLoopsFP_b": "<img src=\"https://images.code.org/31a85d4e5be5209240195d34b17a177b-image-1478732674613.32.53.png\" width=\"200px\"/>\n\nCette image a été faite en utilisant un code similaire à celui d'autres niveaux que tu as déjà fait, mais avec des cercles (Répète 360 fois : avancer de 1, tourner de 1 degré).",
+          "courseD_artist_nestedLoopsFP_c": "<img src=\"https://images.code.org/f654f1512860c6c8cf6795c961a8959c-image-1478732674616.02.58.png\" width=\"200px\"/>\n\nCette image a été faite en utilisant une seule boucle imbriquée qui répète un pentagone (de 50 px de côté) 15 fois en utilisant un tournant de 48 degrés."
         },
         "courseD_artist_nestedLoopsFP_2018": {
-          "courseD_artist_nestedLoopsFP_a": "<img src=\"https://images.code.org/9257cbf61f238f5a749a949059731934-image-1478732674615.02.25.png\" width=\"200px\"/>\n\nCette image a été faite avec une simple boucle imbriquée qui répète un hexagon (de 50px de côté) 15 fois avec un tournant de 48 degrés.",
-          "courseD_artist_nestedLoopsFP_b": "<img src=\"https://images.code.org/31a85d4e5be5209240195d34b17a177b-image-1478732674613.32.53.png\" width=\"200px\"/>\n\nCette image a été faite en utilisant un code similaire aux autres niveaux que tu as déjà fait, mais avec des cercles (Répète 360 fois: avance de 1, tourne de 1 degré).",
-          "courseD_artist_nestedLoopsFP_c": "<img src=\"https://images.code.org/f654f1512860c6c8cf6795c961a8959c-image-1478732674616.02.58.png\" width=\"200px\"/>\n\nCette image a été faite en utilisant une boucle imprimée qui répète un pentagone (de 50 px de côté) 15 fois en utilisant un tournant de 48 degrés."
+          "courseD_artist_nestedLoopsFP_a": "<img src=\"https://images.code.org/9257cbf61f238f5a749a949059731934-image-1478732674615.02.25.png\" width=\"200px\"/>\n\nCette image a été faite avec une seules boucle imbriquée qui répète un hexagone (de 50 px de côté) 15 fois en utilisant un tournant de 48 degrés.",
+          "courseD_artist_nestedLoopsFP_b": "<img src=\"https://images.code.org/31a85d4e5be5209240195d34b17a177b-image-1478732674613.32.53.png\" width=\"200px\"/>\n\nCette image a été faite en utilisant un code similaire à celui d'autres niveaux que tu as déjà fait, mais avec des cercles (Répète 360 fois : avancer de 1, tourner de 1 degré).",
+          "courseD_artist_nestedLoopsFP_c": "<img src=\"https://images.code.org/f654f1512860c6c8cf6795c961a8959c-image-1478732674616.02.58.png\" width=\"200px\"/>\n\nCette image a été faite en utilisant une seule boucle imbriquée qui répète un pentagone (de 50 px de côté) 15 fois en utilisant un tournant de 48 degrés."
         },
         "courseD_artist_nestedLoopsFP_2019": {
-          "courseD_artist_nestedLoopsFP_a": "<img src=\"https://images.code.org/9257cbf61f238f5a749a949059731934-image-1478732674615.02.25.png\" width=\"200px\"/>\n\nCette image a été faite avec une simple boucle imbriquée qui répète un hexagon (de 50px de côté) 15 fois avec un tournant de 48 degrés.",
-          "courseD_artist_nestedLoopsFP_b": "<img src=\"https://images.code.org/31a85d4e5be5209240195d34b17a177b-image-1478732674613.32.53.png\" width=\"200px\"/>\n\nCette image a été faite en utilisant un code similaire aux autres niveaux que tu as déjà fait, mais avec des cercles (Répète 360 fois: avance de 1, tourne de 1 degré).",
-          "courseD_artist_nestedLoopsFP_c": "<img src=\"https://images.code.org/f654f1512860c6c8cf6795c961a8959c-image-1478732674616.02.58.png\" width=\"200px\"/>\n\nCette image a été faite en utilisant une boucle imprimée qui répète un pentagone (de 50 px de côté) 15 fois en utilisant un tournant de 48 degrés."
+          "courseD_artist_nestedLoopsFP_a": "<img src=\"https://images.code.org/9257cbf61f238f5a749a949059731934-image-1478732674615.02.25.png\" width=\"200px\"/>\n\nCette image a été faite avec une seules boucle imbriquée qui répète un hexagone (de 50 px de côté) 15 fois en utilisant un tournant de 48 degrés.",
+          "courseD_artist_nestedLoopsFP_b": "<img src=\"https://images.code.org/31a85d4e5be5209240195d34b17a177b-image-1478732674613.32.53.png\" width=\"200px\"/>\n\nCette image a été faite en utilisant un code similaire à celui d'autres niveaux que tu as déjà fait, mais avec des cercles (Répète 360 fois : avancer de 1, tourner de 1 degré).",
+          "courseD_artist_nestedLoopsFP_c": "<img src=\"https://images.code.org/f654f1512860c6c8cf6795c961a8959c-image-1478732674616.02.58.png\" width=\"200px\"/>\n\nCette image a été faite en utilisant une seule boucle imbriquée qui répète un pentagone (de 50 px de côté) 15 fois en utilisant un tournant de 48 degrés."
         },
         "courseD_artist_nestedLoopsFP_2020": {
-          "courseD_artist_nestedLoopsFP_a": "<img src=\"https://images.code.org/9257cbf61f238f5a749a949059731934-image-1478732674615.02.25.png\" width=\"200px\"/>\n\nCette image a été faite avec une simple boucle imbriquée qui répète un hexagon (de 50px de côté) 15 fois avec un tournant de 48 degrés.",
-          "courseD_artist_nestedLoopsFP_b": "<img src=\"https://images.code.org/31a85d4e5be5209240195d34b17a177b-image-1478732674613.32.53.png\" width=\"200px\"/>\n\nCette image a été faite en utilisant un code similaire aux autres niveaux que tu as déjà fait, mais avec des cercles (Répète 360 fois: avance de 1, tourne de 1 degré).",
-          "courseD_artist_nestedLoopsFP_c": "<img src=\"https://images.code.org/f654f1512860c6c8cf6795c961a8959c-image-1478732674616.02.58.png\" width=\"200px\"/>\n\nCette image a été faite en utilisant une boucle imprimée qui répète un pentagone (de 50 px de côté) 15 fois en utilisant un tournant de 48 degrés."
+          "courseD_artist_nestedLoopsFP_a": "<img src=\"https://images.code.org/9257cbf61f238f5a749a949059731934-image-1478732674615.02.25.png\" width=\"200px\"/>\n\nCette image a été faite avec une seules boucle imbriquée qui répète un hexagone (de 50 px de côté) 15 fois en utilisant un tournant de 48 degrés.",
+          "courseD_artist_nestedLoopsFP_b": "<img src=\"https://images.code.org/31a85d4e5be5209240195d34b17a177b-image-1478732674613.32.53.png\" width=\"200px\"/>\n\nCette image a été faite en utilisant un code similaire à celui d'autres niveaux que tu as déjà fait, mais avec des cercles (Répète 360 fois : avancer de 1, tourner de 1 degré).",
+          "courseD_artist_nestedLoopsFP_c": "<img src=\"https://images.code.org/f654f1512860c6c8cf6795c961a8959c-image-1478732674616.02.58.png\" width=\"200px\"/>\n\nCette image a été faite en utilisant une seule boucle imbriquée qui répète un pentagone (de 50 px de côté) 15 fois en utilisant un tournant de 48 degrés."
         },
         "courseD_artist_nestedLoops_challenge1": {
           "courseD_artist_nestedLoops_challenge1_a": "Commence par changer la couleur en bleu, ensuite crée un octagone avec 50 pixels de côté et des tournants à gauche de 45 degrés.",
@@ -5390,116 +5390,116 @@
           "courseD_artist_project1_b": "N'oublie pas que le fait « d'avancer » va dessiner une ligne, alors que « sauter vers l'avant » ne le fera pas."
         },
         "courseD_artist_project1a": {
-          "courseD_artist_project1a_a": "Cette marche d’escalier utilise un tour de 76 degrés et se répète 4 fois.\n\n<img src=\"https://images.code.org/73b1310fca6cf884ec8fb8b026210212-image-1495839168718.16.10.png\" width=\"200px\" />",
-          "courseD_artist_project1a_b": "Ces modèles ressemblent de beaucoup aux marches d’escaliers d'autres énigmes, mais utilisent des angles différents."
+          "courseD_artist_project1a_a": "Ce motif en escalier utilise un angle de rotation de 76 degrés et se répète 4 fois.\n\n<img src=\"https://images.code.org/73b1310fca6cf884ec8fb8b026210212-image-1495839168718.16.10.png\" width=\"200px\" />",
+          "courseD_artist_project1a_b": "Ces motifs ressemblent beaucoup aux motifs récurrents en escaliers d'autres casse-têtes, mais emploient des angles différents."
         },
         "courseD_artist_project1a_2018": {
-          "courseD_artist_project1a_a": "Cette marche d’escalier utilise un tour de 76 degrés et se répète 4 fois.\n\n<img src=\"https://images.code.org/73b1310fca6cf884ec8fb8b026210212-image-1495839168718.16.10.png\" width=\"200px\" />",
-          "courseD_artist_project1a_b": "Ces modèles ressemblent de beaucoup aux marches d’escaliers d'autres énigmes, mais utilisent des angles différents."
+          "courseD_artist_project1a_a": "Ce motif en escalier utilise un angle de rotation de 76 degrés et se répète 4 fois.\n\n<img src=\"https://images.code.org/73b1310fca6cf884ec8fb8b026210212-image-1495839168718.16.10.png\" width=\"200px\" />",
+          "courseD_artist_project1a_b": "Ces motifs ressemblent beaucoup aux motifs récurrents en escaliers d'autres casse-têtes, mais emploient des angles différents."
         },
         "courseD_artist_project1a_2019": {
-          "courseD_artist_project1a_a": "Cette marche d’escalier utilise un tour de 76 degrés et se répète 4 fois.\n\n<img src=\"https://images.code.org/73b1310fca6cf884ec8fb8b026210212-image-1495839168718.16.10.png\" width=\"200px\" />",
-          "courseD_artist_project1a_b": "Ces modèles ressemblent de beaucoup aux marches d’escaliers d'autres énigmes, mais utilisent des angles différents."
+          "courseD_artist_project1a_a": "Ce motif en escalier utilise un angle de rotation de 76 degrés et se répète 4 fois.\n\n<img src=\"https://images.code.org/73b1310fca6cf884ec8fb8b026210212-image-1495839168718.16.10.png\" width=\"200px\" />",
+          "courseD_artist_project1a_b": "Ces motifs ressemblent beaucoup aux motifs récurrents en escaliers d'autres casse-têtes, mais emploient des angles différents."
         },
         "courseD_artist_project1a_2020": {
-          "courseD_artist_project1a_a": "Cette marche d’escalier utilise un tour de 76 degrés et se répète 4 fois.\n\n<img src=\"https://images.code.org/73b1310fca6cf884ec8fb8b026210212-image-1495839168718.16.10.png\" width=\"200px\" />",
-          "courseD_artist_project1a_b": "Ces modèles ressemblent de beaucoup aux marches d’escaliers d'autres énigmes, mais utilisent des angles différents."
+          "courseD_artist_project1a_a": "Ce motif en escalier utilise un angle de rotation de 76 degrés et se répète 4 fois.\n\n<img src=\"https://images.code.org/73b1310fca6cf884ec8fb8b026210212-image-1495839168718.16.10.png\" width=\"200px\" />",
+          "courseD_artist_project1a_b": "Ces motifs ressemblent beaucoup aux motifs récurrents en escaliers d'autres casse-têtes, mais emploient des angles différents."
         },
         "courseD_artist_project2": {
           "courseD_artist_project2_a": "N'oublie pas que le fait « d'avancer » va dessiner une ligne, alors que « sauter vers l'avant » ne le fera pas.",
-          "courseD_artist_project2_b": "Après avoir dessiné et déplacé, la première fois, tu peux répéter le code en ajoutant une boucle autour de l’extérieur"
+          "courseD_artist_project2_b": "Une fois avoir dessiné et t'être déplacé la première fois, tu peux répéter le code en ajoutant une boucle autour de l’extérieur."
         },
         "courseD_artist_project2_2018": {
           "courseD_artist_project2_a": "N'oublie pas que le fait « d'avancer » va dessiner une ligne, alors que « sauter vers l'avant » ne le fera pas.",
-          "courseD_artist_project2_b": "Après avoir dessiné et déplacé, la première fois, tu peux répéter le code en ajoutant une boucle autour de l’extérieur"
+          "courseD_artist_project2_b": "Une fois avoir dessiné et t'être déplacé la première fois, tu peux répéter le code en ajoutant une boucle autour de l’extérieur."
         },
         "courseD_artist_project2_2019": {
           "courseD_artist_project2_a": "N'oublie pas que le fait « d'avancer » va dessiner une ligne, alors que « sauter vers l'avant » ne le fera pas.",
-          "courseD_artist_project2_b": "Après avoir dessiné et déplacé, la première fois, tu peux répéter le code en ajoutant une boucle autour de l’extérieur"
+          "courseD_artist_project2_b": "Une fois avoir dessiné et t'être déplacé la première fois, tu peux répéter le code en ajoutant une boucle autour de l’extérieur."
         },
         "courseD_artist_project2_2020": {
           "courseD_artist_project2_a": "N'oublie pas que le fait « d'avancer » va dessiner une ligne, alors que « sauter vers l'avant » ne le fera pas.",
-          "courseD_artist_project2_b": "Après avoir dessiné et déplacé, la première fois, tu peux répéter le code en ajoutant une boucle autour de l’extérieur"
+          "courseD_artist_project2_b": "Une fois avoir dessiné et t'être déplacé la première fois, tu peux répéter le code en ajoutant une boucle autour de l’extérieur."
         },
         "courseD_artist_project2a": {
-          "courseD_artist_project2a_a": "Ce dessin a été réalisé en imbriquant une boucle de 4 escaliers et un bloc `tourner à droite sur 180 degrés` à l'intérieur d'un bloc `répéter 2 fois`.\n\n<img src=\"https://images.code.org/bb24f9acee8afed2e119c1e920cb43f6-image-1495834479042.16.27.png\" width=\"200px\" />"
+          "courseD_artist_project2a_a": "Ce dessin a été réalisé en imbriquant une boucle de 4 escaliers et un bloc `tourner à droite de 180 degrés` au sein d'un bloc `répéter 2 fois`.\n\n<img src=\"https://images.code.org/bb24f9acee8afed2e119c1e920cb43f6-image-1495834479042.16.27.png\" width=\"200px\" />"
         },
         "courseD_artist_project2a_2018": {
-          "courseD_artist_project2a_a": "Ce dessin a été réalisé en imbriquant une boucle de 4 escaliers et un bloc `tourner à droite sur 180 degrés` à l'intérieur d'un bloc `répéter 2 fois`.\n\n<img src=\"https://images.code.org/bb24f9acee8afed2e119c1e920cb43f6-image-1495834479042.16.27.png\" width=\"200px\" />"
+          "courseD_artist_project2a_a": "Ce dessin a été réalisé en imbriquant une boucle de 4 escaliers et un bloc `tourner à droite de 180 degrés` au sein d'un bloc `répéter 2 fois`.\n\n<img src=\"https://images.code.org/bb24f9acee8afed2e119c1e920cb43f6-image-1495834479042.16.27.png\" width=\"200px\" />"
         },
         "courseD_artist_project2a_2019": {
-          "courseD_artist_project2a_a": "Ce dessin a été réalisé en imbriquant une boucle de 4 escaliers et un bloc `tourner à droite sur 180 degrés` à l'intérieur d'un bloc `répéter 2 fois`.\n\n<img src=\"https://images.code.org/bb24f9acee8afed2e119c1e920cb43f6-image-1495834479042.16.27.png\" width=\"200px\" />"
+          "courseD_artist_project2a_a": "Ce dessin a été réalisé en imbriquant une boucle de 4 escaliers et un bloc `tourner à droite de 180 degrés` au sein d'un bloc `répéter 2 fois`.\n\n<img src=\"https://images.code.org/bb24f9acee8afed2e119c1e920cb43f6-image-1495834479042.16.27.png\" width=\"200px\" />"
         },
         "courseD_artist_project2a_2020": {
-          "courseD_artist_project2a_a": "Ce dessin a été réalisé en imbriquant une boucle de 4 escaliers et un bloc `tourner à droite sur 180 degrés` à l'intérieur d'un bloc `répéter 2 fois`.\n\n<img src=\"https://images.code.org/bb24f9acee8afed2e119c1e920cb43f6-image-1495834479042.16.27.png\" width=\"200px\" />"
+          "courseD_artist_project2a_a": "Ce dessin a été réalisé en imbriquant une boucle de 4 escaliers et un bloc `tourner à droite de 180 degrés` au sein d'un bloc `répéter 2 fois`.\n\n<img src=\"https://images.code.org/bb24f9acee8afed2e119c1e920cb43f6-image-1495834479042.16.27.png\" width=\"200px\" />"
         },
         "courseD_artist_project3": {
           "courseD_artist_project3_a": "Utilise le menu déroulant du bloc « tourner » pour choisir l'angle dont tu as besoin !",
-          "courseD_artist_project3_b": "Essaie les boucles imbriquées !\n\nUtilise le code que tu as créé pour dessiner une ligne de formes et imbrique-le à l'intérieur d'une autre boucle. Au fond, avant que la boucle extérieure ne s'arrête, ajoute un bloc qui fera se retourner Elsa.\n\n-   Essaie 72 degrés, si tu répètes la boucle extérieure 5 fois.\n-   Essaie 60 degrés, si tu répètes la boucle extérieure 6 fois"
+          "courseD_artist_project3_b": "Essaie avec les boucles imbriquées !\n\nUtilise le code que tu as créé pour dessiner une rangée de formes et imbrique-la au seind'une autre boucle. En bas, avant que la boucle extérieure ne s'arrête, ajoute un bloc qui fera se retourner Elsa.\n\n-   Essaie 72 degrés, si tu répètes la boucle extérieure 5 fois\n-   Essaie 60 degrés, si tu répètes la boucle extérieure 6 fois"
         },
         "courseD_artist_project3_2018": {
           "courseD_artist_project3_a": "Utilise le menu déroulant du bloc « tourner » pour choisir l'angle dont tu as besoin !",
-          "courseD_artist_project3_b": "Essaie les boucles imbriquées !\n\nUtilise le code que tu as créé pour dessiner une ligne de formes et imbrique-le à l'intérieur d'une autre boucle. Au fond, avant que la boucle extérieure ne s'arrête, ajoute un bloc qui fera se retourner Elsa.\n\n-   Essaie 72 degrés, si tu répètes la boucle extérieure 5 fois.\n-   Essaie 60 degrés, si tu répètes la boucle extérieure 6 fois"
+          "courseD_artist_project3_b": "Essaie avec les boucles imbriquées !\n\nUtilise le code que tu as créé pour dessiner une rangée de formes et imbrique-la au seind'une autre boucle. En bas, avant que la boucle extérieure ne s'arrête, ajoute un bloc qui fera se retourner Elsa.\n\n-   Essaie 72 degrés, si tu répètes la boucle extérieure 5 fois\n-   Essaie 60 degrés, si tu répètes la boucle extérieure 6 fois"
         },
         "courseD_artist_project3_2019": {
           "courseD_artist_project3_a": "Utilise le menu déroulant du bloc « tourner » pour choisir l'angle dont tu as besoin !",
-          "courseD_artist_project3_b": "Essaie les boucles imbriquées !\n\nUtilise le code que tu as créé pour dessiner une ligne de formes et imbrique-le à l'intérieur d'une autre boucle. Au fond, avant que la boucle extérieure ne s'arrête, ajoute un bloc qui fera se retourner Elsa.\n\n-   Essaie 72 degrés, si tu répètes la boucle extérieure 5 fois.\n-   Essaie 60 degrés, si tu répètes la boucle extérieure 6 fois"
+          "courseD_artist_project3_b": "Essaie avec les boucles imbriquées !\n\nUtilise le code que tu as créé pour dessiner une rangée de formes et imbrique-la au seind'une autre boucle. En bas, avant que la boucle extérieure ne s'arrête, ajoute un bloc qui fera se retourner Elsa.\n\n-   Essaie 72 degrés, si tu répètes la boucle extérieure 5 fois\n-   Essaie 60 degrés, si tu répètes la boucle extérieure 6 fois"
         },
         "courseD_artist_project3_2020": {
           "courseD_artist_project3_a": "Utilise le menu déroulant du bloc « tourner » pour choisir l'angle dont tu as besoin !",
-          "courseD_artist_project3_b": "Essaie les boucles imbriquées !\n\nUtilise le code que tu as créé pour dessiner une ligne de formes et imbrique-le à l'intérieur d'une autre boucle. Au fond, avant que la boucle extérieure ne s'arrête, ajoute un bloc qui fera se retourner Elsa.\n\n-   Essaie 72 degrés, si tu répètes la boucle extérieure 5 fois.\n-   Essaie 60 degrés, si tu répètes la boucle extérieure 6 fois"
+          "courseD_artist_project3_b": "Essaie avec les boucles imbriquées !\n\nUtilise le code que tu as créé pour dessiner une rangée de formes et imbrique-la au seind'une autre boucle. En bas, avant que la boucle extérieure ne s'arrête, ajoute un bloc qui fera se retourner Elsa.\n\n-   Essaie 72 degrés, si tu répètes la boucle extérieure 5 fois\n-   Essaie 60 degrés, si tu répètes la boucle extérieure 6 fois"
         },
         "courseD_artist_project3a": {
-          "courseD_artist_project3a_a": "Tu peux choisir différentes valeurs pour faire tourner ta forme! Pourquoi pas 18 fois en tournant de 20 degrés entre chaque?"
+          "courseD_artist_project3a_a": "Tu peux choisir différentes valeurs pour faire pivoter ta forme ! Pourquoi pas la recréer 18 fois en tournant de 20 degrés à chaque fois ?"
         },
         "courseD_artist_project3a_2018": {
-          "courseD_artist_project3a_a": "Tu peux choisir différentes valeurs pour faire tourner ta forme! Pourquoi pas 18 fois en tournant de 20 degrés entre chaque?"
+          "courseD_artist_project3a_a": "Tu peux choisir différentes valeurs pour faire pivoter ta forme ! Pourquoi pas la recréer 18 fois en tournant de 20 degrés à chaque fois ?"
         },
         "courseD_artist_project3a_2019": {
-          "courseD_artist_project3a_a": "Tu peux choisir différentes valeurs pour faire tourner ta forme! Pourquoi pas 18 fois en tournant de 20 degrés entre chaque?"
+          "courseD_artist_project3a_a": "Tu peux choisir différentes valeurs pour faire pivoter ta forme ! Pourquoi pas la recréer 18 fois en tournant de 20 degrés à chaque fois ?"
         },
         "courseD_artist_project3a_2020": {
-          "courseD_artist_project3a_a": "Tu peux choisir différentes valeurs pour faire tourner ta forme! Pourquoi pas 18 fois en tournant de 20 degrés entre chaque?"
+          "courseD_artist_project3a_a": "Tu peux choisir différentes valeurs pour faire pivoter ta forme ! Pourquoi pas la recréer 18 fois en tournant de 20 degrés à chaque fois ?"
         },
         "courseD_artist_project4": {
-          "courseD_artist_project4_a": "Voici le flocon de neige en pentagone avec un tour de 36 degrés avant un flocon de neige en triangle :\n\n<img src=\"https://images.code.org/2ba023db9404f948fab655bfa7923160-image-1495822526223.14.13.png\" width=\"200px\" />\n\nVoici un ensemble d'hexagones avec des carrés :\n\n<img src=\"https://images.code.org/4d77462f3d07df6f1f5f2dc25e5d2b70-image-1495822526224.15.08.png\" width=\"200px\" />",
-          "courseD_artist_project4_b": "Pour essayer ceci, dessine ton premier flocon de neige, tourne, puis dessine un deuxième flocon."
+          "courseD_artist_project4_a": "Voici le flocon de neige en pentagone avec une rotation de 36 degrés avant d'ajouter un flocon de neige en triangle par-dessus :\n\n<img src=\"https://images.code.org/2ba023db9404f948fab655bfa7923160-image-1495822526223.14.13.png\" width=\"200px\" />\n\nVoici une groupe d'hexagones avec des carrés :\n\n<img src=\"https://images.code.org/4d77462f3d07df6f1f5f2dc25e5d2b70-image-1495822526224.15.08.png\" width=\"200px\" />",
+          "courseD_artist_project4_b": "Pour essayer toi-même, dessine ton premier flocon de neige, tourne, puis dessine un deuxième flocon."
         },
         "courseD_artist_project4_2018": {
-          "courseD_artist_project4_a": "Voici le flocon de neige en pentagone avec un tour de 36 degrés avant un flocon de neige en triangle :\n\n<img src=\"https://images.code.org/2ba023db9404f948fab655bfa7923160-image-1495822526223.14.13.png\" width=\"200px\" />\n\nVoici un ensemble d'hexagones avec des carrés :\n\n<img src=\"https://images.code.org/4d77462f3d07df6f1f5f2dc25e5d2b70-image-1495822526224.15.08.png\" width=\"200px\" />",
-          "courseD_artist_project4_b": "Pour essayer ceci, dessine ton premier flocon de neige, tourne, puis dessine un deuxième flocon."
+          "courseD_artist_project4_a": "Voici le flocon de neige en pentagone avec une rotation de 36 degrés avant d'ajouter un flocon de neige en triangle par-dessus :\n\n<img src=\"https://images.code.org/2ba023db9404f948fab655bfa7923160-image-1495822526223.14.13.png\" width=\"200px\" />\n\nVoici une groupe d'hexagones avec des carrés :\n\n<img src=\"https://images.code.org/4d77462f3d07df6f1f5f2dc25e5d2b70-image-1495822526224.15.08.png\" width=\"200px\" />",
+          "courseD_artist_project4_b": "Pour essayer toi-même, dessine ton premier flocon de neige, tourne, puis dessine un deuxième flocon."
         },
         "courseD_artist_project4_2019": {
-          "courseD_artist_project4_a": "Voici le flocon de neige en pentagone avec un tour de 36 degrés avant un flocon de neige en triangle :\n\n<img src=\"https://images.code.org/2ba023db9404f948fab655bfa7923160-image-1495822526223.14.13.png\" width=\"200px\" />\n\nVoici un ensemble d'hexagones avec des carrés :\n\n<img src=\"https://images.code.org/4d77462f3d07df6f1f5f2dc25e5d2b70-image-1495822526224.15.08.png\" width=\"200px\" />",
-          "courseD_artist_project4_b": "Pour essayer ceci, dessine ton premier flocon de neige, tourne, puis dessine un deuxième flocon."
+          "courseD_artist_project4_a": "Voici le flocon de neige en pentagone avec une rotation de 36 degrés avant d'ajouter un flocon de neige en triangle par-dessus :\n\n<img src=\"https://images.code.org/2ba023db9404f948fab655bfa7923160-image-1495822526223.14.13.png\" width=\"200px\" />\n\nVoici une groupe d'hexagones avec des carrés :\n\n<img src=\"https://images.code.org/4d77462f3d07df6f1f5f2dc25e5d2b70-image-1495822526224.15.08.png\" width=\"200px\" />",
+          "courseD_artist_project4_b": "Pour essayer toi-même, dessine ton premier flocon de neige, tourne, puis dessine un deuxième flocon."
         },
         "courseD_artist_project4_2020": {
-          "courseD_artist_project4_a": "Voici le flocon de neige en pentagone avec un tour de 36 degrés avant un flocon de neige en triangle :\n\n<img src=\"https://images.code.org/2ba023db9404f948fab655bfa7923160-image-1495822526223.14.13.png\" width=\"200px\" />\n\nVoici un ensemble d'hexagones avec des carrés :\n\n<img src=\"https://images.code.org/4d77462f3d07df6f1f5f2dc25e5d2b70-image-1495822526224.15.08.png\" width=\"200px\" />",
-          "courseD_artist_project4_b": "Pour essayer ceci, dessine ton premier flocon de neige, tourne, puis dessine un deuxième flocon."
+          "courseD_artist_project4_a": "Voici le flocon de neige en pentagone avec une rotation de 36 degrés avant d'ajouter un flocon de neige en triangle par-dessus :\n\n<img src=\"https://images.code.org/2ba023db9404f948fab655bfa7923160-image-1495822526223.14.13.png\" width=\"200px\" />\n\nVoici une groupe d'hexagones avec des carrés :\n\n<img src=\"https://images.code.org/4d77462f3d07df6f1f5f2dc25e5d2b70-image-1495822526224.15.08.png\" width=\"200px\" />",
+          "courseD_artist_project4_b": "Pour essayer toi-même, dessine ton premier flocon de neige, tourne, puis dessine un deuxième flocon."
         },
         "courseD_artist_project4a": {
-          "courseD_artist_project4a_a": "Voici 2 longueurs différentes de flocons de neige, dessinés l'un après l'autre (avec un tour de 30 degrés entre eux.)\n\n<img src=\"https://images.code.org/45dedb51d89d3e5d0a88fe65ecbd7d7b-image-1495833855890.22.39.png\" width=\"200px\" />"
+          "courseD_artist_project4a_a": "Voici deux flocons de neige de longueurs différentes, dessinés l'un à la suite de l'autre (avec un angle de rotation de 30 degrés entre les deux). \n\n<img src=\"https://images.code.org/45dedb51d89d3e5d0a88fe65ecbd7d7b-image-1495833855890.22.39.png\" width=\"200px\" />"
         },
         "courseD_artist_project4a_2018": {
-          "courseD_artist_project4a_a": "Voici 2 longueurs différentes de flocons de neige, dessinés l'un après l'autre (avec un tour de 30 degrés entre eux.)\n\n<img src=\"https://images.code.org/45dedb51d89d3e5d0a88fe65ecbd7d7b-image-1495833855890.22.39.png\" width=\"200px\" />"
+          "courseD_artist_project4a_a": "Voici deux flocons de neige de longueurs différentes, dessinés l'un à la suite de l'autre (avec un angle de rotation de 30 degrés entre les deux). \n\n<img src=\"https://images.code.org/45dedb51d89d3e5d0a88fe65ecbd7d7b-image-1495833855890.22.39.png\" width=\"200px\" />"
         },
         "courseD_artist_project4a_2019": {
-          "courseD_artist_project4a_a": "Voici 2 longueurs différentes de flocons de neige, dessinés l'un après l'autre (avec un tour de 30 degrés entre eux.)\n\n<img src=\"https://images.code.org/45dedb51d89d3e5d0a88fe65ecbd7d7b-image-1495833855890.22.39.png\" width=\"200px\" />"
+          "courseD_artist_project4a_a": "Voici deux flocons de neige de longueurs différentes, dessinés l'un à la suite de l'autre (avec un angle de rotation de 30 degrés entre les deux). \n\n<img src=\"https://images.code.org/45dedb51d89d3e5d0a88fe65ecbd7d7b-image-1495833855890.22.39.png\" width=\"200px\" />"
         },
         "courseD_artist_project4a_2020": {
-          "courseD_artist_project4a_a": "Voici 2 longueurs différentes de flocons de neige, dessinés l'un après l'autre (avec un tour de 30 degrés entre eux.)\n\n<img src=\"https://images.code.org/45dedb51d89d3e5d0a88fe65ecbd7d7b-image-1495833855890.22.39.png\" width=\"200px\" />"
+          "courseD_artist_project4a_a": "Voici deux flocons de neige de longueurs différentes, dessinés l'un à la suite de l'autre (avec un angle de rotation de 30 degrés entre les deux). \n\n<img src=\"https://images.code.org/45dedb51d89d3e5d0a88fe65ecbd7d7b-image-1495833855890.22.39.png\" width=\"200px\" />"
         },
         "courseD_artist_project5": {
-          "courseD_artist_project4_a": "Lignes de 2 hexagones et 4 triangles :\n\n<img src=\"https://images.code.org/37ca9779bafd2ccc5cc801f82358008e-image-1495823683964.34.09.png\" width=\"200px\" />"
+          "courseD_artist_project4_a": "Rangées de 2 hexagones et 4 triangles :\n\n<img src=\"https://images.code.org/37ca9779bafd2ccc5cc801f82358008e-image-1495823683964.34.09.png\" width=\"200px\" />"
         },
         "courseD_artist_project5_2018": {
-          "courseD_artist_project4_a": "Lignes de 2 hexagones et 4 triangles :\n\n<img src=\"https://images.code.org/37ca9779bafd2ccc5cc801f82358008e-image-1495823683964.34.09.png\" width=\"200px\" />"
+          "courseD_artist_project4_a": "Rangées de 2 hexagones et 4 triangles :\n\n<img src=\"https://images.code.org/37ca9779bafd2ccc5cc801f82358008e-image-1495823683964.34.09.png\" width=\"200px\" />"
         },
         "courseD_artist_project5_2019": {
-          "courseD_artist_project4_a": "Lignes de 2 hexagones et 4 triangles :\n\n<img src=\"https://images.code.org/37ca9779bafd2ccc5cc801f82358008e-image-1495823683964.34.09.png\" width=\"200px\" />"
+          "courseD_artist_project4_a": "Rangées de 2 hexagones et 4 triangles :\n\n<img src=\"https://images.code.org/37ca9779bafd2ccc5cc801f82358008e-image-1495823683964.34.09.png\" width=\"200px\" />"
         },
         "courseD_artist_project5_2020": {
-          "courseD_artist_project4_a": "Lignes de 2 hexagones et 4 triangles :\n\n<img src=\"https://images.code.org/37ca9779bafd2ccc5cc801f82358008e-image-1495823683964.34.09.png\" width=\"200px\" />"
+          "courseD_artist_project4_a": "Rangées de 2 hexagones et 4 triangles :\n\n<img src=\"https://images.code.org/37ca9779bafd2ccc5cc801f82358008e-image-1495823683964.34.09.png\" width=\"200px\" />"
         },
         "courseD_artist_ramp11": {
           "courseD_artist_ramp11a": "Pour dessiner un côté, utilise le bloc `move forward by 100 pixels`, et remplace 100 par 200.",
@@ -5617,7 +5617,7 @@
           "courseD_bee_conditionals4_hintVid1": "Besoin d'aide pour démarrer? Regarde la vidéo!",
           "courseD_bee_conditionals4_a": "Tu peux toujours traiter chaque case comme s'il y avait un nuage par-dessus, même si tu peux voir tout le chemin.",
           "courseD_bee_conditionals4_b": "Utilise une indication « si » à l'intérieur de ta boucle pour voir dans chaque case s'il n'y a pas du nectar.",
-          "courseD_bee_conditionals4_c": "En utilisant le bloc [blockly block][0], tu dois pouvoir avancer et vérifier si une fleur est présente. S'il y a une fleur, qu'est ce que l'abeille doit faire?",
+          "courseD_bee_conditionals4_c": "En utilisant le bloc <xml><block type=\"maze_untilBlocked\"/></xml>, tu dois pouvoir avancer et vérifier si une fleur est présente. S'il y a une fleur, qu'est ce que l'abeille doit faire?",
           "courseD_bee_conditionals4_hintVid2": "Regarde cette vidéo pour t'aider à résoudre ce puzzle."
         },
         "courseD_bee_conditionals4_2018": {
@@ -5646,7 +5646,7 @@
           "courseD_bee_conditionals5_hintVid1": "Besoin d'aide pour démarrer? Regarde la vidéo!",
           "courseD_bee_conditionals5_a": "Imagine chaque côté du rectangle en étant comme un chemin. Configure une boucle imbriquée avec un bloc `répéter` à l’extérieur et une boucle `tant qu'il y a chemin devant` à l'intérieur. De combien de chemins l'abeille a-t-elle besoin si elle doit bourdonner de chaque côté où il y a une fleur ?",
           "courseD_bee_conditionals5_c": "Il y a 3 côtés du rectangle avec des fleurs, donc le code a besoin de `Répéter 3 fois`. À chaque répétition, l'abeille devra continuer sur le chemin, `tant qu’il y a un chemin devant`. Pour continuer le long du chemin, l'abeille devra `avancer`. Tant qu’elle est sur le chemin, l’abeille doit vérifier s'il y a une fleur. `si il y a une fleur`, l'abeille doit `obtenir du nectar`.",
-          "courseD_bee_conditionals5_b": "A l'intérieur du bloc ` tant qu’il y a un chemin devant `, tu devras avancer et vérifier qu'il y a une fleur. Comment vérifier qu'il y a une fleur ? Que faire s'il y a une fleur ?",
+          "courseD_bee_conditionals5_b": "A l'intérieur du bloc `tant qu’il y a un chemin devant`, tu devras avancer et vérifier qu'il y a une fleur. Comment vérifier qu'il y a une fleur ? Que faire s'il y a une fleur ?",
           "courseD_bee_conditionals5_hintVid2": "Regarde cette vidéo pour t'aider à résoudre ce puzzle."
         },
         "courseD_bee_conditionals5_2018": {
@@ -5950,9 +5950,9 @@
           "courseD_bounce_events7s_a": "Tu peux ajouter des sons à d'autres moments si tu veux !"
         },
         "courseD_collector_debugging1": {
-          "courseD_collector_debugging1_a": "Utilise le bouton \"Etape\" pour voir si tout est bon à la première étape,\n\nEt à la deuxième ?\n\nOù cela va mal ?",
+          "courseD_collector_debugging1_a": "Utilise le bouton « Étape » pour voir si tout va bien au niveau de la première étape. \n\nEt qu'en est-il de la deuxième ?\n\nOù est-ce que ça tourne mal ?",
           "courseD_collector_debugging1_b": "Est ce que tu vois des motifs qui peuvent être simplifiés en utilisant des boucles `Répéter`?",
-          "courseD_collector_debugging1_c": "Souviens toi d'utiliser le bloc `ramasser` pour ramasser les diamants une fois que tu as bougé vers eux."
+          "courseD_collector_debugging1_c": "N'oublie pas d'utiliser le bloc `ramasser` pour ramasser le trésor une fois que tu t'es déplacé jusqu'à celui-ci. "
         },
         "courseD_collector_debugging10_predict1": {
           "courseD_collector_debugging9_a": "Il y a plusieurs moyens de résoudre ce problème... mais ils nécessitent tous des tournants!",
@@ -5971,7 +5971,7 @@
           "courseD_collector_debugging1_c": "N'oublie pas d'utiliser le bloc `ramasser` pour ramasser le trésor une fois que tu t'es déplacé jusqu'à celui-ci. "
         },
         "courseD_collector_debugging2": {
-          "courseD_collector_debugging2_a": "Utilise le bouton \"Etape\" pour voir si tout est bon à la première étape,\n\nEt à la deuxième ?\n\nOù cela va mal ?",
+          "courseD_collector_debugging2_a": "Utilise le bouton « Étape » pour voir si tout va bien au niveau de la première étape. \n\nEt qu'en est-il de la deuxième ?\n\nOù est-ce que ça tourne mal ?",
           "courseD_collector_debugging2_b": "Est ce que tu vois des motifs qui peuvent être simplifiés en utilisant des boucles `Répéter`?",
           "courseD_collector_debugging2_c": "Essaie de ramasser les diamants d'un côté du modèle. Est ce que tu peux le répéter pour ramasser les diamants des deux autres côtés?"
         },
@@ -5988,7 +5988,7 @@
           "courseD_collector_debugging2a_c": "Que se passe-t-il ?   \n\nQue devrait-il se passer ?   \n\nQu'est-ce que cela t'indique ?"
         },
         "courseD_collector_debugging3": {
-          "courseD_collector_debugging3_a": "Est-ce qu'il y a un endroit où Laurel fais quelque chose qui n'a pas de sens? Que se passe-t-il lorsque tu changes ces blocs ?",
+          "courseD_collector_debugging3_a": "Est-ce qu'il y a un endroit où Laurel fait quelque chose qui n'est pas logique ? Que se passe-t-il lorsque tu changes ces blocs ?",
           "courseD_collector_debugging3_b": "Essaie de simplifier le code en utilisant des boucles imbriquées."
         },
         "courseD_collector_debugging3a_2018": {
@@ -6001,8 +6001,8 @@
           "courseD_collector_debugging3_a": "Est-ce qu'il y a un endroit où Laurel fait quelque chose qui n'est pas logique ? Que se passe-t-il lorsque tu changes ces blocs ?"
         },
         "courseD_collector_debugging4": {
-          "courseD_collector_debugging4_a": "Essaie d'utiliser le processus de debuggage plusieurs fois sur une rangée.\n\nQu'est-ce qui cause le premier problème?\n\nUne fois ce problème résolu, qu'est ce qui ne va pas ?",
-          "courseD_collector_debugging4_b": "Si c'est difficile pour toi de trouver comment faire le motif des marches d'escalier, essaie de le tracer avec ton doigt en répétant les commandes à voix haute.\n\nN'oublie pas de remarquer les directions des tournants!",
+          "courseD_collector_debugging4_a": "Essaie d'utiliser le processus de débogage plusieurs fois à la suite.\n\nQu'est-ce qui cause le premier problème ?\n\nUne fois ce là problème résolu, qu'est-ce qui tourne mal ?",
+          "courseD_collector_debugging4_b": "Si tu as du mal à voir comment faire le schéma récurrent en escalier, essaie de le tracer avec ton doigt en répétant les commandes à voix haute.\n\nN'oublie pas de faire remarquer les directions des tournants !",
           "courseD_collector_debugging4_c": "Il manque seulement un bloc dans cette boucle. Peux-tu trouver lequel?"
         },
         "courseD_collector_debugging4a_2018": {
@@ -6034,7 +6034,7 @@
           "courseD_collector_debugging5a_b": "Une fois que tu as ramassé la première rangée de trésor, que reste-t-il dans ton code ?"
         },
         "courseD_collector_debugging6": {
-          "courseD_collector_debugging6_a": "Essaie de faire fonctionner ce code avec le bouton \"Etape\". Est-ce que tout est bon à la première étape?\n\nEt à la seconde?\n\nQuand les choses tournent-elles mal?",
+          "courseD_collector_debugging6_a": "Essaie de regarder s'exécuter ce code en utilisant le bouton « Étape ». Est-ce que tout va bien lors de la première étape ?\n\nEt lors de la deuxième ?\n\nQuand est-ce que les choses tournent mal ?",
           "courseD_collector_debugging6_b": "Il semble que toutes les bonnes étapes soient la, tu en as juste besoin de plus. Comment peux-tu répéter l'action `ramasser` plusieurs fois?"
         },
         "courseD_collector_debugging6a_2018": {
@@ -7439,8 +7439,8 @@
           "grade3_robotFarmer_ConditionalsIntro_8_c": "Utilise une boucle `répéter` pour exécuter ton code plusieurs fois pour chaque chemin droit."
         },
         "courseE_farmer_functions1": {
-          "courseE_farmer_functions1_a": "La boîte à outils est organisée différemment ce coup-ci. Clique sur les catégories différentes pour voir les blocs à disposition.",
-          "courseE_farmer_functions1_b": "Tu dois ramasser seulement une citrouille, mais peux-tu utiliser une boucle pour l'obtenir ?"
+          "courseE_farmer_functions1_a": "La boîte à outils est organisée un peu différemment ce coup-ci. Clique sur les catégories différentes pour voir les blocs que tu as à ta disposition. ",
+          "courseE_farmer_functions1_b": "Tu n'as besoin de ramasser qu'une seule citrouille, mais peux-tu utiliser une boucle pour l'obtenir ?"
         },
         "courseE_farmer_functions10b": {
           "courseE_farmer_functions10b_a": "Tu devras re-créer ta fonction d'abord.",
@@ -7448,16 +7448,16 @@
           "courseE_farmer_functions10b_c": "Repense à ton dernier puzzle si tu as besoin d'aide pour faire ta fonction."
         },
         "courseE_farmer_functions1_2018": {
-          "courseE_farmer_functions1_a": "La boîte à outils est organisée différemment ce coup-ci. Clique sur les catégories différentes pour voir les blocs à disposition.",
-          "courseE_farmer_functions1_b": "Tu dois ramasser seulement une citrouille, mais peux-tu utiliser une boucle pour l'obtenir ?"
+          "courseE_farmer_functions1_a": "La boîte à outils est organisée un peu différemment ce coup-ci. Clique sur les catégories différentes pour voir les blocs que tu as à ta disposition. ",
+          "courseE_farmer_functions1_b": "Tu n'as besoin de ramasser qu'une seule citrouille, mais peux-tu utiliser une boucle pour l'obtenir ?"
         },
         "courseE_farmer_functions1_2019": {
-          "courseE_farmer_functions1_a": "La boîte à outils est organisée différemment ce coup-ci. Clique sur les catégories différentes pour voir les blocs à disposition.",
-          "courseE_farmer_functions1_b": "Tu dois ramasser seulement une citrouille, mais peux-tu utiliser une boucle pour l'obtenir ?"
+          "courseE_farmer_functions1_a": "La boîte à outils est organisée un peu différemment ce coup-ci. Clique sur les catégories différentes pour voir les blocs que tu as à ta disposition. ",
+          "courseE_farmer_functions1_b": "Tu n'as besoin de ramasser qu'une seule citrouille, mais peux-tu utiliser une boucle pour l'obtenir ?"
         },
         "courseE_farmer_functions1_2020": {
-          "courseE_farmer_functions1_a": "La boîte à outils est organisée différemment ce coup-ci. Clique sur les catégories différentes pour voir les blocs à disposition.",
-          "courseE_farmer_functions1_b": "Tu dois ramasser seulement une citrouille, mais peux-tu utiliser une boucle pour l'obtenir ?"
+          "courseE_farmer_functions1_a": "La boîte à outils est organisée un peu différemment ce coup-ci. Clique sur les catégories différentes pour voir les blocs que tu as à ta disposition. ",
+          "courseE_farmer_functions1_b": "Tu n'as besoin de ramasser qu'une seule citrouille, mais peux-tu utiliser une boucle pour l'obtenir ?"
         },
         "courseE_farmer_functions1a": {
           "courseE_farmer_functions1a_a": "Réfléchis à ce qu’il se passe dans la déclaration `« Si/Sinon »` pas à pas. Que dois-tu faire si tu te trouves près d'une plante de maïs ?",
@@ -7500,13 +7500,13 @@
           "courseE_farmer_functions2ba_b": "Met ensemble tous les blocs dans l'espace de travail sous le bloc `quand l'exécution commence` pour voir comment cette fonction évolue."
         },
         "courseE_farmer_functions2ba_2018": {
-          "courseE_farmer_functions2ba_a": "Utilise le bloc vert `ramasse toutes les citrouilles` pour être sûr de ramasser toutes les citrouilles !"
+          "courseE_farmer_functions2ba_a": "Utilise le bloc vert `récolter toutes les citrouilles` pour être sûr de ramasser toutes les citrouilles !"
         },
         "courseE_farmer_functions2ba_2019": {
-          "courseE_farmer_functions2ba_a": "Utilise le bloc vert `ramasse toutes les citrouilles` pour être sûr de ramasser toutes les citrouilles !"
+          "courseE_farmer_functions2ba_a": "Utilise le bloc vert `récolter toutes les citrouilles` pour être sûr de ramasser toutes les citrouilles !"
         },
         "courseE_farmer_functions2ba_2020": {
-          "courseE_farmer_functions2ba_a": "Utilise le bloc vert `ramasse toutes les citrouilles` pour être sûr de ramasser toutes les citrouilles !"
+          "courseE_farmer_functions2ba_a": "Utilise le bloc vert `récolter toutes les citrouilles` pour être sûr de ramasser toutes les citrouilles !"
         },
         "courseE_farmer_functions3c": {
           "courseE_farmer_functions3c_a": "Quelle séquence est souvent répétée dans ce programme ? Est-ce que tu peux mettre ces blocs dans la fonction ?",
@@ -7593,104 +7593,104 @@
           "courseE_farmer_functions9b_c": "Tu voudras te déplacer dans les chemins comme s'il y avait des carrés qui devenaient de plus en plus grands après chaque boucle."
         },
         "courseE_farmer_ramp11a": {
-          "courseE_farmer_ramp12_a": "Au lieu d'utiliser une boucle `répéter` pour dire au fermier combien de fois ramasser la saleté, tu peux maintenant utiliser un bloc `tant qu’il y a une pile`.  ",
+          "courseE_farmer_ramp12_a": "Au lieu d'utiliser une boucle `répéter` pour indiquer à la fermière combien de fois pelleter la terre, tu peux maintenant utiliser un bloc `tant qu’il y a une pile`.  ",
           "courseE_farmer_ramp12_b": "Tu dois seulement avancer une fois pour atteindre la saleté."
         },
         "courseE_farmer_ramp11a_2018": {
-          "courseE_farmer_ramp12_a": "Au lieu d'utiliser une boucle `répéter` pour dire au fermier combien de fois ramasser la saleté, tu peux maintenant utiliser un bloc `tant qu’il y a une pile`.  ",
+          "courseE_farmer_ramp12_a": "Au lieu d'utiliser une boucle `répéter` pour indiquer à la fermière combien de fois pelleter la terre, tu peux maintenant utiliser un bloc `tant qu’il y a une pile`.  ",
           "courseE_farmer_ramp12_b": "Tu dois seulement avancer une fois pour atteindre la saleté."
         },
         "courseE_farmer_ramp11a_2019": {
-          "courseE_farmer_ramp12_a": "Au lieu d'utiliser une boucle `répéter` pour dire au fermier combien de fois ramasser la saleté, tu peux maintenant utiliser un bloc `tant qu’il y a une pile`.  ",
+          "courseE_farmer_ramp12_a": "Au lieu d'utiliser une boucle `répéter` pour indiquer à la fermière combien de fois pelleter la terre, tu peux maintenant utiliser un bloc `tant qu’il y a une pile`.  ",
           "courseE_farmer_ramp12_b": "Tu dois seulement avancer une fois pour atteindre la saleté."
         },
         "courseE_farmer_ramp11a_2020": {
-          "courseE_farmer_ramp12_a": "Au lieu d'utiliser une boucle `répéter` pour dire au fermier combien de fois ramasser la saleté, tu peux maintenant utiliser un bloc `tant qu’il y a une pile`.  ",
+          "courseE_farmer_ramp12_a": "Au lieu d'utiliser une boucle `répéter` pour indiquer à la fermière combien de fois pelleter la terre, tu peux maintenant utiliser un bloc `tant qu’il y a une pile`.  ",
           "courseE_farmer_ramp12_b": "Tu dois seulement avancer une fois pour atteindre la saleté."
         },
         "courseE_farmer_ramp11b": {
-          "courseE_farmer_ramp11b_a": "Tu peux imbriquer ta boucle `tant que` dans une boucle `répéter` pour raccourcir ton code."
+          "courseE_farmer_ramp11b_a": "Tu peux imbriquer ta boucle `tant que` au sein d'une boucle `répéter` pour raccourcir ton code."
         },
         "courseE_farmer_ramp11b_2018": {
-          "courseE_farmer_ramp11b_a": "Tu peux imbriquer ta boucle `tant que` dans une boucle `répéter` pour raccourcir ton code."
+          "courseE_farmer_ramp11b_a": "Tu peux imbriquer ta boucle `tant que` au sein d'une boucle `répéter` pour raccourcir ton code."
         },
         "courseE_farmer_ramp11b_2019": {
-          "courseE_farmer_ramp11b_a": "Tu peux imbriquer ta boucle `tant que` dans une boucle `répéter` pour raccourcir ton code."
+          "courseE_farmer_ramp11b_a": "Tu peux imbriquer ta boucle `tant que` au sein d'une boucle `répéter` pour raccourcir ton code."
         },
         "courseE_farmer_ramp11b_2020": {
-          "courseE_farmer_ramp11b_a": "Tu peux imbriquer ta boucle `tant que` dans une boucle `répéter` pour raccourcir ton code."
+          "courseE_farmer_ramp11b_a": "Tu peux imbriquer ta boucle `tant que` au sein d'une boucle `répéter` pour raccourcir ton code."
         },
         "courseE_farmer_ramp12_forswap": {
-          "courseE_farmer_ramp12_b": "Tu devras encore utiliser une boucle `répéter`, à l'extérieur de tout cela, pour dire à la fermière combien de fois elle doit avancer et ramasser la laitue."
+          "courseE_farmer_ramp12_b": "Il va toujours te falloir utiliser une boucle `répéter` à l'extérieur de tout cet ensemble pour indiquer à la fermière combien de fois avancer et récolter la laitue."
         },
         "courseE_farmer_ramp12_forswap_2018": {
-          "courseE_farmer_ramp12_b": "Tu devras encore utiliser une boucle `répéter`, à l'extérieur de tout cela, pour dire à la fermière combien de fois elle doit avancer et ramasser la laitue."
+          "courseE_farmer_ramp12_b": "Il va toujours te falloir utiliser une boucle `répéter` à l'extérieur de tout cet ensemble pour indiquer à la fermière combien de fois avancer et récolter la laitue."
         },
         "courseE_farmer_ramp12_forswap_2019": {
-          "courseE_farmer_ramp12_b": "Tu devras encore utiliser une boucle `répéter`, à l'extérieur de tout cela, pour dire à la fermière combien de fois elle doit avancer et ramasser la laitue."
+          "courseE_farmer_ramp12_b": "Il va toujours te falloir utiliser une boucle `répéter` à l'extérieur de tout cet ensemble pour indiquer à la fermière combien de fois avancer et récolter la laitue."
         },
         "courseE_farmer_ramp12_forswap_2020": {
-          "courseE_farmer_ramp12_b": "Tu devras encore utiliser une boucle `répéter`, à l'extérieur de tout cela, pour dire à la fermière combien de fois elle doit avancer et ramasser la laitue."
+          "courseE_farmer_ramp12_b": "Il va toujours te falloir utiliser une boucle `répéter` à l'extérieur de tout cet ensemble pour indiquer à la fermière combien de fois avancer et récolter la laitue."
         },
         "courseE_farmer_ramp12c": {
-          "courseE_farmer_ramp12b_b": "Tu devras encore utiliser une boucle `jusqu'à`, en premier, puis utiliser une boucle `tant que`, une fois que tu auras atteint la laitue."
+          "courseE_farmer_ramp12b_b": "Il va toujours te falloir utiliser une boucle `jusqu'à` d'abord, puis utiliser une boucle `tant que` une fois que tu auras atteint la laitue."
         },
         "courseE_farmer_ramp12c_2018": {
-          "courseE_farmer_ramp12b_b": "Tu devras encore utiliser une boucle `jusqu'à`, en premier, puis utiliser une boucle `tant que`, une fois que tu auras atteint la laitue."
+          "courseE_farmer_ramp12b_b": "Il va toujours te falloir utiliser une boucle `jusqu'à` d'abord, puis utiliser une boucle `tant que` une fois que tu auras atteint la laitue."
         },
         "courseE_farmer_ramp12c_2019": {
-          "courseE_farmer_ramp12b_b": "Tu devras encore utiliser une boucle `jusqu'à`, en premier, puis utiliser une boucle `tant que`, une fois que tu auras atteint la laitue."
+          "courseE_farmer_ramp12b_b": "Il va toujours te falloir utiliser une boucle `jusqu'à` d'abord, puis utiliser une boucle `tant que` une fois que tu auras atteint la laitue."
         },
         "courseE_farmer_ramp12c_2020": {
-          "courseE_farmer_ramp12b_b": "Tu devras encore utiliser une boucle `jusqu'à`, en premier, puis utiliser une boucle `tant que`, une fois que tu auras atteint la laitue."
+          "courseE_farmer_ramp12b_b": "Il va toujours te falloir utiliser une boucle `jusqu'à` d'abord, puis utiliser une boucle `tant que` une fois que tu auras atteint la laitue."
         },
         "courseE_farmer_ramp12d": {
           "courseE_farmer_ramp12d_b": "Tu devras encore mettre tes boucles `jusqu'à` et `tant que` à l'intérieur d'une boucle `répéter` pour résoudre cette énigme !"
         },
         "courseE_farmer_ramp12d_2018": {
-          "courseE_farmer_ramp12d_b": "Tu devras encore mettre tes boucles `jusqu'à` et `tant que` à l'intérieur d'une boucle `répéter` pour résoudre cette énigme !"
+          "courseE_farmer_ramp12d_b": "Il va toujours te falloir placer tes boucles `jusqu'à` et `tant que` au sein d'une boucle `répéter` pour résoudre ce casse-tête !"
         },
         "courseE_farmer_ramp12d_2019": {
-          "courseE_farmer_ramp12d_b": "Tu devras encore mettre tes boucles `jusqu'à` et `tant que` à l'intérieur d'une boucle `répéter` pour résoudre cette énigme !"
+          "courseE_farmer_ramp12d_b": "Il va toujours te falloir placer tes boucles `jusqu'à` et `tant que` au sein d'une boucle `répéter` pour résoudre ce casse-tête !"
         },
         "courseE_farmer_ramp12d_2020": {
-          "courseE_farmer_ramp12d_b": "Tu devras encore mettre tes boucles `jusqu'à` et `tant que` à l'intérieur d'une boucle `répéter` pour résoudre cette énigme !"
+          "courseE_farmer_ramp12d_b": "Il va toujours te falloir placer tes boucles `jusqu'à` et `tant que` au sein d'une boucle `répéter` pour résoudre ce casse-tête !"
         },
         "courseE_farmer_ramp12e": {
           "courseE_farmer_ramp12e_b": "La solution à cette énigme ressemblera beaucoup à la solution au dernier puzzle, mais en tournant dans l'autre sens."
         },
         "courseE_farmer_ramp12e_2018": {
-          "courseE_farmer_ramp12e_b": "La solution à cette énigme ressemblera beaucoup à la solution au dernier puzzle, mais en tournant dans l'autre sens."
+          "courseE_farmer_ramp12e_b": "La solution à ce casse-tête ressemblera beaucoup à la solution du dernier casse-tête, mais il faudra tourner dans l'autre sens."
         },
         "courseE_farmer_ramp12e_2019": {
-          "courseE_farmer_ramp12e_b": "La solution à cette énigme ressemblera beaucoup à la solution au dernier puzzle, mais en tournant dans l'autre sens."
+          "courseE_farmer_ramp12e_b": "La solution à ce casse-tête ressemblera beaucoup à la solution du dernier casse-tête, mais il faudra tourner dans l'autre sens."
         },
         "courseE_farmer_ramp12e_2020": {
-          "courseE_farmer_ramp12e_b": "La solution à cette énigme ressemblera beaucoup à la solution au dernier puzzle, mais en tournant dans l'autre sens."
+          "courseE_farmer_ramp12e_b": "La solution à ce casse-tête ressemblera beaucoup à la solution du dernier casse-tête, mais il faudra tourner dans l'autre sens."
         },
         "courseE_farmer_ramp12f": {
-          "courseE_farmer_ramp12f_b": "Utilise un bloc `« Si/Sinon »` pour aider le fermier à décider s'il doit tourner à droite ou à gauche."
+          "courseE_farmer_ramp12f_b": "Utilise un bloc « Si/Sinon » pour aider la fermière à choisir s'il faut tourner à droite ou à gauche."
         },
         "courseE_farmer_ramp12f_2018": {
-          "courseE_farmer_ramp12f_b": "Utilise un bloc `« Si/Sinon »` pour aider le fermier à décider s'il doit tourner à droite ou à gauche."
+          "courseE_farmer_ramp12f_b": "Utilise un bloc « Si/Sinon » pour aider la fermière à choisir s'il faut tourner à droite ou à gauche."
         },
         "courseE_farmer_ramp12f_2019": {
-          "courseE_farmer_ramp12f_b": "Utilise un bloc `« Si/Sinon »` pour aider le fermier à décider s'il doit tourner à droite ou à gauche."
+          "courseE_farmer_ramp12f_b": "Utilise un bloc « Si/Sinon » pour aider la fermière à choisir s'il faut tourner à droite ou à gauche."
         },
         "courseE_farmer_ramp12f_2020": {
-          "courseE_farmer_ramp12f_b": "Utilise un bloc `« Si/Sinon »` pour aider le fermier à décider s'il doit tourner à droite ou à gauche."
+          "courseE_farmer_ramp12f_b": "Utilise un bloc « Si/Sinon » pour aider la fermière à choisir s'il faut tourner à droite ou à gauche."
         },
         "courseE_farmer_ramp12g": {
-          "courseE_farmer_ramp12G_b": "Utilise un bloc `« Si/Sinon »` pour aider le fermier à décider s'il doit tourner à droite ou à gauche."
+          "courseE_farmer_ramp12G_b": "Utilise un bloc « Si/Sinon » pour aider la fermière à choisir s'il faut tourner à droite ou à gauche."
         },
         "courseE_farmer_ramp12g_2018": {
-          "courseE_farmer_ramp12G_b": "Utilise un bloc `« Si/Sinon »` pour aider le fermier à décider s'il doit tourner à droite ou à gauche."
+          "courseE_farmer_ramp12G_b": "Utilise un bloc « Si/Sinon » pour aider la fermière à choisir s'il faut tourner à droite ou à gauche."
         },
         "courseE_farmer_ramp12g_2019": {
-          "courseE_farmer_ramp12G_b": "Utilise un bloc `« Si/Sinon »` pour aider le fermier à décider s'il doit tourner à droite ou à gauche."
+          "courseE_farmer_ramp12G_b": "Utilise un bloc « Si/Sinon » pour aider la fermière à choisir s'il faut tourner à droite ou à gauche."
         },
         "courseE_farmer_ramp12g_2020": {
-          "courseE_farmer_ramp12G_b": "Utilise un bloc `« Si/Sinon »` pour aider le fermier à décider s'il doit tourner à droite ou à gauche."
+          "courseE_farmer_ramp12G_b": "Utilise un bloc « Si/Sinon » pour aider la fermière à choisir s'il faut tourner à droite ou à gauche."
         },
         "courseE_playLab_challenge1": {
           "courseE_playLab_challenge1_a": "Voici ce que tu pourrais faire lorsque le joueur gagne le jeu:\n\n-   Faire disparaitre le dinosaure\n-   Arrêter les écureuils.\n-   Faire plaisir aux écureuils et au chevalier.\n-   Mettre un nouvel arrière plan\n-   Faire que le chevalier remercie le joueur de l'avoir aidé.\n-   Faire disparaitre tous les acteurs et montrer un message \"Tu as gagné!\".",
@@ -8714,10 +8714,10 @@
           "courseD_artist_ramp12_c": "Pour dessiner chaque côté, tu devras avancer de 100 pixels, puis tourner de 120 degrés. De combien de côté as-tu besoin ?"
         },
         "courseE_bee_ramp14": {
-          "courseE_farmer_ramp12d_b": "Tu devras encore mettre tes boucles `jusqu'à` et `tant que` à l'intérieur d'une boucle `répéter` pour résoudre cette énigme !"
+          "courseE_farmer_ramp12d_b": "Il va toujours te falloir placer tes boucles `jusqu'à` et `tant que` au sein d'une boucle `répéter` pour résoudre ce casse-tête !"
         },
         "courseE_farmer_predict2": {
-          "courseE_farmer_ramp12e_b": "La solution à cette énigme ressemblera beaucoup à la solution au dernier puzzle, mais en tournant dans l'autre sens."
+          "courseE_farmer_ramp12e_b": "La solution à ce casse-tête ressemblera beaucoup à la solution du dernier casse-tête, mais il faudra tourner dans l'autre sens."
         },
         "outbreak7": {
           "whenclicked": "## Vaccins\n\nVous pouvez simuler l'administration d'un vaccin aux monstres en cliquant sur eux. Pour ce faire, utilisez le bloc \"changer de costume\" à l'aide de cet événement :\n\n[blockly block][0]",
@@ -8788,7 +8788,7 @@
           "voyage_aquatic_10a": "Tu vois les **Lanternes Aquatiques** ![](https://images.code.org/471b33234222ddffb463aeb65de6b371-image-1539183353423.net-resizeimage.png) ? Comment peux-tu utiliser un bloc conditionnel avec celles-ci pour traverser le monument sous-marin ?"
         },
         "CourseE_HOC 2018 Level_7a_2021": {
-          "aquatic7": "Vous pouvez utiliser le bloc si chemin pour faire les bons virages."
+          "aquatic7": "Tu peux utiliser le bloc si chemin pour t'aider à faire les bons virages."
         },
         "CourseE_HOC 2018 Level_9b_2021": {
           "voyage_aquatic_9a": "Tu vois les blocs de corail rouges et bleus ? Sers-t'en comme poteaux indicateurs pour tourner à droite et à gauche au sein du récif. "
@@ -9897,52 +9897,52 @@
           "1": "Si tu changes tes formes, n'oublie pas que tu auras aussi besoin de changer leurs angles !"
         },
         "courseD_artist_nestedLoops1_2021": {
-          "courseD_artist_nestedLoops1_a": "Le moyen le plus simple pour le dessiner c'est d'avancer et de tourner à droite.",
-          "courseD_artist_nestedLoops1_b": "Tu peux dessiner ce triangle avec une boucle `Répéter` et 2 blocs à l'intérieur. De quels blocs as tu besoin?",
-          "courseD_artist_nestedLoops1_c": "Essaie d'écrire les étapes sur une feuille de papier et de chercher des motifs qui peuvent être simplifiés avec des boucles."
+          "courseD_artist_nestedLoops1_a": "La manière la plus simple de le dessiner, c'est d'avancer et de tourner à droite.",
+          "courseD_artist_nestedLoops1_b": "Tu peux dessiner ce triangle en utilisant une boucle `répéter` avec deux blocs placés à l'intérieur. De quels blocs as tu besoin ?",
+          "courseD_artist_nestedLoops1_c": "Essaie d'écrire les étapes sur une feuille de papier et de chercher des motifs qui peuvent être simplifiés par des boucles."
         },
         "courseD_artist_nestedLoops1a_2021": {
-          "courseD_artist_nestedLoops1a_a": "Tu devras dessiner au total 6 triangles. Après avoir terminé chaque triangle, tourne de 60 degrés et avance pour commencer le triangle suivant.\n\n![](https://images.code.org/ad6c6d98298df9f4e3cea5bbe5ec776e-image-1497476332024.2_solution2.gif)",
-          "courseD_artist_nestedLoops1a_b": "Si tu crées ton triangle avec une boucle, l'artiste doit être dans la même position à chaque départ. Cela rendra la rotation à 60 degrés plus facile à gérer.",
-          "courseD_artist_nestedLoops1a_c": "Si tu veux des couleurs, utilise le bloc `Définir la couleur` dans ton code. Tu n'as pas besoin de faire correspondre les couleurs avec le modèle de l'image."
+          "courseD_artist_nestedLoops1a_a": "Il va te falloir dessiner 6 triangles en tout. Après avoir terminé chaque triangle, tourne de 60 degrés et déplace-toi pour commencer le triangle suivant.\n\n![](https://images.code.org/ad6c6d98298df9f4e3cea5bbe5ec776e-image-1497476332024.2_solution2.gif)",
+          "courseD_artist_nestedLoops1a_b": "Si tu crées ton triangle en utilisant une boucle, l'artiste devrait se retrouver dans la même position que celle dans laquelle il a commencé. Cela rendra la rotation à 60 degrés bien plus facile à gérer.",
+          "courseD_artist_nestedLoops1a_c": "Si tu veux des couleurs, utilise le bloc `définir la couleur` dans ton code. Tu n'as pas besoin de faire correspondre les couleurs avec celles dans l'image modèle."
         },
         "courseD_artist_nestedLoops2_2021": {
-          "courseD_artist_nestedLoops2_a": "Emboîte ta boucle en entourant le code du triangle avec une autre boucle `Répéter`.",
-          "courseD_artist_nestedLoops2_b": "Souviens toi de mettre le bloc `Tourner` à l'intérieur de la boucle afin que l'artiste tourne après chaque triangle."
+          "courseD_artist_nestedLoops2_a": "Imbrique tes boucles en entourant le code du triangle avec une autre boucle `répéter`.",
+          "courseD_artist_nestedLoops2_b": "N'oublie pas de mettre le bloc `tourner` à l'intérieur de la boucle pour faire tourner l'artiste après chaque triangle."
         },
         "courseD_artist_nestedLoops3_2021": {
-          "courseD_artist_nestedLoops3_a": "Essaie d'utiliser le bloc ˋsauter en avantˋ pour aller du sommet d'un carré à l'endroit où tu veux commencer le suivant. \n\nSi tes carrés font 20 pixels de haut et sont séparés de 20 pixels, de combien dois-tu sauter ?",
-          "courseD_artist_nestedLoops3_b": "N'oublie pas d'utiliser une boucle imbriquée pour résoudre ce puzzle rapidement. ",
-          "courseD_artist_nestedLoops3_c": "Commence par utiliser une boucle `Répéter` pour faire un carré. Ensuite, répète ce carré 8 fois, en sautant de 40 pixels entre chaque carré. "
+          "courseD_artist_nestedLoops3_a": "Essaie d'utiliser le bloc ˋsauter en avantˋ pour aller du haut d'un carré à l'endroit où tu veux commencer le suivant. \n\nSi tes carrés font 20 pixels de haut et sont séparés de 20 pixels, de combien dois-tu sauter ?",
+          "courseD_artist_nestedLoops3_b": "N'oublie pas d'utiliser une boucle imbriquée pour résoudre ce casse-tête rapidement. ",
+          "courseD_artist_nestedLoops3_c": "Commence par utiliser une boucle `répéter` pour faire un carré. Ensuite, répète ce carré 8 fois, en sautant de 40 pixels entre chaque carré. "
         },
         "courseD_artist_nestedLoops4_2021": {
-          "courseD_artist_nestedLoops4_d": "Pour résoudre ce problème correctement, tu dois avancer **avant** de tourner, sinon tes cercles seront un peu décoiffés!",
-          "courseD_artist_nestedLoops4_a": "Pour faire un cercle:\n\n-   Répéter 360 fois\n    -   Avance d'1 pixel\n    -   Tourne à gauche d'1 degré",
+          "courseD_artist_nestedLoops4_d": "Pour résoudre ce problème correctement, tu dois avancer **avant** de tourner, sinon tes cercles seront un tant soit peu décoiffés !",
+          "courseD_artist_nestedLoops4_a": "Pour faire un cercle :\n\n-   Répéter 360 fois :\n    -   Avancer d'1 pixel\n    -   Tourner à gauche d'1 degré",
           "courseD_artist_nestedLoops4_b": "N'oublie pas de sauter en avant de 50 pixels entre chaque cercle.",
           "courseD_artist_nestedLoops4_c": "Utilise une boucle imbriquée pour dessiner ton cercle 4 fois."
         },
         "courseD_artist_nestedLoops5_2021": {
-          "courseD_artist_nestedLoops5_a": "Pour faire ça facilement:\n\n-   Répète 4 fois\n    -   Faire un cercle\n    -   Saute en avant de 50 pixels\n    -   Tourne à droite de 90 degrés",
-          "courseD_artist_nestedLoops5_b": "Pour faire un cercle, tu dois configurer une boucle qui se répète 360 fois. Dans la boucle, avance de 1 pixel et tourne de 1 degré."
+          "courseD_artist_nestedLoops5_a": "Pour faire facilement ceci :\n\n-   Répète 4 fois :\n    -   Faire un cercle\n    -   Sauter en avant de 50 pixels\n    -   Tourner à droite de 90 degrés",
+          "courseD_artist_nestedLoops5_b": "Pour faire un cercle, tu dois configurer une boucle répéter qui se répète 360 fois. Au sein de la boucle, avance de 1 pixel et tourne de 1 degré."
         },
         "courseD_artist_nestedLoops7_2021": {
-          "courseD_artist_nestedLoops7_a": "Tu dois utiliser les boucles imbriquées ici. D'abord utilise une boucle pour dessiner un carré. Qu'est ce que fait l'extérieur de la boucle si l'intérieur dessine un carré ?",
-          "courseD_artist_nestedLoops7_b": "Utilise une boucle imbriquée, où l'intérieure de la boucle est le code pour un carré.\n\n-   Répète 6 fois\n    -   Fait un carré\n    -   Saute en avant de **50 pixels**\n    -   Tourne de **60 degrés**"
+          "courseD_artist_nestedLoops7_a": "Il va te falloir utiliser des boucles imbriquées ici. D'abord, utilise une boucle pour dessiner un carré. Que fera la boucle extérieur si la boucle intérieur dessine un carré ?",
+          "courseD_artist_nestedLoops7_b": "Utilise une boucle imbriquée, où la boucle intérieure contient le code pour un carré.\n\n-   Répète 6 fois :\n    -   Faire un carré\n    -   Sauter en avant de **50 pixels**\n    -   Tourner de **60 degrés**"
         },
         "courseD_artist_nestedLoops8_2021": {
-          "courseD_artist_nestedLoops8_a": "Pour avoir 8 hexagones dans ton dessin, tu as besoin de tourner de **45 degrés** entre chacun d'eux. Pourquoi? Parce que 360 degrés (un tour complet) divisé par 8 (le nombre d'hexagones) fait 45 degrés.",
-          "courseD_artist_nestedLoops8_b": "Si tu es bloqué, commence par regarder le dernier puzzle, puis change les choses qui sont différentes.",
-          "courseD_artist_nestedLoops8_c": "Utilise une boucle imbriquée:\n\n-   Répète 8 fois\n    -   Dessine un hexagone\n    -   Saute en avant de 50 pixels\n    -   Tourne à droite de 45 degrés"
+          "courseD_artist_nestedLoops8_a": "Pour avoir 8 hexagones dans ton dessin, il va te falloir tourner de **45 degrés** entre chacun d'eux. Pourquoi ? Parce que 360 degrés (un tour complet) divisé par 8 (le nombre d'hexagones), ça fait 45 degrés.",
+          "courseD_artist_nestedLoops8_b": "Si tu es coincé, commence par regarder le dernier casse-tête puis change les choses qui sont différentes.",
+          "courseD_artist_nestedLoops8_c": "Utilise une boucle imbriquée :\n\n-   Répète 8 fois :\n    -   Dessiner un hexagone\n    -   Sauter en avant de 50 pixels\n    -   Tourner à droite de 45 degrés"
         },
         "courseD_artist_nestedLoops9_2021": {
-          "courseD_artist_nestedLoops9_a": "Commence par utiliser une boucle imbriquée comme auparavant, mais cette fois, fais le avec des carrés.",
-          "courseD_artist_nestedLoops9_b": "Ajoute une seconde boucle imbriquée à la fin de la première, mais cette fois utilise des triangles.",
-          "courseD_artist_nestedLoops9_c": "Utilise 2 boucles imbriquées:\n\n-   Répète 8 fois\n    -   dessine un carré\n    -   Saute en avant de 50 pixels\n    -   Tourne à droite de 45 degrés\n-   Répète 8 fois\n    -   Dessine un triangle\n    -   Saute en avant de 50 pixels\n    -   Tourne à droite de 45 degrés"
+          "courseD_artist_nestedLoops9_a": "Commence en utilisant une boucle imbriquée comme tu l'as fait auparavant, mais cette fois-ci, fais des carrés avec. ",
+          "courseD_artist_nestedLoops9_b": "Ajoute une deuxième boucle imbriquée à la fin de la première, mais cette fois-ci utilise des triangles.",
+          "courseD_artist_nestedLoops9_c": "Utilise 2 boucles imbriquées :\n\n-   Répète 8 fois :\n    -   Dessiner un carré\n    -   Sauter en avant de 50 pixels\n    -   Tourner à droite de 45 degrés\n-   Répète 8 fois :\n    -   Dessiner un triangle\n    -   Sauter en avant de 50 pixels\n    -   Tourner à droite de 45 degrés"
         },
         "courseD_artist_nestedLoopsFP_2021": {
-          "courseD_artist_nestedLoopsFP_a": "<img src=\"https://images.code.org/9257cbf61f238f5a749a949059731934-image-1478732674615.02.25.png\" width=\"200px\"/>\n\nCette image a été faite avec une simple boucle imbriquée qui répète un hexagon (de 50px de côté) 15 fois avec un tournant de 48 degrés.",
-          "courseD_artist_nestedLoopsFP_b": "<img src=\"https://images.code.org/31a85d4e5be5209240195d34b17a177b-image-1478732674613.32.53.png\" width=\"200px\"/>\n\nCette image a été faite en utilisant un code similaire aux autres niveaux que tu as déjà fait, mais avec des cercles (Répète 360 fois: avance de 1, tourne de 1 degré).",
-          "courseD_artist_nestedLoopsFP_c": "<img src=\"https://images.code.org/f654f1512860c6c8cf6795c961a8959c-image-1478732674616.02.58.png\" width=\"200px\"/>\n\nCette image a été faite en utilisant une boucle imprimée qui répète un pentagone (de 50 px de côté) 15 fois en utilisant un tournant de 48 degrés."
+          "courseD_artist_nestedLoopsFP_a": "<img src=\"https://images.code.org/9257cbf61f238f5a749a949059731934-image-1478732674615.02.25.png\" width=\"200px\"/>\n\nCette image a été faite avec une seules boucle imbriquée qui répète un hexagone (de 50 px de côté) 15 fois en utilisant un tournant de 48 degrés.",
+          "courseD_artist_nestedLoopsFP_b": "<img src=\"https://images.code.org/31a85d4e5be5209240195d34b17a177b-image-1478732674613.32.53.png\" width=\"200px\"/>\n\nCette image a été faite en utilisant un code similaire à celui d'autres niveaux que tu as déjà fait, mais avec des cercles (Répète 360 fois : avancer de 1, tourner de 1 degré).",
+          "courseD_artist_nestedLoopsFP_c": "<img src=\"https://images.code.org/f654f1512860c6c8cf6795c961a8959c-image-1478732674616.02.58.png\" width=\"200px\"/>\n\nCette image a été faite en utilisant une seule boucle imbriquée qui répète un pentagone (de 50 px de côté) 15 fois en utilisant un tournant de 48 degrés."
         },
         "courseD_artist_nestedLoops_challenge1_2021": {
           "courseD_artist_nestedLoops_challenge1_a": "Commence par changer la couleur en bleu, ensuite crée un octagone avec 50 pixels de côté et des tournants à gauche de 45 degrés.",
@@ -9959,32 +9959,32 @@
           "courseD_artist_project1_b": "N'oublie pas que le fait « d'avancer » va dessiner une ligne, alors que « sauter vers l'avant » ne le fera pas."
         },
         "courseD_artist_project1a_2021": {
-          "courseD_artist_project1a_a": "Cette marche d’escalier utilise un tour de 76 degrés et se répète 4 fois.\n\n<img src=\"https://images.code.org/73b1310fca6cf884ec8fb8b026210212-image-1495839168718.16.10.png\" width=\"200px\" />",
-          "courseD_artist_project1a_b": "Ces modèles ressemblent de beaucoup aux marches d’escaliers d'autres énigmes, mais utilisent des angles différents."
+          "courseD_artist_project1a_a": "Ce motif en escalier utilise un angle de rotation de 76 degrés et se répète 4 fois.\n\n<img src=\"https://images.code.org/73b1310fca6cf884ec8fb8b026210212-image-1495839168718.16.10.png\" width=\"200px\" />",
+          "courseD_artist_project1a_b": "Ces motifs ressemblent beaucoup aux motifs récurrents en escaliers d'autres casse-têtes, mais emploient des angles différents."
         },
         "courseD_artist_project2_2021": {
           "courseD_artist_project2_a": "N'oublie pas que le fait « d'avancer » va dessiner une ligne, alors que « sauter vers l'avant » ne le fera pas.",
-          "courseD_artist_project2_b": "Après avoir dessiné et déplacé, la première fois, tu peux répéter le code en ajoutant une boucle autour de l’extérieur."
+          "courseD_artist_project2_b": "Une fois avoir dessiné et t'être déplacé la première fois, tu peux répéter le code en ajoutant une boucle autour de l’extérieur."
         },
         "courseD_artist_project2a_2021": {
-          "courseD_artist_project2a_a": "Ce dessin a été réalisé en imbriquant une boucle de 4 escaliers et un bloc `tourner à droite sur 180 degrés` à l'intérieur d'un bloc `répéter 2 fois`.\n\n<img src=\"https://images.code.org/bb24f9acee8afed2e119c1e920cb43f6-image-1495834479042.16.27.png\" width=\"200px\" />"
+          "courseD_artist_project2a_a": "Ce dessin a été réalisé en imbriquant une boucle de 4 escaliers et un bloc `tourner à droite de 180 degrés` au sein d'un bloc `répéter 2 fois`.\n\n<img src=\"https://images.code.org/bb24f9acee8afed2e119c1e920cb43f6-image-1495834479042.16.27.png\" width=\"200px\" />"
         },
         "courseD_artist_project3_2021": {
           "courseD_artist_project3_a": "Utilise le menu déroulant du bloc `tourner` pour choisir l'angle dont tu as besoin !",
-          "courseD_artist_project3_b": "Essaie les boucles imbriquées !\n\nUtilise le code que tu as créé pour dessiner une ligne de formes et imbrique-le à l'intérieur d'une autre boucle. Au fond, avant que la boucle extérieure ne s'arrête, ajoute un bloc qui fera se retourner Elsa.\n\n-   Essaie 72 degrés, si tu répètes la boucle extérieure 5 fois.\n-   Essaie 60 degrés, si tu répètes la boucle extérieure 6 fois"
+          "courseD_artist_project3_b": "Essaie avec les boucles imbriquées !\n\nUtilise le code que tu as créé pour dessiner une rangée de formes et imbrique-la au seind'une autre boucle. En bas, avant que la boucle extérieure ne s'arrête, ajoute un bloc qui fera se retourner Elsa.\n\n-   Essaie 72 degrés, si tu répètes la boucle extérieure 5 fois\n-   Essaie 60 degrés, si tu répètes la boucle extérieure 6 fois"
         },
         "courseD_artist_project3a_2021": {
-          "courseD_artist_project3a_a": "Tu peux choisir différentes valeurs pour faire tourner ta forme! Pourquoi pas 18 fois en tournant de 20 degrés entre chaque?"
+          "courseD_artist_project3a_a": "Tu peux choisir différentes valeurs pour faire pivoter ta forme ! Pourquoi pas la recréer 18 fois en tournant de 20 degrés à chaque fois ?"
         },
         "courseD_artist_project4_2021": {
-          "courseD_artist_project4_a": "Voici le flocon de neige en pentagone avec un tour de 36 degrés avant un flocon de neige en triangle :\n\n<img src=\"https://images.code.org/2ba023db9404f948fab655bfa7923160-image-1495822526223.14.13.png\" width=\"200px\" />\n\nVoici un ensemble d'hexagones avec des carrés :\n\n<img src=\"https://images.code.org/4d77462f3d07df6f1f5f2dc25e5d2b70-image-1495822526224.15.08.png\" width=\"200px\" />",
-          "courseD_artist_project4_b": "Pour essayer ceci, dessine ton premier flocon de neige, tourne, puis dessine un deuxième flocon."
+          "courseD_artist_project4_a": "Voici le flocon de neige en pentagone avec une rotation de 36 degrés avant d'ajouter un flocon de neige en triangle par-dessus :\n\n<img src=\"https://images.code.org/2ba023db9404f948fab655bfa7923160-image-1495822526223.14.13.png\" width=\"200px\" />\n\nVoici une groupe d'hexagones avec des carrés :\n\n<img src=\"https://images.code.org/4d77462f3d07df6f1f5f2dc25e5d2b70-image-1495822526224.15.08.png\" width=\"200px\" />",
+          "courseD_artist_project4_b": "Pour essayer toi-même, dessine ton premier flocon de neige, tourne, puis dessine un deuxième flocon."
         },
         "courseD_artist_project4a_2021": {
-          "courseD_artist_project4a_a": "Voici 2 longueurs différentes de flocons de neige, dessinés l'un après l'autre (avec un tour de 30 degrés entre eux.)\n\n<img src=\"https://images.code.org/45dedb51d89d3e5d0a88fe65ecbd7d7b-image-1495833855890.22.39.png\" width=\"200px\" />"
+          "courseD_artist_project4a_a": "Voici deux flocons de neige de longueurs différentes, dessinés l'un à la suite de l'autre (avec un angle de rotation de 30 degrés entre les deux). \n\n<img src=\"https://images.code.org/45dedb51d89d3e5d0a88fe65ecbd7d7b-image-1495833855890.22.39.png\" width=\"200px\" />"
         },
         "courseD_artist_project5_2021": {
-          "courseD_artist_project4_a": "Lignes de 2 hexagones et 4 triangles :\n\n<img src=\"https://images.code.org/37ca9779bafd2ccc5cc801f82358008e-image-1495823683964.34.09.png\" width=\"200px\" />"
+          "courseD_artist_project4_a": "Rangées de 2 hexagones et 4 triangles :\n\n<img src=\"https://images.code.org/37ca9779bafd2ccc5cc801f82358008e-image-1495823683964.34.09.png\" width=\"200px\" />"
         },
         "courseD_bee_conditionals1_predict1_2021": {
           "courseD_bee_conditionals1_a": "Il va te falloir te servir d'un bloc « si » pour voir s'il y a une fleur sous le nuage avant d'essayer de récolter le nectar."
@@ -10413,8 +10413,8 @@
           "courseE_artist_functions_challenge1_a": "<xml>\n  <block type=\"jump_to_xy\">\n    <title name=\"XPOS\">350</title>\n    <title name=\"YPOS\">200</title>\n  </block>\n  </xml>\n\nCe bloc `sauter à` te permet de faire sauter l'artiste zombie sur n'importe quel pixel de la grille, quand tu le souhaites. Il fonctionne en le bougeant d'un nombre de pixels à droite et d'un autre nombre vers le bas. C'est toujours compté à partir du coin supérieur gauche, ce qui signifie que ce n'est pas important où se trouve l'artiste zombie \\_avant \\_ que la commande soit exécutée !\n\n![](https://images.code.org/b90fdddc778a27e199221271ce91307a-image-1496450976440.png)"
         },
         "courseE_farmer_functions1_2021": {
-          "courseE_farmer_functions1_a": "La boîte à outils est organisée différemment ce coup-ci. Clique sur les catégories différentes pour voir les blocs à disposition.",
-          "courseE_farmer_functions1_b": "Tu dois ramasser seulement une citrouille, mais peux-tu utiliser une boucle pour l'obtenir ?"
+          "courseE_farmer_functions1_a": "La boîte à outils est organisée un peu différemment ce coup-ci. Clique sur les catégories différentes pour voir les blocs que tu as à ta disposition. ",
+          "courseE_farmer_functions1_b": "Tu n'as besoin de ramasser qu'une seule citrouille, mais peux-tu utiliser une boucle pour l'obtenir ?"
         },
         "courseE_farmer_functions1a_2021": {
           "courseE_farmer_functions1a_a": "Assure-toi de lire la définition de la fonction. Est-ce que tu arrives à voir ce qu'elle fait ?",
@@ -10446,29 +10446,29 @@
           "courseE_farmer_functions9a1_2018c": "Tu devras `tourner` plusieurs fois et `avancer` pour arriver à la dernière pousse de laitue avant de pouvoir appeler ta fonction à nouveau."
         },
         "courseE_farmer_ramp11a_2021": {
-          "courseE_farmer_ramp12_a": "Au lieu d'utiliser une boucle `répéter` pour dire au fermier combien de fois ramasser la saleté, tu peux maintenant utiliser un bloc `tant qu’il y a une pile`.  ",
+          "courseE_farmer_ramp12_a": "Au lieu d'utiliser une boucle `répéter` pour indiquer à la fermière combien de fois pelleter la terre, tu peux maintenant utiliser un bloc `tant qu’il y a une pile`.  ",
           "courseE_farmer_ramp12_b": "Tu dois seulement avancer une fois pour atteindre la saleté."
         },
         "courseE_farmer_ramp11b_2021": {
-          "courseE_farmer_ramp11b_a": "Tu peux imbriquer ta boucle `while` dans une boucle `repeat` pour raccourcir ton code."
+          "courseE_farmer_ramp11b_a": "Tu peux imbriquer ta boucle `tant que` au sein d'une boucle `répéter` pour raccourcir ton code."
         },
         "courseE_farmer_ramp12_forswap_2021": {
-          "courseE_farmer_ramp12_b": "Tu devras encore utiliser une boucle `repeat`, à l'extérieur de tout cela, pour dire au fermier combien de fois il doit avancer et ramasser la laitue."
+          "courseE_farmer_ramp12_b": "Il va toujours te falloir utiliser une boucle `répéter` à l'extérieur de tout cet ensemble pour indiquer à la fermière combien de fois avancer et récolter la laitue."
         },
         "courseE_farmer_ramp12c_2021": {
-          "courseE_farmer_ramp12b_b": "Tu devras encore utiliser une boucle `while`, en premier, puis utiliser une boucle `while`, une fois que tu auras atteint la laitue."
+          "courseE_farmer_ramp12b_b": "Il va toujours te falloir utiliser une boucle `jusqu'à` d'abord, puis utiliser une boucle `tant que` une fois que tu auras atteint la laitue."
         },
         "courseE_farmer_ramp12d_2021": {
-          "courseE_farmer_ramp12d_b": "Tu devras encore mettre tes boucles `until` et `while` à l'intérieur d'une boucle `repeat` pour résoudre cette énigme !"
+          "courseE_farmer_ramp12d_b": "Il va toujours te falloir placer tes boucles `jusqu'à` et `tant que` au sein d'une boucle `répéter` pour résoudre ce casse-tête !"
         },
         "courseE_farmer_ramp12e_2021": {
-          "courseE_farmer_ramp12e_b": "La solution à cette énigme ressemblera beaucoup à la solution au dernier puzzle, mais en tournant dans l'autre sens."
+          "courseE_farmer_ramp12e_b": "La solution à ce casse-tête ressemblera beaucoup à la solution du dernier casse-tête, mais il faudra tourner dans l'autre sens."
         },
         "courseE_farmer_ramp12f_2021": {
-          "courseE_farmer_ramp12f_b": "Utilise un bloc `« Si/Sinon »` pour aider le fermier à décider s'il doit tourner à droite ou à gauche."
+          "courseE_farmer_ramp12f_b": "Utilise un bloc « Si/Sinon » pour aider la fermière à choisir s'il faut tourner à droite ou à gauche."
         },
         "courseE_farmer_while1_2021": {
-          "courseE_farmer_ramp12G_b": "Utilise un bloc `« Si/Sinon »` pour aider le fermier à décider s'il doit tourner à droite ou à gauche."
+          "courseE_farmer_ramp12G_b": "Utilise un bloc « Si/Sinon » pour aider la fermière à choisir s'il faut tourner à droite ou à gauche."
         },
         "courseF_artist_for10_2021": {
           "courseF_artist_for10_a": "L'image dans le dessin a été faite à l'aide d'un compteur pour le bloc 'définir alpha' et un `compteur` / 10 comme taille de pinceau.",
@@ -11947,48 +11947,48 @@
           "1": "Si tu changes tes formes, n'oublie pas que tu auras aussi besoin de changer leurs angles !"
         },
         "courseD_artist_nestedLoops12022": {
-          "courseD_artist_nestedLoops1_a": "Le moyen le plus simple pour le dessiner c'est d'avancer et de tourner à droite.",
-          "courseD_artist_nestedLoops1_b": "Tu peux dessiner ce triangle avec une boucle `Répéter` et 2 blocs à l'intérieur. De quels blocs as tu besoin?",
-          "courseD_artist_nestedLoops1_c": "Essaie d'écrire les étapes sur une feuille de papier et de chercher des motifs qui peuvent être simplifiés avec des boucles."
+          "courseD_artist_nestedLoops1_a": "La manière la plus simple de le dessiner, c'est d'avancer et de tourner à droite.",
+          "courseD_artist_nestedLoops1_b": "Tu peux dessiner ce triangle en utilisant une boucle `répéter` avec deux blocs placés à l'intérieur. De quels blocs as tu besoin ?",
+          "courseD_artist_nestedLoops1_c": "Essaie d'écrire les étapes sur une feuille de papier et de chercher des motifs qui peuvent être simplifiés par des boucles."
         },
         "courseD_artist_nestedLoops1a2022": {
-          "courseD_artist_nestedLoops1a_a": "Tu devras dessiner au total 6 triangles. Après avoir terminé chaque triangle, tourne de 60 degrés et avance pour commencer le triangle suivant.\n\n![](https://images.code.org/ad6c6d98298df9f4e3cea5bbe5ec776e-image-1497476332024.2_solution2.gif)",
-          "courseD_artist_nestedLoops1a_b": "Si tu crées ton triangle avec une boucle, l'artiste doit être dans la même position à chaque départ. Cela rendra la rotation à 60 degrés plus facile à gérer.",
-          "courseD_artist_nestedLoops1a_c": "Si tu veux des couleurs, utilise le bloc `Définir la couleur` dans ton code. Tu n'as pas besoin de faire correspondre les couleurs avec le modèle de l'image."
+          "courseD_artist_nestedLoops1a_a": "Il va te falloir dessiner 6 triangles en tout. Après avoir terminé chaque triangle, tourne de 60 degrés et déplace-toi pour commencer le triangle suivant.\n\n![](https://images.code.org/ad6c6d98298df9f4e3cea5bbe5ec776e-image-1497476332024.2_solution2.gif)",
+          "courseD_artist_nestedLoops1a_b": "Si tu crées ton triangle en utilisant une boucle, l'artiste devrait se retrouver dans la même position que celle dans laquelle il a commencé. Cela rendra la rotation à 60 degrés bien plus facile à gérer.",
+          "courseD_artist_nestedLoops1a_c": "Si tu veux des couleurs, utilise le bloc `définir la couleur` dans ton code. Tu n'as pas besoin de faire correspondre les couleurs avec celles dans l'image modèle."
         },
         "courseD_artist_nestedLoops22022": {
-          "courseD_artist_nestedLoops2_a": "Emboîte ta boucle en entourant le code du triangle avec une autre boucle `Répéter`.",
-          "courseD_artist_nestedLoops2_b": "Souviens toi de mettre le bloc `Tourner` à l'intérieur de la boucle afin que l'artiste tourne après chaque triangle."
+          "courseD_artist_nestedLoops2_a": "Imbrique tes boucles en entourant le code du triangle avec une autre boucle `répéter`.",
+          "courseD_artist_nestedLoops2_b": "N'oublie pas de mettre le bloc `tourner` à l'intérieur de la boucle pour faire tourner l'artiste après chaque triangle."
         },
         "courseD_artist_nestedLoops32022": {
-          "courseD_artist_nestedLoops3_a": "Essaie d'utiliser le bloc ˋsauter en avantˋ pour aller du sommet d'un carré à l'endroit où tu veux commencer le suivant. \n\nSi tes carrés font 20 pixels de haut et sont séparés de 20 pixels, de combien dois-tu sauter ?",
-          "courseD_artist_nestedLoops3_b": "N'oublie pas d'utiliser une boucle imbriquée pour résoudre ce puzzle rapidement. ",
-          "courseD_artist_nestedLoops3_c": "Commence par utiliser une boucle `Répéter` pour faire un carré. Ensuite, répète ce carré 8 fois, en sautant de 40 pixels entre chaque carré. "
+          "courseD_artist_nestedLoops3_a": "Essaie d'utiliser le bloc ˋsauter en avantˋ pour aller du haut d'un carré à l'endroit où tu veux commencer le suivant. \n\nSi tes carrés font 20 pixels de haut et sont séparés de 20 pixels, de combien dois-tu sauter ?",
+          "courseD_artist_nestedLoops3_b": "N'oublie pas d'utiliser une boucle imbriquée pour résoudre ce casse-tête rapidement. ",
+          "courseD_artist_nestedLoops3_c": "Commence par utiliser une boucle `répéter` pour faire un carré. Ensuite, répète ce carré 8 fois, en sautant de 40 pixels entre chaque carré. "
         },
         "courseD_artist_nestedLoops42022": {
-          "courseD_artist_nestedLoops4_d": "Pour résoudre ce problème correctement, tu dois avancer **avant** de tourner, sinon tes cercles seront un peu décoiffés!",
-          "courseD_artist_nestedLoops4_a": "Pour faire un cercle:\n\n-   Répéter 360 fois\n    -   Avance d'1 pixel\n    -   Tourne à gauche d'1 degré",
+          "courseD_artist_nestedLoops4_d": "Pour résoudre ce problème correctement, tu dois avancer **avant** de tourner, sinon tes cercles seront un tant soit peu décoiffés !",
+          "courseD_artist_nestedLoops4_a": "Pour faire un cercle :\n\n-   Répéter 360 fois :\n    -   Avancer d'1 pixel\n    -   Tourner à gauche d'1 degré",
           "courseD_artist_nestedLoops4_b": "N'oublie pas de sauter en avant de 50 pixels entre chaque cercle.",
           "courseD_artist_nestedLoops4_c": "Utilise une boucle imbriquée pour dessiner ton cercle 4 fois."
         },
         "courseD_artist_nestedLoops52022": {
-          "courseD_artist_nestedLoops5_b": "Pour faire un cercle, tu dois configurer une boucle qui se répète 360 fois. Dans la boucle, avance de 1 pixel et tourne de 1 degré."
+          "courseD_artist_nestedLoops5_b": "Pour faire un cercle, tu dois configurer une boucle répéter qui se répète 360 fois. Au sein de la boucle, avance de 1 pixel et tourne de 1 degré."
         },
         "courseD_artist_nestedLoops72022": {
-          "courseD_artist_nestedLoops7_a": "Tu dois utiliser les boucles imbriquées ici. D'abord utilise une boucle pour dessiner un carré. Qu'est ce que fait l'extérieur de la boucle si l'intérieur dessine un carré ?"
+          "courseD_artist_nestedLoops7_a": "Il va te falloir utiliser des boucles imbriquées ici. D'abord, utilise une boucle pour dessiner un carré. Que fera la boucle extérieur si la boucle intérieur dessine un carré ?"
         },
         "courseD_artist_nestedLoops82022": {
-          "courseD_artist_nestedLoops8_a": "Pour avoir 8 hexagones dans ton dessin, tu as besoin de tourner de **45 degrés** entre chacun d'eux. Pourquoi? Parce que 360 degrés (un tour complet) divisé par 8 (le nombre d'hexagones) fait 45 degrés.",
-          "courseD_artist_nestedLoops8_b": "Si tu es bloqué, commence par regarder le dernier puzzle, puis change les choses qui sont différentes."
+          "courseD_artist_nestedLoops8_a": "Pour avoir 8 hexagones dans ton dessin, il va te falloir tourner de **45 degrés** entre chacun d'eux. Pourquoi ? Parce que 360 degrés (un tour complet) divisé par 8 (le nombre d'hexagones), ça fait 45 degrés.",
+          "courseD_artist_nestedLoops8_b": "Si tu es coincé, commence par regarder le dernier casse-tête puis change les choses qui sont différentes."
         },
         "courseD_artist_nestedLoops92022": {
-          "courseD_artist_nestedLoops9_a": "Commence par utiliser une boucle imbriquée comme auparavant, mais cette fois, fais le avec des carrés.",
-          "courseD_artist_nestedLoops9_b": "Ajoute une seconde boucle imbriquée à la fin de la première, mais cette fois utilise des triangles."
+          "courseD_artist_nestedLoops9_a": "Commence en utilisant une boucle imbriquée comme tu l'as fait auparavant, mais cette fois-ci, fais des carrés avec. ",
+          "courseD_artist_nestedLoops9_b": "Ajoute une deuxième boucle imbriquée à la fin de la première, mais cette fois-ci utilise des triangles."
         },
         "courseD_artist_nestedLoopsFP2022": {
-          "courseD_artist_nestedLoopsFP_a": "<img src=\"https://images.code.org/9257cbf61f238f5a749a949059731934-image-1478732674615.02.25.png\" width=\"200px\"/>\n\nCette image a été faite avec une simple boucle imbriquée qui répète un hexagon (de 50px de côté) 15 fois avec un tournant de 48 degrés.",
-          "courseD_artist_nestedLoopsFP_b": "<img src=\"https://images.code.org/31a85d4e5be5209240195d34b17a177b-image-1478732674613.32.53.png\" width=\"200px\"/>\n\nCette image a été faite en utilisant un code similaire aux autres niveaux que tu as déjà fait, mais avec des cercles (Répète 360 fois: avance de 1, tourne de 1 degré).",
-          "courseD_artist_nestedLoopsFP_c": "<img src=\"https://images.code.org/f654f1512860c6c8cf6795c961a8959c-image-1478732674616.02.58.png\" width=\"200px\"/>\n\nCette image a été faite en utilisant une boucle imprimée qui répète un pentagone (de 50 px de côté) 15 fois en utilisant un tournant de 48 degrés."
+          "courseD_artist_nestedLoopsFP_a": "<img src=\"https://images.code.org/9257cbf61f238f5a749a949059731934-image-1478732674615.02.25.png\" width=\"200px\"/>\n\nCette image a été faite avec une seules boucle imbriquée qui répète un hexagone (de 50 px de côté) 15 fois en utilisant un tournant de 48 degrés.",
+          "courseD_artist_nestedLoopsFP_b": "<img src=\"https://images.code.org/31a85d4e5be5209240195d34b17a177b-image-1478732674613.32.53.png\" width=\"200px\"/>\n\nCette image a été faite en utilisant un code similaire à celui d'autres niveaux que tu as déjà fait, mais avec des cercles (Répète 360 fois : avancer de 1, tourner de 1 degré).",
+          "courseD_artist_nestedLoopsFP_c": "<img src=\"https://images.code.org/f654f1512860c6c8cf6795c961a8959c-image-1478732674616.02.58.png\" width=\"200px\"/>\n\nCette image a été faite en utilisant une seule boucle imbriquée qui répète un pentagone (de 50 px de côté) 15 fois en utilisant un tournant de 48 degrés."
         },
         "courseD_artist_nestedLoops_challenge12022": {
           "courseD_artist_nestedLoops_challenge1_a": "Commence par changer la couleur en bleu, ensuite crée un octagone avec 50 pixels de côté et des tournants à gauche de 45 degrés.",
@@ -12005,32 +12005,32 @@
           "courseD_artist_project1_b": "N'oublie pas que le fait « d'avancer » va dessiner une ligne, alors que « sauter vers l'avant » ne le fera pas."
         },
         "courseD_artist_project1a2022": {
-          "courseD_artist_project1a_a": "Cette marche d’escalier utilise un tour de 76 degrés et se répète 4 fois.\n\n<img src=\"https://images.code.org/73b1310fca6cf884ec8fb8b026210212-image-1495839168718.16.10.png\" width=\"200px\" />",
-          "courseD_artist_project1a_b": "Ces modèles ressemblent de beaucoup aux marches d’escaliers d'autres énigmes, mais utilisent des angles différents."
+          "courseD_artist_project1a_a": "Ce motif en escalier utilise un angle de rotation de 76 degrés et se répète 4 fois.\n\n<img src=\"https://images.code.org/73b1310fca6cf884ec8fb8b026210212-image-1495839168718.16.10.png\" width=\"200px\" />",
+          "courseD_artist_project1a_b": "Ces motifs ressemblent beaucoup aux motifs récurrents en escaliers d'autres casse-têtes, mais emploient des angles différents."
         },
         "courseD_artist_project22022": {
           "courseD_artist_project2_a": "N'oublie pas que le fait « d'avancer » va dessiner une ligne, alors que « sauter vers l'avant » ne le fera pas.",
-          "courseD_artist_project2_b": "Après avoir dessiné et déplacé, la première fois, tu peux répéter le code en ajoutant une boucle autour de l’extérieur"
+          "courseD_artist_project2_b": "Une fois avoir dessiné et t'être déplacé la première fois, tu peux répéter le code en ajoutant une boucle autour de l’extérieur."
         },
         "courseD_artist_project2a2022": {
-          "courseD_artist_project2a_a": "Ce dessin a été réalisé en imbriquant une boucle de 4 escaliers et un bloc `tourner à droite sur 180 degrés` à l'intérieur d'un bloc `répéter 2 fois`.\n\n<img src=\"https://images.code.org/bb24f9acee8afed2e119c1e920cb43f6-image-1495834479042.16.27.png\" width=\"200px\" />"
+          "courseD_artist_project2a_a": "Ce dessin a été réalisé en imbriquant une boucle de 4 escaliers et un bloc `tourner à droite de 180 degrés` au sein d'un bloc `répéter 2 fois`.\n\n<img src=\"https://images.code.org/bb24f9acee8afed2e119c1e920cb43f6-image-1495834479042.16.27.png\" width=\"200px\" />"
         },
         "courseD_artist_project32022": {
           "courseD_artist_project3_a": "Utilise le menu déroulant du bloc « tourner » pour choisir l'angle dont tu as besoin !",
-          "courseD_artist_project3_b": "Essaie les boucles imbriquées !\n\nUtilise le code que tu as créé pour dessiner une ligne de formes et imbrique-le à l'intérieur d'une autre boucle. Au fond, avant que la boucle extérieure ne s'arrête, ajoute un bloc qui fera se retourner Elsa.\n\n-   Essaie 72 degrés, si tu répètes la boucle extérieure 5 fois.\n-   Essaie 60 degrés, si tu répètes la boucle extérieure 6 fois"
+          "courseD_artist_project3_b": "Essaie avec les boucles imbriquées !\n\nUtilise le code que tu as créé pour dessiner une rangée de formes et imbrique-la au seind'une autre boucle. En bas, avant que la boucle extérieure ne s'arrête, ajoute un bloc qui fera se retourner Elsa.\n\n-   Essaie 72 degrés, si tu répètes la boucle extérieure 5 fois\n-   Essaie 60 degrés, si tu répètes la boucle extérieure 6 fois"
         },
         "courseD_artist_project3a2022": {
-          "courseD_artist_project3a_a": "Tu peux choisir différentes valeurs pour faire tourner ta forme! Pourquoi pas 18 fois en tournant de 20 degrés entre chaque?"
+          "courseD_artist_project3a_a": "Tu peux choisir différentes valeurs pour faire pivoter ta forme ! Pourquoi pas la recréer 18 fois en tournant de 20 degrés à chaque fois ?"
         },
         "courseD_artist_project42022": {
-          "courseD_artist_project4_a": "Voici le flocon de neige en pentagone avec un tour de 36 degrés avant un flocon de neige en triangle :\n\n<img src=\"https://images.code.org/2ba023db9404f948fab655bfa7923160-image-1495822526223.14.13.png\" width=\"200px\" />\n\nVoici un ensemble d'hexagones avec des carrés :\n\n<img src=\"https://images.code.org/4d77462f3d07df6f1f5f2dc25e5d2b70-image-1495822526224.15.08.png\" width=\"200px\" />",
-          "courseD_artist_project4_b": "Pour essayer ceci, dessine ton premier flocon de neige, tourne, puis dessine un deuxième flocon."
+          "courseD_artist_project4_a": "Voici le flocon de neige en pentagone avec une rotation de 36 degrés avant d'ajouter un flocon de neige en triangle par-dessus :\n\n<img src=\"https://images.code.org/2ba023db9404f948fab655bfa7923160-image-1495822526223.14.13.png\" width=\"200px\" />\n\nVoici une groupe d'hexagones avec des carrés :\n\n<img src=\"https://images.code.org/4d77462f3d07df6f1f5f2dc25e5d2b70-image-1495822526224.15.08.png\" width=\"200px\" />",
+          "courseD_artist_project4_b": "Pour essayer toi-même, dessine ton premier flocon de neige, tourne, puis dessine un deuxième flocon."
         },
         "courseD_artist_project4a2022": {
-          "courseD_artist_project4a_a": "Voici 2 longueurs différentes de flocons de neige, dessinés l'un après l'autre (avec un tour de 30 degrés entre eux.)\n\n<img src=\"https://images.code.org/45dedb51d89d3e5d0a88fe65ecbd7d7b-image-1495833855890.22.39.png\" width=\"200px\" />"
+          "courseD_artist_project4a_a": "Voici deux flocons de neige de longueurs différentes, dessinés l'un à la suite de l'autre (avec un angle de rotation de 30 degrés entre les deux). \n\n<img src=\"https://images.code.org/45dedb51d89d3e5d0a88fe65ecbd7d7b-image-1495833855890.22.39.png\" width=\"200px\" />"
         },
         "courseD_artist_project52022": {
-          "courseD_artist_project4_a": "Lignes de 2 hexagones et 4 triangles :\n\n<img src=\"https://images.code.org/37ca9779bafd2ccc5cc801f82358008e-image-1495823683964.34.09.png\" width=\"200px\" />"
+          "courseD_artist_project4_a": "Rangées de 2 hexagones et 4 triangles :\n\n<img src=\"https://images.code.org/37ca9779bafd2ccc5cc801f82358008e-image-1495823683964.34.09.png\" width=\"200px\" />"
         },
         "courseD_bee_conditionals1_predict12022": {
           "courseD_bee_conditionals1_a": "Il va te falloir te servir d'un bloc « si » pour voir s'il y a une fleur sous le nuage avant d'essayer de récolter le nectar."
@@ -12404,8 +12404,8 @@
           "courseE_artist_functions_challenge1_a": "<xml>\n  <block type=\"jump_to_xy\">\n    <title name=\"XPOS\">350</title>\n    <title name=\"YPOS\">200</title>\n  </block>\n  </xml>\n\nCe bloc `sauter à` te permet de faire sauter l'artiste zombie sur n'importe quel pixel de la grille, quand tu le souhaites. Il fonctionne en le bougeant d'un nombre de pixels à droite et d'un autre nombre vers le bas. C'est toujours compté à partir du coin supérieur gauche, ce qui signifie que ce n'est pas important où se trouve l'artiste zombie \\_avant \\_ que la commande soit exécutée !\n\n![](https://images.code.org/b90fdddc778a27e199221271ce91307a-image-1496450976440.png)"
         },
         "courseE_farmer_functions12022": {
-          "courseE_farmer_functions1_a": "La boîte à outils est organisée différemment ce coup-ci. Clique sur les catégories différentes pour voir les blocs à disposition.",
-          "courseE_farmer_functions1_b": "Tu dois ramasser seulement une citrouille, mais peux-tu utiliser une boucle pour l'obtenir ?"
+          "courseE_farmer_functions1_a": "La boîte à outils est organisée un peu différemment ce coup-ci. Clique sur les catégories différentes pour voir les blocs que tu as à ta disposition. ",
+          "courseE_farmer_functions1_b": "Tu n'as besoin de ramasser qu'une seule citrouille, mais peux-tu utiliser une boucle pour l'obtenir ?"
         },
         "courseE_farmer_functions1a2022": {
           "courseE_farmer_functions1a_a": "Assure-toi de lire la définition de la fonction. Est-ce que tu arrives à voir ce qu'elle fait ?",
@@ -12417,7 +12417,7 @@
           "courseE_farmer_functions2b_c": "Tu auras besoin de 2 blocs séparés `répéter jusqu'à` pour atteindre toutes les cultures."
         },
         "courseE_farmer_functions2ba2022": {
-          "courseE_farmer_functions2ba_a": "Utilise le bloc vert `ramasse toutes les citrouilles` pour être sûr de ramasser toutes les citrouilles !"
+          "courseE_farmer_functions2ba_a": "Utilise le bloc vert `récolter toutes les citrouilles` pour être sûr de ramasser toutes les citrouilles !"
         },
         "courseE_farmer_functions3c12022": {
           "coursee_farmer_functions3c1_2018_a": "Il te faudra utiliser la fonction `récolter en chemin` trois fois pour résoudre ce casse-tête.",
@@ -12437,29 +12437,29 @@
           "courseE_farmer_functions9a1_2018c": "Tu devras `tourner` plusieurs fois et `avancer` pour arriver à la dernière pousse de laitue avant de pouvoir appeler ta fonction à nouveau."
         },
         "courseE_farmer_ramp11a2022": {
-          "courseE_farmer_ramp12_a": "Au lieu d'utiliser une boucle `répéter` pour dire au fermier combien de fois ramasser la saleté, tu peux maintenant utiliser un bloc `tant qu’il y a une pile`.  ",
+          "courseE_farmer_ramp12_a": "Au lieu d'utiliser une boucle `répéter` pour indiquer à la fermière combien de fois pelleter la terre, tu peux maintenant utiliser un bloc `tant qu’il y a une pile`.  ",
           "courseE_farmer_ramp12_b": "Tu dois seulement avancer une fois pour atteindre la saleté."
         },
         "courseE_farmer_ramp11b2022": {
-          "courseE_farmer_ramp11b_a": "Tu peux imbriquer ta boucle `tant que` dans une boucle `répéter` pour raccourcir ton code."
+          "courseE_farmer_ramp11b_a": "Tu peux imbriquer ta boucle `tant que` au sein d'une boucle `répéter` pour raccourcir ton code."
         },
         "courseE_farmer_ramp12_forswap2022": {
-          "courseE_farmer_ramp12_b": "Tu devras encore utiliser une boucle `répéter`, à l'extérieur de tout cela, pour dire à la fermière combien de fois elle doit avancer et ramasser la laitue."
+          "courseE_farmer_ramp12_b": "Il va toujours te falloir utiliser une boucle `répéter` à l'extérieur de tout cet ensemble pour indiquer à la fermière combien de fois avancer et récolter la laitue."
         },
         "courseE_farmer_ramp12c2022": {
-          "courseE_farmer_ramp12b_b": "Tu devras encore utiliser une boucle `jusqu'à`, en premier, puis utiliser une boucle `tant que`, une fois que tu auras atteint la laitue."
+          "courseE_farmer_ramp12b_b": "Il va toujours te falloir utiliser une boucle `jusqu'à` d'abord, puis utiliser une boucle `tant que` une fois que tu auras atteint la laitue."
         },
         "courseE_farmer_ramp12d2022": {
-          "courseE_farmer_ramp12d_b": "Tu devras encore mettre tes boucles `jusqu'à` et `tant que` à l'intérieur d'une boucle `répéter` pour résoudre cette énigme !"
+          "courseE_farmer_ramp12d_b": "Il va toujours te falloir placer tes boucles `jusqu'à` et `tant que` au sein d'une boucle `répéter` pour résoudre ce casse-tête !"
         },
         "courseE_farmer_ramp12e2022": {
-          "courseE_farmer_ramp12e_b": "La solution à cette énigme ressemblera beaucoup à la solution au dernier puzzle, mais en tournant dans l'autre sens."
+          "courseE_farmer_ramp12e_b": "La solution à ce casse-tête ressemblera beaucoup à la solution du dernier casse-tête, mais il faudra tourner dans l'autre sens."
         },
         "courseE_farmer_ramp12f2022": {
-          "courseE_farmer_ramp12f_b": "Utilise un bloc `« Si/Sinon »` pour aider le fermier à décider s'il doit tourner à droite ou à gauche."
+          "courseE_farmer_ramp12f_b": "Utilise un bloc « Si/Sinon » pour aider la fermière à choisir s'il faut tourner à droite ou à gauche."
         },
         "courseE_farmer_while12022": {
-          "courseE_farmer_ramp12G_b": "Utilise un bloc `« Si/Sinon »` pour aider le fermier à décider s'il doit tourner à droite ou à gauche."
+          "courseE_farmer_ramp12G_b": "Utilise un bloc « Si/Sinon » pour aider la fermière à choisir s'il faut tourner à droite ou à gauche."
         },
         "courseF_artist_for102022": {
           "courseF_artist_for10_a": "L'image dans le dessin a été faite à l'aide d'un compteur pour le bloc 'définir alpha' et un `compteur` / 10 comme taille de pinceau.",
