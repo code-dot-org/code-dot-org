@@ -28,6 +28,7 @@ const Template = args => (
       activitySectionPosition={1}
       activityPosition={1}
       allowMajorCurriculumChanges={true}
+      scriptLevel={defaultLevel}
       {...args}
     />
   </div>
@@ -35,26 +36,22 @@ const Template = args => (
 
 export const LevelTokenLessonExtras = Template.bind({});
 LevelTokenLessonExtras.args = {
-  scriptLevel: defaultLevel,
   lessonExtrasAvailableForUnit: true
 };
 
 export const LevelTokenNoExtras = Template.bind({});
 LevelTokenNoExtras.args = {
-  scriptLevel: defaultLevel,
   lessonExtrasAvailableForUnit: false
 };
 
 export const LevelTokenPL = Template.bind({});
 LevelTokenPL.args = {
-  scriptLevel: defaultLevel,
   lessonExtrasAvailableForUnit: true,
   isProfessionalLearningCourse: true
 };
 
 export const LevelTokenInactive = Template.bind({});
 LevelTokenInactive.args = {
-  scriptLevel: defaultLevel,
   lessonExtrasAvailableForUnit: true,
   inactiveLevelNames: ['Inactive Level']
 };
