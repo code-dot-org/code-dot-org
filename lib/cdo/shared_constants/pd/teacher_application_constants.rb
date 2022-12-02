@@ -15,6 +15,12 @@ module Pd
 
     YEAR = SharedApplicationConstants::APPLICATION_CURRENT_YEAR
 
+    REGIONAL_PARTNER_DEFAULT_GUARDRAILS = {
+      frl_rural: 40,
+      frl_not_rural: 50,
+      urg: 50
+    }
+
     SECTION_HEADERS = {
       choose_your_program: 'Choose Your Program',
       find_your_region: 'Find Your Region',
