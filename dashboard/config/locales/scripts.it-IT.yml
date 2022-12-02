@@ -4115,3 +4115,7 @@ it:
           description_audience: Scrittori di curriculum
           description_short: Per allestire gli aggiornamenti nelle lezioni o nei livelli
             tra le versioni del curriculum
+        devices-2022:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: 'Capitolo 2: Input Hardware'

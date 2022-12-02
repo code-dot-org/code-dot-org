@@ -169,7 +169,7 @@
           "wobbling": "ぐらぐらさせる",
           "spinning right": "右に回す",
           "wandering": "あちこちに動かす",
-          "spinning right2": "右に回す 2",
+          "spinning right2": "右に回す 2\n",
           "wandering2": "あちこちに動かす 2",
           "moving east and looping": "東に動かしてループ",
           "moving west": "西に動かす",
@@ -437,7 +437,7 @@
           "growing": "大きくする",
           "shrinking": "小さくする",
           "moving east": "東に動かす",
-          "moving north": "北に動かす"
+          "moving north": "北に動かす北に動かす"
         },
         "Virtual Pet 1_2021": {
           "patrolling": "パトロール",

@@ -4237,3 +4237,7 @@ zh-CN:
           title: 计算机科学原理游戏板
           description_audience: 课程作者
           description_short: 用于课程版本之间的课程或级别分阶段更新
+        devices-2022:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: 第 2 章︰ 创建物理原型

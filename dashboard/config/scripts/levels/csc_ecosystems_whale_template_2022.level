@@ -1,9 +1,5 @@
 <GamelabJr>
   <config><![CDATA[{
-  "game_id": 64,
-  "created_at": "2022-06-13T21:00:31.000Z",
-  "level_num": "custom",
-  "user_id": 182,
   "properties": {
     "skin": "gamelab",
     "show_debug_watch": "true",
@@ -69,13 +65,38 @@
     "skip_autosave": true,
     "preload_asset_list": null
   },
+  "level_num": "custom",
+  "game_id": 64,
+  "created_at": "2022-06-13T21:00:31.000Z",
+  "user_id": 182,
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-06-13T21:00:31.389+00:00\",\"changed\":[\"cloned from \\\"csc_ecosystems_whale_template\\\"\"],\"cloned_from\":\"csc_ecosystems_whale_template\"}]",
+  "audit_log": "[{\"changed_at\":\"2022-06-13T21:00:31.389+00:00\",\"changed\":[\"cloned from \\\"csc_ecosystems_whale_template\\\"\"],\"cloned_from\":\"csc_ecosystems_whale_template\"},{\"changed_at\":\"2022-11-30 17:20:56 +0000\",\"changed\":[\"solution_blocks\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
   <blocks>
+    <start_blocks>
+      <xml>
+        <block type="when_run" deletable="false" movable="false">
+          <next>
+            <block type="gamelab_setBackgroundImageAs" deletable="false" can_disconnect_from_parent="false">
+              <field name="IMG">"world-map"</field>
+              <next>
+                <block type="gamelab_makeNewSpriteAnon" deletable="false" can_disconnect_from_parent="false">
+                  <field name="ANIMATION_NAME">"whale-4"</field>
+                  <value name="LOCATION">
+                    <block type="gamelab_location_picker" deletable="false" can_disconnect_from_parent="false">
+                      <field name="LOCATION">{"x":112,"y":209}</field>
+                    </block>
+                  </value>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+      </xml>
+    </start_blocks>
     <solution_blocks>
       <xml>
         <block type="behavior_definition" deletable="false" movable="false" editable="false" uservisible="false">

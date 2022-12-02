@@ -1133,7 +1133,7 @@ he:
             '9': '9'
             '10': '10'
       gamelab_isKeyPressed:
-        text: לחוץ
+        text: "{KEY} לחוץ"
         options:
           KEY:
             '"up"': למעלה
@@ -1451,7 +1451,9 @@ he:
             '"when"': כאשר
             '"while"': כל עוד
       gamelab_spriteSay:
-        text: אמור
+        text: "{SPRITE} אמור {SPEECH}"
+      gamelab_spriteThink:
+        text: "{SPRITE} חשוב {SPEECH}"
       gamelab_subjectSpritePointer:
         text: "{SPRITE}"
       gamelab_turn:
@@ -1507,7 +1509,9 @@ he:
       gamelab_whileUpArrow:
         text: בעוד חץ למעלה לחוץ
       gamelab_withPercentChance:
-        text: אם {NUM} אחוז סיכוי
+        text: |-
+          אם {NUM} אחוז סיכוי
+          {STATEMENT}
       gamelab_withPercentChanceDropdown:
         text: |2-
            {NUM} סיכוי
@@ -2103,7 +2107,7 @@ he:
             '0.5': half of
             '0.25': few
       aalab_spriteSayChoices:
-        text: אמור
+        text: "{SPRITE} אמור {SPEECH}"
       binary_drawBin:
         text: לצייר בינארי {BIN}
       binary_drawBinScreen:

@@ -2737,3 +2737,7 @@ fil:
           lesson_groups:
             lessonGroup-2:
               display_name: Maglikha ng PT
+        devices-2022:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: 'Kabanata 2: Input ng Hardware'

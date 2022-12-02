@@ -3405,7 +3405,7 @@
         },
         "CSD U6 - Functions - SB_2222": {
           "CSD U6L14.PD - todo1": "¡Actualiza la función aquí!",
-          "CSD U6L14.PD - todo2": "Actualizar el código para utilizar color1 y color2",
+          "CSD U6L14.PD - todo2": "Actualiza el código para utilizar color1 y color2",
           "CSD U6L14.PD - todo3": "Llama a tu función aquí"
         },
         "CSD U6 - Music - A_2222": {
@@ -3416,7 +3416,7 @@
           "CSD U6L13.6 - sharp_notes": "Estos eventos son para las notas agudas"
         },
         "CSD U6 - Sensors - PB_2222": {
-          "CSD U6L11.PB - boardevent": "¡Añade tu evento a la placa aquí!"
+          "CSD U6L11.PB - boardevent": "¡Añade tu evento de la placa aquí!"
         },
         "helloworld_food_click_space-2022": {
           "hw_Run": "¡Pulsa aquí primero!"

@@ -1324,7 +1324,7 @@
         "MC_HOC_2017_05_Cole_2021": "Juttasd a játékost az ásóhoz.",
         "MC_HOC_2017_06_Cole_2021": "Javítsd ki ezt a kódot, hogy az Agent hidat építsen a folyóra.",
         "MC_HOC_2017_07_Cole_2021": "Törd fel a jeget, és juttasd {currentPlayerName} játékost a csilléhez.",
-        "MC_HOC_2017_10_RETRY_2021": "Hozz létre egy függvényt, amely segítségével bejárhatod az utat a csillével.",
+        "MC_HOC_2017_10_RETRY_2021": "Hozz létre egy függvényt, amellyel befejezheted ezt a csillét.",
         "MC_HOC_2017_Ali_2021": "Használd a függvényeket a láván átvezető út megtalálásához.",
         "MC_HOC_2017_FP20x20_2021": "**Szabad játék:**  Most szabadon barangolhatsz!",
         "Overworld Avoid Monsters_2021": "Nem jó ötlet nekimenni a Creepereknek. Óvatosan haladj el a Creeperek között, hogy épségben hazaérj.",
@@ -1937,12 +1937,21 @@
         "courseF_groups_size_-2022-2": "Írj programot, ami megváltoztatja annak a sprite-nak a méretét, amire rákattintasz. ",
         "coursea_maze_ramp12022": "Ebben a feladatban csak kapcsold össze a blokkokat és nyomd meg a \"▶Futtatás\" gombot!",
         "coursea_maze_ramp1_2021": "Ebben a feladatban csak kapcsold össze a blokkokat és nyomd meg a \"▶Futtatás\" gombot!",
-        "Fish Tank 2-validated_2021": "Cseréld le az ördögszekeret valamilyen halra!",
-        "Fish Tank 3-validated_2021": "Változtasd meg a hal viselkedését, hogy jobbra-balra úszkáljon.",
-        "Fish Tank 4-validated_2021": "Használd a `háttérszín beállítása` blokkot, hogy megváltoztasd a háttér színét.",
-        "Fish Tank 5-validated_2021": "A hal kalandvágyó lény, és szeretne további lényekkel találkozni a tengerben. Adj egy újabb spite-ot az akváriumhoz! Az új sprite bármilyen típusú lény lehet, de ne legyen ugyanolyan, mint a jelenlegi hal.",
-        "Fish Tank 6-validated_2021": "Adj egy viselkedést is a hal új barátjának!",
-        "courseC_artist_prog7_2021": "**Kihívás:** Ennek a bilétának különleges alakja van!"
+        "courseA_harvester_seq10_2021": "Ügyelj arra, hogy az összes kukoricát felszedd!",
+        "courseA_harvester_seq11_2021": "Próbáld meg önállóan! Szedd fel az összes kukoricát!",
+        "courseA_harvester_seq12_2021": "Szedd fel az összes kukoricát!",
+        "courseA_harvester_seq13_2021": "Játssz egy kicsit ezekkel a blokkokkal, hogy segíts az aratónak betakarítani a kukoricát!",
+        "courseA_harvester_seq1_2021": "Játssz ezekkel a blokkokkal, hogy segíts az aratónak betakarítani a kukoricát!",
+        "courseA_harvester_seq2_2021": "Használj három `menj nyugatra` blokkot és egy `felszed kukorica` blokkot a feladvány megoldásához.",
+        "courseA_harvester_seq3_2021": "Használj három `menj északra` blokkot és egy `felszed kukorica` blokkot!",
+        "courseA_harvester_seq4_2021": "Adj hozzá egy blokkot, hogy az arató megszerezze a kukoricát!",
+        "courseA_harvester_seq5_2021": "Keresd meg a hibát és javítsd ki!",
+        "courseA_harvester_seq6_2021": "Próbáld ki magad!",
+        "courseA_harvester_seq7_2021": "Próbáld ki magad!",
+        "courseA_harvester_seq9_2021": "Adj két blokkot az eddigiekhez a feladvány befejezéséhez!",
+        "courseA_maze_seq10_2021": "Kihívás: Óvakodj a TNT-s ládáktól, miközben a madarat elviszed a malacig! ",
+        "courseA_maze_seq5_2021": "Ezt is próbáld meg!",
+        "courseA_maze_seq5a_2021": "Mit kellene hozzátenned ehhez a kódsorhoz, hogy a végén a madár elérjen a malacig?"
       }
     }
   }

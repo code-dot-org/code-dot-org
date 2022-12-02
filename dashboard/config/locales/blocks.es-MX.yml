@@ -1028,6 +1028,8 @@ es-MX:
             '1': jugo de limón
             '3': bicarbonato de sodio
             '5': ambos
+      DansBlocks_testRectangle:
+        text: 'hacer rectàngulo x: {X} y: {Y} w: {W} h: {H} color: {COLOR}'
       FunctionBlocks_communicate:
         text: Comunicar {VAR1} a {SPRITE1COSTUME}
       FunctionBlocks_makeManipulative2:

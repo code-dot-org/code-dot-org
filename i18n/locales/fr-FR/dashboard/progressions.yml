@@ -39,7 +39,7 @@ fr:
       Back and Forth: Va et vient
       Basic Conditionals: Conditions de base
       Bass, Mid, and Treble: Basse, médium et aigu
-      Be a Super Digital Citizen: Soyez un Super Citoyen Numérique
+      Be a Super Digital Citizen: Sois un Super Citoyen Numérique
       Begin planning your project: Commencez à planifier votre projet
       Begin planning your project_2018: Commencez à planifier votre projet_2018
       Binary Bracelets - Unplugged Activity: Bracelets Binaires - Activité déconnectée
@@ -90,7 +90,7 @@ fr:
       Circuits and Logic: Circuits et logique
       Code Your Own Flappy Game: Codez votre propre jeu Flappy 
       Code Your Page: Codez votre page
-      Collector Game: Jeu Collector
+      Collector Game: Jeu Collectionneur
       Collision Detection: Détection de collision
       Collision Detection Review: Révision de la détection de collision
       Collisions: Collisions
@@ -132,8 +132,8 @@ fr:
       Design Your Prototype: Concevez votre prototype
       Design a Screen for your App: Concevez un écran pour votre appli
       Designing Screens with Code: Dessiner des écrans en codant
-      Designing for Accessibility: Concevoir pour l'Accessibilité
-      Digital Sharing - Unplugged Activity: Partage numérique - Activité hors ligne
+      Designing for Accessibility: Conception Accessible
+      Digital Sharing - Unplugged Activity: Partage numérique - Activité déconnectée
       Dogger Example: "Exemple de Dogger\n"
       Drawing: Dessiner
       Drawing Shapes: Dessiner des formes
@@ -153,7 +153,8 @@ fr:
       Exploration: Exploration
       'Exploration: Adding Style': 'Exploration : Ajout de style'
       'Exploration: For Loops': 'Exploration : Boucles « Pour »'
-      'Exploration: Sample Apps': ' Exemples d''Aplications'
+      'Exploration: Rikki''s Poster': 'Exploration : l''affiche de Rikki'
+      'Exploration: Sample Apps': 'Exploration : Exemples d''Applis'
       'Exploration: Sample Project': 'Exploration : Exemple de projet'
       Explore HTML: Explorer le HTML
       Extra: Supplémentaire
@@ -161,6 +162,7 @@ fr:
       Finish the Prototype: Terminer le prototype
       Finishing Functions: Terminer les fonctions
       Finishing Touches: Terminer les touches
+      Follow the Algorithm - Unplugged Activity: Suis l'Agorithme – Activité déconnectée
       Follow the Mouse: Suivre la souris
       For Loops: Les Boucles « Pour »
       For Loops and Color LEDs: Les Boucles « Pour » et LEDs colorées
@@ -212,13 +214,15 @@ fr:
       Making Music: Créer de la Musique
       Measures: Mesures
       'Minecraft: Hero''s Journey': 'Minecraft: Le voyage du héros'
-      'Mini-Project: About Me': 'À propos de Moi avec le Labo des Lutins'
+      'Mini-Project: About Me': 'Mini-Projet : À propos de Moi'
       'Mini-Project: Alien Dance Party': ' Soirée Dansante des Extraterrestres'
       'Mini-Project: Create a Virtual Pet': 'Mini-Projet : Crées un animal de compagnie virtuel'
       'Mini-Project: Outbreak Simulator': ' Simulateur d''épidémie'
       'Mini-Project: Royal Battle': 'Mini-projet : Bataille Royale'
+      "Mini-Project: Snowflake #1": "Mini-projet : Flocon de neige #1"
+      "Mini-Project: Snowflake #2": "Mini-projet : Flocon de neige #2"
       'Mini-Project: Sticker Art': 'Mini-projet : Design à base d''autocollants '
-      'Mini-Project: Virtual Pet': 'Mini-projet : animal de compagnie virtuel '
+      'Mini-Project: Virtual Pet': 'Mini-projet : Animal domestique virtuel '
       'Mini-project: Chase Game': 'Mini-projet : Jouer à la Chasse'
       'Mini-project: Flappy Game': 'Mini-projet : Jeu Flappy'
       'Mini-project: Interactive Poster': 'Mini-project : Poster interactif'
@@ -312,6 +316,7 @@ fr:
       Skill Building: Développement des Compétences
       Skill-Building: Développement des Compétences
       Social Sleuth: Limier social
+      Songwriting - Functions Unplugged Activity: Écrire des chansons - Activité déconnectée « Fonctions »
       Speed it Up, Slow it Down: Accélère et ralentis
       Sprite Interactions: Interactions de sprite
       Sprite Interactions Review: Révision des interactions de sprite
@@ -342,11 +347,11 @@ fr:
       'Video:  Debugging with the Step Button': 'Vidéo : Le débogage avec le bouton Étape'
       'Video:  Minecraft - The Agent': 'Vidéo : Minecraft - L''Agent'
       'Video:  Text  and Prompts': 'Vidéo : Texte et Invites '
-      'Video: "If/Else"': 'Video: « Si/Sinon »'
+      'Video: "If/Else"': 'Vidéo : « Si/Sinon »'
       'Video: "If/Else" Statements': 'Vidéo : Instructions conditionnelles « Si/Sinon »'
       'Video: AI: What is Machine Learning?': 'Vidéo : IA : Qu''est-ce que l''apprentissage automatique ? '
       'Video: Artist Intro with JR Hildebrand': 'Vidéo : Intro à l''Artiste avec JR Hildebrand'
-      'Video: Artist Intro with JR Hildebrande': 'Vidéo : Intro l''Artiste avec JR Hildebrande'
+      'Video: Artist Intro with JR Hildebrande': 'Vidéo : Intro à l''Artiste avec JR Hildebrande'
       'Video: Booleans': 'Vidéo : Boléens'
       'Video: CS Matters': 'Vidéo : Questions d’informatique'
       'Video: Code Your Own Flappy Game': 'Vidéo : Code ton propre jeu Flappy'
@@ -395,12 +400,12 @@ fr:
       'Video: Minecraft - Congratulations': ' Minecraft - Félicitations'
       'Video: Minecraft - Functions': 'Vidéo : Minecraft - Fonctions'
       'Video: Minecraft - Repeat Loops': 'Vidéo : Minecraft - Les boucles « répéter »'
-      'Video: Minecraft - The Agent': 'Vidéo : Minecraft - L''agent'
+      'Video: Minecraft - The Agent': 'Vidéo : Minecraft - L''Agent'
       'Video: Minecraft: Voyage Aquatic Conditionals': 'Minecraft : Minecraft : Voyage Aquatique – Formules Conditionnelles'
       'Video: Minecraft: Voyage Aquatic Congratulations': 'Vidéo : Minecraft : Voyage Aquatique - Félicitations'
       'Video: Minecraft: Voyage Aquatic Introduction': 'Vidéo : Minecraft : Voyage Aquatique - Introduction'
       'Video: Minecraft: Voyage Aquatic Repeat Until': 'Vidéo : Minecraft : Voyage Aquatique – Répéter Jusqu''à'
-      'Video: Nested Loops': 'Vidéo : Boucles imbriquées'
+      'Video: Nested Loops': 'Vidéo : Les boucles imbriquées'
       'Video: Nested Loops with the Bee': 'Vidéo : Les boucles imbriquées avec l''abeille '
       'Video: Pair Programming': ' Programmation en Binôme'
       'Video: Pair Programming ': 'Vidéo : Programmation en Binôme '
