@@ -3,7 +3,7 @@
     "medical_priority": {
       "fields": {
         "age": {
-          "id": "age"
+          "id": "âge"
         }
       }
     },
@@ -74,7 +74,7 @@
     "insurance_cost": {
       "fields": {
         "age": {
-          "id": "age"
+          "id": "âge"
         }
       }
     },
@@ -146,7 +146,7 @@
           "id": "école"
         },
         "age": {
-          "id": "age"
+          "id": "âge"
         },
         "health": {
           "id": "santé"
@@ -172,7 +172,7 @@
     "census_part": {
       "fields": {
         "age": {
-          "id": "age"
+          "id": "âge"
         }
       }
     },

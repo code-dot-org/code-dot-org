@@ -795,7 +795,7 @@
         "courseC_starWars_loops9": "![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _\"Yurishda davom eting!\"_\n\nBarcha metallolomlarni yig‘ib olishda o‘rgangan narsangizdan foydalaning!",
         "courseD_bee_conditionals1_predict1": "_\"Bu bulut menga ko‘rinishni to‘sib qo‘ymoqda!\"_\n\n Bulut ostida gul bor-yo‘qligini tekshirib ko‘ring. Agar gul bo‘lsa, nektar yig‘ishni boshlang.",
         "courseD_bee_conditionals1_predict1_copy": "_\"Bu bulut menga ko‘rinishni to‘sib qo‘ymoqda!\"_\n\n Bulut ostida gul bor-yo‘qligini tekshirib ko‘ring. Agar gul bo‘lsa, nektar yig‘ishni boshlang.",
-        "courseD_bee_conditionals2": "More clouds! \n\nNektar olishdan oldin gulni yashirganligini bilish uchun har bir bulut ostidan tekshiring. Agar bulut ostida gul bo'lsa, asalarilar bir marta nektar olishi kerak bo'ladi. \n \n Esingizda bo'lsin: Hamma bulutlar bir narsani yashirmaydi!",
+        "courseD_bee_conditionals2": "More clouds! \n\nNektar olishdan oldin gulni yashirganligini bilish uchun har bir bulut ostidan tekshiring. Agar bulut ostida gul bo'lsa, asalarilar bir marta nektar olishi kerak bo'ladi. \n\n Esingizda bo'lsin: Hamma bulutlar bir narsani yashirmaydi!",
         "courseD_bee_conditionals2_copy": "More clouds! \n\nNektar olishdan oldin gulni yashirganligini bilish uchun har bir bulut ostidan tekshiring. Agar bulut ostida gul bo'lsa, asalarilar bir marta nektar olishi kerak bo'ladi. \n \n Esingizda bo'lsin: Hamma bulutlar bir narsani yashirmaydi!",
         "courseD_bee_conditionals3": "Siz faqat nektarni gullardan yig'ishingiz mumkin, lekin siz gul bor-yo'qligini bilish uchun istalgan joyni tekshirishingiz mumkin. Agar ushbu bulutlarning birortasi ostida gul bo'lsa, asalarilar bir marta nektar to'plashlari kerak.",
         "courseD_bee_conditionals3_copy": "Siz faqat nektarni gullardan yig'ishingiz mumkin, lekin siz gul bor-yo'qligini bilish uchun istalgan joyni tekshirishingiz mumkin. Agar ushbu bulutlarning birortasi ostida gul bo'lsa, asalarilar bir marta nektar to'plashlari kerak.",
@@ -1456,7 +1456,7 @@
         "courseE_artist_functions2_copy": "Funksiyalar sizga yangi bloklarni aniqlashga imkon beradi!\n\nBiz kvadrat chizish uchun zarur bo'lgan bloklarni \"kvadrat chizish\" deb nomlangan funksiyaga o'tkazdik. Bu safar ko'zoynaklar yaratish uchun `kvadrat chizish` funktsiyasidan foydalaning.\n\n* * *\n\nKvadratchalar bir-biridan 75 piksel masofada joylashgan.",
         "courseE_artist_functions3": "Yaqinda biz funksiyalarga qaytamiz. Keling, ushbu yulduzni yasash bilan shug'ullanish uchun tanaffus qilaylik.\n\nSiz ushbu rasmni takroriy blok qo'shib qilishingiz mumkin.",
         "courseE_artist_functions3_copy": "Yaqinda biz funksiyalarga qaytamiz. Keling, ushbu yulduzni yasash bilan shug'ullanish uchun tanaffus qilaylik.\n\nSiz ushbu rasmni takroriy blok qo'shib qilishingiz mumkin.",
-        "courseE_artist_functions4": "Endi siz yulduz chizishingiz mumkin, to'rtta yulduzni chizishga harakat qiling!\n\n- Yulduzning har bir shoxi 25 piksel uzunlikda bo'lsin\n- Shoxlar orasida 45 daraja buriling\n- Har bir yulduz o'rtasida 100 pikselga sakrab o'ting",
+        "courseE_artist_functions4": "Endi siz yulduz chizishingiz mumkin, to'rtta yulduzni chizishga harakat qiling!\n\n-   Yulduzning har bir shoxi 25 piksel uzunlikda bo'lsin\n-   Shoxlar orasida 45 daraja buriling\n-   Har bir yulduz o'rtasida 100 pikselga sakrab o'ting",
         "courseE_artist_functions4_copy": "Endi siz yulduz chizishingiz mumkin, to'rtta yulduzni chizishga harakat qiling!\n\n- Yulduzning har bir shoxi 25 piksel uzunlikda bo'lsin\n- Shoxlar orasida 45 daraja buriling\n- Har bir yulduz o'rtasida 100 pikselga sakrab o'ting",
         "courseE_artist_functions5": "Uchta yulduz chizish qachon to'rt marta chizishdan qiyinroq? Siz oydan ham sakrab o'tishingiz kerak bo'lganda!\n\nUshbu jumboqni tugatish uchun faqat uchta yulduzni chizing.",
         "courseE_artist_functions5_copy": "Uchta yulduz chizish qachon to'rt marta chizishdan qiyinroq? Siz oydan ham sakrab o'tishingiz kerak bo'lganda!\n\nUshbu jumboqni tugatish uchun faqat uchta yulduzni chizing.",
@@ -3208,8 +3208,7 @@
         "ramp_artist_loops82022": "**Qo‘shimcha topshiriq:** O‘xshashlikni qidiring va sikllardan foydalangan holda hozirgi kodni qisqartiring.",
         "ramp_artist_loops92022": "Bu boshqotirmani tomonlari 200 pikseldan iborat to‘rtburchak chizgan holda yeching.",
         "poetry_modal_function_editor": "Bu sheʼr darajasi boʻlib, unda avtomatik ravishda toʻldirilgan “PROTSEDURALAR” kategoriyasini oʻz ichiga oladi va modal funksiya muharriri yoʻq.",
-        "poetry_no_modal_function_editor": "Bu sheʼr darajasi boʻlib, unda avtomatik ravishda toʻldirilgan “PROTSEDURALAR” kategoriyasini oʻz ichiga oladi va modal funksiya muharriri yoʻq.",
-        "ramp_artist_loops62022": "Bu zinapoya anchagina katta, lekin uni yaratish uchun yozilgan kod miqdori bundan oldingi boshqotirmani yechish uchun yozilgan kod bilan bir hil!\n\nBoshqotirmani yakunlash uchun ushbu sikldagi xatoni tuzating."
+        "poetry_no_modal_function_editor": "Bu sheʼr darajasi boʻlib, unda avtomatik ravishda toʻldirilgan “PROTSEDURALAR” kategoriyasini oʻz ichiga oladi va modal funksiya muharriri yoʻq."
       }
     }
   }

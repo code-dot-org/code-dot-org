@@ -7049,7 +7049,7 @@ tr-TR:
         - {}
         - {}
         questions:
-        - text: Giriş
+        - text: Girdi
         - {}
         - text: Depolama
         - text: İşleme
@@ -7060,7 +7060,7 @@ tr-TR:
         - {}
         - {}
         questions:
-        - text: Giriş
+        - text: Girdi
         - {}
         - text: Depolama
         - text: İşleme
@@ -7071,7 +7071,7 @@ tr-TR:
         - {}
         - {}
         questions:
-        - text: Giriş
+        - text: Girdi
         - {}
         - text: Depolama
         - text: İşleme
