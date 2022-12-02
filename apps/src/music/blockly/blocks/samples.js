@@ -127,3 +127,26 @@ export const playSoundInTrack = {
   generator: ctx =>
     `MusicPlayer.addSoundToCurrentTrack('${ctx.getFieldValue('sound')}');`
 };
+
+export const restInTrack = {
+  definition: {
+    type: BlockTypes.REST_IN_TRACK,
+    message0: 'rest for %1 measures',
+    args0: [
+      {
+        type: 'input_value',
+        name: 'measures'
+      }
+    ],
+    inputsInline: true,
+    previousStatement: null,
+    nextStatement: null,
+    colour: 50
+  },
+  generator: ctx =>
+    `MusicPlayer.restInCurrentTrack(${Blockly.JavaScript.valueToCode(
+      ctx,
+      'measures',
+      Blockly.JavaScript.ORDER_ASSIGNMENT
+    )});`
+};

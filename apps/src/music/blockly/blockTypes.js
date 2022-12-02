@@ -4,5 +4,6 @@ export const BlockTypes = {
   PLAY_SOUND: 'play_sound',
   FOR_LOOP: 'for_loop',
   NEW_TRACK: 'new_track',
-  PLAY_SOUND_IN_TRACK: 'play_sound_in_track'
+  PLAY_SOUND_IN_TRACK: 'play_sound_in_track',
+  REST_IN_TRACK: 'rest_in_track'
 };
