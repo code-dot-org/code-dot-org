@@ -291,12 +291,9 @@ const styles = {
     position: 'relative'
   },
   chevronButton: {
-    position: 'absolute',
     padding: 0,
-    border: 'none',
-    top: 0,
-    left: 8,
     margin: 0,
+    border: 'none',
     lineHeight: styleConstants['workspace-headers-height'] + 'px',
     backgroundColor: 'transparent',
     color: color.lighter_purple,
