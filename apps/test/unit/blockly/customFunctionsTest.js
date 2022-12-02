@@ -11,8 +11,6 @@ import {
 
 describe('Custom Functions', () => {
   const cdoBlockly = Blockly;
-  // Reset context menu registry.
-  GoogleBlockly.ContextMenuRegistry.registry.reset();
   beforeEach(() => {
     GoogleBlockly.JavaScript = sinon.spy();
     Blockly = initializeGoogleBlocklyWrapper(GoogleBlockly); // eslint-disable-line no-global-assign

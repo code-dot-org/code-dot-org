@@ -7,8 +7,6 @@ import '@cdo/apps/flappy/flappy'; // Importing the app forces the test to load B
 
 describe('Google Blockly Wrapper', () => {
   const cdoBlockly = Blockly;
-  // Reset context menu registry.
-  GoogleBlockly.ContextMenuRegistry.registry.reset();
   beforeEach(() => {
     GoogleBlockly.JavaScript = sinon.spy();
     Blockly = initializeGoogleBlocklyWrapper(GoogleBlockly); // eslint-disable-line no-global-assign
