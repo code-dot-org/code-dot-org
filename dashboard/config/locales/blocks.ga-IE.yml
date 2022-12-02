@@ -989,11 +989,6 @@ ga:
             '"hearts"': croíthe
             '"rain"': báisteach
             '"starburst"': Pléascadh Réaltaí
-      FunctionBlocks_representManipulative:
-        options:
-          BEHAVIOR:
-            wandering(): fánaíocht
-            shrinking(): crapadh
       gamelab_addBehaviorSimple:
         text: nuair a thosaíonn {SPRITE} {BEHAVIOR}
       gamelab_allSpritesWithAnimation:
@@ -1864,5 +1859,13 @@ ga:
           DIR:
             right: ar deiseal ↻
             left: ar tuathal ↺
+      storylab_setForegroundEffect2:
+        options:
+          EFFECT:
+            '"bubbles"': Boilgeoga
+            '"confetti"': Coinfití
+            '"hearts"': croíthe
+            '"rain"': báisteach
+            '"starburst"': Pléascadh Réaltaí
       validation_validatedBackground:
         text: 'socraigh an cúlra: {IMG}'

@@ -814,13 +814,13 @@
           "Function_intro_Ryan_1": "Ez a kis utasítás azt mondja a számítógépnek, hogy futassa a NAGY kódtömböt ugyanazzal a névvel a munkaterületen."
         },
         "MC_HOC_2017_03_Cole_2021": {
-          "MC_HOC_2017_03_Cole_1": "Ez egy \"ismétlés\" ciklus.  Vidd a munkaterületre, és add meg azt a kódot, amelyet újra és újra futtatni szeretnél."
+          "MC_HOC_2017_03_Cole_1": "Ez egy \"ismételd\" ciklus.  Vidd a munkaterületre, és add meg azt a kódot, amelyet újra és újra futtatni szeretnél."
         },
         "MC_HOC_2017_04_Cole_2021": {
-          "MC_HOC_2017_04_Cole_a": "Az Ügynök tud a víz fölött lebegni, de a játékos nem!"
+          "MC_HOC_2017_04_Cole_a": "Az Agent tud a víz fölött lebegni, de a játékos nem!"
         },
         "MC_HOC_2017_06_Cole_2021": {
-          "MC_HOC_2017_06_Cole_1": "Ezeket a blokkokat nem dobhatod el, de szerkesztheted őket!"
+          "MC_HOC_2017_06_Cole_1": "Ezeket a blokkokat nem dobhatod ki, de szerkesztheted őket!"
         },
         "MC_HOC_2017_Ali_2021": {
           "MC_HOC_2017_08_RY_1": "Az Ügynök tud a láva fölött lebegni, de a játékos nem!  "
@@ -1207,7 +1207,7 @@
           "gradek_adventurer_loops2_1": "Ez a szám azt mondja el, hogy ezek közül a blokkok közül mennyit használhatsz a feladvány megoldásához."
         },
         "courseA_maze_ramp22022": {
-          "courseC_maze_programming2_1": "Ez itt a toolbox, de hívhatnánk szerszámosládának is. Extra blokkokat találhatsz itt, amikkel teljesítheted a feladatokat."
+          "courseC_maze_programming2_1": "Ez itt az eszköztár, de hívhatnánk akár szerszámosládának vagy toolboxnak is. Extra blokkokat találhatsz itt, amikkel teljesítheted a feladatokat."
         },
         "courseA_maze_seq12022": {
           "courseA_maze_seq1_1": "Kattints a villanykörtére, ha segítségre van szükséged!"
@@ -1368,6 +1368,21 @@
         },
         "helloworld_food_sounds_space-2022": {
           "hello_world_new": "Új blokk!"
+        },
+        "courseF_groups_size_-2022-2": {
+          "mini-toolbox-blue-button": "Kattints a kék gombra a kinyitáshoz és a bezáráshoz."
+        },
+        "coursea_maze_ramp12022": {
+          "grade2_CaringForNewPet_0_1": "Miután a blokkokat egymáshoz csatlakoztattad, nyomj \"Futtatás\" gombra, hogy elinduljon a program!"
+        },
+        "coursea_maze_ramp1_2021": {
+          "grade2_CaringForNewPet_0_1": "Miután a blokkokat egymáshoz csatlakoztattad, nyomj \"Futtatás\" gombra, hogy elinduljon a program!"
+        },
+        "Fish Tank 3-validated_2021": {
+          "spritelab_comment": "Ezt a blokkot arra használhatod, hogy saját magadnak vagy a tanárodnak megjegyzést írj arról, hogy a kód hogyan működik. "
+        },
+        "courseC_artist_prog2_2021": {
+          "slider": "Itt lelassíthatod a programodat."
         }
       }
     }

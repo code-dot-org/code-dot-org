@@ -75,11 +75,23 @@
             null
           ]
         },
+        "49994950-2fc5-4779-abd5-2369a402a750": {
+          "progression_name": "Desenvolupament d'habilitats"
+        },
         "950807e2-afa0-4c26-9459-4682b3f49602": {
           "progression_name": "Exemple"
         },
+        "175a6627-901e-40c3-9b54-d156c7da668f": {
+          "progression_name": "Desenvolupament d'habilitats"
+        },
+        "96abf95f-d28e-4fe0-a376-016b5dbd6883": {
+          "progression_name": "Desenvolupament d'habilitats"
+        },
         "51fbff8e-3efa-4697-8f66-bc9c3b27e82b": {
           "progression_name": "Exemple"
+        },
+        "14006414-2422-4d85-bbed-d7bd50c95996": {
+          "progression_name": "Desenvolupament d'habilitats"
         },
         "a6528f05-51ce-4f9d-ae5e-0cc1543f71b6": {
           "progression_name": "Joc lliure"
@@ -377,10 +389,44 @@
           ]
         },
         "8581ae5d-4d2a-4221-b820-5920dd449b6c": {
-          "name": "Introducció"
+          "name": "Introducció",
+          "description": ""
+        },
+        "d63c77c1-4167-4360-ab98-25610934beda": {
+          "name": "",
+          "description": "",
+          "progression_name": ""
+        },
+        "385c2c6a-f7e4-4c90-b081-7030d22193ed": {
+          "description": "",
+          "progression_name": ""
+        },
+        "60837b14-7f66-4848-9c51-1c6aa9a21ad9": {
+          "description": ""
+        },
+        "13a06294-2f2a-4661-9947-46ed5843913f": {
+          "description": ""
+        },
+        "df13fa93-37df-4188-837d-462c48179625": {
+          "description": "",
+          "progression_name": "Desenvolupament d'habilitats"
+        },
+        "ae9fb00b-5b7e-4ecb-94c9-c778a2eba24e": {
+          "description": "",
+          "progression_name": ""
         },
         "0620e645-f84e-47ca-809b-3dcbe803d83e": {
           "progression_name": "Joc lliure"
+        },
+        "3a53855f-2fc4-48f1-a05e-1bd8e2c265e0": {
+          "description": ""
+        },
+        "b3189fd8-5272-4de4-953a-f4848b2ddb5c": {
+          "description": ""
+        },
+        "b8e884f1-eae0-4138-8778-0972f90e34d9": {
+          "name": "",
+          "description": ""
         },
         "21f43e64-dea3-4abc-8284-e055480370ce": {
           "name": "Introducció",
@@ -493,10 +539,35 @@
             null
           ]
         },
+        "e9aff97e-cad0-44f6-a38c-acea877cab0f": {
+          "name": "Recapitulació"
+        },
+        "50216925-6742-400e-b45a-2de4cd3b63f2": {
+          "name": "Recapitulació"
+        },
+        "197fed33-dc42-4fc0-8d20-e84b09292caa": {
+          "name": "",
+          "description": ""
+        },
         "de7dca58-f7d8-448f-84cf-41d215d2bf11": {
+          "description": "",
           "tips": [
-            null
+            ""
           ]
+        },
+        "7acfc985-03d8-4d14-b244-203f8cbf4843": {
+          "name": "",
+          "description": ""
+        },
+        "1634ab74-919f-40fb-b2dc-8cd5701655a2": {
+          "name": ""
+        },
+        "2edc03d3-b9a7-4c1b-a046-16fa43b3a7a3": {
+          "description": ""
+        },
+        "b68a11cc-930a-4803-beca-1d4f49ede378": {
+          "name": "",
+          "description": ""
         },
         "d80d3591-db5f-43bb-b3be-3a0eb14690a7": {
           "name": "Introducció"
@@ -518,6 +589,9 @@
           "tips": [
             null
           ]
+        },
+        "4e14f7ca-7b1a-4769-ae57-9f128722a0dd": {
+          "progression_name": "Desenvolupament d'habilitats"
         },
         "f5627332-703a-420b-ab72-660c350b87d9": {
           "tips": [
@@ -543,6 +617,9 @@
         "0c752c58-d938-43f6-ac3c-a9b4556d12db": {
           "name": "Introducció"
         },
+        "7e3632b0-108a-4179-adf0-89a8e204b031": {
+          "progression_name": "Desenvolupament d'habilitats"
+        },
         "037b9c5d-7263-4bb9-aef3-f818cd3d71d6": {
           "name": "Introducció"
         },
@@ -566,6 +643,9 @@
         },
         "b7541d65-dbb6-4402-8392-0a1416e131d5": {
           "name": "Introducció"
+        },
+        "eb787c9f-ed60-4591-ab5f-b76a25cf26b3": {
+          "progression_name": "Desenvolupament d'habilitats"
         },
         "cda08e32-7472-46e5-900d-947542cde40e": {
           "tips": [
@@ -598,6 +678,12 @@
         "bcde2562-834f-4054-9106-c9f0ff082258": {
           "name": "Introducció als bucles"
         },
+        "d9fbe733-657b-4504-8dbb-eab8104168aa": {
+          "progression_name": "Desenvolupament d'habilitats"
+        },
+        "d278b098-4bb0-4e0e-94b2-030bcfdc25bb": {
+          "progression_name": "Desenvolupament d'habilitats"
+        },
         "31073c5d-beaf-420a-af98-4aa468a7b9d4": {
           "tips": [
             null
@@ -606,8 +692,20 @@
         "6169bc3a-deb5-4c4f-9860-10ba26c60214": {
           "name": "Introducció"
         },
+        "61fa4607-bb88-4573-8bea-10a12e88181a": {
+          "progression_name": "Desenvolupament d'habilitats"
+        },
+        "f52282b3-cfad-49a9-a004-5297a4ca7bbc": {
+          "progression_name": "Desenvolupament d'habilitats"
+        },
         "9fe5d0e9-dadb-4541-9ebb-5eaa1acc5883": {
           "name": "Introducció"
+        },
+        "0f7a9d4d-e15d-4efc-a408-644c06c8fcb2": {
+          "progression_name": "Desenvolupament d'habilitats"
+        },
+        "535eebb3-357a-451a-95e4-f6cce960290e": {
+          "progression_name": "Desenvolupament d'habilitats"
         },
         "a8dddc64-bf3e-4023-85b5-e202ec1a0eb6": {
           "name": "Introducció"
@@ -623,17 +721,41 @@
         "ff230610-bef8-421e-b37a-6d77e490ce3e": {
           "name": "Introducció"
         },
+        "419b0732-9e07-4ab2-8c48-0fb798dfdfde": {
+          "progression_name": "Desenvolupament d'habilitats"
+        },
+        "c6bd1d9a-a98f-444b-b24b-05fef7ca82ec": {
+          "progression_name": "Desenvolupament d'habilitats"
+        },
         "268e56b4-6f3e-4a44-8383-2e538ae1ab72": {
           "progression_name": "Joc lliure"
         },
         "8ae849bd-292d-44e8-9ccd-9d9bfc86c592": {
           "name": "Introducció"
         },
+        "c6c9457f-77f7-4a4a-9f79-72386ab1ac9a": {
+          "progression_name": "Desenvolupament d'habilitats"
+        },
+        "106bfc79-23ce-4a84-b0b6-38740eb9df89": {
+          "progression_name": "Desenvolupament d'habilitats"
+        },
         "f909f46d-5551-4020-b2d5-402aa7f10361": {
           "name": "Introducció"
         },
+        "e1adf430-4152-42c1-a520-f40716ca9378": {
+          "progression_name": "Desenvolupament d'habilitats"
+        },
+        "26d62974-617f-4322-ab5d-29e79e49cc87": {
+          "progression_name": "Desenvolupament d'habilitats"
+        },
         "cefe1ce5-6a04-45e4-8805-e5b94fff2197": {
           "name": "Introducció"
+        },
+        "88a4ca9a-f917-418e-8c1c-2cc4ac814afd": {
+          "progression_name": "Desenvolupament d'habilitats"
+        },
+        "34a17d75-d294-42da-b0ca-57ddd75b50cb": {
+          "progression_name": "Desenvolupament d'habilitats"
         },
         "e8e5a324-ff1a-4d75-b917-b0c405905904": {
           "tips": [
@@ -674,7 +796,8 @@
         "3f88f7fc-f308-44e8-ad91-df97a9080361": {
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "Desenvolupament d'habilitats"
         },
         "98dedd12-1d66-41ed-9629-e30265862d45": {
           "tips": [
@@ -685,6 +808,9 @@
           "tips": [
             null
           ]
+        },
+        "ddbb537c-edf8-479c-b44d-8188941c0655": {
+          "progression_name": "Desenvolupament d'habilitats"
         },
         "d5632c3a-b496-41b6-a90f-1c738211a438": {
           "tips": [
@@ -720,7 +846,8 @@
         "304fbec8-0776-402a-9eeb-1e774da6bc0c": {
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "Desenvolupament d'habilitats"
         },
         "aef1a460-c4ee-406c-9f3e-2e9243f88502": {
           "tips": [
@@ -750,6 +877,9 @@
             null
           ]
         },
+        "e2e2e67f-7883-47c0-b018-118af90abc79": {
+          "progression_name": "Desenvolupament d'habilitats"
+        },
         "6962360d-5a78-47ae-8686-4038e83ebfbf": {
           "progression_name": "Joc lliure"
         },
@@ -771,6 +901,9 @@
             null
           ]
         },
+        "f621cd05-64b4-41d4-8c9a-b310731edecb": {
+          "progression_name": "Desenvolupament d'habilitats"
+        },
         "37214efe-4044-4968-8924-71472b1d2725": {
           "name": "Introducció"
         },
@@ -784,6 +917,12 @@
           "tips": [
             null
           ]
+        },
+        "fc407406-3b2b-46cd-be85-000640f4f949": {
+          "progression_name": "Desenvolupament d'habilitats"
+        },
+        "21348baa-81f3-473d-a4d8-bfdef00cc99e": {
+          "progression_name": "Desenvolupament d'habilitats"
         },
         "9630adaa-f7c1-4efa-8f7e-5d3ceb155b0b": {
           "tips": [
@@ -836,6 +975,9 @@
             null
           ]
         },
+        "f26ccabe-2b34-481f-b142-b6227421df3e": {
+          "name": "Explora"
+        },
         "de7ab6f7-a853-4f00-b05d-a9db0bb2da2d": {
           "tips": [
             null
@@ -877,8 +1019,17 @@
             null
           ]
         },
+        "ff7aa3e1-8328-41bf-b516-51ca5ea0a800": {
+          "progression_name": "Desenvolupament d'habilitats"
+        },
         "dce569eb-0a60-42a9-9e31-855a6b138f92": {
           "progression_name": "Joc lliure"
+        },
+        "5c9fce3b-e030-4ff3-8943-67f13f9dbbf8": {
+          "progression_name": "Desenvolupament d'habilitats"
+        },
+        "0121aca1-bd15-436e-ac4d-5424f269e25a": {
+          "progression_name": "Desenvolupament d'habilitats"
         },
         "83a864f0-7f6f-4ef6-8969-b0627bf8ef55": {
           "progression_name": "Joc lliure"
@@ -894,6 +1045,12 @@
         "d058a787-37d6-4c25-b5c0-c427b5bc9373": {
           "name": "Introducció"
         },
+        "d8046ff6-568f-4a94-a37c-3f32f63b19fe": {
+          "progression_name": "Desenvolupament d'habilitats"
+        },
+        "56779577-ac08-415f-b1bd-9ba7abdcf29e": {
+          "progression_name": "Desenvolupament d'habilitats"
+        },
         "83e6c37d-1cc1-49b9-b208-79567063fb20": {
           "name": "Introducció"
         },
@@ -901,6 +1058,12 @@
           "tips": [
             null
           ]
+        },
+        "fe5271b2-e5f3-44f5-94d8-d4630bb9d37d": {
+          "progression_name": "Desenvolupament d'habilitats"
+        },
+        "7571aba3-7786-43cb-91e3-4d1a3218c6cc": {
+          "progression_name": "Desenvolupament d'habilitats"
         },
         "45275988-8cf4-4043-b5a4-659cc090346a": {
           "progression_name": "Joc lliure"
@@ -947,14 +1110,35 @@
             null
           ]
         },
+        "db999346-e73e-4580-8c5f-d76e30ab2b7d": {
+          "progression_name": "Desenvolupament d'habilitats"
+        },
+        "3ee7b90a-c59c-47ae-96f2-c5e9bc506d2a": {
+          "progression_name": "Desenvolupament d'habilitats"
+        },
+        "356734de-fbb9-4ac7-b554-2daaa9d70fee": {
+          "progression_name": "Desenvolupament d'habilitats"
+        },
         "6ddf83bf-3856-4d68-a048-ac5a0ac26349": {
           "progression_name": "Joc lliure"
         },
         "73440a78-9446-4eb3-859e-35c77ce9f79a": {
           "name": "Introducció"
         },
+        "ada4de0f-53bc-4130-bd2f-0da228ca7b7e": {
+          "progression_name": "Desenvolupament d'habilitats"
+        },
         "8628e382-350f-40de-9e22-d522ab7fd289": {
           "name": "Introducció"
+        },
+        "09b06756-c981-4af6-a6ea-5697f8fa78e2": {
+          "progression_name": "Desenvolupament d'habilitats"
+        },
+        "d2e8a5d0-a31d-4a17-a649-8e1cc2aa735a": {
+          "progression_name": "Desenvolupament d'habilitats"
+        },
+        "6d700f77-eea3-46c2-8ea6-27454cbaf9ab": {
+          "progression_name": "Desenvolupament d'habilitats"
         },
         "cbae92bc-d7b3-4707-a5f9-c5b373bdaee7": {
           "progression_name": "Joc lliure"
@@ -965,10 +1149,20 @@
         "a24e03d0-5524-46ec-ab96-a0b1d9b24d8b": {
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "Desenvolupament d'habilitats"
+        },
+        "2908bd65-d321-4b6f-a5f3-6d550564bbaa": {
+          "progression_name": "Desenvolupament d'habilitats"
+        },
+        "62f9f06c-c008-464b-b1fb-86e224ce1018": {
+          "progression_name": "Desenvolupament d'habilitats"
         },
         "93c7190d-ff63-4aa2-a7f5-cf7546acdb61": {
           "name": "Introducció"
+        },
+        "19a96cd7-57c5-4a55-a7a2-e71a01464fb4": {
+          "progression_name": "Desenvolupament d'habilitats"
         },
         "179685a9-6ed2-454f-8a2b-76c4032f1d16": {
           "tips": [
@@ -979,6 +1173,9 @@
           "tips": [
             null
           ]
+        },
+        "b032e6b2-4dfd-431c-a938-06a8bd4a8056": {
+          "name": "Explora"
         },
         "a0f0bda0-512f-4e9c-8c28-1f749a2a7431": {
           "tips": [
@@ -1023,10 +1220,16 @@
             null
           ]
         },
+        "63f75f65-45a9-4de8-9cc0-6b402647ccc1": {
+          "progression_name": "Desenvolupament d'habilitats"
+        },
         "c05c857d-b5f3-4136-b505-f9ab43799bcb": {
           "tips": [
             null
           ]
+        },
+        "12d31175-b400-43ea-b132-40b08afeb0fa": {
+          "progression_name": "Desenvolupament d'habilitats"
         },
         "59fe6808-f9a3-4cbb-b193-9684c40568b6": {
           "tips": [
@@ -1041,6 +1244,12 @@
             null
           ]
         },
+        "49fbb767-771c-46d4-82ed-25acdc22cc34": {
+          "progression_name": "Desenvolupament d'habilitats"
+        },
+        "9edf4db6-25f2-432c-962d-7972ad7ef163": {
+          "progression_name": "Desenvolupament d'habilitats"
+        },
         "d7529639-1989-486a-994e-2c87b04b3113": {
           "name": "Fent bucles"
         },
@@ -1052,8 +1261,20 @@
         "48078796-9a5d-47a8-890e-69e86fb1400a": {
           "name": "Introducció"
         },
+        "16d31221-e844-4e6f-8344-fa1084b9dbf9": {
+          "progression_name": "Desenvolupament d'habilitats"
+        },
+        "8cd5852c-c611-485e-967b-a0b071a6e04d": {
+          "progression_name": "Desenvolupament d'habilitats"
+        },
         "8c6d11c7-2b53-47b4-a1f3-cc9587f2b10c": {
           "name": "Introducció"
+        },
+        "bfca3091-4042-4479-acb3-446e166a3dde": {
+          "progression_name": "Desenvolupament d'habilitats"
+        },
+        "4926c6b2-f0ed-4508-bbc9-df16b0e5042f": {
+          "progression_name": "Desenvolupament d'habilitats"
         },
         "a60b1be5-48d8-4fcc-9203-bdc66d8effe9": {
           "name": "Introducció"
@@ -1062,6 +1283,12 @@
           "tips": [
             null
           ]
+        },
+        "b7796885-3fd7-48b7-9a37-60950e9906ee": {
+          "progression_name": "Desenvolupament d'habilitats"
+        },
+        "bda70e53-e9ab-4e7c-877f-4d5020435d75": {
+          "progression_name": "Desenvolupament d'habilitats"
         },
         "b8b54f7e-0f68-46c7-84d1-756d1d134cdc": {
           "progression_name": "Joc lliure"
@@ -1112,14 +1339,26 @@
             null
           ]
         },
+        "49b2f670-c867-4f10-9a00-69e36e656858": {
+          "progression_name": "Desenvolupament d'habilitats"
+        },
         "50c37f50-7e2b-4c9c-9443-013742231b0e": {
           "name": "Introducció"
+        },
+        "2e366d04-1f25-4c62-8345-e74a5e81799d": {
+          "progression_name": "Desenvolupament d'habilitats"
         },
         "0ce0c382-a11b-4c74-ad59-41f02403b46b": {
           "name": "Introducció"
         },
+        "f2310ede-7d4f-478c-aa07-906ae23fe170": {
+          "progression_name": "Desenvolupament d'habilitats"
+        },
         "73186d8b-412c-447c-b31d-ba6efced8854": {
           "name": "Introducció"
+        },
+        "9d3c0460-5365-4117-811d-9728a5a3f9d9": {
+          "progression_name": "Desenvolupament d'habilitats"
         },
         "3c6953b2-ead1-488b-b460-2735304f527f": {
           "tips": [
@@ -1137,13 +1376,22 @@
             null
           ]
         },
+        "2a075c6b-296c-42fb-931a-7f035332357c": {
+          "progression_name": "Desenvolupament d'habilitats"
+        },
         "048bc86f-ea26-419c-9d73-452f86ff0000": {
           "progression_name": "Joc lliure"
+        },
+        "25d0dd9f-5a89-4a91-a3de-aba0e507aac8": {
+          "progression_name": "Desenvolupament d'habilitats"
         },
         "c4709ef3-6dff-44f9-ab00-7c8d4ceb84de": {
           "tips": [
             null
           ]
+        },
+        "5ee02837-9f63-4306-84d8-ded40216114f": {
+          "progression_name": "Desenvolupament d'habilitats"
         },
         "9e411d33-77b5-4582-b8e8-dedb36230af5": {
           "name": "Introducció"
@@ -1173,6 +1421,9 @@
         "0681ba72-f4b3-4587-ad2b-c4343ee5d7af": {
           "name": "Introducció"
         },
+        "398815f4-e1bb-4d7c-b2be-2c9380704b3e": {
+          "progression_name": "Desenvolupament d'habilitats"
+        },
         "5e8e6fbf-ad94-47ff-935e-155e7a92c73f": {
           "name": "Introducció"
         },
@@ -1190,8 +1441,14 @@
         "012a07d9-4401-4f1b-9b2f-0ef2befba91e": {
           "name": "Introducció"
         },
+        "071fbf5c-0fc0-4738-a7d1-558290f78934": {
+          "progression_name": "Desenvolupament d'habilitats"
+        },
         "4df80825-7300-4e21-b3ec-5b1ecc62d490": {
           "name": "Introducció"
+        },
+        "83daad31-f1c9-4d21-897b-a291d39f55df": {
+          "progression_name": "Desenvolupament d'habilitats"
         },
         "9798ab7a-f709-42df-b9fb-1828099a88d3": {
           "progression_name": "Joc lliure"
@@ -1199,11 +1456,32 @@
         "414b0efd-1356-4677-9c30-303d3c0afb41": {
           "name": "Introducció"
         },
+        "99b05859-1e56-404c-ab65-0eabd5009dc8": {
+          "progression_name": "Desenvolupament d'habilitats"
+        },
+        "2ba5a718-c776-4973-b81b-46c01ee3a611": {
+          "progression_name": "Desenvolupament d'habilitats"
+        },
         "137d4f7b-efec-4607-97b0-e4838274a5c9": {
           "name": "Introducció"
         },
+        "599f0ab4-6410-4002-9b4a-540e75d4f815": {
+          "progression_name": "Desenvolupament d'habilitats"
+        },
+        "9ab1ae71-66af-4623-b62a-f064c3c1f6eb": {
+          "progression_name": "Desenvolupament d'habilitats"
+        },
         "eababef0-4852-4c6f-b5db-2021e532c24d": {
           "name": "Introducció"
+        },
+        "ae2702dd-1b90-4eac-a21e-8cb4a84b6cd1": {
+          "progression_name": "Desenvolupament d'habilitats"
+        },
+        "1604d928-c94d-4496-a973-156b5ce382a9": {
+          "progression_name": "Desenvolupament d'habilitats"
+        },
+        "6ebeff6b-35ce-4b04-8570-ea1ef77e68cc": {
+          "progression_name": "Desenvolupament d'habilitats"
         },
         "828088e0-ab60-429b-ac4b-4317696c271c": {
           "progression_name": "Joc lliure"
@@ -1211,8 +1489,17 @@
         "d5f6ef42-7dc3-4862-a568-590c2a26c7fa": {
           "name": "Introducció"
         },
+        "db031fa5-7047-46ee-8ccf-49a1f15c696a": {
+          "progression_name": "Desenvolupament d'habilitats"
+        },
+        "b19a320c-8372-4505-90c0-a44255e0ae50": {
+          "progression_name": "Desenvolupament d'habilitats"
+        },
         "d89fd667-2100-4ea0-ac33-c25c317c1138": {
           "name": "Introducció"
+        },
+        "f93f7ead-cfbc-494a-bfa3-03ed6ed8e7a4": {
+          "progression_name": "Desenvolupament d'habilitats"
         },
         "fbf95927-5c0c-4980-bbb6-7a4bc75da827": {
           "name": "Introducció",
@@ -1224,6 +1511,15 @@
           "tips": [
             null
           ]
+        },
+        "2d570216-8519-47e7-bc42-58b9e876dd9e": {
+          "progression_name": "Desenvolupament d'habilitats"
+        },
+        "4da6304f-c60e-4701-b04e-38b38ddf008f": {
+          "progression_name": "Desenvolupament d'habilitats"
+        },
+        "94e730d2-235a-408d-8a51-b9ca83fe59e0": {
+          "progression_name": "Desenvolupament d'habilitats"
         },
         "0cb275f3-0f5c-4b45-a456-c3acd5a7b82d": {
           "progression_name": "Joc lliure"
@@ -1245,7 +1541,8 @@
         "515ecad5-bd7d-46e5-b210-53f7e7a3d43b": {
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "Desenvolupament d'habilitats"
         },
         "aa72fe0f-492d-4c13-827d-43918664378e": {
           "name": "Introducció"
@@ -1265,14 +1562,26 @@
             null
           ]
         },
+        "93c42114-b7e6-4d21-9e93-0760e125a7b9": {
+          "progression_name": "Desenvolupament d'habilitats"
+        },
+        "84a9b36a-0025-40e0-a586-3a4b7922202d": {
+          "progression_name": "Desenvolupament d'habilitats"
+        },
         "29bc9a2b-2f0e-4f9f-becf-3264d6d93b43": {
           "progression_name": "Joc lliure"
         },
         "25e6419e-5475-4864-a3db-c05f2d873436": {
           "name": "Introducció"
         },
+        "aed9e7b5-5f28-4fef-81d9-35d67a89ce96": {
+          "progression_name": "Desenvolupament d'habilitats"
+        },
         "4c108344-ee78-432c-bec0-21f055aec442": {
           "name": "Introducció"
+        },
+        "09232a7b-7302-4953-bf68-8d92ccc592e4": {
+          "progression_name": "Desenvolupament d'habilitats"
         },
         "bb3c50cd-8d7e-457a-b39d-2fe3172f0e9e": {
           "name": "Introducció"
@@ -1281,6 +1590,9 @@
           "tips": [
             null
           ]
+        },
+        "e0e39e0f-93b9-40b2-abe5-18886551cf49": {
+          "progression_name": "Desenvolupament d'habilitats"
         },
         "f8950515-c428-4508-b465-0930dcbb9d57": {
           "progression_name": "Joc lliure"
@@ -1297,6 +1609,7 @@
         },
         "de1b7224-82b6-4f1e-aa81-b9aebc78c6b1": {
           "name": "Introducció",
+          "description": "### Comportament al Laboratori d'Informàtica\n\n**Objectiu:** Aquesta presentació mostrarà als estudiants què poden esperar i com s'han de comportar quan entren al laboratori d'informàtica.",
           "tips": [
             null
           ]
@@ -1306,15 +1619,36 @@
             null
           ]
         },
+        "daf617ff-a3a7-4eb0-bede-08a0d1526a52": {
+          "description": "**Debateu:**\n\nAnimeu un bon debat sobre com cal comportar-se al laboratori d'informàtica per assegurar-vos que els alumnes entenen les normes. Alguns temes de reflexió poden ser:\n\n-   Està bé córrer al laboratori d'informàtica?\n-   Com de fort hem de caminar quan som al laboratori d'informàtica?\n-   Què has de fer si et quedes encallat en un trencaclosques?\n-   Si et sents frustrat, creus que t'ajudarà donar cops a l'ordinador?\n-   Com ens hem de preparar quan estiguem a punt d'anar al laboratori d'informàtica?"
+        },
+        "d5094792-babe-40db-9c52-2a413ad1345a": {
+          "description": "### Previsualització de Trencaclosques en línea (5 min.)\n\nPrepareu un trencaclosques de la lliçó 1. Ensenyeu a la classe com fer clic a la imatge i col·locar-la al lloc correcte arrossegant-la i deixant-la anar. Cometeu errors a propòsit, com fer clic sobre el fons o deixar anar la imatge abans que es trobi al lloc correcte. Demaneu l'ajuda de voluntaris a la classe quan us trobeu amb aquests problemes."
+        },
         "749e673c-fb7b-4101-9308-78d14af34b57": {
           "tips": [
             null
           ]
         },
+        "a7aaca22-48bd-4605-bd09-d6a0c6b4beae": {
+          "description": "Feu que els nens formin parelles i vegin el vídeo de programació, o bé en grup o bé als seus ordinadors. Això els ajudarà a començar en la direcció correcta."
+        },
         "e7ff4d51-6bd2-4e1b-9da4-71c9c010c069": {
           "tips": [
             null
           ]
+        },
+        "99491ad7-d0e6-4752-9f6b-01236e762005": {
+          "description": "-   Feu servir la programació per parelles sempre que sigui possible durant l'activitat.\n-   Animeu els estudiants que tinguin preguntes o problemes a que primer li preguntin al company.\n-   Les preguntes sense resposta es poden dirigir a un grup proper, que potser ja sap la solució.\n-   Recordeu als alumnes que han de fer servir el procés de depuració abans d'apropar-se.\n-   Feu que els alumnes descriguin el problema que tenen davant. Què se suposa que ha de fer? Què fa? I això què els diu?\n-   Recoredeu als alumnes frustrats que la frustració és un pas més del camí d'aprenentatge i que la persistència donarà fruit.\n-   Si un alumne segueix encallat després de tot aquest procés, feu-li preguntes orientatives per tal que detecti l'error per si mateix."
+        },
+        "282e9e32-5912-4b7b-b154-daceab2b09db": {
+          "progression_name": "Desenvolupament d'habilitats"
+        },
+        "9374c17f-89e9-405d-9c08-996fbf90e971": {
+          "description": "Demanar als alumnes que escriguin sobre allò que han après, per què és útil, i què en pensen pot ajudar-los a assimilar el coneixement que han adquirit avui, i en fer-ho crearan un full de repàs que els podran consultar més endavant.\n\n**Idees:**\n\n-   Dibuxa una careta que transmeti com t'ha fet sentir la lliçó d'avui a la cantonada superior de la llibreta.\n-   Pots dibuixar una seqüència que ensenyi com et prepares per anar al laboratori d'informàtica?\n-   Dibuixa una cosa que es pot fer i una que no es pot fer al laboratori. \n-   Dibuixa i posa el nom de la part de l'ordinador que has fet servir per fer clic i arrossegar durant els trencaclosques (botó del ratolí, pantalla tàctil, trackpad)."
+        },
+        "486abca7-e486-4acf-bb53-98c8c9cbbf12": {
+          "description": "Si els alumnes acaben els trencaclosques de l'Etapa 4 abans de temps, demaneu-los que dediquin un temps a inventar-se els seus propis trancaclosques en els seus diaris de reflexió."
         },
         "f1441fec-0659-46e7-b4a8-e5faada350e9": {
           "tips": [
@@ -1331,6 +1665,12 @@
             null
           ]
         },
+        "bc9ddb65-4298-403d-b9b4-d8c7ad98b760": {
+          "progression_name": "Desenvolupament d'habilitats"
+        },
+        "4b2ae2f9-5106-4ab2-91b3-fa6b5077a205": {
+          "progression_name": "Desenvolupament d'habilitats"
+        },
         "be7516c7-7930-4a50-afac-99d9ff233e72": {
           "tips": [
             null
@@ -1339,6 +1679,9 @@
         "0918b0a2-6581-4f48-b0f1-4ef6a2b114ce": {
           "name": "Introducció"
         },
+        "7e274048-6f57-4ec7-b0ef-a9fea4f99ce2": {
+          "progression_name": "Desenvolupament d'habilitats"
+        },
         "951923b1-6912-477c-b97f-b4f9d6f71f62": {
           "name": "Introducció"
         },
@@ -1346,6 +1689,12 @@
           "tips": [
             null
           ]
+        },
+        "5d87e611-aef5-4743-b2c2-4c12c39f3069": {
+          "progression_name": "Desenvolupament d'habilitats"
+        },
+        "ac3a1054-1f1e-4c0a-8c2c-e20afa043bdf": {
+          "progression_name": "Desenvolupament d'habilitats"
         },
         "e0d79c69-a899-455f-b74d-670229a86973": {
           "name": "Introducció"
@@ -1360,8 +1709,20 @@
             null
           ]
         },
+        "b7cac6ab-1f77-4f85-8049-a0f88b26e2d1": {
+          "progression_name": "Desenvolupament d'habilitats"
+        },
+        "b28b1ad5-4cd6-44ce-b3b9-7dcdebbf95ff": {
+          "progression_name": "Desenvolupament d'habilitats"
+        },
         "ea1b43fd-047d-4ed2-a8f6-9c639ec26416": {
           "name": "Introducció"
+        },
+        "0c5c0b74-df51-44ca-9b65-78e14fff2a73": {
+          "progression_name": "Desenvolupament d'habilitats"
+        },
+        "e371ebd3-968f-49a0-a5dd-c464cdd9e1f0": {
+          "progression_name": "Desenvolupament d'habilitats"
         },
         "524c769b-ceae-4bde-906e-c73bde2ce3e9": {
           "name": "Introducció"
@@ -1370,6 +1731,12 @@
           "tips": [
             null
           ]
+        },
+        "a3ae6601-d988-4211-bd0f-1a29739732c7": {
+          "progression_name": "Desenvolupament d'habilitats"
+        },
+        "f6fd7485-d7ca-40e8-9a20-d1f6236db0a4": {
+          "progression_name": "Desenvolupament d'habilitats"
         },
         "45027086-96db-45ba-baa9-2983b677e8c9": {
           "progression_name": "Joc lliure"
@@ -1381,6 +1748,9 @@
           "tips": [
             null
           ]
+        },
+        "5a79f620-d679-4a68-9d90-91f8e5f311c9": {
+          "progression_name": "Desenvolupament d'habilitats"
         },
         "1c1d446d-d36d-4429-9aa9-c043841d460a": {
           "progression_name": "Joc lliure"
@@ -1418,6 +1788,9 @@
             null
           ]
         },
+        "1649ef8d-4ee4-47d1-8bcc-bb5d13194f38": {
+          "progression_name": "Desenvolupament d'habilitats"
+        },
         "719202e7-e59f-44af-9208-46eb120b3ba0": {
           "tips": [
             null
@@ -1441,10 +1814,19 @@
             null
           ]
         },
+        "26f5ae92-053e-41b6-986f-2000c544fdf1": {
+          "progression_name": "Desenvolupament d'habilitats"
+        },
         "312dff10-c9dd-416d-8ef0-210bcb685fa8": {
           "tips": [
             null
           ]
+        },
+        "12694952-dd7c-472d-a1e5-a328dbe61d45": {
+          "progression_name": "Desenvolupament d'habilitats"
+        },
+        "d37d8cc9-677b-4872-90aa-c0d034c56046": {
+          "progression_name": "Desenvolupament d'habilitats"
         },
         "398d751a-0d3a-4a34-8467-cf803d7a6281": {
           "tips": [
@@ -1453,6 +1835,9 @@
         },
         "bcfc82a8-7ed5-47c7-8184-f0aa05afeddf": {
           "name": "Introducció"
+        },
+        "370d17c8-578a-49d9-ab3f-052a436d0217": {
+          "progression_name": "Desenvolupament d'habilitats"
         },
         "dad2daad-3c3c-4b68-9796-dce5981083a9": {
           "name": "Introducció"
@@ -1467,6 +1852,12 @@
             null
           ]
         },
+        "b3b3ff78-4902-4198-ae3c-a3742e2f141d": {
+          "progression_name": "Desenvolupament d'habilitats"
+        },
+        "d2711b59-b742-4252-bd55-ff3126f404d1": {
+          "progression_name": "Desenvolupament d'habilitats"
+        },
         "da0d9b08-22ef-4f7d-b750-31f702a06784": {
           "tips": [
             null
@@ -1480,8 +1871,20 @@
             null
           ]
         },
+        "3107f7a8-270f-41aa-9a41-896619d41b1b": {
+          "progression_name": "Desenvolupament d'habilitats"
+        },
+        "ee8caf71-360e-4c70-a574-7b7a2745d530": {
+          "progression_name": "Desenvolupament d'habilitats"
+        },
         "7b804016-339b-43f0-b33b-80f59f2dd53f": {
           "name": "Introducció"
+        },
+        "3d60a400-ed5c-4cda-90f5-9f4ae59c23a4": {
+          "progression_name": "Desenvolupament d'habilitats"
+        },
+        "fa2be632-6107-465b-a739-2311da75e17f": {
+          "progression_name": "Desenvolupament d'habilitats"
         },
         "31c7212e-56c7-41b0-97c8-277498149ef7": {
           "tips": [
@@ -1553,14 +1956,26 @@
             null
           ]
         },
+        "a0390c7b-253b-4729-bda9-791ef82df43b": {
+          "progression_name": "Desenvolupament d'habilitats"
+        },
         "e681233b-1029-4530-a3ef-4842b8254aa6": {
           "name": "Introducció"
+        },
+        "2029eb81-02c4-400f-9c31-585c5a3f2118": {
+          "progression_name": "Desenvolupament d'habilitats"
         },
         "505c83de-b318-4a7d-9a4b-9da377a5b0d8": {
           "name": "Introducció"
         },
+        "581b9960-a83f-4bdd-87d8-7007977e087c": {
+          "progression_name": "Desenvolupament d'habilitats"
+        },
         "9f1508f1-3a4b-42fb-82fb-d31a0aad9576": {
           "name": "Introducció"
+        },
+        "efbbafe6-1b5a-4084-be1d-a0adf068fe3c": {
+          "progression_name": "Desenvolupament d'habilitats"
         },
         "12b5328f-3f65-46e2-b3e7-9426b47e1f31": {
           "tips": [
@@ -1577,6 +1992,15 @@
         },
         "be9470c8-795f-4e1d-83f2-069961c852d2": {
           "name": "Introducció"
+        },
+        "336c18d5-0c32-44c2-b35c-a6f7eec5abff": {
+          "progression_name": "Desenvolupament d'habilitats"
+        },
+        "78b79d53-246f-40a9-ab3a-557fba2f5c1a": {
+          "progression_name": "Desenvolupament d'habilitats"
+        },
+        "38b1f726-8881-479b-a9e5-7fd354aacf31": {
+          "progression_name": "Desenvolupament d'habilitats"
         },
         "f4370643-7030-4064-a1a5-5d5385a91c80": {
           "name": "Introducció"
@@ -1612,6 +2036,9 @@
         },
         "49e86e55-b607-4af6-bdb6-b912549b69ea": {
           "name": "Introducció"
+        },
+        "70706f4c-ac33-422e-86fd-6f20f63e4438": {
+          "progression_name": "Desenvolupament d'habilitats"
         },
         "ddee86f6-7f1f-41b8-bd96-f891312addb0": {
           "tips": [
@@ -2626,7 +3053,8 @@
         "7ac34d77-29c1-48f2-83f9-2958ace257d6": {
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "Desenvolupament d'habilitats"
         },
         "39e245a3-6023-4437-9b2d-be1302738dcf": {
           "tips": [
@@ -2656,7 +3084,8 @@
         "8edada5b-86d6-4a42-ac50-b07edf4532b9": {
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "Desenvolupament d'habilitats"
         },
         "688da228-b907-4c2c-9da1-994c310ee90a": {
           "tips": [
@@ -2691,7 +3120,8 @@
         "07fe88bf-35a4-4aa8-acf7-9c1007644cde": {
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "Desenvolupament d'habilitats"
         },
         "f74ad1cc-b5f7-449b-a326-539985fed8e8": {
           "tips": [
@@ -2712,6 +3142,9 @@
           "tips": [
             null
           ]
+        },
+        "a0264725-895e-4d0e-b484-80c5a27e5cc2": {
+          "progression_name": "Desenvolupament d'habilitats"
         },
         "5faee321-0fce-40db-840a-01d1c60a93f3": {
           "tips": [
@@ -2738,10 +3171,17 @@
             null
           ]
         },
+        "d57fe82a-42f4-4970-93f4-0986d14634d8": {
+          "progression_name": "Desenvolupament d'habilitats"
+        },
         "b4a96bd4-10b7-422b-b6da-c47207c5dfab": {
           "tips": [
             null
           ]
+        },
+        "2e9880cf-89f3-43ae-9c97-f6cf3b433745": {
+          "name": "Desenvolupament d'habilitats",
+          "progression_name": "Desenvolupament d'habilitats"
         },
         "165877c4-3e03-481d-a154-fb67246e645f": {
           "tips": [
@@ -2763,6 +3203,9 @@
             null
           ]
         },
+        "5220005a-c3fe-43a5-b9bb-19b36903e4ad": {
+          "progression_name": "Desenvolupament d'habilitats"
+        },
         "80c13844-f45f-4521-8389-785692d08d25": {
           "tips": [
             null
@@ -2777,6 +3220,9 @@
           "tips": [
             null
           ]
+        },
+        "e34ce1fc-a4e7-49bf-80a6-e2b858117d2f": {
+          "progression_name": "Desenvolupament d'habilitats"
         },
         "6e1156cb-9a38-4700-be52-a89c8369e931": {
           "tips": [
@@ -2833,10 +3279,16 @@
             null
           ]
         },
+        "8f51b172-1a29-4573-a1fd-0033d63b8da1": {
+          "progression_name": "Desenvolupament d'habilitats"
+        },
         "74e39a1e-2693-4a64-a2ec-c48bac2b2c63": {
           "tips": [
             null
           ]
+        },
+        "bf47c328-bb3b-4bfa-9c8b-feb889ea9ba3": {
+          "progression_name": "Desenvolupament d'habilitats"
         },
         "295153cb-f9cb-4b1b-94a2-2e5f8588f879": {
           "tips": [
@@ -2862,6 +3314,9 @@
           "tips": [
             null
           ]
+        },
+        "ae66fc73-77cf-4997-89b6-e462459ec4af": {
+          "progression_name": "Desenvolupament d'habilitats"
         },
         "22bee33a-d845-4e5a-8a7a-568e3d59d2ed": {
           "tips": [
@@ -2929,10 +3384,16 @@
             null
           ]
         },
+        "6d194426-183e-4481-bbce-fb81d3e1e56b": {
+          "progression_name": "Desenvolupament d'habilitats"
+        },
         "36ef31fd-2fa5-4094-94cb-7ac969d0ce87": {
           "tips": [
             null
           ]
+        },
+        "45b91d61-4ce0-4926-958e-854ae5d14009": {
+          "progression_name": "Desenvolupament d'habilitats"
         },
         "a165a923-3695-4f37-b717-2fb10df4bbc1": {
           "tips": [
@@ -2954,6 +3415,9 @@
             null
           ]
         },
+        "8b674ee3-5e12-41cb-ada9-79231faed7a1": {
+          "progression_name": "Desenvolupament d'habilitats"
+        },
         "36faa123-8d61-46f0-96f8-0582020a1720": {
           "tips": [
             null
@@ -2974,10 +3438,16 @@
             null
           ]
         },
+        "3b5b4962-1d02-4591-a4c6-fd1f81665d68": {
+          "progression_name": "Desenvolupament d'habilitats"
+        },
         "8eb9e876-638b-43a9-bacf-9b3b7a51cd6c": {
           "tips": [
             null
           ]
+        },
+        "92a73697-24cd-48cc-ba19-2889073f4ad1": {
+          "name": "Recapitulació"
         },
         "6aa2ee53-e19e-4f39-b28b-698cae041a4c": {
           "tips": [
@@ -3019,6 +3489,9 @@
             null
           ]
         },
+        "66c70a69-b26c-448c-bda8-2276640f676f": {
+          "progression_name": "Desenvolupament d'habilitats"
+        },
         "6bfb34b7-8459-40b8-8d0b-72a3527e83c6": {
           "tips": [
             null
@@ -3027,7 +3500,8 @@
         "640a6355-8d52-44a5-a894-575214bda979": {
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "Desenvolupament d'habilitats"
         },
         "c93790fe-02a3-47ad-9199-92f4842aadc8": {
           "tips": [
@@ -3052,7 +3526,8 @@
         "64a8ae9e-f9ad-422b-88e4-44d0fa1da466": {
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "Desenvolupament d'habilitats"
         },
         "7864c72c-12b6-4eea-acff-8a373828ad58": {
           "tips": [
@@ -3089,6 +3564,9 @@
             null
           ]
         },
+        "bf671c2c-974c-4324-bd4a-9616e5bb20e4": {
+          "progression_name": "Desenvolupament d'habilitats"
+        },
         "a67f4422-b407-43b2-a7bf-e06224301f5c": {
           "tips": [
             null
@@ -3118,6 +3596,9 @@
           "tips": [
             null
           ]
+        },
+        "d6732922-69fb-4e9c-b948-66f12e6f57a3": {
+          "progression_name": "Desenvolupament d'habilitats"
         },
         "f9222c7e-7a06-45fb-a1e1-ba6451ebab35": {
           "tips": [
@@ -3152,7 +3633,8 @@
         "13ca0af7-3563-408a-830b-ff9cf0dfba21": {
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "Desenvolupament d'habilitats"
         },
         "2b837cc6-474a-4bb8-9a2e-92b36aa92c6c": {
           "tips": [
@@ -3351,7 +3833,8 @@
         "f07ea960-3ec3-4d96-86e0-cc073c17b228": {
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "Desenvolupament d'habilitats"
         },
         "a3726f27-d799-44a0-95d4-81a834a2cc1e": {
           "tips": [
@@ -3450,12 +3933,16 @@
         "2f24bcd8-4cad-4f5e-8e48-e447e7f11643": {
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "Desenvolupament d'habilitats"
         },
         "7fa2e2fc-b041-45c9-8e0e-b9151489242c": {
           "tips": [
             null
           ]
+        },
+        "7c07f87c-a21e-4662-bb0d-6263882ac387": {
+          "progression_name": "Desenvolupament d'habilitats"
         },
         "3faa678d-ec51-4137-be13-f88350002fc9": {
           "tips": [
@@ -3548,6 +4035,9 @@
             null
           ]
         },
+        "314d9957-e9b4-45c0-9440-7462d749c5b3": {
+          "progression_name": "Desenvolupament d'habilitats"
+        },
         "f273902f-63fb-4703-8c73-077a259223ec": {
           "tips": [
             null
@@ -3587,6 +4077,9 @@
           "tips": [
             null
           ]
+        },
+        "fc0f6ab0-0642-4088-9837-a115e3dcdd9c": {
+          "progression_name": "Desenvolupament d'habilitats"
         },
         "f09be7f8-ad87-407c-be00-6b83a6751663": {
           "tips": [
@@ -3728,6 +4221,9 @@
             null
           ]
         },
+        "050b31c5-9eb8-461a-bde2-8b91be06bc74": {
+          "progression_name": "Desenvolupament d'habilitats"
+        },
         "e4ee1214-55ce-4eda-a395-634fd773a278": {
           "tips": [
             null
@@ -3760,6 +4256,9 @@
           "tips": [
             null
           ]
+        },
+        "e0bb7854-a0d5-4a85-85da-fc538f4c21e9": {
+          "progression_name": "Desenvolupament d'habilitats"
         },
         "3d1edd9e-b6e0-4a7a-82c6-7f2e901eb943": {
           "tips": [
@@ -4006,6 +4505,12 @@
           "tips": [
             null
           ]
+        },
+        "71fa0ffd-0409-4796-976e-b36b4c811ad4": {
+          "name": "Recapitulació"
+        },
+        "9680a7eb-64bc-464e-a2fd-3b0e82681ed9": {
+          "name": "Recapitulació"
         },
         "9b779d91-6724-4b98-be00-bc17491f3680": {
           "tips": [
@@ -4322,6 +4827,9 @@
             null
           ]
         },
+        "528da587-643b-41ca-8a13-f42753a24da1": {
+          "name": "Recapitulació"
+        },
         "61d19495-eb48-4111-a900-b401fd6e2e3e": {
           "tips": [
             null
@@ -4361,7 +4869,8 @@
         "8521baa9-94ef-4752-ad13-09bacfd132d6": {
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "Desenvolupament d'habilitats"
         },
         "a184074d-7a79-46a5-892f-8aeff5829c19": {
           "tips": [
@@ -4371,7 +4880,8 @@
         "010e456f-614d-48fe-a5bc-05ba548140ba": {
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "Desenvolupament d'habilitats"
         },
         "e8a29551-e19b-47bd-9263-f1c1a08575ff": {
           "tips": [
@@ -4402,7 +4912,8 @@
         "a0549135-da45-4397-be95-1aad863b37d2": {
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "Desenvolupament d'habilitats"
         },
         "04b6ab50-104f-420b-9e70-8da663144a51": {
           "tips": [
@@ -4418,6 +4929,9 @@
           "tips": [
             null
           ]
+        },
+        "66906651-7aa5-4c1e-95ea-b80ab57da2c3": {
+          "progression_name": "Desenvolupament d'habilitats"
         },
         "fde374b2-aa35-4cb7-9cb2-176b0b48a9ae": {
           "tips": [
@@ -4439,15 +4953,24 @@
             null
           ]
         },
+        "93ea638a-0d81-4055-88cc-d9167581d9be": {
+          "progression_name": "Desenvolupament d'habilitats"
+        },
         "a0f4ad44-579c-4404-8ba2-bcb19e459e0c": {
           "tips": [
             null
           ]
         },
+        "c8cebe3f-35da-44ac-9cc6-29190c5b6544": {
+          "progression_name": "Desenvolupament d'habilitats"
+        },
         "64e9d8c1-f351-4dec-b424-f4c03bd5324a": {
           "tips": [
             null
           ]
+        },
+        "99737e58-9db8-43d5-8437-03794c232a9c": {
+          "progression_name": "Desenvolupament d'habilitats"
         },
         "314cd764-1846-45e2-951b-1fc00d8b5aed": {
           "tips": [
@@ -4458,6 +4981,9 @@
           "tips": [
             null
           ]
+        },
+        "ae140bd7-8f40-4e4b-b867-e72fe2d1894e": {
+          "progression_name": "Desenvolupament d'habilitats"
         },
         "103c17a8-f0b0-4836-8eed-93cd0a2fa293": {
           "tips": [
@@ -4512,6 +5038,9 @@
             null
           ]
         },
+        "acf62008-5c0a-42bf-887f-c933e92f107a": {
+          "progression_name": "Desenvolupament d'habilitats"
+        },
         "8f9190dd-ac05-4161-a3ec-523af179eb8f": {
           "tips": [
             null
@@ -4526,6 +5055,9 @@
           "tips": [
             null
           ]
+        },
+        "6b3d5fc1-6b24-4b20-b689-859ed60b7781": {
+          "progression_name": "Desenvolupament d'habilitats"
         },
         "3b80805c-210e-4afa-b195-9d0849f5a1f0": {
           "tips": [
@@ -4542,10 +5074,16 @@
             null
           ]
         },
+        "b61c6ed4-9e1d-4cec-8749-167d1414b515": {
+          "progression_name": "Desenvolupament d'habilitats"
+        },
         "e13764d2-b1f3-40c7-9632-b0e82f82ee45": {
           "tips": [
             null
           ]
+        },
+        "d18fd32f-358e-4525-96b9-329e455fea1c": {
+          "name": "Recapitulació"
         },
         "8e91a1e2-4138-418e-bb96-7c64113b711a": {
           "tips": [
@@ -4562,10 +5100,20 @@
             null
           ]
         },
+        "ecb1a1f9-d63d-4386-b991-bc3a954a2648": {
+          "name": "Recapitulació"
+        },
         "8044eba7-f12f-4ff5-b1b7-a2ee795043cf": {
+          "name": "Recapitulació",
           "tips": [
             null
           ]
+        },
+        "3a7eb86f-0db6-4e77-b6ae-b126fb389834": {
+          "name": "Recapitulació"
+        },
+        "f0da6b6d-7815-4cb8-bb39-ebca0481b983": {
+          "name": "Recapitulació"
         },
         "e2e83de3-7f19-4af1-816a-e8e685a1f6f7": {
           "tips": [
@@ -4577,10 +5125,23 @@
             null
           ]
         },
+        "2e59bfde-65a5-450d-9701-426f7353a617": {
+          "name": "Recapitulació"
+        },
+        "a26024c1-74e8-4da6-81b3-b0f43b4a9df3": {
+          "name": "Recapitulació"
+        },
         "4c4844c5-1cfc-4e21-b5fe-688b84f55ab3": {
+          "name": "Recapitulació",
           "tips": [
             null
           ]
+        },
+        "61b7da2d-8df0-408c-8e32-3e4c2d0b749f": {
+          "name": "Recapitulació"
+        },
+        "43fde334-6c07-4b1b-b23d-4b67f5fbfbc0": {
+          "name": "Recapitulació"
         },
         "b46cfe31-9b5e-4820-b368-fc8a4fa139a7": {
           "tips": [
@@ -4591,6 +5152,12 @@
           "tips": [
             null
           ]
+        },
+        "a2936dce-eb0e-42dc-a9f8-dd616f4fc105": {
+          "progression_name": "Desenvolupament d'habilitats"
+        },
+        "7f101211-f462-454f-ae75-b7a9da3097fa": {
+          "progression_name": "Desenvolupament d'habilitats"
         },
         "c4973fc1-e3ac-4d75-a00c-b2b1d9ea95e5": {
           "tips": [
@@ -4607,6 +5174,9 @@
             null
           ]
         },
+        "39352362-2462-47b6-9319-bd351cfc7c06": {
+          "progression_name": "Desenvolupament d'habilitats"
+        },
         "c54f7dfb-6a80-43de-b63d-b72945c32a55": {
           "tips": [
             null
@@ -4622,6 +5192,9 @@
             null
           ]
         },
+        "ee143b4c-c0a3-41f2-a7ad-f6a9d17b1aa0": {
+          "progression_name": "Desenvolupament d'habilitats"
+        },
         "c4228271-c5b7-4567-a23a-47389f925254": {
           "tips": [
             null
@@ -4631,6 +5204,9 @@
           "tips": [
             null
           ]
+        },
+        "1789c265-b590-41c2-856d-381d22646c28": {
+          "progression_name": "Desenvolupament d'habilitats"
         },
         "69126bf3-cf78-4b06-8fe6-f39b86b5ec93": {
           "tips": [
@@ -4657,6 +5233,9 @@
             null
           ]
         },
+        "ee36fb1a-c452-4da6-a983-33c5987f9085": {
+          "progression_name": "Desenvolupament d'habilitats"
+        },
         "a37f0b1f-508e-4592-a58b-664fcefb22bf": {
           "tips": [
             null
@@ -4666,6 +5245,9 @@
           "tips": [
             null
           ]
+        },
+        "f0d4f74c-c410-4931-aef8-6438559f83a4": {
+          "progression_name": "Desenvolupament d'habilitats"
         },
         "e88de202-5900-475a-87e9-0a47216646d9": {
           "tips": [
@@ -4712,6 +5294,9 @@
             null
           ]
         },
+        "afa4fcac-c0c6-4df6-8b1b-d280c5602fc6": {
+          "progression_name": "Desenvolupament d'habilitats"
+        },
         "65990eea-0d83-4814-9076-d63244b6b628": {
           "tips": [
             null
@@ -4721,6 +5306,9 @@
           "tips": [
             null
           ]
+        },
+        "5ef6b3a1-45cf-420c-9ba9-db06070441df": {
+          "progression_name": "Desenvolupament d'habilitats"
         },
         "0376c3e9-bb4a-4cc6-90a7-1b7db8535f57": {
           "tips": [
@@ -5186,6 +5774,9 @@
             null
           ]
         },
+        "028c9b5f-2865-4e4a-9e49-ed7de06433ef": {
+          "name": "Recapitulació"
+        },
         "8e488c36-f0eb-4c5a-8eda-c42d20cf5e19": {
           "name": "Activitat",
           "tips": [
@@ -5202,25 +5793,52 @@
             null
           ]
         },
+        "043ff201-5128-4934-9f35-d5985053c306": {
+          "name": "Recapitulació"
+        },
+        "1e237958-7dc7-4186-a533-1e95192be751": {
+          "name": "Recapitulació"
+        },
         "dd622be2-1989-4bef-a6cb-62e35ba0c1a5": {
           "tips": [
             null
           ]
+        },
+        "4ec6831d-0286-4e77-9b91-c33286b71b1b": {
+          "name": "Recapitulació"
+        },
+        "6e0d3112-2574-4cfa-895b-861975d37691": {
+          "name": "Recapitulació"
         },
         "d3171373-c8fe-4eb1-9eca-cea927c6d1ba": {
           "tips": [
             null
           ]
         },
+        "62d8c1fd-083d-4e27-a12a-50ce87426ed8": {
+          "name": "Recapitulació"
+        },
+        "b6d6a46b-62ad-4765-ab2b-735affc8c53c": {
+          "name": "Recapitulació"
+        },
         "389aa813-ae13-4198-a933-d98a175b109b": {
           "tips": [
             null
           ]
         },
+        "2fd8da1c-c18a-42c8-a248-841c97595686": {
+          "name": "Recapitulació"
+        },
+        "4dc744de-d6ab-4c2d-b789-0ce346684f5c": {
+          "name": "Recapitulació"
+        },
         "e23ca2cd-a010-46d0-a670-98c96b9b6b13": {
           "tips": [
             null
           ]
+        },
+        "4515c61f-9295-4142-9558-03649dd85bda": {
+          "name": "Recapitulació"
         },
         "d1b8559e-ee84-4203-bed9-7674842fb791": {
           "tips": [
@@ -5304,6 +5922,9 @@
           "name": "Joc lliure",
           "progression_name": "Joc lliure"
         },
+        "71c84958-5cc4-467d-8c97-f2f63123c47d": {
+          "progression_name": "Vídeo"
+        },
         "b6a63f32-8007-4b17-ae9b-718652243e78": {
           "progression_name": "Artista: Variables"
         },
@@ -5329,8 +5950,14 @@
           "name": "Joc lliure",
           "progression_name": "Joc lliure"
         },
+        "345e2136-8d60-4513-a0d9-f7db80faff4a": {
+          "progression_name": "Vídeo"
+        },
         "a7fbfcf7-5c63-4f6d-a1c4-21540179724d": {
           "progression_name": "Joc lliure"
+        },
+        "26d010c0-aeef-49ad-85f9-f06ce1daaa31": {
+          "progression_name": "Vídeo"
         },
         "1405ae48-2e0c-4a36-878f-668639ba0f51": {
           "progression_name": "Joc lliure"
@@ -5486,9 +6113,38 @@
           "progression_name": "Esdeveniments"
         },
         "b16d189d-d990-44c4-be49-8f81ac81a96e": {
+          "description": "",
           "tips": [
-            null
+            ""
           ]
+        },
+        "d99fc09e-a586-41df-84b2-e552cc4735e3": {
+          "description": ""
+        },
+        "b6c8c6a3-fe85-4d42-999e-a2ba13f6739a": {
+          "description": ""
+        },
+        "6fba9dd0-6069-402c-a641-53899ae667e2": {
+          "description": ""
+        },
+        "21c585fc-7b80-4ab9-ba4c-8f4caa8ec102": {
+          "description": ""
+        },
+        "a49bc6c2-1b76-476d-98cd-7f040e8853a7": {
+          "name": "",
+          "description": ""
+        },
+        "065eda67-268c-4f91-9caf-efb2c34493fe": {
+          "description": ""
+        },
+        "51a89a3e-a8c7-41d6-bbbf-2ce16fc7e033": {
+          "description": ""
+        },
+        "8630a813-1b6c-49c5-a58b-d2dc5dcccd0a": {
+          "description": ""
+        },
+        "901dbdcd-5c65-4f3d-8cb2-9c9e36a48c2f": {
+          "description": ""
         },
         "bacf1db7-dc91-41b8-ad71-9fb655e18dfa": {
           "tips": [
@@ -5532,7 +6188,8 @@
         "2a37d5b6-c075-4e1f-acc2-e0c4aa3a8192": {
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "Desenvolupament d'habilitats"
         },
         "4e2fcf33-06aa-4650-913e-e2d763d86be7": {
           "tips": [
@@ -5543,6 +6200,9 @@
           "tips": [
             null
           ]
+        },
+        "e242a5f9-7c5a-4b76-b4cd-2ebfde711630": {
+          "progression_name": "Desenvolupament d'habilitats"
         },
         "cce54ba1-52f6-48fe-a069-63a50363ec5b": {
           "tips": [
@@ -5578,7 +6238,8 @@
         "e64a2440-c243-4f49-8181-171a72e38c5c": {
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "Desenvolupament d'habilitats"
         },
         "20919642-5201-4796-9e45-ee76e368614d": {
           "tips": [
@@ -5603,11 +6264,23 @@
         "a9d27e5a-37b2-4490-a6a2-24fa4bf4cbd3": {
           "name": "Introducció"
         },
+        "ef504f91-6fca-4859-a960-7e792de6223e": {
+          "progression_name": "Desenvolupament d'habilitats"
+        },
+        "411a2b66-714e-40fe-9636-a184b62c44bf": {
+          "progression_name": "Desenvolupament d'habilitats"
+        },
+        "88c99bab-0045-4d56-a8ae-a12f32e2866e": {
+          "progression_name": "Desenvolupament d'habilitats"
+        },
         "d6137926-640f-4180-a257-20c5f32317f5": {
           "progression_name": "Joc lliure"
         },
         "92794e43-3dbb-4bf1-8326-f9ed17ef86b7": {
           "name": "Introducció"
+        },
+        "f5e9f7d1-a504-4581-bf6a-a44a5a62cd20": {
+          "progression_name": "Desenvolupament d'habilitats"
         },
         "6cef858a-437c-47a3-9c8a-1229f634948a": {
           "tips": [
@@ -5616,6 +6289,9 @@
         },
         "3d33fa77-1fa9-4e46-921f-fd661884b23f": {
           "name": "Introducció"
+        },
+        "aa24a7a8-7cec-408b-b980-89e9c457605a": {
+          "progression_name": "Desenvolupament d'habilitats"
         },
         "404887ef-1401-41a7-b88d-c07ab2d119cf": {
           "tips": [
@@ -5635,8 +6311,14 @@
         "2e172722-51c4-49c9-8a05-4447b2627ab3": {
           "name": "Introducció"
         },
+        "b500137c-9df8-40c5-8b4d-e4f364f8255e": {
+          "progression_name": "Desenvolupament d'habilitats"
+        },
         "f44ed624-dfda-4f07-9f36-3c6e1ea15639": {
           "name": "Introducció"
+        },
+        "0fddd8bc-8ad0-4604-9ee1-aff82562c1c6": {
+          "progression_name": "Desenvolupament d'habilitats"
         },
         "2faabfda-d8cb-4b9d-b49c-2e79c30f7507": {
           "progression_name": "Joc lliure"
@@ -5656,6 +6338,9 @@
           "tips": [
             null
           ]
+        },
+        "1b81351d-aade-4896-8957-e06fdd93edfa": {
+          "progression_name": "Desenvolupament d'habilitats"
         },
         "708bfaf4-4547-4c24-87d4-3822f97185b5": {
           "tips": [
@@ -5751,10 +6436,16 @@
             null
           ]
         },
+        "b43821ea-fcde-4389-a55f-285b77e61964": {
+          "progression_name": "Desenvolupament d'habilitats"
+        },
         "7a8f2f22-1330-4e95-934e-8ab9c4441b20": {
           "tips": [
             null
           ]
+        },
+        "a60dc5a3-0c97-439c-86a4-628f733b0916": {
+          "progression_name": "Desenvolupament d'habilitats"
         },
         "6a3d0163-b925-4e7a-933a-93f7d6432233": {
           "tips": [
@@ -5769,6 +6460,12 @@
             null
           ]
         },
+        "a54a5ab7-02a5-461d-bdc2-49c946a369d7": {
+          "progression_name": "Desenvolupament d'habilitats"
+        },
+        "9f24e731-b41f-4339-877d-314aa5813f01": {
+          "progression_name": "Desenvolupament d'habilitats"
+        },
         "018fc5e4-ba55-4049-8faf-bfd0f596e796": {
           "name": "Fent bucles"
         },
@@ -5780,8 +6477,20 @@
         "4d2a4e7e-8950-4697-a7c2-1035fe6a4d4c": {
           "name": "Introducció"
         },
+        "297c2fd4-5c7e-4e3a-961a-844203b345e4": {
+          "progression_name": "Desenvolupament d'habilitats"
+        },
+        "67ec9493-9942-4f64-b3dc-8870f4e30fdc": {
+          "progression_name": "Desenvolupament d'habilitats"
+        },
         "6367a0d2-714f-4845-ab8f-2a350d75a4a9": {
           "name": "Introducció"
+        },
+        "e4d8ad46-dc13-4627-a5e2-8c70b45c0f91": {
+          "progression_name": "Desenvolupament d'habilitats"
+        },
+        "c96009cd-a4d7-491a-9ce5-433a04f9fd08": {
+          "progression_name": "Desenvolupament d'habilitats"
         },
         "bd9b2ae7-e0c5-43b5-8416-ab1b164feb2b": {
           "name": "Introducció"
@@ -5790,6 +6499,12 @@
           "tips": [
             null
           ]
+        },
+        "c2a65792-3f2c-49f9-8cba-8b8f975f5f90": {
+          "progression_name": "Desenvolupament d'habilitats"
+        },
+        "c96a7cbe-674b-41b9-b829-a62377a97e1a": {
+          "progression_name": "Desenvolupament d'habilitats"
         },
         "22891986-f61f-4e37-aae4-177019581071": {
           "progression_name": "Joc lliure"
@@ -5847,6 +6562,9 @@
             null
           ]
         },
+        "31f60124-e5bb-4ed5-b5ef-97509d71cbda": {
+          "progression_name": "Desenvolupament d'habilitats"
+        },
         "4aa550d3-10b9-4151-9ed8-45ce24b49e7d": {
           "tips": [
             null
@@ -5870,10 +6588,19 @@
             null
           ]
         },
+        "88c2697f-a9ba-483a-8091-cc2a1b7bf027": {
+          "progression_name": "Desenvolupament d'habilitats"
+        },
         "7119f518-386e-44e7-893d-eff0fbc5a87d": {
           "tips": [
             null
           ]
+        },
+        "487f446a-7245-403f-827c-e1e94663c256": {
+          "progression_name": "Desenvolupament d'habilitats"
+        },
+        "af0d64b6-9076-490e-96b8-b4d56d3dc5c5": {
+          "progression_name": "Desenvolupament d'habilitats"
         },
         "3719811c-4fc2-4da5-94c7-989c91ef7d1e": {
           "tips": [
@@ -5882,6 +6609,9 @@
         },
         "2ded9602-0160-439c-8830-204047d30796": {
           "name": "Introducció"
+        },
+        "c32e2a10-753e-4e64-b8b8-82d3f4f1a09c": {
+          "progression_name": "Desenvolupament d'habilitats"
         },
         "6c3b7137-b86e-4fc9-9fce-6e346df584dd": {
           "name": "Introducció"
@@ -5896,6 +6626,12 @@
             null
           ]
         },
+        "595fbc1f-baf6-446c-97dd-c89fa67a6baf": {
+          "progression_name": "Desenvolupament d'habilitats"
+        },
+        "c654e7af-7a96-4f1a-af67-5ee47829f1de": {
+          "progression_name": "Desenvolupament d'habilitats"
+        },
         "3cd2a8cd-efcc-40cd-a541-17ae2c95b14c": {
           "tips": [
             null
@@ -5909,8 +6645,20 @@
             null
           ]
         },
+        "aa4a5c66-dcf9-40c9-9200-fa9cac74b945": {
+          "progression_name": "Desenvolupament d'habilitats"
+        },
+        "88d2b3e5-c082-46bc-8aad-915f42e9a2f1": {
+          "progression_name": "Desenvolupament d'habilitats"
+        },
         "6f6b3e61-f640-4e12-b65a-a798a35229e8": {
           "name": "Introducció"
+        },
+        "d060bb00-33a3-4049-925e-56db3f7508f7": {
+          "progression_name": "Desenvolupament d'habilitats"
+        },
+        "665ce7fe-d6ac-4c94-ae9c-3e35402d1a36": {
+          "progression_name": "Desenvolupament d'habilitats"
         },
         "1e2c8e78-0b20-48a4-aeba-08cad3060e42": {
           "tips": [
@@ -5979,14 +6727,26 @@
             null
           ]
         },
+        "1ebd42df-a302-418a-be1e-6bbca930cedf": {
+          "progression_name": "Desenvolupament d'habilitats"
+        },
         "34b2ac1f-8204-4cf2-817c-26a6eafb348b": {
           "name": "Introducció"
+        },
+        "9b6832e5-f80f-4baa-9049-48d9526443ba": {
+          "progression_name": "Desenvolupament d'habilitats"
         },
         "c1c33567-d81d-49d9-a399-e0ba461f0165": {
           "name": "Introducció"
         },
+        "e79bc3de-623c-4238-bdd7-6a6128f79ff8": {
+          "progression_name": "Desenvolupament d'habilitats"
+        },
         "5ba69a56-1f3b-42fa-9be4-9463ae109962": {
           "name": "Introducció"
+        },
+        "e6f324ba-3055-45c2-ad1b-3f8a5d8a0c65": {
+          "progression_name": "Desenvolupament d'habilitats"
         },
         "16e320f6-0c67-4992-87a4-0ae6396a1080": {
           "tips": [
@@ -6001,8 +6761,17 @@
         "ff476c40-142d-458c-8c84-04f775b46de3": {
           "name": "Introducció"
         },
+        "aadcbed9-b15e-4fcb-b277-fd1c8156270e": {
+          "progression_name": "Desenvolupament d'habilitats"
+        },
+        "6fed6081-6c4a-4a1a-8db9-69ab9fd41513": {
+          "progression_name": "Desenvolupament d'habilitats"
+        },
         "dacd64e5-3f26-48ad-9e50-3d2eaca56292": {
           "name": "Introducció"
+        },
+        "2f87a826-1460-4d5c-9db3-47911c77a56a": {
+          "progression_name": "Desenvolupament d'habilitats"
         },
         "aaae9aa4-7847-4f45-be5e-96f454d2e343": {
           "name": "Introducció"
@@ -6035,6 +6804,9 @@
         },
         "6cc5d299-00fd-477a-a654-60dc83031733": {
           "name": "Introducció"
+        },
+        "3344bb9f-6bfa-40f1-b21a-26a077f975a5": {
+          "progression_name": "Desenvolupament d'habilitats"
         },
         "f505b90a-43b4-4d71-b806-e50fdbfeca75": {
           "tips": [
@@ -6107,6 +6879,9 @@
             null
           ]
         },
+        "b76a05a9-cfc1-405a-a3f7-3a646200f34d": {
+          "progression_name": "Desenvolupament d'habilitats"
+        },
         "3b261cf8-73e3-4dd0-bef0-f55ba858297b": {
           "tips": [
             null
@@ -6122,6 +6897,9 @@
         },
         "d2a287ee-e85d-4ced-a525-517d98f9258b": {
           "name": "Introducció"
+        },
+        "0fee56da-4a47-490c-b500-a54be824f01c": {
+          "progression_name": "Desenvolupament d'habilitats"
         },
         "9d0e1d83-61ee-4d81-8524-8423a2ddc53f": {
           "name": "Introducció"
@@ -6144,6 +6922,9 @@
           "tips": [
             null
           ]
+        },
+        "72b1888f-765e-42c0-bccc-0e32a5724f40": {
+          "progression_name": "Desenvolupament d'habilitats"
         },
         "2708da4e-dd8b-4b03-ad52-f16a0af26363": {
           "tips": [
@@ -6173,6 +6954,12 @@
         "d343f1b8-bbf5-455e-8d7d-e50907b2fc18": {
           "name": "Introducció als bucles"
         },
+        "dad54c78-6c91-4ba8-bb15-eff5861db842": {
+          "progression_name": "Desenvolupament d'habilitats"
+        },
+        "1d8def71-6e6f-417d-bf76-bf420f509e2b": {
+          "progression_name": "Desenvolupament d'habilitats"
+        },
         "b2c72983-b5ad-4a39-9f80-e6701c7c6df6": {
           "tips": [
             null
@@ -6181,8 +6968,20 @@
         "f34cb485-1f89-4670-bb09-f170b83be646": {
           "name": "Introducció"
         },
+        "1aa2fcd6-f059-4ee1-9d5b-03653ad98460": {
+          "progression_name": "Desenvolupament d'habilitats"
+        },
+        "1d0954f1-dbad-49b1-b3f3-19b4273adeac": {
+          "progression_name": "Desenvolupament d'habilitats"
+        },
         "07ca6e20-a059-4b67-b099-6a90c6d7f4ab": {
           "name": "Introducció"
+        },
+        "7fe86b33-56e5-43a2-bbd8-760d477b6ee1": {
+          "progression_name": "Desenvolupament d'habilitats"
+        },
+        "802e73fc-cff0-462f-8d3d-24c0855bce28": {
+          "progression_name": "Desenvolupament d'habilitats"
         },
         "75e07169-e97a-4d68-b9dc-18aefddf1eab": {
           "name": "Introducció"
@@ -6198,17 +6997,38 @@
         "6b12a150-fd35-4498-821d-938ad47883e4": {
           "name": "Introducció"
         },
+        "2f024770-481d-43dc-aa55-7133819f6663": {
+          "progression_name": "Desenvolupament d'habilitats"
+        },
         "f5e9d0c0-d9c2-40af-b9aa-781078d95fa2": {
           "progression_name": "Joc lliure"
         },
         "0e7cf944-a328-4388-afa7-8712fed768e0": {
           "name": "Introducció"
         },
+        "39678b81-ac0a-4d3a-a2b9-f244e7de7eeb": {
+          "progression_name": "Desenvolupament d'habilitats"
+        },
+        "3f6678b5-e568-42f2-a629-56defb6374fe": {
+          "progression_name": "Desenvolupament d'habilitats"
+        },
         "9edcc1a3-dce9-45bc-86af-546b41287b53": {
           "name": "Introducció"
         },
+        "05e52524-87c5-4ce3-92ce-5d351618bc3f": {
+          "progression_name": "Desenvolupament d'habilitats"
+        },
+        "60c8c247-570f-4f82-92a1-dddff86de3eb": {
+          "progression_name": "Desenvolupament d'habilitats"
+        },
         "6ecd9736-c038-433f-bd11-18b7ae703bcd": {
           "name": "Introducció"
+        },
+        "743e2b7a-0738-44b2-afb4-44a8f1e3edab": {
+          "progression_name": "Desenvolupament d'habilitats"
+        },
+        "35caf44d-4c1f-4dd0-942d-27132dd2c2ee": {
+          "progression_name": "Desenvolupament d'habilitats"
         },
         "ea88a8c8-980d-4d9f-a288-545a8cd65be6": {
           "tips": [
@@ -6231,14 +7051,26 @@
             null
           ]
         },
+        "65c4bba2-442b-4e0d-9264-aa5cb72e80e7": {
+          "progression_name": "Desenvolupament d'habilitats"
+        },
         "defc5a97-b60a-4a6b-8617-e05be08dab35": {
           "name": "Introducció"
+        },
+        "50d3fc0c-d6f2-418b-aeb5-fd74abc01c94": {
+          "progression_name": "Desenvolupament d'habilitats"
         },
         "b26f7849-9b0a-4cb8-a4c1-27ee2eaf3b08": {
           "name": "Introducció"
         },
+        "0474e6b4-d8ed-450d-a6ac-49d35b6d8872": {
+          "progression_name": "Desenvolupament d'habilitats"
+        },
         "493408f8-a48b-457f-924d-0c99519b55e2": {
           "name": "Introducció"
+        },
+        "d9b1cf39-8041-44b2-a8f8-a2e396647ab2": {
+          "progression_name": "Desenvolupament d'habilitats"
         },
         "91b196fb-aecb-44e0-ac99-e74dfa8e586d": {
           "tips": [
@@ -6256,6 +7088,9 @@
             null
           ]
         },
+        "90de173c-642d-4906-a7fe-c3d9ad3123ec": {
+          "progression_name": "Desenvolupament d'habilitats"
+        },
         "5526b3db-d4a9-4d0d-a4a1-81732ba5d7ab": {
           "progression_name": "Joc lliure"
         },
@@ -6267,10 +7102,16 @@
             null
           ]
         },
+        "924d0fc2-b5b6-4176-b3fd-391937e4d187": {
+          "progression_name": "Desenvolupament d'habilitats"
+        },
         "5eb0801e-a90b-47fe-9787-2f7fc7a79f5f": {
           "tips": [
             null
           ]
+        },
+        "00b7c8be-fa03-430e-9c7c-18c4890ac747": {
+          "progression_name": "Desenvolupament d'habilitats"
         },
         "c536d74f-f3af-41d7-b4e4-475b9a3f45c8": {
           "name": "Introducció"
@@ -6300,6 +7141,9 @@
         "ee5c8682-facd-4fcb-88e1-597ca5e436c4": {
           "name": "Introducció"
         },
+        "f62e3109-74fd-45b6-b335-059ef71dc3c3": {
+          "progression_name": "Desenvolupament d'habilitats"
+        },
         "63067b3c-f088-46f7-a3af-7feb4225a2ac": {
           "name": "Introducció"
         },
@@ -6317,8 +7161,14 @@
         "219bed13-d21f-4886-ac11-47ae6eb56005": {
           "name": "Introducció"
         },
+        "89a3d9b1-6f7c-4581-8abc-9d6501a009cc": {
+          "progression_name": "Desenvolupament d'habilitats"
+        },
         "a608e3c1-c749-4463-b478-51d339fab447": {
           "name": "Introducció"
+        },
+        "db402396-6473-4942-a3b9-e3833beb0cd8": {
+          "progression_name": "Desenvolupament d'habilitats"
         },
         "61cffed6-e526-428f-9d2c-e53fbe5b2653": {
           "progression_name": "Joc lliure"
@@ -6326,11 +7176,32 @@
         "888667b6-71ac-4d2f-81df-ac6b8769f8b8": {
           "name": "Introducció"
         },
+        "2c223051-9787-4ae5-afb2-c999300ee231": {
+          "progression_name": "Desenvolupament d'habilitats"
+        },
+        "431e814c-2fdb-4385-ac49-7a3ad70c8411": {
+          "progression_name": "Desenvolupament d'habilitats"
+        },
         "c75f92ab-cfc1-481f-b93a-c6496cd99709": {
           "name": "Introducció"
         },
+        "23b4fc9a-484e-482b-856b-cb48acb73dcb": {
+          "progression_name": "Desenvolupament d'habilitats"
+        },
+        "d1f28a2a-eb91-4271-aeef-7c155109fac4": {
+          "progression_name": "Desenvolupament d'habilitats"
+        },
         "dc1332e9-8b48-4325-a310-3de22c787e7d": {
           "name": "Introducció"
+        },
+        "0c1c356b-b51e-49e9-902a-9bb743c4acbc": {
+          "progression_name": "Desenvolupament d'habilitats"
+        },
+        "ebbb5af1-a268-4256-a63b-a179d5813d8d": {
+          "progression_name": "Desenvolupament d'habilitats"
+        },
+        "e7ee7550-aa29-42ad-8be2-a126b7919fb4": {
+          "progression_name": "Desenvolupament d'habilitats"
         },
         "7064cb92-5320-4d9f-9de2-6de2ca05c5d1": {
           "progression_name": "Joc lliure"
@@ -6338,8 +7209,17 @@
         "f6d8a30c-dedb-4797-b71a-d661fb24aeec": {
           "name": "Introducció"
         },
+        "3fabd283-0831-412f-8a9f-76e9bf96206f": {
+          "progression_name": "Desenvolupament d'habilitats"
+        },
+        "308b7268-008e-40c7-9ab3-6977bfd38927": {
+          "progression_name": "Desenvolupament d'habilitats"
+        },
         "dc6adaa2-5c73-48d3-b84e-b046c054bfe6": {
           "name": "Introducció"
+        },
+        "38760d27-fbe5-48c9-bd46-2b7eeac81ca2": {
+          "progression_name": "Desenvolupament d'habilitats"
         },
         "88c1c297-1627-45ec-9eb7-f6fffbe45240": {
           "name": "Introducció",
@@ -6351,6 +7231,15 @@
           "tips": [
             null
           ]
+        },
+        "b891b55a-2a7e-486c-ba28-957df49ac0e6": {
+          "progression_name": "Desenvolupament d'habilitats"
+        },
+        "08364a41-ef59-40a4-b3ec-e55ca40c2e6f": {
+          "progression_name": "Desenvolupament d'habilitats"
+        },
+        "f05f4ec1-71a1-4e00-8d93-935c6f47e01d": {
+          "progression_name": "Desenvolupament d'habilitats"
         },
         "91e51520-32ea-4e43-bc6e-603cf76a7d22": {
           "progression_name": "Joc lliure"
@@ -6372,7 +7261,11 @@
         "7f90ece3-2607-4a59-a5fa-e70566aaafc9": {
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "Desenvolupament d'habilitats"
+        },
+        "79a73c29-5877-4ffc-8570-fad97926f939": {
+          "progression_name": "Desenvolupament d'habilitats"
         },
         "47be5db0-347f-4617-a652-e0b01325b180": {
           "progression_name": "Joc lliure"
@@ -6380,8 +7273,14 @@
         "6ab692c9-eee1-4966-91fa-3bda39450263": {
           "name": "Introducció"
         },
+        "60fb6e02-bbf3-49df-ab58-79496259ada1": {
+          "progression_name": "Desenvolupament d'habilitats"
+        },
         "b3ac68a6-7600-49ad-bfb3-88d318e25658": {
           "name": "Introducció"
+        },
+        "a6fa76d1-aeb7-4caa-ac1c-274d1b823ea2": {
+          "progression_name": "Desenvolupament d'habilitats"
         },
         "48c60679-9f25-4ade-9a34-7a52627fc8f2": {
           "name": "Introducció"
@@ -6390,6 +7289,9 @@
           "tips": [
             null
           ]
+        },
+        "5cb283f5-dd23-4694-a205-a97ffd80c3cc": {
+          "progression_name": "Desenvolupament d'habilitats"
         },
         "1582774d-bc37-4642-8f63-dccb08adea1c": {
           "progression_name": "Joc lliure"
@@ -6406,6 +7308,7 @@
         },
         "b1cca8ed-5145-40b2-b81d-7da6d6dd73dd": {
           "name": "Introducció",
+          "description": "### Comportament al Laboratori d'Informàtica\n\n**Objectiu:** Aquesta presentació mostrarà als estudiants què poden esperar i com s'han de comportar quan entren al laboratori d'informàtica.",
           "tips": [
             null
           ]
@@ -6415,15 +7318,36 @@
             null
           ]
         },
+        "1c2125d9-33ff-4e9b-af87-c814567226a5": {
+          "description": "**Debateu:**\n\nAnimeu un bon debat sobre com cal comportar-se al laboratori d'informàtica per assegurar-vos que els alumnes entenen les normes. Alguns temes de reflexió poden ser:\n\n-   Està bé córrer al laboratori d'informàtica?\n-   Com de fort hem de caminar quan som al laboratori d'informàtica?\n-   Què has de fer si et quedes encallat en un trencaclosques?\n-   Si et sents frustrat, creus que t'ajudarà donar cops a l'ordinador?\n-   Com ens hem de preparar quan estiguem a punt d'anar al laboratori d'informàtica?"
+        },
+        "3e550dce-3786-49bf-8181-0db85bf76550": {
+          "description": "### Previsualització de Trencaclosques en línea (5 min.)\n\nPrepareu un trencaclosques de la lliçó 1. Ensenyeu a la classe com fer clic a la imatge i col·locar-la al lloc correcte arrossegant-la i deixant-la anar. Cometeu errors a propòsit, com fer clic sobre el fons o deixar anar la imatge abans que es trobi al lloc correcte. Demaneu l'ajuda de voluntaris a la classe quan us trobeu amb aquests problemes."
+        },
         "f8ae0c1b-6fd2-4f09-9ab3-67830399dfe0": {
           "tips": [
             null
           ]
         },
+        "88dc7233-0f13-40b9-8ce1-8a021d175bb5": {
+          "description": "Feu que els nens formin parelles i vegin el vídeo de programació, o bé en grup o bé als seus ordinadors. Això els ajudarà a començar en la direcció correcta."
+        },
         "d42ef620-4171-4966-a8ef-47c6079cd1ef": {
           "tips": [
             null
           ]
+        },
+        "6de9f22c-a1d4-45f0-bc41-d7ab54516eab": {
+          "description": "-   Feu servir la programació per parelles sempre que sigui possible durant l'activitat.\n-   Animeu els estudiants que tinguin preguntes o problemes a que primer li preguntin al company.\n-   Les preguntes sense resposta es poden dirigir a un grup proper, que potser ja sap la solució.\n-   Recordeu als alumnes que han de fer servir el procés de depuració abans d'apropar-se.\n-   Feu que els alumnes descriguin el problema que tenen davant. Què se suposa que ha de fer? Què fa? I això què els diu?\n-   Recoredeu als alumnes frustrats que la frustració és un pas més del camí d'aprenentatge i que la persistència donarà fruit.\n-   Si un alumne segueix encallat després de tot aquest procés, feu-li preguntes orientatives per tal que detecti l'error per si mateix."
+        },
+        "bde027df-b2a3-4252-980a-7e8493d898e6": {
+          "progression_name": "Desenvolupament d'habilitats"
+        },
+        "68207b57-546c-4e2c-9742-e35a0ba2ef82": {
+          "description": "Demanar als alumnes que escriguin sobre allò que han après, per què és útil, i què en pensen pot ajudar-los a assimilar el coneixement que han adquirit avui, i en fer-ho crearan un full de repàs que els podran consultar més endavant.\n\n**Idees:**\n\n-   Dibuxa una careta que transmeti com t'ha fet sentir la lliçó d'avui a la cantonada superior de la llibreta.\n-   Pots dibuixar una seqüència que ensenyi com et prepares per anar al laboratori d'informàtica?\n-   Dibuixa una cosa que es pot fer i una que no es pot fer al laboratori. \n-   Dibuixa i posa el nom de la part de l'ordinador que has fet servir per fer clic i arrossegar durant els trencaclosques (botó del ratolí, pantalla tàctil, trackpad)."
+        },
+        "d69fc3f9-0235-4de1-90c7-13f7c8c22cc9": {
+          "description": "Si els alumnes acaben els trencaclosques de l'Etapa 4 abans de temps, demaneu-los que dediquin un temps a inventar-se els seus propis trancaclosques en els seus diaris de reflexió."
         },
         "a6a26f0a-a384-454d-bcae-e6b7f4531439": {
           "tips": [
@@ -6440,6 +7364,12 @@
             null
           ]
         },
+        "0394c5d4-246e-42bc-aca2-97d7bd159173": {
+          "progression_name": "Desenvolupament d'habilitats"
+        },
+        "c07f590c-4333-4b74-a479-fa00fb43acd4": {
+          "progression_name": "Desenvolupament d'habilitats"
+        },
         "179a6d3a-af19-4c62-85c7-82844964d06a": {
           "tips": [
             null
@@ -6448,6 +7378,9 @@
         "5990c610-f353-48fd-9d5f-a813486a237f": {
           "name": "Introducció"
         },
+        "3ea0d264-5395-49ba-8d4a-822734bcc3e2": {
+          "progression_name": "Desenvolupament d'habilitats"
+        },
         "6b656efc-0576-4c50-856b-5c9bc433e5b3": {
           "name": "Introducció"
         },
@@ -6455,6 +7388,12 @@
           "tips": [
             null
           ]
+        },
+        "7675abfe-e572-4b1b-9203-ac0c1e6c3407": {
+          "progression_name": "Desenvolupament d'habilitats"
+        },
+        "1dae474b-e6aa-4934-b8f8-e8521eadb593": {
+          "progression_name": "Desenvolupament d'habilitats"
         },
         "f6ac49ff-86ee-444b-9e56-62de0b794363": {
           "name": "Introducció"
@@ -6469,8 +7408,20 @@
             null
           ]
         },
+        "c46e4d51-ddeb-4387-8f5a-73fb0f7e2574": {
+          "progression_name": "Desenvolupament d'habilitats"
+        },
+        "ff9ff779-b617-4ae3-80c1-db23e1b9c27b": {
+          "progression_name": "Desenvolupament d'habilitats"
+        },
         "3948532c-fefc-466f-a7ff-7d95e6692b96": {
           "name": "Introducció"
+        },
+        "9aa00264-eca7-4093-92fb-60d301554a5b": {
+          "progression_name": "Desenvolupament d'habilitats"
+        },
+        "08049c61-d346-4c06-96f3-58775b4bf69d": {
+          "progression_name": "Desenvolupament d'habilitats"
         },
         "6361a98f-3232-4060-8758-b1f8064507a8": {
           "name": "Introducció"
@@ -6479,6 +7430,12 @@
           "tips": [
             null
           ]
+        },
+        "cd1f7b2a-82e7-4f7f-82f5-a4ce10bf4fab": {
+          "progression_name": "Desenvolupament d'habilitats"
+        },
+        "94271c9b-4000-4e8c-a99c-9a04d851549e": {
+          "progression_name": "Desenvolupament d'habilitats"
         },
         "9501ab3a-0fa4-46d5-88a1-d546663cdffa": {
           "progression_name": "Joc lliure"
@@ -6490,6 +7447,9 @@
           "tips": [
             null
           ]
+        },
+        "1474d69b-c98f-40d9-b8c5-07cbeb090699": {
+          "progression_name": "Desenvolupament d'habilitats"
         },
         "92674c9e-c2dc-4023-a386-8fae5c2b8074": {
           "progression_name": "Joc lliure"
@@ -6530,6 +7490,9 @@
             null
           ]
         },
+        "56aebeea-5b5c-4acd-838c-2906fbf5700d": {
+          "progression_name": "Desenvolupament d'habilitats"
+        },
         "83778d93-2959-4776-94d0-e82985346914": {
           "progression_name": "Joc lliure"
         },
@@ -6540,6 +7503,12 @@
           "tips": [
             null
           ]
+        },
+        "5661328f-256c-4f27-988b-ea102fde1cbd": {
+          "progression_name": "Desenvolupament d'habilitats"
+        },
+        "dc08f2e2-dab1-43b0-8349-9ce3161eec83": {
+          "progression_name": "Desenvolupament d'habilitats"
         },
         "f05ee764-4bce-42ba-bc3d-48685d6ba404": {
           "progression_name": "Joc lliure"
@@ -6565,6 +7534,12 @@
         "5929b1ea-c353-4af8-bdd2-3d9dec6a211d": {
           "name": "Introducció"
         },
+        "257e3a1f-5cc5-444e-94e3-ee18c5d7169e": {
+          "progression_name": "Desenvolupament d'habilitats"
+        },
+        "6d3e5d46-a1c6-420d-a4ad-7d6af12d9dbb": {
+          "progression_name": "Desenvolupament d'habilitats"
+        },
         "6d3af202-fd47-493f-93fa-081fec637b53": {
           "name": "Introducció"
         },
@@ -6572,6 +7547,12 @@
           "tips": [
             null
           ]
+        },
+        "35342825-ca7b-4305-b02a-365e6095e8f6": {
+          "progression_name": "Desenvolupament d'habilitats"
+        },
+        "7f4ec132-6df2-4a23-abe3-853efe35701d": {
+          "progression_name": "Desenvolupament d'habilitats"
         },
         "a2a794ce-1af9-4258-84ad-352ee9f9f187": {
           "progression_name": "Joc lliure"
@@ -6618,14 +7599,35 @@
             null
           ]
         },
+        "cd4d43da-dace-4324-a934-618f8c5b6ec7": {
+          "progression_name": "Desenvolupament d'habilitats"
+        },
+        "4130a39a-0232-45ed-b6c7-1f2badada9ee": {
+          "progression_name": "Desenvolupament d'habilitats"
+        },
+        "8543e376-7910-45df-b486-372036c19fdc": {
+          "progression_name": "Desenvolupament d'habilitats"
+        },
         "faa2f676-cf14-4bd7-b277-8e0a30245c0d": {
           "progression_name": "Joc lliure"
         },
         "efa5dada-af20-4c6f-bcc3-1c3ad1b2ef8d": {
           "name": "Introducció"
         },
+        "c8b7ed1a-7b68-48e5-bf78-c411d209179a": {
+          "progression_name": "Desenvolupament d'habilitats"
+        },
         "26475297-6a91-4f8c-a64d-ded841ff0cb9": {
           "name": "Introducció"
+        },
+        "ace06bbe-f40f-4333-806c-928527edede6": {
+          "progression_name": "Desenvolupament d'habilitats"
+        },
+        "735452ce-870a-4728-8b1b-00a77c5bffbb": {
+          "progression_name": "Desenvolupament d'habilitats"
+        },
+        "3b64705c-3a17-44b9-b688-4bbc029ba2ea": {
+          "progression_name": "Desenvolupament d'habilitats"
         },
         "dc8187ff-3bc9-4079-adda-93abea4abd16": {
           "progression_name": "Joc lliure"
@@ -6636,10 +7638,20 @@
         "47ed862d-1562-4505-a98c-8c852ba6d936": {
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "Desenvolupament d'habilitats"
+        },
+        "af239dc4-fc39-4765-a761-8d1979ef5e11": {
+          "progression_name": "Desenvolupament d'habilitats"
+        },
+        "dec0ef7e-1dd7-4abb-a1f9-b4fc7b9e9643": {
+          "progression_name": "Desenvolupament d'habilitats"
         },
         "990891b6-d051-4117-8dd5-fc3346d69dc5": {
           "name": "Introducció"
+        },
+        "6da14073-1ba0-4603-989b-5b9c9758c047": {
+          "progression_name": "Desenvolupament d'habilitats"
         },
         "076a8517-ba6d-4f59-804d-d40a49d9f184": {
           "tips": [
@@ -7042,6 +8054,9 @@
             null
           ]
         },
+        "f1aefb0a-3a33-499b-9ea6-fc842ba895de": {
+          "name": "Recapitulació"
+        },
         "9492e63b-28f6-41b5-89b9-5f1d611186a1": {
           "name": "Activitat"
         },
@@ -7055,25 +8070,52 @@
             null
           ]
         },
+        "c9458a29-f135-4840-aae0-37c35f2bfa52": {
+          "name": "Recapitulació"
+        },
+        "847d4606-cf5c-4060-ab5c-2870853447a3": {
+          "name": "Recapitulació"
+        },
         "3bc8e042-f19f-4233-bebc-baccef07881b": {
           "tips": [
             null
           ]
+        },
+        "892bacbf-54ca-4447-8e4e-c711765fcd7d": {
+          "name": "Recapitulació"
+        },
+        "934317da-7e33-4f20-ad76-9f06d203b1a6": {
+          "name": "Recapitulació"
         },
         "dc5dddbb-40bf-41e0-be7e-51b41edf1337": {
           "tips": [
             null
           ]
         },
+        "065f7419-b028-4610-b0c4-671f2ec86590": {
+          "name": "Recapitulació"
+        },
+        "9e4ffdd6-9a34-453b-953c-23f4e0516b0f": {
+          "name": "Recapitulació"
+        },
         "4af3f898-21e4-4ed3-bbc6-ca4686c46f7a": {
           "tips": [
             null
           ]
         },
+        "2df922c9-a79a-4e9f-a4e5-003cee501451": {
+          "name": "Recapitulació"
+        },
+        "73c0c357-7096-42d6-b457-e88276905578": {
+          "name": "Recapitulació"
+        },
         "15cc22f5-50bf-4102-843a-7f9246727869": {
           "tips": [
             null
           ]
+        },
+        "1f35f92d-5556-4137-a1e6-38c31a3a719f": {
+          "name": "Recapitulació"
         },
         "9819f2db-593b-4631-96e8-ad45aba59e08": {
           "tips": [
@@ -7270,6 +8312,12 @@
           "tips": [
             null
           ]
+        },
+        "743d6e6b-6320-4157-962e-5789b717aa34": {
+          "name": "Recapitulació"
+        },
+        "9afae521-da27-48d1-9d5f-e90c8690923f": {
+          "name": "Recapitulació"
         },
         "8672a531-0212-4a3a-9831-5c522d710bd4": {
           "tips": [
@@ -7575,6 +8623,9 @@
           "tips": [
             null
           ]
+        },
+        "216053ef-be2c-486a-8bd6-89db4c7ea9dc": {
+          "name": "Recapitulació"
         },
         "dfe65c27-9f06-4c6f-857e-06f4ae98dcd1": {
           "tips": [
@@ -8353,6 +9404,9 @@
             null
           ]
         },
+        "74393dee-626c-4743-b131-1566ed43d56c": {
+          "progression_name": "Desenvolupament d'habilitats"
+        },
         "9612456b-5030-4f4c-a11b-893694130773": {
           "tips": [
             null
@@ -8377,6 +9431,9 @@
           "tips": [
             null
           ]
+        },
+        "4c1fe47c-e862-4d73-9a70-66843600aa20": {
+          "progression_name": "Desenvolupament d'habilitats"
         },
         "ef33e6f2-c5d9-4d5d-85fc-4434062b105f": {
           "tips": [
@@ -8406,7 +9463,8 @@
         "a14285ec-28bc-4b44-a63c-204c0034c19f": {
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "Desenvolupament d'habilitats"
         },
         "58908247-dbee-4578-8155-09f7d934c017": {
           "tips": [
@@ -8422,6 +9480,9 @@
           "tips": [
             null
           ]
+        },
+        "cd7e0902-f7eb-47aa-b09c-b506a3860ff0": {
+          "progression_name": "Desenvolupament d'habilitats"
         },
         "dfafff33-7c5b-4a4a-9d38-647e60b34160": {
           "tips": [
@@ -8443,10 +9504,17 @@
             null
           ]
         },
+        "31324d8c-8187-4b66-b0fe-ff74bbb6077e": {
+          "progression_name": "Desenvolupament d'habilitats"
+        },
         "8f56a7b9-e17b-4173-bae9-c996824270b4": {
           "tips": [
             null
           ]
+        },
+        "d78f2220-48f9-4316-aaeb-7b6131700133": {
+          "name": "Desenvolupament d'habilitats",
+          "progression_name": "Desenvolupament d'habilitats"
         },
         "234316a5-009b-44bd-a51d-fdcb54cc8903": {
           "tips": [
@@ -8463,6 +9531,9 @@
             null
           ]
         },
+        "d77cb04c-3156-47e2-88d1-bbb3c891d9b1": {
+          "progression_name": "Desenvolupament d'habilitats"
+        },
         "34fcaf28-d278-49ff-877f-a5f79f77af59": {
           "tips": [
             null
@@ -8472,6 +9543,9 @@
           "tips": [
             null
           ]
+        },
+        "57f321f4-4d9c-4cfe-9142-513345b6aaec": {
+          "progression_name": "Desenvolupament d'habilitats"
         },
         "2d0fc04c-aa1b-4148-9efd-06764f14c100": {
           "tips": [
@@ -8513,10 +9587,16 @@
             null
           ]
         },
+        "71831a0f-cae7-4f2f-be4d-8d29515588aa": {
+          "progression_name": "Desenvolupament d'habilitats"
+        },
         "fcb22a6b-b548-4ea4-b2bf-23f3db9dde29": {
           "tips": [
             null
           ]
+        },
+        "323374c7-2b08-4f0b-a97d-cab7f3f81de7": {
+          "progression_name": "Desenvolupament d'habilitats"
         },
         "d1f93971-c590-43fb-be4d-a3ced983e77a": {
           "tips": [
@@ -8542,6 +9622,9 @@
           "tips": [
             null
           ]
+        },
+        "1b41610c-933d-416a-b713-b4d975f298f9": {
+          "progression_name": "Desenvolupament d'habilitats"
         },
         "06cad4ef-4d60-42e4-829c-02fd3364c31e": {
           "tips": [
@@ -8581,6 +9664,9 @@
             null
           ]
         },
+        "ba88e2d6-49b9-4e4b-a34f-3a7804ea1ce5": {
+          "progression_name": "Desenvolupament d'habilitats"
+        },
         "030bb18c-bfaf-4c13-8ca7-9b251c26c162": {
           "tips": [
             null
@@ -8589,7 +9675,8 @@
         "b3b4d1e4-17c7-4933-8ba6-03ac7a46839a": {
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "Desenvolupament d'habilitats"
         },
         "461492e7-43b9-4c58-9ee4-b63b716dbded": {
           "tips": [
@@ -8605,6 +9692,9 @@
           "tips": [
             null
           ]
+        },
+        "7f5ec4ec-e8ef-46fb-98db-48db8f4510d2": {
+          "progression_name": "Desenvolupament d'habilitats"
         },
         "9345c305-ff75-4d36-a595-b0b7a69c094f": {
           "tips": [
@@ -8624,12 +9714,16 @@
         "991be916-6a79-484c-95a2-0e6f753d9ac8": {
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "Desenvolupament d'habilitats"
         },
         "fb40596d-a877-43f3-87b7-325a2fd79c37": {
           "tips": [
             null
           ]
+        },
+        "957a684d-5930-4823-99fa-0af6c5701b6f": {
+          "name": "Recapitulació"
         },
         "b9716428-aedc-4578-8328-379b70cb0d50": {
           "tips": [
@@ -8656,6 +9750,9 @@
             null
           ]
         },
+        "498b10a2-a029-449b-a37d-0b85141e917b": {
+          "progression_name": "Desenvolupament d'habilitats"
+        },
         "42d0eae6-06b2-4aa6-a8f6-6081ce2fa560": {
           "tips": [
             null
@@ -8664,7 +9761,8 @@
         "e8b8a1b0-89e9-4b09-978f-11db835db760": {
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "Desenvolupament d'habilitats"
         },
         "a0ba31d0-91f2-4271-aacb-bf5c614aabc3": {
           "tips": [
@@ -8689,7 +9787,8 @@
         "49cfe240-7090-4fbd-9e61-ef725f8bddb1": {
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "Desenvolupament d'habilitats"
         },
         "ef8e8137-1524-4b5d-9e2a-6c6d535cda60": {
           "tips": [
@@ -8710,6 +9809,9 @@
           "tips": [
             null
           ]
+        },
+        "e327d5f5-1886-4b6a-ba54-7eb091abc739": {
+          "progression_name": "Desenvolupament d'habilitats"
         },
         "96cef9d3-a478-4852-9dff-061a5fa5dc79": {
           "tips": [
@@ -8741,6 +9843,9 @@
             null
           ]
         },
+        "c6e363e6-23a1-466a-9589-a4b871989618": {
+          "progression_name": "Desenvolupament d'habilitats"
+        },
         "6b47f10d-a466-436e-ad48-25f2404ae07a": {
           "tips": [
             null
@@ -8764,7 +9869,8 @@
         "085e06bd-a991-42ec-b8e2-2e27712cf7dd": {
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "Desenvolupament d'habilitats"
         },
         "e4283f2d-5933-4812-80df-341067426cc8": {
           "tips": [
@@ -9370,7 +10476,8 @@
         "27e7e382-bef2-4576-94b2-15f081c1c260": {
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "Desenvolupament d'habilitats"
         },
         "415a1a02-00ce-4eee-9af3-bcddf1369b79": {
           "tips": [
@@ -9431,10 +10538,16 @@
             null
           ]
         },
+        "8c1fda37-7107-43e8-92ad-60e7fc6d2d7d": {
+          "progression_name": "Desenvolupament d'habilitats"
+        },
         "bc3aac22-e4eb-4c6f-9b69-60cb02414ac9": {
           "tips": [
             null
           ]
+        },
+        "d9a4b1da-84da-40b3-a256-bbd4223652cd": {
+          "progression_name": "Desenvolupament d'habilitats"
         },
         "3d52ed72-b57b-4d05-902a-c9daceffadc6": {
           "tips": [
@@ -9511,6 +10624,9 @@
             null
           ]
         },
+        "f69595ea-98fa-4c39-9686-6916ab265ab4": {
+          "progression_name": "Desenvolupament d'habilitats"
+        },
         "cf0abcbd-3e9a-4964-9cb3-de8d7b5bec52": {
           "tips": [
             null
@@ -9550,6 +10666,9 @@
           "tips": [
             null
           ]
+        },
+        "e26e14a3-6dad-4328-82ae-39649c0e2970": {
+          "progression_name": "Desenvolupament d'habilitats"
         },
         "60bf9811-2a1c-4ff5-8986-082f04512e85": {
           "tips": [
@@ -9681,6 +10800,9 @@
             null
           ]
         },
+        "6a056ff0-2cca-4983-bfe6-a78771cae232": {
+          "progression_name": "Desenvolupament d'habilitats"
+        },
         "d22a9dfb-fec1-43bb-add2-c76ec1a76f2a": {
           "tips": [
             null
@@ -9708,6 +10830,9 @@
           "tips": [
             null
           ]
+        },
+        "850ba43d-59d1-4cf8-be6c-b2c33b4b4875": {
+          "progression_name": "Desenvolupament d'habilitats"
         },
         "34f33cbb-40a2-4d61-aa69-7bf1aa7f4c81": {
           "tips": [
@@ -9764,6 +10889,9 @@
           "name": "Joc lliure",
           "progression_name": "Joc lliure"
         },
+        "94714177-352d-4ab8-ac96-ec07dc7ba441": {
+          "progression_name": "Recapitulació"
+        },
         "83b5ca79-12e5-4d68-a965-4bed0681e331": {
           "progression_name": "Esdeveniments"
         },
@@ -9793,8 +10921,14 @@
         "4280e340-3549-4814-9afe-d6c9fe291025": {
           "progression_name": "Joc lliure"
         },
+        "3d63e945-be66-4203-91e4-d4780e318ace": {
+          "progression_name": "Vídeo"
+        },
         "84c7f95c-006b-46bc-ba15-67e59c540a18": {
           "progression_name": "Joc lliure"
+        },
+        "b8c86684-ebd8-441f-ba6e-669457575120": {
+          "progression_name": "Vídeo"
         },
         "08cf29e4-2239-4519-b813-5d66842379ae": {
           "progression_name": "Joc lliure"
@@ -9818,6 +10952,9 @@
         },
         "0d749e3d-cf8b-4e7e-bb6e-104a1812a49f": {
           "progression_name": "Joc lliure"
+        },
+        "54fa7040-6612-4012-b595-1f4745f1479d": {
+          "progression_name": "Vídeo"
         },
         "fd7fee3b-f3b5-4866-a223-18e2c76385eb": {
           "progression_name": "Artista: Variables"

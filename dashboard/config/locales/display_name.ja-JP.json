@@ -195,7 +195,7 @@
         "courseF_sprites_behaviors": "スプライトの動き",
         "courseF_sprites_desert": "さばくのシーン",
         "Course E: Artist Project_2021": "アーティストプロジェクトを作成する",
-        "Course E: Frozen Project_2021": "フローズンプロジェクトを作成する",
+        "Course E: Frozen Project_2021": "フローズンプロジェクトを作る",
         "Course E: Frozen Project_examples_2021": "雪の花",
         "CourseE_Project_SpriteLab_2021": "スプライトラボプロジェクトを作成する",
         "CourseE_Project_SpriteLab_cupcake_examples_2021": "カップケーキダンス（スプライトラボ）",
@@ -595,7 +595,10 @@
         "helloworld_food_sizes_soccer-2022": "サイズ",
         "helloworld_food_sizes_space-2022": "サイズ",
         "helloworld_food_sounds_soccer-2022": "サウンド",
-        "helloworld_food_sounds_space-2022": "サウンド"
+        "helloworld_food_sounds_space-2022": "サウンド",
+        "helloworld_food_backgrounds": "「イベント」をクリックします",
+        "helloworld_food_backgrounds_soccer-2022": "「イベント」をクリックします",
+        "helloworld_food_backgrounds_space-2022": "「イベント」をクリックします"
       }
     }
   }
