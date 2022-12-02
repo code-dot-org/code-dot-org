@@ -43,12 +43,12 @@
     "encrypted_examples": "WM0VNy3TUx+ZEBFHr58e1LEPtNsEwghKncazQIMYVBBoTcjZ4RsIL0HcwzOE\nNt4gwPgA6BDYm6pecsqUDmAUvg==\n",
     "preload_asset_list": null
   },
-  "game_id": 64,
-  "published": true,
-  "created_at": "2022-11-01T23:06:09.000Z",
   "level_num": "custom",
+  "game_id": 64,
+  "created_at": "2022-11-01T23:06:09.000Z",
   "user_id": 18528,
-  "audit_log": "[{\"changed_at\":\"2022-11-01T23:06:09.668+00:00\",\"changed\":[\"cloned from \\\"csc_ecosystems_solution3A_2022\\\"\"],\"cloned_from\":\"csc_ecosystems_solution3A_2022\"},{\"changed_at\":\"2022-11-08 18:49:32 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2022-11-08 18:56:15 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2022-11-08 19:01:15 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"validation_code\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-11-08 19:11:31 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"validation_code\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-11-08 19:13:32 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"validation_code\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-11-08 19:25:01 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"helper_libraries\",\"validation_code\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-11-08 19:29:35 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"validation_code\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-11-08 19:46:03 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"validation_code\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2022-11-08 19:47:16 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2022-11-08 19:49:10 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]",
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2022-11-01T23:06:09.668+00:00\",\"changed\":[\"cloned from \\\"csc_ecosystems_solution3A_2022\\\"\"],\"cloned_from\":\"csc_ecosystems_solution3A_2022\"},{\"changed_at\":\"2022-11-08 18:49:32 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2022-11-08 18:56:15 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2022-11-08 19:01:15 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"validation_code\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-11-08 19:11:31 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"validation_code\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-11-08 19:13:32 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"validation_code\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-11-08 19:25:01 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"helper_libraries\",\"validation_code\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-11-08 19:29:35 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"validation_code\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-11-08 19:46:03 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"validation_code\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2022-11-08 19:47:16 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2022-11-08 19:49:10 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2022-12-01 18:02:11 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
@@ -1669,7 +1669,7 @@
         <block type="gamelab_makeNewSpriteAnon">
           <field name="ANIMATION_NAME">"boat-net"</field>
           <value name="LOCATION">
-            <block type="gamelab_location_picker">
+            <block type="gamelab_location_picker" can_disconnect_from_parent="false">
               <field name="LOCATION">{"x":0,"y":50}</field>
             </block>
           </value>
@@ -1677,24 +1677,24 @@
         <block type="gamelab_setProp">
           <field name="PROPERTY">"scale"</field>
           <value name="SPRITE">
-            <block type="gamelab_allSpritesWithAnimation">
+            <block type="gamelab_allSpritesWithAnimation" can_disconnect_from_parent="false">
               <field name="ANIMATION">"boat-net"</field>
             </block>
           </value>
           <value name="VAL">
-            <block type="math_number">
+            <block type="math_number" can_disconnect_from_parent="false">
               <field name="NUM">200</field>
             </block>
           </value>
         </block>
         <block type="gamelab_addBehaviorSimple">
           <value name="SPRITE">
-            <block type="gamelab_allSpritesWithAnimation">
+            <block type="gamelab_allSpritesWithAnimation" can_disconnect_from_parent="false">
               <field name="ANIMATION">"boat-net"</field>
             </block>
           </value>
           <value name="BEHAVIOR">
-            <block type="gamelab_behavior_get">
+            <block type="gamelab_behavior_get" can_disconnect_from_parent="false">
               <mutation/>
               <field name="VAR" id="moving east">moving east</field>
             </block>
@@ -1703,7 +1703,7 @@
         <block type="variables_set">
           <field name="VAR">fishCaught</field>
           <value name="VALUE">
-            <block type="math_number">
+            <block type="math_number" can_disconnect_from_parent="false">
               <field name="NUM">0</field>
             </block>
           </value>
@@ -1711,7 +1711,7 @@
         <block type="math_change">
           <field name="VAR">fishCaught</field>
           <value name="DELTA">
-            <block type="math_number">
+            <block type="math_number" can_disconnect_from_parent="false">
               <field name="NUM">1</field>
             </block>
           </value>
@@ -1719,7 +1719,7 @@
         <block type="gamelab_everyInterval">
           <field name="UNIT">"seconds"</field>
           <value name="N">
-            <block type="math_number">
+            <block type="math_number" can_disconnect_from_parent="false">
               <field name="NUM">8</field>
             </block>
           </value>

@@ -1,9 +1,5 @@
 <GamelabJr>
   <config><![CDATA[{
-  "game_id": 64,
-  "created_at": "2022-11-01T23:04:48.000Z",
-  "level_num": "custom",
-  "user_id": 182,
   "properties": {
     "skin": "gamelab",
     "show_debug_watch": "true",
@@ -72,9 +68,13 @@
     "thumbnail_url": "https://images.code.org/31a67be59074553b94d1ea33fdee8747-image-1650394302259.51.33 AM.png",
     "preload_asset_list": null
   },
+  "level_num": "custom",
+  "game_id": 64,
+  "created_at": "2022-11-01T23:04:48.000Z",
+  "user_id": 182,
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-11-01T23:04:48.478+00:00\",\"changed\":[\"cloned from \\\"csc_ecosystems_survival_choice_sharks_2022\\\"\"],\"cloned_from\":\"csc_ecosystems_survival_choice_sharks_2022\"}]",
+  "audit_log": "[{\"changed_at\":\"2022-11-01T23:04:48.478+00:00\",\"changed\":[\"cloned from \\\"csc_ecosystems_survival_choice_sharks_2022\\\"\"],\"cloned_from\":\"csc_ecosystems_survival_choice_sharks_2022\"},{\"changed_at\":\"2022-11-30 19:29:08 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
@@ -120,12 +120,12 @@
         <block type="gamelab_moveInDirection">
           <field name="DIRECTION">"North"</field>
           <value name="SPRITE">
-            <block type="gamelab_allSpritesWithAnimation">
+            <block type="gamelab_allSpritesWithAnimation" can_disconnect_from_parent="false">
               <field name="ANIMATION">"cuteanimals_shark"</field>
             </block>
           </value>
           <value name="DISTANCE">
-            <block type="math_number">
+            <block type="math_number" can_disconnect_from_parent="false">
               <field name="NUM">10</field>
             </block>
           </value>
@@ -133,7 +133,7 @@
         <block type="gamelab_spriteSay">
           <field name="SPEECH">Let's work together to hunt for little fish!</field>
           <value name="SPRITE">
-            <block type="gamelab_allSpritesWithAnimation">
+            <block type="gamelab_allSpritesWithAnimation" can_disconnect_from_parent="false">
               <field name="ANIMATION">"cuteanimals_shark"</field>
             </block>
           </value>
