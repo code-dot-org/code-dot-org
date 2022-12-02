@@ -220,10 +220,6 @@ Rails/AssertNot:
 Rails/Date:
   Enabled: false
 
-# Offense count: 9
-Rails/DeprecatedActiveModelErrorsMethods:
-  Enabled: false
-
 # Offense count: 478
 # This cop supports unsafe auto-correction (--auto-correct-all).
 # Configuration parameters: Whitelist, AllowedMethods, AllowedReceivers.
