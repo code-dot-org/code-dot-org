@@ -1,28 +1,23 @@
 @import "color.scss";
 
-.iconContainer {
-  float: right;
-  margin-right: 10px;
-  margin-left: 10px;
+.settingsButton {
+  margin: 0 10px;
+  padding: 0;
+  border-width: 0 1px;
+  border-color: transparent;
   height: 100%;
-  cursor: pointer;
+  background-color: $purple;
   color: $lighter_purple;
   display: flex;
   align-items: center;
 
   &Running {
+    background-color: $lighter_purple;
     color: $dark_charcoal;
   }
-}
-
-.button {
-  margin: 0;
-  padding: 0;
-  background-color: $purple;
-  border: 0;
-  color: $lighter_purple;
 
   &:hover {
     box-shadow: none;
+    color: $white;
   }
 }

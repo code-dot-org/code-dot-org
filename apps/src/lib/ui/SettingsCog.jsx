@@ -7,7 +7,6 @@ import FontAwesome from '../../templates/FontAwesome';
 import * as assets from '../../code-studio/assets';
 import project from '../../code-studio/initApp/project';
 import * as makerToolkitRedux from '../kits/maker/redux';
-import PopUpMenu from './PopUpMenu';
 import ConfirmEnableMakerDialog from './ConfirmEnableMakerDialog';
 import LibraryManagerDialog from '@cdo/apps/code-studio/components/libraries/LibraryManagerDialog';
 import {getStore} from '../../redux';
@@ -15,8 +14,11 @@ import ModelManagerDialog from '@cdo/apps/code-studio/components/ModelManagerDia
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 import classNames from 'classnames';
 import moduleStyles from './settings-cog.module.scss';
+import JavalabDropdown from '@cdo/apps/javalab/components/JavalabDropdown';
+import onClickOutside from 'react-onclickoutside';
 
-export default class SettingsCog extends Component {
+// Exported for testing
+export class SettingsCog extends Component {
   static propTypes = {
     isRunning: PropTypes.bool,
     runModeIndicators: PropTypes.bool,
@@ -31,10 +33,9 @@ export default class SettingsCog extends Component {
     managingModels: false
   };
 
-  targetPoint = {top: 0, left: 0};
-
   open = () => this.setState({open: true});
   close = () => this.setState({open: false});
+  toggleOpen = () => this.setState({open: !this.state.open});
 
   manageAssets = () => {
     this.close();
@@ -79,19 +80,7 @@ export default class SettingsCog extends Component {
   hideConfirmation = () => this.setState({confirmingEnableMaker: false});
   closeLibraryManager = () => this.setState({managingLibraries: false});
   closeModelManager = () => this.setState({managingModels: false});
-
-  setTargetPoint(icon) {
-    if (!icon) {
-      return;
-    }
-
-    const rect = icon.getBoundingClientRect();
-    const offsetSoItLooksRight = {top: -6, left: -1};
-    this.targetPoint = {
-      top: rect.bottom + offsetSoItLooksRight.top,
-      left: rect.left + rect.width / 2 + offsetSoItLooksRight.left
-    };
-  }
+  handleClickOutside = () => this.close();
 
   areLibrariesEnabled() {
     let pageConstants = getStore().getState().pageConstants;
@@ -117,17 +106,14 @@ export default class SettingsCog extends Component {
     const {isRunning, runModeIndicators} = this.props;
 
     return (
-      <span
-        className={classNames(
-          moduleStyles.iconContainer,
-          runModeIndicators && isRunning && moduleStyles.iconContainerRunning
-        )}
-        ref={icon => this.setTargetPoint(icon)}
-      >
+      <span>
         <button
           type="button"
-          onClick={this.open}
-          className={moduleStyles.button}
+          onClick={this.toggleOpen}
+          className={classNames(
+            moduleStyles.settingsButton,
+            runModeIndicators && isRunning && moduleStyles.settingsButtonRunning
+          )}
         >
           <FontAwesome
             className="settings-cog"
@@ -135,24 +121,25 @@ export default class SettingsCog extends Component {
             title={msg.settings()}
           />
         </button>
-        <PopUpMenu
-          className="settings-cog-menu"
-          targetPoint={this.targetPoint}
-          isOpen={this.state.open}
-          onClose={this.close}
-          showTail={true}
-        >
-          <ManageAssets onClick={this.manageAssets} />
-          {this.areLibrariesEnabled() && (
-            <ManageLibraries onClick={this.manageLibraries} />
-          )}
-          {this.areAIToolsEnabled() && (
-            <ManageModels onClick={this.manageModels} />
-          )}
-          {this.props.showMakerToggle && (
-            <ToggleMaker onClick={this.toggleMakerToolkit} />
-          )}
-        </PopUpMenu>
+        {this.state.open && (
+          <JavalabDropdown>
+            <button type="button" onClick={this.manageAssets}>
+              {msg.manageAssets()}
+            </button>
+            {this.areLibrariesEnabled() && (
+              <button type="button" onClick={this.manageLibraries}>
+                {msg.manageLibraries()}
+              </button>
+            )}
+            {this.areAIToolsEnabled() && (
+              <button type="button" onClick={this.manageModels}>
+                {msg.manageAIModels()}
+              </button>
+            )}
+            {this.props.showMakerToggle &&
+              renderMakerButton(this.toggleMakerToolkit)}
+          </JavalabDropdown>
+        )}
         {this.areAIToolsEnabled() && (
           <ModelManagerDialog
             isOpen={this.state.managingModels}
@@ -175,34 +162,19 @@ export default class SettingsCog extends Component {
   }
 }
 
-export function ManageAssets(props) {
-  return <PopUpMenu.Item {...props}>{msg.manageAssets()}</PopUpMenu.Item>;
-}
-ManageAssets.propTypes = {
-  onClick: PropTypes.func,
-  first: PropTypes.bool,
-  last: PropTypes.bool
-};
+export default onClickOutside(SettingsCog);
 
-export function ManageModels(props) {
-  return <PopUpMenu.Item {...props}>{msg.manageAIModels()}</PopUpMenu.Item>;
-}
-
-export function ManageLibraries(props) {
-  return <PopUpMenu.Item {...props}>{msg.manageLibraries()}</PopUpMenu.Item>;
-}
-
-export function ToggleMaker(props) {
+export function renderMakerButton(onClick) {
   const reduxState = getStore().getState();
   if (!makerToolkitRedux.isAvailable(reduxState)) {
     return null;
   }
+
   return (
-    <PopUpMenu.Item {...props}>
+    <button type="button" onClick={onClick}>
       {makerToolkitRedux.isEnabled(reduxState)
         ? msg.disableMaker()
         : msg.enableMaker()}
-    </PopUpMenu.Item>
+    </button>
   );
 }
-ToggleMaker.propTypes = ManageAssets.propTypes;
