@@ -866,7 +866,7 @@ module Pd::Application
       application = create :pd_teacher_application, regional_partner: regional_partner, form_data_hash: application_hash
       application.auto_score!
 
-      # Regional partner defined guardrails: FRL - 52%, URG - 48%
+      # Regional partner defined guardrails: FRL = (default + 2)%, URG = (default - 2)%
       assert_equal(NO, application.response_scores_hash[:meets_scholarship_criteria_scores][:free_lunch_percent])
       assert_equal(YES, application.response_scores_hash[:meets_scholarship_criteria_scores][:underrepresented_minority_percent])
     end
