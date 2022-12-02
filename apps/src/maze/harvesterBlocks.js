@@ -81,6 +81,7 @@ function addUntilAtSpecificCropBlock(blockly, generator, crop) {
   generator[`harvester_untilAt${capitalizeFirstLetter(crop)}`] = function() {
     var atCrop = `Maze.at${capitalizeFirstLetter(crop)}('block_id_${this.id}')`;
     var branch = generator.statementToCode(this, 'DO');
+    console.log(`in harvesterBlocks:84 before LoopTrap at ${new Date()}`);
     branch = Blockly.getInfiniteLoopTrap() + branch;
     var code = `while (!${atCrop}) {\n${branch}}\n`;
     return code;
@@ -159,6 +160,7 @@ function addWhileSpecificCropHasBlock(blockly, generator, crop) {
       this.id
     }')`;
     var branch = generator.statementToCode(this, 'DO');
+    console.log(`in harvesterBlocks:163 before LoopTrap at ${new Date()}`);
     branch = Blockly.getInfiniteLoopTrap() + branch;
     var code = `while (${argument}) {\n${branch}}\n`;
     return code;
@@ -185,6 +187,7 @@ function addUntilSpecificCropHasBlock(blockly, generator, crop) {
       this.id
     }')`;
     var branch = generator.statementToCode(this, 'DO');
+    console.log(`in harvesterBlocks:190 before LoopTrap at ${new Date()}`);
     branch = Blockly.getInfiniteLoopTrap() + branch;
     var code = `while (!${argument}) {\n${branch}}\n`;
     return code;
@@ -297,6 +300,7 @@ exports.install = function(blockly, blockInstallOptions) {
   generator.harvester_untilAtCrop = function() {
     var atCrop = `Maze.at${this.getFieldValue('LOC')}('block_id_${this.id}')`;
     var branch = generator.statementToCode(this, 'DO');
+    console.log(`in harvesterBlocks:303 before LoopTrap at ${new Date()}`);
     branch = Blockly.getInfiniteLoopTrap() + branch;
     var code = `while (!${atCrop}) {\n${branch}}\n`;
     return code;
@@ -375,6 +379,7 @@ exports.install = function(blockly, blockInstallOptions) {
       this.id
     }')`;
     var branch = generator.statementToCode(this, 'DO');
+    console.log(`in harvesterBlocks:382 before LoopTrap at ${new Date()}`);
     branch = Blockly.getInfiniteLoopTrap() + branch;
     var code = `while (${argument}) {\n${branch}}\n`;
     return code;
@@ -401,6 +406,7 @@ exports.install = function(blockly, blockInstallOptions) {
       this.id
     }')`;
     var branch = generator.statementToCode(this, 'DO');
+    console.log(`in harvesterBlocks:409 before LoopTrap at ${new Date()}`);
     branch = Blockly.getInfiniteLoopTrap() + branch;
     var code = `while (!${argument}) {\n${branch}}\n`;
     return code;

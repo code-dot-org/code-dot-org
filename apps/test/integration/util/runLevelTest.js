@@ -62,6 +62,7 @@ module.exports = function(testCollection, testData, dataItem, done) {
   // Validate successful solution.
   var validateResult = async function(report) {
     try {
+      console.log(`in validateResult ${new Date()}`);
       assert(testData.expected, 'Have expectations');
       var expected;
       if (Array.isArray(testData.expected)) {
@@ -78,6 +79,7 @@ module.exports = function(testCollection, testData, dataItem, done) {
           assert(false, failureMsg);
         }
       });
+      console.log(`in validateResult after result check ${new Date()}`);
 
       // define a customValidator to run/validate arbitrary code at the point when
       // StudioApp.report gets called. Allows us to access some things that
@@ -87,11 +89,13 @@ module.exports = function(testCollection, testData, dataItem, done) {
         // Increase the timer below if things start failing here.
         await new Promise(resolve =>
           setTimeout(() => {
+            console.log(`in validateResult setTimeout ${new Date()}`);
             assert(testData.customValidator(assert), 'Custom validator failed');
             resolve();
           }, 2500)
         );
       }
+      console.log(`in validateResult after customValidator ${new Date()}`);
 
       // Notify the app that the report operation is complete
       // (important to do this asynchronously to simulate a service call or else
@@ -103,6 +107,7 @@ module.exports = function(testCollection, testData, dataItem, done) {
     } catch (e) {
       done(e);
     }
+    console.log(`end of validateResult ${new Date()}`);
   };
 
   runLevel(app, skinId, level, validateResult, finished, testData);

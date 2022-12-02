@@ -119,6 +119,8 @@ module.exports = {
       customValidator: function() {
         // Don't run all 10,000 steps...
         Maze.executionInfo.steps_.length = 0;
+        console.log(Maze.executionInfo);
+        console.log(Maze.executionInfo.terminationValue());
         return (
           Maze.executionInfo.terminationValue() ===
           constants.BeeTerminationValue.INFINITE_LOOP
