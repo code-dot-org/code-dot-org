@@ -12,9 +12,7 @@ import {
 describe('Custom Functions', () => {
   const cdoBlockly = Blockly;
   // Reset context menu registry.
-  const registry = JSON.parse(
-    JSON.stringify(GoogleBlockly.ContextMenuRegistry.registry.registry_)
-  );
+  GoogleBlockly.ContextMenuRegistry.registry.reset();
   beforeEach(() => {
     GoogleBlockly.JavaScript = sinon.spy();
     Blockly = initializeGoogleBlocklyWrapper(GoogleBlockly); // eslint-disable-line no-global-assign
@@ -23,9 +21,7 @@ describe('Custom Functions', () => {
     // Reset Blockly for other tests.
     Blockly = cdoBlockly; // eslint-disable-line no-global-assign
     // Reset context menu for other tests.
-    GoogleBlockly.ContextMenuRegistry.registry.registry_ = JSON.parse(
-      JSON.stringify(registry)
-    );
+    GoogleBlockly.ContextMenuRegistry.registry.reset();
   });
 
   it('Can create a blank function definition block', () => {
