@@ -2652,7 +2652,7 @@
         },
         "courseD_bee_conditionals4": {
           "courseD_bee_conditionals4_hintVid1": "Heb je hulp nodig om op gang te komen?  Kijk naar de video!",
-          "courseD_bee_conditionals4_c": "Met het [blockly block][0] blok, moet je vooruit bewegen en kijken of er bloemen zijn. Als er een bloem is, wat zou de bloem dan moeten doen?",
+          "courseD_bee_conditionals4_c": "Met het <xml><block type=\"maze_untilBlocked\"/></xml> blok, moet je vooruit bewegen en kijken of er bloemen zijn. Als er een bloem is, wat zou de bloem dan moeten doen?",
           "courseD_bee_conditionals4_hintVid2": "Kijk naar deze video voor hulp bij deze puzzle."
         },
         "courseD_bee_conditionals4_2018": {
