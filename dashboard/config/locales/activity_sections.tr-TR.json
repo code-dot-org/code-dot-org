@@ -1851,7 +1851,7 @@
           "progression_name": "Video: Özellikler"
         },
         "617957c6-14b8-4db6-8018-1f81a191b624": {
-          "progression_name": "Özellikleri"
+          "progression_name": "Özellikler"
         },
         "63a3dd77-4375-473b-baa6-45c56d551354": {
           "tips": [
@@ -4043,7 +4043,7 @@
           "tips": [
             "Dersin bu noktasından sonra talimatların daha az kuralcı olduğunu fark edebilirsiniz. Öğrencileri yaratıcı olmaları ve gösterilen yeni blokları keşfetmeleri konusunda teşvik edin. Belirli bir görevi çözmek yerine deneme yapmayı teşvik etmek için, bu andan itibaren öğrenci kodları **doğrulukları açısından kontrol edilmeyecek**"
           ],
-          "progression_name": "Özellikleri"
+          "progression_name": "Özellikler"
         },
         "0b074fdf-834b-4d06-a5da-6c7e0c670b05": {
           "description": "##### Parti Başladı!",
@@ -12445,7 +12445,7 @@
           "progression_name": "Örnek Projeler"
         },
         "7ba3e3fc-9997-480c-86f7-54e100343b8a": {
-          "progression_name": "Grafik Lab Projesi"
+          "progression_name": "Hareketli Nesne Laboratuvar Projesi"
         },
         "919ce65a-2a03-4e80-9108-6243b5dd733f": {
           "name": "Sanatçı Projesi",
@@ -12659,7 +12659,7 @@
           "progression_name": "Örnek Projeler"
         },
         "b8f9aaae-501f-4c71-9df3-3250ffe49d6e": {
-          "progression_name": "Grafik Lab Projesi"
+          "progression_name": "Hareketli Nesne Laboratuvar Projesi"
         },
         "22ed3900-dd2a-4eec-99c1-69f131286de6": {
           "name": "Sanatçı Projesi",
@@ -12669,7 +12669,7 @@
           "progression_name": "Örnek Projeler"
         },
         "f0d08173-4d56-4bdc-8bd0-173ba4445206": {
-          "progression_name": "Grafik Lab Projesi"
+          "progression_name": "Hareketli Nesne Laboratuvar Projesi"
         },
         "9a803448-dc94-4fae-9c6e-9099f7a26bc2": {
           "name": "Sanatçı Projesi",
@@ -17672,7 +17672,7 @@
         },
         "d3f08051-43ee-48aa-9154-f8b1f21a486f": {
           "description": "##### Seviye 11\n\n-   11-13 seviyeleri dansçıların özelliklerini (örn. boyut, renk) ayarlamakla ilgilidir.\n-   Teal `set` bloğunun dansçıların oluşturulduğu _after_ programında bir yere yerleştirildiğinden emin olmak önemlidir. Bu bulmacayı çözmek için programınızın herhangi bir yerine bir 'set boyutu' bloğu yerleştirin ve dansçılarınızın bazılarının boyutunu değiştirmek için kullanın. \n-   Grup olarak oluşturulan dansçıların varsayılan boyutu 30'dur. Diğer dansçıların varsayılan boyutu 100.\n\n##### Seviye 12\n\n-   Önceki seviyede olduğu gibi, yalnızca programınızdaki dansçıları yaptıktan sonra `set tonu (color)`bloğunu kullandığınızdan emin olun. Örneğin, programınızın `setup` alanına ilk adım olarak yerleştirilmesi hiçbir etkisi olmayacaktır.\n\n##### Seviye 13\n\n-   Doğru kodla dansçı döngüsünü farklı renkler, boyutlar veya dans hareketleriyle görmelisiniz.\n-   Bir teal `change`, bir teal `randomize` bloğu veya “her 2 ölçüm' bloğuna bağlı mor bir \\`sonsuza kadar yapmak' bloğu olduğundan emin olun. \n-   'sonsuza dek yap' bloklarının (Sonraki), (Önceki) veya (Rastgele) olarak ayarlandığından emin olun. Aksi takdirde, dansçı sadece set hareketini tekrar tekrar gerçekleştirecektir.\n-   Öğrencilerin bu seviyede yazdık**kod doğruluğu için kontrol edilmediğini unutmayın**. Bu, programı değiştirmese bile, her zaman seviyeyi geçecekleri anlamına gelir. Öğrenciler, kodlarını kendileri için ilginç şekillerde denemekten çekinmelidirler. Devam etmek için “Son” düğmesine tıklayın.\n-   'Her 2 önlem' bloğunun içinde yeni dansçılar yapmak programınızın aynı konumda (lar) da birden çok özdeş dansçı oluşturmasına neden olur ve istenmeyen sonuçlara yol açabilir!",
-          "progression_name": "Özellikleri"
+          "progression_name": "Özellikler"
         },
         "c7bb438d-7dd6-483a-954a-0431f8ece258": {
           "tips": [
@@ -18373,7 +18373,7 @@
           "tips": [
             "Dersin bu noktasından sonra talimatların daha az kuralcı olduğunu fark edebilirsiniz. Öğrencileri yaratıcı olmaları ve gösterilen yeni blokları keşfetmeleri konusunda teşvik edin. Belirli bir görevi çözmek yerine deneme yapmayı teşvik etmek için, bu andan itibaren öğrenci kodları **doğrulukları açısından kontrol edilmeyecek**"
           ],
-          "progression_name": "Özellikleri"
+          "progression_name": "Özellikler"
         },
         "97583afa-79d7-487a-a962-9366e1d17bba": {
           "description": "##### Parti Başladı!",
@@ -24383,7 +24383,7 @@
           "progression_name": "Ölçü"
         },
         "a9494fa0-0b2b-4c5a-939e-c440bb5f4717": {
-          "progression_name": "Özellikleri"
+          "progression_name": "Özellikler"
         },
         "7a2b3e7f-2f8f-4592-a166-1d279f647fb2": {
           "progression_name": "Özet"

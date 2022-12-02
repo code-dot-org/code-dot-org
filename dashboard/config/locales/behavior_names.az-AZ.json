@@ -2508,9 +2508,9 @@
           "spinning right": "sağa fırlanır",
           "growing": "böyüyən",
           "spinning left": "sola fırlanır",
-          "swimming left and right": "sola və sağa üzmək ",
+          "swimming left and right": "sola və sağa üzmək",
           "moving west2": "qərbə hərəkət2",
-          "swimming left and right2": "Sola və sağa üzmək2",
+          "swimming left and right2": "sola və sağa üzmək2",
           "moving east2": "şərqə hərəkət 2",
           "moving north2": "şimala hərəkət2",
           "moving south2": "cənuba hərəkət2",
@@ -2671,7 +2671,7 @@
           "moving north": "şimala hərəkət",
           "moving south": "cənuba hərəkət",
           "moving west": "qərbə doğru hərəkət",
-          "swimming left and right": "Sola və sağa üzmək",
+          "swimming left and right": "sola və sağa üzmək ",
           "growing": "böyüyən",
           "spinning right": "sağa fırlanır"
         },
@@ -2684,7 +2684,7 @@
           "moving north": "şimala hərəkət",
           "moving south": "cənuba hərəkət",
           "moving west": "qərbə doğru hərəkət",
-          "swimming left and right": "Sola və sağa üzmək",
+          "swimming left and right": "sola və sağa üzmək ",
           "growing": "böyüyən",
           "spinning right": "sağa fırlanır"
         },
@@ -2697,7 +2697,7 @@
           "moving north": "şimala hərəkət",
           "moving south": "cənuba hərəkət",
           "moving west": "qərbə doğru hərəkət",
-          "swimming left and right": "Sola və sağa üzmək",
+          "swimming left and right": "sola və sağa üzmək ",
           "growing": "böyüyən",
           "spinning right": "sağa fırlanır"
         },

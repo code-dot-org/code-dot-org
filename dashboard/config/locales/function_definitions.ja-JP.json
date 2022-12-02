@@ -3820,7 +3820,7 @@
             "name": "正方形 を かく",
             "parameters": {
               "length": "長さ",
-              "sides": "サイド"
+              "sides": "辺"
             }
           },
           "small flower": {

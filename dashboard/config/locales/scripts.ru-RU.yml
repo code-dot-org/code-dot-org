@@ -4348,3 +4348,7 @@ ru:
           description_audience: Руководство для авторов
           description_short: Для поэтапныъ обновлений в уроках или уровней между версиями
             учебной программы
+        devices-2022:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: 'Глава 2: Создание физических прототипов'

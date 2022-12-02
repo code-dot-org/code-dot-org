@@ -1632,7 +1632,7 @@
         "courseD_bee_conditionals1_predict1_2019": "_「這雲擋住了我的視線 ！」_\n\n檢查看看雲下面是不是有花，如果有，就採集花蜜。",
         "courseD_bee_conditionals1_predict1_2020": "_「這雲擋住了我的視線 ！」_\n\n檢查看看雲下面是不是有花，如果有，就採集花蜜。",
         "courseD_bee_conditionals1_predict1_copy": "_「這雲擋住了我的視線 ！」_\n\n檢查看看雲下面是不是有花，如果有，就採集花蜜。",
-        "courseD_bee_conditionals2": "更多的雲朵！\n\n在獲取花蜜之前，請檢查每朵雲朵下方是否藏有花。如果雲朵下方有花，蜜蜂就需要獲取_一次_花蜜。\n\n>記住：不是所有的雲朵下面都藏著同樣的東西！",
+        "courseD_bee_conditionals2": "更多的雲朵！\n\n在獲取花蜜之前，請檢查每朵雲朵下方是否藏有花。如果雲朵下方有花，蜜蜂就需要獲取_一次_花蜜。\n\n> 記住：不是所有的雲朵下面都藏著同樣的東西！",
         "courseD_bee_conditionals2_2018": "更多的雲朵！\n\n在獲取花蜜之前，請檢查每朵雲朵下方是否藏有花。如果雲朵下方有花，蜜蜂就需要獲取_一次_花蜜。\n\n> 記住：不是所有的雲朵下面都藏著同樣的東西！",
         "courseD_bee_conditionals2_2019": "更多的雲朵！\n\n在獲取花蜜之前，請檢查每朵雲朵下方是否藏有花。如果雲朵下方有花，蜜蜂就需要獲取_一次_花蜜。\n\n> 記住：不是所有的雲朵下面都藏著同樣的東西！",
         "courseD_bee_conditionals2_2020": "更多的雲朵！\n\n在獲取花蜜之前，請檢查每朵雲朵下方是否藏有花。如果雲朵下方有花，蜜蜂就需要獲取_一次_花蜜。\n\n> 記住：不是所有的雲朵下面都藏著同樣的東西！",
@@ -2023,7 +2023,7 @@
         "courseE_artist_functions10_2019": "這次，使用8 個邊長為 25 像素的六邊形來繪製。\n\n-   在繪製每個六邊形時，重複繪製 6 次來畫圖型的邊，並且每次旋轉 60 度。\n-   在每個六邊形之間跳躍 25 個像素。\n-   要繪製出菱形，需要交替轉向 60 度和 120 度。",
         "courseE_artist_functions10_2020": "這次，使用8 個邊長為 25 像素的六邊形來繪製。\n\n-   在繪製每個六邊形時，重複繪製 6 次來畫圖型的邊，並且每次旋轉 60 度。\n-   在每個六邊形之間跳躍 25 個像素。\n-   要繪製出菱形，需要交替轉向 60 度和 120 度。",
         "courseE_artist_functions1_copy": "_「我是殭屍小藝術家。我喜歡繪畫！」_\n\n幫殭屍畫一副邊長都為100像素的方形眼鏡。而兩個鏡片之間要距離75像素。",
-        "courseE_artist_functions2": "函式可以定義新的積木！\n\n我們已將繪製正方形所需的積木移動到名為`繪製正方形`的函式中。這次，使用`繪製正方形`函式來創造眼鏡。\n\n* * *\n\n正方形之間要相隔 75 像素。\n\n",
+        "courseE_artist_functions2": "函式可以定義新的積木！\n\n我們已將繪製正方形所需的積木移動到名為`繪製正方形`的函式中。這次，使用`繪製正方形`函式來創造眼鏡。\n\n* * *\n\n正方形之間要相隔 75 像素。",
         "courseE_artist_functions2_2018": "\"這裡有一個叫做`繪製正方形`的函式。用它來完成這次繪圖。 \n\n* * *\n\n正方形的間距為 75 像素。\"",
         "courseE_artist_functions2_2019": "\"這裡有一個叫做`繪製正方形`的函式。用它來完成這次繪圖。 \n\n* * *\n\n正方形的間距為 75 像素。\"",
         "courseE_artist_functions2_2020": "\"這裡有一個叫做`繪製正方形`的函式。用它來完成這次繪圖。 \n\n* * *\n\n正方形的間距為 75 像素。\"",
@@ -3943,7 +3943,7 @@
         "ramp_artist_loops12022": "真是美好的一天！\n\n向前移動60畫素，幫助小藝術家在冬天來臨之前蓋住他的鮮花。",
         "ramp_artist_loops22022": "重複該步驟5次，在每次移動之間改變隨機改變顏色。",
         "ramp_artist_loops32022": "再次畫彩色線條5次，這次使用一個重複迴圈。",
-        "ramp_artist_loops42022": "你可以透過迴圈`移動 - 向前`和`轉向 右邊 144 度`積木的序列來建立這個星形圖案。",
+        "ramp_artist_loops42022": "你可以透過迴圈`移動 - 向前`和`轉向 右邊 144 度`積木的序列來建立這個星形圖案。\n",
         "ramp_artist_loops52022": "迴圈確實能讓程式編寫更容易！\n\n使用迴圈來畫這個樓梯。\n\n-   每個階梯長50畫素，高50畫素\n-   您需要每個方向轉90度",
         "ramp_artist_loops72022": "找到規律，用迴圈讓這個程式更精簡！",
         "ramp_artist_loops82022": "**挑戰：** 尋找一個模式，使用迴圈來讓這個程式更簡潔。",
@@ -3975,8 +3975,7 @@
         "helloworld_food_freeplay_soccer-2022": "_是時候開始創造你想要的東西了！當你完成時，分享你的項目，並對你世界中的人說：“你好！”_\n\n<div style=\"float:right;padding:20px\">\n<img src=\"https://studio.code.org/api/v1/animation-library/spritelab/FtyDPCdPAUpUJaJb_KJYPf7hTvk70qwv/category_sports/soccer_ball.png\" style=\"height:60px; border-width:0px; border-style:solid; border-color:black; border-radius:10px\"><img src=\"https://studio.code.org/api/v1/animation-library/spritelab/8gC4IJlmaANSQ2nC4n6nwspUHroJSWwd/category_sports/soccer_player_4.png\" style=\"height:60px; border-width:0px; border-style:solid; border-color:black; border-radius:10px\"><img src=\"https://studio.code.org/api/v1/animation-library/spritelab/D6gv9H1EUMv3zC.1qarPSuTpjV5xHXN5/category_sports/soccer_trophy.png\" style=\"height:60px; border-width:0px; border-style:solid; border-color:black; border-radius:10px\"><img src=\"https://studio.code.org/api/v1/animation-library/spritelab/WVrdWiyVvKgDIFxer4j9dZynKdcvaOV2/category_sports/soccer_player_1.png\" style=\"height:60px; border-width:0px; border-style:solid; border-color:black; border-radius:10px\">\n</div>\n\n-   點擊_服裝_標籤，向你的專案添加更多_服裝_。\n-   向工作區添加_代碼_使精靈圖出現。\n-   嘗試向你的項目添加更多功能，使其更好。\n-   按上面的_分享_按鈕，將你的項目發送給朋友！\n\n若想獲得一些額外的樂趣，請查看**精靈**類別中全新的`create effect`積木！\n\n<xml>\n  <block type=\"gamelab_makeBurst\">\n    <title name=\"ANIMATION_NAME\">\"face_burger_1\"</title>\n    <value name=\"NUM\">\n      <block type=\"math_number\">\n        <title name=\"NUM\">10</title>\n      </block>\n    </value>\n  </block>\n</xml>",
         "helloworld_food_freeplay_space-2022": "_是時候開始創造你想要的東西了！當你完成時，分享你的項目，並對你世界中的人說：“你好！”_\n\n<div style=\"float:right;padding:20px\">\n<img src=\"https://studio.code.org/api/v1/animation-library/spritelab/BwBMSmcRhyFJcNQdvbF4EQNr6iBqqJcE/category_space/space_astronaut_unicorn.png\" style=\"height:60px; border-width:0px; border-style:solid; border-color:black; border-radius:10px\"><img src=\"https://studio.code.org/api/v1/animation-library/spritelab/2gg2OueoMTsFgRsb8gFe5tfh1qgKKEhW.S/category_space/space_astronaut_4.png\" style=\"height:60px; border-width:0px; border-style:solid; border-color:black; border-radius:10px\"><img src=\"https://studio.code.org/api/v1/animation-library/spritelab/hjsJUEMDi_KtdrHYBbTAE6352QGi.bQ8/category_space/space_sun.png\" style=\"height:60px; border-width:0px; border-style:solid; border-color:black; border-radius:10px\"><img src=\"https://studio.code.org/api/v1/animation-library/spritelab/zfJDL4rdROZ999p.U5.8sOu8zP5VkSVb/category_space/space_rover.png\" style=\"height:60px; border-width:0px; border-style:solid; border-color:black; border-radius:10px\">\n</div>\n\n-   點擊_服裝_標籤，向你的專案添加更多_服裝_。\n-   向工作區添加_代碼_使精靈圖出現。\n-   嘗試向你的項目添加更多功能，使其更好。\n-   按上面的_分享_按鈕，將你的項目發送給朋友！\n\n若想獲得一些額外的樂趣，請查看**精靈**類別中全新的`create effect`積木！\n\n<xml>\n  <block type=\"gamelab_makeBurst\">\n    <title name=\"ANIMATION_NAME\">\"face_burger_1\"</title>\n    <value name=\"NUM\">\n      <block type=\"math_number\">\n        <title name=\"NUM\">10</title>\n      </block>\n    </value>\n  </block>\n</xml>",
         "poetry_modal_function_editor": "這是一個詩歌關卡，包括自動填充的`程式`類別並使用模態函數編輯器。",
-        "poetry_no_modal_function_editor": "這是一個詩歌關卡，包括自動填充的`程式`類別，沒有模態函數編輯器。",
-        "ramp_artist_loops62022": "這個樓梯要大得多，但它所使用的程式數量與上一關一樣多！\n\n修正這個迴圈來過關。"
+        "poetry_no_modal_function_editor": "這是一個詩歌關卡，包括自動填充的`程式`類別，沒有模態函數編輯器。"
       }
     }
   }

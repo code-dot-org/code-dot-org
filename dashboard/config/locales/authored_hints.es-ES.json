@@ -5558,7 +5558,7 @@
           "courseD_artist_binary8_c": "¡No tengas miedo de cometer un error! Intenta escribir binario y ejecuta el código para ver qué sucederá, incluso si aún no has resuelto el desafío."
         },
         "courseD_bee_conditionals1_predict1": {
-          "courseD_bee_conditionals1_a": "Tendrás que utilizar un bloque ` si ` para comprobar si hay una flor debajo de la nube antes de intentar recoger el néctar."
+          "courseD_bee_conditionals1_a": "Tendrás que utilizar un bloque `si` para comprobar si hay una flor debajo de la nube antes de intentar recoger el néctar."
         },
         "courseD_bee_conditionals1_predict1_2018": {
           "courseD_bee_conditionals1_a": "Tendrás que utilizar un bloque `si` para comprobar si hay una flor debajo de la nube antes de intentar recoger el néctar."
@@ -5633,8 +5633,8 @@
         "courseD_bee_conditionals4": {
           "courseD_bee_conditionals4_hintVid1": "¿Necesitas ayuda para comenzar? ¡Ve el vídeo!",
           "courseD_bee_conditionals4_a": "Todavía puedes tratar cada espacio como si hubiera una nube sobre él, aunque puedas ver todo el camino.",
-          "courseD_bee_conditionals4_b": "Usa una afirmación `si' dentro de tu bucle para comprobar si hay néctar en cada espacio. ",
-          "courseD_bee_conditionals4_c": "Usa un bloque [bloque blockly][0] para avanzar y comprobar si hay una flor. Si hay una flor, ¿qué debería hacer la abeja?",
+          "courseD_bee_conditionals4_b": "Usa una afirmación \\`si' dentro de tu bucle para comprobar si hay néctar en cada espacio. ",
+          "courseD_bee_conditionals4_c": "Usa un bloque <xml><block type=\"maze_untilBlocked\"/></xml> para avanzar y comprobar si hay una flor. Si hay una flor, ¿qué debería hacer la abeja?",
           "courseD_bee_conditionals4_hintVid2": "Ve este vídeo como ayuda para resolver este puzle."
         },
         "courseD_bee_conditionals4_2018": {
@@ -5662,7 +5662,7 @@
         "courseD_bee_conditionals5": {
           "courseD_bee_conditionals5_hintVid1": "¿Necesitas ayuda para comenzar? ¡Ve el vídeo!",
           "courseD_bee_conditionals5_a": "Piensa en cada lado de la ruta rectangular como un camino en sí mismo. Crea un bucle anidado con un bloque `repetir` en el exterior y un bucle`mientras haya camino por delante` en el interior. ¿Cuántos caminos necesita recorrer la abeja si la abeja necesita recorrer cada lado con una flor?",
-          "courseD_bee_conditionals5_c": "Hay 3 lados del rectángulo con flores, por lo que el código se debe `repetir 3 veces`. En cada repetición, la abeja deberá avanzar por el camino, \"mientras haya un camino por delante\". Para continuar por el camino, la abeja deberá 'avanzar'. Mientras recorre el camino, la abeja tiene que comprobar si hay una flor. ` si hay una flor`, la abeja debería` recoger néctar`.",
+          "courseD_bee_conditionals5_c": "Hay 3 lados del rectángulo con flores, por lo que el código se debe `repetir 3 veces`. En cada repetición, la abeja deberá avanzar por el camino, \"mientras haya un camino por delante\". Para continuar por el camino, la abeja deberá 'avanzar'. Mientras recorre el camino, la abeja tiene que comprobar si hay una flor. `si hay una flor`, la abeja debería`recoger néctar`.",
           "courseD_bee_conditionals5_b": "En el interior del bloque`mientras que haya un camino delante` tendrás que avanzar y comprobar si hay una flor. ¿Cómo se comprueba si hay una flor? ¿Qué haces si hay una flor?",
           "courseD_bee_conditionals5_hintVid2": "Ve este vídeo como ayuda para resolver este puzle."
         },
@@ -7090,7 +7090,7 @@
         "courseE_artist_functions2": {
           "courseD_artist_functions2_b": "La función que escribes no debería contener el programa completo, sólo la parte que dibuja un cuadrado con lado de 100 pixeles.",
           "courseD_artist_functions2_c": "Utiliza el bloque verde 'dibujar un cuadrado' para \"llamar\" a tu función debajo del bloque 'cuando ejecutar'. De lo contrario, el código en la función no se ejecutará.\n\n<xml><block type=\"procedures_callnoreturn\" limit=\"2\"><mutation name=\"draw a square\"/></block></xml>",
-          "courseD_artist_functions2_a": "El programa debe:\n\n- Usar la función\n- Avanzar 100 + 75 pixeles\n- Usar la función"
+          "courseD_artist_functions2_a": "El programa debe:\n\n-   Usar la función\n-   Avanzar 100 + 75 pixeles\n-   Usar la función"
         },
         "courseE_artist_functions2_2018": {
           "courseD_artist_functions2_b": "La función no debería contener el programa completo, sólo la parte que dibuja un cuadrado con lado de 100 pixels.",
@@ -9576,8 +9576,8 @@
           "courseC_artist_loops7a_a": "Un circulo tiene 360 grados. Multiplica los grados de tu giro las veces que el numero se repita. ¿Equivale a 360?\nComprueba las rotaciones sugeridas para ver si funciona!"
         },
         "courseC_artist_prog2_2021": {
-          "courseC_artist_prog2_a": "\"Si usas el bloque <xml><block type=\"draw_move_by_constant\"><title name=\"DIR\">moveForward</title><title name=\"VALUE\">100</title></block></xml>, dibujaré una línea\".",
-          "courseC_artist_prog2_b": "¿Tienes problemas para girar en la esquina? Utiliza el bloque <xml><block type=\"draw_turn_by_constant_dropdown\"><title name=\"DIR\">turnRight</title><title name=\"VALUE\" config=\"45,60,90,120,180\">90</title></block></xml>."
+          "courseC_artist_prog2_a": "Si utiliza el bloque para hacerme 'avanzar 100 píxeles', sacaré una línea automáticamente.",
+          "courseC_artist_prog2_b": "¿Tienes problemas girando la esquina? Usa el bloque `girar a la derecha 90 grados`."
         },
         "courseC_artist_prog3_2021": {
           "courseC_artist_prog3_a": "Para crear esta ventana, dibuja un cuadrado de 100 pixeles de lado.\n\n-   avanzar\n-   girar\n-   avanzar\n-   girar\n-   avanzar\n-   girar\n-   avanzar",

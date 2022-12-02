@@ -1089,7 +1089,7 @@ mk-MK:
         answers:
         - text: А
         - text: Б
-        - {}
+        - text: C
         - text: Д
         questions:
         - {}
@@ -1097,7 +1097,7 @@ mk-MK:
         answers:
         - text: А
         - text: Б
-        - {}
+        - text: C
         - text: Д
         questions:
         - {}
@@ -1105,7 +1105,7 @@ mk-MK:
         answers:
         - text: А
         - text: Б
-        - {}
+        - text: C
         - text: Д
         questions:
         - {}
@@ -1113,7 +1113,7 @@ mk-MK:
         answers:
         - text: А
         - text: Б
-        - {}
+        - text: C
         - text: Д
         questions:
         - {}
@@ -1121,7 +1121,7 @@ mk-MK:
         answers:
         - text: А
         - text: Б
-        - {}
+        - text: C
         - {}
         questions:
         - {}
@@ -1129,7 +1129,7 @@ mk-MK:
         answers:
         - text: А
         - text: Б
-        - {}
+        - text: C
         - {}
         questions:
         - {}
@@ -1137,7 +1137,7 @@ mk-MK:
         answers:
         - text: А
         - text: Б
-        - {}
+        - text: C
         - {}
         questions:
         - {}
@@ -1145,7 +1145,7 @@ mk-MK:
         answers:
         - text: А
         - text: Б
-        - {}
+        - text: C
         - {}
         questions:
         - {}
@@ -1886,7 +1886,7 @@ mk-MK:
         answers:
         - text: А
         - text: Б
-        - {}
+        - text: C
         - {}
         questions:
         - {}
@@ -2258,7 +2258,7 @@ mk-MK:
         - {}
         - {}
         questions:
-        - {}
+        - text: Влез
         - {}
         - {}
         - {}
@@ -2269,7 +2269,7 @@ mk-MK:
         - {}
         - {}
         questions:
-        - {}
+        - text: Влез
         - {}
         - {}
         - {}
@@ -2280,7 +2280,7 @@ mk-MK:
         - {}
         - {}
         questions:
-        - {}
+        - text: Влез
         - {}
         - {}
         - {}
@@ -8896,7 +8896,7 @@ mk-MK:
         answers:
         - text: А
         - text: Б
-        - {}
+        - text: C
         - {}
         questions:
         - {}

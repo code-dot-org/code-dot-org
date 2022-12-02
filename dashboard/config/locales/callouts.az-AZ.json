@@ -636,7 +636,7 @@
           "dance_callout_06": "Yeni rəqqasənizi bura əlavə edin"
         },
         "Fish Tank 3-validated_2021": {
-          "spritelab_comment": "Kodunuzun necə işlədiyini özünüzə və ya müəlliminizə qeyd etmək üçün bu blokdan istifadə edin."
+          "spritelab_comment": "Kodunun necə işlədiyini özünə və ya müəlliminizə qeyd etmək üçün bu blokdan istifadə et. "
         },
         "Overworld House Frame Chosen_2021": {
           "craft_callout_preplaced_house": "Bu kod evini tikməyə başlayacaq. Bitirə bilərsən? "
@@ -2420,9 +2420,6 @@
         },
         "helloworld_food_sounds_space-2022": {
           "hello_world_new": "Yeni blok!"
-        },
-        "courseC_artist_prog2_2021": {
-          "slider": "Proqramınızı burada yavaşlata bilərsiniz."
         }
       }
     }
