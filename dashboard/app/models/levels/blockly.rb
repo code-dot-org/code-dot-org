@@ -447,6 +447,7 @@ class Blockly < Level
   end
 
   def localized_start_html(start_html)
+    return unless start_html
     start_html_xml = Nokogiri::XML(start_html, &:noblanks)
 
     # match any element that contains text
