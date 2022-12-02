@@ -811,8 +811,6 @@ describe('entry tests', () => {
       './src/sites/studio/pages/pd/teachercon_survey/new.js',
     'pd/application_dashboard/index':
       './src/sites/studio/pages/pd/application_dashboard/index.js',
-    'pd/application/facilitator_application/new':
-      './src/sites/studio/pages/pd/application/facilitator_application/new.js',
     'pd/application/teacher_application/new':
       './src/sites/studio/pages/pd/application/teacher_application/new.js',
     'pd/application/principal_approval_application/new':
