@@ -169,6 +169,15 @@ class Pd::EnrollmentTest < ActiveSupport::TestCase
     enrollment.send_exit_survey
   end
 
+  test 'send_exit_survey does not send mail for workshops without exit survey URL' do
+    enrollment = create :pd_enrollment, user: create(:teacher)
+
+    Pd::Enrollment.any_instance.expects(:exit_survey_url).returns(nil)
+    Pd::WorkshopMailer.expects(:exit_survey).never
+
+    enrollment.send_exit_survey
+  end
+
   test 'send_exit_survey tries to send email and, if successful, updates survey_sent_at ' do
     enrollment = create :pd_enrollment, user: create(:teacher)
 

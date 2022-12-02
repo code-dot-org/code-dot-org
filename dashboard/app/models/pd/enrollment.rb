@@ -221,6 +221,9 @@ class Pd::Enrollment < ApplicationRecord
 
     return unless should_send_exit_survey?
 
+    # Don't send if there's no associated survey
+    return unless exit_survey_url
+
     return unless (mailer = Pd::WorkshopMailer.exit_survey(self))
 
     mailer.deliver_now
