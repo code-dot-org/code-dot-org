@@ -36,17 +36,23 @@ export default function Example({example, programmingEnvironmentName}) {
       const embedUrl = example.app.endsWith('embed_app_and_code')
         ? example.app
         : example.app + '/embed_app_and_code';
+      const enteredHeight =
+        Number(example.embed_app_with_code_height) > 400
+          ? Number(example.embed_app_with_code_height)
+          : 400;
       return (
         <div style={{width: '100%'}}>
           <div>
             {content}
-            <iframe
-              src={embedUrl}
-              style={{
-                width: '100%',
-                height: Number(example.embed_app_with_code_height) || 310
-              }}
-            />
+            <div style={{height: enteredHeight, overflow: 'scroll'}}>
+              <iframe
+                src={embedUrl}
+                style={{
+                  width: '100%',
+                  height: enteredHeight * 1.5
+                }}
+              />
+            </div>
           </div>
           {example.image && <img src={example.image} />}
         </div>
