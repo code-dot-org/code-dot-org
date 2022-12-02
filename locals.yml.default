@@ -135,5 +135,5 @@ use_my_apps: true
 
 # Contributors will not have permission to access certain keys, but also should
 # not need access. Override them here to avoid errors.
-# slack_bot_token: localoverride
-# pardot_private_key: localoverride
+# slack_bot_token: PLACEHOLDER
+# pardot_private_key: PLACEHOLDER
