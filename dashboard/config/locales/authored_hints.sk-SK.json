@@ -4798,7 +4798,7 @@
         },
         "courseD_bee_conditionals3": {
           "courseD_bee_conditionals3_a": "Použi podmienku `ak`, skontroluj každé miesto a zisti, či sa tam nachádza kvet, alebo nič.",
-          "courseD_bee_conditionals3_b": "Môžeš použiť cyklus `opakuj` alebo `pokiaľ, aby sa včela pohybovala smerom vpred. Použi ktorýkoľvek chceš!",
+          "courseD_bee_conditionals3_b": "Môžeš použiť cyklus `opakuj` alebo \\`pokiaľ, aby sa včela pohybovala smerom vpred. Použi ktorýkoľvek chceš!",
           "courseD_bee_conditionals3_c": "Neboj sa urobiť chybu! Pridaj bloky,  spusti kód a sleduj, čo sa stane, aj keď úlohu ešte nemáš úplne vyriešenú. "
         },
         "courseD_bee_conditionals3_2018": {
@@ -4822,7 +4822,7 @@
         "courseD_bee_conditionals4": {
           "courseD_bee_conditionals4_a": "Ku každému políčku pristupuj tak, akoby bol nad ním oblak, napriek tomu, že vidíš celú cestu.",
           "courseD_bee_conditionals4_b": "V cykle použi podmienku  `ak` a skontroluj každé pole, či sa tam nachádza nektár.",
-          "courseD_bee_conditionals4_c": "Použitím  bloku [blockly block][0] by si sa mal posunúť vpred a skontrolovať kvet. Ak je tam kvet, čo by mala včela spraviť?"
+          "courseD_bee_conditionals4_c": "Použitím  bloku <xml><block type=\"maze_untilBlocked\"/></xml> by si sa mal posunúť vpred a skontrolovať kvet. Ak je tam kvet, čo by mala včela spraviť?"
         },
         "courseD_bee_conditionals4_2018": {
           "courseD_bee_conditionals4_a": "Ku každému políčku pristupuj tak, akoby bol nad ním oblak, napriek tomu, že vidíš celú cestu.",
@@ -9426,7 +9426,7 @@
           "courseE_artist_functions_challenge1_b": "Pomocou príkazu `skoč na` sa môžeš dostať aj na iné pozície pozície alebo môžeš zmeniť celý vzor, ako len budeš chcieť."
         },
         "courseE_artist_functions_challenge2_2021": {
-          "courseE_artist_functions_challenge1_a": "<xml>\n  <block type=\"jump_to_xy\">\n    <title name=\"XPOS\">350</title>\n    <title name=\"YPOS\">200</title>\n  </block>\n  </xml>\n\nBlok `skoč na` ti umožňuje kedykoľvek presunúť zombíka na ktorýkoľvek pixel na mriežke. Príkaz funguje tak, že ho posunie o konkrétny počet pixelov doprava a o konkrétny počet pixelov dole. Tieto pixely sa vždy počítajú z ľavého horného rohu, takže nezáleží na tom, kde sa zombík nachádza _pred_ spustením príkazu.\n\n![](https://images.code.org/b90fdddc778a27e199221271ce91307a-image-1496450976440.png)"
+          "courseE_artist_functions_challenge1_a": "<xml>\n  <block type=\"jump_to_xy\">\n    <title name=\"XPOS\">350</title>\n    <title name=\"YPOS\">200</title>\n  </block>\n  </xml>\n\nBlok „skoč na“ ti umožňuje kedykoľvek presunúť zombíka na ktorýkoľvek pixel na mriežke. Príkaz funguje tak, že ho posunie o konkrétny počet pixelov doprava a o konkrétny počet pixelov dole. Tieto pixely sa vždy počítajú z ľavého horného rohu, takže nezáleží na tom, kde sa zombík nachádza _pred_ spustením príkazu.\n\n![](https://images.code.org/b90fdddc778a27e199221271ce91307a-image-1496450976440.png)"
         },
         "courseF_variables_card_finish": {
           "card_idea1": "Prepojením nového bloku výzvy s inou premennou s tvojou prvou udalosťou „keď zodpovedaná“ môžeš pridať druhú (či tretiu alebo štvrtú) výzvu.\n\n<xml><block type=\"gamelab_whenPromptAnswered\">\n    <value name=\"VAR\">\n      <block type=\"variables_get\" can_disconnect_from_parent=\"false\">\n        <title name=\"VAR\">meno</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_setPrompt\">\n        <value name=\"QUESTION\">\n          <block type=\"text\" can_disconnect_from_parent=\"false\">\n            <title name=\"TEXT\">čo si želáš na narodeniny?</title>\n          </block>\n        </value>\n        <value name=\"VAR\">\n          <block type=\"variables_get\" can_disconnect_from_parent=\"false\">\n            <title name=\"VAR\">darček</title>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block></xml>",
