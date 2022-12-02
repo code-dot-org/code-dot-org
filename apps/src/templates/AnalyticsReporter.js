@@ -6,11 +6,13 @@ import {
   setUserId
 } from '@amplitude/analytics-browser';
 
-const API_KEY = '12345';
-
 class AnalyticsReporter {
   constructor() {
-    init(API_KEY);
+    // Get the API key from the DOM. See application.html.haml layout.
+    const element = document.querySelector('script[data-amplitude-api-key]');
+    const api_key = element ? element.dataset.amplitudeApiKey : '';
+    // Let Amplitude handle missing/invalid keys.
+    init(api_key);
   }
 
   setUserProperties(userId, userType, signInState) {
