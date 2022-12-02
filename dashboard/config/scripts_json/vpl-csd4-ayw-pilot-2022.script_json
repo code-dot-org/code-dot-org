@@ -13,7 +13,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-12-01 01:11:55 UTC",
+    "serialized_at": "2022-12-01 18:47:13 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -371,7 +371,7 @@
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "VPL-CSD-PILOT-S22-AYW-M4-PhysCompSample1"
+          "VPL-CSD-PILOT-S22-AYW-M4-PhysCompSample"
         ],
         "lesson.key": "lesson-3",
         "lesson_group.key": "lessonGroup-2",
@@ -379,7 +379,7 @@
         "activity_section.key": "2d2f6539-1176-4edd-a3e0-be59d2a86021"
       },
       "level_keys": [
-        "VPL-CSD-PILOT-S22-AYW-M4-PhysCompSample1"
+        "VPL-CSD-PILOT-S22-AYW-M4-PhysCompSample"
       ]
     },
     {
@@ -572,9 +572,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "VPL-CSD-PILOT-S22-AYW-M4-PhysCompSample1",
+        "level.key": "VPL-CSD-PILOT-S22-AYW-M4-PhysCompSample",
         "script_level.level_keys": [
-          "VPL-CSD-PILOT-S22-AYW-M4-PhysCompSample1"
+          "VPL-CSD-PILOT-S22-AYW-M4-PhysCompSample"
         ],
         "lesson.key": "lesson-3",
         "lesson_group.key": "lessonGroup-2",
