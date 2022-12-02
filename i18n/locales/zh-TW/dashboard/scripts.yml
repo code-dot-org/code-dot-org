@@ -4755,3 +4755,7 @@ zh-TW:
           title: CSP 遊樂場
           description_audience: 課程作者
           description_short: 用於課程版本之間的課程或級別分階段更新
+        devices-2022:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: 第 2 章：建立物理原型
