@@ -12,7 +12,7 @@
     },
     "new_name": null,
     "family_name": "csc-bookcover",
-    "serialized_at": "2022-11-28 17:06:17 UTC",
+    "serialized_at": "2022-11-29 14:07:51 UTC",
     "published_state": "pilot",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -2064,6 +2064,20 @@
         "lesson.key": "Sharing My Time Capsule (beta)",
         "framework.shortcode": "csta",
         "standard.shortcode": "1B-AP-12"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "framework.shortcode": "ccela",
+        "standard.shortcode": "5.RL.4"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "framework.shortcode": "ccela",
+        "standard.shortcode": "5.RL.7"
       }
     }
   ],
