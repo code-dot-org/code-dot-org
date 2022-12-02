@@ -39,8 +39,8 @@ theme: responsive
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
         <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom:10px"><strong>ಡ್ಯಾನ್ಸ್‌ ಪಾರ್ಟಿ</strong></h3>
-        <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">ಸ್ನೇಹಿತರು ಮತ್ತು ಕುಟುಂಬದೊಂದಿಗೆ ಹಂಚಿಕೊಳ್ಳಲು ಒಂದು ಡ್ಯಾನ್ಸ್ ಪಾರ್ಟಿ ಅನ್ನು ಕೋಡ್ ಮಾಡಿ. ಕೇಟಿ ಪೆರ್‍ರಿ, ಶಾನ್ ಮೆಂಡೆಸ್, ಪ್ಯಾನಿಕ್ ಅನ್ನು ಒಳಗೊಂಡಿದೆ! ದಿ ಡೆಸ್ಕ್ಓ, ಲಿಲ್ ನ್ಯಾಸ್ ಎಕ್ಸ್, ಜೋನಸ್ ಬ್ರದರ್ಸ್‌, ನಿಕಿ ಮಿನಾಜ್ ಮತ್ತು ಇನ್ನೂ 34!</div>
-        <a class="linktag" id="danceparty" href="/dance" target="_blank"><button>ಚಟುವಟಿಕೆ ಟ್ರೈ ಮಾಡಿ</button></a>
+        <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">ಸ್ನೇಹಿತರು ಮತ್ತು ಕುಟುಂಬದೊಂದಿಗೆ ಹಂಚಿಕೊಳ್ಳಲು ಒಂದು ಡ್ಯಾನ್ಸ್ ಪಾರ್ಟಿ ಅನ್ನು ಕೋಡ್ ಮಾಡಿ. ಬಿಯಾನ್ಸೆ, ಹ್ಯಾರಿ ಸ್ಟೈಲ್ಸ್, ಲಿಝೋ, ಲಿಲ್ ನಾಸ್ ಎಕ್ಸ್, ಸೆಲೆನಾ ಗೊಮೆಜ್, ಡಿಸ್ನಿಯ “ಎನ್ಕಾಂಟೊ” ಸಂಗೀತ ಮತ್ತು ಹೆಚ್ಚಿನದನ್ನು ಒಳಗೊಂಡಿದೆ!</div>
+        <a class="linktag" id="danceparty" href="/dance" target="_blank"><button>ಚಟುವಟಿಕೆಯನ್ನು ಪ್ರಯತ್ನಿಸಿ</button></a>
     </span>
   </div>
 </div>

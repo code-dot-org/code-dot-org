@@ -39,8 +39,8 @@ theme: responsive
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
         <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom:10px"><strong>댄스 파티</strong></h3>
-        <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">댄스 파티를 코딩해 친구들과 가족들과 공유하세요. Katy Perry, Shawn Mendes, Panic! At The At The Disco, Lil Nas X, Jonas Brothers, Nicki Minaj 등 3등 34팀이 함께합니다!</div>
-        <a class="linktag" id="danceparty" href="/dance" target="_blank"><button>활동 체험하기</button></a>
+        <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">댄스 파티를 코딩해 친구들과 가족들과 공유하세요. 비욘세, 해리 스타일스, 리조, 릴 나스 X, 셀레나 고메즈, 디즈니 “엔칸토”의 음악 등이 등장합니다!</div>
+        <a class="linktag" id="danceparty" href="/dance" target="_blank"><button>활동 시도하기</button></a>
     </span>
   </div>
 </div>

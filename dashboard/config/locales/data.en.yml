@@ -718,6 +718,8 @@ en:
         csc_fm_pilot: Function Machines (Pilot)
         csc_fm_pilot_v2: 'Function Machines Intro '
         csc-sprite-lab-pixel-editor: Draw Your Own Sprite
+        csa-pl-intro-to-strings: Introduction to Strings in Java
+        csa-pl-compareTo: The compareTo() method
     callout:
       text:
         drag_blocks: Drag a "move" block and snap it below the other block

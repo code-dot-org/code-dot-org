@@ -87,7 +87,7 @@ module BrowserHelpers
   def element_has_css_multiple_properties(selector, properties, expected_value)
     expected = false
     properties.each do |property|
-      expected ||= (element_css_value(selector, property) === (expected_value))
+      expected ||= (element_css_value(selector, property) == (expected_value))
     end
     expected
   end

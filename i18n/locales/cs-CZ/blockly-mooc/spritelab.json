@@ -97,7 +97,7 @@
   "madlibNoSprites": "Vaše výzva funguje. Jestliže dělá to, co očekáváte, můžete začít přidávat ke svému projekty sprajty. O čem Váš příběh nebo báseň je?",
   "madlibPrintVariable": "Zdá se, že chatbot reaguje, ale nevytiskl, co jste napsali do výzvy. Zajistěte, aby k Vašemu bloku`tisk` byl připojen štítek **proměnná**.",
   "madlibPrintWhenAnswered": "Právě teď tisknete text jen jednou. Zajistěte, aby byl blok `tisk` pod blokem `když je odpovězeno`. \n <xml><block type=\"gamelab_whenPromptAnswered\"><value name=\"VAR\"><block type=\"variables_get\" can_disconnect_from_parent=\"false\"><title name=\"VAR\">food</title></block></value></block></xml>",
-  "madlibTitleVariable": "Zdá se, že jste ke svému programu přidali titulní obrazovku, avšak ta neobsahovala text z výzvy. ",
+  "madlibTitleVariable": "Vypadá to, že jste ke svému programu přidali titulní obrazovku, ale nebyl u ní zahrnut text z výzvy.",
   "moreSprites": "Musíte vytvořit nové sprajty.",
   "moveBothWays": "Váš sprajt by se měl pohnout jedním způsobem a poté druhým.",
   "moveSpriteByDrag": "Zdá se, že Váš kód je vynikající! Chcete-li svůj sprajt přetáhnout, klikněte na něj za chodu programu.",

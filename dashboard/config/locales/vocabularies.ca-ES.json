@@ -56,6 +56,14 @@
         "debugging/starwarsblocks/unversioned": {
           "word": "Depuració"
         },
+        "event/outbreak/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "models_and_simulations/outbreak/unversioned": {
+          "word": "",
+          "definition": ""
+        },
         "code/sports/unversioned": {
           "word": "ModeCodi"
         },
@@ -74,6 +82,9 @@
         "conditionals/coursed/2022": {
           "word": "Condicionals"
         },
+        "behavior/coursef/2022": {
+          "word": "Comportament"
+        },
         "variable/coursef/2022": {
           "word": "Variable"
         },
@@ -82,6 +93,9 @@
         },
         "define/coursef/2022": {
           "word": "Defineix"
+        },
+        "behavior/coursee/2022": {
+          "word": "Comportament"
         },
         "function/coursee/2022": {
           "word": "Funció"
@@ -103,6 +117,9 @@
         },
         "debugging/express/2022": {
           "word": "Depuració"
+        },
+        "behavior/express/2022": {
+          "word": "Comportament"
         },
         "conditionals/express/2022": {
           "word": "Condicionals"
@@ -153,7 +170,27 @@
           "word": "Copyright"
         },
         "code/poem-art/unversioned": {
-          "word": "ModeCodi"
+          "word": "ModeCodi",
+          "definition": ""
+        },
+        "event/poem-art/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "program/poem-art/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "mood/poem-art/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "line/poem-art/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "behavior/coursef/2021": {
+          "word": "Comportament"
         },
         "variable/coursef/2021": {
           "word": "Variable"
@@ -191,6 +228,9 @@
         "debugging/express/2021": {
           "word": "Depuració"
         },
+        "behavior/express/2021": {
+          "word": "Comportament"
+        },
         "conditionals/express/2021": {
           "word": "Condicionals"
         },
@@ -208,6 +248,9 @@
         },
         "debugging/pre-express/2021": {
           "word": "Depuració"
+        },
+        "behavior/coursee/2021": {
+          "word": "Comportament"
         },
         "copyright/coursee/2021": {
           "word": "Copyright"

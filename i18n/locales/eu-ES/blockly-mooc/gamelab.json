@@ -1,4 +1,8 @@
 {
-  "foo":"foo",
-  "fooTooltip":"do foo"
+  "dropletBlock_createSprite_param3": "Altuera",
+  "dropletBlock_setCollider_param0": "mota",
+  "dropletBlock_setCollider_param4": "Altuera",
+  "dropletBlock_setColliderEach_param0": "mota",
+  "dropletBlock_setColliderEach_param4": "Altuera",
+  "shareGame": "Partekatu zure jokoa:"
 }

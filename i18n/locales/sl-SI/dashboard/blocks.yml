@@ -771,3 +771,8 @@ sl:
           DIR:
             right: desno↻
             left: levo↺
+      storylab_setForegroundEffect2:
+        options:
+          EFFECT:
+            '"hearts"': srca
+            '"rain"': dež

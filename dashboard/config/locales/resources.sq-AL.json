@@ -2,6 +2,40 @@
   "sq-AL": {
     "data": {
       "resources": {
+        "dance-party-playlist/dance-extras/unversioned": {
+          "name": "Playlist ne Spotify (te gjitha moshat)"
+        },
+        "poem_art_introduction/poem-art/2021": {
+          "name": "Poema Art 1 - Hyrje"
+        },
+        "csf-artist-intro-video/artist/unversioned": {
+          "name": "Hyrje Artisti"
+        },
+        "csf-turns-angles-doc/artist/unversioned": {
+          "name": "Kthesat dhe këndet",
+          "type": "Doracaku i Studentëve"
+        },
+        "csf-turns-angles-video/artist/unversioned": {
+          "name": "Kthesat dhe këndet"
+        },
+        "dance-party-playlist/dance/unversioned": {
+          "name": "Playlist ne Spotify (te gjitha moshat)"
+        },
+        "encryption-and-public-keys-optional-1/hoc-encryption/unversioned": {
+          "name": "Enkriptimi dhe çelësat publikë"
+        },
+        "hocencryption/hoc-encryption/unversioned": {
+          "name": "Veglat e enkriptimit në Code Studio"
+        },
+        "dance-party-playlist/dance-extras-2019/unversioned": {
+          "name": "Playlist ne Spotify (te gjitha moshat)"
+        },
+        "dance-party-playlist/dance-2019/unversioned": {
+          "name": "Playlist ne Spotify (te gjitha moshat)"
+        },
+        "ai-societal/oceans/unversioned": {
+          "name": "AI: Ndikimi në Shoqëri"
+        },
         "implementation_guide/coursed/2022": {
           "name": "Guida e Implementimit"
         },
@@ -44,6 +78,9 @@
         "relay_programming_5/coursed/2022": {
           "name": "Programimi i Besuar"
         },
+        "spotify_playlist_all_ages_/coursed/2022": {
+          "name": "Playlist ne Spotify (te gjitha moshat)"
+        },
         "conditionals_with_cards/coursed/2022": {
           "name": "Kushtoret me Karta"
         },
@@ -62,6 +99,9 @@
         "implementation_guide/coursef/2022": {
           "name": "Guida e Implementimit"
         },
+        "ai_impact_on_society/coursef/2022": {
+          "name": "AI: Ndikimi në Shoqëri"
+        },
         "internet/coursef/2022": {
           "name": "Internet"
         },
@@ -74,8 +114,24 @@
         "implementation_guide/coursee/2022": {
           "name": "Guida e Implementimit"
         },
+        "private_and_personal_information_exit_ticket/coursee/2022": {
+          "type": "Doracaku i Studentëve"
+        },
+        "turns_angles/coursee/2022": {
+          "name": "Kthesat dhe këndet",
+          "type": "Doracaku i Studentëve"
+        },
+        "turns_angles_1/coursee/2022": {
+          "name": "Kthesat dhe këndet"
+        },
         "implementation_guide/courseb/2022": {
           "name": "Guida e Implementimit"
+        },
+        "digital_trails_animal_tracks/courseb/2022": {
+          "type": "Doracaku i Studentëve"
+        },
+        "digital_trails_digital_trail_squares/courseb/2022": {
+          "type": "Doracaku i Studentëve"
         },
         "move_it_move_it/courseb/2022": {
           "name": "Lëvize atë, lëvize atë"
@@ -116,6 +172,18 @@
         "pair_programming/express/2022": {
           "name": "Programim në çift"
         },
+        "artist_introduction/express/2022": {
+          "name": "Hyrje Artisti"
+        },
+        "turns_angles/express/2022": {
+          "name": "Kthesat dhe këndet"
+        },
+        "turns_angles_1/express/2022": {
+          "name": "Kthesat dhe këndet"
+        },
+        "spotify_playlist_all_ages_/express/2022": {
+          "name": "Playlist ne Spotify (te gjitha moshat)"
+        },
         "variables/express/2022": {
           "name": "variabla"
         },
@@ -124,6 +192,9 @@
         },
         "implementation_guide/coursea/2022": {
           "name": "Guida e Implementimit"
+        },
+        "safety_in_my_online_neighborhood_pause_and_think_moment/coursea/2022": {
+          "type": "Doracaku i Studentëve"
         },
         "pair_programming/coursea/2022": {
           "name": "Programim në çift"
@@ -143,6 +214,9 @@
         "implementation_guide/coursec/2022": {
           "name": "Guida e Implementimit"
         },
+        "putting_a_stop_to_online_meanness_stop_online_meanness/coursec/2022": {
+          "type": "Doracaku i Studentëve"
+        },
         "my_robotic_friends/coursec/2022": {
           "name": "Miqtë e mi Robotikë"
         },
@@ -160,6 +234,16 @@
         },
         "pair_programming/coursec/2022": {
           "name": "Programim në çift"
+        },
+        "artist_introduction/coursec/2022": {
+          "name": "Hyrje Artisti"
+        },
+        "turns_angles/coursec/2022": {
+          "name": "Kthesat dhe këndet"
+        },
+        "turns_angles_1/coursec/2022": {
+          "name": "Kthesat dhe këndet",
+          "type": "Doracaku i Studentëve"
         },
         "the_big_event/coursec/2022": {
           "name": "Eventi i Madh"
@@ -184,6 +268,9 @@
         },
         "binary_bracelets_4/coursec/2022": {
           "name": "Byzylykët Binarë"
+        },
+        "video_machine_learning/csd/2022": {
+          "name": "Video: Mësimi i makinës"
         },
         "make_a_recommendation/csd/2022": {
           "type": "Rishikimi i ndërsjellë"
@@ -253,6 +340,9 @@
         },
         "functions_5/csd/2022": {
           "name": "funksione"
+        },
+        "ai_ethics_research_reflection/csd/2022": {
+          "type": "Doracaku i Studentëve"
         },
         "lesson_plans/courseb/2018": {
           "name": "Plani Mësimor"
@@ -386,6 +476,11 @@
         "lesson_plans_3/csd/2017": {
           "name": "Plani Mësimor"
         },
+        "list_of_poems_1/poem-art/unversioned": {
+          "name": "",
+          "url": "",
+          "type": ""
+        },
         "implementation_guide/coursef/2021": {
           "name": "Guida e Implementimit"
         },
@@ -404,6 +499,9 @@
         "unplugged-video-for-loop-fun/coursef/2021": {
           "name": "Qef me Ciklet For"
         },
+        "ai-societal/coursef/2021": {
+          "name": "AI: Ndikimi në Shoqëri"
+        },
         "assessment-answer-internet/coursef/2021": {
           "name": "Internet"
         },
@@ -415,6 +513,12 @@
         },
         "implementation_guide/courseb/2021": {
           "name": "Guida e Implementimit"
+        },
+        "digital-trails-animal-tracks/courseb/2021": {
+          "type": "Doracaku i Studentëve"
+        },
+        "digital-trails-digital-trail-squares/courseb/2021": {
+          "type": "Doracaku i Studentëve"
         },
         "mimi-activity/courseb/2021": {
           "name": "Lëvize atë, lëvize atë"
@@ -455,6 +559,9 @@
         "implementation_guide/coursea/2021": {
           "name": "Guida e Implementimit"
         },
+        "safety-in-my-online-neighborhood-pause-and-think-moment/coursea/2021": {
+          "type": "Doracaku i Studentëve"
+        },
         "pair-programming-vid/coursea/2021": {
           "name": "Programim në çift"
         },
@@ -473,6 +580,9 @@
         "implementation_guide/coursec/2021": {
           "name": "Guida e Implementimit"
         },
+        "putting-a-stop-to-online-meanness-stop-online-meanness/coursec/2021": {
+          "type": "Doracaku i Studentëve"
+        },
         "csf-mrf-cup-spacing/coursec/2021": {
           "name": "Miqtë e mi Robotikë"
         },
@@ -490,6 +600,16 @@
         },
         "pair-programming-vid/coursec/2021": {
           "name": "Programim në çift"
+        },
+        "csf-artist-intro-video/coursec/2021": {
+          "name": "Hyrje Artisti"
+        },
+        "csf-turns-angles-doc/coursec/2021": {
+          "name": "Kthesat dhe këndet",
+          "type": "Doracaku i Studentëve"
+        },
+        "csf-turns-angles-video/coursec/2021": {
+          "name": "Kthesat dhe këndet"
         },
         "assessment-answer-big-event/coursec/2021": {
           "name": "Eventi i Madh"
@@ -557,6 +677,9 @@
         "unplugged-video-relay-programming/coursed/2021": {
           "name": "Programimi i Besuar"
         },
+        "dance-party-playlist/coursed/2021": {
+          "name": "Playlist ne Spotify (te gjitha moshat)"
+        },
         "assessment-answer-conditionals-cards/coursed/2021": {
           "name": "Kushtoret me Karta"
         },
@@ -575,6 +698,18 @@
         "pair_programming/express/2021": {
           "name": "Programim në çift"
         },
+        "artist_introduction/express/2021": {
+          "name": "Hyrje Artisti"
+        },
+        "turns_angles/express/2021": {
+          "name": "Kthesat dhe këndet"
+        },
+        "turns_angles_1/express/2021": {
+          "name": "Kthesat dhe këndet"
+        },
+        "dance-party-playlist/express/2021": {
+          "name": "Playlist ne Spotify (te gjitha moshat)"
+        },
         "variables_video/express/2021": {
           "name": "variabla"
         },
@@ -583,6 +718,19 @@
         },
         "implementation_guide/coursee/2021": {
           "name": "Guida e Implementimit"
+        },
+        "private-and-personal-information-exit-ticket/coursee/2021": {
+          "type": "Doracaku i Studentëve"
+        },
+        "csf-turns-angles-doc/coursee/2021": {
+          "name": "Kthesat dhe këndet",
+          "type": "Doracaku i Studentëve"
+        },
+        "csf-turns-angles-video/coursee/2021": {
+          "name": "Kthesat dhe këndet"
+        },
+        "ai_ethics_research_reflection/csd/2021": {
+          "type": "Doracaku i Studentëve"
         },
         "design_mode/csd/2021": {
           "name": "dan is a masive dick- "
@@ -598,6 +746,9 @@
         },
         "for_loops/csd/2021": {
           "name": "Për Ciklet"
+        },
+        "video_machine_learning/csd/2021": {
+          "name": "Video: Mësimi i makinës"
         },
         "make-a-recommendation-peer-review-2019/csd/2021": {
           "type": "Rishikimi i ndërsjellë"

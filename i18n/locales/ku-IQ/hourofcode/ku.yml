@@ -42,6 +42,8 @@ ku:
   hoc2022_codeorg_title: Celebrate Hour of Code with NASA and more
   hoc2022_codeorg_description: The 10th Hour of Code is out of this world! Come explore,
     play, and create with us.
+  social_hoc2022_dance: Featuring Beyoncé, Harry Styles, Lizzo, Lil Nas X, Selena
+    Gomez, music from Disney's "Encanto," and more!
   social_hoc2021_cse: 'During the #HourOfCode, we''re celebrating #CSEverywhere. Discover
     the connections!'
   hoc2020_header: Learn today, build a brighter tomorrow.
@@ -570,6 +572,7 @@ ku:
   signup_send_posters_address_placeholder: This address will not be shared on our
     map
   signup_event_type_in_school: School
+  signup_event_type_after_school: After school program
   signup_event_type_out_of_school: Organization/Company
   signup_event_type_at_home: Home
   signup_submit_census_label: Submit
@@ -1020,10 +1023,6 @@ ku:
     or <a id=''teacher_banner_howto''>read the How-To Guide</a>'
   learn_banner_teachers_markdown: 'Teachers: [Host an hour](%{host_url}) or [read
     the How-To Guide](%{howto_url})'
-  learn_robotics_banner_heading: Robotics and Circuits
-  learn_robotics_banner_blurb: Got robots or physical computing kits? Use them with
-    the activities below and make a tangible Hour of Code for students of any age!
-    Some activities even offer a simulator so you can get started without any hardware.
   tutorial_dance2019_name: Dance Party
   tutorial_danceparty_name: Dance Party
   tutorial_chibitronics_name: 'Chibitronics: Illuminated Story'
@@ -1445,12 +1444,12 @@ ku:
   tutorial_bcjs2_name: World of JavaScript 2
   tutorial_3dbearmars_name: The Mars Pioneers
   tutorial_bitsboxyak_name: Yak Attack! Make a Card with Typed Code
-  tutorial_blockscadbargraphs_name: Bar Graphs
-  tutorial_blockscadbirdhouses_name: Birdhouses
-  tutorial_blockscadclock_name: Analog Clock
-  tutorial_blockscaddinner_name: Dinner Robot
-  tutorial_blockscadicecream_name: Ice Cream Machine
-  tutorial_blockscadpizza_name: Pizza Printer
+  tutorial_blockscadbargraphs_name: BlocksCAD Bar Graphs
+  tutorial_blockscadbirdhouses_name: BlocksCAD Birdhouses
+  tutorial_blockscadclock_name: BlocksCAD Analog Clock
+  tutorial_blockscaddinner_name: BlocksCAD Dinner Robot
+  tutorial_blockscadicecream_name: BlocksCAD Ice Cream Machine
+  tutorial_blockscadpizza_name: BlocksCAD Pizza Printer
   tutorial_blockscadsugar_name: Sugar Cubes
   tutorial_bsgridlight_name: 'GridLight: Hello World'
   tutorial_bpartscratch_name: 'Art & Music: Color (Scratch)'
@@ -8711,9 +8710,9 @@ ku:
   tutorial_eddog_name: Code a guard dog with Edison
   tutorial_microbit15_name: 'micro:bit: coding towards Global Goal 15, Life on Land'
   tutorial_unity_name: 'Unity Game Development Creator Kit: Beginner Code'
-  tutorial_blockscadtarget_name: Transformation Target Practice
+  tutorial_blockscadtarget_name: BlocksCAD Transformation Target Practice
   tutorial_tcadicicles_name: Designing Icicles With Codeblocks in Tinkercad
-  tutorial_blockscadscale_name: Scale City
+  tutorial_blockscadscale_name: BlocksCAD Scale City
   tutorial_tcadloops_name: Using Loops in Tinkercad to Design a Bursting Star
   tutorial_phidgets_name: A Phidgets Theremin with Processing
   tutorial_modvariables_name: Investigating Variables & Block Values using Cubelets
@@ -9572,7 +9571,7 @@ ku:
   tutorial_robotical2_name: Hour of Code Activity 2 - the Marty Controller
   tutorial_robotical3_name: Hour of Code Activity 3 - Getting Started with Marty Blocks
     Jr
-  tutorial_blockscadvirus_name: Modeling a Virus with Code
+  tutorial_blockscadvirus_name: BlocksCAD Modeling a Virus with Code
   tutorial_robotical1_name: Hour of Code Activity 1 - Marty Unplugged
   tutorial_irobotshapes_name: 'Robotics for K-2: Robot Shapes'
   tutorial_irobotparts_name: 'Robotics for K-2: Robot Parts'
@@ -10444,7 +10443,7 @@ ku:
   tutorial_clbinary_name: Learn How Binary Works with Computers using Minecraft
   tutorial_sascollabcode_name: 'SAS CodeSnaps: Collaborative coding for blind, low
     vision and sighted students'
-  tutorial_codecombatgoblins_name: 'CodeCombat: Goblins nn'' Glory'
+  tutorial_codecombatgoblins_name: 'CodeCombat: Goblins ''n'' Glory'
   tutorial_scratchstorytelling_name: Anything is Possible! Storytelling with Scratch
   tutorial_crayolasymbols_name: 'Unplugged Coding from Crayola Education: Visual Symbols
     Convey Meaning'
@@ -11212,7 +11211,7 @@ ku:
   tutorial_googlesuperhero_string_detail_programming_languages: Blocks
   tutorial_googlename _string_detail_programming_languages: Blocks
   tutorial_carnegiezillah_string_detail_programming_languages: Blocks
-  tutorial_nasachspacejam_string_detail_programming_languages: JavaScript, P5
+  tutorial_nasachspacejam_string_detail_programming_languages: Blocks
   tutorial_hatchxrsolar_string_detail_programming_languages: Blocks
   tutorial_hatchxrspace_string_detail_programming_languages: Blocks
   tutorial_hatchxrtrex_string_detail_programming_languages: Blocks
@@ -11247,6 +11246,29 @@ ku:
   tutorial_nasapackage_string_detail_programming_languages: Blocks
   tutorial_nasalunar_string_detail_programming_languages: Blocks, JavaScript
   tutorial_meeestate_string_detail_programming_languages: Blocks, Python
+  tutorial_imagipixelart_longdescription: Learn Python and create your own colorful
+    animations in this 1 hour crash course!
+  tutorial_imagipixelart_name: Code your own pixel art!
+  tutorial_imagipixelart_string_detail_grades: Grades 2-8
+  tutorial_imagipixelart_string_detail_platforms: ''
+  tutorial_imagipixelart_string_detail_programming_languages: typing
+  tutorial_imagipixelart_string_platforms: All modern browsers, iPad, Android tablets,
+    Windows phone, Android phone, iPhone
+  tutorial_kcjhealth_longdescription: 'Learn about data visualization, algorithmic
+    art and coding, while exploring SDG #3 ''Good Health and Well-Being''.'
+  tutorial_kcjhealth_name: The Health & Well-Being Challenge
+  tutorial_kcjhealth_string_detail_grades: Grades 6+
+  tutorial_kcjhealth_string_detail_platforms: ''
+  tutorial_kcjhealth_string_detail_programming_languages: blocks
+  tutorial_kcjhealth_string_platforms: All modern browsers
+  tutorial_msftwakanda_longdescription: 'Shuri, Okoye, and Riri must band together
+    to help Wakanda. Code your own action-packed activity inspired by Marvel Studios''
+    ''Black Panther: Wakanda Forever''!'
+  tutorial_msftwakanda_name: Long Live Wakanda
+  tutorial_msftwakanda_string_detail_grades: Grades 6+
+  tutorial_msftwakanda_string_detail_platforms: ''
+  tutorial_msftwakanda_string_detail_programming_languages: blocks
+  tutorial_msftwakanda_string_platforms: All modern browsers
   school_not_found_heading: We couldn't find your school. Please enter more information.
   school_name: School name
   school_name_error: School name is required.
