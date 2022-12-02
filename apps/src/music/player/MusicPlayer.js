@@ -128,6 +128,18 @@ export default class MusicPlayer {
     this.currentTrack.sounds.push(sound);
   }
 
+  restInCurrentTrack(measures) {
+    if (!this.currentTrack) {
+      console.warn('no track in progress. Ignoring.');
+      return;
+    }
+
+    this.currentTrack.sounds.push({
+      type: 'REST',
+      length: measures
+    });
+  }
+
   finishTrack() {
     if (!this.currentTrack) {
       console.warn('no track in progress. Ignoring');
@@ -138,8 +150,12 @@ export default class MusicPlayer {
 
     let when = measure;
     for (const sound of sounds) {
-      this.playSoundAtMeasureById(sound, when, insideWhenRun, trackName);
-      when += this.getLengthForId(sound);
+      if (sound.type === 'REST') {
+        when += sound.length;
+      } else {
+        this.playSoundAtMeasureById(sound, when, insideWhenRun, trackName);
+        when += this.getLengthForId(sound);
+      }
     }
 
     this.currentTrack = null;

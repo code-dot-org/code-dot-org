@@ -54,6 +54,20 @@ export const baseToolbox = {
               }
             }
           }
+        },
+        {
+          kind: 'block',
+          type: BlockTypes.REST_IN_TRACK,
+          inputs: {
+            measures: {
+              shadow: {
+                type: 'math_number',
+                fields: {
+                  NUM: 1
+                }
+              }
+            }
+          }
         }
       ]
     },

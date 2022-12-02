@@ -1,4 +1,9 @@
-import {newTrack, playSound, playSoundInTrack} from './blocks/samples';
+import {
+  newTrack,
+  playSound,
+  playSoundInTrack,
+  restInTrack
+} from './blocks/samples';
 import {forLoop} from './blocks/control';
 import {triggeredAt, whenRun} from './blocks/events';
 
@@ -9,7 +14,8 @@ const blockList = [
   playSound,
   forLoop,
   newTrack,
-  playSoundInTrack
+  playSoundInTrack,
+  restInTrack
 ];
 
 const MUSIC_BLOCKS = {};
