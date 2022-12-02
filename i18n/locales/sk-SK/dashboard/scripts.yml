@@ -3417,3 +3417,7 @@ sk:
         csp-playground:
           description_audience: Autori osnov
           description_short: Na prípravu aktualizácií hodín alebo úrovní medzi verziami učebných osnov
+        devices-2022:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: 'Kapitola 2: Vytváranie fyzických prototypov'
