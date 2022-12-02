@@ -17,6 +17,7 @@ import BulkLessonVisibilityToggle from '@cdo/apps/code-studio/components/progres
 import {unitCalendarLesson} from '../../../templates/progress/unitCalendarLessonShapes';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 import FontAwesome from '../../../templates/FontAwesome';
+import {PublishedState} from '@cdo/apps/generated/curriculum/sharedCourseConstants';
 
 export const NOT_STARTED = 'NOT_STARTED';
 export const IN_PROGRESS = 'IN_PROGRESS';
@@ -43,6 +44,7 @@ class UnitOverviewTopRow extends React.Component {
     courseOfferingId: PropTypes.number,
     courseVersionId: PropTypes.number,
     isProfessionalLearningCourse: PropTypes.bool,
+    publishedState: PropTypes.oneOf(Object.values(PublishedState)),
 
     // redux provided
     sectionsForDropdown: PropTypes.arrayOf(sectionForDropdownShape).isRequired,
@@ -125,7 +127,8 @@ class UnitOverviewTopRow extends React.Component {
       hasPerLevelResults,
       courseOfferingId,
       courseVersionId,
-      isProfessionalLearningCourse
+      isProfessionalLearningCourse,
+      publishedState
     } = this.props;
 
     const pdfDropdownOptions = this.compilePdfDropdownOptions();
@@ -149,6 +152,11 @@ class UnitOverviewTopRow extends React.Component {
      * */
     let completedProfessionalLearningCourse =
       isProfessionalLearningCourse && unitProgress === COMPLETED;
+
+    const displayPrintingOptionsDropwdown =
+      pdfDropdownOptions.length > 0 &&
+      publishedState !== PublishedState.pilot &&
+      publishedState !== PublishedState.in_development;
 
     return (
       <div style={styles.buttonRow} className="unit-overview-top-row">
@@ -192,7 +200,7 @@ class UnitOverviewTopRow extends React.Component {
                 unitId={scriptId}
               />
             )}
-          {pdfDropdownOptions.length > 0 && viewAs === ViewType.Instructor && (
+          {displayPrintingOptionsDropwdown && viewAs === ViewType.Instructor && (
             <div style={{marginRight: 5}}>
               <DropdownButton
                 customText={

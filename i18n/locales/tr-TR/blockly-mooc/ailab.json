@@ -1,1 +1,9 @@
-{}
+{
+  "selectDataset": "Kullanmak istediğiniz veri kümesini seçin. ",
+  "uploadedDataset": "Veri kümesini yüklediniz. ",
+  "selectedDataset": "Veri kümesini seçtiniz. ",
+  "dataDisplayLabel": "Tahmin etmek için bir sütun seçin.",
+  "dataDisplayFeatures": "Tahminin yapılmasına yardımcı olması için girdi olarak bir veya daha fazla sütun seçin.",
+  "selectedFeatureNumerical": "Az önce sayısal bir özellik seçtiniz.",
+  "selectedFeatureCategorical": "Az önce kategorik bir özellik seçtiniz."
+}

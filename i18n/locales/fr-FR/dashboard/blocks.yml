@@ -31,8 +31,8 @@ fr:
             sprites: tout
             '"ALIEN"': tous les extraterrestres
             '"BEAR"': les ours
-            '"CAT"': tous les chats
-            '"DOG"': tous les chiens
+            '"CAT"': les chats
+            '"DOG"': les chiens
             '"DUCK"': les canards
             '"FROG"': les grenouilles
             '"MOOSE"': tous les élans
@@ -87,8 +87,8 @@ fr:
             sprites: tout
             '"ALIEN"': tous les extraterrestres
             '"BEAR"': les ours
-            '"CAT"': tous les chats
-            '"DOG"': tous les chiens
+            '"CAT"': les chats
+            '"DOG"': les chiens
             '"DUCK"': les canards
             '"FROG"': les grenouilles
             '"MOOSE"': tous les élans
@@ -149,8 +149,8 @@ fr:
             sprites: tout
             '"ALIEN"': tous les extraterrestres
             '"BEAR"': les ours
-            '"CAT"': tous les chats
-            '"DOG"': tous les chiens
+            '"CAT"': les chats
+            '"DOG"': les chiens
             '"DUCK"': les canards
             '"FROG"': les grenouilles
             '"MOOSE"': tous les élans
@@ -173,8 +173,8 @@ fr:
             sprites: tout
             '"ALIEN"': tous les extraterrestres
             '"BEAR"': les ours
-            '"CAT"': tous les chats
-            '"DOG"': tous les chiens
+            '"CAT"': les chats
+            '"DOG"': les chiens
             '"DUCK"': les canards
             '"FROG"': les grenouilles
             '"MOOSE"': tous les élans
@@ -323,8 +323,8 @@ fr:
             sprites: tout
             '"ALIEN"': tous les extraterrestres
             '"BEAR"': les ours
-            '"CAT"': tous les chats
-            '"DOG"': tous les chiens
+            '"CAT"': les chats
+            '"DOG"': les chiens
             '"DUCK"': les canards
             '"FROG"': les grenouilles
             '"MOOSE"': tous les élans
@@ -351,8 +351,8 @@ fr:
             sprites: tout
             '"ALIEN"': tous les extraterrestres
             '"BEAR"': les ours
-            '"CAT"': tous les chats
-            '"DOG"': tous les chiens
+            '"CAT"': les chats
+            '"DOG"': les chiens
             '"DUCK"': les canards
             '"FROG"': les grenouilles
             '"MOOSE"': tous les élans
@@ -478,8 +478,8 @@ fr:
           COSTUME:
             '"ALIEN"': tous les extraterrestres
             '"BEAR"': les ours
-            '"CAT"': tous les chats
-            '"DOG"': tous les chiens
+            '"CAT"': les chats
+            '"DOG"': les chiens
             '"DUCK"': les canards
             '"FROG"': les grenouilles
             '"MOOSE"': tous les élans
@@ -607,8 +607,8 @@ fr:
             sprites: tout
             '"ALIEN"': tous les extraterrestres
             '"BEAR"': les ours
-            '"CAT"': tous les chats
-            '"DOG"': tous les chiens
+            '"CAT"': les chats
+            '"DOG"': les chiens
             '"DUCK"': les canards
             '"FROG"': les grenouilles
             '"MOOSE"': tous les élans
@@ -681,8 +681,8 @@ fr:
             sprites: tout
             '"ALIEN"': tous les extraterrestres
             '"BEAR"': les ours
-            '"CAT"': tous les chats
-            '"DOG"': tous les chiens
+            '"CAT"': les chats
+            '"DOG"': les chiens
             '"DUCK"': les canards
             '"FROG"': les grenouilles
             '"MOOSE"': tous les élans
@@ -717,8 +717,8 @@ fr:
             sprites: tout
             '"ALIEN"': tous les extraterrestres
             '"BEAR"': les ours
-            '"CAT"': tous les chats
-            '"DOG"': tous les chiens
+            '"CAT"': les chats
+            '"DOG"': les chiens
             '"DUCK"': les canards
             '"FROG"': les grenouilles
             '"MOOSE"': tous les élans
@@ -744,8 +744,8 @@ fr:
             sprites: tout
             '"ALIEN"': tous les extraterrestres
             '"BEAR"': les ours
-            '"CAT"': tous les chats
-            '"DOG"': tous les chiens
+            '"CAT"': les chats
+            '"DOG"': les chiens
             '"DUCK"': les canards
             '"FROG"': les grenouilles
             '"MOOSE"': tous les élans
@@ -761,8 +761,8 @@ fr:
             sprites: tout
             '"ALIEN"': tous les extraterrestres
             '"BEAR"': les ours
-            '"CAT"': tous les chats
-            '"DOG"': tous les chiens
+            '"CAT"': les chats
+            '"DOG"': les chiens
             '"DUCK"': les canards
             '"FROG"': les grenouilles
             '"MOOSE"': tous les élans
@@ -786,8 +786,8 @@ fr:
             sprites: tout
             '"ALIEN"': tous les extraterrestres
             '"BEAR"': les ours
-            '"CAT"': tous les chats
-            '"DOG"': tous les chiens
+            '"CAT"': les chats
+            '"DOG"': les chiens
             '"DUCK"': les canards
             '"FROG"': les grenouilles
             '"MOOSE"': tous les élans
@@ -821,8 +821,8 @@ fr:
             sprites: tout
             '"ALIEN"': tous les extraterrestres
             '"BEAR"': les ours
-            '"CAT"': tous les chats
-            '"DOG"': tous les chiens
+            '"CAT"': les chats
+            '"DOG"': les chiens
             '"DUCK"': les canards
             '"FROG"': les grenouilles
             '"MOOSE"': tous les élans
@@ -866,8 +866,8 @@ fr:
             sprites: tout
             '"ALIEN"': tous les extraterrestres
             '"BEAR"': les ours
-            '"CAT"': tous les chats
-            '"DOG"': tous les chiens
+            '"CAT"': les chats
+            '"DOG"': les chiens
             '"DUCK"': les canards
             '"FROG"': les grenouilles
             '"MOOSE"': tous les élans
@@ -1945,7 +1945,7 @@ fr:
         text: en appuyant sur {KEY}
         options:
           KEY:
-            '"up"': flèche « vers le haut »
+            '"up"': flèche « vers le haut »
             '"down"': flèche « vers le bas »
             '"left"': flèche « vers la gauche »
             '"right"': flèche « vers la droite »
@@ -1957,7 +1957,7 @@ fr:
       Mikelab_whenKeyReleased:
         options:
           KEY:
-            '"up"': flèche « vers le haut »
+            '"up"': flèche « vers le haut »
             '"down"': flèche « vers le bas »
             '"left"': flèche « vers la gauche »
             '"right"': flèche « vers la droite »
@@ -1977,7 +1977,7 @@ fr:
       Mikelab_whileKeyPressed:
         options:
           KEY:
-            '"up"': flèche « vers le haut »
+            '"up"': flèche « vers le haut »
             '"down"': flèche « vers le bas »
             '"left"': flèche « vers la gauche »
             '"right"': flèche « vers la droite »

@@ -268,6 +268,7 @@ tr:
   teacher_mailer:
     new_teacher_subject: 'Code.org''a Hoşgeldiniz!'
     delete_teacher_subject: 'Code.org hesabınız silindi'
+    verified_teacher_subject: 'Code.org Öğretmen Doğrulaması - Başarılı'
   section:
     your_section:
       one: 'Bölüm:'
@@ -1049,12 +1050,15 @@ tr:
         not_listed: 'Tercih edilen terim listelenmemektedir.'
         none: 'Cevap vermemeyi tercih ederim'
       school_country:
+        barbados: 'Barbados'
+        belize: 'Belize'
         canada: 'Kanada'
         chile: 'Şili'
         colombia: 'Kolombiya'
         israel: 'İsrail'
         malaysia: 'Malezya'
         mexico: 'Meksika'
+        paraguay: 'Paraguay'
         thailand: 'Tayland'
         uzbekistan: 'Özbekistan'
       ages:
@@ -1162,4 +1166,21 @@ tr:
       forbidden: "Kullanıcı, öğrencinin kilitlenebilme durumunu güncelleyemez"
   reset_predict_progress_button: "Yanıtı Sil"
   pixelation:
+    raw_format: "Ham Format"
+    raw_format_alt: "Bitleri herhangi bir biçimlendirme olmadan görüntüleyin"
+    readable_format: "Okunabilir Biçim"
+    readable_format_alt: "Pikselle ayrılmış bitleri görüntüleyin"
+    save_image: "Resmi kaydet"
+    actual_size: "Gerçek boyut"
+    image_file_format_header: "Görüntü Dosyası Biçimi"
+    image_file_format_width: "Genişlik: 1 bayt"
+    image_file_format_height: "Yükseklik: 1 bayt"
+    image_file_format_bits_per_pixel: "Piksel başına bit: 1 bayt"
+    image_file_format_data_a: "n bit piksel veri"
+    image_file_format_data_b: "n = Genişlik* Yükseklik* Piksel başına bit"
+    image_width: "Resim genişliği"
+    image_height: "Resim yüksekliği"
+    bits_per_pixel_header: "Piksel Başına Bit"
     binary: "İkili"
+    hexadecimal: "Onaltılık"
+    pixel_format_header: "Piksel Biçimi"

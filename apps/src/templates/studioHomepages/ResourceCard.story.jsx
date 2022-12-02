@@ -1,35 +1,28 @@
 import React from 'react';
 import ResourceCard from './ResourceCard';
+import {Provider} from 'react-redux';
+import {reduxStore} from '@cdo/storybook/decorators';
 
-export default storybook => {
-  return storybook
-    .storiesOf('Cards/ResourceCard', module)
-    .withReduxStore()
-    .addStoryTable([
-      {
-        name: 'tool card',
-        description: `This is an example tool card.`,
-        story: () => (
-          <ResourceCard
-            title="Teacher Community"
-            description="Ask questions about curriculum, share ideas from your lessons, and get help from other teachers"
-            buttonText="Connect Today"
-            link="link to teacher community"
-          />
-        )
-      },
-      {
-        name: 'tool card - allow wrap',
-        description: `This is an example tool card that allows the title to wrap.`,
-        story: () => (
-          <ResourceCard
-            title="Teacher Community"
-            description="Ask questions about curriculum, share ideas from your lessons, and get help from other teachers"
-            buttonText="Connect Today"
-            link="link to teacher community"
-            allowWrap={true}
-          />
-        )
-      }
-    ]);
+export default {
+  title: 'ResourceCard',
+  component: ResourceCard
+};
+
+const Template = args => (
+  <Provider store={reduxStore()}>
+    <ResourceCard
+      title="Teacher Community"
+      description="Ask questions about curriculum, share ideas from your lessons, and get help from other teachers"
+      buttonText="Connect Today"
+      link="link to teacher community"
+      {...args}
+    />
+  </Provider>
+);
+
+export const ToolCard = Template.bind({});
+
+export const ToolCardWithWrap = Template.bind({});
+ToolCardWithWrap.args = {
+  allowWrap: true
 };

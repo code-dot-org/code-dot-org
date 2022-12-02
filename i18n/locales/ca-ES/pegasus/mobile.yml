@@ -1053,6 +1053,7 @@
   alice_beyond_longdescription: "El projecte Alice utilitzant un entorn de programació innovadora per donar suport a la creació d'animacions 3D, proporciona eines i materials d'ensenyament i aprenentatge de pensament computacional, resolució de problemes i la programació informàtica a través d'un espectre d'edats i nivells de qualificació."
   sphero_beyond_longdescription: "Si ets educador o un pare, les lliçons SPRK donen als nens un divertit curs accelerat a la programació de robots de mentre  milloren les seves habilitats en matemàtiques i ciències."
   compatibility_hide_this_warning: "Amaga aquest avís"
+  compatibility_unsupported_browser_markdown: "El vostre navegador no és compatible. Sisplau, actualitzeu-lo a [un dels nostres navegadors compatibles](%{supported_browsers_url}). Podeu provar de veure la pàgina, però la funcionalitat es podria veure afectada."
   flappy_shortcode: "aleteig"
   header_courses: "cursos"
   header_course_catalog: "Catàleg de cursos"
@@ -1074,6 +1075,7 @@
   header_help_us: "Ajuda'ns"
   header_about: "Quant a"
   header_help_support: 'Ajuda i suport '
+  header_report_bug: "Informar d'un problema"
   header_legal_privacy: "Política de privadesa"
   header_legal_tos: "Condicions d'ús"
   user_header_label: "Hola %{username}"

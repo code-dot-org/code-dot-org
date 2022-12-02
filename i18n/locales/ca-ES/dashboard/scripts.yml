@@ -654,6 +654,7 @@ ca:
               display_name: Vista general
         dance-2019:
           title: Festa de ball
+          description_short: Codi d'una festa de ball per compartir amb els vostres amics i familiars. Amb Beyoncé, Harry Styles, Lizzo, Lil Nas X, Selena Gomez, música de “Encanto” de Disney i molt més!
           description: Crea un codi amb la teva pròpia festa amb ball i comparteix-la amb els teus amics!
           student_description: Crea un codi amb la teva pròpia festa amb ball i comparteix-la amb els teus amics!
         dance-extras-2019:
@@ -904,6 +905,8 @@ ca:
           description_short: 'Una introducció a la informàtica: combina el millor del nostre currículum d''educació primària per alumnes més grans.'
           description_audience: De 9 a 18 anys
           lesson_groups:
+            csf_warmup:
+              display_name: Recapitulació
             csf_loops:
               display_name: Bucles
             csf_conditionals:
@@ -917,6 +920,7 @@ ca:
             lessonGroup-9:
               display_name: Esdeveniments
         pre-express-2021:
+          title: Curs Exprés per pre-lectors (2021)
           description_short: 'Una introducció a la informàtica per a prelectors: combina el millor dels cursos de parvulari i primer.'
           description_audience: De 4 a 8 anys
           lesson_groups:

@@ -13,7 +13,28 @@ export default class Timeline extends React.Component {
     sounds: PropTypes.array
   };
 
-  getUniqueIndexForEventId = id => {
+  getEventHeight = () => {
+    const numUniqueSounds = this.getUniqueSounds().length;
+    const actualHeight = 110;
+
+    // While we might not actually have this many rows to show,
+    // we will limit each row's height to the size that would allow
+    // this many to be shown at once.
+    const minVisible = 5;
+
+    const maxVisible = 10;
+
+    // We might not actually have this many rows to show, but
+    // we will size the bars so that this many rows would show.
+    const numSoundsToShow = Math.max(
+      Math.min(numUniqueSounds, maxVisible),
+      minVisible
+    );
+
+    return Math.floor(actualHeight / numSoundsToShow);
+  };
+
+  getUniqueSounds = () => {
     // Each unique sound gets its own color/row.
     const uniqueSounds = [];
     for (const songEvent of this.props.songData.events) {
@@ -22,12 +43,15 @@ export default class Timeline extends React.Component {
         uniqueSounds.push(id);
       }
     }
+    return uniqueSounds;
+  };
 
-    return uniqueSounds.indexOf(id);
+  getUniqueIndexForEventId = id => {
+    return this.getUniqueSounds().indexOf(id);
   };
 
   getVerticalOffsetForEventId = id => {
-    return this.getUniqueIndexForEventId(id) * 24;
+    return this.getUniqueIndexForEventId(id) * this.getEventHeight();
   };
 
   getColorsForEventId = id => {
@@ -64,6 +88,9 @@ export default class Timeline extends React.Component {
     const playHeadOffset = isPlaying
       ? (currentAudioElapsedTime * barWidth) / convertMeasureToSeconds(1)
       : null;
+
+    // Leave some vertical space between each event block.
+    const eventVerticalSpace = 2;
 
     return (
       <div
@@ -134,6 +161,7 @@ export default class Timeline extends React.Component {
                   style={{
                     width: barWidth * this.getLengthForId(eventData.id) - 4,
                     position: 'absolute',
+                    boxSizing: 'border-box',
                     left: barWidth * eventData.when,
                     top: 20 + this.getVerticalOffsetForEventId(eventData.id),
                     backgroundColor: this.getColorsForEventId(eventData.id)
@@ -142,7 +170,7 @@ export default class Timeline extends React.Component {
                       'solid 2px ' +
                       this.getColorsForEventId(eventData.id).border,
                     borderRadius: 8,
-                    height: 18
+                    height: this.getEventHeight() - eventVerticalSpace
                   }}
                 >
                   &nbsp;

@@ -8,12 +8,7 @@ import {
   Row,
   Col
 } from 'react-bootstrap';
-import {
-  PROGRAM_CSD,
-  PROGRAM_CSP,
-  PROGRAM_CSA,
-  styles
-} from './TeacherApplicationConstants';
+import {styles} from './TeacherApplicationConstants';
 import {
   PageLabels,
   SectionHeaders
@@ -38,6 +33,7 @@ const US = 'United States';
 
 const FindYourRegion = props => {
   const {onChange, errors, data} = props;
+  const hasNoProgramSelected = data.program === undefined;
   const resetCountry = () => onChange({country: US});
   const [regionalPartner] = useRegionalPartner(data);
   useEffect(() => {
@@ -49,23 +45,6 @@ const FindYourRegion = props => {
       )
     });
   }, [regionalPartner, onChange]);
-
-  const getProgramInfo = program => {
-    switch (program) {
-      case PROGRAM_CSD:
-        return {name: 'CS Discoveries', shortName: 'CSD'};
-      case PROGRAM_CSP:
-        return {name: 'CS Principles', shortName: 'CSP'};
-      case PROGRAM_CSA:
-        return {name: 'CSA', shortName: 'CSA'};
-      default:
-        return {name: 'CS Program', shortName: null};
-    }
-  };
-  const programInfo = getProgramInfo(data.program);
-  const isOffered = regionalPartner?.pl_programs_offered?.includes(
-    programInfo.shortName
-  );
 
   const renderInternationalModal = () => {
     return (
@@ -108,35 +87,18 @@ const FindYourRegion = props => {
   const renderRegionalPartnerInfo = () => {
     let content;
     if (regionalPartner?.name) {
-      if (data.program === PROGRAM_CSA && regionalPartner && !isOffered) {
-        content = (
-          <p style={styles.error}>
-            <strong>
-              The Regional Partner in your region is not offering Computer
-              Science A at this time.{' '}
-            </strong>
-            Code.org will review your application and contact you with options
-            for joining a national cohort of Computer Science A teachers. If
-            accepted into the program, travel may be required to attend a
-            weeklong in-person summer workshop. If so, travel and accommodation
-            will be provided by Code.org. Academic year workshops for the
-            national cohort will be hosted virtually.
+      content = (
+        <>
+          <p>
+            Your Regional Partner will host the full professional learning
+            program and provide ongoing support as you implement what you’ve
+            learned in the classroom!
           </p>
-        );
-      } else {
-        content = (
-          <>
-            <p>
-              Your Regional Partner will host the full professional learning
-              program and provide ongoing support as you implement what you’ve
-              learned in the classroom!
-            </p>
-            <p>
-              <strong>Your Regional Partner is: {regionalPartner.name}</strong>
-            </p>
-          </>
-        );
-      }
+          <p>
+            <strong>Your Regional Partner is: {regionalPartner.name}</strong>
+          </p>
+        </>
+      );
     } else {
       content = (
         <>
@@ -167,12 +129,19 @@ const FindYourRegion = props => {
     );
   };
 
-  return (
-    <FormContext.Provider value={props}>
-      <LabelsContext.Provider value={PageLabels.findYourRegion}>
-        <FormGroup>
-          <h3>Section 2: {SectionHeaders.findYourRegion}</h3>
-
+  const renderContents = () => {
+    if (hasNoProgramSelected) {
+      return (
+        <div style={styles.error}>
+          <p>
+            Please fill out Section 1 and select your program before completing
+            this section.
+          </p>
+        </div>
+      );
+    } else {
+      return (
+        <>
           <LabeledRadioButtons name="country" />
           {renderInternationalModal()}
 
@@ -218,6 +187,18 @@ const FindYourRegion = props => {
           )}
 
           {renderRegionalPartnerInfo()}
+        </>
+      );
+    }
+  };
+
+  return (
+    <FormContext.Provider value={props}>
+      <LabelsContext.Provider value={PageLabels.findYourRegion}>
+        <FormGroup>
+          <h3>Section 2: {SectionHeaders.findYourRegion}</h3>
+
+          {renderContents()}
         </FormGroup>
       </LabelsContext.Provider>
     </FormContext.Provider>

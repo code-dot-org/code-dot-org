@@ -587,11 +587,11 @@ fr-FR:
           actions gérées par un ordinateur. Dans cette leçon, tu vas réagir différemment
           selon le bouton sur lequel on appuie. \n"
       BinaryBracelets-Unplugged:
-        markdown: "# Binaires Bracelets    Crée un bracelet qui représente ton nom
-          dans un système que les ordinateurs comprennent !   ![] (https://images.code.org/ed15a484276c0989e4adb5daf480f68a-image-1557870226222.png)\n"
+        markdown: "# Bracelets Binaires  \n\nCrée un bracelet qui représente ton nom
+          dans un système qu'un ordinateur peut comprendre !  \n\n![] (https://images.code.org/ed15a484276c0989e4adb5daf480f68a-image-1557870226222.png)\n"
       BinaryBracelets-Unplugged_2020:
-        markdown: "# Binaires Bracelets    Crée un bracelet qui représente ton nom
-          dans un système que les ordinateurs comprennent !   ![] (https://images.code.org/ed15a484276c0989e4adb5daf480f68a-image-1557870226222.png)\n"
+        markdown: "# Bracelets Binaires  \n\nCrée un bracelet qui représente ton nom
+          dans un système qu'un ordinateur peut comprendre !  \n\n![] (https://images.code.org/ed15a484276c0989e4adb5daf480f68a-image-1557870226222.png)\n"
       BinaryImages-Unplugged:
         markdown: "# Images Binaires    Exprime comment recréer une image seulement
           à l'aide de deux valeurs simples.\n"
@@ -1167,13 +1167,13 @@ fr-FR:
             sera lancée.
         title: Faites une prévision
       ConditionalsWithCards-Unplugged:
-        markdown: "# Conditionnelles avec des Cartes    Joue à un jeu de cartes et
-          crée des règles comme « Si je dessine un carton rouge, j'obtiens un point
-          » et « Si je dessine une carte noire, tu obtiens un point. »\n"
+        markdown: "# Les instructions conditionnelles avec des Cartes   \n\nJoue à
+          un jeu de cartes et crée des règles comme : « Si je tire une carte rouge,
+          je marque un point » et « Si je tire une carte noire, tu marques un point ».\n"
       ConditionalsWithCards-Unplugged_2020:
-        markdown: "# Conditionnelles avec des Cartes    Joue à un jeu de cartes et
-          crée des règles comme « Si je dessine un carton rouge, j'obtiens un point
-          » et « Si je dessine une carte noire, tu obtiens un point. »\n"
+        markdown: "# Les instructions conditionnelles avec des Cartes   \n\nJoue à
+          un jeu de cartes et crée des règles comme : « Si je tire une carte rouge,
+          je marque un point » et « Si je tire une carte noire, tu marques un point ».\n"
       Crowdsourcing-Unplugged:
         markdown: "# Production participative   Vois comment la production participative,
           une technique de résolution de problèmes commune en informatique, peut t'aider
@@ -1290,11 +1290,11 @@ fr-FR:
 
 '
       GraphPaperProgramming-Unplugged:
-        markdown: "# Programmation sur Papier Millimétré    Écris des algorithmes
-          que tes camarades de classe peuvent utiliser pour dessiner des images.\n"
+        markdown: "# Programmation sur Papier Millimétré    \n\nÉcris des algorithmes
+          que tes camarades de classe pourront utiliser pour faire des dessins."
       GraphPaperProgramming-Unplugged_2020:
-        markdown: "# Programmation sur Papier Millimétré    Écris des algorithmes
-          que tes camarades de classe peuvent utiliser pour dessiner des images.\n"
+        markdown: "# Programmation sur Papier Millimétré    \n\nÉcris des algorithmes
+          que tes camarades de classe pourront utiliser pour faire des dessins."
       HappyLoops-Unplugged:
         markdown: |
           # Joyeuses boucles
@@ -1640,11 +1640,15 @@ fr-FR:
       Multi-Screen Apps:
         content1: description ici
       MyLoopyRoboticFriends-Unplugged:
-        markdown: "# Mes Amis Robotiques Loufoques    Raccourcis tes programmes en
-          utilisant des boucles !\n"
+        markdown: |
+          # Mes Amis Robotiques Maboul
+
+          Rends tes programmes plus courts en utilisant des boucles !
       MyLoopyRoboticFriends-Unplugged_2020:
-        markdown: "# Mes Amis Robotiques Loufoques    Raccourcis tes programmes en
-          utilisant des boucles !\n"
+        markdown: |
+          # Mes Amis Robotiques Maboul
+
+          Rends tes programmes plus courts en utilisant des boucles !
       MyRoboticFriends-Unplugged:
         markdown: |
           # Mes amis robotiques
@@ -2359,11 +2363,11 @@ fr-FR:
 
           ## Quelles informations vous concernant pouvez-vous partager en ligne?
       RelayProgramming-Unplugged:
-        markdown: "# Programmation en Relais    Composez des équipes et travaillez
-          ensemble pour écrire des programmes qui dessinent des images.\n"
+        markdown: "# Programmation en Relais   \n\nFaites des équipes et travaillez
+          ensemble pour écrire des programmes font des dessins."
       RelayProgramming-Unplugged_2020:
-        markdown: "# Programmation en Relais    Composez des équipes et travaillez
-          ensemble pour écrire des programmes qui dessinent des images.\n"
+        markdown: "# Programmation en Relais   \n\nFaites des équipes et travaillez
+          ensemble pour écrire des programmes font des dessins."
       ScreenOutTheMean-Unplugged:
         markdown: |
           # Rejette les mechancetés
@@ -2602,71 +2606,71 @@ fr-FR:
       courseC_multi_harvester_loops11_predict1:
         answers:
         - text: '4'
-          feedback: Incorrect. Le fermier ramassera 4 citrouilles dans chacune des
-            3 boucles. 4 fois 3 égal 12!
+          feedback: Incorrect. L'agricultrice ramassera 4 citrouilles dans chacune
+            des 3 boucles. 4 fois 3, ça fait 12 !
         - text: '12'
           correct: true
           feedback: Correct !
         - text: '15'
-          feedback: Incorrect. Le fermier ramassera 4 citrouilles dans chacune des
-            3 boucles. 4 fois 3 égal 12!
+          feedback: Incorrect. L'agricultrice ramassera 4 citrouilles dans chacune
+            des 3 boucles. 4 fois 3, ça fait 12 !
         - text: Je ne sais pas.
           feedback: Le fermier ramassera 4 citrouilles dans chacune des 3 boucles.
             4 fois 3 égal 12!
         questions:
-        - text: Regarde attentivement le code ci-dessous. Combien de citrouilles le
-            fermier ramassera-t-il après avoir cliqué sur "Démarrer" ?
+        - text: Regarde attentivement le code ci-dessous. Combien de citrouilles l'agricultrice
+            ramassera-t-elle une fois que tu as cliqué sur « Démarrer » ?
       courseC_multi_harvester_loops11_predict1_2018:
         answers:
         - text: '4'
-          feedback: Incorrect. Le fermier ramassera 4 citrouilles dans chacune des
-            3 boucles. 4 fois 3 égal 12!
+          feedback: Incorrect. L'agricultrice ramassera 4 citrouilles dans chacune
+            des 3 boucles. 4 fois 3, ça fait 12 !
         - text: '12'
           correct: true
           feedback: Correct !
         - text: '15'
-          feedback: Incorrect. Le fermier ramassera 4 citrouilles dans chacune des
-            3 boucles. 4 fois 3 égal 12!
+          feedback: Incorrect. L'agricultrice ramassera 4 citrouilles dans chacune
+            des 3 boucles. 4 fois 3, ça fait 12 !
         - text: Je ne sais pas.
           feedback: Le fermier ramassera 4 citrouilles dans chacune des 3 boucles.
             4 fois 3 égal 12!
         questions:
-        - text: Regarde attentivement le code ci-dessous. Combien de citrouilles le
-            fermier ramassera-t-il après avoir cliqué sur "Démarrer" ?
+        - text: Regarde attentivement le code ci-dessous. Combien de citrouilles l'agricultrice
+            ramassera-t-elle une fois que tu as cliqué sur « Démarrer » ?
       courseC_multi_harvester_loops11_predict1_2018_2019:
         answers:
         - text: '4'
-          feedback: Incorrect. Le fermier ramassera 4 citrouilles dans chacune des
-            3 boucles. 4 fois 3 égal 12!
+          feedback: Incorrect. L'agricultrice ramassera 4 citrouilles dans chacune
+            des 3 boucles. 4 fois 3, ça fait 12 !
         - text: '12'
           correct: true
           feedback: Correct !
         - text: '15'
-          feedback: Incorrect. Le fermier ramassera 4 citrouilles dans chacune des
-            3 boucles. 4 fois 3 égal 12!
+          feedback: Incorrect. L'agricultrice ramassera 4 citrouilles dans chacune
+            des 3 boucles. 4 fois 3, ça fait 12 !
         - text: Je ne sais pas.
           feedback: Le fermier ramassera 4 citrouilles dans chacune des 3 boucles.
             4 fois 3 égal 12!
         questions:
-        - text: Regarde attentivement le code ci-dessous. Combien de citrouilles le
-            fermier ramassera-t-il après avoir cliqué sur "Démarrer" ?
+        - text: Regarde attentivement le code ci-dessous. Combien de citrouilles l'agricultrice
+            ramassera-t-elle une fois que tu as cliqué sur « Démarrer » ?
       courseC_multi_harvester_loops11_predict1_2018_2019_2020:
         answers:
         - text: '4'
-          feedback: Incorrect. Le fermier ramassera 4 citrouilles dans chacune des
-            3 boucles. 4 fois 3 égal 12!
+          feedback: Incorrect. L'agricultrice ramassera 4 citrouilles dans chacune
+            des 3 boucles. 4 fois 3, ça fait 12 !
         - text: '12'
           correct: true
           feedback: Correct !
         - text: '15'
-          feedback: Incorrect. Le fermier ramassera 4 citrouilles dans chacune des
-            3 boucles. 4 fois 3 égal 12!
+          feedback: Incorrect. L'agricultrice ramassera 4 citrouilles dans chacune
+            des 3 boucles. 4 fois 3, ça fait 12 !
         - text: Je ne sais pas.
           feedback: Le fermier ramassera 4 citrouilles dans chacune des 3 boucles.
             4 fois 3 égal 12!
         questions:
-        - text: Regarde attentivement le code ci-dessous. Combien de citrouilles le
-            fermier ramassera-t-il après avoir cliqué sur "Démarrer" ?
+        - text: Regarde attentivement le code ci-dessous. Combien de citrouilles l'agricultrice
+            ramassera-t-elle une fois que tu as cliqué sur « Démarrer » ?
       courseC_multi_maze_debugging8_predict1:
         answers:
         - text: Le programme n'échouera pas. Scrat va atteindre le gland.
@@ -2790,7 +2794,7 @@ fr-FR:
             tu vas cliquer sur "Démarrer"?
       courseC_multi_starWars_predict1:
         answers:
-        - text: BB-8 ne bougera pas.
+        - text: BB-8 ne se déplacera pas
           feedback: Incorrect. Le bloc « répéter » fera avancer BB-8 5 fois.
         - text: BB-8 ne se déplacera que d'une seule case
           feedback: Incorrect. Le bloc « répéter » fera avancer BB-8 5 fois.
@@ -2803,7 +2807,7 @@ fr-FR:
         - text: Que penses-tu qu'il se passera quand tu appuies sur « Démarrer » ?
       courseC_multi_starWars_predict1_2018:
         answers:
-        - text: BB-8 ne bougera pas.
+        - text: BB-8 ne se déplacera pas
           feedback: Incorrect. Le bloc « répéter » fera avancer BB-8 5 fois.
         - text: BB-8 ne se déplacera que d'une seule case
           feedback: Incorrect. Le bloc « répéter » fera avancer BB-8 5 fois.
@@ -2816,7 +2820,7 @@ fr-FR:
         - text: Que penses-tu qu'il se passera quand tu appuies sur « Démarrer » ?
       courseC_multi_starWars_predict1_2018_2019:
         answers:
-        - text: BB-8 ne bougera pas.
+        - text: BB-8 ne se déplacera pas
           feedback: Incorrect. Le bloc « répéter » fera avancer BB-8 5 fois.
         - text: BB-8 ne se déplacera que d'une seule case
           feedback: Incorrect. Le bloc « répéter » fera avancer BB-8 5 fois.
@@ -2829,7 +2833,7 @@ fr-FR:
         - text: Que penses-tu qu'il se passera quand tu appuies sur « Démarrer » ?
       courseC_multi_starWars_predict1_2018_2019_2020:
         answers:
-        - text: BB-8 ne bougera pas.
+        - text: BB-8 ne se déplacera pas
           feedback: Incorrect. Le bloc « répéter » fera avancer BB-8 5 fois.
         - text: BB-8 ne se déplacera que d'une seule case
           feedback: Incorrect. Le bloc « répéter » fera avancer BB-8 5 fois.
@@ -2913,8 +2917,8 @@ fr-FR:
         - text: Regarde attentivement le code ci-dessous. Que va-t-il se passer lorsque
             tu cliques sur « Démarrer » ?
       courseD_EOC_2020:
-        description: Tu as finis la dernière leçon du Cours D! Choisis un projet à
-          créer.
+        description: Tu es arrivé à la dernière leçon du Cours D ! Choisis un projet
+          à créer.
         display_name: Projet de fin de cours
       courseD_multi_artist_binary8_predict1:
         answers:
@@ -3083,10 +3087,10 @@ fr-FR:
             le nectar seulement si il y a une fleur sous le nuage.
         questions:
         - text: Le nuage bloque la vue. Il pourrait y avoir une fleur sous le nuage.
-            S'il y a une fleur, l'abeille devra y ramasser le nectar une fois. S'il
-            n'y a pas de fleur, l'abeille ne fera rien. Regarde bien le code suivant.
-            Qu'est ce que tu penses qu’il se passera après avoir appuyé sur "Démarrer"
-            ?
+            S'il y a une fleur, il faudra que l'abeille y récolte du nectar une fois.
+            S'il n'y a pas de fleur, l'abeille ne fera rien. Regarde bien le code
+            suivant. Qu'est ce que tu penses qui se passera après une fois que tu
+            cliques sur « Démarrer » ?
       courseD_multi_bee_conditionals1_predict1_2018:
         answers:
         - text: 'L''abeille bougera jusqu''au nuage et ne fera rien ensuite, peu importe
@@ -3106,10 +3110,10 @@ fr-FR:
             le nectar seulement si il y a une fleur sous le nuage.
         questions:
         - text: Le nuage bloque la vue. Il pourrait y avoir une fleur sous le nuage.
-            S'il y a une fleur, l'abeille devra y ramasser le nectar une fois. S'il
-            n'y a pas de fleur, l'abeille ne fera rien. Regarde bien le code suivant.
-            Qu'est ce que tu penses qu’il se passera après avoir appuyé sur "Démarrer"
-            ?
+            S'il y a une fleur, il faudra que l'abeille y récolte du nectar une fois.
+            S'il n'y a pas de fleur, l'abeille ne fera rien. Regarde bien le code
+            suivant. Qu'est ce que tu penses qui se passera après une fois que tu
+            cliques sur « Démarrer » ?
       courseD_multi_bee_conditionals1_predict1_2018_2019:
         answers:
         - text: 'L''abeille bougera jusqu''au nuage et ne fera rien ensuite, peu importe
@@ -3129,10 +3133,10 @@ fr-FR:
             le nectar seulement si il y a une fleur sous le nuage.
         questions:
         - text: Le nuage bloque la vue. Il pourrait y avoir une fleur sous le nuage.
-            S'il y a une fleur, l'abeille devra y ramasser le nectar une fois. S'il
-            n'y a pas de fleur, l'abeille ne fera rien. Regarde bien le code suivant.
-            Qu'est ce que tu penses qu’il se passera après avoir appuyé sur "Démarrer"
-            ?
+            S'il y a une fleur, il faudra que l'abeille y récolte du nectar une fois.
+            S'il n'y a pas de fleur, l'abeille ne fera rien. Regarde bien le code
+            suivant. Qu'est ce que tu penses qui se passera après une fois que tu
+            cliques sur « Démarrer » ?
       courseD_multi_bee_conditionals1_predict1_2018_2019_2020:
         answers:
         - text: 'L''abeille bougera jusqu''au nuage et ne fera rien ensuite, peu importe
@@ -3152,10 +3156,10 @@ fr-FR:
             le nectar seulement si il y a une fleur sous le nuage.
         questions:
         - text: Le nuage bloque la vue. Il pourrait y avoir une fleur sous le nuage.
-            S'il y a une fleur, l'abeille devra y ramasser le nectar une fois. S'il
-            n'y a pas de fleur, l'abeille ne fera rien. Regarde bien le code suivant.
-            Qu'est ce que tu penses qu’il se passera après avoir appuyé sur "Démarrer"
-            ?
+            S'il y a une fleur, il faudra que l'abeille y récolte du nectar une fois.
+            S'il n'y a pas de fleur, l'abeille ne fera rien. Regarde bien le code
+            suivant. Qu'est ce que tu penses qui se passera après une fois que tu
+            cliques sur « Démarrer » ?
       courseD_multi_bee_conditionals1_predict1_copy:
         answers:
         - text: 'L''abeille bougera jusqu''au nuage et ne fera rien ensuite, peu importe
@@ -3175,10 +3179,10 @@ fr-FR:
             le nectar seulement si il y a une fleur sous le nuage.
         questions:
         - text: Le nuage bloque la vue. Il pourrait y avoir une fleur sous le nuage.
-            S'il y a une fleur, l'abeille devra y ramasser le nectar une fois. S'il
-            n'y a pas de fleur, l'abeille ne fera rien. Regarde bien le code suivant.
-            Qu'est ce que tu penses qu’il se passera après avoir appuyé sur "Démarrer"
-            ?
+            S'il y a une fleur, il faudra que l'abeille y récolte du nectar une fois.
+            S'il n'y a pas de fleur, l'abeille ne fera rien. Regarde bien le code
+            suivant. Qu'est ce que tu penses qui se passera après une fois que tu
+            cliques sur « Démarrer » ?
       courseD_multi_bee_conditionals7_predict2:
         answers:
         - text: L'abeille ramassera le nectar de chaque fleur et le miel de chaque
@@ -4861,6 +4865,12 @@ fr-FR:
           ## Comment être fort quand on est témoin de cyber-harcèlement ?
       csf_password_power-up:
         content1: description ici
+        markdown: "# Fais monter en puissance ton mot de passe \n\n## Conseils pour
+          retenir le mot de passe\n\n* Commence par une **phrase** facile à retenir.\n*
+          Seuls tes **parents** doivent le connaître.\n* N'utilise jamais d'informations
+          identifiantes **privées** dans ton mot de passe.\n* Crée des mots de passe
+          avec au moins **huit** caractères.\n* Mets-y des lettres, des chiffres et
+          des **symboles**. \n\n![](https://images.code.org/bfa69295fbf33c77ecdeb79b5498d8f7-image-1584751340896.png)\n"
       csf_putting_a_stop_to_online_meanness:
         content1: description ici
         markdown: "# STOP à la méchanceté\n\n## Que faut-il faire si quelqu'un est
@@ -5146,12 +5156,12 @@ fr-FR:
           actions gérées par un ordinateur. Dans cette leçon, tu vas réagir différemment
           selon le bouton sur lequel on appuie. \n"
       BinaryBracelets-Unplugged_2021:
-        markdown: "# Binaires Bracelets    \nCrée un bracelet qui représente ton nom
-          dans un système que les ordinateurs comprennent ! \n  ![] (https://images.code.org/ed15a484276c0989e4adb5daf480f68a-image-1557870226222.png)\n"
+        markdown: "# Bracelets Binaires  \n\nCrée un bracelet qui représente ton nom
+          dans un système qu'un ordinateur peut comprendre !  \n\n![] (https://images.code.org/ed15a484276c0989e4adb5daf480f68a-image-1557870226222.png)\n"
       ConditionalsWithCards-Unplugged_2021:
-        markdown: "# Conditions avec des Cartes    \n\nJoue à un jeu de cartes et
-          crée des règles comme « Si je dessine un carton rouge, j'obtiens un point
-          » et « Si je dessine une carte noire, tu obtiens un point. »\n"
+        markdown: "# Les instructions conditionnelles avec des Cartes   \n\nJoue à
+          un jeu de cartes et crée des règles comme : « Si je tire une carte rouge,
+          je marque un point » et « Si je tire une carte noire, tu marques un point ».\n"
       CourseF_outbreak_story:
         content1: description ici
         markdown: "# Éclosion : codez votre propre simulation\n\n## Bienvenue à Monster
@@ -5291,7 +5301,7 @@ fr-FR:
           en programmation au travers d'une activité dansante."
       GraphPaperProgramming-Unplugged_2021:
         markdown: "# Programmation sur Papier Millimétré    \n\nÉcris des algorithmes
-          que tes camarades de classe peuvent utiliser pour dessiner des images.\n"
+          que tes camarades de classe pourront utiliser pour faire des dessins.\n"
       HappyMaps-Unplugged_2021:
         markdown: |
           # Cartes joyeuses
@@ -5306,7 +5316,7 @@ fr-FR:
 
           Utilise une carte et donne les commandes pour atteindre l'objectif.
       MyLoopyRoboticFriends-Unplugged_2021:
-        markdown: "# Mes Amis Robotiques Loufoques \n   \nRaccourcis tes programmes
+        markdown: "# Mes Amis Robotiques Maboul\n   \nRends tes programmes plus courts
           en utilisant des boucles !\n"
       MyRoboticFriends-Unplugged_2021:
         markdown: |
@@ -5383,8 +5393,8 @@ fr-FR:
 
           ## Quelles informations vous concernant pouvez-vous partager en ligne?
       RelayProgramming-Unplugged_2021:
-        markdown: "# Programmation en Relais    \n\nComposez des équipes et travaillez
-          ensemble pour écrire des programmes qui dessinent des images.\n"
+        markdown: "# Programmation en Relais   \n\nFaites des équipes et travaillez
+          ensemble pour écrire des programmes font des dessins."
       Songwriting-Unplugged_2021:
         markdown: "# Écriture de Chansons   Utilise le concept du refrain, dans une
           chanson, pour mieux comprendre la définition et l'appel des fonctions.\n"
@@ -5412,20 +5422,20 @@ fr-FR:
       courseC_multi_harvester_loops11_predict1_2021:
         answers:
         - text: '4'
-          feedback: Incorrect. Le fermier ramassera 4 citrouilles dans chacune des
-            3 boucles. 4 fois 3 égal 12!
+          feedback: Incorrect. L'agricultrice ramassera 4 citrouilles dans chacune
+            des 3 boucles. 4 fois 3, ça fait 12 !
         - text: '12'
           correct: true
           feedback: Correct !
         - text: '15'
-          feedback: Incorrect. Le fermier ramassera 4 citrouilles dans chacune des
-            3 boucles. 4 fois 3 égal 12!
+          feedback: Incorrect. L'agricultrice ramassera 4 citrouilles dans chacune
+            des 3 boucles. 4 fois 3, ça fait 12 !
         - text: '20'
-          feedback: Incorrect. Le fermier ramassera 4 citrouilles dans chacune des
-            3 boucles. 4 fois 3 égal 12!
+          feedback: Incorrect. L'agricultrice ramassera 4 citrouilles dans chacune
+            des 3 boucles. 4 fois 3, ça fait 12 !
         questions:
-        - text: Regarde attentivement le code ci-dessous. Combien de citrouilles le
-            fermier ramassera-t-il après avoir cliqué sur "Démarrer" ?
+        - text: Regarde attentivement le code ci-dessous. Combien de citrouilles l'agricultrice
+            ramassera-t-elle une fois que tu as cliqué sur « Démarrer » ?
       courseC_multi_maze_debugging8_predict1_2021:
         answers:
         - text: Scrat va atteindre le gland. Il n'y a pas de bugs dans le code.
@@ -5462,7 +5472,7 @@ fr-FR:
             tu vas cliquer sur "Démarrer"?
       courseC_multi_starWars_predict1_2021:
         answers:
-        - text: BB-8 ne bougera pas.
+        - text: BB-8 ne se déplacera pas
           feedback: Incorrect. Le bloc « répéter » fera avancer BB-8 5 fois.
         - text: BB-8 ne se déplacera que d'une seule case
           feedback: Incorrect. Le bloc « répéter » fera avancer BB-8 5 fois.
@@ -5492,7 +5502,7 @@ fr-FR:
         - text: Regarde attentivement le code ci-dessous. Que va-t-il se passer lorsque
             tu cliques sur « Démarrer » ?
       courseD_EOC_2021:
-        description: Tu as finis la dernière leçon du Cours D ! Choisis un projet
+        description: Tu es arrivé à la dernière leçon du Cours D ! Choisis un projet
           à créer.
         display_name: Projet de Fin de Cours
       courseD_multi_artist_nestedLoops9_predict1_2021:
@@ -5537,10 +5547,10 @@ fr-FR:
             de ramasser le nectar seulement si il y a une fleur sous le nuage.
         questions:
         - text: Le nuage bloque la vue. Il pourrait y avoir une fleur sous le nuage.
-            S'il y a une fleur, l'abeille devra y ramasser le nectar une fois. S'il
-            n'y a pas de fleur, l'abeille ne fera rien. Regarde bien le code suivant.
-            Qu'est ce que tu penses qu’il se passera après avoir appuyé sur "Démarrer"
-            ?
+            S'il y a une fleur, il faudra que l'abeille y récolte du nectar une fois.
+            S'il n'y a pas de fleur, l'abeille ne fera rien. Regarde bien le code
+            suivant. Qu'est ce que tu penses qui se passera après une fois que tu
+            cliques sur « Démarrer » ?
       courseD_multi_bee_conditionals1_predict1_dani:
         answers:
         - text: 'L''abeille bougera jusqu''au nuage et ne fera rien ensuite, peu importe
@@ -5560,10 +5570,10 @@ fr-FR:
             le nectar seulement si il y a une fleur sous le nuage.
         questions:
         - text: Le nuage bloque la vue. Il pourrait y avoir une fleur sous le nuage.
-            S'il y a une fleur, l'abeille devra y ramasser le nectar une fois. S'il
-            n'y a pas de fleur, l'abeille ne fera rien. Regarde bien le code suivant.
-            Qu'est ce que tu penses qu’il se passera après avoir appuyé sur "Démarrer"
-            ?
+            S'il y a une fleur, il faudra que l'abeille y récolte du nectar une fois.
+            S'il n'y a pas de fleur, l'abeille ne fera rien. Regarde bien le code
+            suivant. Qu'est ce que tu penses qui se passera après une fois que tu
+            cliques sur « Démarrer » ?
       courseD_multi_bee_conditionals7_predict2_2021:
         answers:
         - text: L'abeille récoltera le nectar de chaque fleur et fera du miel à chaque
@@ -5958,11 +5968,12 @@ fr-FR:
           ## Comment être fort quand on est témoin de cyber-harcèlement ?
       csf_password_power-up_2021:
         content1: description ici
-        markdown: "# Mets ton mot de passe\n\n## Conseils pour retenir le mot de passe\n\n*
-          Commencez par une **phrase** facile à retenir.\n* Seuls tes **parents**
-          doivent le connaître.\n* N'utilise jamais d'informations d'identité **privées**
-          dans ton mot de passe.\n* Créez des mots de passe avec au moins **huit**
-          caractères.\n* Mets-y des lettres, des chiffres et des **symboles**. \n\n![](https://images.code.org/bfa69295fbf33c77ecdeb79b5498d8f7-image-1584751340896.png)\n"
+        markdown: "# Fais monter en puissance ton mot de passe\n\n## Conseils pour
+          retenir le mot de passe\n\n* Commence par une **phrase** facile à retenir.\n*
+          Seuls tes **parents** doivent le connaître.\n* N'utilise jamais d'informations
+          identifiantes **privées** dans ton mot de passe.\n* Crée des mots de passe
+          avec au moins **huit** caractères.\n* Mets-y des lettres, des chiffres et
+          des **symboles**. \n\n![](https://images.code.org/bfa69295fbf33c77ecdeb79b5498d8f7-image-1584751340896.png)\n"
       csf_putting_a_stop_to_online_meanness_2021:
         content1: description ici
         markdown: "# STOP à la méchanceté\n\n## Que faut-il faire si quelqu'un est
@@ -6002,7 +6013,7 @@ fr-FR:
         display_name: Projet de fin de cours
       courseF_EOC_samples_2021:
         display_name: Projet de Fin de Cours
-        description: 'Tu es sur le point de commencer ton projet final. Avant de commencer,
+        description: 'Tu es sur le point d''entamer ton projet final. Avant de commencer,
           prends le temps d''examiner les exemples de projets. '
       courseF_variables_samples:
         description: 'Vous allez créer soit une carte de vœux, un chatbot ou une histoire
@@ -6116,12 +6127,12 @@ fr-FR:
           avec les boucles et l''abeille ! '
         display_name: Entrainement avec l'abeille
       courseD_EOC_examples_2021:
-        description: 'Tu es sur le point de commencer ton projet final. Avant de commencer,
+        description: 'Tu es sur le point d''entamer ton projet final. Avant de commencer,
           prends le temps d''examiner les exemples de projets. '
         display_name: 'Exemples de projets '
       express_EOC_examples_2021:
-        description: 'Tu es sur le point de te lancer dans ton projet final. Avant
-          de commencer, prends le temps d''examiner les exemples de projets. '
+        description: 'Tu es sur le point d''entamer ton projet final. Avant de commencer,
+          prends le temps d''examiner les exemples de projets. '
         display_name: 'Exemples de projets '
       SimonSays-Unplugged_2021:
         markdown: "# Suivez l'algorithme\n\nJouez à un jeu et réfléchissez aux commandes
@@ -16067,8 +16078,8 @@ fr-FR:
           actions gérées par un ordinateur. Dans cette leçon, tu vas réagir différemment
           selon le bouton sur lequel on appuie. \n"
       BinaryBracelets-Unplugged2022:
-        markdown: "# Binaires Bracelets    Crée un bracelet qui représente ton nom
-          dans un système que les ordinateurs comprennent !   ![] (https://images.code.org/ed15a484276c0989e4adb5daf480f68a-image-1557870226222.png)\n"
+        markdown: "# Bracelets Binaires  \n\nCrée un bracelet qui représente ton nom
+          dans un système qu'un ordinateur peut comprendre !  \n\n![] (https://images.code.org/ed15a484276c0989e4adb5daf480f68a-image-1557870226222.png)\n"
       CSD End of Unit Survey - Unit 1 - IntroMD_2022:
         teacher_markdown: |-
           **Sondages de fin d'unité pour les enseignants : Pendant que vos élèves remplissent le questionnaire, nous vous serions reconnaissants de remplir un bref sondage pour les enseignants.
@@ -16077,9 +16088,9 @@ fr-FR:
       CSD Student End of Unit Survey - Unit 1_2022:
         title: Enquête de fin d'unité sur Découvertes en informatique !
       ConditionalsWithCards-Unplugged2022:
-        markdown: "# Conditionnelles avec des Cartes    Joue à un jeu de cartes et
-          crée des règles comme « Si je dessine un carton rouge, j'obtiens un point
-          » et « Si je dessine une carte noire, tu obtiens un point. »\n"
+        markdown: "# Les instructions conditionnelles avec des Cartes   \n\nJoue à
+          un jeu de cartes et crée des règles comme : « Si je tire une carte rouge,
+          je marque un point » et « Si je tire une carte noire, tu marques un point ».\n"
       CourseE_Artist_Practice_2022:
         description: 'Excellent travail jusqu''à présent ! Choisissez votre prochaine
           activité. Remplissez-en autant que vous le pouvez. Continuez à vous entraîner
@@ -16226,8 +16237,8 @@ fr-FR:
         markdown: "# Affaire bouclée \n\nCette leçon introduit la notion de boucles
           en programmation au travers d'une activité dansante."
       GraphPaperProgramming-Unplugged2022:
-        markdown: "# Programmation sur Papier Millimétré    Écris des algorithmes
-          que tes camarades de classe peuvent utiliser pour dessiner des images.\n"
+        markdown: "# Programmation sur Papier Millimétré    \n\nÉcris des algorithmes
+          que tes camarades de classe pourront utiliser pour faire des dessins."
       HappyMaps-Unplugged2022:
         markdown: |
           # Cartes joyeuses
@@ -16242,8 +16253,10 @@ fr-FR:
 
           Utilise une carte et donne les commandes pour atteindre l'objectif.
       MyLoopyRoboticFriends-Unplugged2022:
-        markdown: "# Mes Amis Robotiques Loufoques    Raccourcis tes programmes en
-          utilisant des boucles !\n"
+        markdown: |
+          # Mes Amis Robotiques Maboul
+
+          Rends tes programmes plus courts en utilisant des boucles !
       MyRoboticFriends-Unplugged2022:
         markdown: |
           # Mes amis robotiques
@@ -16260,8 +16273,8 @@ fr-FR:
 
           ## Quelles informations vous concernant pouvez-vous partager en ligne?
       RelayProgramming-Unplugged2022:
-        markdown: "# Programmation en Relais    Composez des équipes et travaillez
-          ensemble pour écrire des programmes qui dessinent des images.\n"
+        markdown: "# Programmation en Relais   \n\nFaites des équipes et travaillez
+          ensemble pour écrire des programmes font des dessins."
       Songwriting-Unplugged2022:
         markdown: "# Écriture de Chansons   Utilise le concept du refrain, dans une
           chanson, pour mieux comprendre la définition et l'appel des fonctions.\n"
@@ -16295,20 +16308,20 @@ fr-FR:
       courseC_multi_harvester_loops11_predict12022:
         answers:
         - text: '4'
-          feedback: Incorrect. Le fermier ramassera 4 citrouilles dans chacune des
-            3 boucles. 4 fois 3 égal 12!
+          feedback: Incorrect. L'agricultrice ramassera 4 citrouilles dans chacune
+            des 3 boucles. 4 fois 3, ça fait 12 !
         - text: '12'
           correct: true
           feedback: Correct !
         - text: '15'
-          feedback: Incorrect. Le fermier ramassera 4 citrouilles dans chacune des
-            3 boucles. 4 fois 3 égal 12!
+          feedback: Incorrect. L'agricultrice ramassera 4 citrouilles dans chacune
+            des 3 boucles. 4 fois 3, ça fait 12 !
         - text: '20'
-          feedback: Incorrect. Le fermier ramassera 4 citrouilles dans chacune des
-            3 boucles. 4 fois 3 égal 12!
+          feedback: Incorrect. L'agricultrice ramassera 4 citrouilles dans chacune
+            des 3 boucles. 4 fois 3, ça fait 12 !
         questions:
-        - text: Regarde attentivement le code ci-dessous. Combien de citrouilles le
-            fermier ramassera-t-il après avoir cliqué sur "Démarrer" ?
+        - text: Regarde attentivement le code ci-dessous. Combien de citrouilles l'agricultrice
+            ramassera-t-elle une fois que tu as cliqué sur « Démarrer » ?
       courseC_multi_maze_debugging8_predict12022:
         answers:
         - text: Scrat va atteindre le gland. Il n'y a pas de bugs dans le code.
@@ -16345,7 +16358,7 @@ fr-FR:
             tu vas cliquer sur "Démarrer"?
       courseC_multi_starWars_predict12022:
         answers:
-        - text: BB-8 ne bougera pas.
+        - text: BB-8 ne se déplacera pas
           feedback: Incorrect. Le bloc « répéter » fera avancer BB-8 5 fois.
         - text: BB-8 ne se déplacera que d'une seule case
           feedback: Incorrect. Le bloc « répéter » fera avancer BB-8 5 fois.
@@ -16375,12 +16388,12 @@ fr-FR:
         - text: Regarde attentivement le code ci-dessous. Que va-t-il se passer lorsque
             tu cliques sur « Démarrer » ?
       courseD_EOC2022:
-        description: Tu as finis la dernière leçon du Cours D! Choisis un projet à
-          créer.
+        description: Tu es arrivé à la dernière leçon du Cours D ! Choisis un projet
+          à créer.
         display_name: Projet de fin de cours
       courseD_EOC_examples2022:
-        description: 'Tu es sur le point de te lancer dans ton projet final. Avant
-          de commencer, prends le temps d''examiner les exemples de projets. '
+        description: 'Tu es sur le point d''entamer ton projet final. Avant de commencer,
+          prends le temps d''examiner les exemples de projets. '
         display_name: 'Exemples de projets '
       courseD_multi_artist_nestedLoops9_predict12022:
         answers:
@@ -16424,10 +16437,10 @@ fr-FR:
             de ramasser le nectar seulement si il y a une fleur sous le nuage.
         questions:
         - text: Le nuage bloque la vue. Il pourrait y avoir une fleur sous le nuage.
-            S'il y a une fleur, l'abeille devra y ramasser le nectar une fois. S'il
-            n'y a pas de fleur, l'abeille ne fera rien. Regarde bien le code suivant.
-            Qu'est ce que tu penses qu’il se passera après avoir appuyé sur "Démarrer"
-            ?
+            S'il y a une fleur, il faudra que l'abeille y récolte du nectar une fois.
+            S'il n'y a pas de fleur, l'abeille ne fera rien. Regarde bien le code
+            suivant. Qu'est ce que tu penses qui se passera après une fois que tu
+            cliques sur « Démarrer » ?
       courseD_multi_bee_conditionals7_predict22022:
         answers:
         - text: L'abeille récoltera le nectar de chaque fleur et fera du miel à chaque
@@ -16636,8 +16649,8 @@ fr-FR:
       courseF_EOC_examples2022_2022_pilot_-2022-2:
         display_name: Projet de fin de cours
       courseF_EOC_samples2022:
-        description: 'Tu es sur le point de te lancer dans ton projet final. Avant
-          de commencer, prends le temps d''examiner les exemples de projets. '
+        description: 'Tu es sur le point d''entamer ton projet final. Avant de commencer,
+          prends le temps d''examiner les exemples de projets. '
         display_name: Projet de fin de cours
       courseF_collector_samples_2022_pilot_-2022-2:
         display_name: 'Exploration - Exemples de programmes '
@@ -16845,6 +16858,12 @@ fr-FR:
           ## Comment être fort quand on est témoin de cyber-harcèlement ?
       csf_password_power-up2022:
         content1: description ici
+        markdown: "# Fais monter en puissance ton mot de passe \n\n## Conseils pour
+          retenir le mot de passe\n\n* Commence par une **phrase** facile à retenir.\n*
+          Seuls tes **parents** doivent le connaître.\n* N'utilise jamais d'informations
+          identifiantes **privées** dans ton mot de passe.\n* Crée des mots de passe
+          avec au moins **huit** caractères.\n* Mets-y des lettres, des chiffres et
+          des **symboles**. \n\n![](https://images.code.org/bfa69295fbf33c77ecdeb79b5498d8f7-image-1584751340896.png)\n"
       csf_putting_a_stop_to_online_meanness2022:
         content1: description ici
         markdown: "# STOP à la méchanceté\n\n## Que faut-il faire si quelqu'un est
@@ -16889,8 +16908,8 @@ fr-FR:
         description: Tu es arrivé à la fin du Cours E ! Choisis un projet à créer.
         display_name: Projet de fin de cours
       express_EOC_examples2022:
-        description: 'Tu es sur le point de te lancer dans ton projet final. Avant
-          de commencer, prends le temps d''examiner les exemples de projets. '
+        description: 'Tu es sur le point d''entamer ton projet final. Avant de commencer,
+          prends le temps d''examiner les exemples de projets. '
         display_name: 'Exemples de projets '
       grade2_multi_collector_A_predict12022:
         answers:
