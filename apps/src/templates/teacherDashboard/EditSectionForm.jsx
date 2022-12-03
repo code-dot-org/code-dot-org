@@ -28,8 +28,12 @@ import {
   StudentGradeLevels
 } from '@cdo/apps/util/sharedConstants';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import {ParticipantAudience} from '../../generated/curriculum/sharedCourseConstants';
 import GetVerifiedBanner from './GetVerifiedBanner';
+
+const COMPLETED_EVENT = 'Section Setup Completed';
+const CANCELLED_EVENT = 'Section Setup Cancelled';
 
 /**
  * UI for editing section details: Name, grade, assigned course, etc.
@@ -65,10 +69,18 @@ class EditSectionForm extends Component {
     showHiddenUnitWarning: false
   };
 
+  onCloseClick = () => {
+    const {handleClose} = this.props;
+    this.recordSectionSetupExitEvent(CANCELLED_EVENT);
+    handleClose();
+  };
+
   onSaveClick = () => {
     const {section, hiddenLessonState} = this.props;
     const sectionId = section.id;
     const scriptId = section.unitId;
+
+    this.recordSectionSetupExitEvent(COMPLETED_EVENT);
 
     const isScriptHidden =
       sectionId &&
@@ -126,6 +138,25 @@ class EditSectionForm extends Component {
       },
       {useProgressScriptId: false, includeUserId: true}
     );
+  };
+
+  // valid event names: 'Section Setup Complete', 'Section Setup Cancelled'.
+  recordSectionSetupExitEvent = eventName => {
+    const {section, courseOfferings, isNewSection} = this.props;
+
+    const courseName = courseOfferings.hasOwnProperty(section.courseOfferingId)
+      ? courseOfferings[section.courseOfferingId].display_name
+      : '';
+
+    if (isNewSection) {
+      analyticsReporter.sendEvent(eventName, {
+        sectionCurriculum: courseName,
+        sectionGrade: section.grade,
+        sectionLockSelection: section.restrictSection,
+        sectionName: section.name,
+        sectionPairProgramSelection: section.pairingAllowed
+      });
+    }
   };
 
   render() {
@@ -260,7 +291,7 @@ class EditSectionForm extends Component {
         </div>
         <DialogFooter>
           <Button
-            onClick={handleClose}
+            onClick={this.onCloseClick}
             text={i18n.dialogCancel()}
             size={Button.ButtonSize.large}
             color={Button.ButtonColor.gray}
