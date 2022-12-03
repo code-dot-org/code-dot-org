@@ -6,6 +6,7 @@ import {getStore} from '../redux';
 import {setAssetPath} from '@code-dot-org/ml-playground/dist/assetPath';
 import {TestResults} from '@cdo/apps/constants';
 import ailabMsg from './locale';
+import mlPlaygroundMsg from './mlPlayground_locale';
 import $ from 'jquery';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 
@@ -203,7 +204,7 @@ Ailab.prototype.initMLActivities = function() {
     mode,
     onContinue,
     setInstructionsKey,
-    i18n: ailabMsg,
+    i18n: mlPlaygroundMsg,
     saveTrainedModel,
     logMetric
   });
