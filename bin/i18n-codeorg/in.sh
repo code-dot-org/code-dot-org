@@ -57,8 +57,8 @@ done
 cp_in apps/node_modules/@code-dot-org/ml-activities/i18n/oceans.json i18n/locales/source/blockly-mooc/fish.json
 
 ### AI Lab UI Strings
-source_ui=apps/node_modules/@code-dot-org/ml-playground/i18n/ailab.json
-staged_ui=i18n/locales/source/blockly-mooc/ailab.json
+source_ui=apps/node_modules/@code-dot-org/ml-playground/i18n/mlPlayground.json
+staged_ui=i18n/locales/source/external-sources/ml-playground/mlPlayground.json
 cp_in $source_ui $staged_ui
 
 ### AI Lab datasets
