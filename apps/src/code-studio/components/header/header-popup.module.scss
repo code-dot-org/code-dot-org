@@ -5,15 +5,17 @@
   cursor: pointer;
   background-color: transparent;
   padding: 0;
+  border: none;
+  color: color.$orange;
   &:hover {
     cursor: pointer;
     box-shadow: none;
+    color: color.$white;
   }
 }
 
 .caret {
   font-size: 40px;
-  color: color.$orange;
   line-height: 10px;
 }
 
