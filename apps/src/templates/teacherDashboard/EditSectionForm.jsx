@@ -28,7 +28,7 @@ import {
   StudentGradeLevels
 } from '@cdo/apps/util/sharedConstants';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
-import analyticsReporter from '../AnalyticsReporter';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import {ParticipantAudience} from '../../generated/curriculum/sharedCourseConstants';
 import GetVerifiedBanner from './GetVerifiedBanner';
 
