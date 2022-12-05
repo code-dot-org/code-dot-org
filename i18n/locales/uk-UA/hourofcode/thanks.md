@@ -6,8 +6,6 @@ title: Дякуємо за реєстрацію заходу в межах Го�
 
 <br /> ** Година коду триває протягом {{ campaign_date/full }}, і ми повідомляти про нові навчальні матеріали та інші цікаві оновлення, коли вони з’являться. Тим часом, що ти можеш робити зараз? **
 
-Як особлива подяка організаторам Hour of Code, ми маємо новий набір плакатів із участю Малали, Стівена Каррі, Шакіри та інших, доступних для замовлення за адресою <a href = "https://www.amazon.com/promocode/A3QAYNZUZTSSNQ" > 50% знижки від Amazon </a>. This year, each set comes with 6 posters and 126 "I did the Hour of Code" stickers. With the discount you'll get them for less than our cost to make them. Поставки обмежені, тож незабаром замовляйте свої плакати. If you're not in the United States, you can [download and print all posters]({{ promote/promote_posters_url }}).
-
 ## 1. Spread the word in your school and community
 
 You just joined the Hour of Code movement. Tell your friends with **#HourOfCode**!
@@ -22,11 +20,11 @@ Use these [posters, banners, stickers, videos and more]({{ promote/resources }})
 
 ## 3. Plan your Hour of Code
 
-Виберіть [ Активність «Години коду» ](https://hourofcode.com/learn) для свого класу та [ перегляньте цей посібник ]({{ urls/how_to_guide }}).
+Choose an [Hour of Code activity](https://hourofcode.com/learn) for your classroom and [review this how-to guide]({{ urls/how_to_guide }}).
 
 ### 4. Stock up on swag
 
-Замовляйте матеріали, щоб допомогти студентам радіти вашій події, перейшовши на Code.org  магазин Amazon < / a>. [ Замовляйте плакати ](https://www.amazon.com/promocode/A3QAYNZUZTSSNQ) (і отримайте додаткові знижки 50%), комплекти "Години коду", наклейки тощо! Але поспішайте, запаси обмежені.</p> 
+Order materials to help get students excited about your event by heading to the Code.org [Amazon store](https://www.amazon.com/stores/page/8557B2A6-EBF2-4C9F-95C5-C3256FBA0220). Order posters, Hour of Code kits, stickers, and more! But hurry, supplies are limited.
 
 # Виходьте за рамки Години коду
 

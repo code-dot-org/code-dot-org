@@ -26,7 +26,8 @@ const defaultProps = {
   isMigrated: false,
   unitCompleted: false,
   hasPerLevelResults: false,
-  isProfessionalLearningCourse: false
+  isProfessionalLearningCourse: false,
+  publishedState: 'stable'
 };
 
 describe('UnitOverviewTopRow', () => {
@@ -313,5 +314,31 @@ describe('UnitOverviewTopRow', () => {
     expect(() => {
       shallow(<UnitOverviewTopRow {...defaultProps} isRtl={true} />);
     }).not.to.throw();
+  });
+
+  it('does not render the printing options drop down if the course is in pilot', () => {
+    const wrapper = shallow(
+      <UnitOverviewTopRow
+        {...defaultProps}
+        publishedState="pilot"
+        scriptOverviewPdfUrl="/link/to/script_overview.pdf"
+        scriptResourcesPdfUrl="/link/to/script_resources.pdf"
+        viewAs={ViewType.Instructor}
+      />
+    );
+    expect(wrapper.find(DropdownButton).length).to.equal(0);
+  });
+
+  it('does not render the printing options drop down if the course is in development', () => {
+    const wrapper = shallow(
+      <UnitOverviewTopRow
+        {...defaultProps}
+        publishedState="in_development"
+        scriptOverviewPdfUrl="/link/to/script_overview.pdf"
+        scriptResourcesPdfUrl="/link/to/script_resources.pdf"
+        viewAs={ViewType.Instructor}
+      />
+    );
+    expect(wrapper.find(DropdownButton).length).to.equal(0);
   });
 });

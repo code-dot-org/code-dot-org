@@ -95,6 +95,9 @@
         "express-2022/Dance Party": {
           "name": "Festa de ball"
         },
+        "pre-express-2022/Learn to Drag and Drop": {
+          "preparation": "-   Podeu veure el vídeo del professor **\\*Com crear una secció de classe a Code.org**. Creeu la vostra pròpia secció de classe a Code.org i assegureu-vos que cada estudiant tingui una targeta amb el seu **codi d'accéso**.\n-   Assegureu-vos que els estudiants podran accedir a la Lliçó 2 des dels seus dispositius. Valoreu si voleu amagar les lliçons futures per evitar que els alumnes avancin massa ràpid.\n-   Demaneu a l'informàtic de l'escola que afegeixi un enllaç ràpid per la secció de la vostra classe a l'escriptori de l'ordinador.\n-   Reviseu el lloc web de Common Sense Education per obtenir més contingut sobre seguretat en línia."
+        },
         "coursea-2022/Happy Maps": {
           "name": "Mapes feliços"
         },
@@ -724,6 +727,9 @@
         },
         "express-2021/lesson-1": {
           "name": "Festa de ball"
+        },
+        "pre-express-2021/Learn to Drag and Drop": {
+          "preparation": "-   Podeu veure el vídeo del professor **\\*Com crear una secció de classe a Code.org**. Creeu la vostra pròpia secció de classe a Code.org i assegureu-vos que cada estudiant tingui una targeta amb el seu **codi d'accéso**.\n-   Assegureu-vos que els estudiants podran accedir a la Lliçó 2 des dels seus dispositius. Valoreu si voleu amagar les lliçons futures per evitar que els alumnes avancin massa ràpid.\n-   Demaneu a l'informàtic de l'escola que afegeixi un enllaç ràpid per la secció de la vostra classe a l'escriptori de l'ordinador.\n-   Reviseu el lloc web de Common Sense Education per obtenir més contingut sobre seguretat en línia."
         },
         "coursee-2021/Functions: Songwriting": {
           "name": "Composició de cançons"

@@ -49,6 +49,8 @@ class RegionalPartner < ApplicationRecord
     apps_close_date_csd_facilitator
     apps_close_date_csp_facilitator
     apps_priority_deadline_date
+    urg_guardrail_percent
+    frl_guardrail_percent
     applications_principal_approval
     applications_decision_emails
     link_to_partner_application
