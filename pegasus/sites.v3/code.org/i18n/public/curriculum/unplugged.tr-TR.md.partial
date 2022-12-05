@@ -9,7 +9,7 @@ theme: responsive
 Sınıfınızda kullanmanız için tüm bağlantısız derslerimizin bir listesini derledik. Artık sınıfınızda bilgisayar olsa da olmasa da bilgisayar biliminin temellerini öğretebilirsiniz!
 <br>
 <div class="col-50">
-Öğrencilerin bilgisayarda çalışmadığı derslere “bağlantısız” diyoruz Öğrenciler genellikle kalem ve kâğıt veya fiziksel manipülatiflerle çalışacaklardır.  Bunlar, öğrencilerin karmaşık kavramları kendi yaşamlarıyla ilgili şekillerde sindirmelerine yardımcı olan kasıtlı olarak yerleştirilmiş kinestetik fırsatlardır. <br><br>
+Öğrencilerin bilgisayarda çalışmadığı derslere “bağlantısız” diyoruz Öğrenciler genellikle kalem ve kâğıt veya fiziksel hilelerle çalışacaklardır.  Bunlar, öğrencilerin karmaşık kavramları kendi yaşamlarıyla ilgili şekillerde sindirmelerine yardımcı olan kasıtlı olarak yerleştirilmiş kinestetik fırsatlardır. <br><br>
 Bağlantısız dersler, işbirlikçi bir sınıf ortamı oluşturmak ve sürdürmek için özellikle yararlıdır ve daha soyut kavramları tanıtırken başvurabileceğiniz faydalı mihenk taşı deneyimleridir. Bu etkinliklerin her biri ya tek başına ya da ilgili kavramlarla ilgili diğer bilgisayar bilimi dersleriyle birlikte kullanılabilir.
 </div>
 
@@ -60,13 +60,13 @@ th, td {
 </style>
 <table style="width:100%">
   <tr>
-    <th><center><big>Course</th>
-    <th><center><big>Lesson Plan</th>
-    <th width=10%><center><big>Concept</th>
+    <th><center><big>Kurs</th>
+    <th><center><big>Ders Planı</th>
+    <th width=10%><center><big>Konsept</th>
     <th width=20%><center><big>Video</th>
      <tr>
-    <th rowspan="3" id="t01">Course A</th>
-    <td width=40%><a href="https://studio.code.org/s/coursea-2022/lessons/3">A.3 - Happy Maps</a><br><small>This unplugged lesson brings together teams with a simple task: get the "flurb" to the fruit. Öğrenciler, talimatları sağlanan sembollere çevirmeye çalışırken kesin talimatlar yazma alıştırması yapacaklardır. If problems arise in the code, students should also work together to recognize bugs and build solutions.</td><td>Sequencing</td> <td>{{ curriculum/unplugged/coursea_one_video_thumbnail }}</td>
+    <th rowspan="3" id="t01">Kurs A</th>
+    <td width=40%><a href="https://studio.code.org/s/coursea-2022/lessons/3">A.3 - Mutlu Haritalar</a><br><small>Bu bağlantısız ders, ekipleri basit bir görevle bir araya getirir: flurb'ı meyveye getirin. Öğrenciler, talimatları sağlanan sembollere çevirmeye çalışırken kesin talimatlar yazma alıştırması yapacaklardır. If problems arise in the code, students should also work together to recognize bugs and build solutions.</td><td>Sequencing</td> <td>{{ curriculum/unplugged/coursea_one_video_thumbnail }}</td>
   </tr>
   <tr>
     <td width=40%><a href="https://studio.code.org/s/coursea-2022/lessons/7">A.7 - Happy Loops</a><br><small>This activity revisits Happy Maps. This time, student will be solving bigger, longer puzzles with their code, leading them to see utility in structures that let them write longer code in an easier way.</td><td>Loops</td> <td><img src="/images/a7.png" width="90%"></td>
