@@ -5,6 +5,7 @@ import {
   identify,
   setUserId
 } from '@amplitude/analytics-browser';
+import {currentLocation} from '@cdo/apps/utils';
 
 // A flag that can be toggled to send events regardless of environment
 const ALWAYS_PUT = false;
@@ -91,7 +92,7 @@ class AnalyticsReporter {
    * @return {string} The current environment, e.g., "staging" or "production".
    */
   getEnvironment() {
-    const hostname = window.location.hostname;
+    const hostname = currentLocation().hostname;
     if (hostname.includes('adhoc')) {
       // As adhoc hostnames may include other keywords, check it first.
       return Environments.adhoc;
@@ -123,7 +124,7 @@ class AnalyticsReporter {
   }
 
   isProductionEnvironment() {
-    return this.getEnvironment() === Environments.prodcution;
+    return this.getEnvironment() === Environments.production;
   }
 }
 
