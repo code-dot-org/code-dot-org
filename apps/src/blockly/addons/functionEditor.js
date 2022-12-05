@@ -73,7 +73,7 @@ export function allCallBlocks(procedures) {
     // The argument list is likely empty as we don't currently support
     // functions with parameters. This loop is needed if that changes.
     for (let j = 0; j < args.length; j++) {
-      const arg = xml.parseElement(`<arg name="${args[j]}></arg>`, true);
+      const arg = xml.parseElement(`<arg name="${args[j]}"></arg>`, true);
       mutation.appendChild(arg);
     }
     blockElements.push(block);
