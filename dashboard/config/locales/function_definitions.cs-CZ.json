@@ -3101,10 +3101,10 @@
             "parameters": {
               "x": "x"
             },
-            "name": "nakresli plamen"
+            "name": "nakreslete plamen"
           },
           "draw fire": {
-            "name": "nakresli oheň"
+            "name": "nakreslete oheň"
           }
         },
         "courseC_data wizard_2021": {
