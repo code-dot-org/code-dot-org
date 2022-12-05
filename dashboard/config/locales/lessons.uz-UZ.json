@@ -920,6 +920,7 @@
         "coursec-2022/Collecting Treasure with Laurel": {
           "name": "Laurel bilan xazina yig‘ish",
           "overview": "Boshqotirmalar to‘plamida, talabalar algoritmlar va debug qilish bo‘yicha o‘zlarining tushunchalarini rivojlantirishda davom etishadi. Yangi obraz, sarguzashtchi Laurel bilan talabalar Laurelni u yo‘lak bo‘ylab harakatlanganda xazinalar cho‘qqisiga olib chiqish uchun algoritmlar ketma-ketligini yaratishadi.",
+          "preparation": "-   Sinfingizda paydo bo'lgan muammolarni yechish uchun jumboqlarni yeching",
           "student_overview": "Sarguzashtchi Laurelga ko‘plab marvaridlar yig‘ishda yordam berish uchun algoritm yozing!"
         },
         "coursec-2022/Creating Art with Code": {
@@ -931,12 +932,14 @@
         "coursec-2022/My Loopy Robotic Friends Jr": {
           "name": "Mening sikllashtirilgan robot do‘stlarim Jr.",
           "overview": "\"Mening Robot Do‘stlarim\" mashg‘ulotiga asoslangan holda, talabalar kattaroq va yanada mukammalroq dizaynlarni ham yecha olishadi. Bu mukammalroq dizaynlarni yaratish jarayonida o‘z robotlarini dasturlash maqsadida talabalar o‘z ko‘rsatmalaridagi biron sikl bilan almashtirsa bo‘ladigan takrorlanuvchi ko‘rinishlarni aniqlashi kerak bo‘ladi.",
+          "preparation": "-   Har bir 4 nafar o‘quvchidan iborat guruh uchun 20 ta qog‘oz stakan (yoki **\\*qog‘oz trapesiya**)dan iborat to‘plam tayyorlang.\n-   Talabalar dars davomida murojaat qilishlari mumkin bo'lgan **\\*belgilarni** ko'rsating.\n-   (Ixtiyoriy) 4 nafar talabadan iborat guruhga bittadan **\\*Tartibga solish g‘oyalari**ni chop eting.",
           "purpose": "Bu dars hozirda tanish bo'lgan \"robot \" dasturlash ko'rsatmalaridan foydalangan holda sikllar uchun qayta tanishtiruv sifatida xizmat qiladi. Talabalar sinfdoshlarining harakatlaridagi takrorlanuvchi ko‘rinishlarni izlash va sikllardan foydalanib ushbu takroriy ko‘rinishlarni qanday soddalashtirsh orqali tanqidiy fikrlash mahoratlarini rivojlantiradilar.",
           "student_overview": "In this lesson, you'll program your classmates again, but using loops you'll be able to solve bigger and more complicated problems."
         },
         "coursec-2022/Loops with Rey and BB-8": {
           "name": "Loops with Rey and BB-8",
           "overview": "\"Getting loopy\"dagi takrorlanuvchi ko‘rsatmalar tushunchalari asosida yaratilib, bu bosqichda talabalar BB-8ga labirintdan oldingiga qaraganda samaraliroq o‘tishiga yordam berish uchun sikllardan foydalanishadi.",
+          "preparation": "-   Sinfingizda paydo bo'lgan muammolarni yechish uchun jumboqlarni toping.",
           "student_overview": "Sikllardan foydalanib BB-8 ga labirint bo‘ylab harakatlanishida yordam bering! "
         },
         "coursec-2022/Harvesting Crops with Loops": {
@@ -944,6 +947,7 @@
           "student_overview": "Keling, dehqonga ba’zi sabzavotlarni yig‘ishda sikllardan foydalanib yordam beramiz!"
         },
         "coursec-2022/Mini-Project: Sticker Art": {
+          "preparation": "-   O'z dizayningizni yaratishda mashq qiling. Bu darajalar avvalgilaridan qanday farq qilishiga e'tibor bering.",
           "purpose": "Bu to‘plamlar sikllarning ahammiyatini yaratuvchan va shaxsiy dizaynlar bilan ta’kidlab ko‘rsatadi.\n\n Loyiha ortidagi ketma-ketlik sifatida taklif qilinib, bu o‘sish talabalarga o‘z ishining ustasi bo‘lishga va ajoyib asarlar yaratishga imkon beradi.",
           "student_overview": "In this lesson, loops make it easy to make even cooler images with Artist!"
         },

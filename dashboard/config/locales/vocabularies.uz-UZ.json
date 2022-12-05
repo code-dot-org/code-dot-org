@@ -772,11 +772,16 @@
           "definition": "Kompyuter buyruqlarni o‘qishi uchun buyruqlarni to‘g‘ri tartibda qo‘yish."
         },
         "persistence/coursec/2022": {
-          "word": "Qat'iylik"
+          "word": "Qat'iylik",
+          "definition": "Taslim bo'lmaslik."
         },
         "programming/coursec/2022": {
           "word": "Dasturlash (Programming)",
           "definition": "Dastur yaratish san'ati."
+        },
+        "angle/coursec/2022": {
+          "word": "Burchak",
+          "definition": "-   **Burchak** - Shaklning ikki tomoni birikadigan joyi, darajasi bilan o'lchanadi"
         },
         "loop/coursec/2022": {
           "word": "Sikl",

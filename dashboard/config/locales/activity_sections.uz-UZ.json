@@ -3912,16 +3912,34 @@
           "description": "Ushbu mashg‘ulotlardan o‘quvchilar bilimini oshirish uchun foydalaning. Ular sinfdan tashqarida ishlatilishi mumkin.\n\n\\*\\* O‘zingizni yarating \\*\\* \n\n Kichik guruhlarda talabalarga o‘zlarining labirintlarini loyihalashtirishlariga  va ularni yechish uchun dasturlar yozish uchun bir-birlariga murojaat qilishlariga ruxsat bering. Qo‘shimcha ko‘ngil ochish uchun talabalar bilan cho‘chqa va qush kabi hayotiy labirintlarni yarating."
         },
         "ea522c1a-0f1d-4224-9a6c-25852564554a": {
-          "name": "O‘ylamoq"
+          "name": "O‘ylamoq",
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Ko'rsatish**: Reflektsiya slaydni ko'rsatish\n\nTalabalardan kundalik hayotlarida duch keladigan muammolar haqida o'ylab korishlarini so'rang.\n\n**Ko'zda tuting:**\n\n-   _Kundalik hayotingizda ishlatmaydigan narsalarni qanday togirlaysiz?_\n-   _Muayyan qadamlar ketma-ketligiga amal qilyapsizmi?_"
         },
         "0d59aa71-1a4e-4fd3-8a95-3f0f23933b47": {
-          "name": "Lug‘at"
+          "name": "Lug‘at",
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Show**: \"Lug'at\" slaydni ko'rsatish\n\nUshbu darsda uchta yangi va muhim lug'at so'zlari mavjud:\n\n-   **Xato** - dasturning to'g'ri ishlamayotgan qismi.\n\n-   **Debug** - Algoritm yoki dasturdagi muammolarni toping va tuzating.\n\n-   **Sabr-toqat** - Taslim bo'lmang.\n\nQat'iylik narsalarni turli yo'llar bilan va ko'p marta sinab ko'rganingizda gina yaxshi ishlaydi."
         },
         "e681233b-1029-4530-a3ef-4842b8254aa6": {
-          "name": "Kirish"
+          "name": "Kirish",
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: “Labirintda debbuging” slaydni ko‘rsatish"
+        },
+        "aa294a86-24c0-42a5-b28d-b7d81a9a94d5": {
+          "description": "Ushbu bo'limdagi jumboqlar siz uchun allaqachon echilgan (ura!), lekin ular ishlamayapti shekilli (voy!)\nBiz ushbu dasturlardagi muammolarni \"xatolar\" deb ataymiz va \"nosozliklarni tuzatish\" sizning vazifangizdir."
+        },
+        "507d26f6-e0ec-4b5a-9184-967fbc90c3da": {
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Ko'rsatish**: \"Nosozliklarni tuzatish\" slaydni ko'rsatish\n\n\\*\\* Ayting:\\*\\* _Dasturingizda xatolik bormi?_\n\n-   _Xatoni topish uchun dasturni bosqichma-bosqich tekshiring._\n-   _Birinchi qadamni sinab ko'ring, ishladimi?_\n-   _Keyin ikkinchisi, hozir chi?_"
+        },
+        "4423598b-200c-40bc-afb9-4bb1065199cc": {
+          "description": "Agar siz hamma narsa satr bo'yicha ishlashiga ishonch hosil qilgan bo'lsangiz, kodingiz o'zi bajarishi kerak bo'lgan narsani qilmayotgan nuqtaga kelganingizda, siz xato topganingizni bilib olasiz. Xatoyingizni topganingizdan so'ng, uni tuzatish (yoki \"nosozliklarni tuzatish\") ustida ishlashingiz mumkin!"
+        },
+        "1a784a55-fe5e-4577-a0a9-103136628be5": {
+          "description": "Agar bu sinfda shov-shuvga sabab bo'ladi deb o'ylasangiz, bugungi jumboq qahramoni _\"Muzlik davri\"_ dan _Scrata_ bilan tanishtirishingiz mumkin. Agar o'quvchilar _Scrat_ bilan tanish bo'lmasalar, g'aroyib olmaxon bilan duch kelgan videokliplarini ko'rsating."
         },
         "1df7d894-eea7-4874-8ae7-b88b4503b76b": {
           "name": "Debugging in Maze"
+        },
+        "c3172960-9aa5-4221-b1ab-2d35fb80653e": {
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: “Labirintda debbuging” slaydni ko‘rsatish"
         },
         "2029eb81-02c4-400f-9c31-585c5a3f2118": {
           "progression_name": "Malaka orttirish"
@@ -3931,6 +3949,7 @@
           "progression_name": "Chaqiriq (Challenge)"
         },
         "840f0979-0841-4874-9b50-dfa816eb4930": {
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: “9-daraja – Challenge” slaydni ko‘rsatish",
           "progression_name": "Oldindan ko'rish"
         },
         "821cc31c-fbe6-4890-bf1f-4e3c3248149c": {
@@ -3941,25 +3960,33 @@
           "progression_name": "Dars qo‘shimchalari"
         },
         "b29c4e41-3e9a-45c7-8132-e66d4af738b9": {
-          "name": "Reflection"
+          "name": "Reflection",
+          "description": "**<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> \\*\\*Show**: Reflektsiya slaydni ko'rsatish\n\n**Mulohaza:** _Bugun  jumboqlardan  topilgan xatolarni  chizing. Dasturni \"debug\" qilish uchun nima qildingiz?_"
         },
         "02b3715d-7036-47da-84c1-c9478fe67b8f": {
           "description": "Ushbu mashg‘ulotlardan o‘quvchilar bilimini oshirish uchun foydalaning. Ular sinfdan tashqarida ishlatilishi mumkin.\n\n\\*\\* Xatolar qoldirish\\*\\* \n\nO‘quvchilar oldingi darajalardan o‘tib, ularning echimlariga maqsadli ravishda xatolar qo‘shadilar. Keyin ular boshqa talabalardan o‘zlarining ishlarini debug qilishni so‘rashlari mumkin. Buni qog‘ozli jumboqlar bilan ham qilish mumkin. \n\n Boshqa talabalar debug paytida, tanqidlar konstruktiv ekanligiga ishonch hosil qiling. Agar bu sizning sinfingizga muammo tug‘dirsa, boshqa talaba bilan rol o‘ynab, ushbu mashg‘ulotdan oldin hurmat bilan debug qilishni ko‘rsating."
         },
         "fb89a68d-3b84-40eb-8670-33a34ad4431b": {
-          "name": "O‘ylamoq"
+          "name": "O‘ylamoq",
+          "description": "**O'ylab ko'ring:** _Kundalik hayotda qat'iyatli bo'lish qanday muhim?_"
         },
         "7e073b00-f336-4d89-a848-f79ee9a8bc23": {
-          "name": "Lug‘at"
+          "name": "Lug‘at",
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Show**: \"Lug'at\" slaydni ko'rsatish\n\n-   **Algoritm** - topshiriqni bajarish bosqichlari ro'yxati.\n-   **Dastur** - Mashina tomonidan boshqarilishi mumkin bo'lgan narsaga kodlangan algoritm.\n-   **Dasturlash** - Dastur yaratish san'ati."
         },
         "505c83de-b318-4a7d-9a4b-9da377a5b0d8": {
-          "name": "Kirish"
+          "name": "Kirish",
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Ko'rsatish**: \"Yangi blok\" slaydni ko'rsatish\n\n\\*\\* Ayting:\\*\\* _Sarguzashtchi Laurel  xazinani olishi kerak. Bizning yangi \"to'plash\" blokimiz buni amalga oshirishga imkon beradi._\n\nUshbu yangi blok ko'prik mashqlarida batafsilroq muhokama qilinadi."
         },
         "f6bf2eb5-a621-45b5-a038-0dbbb36152ee": {
-          "name": "Onlayn boshqotirmalarni sinf bilan ko‘rib chiqish"
+          "name": "Onlayn boshqotirmalarni sinf bilan ko‘rib chiqish",
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: O'tish harakati slaydni ko'rsatish\n\n**Ayting:** _Sarguzashtchi Lorelni barcha xazinalarni to'plashga majbur qiladigan algoritmni tasvirlab bering._\n\nTalabalardan baham ko'rishlarini so'rang. Qarang, yana qancha talabalar bir xil javob berdilar!\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Ko'rsatish**: \"Javob namunasi\" slaydni ko'rsatish\n\n![](<https://images.code.org/8e1740662bab87a9e82b3ccd8f44b5ab-code collect.png>)"
         },
         "2780e63f-ba52-459a-9176-4208568b6163": {
           "name": "Laurel bilan xazina yig‘ish"
+        },
+        "f3c465c8-b7b0-4b73-8afc-5f30c132f35b": {
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: “Dars qo‘shimchalari” slaydni ko‘rsatish"
         },
         "581b9960-a83f-4bdd-87d8-7007977e087c": {
           "progression_name": "Malaka orttirish"
@@ -3969,31 +3996,43 @@
           "progression_name": "Chaqiriq (Challenge)"
         },
         "c6479440-7f5b-4d91-829d-92cc5daff4fc": {
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: “9-11-daraja – Challenge” slaydni ko‘rsatish",
           "progression_name": "Amaliyot"
         },
         "c6a14661-c9e0-4aab-bf9f-5f90e7210276": {
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: “12-daraja – Challenge” slaydni ko‘rsatish",
           "progression_name": "Oldindan ko'rish"
         },
         "c6cca796-344f-48df-a35f-3b1e0613ee0c": {
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: “13-daraja – Challenge” slaydni ko‘rsatish",
           "progression_name": "Amaliyot"
         },
         "520f7482-b58c-4d37-94b7-fa8c4d83314b": {
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: “Dars qo‘shimchalari” slaydni ko‘rsatish",
           "progression_name": "Dars qo‘shimchalari"
         },
         "4ab4040a-556d-4dfd-9d56-8730be8041ac": {
-          "name": "Reflection"
+          "name": "Reflection",
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Ko'rsatish**: Reflektsiya slaydni ko'rsatish\n\n**O'ylab ko'ring:** _Bugun boshqotirmalarni yechishni davom ettirdingiz mi?_"
         },
         "ea8d0dcc-28b3-440d-b100-c036b74d9499": {
-          "name": "O‘ylamoq"
+          "name": "O‘ylamoq",
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Ko'rsatish**: Reflektsiya slaydni ko'rsatish\n\n**O'ylab ko'ring:** _Nima uchun debbuging  ko'rib chiqish muhim?_"
         },
         "7e945f73-76d3-4b83-817d-2b9af9789dd7": {
-          "name": "Lug‘at"
+          "name": "Lug‘at",
+          "description": "-   **Burchak** - Shaklning ikki tomoni birikadigan joy, darajasi bilan o'lchanadi"
         },
         "9f1508f1-3a4b-42fb-82fb-d31a0aad9576": {
-          "name": "Kirish"
+          "name": "Kirish",
+          "description": "Talabalarga burchaklarga kirish sifatida quyidagi videoni ko'rsating:\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Show**: Aylanma burchaklarni ko‘rsating: Videoni darajalarda chizing\n\n[Burilishlar va burchaklar](https://www.youtube.com/watch?v=sPKXZBL_Yvs) - talabalar videosi (davomiyligi 2 daqiqa)\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Ko'rsatish**: Talabalar uchun tarqatma materialni ko'rsating\n\nTalabalarga turli shakllar uchun ichki va tashqi burchaklarni ko'rsatish uchun **\\*Material** dan foydalaning. Ushbu hujjat tarqatma material sifatida ishlatilishi yoki talabalar uchun plakat sifatida chop etilishi mumkin.\n\n**Hujjatdagi shakllarni muhokama qiling**.\n\n-   _Bu rasmni chizish uchun kompyuterni qanday dasturlashtirgan bo'lardingiz?_\n-   _Ko'rsatmalar qanday tartibda bo'lishi kerak?_\n\nTalabalarga bu jumboqlarda ular hamma joyda chiziq qoldiradigan belgini harakatga keltirishlarini ayting. Talabalar xarakterni turli shakllarni chizishga majbur qiladigan kod yozadilar."
         },
         "285edd36-99af-46e6-ba3a-91300c2ef572": {
-          "name": "Kod bilan san’at yaratish"
+          "name": "Kod bilan san’at yaratish",
+          "description": "Ushbu jumboq to'plamida rassom endi 90 graduslik burchaklar bilan cheklanmaydi. Jismoniy o'tkazgichlarga ega bo'lish o'quvchilarga kerakli burchaklarni yaxshiroq tasavvur qilishlariga yordam beradi. Aks holda, o'quvchi qaysi burchakdan foydalanishni tanlaganida, sahna burchaklarning tasvirlarini beradi. (Yodda tutingki, ochiladigan menyuda burchak tanlash ikkita bilan cheklangan, bu esa oʻquvchilar ishlashlari kerak boʻlgan variantlar sonini kamaytiradi.)\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Show**: Protractor onlayn slaydni ko'rsatish\n\nTalabalarni boshqotirma ustida ishlash uchun kompyuterga yuborishdan oldin ushbu darajadagi vositalardan qanday foydalanish haqida qisqacha ma’lumot berish foydali bo‘ladi. Biz sizga o'tkazgichdan onlayn darsdan foydalanishni ko'rsatish uchun yaxshi boshqotirma sifatida 5-jumboqni tavsiya qilamiz."
+        },
+        "0b1b669c-1acf-42de-9f59-8182f34db782": {
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: “Labirintda debbuging” slaydni ko‘rsatish"
         },
         "efbbafe6-1b5a-4084-be1d-a0adf068fe3c": {
           "progression_name": "Malaka orttirish"
@@ -4018,48 +4057,75 @@
           "progression_name": "Dars qo‘shimchalari"
         },
         "fb85f373-fbf3-4b4c-a7d4-878c77ab3d99": {
-          "name": "Reflection"
+          "name": "Reflection",
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Show**: Reflektsiya slaydni ko'rsatish\n\n**O'ylab ko'ring:** _Qog'ozga oddiy shaklni chizing va  ishlatish uchun kodni tasavvur qiling. Ushbu kodni shakl yoniga yoza olasizmi?_"
         },
         "38f1faf6-557e-4278-8336-2ae0d394cce1": {
-          "name": "O‘ylamoq"
+          "name": "O‘ylamoq",
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Ko'rsatish**: Reflektsiya slaydni ko'rsatish\n\n**O'ylab ko'ring:** _O'tgan darsda kodning takroriy satrlarini nima hosil qiladi?_\n_Ular kodning qaysi qatorlarini takrorladilar?_"
         },
         "bcf1fc52-7c45-4c27-928d-9535649691dc": {
-          "name": "Lug‘at"
+          "name": "Lug‘at",
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Show**: \"Lug'at\" slaydni ko'rsatish\n\n-   **Loop** - biror narsani qayta-qayta bajarganingizdagi harakat.\n\n-   **Takrorlash** - Yana nimadir qiling."
         },
         "129d2408-3ca5-4a8e-90b1-f5ad3d0e6c48": {
-          "name": "Kirish"
+          "name": "Kirish",
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: \"Buni eslaysizmi?\" slayd\n\n**Maqsad:** Ushbu umumiy ko‘rinish o‘quvchilarga “Mening robot do‘stlarim” sinfi uchun intensiv dasturlar qanchalik tez bo‘lishi mumkinligini tushunishga yordam beradi.\n\n**Displey:** Ko‘rsatish **\\*Belgi tugmasi**, biz Robot Do‘stlarim ilovasida foydalanganmiz. To'rtta belgining har biri uchun o'quvchilardan robot ushbu ko'rsatmalarga qanday  amal qilishini  ko'rsatishlarini so'rang.\n\n<img alt=\"\" src=\"https://curriculum.code.org/media/uploads/Screenshot-2018-03-13-19.49.03.png\" style=\"max-width: 300px;\">\n\n**Model:** Sinf bilan birga **\\*Shisha yig‘ish g‘oyalari** bo‘yicha oddiy boshqotirma tuzing, qoidalar va terminologiyani eslab qolish uchun bir-biringizga  dasturlashda yordam bering.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: \"Endi sinab ko'ring!\" slayd\n\nKeyin quyida ko'rsatilganidek, biroz qiyinroq, lekin juda ko'p qadamlarni talab qiladigan jumboqni to'plang.\n\n<img alt=\"\" src=\"https://curriculum.code.org/media/uploads/Screenshot-2018-03-14-18.17.12.png\" style=\"max-width: 300px;\">\n\n**Ko‘ngilli:** Ko‘ngillilardan (yoki ko‘ngillilar guruhidan) buni doskada dasturlashda yordam berishini so‘rang. Agar siz ularni \"kalitdagi belgilardan boshqa belgilar yo'q\" qoidasiga qat'iy rioya qilishga majburlasangiz, ehtimol biroz vaqt talab etiladi!\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: \"Yana bir marta!\" slayd\n\n**Display:** Endi ushbu rasmni oching:\n\n<img src=\"https://curriculum.code.org/media/uploads/Screenshot-2018-03-14-17.59.02.png\" style=\"max-width: 300px;\">\n\nSinfning munosabati qanday?\n\n**Maslahat** Talabalarga oʻzlari yaratmoqchi boʻlgan kodni etkazishning qisqaroq usullarini oʻylab koʻring. (Agar o‘quvchilaringiz “6 marta oldinga siljish” kabi so‘zlarni ishlata boshlasa, ushbu parchani o‘tkazib yuborish mumkin. Chunki bu “olti marta”ni belgilar bilan qanday ko‘rsatish haqida munozarani ochadi.)\n\nTalabalar \"takroriy\" kod g'oyasini shakllantirgandan so'ng, ularga u bilan bog'liq lug'atni bering. Ko'pincha \"biror narsani takrorlash\" va \"biror narsani aylantirish\" atamalari bir-birining o'rnida ishlatilishini ular bilan baham ko'ring."
         },
         "3ff8ec4d-fe12-413a-975d-69e143845e37": {
           "name": "Mening sikllashtirilgan Robot Do‘stlarim"
         },
+        "a583dcd9-098b-4af8-bde5-e7c9cb199080": {
+          "description": "#### Kirish va modellashtirish\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Show**: \"Mening Loopy Robotic Friends\" slaydni ko'rsatish\n\n**Tayyorlash:** Guruhlar uchun stakanchalar yoki qog'oz kesmalarni tayyorlang.\n\n**Display:** Oldingi stakanlaringizdan dasturni oling va uni sinfga ko'rsating yoki quyidagi dasturdan foydalaning.\n\n[3 stakan eritma] [0]\n\n**O'ylab ko'ring:** Talabalardan ushbu dasturda doimiy ravishda takrorlanadigan ko'rsatmalar namunasini qaerdan topishlari mumkinligi haqida jimgina o'ylab ko'rishlarini so'rang (bitta strelka qayta-qayta takrorlanadi).\n\n**Juftlik:** Sherigingizga murojaat qiling va topilgan takrorlanuvchi naqshlardan biri haqida gapirib bering.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Ko'rsatish**: \"Javob namunasi\" slaydni ko'rsatish\n\n**Model.** Sinf tomonidan topilgan takrorlanuvchi naqshlardan birini ishlatib,  ko'rsatma yoki naqshni qanday qilib aylana olishni modellashtiring, o'sha doira yoniga choklar sonini yozing, so'ngra qolgan o'qlarni kesib tashlang.\n\n![aylanma kodi](https://curriculum.code.org/media/uploads/codeloop_EVpjnMz.png)\n\nBuni butun dastur qisqartirilguncha takrorlang va keyin dasturni qayta yozing, shunda talabalar ko'rsatmalar qanchalik oson ekanligini ko'rishlari mumkin."
+        },
+        "fcc81bb0-b063-403b-90e0-8206f5a66b9c": {
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Show**: \"Loop Your Robots\" slaydni ko'rsatish\n\n**Aytib bering:**\n\n-   Guruhingizga kirganingizdan so'ng, sheriklarga bo'ling.\n\n-   Kuboklarni bezash g'oyalariga qarang.\n\n-   Hamkoringiz bilan birgalikda robotingiz uchun bitta dizaynni tanlang.\n\n![](<https://images.code.org/ff04a9994e4d65688eb2833e5e4d04e7-cup stack ideas.png>)"
+        },
         "b1974523-e458-4364-aeb2-80f00e6de4bd": {
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Show**: dastur slaydni ko'rsatish\n\n**Aytib bering:**\n\n-   _Faqat strelkalar yordamida stekni qanday qurish kerakligini muhokama qiling._\n\n-   _Algoritmingizni qog'ozga tushiring._\n\n-   _Har qanday takrorlanadigan amallarni halqa bilan almashtiring._",
           "tips": [
             null
           ]
         },
+        "9ed22a0d-5061-4e5d-aa31-20ca315e5c6c": {
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Show**: \"Robotlaringizni ishga tushirish va debbuging qilish\" slaydni ko'rsatish\n\n**Aytib bering:**\n\n-   _Robot bo'lish vaqti keldi!_\n-   _Guruhingizdagi boshqa hamkorlar bilan algoritmlarni almashing._\n-   _Xatolardan ehtiyot bo'ling. Agar buni kuzatsangiz, robotdan ko'rsatmalarga iloji boricha amal qilishini so'rang._\n-   _Xatoni hamkorlaringiz bilan muhokama qiling va yechim toping._\n-   _Algoritm ishlamaguncha uni sinab ko'ring!_\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Show**: Muhokama slaydni ko'rsatish\n\n**Muhokama:** Barcha juftliklar o‘z dasturlarini ishga tushirishga muvaffaq bo‘lgach, bir necha kishidan o‘z yechimlarini sinf bilan baham ko‘rishlarini so‘rang. Guruhlar bir xil jumboqning turli yechimlarini qanday topishganini muhokama qilish uchun ushbu imkoniyatdan foydalaning. Xususan, har bir dasturdan so'rashingiz mumkin:\n\n-   _Siz biron bir loopsni aniqladingizmi?_\n-   _Bu tsikllarni yozishning boshqa usuli bormi? Qanday?_"
+        },
         "373c8a50-ff0d-4677-98aa-a2492f33c9f2": {
-          "name": "Reflection"
+          "name": "Reflection",
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Ko'rsatish**: Reflektsiya slaydni ko'rsatish\n\n**O'ylab ko'ring:** _Qaysisini tushunish osonroq: loops dasturlarmi yoki qo'lda yozilgan dasturlarmi? Nega?_"
         },
         "6ad48bbf-6b60-4210-99ba-722ef48e2ea4": {
-          "name": "O‘ylamoq"
+          "name": "O‘ylamoq",
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Ko'rsatish**: Reflektsiya slaydni ko'rsatish\n\n**Ko'zda tuting:**\n\n-   _Looplar nima?_\n-   _Nima uchun biz ulardan foydalanamiz?_"
         },
         "25f3c528-ac14-47ff-b254-cd071d8737ff": {
-          "name": "Lug‘at"
+          "name": "Lug‘at",
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Show**: \"Lug'at\" slaydni ko'rsatish\n\n-   **Loop** - biror narsani qayta-qayta bajarganingizdagi harakat.\n\n-   **Takrorlash** - Yana nimadir qiling."
         },
         "be9470c8-795f-4e1d-83f2-069961c852d2": {
-          "name": "Kirish"
+          "name": "Kirish",
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Ko'rsatish**: sikllarni topish slaydni ko'rsatish\n![](<https://images.code.org/17dc6c40c0b81926fc7ed359c2770b4f-find the loops.png>)\n\nTalabalar bilan “Mening loopy robot do‘stlarim” mashg‘ulotini ko‘rib chiqing:\n\nTalabalarga sinfning qolgan qismi tomonidan bajarilishi kerak bo'lgan dasturni (takroriy qadamlar bilan) tezda ko'rsating. Sinfning qolgan qismidan dasturdagi halqalarni topib, ularga ishora qilishni so‘rang.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Show**: Javoblar kaliti slaydni ko'rsatish\n[][bir]\n\nAgar sizga qulay bo'lsa, menga _Yulduzli urushlar_ filmidagi _BB-8_ haqida gapirib bering. Ko'p bolalar yoqimli robot bilan tanish bo'lishi mumkin, ammo u bilan tanishish qiziqish uyg'otadi."
+        },
+        "a36ffc45-1507-4d23-b7c0-f095cd7c0550": {
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: O'tish harakati slaydni ko'rsatish\n\nUshbu faoliyat My Loopy Robotic Friends-dan bog'lanmagan tushunchalarni talabalar o'tayotgan onlayn dunyoga olib kirishga yordam beradi. Sinfingiz bilan bajarish uchun quyidagilardan \\_ birini\\_ tanlang:"
         },
         "6adb6ede-2fc4-47f7-97d8-32cd0c02402f": {
           "name": "Onlayn boshqotirmalarni sinf bilan ko‘rib chiqish"
         },
         "fe682113-6220-4a20-b2a7-009bde3d8e27": {
-          "name": "Loops with Rey and BB-8"
+          "name": "Loops with Rey and BB-8",
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Displey**: “Rey va BB-8 bilan dasturlash” videosini ko‘rish"
         },
         "336c18d5-0c32-44c2-b35c-a6f7eec5abff": {
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: “2-daraja – Challenge” slaydni ko‘rish",
           "progression_name": "Malaka orttirish"
         },
         "4faf8753-aee7-43d6-9f6f-0e0033aa315f": {
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: “3-daraja – Challenge” slaydni ko‘rish",
           "progression_name": "Oldindan ko'rish"
+        },
+        "ac539445-fa4c-45cd-8d04-d794a3041826": {
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Displey**: “4-daraja – BB-8 bilan bloklarni takrorlash” videosini ko‘rish"
         },
         "78b79d53-246f-40a9-ab3a-557fba2f5c1a": {
           "progression_name": "Malaka orttirish"
@@ -4074,6 +4140,7 @@
           "progression_name": "Oldindan ko'rish"
         },
         "f26e056f-e9c9-4a0a-95f8-64e3044c86c9": {
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: “14-daraja – Challenge” slaydni ko‘rish",
           "progression_name": "Amaliyot"
         },
         "a9c1c890-7b91-4f1a-a207-155306c84f5e": {
@@ -4081,27 +4148,34 @@
           "progression_name": "Dars qo‘shimchalari"
         },
         "58e08b96-df9d-4862-98c6-872f29a5e215": {
-          "name": "Reflection"
+          "name": "Reflection",
+          "description": "**Ko'zgu:** _Qayta-qayta takrorlanadigan narsa haqida o'ylab ko'ring. Buning uchun dastur qanday ko'rinishi mumkin?_"
         },
         "ab2c8aa4-322c-4ac6-b003-7fbf0dfb807b": {
           "description": "Ushbu mashg‘ulotlardan o‘quvchilar bilimini oshirish uchun foydalaning. Ular sinfdan tashqarida ishlatilishi mumkin.\n\n### Juda harakatlantiruvchi!\n\n-   Talabalarga ular qila oladigan harakatlar yoki raqs rasmlarini bering.\n-   Talabalar o‘zlarining raqslarini xoreografiya qilish uchun harakatlarni tashkil qilishlari va sikl qo‘shishlari kerak.\n-   Raqslarni qolgan sinfdoshlar bilan ulashishsin.\n\n\\*\\* Qayta ulang \\*\\*\n\n-   Takrorlanuvshi mashhur raqslarning YouTube videolarini toping.\n-   Sizning sinfingiz sikllarni topa oladimi?\n-   Xuddi shu narsani qo‘shiqlar bilan sinab ko‘ring!"
         },
         "b57a66a7-3da1-4c20-8d0a-9b5da066c07e": {
-          "name": "O‘ylamoq"
+          "name": "O‘ylamoq",
+          "description": "Hozirgacha o‘quvchilar “Labirint” boshqotirmalarida faqat ilmoqlardan foydalanganlar. Bu jumboqlar takrorlanuvchi harakat ko'rsatmalariga qaratilgan. Ushbu bosqichda bir nechta narsalarni bir joyda to'plash uchun halqalardan foydalaniladi.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Ko'rsatish**: Reflektsiya slaydni ko'rsatish\n\n**Mulohaza:** _Bugun biz kod bilan hosilni yig'ib olamiz._\n\n_Harvester jumboqlarida bir joyda ko‘p narsalar bo‘lishi mumkin._\n\n_Qanday qilib biz ilmoqlardan istalgan sonini ikkita blokda to'plashimiz mumkin?_"
         },
         "3c79c590-2f48-4931-b8fa-736281002766": {
-          "name": "Lug‘at"
+          "name": "Lug‘at",
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Show**: \"Lug'at\" slaydni ko'rsatish\n\n-   **Loop** - biror narsani qayta-qayta bajarganingizdagi harakat.\n-   **Takrorlash** - Yana nimadir qiling."
         },
         "d9c07104-b142-42fc-abf8-4b34d8429b7a": {
-          "name": "Harvesting Crops with Loops"
+          "name": "Harvesting Crops with Loops",
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Displey**: “Harvester” videosini ko‘rsatish"
         },
         "38b1f726-8881-479b-a9e5-7fd354aacf31": {
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: \"2-8-darajali - Ko'nikmani rivojlantirish\" slaydni ko'rsatish\n\nTalabalar harakatni takrorlash uchun halqalardan foydalanganda (masalan, qovoq terish), ularni harakatdan oldin va keyin harakatlar haqida o'ylab korishlarini taklif qiling. Bu harakatlarni ham halqaga kiritish mumkinmi?",
           "progression_name": "Malaka orttirish"
         },
         "7d2a391e-fb8f-4791-841a-f31ddac790b7": {
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: “9-daraja – Challenge” slaydni ko‘rsatish",
           "progression_name": "Chaqiriq (Challenge)"
         },
         "e68467ed-58ff-45fe-b064-90e8dbca1c3d": {
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: “10-12-daraja – Challenge” slaydni ko‘rsatish",
           "progression_name": "Amaliyot"
         },
         "be50d0ba-53db-4cb0-b970-f8fda6cf3ec1": {
@@ -4112,7 +4186,8 @@
           "progression_name": "Dars qo‘shimchalari"
         },
         "63b4337c-4ae6-43ee-99ae-3f637cd0c29d": {
-          "name": "Reflection"
+          "name": "Reflection",
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Ko'rsatish**: Reflektsiya slaydni ko'rsatish\n\n**O'ylab ko'ring:** _Kodingizda tsikllardan foydalanishga ikkita misol keltiring._"
         },
         "97ec11ba-87bb-4b11-9a21-da5ebf94b45b": {
           "description": "Ushbu mashg‘ulotlardan o‘quvchilar bilimini oshirish uchun foydalaning. Ular sinfdan tashqarida ishlatilishi mumkin.\n\n\\*\\* Materiallarni to‘plash \\*\\* \n\n-   O‘quvchilarga ish stollari (qalam, o‘chirish moslamasi va boshqalar) ustida uyumlarni yaratsinlar \n-   Sheriklari har bir guruhni yig‘ib terimchining uyumdan uyumga yurib,  qanday qilib yo‘l bo‘ylab narsalarni terishni aniqlab bersin. \n-   Dasturlarni sinfning qolgan qismi bilan ulashing."
@@ -4121,7 +4196,8 @@
           "name": "O‘ylamoq"
         },
         "305f3738-2a15-46f7-bef1-c405a63b948d": {
-          "name": "Lug‘at"
+          "name": "Lug‘at",
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Show**: \"Lug'at\" slaydni ko'rsatish\n\n-   **Loop** - biror narsani qayta-qayta bajarganingizdagi harakat.\n\n-   **Takrorlash** - Yana nimadir qiling."
         },
         "f4370643-7030-4064-a1a5-5d5385a91c80": {
           "name": "Kirish"
