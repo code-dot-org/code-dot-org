@@ -14,9 +14,9 @@ Resources:
   RedirectFunction:
     Type: AWS::CloudFront::Function
     Properties: 
-      Name: !Sub "${AWS::StackName}-www-redirect"
+      Name: !Sub "${AWS::StackName}-redirect-function"
       FunctionConfig: 
-        Comment: Redirects to code.org
+        Comment: Redirects various domains
         Runtime: cloudfront-js-1.0
       AutoPublish: true
       FunctionCode: |
@@ -32,7 +32,8 @@ Resources:
             "dayofcode.org": "hourofcode.com",
             "monthofcode.com": "hourofcode.com",
             "weekofcode.org": "hourofcode.com",
-            "weekofcode.com": "hourofcode.com"
+            "weekofcode.com": "hourofcode.com",
+            "www.hourofcode.com": "hourofcode.com"
           }
           var newUrl = redirects[event.origin.domainName]
           var newUrl = 'https://code.org';
