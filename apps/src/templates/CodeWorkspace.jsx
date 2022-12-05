@@ -120,13 +120,15 @@ class CodeWorkspace extends React.Component {
         key="toolbox-header"
         style={styles.toolboxHeaderContainer}
       >
-        <button
-          id="hide-toolbox-icon"
-          style={[commonStyles.hidden, chevronStyle]}
-          type="button"
-        >
-          <i className="fa fa-chevron-circle-right" />
-        </button>
+        <span>
+          <button
+            id="hide-toolbox-icon"
+            style={[commonStyles.hidden, chevronStyle]}
+            type="button"
+          >
+            <i className="fa fa-chevron-circle-right" />
+          </button>
+        </span>
         <span style={textStyle}>
           {editCode ? i18n.toolboxHeaderDroplet() : i18n.toolboxHeader()}
         </span>
@@ -138,12 +140,13 @@ class CodeWorkspace extends React.Component {
         style={{...styles.toolboxHeaderContainer, ...commonStyles.hidden}}
       >
         <span id="show-toolbox-click-target">
-          <button id="show-toolbox-icon" style={chevronStyle} type="button">
-            <i className="fa fa-chevron-circle-right" />
-          </button>
+          <span>
+            <button id="show-toolbox-icon" style={chevronStyle} type="button">
+              <i className="fa fa-chevron-circle-right" />
+            </button>
+          </span>
           <span>{i18n.showToolbox()}</span>
         </span>
-        <span>{i18n.showToolbox()}</span>
         <span>{settingsCog}</span>
       </PaneSection>
     ];
