@@ -1,5 +1,5 @@
 import {makeEnum} from '../utils';
-import analyticsReport from './AnalyticsReporter';
+import analyticsReport from '@cdo/apps/lib/util/AnalyticsReporter';
 
 const SET_CURRENT_USER_NAME = 'currentUser/SET_CURRENT_USER_NAME';
 const SET_USER_SIGNED_IN = 'currentUser/SET_USER_SIGNED_IN';

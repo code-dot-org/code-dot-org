@@ -1,5 +1,5 @@
-import {expect} from '../../util/reconfiguredChai';
-import analyticsReporter from '@cdo/apps/templates/AnalyticsReporter';
+import {expect} from '../../../util/reconfiguredChai';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import * as utils from '@cdo/apps/utils';
 import {stub} from 'sinon';
 
