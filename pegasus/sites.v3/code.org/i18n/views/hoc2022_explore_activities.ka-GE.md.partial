@@ -1,4 +1,4 @@
-{{ featured_tutorial, title: "Hello World: კოსმოსი", body: "შექმენით გალაქტიკათშორისი სცენები პერსონაჟებით და ხმებით, რომლებსაც ექნებათ თქვენი ფრაზა \"Hello worlds!\"", image: "/images/hoc2022-hello-world-space.png", url: "https://studio.code.org/s/hello-world-space-2022/reset" }}
+{{ featured_tutorial, title: "გამარჯობა სამყარო: კოსმოსი", body: "შექმენით გალაქტიკათშორისი სცენები პერსონაჟებით და ხმებით, რომლებსაც ექნებათ თქვენი ფრაზა \"გამარჯობა სამყაროებო!\"", image: "/images/hoc2022-hello-world-space.png", url: "https://studio.code.org/s/hello-world-space-2022/reset" }}
 
 {{ featured_tutorial, title: "NASA-ს კოსმოსური ჯემ-სეიშენი", body: "შექმენით მზის სისტემა, რომელიც ნამდვილად ამაღელვებელია და გაიგეთ მეტი მუსიკის, ასტრონომიის და პროგრამირების შესახებ ამ პროცესში!", image: "/images/hoc2022-nasa-space-jam.png", url: "https://chandra.si.edu/sound/code/" }}
 
