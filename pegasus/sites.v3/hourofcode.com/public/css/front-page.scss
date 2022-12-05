@@ -41,6 +41,7 @@ section {
     margin: 0 auto;
     line-height: 1.4;
     text-align: center;
+    font-size: 18px;
 
     @media screen and (max-width: $width-sm) {
       font-size: 16px;
@@ -94,10 +95,6 @@ section.join-us {
   h3, h4 {
     margin-bottom: 2em;
     max-width: 820px;
-  }
-
-  h4 {
-    font-size: 18px;
   }
 
   .row {
