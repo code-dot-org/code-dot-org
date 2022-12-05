@@ -37,7 +37,7 @@ section {
     }
   }
 
-  h3 {
+  h3, h4 {
     margin: 0 auto;
     line-height: 1.4;
     text-align: center;
@@ -91,9 +91,13 @@ section.map {
 // Join us / Signup form
 section.join-us {
 
-  h3 {
+  h3, h4 {
     margin-bottom: 2em;
     max-width: 820px;
+  }
+
+  h4 {
+    font-size: 18px;
   }
 
   .row {
