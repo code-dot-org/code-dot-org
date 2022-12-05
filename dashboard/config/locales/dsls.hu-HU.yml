@@ -3588,8 +3588,12 @@ hu-HU:
             a programot?
       courseAB_EOC_2021:
         display_name: Kurzus Projekt vége
+        description: Elértél a tanfolyam utolsó leckéjéhez! Válassz egy projektet,
+          amit elkészítesz!
       courseB_EOC_2021:
         display_name: Kurzus Projekt vége
+        description: Elértél a tanfolyam utolsó leckéjéhez! Válassz egy projektet,
+          amit elkészítesz!
       courseF_EOC_samples_2021:
         display_name: Kurzus Projekt vége
       CSD U3 Collisions SFLP:
@@ -11119,8 +11123,12 @@ hu-HU:
           ## Milyen információk azok, amik online megosztása rendben van?
       courseAB_EOC2022:
         display_name: Kurzus Projekt vége
+        description: Elértél a tanfolyam utolsó leckéjéhez! Válassz egy projektet,
+          amit elkészítesz!
       courseB_EOC2022:
         display_name: Kurzus Projekt vége
+        description: Elértél a tanfolyam utolsó leckéjéhez! Válassz egy projektet,
+          amit elkészítesz!
       courseC_multi_artist_prog6_predict12022:
         answers:
         - text: A művész olyan háromszöget rajzol, amelyiknek mindhárom oldala egyenlő
@@ -11525,3 +11533,17 @@ hu-HU:
           projekteket készíteni, mint ezek... és még sok mást is tudni fogsz!
       csd-pre-survey-levelgroup_21_22_2022:
         title: Számítástechnika felfedezése c. tanfolyam előzetes felmérése
+      GettingLoopy-Unplugged_2021:
+        markdown: |
+          # Ismétlődések
+
+          Ez a leckbe bemutatja az ismétlődések szerepét a programozásban, méghozzá egy kis tánc segítségével.
+      TheRightAppMarkdownLevel_2021:
+        markdown: |
+          # A megfelelő alkalmazás
+
+          * Ma már mindenki használ számítógépet, különösen okostelefont.
+          * Az okostelefonos alkalmazások segítenek az embereknek, hogy beszélgessenek a barátokkal, zenét hallgassanak, vásárloljanak, vagy csak egyszerűen böngésszenek az interneten.
+          * Fontos, hogy a programozók megértsék a felhasználók igényeit, és ezeket szem előtt tartva tervezzenek alkalmazásokat!
+
+          ![](https://images.code.org/fb17eeb9238d2f26c6ab40c9841517a7-image-1555611687284.png)
