@@ -7049,7 +7049,7 @@ tr-TR:
         - {}
         - {}
         questions:
-        - text: Giriş
+        - text: Girdi
         - {}
         - text: Depolama
         - text: İşleme
@@ -7060,7 +7060,7 @@ tr-TR:
         - {}
         - {}
         questions:
-        - text: Giriş
+        - text: Girdi
         - {}
         - text: Depolama
         - text: İşleme
@@ -7071,7 +7071,7 @@ tr-TR:
         - {}
         - {}
         questions:
-        - text: Giriş
+        - text: Girdi
         - {}
         - text: Depolama
         - text: İşleme
@@ -8914,7 +8914,7 @@ tr-TR:
           correct: true
         - correct: true
         questions:
-        - {}
+        - text: Web Geliştirme
       csd-post-survey-2019-I like cs:
         answers:
         - correct: true

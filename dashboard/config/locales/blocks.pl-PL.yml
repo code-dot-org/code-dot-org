@@ -1050,6 +1050,8 @@ pl:
             '1': sok cytrynowy
             '3': proszek do pieczenia
             '5': oba
+      DansBlocks_testRectangle:
+        text: 'utwórz prostokąt x: {X} y: {Y} w: {W} h: {H} kolor: {COLOR}'
       FunctionBlocks_addEightBlock:
         text: AddEight
       FunctionBlocks_addFiveBlock:

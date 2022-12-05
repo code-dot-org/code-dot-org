@@ -4188,3 +4188,7 @@ pt:
           title: CSP Parque Infantil
           description_audience: Escritores de currículos
           description_short: Para organizar atualizações de aulas ou níveis entre versões de currículo
+        devices-2022:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: 'Capítulo 2: Construindo protótipos físicos'

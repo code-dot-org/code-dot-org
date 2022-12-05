@@ -3002,3 +3002,7 @@ is:
               display_name: 'Eining 10: Netöryggi og mikilvægi þess'
             lessonGroup-2:
               display_name: Könnun eftir námskeið
+        devices-2022:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: 'Kafli 2: Smíði frumgerða vélbúnaðar'

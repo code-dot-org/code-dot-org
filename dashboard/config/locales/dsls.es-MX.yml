@@ -15283,7 +15283,7 @@ es-MX:
           correct: true
         - text: I, II, y III
         questions:
-        - text: "¿Qué necesita saber un programador al crear un escuchador de eventos?
+        - text: "¿Qué necesita saber un programador al crear un detector de eventos?
             \ \n&nbsp;&nbsp;&nbsp;I. El evento que activará el cambio  \n&nbsp;&nbsp;&nbsp;II.
             Cuando se activará el evento en el programa    \n&nbsp;&nbsp;&nbsp;III.
             Qué debe hacer el programa cuando se dispara el evento"
@@ -15296,7 +15296,7 @@ es-MX:
           correct: true
         - text: I, II, y III
         questions:
-        - text: "¿Qué necesita saber un programador al crear un escuchador de eventos?
+        - text: "¿Qué necesita saber un programador al crear un detector de eventos?
             \ \n&nbsp;&nbsp;&nbsp;I. El evento que activará el cambio  \n&nbsp;&nbsp;&nbsp;II.
             Cuando se activará el evento en el programa    \n&nbsp;&nbsp;&nbsp;III.
             Qué debe hacer el programa cuando se dispara el evento"
