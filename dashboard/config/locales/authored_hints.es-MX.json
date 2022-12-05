@@ -5558,7 +5558,7 @@
           "courseD_artist_binary8_c": "¡No tengas miedo de cometer un error! Intenta escribir binario y ejecuta el código para ver qué sucederá, incluso si aún no has resuelto el desafío."
         },
         "courseD_bee_conditionals1_predict1": {
-          "courseD_bee_conditionals1_a": "Tendrás que utilizar un bloque ` si ` para comprobar si hay una flor debajo de la nube antes de intentar recoger el néctar."
+          "courseD_bee_conditionals1_a": "Tendrás que utilizar un bloque `si` para comprobar si hay una flor debajo de la nube antes de intentar recoger el néctar."
         },
         "courseD_bee_conditionals1_predict1_2018": {
           "courseD_bee_conditionals1_a": "Tendrás que utilizar un bloque `si` para comprobar si hay una flor debajo de la nube antes de intentar recoger el néctar."
@@ -5574,7 +5574,7 @@
         },
         "courseD_bee_conditionals2": {
           "courseD_bee_conditionals2_hintVid1": "¿Necesitas ayuda para comenzar? ¡Ve el vídeo!",
-          "courseD_bee_conditionals2_a": "Algunas veces una flor estará allí, otras no.  Si quieres que tu código se ejecute en ambos casos, asegúrate de utilizar un ` si ` comunicado.",
+          "courseD_bee_conditionals2_a": "Algunas veces una flor estará allí, otras no.  Si quieres que tu código se ejecute en ambos casos, asegúrate de utilizar un `si` comunicado.",
           "courseD_bee_conditionals2_b": "Puedes usar un loop 'repetir' o un 'mientras camino por delante' para moverse a través de este laberinto.",
           "courseD_bee_conditionals2_c": "No tienes buscar panales, solo habrá flores o espacios en blanco debajo de las nubes.",
           "courseD_bee_conditionals2_hintVid2": "Mire este vídeo para ayudar a resolver este desafío."
@@ -5633,8 +5633,8 @@
         "courseD_bee_conditionals4": {
           "courseD_bee_conditionals4_hintVid1": "¿Necesitas ayuda para comenzar? ¡Ve el vídeo!",
           "courseD_bee_conditionals4_a": "Todavía puedes tratar cada espacio como si hubiera una nube sobre él, aunque puedas ver todo el camino.",
-          "courseD_bee_conditionals4_b": "Usa una instrucción `si' dentro de tu bucle (loop) para comprobar si hay néctar en cada espacio. ",
-          "courseD_bee_conditionals4_c": "Usa un bloque [bloque blockly][0] para avanzar y comprobar si hay una flor. Si hay una flor, ¿qué debería hacer la abeja?",
+          "courseD_bee_conditionals4_b": "Usa una instrucción \\`si' dentro de tu bucle (loop) para comprobar si hay néctar en cada espacio. ",
+          "courseD_bee_conditionals4_c": "Usa un bloque <xml><block type=\"maze_untilBlocked\"/></xml> para avanzar y comprobar si hay una flor. Si hay una flor, ¿qué debería hacer la abeja?",
           "courseD_bee_conditionals4_hintVid2": "Mire este vídeo para ayudar a resolver este desafío."
         },
         "courseD_bee_conditionals4_2018": {
@@ -5662,7 +5662,7 @@
         "courseD_bee_conditionals5": {
           "courseD_bee_conditionals5_hintVid1": "¿Necesitas ayuda para comenzar? ¡Ve el vídeo!",
           "courseD_bee_conditionals5_a": "Piensa en cada lado de la ruta rectangular como un camino en sí mismo. Configura un loop anidado con un bloque `repetir` en el exterior y un ciclo`cuando hay un camino por delante` en el interior. ¿Cuántos caminos necesita recorrer la abeja si la abeja necesita recorrer cada lado con una flor?",
-          "courseD_bee_conditionals5_c": "Hay 3 lados del rectángulo con flores, por lo que el código se debe `repetir 3 veces`. En cada repetición, la abeja deberá continuar por el camino, \"mientras haya un camino por delante\". Para continuar por el camino, la abeja deberá 'avanzar'. Mientras que en el camino, la abeja tiene que comprobar si hay una flor. ` si hay una flor`, la abeja debería` obtener néctar`.",
+          "courseD_bee_conditionals5_c": "Hay 3 lados del rectángulo con flores, por lo que el código se debe `repetir 3 veces`. En cada repetición, la abeja deberá continuar por el camino, \"mientras haya un camino por delante\". Para continuar por el camino, la abeja deberá 'avanzar'. Mientras que en el camino, la abeja tiene que comprobar si hay una flor. `si hay una flor`, la abeja debería`obtener néctar`.",
           "courseD_bee_conditionals5_b": "En el interior del bloque`mientras que hay un camino adelante` tendrás que seguir adelante y comprobar si hay una flor. ¿Cómo se comprueba si hay una flor? ¿Qué haces si hay una flor?",
           "courseD_bee_conditionals5_hintVid2": "Mire este vídeo para ayudar a resolver este desafío."
         },
@@ -7090,7 +7090,7 @@
         "courseE_artist_functions2": {
           "courseD_artist_functions2_b": "La función que escribes no debería contener el programa completo, sólo la parte que dibuja un cuadrado con lado de 100 pixeles.",
           "courseD_artist_functions2_c": "Utiliza el bloque verde 'dibujar un cuadrado' para \"llamar\" a tu función debajo del bloque 'cuando ejecutar'. De lo contrario, el código en la función no se ejecutará.\n\n<xml><block type=\"procedures_callnoreturn\" limit=\"2\"><mutation name=\"draw a square\"/></block></xml>",
-          "courseD_artist_functions2_a": "El programa debe:\n\n- Usar la función\n- Avanzar 100 + 75 pixeles\n- Usar la función"
+          "courseD_artist_functions2_a": "El programa debe:\n\n-   Usar la función\n-   Avanzar 100 + 75 pixeles\n-   Usar la función"
         },
         "courseE_artist_functions2_2018": {
           "courseD_artist_functions2_b": "La función no debería contener el programa completo, sólo la parte que dibuja un cuadrado con lados de 100 pixels.",
@@ -8875,11 +8875,11 @@
           "MC_HOC_2017_03_Cole_b": "¿Crees que el código es demasiado largo? Intenta usar el bucle (loop) de \"repetir\" para averiguar la manera de acortarlo!"
         },
         "MC_HOC_2017_04POINT5_RYAN_2021": {
-          "MC_HOC_2017_04POINT5_RYAN_b": "Usa el bloque \"girar a la derecha\" para cambiar la dirección del Agent",
+          "MC_HOC_2017_04POINT5_RYAN_b": "Usa el bloque \"girar a la derecha\" para cambiar la dirección del Agente",
           "MC_HOC_2017_04POINT5_RYAN_a": "El Agent solo tiene que llegar al primer plato de presión para que Alex o Steve puedan llegar al hacha."
         },
         "MC_HOC_2017_04_Cole_2021": {
-          "MC_HOC_2017_04_Cole_a": "El Agent necesita \"avanzar\" 7 veces. ¿Cómo puedes usar un bucle (loop) de \"repetir\" para que esto ocurra?",
+          "MC_HOC_2017_04_Cole_a": "El Agente necesita \"avanzar\" 7 veces. ¿Cómo puedes usar un bucle (loop) de \"repetir\" para que esto ocurra?",
           "MC_HOC_2017_04_Cole_c": "¡Presiona \"Ejecutar\"! \nPuedes ejecutar tu código aunque no sea correcto.  Ejecuta y restablece tu código una y otra vez hasta que descubras qué está mal.",
           "MC_HOC_2017_04_Cole_b": "Una vez que el Agente llegue a la placa de presión, le abrirá la puerta al jugador."
         },
@@ -9620,16 +9620,16 @@
           "courseC_artist_loops7a_a": "Un circulo tiene 360 grados. Multiplica los grados de tu giro las veces que el numero se repita. ¿Equivale a 360?\nComprueba las rotaciones sugeridas para ver si funciona!"
         },
         "courseC_artist_prog2_2021": {
-          "courseC_artist_prog2_a": "\"Si usas el bloque <xml><block type=\"draw_move_by_constant\"><title name=\"DIR\">moveForward</title><title name=\"VALUE\">100</title></block></xml>, dibujaré una línea\".",
+          "courseC_artist_prog2_a": "*\"Si utilizas el bloque <xml><block type=\"draw_move_by_constant\"><title name=\"DIR\">avanzar</title><title name=\"VALUE\">100</title></block></xml>, dibujaré una línea\"*",
           "courseC_artist_prog2_b": "¿Tienes problemas para girar en la esquina? Utiliza el bloque <xml><block type=\"draw_turn_by_constant_dropdown\"><title name=\"DIR\">turnRight</title><title name=\"VALUE\" config=\"45,60,90,120,180\">90</title></block></xml>."
         },
         "courseC_artist_prog3_2021": {
           "courseC_artist_prog3_a": "Para crear esta ventana, dibuja un cuadrado de 100 pixeles de lado.\n\n-   avanzar\n-   girar\n-   avanzar\n-   girar\n-   avanzar\n-   girar\n-   avanzar",
-          "courseC_artist_prog3_b": "¿Quieres hacer el programa más corto? Intenta usar un bucle (loop) en este rompecabezas."
+          "courseC_artist_prog3_b": "¿Quieres hacer el programa más corto? Intenta usar un bucle (loop) en este rompecabezas"
         },
         "courseC_artist_prog4_2021": {
           "courseC_artist_prog4_a": "Para terminar el cohete, ¡simplemente dibuja el triángulo en la parte superior!",
-          "courseC_artist_prog4_b": "¡Puedes utilizar el menú desplegable en los bloques de 'girar' para ver qué ángulo necesitas!",
+          "courseC_artist_prog4_b": "¡Puedes utilizar el menú desplegable en los bloques 'girar' para ver qué ángulo necesitas!",
           "courseC_artist_prog4_c": "Para dibujar un triángulo, deberás:\n\n-   avanzar \n-   girar 120 grados a la izquierda \n-   avanzar \n-   girar 120 grados a la izquierda \n-   avanzar"
         },
         "courseC_artist_prog5_2021": {
@@ -10212,8 +10212,8 @@
           "courseD_farmer_condLoops_challenge2_a": "La cantidad de cada vegetal en cada espacio puede cambiar. ¡Un bucle (loop) `mientras` puede ayudar!"
         },
         "courseD_farmer_while1_2021": {
-          "courseD_farmer_while1_a": "Tendrás que avanzar cuatro veces para llegar a la pila. ¿Puedes usar un bucle (loop) de 'repetir' para esto?",
-          "courseD_farmer_while1_b": "Usa el bloque `quita 1` cuando estés parado en la pila de tierra para quitarlo."
+          "courseD_farmer_while1_a": "Tendrás que avanzar cuatro veces para llegar a la pila. ¿Puedes usar un bucle '(loop) de 'repetir' para esto?",
+          "courseD_farmer_while1_b": "Usa el bloque `quitar 1` cuando estés parado en la pila de tierra para quitarlo."
         },
         "courseD_farmer_while2_2021": {
           "courseD_farmer_while2_a": "Solo necesitarás moverte una vez para llegar al hoyo.",
@@ -10424,16 +10424,16 @@
           "courseD_artist_functions8_a": "Comienza haciendo una función para un cuadrado, luego intenta hacer una función para una línea de cuadrados. ¿Cómo usarías la función `dibujar línea de cuadrados` para hacer esta imagen?",
           "courseD_artist_functions8_d": "Para hacer una línea de cuadrados,\n\n-   repite 3 veces \n    -   dibuja un cuadrado con lados de **50 pixeles** \n    -   salta **100 pixeles** hacia adelante",
           "courseD_artist_functions8_b": "Piensa en cada fila de esta imagen como una línea de 3 cuadrados. ¿Cuántas líneas de cuadrados hay y dónde comienzas a dibujar cada uno de ellas? \n\n![](<https://images.code.org/22a6f5cc5551371057244eee01955f8e-image-1493135135468.4.10 Hint Drawing.png>)",
-          "courseD_artist_functions8_c": "Al final de cada línea de cuadrados escalonados , el artista tendrá que saltar hacia abajo y hacia atrás antes de dibujar el siguiente conjunto de cuadrados escalonados.",
+          "courseD_artist_functions8_c": "Al final de cada línea de cuadrados, el artista tendrá que saltar hacia abajo y hacia atrás antes de dibujar el siguiente conjunto de cuadrados escalonados.",
           "courseD_artist_functions8_g": "![](https://images.code.org/c5b48a0db328c6cb32a024d2bf9c00af-image-1493139855549.gif)"
         },
         "courseE_artist_functions8b_2021": {
           "courseD_artist_functions8_f": "¡Si lo has hecho bien, solo tendrás que usar un bloque \"avanzar\"!",
-          "courseD_artist_functions8_a": "Empieza creando una función por un cuadrado, después intenta hacer una función por una línea de cuadrados.",
+          "courseD_artist_functions8_a": "Empieza creando una función por cuadrado, después intenta hacer una función por una línea de cuadrados.",
           "courseD_artist_functions8_d": "Para hacer una línea de cuadrados,\n\n-   repite 3 veces\n-   dibuja un cuadrado\n-   salta **100 pixeles** hacia adelante"
         },
         "courseE_artist_functions8c_2021": {
-          "courseD_artist_functions8_f": "Esto es mas fácil de lo que parece! No deberías necesitar ningún bloque de \"mover\" o \"saltar\"!",
+          "courseD_artist_functions8_f": "Esto es mas fácil de lo que parece,   No deberías necesitar ningún bloque de \"mover\" o \"saltar\"!",
           "courseD_artist_functions8_a": "¡La segunda línea de cuadrados es diferente de la primera por solo un giro de 180 grados!",
           "courseD_artist_functions8_c": "Al final de cada línea de cuadrados, el artista solo debe girar 180 grados antes de dibujar la siguiente línea. ¡Pon todo esto en un bucle  (loop) de 'repetir' para iniciar el siguiente ejercicio!"
         },

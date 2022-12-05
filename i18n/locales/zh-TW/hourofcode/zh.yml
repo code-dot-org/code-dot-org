@@ -8054,10 +8054,12 @@ zh:
   tutorial_codespellsnexus_longdescription: Under the mentorship of a mysterious sock
     puppet, you must infiltrate and reprogram a super-intelligent 'Learn to Code'
     app that seeks global domination. Solve puzzles. Learn to code. Hack the Nexus.
-  tutorial_carnegieslime_longdescription: Super Slime Battle is a game that was co-designed
-    between researchers at Carnegie Mellon University and students from the Boys and
-    Girls Clubs of Western PA where students and their (co)robot partners must defend
-    their candy stash from oncoming baddies.
+  tutorial_carnegieslime_longdescription: Every year the Minions of Scarecorp try
+    to steal your candy crops. Booville High's Baddest Slimeball crew have come together
+    to protect the candy crops with slime weapons. Players play as teen monsters who
+    program their collaborative robot (aka 'cobot') pets to help take down the Minions
+    of Scarecorp who are after their town's candy harvest. Choose between four characters
+    and their cobotic pets.
   tutorial_ozotown_longdescription: The Ozobot Blockly OzoTown will teach advanced
     sequencing as students utilize logic, reasoning, and computer science skills to
     navigate real life scenarios. No bot needed!
@@ -9520,7 +9522,7 @@ zh:
   tutorial_kcjhealth_name: The Health & Well-Being Challenge
   tutorial_kcjhealth_string_detail_grades: 年級 6+
   tutorial_kcjhealth_string_detail_platforms: ''
-  tutorial_kcjhealth_string_detail_programming_languages: blocks
+  tutorial_kcjhealth_string_detail_programming_languages: 積木式
   tutorial_kcjhealth_string_platforms: 所有的主流瀏覽器
   tutorial_msftwakanda_longdescription: 'Shuri, Okoye, and Riri must band together
     to help Wakanda. Code your own action-packed activity inspired by Marvel Studios''
@@ -9528,7 +9530,7 @@ zh:
   tutorial_msftwakanda_name: Long Live Wakanda
   tutorial_msftwakanda_string_detail_grades: 年級 6+
   tutorial_msftwakanda_string_detail_platforms: ''
-  tutorial_msftwakanda_string_detail_programming_languages: blocks
+  tutorial_msftwakanda_string_detail_programming_languages: 積木式
   tutorial_msftwakanda_string_platforms: 所有的主流瀏覽器
   school_not_found_heading: 我們找不到你的學校。請輸入更多資訊。
   school_name: 學校名稱

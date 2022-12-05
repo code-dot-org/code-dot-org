@@ -80,7 +80,7 @@ fr:
         title: Capteurs de Soleil Fonctionnels
         desc: Les élèves créent un algorithme avec des variables et des fonctions (portions de code que l’on utilise encore et encore) pour créer des capteurs de soleil à l’aide de ficelles et de perles.
       SongwritingParameters:
-        title: Écriture de chansons
+        title: Écrire des chansons
         desc: Les élèves utilisent le concept de refrain dans une chanson pour apprendre ce que sont la définition et l’appel de fonctions.
       DiceRace:
         title: 'Algorithmes du Monde Réel : La Course de Dés'
@@ -205,7 +205,7 @@ fr:
         title: Production Participative
         desc: Les élèves utilisent la production participative, une technique de résolution de problèmes répandue en informatique, et toute la classe accomplit ainsi une tâche plus efficacement que si un élève l'avait tentée seul.
       courseE_unplugged_songwriting:
-        title: Écriture de chansons
+        title: Écrire des chansons
         desc: Les élèves utilisent le concept de refrain dans une chanson pour apprendre ce que sont la définition et l’appel de fonctions.
       courseF_unplugged_tangrams:
         title: Algorithmes de Tangram
@@ -247,7 +247,7 @@ fr:
         title: Activité Déconnectée
         desc: Aujourd'hui, tu apprendras ce qu’il faut faire si quelqu'un devient méchant en ligne.
       Conditionals_2018:
-        title: Instructions conditionnelles
+        title: Formules conditionnelles
         desc: Pour mieux comprendre les déclarations conditionnelles, les élèves jouent à un jeu de cartes et créent des règles comme « Si je tire une carte rouge, je gagne un point », et « Si je tire une carte noire, tu gagnes un point ».
       DigitalFootprint_2018:
         title: Ton Empreinte Numérique
@@ -285,7 +285,7 @@ fr:
         title: 'traduction manquante : en-US.data.unplugged.courseB_unplugged_loopyMRF_2018.title'
         desc: 'traduction manquante : en-US.data.unplugged.courseB_unplugged_loopyMRF_2018.desc'
       Conditionals_2019:
-        title: Instructions conditionnelles
+        title: Formules conditionnelles
         desc: Pour mieux comprendre les déclarations conditionnelles, les élèves jouent à un jeu de cartes et créent des règles comme « Si je tire une carte rouge, je gagne un point », et « Si je tire une carte noire, tu gagnes un point ».
       courseF_unplugged_powerOfWords_2019:
         title: 'traduction manquante : en-US.data.unplugged.courseF_unplugged_powerOfWords_2018.title'
@@ -309,7 +309,7 @@ fr:
         title: Images Binaires
         desc: Bien que beaucoup de gens considèrent le binaire comme étant strictement des zéros et des uns, nos précédents cours ont enseigné aux élèves que les informations peuvent être représentées dans une variété d'options binaires. Cette leçon emmène ce concept un peu plus loin en illustrant comment un ordinateur peut stocker des informations encore plus complexes (telles que les images et les couleurs) également en binaire.
       courseE_unplugged_privateInformation_2019:
-        title: 'traduction manquante : en-US.data.unplugged.courseE_unplugged_privateInformation_2018.title'
+        title: Informations Privées et Personnelles 
         desc: Développée par Common Sense Education, cette leçon traite de la différence entre les informations qui peuvent être partagées, en toute sécurité, en ligne, et les informations qui ne le peuvent pas.
       SongwritingParameters_2019:
         title: 'traduction manquante : en-US.data.unplugged.SongwritingParameters_2018.title'
@@ -374,5 +374,5 @@ fr:
         title: Production Participative
         desc: '_Note de Josh : contrairement à la première leçon, j’ai formaté celle-ci, simplement, comme une leçon débranchée typique.'
       timeforcs_demo_conditionals:
-        title: Instructions conditionnelles
+        title: Formules conditionnelles
         desc: Pour mieux comprendre les déclarations conditionnelles, les élèves jouent à un jeu de cartes et créent des règles comme « Si je tire une carte rouge, je gagne un point », et « Si je tire une carte noire, tu gagnes un point ».

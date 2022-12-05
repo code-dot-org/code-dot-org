@@ -1,7 +1,7 @@
-{{ featured_tutorial, title: "Hello World: Soccer", body: "You're the team captain as you code interactive scenes on the soccer pitch. GOOOAAALLL!", image: "/images/hoc2022-hello-world-soccer.png", url: "https://studio.code.org/s/hello-world-soccer-2022/reset" }}
+{{ featured_tutorial, title: "Xin chào cả thế giới: Bóng đá", body: "Bạn là đội trưởng khi bạn lập trình các cảnh tương tác trên sân bóng. VÀOOOOOOOO!", image: "/images/hoc2022-hello-world-soccer.png", url: "https://studio.code.org/s/hello-world-soccer-2022/reset" }}
 
-{{ featured_tutorial, title: "Sports", body: "Make a basketball game or mix and match across sports.", image: "/shared/images/courses/logo_tall_sports.jpg", url: "https://code.org/athletes" }}
+{{ featured_tutorial, title: "Thể thao", body: "Làm game bóng rổ hoặc kết hợp các môn thể thao.", image: "/shared/images/courses/logo_tall_sports.jpg", url: "https://code.org/athletes" }}
 
-{{ featured_tutorial, title: "Flappy Code", body: "Wanna write your own game in less than 10 minutes? Try our Flappy Code tutorial!", image: "/shared/images/courses/logo_tall_flappy.jpg", url: "https://studio.code.org/s/flappy/reset" }}
+{{ featured_tutorial, title: "Lập trình game dạng Flappy Bird", body: "Bạn có muốn tự lập trình game trong vòng chưa tới 10 phút không? Hãy thử bài hướng dẫn Lập trình game dạng Flappy Bird của chúng tôi!", image: "/shared/images/courses/logo_tall_flappy.jpg", url: "https://studio.code.org/s/flappy/reset" }}
 
-{{ featured_tutorial, title: "Minecraft Hour of Code", body: "Minecraft is back for the Hour of Code with a brand new activity! Journey through Minecraft with code.", image: "/images/hoc2022-mc-escape.png", url: "https://aka.ms/HourofCode2022" }}
+{{ featured_tutorial, title: "Minecraft Giờ lập trình", body: "Minecraft đã trở lại trong Giờ lập trình với một hoạt động hoàn toàn mới! Chuyến du hành trong Minecraft với mã lệnh.", image: "/images/hoc2022-mc-escape.png", url: "https://aka.ms/HourofCode2022" }}

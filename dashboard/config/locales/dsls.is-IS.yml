@@ -4985,10 +4985,14 @@ is-IS:
       courseE_swim_fish_behavior_predict1_2021:
         answers:
         - text: Ekkert mun gerast.
-        - {}
-        - correct: true
+          feedback: Ekki rétt. Fokurtin mun byrja að velta
+        - text: Fokurtin mun færast efst á skjáinn
+          feedback: Ekki rétt. Fokurtin mun byrja að velta
+        - text: Fokurtin mun byrja að velta
+          correct: true
           feedback: Rétt!
-        - {}
+        - text: Fokurtin mun blikka á og af
+          feedback: Ekki rétt. Fokurtin mun byrja að velta
         questions:
         - text: Skoðaðu kóðann fyrir neðan vandlega. Hvað mun gerast þegar þú smellir
             á "Keyra"?

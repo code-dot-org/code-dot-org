@@ -810,11 +810,20 @@ nn:
     unike elevar eksakt når vi måler deltakinga på Kodetimen, særskilt kjem dette
     av at vi ikkje krev innlogging eller registrering. Dette fører til at vi både
     tel for mange og for få heile tida. Les fleire detaljar om dette <a href='%{codeorg_url}/loc'>her</a>.
-  hoc_faq_count_hoc_a_markdown: The Hour of Code tracker isn't an exact measurement
-    of usage. We do not count unique student IDs perfectly when tracking participation
-    in the Hour of Code, especially because we don't require students to log in or
-    register. As a result, we both over-count and under-count participants at the
-    same time. Read all the details [here](%{codeorg_url}/loc).
+  hoc_faq_count_hoc_a_markdown: 'We do not count unique student IDs perfectly when
+    tracking participation in the Hour of Code. Why? Partly because we don''t want
+    the friction of prompting to “login / register” before a student or classroom
+    tries learning for the first time, and partly because there are may activities
+    we cannot track online. We do take certain steps to reduce double-counting, but
+    without a login prompt, this can''t work perfectly. At the same time, there are
+    MANY student activities in the Hour of Code that aren''t tracked at all. For example:
+    (1) students who use a mobile/tablet app to try the Hour of Code are typically
+    not counted (2) students who share a screen for pair-programming or group-programming
+    may be counted as one (3) students trying an unplugged classroom activity cannot
+    be counted online (4) teachers who create their own Hour of Code activities. As
+    a result, there is some under-counting and some double-counting, and so we do
+    not view the Hour of Code tracker to be an exact measure of usage. It is certainly
+    directionally correct, and shows that many tens of millions of students have participated.'
   hoc_faq_one_hour_q: Hvor mye kan ein lære i ein time?
   hoc_faq_one_hour_a: Målet til Kodetimen er ikkje at nokon skal bli ekspert i informatikk
     eller koding på ein time. Ein time er berre nok til å lære at informatikk er moro
@@ -9821,10 +9830,12 @@ nn:
   tutorial_codespellsnexus_longdescription: Under the mentorship of a mysterious sock
     puppet, you must infiltrate and reprogram a super-intelligent 'Learn to Code'
     app that seeks global domination. Solve puzzles. Learn to code. Hack the Nexus.
-  tutorial_carnegieslime_longdescription: Super Slime Battle is a game that was co-designed
-    between researchers at Carnegie Mellon University and students from the Boys and
-    Girls Clubs of Western PA where students and their (co)robot partners must defend
-    their candy stash from oncoming baddies.
+  tutorial_carnegieslime_longdescription: Every year the Minions of Scarecorp try
+    to steal your candy crops. Booville High's Baddest Slimeball crew have come together
+    to protect the candy crops with slime weapons. Players play as teen monsters who
+    program their collaborative robot (aka 'cobot') pets to help take down the Minions
+    of Scarecorp who are after their town's candy harvest. Choose between four characters
+    and their cobotic pets.
   tutorial_ozotown_longdescription: The Ozobot Blockly OzoTown will teach advanced
     sequencing as students utilize logic, reasoning, and computer science skills to
     navigate real life scenarios. No bot needed!
@@ -11305,7 +11316,7 @@ nn:
   tutorial_kcjhealth_name: The Health & Well-Being Challenge
   tutorial_kcjhealth_string_detail_grades: Frå 6. klasse
   tutorial_kcjhealth_string_detail_platforms: ''
-  tutorial_kcjhealth_string_detail_programming_languages: blocks
+  tutorial_kcjhealth_string_detail_programming_languages: Blokker
   tutorial_kcjhealth_string_platforms: Alle moderne nettlesere
   tutorial_msftwakanda_longdescription: 'Shuri, Okoye, and Riri must band together
     to help Wakanda. Code your own action-packed activity inspired by Marvel Studios''
@@ -11313,7 +11324,7 @@ nn:
   tutorial_msftwakanda_name: Long Live Wakanda
   tutorial_msftwakanda_string_detail_grades: Frå 6. klasse
   tutorial_msftwakanda_string_detail_platforms: ''
-  tutorial_msftwakanda_string_detail_programming_languages: blocks
+  tutorial_msftwakanda_string_detail_programming_languages: Blokker
   tutorial_msftwakanda_string_platforms: Alle moderne nettlesere
   school_not_found_heading: Vi kunne ikkje finne skulen din. Skriv inn meir informasjon.
   school_name: Skulenamn
