@@ -39,8 +39,8 @@ export default class JavalabDropdown extends Component {
           .map((child, index) => (
             <button
               type="button"
-              className={style.anchor}
               {...child.props}
+              className={classNames(style.anchor, child.props.className)}
               key={index}
               style={child.props.style}
             />

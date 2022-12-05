@@ -122,20 +122,12 @@ export class SettingsCog extends Component {
           />
         </button>
         {this.state.open && (
-          <JavalabDropdown>
-            <button type="button" onClick={this.manageAssets}>
-              {msg.manageAssets()}
-            </button>
-            {this.areLibrariesEnabled() && (
-              <button type="button" onClick={this.manageLibraries}>
-                {msg.manageLibraries()}
-              </button>
-            )}
-            {this.areAIToolsEnabled() && (
-              <button type="button" onClick={this.manageModels}>
-                {msg.manageAIModels()}
-              </button>
-            )}
+          <JavalabDropdown className="ui-test-settings-cog-menu">
+            {renderMenuItem(this.manageAssets, msg.manageAssets())}
+            {this.areLibrariesEnabled() &&
+              renderMenuItem(this.manageLibraries, msg.manageLibraries())}
+            {this.areAIToolsEnabled() &&
+              renderMenuItem(this.manageModels, msg.manageAIModels())}
             {this.props.showMakerToggle &&
               renderMakerButton(this.toggleMakerToolkit)}
           </JavalabDropdown>
@@ -170,11 +162,21 @@ export function renderMakerButton(onClick) {
     return null;
   }
 
+  const buttonText = makerToolkitRedux.isEnabled(reduxState)
+    ? msg.disableMaker()
+    : msg.enableMaker();
+
+  return renderMenuItem(onClick, buttonText);
+}
+
+export function renderMenuItem(onClick, text) {
   return (
-    <button type="button" onClick={onClick}>
-      {makerToolkitRedux.isEnabled(reduxState)
-        ? msg.disableMaker()
-        : msg.enableMaker()}
+    <button
+      type="button"
+      onClick={onClick}
+      className="ui-test-settings-cog-menu-item"
+    >
+      {text}
     </button>
   );
 }
