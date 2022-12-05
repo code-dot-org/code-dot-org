@@ -2505,3 +2505,7 @@ nl:
               display_name: Parameters en Returnwaardes
             csp_libraries:
               display_name: Bibliotheken
+        devices-2022:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: 'Hoofdstuk 2: Hardware Input'

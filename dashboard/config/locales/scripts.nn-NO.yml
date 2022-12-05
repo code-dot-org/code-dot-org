@@ -2700,3 +2700,7 @@ nn:
           lesson_groups:
             lessonGroup-2:
               display_name: Undersøking etter kurs
+        devices-2022:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: 'Kapittel 2: Bygge fysiske prototypar'

@@ -1936,7 +1936,22 @@
         "courseF_groups_say_-2022-2": "Meg tudod oldani, hogy a különböző sprite-ok mondjanak valamit, amikor rájuk kattintasz?",
         "courseF_groups_size_-2022-2": "Írj programot, ami megváltoztatja annak a sprite-nak a méretét, amire rákattintasz. ",
         "coursea_maze_ramp12022": "Ebben a feladatban csak kapcsold össze a blokkokat és nyomd meg a \"▶Futtatás\" gombot!",
-        "coursea_maze_ramp1_2021": "Ebben a feladatban csak kapcsold össze a blokkokat és nyomd meg a \"▶Futtatás\" gombot!"
+        "coursea_maze_ramp1_2021": "Ebben a feladatban csak kapcsold össze a blokkokat és nyomd meg a \"▶Futtatás\" gombot!",
+        "courseA_harvester_seq10_2021": "Ügyelj arra, hogy az összes kukoricát felszedd!",
+        "courseA_harvester_seq11_2021": "Próbáld meg önállóan! Szedd fel az összes kukoricát!",
+        "courseA_harvester_seq12_2021": "Szedd fel az összes kukoricát!",
+        "courseA_harvester_seq13_2021": "Játssz egy kicsit ezekkel a blokkokkal, hogy segíts az aratónak betakarítani a kukoricát!",
+        "courseA_harvester_seq1_2021": "Játssz ezekkel a blokkokkal, hogy segíts az aratónak betakarítani a kukoricát!",
+        "courseA_harvester_seq2_2021": "Használj három `menj nyugatra` blokkot és egy `felszed kukorica` blokkot a feladvány megoldásához.",
+        "courseA_harvester_seq3_2021": "Használj három `menj északra` blokkot és egy `felszed kukorica` blokkot!",
+        "courseA_harvester_seq4_2021": "Adj hozzá egy blokkot, hogy az arató megszerezze a kukoricát!",
+        "courseA_harvester_seq5_2021": "Keresd meg a hibát és javítsd ki!",
+        "courseA_harvester_seq6_2021": "Próbáld ki magad!",
+        "courseA_harvester_seq7_2021": "Próbáld ki magad!",
+        "courseA_harvester_seq9_2021": "Adj két blokkot az eddigiekhez a feladvány befejezéséhez!",
+        "courseA_maze_seq10_2021": "Kihívás: Óvakodj a TNT-s ládáktól, miközben a madarat elviszed a malacig! ",
+        "courseA_maze_seq5_2021": "Ezt is próbáld meg!",
+        "courseA_maze_seq5a_2021": "Mit kellene hozzátenned ehhez a kódsorhoz, hogy a végén a madár elérjen a malacig?"
       }
     }
   }
