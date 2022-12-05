@@ -5537,7 +5537,7 @@
           "courseD_bee_conditionals4_hintVid1": "わからないときは、ビデオを見てみよう！",
           "courseD_bee_conditionals4_a": "道は見えているけど、くものときと同じように花があるか調べよう。",
           "courseD_bee_conditionals4_b": "くり返しの中で`もし`を使って、ミツがあるかどうか調べよう。 ",
-          "courseD_bee_conditionals4_c": "[blockly block][0] blockを使って、前に進むの と 花があるか 調べるのを くりかえそう。花があれば、ハチは何をすればいいかな？",
+          "courseD_bee_conditionals4_c": "<xml><block type=\"maze_untilBlocked\"/></xml> blockを使って、前に進むの と 花があるか 調べるのを くりかえそう。花があれば、ハチは何をすればいいかな？",
           "courseD_bee_conditionals4_hintVid2": "ビデオを見てパズルをクリアしよう。"
         },
         "courseD_bee_conditionals4_2018": {
@@ -6999,8 +6999,8 @@
         },
         "courseE_artist_functions2": {
           "courseD_artist_functions2_b": "関数の中に書くのは、一辺が100ピクセルの正方形をかくところだけで、他の部分を書いてはいけません。",
-          "courseD_artist_functions2_c": "`実行（じっこう）したとき` のしたで 緑色の関数`正方形を かく` を \"呼び出して\"ください。呼び出さないと、関数の中の命令は実行されません。\n\n[blockly block][0]",
-          "courseD_artist_functions2_a": "プログラムの条件:\n- 関数を呼ぶ\n- 前に動くブロック 100 + 75 ピクセル\n- 関数を呼ぶ"
+          "courseD_artist_functions2_c": "`実行（じっこう）したとき` のしたで 緑色の関数`正方形を かく` を \"呼び出して\"ください。呼び出さないと、関数の中の命令は実行されません。\n\n<xml><block type=\"procedures_callnoreturn\" limit=\"2\"><mutation name=\"draw a square\"/></block></xml>",
+          "courseD_artist_functions2_a": "プログラムの条件:\n\n-   関数を呼ぶ\n-   前に動くブロック 100 + 75 ピクセル\n-   関数を呼ぶ"
         },
         "courseE_artist_functions2_2018": {
           "courseD_artist_functions2_b": "関数の中に書くのは、一辺が100ピクセルの正方形をかくところだけで、他の部分を書いてはいけません。",

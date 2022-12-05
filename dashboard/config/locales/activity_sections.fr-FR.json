@@ -1814,7 +1814,7 @@
           "tips": [
             "Si c'est la première fois que vos élèves utilisent Code.org, prévoyez du temps pour les aider à comprendre comment naviguer vers le site Web et se connecter à leur compte. "
           ],
-          "progression_name": " Exemples d'Aplications"
+          "progression_name": "Exploration : Exemples d'Applis"
         },
         "1a098222-2063-4b01-8d00-34170d233880": {
           "name": "Partager"
@@ -1870,7 +1870,7 @@
           "description": "**Faites ceci :** Révisez ou introduisez le mot **algorithme** : une liste d'étapes pour accomplir une tâche. "
         },
         "d954cdfd-7126-43ca-a817-12ef8812a38a": {
-          "name": "Suivez l'algorithme "
+          "name": "Suis l'Algorithme "
         },
         "cf819fb5-aff2-47a4-9c0f-8ab6af6f218f": {
           "description": "Aujourd'hui, nous allons commencer par un jeu rapide. Dans ce jeu, je vais vous donner toutes les commandes à suivre et votre travail consiste à suivre l'**algorithme**. Les commandes commenceront toujours par « begin » ou « stop ». Si je vous dis de commencer à faire quelque chose, vous devez commencer ce comportement et le maintenir jusqu'à ce que je vous dise d'arrêter. Je pourrais aussi vous dire de « tout arrêter », ce qui signifie que vous pouvez mettre fin à tous les comportements que je vous ai donnés jusqu'à présent. Nous jouerons 3 tours et après chaque tour, je vous poserai quelques questions. ",
@@ -1941,7 +1941,7 @@
           "description": "**Faites ceci :** Facilitez la distribution et le remassage des enveloppes portant la mention « objet », « liquide » et « numéro ». Une fois récupérées, gardez les enveloppes fermées et commencez à lire l'histoire. Une fois que vous atteignez chaque blanc, ouvrez l'enveloppe et lisez la valeur stockée. "
         },
         "580f30a2-5998-427d-9399-f52a5426e91d": {
-          "name": "Jeux festifs"
+          "name": "Jeux de fête"
         },
         "c173338f-588c-408f-a20a-9fff31d41a14": {
           "description": "Dans l'activité d'aujourd'hui, vous travaillerez avec un groupe pour créer votre propre histoire d'espace vide. "
@@ -2287,7 +2287,7 @@
           "name": "Vocabulaire-clé"
         },
         "3c23fa37-7254-47f3-b576-da07d0b605dd": {
-          "progression_name": "Soyez un Super Citoyen Numérique"
+          "progression_name": "Sois un Super Citoyen Numérique"
         },
         "8a089041-e523-46ab-99f6-80c9f1f22523": {
           "name": "Vocabulaire-clé"
@@ -2304,7 +2304,7 @@
           ]
         },
         "8ad1b5bf-8e05-4fad-89fc-ef821c11b02f": {
-          "name": "Des Poissons qui Nagent, avec le Labo des Lutins"
+          "name": "Poissons Nageant dans le Labo des Sprites"
         },
         "9e16dba8-c792-499c-aa27-cbea95bf15cd": {
           "description": "**Transition :** Déplacez les élèves vers leurs ordinateurs. Encouragez les élèves à suivre les instructions pour chaque casse-tête. Aidez-les à comprendre qu'il s'agit d'une activité créative, destinée à les aider à apprendre Sprite Lab. Il ne s'agit en aucun cas d'une activité d'évaluation. ",
@@ -2372,8 +2372,11 @@
             null
           ]
         },
+        "c8351508-1d35-45ce-9f1e-1905c90c7df1": {
+          "progression_name": "Exploration : l'affiche de Rikki"
+        },
         "e56da37d-683e-4dc5-89f1-da5e039357d9": {
-          "progression_name": "À propos de Moi avec le Labo des Lutins"
+          "progression_name": "Mini-Projet : À propos de Moi"
         },
         "163b611c-e2ba-4242-8842-33cb5c319a9b": {
           "name": "Partager"
@@ -2385,8 +2388,8 @@
           "name": "Introduction"
         },
         "11131345-98a9-4474-8782-c0d97fe84206": {
-          "name": "Dessiner avec des Boucles",
-          "progression_name": "Vidéo : Intro l'Artiste avec JR Hildebrande"
+          "name": "Dessiner avec les Boucles",
+          "progression_name": "Vidéo : Intro à l'Artiste avec JR Hildebrande"
         },
         "d8046ff6-568f-4a94-a37c-3f32f63b19fe": {
           "progression_name": "Développement des Compétences"
@@ -2418,7 +2421,7 @@
           "progression_name": "Développement des Compétences"
         },
         "9c33a50c-2471-4797-b3c7-024447bf16ff": {
-          "progression_name": "Vidéo : Boucles imbriquées"
+          "progression_name": "Vidéo : Les boucles imbriquées"
         },
         "7571aba3-7786-43cb-91e3-4d1a3218c6cc": {
           "progression_name": "Développement des Compétences"
@@ -2439,7 +2442,11 @@
           "name": "Introduction"
         },
         "7823fbff-f32d-4f4f-808e-1bc340e10cf2": {
-          "name": "Les Boucles Imbriquées avec Frozen"
+          "name": "Les Boucles Imbriquées avec Frozen",
+          "progression_name": "Mini-projet : Flocon de neige #1"
+        },
+        "2bbcbfb8-df97-457d-9891-719b479cd6b0": {
+          "progression_name": "Mini-projet : Flocon de neige #2"
         },
         "f826bb4e-317d-4660-9b78-cd1ddb2adc50": {
           "name": "Réflexion"
@@ -2458,7 +2465,8 @@
           ]
         },
         "d3f1d3da-8013-4459-a62c-4a67b4457c61": {
-          "name": "Écriture de chansons"
+          "name": "Écrire des chansons",
+          "progression_name": "Écrire des chansons - Activité déconnectée « Fonctions »"
         },
         "850fd05d-eae1-4111-a12a-31ab15e4d5be": {
           "tips": [
@@ -2487,7 +2495,7 @@
           "tips": [
             null
           ],
-          "progression_name": "Vidéo : Minecraft - L'agent"
+          "progression_name": "Vidéo : Minecraft - L'Agent"
         },
         "db999346-e73e-4580-8c5f-d76e30ab2b7d": {
           "progression_name": "Développement des Compétences"
@@ -2536,7 +2544,7 @@
           "name": "Introduction"
         },
         "931a781a-12c2-4079-842c-71002b1bb8a2": {
-          "name": "Les Conditions dans Minecraft : Voyage Aquatique",
+          "name": "Les Formules Conditionnelles dans Minecraft : Voyage Aquatique",
           "progression_name": "Vidéo : Minecraft : Voyage Aquatique - Introduction"
         },
         "09b06756-c981-4af6-a6ea-5697f8fa78e2": {
@@ -2570,7 +2578,7 @@
           "name": "Introduction"
         },
         "a24e03d0-5524-46ec-ab96-a0b1d9b24d8b": {
-          "name": "Les Conditions avec la Fermière",
+          "name": "Les Formules Conditionnelles avec la Fermière",
           "tips": [
             null
           ],
@@ -2592,7 +2600,7 @@
           "progression_name": "Développement des Compétences"
         },
         "2c2983a7-3e7f-4e05-bc7f-c5663ad6e446": {
-          "progression_name": "Video: « Si/Sinon »"
+          "progression_name": "Vidéo : « Si/Sinon »"
         },
         "2b231315-7f71-4e5f-a7b9-e32def714216": {
           "progression_name": "Défi"
@@ -2626,8 +2634,8 @@
           "name": "Réflexion"
         },
         "2cf54fda-a233-45c5-a347-5ea0150eb697": {
-          "name": "Concevoir pour l'Accessibilité",
-          "progression_name": "Concevoir pour l'Accessibilité"
+          "name": "Conception Accessible",
+          "progression_name": "Conception Accessible"
         },
         "e1fe5c10-383e-402b-a4c2-1efbbb6641c1": {
           "name": "Réflexion"
@@ -2639,7 +2647,7 @@
         },
         "90986348-020e-4b00-b92f-ba4160018feb": {
           "name": "Partage Numérique",
-          "progression_name": "Partage numérique - Activité hors ligne"
+          "progression_name": "Partage numérique - Activité déconnectée"
         },
         "3f9da29a-6132-4d1b-937a-5732b48eeb94": {
           "tips": [
@@ -3358,7 +3366,7 @@
           ]
         },
         "68fc4cb4-cf83-491b-a896-0465d95d09a7": {
-          "name": "Des Poissons qui Nagent, avec le Labo des Lutins",
+          "name": "Poissons Nageant dans le Labo des Sprites",
           "description": "**Objectif :** Aujourd'hui, les élèves programmeront leur propre aquarium. Ils commenceront par apprendre à mettre des sprites à l'écran, puis ils les feront bouger. Enfin, ils personnaliseront leur aquarium pour ajouter les créatures et les objets de leur choix. "
         },
         "0e4c9d5d-95f3-4156-ad18-fbd153d4a7df": {
@@ -3391,7 +3399,7 @@
         },
         "3c242de5-2944-4439-a772-10f0e2bfd48a": {
           "name": "Explorer les Applications",
-          "progression_name": " Exemples d'Aplications"
+          "progression_name": "Exploration : Exemples d'Applis"
         },
         "25d0dd9f-5a89-4a91-a3de-aba0e507aac8": {
           "progression_name": "Développement des Compétences"
@@ -3410,7 +3418,7 @@
           "description": "#### Journalisation\n\nDemander aux élèves de résumer ce qu'ils ont appris, pourquoi c'est utile et ce qu'ils en pensent, peut aider à consolider les connaissances qu'ils ont acquises aujourd'hui et à créer une feuille de révision qu'ils pourront consulter plus tard.\n\n**Invites:**\nQuels conseils donneriez-vous à un ami qui souhaite créer ses propres programmes dans Sprite Lab ? "
         },
         "c4709ef3-6dff-44f9-ab00-7c8d4ceb84de": {
-          "name": "Suivez l'algorithme ",
+          "name": "Suis l'Algorithme ",
           "tips": [
             "Veillez laisser un peu d'espace entre les commandes. Pour chacune de ces sections, envisagez de parcourir toute la séquence sans aucune discussion et de la répéter plus tard une fois que tout le monde a eu l'occasion de débriefer et de gérer toute confusion."
           ]
@@ -3720,7 +3728,7 @@
           "name": "Introduction"
         },
         "eb47f00e-2104-4a6e-b415-3457a740405f": {
-          "name": "Les Boucles Tant Que dans la Fermière",
+          "name": "Les Boucles Tant Que dans La Fermière",
           "description": "Les boucles « while » ne sont pas toujours difficiles à comprendre pour les élèves, mais si vous pensez que votre classe pourrait avoir du mal avec, nous vous recommandons la programmation en binômes. Cela leur permettra de confronter leurs idées avant d'implémenter le code. La programmation en binômes permet de mieux comprendre et maitriser les boucles « while »."
         },
         "599f0ab4-6410-4002-9b4a-540e75d4f815": {
@@ -3756,7 +3764,7 @@
           "description": "Regroupez toute la classe et demandez à deux volontaires de marcher tout droit dans une certaine direction dans la salle de classe. S'ils voient une chaise déplacée, ils doivent l'enjamber. S'ils atteignent un mur, ils doivent s'asseoir.\n\nUne fois que tous les élèves seront assis, demandez comment vous programmeriez un robot pour qu'il réponde à un mur ou à une chaise. Rappelez aux élèves que vous ne pouvez pas simplement dire « Enjambe la chaise » à moins que vous ne sachiez qu'il y a une chaise, et vous ne saurez pas toujours qu'il y a une chaise. Il peut être utile de traduire la tâche en instructions telles que :\n\n-   tant qu'il y a un chemin à parcourir\n    -   avancer\n    -   s'il y a une chaise, l'enjamber\n-   s'asseoir\n\nDites aux élèves qu'ils utiliseront des conditions pendant cette leçon. Donnez la définition de :\n\n-   **Condition** : une déclaration qu'un programme vérifie pour voir si elle est vraie ou fausse. Si vrai, une action est entreprise. Sinon, l'action est ignorée.\n-   **Conditions** : instructions qui ne s'exécutent que sous certaines conditions.\n\nOuvrez une discussion pour voir quand vous pourrez utiliser une condition dans votre code. "
         },
         "78faf9ff-f8c9-4623-8b19-ebb00866ef62": {
-          "name": "Les Conditions dans Minecraft : Voyage Aquatique",
+          "name": "Les Formules Conditionnelles dans Minecraft : Voyage Aquatique",
           "description": "Les élèves vont se régaler avec cette leçon. Il est probable que la plupart de vos élèves aient entendu parler de _Minecraft_, mais faites une brève introduction pour ceux qui connaitraient pas.\n\n_Minecraft_ est un jeu de cubes. Vous pouvez incarner Alex ou Steve pendant que vous travaillez dans des labyrinthes. Vous devrez éviter la lave, ramasser des objets et explorer un monde composé de cubes de choses.\n\nMontrez l'une des énigmes à la classe. Une fois que toutes les questions ont été traitées, faites passer les élèves aux ordinateurs et laissez-les commencer la programmation en binôme. ",
           "progression_name": "Vidéo : Minecraft : Voyage Aquatique - Introduction"
         },
@@ -4120,8 +4128,8 @@
           "progression_name": "Exemples de projets"
         },
         "77e1eae3-37ee-4b59-8014-30279b618562": {
-          "name": "Crées ton projet",
-          "progression_name": "Crées ton projet"
+          "name": "Crée ton projet",
+          "progression_name": "Crée ton projet"
         },
         "87e3ea72-c651-4ee5-a33d-17612269cbe3": {
           "name": "Exemple",
@@ -7104,7 +7112,7 @@
           ]
         },
         "f0528d6a-0b12-4ff1-aa3a-51f47643023b": {
-          "name": "Instructions conditionnelles",
+          "name": "Formules conditionnelles",
           "tips": [
             "**Guide de programmation des niveaux:** Des conseils supplémentaires pour la programmation des niveaux sont fournis dans le [Guide CSD de programmation des niveaux](https://docs.google.com/document/d/1WGywQ25khB6-FB20x6wO9dGVO9_qJlWkuLVLREJS4Jo/preview). Ce document comprend des stratégies et des bonnes pratiques pour faciliter la programmation des niveaux avec les élèves."
           ]
@@ -7494,7 +7502,7 @@
           "tips": [
             "**Niveau 7 : Fonctions en contexte**\n\nDans ces niveaux, les élèves utiliseront des fonctions pour organiser le code dans un jeu simple. Bien qu'il ne soit pas identique au jeu de défilement latéral, de nombreuses compétences et utilisations des fonctions dans ces niveaux peuvent et doivent être utilisées lorsqu'ils terminent leur jeu de défilement latéral."
           ],
-          "progression_name": "Jeu Collector"
+          "progression_name": "Jeu Collectionneur"
         },
         "27a6e960-e29f-4ace-b464-1062d314e4dc": {
           "progression_name": "Défis"
@@ -10384,7 +10392,7 @@
           "progression_name": "Fonctions"
         },
         "d34707f5-3e1c-4448-b0e4-254a116ac2b7": {
-          "progression_name": "Jeu Collector"
+          "progression_name": "Jeu Collectionneur"
         },
         "cf0e3aa7-6158-4763-928b-e8e1ea28c231": {
           "progression_name": "Révision des fonctions"
@@ -11596,8 +11604,8 @@
           "progression_name": "Jeu libre"
         },
         "11964f47-1926-4d07-b751-656b37e887c3": {
-          "name": "Mini-projet : animal de compagnie virtuel ",
-          "progression_name": "Mini-projet : animal de compagnie virtuel "
+          "name": "Mini-projet : Animal domestique virtuel ",
+          "progression_name": "Mini-projet : Animal domestique virtuel "
         },
         "ee1ed9bb-80d3-4f5c-abfb-431d175a74d5": {
           "progression_name": "Exemples de projets"
@@ -11740,6 +11748,13 @@
         },
         "1405ae48-2e0c-4a36-878f-668639ba0f51": {
           "progression_name": "Jeu libre"
+        },
+        "53be673c-1d10-49fe-8845-ef08b0f5a0e2": {
+          "progression_name": "Mini-projet : Flocon de neige #1"
+        },
+        "104e419d-06d1-465a-850a-f23d9b0d860d": {
+          "name": "Mini-projet : Flocon de neige #2",
+          "progression_name": "Mini-projet : Flocon de neige #2"
         },
         "5469d3f7-7017-41cd-b9b2-a8c56d0971b6": {
           "progression_name": "S'entraîner"
@@ -12196,7 +12211,7 @@
           "progression_name": "Fonctions"
         },
         "49c1d6b1-5bbb-41aa-a6a5-ab66992bbf72": {
-          "progression_name": "Jeu Collector"
+          "progression_name": "Jeu Collectionneur"
         },
         "707a377a-3f80-4021-b0f2-65384b8a95c0": {
           "progression_name": "Révision des fonctions"
@@ -13267,7 +13282,7 @@
           "progression_name": "Fonctions"
         },
         "f650608e-baa7-49b7-a4e9-2f0b12af0d4f": {
-          "progression_name": "Jeu Collector"
+          "progression_name": "Jeu Collectionneur"
         },
         "d831e37b-1630-4982-99bc-4ea5ce219204": {
           "progression_name": "Révision des fonctions"
@@ -14027,7 +14042,7 @@
           "tips": [
             "Si c'est la première fois que vos élèves utilisent Code.org, prévoyez du temps pour les aider à comprendre comment naviguer vers le site Web et se connecter à leur compte. "
           ],
-          "progression_name": " Exemples d'Aplications"
+          "progression_name": "Exploration : Exemples d'Applis"
         },
         "f321b39c-8051-4fc9-9e40-24f25216f88c": {
           "name": "Partager",
@@ -14097,7 +14112,7 @@
           "description": "**Faites ceci :** Révisez ou introduisez le mot **algorithme** : une liste d'étapes pour accomplir une tâche. "
         },
         "9c5a2a2f-7a92-4928-a7c4-89d29765cb01": {
-          "name": "Suivez l'algorithme ",
+          "name": "Suis l'Algorithme ",
           "description": "Aujourd'hui, nous allons commencer par un jeu rapide. Dans ce jeu, je vais vous donner toutes les commandes à suivre et votre travail consiste à suivre l'**algorithme**. Les commandes commenceront toujours par « begin » ou « stop ». Si je vous dis de commencer à faire quelque chose, vous devez commencer ce comportement et le maintenir jusqu'à ce que je vous dise d'arrêter. Je pourrais aussi vous dire de « tout arrêter », ce qui signifie que vous pouvez mettre fin à tous les comportements que je vous ai donnés jusqu'à présent. Nous jouerons 3 tours et après chaque tour, je vous poserai quelques questions. ",
           "tips": [
             "Veillez laisser un peu d'espace entre les commandes. Pour chacune de ces sections, envisagez de parcourir toute la séquence sans aucune discussion et de la répéter plus tard une fois que tout le monde a eu l'occasion de débriefer et de gérer toute confusion."
@@ -14199,7 +14214,7 @@
           "description": "**Faites ceci :** Facilitez la distribution et le remassage des enveloppes portant la mention « objet », « liquide » et « numéro ». Une fois récupérées, gardez les enveloppes fermées et commencez à lire l'histoire. Une fois que vous atteignez chaque blanc, ouvrez l'enveloppe et lisez la valeur stockée. "
         },
         "437d0e58-a47c-4ea2-8125-501e4c0b154f": {
-          "name": "Jeux festifs",
+          "name": "Jeux de fête",
           "description": "**Faites ceci :**\n\n-   Préparez les enveloppes marquées « adjectif », « objet », « partie du corps » et « numéro ».\n-   Recommencez le jeu ci-dessus avec la deuxième histoire. Cette fois, vous pouvez commencer par les étiquettes avant de montrer l'histoire pour créer plus de suspense. Les animations dans les diapositives de la leçon sont déjà configurées pour faciliter cela.\n\n#### (Facultatif) Extension de jeu de rôle\n\nUn lien peut être établi entre les volontaires et l'idée d'une application ayant un « utilisateur ». Dans cette analogie, votre rôle en tant qu'enseignant a été celui de l'ordinateur. Vous demanderez et stockerez les informations des \"utilisateurs\", puis vous déterminerez comment assembler l'histoire. Pour impliquer plus d'étudiants et les faire jouer ce modèle, attribuez des rôles :\n\n_Ordinateurs :_ Distribuez et récupérez les enveloppes. Ouvrez chaque enveloppe pendant la lecture de l'histoire pour vérifier les valeurs stockées.\n\n_Utilisateurs :_ Envoyez les bons mots pour finir l'histoire.\n\n_Reader:_ Lisez l'histoire terminée à haute voix.\n\n#### Débriefing\n\n**Discussion :** En quoi l'écriture d'une histoire sur un espace vide est-elle différente de celle d'une histoire normale ? "
         },
         "fefc9dd6-ed1d-411b-ae3e-75a95da347b9": {
@@ -14310,11 +14325,11 @@
           "description": "Les élèves peuvent avoir différents niveaux d'expérience à la fois avec l'outil Artist et le concept des boucles. En fonction de ce dont vous pensez que votre classe pourrait bénéficier, nous vous recommandons de trouver un ou deux casse-tête à prévisualiser avec la classe. Que cette leçon soit une introduction ou une révision, il est important de préparer vos élèves à la suite !"
         },
         "1744b867-c4fe-43e6-9707-050abe0791c5": {
-          "name": "Dessiner avec des Boucles",
+          "name": "Dessiner avec les Boucles",
           "description": "Certains élèves peuvent découvrir où ajouter des boucles de « répétition » en écrivant le programme sans boucles, puis en encerclant les sections de répétitions. Si les élèves de votre classe semblent pouvoir en bénéficier, demandez-leur de garder du papier et des crayons à côté d'eux à leurs machines. Ils aimeront peut être aussi dessiner certaines formes et figures sur papier avant de les programmer en ligne."
         },
         "0b7773fb-83ae-4dce-abc3-5cf15ae03aeb": {
-          "progression_name": "Vidéo : Intro l'Artiste avec JR Hildebrande"
+          "progression_name": "Vidéo : Intro à l'Artiste avec JR Hildebrande"
         },
         "ef504f91-6fca-4859-a960-7e792de6223e": {
           "progression_name": "Développement des Compétences"
@@ -17165,7 +17180,7 @@
           ]
         },
         "34fa0257-d60c-41dd-b16e-fde95d6ca02c": {
-          "name": "Des Poissons qui Nagent, avec le Labo des Lutins",
+          "name": "Poissons Nageant dans le Labo des Sprites",
           "description": "**Objectif :** Aujourd'hui, les élèves programmeront leur propre aquarium. Ils commenceront par apprendre à mettre des sprites à l'écran, puis ils les feront bouger. Enfin, ils personnaliseront leur aquarium pour ajouter les créatures et les objets de leur choix. "
         },
         "b64e8b68-fcfb-4aa3-9769-2c23d35a9b21": {
@@ -17237,7 +17252,7 @@
           "description": "#### Journalisation\n\nDemander aux élèves de résumer ce qu'ils ont appris, pourquoi c'est utile et ce qu'ils en pensent, peut aider à consolider les connaissances qu'ils ont acquises aujourd'hui et à créer une feuille de révision qu'ils pourront consulter plus tard.\n\n**Invites:**\nQuels conseils donneriez-vous à un ami qui souhaite créer ses propres programmes dans Sprite Lab ? "
         },
         "5eb0801e-a90b-47fe-9787-2f7fc7a79f5f": {
-          "name": "Suivez l'algorithme ",
+          "name": "Suis l'Algorithme ",
           "tips": [
             "Veillez laisser un peu d'espace entre les commandes. Pour chacune de ces sections, envisagez de parcourir toute la séquence sans aucune discussion et de la répéter plus tard une fois que tout le monde a eu l'occasion de débriefer et de gérer toute confusion."
           ]
@@ -17548,7 +17563,7 @@
           "description": "Utilisez « while » dans une phrase devant les élèves et demandez-leur ce que cela veut dire. Si vous deviez dire _\" tant qu'il y a un trou, remplissez-le de terre \"_ que feraient-ils ? Combien de temps le feraient-ils ?\n\nLorsque vous utilisez un mot comme « while », vous comptez sur une condition pour indiquer à l'ordinateur combien de temps la boucle doit s'exécuter. Une condition est une déclaration qui est testée et jugée vraie ou fausse. Dans le cas ci-dessus, la condition est s'il y a un trou. Il est seulement possible qu'il y ait un trou ou qu'il n'y ait pas de trou, donc l'énoncé n'est jamais vrai ou faux.\n\nDites aux élèves qu'ils vont découvrir un nouveau type de boucle. Avant, ils n'utilisaient des boucles que pour répéter une commande un certain nombre de fois. Ici, ils ne sauront pas toujours combien de fois répéter la commande, cependant, ils sauront quand s'arrêter ou quand continuer. Les boucles While permettent au programmeur de répéter une commande tant qu'une condition est vraie. Dans l'exemple précédent, la condition est l'existence d'un trou.\n\nS'il y a du temps, demandez-leur de discuter d'autres moments en utilisant une boucle while serait utile. Les exemples comprennent:\n\n-   Courir vers une balle alors qu'elle est devant vous.\n-   Remplir un verre pendant qu'il a de la place pour plus de liquide.\n-   Avancer tant qu'il y a un chemin devant vous.\n\n### Aperçu des puzzles en ligne\n\nPrenez-en un parmi ceux en ligne de Code Studio d'aujourd'hui. Nous recommandons le nº 6.\n\n-   Demandez à la classe ce que la fermière doit faire lorsqu'elle atteint le tas de terre.\n    -   Elle doit utiliser une boucle while pour commencer à enlever la saleté.\n-   Utilisez la tant qu'il y a un bloc pile/do. Demandez à la classe ce qu'elle doit faire dans la boucle while.\n    -   Elle doit en retirer 1. Elle continuera à \"enlever 1 saleté\" tant qu'il y en aura. En d'autres termes, lorsqu'il n'y a pas de saleté, remove 1 ne s'exécutera plus !\n\nRemplissez le reste du code et appuyez sur Exécuter. Discutez avec la classe des raisons pour lesquelles cela a fonctionné."
         },
         "b6676ce5-2f4a-4761-a053-792853904bd5": {
-          "name": "Les Boucles Tant Que dans la Fermière",
+          "name": "Les Boucles Tant Que dans La Fermière",
           "description": "Les boucles « while » ne sont pas toujours difficiles à comprendre pour les élèves, mais si vous pensez que votre classe pourrait avoir du mal avec, nous vous recommandons la programmation en binômes. Cela leur permettra de confronter leurs idées avant d'implémenter le code. La programmation en binômes permet de mieux comprendre et maitriser les boucles « while »."
         },
         "23b4fc9a-484e-482b-856b-cb48acb73dcb": {
@@ -17584,7 +17599,7 @@
           "description": "Regroupez toute la classe et demandez à deux volontaires de marcher tout droit dans une certaine direction dans la salle de classe. S'ils voient une chaise déplacée, ils doivent l'enjamber. S'ils atteignent un mur, ils doivent s'asseoir.\n\nUne fois que tous les élèves seront assis, demandez comment vous programmeriez un robot pour qu'il réponde à un mur ou à une chaise. Rappelez aux élèves que vous ne pouvez pas simplement dire « Enjambe la chaise » à moins que vous ne sachiez qu'il y a une chaise, et vous ne saurez pas toujours qu'il y a une chaise. Il peut être utile de traduire la tâche en instructions telles que :\n\n-   tant qu'il y a un chemin à parcourir\n    -   avancer\n    -   s'il y a une chaise, l'enjamber\n-   s'asseoir\n\nDites aux élèves qu'ils utiliseront des conditions pendant cette leçon. Donnez la définition de :\n\n-   **Condition** : une déclaration qu'un programme vérifie pour voir si elle est vraie ou fausse. Si vrai, une action est entreprise. Sinon, l'action est ignorée.\n-   **Conditions** : instructions qui ne s'exécutent que sous certaines conditions.\n\nOuvrez une discussion pour voir quand vous pourrez utiliser une condition dans votre code. "
         },
         "59ec2b50-dbdf-4df1-9593-1bb961c5edd8": {
-          "name": "Les Conditions dans Minecraft : Voyage Aquatique",
+          "name": "Les Formules Conditionnelles dans Minecraft : Voyage Aquatique",
           "description": "Les élèves vont se régaler avec cette leçon. Il est probable que la plupart de vos élèves aient entendu parler de _Minecraft_, mais faites une brève introduction pour ceux qui connaitraient pas.\n\n_Minecraft_ est un jeu de cubes. Vous pouvez incarner Alex ou Steve pendant que vous travaillez dans des labyrinthes. Vous devrez éviter la lave, ramasser des objets et explorer un monde composé de cubes de choses.\n\nMontrez l'une des énigmes à la classe. Une fois que toutes les questions ont été traitées, faites passer les élèves aux ordinateurs et laissez-les commencer la programmation en binôme. ",
           "progression_name": "Vidéo : Minecraft : Voyage Aquatique - Introduction"
         },
@@ -17916,8 +17931,8 @@
           "progression_name": "Exemples de projets"
         },
         "3d53701a-e90f-4938-977a-ca8ee2584163": {
-          "name": "Crées ton projet",
-          "progression_name": "Crées ton projet"
+          "name": "Crée ton projet",
+          "progression_name": "Crée ton projet"
         },
         "d99249e4-021e-4a39-9462-045e0306c00a": {
           "name": "Exemple",
@@ -18256,7 +18271,8 @@
           "name": "Introduction"
         },
         "9a413780-6d7b-4341-9041-e8a1e3f540b6": {
-          "name": "Suivez l'algorithme "
+          "name": "Suis l'Algorithme ",
+          "progression_name": "Suis l'Agorithme – Activité déconnectée"
         },
         "51b3125a-1efe-4f25-a05e-3e5250ceff18": {
           "name": "Réflexion",
@@ -18273,7 +18289,7 @@
           ]
         },
         "e83fa08f-d3bb-4e23-b749-ecb175cbce13": {
-          "name": "Des Poissons qui Nagent, avec le Labo des Lutins",
+          "name": "Poissons Nageant dans le Labo des Sprites",
           "description": "**Objectif :** Aujourd'hui, les élèves programmeront leur propre aquarium. Ils commenceront par apprendre à mettre des sprites à l'écran, puis ils les feront bouger. Enfin, ils personnaliseront leur aquarium pour ajouter les créatures et les objets de leur choix. "
         },
         "65fd5465-cd74-4e68-a4de-c174e2cbd8f6": {
@@ -18307,7 +18323,7 @@
           "name": "Introduction"
         },
         "9f5b1627-f04c-42a1-8955-17c994ad2b18": {
-          "name": "Soirée Dansante Extraterrestre avec le Labo des Lutins",
+          "name": "Soirée Dansante Extraterrestre avec le Labo des Sprites",
           "tips": [
             "Encouragez les élèves qui ont des questions/défis à commencer par demander à leur partenaire. Les questions sans réponse peuvent être transmises à un groupe à proximité, qui connaît peut-être déjà la solution. Demandez aux élèves de décrire le problème qu'ils voient :\n\n-   Qu'est-ce que c'est censé faire ?\n-   Qu'est ce que ça fait ?\n-   Qu'est-ce que ça veut dire ?"
           ]
@@ -18334,7 +18350,7 @@
           "name": "Vocabulaire-clé"
         },
         "c350027b-7b9e-4782-af88-dc1015043bac": {
-          "progression_name": "Soyez un Super Citoyen Numérique"
+          "progression_name": "Sois un Super Citoyen Numérique"
         },
         "bec84680-216c-4711-b91f-5b37260fd598": {
           "name": "Vocabulaire-clé"
@@ -18347,8 +18363,11 @@
             null
           ]
         },
+        "0b71a326-8b01-4631-8781-efedc2cd6d07": {
+          "progression_name": "Exploration : l'affiche de Rikki"
+        },
         "2e6aa365-ef8d-4f04-8a5e-fcc6bb53bc1d": {
-          "progression_name": "À propos de Moi avec le Labo des Lutins"
+          "progression_name": "Mini-Projet : À propos de Moi"
         },
         "e7f9b4de-f4a4-401b-99ad-207a2fad7964": {
           "name": "Partager"
@@ -18363,7 +18382,7 @@
         },
         "bba24018-1d90-4a18-b596-eaab2e50567e": {
           "name": "Partage Numérique",
-          "progression_name": "Partage numérique - Activité hors ligne"
+          "progression_name": "Partage numérique - Activité déconnectée"
         },
         "7d8c55c5-c431-4f24-8823-f9c8e13bc085": {
           "tips": [
@@ -18378,8 +18397,8 @@
           "description": "Les élèves peuvent avoir différents niveaux d'expérience à la fois avec l'outil Artist et le concept des boucles. En fonction de ce dont vous pensez que votre classe pourrait bénéficier, nous vous recommandons de trouver un ou deux casse-tête à prévisualiser avec la classe. Que cette leçon soit une introduction ou une révision, il est important de préparer vos élèves à la suite !"
         },
         "c0191294-55c5-47ec-a80d-76f9023bd84e": {
-          "name": "Dessiner avec des Boucles",
-          "progression_name": "Vidéo : Intro l'Artiste avec JR Hildebrande"
+          "name": "Dessiner avec les Boucles",
+          "progression_name": "Vidéo : Intro à l'Artiste avec JR Hildebrande"
         },
         "257e3a1f-5cc5-444e-94e3-ee18c5d7169e": {
           "progression_name": "Développement des Compétences"
@@ -18418,7 +18437,7 @@
           "progression_name": "Développement des Compétences"
         },
         "1768d4b3-853f-4f6a-ba24-6a174b345dbf": {
-          "progression_name": "Vidéo : Boucles imbriquées"
+          "progression_name": "Vidéo : Les boucles imbriquées"
         },
         "7f4ec132-6df2-4a23-abe3-853efe35701d": {
           "progression_name": "Développement des Compétences"
@@ -18445,7 +18464,11 @@
           "name": "Introduction"
         },
         "5d0e32d6-0d8a-4783-92f2-1e20fb8e5ea9": {
-          "name": "Les Boucles Imbriquées avec Frozen"
+          "name": "Les Boucles Imbriquées avec Frozen",
+          "progression_name": "Mini-projet : Flocon de neige #1"
+        },
+        "f508c803-c84b-4de9-8d54-88da404dbb4f": {
+          "progression_name": "Mini-projet : Flocon de neige #2"
         },
         "47f46b59-d887-4bc5-8f39-c72cd925587a": {
           "name": "Réflexion"
@@ -18464,7 +18487,8 @@
           ]
         },
         "567a28bf-ed4a-4d8d-8be2-2e196d37cb6d": {
-          "name": "Écriture de chansons"
+          "name": "Écrire des chansons",
+          "progression_name": "Écrire des chansons - Activité déconnectée « Fonctions »"
         },
         "dfc4f2ab-d9c6-454e-b3a6-8696815b4fdc": {
           "tips": [
@@ -18493,7 +18517,7 @@
           "tips": [
             null
           ],
-          "progression_name": "Vidéo : Minecraft - L'agent"
+          "progression_name": "Vidéo : Minecraft - L'Agent"
         },
         "cd4d43da-dace-4324-a934-618f8c5b6ec7": {
           "progression_name": "Développement des Compétences"
@@ -18546,7 +18570,7 @@
           "description": "Regroupez toute la classe et demandez à deux volontaires de marcher tout droit dans une certaine direction dans la salle de classe. S'ils voient une chaise déplacée, ils doivent l'enjamber. S'ils atteignent un mur, ils doivent s'asseoir.\n\nUne fois que tous les élèves seront assis, demandez comment vous programmeriez un robot pour qu'il réponde à un mur ou à une chaise. Rappelez aux élèves que vous ne pouvez pas simplement dire « Enjambe la chaise » à moins que vous ne sachiez qu'il y a une chaise, et vous ne saurez pas toujours qu'il y a une chaise. Il peut être utile de traduire la tâche en instructions telles que :\n\n-   tant qu'il y a un chemin à parcourir\n    -   avancer\n    -   s'il y a une chaise, l'enjamber\n-   s'asseoir\n\nDites aux élèves qu'ils utiliseront des conditions pendant cette leçon. Donnez la définition de :\n\n-   **Condition** : une déclaration qu'un programme vérifie pour voir si elle est vraie ou fausse. Si vrai, une action est entreprise. Sinon, l'action est ignorée.\n-   **Conditions** : instructions qui ne s'exécutent que sous certaines conditions.\n\nOuvrez une discussion pour voir quand vous pourrez utiliser une condition dans votre code. "
         },
         "6e3ca289-2d9d-4ff7-b9c6-dd6d8fcad1bf": {
-          "name": "Les Conditions dans Minecraft : Voyage Aquatique",
+          "name": "Les Formules Conditionnelles dans Minecraft : Voyage Aquatique",
           "progression_name": "Vidéo : Minecraft : Voyage Aquatique - Introduction"
         },
         "ace06bbe-f40f-4333-806c-928527edede6": {
@@ -18580,7 +18604,7 @@
           "name": "Introduction"
         },
         "47ed862d-1562-4505-a98c-8c852ba6d936": {
-          "name": "Les Conditions avec la Fermière",
+          "name": "Les Formules Conditionnelles avec la Fermière",
           "tips": [
             null
           ],
@@ -18602,7 +18626,7 @@
           "progression_name": "Développement des Compétences"
         },
         "37929d1a-a0f2-4700-96e9-7d207a70dc1e": {
-          "progression_name": "Video: « Si/Sinon »"
+          "progression_name": "Vidéo : « Si/Sinon »"
         },
         "85c2f391-04ff-4b1f-8e2d-dad1aebd0b17": {
           "progression_name": "Défi"
@@ -18636,8 +18660,8 @@
           "name": "Réflexion"
         },
         "8873d7fd-15b6-4da5-9e83-156d6a9516d0": {
-          "name": "Concevoir pour l'Accessibilité",
-          "progression_name": "Concevoir pour l'Accessibilité"
+          "name": "Conception Accessible",
+          "progression_name": "Conception Accessible"
         },
         "365538ed-acdc-4054-9f6c-fb4085cced76": {
           "name": "Réflexion"
@@ -20979,7 +21003,7 @@
           ]
         },
         "02bcc907-1476-4a48-90ea-a56c5c91e6d4": {
-          "name": "Instructions conditionnelles"
+          "name": "Formules conditionnelles"
         },
         "970064bc-3023-4f10-9359-91868ff9c77d": {
           "progression_name": "Prévision"
@@ -21309,7 +21333,7 @@
           "tips": [
             null
           ],
-          "progression_name": "Jeu Collector"
+          "progression_name": "Jeu Collectionneur"
         },
         "c3302e9a-4da1-4c1b-96ca-232b7026ea9c": {
           "progression_name": "Défis"
@@ -23214,6 +23238,13 @@
         "08cf29e4-2239-4519-b813-5d66842379ae": {
           "progression_name": "Jeu libre"
         },
+        "62445b52-b1d7-46ff-9df7-0adfc102426b": {
+          "progression_name": "Mini-projet : Flocon de neige #1"
+        },
+        "b5fb0dff-6964-4271-b099-d3d1afaf93cd": {
+          "name": "Mini-projet : Flocon de neige #2",
+          "progression_name": "Mini-projet : Flocon de neige #2"
+        },
         "42aa151d-e1f6-4ebc-ac61-1997a9aa4719": {
           "progression_name": "S'entraîner"
         },
@@ -23262,8 +23293,8 @@
           "progression_name": "Exemples de projets"
         },
         "dc5d2770-baaa-4bd2-a210-0335bdb5a6b9": {
-          "name": "Crées ton projet",
-          "progression_name": "Crées ton projet"
+          "name": "Crée ton projet",
+          "progression_name": "Crée ton projet"
         },
         "b009d107-5f2d-46b7-9cdf-6df3f9dadc06": {
           "name": "S'entraîner",
@@ -23509,8 +23540,8 @@
           "progression_name": "Jeu libre"
         },
         "cc5d6565-d338-4155-973c-d9eb5df8f228": {
-          "name": "Mini-projet : animal de compagnie virtuel ",
-          "progression_name": "Mini-projet : animal de compagnie virtuel "
+          "name": "Mini-projet : Animal domestique virtuel ",
+          "progression_name": "Mini-projet : Animal domestique virtuel "
         },
         "d8a45307-88cc-435b-a5b2-a6d8f7de2165": {
           "progression_name": "Exemples de projets"

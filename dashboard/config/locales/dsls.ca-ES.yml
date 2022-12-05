@@ -9356,3 +9356,19 @@ ca-ES:
         - {}
         questions:
         - {}
+      CSD U3 drawing practice choice_2021:
+        display_name: Pràctica
+      CSD U3 drawing practice choice_2022:
+        display_name: Pràctica
+      CSD web draw loop practice choice_2021:
+        display_name: Pràctica
+      CSD web draw loop practice choice_2022:
+        display_name: Pràctica
+      CSD web movement practice choice_2021:
+        display_name: Pràctica
+      CSD web movement practice choice_2022:
+        display_name: Pràctica
+      CSD web text practice choice_2021:
+        display_name: Pràctica
+      CSD web text practice choice_2022:
+        display_name: Pràctica

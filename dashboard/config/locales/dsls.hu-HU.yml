@@ -3441,8 +3441,7 @@ hu-HU:
         - {}
       courseE_swim_fish_behavior_predict1_2021:
         answers:
-        - text: Semmi sem történik
-          feedback: Helytelen. Az ördögszekér gördülni kezd.
+        - feedback: Helytelen. Az ördögszekér gördülni kezd.
         - text: Az ördögszekér a képernyő tetején fog lebegni.
           feedback: Helytelen. Az ördögszekér gördülni kezd.
         - text: Az ördögszekér gördülni kezd.
@@ -3451,8 +3450,7 @@ hu-HU:
         - text: Az ördögszekér villogni fog.
           feedback: Helytelen. Az ördögszekér gördülni kezd.
         questions:
-        - text: Nézd meg közelebbről az alábbi kódot! Mi történik, miután megnyomod
-            a "Futtatás" gombot?
+        - {}
       courseF_EOC_2021:
         description: Elértél az F tanfolyam utolsó leckéjéhez! Válassz egy projektet,
           amit elkészítesz.

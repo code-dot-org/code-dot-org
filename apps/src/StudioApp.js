@@ -2443,7 +2443,7 @@ StudioApp.prototype.handleEditCode_ = function(config) {
         this.editor.enablePalette(!this.editor.session.paletteEnabled);
         showToolboxHeader.style.display = this.editor.session.paletteEnabled
           ? 'none'
-          : 'inline-block';
+          : 'flex';
         hideToolboxIcon.style.display = !this.editor.session.paletteEnabled
           ? 'none'
           : 'inline-block';

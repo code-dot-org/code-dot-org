@@ -13,7 +13,7 @@ fr:
         Artist2: L'Artiste 2
         Unplug5: Fonctions
         Farmer: Le Fermier
-        Unplug6: Instructions conditionnelles
+        Unplug6: Formules conditionnelles
         Artist3: L'Artiste 3
         Unplug7: Ecriture de chanson
         Farmer2: Le Fermier 2
@@ -346,7 +346,7 @@ fr:
         C4_function_edit: Modification de fonctions
         C4_function_create: Création de Fonctions
         C4_function_parameters: Fonctions avec Paramètres
-        C4_conditionals: Instructions conditionnelles
+        C4_conditionals: Formules conditionnelles
         C4_unplugged_algorithms: Algorithmes avec des Tangrams
         C4_unplugged_madlibs: Mad Libs (histoire à trous)
         C4_unplugged_variables: Variables en Enveloppes
@@ -354,7 +354,7 @@ fr:
         C4_unplugged_parameters: La composition de chansons avec des paramètres
         C4_unplugged_binary: Binaire
         CSF_a_b_artist_loops: Les Boucles dans l'Artiste
-        CSF_artist_angles: Angles dans l’Artiste
+        CSF_artist_angles: Les angles dans l’Artiste
         CSF_collector_k1_blocks: 'Fondamentaux de l’Informatique : La Collectionneuse'
         CSF_collector_repeat_loops: Les Boucles Répéter dans la Collectionneuse
         CSF_collector_text_blocks: 'Fondamentaux de l’Informatique : La Collectionneuse'
@@ -530,7 +530,7 @@ fr:
         csd_what_computers_do: Que font les ordinateurs?
         csf_my_online_neighborhood_2020: Mon Quartier en Ligne
         csf_follow_the_digital_trail: Suis la Piste Numérique
-        csf_private_and_personal_information: 'traduction manquante : en-US.data.unplugged.courseE_unplugged_privateInformation_2018.title'
+        csf_private_and_personal_information: Informations Privées et Personnelles 
         csd_what_computers_are: Qu'est ce qu'un Ordinateur ?
         codebreak_e01: 'Code Break 1.0: Algorithmes avec Hill Harper'
         codebreak_e02: 'Code Break 2.0: Prototypes avec Mark Cuban et Lyndsey Scott'

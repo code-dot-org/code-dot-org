@@ -17,6 +17,12 @@
             "game_lab": {
               "name": "Работилница за апликации"
             },
+            "sprites": {
+              "name": "Сприти"
+            },
+            "groups": {
+              "name": "Групи"
+            },
             "control": {
               "name": "Контрола"
             },
@@ -36,6 +42,9 @@
             "canvas": {
               "name": "Canvas"
             },
+            "data": {
+              "name": "Податоци"
+            },
             "turtle": {
               "name": "Turtle (Желка)"
             },
@@ -48,6 +57,9 @@
             "variables": {
               "name": "Променливи"
             },
+            "advanced": {
+              "name": "Напредно"
+            },
             "maker": {
               "name": "Maker"
             }
@@ -56,8 +68,20 @@
         "spritelab": {
           "description": "Sprite Lab е Blocky програмска средина каде можете да создадете интерактивни проекти.",
           "categories": {
+            "sprites": {
+              "name": "Сприти"
+            },
+            "world": {
+              "name": "Светот"
+            },
+            "location": {
+              "name": "Локации"
+            },
             "actions": {
               "name": "Акции"
+            },
+            "behaviors": {
+              "name": "Однесувања"
             },
             "loops": {
               "name": "Лупови"
@@ -73,6 +97,9 @@
             },
             "text": {
               "name": "Текст"
+            },
+            "comments": {
+              "name": "Коментари"
             }
           }
         },

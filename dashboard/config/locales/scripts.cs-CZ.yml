@@ -3185,3 +3185,7 @@ cs:
           description_audience: Pisatelé životopisů
           description_short: Na uvádění aktualizací lekcí nebo úrovní mezi verzemi
             životopisu
+        devices-2022:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: 'Kapitola 2: Stavba fyzického prototypu'

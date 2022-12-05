@@ -5576,7 +5576,7 @@
           "courseD_bee_conditionals4_hintVid1": "Hai bisogno di aiuto per iniziare? Guarda il video-suggerimento!",
           "courseD_bee_conditionals4_a": "Puoi sempre trattare ogni casella come se avesse sopra una nuvola, anche se in questo caso riesci a vedere tutto il percorso.",
           "courseD_bee_conditionals4_b": "Usa un blocco `se` all'interno del ciclo per controllare la presenza di un fiore in ogni casella.",
-          "courseD_bee_conditionals4_c": "Grazie ad un blocco [blockly block][0] riesci ad andare avanti e controllare se c'è un fiore. Cosa deve fare l'ape se c'è un fiore?",
+          "courseD_bee_conditionals4_c": "Grazie ad un blocco <xml><block type=\"maze_untilBlocked\"/></xml> riesci ad andare avanti e controllare se c'è un fiore. Cosa deve fare l'ape se c'è un fiore?",
           "courseD_bee_conditionals4_hintVid2": "Guarda il video per risolvere questo esercizio."
         },
         "courseD_bee_conditionals4_2018": {
@@ -7031,8 +7031,8 @@
         },
         "courseE_artist_functions2": {
           "courseD_artist_functions2_b": "La funzione che hai scritto non deve contenere l'intero programma, ma solo la parte che disegna un quadrato con lati di 100 pixel.",
-          "courseD_artist_functions2_c": "Per richiamare la funzione `disegna un quadrato` usa questo blocco verde:\n\n[blockly block][0]\n\nIn caso contrario, il codice contenuto nella funzione non verrà mai eseguito.",
-          "courseD_artist_functions2_a": "Il programma deve:\n\n- usare la funzione\n- andare avanti di 100 + 75 pixel\n- usare la funzione"
+          "courseD_artist_functions2_c": "Per richiamare la funzione `disegna un quadrato` usa questo blocco verde:\n\n<xml><block type=\"procedures_callnoreturn\" limit=\"2\"><mutation name=\"draw a square\"/></block></xml>\n\nIn caso contrario, il codice contenuto nella funzione non verrà mai eseguito.",
+          "courseD_artist_functions2_a": "Il programma deve:\n\n-   usare la funzione\n-   andare avanti di 100 + 75 pixel\n-   usare la funzione"
         },
         "courseE_artist_functions2_2018": {
           "courseD_artist_functions2_b": "La funzione non deve contenere l'intero programma, ma solo la parte che disegna un singolo quadrato con i lati di 100 pixel.",

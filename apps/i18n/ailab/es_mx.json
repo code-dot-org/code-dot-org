@@ -272,6 +272,23 @@
         },
         "Shucked weight": {
           "id": "Peso descascarado "
+        },
+        "Viscera weight": {
+          "id": "Peso de las vísceras",
+          "description": "El peso de las vísceras, en gramos."
+        },
+        "Shell weight": {
+          "id": "Peso de la cáscara",
+          "description": "El peso de la cáscara después de secarse, en gramos."
+        },
+        "Rings": {
+          "id": "Anillos",
+          "description": "La edad en años."
+        }
+      },
+      "card": {
+        "context": {
+          "potentialUses": "Determina la edad de un abulón."
         }
       }
     },

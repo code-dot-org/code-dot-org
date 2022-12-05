@@ -115,7 +115,11 @@ class CodeWorkspace extends React.Component {
     );
 
     return [
-      <PaneSection id="toolbox-header" key="toolbox-header">
+      <PaneSection
+        id="toolbox-header"
+        key="toolbox-header"
+        style={styles.toolboxHeaderContainer}
+      >
         <button
           id="hide-toolbox-icon"
           style={[commonStyles.hidden, chevronStyle]}
@@ -126,12 +130,12 @@ class CodeWorkspace extends React.Component {
         <span style={textStyle}>
           {editCode ? i18n.toolboxHeaderDroplet() : i18n.toolboxHeader()}
         </span>
-        {settingsCog}
+        <span>{settingsCog}</span>
       </PaneSection>,
       <PaneSection
         id="show-toolbox-header"
         key="show-toolbox-header"
-        style={commonStyles.hidden}
+        style={{...styles.toolboxHeaderContainer, ...commonStyles.hidden}}
       >
         <span id="show-toolbox-click-target">
           <button id="show-toolbox-icon" style={chevronStyle} type="button">
@@ -139,7 +143,8 @@ class CodeWorkspace extends React.Component {
           </button>
           <span>{i18n.showToolbox()}</span>
         </span>
-        {settingsCog}
+        <span>{i18n.showToolbox()}</span>
+        <span>{settingsCog}</span>
       </PaneSection>
     ];
   }
@@ -303,6 +308,11 @@ const styles = {
       color: color.white,
       boxShadow: 'none'
     }
+  },
+  toolboxHeaderContainer: {
+    display: 'flex',
+    justifyContent: 'space-between',
+    alignItems: 'center'
   }
 };
 
