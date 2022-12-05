@@ -107,11 +107,7 @@ use_my_apps: true
 
 
 # Specify `use_mailcatcher: true` if you are running mailcatcher on localhost.
-# You should have also run this once:
-#   `gem install mailcatcher`
-# If installation fails on Catalina, see https://github.com/sj26/mailcatcher/issues/430#issuecomment-700207954
-# And this each time you need to start mailcatcher in the background again:
-#   `mailcatcher --ip=0.0.0.0`
+# See development.rb file for information about how to use mailcatcher.
 #use_mailcatcher: true
 
 
