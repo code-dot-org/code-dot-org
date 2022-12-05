@@ -2287,7 +2287,7 @@
     }
   },
   "https://studio.code.org/s/allthethings/lessons/32/levels/1": {
-    "long_instructions": "Make an awesome web page!\n\n1.  Look at the web page we gave you to start with. Look how lame it is. 1996 just called and wants its web page back. But don't get depressed - YOU can fix it!\n2.  Add a background-color attribute in the body style in style.css to make the page background color 'darkcyan'\n3.  Add a text-align attribute to the body style in style.css to center the image and text horizontally\n4.  Change index.html to include an inspiring hashtag\n5.  Add a color attribute to the p style in style.css to make the inspiring hashtag white\n6.  Add a font-size attribute to the p style in style.css to make your inspiring hashtag REALLY BIG! (Try 24px and 3em and see what happens.)"
+    "long_instructions": "Make an awesome web page!\n\n1.  Look at the web page we gave you to start with. Let's improve it!\n2.  Add a background-color attribute in the body style in style.css to make the page background color 'darkcyan'\n3.  Add a text-align attribute to the body style in style.css to center the image and text horizontally\n4.  Change index.html to include an inspiring hashtag\n5.  Add a color attribute to the p style in style.css to make the inspiring hashtag white\n6.  Add a font-size attribute to the p style in style.css to make your inspiring hashtag REALLY BIG! (Try 24px and 3em and see what happens.)"
   },
   "https://studio.code.org/s/allthethings/lessons/33/levels/1": {
     "sublevels": {
@@ -2557,7 +2557,7 @@
       "AllTheThings_StandaloneVideo": {
       },
       "Web Lab 1": {
-        "long_instructions": "Make an awesome web page!\r\n\r\n1. Look at the web page we gave you to start with. Look how lame it is. 1996 just called and wants its web page back. But don't get depressed - YOU can fix it!\r\n2. Add a background-color attribute in the body style in style.css to make the page background color 'darkcyan'\r\n3. Add a text-align attribute to the body style in style.css to center the image and text horizontally\r\n4. Change index.html to include an inspiring hashtag\r\n5. Add a color attribute to the p style in style.css to make the inspiring hashtag white\r\n6. Add a font-size attribute to the p style in style.css to make your inspiring hashtag REALLY BIG! (Try 24px and 3em and see what happens.)"
+        "long_instructions": "Make an awesome web page!\r\n\r\n1. Look at the web page we gave you to start with. Let's improve it!\r\n2. Add a background-color attribute in the body style in style.css to make the page background color 'darkcyan'\r\n3. Add a text-align attribute to the body style in style.css to center the image and text horizontally\r\n4. Change index.html to include an inspiring hashtag\r\n5. Add a color attribute to the p style in style.css to make the inspiring hashtag white\r\n6. Add a font-size attribute to the p style in style.css to make your inspiring hashtag REALLY BIG! (Try 24px and 3em and see what happens.)"
       },
       "Overworld Chop Tree - allthethings": {
         "short_instructions": "Wood is a very important resource. Many things are made from it. Walk to the tree and use the “destroy block” command to chop it down."
