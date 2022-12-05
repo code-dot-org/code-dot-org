@@ -47,7 +47,7 @@
   "created_at": "2022-11-01T23:05:09.000Z",
   "user_id": 18528,
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2022-11-01T23:05:09.547+00:00\",\"changed\":[\"cloned from \\\"csc_ecosystems_algae_growth_2022\\\"\"],\"cloned_from\":\"csc_ecosystems_algae_growth_2022\"},{\"changed_at\":\"2022-11-10 19:10:28 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2022-11-01T23:05:09.547+00:00\",\"changed\":[\"cloned from \\\"csc_ecosystems_algae_growth_2022\\\"\"],\"cloned_from\":\"csc_ecosystems_algae_growth_2022\"},{\"changed_at\":\"2022-11-10 19:10:28 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2022-11-30 20:21:58 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
@@ -423,7 +423,7 @@
         <block type="gamelab_makeNumSprites">
           <field name="ANIMATION_NAME">"green-sea-plant-2"</field>
           <value name="NUM">
-            <block type="math_number">
+            <block type="math_number" can_disconnect_from_parent="false">
               <field name="NUM">10</field>
             </block>
           </value>
@@ -431,24 +431,24 @@
         <block type="gamelab_setProp">
           <field name="PROPERTY">"scale"</field>
           <value name="SPRITE">
-            <block type="gamelab_allSpritesWithAnimation">
+            <block type="gamelab_allSpritesWithAnimation" can_disconnect_from_parent="false">
               <field name="ANIMATION">"green-sea-plant-2"</field>
             </block>
           </value>
           <value name="VAL">
-            <block type="math_number">
+            <block type="math_number" can_disconnect_from_parent="false">
               <field name="NUM">30</field>
             </block>
           </value>
         </block>
         <block type="gamelab_addBehaviorSimple">
           <value name="SPRITE">
-            <block type="gamelab_allSpritesWithAnimation">
+            <block type="gamelab_allSpritesWithAnimation" can_disconnect_from_parent="false">
               <field name="ANIMATION">"fish_10"</field>
             </block>
           </value>
           <value name="BEHAVIOR">
-            <block type="gamelab_collectibleBehaviors">
+            <block type="gamelab_collectibleBehaviors" can_disconnect_from_parent="false">
               <field name="BEHAVIOR">new Behavior(wandering, [])</field>
             </block>
           </value>
@@ -456,12 +456,12 @@
         <block type="gamelab_checkTouching">
           <field name="CONDITION">"when"</field>
           <value name="SPRITE1">
-            <block type="gamelab_allSpritesWithAnimation">
+            <block type="gamelab_allSpritesWithAnimation" can_disconnect_from_parent="false">
               <field name="ANIMATION">"fish_10"</field>
             </block>
           </value>
           <value name="SPRITE2">
-            <block type="gamelab_allSpritesWithAnimation">
+            <block type="gamelab_allSpritesWithAnimation" can_disconnect_from_parent="false">
               <field name="ANIMATION">"green-sea-plant-2"</field>
             </block>
           </value>
@@ -470,7 +470,7 @@
         <block type="gamelab_everyInterval">
           <field name="UNIT">"seconds"</field>
           <value name="N">
-            <block type="math_number">
+            <block type="math_number" can_disconnect_from_parent="false">
               <field name="NUM">3</field>
             </block>
           </value>
