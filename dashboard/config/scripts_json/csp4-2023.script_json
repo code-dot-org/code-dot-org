@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-11-07 22:53:42 UTC",
+    "serialized_at": "2022-12-04 00:50:17 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -89,9 +89,8 @@
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "To begin the lesson students explore sample apps similar to the ones they'll be able to build by the end of the unit. Then students complete an unplugged activity with plastic baggies and sticky notes to build a mental model of how variables are used to move and store information. The lesson ends with a synthesizing discussion and students adding key vocabulary to their journal.",
-        "preparation": "* Collect for each pair of students:\n\t* 3 sandwich baggies\n\t* packs of red and yellow stickies\n\t* pens / pencils\n\t* 1 dry erase marker per four students (pairs can share)\n* Review the sample apps shown in the warm up\n* Review the rules and vocabulary used in the slides\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-variables-lessons-1-4/36474) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching this virtually, consider checking our [Virtual Modifications](https://docs.google.com/document/d/1TZvyLbvsl81_-bcmkwT-opTU6AhNvbvXho-leSIMsj8/edit?usp=sharing)",
-        "student_overview": "Develop a mental model for how information is stored and processed by programs.",
-        "unplugged": true
+        "preparation": "**For the entire EIPM Sequence:** \n- Review the information covered in the slides.\n- Try completing the Make Task yourself.\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-variables-lessons-1-4/36474) forum for verified teachers to find additional strategies or resources shared by fellow teachers.\n- If you are teaching this virtually, consider checking our [Virtual Modifications](https://docs.google.com/document/d/1TZvyLbvsl81_-bcmkwT-opTU6AhNvbvXho-leSIMsj8/edit?usp=sharing).\n\n:::details [**Explore:**]\n* Collect for each pair of students:\n\t* 3 sandwich baggies\n\t* packs of red and yellow stickies\n\t* pens / pencils\n\t* 1 dry erase marker per four students (pairs can share)\n* Review the sample apps shown in the warm up.\n* Review the rules and vocabulary used in the slides.\n:::\n\n:::details [**Investigate:**]\n* Review the example apps and the prompts that students will be asked to respond to for each.\n:::\n:::details [**Practice:**]\n* Review the video in the level progression that covers global vs. local variables. This is a tricky topic.\n* Review other programming levels to be better prepared to support students.\n:::\n:::details [**Make:**]\n* Review the different steps students will be asked to complete as they build the app.\n:::",
+        "student_overview": "Develop a mental model for how information is stored and processed by programs."
       },
       "seeding_key": {
         "lesson.key": "Variables Explore",
@@ -108,8 +107,8 @@
       "relative_position": 2,
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "overview": "In this lesson, students work with partners to investigate several versions of the \"Thermostat App\" to understand how variables store and update information. These investigations involve reading code, discussing parts of the code, and modifying the existing code. To begin, students examine a version of the app where the temperature displayed changes each time a button is clicked. The next two versions of the app demonstrate how variables can store strings. Students learn about the patterns they are observing, specifically \"Counter Pattern with Event\" and \"Variables with String Concatenation Pattern\". To conclude the lesson, students review and discuss the programming patterns that they will make use of in the programs they write. ",
-        "preparation": "* Review the example apps and the prompts that students will be asked to respond to for each\n* Review the information covered in the slides\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-variables-lessons-1-4/36474) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching this virtually, consider checking our [Virtual Modifications](https://docs.google.com/document/d/1jl1LrZ0MuDLSbGfjBymgxFB491GumdVxocs2gRxdAMA/edit?usp=sharing)",
+        "overview": "**Note: This lesson is meant to be taught over the course of four 45min class periods or the equivalent amount of class time.**\n\nIn this lesson, students work with partners to investigate several versions of the \"Thermostat App\" to understand how variables store and update information. These investigations involve reading code, discussing parts of the code, and modifying the existing code. To begin, students examine a version of the app where the temperature displayed changes each time a button is clicked. The next two versions of the app demonstrate how variables can store strings. Students learn about the patterns they are observing, specifically \"Counter Pattern with Event\" and \"Variables with String Concatenation Pattern\". To conclude the lesson, students review and discuss the programming patterns that they will make use of in the programs they write. ",
+        "preparation": "**Before Day 1**\n\n* Review the example apps and the prompts that students will be asked to respond to for each\n* Review the information covered in the slides\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-variables-lessons-1-4/36474) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching this virtually, consider checking our [Virtual Modifications](https://docs.google.com/document/d/1jl1LrZ0MuDLSbGfjBymgxFB491GumdVxocs2gRxdAMA/edit?usp=sharing)",
         "student_overview": "Investigate and modify sample apps that use variables and learn common programming patterns with variables."
       },
       "seeding_key": {
@@ -396,42 +395,56 @@
       }
     },
     {
-      "key": "e0597c33-28d4-450c-9052-3c4a5c475bb2",
+      "key": "64fc8a32-7181-4f50-849d-7bc4aefa320e",
       "position": 2,
       "properties": {
-        "duration": 5,
-        "name": "Warm Up"
+        "duration": 45,
+        "name": "Explore"
       },
       "seeding_key": {
-        "lesson_activity.key": "e0597c33-28d4-450c-9052-3c4a5c475bb2",
+        "lesson_activity.key": "64fc8a32-7181-4f50-849d-7bc4aefa320e",
         "lesson.key": "Variables Explore",
         "lesson_group.key": "csp_variables",
         "script.name": "csp4-2023"
       }
     },
     {
-      "key": "3d92cf6b-9b56-430e-8713-7e84c10032a7",
+      "key": "1803be73-5edb-4711-9e70-ae02767cec86",
       "position": 3,
       "properties": {
-        "duration": 30,
-        "name": "Activity"
+        "duration": 45,
+        "name": "Investigate"
       },
       "seeding_key": {
-        "lesson_activity.key": "3d92cf6b-9b56-430e-8713-7e84c10032a7",
+        "lesson_activity.key": "1803be73-5edb-4711-9e70-ae02767cec86",
         "lesson.key": "Variables Explore",
         "lesson_group.key": "csp_variables",
         "script.name": "csp4-2023"
       }
     },
     {
-      "key": "4ea22675-a085-4083-bdf2-5b95666d0282",
+      "key": "8577c4ca-4ba7-4b86-9bde-4e5ef5aba71f",
       "position": 4,
       "properties": {
-        "duration": 10,
-        "name": "Wrap Up"
+        "duration": 45,
+        "name": "Practice"
       },
       "seeding_key": {
-        "lesson_activity.key": "4ea22675-a085-4083-bdf2-5b95666d0282",
+        "lesson_activity.key": "8577c4ca-4ba7-4b86-9bde-4e5ef5aba71f",
+        "lesson.key": "Variables Explore",
+        "lesson_group.key": "csp_variables",
+        "script.name": "csp4-2023"
+      }
+    },
+    {
+      "key": "ccf3129a-0d0d-4247-8cb4-150b9d7b62ec",
+      "position": 5,
+      "properties": {
+        "duration": 45,
+        "name": "Make"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "ccf3129a-0d0d-4247-8cb4-150b9d7b62ec",
         "lesson.key": "Variables Explore",
         "lesson_group.key": "csp_variables",
         "script.name": "csp4-2023"
@@ -1221,7 +1234,7 @@
       "key": "7abe3d9d-4fd1-4609-949e-56915968c7dd",
       "position": 1,
       "properties": {
-        "description": "This is the first official \"Explore\" lesson in the EIPM model. Review the EIPM model in the [EIPM One Pager](\thttps://docs.google.com/document/d/1ncil5b0yWAN4LCyOeXwYuNrNKEHtN4nmAd2o-_K5Psw/edit?usp=sharing).\n\n### Explore Lessons:\n**Overview:** Students explore the new concept through a teacher-led hands-on group activity.\n\n* Typically uses physical manipulatives\n* Teacher leads with the support of slides and activity guides\n\n**Goal:** Students begin to develop a shared mental model and understand the main ideas of the new concept. \n\n![](https://curriculum.code.org/media/uploads/explore.png)\n\nWatch the following videos:\n\n* [Guide to EIPM Lessons](https://www.youtube.com/watch?v=OTvi0XRTIjA)\n* [Guide to Explore Lessons](https://www.youtube.com/watch?v=mzm-xqXH8BQ)\n"
+        "description": "::: details [**Explore:**] \n\n### Explore Lessons:\n**Overview:** Students explore the new concept through a teacher-led hands-on group activity.\n\n* Typically uses physical manipulatives\n* Teacher leads with the support of slides and activity guides\n\n**Goal:** Students begin to develop a shared mental model and understand the main ideas of the new concept. \n\n![](https://curriculum.code.org/media/uploads/explore.png)\n\nWatch the following videos:\n\n* [Guide to EIPM Lessons](https://www.youtube.com/watch?v=OTvi0XRTIjA)\n* [Guide to Explore Lessons](https://www.youtube.com/watch?v=mzm-xqXH8BQ)\n\nThis is the first official \"Investigate\" lesson in the EIPM model. Review the EIPM model in the [EIPM One Pager](https://docs.google.com/document/d/1ncil5b0yWAN4LCyOeXwYuNrNKEHtN4nmAd2o-_K5Psw/edit?usp=sharing).\n\n:::\n\n::: details [**Investigate:**] \n### Investigate Lessons:\n\n**Overview:** Students investigate two or three sample programs that use the new concept.\n\n* Close-reading of working programs\n* Teacher-led discussions\n* Tasks to modify apps\n\n**Goal:** Students become comfortable reading and modifying programs that use the new concept. \n\n![](https://images.code.org/0f42442e0f78f7f39028ce253620efbd-investigate.png)\n\nWatch the following videos:\n\n* [Guide to EIPM Lessons](https://www.youtube.com/watch?v=OTvi0XRTIjA)\n* [Guide to Investigate Lessons](https://www.youtube.com/watch?v=jC85CeXs3ds)\n\n:::\n\n::: details [**Practice:**]\n\n### Practice Lessons:\n**Overview:** Students practice using the new concept through a scaffolded series of programming activities.\n\n* Students work independently or in pairs\n* Teacher introduces debugging practices that the beginning of the Activity and circulates the room during the lesson to provide targeted support.\n\n**Goal:** Students gain confidence in writing and debugging programs that use the new concept.  \n\n![](https://images.code.org/58afef806d6c4a8b61387df746d1291e-practice.png)\n\nWatch the following videos:\n\n* [Guide to EIPM Lessons](https://www.youtube.com/watch?v=OTvi0XRTIjA)\n* [Guide to Practice Lessons](https://www.youtube.com/watch?v=Aad0UJXGcR4)\n:::\n\n::: details [**Make:**]\n\n### Make Lessons:\n\n[pull-right]\n\n![](https://curriculum.code.org/media/uploads/make.png)\n\n[/pull-right]\n\n**Overview:** Students make a target app for which they are given the screen elements but little to no starter code. \n\n* Students are provided high-level steps to break down the project\n* Teacher supports students by directing them towards notes, previous work, and debugging strategies practiced in earlier lessons.\n\n**Goal:** Students can independently decide when and how to use the new concept in the context of a larger project.\n\nWatch the following videos:\n\n* [Guide to EIPM Lessons](https://www.youtube.com/watch?v=OTvi0XRTIjA)\n* [Guide to Make Lessons](https://www.youtube.com/watch?v=d5IK3kUlXW4)\n:::"
       },
       "seeding_key": {
         "activity_section.key": "7abe3d9d-4fd1-4609-949e-56915968c7dd",
@@ -1229,69 +1242,69 @@
       }
     },
     {
-      "key": "85bd889b-d594-420f-9f3a-7622bb6cf90a",
+      "key": "461c2038-2a59-4d56-8532-6bce5868cbb1",
       "position": 1,
       "properties": {
         "description": "**Group:** Place students in pairs",
-        "name": "Explore Sample Apps"
+        "duration": "5",
+        "name": "Warm Up - Explore Sample Apps"
       },
       "seeding_key": {
-        "activity_section.key": "85bd889b-d594-420f-9f3a-7622bb6cf90a",
-        "lesson_activity.key": "e0597c33-28d4-450c-9052-3c4a5c475bb2"
+        "activity_section.key": "461c2038-2a59-4d56-8532-6bce5868cbb1",
+        "lesson_activity.key": "64fc8a32-7181-4f50-849d-7bc4aefa320e"
       }
     },
     {
-      "key": "f8fa7353-3a18-4fd0-947f-5775b5b03e31",
+      "key": "f23982d1-616f-4f18-a9e6-e8705b0d18b7",
       "position": 2,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Give students 3-5 minutes to explore sample apps that they'll find on Code.org at the beginning of this lesson (in Levels 1-3). Students can explore one or more depending on time.",
-        "name": "Sample Apps",
-        "progression_name": "Sample Apps"
+        "progression_name": "Explore Sample Apps"
       },
       "seeding_key": {
-        "activity_section.key": "f8fa7353-3a18-4fd0-947f-5775b5b03e31",
-        "lesson_activity.key": "e0597c33-28d4-450c-9052-3c4a5c475bb2"
+        "activity_section.key": "f23982d1-616f-4f18-a9e6-e8705b0d18b7",
+        "lesson_activity.key": "64fc8a32-7181-4f50-849d-7bc4aefa320e"
       }
     },
     {
-      "key": "63a2acb9-d1ac-4c5c-bdd9-4b92529e52ab",
+      "key": "b93fc763-df6e-4875-a006-4790c072ea76",
       "position": 3,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Discuss:** *These are samples of the kinds of apps you'll be able to build by the end of this unit. As you go through them, write down at least two examples where the app seems to be keeping track of a piece of information or using it to make decisions.*\n\n**Discussion Goal:** Have volunteers share what they noticed with the room. Some ideas include:\n\n* The Pet Rock App keeps track of clicks and uses it to decide when the pet rock will \"evolve\"\n* The Poem App keeps track of the poem as you write it\n* The Thermostat App keeps track of temperature and uses it to change the color of the text\n\n"
       },
       "seeding_key": {
-        "activity_section.key": "63a2acb9-d1ac-4c5c-bdd9-4b92529e52ab",
-        "lesson_activity.key": "e0597c33-28d4-450c-9052-3c4a5c475bb2"
+        "activity_section.key": "b93fc763-df6e-4875-a006-4790c072ea76",
+        "lesson_activity.key": "64fc8a32-7181-4f50-849d-7bc4aefa320e"
       }
     },
     {
-      "key": "f7ea9361-b75a-4732-8c7b-61a1b5347db6",
+      "key": "3aaa9f68-5ab9-4428-87b5-f5bd779313e0",
       "position": 4,
       "properties": {
         "description": "Last unit we built apps that mostly focus on input and output. For example\n\n* When button clicked → show picture\n* When button clicked → change screen\n* When button clicked → play a sound\n\nBut we all want our programs to do more than that! In this unit we’re going to learn how to build apps that keep track of information and use to make decisions and perform calculations. This is going to let us build much more powerful apps! So let's get started by diving in deep on what's involved with programming with information.",
-        "name": "Preview the Unit",
         "remarks": true
       },
       "seeding_key": {
-        "activity_section.key": "f7ea9361-b75a-4732-8c7b-61a1b5347db6",
-        "lesson_activity.key": "e0597c33-28d4-450c-9052-3c4a5c475bb2"
+        "activity_section.key": "3aaa9f68-5ab9-4428-87b5-f5bd779313e0",
+        "lesson_activity.key": "64fc8a32-7181-4f50-849d-7bc4aefa320e"
       }
     },
     {
-      "key": "b98ea051-24a4-4164-a124-6891f9a67990",
-      "position": 1,
+      "key": "d31fcd90-c616-412f-8359-631718312f09",
+      "position": 5,
       "properties": {
         "description": "**Group:** Group students in pairs.",
-        "name": "Variables \r"
+        "duration": "30",
+        "name": "Activity "
       },
       "seeding_key": {
-        "activity_section.key": "b98ea051-24a4-4164-a124-6891f9a67990",
-        "lesson_activity.key": "3d92cf6b-9b56-430e-8713-7e84c10032a7"
+        "activity_section.key": "d31fcd90-c616-412f-8359-631718312f09",
+        "lesson_activity.key": "64fc8a32-7181-4f50-849d-7bc4aefa320e"
       }
     },
     {
-      "key": "5830f7d8-ac70-447b-b66b-2f7ae054b96b",
-      "position": 2,
+      "key": "3842255b-25fa-4783-82a5-7bbf4b4aa081",
+      "position": 6,
       "properties": {
         "description": "**Distribute:** Give each pair of students:\n\n* A small stack of red and yellow sticky notes\n* A pen / pencil\n* 3 plastic baggies\n* A dry erase marker to share with another group",
         "tips": [
@@ -1302,23 +1315,23 @@
         ]
       },
       "seeding_key": {
-        "activity_section.key": "5830f7d8-ac70-447b-b66b-2f7ae054b96b",
-        "lesson_activity.key": "3d92cf6b-9b56-430e-8713-7e84c10032a7"
+        "activity_section.key": "3842255b-25fa-4783-82a5-7bbf4b4aa081",
+        "lesson_activity.key": "64fc8a32-7181-4f50-849d-7bc4aefa320e"
       }
     },
     {
-      "key": "d27fb50c-d6ad-48ae-b63a-65e66121fc40",
-      "position": 3,
+      "key": "c255baf6-2d7f-4cd3-9d58-c8c8a06154cf",
+      "position": 7,
       "properties": {
       },
       "seeding_key": {
-        "activity_section.key": "d27fb50c-d6ad-48ae-b63a-65e66121fc40",
-        "lesson_activity.key": "3d92cf6b-9b56-430e-8713-7e84c10032a7"
+        "activity_section.key": "c255baf6-2d7f-4cd3-9d58-c8c8a06154cf",
+        "lesson_activity.key": "64fc8a32-7181-4f50-849d-7bc4aefa320e"
       }
     },
     {
-      "key": "e39c1bbe-1477-4d0c-960f-23d516f1cf82",
-      "position": 4,
+      "key": "7bfafa08-314e-48de-afff-a8a552b3eddb",
+      "position": 8,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Display:** Use the activity slides for this lesson to guide the unplugged activity on Variables.",
         "tips": [
@@ -1329,66 +1342,592 @@
         ]
       },
       "seeding_key": {
-        "activity_section.key": "e39c1bbe-1477-4d0c-960f-23d516f1cf82",
-        "lesson_activity.key": "3d92cf6b-9b56-430e-8713-7e84c10032a7"
+        "activity_section.key": "7bfafa08-314e-48de-afff-a8a552b3eddb",
+        "lesson_activity.key": "64fc8a32-7181-4f50-849d-7bc4aefa320e"
       }
     },
     {
-      "key": "7810178c-4651-4ffc-891d-cf024e93699c",
-      "position": 5,
+      "key": "12df10e1-0425-4809-afec-64f92f4ec5bf",
+      "position": 9,
       "properties": {
         "description": "| Slides&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | Speaker Notes |\n|---|---|\n|![](https://images.code.org/bdab647a379b05779e8a662940d4d167-U4L1_1.svg.png) |**Say:** Today we are going to explore Variables. |\n|![](https://images.code.org/d5af0c72098512bf185ed473761bcdc7-CSPVariables2.svg.png) |**Say:** We're going to be thinking about how computers work with information. We're going to call one \"piece\" of information a \"value\". Right now there are two different types of values: numbers and strings. There are a few ways to tell them apart. Numbers work the way you normally think of numbers. They are made of the digits 0 through 9. We are going to put numbers on yellow sticky notes. When we write numbers you don't need quotes. Strings are made of any characters you can see on the keyboard which means all these examples count as strings. Strings go inside double quotes. You can see how it would be important to tell the number 123 apart from the string \"123\".  <br><br> **Do This:** Make one string and one number and hold it up at your table. |\n|![](https://images.code.org/cfa94f5d1dbe63a048fc36a273cdd86e-CSPVariables3.svg.png) | **Say:** Operator is just a fancy name for the plus, minus, multiply, and divide symbols. An expression is a combination of two sticky notes and an operator. When I ask you \"what's 2 plus 3\" you say \"5\"! You just \"evaluated\" the expression 2+3, or figure out what the value is. Since 5 is a number, we put it on a yellow sticky. When evaluating an expression, we follow order of operations - just like in math class. <br><br> **Do This:** Evaluate the expression 5-1 and make a sticky note. Make sure you pick the correct color and decide if you need quotes or not!   |\n|![](https://curriculum.code.org/media/uploads/CSPVariables4.svg) | **Say:** This table shows the different ways we can create expressions. We can use all four operators with numbers the normal way. When you want to use strings, you can only use the + operator and it connects the two words together. If you're connecting a number and a string, the number first gets converted to a string. <br><br> **Do This:** With your partner make a sticky note for each of these 5 expressions and we'll share as a class. <br><br> ![](https://curriculum.code.org/media/uploads/animation.png) **Click for animation:** Click through to see the answers. |\n|![](https://curriculum.code.org/media/uploads/CSPVariables5.svg) | **Say:** We're going to call the plastic baggies on your table \"variables\". Variables can hold at most one value, or sticky note. They have names that use no quotes, include no spaces, and must start with a letter. For now just practice making a variable with your partner. <br><br> **Do This:** Make one variable with any name you like. Share it with another group. Make sure you use a whiteboard marker so we can reuse the baggies later.  |\n|![](https://curriculum.code.org/media/uploads/CSPVariables6.svg) | **Say:** We can evaluate expressions that include variable names. To do that, first make a copy of the sticky note inside the variable. Then evaluate the expression the way you normally would. These two examples show you how. <br><br> ![](https://curriculum.code.org/media/uploads/animation.png) **Click for animation: ** Click through to see the answers.  |\n|![](https://curriculum.code.org/media/uploads/CSPVariables7.svg) | **Do This:** Evaluate these expressions. Make sure to pay attention to whether it evaluates to a string or a number. <br><br> **Note:** Have students share their answers by holding up the sticky notes for each solution. <br><br> ![](https://curriculum.code.org/media/uploads/animation.png) **Click for animation: ** Click through to see the answers. | \n|![](https://curriculum.code.org/media/uploads/CSPVariables8.svg) | **Say:** Now let's write programs. We're going to stop using sticky notes, but will highlight strings and numbers to help you remember the difference. |\n|![](https://curriculum.code.org/media/uploads/CSPVariables9.svg) | **Say:** Here's what a program looks like. The var command tells the computer to create a variable. |\n|![](https://curriculum.code.org/media/uploads/CSPVariables10.svg) | **Say:** The left arrow is called the \"assignment operator\". That's just a fancy word for \"put this value in the baggy\". If we wanted to read line 01 we would say \"pow gets 3\". We know that variables can only hold one sticky note or value. So if we try to assign a variable that already has a value in it, we just throw the old one away. <br><br> ![](https://curriculum.code.org/media/uploads/animation.png) **Click for animation: ** Click through to run the program. <br><br> **Say:** In a computer you don't actually put the old number in a trash can, it's totally deleted! The numbers are stored as electrical charges somewhere in your computer's memory. When you assign a new number to a variable it actually erases the old number, and stores  the new number in its place. |\n|![](https://curriculum.code.org/media/uploads/CSPVariables11.svg) | **Do This:** Run this program. Compare your results with another group. <br><br> **Note:** Walk around the room making sure students are following the rules correctly.  No baggies should have more than one sticky note in them. <br><br> ![](https://curriculum.code.org/media/uploads/animation.png) **Click for animation: ** Click through to see the answers.  |\n|![](https://curriculum.code.org/media/uploads/CSPVariables12.svg) | **Say:** Now let's combine what we've learned. You can use assignment with expressions. In order for this to work you need to evaluate first, then assign. This makes sense because we know we can only put one sticky note in the variable baggy. |\n|![](https://curriculum.code.org/media/uploads/CSPVariables13.svg) | **Do This:** Run the program. Compare your results with another group. <br><br> **Note:** Walk around the room making sure students are evaluating before they assign. Reinforce the language \"gets\" for the assignment operator. For example, line 02 would read \"fly gets two plus day\". <br><br> ![](https://curriculum.code.org/media/uploads/animation.png) **Click for animation: ** Click through to see the answers. |\n|![](https://curriculum.code.org/media/uploads/CSPVariables14.svg) | **Say:** We're not going to highlight our strings and numbers anymore. We can just use double quotes around the strings to tell the difference.  |\n|![](https://curriculum.code.org/media/uploads/CSPVariables15.svg) | **Do This:** Run through this program together as a class. <br><br> **Note:** Reinforce: <br><br> Evaluate,  then assign <br><br> As shown on line 04, there's no special \"connection\" made between variables. All we're doing is moving information around. <br><br> Variables only hold one value, the old one is \"thrown away\" (again, what's happening is that assignment replaces the electric charges somewhere inside the computer so the old value is actually \"erased\" or \"deleted\") <br><br> ![](https://curriculum.code.org/media/uploads/animation.png) **Click for animation: ** Click through to run the program. |\n|![](https://curriculum.code.org/media/uploads/CSP-Unit-4---Variables,-Conditionals,-and-Functions_slide22.svg) | **Do This:** Run this program. Compare your results with another group. <br><br> **Note:** Have students hold up their two baggies when they're done. Make sure students are evaluating and then assigning. Call out that last three lines which can be a little nutty to think about. You're using a variable's value as part of the assignment. This lets it \"count up by one\". <br><br> ![](https://curriculum.code.org/media/uploads/animation.png) **Click for animation: ** Click through to see the answers.  |\n|![](https://curriculum.code.org/media/uploads/CSPVariables17.svg) | **Do This:** Review the key takeaways with students. |\n|![](https://curriculum.code.org/media/uploads/CSPVariables18.svg) | **Say:** In some programming languages the assignment operator is not written with an arrow but is written as an equal sign. |\n|![](https://curriculum.code.org/media/uploads/CSPVariables19.svg) | **Say:** Here's how the assignment operator looks in Javascript. We'll see more of this in the next lesson! <br><br> **Note:** In math = means \"are equal forever\". In programming = means \"put this value in this variable\".|\n\n\n\n\n\n\n\n\n\n"
       },
       "seeding_key": {
-        "activity_section.key": "7810178c-4651-4ffc-891d-cf024e93699c",
-        "lesson_activity.key": "3d92cf6b-9b56-430e-8713-7e84c10032a7"
+        "activity_section.key": "12df10e1-0425-4809-afec-64f92f4ec5bf",
+        "lesson_activity.key": "64fc8a32-7181-4f50-849d-7bc4aefa320e"
       }
     },
     {
-      "key": "2dbe0ecb-ef60-424d-80eb-5ca8b290c5c7",
-      "position": 1,
+      "key": "388d449e-6bda-48c5-afa0-b5b1b4b35f7f",
+      "position": 10,
+      "properties": {
+        "duration": "10",
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "activity_section.key": "388d449e-6bda-48c5-afa0-b5b1b4b35f7f",
+        "lesson_activity.key": "64fc8a32-7181-4f50-849d-7bc4aefa320e"
+      }
+    },
+    {
+      "key": "a4b80b54-97cd-44ef-8841-7c78fc9919d7",
+      "position": 11,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> \r\n **Journal:** Have students add the following words to their journals: Expression, Variable, Assignment Operator.  \r\n\r\n* **Expression:** a combination of operators and values that evaluates to a single value.\r\n* **Variable** an abstraction inside the program that can hold a value.  Each variable has associated data storage that represents one value at a time.\r\n* **Assignment operator:** allows a program to change the value represented by a variable."
       },
       "seeding_key": {
-        "activity_section.key": "2dbe0ecb-ef60-424d-80eb-5ca8b290c5c7",
-        "lesson_activity.key": "4ea22675-a085-4083-bdf2-5b95666d0282"
+        "activity_section.key": "a4b80b54-97cd-44ef-8841-7c78fc9919d7",
+        "lesson_activity.key": "64fc8a32-7181-4f50-849d-7bc4aefa320e"
       }
     },
     {
-      "key": "67886889-4d00-4fa8-a35f-83457d731e0f",
-      "position": 2,
+      "key": "971b3c9b-08a6-4c09-839c-c70e69697cc7",
+      "position": 12,
       "properties": {
         "description": "This isn't the last time we'll look at these definitions and it's fine to update them as you get more experience. In fact, I'm sure you'll have a lot more to add once we see all of these concepts used inside of apps when we meet next time!",
         "remarks": true
       },
       "seeding_key": {
-        "activity_section.key": "67886889-4d00-4fa8-a35f-83457d731e0f",
-        "lesson_activity.key": "4ea22675-a085-4083-bdf2-5b95666d0282"
+        "activity_section.key": "971b3c9b-08a6-4c09-839c-c70e69697cc7",
+        "lesson_activity.key": "64fc8a32-7181-4f50-849d-7bc4aefa320e"
       }
     },
     {
-      "key": "28eb39b2-5325-42c9-b239-f0e7c99cc150",
-      "position": 3,
+      "key": "d6da62d7-8bef-41f9-ae5c-c9214c430bf0",
+      "position": 13,
       "properties": {
         "description": "---"
       },
       "seeding_key": {
-        "activity_section.key": "28eb39b2-5325-42c9-b239-f0e7c99cc150",
-        "lesson_activity.key": "4ea22675-a085-4083-bdf2-5b95666d0282"
+        "activity_section.key": "d6da62d7-8bef-41f9-ae5c-c9214c430bf0",
+        "lesson_activity.key": "64fc8a32-7181-4f50-849d-7bc4aefa320e"
       }
     },
     {
-      "key": "f967a0f2-4359-4bd9-bdfe-1f53e29876ea",
-      "position": 4,
+      "key": "1d888998-9023-4eb7-9428-c43088cea317",
+      "position": 14,
       "properties": {
         "description": "*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*\r\n\r\n**Question:** What will the value of score be at the end of the program?\r\n\r\n```\r\nvar score\r\nscore <- 3\r\nscore <- score + 1\r\nscore <- \"The score is: \" + score\r\n```",
-        "name": "Check For Understanding",
-        "progression_name": "Check For Understanding"
+        "progression_name": "Explore - Check For Understanding"
       },
       "seeding_key": {
-        "activity_section.key": "f967a0f2-4359-4bd9-bdfe-1f53e29876ea",
-        "lesson_activity.key": "4ea22675-a085-4083-bdf2-5b95666d0282"
+        "activity_section.key": "1d888998-9023-4eb7-9428-c43088cea317",
+        "lesson_activity.key": "64fc8a32-7181-4f50-849d-7bc4aefa320e"
+      }
+    },
+    {
+      "key": "3494e852-2062-428d-a521-ff2556175119",
+      "position": 1,
+      "properties": {
+        "description": "Yesterday we explored storing information like a computer. Computers store each piece of information in a variable. In Javascript, we name or declare a variable with the keyword `var`. Today we are going to look at a new app that stores information in variables.\n",
+        "duration": "5",
+        "name": "Warmup - Preview the Lesson",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "3494e852-2062-428d-a521-ff2556175119",
+        "lesson_activity.key": "1803be73-5edb-4711-9e70-ae02767cec86"
+      }
+    },
+    {
+      "key": "e9238058-3f4c-4b64-98fc-80c52d940994",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Discuss:** *Let's do a quick review. How does a baggy represent a variable?*\n\n**Discussion Goal:** The baggy represents a variable by storing one item: a value on a sticky note placed in a named baggy. The value in the baggy can be changed at any time, just like a variable's value can change. \n"
+      },
+      "seeding_key": {
+        "activity_section.key": "e9238058-3f4c-4b64-98fc-80c52d940994",
+        "lesson_activity.key": "1803be73-5edb-4711-9e70-ae02767cec86"
+      }
+    },
+    {
+      "key": "94479237-73df-48a1-a9a4-d330f62830f8",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Group:** Place students in pairs. One student per group should navigate to the lesson on Code Studio.",
+        "duration": "30",
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "activity_section.key": "94479237-73df-48a1-a9a4-d330f62830f8",
+        "lesson_activity.key": "1803be73-5edb-4711-9e70-ae02767cec86"
+      }
+    },
+    {
+      "key": "f8d0b5a2-ce45-44dd-a368-47ed95f736c5",
+      "position": 4,
+      "properties": {
+        "description": "#### Investigation #1: Thermostat App v.1\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Level 5: Thermostat App v.1:** This level introduces a new app for students to investigate. It represents a Thermostat App where the temperature can be changed up and down. \n\n* Run the app: Let students run the app for a few minutes.\n* Predict: Students predict the information that is being stored in variables. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Level 6: Thermostat App v.1 Code:**  \n\n* Assign Code Sections: Assign half the pairs to investigate the first section on lines 1-12. The other half investigates the second half on lines 14-21. \n* Read Code: Groups should carefully read the code for their section making sure they understand how it works. Give them 3 minutes to do so. \n* Explain Your Section: Have partners make a group with members of the other section and carefully explain how their section works line by line.",
+        "progression_name": "Investigation #1: Thermostat App v.1 "
+      },
+      "seeding_key": {
+        "activity_section.key": "f8d0b5a2-ce45-44dd-a368-47ed95f736c5",
+        "lesson_activity.key": "1803be73-5edb-4711-9e70-ae02767cec86"
+      }
+    },
+    {
+      "key": "2cf50eab-76bd-42b0-96a2-daaad0910adf",
+      "position": 5,
+      "properties": {
+        "description": "**Discuss:** Ask a few members of each section to quickly share out how their section works. Display the code at the front so you can talk through it together.\n\nHere are some points that students are likely to bring up while discussing their code:\n\n**Lines 1-12:**\n* Two variables are created: `temp` and `tempF`. `temp` gets the value `70` and `TempF` is set to an empty string, which is represented with empty quotation marks.\n* On line 7, an [`onEvent`(#fff176)](/docs/applab/onEvent/) is created for when the `downButton` is clicked.\n* When the down button is clicked, the `temp` variable decreases by one.\n* Then the `tempF` variable is updated with the current value of `temp` joined with the letter `F`.\n* The text on the screen is set to display the value stored in the variable `tempF`\n* A sound is played.\n\n**Lines 14-21**\n\n* On line 16, an [`onEvent`(#fff176)](/docs/applab/onEvent/) is created for when the `upButton` is clicked.\n* When the up button is clicked, the `temp` variable is increased by one.\n* Then the `tempF` variable is updated with the current value of `temp` joined with the letter `F`.\n* The text on the screen is set to display the value stored in the variable `tempF`\n* A sound is played"
+      },
+      "seeding_key": {
+        "activity_section.key": "2cf50eab-76bd-42b0-96a2-daaad0910adf",
+        "lesson_activity.key": "1803be73-5edb-4711-9e70-ae02767cec86"
+      }
+    },
+    {
+      "key": "9d2b3ffd-a57a-437d-8c78-7f29d9c8ee19",
+      "position": 6,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Display the slide showing students how to add a watcher in the debugging panel to track the value a variable stores. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Modify:** have groups return to their original seats. Give them a couple of minutes to work on modifying the app to change the degrees by two when the up and down arrows are clicked."
+      },
+      "seeding_key": {
+        "activity_section.key": "9d2b3ffd-a57a-437d-8c78-7f29d9c8ee19",
+        "lesson_activity.key": "1803be73-5edb-4711-9e70-ae02767cec86"
+      }
+    },
+    {
+      "key": "775940a9-f3d6-4e6a-9ead-822c51f5f345",
+      "position": 7,
+      "properties": {
+        "description": "#### Investigation #2: Thermostat App v.2\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Level 7:** This is a predict level where students must first make a prediction about how [`Math.round`(#FFB74D)](/docs/applab/mathRound/) works before they can run the code.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Level 8:** This program is an updated version of the Thermostat app. This time students should continue to work in partners but do not need to work with other groups. They will need to:\n\n* Run the app: Let students run the app for a few minutes.\n* Discuss Changes: Talk through how the app is different than the first version. \n* Find the [`Math.round`(#FFB74D)](/docs/applab/mathRound/) command: Discuss with a partner how this command might work. Try deleting [`Math.round`(#FFB74D)](/docs/applab/mathRound/) in lines 3, 15, and 28. What happens? Add it back in.",
+        "progression_name": "Investigation #2: Thermostat App v.2"
+      },
+      "seeding_key": {
+        "activity_section.key": "775940a9-f3d6-4e6a-9ead-822c51f5f345",
+        "lesson_activity.key": "1803be73-5edb-4711-9e70-ae02767cec86"
+      }
+    },
+    {
+      "key": "29fcc2d9-baa4-41b8-8d68-8f61162a776a",
+      "position": 8,
+      "properties": {
+        "description": "*  Class Discussion: Ask a few students to explain what's happening on line 3 with [`Math.round`(#FFB74D)](/docs/applab/mathRound/).\n* Modify the Code: Change the code so that no space displays between the temperature and the unit description (\"F\" or \"C\").\n\n**Discussion Goal:** On line 3, the Fahrenheit temperature is converted to Celsius. [`Math.round`(#FFB74D)](/docs/applab/mathRound/) rounds a given value to the nearest integer. \n"
+      },
+      "seeding_key": {
+        "activity_section.key": "29fcc2d9-baa4-41b8-8d68-8f61162a776a",
+        "lesson_activity.key": "1803be73-5edb-4711-9e70-ae02767cec86"
+      }
+    },
+    {
+      "key": "90dc80a0-ac97-49e1-a399-8418ec7cd453",
+      "position": 9,
+      "properties": {
+        "description": "#### Investigation #3: Thermostat App v.3\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Level 9:** This program is again an updated version of the Thermostat app with a login screen. \n\n* Run the app: Let students run the app for a few minutes.\n* Predict: Students predict the information that is being stored in variables. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Level 10:** The code for Thermostat App v.3 is displayed.\n\n* Read Code: Give students a few minutes to read and discuss the code with their partners. What has changed? What has stayed the same?",
+        "progression_name": "Investigation #3: Thermostat App v.3"
+      },
+      "seeding_key": {
+        "activity_section.key": "90dc80a0-ac97-49e1-a399-8418ec7cd453",
+        "lesson_activity.key": "1803be73-5edb-4711-9e70-ae02767cec86"
+      }
+    },
+    {
+      "key": "5616002d-4950-4445-84fd-00ce93612eb4",
+      "position": 10,
+      "properties": {
+        "description": "*  Class Discussion: Look at line 40. How does [`getText()`(#fff176)](/docs/applab/getText/) work? What is it doing?\n* Modify the Code: Add an explanation point `\"!\"` to the end of the string stored in `userName`.\n\n**Discussion Goal:**[`getText`(#fff176)](/docs/applab/getText/) gets the string of text that is found in the element with the given id. In this case, the id is `\"nameInput\"`. In our app, the name written in the `\"nameInput\"` element is concatenated with \"Hi\" and then stored in the variable `myName`. \n"
+      },
+      "seeding_key": {
+        "activity_section.key": "5616002d-4950-4445-84fd-00ce93612eb4",
+        "lesson_activity.key": "1803be73-5edb-4711-9e70-ae02767cec86"
+      }
+    },
+    {
+      "key": "c35c3a09-6907-49c0-976c-04290505210a",
+      "position": 11,
+      "properties": {
+        "description": "#### Patterns\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "c35c3a09-6907-49c0-976c-04290505210a",
+        "lesson_activity.key": "1803be73-5edb-4711-9e70-ae02767cec86"
+      }
+    },
+    {
+      "key": "33bbad81-a857-4001-b7f4-1adca0a61118",
+      "position": 12,
+      "properties": {
+        "description": "We are learning two patterns here:\n\n* Counter Pattern with Event\n* Variables with String Concatenation Pattern\n\nThe Counter Pattern with Event is a common pattern for updating variables that you will use in making many different apps. We call it the **Counter Pattern with Event**.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "33bbad81-a857-4001-b7f4-1adca0a61118",
+        "lesson_activity.key": "1803be73-5edb-4711-9e70-ae02767cec86"
+      }
+    },
+    {
+      "key": "f71ca940-13a9-4ea2-8a5d-70b9dc24fad7",
+      "position": 13,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Talk through the pattern with students."
+      },
+      "seeding_key": {
+        "activity_section.key": "f71ca940-13a9-4ea2-8a5d-70b9dc24fad7",
+        "lesson_activity.key": "1803be73-5edb-4711-9e70-ae02767cec86"
+      }
+    },
+    {
+      "key": "fd798b5e-ca56-4b26-9e9f-c0d93e5f1266",
+      "position": 14,
+      "properties": {
+        "description": "**Discuss:** *With a partner, discuss the following:*\n\n**Discussion Goal:** Students should step through each line of the pattern, explaining what's happening. \n\nCounter Pattern with Event:\n\n* myVar gets the value 0\n* When the event is triggered, myVar is updated getting the current value of myVar and adding 1.\n\nThe **Counter Pattern with Event** might be used to update a score in a game when an item is clicked.\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "fd798b5e-ca56-4b26-9e9f-c0d93e5f1266",
+        "lesson_activity.key": "1803be73-5edb-4711-9e70-ae02767cec86"
+      }
+    },
+    {
+      "key": "2fc79dd8-db8e-4ea8-873e-bdb251d21b30",
+      "position": 15,
+      "properties": {
+        "description": "* The \"Counter Pattern with Event\" should look familiar! How would you explain this pattern to another person? \n* When might you want to use the \"Counter Pattern with Event\"?"
+      },
+      "seeding_key": {
+        "activity_section.key": "2fc79dd8-db8e-4ea8-873e-bdb251d21b30",
+        "lesson_activity.key": "1803be73-5edb-4711-9e70-ae02767cec86"
+      }
+    },
+    {
+      "key": "4c51d0c1-602c-4e6e-9f6b-64a5e98bd8fd",
+      "position": 16,
+      "properties": {
+        "description": "Variables can store many different types of information including numbers and Strings. Anything placed inside of the quotation marks becomes a String. \n\nGuess what! There's a pattern for working with Strings. When we want to combine Strings with other Strings, numbers, or even with another variable we call that concatenation.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "4c51d0c1-602c-4e6e-9f6b-64a5e98bd8fd",
+        "lesson_activity.key": "1803be73-5edb-4711-9e70-ae02767cec86"
+      }
+    },
+    {
+      "key": "119dd4ee-adb2-442a-8b96-3062ca87731d",
+      "position": 17,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Display:** Talk through the pattern with students.\n\n**Discuss:** *Explain to a partner how the \"Variable with String Concatenation Pattern\" works.*\n\n**Discussion Goal:** Students should be able to verbally explain how the **Variable with String Concatenation Pattern** works. \n\n* myString gets the value \"rock\"\n* myOtherStrings gets the value \"roll\"\n* myStory gets the value that is stored in myString (\"rock\") and combines that with a string \"and\" and the value stored in myOtherString (\"roll\")\n* myStory now stores the value: \"rock and roll\""
+      },
+      "seeding_key": {
+        "activity_section.key": "119dd4ee-adb2-442a-8b96-3062ca87731d",
+        "lesson_activity.key": "1803be73-5edb-4711-9e70-ae02767cec86"
+      }
+    },
+    {
+      "key": "98260056-c47b-476f-b58e-df192eb21748",
+      "position": 18,
+      "properties": {
+        "description": "The patterns we learned today are present in many different kinds of apps. As we learn new patterns, they will show up in the \"Help & Tips\" tab at the top of your screen on programming levels.",
+        "duration": "5",
+        "name": "Wrap Up",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "98260056-c47b-476f-b58e-df192eb21748",
+        "lesson_activity.key": "1803be73-5edb-4711-9e70-ae02767cec86"
+      }
+    },
+    {
+      "key": "739a9fb3-194d-4b8b-9de0-a75d64969df9",
+      "position": 19,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Discuss:** *Let's review. What can be stored in a variable? Why is using a meaningful name for the variable important?*\n\n**Discussion Goal:** \n\nWhat can be stored in a variable?\n\n* At this point, students should know that these two things can be stored in variables. Students will learn about other data types that can be stored in variables in later lessons. \n\t* Numbers\n\t* Strings\n\t\t* Including concatenated strings (`temp + \" F\"`)\n\nWhy is using a meaningful name for the variable important?\n\n* When you write code, you are not just writing for the computer, you are also writing for people. Using meaningful names help people be able to read your code easier.\n* It also helps readers predict what values may be stored in the variables."
+      },
+      "seeding_key": {
+        "activity_section.key": "739a9fb3-194d-4b8b-9de0-a75d64969df9",
+        "lesson_activity.key": "1803be73-5edb-4711-9e70-ae02767cec86"
+      }
+    },
+    {
+      "key": "6849dcaf-7a21-453b-948c-73a7b0afc010",
+      "position": 20,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Journal:** Add to your journal the definition for variable."
+      },
+      "seeding_key": {
+        "activity_section.key": "6849dcaf-7a21-453b-948c-73a7b0afc010",
+        "lesson_activity.key": "1803be73-5edb-4711-9e70-ae02767cec86"
+      }
+    },
+    {
+      "key": "49907180-db04-48c7-bdee-520cc48d4395",
+      "position": 21,
+      "properties": {
+        "description": "Today we've learned a lot about how variables work in actual programs.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "49907180-db04-48c7-bdee-520cc48d4395",
+        "lesson_activity.key": "1803be73-5edb-4711-9e70-ae02767cec86"
+      }
+    },
+    {
+      "key": "089ffea8-c745-42ad-9b57-4b1f5fc7c4d1",
+      "position": 22,
+      "properties": {
+        "description": "----\n\n#### Assessment: Check For Understanding\n*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*\n\n**Question:** Explain in your own words the process of creating and updating a variable. How does the Counter Pattern with Event work?",
+        "progression_name": "Investigate - Check For Understanding"
+      },
+      "seeding_key": {
+        "activity_section.key": "089ffea8-c745-42ad-9b57-4b1f5fc7c4d1",
+        "lesson_activity.key": "1803be73-5edb-4711-9e70-ae02767cec86"
+      }
+    },
+    {
+      "key": "cb5e2b07-5c45-46d7-b93f-ca4903e1b022",
+      "position": 1,
+      "properties": {
+        "description": "Today we're going to have a chance to practice programming with a lot of the concepts and patterns we've explored over the last two lessons. I encourage you to go through these with a partner, but pay close attention to what each other is doing. In our next lesson you're going to have to use a lot of these on an independent project, and these activities are good practice for what you'll find there! Alright, let's get to it!",
+        "duration": "2",
+        "name": "Warm Up - Quick Setup",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "cb5e2b07-5c45-46d7-b93f-ca4903e1b022",
+        "lesson_activity.key": "8577c4ca-4ba7-4b86-9bde-4e5ef5aba71f"
+      }
+    },
+    {
+      "key": "8b853d2d-5a5f-4951-aec5-ae9049c83d7b",
+      "position": 2,
+      "properties": {
+        "description": "**Group:** It is recommended that students work in pairs for this lesson and a number of the activities feature discussions. Consider using pair programming, having drivers and navigators switch every 3 minutes, not every level.\n\n**Distribute:** Optionally pass out a plastic cup or other manipulative they can place on their computer when they are stuck as a signal that they need support.\n",
+        "duration": "38",
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "activity_section.key": "8b853d2d-5a5f-4951-aec5-ae9049c83d7b",
+        "lesson_activity.key": "8577c4ca-4ba7-4b86-9bde-4e5ef5aba71f"
+      }
+    },
+    {
+      "key": "0f4f7aa1-7da6-43c5-a23a-0257ced75871",
+      "position": 3,
+      "properties": {
+        "description": "Today you're mostly going to practice what we've learned about programming with variables. As always you should be using the debugging process to help you as you work on issues. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Let's review the debugging process first. Debugging is the process of finding and fixing problems in code. We previously talked about these four steps: Describe, Hunt, Try, and Document. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Today we're going to also focus on three particular debugging skills\n\n1. Slowing down code with the speed slider\n2. Using console.log to get output\n3. Using the Watch area to watch your variables change values",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "0f4f7aa1-7da6-43c5-a23a-0257ced75871",
+        "lesson_activity.key": "8577c4ca-4ba7-4b86-9bde-4e5ef5aba71f"
+      }
+    },
+    {
+      "key": "1a9e0be0-9fed-47ce-89f4-2ff7633e70a7",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Do This:** Direct students to Code Studio, Lesson 1 - Level 12."
+      },
+      "seeding_key": {
+        "activity_section.key": "1a9e0be0-9fed-47ce-89f4-2ff7633e70a7",
+        "lesson_activity.key": "8577c4ca-4ba7-4b86-9bde-4e5ef5aba71f"
+      }
+    },
+    {
+      "key": "461fdc6d-e475-4381-966c-00c17ed20285",
+      "position": 5,
+      "properties": {
+        "description": "#### Assigning Numbers and Strings\n\n**Levels 12-13 Assigning Numbers and Strings:** These levels only use the console.log() command which prints commands in the debug console. Some key points in these levels.\n\n* Students should practice using the \"Watch\" area to track how variables change over a program\n* Students are asked to discuss what they see with a partner\n* These levels heavily reinforce language around assigning and creating variables\n* Level 13 is a debugging-heavy level which introduces more rules about syntax.\n",
+        "progression_name": "Practice Assigning Numbers and Strings"
+      },
+      "seeding_key": {
+        "activity_section.key": "461fdc6d-e475-4381-966c-00c17ed20285",
+        "lesson_activity.key": "8577c4ca-4ba7-4b86-9bde-4e5ef5aba71f"
+      }
+    },
+    {
+      "key": "a614f66b-fbd4-431d-8acd-8f28a053a6d3",
+      "position": 6,
+      "properties": {
+        "description": "#### Variables and Operators\n\n**Levels 14-18 Variables and Operators:** These levels have students practice writing more complex expressions and using operators. A few tricky things to look out for\n\n* These levels transition from using only [`console.log`(#BB77C7)](/docs/applab/console.log/) to using full apps with user interfaces.\n* Level 16 introduces `\\n`, the new line character\n* Students continue to be encouraged to discuss what they are learning with a neighbor\n* Levels 17 and 18 introduce the use of the counter pattern with numbers and strings. Students may need to consult the Help and Tips tab for support.",
+        "progression_name": "Practice Variables and Operators"
+      },
+      "seeding_key": {
+        "activity_section.key": "a614f66b-fbd4-431d-8acd-8f28a053a6d3",
+        "lesson_activity.key": "8577c4ca-4ba7-4b86-9bde-4e5ef5aba71f"
+      }
+    },
+    {
+      "key": "c371a3cd-b8c6-403b-bc3e-57c9a04d6051",
+      "position": 7,
+      "properties": {
+        "description": "**Regroup:** Bring the class back together to watch the Scope Practice Video.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Scope Practice video. This video is located on the slides and on Level 19. You may opt to have students watch it alone or as a class. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Discuss debugging scope issues with the next three slides before directing students back to Code Studio."
+      },
+      "seeding_key": {
+        "activity_section.key": "c371a3cd-b8c6-403b-bc3e-57c9a04d6051",
+        "lesson_activity.key": "8577c4ca-4ba7-4b86-9bde-4e5ef5aba71f"
+      }
+    },
+    {
+      "key": "9de523dc-efc9-4bc1-beae-de42f5706891",
+      "position": 8,
+      "properties": {
+        "description": "#### Debugging Scope Issues\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Levels 19-20 Debugging Scope Issues:** These levels identify a common bug that can come up when working with variables. While students should be aware of this bug, they don't quite have the background they'd need to fully understand it. For now support students in following the three main takeaways.\n\n* Create variables once\n* Create variables at the top of your program\n* Don't create variables inside [`onEvent()`(#fff176)](/docs/applab/onEvent/) or `function()` blocks",
+        "progression_name": "Practice Debugging Scope Issues"
+      },
+      "seeding_key": {
+        "activity_section.key": "9de523dc-efc9-4bc1-beae-de42f5706891",
+        "lesson_activity.key": "8577c4ca-4ba7-4b86-9bde-4e5ef5aba71f"
+      }
+    },
+    {
+      "key": "3a2b91e9-7ec6-4ad9-876c-e61593538ffa",
+      "position": 9,
+      "properties": {
+        "description": "#### Putting It Together\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Level 10 Putting It All Together:** These levels ask students to put together many of the concepts they've seen so far. This is an opportunity to have a bit more of a \"blank screen moment\" while still being able to use some starter code as a guide.\n * **Level 10a:** - Students practice using code from one button to make others work.\n * **Level 10b:** - Students add code to keep track of different variables depending on the event.\n * **Level 10c:** - Students practice using string concatenation to add captions to a photo.",
+        "progression_name": "Practice Putting It Together",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Choice Level:** Consider providing opportunities for students to demonstrate and explain their solutions to certain choice levels to the entire class. This helps center students as classroom leaders and challenges students to explain their thinking process."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "3a2b91e9-7ec6-4ad9-876c-e61593538ffa",
+        "lesson_activity.key": "8577c4ca-4ba7-4b86-9bde-4e5ef5aba71f"
+      }
+    },
+    {
+      "key": "a24b4feb-84ea-45e3-9b34-e1429d4d3b13",
+      "position": 10,
+      "properties": {
+        "description": "#### Close The Loop\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Discuss:** *What aspects of working with variables do you feel like clicked today? What do you still feel like you have trouble with?*\n\n**Discussion Goal:** Use this opportunity to address any lingering questions or misconceptions in the room. You can also use this as a source of discussion topics to kick off the following lesson. As you lead the discussion, call out the many resources students have access to help when they're getting stuck. \n\n**Discuss:** Have students share with one another before sharing with the whole class.",
+        "duration": "5",
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "activity_section.key": "a24b4feb-84ea-45e3-9b34-e1429d4d3b13",
+        "lesson_activity.key": "8577c4ca-4ba7-4b86-9bde-4e5ef5aba71f"
+      }
+    },
+    {
+      "key": "429ab26e-053f-4a78-8a34-005a669d87fe",
+      "position": 11,
+      "properties": {
+        "description": "Variables can be a little bit tricky, but I saw a lot of good progress today in nailing down this concept. We may have a  few lingering questions, but you also have a lot of resources available. Next time you'll have a chance to put all this together by programming an app that starts with \"the blank screen\"!",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "429ab26e-053f-4a78-8a34-005a669d87fe",
+        "lesson_activity.key": "8577c4ca-4ba7-4b86-9bde-4e5ef5aba71f"
+      }
+    },
+    {
+      "key": "a478b361-51c0-4958-b025-f175e24aa583",
+      "position": 12,
+      "properties": {
+        "description": "---\n\n*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*\n\n**Question:** What will be displayed after this code segment is run?\n\n![](https://images.code.org/7a23b0d66914dccc07c0818a5b459599-image-1568057423164.30.17 PM.png)",
+        "progression_name": "Practice Check For Understanding"
+      },
+      "seeding_key": {
+        "activity_section.key": "a478b361-51c0-4958-b025-f175e24aa583",
+        "lesson_activity.key": "8577c4ca-4ba7-4b86-9bde-4e5ef5aba71f"
+      }
+    },
+    {
+      "key": "b20e56e8-378f-4ad8-899d-880f58a2ade4",
+      "position": 1,
+      "properties": {
+        "description": "For the past few days, we've learned a lot about storing and updating information in variables. Today you are going to have an opportunity to demonstrate your learning by making an app.",
+        "duration": "2",
+        "name": "Warm Up",
+        "remarks": true,
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Short Intro:** The Warm Up today is short and light. Students should spend the maximum amount of time working on their projects."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "b20e56e8-378f-4ad8-899d-880f58a2ade4",
+        "lesson_activity.key": "ccf3129a-0d0d-4247-8cb4-150b9d7b62ec"
+      }
+    },
+    {
+      "key": "bbc0789c-0ba9-463a-ad64-32b734411b23",
+      "position": 2,
+      "properties": {
+        "description": "**Group:** Make a determination as to whether this project will be completed in pairs or individually. You may even choose to let students decide.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students explore the working Photo Maker App in Level 24.",
+        "duration": "38",
+        "name": "Activity",
+        "progression_name": "Try the Photo Liker App"
+      },
+      "seeding_key": {
+        "activity_section.key": "bbc0789c-0ba9-463a-ad64-32b734411b23",
+        "lesson_activity.key": "ccf3129a-0d0d-4247-8cb4-150b9d7b62ec"
+      }
+    },
+    {
+      "key": "43d0a24c-5e30-4c6e-a9c0-a8aaf7267036",
+      "position": 3,
+      "properties": {
+        "description": "\nIf students are not working in pairs they should still discuss with a neighbor.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** \n\n* *What does this app do?*\n  * It lets a user \"like\" an image and add comments to it. \n* *What are the inputs?*\n  * The thumbs up and thumbs down button, the text input for adding a new comment, and the button to add the comment.\n* *What are the outputs?*\n  * The number showing how many thumbs up the image has.\n* *What's one piece of information that might be stored in a variable?*\n  * The number of likes and all the comments added so far. ",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Supporting Students:** While students are working on their apps, circulate the room and check in with students who need a little help. Encourage students to collaborate and discuss bugs with each other.  \n\n**Debugging:** Review with students steps they can use to debug if they get stuck:\n\n* Run the code on turtle mode\n* Add the variables to the watcher\n* Use console.log() to get output from the app\n* Explain the code to a friend\n* Read the code carefully line by line, trying to decide which one is causing the error."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "43d0a24c-5e30-4c6e-a9c0-a8aaf7267036",
+        "lesson_activity.key": "ccf3129a-0d0d-4247-8cb4-150b9d7b62ec"
+      }
+    },
+    {
+      "key": "3f2a85b2-51d0-4ec7-b1b5-e87a02729aac",
+      "position": 4,
+      "properties": {
+        "description": "Now let's build the this app. The screen has been set up for you - it's your job to add the code!",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "3f2a85b2-51d0-4ec7-b1b5-e87a02729aac",
+        "lesson_activity.key": "ccf3129a-0d0d-4247-8cb4-150b9d7b62ec"
+      }
+    },
+    {
+      "key": "5c0e26ba-f7e8-462e-b78c-f380c2aceae6",
+      "position": 5,
+      "properties": {
+        "description": "**Distribute:** Give students copies of [CSP Variables Make - Photo Liker App - Activity Guide](https://docs.google.com/document/d/1q13ZBiTwSUuE2zG5nSIvYv7QASLS784LjmpJis9vzQY/edit) if you will be using it during the class.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to level three where they complete the Photo Liker App. Given this is students first Make project, it is highly recommended that students practice with this guide the first time. In future Make lessons they may opt not to use this guide. For students who need more detailed guidance once they've started programming, Step 3 includes step by step instructions that the student can follow.\n\nBased on the needs of your classroom decide whether you will collectively go through the activity guide or have students complete it individually.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Submit:** Encourage students to check the rubric on the last page of the Activity Guide before submitting.",
+        "progression_name": "Make the Photo Liker App"
+      },
+      "seeding_key": {
+        "activity_section.key": "5c0e26ba-f7e8-462e-b78c-f380c2aceae6",
+        "lesson_activity.key": "ccf3129a-0d0d-4247-8cb4-150b9d7b62ec"
+      }
+    },
+    {
+      "key": "518b543d-0cd1-45fc-9dc7-24d75b9ae518",
+      "position": 6,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Awesome work today! Make sure to submit your project when you're done with it!",
+        "duration": "5",
+        "name": "Wrap Up",
+        "remarks": true,
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Maximize Work Time:** The wrap up is short to allow the maximum amount of time for students to complete the activity. \n\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "518b543d-0cd1-45fc-9dc7-24d75b9ae518",
+        "lesson_activity.key": "ccf3129a-0d0d-4247-8cb4-150b9d7b62ec"
+      }
+    },
+    {
+      "key": "feb3aa97-b5e0-4bb3-b90d-17de7a32ab32",
+      "position": 7,
+      "properties": {
+        "description": "---\n#### Assessment: Make Project\n\nUse the rubric provided with the project to assess student projects."
+      },
+      "seeding_key": {
+        "activity_section.key": "feb3aa97-b5e0-4bb3-b90d-17de7a32ab32",
+        "lesson_activity.key": "ccf3129a-0d0d-4247-8cb4-150b9d7b62ec"
       }
     },
     {
@@ -3808,10 +4347,7 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSP U4 My Pet Rock Example App_2023"
-        ],
-        "progression": "Sample Apps"
+        "progression": "Explore Sample Apps"
       },
       "bonus": false,
       "seeding_key": {
@@ -3821,7 +4357,7 @@
         "lesson.key": "Variables Explore",
         "lesson_group.key": "csp_variables",
         "script.name": "csp4-2023",
-        "activity_section.key": "f8fa7353-3a18-4fd0-947f-5775b5b03e31"
+        "activity_section.key": "f23982d1-616f-4f18-a9e6-e8705b0d18b7"
       },
       "level_keys": [
         "CSP U4 My Pet Rock Example App_2023"
@@ -3833,10 +4369,7 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U4 L01 Poetry App_2023"
-        ],
-        "progression": "Sample Apps"
+        "progression": "Explore Sample Apps"
       },
       "bonus": false,
       "seeding_key": {
@@ -3846,7 +4379,7 @@
         "lesson.key": "Variables Explore",
         "lesson_group.key": "csp_variables",
         "script.name": "csp4-2023",
-        "activity_section.key": "f8fa7353-3a18-4fd0-947f-5775b5b03e31"
+        "activity_section.key": "f23982d1-616f-4f18-a9e6-e8705b0d18b7"
       },
       "level_keys": [
         "U4 L01 Poetry App_2023"
@@ -3858,10 +4391,7 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U4 L01 Thermostat App_2023"
-        ],
-        "progression": "Sample Apps"
+        "progression": "Explore Sample Apps"
       },
       "bonus": false,
       "seeding_key": {
@@ -3871,7 +4401,7 @@
         "lesson.key": "Variables Explore",
         "lesson_group.key": "csp_variables",
         "script.name": "csp4-2023",
-        "activity_section.key": "f8fa7353-3a18-4fd0-947f-5775b5b03e31"
+        "activity_section.key": "f23982d1-616f-4f18-a9e6-e8705b0d18b7"
       },
       "level_keys": [
         "U4 L01 Thermostat App_2023"
@@ -3883,10 +4413,7 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "U1 L02 CYU MC2022_2023"
-        ],
-        "progression": "Check For Understanding"
+        "progression": "Explore - Check For Understanding"
       },
       "bonus": false,
       "seeding_key": {
@@ -3896,7 +4423,7 @@
         "lesson.key": "Variables Explore",
         "lesson_group.key": "csp_variables",
         "script.name": "csp4-2023",
-        "activity_section.key": "f967a0f2-4359-4bd9-bdfe-1f53e29876ea"
+        "activity_section.key": "1d888998-9023-4eb7-9428-c43088cea317"
       },
       "level_keys": [
         "U1 L02 CYU MC2022_2023"
@@ -3904,13 +4431,10 @@
     },
     {
       "chapter": 5,
-      "position": 1,
+      "position": 5,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U4 L02 Thermostat App v1_2023"
-        ],
         "progression": "Investigation #1: Thermostat App v.1 "
       },
       "bonus": false,
@@ -3918,10 +4442,10 @@
         "script_level.level_keys": [
           "U4 L02 Thermostat App v1_2023"
         ],
-        "lesson.key": "Variables Investigate",
+        "lesson.key": "Variables Explore",
         "lesson_group.key": "csp_variables",
         "script.name": "csp4-2023",
-        "activity_section.key": "fc6987c2-9c5b-42bd-8900-d3439974b96a"
+        "activity_section.key": "f8d0b5a2-ce45-44dd-a368-47ed95f736c5"
       },
       "level_keys": [
         "U4 L02 Thermostat App v1_2023"
@@ -3929,13 +4453,10 @@
     },
     {
       "chapter": 6,
-      "position": 2,
+      "position": 6,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U4 L02 Thermostat App v1 Code_2023"
-        ],
         "progression": "Investigation #1: Thermostat App v.1 "
       },
       "bonus": false,
@@ -3943,10 +4464,10 @@
         "script_level.level_keys": [
           "U4 L02 Thermostat App v1 Code_2023"
         ],
-        "lesson.key": "Variables Investigate",
+        "lesson.key": "Variables Explore",
         "lesson_group.key": "csp_variables",
         "script.name": "csp4-2023",
-        "activity_section.key": "fc6987c2-9c5b-42bd-8900-d3439974b96a"
+        "activity_section.key": "f8d0b5a2-ce45-44dd-a368-47ed95f736c5"
       },
       "level_keys": [
         "U4 L02 Thermostat App v1 Code_2023"
@@ -3954,13 +4475,10 @@
     },
     {
       "chapter": 7,
-      "position": 3,
+      "position": 7,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSP U4L2 Predict"
-        ],
         "progression": "Investigation #2: Thermostat App v.2"
       },
       "bonus": false,
@@ -3968,10 +4486,10 @@
         "script_level.level_keys": [
           "CSP U4L2 Predict"
         ],
-        "lesson.key": "Variables Investigate",
+        "lesson.key": "Variables Explore",
         "lesson_group.key": "csp_variables",
         "script.name": "csp4-2023",
-        "activity_section.key": "bcfb1718-f2ae-4a11-98ed-ac57ecd2a32e"
+        "activity_section.key": "775940a9-f3d6-4e6a-9ead-822c51f5f345"
       },
       "level_keys": [
         "CSP U4L2 Predict"
@@ -3979,13 +4497,10 @@
     },
     {
       "chapter": 8,
-      "position": 4,
+      "position": 8,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U4 L02 Thermostat App v2_2023"
-        ],
         "progression": "Investigation #2: Thermostat App v.2"
       },
       "bonus": false,
@@ -3993,10 +4508,10 @@
         "script_level.level_keys": [
           "U4 L02 Thermostat App v2_2023"
         ],
-        "lesson.key": "Variables Investigate",
+        "lesson.key": "Variables Explore",
         "lesson_group.key": "csp_variables",
         "script.name": "csp4-2023",
-        "activity_section.key": "bcfb1718-f2ae-4a11-98ed-ac57ecd2a32e"
+        "activity_section.key": "775940a9-f3d6-4e6a-9ead-822c51f5f345"
       },
       "level_keys": [
         "U4 L02 Thermostat App v2_2023"
@@ -4004,13 +4519,10 @@
     },
     {
       "chapter": 9,
-      "position": 5,
+      "position": 9,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U4 L02 Thermostat App v3_2023"
-        ],
         "progression": "Investigation #3: Thermostat App v.3"
       },
       "bonus": false,
@@ -4018,10 +4530,10 @@
         "script_level.level_keys": [
           "U4 L02 Thermostat App v3_2023"
         ],
-        "lesson.key": "Variables Investigate",
+        "lesson.key": "Variables Explore",
         "lesson_group.key": "csp_variables",
         "script.name": "csp4-2023",
-        "activity_section.key": "2b9a69bd-10bf-401a-8411-ae268335acaa"
+        "activity_section.key": "90dc80a0-ac97-49e1-a399-8418ec7cd453"
       },
       "level_keys": [
         "U4 L02 Thermostat App v3_2023"
@@ -4029,13 +4541,10 @@
     },
     {
       "chapter": 10,
-      "position": 6,
+      "position": 10,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U4 L02 Thermostat App v3 pt2_2023"
-        ],
         "progression": "Investigation #3: Thermostat App v.3"
       },
       "bonus": false,
@@ -4043,10 +4552,10 @@
         "script_level.level_keys": [
           "U4 L02 Thermostat App v3 pt2_2023"
         ],
-        "lesson.key": "Variables Investigate",
+        "lesson.key": "Variables Explore",
         "lesson_group.key": "csp_variables",
         "script.name": "csp4-2023",
-        "activity_section.key": "2b9a69bd-10bf-401a-8411-ae268335acaa"
+        "activity_section.key": "90dc80a0-ac97-49e1-a399-8418ec7cd453"
       },
       "level_keys": [
         "U4 L02 Thermostat App v3 pt2_2023"
@@ -4054,24 +4563,21 @@
     },
     {
       "chapter": 11,
-      "position": 7,
+      "position": 11,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "U4 L02 CYU Exit Ticket_2023"
-        ],
-        "progression": "Assessment: Check For Understanding\r"
+        "progression": "Investigate - Check For Understanding"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U4 L02 CYU Exit Ticket_2023"
         ],
-        "lesson.key": "Variables Investigate",
+        "lesson.key": "Variables Explore",
         "lesson_group.key": "csp_variables",
         "script.name": "csp4-2023",
-        "activity_section.key": "8b080bb6-dcbb-4702-9d88-7d98e8f7272a"
+        "activity_section.key": "089ffea8-c745-42ad-9b57-4b1f5fc7c4d1"
       },
       "level_keys": [
         "U4 L02 CYU Exit Ticket_2023"
@@ -4079,24 +4585,21 @@
     },
     {
       "chapter": 12,
-      "position": 1,
+      "position": 12,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U4 L03 Variables numbers practice 1_2023"
-        ],
-        "progression": "Assigning Numbers and Strings"
+        "progression": "Practice Assigning Numbers and Strings"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U4 L03 Variables numbers practice 1_2023"
         ],
-        "lesson.key": "Variables Practice",
+        "lesson.key": "Variables Explore",
         "lesson_group.key": "csp_variables",
         "script.name": "csp4-2023",
-        "activity_section.key": "47765060-e1e6-47d1-858e-87c1b4545d69"
+        "activity_section.key": "461fdc6d-e475-4381-966c-00c17ed20285"
       },
       "level_keys": [
         "U4 L03 Variables numbers practice 1_2023"
@@ -4104,24 +4607,21 @@
     },
     {
       "chapter": 13,
-      "position": 2,
+      "position": 13,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U4 L03 Variables numbers practice 4_2023"
-        ],
-        "progression": "Assigning Numbers and Strings"
+        "progression": "Practice Assigning Numbers and Strings"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U4 L03 Variables numbers practice 4_2023"
         ],
-        "lesson.key": "Variables Practice",
+        "lesson.key": "Variables Explore",
         "lesson_group.key": "csp_variables",
         "script.name": "csp4-2023",
-        "activity_section.key": "47765060-e1e6-47d1-858e-87c1b4545d69"
+        "activity_section.key": "461fdc6d-e475-4381-966c-00c17ed20285"
       },
       "level_keys": [
         "U4 L03 Variables numbers practice 4_2023"
@@ -4129,24 +4629,21 @@
     },
     {
       "chapter": 14,
-      "position": 3,
+      "position": 14,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U4 L03 Variables operator practice 1_2023"
-        ],
-        "progression": "Variables and Operators"
+        "progression": "Practice Variables and Operators"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U4 L03 Variables operator practice 1_2023"
         ],
-        "lesson.key": "Variables Practice",
+        "lesson.key": "Variables Explore",
         "lesson_group.key": "csp_variables",
         "script.name": "csp4-2023",
-        "activity_section.key": "f6066689-4d3f-4b47-af89-2e890ac2e015"
+        "activity_section.key": "a614f66b-fbd4-431d-8acd-8f28a053a6d3"
       },
       "level_keys": [
         "U4 L03 Variables operator practice 1_2023"
@@ -4154,24 +4651,21 @@
     },
     {
       "chapter": 15,
-      "position": 4,
+      "position": 15,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U4 L03 Variables operator practice 3_2023"
-        ],
-        "progression": "Variables and Operators"
+        "progression": "Practice Variables and Operators"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U4 L03 Variables operator practice 3_2023"
         ],
-        "lesson.key": "Variables Practice",
+        "lesson.key": "Variables Explore",
         "lesson_group.key": "csp_variables",
         "script.name": "csp4-2023",
-        "activity_section.key": "f6066689-4d3f-4b47-af89-2e890ac2e015"
+        "activity_section.key": "a614f66b-fbd4-431d-8acd-8f28a053a6d3"
       },
       "level_keys": [
         "U4 L03 Variables operator practice 3_2023"
@@ -4179,24 +4673,21 @@
     },
     {
       "chapter": 16,
-      "position": 5,
+      "position": 16,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U4 L03 Variables operator practice 2_2023"
-        ],
-        "progression": "Variables and Operators"
+        "progression": "Practice Variables and Operators"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U4 L03 Variables operator practice 2_2023"
         ],
-        "lesson.key": "Variables Practice",
+        "lesson.key": "Variables Explore",
         "lesson_group.key": "csp_variables",
         "script.name": "csp4-2023",
-        "activity_section.key": "f6066689-4d3f-4b47-af89-2e890ac2e015"
+        "activity_section.key": "a614f66b-fbd4-431d-8acd-8f28a053a6d3"
       },
       "level_keys": [
         "U4 L03 Variables operator practice 2_2023"
@@ -4204,24 +4695,21 @@
     },
     {
       "chapter": 17,
-      "position": 6,
+      "position": 17,
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U4 L03 Variables operator practice 5_2023"
-        ],
-        "progression": "Variables and Operators"
+        "progression": "Practice Variables and Operators"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U4 L03 Variables operator practice 5_2023"
         ],
-        "lesson.key": "Variables Practice",
+        "lesson.key": "Variables Explore",
         "lesson_group.key": "csp_variables",
         "script.name": "csp4-2023",
-        "activity_section.key": "f6066689-4d3f-4b47-af89-2e890ac2e015"
+        "activity_section.key": "a614f66b-fbd4-431d-8acd-8f28a053a6d3"
       },
       "level_keys": [
         "U4 L03 Variables operator practice 5_2023"
@@ -4229,24 +4717,21 @@
     },
     {
       "chapter": 18,
-      "position": 7,
+      "position": 18,
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U4 L03 Variables operator practice 6_2023"
-        ],
-        "progression": "Variables and Operators"
+        "progression": "Practice Variables and Operators"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U4 L03 Variables operator practice 6_2023"
         ],
-        "lesson.key": "Variables Practice",
+        "lesson.key": "Variables Explore",
         "lesson_group.key": "csp_variables",
         "script.name": "csp4-2023",
-        "activity_section.key": "f6066689-4d3f-4b47-af89-2e890ac2e015"
+        "activity_section.key": "a614f66b-fbd4-431d-8acd-8f28a053a6d3"
       },
       "level_keys": [
         "U4 L03 Variables operator practice 6_2023"
@@ -4254,24 +4739,21 @@
     },
     {
       "chapter": 19,
-      "position": 8,
+      "position": 19,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U4 L03 Variable Scope: Local vs. Global2022_2023"
-        ],
-        "progression": "Debugging Scope Issues"
+        "progression": "Practice Debugging Scope Issues"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U4 L03 Variable Scope: Local vs. Global2022_2023"
         ],
-        "lesson.key": "Variables Practice",
+        "lesson.key": "Variables Explore",
         "lesson_group.key": "csp_variables",
         "script.name": "csp4-2023",
-        "activity_section.key": "1dfa2bbb-fd15-47ea-a15c-cacf3ad73b24"
+        "activity_section.key": "9de523dc-efc9-4bc1-beae-de42f5706891"
       },
       "level_keys": [
         "U4 L03 Variable Scope: Local vs. Global2022_2023"
@@ -4279,24 +4761,21 @@
     },
     {
       "chapter": 20,
-      "position": 9,
+      "position": 20,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U4 L03 Scope Issue_2023"
-        ],
-        "progression": "Debugging Scope Issues"
+        "progression": "Practice Debugging Scope Issues"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U4 L03 Scope Issue_2023"
         ],
-        "lesson.key": "Variables Practice",
+        "lesson.key": "Variables Explore",
         "lesson_group.key": "csp_variables",
         "script.name": "csp4-2023",
-        "activity_section.key": "1dfa2bbb-fd15-47ea-a15c-cacf3ad73b24"
+        "activity_section.key": "9de523dc-efc9-4bc1-beae-de42f5706891"
       },
       "level_keys": [
         "U4 L03 Scope Issue_2023"
@@ -4304,24 +4783,21 @@
     },
     {
       "chapter": 21,
-      "position": 10,
+      "position": 21,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSP U4L3 Choice_2023"
-        ],
-        "progression": "Putting it Together"
+        "progression": "Practice Putting It Together"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSP U4L3 Choice_2023"
         ],
-        "lesson.key": "Variables Practice",
+        "lesson.key": "Variables Explore",
         "lesson_group.key": "csp_variables",
         "script.name": "csp4-2023",
-        "activity_section.key": "a67a439a-4127-42c2-864a-46b9df30067c"
+        "activity_section.key": "3a2b91e9-7ec6-4ad9-876c-e61593538ffa"
       },
       "level_keys": [
         "CSP U4L3 Choice_2023"
@@ -4329,24 +4805,21 @@
     },
     {
       "chapter": 22,
-      "position": 11,
+      "position": 22,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "U4L3 CFU Variables Psuedocode2022_2023"
-        ],
-        "progression": "Assessment: Check For Understanding: AP Practice\r"
+        "progression": "Practice Check For Understanding"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U4L3 CFU Variables Psuedocode2022_2023"
         ],
-        "lesson.key": "Variables Practice",
+        "lesson.key": "Variables Explore",
         "lesson_group.key": "csp_variables",
         "script.name": "csp4-2023",
-        "activity_section.key": "ee323b02-24a7-4f8c-9861-dad6e390f378"
+        "activity_section.key": "a478b361-51c0-4958-b025-f175e24aa583"
       },
       "level_keys": [
         "U4L3 CFU Variables Psuedocode2022_2023"
@@ -4354,24 +4827,21 @@
     },
     {
       "chapter": 23,
-      "position": 12,
+      "position": 23,
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "U4L3 CFU Variables Randomness Psuedocode2022_2023"
-        ],
-        "progression": "Assessment: Check For Understanding: AP Practice\r"
+        "progression": "Practice Check For Understanding"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U4L3 CFU Variables Randomness Psuedocode2022_2023"
         ],
-        "lesson.key": "Variables Practice",
+        "lesson.key": "Variables Explore",
         "lesson_group.key": "csp_variables",
         "script.name": "csp4-2023",
-        "activity_section.key": "ee323b02-24a7-4f8c-9861-dad6e390f378"
+        "activity_section.key": "a478b361-51c0-4958-b025-f175e24aa583"
       },
       "level_keys": [
         "U4L3 CFU Variables Randomness Psuedocode2022_2023"
@@ -4379,24 +4849,21 @@
     },
     {
       "chapter": 24,
-      "position": 1,
+      "position": 24,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U4 L04 Variables Make Project_2023"
-        ],
-        "progression": "Try the Photo Liker app"
+        "progression": "Try the Photo Liker App"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U4 L04 Variables Make Project_2023"
         ],
-        "lesson.key": "Variables Make",
+        "lesson.key": "Variables Explore",
         "lesson_group.key": "csp_variables",
         "script.name": "csp4-2023",
-        "activity_section.key": "13cdebda-01cd-4c04-b1e1-cbc14e63f618"
+        "activity_section.key": "bbc0789c-0ba9-463a-ad64-32b734411b23"
       },
       "level_keys": [
         "U4 L04 Variables Make Project_2023"
@@ -4404,24 +4871,21 @@
     },
     {
       "chapter": 25,
-      "position": 2,
+      "position": 25,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "U4 L04 Variables Make Project Submit_2023"
-        ],
-        "progression": "Make the Photo Liker app"
+        "progression": "Make the Photo Liker App"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U4 L04 Variables Make Project Submit_2023"
         ],
-        "lesson.key": "Variables Make",
+        "lesson.key": "Variables Explore",
         "lesson_group.key": "csp_variables",
         "script.name": "csp4-2023",
-        "activity_section.key": "060d7ec0-f3e1-48db-8c7c-af95ad99b042"
+        "activity_section.key": "5c0e26ba-f7e8-462e-b78c-f380c2aceae6"
       },
       "level_keys": [
         "U4 L04 Variables Make Project Submit_2023"
@@ -4429,7 +4893,7 @@
     },
     {
       "chapter": 26,
-      "position": 3,
+      "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -4454,7 +4918,7 @@
     },
     {
       "chapter": 27,
-      "position": 4,
+      "position": 2,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -5083,6 +5547,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U4L9 ExplorePredict"
+        ],
         "progression": "Explore Functions"
       },
       "bonus": false,
@@ -5835,7 +6302,7 @@
         "lesson.key": "Variables Explore",
         "lesson_group.key": "csp_variables",
         "script.name": "csp4-2023",
-        "activity_section.key": "f8fa7353-3a18-4fd0-947f-5775b5b03e31"
+        "activity_section.key": "f23982d1-616f-4f18-a9e6-e8705b0d18b7"
       }
     },
     {
@@ -5847,7 +6314,7 @@
         "lesson.key": "Variables Explore",
         "lesson_group.key": "csp_variables",
         "script.name": "csp4-2023",
-        "activity_section.key": "f8fa7353-3a18-4fd0-947f-5775b5b03e31"
+        "activity_section.key": "f23982d1-616f-4f18-a9e6-e8705b0d18b7"
       }
     },
     {
@@ -5859,7 +6326,7 @@
         "lesson.key": "Variables Explore",
         "lesson_group.key": "csp_variables",
         "script.name": "csp4-2023",
-        "activity_section.key": "f8fa7353-3a18-4fd0-947f-5775b5b03e31"
+        "activity_section.key": "f23982d1-616f-4f18-a9e6-e8705b0d18b7"
       }
     },
     {
@@ -5871,7 +6338,7 @@
         "lesson.key": "Variables Explore",
         "lesson_group.key": "csp_variables",
         "script.name": "csp4-2023",
-        "activity_section.key": "f967a0f2-4359-4bd9-bdfe-1f53e29876ea"
+        "activity_section.key": "1d888998-9023-4eb7-9428-c43088cea317"
       }
     },
     {
@@ -5880,10 +6347,10 @@
         "script_level.level_keys": [
           "U4 L02 Thermostat App v1_2023"
         ],
-        "lesson.key": "Variables Investigate",
+        "lesson.key": "Variables Explore",
         "lesson_group.key": "csp_variables",
         "script.name": "csp4-2023",
-        "activity_section.key": "fc6987c2-9c5b-42bd-8900-d3439974b96a"
+        "activity_section.key": "f8d0b5a2-ce45-44dd-a368-47ed95f736c5"
       }
     },
     {
@@ -5892,10 +6359,10 @@
         "script_level.level_keys": [
           "U4 L02 Thermostat App v1 Code_2023"
         ],
-        "lesson.key": "Variables Investigate",
+        "lesson.key": "Variables Explore",
         "lesson_group.key": "csp_variables",
         "script.name": "csp4-2023",
-        "activity_section.key": "fc6987c2-9c5b-42bd-8900-d3439974b96a"
+        "activity_section.key": "f8d0b5a2-ce45-44dd-a368-47ed95f736c5"
       }
     },
     {
@@ -5904,10 +6371,10 @@
         "script_level.level_keys": [
           "CSP U4L2 Predict"
         ],
-        "lesson.key": "Variables Investigate",
+        "lesson.key": "Variables Explore",
         "lesson_group.key": "csp_variables",
         "script.name": "csp4-2023",
-        "activity_section.key": "bcfb1718-f2ae-4a11-98ed-ac57ecd2a32e"
+        "activity_section.key": "775940a9-f3d6-4e6a-9ead-822c51f5f345"
       }
     },
     {
@@ -5916,10 +6383,10 @@
         "script_level.level_keys": [
           "U4 L02 Thermostat App v2_2023"
         ],
-        "lesson.key": "Variables Investigate",
+        "lesson.key": "Variables Explore",
         "lesson_group.key": "csp_variables",
         "script.name": "csp4-2023",
-        "activity_section.key": "bcfb1718-f2ae-4a11-98ed-ac57ecd2a32e"
+        "activity_section.key": "775940a9-f3d6-4e6a-9ead-822c51f5f345"
       }
     },
     {
@@ -5928,10 +6395,10 @@
         "script_level.level_keys": [
           "U4 L02 Thermostat App v3_2023"
         ],
-        "lesson.key": "Variables Investigate",
+        "lesson.key": "Variables Explore",
         "lesson_group.key": "csp_variables",
         "script.name": "csp4-2023",
-        "activity_section.key": "2b9a69bd-10bf-401a-8411-ae268335acaa"
+        "activity_section.key": "90dc80a0-ac97-49e1-a399-8418ec7cd453"
       }
     },
     {
@@ -5940,10 +6407,10 @@
         "script_level.level_keys": [
           "U4 L02 Thermostat App v3 pt2_2023"
         ],
-        "lesson.key": "Variables Investigate",
+        "lesson.key": "Variables Explore",
         "lesson_group.key": "csp_variables",
         "script.name": "csp4-2023",
-        "activity_section.key": "2b9a69bd-10bf-401a-8411-ae268335acaa"
+        "activity_section.key": "90dc80a0-ac97-49e1-a399-8418ec7cd453"
       }
     },
     {
@@ -5952,10 +6419,10 @@
         "script_level.level_keys": [
           "U4 L02 CYU Exit Ticket_2023"
         ],
-        "lesson.key": "Variables Investigate",
+        "lesson.key": "Variables Explore",
         "lesson_group.key": "csp_variables",
         "script.name": "csp4-2023",
-        "activity_section.key": "8b080bb6-dcbb-4702-9d88-7d98e8f7272a"
+        "activity_section.key": "089ffea8-c745-42ad-9b57-4b1f5fc7c4d1"
       }
     },
     {
@@ -5964,10 +6431,10 @@
         "script_level.level_keys": [
           "U4 L03 Variables numbers practice 1_2023"
         ],
-        "lesson.key": "Variables Practice",
+        "lesson.key": "Variables Explore",
         "lesson_group.key": "csp_variables",
         "script.name": "csp4-2023",
-        "activity_section.key": "47765060-e1e6-47d1-858e-87c1b4545d69"
+        "activity_section.key": "461fdc6d-e475-4381-966c-00c17ed20285"
       }
     },
     {
@@ -5976,10 +6443,10 @@
         "script_level.level_keys": [
           "U4 L03 Variables numbers practice 4_2023"
         ],
-        "lesson.key": "Variables Practice",
+        "lesson.key": "Variables Explore",
         "lesson_group.key": "csp_variables",
         "script.name": "csp4-2023",
-        "activity_section.key": "47765060-e1e6-47d1-858e-87c1b4545d69"
+        "activity_section.key": "461fdc6d-e475-4381-966c-00c17ed20285"
       }
     },
     {
@@ -5988,10 +6455,10 @@
         "script_level.level_keys": [
           "U4 L03 Variables operator practice 1_2023"
         ],
-        "lesson.key": "Variables Practice",
+        "lesson.key": "Variables Explore",
         "lesson_group.key": "csp_variables",
         "script.name": "csp4-2023",
-        "activity_section.key": "f6066689-4d3f-4b47-af89-2e890ac2e015"
+        "activity_section.key": "a614f66b-fbd4-431d-8acd-8f28a053a6d3"
       }
     },
     {
@@ -6000,10 +6467,10 @@
         "script_level.level_keys": [
           "U4 L03 Variables operator practice 3_2023"
         ],
-        "lesson.key": "Variables Practice",
+        "lesson.key": "Variables Explore",
         "lesson_group.key": "csp_variables",
         "script.name": "csp4-2023",
-        "activity_section.key": "f6066689-4d3f-4b47-af89-2e890ac2e015"
+        "activity_section.key": "a614f66b-fbd4-431d-8acd-8f28a053a6d3"
       }
     },
     {
@@ -6012,10 +6479,10 @@
         "script_level.level_keys": [
           "U4 L03 Variables operator practice 2_2023"
         ],
-        "lesson.key": "Variables Practice",
+        "lesson.key": "Variables Explore",
         "lesson_group.key": "csp_variables",
         "script.name": "csp4-2023",
-        "activity_section.key": "f6066689-4d3f-4b47-af89-2e890ac2e015"
+        "activity_section.key": "a614f66b-fbd4-431d-8acd-8f28a053a6d3"
       }
     },
     {
@@ -6024,10 +6491,10 @@
         "script_level.level_keys": [
           "U4 L03 Variables operator practice 5_2023"
         ],
-        "lesson.key": "Variables Practice",
+        "lesson.key": "Variables Explore",
         "lesson_group.key": "csp_variables",
         "script.name": "csp4-2023",
-        "activity_section.key": "f6066689-4d3f-4b47-af89-2e890ac2e015"
+        "activity_section.key": "a614f66b-fbd4-431d-8acd-8f28a053a6d3"
       }
     },
     {
@@ -6036,10 +6503,10 @@
         "script_level.level_keys": [
           "U4 L03 Variables operator practice 6_2023"
         ],
-        "lesson.key": "Variables Practice",
+        "lesson.key": "Variables Explore",
         "lesson_group.key": "csp_variables",
         "script.name": "csp4-2023",
-        "activity_section.key": "f6066689-4d3f-4b47-af89-2e890ac2e015"
+        "activity_section.key": "a614f66b-fbd4-431d-8acd-8f28a053a6d3"
       }
     },
     {
@@ -6048,10 +6515,10 @@
         "script_level.level_keys": [
           "U4 L03 Variable Scope: Local vs. Global2022_2023"
         ],
-        "lesson.key": "Variables Practice",
+        "lesson.key": "Variables Explore",
         "lesson_group.key": "csp_variables",
         "script.name": "csp4-2023",
-        "activity_section.key": "1dfa2bbb-fd15-47ea-a15c-cacf3ad73b24"
+        "activity_section.key": "9de523dc-efc9-4bc1-beae-de42f5706891"
       }
     },
     {
@@ -6060,10 +6527,10 @@
         "script_level.level_keys": [
           "U4 L03 Scope Issue_2023"
         ],
-        "lesson.key": "Variables Practice",
+        "lesson.key": "Variables Explore",
         "lesson_group.key": "csp_variables",
         "script.name": "csp4-2023",
-        "activity_section.key": "1dfa2bbb-fd15-47ea-a15c-cacf3ad73b24"
+        "activity_section.key": "9de523dc-efc9-4bc1-beae-de42f5706891"
       }
     },
     {
@@ -6072,10 +6539,10 @@
         "script_level.level_keys": [
           "CSP U4L3 Choice_2023"
         ],
-        "lesson.key": "Variables Practice",
+        "lesson.key": "Variables Explore",
         "lesson_group.key": "csp_variables",
         "script.name": "csp4-2023",
-        "activity_section.key": "a67a439a-4127-42c2-864a-46b9df30067c"
+        "activity_section.key": "3a2b91e9-7ec6-4ad9-876c-e61593538ffa"
       }
     },
     {
@@ -6084,10 +6551,10 @@
         "script_level.level_keys": [
           "U4L3 CFU Variables Psuedocode2022_2023"
         ],
-        "lesson.key": "Variables Practice",
+        "lesson.key": "Variables Explore",
         "lesson_group.key": "csp_variables",
         "script.name": "csp4-2023",
-        "activity_section.key": "ee323b02-24a7-4f8c-9861-dad6e390f378"
+        "activity_section.key": "a478b361-51c0-4958-b025-f175e24aa583"
       }
     },
     {
@@ -6096,10 +6563,10 @@
         "script_level.level_keys": [
           "U4L3 CFU Variables Randomness Psuedocode2022_2023"
         ],
-        "lesson.key": "Variables Practice",
+        "lesson.key": "Variables Explore",
         "lesson_group.key": "csp_variables",
         "script.name": "csp4-2023",
-        "activity_section.key": "ee323b02-24a7-4f8c-9861-dad6e390f378"
+        "activity_section.key": "a478b361-51c0-4958-b025-f175e24aa583"
       }
     },
     {
@@ -6108,10 +6575,10 @@
         "script_level.level_keys": [
           "U4 L04 Variables Make Project_2023"
         ],
-        "lesson.key": "Variables Make",
+        "lesson.key": "Variables Explore",
         "lesson_group.key": "csp_variables",
         "script.name": "csp4-2023",
-        "activity_section.key": "13cdebda-01cd-4c04-b1e1-cbc14e63f618"
+        "activity_section.key": "bbc0789c-0ba9-463a-ad64-32b734411b23"
       }
     },
     {
@@ -6120,10 +6587,10 @@
         "script_level.level_keys": [
           "U4 L04 Variables Make Project Submit_2023"
         ],
-        "lesson.key": "Variables Make",
+        "lesson.key": "Variables Explore",
         "lesson_group.key": "csp_variables",
         "script.name": "csp4-2023",
-        "activity_section.key": "060d7ec0-f3e1-48db-8c7c-af95ad99b042"
+        "activity_section.key": "5c0e26ba-f7e8-462e-b78c-f380c2aceae6"
       }
     },
     {
@@ -6872,11 +7339,12 @@
     },
     {
       "name": "CSP Debugging Guide",
-      "url": "https://docs.google.com/document/d/13wipr2CpR3kHY2_pLoiUtVPqt2prMaTASYr5XaRoy-Q/edit?usp=sharing",
+      "url": "https://docs.google.com/document/d/175I17p2cSfL0q7Uuvw2yBsb1eogbu_gVvV_AIfG8AnA/edit?usp=sharing",
       "key": "csp_debugging_guide",
       "properties": {
         "audience": "Teacher",
-        "include_in_pdf": true
+        "include_in_pdf": true,
+        "type": "Resource"
       },
       "seeding_key": {
         "resource.key": "csp_debugging_guide"
@@ -6931,6 +7399,18 @@
       },
       "seeding_key": {
         "resource.key": "csp_unit_4_-_variables_conditionals_and_functions"
+      }
+    },
+    {
+      "name": "CSP Unit 4 Lesson 1 - Variables",
+      "url": "https://docs.google.com/presentation/d/14ZTJvYahmAM-tDM3CfY7n6dALBCUuUsw0jXYkstn_vw/template",
+      "key": "csp_unit_4_lesson_1_-_variables",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "csp_unit_4_lesson_1_-_variables"
       }
     },
     {
@@ -7453,7 +7933,25 @@
     {
       "seeding_key": {
         "lesson.key": "Variables Explore",
-        "resource.key": "csp_unit_4_-_variables_conditionals_and_functions"
+        "resource.key": "csp_debugging_guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Variables Explore",
+        "resource.key": "csp_unit_4_lesson_1_-_variables"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Variables Explore",
+        "resource.key": "csp_variables_make_-_photo_liker_app"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Variables Explore",
+        "resource.key": "debugging_global_vs_local_variables"
       }
     },
     {
@@ -7466,12 +7964,6 @@
       "seeding_key": {
         "lesson.key": "Variables Explore",
         "resource.key": "guide_to_eipm_lessons"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Variables Explore",
-        "resource.key": "guide_to_explore_lessons"
       }
     },
     {
@@ -7613,6 +8105,27 @@
 
   ],
   "lessons_programming_expressions": [
+    {
+      "seeding_key": {
+        "lesson.key": "Variables Explore",
+        "programming_environment.name": "applab",
+        "programming_expression.key": "declareAssign_x"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Variables Explore",
+        "programming_environment.name": "applab",
+        "programming_expression.key": "declareNoAssign_x"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Variables Explore",
+        "programming_environment.name": "applab",
+        "programming_expression.key": "mathRound"
+      }
+    },
     {
       "seeding_key": {
         "lesson.key": "Variables Investigate",
@@ -8393,7 +8906,28 @@
       "seeding_key": {
         "lesson.key": "Variables Explore",
         "framework.shortcode": "csp2021",
+        "standard.shortcode": "AAP-1.A.2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Variables Explore",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "AAP-1.A.3"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Variables Explore",
+        "framework.shortcode": "csp2021",
         "standard.shortcode": "AAP-1.B.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Variables Explore",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "AAP-1.B.2"
       }
     },
     {
@@ -8442,7 +8976,42 @@
       "seeding_key": {
         "lesson.key": "Variables Explore",
         "framework.shortcode": "csp2021",
+        "standard.shortcode": "AAP-2.C.2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Variables Explore",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "AAP-2.C.3"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Variables Explore",
+        "framework.shortcode": "csp2021",
         "standard.shortcode": "AAP-2.C.4"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Variables Explore",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "AAP-2.D.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Variables Explore",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "AAP-3.A.6"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Variables Explore",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "AAP-3.E.1"
       }
     },
     {
@@ -8455,8 +9024,29 @@
     {
       "seeding_key": {
         "lesson.key": "Variables Explore",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "DAT-1.B.2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Variables Explore",
         "framework.shortcode": "csta",
         "standard.shortcode": "2-AP-11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Variables Explore",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-19"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Variables Explore",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3B-AP-23"
       }
     },
     {
