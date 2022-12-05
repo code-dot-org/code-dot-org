@@ -29,11 +29,6 @@ class Pd::FitWeekendRegistrationBase < ApplicationRecord
   after_initialize :set_registration_year
   before_validation :set_registration_year
 
-  after_create :send_fit_weekend_confirmation_email
-  def send_fit_weekend_confirmation_email
-    Pd::FitWeekendRegistrationMailer.confirmation(self).deliver_now
-  end
-
   # Override in derived classes and set to valid value.
   # Setting to nil here fails those validations and prevents this base class from being saved.
   def set_registration_year
