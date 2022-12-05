@@ -250,7 +250,7 @@
   "cscBookcoverClickNoSpeech": "Has pulsado sobre Hank, pero no dice nada.\nUtiliza el bloque `sprite dice` para que tus dos sprites hablen entre sí.",
   "cscBookcoverNoClick": "Tienes que pulsar sobre el sprite para ver lo que dice.",
   "cscBookcoverMissingPrompt": "Has pulsado un sprite, pero no tenía un mensaje.\nTienes que añadir un bloque de mensaje a tu espacio de trabajo.",
-  "cscBookcoverPromptNotInEvent": "Has añadido un bloque de impresión a tu código, pero no lo has adjuntado a un bloque de eventos.\nAsegúrate de que el bloque de impresión está unido a un bloque de evento `cuando se responda al mensaje`.",
   "cscBookcoverMissingPrintInPromptEvent": "Has respondido al mensaje, pero no se ha mostrado nada en la pantalla.\nAsegúrate de añadir un bloque `imprimir` bajo el bloque de eventos `cuando se responde al mensaje`.",
-  "cscBookcoverNoPromptAnswered": "Asegúrate de pulsar en el sprite y responder a la pregunta para ver qué ocurre."
+  "cscBookcoverNoPromptAnswered": "Asegúrate de pulsar en el sprite y responder a la pregunta para ver qué ocurre.",
+  "cscBookcoverPromptNotInEvent": "Has añadido un bloque de impresión a tu código, pero no lo has adjuntado a un bloque de eventos.\nAsegúrate de que el bloque de impresión está unido a un bloque de evento `cuando se responda al mensaje`."
 }
