@@ -2332,9 +2332,9 @@ fr-FR:
           faire si quelqu'un est méchant en ligne.\n"
       PowerOfWords-Unplugged_2020:
         markdown: |-
-          # Le pouvoir des mots
+          # Le Pouvoir des Mots
 
-          ## Que dois-tu faire quand quelqu'un utilise des paroles méchantes ou blessantes sur internet ?
+          ## Que dois-tu faire quand quelqu'un utilise des paroles méchantes ou blessantes sur internet ?
       PowerfulPasswords-Unplugged:
         markdown: |
           # Mot de passe puissant
@@ -5381,9 +5381,9 @@ fr-FR:
           Dans la prochaine étape, nous allons ajouter de la complexité à nos programmes grâce à l'ajout de boucles.
       PowerOfWords-Unplugged_2021:
         markdown: |-
-          # Le pouvoir des mots
+          # Le Pouvoir des Mots
 
-          ## Que dois-tu faire quand quelqu'un utilise des paroles méchantes ou blessantes sur internet ?
+          ## Que dois-tu faire quand quelqu'un utilise des paroles méchantes ou blessantes sur internet ?
       PrivatePersonalInformation-Unplugged_2021:
         markdown: |-
           # Informations Privées et Personnelles
@@ -5840,21 +5840,21 @@ fr-FR:
         - text: Lis le code, puis fais une prévision.
       courseF_labels_predict_multi:
         answers:
-        - text: '"Une pizza, c''est parti !"'
+        - text: "« Une pizza, ça arrive tout de suite ! »"
           feedback: 'Incorrect. Les libellés des variables ne correspondent pas. '
-        - text: '"Un menu, c''est parti !"'
-          feedback: 'Incorrect. Le libellé d''une variable n''est jamais imprimé. '
-        - text: '"Un plat, c''est parti !"'
-          feedback: 'Incorrect. Le libellé d''une variable n''est jamais imprimé. '
-        - text: '"Et c''est parti !"'
+        - text: "« Un repas, ça arrive tout de suite ! »"
+          feedback: Incorrect. Le libellé d'une variable ne s'imprime jamais.
+        - text: "« Une nourriture, ça arrive tout de suite ! »"
+          feedback: Incorrect. Le libellé d'une variable ne s'imprime jamais.
+        - text: "« Une , ça arrive tout de suite ! »"
           correct: true
-          feedback: 'Correct ! Les libellés des variables ne correspondent pas. '
+          feedback: 'Correct ! Les libellés des variables ne correspondent pas. '
         - text: Rien ne sera imprimé.
           feedback: 'Incorrect. L''événement et le bloc d''impression fonctionneront
             toujours. '
         questions:
-        - text: 'Ce code peut vous sembler familier, mais lisez-le attentivement.
-            Qu''est-ce qui sera imprimé si l''utilisateur tape « pizza » ? '
+        - text: 'Ce code peut paraître familier, mais lis-le attentivement. Qu''est-ce
+            qui sera imprimé si l''utilisateur tape « pizza » ? '
       courseF_multi_artist_variables3a_predict1_2021:
         answers:
         - text: L'artiste dessinera un triangle avec des côtés de 50 pixels.
@@ -5930,17 +5930,24 @@ fr-FR:
             que se passera-t-il après avoir répondu à la question ? '
       courseF_variables_stop:
         content1: description ici
-        markdown: "# Arrêtez !\n\n## Êtes-vous sûr d'être prêt à passer à autre chose
-          ?\n\n\nAu niveau suivant, vous commencerez à écrire le code de votre projet.
-          Cela fonctionne mieux si vous avez déjà un plan.\n\nVotre plan complété
-          doit inclure :\n\n<img src=\"https://images.code.org/b476ac330f2b66e44e02208fee386a56-image-1614802439867.png\"
-          style=\"float:left; height:70px; padding:10px\"/>\n\n* Le type de projet
-          que vous construisez. Par exemple, une carte de vœux, un chatbot ou une
-          histoire d'espace vide.\n* Une liste de questions que vous poserez à l'utilisateur.\n*
-          L'autre texte que vous afficherez à l'écran.\n* Une description ou un dessin
-          des sprites dont vous aurez besoin (et leurs comportements).\n\nSi vous
-          n'êtes pas sûr d'être prêt à passer à autre chose, voyez avec votre professeur
-          ! \n"
+        markdown: |-
+          # Stop !
+
+          ## Est-ce que tu es sûr d'être prêt à passer à autre chose ?
+
+
+          Dans le niveau suivant, tu vas te mettre à écrire le code pour ton projet. Ce sera bien plus facile si tu as déjà un plan.
+
+          Ton plan complet devrait comprendre :
+
+          <img src="https://images.code.org/b476ac330f2b66e44e02208fee386a56-image-1614802439867.png" style="float:left; height:70px; padding:10px"/>
+
+          * Le type de projet que tu vas développer. Comme par exemple une carte de vœux, un chatbot ou une histoire d'espace vide.
+          * Une liste des questions que tu vas poser à l'utilisateur.
+          * L'autre texte que tu vas afficher à l'écran.
+          * Une description ou un dessin des sprites dont tu vas avoir besoin (ainsi que leurs comportements).
+
+          Si tu n'es pas sûr si tu es prêt à passer à autre chose, vois avec ton instituteur !
       coursee_prediction_artistfunction2_2021:
         answers:
         - text: L’artiste résoudra ce casse-tête correctement.
@@ -6013,10 +6020,10 @@ fr-FR:
         description: 'Tu es sur le point d''entamer ton projet final. Avant de commencer,
           prends le temps d''examiner les exemples de projets. '
       courseF_variables_samples:
-        description: 'Vous allez créer soit une carte de vœux, un chatbot ou une histoire
-          d''espace vide. Avant de commencer, explorez les exemples de projets ci-dessous
-          pour voir ce que vous souhaitez créer. Appuyez sur \"Terminer\" lorsque
-          vous êtes prêt à commencer à planifier votre propre programme. '
+        description: 'Tu vas créer soit une carte de vœux, soit un chatbot, soit une
+          histoire d''espace vide. Avant de commencer, jette un œil aux exemples de
+          projets ci-dessous pour voir ce que tu pourrais vouloir créer. Appuie sur
+          « Terminer » quand tu es prêt à commencer à imaginer ton propre programme. '
         teacher_markdown: "# Présentation du niveau de choix\nLes niveaux de choix
           fournissent un menu de niveaux supplémentaires à compléter par les étudiants.
           Les étudiants doivent terminer au moins un des sous-niveaux ici, mais peuvent
@@ -6045,15 +6052,15 @@ fr-FR:
           Cette activité est destinée à être coordonnée avec la feuille de travail
           Exploring Apps, qui se trouve dans le [plan de cours](.././). "
       courseF_events_freeplay:
-        description: 'Maintenant, vous pouvez utiliser ce que vous avez appris pour
-          rendre votre projet encore meilleur ! Continuez à ajouter à votre programme
-          ou commencez quelque chose de nouveau ! '
+        description: 'Maintenant, tu peux utiliser ce que tu as appris pour rendre
+          ton projet encore meilleur ! Continue à ajouter à ton programme ou commence
+          quelque chose de nouveau ! '
         display_name: Événements - Jeu libre
       courseF_events_practice:
-        description: 'Excellent travail pour l''instant ! Choisissez votre prochaine
-          activité. Faites-en autant que vous le pouvez. Continuez à vous entraîner
-          avec des évènements ! '
-        display_name: 'Pratique des événements '
+        description: 'Excellent travail jusqu''à présent ! Choisis ta prochaine activité.
+          Complètes-en autant que tu peux. Continue à t''entraîner avec les sprites
+          et les comportements ! '
+        display_name: 'Entraînement avec les événements '
         teacher_markdown: |+
           # Présentation du niveau de choix
           Les niveaux de choix fournissent un menu de niveaux supplémentaires à faire par les étudiants. Ils doivent finir au moins l'un des sous-niveaux ici, mais peuvent en suivre autant qu'ils le souhaitent ou que vous le souhaitez.
@@ -6067,10 +6074,10 @@ fr-FR:
 
 
       courseF_text_practice:
-        description: 'Excellent travail jusqu''à présent ! Choisissez votre prochaine
-          activité. Remplissez-en autant que vous le pouvez. Continuez à vous entraîner
-          avec du texte et des invites ! '
-        display_name: 'Entraînement avec du texte et des invites '
+        description: 'Excellent travail jusqu''ici ! Choisis ta prochaine activité.
+          Complètes-en autant que tu peux. Continue à t''entraîner avec les sprites
+          et les comportements ! '
+        display_name: 'Entraînement sur le texte et les invites '
         teacher_markdown: |-
           # Présentation du niveau de choix
           Les niveaux de choix fournissent un menu de niveaux supplémentaires à faire par les étudiants. Ils doivent finir au moins un des sous-niveaux ici, mais peuvent en suivre autant qu'ils le souhaitent, ou que vous le souhaitez.
@@ -6082,14 +6089,14 @@ fr-FR:
           | ***Type*** |**Review**|**Debug**|**Debug**|**Debug**|**Optional Content**|**Optional Content**|**Free Play**
           | ***Concept***|*print block, events*|*prompts, events*|*adding spaces*|*matching variable labels*|*title screen blocks*|*storing colors*|*no new content*
       EnvelopeVariables-Unplugged_2021_2:
-        markdown: " Histoires d'espace vide\n\nDans cette leçon, vous apprendrez à
-          utiliser et à écrire des histoires d'espace vide. Regardez cette vidéo pour
-          découvrir comment cela se connecte à l'informatique. "
+        markdown: "# Histoires d'espace vide\n\nDans cette leçon, tu vas apprendre
+          à utiliser et à écrire des histoires d'espace vide. Regarde cette vidéo
+          pour voir ce que cela a à voir avec l'informatique. "
       courseF_variables_projects:
-        description: 'Vous allez créer soit une carte de vœux, un chatbot ou une histoire
-          d''espace vide. Si vous avez déjà terminé la \"Partie 1\" de votre projet,
-          passez à la \"Partie 2\". '
-        display_name: Choisissez un projet
+        description: 'Tu vas créer soit une carte de vœux, soit un chatbot, soit une
+          histoire d''espace vide. Si tu as déjà terminé la \« 1ère Partie\ » de ton
+          projet, passe à la \« 2ème Partie\ ». '
+        display_name: Choisis un projet
         teacher_markdown: "# Présentation du niveau de choix\nLes niveaux de choix
           fournissent un menu de niveaux supplémentaires à compléter par les étudiants.
           Ils doivent faire au moins un des sous-niveaux ici, mais devraient être
@@ -6135,10 +6142,10 @@ fr-FR:
         markdown: "# Suis l'algorithme\n\nJoue à un jeu et réfléchis à quelles commandes
           il faut utiliser pour obtenir le bon résultat. "
       courseF_sprites_practice:
-        description: 'Excellent travail jusqu''à présent ! Choisis ta prochaine activité.
-          Remplis-en autant que tu peux. Continue à t''entraîner avec les sprites
-          et les comportements ! '
-        display_name: Entraînement avec les sprites
+        description: 'Excellent travail jusqu''à présent ! Choisis ta prochaine activité.
+          Complètes-en autant que tu peux. Continue à t''entraîner avec les sprites
+          et les comportements ! '
+        display_name: Entraînement avec les Sprites
         teacher_markdown: |+
           # Aperçu du niveau de choix
           Les niveaux de choix fournissent un menu de niveaux supplémentaires à compléter par les étudiants. Ils doivent terminer au moins un des sous-niveaux ici, mais peuvent en suivre autant qu'ils le souhaitent ou que vous le souhaitez.
@@ -6913,8 +6920,8 @@ fr-FR:
 
           > <a href="http://forum.code.org/t/teaching-computer-science-your-plans/412" target="blank" rel="noopener noreferrer"><button class="plc"> Publiez votre programme >></button></a>
       courseF_sprites_freeplay:
-        description: C'est à votre tour de créer ce que vous voulez ! Quel genre de
-          projet ferez-vous ?
+        description: C'est ton tour maintenant, crée ce que tu veux ! Quel type de
+          projet vas-tu faire ?
         display_name: Sprites - Jeu libre
       OPD-K5 About:
         markdown: |-
@@ -16226,9 +16233,9 @@ fr-FR:
           et les avantages du respect de la propriété et du droit d'auteur, notamment
           dans les environnements numériques.\n"
       EnvelopeVariables-Unplugged_2021_22022_2022_pilot_-2022-2:
-        markdown: " Histoires d'espace vide\n\nDans cette leçon, vous apprendrez à
-          utiliser et à écrire des histoires d'espace vide. Regardez cette vidéo pour
-          découvrir comment cela se connecte à l'informatique. "
+        markdown: "# Histoires d'espace vide\n\nDans cette leçon, tu vas apprendre
+          à utiliser et à écrire des histoires d'espace vide. Regarde cette vidéo
+          pour voir ce que cela a à voir avec l'informatique. "
       GettingLoopy-Unplugged2022:
         markdown: "# Affaire bouclée \n\nCette leçon introduit la notion de boucles
           en programmation au travers d'une activité dansante."
@@ -16260,9 +16267,9 @@ fr-FR:
           Apprends à programmer en codant pour tes amis !
       PowerOfWords-Unplugged2022_2022_pilot_-2022-2:
         markdown: |-
-          # Le pouvoir des mots
+          # Le Pouvoir des Mots
 
-          ## Que dois-tu faire quand quelqu'un utilise des paroles méchantes ou blessantes sur internet ?
+          ## Que dois-tu faire quand quelqu'un utilise des paroles méchantes ou blessantes sur internet ?
       PrivatePersonalInformation-Unplugged2022:
         markdown: |-
           # Informations Privées et Personnelles
@@ -16651,15 +16658,15 @@ fr-FR:
       courseF_collector_samples_2022_pilot_-2022-2:
         display_name: 'Exploration - Exemples de programmes '
       courseF_events_freeplay2022_2022_pilot_-2022-2:
-        description: 'Maintenant, vous pouvez utiliser ce que vous avez appris pour
-          rendre votre projet encore meilleur ! Continuez à ajouter à votre programme
-          ou commencez quelque chose de nouveau ! '
+        description: 'Maintenant, tu peux utiliser ce que tu as appris pour rendre
+          ton projet encore meilleur ! Continue à ajouter à ton programme ou commence
+          quelque chose de nouveau ! '
         display_name: Événements - Jeu libre
       courseF_events_practice2022_2022_pilot_-2022-2:
-        description: 'Excellent travail pour l''instant ! Choisissez votre prochaine
-          activité. Faites-en autant que vous le pouvez. Continuez à vous entraîner
-          avec des évènements ! '
-        display_name: 'Pratique des événements '
+        description: 'Excellent travail jusqu''à présent ! Choisis ta prochaine activité.
+          Complètes-en autant que tu peux. Continue à t''entraîner avec les sprites
+          et les comportements ! '
+        display_name: 'Entraînement avec les événements '
       courseF_events_predict_multi2022_2022_pilot_-2022-2:
         answers:
         - text: Le sprite va juste tournoyer à droite.
@@ -16688,21 +16695,21 @@ fr-FR:
         display_name: Applis Labo des Sprites
       courseF_labels_predict_multi2022_2022_pilot_-2022-2:
         answers:
-        - text: '"Une pizza, c''est parti !"'
+        - text: "« Une pizza, ça arrive tout de suite ! »"
           feedback: 'Incorrect. Les libellés des variables ne correspondent pas. '
-        - text: '"Un menu, c''est parti !"'
-          feedback: 'Incorrect. Le libellé d''une variable n''est jamais imprimé. '
-        - text: '"Un plat, c''est parti !"'
-          feedback: 'Incorrect. Le libellé d''une variable n''est jamais imprimé. '
-        - text: '"Et c''est parti !"'
+        - text: "« Un repas, ça arrive tout de suite ! »"
+          feedback: Incorrect. Le libellé d'une variable ne s'imprime jamais.
+        - text: "« Une nourriture, ça arrive tout de suite ! »"
+          feedback: Incorrect. Le libellé d'une variable ne s'imprime jamais.
+        - text: "« Une , ça arrive tout de suite ! »"
           correct: true
-          feedback: 'Correct ! Les libellés des variables ne correspondent pas. '
+          feedback: 'Correct ! Les libellés des variables ne correspondent pas. '
         - text: Rien ne sera imprimé.
           feedback: 'Incorrect. L''événement et le bloc d''impression fonctionneront
             toujours. '
         questions:
-        - text: 'Ce code peut vous sembler familier, mais lisez-le attentivement.
-            Qu''est-ce qui sera imprimé si l''utilisateur tape « pizza » ? '
+        - text: 'Ce code peut paraître familier, mais lis-le attentivement. Qu''est-ce
+            qui sera imprimé si l''utilisateur tape « pizza » ? '
       courseF_multi_artist_variables3a_predict12022:
         answers:
         - text: L'artiste dessinera un triangle avec des côtés de 50 pixels.
@@ -16743,14 +16750,14 @@ fr-FR:
         - text: Lis le code ci-dessous. Que va-t-il se passer quand tu cliques su
             « Démarrer » ?
       courseF_sprites_freeplay2022_2022_pilot_-2022-2:
-        description: C'est à votre tour de créer ce que vous voulez ! Quel genre de
-          projet ferez-vous ?
+        description: C'est ton tour maintenant, crée ce que tu veux ! Quel type de
+          projet vas-tu faire ?
         display_name: Sprites - Jeu libre
       courseF_sprites_practice2022_2022_pilot_-2022-2:
-        description: 'Excellent travail jusqu''à présent ! Choisis ta prochaine activité.
-          Remplis-en autant que tu peux. Continue à t''entraîner avec les sprites
-          et les comportements ! '
-        display_name: Entraînement avec les sprites
+        description: 'Excellent travail jusqu''à présent ! Choisis ta prochaine activité.
+          Complètes-en autant que tu peux. Continue à t''entraîner avec les sprites
+          et les comportements ! '
+        display_name: Entraînement avec les Sprites
       courseF_sprites_predict_multi2022_2022_pilot_-2022-2:
         answers:
         - text: 'Les deux avions se déplaceront d''une case le long de la grille,
@@ -16770,10 +16777,10 @@ fr-FR:
         questions:
         - text: Lis le code, puis fais une prévision.
       courseF_text_practice2022_2022_pilot_-2022-2:
-        description: 'Excellent travail jusqu''à présent ! Choisissez votre prochaine
-          activité. Remplissez-en autant que vous le pouvez. Continuez à vous entraîner
-          avec du texte et des invites ! '
-        display_name: 'Entraînement avec du texte et des invites '
+        description: 'Excellent travail jusqu''ici ! Choisis ta prochaine activité.
+          Complètes-en autant que tu peux. Continue à t''entraîner avec les sprites
+          et les comportements ! '
+        display_name: 'Entraînement sur le texte et les invites '
       courseF_variables2_predict2_multi2022_-2022-2:
         answers:
         - correct: true
@@ -16807,29 +16814,36 @@ fr-FR:
             clavier. Le bloc « imprimer » affiche du texte à l''écran. Fais une prévision :
             que se passera-t-il après avoir répondu à la question ? '
       courseF_variables_projects2022_2022_pilot_-2022-2:
-        description: 'Vous allez créer soit une carte de vœux, un chatbot ou une histoire
-          d''espace vide. Si vous avez déjà terminé la \"Partie 1\" de votre projet,
-          passez à la \"Partie 2\". '
-        display_name: Choisissez un projet
+        description: 'Tu vas créer soit une carte de vœux, soit un chatbot, soit une
+          histoire d''espace vide. Si tu as déjà terminé la \« 1ère Partie\ » de ton
+          projet, passe à la \« 2ème Partie\ ». '
+        display_name: Choisis un projet
       courseF_variables_samples2022_2022_pilot_-2022-2:
-        description: 'Vous allez créer soit une carte de vœux, un chatbot ou une histoire
-          d''espace vide. Avant de commencer, explorez les exemples de projets ci-dessous
-          pour voir ce que vous souhaitez créer. Appuyez sur \"Terminer\" lorsque
-          vous êtes prêt à commencer à planifier votre propre programme. '
+        description: 'Tu vas créer soit une carte de vœux, soit un chatbot, soit une
+          histoire d''espace vide. Avant de commencer, jette un œil aux exemples de
+          projets ci-dessous pour voir ce que tu pourrais vouloir créer. Appuie sur
+          « Terminer » quand tu es prêt à commencer à imaginer ton propre programme. '
         display_name: 'Exploration - Exemples de programmes '
       courseF_variables_stop2022_2022_pilot_-2022-2:
         content1: description ici
-        markdown: "# Arrêtez !\n\n## Êtes-vous sûr d'être prêt à passer à autre chose
-          ?\n\n\nAu niveau suivant, vous commencerez à écrire le code de votre projet.
-          Cela fonctionne mieux si vous avez déjà un plan.\n\nVotre plan complété
-          doit inclure :\n\n<img src=\"https://images.code.org/b476ac330f2b66e44e02208fee386a56-image-1614802439867.png\"
-          style=\"float:left; height:70px; padding:10px\"/>\n\n* Le type de projet
-          que vous construisez. Par exemple, une carte de vœux, un chatbot ou une
-          histoire d'espace vide.\n* Une liste de questions que vous poserez à l'utilisateur.\n*
-          L'autre texte que vous afficherez à l'écran.\n* Une description ou un dessin
-          des sprites dont vous aurez besoin (et leurs comportements).\n\nSi vous
-          n'êtes pas sûr d'être prêt à passer à autre chose, voyez avec votre professeur
-          ! \n"
+        markdown: |-
+          # Stop !
+
+          ## Est-ce que tu es sûr d'être prêt à passer à autre chose ?
+
+
+          Dans le niveau suivant, tu vas te mettre à écrire le code pour ton projet. Ce sera bien plus facile si tu as déjà un plan.
+
+          Ton plan complet devrait comprendre :
+
+          <img src="https://images.code.org/b476ac330f2b66e44e02208fee386a56-image-1614802439867.png" style="float:left; height:70px; padding:10px"/>
+
+          * Le type de projet que tu vas développer. Comme par exemple une carte de vœux, un chatbot ou une histoire d'espace vide.
+          * Une liste des questions que tu vas poser à l'utilisateur.
+          * L'autre texte que tu vas afficher à l'écran.
+          * Une description ou un dessin des sprites dont tu vas avoir besoin (ainsi que leurs comportements).
+
+          Si tu n'es pas sûr si tu es prêt à passer à autre chose, vois avec ton instituteur !
       coursee_prediction_artistfunction22022:
         answers:
         - text: L’artiste résoudra ce casse-tête correctement.

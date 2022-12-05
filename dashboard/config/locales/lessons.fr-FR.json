@@ -448,10 +448,10 @@
         },
         "coursef-2022/The Power of Words": {
           "name": "Le Pouvoir des Mots",
-          "overview": " [![Common sense education](https://curriculum.code.org/static/img/common_sense_education.png)](https://www.commonsense.org)\n\nCette leçon a été créée à l'origine par Common Sense Education. [Learn more.](https://www.commonsense.org/education/digital-citizenship/curriculum)\n\nÀ mesure que les enfants grandissent, ils commenceront naturellement à communiquer davantage en ligne. Mais certaines choses de ce qu'ils voient pourraient les blesser, les atrister, les mettre en colère ou leur faire peur. Aidez vos élèves à développer de l'empathie pour les autres et à apprendre des stratégies à utiliser lorsqu'ils sont confrontés à la cyberintimidation. ",
+          "overview": " [![common sense education](https://curriculum.code.org/static/img/common_sense_education.png)](https://www.commonsense.org)\n\nCette leçon a été créée à l'origine par Common Sense Education. [En savoir plus.](https://www.commonsense.org/education/digital-citizenship/curriculum)\n\nÀ mesure que les enfants grandissent, ils commenceront naturellement à communiquer davantage en ligne. Mais certaines choses qu'ils voient pourraient les blesser, les atrister, les mettre en colère ou leur faire peur. Aidez vos élèves à développer de l'empathie pour les autres et à apprendre des stratégies à utiliser lorsqu'ils sont confrontés à la cyberintimidation. ",
           "preparation": "-   Réviser les supports pédagogiques.\n-   Imprimez le(s) document(s) pour chaque élève.\n-   Préparez une longue ficelle (ou corde) et du papier pour la classe. ",
           "purpose": "Common Sense Education a créé cette leçon pour enseigner aux élèves ce qu'ils doivent faire lorsque quelqu'un utilise un langage méchant ou blessant sur Internet. ",
-          "student_overview": "Le harcèlement n'est jamais acceptable. Cette leçon vous apprendra ce qui est et n'est pas acceptable de dire en ligne."
+          "student_overview": "Le harcèlement n'est jamais acceptable. Cette leçon va t'apprendre ce qu'on peut et ce qu'on ne peut pas dire en ligne. "
         },
         "coursef-2022/Introducing Sprite Lab": {
           "name": "Introduction au Labo des Sprites",
@@ -483,10 +483,10 @@
         },
         "coursef-2022/Blank Space Stories": {
           "name": "Histoires d'espace vide ",
-          "overview": "Dans cette leçon de **mise en contexte**, les élèves utiliseront des histoires à compléter (similaires à Mad Libs®) comme contexte pour comprendre comment les ordinateurs prennent et stockent les entrées d'un utilisateur, puis les utiliseront plus tard quand le programme s'exécute. ",
+          "overview": "Dans cette leçon de **mise en contexte**, les élèves utiliseront des histoires à compléter soi-même (semblables aux Mad Libs®) comme contexte pour comprendre comment les ordinateurs prennent et retiennent les informations saisies par un utilisateur, puis les utilisent plus tard lors de l'exécution de programmes.",
           "preparation": "Procurez-vous 6 enveloppes (sinon : papier ou fiches, pliées en deux).\n\n-   Étiquetez le devant de chaque enveloppe avec de grandes lettres : objet, liquide, numéro, adjectif, partie du corps, numéro\n-   Imprimez des copies de la **\\*feuille de travail** de l'étudiant (ou publiez la version numérique sur votre LMS). ",
           "purpose": "Cette leçon fournit un contexte partagé qui sera utile pour comprendre comment les variables fonctionnent lorsque les élèves retournent à la programmation. ",
-          "student_overview": "Dans cette activité, vous utiliserez des histoires à compléter (similaires à Mad Libs®) pour vous préparer à comprendre comment les ordinateurs prennent et stockent les entrées d'un utilisateur, puis les utiliserez plus tard lors de l'exécution d'un programme. "
+          "student_overview": "Dans cette activité, tu vas utiliser des histoires à compléter soi-même (semblables aux Mad Libs®) pour te préparer à comprendre comment les ordinateurs prennent et retiennent les informations saisies par un utilisateur, puis les utilisent plus tard lors de l'exécution de programmes. "
         },
         "coursef-2022/Text and Prompts": {
           "name": "Texte et invites ",
@@ -496,13 +496,14 @@
           "student_overview": "Dans ce cours, tu t'entraîneras sur les variables dans le Labo des Sprites."
         },
         "coursef-2022/Mini-Project: User Input Programs": {
-          "overview": "Les étudiants appliqueront leurs nouvelles compétences avec des variables à l'un des trois **mini-projets** ouverts. Ils exploreront des exemples de programmes, créeront un plan pour leur propre projet et le programmeront entièrement depuis le début.",
+          "name": "Mini-projet : Programmes avec saisies de l'utilisateur ",
+          "overview": "Les élèves mettront en pratique leurs nouvelles compétences avec les variables dans l'un de ces trois **mini-projets** libres. Ils découvriront des exemples de programmes, esquisseront un plan pour leur propre projet et le programmeront entièrement à partir de zéro.",
           "preparation": "-   Imprimez le guide de planification ou distribuez une copie numérique à chaque élève. Consultez-le à l'avance au cas où vous souhaiteriez apporter des modifications pour l'adapter à votre classe.\n\n-   Passez en revue les options du niveau 3 à l'avance pour vous familiariser avec le cheminement que les élèves devront suivre.\n\n-   Cette leçon peut s'étendre sur plusieurs périodes de cours. Considérez les implications de la planification à l'avance. ",
           "purpose": "Cette leçon n'introduit pas de nouvelles compétences ou de nouveaux concepts, mais donne plutôt aux élèves la possibilité d'appliquer ce qu'ils ont appris de manière créative. ",
-          "student_overview": "Appliquez vos nouvelles compétences avec des variables à l'un des trois projets ouverts. "
+          "student_overview": "Met en pratique tes nouvelles compétences avec les variables avec l'un de ces trois projets libres."
         },
         "coursef-2022/Simulating Experiments": {
-          "name": "Simuler des Expérimentations",
+          "name": "Simulation d'Expériences",
           "overview": "En exécutant une simulation simple dans le Labo des Sprites, les étudiants découvriront comment l'informatique peut être utilisée pour collecter des données qui identifient des tendances ou des modèles. Après avoir exécuté la simulation de nombreuses fois, les élèves auront l'occasion de faire une prédiction sur la façon dont la modification d'une variable dans la simulation peut avoir un impact sur le résultat, puis de tester cette hypothèse.",
           "preparation": "-   Voyez si les élèves feront des simulations sur leur propre ordinateur ou si vous les ferez avec toute la classe\n-   Si nécessaire, préparez-vous à projeter les deux simulations dans cette leçon. ",
           "purpose": "Les sciences, dans de nombreuses disciplines, utilisent l'informatique pour exécuter des modèles et des simulations, afin d'exécuter des expériences, de recueillir des données et de les analyser pour obtenir des informations. Bien que la simulation présentée dans cette leçon soit assez simpliste, elle peut être utilisée comme point de départ pour que les étudiants examinent comment des modèles informatiques plus sophistiqués pourraient être utilisés pour tester des hypothèses. ",
@@ -1730,10 +1731,10 @@
           "name": "Les Boucles Imbriquées avec Frozen"
         },
         "coursef-2018/Conditionals with Cards": {
-          "name": "Instructions conditionnelles avec des cartes"
+          "name": "Les instructions conditionnelles avec des cartes"
         },
         "coursef-2018/Conditionals in Farmer": {
-          "name": "Les Conditions avec la Fermière"
+          "name": "Les Formules Conditionnelles avec la Fermière"
         },
         "coursef-2018/Functions in Minecraft": {
           "name": "Les Fonctions avec Minecraft"
@@ -2552,7 +2553,7 @@
           "name": "Modifier des Variables avec l'Artiste"
         },
         "coursef-2019/Simulating Experiments": {
-          "name": "Simuler des Expérimentations"
+          "name": "Simulation d'Expériences"
         },
         "coursef-2019/For Loop Fun": {
           "name": "Jouer avec les Boucles « Pour »"
@@ -4335,17 +4336,17 @@
         },
         "coursef-2021/lesson-2": {
           "name": "Le Pouvoir des Mots",
-          "overview": " [![Common sense education](https://curriculum.code.org/static/img/common_sense_education.png)](https://www.commonsense.org)\n\nCette leçon a été créée à l'origine par Common Sense Education. [Learn more.](https://www.commonsense.org/education/digital-citizenship/curriculum)\n\nÀ mesure que les enfants grandissent, ils commenceront naturellement à communiquer davantage en ligne. Mais certaines choses de ce qu'ils voient pourraient les blesser, les atrister, les mettre en colère ou leur faire peur. Aidez vos élèves à développer de l'empathie pour les autres et à apprendre des stratégies à utiliser lorsqu'ils sont confrontés à la cyberintimidation. ",
+          "overview": " [![common sense education](https://curriculum.code.org/static/img/common_sense_education.png)](https://www.commonsense.org)\n\nCette leçon a été créée à l'origine par Common Sense Education. [En savoir plus.](https://www.commonsense.org/education/digital-citizenship/curriculum)\n\nÀ mesure que les enfants grandissent, ils commenceront naturellement à communiquer davantage en ligne. Mais certaines choses qu'ils voient pourraient les blesser, les atrister, les mettre en colère ou leur faire peur. Aidez vos élèves à développer de l'empathie pour les autres et à apprendre des stratégies à utiliser lorsqu'ils sont confrontés à la cyberintimidation. ",
           "preparation": "-   Réviser les supports pédagogiques.\n-   Imprimez le(s) document(s) pour chaque élève.\n-   Préparez une longue ficelle (ou corde) et du papier pour la classe. ",
           "purpose": "Common Sense Education a créé cette leçon pour enseigner aux élèves ce qu'ils doivent faire lorsque quelqu'un utilise un langage méchant ou blessant sur Internet. ",
-          "student_overview": "Le harcèlement n'est jamais acceptable. Cette leçon vous apprendra ce qui est et n'est pas acceptable de dire en ligne."
+          "student_overview": "Le harcèlement n'est jamais acceptable. Cette leçon va t'apprendre ce qu'on peut et ce qu'on ne peut pas dire en ligne. "
         },
         "coursef-2021/lesson-9": {
           "name": "Histoires d'espace vide ",
-          "overview": "Dans cette leçon de **mise en contexte**, les élèves utiliseront des histoires à compléter (similaires à Mad Libs®) comme contexte pour comprendre comment les ordinateurs prennent et stockent les entrées d'un utilisateur, puis les utiliseront plus tard quand le programme s'exécute. ",
+          "overview": "Dans cette leçon de **mise en contexte**, les élèves utiliseront des histoires à compléter soi-même (semblables aux Mad Libs®) comme contexte pour comprendre comment les ordinateurs prennent et retiennent les informations saisies par un utilisateur, puis les utilisent plus tard lors de l'exécution de programmes.",
           "preparation": "Procurez-vous 6 enveloppes (sinon : papier ou fiches, pliées en deux).\n\n-   Étiquetez le devant de chaque enveloppe avec de grandes lettres : objet, liquide, numéro, adjectif, partie du corps, numéro\n-   Imprimez des copies de la **\\*feuille de travail** de l'étudiant (ou publiez la version numérique sur votre LMS). ",
           "purpose": "Cette leçon fournit un contexte partagé qui sera utile pour comprendre comment les variables fonctionnent lorsque les élèves retournent à la programmation. ",
-          "student_overview": "Dans cette activité, vous utiliserez des histoires à compléter (similaires à Mad Libs®) pour vous préparer à comprendre comment les ordinateurs prennent et stockent les entrées d'un utilisateur, puis les utiliserez plus tard lors de l'exécution d'un programme. "
+          "student_overview": "Dans cette activité, tu vas utiliser des histoires à compléter soi-même (semblables aux Mad Libs®) pour te préparer à comprendre comment les ordinateurs prennent et retiennent les informations saisies par un utilisateur, puis les utilisent plus tard lors de l'exécution de programmes. "
         },
         "coursef-2021/lesson-10": {
           "name": "Texte et invites ",
@@ -4355,10 +4356,11 @@
           "student_overview": "Dans ce cours, tu t'entraîneras sur les variables dans le Labo des Sprites."
         },
         "coursef-2021/lesson-11": {
-          "overview": "Les étudiants appliqueront leurs nouvelles compétences avec des variables à l'un des trois **mini-projets** ouverts. Ils exploreront des exemples de programmes, créeront un plan pour leur propre projet et le programmeront entièrement depuis le début.",
+          "name": "Mini-projet : Programmes avec saisies de l'utilisateur ",
+          "overview": "Les élèves mettront en pratique leurs nouvelles compétences avec les variables dans l'un de ces trois **mini-projets** libres. Ils découvriront des exemples de programmes, esquisseront un plan pour leur propre projet et le programmeront entièrement à partir de zéro.",
           "preparation": "-   Imprimez le guide de planification ou distribuez une copie numérique à chaque élève. Consultez-le à l'avance au cas où vous souhaiteriez apporter des modifications pour l'adapter à votre classe.\n\n-   Passez en revue les options du niveau 3 à l'avance pour vous familiariser avec le cheminement que les élèves devront suivre.\n\n-   Cette leçon peut s'étendre sur plusieurs périodes de cours. Considérez les implications de la planification à l'avance. ",
           "purpose": "Cette leçon n'introduit pas de nouvelles compétences ou de nouveaux concepts, mais donne plutôt aux élèves la possibilité d'appliquer ce qu'ils ont appris de manière créative. ",
-          "student_overview": "Appliquez vos nouvelles compétences avec des variables à l'un des trois projets ouverts. "
+          "student_overview": "Met en pratique tes nouvelles compétences avec les variables avec l'un de ces trois projets libres."
         },
         "coursef-2021/Loops with the Artist": {
           "name": "Dessiner avec les Boucles",
@@ -4368,7 +4370,7 @@
           "student_overview": "Dans cette leçon, les **boucles** facilitent la création d'images stylées avec l'Artiste !"
         },
         "coursef-2021/Variables that Change in Artist": {
-          "name": "Utiliser des Variables avec l'Artistes",
+          "name": "Utiliser des Variables avec l'Artiste",
           "overview": "Dans cette leçon de **développement des compétences**, les élèves exploreront la création de motifs récurrents à l'aide de variables dans le monde de l'Artiste. Les élèves apprendront à utiliser les variables pour rendre le code plus facile à écrire et à lire. À la suite de casse-têtes guidées, les élèves termineront avec un niveau en jeu libre pour qu'ils puissent montrer ce qu'ils ont appris et créer de nouveaux designs.",
           "preparation": "-   Parcourez les énigmes pour trouver des problèmes potentiels pour votre groupe scolaire.\n-   Assurez-vous que chaque élève ait bien un journal de réflexion. ",
           "purpose": "Les variables sont essentiellement des espaces réservés pour des valeurs qui peuvent être inconnues au moment où vous exécutez votre programme ou pour des valeurs qui peuvent changer pendant l'exécution d'un programme. Ceux-ci sont essentiels à la création de code dynamique car ils permettent à votre programme de changer et de se développer en fonction d'un nombre quelconque de modifications potentielles. Cette étape renforce l'utilisation des variables, en utilisant les capacités les plus élémentaires de les définir et de les utiliser. ",
@@ -4410,7 +4412,7 @@
           "student_overview": "Prépare-toi à réaliser ton prochain chef-d'œuvre. Ici, tu utiliseras des boucles « pour » pour créer des images à couper le souffle."
         },
         "coursef-2021/Simulating Experiments": {
-          "name": "Simuler des Expérimentations",
+          "name": "Simulation d'Expériences",
           "overview": "En exécutant une simulation simple dans le Labo des Sprites, les étudiants découvriront comment l'informatique peut être utilisée pour collecter des données qui identifient des tendances ou des modèles. Après avoir exécuté la simulation de nombreuses fois, les élèves auront l'occasion de faire une prédiction sur la façon dont la modification d'une variable dans la simulation peut avoir un impact sur le résultat, puis de tester cette hypothèse.",
           "preparation": "-   Voyez si les élèves feront des simulations sur leur propre ordinateur ou si vous les ferez avec toute la classe\n-   Si nécessaire, préparez-vous à projeter les deux simulations dans cette leçon. ",
           "purpose": "Les sciences, dans de nombreuses disciplines, utilisent l'informatique pour exécuter des modèles et des simulations, afin d'exécuter des expériences, de recueillir des données et de les analyser pour obtenir des informations. Bien que la simulation présentée dans cette leçon soit assez simpliste, elle peut être utilisée comme point de départ pour que les étudiants examinent comment des modèles informatiques plus sophistiqués pourraient être utilisés pour tester des hypothèses. ",
@@ -5011,7 +5013,7 @@
           "student_overview": "Dans ce cours, tu t'entraîneras sur les variables dans le Labo des Sprites."
         },
         "express-2021/Variables with Artist": {
-          "name": "Utiliser des Variables avec l'Artistes",
+          "name": "Utiliser des Variables avec l'Artiste",
           "overview": "Dans cette leçon de **développement des compétences**, les élèves exploreront la création de motifs récurrents à l'aide de variables dans le monde de l'Artiste. Les élèves apprendront à utiliser les variables pour rendre le code plus facile à écrire et à lire. À la suite de casse-têtes guidées, les élèves termineront avec un niveau en jeu libre pour qu'ils puissent montrer ce qu'ils ont appris et créer de nouveaux designs.",
           "preparation": "-   Parcourez les énigmes pour trouver des problèmes potentiels pour votre classe.\n-   Assurez-vous que chaque élève ait bien un journal de réflexion. ",
           "purpose": "Les variables sont essentiellement des espaces réservés pour des valeurs qui peuvent être inconnues au moment où vous exécutez votre programme ou pour des valeurs qui peuvent changer pendant l'exécution d'un programme. Ceux-ci sont essentiels à la création de code dynamique car ils permettent à votre programme de changer et de se développer en fonction d'un nombre quelconque de modifications potentielles. Cette étape renforce l'utilisation des variables, en utilisant les capacités les plus élémentaires de les définir et de les utiliser. ",
@@ -5950,7 +5952,7 @@
           "name": "Modifier des Variables avec l'Artiste"
         },
         "coursef-2020/Simulating Experiments": {
-          "name": "Simuler des Expérimentations"
+          "name": "Simulation d'Expériences"
         },
         "coursef-2020/AI for Oceans": {
           "name": "IA pour les Océans"

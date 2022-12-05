@@ -155,6 +155,7 @@ fr:
       'Exploration: For Loops': 'Exploration : Boucles « Pour »'
       'Exploration: Rikki''s Poster': 'Exploration : l''affiche de Rikki'
       'Exploration: Sample Apps': 'Exploration : Exemples d''Applis'
+      'Exploration: Sample Programs': 'Exploration : Exemples de programmes '
       'Exploration: Sample Project': 'Exploration : Exemple de projet'
       Explore HTML: Explorer le HTML
       Extra: Supplémentaire
@@ -169,7 +170,7 @@ fr:
       For Loops and Repeat Blocks: Les Boucles « Pour » et Les Blocs « Répéter »
       Formatting HTML: Mise en forme HTML
       Free Play: Jeu libre
-      'Free Play: Make a Scene': 'Jeu Libre : Crées une scène'
+      'Free Play: Make a Scene': 'Jeu Libre : Crée un tableau'
       'Free Play: Make an Interactive Scene': 'Jeu Libre : Crées une scène interactive'
       Functions: Fonctions
       Functions Review: Révision des fonctions
@@ -222,6 +223,7 @@ fr:
       "Mini-Project: Snowflake #1": "Mini-projet : Flocon de neige #1"
       "Mini-Project: Snowflake #2": "Mini-projet : Flocon de neige #2"
       'Mini-Project: Sticker Art': 'Mini-projet : Design à base d''autocollants '
+      'Mini-Project: User Input Programs': 'Mini-projet : Programmes avec saisies de l''utilisateur '
       'Mini-Project: Virtual Pet': 'Mini-projet : Animal domestique virtuel '
       'Mini-project: Chase Game': 'Mini-projet : Jouer à la Chasse'
       'Mini-project: Flappy Game': 'Mini-projet : Jeu Flappy'
@@ -259,7 +261,7 @@ fr:
       Picturing Data: Se représenter les Données
       Plan Your Project: Planifiez votre projet
       Plane Jumper: Saut d’avion
-      Planning: Planifier
+      Planning: Planning
       Platform Jumper - Background and Variables: Platform Jumper - Contexte et variables
       Platform Jumper - Items: Plate-forme de sauts - Objets
       Platform Jumper - Platforms: Plate-forme de sauts - Plate-formes
@@ -333,6 +335,7 @@ fr:
       The Big Event - Unplugged Activity: Le Grand Événement - Activité déconnectée 
       The Draw Loop: La Boucle Dessiner
       The Harvester: L'Agricultrice
+      The Power of Words - Unplugged Activity: Le Pouvoir des Mots - Activité déconnectée
       The Right App - Unplugged Activity: La Bonne Appli - Activité Déconnectée
       Tour of Design Mode: Visite du mode création
       Train an AI to Clean the Ocean: Entraîner l'IA pour rendre l'océan propre
@@ -429,7 +432,7 @@ fr:
       'Video: The Collector': 'Vidéo : La Collectionneuse'
       'Video: The Harvester': 'Vidéo : L''Agricultrice'
       'Video: Training Data & Bias': 'Vidéo : Données de formation et préférences'
-      'Video: Unplugged Variables in Envelopes': 'Vidéo : Variables débranchées dans les enveloppes '
+      'Video: Unplugged Variables in Envelopes': 'Vidéo : Variables déconnectées en enveloppes '
       'Video: Using the Repeat Block': 'Vidéo : Utiliser le Bloc Répéter'
       'Video: Variables in Artist': ' Les Variables dans l''Artiste'
       'Video: Velocity': 'Vidéo : la vitesse'
