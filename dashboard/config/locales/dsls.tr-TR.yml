@@ -6878,7 +6878,7 @@ tr-TR:
         - {}
         - {}
       CSD U3 drawing practice choice_2021:
-        display_name: Egzersizler
+        display_name: Alıştırma
       CSD U3 game intro_2018_2019_pilot_2021:
         content1: açıklama buraya
       CSD U3 platform intro_2018_2019_pilot_2021:
@@ -6905,21 +6905,21 @@ tr-TR:
         - {}
         title: Bir Tahminde Bulun
       CSD games cake challenge choice_2021:
-        display_name: Meydan okuma
+        display_name: Mücadeleler
       CSD games functions practice choice_2021:
         display_name: Fonksiyonları Uygulama
       CSD games platform challenge choice_2021:
-        display_name: Meydan okuma
+        display_name: Mücadeleler
       CSD web conditionals practice choice_2021:
         display_name: 'Koşulları Uygulama
 
 '
       CSD web draw loop practice choice_2021:
-        display_name: Egzersizler
+        display_name: Alıştırma
       CSD web movement practice choice_2021:
-        display_name: Egzersizler
+        display_name: Alıştırma
       CSD web text practice choice_2021:
-        display_name: Egzersizler
+        display_name: Alıştırma
       csd-pre-survey-levelgroup_21_22:
         title: CS Keşifleri Öğrenci Ön Ders Değerlendirmesi
       PowerOfWords-Unplugged_2020:
@@ -7574,7 +7574,7 @@ tr-TR:
         - {}
         - {}
       CSD U3 drawing practice choice_2022:
-        display_name: Egzersizler
+        display_name: Alıştırma
       CSD U3 platform intro_2018_2019_pilot_2022:
         content1: açıklama buraya
       CSD U4 test feature match:
@@ -7866,29 +7866,29 @@ tr-TR:
         questions:
         - {}
       CSD U6 - Accelerometer - Chal_2222:
-        display_name: Zorluk Düzeyleri
+        display_name: Mücadele Düzeyleri
       CSD U6 - Board Inputs - Chal_2222:
-        display_name: Zorluk Düzeyleri
+        display_name: Mücadele Düzeyleri
       CSD U6 - Board Outputs - Chal_2222:
-        display_name: Zorluk Düzeyleri
+        display_name: Mücadele Düzeyleri
       CSD U6 - Color LEDs - Chal_2222:
-        display_name: Zorluk Düzeyleri
+        display_name: Mücadele Düzeyleri
       CSD U6 - Combine Inputs - Chal_2222:
-        display_name: Zorluk Düzeyleri
+        display_name: Mücadele Düzeyleri
       CSD U6 - If Variables - Chal_2222:
-        display_name: Zorluk Düzeyleri
+        display_name: Mücadele Düzeyleri
       CSD U6 - Music - Chal_2222:
-        display_name: Zorluk Düzeyleri
+        display_name: Mücadele Düzeyleri
       CSD U6 - Physical Input - Chal_2222:
-        display_name: Zorluk Düzeyleri
+        display_name: Mücadele Düzeyleri
       CSD U6 - Physical Output - Chal_2222:
-        display_name: Zorluk Düzeyleri
+        display_name: Mücadele Düzeyleri
       CSD U6 - Screen Inputs - Chal_2222:
-        display_name: Zorluk Düzeyleri
+        display_name: Mücadele Düzeyleri
       CSD U6 - Screen Outputs - Chal_2222:
-        display_name: Zorluk Düzeyleri
+        display_name: Mücadele Düzeyleri
       CSD U6 - Sensors - Chal_2222:
-        display_name: Zorluk Düzeyleri
+        display_name: Mücadele Düzeyleri
       CSD U6 setProperty predict multi_2222:
         answers:
         - {}
@@ -8025,21 +8025,21 @@ tr-TR:
         questions:
         - {}
       CSD games cake challenge choice_2022:
-        display_name: Meydan okuma
+        display_name: Mücadeleler
       CSD games functions practice choice_2022:
         display_name: Fonksiyonları Uygulama
       CSD games platform challenge choice_2022:
-        display_name: Meydan okuma
+        display_name: Mücadeleler
       CSD web conditionals practice choice_2022:
         display_name: 'Koşulları Uygulama
 
 '
       CSD web draw loop practice choice_2022:
-        display_name: Egzersizler
+        display_name: Alıştırma
       CSD web movement practice choice_2022:
-        display_name: Egzersizler
+        display_name: Alıştırma
       CSD web text practice choice_2022:
-        display_name: Egzersizler
+        display_name: Alıştırma
       CSP PD Example Question 1:
         answers:
         - {}
@@ -13541,7 +13541,7 @@ tr-TR:
         - correct: true
         - text: Asyalı
           correct: true
-        - text: Siyahi veya Afrika kökenli Amerikalı
+        - text: Siyah veya Afrikalı Amerikalı
           correct: true
         - correct: true
         - correct: true

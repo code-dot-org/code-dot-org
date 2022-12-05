@@ -1440,7 +1440,7 @@
           "type": "Slaytlar"
         },
         "combining_representations/csd/2022": {
-          "name": "İfadeleri birleştirme",
+          "name": "Temsillerin Birleştirilmesi",
           "type": "Slaytlar"
         },
         "medical_records_1/csd/2022": {
@@ -1543,7 +1543,7 @@
           "type": "Slaytlar"
         },
         "make_a_recommendation/csd/2022": {
-          "type": "Eş gözden geçirme"
+          "type": "Akran Değerlendirmesi"
         },
         "make_a_recommendation_1/csd/2022": {
           "type": "Değerlendirme Tablosu"
@@ -1619,7 +1619,7 @@
         },
         "apps_and_problem_solving_1/csd/2022": {
           "name": "Uygulamalar ve Problem çözme",
-          "type": "Eş gözden geçirme"
+          "type": "Akran Değerlendirmesi"
         },
         "apps_and_problem_solving_2/csd/2022": {
           "name": "Uygulamalar ve Problem çözme",
@@ -1817,7 +1817,7 @@
         },
         "interactive_card_2/csd/2022": {
           "name": "İnteraktif Kart",
-          "type": "Eş gözden geçirme"
+          "type": "Akran Değerlendirmesi"
         },
         "interactive_card_3/csd/2022": {
           "name": "İnteraktif Kart",
@@ -1862,7 +1862,7 @@
           "type": "Slaytlar"
         },
         "velocity_and_the_counter_pattern/csd/2022": {
-          "name": "Hız ve Sayaç Modeli",
+          "name": "Hız ve Sayaç Deseni",
           "type": "Kaynak"
         },
         "complex_sprite_movement/csd/2022": {
@@ -1908,7 +1908,7 @@
           "type": "Proje Kılavuzu"
         },
         "make_your_own_game_2/csd/2022": {
-          "type": "Eş gözden geçirme"
+          "type": "Akran Değerlendirmesi"
         },
         "make_your_own_game_3/csd/2022": {
           "type": "Değerlendirme Tablosu"
@@ -1965,7 +1965,7 @@
           "type": "Değerlendirme Tablosu"
         },
         "html_web_page_2/csd/2022": {
-          "type": "Eş gözden geçirme"
+          "type": "Akran Değerlendirmesi"
         },
         "html_web_page_3/csd/2022": {
           "type": "Proje Kılavuzu"
@@ -2010,7 +2010,7 @@
           "type": "Değerlendirme Tablosu"
         },
         "your_personal_style_1/csd/2022": {
-          "type": "Eş gözden geçirme"
+          "type": "Akran Değerlendirmesi"
         },
         "your_personal_style_2/csd/2022": {
           "type": "Proje Kılavuzu"
@@ -2055,7 +2055,7 @@
           "type": "Kaynak"
         },
         "personal_web_page/csd/2022": {
-          "type": "Eş gözden geçirme"
+          "type": "Akran Değerlendirmesi"
         },
         "personal_web_page_-_reflect/csd/2022": {
           "type": "Proje Kılavuzu"
@@ -2067,7 +2067,7 @@
           "type": "Değerlendirme Tablosu"
         },
         "publishing_your_website/csd/2022": {
-          "name": "Web Sitenizi Yayınlıyoruz",
+          "name": "Web Sitenizi Yayınlama",
           "type": "Video"
         },
         "project_-_personal_web_page/csd/2022": {
@@ -2137,7 +2137,7 @@
           "type": "Proje Kılavuzu"
         },
         "website_for_a_purpose_1/csd/2022": {
-          "type": "Eş gözden geçirme"
+          "type": "Akran Değerlendirmesi"
         },
         "peer_review_and_final_touches/csd/2022": {
           "name": "Akran İncelemesi ve Son Rötuşlar",
@@ -2263,7 +2263,11 @@
         "bugs_and_features_2/csd/2022": {
           "type": "Slaytlar"
         },
+        "updating_your_prototype/csd/2022": {
+          "name": "Prototipinizi Güncelleme"
+        },
         "updating_your_prototype_1/csd/2022": {
+          "name": "Prototipinizi Güncelleme",
           "type": "Slaytlar"
         },
         "app_presentation/csd/2022": {
@@ -2322,11 +2326,11 @@
           "type": "Slaytlar"
         },
         "board_events/csd/2022": {
-          "name": "Kurul Etkinlikleri",
+          "name": "Devre kartı Etkinlikleri",
           "type": "Kaynak"
         },
         "board_events_1/csd/2022": {
-          "name": "Kurul Etkinlikleri",
+          "name": "Devre kartı Etkinlikleri",
           "type": "Slaytlar"
         },
         "physical_input/csd/2022": {
@@ -2425,7 +2429,7 @@
           "type": "Slaytlar"
         },
         "playing_notes/csd/2022": {
-          "name": "Notları çalma",
+          "name": "Notaları çalma",
           "type": "Kaynak"
         },
         "producing_output/csd/2022": {
@@ -4927,6 +4931,9 @@
         "responding_to_user_input/csd/2021": {
           "type": "Kaynak"
         },
+        "updating-your-prototype/csd/2021": {
+          "name": "Prototipinizi Güncelleme"
+        },
         "app-presentation/csd/2021": {
           "name": "Uygulama Sunumu",
           "type": "Değerlendirme Tablosu"
@@ -4972,7 +4979,7 @@
           "type": "Kaynak"
         },
         "board_events/csd/2021": {
-          "name": "Kurul Etkinlikleri",
+          "name": "Devre kartı Etkinlikleri",
           "type": "Kaynak"
         },
         "physical_input/csd/2021": {
@@ -5031,7 +5038,7 @@
           "type": "Kaynak"
         },
         "playing_notes/csd/2021": {
-          "name": "Notları çalma",
+          "name": "Notaları çalma",
           "type": "Kaynak"
         },
         "producing_output/csd/2021": {
@@ -5168,7 +5175,7 @@
           "type": "Video"
         },
         "make-a-recommendation-peer-review-2019/csd/2021": {
-          "type": "Eş gözden geçirme"
+          "type": "Akran Değerlendirmesi"
         },
         "make-a-recommendation-1/csd/2021": {
           "type": "Değerlendirme Tablosu"
@@ -5294,7 +5301,7 @@
         },
         "interactive-card-1-2-3-4/csd/2021": {
           "name": "İnteraktif Kart",
-          "type": "Eş gözden geçirme"
+          "type": "Akran Değerlendirmesi"
         },
         "interactive_card/csd/2021": {
           "name": "İnteraktif Kart",
@@ -5327,7 +5334,7 @@
           "type": "Proje Kılavuzu"
         },
         "velocity_and_the_counter_pattern_-_map_level_pdf_/csd/2021": {
-          "name": "Hız ve Sayaç Modeli",
+          "name": "Hız ve Sayaç Deseni",
           "type": "Kaynak"
         },
         "flyer-game-1/csd/2021": {
@@ -5350,7 +5357,7 @@
           "type": "Proje Kılavuzu"
         },
         "make-your-own-game-1-2-3/csd/2021": {
-          "type": "Eş gözden geçirme"
+          "type": "Akran Değerlendirmesi"
         },
         "make_your_own_game/csd/2021": {
           "type": "Değerlendirme Tablosu"
@@ -5394,7 +5401,7 @@
         },
         "apps-and-problem-solving-peer-review-2019/csd/2021": {
           "name": "Uygulamalar ve Problem çözme",
-          "type": "Eş gözden geçirme"
+          "type": "Akran Değerlendirmesi"
         },
         "apps_and_problem_solving/csd/2021": {
           "name": "Uygulamalar ve Problem çözme",
@@ -5444,7 +5451,7 @@
           "type": "Slaytlar"
         },
         "html-web-page/csd/2021": {
-          "type": "Eş gözden geçirme"
+          "type": "Akran Değerlendirmesi"
         },
         "html-page/csd/2021": {
           "type": "Proje Kılavuzu"
@@ -5485,7 +5492,7 @@
           "type": "Değerlendirme Tablosu"
         },
         "your-personal-style-1/csd/2021": {
-          "type": "Eş gözden geçirme"
+          "type": "Akran Değerlendirmesi"
         },
         "your-personal-style/csd/2021": {
           "type": "Proje Kılavuzu"
@@ -5505,7 +5512,7 @@
           "type": "Proje Kılavuzu"
         },
         "personal-web-page-1/csd/2021": {
-          "type": "Eş gözden geçirme"
+          "type": "Akran Değerlendirmesi"
         },
         "person-web-page-reflect/csd/2021": {
           "type": "Proje Kılavuzu"
@@ -5514,7 +5521,7 @@
           "type": "Değerlendirme Tablosu"
         },
         "publishing_your_website/csd/2021": {
-          "name": "Web Sitenizi Yayınlıyoruz",
+          "name": "Web Sitenizi Yayınlama",
           "type": "Video"
         },
         "personal_web_page_-_student_checklist/csd/2021": {
@@ -5556,7 +5563,7 @@
           "type": "Kaynak"
         },
         "website-for-a-purpose/csd/2021": {
-          "type": "Eş gözden geçirme"
+          "type": "Akran Değerlendirmesi"
         },
         "website-for-a-purpose-reflect/csd/2021": {
           "type": "Proje Kılavuzu"

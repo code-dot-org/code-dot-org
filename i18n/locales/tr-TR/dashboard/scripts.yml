@@ -66,9 +66,9 @@ tr:
           name: cebir
         infinity:
           title: Disney Infinity Play Laboratuarı
-          description: Bir hikaye ya da Disney Infinity karakteriyle bir oyun yaratmak için Play Lab'i kullanın.
-          description_short: Bir hikaye ya da Disney Infinity karakteriyle bir oyun yaratmak için Play Lab'i kullanın.
-          student_description: Bir hikaye ya da Disney Infinity karakteriyle bir oyun yaratmak için Play Lab'i kullanın.
+          description: Disney Infinity karakteriyle bir hikaye ya da  bir oyun yaratmak için Play Lab'i kullanın.
+          description_short: Disney Infinity karakteriyle bir hikaye ya da  bir oyun yaratmak için Play Lab'i kullanın.
+          student_description: Disney Infinity karakteriyle bir hikaye ya da  bir oyun yaratmak için Play Lab'i kullanın.
           name: sonsuzluk
         algebrademo:
           title: Cebir Demo
@@ -5650,7 +5650,7 @@ tr:
           description: Müfredat sürümleri değişirken derslerin veya seviyelerin güncellemelerini hazırlamak için
           lessons:
             lesson-7:
-              name: Spritese Giriş
+              name: Hareketli Nesnelere Giriş
             lesson-8:
               name: Fiziksel Bilişim PSP
         csc-pilot-2022-ecosystems:

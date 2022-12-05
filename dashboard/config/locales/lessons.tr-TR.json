@@ -551,6 +551,9 @@
           "preparation": "-   Planlama kılavuzunu yazdırın veya her öğrenciye dijital bir kopyasını dağıtın. Sınıfınıza uyacak herhangi bir değişiklik yapmak isterseniz, vaktinden önce gözden geçirin.\n\n-   Öğrencilerin takip etmesi gereken akışa aşina olmak için önceden seviye 3'teki seçenekleri gözden geçirin.\n\n-   Bu ders birden fazla sınıf dönemine kadar uzanma potansiyeline sahiptir. Sonuçlarını zamanından önce planlamayı düşünün.",
           "purpose": "Bu ders yeni becerileri veya kavramları tanıtmaz, ancak bunun yerine öğrendiklerini yaratıcı bir şekilde uygulama fırsatı verir."
         },
+        "coursef-2022/[New] Mini-Project: Collector Game": {
+          "name": "Mini-Proje: Koleksiyoncu Oyunu"
+        },
         "coursef-2022/Simulating Experiments": {
           "name": "Deneyleri Benzetme",
           "overview": "Hareketli Nesne Laboratuvarında basit bir simülasyonu çalıştırarak öğrenciler, trendleri ve desenleri tanımlayan veriyi toplamak için bilişimin nasıl kullanılabileceğini görecekler. Simülasyonu birçok kere çalıştırdıktan sonra öğrenciler, simülasyonda bir değişkenin değiştirilmesinin, sonucu nasıl etkileyebileceğine dair bir tahminde bulunma ve sonrasında bu hipotezi test etme fırsatını bulacaktır.",
@@ -1251,7 +1254,7 @@
           "name": "Numaraları temsil eden"
         },
         "csd5-2022/Combining Representations": {
-          "name": "İfadeleri birleştirme"
+          "name": "Temsillerin Birleştirilmesi"
         },
         "csd5-2022/Keeping Data Secret": {
           "name": "Verileri Gizli Tutmak"
@@ -1478,6 +1481,9 @@
         "csd4-2022/Testing the App": {
           "name": "Uygulamayı Test Etmek"
         },
+        "csd4-2022/Updating Your Prototype": {
+          "name": "Prototipinizi Güncelleme"
+        },
         "csd4-2022/Project - App Presentation": {
           "name": "Proje - Uygulama Sunumu"
         },
@@ -1491,7 +1497,7 @@
           "name": "Çember Oyun Alanı"
         },
         "csd6-2022/Board Events": {
-          "name": "Kurul Etkinlikleri"
+          "name": "Devre kartı Etkinlikleri"
         },
         "csd6-2022/Color LEDs": {
           "name": "Renkli LED'ler"
@@ -1674,7 +1680,7 @@
           "name": "Sanatçı Programlama"
         },
         "coursef-2018/Loops: My Loopy Robotic Friends": {
-          "name": "Döngüler: Loopy robot dostlarım"
+          "name": "Loopy Robotik Arkadaşlarım"
         },
         "coursef-2018/Loops in Artist": {
           "name": "Sanatçıların Döngüleri"
@@ -1776,7 +1782,7 @@
           "name": "Arı -içiçe döngüler"
         },
         "express-2018/While Loops in Farmer": {
-          "name": "Çiftçi Döngüleri"
+          "name": "Çiftçi ile While (Süresince) Döngüleri"
         },
         "express-2018/Until Loops in Maze": {
           "name": "Labirentte Bitiş Döngüleri"
@@ -1893,7 +1899,7 @@
           "name": "Sanatçı Programlama"
         },
         "coursee-2018/Loops: My Loopy Robotic Friends": {
-          "name": "Döngüler: Loopy robot dostlarım"
+          "name": "Loopy Robotik Arkadaşlarım"
         },
         "coursee-2018/Loops in Artist": {
           "name": "Sanatçıların Döngüleri"
@@ -2133,7 +2139,7 @@
           "name": "Bağımsız (Unplugged) Girdi"
         },
         "csd6-2018/Board Events": {
-          "name": "Kurul Etkinlikleri"
+          "name": "Devre kartı Etkinlikleri"
         },
         "csd6-2018/Getting Properties": {
           "name": "Özelikleri Alma"
@@ -2190,7 +2196,7 @@
           "name": "Verileri Gizli Tutmak"
         },
         "csd5-2018/Combining Representations": {
-          "name": "İfadeleri birleştirme"
+          "name": "Temsillerin Birleştirilmesi"
         },
         "csd5-2018/Project - Create a Representation": {
           "name": "Proje - bir ifade oluşturun"
@@ -2616,7 +2622,7 @@
           "name": "Koşullar-Arı"
         },
         "express-2019/While Loops in Farmer": {
-          "name": "Çiftçi Döngüleri"
+          "name": "Çiftçi ile While (Süresince) Döngüleri"
         },
         "express-2019/Conditionals in Minecraft: Voyage Aquatic": {
           "name": "Minecraft'ta Koşullar: Su Yolculuğu"
@@ -2829,7 +2835,7 @@
           "name": "Bağımsız (Unplugged) Girdi"
         },
         "csd6-2019/Board Events": {
-          "name": "Kurul Etkinlikleri"
+          "name": "Devre kartı Etkinlikleri"
         },
         "csd6-2019/Getting Properties": {
           "name": "Özelikleri Alma"
@@ -2931,7 +2937,7 @@
           "name": "Verileri Gizli Tutmak"
         },
         "csd5-2019/Combining Representations": {
-          "name": "İfadeleri birleştirme"
+          "name": "Temsillerin Birleştirilmesi"
         },
         "csd5-2019/Project - Create a Representation": {
           "name": "Proje - bir ifade oluşturun"
@@ -3585,7 +3591,7 @@
           "name": "Bağımsız (Unplugged) Girdi"
         },
         "csd6-2017/Board Events_": {
-          "name": "Kurul Etkinlikleri"
+          "name": "Devre kartı Etkinlikleri"
         },
         "csd6-2017/Getting Properties_": {
           "name": "Özelikleri Alma"
@@ -3708,7 +3714,7 @@
           "name": "Verileri Gizli Tutmak"
         },
         "csd5-2017/Combining Representations": {
-          "name": "İfadeleri birleştirme"
+          "name": "Temsillerin Birleştirilmesi"
         },
         "csd5-2017/Project - Create a Representation": {
           "name": "Proje - bir ifade oluşturun"
@@ -5214,6 +5220,9 @@
         "csd4-2021/Testing the App": {
           "name": "Uygulamayı Test Etmek"
         },
+        "csd4-2021/Updating Your Prototype": {
+          "name": "Prototipinizi Güncelleme"
+        },
         "csd4-2021/Project - App Presentation": {
           "name": "Proje - Uygulama Sunumu"
         },
@@ -5236,7 +5245,7 @@
           "overview": "Uygulama Laboratuvarı ile programlamaya daha derinlemesine inme hazırlığında, öğrenciler, hem Oyun Laboratuvarında hem de Uygulama Laboratuvarında yazılan az miktardaki farklı programların kullanıcılardan girdi almayı nasıl ele aldığını keşfedecekler. Örnek uygulamalarda gördükleri yaklaşımların benzer ve farklı yönlerini kıyasladıktan sonra, öğrenciler, nasıl çalıştıklarına dair daha iyi bir anlayış kazanmak adına girdi için (sonsuz ve eş zamansız etkinliklerde koşullar) iki farklı modeli canlandırmak üzere toplanırlar."
         },
         "csd6-2021/Board Events": {
-          "name": "Kurul Etkinlikleri"
+          "name": "Devre kartı Etkinlikleri"
         },
         "csd6-2021/Getting Properties": {
           "name": "Özelikleri Alma"
@@ -5294,7 +5303,7 @@
           "name": "Numaraları temsil eden"
         },
         "csd5-2021/Combining Representations": {
-          "name": "İfadeleri birleştirme"
+          "name": "Temsillerin Birleştirilmesi"
         },
         "csd5-2021/Keeping Data Secret": {
           "name": "Verileri Gizli Tutmak"
@@ -5561,7 +5570,7 @@
           "name": "Koşullar-Arı"
         },
         "express-2020/While Loops with the Farmer": {
-          "name": "Çiftçi Döngüleri"
+          "name": "Çiftçi ile While (Süresince) Döngüleri"
         },
         "express-2020/Conditionals in Minecraft: Voyage Aquatic": {
           "name": "Minecraft'ta Koşullar: Su Yolculuğu"
