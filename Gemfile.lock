@@ -394,7 +394,7 @@ GEM
       actionpack (>= 4)
       i18n
     e2mmap (0.1.0)
-    erubi (1.10.0)
+    erubi (1.11.0)
     erubis (2.7.0)
     eventmachine (1.2.7)
     execjs (2.7.0)
