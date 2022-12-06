@@ -165,7 +165,7 @@ def restore_redacted_files
       elsif original_path.starts_with? "i18n/locales/original/course_content"
         # Course content should be merged with existing content, so existing
         # data doesn't get lost
-        restored_data = RedactRestoreUtils.restore_file(original_path, translated_path, ['blockly'])
+        restored_data = RedactRestoreUtils.restore_file(original_path, translated_path, ['blockly', 'startHtml'])
         translated_data = JSON.parse(File.read(translated_path))
         File.open(translated_path, "w") do |file|
           file.write(JSON.pretty_generate(translated_data.deep_merge(restored_data)))
@@ -185,8 +185,6 @@ def restore_redacted_files
           plugins << 'visualCodeBlock'
           plugins << 'link'
           plugins << 'resourceLink'
-        elsif %w(applab gamelab weblab).include?(File.basename(original_path, '.json'))
-          plugins << 'link'
         end
         RedactRestoreUtils.restore(original_path, translated_path, translated_path, plugins)
       end
@@ -451,9 +449,6 @@ def distribute_translations(upload_manifests)
       next unless file_changed?(locale, relative_path)
 
       destination_dir = "pegasus/sites.v3/code.org/i18n/public"
-      # The `views` path is actually outside of the `public` path, so when we
-      # see such files, we make sure we restore the `/..` to the destination.
-      destination_dir << "/.." if relative_path.start_with? "/views"
       relative_dir = File.dirname(relative_path)
       name = File.basename(loc_file, ".*")
       destination = File.join(destination_dir, relative_dir, "#{name}.#{locale}.md.partial")
@@ -542,7 +537,7 @@ end
 
 # For untranslated apps, copy English file for all locales
 def copy_untranslated_apps
-  untranslated_apps = %w(calc eval netsim)
+  untranslated_apps = %w(applab calc eval gamelab netsim weblab)
 
   PegasusLanguages.get_locale.each do |prop|
     next unless prop[:locale_s] != 'en-US'
