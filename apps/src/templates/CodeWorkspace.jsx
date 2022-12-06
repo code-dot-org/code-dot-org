@@ -143,7 +143,7 @@ class CodeWorkspace extends React.Component {
           <button id="show-toolbox-icon" style={chevronStyle} type="button">
             <i className="fa fa-chevron-circle-right" />
           </button>
-          <span>{i18n.showToolbox()}</span>
+          <span className="show-toolbox-label">{i18n.showToolbox()}</span>
         </span>
         <span>{settingsCog}</span>
       </PaneSection>
