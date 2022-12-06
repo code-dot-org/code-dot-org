@@ -199,19 +199,19 @@ class ProgrammingExpression < ApplicationRecord
       blockName: block_name,
       category: get_localized_property(
         :name,
-        programming_environment_category&.name,
         [:data,
          :programming_environments,
          programming_environment&.name,
          :categories,
-         programming_environment_category&.key]
+         programming_environment_category&.key],
+         programming_environment_category&.name
       ),
       color: get_color,
       externalDocumentation: external_documentation,
-      content: get_localized_property(:content, content, expression_scope),
-      syntax: get_localized_property(:syntax, syntax, expression_scope),
-      returnValue: get_localized_property(:return_value, return_value, expression_scope),
-      tips: get_localized_property(:tips, tips, expression_scope),
+      content: get_localized_property(:content, expression_scope, content),
+      syntax: get_localized_property(:syntax, expression_scope, syntax),
+      returnValue: get_localized_property(:return_value, expression_scope, return_value),
+      tips: get_localized_property(:tips,  expression_scope, tips),
       parameters: get_localized_params,
       examples: get_localized_examples,
       video: video_key.blank? ? nil : Video.current_locale.find_by_key(video_key)&.summarize(false),
@@ -307,7 +307,7 @@ class ProgrammingExpression < ApplicationRecord
     localized_params
   end
 
-  def get_localized_property(property_name, default_value, scope)
+  def get_localized_property(property_name,  scope, default_value)
     I18n.t(
       property_name,
       scope: scope,

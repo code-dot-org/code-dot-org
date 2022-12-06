@@ -17,23 +17,23 @@ require_relative '../animation_assets/manifest_builder'
 
 def sync_in
   puts "Sync in starting"
-  Services::I18n::CurriculumSyncUtils.sync_in
-  HocSyncUtils.sync_in
-  localize_level_and_project_content
-  localize_block_content
-  localize_animation_library
-  localize_shared_functions
-  localize_course_offerings
-  localize_standards
+  # Services::I18n::CurriculumSyncUtils.sync_in
+  # HocSyncUtils.sync_in
+  # localize_level_and_project_content
+  # localize_block_content
+  # localize_animation_library
+  # localize_shared_functions
+  # localize_course_offerings
+  # localize_standards
   localize_docs
-  puts "Copying source files"
-  I18nScriptUtils.run_bash_script "bin/i18n-codeorg/in.sh"
-  localize_external_sources
-  redact_level_content
+  # puts "Copying source files"
+  # I18nScriptUtils.run_bash_script "bin/i18n-codeorg/in.sh"
+  # localize_external_sources
+  # redact_level_content
   redact_docs
-  redact_block_content
-  redact_script_and_course_content
-  localize_markdown_content
+  # redact_block_content
+  # redact_script_and_course_content
+  # localize_markdown_content
   puts "Sync in completed successfully"
 rescue => e
   puts "Sync in failed from the error: #{e}"
@@ -93,18 +93,20 @@ def localize_docs
 
   # TODO: Adding spritelab and Javalab to translation pipeline
   # Currently supporting translations for applab, gamelab and weblab. NOT translating javalab and spritelab.
-  # javalab documentations exists in a different table because it has a different structure, more align with java.
-  # spritlab uses blockly blocks which are translatable, unlike JavaScript blocks. This requires translating the
-  # Programming Expression name
+  # Javalab documentations exists in a different table because it has a different structure, more align with java.
+  # Spritlab uses trasnlatable block names, unlike JavaScript blocks.
   localized_environments = %w(applab gamelab weblab)
-
-  docs_content_file = File.join(I18N_SOURCE_DIR, "docs", "programming_environments.json")
-  programming_env_docs = {}
 
   ### Localize Programming Environments
   # For each programming environment, name is used as key, title is used as name
   ProgrammingEnvironment.all.sort.each do |env|
     next unless localized_environments.include?(env.name)
+
+    # In the sync-in, each environment is store in an individual file.
+    # Files are merged during the sync-out in programming_environments.{locale}.json
+    docs_content_file = File.join(I18N_SOURCE_DIR, "docs", env.name + ".json")
+
+    programming_env_docs = {}
     programming_env_docs[env.name] = {
       'name' => env.properties["title"],
       'description' => env.properties["description"],
@@ -170,11 +172,11 @@ def localize_docs
         end
       end
     end
-  end
-  # Generate a file containing the string of all Programming Environments.
-  FileUtils.mkdir_p(File.dirname(docs_content_file))
-  File.open(docs_content_file, "w") do |file|
-    file.write(JSON.pretty_generate(programming_env_docs.compact))
+    # Generate a file containing the string of each Programming Environment.
+    FileUtils.mkdir_p(File.dirname(docs_content_file))
+    File.open(docs_content_file, "w") do |file|
+      file.write(JSON.pretty_generate(programming_env_docs.compact))
+    end
   end
 end
 
@@ -651,11 +653,12 @@ end
 def redact_docs
   puts "Redacting /docs content"
 
-  source = File.join(I18N_SOURCE_DIR, "docs", "programming_environments.json")
-  backup = source.sub("source", "original")
-  FileUtils.mkdir_p(File.dirname(backup))
-  FileUtils.cp(source, backup)
-  RedactRestoreUtils.redact(source, source, ['visualCodeBlock', 'link', 'resourceLink'])
+  Dir.glob(File.join(I18N_SOURCE_DIR, "docs", "*.json")).each do |source|
+    backup = source.sub("source", "original")
+    FileUtils.mkdir_p(File.dirname(backup))
+    FileUtils.cp(source, backup)
+    RedactRestoreUtils.redact(source, source, ['visualCodeBlock', 'link', 'resourceLink'])
+  end
 end
 
 def redact_level_content
