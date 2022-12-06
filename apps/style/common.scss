@@ -1090,19 +1090,27 @@ $workspace-header-button-margin: ($workspace-headers-height - $workspace-header-
     margin-right: 0;
   }
 
+  #show-toolbox-icon,
+  #hide-toolbox-icon {
+    left: auto;
+    right: 8px;
+  }
+
+  #show-toolbox-icon {
+    @include horizontal-flip;
+  }
+
+  #hide-toolbox-icon {
+    @include no-transform;
+  }
+
   #toolbox-header {
     border-right: 0;
     border-left: 1px solid gray;
-    // keep on the left to stay above the toolbox,
-    // and set to row-reverse so the chevron button is
-    // in the correct logical location
-    float: left;
-    flex-direction: row-reverse;
+    float: right;
   }
-  // keep on the left to stay above the toolbox
   #show-toolbox-header {
-    float: left;
-    flex-direction: row-reverse;
+    float: right;
   }
   .workspace-header-button {
     margin-left: $workspace-header-button-margin;
