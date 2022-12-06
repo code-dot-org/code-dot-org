@@ -145,6 +145,8 @@ steps:
         from_secret: SAUCE_USERNAME
       SAUCE_ACCESS_KEY:
         from_secret: SAUCE_ACCESS_KEY
+      APPLITOOLS_EYES_API_KEY:
+        from_secret: APPLITOOLS_EYES_API_KEY
     commands:
       # If running on EC2, get hostname from ec2 metadata
       - hostname=$(curl -s --max-time 3 http://169.254.169.254/latest/meta-data/public-hostname || echo $DRONE_RUNNER_HOSTNAME); echo "Running on $hostname"
@@ -188,6 +190,6 @@ trigger:
     - pull_request
 ---
 kind: signature
-hmac: bb9d5b8edd6b1b4b39a54e6f37561bbb74b9a6139e584eba1ab7fd04d9635036
+hmac: 9a3cc084d31be93648eb2c160aebf4626067ff42edd5d79d9e280ae8898d3894
 
 ...
