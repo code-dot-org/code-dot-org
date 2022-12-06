@@ -39,43 +39,30 @@
                   Connected to
                   <code>https://downloads.computinginthecore.org</code>
                 </td>
-                <td class="incomplete">Not complete</td>
-                <td class="computinginthecore loading" style="display: none">
-                  Connecting...
-                </td>
-                <td class="computinginthecore passed" style="display: none">
-                  Passed
-                </td>
-                <td class="computinginthecore failed" style="display: none">
-                  Failed
-                </td>
-                <td class="computinginthecore error" style="display: none">
-                  Error
+                <td class="computinginthecore">
+                  <p class="incomplete">Not complete</p>
+                  <p class="loading" style="display: none">Connecting...</p>
+                  <p class="succeeded" style="display: none">Success</p>
+                  <p class="failed" style="display: none">Failed</p>
                 </td>
               </tr>
               <tr>
                 <td>Connected to <code>https://codeprojects.org</code></td>
-                <td class="incomplete">Not complete</td>
-                <td class="codeprojects loading" style="display: none">
-                  Connecting...
+                <td class="codeprojects">
+                  <p class="incomplete">Not complete</p>
+                  <p class="loading" style="display: none">Connecting...</p>
+                  <p class="succeeded" style="display: none">Success</p>
+                  <p class="failed" style="display: none">Failed</p>
                 </td>
-                <td class="codeprojects passed" style="display: none">
-                  Passed
-                </td>
-                <td class="codeprojects failed" style="display: none">
-                  Failed
-                </td>
-                <td class="codeprojects error" style="display: none">Error</td>
               </tr>
               <tr>
                 <td>Able to load an iFrame</td>
-                <td class="incomplete">Not complete</td>
-                <td class="iframe loading" style="display: none">
-                  Connecting...
+                <td class="iframe">
+                  <p class="incomplete">Not complete</p>
+                  <p class="loading" style="display: none">Connecting...</p>
+                  <p class="succeeded" style="display: none">Success</p>
+                  <p class="failed" style="display: none">Failed</p>
                 </td>
-                <td class="iframe passed" style="display: none">Passed</td>
-                <td class="iframe failed" style="display: none">Failed</td>
-                <td class="iframe error" style="display: none">Error</td>
               </tr>
             </tbody>
           </table>
@@ -83,23 +70,19 @@
         <div>
           <button id="connect" class="btn btn-primary">Connect</button>
         </div>
-        <p id="response-ok" class="text-success" style="display: none">
-          <strong
-            >You successfully connected! No further action is needed.</strong
-          >
+        <!-- TODO: Check copy -->
+        <p id="success-message" style="display: none">
+          <strong>You passed all checks! No further action is needed.</strong>
         </p>
-        <div id="request-failed" style="display: none">
-          <p class="text-danger">
-            <strong>Error. Connection unsuccessful.</strong>
+        <div id="fail-message" style="display: none">
+          <p>
+            <strong>Error. One or more checks failed.</strong>
           </p>
           <p>
             <strong>Action required: </strong>
             Please contact your IT department to update your school’s firewall
-            settings or device policies. Specifically, our CSA tools need to be
-            able to initiate an Upgrade request on *.code.org domains on the
-            HTTPS port 443 and could maintain a secure WebSocket (WSS)
-            connection for up to 5 minutes. Let us know as soon as possible if
-            this will be impossible for your school.
+            settings or device policies. Here is the rest of this call to
+            action.
           </p>
           <p>
             Contact our Support Team (<a href="mailto:support@code.org"
@@ -107,163 +90,132 @@
             >) if you have any questions.
           </p>
         </div>
+        <iframe id="test-iframe" src="/" style="display: none"></iframe>
       </div>
     </div>
   </div>
 </div>
 <script>
-  function testImageAccess(
-    url,
-    successCallback = () => {},
-    failureCallback = () => {},
-    timeoutMs = 5000,
-    videoElement = false
-  ) {
-    var element;
-    if (videoElement) {
-      element = document.createElement("video");
-    } else {
-      element = new Image();
-    }
-    var called = false;
-    function finish(callback) {
-      return function () {
-        if (called) {
-          return;
-        }
-        called = true;
-        window.clearTimeout(timeout);
-        callback();
+  // TODO: Is there a way to use the existing code for this in apps directory?
+  const TIMEOUT_MS = 3000;
+  function testImageAccess(url, callback = () => {}) {
+    return new Promise((resolve, reject) => {
+      const element = new Image();
+      element.src = url;
+
+      let succeeded = false;
+      element.onerror = () => {
+        callback(new Error());
+        reject();
       };
-    }
-    var timeout = window.setTimeout(finish(failureCallback), timeoutMs);
-    element.onerror = finish(failureCallback);
-    if (videoElement) {
-      element.ondurationchange = finish(successCallback);
-    } else {
-      element.onload = finish(successCallback);
-    }
-    element.src = url;
-    // store a reference to the element so it doesn't get collected
-    window.testImages = window.testImages || [];
-    window.testImages.push(element);
+      element.onload = () => {
+        succeeded = true;
+        callback();
+        resolve();
+      };
+      setTimeout(() => {
+        if (!succeeded) {
+          callback(new Error());
+          reject();
+        }
+      }, TIMEOUT_MS);
+
+      // store a reference to the element so it doesn't get collected
+      window.testImages = window.testImages || [];
+      window.testImages.push(element);
+    });
+  }
+
+  function testIFrameAccess(successCallback, failureCallback) {
+    return new Promise((resolve, reject) => {
+      var iframe = document.getElementById("test-iframe");
+      var iframeDoc = iframe.contentDocument || iframe.contentWindow.document;
+
+      const checkIFrameLoaded = () => {
+        let elapsedTime = new Date().getTime() - startTime;
+        if (iframeDoc.readyState === "complete") {
+          setAttribute(".iframe > .loading", { style: "display: none" });
+          setAttribute(".iframe > .succeeded", {
+            style: "display: block",
+          });
+          resolve();
+        } else if (elapsedTime > TIMEOUT_MS) {
+          setAttribute(".iframe > .loading", { style: "display: none" });
+          setAttribute(".iframe > .failed", {
+            style: "display: block",
+          });
+          reject();
+        }
+      };
+
+      const startTime = new Date().getTime();
+      setInterval(checkIFrameLoaded, 100);
+    });
+  }
+
+  function setAttribute(selector, obj) {
+    Array.from(document.querySelectorAll(selector)).forEach((element) =>
+      Object.keys(obj).forEach((key) => {
+        element.setAttribute(key, obj[key]);
+      })
+    );
   }
 
   function connect() {
-    function modifyAllElementsWithClassName(className, attribute, value) {
-      Array.from(document.getElementsByClassName(className)).forEach(
-        (element) => element.setAttribute(attribute, value)
-      );
-    }
-    function displayState(state) {
-      Array.from(document.getElementsByClassName(state)).forEach(
-        (element) => (element.style.display = "block")
-      );
-    }
+    setAttribute(".loading", { style: "display: block" });
+    setAttribute(".incomplete", { style: "display: none" });
+    setAttribute(".failed", { style: "display: none" });
 
-    modifyAllElementsWithClassName("loading", "style", "display: block");
-    modifyAllElementsWithClassName("incomplete", "style", "display: none");
-    modifyAllElementsWithClassName("failed", "style", "display: none");
-
-    // const options = {
-    //   referrerPolicy: "strict-origin-when-cross-origin",
-    //   body: null,
-    //   method: "GET",
-    //   mode: "cors",
-    //   credentials: "omit",
-    // };
-
-    const options = {
-      headers: {
-        accept: "*/*",
-        "accept-language": "en-US,en;q=0.9",
-        "sec-ch-ua":
-          '"Google Chrome";v="107", "Chromium";v="107", "Not=A?Brand";v="24"',
-        "sec-ch-ua-mobile": "?0",
-        "sec-ch-ua-platform": '"macOS"',
-        "sec-fetch-dest": "empty",
-        "sec-fetch-mode": "cors",
-        "sec-fetch-site": "cross-site",
-      },
-      referrer: "http://localhost:3000/",
-      referrerPolicy: "strict-origin-when-cross-origin",
-      body: null,
-      method: "GET",
-      mode: "cors",
-      credentials: "omit",
-    };
-    // fetch("https://codeprojects.org/favicon.ico?1669678901938", {
-    //   headers: {
-    //     accept: "*/*",
-    //     "accept-language": "en-US,en;q=0.9",
-    //     "sec-ch-ua":
-    //       '"Google Chrome";v="107", "Chromium";v="107", "Not=A?Brand";v="24"',
-    //     "sec-ch-ua-mobile": "?0",
-    //     "sec-ch-ua-platform": '"macOS"',
-    //     "sec-fetch-dest": "empty",
-    //     "sec-fetch-mode": "cors",
-    //     "sec-fetch-site": "cross-site",
-    //   },
-    //   referrer: "http://localhost:3000/",
-    //   referrerPolicy: "strict-origin-when-cross-origin",
-    //   body: null,
-    //   method: "GET",
-    //   mode: "cors",
-    //   credentials: "omit",
-    // });
-
-    testImageAccess(
-      "https://codeprojects.org/favicon.ico?1669678901938",
-      () => console.log("got it!"),
-      () => console.log("oopsie doopsie!")
+    const computingInTheCorePromise = testImageAccess(
+      "https://downloads.computinginthecore.org/favicon.ico?" + Math.random(),
+      (err) => {
+        if (!err) {
+          setAttribute(".computinginthecore > .loading", {
+            style: "display: none",
+          });
+          setAttribute(".computinginthecore > .succeeded", {
+            style: "display: block",
+          });
+        } else {
+          setAttribute(".computinginthecore > .loading", {
+            style: "display: none",
+          });
+          setAttribute(".computinginthecore > .failed", {
+            style: "display: block",
+          });
+        }
+      }
     );
 
-    const requests = [
-      {
-        url:
-          "https://downloads.computinginthecore.org/favicon.ico?" + Date.now(),
-        id: "computinginthecore",
-      },
-      {
-        url: "https://codeprojects.org/favicon.ico?" + Date.now(),
-        id: "codeprojects",
-      },
-    ];
-
-    const promises = requests.map((request) =>
-      fetch(request.url, options).catch((error) => {
-        console.log(`i got an error in the ${request.id} request!`, error);
-        modifyAllElementsWithClassName(
-          `${request.id} loading`,
-          "style",
-          "display: none"
-        );
-        modifyAllElementsWithClassName(
-          `${requests.id} error`,
-          "style",
-          "display: block"
-        );
-      })
+    const codeProjectsPromise = testImageAccess(
+      "https://codeprojects.org/favicon.ico?" + Math.random(),
+      (err) => {
+        if (!err) {
+          setAttribute(".codeprojects > .loading", { style: "display: none" });
+          setAttribute(".codeprojects > .succeeded", {
+            style: "display: block",
+          });
+        } else {
+          setAttribute(".codeprojects > .loading", { style: "display: none" });
+          setAttribute(".codeprojects > .failed", {
+            style: "display: block",
+          });
+        }
+      }
     );
 
-    Promise.all(promises)
-      .then((responses) => {
-        modifyAllElementsWithClassName("loading", "style", "display: none");
-        responses.forEach((response, i) => {
-          const result = !response.okay ? "failed" : "passed";
-          console.log(`result of ${requests[i].id}:` + result);
-          console.log("response: ", response);
-          modifyAllElementsWithClassName(
-            `${requests[i].id} ${result}`,
-            "style",
-            "display: block"
-          );
-        });
+    return Promise.all([
+      computingInTheCorePromise,
+      codeProjectsPromise,
+      testIFrameAccess(),
+    ])
+      .then(() => {
+        console.log("got to then!");
+        setAttribute("#success-message", { style: "display: block" });
       })
-      .catch((error) => {
-        console.log("i got a general error!", error);
-        // document.querySelector(".loading").style.display = "none";
-        // document.querySelector(".error").style.display = "block";
+      .catch((err) => {
+        console.log("got to catch!", err);
+        setAttribute("#fail-message", { style: "display: block" });
       });
   }
   $(function () {
