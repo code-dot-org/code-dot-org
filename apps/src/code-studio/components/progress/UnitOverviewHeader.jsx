@@ -40,9 +40,6 @@ const OUTDATED_SCRIPT_NAMES_AND_DESC = {
   }),
   '20-hour': i18n.outdatedCourseWarningDescCoursesAccelCourse({
     expressCourseLink: studio('/s/express')
-  }),
-  algebra: i18n.outdatedCourseWarningDescCoursesCSInAlgebra({
-    bootstrapAlgLink: 'https://www.bootstrapworld.org/materials/algebra/'
   })
 };
 
