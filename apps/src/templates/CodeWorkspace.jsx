@@ -139,13 +139,11 @@ class CodeWorkspace extends React.Component {
         key="show-toolbox-header"
         style={{...styles.toolboxHeaderContainer, ...commonStyles.hidden}}
       >
-        <span id="show-toolbox-click-target">
-          <span>
-            <button id="show-toolbox-icon" style={chevronStyle} type="button">
-              <i className="fa fa-chevron-circle-right" />
-            </button>
-          </span>
-          <span>{i18n.showToolbox()}</span>
+        <span id="show-toolbox-click-target" style={styles.showToolboxSection}>
+          <button id="show-toolbox-icon" style={chevronStyle} type="button">
+            <i className="fa fa-chevron-circle-right" />
+          </button>
+          {i18n.showToolbox()}
         </span>
         <span>{settingsCog}</span>
       </PaneSection>
