@@ -209,14 +209,8 @@
       codeProjectsPromise,
       testIFrameAccess(),
     ])
-      .then(() => {
-        console.log("got to then!");
-        setAttribute("#success-message", { style: "display: block" });
-      })
-      .catch((err) => {
-        console.log("got to catch!", err);
-        setAttribute("#fail-message", { style: "display: block" });
-      });
+      .then(() => setAttribute("#success-message", { style: "display: block" }))
+      .catch(() => setAttribute("#fail-message", { style: "display: block" }));
   }
   $(function () {
     $("#connect").click(function () {
