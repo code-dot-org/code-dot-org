@@ -150,11 +150,11 @@ class EditSectionForm extends Component {
 
     if (isNewSection) {
       analyticsReporter.sendEvent(eventName, {
-        'section curriculum': courseName,
-        'section grade': section.grade,
-        'section lock selection': section.restrictSection,
-        'section name': section.name,
-        'section pair program selection': section.pairingAllowed
+        sectionCurriculum: courseName,
+        sectionGrade: section.grade,
+        sectionLockSelection: section.restrictSection,
+        sectionName: section.name,
+        sectionPairProgramSelection: section.pairingAllowed
       });
     }
   };
