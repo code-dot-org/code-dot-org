@@ -1,37 +1,30 @@
 import React from 'react';
 import ProgressLegend from './ProgressLegend';
 
-export default storybook => {
-  storybook.storiesOf('Progress/ProgressLegend', module).addStoryTable([
-    {
-      name: 'progress legend - CSF',
-      story: () => (
-        <div style={{width: 970}}>
-          <ProgressLegend includeCsfColumn={true} />
-        </div>
-      )
-    },
+export default {
+  title: 'ProgressLegend',
+  component: ProgressLegend
+};
 
-    {
-      name: 'progress legend - CSP',
-      story: () => (
-        <div style={{width: 970}}>
-          <ProgressLegend includeCsfColumn={false} />
-        </div>
-      )
-    },
+const Template = args => (
+  <div style={{width: 970}}>
+    <ProgressLegend {...args} />
+  </div>
+);
 
-    {
-      name: 'progress legend - full',
-      story: () => (
-        <div style={{width: 970}}>
-          <ProgressLegend
-            includeCsfColumn
-            includeProgressNotApplicable
-            includeReviewStates
-          />
-        </div>
-      )
-    }
-  ]);
+export const CSF = Template.bind({});
+CSF.args = {
+  includeCsfColumn: true
+};
+
+export const CSP = Template.bind({});
+CSP.args = {
+  includeCsfColumn: false
+};
+
+export const FullLegend = Template.bind({});
+FullLegend.args = {
+  includeCsfColumn: true,
+  includeProgressNotApplicable: true,
+  includeReviewStates: true
 };
