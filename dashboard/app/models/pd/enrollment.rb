@@ -221,7 +221,13 @@ class Pd::Enrollment < ApplicationRecord
 
     return unless should_send_exit_survey?
 
-    Pd::WorkshopMailer.exit_survey(self).deliver_now
+    # Don't send if there's no associated survey
+    return unless exit_survey_url
+
+    return unless (mailer = Pd::WorkshopMailer.exit_survey(self))
+
+    mailer.deliver_now
+    update!(survey_sent_at: Time.zone.now)
   end
 
   # TODO: Once we're satisfied with the first/last name split data,
