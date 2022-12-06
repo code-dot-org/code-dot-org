@@ -96,9 +96,12 @@ class Button extends React.Component {
       throw new Error('Expect at least one of href/onClick');
     }
 
+    let buttonStyle = style;
     let Tag = 'button';
     if (__useDeprecatedTag) {
       Tag = href ? 'a' : 'div';
+    } else {
+      buttonStyle = {...style, boxShadow: 'none'};
     }
 
     if (download && Tag !== 'a') {
@@ -140,7 +143,7 @@ class Button extends React.Component {
     return (
       <Tag
         className={className}
-        style={{...style}}
+        style={{...buttonStyle}}
         href={disabled ? '#' : href}
         target={target}
         rel={rel}

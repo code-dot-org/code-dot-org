@@ -60,7 +60,7 @@ class PublishDialog extends Component {
             onClick={this.close}
             color={Button.ButtonColor.gray}
             className="no-mc"
-            style={{boxShadow: 'none'}}
+            style={{margin: 0}}
           />
           <Button
             text={i18n.publish()}
@@ -69,7 +69,7 @@ class PublishDialog extends Component {
             className="no-mc"
             isPending={this.props.isPublishPending}
             pendingText={i18n.publishPending()}
-            style={{boxShadow: 'none'}}
+            style={{margin: 0}}
             id="publish-dialog-publish-button"
           />
         </DialogFooter>
