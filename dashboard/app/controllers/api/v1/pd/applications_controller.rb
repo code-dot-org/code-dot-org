@@ -156,19 +156,6 @@ module Api::V1::Pd
 
       # only allow those with full management permission to lock/unlock and edit form data
       if current_user.workshop_admin?
-        if current_user.workshop_admin? && application_admin_params.key?(:locked)
-          # only current facilitator applications can be locked/unlocked
-          if @application.application_type == FACILITATOR_APPLICATION
-            # explicitly convert locked variable to boolean in case it is passed into this function as string
-            locked_param = ActiveModel::Type::Boolean.new.cast(application_admin_params[:locked])
-
-            if locked_param != @application.locked?
-              lock_changed = true
-              locked_param ? @application.lock! : @application.unlock!
-            end
-          end
-        end
-
         @application.form_data_hash = application_admin_params[:form_data] if application_admin_params.key?(:form_data)
       end
 
@@ -216,12 +203,6 @@ module Api::V1::Pd
       applications_of_type = applications_of_type.includes(:user, :regional_partner) if include_associations
 
       case role
-      when :csf_facilitators
-        return applications_of_type.csf
-      when :csd_facilitators
-        return applications_of_type.csd
-      when :csp_facilitators
-        return applications_of_type.csp
       when :csd_teachers
         return applications_of_type.csd.where(application_year: APPLICATION_CURRENT_YEAR)
       when :csp_teachers
@@ -266,9 +247,6 @@ module Api::V1::Pd
     end
 
     TYPES_BY_ROLE = {
-      csf_facilitators: FACILITATOR_APPLICATION_CLASS,
-      csd_facilitators: FACILITATOR_APPLICATION_CLASS,
-      csp_facilitators: FACILITATOR_APPLICATION_CLASS,
       csd_teachers: TEACHER_APPLICATION_CLASS,
       csp_teachers: TEACHER_APPLICATION_CLASS,
       csa_teachers: TEACHER_APPLICATION_CLASS
