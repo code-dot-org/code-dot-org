@@ -40,8 +40,8 @@ cloudfront_key_pair_id: $CLOUDFRONT_KEY_PAIR_ID
 cloudfront_private_key: \"$CLOUDFRONT_PRIVATE_KEY\"
 saucelabs_username: $SAUCE_USERNAME
 saucelabs_authkey: $SAUCE_ACCESS_KEY
-ignore_eyes_mismatches: true
-disable_all_eyes_running: true
+ignore_eyes_mismatches: false
+disable_all_eyes_running: false
 firebase_name: $FIREBASE_NAME
 firebase_secret: $FIREBASE_SECRET
 firebase_shared_secret: $FIREBASE_SHARED_SECRET
