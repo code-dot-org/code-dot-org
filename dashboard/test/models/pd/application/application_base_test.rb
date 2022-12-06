@@ -336,7 +336,7 @@ module Pd::Application
     end
 
     test 'formatted_partner_contact_email' do
-      application = create :pd_facilitator1920_application
+      application = create :pd_teacher_application
 
       partner = create :regional_partner
 
