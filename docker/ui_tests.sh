@@ -42,6 +42,7 @@ saucelabs_username: $SAUCE_USERNAME
 saucelabs_authkey: $SAUCE_ACCESS_KEY
 ignore_eyes_mismatches: false
 disable_all_eyes_running: false
+applitools_eyes_api_key: $APPLITOOLS_EYES_API_KEY
 firebase_name: $FIREBASE_NAME
 firebase_secret: $FIREBASE_SECRET
 firebase_shared_secret: $FIREBASE_SHARED_SECRET
