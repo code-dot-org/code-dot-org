@@ -28,11 +28,8 @@ import {
   StudentGradeLevels
 } from '@cdo/apps/util/sharedConstants';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
-import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import {ParticipantAudience} from '../../generated/curriculum/sharedCourseConstants';
 import GetVerifiedBanner from './GetVerifiedBanner';
-
-const SAVE = 'section details saved';
 
 /**
  * UI for editing section details: Name, grade, assigned course, etc.
@@ -69,7 +66,6 @@ class EditSectionForm extends Component {
   };
 
   onSaveClick = () => {
-    analyticsReporter.sendEvent('Button clicked', {buttonName: SAVE});
     const {section, hiddenLessonState} = this.props;
     const sectionId = section.id;
     const scriptId = section.unitId;
