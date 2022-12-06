@@ -11,7 +11,7 @@ In addition to updating numeric values stored inside a variable, you can modify 
 Consider the example below:
 
 ```
-String favoriteFlavor = chocolate;
+String favoriteFlavor = "chocolate";
 favoriteFlavor = favoriteFlavor + “ chip”;
 System.out.println(favoriteFlavor);
 ```

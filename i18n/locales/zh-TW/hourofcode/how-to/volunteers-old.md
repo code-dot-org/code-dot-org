@@ -55,13 +55,13 @@ Do you believe that learning computer science can open doors of opportunity for 
 
 ### 議程範例：
 
-| 時間       | 議程                                                                                                                                                                                                                                                                                          |
-| -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 1-5 分鐘   | [Show an inspirational video]({{ promote/videos }}).                                                                                                                                                                                                                                        |
-| 5-10 分鐘  | Introduce yourself and learn more about the students: </ul><li>你的工作是什麼, 你做什麼, 你最喜歡你的工作是什麼？</li><li>什麼或誰激勵了你</li><li>你是如何對計算機科學感興趣的？</li><li>你有導師嗎？</li><li>分享一個關於科技如何影響每個人的故事。</li><br>問學生問題，並留下時間問問題</br> <li> 他們對什麼工作感興趣？他們主喜歡的科技產品或應用程序時什麼？以及他們認為這些東西是怎麼製作的？ </li><li> 學生們有對你提出任何問題嗎?</ul> |
-| 30-60 分鐘 | **Code!** Walk around, answer questions, and guide them through tough puzzles. 盡量不要馬上給學生答案。試著問他們問題，這樣他們自己可以回答哪裡出錯了，並鼓勵學生相互間問問題。 互相學習是一個很好的學習機會。                                                                                                                                             |
-| 1-3 分鐘   | Thank everyone and share inspirational parting words. Hand out any of your company swag (stickers are awesome)!                                                                                                                                                                             |
-| 之後       | **Make a lasting change:** Talk to the teacher about turning the Hour of Code into a full computer science course! 轉到 [ code.org/yourschool ](HTTPs://code.org/yourschool), 與您的教師一起填寫該學校今天所教的內容, 並鼓勵他們保證將 computer 科學帶到他們的教室。                                                               |
+| 時間       | 議程                                                                                                                                                                                                                                                                                           |
+| -------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 1-5 分鐘   | [Show an inspirational video]({{ promote/videos }}).                                                                                                                                                                                                                                         |
+| 5-10 分鐘  | Introduce yourself and learn more about the students: </ul><li>你的工作是什麼, 你做什麼, 你最喜歡你的工作是什麼？</li><li>什麼或誰激勵了你？</li><li>你是如何對計算機科學感興趣的？</li><li>你有導師嗎？</li><li>分享一個關於科技如何影響每個人的故事。</li><br>問學生問題，並留下時間問問題。</br> <li> 他們對什麼工作感興趣？他們主喜歡的科技產品或應用程序時什麼？以及他們認為這些東西是怎麼製作的？ </li><li> 學生們有對你提出任何問題嗎?</ul> |
+| 30-60 分鐘 | **Code!** Walk around, answer questions, and guide them through tough puzzles. 盡量不要馬上給學生答案。試著問他們問題，這樣他們自己可以回答哪裡出錯了，並鼓勵學生相互間問問題。 互相學習是一個很好的學習機會。                                                                                                                                              |
+| 1-3 分鐘   | Thank everyone and share inspirational parting words. Hand out any of your company swag (stickers are awesome)!                                                                                                                                                                              |
+| 之後       | **Make a lasting change:** Talk to the teacher about turning the Hour of Code into a full computer science course! 轉到 [ code.org/yourschool ](HTTPs://code.org/yourschool), 與您的教師一起填寫該學校今天所教的內容, 並鼓勵他們保證將 computer 科學帶到他們的教室。                                                                |
 
 ### 在活動後:
 - 在@code.org 上和Code.org 分享你的相片和故事。
@@ -78,7 +78,7 @@ Do you believe that learning computer science can open doors of opportunity for 
 ## 一小時玩程式志工服務常見問答
 
 ### I haven't been contacted by a teacher yet. How can I still volunteer?
-嘗試搜索當地的學校, 並致電校長/教師/前廳, 問你如何能提供幫助。
+嘗試搜索當地的學校，並致電校長/教師/前廳,，詢問你能如何提供幫助。
 
 ### 課堂訪問持續多長時間？
 實體課程通常為 60-90 分鐘，而網絡課程通常為 20-30 分鐘。

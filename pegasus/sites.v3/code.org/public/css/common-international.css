@@ -139,9 +139,6 @@
   font-size: 12px;
   padding-right: 75px;
 }
-.course-carousel .slide div.slide-participants-count {
-  display: none;
-}
 .course-carousel .slide .slide-teachers-notes-link {
   display: none;
 }
@@ -336,12 +333,6 @@
     display: none;
   }
   .course-carousel .slide .slide-tags {
-    font-size: 14px;
-    padding-right: 120px;
-  }
-  .course-carousel .slide div.slide-participants-count {
-    margin: 0 0 .5em;
-    display: block;
     font-size: 14px;
     padding-right: 120px;
   }

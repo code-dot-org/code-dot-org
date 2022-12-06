@@ -8,7 +8,7 @@ title: Przewodnik - Godzina Kodowania w ramach zajęć pozalekcyjnych
 
 ### Przyłącz się do tej inicjatywy i wprowadź swoich uczniów w dziedzinę informatyki w sposób następujący.
 
-Myślenie informatyczne pomaga rozwijać umiejętność rozwiązywania problemów, logikę oraz kreatywność. A technologia zmienia każdą branżę na świecie. Uczniowie dnia dzisiejszego powinni się uczyć, jak tworzyć technologię, a nie tylko jak z niej korzystać. Rozpoczęcie nauki na wczesnym etapie da im podwaliny sukcesu na dowolnej ścieżce zawodowej na miarę XXI wieku.
+Myślenie komputacyjne pomaga rozwijać umiejętności rozwiązywania problemów, logiczne myślenie i kreatywność. A technologia zmienia każdą branżę na świecie. Uczniowie dzisiaj powinni poznać, jak tworzyć technologię, a nie tylko ją stosować. Rozpoczęcie nauki na wczesnym etapie da im podwaliny sukcesu na dowolnej ścieżce zawodowej w XXI wieku.
 
 Akcja godzina kodowania to prosty i przyjemny sposób na zapoznanie dzieci z podstawami informatyki. Jeśli potrzebujesz wsparcia, [ poszukaj wolontariusza ]({{ urls/volunteer_local }}), który pomoże poprowadzić Godzinę kodowania na twoich pozaszkolnych zajęciach.
 
@@ -16,7 +16,7 @@ Akcja godzina kodowania to prosty i przyjemny sposób na zapoznanie dzieci z pod
 
 * * *
 
-## 1. Obejrzyj ten film instruktażowy <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
+## 1. Obejrzyj ten film instruktażowy <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe> 
 
 ## 2. Wybierz samouczek
 
@@ -65,7 +65,7 @@ Rozpocznij Godzinę Kodowania inspirując uczestników i dyskutując, jaki jest 
 
 ** Skieruj uczestników na zajęcia ** - Napisz link do samouczka na tablicy. Znajdź link wymieniony [w informacji dla wybranego przez Ciebie samouczka]({{ urls/learn }}) pod liczbą uczestników.
 
-** Gdy ktoś napotka trudności, to w porządku jest odpowiedzieć: ** - „Nie wiem. Rozwiążmy to razem.” - „Technologia nie zawsze działa tak, jak chcemy”. - „Nauka programowania jest jak nauka nowego języka; nie od razu będziesz biegły. ”
+** Gdy ktoś napotka trudności, to w porządku jest odpowiedzieć: ** - „Nie wiem. Rozwiążmy to razem.” - „Technologia nie zawsze działa tak, jak chcemy”. - „Nauka programowania jest, jak nauka nowego języka; nie od razu będziesz biegły. ”
 
 ** Co zrobić, jeśli ktoś skończy wcześniej? ** - Zachęć uczestników do wypróbowania kolejnych zajęć w ramach "Godziny kodowania" na [hourofcode.com/learn]({{ urls/learn }}) - Lub poproś tych, którzy skończą wcześniej, aby pomogli innym, którzy mają kłopoty.
 

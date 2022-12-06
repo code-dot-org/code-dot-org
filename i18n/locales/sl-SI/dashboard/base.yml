@@ -8,8 +8,14 @@
 #To use a different locale, set it with `I18n.locale`:
 #I18n.locale = :es
 #This would use the information in config/locales/es.yml.
+#The following keys must be escaped otherwise they will not be retrieved by
+#the default I18n backend:
+#true, false, on, off, yes, no
+#Instead, surround them with single quotes.
+#en:
+#'true': 'foo'
 #To learn more, please read the Rails Internationalization guide
-#available at http://guides.rubyonrails.org/i18n.html.
+#available at https://guides.rubyonrails.org/i18n.html.
 sl:
   errors:
     messages:
@@ -278,7 +284,6 @@ sl:
     popup:
       progress_for_user: "Napredek od %{name}"
       progress: 'Tvoj napredek'
-      lines: 'Skupno število vrstic kode: %{lines}'
       close: 'ZAPRI'
       mastery: 'Koncepti'
       puzzle_map: 'Stopnje'
@@ -362,6 +367,7 @@ sl:
     no_primary_course: "Poskusite Code Studio smer"
     choose_next_course: "Poskusi Code Studio tečaj z izbiro enga spodaj"
     print_certificate: "Natisni certifikat"
+  certificate_hour_of_code: "Ura kode"
   move_students:
     new_section_dne: "Žal, oddelek %{new_section_code} ne obstaja. Prosimo vnesite drugo šifro odseka."
     section_code_cant_be_current_section: "Trenutni odsek ne more biti enak kot nov odsek."
@@ -635,13 +641,18 @@ sl:
         math: 'Matematika'
         science: 'Znanost'
         la: 'Jezikoslovje'
+        other: "Drugi"
       resources:
         kodable: 'Kodable'
+        other: "Drugi"
       robotics:
         kodable: 'Kodable'
+        other: "Drugi"
       email_opt_in:
         opt_in_yes: 'Da'
         opt_in_no: 'Ne'
   cookie_banner:
     accept: 'Strinjam se'
   copy: 'Kopiraj'
+  pixelation:
+    binary: "Binarno"

@@ -20,14 +20,17 @@ he:
       level: שלב
       name: שם
       nectar: צוף
+      object: אובייקט
       planet: כוכב לכת
       points: נקודות
       random: אקראי
       repeat: חזור
       right: ימינה
       score: ניקוד
+      shout: צרחה
       size: גודל
       speed: מהירות
+      type: סוג
       variable: משתנה.
       width: רוחב
       wizard: אשף

@@ -8,8 +8,14 @@
 #To use a different locale, set it with `I18n.locale`:
 #I18n.locale = :es
 #This would use the information in config/locales/es.yml.
+#The following keys must be escaped otherwise they will not be retrieved by
+#the default I18n backend:
+#true, false, on, off, yes, no
+#Instead, surround them with single quotes.
+#en:
+#'true': 'foo'
 #To learn more, please read the Rails Internationalization guide
-#available at http://guides.rubyonrails.org/i18n.html.
+#available at https://guides.rubyonrails.org/i18n.html.
 mn:
   errors:
     messages:
@@ -398,7 +404,6 @@ mn:
     popup:
       progress_for_user: "%{name}-н ахиц дэвшил"
       progress: 'Таны ахиц дэвшил'
-      lines: 'Кодын нийт мөр: %{lines}'
       close: 'ХААХ'
       mastery: 'Үзэл баримтлал'
       puzzle_map: 'Үеүд'
@@ -510,6 +515,7 @@ mn:
     no_primary_course: "Кодын студийн хичээлийг оролдоорой"
     choose_next_course: "Доорхын нэгийг сонгож Кодын студийн хичээлийг оролдоорой"
     print_certificate: "Гэрчилгээг хэвлэх"
+  certificate_hour_of_code: "Кодын цаг"
   move_students:
     new_section_dne: "Уучлаарай, гэхдээ хэсэг %{new_section_code} оршихгүй байна. Өөр хэсгийн кодыг оруулаарай."
     section_code_cant_be_current_section: "Одоогийн хэсэг шинэ хэсэгтэй адил байх боломжгүй."
@@ -1004,7 +1010,7 @@ mn:
         kodable: 'Kodable'
         scratch: 'Ноорог'
         tynker: 'Tynker'
-        other: "Бусад:"
+        other: "Бусад"
       robotics:
         grok: 'Grok сурах'
         kodable: 'Kodable'
@@ -1014,7 +1020,7 @@ mn:
         sphero: 'Sphero'
         raspberry: 'Raspberry Pi'
         wonder: 'Гайхалтай семинар'
-        other: "Бусад:"
+        other: "Бусад"
       workshop_course:
         csf_af: 'КШУ-ны үндэс (А-F хичээл)'
         csf_express: 'КШУ-ны үндэс (шуурхай сургалтын өмнөх ба шуурхай сургалт)'
@@ -1047,3 +1053,5 @@ mn:
   page_not_found_button: "Нүүр хуудас руу буцах"
   copy: 'Хуулах'
   teacher_feedback: "Багшийн хариу үйлдэл"
+  pixelation:
+    binary: "Хоёрт"

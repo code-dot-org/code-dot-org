@@ -320,7 +320,7 @@ export default connect(
     );
 
     let lessonNames = {};
-    state.progress.lessons.forEach(lesson => {
+    state.progress.lessons?.forEach(lesson => {
       lessonNames[lesson.id] = lesson.name;
     });
 

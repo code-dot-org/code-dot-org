@@ -16,7 +16,7 @@ class RegionalPartnersController < ApplicationController
   # GET /regional_partners
   def index
     search_term = params[:search_term]
-    if search_term =~ /^\d+$/
+    if /^\d+$/.match?(search_term)
       @regional_partners = RegionalPartner.where(id: search_term)
     elsif search_term
       @regional_partners = RegionalPartner.where("name LIKE :partial_name", {partial_name: "%#{search_term}%"})
@@ -155,6 +155,8 @@ class RegionalPartnersController < ApplicationController
       :cohort_capacity_csp,
       :apps_open_date_teacher,
       :apps_close_date_teacher,
+      :urg_guardrail_percent,
+      :frl_guardrail_percent,
       :apps_open_date_csd_facilitator,
       :apps_open_date_csp_facilitator,
       :apps_close_date_csd_facilitator,
@@ -226,7 +228,7 @@ class RegionalPartnersController < ApplicationController
     errors = []
     csv.each do |row|
       region = row['Region']
-      unless region.present?
+      if region.blank?
         regions_missing = true
         next
       end

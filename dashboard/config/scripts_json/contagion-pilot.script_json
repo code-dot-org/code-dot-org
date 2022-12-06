@@ -7,12 +7,6 @@
       "is_course": true,
       "is_migrated": true,
       "pilot_experiment": "contagion-pilot",
-      "teacher_resources": [
-        [
-          "lessonPlans",
-          "https://docs.google.com/document/d/1wBceXwfyyJKqjKmSQaT_DlyLXlLG3qd3Qm_yL0mNgi8/edit?usp=sharing"
-        ]
-      ],
       "version_year": "unversioned"
     },
     "new_name": null,

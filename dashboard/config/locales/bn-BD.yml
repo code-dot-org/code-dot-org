@@ -242,6 +242,7 @@ bn:
       ব্যাবহার করে দেখুন।
     use_as_teacher: শিক্ষক হিসেবে এই সাইটটি ব্যবহার করুন
     your_gallery: সংগ্রহশালা
+  certificate_hour_of_code: এক ঘন্টার কোড
   gender:
     male: পুরুষ
     female: মহিলা
@@ -398,13 +399,18 @@ bn:
       subjects:
         cs: কম্পিউটার বিজ্ঞান
         math: গণিত
+        other: অন্যান্য
       resources:
         kodable: কোডাবল
+        other: অন্যান্য
       robotics:
         kodable: কোডাবল
+        other: অন্যান্য
       email_opt_in:
         opt_in_yes: '"হ্যাঁ"'
         opt_in_no: না
   cookie_banner:
     accept: আমি একমত
   copy: অনুলিপি
+  pixelation:
+    binary: দ্বি-আঙ্কিক

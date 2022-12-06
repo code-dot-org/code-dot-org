@@ -356,13 +356,14 @@
     ],
     "encrypted_examples": [
 
-    ]
+    ],
+    "map_reference": "/programming_environments/javalab"
   },
   "game_id": 68,
   "published": true,
   "created_at": "2022-02-14T16:54:11.000Z",
   "level_num": "custom",
   "user_id": 16889,
-  "audit_log": "[{\"changed_at\":\"2022-02-14T16:54:11.636+00:00\",\"changed\":[\"cloned from \\\"CSA U1L2-L2_2022\\\"\"],\"cloned_from\":\"CSA U1L2-L2_2022\"},{\"changed_at\":\"2022-02-14 16:55:54 +0000\",\"changed\":[\"long_instructions\",\"teacher_markdown\",\"serialized_maze\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-02-14 16:59:37 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-02-14 17:02:31 +0000\",\"changed\":[\"serialized_maze\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-02-14T16:54:11.636+00:00\",\"changed\":[\"cloned from \\\"CSA U1L2-L2_2022\\\"\"],\"cloned_from\":\"CSA U1L2-L2_2022\"},{\"changed_at\":\"2022-02-14 16:55:54 +0000\",\"changed\":[\"long_instructions\",\"teacher_markdown\",\"serialized_maze\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-02-14 16:59:37 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-02-14 17:02:31 +0000\",\"changed\":[\"serialized_maze\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-05-27 18:54:41 +0000\",\"changed\":[\"serialized_maze\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>
 </Javalab>

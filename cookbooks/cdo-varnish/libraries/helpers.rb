@@ -97,12 +97,12 @@ end
 def set_vary(header, resp)
   # Matches a Vary header field delimiter.
   sep = '(\\s|,|^|$)'
-  <<-VCL
-if (!#{resp}.http.Vary) {
-  set #{resp}.http.Vary = "#{header}";
-} elseif (#{resp}.http.Vary !~ "#{sep}#{header}#{sep}") {
-  set #{resp}.http.Vary = #{resp}.http.Vary + ", #{header}";
-}
+  <<~VCL
+    if (!#{resp}.http.Vary) {
+      set #{resp}.http.Vary = "#{header}";
+    } elseif (#{resp}.http.Vary !~ "#{sep}#{header}#{sep}") {
+      set #{resp}.http.Vary = #{resp}.http.Vary + ", #{header}";
+    }
   VCL
 end
 
@@ -126,10 +126,10 @@ end
 
 # VCL string to extract a cookie into an internal X-COOKIE HTTP header.
 def extract_cookie(cookie)
-  <<-VCL
-if(cookie.isset("#{cookie}")) {
-  set req.http.X-COOKIE-#{cookie} = cookie.get("#{cookie}");
-}
+  <<~VCL
+    if(cookie.isset("#{cookie}")) {
+      set req.http.X-COOKIE-#{cookie} = cookie.get("#{cookie}");
+    }
   VCL
 end
 
@@ -157,7 +157,7 @@ def process_request(behavior, _)
     end
   )
   if behavior[:query] == false
-    out << "\n" + 'set req.url = regsub(req.url, "\?.*$", "");'
+    out << ("\n" + 'set req.url = regsub(req.url, "\?.*$", "");')
   end
   REMOVED_HEADERS.each do |remove_header|
     name, value = remove_header.split ':'
@@ -173,8 +173,8 @@ def process_request(behavior, _)
 end
 
 def unset_header(header)
-  <<-VCL
-if(req.http.#{header}) { unset req.http.#{header}; }
+  <<~VCL
+    if(req.http.#{header}) { unset req.http.#{header}; }
   VCL
 end
 

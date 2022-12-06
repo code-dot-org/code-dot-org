@@ -221,7 +221,6 @@ kk:
     popup:
       progress_for_user: "%{name} сабақ оқу барысы"
       progress: Сіздің сабақ оқу барысыңыз
-      lines: 'Жазылған жалпы код жолы: %{lines}'
       close: ЖАБУ
       mastery: Ұғымдар
       puzzle_map: Деңгейлер
@@ -313,6 +312,7 @@ kk:
     no_primary_course: Код Студиясы курсын байқап көру
     choose_next_course: Төмендегі Код Студиясы курсының біреуін байқап көріңіз
     print_certificate: Сертификатты басып шығару
+  certificate_hour_of_code: Код жазу Сағаты
   move_students:
     student_not_found: Бір немесе одан көбірек оқушы табылмады.
   share:
@@ -655,13 +655,18 @@ kk:
         math: Математика
         science: Ғылым
         la: Тіл Өнерлері
+        other: Басқасы
       resources:
         kodable: Kodable
+        other: Басқасы
       robotics:
         kodable: Kodable
+        other: Басқасы
       email_opt_in:
         opt_in_yes: Иә
         opt_in_no: Жоқ
   cookie_banner:
     accept: Мен келісемін
   copy: Көшіру
+  pixelation:
+    binary: Бинарлы

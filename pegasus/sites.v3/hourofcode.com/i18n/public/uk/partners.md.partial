@@ -2,39 +2,37 @@
 title: Партнери
 ---
 
-Годину коду ведуть Дорадчий та Спостережний комітети Години коду та Тижня освіти з інформатики.
+Година коду проводиться за участю Наглядового комітету Години коду.
 
-The [Advisory Committee]({{ urls/advisory_committee }}) is composed of representatives from K-12, academia, nonprofits, for-profits, and international organizations. Цей комітет керує стратегією кампанії Години коду.
+У [Наглядовий комітет]({{ urls/review_committee }}) входять 12 діючих і колишніх вчителів 1–12 класів, які оцінюють та рекомендують заняття з використанням рубрики, визначеної дорадчим комітетом. Ці педагоги переглядають вправи для самостійного опанування та плани уроків під проводом учителя, представлені сотнями партнерів, оцінюючи освітню цінність заняття, здатність захоплювати учнів та потенційну привабливість для різних груп учнів.
 
-The [Review Committee]({{ urls/review_committee }}) is composed of 15 educators across K-12 grade bands that assess and recommend activities using the Advisory Committee's rubric. These educators review student-led activities and teacher-led lesson plans submitted by hundreds of activity partners, evaluating the activities' educational value, ability to engage learners, and potential appeal to diverse sets of students.
+Праця та самовідданість комітету сприяла успіхові Години коду та досягненню її місії – знайомства з інформатикою кожного учня.
 
-Праця та самовідданість обох комітетів сприяла успіхові Години коду та її бачення пропонування введення до інформатики кожному учневі.
-
-# Major Partners and Corporate Supporters
+# Основні партнери та корпоративні спонсори
 
 {{ partners/major_partners_corporate_supporters }}
 
 * * *
 
-# International Partners
+# Міжнародні партнери
 
 {{ partners/international_partners }}
 
 * * *
 
-# Curriculum and Tutorial Partners
+# Партнери з навчальних програм і посібників
 
 {{ partners/curriculum_tutorial_partners }}
 
 * * *
 
-# Infrastructure Partners and Tools
+# Партнери із забезпечення інфраструктури та інструментів
 
 {{ partners/infrastructure_partners_tools }}
 
 * * *
 
-# Additional Partners
+# Додаткові партнери
 
 {{ partners/additional_partners }}
 

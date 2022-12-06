@@ -1,40 +1,22 @@
-import React, {Component} from 'react';
+import React, {useState} from 'react';
 import PropTypes from 'prop-types';
 import DropdownButton from '@cdo/apps/templates/DropdownButton';
 import Button from '@cdo/apps/templates/Button';
 import javalabMsg from '@cdo/javalab/locale';
 import Spinner from '@cdo/apps/code-studio/pd/components/spinner';
 import {currentLocation, navigateToHref} from '@cdo/apps/utils';
-import {VIEWING_CODE_REVIEW_URL_PARAM} from '@cdo/apps/templates/instructions/ReviewTab';
+import {VIEWING_CODE_REVIEW_URL_PARAM} from '@cdo/apps/templates/instructions/CommitsAndReviewTab';
 
-class ReviewNavigator extends Component {
-  static propTypes = {
-    viewPeerList: PropTypes.bool,
-    loadPeers: PropTypes.func,
-    teacherAccountViewingAsParticipant: PropTypes.bool
-  };
+const ReviewNavigator = ({
+  viewPeerList,
+  loadPeers,
+  teacherAccountViewingAsParticipant
+}) => {
+  const [peers, setPeers] = useState([]);
+  const [loadError, setLoadError] = useState(false);
+  const [loadInProgress, setLoadInProgress] = useState(false);
 
-  state = {
-    peers: [],
-    loadError: false,
-    loadInProgress: false
-  };
-
-  onSelectPeer = peer => {
-    if (!peer.id) {
-      return;
-    }
-
-    navigateToHref(
-      this.generateLevelUrlWithCodeReviewParam() + `&user_id=${peer.id}`
-    );
-  };
-
-  onClickBackToProject = () => {
-    navigateToHref(this.generateLevelUrlWithCodeReviewParam());
-  };
-
-  generateLevelUrlWithCodeReviewParam = () => {
+  const generateLevelUrlWithCodeReviewParam = () => {
     let url =
       currentLocation().origin +
       currentLocation().pathname +
@@ -42,27 +24,38 @@ class ReviewNavigator extends Component {
 
     // If teacher account is viewing as participant, set up URLs
     // to persist this setting when they click to view another project.
-    if (this.props.teacherAccountViewingAsParticipant) {
+    if (teacherAccountViewingAsParticipant) {
       url += `&viewAs=Participant`;
     }
     return url;
   };
 
-  onDropdownClick = () => {
-    this.setState({loadInProgress: true, loadError: false, peers: []});
-    this.props.loadPeers(this.onPeerLoadSuccess, this.onPeerLoadFailure);
+  const onSelectPeer = id => {
+    if (id) {
+      navigateToHref(generateLevelUrlWithCodeReviewParam() + `&user_id=${id}`);
+    }
   };
 
-  onPeerLoadSuccess = peerList => {
-    this.setState({peers: peerList, loadInProgress: false});
+  const onClickBackToProject = () => {
+    navigateToHref(generateLevelUrlWithCodeReviewParam());
   };
 
-  onPeerLoadFailure = () => {
-    this.setState({loadError: true, loadInProgress: false});
+  const onDropdownClick = () => {
+    setLoadInProgress(true);
+    loadPeers(onPeerLoadSuccess, onPeerLoadFailure);
   };
 
-  getPeerList() {
-    const {loadError, peers, loadInProgress} = this.state;
+  const onPeerLoadSuccess = peerList => {
+    setPeers(peerList);
+    setLoadInProgress(false);
+  };
+
+  const onPeerLoadFailure = () => {
+    setLoadError(true);
+    setLoadInProgress(false);
+  };
+
+  const getDropdownElements = () => {
     if (loadInProgress) {
       return [
         <a key="loading" onClick={() => {}}>
@@ -85,44 +78,45 @@ class ReviewNavigator extends Component {
     } else {
       return peers.map(peer => (
         <a
-          key={peer.id}
-          onClick={() => {
-            this.onSelectPeer(peer);
-          }}
+          key={peer.ownerId}
+          onClick={() => onSelectPeer(peer.ownerId)}
           className="code-review-peer-link"
         >
-          {peer.name}
+          {peer.ownerName}
         </a>
       ));
     }
-  }
+  };
 
-  render() {
-    const {viewPeerList} = this.props;
-    return viewPeerList ? (
-      <div style={styles.container}>
-        <DropdownButton
-          text={javalabMsg.youHaveProjectsToReview()}
-          color={Button.ButtonColor.gray}
-          onClick={this.onDropdownClick}
-          className="peer-dropdown-button"
-        >
-          {this.getPeerList()}
-        </DropdownButton>
-      </div>
-    ) : (
-      <Button
-        text={javalabMsg.returnToMyProject()}
+  return viewPeerList ? (
+    <div style={styles.container}>
+      <DropdownButton
+        text={javalabMsg.youHaveProjectsToReview()}
         color={Button.ButtonColor.gray}
-        icon={'caret-left'}
-        size={Button.ButtonSize.default}
-        iconStyle={styles.backToProjectIcon}
-        onClick={this.onClickBackToProject}
-        style={styles.backToProjectButton}
-      />
-    );
-  }
-}
+        onClick={onDropdownClick}
+        className="peer-dropdown-button"
+      >
+        {getDropdownElements()}
+      </DropdownButton>
+    </div>
+  ) : (
+    <Button
+      text={javalabMsg.returnToMyProject()}
+      color={Button.ButtonColor.gray}
+      icon={'caret-left'}
+      size={Button.ButtonSize.default}
+      iconStyle={styles.backToProjectIcon}
+      onClick={onClickBackToProject}
+      style={styles.backToProjectButton}
+    />
+  );
+};
+
+ReviewNavigator.propTypes = {
+  viewPeerList: PropTypes.bool,
+  loadPeers: PropTypes.func,
+  teacherAccountViewingAsParticipant: PropTypes.bool
+};
 
 const styles = {
   container: {

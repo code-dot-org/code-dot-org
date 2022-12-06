@@ -80,12 +80,12 @@ class AdminUsersController < ApplicationController
     end
     script =
       if params[:script_id_or_name].to_i.to_s == params[:script_id_or_name]
-        Script.find_by_id(params[:script_id_or_name])
+        Unit.find_by_id(params[:script_id_or_name])
       else
-        Script.find_by_name(params[:script_id_or_name])
+        Unit.find_by_name(params[:script_id_or_name])
       end
     unless script
-      flash[:alert] = "Script (ID or Name: #{params[:script_id_or_name]}) not found"
+      flash[:alert] = "Unit (ID or Name: #{params[:script_id_or_name]}) not found"
     end
     level = Level.find_by_id(params[:level_id])
     unless level
@@ -163,7 +163,7 @@ class AdminUsersController < ApplicationController
     params.require([:user_id, :script_id])
 
     @target_user = User.find(params[:user_id])
-    @script = Script.get_from_cache(params[:script_id])
+    @script = Unit.get_from_cache(params[:script_id])
     @user_level_count = UserLevel.
       where(user_id: @target_user.id, script_id: @script.id).
       count
@@ -194,6 +194,7 @@ class AdminUsersController < ApplicationController
     UserLevel.where(user_id: user_id, script_id: script_id).destroy_all
     ChannelToken.where(storage_id: user_storage_id, script_id: script_id).destroy_all unless user_storage_id.nil?
     TeacherFeedback.where(student_id: user_id, script_id: script_id).destroy_all
+    CodeReview.where(user_id: user_id, script_id: script_id).destroy_all
 
     redirect_to user_progress_form_path({user_identifier: user_id}), notice: "Progress deleted."
   end
@@ -203,7 +204,7 @@ class AdminUsersController < ApplicationController
     search_term = params[:search_term]
     permission = params[:permission]
     if search_term.present?
-      if search_term =~ /^\d+$/
+      if /^\d+$/.match?(search_term)
         @user = restricted_users.find_by(id: search_term)
       else
         users = restricted_users.where(hashed_email: User.hash_email(search_term)).or(restricted_users.where(username: search_term))

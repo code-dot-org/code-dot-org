@@ -1,5 +1,7 @@
+@use "sass:math";
+
 @mixin visualization-width-height-original($width, $height, $visualizationOriginalWidth) {
-  $scale: $width / $visualizationOriginalWidth;
+  $scale: math.div($width, $visualizationOriginalWidth);
 
   #visualization.responsive {
     max-height: $height;
@@ -14,17 +16,17 @@
   .editor-column {
     left: $width;
   }
-  html[dir='rtl'] .editor-column {
+  html[dir="rtl"] .editor-column {
     right: $width;
   }
-  html[dir='rtl'] body.readonly .editor-column {
+  html[dir="rtl"] body.readonly .editor-column {
     right: 0;
   }
   div#visualizationResizeBar {
     left: $width;
     line-height: $height;
   }
-  html[dir='rtl'] div#visualizationResizeBar {
+  html[dir="rtl"] div#visualizationResizeBar {
     right: $width;
   }
   #visualization.responsive > * {

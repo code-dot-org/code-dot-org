@@ -1,6 +1,6 @@
 name 'CSA U3L3-L3_2022'
 display_name 'Using For Loops'
-description 'Use a for loop to traverse a 1D array.'
+description 'Use a `for` loop to traverse a 1D array.'
 
 sublevels
 level 'CSA U3L3-L3a_2022'

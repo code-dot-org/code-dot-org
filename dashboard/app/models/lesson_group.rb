@@ -19,9 +19,9 @@
 class LessonGroup < ApplicationRecord
   include SerializedProperties
 
-  belongs_to :script
+  belongs_to :script, class_name: 'Unit', optional: true
   def script
-    Script.get_from_cache(script_id)
+    Unit.get_from_cache(script_id)
   end
 
   has_many :lessons, -> {order(:absolute_position)}, dependent: :destroy
@@ -30,7 +30,7 @@ class LessonGroup < ApplicationRecord
 
   validates :position, numericality: {greater_than: 0}
 
-  validates_uniqueness_of :key, scope: :script_id
+  validates_uniqueness_of :key, scope: :script_id, case_sensitive: true
 
   validates :key,
     presence: {
@@ -177,7 +177,7 @@ class LessonGroup < ApplicationRecord
   def seeding_key(seed_context)
     my_key = {'lesson_group.key': key}
 
-    raise "No Script found for #{self.class}: #{my_key}" unless seed_context.script
+    raise "No Unit found for #{self.class}: #{my_key}" unless seed_context.script
     script_seeding_key = seed_context.script.seeding_key(seed_context)
 
     my_key.merge!(script_seeding_key) {|key, _, _| raise "Duplicate key when generating seeding_key: #{key}"}
@@ -235,7 +235,7 @@ class LessonGroup < ApplicationRecord
   def copy_to_unit(destination_script, new_level_suffix = nil)
     return if script == destination_script
     raise 'Both lesson group and script must be migrated' unless script.is_migrated? && destination_script.is_migrated?
-    raise 'Destination script and lesson group must be in a course version' if destination_script.get_course_version.nil?
+    raise 'Destination script and lesson group must be in a course version' if destination_script.get_course_version.nil? && !destination_script.old_professional_learning_course?
 
     copied_lesson_group = dup
     copied_lesson_group.script = destination_script
@@ -247,7 +247,7 @@ class LessonGroup < ApplicationRecord
       copied_lesson = original_lesson.copy_to_unit(destination_script, new_level_suffix)
       raise 'Something went wrong: copied lesson should be in new lesson group' unless copied_lesson.lesson_group == copied_lesson_group
     end
-    Script.merge_and_write_i18n(copied_lesson_group.i18n_hash, destination_script.name)
+    Unit.merge_and_write_i18n(copied_lesson_group.i18n_hash, destination_script.name)
     copied_lesson_group
   end
 end

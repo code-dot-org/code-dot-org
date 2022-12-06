@@ -410,6 +410,7 @@ ar:
       educate_beyond: ما بعد Code.org
       educate_inspire: ألهم طالب
       educate_community: المجتمع الإلكتروني
+      educate_requirements: المتطلبات التقنية
       educate_tools: الأدوات ومقاطع الفيديو
       about_us: نبذة عنا
       about_leadership: القيادة
@@ -428,6 +429,7 @@ ar:
       about: نبذة
       legal: الخصوصية والقانونية
       legal_privacy: سياسة الخصوصية
+      legal_cookie_notice: إشعار ملفات تعريف الارتباط
       legal_tos: شروط الخدمة
     user:
       classroom: الصفحة الرئيسية للمعلم
@@ -483,7 +485,6 @@ ar:
     popup:
       progress_for_user: تقدم %{name}
       progress: إنجازاتك
-      lines: 'عدد أسطر الكود البرمجي : %{lines}'
       close: إغلاق
       mastery: مفاهيم
       puzzle_map: مراحل
@@ -634,6 +635,7 @@ ar:
     choose_next_course: جرب دورة تدريبية من كود استوديو باختيار واحد من الأسفل
     print_certificate: طباعة الشهادة
   certificate_sponsor_message: "%{sponsor_name} تقدم بهدية سخية لرعاية تعلّمك."
+  certificate_hour_of_code: ساعة البرمجة
   move_students:
     new_section_dne: عذراً, ولكن قسم %{new_section_code} غير موجود. الرجاء إدخال كود
       قسم مختلف.
@@ -790,6 +792,11 @@ ar:
       title: حفلة الرقص
     dance-2019:
       title: حفلة الرقص
+    hello-world:
+      title: مرحبًا أيها العالم
+      body: اختر من بين أربعة موضوعات ممتعة لبرمجة شخصيات تفاعلية في عالم تقوم بإنشائه.
+    poem-art:
+      title: فن القصيدة
     hoc:
       title: المتاهة الكلاسيكية
       body: جرب تعلّم أساسيات علوم الحاسب الآلي. الملايين قاموا بذلك.
@@ -996,16 +1003,6 @@ ar:
       لا تتوفر أدواتنا لتدريس لغة جافا سكريبت لطلابك قبل الموافقة على الشروط التي
       تم تحديثها.
     review_terms: راجع الشروط المُحدَّثَة
-  donor_interstitial:
-    title: أصبحت دورات علوم الكمبيوتر المجانية الخاصة بك ممكنة عن طريق ...
-    subtitle: نود أن نشكر الجهات المانحة السخية التي جعل دعمها نجاح Code.org ممكنًا.
-      نحن ملتزمون بالحفاظ على Code.org مجانًا للمدارس والطلاب ، على مستوى العالم ،
-      بفضل كرمنا المستمر[donors](%{donors_url})!
-    local_supporters: الداعمون المحليون
-    global_supporters: الداعمون العالميون
-    support_codeorg_1: كل دولار يتم منحه لـ Code.org يجلب الفرصة لمزيد من الطلاب.
-    support_codeorg_2: "[تبرع الآن] (%{donate_url}) لدعم Code.org."
-    get_started: ابدأ على Code.org
   school_info_interstitial:
     title: نريد أن نوصل علم الحاسوب إلى جميع الطلاب - ساعدنا على مواصلة تقدمنا في
       ذلك!
@@ -1304,6 +1301,7 @@ ar:
         music: الموسيقى
         art: الفن
         other: 'غير ذلك:'
+        na: لا ينطبق
       resources:
         bootstrap: التمهيد
         codecademy: CodeCademy
@@ -1314,7 +1312,8 @@ ar:
         tynker: 'Tynker
 
 '
-        other: 'غير ذلك:'
+        other: الأخرى
+        na: لا ينطبق
       robotics:
         grok: Grok Learning
         kodable: كودابل
@@ -1332,7 +1331,8 @@ ar:
 
 '
         wonder: Wonder Workshop
-        other: 'غير ذلك:'
+        other: الأخرى
+        na: لا ينطبق
       workshop_course:
         csf_af: أساسيات علوم الكمبيوتر (دورات أ-و)
         csf_express: أساسيات علوم الكمبيوتر (ما قبل السريعة أو السريعة)
@@ -1408,3 +1408,12 @@ ar:
   unit_prefix: وحدة %{n}
   code_org_logo_alt: الصفحة الرئيسية Code.org
   teacher_feedback: ملاحظات المعلمين
+  lesson_lock:
+    error:
+      no_updates: لا توجد تحديثات يمكن إجراؤها
+      missing_params: يجب توفير المستخدم والمستوى ومعرّفات الوحدات
+      cannot_view_locked_answers: لا يمكن مشاهدة الإجابات أثناء القفل
+      forbidden: 'لا يمكن للمستخدم تحديث حالة الطالب القابلة للقفل '
+  reset_predict_progress_button: حذف الإجابة
+  pixelation:
+    binary: ثنائي

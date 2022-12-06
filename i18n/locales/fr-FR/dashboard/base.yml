@@ -8,8 +8,14 @@
 #To use a different locale, set it with `I18n.locale`:
 #I18n.locale = :es
 #This would use the information in config/locales/es.yml.
+#The following keys must be escaped otherwise they will not be retrieved by
+#the default I18n backend:
+#true, false, on, off, yes, no
+#Instead, surround them with single quotes.
+#en:
+#'true': 'foo'
 #To learn more, please read the Rails Internationalization guide
-#available at http://guides.rubyonrails.org/i18n.html.
+#available at https://guides.rubyonrails.org/i18n.html.
 fr:
   errors:
     messages:
@@ -63,6 +69,7 @@ fr:
   previous_page: Page précédente
   next_page: Page suivante
   next_resource: Ressource suivante
+  done_with_module: Module d'apprentissage terminé
   cancel: "Annuler"
   okay: "OK"
   or: "ou"
@@ -79,14 +86,14 @@ fr:
     submit: 'Ajouter un indice'
   appname: "Code.org"
   stage: "étape"
-  stage_number: "Leçon %{number}"
+  stage_number: "Leçon %{number} "
   puzzle: "Énigme"
   trophies: "trophées"
   courses: 'Cours'
   courses_page:
-    title_student: "Apprends avec Code Studio"
+    title_student: "Apprendre l'Informatique"
     title_teacher: "Enseigner l'informatique"
-  unplugged_activity: 'Activité "Déconnectée"'
+  unplugged_activity: 'Activité Déconnectée'
   of: "de"
   more: "PLUS"
   less: "MOINS"
@@ -293,6 +300,8 @@ fr:
       blank_code: "Saisis un code de section."
       cant_join_own_section: "Désolé, tu ne peux pas te joindre à ta propre section."
       provider_managed_section: "Cette section est gérée par un autre fournisseur et ne peut pas être rejointe. Demande à ton professeur de t’ajouter via %{provider} et de resynchroniser sa section."
+      restricted_section: "Nous n'avons pas pu vous ajouter à la section %{section_code}, car elle est verrouillée. Veuillez contacter votre professeur pour obtenir de l'aide."
+      full_section: "Nous n'avons pas pu vous ajouter à la section %{section_code}, car elle contient déjà %{section_capacity} élèves. Veuillez contacter votre professeur pour obtenir de l'aide."
       not_participant_type: "Nous n'avons pas pu vous ajouter à la section %{section_code}, vous ne remplissez pas les conditions pour y participer."
     mail:
       student_disassociated:
@@ -328,8 +337,8 @@ fr:
       course_catalog: "Catalogue des cours"
       project_gallery: "Projets"
       sections: "Sections"
-      help_support: "Aide et Support"
-      report_bug: "Rapporter un problème"
+      help_support: "Aide et assistance technique"
+      report_bug: "Signaler un problème"
       report_abuse: "Signaler un abus"
       teacher_community: "Communauté des enseignants"
       professional_learning: "Apprentissage professionnel"
@@ -351,6 +360,7 @@ fr:
       educate_beyond: "Aller plus loin"
       educate_inspire: "Inspirer un élève"
       educate_community: "Communauté en ligne"
+      educate_requirements: "Pré-requis techniques"
       educate_tools: "Outils et vidéos"
       about_us: "À propos"
       about_leadership: "Équipe de direction"
@@ -367,8 +377,9 @@ fr:
       help_us: "Nous aider"
       teach: "Enseigner"
       about: "À propos"
-      legal: "Confidentialité et légal"
+      legal: "Confidentialité et mentions légales"
       legal_privacy: "Politique de confidentialité"
+      legal_cookie_notice: " Utilisation des cookies"
       legal_tos: "Conditions Générales d'Utilisation"
     user:
       classroom: 'Page d''accueil de l''enseignant'
@@ -397,7 +408,7 @@ fr:
       eval: 'Eval'
       flappy: 'Flappy'
       frozen: 'La Reine des neiges'
-      gamelab: 'Labo des Jeux'
+      gamelab: 'Labo Jeux'
       gamelab_jr: 'Labo des jeux (beta)'
       gumball: 'Le monde incroyable de Gumball'
       iceage: 'L’âge de Glace'
@@ -414,17 +425,17 @@ fr:
       poetry_hoc: 'Art du poème'
       scratch: 'Scratch'
       sports: 'Sports'
-      spritelab: 'Le Labo des Lutins'
+      spritelab: 'Le Labo des Sprites'
       starwars: 'Star Wars'
       starwarsblocks: 'Star Wars (blocs)'
       starwarsblocks_hour: 'Star Wars (blocs)'
+      thebadguys: 'Les Bad Guys'
       loading: 'Chargement...'
-      weblab: 'Lab du Web'
+      weblab: 'Labo Web'
       view_all: 'Afficher tous les projets...'
     popup:
       progress_for_user: "progrès de %{name}"
       progress: 'Ton progrès'
-      lines: 'Total de lignes de code: %{lines}'
       close: 'FERMER'
       mastery: 'Concepts'
       puzzle_map: 'Étapes'
@@ -544,6 +555,7 @@ fr:
     choose_next_course: "Essaye un cours Code Studio en le choisissant ci-dessous"
     print_certificate: "Imprimer le certificat"
   certificate_sponsor_message: "%{sponsor_name} a fait le don généreux de parrainer ton apprentissage."
+  certificate_hour_of_code: "Heure de Code"
   move_students:
     new_section_dne: "Désolé, la section %{new_section_code} n’existe pas. Veuillez saisir un code de section différent."
     section_code_cant_be_current_section: "La section courante ne peut pas être identique à la nouvelle section."
@@ -556,7 +568,7 @@ fr:
     not_correct_participant_type: "Impossible de déplacer ces utilisateurs car ils n'ont pas les autorisations nécessaires pour participer à la nouvelle section."
   share:
     title: "Apprends avec Code Studio"
-    description: "N'importe qui peut apprendre l’informatique. Crée des jeux, des applications et de l'art avec du code."
+    description: "Tout le monde peut apprendre l’informatique. Crée des jeux, des applications et de l'art avec du code."
     try_hour_of_code: 'Essaie une Heure du Code !'
   gender:
     male: 'Masculin'
@@ -568,20 +580,20 @@ fr:
     student: 'Élève'
     teacher: 'Professeur'
   footer:
-    thank_you: 'Nous remercions nos <a href="https://code.org/about/donors"> donateurs</a>, <a href="https://code.org/about/partners"> partenaires</a>, notre <a href="https://code.org/about/team"> équipe étendue</a>, notre casting vidéo et nos <a href="https://code.org/about/advisors"> conseillers d''éducation</a> pour leur soutien à la création de Code Studio.'
-    help_from_html: 'Nous tenons particulièrement à remercier les ingénieurs d’Amazon, de Google et de Microsoft,qui ont contribué à créer ce matériel.'
-    help_from_html_old: 'Les ingénieurs de Google, Microsoft, Facebook et Twitter ont contribué à créer ces documents de formation.'
-    art_from_html: 'Minecraft&#8482; &copy; %{current_year} Microsoft. Tous droits réservés. <br />Star Wars&#8482; &copy; %{current_year} Disney et Lucasfilm. Tous droits réservés.<br />La reine des neiges&#8482; &copy; %{current_year} Disney. Tous droits réservés. <br /> L’âge de glace&#8482; &copy; %{current_year} 20th Century Fox. Tous droits réservés. <br /> Angry Bird&#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. Tous droits réservés. <br /> Plants vs. Zombies&#8482; &copy; %{current_year} Electronic Arts Inc. Tous droits réservés. <br /> Le monde incroyable de Gumball est une marque commerciale et &copy; %{current_year} Cartoon Network.'
-    art_from_html_old: 'Minecraft&#8482; &copy; %{current_year} Microsoft. Tous droits réservés. Star Wars&#8482; &copy; %{current_year} Disney et Lucasfilm. Tous droits réservés. La reine des neiges&#8482; &copy; %{current_year} Disney. Tous droits réservés. L’âge de glace&#8482; &copy; %{current_year} 20th Century Fox. Tous droits réservés. Angry Bird&#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. Tous droits réservés. Plantes vs. Zombies&#8482; &copy; %{current_year} Electronic Arts Inc. Tous droits réservés. Le monde incroyable de Gumball est une marque commerciale et &copy; %{current_year} Cartoon Network.'
+    thank_you: 'Nous tenons à remercier nos <a href="https://code.org/about/donors"> donateurs</a>, <a href="https://code.org/about/partners"> partenaires</a>, nos <a href="https://code.org/about/team"> équipes</a>, notre casting vidéo et nos <a href="https://code.org/about/advisors"> conseillers d''éducation</a> pour leur soutien lors de la création de Code Studio.'
+    help_from_html: 'Nous tenons particulièrement à remercier les ingénieurs d’Amazon, de Google et de Microsoft, qui ont contribué à la création de ce matériel.'
+    help_from_html_old: 'Des ingénieurs de chez Google, Microsoft, Facebook et Twitter ont contribué à créer ces documents de formation.'
+    art_from_html: 'Minecraft&#8482; &copy; %{current_year} Microsoft. Tous droits réservés. <br />Star Wars&#8482; &copy; %{current_year} Disney et Lucasfilm. Tous droits réservés.<br />La reine des neiges&#8482; &copy; %{current_year} Disney. Tous droits réservés. <br /> L’Âge de glace&#8482; &copy; %{current_year} 20th Century Fox. Tous droits réservés. <br /> Angry Birds&#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. Tous droits réservés. <br /> Plantes contre Zombies&#8482; &copy; %{current_year} Electronic Arts Inc. Tous droits réservés.<br />DreamWorks Les Bad Guys &copy; %{current_year} DreamWorks Animation LLC. Tous droits réservés.'
+    art_from_html_old: 'Minecraft&#8482; &copy; %{current_year} Microsoft. Tous droits réservés. Star Wars&#8482; &copy; %{current_year} Disney et Lucasfilm. Tous droits réservés. La reine des neiges&#8482; &copy; %{current_year} Disney. Tous droits réservés. L’âge de glace&#8482; &copy; %{current_year} 20th Century Fox. Tous droits réservés. Angry Birds&#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. Tous droits réservés. Plantes contre Zombies&#8482; &copy; %{current_year} Electronic Arts Inc. Tous droits réservés. Le monde incroyable de Gumball est une marque commerciale et &copy; %{current_year} Cartoon Network.'
     code_from_html: 'Code.org utilise p5.play, qui est distribué sous la licence <a href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html">GNU LGPL 2.1</a>.'
-    powered_by_aws: 'Fourni par Amazon Web Services'
-    built_on_github: 'Construit sur GitHub de Microsoft'
+    powered_by_aws: 'Amazon Web Services et le logo « Powered by AWS » sont des marques déposées d''Amazon.com, Inc. ou ses filiales aux États-Unis et/ou dans d''autres pays. '
+    built_on_github: 'Construit avec GitHub de Microsoft'
     google_copyright: '&copy; Google Inc. utilisé avec autorisation. Google Classroom est une marque déposée de Google Inc.'
     trademark: '&copy; Code.org, %{current_year}. Code.org&reg;, le logo CODE et Hour of Code&reg; sont des marques déposées de Code.org.'
     copyright: 'Copyright'
     more: 'Plus'
     feedback: 'Fournir un commentaire'
-    translate: 'Aidez-nous à traduire vers votre langue'
+    translate: 'Portez-vous volontaire pour traduire vers votre langue'
     support: 'Assistance'
     support_url: 'http://support.code.org'
     tos_short: 'Conditions Générales'
@@ -594,8 +606,8 @@ fr:
     make_my_own_app: 'Développer ma propre application'
     how_it_works: 'Comment ça marche'
     try_hour_of_code: 'Essaie une Heure du Code !'
-    store: 'Magasin'
-    cookie_notice: ' Utilisation de cookies'
+    store: 'Boutique'
+    cookie_notice: ' Utilisation des cookies'
   reference_area:
     title: 'Besoin d''aide ?'
     subtitle: 'Regarder les vidéos et les indices'
@@ -606,20 +618,20 @@ fr:
     direction: 'Direction au départ (en degrés)'
   video:
     tab: 'Vidéo.'
-    notes: 'Pas de vidéo ? Montre les notes.'
+    notes: 'Pas de vidéo ? Voir les notes.'
     notes_coming_soon: 'Il y aura bientôt des notes pour cette vidéo.'
     autoplay_option: 'Lire les vidéos automatiquement'
     download: 'Télécharger la vidéo'
     show_notes: 'Afficher les Notes'
     show_video: 'Afficher la Vidéo'
-    label: 'Vidéo'
+    label: 'Vidéo '
   compatibility:
     upgrade:
-      unsupported_message: "Votre navigateur n'est pas supporté. Merci de mettre votre navigateur à jour avec [un de nos navigateurs supportés](%{supported_browsers_url}). Vous pouvez essayer d’afficher la page mais la fonctionnalité risque d’être rompue."
+      unsupported_message: "Votre navigateur n'est pas compatible. Merci de mettre votre navigateur à jour avec [l'un des navigateurs compatibles avec nos services](%{supported_browsers_url}). Vous pouvez essayer d’afficher la page, mais les fonctionnalités risquent d’être compromises. "
       link: "En savoir plus"
-      applab_unsupported_tablet: "Le Labo des Applis fonctionne idéalement sur un ordinateur portable ou de bureau avec une souris et un clavier. Il se peut que vous rencontriez des problèmes en utilisant cet outil sur votre appareil actuel."
-      gamelab_unsupported_tablet: "Le Labo des Jeux fonctionne idéalement sur un ordinateur portable ou de bureau avec une souris et un clavier. Il se peut que vous rencontriez des problèmes en utilisant cet outil sur votre appareil actuel."
-      weblab_unsupported_locale_storage: "Il se peut que vous rencontriez des difficultés en utilisant le Labo du Web, en mode incognito. Merci de recharger votre projet en mode normal. Nous sommes désolés pour la gêne occasionnée."
+      applab_unsupported_tablet: "Le Labo des Applis fonctionne au mieux sur un ordinateur portable ou fixe équipé d'une souris et d'un clavier. Il se peut que vous rencontriez des difficultés en utilisant cet outil avec votre appareil actuel."
+      gamelab_unsupported_tablet: "Le Labo Jeux fonctionne au mieux sur un ordinateur portable ou de bureau avec une souris et un clavier. Il se peut que vous rencontriez des problèmes en utilisant cet outil avec votre appareil actuel."
+      weblab_unsupported_locale_storage: "Il se peut que vous rencontriez des difficultés en utilisant le Labo Web en mode Navigation Privée. Merci de réactualiser votre projet en mode normal. Nous sommes désolés pour la gêne occasionnée."
   slow_loading: 'Cela prend plus de temps que d''habitude...'
   try_reloading: 'Essaie de recharger la page'
   next_stage: 'Terminé! Continue vers l''étape suivante'
@@ -634,7 +646,7 @@ fr:
     bounce_og_title: "Vérifier mon jeu de rebond"
     flappy_og_title: "Vérifier mon jeu Flappy l’oiseau"
     studio_og_title: "Vérifier mon application Labo de jeux"
-    check_out_what_i_made: "Vérifier ce que j'ai fait"
+    check_out_what_i_made: "Aller voir ce que j'ai fait"
     og_description: "J'ai écrit le code moi-même avec Code.org"
     phone_number_not_allowed: "On dirait qu’il y a un numéro de téléphone dedans. Essaie de modifier le texte."
     address_not_allowed: "On dirait qu’il y a une adresse dedans. Essaie de modifier le texte."
@@ -662,6 +674,12 @@ fr:
       title: 'Soirée Dansante'
     dance-2019:
       title: 'Soirée Dansante'
+    hello-world:
+      title: 'Bonjour tout le monde !'
+      body: 'Choisis entre quatre activités amusantes pour programmer des personnages interactifs dans un monde que tu as créé!'
+    poem-art:
+      title: 'Art du poème'
+      body: 'Exprime-toi! Programme un poème animé.'
     hoc:
       title: 'Labyrinthe classique'
       body: 'Essaie les fondamentaux de l''informatique. Des millions ont essayé.'
@@ -679,8 +697,8 @@ fr:
       title: "Galerie"
       body: "Regarde une galerie des applications et des images d'artistes créées par nos utilisateurs."
     gamelab:
-      title: "Labo des Jeux"
-      body: "Le Labo des Jeux est un environnement de programmation où vous pouvez créer des animations simples et des jeux avec des objets et des personnages qui interagissent entre eux."
+      title: "Labo Jeux"
+      body: "Le Labo Jeux est un environnement de programmation où on peut créer des animations simples et des jeux avec des objets et des personnages qui interagissent entre eux."
       audience: "Âge recommandé: 13 ans et plus"
       cta: "Apprendre comment"
     hoc-encryption:
@@ -688,7 +706,7 @@ fr:
       body: "Les élèves apprendront les techniques pour créer et casser des messages chiffrés."
     weblab:
       title: "Le Labo du Web (beta)"
-      body: "Le Labo du Web est un environnement de programmation où tu peux créer des pages web simples, en utilisant HTML et CSS. Crée tes pages web et partage ton site en quelques instants."
+      body: "Le Labo Web est un environnement de programmation où tu peux créer des pages web simples, en utilisant l'HTML et le CSS. Crée tes pages web et partage ton site en quelques instants."
       audience: "Âge recommandé: 13 ans et plus"
       cta: "Apprendre comment"
     frozen:
@@ -696,8 +714,8 @@ fr:
     starwars:
       title: "Star Wars"
     infinity:
-      title: "Labo de jeu Infinity"
-      body: "Utilise le Labo de jeux pour créer une histoire ou un jeu mettant en vedette les personnages de Disney Infinity."
+      title: "Labo Jeux Infinity"
+      body: "Utilise le Labo Jeux pour créer une histoire ou un jeu mettant en scène les personnages de Disney Infinity."
     minecraft:
       title: "Minecraft"
       body: "Explore un monde Minecraft à travers son code."
@@ -716,12 +734,12 @@ fr:
       title: "Compression de texte"
       body: "Dans cette leçon, les élèves utiliseront le Widget de Compression de Texte pour compresser le texte en remplaçant des modèles par des symboles."
     unplugged:
-      title: "Leçons en mode \"déconnecté\""
-      audience: "Âge recommandé: 4 ans et plus"
+      title: "Leçons en mode « déconnecté »"
+      audience: "À partir de 4 ans"
       body: "Nous avons compilé une liste de leçons en mode \"déconnecté\" que vous pouvez utiliser en classe. Vous pouvez désormais enseigner les bases de l'informatique, que vous ayez ou non des ordinateurs dans votre classe ! Essayez d'utiliser ces leçons sous forme de cours indépendant ou sous forme de leçons complémentaires à l'un de vos cours d'informatique."
-      body_short: "Si vous n'avez pas d'ordinateur, essayez ces leçons en mode \"déconnecté\" dans votre classe."
+      body_short: "Si vous n'avez pas d'ordinateurs, essayez ces leçons en mode \"déconnecté\" dans votre classe."
     unplugged_conditionals:
-      title: "Instructions conditionnelles"
+      title: "Formules conditionnelles"
       body: "Découvre les algorithmes et les déclarations conditionnelles, dans cette activité \"déconnectée\", en t’appuyant sur un jeu de cartes."
     widgets:
       title: "Widgets"
@@ -734,7 +752,7 @@ fr:
     support: "Obtenir de l'aide"
     support_url: "//support.code.org"
     help_resources: "Aide et ressources"
-    help_support: "Aide et Support"
+    help_support: "Aide et assistance technique"
     documentation: "Documentation"
     tutorials: "Didacticiels"
   free_response:
@@ -824,14 +842,6 @@ fr:
     reminder_desc: 'Nous avons mis à jour nos <a href="%{tos_url}" target="_blank">Conditions d’utilisation</a> et notre<a href="%{privacy_url}" target="_blank">Politique de confidentialité</a>. Veuillez les lire soigneusement avant de les accepter. Notez que nos outils pédagogiques JavaScript peuvent être indisponibles pour vos élèves avant votre acceptation expresse des conditions mises à jour.'
     reminder_desc_markdown: Nous avons mis à jour nos [Conditions d’utilisation](%{tos_url}) et notre[Politique de confidentialité](%{privacy_url}). Veuillez les lire soigneusement avant de les accepter. Notez que nos outils pédagogiques JavaScript peuvent être indisponibles pour vos élèves avant votre acceptation expresse des conditions mises à jour.
     review_terms: "Consulter les éléments modifiés"
-  donor_interstitial:
-    title: "Vos leçons CS gratuites sont rendues possibles par..."
-    subtitle: "Nous voudrions remercier les généreux donateurs dont le soutien a fait de Code.org un réel succès. Nous nous engageons à maintenir Code.org gratuit pour les écoles et les étudiants, mondialement, grâce à la générosité continue de nos donateurs [donors](%{donors_url})!"
-    local_supporters: "Soutiens Locaux"
-    global_supporters: "Soutiens Mondiaux"
-    support_codeorg_1: "Chaque dollar donné à Code.org apporte des opportunités à plus d'étudiants."
-    support_codeorg_2: "[Faire un don maintenant](%{donate_url}) pour soutnenir Code.org."
-    get_started: "Débuter avec Code.org"
   school_info_interstitial:
     title: "Nous voulons apporter l'Informatique à tous les étudiants - aidez-nous à suivre notre progression !"
     message: "Veuillez saisir les informations de l’école ci-dessous."
@@ -926,6 +936,7 @@ fr:
     instructor_feedback: 'Commentaires de l’instructeur'
     peer_feedback: 'Commentaire par les pairs'
     outdated: 'Ce commentaire a été émis pour une version précédente'
+    review_count: 'Tu dois compléter %{review_count} révisions pour cette unité.'
     peer_review: 'Commentaire par un pair'
   external_links:
     disclaimer: Clause de non-responsabilité
@@ -986,15 +997,20 @@ fr:
     windows: 'Windows (64 bits)'
     mac: 'Mac OS X'
   locked_stage: 'Les contenus ne sont pas visibles car cette étape est verrouillée pour l''instant. Ton professeur la déverrouillera lorsqu''il sera temps de travailler dessus ou pour consulter tes réponses.'
-  hidden_stage: "Ton professeur n'avait pas prévu que tu travailles ici. Demande lui quelle leçon tu dois suivre."
+  hidden_stage: "Ton enseignant n'avait pas prévu que tu te retrouves ici. Demande-lui sur quelle leçon tu devrais travailler. "
   hidden_script: "Ton professeur n'avait pas prévu que tu travailles ici. Demande lui quelle unité tu dois suivre."
   no_course_access_student: "Vous n'avez pas accès à ce cours. S'il vous plaît informez votre professeur quel cours vous devriez suivre."
   no_course_access_teacher: "Vous n'avez pas accès à ce cours. Si vous penser que vous devriez avoir accès à ce cours, s'il vous plaît écrivez à support@code.org afin que nous puissions arranger la situation."
   no_script_access_student: "Tu n’as pas accès à cette unité. Merci de demander à ton professeur quelle unité tu devrais suivre."
   no_script_access_teacher: "Tu n’as pas accès à cette unité. Si tu penses que tu devrais avoir accès à cette unité, merci d’écrire à support@code.org afin que nous puissions corriger la situation."
-  return_unit_overview: 'Accéder à l’aperçu de l''unité'
+  no_level_access_student: "Tu n’as pas accès à cette unité. Merci de demander à ton professeur quelle unité tu devrais suivre."
+  no_level_access_teacher: "Tu n’as pas accès à cette unité. Si tu penses que tu devrais y avoir accès, merci d’écrire à support@code.org afin que nous puissions corriger la situation."
+  no_exemplar: "Aucun exemple n'existe pour ce niveau."
+  no_exemplar_access_student: "Les élèves ne peuvent accéder aux programmes d'exemple. Merci de demander à ton professeur quelle unité tu devrais suivre."
+  no_exemplar_access_teacher: "Seul les professeurs peuvent accéder aux programmes exemples. Si vous voulez devenir un professeur autorisé, prière d'écrire à support@code.org."
+  return_unit_overview: 'Aller à l’aperçu de l''unité'
   return_course_overview: 'Accéder à l’aperçu du cours'
-  view_all_units: 'Afficher toutes les unités'
+  view_all_units: 'Voir toutes les unités'
   view_teacher_guide: 'Voir le guide de l''enseignant'
   pd:
     form_labels:
@@ -1009,9 +1025,13 @@ fr:
       school_city: 'Ville de l’École'
       school_city_district: 'École de ville/ district'
       school_country: 'Pays de l’École'
+      school_department_region: 'Département/région scolaire'
       colombian_school_city: 'Ville de l’École'
+      colombian_chilean_school_department: 'Département/région scolaire'
+      colombian_school_municipality: 'Municipalité scolaire'
       colombian_chilean_school_name: 'Nom de l''école'
       chilean_school_commune: 'Commune'
+      chilean_school_id: 'Identifiant d''école'
       ages: 'Quelle est la tranche d''âge de vos étudiants, cette année ?'
       subjects: 'Quelle(s) matière(s) enseignez-vous, cette année ?'
       resources: 'Parmi les ressources d’éducation en informatique suivantes, lesquelles utilisez-vous ?'
@@ -1057,6 +1077,7 @@ fr:
         music: 'Musique'
         art: 'Art'
         other: "Autre :"
+        na: 'Non applicable'
       resources:
         bootstrap: 'Bootstrap'
         codecademy: 'CodeCademy'
@@ -1065,7 +1086,8 @@ fr:
         kodable: 'Kodable'
         scratch: 'Scratch'
         tynker: 'Tynker'
-        other: "Autre :"
+        other: "Autre"
+        na: 'Non applicable'
       robotics:
         grok: 'Grok Learning'
         kodable: 'Kodable'
@@ -1075,7 +1097,8 @@ fr:
         sphero: 'Sphero'
         raspberry: 'Raspberry Pi'
         wonder: 'Wonder Workshop'
-        other: "Autre :"
+        other: "Autre"
+        na: 'Non applicable'
       workshop_course:
         csf_af: 'Les Fondamentaux de l’Informatique (Cours A-F)'
         csf_express: 'Les Fondamentaux de l’Informatique (Pré-Express ou Express)'
@@ -1103,7 +1126,7 @@ fr:
       body_markdown: 'Votre compte n’est pas associé à une adresse e-mail. Veuillez [consulter les paramètres de votre compte](%{user_registration}) pour ajouter votre adresse e-mail avant de remplir ce formulaire.'
   courses_category: 'Cours Complets'
   cookie_banner:
-    message: 'En poursuivant votre navigation sur ce site ou en cliquant sur « J’accepte », vous acceptez le stockage de cookies sur votre ordinateur ou appareil mobile.'
+    message: 'En poursuivant votre navigation sur ce site ou en cliquant sur « J’accepte », vous acceptez le stockage de cookies sur votre ordinateur ou appareil.'
     more_information: "Consulter la Politique de Confidentialité de Code.org."
     accept: 'J''accepte'
   page_not_found_title: "Page Introuvable"
@@ -1129,5 +1152,14 @@ fr:
   behaviors:
     this_sprite: "ce sprite"
   unit_prefix: "Unité %{n}"
-  code_org_logo_alt: "Code.org Accueil"
+  code_org_logo_alt: "Accueil Code.org"
   teacher_feedback: "FeedBack enseignants"
+  lesson_lock:
+    error:
+      no_updates: "Aucune mise à jour à effectuer"
+      missing_params: "Fournir les identifiants de l'utilisateur, le niveau et les codes d'identification d'unité."
+      cannot_view_locked_answers: "Impossible d'afficher les réponses lorsque le système est verrouillé"
+      forbidden: "L'utilisateur ne peut pas modifier les paramètres de verrouillage de l'apprenant"
+  reset_predict_progress_button: "Supprimer la réponse"
+  pixelation:
+    binary: "Binaire"

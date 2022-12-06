@@ -51,23 +51,23 @@
     "show_type_hints": "false",
     "include_shared_functions": "false",
     "teacher_markdown": "Students will be using App Lab to create a simple prototype for their app.  Students who want to go further in making their apps functional can learn more about App Lab, watch demo videos, and work through tutorials at [https://code.org/educate/applab](https://code.org/educate/applab).",
-    "map_reference": "/docs/concepts/app-lab/design-mode/",
+    "map_reference": "/courses/vpl-csd-summer-pilot-ci-2022/guides/design-mode",
     "mini_rubric": "false",
     "encrypted": "false",
     "video_key": "csd_applab_designmode",
     "code_functions": {
       "setScreen": null
     },
-    "preload_asset_list": null,
     "widget_mode": "false",
     "libraries_enabled": "false",
-    "ai_enabled": "false"
+    "ai_enabled": "false",
+    "preload_asset_list": null
   },
-  "game_id": 41,
-  "published": true,
-  "created_at": "2022-03-31T19:15:30.000Z",
   "level_num": "custom",
+  "game_id": 41,
+  "created_at": "2022-03-31T19:15:30.000Z",
   "user_id": 155,
+  "published": true,
   "notes": "",
   "audit_log": "[{\"changed_at\":\"2022-03-31T19:15:30.977+00:00\",\"changed\":[\"cloned from \\\"U4 Model Design 1_2021\\\"\"],\"cloned_from\":\"U4 Model Design 1_2021\"},{\"changed_at\":\"2022-03-31 19:57:25 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\",\"code_functions\",\"preload_asset_list\"],\"changed_by_id\":962,\"changed_by_email\":\"jess@code.org\"}]"
 }]]></config>

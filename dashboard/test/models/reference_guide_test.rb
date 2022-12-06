@@ -51,4 +51,11 @@ class ReferenceGuideTest < ActiveSupport::TestCase
     category = create :reference_guide, key: 'category_page', course_version_id: guide.course_version_id
     assert_equal [guide], category.children
   end
+
+  test "reference guides can be found by course_version_name and key" do
+    unit_group = create :unit_group, family_name: 'bogus-course', version_year: '2022', name: 'bogus-course-2022'
+    CourseOffering.add_course_offering(unit_group)
+    guide = create :reference_guide, key: 'page', course_version: unit_group.course_version
+    assert_equal guide, ReferenceGuide.find_by_course_name_and_key(guide.course_offering_version, guide.key)
+  end
 end

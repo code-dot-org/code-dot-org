@@ -445,6 +445,8 @@ fil:
           piraso ng code sa isang function ay lubhang nakakatulong na kasanayan.  '
       courseB_unplugged_MRF_2018:
         title: Ang Robot Kong Mga Kaibigan
+        desc: Matutong magprograma sa pamamagitan ng pagsulat ng code para sa mga
+          kaibigan mo!
       PlantASeed_2018:
         title: 'Mga Totoong-buhay na Algoritmo: Pagtatanim ng Buto'
         desc: Ang araling ito ay nagpapahiwatig sa mga pamamaraan na gumamit tayo
@@ -522,10 +524,31 @@ fil:
           na ang mga datos ay maaaring irepresenta at itago sa higit sa isang pamamaraan.
       MoveItMoveIt_2018:
         title: Galawin ito, Galawin ito
+      courseB_unplugged_CnC_2018:
+        title: Mahusay na Gumawa at Maglaro ng Patas
+        desc: Pinahiram sa Computer Science Fundamentals ng team sa Copyright and
+          Creativity, umiiral ang araling ito upang tulungan ang mga mag-aaral na
+          maunawaan ang malikhaing proseso ng pagbabahagi at inspirasyon. Kasabay
+          nito ang pagsulong ng malikhaing pagpapahayag at ang pangangailangang maging
+          patas sa malikhaing gawain.
+      courseE_unplugged_CnC_2018:
+        title: Digital na Pagbabahagi
+        desc: Pinahiram sa Computer Science Fundamentals ng team sa Copyright at Creativity,
+          umiiral ang araling ito upang tulungan ang mga mag-aaral na maunawaan ang
+          mga hamon at benepisyo ng paggalang sa pagmamay-ari at copyright, partikular
+          sa mga digital na kapaligiran. Dapat hikayatin ang mga mag-aaral na igalang
+          ang mga karapatan ng mga artista bilang isang mahalagang bahagi ng pagiging
+          etikal na digital na mamamayan.
       RelayProgramming_2018:
         title: Relay Programming
+        desc: Magsisimula ang aktibidad na ito sa isang maikling aralin sa pag-debug
+          at pagtitiyaga, pagkatapos ay mabilisang lilipat sa karera laban sa orasan
+          habang ang mga mag-aaral ay naghahati-hati sa mga team at nagtutulungan
+          upang magsulat ng programa isang instruksiyon sa bawat pagkakataon.
       courseB_unplugged_MRF_2019:
         title: Ang Robot Kong Mga Kaibigan
+        desc: Matutong magprograma sa pamamagitan ng pagsulat ng code para sa mga
+          kaibigan mo!
       BuildingAFoundation_2019:
         title: 'nawala ang pagsasalin: en-US.data.unplugged.BuildingAFoundation_2018.title'
         desc: 'nawala ang pagsasalin: en-US.data.unplugged.BuildingAFoundation_2018.desc'
@@ -554,6 +577,10 @@ fil:
           drowing.
       RelayProgramming_2018_2019:
         title: Relay Programming
+        desc: Magsisimula ang aktibidad na ito sa isang maikling aralin sa pag-debug
+          at pagtitiyaga, pagkatapos ay mabilisang lilipat sa karera laban sa orasan
+          habang ang mga mag-aaral ay naghahati-hati sa mga team at nagtutulungan
+          upang magsulat ng programa isang instruksiyon sa bawat pagkakataon.
       courseD_unplugged_digitalCitizenship_2019:
         title: Unplugged na Aktibidad
         desc: Ngayon matutunan mo kung ano ang ibig sabihin ng maging isang Digital
@@ -568,9 +595,19 @@ fil:
           larawan at mga kulay) pati na rin sa binary.
       courseE_unplugged_privateInformation_2019:
         title: Pribado at Personal na Impormasyon
+        desc: Binuo ng Common Sense Education, ang araling ito ay tungkol sa pagkakaiba
+          sa pagitan ng impormasyong ligtas na ibahagi online at impormasyong hindi.
       SongwritingParameters_2019:
         title: 'nawala ang pagsasalin: en-US.data.unplugged.SongwritingParameters_2018.title'
         desc: 'nawala ang pagsasalin: en-US.data.unplugged.SongwritingParameters_2018.desc'
+      courseE_unplugged_CnC_2019:
+        title: Digital na Pagbabahagi
+        desc: Pinahiram sa Computer Science Fundamentals ng team sa Copyright at Creativity,
+          umiiral ang araling ito upang tulungan ang mga mag-aaral na maunawaan ang
+          mga hamon at benepisyo ng paggalang sa pagmamay-ari at copyright, partikular
+          sa mga digital na kapaligiran. Dapat hikayatin ang mga mag-aaral na igalang
+          ang mga karapatan ng mga artista bilang isang mahalagang bahagi ng pagiging
+          etikal na digital na mamamayan.
       Internet_2019:
         title: 'nawala ang pagsasalin: en-US.data.unplugged.Internet_2018.title'
         desc: 'nawala ang pagsasalin: en-US.data.unplugged.Internet_2018.desc'
@@ -630,8 +667,36 @@ fil:
         desc: Ang mga guro ay magpapakilala sa mga estudyante ng ideya na paglagay
           ng impormasyon tungkol sa kanilang mga sarili online ay lilikha ng isang
           digital na yapak o "bakas" na mayroong kahihinatnan.
+      courseB_unplugged_CnC_2019:
+        title: Mahusay na Gumawa at Maglaro ng Patas
+        desc: Pinahiram sa Computer Science Fundamentals ng team sa Copyright and
+          Creativity, umiiral ang araling ito upang tulungan ang mga mag-aaral na
+          maunawaan ang malikhaing proseso ng pagbabahagi at inspirasyon. Kasabay
+          nito ang pagsulong ng malikhaing pagpapahayag at ang pangangailangang maging
+          patas sa malikhaing gawain.
+      GraphingData_2019:
+        title: Paglalarawan ng Data
+        desc: Sa araling ito, ang mga mag-aaral ay mangongolekta ng data mula sa isang
+          proyekto sa Play Lab o totoong sitwasyon at gagamitin ito upang gumawa ng
+          mga hula.
+      courseE_unplugged_accessAbility_2019:
+        title: Kakayahang Pag-access
+        desc: Matuto tungkol sa pagiging madaling ma-access at ang halaga ng empatiya
+          sa pamamagitan ng brainstorming at pagdidisenyo ng mga naa-access na solusyon
+          sa mga hypothetical na app.
+      courseE_simon_says_2019:
+        title: Sabi ni Simon
+        desc: "Maglaro at isipin kung anong mga utos ang kailangan upang makuha ang
+          tamang resulta.\r\n\r\n![test image](https://code.org/images/logo.png)"
+      courseB_unplugged_passwords_2019:
+        title: Mga Makapangyarihang Password
+        desc: Tuklasin kung bakit gumagamit ng mga password ang mga tao, alamin ang
+          mga benepisyo ng paggamit ng mga password, at tumuklas ng mga diskarte sa
+          paggawa at pagpapanatiling matatag at secure na mga password.
       timeforcs_demo_crowdsourcing:
         title: Pag-crowdsourcing
+        desc: '_Tala ni Josh: taliwas sa unang aralin, na-format ko ang isang ito
+          tulad ng karaniwang hindi naka-plug na aralin._'
       timeforcs_demo_conditionals:
         title: Mga conditional
         desc: Para matuto tungkol sa mga kondisyonal na mga pahayag, ang mga estudyante

@@ -1986,23 +1986,163 @@ id:
     poemart_intro:
       1:
         image: 'notes/hoc_poem_art_2021_introduction_01.jpg'
+        text: "Nama saya Caia dan saya seorang pembuat puisi dan siswa ilmu komputer. Saya telah belajar banyak dari coding yang membuat saya menjadi pembuat puisi yang lebih baik, dan sangat banyak puisi saya yang telah membuat saya jadi lebih baik dalam coding, karena Anda harus benar-benar memikirkan kata-kata yang Anda pilih dan apa yang akan Anda buat setelah semuanya menyatu."
       2:
         image: 'notes/hoc_poem_art_2021_introduction_02.jpg'
+        text: "Dalam satu jam berikutnya, kamu akan belajar tentang ilmu komputer dan puisi dengan membuat puisi animasi. Pada dasarnya, puisi adalah membuat seni dengan kata-kata. Saya membuat puisi untuk mengekspresikan diri saya; Saya mencoba membangkitkan imajinasi dan emosi orang lain saat menulis dengan menggunakan gaya dan ritme saya yang unik."
       3:
         image: 'notes/hoc_poem_art_2021_introduction_03.jpg'
+        text: "Seperti halnya seni, puisi dapat ditafsirkan dengan berbagai cara. Puisi yang sama mungkin memiliki arti yang sangat berbeda bagi orang yang berbeda, dan tiap puisi memiliki mood yang berbeda. Mood adalah perasaan yang kamu dapatkan dari sebuah puisi. Terkadang orang menghubungkan warna dan perumpamaan tertentu dengan mood yang berbeda."
       4:
         image: 'notes/hoc_poem_art_2021_introduction_04.jpg'
+        text: "Misalnya, warna kuning membuat saya merasa ceria. Dan ketika saya memikirkan moood seperti ketakutan, saya kadang membayangkan malam yang gelap dan penuh badai. Dalam kegiatan ini, kamu akan memiliki kesempatan untuk menggambarkan dan menganimasikan mood puisi sesuai perasaanmu."
       5:
         image: 'notes/hoc_poem_art_2021_introduction_05.jpg'
+        text: "Mari kita lihat cara kamu melakukannya dengan kode. Kamu bisa melihat bahwa layar kamu terbagi menjadi tiga bagian utama. Di sebelah kiri adalah ruang bemain. Di sinilah animasi puisimu akan muncul. Tiap puisi memiliki judul dan pengarang."
       6:
         image: 'notes/hoc_poem_art_2021_introduction_06.jpg'
+        text: "Area tengah ini adalah toolbox. Blok-blok code baru akan tersedia di ruang ini sepanjang kamu mengikuti pelajaran."
       7:
         image: 'notes/hoc_poem_art_2021_introduction_07.jpg'
+        text: "Ruang di sisi kanan adalah ruang kerja. Kamu dapat menarik blok keluar dari toolbox dan masuk ke ruang kerja untuk membuat program."
       8:
         image: 'notes/hoc_poem_art_2021_introduction_08.jpg'
+        text: "Instruksi untuk tiap level akan muncul di bagian atas layar. Jika kamu memerlukan tips, cukup klik bola lampunya."
       9:
         image: 'notes/hoc_poem_art_2021_introduction_09.jpg'
+        text: "Pertama, pilih puisi yang kamu suka. Semua jenis puisi tersedia dan kamu dapat memilih yang baru di tiap level."
       10:
         image: 'notes/hoc_poem_art_2021_introduction_10.jpg'
+        text: "Selanjutnya, kamu akan menarik blok dari toolbox ke ruang kerja untuk menganimasikan puisimu. Kamu dapat memilih warna atau efek latar belakang yang sesuai dengan mood puisimu, lalu klik \"Run\" untuk melihat hasilnya."
       11:
         image: 'notes/hoc_poem_art_2021_introduction_11.jpg'
+        text: "Luangkan waktu untuk membaca puisi lain dan temukan puisi yang menggugah emosi dalam dirimu. Pikirkan yang kamu rasakan, dan hubungkan perasaan itu melalui penggambaran dan kode."
+    poemart_events:
+      1:
+        image: 'notes/hoc_poem_art_2021_events_01.jpg'
+        text: "Terkadang, mood puisi berubah melalui puisi itu. Yang awalnya mungkin terdengar bahagia berubah menjadi sedih, atau mungkin kegelapan berubah menjadi cahaya."
+      2:
+        image: 'notes/hoc_poem_art_2021_events_02.jpg'
+        text: "Dalam kegiatan ini, kamu akan bekerja dengan event. Kamu dapat menggunakan blok event ini untuk mengubah program kamu ketika baris tertentu dalam puisimu muncul. Perhatikan bahwa blok event tidak masuk ke program utama, melainkan membuat program kecilnya sendiri."
+      3:
+        image: 'notes/hoc_poem_art_2021_events_03.jpg'
+        text: "Bacalah puisimu dan temukan momen di mana moodnya berubah. Hitung baris apa yang terjadi pada: satu, dua, tiga. Di blok event-mu, masukkan nomor barisnya."
+      4:
+        image: 'notes/hoc_poem_art_2021_events_04.jpg'
+        text: "Lalu buatkan program untuk menggambarkan perubahan mood saat garis itu muncul di layar. Saat menekan \"Run\", kamu dapat melihat kode yang kamu buat."
+    poemart_imagery:
+      1:
+        image: 'notes/hoc_poem_art_2021_imagery_01.jpg'
+        text: "Dalam puisi, pengarang menggunakan perumpamaan untuk melukiskan gambaran di benak pembaca. Saat kita melihat kata buaya, kita otomatis membayangkan buaya hijau di benak kita. Untuk mendapatkan gambaran seperti ini dalam animasi, kita akan menggunakan sprite."
+      2:
+        image: 'notes/hoc_poem_art_2021_imagery_02.jpg'
+        text: "Ini membuat blok sprite baru yang memungkinkan kamu membuat sprite dan memilih kostum untuknya. Pilih kostum untuk sprite yang menurut kamu sesuai dengan puisi itu."
+      3:
+        image: 'notes/hoc_poem_art_2021_imagery_03.jpg'
+        text: "Untuk mengubah lokasi sprite, kamu bisa mengklik ikon pin pada blok lokasi, lalu klik ke arah mana yang kamu inginkan di ruang bermain."
+      4:
+        image: 'notes/hoc_poem_art_2021_imagery_04.jpg'
+        text: "Dalam beberapa level berikutnya, kamu akan melihat beberapa blok baru. Blok ini memungkinkan kamu untuk mengubah ukuran sprite, dan menganimasikan sprite kamu dengan perilaku tersebut."
+      5:
+        image: 'notes/hoc_poem_art_2021_imagery_05.jpg'
+        text: "Jika puisi menyebutkan wandering cloud, pertama-tama buatlah sprite awan, lalu pilih blok perilaku ini, tarik keluar, dan pilih wandering."
+      6:
+        image: 'notes/hoc_poem_art_2021_imagery_06.jpg'
+        text: "Pastikan kostum sprite kamu cocok. Saat menekan run, kamu akan membaca dan melihat wandering cloud."
+      7:
+        image: 'notes/hoc_poem_art_2021_imagery_07.jpg'
+        text: "Sekarang kamu dapat menambahkan perumpamaan untuk menggambarkan kata-kata dalam puisi tersebut. Selamat bersenang-senang!"
+    poemart_celebration:
+      1:
+        image: 'notes/hoc_poem_art_2021_celebration_01.jpg'
+        text: "Selamat! Kamu baru saja mempelajari dasar-dasar ilmu komputer dan cara menemukan mood sebuah puisi. Sekarang kamu dapat membuat animasi puisimu sendiri untuk dibagikan kepada teman-teman."
+      2:
+        image: 'notes/hoc_poem_art_2021_celebration_02.jpg'
+        text: "Apakah kamu akan memilih dengan teliti adegan sederhana untuk seluruh puisi?"
+      3:
+        image: 'notes/hoc_poem_art_2021_celebration_03.jpg'
+        text: "Atau akan menggunakan banyak event untuk membuat adegan baru untuk tiap baris puisimu?"
+      4:
+        image: 'notes/hoc_poem_art_2021_celebration_04.jpg'
+        text: "Di akhir tutorial, kamu dapat membagikan tautan kreasimu kepada teman-teman."
+      5:
+        image: 'notes/hoc_poem_art_2021_celebration_05.jpg'
+        text: "Bentangkan imajinasimu dan bersenang-senanglah!"
+    hello_world_intro:
+      1:
+        image: 'notes/hoc_hello_world_2021_introduction_01.jpg'
+        text: "Hai! Nama saya Erin, dan saya seorang pengembang perangkat lunak di Code.org. Saya sangat bersemangat karena harus mengerjakan tutorial yang akan kalian kerjakan! Kami menyebutnya \"Halo Dunia\"."
+      2:
+        image: 'notes/hoc_hello_world_2021_introduction_02.jpg'
+        text: "\"Halo Dunia\" merupakan frasa terkenal dalam ilmu komputer, dan menampilkan frasa ini adalah langkah umum pertama dalam mempelajari ilmu komputer. Dalam satu jam berikutnya, kamu akan mengawali ilmu komputer dengan membuat program di Sprite Lab."
+      3:
+        image: 'notes/hoc_hello_world_2021_introduction_03.jpg'
+        text: "Sprite Lab adalah sarana yang dapat kamu gunakan untuk membuat proyek yang imajinatif dan seru. Kamu akan melihat bahwa layar kamu terbagi menjadi tiga bagian utama. Di sebelah kiri adalah ruang bermain. Di sinilah sprite kamu akan muncul."
+      4:
+        image: 'notes/hoc_hello_world_2021_introduction_04.jpg'
+        text: "Sprite merupakan objek di layar yang dapat berinteraksi denganmu, seperti karakter atau item dalam cerita atau game."
+      5:
+        image: 'notes/hoc_hello_world_2021_introduction_05.jpg'
+        text: "Area tengah ini adalah toolbox. Blok-blok code baru akan tersedia di ruang ini sepanjang kamu mengikuti pelajaran."
+      6:
+        image: 'notes/hoc_hello_world_2021_introduction_06.jpg'
+        text: "Ruang di sisi kanan adalah ruang kerja. Kamu dapat menarik blok keluar dari toolbox dan masuk ke ruang kerja untuk membuat program."
+      7:
+        image: 'notes/hoc_hello_world_2021_introduction_07.jpg'
+        text: "Instruksi untuk tiap level akan muncul di bagian atas layar. Jika kamu memerlukan tips, cukup klik bola lampunya."
+      8:
+        image: 'notes/hoc_hello_world_2021_introduction_08.jpg'
+        text: "Untuk memulai, mari kita buat sprite! Blok ini memungkinkan kamu memberi kostum dan lokasi kepada sprite. Kostum adalah kata yang kita gunakan untuk menggambarkan tampilan sprite. Untuk mengubah lokasi sprite, kamu dapat mengklik ikon pin di blok lokasi, lalu klik lokasi yang ingin kamu tuju."
+      9:
+        image: 'notes/hoc_hello_world_2021_introduction_09.jpg'
+        text: "Sekarang mari kita buat sprite memperkenalkan dirinya! Agar sprite mengucapkan sesuatu, gunakan blok \"Say\" ini, dan tambahkan ke program. Pastikan kostum yang dipilih di blok \"Say\" kamu cocok dengan kostum di sprite milikmu."
+      10:
+        image: 'notes/hoc_hello_world_2021_introduction_10.jpg'
+        text: "Saat menekan \"Run\", sprite akan mengucapkan teks apa pun yang kamu perintahkan. Sekarang saatnya memulai dengan Sprite Lab, dan lihat hasil imaginasimu!"
+    hello_world_events:
+      1:
+        image: 'notes/hoc_hello_world_2021_events_01.jpg'
+        text: "Setelah mempelajari cara menggunakan Sprite Lab, kamu pasti ingin membuat programmu bereaksi ketika seseorang memainkannya. Untuk melakukannya, kamu akan menggunakan event. Event memberitahu program untuk mendengarkan sesuatu yang terjadi, dan kemudian langsung bereaksi."
+      2:
+        image: 'notes/hoc_hello_world_2021_events_02.jpg'
+        text: "Beberapa contoh event adalah mendengarkan klik mouse, tombol panah, atau ketukan di layar. Blok seperti \"when clicked\" disebut blok event. Kode yang terhubung ke blok event berjalan ketika mendeteksi tindakan yang sesuai."
+      3:
+        image: 'notes/hoc_hello_world_2021_events_03.jpg'
+        text: "Misalnya, jika saya menyematkan blok \"say\" ini ke event \"when clicked\", sprite saya akan mengucapkan sesuatu ketika pengguna mengklik atau mengetuknya. Perhatikan bahwa blok event tidak masuk ke program utama kamu. Sebaliknya, blok tersebut membuat program kecilnya sendiri."
+      4:
+        image: 'notes/hoc_hello_world_2021_events_04.jpg'
+        text: "Jika kamu memiliki beberapa sprite, kamu dapat menggunakan event tambahan untuk menceritakan kisah interaktif."
+      5:
+        image: 'notes/hoc_hello_world_2021_events_05.jpg'
+        text: "Kamu akan segera belajar cara melakukan lebih banyak lagi di Sprite Lab, misalnya mengubah ukuran atau tampilan sprite, mengatur latar belakang yang berbeda, memainkan suara, dan lainnya. Apa yang kamu ingin sprite lakukan ketika seseorang berinteraksi dengan mereka? Kamu bebas menentukannya!"
+    hello_world_congrats:
+      1:
+        image: 'notes/hoc_hello_world_2021_freeplay_01.jpg'
+        text: "Selamat! kamu baru saja mempelajari dasar-dasar ilmu komputer. Sekarang kamu dapat menggunakan Sprite Lab untuk membuat apa pun yang kamu inginkan."
+      2:
+        image: 'notes/hoc_hello_world_2021_freeplay_02.jpg'
+        text: "Kamu akan melihat tombol yang bertuliskan Kostum. Saat mengkliknya, kamu dapat memilih kostum sprite baru dari pustaka."
+      3:
+        image: 'notes/hoc_hello_world_2021_freeplay_03.jpg'
+        text: "Kamu juga dapat menggambar kostummu sendiri! Setelah memiliki kostum yang disukai, kembalilah ke kode kamu."
+      4:
+        image: 'notes/hoc_hello_world_2021_freeplay_04.jpg'
+        text: "Sekarang, pilih kostum tersebut untuk sprite kamu."
+      5:
+        image: 'notes/hoc_hello_world_2021_freeplay_05.jpg'
+        text: "Jika kamu melihat di toolbox, kamu akan menemukan beberapa blok baru yang belum pernah kamu lihat sebelumnya. Misalnya, ada banyak blok perilaku yang memungkinkan kamu menggerakkan sprite dengan cara yang seru dan menarik."
+      6:
+        image: 'notes/hoc_hello_world_2021_freeplay_06.jpg'
+        text: "Kamu dapat menggunakan blok event \"when touches\" untuk mengontrol yang terjadi saat dua sprite bertabrakan."
+      7:
+        image: 'notes/hoc_hello_world_2021_freeplay_07.jpg'
+        text: "Cari blok \"create effect\". Blok ini dapat digunakan untuk membuat banyak sprite meledak, atau meletus, atau menghujani jika diperintah."
+      8:
+        image: 'notes/hoc_hello_world_2021_freeplay_08.jpg'
+        text: "Lihat-lihatlah, dan lakukan eksperimen dengan blok dan fitur baru ini. Di akhir tutorial, klik tombol \"Bagikan\" untuk membagikan tautan kreasimu kepada teman-teman."
+      9:
+        image: 'notes/hoc_hello_world_2021_freeplay_09.jpg'
+        text: "Kamu memiliki semua keterampilan hebat yang dibutuhkan untuk mulai mengembangkan aplikasi, game, dan program baru lainnya di Sprite Lab! Gunakan keterampilan barumu untuk kebaikan. Tetaplah bersikap baik dan menghormati, seperti yang kamu lakukan jika membuat sesuatu di atas kertas, atau berbicara dengan teman."
+      10:
+        image: 'notes/hoc_hello_world_2021_freeplay_10.jpg'
+        text: "Jadi apa yang akan kamu buat? Kamu bisa menceritakan kisah tentang dirimu... atau mengarangnya dengan karakter spesialmu sendiri. Bahkan mungkin menggunakan keterampilan ilmu komputer barumu untuk proyek sekolahmu berikutnya! Bentangkan imajinasimu dan bersenang-senanglah!"

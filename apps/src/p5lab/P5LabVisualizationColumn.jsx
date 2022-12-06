@@ -96,10 +96,8 @@ class P5LabVisualizationColumn extends React.Component {
     // Use jQuery to turn on and off the grid since it lives in a protected div
     if (nextProps.showGrid !== this.props.showGrid) {
       if (nextProps.showGrid) {
-        $('#grid-checkbox')[0].className = 'fa fa-check-square-o';
         $('#grid-overlay')[0].style.display = '';
       } else {
-        $('#grid-checkbox')[0].className = 'fa fa-square-o';
         $('#grid-overlay')[0].style.display = 'none';
       }
     }
@@ -140,16 +138,19 @@ class P5LabVisualizationColumn extends React.Component {
 
   renderGridCheckbox() {
     return (
-      <div
-        style={{textAlign: 'left'}}
-        onClick={() => this.props.toggleShowGrid(!this.props.showGrid)}
-      >
-        <i id="grid-checkbox" className="fa fa-square-o" style={{width: 14}} />
-        <span style={{marginLeft: 5}}>Show grid</span>
+      <div>
+        <label style={styles.checkboxLabel}>
+          <input
+            id="grid-checkbox"
+            type="checkbox"
+            onChange={() => this.props.toggleShowGrid(!this.props.showGrid)}
+            style={styles.checkbox}
+          />
+          {i18n.showGrid()}
+        </label>
       </div>
     );
   }
-
   render() {
     const {isResponsive, isShareView, isRtl} = this.props;
     const divGameLabStyle = {
@@ -246,6 +247,16 @@ const styles = {
   },
   selectStyle: {
     width: APP_WIDTH
+  },
+  checkbox: {
+    flex: 'none',
+    marginBottom: 3,
+    marginRight: 4
+  },
+  checkboxLabel: {
+    display: 'flex',
+    alignItems: 'center',
+    fontSize: 13
   }
 };
 

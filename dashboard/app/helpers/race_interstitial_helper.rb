@@ -14,8 +14,7 @@ module RaceInterstitialHelper
     # Restrict to cases where we can successfully geolocate to the US
     return false if user.current_sign_in_ip.nil?
     location = Geocoder.search(user.current_sign_in_ip).first
-    return false unless location
-    return false if location.country_code.to_s.downcase != 'us'
+    return false unless location&.country_code.to_s.casecmp?('us')
 
     return true
   end

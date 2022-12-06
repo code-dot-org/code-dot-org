@@ -1,0 +1,70 @@
+{
+  "ky-KG": {
+    "data": {
+      "programming_environments": {
+        "weblab": {
+          "name": "Web Lab"
+        },
+        "gamelab": {
+          "name": "Оюн лабы",
+          "categories": {
+            "game_lab": {
+              "name": "Оюн лабы"
+            },
+            "math": {
+              "name": "Математика"
+            },
+            "variables": {
+              "name": "Өзгөрмөлөр"
+            },
+            "functions": {
+              "name": "Функциялар"
+            }
+          }
+        },
+        "applab": {
+          "name": "App Lab",
+          "categories": {
+            "math": {
+              "name": "Математика"
+            },
+            "variables": {
+              "name": "Өзгөрмөлөр"
+            },
+            "functions": {
+              "name": "Функциялар"
+            }
+          }
+        },
+        "spritelab": {
+          "categories": {
+            "actions": {
+              "name": "Иш-аракеттер"
+            },
+            "events": {
+              "name": "Окуялар"
+            },
+            "loops": {
+              "name": "Циклдер"
+            },
+            "variables": {
+              "name": "Өзгөрмөлөр"
+            },
+            "math": {
+              "name": "Математика"
+            },
+            "logic": {
+              "name": "Логика"
+            },
+            "functions": {
+              "name": "Функциялар"
+            },
+            "text": {
+              "name": "Тексттер"
+            }
+          }
+        }
+      }
+    }
+  }
+}

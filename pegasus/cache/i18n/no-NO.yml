@@ -1212,6 +1212,7 @@ no-NO:
   coursee-2020_name: Kurs E (2020)
   coursef-2020_name: Kurs F (2020)
   coursed-2021_name: Kurs D (2021)
+  coursed-2022_name: Kurs D (2021)
   express-2018_name: Ekspress kurs (2018)
   pre-express-2018_name: Førskole ekspress kurs (2018)
   express-2019_name: Ekspress kurs (2019)
@@ -1330,6 +1331,12 @@ no-NO:
   coursed-2021_gradelevel: 8.+ klasse
   coursee-2021_gradelevel: Alder 8–12
   coursef-2021_gradelevel: Alder 9-13
+  coursea-2022_gradelevel: Alder 4-7
+  courseb-2022_gradelevel: Alder 5-8
+  coursec-2022_gradelevel: Alder 6-10
+  coursed-2022_gradelevel: 8.+ klasse
+  coursee-2022_gradelevel: Alder 8–12
+  coursef-2022_gradelevel: Alder 9-13
   accelerated_gradelevel: Alder 10+ (etter kurs 3)
   codeorg_platformtext: Moderne nettlesere, smart-telefoner, nettbrett
   codeintl_platformtext: Moderne nettlesere, smart-telefoner, nettbrett
@@ -2211,3 +2218,4 @@ no-NO:
   ai_for_oceans_lesson_plan: oppgaveplan
   ai_activity: Aktivitet
   ai_description: Beskrivelse
+  hoc2022_landing_page_create_title: Opprett

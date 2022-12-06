@@ -23,7 +23,7 @@ vi:
           qua một mê cung để đến chỗ Con Lợn Xanh.
       7:
         text: Phía bên trái là mê cung nơi mà chương trình của bạn chạy. Những chỉ
-          dẫn cho mỗi câu đố ở dưới mê cung.
+          dẫn cho mỗi bài tập ở dưới mê cung.
       8:
         text: Hộp công cụ ở giữa có các dòng lệnh cho Chú Chim Tức Giận. Bạn sẽ sử
           dụng chúng để xây dựng đoạn code của bạn.
@@ -32,9 +32,9 @@ vi:
           hộp công cụ để xây dựng chương trình của bạn. Để xóa một khối, kéo nó vào
           thùng rác ở trong góc.
       10:
-        text: Mỗi khối là một chỉ dẫn. Nếu bạn kéo một khối lệnh "di chuyển về phía
-          trước" vào trong không gian làm việc và ấn "Chạy chương trình", con chim
-          sẽ di chuyển 1 bước trong mê cung.
+        text: Mỗi khối là một chỉ dẫn. Nếu bạn kéo một khối lệnh “tiến lên" vào trong
+          không gian làm việc và ấn “Chạy chương trình”, chú chim sẽ di chuyển 1 bước
+          trong mê cung.
       11:
         text: Để thực hiện nhiều hơn 1 hành động, bạn có thể kéo nhiều khối lệnh vào
           không gian làm việc của bạn và gắn chúng vào với nhau. Con chim sẽ thực
@@ -43,28 +43,28 @@ vi:
         text: Nếu bạn chạy một chương trình và muốn sửa nó và thử lại, ấn nút "Khởi
           động lại".
       13:
-        text: Hãy đi bắt những con lợn đó nào!
+        text: Hãy đi bắt những con heo đó nào!
     artist_intro:
       1:
         text: Xin chào, tôi là JR! Mỗi đội xe đua cần các nhà khoa học về máy tính
           để giành chiến thắng. Họ phân tích dữ liệu từ xe để giúp nó đi nhanh hơn.
       2:
-        text: Trong loạt câu đố này, bạn là một họa sĩ vẽ đường thẳng bên dưới chân
+        text: Trong loạt bài tập này, bạn là một họa sĩ vẽ đường thẳng bên dưới chân
           bạn ở bất cứ nơi nào bạn đi qua.
       3:
         text: Khối lệnh này nói rằng "đi thẳng về phía trước 100 điểm ảnh." Điểm ảnh
           là những chấm nhỏ trên màn hình của bạn.
       4:
-        text: Khối lệnh này nói rằng "rẽ phải 90 độ." Nó sẽ quay hướng họa sĩ của
-          bạn giống như khối lệnh "quay" trong loạt câu đố mê cung.
+        text: Khối này có ghi “rẽ phải 90 độ”. Khối này sẽ quay hướng họa sĩ của bạn
+          giống như khối “quay” trong loạt bài tập mê cung.
       5:
         text: Nhấp chuột vào mũi tên trong các khối để thay đổi số lượng các di chuyển
           của nghệ sĩ về phía trước hoặc quay. Chơi nhiều khối để làm quen với các
           khối mới.
     farmer_intro:
       1:
-        text: Xin chào, tôi là Paola! Trong loạt câu đố này, bạn là một người nông
-          dân đã san phẳng đất trên cánh đồng để bắt đầu trồng cây.
+        text: Xin chào, tôi là Paola! Trong loạt bài tập này, bạn là một người nông
+          dân san phẳng đất trên cánh đồng để bắt đầu trồng cây.
       2:
         text: Bạn phải giúp cô ấy loại bỏ các cọc bị bám bẩn và cắm vào các lỗ.
       3:
@@ -100,14 +100,15 @@ vi:
           vào cách lệnh xử lý sự kiện thích hợp, sau đó trở đi cứ khi nào bạn nhấp
           chuột, chú chim sẽ vỗ cánh.
       8:
-        text: Trong mỗi câu đố của hoạt động này, chúng tôi sẽ giới thiệu các loại
-          sự kiện mới tương ứng với các khối xanh lá cây trong khu làm việc, và bạn
-          sẽ quyết định gắn khối lệnh thích hợp để đáp lại các sự kiện trên.
+        text: Trong mỗi bài tập của hoạt động này, chúng tôi sẽ giới thiệu các loại
+          sự kiện mới tương ứng với các khối xanh lá cây trong không gian làm việc,
+          và bạn sẽ quyết định gắn khối lệnh thích hợp để phản hồi lại các sự kiện
+          trên.
       9:
         text: Khi bạn thấy một mũi tên xổ dọc xuống như thế này, điều đó có nghĩa
           là bạn có thể chỉnh sửa cài đặt trong game.
       10:
-        text: Trong câu đố cuối cùng, có thể bạn sẽ tạo ra trò chơi của riêng bạn
+        text: Trong bài tập cuối cùng, có thể bạn sẽ tạo ra trò chơi của riêng bạn
           và chia sẻ nó với bạn bè của bạn. Chúc vui vẻ!
     loop_times:
       1:
@@ -115,16 +116,15 @@ vi:
           bạn có thể nói với một cái máy tính lặp đi lặp lại bất kì tập hợp hành động
           nào, hàng nghìn hoặc thậm chí hàng tỉ lần.
       2:
-        text: Trong câu đố này, chúng tôi muốn làm con chim tiến lên phía trước 5
-          đoạn để trúng vào con lợn.
+        text: Trong bài tập này, chúng tôi muốn làm chú chim tiến lên phía trước 5
+          ô để tới chỗ con heo.
       3:
         text: Chúng ta có thể sử dụng khối "lặp" mới để giúp đỡ.
       4:
         text: Thay vì kéo ra 5 khối "tiến lên phía trước"...
       5:
-        text: Chúng tôi có thể đặt các khối "di chuyển về phía trước" bên trong khối
-          "lặp lại" và viết một số vào trong khối để cho biết nó lặp lại bao nhiêu
-          lần.
+        text: Chúng ta có thể đặt các khối “tiến lên” bên trong khối “lặp lại” và
+          viết một con số vào trong khối để cho biết khối lặp lại bao nhiêu lần.
       6:
         text: 'Điều quan trọng: bạn có thể đặt nhiều hơn một lệnh bên trong một khối
           "lặp lại".'
@@ -136,12 +136,12 @@ vi:
           Georgia Tech để nghiên cứu khoa học máy tính. Hãy thử khối mới của chúng
           tôi: "lặp lại cho đến khi".'
       2:
-        text: Phải làm gì nếu chúng tôi không biết khoảng cách những con chim phải
-          di chuyển bao xa để đến được những con lợn?
+        text: Phải làm gì nếu chúng ta không biết khoảng cách những chú chim cần phải
+          di chuyển để đến được chỗ con heo?
       3:
-        text: Nếu chúng ta đặt một khối "di chuyển về phía trước" bên trong khối "lặp
-          lại cho đến khi", chim sẽ di chuyển về phía trước cho đến khi nó đi đến
-          con lợn (hay đâm vào một bức tường).
+        text: Nếu chúng ta đặt một khối “tiến lên” bên trong khối “lặp lại cho đến
+          khi”, chú chim sẽ tiến lên cho đến khi nó tới chỗ con heo (hay đâm vào một
+          bức tường).
       4:
         text: 'Và điều này là quan trọng: giống như trước, chúng tôi đặt nhiều khối
           bên trong khối "lặp lại cho đến khi", và nó sẽ lặp đi lặp lại tất cả.'
@@ -153,17 +153,17 @@ vi:
         text: Bạn sử dụng báo cáo "nếu" cho mình mỗi ngày. Trước khi bạn đi ra ngoài
           mỗi buổi sáng, bạn nói nếu nó mưa bên ngoài, tôi phải mặc áo của tôi.
       3:
-        text: Chúng tôi có thể cho các zombie biết để kiểm tra xem nếu có các con
-          đường bên trái, và nếu anh ta tìm thấy một con đường bên trái, chúng tôi
-          có thể có anh ta chuyển theo hướng đó.
+        text: Chúng ta có thể cho thây ma biết để kiểm tra xem có đường đi bên trái
+          hay không, và nếu hắn tìm thấy đường đi bên trái, chúng ta có thể cho hắn
+          di chuyển theo hướng đó.
       4:
         text: Để viết mã cho việc này, hãy kéo ra khối "nếu" và đặt một khối "rẽ trái"
           bên trong nó.
       5:
-        text: Bây giờ, nếu chúng ta đặt một khối "di chuyển về phía trước" ở trên
-          nó và một khối "lặp lại" xung quanh tất cả mọi thứ, mỗi khi zombie di chuyển,
-          anh ta sẽ kiểm tra nếu có một con đường bên trái và quay sang. "Lặp lại"
-          lệnh là rất quan trọng để kiểm tra một lần lượt tại mỗi bước.
+        text: Bây giờ, nếu chúng ta đặt một khối “tiến lên” ở phía trên và một khối
+          “lặp lại” ở ngoài cùng, mỗi khi thây ma di chuyển, hắn sẽ kiểm tra xem có
+          đường đi bên trái hay không và xoay. Lệnh “lặp lại” rất quan trọng để kiểm
+          tra một lượt xoay ở mỗi bước.
       6:
         text: Lệnh nếu rất quan trọng trong khoa học máy tính. Một trong những chương
           trình đầu tiên tôi đã viết là một trò chơi tic-tac-toe, Và trong trò chơi
@@ -177,14 +177,14 @@ vi:
           quyết các vấn đề sức khỏe và y học. Hãy tìm hiểu về các khối "if else".
           Cũng giống như khối "if", nhưng nó có một phần phụ vào cuối là "else".
       2:
-        text: Nếu tôi đặt một khối "di chuyển về phía trước" ở vị trí "làm" và một
-          khối "rẽ trái" ở vị trí "khác" có nghĩa là các zombie sẽ lựa chọn giữa 2
-          lựa chọn. Nếu có một con đường phía trước, zombie sẽ di chuyển về phía trước,
-          và nếu không (không có một con đường phía trước), zombie sẽ rẽ trái.
+        text: Nếu tôi đặt một khối “tiến lên” ở vị trí “làm” và một khối “rẽ trái”
+          ở vị trí “nếu không” có nghĩa là thây ma sẽ có 2 lựa chọn. Nếu có đường
+          đi phía trước, thây ma sẽ tiến lên, còn nếu không (không có đường đi phía
+          trước), thây ma sẽ rẽ trái.
       3:
-        text: Giống như các khối "nếu", chúng tôi có thể đặt khối "nếu khác" bên trong
-          khối "lặp lại", zombie sẽ giữ di chuyển và các "nếu khối khác" sẽ kiểm tra
-          nếu có một nơi nào đó để chuyển, sẽ di chuyển theo hướng đó.
+        text: Giống như các khối “nếu”, chúng ta có thể đặt khối “nếu không” bên trong
+          khối “lặp lại”, thây ma sẽ tiếp tục di chuyển và các “nếu không” sẽ kiểm
+          tra xem có đường để xoay hay không.
       4:
         text: Bây giờ, hãy đá đít lũ thây ma ấy nào!
     if_else_scrat:
@@ -275,11 +275,10 @@ vi:
           nhau để vẽ các hình tam giác có kích thước khác nhau.
     hoc_wrapup:
       1:
-        text: Chúc mừng! Với câu đố cuối cùng bạn giải quyết được, bạn chỉ cần viết
-          các đoạn mã từ đó có thể nói cho bất kỳ con robot làm thế nào để tìm thấy
-          con đường của nó thông qua một mê cung không phân nhánh hay hầm với chiều
-          dài bất kỳ, cho dù đó là một chú zombie, một con chim, một chiếc xe dò đường
-          trên sao Hỏa, hoặc thậm chí là một chiếc xe hơi tự lái.
+        text: Chúc mừng! Ở bài tập cuối cùng mà bạn đã xử lý, bạn chỉ cần viết mã
+          lệnh để ra lệnh cho robot bất kỳ cách tìm đường đi trong mê cung không phân
+          nhánh hay đường hầm có chiều dài bất kỳ, cho dù đó là thây ma, chú chim,
+          xe dò đường trên sao Hỏa, hoặc thậm chí là xe tự lái.
       2:
         text: Các khái niệm cơ bản bạn sử dụng ở trung tâm của mọi chương trình hoặc
           ứng dụng bạn sẽ phải cố gắng.  Chúng tôi đã được học về vòng lặp lại, lặp
@@ -328,17 +327,15 @@ vi:
           ta sẽ xây dựng chương trình của chúng ta. Để di chuyển xung quanh trên bề
           mặt băng, bạn sẽ sử dụng khối "Di chuyển về phía trước" '
       8:
-        text: Ở đây, khối "Di chuyển về phía trước" nói, "di chuyển về phía trước
-          100 điểm ảnh." Khi chúng tôi nhấn "Chạy", điều gì sẽ xảy ra? Elsa di chuyển
-          về phía trước một số khoảng cách nhất định trên màn hình, 100 điểm ảnh trong
-          thực tế! Điểm ảnh về cơ bản là một hình vuông nhỏ trên màn hình máy tính
-          của bạn.
+        text: Ở đây, khối “tiến lên” có ghi “tiến lên 100 điểm ảnh”. Khi chúng ta
+          nhấn “Chạy”, điều gì sẽ xảy ra? Elsa tiến lên một khoảng cách nhất định
+          trên màn hình, thực tế là 100 điểm ảnh! Điểm ảnh về cơ bản là một hình vuông
+          nhỏ trên màn hình máy tính của bạn.
       9:
-        text: Với các khối khác, trong câu đố này chúng ta chúng ta nói "qua phải
-          90 độ". Khi chúng ta sử dụng khối "quay phải", điều đó làm cho Elsa quay
-          một khoảng cách nhất định. Bạn có thể cho quay xung quanh với một khoảng
-          bao xa bạn muốn Elsa quay. Các góc được đo từ con đường phía trước của Elsa.
-          Vì vậy đây là quay 90 độ. Và đây là quay 120 độ.
+        text: Với các khối khác trong bài tập này có ghi “xoay phải 90 độ”. Khi chúng
+          ta sử dụng khối “xoay phải” thì Elsa sẽ xoay một góc nhất định. Bạn có thể
+          khám phá góc xoay của Elsa mà bạn muốn. Các góc này được đo trên cơ sở đường
+          đi phía trước của Elsa. Vậy nên đây là xoay 90 độ. Còn đây là xoay 120 độ.
       10:
         text: Hãy nhớ rằng, bạn có thể thay đổi số lượng điểm ảnh và góc độ bằng cách
           nhấp vào mũi tên bên cạnh chúng.
@@ -350,10 +347,9 @@ vi:
           vài giây. Cho dù nó đếm, hoặc vẽ, hoặc làm bất cứ điều gì - máy tính có
           thể lặp lại điều đó hàng trăm hoặc thậm chí hàng tỷ lần.
       2:
-        text: Trong chương trình, chúng tôi gọi đây là một vòng lặp. Một vòng lặp
-          là làm thế nào bạn lặp lại mã của bạn nhiều lần. Đối với các câu đố tiếp
-          theo, mục tiêu của bạn là giúp Anna tạo ra một hình vuông với khối "Lặp
-          lại".
+        text: Trong chương trình, chúng ta gọi đây là vòng lặp. Vòng lặp là cách bạn
+          lặp lại mã lệnh nhiều lần. Trong các bài tập tiếp theo, mục tiêu của bạn
+          là giúp Anna tạo ra một hình vuông với khối “Lặp lại”.
       3:
         text: Bất kỳ khối mã bạn đặt bên trong khối "Lặp lại" sẽ được lặp lại theo
           thứ tự, như số lần như bạn muốn.
@@ -468,18 +464,17 @@ vi:
           kế tiếp.
     C1_bee_level_intro:
       1:
-        text: Các chú ong có phải thật ngầu không? Trong này thiết lập tiếp theo của
-          câu đố, mục tiêu của bạn là để giúp đỡ các con ong nhận được để những bông
-          hoa và lấy mật hoa từ những bông hoa và bay qua các tổ ong để làm mật ong.
-          Bạn sẽ cần phải sử dụng khối "lấy mật" và khối "làm mật ong" cho phần tập
-          luyện này.
+        text: Các chú ong thật ngầu phải không? Trong bộ bài tập tới đây, mục tiêu
+          của bạn là giúp chú ong đến chỗ bông hoa và lấy mật hoa từ những bông hoa
+          này, rồi bay qua các tổ ong để làm mật ong. Bạn cần phải sử dụng khối “lấy
+          mật hoa” và khối “làm mật ong” trong bài tập này.
       2:
-        text: 'Mỗi bông hoa có một số mật ong khác nhau: 1, 2, 3 hoặc nhiều hơn nữa.
-          Chúng ta biết có bao nhiêu mật hoa trong những bông hoa màu đỏ, bởi con
-          số nhỏ trong góc. Vì vậy, hãy chắc chắn để có được tất cả mật hoa từ Hoa
-          trước khi bạn di chuyển về phía trước. Ngoài ra, mỗi tổ ong chỉ có thể chứa
-          rất nhiều mật ong: 1, 2, 3 hoặc nhiều hơn nữa. Vì vậy, hãy chắc chắn để
-          làm cho càng nhiều mật ong mà các tổ ong có thể giữ.'
+        text: 'Mỗi bông hoa có số mật ong khác nhau: 1, 2, 3 hoặc nhiều hơn. Chúng
+          ta biết có bao nhiêu mật hoa trong những bông hoa màu đỏ thông qua con số
+          nhỏ trong góc. Vì vậy, hãy cố lấy hết mật hoa từ bông hoa trước khi tiến
+          lên. Ngoài ra, mỗi tổ ong chỉ có thể chứa lượng mật ong nhất định: 1, 2,
+          3 hoặc nhiều hơn. Vì vậy, đừng quên tạo ra số mật ong bằng với số mật ong
+          mà tổ ong có thể chứa.'
       3:
         text: Nếu bạn có thể thu thập tất cả các mật hoa và tạo ra mật ong, bạn sẽ
           qua cửa. Nếu không bạn sẽ phải thử lại màn này. Hãy hơi một lúc và cảm nhận
@@ -615,12 +610,13 @@ vi:
           và bấm chạy để xem bạn đúng hay chưa. Và bạn đã làm đúng rồi!
     C1_maze_intro_sequencing:
       1:
-        text: Với trò chơi này, bạn cần đưa con chim tới con lợn. Hãy nhìn vào trò
-          chơi và xem hướng dẫn những điều cần làm.
+        text: Ở trò chơi này, bạn cần đưa chú chim tới con heo. Hãy nhìn vào trò chơi
+          và xem hướng dẫn những điều cần làm.
       2:
-        text: Bạn cần phải kéo các khối từ hộp công cụ đến khu thực hành. Đảm bảo
-          nó ở dưới khối ''Khi chạy'' và khi bạn nghĩ bạn đã có lời giải chính xác,
-          bạn có thể nhấp ''Chạy'' và xem chú chim đi tới chỗ chú lợn.
+        text: Bạn cần kéo các khối từ hộp công cụ vào không gian làm việc. Hãy đảm
+          bảo khối nằm nằm dưới khối “khi chạy” và khi bạn nghĩ bạn đã có lời giải
+          chính xác, bạn có thể nhấp chuột vào '”Chạy”' và xem chú chim đi tới chỗ
+          con heo.
     C1_maze_loops:
       1:
         text: Một trong những điều máy tính làm rất tốt đó là nhắc lại các câu lệnh.
@@ -634,11 +630,11 @@ vi:
           thống gửi tin nhắn đến từng người trên Facebook để chúc họ sinh nhật vui
           vẻ.
       3:
-        text: Để đưa con chim tới chỗ con lợn trong cấp độ này... thay vì kéo 3 khối
-          lệnh Phía Bắc tới không gian làm việc, bạn sẽ sử dụng khối lệnh ''lặp lại''.
-          Kéo khối lệnh ''nhắc lại'' tới không gian làm việc và nhập vào số 3. Sau
-          đó kéo khối lệnh ''Di chuyển phía Bắc'' vào khối lệnh ''lặp lại'' và nhấn
-          ''Chạy" để xem bạn làm đúng chưa. Chúc mừng, bạn đã thành công!
+        text: Để đưa chú chim tới chỗ con heo trong cấp độ này... thay vì kéo 3 khối
+          “lên trên” vào không gian làm việc, bạn sẽ sử dụng khối “lặp lại”'. Kéo
+          khối lệnh “lặp lại”' tới không gian làm việc và nhập số 3. Sau đó kéo khối
+          lệnh “lên trên”' vào khối lệnh '”lặp lại”' và nhấn '”Chạy” để xem bạn làm
+          đúng chưa. Chúc mừng, bạn đã thành công!
     C1_moveitmoveit_unplugged:
       1:
         text: Bài học này được gọi là di chuyển, di chuyển nó. Chúng ta sẽ cùng nhau
@@ -783,21 +779,20 @@ vi:
           thống gửi tin nhắn đến từng người trên Facebook để chúc họ sinh nhật vui
           vẻ.
       3:
-        text: Trong ví dụ này, mục tiêu của bạn sẽ là di chuyển con chim tới chỗ con
-          lợn. Bây giờ chúng ta có thể sử dụng khối lệnh lặp lại để làm điều này rất
+        text: Trong ví dụ này, mục tiêu của bạn sẽ là di chuyển chú chim tới chỗ con
+          heo. Bây giờ chúng ta có thể sử dụng khối lệnh lặp lại để làm điều này rất
           dễ dàng. Bạn có thể làm điều này bằng cách đưa vào máy tính lệnh di chuyển
-          lên phía trước 5 lần để mỗi lần chú chim tiến một bước tới chú lợn hoặc
-          bạn có thể yêu cầu máy tính di chuyển 1 lần, và sau đó yêu cầu nó lặp lại
-          lệnh đó 5 lần và nó sẽ làm tương tự.
+          lên phía trước 5 lần để mỗi lần chú chim tiến một bước tới con heo hoặc
+          bạn có thể yêu cầu máy tính di chuyển 1 lần, rồi yêu cầu lặp lại lệnh đó
+          5 lần và máy tính sẽ làm tương tự.
       4:
-        text: Để làm điều này, bạn kéo lệnh di chuyển về phía trước và sau đó bạn
-          đặt nó vào khối lệnh lặp lại. Và bạn có thể nhấp chuột vào nó và cho biết
-          bạn lặp lại khối lệnh bao nhiêu lần để nó biết bạn muốn nó di chuyển về
-          phía trước bao nhiêu bước.
+        text: Để làm vậy, bạn kéo lệnh tiến lên rồi đặt vào trong khối lặp lại. Bạn
+          có thể nhấp chuột vào đó và cho biết bạn lặp lại khối này bao nhiêu lần
+          để chương trình biết bạn muốn tiến lên bao nhiêu bước.
       5:
         text: Một điều nữa là bạn có thể đặt bao nhiêu lệnh tuỳ ý vào khối lệnh lặp
-          lại. Vì thế trong ví dụ này, bạn sẽ yêu cầu nó di chuyển về phía trước và
-          rẽ trái và nó sẽ thực hiện 5 lần. Chúc vui!
+          lại. Vì thế trong ví dụ này, bạn sẽ yêu cầu tiến lên và rẽ trái và chương
+          trình sẽ thực hiện 5 lần. Chúc vui vẻ!
     C2_artist_intro:
       1:
         text: Bạn thậm chí không đủ tiêu chuẩn cho cuộc đua nếu bạn không có những
@@ -809,11 +804,10 @@ vi:
           các hình dạng khác nhau. Nghệ sỹ của bạn đi đâu, nó sẽ vẽ 1 đường thẳng
           ở phía sau.
       3:
-        text: Để di chuyển xung quanh bức vẽ, bạn sẽ sử dụng khối lệnh di chuyển về
-          phía trước. Đây là khối lệnh nói di chuyển về phía trước 100 điểm ảnh. Khi
-          chúng ta nhấn chạy, điều gì sẽ xảy ra? Nghệ sỹ di chuyển 1 số bước nhất
-          định là 100 điểm ảnh. Điểm ảnh cơ bản là những hình vuông rất nhỏ trên màn
-          hình máy tính của bạn.
+        text: Để di chuyển xung quanh bức tranh, bạn sẽ sử dụng khối lệnh tiến lên.
+          Đây là khối lệnh có ghi tiến lên 100 điểm ảnh. Khi chúng ta nhấn chạy, điều
+          gì sẽ xảy ra? Họa sỹ di chuyển 1 số bước nhất định là 100 điểm ảnh. Điểm
+          ảnh cơ bản là những hình vuông rất nhỏ trên màn hình máy tính của bạn.
       4:
         text: Khối lệnh khác chúng ta có trong trò chơi này nói "qua phải 1 góc 90
           độ". Và khi chúng ta kéo khối lệnh sẽ khiến nghệ sỹ của chúng ta quay 1
@@ -975,28 +969,28 @@ vi:
           bước khi lập trình nhân vật nghệ sỹ. Chúng ta đã có sẵn 1 vài khối lệnh
           trên sân khấu nhưng chúng chỉ để ta khởi động.
       2:
-        text: Để lặp những khối lệnh này 4 lần để vẽ cả hình vuông, chúng ta chỉ cần
-          kéo khối lệnh lặp lại và đặt khối lệnh "di chuyển về phía trước và rẽ phải"
-          trong khối lệnh "lặp lại". Khi chúng ta nhấn Chạy, nghệ sỹ sẽ lặp lại những
-          bước này 4 lần để hoàn thành hình vuông.
+        text: Để lặp những khối lệnh này 4 lần để vẽ toàn bộ hình vuông, chúng ta
+          chỉ cần kéo khối lặp lại và đặt khối “tiến lên và rẽ phải” trong khối “lặp
+          lại”. Khi nhấn Chạy, họa sĩ sẽ lặp lại những bước này 4 lần để hoàn thành
+          hình vuông.
     C2_bee_loops:
       1:
         text: '"Vòng lặp" là sự lặp lại liên tục của hành động. Khi định quan sát
           1 tổ ong, tôi kéo 1 khung cầu ong ra xem, và sau đó lại đặt lại. Tôi lặp
           lại việc này nhiều lần. Việc "lặp đi lặp lại" như vậy gọi là Vòng lặp.'
       2:
-        text: Đây là khối lệnh lặp lại. Bất kì hành động nào bạn đặt vào khối lệnh
+        text: Đây là khối lệnh lặp lại. Bất kì hành động nào bạn đặt vào khối này
           sẽ lặp lại hành động đó theo số lần mà bạn yêu cầu. Ví dụ, trong cấp độ
-          này, thay vì kéo lệnh "di chuyển về phía trước" và lấy mật 3 lần, chúng
-          ta sẽ chỉ cần kéo lệnh 1 lần và nhắc lại hành động đó 3 lần. Thật dễ dàng!
+          này, thay vì kéo lệnh “tiến lên” và lấy mật 3 lần, chúng ta chỉ cần kéo
+          lệnh 1 lần và lặp lại hành động đó 3 lần. Thật dễ dàng!
     C2_maze_intro:
       1:
         text: Thông thường, lập trình là dưới dạng văn bản nhưng chúng ta sẽ sử dụng
-          Blockly tức là sử dụng các hình lệnh mà bạn kéo và thả để viết các chương
-          trình. Dưới lớp hình, thực ra bạn vẫn đang tạo câu lệnh. Để khởi động, chúng
-          ta sẽ xây dựng câu lệnh cho chương trình mà giúp nhân vật Angry Bird này
-          di chuyển qua một mê cung để đến được chỗ những con lợn độc ác đã ăn cắp
-          trứng của nó.
+          Blockly, tức là sử dụng các khối minh họa mà bạn kéo và thả để viết chương
+          trình. Về bản chất, thực ra bạn vẫn đang tạo ra mã lệnh. Để khởi động, chúng
+          ta sẽ viết mã lệnh cho chương trình giúp nhân vật Angry Bird này di chuyển
+          qua một mê cung để đến được chỗ những con heo độc ác đã ăn cắp trứng của
+          nó.
       2:
         text: Blockly được chia thành 3 phần chính. Bên trái là mê cung của chú chim,
           nơi chương trình của bạn sẽ chạy. Các chỉ dẫn cho mỗi cấp độ được viết bên
@@ -1004,21 +998,20 @@ vi:
           mệnh lệnh mà chú chim có thể hiểu được. Khu vực trống ở bên phải được gọi
           là không gian làm việc và đây là nơi chúng ta sẽ xây dựng chương trình.
       3:
-        text: Nếu tôi kéo khối lệnh Di chuyển tới không gian làm việc và nhấn "Chạy",
-          điều gì sẽ xảy ra? Chú chim tiến về phía trước 1 ô trong khung. Và nếu tôi
-          muốn chú chim làm gì khác sau khi tiến lên 1 ô? Tôi có thể thêm khối lệnh
-          khác vào chương trình.
+        text: Nếu tôi kéo khối di chuyển tới không gian làm việc và nhấn “Chạy” thì
+          điều gì sẽ xảy ra? Chú chim tiến về phía trước 1 ô trên lưới. Và nếu tôi
+          muốn chú chim làm việc khác sau khi tiến lên 1 ô thì sao? Tôi có thể thêm
+          các khối khác vào chương trình.
       4:
-        text: Tôi sẽ chọn khối lệnh "rẽ phải" và tôi sẽ kéo nó đặt xuống dưới khối
-          lệnh di chuyển sao cho mũi tên màu vàng xuất hiện. Sau đó tôi thả lệnh và
-          2 khối lệnh sẽ chập lại với nhau. Khi tôi nhấn "Chạy", chú chim sẽ thực
-          hiện lần lượt các lệnh được xếp từ trên xuống dưới trong không gian làm
-          việc.
+        text: Tôi sẽ chọn khối “rẽ phải” và tôi sẽ kéo khối này đặt xuống bên dưới
+          khối di chuyển sao cho mũi tên màu vàng xuất hiện. Sau đó tôi thả ra và
+          2 khối sẽ gắn lại với nhau. Khi tôi nhấn “Chạy”, chú chim sẽ thực hiện hết
+          các lệnh được sắp xếp từ trên xuống dưới trong không gian làm việc.
       5:
-        text: Nếu bạn muốn xoá 1 khối lệnh, chỉ cần bỏ nó khỏi ngăn xếp và kéo đến
-          thùng rác. Sau khi đã nhấn chạy, bạn vẫn có thể nhấn nút "Thiết lập lại"
-          để chú chim trở lại điểm khởi đầu. Bây giờ hãy đi bắt những con lợn xấu
-          xa!
+        text: Nếu bạn muốn xoá 1 khối, chỉ cần bỏ khối đó khỏi ngăn xếp và kéo đến
+          thùng rác. Sau khi đã nhấn chạy, bạn vẫn có thể nhấn nút “Thiết lập lại”
+          để chú chim trở lại điểm khởi đầu. Bây giờ hãy đi bắt những con heo xấu
+          xa nào!
     C2_paper_airplanes:
       1:
         text: Bài học này được gọi là Thuật toán Đời thực. Thuật toán miêu tả những
@@ -1045,6 +1038,16 @@ vi:
           toán mà người khác có thể hiểu được là rất quan trọng. Đó là lí do mỗi thuật
           toán đều phải được viết ra, để dù cho là ai làm, thì kết quả cũng không
           đổi.
+    C2_playlab_createstory:
+      1:
+        text: Cho đến thời điểm hiện tại, bạn đã tạo hình chuyển động hoặc câu chuyện
+          giống hệt như vậy mỗi khi bạn chạy chương trình. Bây giờ bạn có thể tạo
+          một trò chơi tương tác mà bạn thực sự có thể chơi.
+      2:
+        text: Có một số khối mới để thử là khối “khi mũi tên” và khối “di chuyển nhân
+          vật”. Bạn có thể gắn các khối này với nhau để di chuyển nhân vật xung quanh
+          bằng các phím mũi tên. Có một số khối hoạt động khi nhân vật va chạm hoặc
+          được nhấp chuột. Hãy thử và khám phá nhé!
     C2_relay_programming:
       1:
         text: Hôm nay chúng ta sẽ thực hiện lập trình tiếp sức. Nó đề cập đến việc
@@ -1075,6 +1078,42 @@ vi:
           Con người sẽ thấy rất nhàm chán nếu phải làm một việc rất nhiều lần không
           ngừng nghỉ. Nhưng một máy tính có thể làm một việc cả triệu thậm chí cả
           tỷ lần mà không thấy nhàm chán và có thể thực hiện điều đó rất tốt.
+      2:
+        text: Chẳng hạn nếu tôi muốn chúc sinh nhật mọi người trên Facebook bằng cách
+          gửi email cho họ, tôi có thể mất hơn một thế kỷ để viết hết ra toàn bộ số
+          email đó cho mọi người. Nhưng chỉ với vài dòng mã lệnh, tôi có thể sở hữu
+          một hệ thống gửi email đến mọi người trên Facebook để chúc họ sinh nhật
+          vui vẻ. Đó là chính là bản chất của vòng lặp và là điều làm nên giá trị
+          của chúng, cũng là thứ mà máy tính có thể thực hiện rất hiệu quả.
+      3:
+        text: Trong ví dụ này, mục tiêu của bạn sẽ là di chuyển chú chim để tới chỗ
+          con heo. Bây giờ chúng ta sẽ có thể sử dụng khối “lặp lại” để thực hiện
+          việc này vô cùng dễ dàng. Bạn có thể làm vậy bằng cách ra lệnh cho máy tính
+          “tiến lên” năm lần để chú chim tiến một bước mỗi lần về phía con heo.
+      4:
+        text: Hoặc bạn có thể yêu cầu máy tính “tiến lên” một lần, rồi yêu cầu máy
+          tính “lặp lại” 5 lần và máy tính sẽ thực hiện lệnh tương tự. Để làm điều
+          này, bạn kéo lệnh “tiến lên”, rồi đặt bên trong khối “lặp lại”. Bạn có thể
+          nhấp chuột vào khối đó và ghi số lần lặp lại tùy ý để máy tính biết bạn
+          muốn tiếp tục tiến lên bao nhiêu lần.
+      5:
+        text: Bây giờ, một điều nữa là bạn có thể đặt bao nhiêu lệnh tuỳ ý vào khối
+          lệnh lặp lại. Vì thế trong ví dụ này bạn sẽ yêu cầu tiến lên và rẽ trái
+          và chương trình sẽ thực hiện 5 lần. Được rồi, làm tốt lắm, chúc bạn vui
+          vẻ!
+    C3_artist_functions:
+      1:
+        text: Một trong những điều tuyệt vời trong lập trình máy tính là khi bạn đã
+          dạy cho máy tính cách thực hiện một hành động, bạn có thể gọi lại hàm đó.
+          Bạn đặt tên cho hàm và sau đó có thể gọi hàm. Phương pháp này thực sự giống
+          như việc mở rộng ngôn ngữ.
+      2:
+        text: Trong chương trình chúng ta đã phát triển, chúng ta đã học cách vẽ một
+          hình vuông bằng cách di chuyển và xoay bốn lần. Chúng ta có thể lấy hàm
+          đó và đặt tên là “vẽ hình vuông” để bất cứ lúc nào chúng ta muốn làm như
+          vậy, chúng ta chỉ cần nói “vẽ hình vuông” và chương trình sẽ quay lại và
+          gọi hàm cùng mã lệnh đó. Chương trình sẽ thực hiện giúp chúng ta. Chúng
+          ta đã thêm khái niệm đó vào ngôn ngữ lập trình của mình.
     C3_artist_intro:
       1:
         text: Bạn thậm chí không đủ tiêu chuẩn cho cuộc đua nếu bạn không có những
@@ -1086,11 +1125,10 @@ vi:
           các hình dạng khác nhau. Nghệ sỹ của bạn đi đâu, nó sẽ vẽ 1 đường thẳng
           ở phía sau.
       3:
-        text: Để di chuyển xung quanh bức vẽ, bạn sẽ sử dụng khối lệnh di chuyển về
-          phía trước. Đây là khối lệnh nói di chuyển về phía trước 100 điểm ảnh. Khi
-          chúng ta nhấn chạy, điều gì sẽ xảy ra? Nghệ sỹ di chuyển 1 số bước nhất
-          định là 100 điểm ảnh. Điểm ảnh cơ bản là những hình vuông rất nhỏ trên màn
-          hình máy tính của bạn.
+        text: Để di chuyển xung quanh bức tranh, bạn sẽ sử dụng khối lệnh tiến lên.
+          Đây là khối lệnh có ghi tiến lên 100 điểm ảnh. Khi chúng ta nhấn chạy, điều
+          gì sẽ xảy ra? Họa sỹ di chuyển 1 số bước nhất định là 100 điểm ảnh. Điểm
+          ảnh cơ bản là những hình vuông rất nhỏ trên màn hình máy tính của bạn.
       4:
         text: Khối lệnh khác chúng ta có trong trò chơi này nói "qua phải 1 góc 90
           độ". Và khi chúng ta kéo khối lệnh sẽ khiến nghệ sỹ của chúng ta quay 1
@@ -1100,6 +1138,16 @@ vi:
         text: Và đây là một góc quay 120 độ. Và nhớ là, bạn có thể thay đổi những
           giá trị này bằng cách nhấp vào các mũi tên bên cạnh các chỉ điểm ảnh hoặc
           độ. Hãy tận hưởng trò chơi!
+    C3_artist_nested_loops:
+      1:
+        text: 'Khi bạn đặt một vòng lặp bên trong một vòng lặp khác, chúng ta gọi
+          đó là vòng lặp lồng nhau. Ví dụ: ở đây chúng ta đã cung cấp mã lệnh để vẽ
+          một hình tam giác với các cạnh có độ dài 100 điểm ảnh bằng cách sử dụng
+          khối lặp lại ba lần, một lần cho mỗi cạnh của hình tam giác.'
+      2:
+        text: Nhưng chúng ta muốn vẽ sáu hình tam giác. Để làm được điều đó, chúng
+          ta sẽ lấy vòng lặp đó và đặt nó vào bên trong một khối lặp lại khác. Tuyệt
+          vời!
     C3_bee_conditionals:
       1:
         text: Đây là khối lệnh câu điều kiện. Nó nói rằng NẾU mật hoa hoặc mật ong
@@ -1124,14 +1172,453 @@ vi:
         text: Có vẻ như đây là vấn đề rồi! Chúng ta cần thêm 1 khối lệnh tiến về phía
           trước nữa. Nút "Bước" giúp chúng ta gỡ lỗi bằng cách xác định lỗi sai ở
           đâu vì thế chúng ta có thể sửa chữa nó.
+    C3_bee_functions:
+      1:
+        text: Một trong những khái niệm quan trọng nhất trong khoa học máy tính là
+          cách xác định các lệnh mới, cách thêm các từ của riêng bạn vào một ngôn
+          ngữ máy tính. Hầu hết các ngôn ngữ máy tính chỉ có khoảng một trăm từ hoặc
+          lệnh. Nghệ thuật và sự kỳ diệu nằm trong việc định nghĩa các từ mới của
+          riêng bạn từ các khối xây dựng này.
+      2:
+        text: Chúng ta luôn làm điều này trong thể thao. Ví dụ, trong bóng rổ, bạn
+          bắt đầu bằng cách học cách rê bóng, cách di chuyển, cách bật rổ. Khi bạn
+          đã học được các bước di chuyển thực sự cơ bản này, bạn sẽ học các bước di
+          chuyển mới và kết hợp các khối xây dựng này lại với nhau, giống như bù lật
+          hoặc chuyền bóng chạy chỗ. Từ đó, bạn có thể phát triển các lối chơi phức
+          tạp hơn. Một khi bạn học được lối chơi này và đặt tên cho nó, mọi người
+          trong nhóm sẽ biết cách thực hiện.
+      3:
+        text: Tương tự, khi bạn đã dạy máy tính cách thực hiện một hành động khi sử
+          dụng các chuỗi lệnh này, bạn có thể tạo tên riêng cho hành động đó để sau
+          này dễ dàng lặp lại. Khi bạn định nghĩa lệnh của riêng mình và đặt tên cho
+          nó thì lệnh được gọi là hàm. Bây giờ, chúng ta sẽ sử dụng hàm để giúp chú
+          ong.
+      4:
+        text: Trong ví dụ này, hàm của chúng ta được gọi là lấy 2 mật hoa, khối màu
+          xanh lá cây ngay ở đây. Chúng ta biết hàm lấy 2 mật hoa có tác dụng gì bằng
+          cách nhìn vào hộp màu xám định nghĩa hàm ở đây. Nếu nhìn vào đó, hàm lấy
+          2 mật hoa sẽ lấy mật hoa rồi lấy mật hoa một lần nữa. Hãy luôn nhìn vào
+          nội dung bên trong hộp màu xám để biết chức năng của các khối hàm màu xanh
+          lá cây.
+    C3_bee_nested_loops:
+      1:
+        text: Bây giờ, chúng ta sẽ sử dụng vòng lặp lồng nhau với chú ong. Chúng ta
+          có sẵn một số mã lệnh ban đầu yêu cầu chú ong tiến về phía trước và lấy
+          mật hoa ba lần rồi rẽ phải. Hãy lấy toàn bộ đoạn mã lệnh đó và lồng vào
+          bên trong một khối lặp lại khác, rồi thiết lập lặp lại ba lần. Xong rồi!
+    C3_bounce:
+      1:
+        text: Bạn sẽ tạo ra trò chơi ném bóng của riêng mình để có thể chia sẻ với
+          bạn bè! Thật tuyệt!
+      2:
+        text: Để bắt đầu, chúng ta phải gắn các núm điều khiển với các phím mũi tên
+          trên bàn phím của mình.
+      3:
+        text: Chúng ta có thể làm vậy bằng cách gắn khối mũi tên trái với khối di
+          chuyển sang trái và khối mũi tên phải với khối di chuyển sang phải. Hãy
+          thử và chẳng mấy chốc bạn sẽ lập trình được trò chơi ném bóng của riêng
+          mình!
+    C3_computational_thinking:
+      1:
+        text: Bài học này là tư duy tính toán. Đôi khi học cách chơi một trò chơi
+          mới có thể hơi khó phải không nào? Lúc đầu có vẻ thực sự khó hiểu và đôi
+          khi, không có ai dạy bạn luật chơi, vì vậy bạn phải tự tìm ra cách chơi.
+      2:
+        text: Điều tuyệt vời là bạn có thể tự mình tìm hiểu mọi thứ tốt hơn khi biết
+          một vài thủ thuật tư duy. Những thủ thuật này là những phương pháp độc đáo
+          để xem xét và giải quyết vấn đề. Trong bài học này, bạn sẽ tìm hiểu về bốn
+          thủ thuật và thực hành với bạn bè của mình để tìm ra các quy tắc của trò
+          chơi.
+      3:
+        text: Khi bạn chia một bài toán lớn thành nhiều phần nhỏ hơn, bạn đang sử
+          dụng bộ não của mình để phân tách bài toán lớn. Khi chúng ta đã phân tách
+          bài toán lớn thành một số bài toán nhỏ hơn, chúng ta có thể chuyển sang
+          thủ thuật tiếp theo được gọi là so sánh mẫu.
+      4:
+        text: Đó là khi chúng ta tìm kiếm những điểm tương đồng giữa các đối tượng.
+          Một khi tôi tìm thấy những điểm giống nhau, tôi có thể tìm ra những điểm
+          khác nhau. Khi tôi loại bỏ những điểm khác biệt, việc đó được gọi là tính
+          trừu tượng.
+      5:
+        text: Sau khi tìm ra các bước để giải bài toán, tôi có thể đặt các bước đó
+          theo một thứ tự cụ thể gọi là thuật toán để bất kỳ ai cũng có thể sử dụng
+          hướng dẫn của tôi để giải bài toán đó. Chúng ta sẽ sử dụng bốn bước sau
+          để tìm ra cách chơi trò chơi không có luật chơi. Ở giai đoạn cuối trò chơi,
+          bạn sẽ có thể chơi một trò tương tự như thế này!
+    C3_crowdsourcing:
+      1:
+        text: Bài học này được gọi là nguồn cung ứng cộng đồng. Trong bài học này,
+          chúng ta sẽ sử dụng một bộ bài để tìm hiểu xem một số việc sẽ trở nên dễ
+          dàng hơn tới mức nào nếu làm theo nhóm thay vì cố gắng làm tất cả một mình.
+          Hãy rủ bạn bè và làm một điều gì đó thật tuyệt vời. Nguồn cung ứng cộng
+          đồng nghĩa là nhận được sự trợ giúp từ một nhóm nhiều người để hoàn thành
+          việc gì đó nhanh hơn.
+      2:
+        text: Trong khoa học máy tính, chúng ta thường xuyên sử dụng nguồn cung ứng
+          cộng đồng. Hàng nghìn người nghiệp dư và chuyên gia liên kết máy tính của
+          họ với nhau để duyệt qua hàng tỷ tỷ mẩu thông tin. Tìm kiếm những thứ như
+          số nguyên tố Marsenne tiếp theo, hoặc thậm chí có thể là liên lạc với người
+          ngoài hành tinh.
+      3:
+        text: Khi bạn xem một bộ phim, mỗi giây của bộ phim là 24 hình ảnh riêng lẻ,
+          chúng ta gọi đó là khung hình. Mỗi bức ảnh trong số đó cần được tạo ra,
+          kết xuất và kết hợp tất cả lại với nhau. Nhóm của tôi và tôi, tất cả chúng
+          ta đều là những nhà phát triển phần mềm. Tất cả chúng ta làm việc cùng nhau
+          để tạo ra một phần mềm thực sự tạo ra hình ảnh, tạo ra hình ảnh cuối cùng
+          mà bạn nhìn thấy trên màn hình. Đó là một công cụ mà các nghệ sĩ và các
+          nhà phát triển khác có thể sử dụng trong quá trình làm việc nhóm và quy
+          trình của họ để có thể tạo ra những hình ảnh mà họ muốn trên màn hình.
+      4:
+        text: Ví dụ, trong Đi tìm Nemo, khi Crush, Squirt và tất cả bạn bè của mình
+          bơi qua Dòng chảy Đông Úc. Bạn đang nhìn thấy hình ảnh nước chảy qua, bạn
+          nhìn thấy màu sắc trên lưng rùa, bạn nhìn thấy hai bên của con cá. Tất cả
+          những thứ đó được tạo ra thông qua các chương trình toán học và máy tính
+          mà chúng ta viết, sau đó chúng ta đưa cho họa sĩ và họ sử dụng để tạo ra
+          hình ảnh cuối cùng cũng như chỉnh sửa để làm hình ảnh trông đẹp và vui nhộn.
+    C3_dice_race:
+      1:
+        text: Bài học này được gọi là cuộc đua xúc xắc. Hầu như tất cả mọi người đều
+          thích chơi game trên máy tính. Bạn đã bao giờ nghĩ về cách các nhà lập trình
+          máy tính biến các bước của một trò chơi thành một chương trình chưa? Bước
+          đầu tiên trong việc tạo ra các trò chơi máy tính và giải quyết bất kỳ vấn
+          đề nào đều đòi hỏi sự suy nghĩ và lập kế hoạch.
+      2:
+        text: Bước tư duy giải quyết vấn đề tạo ra một thuật toán, là một kế hoạch
+          từng bước để giải quyết một vấn đề hoặc hoàn thành một nhiệm vụ. Trong bài
+          học này, bạn sẽ tạo một thuật toán cho trò chơi cuộc đua xúc xắc. Sau đó,
+          bạn sẽ yêu cầu bạn bè chơi thử kế hoạch của mình để xem liệu họ có thể làm
+          theo các bước để chơi trò chơi hay không. Sau khi lập trình viên chắc chắn
+          các bước là chính xác, đã đến lúc dịch thuật toán thành chương trình có
+          ngôn ngữ mà máy tính có thể hiểu được.
+      3:
+        text: Hầu hết mọi thứ chúng ta làm hàng ngày đều cần thuật toán, danh sách
+          các bước bạn có thể làm theo để hoàn thành nhiệm vụ. Hãy suy nghĩ về việc
+          chuẩn bị đến trường hoặc lên kế hoạch cho một ngày vui vẻ với bạn bè hoặc
+          chuẩn bị một bữa ăn nhẹ. Để hoàn thành bất kỳ nhiệm vụ nào trong số đó,
+          bạn sẽ cần chia nhiệm vụ thành các bước nhỏ hơn và đôi khi các bước phải
+          theo thứ tự cụ thể.
+      4:
+        text: Hãy nghĩ về việc làm một chiếc bánh mì sandwich. Bạn lấy nguyên liệu
+          nào ra khỏi tủ trước không quan trọng. Nhưng bạn không thể phết bơ đậu phộng
+          cho trước khi mở lọ. Máy tính cần các thuật toán và chương trình để chỉ
+          cho chúng cách làm những việc đơn giản mà chúng ta có thể làm mà không cần
+          suy nghĩ.
+      5:
+        text: Thuật toán là suy nghĩ đằng sau những hoạt động diễn ra, còn chương
+          trình là hướng dẫn thực tế được cung cấp cho máy tính để biến nó thành hiện
+          thực. Thuật toán phải được dịch thành chương trình để máy tính có thể chạy.
+          Việc chia một nhiệm vụ thành các bước gọi là thuật toán đôi khi rất khó.
+          Nhưng giống như bất kỳ kỹ năng mới nào, luyện tập càng nhiều thì càng trở
+          nên dễ dàng.
+    C3_farmer_while:
+      1:
+        text: Vòng lặp while khá giống với những gì bạn làm trong cuộc sống hàng ngày.
+          Hãy tưởng tượng bạn đang rửa xe, bạn sẽ tiếp tục kỳ cọ cho đến khi sạch
+          sẽ. Nếu chưa sạch, hãy tiếp tục cọ rửa. Bạn luôn đánh giá những yếu tố này.
+      2:
+        text: Chúng ta đã có một công cụ mới để giúp đỡ người nông dân. Đây là khối
+          while. Khối này thực sự khá đơn giản. Nếu mệnh đề ở trên cùng là đúng, hãy
+          làm điều gì đó. Ví dụ, nếu có một đống đất, di chuyển đống đất đó. Hãy tiếp
+          tục và thử với người nông dân của bạn.
+    C3_functional_suncatchers:
+      1:
+        text: Bài học này là lưới bắt nắng bằng hàm. Bạn sẽ tạo ra những chiếc lưới
+          bắt nắng khá đẹp bằng cách sử dụng hàm. Có một số bước để tạo ra những chiếc
+          lưới bắt nắng như thế này. Một số bước bạn phải lặp lại nhiều lần.
+      2:
+        text: Bước đầu tiên để đơn giản hóa quá trình tạo lưới bắt nắng là tìm ra
+          những phần chúng ta phải lặp đi lặp lại nhiều lần. Chúng ta có thể nhóm
+          các bước này thành một hàm.
+      3:
+        text: Nhưng có cách tạo ra lưới bắt nắng đẹp hơn là chỉ làm theo các bước
+          chính xác. Đôi khi chúng ta muốn sáng tạo và thay đổi màu sắc của các loại
+          hạt mà chúng ta sử dụng. Chúng ta có thể làm cho mọi chiếc đồng hồ đeo tay
+          trở nên độc đáo nếu chúng ta sử dụng các hạt màu khác nhau.
+      4:
+        text: Lưới bắt nắng của bạn sẽ là độc nhất vô nhị khi bạn học cách tưởng tượng
+          các loại hạt là biến, nghĩa là trình giữ chỗ cho thông tin có thể thay đổi.
+          Chúc bạn vui vẻ khi tạo những chiếc lưới bắt nắng đẹp mắt bằng cách sử dụng
+          hàm và biến nhé!
+    C3_internet:
+      1:
+        text: Bài học này chỉ nói về internet. Internet là một nơi rất sôi động và
+          tương tự như con đường đông đúc này. Các tin nhắn như ô tô đang lao tới
+          điểm đến. Tin nhắn di chuyển qua internet rất nhanh chóng.
+      2:
+        text: Tìm hiểu cách thức hoạt động của Internet sẽ giúp bạn hiểu hoạt động
+          đang diễn ra khi bạn sử dụng Internet. Bạn sẽ tìm hiểu cách gửi thông điệp
+          từ máy tính của bạn đến một trang web yêu thích hoặc từ một người bạn đến
+          hộp thư email. Cũng giống như việc di chuyển trên những con đường đông đúc
+          trở nên dễ dàng hơn khi bạn biết đường và có thể đọc các biển báo, việc
+          di chuyển trên internet không quá phức tạp khi bạn biết những hoạt động
+          diễn ra phía sau hậu trường.
+      3:
+        text: Gửi tin nhắn trên internet hơi giống như gửi tin nhắn trong mail nhưng
+          có một vài điểm khác biệt. Tôi đang ở Google.com. Địa chỉ IP cho trang web
+          là dãy số này. Bạn có thể coi địa chỉ IP là địa chỉ gửi đi của mình trong
+          thư. Hãy tưởng tượng rằng tôi muốn gửi một thông điệp bằng thư cho một người
+          nào đó trong văn phòng ở lầu dưới. Bạn có thấy URL và địa chỉ IP trên cánh
+          cửa đó không? Tôi đã viết tin nhắn này và nhấn gửi.
+      4:
+        text: Không giống như Dịch vụ Bưu điện, điều đầu tiên xảy ra là internet sẽ
+          chia thông điệp thành các phần nhỏ hơn để có thể gửi đi dễ dàng hơn. Những
+          phần nhỏ này được gọi là gói tin. Mỗi gói tin lần lượt được gửi đến đích.
+          Các gói tin này được ghép lại với nhau theo đúng thứ tự để người nhận có
+          thể đọc chính xác tin nhắn. Tất nhiên, còn nhiều điều cần tìm hiểu về cách
+          thức hoạt động của internet nhưng đây là một khởi đầu tuyệt vời. Bạn đang
+          trên đường trở thành một người dùng Internet am hiểu đấy! Đừng quên nói
+          với gia đình và bạn bè của bạn những kiến thức bạn đã học được nhé!
+      5:
+        text: Tên tôi là Amanda Camp và tôi là kỹ sư phần mềm tại Google. Tôi làm
+          việc trong một nhóm hoạt động trên máy chủ backend lưu trữ hồ sơ và địa
+          chỉ liên hệ. Trong công việc của mình, chúng tôi nghĩ rất nhiều về cách
+          gửi danh bạ đến các thiết bị khác, chẳng hạn như điện thoại của bạn. Hầu
+          hết mọi người đều có rất nhiều danh bạ, thậm chí là 1.000 danh bạ và chúng
+          tôi không muốn gửi tất cả những danh bạ đó cùng một lúc đến điện thoại của
+          bạn vì kích thước quá lớn so với một tin nhắn. Tương tự như cách internet
+          chia nhỏ các tin nhắn lớn thành các gói tin, chúng tôi sử dụng một khái
+          niệm gọi là phân trang, trong đó chúng tôi chỉ có thể gửi cho điện thoại
+          của bạn 100 danh bạ cùng một lúc và để điện thoại của bạn phản hồi lại chúng
+          tôi và yêu cầu 100 danh bạ tiếp theo.
+      6:
+        text: Điều thú vị nhất về phần mềm là việc phần mềm có thể ảnh hưởng đến toàn
+          thế giới. Tôi học lập trình lần đầu tiên khi tôi khoảng 19 tuổi. Hình như
+          lúc đó tôi là sinh viên năm hai hoặc năm ba đại học. Chương trình đầu tiên
+          mà tôi nhớ tôi đã viết là công cụ chuyển độ C sang độ F. Tôi thích lập trình
+          vì tôi thích giúp đỡ mọi người. Tôi có thể viết các chương trình tại Google
+          để giúp đỡ mọi người trên toàn thế giới và điều đó thực sự đáng kinh ngạc
+          và thú vị.
+    C3_maze_conditionals:
+      1:
+        text: Chúng ta phải đưa ra quyết định mỗi ngày. Ví dụ, trước khi ra ngoài,
+          bạn có câu lệnh if nói rằng nếu trời mưa thì tôi cần lấy áo khoác. Máy tính
+          thật tuyệt vời khi bạn quyết định những loại câu lệnh mà chúng có thể thực
+          thi những việc đó một cách đáng tin cậy và với tốc độ không tưởng. Chương
+          trình máy tính thực sự là kết hợp toán học với vài câu lệnh if để đưa ra
+          quyết định.
+      2:
+        text: Khối if giúp thây ma đưa ra quyết định. Khối này kiểm tra một thông
+          tin nào đó. Ví dụ, hãy sử dụng khối này để kiểm tra xem có đường đi bên
+          trái hay không và đặt lệnh rẽ trái bên trong khối đó. Chúng ta đang yêu
+          cầu thây ma kiểm tra môi trường xung quanh, xem có đường đi bên trái hay
+          không và nếu có, hãy rẽ vào đó.
+      3:
+        text: Sau đó, chúng ta sử dụng khối tiến lên bên trong khối lặp lại này để
+          thây ma tiếp tục tiến lên miễn là thây ma chỉ muốn đi thẳng. Sau đó, khi
+          có lối rẽ, khối if sẽ yêu cầu thây ma rẽ trái. Bạn có thể thấy rằng nếu
+          chúng ta làm như vậy, nếu chúng ta rẽ trái và tiến lên, chúng ta sẽ đến
+          được đích.
+      4:
+        text: Đó là một ví dụ về việc sử dụng câu lệnh if, một khái niệm vô cùng cơ
+          bản trong lập trình máy tính. Một trong những điều đầu tiên tôi học được
+          là cách viết chương trình chơi cờ ca-rô. Tôi đã có câu lệnh if để nói rằng
+          nếu người kia sắp thắng, hãy tiếp tục chặn vị trí đó. Hãy khám phá cách
+          sử dụng câu lệnh if nhé, đây là một khái niệm quan trọng đấy.
+    C3_maze_level_4:
+      1:
+        text: Trong ví dụ này, mục tiêu của bạn là đưa thây ma đến chỗ hoa hướng dương.
+          Chúng ta có thể sử dụng năm khối tiến lên hoặc có thể yêu cầu máy tính tiến
+          lên và lặp lại năm lần bằng cách sử dụng khối lặp lại.
+      2:
+        text: Cách làm này giúp tiết kiệm thời gian và dễ dàng hơn. Để sử dụng cách
+          này, chỉ cần đặt khối tiến lên vào bên trong khối lặp lại. Nhấn chạy và
+          thây ma sẽ tiến lên năm lần đến chỗ bông hoa hướng dương ngon miệng.
+    C3_playlab_create_game:
+      1:
+        text: Cho đến thời điểm hiện tại, bạn đã tạo hình chuyển động hoặc câu chuyện
+          giống hệt như vậy mỗi khi bạn chạy chương trình. Bây giờ bạn có thể tạo
+          một trò chơi tương tác mà bạn thực sự có thể chơi.
+      2:
+        text: Có một số khối mới để thử là khối “khi mũi tên” và khối “di chuyển nhân
+          vật”. Bạn có thể gắn các khối này với nhau để di chuyển nhân vật xung quanh
+          bằng các phím mũi tên. Có một số khối hoạt động khi nhân vật va chạm hoặc
+          được nhấp chuột. Hãy thử và khám phá nhé!
+    C3_songwriting_with_parameters:
+      1:
+        text: Đây là bài học sáng tác bài hát. Âm nhạc rất giống một chương trình
+          máy tính. Các nốt nhạc và lời được viết ra cho ca sĩ biết chính xác những
+          gì mình cần làm. Một số đoạn nhạc được lặp đi lặp lại.
+      2:
+        text: Chúng ta gọi phần này là điệp khúc. Trong một chương trình máy tính,
+          các phần của chương trình được sử dụng lặp đi lặp lại được gọi là hàm. Khi
+          bạn đọc lời bài hát và đến đoạn có chữ điệp khúc, bạn có hát chữ điệp khúc
+          đó không? Không, bạn nhìn lên đầu trang để xem những từ nào có trong phần
+          điệp khúc.
+      3:
+        text: Trong bài học này, bạn sẽ học một bài hát ngắn vui nhộn có tên là thỏ
+          con foo foo. Bài hát có một đoạn điệp khúc mà bạn sẽ hát đi hát lại nhiều
+          lần. Hàm là đoạn mã lệnh mà bạn có thể gọi và sử dụng nhiều lần. Hàm giúp
+          việc lập trình trở nên dễ dàng và hiệu quả hơn, do đó bạn không cần phải
+          viết đi viết lại các bước của hàm. Bạn chỉ cần viết một lần!
+    C4_bee_conditional:
+      1:
+        text: Đây là khối lệnh điều kiện. Khối này nói rằng nếu bạn đang ở vị trí
+          bông hoa hay tổ ong thì hãy làm gì đó. Khối này rất hữu ích khi chúng ta
+          không biết phải lấy bao nhiêu mật ong hoặc mật hoa như trường hợp dấu chấm
+          hỏi ở đây.
+      2:
+        text: Trong ví dụ này, chúng ta sẽ nói rằng nếu đó là bông hoa, hãy lấy tất
+          cả mật hoa rồi sử dụng một khối khác để nói rằng nếu đó là tổ ong, hãy làm
+          mật ong. Xem này!
+    C4_conditionals:
+      1:
+        text: Chúng ta có một khối mới được gọi là khối if/else. Đây là câu lệnh điều
+          kiện giống như khối if mà bạn đã sử dụng trong các bài tập trước đây. Nhưng
+          bây giờ có một phần mới ở phía dưới có ghi là “nếu không”. Khối if/else
+          cho phép chú ong đưa ra quyết định giữa hai nhóm hành động. Nếu chú ong
+          ở vị trí một bông hoa, chú ong sẽ thực hiện chuỗi hành động mà bạn đã đặt
+          trong phần đầu tiên có ghi là “làm”. Nếu chú ong không ở vị trí bông hoa,
+          chú ong sẽ thực hiện chuỗi hành động mà bạn đặt vào chỗ trống có ghi “nếu
+          không”.
+      2:
+        text: Câu lệnh if là cách máy tính đưa ra quyết định. Con người thiết lập
+          các điều kiện cho máy tính với nội dung nếu máy tính rơi vào một tình huống
+          nhất định thì hãy làm điều này. Nếu không, có nghĩa là tình huống ngược
+          lại, hãy làm điều kia. Phần trên cùng của khối if/else của chúng ta có ghi
+          “nếu ở vị trí hoa”. Nhưng phần trên cùng của khối có thể ghi những nội dung
+          khác, chẳng hạn như nếu mật hoa bằng 2 hoặc nếu có đường đi phía trước,
+          khối của chúng ta sẽ hoạt động giống nhau. Nếu câu lệnh ở trên cùng là đúng,
+          chương trình sẽ thực hiện chuỗi hành động đầu tiên. Nhưng nếu câu lệnh ở
+          trên cùng là sai, chương trình sẽ thực hiện chuỗi hành động thứ hai.
+    C4_for_loops:
+      1:
+        text: Khi bạn sử dụng khối lặp lại để lặp lại mã lệnh, làm cách nào máy tính
+          biết được nó đã lặp lại đủ số lần? Khối lặp lại thực sự đang ẩn một đoạn
+          mã phức tạp hơn được gọi là vòng lặp for, tính từ giá trị bắt đầu đến giá
+          trị kết thúc bằng một gia số cụ thể.
+      2:
+        text: Ví dụ, khối lặp lại ba lần đếm từ 1 đến 3 với gia số là 1. Mỗi khi đếm,
+          khối đó chạy mã lệnh bên trong vòng lặp. Vòng lặp for biết khối đó đã chạy
+          bao nhiêu lần bằng cách sử dụng một biến đếm được đặt thành giá trị bắt
+          đầu ở đầu vòng lặp và cộng thêm gia số mỗi khi chạy vòng lặp. Ngay sau khi
+          biến đếm lớn hơn giá trị kết thúc thì vòng lặp ngừng chạy.
+      3:
+        text: 'Lợi ích của việc sử dụng vòng lặp for thực tế thay vì khối lặp lại
+          là bạn có thể thấy rõ biến đếm và sử dụng biến đó trong vòng lặp của mình.
+          Ví dụ: nếu tôi có một loạt hoa và bông hoa đầu tiên có một mật hoa, bông
+          hoa thứ hai có hai mật hoa và bông hoa thứ ba có ba mật hoa, tôi có thể
+          sử dụng vòng lặp for để yêu cầu chú ong thu thập mật hoa mỗi lần, một ở
+          bông hoa đầu tiên, hai ở bông hoa thứ hai và ba ở bông hoa thứ ba.'
+      4:
+        text: Cũng trong vòng lặp for, bạn có thể tăng bộ đếm lên một số khác mỗi
+          lần. Bạn có thể đếm theo gia số 2, 4 hoặc thậm chí một gia số thay đổi mỗi
+          lượt.
+    C4_for_loops_bee:
+      1:
+        text: Khi bạn sử dụng khối lặp lại để lặp lại mã lệnh, làm cách nào máy tính
+          biết được nó đã lặp lại đủ số lần? Khối lặp lại thực sự đang ẩn một đoạn
+          mã phức tạp hơn được gọi là vòng lặp for, tính từ giá trị bắt đầu đến giá
+          trị kết thúc bằng một gia số cụ thể.
+      2:
+        text: Ví dụ, khối lặp lại ba lần đếm từ 1 đến 3 với gia số là 1. Mỗi khi đếm,
+          khối đó chạy mã lệnh bên trong vòng lặp. Vòng lặp for biết khối đó đã chạy
+          bao nhiêu lần bằng cách sử dụng một biến đếm được đặt thành giá trị bắt
+          đầu ở đầu vòng lặp và cộng thêm gia số mỗi khi chạy vòng lặp. Ngay sau khi
+          biến đếm lớn hơn giá trị kết thúc thì vòng lặp ngừng chạy.
+      3:
+        text: 'Lợi ích của việc sử dụng vòng lặp for thực tế thay vì khối lặp lại
+          là bạn có thể thấy rõ biến đếm và sử dụng biến đó trong vòng lặp của mình.
+          Ví dụ: nếu tôi có một loạt hoa và bông hoa đầu tiên có một mật hoa, bông
+          hoa thứ hai có hai mật hoa và bông hoa thứ ba có ba mật hoa, tôi có thể
+          sử dụng vòng lặp for để yêu cầu chú ong thu thập mật hoa mỗi lần, một ở
+          bông hoa đầu tiên, hai ở bông hoa thứ hai và ba ở bông hoa thứ ba.'
+      4:
+        text: Cũng trong vòng lặp for, bạn có thể tăng bộ đếm lên một số khác mỗi
+          lần. Bạn có thể đếm theo gia số 2, 4 hoặc thậm chí một gia số thay đổi mỗi
+          lượt.
+    C4_for_loops_no_bee:
+      1:
+        text: Khi bạn sử dụng khối lặp lại để lặp lại mã lệnh, làm cách nào máy tính
+          biết được nó đã lặp lại đủ số lần? Khối lặp lại thực sự đang ẩn một đoạn
+          mã phức tạp hơn được gọi là vòng lặp for, tính từ giá trị bắt đầu đến giá
+          trị kết thúc bằng một gia số cụ thể.
+      2:
+        text: Ví dụ, khối lặp lại ba lần đếm từ 1 đến 3 với gia số là 1. Mỗi khi đếm,
+          khối đó chạy mã lệnh bên trong vòng lặp. Vòng lặp for biết khối đó đã chạy
+          bao nhiêu lần bằng cách sử dụng một biến đếm được đặt thành giá trị bắt
+          đầu ở đầu vòng lặp và cộng thêm gia số mỗi khi chạy vòng lặp. Ngay sau khi
+          biến đếm lớn hơn giá trị kết thúc thì vòng lặp ngừng chạy. Lợi ích của việc
+          sử dụng vòng lặp for thay vì dùng khối lặp lại là bạn thực sự có thể nhìn
+          thấy biến đếm và sử dụng trong vòng lặp của mình.
+    C4_function_create:
+      1:
+        text: Bạn đã biết cách chỉnh sửa các khối hàm, bây giờ là lúc tạo khối hàm
+          mới từ đầu. Đơn giản lắm. Bạn sẽ thấy hộp công cụ có một danh mục được gọi
+          là hàm. Nếu bạn nhấp chuột vào nút này, bạn sẽ thấy một nút màu cam ghi
+          là “tạo hàm”. Nhấp chuột vào đây sẽ hiển thị trình chỉnh sửa hàm mà bạn
+          đã sử dụng để chỉnh sửa các khối hàm hiện có.
+      2:
+        text: Cũng giống như trước, bạn bắt đầu bằng cách đặt tên cho hàm của mình,
+          viết mô tả tác dụng của hàm. Ví dụ, hàm này sẽ vẽ một hình vuông hoặc vẽ
+          một hình tam giác rồi kéo các khối từ hộp công cụ vào không gian làm việc
+          màu trắng bên dưới. Hãy nhớ kéo các khối này vào bên trong khối bao bọc
+          hàm màu xanh lá cây.
+      3:
+        text: Sau khi hoàn tất, hãy nhấp chuột vào lưu và thoát. Thao tác này sẽ đưa
+          bạn trở lại không gian làm việc chính. Hàm mới bạn vừa tạo sẽ hiển thị dưới
+          dạng khối màu xanh lá cây trong danh mục hàm trong hộp công cụ. Kéo và thả
+          khối này vào không gian làm việc chính và sử dụng như bất kỳ khối nào khác
+          để giải bài tập.
+    C4_function_edit:
+      1:
+        text: Một trong những điều tuyệt vời trong lập trình máy tính là khi bạn đã
+          dạy cho máy tính cách thực hiện một hành động, bạn có thể gọi lại hàm đó.
+          Bạn đặt tên cho hàm và sau đó có thể gọi hàm. Phương pháp này thực sự giống
+          như việc mở rộng ngôn ngữ.
+      2:
+        text: Trong chương trình chúng ta đã phát triển, chúng ta đã học cách vẽ một
+          hình vuông bằng cách di chuyển và xoay bốn lần. Chúng ta có thể lấy hàm
+          đó và đặt tên là “vẽ hình vuông” để bất cứ lúc nào chúng ta muốn làm như
+          vậy, chúng ta chỉ cần nói “vẽ hình vuông” và chương trình sẽ quay lại và
+          gọi hàm cùng mã lệnh đó. Chương trình sẽ thực hiện giúp chúng ta. Chúng
+          ta đã thêm khái niệm đó vào ngôn ngữ lập trình của mình.
+      3:
+        text: Trong bài tập này, chúng tôi đã tạo sẵn hàm vẽ hình vuông cho bạn. Bạn
+          sẽ thấy hàm đó trong hộp công cụ dưới dạng một khối màu xanh lục. Những
+          gì bạn cần làm là viết mã lệnh giống với mã lệnh vẽ hình vuông trước đây
+          và đưa vào hàm này. Để làm điều đó, hãy nhấp vào tùy chọn chỉnh sửa trong
+          khối vẽ hình vuông màu xanh lá cây. Thao tác này sẽ mở ra trình chỉnh sửa
+          hàm. Trình chỉnh sửa hàm có ba phần. Phần đặt tên cho hàm xuất hiện trên
+          khối màu xanh lá cây trước hàm đó. Sau đó, hãy viết một đoạn mô tả ngắn
+          về tác dụng của hàm đó.
+      4:
+        text: Trong trường hợp này, hàm cần vẽ một hình vuông. Khoảng trắng bên dưới
+          là không gian làm việc và hoạt động giống như không gian làm việc mà bạn
+          đã và đang sử dụng. Kéo và thả các khối từ hộp công cụ vào không gian làm
+          việc này. Hãy nhớ đặt các khối tạo hình vuông bên trong khối bao bọc hàm
+          màu xanh lá cây. Sau khi hoàn tất, hãy nhấp vào lưu và thoát. Thao tác này
+          sẽ đưa bạn trở lại không gian làm việc chính. Bây giờ, bạn có thể sử dụng
+          khối hàm vẽ hình vuông giống như bất kỳ khối nào khác để giải bài tập.
+    C4_function_parameters:
+      1:
+        text: Đây là hàm vẽ hình vuông có cạnh 50 điểm ảnh. Tuyệt đấy, nhưng nếu tôi
+          muốn vẽ hình vuông có cạnh 50 điểm ảnh và một hình vuông khác có cạnh 100
+          điểm ảnh thì sao? Chúng ta không cần phải tạo hai hàm riêng biệt gần như
+          giống nhau. Thay vào đó, chúng ta có thể sử dụng một hàm chứa thông số.
+      2:
+        text: Thông số cho phép chúng ta đặt giá trị vào hàm được sử dụng như các
+          biến bên trong hàm. Hãy thử thêm thông số kích thước vào hàm này để chúng
+          ta có thể sử dụng để tạo các hình vuông có kích thước khác nhau. Trong trình
+          chỉnh sửa hàm, bạn có thể chỉnh sửa tên và mô tả như trước đây, nhưng bây
+          giờ bạn cũng có thể thêm thông số. Viết tên thông số của bạn vào khoảng
+          trống và nhấp vào Thêm thông số. Thao tác này sẽ tạo một khối màu đỏ với
+          tên của thông số bạn vừa tạo. Bây giờ chúng ta có thể thay thế khối tiến
+          lên 100 ô bằng tham số Chiều dài để tiến lên một khoảng bằng Chiều dài.
+      3:
+        text: Nhấp vào lưu và đóng rồi kéo khối tạo hình vuông mới từ danh mục hàm
+          trong hộp công cụ. Bạn sẽ nhận thấy có một khoảng trống bên cạnh chiều dài
+          vì hàm muốn biết giá trị của thông số Chiều dài. Kéo một khối số từ danh
+          mục Toán học và đặt vào không gian này. Hãy xem bạn có thể sử dụng hàm nhiều
+          lần với các độ dài khác nhau để tạo ra các hình vuông có kích thước khác
+          nhau như thế nào nhé? Hãy tự mình thử đi nào!
     C4_intro:
       1:
         text: Thông thường, lập trình là dưới dạng văn bản nhưng chúng ta sẽ sử dụng
-          Blockly tức là sử dụng các hình lệnh mà bạn kéo và thả để viết các chương
-          trình. Dưới lớp hình, thực ra bạn vẫn đang tạo câu lệnh. Để khởi động, chúng
-          ta sẽ xây dựng câu lệnh cho chương trình mà giúp nhân vật Angry Bird này
-          di chuyển qua một mê cung để đến được chỗ những con lợn độc ác đã ăn cắp
-          trứng của nó.
+          Blockly, tức là sử dụng các khối minh họa mà bạn kéo và thả để viết chương
+          trình. Về bản chất, thực ra bạn vẫn đang tạo ra mã lệnh. Để khởi động, chúng
+          ta sẽ viết mã lệnh cho chương trình giúp nhân vật Angry Bird này di chuyển
+          qua một mê cung để đến được chỗ những con heo độc ác đã ăn cắp trứng của
+          nó.
       2:
         text: Blockly được chia thành 3 phần chính. Bên trái là mê cung của chú chim,
           nơi chương trình của bạn sẽ chạy. Các chỉ dẫn cho mỗi cấp độ được viết bên
@@ -1139,21 +1626,529 @@ vi:
           mệnh lệnh mà chú chim có thể hiểu được. Khu vực trống ở bên phải được gọi
           là không gian làm việc và đây là nơi chúng ta sẽ xây dựng chương trình.
       3:
-        text: Nếu tôi kéo khối lệnh Di chuyển tới không gian làm việc và nhấn "Chạy",
-          điều gì sẽ xảy ra? Chú chim tiến về phía trước 1 ô trong khung. Và nếu tôi
-          muốn chú chim làm gì khác sau khi tiến lên 1 ô? Tôi có thể thêm khối lệnh
-          khác vào chương trình.
+        text: Nếu tôi kéo khối di chuyển tới không gian làm việc và nhấn “Chạy” thì
+          điều gì sẽ xảy ra? Chú chim tiến về phía trước 1 ô trên lưới. Và nếu tôi
+          muốn chú chim làm việc khác sau khi tiến lên 1 ô thì sao? Tôi có thể thêm
+          các khối khác vào chương trình.
       4:
-        text: Tôi sẽ chọn khối lệnh "rẽ phải" và tôi sẽ kéo nó đặt xuống dưới khối
-          lệnh di chuyển sao cho mũi tên màu vàng xuất hiện. Sau đó tôi thả lệnh và
-          2 khối lệnh sẽ chập lại với nhau. Khi tôi nhấn "Chạy", chú chim sẽ thực
-          hiện lần lượt các lệnh được xếp từ trên xuống dưới trong không gian làm
-          việc.
+        text: Tôi sẽ chọn khối “rẽ phải” và tôi sẽ kéo khối này đặt xuống bên dưới
+          khối di chuyển sao cho mũi tên màu vàng xuất hiện. Sau đó tôi thả ra và
+          2 khối sẽ gắn lại với nhau. Khi tôi nhấn “Chạy”, chú chim sẽ thực hiện hết
+          các lệnh được sắp xếp từ trên xuống dưới trong không gian làm việc.
       5:
-        text: Nếu bạn muốn xoá 1 khối lệnh, chỉ cần bỏ nó khỏi ngăn xếp và kéo đến
-          thùng rác. Sau khi đã nhấn chạy, bạn vẫn có thể nhấn nút "Thiết lập lại"
-          để chú chim trở lại điểm khởi đầu. Bây giờ hãy đi bắt những con lợn xấu
-          xa!
+        text: Nếu bạn muốn xoá 1 khối, chỉ cần bỏ khối đó khỏi ngăn xếp và kéo đến
+          thùng rác. Sau khi đã nhấn chạy, bạn vẫn có thể nhấn nút “Thiết lập lại”
+          để chú chim trở lại điểm khởi đầu. Bây giờ hãy đi bắt những con heo xấu
+          xa nào!
+    C4_math_artist:
+      1:
+        text: Nếu tôi muốn vẽ hình chữ nhật có chiều cao 50 điểm ảnh và chiều rộng
+          gấp đôi chiều cao, tôi sẽ lập trình máy tính như thế nào để thực hiện điều
+          đó? Chà, tôi có thể bảo họa sĩ đi lên 50, rẽ phải, rồi đi tiếp 100 và di
+          chuyển toàn bộ các bước đó hai lần. Nhưng như vậy là tôi đang làm toán thay
+          cho máy tính.
+      2:
+        text: Tính nhẩm năm mươi nhân hai có thể không khó nhưng máy tính thực sự
+          rất giỏi làm toán, vì vậy chúng ta nên giao việc này cho máy tính bất cứ
+          khi nào có thể. Thay vào đó, nếu tôi chỉ sử dụng một biến có tên là chiều
+          cao thì tôi có thể dễ dàng thay đổi chiều cao thành năm mươi rồi thay đổi
+          thuật toán của mình để yêu cầu họa sĩ đi lên một khoảng bằng chiều cao,
+          rẽ phải và sau đó đi tiếp một khoảng bằng chiều cao lần 2, làm như vậy sẽ
+          cho chúng ta một hình chữ nhật rộng gấp đôi chiều cao.
+    C4_unplugged_algorithms:
+      1:
+        text: Bài học này có tên là Thuật toán bảy miếng ghép. Bảy miếng ghép là trò
+          chơi xếp hình có bảy miếng ghép với nhau để tạo thành các hình khối khác.
+          Bạn sẽ sử dụng một thuật toán để giải thích cho bạn cùng nhóm của mình cách
+          ghép các mảnh ghép lại với nhau.
+      2:
+        text: Thuật toán chỉ là danh sách các bước mà bạn có thể thực hiện để hoàn
+          thành nhiệm vụ. Chúng ta sử dụng chúng hàng ngày trong những thứ như danh
+          sách mua sắm và công thức nấu ăn. Nếu bạn tạo thuật toán đơn giản, có rất
+          nhiều cách để diễn giải thuật toán đó và bất kỳ ai thực hiện thuật toán
+          đó có thể không làm chính xác những gì bạn muốn. Nếu bạn muốn đảm bảo rằng
+          tất cả mọi người đều tạo ra kết quả chính xác thì thuật toán của bạn cần
+          phải chi tiết và thật cụ thể.
+      3:
+        text: Hôm nay tôi đang sử dụng một thuật toán để hoàn thành một bức tranh.
+          Tôi muốn thử vẽ mấy con sói nhưng tôi không phải là họa sĩ tài ba. May mắn
+          cho những người như tôi là có dạng tranh số hóa. Có bốn mươi màu và có các
+          chữ cái và chữ số nhỏ cho bạn biết phải tô màu nào ở mỗi phần. Tranh số
+          hóa cho tôi biết chính xác màu sắc cần sử dụng và vị trí tô.
+      4:
+        text: Vì bức tranh rất cụ thể nên tôi có thể làm theo chỉ dẫn và kết quả là
+          bức tranh sẽ rất tuyệt. Đó là một thuật toán tuyệt vời. Nếu hướng dẫn không
+          đủ cụ thể, những con sói của tôi trông sẽ không đẹp. Khi bạn thực sự muốn
+          một điều gì đó diễn ra chính xác theo cách bạn đã lên kế hoạch, tốt nhất
+          là bạn phải cực kỳ chính xác.
+    C4_unplugged_binary:
+      1:
+        text: Mỗi đội bao gồm người hướng dẫn và người cầm tờ giấy phải tìm ra biểu
+          tượng tắt và biểu tượng bật của họ là gì. Trong hệ nhị phân, điều này giống
+          như bảng chữ cái chỉ có hai chữ cái. Giống như A và B là toàn bộ bảng chữ
+          cái của bạn, nhưng bạn lại có số 0 và số 1.
+      2:
+        text: Cách phổ biến nhất mà bạn sử dụng nhị phân là trong câu lệnh if. Đây
+          là phương pháp cổ điển trong lập trình. Chương trình chạy và cho biết nếu
+          điều kiện này là đúng thì hãy làm điều này. Hoặc điều kiện không đúng và
+          bạn làm điều khác. Điều gì xảy ra nếu bạn muốn làm điều một việc phức tạp
+          hơn một chút? Thay vì câu lệnh if, bạn muốn làm việc với thứ gì đó như hình
+          ảnh hoặc âm thanh trong máy tính.
+      3:
+        text: 'Một máy tính chỉ hiểu nhị phân nhưng hình ảnh không phải là nhị phân,
+          không phải là những con số 0 và 1, vậy làm thế nào để bạn làm điều đó? Đây
+          là một ví dụ: Bạn có bức tranh tuyệt đẹp này. Bức tranh về cơ bản là một
+          dạng thông tin. Tất cả thông tin có thể được mã hóa theo cách này hay cách
+          khác, bạn chỉ cần tìm ra cách thực hiện.'
+      4:
+        text: Bạn tưởng tượng rằng chúng ta sẽ tạo một ô lưới trên con gấu trúc này
+          và đối với mỗi hình vuông, chúng ta sẽ quyết định xem hình vuông đó là nên
+          có màu đen hay màu trắng. Sau đó, chúng tôi sẽ tô màu theo hướng dẫn đó.
+          Bây giờ, mỗi ô trên lưới có màu đen hoặc trắng, sau đó chúng ta gọi các
+          ô màu đen là không (chữ số nhị phân) còn các ô trắng là một, chữ số nhị
+          phân còn lại. Cuối cùng, bạn chỉ còn lại dãy số 0 và 1 thôi. Đó là cách
+          bạn biểu diễn hình ảnh này trong hệ nhị phân.
+    C4_unplugged_forloops:
+      1:
+        text: Bài học này được gọi là vòng lặp vui nhộn. Trong bài học này, chúng
+          ta sẽ sử dụng một dãy số để chơi trò chơi xúc xắc. Mỗi người chơi sẽ tung
+          ba lần để gán giá trị bắt đầu, giá trị dừng và khoảng thời gian của chúng
+          tôi. Trong mỗi lượt, chúng ta khoanh tròn giá trị bắt đầu và mọi giá trị
+          có cùng số bước tiến với giá trị khoảng cách thời gian. Chúng ta ngừng xoay
+          vòng khi đạt đến giá trị dừng của mình. Người có số điểm cao nhất sẽ chiến
+          thắng!
+      2:
+        text: Vòng lặp for có thể hữu ích ở nhiều tình huống và nếu bạn trở thành
+          một nhà khí tượng học, bạn sẽ sử dụng vòng lặp for thường xuyên. Xin chào,
+          tôi là Becky. Tôi làm việc tại EverPower Renewables với tư cách là nhà khí
+          tượng học về gió. Tôi dự báo tốc độ gió cho khu vực Hẻm núi sông Columbia,
+          nơi công ty sở hữu các trang trại gió.
+      3:
+        text: Chúng tôi đang cố gắng tìm hiểu lượng gió xuất hiện ở đó để biết lượng
+          điện năng có thể sản xuất. Chúng tôi cung cấp thông tin đó cho các nhà giao
+          dịch điện năng theo thời gian thực. Họ mua và bán điện dựa trên lượng điện
+          mà chúng tôi cho họ biết là sẽ đủ để đảm bảo lưới điện cân bằng, đèn của
+          bạn luôn sáng và chúng tôi tối đa hóa lượng năng lượng thu được từ trang
+          trại của mình.
+      4:
+        text: Chúng tôi đang ở trung tâm kiểm soát quốc gia của EverPower Renewables
+          ở Portland và đây là nơi chúng tôi nhận thông tin đến từ tất cả các trang
+          trại của chúng tôi trên toàn quốc. Ngay cả những máy tính công suất cao
+          nhất hiện nay cũng không thể mô phỏng khí quyển ở khắp mọi nơi. Trong các
+          mô hình dự báo trên máy tính, chúng ta có một thứ gọi là lưới. Mỗi điểm
+          lưới là một vĩ độ, kinh độ. Chúng ta phải tính toán các yếu tố vật lý và
+          thử tìm ra tốc độ gió, nhiệt độ, áp suất, v.v.
+      5:
+        text: Vì đây những lưới này khá lớn và chúng tôi đang thực hiện ở rất nhiều
+          điểm, chúng tôi đang lặp lại những việc này hàng triệu triệu lần. Tôi sẽ
+          sử dụng vòng lặp for cho mọi việc mà tôi làm. Ví dụ một vòng lặp for ở ngay
+          đây. Khi dự báo gió, có rất nhiều thông số khác nhau được đưa vào, không
+          ai có thể ngồi xuống và thực hiện tất cả những phép tính đó. Có rất nhiều
+          khía cạnh khác nhau có khả năng ảnh hưởng đến hoạt động của gió và chúng
+          tôi cần một mô hình máy tính để dự báo.
+    C4_unplugged_madlibs:
+      1:
+        text: Trong bài học này, chúng ta sẽ khám phá một số câu chuyện điền vào chỗ
+          trống. Bạn đang có câu chuyện mẫu để điền vào và sáng tạo những câu chuyện
+          giống nhau nhưng có sự khác biệt rất thú vị.
+      2:
+        text: Trong bài học này, chúng ta cũng đã học cách tạo một mẫu trừu tượng
+          từ hai câu chuyện đã được tạo. Trừu tượng hóa là nghệ thuật loại bỏ sự khác
+          biệt và chi tiết để bạn có thể thấy hiệu quả của giải pháp với nhiều vấn
+          đề khác nhau. Phương pháp này rất hữu ích trong khoa học máy tính vì nó
+          cho phép chúng ta tạo ra các hàm có thể hữu ích trong một số trường hợp
+          khác nhau.
+    C4_unplugged_parameters:
+      1:
+        text: Bài học này được gọi là sáng tác bài hát có thông số. Chúng tôi sẽ viết
+          một số bài hát ở đây. Đôi khi phần điệp khúc chỉ khác một chút mỗi lần bạn
+          hát. Bạn có nhớ bài Old Macdonald Had a Farm không? Các đoạn điệp khúc hơi
+          khác nhau đối với mỗi con vật. And on that farm, he had a cow, e-i-e-i-o.
+          Sự thay đổi nhỏ trong mỗi phần điệp khúc có thể được hiển thị bằng cách
+          sử dụng một yếu tố mà chúng tôi gọi là thông số.
+      2:
+        text: Đôi khi hàm cần có một thông số. Thông số là phần thông tin bổ sung
+          mà bạn có thể đưa vào hàm để tùy chỉnh theo nhu cầu đặc biệt. Khi bạn làm
+          bánh su kem với bạn bè, bạn đang sử dụng một quy trình tương tự như các
+          thông số trong chương trình máy tính.
+      3:
+        text: Đĩa kem vani có thể giống nhau đối với mỗi ly kem nhưng khi bạn hỏi
+          bạn bè của mình loại topping nào mà họ thích, bạn có thể nhận được rất nhiều
+          sự kết hợp khác nhau. Topping là tên hàm nhưng mỗi loại topping là một thông
+          số. Các hàm và thông số kết hợp với nhau để tạo ra các chương trình máy
+          tính tuyệt vời và cả những ly kem tuyệt vời nữa.
+    C4_unplugged_variables:
+      1:
+        text: Bài học này được gọi là biến trong phong bì. Chúng ta sẽ tìm hiểu cách
+          chúng ta viết câu khi thiếu các phần thông tin. Hầu hết chúng ta đã quen
+          thuộc với ý tưởng điền vào chỗ trống. Chúng ta làm điều đó khi ghi tên mình
+          vào bài tập về nhà. Đôi khi có nhiều hơn một từ cần được điền và trong trường
+          hợp đó, chúng ta gắn nhãn cho ô trống đó để biết phần thông tin nào cần
+          điền vào đâu.
+      2:
+        text: Biến là phần giữ chỗ cho các phần thông tin có thể thay đổi. Bằng cách
+          sử dụng biến cho thông tin còn thiếu, chúng ta có thể tiếp tục làm bất cứ
+          điều gì chúng tôi đang làm và để người khác điền thông tin bị thiếu sau
+          đó. Trong phần mềm, chúng ta sử dụng các biến rất nhiều. Chúng ta sử dụng
+          biến làm trình giữ chỗ cho tên, địa chỉ email và thậm chí cả tên người dùng.
+          Bằng cách đó, chúng ta có thể cho chương trình biết những chi tiết đó sẽ
+          xuất hiện ở đâu sau khi người dùng điền vào. Chúng ta thường xuyên sử dụng
+          biến trong công việc của mình.
+      3:
+        text: Bất kỳ lúc nào bạn cần lưu trữ một phần thông tin để sử dụng sau này,
+          chúng ta sử dụng biến. Giả sử chúng ta cần đếm số lần người dùng đã tweet.
+          Mỗi khi người dùng đó tweet, chúng ta sẽ cộng một vào con số đó và mỗi khi
+          người dùng xóa một tweet, chúng ta sẽ trừ một vào con số đó. Bất cứ khi
+          nào chúng ta cần biết người dùng đó đã tweet bao nhiêu lần, chúng ta sẽ
+          chỉ xem xét biến đó.
+    C4_variables_artist:
+      1:
+        text: Biến là một vùng chứa mà bạn có thể lưu trữ giá trị. Khi bạn sử dụng
+          biến trong thuật toán, biến đó sẽ mở ra vùng chứa và xem giá trị bên trong.
+          Điều này cho phép bạn viết các thuật toán thông minh hơn, cách hoạt động
+          khác nhau tùy thuộc vào giá trị lưu trữ trong biến.
+      2:
+        text: 'Ví dụ: nếu bạn muốn viết thuật toán để nói “Chúc mừng sinh nhật, em
+          tròn 10 tuổi rồi!” cho em trai tôi, điều đó thật tuyệt nhưng khi tôi chạy
+          chương trình vào năm sau, tôi muốn chương trình nói rằng “Chúc mừng sinh
+          nhật, em tròn 11 tuổi rồi!”. Tôi có thể tạo biến có tên là “tuổi” để lưu
+          tuổi của em trai và viết thuật toán để nói “Chúc mừng sinh nhật, em tròn
+          ‘tuổi’ tuổi rồi!”. Bởi vì biến có thể thay đổi, hàng năm tôi có thể cập
+          nhật biến “tuổi” bằng “tuổi” cộng 1.'
+      3:
+        text: Trong bài tập này, chúng ta sẽ sử dụng biến đặt độ dài của đoạn thẳng
+          mà họa sĩ của chúng ta vẽ. Sau đó trong mã lệnh của chúng ta, khối tiến
+          lên sẽ xem xét biến độ dài đó để xem bạn đã đặt nó thành giá trị nào.
+    C4_variables_playlab:
+      1:
+        text: Biến là một vùng chứa mà bạn có thể lưu trữ giá trị. Khi bạn sử dụng
+          biến trong thuật toán, biến đó sẽ mở ra vùng chứa và xem giá trị bên trong.
+          Điều này cho phép bạn viết các thuật toán thông minh hơn, cách hoạt động
+          khác nhau tùy thuộc vào giá trị lưu trữ trong biến.
+      2:
+        text: Bây giờ bạn sẽ thử PlayLab, nơi bạn được cung cấp các trò chơi khác
+          nhau và bạn có thể thay đổi giá trị của biến như tốc độ, chiều cao, điểm
+          số để thay đổi trò chơi. Bạn sẽ không phải thay đổi thuật toán của trò chơi
+          để thay đổi cách chơi, chỉ cần đổi biến.
+      3:
+        text: Trong công việc cho Kindle và X-ray cho sách, chúng ta áp dụng biến
+          theo nhiều cách khác nhau. Một cách mà bạn có thể sử dụng biến là lưu trữ
+          số trang của một cuốn sách. Người dùng có thể tăng và giảm kích thước của
+          phông chữ trên một trang. Dựa vào cỡ chữ, số trang trong sách có thể thay
+          đổi. Chúng ta có thể điều chỉnh nó bằng cách lưu trữ số trang trong biến.
+    infinity_playlab_events:
+      1:
+        text: Bây giờ chúng ta sẽ tìm hiểu về một thứ mà tất cả các lập trình viên
+          game sử dụng hàng ngày. Chúng được gọi là sự kiện. Sự kiện yêu cầu chương
+          trình của bạn theo dõi khi có hiện tượng xảy ra. Và sau đó khi phát hiện
+          ra, chương trình thực hiện một hành động. Một số ví dụ về các sự kiện theo
+          dõi nhấp chuột, nút mũi tên hoặc thao tác chạm trên màn hình.
+      2:
+        text: Ở đây, chúng ta sẽ làm cho Baymax di chuyển lên để chạm vào Hiro và
+          di chuyển xuống để chạm vào Rapunzel khi người chơi sử dụng các phím mũi
+          tên lên/xuống hoặc các nút lên/xuống. Chúng ta sẽ sử dụng khối khi nhấn
+          mũi tên lên và gắn khối di chuyển lên đó, vì vậy khi người chơi nhấn phím
+          mũi tên lên, mọi khối gắn liền với khối “khi nhấn mũi tên lên” sẽ chạy.
+          Chúng ta sẽ làm điều tương tự để Baymax đi xuống. Dần dần trò chơi của bạn
+          ngày càng có tính tương tác cao hơn.
+    infinity_playlab_intro:
+      1:
+        text: Vậy bạn đang học lớp mấy? Thứ hai. Lớp mười. Lớp một. Tôi học lớp tám
+          khi tôi học lập trình. Tôi có chiếc máy tính đầu tiên khi tôi học lớp sáu.
+          Điều khiến tôi phấn khích là có thể khắc phục sự cố của mọi người. Bạn có
+          cơ hội thể hiện bản thân, bạn có thể phát triển mọi thứ từ một ý tưởng.
+      2:
+        text: Khoa học máy tính là cơ sở cho rất nhiều điều mà sinh viên đại học và
+          các chuyên gia sẽ làm trong hai mươi hoặc ba mươi năm tới. Tôi thích lập
+          trình vì tôi thích giúp đỡ mọi người. Tôi có cơ hội phát triển một công
+          cụ giúp cho cuộc sống của mọi người dễ dàng hơn. Tôi nghĩ đó là thứ giống
+          với siêu sức mạnh nhất mà chúng ta có thể sở hữu. Khởi đầu là phần quan
+          trọng nhất. Bản thân tôi là người mới bắt đầu và tôi muốn bạn học cùng tôi.
+      3:
+        text: Tôi là John Vechey, tôi là một trong những nhà đồng sáng lập của PopCap
+          Games. Chúng tôi tạo ra các trò chơi như Plants vs. Zombies, Bejeweled và
+          Peggle. Rất nhiều trường hợp trong game, mã lệnh của bạn hoàn hảo đến mức
+          nào không quan trọng, thiết kế của bạn hoàn hảo đến mức nào cũng không quan
+          trọng, mà là về cảm giác và mức độ thú vị của nó. Bạn chỉ có thể sở hữu
+          cảm giác đó bằng cách thử, bằng cách làm, bằng cách học hỏi, thích nghi
+          và lặp lại các kỹ năng làm game của riêng bạn.
+      4:
+        text: Bạn có một trò chơi điện tử yêu thích? Chà, chúng ta sẽ tiến thêm một
+          bước để tạo ra các trò chơi giống như vậy bằng Play Lab. Game hay có cốt
+          truyện và mỗi câu chuyện đều có diễn viên. Diễn viên làm những việc như
+          nói, di chuyển và tương tác với nhau. Thậm chí có thể ghi điểm dựa trên
+          luật chơi. Hôm nay chúng ta sẽ từng bước học cách làm tất cả những điều
+          này với các nhân vật của Disney như Anna, Elsa, Hiro, Baymax và Rapunzel.
+          Chúng ta sẽ làm game từ con số 0 để có thể chia sẻ và chơi trên điện thoại
+          nhé.
+      5:
+        text: Màn hình của bạn được chia thành ba phần chính. Ở bên trái là không
+          gian trò chơi, nơi chương trình của bạn sẽ chạy. Hướng dẫn cho mỗi cấp độ
+          được viết dưới đây. Khu vực giữa này là hộp công cụ và mỗi khối này là một
+          đoạn mã lệnh. Khoảng trắng ở bên phải được gọi là không gian làm việc và
+          đây là nơi chúng ta sẽ lập trình chương trình của mình.
+      6:
+        text: Để bắt đầu, bạn cần gắn các khối của mình với khối “khi chạy” màu cam.
+          Bạn có thể gắn nhiều khối với nhau bằng cách kéo chúng ra cho đến khi bạn
+          nhìn thấy đường viền màu vàng và sau đó chúng sẽ gắn lại với nhau. Trong
+          bài tập đầu tiên này, Hiro là Diễn viên 1 và Baymax là Diễn viên 2. Chúng
+          ta cần di chuyển Hiro đến chỗ Baymax bằng cách kéo khối “di chuyển sang
+          phải” và gắn với khối “khi chạy”. Khi bạn xếp các khối vào vị trí, hãy nhấn
+          vào nút “Chạy” để xem những gì bạn đã lập trình.
+      7:
+        text: Hãy bắt đầu và cuối cùng, bạn sẽ có thể tạo ra trò chơi của riêng mình
+          với những diễn viên tuyệt vời có thể tương tác, ghi điểm, ném microbot,
+          quả anh đào, chảo, kim tuyến và băng... và làm diễn viên khác biến mất.
+          Tất cả là tùy vào bạn!
+    infinity_playlab_repeat_forever:
+      1:
+        text: Bạn có thể tưởng tượng nếu bạn phải lặp lại điều gì đó mãi mãi không?
+          Hy vọng rằng bạn sẽ không bao giờ phải làm như vậy vì máy tính thực sự giỏi
+          trong việc lặp lại mọi thứ. Đây là khối lặp lại mãi mãi. Bất cứ lệnh nào
+          bên trong khối này sẽ xảy ra mãi mãi trong trò chơi.
+      2:
+        text: Vì vậy, nếu chúng ta muốn một diễn viên lặp đi lặp lại một hành động
+          mà người chơi không phải làm bất cứ điều gì, chúng ta sẽ đặt những khối
+          đó bên trong khối lặp lại mãi mãi. Trong bài tập tiếp theo này, mục tiêu
+          của chúng ta là giúp Anna đi lên và xuống liên tục. Học cách hoạt động của
+          các lệnh lặp lại sẽ giúp bạn tiết kiệm rất nhiều thời gian sau này khi bạn
+          lập trình trò chơi của riêng mình.
+    tutorial_puzzle_challenge:
+      1:
+        text: Lớn lên bạn muốn làm nghề gì, Olivia? Phi hành gia ạ. Bạn có biết lập
+          trình máy tính là gì không? Ơ dạ không. Sao cơ? Tôi giỏi việc giải thích
+          rằng lập trình máy tính khá đơn giản. Đó là một tập hợp các hướng dẫn giống
+          như một công thức, bạn phải làm theo từng bước để có được kết quả cuối cùng
+          như mong muốn.
+      2:
+        text: Tôi có thể thay đổi số lượng điểm ảnh, độ dài của dòng bằng cách sử
+          dụng trình đơn thả xuống này. Độ dài là bao nhiêu ấy nhỉ? Bạn có thể xem
+          lại hướng dẫn bằng cách xem bên dưới nút chạy. Ở đây tôi đã sử dụng khối
+          tiến lên và tôi sẽ chọn 100 điểm ảnh. Tôi có thể xóa một khối bằng cách
+          kéo nó vào hộp công cụ hoặc thùng rác. Hãy đặt khối đó trở lại.
+      3:
+        text: Chạy mã lệnh bằng cách nhấn chạy. Chà, có gì đó không đúng! Tôi sẽ nhấn
+          đặt lại và tìm ra chỗ sai. Bạn có thể thử bài tập bao nhiêu lần tùy thích
+          và bỏ qua bài tập và quay lại sau. Chỉ cần nhớ là hãy cố gắng hết sức và
+          không bỏ cuộc. Hãy thêm một khối tiến lên. Vẫn không đúng. Tôi có thể đặt
+          một khối giữa các khối khác.
+      4:
+        text: Hãy lấy một khối rẽ và đặt ở giữa các khối tiến lên. Quay trái 45 độ.
+          Hãy chạy lại nào. Đặt lại, chạy, tuyệt vời! Đây là một bài tập khác. Đôi
+          khi bạn được cung cấp mã lệnh ban đầu để hoàn thành. Ở đây tôi cần thêm
+          độ dài và số đo góc thích hợp.
+      5:
+        text: Đôi khi bạn có thể vô tình làm hỏng mã lệnh ban đầu. Sau đó bạn sẽ làm
+          gì? Bạn có thể nhấn nút xóa bài tập và bắt đầu lại từ đầu. Tôi sẽ kéo khối
+          số này vào các khu vực điểm ảnh khác nhau. Chọn lại 100 điểm ảnh, góc 45
+          độ và 100 điểm ảnh một lần nữa. Thật bất ngờ! Đây là chú ong Code Studio.
+          Tôi cần di chuyển chú ong đến từng bông hoa và lấy mật hoa.
+      6:
+        text: Bông hoa đầu tiên cách đó ba khối nên tôi cần ba lần di chuyển tiếp.
+          1, 2, 3. Sau đó, dùng một khối lấy mật hoa, sau đó dùng một khối lấy mật
+          hoa nữa. Ôi, không được rồi! Tôi sẽ đặt một khối tiến lên khác giữa các
+          khối lấy mật hoa và chạy một lần nữa. Tuyệt, được rồi nè! Bạn vừa học cách
+          sử dụng họa sĩ Code Studio và bài tập về chú ong. Chúc may mắn với thử thách
+          bài tập của Code Studio nhé.
+    unplug1:
+      1:
+        text: Lớn lên bạn muốn làm nghề gì, Olivia? Ừm, phi hành gia ạ. Bạn có biết
+          lập trình máy tính là gì không? Ơ, dạ không. Sao cơ? Tôi giỏi việc giải
+          thích rằng lập trình máy tính khá đơn giản. Đó là một tập hợp các hướng
+          dẫn giống như một công thức, bạn phải làm theo từng bước để có được kết
+          quả cuối cùng như mong muốn.
+      2:
+        text: Khoa học máy tính là một cách để tác động đến thế giới. Có thể là video
+          ca nhạc, có thể là trò chơi, phát hiện xem ai đó có mối liên hệ với người
+          khác hay không. Tìm bạn bè cho mọi người nữa. Bạn có thể làm tất cả những
+          điều điên rồ mà thực sự cứu được mạng người. Tôi nghĩ bạn phải có công cụ.
+          Đối với tôi công cụ đó giống như cây cọ vẽ. Tôi nghĩ rằng một chương trình
+          tuyệt vời không có gì quá khác biệt so với một tác phẩm nghệ thuật tuyệt
+          vời.
+      3:
+        text: Sau này khi tôi học được một chút về lập trình, bức tường trống đó đã
+          biến thành một loạt các cánh cửa, bạn mở ra và tất nhiên bạn sẽ thấy đằng
+          sau những cánh cửa đó là một hành lang mới với hàng loạt cánh cửa. Lập trình
+          rất thú vị và dễ dàng. Bạn có thể làm bất cứ điều gì mà tâm trí bạn muốn
+          làm. Cuối cùng, bạn bắt đầu mở đủ cánh cửa để ánh sáng chiếu vào. Đối với
+          tôi, một chương trình hoàn thành giống như một cấu trúc chứa đầy ánh sáng.
+          Tất cả các góc đều được chiếu sáng. Số lượng người mà bạn có thể tiếp xúc
+          và tương tác là điều mà thế giới chưa từng thấy trước đây.
+      4:
+        text: Bài học đầu tiên của chúng ta trong loạt bài này là về khái niệm khoa
+          học máy tính, công việc của chuyên gia khoa học máy tính và cách hành xử
+          có trách nhiệm hơn khi sử dụng công nghệ. Đây là một bài học rất quan trọng
+          nhưng hơi nặng về lý thuyết. Cuối cùng, bạn có thể tạo mã hóa tùy chỉnh
+          của riêng bạn bằng cách sử dụng tên viết tắt của mình. Đây là hoạt động
+          thú vị và rất mạnh mẽ bởi vì nhị phân là một trong những khái niệm mang
+          lại cảm giác rất kỹ thuật nhưng một khi bạn hiểu thì giống như bạn nói một
+          ngôn ngữ bí mật vậy.
+    unplug2:
+      1:
+        text: Bài học về tư duy máy tính nhằm hướng dẫn bạn cách giải một bài toán
+          khó lớn và chia thành nhiều bài toán đơn giản hơn. Mục tiêu của bài học
+          này là viết một tập hợp các hướng dẫn để người khác làm theo và vẽ một trong
+          những con quái vật có trong giáo án.
+      2:
+        text: 'Học sinh sẽ chia thành các nhóm để viết hướng dẫn rồi chuyển sang nhóm
+          khác để vẽ con quái vật. Các nhóm sẽ viết hướng dẫn bằng bốn bước của tư
+          duy máy tính: phân tách, vị trí mẫu, tính trừu tượng và thuật toán.'
+      3:
+        text: Các nhóm đầu tiên sẽ phân tách nhiệm vụ, nghĩa là lập kế hoạch chơi.
+          Sau đó, họ sẽ tìm kiếm mẫu giữa tất cả các quái vật trong danh mục. Khi
+          họ phát hiện ra sự khác biệt giữa các quái vật, họ sẽ trừu tượng hóa hoặc
+          loại bỏ những chi tiết đó. Ví dụ, một con quái vật trong danh mục có mắt
+          vegitas và một con khác có mắt spritem. Nhưng cả hai đều có mắt nên chúng
+          ta có thể viết một dòng nói rằng con quái vật có đôi mắt rỗng.
+      4:
+        text: Vì vậy, học sinh sẽ có thể viết một tập hợp hướng dẫn được gọi là thuật
+          toán, liệt kê các bộ phận của quái vật và để trống hình dáng của bộ phân
+          đó. Đây là tập hợp các hướng dẫn mà họ sẽ chuyển cho học sinh khác để tái
+          tạo quái vật của riêng họ.
+    unplug3:
+      1:
+        text: Trong hoạt động lập trình trên giấy kẻ ô ly, chúng ta giúp giải thích
+          cách hoạt động của mã lệnh bằng cách cố gắng giúp mọi người vẽ lại bức tranh
+          chỉ với mũi tên và nét vẽ nguệch ngoạc. Một người nhận một bức tranh nhỏ
+          trên giấy kẻ ô vuông và họ chỉ cần sử dụng các mũi tên cụ thể để cố gắng
+          mô tả cách vẽ lại bức tranh đó.
+      2:
+        text: 'Trong hoạt động này, các biểu tượng duy nhất bạn có thể sử dụng là:
+          tiến một ô, lùi một ô, lên một ô, xuống một ô, đổi sang màu khác và tô màu
+          vào ô. Sau khi lập trình xong, chúng ta có thể giao cho người khác đọc mã
+          lệnh và thử và vẽ lại bức tranh.'
+    unplug4:
+      1:
+        text: Trong hoạt động lập trình trên giấy kẻ ô ly, chúng ta giúp giải thích
+          cách hoạt động của mã lệnh bằng cách cố gắng giúp mọi người vẽ lại bức tranh
+          chỉ với mũi tên và nét vẽ nguệch ngoạc. Một người nhận một bức tranh nhỏ
+          trên giấy kẻ ô vuông và họ chỉ cần sử dụng các mũi tên cụ thể để cố gắng
+          mô tả cách vẽ lại bức tranh đó.
+      2:
+        text: Trong nửa sau của hoạt động, chúng ta hỏi học sinh có bao nhiêu cách
+          khác nhau để gấp một mảnh giấy và tạo ra mười sáu hình chữ nhật giống nhau.
+          Sau đó, bạn sẽ thảo luận về việc nhiều giải pháp có thể dẫn đến cùng một
+          kết quả và tại sao một số giải pháp lại hiệu quả hơn trong một số tình huống
+          nhất định.
+    unplug5:
+      1:
+        text: Trong hoạt động lập trình trên giấy kẻ ô ly, chúng ta giúp giải thích
+          cách hoạt động của mã lệnh bằng cách cố gắng giúp mọi người vẽ lại bức tranh
+          chỉ với mũi tên và nét vẽ nguệch ngoạc. Một người nhận một bức tranh nhỏ
+          trên giấy kẻ ô vuông và họ chỉ cần sử dụng các mũi tên cụ thể để cố gắng
+          mô tả cách vẽ lại bức tranh đó.
+      2:
+        text: Trong nửa sau của hoạt động, chúng ta hỏi học sinh có bao nhiêu cách
+          khác nhau để gấp một mảnh giấy và tạo ra mười sáu hình chữ nhật giống nhau.
+          Sau đó, bạn sẽ thảo luận về việc nhiều giải pháp có thể dẫn đến cùng một
+          kết quả và tại sao một số giải pháp lại hiệu quả hơn trong một số tình huống
+          nhất định.
+    unplug6:
+      1:
+        text: Hoạt động này được gọi là lập trình với lá bài và phù hợp cho mọi lứa
+          tuổi. Giống như bạn đã học với câu lệnh if trong các bài học trước đó, trong
+          Blockly, câu lệnh if có chứa một phần mà bạn phải đánh giá để xem phần đó
+          đúng hay sai. Đó là lệnh điều kiện và bạn có thể sử dụng theo nhiều cách
+          khác nhau.
+      2:
+        text: Chúng ta tận dụng điều đó bằng cách viết chương trình trên giấy và chạy
+          chương trình bằng cách rút lá bài ngẫu nhiên. Bạn có thể nhận được câu lệnh
+          if có nội dung đại loại là nếu lá bài vừa rút lớn hơn 8, bạn được một điểm.
+          Nếu không, đối thủ của bạn sẽ được một điểm. Bạn có thể tùy ý tạo ra điều
+          kiện đơn giản hoặc phức tạp.
+    unplug7:
+      1:
+        text: Bạn có biết khi tìm lời bài hát, người ta xác định phần điệp khúc ngay
+          từ đầu rồi tới phần còn lại của bài hát, họ lại dẫn bạn quay trở lại phần
+          điệp khúc không? Đó là cách bạn gọi hàm.
+      2:
+        text: Trong bài học này, chúng ta xác định điệp khúc ở đầu bài hát, sau đó
+          chúng ta hát hết bài hát rồi quay lại, và chúng ta nhận thấy rằng cả lớp
+          không hát từ “điệp khúc”, các em tự động quay trở lại phần đầu tiên nơi
+          chúng ta xác định đoạn điệp khúc và hát phần đó. Chúng ta tận dụng hoạt
+          động này như một lời giới thiệu tuyệt vời về cách hiểu hoạt động của chương
+          trình khi định nghĩa và gọi hàm.
+      3:
+        text: Chúng ta sử dụng các bài hát quen thuộc như Old Macdonald để nói về
+          cách hát đi hát lại một đoạn điệp khúc và một số đoạn điệp khúc có thể thay
+          đổi. Nếu bạn có một bài hát như Old Macdonald, trong đó một số từ nhất định
+          thay đổi, đó là công cụ tuyệt vời để giới thiệu ý tưởng về các thông số.
+          Điền một số từ nhất định để bạn có thể đưa thêm thông tin cho hàm của mình.
+          Khi chúng ta chắc chắn rằng mọi người đều hiểu, bạn có thể dùng bài hát
+          quen thuộc của riêng mình và tự chia nhỏ. Hãy xem mọi người có thể cùng
+          nhau tìm ra không nhé.
+    unplug8:
+      1:
+        text: Bài học về tính trừu tượng sử dụng khái niệm quen thuộc về Mad Libs,
+          về cơ bản bạn sẽ chèn một ô trống vào một câu chuyện có thể chứa rất nhiều
+          từ khác nhau. Chúng ta lấy ý tưởng đó, đố các em nghĩ ra từ riêng cho câu
+          chuyện của trẻ và giải thích khái niệm tính trừu tượng.
+      2:
+        text: Bài học này chỉ nói về hàm và cách tạo hàm, như trong bài hát Old Macdonald,
+          nơi bạn có cấu trúc cho phần điệp khúc của mình nhưng bạn có một số thay
+          đổi nhỏ, bạn trừu tượng hóa phần thay đổi nhỏ đó và bạn có thể điền từ tùy
+          thích. Nhưng đôi khi bạn có ba từ thay đổi nên bạn điền những từ đó với
+          ba thông số, cách này vẫn khá hữu ích.
+      3:
+        text: Bạn có thể sở hữu một hàm xử lý được nhiều bài toán khác nhau. Mọi người
+          thường sẽ viết các hàm riêng biệt cho tất cả những bài toán đó mà không
+          nhận ra rằng chỉ có một sự khác biệt nhỏ. Nếu họ có thể tìm ra cách xử lý
+          khác biệt nhỏ đó, họ có thể tái sử dụng một hàm nhiều lần, thay vì tạo 14
+          hàm khác nhau.
+    unplug9:
+      1:
+        text: Lập trình tiếp sức là một bài học cực kỳ thú vị, hơn cả khoa học máy
+          tính. Đôi khi mọi người đều cảm thấy hơi bứt rứt và bạn muốn họ đứng dậy
+          vận động. Đây là một phương pháp lý tưởng để tạo thêm hứng thú với khoa
+          học máy tính.
+      2:
+        text: Bạn chia mọi người thành hai nhóm đứng thành một hàng và chạy kiểu chạy
+          tiếp sức. Người đầu tiên trong mỗi nhóm chạy sang phía bên kia của căn phòng,
+          nơi bạn có một bản vẽ trên giấy kẻ ô ly và một tờ giấy trắng đang đợi họ.
+          Họ viết ra bước đầu tiên để vẽ hình ảnh đó, chạy trở lại hàng của mình,
+          đập tay người chơi tiếp theo để tiếp sức và viết bước tiếp theo.
+      3:
+        text: Đây là cách tuyệt vời để tìm hiểu ý tưởng sửa lỗi, cần phải đọc lại
+          phần việc của chính mình và cần kiểm tra phần việc của những người đã hoàn
+          thành trước mình. Bạn sẽ nhanh chóng hiểu được tầm quan trọng của sự cẩn
+          thận trong quá trình viết mã lệnh khi cả nhóm phụ thuộc vào bạn.
+    unplug10:
+      1:
+        text: Hoạt động này giải thích một cách dễ hiểu cách thức hoạt động của Internet.
+          Chúng ta giải thích tất cả các thuật ngữ bạn sẽ cần những thuật ngữ đơn
+          giản để học sinh có thể mô phỏng việc truyền thông tin, chẳng hạn như email.
+      2:
+        text: Học sinh sẽ truyền thông tin trong khi đóng vai là một trong ba phương
+          thức truyền tải. Internet không dây, DSL hoặc cáp quang. Những học sinh
+          đại diện cho Wi-Fi sẽ phải đeo thông tin mà họ đang truyền trên đầu vì Wi-Fi
+          có khả năng làm mất thông tin cao nhất.
+      3:
+        text: Học sinh đóng vai DSL hoặc cáp sẽ mang thông tin trên mu bàn tay, nơi
+          họ ít có khả năng đánh rơi thông tin hơn. Còn học sinh đóng vai cáp quang
+          sẽ được mang thông tin bằng cả hai tay. Hoạt động này là phương pháp tuyệt
+          vời để hiểu công nghệ mà nhiều người trong chúng ta đang sử dụng hàng ngày.
+    unplug11:
+      1:
+        text: Giờ là lúc để dừng lại và nhìn tổng quan mọi hoạt động bạn đã thực hiện
+          trong 19 bài học vừa qua. Đây là thời điểm tuyệt vời để nhắc học sinh rằng
+          những gì họ vừa làm được là một thành tựu to lớn. Kiến thức họ đã học được
+          trong những bài học này nhiều hơn hiểu biết của hầu hết người trưởng thành
+          về khoa học máy tính.
+      2:
+        text: Thảo luận trong lớp hoặc trong nhóm nhỏ về các bài học yêu thích của
+          họ. Sau khi nhìn lại tất cả những kiến thức đã học, đây là nơi sự sáng tạo
+          của học sinh có thể tỏa sáng. Hãy chia họ thành các nhóm và yêu cầu họ tự
+          thiết kế bài học không dùng thiết bị điện tử của riêng mình. Chỉ định cho
+          mỗi nhóm một khái niệm chính, như hàm hoặc thuật toán và chuẩn bị sẵn thật
+          nhiều vật liệu làm thủ công để họ sử dụng. Yêu cầu mỗi nhóm trình bày hoạt
+          động không dùng thiết bị điện tử mới của mình hoặc thậm chí sắp xếp một
+          ngày khác để thực hiện một vài hoạt động do học sinh thiết kế.
+      3:
+        text: Tất cả chúng tôi ở đây tại Code.org đều hy vọng bạn đã có THẬT NHIỀU
+          niềm vui trong khóa học này. Và cho dù ước mơ của bạn là tạo ra một ứng
+          dụng mới tốt nhất, sử dụng lập trình để giúp chữa bệnh hay bạn chỉ muốn
+          trở thành một người giải quyết vấn đề xuất sắc, thì khóa học này là bước
+          đầu tiên để đạt được những ước mơ đó.
     starwars_intro:
       1:
         text: 'Xin chào, tôi là Kathleen Kennedy và tôi là nhà sản xuất của Chiến
@@ -1207,13 +2202,13 @@ vi:
           lại điểm xuất phát. Chúng ta hãy bắt đầu chạy nào!
     starwars_typing:
       1:
-        text: Bên trong các khối mà chúng tôi đang sử dụng là các lệnh JavaScript.
+        text: Bên trong các khối mà chúng ta đang sử dụng là các lệnh JavaScript.
           JavaScript là ngôn ngữ lập trình phổ biến nhất của các nhà phát triển chuyên
-          nghiệp hiện nay. Các khối là một cách tuyệt vời để bắt đầu học viết mã và
+          nghiệp hiện nay. Khối là một cách tuyệt vời để bắt đầu học lập trình và
           trên thực tế, các trường đại học hàng đầu như Harvard và Berkeley bắt đầu
           dạy theo phương pháp này. Nhưng trong khi chúng ta học những kiến thức căn
-          bản thì các kỹ sư viết mã bằng cách gõ văn bản vì cách đó cho phép chúng
-          tôi lập trình nhanh hơn.
+          bản thì các kỹ sư lập trình bằng cách gõ văn bản vì cách đó cho phép chúng
+          ta lập trình nhanh hơn.
       2:
         text: Chúng ta có thể gõ hàng trăm lệnh mà không cần phải tìm chúng trong
           hộp công cụ hoặc kéo chúng ra. Bởi vì trong giai đoạn học hỏi ban đầu, đánh
@@ -1228,12 +2223,12 @@ vi:
           Khi bắt đầu nhập, bạn sẽ thấy tên của các lệnh khả dụng hiển thị bên dưới
           vị trí bạn đang nhập. Thay vì nhập toàn bộ tên lệnh, bạn có thể chọn một
           trong các lệnh này để lập trình nhanh hơn. Trong công việc, tôi luôn sử
-          dụng tính năng tự động hoàn thành này khi viết mã.
+          dụng tính năng tự động hoàn thành này khi viết mã lệnh.
       5:
-        text: Khi nhập mã, máy tính cần bạn phải thật chính xác. Bạn cần đánh vần
-          và viết hoa tên lệnh một cách chính xác, bao gồm cả dấu ngoặc đơn và dấu
-          chấm phẩy. Ngay cả một lỗi đánh máy nhỏ cũng khiến BB-8 cũng không thể hiểu
-          được mã lệnh và sẽ không thể di chuyển.
+        text: Khi nhập mã lệnh, máy tính cần bạn phải thật chính xác. Bạn cần đánh
+          vần và viết hoa tên lệnh một cách chính xác, bao gồm cả dấu ngoặc đơn và
+          dấu chấm phẩy. Ngay cả một lỗi đánh máy nhỏ cũng khiến BB-8 cũng không thể
+          hiểu được mã lệnh và sẽ không thể di chuyển.
       6:
         text: Khi bạn mắc lỗi trên dòng, trình chỉnh sửa sẽ đánh dấu lỗi đó để bạn
           có thể thử thay đổi văn bản của mình để sửa lỗi đó.
@@ -1563,9 +2558,28 @@ vi:
       4:
         text: Bây giờ bạn có thể xây dựng bất cứ thứ gì mà bạn muốn. Chúc vui vẻ!
     gumball_intro:
+      1:
+        text: Nếu bạn muốn làm game của riêng mình thì dễ lắm. Tất cả những gì bạn
+          cần chỉ là một chút kiến thức cơ bản về lập trình và bạn có thể bắt đầu
+          chơi game mà mình vừa tạo.
+      2:
+        text: Bạn có một trò chơi điện tử yêu thích? Chúng ta sẽ tiến thêm một bước
+          để tạo ra các trò chơi giống như vậy bằng Play Lab. Game hay có cốt truyện
+          và mỗi câu chuyện đều có diễn viên. Diễn viên làm những việc như nói, di
+          chuyển và tương tác với nhau. Thậm chí có thể ghi điểm dựa trên luật chơi.
+          Hôm nay chúng ta sẽ từng bước học cách làm tất cả những điều này với các
+          nhân vật vui nhộn và làm game từ con số 0 để có thể chia sẻ và chơi trên
+          điện thoại nhé.
+      3:
+        text: Hôm nay, chúng ta sẽ học cách thực hiện tất cả những điều này lần lượt
+          với các diễn viên vui nhộn, rồi lập trình game từ con số 0 để có thể chia
+          sẻ và chơi trên điện thoại.
       4:
         text: Màn hình của bạn được chia thành ba phần chính. Ở bên trái là không
           gian chương trình sẽ chạy. Các lệnh cho từng cấp độ được viết bên dưới.
+      5:
+        text: Khu vực ở giữa này là hộp công cụ và mỗi khối trong số này là một đoạn
+          mã lệnh.
       6:
         text: Vùng màu trắng bên phải được gọi là không gian làm việc và đây là nơi
           bạn sẽ xây dựng chương trình.
@@ -1573,10 +2587,72 @@ vi:
         text: Để bắt đầu, bạn sẽ cần liên kết các khối với khối màu cam "khi chạy".
           Bạn có thể liên kết nhiều khối với nhau bằng cách kéo chúng cho đến khi
           bạn nhìn thấy đường màu vàng, và sau đó chúng sẽ nối liền với nhau.
+      8:
+        text: Trong bài tập đầu tiên này, chúng ta sẽ bắt các diễn viên nói điều gì
+          đó bằng cách gắn khối “nói” với khối “khi chạy” và nhập thông điệp của bạn.
+          Sau khi đã có các khối của mình, hãy nhấn vào nút chạy để xem những gì bạn
+          đã lập trình.
+      9:
+        text: Hãy bắt đầu và cuối cùng, bạn sẽ có thể tạo ra trò chơi của riêng mình
+          với thật nhiều kiểu người chơi có thể tương tác, ghi điểm, ném đồ vật và
+          làm người chơi khác biến mất. Tất cả là tùy vào bạn!
+    gumball_events:
+      1:
+        text: Bây giờ, chúng ta cần tìm hiểu về một thứ mà tất cả các lập trình viên
+          game sử dụng hàng ngày. Đó là sự kiện. Sự kiện yêu cầu chương trình của
+          bạn phát hiện sự việc nào đó xảy ra và khi đó, game sẽ thực hiện một hành
+          động.
+      2:
+        text: Một số ví dụ về các sự kiện đang phát hiện thao tác nhấp chuột hoặc
+          phím mũi tên lên hoặc xuống hoặc thậm chí là một lần chạm trên màn hình.
+      3:
+        text: Ở đây, chúng ta sẽ cho diễn viên nói điều gì đó khi người chơi nhấp
+          chuột vào. Chúng ta sẽ sử dụng khối “khi nhấp chuột” và gắn khối “nói” vào
+          đó. Khi người chơi nhấp chuột, tất cả các khối được gắn vào khối này sẽ
+          được thực hiện.
+      4:
+        text: Ngoài ra còn có khối khi nhấn mũi tên. Nếu bạn gắn các khối di chuyển
+          với các khối đó, bạn có thể bắt đầu di chuyển các diễn viên của mình lên,
+          xuống, sang trái, sang phải bằng các phím mũi tên. Dần dần game của bạn
+          ngày càng trở nên tương tác hơn.
+    gumball_repeat:
+      1:
+        text: Bạn có thể tưởng tượng nếu bạn phải lặp lại điều gì đó mãi mãi không?
+          Hy vọng rằng bạn không bao giờ phải làm như vậy vì máy tính thực sự giỏi
+          trong việc lặp lại mọi thứ.
+      2:
+        text: Đây là khối lặp lại mãi mãi. Bất cứ hành động nào bên trong khối này
+          sẽ xảy ra mãi mãi trong trò chơi. Nếu chúng ta muốn một diễn viên làm điều
+          gì đó lặp đi lặp lại mà người chơi không cần phải làm bất cứ điều gì, chúng
+          ta sẽ đặt những khối đó bên trong khối lặp lại mãi mãi.
+      3:
+        text: Trong bài tập tiếp theo này, mục tiêu của chúng ta là giúp diễn viên
+          làm một việc liên tục. Tìm hiểu cách hoạt động của các lệnh lặp lại sẽ giúp
+          bạn tiết kiệm rất nhiều thời gian sau này khi bạn lập trình game của riêng
+          mình.
     iceage_intro:
+      1:
+        text: Nếu bạn muốn làm game của riêng mình thì dễ lắm. Tất cả những gì bạn
+          cần chỉ là một chút kiến thức cơ bản về lập trình và bạn có thể bắt đầu
+          chơi game mà mình vừa tạo.
+      2:
+        text: Bạn có một trò chơi điện tử yêu thích? Chúng ta sẽ tiến thêm một bước
+          để tạo ra các trò chơi giống như vậy bằng Play Lab. Game hay có cốt truyện
+          và mỗi câu chuyện đều có diễn viên. Diễn viên làm những việc như nói, di
+          chuyển và tương tác với nhau. Thậm chí có thể ghi điểm dựa trên luật chơi.
+          Hôm nay chúng ta sẽ từng bước học cách làm tất cả những điều này với các
+          nhân vật vui nhộn và làm game từ con số 0 để có thể chia sẻ và chơi trên
+          điện thoại nhé.
+      3:
+        text: Hôm nay, chúng ta sẽ học cách thực hiện tất cả những điều này lần lượt
+          với các diễn viên vui nhộn, rồi lập trình game từ con số 0 để có thể chia
+          sẻ và chơi trên điện thoại.
       4:
         text: Màn hình của bạn được chia thành ba phần chính. Ở bên trái là không
           gian chương trình sẽ chạy. Các lệnh cho từng cấp độ được viết bên dưới.
+      5:
+        text: Khu vực ở giữa này là hộp công cụ và mỗi khối trong số này là một đoạn
+          mã lệnh.
       6:
         text: Vùng màu trắng bên phải được gọi là không gian làm việc và đây là nơi
           bạn sẽ xây dựng chương trình.
@@ -1584,6 +2660,339 @@ vi:
         text: Để bắt đầu, bạn sẽ cần liên kết các khối với khối màu cam "khi chạy".
           Bạn có thể liên kết nhiều khối với nhau bằng cách kéo chúng cho đến khi
           bạn nhìn thấy đường màu vàng, và sau đó chúng sẽ nối liền với nhau.
+      8:
+        text: Trong bài tập đầu tiên này, chúng ta sẽ bắt các diễn viên nói điều gì
+          đó bằng cách gắn khối “nói” với khối “khi chạy” và nhập thông điệp của bạn.
+          Sau khi đã có các khối của mình, hãy nhấn vào nút chạy để xem những gì bạn
+          đã lập trình.
+      9:
+        text: Hãy bắt đầu và cuối cùng, bạn sẽ có thể tạo ra trò chơi của riêng mình
+          với thật nhiều kiểu người chơi có thể tương tác, ghi điểm, ném đồ vật và
+          làm người chơi khác biến mất. Tất cả là tùy vào bạn!
+    iceage_events:
+      1:
+        text: Bây giờ, chúng ta cần tìm hiểu về một thứ mà tất cả các lập trình viên
+          game sử dụng hàng ngày. Đó là sự kiện. Sự kiện yêu cầu chương trình của
+          bạn phát hiện sự việc nào đó xảy ra và khi đó, game sẽ thực hiện một hành
+          động.
+      2:
+        text: Một số ví dụ về các sự kiện đang phát hiện thao tác nhấp chuột hoặc
+          phím mũi tên lên hoặc xuống hoặc thậm chí là một lần chạm trên màn hình.
+      3:
+        text: Ở đây, chúng ta sẽ cho diễn viên nói điều gì đó khi người chơi nhấp
+          chuột vào. Chúng ta sẽ sử dụng khối “khi nhấp chuột” và gắn khối “nói” vào
+          đó. Khi người chơi nhấp chuột, tất cả các khối được gắn vào khối này sẽ
+          được thực hiện.
+      4:
+        text: Ngoài ra còn có khối khi nhấn mũi tên. Nếu bạn gắn các khối di chuyển
+          với các khối đó, bạn có thể bắt đầu di chuyển các diễn viên của mình lên,
+          xuống, sang trái, sang phải bằng các phím mũi tên. Dần dần game của bạn
+          ngày càng trở nên tương tác hơn.
+    iceage_repeat:
+      1:
+        text: Bạn có thể tưởng tượng nếu bạn phải lặp lại điều gì đó mãi mãi không?
+          Hy vọng rằng bạn không bao giờ phải làm như vậy vì máy tính thực sự giỏi
+          trong việc lặp lại mọi thứ.
+      2:
+        text: Đây là khối lặp lại mãi mãi. Bất cứ hành động nào bên trong khối này
+          sẽ xảy ra mãi mãi trong trò chơi. Nếu chúng ta muốn một diễn viên làm điều
+          gì đó lặp đi lặp lại mà người chơi không cần phải làm bất cứ điều gì, chúng
+          ta sẽ đặt những khối đó bên trong khối lặp lại mãi mãi.
+      3:
+        text: Trong bài tập tiếp theo này, mục tiêu của chúng ta là giúp diễn viên
+          làm một việc liên tục. Tìm hiểu cách hoạt động của các lệnh lặp lại sẽ giúp
+          bạn tiết kiệm rất nhiều thời gian sau này khi bạn lập trình game của riêng
+          mình.
+    mc_2016_intro:
+      1:
+        text: Xin chào, tên tôi là Jens và tôi là nhà thiết kế sáng tạo chính của
+          Minecraft. Trong giờ tới, bạn sẽ tạo game Minecraft của riêng mình. Game
+          này trông giống như Minecraft nhưng thế giới đã dừng lại. Đàn cừu không
+          di chuyển, gà không đẻ trứng và thây ma chỉ đứng yên. Việc thêm mã lệnh
+          để làm cho thế giới Minecraft hoạt động là tùy thuộc vào bạn.
+      2:
+        text: 'Tên tôi là Melissa và tôi là một nhà nghiên cứu người dùng tại Minecraft.
+          Điều tôi thực sự quan tâm là cách mọi người suy nghĩ và tương tác với công
+          nghệ và vì vậy, công việc này là công việc hoàn hảo để tôi kết hợp kỹ thuật
+          máy tính với tâm lý: cách mọi người suy nghĩ và hành xử.'
+      3:
+        text: Bạn sẽ thấy màn hình của mình được chia thành ba phần chính. 1) Bên
+          trái là trò chơi Minecraft. Hiện tại, thế giới đang bị đóng băng nhưng chúng
+          ta sẽ khắc phục điều đó bằng mã lệnh.
+      4:
+        text: 2) Khu vực giữa này là hộp công cụ. Mỗi khối này là một lệnh mà gà,
+          cừu và các sinh vật Minecraft khác có thể hiểu được.
+      5:
+        text: 3) Không gian bên phải được gọi là không gian làm việc và đây là nơi
+          chúng ta sẽ phát triển chương trình của mình.
+      6:
+        text: Nếu bạn quên phải làm gì thì hướng dẫn cho mỗi cấp độ ở trên cùng.
+      7:
+        text: Để bắt đầu, chúng ta sẽ lập trình một con gà. Hãy kéo lệnh “tiến lên”
+          vào không gian làm việc. Khi tôi nhấn “Chạy”, con gà sẽ tiến lên một bước.
+          Để đi xa hơn, tôi sẽ kéo một khối “tiến lên” khác bên dưới khối “tiến lên”
+          đầu tiên cho đến khi phần nổi bật xuất hiện. Sau đó, tôi sẽ thả ra và hai
+          khối khớp lại với nhau. Nếu tôi nhấn “Chạy” một lần nữa, con gà đi hai bước.
+      8:
+        text: Nếu bạn muốn xóa một khối, chỉ cần xóa khối đó khỏi ngăn xếp và kéo
+          trở lại hộp công cụ.
+      9:
+        text: Sau khi nhấn “Chạy”, bạn luôn có thể nhấn nút “Đặt lại” để đặt lại game
+          và bắt đầu lại. Bây giờ, đến lượt bạn tạo phiên bản Minecraft của riêng
+          mình rồi. Chúc vui vẻ!
+    mc_2016_loops:
+      1:
+        text: Xin chào, tôi là Lisa. Tôi là nhà phát triển phần mềm trên Minecraft
+          và tôi làm việc trên một số loài động vật và kẻ thù trong trò chơi. Một
+          trong những con vật mà tôi đã làm việc là mèo gấm Ocelot. Tôi đã xử lý chức
+          năng giúp bạn có thể nuôi một con mèo gấm Ocelot để thuần hóa nó thành con
+          mèo của riêng bạn.
+      2:
+        text: Là con người, chúng ta thực sự cảm thấy nhàm chán nếu cứ phải làm đi
+          làm lại một việc giống nhau. Nhưng điều thú vị về máy tính là chúng có thể
+          làm điều tương tự hàng triệu, thậm chí hàng tỷ lần liên tục mà không thấy
+          chán. Sự lặp lại này được gọi là vòng lặp và mọi sinh vật trong Minecraft
+          đều sử dụng các vòng lặp.
+      3:
+        text: Trước đó, chúng ta có một con gà để di chuyển qua màn hình nhưng sau
+          đó nó dừng lại. Trong Minecraft, những con gà đi lang thang mãi mãi. Hãy
+          sử dụng vòng lặp “làm mãi mãi” từ hộp công cụ để khiến con gà di chuyển
+          mãi mãi. Sức mạnh của các vòng lặp sẽ giúp bạn tiết kiệm rất nhiều thời
+          gian và mở ra tất cả các loại tùy chọn gọn gàng khi bạn xây dựng phiên bản
+          Minecraft của riêng mình.
+    mc_2016_events:
+      1:
+        text: Ở cấp độ tiếp theo này, bạn có thể chọn trở thành Steve hoặc Alex. Nhấn
+          các nút mũi tên trên bàn phím để di chuyển lên, xuống, sang trái và phải.
+          Bây giờ bạn có thể di chuyển xung quanh một màn chơi bất cứ nơi nào bạn
+          muốn. Để sử dụng một sinh vật, chỉ cần đi về phía đó, quay mặt về phía sinh
+          vật đó và nhấn phím cách.
+      2:
+        text: Nếu bạn đang sử dụng màn hình cảm ứng, hãy vuốt lên, xuống, sang trái
+          và phải để di chuyển xung quanh. Sau đó chạm vào game để sử dụng vật phẩm
+          trước mặt bạn.
+      3:
+        text: Nhưng điều gì sẽ xảy ra khi bạn sử dụng vật phẩm đó? Trong Minecraft,
+          cừu sẽ thả len khi bạn xén lông, bò bỏ chạy khi bạn đánh chúng và creeper
+          phát nổ khi bạn đến gần. Những phản ứng này xảy ra nhờ một thứ gọi là sự
+          kiện. Các sự kiện cho biết chương trình theo dõi hoặc đợi khi có điều gì
+          đó xảy ra. Và khi đó, hãy thực hiện một hành động.
+      4:
+        text: Bạn đã sử dụng một sự kiện cho tới thời điểm hiện tại. Mã lệnh bạn đặt
+          trong ô “khi xuất hiện” sẽ chạy khi sinh vật của bạn được tạo ra hoặc khi
+          trò chơi bắt đầu. Trong một vài màn chơi tiếp theo, bạn sẽ có các ô mới
+          cho các sự kiện như “khi chạm” để chạy khi bạn chạm vào sinh vật hoặc “khi
+          dùng” trong trường hợp bạn sử dụng sinh vật đó. Ngoài ra, nếu bạn muốn thây
+          ma của mình biến mất khi mặt trời mọc, hãy đặt nó vào ô “khi là ban ngày”.
+    mc_2016_spawn:
+      1:
+        text: Trong game, xuất hiện có nghĩa tương tự như tạo. Trong cấp độ này, hãy
+          làm cho các thây ma xuất hiện khi mặt trời lặn. Để làm điều này, chúng ta
+          sẽ sử dụng khối “khi là ban đêm”.
+      2:
+        text: Vì chúng ta muốn thây ma xuất hiện vào ban đêm nên chúng ta sẽ thêm
+          khối “thây ma xuất hiện” bên dưới khối “khi là ban đêm”. Ngay sau khi chúng
+          xuất hiện, mỗi thây ma sẽ chạy mã lệnh mà bạn đặt trong vùng sự kiện “khi
+          xuất hiện”. Chúc bạn tạo ra thây ma vui vẻ nhé!
+    mc_2016_congrats:
+      1:
+        text: Xin chúc mừng! Bạn đã học cách sử dụng các lệnh khoa học máy tính để
+          biến thế giới Minecraft trở nên sống động. Bây giờ bạn đã trở thành nhà
+          phát triển. Bạn đã mở khóa tất cả các lệnh và tất cả các sinh vật. Bạn là
+          người chọn những gì sẽ xảy ra.
+      2:
+        text: Khi bạn hoàn thành game của mình, hãy chọn chia sẻ để nhận liên kết
+          có thể chia sẻ với bạn bè hoặc để chơi game của mình trên điện thoại. Chúc
+          vui vẻ nhé! Tôi rất mong chờ được chơi phiên bản Minecraft của bạn.
+    applab_intro_welcome:
+      1:
+        text: Tên tôi là Mei'lani. Tôi là một thực tập sinh tại code.org và tôi cũng
+          là một sinh viên khoa học máy tính. Tôi thích khoa học máy tính vì môn học
+          này thực sự sáng tạo. Tôi được trở thành người giải quyết vấn đề. Tôi phải
+          làm cho mọi thứ hoạt động theo cách tôi muốn. Nhưng tôi cũng có thể trở
+          thành nhà thiết kế. Tôi trở thành họa sĩ và chọn mọi thứ trên khía cạnh
+          sáng tạo của nó.
+      2:
+        text: Tạo ứng dụng của riêng bạn thật dễ dàng với App Lab! Cho dù bạn là người
+          mới lập trình hay đã có chút kinh nghiệm. App Lab là một công cụ tuyệt vời
+          để lập trình các ứng dụng mới và chia sẻ với bạn bè của bạn.
+      3:
+        text: Đây là App Lab. Ở phía bên trái là ứng dụng của bạn. Ở phía bên phải
+          là mã lệnh làm cho ứng dụng chạy. Bạn xây dựng chương trình của mình bằng
+          cách kéo các khối từ hộp công cụ. Để bắt đầu, bạn sẽ chỉ có một khối được
+          gọi là 'setProperty'.
+      4:
+        text: Khối đặt thuộc tính thay đổi giao diện của các phần tử trên màn hình
+          như các nút, nhãn hoặc thậm chí chính màn hình. Trước tiên, bạn cần quyết
+          định yếu tố nào bạn muốn thay đổi. Nếu bạn di chuột qua một phần tử trong
+          ứng dụng của mình, bạn có thể thấy tên hoặc ID tại đây. Sau đó, chọn ID
+          đó từ menu thả xuống đầu tiên.
+      5:
+        text: Các phần tử có rất nhiều thuộc tính mà bạn có thể thay đổi như màu văn
+          bản, màu nền hoặc kích thước phông chữ. Bạn có thể xem danh sách đầy đủ
+          và chọn thuộc tính bạn muốn thay đổi trong menu thả xuống thứ hai.
+      6:
+        text: Menu thả xuống cuối cùng là nơi bạn sẽ viết giá trị bạn muốn sử dụng.
+          Khối này sẽ đưa ra gợi ý cho bạn, nhưng bạn luôn có thể tự mình gõ các màu
+          hoặc số khác nhau.
+      7:
+        text: 'Sau khi hoàn tất, khối này có nội dung hơi giống một câu: ‘Đặt màu
+          nền của nút 1 thành màu xanh lục’. Nhấn chạy để xem những thay đổi bạn đang
+          tạo trong mã lệnh. Nếu bạn đặt lại, bạn có thể kéo thêm các khối để thay
+          đổi những yếu tố khác trong ứng dụng của mình. Như văn bản chẳng hạn!'
+      8:
+        text: Trong hướng dẫn này, chúng ta sẽ làm việc ở chế độ khối nhưng App Lab
+          cũng hỗ trợ làm việc ở chế độ văn bản.
+      9:
+        text: Dù bằng cách nào thì bạn cũng sẽ lập trình bằng JavaScript, ngôn ngữ
+          của web. Mỗi cấp độ có một mục tiêu, hướng dẫn và hình ảnh bạn cần tạo.
+      10:
+        text: Nếu gặp khó khăn, hãy nhấp chuột vào hình ảnh này và ứng dụng sẽ chỉ
+          cho bạn chính xác cách hoàn thành cấp độ. Nhưng trước tiên, hãy xem liệu
+          bạn có thể tự hoàn thành được không.
+      11:
+        text: Sau khi hoàn thành mục tiêu cho cấp độ này, hãy nhấp vào Hoàn tất để
+          tiếp tục. Xong rồi! Nhấn vào nút “tiếp tục” màu cam để chuyển sang cấp độ
+          tiếp theo và bắt đầu cuộc phiêu lưu của bạn với App Lab nhé!
+    applab_intro_events:
+      1:
+        text: Các ứng dụng thực sự thú vị vì giống như bạn tự khởi nghiệp, ý là, bạn
+          phải thiết kế từ đầu, bạn phải quản lý mọi thứ và bạn là chủ sở hữu của
+          tác phẩm mà bạn vừa tạo ra bằng mã lệnh.
+      2:
+        text: Bây giờ, bạn có thể thay đổi giao diện ứng dụng của mình, hãy tăng tính
+          tương tác bằng cách phản hồi các sự kiện! Sự kiện là các hành động của người
+          dùng như nhấp chuột, cuộn menu hoặc di chuột qua ảnh. Các ứng dụng tương
+          tác cần phương thức phản hồi sự kiện, chẳng hạn như phát âm thanh khi tôi
+          nhấp chuột vào nút này. Để thực hiện việc này trong App Lab, bạn cần sử
+          dụng một khối mới có tên 'onEvent'.
+      3:
+        text: Chương trình này đặt màn hình thành màu xanh lam. Tôi muốn màn hình
+          chuyển sang màu xanh lục khi tôi nhấp chuột vào nút này. Đầu tiên, tôi cần
+          kéo một khối onEvent. Bằng cách di chuột, tôi biết ID của nút là “bigButton”,
+          vì vậy tôi sẽ chọn ID đó trong menu thả xuống đầu tiên.
+      4:
+        text: Tiếp theo, tôi sẽ chọn loại sự kiện. Có rất nhiều tùy chọn bạn có thể
+          chọn nhưng ngay bây giờ tôi sẽ để nó như một lần nhấp chuột kiểu thông thường
+          như ban đầu.
+      5:
+        text: 'Cuối cùng, tôi sẽ thêm mã lệnh vào bên trong onEvent để thay đổi màu
+          nền của màn hình. Bạn có thể đọc khối này như một câu: “Nếu sự kiện nhấp
+          chuột vào nút này xảy ra, hãy chạy tất cả mã lệnh sau”.'
+      6:
+        text: Hãy thử đi. Các khối bên ngoài onEvent vẫn chạy ngay lập tức nên màn
+          hình ban đầu có màu xanh lam.
+      7:
+        text: Và khi tôi nhấp vào nút lớn, mã lệnh bên trong onEvent chạy và màn hình
+          của tôi chuyển sang màu xanh lục.
+      8:
+        text: Nếu bạn muốn thay đổi nhiều thứ hơn sau sự kiện, chẳng hạn như văn bản
+          trên màn hình, chỉ cần thêm nhiều mã lệnh hơn vào onEvent.
+      9:
+        text: Để làm cho chương trình của bạn phản hồi với nhiều sự kiện hơn, hãy
+          thêm nhiều khối onEvent hơn. Chỉ cần đảm bảo không đặt chúng lồng vào nhau.
+          Bây giờ là lúc để tự mình thử rồi đó. Chúc vui vẻ!
+    applab_intro_sounds:
+      1:
+        text: Tiếp theo, bạn sẽ tìm hiểu về cách thêm hình ảnh và âm thanh vào ứng
+          dụng của mình. Hãy bắt đầu bằng cách xem các tùy chọn âm thanh.
+      2:
+        text: Trong hộp công cụ, bạn sẽ tìm thấy một khối mới có tên “playSound”.
+          Kéo khối đó vào không gian làm việc. Bạn có thể chọn âm thanh để phát bằng
+          cách nhấp vào menu thả xuống, sau đó nhấp vào “Chọn”.
+      3:
+        text: Từ đây, bạn có thể tải lên tệp âm thanh từ máy tính của mình hoặc tìm
+          kiếm âm thanh từ thư viện âm thanh. Thư viện âm thanh có rất nhiều danh
+          mục khác nhau như nhạc cụ, nhạc nền hoặc động vật.
+      4:
+        text: Khi bạn đã có âm thanh mình muốn, hãy nhấp vào “Chọn”. Khi khối này
+          chạy, nó sẽ phát âm thanh mà bạn đã chọn.
+      5:
+        text: Để thêm hình ảnh vào các phần tử của bạn, bạn chỉ có thể sử dụng khối
+          setProperty. Chọn thuộc tính hình ảnh trong menu thả xuống thứ hai
+      6:
+        text: Sau đó chọn mục “Chọn” từ trình đơn thả xuống thứ ba.
+      7:
+        text: Từ đây, bạn có thể tải lên hình ảnh từ máy tính của mình hoặc bạn có
+          thể xem qua một thư viện biểu tượng khổng lồ trong thư viện biểu tượng.
+      8:
+        text: Quay lại chế độ mã lệnh, bạn có thể sử dụng khối “setProperty” để thay
+          đổi màu biểu tượng của bạn. Khi đã chọn được hình ảnh mà biểu tượng sẽ sử
+          dụng, hãy nhấp vào “Chạy” để xem biểu tượng trông như thế nào.
+      9:
+        text: Xong rồi đó! Giờ đây, bạn có thể bắt đầu thêm hình ảnh và âm thanh để
+          làm cho ứng dụng của mình trở nên thú vị và năng động hơn.
+    applab_intro_designmode:
+      1:
+        text: Để lập trình ứng dụng của riêng bạn, bạn cần bắt đầu thiết kế màn hình
+          và các yếu tố từ con số 0. App Lab giúp việc này dễ dàng thực hiện với Chế
+          độ thiết kế.
+      2:
+        text: Sử dụng nút gạt phía trên cùng của ứng dụng để chuyển sang Chế độ thiết
+          kế.
+      3:
+        text: Bạn có thể thêm các phần tử mới bằng cách kéo chúng lên màn hình. Bạn
+          có thể di chuyển chúng đến các vị trí khác nhau và thay đổi kích thước của
+          chúng bằng cách kéo góc dưới cùng bên phải.
+      4:
+        text: 'Để thay đổi thuộc tính của một phần tử, hãy sử dụng các nút điều khiển
+          ở bên phải. Ví dụ: việc thay đổi văn bản, màu sắc và kích thước phông chữ
+          của nút này rất đơn giản.'
+      5:
+        text: Khi bạn thêm một phần tử mới vào màn hình, phần tử này sẽ nhận được
+          một ID chung như button1. Bạn nên thay đổi ID của nút này thành một nội
+          dung có ý nghĩa hơn như “rightButton”. Như vậy, bạn sẽ biết phần tử đó là
+          gì khi truy cập chương trình.
+      6:
+        text: Nếu bạn vô tình thêm một phần tử vào ứng dụng của mình, chỉ cần kéo
+          phần tử đó ra hoặc nhấn nút xóa.
+      7:
+        text: Bạn có thể thêm màn hình hoàn toàn mới vào ứng dụng của mình bằng cách
+          kéo phần tử màn hình vào.
+      8:
+        text: Từ menu thả xuống ở trên cùng, bạn có thể nhanh chóng chuyển đổi qua
+          lại giữa các màn hình bạn tạo.
+      9:
+        text: Trong ứng dụng của mình, bạn cần một cách để chuyển đổi giữa tất cả
+          các màn hình này, vì vậy khối setScreen đã được thêm vào hộp công cụ. Sử
+          dụng “setScreen” bên trong khối “onEvent" để thay đổi màn hình chỉ bằng
+          một nút bấm.
+      10:
+        text: Trong vài cấp độ tiếp theo, bạn sẽ làm việc trên một dự án duy nhất.
+          Đầu tiên, bạn sẽ thêm một nút, sau đó bạn sẽ thêm một màn hình mới và cuối
+          cùng bạn sẽ viết mã lệnh để nút đó chuyển sang màn hình mới.
+    applab_intro_share:
+      1:
+        text: Vậy là bạn đã học một số kiến thức cơ bản về App Lab như thêm nút, âm
+          thanh, hình ảnh, văn bản và màn hình mới, bạn có thể tạo tất cả các loại
+          ứng dụng.
+      2:
+        text: Ở cấp độ tiếp theo, bạn sẽ tìm thấy ứng dụng mà bạn vừa lập trình xong.
+          Với một chút sáng tạo, bạn có thể biến ứng dụng này thành một bài trắc nghiệm
+          tính cách cho bạn bè, một tấm thiệp chúc mừng mà bạn có thể chia sẻ với
+          gia đình hoặc một trò chơi phiêu lưu tự chọn. Tất cả các ứng dụng này chỉ
+          là sự kết hợp của các kỹ năng bạn đã học và tôi cá là bạn có thể nghĩ ra
+          nhiều hơn nữa.
+      3:
+        text: Sau khi hoàn tất ứng dụng của mình, bạn có thể dễ dàng gửi ứng dụng
+          đến điện thoại của mình để xem thử. Chỉ cần nhấp chuột vào “Chia sẻ” và
+          nhập số điện thoại của bạn tại đây.
+      4:
+        text: Bạn sẽ nhận được một tin nhắn văn bản cho phép bạn mở ứng dụng của mình
+          ngay lập tức.
+      5:
+        text: Bạn cũng có thể chia sẻ liên kết đến ứng dụng của mình qua mạng xã hội
+          hoặc đăng lên thư viện công cộng code.org để những người khác chơi và chia
+          sẻ.
+      6:
+        text: Bạn chỉ vừa tìm hiểu sơ qua về những gì App Lab có thể làm. App Lab
+          đầy đủ có các tính năng tương tác người dùng nâng cao hơn, các phần tử màn
+          hình mới và thậm chí là cơ sở dữ liệu tích hợp để bạn có thể nhanh chóng
+          tạo các ứng dụng đầy đủ tính năng. Tại “code.org/applab”, bạn sẽ tìm thấy
+          công cụ đầy đủ và rất nhiều ý tưởng nếu bạn muốn tiếp tục.
+      7:
+        text: Cảm ơn bạn đã đồng hành. Bây giờ, hãy lập trình và chia sẻ ứng dụng
+          đầu tiên của bạn, đồng thời tiếp tục lập trình ứng dụng với App Lab nhé!
     mc_2017_agent_intro:
       1:
         text: 'Stacy: Stampy, Lizzy, Preston – cảm ơn các cậu đã đồng hành cùng tôi.
@@ -1632,6 +3041,8 @@ vi:
         text: Tác tử có thể đi, rẽ và kích hoạt các tấm áp lực. Nó cũng có thể phá
           hủy các khối và đặt các khối. Khi đặt khối giống như những đường ray xe
           mỏ này, tác tử sẽ đặt khối bên dưới chính nó.
+      11:
+        text: Nếu bạn quên phải làm gì thì hướng dẫn cho mỗi cấp độ ở trên cùng.
       12:
         text: Nếu muốn thử lại, bạn có thể nhấn vào nút đặt lại màu xanh dương để
           đặt lại mọi thứ về trạng thái ban đầu. Và nếu bạn cần xóa một khối mã lệnh,
@@ -1734,30 +3145,1229 @@ vi:
       8:
         text: 'Stampy: Làm sao làm được vậy? Stacy: Thực ra thì rất dễ dàng. Tôi vừa
           mới sử dụng mã lệnh đấy!'
-    hoc_dance_events_2019:
+    csd_concept_how_computers_work:
+      1:
+        text: 'Dù ở bất cứ đâu, máy tính cũng đang thay đổi thế giới. Cho dù ở trên
+          máy tính để bàn, trong nhà, trong túi của chúng ta hay ở bất kỳ nơi nào
+          khác. Nhưng trong khi hầu hết chúng ta sử dụng công nghệ mang tính cách
+          mạng này hàng ngày, chúng ta không thường hỏi: “Máy tính hoạt động như thế
+          nào?” Trong loạt bài học này, bạn sẽ tìm hiểu cách hoạt động thực sự của
+          máy tính, bắt đầu với bản chất của máy tính. Sau đó, bạn sẽ xem thông tin
+          được biểu diễn như thế nào bên trong máy tính với các tín hiệu điện cực
+          nhỏ bật và tắt với tốc độ đáng kinh ngạc.'
+      2:
+        text: Sau đó, bạn sẽ học cách máy tính sử dụng các mạch để làm mọi việc, từ
+          phép tính đơn giản đến mô phỏng toàn bộ thế giới ảo. Tiếp theo, bạn sẽ đi
+          sâu hơn và xem xét các linh kiện khác nhau của máy tính nhập, xuất và lưu
+          trữ tất cả thông tin trên thực tế. Cuối cùng, bạn sẽ xem khái niệm thực
+          sự của mã lệnh và cách phần mềm điều khiển phần cứng. Cho dù bạn chỉ tò
+          mò về các thiết bị bạn sử dụng hàng ngày hay bạn muốn thiết kế những cải
+          tiến của tương lai, thì bước đầu tiên là tìm hiểu cách hoạt động của máy
+          tính.
+    csd_concept_computer:
+      1:
+        text: Tên tôi là May-Li Khoe, tôi là một nhà thiết kế và một nhà phát minh.
+          Vì vậy, một số thứ tôi đã thiết kế đã có ở Apple, và bây giờ tôi thiết kế
+          các sản phẩm cho trẻ em sử dụng để trẻ thoải mái hơn khi ở trường. Các công
+          việc khác của tôi bao gồm DJ và khiêu vũ.
+      2:
+        text: Máy tính có mặt ở khắp mọi nơi! Chúng ở trong túi, ở trong xe, trên
+          cổ tay của mọi người. Chúng có thể nằm trong ba lô của bạn ngay lúc này.
+          Nhưng bản chất của máy tính là gì? Điều gì làm nên một chiếc máy tính? Và
+          máy tính hoạt động như thế nào?
+      3:
+        text: Xin chào, tôi là Nat! Tôi là một trong những nhà thiết kế đầu tiên của
+          Xbox. Tôi đã làm việc với máy tính từ khi mới 7 tuổi và bây giờ tôi làm
+          việc về thực tế ảo. Là con người, chúng ta luôn xây dựng các công cụ để
+          giúp chúng ta giải quyết vấn đề. Các công cụ như xe cút kít, búa, máy in
+          ép hoặc xe đầu kéo.
       4:
+        text: Tất cả những phát minh này đã giúp chúng ta làm công việc chân tay.
+          Theo thời gian, mọi người bắt đầu tự hỏi liệu một cỗ máy có thể được thiết
+          kế và chế tạo để giúp chúng ta thực hiện công việc tư duy như giải phương
+          trình hay theo dõi các vì sao trên bầu trời hay không. Thay vì di chuyển
+          hoặc thao tác trên những vật chất như đất đá, những cỗ máy này cần được
+          thiết kế để xử lý thông tin. Khi những người tiên phong của khoa học máy
+          tính khám phá cách thiết kế một cỗ máy tư duy, họ nhận ra rằng phải thực
+          hiện bốn nhiệm vụ khác nhau.
+      5:
+        text: Máy tính cần nhận tín hiệu đầu vào, lưu trữ thông tin xử lý và sau đó
+          xuất ra kết quả. Nghe có vẻ đơn giản nhưng bốn yếu tố này phổ biến cho tất
+          cả các máy tính. Đó là bản chất của máy tính.
+      6:
+        text: Ban đầu, máy tính chỉ là chiếc máy tính bỏ túi cơ bản nhưng thực sự
+          tuyệt vời vào thời điểm đó, và khi đó chúng chỉ thao tác với các con số.
+          Nhưng bây giờ chúng ta có thể sử dụng chúng để nói chuyện với nhau, chúng
+          ta có thể sử dụng chúng để chơi game, điều khiển robot và làm bất kỳ điều
+          gì điên rồ mà bạn có thể tưởng tượng ra. Những chiếc máy tính hiện đại khác
+          hoàn toàn những cỗ máy cũ kỹ nhưng chúng vẫn làm được bốn điều tương tự.
+      7:
+        text: Đầu tiên, chúng ta sẽ nói về tín hiệu đầu vào. Bạn có thể cho máy tính
+          biết phải làm gì bằng bàn phím, bằng chuột, micrô, máy ảnh. Tất cả các tín
+          hiệu đầu vào khác nhau này cung cấp thông tin máy tính, sau đó được lưu
+          trữ trong bộ nhớ.
+      8:
+        text: Bộ xử lý của máy tính lấy thông tin từ bộ nhớ. Máy tính thao tác thông
+          tin hoặc thay đổi bằng cách sử dụng thuật toán, vốn chỉ là một chuỗi lệnh.
+          Sau đó, máy tính sẽ gửi lại thông tin đã xử lý để lưu trữ trong bộ nhớ.
+          Quá trình này tiếp tục cho đến khi thông tin đã xử lý sẵn sàng xuất ra.
+      9:
+        text: Cách máy tính xuất thông tin phụ thuộc vào mục đích của chiếc máy tính
+          đó. Màn hình máy tính có thể hiển thị văn bản, ảnh, video hoặc game tương
+          tác – thậm chí cả thực tế ảo! Đầu ra của máy tính thậm chí có thể bao gồm
+          các tín hiệu để điều khiển robot.
+      10:
+        text: Và ai biết được chiếc máy tính của tương lai sẽ như thế nào? Tôi hy
+          vọng rằng bạn có thể giúp quyết định ý tưởng của bạn về chiếc máy tính của
+          tương lai. Nhưng trên tất cả các máy tính, bất kể loại công nghệ khác nhau
+          mà chúng sử dụng, chúng luôn làm bốn thao tác giống nhau. Chúng tiếp nhận
+          thông tin, lưu trữ dưới dạng dữ liệu, xử lý thông tin, rồi đưa ra kết quả.
+    csd_concept_binary_data:
+      1:
+        text: Xin chào! Tên tôi là Limor Fried, và tôi là kỹ sư tại Adafruit Industries.
+          Và đây là nơi tôi làm kỹ thuật và thiết kế, và tôi thiết kế bo mạch cho
+          lĩnh vực thời trang, âm nhạc và công nghệ.
+      2:
+        text: Tên tôi là Federico Gomez Suarez và tôi là nhà phát triển phần mềm tại
+          Microsoft Hack for Good. Tôi nghiên cứu quá trình sử dụng công nghệ để giúp
+          chúng ta giải quyết một số vấn đề xã hội lớn trong thời đại này.
+      3:
+        text: Bạn có thể đã từng nghe nói rằng máy tính hoạt động dựa trên số 1 và
+          số 0. Nhưng hầu như không ai ngày nay thực sự làm việc trực tiếp với những
+          số 1 và số 0 này. Nhưng số 1 và số 0 đóng vai trò lớn trong cách hoạt động
+          bên trong của máy tính.
+      4:
+        text: Bên trong máy tính là các sợi dây và mạch điện mang tất cả thông tin
+          trong máy tính. Làm thế nào để bạn lưu trữ hoặc biểu diễn thông tin bằng
+          điện?
+      5:
+        text: Nếu bạn có một sợi dây duy nhất có dòng điện chạy qua thì tín hiệu có
+          thể bật hoặc tắt. Không có nhiều sự lựa chọn, nhưng đây là khởi đầu thực
+          sự quan trọng. Với một sợi dây, chúng ta có thể biểu diễn có hoặc không,
+          đúng hoặc sai, một hoặc không, hoặc bất kỳ điều gì khác chỉ với hai tùy
+          chọn. Trạng thái bật/tắt của một dây đơn lẻ được gọi là bit và đó là phần
+          thông tin nhỏ nhất mà máy tính có thể lưu trữ.
+      6:
+        text: 'Nếu bạn sử dụng nhiều dây hơn, bạn sẽ nhận được nhiều bit hơn: nhiều
+          số 1 và số 0 hơn. Với nhiều bit hơn, bạn có thể biểu diễn nhiều thông tin
+          phức tạp hơn. Nhưng để hiểu được điều đó, chúng ta cần tìm hiểu về một thứ
+          gọi là hệ thống số nhị phân.'
+      7:
+        text: 'Trong hệ thống số thập phân, chúng ta có mười chữ số từ 0 đến 9, và
+          đó là cách tất cả chúng ta học đếm. Trong hệ thống nhị phân, chúng ta chỉ
+          có hai chữ số: 0 và 1. Với hai chữ số này, chúng ta có thể đếm đến bất kỳ
+          số nào.'
+      8:
+        text: 'Đây là cách nó hoạt động. Trong hệ thống số thập phân mà tất cả chúng
+          ta đều biết, mỗi vị trí trong một số có một giá trị khác nhau. Có vị trí
+          1, vị trí 10, vị trí 100, v.v. Ví dụ: số 9 ở vị trí 100 là số 900. Trong
+          hệ nhị phân, mỗi vị trí cũng mang một giá trị. Nhưng thay vì nhân với 10
+          mỗi lần, chúng ta nhân với 2. Vì vậy, có vị trí 1, vị trí 2, vị trí 4, vị
+          trí 8, v.v. Ví dụ, số 9 trong hệ nhị phân là 1001. Để tính giá trị, chúng
+          ta lấy 1 nhân 8, cộng 0 nhân 4, cộng 0 nhân 2, cộng thêm 1 nhân 1. Hầu như
+          không ai làm phép toán này vì máy tính làm thay chúng ta. Điều quan trọng
+          là bất kỳ số nào cũng có thể được biểu diễn bằng các số 1 và 0, hoặc bằng
+          một loạt các sợi dây được bật hoặc tắt. Bạn càng sử dụng nhiều dây, số lượng
+          bạn có thể lưu trữ càng lớn. Với 8 dây, bạn có thể lưu trữ các số từ 0 đến
+          255. Đó là 8 số 1. Chỉ với 32 sợi dây, bạn thậm chí có thể lưu trữ từ 0
+          đến hơn 4 tỷ. Bạn có thể biểu diễn bất kỳ số nào bạn thích bằng hệ thống
+          số nhị phân.'
+      9:
+        text: Nhưng những loại thông tin khác thì sao? Như văn bản, hình ảnh hoặc
+          âm thanh? Hóa ra tất cả những thông tin này cũng có thể biểu diễn bằng các
+          con số. Hãy xem tất cả các chữ cái trong bảng chữ cái. Bạn có thể gán một
+          số cho mỗi chữ cái. A có thể là 1, B có thể là 2, v.v. Sau đó, bạn có thể
+          biểu diễn bất kỳ từ hoặc đoạn văn nào dưới dạng một chuỗi số. Và như chúng
+          ta đã thấy, những con số này có thể được lưu trữ dưới dạng tín hiệu điện
+          bật hoặc tắt. Mọi từ bạn thấy trên mọi trang web hoặc điện thoại của bạn
+          đều được biểu diễn bằng một hệ thống như vậy.
+      10:
+        text: Bây giờ, hãy xem xét ảnh, video và tất cả yếu tố đồ họa bạn thấy trên
+          màn hình.
+      11:
+        text: Tất cả những hình ảnh này được tạo ra từ các chấm nhỏ gọi là điểm ảnh
+          và mỗi điểm ảnh có một màu. Mỗi màu có thể được biểu thị bằng các con số.
+          Khi bạn tính đến hình ảnh điển hình có hàng triệu điểm ảnh và video điển
+          hình hiển thị 30 hình trên giây thì lượng dữ liệu chúng ta đang nhắc tới
+          ở đây là rất lớn.
+      12:
+        text: Mỗi âm thanh là một loạt các dao động trong không khí. Rung động có
+          thể được biểu diễn bằng đồ thị dưới dạng sóng. Bất kỳ điểm nào trên dạng
+          sóng này đều có thể được biểu diễn bằng một số. Và theo cách này, bất kỳ
+          âm thanh nào cũng có thể được chia nhỏ thành một chuỗi số. Nếu bạn muốn
+          âm thanh chất lượng cao hơn, bạn sẽ chọn âm thanh 32 bit hoặc âm thanh 8
+          bit. Nhiều bit hơn có nghĩa là phạm vi số cao hơn.
+      13:
+        text: Khi bạn sử dụng máy tính để viết mã lệnh hoặc tạo ứng dụng của riêng
+          mình, bạn sẽ không xử lý trực tiếp những số 1 và 0 này. Nhưng bạn sẽ xử
+          lý hình ảnh hoặc âm thanh hoặc video. Vì vậy, nếu bạn muốn hiểu cách máy
+          tính hoạt động bên trong, tất cả đều dựa trên những số 1 và 0 đơn giản này
+          và các tín hiệu điện trong các bo mạch đằng sau.
+    csd_concept_circuits_logic:
+      1:
+        text: Một trong những điều thú vị nhất mà tôi đã khám phá được về mạch điện
+          là mạch điện có thể là một hình thức nghệ thuật, chẳng hạn như nếu tôi có
+          ý tưởng sáng tạo, tôi có thể thể hiện ý tưởng sáng tạo đó bằng cách sử dụng
+          mạch điện. Vì vậy, nếu bạn có ý tưởng, bạn có thể sử dụng công nghệ để biến
+          những ý tưởng đó thành hiện thực.
+      2:
+        text: Mọi tín hiệu đầu vào hoặc đầu ra của máy tính thực sự là một loại thông
+          tin, có thể được biểu diễn bằng các tín hiệu điện bật hoặc tắt hoặc các
+          con số 1 và 0.
+      3:
+        text: Để xử lý thông tin đầu vào và tạo thông tin đầu ra, máy tính cần sửa
+          đổi và kết hợp các tín hiệu đầu vào. Để làm được điều này, một máy tính
+          sử dụng hàng triệu linh kiện điện tử nhỏ, chúng kết hợp với nhau để tạo
+          thành mạch điện.
+      4:
+        text: Chúng ta hãy xem xét kỹ hơn cách các mạch điện có thể sửa đổi và xử
+          lý thông tin được biểu thị bằng số 1 và 0. Đây là một mạch điện cực kỳ đơn
+          giản. Mạch này nhận một tín hiệu điện, bật hoặc tắt, và đảo ngược tín hiệu
+          đó lại. Vì vậy, nếu tín hiệu bạn cung cấp cho mạch điện là số 1, mạch điện
+          cung cấp cho bạn số 0 và nếu bạn cung cấp cho mạch điện số 0, mạch điện
+          cho bạn số 1. Tín hiệu đi vào không giống với tín hiệu đi ra, và vì vậy
+          chúng ta gọi mạch này là KHÔNG.
+      5:
+        text: Các mạch phức tạp hơn có thể lấy nhiều tín hiệu và kết hợp chúng lại
+          và cho bạn một kết quả khác. Trong ví dụ này, một mạch sẽ nhận hai tín hiệu
+          điện, mỗi tín hiệu có thể là 1 hoặc 0. Nếu một trong hai tín hiệu đến là
+          0, thì kết quả cũng là 0. Mạch này sẽ chỉ cung cấp cho bạn 1, nếu tín hiệu
+          đầu tiên và tín hiệu thứ hai đều là 1, và do đó chúng ta gọi là mạch VÀ.
+      6:
+        text: Có rất nhiều mạch nhỏ như thế này thực hiện các phép tính logic đơn
+          giản. Khi nối các mạch điện này với nhau, chúng ta có thể tạo ra các mạch
+          điện phức tạp hơn thực hiện các phép tính phức tạp hơn.
+      7:
+        text: Ví dụ, bạn có thể tạo một mạch gộp 2 bit với nhau được gọi là mạch cộng.
+          Mạch này nhận 2 bit riêng lẻ, mỗi bit là 1 hoặc 0 và cộng chúng lại với
+          nhau để tính tổng. Tổng có thể là 0 cộng với 0 bằng 0, 0 cộng 1 bằng 1,
+          hoặc 1 cộng 1 bằng 2. Bạn cần hai dây nối ra vì có thể mất đến hai chữ số
+          nhị phân để biểu diễn tổng. Khi bạn có một mạch cộng duy nhất để cộng hai
+          bit thông tin, bạn có thể đặt nhiều mạch cộng như vậy cạnh nhau để cộng
+          các số lớn hơn nhiều.
+      8:
+        text: Ví dụ, đây là cách mạch cộng 8 bit cộng các số 25 và 50. Mỗi số được
+          biểu diễn bằng 8 bit, kết quả tạo ra 16 tín hiệu điện khác nhau đi vào mạch.
+          Mạch điện cho một mạch cộng 8 bit có rất nhiều mạch cộng nhỏ bên trong cùng
+          nhau tính tổng.
+      9:
+        text: Các mạch điện khác nhau có thể thực hiện các phép tính đơn giản khác
+          như phép trừ hoặc phép nhân. Trên thực tế, tất cả các thao tác xử lý thông
+          tin mà máy tính của bạn thực hiện chỉ là rất nhiều thao tác nhỏ đơn giản
+          ghép lại với nhau. Mỗi hoạt động riêng lẻ được thực hiện bởi một máy tính
+          đơn giản đến mức có thể con người cũng có thể làm được, nhưng mạch điện
+          bên trong máy tính thực hiện nhanh hơn rất nhiều.
+      10:
+        text: Trước đây, những mạch điện này rất lớn và cồng kềnh, và một mạch cộng
+          8 bit có thể lớn bằng một cái tủ lạnh, và sẽ mất vài phút để thực hiện một
+          phép tính đơn giản. Ngày nay, các vi mạch máy tính có kích thước siêu nhỏ
+          và nhanh hơn. Tại sao máy tính nhỏ hơn mà lại nhanh hơn? Vì mạch càng nhỏ
+          thì khoảng cách mà tín hiệu điện phải truyền đi càng ngắn. Dòng điện di
+          chuyển với tốc độ gần bằng tốc độ ánh sáng, đó là lý do tại sao các vi mạch
+          hiện đại có thể thực hiện hàng tỷ phép tính mỗi giây.
+      11:
+        text: Do đó, cho dù bạn đang chơi game, quay video hay khám phá vũ trụ, mọi
+          thứ bạn có thể làm với công nghệ đều yêu cầu lượng thông tin khổng lồ phải
+          được xử lý cực kỳ nhanh chóng. Đằng sau tất cả sự phức tạp này chỉ là rất
+          nhiều mạch nhỏ có thể biến tín hiệu nhị phân thành các trang web, video,
+          nhạc và game. Những mạch điện này thậm chí có thể giúp chúng ta giải mã
+          ADN để chẩn đoán và chữa bệnh. Vậy bạn muốn làm gì với tất cả các mạch điện
+          này?
+    csd_concept_memory_cpu_input_output:
+      1:
+        text: Xin chào, tên tôi là Madison Maxey. Tôi có một công ty tên là Loomia
+          và chúng tôi tập trung sản xuất các loại vải thông minh cho quần áo thông
+          minh cũng như các sản phẩm thông minh mềm mại, chất lượng tốt. Khi nhắc
+          đến hàng dệt may thì dường như không có giới hạn.
+      2:
+        text: Tên tôi là Danielle Applestone và tôi là Giám đốc điều hành của Công
+          ty Othermachine. Chúng tôi chế tạo máy phay để bàn. Máy phay sử dụng một
+          công cụ cắt xoay và di chuyển trên vật liệu để tạo ra vật thể 3D.
+      3:
+        text: Về bản chất, tất cả máy tính đều thực hiện bốn nhiệm vụ cơ bản giống
+          nhau. Chúng nhập thông tin, lưu trữ và xử lý thông tin, sau đó xuất ra thông
+          tin. Mỗi nhiệm vụ được thực hiện bởi một bộ phận khác nhau của máy tính.
+      4:
+        text: Thiết bị đầu vào lấy tín hiệu đầu vào từ thế giới bên ngoài và chuyển
+          thành thông tin nhị phân. Bộ nhớ lưu trữ thông tin này. Thiết bị xử lý trung
+          tâm hoặc CPU là nơi thực hiện tất cả phép tính. Và cuối cùng, thiết bị đầu
+          ra lấy thông tin và chuyển thành tín hiệu đầu ra thực tế.
+      5:
+        text: Trước tiên hãy nói về tín hiệu đầu vào. Máy tính có thể nhận nhiều kiểu
+          tín hiệu đầu vào khác nhau, chẳng hạn như bàn phím của máy tính, bàn di
+          chuột của điện thoại, máy ảnh, micrô hoặc GPS. Nhưng ngay cả cảm biến trên
+          ô tô, bộ điều nhiệt hay máy bay không người lái cũng là những thiết bị đầu
+          vào khác nhau.
+      6:
+        text: Bây giờ, hãy xem một ví dụ đơn giản về cách tín hiệu đầu vào di chuyển
+          qua máy tính và trở thành tín hiệu đầu ra. Khi bạn nhấn phím trên bàn phím
+          – giả sử là chữ cái “B”. Bàn phím chuyển chữ cái thành số. Số đó được gửi
+          dưới dạng nhị phân, 1 và 0, vào máy tính.
+      7:
+        text: Bắt đầu từ con số này, CPU sẽ tính toán cách hiển thị ký tự “B” theo
+          từng điểm ảnh. CPU yêu cầu hướng dẫn từng bước từ bộ nhớ, hướng dẫn này
+          cho biết cách vẽ chữ “B”. CPU chạy các hướng dẫn này và lưu trữ kết quả
+          dưới dạng điểm ảnh trong bộ nhớ.
+      8:
+        text: Cuối cùng, thông tin điểm ảnh này được gửi dưới dạng nhị phân đến màn
+          hình. Màn hình là một thiết bị đầu ra, chuyển đổi tín hiệu nhị phân thành
+          các ánh sáng và màu sắc nhỏ tạo nên nội dung mà bạn nhìn thấy.
+      9:
+        text: Toàn bộ quá trình này xảy ra nhanh đến mức dường như tức thì, nhưng
+          để hiển thị từng chữ cái, máy tính sẽ chạy hàng nghìn hướng dẫn, bắt đầu
+          từ thời điểm ngón tay của bạn nhấn vào phím.
+      10:
+        text: 'Trong ví dụ đó, thiết bị đầu ra là màn hình, nhưng có nhiều loại tín
+          hiệu đầu ra khác nhau lấy tín hiệu nhị phân từ máy tính và thực hiện điều
+          gì đó trong thế giới thực. Ví dụ: loa sẽ phát âm thanh và máy in 3D sẽ in
+          một vật thể. Các thiết bị đầu ra cũng có thể điều khiển chuyển động vật
+          lý như cánh tay robot, động cơ của ô tô hoặc công cụ cắt của máy phay mà
+          công ty tôi sản xuất. Các loại tín hiệu đầu vào và tín hiệu đầu ra mới cho
+          phép máy tính tương tác với thế giới theo những cách hoàn toàn mới. Thành
+          quả này là nhờ sự hỗ trợ của những cải tiến về tốc độ và kích thước của
+          bộ nhớ và CPU.'
+      11:
+        text: Một tác vụ càng phức tạp và càng có nhiều thông tin tín hiệu đầu vào
+          hoặc tín hiệu đầu ra thì máy tính càng cần nhiều khả năng xử lý và bộ nhớ
+          hơn. Việc gõ chữ trên màn hình có thể dễ dàng nhưng để làm đồ họa 3D phức
+          tạp hoặc quay phim độ nét cao, máy tính hiện đại thường có nhiều CPU để
+          xử lý tất cả thông tin đó và nhiều GB bộ nhớ để lưu trữ.
+      12:
+        text: 'Bất kể bạn muốn làm gì với máy tính, mọi hành động đều là: nhập thông
+          tin từ thế giới thực, lưu trữ và xử lý thông tin đó và đưa một số tín hiệu
+          đầu ra trở lại thế giới thực.'
+    csd_concept_hardware_software:
+      1:
+        text: Xin chào, tên tôi là Erica Gomez và tôi là giám đốc kỹ thuật tại Amazon.com.
+          Một trong những điều tuyệt vời nhất khi làm việc trong lĩnh vực công nghệ,
+          và đặc biệt là tại Amazon, là tôi có thể mang theo chú chó của mình đi làm
+          hàng ngày. Công việc của tôi là giúp đảm bảo phần mềm được đưa ra ngoài
+          thế giới và công việc của cô bé này là ngủ trưa dưới bàn làm việc của tôi
+          và ngáy rất to.
+      2:
+        text: 'Tên tôi là Jerome Holman, tôi là Quản lý chương trình trên Team Xbox
+          và tôi có một công việc thực sự thú vị: Về cơ bản là kết hợp phần cứng và
+          phần mềm lại với nhau để cung cấp cho bạn tất cả các trò chơi mà bạn yêu
+          thích trên Xbox.'
+      3:
+        text: Khi nhìn vào bên trong một thiết bị máy tính, bạn sẽ thấy một loạt các
+          mạch điện, chip, dây dẫn, loa, phích cắm và tất cả những linh kiện khác.
+          Đây là phần cứng.
+      4:
+        text: Nhưng những gì bạn không nhìn thấy là phần mềm. Phần mềm là tất cả các
+          chương trình máy tính, hoặc mã lệnh, chạy trên cỗ máy này. Phần mềm có thể
+          là bất cứ thứ gì, từ ứng dụng và trò chơi đến các trang web và phần mềm
+          khoa học dữ liệu mà tôi và các nhóm của tôi sử dụng tại Amazon để hiểu hành
+          vi của khách hàng.
+      5:
+        text: Nhưng làm thế nào để phần cứng và phần mềm tương tác với nhau? Hãy bắt
+          đầu xem xét đơn vị xử lý trung tâm của máy tính, hay là CPU.
+      6:
+        text: CPU là chip chính điều khiển tất cả các bộ phận khác của máy tính. CPU
+          cần làm những việc khác nhau nên bên trong nó có các bộ phận nhỏ hơn, đơn
+          giản hơn để xử lý các tác vụ cụ thể. Nó có các mạch điện để thực hiện các
+          phép toán và logic đơn giản. Nó có các mạch điện khác để gửi và nhận thông
+          tin đến và từ các bộ phận khác nhau của máy tính.
+      7:
+        text: Điều kỳ diệu thực sự của CPU là cách thiết bị này biết sử dụng mạch
+          điện nào và sử dụng khi nào. CPU nhận được các lệnh đơn giản cho biết thiết
+          bị sẽ sử dụng mạch nào để thực hiện một công việc cụ thể. Ví dụ, lệnh “cộng”
+          yêu cầu CPU sử dụng mạch điện bên ngoài để tính toán một số mới. Còn lệnh
+          “lưu trữ” ra lệnh cho CPU sử dụng một mạch điện khác để lưu kết quả đó vào
+          bộ nhớ.
+      8:
+        text: Cũng giống như các con số, tất cả các lệnh đơn giản này có thể biểu
+          diễn dưới dạng nhị phân với số 0 và 1 hoặc tín hiệu điện bật và tắt. Các
+          lệnh nhị phân được lưu trữ trong bộ nhớ và CPU tìm nạp cũng như thực thi
+          chúng theo trình tự lần lượt. Trên thực tế, chuỗi lệnh này là một chương
+          trình máy tính rất đơn giản.
+      9:
+        text: Mã nhị phân là dạng phần mềm cơ bản nhất và điều khiển tất cả phần cứng
+          của máy tính. Ngày nay, không ai viết phần mềm ở dạng nhị phân. Bạn sẽ mất
+          rất nhiều thời gian!
+      10:
+        text: Ngày nay, phần mềm chúng ta viết trông giống như thế này (Python), hoặc
+          như thế này (Ruby), hoặc thậm chí là như thế này (Blockly). Các ngôn ngữ
+          lập trình như vậy giúp bạn nhập các lệnh bằng ngôn ngữ rất giống tiếng Anh.
+      11:
+        text: Để vẽ một hình chữ nhật trên màn hình, bạn chỉ cần một lệnh duy nhất.
+          Lệnh cấp cao này được chuyển đổi thành hàng trăm hoặc hàng nghìn lệnh nhị
+          phân đơn giản hơn mà CPU hiểu được. Phần mềm cho CPU biết phải làm gì, nhưng
+          khi bạn đang nghe nhạc, duyệt web và trò chuyện với bạn bè, máy tính của
+          bạn đang chạy nhiều phần mềm cùng một lúc.
+      12:
+        text: Vì vậy, làm thế nào để tất cả các chương trình này có trên máy tính
+          ngay từ đầu và làm thế nào để CPU có thể chạy tất cả chúng cùng một lúc?
+          Để tìm hiểu, chúng ta sẽ phải tìm hiểu hệ điều hành.
+      13:
+        text: 'Hệ điều hành của máy tính là chương trình chính quản lý cách phần mềm
+          sử dụng phần cứng của máy tính. Ví dụ: Tôi đã góp sức tạo ra hệ điều hành
+          Windows chạy trên hầu hết các máy tính cá nhân.'
+      14:
+        text: Hệ điều hành là một chương trình có khả năng đặc biệt cho phép nó điều
+          khiển phần mềm khác trên máy tính. Chương trình này cho phép bạn cài đặt
+          các chương trình mới bằng cách tải chúng vào bộ nhớ máy tính của bạn. Chương
+          trình này quyết định khi nào bộ xử lý trung tâm cần chạy chương trình và
+          liệu chương trình đó có thể truy cập vào các thiết bị đầu vào và đầu ra
+          của máy tính hay không. Và khi bạn nghĩ rằng máy tính của mình đang chạy
+          nhiều chương trình cùng một lúc, thì trên thực tế, đó là hệ điều hành đang
+          nhanh chóng chuyển đổi giữa các chương trình chia sẻ CPU đó trong một tích
+          tắc.
+      15:
+        text: Bên trong mỗi máy tính là một phần mềm quản lý hệ điều hành điều khiển
+          phần cứng của máy tính.
+      16:
+        text: Phần mềm là chuỗi các lệnh được tạo ra bằng mã lệnh nhị phân đơn giản,
+          và mã lệnh nhị phân đó chỉ là các tín hiệu điện tử chạy qua hàng tỷ mạch
+          điện siêu nhỏ.
+      17:
+        text: Máy tính có tiềm năng làm nên những điều đáng kinh ngạc. Nhưng điều
+          duy nhất làm cho máy tính trở nên thông minh, hoặc hữu ích, chính là bạn.
+          Khi bạn học viết mã lệnh, bạn phải xác định vấn đề bạn muốn giải quyết và
+          viết phần mềm biến những ý tưởng đó thành hiện thực.
+    hoc_dance_warmup:
+      1:
+        text: 'Giờ lập trình | Bữa tiệc khiêu vũ: Khởi động'
+      2:
+        text: Xin chào! Tên tôi là Miral Kotb và tôi là một vũ công, nhà phát triển
+          phần mềm và nhà sáng lập iLuminate.
+      3:
+        text: Khoa học máy tính có mối tương quan với sự sáng tạo theo nhiều cách
+          khác nhau. Thực sự là không thể đo lường được. Ý tôi là, một khi bạn có
+          khả năng viết phần mềm, bạn có thể đưa ý tưởng vào bất cứ thứ gì. Tôi làm
+          điều đó với những bộ quần áo phát sáng. Có rất nhiều điều bạn có thể làm
+          khi bạn có công cụ để viết phần mềm và khả năng thực sự là vô tận.
+      4:
+        text: Trong giờ tới, bạn sẽ bắt đầu với khoa học máy tính bằng cách lập trình
+          bữa tiệc khiêu vũ của riêng bạn! Chúng tôi đã tập hợp một số bản nhạc nổi
+          tiếng và một đội vũ công tuyệt vời để bạn chơi cùng.
+      5:
+        text: Bạn sẽ sử dụng các khối mã lệnh để chọn các vũ công khác nhau, thay
+          đổi các bước nhảy của họ, khiến họ phản hồi theo âm nhạc và khiến họ tương
+          tác.
+      6:
+        text: Bạn sẽ thấy rằng màn hình của bạn được chia thành ba phần chính. Bên
+          trái là không gian chơi. Đây là nơi các vũ công của bạn xuất hiện.
+      7:
+        text: Khu vực giữa này là hộp công cụ. Các khối mã lệnh mới có sẵn trong không
+          gian này khi bạn xem qua các bài học.
+      8:
+        text: Khoảng trống bên phải là không gian làm việc. Bạn có thể kéo các khối
+          ra khỏi hộp công cụ và vào không gian làm việc để xây dựng chương trình
+          của mình.
+      9:
+        text: Hướng dẫn cho mỗi cấp độ sẽ hiển thị ở đầu màn hình. Nếu bạn cần gợi
+          ý, chỉ cần nhấp chuột vào bóng đèn.
+      10:
+        text: Để bắt đầu, hãy tạo một vũ công mới với khối màu đỏ này. Đầu tiên, kéo
+          khối ra khỏi hộp công cụ và gắn vào bên dưới khối “thiết lập” màu cam này.
+          Vũ công này là một chú mèo có tên là “vu_cong_dau_tien”. Bạn có thể thay
+          đổi tên thành bất kỳ tên nào bạn muốn bằng cách nhấp chuột vào đây.
+      11:
+        text: Bạn cũng có thể thay đổi vị trí vũ công xuất hiện trong không gian chơi
+          của mình bằng cách này.
+      12:
+        text: Phía trên không gian chơi là menu để chọn nhạc. Có rất nhiều bài hát
+          để bạn lựa chọn, vì vậy, hãy tận hưởng khi tìm thấy bài hát yêu thích của
+          bạn. Dưới không gian chơi là nút chạy. Khi nhấn chạy, bạn sẽ thấy các vũ
+          công từ chương trình của mình xuất hiện trong không gian chơi và nhạc sẽ
+          chạy.
+      13:
+        text: Hãy tự mình thử nhé! Nếu bạn gặp khó khăn thì không sao cả! Chỉ cần
+          đứng dậy và di chuyển, và chẳng mấy chốc mà bạn sẽ có một bữa tiệc khiêu
+          vũ của riêng mình. Vậy bạn sẽ tạo ra điều gì?
+    hoc_dance_events:
+      1:
+        text: 'Giờ lập trình | Bữa tiệc khiêu vũ: Sự kiện'
+      2:
+        text: Tôi là Aloe Blacc. Tôi là ca sĩ, nhạc sĩ và nghệ sĩ giải trí. Tôi nghĩ
+          rằng việc học khoa học máy tính thực sự quan trọng bởi vì khoa học máy tính
+          là tương lai, và tôi nghĩ mọi người phải kiểm soát được công nghệ vốn đang
+          kiểm soát cuộc sống của họ theo đúng nghĩa đen.
+      3:
+        text: Để thực hiện các bước nhảy khác nhau đúng nhịp với nhạc, bạn có thể
+          sử dụng một công cụ gọi là sự kiện. Sự kiện yêu cầu chương trình của bạn
+          theo dõi hiện tượng nào đó rồi phản ứng ngay lập tức.
+      4:
+        text: Một cú nhấp chuột, một nút mũi tên hoặc một lần nhấn trên màn hình.
+          Sự kiện chúng ta sẽ sử dụng bây giờ sẽ theo dõi sự thay đổi trong bài hát.
+          Sự thay đổi này sẽ kích hoạt vũ công của bạn thực hiện một điệu nhảy mới.
+      5:
+        text: Các vũ công chuyên nghiệp luyện tập vũ đạo bằng cách đếm nhịp của bài
+          hát.
+      6:
+        text: Trong âm nhạc, nhịp điệu dùng để chỉ một số phách nhất định. Trong hầu
+          hết các bài hát phổ biến, một nhịp dài bốn phách.
+      7:
+        text: Để giúp các vũ công của bạn thả lỏng, bạn sẽ cần một khối sự kiện màu
+          xanh lá cây. Khối sự kiện này có ghi “sau 4 nhịp”.
+      8:
+        text: Nếu bạn kéo ra khối màu tím “làm mãi mãi”, bạn có thể chọn một điệu
+          nhảy để vũ công của bạn thực hiện. Vì nằm trong khối sự kiện “sau 4 nhịp”,
+          vũ công của bạn sẽ đợi 4 nhịp của bài hát rồi mới bắt đầu điệu nhảy của
+          họ.
+      9:
+        text: Hãy để mắt đến bộ đếm nhịp ở phía trên cùng của khu vực hiển thị.
+      10:
+        text: Hãy nhìn và theo dõi sự kiện kích hoạt mã lệnh nhảy. Và vũ công của
+          chúng ta bắt đầu điệu nhảy rất đúng nhịp.
+    hoc_dance_properties:
+      1:
+        text: 'Giờ lập trình | Bữa tiệc khiêu vũ: Thuộc tính'
+      2:
+        text: Tên tôi là Maria. Tôi là sinh viên Đại học Washington và tôi là Kỹ sư
+          tương lai của Amazon.
+      3:
+        text: Tôi yêu thích khoa học máy tính vì môn học này kết hợp khả năng giải
+          quyết vấn đề và tư duy phản biện, đồng thời sau hàng giờ làm việc, bạn có
+          thể nhận được thành quả thực sự thú vị và bổ ích.
+      4:
+        text: Cho đến thời điểm hiện tại bạn đã có cơ hội khám phá một số kiểu vũ
+          công khác nhau và bạn đã lập trình cho họ thực hiện các bước nhảy khác nhau.
+          Nhưng những bước nhảy này thực sự hoạt động như thế nào?
+      5:
+        text: Mỗi bước nhảy đều được tạo thành từ một chuỗi các hình ảnh được gọi
+          là khung hình. Mỗi khung hình hơi khác so với khung hình trước đó. Khi chương
+          trình chạy, máy tính sẽ hiển thị lần lượt từ khung hình này đến khung hình
+          khác. Chúng được hiển thị nhanh đến mức có cảm giác như vũ công đang chuyển
+          động. Đây là bí mật đằng sau tất cả ảnh chuyển động.
+      6:
+        text: Bạn không chỉ có thể thay đổi động tác của vũ công mà còn có thể thay
+          đổi thuộc tính của vũ công. Các thuộc tính mô tả những yếu tố như vị trí
+          của vũ công trên màn hình, kích thước của vũ công và màu sắc của vũ công.
+      7:
+        text: Để thay đổi các thuộc tính của vũ công, bạn sẽ sử dụng một khối đặt.
+          Hãy sử dụng khối đặt để cho các vũ công của chúng ta trông nhỏ hơn. Đầu
+          tiên, kéo khối đặt vào chương trình của bạn. Sau đó, chọn vũ công bạn muốn
+          thay đổi và nhập kích thước xuất hiện trên màn hình.
+      8:
+        text: Kích thước tối đa là 100. Nếu bạn chọn số thấp hơn, vũ công sẽ nhỏ hơn.
+          Vũ công càng nhỏ thì trông càng xa. Đây là một cách tuyệt vời để tạo vũ
+          công phụ họa.
+      9:
+        text: Bạn cũng có thể sử dụng khối đặt để thay đổi kích thước, hướng xoay,
+          vị trí và màu sắc của vũ công. Bằng cách khám phá các thuộc tính này, bạn
+          có thể thực hiện tất cả các kiểu thay đổi và liên kết với các phần khác
+          nhau của bài hát.
+      10:
+        text: Hãy nhớ rằng, bạn chỉ có thể đặt các thuộc tính của một vũ công đã có
+          sẵn. Đừng quên rằng khối đặt phải đứng sau khối “Tạo vũ công mới”. Hãy thoải
+          mái thử nghiệm, sáng tạo và vui vẻ nhé.
+    hoc_dance_congrats:
+      1:
+        text: 'Giờ lập trình | Bữa tiệc khiêu vũ: Quẩy lên nào!'
+      2:
+        text: Xin chúc mừng! Bạn vừa học những kiến thức cơ bản về khoa học máy tính.
+          Giờ đây, bạn có thể sử dụng các khối này để tạo ra một bữa tiệc khiêu vũ
+          do chính bạn thiết kế để chia sẻ với bạn bè.
+      3:
+        text: Nếu nhìn vào hộp công cụ, bạn sẽ thấy một số khối hoàn toàn mới mà bạn
+          chưa từng thấy trước đây. Ví dụ, bạn có thể sử dụng khối bố cục để sắp xếp
+          các vũ công theo những cách khác nhau trên màn hình.
+      4:
+        text: Hãy khám phá và thử nghiệm các khối và tính năng mới này. Bạn sẽ tạo
+          ra một điệu nhảy được biên đạo chỉn chu cho bài hát yêu thích của bạn chứ?
+      5:
+        text: Hay một buổi thi nhảy với bạn bè?
+      6:
+        text: Hay một hoạt động hoàn toàn mới?
+      7:
+        text: Ở cuối bài hướng dẫn, bạn có thể chia sẻ liên kết đến tác phẩm của mình
+          với bạn bè. Hãy để trí tưởng tượng bay xa và tận hưởng niềm vui nhé!
+    mc_2018_intro:
+      1:
+        text: Xin chào! Bạn tới đúng lúc lắm. Chào mừng bạn đến với Chuyến du hành
+          dưới nước. Tôi sắp bắt tay vào tìm kiếm kho báu dưới lòng đại dương và tôi
+          rất vui khi được các bạn giúp đỡ. Ai mà biết chúng ta sẽ gặp những gì dọc
+          theo những con đường bí ẩn dưới nước này? Chúng ta sẽ gặp hướng dẫn viên
+          đầu tiên ở đâu đó trên bến tàu này.
+      2:
+        text: Chào mừng những nhà thám hiểm! Để hoàn thành Chuyến du hành dưới nước,
+          bạn cần giải một loạt các bài tập bằng cách sử dụng mã lệnh. Đây là cách
+          hoạt động. Màn hình của bạn được chia thành ba phần chính.
+      3:
+        text: Ở bên trái, bạn sẽ thấy thế giới Minecraft.
+      4:
+        text: Khu vực giữa là hộp công cụ của bạn để tìm lệnh lập trình.
+      5:
+        text: Và khu vực lớn bên phải là không gian làm việc. Đây là nơi bạn có thể
+          xếp chồng các lệnh để xây dựng chương trình và điều khiển các chuyển động.
+      6:
+        text: Hướng dẫn của mỗi cấp độ ở trên đầu trang. Nhấp chuột vào dấu cộng để
+          thay đổi giữa hướng dẫn dài và ngắn.
+      7:
+        text: Hãy thử kéo các khối từ hộp công cụ vào không gian làm việc, xếp chồng
+          chúng, sau đó nhấp chuột vào nút chạy để thực thi lệnh.
+      8:
+        text: Bạn có thể phải thử vài lần để làm đúng và một số bài tập có nhiều hơn
+          một lời giải, vì vậy hãy thử nghiệm xem cách nào hiệu quả nhé.
+      9:
+        text: Nếu bạn muốn thử lại, hãy nhấp chuột vào nút đặt lại để quay lại thời
+          điểm bắt đầu.
+      10:
+        text: Nếu bạn cần xóa lệnh, chỉ cần kéo khối từ không gian làm việc của bạn
+          trở lại hộp công cụ. Hãy nhớ, nhấp chuột vào “Chạy” để xem mã lệnh của bạn
+          trông như thế nào khi hoạt động.
+      11:
+        text: Khám phá vậy là đủ rồi nhà thám hiểm. Hãy bắt đầu viết mã lệnh để tìm
+          một kho báu dưới nước nào.
+    MC_2018_loops:
+      1:
+        text: Tuyệt! Chúng ta đã bắt được một con cá tuyết! Bạn có biết nếu bạn cho
+          cá heo ăn cá tuyết, cá heo sẽ dẫn bạn đến một con tàu đắm nơi có thể có
+          kho báu? Chúng ta phải tiến gần hơn. Bộ bài tập tiếp theo chắc chắn sẽ phức
+          tạp hơn, vì vậy chúng ta nên học thêm một số kỹ năng lập trình. Gì đây?
+          Một cái hang?
+      2:
+        text: Chào mừng nhà thám hiểm! Tên tôi là Mực. Tôi nhận thấy rằng bạn đang
+          sử dụng lặp đi lặp lại cùng một chuỗi lệnh trong một vài bài tập cuối cùng.
+          Làm như vậy chắc là mệt lắm. Bạn có bao giờ ước rằng mình có một cách để
+          làm đi làm lại một việc gì đó như rửa bát hay đánh răng mà không thấy mệt
+          hay chán không? Được vậy thì còn gì bằng.
+      3:
+        text: Máy tính thực sự giỏi khi làm đi làm lại cùng một việc bằng cách sử
+          dụng các vòng lặp lập trình. Khi bạn muốn chương trình của mình thực hiện
+          các hướng dẫn giống nhau nhiều lần, bạn có thể sử dụng vòng lặp!
+      4:
+        text: Khối vòng lặp chứa các hướng dẫn lặp lại cho đến khi đạt được mục tiêu.
+          Khi chương trình của bạn bắt đầu vòng lặp “Lặp lại cho đến khi đạt được
+          mục tiêu”, chương trình sẽ tiếp tục lặp lại các hướng dẫn bên trong cho
+          đến khi đạt được mục tiêu.
+      5:
+        text: Hãy tự mình thử nhé! Đặt các lệnh bạn muốn lặp lại bên trong khối “Lặp
+          lại cho đến khi đạt được mục tiêu”, nhấp chuột vào “Chạy” và xem chương
+          trình chạy nào!
+      6:
+        text: Chà, hơi kỳ lạ nha. Ai mà ngờ được mực cũng biết lập trình? Tôi thậm
+          chí còn nghĩ rằng mực chẳng có ngón tay. Bây giờ chúng ta đã biết về vòng
+          lặp. Hãy sử dụng chúng để mang về nhiều kho báu hơn nào.
+    mc_2018_conditionals:
+      1:
+        text: Ồ! Giải được thêm ba bài tập nữa rồi! Và chúng ta đã bắt được... một
+          con cá hồi. Không thú vị như đống vàng, nhưng thôi thì có cái gì lấy cái
+          đó. Và tôi có cảm giác rằng vỏ ốc anh vũ sẽ có ích sau này. Không biết có
+          gì đang ẩn nấp trong những đống đổ nát này nhỉ. Chắc là thêm một gợi ý!
+          Chúng ta hãy nhìn vào bên trong nào.
+      2:
+        text: Tên tôi là Netty và chào mừng đến với tàn tích của tôi. Chúng ta luôn
+          đưa ra quyết định dựa trên điều kiện. Nếu trời có vẻ mưa thì chúng ta sẽ
+          lấy một chiếc ô. Nếu đói thì chúng ta sẽ ăn vặt.
+      3:
+        text: Nếu nhìn thấy creeper thì chúng ta chạy theo hướng ngược lại. Máy tính
+          cũng đưa ra những quyết định kiểu như vậy. Chúng thực sự có thể đáp ứng
+          các điều kiện bằng cách sử dụng mã lệnh.
+      4:
+        text: Để lập trình một phản hồi như vậy bằng cách sử dụng lệnh lập trình ,
+          hãy chọn một khối nếu có đường đi.
+      5:
+        text: Chọn menu thả xuống để tạo lệnh.
+      6:
+        text: Ví dụ, nếu bạn viết lệnh “nếu có đường đi bên phải” và đặt khối rẽ phải
+          bên trong lệnh điều kiện thì khi Steve đến chỗ có đường đi ở bên phải, anh
+          ấy sẽ luôn rẽ phải. Nếu không có đường đi bên phải, anh ta sẽ không rẽ phải.
+          Các lệnh điều kiện if này rất hữu ích khi bạn chạy mã lệnh trong các tình
+          huống không thể đoán trước, chẳng hạn như tàn tích bí ẩn trong các hang
+          động dưới nước.
+      7:
+        text: Hãy thử dùng các khối if và lấy mã lệnh của bạn để xoay.
+      8:
+        text: Ồ! Tàn tích của Netty thật tuyệt vời. Tôi phải chuyển ra khỏi nhà bố
+          mẹ mới được. Bạn nghĩ sao? Các điều kiện có phù hợp để chúng ta hoàn thành
+          các bài tập cuối cùng không? Hãy thử đi.
+    mc_2018_closing:
+      1:
+        text: 'Amy Lee33: Xin chúc mừng! Bạn làm được rồi!'
+      2:
+        text: 'Mực: Xin chúc mừng!'
+      3:
+        text: 'Netty: Bạn đã làm được! Xin chúc mừng!'
+      4:
+        text: 'Tomohawk: Xin chúc mừng!'
+      5:
+        text: Thật là một ngày tuyệt vời! Cuộc săn tìm kho báu đã khiến chúng ta xây
+          dựng một ống dẫn Minecraft, tìm vỏ ốc anh vũ và khám phá các rương kho báu.
+          Tôi rất thích màu sắc đá prismarine. Chúng ta cũng đã học cách viết mã lệnh
+          với vòng lặp và lệnh điều kiện.
+      6:
+        text: Nhắc tới lập trình, còn một cấp độ nữa cho nhiệm vụ này. Bạn đã sẵn
+          sàng chưa, nhà thám hiểm?
+      7:
+        text: Đó là cấp độ chơi tự do và bạn có thể sử dụng kỹ năng lập trình của
+          mình và tạo ra một thứ gì đó đáng kinh ngạc.
+      8:
+        text: Hừm... nơi cất giấu kho báu, đài tưởng niệm dưới nước, lâu đài san hô?
+          A... nhiều ý tưởng quá. Hãy thử dùng vòng lặp để tạo hành động lặp lại và
+          lệnh điều kiện để chuẩn bị cho tất cả các tình huống không thể đoán trước
+          đó.
+      9:
+        text: Chắc hẳn bây giờ bạn đã chứng tỏ mình là một lập trình viên gan dạ và
+          tôi rất nóng lòng muốn xem thành quả của bạn. Và hy vọng rằng cuộc phiêu
+          lưu với mã lệnh của bạn không dừng tại đây. Thượng lộ bình an nhé!
+    teaching_csf_how_it_works:
+      1:
+        image: notes/teaching_cs_fundamentals_1.png
+        text: Khóa học này được chia thành các giai đoạn.
+      2:
+        image: notes/teaching_cs_fundamentals_2.png
+        text: Một số giai đoạn đầu tiên sẽ giới thiệu khái niệm khoa học máy tính,
+          cũng như một số từ vựng chính.
+      3:
+        image: notes/teaching_cs_fundamentals_3.png
+        text: Tiếp theo, bạn sẽ học cách viết mã lệnh giống như cách mà học sinh của
+          bạn sẽ làm. Các giai đoạn cuối cùng của khóa học sẽ giúp bạn lập kế hoạch
+          giảng dạy môn khoa học máy tính trong lớp học của mình. Trong suốt khóa
+          học, bạn sẽ thấy các ví dụ về các bài học bao gồm cả có dùng thiết bị điện
+          tử – hay trực truyến – cũng như các bài học không dùng thiết bị điện tử,
+          có thể thực hiện mà không cần máy tính.
+      4:
+        image: notes/teaching_cs_fundamentals_4.png
+        text: Nền tảng học tập sẽ theo dõi tiến độ của bạn, vì vậy bạn có thể tiếp
+          tục học từ vị trí bạn đã dừng lại bất cứ lúc nào.
+    what_is_cs:
+      1:
+        image: notes/what_is_cs.png
+        text: Lập trình là tập hợp các hướng dẫn bạn cung cấp cho máy tính. Khoa học
+          máy tính là lĩnh vực mà mọi người sử dụng sức mạnh của máy tính để giải
+          quyết các vấn đề lớn. Khoa học máy tính bao gồm lập trình, nhưng cũng bao
+          gồm những khía cạnh khác, như cách hoạt động của internet và tác động đến
+          xã hội, phải làm gì với dữ liệu lớn và cách giải quyết các vấn đề lớn. Khoa
+          học máy tính đề cập tới giải quyết vấn đề, tư duy phản biện và sự kiên trì.
+    writing_first_program:
+      1:
+        image: notes/writing_first_program_1.png
+        text: Code.org sử dụng ngôn ngữ lập trình trực quan, kéo và thả gọi là Blockly.
+          Blockly sử dụng những lệnh đầy màu sắc được gọi là khối để xây dựng chương
+          trình và giải bài tập.
+      2:
+        image: notes/writing_first_program_2.png
+        text: Mỗi bài tập có bốn phần.
+      3:
+        image: notes/writing_first_program_3.png
+        text: Không gian chơi nằm ở bên trái, nơi chương trình của bạn chạy.
+      4:
+        image: notes/writing_first_program_3.png
+        text: Ở giữa có khu vực hộp công cụ, nơi có tất cả các khối bạn cần.
+      5:
+        image: notes/writing_first_program_4.png
+        text: Ở bên phải là không gian làm việc, nơi bạn sẽ kéo các khối để xây dựng
+          chương trình của mình.
+      6:
+        image: notes/writing_first_program_5.png
+        text: Phía trên không gian làm việc là hướng dẫn cho mỗi bài tập.
+      7:
+        image: notes/writing_first_program_6.png
+        text: Nếu bạn kéo quá nhiều khối khỏi hộp công cụ, chỉ cần kéo khối bị dư
+          trở lại hộp công cụ. Nhấn Chạy để thử chương trình của bạn và Đặt lại để
+          thử lại.
+    repeat_block:
+      1:
+        image: notes/writing_first_program_7.png
+        text: Khối lặp lại giúp bạn lặp lại mã lệnh bên trong bao nhiêu lần tùy ý.
+    what_is_an_event:
+      1:
+        image: notes/writing_first_program_7.png
+        text: Sự kiện yêu cầu chương trình theo dõi hiện tượng nào đó sẽ xảy ra. Khi
+          điều đó xảy ra, chương trình sẽ thực hiện hành động. Máy tính có thể theo
+          dõi một lượt nhấp chuột, nhấn vào nút mũi tên hoặc lượt chạm trên màn hình.
+    lesson_planning:
+      1:
+        image: notes/what_is_an_event.png
+        text: Các bài học Nguyên tắc cơ bản của KHMT bắt đầu với phần tổng quan để
+          cho bạn biết nội dung có trong bài học.
+      2:
+        image: notes/lesson_planning_2.png
+        text: Các bài học có phần khởi động, hoạt động và tổng kết. Nếu bạn muốn tạo
+          giáo án của riêng mình, bạn cần ghi nhớ những lời khuyên này.
+      3:
+        image: notes/lesson_planning_3.png
+        text: 1. Cố gắng sử dụng thiết kế chương trình giảng dạy kiểu xoay vòng. Giới
+          thiệu các khái niệm một lần rồi ôn lại sau.
+      4:
+        image: notes/lesson_planning_4.png
+        text: 2. Tạo trải nghiệm học tập kết hợp bằng cách kết hợp các bài học trực
+          tuyến với các bài học không dùng thiết bị điện tử.
+      5:
+        image: notes/lesson_planning_5.png
+        text: 3. Chia chương trình học của bạn thành nhiều phần nhỏ hơn.
+      6:
+        image: notes/lesson_planning_6.png
+        text: 4. Đảm bảo rằng bạn tuân thủ các tiêu chuẩn địa phương và các kỹ năng
+          cần thiết cho việc học đại học và làm việc.
+    opd_closing:
+      1:
+        image: notes/opd_closing_1.png
+        text: Xin chúc mừng! Bạn đã hoàn thành khóa học trực tuyến về Giảng dạy Nguyên
+          tắc cơ bản của Khoa học máy tính. Giờ đây, bạn là một phần của cộng đồng
+          giáo viên ngày càng phát triển, trang bị kiến thức phục vụ tương lai cho
+          học sinh.
+      2:
+        image: notes/opd_closing_2.png
+        text: 'Hãy xem các nguồn hỗ trợ sau nếu bạn cần thêm sự trợ giúp: 1. forum.code.org
+          2. @teachcode trên Twitter 3. studio.code.org'
+    hoc_dance_warmup_2019:
+      1:
+        text: 'Giờ lập trình | Bữa tiệc khiêu vũ: Khởi động'
+      2:
+        text: Xin chào! Tên tôi là Miral Kotb và tôi là một vũ công, nhà phát triển
+          phần mềm và nhà sáng lập iLuminate.
+      3:
+        text: Khoa học máy tính có mối tương quan với sự sáng tạo theo nhiều cách
+          khác nhau. Thực sự là không thể đo lường được. Ý tôi là, một khi bạn có
+          khả năng viết phần mềm, bạn có thể đưa ý tưởng vào bất cứ thứ gì. Tôi làm
+          điều đó với những bộ quần áo phát sáng. Có rất nhiều điều bạn có thể làm
+          khi bạn có công cụ để viết phần mềm và khả năng thực sự là vô tận.
+      4:
+        text: Trong giờ tới, bạn sẽ bắt đầu với khoa học máy tính bằng cách lập trình
+          bữa tiệc khiêu vũ của riêng bạn! Chúng tôi đã tập hợp một số bản nhạc nổi
+          tiếng và một đội vũ công tuyệt vời để bạn chơi cùng.
+      5:
+        image: notes/hoc_dance_warmup_2019_5.png
+        text: Bạn sẽ sử dụng các khối mã lệnh để chọn các vũ công khác nhau, thay
+          đổi các bước nhảy của họ, khiến họ phản hồi theo âm nhạc và khiến họ tương
+          tác.
+      6:
+        image: notes/hoc_dance_warmup_2019_6.png
+        text: Bạn sẽ thấy rằng màn hình của bạn được chia thành ba phần chính. Bên
+          trái là không gian chơi. Đây là nơi các vũ công của bạn xuất hiện.
+      7:
+        image: notes/hoc_dance_warmup_2019_7.png
+        text: Khu vực giữa này là hộp công cụ. Các khối mã lệnh mới có sẵn trong không
+          gian này khi bạn xem qua các bài học.
+      8:
+        image: notes/hoc_dance_warmup_2019_8.png
+        text: Khoảng trống bên phải là không gian làm việc. Bạn có thể kéo các khối
+          ra khỏi hộp công cụ và vào không gian làm việc để xây dựng chương trình
+          của mình.
+      9:
+        image: notes/hoc_dance_warmup_2019_9.png
+        text: Hướng dẫn cho mỗi cấp độ sẽ hiển thị ở đầu màn hình. Nếu bạn cần gợi
+          ý, chỉ cần nhấp chuột vào bóng đèn.
+      10:
+        image: notes/hoc_dance_warmup_2019_10.png
+        text: Để bắt đầu, hãy tạo một vũ công mới với khối màu đỏ này. Đầu tiên, kéo
+          khối ra khỏi hộp công cụ và gắn vào bên dưới khối “thiết lập” màu cam này.
+          Vũ công này là một chú mèo.
+      11:
+        image: notes/hoc_dance_warmup_2019_11.png
+        text: Bạn cũng có thể thay đổi vị trí vũ công xuất hiện trong không gian chơi
+          của mình bằng cách này.
+      12:
+        image: notes/hoc_dance_warmup_2019_12.png
+        text: Phía trên không gian chơi là menu để chọn nhạc. Có rất nhiều bài hát
+          để bạn lựa chọn, vì vậy, hãy tận hưởng khi tìm thấy bài hát yêu thích của
+          bạn. Dưới không gian chơi là nút chạy. Khi nhấn chạy, bạn sẽ thấy các vũ
+          công từ chương trình của mình xuất hiện trong không gian chơi và nhạc sẽ
+          chạy.
+      13:
+        text: Hãy tự mình thử nhé! Nếu bạn gặp khó khăn thì không sao cả! Chỉ cần
+          đứng dậy và di chuyển, và chẳng mấy chốc mà bạn sẽ có một bữa tiệc khiêu
+          vũ của riêng mình. Vậy bạn sẽ tạo ra điều gì?
+    hoc_dance_events_2019:
+      1:
+        text: 'Giờ lập trình | Bữa tiệc khiêu vũ: Sự kiện'
+      2:
+        image: notes/hoc_dance_events_2019_2.png
+        text: Tên tôi là Erin, tôi là kỹ sư phần mềm tại Code.org và tôi đã giúp xây
+          dựng Bữa tiệc khiêu vũ.
+      3:
+        image: notes/hoc_dance_events_2019_3.png
+        text: Để thực hiện các bước nhảy khác nhau đúng nhịp với nhạc, bạn có thể
+          sử dụng một công cụ gọi là sự kiện. Sự kiện yêu cầu chương trình của bạn
+          theo dõi hiện tượng nào đó rồi phản ứng ngay lập tức.
+      4:
+        image: notes/hoc_dance_events_2019_4.png
         text: 'Một số ví dụ về các sự kiện là: đang lắng nghe cho một nhấp chuột,
           phím mũi tên hoặc phím tab được nhấn.'
+      5:
+        image: notes/hoc_dance_events_2019_5.png
+        text: Ở đây, chúng ta sẽ lập trình vũ công thực hiện một động tác khi bạn
+          nhấn các nút mũi tên trên màn hình hoặc các phím trên bàn phím của bạn.
+      6:
+        image: notes/hoc_dance_events_2019_6.png
+        text: Chúng ta có thể sử dụng khối sự kiện “khi nhấn mũi tên lên” và gắn khối
+          “làm một lần” vào đó. Khi có người nhấn phím mũi tên lên, mã lệnh gắn với
+          khối “khi nhấn mũi tên lên” sẽ chạy. Bạn sẽ chọn bước nhảy nào?
+      7:
+        image: notes/hoc_dance_events_2019_7.png
+        text: Đảm bảo loại vũ công bạn chọn phù hợp với một trong những vũ công bạn
+          đã tạo bên trong khối “đặt”, nếu không bạn có thể không thấy bất kỳ điều
+          gì xảy ra.
+      8:
+        image: notes/hoc_dance_events_2019_8.png
+        text: Cuối cùng, bạn có thể tạo thêm các sự kiện như thế này để khiến các
+          vũ công của bạn thực hiện các động tác khác nhau với mỗi phím. Hãy thử và
+          với một vài dòng mã lệnh, bạn có thể thực hiện điệu nhảy tương tác của riêng
+          mình.
+    hoc_dance_measures_2019:
+      1:
+        image: notes/hoc_dance_measures_2019_1.png
+        text: 'Giờ lập trình | Bữa tiệc khiêu vũ: Nhịp'
+      2:
+        image: notes/hoc_dance_measures_2019_2.png
+        text: Tôi là Aloe Blacc. Tôi là ca sĩ, nhạc sĩ và nghệ sĩ giải trí. Tôi nghĩ
+          rằng việc học khoa học máy tính thực sự quan trọng bởi vì khoa học máy tính
+          là tương lai, và tôi nghĩ mọi người phải kiểm soát được công nghệ vốn đang
+          kiểm soát cuộc sống của họ theo đúng nghĩa đen.
+      3:
+        image: notes/hoc_dance_measures_2019_3.png
+        text: Sự kiện chúng ta sẽ sử dụng bây giờ sẽ theo dõi sự thay đổi trong bài
+          hát. Sự thay đổi đó sẽ kích hoạt vũ công của bạn thực hiện một bước nhảy
+          mới.
+      4:
+        image: notes/hoc_dance_measures_2019_4.png
+        text: Các vũ công chuyên nghiệp luyện tập vũ đạo của họ bằng cách đếm nhịp
+          của bài hát. Trong âm nhạc, nhịp điệu dùng để chỉ một số phách nhất định.
+          Trong hầu hết các bài hát phổ biến, một nhịp dài bốn phách.
+      5:
+        image: notes/hoc_dance_measures_2019_5.png
+        text: Để giúp các vũ công của bạn thả lỏng, bạn sẽ cần một khối sự kiện màu
+          xanh lá cây. Khối sự kiện này có ghi “sau 4 nhịp”.
+      6:
+        image: notes/hoc_dance_measures_2019_6.png
+        text: Nếu bạn kéo ra khối màu tím “làm mãi mãi”, bạn có thể chọn một điệu
+          nhảy để vũ công của bạn thực hiện. Vì nằm trong khối sự kiện “sau 4 nhịp”,
+          vũ công của bạn sẽ đợi 4 nhịp của bài hát rồi mới bắt đầu điệu nhảy của
+          họ.
+      7:
+        image: notes/hoc_dance_measures_2019_7.png
+        text: Hãy để mắt đến bộ đếm nhịp ở phía trên cùng của khu vực hiển thị.
+      8:
+        image: notes/hoc_dance_measures_2019_8.png
+        text: Hãy nhìn và theo dõi sự kiện kích hoạt mã lệnh nhảy. Và vũ công của
+          chúng ta bắt đầu điệu nhảy rất đúng nhịp.
+    hoc_dance_properties_2019:
+      1:
+        text: 'Giờ lập trình | Bữa tiệc khiêu vũ: Thuộc tính'
+      2:
+        text: Tên tôi là Maria. Tôi là sinh viên Đại học Washington và tôi là Kỹ sư
+          tương lai của Amazon.
+      3:
+        text: Tôi yêu thích khoa học máy tính vì môn học này kết hợp khả năng giải
+          quyết vấn đề và tư duy phản biện, đồng thời sau hàng giờ làm việc, bạn có
+          thể nhận được thành quả thực sự thú vị và bổ ích.
+      4:
+        text: Cho đến thời điểm hiện tại bạn đã có cơ hội khám phá một số kiểu vũ
+          công khác nhau và bạn đã lập trình cho họ thực hiện các bước nhảy khác nhau.
+          Nhưng những bước nhảy này thực sự hoạt động như thế nào?
+      5:
+        text: Mỗi bước nhảy đều được tạo thành từ một chuỗi các hình ảnh được gọi
+          là khung hình. Mỗi khung hình hơi khác so với khung hình trước đó. Khi chương
+          trình chạy, máy tính sẽ hiển thị lần lượt từ khung hình này đến khung hình
+          khác. Chúng được hiển thị nhanh đến mức có cảm giác như vũ công đang chuyển
+          động. Đây là bí mật đằng sau tất cả ảnh chuyển động.
+      6:
+        text: Bạn không chỉ có thể thay đổi động tác của vũ công mà còn có thể thay
+          đổi thuộc tính của vũ công. Các thuộc tính mô tả những yếu tố như vị trí
+          của vũ công trên màn hình, kích thước của vũ công và màu sắc của vũ công.
+      7:
+        image: notes/hoc_dance_properties_2019_7.png
+        text: Để thay đổi các thuộc tính của vũ công, bạn sẽ sử dụng một khối đặt.
+          Hãy sử dụng khối đặt để cho các vũ công của chúng ta trông nhỏ hơn. Đầu
+          tiên, kéo khối đặt vào chương trình của bạn.
+      8:
+        image: notes/hoc_dance_properties_2019_8.png
+        text: Sau đó, chọn vũ công bạn muốn thay đổi và nhập kích thước xuất hiện
+          trên màn hình. Kích thước tối đa là 100. Nếu bạn chọn số thấp hơn, vũ công
+          sẽ nhỏ hơn. Vũ công càng nhỏ thì trông càng xa.
+      9:
+        image: notes/hoc_dance_properties_2019_9.png
+        text: Bạn cũng có thể sử dụng khối đặt để thay đổi kích thước, hướng xoay,
+          vị trí và màu sắc của vũ công. Bằng cách khám phá các thuộc tính này, bạn
+          có thể thực hiện tất cả các kiểu thay đổi và liên kết với các phần khác
+          nhau của bài hát.
+      10:
+        image: notes/hoc_dance_properties_2019_10.png
+        text: Hãy nhớ rằng, bạn chỉ có thể đặt các thuộc tính của một vũ công đã có
+          sẵn. Đừng quên rằng khối đặt phải đứng sau khối “Tạo vũ công mới”. Hãy thoải
+          mái thử nghiệm, sáng tạo và vui vẻ nhé.
+    hoc_dance_congrats_2019:
+      1:
+        text: 'Giờ lập trình | Bữa tiệc khiêu vũ: Quẩy lên nào!'
+      2:
+        text: Xin chúc mừng! Bạn vừa học những kiến thức cơ bản về khoa học máy tính.
+          Giờ đây, bạn có thể sử dụng các khối này để tạo ra một bữa tiệc khiêu vũ
+          do chính bạn thiết kế để chia sẻ với bạn bè.
+      3:
+        text: Nếu nhìn vào hộp công cụ, bạn sẽ thấy một số khối hoàn toàn mới mà bạn
+          chưa từng thấy trước đây. Ví dụ, bạn có thể sử dụng khối bố cục để sắp xếp
+          các vũ công theo những cách khác nhau trên màn hình.
+      4:
+        text: Hãy khám phá và thử nghiệm các khối và tính năng mới này. Bạn sẽ tạo
+          ra một điệu nhảy được biên đạo chỉn chu cho bài hát yêu thích của bạn chứ?
+      5:
+        text: Hay một buổi thi nhảy với bạn bè?
+      6:
+        text: Hay một hoạt động hoàn toàn mới?
+      7:
+        image: notes/hoc_dance_congrats_7.png
+        text: Ở cuối bài hướng dẫn, bạn có thể chia sẻ liên kết đến tác phẩm của mình
+          với bạn bè. Hãy để trí tưởng tượng bay xa và tận hưởng niềm vui nhé!
     poemart_intro:
       1:
         image: notes/hoc_poem_art_2021_introduction_01.jpg
+        text: Tên tôi là Caia, tôi là một nhà thơ và là sinh viên khoa học máy tính.
+          Tôi đã học được rất nhiều điều từ lập trình, điều đó khiến tôi trở thành
+          một nhà thơ giỏi hơn và rất nhiều điều trong thơ ca đã giúp tôi viết mã
+          lệnh tốt hơn, chỉ vì bạn phải thực sự suy nghĩ về những từ bạn chọn và thành
+          quả đạt được khi kết hợp với nhau.
       2:
         image: notes/hoc_poem_art_2021_introduction_02.jpg
+        text: Trong giờ tới, bạn sẽ tìm hiểu về khoa học máy tính và thơ ca bằng cách
+          tạo ra một bài thơ có hình chuyển động. Thực chất thơ là làm nghệ thuật
+          bằng ngôn từ. Tôi sáng tác thơ để thể hiện mình; Tôi cố gắng khuấy động
+          trí tưởng tượng và cảm xúc của khán giả khi tôi viết bằng cách sử dụng phong
+          cách và nhịp điệu độc đáo của mình.
       3:
         image: notes/hoc_poem_art_2021_introduction_03.jpg
+        text: Cũng giống như nghệ thuật, bài thơ có thể được hiểu theo nhiều cách
+          khác nhau. Cùng một bài thơ có thể có những ý nghĩa rất khác nhau đối với
+          những người khác nhau, và mỗi bài thơ có một tâm trạng riêng. Tâm trạng
+          là cảm giác bạn nhận được từ một bài thơ. Đôi khi mọi người liên kết những
+          màu sắc và hình ảnh nhất định với những tâm trạng khác nhau.
       4:
         image: notes/hoc_poem_art_2021_introduction_04.jpg
+        text: Ví dụ, màu vàng làm cho tôi cảm thấy vui vẻ. Và khi tôi nghĩ về một
+          tâm trạng như sợ hãi, đôi khi tôi hình dung ra một đêm tối tăm và giông
+          bão trong đầu. Trong hoạt động này, bạn sẽ có cơ hội để minh họa và làm
+          sinh động tâm trạng của một bài thơ dựa trên cảm nhận của nó.
       5:
         image: notes/hoc_poem_art_2021_introduction_05.jpg
+        text: Hãy xem cách bạn thực hiện việc này bằng mã lệnh. Bạn sẽ thấy rằng màn
+          hình được chia thành ba phần chính. Bên trái là không gian chơi. Đây là
+          nơi bài thơ có hình chuyển động sẽ hiển thị. Mỗi bài thơ đều có tiêu đề
+          và tác giả.
       6:
         image: notes/hoc_poem_art_2021_introduction_06.jpg
+        text: Khu vực giữa này là hộp công cụ. Các khối mã lệnh mới sẽ có sẵn trong
+          không gian này khi bạn xem bài học.
       7:
         image: notes/hoc_poem_art_2021_introduction_07.jpg
+        text: Khoảng trống bên phải là không gian làm việc. Bạn có thể kéo các khối
+          ra khỏi hộp công cụ và vào không gian làm việc để xây dựng chương trình
+          của mình.
       8:
         image: notes/hoc_poem_art_2021_introduction_08.jpg
+        text: Hướng dẫn cho mỗi cấp độ sẽ hiển thị ở đầu màn hình. Nếu bạn cần gợi
+          ý, hãy nhấp chuột vào bóng đèn.
       9:
         image: notes/hoc_poem_art_2021_introduction_09.jpg
+        text: Đầu tiên, hãy chọn một bài thơ mà bạn thích. Có nhiều thể loại thơ và
+          bạn có thể chọn một bài thơ mới ở mọi cấp độ.
       10:
         image: notes/hoc_poem_art_2021_introduction_10.jpg
+        text: Tiếp theo, bạn sẽ kéo các khối từ hộp công cụ vào không gian làm việc
+          để tạo hình chuyển động cho bài thơ. Bạn có thể chọn màu nền hoặc hiệu ứng
+          phù hợp với tâm trạng của bài thơ, sau đó nhấp chuột vào “Chạy” để xem bài
+          thơ của bạn chuyển động.
       11:
         image: notes/hoc_poem_art_2021_introduction_11.jpg
+        text: Hãy dành một chút thời gian để đọc những bài thơ khác nhau và tìm một
+          bài thơ khơi dậy cảm xúc trong bạn. Hãy nghĩ về cảm giác của bạn và cách
+          bạn truyền tải cảm giác đó thông qua hình ảnh và mã lệnh.
+    poemart_events:
+      1:
+        image: notes/hoc_poem_art_2021_events_01.jpg
+        text: Đôi khi tâm trạng của bài thơ thay đổi giữa chừng. Hiệu ứng nào đó thể
+          hiện một bài thơ vui vẻ chuyển thành buồn, hoặc có thể là từ tối chuyển
+          thành sáng.
+      2:
+        image: notes/hoc_poem_art_2021_events_02.jpg
+        text: Trong hoạt động này, bạn sẽ làm việc với các sự kiện. Bạn có thể sử
+          dụng khối sự kiện này để thay đổi tiến trình của chương trình khi một dòng
+          cụ thể trong bài thơ xuất hiện. Lưu ý rằng các khối sự kiện không gắn với
+          chương trình chính của bạn. Thay vào đó, chúng tạo ra các chương trình nhỏ
+          của riêng mình.
+      3:
+        image: notes/hoc_poem_art_2021_events_03.jpg
+        text: 'Đọc bài thơ của bạn và tìm thời điểm mà tâm trạng thay đổi. Đếm dòng
+          xảy ra hiện tượng đó: một, hai, ba. Trong khối sự kiện, hãy nhập số của
+          dòng.'
+      4:
+        image: notes/hoc_poem_art_2021_events_04.jpg
+        text: Sau đó, hãy lập trình một hiệu ứng thể hiện sự thay đổi tâm trạng khi
+          dòng thơ đó hiển thị trên màn hình. Khi nhấn “Chạy”, bạn có thể thấy những
+          gì bạn đã lập trình.
+    poemart_imagery:
+      1:
+        image: notes/hoc_poem_art_2021_imagery_01.jpg
+        text: Trong thơ, tác giả sử dụng hình ảnh để vẽ nên một bức tranh trong tâm
+          trí người đọc. Khi chúng ta nhìn thấy từ cá sấu, chúng ta sẽ tự động hình
+          dung ra một con cá sấu màu xanh lục trong tâm trí của mình. Để có được hình
+          ảnh như vậy dưới dạng hình chuyển động, chúng ta sẽ sử dụng nhân vật.
+      2:
+        image: notes/hoc_poem_art_2021_imagery_02.jpg
+        text: Phần này tạo ra khối nhân vật mới cho phép bạn tạo nhân vật và chọn
+          trang phục cho nhân vật đó. Hãy chọn trang phục cho nhân vật mà bạn cho
+          là phù hợp với bài thơ.
+      3:
+        image: notes/hoc_poem_art_2021_imagery_03.jpg
+        text: Để thay đổi vị trí của nhân vật, bạn có thể nhấp chuột vào biểu tượng
+          ghim trong khối vị trí, sau đó nhấp chuột vào vị trí bạn muốn nhân vật chạy
+          đến trong không gian chơi.
+      4:
+        image: notes/hoc_poem_art_2021_imagery_04.jpg
+        text: Trong vài cấp độ tiếp theo, bạn sẽ thấy một số khối mới. Khối này cho
+          phép bạn thay đổi kích thước của nhân vật. Khối này cho phép bạn tạo hình
+          chuyển động cho nhân vật của mình với hành vi.
+      5:
+        image: notes/hoc_poem_art_2021_imagery_05.jpg
+        text: Nếu một bài thơ đề cập đến những đám mây lang thang, trước tiên hãy
+          tạo hình ảnh đám mây, sau đó chọn khối hành vi này, kéo nó ra và chọn lang
+          thang.
+      6:
+        image: notes/hoc_poem_art_2021_imagery_06.jpg
+        text: Hãy chắc chắn rằng trang phục của bạn phù hợp. Khi nhấn chạy, bạn sẽ
+          đọc bài thơ và thấy một đám mây lang thang.
+      7:
+        image: notes/hoc_poem_art_2021_imagery_07.jpg
+        text: Bây giờ bạn có thể thêm các hình ảnh nghĩa đen để minh họa các từ trong
+          bài thơ. Chúc vui vẻ!
+    poemart_celebration:
+      1:
+        image: notes/hoc_poem_art_2021_celebration_01.jpg
+        text: Xin chúc mừng! Các bạn vừa học những kiến thức cơ bản về khoa học máy
+          tính và cách xác định tâm trạng của bài thơ. Bây giờ bạn có thể tạo bài
+          thơ có hình chuyển động của riêng mình để chia sẻ với bạn bè rồi.
+      2:
+        image: notes/hoc_poem_art_2021_celebration_02.jpg
+        text: Bạn sẽ cẩn thận chọn một cảnh đơn giản cho toàn bộ bài thơ chứ?
+      3:
+        image: notes/hoc_poem_art_2021_celebration_03.jpg
+        text: Hay bạn sẽ sử dụng nhiều sự kiện để tạo ra một khung cảnh mới cho mỗi
+          dòng thơ của mình?
+      4:
+        image: notes/hoc_poem_art_2021_celebration_04.jpg
+        text: Ở cuối hướng dẫn, bạn có thể chia sẻ liên kết đến tác phẩm của mình
+          với bạn bè.
+      5:
+        image: notes/hoc_poem_art_2021_celebration_05.jpg
+        text: Hãy để trí tưởng tượng bay xa và tận hưởng niềm vui nhé!
+    hello_world_intro:
+      1:
+        image: notes/hoc_hello_world_2021_introduction_01.jpg
+        text: Xin chào! Tên tôi là Erin và tôi là kỹ sư phần mềm tại Code.org. Tôi
+          rất hào hứng, vì tôi biên soạn hướng dẫn mà bạn sắp xem! Chúng tôi gọi nó
+          là “Xin chào cả thế giới”.
+      2:
+        image: notes/hoc_hello_world_2021_introduction_02.jpg
+        text: "“Xin chào cả thế giới” là một cụm từ nổi tiếng trong khoa học máy tính
+          và học cách hiển thị cụm từ đó thường là bước đầu tiên khi học khoa học
+          máy tính. Trong giờ tới, bạn sẽ bắt đầu với khoa học máy tính bằng cách
+          lập trình trong Sprite Lab."
+      3:
+        image: notes/hoc_hello_world_2021_introduction_03.jpg
+        text: Sprite Lab là công cụ bạn có thể sử dụng để xây dựng các dự án sáng
+          tạo và thú vị. Bạn sẽ thấy rằng màn hình của bạn được chia thành ba phần
+          chính. Bên trái là không gian chơi. Đây là nơi các nhân vật của bạn xuất
+          hiện.
+      4:
+        image: notes/hoc_hello_world_2021_introduction_04.jpg
+        text: Nhân vật là các đối tượng trên màn hình mà bạn có thể tương tác, như
+          một nhân vật hoặc vật phẩm trong một câu chuyện hoặc game.
+      5:
+        image: notes/hoc_hello_world_2021_introduction_05.jpg
+        text: Khu vực giữa này là hộp công cụ. Các khối mã lệnh mới sẽ có sẵn trong
+          không gian này khi bạn xem bài học.
+      6:
+        image: notes/hoc_hello_world_2021_introduction_06.jpg
+        text: Khoảng trống bên phải là không gian làm việc. Bạn có thể kéo các khối
+          ra khỏi hộp công cụ, và vào không gian làm việc để xây dựng chương trình
+          của mình.
+      7:
+        image: notes/hoc_hello_world_2021_introduction_07.jpg
+        text: Hướng dẫn cho mỗi cấp độ sẽ hiển thị ở đầu màn hình. Nếu bạn cần gợi
+          ý, hãy nhấp chuột vào bóng đèn.
+      8:
+        image: notes/hoc_hello_world_2021_introduction_08.jpg
+        text: Để bắt đầu, chúng ta hãy tạo một nhân vật! Khối này cho phép bạn cung
+          cấp cho nhân vật của mình một bộ trang phục và một vị trí. Trang phục là
+          từ chúng ta sử dụng để mô tả ngoại hình của một nhân vật. Để thay đổi vị
+          trí của nhân vật, bạn có thể nhấp chuột vào biểu tượng ghim trong khối vị
+          trí, sau đó nhấp chuột vào vị trí bạn muốn nhân vật đi tới.
+      9:
+        image: notes/hoc_hello_world_2021_introduction_09.jpg
+        text: Bây giờ chúng ta hãy để nhân vật tự giới thiệu về mình! Để làm cho nhân
+          vật nói gì đó, hãy sử dụng khối “Nói” này và thêm vào chương trình của bạn.
+          Hãy đảm bảo rằng trang phục được chọn trong khối “Nói” khớp với trang phục
+          nhân vật của bạn.
+      10:
+        image: notes/hoc_hello_world_2021_introduction_10.jpg
+        text: Khi bạn nhấn “Chạy”, nhân vật sẽ nói bất kỳ văn bản nào bạn yêu cầu.
+          Bây giờ đã đến lúc bắt đầu với Sprite Lab và xem trí tưởng tượng của bạn
+          bay xa tới đâu nhé!
+    hello_world_events:
+      1:
+        image: notes/hoc_hello_world_2021_events_01.jpg
+        text: Bây giờ bạn đã học cách sử dụng Sprite Lab, bạn sẽ muốn làm cho chương
+          trình của mình phản ứng khi ai đó chơi với nó. Để làm điều đó, bạn sẽ sử
+          dụng các sự kiện. Sự kiện yêu cầu chương trình của bạn theo dõi hiện tượng
+          xảy ra rồi phản ứng ngay lập tức.
+      2:
+        image: notes/hoc_hello_world_2021_events_02.jpg
+        text: Một cú nhấp chuột, một nút mũi tên hoặc một lần nhấn trên màn hình.
+          Các khối như “khi nhấp chuột” được gọi là khối sự kiện. Mã lệnh gắn với
+          khối sự kiện sẽ chạy khi hành động thích hợp được phát hiện.
+      3:
+        image: notes/hoc_hello_world_2021_events_03.jpg
+        text: 'Ví dụ: nếu tôi gắn khối “nói” này vào sự kiện “khi nhấp chuột”, nhân
+          vật của tôi sẽ nói điều gì đó khi người dùng nhấp chuột hoặc chạm vào. Lưu
+          ý rằng các khối sự kiện không gắn với chương trình chính của bạn. Thay vào
+          đó, chúng tạo ra các chương trình nhỏ của riêng mình.'
+      4:
+        image: notes/hoc_hello_world_2021_events_04.jpg
+        text: Nếu bạn có nhiều nhân vật, bạn có thể sử dụng thêm sự kiện để kể một
+          câu chuyện tương tác.
+      5:
+        image: notes/hoc_hello_world_2021_events_05.jpg
+        text: Bạn sẽ sớm học được cách làm nhiều việc hơn nữa trong Sprite Lab, bao
+          gồm cả việc thay đổi kích thước hoặc hình thức của một nhân vật, đặt hình
+          nền khác nhau, phát âm thanh, v.v. Bạn muốn nhân vật của mình làm gì khi
+          ai đó tương tác với họ? Tùy bạn đó!
+    hello_world_congrats:
+      1:
+        image: notes/hoc_hello_world_2021_freeplay_01.jpg
+        text: Xin chúc mừng! Bạn vừa học những kiến thức cơ bản về khoa học máy tính.
+          Bây giờ bạn có thể sử dụng Sprite Lab để tạo bất cứ thứ gì bạn muốn.
+      2:
+        image: notes/hoc_hello_world_2021_freeplay_02.jpg
+        text: Bạn sẽ thấy một nút có nội dung Trang phục. Khi bạn nhấp chuột vào đó,
+          bạn có thể chọn trang phục nhân vật mới trong thư viện.
+      3:
+        image: notes/hoc_hello_world_2021_freeplay_03.jpg
+        text: Bạn cũng có thể tự vẽ trang phục! Sau khi bạn có một bộ trang phục ưng
+          ý, hãy quay lại mã lệnh của mình.
+      4:
+        image: notes/hoc_hello_world_2021_freeplay_04.jpg
+        text: Bây giờ, hãy chọn trang phục đó cho nhân vật.
+      5:
+        image: notes/hoc_hello_world_2021_freeplay_05.jpg
+        text: 'Nếu bạn nhìn vào hộp công cụ, bạn sẽ tìm thấy một số khối hoàn toàn
+          mới mà bạn chưa từng thấy trước đây. Ví dụ: có rất nhiều khối hành vi cho
+          phép bạn yêu cầu nhân vật di chuyển theo những cách vui nhộn và thú vị.'
+      6:
+        image: notes/hoc_hello_world_2021_freeplay_06.jpg
+        text: Bạn có thể sử dụng khối sự kiện “khi chạm” để kiểm soát hiện tượng xảy
+          ra khi hai nhân vật va vào nhau.
+      7:
+        image: notes/hoc_hello_world_2021_freeplay_07.jpg
+        text: Tìm khối “tạo hiệu ứng”. Khối hiệu quả này có thể sử dụng để tạo ra
+          một loạt các nhân vật nổ, hoặc vỡ, hoặc rơi xuống theo lệnh.
+      8:
+        image: notes/hoc_hello_world_2021_freeplay_08.jpg
+        text: Hãy khám phá và thử nghiệm các khối và tính năng mới này nhé. Ở cuối
+          bài hướng dẫn, hãy nhấp chuột vào nút “Chia sẻ” để chia sẻ liên kết đến
+          tác phẩm của bạn với bạn bè.
+      9:
+        image: notes/hoc_hello_world_2021_freeplay_09.jpg
+        text: Bạn có tất cả kỹ năng mạnh mẽ cần thiết để bắt đầu phát triển ứng dụng,
+          trò chơi và các chương trình mới khác trong Sprite Lab! Hãy sử dụng sức
+          mạnh mới của bạn thật tốt nhé. Hãy cư xử tử tế và tôn trọng, giống như cách
+          bạn làm nếu bạn đang tạo ra một tác phẩm trên giấy hoặc nói chuyện với một
+          người bạn.
+      10:
+        image: notes/hoc_hello_world_2021_freeplay_10.jpg
+        text: Vậy bạn sẽ tạo ra điều gì? Bạn có thể kể một câu chuyện về bản thân...
+          hoặc sáng tác một câu chuyện với các ký tự đặc biệt của riêng mình. Thậm
+          chí bạn có thể sử dụng các kỹ năng khoa học máy tính mới của mình cho dự
+          án trường học tiếp theo nữa đấy! Hãy để trí tưởng tượng bay xa và tận hưởng
+          niềm vui nhé!

@@ -57,9 +57,9 @@
     "parent_level_id": 20458,
     "name_suffix": "_2222",
     "reference_links": [
-      "/docs/concepts/maker-toolkit/analog-sensors/"
+      "/courses/csd-2022/guides/analog-sensors"
     ],
-    "map_reference": "/docs/concepts/maker-toolkit/data-and-change-events/",
+    "map_reference": "/courses/csd-2022/guides/data-and-change-events",
     "mini_rubric": "false",
     "encrypted": "false",
     "widget_mode": "false",
@@ -67,11 +67,11 @@
     "ai_enabled": "false",
     "preload_asset_list": null
   },
-  "game_id": 41,
-  "published": true,
-  "created_at": "2022-04-08T17:06:08.000Z",
   "level_num": "custom",
+  "game_id": 41,
+  "created_at": "2022-04-08T17:06:08.000Z",
   "user_id": 1,
+  "published": true,
   "notes": "",
   "audit_log": "[{\"changed_at\":\"2022-04-08T17:06:08.368+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Sensors - SB4_2022\\\"\"],\"cloned_from\":\"CSD U6 - Sensors - SB4_2022\"},{\"changed_at\":\"2022-04-13 21:44:35 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"start_blocks\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>

@@ -61,7 +61,7 @@ class Api::V1::RegionalPartnersControllerTest < ActionController::TestCase
 
   test 'index gets all regional partners for workshop admin' do
     regional_partner = create :regional_partner, name: 'New regional partner'
-    sign_in (create :workshop_admin)
+    sign_in(create(:workshop_admin))
 
     get :index
     response = JSON.parse(@response.body)
@@ -82,7 +82,7 @@ class Api::V1::RegionalPartnersControllerTest < ActionController::TestCase
       )
 
       application.update_form_data_hash({first_name: 'Minerva', last_name: 'McGonagall'})
-      application.status = 'accepted_not_notified'
+      application.status = 'accepted'
       application.save!
       application.lock!
 
@@ -131,7 +131,7 @@ class Api::V1::RegionalPartnersControllerTest < ActionController::TestCase
       )
 
       application.update_form_data_hash({first_name: 'Minerva', last_name: 'McGonagall'})
-      application.status = 'accepted_not_notified'
+      application.status = 'accepted'
       application.save!
       application.lock!
 
@@ -179,7 +179,7 @@ class Api::V1::RegionalPartnersControllerTest < ActionController::TestCase
       )
 
       application.update_form_data_hash({first_name: 'Minerva', last_name: 'McGonagall'})
-      application.status = 'accepted_not_notified'
+      application.status = 'accepted'
       application.save!
       application.lock!
 
@@ -203,7 +203,7 @@ class Api::V1::RegionalPartnersControllerTest < ActionController::TestCase
       )
 
       application.update_form_data_hash({first_name: 'Minerva', last_name: 'McGonagall'})
-      application.status = 'accepted_not_notified'
+      application.status = 'accepted'
       application.save!
       application.lock!
 
@@ -227,7 +227,7 @@ class Api::V1::RegionalPartnersControllerTest < ActionController::TestCase
       )
 
       application.update_form_data_hash({first_name: 'Minerva', last_name: 'McGonagall'})
-      application.status = 'accepted_not_notified'
+      application.status = 'accepted'
       application.save!
       application.lock!
 

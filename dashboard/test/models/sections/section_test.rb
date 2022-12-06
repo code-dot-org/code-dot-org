@@ -186,10 +186,10 @@ class SectionTest < ActiveSupport::TestCase
   end
 
   test 'can not update participant type' do
-    section = create :section, participant_type: SharedCourseConstants::PARTICIPANT_AUDIENCE.student
+    section = create :section, participant_type: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.student
 
     error = assert_raises do
-      section.participant_type = SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher
+      section.participant_type = Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher
       section.grade = 'pl'
       section.save!
     end
@@ -274,9 +274,9 @@ class SectionTest < ActiveSupport::TestCase
   end
 
   test 'add_student raises for admin students' do
-    assert_raises do
-      assert_does_not_create(Follower) do
-        @section.add_student (create :admin)
+    assert_does_not_create(Follower) do
+      assert_raises ActiveRecord::RecordInvalid do
+        @section.add_student(create(:admin))
       end
     end
   end
@@ -421,6 +421,7 @@ class SectionTest < ActiveSupport::TestCase
         linkToAssigned: '/courses/somecourse',
         currentUnitTitle: '',
         linkToCurrentUnit: '',
+        courseVersionName: 'somecourse',
         numberOfStudents: 0,
         linkToStudents: "//test-studio.code.org/teacher_dashboard/sections/#{section.id}/manage_students",
         code: section.code,
@@ -454,7 +455,7 @@ class SectionTest < ActiveSupport::TestCase
 
   test 'summarize: section with a script assigned' do
     # Use an existing script so that it has a translation
-    script = Script.find_by_name('jigsaw')
+    script = Unit.find_by_name('jigsaw')
     CourseOffering.add_course_offering(script)
 
     Timecop.freeze(Time.zone.now) do
@@ -469,6 +470,7 @@ class SectionTest < ActiveSupport::TestCase
         linkToAssigned: '/s/jigsaw',
         currentUnitTitle: '',
         linkToCurrentUnit: '',
+        courseVersionName: 'jigsaw',
         numberOfStudents: 0,
         linkToStudents: "//test-studio.code.org/teacher_dashboard/sections/#{section.id}/manage_students",
         code: section.code,
@@ -502,7 +504,7 @@ class SectionTest < ActiveSupport::TestCase
 
   test 'summarize: section with both a course and a script' do
     # Use an existing script so that it has a translation
-    script = Script.find_by_name('jigsaw')
+    script = Unit.find_by_name('jigsaw')
     unit_group = create :unit_group, name: 'somecourse', version_year: '1991', family_name: 'some-family'
     CourseOffering.add_course_offering(unit_group)
 
@@ -520,6 +522,7 @@ class SectionTest < ActiveSupport::TestCase
         linkToAssigned: '/courses/somecourse',
         currentUnitTitle: 'Jigsaw',
         linkToCurrentUnit: '/s/jigsaw',
+        courseVersionName: 'somecourse',
         numberOfStudents: 0,
         linkToStudents: "//test-studio.code.org/teacher_dashboard/sections/#{section.id}/manage_students",
         code: section.code,
@@ -564,6 +567,7 @@ class SectionTest < ActiveSupport::TestCase
         linkToAssigned: '//test-studio.code.org/teacher_dashboard/sections/',
         currentUnitTitle: '',
         linkToCurrentUnit: '',
+        courseVersionName: nil,
         numberOfStudents: 0,
         linkToStudents: "//test-studio.code.org/teacher_dashboard/sections/#{section.id}/manage_students",
         code: section.code,
@@ -771,7 +775,7 @@ class SectionTest < ActiveSupport::TestCase
     self.use_transactional_test_case = true
 
     def create_script_with_levels(name, level_type)
-      script = Script.find_by_name(name) || create(:script, name: name)
+      script = Unit.find_by_name(name) || create(:script, name: name)
       lesson_group = create :lesson_group, script: script
       lesson = create :lesson, script: script, lesson_group: lesson_group
       # 5 non-programming levels
@@ -788,7 +792,7 @@ class SectionTest < ActiveSupport::TestCase
 
     # Create progress for student in given script. Assumes all levels are either
     # Unplugged or some form of programming level
-    # @param {Script} script
+    # @param {Unit} script
     # @param {User} student
     # @param {number} num_programming_levels
     # @param {number} num_non_programming_levels

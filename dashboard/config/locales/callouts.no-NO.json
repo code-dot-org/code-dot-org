@@ -1337,6 +1337,281 @@
         },
         "CSD web text explore_2021": {
           "CSD_U3_variables": "Endre antall her"
+        },
+        "CSD U3 Variables Predict Where XY_2022": {
+          "grid": "Klikk her for å vise rutenett."
+        },
+        "CSD U3 Variables Predict Where X_2022": {
+          "CSD_U3_variables": "Endre antall her"
+        },
+        "CSD U3 debug_2022": {
+          "CSD_U3_rect_c1": "Her er koden",
+          "CSD_U3_rect_c2": "Dra denne blokken inn i kode-området."
+        },
+        "CSD U3 drawing challenge 2_2022": {
+          "CSD_U3_rect_c1": "Her er koden",
+          "CSD_U3_rect_c2": "Dra denne blokken inn i kode-området."
+        },
+        "CSD U3 drawing challenge 3_2022": {
+          "CSD_U3_rect_c1": "Her er koden",
+          "CSD_U3_rect_c2": "Dra denne blokken inn i kode-området."
+        },
+        "CSD U3 drawing practice 1_2022": {
+          "CSD_U3_rect_c1": "Her er koden",
+          "CSD_U3_rect_c2": "Dra denne blokken inn i kode-området."
+        },
+        "CSD U3 drawing practice 2_2022": {
+          "CSD_U3_rect_c1": "Her er koden",
+          "CSD_U3_rect_c2": "Dra denne blokken inn i kode-området."
+        },
+        "CSD U3 drawing practice 3_2022": {
+          "CSD_U3_rect_c1": "Her er koden",
+          "CSD_U3_rect_c2": "Dra denne blokken inn i kode-området."
+        },
+        "CSD U3 ellipse_2022": {
+          "CSD_U3_rect_c1": "Her er koden",
+          "CSD_U3_rect_c2": "Dra denne blokken inn i kode-området."
+        },
+        "CSD U3 fill_2022": {
+          "CSD_U3_rect_c1": "Her er koden",
+          "CSD_U3_rect_c2": "Dra denne blokken inn i kode-området."
+        },
+        "CSD U3 properties depth_2022": {
+          "CSD_U3_rect_c1": "Her er koden",
+          "CSD_U3_rect_c2": "Dra denne blokken inn i kode-området."
+        },
+        "CSD U3 properties tint_2022": {
+          "CSD_U3_rect_c1": "Her er koden",
+          "CSD_U3_rect_c2": "Dra denne blokken inn i kode-området."
+        },
+        "CSD U3 rect_2022": {
+          "CSD_U3_rect_c1": "Her er koden"
+        },
+        "CSD U3 sequence_2022": {
+          "CSD_U3_rect_c1": "Her er koden",
+          "CSD_U3_rect_c2": "Dra denne blokken inn i kode-området."
+        },
+        "CSD U3 shapes arc_2022": {
+          "CSD_U3_rect_c1": "Her er koden",
+          "CSD_U3_rect_c2": "Dra denne blokken inn i kode-området."
+        },
+        "CSD U3 shapes behind_2022": {
+          "CSD_U3_rect_c1": "Her er koden",
+          "CSD_U3_rect_c2": "Dra denne blokken inn i kode-området."
+        },
+        "CSD U3 shapes line_2022": {
+          "CSD_U3_rect_c1": "Her er koden",
+          "CSD_U3_rect_c2": "Dra denne blokken inn i kode-området."
+        },
+        "CSD U3 shapes missing_2022": {
+          "CSD_U3_rect_c1": "Her er koden",
+          "CSD_U3_rect_c2": "Dra denne blokken inn i kode-området."
+        },
+        "CSD U3 shapes polygon_2022": {
+          "CSD_U3_rect_c1": "Her er koden",
+          "CSD_U3_rect_c2": "Dra denne blokken inn i kode-området."
+        },
+        "CSD U3 shapes scene_2022": {
+          "CSD_U3_rect_c1": "Her er koden",
+          "CSD_U3_rect_c2": "Dra denne blokken inn i kode-området."
+        },
+        "CSD U3 shapes_2022": {
+          "CSD_U3_rect_c1": "Her er koden",
+          "CSD_U3_rect_c2": "Dra denne blokken inn i kode-området."
+        },
+        "CSD U6 - Color LEDs - SB4_2222": {
+          "CSDU6L10_rainbow": "Legg til koden din her"
+        },
+        "CSD web text explore_2022": {
+          "CSD_U3_variables": "Endre antall her"
+        },
+        "Function intro Ryan2022": {
+          "Function_intro_Ryan_1": "Denne lille instruksjonen forteller datamaskinen at den skal kjøre den store bolken med kode med samme navn i arbeidsområdet."
+        },
+        "MC_HOC_2017_03_Cole2022": {
+          "MC_HOC_2017_03_Cole_1": "Dette er en `gjenta`-løkke! Dra den inn i arbeidsområdet for å legge til kode som du vil kjøre om og om igjen."
+        },
+        "MC_HOC_2017_04_Cole2022": {
+          "MC_HOC_2017_04_Cole_a": "Agenten kan sveve over vannet, men ikke spilleren!"
+        },
+        "MC_HOC_2017_06_Cole2022": {
+          "MC_HOC_2017_06_Cole_1": "Du kan ikke kaste disse blokkene, men du kan redigere dem!"
+        },
+        "MC_HOC_2017_Ali2022": {
+          "MC_HOC_2017_08_RY_1": "Agenten kan sveve over lava, men ikke Steve og Alex!  "
+        },
+        "courseA_artist_loops42022": {
+          "courseA_artist_loops4_1": "Dette tallet angir hvor mange av disse blokkene du kan bruke i denne oppgaven."
+        },
+        "courseA_artist_loops72022": {
+          "courseA_artist_loops7_1": "Dette tallet betyr at kun en av denne typen blokk kan bli brukt i det endelige svaret."
+        },
+        "courseA_artist_loops82022": {
+          "courseA_artist_loops8_1": "Visste du at du kan tegne tilbake og over en linje når du vil?"
+        },
+        "courseA_collector_loops12022": {
+          "courseA_collector_loops1_1": "Ser du noen nye blokker i verktøykassen?  Ta det helt med ro, vi vil vise deg hvordan du bruker dem senere i nivået."
+        },
+        "courseA_collector_loops32022": {
+          "gradek_adventurer_loops2_1": "Dette tallet angir hvor mange av disse blokkene du kan bruke i denne oppgaven."
+        },
+        "courseA_maze_seq12022": {
+          "courseA_maze_seq1_1": "Klikk på lyspæren når du trenger hjelp!"
+        },
+        "courseA_playLab_events42022": {
+          "courseA_playlab_events4_callout1": "Dette er et rop"
+        },
+        "courseA_playLab_events52022": {
+          "courseA_playLab_events5_1": "Klikk her for å endre retningen på hendelses-pilen."
+        },
+        "courseA_playLab_events62022": {
+          "courseA_playLab_events6_1": "Dette lar deg velge en \"tilfeldig\" lyd, som betyr at du ikke vet hvilken lyd du får før du hører den!"
+        },
+        "courseB_Scrat_ramp12022": {
+          "grade2_CaringForNewPet_0_1": "Etter du har koblet sammen alle blokkene, klikk på \"Kjør\" for å starte programmet."
+        },
+        "courseB_Scrat_ramp3a2022": {
+          "courseC_maze_programming2_1": "Dette er verktøykassa. Der vil du finne ekstra blokker for å fullføre oppgavene."
+        },
+        "courseB_artist_loops32022": {
+          "courseB_artist_loops3_1": "Det er kun en av disse blokkene i verktøykassa. Hvordan vil du bruke den?"
+        },
+        "courseB_collector_loops12022": {
+          "courseB_collector_loops1_1": "Ser du noen nye blokker i verktøykassen?  Ta det helt med ro, vi vil vise deg hvordan du bruker dem senere i nivået."
+        },
+        "courseB_maze_seq12022": {
+          "courseB_maze_seq1": "Klikk på lyspæren når du trenger hjelp!"
+        },
+        "courseB_playlab_events62022": {
+          "courseB_playlab_events6_a": "Bruk den grønne nedtrekksmenyen for å endre retning."
+        },
+        "courseC_PlayLab_events82022": {
+          "courseC_PlayLab_events8_callout1": "Bruk denne blokken når Waddles og Chomp er borti hverandre!"
+        },
+        "courseC_PlayLab_events_challenge12022": {
+          "courseC_PlayLab_events_challenge1_1": "Denne blokka lar deg flytte figurer til forskjellige deler av spillet."
+        },
+        "courseC_PlayLab_events_lesson_extras": {
+          "courseC_PlayLab_events_challenge1_1": "Denne blokka lar deg flytte figurer til forskjellige deler av spillet."
+        },
+        "courseC_collector_prog12022": {
+          "courseC_collector_prog1_1": "Ser du noen nye blokker i verktøykassen?  Ta det helt med ro, vi vil vise deg hvordan du bruker dem senere i nivået."
+        },
+        "courseC_collector_prog72022": {
+          "courseC_collector_prog7_1": "Du kan bruke flere blokker fra verktøykassa hvis du trenger dem!"
+        },
+        "courseC_harvester_loops12022": {
+          "courseC_harvester_loops1_callout1": "Tallet fire på gresskaret forteller deg at det er fire gresskar igjen å bruke."
+        },
+        "courseC_maze_debugging52022": {
+          "courseC_maze_debugging5_1": "Disse blokkene er låste og kan ikke bli slettet!"
+        },
+        "courseC_maze_programming12022": {
+          "grade2_CaringForNewPet_0_1": "Etter du har koblet sammen alle blokkene, klikk på \"Kjør\" for å starte programmet."
+        },
+        "courseC_maze_programming22022": {
+          "courseC_maze_programming2_1": "Dette er verktøykassa. Der vil du finne ekstra blokker for å fullføre oppgavene."
+        },
+        "courseC_maze_programming32022": {
+          "courseC_maze_programming3_2": "Du kan dra ekstra blokker tilbake til verktøykassa hvis du trenger å kaste dem."
+        },
+        "courseC_maze_programming42022": {
+          "courseC_maze_programming4_1": "Dette er grensen på antall blokker. Den forteller deg hvor mange av disse blokkene du har igjen å bruke."
+        },
+        "courseC_starWars_loops22022": {
+          "courseC_starWars_loops2": "Du har kun en av disse blokkene igjen i denne oppgaven."
+        },
+        "courseE_farmer_functions12022": {
+          "courseE_farmer_functions1_2": "Verktøykassa er organisert litt annerledes denne gangen! Klikk på de forskjellige kategoriene for å se hvilke blokker du har tilgjengelig."
+        },
+        "courseE_farmer_functions132022": {
+          "courseE_farmer_functions1a_1": "Denne grønnsaken er ukjent. Den endrer seg hver gang du kjører programmet."
+        },
+        "courseE_farmer_functions1a2022": {
+          "courseE_farmer_functions1a_1": "Denne grønnsaken er ukjent. Den endrer seg hver gang du kjører programmet."
+        },
+        "courseE_farmer_functions2b2022": {
+          "courseE_farmer_functions1a_1": "Denne grønnsaken er ukjent. Den endrer seg hver gang du kjører programmet."
+        },
+        "CourseD_Dance_2020_012022": {
+          "dance_callout_01": "Velg type danser her."
+        },
+        "CourseD_Dance_2020_022022": {
+          "dance_callout_11_a": "Legg til denne blokken til programmet ditt.",
+          "arrow_buttons": "Bruk piltastene for å kontrollere danseren din."
+        },
+        "CourseD_Dance_2020_042022": {
+          "dance_callout_02": "Legg til denne blokken til programmet ditt!"
+        },
+        "CourseD_Dance_2020_052022": {
+          "dance_callout_05": "Legg til en ny hendelse til programmet ditt."
+        },
+        "CourseD_Dance_2020_062022": {
+          "dance_party_11_5_groups": "Ny blokk!"
+        },
+        "CourseD_Dance_2020_072022": {
+          "setprop_hint": "Ny blokk!"
+        },
+        "CourseD_Dance_2020_092022": {
+          "new_block_3": "Ny blokk!",
+          "new_block_4": "Ny blokk!"
+        },
+        "Overworld Chop Trees2022": {
+          "craft_callout_preplaced": "Vi har plassert noen blokker her slik at du kommer i gang"
+        },
+        "Overworld House Frame Chosen2022": {
+          "craft_callout_preplaced_house": "Denne koden starter byggingen av huset ditt. Kan du fullføre det?"
+        },
+        "Overworld Move to Sheep2022": {
+          "craft_run_button_callout": "Trykk på \"Kjør\" for å prøve programme",
+          "craft_drag_block_callout": "Dra en \"flytt fremover\"-blokk og plasser den under den andre blokken"
+        },
+        "Overworld Place Wall2022": {
+          "craft_inside_repeat": "Gjenta handlinger ved å plassere blokker her"
+        },
+        "Underground Avoiding Lava2022": {
+          "craft_callout_moveforward": "Denne koden vil se etter lava. Kan du legge inn en kommando for å flytte fremover?"
+        },
+        "Underground Iron2022": {
+          "craft_what_is_iron": "Utvinn dette jernet!"
+        },
+        "courseA_maze_ramp22022": {
+          "courseC_maze_programming2_1": "Dette er verktøykassa. Der vil du finne ekstra blokker for å fullføre oppgavene."
+        },
+        "courseD_bee_conditionals22022": {
+          "4_5_Bee_Conditionals_2_1": "Husk, sjekk om HVER sky har en BLOMST. Du trenger ikke å se etter bikaker i det hele tatt."
+        },
+        "courseD_maze_intro42022": {
+          "courseC_maze_programming4_1": "Dette er grensen på antall blokker. Den forteller deg hvor mange av disse blokkene du har igjen å bruke."
+        },
+        "courseD_maze_ramp12022": {
+          "grade2_CaringForNewPet_0_1": "Etter du har koblet sammen alle blokkene, klikk på \"Kjør\" for å starte programmet."
+        },
+        "courseD_maze_ramp22022": {
+          "courseC_maze_programming2_1": "Dette er verktøykassa. Der vil du finne ekstra blokker for å fullføre oppgavene."
+        },
+        "courseD_maze_ramp32022": {
+          "courseC_maze_programming3_2": "Du kan dra ekstra blokker tilbake til verktøykassa hvis du trenger å kaste dem."
+        },
+        "helloworld_food_costumes_soccer-2022": {
+          "hello_world_new": "Ny blokk!"
+        },
+        "helloworld_food_costumes_space-2022": {
+          "hello_world_new": "Ny blokk!"
+        },
+        "helloworld_food_sizes_soccer-2022": {
+          "hello_world_new": "Ny blokk!",
+          "hello_world_new_block": "Ny blokk!"
+        },
+        "helloworld_food_sizes_space-2022": {
+          "hello_world_new": "Ny blokk!",
+          "hello_world_new_block": "Ny blokk!"
+        },
+        "helloworld_food_sounds_soccer-2022": {
+          "hello_world_new": "Ny blokk!"
+        },
+        "helloworld_food_sounds_space-2022": {
+          "hello_world_new": "Ny blokk!"
         }
       }
     }

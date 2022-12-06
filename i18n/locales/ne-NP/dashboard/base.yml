@@ -8,8 +8,14 @@
 #To use a different locale, set it with `I18n.locale`:
 #I18n.locale = :es
 #This would use the information in config/locales/es.yml.
+#The following keys must be escaped otherwise they will not be retrieved by
+#the default I18n backend:
+#true, false, on, off, yes, no
+#Instead, surround them with single quotes.
+#en:
+#'true': 'foo'
 #To learn more, please read the Rails Internationalization guide
-#available at http://guides.rubyonrails.org/i18n.html.
+#available at https://guides.rubyonrails.org/i18n.html.
 ne:
   errors:
     messages:
@@ -246,7 +252,6 @@ ne:
     popup:
       progress_for_user: "%{name}'s progress"
       progress: 'तपाईँको प्रगति'
-      lines: 'Total lines of code: %{lines}'
       close: 'बन्द गर्नुहोस्'
       mastery: 'Concepts'
       puzzle_map: 'Stages'
@@ -333,6 +338,7 @@ ne:
     no_primary_course: "Try a Code Studio course"
     choose_next_course: "Try a Code Studio course by choosing one below"
     print_certificate: "Print Certificate"
+  certificate_hour_of_code: "Hour of Code"
   move_students:
     new_section_dne: "Sorry, but section %{new_section_code} does not exist. Please enter a different section code."
     section_code_cant_be_current_section: "The current section cannot be the same as the new section."
@@ -718,10 +724,13 @@ ne:
         math: 'Math'
         science: 'Science'
         la: 'Language Arts'
+        other: "अन्य"
       resources:
         kodable: 'Kodable'
+        other: "अन्य"
       robotics:
         kodable: 'Kodable'
+        other: "अन्य"
       workshop_course:
         csp: '''16-''17 CS Principles'
       email_opt_in:
@@ -730,3 +739,5 @@ ne:
   cookie_banner:
     accept: 'I agree'
   copy: 'प्रतिलिपि गर्नुहोस्'
+  pixelation:
+    binary: "Binary"

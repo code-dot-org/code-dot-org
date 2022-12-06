@@ -1,6 +1,22 @@
 fil:
   data:
     shared_functions:
+      driving with arrow keys: pagmamaneho gamit ang mga arrow key
+      fluttering: pumapagaspas
+      growing: lumalaki
+      jittering: nanginginig
+      moving east: gumagalaw sa silangan
+      moving east and looping: gumagalaw sa silangan at umiikot
+      moving north: gumagalaw sa hilaga
       moving north and looping: gumagalaw sa hilaga at umiikot
+      moving south: gumagalaw sa timog
       moving south and looping: gumagalaw sa timog at umiikot
+      moving west: gumagalaw sa kanluran
+      moving west and looping: gumagalaw sa kanluran at umiikot
       moving with arrow keys: gumagalaw gamit ang mga arrow key
+      patrolling: nagpapatrolya
+      shrinking: lumiliit
+      spinning left: umiikot pakaliwa
+      spinning right: umiikot pakanan
+      wandering: gumagala
+      wobbling: gumulong-gulong

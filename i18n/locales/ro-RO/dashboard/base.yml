@@ -8,8 +8,14 @@
 #To use a different locale, set it with `I18n.locale`:
 #I18n.locale = :es
 #This would use the information in config/locales/es.yml.
+#The following keys must be escaped otherwise they will not be retrieved by
+#the default I18n backend:
+#true, false, on, off, yes, no
+#Instead, surround them with single quotes.
+#en:
+#'true': 'foo'
 #To learn more, please read the Rails Internationalization guide
-#available at http://guides.rubyonrails.org/i18n.html.
+#available at https://guides.rubyonrails.org/i18n.html.
 ro:
   errors:
     messages:
@@ -349,6 +355,7 @@ ro:
       educate_beyond: "Dincolo de Code.org"
       educate_inspire: "Inspirați un Student"
       educate_community: "Comunitate online"
+      educate_requirements: "Cerințe tehnice"
       educate_tools: "Instrumente şi clipuri video"
       about_us: "Despre noi"
       about_leadership: "Conducere"
@@ -422,7 +429,6 @@ ro:
     popup:
       progress_for_user: "Progresul lui %{name}"
       progress: 'Progresul tău'
-      lines: 'Total linii de cod: %{lines}'
       close: 'ÎNCHIDE'
       mastery: 'Concepte'
       puzzle_map: 'Etape'
@@ -542,6 +548,7 @@ ro:
     choose_next_course: "Încearcă un curs cu Atelierul de programare alegând unul de mai jos"
     print_certificate: "Tipărește certificatul"
   certificate_sponsor_message: "%{sponsor_name} a făcut darul generos de a vă sponsoriza învățarea."
+  certificate_hour_of_code: "Oră de Programare"
   move_students:
     new_section_dne: "Ne pare rău, dar secțiunea %{new_section_code} nu există. Vă rugăm să introduceţi un cod aferent unei secţiuni diferite."
     section_code_cant_be_current_section: "Secţiunea curentă nu poate fi la fel ca o secţiune nouă."
@@ -655,6 +662,11 @@ ro:
       title: 'Petrecere dansantă'
     dance-2019:
       title: 'Petrecere dansantă'
+    hello-world:
+      title: 'Bună Lume'
+      body: 'Alege din patru teme distractive pentru a codifica personaje interactive într-o lume pe care o creezi tu.'
+    poem-art:
+      title: 'Arta Poeziei'
     hoc:
       title: 'Labirint Clasic'
       body: 'Încearcă bazele programarii. Milioane de oameni au încercat.'
@@ -813,14 +825,6 @@ ro:
     reminder_desc: 'Am actualizat <a href="%{tos_url}" target="_blank"> Termenii</a> şi <a href="%{privacy_url}" target="_blank"> Politica de confidenţialitate</a>. Vă rugăm să citiţi acestea cu atenţie înainte de a le accepta. Reţineţi că instrumentele noastre de predare JavaScript pot fi disponibile pentru studenţii dumneavoastră înainte de a accepta în mod explicit actualizarea de termeni.'
     reminder_desc_markdown: Am actualizat [Termenii](%{tos_url}) şi [Politica de confidenţialitate](%{privacy_url}). Vă rugăm să citiţi acestea cu atenţie înainte de a le accepta. Reţineţi că instrumentele noastre de predare JavaScript pot fi disponibile pentru studenţii dumneavoastră înainte de a accepta în mod explicit actualizarea de termeni.
     review_terms: "Revedeţi termenii actualizati"
-  donor_interstitial:
-    title: "Cursurile tale gratuite de Informatică au fost posibile de către..."
-    subtitle: "Dorim să mulțumim donatorilor generoși al căror suport a făcut posibil succesul Code.org. Ne angajăm să menținem Code.org gratuit pentru școli și studenți, în general, datorită generozității continue a [donors](%{donors_url}) noștri!"
-    local_supporters: "Suporteri Locali"
-    global_supporters: "Suporteri Globali"
-    support_codeorg_1: "Fiecare dolar donat la Code.org aduce oportunități mai multor studenți."
-    support_codeorg_2: "[Donează acum](%{donate_url}) pentru a susține Code.org."
-    get_started: "Începe pe Code.org."
   school_info_interstitial:
     title: "Dorim să prezentăm Informatica fiecărui student - ajutați-ne pentru a ne putea urmări progresul!"
     message: "Vă rugăm introduceți informațiile despre școala dumneavoastră mai jos."
@@ -1044,6 +1048,7 @@ ro:
         music: 'Muzică'
         art: 'Artă'
         other: "Altele:"
+        na: 'Nu se aplică'
       resources:
         bootstrap: "\nSistem cu Buclă(Bootstrap)"
         codecademy: 'CodeCademy'
@@ -1052,7 +1057,8 @@ ro:
         kodable: 'Kodable'
         scratch: 'Scratch'
         tynker: 'Tynker'
-        other: "Altele:"
+        other: "Alte"
+        na: 'Nu se aplică'
       robotics:
         grok: 'Grok Learning'
         kodable: 'Kodable'
@@ -1062,7 +1068,8 @@ ro:
         sphero: 'Sphero'
         raspberry: 'Raspberry Pi'
         wonder: 'Atelierul minune'
-        other: "Altele:"
+        other: "Alte"
+        na: 'Nu se aplică'
       workshop_course:
         csf_af: 'Fundamentele informaticii (Cursuri A-F)'
         csf_express: 'Fundamentele informaticii (pre-Express sau Express)'
@@ -1114,3 +1121,12 @@ ro:
     this_sprite: "acest spirit"
   unit_prefix: "Unitate %{n}"
   teacher_feedback: "Punctele de vedere ale profesorului"
+  lesson_lock:
+    error:
+      no_updates: "Nu există actualizări de efectuat."
+      missing_params: "Trebuie furnizate id-urile de utilizator, nivel și unitate"
+      cannot_view_locked_answers: "Nu se pot vizualiza răspunsurile în timp ce sunt blocate"
+      forbidden: "Utilizatorul nu poate actualiza starea de blocare a elevului."
+  reset_predict_progress_button: "Șterge Răspunsul"
+  pixelation:
+    binary: "Binar"

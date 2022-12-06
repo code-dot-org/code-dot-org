@@ -263,7 +263,6 @@ si:
     popup:
       progress_for_user: "%{name} ගේ ප්‍රගතිය"
       progress: ඔබගේ ප්‍රගතිය
-      lines: 'සම්පූර්ණ කේත පේලි ගණන: %{lines}'
       close: වහන්න
       mastery: අදහස්
       puzzle_map: අදියරයන්
@@ -362,6 +361,7 @@ si:
     no_primary_course: කේත ස්ටූඩියෝ පාඨමාලාවක් හදාරන්න
     choose_next_course: පහතින් එකක් තෝරා ගැනීමෙන් කේත ස්ටූඩියෝ පාඨමාලාවක් උත්සාහ කරන්න
     print_certificate: සහතිකය මුද්‍රණයකරන්න
+  certificate_hour_of_code: Hour of Code
   move_students:
     new_section_dne: සමාවෙන්න!, %{new_section_code} අංශය නොපවතී. කරුණාකර වෙනස් අංශ
       කේතයක් ඇතුල් කරන්න.
@@ -817,12 +817,15 @@ si:
         math: ගණිත
         science: විද්‍යාව
         la: භාෂා අධ්‍යනය
+        other: වෙනත්
       resources:
         khan: ඛාන් ඇකඩමිය
         kodable: කෝඩබල්
         lightbot: Lightbot
+        other: වෙනත්
       robotics:
         kodable: කෝඩබල්
+        other: වෙනත්
       workshop_course:
         csp: "'16-'17 පරිගණක විද්‍යාවේ මූලිකාංග"
       email_opt_in:
@@ -832,3 +835,5 @@ si:
     accept: මම එකඟයි
   page_not_found_title: පිටුව සොයාගත නොහැක
   copy: පිටපත් කරන්න
+  pixelation:
+    binary: ද්විමය

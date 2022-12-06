@@ -319,13 +319,13 @@ class Api::V1::AssessmentsControllerTest < ActionController::TestCase
     ]
 
     # create user_level for level_group
-    user_level = create :user_level, user: @student_1, best_result: 100, script: script, level: level1, submitted: true
+    level_group_user_level = create :user_level, user: @student_1, best_result: 100, script: script, level: level1, submitted: true
 
     # create user_levels for sublevels
     student_answers.each do |level_and_answer|
       level, answer = level_and_answer
       level_source = create :level_source, level: level, data: answer
-      user_level = create :user_level, user: @student_1, script: script, level: level, level_source: level_source
+      create :user_level, user: @student_1, script: script, level: level, level_source: level_source
     end
 
     # Call the controller method.
@@ -350,7 +350,7 @@ class Api::V1::AssessmentsControllerTest < ActionController::TestCase
               "match_correct" => 0,
               "match_count" => 0,
               "submitted" => true,
-              "timestamp" => user_level[:updated_at],
+              "timestamp" => level_group_user_level[:updated_at],
               "level_results" => [
                 {"type" => "Multi", "student_result" => [2, 3], "status" => "correct",},
                 {"type" => "Multi", "student_result" => [3], "status" => "incorrect",}
@@ -711,7 +711,7 @@ class Api::V1::AssessmentsControllerTest < ActionController::TestCase
       create :teacher_feedback, script: script, level: weblab_level, student: student, teacher: @teacher
     end
 
-    assert_queries 13 do
+    assert_queries 12 do
       get :section_feedback, params: {section_id: @section.id, script_id: script.id}
     end
 

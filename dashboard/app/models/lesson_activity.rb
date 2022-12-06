@@ -24,7 +24,7 @@
 class LessonActivity < ApplicationRecord
   include SerializedProperties
 
-  belongs_to :lesson
+  belongs_to :lesson, optional: true
   has_one :script, through: :lesson
   has_many :activity_sections, -> {order(:position)}, dependent: :destroy
 

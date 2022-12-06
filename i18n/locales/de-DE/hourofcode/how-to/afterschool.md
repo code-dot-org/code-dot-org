@@ -8,7 +8,7 @@ title: Außerschulische Anleitung für Hour of Code
 
 ### Schließen Sie sich der Bewegung an und führen Sie Ihre Lernenden mit diesen Schritten an die Informatik heran.
 
-Rechnergestütztes Denken fördert Problemlösungsfähigkeiten, Logik und Kreativität. Gleichzeitig verändert die Technologie jede Branche auf diesem Planeten. Lernende von heute müssen verstehen, wie man Technologie erschafft und nicht nur, wie man sie verwendet. Wenn sie früh anfangen, schaffen sie damit die Grundlagen zum Erfolg in jedem Berufsbild des 21. Jahrhunderts.
+Rechnergestütztes Denken fördert Problemlösungsfähigkeiten, Logik und Kreativität. Die Technologie verändert alle Branchen auf unserem Planeten. Lernende von heute müssen verstehen, wie man Technologie erschafft und nicht nur, wie man sie verwendet. Wenn sie früh anfangen, schaffen sie damit die Grundlagen zum Erfolg in jedem Berufsbild des 21. Jahrhunderts.
 
 Hour of Code ist eine einfache und spaßige Möglichkeit, um Lernende an die Informatik heranzuführen. Wenn Sie mehr Hilfe brauchen, können Sie ein [lokalen Freiwilliger]({{ urls/volunteer_local }})finden, damit Hour of Code in Ihre außerschulische Klasse oder Schulclub zu helfen.
 
@@ -16,7 +16,7 @@ Hour of Code ist eine einfache und spaßige Möglichkeit, um Lernende an die Inf
 
 * * *
 
-## 1. Schauen Sie sich dieses Tutorialvideo an <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
+## 1. Schauen Sie sich dieses Tutorialvideo an <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe> 
 
 ## 2. Wählen Sie eine Lektion
 
@@ -36,7 +36,7 @@ Bewerben Sie Ihre Hour of Code [mit diesen Tools]({{ urls/promote }}) und ermuti
 
 Die beste "Hour of Code"-Erfahrung macht man mit Computern, die einen Internetzugang haben. Aber Sie brauchen **nicht** ein Computer für jedes Kind und Sie können sogar Hour of Code ohne ein Computer machen.
 
-Testen Sie Tutorials auf den Computern oder Geräten der Lernenden. Prüfen Sie, dass Ton und Video im Browser ordnungsgemäß funktionieren. **Geringe Bandbreite haben?** Abspielen Videos vor der Klasse, sodass jeder Student nicht eigenen Videos herunterladen muss. Oder probieren die ausgesteckt/offline Tutorials.
+Testen Sie Tutorials auf den Computern oder Geräten der SchülerInnen. Prüfen Sie, Ton und Video im Browser ordnungsgemäß funktionieren. **Geringe Bandbreite haben?** Abspielen Videos vor der Klasse, sodass jeder Student nicht eigenen Videos herunterladen muss. Oder probieren die ausgesteckt/offline Tutorials.
 
 Stellen Sie Ihrer Klasse Kopfhörer zur Verfügung, oder bitten Sie sie, eigene mitzubringen, wenn das ausgewählte Tutorial am Besten mit Ton funktioniert.
 
@@ -81,7 +81,7 @@ Beginnen Sie Ihre Hour of Code mit einer motivierenden Diskussion mit den Teilne
 - Sehen Sie sich [bewährte Methoden](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) von früheren Hour of Code Veranstaltern an.
 - Schauen Sie sich die Aufzeichnung unseres [Anleitung für Hour of Code Unterrichtende](https://youtu.be/EJeMeSW2-Mw) Webinars an.
 - Besuchen Sie das [Hour of Code Forum](http://forum.code.org/c/plc/hour-of-code), um Vorschläge, Einblicke und Unterstützung von anderen Veranstaltern zu erhalten.
-- Sehen Sie sich die FAW zu [Hour of Code](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code) an.
+- Lesen Sie die Antworten auf häufig gestellte Fragen [Hour of Code](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code) an.
 
 ## Was kommt nach der Hour of Code?
 

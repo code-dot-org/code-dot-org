@@ -34,16 +34,13 @@ module Pd
     include Pd::WorkshopSurveyConstants
 
     belongs_to :user
-    belongs_to :pd_session, class_name: 'Pd::Session'
+    belongs_to :pd_session, class_name: 'Pd::Session', optional: true
     belongs_to :pd_workshop, class_name: 'Pd::Workshop'
 
     validates_uniqueness_of :user_id, scope: [:pd_workshop_id, :day, :form_id],
                             message: 'already has a submission for this workshop, day, and form'
-    validates_presence_of(
-      :user_id,
-      :pd_workshop_id,
-      :day
-    )
+
+    validates_presence_of :day
     validate :day_for_subject
 
     # @override
@@ -102,7 +99,7 @@ module Pd
 
     def day_for_subject
       unless VALID_DAYS[CATEGORY_MAP[pd_workshop.subject]].include? day
-        errors[:day] << "Day #{day} is not valid for workshop subject #{pd_workshop.subject}"
+        errors.add(:day, "Day #{day} is not valid for workshop subject #{pd_workshop.subject}")
       end
     end
   end

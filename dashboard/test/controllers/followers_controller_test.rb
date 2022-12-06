@@ -6,7 +6,7 @@ class FollowersControllerTest < ActionController::TestCase
     @laurel = create(:teacher)
     @laurel_section_1 = create(:section, user: @laurel)
     @laurel_section_2 = create(:section, user: @laurel)
-    @laurel_section_script = create(:section, user: @laurel, script: Script.find_by_name('course1'))
+    @laurel_section_script = create(:section, user: @laurel, script: Unit.find_by_name('course1'))
 
     # add a few students to a section
     @laurel_student_1 = create(:follower, section: @laurel_section_1)
@@ -22,6 +22,8 @@ class FollowersControllerTest < ActionController::TestCase
     @word_section = create(:section, login_type: Section::LOGIN_TYPE_WORD)
 
     @admin = create(:admin)
+
+    @request.host = CDO.dashboard_hostname
   end
 
   test "student in picture section should be redirected to picture login when joining section" do

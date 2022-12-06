@@ -1,6 +1,3 @@
-# Maddie (6/12/2020) disabled in IE because "And I press keys" step does not work in IE.
-# https://github.com/code-dot-org/code-dot-org/pull/24646
-@no_ie
 @no_mobile
 Feature: Libraries
 
@@ -32,7 +29,7 @@ Feature: Libraries
     And I start a new Game Lab project
     And I wait for the page to fully load
     Then I open the Manage Libraries dialog
-    And I wait until element "h1:contains('Import library from ID')" is visible
+    And I wait until element "h2:contains('Import library from ID')" is visible
     And I type the saved channel id into element "#ui-test-import-library > input"
     And I click selector "#ui-test-import-library > button" to load a new page
 

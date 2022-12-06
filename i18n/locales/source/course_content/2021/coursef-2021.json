@@ -36,6 +36,24 @@
           "wobbling": "wobbling",
           "moving west and looping": "moving west and looping",
           "moving east and looping": "moving east and looping"
+        },
+        "behavior_descriptions": {
+          "move a sprite across the screen, reversing direction if it touches the edges": "move a sprite across the screen, reversing direction if it touches the edges",
+          "move a sprite, changing its direction randomly": "move a sprite, changing its direction randomly",
+          "move a sprite to the right across the screen": "move a sprite to the right across the screen",
+          "rotate a sprite to its left": "rotate a sprite to its left",
+          "rotate a sprite to its right": "rotate a sprite to its right",
+          "change the size of a sprite": "change the size of a sprite",
+          "move a sprite downwards across the screen": "move a sprite downwards across the screen",
+          "move a sprite horizontally, reversing direction if it touches the edges of the screen": "move a sprite horizontally, reversing direction if it touches the edges of the screen",
+          "move a sprite upwards across the screen": "move a sprite upwards across the screen",
+          "randomly change the size of a sprite": "randomly change the size of a sprite",
+          "move a sprite to the left across the screen": "move a sprite to the left across the screen",
+          "move a sprite if the user is pressing the arrow keys": "move a sprite if the user is pressing the arrow keys",
+          "randomly change the vertical position of a sprite": "randomly change the vertical position of a sprite",
+          "randomly set the rotation of a sprite": "randomly set the rotation of a sprite",
+          "Move a sprite to the left across the screen. When it goes off the left side of the screen, move it back to the right side of the screen.": "Move a sprite to the left across the screen. When it goes off the left side of the screen, move it back to the right side of the screen.",
+          "Move a sprite to the right across the screen. When it goes off the right side of the screen, move it back to the left side of the screen.": "Move a sprite to the right across the screen. When it goes off the right side of the screen, move it back to the left side of the screen."
         }
       },
       "courseF_apps_card": {
@@ -66,6 +84,10 @@
           "moving west": "moving west",
           "spinning right": "spinning right",
           "spinning left": "spinning left"
+        },
+        "behavior_descriptions": {
+          "Moves back and forth in one direction. To change the direction a sprite is patrolling, change its \"movement direction\"": "Moves back and forth in one direction. To change the direction a sprite is patrolling, change its \"movement direction\"",
+          "rotate a sprite to its left": "rotate a sprite to its left"
         }
       },
       "courseF_apps_chatbot": {
@@ -118,6 +140,21 @@
           "patrolling2": "patrolling2",
           "moving with arrow keys2": "moving with arrow keys2",
           "driving with arrow keys2": "driving with arrow keys2"
+        },
+        "behavior_descriptions": {
+          "Moves back and forth in one direction. To change the direction a sprite is patrolling, change its \"movement direction\"": "Moves back and forth in one direction. To change the direction a sprite is patrolling, change its \"movement direction\"",
+          "rotate a sprite to its left": "rotate a sprite to its left",
+          "move a sprite, changing its direction randomly": "move a sprite, changing its direction randomly",
+          "move a sprite to the right across the screen": "move a sprite to the right across the screen",
+          "rotate a sprite to its right": "rotate a sprite to its right",
+          "change the size of a sprite": "change the size of a sprite",
+          "move a sprite downwards across the screen": "move a sprite downwards across the screen",
+          "move a sprite horizontally, reversing direction if it touches the edges of the screen": "move a sprite horizontally, reversing direction if it touches the edges of the screen",
+          "move a sprite upwards across the screen": "move a sprite upwards across the screen",
+          "randomly change the size of a sprite": "randomly change the size of a sprite",
+          "move a sprite to the left across the screen": "move a sprite to the left across the screen",
+          "move a sprite across the screen, reversing direction if it touches the edges": "move a sprite across the screen, reversing direction if it touches the edges",
+          "move a sprite if the user is pressing the arrow keys": "move a sprite if the user is pressing the arrow keys"
         }
       },
       "courseF_apps_madlib": {
@@ -156,6 +193,24 @@
           "wobbling": "wobbling",
           "moving west and looping": "moving west and looping",
           "moving east and looping": "moving east and looping"
+        },
+        "behavior_descriptions": {
+          "move a sprite, changing its direction randomly": "move a sprite, changing its direction randomly",
+          "move a sprite to the right across the screen": "move a sprite to the right across the screen",
+          "rotate a sprite to its left": "rotate a sprite to its left",
+          "rotate a sprite to its right": "rotate a sprite to its right",
+          "change the size of a sprite": "change the size of a sprite",
+          "move a sprite downwards across the screen": "move a sprite downwards across the screen",
+          "move a sprite horizontally, reversing direction if it touches the edges of the screen": "move a sprite horizontally, reversing direction if it touches the edges of the screen",
+          "move a sprite upwards across the screen": "move a sprite upwards across the screen",
+          "randomly change the size of a sprite": "randomly change the size of a sprite",
+          "move a sprite to the left across the screen": "move a sprite to the left across the screen",
+          "move a sprite across the screen, reversing direction if it touches the edges": "move a sprite across the screen, reversing direction if it touches the edges",
+          "move a sprite if the user is pressing the arrow keys": "move a sprite if the user is pressing the arrow keys",
+          "randomly change the vertical position of a sprite": "randomly change the vertical position of a sprite",
+          "randomly set the rotation of a sprite": "randomly set the rotation of a sprite",
+          "Move a sprite to the left across the screen. When it goes off the left side of the screen, move it back to the right side of the screen.": "Move a sprite to the left across the screen. When it goes off the left side of the screen, move it back to the right side of the screen.",
+          "Move a sprite to the right across the screen. When it goes off the right side of the screen, move it back to the left side of the screen.": "Move a sprite to the right across the screen. When it goes off the right side of the screen, move it back to the left side of the screen."
         }
       },
       "courseF_apps_aquarium": {
@@ -206,6 +261,20 @@
           "patrolling2": "patrolling2",
           "moving with arrow keys2": "moving with arrow keys2",
           "driving with arrow keys2": "driving with arrow keys2"
+        },
+        "behavior_descriptions": {
+          "move a sprite, changing its direction randomly": "move a sprite, changing its direction randomly",
+          "move a sprite to the right across the screen": "move a sprite to the right across the screen",
+          "move a sprite to the left across the screen": "move a sprite to the left across the screen",
+          "rotate a sprite to its left": "rotate a sprite to its left",
+          "rotate a sprite to its right": "rotate a sprite to its right",
+          "change the size of a sprite": "change the size of a sprite",
+          "move a sprite downwards across the screen": "move a sprite downwards across the screen",
+          "move a sprite horizontally, reversing direction if it touches the edges of the screen": "move a sprite horizontally, reversing direction if it touches the edges of the screen",
+          "move a sprite upwards across the screen": "move a sprite upwards across the screen",
+          "randomly change the size of a sprite": "randomly change the size of a sprite",
+          "move a sprite across the screen, reversing direction if it touches the edges": "move a sprite across the screen, reversing direction if it touches the edges",
+          "move a sprite if the user is pressing the arrow keys": "move a sprite if the user is pressing the arrow keys"
         }
       },
       "courseF_apps_collector": {
@@ -257,6 +326,22 @@
           "patrolling2": "patrolling2",
           "moving with arrow keys2": "moving with arrow keys2",
           "driving with arrow keys2": "driving with arrow keys2"
+        },
+        "behavior_descriptions": {
+          "move a sprite, changing its direction randomly": "move a sprite, changing its direction randomly",
+          "move a sprite to the left across the screen": "move a sprite to the left across the screen",
+          "Move a sprite to the left across the screen. If it goes off the left side of the screen it moves to the right side of the screen.": "Move a sprite to the left across the screen. If it goes off the left side of the screen it moves to the right side of the screen.",
+          "randomly move the sprite up or down": "randomly move the sprite up or down",
+          "move a sprite to the right across the screen": "move a sprite to the right across the screen",
+          "rotate a sprite to its left": "rotate a sprite to its left",
+          "rotate a sprite to its right": "rotate a sprite to its right",
+          "change the size of a sprite": "change the size of a sprite",
+          "move a sprite downwards across the screen": "move a sprite downwards across the screen",
+          "move a sprite horizontally, reversing direction if it touches the edges of the screen": "move a sprite horizontally, reversing direction if it touches the edges of the screen",
+          "move a sprite upwards across the screen": "move a sprite upwards across the screen",
+          "randomly change the size of a sprite": "randomly change the size of a sprite",
+          "move a sprite across the screen, reversing direction if it touches the edges": "move a sprite across the screen, reversing direction if it touches the edges",
+          "move a sprite if the user is pressing the arrow keys": "move a sprite if the user is pressing the arrow keys"
         }
       },
       "CourseF_app_computer": {
@@ -289,6 +374,19 @@
       "moving north": "moving north",
       "jittering": "jittering",
       "patrolling": "patrolling"
+    },
+    "behavior_descriptions": {
+      "move a sprite to the right across the screen": "move a sprite to the right across the screen",
+      "move a sprite to the left across the screen": "move a sprite to the left across the screen",
+      "move a sprite, changing its direction randomly": "move a sprite, changing its direction randomly",
+      "rotate a sprite to its left": "rotate a sprite to its left",
+      "rotate a sprite to its right": "rotate a sprite to its right",
+      "change the size of a sprite": "change the size of a sprite",
+      "move a sprite downwards across the screen": "move a sprite downwards across the screen",
+      "move a sprite horizontally, reversing direction if it touches the edges of the screen": "move a sprite horizontally, reversing direction if it touches the edges of the screen",
+      "move a sprite upwards across the screen": "move a sprite upwards across the screen",
+      "randomly change the size of a sprite": "randomly change the size of a sprite",
+      "move a sprite across the screen, reversing direction if it touches the edges": "move a sprite across the screen, reversing direction if it touches the edges"
     },
     "contained levels": [
       {
@@ -349,6 +447,20 @@
       "wobbling": "wobbling",
       "moving west and looping": "moving west and looping",
       "moving east and looping": "moving east and looping"
+    },
+    "behavior_descriptions": {
+      "move a sprite to the right across the screen": "move a sprite to the right across the screen",
+      "rotate a sprite to its left": "rotate a sprite to its left",
+      "rotate a sprite to its right": "rotate a sprite to its right",
+      "change the size of a sprite": "change the size of a sprite",
+      "move a sprite downwards across the screen": "move a sprite downwards across the screen",
+      "move a sprite upwards across the screen": "move a sprite upwards across the screen",
+      "randomly change the size of a sprite": "randomly change the size of a sprite",
+      "move a sprite to the left across the screen": "move a sprite to the left across the screen",
+      "randomly change the vertical position of a sprite": "randomly change the vertical position of a sprite",
+      "randomly set the rotation of a sprite": "randomly set the rotation of a sprite",
+      "Move a sprite to the left across the screen. When it goes off the left side of the screen, move it back to the right side of the screen.": "Move a sprite to the left across the screen. When it goes off the left side of the screen, move it back to the right side of the screen.",
+      "Move a sprite to the right across the screen. When it goes off the right side of the screen, move it back to the left side of the screen.": "Move a sprite to the right across the screen. When it goes off the right side of the screen, move it back to the left side of the screen."
     }
   },
   "https://studio.code.org/s/coursef-2021/lessons/2/levels/4": {
@@ -373,6 +485,20 @@
       "wobbling": "wobbling",
       "moving west and looping": "moving west and looping",
       "moving east and looping": "moving east and looping"
+    },
+    "behavior_descriptions": {
+      "move a sprite to the right across the screen": "move a sprite to the right across the screen",
+      "rotate a sprite to its left": "rotate a sprite to its left",
+      "rotate a sprite to its right": "rotate a sprite to its right",
+      "change the size of a sprite": "change the size of a sprite",
+      "move a sprite downwards across the screen": "move a sprite downwards across the screen",
+      "move a sprite upwards across the screen": "move a sprite upwards across the screen",
+      "randomly change the size of a sprite": "randomly change the size of a sprite",
+      "move a sprite to the left across the screen": "move a sprite to the left across the screen",
+      "randomly change the vertical position of a sprite": "randomly change the vertical position of a sprite",
+      "randomly set the rotation of a sprite": "randomly set the rotation of a sprite",
+      "Move a sprite to the left across the screen. When it goes off the left side of the screen, move it back to the right side of the screen.": "Move a sprite to the left across the screen. When it goes off the left side of the screen, move it back to the right side of the screen.",
+      "Move a sprite to the right across the screen. When it goes off the right side of the screen, move it back to the left side of the screen.": "Move a sprite to the right across the screen. When it goes off the right side of the screen, move it back to the left side of the screen."
     }
   },
   "https://studio.code.org/s/coursef-2021/lessons/2/levels/5": {
@@ -394,6 +520,20 @@
       "wobbling": "wobbling",
       "moving west and looping": "moving west and looping",
       "moving east and looping": "moving east and looping"
+    },
+    "behavior_descriptions": {
+      "move a sprite to the right across the screen": "move a sprite to the right across the screen",
+      "rotate a sprite to its left": "rotate a sprite to its left",
+      "rotate a sprite to its right": "rotate a sprite to its right",
+      "change the size of a sprite": "change the size of a sprite",
+      "move a sprite downwards across the screen": "move a sprite downwards across the screen",
+      "move a sprite upwards across the screen": "move a sprite upwards across the screen",
+      "randomly change the size of a sprite": "randomly change the size of a sprite",
+      "move a sprite to the left across the screen": "move a sprite to the left across the screen",
+      "randomly change the vertical position of a sprite": "randomly change the vertical position of a sprite",
+      "randomly set the rotation of a sprite": "randomly set the rotation of a sprite",
+      "Move a sprite to the left across the screen. When it goes off the left side of the screen, move it back to the right side of the screen.": "Move a sprite to the left across the screen. When it goes off the left side of the screen, move it back to the right side of the screen.",
+      "Move a sprite to the right across the screen. When it goes off the right side of the screen, move it back to the left side of the screen.": "Move a sprite to the right across the screen. When it goes off the right side of the screen, move it back to the left side of the screen."
     }
   },
   "https://studio.code.org/s/coursef-2021/lessons/2/levels/6": {
@@ -418,6 +558,20 @@
       "wobbling": "wobbling",
       "moving west and looping": "moving west and looping",
       "moving east and looping": "moving east and looping"
+    },
+    "behavior_descriptions": {
+      "move a sprite to the right across the screen": "move a sprite to the right across the screen",
+      "rotate a sprite to its left": "rotate a sprite to its left",
+      "rotate a sprite to its right": "rotate a sprite to its right",
+      "change the size of a sprite": "change the size of a sprite",
+      "move a sprite downwards across the screen": "move a sprite downwards across the screen",
+      "move a sprite upwards across the screen": "move a sprite upwards across the screen",
+      "randomly change the size of a sprite": "randomly change the size of a sprite",
+      "move a sprite to the left across the screen": "move a sprite to the left across the screen",
+      "randomly change the vertical position of a sprite": "randomly change the vertical position of a sprite",
+      "randomly set the rotation of a sprite": "randomly set the rotation of a sprite",
+      "Move a sprite to the left across the screen. When it goes off the left side of the screen, move it back to the right side of the screen.": "Move a sprite to the left across the screen. When it goes off the left side of the screen, move it back to the right side of the screen.",
+      "Move a sprite to the right across the screen. When it goes off the right side of the screen, move it back to the left side of the screen.": "Move a sprite to the right across the screen. When it goes off the right side of the screen, move it back to the left side of the screen."
     }
   },
   "https://studio.code.org/s/coursef-2021/lessons/2/levels/7": {
@@ -437,6 +591,15 @@
       "moving south": "moving south",
       "moving north": "moving north",
       "moving west": "moving west"
+    },
+    "behavior_descriptions": {
+      "move a sprite to the right across the screen": "move a sprite to the right across the screen",
+      "rotate a sprite to its left": "rotate a sprite to its left",
+      "rotate a sprite to its right": "rotate a sprite to its right",
+      "change the size of a sprite": "change the size of a sprite",
+      "move a sprite downwards across the screen": "move a sprite downwards across the screen",
+      "move a sprite upwards across the screen": "move a sprite upwards across the screen",
+      "move a sprite to the left across the screen": "move a sprite to the left across the screen"
     }
   },
   "https://studio.code.org/s/coursef-2021/lessons/2/levels/8": {
@@ -465,6 +628,20 @@
           "wobbling": "wobbling",
           "moving west and looping": "moving west and looping",
           "moving east and looping": "moving east and looping"
+        },
+        "behavior_descriptions": {
+          "move a sprite to the right across the screen": "move a sprite to the right across the screen",
+          "rotate a sprite to its left": "rotate a sprite to its left",
+          "rotate a sprite to its right": "rotate a sprite to its right",
+          "change the size of a sprite": "change the size of a sprite",
+          "move a sprite downwards across the screen": "move a sprite downwards across the screen",
+          "move a sprite upwards across the screen": "move a sprite upwards across the screen",
+          "randomly change the size of a sprite": "randomly change the size of a sprite",
+          "move a sprite to the left across the screen": "move a sprite to the left across the screen",
+          "randomly change the vertical position of a sprite": "randomly change the vertical position of a sprite",
+          "randomly set the rotation of a sprite": "randomly set the rotation of a sprite",
+          "Move a sprite to the left across the screen. When it goes off the left side of the screen, move it back to the right side of the screen.": "Move a sprite to the left across the screen. When it goes off the left side of the screen, move it back to the right side of the screen.",
+          "Move a sprite to the right across the screen. When it goes off the right side of the screen, move it back to the left side of the screen.": "Move a sprite to the right across the screen. When it goes off the right side of the screen, move it back to the left side of the screen."
         }
       },
       "courseF_place_fruit": {
@@ -486,6 +663,20 @@
           "wobbling": "wobbling",
           "moving west and looping": "moving west and looping",
           "moving east and looping": "moving east and looping"
+        },
+        "behavior_descriptions": {
+          "move a sprite to the right across the screen": "move a sprite to the right across the screen",
+          "rotate a sprite to its left": "rotate a sprite to its left",
+          "rotate a sprite to its right": "rotate a sprite to its right",
+          "change the size of a sprite": "change the size of a sprite",
+          "move a sprite downwards across the screen": "move a sprite downwards across the screen",
+          "move a sprite upwards across the screen": "move a sprite upwards across the screen",
+          "randomly change the size of a sprite": "randomly change the size of a sprite",
+          "move a sprite to the left across the screen": "move a sprite to the left across the screen",
+          "randomly change the vertical position of a sprite": "randomly change the vertical position of a sprite",
+          "randomly set the rotation of a sprite": "randomly set the rotation of a sprite",
+          "Move a sprite to the left across the screen. When it goes off the left side of the screen, move it back to the right side of the screen.": "Move a sprite to the left across the screen. When it goes off the left side of the screen, move it back to the right side of the screen.",
+          "Move a sprite to the right across the screen. When it goes off the right side of the screen, move it back to the left side of the screen.": "Move a sprite to the right across the screen. When it goes off the right side of the screen, move it back to the left side of the screen."
         }
       },
       "courseF_sprites_ship": {
@@ -507,6 +698,20 @@
           "wobbling": "wobbling",
           "moving west and looping": "moving west and looping",
           "moving east and looping": "moving east and looping"
+        },
+        "behavior_descriptions": {
+          "move a sprite to the right across the screen": "move a sprite to the right across the screen",
+          "rotate a sprite to its left": "rotate a sprite to its left",
+          "rotate a sprite to its right": "rotate a sprite to its right",
+          "change the size of a sprite": "change the size of a sprite",
+          "move a sprite downwards across the screen": "move a sprite downwards across the screen",
+          "move a sprite upwards across the screen": "move a sprite upwards across the screen",
+          "randomly change the size of a sprite": "randomly change the size of a sprite",
+          "move a sprite to the left across the screen": "move a sprite to the left across the screen",
+          "randomly change the vertical position of a sprite": "randomly change the vertical position of a sprite",
+          "randomly set the rotation of a sprite": "randomly set the rotation of a sprite",
+          "Move a sprite to the left across the screen. When it goes off the left side of the screen, move it back to the right side of the screen.": "Move a sprite to the left across the screen. When it goes off the left side of the screen, move it back to the right side of the screen.",
+          "Move a sprite to the right across the screen. When it goes off the right side of the screen, move it back to the left side of the screen.": "Move a sprite to the right across the screen. When it goes off the right side of the screen, move it back to the left side of the screen."
         }
       },
       "courseF_sprites_clouds": {
@@ -532,6 +737,21 @@
           "wobbling": "wobbling",
           "moving west and looping": "moving west and looping",
           "moving east and looping": "moving east and looping"
+        },
+        "behavior_descriptions": {
+          "move a sprite, changing its direction randomly": "move a sprite, changing its direction randomly",
+          "move a sprite to the right across the screen": "move a sprite to the right across the screen",
+          "rotate a sprite to its left": "rotate a sprite to its left",
+          "rotate a sprite to its right": "rotate a sprite to its right",
+          "change the size of a sprite": "change the size of a sprite",
+          "move a sprite downwards across the screen": "move a sprite downwards across the screen",
+          "move a sprite upwards across the screen": "move a sprite upwards across the screen",
+          "randomly change the size of a sprite": "randomly change the size of a sprite",
+          "move a sprite to the left across the screen": "move a sprite to the left across the screen",
+          "randomly change the vertical position of a sprite": "randomly change the vertical position of a sprite",
+          "randomly set the rotation of a sprite": "randomly set the rotation of a sprite",
+          "Move a sprite to the left across the screen. When it goes off the left side of the screen, move it back to the right side of the screen.": "Move a sprite to the left across the screen. When it goes off the left side of the screen, move it back to the right side of the screen.",
+          "Move a sprite to the right across the screen. When it goes off the right side of the screen, move it back to the left side of the screen.": "Move a sprite to the right across the screen. When it goes off the right side of the screen, move it back to the left side of the screen."
         }
       }
     }
@@ -562,6 +782,21 @@
           "jittering": "jittering",
           "fluttering": "fluttering",
           "wobbling": "wobbling"
+        },
+        "behavior_descriptions": {
+          "Move a sprite to the left across the screen. When it goes off the left side of the screen, move it back to the right side of the screen.": "Move a sprite to the left across the screen. When it goes off the left side of the screen, move it back to the right side of the screen.",
+          "move a sprite to the right across the screen": "move a sprite to the right across the screen",
+          "Move a sprite to the right across the screen. When it goes off the right side of the screen, move it back to the left side of the screen.": "Move a sprite to the right across the screen. When it goes off the right side of the screen, move it back to the left side of the screen.",
+          "move a sprite to the left across the screen": "move a sprite to the left across the screen",
+          "move a sprite, changing its direction randomly": "move a sprite, changing its direction randomly",
+          "rotate a sprite to its left": "rotate a sprite to its left",
+          "rotate a sprite to its right": "rotate a sprite to its right",
+          "change the size of a sprite": "change the size of a sprite",
+          "move a sprite downwards across the screen": "move a sprite downwards across the screen",
+          "move a sprite upwards across the screen": "move a sprite upwards across the screen",
+          "randomly change the size of a sprite": "randomly change the size of a sprite",
+          "randomly change the vertical position of a sprite": "randomly change the vertical position of a sprite",
+          "randomly set the rotation of a sprite": "randomly set the rotation of a sprite"
         }
       },
       "courseF_sprites_freeplay_aquatic": {
@@ -584,6 +819,21 @@
           "jittering": "jittering",
           "fluttering": "fluttering",
           "wobbling": "wobbling"
+        },
+        "behavior_descriptions": {
+          "Move a sprite to the left across the screen. When it goes off the left side of the screen, move it back to the right side of the screen.": "Move a sprite to the left across the screen. When it goes off the left side of the screen, move it back to the right side of the screen.",
+          "move a sprite to the right across the screen": "move a sprite to the right across the screen",
+          "Move a sprite to the right across the screen. When it goes off the right side of the screen, move it back to the left side of the screen.": "Move a sprite to the right across the screen. When it goes off the right side of the screen, move it back to the left side of the screen.",
+          "move a sprite to the left across the screen": "move a sprite to the left across the screen",
+          "move a sprite, changing its direction randomly": "move a sprite, changing its direction randomly",
+          "rotate a sprite to its left": "rotate a sprite to its left",
+          "rotate a sprite to its right": "rotate a sprite to its right",
+          "change the size of a sprite": "change the size of a sprite",
+          "move a sprite downwards across the screen": "move a sprite downwards across the screen",
+          "move a sprite upwards across the screen": "move a sprite upwards across the screen",
+          "randomly change the size of a sprite": "randomly change the size of a sprite",
+          "randomly change the vertical position of a sprite": "randomly change the vertical position of a sprite",
+          "randomly set the rotation of a sprite": "randomly set the rotation of a sprite"
         }
       },
       "courseF_sprites_freeplay_air": {
@@ -606,6 +856,21 @@
           "jittering": "jittering",
           "fluttering": "fluttering",
           "wobbling": "wobbling"
+        },
+        "behavior_descriptions": {
+          "Move a sprite to the left across the screen. When it goes off the left side of the screen, move it back to the right side of the screen.": "Move a sprite to the left across the screen. When it goes off the left side of the screen, move it back to the right side of the screen.",
+          "move a sprite to the right across the screen": "move a sprite to the right across the screen",
+          "Move a sprite to the right across the screen. When it goes off the right side of the screen, move it back to the left side of the screen.": "Move a sprite to the right across the screen. When it goes off the right side of the screen, move it back to the left side of the screen.",
+          "move a sprite to the left across the screen": "move a sprite to the left across the screen",
+          "move a sprite, changing its direction randomly": "move a sprite, changing its direction randomly",
+          "rotate a sprite to its left": "rotate a sprite to its left",
+          "rotate a sprite to its right": "rotate a sprite to its right",
+          "change the size of a sprite": "change the size of a sprite",
+          "move a sprite downwards across the screen": "move a sprite downwards across the screen",
+          "move a sprite upwards across the screen": "move a sprite upwards across the screen",
+          "randomly change the size of a sprite": "randomly change the size of a sprite",
+          "randomly change the vertical position of a sprite": "randomly change the vertical position of a sprite",
+          "randomly set the rotation of a sprite": "randomly set the rotation of a sprite"
         }
       },
       "courseF_sprites_freeplay_space": {
@@ -628,6 +893,21 @@
           "jittering": "jittering",
           "fluttering": "fluttering",
           "wobbling": "wobbling"
+        },
+        "behavior_descriptions": {
+          "Move a sprite to the left across the screen. When it goes off the left side of the screen, move it back to the right side of the screen.": "Move a sprite to the left across the screen. When it goes off the left side of the screen, move it back to the right side of the screen.",
+          "move a sprite to the right across the screen": "move a sprite to the right across the screen",
+          "Move a sprite to the right across the screen. When it goes off the right side of the screen, move it back to the left side of the screen.": "Move a sprite to the right across the screen. When it goes off the right side of the screen, move it back to the left side of the screen.",
+          "move a sprite to the left across the screen": "move a sprite to the left across the screen",
+          "move a sprite, changing its direction randomly": "move a sprite, changing its direction randomly",
+          "rotate a sprite to its left": "rotate a sprite to its left",
+          "rotate a sprite to its right": "rotate a sprite to its right",
+          "change the size of a sprite": "change the size of a sprite",
+          "move a sprite downwards across the screen": "move a sprite downwards across the screen",
+          "move a sprite upwards across the screen": "move a sprite upwards across the screen",
+          "randomly change the size of a sprite": "randomly change the size of a sprite",
+          "randomly change the vertical position of a sprite": "randomly change the vertical position of a sprite",
+          "randomly set the rotation of a sprite": "randomly set the rotation of a sprite"
         }
       },
       "courseF_sprites_freeplay_animals": {
@@ -650,6 +930,21 @@
           "jittering": "jittering",
           "fluttering": "fluttering",
           "wobbling": "wobbling"
+        },
+        "behavior_descriptions": {
+          "Move a sprite to the left across the screen. When it goes off the left side of the screen, move it back to the right side of the screen.": "Move a sprite to the left across the screen. When it goes off the left side of the screen, move it back to the right side of the screen.",
+          "move a sprite to the right across the screen": "move a sprite to the right across the screen",
+          "Move a sprite to the right across the screen. When it goes off the right side of the screen, move it back to the left side of the screen.": "Move a sprite to the right across the screen. When it goes off the right side of the screen, move it back to the left side of the screen.",
+          "move a sprite to the left across the screen": "move a sprite to the left across the screen",
+          "move a sprite, changing its direction randomly": "move a sprite, changing its direction randomly",
+          "rotate a sprite to its left": "rotate a sprite to its left",
+          "rotate a sprite to its right": "rotate a sprite to its right",
+          "change the size of a sprite": "change the size of a sprite",
+          "move a sprite downwards across the screen": "move a sprite downwards across the screen",
+          "move a sprite upwards across the screen": "move a sprite upwards across the screen",
+          "randomly change the size of a sprite": "randomly change the size of a sprite",
+          "randomly change the vertical position of a sprite": "randomly change the vertical position of a sprite",
+          "randomly set the rotation of a sprite": "randomly set the rotation of a sprite"
         }
       },
       "courseF_sprites_freeplay_blank": {
@@ -672,6 +967,21 @@
           "jittering": "jittering",
           "fluttering": "fluttering",
           "wobbling": "wobbling"
+        },
+        "behavior_descriptions": {
+          "Move a sprite to the left across the screen. When it goes off the left side of the screen, move it back to the right side of the screen.": "Move a sprite to the left across the screen. When it goes off the left side of the screen, move it back to the right side of the screen.",
+          "move a sprite to the right across the screen": "move a sprite to the right across the screen",
+          "Move a sprite to the right across the screen. When it goes off the right side of the screen, move it back to the left side of the screen.": "Move a sprite to the right across the screen. When it goes off the right side of the screen, move it back to the left side of the screen.",
+          "move a sprite to the left across the screen": "move a sprite to the left across the screen",
+          "move a sprite, changing its direction randomly": "move a sprite, changing its direction randomly",
+          "rotate a sprite to its left": "rotate a sprite to its left",
+          "rotate a sprite to its right": "rotate a sprite to its right",
+          "change the size of a sprite": "change the size of a sprite",
+          "move a sprite downwards across the screen": "move a sprite downwards across the screen",
+          "move a sprite upwards across the screen": "move a sprite upwards across the screen",
+          "randomly change the size of a sprite": "randomly change the size of a sprite",
+          "randomly change the vertical position of a sprite": "randomly change the vertical position of a sprite",
+          "randomly set the rotation of a sprite": "randomly set the rotation of a sprite"
         }
       }
     }
@@ -697,6 +1007,19 @@
       "moving west": "moving west",
       "patrolling": "patrolling",
       "moving east": "moving east"
+    },
+    "behavior_descriptions": {
+      "move a sprite, changing its direction randomly": "move a sprite, changing its direction randomly",
+      "move a sprite to the right across the screen": "move a sprite to the right across the screen",
+      "rotate a sprite to its left": "rotate a sprite to its left",
+      "rotate a sprite to its right": "rotate a sprite to its right",
+      "change the size of a sprite": "change the size of a sprite",
+      "move a sprite downwards across the screen": "move a sprite downwards across the screen",
+      "move a sprite horizontally, reversing direction if it touches the edges of the screen": "move a sprite horizontally, reversing direction if it touches the edges of the screen",
+      "move a sprite upwards across the screen": "move a sprite upwards across the screen",
+      "randomly change the size of a sprite": "randomly change the size of a sprite",
+      "move a sprite to the left across the screen": "move a sprite to the left across the screen",
+      "move a sprite across the screen, reversing direction if it touches the edges": "move a sprite across the screen, reversing direction if it touches the edges"
     },
     "contained levels": [
       {
@@ -755,6 +1078,22 @@
       "fluttering": "fluttering",
       "moving west and looping": "moving west and looping",
       "moving east and looping": "moving east and looping"
+    },
+    "behavior_descriptions": {
+      "move a sprite across the screen, reversing direction if it touches the edges": "move a sprite across the screen, reversing direction if it touches the edges",
+      "move the sprite forward in the direction it is facing": "move the sprite forward in the direction it is facing",
+      "change the size of a sprite": "change the size of a sprite",
+      "move a sprite to the left across the screen": "move a sprite to the left across the screen",
+      "rotate a sprite to its right": "rotate a sprite to its right",
+      "move a sprite to the right across the screen": "move a sprite to the right across the screen",
+      "move a sprite upwards across the screen": "move a sprite upwards across the screen",
+      "move a sprite downwards across the screen": "move a sprite downwards across the screen",
+      "randomly change the size of a sprite": "randomly change the size of a sprite",
+      "move a sprite, changing its direction randomly": "move a sprite, changing its direction randomly",
+      "rotate a sprite to its left": "rotate a sprite to its left",
+      "randomly change the vertical position of a sprite": "randomly change the vertical position of a sprite",
+      "Move a sprite to the left across the screen. When it goes off the left side of the screen, move it back to the right side of the screen.": "Move a sprite to the left across the screen. When it goes off the left side of the screen, move it back to the right side of the screen.",
+      "Move a sprite to the right across the screen. When it goes off the right side of the screen, move it back to the left side of the screen.": "Move a sprite to the right across the screen. When it goes off the right side of the screen, move it back to the left side of the screen."
     }
   },
   "https://studio.code.org/s/coursef-2021/lessons/3/levels/4": {
@@ -782,6 +1121,22 @@
       "fluttering": "fluttering",
       "moving west and looping": "moving west and looping",
       "moving east and looping": "moving east and looping"
+    },
+    "behavior_descriptions": {
+      "move a sprite across the screen, reversing direction if it touches the edges": "move a sprite across the screen, reversing direction if it touches the edges",
+      "move the sprite forward in the direction it is facing": "move the sprite forward in the direction it is facing",
+      "change the size of a sprite": "change the size of a sprite",
+      "move a sprite to the left across the screen": "move a sprite to the left across the screen",
+      "rotate a sprite to its right": "rotate a sprite to its right",
+      "move a sprite to the right across the screen": "move a sprite to the right across the screen",
+      "move a sprite upwards across the screen": "move a sprite upwards across the screen",
+      "move a sprite downwards across the screen": "move a sprite downwards across the screen",
+      "randomly change the size of a sprite": "randomly change the size of a sprite",
+      "move a sprite, changing its direction randomly": "move a sprite, changing its direction randomly",
+      "rotate a sprite to its left": "rotate a sprite to its left",
+      "randomly change the vertical position of a sprite": "randomly change the vertical position of a sprite",
+      "Move a sprite to the left across the screen. When it goes off the left side of the screen, move it back to the right side of the screen.": "Move a sprite to the left across the screen. When it goes off the left side of the screen, move it back to the right side of the screen.",
+      "Move a sprite to the right across the screen. When it goes off the right side of the screen, move it back to the left side of the screen.": "Move a sprite to the right across the screen. When it goes off the right side of the screen, move it back to the left side of the screen."
     }
   },
   "https://studio.code.org/s/coursef-2021/lessons/3/levels/5": {
@@ -812,6 +1167,22 @@
       "fluttering": "fluttering",
       "moving west and looping": "moving west and looping",
       "moving east and looping": "moving east and looping"
+    },
+    "behavior_descriptions": {
+      "move a sprite across the screen, reversing direction if it touches the edges": "move a sprite across the screen, reversing direction if it touches the edges",
+      "move the sprite forward in the direction it is facing": "move the sprite forward in the direction it is facing",
+      "change the size of a sprite": "change the size of a sprite",
+      "move a sprite to the left across the screen": "move a sprite to the left across the screen",
+      "rotate a sprite to its right": "rotate a sprite to its right",
+      "move a sprite to the right across the screen": "move a sprite to the right across the screen",
+      "move a sprite upwards across the screen": "move a sprite upwards across the screen",
+      "move a sprite downwards across the screen": "move a sprite downwards across the screen",
+      "randomly change the size of a sprite": "randomly change the size of a sprite",
+      "move a sprite, changing its direction randomly": "move a sprite, changing its direction randomly",
+      "rotate a sprite to its left": "rotate a sprite to its left",
+      "randomly change the vertical position of a sprite": "randomly change the vertical position of a sprite",
+      "Move a sprite to the left across the screen. When it goes off the left side of the screen, move it back to the right side of the screen.": "Move a sprite to the left across the screen. When it goes off the left side of the screen, move it back to the right side of the screen.",
+      "Move a sprite to the right across the screen. When it goes off the right side of the screen, move it back to the left side of the screen.": "Move a sprite to the right across the screen. When it goes off the right side of the screen, move it back to the left side of the screen."
     }
   },
   "https://studio.code.org/s/coursef-2021/lessons/3/levels/6": {
@@ -835,6 +1206,22 @@
       "fluttering": "fluttering",
       "moving west and looping": "moving west and looping",
       "moving east and looping": "moving east and looping"
+    },
+    "behavior_descriptions": {
+      "move a sprite to the right across the screen": "move a sprite to the right across the screen",
+      "move a sprite across the screen, reversing direction if it touches the edges": "move a sprite across the screen, reversing direction if it touches the edges",
+      "move the sprite forward in the direction it is facing": "move the sprite forward in the direction it is facing",
+      "change the size of a sprite": "change the size of a sprite",
+      "move a sprite to the left across the screen": "move a sprite to the left across the screen",
+      "rotate a sprite to its right": "rotate a sprite to its right",
+      "move a sprite upwards across the screen": "move a sprite upwards across the screen",
+      "move a sprite downwards across the screen": "move a sprite downwards across the screen",
+      "randomly change the size of a sprite": "randomly change the size of a sprite",
+      "move a sprite, changing its direction randomly": "move a sprite, changing its direction randomly",
+      "rotate a sprite to its left": "rotate a sprite to its left",
+      "randomly change the vertical position of a sprite": "randomly change the vertical position of a sprite",
+      "Move a sprite to the left across the screen. When it goes off the left side of the screen, move it back to the right side of the screen.": "Move a sprite to the left across the screen. When it goes off the left side of the screen, move it back to the right side of the screen.",
+      "Move a sprite to the right across the screen. When it goes off the right side of the screen, move it back to the left side of the screen.": "Move a sprite to the right across the screen. When it goes off the right side of the screen, move it back to the left side of the screen."
     }
   },
   "https://studio.code.org/s/coursef-2021/lessons/3/levels/7": {
@@ -861,6 +1248,22 @@
       "fluttering": "fluttering",
       "moving west and looping": "moving west and looping",
       "moving east and looping": "moving east and looping"
+    },
+    "behavior_descriptions": {
+      "move a sprite across the screen, reversing direction if it touches the edges": "move a sprite across the screen, reversing direction if it touches the edges",
+      "move the sprite forward in the direction it is facing": "move the sprite forward in the direction it is facing",
+      "change the size of a sprite": "change the size of a sprite",
+      "move a sprite to the left across the screen": "move a sprite to the left across the screen",
+      "rotate a sprite to its right": "rotate a sprite to its right",
+      "move a sprite to the right across the screen": "move a sprite to the right across the screen",
+      "move a sprite upwards across the screen": "move a sprite upwards across the screen",
+      "move a sprite downwards across the screen": "move a sprite downwards across the screen",
+      "randomly change the size of a sprite": "randomly change the size of a sprite",
+      "move a sprite, changing its direction randomly": "move a sprite, changing its direction randomly",
+      "rotate a sprite to its left": "rotate a sprite to its left",
+      "randomly change the vertical position of a sprite": "randomly change the vertical position of a sprite",
+      "Move a sprite to the left across the screen. When it goes off the left side of the screen, move it back to the right side of the screen.": "Move a sprite to the left across the screen. When it goes off the left side of the screen, move it back to the right side of the screen.",
+      "Move a sprite to the right across the screen. When it goes off the right side of the screen, move it back to the left side of the screen.": "Move a sprite to the right across the screen. When it goes off the right side of the screen, move it back to the left side of the screen."
     }
   },
   "https://studio.code.org/s/coursef-2021/lessons/3/levels/8": {
@@ -892,6 +1295,22 @@
           "fluttering": "fluttering",
           "moving west and looping": "moving west and looping",
           "moving east and looping": "moving east and looping"
+        },
+        "behavior_descriptions": {
+          "move a sprite across the screen, reversing direction if it touches the edges": "move a sprite across the screen, reversing direction if it touches the edges",
+          "move the sprite forward in the direction it is facing": "move the sprite forward in the direction it is facing",
+          "change the size of a sprite": "change the size of a sprite",
+          "move a sprite to the left across the screen": "move a sprite to the left across the screen",
+          "rotate a sprite to its right": "rotate a sprite to its right",
+          "move a sprite to the right across the screen": "move a sprite to the right across the screen",
+          "move a sprite upwards across the screen": "move a sprite upwards across the screen",
+          "move a sprite downwards across the screen": "move a sprite downwards across the screen",
+          "randomly change the size of a sprite": "randomly change the size of a sprite",
+          "move a sprite, changing its direction randomly": "move a sprite, changing its direction randomly",
+          "rotate a sprite to its left": "rotate a sprite to its left",
+          "randomly change the vertical position of a sprite": "randomly change the vertical position of a sprite",
+          "Move a sprite to the left across the screen. When it goes off the left side of the screen, move it back to the right side of the screen.": "Move a sprite to the left across the screen. When it goes off the left side of the screen, move it back to the right side of the screen.",
+          "Move a sprite to the right across the screen. When it goes off the right side of the screen, move it back to the left side of the screen.": "Move a sprite to the right across the screen. When it goes off the right side of the screen, move it back to the left side of the screen."
         }
       },
       "courseF_events_practice_reorder": {
@@ -921,6 +1340,23 @@
           "fluttering": "fluttering",
           "moving west and looping": "moving west and looping",
           "moving east and looping": "moving east and looping"
+        },
+        "behavior_descriptions": {
+          "move a sprite to the right across the screen": "move a sprite to the right across the screen",
+          "move a sprite upwards across the screen": "move a sprite upwards across the screen",
+          "move a sprite across the screen, reversing direction if it touches the edges": "move a sprite across the screen, reversing direction if it touches the edges",
+          "move a sprite if the user is pressing the arrow keys": "move a sprite if the user is pressing the arrow keys",
+          "move the sprite forward in the direction it is facing": "move the sprite forward in the direction it is facing",
+          "change the size of a sprite": "change the size of a sprite",
+          "move a sprite to the left across the screen": "move a sprite to the left across the screen",
+          "rotate a sprite to its right": "rotate a sprite to its right",
+          "move a sprite downwards across the screen": "move a sprite downwards across the screen",
+          "randomly change the size of a sprite": "randomly change the size of a sprite",
+          "move a sprite, changing its direction randomly": "move a sprite, changing its direction randomly",
+          "rotate a sprite to its left": "rotate a sprite to its left",
+          "randomly change the vertical position of a sprite": "randomly change the vertical position of a sprite",
+          "Move a sprite to the left across the screen. When it goes off the left side of the screen, move it back to the right side of the screen.": "Move a sprite to the left across the screen. When it goes off the left side of the screen, move it back to the right side of the screen.",
+          "Move a sprite to the right across the screen. When it goes off the right side of the screen, move it back to the left side of the screen.": "Move a sprite to the right across the screen. When it goes off the right side of the screen, move it back to the left side of the screen."
         }
       },
       "courseF_events_choice_conflict": {
@@ -944,6 +1380,22 @@
           "fluttering": "fluttering",
           "moving west and looping": "moving west and looping",
           "moving east and looping": "moving east and looping"
+        },
+        "behavior_descriptions": {
+          "move a sprite across the screen, reversing direction if it touches the edges": "move a sprite across the screen, reversing direction if it touches the edges",
+          "move the sprite forward in the direction it is facing": "move the sprite forward in the direction it is facing",
+          "change the size of a sprite": "change the size of a sprite",
+          "move a sprite to the left across the screen": "move a sprite to the left across the screen",
+          "rotate a sprite to its right": "rotate a sprite to its right",
+          "move a sprite to the right across the screen": "move a sprite to the right across the screen",
+          "move a sprite upwards across the screen": "move a sprite upwards across the screen",
+          "move a sprite downwards across the screen": "move a sprite downwards across the screen",
+          "randomly change the size of a sprite": "randomly change the size of a sprite",
+          "move a sprite, changing its direction randomly": "move a sprite, changing its direction randomly",
+          "rotate a sprite to its left": "rotate a sprite to its left",
+          "randomly change the vertical position of a sprite": "randomly change the vertical position of a sprite",
+          "Move a sprite to the left across the screen. When it goes off the left side of the screen, move it back to the right side of the screen.": "Move a sprite to the left across the screen. When it goes off the left side of the screen, move it back to the right side of the screen.",
+          "Move a sprite to the right across the screen. When it goes off the right side of the screen, move it back to the left side of the screen.": "Move a sprite to the right across the screen. When it goes off the right side of the screen, move it back to the left side of the screen."
         }
       },
       "courseF_events_choice_conflict2": {
@@ -966,6 +1418,21 @@
           "fluttering": "fluttering",
           "moving west and looping": "moving west and looping",
           "moving east and looping": "moving east and looping"
+        },
+        "behavior_descriptions": {
+          "move a sprite across the screen, reversing direction if it touches the edges": "move a sprite across the screen, reversing direction if it touches the edges",
+          "move the sprite forward in the direction it is facing": "move the sprite forward in the direction it is facing",
+          "change the size of a sprite": "change the size of a sprite",
+          "move a sprite to the left across the screen": "move a sprite to the left across the screen",
+          "rotate a sprite to its right": "rotate a sprite to its right",
+          "move a sprite to the right across the screen": "move a sprite to the right across the screen",
+          "move a sprite upwards across the screen": "move a sprite upwards across the screen",
+          "move a sprite downwards across the screen": "move a sprite downwards across the screen",
+          "move a sprite, changing its direction randomly": "move a sprite, changing its direction randomly",
+          "rotate a sprite to its left": "rotate a sprite to its left",
+          "randomly change the vertical position of a sprite": "randomly change the vertical position of a sprite",
+          "Move a sprite to the left across the screen. When it goes off the left side of the screen, move it back to the right side of the screen.": "Move a sprite to the left across the screen. When it goes off the left side of the screen, move it back to the right side of the screen.",
+          "Move a sprite to the right across the screen. When it goes off the right side of the screen, move it back to the left side of the screen.": "Move a sprite to the right across the screen. When it goes off the right side of the screen, move it back to the left side of the screen."
         }
       },
       "courseF_events_choice_pufferfish": {
@@ -993,6 +1460,22 @@
           "fluttering": "fluttering",
           "moving west and looping": "moving west and looping",
           "moving east and looping": "moving east and looping"
+        },
+        "behavior_descriptions": {
+          "move a sprite across the screen, reversing direction if it touches the edges": "move a sprite across the screen, reversing direction if it touches the edges",
+          "move the sprite forward in the direction it is facing": "move the sprite forward in the direction it is facing",
+          "change the size of a sprite": "change the size of a sprite",
+          "move a sprite to the left across the screen": "move a sprite to the left across the screen",
+          "rotate a sprite to its right": "rotate a sprite to its right",
+          "move a sprite to the right across the screen": "move a sprite to the right across the screen",
+          "move a sprite upwards across the screen": "move a sprite upwards across the screen",
+          "move a sprite downwards across the screen": "move a sprite downwards across the screen",
+          "randomly change the size of a sprite": "randomly change the size of a sprite",
+          "move a sprite, changing its direction randomly": "move a sprite, changing its direction randomly",
+          "rotate a sprite to its left": "rotate a sprite to its left",
+          "randomly change the vertical position of a sprite": "randomly change the vertical position of a sprite",
+          "Move a sprite to the left across the screen. When it goes off the left side of the screen, move it back to the right side of the screen.": "Move a sprite to the left across the screen. When it goes off the left side of the screen, move it back to the right side of the screen.",
+          "Move a sprite to the right across the screen. When it goes off the right side of the screen, move it back to the left side of the screen.": "Move a sprite to the right across the screen. When it goes off the right side of the screen, move it back to the left side of the screen."
         }
       },
       "courseF_events_choice_penguin": {
@@ -1020,6 +1503,22 @@
           "fluttering": "fluttering",
           "moving west and looping": "moving west and looping",
           "moving east and looping": "moving east and looping"
+        },
+        "behavior_descriptions": {
+          "move a sprite across the screen, reversing direction if it touches the edges": "move a sprite across the screen, reversing direction if it touches the edges",
+          "move the sprite forward in the direction it is facing": "move the sprite forward in the direction it is facing",
+          "change the size of a sprite": "change the size of a sprite",
+          "move a sprite to the left across the screen": "move a sprite to the left across the screen",
+          "rotate a sprite to its right": "rotate a sprite to its right",
+          "move a sprite to the right across the screen": "move a sprite to the right across the screen",
+          "move a sprite upwards across the screen": "move a sprite upwards across the screen",
+          "move a sprite downwards across the screen": "move a sprite downwards across the screen",
+          "randomly change the size of a sprite": "randomly change the size of a sprite",
+          "move a sprite, changing its direction randomly": "move a sprite, changing its direction randomly",
+          "rotate a sprite to its left": "rotate a sprite to its left",
+          "randomly change the vertical position of a sprite": "randomly change the vertical position of a sprite",
+          "Move a sprite to the left across the screen. When it goes off the left side of the screen, move it back to the right side of the screen.": "Move a sprite to the left across the screen. When it goes off the left side of the screen, move it back to the right side of the screen.",
+          "Move a sprite to the right across the screen. When it goes off the right side of the screen, move it back to the left side of the screen.": "Move a sprite to the right across the screen. When it goes off the right side of the screen, move it back to the left side of the screen."
         }
       }
     }
@@ -1049,6 +1548,21 @@
           "jittering": "jittering",
           "fluttering": "fluttering",
           "wobbling": "wobbling"
+        },
+        "behavior_descriptions": {
+          "Move a sprite to the left across the screen. When it goes off the left side of the screen, move it back to the right side of the screen.": "Move a sprite to the left across the screen. When it goes off the left side of the screen, move it back to the right side of the screen.",
+          "move a sprite to the right across the screen": "move a sprite to the right across the screen",
+          "Move a sprite to the right across the screen. When it goes off the right side of the screen, move it back to the left side of the screen.": "Move a sprite to the right across the screen. When it goes off the right side of the screen, move it back to the left side of the screen.",
+          "move a sprite to the left across the screen": "move a sprite to the left across the screen",
+          "move a sprite, changing its direction randomly": "move a sprite, changing its direction randomly",
+          "rotate a sprite to its left": "rotate a sprite to its left",
+          "rotate a sprite to its right": "rotate a sprite to its right",
+          "change the size of a sprite": "change the size of a sprite",
+          "move a sprite downwards across the screen": "move a sprite downwards across the screen",
+          "move a sprite upwards across the screen": "move a sprite upwards across the screen",
+          "randomly change the size of a sprite": "randomly change the size of a sprite",
+          "randomly change the vertical position of a sprite": "randomly change the vertical position of a sprite",
+          "randomly set the rotation of a sprite": "randomly set the rotation of a sprite"
         }
       },
       "courseF_events_freeplay_aquatic": {
@@ -1070,6 +1584,21 @@
           "jittering": "jittering",
           "fluttering": "fluttering",
           "wobbling": "wobbling"
+        },
+        "behavior_descriptions": {
+          "Move a sprite to the left across the screen. When it goes off the left side of the screen, move it back to the right side of the screen.": "Move a sprite to the left across the screen. When it goes off the left side of the screen, move it back to the right side of the screen.",
+          "move a sprite to the right across the screen": "move a sprite to the right across the screen",
+          "Move a sprite to the right across the screen. When it goes off the right side of the screen, move it back to the left side of the screen.": "Move a sprite to the right across the screen. When it goes off the right side of the screen, move it back to the left side of the screen.",
+          "move a sprite to the left across the screen": "move a sprite to the left across the screen",
+          "move a sprite, changing its direction randomly": "move a sprite, changing its direction randomly",
+          "rotate a sprite to its left": "rotate a sprite to its left",
+          "rotate a sprite to its right": "rotate a sprite to its right",
+          "change the size of a sprite": "change the size of a sprite",
+          "move a sprite downwards across the screen": "move a sprite downwards across the screen",
+          "move a sprite upwards across the screen": "move a sprite upwards across the screen",
+          "randomly change the size of a sprite": "randomly change the size of a sprite",
+          "randomly change the vertical position of a sprite": "randomly change the vertical position of a sprite",
+          "randomly set the rotation of a sprite": "randomly set the rotation of a sprite"
         }
       },
       "courseF_events_freeplay_air": {
@@ -1091,6 +1620,21 @@
           "jittering": "jittering",
           "fluttering": "fluttering",
           "wobbling": "wobbling"
+        },
+        "behavior_descriptions": {
+          "Move a sprite to the left across the screen. When it goes off the left side of the screen, move it back to the right side of the screen.": "Move a sprite to the left across the screen. When it goes off the left side of the screen, move it back to the right side of the screen.",
+          "move a sprite to the right across the screen": "move a sprite to the right across the screen",
+          "Move a sprite to the right across the screen. When it goes off the right side of the screen, move it back to the left side of the screen.": "Move a sprite to the right across the screen. When it goes off the right side of the screen, move it back to the left side of the screen.",
+          "move a sprite to the left across the screen": "move a sprite to the left across the screen",
+          "move a sprite, changing its direction randomly": "move a sprite, changing its direction randomly",
+          "rotate a sprite to its left": "rotate a sprite to its left",
+          "rotate a sprite to its right": "rotate a sprite to its right",
+          "change the size of a sprite": "change the size of a sprite",
+          "move a sprite downwards across the screen": "move a sprite downwards across the screen",
+          "move a sprite upwards across the screen": "move a sprite upwards across the screen",
+          "randomly change the size of a sprite": "randomly change the size of a sprite",
+          "randomly change the vertical position of a sprite": "randomly change the vertical position of a sprite",
+          "randomly set the rotation of a sprite": "randomly set the rotation of a sprite"
         }
       },
       "courseF_events_freeplay_space": {
@@ -1112,6 +1656,21 @@
           "jittering": "jittering",
           "fluttering": "fluttering",
           "wobbling": "wobbling"
+        },
+        "behavior_descriptions": {
+          "Move a sprite to the left across the screen. When it goes off the left side of the screen, move it back to the right side of the screen.": "Move a sprite to the left across the screen. When it goes off the left side of the screen, move it back to the right side of the screen.",
+          "move a sprite to the right across the screen": "move a sprite to the right across the screen",
+          "Move a sprite to the right across the screen. When it goes off the right side of the screen, move it back to the left side of the screen.": "Move a sprite to the right across the screen. When it goes off the right side of the screen, move it back to the left side of the screen.",
+          "move a sprite to the left across the screen": "move a sprite to the left across the screen",
+          "move a sprite, changing its direction randomly": "move a sprite, changing its direction randomly",
+          "rotate a sprite to its left": "rotate a sprite to its left",
+          "rotate a sprite to its right": "rotate a sprite to its right",
+          "change the size of a sprite": "change the size of a sprite",
+          "move a sprite downwards across the screen": "move a sprite downwards across the screen",
+          "move a sprite upwards across the screen": "move a sprite upwards across the screen",
+          "randomly change the size of a sprite": "randomly change the size of a sprite",
+          "randomly change the vertical position of a sprite": "randomly change the vertical position of a sprite",
+          "randomly set the rotation of a sprite": "randomly set the rotation of a sprite"
         }
       },
       "courseF_events_freeplay_animals": {
@@ -1133,6 +1692,21 @@
           "jittering": "jittering",
           "fluttering": "fluttering",
           "wobbling": "wobbling"
+        },
+        "behavior_descriptions": {
+          "Move a sprite to the left across the screen. When it goes off the left side of the screen, move it back to the right side of the screen.": "Move a sprite to the left across the screen. When it goes off the left side of the screen, move it back to the right side of the screen.",
+          "move a sprite to the right across the screen": "move a sprite to the right across the screen",
+          "Move a sprite to the right across the screen. When it goes off the right side of the screen, move it back to the left side of the screen.": "Move a sprite to the right across the screen. When it goes off the right side of the screen, move it back to the left side of the screen.",
+          "move a sprite to the left across the screen": "move a sprite to the left across the screen",
+          "move a sprite, changing its direction randomly": "move a sprite, changing its direction randomly",
+          "rotate a sprite to its left": "rotate a sprite to its left",
+          "rotate a sprite to its right": "rotate a sprite to its right",
+          "change the size of a sprite": "change the size of a sprite",
+          "move a sprite downwards across the screen": "move a sprite downwards across the screen",
+          "move a sprite upwards across the screen": "move a sprite upwards across the screen",
+          "randomly change the size of a sprite": "randomly change the size of a sprite",
+          "randomly change the vertical position of a sprite": "randomly change the vertical position of a sprite",
+          "randomly set the rotation of a sprite": "randomly set the rotation of a sprite"
         }
       },
       "courseF_events_freeplay_blank": {
@@ -1154,6 +1728,21 @@
           "jittering": "jittering",
           "fluttering": "fluttering",
           "wobbling": "wobbling"
+        },
+        "behavior_descriptions": {
+          "Move a sprite to the left across the screen. When it goes off the left side of the screen, move it back to the right side of the screen.": "Move a sprite to the left across the screen. When it goes off the left side of the screen, move it back to the right side of the screen.",
+          "move a sprite to the right across the screen": "move a sprite to the right across the screen",
+          "Move a sprite to the right across the screen. When it goes off the right side of the screen, move it back to the left side of the screen.": "Move a sprite to the right across the screen. When it goes off the right side of the screen, move it back to the left side of the screen.",
+          "move a sprite to the left across the screen": "move a sprite to the left across the screen",
+          "move a sprite, changing its direction randomly": "move a sprite, changing its direction randomly",
+          "rotate a sprite to its left": "rotate a sprite to its left",
+          "rotate a sprite to its right": "rotate a sprite to its right",
+          "change the size of a sprite": "change the size of a sprite",
+          "move a sprite downwards across the screen": "move a sprite downwards across the screen",
+          "move a sprite upwards across the screen": "move a sprite upwards across the screen",
+          "randomly change the size of a sprite": "randomly change the size of a sprite",
+          "randomly change the vertical position of a sprite": "randomly change the vertical position of a sprite",
+          "randomly set the rotation of a sprite": "randomly set the rotation of a sprite"
         }
       }
     }
@@ -1180,6 +1769,24 @@
       "wobbling": "wobbling",
       "moving west and looping": "moving west and looping",
       "moving east and looping": "moving east and looping"
+    },
+    "behavior_descriptions": {
+      "move a sprite across the screen, reversing direction if it touches the edges": "move a sprite across the screen, reversing direction if it touches the edges",
+      "move a sprite, changing its direction randomly": "move a sprite, changing its direction randomly",
+      "move a sprite to the right across the screen": "move a sprite to the right across the screen",
+      "rotate a sprite to its left": "rotate a sprite to its left",
+      "rotate a sprite to its right": "rotate a sprite to its right",
+      "change the size of a sprite": "change the size of a sprite",
+      "move a sprite downwards across the screen": "move a sprite downwards across the screen",
+      "move a sprite horizontally, reversing direction if it touches the edges of the screen": "move a sprite horizontally, reversing direction if it touches the edges of the screen",
+      "move a sprite upwards across the screen": "move a sprite upwards across the screen",
+      "randomly change the size of a sprite": "randomly change the size of a sprite",
+      "move a sprite to the left across the screen": "move a sprite to the left across the screen",
+      "move a sprite if the user is pressing the arrow keys": "move a sprite if the user is pressing the arrow keys",
+      "randomly change the vertical position of a sprite": "randomly change the vertical position of a sprite",
+      "randomly set the rotation of a sprite": "randomly set the rotation of a sprite",
+      "Move a sprite to the left across the screen. When it goes off the left side of the screen, move it back to the right side of the screen.": "Move a sprite to the left across the screen. When it goes off the left side of the screen, move it back to the right side of the screen.",
+      "Move a sprite to the right across the screen. When it goes off the right side of the screen, move it back to the left side of the screen.": "Move a sprite to the right across the screen. When it goes off the right side of the screen, move it back to the left side of the screen."
     }
   },
   "https://studio.code.org/s/coursef-2021/lessons/4/levels/2": {
@@ -1202,6 +1809,19 @@
       "jittering": "jittering",
       "moving west": "moving west",
       "patrolling": "patrolling"
+    },
+    "behavior_descriptions": {
+      "move a sprite, changing its direction randomly": "move a sprite, changing its direction randomly",
+      "move a sprite to the right across the screen": "move a sprite to the right across the screen",
+      "rotate a sprite to its left": "rotate a sprite to its left",
+      "rotate a sprite to its right": "rotate a sprite to its right",
+      "change the size of a sprite": "change the size of a sprite",
+      "move a sprite downwards across the screen": "move a sprite downwards across the screen",
+      "move a sprite horizontally, reversing direction if it touches the edges of the screen": "move a sprite horizontally, reversing direction if it touches the edges of the screen",
+      "move a sprite upwards across the screen": "move a sprite upwards across the screen",
+      "randomly change the size of a sprite": "randomly change the size of a sprite",
+      "move a sprite to the left across the screen": "move a sprite to the left across the screen",
+      "move a sprite across the screen, reversing direction if it touches the edges": "move a sprite across the screen, reversing direction if it touches the edges"
     }
   },
   "https://studio.code.org/s/coursef-2021/lessons/4/levels/3": {
@@ -1233,6 +1853,19 @@
       "jittering2": "jittering2",
       "moving west2": "moving west2",
       "patrolling2": "patrolling2"
+    },
+    "behavior_descriptions": {
+      "move a sprite, changing its direction randomly": "move a sprite, changing its direction randomly",
+      "move a sprite to the right across the screen": "move a sprite to the right across the screen",
+      "rotate a sprite to its left": "rotate a sprite to its left",
+      "rotate a sprite to its right": "rotate a sprite to its right",
+      "change the size of a sprite": "change the size of a sprite",
+      "move a sprite downwards across the screen": "move a sprite downwards across the screen",
+      "move a sprite horizontally, reversing direction if it touches the edges of the screen": "move a sprite horizontally, reversing direction if it touches the edges of the screen",
+      "move a sprite upwards across the screen": "move a sprite upwards across the screen",
+      "randomly change the size of a sprite": "randomly change the size of a sprite",
+      "move a sprite to the left across the screen": "move a sprite to the left across the screen",
+      "move a sprite across the screen, reversing direction if it touches the edges": "move a sprite across the screen, reversing direction if it touches the edges"
     }
   },
   "https://studio.code.org/s/coursef-2021/lessons/4/levels/4": {
@@ -1293,6 +1926,19 @@
       "jittering": "jittering",
       "patrolling": "patrolling"
     },
+    "behavior_descriptions": {
+      "move a sprite to the right across the screen": "move a sprite to the right across the screen",
+      "move a sprite to the left across the screen": "move a sprite to the left across the screen",
+      "move a sprite, changing its direction randomly": "move a sprite, changing its direction randomly",
+      "rotate a sprite to its left": "rotate a sprite to its left",
+      "rotate a sprite to its right": "rotate a sprite to its right",
+      "change the size of a sprite": "change the size of a sprite",
+      "move a sprite downwards across the screen": "move a sprite downwards across the screen",
+      "move a sprite horizontally, reversing direction if it touches the edges of the screen": "move a sprite horizontally, reversing direction if it touches the edges of the screen",
+      "move a sprite upwards across the screen": "move a sprite upwards across the screen",
+      "randomly change the size of a sprite": "randomly change the size of a sprite",
+      "move a sprite across the screen, reversing direction if it touches the edges": "move a sprite across the screen, reversing direction if it touches the edges"
+    },
     "contained levels": [
       {
         "dsls": {
@@ -1351,6 +1997,22 @@
       "fluttering": "fluttering",
       "moving west and looping": "moving west and looping",
       "moving east and looping": "moving east and looping"
+    },
+    "behavior_descriptions": {
+      "move a sprite across the screen, reversing direction if it touches the edges": "move a sprite across the screen, reversing direction if it touches the edges",
+      "move the sprite forward in the direction it is facing": "move the sprite forward in the direction it is facing",
+      "change the size of a sprite": "change the size of a sprite",
+      "move a sprite to the left across the screen": "move a sprite to the left across the screen",
+      "rotate a sprite to its right": "rotate a sprite to its right",
+      "move a sprite to the right across the screen": "move a sprite to the right across the screen",
+      "move a sprite upwards across the screen": "move a sprite upwards across the screen",
+      "move a sprite downwards across the screen": "move a sprite downwards across the screen",
+      "randomly change the size of a sprite": "randomly change the size of a sprite",
+      "move a sprite, changing its direction randomly": "move a sprite, changing its direction randomly",
+      "rotate a sprite to its left": "rotate a sprite to its left",
+      "randomly change the vertical position of a sprite": "randomly change the vertical position of a sprite",
+      "Move a sprite to the left across the screen. When it goes off the left side of the screen, move it back to the right side of the screen.": "Move a sprite to the left across the screen. When it goes off the left side of the screen, move it back to the right side of the screen.",
+      "Move a sprite to the right across the screen. When it goes off the right side of the screen, move it back to the left side of the screen.": "Move a sprite to the right across the screen. When it goes off the right side of the screen, move it back to the left side of the screen."
     }
   },
   "https://studio.code.org/s/coursef-2021/lessons/7/levels/4": {
@@ -1378,6 +2040,22 @@
       "fluttering": "fluttering",
       "moving west and looping": "moving west and looping",
       "moving east and looping": "moving east and looping"
+    },
+    "behavior_descriptions": {
+      "move a sprite across the screen, reversing direction if it touches the edges": "move a sprite across the screen, reversing direction if it touches the edges",
+      "move the sprite forward in the direction it is facing": "move the sprite forward in the direction it is facing",
+      "change the size of a sprite": "change the size of a sprite",
+      "move a sprite to the left across the screen": "move a sprite to the left across the screen",
+      "rotate a sprite to its right": "rotate a sprite to its right",
+      "move a sprite to the right across the screen": "move a sprite to the right across the screen",
+      "move a sprite upwards across the screen": "move a sprite upwards across the screen",
+      "move a sprite downwards across the screen": "move a sprite downwards across the screen",
+      "randomly change the size of a sprite": "randomly change the size of a sprite",
+      "move a sprite, changing its direction randomly": "move a sprite, changing its direction randomly",
+      "rotate a sprite to its left": "rotate a sprite to its left",
+      "randomly change the vertical position of a sprite": "randomly change the vertical position of a sprite",
+      "Move a sprite to the left across the screen. When it goes off the left side of the screen, move it back to the right side of the screen.": "Move a sprite to the left across the screen. When it goes off the left side of the screen, move it back to the right side of the screen.",
+      "Move a sprite to the right across the screen. When it goes off the right side of the screen, move it back to the left side of the screen.": "Move a sprite to the right across the screen. When it goes off the right side of the screen, move it back to the left side of the screen."
     }
   },
   "https://studio.code.org/s/coursef-2021/lessons/7/levels/5": {
@@ -1402,6 +2080,22 @@
       "fluttering": "fluttering",
       "moving west and looping": "moving west and looping",
       "moving east and looping": "moving east and looping"
+    },
+    "behavior_descriptions": {
+      "move a sprite across the screen, reversing direction if it touches the edges": "move a sprite across the screen, reversing direction if it touches the edges",
+      "move the sprite forward in the direction it is facing": "move the sprite forward in the direction it is facing",
+      "change the size of a sprite": "change the size of a sprite",
+      "move a sprite to the left across the screen": "move a sprite to the left across the screen",
+      "rotate a sprite to its right": "rotate a sprite to its right",
+      "move a sprite to the right across the screen": "move a sprite to the right across the screen",
+      "move a sprite upwards across the screen": "move a sprite upwards across the screen",
+      "move a sprite downwards across the screen": "move a sprite downwards across the screen",
+      "randomly change the size of a sprite": "randomly change the size of a sprite",
+      "move a sprite, changing its direction randomly": "move a sprite, changing its direction randomly",
+      "rotate a sprite to its left": "rotate a sprite to its left",
+      "randomly change the vertical position of a sprite": "randomly change the vertical position of a sprite",
+      "Move a sprite to the left across the screen. When it goes off the left side of the screen, move it back to the right side of the screen.": "Move a sprite to the left across the screen. When it goes off the left side of the screen, move it back to the right side of the screen.",
+      "Move a sprite to the right across the screen. When it goes off the right side of the screen, move it back to the left side of the screen.": "Move a sprite to the right across the screen. When it goes off the right side of the screen, move it back to the left side of the screen."
     }
   },
   "https://studio.code.org/s/coursef-2021/lessons/7/levels/6": {
@@ -1430,6 +2124,22 @@
       "fluttering": "fluttering",
       "moving west and looping": "moving west and looping",
       "moving east and looping": "moving east and looping"
+    },
+    "behavior_descriptions": {
+      "move a sprite across the screen, reversing direction if it touches the edges": "move a sprite across the screen, reversing direction if it touches the edges",
+      "move the sprite forward in the direction it is facing": "move the sprite forward in the direction it is facing",
+      "change the size of a sprite": "change the size of a sprite",
+      "move a sprite to the left across the screen": "move a sprite to the left across the screen",
+      "rotate a sprite to its right": "rotate a sprite to its right",
+      "move a sprite to the right across the screen": "move a sprite to the right across the screen",
+      "move a sprite upwards across the screen": "move a sprite upwards across the screen",
+      "move a sprite downwards across the screen": "move a sprite downwards across the screen",
+      "randomly change the size of a sprite": "randomly change the size of a sprite",
+      "move a sprite, changing its direction randomly": "move a sprite, changing its direction randomly",
+      "rotate a sprite to its left": "rotate a sprite to its left",
+      "randomly change the vertical position of a sprite": "randomly change the vertical position of a sprite",
+      "Move a sprite to the left across the screen. When it goes off the left side of the screen, move it back to the right side of the screen.": "Move a sprite to the left across the screen. When it goes off the left side of the screen, move it back to the right side of the screen.",
+      "Move a sprite to the right across the screen. When it goes off the right side of the screen, move it back to the left side of the screen.": "Move a sprite to the right across the screen. When it goes off the right side of the screen, move it back to the left side of the screen."
     }
   },
   "https://studio.code.org/s/coursef-2021/lessons/7/levels/7": {
@@ -1457,6 +2167,22 @@
       "fluttering": "fluttering",
       "moving west and looping": "moving west and looping",
       "moving east and looping": "moving east and looping"
+    },
+    "behavior_descriptions": {
+      "move a sprite across the screen, reversing direction if it touches the edges": "move a sprite across the screen, reversing direction if it touches the edges",
+      "move the sprite forward in the direction it is facing": "move the sprite forward in the direction it is facing",
+      "change the size of a sprite": "change the size of a sprite",
+      "move a sprite to the left across the screen": "move a sprite to the left across the screen",
+      "rotate a sprite to its right": "rotate a sprite to its right",
+      "move a sprite to the right across the screen": "move a sprite to the right across the screen",
+      "move a sprite upwards across the screen": "move a sprite upwards across the screen",
+      "move a sprite downwards across the screen": "move a sprite downwards across the screen",
+      "randomly change the size of a sprite": "randomly change the size of a sprite",
+      "move a sprite, changing its direction randomly": "move a sprite, changing its direction randomly",
+      "rotate a sprite to its left": "rotate a sprite to its left",
+      "randomly change the vertical position of a sprite": "randomly change the vertical position of a sprite",
+      "Move a sprite to the left across the screen. When it goes off the left side of the screen, move it back to the right side of the screen.": "Move a sprite to the left across the screen. When it goes off the left side of the screen, move it back to the right side of the screen.",
+      "Move a sprite to the right across the screen. When it goes off the right side of the screen, move it back to the left side of the screen.": "Move a sprite to the right across the screen. When it goes off the right side of the screen, move it back to the left side of the screen."
     }
   },
   "https://studio.code.org/s/coursef-2021/lessons/7/levels/8": {
@@ -1488,6 +2214,22 @@
       "fluttering": "fluttering",
       "moving west and looping": "moving west and looping",
       "moving east and looping": "moving east and looping"
+    },
+    "behavior_descriptions": {
+      "move a sprite across the screen, reversing direction if it touches the edges": "move a sprite across the screen, reversing direction if it touches the edges",
+      "move the sprite forward in the direction it is facing": "move the sprite forward in the direction it is facing",
+      "change the size of a sprite": "change the size of a sprite",
+      "move a sprite to the left across the screen": "move a sprite to the left across the screen",
+      "rotate a sprite to its right": "rotate a sprite to its right",
+      "move a sprite to the right across the screen": "move a sprite to the right across the screen",
+      "move a sprite upwards across the screen": "move a sprite upwards across the screen",
+      "move a sprite downwards across the screen": "move a sprite downwards across the screen",
+      "randomly change the size of a sprite": "randomly change the size of a sprite",
+      "move a sprite, changing its direction randomly": "move a sprite, changing its direction randomly",
+      "rotate a sprite to its left": "rotate a sprite to its left",
+      "randomly change the vertical position of a sprite": "randomly change the vertical position of a sprite",
+      "Move a sprite to the left across the screen. When it goes off the left side of the screen, move it back to the right side of the screen.": "Move a sprite to the left across the screen. When it goes off the left side of the screen, move it back to the right side of the screen.",
+      "Move a sprite to the right across the screen. When it goes off the right side of the screen, move it back to the left side of the screen.": "Move a sprite to the right across the screen. When it goes off the right side of the screen, move it back to the left side of the screen."
     }
   },
   "https://studio.code.org/s/coursef-2021/lessons/7/levels/9": {
@@ -1527,6 +2269,24 @@
           "wobbling": "wobbling",
           "moving west and looping": "moving west and looping",
           "moving east and looping": "moving east and looping"
+        },
+        "behavior_descriptions": {
+          "move a sprite, changing its direction randomly": "move a sprite, changing its direction randomly",
+          "move a sprite to the right across the screen": "move a sprite to the right across the screen",
+          "rotate a sprite to its left": "rotate a sprite to its left",
+          "rotate a sprite to its right": "rotate a sprite to its right",
+          "change the size of a sprite": "change the size of a sprite",
+          "move a sprite downwards across the screen": "move a sprite downwards across the screen",
+          "move a sprite horizontally, reversing direction if it touches the edges of the screen": "move a sprite horizontally, reversing direction if it touches the edges of the screen",
+          "move a sprite upwards across the screen": "move a sprite upwards across the screen",
+          "randomly change the size of a sprite": "randomly change the size of a sprite",
+          "move a sprite to the left across the screen": "move a sprite to the left across the screen",
+          "move a sprite across the screen, reversing direction if it touches the edges": "move a sprite across the screen, reversing direction if it touches the edges",
+          "move a sprite if the user is pressing the arrow keys": "move a sprite if the user is pressing the arrow keys",
+          "randomly change the vertical position of a sprite": "randomly change the vertical position of a sprite",
+          "randomly set the rotation of a sprite": "randomly set the rotation of a sprite",
+          "Move a sprite to the left across the screen. When it goes off the left side of the screen, move it back to the right side of the screen.": "Move a sprite to the left across the screen. When it goes off the left side of the screen, move it back to the right side of the screen.",
+          "Move a sprite to the right across the screen. When it goes off the right side of the screen, move it back to the left side of the screen.": "Move a sprite to the right across the screen. When it goes off the right side of the screen, move it back to the left side of the screen."
         }
       },
       "courseF_text_choice_events": {
@@ -1558,6 +2318,24 @@
           "wobbling": "wobbling",
           "moving west and looping": "moving west and looping",
           "moving east and looping": "moving east and looping"
+        },
+        "behavior_descriptions": {
+          "move a sprite, changing its direction randomly": "move a sprite, changing its direction randomly",
+          "move a sprite to the right across the screen": "move a sprite to the right across the screen",
+          "rotate a sprite to its left": "rotate a sprite to its left",
+          "rotate a sprite to its right": "rotate a sprite to its right",
+          "change the size of a sprite": "change the size of a sprite",
+          "move a sprite downwards across the screen": "move a sprite downwards across the screen",
+          "move a sprite horizontally, reversing direction if it touches the edges of the screen": "move a sprite horizontally, reversing direction if it touches the edges of the screen",
+          "move a sprite upwards across the screen": "move a sprite upwards across the screen",
+          "randomly change the size of a sprite": "randomly change the size of a sprite",
+          "move a sprite to the left across the screen": "move a sprite to the left across the screen",
+          "move a sprite across the screen, reversing direction if it touches the edges": "move a sprite across the screen, reversing direction if it touches the edges",
+          "move a sprite if the user is pressing the arrow keys": "move a sprite if the user is pressing the arrow keys",
+          "randomly change the vertical position of a sprite": "randomly change the vertical position of a sprite",
+          "randomly set the rotation of a sprite": "randomly set the rotation of a sprite",
+          "Move a sprite to the left across the screen. When it goes off the left side of the screen, move it back to the right side of the screen.": "Move a sprite to the left across the screen. When it goes off the left side of the screen, move it back to the right side of the screen.",
+          "Move a sprite to the right across the screen. When it goes off the right side of the screen, move it back to the left side of the screen.": "Move a sprite to the right across the screen. When it goes off the right side of the screen, move it back to the left side of the screen."
         }
       },
       "courseF_text_choice_interview": {
@@ -1588,6 +2366,24 @@
           "wobbling": "wobbling",
           "moving west and looping": "moving west and looping",
           "moving east and looping": "moving east and looping"
+        },
+        "behavior_descriptions": {
+          "move a sprite, changing its direction randomly": "move a sprite, changing its direction randomly",
+          "move a sprite to the right across the screen": "move a sprite to the right across the screen",
+          "rotate a sprite to its left": "rotate a sprite to its left",
+          "rotate a sprite to its right": "rotate a sprite to its right",
+          "change the size of a sprite": "change the size of a sprite",
+          "move a sprite downwards across the screen": "move a sprite downwards across the screen",
+          "move a sprite horizontally, reversing direction if it touches the edges of the screen": "move a sprite horizontally, reversing direction if it touches the edges of the screen",
+          "move a sprite upwards across the screen": "move a sprite upwards across the screen",
+          "randomly change the size of a sprite": "randomly change the size of a sprite",
+          "move a sprite to the left across the screen": "move a sprite to the left across the screen",
+          "move a sprite across the screen, reversing direction if it touches the edges": "move a sprite across the screen, reversing direction if it touches the edges",
+          "move a sprite if the user is pressing the arrow keys": "move a sprite if the user is pressing the arrow keys",
+          "randomly change the vertical position of a sprite": "randomly change the vertical position of a sprite",
+          "randomly set the rotation of a sprite": "randomly set the rotation of a sprite",
+          "Move a sprite to the left across the screen. When it goes off the left side of the screen, move it back to the right side of the screen.": "Move a sprite to the left across the screen. When it goes off the left side of the screen, move it back to the right side of the screen.",
+          "Move a sprite to the right across the screen. When it goes off the right side of the screen, move it back to the left side of the screen.": "Move a sprite to the right across the screen. When it goes off the right side of the screen, move it back to the left side of the screen."
         }
       },
       "courseF_text_choice_multiprompt": {
@@ -1621,6 +2417,24 @@
           "wobbling": "wobbling",
           "moving west and looping": "moving west and looping",
           "moving east and looping": "moving east and looping"
+        },
+        "behavior_descriptions": {
+          "move a sprite, changing its direction randomly": "move a sprite, changing its direction randomly",
+          "move a sprite to the right across the screen": "move a sprite to the right across the screen",
+          "rotate a sprite to its left": "rotate a sprite to its left",
+          "rotate a sprite to its right": "rotate a sprite to its right",
+          "change the size of a sprite": "change the size of a sprite",
+          "move a sprite downwards across the screen": "move a sprite downwards across the screen",
+          "move a sprite horizontally, reversing direction if it touches the edges of the screen": "move a sprite horizontally, reversing direction if it touches the edges of the screen",
+          "move a sprite upwards across the screen": "move a sprite upwards across the screen",
+          "randomly change the size of a sprite": "randomly change the size of a sprite",
+          "move a sprite to the left across the screen": "move a sprite to the left across the screen",
+          "move a sprite across the screen, reversing direction if it touches the edges": "move a sprite across the screen, reversing direction if it touches the edges",
+          "move a sprite if the user is pressing the arrow keys": "move a sprite if the user is pressing the arrow keys",
+          "randomly change the vertical position of a sprite": "randomly change the vertical position of a sprite",
+          "randomly set the rotation of a sprite": "randomly set the rotation of a sprite",
+          "Move a sprite to the left across the screen. When it goes off the left side of the screen, move it back to the right side of the screen.": "Move a sprite to the left across the screen. When it goes off the left side of the screen, move it back to the right side of the screen.",
+          "Move a sprite to the right across the screen. When it goes off the right side of the screen, move it back to the left side of the screen.": "Move a sprite to the right across the screen. When it goes off the right side of the screen, move it back to the left side of the screen."
         }
       },
       "courseF_text_choice_title": {
@@ -1651,6 +2465,22 @@
           "fluttering": "fluttering",
           "moving west and looping": "moving west and looping",
           "moving east and looping": "moving east and looping"
+        },
+        "behavior_descriptions": {
+          "move a sprite across the screen, reversing direction if it touches the edges": "move a sprite across the screen, reversing direction if it touches the edges",
+          "move the sprite forward in the direction it is facing": "move the sprite forward in the direction it is facing",
+          "change the size of a sprite": "change the size of a sprite",
+          "move a sprite to the left across the screen": "move a sprite to the left across the screen",
+          "rotate a sprite to its right": "rotate a sprite to its right",
+          "move a sprite to the right across the screen": "move a sprite to the right across the screen",
+          "move a sprite upwards across the screen": "move a sprite upwards across the screen",
+          "move a sprite downwards across the screen": "move a sprite downwards across the screen",
+          "randomly change the size of a sprite": "randomly change the size of a sprite",
+          "move a sprite, changing its direction randomly": "move a sprite, changing its direction randomly",
+          "rotate a sprite to its left": "rotate a sprite to its left",
+          "randomly change the vertical position of a sprite": "randomly change the vertical position of a sprite",
+          "Move a sprite to the left across the screen. When it goes off the left side of the screen, move it back to the right side of the screen.": "Move a sprite to the left across the screen. When it goes off the left side of the screen, move it back to the right side of the screen.",
+          "Move a sprite to the right across the screen. When it goes off the right side of the screen, move it back to the left side of the screen.": "Move a sprite to the right across the screen. When it goes off the right side of the screen, move it back to the left side of the screen."
         }
       },
       "courseF_text_choice_color": {
@@ -1680,6 +2510,22 @@
           "fluttering": "fluttering",
           "moving west and looping": "moving west and looping",
           "moving east and looping": "moving east and looping"
+        },
+        "behavior_descriptions": {
+          "move a sprite across the screen, reversing direction if it touches the edges": "move a sprite across the screen, reversing direction if it touches the edges",
+          "move the sprite forward in the direction it is facing": "move the sprite forward in the direction it is facing",
+          "change the size of a sprite": "change the size of a sprite",
+          "move a sprite to the left across the screen": "move a sprite to the left across the screen",
+          "rotate a sprite to its right": "rotate a sprite to its right",
+          "move a sprite to the right across the screen": "move a sprite to the right across the screen",
+          "move a sprite upwards across the screen": "move a sprite upwards across the screen",
+          "move a sprite downwards across the screen": "move a sprite downwards across the screen",
+          "randomly change the size of a sprite": "randomly change the size of a sprite",
+          "move a sprite, changing its direction randomly": "move a sprite, changing its direction randomly",
+          "rotate a sprite to its left": "rotate a sprite to its left",
+          "randomly change the vertical position of a sprite": "randomly change the vertical position of a sprite",
+          "Move a sprite to the left across the screen. When it goes off the left side of the screen, move it back to the right side of the screen.": "Move a sprite to the left across the screen. When it goes off the left side of the screen, move it back to the right side of the screen.",
+          "Move a sprite to the right across the screen. When it goes off the right side of the screen, move it back to the left side of the screen.": "Move a sprite to the right across the screen. When it goes off the right side of the screen, move it back to the left side of the screen."
         }
       },
       "courseF_text_choice_freeplay": {
@@ -1709,6 +2555,24 @@
           "wobbling": "wobbling",
           "moving west and looping": "moving west and looping",
           "moving east and looping": "moving east and looping"
+        },
+        "behavior_descriptions": {
+          "move a sprite, changing its direction randomly": "move a sprite, changing its direction randomly",
+          "move a sprite to the right across the screen": "move a sprite to the right across the screen",
+          "rotate a sprite to its left": "rotate a sprite to its left",
+          "rotate a sprite to its right": "rotate a sprite to its right",
+          "change the size of a sprite": "change the size of a sprite",
+          "move a sprite downwards across the screen": "move a sprite downwards across the screen",
+          "move a sprite horizontally, reversing direction if it touches the edges of the screen": "move a sprite horizontally, reversing direction if it touches the edges of the screen",
+          "move a sprite upwards across the screen": "move a sprite upwards across the screen",
+          "randomly change the size of a sprite": "randomly change the size of a sprite",
+          "move a sprite to the left across the screen": "move a sprite to the left across the screen",
+          "move a sprite across the screen, reversing direction if it touches the edges": "move a sprite across the screen, reversing direction if it touches the edges",
+          "move a sprite if the user is pressing the arrow keys": "move a sprite if the user is pressing the arrow keys",
+          "randomly change the vertical position of a sprite": "randomly change the vertical position of a sprite",
+          "randomly set the rotation of a sprite": "randomly set the rotation of a sprite",
+          "Move a sprite to the left across the screen. When it goes off the left side of the screen, move it back to the right side of the screen.": "Move a sprite to the left across the screen. When it goes off the left side of the screen, move it back to the right side of the screen.",
+          "Move a sprite to the right across the screen. When it goes off the right side of the screen, move it back to the left side of the screen.": "Move a sprite to the right across the screen. When it goes off the right side of the screen, move it back to the left side of the screen."
         }
       }
     }
@@ -1738,6 +2602,19 @@
       "moving north": "moving north",
       "jittering": "jittering",
       "patrolling": "patrolling"
+    },
+    "behavior_descriptions": {
+      "move a sprite to the right across the screen": "move a sprite to the right across the screen",
+      "move a sprite to the left across the screen": "move a sprite to the left across the screen",
+      "move a sprite, changing its direction randomly": "move a sprite, changing its direction randomly",
+      "rotate a sprite to its left": "rotate a sprite to its left",
+      "rotate a sprite to its right": "rotate a sprite to its right",
+      "change the size of a sprite": "change the size of a sprite",
+      "move a sprite downwards across the screen": "move a sprite downwards across the screen",
+      "move a sprite horizontally, reversing direction if it touches the edges of the screen": "move a sprite horizontally, reversing direction if it touches the edges of the screen",
+      "move a sprite upwards across the screen": "move a sprite upwards across the screen",
+      "randomly change the size of a sprite": "randomly change the size of a sprite",
+      "move a sprite across the screen, reversing direction if it touches the edges": "move a sprite across the screen, reversing direction if it touches the edges"
     },
     "contained levels": [
       {
@@ -1814,6 +2691,10 @@
           "moving west": "moving west",
           "spinning right": "spinning right",
           "spinning left": "spinning left"
+        },
+        "behavior_descriptions": {
+          "Moves back and forth in one direction. To change the direction a sprite is patrolling, change its \"movement direction\"": "Moves back and forth in one direction. To change the direction a sprite is patrolling, change its \"movement direction\"",
+          "rotate a sprite to its left": "rotate a sprite to its left"
         }
       },
       "courseF_editable_chatbot": {
@@ -1852,6 +2733,10 @@
           "moving west": "moving west",
           "spinning right": "spinning right",
           "spinning left": "spinning left"
+        },
+        "behavior_descriptions": {
+          "Moves back and forth in one direction. To change the direction a sprite is patrolling, change its \"movement direction\"": "Moves back and forth in one direction. To change the direction a sprite is patrolling, change its \"movement direction\"",
+          "rotate a sprite to its left": "rotate a sprite to its left"
         }
       },
       "courseF_editable_madlib": {
@@ -1891,6 +2776,24 @@
           "wobbling": "wobbling",
           "moving west and looping": "moving west and looping",
           "moving east and looping": "moving east and looping"
+        },
+        "behavior_descriptions": {
+          "move a sprite, changing its direction randomly": "move a sprite, changing its direction randomly",
+          "move a sprite to the right across the screen": "move a sprite to the right across the screen",
+          "rotate a sprite to its left": "rotate a sprite to its left",
+          "rotate a sprite to its right": "rotate a sprite to its right",
+          "change the size of a sprite": "change the size of a sprite",
+          "move a sprite downwards across the screen": "move a sprite downwards across the screen",
+          "move a sprite horizontally, reversing direction if it touches the edges of the screen": "move a sprite horizontally, reversing direction if it touches the edges of the screen",
+          "move a sprite upwards across the screen": "move a sprite upwards across the screen",
+          "randomly change the size of a sprite": "randomly change the size of a sprite",
+          "move a sprite to the left across the screen": "move a sprite to the left across the screen",
+          "move a sprite across the screen, reversing direction if it touches the edges": "move a sprite across the screen, reversing direction if it touches the edges",
+          "move a sprite if the user is pressing the arrow keys": "move a sprite if the user is pressing the arrow keys",
+          "randomly change the vertical position of a sprite": "randomly change the vertical position of a sprite",
+          "randomly set the rotation of a sprite": "randomly set the rotation of a sprite",
+          "Move a sprite to the left across the screen. When it goes off the left side of the screen, move it back to the right side of the screen.": "Move a sprite to the left across the screen. When it goes off the left side of the screen, move it back to the right side of the screen.",
+          "Move a sprite to the right across the screen. When it goes off the right side of the screen, move it back to the left side of the screen.": "Move a sprite to the right across the screen. When it goes off the right side of the screen, move it back to the left side of the screen."
         }
       }
     }
@@ -1934,6 +2837,24 @@
           "wobbling": "wobbling",
           "moving west and looping": "moving west and looping",
           "moving east and looping": "moving east and looping"
+        },
+        "behavior_descriptions": {
+          "move a sprite, changing its direction randomly": "move a sprite, changing its direction randomly",
+          "move a sprite to the right across the screen": "move a sprite to the right across the screen",
+          "rotate a sprite to its left": "rotate a sprite to its left",
+          "rotate a sprite to its right": "rotate a sprite to its right",
+          "change the size of a sprite": "change the size of a sprite",
+          "move a sprite downwards across the screen": "move a sprite downwards across the screen",
+          "move a sprite horizontally, reversing direction if it touches the edges of the screen": "move a sprite horizontally, reversing direction if it touches the edges of the screen",
+          "move a sprite upwards across the screen": "move a sprite upwards across the screen",
+          "randomly change the size of a sprite": "randomly change the size of a sprite",
+          "move a sprite to the left across the screen": "move a sprite to the left across the screen",
+          "move a sprite across the screen, reversing direction if it touches the edges": "move a sprite across the screen, reversing direction if it touches the edges",
+          "move a sprite if the user is pressing the arrow keys": "move a sprite if the user is pressing the arrow keys",
+          "randomly change the vertical position of a sprite": "randomly change the vertical position of a sprite",
+          "randomly set the rotation of a sprite": "randomly set the rotation of a sprite",
+          "Move a sprite to the left across the screen. When it goes off the left side of the screen, move it back to the right side of the screen.": "Move a sprite to the left across the screen. When it goes off the left side of the screen, move it back to the right side of the screen.",
+          "Move a sprite to the right across the screen. When it goes off the right side of the screen, move it back to the left side of the screen.": "Move a sprite to the right across the screen. When it goes off the right side of the screen, move it back to the left side of the screen."
         }
       },
       "courseF_variables_card_finish": {
@@ -1968,6 +2889,24 @@
           "wobbling": "wobbling",
           "moving west and looping": "moving west and looping",
           "moving east and looping": "moving east and looping"
+        },
+        "behavior_descriptions": {
+          "move a sprite, changing its direction randomly": "move a sprite, changing its direction randomly",
+          "move a sprite to the right across the screen": "move a sprite to the right across the screen",
+          "rotate a sprite to its left": "rotate a sprite to its left",
+          "rotate a sprite to its right": "rotate a sprite to its right",
+          "change the size of a sprite": "change the size of a sprite",
+          "move a sprite downwards across the screen": "move a sprite downwards across the screen",
+          "move a sprite horizontally, reversing direction if it touches the edges of the screen": "move a sprite horizontally, reversing direction if it touches the edges of the screen",
+          "move a sprite upwards across the screen": "move a sprite upwards across the screen",
+          "randomly change the size of a sprite": "randomly change the size of a sprite",
+          "move a sprite to the left across the screen": "move a sprite to the left across the screen",
+          "move a sprite across the screen, reversing direction if it touches the edges": "move a sprite across the screen, reversing direction if it touches the edges",
+          "move a sprite if the user is pressing the arrow keys": "move a sprite if the user is pressing the arrow keys",
+          "randomly change the vertical position of a sprite": "randomly change the vertical position of a sprite",
+          "randomly set the rotation of a sprite": "randomly set the rotation of a sprite",
+          "Move a sprite to the left across the screen. When it goes off the left side of the screen, move it back to the right side of the screen.": "Move a sprite to the left across the screen. When it goes off the left side of the screen, move it back to the right side of the screen.",
+          "Move a sprite to the right across the screen. When it goes off the right side of the screen, move it back to the left side of the screen.": "Move a sprite to the right across the screen. When it goes off the right side of the screen, move it back to the left side of the screen."
         }
       },
       "courseF_variables_chatbot": {
@@ -1996,6 +2935,24 @@
           "wobbling": "wobbling",
           "moving west and looping": "moving west and looping",
           "moving east and looping": "moving east and looping"
+        },
+        "behavior_descriptions": {
+          "move a sprite, changing its direction randomly": "move a sprite, changing its direction randomly",
+          "move a sprite to the right across the screen": "move a sprite to the right across the screen",
+          "rotate a sprite to its left": "rotate a sprite to its left",
+          "rotate a sprite to its right": "rotate a sprite to its right",
+          "change the size of a sprite": "change the size of a sprite",
+          "move a sprite downwards across the screen": "move a sprite downwards across the screen",
+          "move a sprite horizontally, reversing direction if it touches the edges of the screen": "move a sprite horizontally, reversing direction if it touches the edges of the screen",
+          "move a sprite upwards across the screen": "move a sprite upwards across the screen",
+          "randomly change the size of a sprite": "randomly change the size of a sprite",
+          "move a sprite to the left across the screen": "move a sprite to the left across the screen",
+          "move a sprite across the screen, reversing direction if it touches the edges": "move a sprite across the screen, reversing direction if it touches the edges",
+          "move a sprite if the user is pressing the arrow keys": "move a sprite if the user is pressing the arrow keys",
+          "randomly change the vertical position of a sprite": "randomly change the vertical position of a sprite",
+          "randomly set the rotation of a sprite": "randomly set the rotation of a sprite",
+          "Move a sprite to the left across the screen. When it goes off the left side of the screen, move it back to the right side of the screen.": "Move a sprite to the left across the screen. When it goes off the left side of the screen, move it back to the right side of the screen.",
+          "Move a sprite to the right across the screen. When it goes off the right side of the screen, move it back to the left side of the screen.": "Move a sprite to the right across the screen. When it goes off the right side of the screen, move it back to the left side of the screen."
         }
       },
       "courseF_variables_chatbot_finish": {
@@ -2032,6 +2989,24 @@
           "wobbling": "wobbling",
           "moving west and looping": "moving west and looping",
           "moving east and looping": "moving east and looping"
+        },
+        "behavior_descriptions": {
+          "move a sprite, changing its direction randomly": "move a sprite, changing its direction randomly",
+          "move a sprite to the right across the screen": "move a sprite to the right across the screen",
+          "rotate a sprite to its left": "rotate a sprite to its left",
+          "rotate a sprite to its right": "rotate a sprite to its right",
+          "change the size of a sprite": "change the size of a sprite",
+          "move a sprite downwards across the screen": "move a sprite downwards across the screen",
+          "move a sprite horizontally, reversing direction if it touches the edges of the screen": "move a sprite horizontally, reversing direction if it touches the edges of the screen",
+          "move a sprite upwards across the screen": "move a sprite upwards across the screen",
+          "randomly change the size of a sprite": "randomly change the size of a sprite",
+          "move a sprite to the left across the screen": "move a sprite to the left across the screen",
+          "move a sprite across the screen, reversing direction if it touches the edges": "move a sprite across the screen, reversing direction if it touches the edges",
+          "move a sprite if the user is pressing the arrow keys": "move a sprite if the user is pressing the arrow keys",
+          "randomly change the vertical position of a sprite": "randomly change the vertical position of a sprite",
+          "randomly set the rotation of a sprite": "randomly set the rotation of a sprite",
+          "Move a sprite to the left across the screen. When it goes off the left side of the screen, move it back to the right side of the screen.": "Move a sprite to the left across the screen. When it goes off the left side of the screen, move it back to the right side of the screen.",
+          "Move a sprite to the right across the screen. When it goes off the right side of the screen, move it back to the left side of the screen.": "Move a sprite to the right across the screen. When it goes off the right side of the screen, move it back to the left side of the screen."
         }
       },
       "courseF_variables_madlib": {
@@ -2060,6 +3035,24 @@
           "wobbling": "wobbling",
           "moving west and looping": "moving west and looping",
           "moving east and looping": "moving east and looping"
+        },
+        "behavior_descriptions": {
+          "move a sprite, changing its direction randomly": "move a sprite, changing its direction randomly",
+          "move a sprite to the right across the screen": "move a sprite to the right across the screen",
+          "rotate a sprite to its left": "rotate a sprite to its left",
+          "rotate a sprite to its right": "rotate a sprite to its right",
+          "change the size of a sprite": "change the size of a sprite",
+          "move a sprite downwards across the screen": "move a sprite downwards across the screen",
+          "move a sprite horizontally, reversing direction if it touches the edges of the screen": "move a sprite horizontally, reversing direction if it touches the edges of the screen",
+          "move a sprite upwards across the screen": "move a sprite upwards across the screen",
+          "randomly change the size of a sprite": "randomly change the size of a sprite",
+          "move a sprite to the left across the screen": "move a sprite to the left across the screen",
+          "move a sprite across the screen, reversing direction if it touches the edges": "move a sprite across the screen, reversing direction if it touches the edges",
+          "move a sprite if the user is pressing the arrow keys": "move a sprite if the user is pressing the arrow keys",
+          "randomly change the vertical position of a sprite": "randomly change the vertical position of a sprite",
+          "randomly set the rotation of a sprite": "randomly set the rotation of a sprite",
+          "Move a sprite to the left across the screen. When it goes off the left side of the screen, move it back to the right side of the screen.": "Move a sprite to the left across the screen. When it goes off the left side of the screen, move it back to the right side of the screen.",
+          "Move a sprite to the right across the screen. When it goes off the right side of the screen, move it back to the left side of the screen.": "Move a sprite to the right across the screen. When it goes off the right side of the screen, move it back to the left side of the screen."
         }
       },
       "courseF_variables_madlib_finish": {
@@ -2094,6 +3087,24 @@
           "wobbling": "wobbling",
           "moving west and looping": "moving west and looping",
           "moving east and looping": "moving east and looping"
+        },
+        "behavior_descriptions": {
+          "move a sprite, changing its direction randomly": "move a sprite, changing its direction randomly",
+          "move a sprite to the right across the screen": "move a sprite to the right across the screen",
+          "rotate a sprite to its left": "rotate a sprite to its left",
+          "rotate a sprite to its right": "rotate a sprite to its right",
+          "change the size of a sprite": "change the size of a sprite",
+          "move a sprite downwards across the screen": "move a sprite downwards across the screen",
+          "move a sprite horizontally, reversing direction if it touches the edges of the screen": "move a sprite horizontally, reversing direction if it touches the edges of the screen",
+          "move a sprite upwards across the screen": "move a sprite upwards across the screen",
+          "randomly change the size of a sprite": "randomly change the size of a sprite",
+          "move a sprite to the left across the screen": "move a sprite to the left across the screen",
+          "move a sprite across the screen, reversing direction if it touches the edges": "move a sprite across the screen, reversing direction if it touches the edges",
+          "move a sprite if the user is pressing the arrow keys": "move a sprite if the user is pressing the arrow keys",
+          "randomly change the vertical position of a sprite": "randomly change the vertical position of a sprite",
+          "randomly set the rotation of a sprite": "randomly set the rotation of a sprite",
+          "Move a sprite to the left across the screen. When it goes off the left side of the screen, move it back to the right side of the screen.": "Move a sprite to the left across the screen. When it goes off the left side of the screen, move it back to the right side of the screen.",
+          "Move a sprite to the right across the screen. When it goes off the right side of the screen, move it back to the left side of the screen.": "Move a sprite to the right across the screen. When it goes off the right side of the screen, move it back to the left side of the screen."
         }
       }
     }
@@ -2695,6 +3706,24 @@
       "wobbling": "wobbling",
       "moving west and looping": "moving west and looping",
       "moving east and looping": "moving east and looping"
+    },
+    "behavior_descriptions": {
+      "move a sprite, changing its direction randomly": "move a sprite, changing its direction randomly",
+      "move a sprite across the screen, reversing direction if it touches the edges": "move a sprite across the screen, reversing direction if it touches the edges",
+      "move a sprite to the right across the screen": "move a sprite to the right across the screen",
+      "rotate a sprite to its left": "rotate a sprite to its left",
+      "rotate a sprite to its right": "rotate a sprite to its right",
+      "change the size of a sprite": "change the size of a sprite",
+      "move a sprite downwards across the screen": "move a sprite downwards across the screen",
+      "move a sprite horizontally, reversing direction if it touches the edges of the screen": "move a sprite horizontally, reversing direction if it touches the edges of the screen",
+      "move a sprite upwards across the screen": "move a sprite upwards across the screen",
+      "randomly change the size of a sprite": "randomly change the size of a sprite",
+      "move a sprite to the left across the screen": "move a sprite to the left across the screen",
+      "move a sprite if the user is pressing the arrow keys": "move a sprite if the user is pressing the arrow keys",
+      "randomly change the vertical position of a sprite": "randomly change the vertical position of a sprite",
+      "randomly set the rotation of a sprite": "randomly set the rotation of a sprite",
+      "Move a sprite to the left across the screen. When it goes off the left side of the screen, move it back to the right side of the screen.": "Move a sprite to the left across the screen. When it goes off the left side of the screen, move it back to the right side of the screen.",
+      "Move a sprite to the right across the screen. When it goes off the right side of the screen, move it back to the left side of the screen.": "Move a sprite to the right across the screen. When it goes off the right side of the screen, move it back to the left side of the screen."
     }
   },
   "https://studio.code.org/s/coursef-2021/lessons/17/levels/1": {
@@ -2718,6 +3747,10 @@
     "behavior_names": {
       "recovering": "recovering",
       "wandering": "wandering"
+    },
+    "behavior_descriptions": {
+      "gradually recover from sickness": "gradually recover from sickness",
+      "move a sprite, changing its direction randomly": "move a sprite, changing its direction randomly"
     }
   },
   "https://studio.code.org/s/coursef-2021/lessons/17/levels/4": {
@@ -2734,6 +3767,10 @@
     "behavior_names": {
       "recovering": "recovering",
       "wandering": "wandering"
+    },
+    "behavior_descriptions": {
+      "gradually recover from sickness": "gradually recover from sickness",
+      "move a sprite, changing its direction randomly": "move a sprite, changing its direction randomly"
     }
   },
   "https://studio.code.org/s/coursef-2021/lessons/17/levels/5": {
@@ -2747,13 +3784,17 @@
     "behavior_names": {
       "recovering": "recovering",
       "wandering": "wandering"
+    },
+    "behavior_descriptions": {
+      "gradually recover from sickness": "gradually recover from sickness",
+      "move a sprite, changing its direction randomly": "move a sprite, changing its direction randomly"
     }
   },
   "https://studio.code.org/s/coursef-2021/lessons/17/levels/6": {
     "display_name": "Modify Your Simulation",
     "bubble_choice_description": "Change how the simulation works and make a prediction about what will happen.",
     "short_instructions": "Change the number and size of monster sprites for your simulation.",
-    "long_instructions": "<img src=\"https://images.code.org/d228e4b5feb602025d5f7b5145dbece9-image-1603143852671.gif\" width=\"250\" class=\"instructor-image-end\">\n\n# More monsters\n\n_New monsters are moving into Monster Town! What will this mean for the outbreak? Let's use the simulation to make predictions._ \n\n## Do This\n\n1.  Change the number of monster sprites you make by editing this block: \n    <p><xml><block type=\"gamelab_makeNumSprites\"><title name=\"ANIMATION_NAME\">\"healthy\"</title><value name=\"NUM\"><block type=\"math_number\"><title name=\"NUM\">???</title></block></value></block></xml></p>\n\n2.  Change the size of the sprites by editing this block: \n    <p><xml><block type=\"gamelab_setProp\"><title name=\"PROPERTY\">\"scale\"</title><value name=\"SPRITE\"><block type=\"gamelab_getAllSprites\"></block></value><value name=\"VAL\"><block type=\"math_number\"><title name=\"NUM\">???</title></block></value></block></xml></p>\n\n3.  Run the new simulation 3-5 times.\n\n_Did anything happen differently?_",
+    "long_instructions": "<img src=\"https://images.code.org/d228e4b5feb602025d5f7b5145dbece9-image-1603143852671.gif\" width=\"250\" class=\"instructor-image-end\">\n\n# More monsters\n\n_New monsters are moving into Monster Town! What will this mean for the outbreak? Let's use the simulation to make predictions._ \n\n## Do This\n\n1.  Change the number of monster sprites you make by editing this block:\n    [blockly block][0]\n\n2.  Change the size of the sprites by editing this block:\n    [blockly block][1]\n\n3.  Run the new simulation 3-5 times.\n\n_Did anything happen differently?_",
     "authored_hints": {
       "challenge": "## Looking for an extra challenge?\n\nYou can also make the monsters move faster or slower.\n\n1.  Click `Edit` in this block [blockly block][0] \n2.  Increase or decrease the number in this block: \n\n[blockly block][1]\n\nTo make the monsters move slower, choose a decimal number like `0.5` or `0.25`. To make them move faster, choose any number greater than 1."
     },
@@ -2772,6 +3813,20 @@
       "moving west": "moving west",
       "patrolling": "patrolling",
       "moving with arrow keys": "moving with arrow keys"
+    },
+    "behavior_descriptions": {
+      "gradually recover from sickness": "gradually recover from sickness",
+      "move a sprite, changing its direction randomly": "move a sprite, changing its direction randomly",
+      "move a sprite to the right across the screen": "move a sprite to the right across the screen",
+      "rotate a sprite to its left": "rotate a sprite to its left",
+      "rotate a sprite to its right": "rotate a sprite to its right",
+      "change the size of a sprite": "change the size of a sprite",
+      "move a sprite downwards across the screen": "move a sprite downwards across the screen",
+      "move a sprite horizontally, reversing direction if it touches the edges of the screen": "move a sprite horizontally, reversing direction if it touches the edges of the screen",
+      "move a sprite upwards across the screen": "move a sprite upwards across the screen",
+      "randomly change the size of a sprite": "randomly change the size of a sprite",
+      "move a sprite to the left across the screen": "move a sprite to the left across the screen",
+      "move a sprite across the screen, reversing direction if it touches the edges": "move a sprite across the screen, reversing direction if it touches the edges"
     }
   },
   "https://studio.code.org/s/coursef-2021/lessons/17/levels/7": {
@@ -2788,6 +3843,10 @@
     "behavior_names": {
       "recovering": "recovering",
       "wandering": "wandering"
+    },
+    "behavior_descriptions": {
+      "gradually recover from sickness": "gradually recover from sickness",
+      "move a sprite, changing its direction randomly": "move a sprite, changing its direction randomly"
     }
   },
   "https://studio.code.org/s/coursef-2021/lessons/17/levels/9": {
@@ -2802,6 +3861,10 @@
     "behavior_names": {
       "recovering": "recovering",
       "wandering": "wandering"
+    },
+    "behavior_descriptions": {
+      "gradually recover from sickness": "gradually recover from sickness",
+      "move a sprite, changing its direction randomly": "move a sprite, changing its direction randomly"
     }
   },
   "https://studio.code.org/s/coursef-2021/lessons/17/levels/10": {
@@ -2831,6 +3894,20 @@
       "moving west": "moving west",
       "patrolling": "patrolling",
       "moving with arrow keys": "moving with arrow keys"
+    },
+    "behavior_descriptions": {
+      "gradually recover from sickness": "gradually recover from sickness",
+      "move a sprite, changing its direction randomly": "move a sprite, changing its direction randomly",
+      "move a sprite to the right across the screen": "move a sprite to the right across the screen",
+      "rotate a sprite to its left": "rotate a sprite to its left",
+      "rotate a sprite to its right": "rotate a sprite to its right",
+      "change the size of a sprite": "change the size of a sprite",
+      "move a sprite downwards across the screen": "move a sprite downwards across the screen",
+      "move a sprite horizontally, reversing direction if it touches the edges of the screen": "move a sprite horizontally, reversing direction if it touches the edges of the screen",
+      "move a sprite upwards across the screen": "move a sprite upwards across the screen",
+      "randomly change the size of a sprite": "randomly change the size of a sprite",
+      "move a sprite to the left across the screen": "move a sprite to the left across the screen",
+      "move a sprite across the screen, reversing direction if it touches the edges": "move a sprite across the screen, reversing direction if it touches the edges"
     }
   },
   "https://studio.code.org/s/coursef-2021/lessons/17/levels/11": {
@@ -2857,6 +3934,20 @@
       "moving west": "moving west",
       "patrolling": "patrolling",
       "moving with arrow keys": "moving with arrow keys"
+    },
+    "behavior_descriptions": {
+      "gradually recover from sickness": "gradually recover from sickness",
+      "move a sprite, changing its direction randomly": "move a sprite, changing its direction randomly",
+      "move a sprite to the right across the screen": "move a sprite to the right across the screen",
+      "rotate a sprite to its left": "rotate a sprite to its left",
+      "rotate a sprite to its right": "rotate a sprite to its right",
+      "change the size of a sprite": "change the size of a sprite",
+      "move a sprite downwards across the screen": "move a sprite downwards across the screen",
+      "move a sprite horizontally, reversing direction if it touches the edges of the screen": "move a sprite horizontally, reversing direction if it touches the edges of the screen",
+      "move a sprite upwards across the screen": "move a sprite upwards across the screen",
+      "randomly change the size of a sprite": "randomly change the size of a sprite",
+      "move a sprite to the left across the screen": "move a sprite to the left across the screen",
+      "move a sprite across the screen, reversing direction if it touches the edges": "move a sprite across the screen, reversing direction if it touches the edges"
     }
   },
   "https://studio.code.org/s/coursef-2021/lessons/18/levels/1": {
@@ -2910,6 +4001,24 @@
           "wobbling": "wobbling",
           "moving west and looping": "moving west and looping",
           "moving east and looping": "moving east and looping"
+        },
+        "behavior_descriptions": {
+          "move a sprite, changing its direction randomly": "move a sprite, changing its direction randomly",
+          "move a sprite to the right across the screen": "move a sprite to the right across the screen",
+          "rotate a sprite to its left": "rotate a sprite to its left",
+          "rotate a sprite to its right": "rotate a sprite to its right",
+          "change the size of a sprite": "change the size of a sprite",
+          "move a sprite downwards across the screen": "move a sprite downwards across the screen",
+          "move a sprite horizontally, reversing direction if it touches the edges of the screen": "move a sprite horizontally, reversing direction if it touches the edges of the screen",
+          "move a sprite upwards across the screen": "move a sprite upwards across the screen",
+          "randomly change the size of a sprite": "randomly change the size of a sprite",
+          "move a sprite to the left across the screen": "move a sprite to the left across the screen",
+          "move a sprite across the screen, reversing direction if it touches the edges": "move a sprite across the screen, reversing direction if it touches the edges",
+          "move a sprite if the user is pressing the arrow keys": "move a sprite if the user is pressing the arrow keys",
+          "randomly change the vertical position of a sprite": "randomly change the vertical position of a sprite",
+          "randomly set the rotation of a sprite": "randomly set the rotation of a sprite",
+          "Move a sprite to the left across the screen. When it goes off the left side of the screen, move it back to the right side of the screen.": "Move a sprite to the left across the screen. When it goes off the left side of the screen, move it back to the right side of the screen.",
+          "Move a sprite to the right across the screen. When it goes off the right side of the screen, move it back to the left side of the screen.": "Move a sprite to the right across the screen. When it goes off the right side of the screen, move it back to the left side of the screen."
         },
         "placeholder_texts": {
           "8e7d34ed67fe4ec0910cefee2f5059cd": "Sky Dancer",

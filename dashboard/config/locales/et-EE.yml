@@ -301,7 +301,6 @@ et:
     popup:
       progress_for_user: "%{name} edusammud"
       progress: Sinu progress
-      lines: 'Koodiridade koguarv: %{lines}'
       close: SULGE
       mastery: Mõisted
       puzzle_map: Etapid
@@ -405,6 +404,7 @@ et:
     no_primary_course: Proovige Code Studio kursust
     choose_next_course: Proovige Code Studio kursuseid. Selleks valige üks altpoolt
     print_certificate: Prindi tunnistus
+  certificate_hour_of_code: KoodiTund
   move_students:
     new_section_dne: Vabandame, kuid seda sektsiooni ei ole olemas %{new_section_code}
       Palun lisa teine sektsiooni kood.
@@ -911,12 +911,15 @@ et:
         math: Matemaatika
         science: Teadus
         la: Keeled
+        other: Muu
       resources:
         khan: Khan Academy
         kodable: Kodable
         lightbot: Lightbot
+        other: Muu
       robotics:
         kodable: Kodable
+        other: Muu
       email_opt_in:
         opt_in_yes: Jah
         opt_in_no: Ei
@@ -924,3 +927,5 @@ et:
     accept: Olen nõus
   page_not_found_title: Lehte ei leitud
   copy: Kopeeri
+  pixelation:
+    binary: Binaarne

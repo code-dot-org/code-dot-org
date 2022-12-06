@@ -2,6 +2,8 @@
 sv:
   data:
     blocks:
+      AmysBlocks_setPromptWithChoices:
+        text: snabb användare {QUESTION} för variabel {VAR} med val {A}{B}{C}
       BadGuys_makeNewBadGuysSprite:
         text: skapa nya {ANIMATION_NAME} sprite vid {LOCATION}
       BadGuys_setSizeAll_dropdown:
@@ -228,20 +230,12 @@ sv:
             MOVES.XArmsUp: Sträck dig
             MOVES.ThisOrThat: Det här eller det där
             MOVES.Rest: Ingen
-      Dancelab_everyMeasuresRange:
-        text: 'upprepa varje {N} takter efter {START} '
       Dancelab_everySeconds:
         text: 'varje {N} {UNIT} '
         options:
           UNIT:
             '"measures"': åtgärder
             '"seconds"': sekunder
-      Dancelab_everySecondsRange:
-        text: 'varje {N} {UNIT} från {START} till {STOP} '
-        options:
-          UNIT:
-            measures: Takter
-            seconds: Sekunder
       Dancelab_everyVerseChorus:
         text: 'varje {UNIT} '
         options:
@@ -991,6 +985,14 @@ sv:
         text: ställ in
       Dancelab_whenSetup2:
         text: ställ in
+      DansBlocks_setForegroundEffect2:
+        options:
+          EFFECT:
+            '"bubbles"': Bubblor
+            '"confetti"': Konfetti
+            '"hearts"': hjärtan
+            '"rain"': regn
+            '"starburst"': Stjärnfall
       gamelab_addBehaviorSimple:
         text: sprite {SPRITE} börjar {BEHAVIOR}
       gamelab_addTarget:
@@ -1228,6 +1230,12 @@ sv:
             '90': ner
             '180': vänster
             '270': upp
+      gamelab_makeSpritesWithSize:
+        options:
+          SIZE:
+            '30': liten
+            '50': medel
+            '100': stor
       gamelab_mirrorSprite:
         text: "{SPRITE} Ansikte {DIRECTION}"
         options:
@@ -1298,6 +1306,10 @@ sv:
             "'sound://category_retro/retro_game_ui_select_6.mp3'": välj
             "'sound://category_jump/quirky_bass_sc-fi_open_or_start.mp3'": knäpp bas
             "'sound://category_digital/jump_7.mp3'": hoppa
+      gamelab_playSoundOptionsSoccer:
+        text: spelljud {SOUND}
+      gamelab_playSoundOptionsSpace:
+        text: spelljud {SOUND}
       gamelab_playSpeech:
         text: spela tal {SOUND}
       gamelab_playerBehaviors:
@@ -1921,6 +1933,8 @@ sv:
             '"sound://category_achievements/peaceful_win_1.mp3"': Vinna
             '"sound://category_explosion/vibrant_game_arcade_game_negative_hit.mp3"': Virvla
             '"sound://category_achievements/peaceful_win_6.mp3"': Vindspel
+      Poetry_playSoundOptionsSpace:
+        text: spelljud {SOUND}
       Poetry_setBackground:
         text: ange bakgrundsfärg {COLOR}
       Poetry_setBackgroundEffect:
@@ -2009,6 +2023,11 @@ sv:
             '8': '8'
             '9': '9'
             '10': '10'
+            '11': '11'
+            '12': '12'
+            '13': '13'
+            '14': '14'
+            '15': '15'
       Poetry_whenPromptAnswered:
         text: när  {VAR} svarade
       RyanLab_moveForward:
@@ -2209,5 +2228,13 @@ sv:
           DIR:
             right: höger ↻
             left: vänster ↺
+      storylab_setForegroundEffect2:
+        options:
+          EFFECT:
+            '"bubbles"': Bubblor
+            '"confetti"': Konfetti
+            '"hearts"': hjärtan
+            '"rain"': regn
+            '"starburst"': Stjärnfall
       validation_validatedBackground:
         text: ställa in bakgrunden till {IMG}

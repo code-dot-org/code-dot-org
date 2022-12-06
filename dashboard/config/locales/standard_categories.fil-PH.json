@@ -1,0 +1,20 @@
+{
+  "fil-PH": {
+    "data": {
+      "standard_categories": {
+        "CT": {
+          "description": "Computational Thinking"
+        },
+        "L": {
+          "description": "Lengwahe"
+        },
+        "C": {
+          "description": "Mga bilog"
+        },
+        "F": {
+          "description": "Mga function"
+        }
+      }
+    }
+  }
+}

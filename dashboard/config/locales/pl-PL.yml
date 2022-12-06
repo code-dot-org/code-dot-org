@@ -37,6 +37,7 @@ pl:
           masz adresu e-mail)](%{url})
         username: Nazwa użytkownika
         password: Hasło
+        verified_teacher: Zweryfikowany nauczyciel
         password_confirmation: Potwierdzenie hasła
         current_password: Aktualne hasło
         locale: Język
@@ -328,6 +329,7 @@ pl:
   teacher_mailer:
     new_teacher_subject: Witaj na Code.org!
     delete_teacher_subject: 'Powiadomienie Code.org: Twoje konto zostało usunięte'
+    verified_teacher_subject: Weryfikacja nauczyciela Code.org — sukces
   section:
     your_section:
       one: 'Twoja sekcja:'
@@ -431,6 +433,7 @@ pl:
       educate_beyond: Poza Code.org
       educate_inspire: Inspiruj ucznia
       educate_community: Społeczność online
+      educate_requirements: Wymagania Techniczne
       educate_tools: Narzędzia i filmy
       about_us: O nas
       about_leadership: Przywództwo
@@ -449,6 +452,7 @@ pl:
       about: O programie
       legal: Prywatność i legalność
       legal_privacy: Polityka prywatności
+      legal_cookie_notice: Informacja o plikach cookie
       legal_tos: Regulamin
     user:
       classroom: Domowa strona nauczyciela
@@ -505,7 +509,6 @@ pl:
     popup:
       progress_for_user: "%{name} w toku"
       progress: Twoje postępy
-      lines: 'Łączna ilość linii kodu: %{lines}'
       close: ZAMKNIJ
       mastery: Pojęcia
       puzzle_map: Etapy
@@ -667,6 +670,7 @@ pl:
     print_certificate: Drukuj Certyfikat
   certificate_sponsor_message: "%{sponsor_name} podarował szczodry prezent w postaci
     sponsorowania Twojej nauki."
+  certificate_hour_of_code: Godzina Kodowania
   move_students:
     new_section_dne: Przepraszamy, ale sekcja %{new_section_code} nie istnieje. Wprowadź
       kod innej sekcji.
@@ -754,6 +758,7 @@ pl:
     try_hour_of_code: Wypróbuj Godzinę Kodowania!
     store: Skład
     cookie_notice: Informacja o plikach cookie
+    view_code: Obejrzyj kod
   reference_area:
     title: Czy potrzebujesz pomocy?
     subtitle: Zobacz te filmiki i wskazówki
@@ -832,6 +837,13 @@ pl:
       title: Potańcówka
     dance-2019:
       title: Potańcówka
+    hello-world:
+      title: Witaj świecie
+      body: Wybierz jeden z czterech zabawnych motywów, aby zakodować interaktywne
+        postacie w tworzonym przez siebie świecie.
+    poem-art:
+      title: 'Sztuka poezji '
+      body: Wyraź siebie! Użyj kodu do tworzenia animowanych wierszy.
     hoc:
       title: Klasyczny labirynt
       body: Wypróbuj podstawy informatyki. Miliony dały im już szansę.
@@ -1049,19 +1061,6 @@ pl:
       mogą być niedostępne dla Twoich uczniów przed zaakceptowaniem zaktualizowanych
       postanowień.
     review_terms: Wyświetl zaktualizowane Warunki korzystania
-  donor_interstitial:
-    title: Twoje bezpłatne kursy CS są możliwe dzięki ...
-    subtitle: 'Chcielibyśmy podziękować hojnym darczyńcom, których wsparcie umożliwiło
-      sukces Code.org. Dążymy do tego, aby Code.org było bezpłatne dla szkół i uczniów
-      na całym świecie, dzięki nieustającej hojności naszych [darczyńców] (%{donors_url})!
-
-'
-    local_supporters: Lokalni zwolennicy
-    global_supporters: Globalni zwolennicy
-    support_codeorg_1: Każdy dolar przekazany Code.org daje szansę większej liczbie
-      uczniów.
-    support_codeorg_2: "[Przekaż darowiznę teraz] (%{donate_url}), aby wesprzeć Code.org."
-    get_started: Zacznij korzystać z Code.org
   school_info_interstitial:
     title: Chcemy przybliżyć Informatykę każdemu uczniowi - pomóż nam śledzić nasze
       postępy!
@@ -1338,12 +1337,15 @@ pl:
         not_listed: Preferowanego terminu nie ma na liście
         none: Wolę nie odpowiadać
       school_country:
+        barbados: Barbados
+        belize: Belize
         canada: Kanada
         chile: Chile
         colombia: Kolumbia
         israel: Izrael
         malaysia: Malezja
         mexico: Meksyk
+        paraguay: Paragwaj
         thailand: Tajlandia
         uzbekistan: Uzbekistan
       ages:
@@ -1366,6 +1368,7 @@ pl:
         music: Muzyka
         art: Sztuka
         other: 'Inne:'
+        na: Nie dotyczy
       resources:
         bootstrap: Bootstrap
         codecademy: CodeCademy
@@ -1375,7 +1378,8 @@ pl:
         lightbot: Lightbot
         scratch: Scratch
         tynker: Tynker
-        other: 'Inne:'
+        other: Inni/inne
+        na: Nie dotyczy
       robotics:
         grok: Nauka Grok
         kodable: Kodable
@@ -1385,7 +1389,8 @@ pl:
         sphero: Sphero
         raspberry: Raspberry Pi
         wonder: Warsztaty Wonder
-        other: 'Inne:'
+        other: Inni/inne
+        na: Nie dotyczy
       workshop_course:
         csf_af: Podstawy informatyki (Kursy A-F)
         csf_express: Podstawy informatyki (Wstępne ekspresowe lub ekspresowe)
@@ -1470,3 +1475,29 @@ pl:
   unit_prefix: Jednostka %{n}
   code_org_logo_alt: Strona domowa Code.org
   teacher_feedback: Opinie nauczycieli
+  lesson_lock:
+    error:
+      no_updates: Brak aktualizacji do wykonania
+      missing_params: Należy podać iużytkownika, poziom i identyfikator jednostki
+      cannot_view_locked_answers: Nie można wyświetlić odpowiedzi, gdy jest zablokowany
+      forbidden: Użytkownik nie może zaktualizować stanu blokady ucznia
+  reset_predict_progress_button: Usuń odpowiedź
+  pixelation:
+    raw_format: Format wiersza
+    raw_format_alt: Wyświetl bity bez formatowania
+    readable_format: Czytelny format
+    readable_format_alt: Wyświetl bity oddzielone pikselami
+    save_image: Zapisz obraz
+    actual_size: Aktualny rozmiar
+    image_file_format_header: Format pliku obrazu
+    image_file_format_width: 'Szerokość: 1 bajt'
+    image_file_format_height: 'Wysokość: 1 bajt'
+    image_file_format_bits_per_pixel: 'Bity na piksel: 1 bajt'
+    image_file_format_data_a: n bitów danych pikseli
+    image_file_format_data_b: n = Szerokość * Wysokość * Bity na piksel
+    image_width: Szerokość obrazu
+    image_height: Wysokość obrazu
+    bits_per_pixel_header: Bity na piksel
+    binary: Binarny
+    hexadecimal: Szesnastkowy
+    pixel_format_header: Format pikseli

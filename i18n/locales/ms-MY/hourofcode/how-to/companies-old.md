@@ -5,7 +5,7 @@ title: Cara untuk menganjurkan acara Jam Kod - Syarikat
 {{ signup_button }}
 
 # Cara membawa Jam Kod kepada syarikat anda
-### Ketahui cara anda dan pekerja anda boleh memberikan inspirasi kepada pelajar untuk mencuba sains komputer!
+### Ketahui cara anda dan pekerja anda yang memberikan inspirasi kepada pelajar untuk mencuba sains komputer!
 
 ***
 
@@ -31,7 +31,7 @@ Untuk arahan yang lebih lanjut mengenai menggalakkan pekerja dan menghubungkan p
 - Promosikan acara [Jam Kod]({{ urls/promote }}) anda dan galakkan yang lain menganjurkannya.
 - Galakkan jurutera perisian di syarikat anda melawat kelas tempatan bertujuan membantu memimpin Jam Kod dan memberikan inspirasi kepada pelajar untuk mengambil pengajian sains komputer. Mereka boleh [mendaftarkan diri]({{ urls/volunteer_engineer }}) untuk dihubungkan dengan kelas.
 
-## 2. Sila tonton video panduan cara <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe>
+## 2. Sila tonton video panduan cara <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe>
 
 ## 3. Pilih aktiviti
 Kami menganjurkan pelbagai aktiviti [yang menyeronokkan, serta berjam lamanya]({{ urls/learn }}) untuk peserta daripada semua peringkat umur, dicipta oleh pelbagai rakan kongsi. [Marilah mencubanya!]({{ urls/learn }})

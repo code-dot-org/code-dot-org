@@ -4,28 +4,37 @@ pl:
       Actions: Działania
       Advanced: Zaawansowane
       Behaviors: Zachowanie
+      'Behaviors ': 'Zachowania '
+      Boolean: Wartość logiczna
       Brushes: Pędzle
+      Category: Kategoria
       Color: Kolor
       Comment: Komentarz
       Comments: Komentarze
       Conditionals: Zdania z warunkami
       Dancers: Tancerze
       Default: Domyślne
+      Effects: Efekty
       Events: Zdarzenia
       Functions: Funkcje
       'Functions ': 'Funkcje '
       Game/Score: Gra/Punkty
       Games/Score: Gry/Punkty
       Groups: Grupy
+      Image: Obraz
       Input: Wejście
       Location: Miejsce
       Locations: Położenie
       Logic: Logika
       Loops: Pętle
       Math: Matematyka
+      Number: Liczba
       Numbers: Liczby
+      Picker: Selektor
+      Prebuilt: Wcześniej zbudowany
       Properties: Właściwości
       Sprites: Duszki
+      String: Łańcuch
       Text: Tekst
       Variables: Zmienne
       'Variables ': 'Zmienne '

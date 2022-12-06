@@ -2,7 +2,7 @@ import {Provider} from 'react-redux';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import TeacherPanel from './components/progress/teacherPanel/TeacherPanel';
-import TeachersOnly from '@cdo/apps/code-studio/components/TeachersOnly';
+import InstructorsOnly from '@cdo/apps/code-studio/components/InstructorsOnly';
 
 /**
  * Render our teacher panel that shows up on our course overview page.
@@ -18,13 +18,13 @@ export function renderTeacherPanel(
 
   ReactDOM.render(
     <Provider store={store}>
-      <TeachersOnly>
+      <InstructorsOnly>
         <TeacherPanel
           unitName={scriptName}
           pageType={pageType}
           scriptId={scriptId}
         />
-      </TeachersOnly>
+      </InstructorsOnly>
     </Provider>,
     div
   );

@@ -1,9 +1,5 @@
 <Applab>
   <config><![CDATA[{
-  "game_id": 41,
-  "created_at": "2022-04-08T17:10:13.000Z",
-  "level_num": "custom",
-  "user_id": 1,
   "properties": {
     "skin": "applab",
     "code_functions": {
@@ -75,13 +71,13 @@
     "widget_mode": "false",
     "ai_enabled": "false",
     "reference_links": [
-      "/docs/concepts/maker-toolkit/the-accelerometer/",
-      "/docs/concepts/maker-toolkit/board-events/",
-      "/docs/concepts/maker-toolkit/data-and-change-events/",
-      "/docs/concepts/javascript/variables/",
-      "/docs/concepts/javascript/random-numbers/"
+      "/courses/csd-2022/guides/the-accelerometer",
+      "/courses/csd-2022/guides/board-events",
+      "/courses/csd-2022/guides/data-and-change-events",
+      "/courses/csd-2022/guides/variables",
+      "/courses/csd-2022/guides/random-numbers"
     ],
-    "map_reference": "/docs/concepts/javascript/functions/",
+    "map_reference": "/courses/csd-2022/guides/functions",
     "starter_assets": {
       "BG-Landscape25.png": "eafc61c0-093d-4d84-9f76-a784aae033d8.png",
       "Alien_02.png": "0a11cf75-00e2-4722-8f39-13e00f420f43.png",
@@ -96,6 +92,10 @@
     "encrypted_examples": "lw/mPMbzFeAhiz1fE4XDGkOHVagqg4Ysy4kOJFzMs2etJ6T1+l0XE/AQ0F7W\ncND1gv4X7eLZQv2p8QJHR+9YPg==\n",
     "preload_asset_list": null
   },
+  "level_num": "custom",
+  "game_id": 41,
+  "created_at": "2022-04-08T17:10:13.000Z",
+  "user_id": 1,
   "published": true,
   "notes": "",
   "audit_log": "[{\"changed_at\":\"2022-04-08T17:10:13.878+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Functions - SB4_2022\\\"\"],\"cloned_from\":\"CSD U6 - Functions - SB4_2022\"}]"

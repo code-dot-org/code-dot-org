@@ -1,0 +1,21 @@
+<Javalab>
+  <config><![CDATA[{
+  "properties": {
+    "encrypted": "false",
+    "encrypted_examples": [
+
+    ],
+    "long_instructions": "## Open-Ended Activity\r\n\r\n**Requirements:**\r\n\r\n* Create a superclass\r\n* Create at least one subclass of the superclass\r\n* Override at least one method from the superclass\r\n* Create a program with a `main`(#e7e8ea) method\r\n* Utilize polymorphism",
+    "mini_rubric": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "csa_view_mode": "console"
+  },
+  "game_id": 68,
+  "published": true,
+  "created_at": "2022-08-10T16:02:36.000Z",
+  "level_num": "custom",
+  "user_id": 18602,
+  "audit_log": "[{\"changed_at\":\"2022-08-10 16:02:39 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
+}]]></config>
+</Javalab>

@@ -12,8 +12,8 @@
 #  index_lessons_opportunity_standards_on_standard_id_and_lesson_id  (standard_id,lesson_id)
 #
 class LessonsOpportunityStandard < ApplicationRecord
-  belongs_to :lesson
-  belongs_to :standard
+  belongs_to :lesson, optional: true
+  belongs_to :standard, optional: true
 
   # Used for seeding from JSON. Returns the full set of information needed to
   # uniquely identify this object as well as any other objects it belongs to.

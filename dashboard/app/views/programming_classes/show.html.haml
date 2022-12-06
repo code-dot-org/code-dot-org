@@ -2,7 +2,7 @@
 - content_for(:head) do
   = tag 'meta', name: 'description', content: @programming_class.syntax
 %script{src: webpack_asset_path('js/programming_classes/show.js'),
-  data: {programmingClass: @programming_class.summarize_for_show.to_json, programmingEnvironmentTitle: (@programming_class.programming_environment.title || @programming_class.programming_environment.name).to_json, categoriesForNavigation: @programming_environment_categories.to_json, currentCategoryKey: @programming_class.programming_environment_category&.key&.to_json}}
+  data: {programmingClass: @programming_class.summarize_for_show.to_json, programmingEnvironmentTitle: (@programming_class.programming_environment.title || @programming_class.programming_environment.name).to_json,programmingEnvironmentName: @programming_class.programming_environment.name.to_json,programmingEnvironmentLanguage: (@programming_class.programming_environment.editor_language || '').to_json, categoriesForNavigation: @programming_environment_categories.to_json, currentCategoryKey: @programming_class.programming_environment_category&.key&.to_json}}
 
 #show-container
 

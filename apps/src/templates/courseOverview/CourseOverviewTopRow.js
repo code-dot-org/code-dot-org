@@ -1,7 +1,6 @@
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
-import {resourceShape} from './resourceType';
-import {resourceShape as migratedResourceShape} from '@cdo/apps/lib/levelbuilder/shapes';
+import {resourceShape} from '@cdo/apps/lib/levelbuilder/shapes';
 import SectionAssigner from '@cdo/apps/templates/teacherDashboard/SectionAssigner';
 import {sectionForDropdownShape} from '@cdo/apps/templates/teacherDashboard/shapes';
 import ResourcesDropdown from '@cdo/apps/code-studio/components/progress/ResourcesDropdown';
@@ -13,10 +12,8 @@ export default class CourseOverviewTopRow extends Component {
     courseOfferingId: PropTypes.number,
     courseVersionId: PropTypes.number,
     teacherResources: PropTypes.arrayOf(resourceShape),
-    migratedTeacherResources: PropTypes.arrayOf(migratedResourceShape),
-    studentResources: PropTypes.arrayOf(migratedResourceShape),
+    studentResources: PropTypes.arrayOf(resourceShape),
     showAssignButton: PropTypes.bool,
-    useMigratedResources: PropTypes.bool.isRequired,
     isInstructor: PropTypes.bool
   };
 
@@ -26,26 +23,17 @@ export default class CourseOverviewTopRow extends Component {
       courseOfferingId,
       courseVersionId,
       teacherResources,
-      migratedTeacherResources,
       studentResources,
       showAssignButton,
       sectionsForDropdown,
-      useMigratedResources,
       isInstructor
     } = this.props;
 
     return (
       <div style={styles.main} className="course-overview-top-row">
-        {isInstructor &&
-          ((useMigratedResources && migratedTeacherResources.length > 0) ||
-            (!useMigratedResources && teacherResources.length > 0)) && (
-            <ResourcesDropdown
-              resources={teacherResources}
-              migratedResources={migratedTeacherResources}
-              unitGroupId={id}
-              useMigratedResources={useMigratedResources}
-            />
-          )}
+        {isInstructor && teacherResources.length > 0 && (
+          <ResourcesDropdown resources={teacherResources} unitGroupId={id} />
+        )}
         {isInstructor && (
           <SectionAssigner
             sections={sectionsForDropdown}
@@ -58,9 +46,8 @@ export default class CourseOverviewTopRow extends Component {
         )}
         {!isInstructor && studentResources && studentResources.length > 0 && (
           <ResourcesDropdown
-            migratedResources={studentResources}
+            resources={studentResources}
             unitGroupId={id}
-            useMigratedResources
             studentFacing
           />
         )}

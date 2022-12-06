@@ -4,13 +4,16 @@ fil:
       Actions: Mga aksyon
       Advanced: Advanced
       Behaviors: Pag-uugali
+      Boolean: Boolean
       Brushes: Brushes
+      Category: Kategorya
       Color: Kulay
       Comment: Komento
       Comments: Komento
       Conditionals: Mga conditional
       Dancers: Mananayaw
       Default: Default
+      Effects: Mga effect
       Events: Mga event
       Functions: Mga function
       'Functions ': 'Function '
@@ -23,10 +26,15 @@ fil:
       Logic: Lohika
       Loops: Mga loop
       Math: Math
+      Number: Bilang
       Numbers: Mga numero
+      Picker: Tagapili
+      Prebuilt: Mga tapos na
       Properties: Mga katangian
       Sprites: Mga Sprites
+      String: String
       Text: Text
       Variables: Mga variable
       'Variables ': 'Pagkakaiba '
+      'Variables  ': 'Mga variable  '
       World: Mundo

@@ -40,7 +40,7 @@
     "fail_on_lint_errors": "false",
     "debugger_disabled": "false",
     "makerlab_enabled": "false",
-    "long_instructions": "# Combining Representations\r\n\r\nAfter learning how to use all three types of binary representation systems (ASCII characters, binary number, and images),  they move on to using all three systems together. Students are introduced to the idea that in order to understand binary information, they must understand both the system that is being used and the meaning of the information encoded. \r\n\r\n# Practice\r\n\r\n<img src=\"https://images.code.org/c157a4628df8e4480503bbc19df0e6c5-image-1651779648118.40.32 PM.png\" alt=\"image of a pet record\" style=\"float: right; height: 400px; clear: both; margin: 0 20px 20px 0;\">\r\n\r\nA pet shelter is keeping records of all the different pets available for adoption.  Each record includes the pet’s age, name, and an 8x8 image representation of the pet.\r\n\r\n\r\nThe record is stored in binary, and it’s organized into 8-bit sections.  Each section of 8 bits is called a **byte**.\r\n\r\n* The record is organized as follows:\r\n* The first byte (00) holds the pet’s age as a binary number.\r\n* The next seven bytes (01-07) hold the pet’s name.  Each byte is one ASCII character.\r\n* The next byte (08) holds the pet’s weight in pounds as a binary number.\r\n* The next seven bytes (09-15) hold the pet’s breed.  Each byte is one ASCII character.\r\n\r\nUse what you know about binary numbers and ASCII to decode the age, name, weight, and breed of the pet described in the record to the right.\r\n![](https://images.code.org/2ea391dd3278478bba76fb130469c88b-image-1651779808608.43.16 PM.png)\r\n\r\n<a href=\"https://docs.google.com/document/d/1RgqkSXE8NGRfJe2Slw5DSIaP_YbpMhRE5u1zrutoyMk/view\" target=\"blank\" rel=\"noopener noreferrer\">Click here</a> to see the ASCII to binary reference table.\r\n\r\n![](https://images.code.org/67741ac7d79cceba60f5b4bd10519557-image-1651779775288.42.41 PM.png)\r\n\r\nThe answer can be found in the \"For Teachers Only\"tab.\r\n\r\n",
+    "long_instructions": "# Combining Representations\r\n\r\nAfter learning how to use all three types of binary representation systems (ASCII characters, binary number, and images), students move on to using all three systems together. Students are introduced to the idea that in order to understand binary information, they must understand both the system that is being used and the meaning of the information encoded. \r\n\r\n# Practice\r\n\r\n<img src=\"https://images.code.org/c157a4628df8e4480503bbc19df0e6c5-image-1651779648118.40.32 PM.png\" alt=\"image of a pet record\" style=\"float: right; height: 400px; clear: both; margin: 0 20px 20px 0;\">\r\n\r\nA pet shelter is keeping records of all the different pets available for adoption.  Each record includes the pet’s age, name, and an 8x8 image representation of the pet.\r\n\r\n\r\nThe record is stored in binary, and it’s organized into 8-bit sections.  Each section of 8 bits is called a **byte**.\r\n\r\n* The record is organized as follows:\r\n* The first byte (00) holds the pet’s age as a binary number.\r\n* The next seven bytes (01-07) hold the pet’s name.  Each byte is one ASCII character.\r\n* The next byte (08) holds the pet’s weight in pounds as a binary number.\r\n* The next seven bytes (09-15) hold the pet’s breed.  Each byte is one ASCII character.\r\n\r\nUse what you know about binary numbers and ASCII to decode the age, name, weight, and breed of the pet described in the record to the right.\r\n![](https://images.code.org/2ea391dd3278478bba76fb130469c88b-image-1651779808608.43.16 PM.png)\r\n\r\n<a href=\"https://docs.google.com/document/d/1RgqkSXE8NGRfJe2Slw5DSIaP_YbpMhRE5u1zrutoyMk/view\" target=\"blank\" rel=\"noopener noreferrer\">Click here</a> to see the ASCII to binary reference table.\r\n\r\n![](https://images.code.org/67741ac7d79cceba60f5b4bd10519557-image-1651779775288.42.41 PM.png)\r\n\r\nThe answer can be found in the \"For Teachers Only\"tab.\r\n\r\n",
     "start_html": "<div id=\"designModeViz\" class=\"appModern withCrosshair clip-content\" data-radium=\"true\" style=\"width: 320px; height: 450px; display: block;\"><div class=\"screen\" tabindex=\"1\" id=\"screen1\" style=\"display: block; height: 450px; width: 320px; left: 0px; top: 0px; position: absolute; z-index: 0;\"><img src=\"https://images.code.org/3d248054eaeaf133a4cbbc167d7eb361-image-1502901324840.26.51 AM.png\" data-canonical-image-url=\"https://images.code.org/3d248054eaeaf133a4cbbc167d7eb361-image-1502901324840.26.51 AM.png\" id=\"startImage\" style=\"height: 75px; width: 285px; position: absolute; left: 20px; top: 155px; margin: 0px;\"></div></div>",
     "top_level_procedure_autopopulate": "false",
     "parent_level_id": 20324,
@@ -52,12 +52,12 @@
     "text_mode_at_start": "false",
     "widget_mode": "false",
     "libraries_enabled": "false",
+    "teacher_markdown": "![](https://images.code.org/ca66541819523ccfdc5509a20347ce94-image-1651779894398.44.33 PM.png)",
+    "ai_enabled": "false",
     "preload_asset_list": null,
     "encrypted_examples": [
 
-    ],
-    "teacher_markdown": "![](https://images.code.org/ca66541819523ccfdc5509a20347ce94-image-1651779894398.44.33 PM.png)",
-    "ai_enabled": "false"
+    ]
   },
   "game_id": 41,
   "published": true,
@@ -65,7 +65,7 @@
   "level_num": "custom",
   "user_id": 324,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-05-05T17:04:39.111+00:00\",\"changed\":[\"cloned from \\\"CSD U5 binary 8 bits_2022\\\"\"],\"cloned_from\":\"CSD U5 binary 8 bits_2022\"},{\"changed_at\":\"2022-05-05 19:50:29 +0000\",\"changed\":[\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":962,\"changed_by_email\":\"jess@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-05-05T17:04:39.111+00:00\",\"changed\":[\"cloned from \\\"CSD U5 binary 8 bits_2022\\\"\"],\"cloned_from\":\"CSD U5 binary 8 bits_2022\"},{\"changed_at\":\"2022-05-05 19:50:29 +0000\",\"changed\":[\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":962,\"changed_by_email\":\"jess@code.org\"},{\"changed_at\":\"2022-05-06 14:58:14 +0000\",\"changed\":[\"long_instructions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":962,\"changed_by_email\":\"jess@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>

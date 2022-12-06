@@ -1,6 +1,6 @@
 class AddProgramRegistrationIdToPdTeacherApplication < ActiveRecord::Migration[5.0]
   # Empty Pd::TeacherApplication model for this migration
-  class Pd::TeacherApplication < ActiveRecord::Base
+  class Pd::TeacherApplication < ApplicationRecord
   end
 
   def change

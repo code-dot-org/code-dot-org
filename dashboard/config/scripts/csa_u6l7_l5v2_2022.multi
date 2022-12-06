@@ -1,20 +1,19 @@
 name 'CSA U6L7-L5v2_2022'
 title 'Check for Understanding'
 
-wrong 'wrong'
-right 'right'
-wrong 'wrong'
-wrong 'wrong'
-wrong 'wrong'
+right 'a=1 b=3 c=8'
+wrong 'a=0 b=2 c=7'
+wrong 'a=1 b=2 c=8'
+wrong 'a=1 b=3 c=7'
+wrong 'a=2 b=4 c=9'
 
 markdown <<MARKDOWN
-Consider the following code segment.
+Consider the code segment below.
 
 ```
-String originalTitle = "Once Upon a Time";
-String newTitle = originalTitle.substring(0, 2) + originalTitle.substring(3, 5) + originalTitle.substring(12);
-System.out.println(newTitle);
+String str = "level nail";
+System.out.println(str.substring(a,b) + str.substring(c));
 ```
 
-What is printed as a result of executing the code segment?
+Which values of `a`, `b`, and `c` will cause the program to output the word `"evil"`?
 MARKDOWN

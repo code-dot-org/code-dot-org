@@ -1,9 +1,5 @@
 <Gamelab>
   <config><![CDATA[{
-  "game_id": 50,
-  "created_at": "2022-03-30T23:39:16.000Z",
-  "level_num": "custom",
-  "user_id": 155,
   "properties": {
     "skin": "gamelab",
     "code_functions": {
@@ -68,12 +64,12 @@
     "parent_level_id": 20689,
     "name_suffix": "_2022",
     "reference_links": [
-      "/docs/concepts/game-lab/animation-tab/",
-      "/docs/concepts/javascript/random-numbers/",
-      "/docs/concepts/javascript/variables/",
-      "/docs/concepts/javascript/naming-variables/",
-      "/docs/concepts/game-lab/drawing-shapes/",
-      "/docs/concepts/game-lab/shapes-and-parameters/"
+      "/courses/csd-2022/guides/animation-tab",
+      "/courses/csd-2022/guides/random-numbers",
+      "/courses/csd-2022/guides/variables",
+      "/courses/csd-2022/guides/naming-variables",
+      "/courses/csd-2022/guides/drawing-shapes",
+      "/courses/csd-2022/guides/shapes-and-parameters"
     ],
     "video_key": "csd_gamelab_animation_tab",
     "disable_procedure_autopopulate": "false",
@@ -83,7 +79,7 @@
     "mini_rubric": "true",
     "encrypted_examples": "KbJcNu2JypEU/UT0j5q95UVjZP0LAL4qOOI24gQCvAwP4RbNRvqwNpnBRr20\n4pSMIr3HD4NnLe0wxQ1xyz6jkg==\n",
     "libraries_enabled": "false",
-    "map_reference": "/docs/concepts/game-lab/sprites/",
+    "map_reference": "/courses/csd-2022/guides/sprites",
     "rubric_key_concept": "Create and use sprites.",
     "rubric_performance_level_1": "More than two sprites have been created with different animations that are drawn to the canvas at different locations. Each sprite has a unique and meaningful label.",
     "rubric_performance_level_2": "At least two sprites have been created with different animations that are drawn to the canvas at different locations.",
@@ -91,6 +87,10 @@
     "rubric_performance_level_4": "No sprites were created or were created without an animation - shown by a gray square.",
     "preload_asset_list": null
   },
+  "level_num": "custom",
+  "game_id": 50,
+  "created_at": "2022-03-30T23:39:16.000Z",
+  "user_id": 155,
   "published": true,
   "notes": "",
   "audit_log": "[{\"changed_at\":\"2022-03-30T23:39:16.105+00:00\",\"changed\":[\"cloned from \\\"CSD U3 Sprites assessment_2021\\\"\"],\"cloned_from\":\"CSD U3 Sprites assessment_2021\"}]"

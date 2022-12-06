@@ -34,7 +34,7 @@ module Cdo
 
       # Potential characters to use as a separator. This list can be safely
       # expanded if the current set proves insufficient
-      SEPARATORS = ".|,-_ /".split('')
+      SEPARATORS = ".|,-_ /".chars
 
       # Return a character than can be used as a separator without separating the
       # given string. If the given string contains all the attempted separator
@@ -50,7 +50,7 @@ module Cdo
       # Used for to make sure that dynamically-provided values can safely be used
       # as the I18n key.
       def self.get_valid_separator(string)
-        characters = string.split('').to_set
+        characters = string.chars.to_set
         SEPARATORS.find do |separator|
           !characters.include? separator
         end

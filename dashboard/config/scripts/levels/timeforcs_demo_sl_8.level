@@ -48,7 +48,6 @@
     "auto_run_setup": "DRAW_LOOP",
     "parent_level_id": 14896,
     "long_instructions": "Finally, add a new sprite that looks like a bell.\r\n\r\nWhen you click on it, make all the aliens start doing the same dance move!",
-    "project_template_level_name": "Dance Party 6_2019",
     "show_type_hints": "true",
     "short_instructions": "Add a new sprite that looks like a bell. Make all the aliens start doing the same dance move when the bell is clicked.",
     "include_shared_functions": "false",

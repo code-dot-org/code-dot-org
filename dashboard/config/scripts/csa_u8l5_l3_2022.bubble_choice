@@ -1,6 +1,6 @@
 name 'CSA U8L5-L3_2022'
 display_name 'Using the Selection Sort'
-description 'level description here'
+description 'Implement the selection sort algorithm to sort 1D and 2D arrays and `ArrayList`s.'
 
 sublevels
 level 'CSA U8L5-L3a_2022'

@@ -54,7 +54,7 @@ ca:
         title: El gran esdeveniment
         desc: Els alumnes es familiaritzen amb el concepte de programació d' "esdeveniments", que són accions que un ordinador supervisa constantment. El mestre polsarà botons en un paper a distància i els alumnes reaccionaran depenent de quin botó es prem.
       GoingPlacesSafely:
-        title: Anant a llocs segurs
+        title: Anar als llocs amb precaució
         desc: Internet és una eina potent, però a vegades també és un lloc perillós. Els mestres t'expliquen com navegar amb seguretat per internet.
       GraphPaperProgramming:
         title: Programació de paper quadriculat
@@ -113,7 +113,7 @@ ca:
         title: Mapes feliços
         desc: Els alumnes creen algoritmes senzills (conjunts d'instruccions) per moure un personatge a través d'un laberint utilitzant tant sols una ordre.
       courseA_unplugged_goingPlacesSafely:
-        title: Anant a llocs segurs
+        title: Anar als llocs amb precaució
         desc: Internet és una eina potent, però a vegades també és un lloc perillós. Els mestres t'expliquen com navegar amb seguretat per internet.
       courseABC_unplugged_bigEvent:
         title: El gran esdeveniment
@@ -170,7 +170,7 @@ ca:
         title: Mapes feliços
         desc: Els alumnes creen algoritmes senzills (conjunts d'instruccions) per moure un personatge a través d'un laberint utilitzant tant sols una ordre.
       GoingPlacesSafely_2018:
-        title: Anant a llocs segurs
+        title: Anar als llocs amb precaució
         desc: Internet és una eina potent, però a vegades també és un lloc perillós. Els mestres t'expliquen com navegar amb seguretat per internet.
       BigEvent_2018:
         title: El gran esdeveniment
@@ -239,7 +239,7 @@ ca:
         title: Mapes feliços
         desc: Els alumnes creen algoritmes senzills (conjunts d'instruccions) per moure un personatge a través d'un laberint utilitzant tant sols una ordre.
       GoingPlacesSafely_2019:
-        title: Anant a llocs segurs
+        title: Anar als llocs amb precaució
         desc: Internet és una eina potent, però a vegades també és un lloc perillós. Els mestres t'expliquen com navegar amb seguretat per internet.
       MoveItMoveIt_2019:
         title: Mou-lo, Mou-lo

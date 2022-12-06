@@ -1,5 +1,5 @@
 import React from 'react';
-import Radium from 'radium';
+import Radium from 'radium'; // eslint-disable-line no-restricted-imports
 import PropTypes from 'prop-types';
 import color from '@cdo/apps/util/color';
 

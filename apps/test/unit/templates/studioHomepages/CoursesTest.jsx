@@ -10,7 +10,6 @@ const TEST_PROPS = {
   isEnglish: true,
   isTeacher: true,
   isSignedOut: true,
-  linesCount: '0',
   studentsCount: '0',
   modernElementaryCoursesAvailable: true
 };

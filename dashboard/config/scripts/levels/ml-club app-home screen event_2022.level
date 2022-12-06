@@ -1,9 +1,5 @@
 <Applab>
   <config><![CDATA[{
-  "game_id": 41,
-  "created_at": "2022-03-30T23:50:14.000Z",
-  "level_num": "custom",
-  "user_id": 106,
   "properties": {
     "skin": "applab",
     "edit_code": true,
@@ -56,16 +52,20 @@
     "ai_model_id": "z5SZPaoHHIvF",
     "ai_model_name": "Club Recommender",
     "reference_links": [
-      "/docs/concepts/app-lab/design-mode/",
-      "/docs/concepts/app-lab/multi-screen-apps/",
-      "/docs/concepts/app-lab/design-mode/design-mode-elements/",
-      "/docs/concepts/app-lab/changing-screens/",
-      "/docs/concepts/app-lab/responding-to-user-input/"
+      "/courses/csd-2022/guides/design-mode",
+      "/courses/csd-2022/guides/multi-screen-apps",
+      "/courses/csd-2022/guides/design-mode-elements",
+      "/courses/csd-2022/guides/changing-screens",
+      "/courses/csd-2022/guides/responding-to-user-input"
     ],
-    "map_reference": "/docs/concepts/app-lab/changing-screens/",
+    "map_reference": "/courses/csd-2022/guides/changing-screens",
     "name_suffix": "_2022",
     "preload_asset_list": null
   },
+  "level_num": "custom",
+  "game_id": 41,
+  "created_at": "2022-03-30T23:50:14.000Z",
+  "user_id": 106,
   "published": true,
   "notes": "",
   "audit_log": "[{\"changed_at\":\"2022-03-30T23:50:14.282+00:00\",\"changed\":[\"cloned from \\\"ml-club app-home screen event\\\"\"],\"cloned_from\":\"ml-club app-home screen event\"}]"

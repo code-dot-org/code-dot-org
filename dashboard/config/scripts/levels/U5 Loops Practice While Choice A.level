@@ -84,9 +84,7 @@
     "bubble_choice_description": "Create a program that simulates rolling a pair of dice and keeps track of how many times doubles are rolled.",
     "thumbnail_url": "https://images.code.org/550df13ca5eb7e3d0e9b5e574cf2a1f9-image-1649913172694.png",
     "preload_asset_list": null,
-    "encrypted_examples": [
-
-    ]
+    "encrypted_examples": "PSMnFZC1WGyvZKXrXvEXkZmsIhh2i7YGelKabFMnsm9rja9oHYu0hjPs/Mxl\nAfrOI713kvkZ4OUqhyE6K/KxEA==\n"
   },
   "game_id": 41,
   "published": true,
@@ -94,7 +92,7 @@
   "level_num": "custom",
   "user_id": 832,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-04-14T05:04:44.986+00:00\",\"changed\":[\"cloned from \\\"U5 Loops Practice Part 32022\\\"\"],\"cloned_from\":\"U5 Loops Practice Part 32022\"},{\"changed_at\":\"2022-04-14 05:14:19 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2022-04-14 05:24:18 +0000\",\"changed\":[\"start_blocks\",\"start_html\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2022-04-14 05:32:17 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"start_blocks\",\"preload_asset_list\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2022-04-21 22:55:32 +0000\",\"changed\":[\"code_functions\",\"watchers_prepopulated\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2022-04-21 22:58:01 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-04-14T05:04:44.986+00:00\",\"changed\":[\"cloned from \\\"U5 Loops Practice Part 32022\\\"\"],\"cloned_from\":\"U5 Loops Practice Part 32022\"},{\"changed_at\":\"2022-04-14 05:14:19 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2022-04-14 05:24:18 +0000\",\"changed\":[\"start_blocks\",\"start_html\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2022-04-14 05:32:17 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"start_blocks\",\"preload_asset_list\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2022-04-21 22:55:32 +0000\",\"changed\":[\"code_functions\",\"watchers_prepopulated\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2022-04-21 22:58:01 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2022-05-20 18:44:09 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>

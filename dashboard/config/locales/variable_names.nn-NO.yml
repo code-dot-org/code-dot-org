@@ -17,6 +17,7 @@ nn:
       length: lengde
       name: namn
       nectar: nektar
+      object: objekt
       points: poeng
       random: tilfeldig
       repeat: gjenta
@@ -25,6 +26,7 @@ nn:
       sides: Sider
       size: størrelse
       speed: fart
+      type: type
       variable: variabel
       width: breidde
       wizard: trollmann

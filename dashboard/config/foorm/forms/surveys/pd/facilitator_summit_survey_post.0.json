@@ -7,7 +7,7 @@
         {
           "type": "html",
           "name": "Intro",
-          "html": "<p><h2>2022 Spring Facilitator Summit Post-Event Survey: Day 2</h2>We are interested in learning about all facilitators' experiences during Day 2 of the 2022 Summit.  Your responses will be shared anonymously with Code.org staff and co-leads running these workshops to help inform summits and other professional learning opportunities in the future.  Thank you for taking a few minutes to complete this survey! </p>"
+          "html": "<p><h2>2022 Spring Facilitator Summit Post-Event Survey</h2>We are interested in learning about all facilitators' experiences during the 2022 Summit.  Your responses will be shared anonymously with Code.org staff and co-leads running these workshops to help inform summits and other professional learning opportunities in the future.  Thank you for taking a few minutes to complete this survey! </p>"
         },
         {
           "type": "html",
@@ -60,7 +60,7 @@
         {
           "type": "radiogroup",
           "name": "facilitator_experience",
-          "visibleIf": "{scheduled_to_facilitate} = 'yes' and ({Course} = 'CSD' or {Course} = 'CSP' or {Course} = 'CSA' )",
+          "visibleIf": "{scheduled_to_facilitate} = 'yes' and ({Course} = 'CSD' or {Course} = 'CSP' or {Course} = 'CSA' or {Course} = 'CSD_pilot')",
           "title": "Will 2022 be the first summer where you facilitate the Code.org 5-day summer workshop?",
           "choices": [
             {
@@ -153,6 +153,11 @@
               "text": "No, I do not give Code.org my permission."
             }
           ]
+        },
+        {
+          "type": "html",
+          "name": "link_to_applications",
+          "html": "<p><h3>P.S. Apply to co-lead a 3-day virtual workshop to train our newest facilitators at FiT (Facilitator-in-Training)! <a href=\"https://bit.ly/fit-colead.\">Visit here for more details</a>"
         },
         {
           "type": "html",

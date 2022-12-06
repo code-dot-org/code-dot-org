@@ -27,12 +27,12 @@
 # Text Match type.
 class TextMatch < DSLDefined
   def dsl_default
-    <<~ruby
+    <<~RUBY
       name 'Enter name here'
       title 'Enter title here'
       content1 'Enter prompt here'
       answer 'Enter answer here'
-    ruby
+    RUBY
   end
 
   def supports_markdown?

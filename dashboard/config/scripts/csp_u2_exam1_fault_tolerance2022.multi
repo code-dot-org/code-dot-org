@@ -1,8 +1,8 @@
 name 'csp-u2-exam1-fault-tolerance2022'
 height 'auto'
 
-question 'Two devices are connected to the Internet and communicating with one another. A squirrel chews through one of the wires in the network that is currently being used by the devices to communicate. The network immediately begins using a different path through the network and communication continues as normal.  
-&nbsp;  
+question 'Two devices are connected to the Internet and communicating with one another. A squirrel chews through one of the wires in the network that is currently being used by the devices to communicate. The network immediately begins using a different path through the network and communication continues as normal.
+&nbsp;
 This situation best exemplifies which principle?'
 right 'fault-tolerance'
 wrong 'scalability'
@@ -12,7 +12,7 @@ wrong 'pathing'
 teacher_markdown <<MARKDOWN
 **Explanation:** Building networks with redundancy, multiple paths between any two connected devices, allows for them to be fault tolerant and in this case when the squirrel chews through one of the wires, the network can use one of the other paths that connects these two devices.
 
-[Lesson 4 - Routers and Redundancy](https://studio.code.org/s/csp2-2021/lessons/4) introduced the concept of fault-tolerance.
+[Lesson 4 - Routers and Redundancy](https://studio.code.org/s/csp2-2022/lessons/4) introduced the concept of fault-tolerance.
 
 ::: details [**Essential Knowledge Connected To This Question**]
 

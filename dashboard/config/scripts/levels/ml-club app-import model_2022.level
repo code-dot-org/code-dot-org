@@ -1,9 +1,5 @@
 <Applab>
   <config><![CDATA[{
-  "game_id": 41,
-  "created_at": "2022-03-30T23:50:13.000Z",
-  "level_num": "custom",
-  "user_id": 106,
   "properties": {
     "skin": "applab",
     "edit_code": true,
@@ -56,12 +52,16 @@
     "ai_model_id": "z5SZPaoHHIvF",
     "ai_model_name": "Club Survey",
     "reference_links": [
-      "/docs/concepts/ai-lab/importing-a-model-in-app-lab/"
+      "/courses/csd-2022/guides/importing-a-model-in-app-lab"
     ],
     "video_key": "csd_ml_model_cards_july2021",
     "name_suffix": "_2022",
     "preload_asset_list": null
   },
+  "level_num": "custom",
+  "game_id": 41,
+  "created_at": "2022-03-30T23:50:13.000Z",
+  "user_id": 106,
   "published": true,
   "notes": "",
   "audit_log": "[{\"changed_at\":\"2022-03-30T23:50:13.165+00:00\",\"changed\":[\"cloned from \\\"ml-club app-import model\\\"\"],\"cloned_from\":\"ml-club app-import model\"}]"

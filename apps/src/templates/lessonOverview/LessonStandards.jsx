@@ -3,7 +3,7 @@ import React, {PureComponent} from 'react';
 import _ from 'lodash';
 import {standardShape} from './lessonPlanShapes';
 import color from '@cdo/apps/util/color';
-import Radium from 'radium';
+import Radium from 'radium'; // eslint-disable-line no-restricted-imports
 
 export const styles = {
   frameworkName: {

@@ -1,8 +1,6 @@
 require 'client_state'
 require 'nokogiri'
 require 'cdo/user_agent_parser'
-require 'cdo/graphics/certificate_image'
-require 'cdo/pegasus/donor'
 require 'dynamic_config/gatekeeper'
 require 'cdo/shared_constants'
 require 'cdo/asset_helper'
@@ -47,11 +45,6 @@ module ApplicationHelper
     User::AGE_DROPDOWN_OPTIONS.map do |age|
       [age, age]
     end
-  end
-
-  def check_mark_html
-    #raw "&#x2714;"
-    image_tag(image_url('white-checkmark.png'))
   end
 
   def activity_css_class(user_level)
@@ -237,16 +230,16 @@ module ApplicationHelper
 
   def share_failure_message(failure_type)
     case failure_type
-      when ShareFiltering::FailureType::EMAIL
-        t('share_code.email_not_allowed')
-      when ShareFiltering::FailureType::ADDRESS
-        t('share_code.address_not_allowed')
-      when ShareFiltering::FailureType::PHONE
-        t('share_code.phone_number_not_allowed')
-      when ShareFiltering::FailureType::PROFANITY
-        t('share_code.profanity_not_allowed')
-      else
-        raise ArgumentError.new("Unknown share failure type #{failure_type}")
+    when ShareFiltering::FailureType::EMAIL
+      t('share_code.email_not_allowed')
+    when ShareFiltering::FailureType::ADDRESS
+      t('share_code.address_not_allowed')
+    when ShareFiltering::FailureType::PHONE
+      t('share_code.phone_number_not_allowed')
+    when ShareFiltering::FailureType::PROFANITY
+      t('share_code.profanity_not_allowed')
+    else
+      raise ArgumentError.new("Unknown share failure type #{failure_type}")
     end
   end
 end

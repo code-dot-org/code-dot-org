@@ -97,7 +97,7 @@
   "madlibNoSprites": "Deine Aufforderung funktioniert. Wenn sie das tut, was du erwartet hast, kannst du anfangen, Sprites zu deinem Projekt hinzuzufügen. Worum geht es in deiner Geschichte oder deinem Gedicht?",
   "madlibPrintVariable": "Es scheint, als ob der Chatbot reagiert, aber er hat nicht das gedruckt, was du in die Aufforderung getippt hast. Achte darauf, dass mit deinem `Drucken`-Block das richtige **Variablen** -Etikett verbunden ist.",
   "madlibPrintWhenAnswered": "Im Moment druckst du den Text nur einmal. Achte darauf, dass sich unter einem `wenn beantwortet`-Block ein 'Drucken'-Block steht. <xml><block type=\"gamelab_whenPromptAnswered\"><value name=\"VAR\"><block type=\"variables_get\" can_disconnect_from_parent=\"false\"><title name=\"VAR\">Nahrungsmittel</title></block></value></block></xml>",
-  "madlibTitleVariable": "Es sieht so aus, als hättest du einen Titelbildschirm zu deinem Programm hinzugefügt, dass er aber keinen Text aus der Aufforderung enthält.",
+  "madlibTitleVariable": "Es sieht so aus, als hättest du einen Titelbildschirm zu deinem Programm hinzugefügt, der aber keinen Text aus der Aufforderung enthält.",
   "moreSprites": "Du musst mehr Sprites erstellen.",
   "moveBothWays": "Dein Sprite soll sich erst in die eine und dann in die andere Richtung bewegen.",
   "moveSpriteByDrag": "Dein Code sieht toll aus! Wenn du dein Sprite ziehen willst, klicke es an, während das Programm läuft.",

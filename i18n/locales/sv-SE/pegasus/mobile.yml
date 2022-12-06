@@ -810,6 +810,12 @@
   coursed-2021_gradelevel: Åldrarna 7-11
   coursee-2021_gradelevel: Åldrarna 8-12
   coursef-2021_gradelevel: Åldrarna 9-13
+  coursea-2022_gradelevel: Åldrarna 4-7
+  courseb-2022_gradelevel: Åldrarna 5-8
+  coursec-2022_gradelevel: Åldrarna 6-10
+  coursed-2022_gradelevel: Åldrarna 7-11
+  coursee-2022_gradelevel: Åldrarna 8-12
+  coursef-2022_gradelevel: Åldrarna 9-13
   accelerated_gradelevel: "Åldrar 10 + (efter kurs 3)"
   codeorg_platformtext: "Moderna webbläsare, smartphones, surfplattor"
   codeintl_platformtext: "Moderna webbläsare, smartphones, surfplattor"
@@ -1248,3 +1254,4 @@
   ai_try_activity: "Prova aktivitet"
   outbreak_tile_title: "Utbrott"
   outbreak_tile_subtitle: "Ett virus har infekterat Monsterstaden! Koda en utbrottssimulator och gör förutsägelser om vad som kommer att hända med Monsterstadens grannar."
+  hoc2022_landing_page_create_title: "Skapa"

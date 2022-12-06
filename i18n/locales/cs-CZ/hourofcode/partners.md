@@ -2,39 +2,37 @@
 title: Partneři
 ---
 
-The Hour of Code is driven by the Hour of Code and Computer Science Education Week Advisory and Review Committees.
+Hodinu programování řídí Revizní výbor Hodiny programování.
 
-The [Advisory Committee]({{ urls/advisory_committee }}) is composed of representatives from K-12, academia, nonprofits, for-profits, and international organizations. This committee guides the strategy for the Hour of Code campaign.
+[Revizní výbor]({{ urls/review_committee }}) se skládá z 12 současných a bývalých vzdělavatelů ve třídách stupně K-12, kteří hodnotí a doporučují aktivity pomocí rubriky založené poradním výborem. Tito vzdělavatelé revidují aktivity prováděné studenty a plány lekcí vyhotovené učiteli prostřednictvím stovek partnerů pro aktivity, přičemž posuzují vzdělávací hodnotu aktivit, jejich schopnost zaujmout žáky a jejich potenciální přitažlivost pro různorodé skupiny studentů.
 
-The [Review Committee]({{ urls/review_committee }}) is composed of 15 educators across K-12 grade bands that assess and recommend activities using the Advisory Committee's rubric. These educators review student-led activities and teacher-led lesson plans submitted by hundreds of activity partners, evaluating the activities' educational value, ability to engage learners, and potential appeal to diverse sets of students.
+Práce a zaujetí výboru přispěly k úspěšnosti Hodiny programování a její vize nabídnout všem studentům úvod do počítačových věd.
 
-Both committees' work and dedication have contributed to the success of the Hour of Code and its vision of offering an introduction to computer science for every student.
-
-# Major Partners and Corporate Supporters
+# Hlavní firemní partneři a sponzoři
 
 {{ partners/major_partners_corporate_supporters }}
 
 * * *
 
-# International Partners
+# Zahraniční partneři
 
 {{ partners/international_partners }}
 
 * * *
 
-# Curriculum and Tutorial Partners
+# Partneři pro osnovy a výukové kurzy
 
 {{ partners/curriculum_tutorial_partners }}
 
 * * *
 
-# Infrastructure Partners and Tools
+# Infrastrukturní partneři a nástroje
 
 {{ partners/infrastructure_partners_tools }}
 
 * * *
 
-# Additional Partners
+# Další partneři
 
 {{ partners/additional_partners }}
 

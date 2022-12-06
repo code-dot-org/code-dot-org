@@ -5181,7 +5181,7 @@ Studio.vanishActor = function(opts) {
 
   var spriteIndex = opts.spriteIndex;
   if (spriteIndex < 0 || spriteIndex >= Studio.spriteCount) {
-    throw new RangeError('Incorrect parameter: ' + spriteIndex);
+    return;
   }
   var sprite = Studio.sprite[spriteIndex];
   var spriteShowing = sprite.visible || sprite.isFading();
@@ -5653,9 +5653,12 @@ Studio.setSprite = function(opts) {
 
   var spriteIndex = opts.spriteIndex;
   if (spriteIndex < 0 || spriteIndex >= Studio.spriteCount) {
-    throw new RangeError('Incorrect parameter: ' + spriteIndex);
+    return;
   }
   var sprite = Studio.sprite[spriteIndex];
+  if (!sprite) {
+    return;
+  }
 
   sprite.visible = spriteValue !== 'hidden' && !opts.forceHidden;
 

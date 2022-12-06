@@ -1,73 +1,73 @@
 ---
-title: Hour of Code How-To Guide for Virtual Events
+title: Οδηγός Κατευθύνσεων για Εικονικές Εκδηλώσεις Ώρα του Κώδικα
 layout: wide
 nav: how_to_nav
 ---
 
 {{ signup_button }}
 
-# Tips for a virtual Hour of Code event
+# Μικρές συμβουλές για μια εικονική εκδήλωση Ώρας του Προγραμματισμού
 
-### You don't have to be in-person to run a successful Hour of Code!
+### Δε χρειάζεται να είστε αυτοπροσώπως για να πραγματοποιήσετε μια επιτυχημένη Ώρα του Προγραμματισμού!
 
 ***
 
-While the Hour of Code is traditionally held in classrooms throughout the globe, you don’t need to be in-person to enjoy the fun! You can still host an interactive and inspirational Hour of Code for students remotely using some of these recommendations.  Take a look at our [guide for virtual events]({{ localized_files/participation_guide_virtual }}) if you still have questions.
+Ενώ η Ώρα του Προγραμματισμού πραγματοποιείται συνήθως πραγματοποιείται σε τάξεις σε όλα και τα πλάτη της γης, δε χρειάζεται να βρίσκεστε εκεί αυτοπροσώπως για να συμμετέχετε και να απολαμβάνετε τη διασκέδαση! Μπορείτε ακόμη να φιλοξενήσετε μια διαδραστική και εμπνευσμένη Ώρα του Προγραμματισμού για τους μαθητές απομεμακρυσμένα με τη χρήση κάποιων από αυτών των προτάσεων.  Ρίξτε μια ματιά στον δικό μας [οδηγό για εικονικές εκδηλώσεις]({{ localized_files/participation_guide }}) αν έχετε ακόμη ερωτήσεις.
 
 <br><br>
 
 [<img src="/images/fit-600/Marketing/pexels-andrea-piacquadio-3762940.jpg" />]({{ urls/learn }})
 
-## You may be apart, but you can still start together
-Even if you plan for students to complete their activities independently, we recommend starting your event with a virtual kick-off online to get participants excited. There are several interesting ways you can start your event: 
+## Μπορεί να είστε μακριά και ξεχωριστά, αλλά μπορείτε ακόμη να ξεκινήσετε μαζί
+Ακόμη αν σχεδιάζετε για τους μαθητές να ολοκληρώνουν τις δραστηριότητες τους ανεξάρτητα, συνιστούμε να ξεκινήσετε με ένα διαδικτυακό εναρκτήριο έναυσμα για να δημιουργήσετε ενθουσιασμό στους συμμετέχοντες. Υπάρχει μια ποικιλία ως προς τους τρόπους που παρουσιάζουν ενδιαφέρον για να αρχίσετε την εκδήλωσή σας:
 
 <ul>
-<li><b>Invite a guest speaker</b>: Thousands of volunteers from all backgrounds are waiting to hear from you! Simply use our <a href="https://code.org/volunteer/local">volunteer map</a> to search for them. With a virtual Hour of Code, you’re not limited by distance so if needed, consider searching outside of your zip code for volunteers that are offering to help remotely. Once you’ve connected with a volunteer, you can reference the <a href="http://hourofcode.com/us/how-to/volunteers">Hour of Code Volunteer How-To</a> as a guide for determining potential topics, discussion questions, and more.</li> 
-<li><b>Show an inspirational video</b>: Another reliable option to start your event, is showing participants one of our many <a href="http://hourofcode.com/us/promote/resources#videos">inspirational videos</a>. Many videos are less than 5 minutes long and feature inspiration and encouragement from celebrities your students will recognize.</li> 
-<li><b>Discuss computer science for good</b>: Turn your Hour of Code event into a deeper understanding of computer science by considering the impact of technology on our everyday lives. Ask students guiding questions and turn the beginning of your event into an interactive discussion. For ideas on how to get the conversation started, check out these <a href="https://code.org/csforgood#prompts">discussion questions</a>.</li>
+<li><b>Προσκαλέστε έναν προσκεκλημένο ομιλητή</b>: Χιλιάδες εθελοντές ομιλητές από όλα τα υπόβαθρα περιμένουν να τους προσκαλέσετε! Χρησιμοποιήστε απλώς το δικό μας <a href="https://code.org/volunteer/local">χάρτη εθελοντών</a>για να τους αναζητήσετε. Με μια εικονική Ώρα του Προγραμματισμού, δε σας περιορίζει η απόσταση, συνεπώς, αν χρειάζεται, εξετάστε το ενδεχόμενο να αναζητήσετε εκτός του δικού σας ταχυδρομικού κώδικα για εθελοντές που προσφέρονται να βοηθήσουν απομεμακρυσμένα. Μόλις συνδεθείτε με έναν εθελοντή ομιλητή, μπορείτε να ανατρέξετε στις <a href="http://hourofcode.com/us/how-to/volunteers">Κατευθυντήριες Οδηγίες Εθελοντών για την Ώρα του Προγραμματισμού</a>για να έχετε μια πυξίδα για τον καθορισμό δυνητικών θεμάτων ομιλίας, ερωτήσεων για συζητήσεις, και άλλα πολλά περισσότερα.</li>
+<li><b>Προβάλλετε ένα εμπνευσμένο βίντεο</b>: Μια βάσιμη, στέρεη, δοκιμασμένη και αξιόπιστη επιλογή για να ξεκινήσετε την εκδήλωσή σας είναι να προβάλλετε ένα από τα πολλά δικά μας <a href="http://hourofcode.com/us/promote/resources#videos">εμπνευσμένα βίντεο</a>.  Πολλά βίντεο διαρκούν λιγότερο από 5 λεπτά και χαρακτηρίζονται από έμπνευση και ενθάρρυνση από διασημότητες που οι μαθητές σας θα αναγνωρίσουν.</li>
+<li><b>Συζητήστε την επιστήμη της πληροφορικής εκτενώς</b>: Μετατρέψτε την εκδήλωσή σας για την Ώρα του Προγραμματισμού σε μια πληρέστερη κατανόηση της επιστήμης της πληροφορικής εξετάζοντας τον αντίκτυπο της τεχνολογίας στην καθημερινή μας ζωή. Ρωτήστε τους μαθητές κατευθυντήριες ερωτήσεις και μετατρέψτε την αρχή της εκδήλωσής σας σε μια διαδραστική συζήτηση. Για ιδέες σχετικά με τον τρόπο που μπορείτε να ξεκινήσετε τη συζήτηση, ρίξτε αυτές τις <a href="https://code.org/csforgood#prompts">ερωτήσεις για συζήτηση</a>.</li>
 </ul>
 
 ---
 
-## What to prepare ahead of time
+## Τι να προετοιμάσετε πριν από τη στιγμή της εκδήλωσης
 
-### 1. Determine your video conferencing platform
-Chances are you’re probably familiar with platforms like Cisco Webex, Google Meet, Microsoft Teams, Skype, or Zoom by now. Whichever tool you prefer, we just encourage you to familiarize yourself, test out it’s capabilities, and run through your Hour of Code agenda prior to your event date.
+### 1. Καθορίστε την πλατφόρμα συνδιασκέψεων βίντεο
+Κατά πάσα πιθανότητα είστε μάλλον πλέον εξοικειωμένοι με τις πλατφόρμες όπως Webex, Google Meet, Microsoft Teams, Skype, ή Zoom. Όποιο και αν είναι το εργαλείο της προτίμησής σας, σας ενθαρρύνουμε να εξοικειωθείτε μαζί του, να δοκιμάσετε τις δυνατότητές του, και να προβάρετε το πρόγραμμα της Ώρας του Προγραμματισμού - απλώς να τα κάνετε όλα αυτά πριν από την ημερομηνία της εκδήλωσής σας.
 
 [<img src="/images/fit-600/Marketing/photo-of-boy-video-calling-with-a-woman-4145197.jpg" />]({{ urls/learn }})
 
-### 2. Plan how students will participate
-**Self-led Hour of Code activity**<br> We recommend that after your kickoff, you allow students to leave the video conference to work through their <a href="https://hourofcode.com/us/learn">Hour of Code activities</a> on their own rather than live together. This will allow students to immerse themselves in their own projects and gain a stronger understanding of the CS concepts. It will also minimize the distraction and obstacle of having to have a video conference window open.
+### 2. Σχεδιάστε τον τρόπο συμμετοχής των μαθητών
+**Αυτοκαθοδηγούμενη δραστηριότητα Ώρας του Κώδικα**<br> Συνιστούμε μετά το εναρκτήριο έναυσμα σας, να δώσετε τη ευκαιρία στους μαθητές να εγκαταλείψουν τη συνδιάσκεψη βίντεο για να επεξεργαστούν μόνοι τους τις δραστηριότητές τους της Ώρας του Προγραμματισμού παρά μαζί και σε ζωντανή σύνδεση.  Η ευκαιρία αυτή θα επιτρέπει στους μαθητές να απορροφηθούν στις δικές τους εργασίες τους και να αποκτήσουν μια αυξημένη κατανόηση των εννοιών της Επιστήμης της Πληροφορικής. Επίσης, η ευκαιρία αυτή θα ελαχιστοποιεί τις αποσπάσεις και τα εμπόδια που σχετίζονται με τη διατήρηση ανοικτού του παράθυρου της συνδιάσκεψης βίντεο.
 
-It may be helpful for you to determine 1-3 tutorial options for them to choose from ahead of time. This allows you to choose activities that are best suited for their grade level. Plus, if students have questions that require your assistance you’ll be better prepared to help if you’re already familiar with the tutorials they’re working on.
+Μπορεί να σας βοηθήσει ο πρόωρος καθορισμός 1-3 επιλογών από εκπαιδευτικά βίντεο που μπορούν να διαλέξουν οι μαθητές. Ο καθορισμός αυτός θα σας επιτρέψει να επιλέγετε δραστηριότητες που είναι πιο κατάλληλες για το επίπεδο της τάξης τους. Συν του ότι, αν οι μαθητές έχουν απορίες που απαιτούν τη συμβολή σας, αν έχετε ήδη εξοικειωθεί με τα εκπαιδευτικά βίντεο πάνω στα οποία θα κάνουν εργασία, θα έχετε προετοιμαστεί καλύτερα να προσφέρετε τη βοήθεια σας.
 
-If your class is expected to do their activity immediately after kickoff, you might consider keeping a virtual conference room, chat platform, or other means of communication open so they can reconnect with you with questions as needed.
+Αν η τάξη των μαθητών σας αναμένονται να κάνουν τη δραστηριότητα τους αμέσως μετά το εναρκτήριο έναυσμα, ίσως θα πρέπει να εξετάσετε το ενδεχόμενο να διατηρήσετε μια εικονική αίθουσα συνδιασκέψεων, πλατφόρμα συζήτησης ή αλλά μέσα επικοινωνίας ανοιχτά έτσι ώστε να μπορούν να επανασυνδεθούν μαζί σας αν έχουν απορίες σύμφωνα με τις ανάγκες.
 
-**Hour of Code activity together online**<br> If you prefer to keep your participants on the same video call for the duration of your event, please note that they’ll need to have two windows open at all times - one for the video conferencing platform, and the other for students to work on their activity.
+**Διαδικτυακή ομαδική δραστηριότητα της Ώρας του Κώδικα**<br> Αν προτιμάτε να διατηρήσετε τους συμμετέχοντες σας στην ίδια βιντεοκλήση για τη διάρκεια της εκδήλωσής σας, παρακαλούμε να έχετε υπόψη σας ότι θα χρειαστεί να έχετε δύο παράθυρα ανοιχτά πάντα - ένα για την πλατφόρμα συνδιάσκεψης βίντεο, και ένα άλλο για τους μαθητές έτσι ώστε να μπορούν να εργάζονται πάνω στην δραστηριότητά τους.
 
-**With parents**<br> For students that are Grade 4 and below, consider encouraging their parents to host an Hour of Code at home. You can support them with some recommended tutorials as well as this helpful <a href="https://hourofcode.com/us/how-to/parents">How-To for Parents</a>.
+**Με γονείς** Για μαθητές της έκτης δημοτικού και χαμηλότερες τάξεις, συλλογιστείτε το ενδεχόμενο να ενθαρρύνετε τους γονείς να φιλοξενήσουν μια 'Ώρα του Προγραμματισμού στο σπίτι. Μπορείτε να τους υποστηρίξετε με κάποιες από τα προτεινόμενα εκπαιδευτικά βίντεο καθώς και με αυτές τις βοηθητικές <a href="https://hourofcode.com/us/how-to/parents">κατευθυντήριες γραμμές για γονείς</a>.
 
 [<img src="/images/fit-600/Marketing//happy-father-and-child-browsing-laptop-in-bedroom-4545778.jpg" />](https://hourofcode.com/us/how-to/parents)
 
-### 3. Enlist a volunteer
-You can find a volunteer suited to your needs by visiting our <a href="https://code.org/volunteer/local">volunteer map</a>. Many are available for remote participation and are more than willing to speak about their experience in computer science, how technology impacts their roles, or simply to help you with troubleshooting student questions. Once you find a volunteer, make sure you set up a meeting with them ahead of time to discuss their role for the event, work out technical requirements, and establish the logistics of participating online.
+### 3. Επιστρατεύστε έναν εθελοντή
+Μπορείτε να βρείτε έναν εθελοντή που ταιριάζει στις ανάγκες σας επισκεπτόμενοι τον δικό μας <a href="https://code.org/volunteer/local">χάρτη εθελοντών</a>. Πολλοί είναι διαθέσιμοι για απομεμακρυσμένη συμμετοχή και έχουν κάθε καλή θέληση να μιλήσουν για την εμπειρία τους στην επιστήμη της πληροφορικής, τον τρόπο με τον οποίο η τεχνολογία επηρεάζει τη θέση τους, ή απλώς να σας βοηθήσουν στην επίλυση αποριών των μαθητών.  Μόλις εντοπίσετε έναν εθελοντή, βεβαιωθείτε ότι κανονίζετε μια συνάντηση μαζί τους νωρίτερα για να συζητήσετε το ρόλο τους στην εκδήλωση, να επιλύσετε τεχνικές απαιτήσεις και να καθιερώσετε μια λογική για τη διαδικτυακή συμμετοχή.
 
-### 4. Celebration supplies
-Take a look below for ideas on celebrating your virtual Hour of Code. Some may require you to prepare ahead of time such as creating completion <a href="https://code.org/certificates">certificates</a> for all of your participants.
+### 4. Εφόδια εορτασμού
+Ρίξτε μια ματιά παρακάτω για ιδέες για τον εορτασμό της εικονικής σας Ώρα του Προγραμματισμού. Κάποιες μπορεί να απαιτούν από εσάς να προετοιμαστείτε νωρίτερα όπως η δημιουργία <a href="https://code.org/certificates">πιστοποιητικών</a> ολοκλήρωσης για όλους τους συμμετέχοντες.
 
 ---
 
-## Celebrate together
+## Γιορτάστε μαζί
 
-Similar to how you started the event, come together afterwards to celebrate! Here are some ideas for making your virtual celebration interactive and special:
+Με τον ίδιο τρόπο όπως αρχίσατε την εκδήλωση, ενώστε τις δυνάμεις σας έπειτα για να το γιορτάσετε! Εδώ σας παραθέτουμε κάποιες ιδέες για να κάνετε τον εικονικό σας εορτασμό διαδραστική και μοναδική.
 
-- Allow students to share their completed projects with the rest of the class. If your conferencing platform allows, you can even encourage students to take a screenshot of their projects and set it as their virtual background!
-- Discuss learnings: What have they learned about computer science or technology? What did they do when they ran into a problem, how did they solve it?
-- <a href="https://code.org/certificates">Create and share certificates</a> for your participants
-- Share photos and videos of your virtual Hour of Code on social media. Use #HourOfCode and @codeorg so we can highlight your success, too!
+- Δώστε την ευκαιρία στους μαθητές να μοιραστούν τις ολοκληρωμένες εργασίες τους με την υπόλοιπη τάξη. Αν η πλατφόρμα συνδιασκέψεων σας δίνει το περιθώριο, μπορείτε ακόμα και να ενθαρρύνετε μαθητές να πάρουν ένα στιγμιότυπο οθόνης από τις εργασίες τους και να το κάνουν εικονικό τους φόντο!
+- Συζητήστε τις γνώσεις: Τι έμαθαν για την επιστήμη της πληροφορικής ή τεχνολογία; Τι έκαναν όταν συνάντησαν ένα πρόβλημα, με ποιο τρόπο το έλυσαν;
+- <a href="https://code.org/certificates">Δημιουργείστε και μοιραστείτε πιστοποιητικά</a>για τους συμμετέχοντες στην εκδήλωσή σας.
+- Μοιραστείτε φωτογραφίες και βίντεο της εικονικής σας Ώρας του Προγραμματισμού στα μέσα κοινωνικής δικτύωσης. Use #HourOfCode and @codeorg so we can highlight your success, too!
 
 [<img src="/images/fit-600/Marketing/g8TUlHzF.jpeg" />]({{ urls/learn }})
 
-Lastly, if you didn’t start the event with a <a href="https://code.org/volunteer/local">guest speaker</a>, <a href="https://hourofcode.com/us/promote/resources#">inspirational video</a>, or <a href="https://code.org/csforgood#prompts">discussion questions</a>, this would be another great opportunity to incorporate one of those experiences as well.
+Τέλος, αν δεν ξεκινήσατε την εκδήλωση σας με έναν <a href="https://code.org/volunteer/local">προσκεκλημένο ομιλητή</a>, </a>εμπνευσμένο βίντεο</a> ή <a href="https://code.org/csforgood#prompts">ερωτήσεις για συζήτηση</a>, τώρα θα είναι μια εξαιρετική ευκαιρία  να ενσωματώσετε μία από αυτές τις εμπειρίες, επίσης.
 
 {{ signup_button }}

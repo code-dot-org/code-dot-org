@@ -6,18 +6,14 @@
     "properties": {
       "announcements": [
         {
-          "notice": "Curriculum Videos",
-          "details": "Some lessons currently do not have links to videos in the lesson plans or slide deck. These videos are in final production and will be linked as soon as these are available.",
-          "link": "",
-          "type": "information",
-          "visibility": "Teacher-only"
-        },
-        {
           "notice": "More Opportunities for Feedback",
-          "details": "Each lesson now includes a quick 2-question survey to give insights to the curriculum team on how the lesson went in your classroom. Students also have the opportunity to leave feedback at the end of each unit, and teachers can answer a short 5-question survey to let the Code.org curriculum team know how the unit went. Some of these features will appear over the summer just before the school year starts.",
-          "link": "",
+          "details": "Each lesson now includes a quick 2-question survey to give insights to the curriculum team on how the lesson went in your classroom. Students also have the opportunity to leave feedback at the end of each unit, and teachers can answer a short survey to let the Code.org curriculum team know how the unit went.",
+          "link": "https://studio.code.org/form/teacher_end_of_unit_survey?survey_data%5Bunit_number%5D=3",
           "type": "feedback",
-          "visibility": "Teacher-only"
+          "visibility": "Teacher-only",
+          "dismissible": false,
+          "buttonText": "End of Unit Survey",
+          "key": "ba568d96-5358-4967-82c7-9cfbb917f51b"
         }
       ],
       "curriculum_umbrella": "CSA",
@@ -27,11 +23,12 @@
       "is_migrated": true,
       "show_calendar": true,
       "student_detail_progress_view": true,
+      "tts": true,
       "weekly_instructional_minutes": 225
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-05-04 15:27:44 UTC",
+    "serialized_at": "2022-10-10 13:27:20 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -88,7 +85,7 @@
       "relative_position": 1,
       "properties": {
         "overview": "**How can I store multiple related values without creating multiple variables?**\n\nStudents have used variables to store literal values and references to objects. Software engineers often need to store multiple values of the same type in a program. In this lesson, students learn how to use one-dimensional (1D) arrays to store multiple values that can be referenced with one variable. Students practice creating arrays using the `new` keyword and with initializer lists and obtaining the size of the array.",
-        "preparation": "* Print copies of the Unit 3 Guide (one for each student)\n* Print copies of the Exploring 1D Arrays handout (one for each pair of students)",
+        "preparation": "* Print copies of the Unit 3 Guide (one for each student)\n* Print copies of the Exploring 1D Arrays handout (one for each pair of students)\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-unit-3-lesson-1-one-dimensional-1d-arrays/36384/2) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
         "student_overview": "**How can I store multiple related values without creating multiple variables?**\n\nYou have used variables to store literal values and references to objects. Software engineers often need to store multiple values of the same type in a program. In this lesson, you learn how to use one-dimensional (1D) arrays to store multiple values that can be referenced with one variable. You practice creating arrays using the `new` keyword and with initializer lists and obtaining the size of the array."
       },
       "seeding_key": {
@@ -105,9 +102,9 @@
       "has_lesson_plan": true,
       "relative_position": 2,
       "properties": {
-        "overview": "**How do I add and change elements in a one-dimensional (1D) array?**\n\nStudents explore how to add, modify, and obtain elements stored in a one-dimensional (1D) array. Students learn about common errors when working with 1D arrays and identify strategies for debugging these errors. Students practice adding, modifying, and printing elements in a 1D array individually and using a `while` loop.",
-        "preparation": "* Print copies of the Investigating Arrays handout (one for each pair of students)",
-        "student_overview": "**How do I add and change elements in a one-dimensional (1D) array?**\n\nOne-dimensional (1D) arrays can store multiple elements. In this lesson, you learn how to add, modify, and obtain elements stored in a 1D array and identify strategies for debugging common errors that can occur while working with 1D arrays. You practice adding, modifying, and printing elements in a 1D array individually and using a `while` loop."
+        "overview": "**How do I modify elements in a one-dimensional (1D) array?**\n\nStudents explore how to modify and obtain elements stored in a one-dimensional (1D) array. Students learn about common errors when working with 1D arrays and identify strategies for debugging these errors. Students practice modifying and printing elements in a 1D array individually and using a `while` loop.",
+        "preparation": "* Print copies of the Investigating Arrays handout (one for each pair of students)\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-unit-3-lesson-2-array-elements/36383/2) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
+        "student_overview": "**How do I modify elements in a one-dimensional (1D) array?**\n\nOne-dimensional (1D) arrays can store multiple elements. In this lesson, you learn how to modify and obtain elements stored in a 1D array and identify strategies for debugging common errors that can occur while working with 1D arrays. You practice modifying and printing elements in a 1D array individually and using a `while` loop."
       },
       "seeding_key": {
         "lesson.key": "lesson-4",
@@ -124,7 +121,7 @@
       "relative_position": 3,
       "properties": {
         "overview": "**How do I search for elements in a 1D array?**\n\nStudents learn about the structure and functionality of a `for` loop and use a for loop to traverse a one-dimensional (1D) array. Before using `for` loops with 1D arrays, students practice identifying the number of times a loop will execute and using trace tables to track the changing values of variables. Additionally, students differentiate between `while` loops and `for` loops and convert between both types of loops. Students practice writing `for` loops to traverse 1D arrays to access elements.",
-        "preparation": "* Print copies of the Tracing Loops handout (one for each student)\n* Create code review groups if you are not reusing the same groups",
+        "preparation": "* Print copies of the Tracing Loops handout (one for each student)\n* Create code review groups if you are not reusing the same groups\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-unit-3-lesson-3-for-loops/36382/2) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
         "student_overview": "**How do I search for elements in a 1D array?**\n\nYou have used `while` loops to repeat a block of code and traverse a one-dimensional (1D) array. In this lesson, you learn about the structure and functionality of a `for` loop and use a `for` loop to traverse a 1D array. Before using `for` loops with 1D arrays, you practice identifying the number of times a loop will execute and using trace tables to track the changing values of variables. Additionally, you differentiate between `while` loops and `for` loops and convert between both types of loops. You practice writing `for` loops to traverse 1D arrays to access elements."
       },
       "seeding_key": {
@@ -142,7 +139,7 @@
       "relative_position": 4,
       "properties": {
         "overview": "**How can I use arrays to find specific elements?**\n\nStudents apply their knowledge of traversing 1D arrays to develop algorithms to find elements that have specific properties. Students learn how to identify the preconditions and postconditions for an algorithm. Additionally, students differentiate between executing a `return` statement inside a loop and at the end of a method.",
-        "preparation": "* Print copies of the CS Bingo Cards (one card for each student)\n* Print the CS Bingo Definitions resource and mix them up\n* Print copies of the Exploring Algorithms handout (one for each pair of students)\n* Create code review groups if you are not reusing the same groups",
+        "preparation": "* Print copies of the CS Bingo Cards (one card for each student)\n* Print the CS Bingo Definitions resource and mix them up\n* Print copies of the Exploring Algorithms handout (one for each pair of students)\n* Create code review groups if you are not reusing the same groups\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-unit-3-lesson-4-array-algorithms/36381/2) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
         "student_overview": "**How can I use arrays to find specific elements?**\n\nTraversing an array makes it possible to find information about data. In this lesson, you apply your knowledge of traversing 1D arrays to explore algorithms to find elements that have specific properties. You learn how to identify the preconditions and postconditions for an algorithm. Additionally, you differentiate between executing a `return` statement inside a loop and at the end of a method."
       },
       "seeding_key": {
@@ -160,6 +157,7 @@
       "relative_position": 5,
       "properties": {
         "overview": "**When would I want to traverse an array with an enhanced for loop?**\n\nStudents learn about enhanced `for` loops to traverse a 1D array. As students explore the functionality of enhanced `for` loops, they identify differences, advantages, and disadvantages of using an enhanced `for` loop to traverse an array. Students use an enhanced `for` loop to calculate the sum or average of the elements in a 1D array.",
+        "preparation": "* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-unit-3-lesson-5-enhanced-for-loops/36380/2) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
         "student_overview": "**When would I want to traverse an array with an enhanced for loop?**\n\nYou have used `while` loops and `for` loops to traverse a 1D array. In this lesson, you learn about enhanced `for` loops and explore their functionality. You identify the differences, advantages, and disadvantages of using an enhanced `for` loop to traverse an array. You then use an enhanced `for` loop to calculate the sum or average of the elements in a 1D array."
       },
       "seeding_key": {
@@ -177,6 +175,7 @@
       "relative_position": 6,
       "properties": {
         "overview": "**How can I define data that does not change or that all objects of a class share?**\n\nStudents learn about static variables and constants and identify scenarios where these types of variables would be useful. Students differentiate between static variables and instance variables as they explore their functionality. Students practice using static variables and constants in program code, including implementing an algorithm to determine the number of elements meeting specific criteria.",
+        "preparation": "* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-unit-3-lesson-6-static-variables-and-constants/36379/2) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
         "student_overview": "**How can I define data that does not change or that all objects of a class share?**\n\nYou have used variables to store values and represent attributes for an object. In this lesson, you learn about static variables and constants and identify scenarios where these types of variables would be useful. You differentiate between static variables and instance variables as you explore their functionality. You practice using static variables and constants in program code, including implementing an algorithm to determine the number of elements meeting specific criteria."
       },
       "seeding_key": {
@@ -194,7 +193,7 @@
       "relative_position": 7,
       "properties": {
         "overview": "**How can I create and use arrays of different objects?**\n\nStudents explore arrays of objects and learn how to refer to object data when accessing elements in an array. Students revisit inheritance and discover using polymorphism to work with 1D arrays of a superclass type. Students review overriding methods and traverse an array of objects to use subclass methods.",
-        "preparation": "* Print copies of the Investigating Polymorphism handout (one for each pair of students)",
+        "preparation": "* Print copies of the Investigating Polymorphism handout (one for each pair of students)\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-unit-3-lesson-7-polymorphism/36378/2) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
         "student_overview": "**How can I create and use arrays of different objects?**\n\nYou have used inheritance to create hierarchies of classes and worked with arrays of primitive values and Strings. In this lesson, you explore arrays of objects and learn how to refer to object data when accessing elements in an array. You revisit inheritance and discover using polymorphism to work with 1D arrays of a superclass type. You review overriding methods and traverse an array of objects to use subclass methods."
       },
       "seeding_key": {
@@ -212,6 +211,7 @@
       "relative_position": 8,
       "properties": {
         "overview": "**How do I plan and implement algorithms to find the minimum and maximum values in a 1D array?**\n\nStudents explore the `File` class and use the `Scanner` class to read data from a file into a 1D array. In the process, students revisit the `ArrayIndexOutOfBoundsException` to identify debugging strategies to resolve off-by-one errors. Using data from a file, students develop algorithms to find the minimum and maximum values in a 1D array. Students plan their algorithms to identify the steps to solve the problem and write pseudocode to outline these steps.",
+        "preparation": "* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-unit-3-lesson-8-more-array-algorithms/36377/2) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
         "student_overview": "**How do I plan and implement algorithms to find the minimum and maximum values in a 1D array?**\n\nYou have used the `Scanner` class to obtain user input from the console. You can also use the `Scanner` class to read data from a file. In this lesson, you explore the `File` class and use the `Scanner` class to read data from a file into a 1D array. In the process, you revisit the `ArrayIndexOutOfBoundsException` to identify debugging strategies to resolve off-by-one errors. Using data from a file, you develop algorithms to find the minimum and maximum values in a 1D array. You plan your algorithms to identify the steps to solve the problem and write pseudocode to outline these steps."
       },
       "seeding_key": {
@@ -229,7 +229,7 @@
       "relative_position": 9,
       "properties": {
         "overview": "**How would I reverse the elements in a 1D array?**\n\nStudents develop an algorithm to reverse elements in a 1D array. Students plan their algorithms using manipulatives to identify the steps to solve the problem and write pseudocode to outline these steps.",
-        "preparation": "* Print copies of the Reversing an Array handout (one for each pair of students)\n* (Optional) Cut out the Reversing an Array manipulatives\n* Create code review groups if you are not reusing the same groups",
+        "preparation": "* Print copies of the Reversing an Array handout (one for each pair of students)\n* (Optional) Cut out the Reversing an Array manipulatives\n* Create code review groups if you are not reusing the same groups\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-unit-3-lesson-9-reversing-arrays/36376/2) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
         "student_overview": "**How would I reverse the elements in a 1D array?**\n\nIn this lesson, you develop an algorithm to reverse elements in a 1D array. You plan your algorithm using manipulatives to identify the steps to solve the problem and write pseudocode to outline these steps."
       },
       "seeding_key": {
@@ -247,7 +247,7 @@
       "relative_position": 10,
       "properties": {
         "overview": "**How would I check whether a 1D array contained duplicate elements?**\n\nStudents learn about nested loops and practice tracing these to explore their functionality. Using nested loops, students develop an algorithm to determine whether there are duplicate elements in a 1D array. Students plan their algorithms using manipulatives to identify the steps to solve the problem and write pseudocode before implementing them in Java.",
-        "preparation": "* Print copies of the Tracing Nested Loops handout (one for each student)\n* Print copies of the Finding Duplicates handout (one for each pair of students)\n* (Optional) Cut out the Finding Duplicates manipulatives\n* Create code review groups if you are not reusing the same groups\n* Print copies of the Unit 3 Study Guide (one for each student)",
+        "preparation": "* Print copies of the Tracing Nested Loops handout (one for each student)\n* Print copies of the Finding Duplicates handout (one for each pair of students)\n* (Optional) Cut out the Finding Duplicates manipulatives\n* Create code review groups if you are not reusing the same groups\n* Print copies of the Unit 3 Study Guide (one for each student)\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-unit-3-lesson-10-finding-duplicates/36375/2) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
         "student_overview": "**How would I check whether a 1D array contained duplicate elements?**\n\nSometimes software engineers need to repeat an action on data to solve more complex problems. In this lesson, you learn about nested loops and practice tracing these to explore their functionality. Using nested loops, you develop an algorithm to determine whether there are duplicate elements in a 1D array. You plan your algorithm using manipulatives to identify the steps to solve the problem and write pseudocode before implementing it in Java."
       },
       "seeding_key": {
@@ -265,7 +265,7 @@
       "relative_position": 11,
       "properties": {
         "overview": "**What questions do I want to answer using data?**\n\nFor this project, students use the skills they have developed throughout this unit to store and analyze data from a text file for a topic that they are interested in or meaningful to them. Students choose a user scenario and data they want to analyze to identify a solution to address a user's needs. After brainstorming and planning, students develop their programs.",
-        "preparation": "* Print copies of the Data for Social Good Project Planning Guide (one for each student)",
+        "preparation": "* Print copies of the Data for Social Good Project Planning Guide (one for each student)\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-unit-3-data-for-social-good-project/36374/2) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
         "student_overview": "**What questions do I want to answer using data?**\n\nFor this project, you use the skills you have developed throughout this unit to store and analyze data from a text file for a topic that you are interested in or meaningful to you. You choose a user scenario and data you want to analyze to identify a solution to address a user's needs. After brainstorming and planning, you develop your program."
       },
       "seeding_key": {
@@ -283,7 +283,7 @@
       "relative_position": 12,
       "properties": {
         "overview": "**How will I implement my plans to create my program?**\n\nStudents identified the data for their topic of interest and read this data into a 1D array. Students continue to develop their projects using their data to implement standard algorithms to analyze the data. Students reinforce software development skills and processes as they participate in a code review to give and use feedback as they develop their program.",
-        "preparation": "* Create code review groups if you are not reusing the same groups",
+        "preparation": "* Create code review groups if you are not reusing the same groups\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-unit-3-data-for-social-good-project/36374/2) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
         "student_overview": "**How will I implement my plans to create my program?**\n\nYou have now identified the data for your topic of interest and read this data into a 1D array. You continue to develop your project using your data to implement standard algorithms to analyze the data. You reinforce software development skills and processes as you participate in a code review to give and use feedback as you develop your program."
       },
       "seeding_key": {
@@ -302,7 +302,7 @@
       "properties": {
         "assessment": true,
         "overview": "**How is my growth as a software engineer reflected in my project?**\n\nStudents conducted code reviews at the end of the previous lesson to give and receive feedback that assists in identifying areas of improvement and fixes for problems they encountered. At this stage of the project, students consider this feedback as they finalize development in this lesson. Students share their final projects with their peers to celebrate their successes.",
-        "preparation": "* Gather several sticky notes for each student",
+        "preparation": "* Gather several sticky notes for each student\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-unit-3-data-for-social-good-project/36374/2) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
         "student_overview": "**How is my growth as a software engineer reflected in my project?**\n\nYou participated in a code review at the end of the previous lesson to give and receive feedback to identify areas of improvement and fixes for problems you encountered. Consider this feedback as you finalize development in this lesson. You then share your final project with your peers to celebrate your success."
       },
       "seeding_key": {
@@ -320,7 +320,7 @@
       "relative_position": 14,
       "properties": {
         "overview": "**How will I use what I know about 1D arrays to answer a Free Response Question?**\n\nStudents practice developing solutions to AP CSA FRQs on a mock Arrays FRQ. Students apply decomposition and annotation strategies to identify the key components of the problem and validate their solutions using Scoring Guidelines.",
-        "preparation": "* Print copies of the TicketTracker FRQ Graphic Organizer (one for each student)\n* Print copies of the TicketTracker FRQ handout (one for each student)\n* Print copies of the TicketTracker FRQ Scoring Guidelines (one for each student)\n* (Optional) Gather blue, orange, and pink colored pencils or markers for each student",
+        "preparation": "* Print copies of the TicketTracker FRQ Graphic Organizer (one for each student)\n* Print copies of the TicketTracker FRQ handout (one for each student)\n* Print copies of the TicketTracker FRQ Scoring Guidelines (one for each student)\n* (Optional) Gather blue, orange, and pink colored pencils or markers for each student\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-unit-3-frq-practice/36373/2) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
         "student_overview": "**How will I use what I know about 1D arrays to answer a Free Response Question?**\n\nYou practice developing solutions to AP CSA FRQs on a mock Arrays FRQ. You apply decomposition and annotation strategies to identify the key components of the problem and validate your solutions using Scoring Guidelines."
       },
       "seeding_key": {
@@ -339,7 +339,7 @@
       "properties": {
         "assessment": true,
         "overview": "Students complete a multiple-choice assessment that covers the unit topics.",
-        "preparation": "* Preview the assessment questions\n* Unlock the assessment questions as indicated on the Unlocking Assessments resource",
+        "preparation": "* Preview the assessment questions\n* Unlock the assessment questions as indicated on the Unlocking Assessments resource\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-unit-3-assessment/36372/2) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
         "student_overview": "Assess your progress through the Unit 3 Assessment."
       },
       "seeding_key": {
@@ -1099,7 +1099,7 @@
       "key": "ac223276-a68c-4444-966c-b9c84b88a5c9",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Define *data structure*.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the video – *One-Dimensional (1D) Arrays*.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Define *one-dimensional array*.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Use Retrieve-Pair-Share to discuss the prompt.\n* *What are some physical examples that are similar to a one-dimensional array?*\n\n**Discussion Goal:** Students suggest physical items that can store multiple items, such as a storage facility, school lockers, or a bike rack.\n\n**Do This:** Click through the animated slides to explain how arrays are declared and initialized:\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Declare an array\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Initialize the array\n* Declare and initialize in one line",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Define *data structure*.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the video – *One-Dimensional (1D) Arrays*.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Define *one-dimensional array*.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Use Retrieve-Pair-Share to discuss the prompt.\n* *What are some physical examples that are similar to a one-dimensional array?*\n\n**Discussion Goal:** Students suggest physical items that can store multiple items, such as a storage facility, school lockers, or a bike rack.\n\n**Do This:** Click through the animated slides to explain how arrays are declared and initialized:\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Declare an array\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Initialize the array\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Declare and initialize in one line",
         "tips": [
           {
             "type": "teachingTip",
@@ -1291,9 +1291,9 @@
       "key": "2e6985ca-8b76-48ac-97ac-edcf1b57dc53",
       "position": 1,
       "properties": {
-        "description": "We learned how to declare and initialize a 1D array using the `new` keyword and an initializer list in the previous lesson. We can also add and modify values to a 1D array after it has been initialized.",
+        "description": "We learned how to declare and initialize a 1D array using the `new` keyword and an initializer list in the previous lesson. We can also modify values to a 1D array after it has been initialized.",
         "duration": "15",
-        "name": "Adding and Changing Values",
+        "name": "Modifying Values",
         "remarks": true
       },
       "seeding_key": {
@@ -1306,7 +1306,7 @@
       "position": 2,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to predict the program's outcome, then run the program to compare their predictions to the actual outcome.",
-        "progression_name": "Predict: Adding and Changing Values"
+        "progression_name": "Predict: Modifying Values"
       },
       "seeding_key": {
         "activity_section.key": "feca7dd5-934c-4967-83d3-fe3344d4ac0e",
@@ -1317,7 +1317,7 @@
       "key": "a6b9d82c-92bc-46ca-a577-4926558f2f22",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What do you notice about the code in this program?*\n* *What do you wonder about the code in this program?*\n\n**Discussion Goal:** Students notice that the variable name, square brackets, and index refer to a position in the array. Students also notice that the assignment operator is used to assign a value to the specified position. Students may wonder if they can only add or change values one index at a time.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What do you notice about the code in this program?*\n* *What do you wonder about the code in this program?*\n\n**Discussion Goal:** Students notice that the variable name, square brackets, and index refer to a position in the array. Students also notice that the assignment operator is used to assign a value to the specified position. Students may wonder if they can only change values one index at a time.",
         "tips": [
           {
             "type": "teachingTip",
@@ -1346,7 +1346,7 @@
       "key": "89d26b41-82af-4763-b260-5267ffe90e60",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the video – *Adding Values to a 1D Array*.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Explain how to store values in a 1D array."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the video – *Modifying Values in a 1D Array*.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Explain how to modify values in a 1D array."
       },
       "seeding_key": {
         "activity_section.key": "89d26b41-82af-4763-b260-5267ffe90e60",
@@ -1389,7 +1389,7 @@
       "position": 8,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Define `ArrayIndexOutOfBoundsException`.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 4 on Code Studio to complete Levels 4 and 5. Students complete a choice level on Level 4 to assign and change individual elements in a 1D array. On Level 5, students print the contents of the 1D array using a `while` loop.",
-        "progression_name": "Using and Changing Values"
+        "progression_name": "Modifying Values"
       },
       "seeding_key": {
         "activity_section.key": "becc8e9d-c868-43cc-9101-f796de1630f8",
@@ -1740,8 +1740,20 @@
       }
     },
     {
-      "key": "e668d7dd-8db6-4fac-a750-1884075d4c8a",
+      "key": "66262e26-ebc7-4db8-b78d-5d74e0e07df0",
       "position": 4,
+      "properties": {
+        "description": "Preconditions and postconditions are useful for identifying what conditions must be met for a method to execute as intended and the expected outcome. Software engineers write method code to satisfy the postconditions when preconditions are met.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "66262e26-ebc7-4db8-b78d-5d74e0e07df0",
+        "lesson_activity.key": "060c42a3-1dff-4fb8-90be-73eae3a75b34"
+      }
+    },
+    {
+      "key": "e668d7dd-8db6-4fac-a750-1884075d4c8a",
+      "position": 5,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts. Use the Hold That Thought strategy to discuss the prompts.\n* *What is the precondition of this code segment?*\n* *What is the postcondition of this code segment?*\n\n**Discussion Goal:** Students identify preconditions of the code segment, such as that the 1D array should not be empty. Students identify postconditions of the code segment, such as that the 1D array should not be modified.",
         "tips": [
@@ -1758,7 +1770,7 @@
     },
     {
       "key": "c85a649a-f580-4ec2-860b-9913b0fd6ad0",
-      "position": 5,
+      "position": 6,
       "properties": {
         "description": "**Group:** Place students in pairs.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each pair a copy of the Exploring Algorithms handout.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 2 on Code Studio. Students work with their partners to explore the program and complete the Exploring Algorithms handout.",
         "progression_name": "Investigate: Exploring Algorithms"
@@ -1769,8 +1781,20 @@
       }
     },
     {
+      "key": "6811ae79-ef10-4e95-ab20-3de036a62842",
+      "position": 7,
+      "properties": {
+        "description": "When we have non-void methods with parameters, these methods receive values through the parameters, use these values, and return a computed value of the specified return type.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "6811ae79-ef10-4e95-ab20-3de036a62842",
+        "lesson_activity.key": "060c42a3-1dff-4fb8-90be-73eae3a75b34"
+      }
+    },
+    {
       "key": "1452610a-26a9-4941-ab07-e3c5d1b595c7",
-      "position": 6,
+      "position": 8,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What is the difference between executing a return statement inside a loop and at the end of a method?*\n\n**Discussion Goal:** Students note that returning inside a loop exits the loop as soon as the value is found and does not check the rest of the array. Students also note that returning at the end of a method ensures that the entire array is checked before returning the result."
       },
@@ -1781,7 +1805,7 @@
     },
     {
       "key": "68cdcee7-e3a2-4577-a172-0531d53555f0",
-      "position": 7,
+      "position": 9,
       "properties": {
         "description": "Traversing a 1D array to determine if at least one or all elements have certain criteria is a standard algorithm that works for many scenarios.",
         "duration": "15",
@@ -1795,7 +1819,7 @@
     },
     {
       "key": "8efe877e-4eb2-40e8-b7b0-d8801891c96d",
-      "position": 8,
+      "position": 10,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 3 on Code Studio. Students complete a choice level to implement an algorithm to find if at least one element has certain criteria.",
         "progression_name": "Writing Algorithms with Arrays",
@@ -1813,7 +1837,7 @@
     },
     {
       "key": "d148548a-cc03-44ee-892b-cf2e5f790102",
-      "position": 9,
+      "position": 11,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to have students participate in the Code Review Call and Response.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete a code review on Level 4.",
         "progression_name": "Code Review: Writing Algorithms with Arrays"
@@ -2338,7 +2362,7 @@
       "key": "dfbab731-b7d5-45dc-9a66-f8ebc53e5381",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What do you notice about the code in this program?*\n* *What do you wonder about the code in this program?*\n\n**Discussion Goal:** Students notice that the 1D array stores references to objects and that they can call an object's method while traversing the array. Students may wonder how they could create an array of different types of objects that extend the same superclass and whether calling each object's method will call the subclass version while traversing the array.\n\n**Group:** Place students in pairs.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each pair a copy of the Investigating Polymorphism handout.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 2 on Code Studio. Students work with their partners to explore the program on Level 2 and complete the Investigating Polymorphism handout.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What do you notice about the code in this program?*\n* *What do you wonder about the code in this program?*\n\n**Discussion Goal:** Students notice that the 1D array stores references to objects and that they can call an object's method while traversing the array. Students may wonder how they could create an array of different types of objects that extend the same superclass and whether calling each object's method will call the subclass version while traversing the array.",
         "progression_name": "Investigate: Polymorphism"
       },
       "seeding_key": {
@@ -2347,8 +2371,19 @@
       }
     },
     {
-      "key": "c938dbc0-f137-4a99-bddf-30a90f198a34",
+      "key": "dcaf4353-157a-4072-903f-6dfde92a6363",
       "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to review the default values for a 1D array that is initialized to contain primitive values.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to discuss that the elements in a 1D array that is initialized to contain reference values are initialized to `null`.\n\n**Group:** Place students in pairs.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each pair a copy of the Investigating Polymorphism handout.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 2 on Code Studio. Students work with their partners to explore the program on Level 2 and complete the Investigating Polymorphism handout."
+      },
+      "seeding_key": {
+        "activity_section.key": "dcaf4353-157a-4072-903f-6dfde92a6363",
+        "lesson_activity.key": "5b37d8ed-f74c-45dd-9382-f471a0097551"
+      }
+    },
+    {
+      "key": "c938dbc0-f137-4a99-bddf-30a90f198a34",
+      "position": 5,
       "properties": {
         "description": "Creating arrays of objects unlock new capabilities. We can make 1D arrays of a superclass type and access subclass versions of behaviors as we traverse the array. Creating and using arrays in this way is an object-oriented programming concept called polymorphism.",
         "name": "Using Polymorphism",
@@ -2361,7 +2396,7 @@
     },
     {
       "key": "9aa4d429-f038-471f-9b97-4127c64dedda",
-      "position": 5,
+      "position": 6,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the video – *Polymorphism*.\n\n**Do This:** Define *polymorphism* and explain its functionality.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Define polymorphism\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Explain the relationship between the superclass and its subclasses\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Explain how each subclass has its version of the method and that this is an example of overriding.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Demonstrate the result of calling each subclass version of the method\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Explain that an array of the superclass type can store objects of a superclass or subclass type",
         "tips": [
@@ -2378,7 +2413,7 @@
     },
     {
       "key": "1e48bf7a-c474-4329-8a2e-cd2221edf38d",
-      "position": 6,
+      "position": 7,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts. Use the Hold That Thought strategy to discuss the prompts.\n* *What are the benefits of using polymorphism in a program?*\n* *When might you use polymorphism in a program?*\n\n**Discussion Goal:** Students note that polymorphism can help make their code more flexible and that they can have a single array to represent multiple types of objects. Students suggest using polymorphism to create an array of `Dessert` objects, such as `Cookie` and `Pie` objects.",
         "tips": [
@@ -2395,7 +2430,7 @@
     },
     {
       "key": "05e0ef32-5529-4852-a54b-363659d7d334",
-      "position": 7,
+      "position": 8,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 3 on Code Studio to complete Levels 3 and 4. Students complete a Check for Understanding, then continue to Level 4 to complete a choice level to use polymorphism.",
         "progression_name": "Using Polymorphism"
@@ -2607,7 +2642,7 @@
       "key": "48b26340-8ff5-4707-9162-015d60c214be",
       "position": 9,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What is causing this error? How do we fix it?*\n* *What are strategies we can use when debugging errors like this?*\n\n**Discussion Goal:** Students note that the program had an `ArrayIndexOutOfBoundsException` because the array traversal looped one too many times. Students share that changing the condition resolved the error and allowed the program to function as expected.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Explain off-by-one errors."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What is causing this error? How do we fix it?*\n* *What are strategies we can use when debugging errors like this?*\n\n**Discussion Goal:** Students note that the program had an `ArrayIndexOutOfBoundsException` because the array traversal looped one too many times. Students share that changing the condition resolved the error and allowed the program to function as expected."
       },
       "seeding_key": {
         "activity_section.key": "48b26340-8ff5-4707-9162-015d60c214be",
@@ -2615,8 +2650,31 @@
       }
     },
     {
-      "key": "f69d4c98-584e-4d0c-98d5-6aa7b69c1305",
+      "key": "46046361-62f2-4700-9a98-c39c72c55350",
       "position": 10,
+      "properties": {
+        "description": "When we are using `for` or `while` loops, we need to be sure that these iteration statements do not loop one time too many or one time too few. Doing so results in an off-by-one error.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "46046361-62f2-4700-9a98-c39c72c55350",
+        "lesson_activity.key": "0dad2402-dd68-429f-93c5-de4f24211508"
+      }
+    },
+    {
+      "key": "a34c9fb5-4784-4614-a4a1-2ae4a05312b5",
+      "position": 11,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Explain off-by-one errors."
+      },
+      "seeding_key": {
+        "activity_section.key": "a34c9fb5-4784-4614-a4a1-2ae4a05312b5",
+        "lesson_activity.key": "0dad2402-dd68-429f-93c5-de4f24211508"
+      }
+    },
+    {
+      "key": "f69d4c98-584e-4d0c-98d5-6aa7b69c1305",
+      "position": 12,
       "properties": {
         "description": "We have written algorithms throughout the unit to determine if elements in an array met specific criteria or find the sum or average of the values. We can also write algorithms to find the minimum and maximum values in an array.",
         "duration": "10",
@@ -2630,7 +2688,7 @@
     },
     {
       "key": "47920e66-7a5f-4400-a16a-e842cfed7b41",
-      "position": 11,
+      "position": 13,
       "properties": {
         "description": "**Group:** Place students in pairs.",
         "tips": [
@@ -2647,7 +2705,7 @@
     },
     {
       "key": "94e7366a-5f11-42f1-8da2-18949b21ea98",
-      "position": 12,
+      "position": 14,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students write pseudocode to find the minimum and maximum values of a 1D array.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 3 on Code Studio to implement their algorithms. ",
         "progression_name": "Finding Minimum and Maximum Values"
@@ -2976,7 +3034,7 @@
       "key": "3660d736-34eb-4a60-a6d5-0a4428ed3a2b",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What do you notice about the code in this program?*\n* *What do you wonder about the code in this program?*\n\n**Discussion Goal:** Students notice that the program uses nested loops and that the inner loop fully executes for each iteration of the outer loop. Students may wonder about other scenarios where nested loops would be useful.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the video – *Nested Loops*.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Define *nested loop*.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate writing a trace table to trace a nested loop.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What do you notice about the code in this program?*\n* *What do you wonder about the code in this program?*\n\n**Discussion Goal:** Students notice that the program uses nested loops and that the inner loop fully executes for each iteration of the outer loop. Students may wonder about other scenarios where nested loops would be useful.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the video – *Nested Loops*.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Define *nested loop*.",
         "tips": [
           {
             "type": "teachingTip",
@@ -2990,8 +3048,31 @@
       }
     },
     {
-      "key": "2963715d-d414-46aa-97c2-e3a370c24e18",
+      "key": "7b32bcc7-96d6-4471-96c5-651f26bcdb6d",
       "position": 4,
+      "properties": {
+        "description": "When a loop is nested inside another loop, the inner loop must complete all its iterations before the outer loop can continue.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "7b32bcc7-96d6-4471-96c5-651f26bcdb6d",
+        "lesson_activity.key": "c270690e-89d1-47dd-b000-9c59105306aa"
+      }
+    },
+    {
+      "key": "986a35a7-baa4-4695-af66-fe406eb0afc3",
+      "position": 5,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate writing a trace table to trace a nested loop."
+      },
+      "seeding_key": {
+        "activity_section.key": "986a35a7-baa4-4695-af66-fe406eb0afc3",
+        "lesson_activity.key": "c270690e-89d1-47dd-b000-9c59105306aa"
+      }
+    },
+    {
+      "key": "2963715d-d414-46aa-97c2-e3a370c24e18",
+      "position": 6,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Tracing Nested Loops handout.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students complete the Tracing Nested Loops handout."
       },
@@ -3002,7 +3083,7 @@
     },
     {
       "key": "079fd980-7d44-4559-826e-3f2cd10a6e10",
-      "position": 5,
+      "position": 7,
       "properties": {
         "description": "Sometimes, we need to evaluate our data for situations like invalid or duplicate values. Duplicate values could change the meaning of the data or tell us about things like the popularity of a certain element. Finding duplicates is another standard algorithm that can be applied to many scenarios.",
         "duration": "20",
@@ -3016,7 +3097,7 @@
     },
     {
       "key": "14f530d1-16a8-489b-8431-a390dd4ab2c3",
-      "position": 6,
+      "position": 8,
       "properties": {
         "description": "**Group:** Place students in pairs.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each pair a copy of the Finding Duplicates handout and manipulatives.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students write pseudocode for finding duplicate values in a one-dimensional array.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 2 on Code Studio to complete Levels 2 and 3. Students complete a Check for Understanding, then continue to Level 3 to complete a choice level to implement their algorithm to find duplicate values.",
         "progression_name": "Finding Duplicates"
@@ -3028,7 +3109,7 @@
     },
     {
       "key": "670d777a-62e7-4cf6-9086-a12caed25743",
-      "position": 7,
+      "position": 9,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to have students participate in the Code Review Call and Response.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete a code review on Level 4.",
         "progression_name": "Code Review: Finding Duplicates"
@@ -3871,7 +3952,7 @@
         "level_keys": [
           "CSA U3L2-L1_2022"
         ],
-        "progression": "Predict: Adding and Changing Values"
+        "progression": "Predict: Modifying Values"
       },
       "bonus": false,
       "seeding_key": {
@@ -3946,7 +4027,7 @@
         "level_keys": [
           "CSA U3L2-L4_2022"
         ],
-        "progression": "Using and Changing Values"
+        "progression": "Modifying Values"
       },
       "bonus": false,
       "seeding_key": {
@@ -3971,7 +4052,7 @@
         "level_keys": [
           "CSA U3L2-L5_2022"
         ],
-        "progression": "Using and Changing Values"
+        "progression": "Modifying Values"
       },
       "bonus": false,
       "seeding_key": {
@@ -6275,6 +6356,18 @@
       }
     },
     {
+      "name": "Modifying Values in a 1D Array",
+      "url": "https://youtu.be/AGp_5hB6dBE",
+      "key": "adding_values_to_a_1d_array",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "adding_values_to_a_1d_array"
+      }
+    },
+    {
       "name": "All Resources",
       "url": "/s/csa3-2022/resources",
       "key": "all_resources_5",
@@ -6320,11 +6413,24 @@
       }
     },
     {
+      "name": "Constants",
+      "url": "https://youtu.be/1lpARsAtV08",
+      "key": "constants",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "constants"
+      }
+    },
+    {
       "name": "CS Bingo Cards",
       "url": "https://docs.google.com/presentation/d/1Vt6S729odlZHRhCs0tEIQ1vThjohUTcYzXAieyRT_cE/edit?usp=sharing",
       "key": "cs_bingo_cards_2",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -6349,10 +6455,23 @@
       "key": "data_for_social_good_project_planning_guide",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
         "resource.key": "data_for_social_good_project_planning_guide"
+      }
+    },
+    {
+      "name": "Enhanced For Loops",
+      "url": "https://youtu.be/b3Uf7anzr-k",
+      "key": "enhanced_for_loops",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "enhanced_for_loops"
       }
     },
     {
@@ -6361,6 +6480,7 @@
       "key": "exploring_1d_arrays",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -6373,6 +6493,7 @@
       "key": "exploring_algorithms",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -6385,10 +6506,23 @@
       "key": "finding_duplicates",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
         "resource.key": "finding_duplicates"
+      }
+    },
+    {
+      "name": "For Loops",
+      "url": "https://youtu.be/EF3laugNVCI",
+      "key": "for_loops",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "for_loops"
       }
     },
     {
@@ -6397,6 +6531,7 @@
       "key": "investigating_arrays",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -6409,10 +6544,47 @@
       "key": "investigating_polymorphism",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
         "resource.key": "investigating_polymorphism"
+      }
+    },
+    {
+      "name": "Nested Loops",
+      "url": "https://youtu.be/xFJoqfqVEbg",
+      "key": "nested_loops",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "nested_loops"
+      }
+    },
+    {
+      "name": "One-Dimensional (1D) Arrays",
+      "url": "https://youtu.be/MgRMA_qZxZ4",
+      "key": "one-dimensional_1d_arrays",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "one-dimensional_1d_arrays"
+      }
+    },
+    {
+      "name": "Polymorphism",
+      "url": "https://youtu.be/Sx8NRbuAJNQ",
+      "key": "polymorphism",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "polymorphism"
       }
     },
     {
@@ -6421,10 +6593,23 @@
       "key": "reversing_an_array",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
         "resource.key": "reversing_an_array"
+      }
+    },
+    {
+      "name": "Static Variables",
+      "url": "https://youtu.be/4dffzoEfufA",
+      "key": "static_variables",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "static_variables"
       }
     },
     {
@@ -6433,6 +6618,7 @@
       "key": "tickettracker_frq",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -6445,6 +6631,7 @@
       "key": "tickettracker_frq_graphic_organizer",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -6457,6 +6644,7 @@
       "key": "tickettracker_frq_scoring_guidelines",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -6469,6 +6657,7 @@
       "key": "tracing_loops",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -6481,6 +6670,7 @@
       "key": "tracing_nested_loops",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -6493,6 +6683,7 @@
       "key": "u3l10_extra_practice",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -6505,6 +6696,7 @@
       "key": "u3l1_extra_practice",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -6517,6 +6709,7 @@
       "key": "u3l2_extra_practice",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -6529,6 +6722,7 @@
       "key": "u3l3_extra_practice",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -6541,6 +6735,7 @@
       "key": "u3l4_extra_practice",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -6553,6 +6748,7 @@
       "key": "u3l5_extra_practice",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -6565,6 +6761,7 @@
       "key": "u3l6_extra_practice",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -6577,6 +6774,7 @@
       "key": "u3l7_extra_practice",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -6589,6 +6787,7 @@
       "key": "u3l8_extra_practice",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -6601,6 +6800,7 @@
       "key": "u3l9_extra_practice",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -6613,10 +6813,23 @@
       "key": "unit_3_guide",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
         "resource.key": "unit_3_guide"
+      }
+    },
+    {
+      "name": "Unit 3 Guide [Exemplar]",
+      "url": "https://docs.google.com/document/d/1CNnvmgTkj3-HYbExyiaGu7QToNwRz33DAaLbUOd3_Oo/edit?usp=sharing",
+      "key": "unit_3_guide_exemplar_",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Exemplar"
+      },
+      "seeding_key": {
+        "resource.key": "unit_3_guide_exemplar_"
       }
     },
     {
@@ -6649,6 +6862,7 @@
       "key": "unit_3_study_guide",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Resource"
       },
       "seeding_key": {
@@ -6780,6 +6994,12 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-12",
+        "resource.key": "nested_loops"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-12",
         "resource.key": "tracing_nested_loops"
       }
     },
@@ -6864,6 +7084,12 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-3",
+        "resource.key": "one-dimensional_1d_arrays"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
         "resource.key": "u3l1_extra_practice"
       }
     },
@@ -6894,6 +7120,12 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-4",
+        "resource.key": "adding_values_to_a_1d_array"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
         "resource.key": "investigating_arrays"
       }
     },
@@ -6919,6 +7151,12 @@
       "seeding_key": {
         "lesson.key": "lesson-5",
         "resource.key": "_key_u3l3_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "resource.key": "for_loops"
       }
     },
     {
@@ -6996,6 +7234,12 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-7",
+        "resource.key": "enhanced_for_loops"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-7",
         "resource.key": "u3l5_extra_practice"
       }
     },
@@ -7009,6 +7253,18 @@
       "seeding_key": {
         "lesson.key": "lesson-8",
         "resource.key": "_key_u3l6_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-8",
+        "resource.key": "constants"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-8",
+        "resource.key": "static_variables"
       }
     },
     {
@@ -7039,6 +7295,12 @@
       "seeding_key": {
         "lesson.key": "lesson-9",
         "resource.key": "investigating_polymorphism"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-9",
+        "resource.key": "polymorphism"
       }
     },
     {
@@ -7076,6 +7338,12 @@
     {
       "seeding_key": {
         "resource.key": "unit_3_guide",
+        "script.name": "csa3-2022"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "unit_3_guide_exemplar_",
         "script.name": "csa3-2022"
       }
     },

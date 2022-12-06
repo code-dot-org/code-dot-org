@@ -20,5 +20,6 @@ lv:
       score: rezultāts
       size: izmērs
       speed: ātrums
+      type: veids
       variable: mainīgais
       x: x

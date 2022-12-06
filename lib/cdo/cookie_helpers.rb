@@ -1,4 +1,3 @@
-
 # We have various cookies that we want to be environment specific. We accomplish
 # this by tacking on the rack_env (unless we're in prod). This helper gets the
 # appropriate cookie name

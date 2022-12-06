@@ -4,7 +4,7 @@ import styleConstants from '../styleConstants';
 import FontAwesome from './FontAwesome';
 import color from '../util/color';
 import PropTypes from 'prop-types';
-import Radium from 'radium';
+import Radium from 'radium'; // eslint-disable-line no-restricted-imports
 
 // ContentContainer provides a full-width container which will render whatever
 // children are passed to it. The component is useful for creating clear,
@@ -125,7 +125,7 @@ const styles = {
     position: 'relative'
   },
   headingText: {
-    fontFamily: 'Gotham 3r',
+    fontFamily: 'Gotham 4r',
     fontSize: 24,
     lineHeight: '26px',
     color: color.charcoal,
@@ -133,7 +133,7 @@ const styles = {
     paddingRight: 20
   },
   headingTextRtl: {
-    fontFamily: 'Gotham 3r',
+    fontFamily: 'Gotham 4r',
     fontSize: 24,
     lineHeight: '26px',
     color: color.charcoal,
@@ -170,7 +170,7 @@ const styles = {
   description: {
     fontSize: 14,
     lineHeight: '22px',
-    fontFamily: 'Gotham 3r',
+    fontFamily: 'Gotham 4r',
     zIndex: 2,
     color: color.charcoal,
     width: '100%',

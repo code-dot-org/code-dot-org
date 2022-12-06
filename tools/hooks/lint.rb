@@ -1,6 +1,6 @@
 require 'open3'
 require 'yaml'
-require_relative 'hooks_utils.rb'
+require_relative 'hooks_utils'
 
 REPO_DIR = File.expand_path('../../../', __FILE__).freeze
 APPS_DIR = "#{REPO_DIR}/apps".freeze
@@ -12,9 +12,9 @@ def filter_eslint_apps(modified_files)
     (f.end_with?(".js", ".jsx")) &&
       !(f.end_with?('.min.js') ||
         f.match(/public\/.+package\//) ||
-        f.match(/apps\/lib\//) ||
-        f.match(/shared\//) ||
-        f.match(/dashboard\/config\//)
+        f.include?('apps/lib/') ||
+        f.include?('shared/') ||
+        f.include?('dashboard/config/')
        )
   end
 end
@@ -25,6 +25,10 @@ def filter_eslint_shared(modified_files)
   end
 end
 
+def filter_scss_apps(modified_files)
+  modified_files.select {|f| f.include?('apps/') && f.end_with?(".scss")}
+end
+
 RUBY_EXTENSIONS = ['.rake', '.rb', 'Rakefile', 'Gemfile'].freeze
 def filter_rubocop(modified_files)
   modified_rb_rake_files = modified_files.select do |f|
@@ -32,7 +36,7 @@ def filter_rubocop(modified_files)
   end
   modified_ruby_scripts = modified_files.select do |f|
     first_line = File.file?(f) ? File.open(f).first : nil
-    first_line && first_line.ascii_only? && first_line.match(/#!.*ruby/)
+    first_line&.ascii_only? && first_line&.match(/#!.*ruby/)
   end
   modified_ruby_scripts + modified_rb_rake_files
 end
@@ -64,11 +68,15 @@ def run_eslint_shared(files)
   run("../../apps/node_modules/eslint/bin/eslint.js #{files.join(' ')}", SHARED_JS_DIR)
 end
 
+def run_stylelint_apps(files)
+  run("./node_modules/.bin/stylelint #{files.join(' ')} --config stylelint.config.js", APPS_DIR)
+end
+
 def run_haml(files)
   run("bundle exec haml-lint #{files.join(' ')}", REPO_DIR)
 end
 
-def run_scss(files)
+def run_scss_dashboard(files)
   run("bundle exec scss-lint #{files.join(' ')}", REPO_DIR)
 end
 
@@ -82,9 +90,10 @@ def do_linting
   modified_files = HooksUtils.get_staged_files
   todo = {
     Object.method(:run_haml) => filter_haml(modified_files),
-    Object.method(:run_scss) => filter_scss(modified_files),
+    Object.method(:run_scss_dashboard) => filter_scss(modified_files),
     Object.method(:run_eslint_apps) => filter_eslint_apps(modified_files),
     Object.method(:run_eslint_shared) => filter_eslint_shared(modified_files),
+    Object.method(:run_stylelint_apps) => filter_scss_apps(modified_files),
     Object.method(:run_rubocop) => filter_rubocop(modified_files)
   }
 

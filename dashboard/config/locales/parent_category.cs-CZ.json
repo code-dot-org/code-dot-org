@@ -1,0 +1,14 @@
+{
+  "cs-CZ": {
+    "data": {
+      "parent_category": {
+        "csp2021/IOC-2": {
+          "description": "Používání počítačových inovací může zahrnovat rizika pro osobní bezpečnost a identitu."
+        },
+        "csp2021/DAT-1": {
+          "description": "Způsob, jakým počítač reprezentuje data, se liší od toho, jakým tato data interpretuje a zobrazuje uživateli. Programy pak překládají data do podoby, která je srozumitelnější pro uživatele."
+        }
+      }
+    }
+  }
+}

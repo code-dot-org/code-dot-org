@@ -3,7 +3,10 @@ import React from 'react';
 import Certificate from './Certificate';
 import StudentsBeyondHoc from './StudentsBeyondHoc';
 import TeachersBeyondHoc from './TeachersBeyondHoc';
+import PetitionCallToAction from '@cdo/apps/templates/certificates/petition/PetitionCallToAction';
 import styleConstants from '../../styleConstants';
+import color from '../../util/color';
+import GraduateToNextLevel from '@cdo/apps/templates/certificates/GraduateToNextLevel';
 
 export default function Congrats(props) {
   /**
@@ -21,6 +24,27 @@ export default function Congrats(props) {
       mc: 'pre2017Minecraft',
       oceans: 'oceans'
     }[tutorial] || 'other');
+  /**
+   * Renders links to certificate alternatives when there is a special event going on.
+   * @param {string} language The language code related to the special event i.e. 'en', 'es', 'ko', etc
+   * @param {string} tutorial The type of tutorial the student finished i.e. 'dance', 'oceans', etc
+   * @returns {HTMLElement} HTML for rendering the extra certificate links.
+   */
+  const renderExtraCertificateLinks = (language, tutorial) => {
+    let extraLinkUrl, extraLinkText;
+    // If Adding extra links see this PR: https://github.com/code-dot-org/code-dot-org/pull/48515
+    if (!extraLinkUrl || !extraLinkText) {
+      // There are no extra links to render.
+      return;
+    }
+    return (
+      <div style={styles.extraLinkContainer}>
+        <a href={extraLinkUrl} target={'_blank'} style={styles.extraLink}>
+          {extraLinkText}
+        </a>
+      </div>
+    );
+  };
 
   const {
     tutorial,
@@ -32,8 +56,13 @@ export default function Congrats(props) {
     randomDonorTwitter,
     randomDonorName,
     hideDancePartyFollowUp,
-    showStudioCertificate
+    initialCertificateImageUrl,
+    isHocTutorial,
+    nextCourseScriptName,
+    nextCourseTitle,
+    nextCourseDesc
   } = props;
+
   const isEnglish = language === 'en';
   const tutorialType = getTutorialType(tutorial);
 
@@ -45,18 +74,32 @@ export default function Congrats(props) {
         randomDonorTwitter={randomDonorTwitter}
         randomDonorName={randomDonorName}
         under13={under13}
-        showStudioCertificate={showStudioCertificate}
-      />
+        initialCertificateImageUrl={initialCertificateImageUrl}
+        isHocTutorial={isHocTutorial}
+      >
+        {renderExtraCertificateLinks(language, tutorial)}
+      </Certificate>
       {userType === 'teacher' && isEnglish && <TeachersBeyondHoc />}
-      <StudentsBeyondHoc
-        completedTutorialType={tutorialType}
-        MCShareLink={MCShareLink}
-        userType={userType}
-        under13={under13}
-        isEnglish={isEnglish}
-        hideDancePartyFollowUp={hideDancePartyFollowUp}
-      />
+      {isHocTutorial && (
+        <StudentsBeyondHoc
+          completedTutorialType={tutorialType}
+          MCShareLink={MCShareLink}
+          userType={userType}
+          under13={under13}
+          isEnglish={isEnglish}
+          hideDancePartyFollowUp={hideDancePartyFollowUp}
+        />
+      )}
+      {!isHocTutorial && (
+        <GraduateToNextLevel
+          scriptName={nextCourseScriptName}
+          courseTitle={nextCourseTitle}
+          courseDesc={nextCourseDesc}
+        />
+      )}
       {userType === 'signedOut' && isEnglish && <TeachersBeyondHoc />}
+      <hr style={styles.divider} />
+      <PetitionCallToAction tutorial={tutorial} />
     </div>
   );
 }
@@ -71,7 +114,11 @@ Congrats.propTypes = {
   randomDonorTwitter: PropTypes.string,
   randomDonorName: PropTypes.string,
   hideDancePartyFollowUp: PropTypes.bool,
-  showStudioCertificate: PropTypes.bool
+  initialCertificateImageUrl: PropTypes.string.isRequired,
+  isHocTutorial: PropTypes.bool,
+  nextCourseScriptName: PropTypes.string,
+  nextCourseTitle: PropTypes.string,
+  nextCourseDesc: PropTypes.string
 };
 
 const styles = {
@@ -80,5 +127,19 @@ const styles = {
     maxWidth: styleConstants['content-width'],
     marginLeft: 'auto',
     marginRight: 'auto'
+  },
+  divider: {
+    borderColor: color.lightest_gray,
+    borderWidth: '1px 0 0 0',
+    borderStyle: 'solid',
+    margin: '20px 0px 20px 0px'
+  },
+  extraLinkContainer: {
+    clear: 'both',
+    paddingTop: 20
+  },
+  extraLink: {
+    color: color.teal,
+    fontSize: 14
   }
 };

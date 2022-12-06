@@ -2,23 +2,11 @@ export default function initializeBlocklyXml(blocklyWrapper) {
   // Clear xml namespace
   blocklyWrapper.utils.xml.NAME_SPACE = '';
 
-  // Aliasing Google's blockToDom() so that we can override it, but still be able
-  // to call Google's blockToDom() in the override function.
-  blocklyWrapper.Xml.originalBlockToDom = blocklyWrapper.Xml.blockToDom;
-  blocklyWrapper.Xml.blockToDom = function(block) {
-    const blockXml = blocklyWrapper.Xml.originalBlockToDom(block);
-    if (!block.canDisconnectFromParent_) {
-      blockXml.setAttribute('can_disconnect_from_parent', false);
-    }
-    return blockXml;
-  };
-
-  // Aliasing Google's domToBlockHeadless_() so that we can override it, but still be able
-  // to call Google's domToBlockHeadless_() in the override function.
-  blocklyWrapper.Xml.originalDomToBlockHeadless_ =
-    blocklyWrapper.Xml.domToBlockHeadless_;
-  // Override domToBlockHeadless_ so that we can gracefully handle unknown blocks.
-  blocklyWrapper.Xml.domToBlockHeadless_ = function(
+  // Aliasing Google's domToBlock() so that we can override it, but still be able
+  // to call Google's domToBlock() in the override function.
+  blocklyWrapper.Xml.originalDomToBlock = blocklyWrapper.Xml.domToBlock;
+  // Override domToBlock so that we can gracefully handle unknown blocks.
+  blocklyWrapper.Xml.domToBlock = function(
     xmlBlock,
     workspace,
     parentConnection,
@@ -26,14 +14,14 @@ export default function initializeBlocklyXml(blocklyWrapper) {
   ) {
     let block;
     try {
-      block = blocklyWrapper.Xml.originalDomToBlockHeadless_(
+      block = blocklyWrapper.Xml.originalDomToBlock(
         xmlBlock,
         workspace,
         parentConnection,
         connectedToParentNext
       );
     } catch (e) {
-      block = blocklyWrapper.Xml.originalDomToBlockHeadless_(
+      block = blocklyWrapper.Xml.originalDomToBlock(
         blocklyWrapper.Xml.textToDom('<block type="unknown" />'),
         workspace,
         parentConnection,
@@ -46,55 +34,7 @@ export default function initializeBlocklyXml(blocklyWrapper) {
     return block;
   };
 
-  // Aliasing Google's domToBlock() so that we can override it, but still be able
-  // to call Google's domToBlock() in the override function.
-  blocklyWrapper.Xml.originalDomToBlock = blocklyWrapper.Xml.domToBlock;
-  blocklyWrapper.Xml.domToBlock = function(xmlBlock, workspace) {
-    const block = blocklyWrapper.Xml.originalDomToBlock(xmlBlock, workspace);
-    const can_disconnect_from_parent = xmlBlock.getAttribute(
-      'can_disconnect_from_parent'
-    );
-    if (can_disconnect_from_parent) {
-      block.canDisconnectFromParent_ = can_disconnect_from_parent === 'true';
-    }
-    return block;
-  };
-
   blocklyWrapper.Xml.domToBlockSpace = function(blockSpace, xml) {
-    const metrics = blockSpace.getMetrics();
-    const width = metrics ? metrics.viewWidth : 0;
-    const padding = 16;
-    const verticalSpaceBetweenBlocks = 10;
-
-    // Block positioning rules:
-    // If the block XML has X/Y coordinates, use them to set the block
-    // position. Note that RTL languages position from the left.
-    // Otherwise, position the block in line with other blocks,
-    // flowing from top to bottom. Blocks with absolute Y positions
-    // do not influence the placement of other blocks.
-    let cursor = {
-      x: blockSpace.RTL ? width - padding : padding,
-      y: padding
-    };
-
-    const positionBlock = function(block) {
-      const heightWidth = block.blockly_block.getHeightWidth();
-
-      if (isNaN(block.x)) {
-        block.x = cursor.x;
-      } else {
-        block.x = blockSpace.RTL ? width - block.x : block.x;
-      }
-
-      if (isNaN(block.y)) {
-        block.y = cursor.y;
-        cursor.y += heightWidth.height + verticalSpaceBetweenBlocks;
-      }
-      block.blockly_block.moveTo(
-        new Blockly.utils.Coordinate(block.x, block.y)
-      );
-    };
-
     // To position the blocks, we first render them all to the Block Space
     //  and parse any X or Y coordinates set in the XML. Then, we store
     //  the rendered blocks and the coordinates in an array so that we can
@@ -104,11 +44,7 @@ export default function initializeBlocklyXml(blocklyWrapper) {
     //  invisible blocks don't cause the visible blocks to flow
     //  differently, which could leave gaps between the visible blocks.
     const blocks = [];
-    /**
-     * NodeList.forEach() is not supported on IE. Use Array.prototype.forEach.call() as a workaround.
-     * https://developer.mozilla.org/en-US/docs/Web/API/NodeList/forEach
-     */
-    Array.prototype.forEach.call(xml.childNodes, function(xmlChild) {
+    xml.childNodes.forEach(xmlChild => {
       if (xmlChild.nodeName.toLowerCase() !== 'block') {
         // skip non-block xml elements
         return;
@@ -122,6 +58,65 @@ export default function initializeBlocklyXml(blocklyWrapper) {
         y: y
       });
     });
+
+    // Note that RTL languages position blocks from the left within a
+    // blockSpace. For instructions and embedded hints, there is no viewWidth,
+    // so we determine the starting point based on the width of the block.
+    const metrics = blockSpace.getMetrics();
+    const viewWidth = metrics ? metrics.viewWidth : 0;
+    const blockWidth = blocks[0]
+      ? blocks[0].blockly_block.getHeightWidth().width
+      : 0;
+    // Add padding if we are in a workspace.
+    const padding = viewWidth ? 16 : 0;
+    const verticalSpaceBetweenBlocks = 10;
+
+    // The cursor is used to position blocks that don't have explicit x/y coordinates
+    let cursor = {
+      x: padding,
+      y: padding
+    };
+    if (blockSpace.RTL && viewWidth) {
+      // Position the cursor from the right of the workspace.
+      cursor.x = viewWidth - padding;
+    } else if (blockSpace.RTL && !viewWidth) {
+      // Position the cursor from the right of the block.
+      cursor.x = blockWidth - padding;
+    }
+
+    const positionBlock = function(block) {
+      const heightWidth = block.blockly_block.getHeightWidth();
+      const hasFrameSvg = !!block.blockly_block.functionalSvg_;
+      const frameSvgSize = hasFrameSvg ? 40 : 0;
+      const frameSvgTop = hasFrameSvg ? 35 : 0;
+      const frameSvgMargin = hasFrameSvg ? 16 : 0;
+
+      // If the block doesn't already have coordinates, use the cursor.
+      if (isNaN(block.x)) {
+        block.x = cursor.x;
+      } else if (blockSpace.RTL) {
+        // Position RTLs with coordinates from the left.
+        block.x = viewWidth - block.x;
+      }
+      // Adjust for Svg Frames for function definition blocks
+      if (!blockSpace.RTL) {
+        block.x += frameSvgMargin;
+      } else {
+        block.x -= frameSvgMargin;
+      }
+
+      if (isNaN(block.y)) {
+        block.y = cursor.y + frameSvgTop;
+        cursor.y +=
+          heightWidth.height + verticalSpaceBetweenBlocks + frameSvgSize;
+      }
+
+      block.blockly_block.moveTo(
+        new Blockly.utils.Coordinate(block.x, block.y)
+      );
+    };
+
+    blocks.sort(reorderBlocks);
 
     blocks
       .filter(function(block) {
@@ -143,4 +138,21 @@ export default function initializeBlocklyXml(blocklyWrapper) {
 
   // We don't want to save absolute position in the block XML
   blocklyWrapper.Xml.blockToDomWithXY = blocklyWrapper.Xml.blockToDom;
+}
+
+// Compare function - Moves functional definitions to the end of a block list.
+function reorderBlocks(a, b) {
+  if (
+    a.blockly_block.type === 'procedures_defnoreturn' &&
+    b.blockly_block.type !== 'procedures_defnoreturn'
+  ) {
+    return 1; // Sort a after b.
+  } else if (
+    b.blockly_block.type === 'procedures_defnoreturn' &&
+    a.blockly_block.type !== 'procedures_defnoreturn'
+  ) {
+    return -1; // Sort a before b.
+  } else {
+    return 0; // Keep original order.
+  }
 }

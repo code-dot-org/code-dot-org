@@ -38,6 +38,7 @@ pt:
         personal_email_markdown: E-mail pessoal [(clique aqui caso não tenha um e-mail)](%{url})
         username: Nome de usuário
         password: Senha
+        verified_teacher: Professor Verificado
         password_confirmation: Confirmação de senha
         current_password: Senha atual
         locale: Idioma
@@ -404,6 +405,7 @@ pt:
       sections: Seções
       help_support: Ajuda e suporte
       report_bug: Reportar um erro
+      report_abuse: Reportar abuso
       teacher_community: Comunidade de professores
       professional_learning: Aprendizado Profissional
       documentation: Documentação
@@ -424,6 +426,7 @@ pt:
       educate_beyond: Além do Code.org
       educate_inspire: Inspire um Estudante
       educate_community: Comunidade On-Line
+      educate_requirements: Requisitos Técnicos
       educate_tools: Vídeos e ferramentas
       about_us: Quem Somos
       about_leadership: Liderança
@@ -440,7 +443,9 @@ pt:
       help_us: Ajude-nos
       teach: Ensinar
       about: Sobre
+      legal: Termos & Privacidade
       legal_privacy: Política de Privacidade
+      legal_cookie_notice: Aviso sobre Cookies
       legal_tos: Termos de Serviço
     user:
       classroom: Página inicial do professor
@@ -497,7 +502,6 @@ pt:
     popup:
       progress_for_user: progresso de %{name}'s
       progress: Seu progresso
-      lines: 'Total de linhas de código: %{lines}'
       close: FECHAR
       mastery: Conceitos
       puzzle_map: Fases
@@ -660,6 +664,7 @@ pt:
     choose_next_course: Experimente um dos seguintes cursos do Code Studio
     print_certificate: Imprimir certificado
   certificate_sponsor_message: "%{sponsor_name} patrocinou o seu aprendizado"
+  certificate_hour_of_code: Hora do Código
   move_students:
     new_section_dne: A seção %{new_section_code} não existe. Insira outro código de
       seção.
@@ -720,6 +725,7 @@ pt:
     code_from_html: A Code.org usa o p5.play, que tem a licensa <a href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html">
       GNU LGPL 2.1</a>.
     powered_by_aws: Powered by Amazon Web Services
+    built_on_github: Construído no GitHub da Microsoft
     google_copyright: "© Google Inc. usado com permissão. Google Classroom é uma marca
       registrada de Google Inc."
     trademark: "&copy; Code.org, %{current_year}. Code.org&reg;, o logotipo da CODE
@@ -733,6 +739,7 @@ pt:
     tos_short: Termos
     tos: Termos de Serviço
     privacy: Política de Privacidade
+    privacy_updated: Política de Privacidade Atualizada
     secure: Versão Segura
     report_abuse: Reportar abuso
     built_on_code_studio: Criado no Code Studio
@@ -819,6 +826,12 @@ pt:
       title: Festa dançante
     dance-2019:
       title: Festa dançante
+    hello-world:
+      title: Olá Mundo
+      body: Selecione entre quatro temas divertidos para codificar os personagens
+        interativos em um mundo criado por você.
+    poem-art:
+      title: Arte poética
     hoc:
       title: Labirinto clássico
       body: Experimente as noções básicas de ciência da computação. Milhões de pessoas
@@ -1042,10 +1055,6 @@ pt:
       de aceitar explicitamente os termos atualizados, observe que nossas ferramentas
       para o ensino de JavaScript podem estar indisponíveis aos seus alunos.
     review_terms: Ver os termos atualizados
-  donor_interstitial:
-    title: Seus cursos gratuitos de CS são possíveis por...
-    support_codeorg_1: Cada dólar doado ao Code.org gera oportunidades para mais estudantes.
-    support_codeorg_2: "[Doe agora](%{donate_url}) para ajudar o Code.org."
   school_info_interstitial:
     title: Nós queremos levar a Ciência da Computação para todos os alunos - ajude-nos
       a acompanhar o nosso progresso!
@@ -1332,6 +1341,7 @@ pt:
         music: Música
         art: Arte
         other: 'Outro:'
+        na: Não aplicável
       resources:
         bootstrap: Bootstrap
         codecademy: CodeCademy
@@ -1341,7 +1351,8 @@ pt:
         lightbot: Lightbot
         scratch: Scratch
         tynker: Tynker
-        other: 'Outro:'
+        other: Outros
+        na: Não aplicável
       robotics:
         grok: Grok Learning (Aprendizagem Grok)
         kodable: Kodable
@@ -1351,7 +1362,8 @@ pt:
         sphero: Sphero
         raspberry: Raspberry Pi
         wonder: Oficina de Maravilhas
-        other: 'Outro:'
+        other: Outros
+        na: Não aplicável
       workshop_course:
         csf_af: Fundamentos de Ciência da Computação (Cursos A-F)
         csf_express: Fundamentos de Ciência da Computação (Pré-Expresso ou Expresso)
@@ -1430,3 +1442,13 @@ pt:
   behaviors:
     this_sprite: este personagem
   teacher_feedback: Feedback do Professor
+  lesson_lock:
+    error:
+      no_updates: Nenhuma atualização a ser executada
+      missing_params: As IDs de usuário, nível e unidade são obrigatórias
+      cannot_view_locked_answers: Não é possível visualizar as respostas com o item
+        bloqueado
+      forbidden: O usuário não pode atualizar o status bloqueável do aluno
+  reset_predict_progress_button: Excluir resposta
+  pixelation:
+    binary: Binário

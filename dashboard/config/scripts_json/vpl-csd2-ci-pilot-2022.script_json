@@ -7,11 +7,13 @@
       "has_verified_resources": true,
       "hideable_lessons": true,
       "is_migrated": true,
-      "student_detail_progress_view": true
+      "pilot_experiment": "vpl-csd-summer-pilot-ci-2022",
+      "student_detail_progress_view": true,
+      "tts": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-04-07 06:41:57 UTC",
+    "serialized_at": "2022-05-20 19:15:00 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -364,7 +366,7 @@
       "key": "b11276e9-8b3e-4af9-a726-42dbc0c23578",
       "position": 3,
       "properties": {
-        "progression_name": "Make a Plan"
+        "progression_name": "Wrap up"
       },
       "seeding_key": {
         "activity_section.key": "b11276e9-8b3e-4af9-a726-42dbc0c23578",
@@ -1359,6 +1361,31 @@
       "level_keys": [
         "VPL-CSD-PILOT-S22-CI-Cahpter2-ProjectOverview-mod2"
       ]
+    },
+    {
+      "chapter": 40,
+      "position": 4,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "-VPL-CSD-PILOT-summer22-navigation"
+        ],
+        "progression": "Wrap up"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "-VPL-CSD-PILOT-summer22-navigation"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "vpl-csd2-ci-pilot-2022",
+        "activity_section.key": "b11276e9-8b3e-4af9-a726-42dbc0c23578"
+      },
+      "level_keys": [
+        "-VPL-CSD-PILOT-summer22-navigation"
+      ]
     }
   ],
   "levels_script_levels": [
@@ -1828,6 +1855,18 @@
         "lesson_group.key": "lessonGroup-2",
         "script.name": "vpl-csd2-ci-pilot-2022",
         "activity_section.key": "8e2610dd-aee3-4d75-8857-dcfeb71aebdf"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "-VPL-CSD-PILOT-summer22-navigation",
+        "script_level.level_keys": [
+          "-VPL-CSD-PILOT-summer22-navigation"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "vpl-csd2-ci-pilot-2022",
+        "activity_section.key": "b11276e9-8b3e-4af9-a726-42dbc0c23578"
       }
     }
   ],

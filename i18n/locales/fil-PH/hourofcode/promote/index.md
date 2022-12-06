@@ -4,7 +4,7 @@ title: Ipamalita ito
 
 {{ signup_button }}
 
-# Isangkot ang kumonidad mo sa Hour of Code
+# Isali ang iyong komunidad sa Hour of Code
 
 ## 1. Palaganapin ang balita
 
@@ -14,7 +14,7 @@ Sabihan ang mga kaibigan mo tungkol sa **#HourOfCode**!
 
 ## 2. Hilingin sa buong paaralan mo na mag-alok ng Hour of Code
 
-[Ipadala itong email](%= resolve_url('/promote/resources#sample-emails') %) sa punong-guro at hamunin ang bawat silid-aralan sa paaralan mo upang mag-sign up.
+[Ipadala itong email](%= resolve_url('/promote/resources#sample-emails') %) sa punong-guro at subukin ang bawat silid-aralan sa paaralan mo upang mag-sign up.
 
 ## 3. Hilingin sa employer mo na makibahagi
 
@@ -22,7 +22,7 @@ Sabihan ang mga kaibigan mo tungkol sa **#HourOfCode**!
 
 ## 4. Ilunsad ang Hour of Code sa kumonidad mo
 
-[Kumalap ng lokal na grupo]({{ promote/sample_emails }})— lalaki/babae scout club, simbahan, unibersidad, grupo ng mga beterano, labor union, o kahit ang ilang mga kaibigan. Hindi mo kailangang pumasok ng paaralan para matuto ng bagong kasanayan. Gamitin itong [mga poster, bandera, mga sticker, video at higit pa](/promote/resources) para sa sarili mong event.
+[Kumalap ng lokal na grupo]({{ promote/sample_emails }})— lalaki/babae na scout club, simbahan, unibersidad, grupo ng mga beterano, labor union, o kahit ang ilang mga kaibigan. Hindi mo kailangang pumasok ng paaralan para matuto ng bagong kasanayan. Gamitin itong [mga poster, bandera, mga sticker, video at higit pa](/promote/resources) para sa sarili mong event.
 
 ## 5. Hingin sa isang lokal na opisyal na sumuporta sa Hour of Code
 

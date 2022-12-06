@@ -4,42 +4,40 @@ title: Gabay sa Paggamit ng Hour of Code
 
 {{ signup_button }}
 
-# How to plan your Hour of Code
+# Paano planuhin ang Hour of Code mo
 
 ### Sumali sa kilusan at ipakilala ang computer science sa mga mag-aaral mo sa mga hakbang na ito.
 
-Nakakatulong ang computational na pag-iisip sa pagpapalakas ng mga kasanayan sa paglutas ng problema, lohika, at pagkamalikhain. At binabago ng teknolohiya ang bawat industriya sa planeta. Dapat matuto ang mga mag-aaral ngayon kung paano lumikha ng teknolohiya, hindi lang ang paggamit nito. Sa pagsisimula nang maaga, magkakaroon sila ng pundasyon sa tagumpay sa anumang landas sa karera sa ika-21 siglo.
+Dapat matuto ang mga mag-aaral ngayon kung paano lumikha ng teknolohiya, hindi lang ang paggamit nito.
 
-Isang simple at nakakatuwang paraan ang pagsubok sa Hour of Code upang ipakilala ang mga mag-aaral sa computer science, marahil sa unang pagkakataon, at perpektong akma ito sa parehong mga setting sa klase at pagkatapos ng klase. Take a look at our [participation guide if you still have questions]({{ localized_files/participation_guide }}).
+Ang pagsubok ng Hour of Code ay isang madali at nakakatuwang paraan upang ipakilala sa mga mag-aaral ang computer science, marahil sa unang pagkakataon! Maghanap ng aktibidad na naaangkop sa iyong tagpo, maaaring habang nasa klase or pagkatapos ng eskwela, sa personal o birtuwal. Tignan ang[ aming gabay sa pakikilahok kung sakaling mayroon kayong tanong]({{ localized_files/participation_guide }}) pagkatapos tignan ang mga hakbang sa ibaba:
 
-- [Panoorin ang gabay sa paggamit na video ng Hour of Code](#how-to-video)
-- [Saliksikin ang mga aktibidad at tutorial. ](#explore-activities)
+- [Panoorin ang video na kung-paano ng Hour of Code](#how-to-video)
+- [Tuklasin ang mga aktibidad at tutorial.](#explore-activities)
 - [Planuhin ang araw mo](#create-your-plan)
-- [Promote your Hour of Code](#promote-your-hour)
+- [I-promote ang Hour of Code mo](#promote-your-hour)
 - [Paano simulan ng malakas ang Hour of Code mo](#how-to-start)
 - [Kumuha ng coding](#code)
 - [Ipagdiwang ang tagumpay ng mga mag-aaral mo](#celebrate)
-- [Iba pang pagkukunan ng Hour of Code para sa mga tagapagturo](#other-resources)
-
-### Maaari ding i-host sa malayuan ang Hour of Code!
+- [Iba pang mapagkukunan ng Hour of Code para sa mga tagapagturo](#other-resources)
 
 * * *
 
 <a id="how-to-video"></a>
 
-## 1. Panoorin ang gabay sa paggamit na video ng Hour of Code <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
+## 1. Panoorin ang video na kung-paano ng Hour of Code <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe> 
 
 * * *
 
 <a id="explore-activities"></a>
 
-## 2. Saliksikin ang mga aktibidad at tutorial. 
+## 2. Tuklasin ang mga aktibidad at tutorial. 
 
-We provide a variety of fun, [student-guided tutorials]({{ urls/learn }}) for all age groups and experience levels. It’s popular for students to try self-led tutorials, though many activities include lesson plans for teachers to guide discussion or extend the activity as well.
+Naglalaan kami ng iba't ibang kasiyahan, [mga tutorial na gabay sa mag-aaral]({{ urls/learn }}) para sa lahat ng edad at mga antas ng karanasan. Sikat sa mga mag-aaral na subukan ang mga tutorial na pinamamahalaan ng sarili, bagama't maraming aktibidad ang may kasamang mga lesson plan para sa mga guro upang gabayan ang talakayan o pahabain din ang aktibidad.
 
-Explore the activities and decide ahead of time if you want to choose a single tutorial for all of your students, or let each child pick their own.
+Tuklasin ang mga aktibidad at magpasya nang maaga kung gusto mong pumili ng isang tutorial para sa lahat ng mga mag-aaral mo, o hayaan ang bawat bata na pumili.
 
-[![](/images/fit-600/tutorials.png)]({{ urls/learn }})
+[![](/images/tutorials.png)]({{ urls/learn }})
 
 * * *
 
@@ -49,16 +47,16 @@ Explore the activities and decide ahead of time if you want to choose a single t
 
 ### Think about your technology needs - computers are optional!
 
-- Ang pinakamahusay na karanasan sa Hour of Code ay kabilang ang internet-connected computers. But you don’t need a computer for every child, and you can even do the Hour of Code without a computer at all! For [unplugged activities](/learn), simply filter the Classroom Technology section to show options for “No computers or devices”.
-- Siguruhing subukan ang mga pagtuturo sa computer ng mga studyante o sa mga aparato para masigurong gumagana ito ng maaayos sa mga browsers ng may kasamang tunog at video. Have low bandwidth? Plan to show videos at the front of the class, so each student isn't downloading their own videos. Or try the offline tutorials.
-- Maglaan ng headphones para sa iyong klase, o kaya ay pagdalhin ang mga studyante ng sarili nila, kung ang pagtuturong napili mo ay mas maayos kung may tunog.
-- Don't have enough devices? Use [pair programming](https://www.youtube.com/watch?v=vgkahOzFH2Q). Kapag nag kapareha ang mga studyante, tinutulungan nila ang isa't isa at hindi masyadong umaasa sa guro. Makikita din nila na ang computer science ay panlipunan at pakikipagtulungan.
+- Kasama sa pinakamagandang karanasan sa Hour of Code ang mga computer na nakakonekta sa Internet. Ngunit hindi mo kailangan ng computer sa bawat bata, at maaari mo ring gawin ang Hour of Code nang walang computer! Para sa [mga hindi naka-plug na aktibidad](/learn), i-filter lang ang seksiyong Teknolohiya ng Silid-aralan upang ipakita ang mga opsyon sa "Walang mga computer o device".
+- Tiyaking subukan ang mga tutorial sa mga computer o device ng mag-aaral upang matiyak na gumagana ang mga ito nang maayos na may tunog at video sa mga browser. May mababang bandwidth? Magplanong magpakita ng mga video sa harap ng klase, para hindi nagda-download ang bawat mag-aaral ng sarili nilang mga video. O subukan ang mga offline na tutorial.
+- Maglaan ng mga headphone sa klase mo, o hilingin sa mga mag-aaral na magdala sila, kung gumagana ng mas mahusay kung may tunog ang napili mong tutorial.
+- Walang sapat na device? Gumamit ng [pair programming](https://www.youtube.com/watch?v=vgkahOzFH2Q). Kapag nag pares-pares ang mga mag-aaral, tinutulungan nila ang isa't isa at hindi gaanong umaasa sa guro. Makikita din nila na ang computer science ay panlipunan at pakikipagtulungan.
 
 <img src="/images/fit-600/group_ipad.jpg" />
 
 ### Pick a day and time
 
-People around the world join in the Hour of Code celebration during CS Education Week (December 9-13) when the latest tutorials and activities are released. But you can do an Hour of Code any day of the year!
+Ang mga tao sa buong mundo ay nakikilahok sa Hour of Code na ipinagdiriwang tuwing CS Education Week (Disyembre 5-11) kung kailan ang pinakabagong mga tutorial at aktibidad ay inilalabas. Ngunit pwede mong gawin ang Hour of Code anumang araw ng taon!
 
 * * *
 
@@ -66,19 +64,19 @@ People around the world join in the Hour of Code celebration during CS Education
 
 ## 4. Itaguyod ang Hour of Code mo
 
-Now that you've planned your event, it's time to start promoting it!
+Ngayong naplano mo na ang event mo, oras na para simulang i-promote ito!
 
 ### Tell your School and Community
 
-Promote the Hour of Code to other teachers who may want to join in on the fun! This is also a great opportunity to reach out to your school’s PTSA or share in parent newsletters, letting them know their children may come home wanting to try more activities and tutorials!
+I-promote ang Hour of Code sa ibang mga guro na maaaring gustong sumali sa saya! Isa rin itong magandang pagkakataon para makipag-ugnayan sa PTSA ng iyong paaralan o magbahagi ng mga newsletter sa magulang, na ipaalam sa kanila na maaaring gustong sumubok ang kanilang mga anak ng higit pang mga aktibidad at tutorial!
 
 ### Let Volunteers Know by Registering Your Event
 
-When you [sign-up your Hour of Code event](/), you’ll receive helpful email communications with news and tips for hosting a successful Hour of Code. It’s also how you can let local volunteers know your school is participating. Volunteers are a great resource and can come speak to your class about computer science or simply help your students with Hour of Code activities.
+Kapag [ iyong na sign-up ang iyong Hour of Code event](/#join) ikaw ay makakatanggap ng mga sulatronikong komunikasyon kasama ng mga balita at mungkahi para sa pag-host ng matagumpay na Hour of Code. It’s also how you can let local volunteers know your school is participating. Volunteers are a great resource and can come speak to your class about computer science or simply help your students with Hour of Code activities.
 
 ### Get your Students Excited
 
-Lead up to the event by sharing [inspirational videos](/promote/resources) highlighting diverse people and creative ways that computer science can be used. Or order inspirational posters for your classroom! Students are more excited to participate in a subject when they see people who look like them encouraging it.
+Lead up to the event by sharing [inspirational videos](/promote/resources) highlighting diverse people and creative ways that computer science can be used. o magprint ng nakakapagbigay inspirasyon na mga poster para sa iyong silid-aralan. Students are more excited to participate in a subject when they see people who look like them encouraging it.
 
 {{ promote_new_posters }}
 
@@ -99,7 +97,7 @@ Magpakita ng nakakapukaw na video:
 - Ang orihinal na Code.org na inilunsad na video, nabilang sina Bill Gates, Mark Zuckerberg, at NBA star na si Chris Bosh. (Mayroong [1 minuto](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 minuto](https://www.youtube.com/watch?v=nKIu9yen5nc), at[9 minuto](https://www.youtube.com/watch?v=dU1xS07N-FA) na mga version available)
 - Find more inspirational [resources]({{ urls/inspire }}) and [videos](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
 
-Ayos lang kahit baguhan ka at ng mga estudyante mo sa computer science. Narito ang ilan sa mga ideya kung paano ipakikilala ang Hour of Code na aktibidad mo:
+Ayos lang kahit baguhan ka at ang mga estudyante mo sa computer science. Narito ang ilan sa mga ideya kung paano ipakikilala ang Hour of Code na aktibidad mo:
 
 - Ipaliwanag ang mga paraan kung paano naapektuhan ng teknolohiya ang ating mga buhay, sa mga halimbawa ang parehong lalaki at babae ay aasikasuhin (makipag-usap tungkol sa pag-save ng mga buhay, pagtulong sa mga tao, pagkonekta sa mga tao, atbp.).
 - Bilang isang klase, mag lista ng mga bagay na ginagamitan ng code sa araw araw na buhay.
@@ -113,7 +111,7 @@ Ayos lang kahit baguhan ka at ng mga estudyante mo sa computer science. Narito a
 
 Patnubayan ang mga estudyante sa aktibidad
 
-- Isulat ang link ng tutorial sa isang whiteboard. Hanapin ang link na nakalista sa [impormasyon para sa iyong napiling tutorial]({{ urls/learn }}) sa ilalim ng bilang ng mga kalahok.
+- Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial]({{ urls/learn }}).
 
 Kung ang iyong mga estudyante ay nahihirapan ay ayos lang na tumugon:
 
@@ -140,7 +138,6 @@ Paano kung ang estudyante ay natapos ng maaga?
 
 - [Print certificates]({{ urls/certificates }}) for your students.
 - [Print "I did an Hour of Code!"]({{ urls/promote_stickers }}) stickers for your students.
-- [Umorder ng pasadyang mga t-shirt](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) para sa iyong paaralan.
 - Ibahagi ang mga larawan at video sa mga nangyayari sa iyong Hour of Code sa social media. Gamitin ang #HourOfCode at @codeorg para maaari rin naming i-highlight ang iyong pinagtatagumpayan!
 
 * * *
@@ -154,6 +151,6 @@ Paano kung ang estudyante ay natapos ng maaga?
 
 ### Ano ang susunod pagkatapos ng Hour of Code?
 
-Hindi kailangang matapos ang computer science sa Hour of Code! Ang aming curriculum ay web-based at malayang gamitin, magpakailanman.[Alamin kung paano](/beyond) dalhin ang CS sa paaralan at mga mag-aaral mo.
+Computer science doesn’t have to end with the Hour of Code! [Learn how](/beyond) to bring CS to your school and students.
 
 {{ signup_button }}

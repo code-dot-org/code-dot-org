@@ -33,7 +33,7 @@ Para obtener más instrucciones sobre cómo alentar a tus empleados y conectarlo
 - Promueva tu [Hora del Código]({{ urls/promote }}) y anime a otros a organizar un evento.
 - Aliente a los ingenieros de software de su empresa a visitar un aula local para ayudar a dirigir una Hora del Código e inspirar a los estudiantes a estudiar informática. Pueden [inscribirse]({{ urls/volunteer_engineer }}) para conectarse con un aula.
 
-## 2. Mira este video explicativo <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe>
+## 2. Mira este video explicativo <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe>
 
 ## 3. Selecciona una actividad
 Ofrecemos una variedad de [actividades divertidas](%= resolve_url('/learn') %), de una hora de duración para participantes de todas las edades, creadas por una variedad de socios. [¡Pruébalos!](%= resolve_url('/learn') %)

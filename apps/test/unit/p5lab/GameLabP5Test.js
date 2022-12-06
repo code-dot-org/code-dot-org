@@ -9,7 +9,7 @@ describe('GameLabP5', function() {
 
   // Using the aggressive sandbox here because the P5 library generates
   // a default canvas when it's not attached to an existing one.
-  sandboxDocumentBody();
+  sandboxDocumentBody(false);
 
   beforeEach(function() {
     p5Wrapper = createP5Wrapper();

@@ -27,13 +27,10 @@ import {
   BOARD_TYPE
 } from '../../util/boardUtils';
 import {isChromeOS, serialPortType} from '../../util/browserChecks';
-import firehoseClient from '@cdo/apps/lib/util/firehose';
+import {SERIAL_BAUD} from '@cdo/apps/lib/kits/maker/util/boardUtils';
 
 // Polyfill node's process.hrtime for the browser, gets used by johnny-five.
 process.hrtime = require('browser-process-hrtime');
-
-/** @const {number} serial port transfer rate */
-const SERIAL_BAUD = 57600;
 
 /** Maps the Circuit Playground Express pins to Circuit Playground Classic. */
 const pinMapping = {
@@ -62,7 +59,6 @@ export default class CircuitPlaygroundBoard extends EventEmitter {
 
     /** @private {SerialPort} serial port controller */
     this.serialPort_ = null;
-    this.logWithFirehose('serial-port-constructor-set-to-null');
 
     /** @private {five.Board} A johnny-five board controller */
     this.fiveBoard_ = null;
@@ -97,7 +93,7 @@ export default class CircuitPlaygroundBoard extends EventEmitter {
   connectToFirmware() {
     return new Promise((resolve, reject) => {
       if (isWebSerialPort(this.port_)) {
-        const name = this.port_.getInfo().usbProductId;
+        const name = this.port_.productId;
         CircuitPlaygroundBoard.openSerialPortWebSerial(this.port_).then(
           port => {
             this.initializePlaygroundAndBoard(port, name, resolve, reject);
@@ -122,10 +118,6 @@ export default class CircuitPlaygroundBoard extends EventEmitter {
     });
     board.once('ready', () => {
       this.serialPort_ = serialPort;
-      this.logWithFirehose(
-        'serial-port-set',
-        JSON.stringify({serialPort, name})
-      );
 
       this.fiveBoard_ = board;
       this.fiveBoard_.samplingInterval(100);
@@ -264,10 +256,8 @@ export default class CircuitPlaygroundBoard extends EventEmitter {
         // node serialport in the Code.org Maker App.
         if (this.serialPort_ && typeof this.serialPort_.close === 'function') {
           this.serialPort_.close();
-          this.logWithFirehose('serial-port-closed');
         }
         this.serialPort_ = null;
-        this.logWithFirehose('serial-port-cleared');
         resolve();
       }, 50);
     });
@@ -301,9 +291,6 @@ export default class CircuitPlaygroundBoard extends EventEmitter {
      */
     if (this.serialPort_) {
       this.serialPort_.queue = [];
-      this.logWithFirehose('serial-port-queue-cleared');
-    } else {
-      this.logWithFirehose('serial-port-undefined');
     }
 
     if (this.prewiredComponents_) {
@@ -398,18 +385,6 @@ export default class CircuitPlaygroundBoard extends EventEmitter {
     return !!this.fiveBoard_;
   }
 
-  logWithFirehose(eventString, dataJson = null) {
-    firehoseClient.putRecord(
-      {
-        study: 'maker-serial-port',
-        study_group: 'serial-port-lifecycle',
-        event: eventString,
-        data_json: dataJson
-      },
-      {includeUserId: true}
-    );
-  }
-
   /**
    * Create a serial port controller and open the serial port immediately.
    * @param {string} portName
@@ -428,14 +403,14 @@ export default class CircuitPlaygroundBoard extends EventEmitter {
 
   /**
    * Create a serial port controller and open the Web Serial port immediately.
-   * @param {string} portName
+   * @param {Object} port
    * @return {Promise<SerialPort>}
    */
-  static async openSerialPortWebSerial(port) {
-    await port.open({baudRate: SERIAL_BAUD});
-
-    this.createPendingQueue(port);
-    return port;
+  static openSerialPortWebSerial(port) {
+    return port.open().then(() => {
+      this.createPendingQueue(port);
+      return port;
+    });
   }
 
   // Creates a queue on the port to store pending buffers
@@ -455,9 +430,8 @@ export default class CircuitPlaygroundBoard extends EventEmitter {
           return;
         }
         if (port.queue.length > 512) {
-          throw new Error(
-            'Send queue is full! More than 512 pending messages.'
-          );
+          // Send queue is full.  More than 512 pending messages.
+          return;
         }
 
         const toSend = port.queue.shift();

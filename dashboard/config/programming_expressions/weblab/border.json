@@ -3,7 +3,7 @@
   "name": "Border",
   "category": "CSS Properties",
   "category_key": "css_properties",
-  "content": "# Border\r\n\r\nThe [`Border`(#d3e965)](/docs/weblab/border/) property specifies the style, width, and color of an element's border. It is a shorthand property for `border-width`, `border-style`, and `border-color`.",
+  "content": "# Border\n\nThe [`Border`(#d3e965)](/docs/weblab/border/) property specifies the style, width, and color of an element's border. It is a shorthand property for [`border: border-width border-style border-color;`(#d3e965)](/docs/weblab/border/).",
   "examples": [
     {
       "name": "Border Property",

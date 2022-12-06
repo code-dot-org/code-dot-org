@@ -2,15 +2,15 @@ name 'CSA U1 Assessment 2022 q11'
 
 wrong '0'
 wrong '2'
-wrong '3'
-right '4'
+right '3'
+wrong '4'
 wrong 'Infinite'
 
 markdown <<MARKDOWN
 Consider the following code segment. 
 
 ```
-while(!myPainter.facingWest()) {		
+while(!myPainter.isFacingWest()) {		
   myPainter.turnLeft();
 }
 ```

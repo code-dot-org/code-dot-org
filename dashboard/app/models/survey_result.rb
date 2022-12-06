@@ -53,7 +53,7 @@ class SurveyResult < ApplicationRecord
   ALL_ATTRS = (DIVERSITY_ATTRS + NET_PROMOTER_SCORE_ATTRS).freeze
 
   serialized_attrs ALL_ATTRS
-  belongs_to :user
+  belongs_to :user, optional: true
 
   KINDS = [
     DIVERSITY_2016 = 'Diversity2016'.freeze,

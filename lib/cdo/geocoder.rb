@@ -75,11 +75,11 @@ module Geocoder
 
       def mapbox_context(name)
         context.map do |c|
-          c if c['id'] =~ Regexp.new(name)
+          c if c['id']&.match?(Regexp.new(name))
         end&.compact&.first
       end
     end
-    Mapbox.send :prepend, CdoResultAdapter
+    Mapbox.prepend CdoResultAdapter
   end
 
   MIN_ADDRESS_LENGTH = 10
@@ -172,7 +172,7 @@ module FreegeoipOverride
     [:http]
   end
 end
-Geocoder::Lookup::Freegeoip.send :prepend, FreegeoipOverride
+Geocoder::Lookup::Freegeoip.prepend FreegeoipOverride
 
 def geocoder_config
   {

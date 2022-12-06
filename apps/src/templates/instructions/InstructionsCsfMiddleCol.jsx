@@ -185,6 +185,7 @@ class InstructionsCsfMiddleCol extends React.Component {
               ttsMessage={hint.ttsMessage}
               block={hint.block}
               video={hint.hintVideo}
+              isRtl={this.props.isRtl}
             />
           ))}
         {/*
@@ -220,7 +221,8 @@ class InstructionsCsfMiddleCol extends React.Component {
 
 const styles = {
   instructions: {
-    padding: '5px 0'
+    padding: '5px 0',
+    minWidth: 40
   },
   instructionsWithTips: {
     width: 'calc(100% - 20px)',

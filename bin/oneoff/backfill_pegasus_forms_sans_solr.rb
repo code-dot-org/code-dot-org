@@ -30,41 +30,41 @@ def process_existing_batch_of_forms
 
   DB[:forms].where(kind: "ClassSubmission").limit(BATCH_SIZE).each do |form|
     kind = Object.const_get(form[:kind])
-    data = JSON.load(form[:data])
-    processed_data = JSON.load(form[:processed_data]) || {}
+    data = JSON.parse(form[:data])
+    processed_data = JSON.parse(form[:processed_data]) || {}
 
     begin
       if kind.respond_to?(:additional_data)
         extra = kind.additional_data(data)
 
         if (extra.to_a - processed_data.to_a).empty?
-          $stderr.puts "Form's processed_data already contains what we meant to write."
+          warn "Form's processed_data already contains what we meant to write."
           already_written_count += 1
         elsif extra.keys.any? {|key| processed_data.key?(key)}
-          $stderr.puts "Form's processed_data already contains one key we meant to write."
+          warn "Form's processed_data already contains one key we meant to write."
           already_has_key_count += 1
         else
           processed_data.merge! extra
 
-          $stderr.puts "Writing #{processed_data.to_json}"
+          warn "Writing #{processed_data.to_json}"
           DB[:forms].where(id: form[:id]).update(processed_data: processed_data.to_json)
           update_count += 1
         end
       end
     rescue AbortFormError => e
-      $stderr.puts "Unable to process form #{form[:id]} because #{e.message}."
+      warn "Unable to process form #{form[:id]} because #{e.message}."
       error_count += 1
       next
     rescue Exception => e
-      $stderr.puts "Unable to process form #{form[:id]} because #{e.message}."
+      warn "Unable to process form #{form[:id]} because #{e.message}."
       raise e
     end
   end
 
-  $stderr.puts "Wrote #{update_count} entries"
-  $stderr.puts "Skipped #{already_written_count} already written entries"
-  $stderr.puts "Skipped #{already_has_key_count} entries already having at least one key"
-  $stderr.puts "Skipped #{error_count} entries with errors"
+  warn "Wrote #{update_count} entries"
+  warn "Skipped #{already_written_count} already written entries"
+  warn "Skipped #{already_has_key_count} entries already having at least one key"
+  warn "Skipped #{error_count} entries with errors"
 
   update_count
 end

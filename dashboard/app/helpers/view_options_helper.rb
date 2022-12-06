@@ -27,6 +27,7 @@ module ViewOptionsHelper
     :game_display_name,
     :app_name,
     :script_name,
+    :unit_year,
     :lesson_position,
     :level_position,
     :public_caching,
@@ -45,6 +46,9 @@ module ViewOptionsHelper
     :backpack_enabled,
     :level_requires_channel,
     :reduce_channel_updates,
+    :has_open_code_review,
+    :is_viewing_own_project,
+    :code_owners_name
   )
   # Sets custom options to be used by the view layer. The option hash is frozen once read.
   def view_options(opts = nil)

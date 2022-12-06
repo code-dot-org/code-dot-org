@@ -56,7 +56,7 @@ class AdvocacySite
             },
             {
               text_actual: "Nation's leaders support CS",
-              url: CDO.code_org_url("/files/open_letter_for_cs.pdf"),
+              url: "https://www.ceosforcs.com/",
               new_tab: true
             }
           ]

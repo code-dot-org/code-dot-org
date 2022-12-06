@@ -167,7 +167,7 @@
   landscape_recommended_certificates: "Il est recommandé de choisir **Paysage** lorsque vous imprimez les certificats."
   print_one_here_certificates: "Imprimez-en un ici."
   enter_certificate_names: "Saisissez jusqu'à 30 noms, **un par ligne**. Une page imprimable avec des certificats personnalisés %{script_name}  sera générée."
-  share_achievement: "Partage ta réalisation"
+  share_achievement: "Partage ta réussite"
   beyond_hour_message: "Continue avec nos <a href='http://studio.code.org'>autres cours</a>, ou vois plus d'options pour <a href='/learn/beyond'>Apprendre au-delà d'une heure</a>."
   beyond_hour_message_markdown: "Continuez à suivre nos [autres cours] (http://studio.code.org), ou consultez d'autres options pour [Apprendre au-delà d'une heure] (/learn/beyond)."
   leaderboards_for_hoc: "Classements pour l'Heure de Code."
@@ -339,6 +339,7 @@
   homepage_banner_40k_teachers_link: "En savoir plus"
   homepage_slot_text_title_hoc: "Heure de Code"
   homepage_slot_text_blurb_hoc: "Tout le monde peut apprendre. Commence aujourd'hui"
+  homepage_slot_text_blurb_hoc_2022: "Explores, joues, crées !"
   homepage_slot_text_link_hoc: "Essayer l'Heure de Code"
   homepage_slot_text_link_about_hoc: "À propos de l'Heure de Code"
   homepage_slot_text_link_host: "Héberger une Heure de Code"
@@ -364,6 +365,7 @@
   homepage_slot_text_link_buy: "S'investir"
   homepage_slot_text_link_donate: "Faire un don"
   homepage_slot_text_link_shop: "T-shirts, casquettes & plus"
+  homepage_slot_text_link_thebadguys: "Codez avec Les Bad Guys."
   homepage_slot_text_link_administrators: "Créer une classe d'informatique dans votre école"
   homepage_gallery_header: "Des %{project_count} millions de projets créés sur Code.org"
   homepage_header_donors: "Code.org remercie tout ceux qui l'ont soutenu"
@@ -503,6 +505,7 @@
   video_title_marco_belinelli: "Heure de Code avec Marco Belinelli"
   video_title_chris_bosh: "Chris Bosh à propos de l'informatique"
   video_title_my_name_is_aracely: "Je m’appelle Aracely"
+  video_title_change_face_of_cs: "Changer le visage de l'informatique"
   video_1min: "1 minutes"
   video_2min: "2 minutes"
   video_3min: "3 min"
@@ -893,7 +896,7 @@
   tynker_name: "Construis ton propre jeu"
   scratch_name: "Deviens créatif avec le codage"
   thinkersmith_name: "Mes amis les robots"
-  condcards_name: "Instructions conditionnelles avec des cartes"
+  condcards_name: "Les instructions conditionnelles avec des cartes"
   codehs_name: "Apprends à coder avec le chien Karel"
   codemonkey_name: "CodeMonkey"
   codeavengers_name: "Construis un jeu avec JavaScript"
@@ -961,14 +964,26 @@
   coursed-2020_name: Cours D (2020)
   coursee-2020_name: Cours E (2020)
   coursef-2020_name: Cours F (2020)
+  coursea-2021_name: Cours A (2021)
+  courseb-2021_name: Cours B (2021)
+  coursec-2021_name: Cours C (2021)
   coursed-2021_name: Cours D (2021)
+  coursee-2021_name: Cours E (2021)
+  coursef-2021_name: Cours F (2021)
+  coursea-2022_name: Cours A (2022)
+  coursec-2022_name: Cours C (2022)
+  coursed-2022_name: Cours D (2022)
+  coursee-2022_name: Cours E (2022)
   express-2018_name: Cours Express (2018)
   pre-express-2018_name: Cours Express pour les Pré-lecteurs (2018)
   express-2019_name: Cour rapide (2019)
   pre-express-2019_name: Cours Express pour les Pré-lecteurs (2019)
   express-2020_name: Cours Express (2020)
   pre-express-2020_name: Cours rapide pour les primo-lecteurs (2020)
+  express-2021_name: Cours Express (2021)
   pre-express-2021_name: Cours rapide pour les primo-lecteurs (2021)
+  express-2022_name: Cours Express (2022)
+  pre-express-2022_name: Cours Express pour les Pré-lecteurs (2022)
   csd2_name: 'Unité 2 : Développement Web'
   csd3_name: 'Unité 3 : Animation et Jeux'
   accelerated_name: "Cours accéléré"
@@ -988,7 +1003,7 @@
   hoc-encryption_name: Cryptage simple
   text-compression_name: Compression de texte
   applab_name: "Labo des applis"
-  gamelab_name: "Labo des Jeux"
+  gamelab_name: "Labo Jeux"
   basketball_name: "Faire un match de basket"
   sports_name: "Coder ton propre jeu de sports"
   applab_gradelevel: "Âge recommandé: 13 ans et plus"
@@ -1082,10 +1097,16 @@
   coursed-2021_gradelevel: 4ème ou plus
   coursee-2021_gradelevel: De 8 à 12 ans
   coursef-2021_gradelevel: Seconde ou plus
+  coursea-2022_gradelevel: CM2 ou plus
+  courseb-2022_gradelevel: 6ème ou plus
+  coursec-2022_gradelevel: 5ème ou plus
+  coursed-2022_gradelevel: 4ème ou plus
+  coursee-2022_gradelevel: De 8 à 12 ans
+  coursef-2022_gradelevel: Seconde ou plus
   accelerated_gradelevel: "De 10 à 18 ans"
   codeorg_platformtext: "Navigateurs récents, smartphones, tablettes"
   codeintl_platformtext: "Navigateurs récents, smartphones, tablettes"
-  thinkersmithspanish_platformtext: "Débranché"
+  thinkersmithspanish_platformtext: "Déconnecté"
   khan_platformtext: "Navigateurs web récents"
   khanes_platformtext: "Navigateurs web récents"
   khanpt_platformtext: "Navigateurs web récents"
@@ -1167,11 +1188,11 @@
   kodableunplugged_shortdescription: "Un exercice amusant sans connexion."
   projguts_shortdescription: "Essaie de modéliser et de simuler en utilisant le jeu pierre/papier/ciseaux."
   hourofcode_shortdescription: "Apprends à coder avec Mark Zuckerberg et Angry Birds !"
-  frozen_shortdescription: "Utilisons du code pour rejoindre Anna et Elsa tandis qu’elles explorent la magie et la beauté de la glace."
+  frozen_shortdescription: "On va utiliser du code pour rejoindre Anna et Elsa dans leur exploration de la magie et la beauté de la glace."
   starwars_shortdescription: "Apprends à programmer des droïdes et crée ton propre jeu Star Wars dans une galaxie lointaine, très lointaine."
-  playlab_shortdescription: "Programme une histoire ou un jeu avec le Labo !"
+  playlab_shortdescription: "Crée une histoire ou construis un jeu avec le Labo Jeux !"
   infinity_shortdescription: "Utilisez le labo pour créer une histoire ou un jeu mettant en vedette les personnages de Disney Infiny."
-  artist_shortdescription: "Dessine des super images et schémas avec l'Artiste!"
+  artist_shortdescription: "Dessine des super images et crée des designs cool avec l'Artiste !"
   monsterocding_shortdescription: "Une aventure de programmation colorée et autoguidée pour les enfants."
   allcancode_shortdescription: "Un jeu immersif pour guider Marco à l'aide d'un langage de programmation visuelle."
   csfirst_shortdescription: "Anime une histoire sur deux personnages marins. Rajoute ta touche personnelle !"
@@ -1218,6 +1239,12 @@
   coursed-2021_shortdescription_congrats: Les élèves développent leur compréhension des boucles, des conditions et des événements. Au-delà du codage, les élèves apprennent la citoyenneté numérique.
   coursee-2021_shortdescription_congrats: Commence à coder avec des algorithmes, des boucles, des conditions et des événements, puis tu passeras aux fonctions. Dans la deuxième partie de ce cours, conçois et crée un projet de synthèse que tu peux partager avec tes amis et ta famille.
   coursef-2021_shortdescription_congrats: Apprends à utiliser différents types de boucles, d'événements, de fonctions et de conditions. Étudie différentes techniques de résolution de problèmes et discute des impacts sociétaux de l'informatique et d'Internet. Dans la deuxième partie de ce cours, conçois et crée un projet de synthèse que tu peux partager avec tes amis et ta famille.
+  coursea-2022_shortdescription_congrats: Apprends les bases de l'informatique et de la sécurité sur internet. À la fin du cours, crée ton propre jeu ou ta propre histoire que tu peux partager.
+  courseb-2022_shortdescription_congrats: Apprends les bases de l'informatique et de la sécurité sur internet. À la fin du cours, crée ton propre jeu ou ta propre histoire que tu peux partager.
+  coursec-2022_shortdescription_congrats: Crée des programmes avec séquençage, boucles et événements. Traduis tes initiales en binaire, étudie différentes techniques de résolution de problèmes et apprends à réagir au cyberharcèlement. À la fin du cours, crée ton propre jeu ou ta propre histoire que tu peux partager !
+  coursed-2022_shortdescription_congrats: Les élèves développent leur compréhension des boucles, des conditions et des événements. Au-delà du codage, les élèves apprennent la citoyenneté numérique.
+  coursee-2022_shortdescription_congrats: Commence à coder avec des algorithmes, des boucles, des conditions et des événements, puis tu passeras aux fonctions. Dans la deuxième partie de ce cours, conçois et crée un projet de synthèse que tu peux partager avec tes amis et ta famille.
+  coursef-2022_shortdescription_congrats: Apprends à utiliser différents types de boucles, d'événements, de fonctions et de conditions. Étudie différentes techniques de résolution de problèmes et discute des impacts sociétaux de l'informatique et d'Internet. Dans la deuxième partie de ce cours, conçois et crée un projet de synthèse que tu peux partager avec tes amis et ta famille.
   codeorg_longdescription: "Apprends les concepts de base de l'informatique avec la programmation, en glissant et en déposant. Il s'agit d'un didacticiel ludique auto-dirigé mettant en vedette des conférences vidéo de Bill Gates, Mark Zuckerberg, Angry Birds et Plants vs. Zombies. Découvre les boucles «&#160;Répéter&#160;», les instructions conditionnelles et les algorithmes de base. Disponibles en 34 langues."
   codeintl_longdescription: "Apprends les concepts de base de l'informatique avec le glisser-déposer. Il s'agit d'un didacticiel ludique, autogéré, mettant en vedette les conférences vidéo de Bill Gates, Mark Zuckerberg, Angry Birds et Plants vs Zombies. Apprends les notions de boucles, d'instructions conditionnelles et des algorithmes de base. Disponible en 34 langues."
   thinkersmithspanish_longdescription: "En utilisant un « Robot Vocabulaire » prédéfini, les élèves découvriront comment se guider pour exécuter des tâches spécifiques sans en discuter au préalable. Cette leçon apprend aux enfants la relation entre les symboles et les actions, ainsi que l'inestimable capacité du débogage."
@@ -1433,7 +1460,7 @@
   sphero_beyond_longdescription: "Que vous soyez un éducateur ou un parent, les leçons SPRK donnent aux enfants un cours accéléré et amusant de programmation de robots, tout en affûtant leurs compétences en mathématiques et en sciences."
   compatibility_hide_this_warning: "Cacher l'avertissement"
   compatibility_unsupported_browser: "Votre navigateur n'est pas supporté. Merci de le mettre à jour avec <a href='%{supported_browsers_url}', target='_blank'>l'un de nos navigateurs supportés</a>. Vous pouvez essayer d’afficher la page, mais la fonctionnalité risque d’être rompue."
-  compatibility_unsupported_browser_markdown: "Votre navigateur n'est pas supporté. Merci de mettre votre navigateur à jour avec [un de nos navigateurs supportés](%{supported_browsers_url}). Vous pouvez essayer d’afficher la page mais la fonctionnalité risque d’être rompue."
+  compatibility_unsupported_browser_markdown: "Votre navigateur n'est pas compatible. Merci de mettre votre navigateur à jour avec [l'un des navigateurs compatibles avec nos services](%{supported_browsers_url}). Vous pouvez essayer d’afficher la page, mais les fonctionnalités risquent d’être compromises. "
   flappy_shortcode: "battre des ailes"
   header_home: "Accueil"
   header_my_dashboard: "Mon Tableau de Bord"
@@ -1451,6 +1478,7 @@
   header_educate_beyond: "Aller plus loin"
   header_educate_inspire: "Inspirer un élève"
   header_educate_community: "Communauté en ligne"
+  header_educate_requirements: "Pré-requis techniques"
   header_educate_tools: "Outils et vidéos"
   header_about_us: "À propos"
   header_about_leadership: "Équipe de direction"
@@ -1469,9 +1497,9 @@
   header_about: "À propos"
   header_teacher_community: "Communauté des enseignants"
   header_help_support: 'Aide et support '
-  header_report_bug: "Rapporter un problème"
+  header_report_bug: "Signaler un problème"
   header_report_abuse: "Signaler un abus"
-  header_legal: "Confidentialité et légal"
+  header_legal: "Confidentialité et mentions légales"
   header_legal_privacy: "Politique de confidentialité"
   header_legal_tos: "Conditions Générales d'Utilisation"
   header_tutorials: "Didacticiels"
@@ -1493,10 +1521,10 @@
   user_header_create: 'Créer '
   user_header_applab: 'Labo des applis '
   user_header_artist: 'Artiste '
-  user_header_gamelab: "Labo des Jeux"
+  user_header_gamelab: "Labo Jeux"
   user_header_playlab: "Labo de jeux"
   user_header_dance: "Soirée Dansante"
-  user_header_spritelab: "Le Labo des Lutins"
+  user_header_spritelab: "Le Labo des Sprites"
   user_header_minecraft: "Minecraft"
   user_header_flappy: "Flappy"
   user_header_view_all: "Afficher tous les projets..."
@@ -1541,6 +1569,9 @@
   hoc_overview_dance_title: "Soirée Dansante"
   hoc_overview_dance_subtitle: "Codez une Soirée Dansante à partager avec vos amis. Avec Katy Perry, Madonna, J. Balvin, Sia, Keith Urban, Ciara, et 25 autres !"
   hoc_overview_dance_2019_subtitle: "Code une Soirée Dansante à partager avec tes amis. Avec Katy Perry, Shawn Mendes, Panic ! At The Disco, Lil Nas X, Jonas Brothers, Nicki Minaj, et 34 autres artistes !"
+  hoc_overview_dance_2022_subtitle: "Organises une soirée dansante à partager avec tes amis. Avec Beyoncé, Harry Styles, Lizzo, Lil Nas X, Selena Gomez, de la musique de « Encanto » de Disney et bien plus encore !"
+  hoc_overview_hello_world_2022_subtitle: "Choisis entre quatre activités amusantes pour programmer des personnages interactifs dans un monde que tu as créé!"
+  hoc_overview_hello_world_2022_alt_text: "Personnages animés d'astronautes et d'animaux flottant autour d'une illustration de la Terre"
   hoc_overview_title: "Activités Hour of Code de Code.org"
   hoc_overview_subtitle: "<a href=\"https://hourofcode.com\">Hour of Code</a> est un mouvement mondial qui touche des dizaines de millions d'étudiants dans plus de 180 pays. Quiconque, n'importe où, peut organiser un événement Hour of Code ou essayer un des 500 et plus tutoriels d'une heure, disponibles en plus de 45 langues."
   hoc_overview_subtitle_markdown: "L' [Hour of Code] (https://hourofcode.com) est un mouvement mondial qui touche des dizaines de millions d'étudiants dans plus de 180 pays. N'importe qui, n'importe où, peut organiser un événement Heure de Code ou essayer l'un des plus de 500 tutoriels d'une heure, disponibles dans plus de 45 langues."
@@ -1579,16 +1610,20 @@
   hoc2018_mc_educators: "Pour les Enseignants"
   hoc2018_mc_educators_box1_title: "Coder avec Minecraft"
   hoc2018_mc_educators_box1_desc: 'Minecraft : Education Edition offre un programme d’études, une formation et du codage dans Minecraft, conformes aux normes.'
-  hoc2018_mc_educators_box1_button: "Démarrer"
+  hoc2018_mc_educators_box1_button: "Commencer"
   hoc2018_mc_educators_box2_title: "Télécharger le guide de l'animateur"
   hoc2018_mc_educators_box2_desc: "Cette boîte à outils vous aidera à organiser une Hour of Code et à impliquer vos élèves dans l'informatique."
   hoc2018_mc_educators_box2_button: "Télécharger"
   hoc2018_mc_educators_box3_title: "Participer à un atelier pour élèves gratuit"
   hoc2018_mc_educators_box3_desc: "Rendez-vous dans  un Microsoft Store, près de chez vous, et participez à un atelier Hour of Code gratuit. Pour tous niveaux de compétence, et à partir de 6 ans."
   hoc2018_mc_educators_box3_button: "Trouver un atelier"
+  hoc2022_mc_educators_box3_desc_markdown: 'Utilisez-le sur demande [cours gratuit] (%{free_course_link}) ou inscrivez l''ensemble de votre classe à un atelier Heure de code en direct avec un professeur invité. Offert à plusieurs reprises pendant la CSEW, du 6 au 11 décembre. '
+  hoc2022_mc_educators_box3_button: "S'inscrire"
   hoc2018_mc_educators_box4_title: "Accéder à plus de ressources informatiques"
   hoc2018_mc_educators_box4_desc: "Générez du changement dans votre communauté, avec des compétences numériques et les ressources éducatives en informatique de Microsoft."
   hoc2018_mc_educators_box4_button: "Explorer les ressources"
+  hoc2022_mc_educators_box4_desc: "Inspirez la passion des STEM aux élèves de la maternelle à la 12e année grâce à un programme d'informatique de 200 heures, du bloc au python, soutenu par un développement professionnel."
+  hoc2022_mc_educators_box4_button: "Continuer l'apprentissage"
   hoc2018_mc_watch_videos: "Avant de commencer, regarde une de ces vidéos pour t'inspirer"
   hoc2018_mc_videos_more: "Plus de <a href='%{inspiring_videos_playlist}'> vidéos qui inspirent</a> et qui font intervenir des modèles de référence et des célébrités"
   hoc2018_mc_careers_more: "Plus de <a href='%{careers_url}' target='_blank'> vidéos inspirational</a> mettant en vedette les professionnels dans les domaines de la technologie"
@@ -1638,7 +1673,7 @@
   hoc2018_dance_teacher_resources_tile1_button: "Plan de cours"
   hoc2018_dance_teacher_resources_tile2_title: "Soirée Dansante Débranchée"
   hoc2018_dance_teacher_resources_tile2_description: "Pas besoin d’ordinateurs ! Apprenez les concepts de code informatique pour chorégraphier une Soirée Dansante ensemble."
-  hoc2018_dance_teacher_resources_tile2_button: "Activité \"Déconnectée\""
+  hoc2018_dance_teacher_resources_tile2_button: "Activité Déconnectée"
   hoc2018_dance_featured_student_creations_title: "Créations d’Élèves en vedette"
   hoc2018_dance_videos_section_heading: "Trouve de l’Inspiration"
   hoc2018_dance_video_title_what_is_creativity: "Qu'est-ce que la Créativité ?"
@@ -1670,8 +1705,8 @@
   hoc2018_aquatic_video3: "Minecraft : Voyage Aquatique - Les Conditions"
   hoc2018_aquatic_video4: "Minecraft : Voyage aquatique - Félicitations"
   hoc2018_dance_video1: "Soirée Dansante - Introduction"
-  hoc2018_dance_video2: "Soirée Dansante – Les Événements"
-  hoc2018_dance_video3: "Soirée Dansante – Les Propriétés"
+  hoc2018_dance_video2: "Soirée Dansante – Événements"
+  hoc2018_dance_video3: "Soirée Dansante – Propriétés"
   hoc2018_dance_video4: "Soirée Dansante - Félicitations"
   dance_box_higher_power_line_1: "Codez une danse au son de \"Higher Power\" de Coldplay et vous pourriez avoir l'occasion de voir le groupe en live!"
   dance_box_higher_power_line_2: "Visitez <a href=\"%{path}\">code.org/coldplay</a> pour plus d'infos"
@@ -1704,8 +1739,11 @@
   hoc2021_mc_mee_villages_description: 'Apprenez les bases du codage et explorez la diversité et l''inclusion avec vos élèves dans Minecraft : Education Edition.'
   hoc2021_mc_mee_ai_title: "AI pour de bon"
   hoc2021_mc_mee_ai_description: 'Explorez l''AI avec vos élèves et apprenez à coder dans Minecraft : Education Edition.'
-  footer_powered_by_aws: "Fourni par Amazon Web Services"
-  footer_built_on_github: "Construit sur GitHub de Microsoft"
+  hoc2022_mc_mee_title: "Domaine d'évasion Minecraft"
+  hoc2022_mc_mee_description: 'Échappez-vous du mystérieux manoir à l''aube et gagnez un million d''émeraudes ! Le nouveau tutoriel Minecraft Hour of Code est désormais disponible dans Minecraft : Education Edition et accessible via Windows, Mac, Chromebook, Ipad et Mobile. Démarrez avec des supports éducatifs, des formations et des vidéos gratuits. '
+  hoc2022_mc_mee_timecraft_description: 'Voyagez dans le temps pour sauver le futur grâce à cette leçon de codage gratuite sur Minecraft : Education Edition.'
+  footer_powered_by_aws: "Amazon Web Services et le logo « Powered by AWS » sont des marques déposées d'Amazon.com, Inc. ou ses filiales aux États-Unis et/ou dans d'autres pays. "
+  footer_built_on_github: "Construit avec GitHub de Microsoft"
   codebytes_skinny_banner_title: "Rejoignez-nous du 7 au 11 décembre pour nos mini-leçons en direct CodeBytes !"
   codebytes_skinny_banner_description: 'Rejoignez-nous chaque jour de la CS Education Week pour CodeBytes, des leçons interactives d''informatique de 20 minutes. En streaming en direct deux fois par jour, CodeBytes est un excellent moyen pour les étudiants de participer à un #HourOfCode virtuel !'
   codebytes_skinny_banner_english_only: "Seulement en anglais"
@@ -1716,7 +1754,7 @@
   footer_partners: "Partenaires"
   footer_blog: "Blogue"
   footer_donate: "Donner"
-  footer_store: "Magasin"
+  footer_store: "Boutique"
   footer_support: "Assistance"
   footer_terms: "Conditions Générales"
   ai_for_oceans: "IA pour les Océans"
@@ -1768,4 +1806,19 @@
   ai_try_activity: "Essayez l'activité"
   outbreak_tile_title: "Épidémie"
   outbreak_tile_subtitle: "Un virus a infecté Monster Town ! Codez un simulateur d'épidémie et faites des prédictions sur ce qui arrivera aux voisins de Monster Town."
-  footer_cookie_notice: " Utilisation de cookies"
+  footer_cookie_notice: " Utilisation des cookies"
+  hoc2022_banner_title: "Découvrir, jouer, créer !"
+  hoc2022_banner_description: "Explorez l'univers, marquez des buts, bougez : il y a tant de manières d'utiliser l'informatique!"
+  hoc2022_cta_primary: "Découvrez les nouveautés"
+  hoc2022_cta_secondary: "Essayez d'autres activités"
+  hoc2022_landing_page_explore_title: "Explorer"
+  hoc2022_landing_page_explore_description: "Grâce aux sciences informatiques, ouvrez les portes de nouveaux mondes !"
+  hoc2022_landing_page_play_title: "Jouer"
+  hoc2022_landing_page_play_description: "Montrez de quoi vous êtes capable et marquez des points !"
+  hoc2022_landing_page_create_title: "Créer"
+  hoc2022_landing_page_create_description: "Créez des choses hors du commun et merveilleuses !"
+  hoc2022_landing_page_banner_alt_left: "Un extraterrestre dansant à côté de Saturne dans l'espace"
+  hoc2022_landing_page_banner_alt_right: "Un robot jouant un ballon de football dans l'espace devant une fusée qui décolle."
+  try_it_yourself: "Essaie toi-même !"
+  try_an_activity: "Essayes une activité"
+  see_more_activities: "Voir plus d'activités"

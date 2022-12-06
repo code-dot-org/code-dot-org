@@ -417,6 +417,7 @@ ro:
       educate_beyond: Dincolo de Code.org
       educate_inspire: Inspirați un Student
       educate_community: Comunitate online
+      educate_requirements: Cerințe tehnice
       educate_tools: Instrumente şi clipuri video
       about_us: Despre noi
       about_leadership: Conducere
@@ -490,7 +491,6 @@ ro:
     popup:
       progress_for_user: Progresul lui %{name}
       progress: Progresul tău
-      lines: 'Total linii de cod: %{lines}'
       close: ÎNCHIDE
       mastery: Concepte
       puzzle_map: Etape
@@ -655,6 +655,7 @@ ro:
     print_certificate: Tipărește certificatul
   certificate_sponsor_message: "%{sponsor_name} a făcut darul generos de a vă sponsoriza
     învățarea."
+  certificate_hour_of_code: Oră de Programare
   move_students:
     new_section_dne: Ne pare rău, dar secțiunea %{new_section_code} nu există. Vă
       rugăm să introduceţi un cod aferent unei secţiuni diferite.
@@ -814,6 +815,12 @@ ro:
       title: Petrecere dansantă
     dance-2019:
       title: Petrecere dansantă
+    hello-world:
+      title: Bună Lume
+      body: Alege din patru teme distractive pentru a codifica personaje interactive
+        într-o lume pe care o creezi tu.
+    poem-art:
+      title: Arta Poeziei
     hoc:
       title: Labirint Clasic
       body: Încearcă bazele programarii. Milioane de oameni au încercat.
@@ -1033,17 +1040,6 @@ ro:
       noastre de predare JavaScript pot fi disponibile pentru studenţii dumneavoastră
       înainte de a accepta în mod explicit actualizarea de termeni.
     review_terms: Revedeţi termenii actualizati
-  donor_interstitial:
-    title: Cursurile tale gratuite de Informatică au fost posibile de către...
-    subtitle: Dorim să mulțumim donatorilor generoși al căror suport a făcut posibil
-      succesul Code.org. Ne angajăm să menținem Code.org gratuit pentru școli și studenți,
-      în general, datorită generozității continue a [donors](%{donors_url}) noștri!
-    local_supporters: Suporteri Locali
-    global_supporters: Suporteri Globali
-    support_codeorg_1: Fiecare dolar donat la Code.org aduce oportunități mai multor
-      studenți.
-    support_codeorg_2: "[Donează acum](%{donate_url}) pentru a susține Code.org."
-    get_started: Începe pe Code.org.
   school_info_interstitial:
     title: Dorim să prezentăm Informatica fiecărui student - ajutați-ne pentru a ne
       putea urmări progresul!
@@ -1335,6 +1331,7 @@ ro:
         music: Muzică
         art: Artă
         other: 'Altele:'
+        na: Nu se aplică
       resources:
         bootstrap: |2-
 
@@ -1345,7 +1342,8 @@ ro:
         kodable: Kodable
         scratch: Scratch
         tynker: Tynker
-        other: 'Altele:'
+        other: Alte
+        na: Nu se aplică
       robotics:
         grok: Grok Learning
         kodable: Kodable
@@ -1355,7 +1353,8 @@ ro:
         sphero: Sphero
         raspberry: Raspberry Pi
         wonder: Atelierul minune
-        other: 'Altele:'
+        other: Alte
+        na: Nu se aplică
       workshop_course:
         csf_af: Fundamentele informaticii (Cursuri A-F)
         csf_express: Fundamentele informaticii (pre-Express sau Express)
@@ -1437,3 +1436,13 @@ ro:
     this_sprite: acest spirit
   unit_prefix: Unitate %{n}
   teacher_feedback: Punctele de vedere ale profesorului
+  lesson_lock:
+    error:
+      no_updates: Nu există actualizări de efectuat.
+      missing_params: Trebuie furnizate id-urile de utilizator, nivel și unitate
+      cannot_view_locked_answers: Nu se pot vizualiza răspunsurile în timp ce sunt
+        blocate
+      forbidden: Utilizatorul nu poate actualiza starea de blocare a elevului.
+  reset_predict_progress_button: Șterge Răspunsul
+  pixelation:
+    binary: Binar

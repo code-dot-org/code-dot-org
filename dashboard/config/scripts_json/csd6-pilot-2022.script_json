@@ -8,7 +8,6 @@
       "hideable_lessons": true,
       "include_student_lesson_plans": true,
       "is_course": true,
-      "is_maker_unit": true,
       "is_migrated": true,
       "pilot_experiment": "csd-u6-pilot-2022",
       "show_calendar": true,

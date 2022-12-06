@@ -1,15 +1,11 @@
 import React from 'react';
-import Radium from 'radium';
+import Radium from 'radium'; // eslint-disable-line no-restricted-imports
 import PropTypes from 'prop-types';
-import QRCode from 'qrcode.react';
 import * as color from '../../util/color';
 import {CIPHER, ALPHABET} from '../../constants';
 import {connect} from 'react-redux';
 import i18n from '@cdo/locale';
 import {hideShareDialog, showLibraryCreationDialog} from './shareDialogRedux';
-
-const INSTRUCTIONS_LINK =
-  'https://codeorg.zendesk.com/knowledge/articles/360004789872';
 
 const style = {
   nav: {
@@ -55,46 +51,11 @@ const style = {
     width: 465,
     height: 80,
     margin: 0
-  },
-  expoButton: {
-    flex: 1,
-    fontSize: 15,
-    marginLeft: 0,
-    marginRight: 20
-  },
-  expoButtonLast: {
-    marginRight: 0
-  },
-  expoContainer: {
-    display: 'flex',
-    flexDirection: 'column'
-  },
-  expoExportButtonRow: {
-    justifyContent: 'space-evenly',
-    marginBottom: 15
-  },
-  expoExportColumn: {
-    flex: 1
-  },
-  expoExportQRCodeRow: {
-    marginBottom: 20
-  },
-  expoExportRow: {
-    display: 'flex',
-    flexGrow: 1
-  },
-  expoInput: {
-    cursor: 'copy',
-    width: 'unset'
-  },
-  qrCode: {
-    marginRight: 20
   }
 };
 
 const ShareOptions = {
   EXPORT: 'export',
-  EXPORT_EXPO: 'exportExpo',
   EMBED: 'embed',
   LIBRARY: 'library'
 };
@@ -102,7 +63,6 @@ const ShareOptions = {
 class AdvancedShareOptions extends React.Component {
   static propTypes = {
     shareUrl: PropTypes.string.isRequired,
-    allowExportExpo: PropTypes.bool.isRequired,
     exportApp: PropTypes.func,
     librariesEnabled: PropTypes.bool,
     openLibraryCreationDialog: PropTypes.func.isRequired,
@@ -119,15 +79,10 @@ class AdvancedShareOptions extends React.Component {
     super(props);
     this.state = {
       selectedOption: props.exportApp
-        ? props.allowExportExpo
-          ? ShareOptions.EXPORT_EXPO
-          : ShareOptions.EXPORT
+        ? ShareOptions.EXPORT
         : ShareOptions.EMBED,
-      exportedExpoZip: false,
       exporting: false,
-      exportingExpo: null,
       exportError: null,
-      exportExpoError: null,
       embedWithoutCode: false
     };
   }
@@ -142,55 +97,6 @@ class AdvancedShareOptions extends React.Component {
           exportError: 'Failed to export project. Please try again later.'
         });
       });
-  };
-
-  downloadExpoExport = async () => {
-    this.setState({
-      exportedExpoZip: true,
-      exportingExpo: 'zip'
-    });
-    try {
-      await this.props.exportApp({mode: 'expoZip'});
-      this.setState({
-        exportingExpo: null,
-        exportExpoError: null
-      });
-    } catch (e) {
-      this.setState({
-        exportingExpo: null,
-        exportExpoError: 'Failed to export project. Please try again later.'
-      });
-    }
-  };
-
-  publishExpoExport = async () => {
-    this.setState({exportingExpo: 'publish'});
-    try {
-      const {
-        expoUri,
-        expoSnackId,
-        iconUri,
-        splashImageUri
-      } = await this.props.exportApp({
-        mode: 'expoPublish'
-      });
-      this.setState({
-        exportingExpo: null,
-        exportExpoError: null,
-        expoUri,
-        expoSnackId,
-        iconUri,
-        splashImageUri
-      });
-    } catch (e) {
-      this.setState({
-        exportingExpo: null,
-        expoUri: null,
-        expoSnackId: null,
-        exportExpoError:
-          'Failed to publish project to Expo. Please try again later.'
-      });
-    }
   };
 
   renderEmbedTab() {
@@ -267,103 +173,6 @@ class AdvancedShareOptions extends React.Component {
     target.select();
   };
 
-  renderExportExpoTab() {
-    const {expoUri, exportedExpoZip} = this.state;
-    const exportSpinner =
-      this.state.exportingExpo === 'zip' ? (
-        <i className="fa fa-spinner fa-spin" />
-      ) : null;
-    const publishSpinner =
-      this.state.exportingExpo === 'publish' ? (
-        <i className="fa fa-spinner fa-spin" />
-      ) : null;
-    // TODO: Make this use a nice UI component from somewhere.
-    const alert = this.state.exportExpoError ? (
-      <div className="alert fade in">{this.state.exportExpoError}</div>
-    ) : null;
-
-    return (
-      <div>
-        <p style={style.p}>
-          Try running your project in the Expo app on iOS or Android. You can
-          also export the app and follow our
-          <a href={INSTRUCTIONS_LINK} style={style.bold}>
-            {' '}
-            step-by-step guide{' '}
-          </a>
-          to submit your app to the Google Play Store.
-        </p>
-        <div style={style.expoContainer}>
-          <div style={[style.expoExportRow, style.expoExportButtonRow]}>
-            <button
-              type="button"
-              onClick={this.publishExpoExport}
-              style={style.expoButton}
-            >
-              {publishSpinner}
-              Test in Expo App
-            </button>
-            <button
-              type="button"
-              onClick={this.downloadExpoExport}
-              style={[style.expoButton, style.expoButtonLast]}
-            >
-              {exportSpinner}
-              Export to Create Native Android App
-            </button>
-          </div>
-          {!!expoUri && (
-            <div style={[style.expoExportRow, style.expoExportQRCodeRow]}>
-              <QRCode style={style.qrCode} value={expoUri} />
-              <div style={style.expoExportColumn}>
-                <div style={style.expoContainer}>
-                  <div>
-                    <p style={[style.p, style.bold]}>Expo App Instructions:</p>
-                    <ol style={[style.p, style.ol]}>
-                      <li>Install the Expo app on your phone.</li>
-                      <li>
-                        Scan the QR code from within the Expo app on Android or
-                        from your camera app on iOS (click on the notification
-                        that pops up on iOS).
-                      </li>
-                      <li>
-                        If #2 doesn't work, send the URL below to your phone and
-                        click the link.
-                      </li>
-                    </ol>
-                  </div>
-                  <input
-                    type="text"
-                    onClick={this.onInputSelect}
-                    readOnly="true"
-                    value={expoUri}
-                    style={style.expoInput}
-                  />
-                </div>
-              </div>
-            </div>
-          )}
-          {!expoUri && exportedExpoZip && (
-            <div style={style.expoExportRow}>
-              <div style={style.expoContainer}>
-                <p style={style.p}>
-                  Once your app finishes downloading,
-                  <a href={INSTRUCTIONS_LINK} style={style.bold}>
-                    {' '}
-                    follow these instructions{' '}
-                  </a>
-                  to create a native Android app and submit it to the Google
-                  Play Store.
-                </p>
-              </div>
-            </div>
-          )}
-          <div style={style.expoExportRow}>{alert}</div>
-        </div>
-      </div>
-    );
-  }
-
   renderLibraryTab = () => {
     return (
       <div>
@@ -394,13 +203,7 @@ class AdvancedShareOptions extends React.Component {
   };
 
   render() {
-    let {
-      expanded,
-      exportApp,
-      allowExportExpo,
-      onExpand,
-      librariesEnabled
-    } = this.props;
+    let {expanded, exportApp, onExpand, librariesEnabled} = this.props;
     let {selectedOption} = this.state;
     if (!selectedOption) {
       // no options are available. Render nothing.
@@ -410,14 +213,7 @@ class AdvancedShareOptions extends React.Component {
     let optionsNav, selectedTab, libraryTab;
     if (expanded) {
       let exportTab = null;
-      let exportExpoTab = null;
       if (exportApp) {
-        if (allowExportExpo) {
-          exportExpoTab = this.renderAdvancedListItem(
-            ShareOptions.EXPORT_EXPO,
-            i18n.runNatively()
-          );
-        }
         exportTab = this.renderAdvancedListItem(
           ShareOptions.EXPORT,
           i18n.exportForWeb()
@@ -436,7 +232,6 @@ class AdvancedShareOptions extends React.Component {
       optionsNav = (
         <div>
           <ul style={style.nav.ul}>
-            {exportExpoTab}
             {exportTab}
             {embedTab}
             {libraryTab}
@@ -446,9 +241,6 @@ class AdvancedShareOptions extends React.Component {
       switch (selectedOption) {
         case ShareOptions.EXPORT:
           selectedTab = this.renderExportTab();
-          break;
-        case ShareOptions.EXPORT_EXPO:
-          selectedTab = this.renderExportExpoTab();
           break;
         case ShareOptions.EMBED:
           selectedTab = this.renderEmbedTab();

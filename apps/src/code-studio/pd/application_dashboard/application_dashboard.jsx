@@ -25,7 +25,6 @@ import DetailView from './detail_view';
 import DetailViewRedirect from './detail_view_redirect';
 import CohortView from './cohort_view';
 import AdminEditView from './admin_edit_view';
-import AdminCohortView from './admin_cohort_view';
 import _ from 'lodash';
 
 const ROOT_PATH = '/pd/application_dashboard';
@@ -135,7 +134,6 @@ export default class ApplicationDashboard extends React.Component {
                           ]
                     }
                     component={DetailView}
-                    viewType={DASHBOARD_COURSES[path].type}
                     course={DASHBOARD_COURSES[path].course}
                   />,
                   path !== 'incomplete_applications' && (
@@ -145,7 +143,6 @@ export default class ApplicationDashboard extends React.Component {
                       breadcrumbs={DASHBOARD_COURSES[path].name}
                       component={QuickView}
                       applicationType={DASHBOARD_COURSES[path].name}
-                      viewType={DASHBOARD_COURSES[path].type}
                       role={path}
                     />
                   ),
@@ -156,23 +153,12 @@ export default class ApplicationDashboard extends React.Component {
                       breadcrumbs={cohort_path_name}
                       component={CohortView}
                       applicationType={cohort_path_name}
-                      viewType={DASHBOARD_COURSES[path].type}
                       role={path}
                     />
                   )
                 ];
               })
             )}
-            {this.props.isWorkshopAdmin &&
-              ['TeacherCon', 'FiT'].map((cohortType, i) => (
-                <Route
-                  path={`${cohortType.toLowerCase()}_cohort`}
-                  breadcrumbs={`${cohortType} Cohort`}
-                  component={AdminCohortView}
-                  cohortType={cohortType}
-                  key={i}
-                />
-              ))}
             <Route
               path=":applicationId"
               breadcrumbs="Application"

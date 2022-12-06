@@ -1,6 +1,6 @@
 name 'CSA U6L10-L3v2_2022'
 display_name 'Finding the Sentiment Value'
-description 'level description here'
+description 'Find the sentiment value of various text.'
 
 sublevels
 level 'CSA U6L10-L3a_2022'

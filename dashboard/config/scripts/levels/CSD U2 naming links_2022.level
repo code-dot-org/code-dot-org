@@ -1,9 +1,5 @@
 <Weblab>
   <config><![CDATA[{
-  "game_id": 58,
-  "created_at": "2022-03-30T23:33:28.000Z",
-  "level_num": "custom",
-  "user_id": 155,
   "properties": {
     "long_instructions": "# Naming Links\r\n\r\n<div class=\"no-pullthrough\" style=\"float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\">\r\n\r\n::: details [**What are hyperlinks?**]\r\n\r\nHyperlinks can connect to local web pages or external web pages. To add navigation to your website you will need to add hyperlinks which connect your individual web pages. You can **add hyperlinks to your web page using the `<a>` element**.  The text you want to display as the hyperlink goes between the opening and closing hyperlink tags. The `<a>` element has an attribute `href` which is the location to link to.  The location of a local page is just the file path for that page. <br> <br>\r\n\r\nFor example to link to the unique houses page you would add the following code inside your `<body>` element. <br><br>\r\n\r\n```\r\n\r\n<a href=\"houses.html\"> Unique Houses </a>\r\n\r\n```\r\n:::\r\n\r\n\r\n::: details [**How do I add a hyperlink?**]\r\n\r\nYou can <strong>add hyperlinks to your web page using the `<a>` element</strong>.  The text you want to display as the hyperlink goes between the opening and closing hyperlink tags. The `<a>` element has an attribute `href` which is the location to link to.  The location of a local page is just the file path for that page. <br> <br>\r\n\r\nFor example to link to the unique houses page you would add the following code inside your `<body>` element. <br /><br />\r\n\r\n```\r\n\r\n<a href=\"houses.html\"> Unique Houses </a>\r\n\r\n```\r\n\r\n\r\n:::\r\n\r\n\r\n::: details [**What are good rules for naming links?**]\r\n\r\nLink names should make it easy for the user to know where they are going.  Some good rules are:\r\n\r\n1. Give the link a good description that makes sense even without reading all the text around it. For example, \"go here\" or \"learn more\" don't tell you where you are going or what you are learning.\r\n2. Give a link name in regular text, rather that just repeating the URL in the link name. For example, \"Home\" or \"Home Page\" are easier to read than \"index.html\".\r\n3. Don't link too much text.  Readers will not understand specifically what the link is about.\r\n\r\n\r\n\r\n:::\r\n</div>\r\n\r\nJust like images and files, links should have clear names that help someone understand what page they are linked to.\r\n\r\n# Do This\r\n* Read the code or click on the links to see where they go.\r\n* Change the names of the links to make it clear where they will take you.",
     "instructions_important": "false",
@@ -13,24 +9,28 @@
     "parent_level_id": 20083,
     "name_suffix": "_2022",
     "reference_links": [
-      "/docs/concepts/css/classes/",
-      "/docs/concepts/css/layout-properties/",
-      "/docs/concepts/css/body-styling/",
-      "/docs/concepts/html/images-in-html/",
-      "/docs/concepts/other/creative-commons-search/",
-      "/docs/concepts/css/style-sheets/",
-      "/docs/concepts/css/text-properties/",
-      "/docs/concepts/html/formatting-html/",
-      "/docs/concepts/html/lists/",
-      "/docs/concepts/html/headings-and-paragraphs/",
-      "/docs/concepts/html/html-tags/"
+      "/courses/csd-2022/guides/classes",
+      "/courses/csd-2022/guides/layout-properties",
+      "/courses/csd-2022/guides/body-styling",
+      "/courses/csd-2022/guides/images-in-html",
+      "/courses/csd-2022/guides/creative-commons-search",
+      "/courses/csd-2022/guides/style-sheets",
+      "/courses/csd-2022/guides/text-properties",
+      "/courses/csd-2022/guides/formatting-html",
+      "/courses/csd-2022/guides/lists",
+      "/courses/csd-2022/guides/headings-and-paragraphs",
+      "/courses/csd-2022/guides/html-tags"
     ],
-    "map_reference": "/docs/concepts/html/hyperlinks/",
+    "map_reference": "/courses/csd-2022/guides/hyperlinks",
     "encrypted": "false",
     "mini_rubric": "false",
     "validation_enabled": "true",
     "encrypted_examples": "KHdSP8/OVLlyRjy10J3cm2rh/Wbh4vNj4fELcZ5DfwzqPHr/oCR7cKCaAQKb\nNbMVGNhItMRrQzyKmCzlttRUAA==\n"
   },
+  "level_num": "custom",
+  "game_id": 58,
+  "created_at": "2022-03-30T23:33:28.000Z",
+  "user_id": 155,
   "published": true,
   "notes": "",
   "audit_log": "[{\"changed_at\":\"2022-03-30T23:33:28.467+00:00\",\"changed\":[\"cloned from \\\"CSD U2 naming links_2021\\\"\"],\"cloned_from\":\"CSD U2 naming links_2021\"}]"

@@ -15,12 +15,13 @@
         "artist"
       ],
       "project_widget_visible": true,
+      "tts": true,
       "version_year": "2022"
     },
     "new_name": null,
     "family_name": "express",
-    "serialized_at": "2022-04-21 16:36:26 UTC",
-    "published_state": "beta",
+    "serialized_at": "2022-11-17 16:57:03 UTC",
+    "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
     "participant_audience": "student",
@@ -604,7 +605,7 @@
       "relative_position": 24,
       "properties": {
         "overview": "In this **skill-building** lesson, students will use variables to track a value that changes over time, like a counter. This lesson also includes a short **mini-project** in which students create a simple game.",
-        "preparation": "Play through the levels and review the **lesson slides**.\n",
+        "preparation": "Play through the levels and review the lesson plan.\n",
         "purpose": "In previous lessons, students learn to use variables to store data that can be retrieved later. In this lesson, students will begin learning to modify the data stored in a variable. This key understanding of how variables work will also enable them to create more advanced projects.",
         "student_overview": "You will learn to use variables to make a counter or keep track of a score in a game."
       },
@@ -4890,7 +4891,7 @@
       "key": "aa72fe0f-492d-4c13-827d-43918664378e",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show next slide\n\n**Discuss**: _Which of the following types of information change over time?_ \n* _Your first name_\n* _Your birthday_\n* _Your height_\n* _Your age_\n* _The temperature outside_\n* _The answer to 2+2_\n* _The capital of our country_\n* _Today’s date_\n* _The score in a game_\n\n**Do This**: Have students discuss which information would change over time and which would not. Some items might generate a larger discussion. For example, it is possible to change your first name or use a nickname. Also, over time, your height will stop changing.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\n**Reflect**: _When is it useful to change what is stored in a variable?_\n\n**Discussion goal**: Students should understand that they can create a variable that stores information that either stays the same or changes over time. In a game with points, a variable is responsible for keeping track of a user’s score throughout the game. Typically, this variable starts out being set to 0 and increases by 1 for every point that the user scores. The final score is reported at the end by printing out the variable. \n",
+        "description": "**Discuss**: _Which of the following types of information change over time?_ \n* _Your first name_\n* _Your birthday_\n* _Your height_\n* _Your age_\n* _The temperature outside_\n* _The answer to 2+2_\n* _The capital of our country_\n* _Today’s date_\n* _The score in a game_\n\n**Do This**: Have students discuss which information would change over time and which would not. Some items might generate a larger discussion. For example, it is possible to change your first name or use a nickname. Also, over time, your height will stop changing.\n\n**Reflect**: _When is it useful to change what is stored in a variable?_\n\n**Discussion goal**: Students should understand that they can create a variable that stores information that either stays the same or changes over time. In a game with points, a variable is responsible for keeping track of a user’s score throughout the game. Typically, this variable starts out being set to 0 and increases by 1 for every point that the user scores. The final score is reported at the end by printing out the variable. \n",
         "name": "Introduction"
       },
       "seeding_key": {
@@ -4915,19 +4916,8 @@
       }
     },
     {
-      "key": "b3d0f826-5e87-4ad6-bd1d-5ea404c1ba6c",
-      "position": 3,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show next slide"
-      },
-      "seeding_key": {
-        "activity_section.key": "b3d0f826-5e87-4ad6-bd1d-5ea404c1ba6c",
-        "lesson_activity.key": "9ce3273c-9779-4593-a194-f2587287f9dd"
-      }
-    },
-    {
       "key": "19ee68f8-7ad7-4cc9-bcff-866ac6ed254b",
-      "position": 4,
+      "position": 3,
       "properties": {
         "description": "The value stored in a variable can change over time.\n\nWhen we start, our count variable is set to 0. After a few seconds, it increases by 1.",
         "remarks": true
@@ -4939,9 +4929,9 @@
     },
     {
       "key": "d51c423f-e3c0-482f-be51-85c0ea2fac87",
-      "position": 5,
+      "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show next slide\n\n**Do this**: Use the lesson slides to review the vocabulary for this lesson. Be sure that students can recall from the lesson where they saw each of these concepts.\n\n\n",
+        "description": "**Do this**: Use the lesson slides to review the vocabulary for this lesson. Be sure that students can recall from the lesson where they saw each of these concepts.\n\n\n",
         "name": "Review"
       },
       "seeding_key": {
@@ -4951,7 +4941,7 @@
     },
     {
       "key": "089b93b5-a7a3-4fb6-849e-44a9e14b4313",
-      "position": 6,
+      "position": 5,
       "properties": {
         "description": "When a user enters information into a prompt, the computer stores it with a variable. The prompt can also trigger an event. If the code uses a variable, the computer will look for a matching label to find the stored information.",
         "remarks": true
@@ -4963,7 +4953,7 @@
     },
     {
       "key": "be0c1c94-6eec-4c10-b90f-59da0ebb1a63",
-      "position": 7,
+      "position": 6,
       "properties": {
         "tips": [
           {
@@ -4992,7 +4982,7 @@
       "key": "b2d87065-8954-443d-a9be-bb206b411b24",
       "position": 2,
       "properties": {
-        "description": "####Prediction (3 minutes)\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 1 - Predict” slide\n\n**Do this**: Have students read the provided code and make a prediction about what will happen. After pressing “Run”, provide time for students to reflect on anything they found interesting or that surprised them.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 2 - Predict” slide\n\n**Do this**: Have students read the provided code and make a prediction about what will happen. After pressing “Run”, provide time for students to reflect on anything they found interesting or that surprised them.",
+        "description": "####Prediction (3 minutes)\n\n**Do this**: Have students read the provided code and make a prediction about what will happen. After pressing “Run”, provide time for students to reflect on anything they found interesting or that surprised them.\n\n**Do this**: Have students read the provided code and make a prediction about what will happen. After pressing “Run”, provide time for students to reflect on anything they found interesting or that surprised them.",
         "progression_name": "Prediction"
       },
       "seeding_key": {
@@ -5020,7 +5010,7 @@
       "key": "93c42114-b7e6-4d21-9e93-0760e125a7b9",
       "position": 4,
       "properties": {
-        "description": "####Skill Building and Exploration (10 mins)\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 3-5 - Skill Building” slide\n\n**Transition**: Move students to their computers. Encourage students to follow the instructions for each level.\n \n",
+        "description": "####Skill Building and Exploration (10 mins)\n\n**Transition**: Move students to their computers. Encourage students to follow the instructions for each level.\n \n",
         "progression_name": "Skill Building"
       },
       "seeding_key": {
@@ -5032,7 +5022,6 @@
       "key": "a88f91f8-569f-40db-a8f8-700323940f53",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 6 - Exploration” slide",
         "progression_name": "Exploration: Clicker Game"
       },
       "seeding_key": {
@@ -5044,7 +5033,7 @@
       "key": "92b27a47-c534-4671-afd1-23a3586897c9",
       "position": 6,
       "properties": {
-        "description": "####Mini-Project (17 mins)\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 7-11 - Clicker Game” slide\n",
+        "description": "####Mini-Project (17 mins)\n\n",
         "progression_name": "Mini-Project: Clicker Game"
       },
       "seeding_key": {
@@ -5056,7 +5045,7 @@
       "key": "b8a87ad4-50ba-433f-8c86-27093af1fafd",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\n**Reflect**: _How did you use variables in your game?_\n\n**Discussion goal**: Students should understand that the variables in their game stored a value that changed over time. A variable’s value can set directly in the code, modified as a user interacts with an app, or input directly such as with a prompt.",
+        "description": "**Reflect**: _How did you use variables in your game?_\n\n**Discussion goal**: Students should understand that the variables in their game stored a value that changed over time. A variable’s value can set directly in the code, modified as a user interacts with an app, or input directly such as with a prompt.",
         "name": "Reflect"
       },
       "seeding_key": {
@@ -9990,31 +9979,6 @@
       "assessment": false,
       "properties": {
         "level_keys": [
-          "Overworld Powered Minecart2022"
-        ],
-        "progression": "Skill Building"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "Overworld Powered Minecart2022"
-        ],
-        "lesson.key": "Looking Ahead with Minecraft",
-        "lesson_group.key": "csf_conditionals",
-        "script.name": "express-2022",
-        "activity_section.key": "83daad31-f1c9-4d21-897b-a291d39f55df"
-      },
-      "level_keys": [
-        "Overworld Powered Minecart2022"
-      ]
-    },
-    {
-      "chapter": 182,
-      "position": 10,
-      "activity_section_position": 10,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
           "Underground Mining Coal2022"
         ],
         "progression": "Skill Building"
@@ -10031,6 +9995,31 @@
       },
       "level_keys": [
         "Underground Mining Coal2022"
+      ]
+    },
+    {
+      "chapter": 182,
+      "position": 10,
+      "activity_section_position": 10,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Underground Iron2022"
+        ],
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Underground Iron2022"
+        ],
+        "lesson.key": "Looking Ahead with Minecraft",
+        "lesson_group.key": "csf_conditionals",
+        "script.name": "express-2022",
+        "activity_section.key": "83daad31-f1c9-4d21-897b-a291d39f55df"
+      },
+      "level_keys": [
+        "Underground Iron2022"
       ]
     },
     {
@@ -10092,14 +10081,14 @@
       "assessment": false,
       "properties": {
         "level_keys": [
-          "Underground Iron2022"
+          "Overworld Powered Minecart2022"
         ],
         "progression": "Challenge"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "Underground Iron2022"
+          "Overworld Powered Minecart2022"
         ],
         "lesson.key": "Looking Ahead with Minecraft",
         "lesson_group.key": "csf_conditionals",
@@ -10107,7 +10096,7 @@
         "activity_section.key": "47b5c27a-db1c-4abd-a3c9-4d90561d7d79"
       },
       "level_keys": [
-        "Underground Iron2022"
+        "Overworld Powered Minecart2022"
       ]
     },
     {
@@ -16880,9 +16869,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "Overworld Powered Minecart2022",
+        "level.key": "Underground Mining Coal2022",
         "script_level.level_keys": [
-          "Overworld Powered Minecart2022"
+          "Underground Mining Coal2022"
         ],
         "lesson.key": "Looking Ahead with Minecraft",
         "lesson_group.key": "csf_conditionals",
@@ -16892,9 +16881,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "Underground Mining Coal2022",
+        "level.key": "Underground Iron2022",
         "script_level.level_keys": [
-          "Underground Mining Coal2022"
+          "Underground Iron2022"
         ],
         "lesson.key": "Looking Ahead with Minecraft",
         "lesson_group.key": "csf_conditionals",
@@ -16928,9 +16917,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "Underground Iron2022",
+        "level.key": "Overworld Powered Minecart2022",
         "script_level.level_keys": [
-          "Underground Iron2022"
+          "Overworld Powered Minecart2022"
         ],
         "lesson.key": "Looking Ahead with Minecraft",
         "lesson_group.key": "csf_conditionals",
@@ -19243,18 +19232,6 @@
       }
     },
     {
-      "name": "Making Sprites",
-      "url": "https://docs.google.com/presentation/d/1u8gueXrKIKoYNgTxbr3bIvmbVlCsJcVT7qcDeqsOh1U/template/preview\t",
-      "key": "making_sprites",
-      "properties": {
-        "audience": "Teacher",
-        "type": "Slides"
-      },
-      "seeding_key": {
-        "resource.key": "making_sprites"
-      }
-    },
-    {
       "name": "Open-ended Programming Levels",
       "url": "https://docs.google.com/document/d/1f2ayrjpWKVWqydZWZFTtXbDWZDdKcNIg4kGaOLB2o3U/view",
       "key": "open-ended_programming_levels",
@@ -19545,12 +19522,6 @@
       "seeding_key": {
         "lesson.key": "Loops with Rey and BB-8",
         "resource.key": "unplugged_blocks_courses_c-f_"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Making Sprites",
-        "resource.key": "making_sprites"
       }
     },
     {

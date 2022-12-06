@@ -252,7 +252,6 @@ bs:
     popup:
       progress_for_user: Napredak za %{name}
       progress: Tvoj napredak
-      lines: 'Ukupno linija kôda: %{lines}'
       close: ZATVORI
       mastery: Pojmovi
       puzzle_map: Faze
@@ -355,6 +354,7 @@ bs:
     no_primary_course: Probajte Code Studio kurs
     choose_next_course: Probajte Code Studio kurs odabirom sljedećih opcija dole
     print_certificate: Ispiši Diplomu
+  certificate_hour_of_code: Sat Kodiranja
   move_students:
     all_students_must_be_in_current_section: Svi učenici trenutno moraju biti upisani
       u vaše odjeljenje.
@@ -693,13 +693,18 @@ bs:
         cs: Računarstvo
         math: Matematika
         science: Nauka
+        other: Ostalo
       resources:
         kodable: Kodable
+        other: Ostalo
       robotics:
         kodable: Kodable
+        other: Ostalo
       email_opt_in:
         opt_in_yes: Da
         opt_in_no: Ne
   cookie_banner:
     accept: Slažem se
   copy: Kopiraj
+  pixelation:
+    binary: Binarno

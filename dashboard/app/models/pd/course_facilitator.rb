@@ -13,10 +13,10 @@
 #
 
 class Pd::CourseFacilitator < ApplicationRecord
-  belongs_to :facilitator, class_name: 'User'
+  belongs_to :facilitator, class_name: 'User', optional: true
 
   validates_inclusion_of :course, in: Pd::Workshop::COURSES
-  validates_uniqueness_of :course, scope: :facilitator_id
+  validates_uniqueness_of :course, scope: :facilitator_id, case_sensitive: true
 
   def self.facilitators_for_course(course)
     User.joins(:courses_as_facilitator).

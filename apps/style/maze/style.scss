@@ -1,12 +1,12 @@
-$root: '/blockly/media/maze/'; //TODO: Parameterize for asset pipeline
+$root: "/blockly/media/maze/"; //TODO: Parameterize for asset pipeline
 $green: #00b050;
 
 #svgMaze {
-  border: solid 1px #DBDBDB;
+  border: solid 1px #dbdbdb;
 }
 
 /* 'Look' icon */
-#look>path {
+#look > path {
   display: none;
   fill: none;
   stroke-width: 10;
@@ -21,13 +21,13 @@ $green: #00b050;
   background-image: url("#{$root}icons.png");
 }
 .code {
-  background-position: -21px 0px;
+  background-position: -21px 0;
 }
 .link {
-  background-position: 0px 0px;
+  background-position: 0 0;
 }
 .run {
-  background-position: 0px -21px;
+  background-position: 0 -21px;
   margin-right: 3px;
 }
 .stop {
@@ -76,7 +76,6 @@ $green: #00b050;
 
   border: 1px solid $green;
   cursor: default;
-  disabled: true;
   text-align: center;
 }
 

@@ -77,6 +77,9 @@ Resources:
       ReplicationInstanceClass: dms.r4.4xlarge
       ReplicationSubnetGroupIdentifier: !ImportValue VPC-DMSSubnetGroup
       VpcSecurityGroupIds: [!ImportValue VPC-DMSSecurityGroup]
+      # This maintenance can interfere with the daily export from MySQL to Redshift which starts at 02:00 UTC, so set it
+      # to start at least 1 hour before the export begins.
+      PreferredMaintenanceWindow: 'Tue:01:00-Tue:01:30'
   # Note that this is an incomplete set of Policies attached to the
   # redshift-s3 Role. The Role itself and other Policies were generated manually
   # in the AWS Console, and we should continue to move these Resources here over time.
@@ -216,16 +219,6 @@ Resources:
                   - 's3:ListBucket'
                 Resource: 'arn:aws:s3:::cdo-activities-archive'
       PermissionsBoundary: !ImportValue IAM-DevPermissions
-<%
-  YAML.load(erb_file(aws_dir('cloudformation/db_parameters.yml.erb'))).each do |key, values|
--%>
-  <%=key%>DBParameters:
-    Type: AWS::RDS::DB<%=key.match('Cluster')%>ParameterGroup
-    Properties:
-      Description: !Sub "<%=key.titleize%> DB Parameters for ${AWS::StackName}."
-      Family: <%=key.include?('Aurora') ? 'aurora-' : ''%>mysql5.7
-      Parameters: <%=values.compact.to_json%>
-<%end -%>
 <%
   # Add CloudWatch Logs Metric Filters for RDS Enhanced Monitoring metrics.
   # Ref: https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_Monitoring.OS.html#w2ab1c20c23c17b7b5

@@ -15,7 +15,7 @@ export default class LandingPage extends Component {
   static propTypes = {
     lastWorkshopSurveyUrl: PropTypes.string,
     lastWorkshopSurveyCourse: PropTypes.string,
-    professionalLearningCourseData: PropTypes.array
+    deeperLearningCourseData: PropTypes.array
   };
 
   render() {
@@ -33,11 +33,9 @@ export default class LandingPage extends Component {
           />
         )}
         <EnrolledWorkshops />
-        {this.props.professionalLearningCourseData && (
+        {this.props.deeperLearningCourseData && (
           <ProfessionalLearningCourseProgress
-            professionalLearningCourseData={
-              this.props.professionalLearningCourseData
-            }
+            deeperLearningCourseData={this.props.deeperLearningCourseData}
           />
         )}
       </div>

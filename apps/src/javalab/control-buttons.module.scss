@@ -1,0 +1,49 @@
+@import "color.scss";
+
+%control-button {
+  float: left;
+  font-size: 15px;
+  width: 140px;
+  background-color: $orange;
+  border-color: $orange;
+  font-family: "Gotham 5r", sans-serif;
+  padding: 5px 12px;
+  margin: 5px 0 5px 5px;
+  justify-content: center;
+
+  &:hover {
+    color: $white;
+    box-shadow: none;
+  }
+}
+
+.button {
+  &Orange {
+    @extend %control-button;
+  }
+
+  &Blue {
+    @extend %control-button;
+    background-color: $cyan;
+    border-color: $cyan;
+  }
+
+  &White {
+    @extend %control-button;
+    background-color: $white;
+    border-color: $dark_charcoal;
+    color: $dark_charcoal;
+
+    &:hover {
+      color: $dark_charcoal;
+    }
+  }
+}
+
+.leftButtons {
+  float: left;
+}
+
+.rightButtons {
+  float: right;
+}

@@ -938,6 +938,12 @@
   coursed-2021_gradelevel: Grade 8+
   coursee-2021_gradelevel: Ages 8-12
   coursef-2021_gradelevel: Ages 9-13
+  coursea-2022_gradelevel: Ages 4-7
+  courseb-2022_gradelevel: Ages 5-8
+  coursec-2022_gradelevel: Ages 6-10
+  coursed-2022_gradelevel: Grade 8+
+  coursee-2022_gradelevel: Ages 8-12
+  coursef-2022_gradelevel: Ages 9-13
   accelerated_gradelevel: "Ages 10-18"
   codeorg_platformtext: "Modern browsers, smartphones, tablets"
   codeintl_platformtext: "Modern browsers, smartphones, tablets"
@@ -1319,3 +1325,4 @@
   ai_microsoft_thanks: "प्रत्येक बच्चालाई कम्प्युटर विज्ञान सिकाउने र २१ औं शताब्दीमा सफल हुने सीपहरु सुनिश्चित गर्न हाम्रो दृष्टि र मिशनलाई समर्थन गरेकोमा हामी माइक्रोसफ्टलाई धन्यवाद दिन्छौं ।\n\n"
   ai_activity: "गतिविधि"
   ai_description: "वर्णन"
+  hoc2022_landing_page_create_title: "बनाउनुहोस्"

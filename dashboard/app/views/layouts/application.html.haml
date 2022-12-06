@@ -31,7 +31,6 @@
     = render inline: File.read(Rails.root.join('..', 'shared', 'haml', 'answerdash.haml')), type: :haml if view_options[:answerdash]
     = javascript_include_tag 'application'
     %script{src: webpack_asset_path("js/#{js_locale}/common_locale.js")}
-    = javascript_include_tag 'https://cdn.optimizely.com/js/12977480133.js' if Rails.env.production?
     %script{src: webpack_asset_path('js/code-studio-common.js')}
     = csrf_meta_tags
     -# Load the manifest.webmanifest for Maze if user is in the offline pilot

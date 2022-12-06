@@ -5,7 +5,7 @@ import ProtectedStatefulDiv from './ProtectedStatefulDiv';
 import commonStyles from '../commonStyles';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
-import Radium from 'radium';
+import Radium from 'radium'; // eslint-disable-line no-restricted-imports
 import SkipButton from './SkipButton';
 import {connect} from 'react-redux';
 

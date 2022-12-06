@@ -34,16 +34,6 @@ else
   exit 1
 fi
 
-if [ -n "$DRONE" ]; then
-  CODECOV=/tmp/codecov.sh
-  curl -s https://codecov.io/bash > ${CODECOV}
-  chmod +x ${CODECOV}
-  CODECOV="$CODECOV -C $DRONE_COMMIT_SHA"
-else
-  # For non-Drone runs, stub-out codecov.
-  CODECOV=: # stub
-fi
-
 GRUNT_CMD="node --max_old_space_size=${MEM_PER_PROCESS} `npm bin`/grunt"
 $GRUNT_CMD preconcat
 
@@ -52,13 +42,15 @@ PARALLEL="parallel --will-cite --halt 2 -j ${PROCS} --joblog - :::"
 
 ${PARALLEL} <<SCRIPT
 npm run lint
-(PORT=9876 ${GRUNT_CMD} unitTest && ${CODECOV} -cF unit)
-(PORT=9877 $GRUNT_CMD storybookTest && ${CODECOV} -cF storybook)
-(PORT=9879 LEVEL_TYPE='turtle' $GRUNT_CMD karma:integration && ${CODECOV} -cF integration)
-(PORT=9880 LEVEL_TYPE='maze|calc|eval' $GRUNT_CMD karma:integration && ${CODECOV} -cF integration)
-(PORT=9881 LEVEL_TYPE='gamelab' $GRUNT_CMD karma:integration && ${CODECOV} -cF integration)
-(PORT=9882 LEVEL_TYPE='craft' $GRUNT_CMD karma:integration && ${CODECOV} -cF integration)
-(PORT=9883 LEVEL_TYPE='applab1' $GRUNT_CMD karma:integration && ${CODECOV} -cF integration)
-(PORT=9884 LEVEL_TYPE='applab2' $GRUNT_CMD karma:integration && ${CODECOV} -cF integration)
-(PORT=9885 LEVEL_TYPE='studio' $GRUNT_CMD karma:integration && ${CODECOV} -cF integration)
+
+PORT=9876 $GRUNT_CMD unitTest
+PORT=9877 $GRUNT_CMD storybookTest
+
+PORT=9879 LEVEL_TYPE='turtle' $GRUNT_CMD karma:integration
+PORT=9880 LEVEL_TYPE='maze|calc|eval' $GRUNT_CMD karma:integration
+PORT=9881 LEVEL_TYPE='gamelab' $GRUNT_CMD karma:integration
+PORT=9882 LEVEL_TYPE='craft' $GRUNT_CMD karma:integration
+PORT=9883 LEVEL_TYPE='applab1' $GRUNT_CMD karma:integration
+PORT=9884 LEVEL_TYPE='applab2' $GRUNT_CMD karma:integration
+PORT=9885 LEVEL_TYPE='studio' $GRUNT_CMD karma:integration
 SCRIPT

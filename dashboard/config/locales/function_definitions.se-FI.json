@@ -627,6 +627,135 @@
           "function 2": {
             "name": "funkšuvdna 2"
           }
+        },
+        "Auto Open Function Editor": {
+          "draw a shape": {
+            "name": "tevdne hámi",
+            "parameters": {
+              "sides": "siiddut"
+            }
+          }
+        },
+        "MC Agent Freeplay": {
+          "function 1": {
+            "name": "funkšuvdna 1"
+          },
+          "function 2": {
+            "name": "funkšuvdna 2"
+          }
+        },
+        "Course E: Artist Project_examples2022": {
+          "my function": {
+            "name": "mu funkšuvdna"
+          }
+        },
+        "Course E: Frozen Project_examples2022": {
+          "draw a star": {
+            "description": "tevdne nástti mearriduvvon čuoggáiguin ja siidduiguin main leat mearriduvvon guhkkodagat"
+          },
+          "draw a circle": {
+            "description": "tevdne jorbbá mas lea mearriduvvon rádius",
+            "parameters": {
+              "radius": "rádius"
+            }
+          },
+          "draw a pinwheel": {
+            "name": "tevdne bieggamillu",
+            "parameters": {
+              "sides": "siiddut"
+            }
+          },
+          "draw a shape": {
+            "name": "tevdne hámi",
+            "parameters": {
+              "sides": "siiddut"
+            }
+          },
+          "draw a square": {
+            "parameters": {
+              "sides": "siiddut"
+            }
+          }
+        },
+        "CourseD_EOC_artist2022": {
+          "draw a star": {
+            "description": "tevdne nástti mearriduvvon čuoggáiguin ja siidduiguin main leat mearriduvvon guhkkodagat"
+          },
+          "draw a circle": {
+            "description": "tevdne jorbbá mas lea mearriduvvon rádius",
+            "parameters": {
+              "radius": "rádius"
+            }
+          },
+          "draw a pinwheel": {
+            "name": "tevdne bieggamillu",
+            "parameters": {
+              "sides": "siiddut"
+            }
+          },
+          "draw a shape": {
+            "name": "tevdne hámi",
+            "parameters": {
+              "sides": "siiddut"
+            }
+          }
+        },
+        "CourseD_EOC_artist_example20212022": {
+          "draw a star": {
+            "description": "tevdne nástti mearriduvvon čuoggáiguin ja siidduiguin main leat mearriduvvon guhkkodagat"
+          },
+          "draw a circle": {
+            "description": "tevdne jorbbá mas lea mearriduvvon rádius",
+            "parameters": {
+              "radius": "rádius"
+            }
+          },
+          "draw a pinwheel": {
+            "name": "tevdne bieggamillu",
+            "parameters": {
+              "sides": "siiddut"
+            }
+          },
+          "draw a shape": {
+            "name": "tevdne hámi",
+            "parameters": {
+              "sides": "siiddut"
+            }
+          }
+        },
+        "Function intro Ryan2022": {
+          "build bridge": {
+            "name": "hukse šaldi"
+          }
+        },
+        "MC_HOC_2017_07_Cole2022": {
+          "clear path": {
+            "name": "sihko geainnu"
+          }
+        },
+        "MC_HOC_2017_10_RETRY2022": {
+          "fix long path": {
+            "name": "divus guhkes geainnu"
+          },
+          "fix short path": {
+            "name": "divus oanehis geainnu"
+          }
+        },
+        "MC_HOC_2017_Ali2022": {
+          "build short bridge": {
+            "name": "hukse oanehis šaldi"
+          },
+          "build long bridge": {
+            "name": "hukse guhkes šaldi"
+          }
+        },
+        "MC_HOC_2017_FP20x202022": {
+          "function 1": {
+            "name": "funkšuvdna 1"
+          },
+          "function 2": {
+            "name": "funkšuvdna 2"
+          }
         }
       }
     }

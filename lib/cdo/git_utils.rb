@@ -116,13 +116,13 @@ module GitUtils
   # Given a branch name, returns its likely base branch / merge destination
   def self.branch_to_base(branch_name)
     case branch_name
-      when 'staging'
-        'origin/test'
-      when 'test'
-        'origin/production'
-      else # levelbuilder, feature branches, etc.
-        # In Continuous Integration (Drone) builds, use the base branch of the Pull Request, which might be staging-next.
-        CDO.ci ? "origin/#{circle_pr_branch_base_no_origin}" : 'origin/staging'
+    when 'staging'
+      'origin/test'
+    when 'test'
+      'origin/production'
+    else # levelbuilder, feature branches, etc.
+      # In Continuous Integration (Drone) builds, use the base branch of the Pull Request, which might be staging-next.
+      CDO.ci ? "origin/#{circle_pr_branch_base_no_origin}" : 'origin/staging'
     end
   end
 

@@ -32,7 +32,7 @@ class QueuedAccountPurge < ApplicationRecord
   # Un-scope the user association to always include soft-deleted users.
   # This lets us say `joins(:user)` below and not get the `deleted_at is null`
   # part of the generated query.
-  belongs_to :user, -> {with_deleted}
+  belongs_to :user, -> {with_deleted}, optional: true
 
   # Some errors are known to be intermittent, such as external services being temporarily
   # unavailable. If an account purge was queued for one of these reasons, our system can

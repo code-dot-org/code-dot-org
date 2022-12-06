@@ -56,7 +56,7 @@ class TestMilestoneParser < Minitest::Test
         ]}
       ]
     )
-    @cache = JSON.parse(IO.read(CACHE_FILE))
+    @cache = JSON.parse(File.read(CACHE_FILE))
   end
 
   def test_parse_create_cache
@@ -65,7 +65,7 @@ class TestMilestoneParser < Minitest::Test
     assert_equal 90, count
     assert_equal 6, @fetch_count
     assert_equal parser.cache, @cache
-    assert_equal LOG_SIZE * 3 + 20 * 3, @bytes_count
+    assert_equal (LOG_SIZE * 3) + (20 * 3), @bytes_count
   end
 
   def test_parse_fully_cached

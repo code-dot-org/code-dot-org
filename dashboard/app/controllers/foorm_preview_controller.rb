@@ -47,6 +47,7 @@ class FoormPreviewController < ApplicationController
           facilitator_position: 3
         }
       ],
+      workshop_id: params[:workshopId] || 1,
       workshop_course: params[:workshopCourse] || "Summer Course",
       workshop_subject: params[:workshopSubject] || "Sample Subject",
       regional_partner_name: params[:regionalPartnerName] || "Regional Partner A",

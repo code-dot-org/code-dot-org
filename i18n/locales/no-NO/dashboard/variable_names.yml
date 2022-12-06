@@ -24,6 +24,7 @@
       sides: Sider
       size: størrelse
       speed: fart
+      type: type
       variable: variabel
       width: bredde
       wizard: trollmann

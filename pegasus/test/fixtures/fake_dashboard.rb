@@ -298,7 +298,10 @@ module FakeDashboard
   # We might want to extract the test data to individual tests in the future,
   # or provide an explicit way to request certain test-data setups.
   def self.create_fake_dashboard_db
+    # rubocop:disable Security/YAMLLoad
     database = YAML.load(ERB.new(File.new(dashboard_dir('config/database.yml')).read).result) || {}
+    # rubocop:enable Security/YAMLLoad
+
     # Temporary tables aren't shared across multiple database connections.
     database['test']['primary']['pool'] = 1
 

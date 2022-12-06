@@ -1,13 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import EnhancedSafeMarkdown from '@cdo/apps/templates/EnhancedSafeMarkdown';
 import {
   NavigationBar,
   NavigationCategory,
   NavigationItem
 } from '@cdo/apps/templates/NavigationBar';
 import {organizeReferenceGuides} from '@cdo/apps/util/referenceGuideHelpers';
-import {Link} from '@dsco_/link';
+import ReferenceGuide from '@cdo/apps/templates/referenceGuides/ReferenceGuide';
 
 const referenceGuideShape = PropTypes.shape({
   display_name: PropTypes.string,
@@ -63,15 +62,7 @@ export default function ReferenceGuideView({
             </NavigationCategory>
           ))}
         </NavigationBar>
-        <div>
-          <EnhancedSafeMarkdown markdown={referenceGuide.content} />
-          <p>
-            Found a bug in the documentation? Let us know at{' '}
-            <Link href={`mailto:documentation@code.org`}>
-              documentation@code.org
-            </Link>
-          </p>
-        </div>
+        <ReferenceGuide referenceGuide={referenceGuide} />
       </div>
     </>
   );

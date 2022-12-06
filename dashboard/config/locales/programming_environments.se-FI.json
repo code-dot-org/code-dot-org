@@ -1,0 +1,49 @@
+{
+  "se-FI": {
+    "data": {
+      "programming_environments": {
+        "gamelab": {
+          "categories": {
+            "sprites": {
+              "name": "Sprite:at"
+            },
+            "groups": {
+              "name": "Joavkkut"
+            }
+          }
+        },
+        "applab": {
+          "description": "App Lab lea programmerenbiras gos sáhtát ráhkadit eaŋkilis app:aid. Ráhkat app:a, koda blohkaiguin dahje JavaScript:ain oažžut dán doaibmat, ja de juoge app:a jođánit.",
+          "categories": {
+            "advanced": {
+              "name": "Avanserta"
+            }
+          }
+        },
+        "spritelab": {
+          "name": "Sprite-lab",
+          "categories": {
+            "sprites": {
+              "name": "Sprite:at"
+            },
+            "world": {
+              "name": "Máilbmi"
+            },
+            "location": {
+              "name": "Báikkit"
+            },
+            "events": {
+              "name": "Dáhpáhusaid"
+            },
+            "behaviors": {
+              "name": "Láhttemat"
+            },
+            "comments": {
+              "name": "Kommentárat"
+            }
+          }
+        }
+      }
+    }
+  }
+}

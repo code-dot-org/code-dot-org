@@ -2,17 +2,966 @@
   "sq-AL": {
     "data": {
       "lessons": {
+        "dance-extras/Dance Party - Go Further": {
+          "name": "Vazhdoni të kërceni (2018)",
+          "overview": "Në këtë mësim, nxënësit e të gjitha moshave marrin një përvojë hyrëse me kodimin dhe shkencën kompjuterike në një mjedis të sigurt dhe mbështetës. Ky mësim është krijuar për nxënës të të gjitha moshave, por kërkon lexim. Ky aktivitet kërkon zë pasi mjeti është ndërtuar për t'iu përgjigjur muzikës.",
+          "preparation": "-   Rishikoni dhe plotësoni vetë tutorialin në internet: [Dance Party](https://studio.code.org/s/dance-extras/lessons/1/levels/1)\n-   Sigurohuni që ta provoni fillimisht përpara se t'u kërkoni studentëve tuaj ta plotësojnë atë. Kontrolloni teknologjinë tuaj dhe vendosni nëse keni nevojë të zgjidhni ndonjë problem përpara Orës së Kodit.",
+          "purpose": "Ky mësim prezanton konceptet thelbësore CS të kodimit dhe programimit të ngjarjeve (duke përdorur blloqe).",
+          "student_overview": "Në këtë mësim, nxënësit e të gjitha moshave marrin një përvojë hyrëse me kodimin dhe shkencën kompjuterike në një mjedis të sigurt dhe mbështetës. Ky mësim është krijuar për nxënës të të gjitha moshave, por kërkon lexim. Ky aktivitet kërkon zë pasi mjeti është ndërtuar për t'iu përgjigjur muzikës."
+        },
+        "minecraft/Minecraft Hour of Code Designer": {
+          "name": "Dizenjo Minecraft-in e Orës së Kodimit",
+          "overview": "Në këtë mësim, nxënësit e të gjitha moshave marrin një përvojë hyrëse me kodimin dhe shkencën kompjuterike në një mjedis të sigurt dhe mbështetës. Ky mësim funksionon mirë për çdo student që është mjaft i vjetër për të lexuar (mosha 6+). Nxënësit më të vegjël ndoshta nuk do ta përfundojnë tutorialin, por do të argëtohen shumë duke punuar nëpër enigmat për një orë. Nxënësit e shkollave të mesme kryesisht do të përfundojnë tutorialin dhe do të kenë pak kohë për të luajtur në nivelin e lojës falas në fund.",
+          "preparation": "### Një javë përpara orës suaj të kodit\n\n-   Rishikoni [Udhëzuesin e Edukatorit të Orës së Kodit](http://hourofcode.com/resources/how-to/) dhe [Praktikat më të mira nga Edukatorët e Suksesshëm](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) në mënyrë që të filloni të planifikoni ngjarjen tuaj të Orës së Kodit.\n-   [Regjistro ngjarjen tënde të Orës së Kodit](http://hourofcode.com) nëse dëshiron të marrësh suport ose mbështetje në klasë.\n-   Rishikoni dhe plotësoni vetë tutorialin në internet: [Minecraft: Voyage Aquatic](https://studio.code.org/s/minecraft/lessons/1/levels/1)\n-   Sigurohuni që ta provoni fillimisht përpara se t'u kërkoni studentëve tuaj ta plotësojnë atë. Kontrolloni teknologjinë tuaj dhe vendosni nëse keni nevojë të zgjidhni ndonjë problem përpara Orës së Kodit.\n\n### Një ditë përpara orës suaj të kodit\n\n-   Shtypni një ose më shumë prej [Shembujve të Biletës së Daljes](https://docs.google.com/a/code.org/document/d/1ylIlO7Pppk6W3Jt58VHS5mjvnshg9URvj3iCU0Ok6qY/edit?usp=sharing) në fund të këtij plani mësimor, ose krijoni tuajin.\n-   Çdo student që përfundon aktivitetin duhet të marrë një certifikatë. [Print one](https://studio.code.org/certificates/batch?course=bWM=) për të gjithë paraprakisht për ta bërë këtë më të lehtë në fund të Orës së Kodit.",
+          "purpose": "Ky mësim prezanton konceptet thelbësore CS të kodimit dhe programimit (duke përdorur blloqe), si dhe teknika të thjeshta korrigjimi.",
+          "student_overview": "Në këtë mësim, nxënësit e të gjitha moshave marrin një përvojë hyrëse me kodimin dhe shkencën kompjuterike në një mjedis të sigurt dhe mbështetës. Ky mësim funksionon mirë për çdo student që është mjaft i vjetër për të lexuar (mosha 6+). Nxënësit më të vegjël ndoshta nuk do ta përfundojnë tutorialin, por do të argëtohen shumë duke punuar nëpër enigmat për një orë. Nxënësit e shkollave të mesme kryesisht do të përfundojnë tutorialin dhe do të kenë pak kohë për të luajtur në nivelin e lojës falas në fund."
+        },
+        "hero/Minecraft Hour of Code": {
+          "overview": "Në këtë mësim, nxënësit e të gjitha moshave marrin një përvojë hyrëse me kodimin dhe shkencën kompjuterike në një mjedis të sigurt dhe mbështetës. Ky mësim funksionon mirë për çdo student që është mjaft i vjetër për të lexuar (mosha 6+). Nxënësit më të vegjël ndoshta nuk do ta përfundojnë tutorialin, por do të argëtohen shumë duke punuar nëpër enigmat për një orë. Nxënësit e shkollave të mesme kryesisht do të përfundojnë tutorialin dhe do të kenë pak kohë për të luajtur në nivelin e lojës falas në fund.",
+          "preparation": "### Një javë përpara orës suaj të kodit\n\n-   Rishikoni [Udhëzuesin e Edukatorit të Orës së Kodit](http://hourofcode.com/resources/how-to/) dhe [Praktikat më të mira nga Edukatorët e Suksesshëm](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) në mënyrë që të filloni të planifikoni ngjarjen tuaj të Orës së Kodit.\n-   [Regjistro ngjarjen tënde të Orës së Kodit](http://hourofcode.com) nëse dëshiron të marrësh suport ose mbështetje në klasë.\n-   Rishikoni dhe plotësoni vetë tutorialin në internet: [Minecraft: Hero's Journey](studio.code.org/s/hero/lessons/1/levels/1)\n-   Sigurohuni që ta provoni fillimisht përpara se t'u kërkoni studentëve tuaj ta plotësojnë atë. Kontrolloni teknologjinë tuaj dhe vendosni nëse keni nevojë të zgjidhni ndonjë problem përpara Orës së Kodit.\n\n### Një ditë përpara orës suaj të kodit\n\n-   Shtypni një ose më shumë prej [Shembujve të Biletës së Daljes](https://docs.google.com/a/code.org/document/d/1ylIlO7Pppk6W3Jt58VHS5mjvnshg9URvj3iCU0Ok6qY/edit?usp=sharing) në fund të këtij plani mësimor, ose krijoni tuajin.\n-   Çdo student që përfundon aktivitetin duhet të marrë një [certifikatë](https://studio.code.org/certificates/batch?course=bWM=). Printoni një për çdo student paraprakisht për ta bërë këtë më të lehtë në fund të Orës së Kodit.",
+          "purpose": "Ky mësim prezanton konceptet thelbësore të CS të kodimit dhe programimit (duke përdorur blloqe), si dhe teknika të thjeshta korrigjimi dhe se si funksionet mund të jenë të dobishme.",
+          "student_overview": "Në këtë mësim, nxënësit e të gjitha moshave marrin një përvojë hyrëse me kodimin dhe shkencën kompjuterike në një mjedis të sigurt dhe mbështetës."
+        },
+        "poem-art-2021/Poem Art": {
+          "overview": "Në këtë mësim të integruar CS dhe ELA, studentët do të animojnë një poezi me kod për të ilustruar gjendjen shpirtërore të një poezie. Nxënësit do të lexojnë dhe zbulojnë gjendjen shpirtërore të një poezie. Më pas ata do të gjejnë efektet dhe imazhet përkatëse për të ndihmuar në ilustrimin e gjendjes shpirtërore të poemës. Së fundi, studentët do të përdorin ngjarje (kodin) për të ilustruar një ndryshim në humor ose për të animuar paraqitjen e imazheve të reja në një poezi.\n\nKy mësim mund të kryhet si një orë mësimi i pavarur. Ekziston gjithashtu një opsion për ta përdorur këtë mësim si mësimin e parë të modulit me shumë mësime të quajtur [Coding with Poetry](http://studio.code.org/s/poetry-2021)."
+        },
+        "flappy/Flappy Code": {
+          "name": "Kodi Flappy",
+          "overview": "Në këtë mësim, nxënësit marrin një përvojë hyrëse me shkencat kompjuterike dhe krijojnë një lojë duke përdorur kodin bazë të bllokut. Ky mësim është krijuar për nxënësit e klasave të mesme, të moshës 10-16 vjeç, por mund të përshtatet për nxënësit më të rinj ose më të vjetër duke përdorur diferencimin sugjerimet e ofruara.",
+          "preparation": "### Një javë përpara orës suaj të kodit\n\n-   Rishikoni [Udhëzuesin e Edukatorit të Orës së Kodit](http://hourofcode.com/resources/how-to/) dhe [Praktikat më të mira nga Edukatorët e Suksesshëm](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) në mënyrë që të filloni të planifikoni ngjarjen tuaj të Orës së Kodit.\n-   [Regjistro ngjarjen tënde të Orës së Kodit](http://hourofcode.com) nëse dëshiron të marrësh suport ose mbështetje në klasë.\n-   Rishikoni dhe plotësoni vetë tutorialin në internet: [Bëni një lojë Flappy](https://studio.code.org/flappy/1)\n-   Sigurohuni që ta provoni fillimisht përpara se t'u kërkoni studentëve tuaj ta plotësojnë atë. Kontrolloni teknologjinë tuaj dhe vendosni nëse keni nevojë të zgjidhni ndonjë problem përpara Orës së Kodit.\n\n### Një ditë përpara orës suaj të kodit\n\n-   Shkruani fjalët \"kodim\", \"programim\" dhe \"debugging\" në tabelë ose shtoni ato në murin tuaj të fjalëve nëse keni një të tillë.\n-   Çdo student që përfundon aktivitetin duhet të marrë një certifikatë. [Print one](http://code.org/certificates) për të gjithë paraprakisht për ta bërë këtë më të lehtë në fund të Orës së Kodit.",
+          "purpose": "Ky mësim prezanton konceptet thelbësore CS të kodimit dhe programimit (duke përdorur blloqe), si dhe teknika të thjeshta korrigjimi.",
+          "student_overview": "Në këtë mësim, nxënësit marrin një përvojë hyrëse me shkencat kompjuterike dhe krijojnë një lojë duke përdorur kodin bazë të bllokut. Ky mësim është krijuar për nxënësit e klasave të mesme, të moshës 10-16 vjeç, por mund të përshtatet për nxënësit më të rinj ose më të vjetër duke përdorur diferencimin sugjerimet e ofruara."
+        },
+        "hello-world-soccer-2022/Hello World: Food": {
+          "name": "Përshëndetje Botërore: futboll"
+        },
+        "hourofcode/Maze": {
+          "name": "Labirint",
+          "overview": "Në këtë mësim, nxënësit e të gjitha moshave marrin një përvojë hyrëse me kodimin dhe shkencën kompjuterike në një mjedis të sigurt dhe mbështetës. Ky mësim është krijuar për nxënësit e klasave të mesme, të moshës 4-10 vjeç, por mund të përshtatet për nxënësit më të rinj ose më të vjetër duke përdorur sugjerimet e diferencimit të ofruara. Nxënësit duhet të kenë një kuptim bazë të gjeometrisë së thjeshtë dhe të këndeve të vizatimit.",
+          "preparation": "### Një javë përpara orës suaj të kodit\n\n-   Rishikoni [Udhëzuesin e Edukatorit të Orës së Kodit](http://hourofcode.com/resources/how-to/) dhe [Praktikat më të mira nga Edukatorët e Suksesshëm](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) në mënyrë që të filloni të planifikoni ngjarjen tuaj të Orës së Kodit.\n-   [Regjistro ngjarjen tënde të Orës së Kodit](http://hourofcode.com) nëse dëshiron të marrësh suport ose mbështetje në klasë.\n-   Rishikoni dhe plotësoni vetë tutorialin në internet: [Minecraft: Hero's Journey](https://studio.code.org/hoc/1)\n-   Sigurohuni që ta provoni fillimisht përpara se t'u kërkoni studentëve tuaj ta plotësojnë atë. Kontrolloni teknologjinë tuaj dhe vendosni nëse keni nevojë të zgjidhni ndonjë problem përpara Orës së Kodit.\n\n### Një ditë përpara orës suaj të kodit\n\n-   Shtypni një ose më shumë prej [Shembujve të Biletës së Daljes](https://docs.google.com/a/code.org/document/d/1ylIlO7Pppk6W3Jt58VHS5mjvnshg9URvj3iCU0Ok6qY/edit?usp=sharing) në fund të këtij plani mësimor, ose krijoni tuajin.\n-   Çdo student që përfundon aktivitetin duhet të marrë një [certifikatë](http://code.org/certificates). Printoni një për çdo student paraprakisht për ta bërë këtë më të lehtë në fund të Orës së Kodit.",
+          "purpose": "Ky mësim prezanton konceptet thelbësore CS të kodimit dhe programimit (duke përdorur blloqe), si dhe teknika të thjeshta korrigjimi.",
+          "student_overview": "Në këtë mësim, nxënësit e të gjitha moshave marrin një përvojë hyrëse me kodimin dhe shkencën kompjuterike në një mjedis të sigurt dhe mbështetës. Ky mësim është krijuar për nxënësit e klasave të mesme, të moshës 4-10 vjeç, por mund të përshtatet për nxënësit më të rinj ose më të vjetër duke përdorur sugjerimet e diferencimit të ofruara. Nxënësit duhet të kenë një kuptim bazë të gjeometrisë së thjeshtë dhe të këndeve të vizatimit."
+        },
+        "frozen/Artist": {
+          "name": "Kodo me Ann-en dhe Elsa-n",
+          "overview": "Në këtë mësim, nxënësit e të gjitha moshave marrin një përvojë hyrëse me kodimin dhe shkencën kompjuterike në një mjedis të sigurt dhe mbështetës. Ky mësim është krijuar për nxënësit e klasave të mesme, të moshës 10-13 vjeç, por mund të përshtatet për nxënësit më të rinj ose më të vjetër duke përdorur sugjerimet e diferencimit të ofruara. Nxënësit duhet të kenë një kuptim bazë të gjeometrisë së thjeshtë dhe të këndeve të vizatimit.",
+          "preparation": "### Një javë përpara orës suaj të kodit\n\n-   Rishikoni [Udhëzuesin e Edukatorit të Orës së Kodit](http://hourofcode.com/resources/how-to/) dhe [Praktikat më të mira nga Edukatorët e Suksesshëm](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) në mënyrë që të filloni të planifikoni ngjarjen tuaj të Orës së Kodit.\n-   [Regjistro ngjarjen tënde të Orës së Kodit](http://hourofcode.com) nëse dëshiron të marrësh suport ose mbështetje në klasë.\n-   Rishikoni dhe plotësoni vetë tutorialin në internet: [Coding with Anna and Elsa](https://studio.code.org/s/frozen/stage/1/puzzle/1)\n-   Sigurohuni që ta provoni fillimisht përpara se t'u kërkoni studentëve tuaj ta plotësojnë atë. Kontrolloni teknologjinë tuaj dhe vendosni nëse keni nevojë të zgjidhni ndonjë problem përpara Orës së Kodit.\n-   Rishikoni planin shtesë të mësimit, [\"The Drawing Machine\"](https://code.org/curriculum/misc/hocunplugged/Teacher) për të përcaktuar nëse dëshironi apo jo ta drejtoni këtë mësim përpara Orës së Kodit.\n\n### Një ditë përpara orës suaj të kodit\n\n-   Shkruani fjalët \"kodim\", \"programim\" dhe \"debugging\" në tabelë ose shtoni ato në murin tuaj të fjalëve nëse keni një të tillë.\n-   Shkruani fjalët \"Shkenca Kompjuterike\" në mes të tabelës tuaj ose në një copë letre në qendër të tabelës së buletinit. Kjo do të shërbejë si [\"harta e mendjes\"] [5] për aktivitetet Përgatitja dhe Vlerësimi.\n-   Keni në dispozicion raportuesit për studentët e rinj në matjen e këndeve\n-   Çdo student që përfundon aktivitetin duhet të marrë një [certifikatë](http://code.org/certificates). Printoni një për çdo student paraprakisht për ta bërë këtë më të lehtë në fund të Orës së Kodit.",
+          "purpose": "Ky mësim prezanton konceptet thelbësore CS të kodimit dhe programimit (duke përdorur blloqe), si dhe teknika të thjeshta korrigjimi.",
+          "student_overview": "Në këtë mësim, nxënësit e të gjitha moshave marrin një përvojë hyrëse me kodimin dhe shkencën kompjuterike në një mjedis të sigurt dhe mbështetës. Ky mësim është krijuar për nxënësit e klasave të mesme, të moshës 10-13 vjeç, por mund të përshtatet për nxënësit më të rinj ose më të vjetër duke përdorur sugjerimet e diferencimit të ofruara. Nxënësit duhet të kenë një kuptim bazë të gjeometrisë së thjeshtë dhe të këndeve të vizatimit."
+        },
+        "iceage/Ice Age Play Lab": {
+          "name": "Laboratori i lojës Epoka e Akullnajave",
+          "overview": "Në këtë mësim, nxënësit marrin një përvojë hyrëse me shkencat kompjuterike dhe krijojnë një lojë duke përdorur kodin bazë të bllokut. Ky mësim është krijuar për nxënësit e klasave të mesme, të moshës 10-16 vjeç, por mund të përshtatet për nxënësit më të rinj ose më të vjetër duke përdorur diferencimin sugjerimet e ofruara.",
+          "preparation": "### Një javë përpara orës suaj të kodit\n\n-   Rishikoni [Udhëzuesin e Edukatorit të Orës së Kodit](http://hourofcode.com/resources/how-to/) dhe [Praktikat më të mira nga Edukatorët e Suksesshëm](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) në mënyrë që të filloni të planifikoni ngjarjen tuaj të Orës së Kodit.\n-   [Regjistro ngjarjen tënde të Orës së Kodit](http://hourofcode.com) nëse dëshiron të marrësh suport ose mbështetje në klasë.\n-   Rishikoni dhe plotësoni vetë tutorialin në internet: [Bëni një lojë Flappy](https://studio.code.org/s/iceage/lessons/1/levels/1)\n-   Sigurohuni që ta provoni fillimisht përpara se t'u kërkoni studentëve tuaj ta plotësojnë atë. Kontrolloni teknologjinë tuaj dhe vendosni nëse keni nevojë të zgjidhni ndonjë problem përpara Orës së Kodit.\n\n### Një ditë përpara orës suaj të kodit\n\n-   Shkruani fjalët \"kodim\", \"programim\" dhe \"debugging\" në tabelë ose shtoni ato në murin tuaj të fjalëve nëse keni një të tillë.\n-   Çdo student që përfundon aktivitetin duhet të marrë një certifikatë. [Print one](http://code.org/certificates) për të gjithë paraprakisht për ta bërë këtë më të lehtë në fund të Orës së Kodit.",
+          "purpose": "Ky mësim prezanton konceptet thelbësore CS të kodimit dhe programimit (duke përdorur blloqe), si dhe teknika të thjeshta korrigjimi.",
+          "student_overview": "Në këtë mësim, nxënësit marrin një përvojë hyrëse me shkencat kompjuterike dhe krijojnë një lojë duke përdorur kodin bazë të bllokut."
+        },
+        "artist/Artist": {
+          "name": "Artisti",
+          "overview": "Në këtë mësim, studentët do të marrin kontrollin e Artistit për të përfunduar vizatimet në ekran. Kjo fazë e Artistit do t'i lejojë studentët të krijojnë imazhe me kompleksitet në rritje duke përdorur blloqe programimi si 'lëvizni përpara me 100 piksel' dhe 'kthejeni djathtas me 90 gradë'.",
+          "preparation": "### Një javë përpara orës suaj të kodit\n\n-   Rishikoni [Udhëzuesin e Edukatorit të Orës së Kodit](http://hourofcode.com/resources/how-to/) dhe [Praktikat më të mira nga Edukatorët e Suksesshëm](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) në mënyrë që të filloni të planifikoni ngjarjen tuaj të Orës së Kodit.\n-   [Regjistro ngjarjen tënde të Orës së Kodit](http://hourofcode.com) nëse dëshiron të marrësh suport ose mbështetje në klasë.\n-   Rishikoni dhe plotësoni vetë tutorialin në internet: [Artist](https://studio.code.org/s/artist/lessons/1/levels/1)\n-   Sigurohuni që ta provoni fillimisht përpara se t'u kërkoni studentëve tuaj ta plotësojnë atë. Kontrolloni teknologjinë tuaj dhe vendosni nëse keni nevojë të zgjidhni ndonjë problem përpara Orës së Kodit.\n\n### Një ditë përpara orës suaj të kodit\n\n-   Shtypni një ose më shumë prej [Shembujve të Biletës së Daljes](https://docs.google.com/a/code.org/document/d/1ylIlO7Pppk6W3Jt58VHS5mjvnshg9URvj3iCU0Ok6qY/edit?usp=sharing) në fund të këtij plani mësimor, ose krijoni tuajin.\n\n-   Çdo student që përfundon aktivitetin duhet të marrë një [certifikatë](https://studio.code.org/certificates/batch). Printoni një për çdo student paraprakisht për ta bërë këtë më të lehtë në fund të Orës së Kodit.\n\n-   Luaj nëpër enigmat për të gjetur ndonjë zonë problematike të mundshme për klasën tuaj.\n\n-   (Opsionale) Merrni raporte për klasën tuaj për të vizualizuar këndet që duhet të përdorin për të plotësuar enigmat.\n\n-   Shtypni një **Kthesa dhe kënde - Fletë pune për nxënës** për secilin student.",
+          "purpose": "Ky mësim do të funksionojë për të frymëzuar më shumë kreativitet me kodimin. Qëllimi i këtij mësimi është të rrisë njohuritë mbi renditjen duke prezantuar blloqet dhe qëllimet e programimit. Në këtë rast, studentët mësojnë rreth pikselëve dhe këndeve duke përdorur blloqet e programimit, duke përfshirë aftësitë e renditjes. Gjithashtu, studentët do të jenë në gjendje të vizualizojnë qëllime të reja si kodimi i Artistit për të vizatuar një katror.",
+          "student_overview": "Krijo imazhe të bukura duke programuar Artistin."
+        },
+        "gumball/Gumball Play Lab": {
+          "name": "Laboratori i Lojës Gumball",
+          "overview": "Në këtë mësim, nxënësit marrin një përvojë hyrëse me shkencat kompjuterike dhe krijojnë një lojë duke përdorur kodin bazë të bllokut. Ky mësim është krijuar për nxënësit e klasave të mesme, të moshës 10-16 vjeç, por mund të përshtatet për nxënësit më të rinj ose më të vjetër duke përdorur diferencimin sugjerimet e ofruara.",
+          "preparation": "### Një javë përpara orës suaj të kodit\n\n-   Rishikoni [Udhëzuesin e edukatorit të Orës së Kodit](http://hourofcode.com/resources/how-to/) dhe [Praktikat më të mira nga Edukatorët e Suksesshëm](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) në mënyrë që të filloni të planifikoni ngjarjen tuaj të Orës së Kodit.\n-   [Regjistro ngjarjen tënde të Orës së Kodit](http://hourofcode.com) nëse dëshiron të marrësh suport ose mbështetje në klasë.\n-   Rishikoni dhe plotësoni vetë tutorialin në internet: [Gumball Play Lab](https://studio.code.org/s/gumball/lessons/1/levels/1)\n-   Sigurohuni që ta provoni fillimisht përpara se t'u kërkoni studentëve tuaj ta plotësojnë atë. Kontrolloni teknologjinë tuaj dhe vendosni nëse keni nevojë të zgjidhni ndonjë problem përpara Orës së Kodit.\n\n### Një ditë përpara orës suaj të kodit\n\n-   Shkruani fjalët \"kodim\", \"programim\" dhe \"debugging\" në tabelë ose shtoni ato në murin tuaj të fjalëve nëse keni një të tillë.\n-   Çdo student që përfundon aktivitetin duhet të marrë një [certifikatë](http://code.org/certificates). Printoni një për çdo student paraprakisht për ta bërë këtë më të lehtë në fund të Orës së Kodit.",
+          "purpose": "Ky mësim prezanton konceptet thelbësore CS të kodimit dhe programimit (duke përdorur blloqe), si dhe teknika të thjeshta korrigjimi.",
+          "student_overview": "Në këtë mësim, nxënësit marrin një përvojë hyrëse me shkencat kompjuterike dhe krijojnë një lojë duke përdorur kodin bazë të bllokut. Ky mësim është krijuar për nxënësit e klasave të mesme, të moshës 10-16 vjeç, por mund të përshtatet për nxënësit më të rinj ose më të vjetër duke përdorur diferencimin sugjerimet e ofruara."
+        },
+        "dance/Dance Party": {
+          "overview": "Në këtë mësim, nxënësit e të gjitha moshave marrin një përvojë hyrëse me kodimin dhe shkencën kompjuterike në një mjedis të sigurt dhe mbështetës. Ky mësim është krijuar për nxënës të të gjitha moshave, por kërkon lexim. Ky aktivitet kërkon zë pasi mjeti është ndërtuar për t'iu përgjigjur muzikës.",
+          "preparation": "### Një javë përpara orës suaj të kodit\n\n-   Rishikoni [Udhëzuesin e Edukatorit të Orës së Kodit](http://hourofcode.com/resources/how-to/) dhe [Praktikat më të mira nga Edukatorët e Suksesshëm](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) në mënyrë që të filloni të planifikoni ngjarjen tuaj të Orës së Kodit.\n-   [Regjistrojeni ngjarjen tuaj të Orës së Kodit](http://hourofcode.com) nëse dëshironi të merrni mbështetje në klasë, postera me zbritje ose të merrni pjesë në dhuratën e robotikës (vetëm në SHBA).\n-   Rishikoni dhe plotësoni vetë tutorialin në internet: [Dance Party](https://studio.code.org/s/dance/lessons/1/levels/1)\n-   Sigurohuni që ta provoni fillimisht përpara se t'u kërkoni studentëve tuaj ta plotësojnë atë. Kontrolloni teknologjinë tuaj dhe vendosni nëse keni nevojë të zgjidhni ndonjë problem përpara Orës së Kodit.\n-   Rishikoni planin e mësimit plotësues, [\"Festa e madhe e vallëzimit\"](studio.code.org/s/dance-unplugged/lessons/1) për të përcaktuar nëse dëshironi apo jo ta drejtoni këtë mësim përpara Orës së Kodit.\n\n### Një ditë përpara orës suaj të kodit\n\n-   Çdo student që përfundon aktivitetin duhet të marrë një [certifikatë](http://code.org/certificates). Printoni një për çdo student paraprakisht për ta bërë këtë më të lehtë në fund të Orës së Kodit.\n-   (me dëshirë) Inkurajoni nxënësit të sjellin kufje për t'i përdorur gjatë aktivitetit.",
+          "purpose": "Ky mësim prezanton konceptet thelbësore CS të kodimit dhe programimit të ngjarjeve (duke përdorur blloqe).",
+          "student_overview": "Në këtë mësim, nxënësit e të gjitha moshave marrin një përvojë hyrëse me kodimin dhe shkencën kompjuterike në një mjedis të sigurt dhe mbështetës. Ky mësim është krijuar për nxënës të të gjitha moshave, por kërkon lexim. Ky aktivitet kërkon zë pasi mjeti është ndërtuar për t'iu përgjigjur muzikës."
+        },
+        "aquatic/Aquatic": {
+          "name": "Minecraft: Udhëtimi ujor",
+          "overview": "Në këtë mësim, nxënësit e të gjitha moshave marrin një përvojë hyrëse me kodimin dhe shkencën kompjuterike në një mjedis të sigurt dhe mbështetës. Ky mësim funksionon mirë për çdo student që është mjaft i vjetër për të lexuar (mosha 6+). Nxënësit më të vegjël ndoshta nuk do ta përfundojnë tutorialin, por do të argëtohen shumë duke punuar nëpër enigmat për një orë. Nxënësit e shkollave të mesme kryesisht do të përfundojnë tutorialin dhe do të kenë pak kohë për të luajtur në nivelin e lojës falas në fund.",
+          "preparation": "### Një javë përpara orës suaj të kodit\n\n-   Rishikoni [Udhëzuesin e Edukatorit të Orës së Kodit](http://hourofcode.com/resources/how-to/) dhe [Praktikat më të mira nga Edukatorët e Suksesshëm](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) në mënyrë që të filloni të planifikoni ngjarjen tuaj të Orës së Kodit.\n-   [Regjistro ngjarjen tënde të Orës së Kodit](http://hourofcode.com) nëse dëshiron të marrësh suport ose mbështetje në klasë.\n-   Rishikoni dhe plotësoni vetë tutorialin në internet: [Minecraft: Voyage Aquatic](http://studio.code.org/s/aquatic/lessons/1/levels/1)\n-   Sigurohuni që ta provoni fillimisht përpara se t'u kërkoni studentëve tuaj ta plotësojnë atë. Kontrolloni teknologjinë tuaj dhe vendosni nëse keni nevojë të zgjidhni ndonjë problem përpara Orës së Kodit.\n\n### Një ditë përpara orës suaj të kodit\n\n-   Shtypni një ose më shumë prej [Shembujve të Biletës së Daljes](https://docs.google.com/a/code.org/document/d/1ylIlO7Pppk6W3Jt58VHS5mjvnshg9URvj3iCU0Ok6qY/edit?usp=sharing) në fund të këtij plani mësimor, ose krijoni tuajin.\n-   Çdo student që përfundon aktivitetin duhet të marrë një certifikatë. [Print one](https://studio.code.org/certificates/batch?course=bWM=) për të gjithë paraprakisht për ta bërë këtë më të lehtë në fund të Orës së Kodit.",
+          "purpose": "Ky mësim prezanton konceptet thelbësore CS të kodimit dhe programimit (duke përdorur blloqe), si dhe teknika të thjeshta korrigjimi dhe kushtesh. Ky grup enigmash do të punojë për të ngurtësuar dhe ndërtuar mbi njohuritë e sytheve dhe për të futur kushte. Duke i bashkuar këto dy koncepte së bashku, studentët do të jenë në gjendje të eksplorojnë potencialin për krijimin e programeve argëtuese dhe novatore në një mjedis të ri dhe emocionues.",
+          "student_overview": "Në këtë mësim, nxënësit e të gjitha moshave marrin një përvojë hyrëse me kodimin dhe shkencën kompjuterike në një mjedis të sigurt dhe mbështetës."
+        },
         "hoc-encryption/Simple Encryption": {
+          "overview": "Në këtë mësim, studentët njihen me nevojën për enkriptim dhe teknika të thjeshta për thyerjen (ose thyerjen) e mesazheve sekrete. Nxënësit përpiqen të thyejnë një mesazh të koduar me shifrën klasike të Cezarit dhe gjithashtu me një shifër zëvendësimi të rastësishëm. Studentët duhet të njihen mirë me idenë se në një epokë të mjeteve të fuqishme llogaritëse, teknikat e kriptimit do të duhet të jenë më të sofistikuara. Aspekti më i rëndësishëm i këtij mësimi është të kuptojmë se si dhe pse enkriptimi luan një rol në të gjithë jetën tonë çdo ditë në internet dhe se bërja e kriptimit të mirë nuk është e parëndësishme. Nxënësit do t'i lagen këmbët duke kuptuar konsideratat që duhen marrë për të bërë kriptim të fortë përballë mjeteve të fuqishme llogaritëse që mund të përdoren për ta thyer atë. Nevoja për fshehtësi gjatë dërgimit të biteve në internet është e rëndësishme për këdo që përdor internetin.",
+          "preparation": "-   Shqyrtoni të dy versionet e miniaplikacionit",
+          "purpose": "\"Kriptimi\" është një proces për transformimin e një mesazhi në mënyrë që origjinali të \"fshihet\" nga kushdo që nuk është marrësi i synuar. Kriptimi nuk është më vetëm për ushtrinë dhe spiunët. Ne përdorim kriptim çdo ditë në internet, kryesisht për të kryer transaksione tregtare, dhe pa të ekonomia jonë mund të ndalet.\n\nKy mësim u jep studentëve një shije të parë të llojit të të menduarit që shkon në enkriptimin e mesazheve përballë mjeteve llogaritëse. Mjetet llogaritëse rrisin në mënyrë dramatike forcën dhe kompleksitetin e algoritmeve që përdorim për të kriptuar informacionin, por të njëjtat mjete rrisin gjithashtu aftësinë tonë për të thyer një kriptim. Zhvillimi i kriptimit të fortë mbështetet në njohuritë e problemeve që janë \"të vështira\" për t'u zgjidhur nga kompjuterët, dhe përdorimin e kësaj njohurie për të enkriptuar mesazhet. Si burim, mund të dëshironi të lexoni të gjithë Kapitullin 5 të _Blown to Bits_. Ai ofron një kontekst social që mund të dëshironi ta sillni në klasën tuaj.",
+          "student_overview": "Në këtë mësim, studentët njihen me nevojën për enkriptim dhe teknika të thjeshta për thyerjen (ose thyerjen) e mesazheve sekrete. Nxënësit përpiqen të thyejnë një mesazh të koduar me shifrën klasike të Cezarit dhe gjithashtu me një shifër zëvendësimi të rastësishëm. Studentët duhet të njihen mirë me idenë se në një epokë të mjeteve të fuqishme llogaritëse, teknikat e kriptimit do të duhet të jenë më të sofistikuara. Aspekti më i rëndësishëm i këtij mësimi është të kuptojmë se si dhe pse enkriptimi luan një rol në të gjithë jetën tonë çdo ditë në internet dhe se bërja e kriptimit të mirë nuk është e parëndësishme. Nxënësit do t'i lagen këmbët duke kuptuar konsideratat që duhen marrë për të bërë kriptim të fortë përballë mjeteve të fuqishme llogaritëse që mund të përdoren për ta thyer atë. Nevoja për fshehtësi gjatë dërgimit të biteve në internet është e rëndësishme për këdo që përdor internetin."
+        },
+        "starwars/Hour of Code 2015": {
+          "name": "Lufta e yjeve: Ndërtimi i një Galaxy me kod (JavaScript)",
+          "overview": "Në këtë mësim, nxënësit e të gjitha moshave marrin një përvojë hyrëse me kodimin dhe shkencën kompjuterike në një mjedis të sigurt dhe mbështetës. Ky mësim ka dy versione. Ky version përdor të dy blloqet drag-drop dhe JavaScript. Nxënësit duhet të jenë në gjendje të shkruajnë në tastierë. Për studentët më të vjetër në kompjuter, mësimi i JavaScript mund të jetë argëtues dhe të sigurojë një sfidë shtesë. Ky version i tutorialit është gjithashtu i shkëlqyeshëm nëse keni disa studentë në klasën tuaj që kanë mësuar tashmë disa kodime. Rekomandohet për moshat 11+.\n\nNjë [Blockly version](https://studio.code.org/s/starwarsblocks/lessons/1/levels/1) ofrohet gjithashtu dhe rekomandohet për studentët në pajisje celulare pa tastierë, studentët më të rinj dhe studentët ndërkombëtarë.",
+          "preparation": "### Një javë përpara orës suaj të kodit\n\n-   Rishikoni [Udhëzuesin e Edukatorit të Orës së Kodit](http://hourofcode.com/resources/how-to/) dhe [Praktikat më të mira nga Edukatorët e Suksesshëm](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) në mënyrë që të filloni të planifikoni ngjarjen tuaj të Orës së Kodit.\n-   [Regjistro ngjarjen tënde të Orës së Kodit](https://studio.code.org/s/starwars/lessons/1/levels/1) nëse dëshiron të marrësh suport ose mbështetje në klasë.\n-   Rishikoni dhe plotësoni vetë tutorialin në internet: [Coding with Anna and Elsa](https://en.wikipedia.org/wiki/Mind_map)\n-   Sigurohuni që ta provoni fillimisht përpara se t'u kërkoni studentëve tuaj ta plotësojnë atë. Kontrolloni teknologjinë tuaj dhe vendosni nëse keni nevojë të zgjidhni ndonjë problem përpara Orës së Kodit.\n-   Rishikoni planin shtesë të mësimit, [\"The Drawing Machine\"](http://code.org/certificates) për të përcaktuar nëse dëshironi apo jo ta drejtoni këtë mësim përpara Orës së Kodit.\n\n### Një ditë përpara orës suaj të kodit\n\n-   Shkruani fjalët \"kodim\", \"programim\" dhe \"debugging\" në tabelë ose shtoni ato në murin tuaj të fjalëve nëse keni një të tillë.\n-   Shkruani fjalët \"Shkenca Kompjuterike\" në mes të tabelës tuaj ose në një copë letre në qendër të tabelës së buletinit. Kjo do të shërbejë si [\"harta e mendjes\"] [5] për aktivitetet Përgatitja dhe Vlerësimi.\n-   Keni në dispozicion raportuesit për studentët e rinj në matjen e këndeve\n-   Çdo student që përfundon aktivitetin duhet të marrë një [certifikatë][6]. Printoni një për çdo student paraprakisht për ta bërë këtë më të lehtë në fund të Orës së Kodit.",
+          "purpose": "Ky mësim prezanton konceptet thelbësore CS të kodimit dhe programimit, duke përfshirë renditjen dhe ngjarjet. Versioni JavaScript i tutorialit gjithashtu i lejon studentët të përjetojnë kodin e shtypjes.",
+          "student_overview": "Në këtë mësim, nxënësit e të gjitha moshave marrin një përvojë hyrëse me kodimin dhe shkencën kompjuterike në një mjedis të sigurt dhe mbështetës."
+        },
+        "mc/Hour of Code 2015": {
+          "name": "Ora e Kodimit Minecraft",
+          "overview": "Në këtë mësim, nxënësit e të gjitha moshave marrin një përvojë hyrëse me kodimin dhe shkencën kompjuterike në një mjedis të sigurt dhe mbështetës. Ky mësim funksionon mirë për çdo student që është mjaft i vjetër për të lexuar (mosha 6+). Nxënësit më të vegjël ndoshta nuk do ta përfundojnë tutorialin, por do të argëtohen shumë duke punuar nëpër enigmat për një orë. Nxënësit e shkollave të mesme kryesisht do të përfundojnë tutorialin dhe do të kenë pak kohë për të luajtur në nivelin e lojës falas në fund.",
+          "preparation": "### Një javë përpara orës suaj të kodit\n\n-   Rishikoni [Udhëzuesin e Edukatorit të Orës së Kodit](http://hourofcode.com/resources/how-to/) dhe [Praktikat më të mira nga Edukatorët e Suksesshëm](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) në mënyrë që të filloni të planifikoni ngjarjen tuaj të Orës së Kodit.\n-   [Regjistro ngjarjen tënde të Orës së Kodit](http://hourofcode.com) nëse dëshiron të marrësh suport ose mbështetje në klasë.\n-   Rishikoni dhe plotësoni vetë tutorialin në internet: [Minecraft: Hero's Journey](studio.code.org/s/mc/lessons/1/levels/1)\n-   Sigurohuni që ta provoni fillimisht përpara se t'u kërkoni studentëve tuaj ta plotësojnë atë. Kontrolloni teknologjinë tuaj dhe vendosni nëse keni nevojë të zgjidhni ndonjë problem përpara Orës së Kodit.\n\n### Një ditë përpara orës suaj të kodit\n\n-   Shtypni një ose më shumë prej [Shembujve të Biletës së Daljes](https://docs.google.com/a/code.org/document/d/1ylIlO7Pppk6W3Jt58VHS5mjvnshg9URvj3iCU0Ok6qY/edit?usp=sharing) në fund të këtij plani mësimor, ose krijoni tuajin.\n-   Çdo student që përfundon aktivitetin duhet të marrë një [certifikatë](https://studio.code.org/certificates/batch?course=bWM=). Printoni një për çdo student paraprakisht për ta bërë këtë më të lehtë në fund të Orës së Kodit.",
+          "purpose": "Ky mësim prezanton konceptet thelbësore CS të kodimit dhe programimit (duke përdorur blloqe), si dhe teknika të thjeshta korrigjimi.",
+          "student_overview": "Në këtë mësim, nxënësit e të gjitha moshave marrin një përvojë hyrëse me kodimin dhe shkencën kompjuterike në një mjedis të sigurt dhe mbështetës. Ky mësim funksionon mirë për çdo student që është mjaft i vjetër për të lexuar (mosha 6+). Nxënësit më të vegjël ndoshta nuk do ta përfundojnë tutorialin, por do të argëtohen shumë duke punuar nëpër enigmat për një orë. Nxënësit e shkollave të mesme kryesisht do të përfundojnë tutorialin dhe do të kenë pak kohë për të luajtur në nivelin e lojës falas në fund."
+        },
+        "playlab/Play Lab": {
+          "name": "Play Lab",
+          "overview": "Në këtë mësim, nxënësit marrin një përvojë hyrëse me shkencat kompjuterike dhe krijojnë një lojë duke përdorur kodin bazë të bllokut. Ky mësim është krijuar për nxënësit e klasave të mesme, të moshës 10-16 vjeç, por mund të përshtatet për nxënësit më të rinj ose më të vjetër duke përdorur diferencimin sugjerimet e ofruara.",
+          "preparation": "### Një javë përpara orës suaj të kodit\n\n-   Rishikoni [Udhëzuesin e edukatorit të Orës së Kodit](http://hourofcode.com/resources/how-to/) dhe [Praktikat më të mira nga Edukatorët e Suksesshëm](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) në mënyrë që të filloni të planifikoni ngjarjen tuaj të Orës së Kodit.\n-   [Regjistro ngjarjen tënde të Orës së Kodit](http://hourofcode.com) nëse dëshiron të marrësh suport ose mbështetje në klasë.\n-   Rishikoni dhe plotësoni vetë tutorialin në internet: [Gumball Play Lab](https://studio.code.org/s/playlab/stage/1/puzzle/1)\n-   Sigurohuni që ta provoni fillimisht përpara se t'u kërkoni studentëve tuaj ta plotësojnë atë. Kontrolloni teknologjinë tuaj dhe vendosni nëse keni nevojë të zgjidhni ndonjë problem përpara Orës së Kodit.\n\n### Një ditë përpara orës suaj të kodit\n\n-   Shkruani fjalët \"kodim\", \"programim\" dhe \"debugging\" në tabelë ose shtoni ato në murin tuaj të fjalëve nëse keni një të tillë.\n-   Çdo student që përfundon aktivitetin duhet të marrë një [certifikatë](http://code.org/certificates). Printoni një për çdo student paraprakisht për ta bërë këtë më të lehtë në fund të Orës së Kodit.",
+          "purpose": "Ky mësim prezanton konceptet thelbësore CS të kodimit dhe programimit (duke përdorur blloqe), si dhe teknika të thjeshta korrigjimi.",
+          "student_overview": "Në këtë mësim, nxënësit marrin një përvojë hyrëse me shkencat kompjuterike dhe krijojnë një lojë duke përdorur kodin bazë të bllokut."
+        },
+        "applab-intro/Intro to App Lab": {
+          "name": "Hyrje në App Lab",
+          "overview": "Ky udhezues eshte i dizaqjnuar qe te prezentoje shkurtimisht App Lab si forme programimi dhe nje vegel e fuqishme per ndertimin dhe shperndarjen e aplikacioneve. Vete udhezuesi i meson studenteve te krijojne dhe kontrollojne butonat, tekstin, imazhet, tingujt dhe ekranet ne JavaScript duke perdorur blloqe ose tekst. Ne fund te udhezuesit, nxenesit do te kene kohe qe te vazhdojne me projektin e tyre ne tri aplikacione: \"Zgjedh Avanturen tende\", \"Karta Pershendetese\", ose aplikacion per \"Kuiz Personaliteti\" \n\nAta mund poashtu te vazhdojne te ndertojne me shume projekte ne faqen e code.org/applab\n\nZbavitu duke kompletuar Oren tende te Kodit me App Lab! \n\n**Pershtatja ne moshe** ky udhezues eshte i dizajnuar per nxenesit e moshes 13 vjeqare. Pasi qe i lejon nxenesit te ngarkojne foto dhe tinguj, nxenesit e rinje nuk duihet ta perdorin kete program pa mbikqyrje. Per te mbrojtur privatesine e nxeneseve, nese nxenesit tuaj jane nen moshen 13 vjeqare, ata nuk do te mund ta perdorin kete tutorial nese nuk i aktivizoni atyre llogarite e tyre ne menyre qe ata te mund t'a perdorin. ",
+          "preparation": "### Një javë para Orës së Kodit\n\n-   Rishikoni [Udhëzuesin e edukatorëve të Orës së Kodimit](http://hourofcode.com/resources/how-to/) dhe [Praktikat më të mira nga edukatorët e suksesshëm](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) në mënyrë që të filloni të planifikoni ngjarjen tuaj të Orës së Kodit. \n-   [Regjistrohu ngjarjen e Orës së Kodit](http://hourofcode.com) nëse dëshironi të merrni mbështetje në klasë.\n-   Rishikoni dhe plotësoni vetë tutorialin online\n-   Sigurohuni që ta provoni atë së pari para se t'i kërkoni nxënësve tuaj ta përfundojnë atë. Kontrolloni teknologjinë tuaj dhe vendosni nëse keni nevojë të zgjidhni ndonjë problem përpara Orës suaj të Kodimit.\n\n### Një ditë para Orës Tuaj të Kodit\n\n-   Shtypni një ose më shumë nga [Shembujt e Biletave të Daljes](https://docs.google.com/a/code.org/document/d/1ylIlO7Pppk6W3Jt58VHS5mjvnshg9URvj3iCU0Ok6qY/edit?usp=sharing) në fund të këtij plani mësimi, ose krijoni tuajën. \n-   Çdo student i cili përfundon aktivitetin duhet të marrë një [certificate](http://code.org/certificates). Printoni një për secilin nxënës paraprakisht për ta bërë këtë më të lehtë në fund të Orës së Kodimit.",
+          "purpose": "Ky mesim eshte hapi i pare i nxenesve tuaj ne App Lab. Vete udhezuesi duhet te sherbeje si nje hyrje per te njohur me mire me nje vegel shume te fuqishme me funksionalitet te gjere. Nxenesit duhet te kene nje eksperience pozitive gjate udhezuesit dhe me se rendesishmi duhet te jene te motivuar te vazhdojne te ndertojne me App Lab. Ata vetem sapo kane filluar ta gervishtin siperfaqen se cka mund te beje kjo vegel, pastaj ata duhet ta perdorin code.org/applab faqen ose galerine e projektit qe te inspirohen me shume per lloje me komplekse te projekteve qe ata deshirojne te realizojne. ",
+          "student_overview": "Ne fund te udhezuesit, do te jeni ne gjendje te zgjeroni nje projekt qe keni filluar te ndertoni ne nje aplikacion \"Zgjidhni aventuren tuaj\", \"Kartoline Pershendetese\", ose \"Kuiz Personaliteti\". Ju gjithashtu mund te vazhdoni te ndertoni me shume projekte ne faqen e code.org/applab"
+        },
+        "starwarsblocks/Hour of Code 2015": {
+          "overview": "Në këtë mësim, nxënësit e të gjitha moshave marrin një përvojë hyrëse me kodimin dhe shkencën kompjuterike në një mjedis të sigurt dhe mbështetës. Ky mësim ka dy versione. Ky version përdor blloqe zvarritëse dhe funksionon më së miri për studentët në pajisje celulare pa tastierë, studentët më të rinj dhe studentët ndërkombëtarë. Rekomandohet për moshat 6+.\n\nNjë version [JavaScript](s/starwars) është gjithashtu i disponueshëm. Për studentët më të vjetër në kompjuter, mësimi i JavaScript mund të jetë argëtues dhe të sigurojë një sfidë shtesë. Vini re se sintaksa JavaScript nuk është e përkthyer dhe për Orën e parë të Kodit, blloqet e përkthyera që gjenden këtu ofrojnë një hyrje më të mirë. Ky version i tutorialit është gjithashtu i shkëlqyeshëm nëse keni disa studentë në klasën tuaj që kanë mësuar tashmë disa kodime. Rekomandohet për moshat 11+.",
+          "preparation": "### Një javë përpara orës suaj të kodit\n\n-   Rishikoni [Udhëzuesin e Edukatorit të Orës së Kodit](http://hourofcode.com/resources/how-to/) dhe [Praktikat më të mira nga Edukatorët e Suksesshëm](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) në mënyrë që të filloni të planifikoni ngjarjen tuaj të Orës së Kodit.\n-   [Regjistro ngjarjen tënde të Orës së Kodit](https://studio.code.org/s/starwarsblocks/lessons/1/levels/1) nëse dëshiron të marrësh suport ose mbështetje në klasë.\n-   Rishikoni dhe plotësoni vetë tutorialin në internet: [Coding with Anna and Elsa](https://en.wikipedia.org/wiki/Mind_map)\n-   Sigurohuni që ta provoni fillimisht përpara se t'u kërkoni studentëve tuaj ta plotësojnë atë. Kontrolloni teknologjinë tuaj dhe vendosni nëse keni nevojë të zgjidhni ndonjë problem përpara Orës së Kodit.\n-   Rishikoni planin shtesë të mësimit, [\"The Drawing Machine\"](http://code.org/certificates) për të përcaktuar nëse dëshironi apo jo ta drejtoni këtë mësim përpara Orës së Kodit.\n\n### Një ditë përpara orës suaj të kodit\n\n-   Shkruani fjalët \"kodim\", \"programim\" dhe \"debugging\" në tabelë ose shtoni ato në murin tuaj të fjalëve nëse keni një të tillë.\n-   Shkruani fjalët \"Shkenca Kompjuterike\" në mes të tabelës tuaj ose në një copë letre në qendër të tabelës së buletinit. Kjo do të shërbejë si [\"harta e mendjes\"] [5] për aktivitetet Përgatitja dhe Vlerësimi.\n-   Keni në dispozicion raportuesit për studentët e rinj në matjen e këndeve\n-   Çdo student që përfundon aktivitetin duhet të marrë një [certifikatë][6]. Printoni një për çdo student paraprakisht për ta bërë këtë më të lehtë në fund të Orës së Kodit.",
+          "purpose": "Ky mësim prezanton konceptet thelbësore CS të kodimit dhe programimit, duke përfshirë renditjen dhe ngjarjet. Versioni JavaScript i tutorialit gjithashtu i lejon studentët të përjetojnë kodin e shtypjes.",
+          "student_overview": "Në këtë mësim, nxënësit e të gjitha moshave marrin një përvojë hyrëse me kodimin dhe shkencën kompjuterike në një mjedis të sigurt dhe mbështetës."
+        },
+        "text-compression/Text Compression": {
+          "overview": "Në një moment arrijmë një kufi fizik se sa shpejt mund të dërgojmë bit dhe nëse duam të dërgojmë një sasi të madhe informacioni më shpejt, duhet të gjejmë një mënyrë për të përfaqësuar të njëjtin informacion me më pak bit - duhet **kompresojmë** të dhënat. Në këtë mësim, studentët do të përdorin miniaplikacionin e kompresimit të tekstit për të kompresuar segmente të tekstit në anglisht duke kërkuar modele dhe duke zëvendësuar simbole për modele më të mëdha të tekstit.",
+          "preparation": "-   Testoni miniaplikacionin e kompresimit të tekstit\n-   Rishikoni këshillat e mësimdhënies për të vendosur se cilat opsione dëshironi të përdorni",
+          "student_overview": "Në një moment arrijmë një kufi fizik se sa shpejt mund të dërgojmë bit dhe nëse duam të dërgojmë një sasi të madhe informacioni më shpejt, duhet të gjejmë një mënyrë për të përfaqësuar të njëjtin informacion me më pak bit - duhet t'i kompresojmë të dhënat."
+        },
+        "outbreak/Outbreak": {
           "overview": "",
           "preparation": "",
           "purpose": "",
           "student_overview": ""
         },
-        "text-compression/Text Compression": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
+        "sports/Sports": {
+          "name": "Krijo lojën tënde sportive",
+          "overview": "Në këtë aktivitet online, studentët do të mësojnë se çfarë janë ngjarjet dhe se si kompjuterët i përdorin ato në programe si lojërat video. Nxënësit do të punojnë përmes enigmave duke e bërë programin të reagojë ndaj ngjarjeve (si shtypja e butonave me shigjeta.) Në fund të enigmës, studentët do të kenë mundësinë të personalizojnë lojën e tyre me shpejtësi dhe tinguj të ndryshëm.",
+          "preparation": "### Një javë përpara orës suaj të kodit\n\n-   Rishikoni [Udhëzuesin e Edukatorit të Orës së Kodit](http://hourofcode.com/resources/how-to/) dhe [Praktikat më të mira nga Edukatorët e Suksesshëm](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) në mënyrë që të filloni të planifikoni ngjarjen tuaj të Orës së Kodit.\n-   [Regjistro ngjarjen tënde të Orës së Kodit](http://hourofcode.com) nëse dëshiron të marrësh suport ose mbështetje në klasë.\n-   Rishikoni dhe plotësoni vetë tutorialin online: [Kodifikoni lojën tuaj të basketbollit](https://studio.code.org/s/sports/lessons/1/levels/1)\n-   Sigurohuni që ta provoni fillimisht përpara se t'u kërkoni studentëve tuaj ta plotësojnë atë. Kontrolloni teknologjinë tuaj dhe vendosni nëse keni nevojë të zgjidhni ndonjë problem përpara Orës së Kodit.\n\n### Një ditë përpara orës suaj të kodit\n\n-   Shtypni një ose më shumë prej [Shembujve të Biletës së Daljes](https://docs.google.com/a/code.org/document/d/1ylIlO7Pppk6W3Jt58VHS5mjvnshg9URvj3iCU0Ok6qY/edit?usp=sharing) në fund të këtij plani mësimor, ose krijoni tuajin.\n\n-   Çdo student që përfundon aktivitetin duhet të marrë një [certifikatë](https://studio.code.org/certificates/batch). Printoni një për çdo student paraprakisht për ta bërë këtë më të lehtë në fund të Orës së Kodit.\n\n-   Lexoni \"Ngjarjet në Bounce - Si ndodhin?\" kuvertë me rrëshqitje (që do t'u prezantohet studentëve në fund të klasës)",
+          "purpose": "Ky mësim prezanton konceptet thelbësore CS të kodimit dhe programimit (duke përdorur blloqe), si dhe teknika të thjeshta korrigjimi. Ata do të mësojnë se ngjarjet janë shumë të zakonshme në programet kompjuterike, veçanërisht në videolojërat.\n\nNxënësit do të zhvillojnë kuptimin e tyre për ngjarjet duke bërë një lojë basketbolli. Nxënësit do të mësojnë të bëjnë një lëvizje me dorë sipas tasteve me shigjeta dhe të bëjnë zhurmë kur objektet përplasen. Në fund, ata do të arrijnë të personalizojnë lojën e tyre për ta bërë atë më unike!",
+          "student_overview": "Keni dashur ndonjëherë të luani video lojëra në shkollë? Në këtë mësim, do të keni mundësi të bëni vetë!"
+        },
+        "infinity/Infinity": {
+          "name": "Larmishmeria e lojrave ne laboratorin e Disney",
+          "overview": "Në këtë mësim, nxënësit marrin një përvojë hyrëse me shkencat kompjuterike dhe krijojnë një lojë duke përdorur kodin bazë të bllokut. Ky mësim është krijuar për nxënësit e klasave të mesme, të moshës 10-16 vjeç, por mund të përshtatet për nxënësit më të rinj ose më të vjetër duke përdorur diferencimin sugjerimet e ofruara.",
+          "preparation": "### Një javë përpara orës suaj të kodit\n\n-   Rishikoni [Udhëzuesin e edukatorit të Orës së Kodit](http://hourofcode.com/resources/how-to/) dhe [Praktikat më të mira nga Edukatorët e Suksesshëm](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) në mënyrë që të filloni të planifikoni ngjarjen tuaj të Orës së Kodit.\n-   [Regjistro ngjarjen tënde të Orës së Kodit](http://hourofcode.com) nëse dëshiron të marrësh suport ose mbështetje në klasë.\n-   Rishikoni dhe plotësoni vetë tutorialin në internet: [Gumball Play Lab](https://studio.code.org/s/playlab/stage/1/puzzle/1)\n-   Sigurohuni që ta provoni fillimisht përpara se t'u kërkoni studentëve tuaj ta plotësojnë atë. Kontrolloni teknologjinë tuaj dhe vendosni nëse keni nevojë të zgjidhni ndonjë problem përpara Orës së Kodit.\n\n### Një ditë përpara orës suaj të kodit\n\n-   Shkruani fjalët \"kodim\", \"programim\" dhe \"debugging\" në tabelë ose shtoni ato në murin tuaj të fjalëve nëse keni një të tillë.\n-   Çdo student që përfundon aktivitetin duhet të marrë një [certifikatë](http://code.org/certificates). Printoni një për çdo student paraprakisht për ta bërë këtë më të lehtë në fund të Orës së Kodit.",
+          "purpose": "Ky mësim prezanton konceptet thelbësore CS të kodimit dhe programimit (duke përdorur blloqe), si dhe teknika të thjeshta korrigjimi.",
+          "student_overview": "Në këtë mësim, nxënësit marrin një përvojë hyrëse me shkencat kompjuterike dhe krijojnë një lojë duke përdorur kodin bazë të bllokut."
+        },
+        "basketball/Bounce": {
+          "name": "Kodoni lojën tuaj të basketbollit",
+          "overview": "Në këtë aktivitet online, studentët do të mësojnë se çfarë janë ngjarjet dhe se si kompjuterët i përdorin ato në programe si lojërat video. Nxënësit do të punojnë përmes enigmave duke e bërë programin të reagojë ndaj ngjarjeve (si shtypja e butonave me shigjeta.) Në fund të enigmës, studentët do të kenë mundësinë të personalizojnë lojën e tyre me shpejtësi dhe tinguj të ndryshëm.",
+          "preparation": "### Një javë përpara orës suaj të kodit\n\n-   Rishikoni [Udhëzuesin e Edukatorit të Orës së Kodit](http://hourofcode.com/resources/how-to/) dhe [Praktikat më të mira nga Edukatorët e Suksesshëm](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) në mënyrë që të filloni të planifikoni ngjarjen tuaj të Orës së Kodit.\n-   [Regjistro ngjarjen tënde të Orës së Kodit](http://hourofcode.com) nëse dëshiron të marrësh suport ose mbështetje në klasë.\n-   Rishikoni dhe plotësoni vetë tutorialin online: [Kodifikoni lojën tuaj të basketbollit](https://studio.code.org/s/basketball/lessons/1/levels/1)\n-   Sigurohuni që ta provoni fillimisht përpara se t'u kërkoni studentëve tuaj ta plotësojnë atë. Kontrolloni teknologjinë tuaj dhe vendosni nëse keni nevojë të zgjidhni ndonjë problem përpara Orës së Kodit.\n\n### Një ditë përpara orës suaj të kodit\n\n-   Shtypni një ose më shumë prej [Shembujve të Biletës së Daljes](https://docs.google.com/a/code.org/document/d/1ylIlO7Pppk6W3Jt58VHS5mjvnshg9URvj3iCU0Ok6qY/edit?usp=sharing) në fund të këtij plani mësimor, ose krijoni tuajin.\n\n-   Çdo student që përfundon aktivitetin duhet të marrë një [certifikatë](https://studio.code.org/certificates/batch). Printoni një për çdo student paraprakisht për ta bërë këtë më të lehtë në fund të Orës së Kodit.\n\n-   Lexoni \"Ngjarjet në Bounce - Si ndodhin?\" kuvertë me rrëshqitje (që do t'u prezantohet studentëve në fund të klasës)",
+          "purpose": "Ky mësim prezanton konceptet thelbësore CS të kodimit dhe programimit (duke përdorur blloqe), si dhe teknika të thjeshta korrigjimi. Ata do të mësojnë se ngjarjet janë shumë të zakonshme në programet kompjuterike, veçanërisht në videolojërat.\n\nNxënësit do të zhvillojnë kuptimin e tyre për ngjarjet duke bërë një lojë basketbolli. Nxënësit do të mësojnë të bëjnë një lëvizje me dorë sipas tasteve me shigjeta dhe të bëjnë zhurmë kur objektet përplasen. Në fund, ata do të arrijnë të personalizojnë lojën e tyre për ta bërë atë më unike!",
+          "student_overview": "Keni dashur ndonjëherë të luani video lojëra në shkollë? Në këtë mësim, do të keni mundësi të bëni vetë!"
+        },
+        "dance-extras-2019/Dance Party - Go Further": {
+          "name": "Vazhdoni të kërceni",
+          "overview": "Në këtë mësim, nxënësit e të gjitha moshave vazhdojnë përvojën e tyre me kodimin dhe shkencën kompjuterike në një mjedis të sigurt dhe mbështetës. Ky mësim është krijuar për nxënës të të gjitha moshave, por kërkon lexim. Ky aktivitet kërkon zë pasi mjeti është ndërtuar për t'iu përgjigjur muzikës.",
+          "preparation": "#### Një javë përpara orës suaj të kodit\n\n-   Rishikoni [Udhëzuesin e Edukatorit të Orës së Kodit](https://hourofcode.com/us/how-to) dhe [Praktikat më të mira nga Edukatorët e Suksesshëm](https://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) në mënyrë që të filloni të planifikoni ngjarjen tuaj të Orës së Kodit.\n\n-   [Regjistrojeni ngjarjen tuaj të Orës së Kodit](https://hourofcode.com/us) nëse dëshironi të merrni mbështetje në klasë, postera me zbritje ose të merrni pjesë në dhuratën e robotikës (vetëm në SHBA).\n\n-   Rishikoni dhe plotësoni vetë tutorialin në internet: [Dance Party](https://studio.code.org/s/dance-2019)\n\n-   Sigurohuni që ta provoni fillimisht përpara se t'u kërkoni studentëve tuaj ta plotësojnë atë.\n\n-   Kontrolloni teknologjinë tuaj dhe vendosni nëse keni nevojë të zgjidhni ndonjë problem përpara Orës së Kodit.\n\n#### Një ditë para orës suaj të kodit\n\n-   Çdo student që përfundon aktivitetin duhet të marrë një [certifikatë](https://studio.code.org/certificates/batch). Printoni një për të gjithë paraprakisht për ta bërë më të lehtë këtë në fund të Orës së Kodit.\n\n-   (me dëshirë) Inkurajoni nxënësit të sjellin kufje për t'i përdorur gjatë aktivitetit.",
+          "purpose": "Ky mësim prezanton konceptet thelbësore CS të kodimit dhe programimit të ngjarjeve (duke përdorur blloqe).",
+          "student_overview": "Nxënësit e të gjitha moshave vazhdojnë një përvojë hyrëse me kodimin dhe shkencën kompjuterike në një mjedis të sigurt dhe mbështetës."
+        },
+        "Hour of Code/Hour of Code 2013": {
+          "name": "Ora e Kodit 2013"
+        },
+        "dance-2019/Dance Party": {
+          "overview": "Në këtë mësim, nxënësit e të gjitha moshave marrin një përvojë hyrëse me kodimin dhe shkencën kompjuterike në një mjedis të sigurt dhe mbështetës. Ky mësim është krijuar për nxënës të të gjitha moshave, por kërkon lexim. Ky aktivitet kërkon zë pasi mjeti është ndërtuar për t'iu përgjigjur muzikës.",
+          "preparation": "### Një javë përpara orës suaj të kodit\n\n-   Rishikoni [Udhëzuesin e Edukatorit të Orës së Kodit](http://hourofcode.com/resources/how-to/) dhe [Praktikat më të mira nga Edukatorët e Suksesshëm](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) në mënyrë që të filloni të planifikoni ngjarjen tuaj të Orës së Kodit.\n-   [Regjistrojeni ngjarjen tuaj të Orës së Kodit](http://hourofcode.com) nëse dëshironi të merrni mbështetje në klasë, postera me zbritje ose të merrni pjesë në dhuratën e robotikës (vetëm në SHBA).\n-   Rishikoni dhe plotësoni vetë tutorialin në internet: [Dance Party](https://studio.code.org/s/dance-2019)\n-   Sigurohuni që ta provoni fillimisht përpara se t'u kërkoni studentëve tuaj ta plotësojnë atë. Kontrolloni teknologjinë tuaj dhe vendosni nëse keni nevojë të zgjidhni ndonjë problem përpara Orës së Kodit.\n-   Rishikoni planin e mësimit plotësues, [\"Dance Party: Unplugged\"](https://studio.code.org/s/dance-unplugged/lessons/1) për të përcaktuar nëse dëshironi apo jo ta drejtoni këtë mësim përpara Orës së Kodit.\n\n### Një ditë përpara orës suaj të kodit\n\n-   Çdo student që përfundon aktivitetin duhet të marrë një certifikatë. [Print one](http://code.org/certificates) për të gjithë paraprakisht për ta bërë këtë më të lehtë në fund të Orës së Kodit.\n-   (me dëshirë) Inkurajoni nxënësit të sjellin kufje për t'i përdorur gjatë aktivitetit.",
+          "purpose": "Ky mësim prezanton konceptet thelbësore CS të kodimit dhe programimit të ngjarjeve (duke përdorur blloqe).",
+          "student_overview": "Në këtë mësim, nxënësit e të gjitha moshave marrin një përvojë hyrëse me kodimin dhe shkencën kompjuterike në një mjedis të sigurt dhe mbështetës. Ky mësim është krijuar për nxënës të të gjitha moshave, por kërkon lexim. Ky aktivitet kërkon zë pasi mjeti është ndërtuar për t'iu përgjigjur muzikës."
+        },
+        "oceans/Oceans": {
+          "overview": "Në këtë mësim, nxënësit e të gjitha moshave marrin një përvojë hyrëse me kodimin dhe shkencën kompjuterike në një mjedis të sigurt dhe mbështetës. Së pari, studentët klasifikojnë objektet si \"peshk\" ose \"jo peshk\" për të tentuar të heqin plehrat nga oqeani. Më pas, studentët do të duhet të zgjerojnë grupin e të dhënave të tyre të trajnimit për të përfshirë krijesa të tjera detare që i përkasin ujit. Në pjesën e dytë të aktivitetit, studentët do të zgjedhin etiketat e tyre për t'i aplikuar në imazhet e peshkut të krijuar rastësisht. Këto të dhëna trajnimi përdoren për një model të mësimit të makinerive që më pas duhet të jetë në gjendje të etiketojë imazhet e reja vetë.",
+          "preparation": "### Një javë para Orës së Kodit\n\n-   Rishikoni [Udhëzuesin e edukatorëve të Orës së Kodimit](http://hourofcode.com/resources/how-to/) dhe [Praktikat më të mira nga edukatorët e suksesshëm](http://hourofcode.com) në mënyrë që të filloni të planifikoni ngjarjen tuaj të Orës së Kodit. \n-   [Regjistrohu ngjarjen e Orës së Kodit](https://studio.code.org/certificates/batch?course=b2NlYW5z) nëse dëshironi të merrni mbështetje në klasë.\n-   Rishikoni dhe plotësoni vetë tutorialin online\n-   Sigurohuni që ta provoni atë së pari para se t'i kërkoni nxënësve tuaj ta përfundojnë atë. Kontrolloni teknologjinë tuaj dhe vendosni nëse keni nevojë të zgjidhni ndonjë problem përpara Orës suaj të Kodimit.\n\n### Një ditë para Orës Tuaj të Kodit\n\n-   Shtypni një ose më shumë nga [Shembujt e Biletave të Daljes][3] në fund të këtij plani mësimi, ose krijoni tuajën. \n-   Çdo student i cili përfundon aktivitetin duhet të marrë një [certificate][4]. Printoni një për secilin nxënës paraprakisht për ta bërë këtë më të lehtë në fund të Orës së Kodimit.",
+          "purpose": "Ky tutorial është krijuar për t'i prezantuar studentët me **mësimin me makinë**, një lloj **inteligjence artificiale**. Studentët do të eksplorojnë se si **të dhënat e trajnimit** përdoren për të mundësuar një model të mësimit të makinës për të klasifikuar të dhënat e reja. Studentët duhet të kenë një përvojë pozitive gjatë tutorialit dhe më e rëndësishmja duhet të jenë të motivuar për të vazhduar mësimin e shkencave kompjuterike.",
+          "student_overview": "Në këtë mësim, nxënësit e të gjitha moshave marrin një përvojë hyrëse me kodimin dhe shkencën kompjuterike në një mjedis të sigurt dhe mbështetës. Së pari, studentët klasifikojnë objektet si \"peshk\" ose \"jo peshk\" për të tentuar të heqin plehrat nga oqeani. Më pas, studentët do të duhet të zgjerojnë grupin e të dhënave të tyre të trajnimit për të përfshirë krijesa të tjera detare që i përkasin ujit. Në pjesën e dytë të aktivitetit, studentët do të zgjedhin etiketat e tyre për t'i aplikuar në imazhet e peshkut të krijuar rastësisht. Këto të dhëna trajnimi përdoren për një model të mësimit të makinerive që më pas duhet të jetë në gjendje të etiketojë imazhet e reja vetë."
+        },
+        "k5-onlinepd-2019/Loops": {
+          "name": "cikle "
+        },
+        "k5-onlinepd-2019/Events": {
+          "name": "Ngjarje"
+        },
+        "k5-onlinepd-2019/Conditionals": {
+          "name": "Kushtet"
+        },
+        "k5-onlinepd-2019/Functions": {
+          "name": "funksione"
+        },
+        "k5-onlinepd-2019/Variables": {
+          "name": "variabla"
+        },
+        "k5-onlinepd-2019/For Loops": {
+          "name": "Për Ciklet"
+        },
+        "K5-OnlinePD/Next Steps": {
+          "name": "Hapat e ardhshme"
+        },
+        "kodea-pd-2021/Next Steps": {
+          "name": "Hapat e ardhshme"
+        },
+        "coursed-2022/Graph Paper Programming": {
+          "name": "Programimi Grafik me Letër"
+        },
+        "coursed-2022/Relay Programming": {
+          "name": "Programimi i Besuar"
+        },
+        "coursed-2022/Events in Bounce": {
+          "student_overview": "Keni dashur ndonjëherë të luani video lojëra në shkollë? Në këtë mësim, do të keni mundësi të bëni vetë!"
+        },
+        "coursed-2022/Dance Party": {
+          "purpose": "Ky mësim prezanton konceptet thelbësore CS të kodimit dhe programimit të ngjarjeve (duke përdorur blloqe)."
+        },
+        "coursed-2022/Conditionals with Cards": {
+          "name": "Kushtoret me Karta"
+        },
+        "coursef-2022/AI For Oceans": {
+          "name": "AI Për oqeanet"
+        },
+        "coursef-2022/The Internet": {
+          "name": "Interneti"
+        },
+        "coursee-2022/Songwriting": {
+          "name": "Të shkruarit e Këngëve"
+        },
+        "courseb-2022/Move It, Move It": {
+          "name": "Lëvize atë, lëvize atë"
+        },
+        "courseb-2022/Getting Loopy": {
+          "name": "Duke u Çmëndur"
+        },
+        "express-2022/Creating Art with Code": {
+          "student_overview": "Krijo imazhe të bukura duke programuar Artistin."
+        },
+        "express-2022/Dance Party": {
+          "purpose": "Ky mësim prezanton konceptet thelbësore CS të kodimit dhe programimit të ngjarjeve (duke përdorur blloqe)."
+        },
+        "coursea-2022/Happy Maps": {
+          "name": "Hartat e Gëzuara"
+        },
+        "coursec-2022/Creating Art with Code": {
+          "student_overview": "Krijo imazhe të bukura duke programuar Artistin."
+        },
+        "coursec-2022/The Big Event": {
+          "name": "Eventi i Madh"
+        },
+        "coursec-2022/Binary Bracelets": {
+          "name": "Byzylykët Binarë"
+        },
+        "csd3-2022/Variables": {
+          "name": "variabla"
+        },
+        "csd3-2022/Text": {
+          "name": "Tekst"
+        },
+        "csd3-2022/Conditionals": {
+          "name": "Kushtet"
+        },
+        "csd3-2022/Functions": {
+          "name": "funksione"
+        },
+        "csd6-2022/Functions": {
+          "name": "funksione"
+        },
+        "courseb-2018/Move It, Move It": {
+          "name": "Lëvize atë, lëvize atë"
+        },
+        "courseb-2018/Your Digital Footprint": {
+          "name": "Gjurmët e Tua Dixhitale"
+        },
+        "coursea-2018/Programming: Happy Maps": {
+          "name": "Hartat e Gëzuara"
+        },
+        "coursea-2018/Going Places Safely": {
+          "name": "Të shkuarit nëpër Vende në mënyrë të Sigurtë"
+        },
+        "coursed-2018/Algorithms: Graph Paper Programming": {
+          "name": "Programimi Grafik me Letër"
+        },
+        "coursed-2018/Relay Programming": {
+          "name": "Programimi i Besuar"
+        },
+        "coursed-2018/Conditionals with Cards": {
+          "name": "Kushtoret me Karta"
+        },
+        "coursed-2018/Digital Citizenship": {
+          "name": "Shtetësi Dixhitale"
+        },
+        "coursed-2018/Unplugged: Binary": {
+          "name": "Imazhet Binare"
+        },
+        "coursef-2018/Programming: My Robotic Friends": {
+          "name": "Miqtë e mi Robotikë"
+        },
+        "coursef-2018/Building a Foundation": {
+          "name": "Krijimi i një fondacioni"
+        },
+        "coursef-2018/Conditionals with Cards": {
+          "name": "Kushtoret me Karta"
+        },
+        "coursef-2018/Envelope Variables": {
+          "name": "Variablat Zarf"
+        },
+        "coursef-2018/For Loop Fun": {
+          "name": "Qef me Ciklet For"
+        },
+        "express-2018/Graph Paper Programming": {
+          "name": "Programimi Grafik me Letër"
+        },
+        "express-2018/Relay Programming": {
+          "name": "Programimi i Besuar"
+        },
+        "express-2018/Loops: Getting Loopy": {
+          "name": "Duke u Çmëndur"
+        },
+        "express-2018/Conditionals with Cards": {
+          "name": "Kushtoret me Karta"
+        },
+        "express-2018/Functions: Songwriting": {
+          "name": "Të shkruarit e Këngëve"
+        },
+        "express-2018/Events: The Big Event": {
+          "name": "Eventi i Madh"
+        },
+        "express-2018/Envelope Variables": {
+          "name": "Variablat Zarf"
+        },
+        "express-2018/For Loop Fun": {
+          "name": "Qef me Ciklet For"
+        },
+        "express-2018/Binary Bracelets": {
+          "name": "Byzylykët Binarë"
+        },
+        "express-2018/Unplugged: Binary": {
+          "name": "Imazhet Binare"
+        },
+        "express-2018/Internet": {
+          "name": "Interneti"
+        },
+        "express-2018/Crowdsourcing": {
+          "name": "Crowdsourcing"
+        },
+        "coursee-2018/Programming: My Robotic Friends": {
+          "name": "Miqtë e mi Robotikë"
+        },
+        "coursee-2018/Building a Foundation": {
+          "name": "Krijimi i një fondacioni"
+        },
+        "coursee-2018/Conditionals with Cards": {
+          "name": "Kushtoret me Karta"
+        },
+        "coursee-2018/Functions: Songwriting": {
+          "name": "Të shkruarit e Këngëve"
+        },
+        "coursee-2018/Internet": {
+          "name": "Interneti"
+        },
+        "coursee-2018/Crowdsourcing": {
+          "name": "Crowdsourcing"
+        },
+        "coursec-2018/Building a Foundation": {
+          "name": "Krijimi i një fondacioni"
+        },
+        "coursec-2018/Loops: Getting Loopy": {
+          "name": "Duke u Çmëndur"
+        },
+        "coursec-2018/Events: The Big Event": {
+          "name": "Eventi i Madh"
+        },
+        "coursec-2018/Binary Bracelets": {
+          "name": "Byzylykët Binarë"
+        },
+        "pre-express-2018/Move It, Move It": {
+          "name": "Lëvize atë, lëvize atë"
+        },
+        "pre-express-2018/Your Digital Footprint": {
+          "name": "Gjurmët e Tua Dixhitale"
+        },
+        "pre-express-2018/Spelling Bee": {
+          "name": "Bleta Gërmëzuese"
+        },
+        "csd3-2018/Variables": {
+          "name": "variabla"
+        },
+        "csd3-2018/Conditionals": {
+          "name": "Kushtet"
+        },
+        "csd3-2018/Functions": {
+          "name": "funksione"
+        },
+        "csd6-2018/Functions with Parameters": {
+          "name": "Funksionet me parametra"
+        },
+        "csd2-2018/Lists": {
+          "name": "Listat"
+        },
+        "coursea-2019/Going Places Safely": {
+          "name": "Të shkuarit nëpër Vende në mënyrë të Sigurtë"
+        },
+        "coursea-2019/Programming: Happy Maps": {
+          "name": "Hartat e Gëzuara"
+        },
+        "courseb-2019/Your Digital Footprint": {
+          "name": "Gjurmët e Tua Dixhitale"
+        },
+        "courseb-2019/Move It, Move It": {
+          "name": "Lëvize atë, lëvize atë"
+        },
+        "courseb-2019/Loops: Getting Loopy": {
+          "name": "Duke u Çmëndur"
+        },
+        "coursed-2019/Algorithms: Graph Paper Programming": {
+          "name": "Programimi Grafik me Letër"
+        },
+        "coursed-2019/Relay Programming": {
+          "name": "Programimi i Besuar"
+        },
+        "coursed-2019/Conditionals with Cards": {
+          "name": "Kushtoret me Karta"
+        },
+        "coursed-2019/Unplugged: Binary": {
+          "name": "Imazhet Binare"
+        },
+        "coursed-2019/Digital Citizenship": {
+          "name": "Shtetësi Dixhitale"
+        },
+        "coursef-2019/Envelope Variables": {
+          "name": "Variablat Zarf"
+        },
+        "coursef-2019/For Loop Fun": {
+          "name": "Qef me Ciklet For"
+        },
+        "coursef-2019/Internet": {
+          "name": "Interneti"
+        },
+        "coursef-2019/Crowdsourcing": {
+          "name": "Crowdsourcing"
+        },
+        "coursee-2019/Functions: Songwriting": {
+          "name": "Të shkruarit e Këngëve"
+        },
+        "coursec-2019/Binary Bracelets": {
+          "name": "Byzylykët Binarë"
+        },
+        "coursec-2019/Events: The Big Event": {
+          "name": "Eventi i Madh"
+        },
+        "pre-express-2019/Spelling Bee": {
+          "name": "Bleta Gërmëzuese"
+        },
+        "csd3-2019/Variables": {
+          "name": "variabla"
+        },
+        "csd3-2019/Conditionals": {
+          "name": "Kushtet"
+        },
+        "csd3-2019/Functions": {
+          "name": "funksione"
+        },
+        "csd6-2019/Functions with Parameters": {
+          "name": "Funksionet me parametra"
+        },
+        "csd2-2019/Lists": {
+          "name": "Listat"
+        },
+        "coursef-2017/Building a Foundation": {
+          "name": "Krijimi i një fondacioni"
+        },
+        "coursef-2017/Algorithms: Tangrams": {
+          "name": "Algoritmet: Tangrams"
+        },
+        "coursea-2017/Real-life Algorithms: Plant a Seed": {
+          "name": "Algoritmet e jetës-Reale: Mbill një Farë"
+        },
+        "pre-express-2017/Real-life Algorithms: Plant a Seed": {
+          "name": "Algoritmet e jetës-Reale: Mbill një Farë"
+        },
+        "pre-express-2017/Spelling Bee": {
+          "name": "Bleta Gërmëzuese"
+        },
+        "coursee-2017/Building a Foundation": {
+          "name": "Krijimi i një fondacioni"
+        },
+        "coursee-2017/Nested Loops": {
+          "name": "Përsëritjet e Mbivendosura"
+        },
+        "coursec-2017/Real-life Algorithms: Paper Planes": {
+          "name": "Algoritmet e Jetës-Reale: Planet në Letër"
+        },
+        "courseb-2017/Real-life Algorithms: Plant a Seed": {
+          "name": "Algoritmet e jetës-Reale: Mbill një Farë"
+        },
+        "coursed-2017/Nested Loops": {
+          "name": "Përsëritjet e Mbivendosura"
+        },
+        "express-2017/Introduction": {
+          "name": "Hyrja"
+        },
+        "express-2017/Building a Foundation": {
+          "name": "Krijimi i një fondacioni"
+        },
+        "express-2017/Nested Loops": {
+          "name": "Përsëritjet e Mbivendosura"
+        },
+        "csd3-2017/Variables": {
+          "name": "variabla"
+        },
+        "csd3-2017/Conditionals": {
+          "name": "Kushtet"
+        },
+        "csd3-2017/Functions": {
+          "name": "funksione"
+        },
+        "csd6-2017/Functions with Parameters_": {
+          "name": "Funksionet me parametra"
+        },
+        "csd2-2017/Lists": {
+          "name": "Listat"
+        },
+        "course4/Unplugged: Tangrams": {
+          "name": "Unplugged: Tangrams"
+        },
+        "course4/Maze and Bee": {
+          "name": "Maze dhe Bletë"
+        },
+        "course4/Artist": {
+          "name": "Artisti"
+        },
+        "course4/Unplugged: Envelope Variables": {
+          "name": "Unplugged: Variablat Zarf"
+        },
+        "course4/Unplugged: Madlibs": {
+          "name": "Unplugged: Madlibs"
+        },
+        "course4/Artist: Variables": {
+          "name": "Artist: Variablat"
+        },
+        "course4/Play Lab: Variables": {
+          "name": "Play Lab: Variablat"
+        },
+        "course4/Unplugged: For Loop Fun": {
+          "name": "Unplugged: Argëtimi Ciklit For"
+        },
+        "course4/Bee: For Loops": {
+          "name": "Bletë: Ciklet For"
+        },
+        "course4/Artist: For Loops": {
+          "name": "Artisti: Ciklet For"
+        },
+        "course4/Play Lab: For Loops": {
+          "name": "Play Lab: Ciklet For"
+        },
+        "course4/Artist: Functions": {
+          "name": "Artisti: Funksionet"
+        },
+        "course4/Unplugged: Songwriting with Parameters": {
+          "name": "Unplugged: Të Shkruarit Këngë me Parametra"
+        },
+        "course4/Artist: Functions with Parameters": {
+          "name": "Artisti: Funksionet me Parametra"
+        },
+        "course4/Play Lab: Functions with Parameters": {
+          "name": "Play Lab: Funksionet me Parametra"
+        },
+        "course4/Bee: Functions with Parameters": {
+          "name": "Bletë: Funksionet me Parametra"
+        },
+        "course4/Unplugged: Binary": {
+          "name": "Unplugged: Binare"
+        },
+        "course4/Artist Binary": {
+          "name": "Artist Binar"
+        },
+        "course4/Super Challenge - Variables": {
+          "name": "Super sfidë- Variabla"
+        },
+        "course4/Super Challenge - For Loops": {
+          "name": "Super sfidë- Për cikle"
+        },
+        "course4/Super Challenge - Functions and Parameters": {
+          "name": "Super sfidë-Funksione dhe Parametra"
+        },
+        "course4/Extreme Challenge - Comprehensive": {
+          "name": "Sfidë Ekstreme- Gjithëpërfshirëse"
+        },
+        "20-hour/Introduction to Computer Science": {
+          "name": "Hyrje në Shkencë Kompjuterike"
+        },
+        "20-hour/The Maze": {
+          "name": "Labirinti"
+        },
+        "20-hour/Computational Thinking": {
+          "name": "Te menduarit kompjuterik"
+        },
+        "20-hour/Graph Paper Programming": {
+          "name": "Programimi Grafik me Letër"
+        },
+        "20-hour/The Artist": {
+          "name": "Artisti"
+        },
+        "20-hour/Algorithms": {
+          "name": "Algoritmet"
+        },
+        "20-hour/The Artist 2": {
+          "name": "Artisti 2"
+        },
+        "20-hour/Functions": {
+          "name": "funksione"
+        },
+        "20-hour/The Farmer": {
+          "name": "Fermeri"
+        },
+        "20-hour/Conditionals": {
+          "name": "Kushtet"
+        },
+        "20-hour/The Artist 3": {
+          "name": "Artisti 3"
+        },
+        "20-hour/Song Writing": {
+          "name": "Të Shkruarit Këngë"
+        },
+        "20-hour/The Farmer 2": {
+          "name": "Fermeri 2"
+        },
+        "20-hour/Abstraction": {
+          "name": "Abstraksioni"
+        },
+        "20-hour/The Artist 4": {
+          "name": "Artisti 4"
+        },
+        "20-hour/Relay Programming": {
+          "name": "Programimi i Besuar"
+        },
+        "20-hour/The Farmer 3": {
+          "name": "Fermeri 3"
+        },
+        "20-hour/The Internet": {
+          "name": "Interneti"
+        },
+        "20-hour/The Artist 5": {
+          "name": "Artisti 5"
+        },
+        "20-hour/Wrap-up": {
+          "name": "Mbështjell"
+        },
+        "course2/Graph Paper Programming": {
+          "name": "Programimi Grafik me Letër"
+        },
+        "course2/Real-life Algorithms: Paper Planes": {
+          "name": "Algoritmet e Jetës-Reale: Planet në Letër"
+        },
+        "course2/Maze: Sequence": {
+          "name": "Labirinti: Sekuencë"
+        },
+        "course2/Artist: Sequence": {
+          "name": "Artist: Sekuencë"
+        },
+        "course2/Getting Loopy": {
+          "name": "Duke u Çmëndur"
+        },
+        "course2/Maze: Loops": {
+          "name": "Maze: Ciklet"
+        },
+        "course2/Artist: Loops": {
+          "name": "Artist: Ciklet"
+        },
+        "course2/Bee: Loops": {
+          "name": "Bletë: Ciklet"
+        },
+        "course2/Relay programming": {
+          "name": "Programim i Besueshëm"
+        },
+        "course2/Bee: Debugging": {
+          "name": "Bletë: Rregullimi"
+        },
+        "course2/Artist: Debugging": {
+          "name": "Artist: Rregullimi"
+        },
+        "course2/Conditionals": {
+          "name": "Kushtet"
+        },
+        "course2/Bee: Conditionals": {
+          "name": "Bletë: Kushtet"
+        },
+        "course2/Binary Bracelets": {
+          "name": "Byzylykët Binarë"
+        },
+        "course2/The Big Event": {
+          "name": "Eventi i Madh"
+        },
+        "course2/Flappy": {
+          "name": "Flappy"
+        },
+        "course2/Studio: Create a Story": {
+          "name": "Play Lab: Krijo një Histori"
+        },
+        "course2/Your Digital Footprint": {
+          "name": "Gjurmët e Tua Dixhitale"
+        },
+        "course2/Artist: Nested Loops": {
+          "name": "Artisti: CIklet e Mbivendosura"
+        },
+        "course3/Computational Thinking": {
+          "name": "Te menduarit kompjuterik"
+        },
+        "course3/Maze": {
+          "name": "Labirint"
+        },
+        "course3/Artist": {
+          "name": "Artisti"
+        },
+        "course3/Functional Suncatchers": {
+          "name": "Suncatchers-at Funksionalë"
+        },
+        "course3/Artist: Functions": {
+          "name": "Artisti: Funksionet"
+        },
+        "course3/Bee: Functions": {
+          "name": "Bleta: Funksionet"
+        },
+        "course3/Bee: Conditionals": {
+          "name": "Bletë: Kushtet"
+        },
+        "course3/Maze: Conditionals": {
+          "name": "Maze: Kushtet"
+        },
+        "course3/Songwriting": {
+          "name": "Të shkruarit e Këngëve"
+        },
+        "course3/Dice Race": {
+          "name": "Gara me zar"
+        },
+        "course3/Artist: Nested Loops": {
+          "name": "Artisti: CIklet e Mbivendosura"
+        },
+        "course3/Farmer: While Loops": {
+          "name": "Fermeri: Ciklet While"
+        },
+        "course3/Bee: Nested Loops": {
+          "name": "Bletë: Ciklet e Mbivendosura"
+        },
+        "course3/Bee: Debugging": {
+          "name": "Bletë: Rregullimi"
+        },
+        "course3/Bounce": {
+          "name": "Hidhu"
+        },
+        "course3/Studio: Create a Story": {
+          "name": "Play Lab: Krijo një Histori"
+        },
+        "course3/Studio: Create a Game": {
+          "name": "Play Lab - Krijo një Lojë"
+        },
+        "course3/Internet": {
+          "name": "Internet"
+        },
+        "course3/Crowdsourcing": {
+          "name": "Crowdsourcing"
+        },
+        "course3/Digital Citizenship": {
+          "name": "Shtetësi Dixhitale"
+        },
+        "course3/Artist: Patterns": {
+          "name": "Artisti: Modelet"
+        },
+        "course1/Happy Maps": {
+          "name": "Hartat e Gëzuara"
+        },
+        "course1/Move it, Move it": {
+          "name": "Lëvize, Lëvize"
+        },
+        "course1/Jigsaw: Learn to drag and drop": {
+          "name": "Jigsaw: Mëso të tërheqësh dhe lëshosh mjete"
+        },
+        "course1/Maze: Sequence": {
+          "name": "Labirinti: Sekuencë"
+        },
+        "course1/Maze: Debugging": {
+          "name": "Maze: Rregullimi"
+        },
+        "course1/Real-life Algorithms: Plant a Seed": {
+          "name": "Algoritmet e jetës-Reale: Mbill një Farë"
+        },
+        "course1/Bee: Sequence": {
+          "name": "Bletë: Sekuencë"
+        },
+        "course1/Artist: Sequence": {
+          "name": "Artist: Sekuencë"
+        },
+        "course1/Building a Foundation": {
+          "name": "Krijimi i një fondacioni"
+        },
+        "course1/Artist: Shapes": {
+          "name": "Artist: Format"
+        },
+        "course1/Spelling Bee": {
+          "name": "Bleta Gërmëzuese"
+        },
+        "course1/Getting Loopy": {
+          "name": "Duke u Çmëndur"
+        },
+        "course1/Maze: Loops": {
+          "name": "Maze: Ciklet"
+        },
+        "course1/Bee: Loops": {
+          "name": "Bletë: Ciklet"
+        },
+        "course1/The Big Event": {
+          "name": "Eventi i Madh"
+        },
+        "course1/Studio: Create a Story": {
+          "name": "Play Lab: Krijo një Histori"
+        },
+        "course1/Going Places Safely": {
+          "name": "Të shkuarit nëpër Vende në mënyrë të Sigurtë"
+        },
+        "course1/Artist: Loops": {
+          "name": "Artist: Ciklet"
+        },
+        "jigsaw/Jigsaw": {
+          "name": "Jigsaw"
+        },
+        "allthethings/Jigsaw": {
+          "name": "Jigsaw"
+        },
+        "allthethings/Maze": {
+          "name": "Labirint"
+        },
+        "allthethings/Artist": {
+          "name": "Artisti"
+        },
+        "allthethings/Bee": {
+          "name": "Bletë"
+        },
+        "allthethings/Farmer": {
+          "name": "Fermer"
+        },
+        "allthethings/Flappy": {
+          "name": "Flappy"
+        },
+        "allthethings/Bounce": {
+          "name": "Hidhu"
+        },
+        "allthethings/Multi": {
+          "name": "Shumë"
+        },
+        "allthethings/Match": {
+          "name": "Përshtat"
+        },
+        "allthethings/Pixelation": {
+          "name": "Pixelation"
+        },
+        "allthethings/Studio": {
+          "name": "Studio"
+        },
+        "allthethings/Minecraft": {
+          "name": "Minecraft"
+        },
+        "coursef-2021/For Loop Fun": {
+          "name": "Qef me Ciklet For"
+        },
+        "coursef-2021/AI for Oceans": {
+          "name": "AI Për oqeanet"
+        },
+        "coursef-2021/Internet": {
+          "name": "Interneti"
+        },
+        "courseb-2021/Move It, Move It": {
+          "name": "Lëvize atë, lëvize atë"
+        },
+        "courseb-2021/Loops: Getting Loopy": {
+          "name": "Duke u Çmëndur"
+        },
+        "coursea-2021/Programming: Happy Maps": {
+          "name": "Hartat e Gëzuara"
+        },
+        "coursec-2021/Programming in Artist": {
+          "student_overview": "Krijo imazhe të bukura duke programuar Artistin."
+        },
+        "coursec-2021/Events: The Big Event": {
+          "name": "Eventi i Madh"
+        },
+        "coursec-2021/Binary Bracelets": {
+          "name": "Byzylykët Binarë"
+        },
+        "coursed-2021/Algorithms: Graph Paper Programming": {
+          "name": "Programimi Grafik me Letër"
+        },
+        "coursed-2021/Relay Programming": {
+          "name": "Programimi i Besuar"
+        },
+        "coursed-2021/Events in Bounce": {
+          "student_overview": "Keni dashur ndonjëherë të luani video lojëra në shkollë? Në këtë mësim, do të keni mundësi të bëni vetë!"
+        },
+        "coursed-2021/Dance Party": {
+          "purpose": "Ky mësim prezanton konceptet thelbësore CS të kodimit dhe programimit të ngjarjeve (duke përdorur blloqe)."
+        },
+        "coursed-2021/Conditionals with Cards": {
+          "name": "Kushtoret me Karta"
+        },
+        "express-2021/Creating Art with Code": {
+          "student_overview": "Krijo imazhe të bukura duke programuar Artistin."
+        },
+        "express-2021/lesson-1": {
+          "purpose": "Ky mësim prezanton konceptet thelbësore CS të kodimit dhe programimit të ngjarjeve (duke përdorur blloqe)."
+        },
+        "coursee-2021/Functions: Songwriting": {
+          "name": "Të shkruarit e Këngëve"
+        },
+        "csd6-2021/Functions with Parameters": {
+          "name": "Funksionet me parametra"
+        },
+        "csd3-2021/Variables": {
+          "name": "variabla"
+        },
+        "csd3-2021/Text": {
+          "name": "Tekst"
+        },
+        "csd3-2021/Conditionals": {
+          "name": "Kushtet"
+        },
+        "csd3-2021/Functions": {
+          "name": "funksione"
+        },
+        "courseb-2020/Move It, Move It": {
+          "name": "Lëvize atë, lëvize atë"
+        },
+        "courseb-2020/Loops: Getting Loopy": {
+          "name": "Duke u Çmëndur"
+        },
+        "coursed-2020/Algorithms: Graph Paper Programming": {
+          "name": "Programimi Grafik me Letër"
+        },
+        "coursed-2020/Relay Programming": {
+          "name": "Programimi i Besuar"
+        },
+        "coursed-2020/Conditionals with Cards": {
+          "name": "Kushtoret me Karta"
+        },
+        "coursed-2020/Unplugged: Binary": {
+          "name": "Imazhet Binare"
+        },
+        "coursec-2020/Binary Bracelets": {
+          "name": "Byzylykët Binarë"
+        },
+        "coursec-2020/Events: The Big Event": {
+          "name": "Eventi i Madh"
+        },
+        "coursee-2020/Functions: Songwriting": {
+          "name": "Të shkruarit e Këngëve"
+        },
+        "coursea-2020/Programming: Happy Maps": {
+          "name": "Hartat e Gëzuara"
+        },
+        "coursef-2020/Envelope Variables": {
+          "name": "Variablat Zarf"
+        },
+        "coursef-2020/Internet": {
+          "name": "Interneti"
+        },
+        "coursef-2020/For Loop Fun": {
+          "name": "Qef me Ciklet For"
         }
       }
     }

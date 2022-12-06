@@ -1,9 +1,5 @@
 <Gamelab>
   <config><![CDATA[{
-  "game_id": 50,
-  "created_at": "2022-03-30T23:41:04.000Z",
-  "level_num": "custom",
-  "user_id": 324,
   "properties": {
     "skin": "gamelab",
     "code_functions": {
@@ -32,10 +28,6 @@
       "console.log": null,
       "comment_Variables": null,
       "stopSound": null,
-      "createGroup": null,
-      "setVelocityEach": null,
-      "setAnimationEach": null,
-      "add": null,
       "randomNumber_min_max": null,
       "setCollider": null,
       "debug": null
@@ -80,13 +72,13 @@
     "parent_level_id": 23249,
     "name_suffix": "_2022",
     "reference_links": [
-      "/docs/concepts/game-lab/sprites/velocity/",
-      "/docs/concepts/javascript/booleans-and-comparison-operators/",
-      "/docs/concepts/javascript/if-statements/",
-      "/docs/concepts/javascript/if-else-statements/",
-      "/docs/concepts/game-lab/the-draw-loop/"
+      "/courses/csd-2022/guides/velocity",
+      "/courses/csd-2022/guides/booleans-and-comparison-operators",
+      "/courses/csd-2022/guides/if-statements",
+      "/courses/csd-2022/guides/if-else-statements",
+      "/courses/csd-2022/guides/the-draw-loop"
     ],
-    "map_reference": "/docs/concepts/game-lab/sprites/collision-detection/",
+    "map_reference": "/courses/csd-2022/guides/collision-detection",
     "mini_rubric": "false",
     "encrypted": "false",
     "start_blocks": "var coin1 = createSprite(100, 100);\r\ncoin1.setAnimation(\"bronze_coin\");\r\ncoin1.velocityX = 1;\r\ncoin1.velocityY = 1;\r\n//Change coin1 collider here.\r\n\r\ncoin1.debug=true;\r\nvar coin2 = createSprite(300, 300);\r\ncoin2.setAnimation(\"bronze_coin\");\r\ncoin2.velocityX = -1;\r\ncoin2.velocityY = -1;\r\n//Change coin2 collider here.\r\n\r\ncoin2.debug=true;\r\nfunction draw() {\r\n  background(\"teal\");\r\n  if (coin1.isTouching(coin2)) {\r\n    coin1.velocityX = 0;\r\n    coin1.velocityY = 0;\r\n    coin2.velocityX = 0;\r\n    coin2.velocityY = 0;\r\n  }\r\n  drawSprites();\r\n}\r\n",
@@ -96,11 +88,16 @@
     "bubble_choice_description": "Improve collisions for sprites with circular animations.",
     "thumbnail_url": "https://images.code.org/a42ba3dcc666047d26145a7832493f70-image-1589906306820.2020-05-19 12_37_36.gif",
     "encrypted_examples": "pkZI3tnt7hqE8oM3EsK1CT2NZCl68J31kd09eg8/32jMGMMYMIOmWM7/rzl/\nRpQRZ+GX/CynLqqB11uNw2SfcA==\n",
+    "validation_enabled": "false",
     "preload_asset_list": null
   },
+  "level_num": "custom",
+  "game_id": 50,
+  "created_at": "2022-03-30T23:41:04.000Z",
+  "user_id": 324,
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-03-30T23:41:04.173+00:00\",\"changed\":[\"cloned from \\\"CSD U3 collision detection challenge collider circle_2021\\\"\"],\"cloned_from\":\"CSD U3 collision detection challenge collider circle_2021\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-03-30T23:41:04.173+00:00\",\"changed\":[\"cloned from \\\"CSD U3 collision detection challenge collider circle_2021\\\"\"],\"cloned_from\":\"CSD U3 collision detection challenge collider circle_2021\"},{\"changed_at\":\"2022-05-11 16:47:19 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Gamelab>

@@ -1,9 +1,5 @@
 <Weblab>
   <config><![CDATA[{
-  "game_id": 58,
-  "created_at": "2022-04-01T20:30:32.000Z",
-  "level_num": "custom",
-  "user_id": 324,
   "properties": {
     "encrypted": "false",
     "instructions_important": "false",
@@ -16,13 +12,17 @@
     "bubble_choice_description": "Learn how to make new lines without starting a new paragraph.  You can use this code to add poems or lists to your page.",
     "encrypted_examples": "f+QYaDua/xyX9rh6RrPEhegK/k90GOrtZGW8VELgCboNkRv+aOqFCzcUZNzm\nFcZ07zYNbzDulbsfhQE/Q3vRxw==\n",
     "reference_links": [
-      "/docs/concepts/html/html-tags/"
+      "/courses/vpl-csd-summer-pilot-2022/guides/html-tags"
     ],
-    "map_reference": "/docs/concepts/html/headings-and-paragraphs/",
+    "map_reference": "/courses/vpl-csd-summer-pilot-2022/guides/headings-and-paragraphs",
     "thumbnail_url": "https://images.code.org/c1fb2198202517b8ddfe3ccb9865ca3e-image-1562863985170.JPG",
     "parent_level_id": 18817,
     "name_suffix": "_vpl-summer-pilot-2022"
   },
+  "level_num": "custom",
+  "game_id": 58,
+  "created_at": "2022-04-01T20:30:32.000Z",
+  "user_id": 324,
   "published": true,
   "notes": "",
   "audit_log": "[{\"changed_at\":\"2022-04-01T20:30:32.848+00:00\",\"changed\":[\"cloned from \\\"CSD Web Headings line break_2022\\\"\"],\"cloned_from\":\"CSD Web Headings line break_2022\"}]"

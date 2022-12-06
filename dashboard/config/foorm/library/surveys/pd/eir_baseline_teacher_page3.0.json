@@ -20,7 +20,7 @@
             {
               "type": "matrix",
               "name": "cs_community",
-              "title": "How much do you agree or disagree with the following statements about your computer science educational community? (Check one in each row.) \n",
+              "title": "How much do you agree or disagree with the following statements about your computer science educational community? (Check one in each row.)",
               "columns": [
                 {
                   "value": "0",
@@ -77,7 +77,7 @@
             {
               "type": "matrix",
               "name": "cs_community_important",
-              "title": "How much do you agree or disagree with the following statements about the leaders and community members in your area? (Check one in each row.) \n",
+              "title": "How much do you agree or disagree with the following statements about the leaders and community members in your area? (Check one in each row.)",
               "columns": [
                 {
                   "value": "0",
@@ -138,7 +138,7 @@
             {
               "type": "checkbox",
               "name": "resistance_change",
-              "title": "What do you perceive to be the greatest challenges in offering computer science courses in your school? (Check all that apply.)\n",
+              "title": "What do you perceive to be the greatest challenges in offering computer science courses in your school? (Check all that apply.)",
               "choices": [
                 {
                   "value": "hardware_software",

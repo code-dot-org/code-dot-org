@@ -48,7 +48,6 @@
     "auto_run_setup": "DRAW_LOOP",
     "parent_level_id": 14894,
     "long_instructions": "We can change all kinds of things in this program when you click on the sprites.  Let’s change their color!  \r\n\r\n**Add code to change the color of each alien when it gets clicked.**",
-    "project_template_level_name": "Dance Party 2_2019",
     "show_type_hints": "true",
     "short_instructions": "Add code to change the color of each alien when it gets clicked.",
     "include_shared_functions": "false",

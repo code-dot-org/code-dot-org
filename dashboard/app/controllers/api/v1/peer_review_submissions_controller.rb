@@ -62,7 +62,7 @@ class Api::V1::PeerReviewSubmissionsController < ApplicationController
     real_reviews = PeerReview.find(reviews.map(&:id))
 
     real_reviews.each do |review|
-      script = Script.find(review.script_id)
+      script = Unit.find(review.script_id)
       # Pull out any that are tied to deprecated scripts/units
       submissions[review.user_level.id] = PeerReview.get_submission_summary_for_user_level(review.user_level, review.script) unless script.deprecated?
     end
@@ -146,14 +146,14 @@ class Api::V1::PeerReviewSubmissionsController < ApplicationController
 
   def result_to_status(result)
     case result
-      when ActivityConstants::REVIEW_ACCEPTED_RESULT
-        'Accepted'
-      when ActivityConstants::REVIEW_REJECTED_RESULT
-        'Rejected'
-      when ActivityConstants::UNREVIEWED_SUBMISSION_RESULT
-        'Pending Review'
-      else
-        'Unsubmitted'
+    when ActivityConstants::REVIEW_ACCEPTED_RESULT
+      'Accepted'
+    when ActivityConstants::REVIEW_REJECTED_RESULT
+      'Rejected'
+    when ActivityConstants::UNREVIEWED_SUBMISSION_RESULT
+      'Pending Review'
+    else
+      'Unsubmitted'
     end
   end
 end

@@ -147,6 +147,10 @@ my:
         options:
           KEY:
             '"x"': "×"
+      DansBlocks_setForegroundEffect2:
+        options:
+          EFFECT:
+            '"rain"': မိုးရွာသည်
       gamelab_checkTouching:
         options:
           CONDITION:
@@ -167,6 +171,12 @@ my:
         options:
           EFFECT:
             '"rain"': မိုးရွာသည်
+      gamelab_makeSpritesWithSize:
+        options:
+          SIZE:
+            '30': small
+            '50': အလယ်အလတ်
+            '100': large
       gamelab_playSoundOptions:
         options:
           SOUND:
@@ -302,3 +312,7 @@ my:
             "'sand'": သဲ
       craft_placeTorch:
         text: မီးတိုင်ကိုထားပါ
+      storylab_setForegroundEffect2:
+        options:
+          EFFECT:
+            '"rain"': မိုးရွာသည်

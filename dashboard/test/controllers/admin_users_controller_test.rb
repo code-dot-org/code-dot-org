@@ -4,6 +4,13 @@ require 'cdo/activity_constants'
 class AdminUsersControllerTest < ActionController::TestCase
   include Devise::Test::ControllerHelpers
 
+  self.use_transactional_test_case = false
+
+  setup_all do
+    @project_owner = create :student
+    @project = create :project, owner: @project_owner
+  end
+
   setup do
     @admin = create(:admin)
     @facilitator = create(:facilitator)
@@ -373,6 +380,17 @@ class AdminUsersControllerTest < ActionController::TestCase
     driver_user_level.reload
     assert driver_user_level.driver?
     assert_equal 1, PairedUserLevel.pairs(driver_user_level).count
+  end
+
+  test "delete_progress deletes code reviews" do
+    sign_in @admin
+
+    review1 = create :code_review, user_id: @project_owner.id, script_id: @script.id, level_id: @level1.id, project_id: @project.id
+    create :code_review_comment, code_review_id: review1.id
+
+    post :delete_progress, params: {user_id: @project_owner.id, script_id: @script.id, reason: 'Testing'}
+    assert_equal 0, CodeReview.where(user_id: @project_owner.id, script_id: @script.id).count
+    assert_equal 0, CodeReviewComment.where(code_review_id: review1.id).count
   end
 
   generate_admin_only_tests_for :user_projects_form

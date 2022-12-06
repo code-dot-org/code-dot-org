@@ -1,18 +1,6 @@
 import React from 'react';
 import ResourcesDropdown from './ResourcesDropdown';
-import ResourceType from '@cdo/apps/templates/courseOverview/resourceType';
 import {allowConsoleWarnings} from '../../../../test/util/testUtils';
-
-const legacySampleResources = [
-  {
-    type: ResourceType.curriculum,
-    link: 'https://example.com/a'
-  },
-  {
-    type: ResourceType.vocabulary,
-    link: 'https://example.com/b'
-  }
-];
 
 const migratedSampleResources = [
   {
@@ -34,24 +22,10 @@ export default storybook => {
 
   storybook.storiesOf('ResourcesDropdown', module).addStoryTable([
     {
-      name: 'unmigrated teacher resources',
-      story: () => (
-        <div>
-          <ResourcesDropdown
-            resources={legacySampleResources}
-            useMigratedResources={false}
-          />
-        </div>
-      )
-    },
-    {
       name: 'migrated teacher resources',
       story: () => (
         <div>
-          <ResourcesDropdown
-            migratedResources={migratedSampleResources}
-            useMigratedResources={true}
-          />
+          <ResourcesDropdown resources={migratedSampleResources} />
         </div>
       )
     },
@@ -60,8 +34,7 @@ export default storybook => {
       story: () => (
         <div>
           <ResourcesDropdown
-            migratedResources={migratedSampleResources}
-            useMigratedResources={true}
+            resources={migratedSampleResources}
             studentFacing={true}
           />
         </div>

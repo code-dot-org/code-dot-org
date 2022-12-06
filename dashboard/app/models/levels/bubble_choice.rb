@@ -37,7 +37,7 @@ class BubbleChoice < DSLDefined
   ALPHABET = ('a'..'z').to_a
 
   def dsl_default
-    <<~ruby
+    <<~RUBY
       name '#{DEFAULT_LEVEL_NAME}'
       display_name 'level display_name here'
       description 'level description here'
@@ -45,7 +45,7 @@ class BubbleChoice < DSLDefined
       sublevels
       level 'level1'
       level 'level2'
-    ruby
+    RUBY
   end
 
   # Returns all of the sublevels for this BubbleChoice level in order.
@@ -240,7 +240,7 @@ class BubbleChoice < DSLDefined
 
   # Returns the sublevel for a user that has the highest best_result.
   # @param [User]
-  # @param [Script]
+  # @param [Unit]
   # @return [Level]
   def best_result_sublevel(user, script)
     sublevels_for_progress = sublevels.map {|sublevel| BubbleChoice.level_for_progress_for_sublevel(sublevel)}

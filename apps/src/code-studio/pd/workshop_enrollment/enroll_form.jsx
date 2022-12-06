@@ -19,6 +19,7 @@ const EXPLAIN = '(Please Explain):';
 
 const CSF = 'CS Fundamentals';
 const INTRO = SubjectNames.SUBJECT_CSF_101;
+const DISTRICT = SubjectNames.SUBJECT_CSF_DISTRICT;
 const DEEP_DIVE = SubjectNames.SUBJECT_CSF_201;
 
 const CSP = 'CS Principles';
@@ -500,7 +501,8 @@ export default class EnrollForm extends React.Component {
           </FormGroup>
         )}
         {this.props.workshop_course === CSF &&
-          this.props.workshop_subject === INTRO && (
+          (this.props.workshop_subject === INTRO ||
+            this.props.workshop_subject === DISTRICT) && (
             <ButtonList
               groupName="csf_intro_intent"
               type="radio"
@@ -518,7 +520,8 @@ export default class EnrollForm extends React.Component {
             />
           )}
         {this.props.workshop_course === CSF &&
-          this.props.workshop_subject === INTRO && (
+          (this.props.workshop_subject === INTRO ||
+            this.props.workshop_subject === DISTRICT) && (
             <ButtonList
               groupName="csf_intro_other_factors"
               type="check"
@@ -606,7 +609,7 @@ export default class EnrollForm extends React.Component {
                 }
                 errorText={this.state.errors.csf_has_physical_curriculum_guide}
                 type="radio"
-                require={true}
+                required={true}
               />
             </FormGroup>
           )}
@@ -756,7 +759,10 @@ export default class EnrollForm extends React.Component {
 
     if (this.props.workshop_course === CSF) {
       requiredFields.push('role', 'grades_teaching');
-      if (this.props.workshop_subject === INTRO) {
+      if (
+        this.props.workshop_subject === INTRO ||
+        this.props.workshop_subject === DISTRICT
+      ) {
         requiredFields.push('csf_intro_intent');
       } else if (this.props.workshop_subject === DEEP_DIVE) {
         requiredFields.push(

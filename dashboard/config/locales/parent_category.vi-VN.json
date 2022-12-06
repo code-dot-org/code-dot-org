@@ -1,0 +1,14 @@
+{
+  "vi-VN": {
+    "data": {
+      "parent_category": {
+        "csp2021/IOC-2": {
+          "description": "Việc sử dụng các tiến bộ về máy tính có thể phát sinh rủi ro đối với sự an toàn và danh tính cá nhân."
+        },
+        "csp2021/DAT-1": {
+          "description": "Cách máy tính biểu diễn dữ liệu khác với cách dữ liệu được diễn giải và hiển thị cho người dùng. Các chương trình được sử dụng để dịch dữ liệu thành một hình thức mà mọi người dễ hiểu hơn."
+        }
+      }
+    }
+  }
+}

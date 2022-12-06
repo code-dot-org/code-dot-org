@@ -2,14 +2,19 @@ tr:
   data:
     parameter_names:
       "???": "???"
-      actor: aktör
+      actor: oyuncu
       color: renk
       counter: sayaç
+      dir: dir
+      direction: yön
       height: Yükseklik
       honey: bal
       left: sol
       length: uzunluk
       min: min
+      nectar units: nektar birimleri
+      nectars: nektarlar
+      numOctagons: numOctagons
       points: Puanlar
       radius: yarıçap
       sides: kenarlar

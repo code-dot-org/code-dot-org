@@ -88,29 +88,29 @@
         </block>
         <block type="procedures_defnoreturn" movable="false" editable="false" y="300">
           <mutation/>
-          <field name="NAME">draw a star</field>
+          <title name="NAME">draw a star</title>
           <statement name="STACK">
             <block type="draw_colour" id="draw-color" movable="false" editable="false">
               <value name="COLOUR">
                 <block type="colour_picker">
-                  <field name="COLOUR">#ffffff</field>
+                  <title name="COLOUR">#ffffff</title>
                 </block>
               </value>
               <next>
                 <block type="controls_repeat" movable="false" editable="false">
-                  <field name="TIMES">8</field>
+                  <title name="TIMES">8</title>
                   <statement name="DO">
                     <block type="draw_move_by_constant" movable="false" editable="false">
-                      <field name="DIR">moveForward</field>
-                      <field name="VALUE">25</field>
+                      <title name="DIR">moveForward</title>
+                      <title name="VALUE">25</title>
                       <next>
                         <block type="draw_move_by_constant" movable="false" editable="false">
-                          <field name="DIR">moveBackward</field>
-                          <field name="VALUE">25</field>
+                          <title name="DIR">moveBackward</title>
+                          <title name="VALUE">25</title>
                           <next>
                             <block type="draw_turn_by_constant" movable="false" editable="false">
-                              <field name="DIR">turnRight</field>
-                              <field name="VALUE">45</field>
+                              <title name="DIR">turnRight</title>
+                              <title name="VALUE">45</title>
                             </block>
                           </next>
                         </block>

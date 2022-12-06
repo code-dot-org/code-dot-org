@@ -280,7 +280,6 @@ sl:
     popup:
       progress_for_user: Napredek od %{name}
       progress: Tvoj napredek
-      lines: 'Skupno število vrstic kode: %{lines}'
       close: ZAPRI
       mastery: Koncepti
       puzzle_map: Stopnje
@@ -374,6 +373,7 @@ sl:
     no_primary_course: Poskusite Code Studio smer
     choose_next_course: Poskusi Code Studio tečaj z izbiro enga spodaj
     print_certificate: Natisni certifikat
+  certificate_hour_of_code: Ura kode
   move_students:
     new_section_dne: Žal, oddelek %{new_section_code} ne obstaja. Prosimo vnesite
       drugo šifro odseka.
@@ -675,13 +675,18 @@ sl:
         math: Matematika
         science: Znanost
         la: Jezikoslovje
+        other: Drugi
       resources:
         kodable: Kodable
+        other: Drugi
       robotics:
         kodable: Kodable
+        other: Drugi
       email_opt_in:
         opt_in_yes: Da
         opt_in_no: Ne
   cookie_banner:
     accept: Strinjam se
   copy: Kopiraj
+  pixelation:
+    binary: Binarno

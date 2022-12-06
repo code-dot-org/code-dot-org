@@ -21,8 +21,8 @@ Unplugged-lessen zijn bijzonder nuttig voor het opbouwen en onderhouden van een 
 <div style="clear: both;"></div>
 
 ***
-## Unplugged-lessen in CS Fundamentals 2021-22
-De volgende lessen zijn te vinden in <a href="https://docs.google.com/document/d/19BIaGVliOZCciSDmuezFFUhhCjhrB2oXpVLn0cJAibc/preview" target="_blank">CS Fundamentals 2021-22</a>. <br><br>
+## Unplugged lessons in CS Fundamentals 2022-23
+The following lessons can be found in <a href="https://docs.google.com/document/d/12j5IkeGEWeAmWnZY9krbNSo8oKOKT5nIQGUH5J7Si80/preview" target="_blank" rel="noopener noreferrer">CS Fundamentals 2022-23</a>. <br><br>
 
 <style>
 table, th, td {
@@ -31,7 +31,7 @@ table, th, td {
 }
 th, td {
   padding: 5px;
-  text-align: left;    
+  text-align: left;
 }
 #t01 {
   width: 10%;
@@ -60,72 +60,73 @@ th, td {
 </style>
 <table style="width:100%">
   <tr>
-    <th><center><big>Cursus</th>
-    <th><center><big>Lesplan</th> 
+    <th><center><big>Course</th>
+    <th><center><big>Lesson Plan</th>
     <th width=10%><center><big>Concept</th>
     <th width=20%><center><big>Video</th>
      <tr>
-    <th rowspan="3" id="t01">Cursus A</th>
-    <td width=40%><a href="https://studio.code.org/s/coursea-2021/lessons/3">A.3 - Vrolijke kaarten</a><br><small>Deze unplugged les brengt teams samen met een eenvoudige taak: de "flurb" naar het fruit krijgen. Leerlingen oefenen in het schrijven van precieze instructies terwijl ze werken aan het vertalen van instructies in de gegeven symbolen. Als er problemen optreden in de code, moeten de leerlingen ook samenwerken om fouten te herkennen en oplossingen te bouwen.</td><td>Sequencing</td> <td>{{ curriculum/unplugged/coursea_one_video_thumbnail }}</td>
+    <th rowspan="3" id="t01">Course A</th>
+    <td width=40%><a href="https://studio.code.org/s/coursea-2022/lessons/3">A.3 - Happy Maps</a><br><small>This unplugged lesson brings together teams with a simple task: get the "flurb" to the fruit. Leerlingen oefenen in het schrijven van precieze instructies terwijl ze werken aan het vertalen van instructies in de gegeven symbolen. If problems arise in the code, students should also work together to recognize bugs and build solutions.</td><td>Sequencing</td> <td>{{ curriculum/unplugged/coursea_one_video_thumbnail }}</td>
   </tr>
   <tr>
-    <td width=40%><a href="https://studio.code.org/s/coursea-2021/lessons/7">A.7 - Vrolijke lussen</a><br><small>Deze activiteit gaat opnieuw in op Vrolijke kaarten. Deze keer zullen de leerlingen grotere, langere puzzels oplossen met hun code, waardoor ze het nut inzien van structuren waarmee ze op een eenvoudigere manier langere code kunnen schrijven.</td><td>Loops</td> <td><img src="/images/a7.png" width="90%"></td>
+    <td width=40%><a href="https://studio.code.org/s/coursea-2022/lessons/7">A.7 - Happy Loops</a><br><small>This activity revisits Happy Maps. This time, student will be solving bigger, longer puzzles with their code, leading them to see utility in structures that let them write longer code in an easier way.</td><td>Loops</td> <td><img src="/images/a7.png" width="90%"></td>
   <tr>
-    <td width=40%><a href="https://studio.code.org/s/coursea-2021/lessons/11">A.11 - De grote gebeurtenis Jr.</a><br><small>Gebeurtenissen zijn een geweldige manier om variatie aan een vooraf geschreven algoritme toe te voegen. Soms wil je dat je programma precies op de gebruiker kan reageren wanneer de gebruiker dat wil. Daar zijn gebeurtenissen voor.</td><td>Gebeurtenissen</td> <td>{{ curriculum/unplugged/coursea_three_video_thumbnail }}</td>
-  </tr>
-       <tr>
-    <th rowspan="3" id="t02">Cursus B</th>
-    <td><a href="https://studio.code.org/s/courseb-2021/lessons/2">B.2 - Aan de kant, aan de kant</a><br><small>Deze les bereidt de leerlingen mentaal voor op de codeeroefeningen die ze tijdens deze cursus zullen tegenkomen. Programmeren om voorzichtig van plaats naar plaats te stappen tot een doel is bereikt.</td><td>Sequencing</td> <td>{{ curriculum/unplugged/courseb_one_video_thumbnail }}</td>
-  </tr>
-  <tr>
-    <td><a href="https://studio.code.org/s/courseb-2021/lessons/6">B.6 - In lussen lopen</a><br><small>Als we langere en interessantere programma's gaan schrijven, bevat onze code vaak veel herhalingen. In deze les leren de leerlingen hoe lussen kunnen worden gebruikt om instructies met veel herhalingen gemakkelijker over te brengen door te kijken naar de herhaalde bewegingspatronen in een dans.</td><td>Lussen</td> <td>{{ curriculum/unplugged/courseb_two_video_thumbnail }}</td>
-  <tr>
-    <td><a href="https://studio.code.org/s/courseb-2021/lessons/10">B.10 - De juiste app</a><br><small>Deze les laat leerlingen inzien dat informatica mensen in het echte leven kan helpen. Eerst leven de leerlingen zich in een aantal fictieve smartphonegebruikers in om hen te helpen de "juiste app" te vinden die aan hun behoeften voldoet. Vervolgens gebruiken de leerlingen hun inlevingsvermogen en creativiteit om hun eigen smartphone-app te ontwerpen die tegemoetkomt aan de behoeften van één extra gebruiker.</td><td>Invloed van informatica</td> <td><img src="/images/b10.png" width="90%"></td>
+    <td width=40%><a href="https://studio.code.org/s/coursea-2022/lessons/11">A.11 - The Big Event Jr.</a><br><small>Events are a great way to add variety to a pre-written algorithm. Soms wil je dat je programma precies op de gebruiker kan reageren wanneer de gebruiker dat wil. That is what events are for.</td><td>Events</td> <td>{{ curriculum/unplugged/coursea_three_video_thumbnail }}</td>
   </tr>
        <tr>
-    <th rowspan="4" id="t03">Cursus C</th>
-    <td><a href="https://studio.code.org/s/coursec-2021/lessons/2">C.2 - Mijn robotvriendjes Jr.</a><br><i>*Supplies: Plastic cups (10/group of 2-3)</i><br><small>Met behulp van een reeks symbolen in plaats van code ontwerpen de leerlingen algoritmen om een "robot" de opdracht te geven bekertjes in verschillende patronen te stapelen. Leerlingen doen om de beurt mee als de robot en reageren alleen op het algoritme dat door hun medeleerlingen is bepaald. Dit segment leert leerlingen het verband tussen symbolen en acties, het verschil tussen een algoritme en een programma, en de waardevolle vaardigheid van debuggen.</td><td>Sequencing</td><td>{{ curriculum/unplugged/coursec_one_video_thumbnail }}</td>
-  </tr> 
+    <th rowspan="3" id="t02">Course B</th>
+    <td><a href="https://studio.code.org/s/courseb-2022/lessons/2">B.2 - Move It, Move It</a><br><small>This lesson will work to prepare students mentally for the coding exercises that they will encounter over the length of this course. In small teams, students will use physical activity to program their classmates to step carefully from place to place until a goal is achieved.</td><td>Sequencing</td> <td>{{ curriculum/unplugged/courseb_one_video_thumbnail }}</td>
+  </tr>
   <tr>
-   <td><a href="https://studio.code.org/s/coursec-2021/lessons/7">C.7 - Mijn lussige robotvriend Jr</a><br><i>*Benodigdheden: Papieren bekertjes (20/groep van 4)</i><br><small>OverzichtVoortbouwend op de eerste "Mijn robotvriendjes"-activiteit gaan leerlingen aan de slag met grotere en meer ingewikkelde ontwerpen. Om hun "robots" zo te programmeren dat ze deze grotere ontwerpen kunnen voltooien, moeten de leerlingen in hun instructies herhalende patronen herkennen die door een loop kunnen worden vervangen.</td><td>Loops</td><td>{{ curriculum/unplugged/coursec_three_video_thumbnail }}</td>
-  </tr> 
+    <td><a href="https://studio.code.org/s/courseb-2022/lessons/6">B.6 - Getting Loopy</a><br><small>As we start to write longer and more interesting programs, our code often contains a lot of repetition. In this lesson, students will learn about how loops can be used to more easily communicate instructions that have a lot of repetition by looking at the repeated patterns of movement in a dance.</td><td>Loops</td> <td>{{ curriculum/unplugged/courseb_two_video_thumbnail }}</td>
+  <tr>
+    <td><a href="https://studio.code.org/s/courseb-2022/lessons/10">B.10 - The Right App</a><br><small>This lesson has students recognize that computer science can help people in real life. Eerst leven de leerlingen zich in een aantal fictieve smartphonegebruikers in om hen te helpen de "juiste app" te vinden die aan hun behoeften voldoet. Then, students exercise empathy and creativity to sketch their own smartphone app that addresses the needs of one additional user.</td><td>Impacts of Computing</td> <td><img src="/images/b10.png" width="90%"></td>
+  </tr>
+       <tr>
+    <th rowspan="4" id="t03">Course C</th>
+    <td><a href="https://studio.code.org/s/coursec-2022/lessons/2">C.2 - My Robotic Friends Jr.</a><br><i>*Supplies: Plastic cups (10/group of 2-3)</i><br><small>Using a set of symbols in place of code, students will design algorithms to instruct a "robot" to stack cups in different patterns. Leerlingen doen om de beurt mee als de robot en reageren alleen op het algoritme dat door hun medeleerlingen is bepaald. This segment teaches students the connection between symbols and actions, the difference between an algorithm and a program, and the valuable skill of debugging.</td><td>Sequencing</td><td>{{ curriculum/unplugged/coursec_one_video_thumbnail }}</td>
+  </tr>
+  <tr>
+   <td><a href="https://studio.code.org/s/coursec-2022/lessons/7">C.7 - My Loopy Robotic Friend Jr</a><br><i>*Supplies: Paper cups (20/group of 4)</i><br><small>Overview
+Building on the initial "My Robotic Friends" activity, students tackle larger and more complicated designs. In order to program their "robots" to complete these bigger designs, students will need to identify repeated patterns in their instructions that could be replaced with a loop.</td><td>Loops</td><td>{{ curriculum/unplugged/coursec_three_video_thumbnail }}</td>
+  </tr>
       <tr>
-   <td><a href="https://studio.code.org/s/coursec-2021/lessons/11">C.11 - De grote gebeurtenis</a><br><small>Leerlingen zullen snel leren dat gebeurtenissen een geweldige manier zijn om flexibiliteit toe te voegen aan een vooraf geschreven algoritme. Soms wil je dat je programma precies op de gebruiker kan reageren wanneer de gebruiker dat wil. Gebeurtenissen kunnen uw programma interessanter en interactiever maken.</td><td>Gebeurtenissen</td><td>{{ curriculum/unplugged/coursec_four_video_thumbnail }}</td>
-   </tr> 
-       </tr> 
-     <td><a href="https://studio.code.org/s/coursec-2021/lessons/15">C.15 - Binaire armbanden</a><br><i>*Benodigdheden: Markeerstiften. Optioneel – 18 zwarte/18 witte kralen, 1 pijpenrager per leerling</i><br><small>Binair is uiterst belangrijk in de wereld van computers. De meeste computers slaan tegenwoordig allerlei soorten informatie op in binaire vorm. Deze les laat zien hoe het mogelijk is om iets uit het echte leven te nemen en het te vertalen in een reeks aan- en uitzetten.</td><td>Binair</td><td>{{ curriculum/unplugged/coursec_two_video_thumbnail }}</td>
+   <td><a href="https://studio.code.org/s/coursec-2022/lessons/11">C.11 - The Big Event</a><br><small>Students will soon learn that events are a great way to add flexibility to a pre-written algorithm. Soms wil je dat je programma precies op de gebruiker kan reageren wanneer de gebruiker dat wil. Events can make your program more interesting and interactive.</td><td>Events</td><td>{{ curriculum/unplugged/coursec_four_video_thumbnail }}</td>
+   </tr>
+       </tr>
+     <td><a href="https://studio.code.org/s/coursec-2022/lessons/15">C.15 - Binary Bracelets</a><br><i>*Supplies: Markers. Optioneel – 18 zwarte/18 witte kralen, 1 pijpenrager per leerling</i><br><small>Binair is uiterst belangrijk in de wereld van computers. De meeste computers slaan tegenwoordig allerlei soorten informatie op in binaire vorm. This lesson helps demonstrate how it is possible to take something from real life and translate it into a series of ons and offs.</td><td>Binary</td><td>{{ curriculum/unplugged/coursec_two_video_thumbnail }}</td>
   </tr>
          <tr>
-    <th rowspan="3" id="t04">Cursus D</th>
-    <td><a href="https://studio.code.org/s/coursed-2021/lessons/2">D.2 - Programmeren met grafiekpapier<br></a><small>Door elkaar te "programmeren" om tekeningen te maken krijgen leerlingen de mogelijkheid om enkele kernconcepten van programmeren op een leuke en toegankelijke manier te ervaren. De les begint met leerlingen die elkaar met symbolen instructies geven om vierkantjes op grafiekpapier in te kleuren in een poging een bestaande afbeelding na te maken. Als er tijd over is, kan de les worden afgesloten met beelden die de leerlingen zelf maken.</td><td>Sequencing</td><td>{{ curriculum/unplugged/coursed_one_video_thumbnail }}</td>
+    <th rowspan="3" id="t04">Course D</th>
+    <td><a href="https://studio.code.org/s/coursed-2022/lessons/2">D.2 - Graph Paper Programming<br></a><small>By "programming" one another to draw pictures, students get an opportunity to experience some of the core concepts of programming in a fun and accessible way. De les begint met leerlingen die elkaar met symbolen instructies geven om vierkantjes op grafiekpapier in te kleuren in een poging een bestaande afbeelding na te maken. If there’s time, the lesson can conclude with images that the students create themselves.</td><td>Sequencing</td><td>{{ curriculum/unplugged/coursed_one_video_thumbnail }}</td>
   </tr>
   <tr>
-    <td><a href="https://studio.code.org/s/coursed-2021/lessons/4">D.4 - Relais programmeren<br></a><small>Deze activiteit begint met een korte les over debuggen en persistentie, en gaat dan snel over in een race tegen de klok waarbij de leerlingen in teams uiteenvallen en samenwerken om een programma te schrijven, één instructie per keer.</td><td>Sequencing</td><td>{{ curriculum/unplugged/coursed_two_video_thumbnail }}</td>
+    <td><a href="https://studio.code.org/s/coursed-2022/lessons/4">D.4 - Relay Programming<br></a><small>This activity will begin with a short lesson on debugging and persistence, then will quickly move to a race against the clock as students break into teams and work together to write a program one instruction at a time.</td><td>Sequencing</td><td>{{ curriculum/unplugged/coursed_two_video_thumbnail }}</td>
       </tr>
   <tr>
-    <td><a href="https://studio.code.org/s/coursed-2021/lessons/12">D.12 - Conditionals met kaarten</a><br><small>Deze les laat zien hoe conditionals kunnen worden gebruikt om een programma toe te snijden op specifieke informatie. We hebben niet altijd alle informatie die we nodig hebben bij het schrijven van een programma. Soms zult u in de ene situatie iets anders willen doen dan in de andere, zelfs als u niet weet welke situatie waar zal zijn wanneer uw code wordt uitgevoerd. Dat is waar conditionals in het spel komen. Conditionals stellen een computer in staat een beslissing te nemen, gebaseerd op de informatie die waar is elke keer dat uw code wordt uitgevoerd.+</td><td>Conditionals</td><td>{{ curriculum/unplugged/coursed_three_video_thumbnail }}</td>
+    <td><a href="https://studio.code.org/s/coursed-2022/lessons/12">D.12 - Conditionals with Cards</a><br><small>This lesson demonstrates how conditionals can be used to tailor a program to specific information. We hebben niet altijd alle informatie die we nodig hebben bij het schrijven van een programma. Soms zult u in de ene situatie iets anders willen doen dan in de andere, zelfs als u niet weet welke situatie waar zal zijn wanneer uw code wordt uitgevoerd. Dat is waar conditionals in het spel komen. Conditionals allow a computer to make a decision, based on the information that is true any time your code is run.+</td><td>Conditionals</td><td>{{ curriculum/unplugged/coursed_three_video_thumbnail }}</td>
 
-    </tr>
-         <tr>
-    <th rowspan="3" id="t05">Cursus E</th>
-    <td><a href="https://studio.code.org/s/coursee-2021/lessons/7">E.7 - Digitaal delen</a><br><i>>*Benodigdheden: Smartphone of tablet</i><br><small>Geleverd aan Computer Science Fundamentals door het team van Copyright and Creativity. Deze les helpt leerlingen te begrijpen wat de uitdagingen en voordelen zijn van het respecteren van eigendom en copyright, vooral in digitale omgevingen. Leerlingen moeten worden aangemoedigd om de rechten van artiesten te respecteren als een belangrijk onderdeel van ethisch digitaal burgerschap.</td><td>Digitaal burgerschap</td><td>{{ curriculum/unplugged/coursee_one_video_thumbnail }}</td>
   </tr>
   <tr>
-    <td><a href="https://studio.code.org/s/coursee-2021/lessons/11">E.11 - Songwriting</a><br><small>Een van de prachtigste structuren in de informaticawereld is de functie. Functies (soms procedures genoemd) zijn mini-programma's die je steeds opnieuw kunt gebruiken binnen je grotere programma. Deze les zal leerlingen helpen intuïtief te begrijpen waarom het combineren van stukken code in functies zo nuttig kan zijn.</td><td>Functies</td><td>{{ curriculum/unplugged/coursee_two_video_thumbnail }}</td>
+    <th rowspan="3" id="t05">Course E</th>
+    <td><a href="https://studio.code.org/s/coursee-2022/lessons/9">E.9 - Songwriting</a><br><small>One of the most magnificent structures in the computer science world is the function. Functies (soms procedures genoemd) zijn mini-programma's die je steeds opnieuw kunt gebruiken binnen je grotere programma. This lesson will help students intuitively understand why combining chunks of code into functions can be such a helpful practice.</td><td>Functions</td><td>{{ curriculum/unplugged/coursee_two_video_thumbnail }}</td>
+  </tr>
   <tr>
-    <td><a href="https://studio.code.org/s/coursee-2021/lessons/17"E.17 - Ontwerpen voor toegankelijkheid</a><br><small>In deze les leren leerlingen over toegankelijkheid en de waarde van empathie door te brainstormen en toegankelijke oplossingen te ontwerpen voor hypothetische apps.</td><td>E</td><td><img src="/images/e18.png" width="90%"></td>
+    <td><a href="https://studio.code.org/s/coursee-2022/lessons/15">E.15 - Designing for Accessibility</a><br><small>In this lesson, students will learn about accessibility and the value of empathy through brainstorming and designing accessible solutions for hypothetical apps.</td><td>Impacts of Computing</td><td><img src="/images/e18.png" width="90%"></td>
+  <tr>
+    <td><a href="https://studio.code.org/s/coursee-2022/lessons/16">E.16 - Digital Sharing</a><br><i>*Supplies: Smartphone or tablet</i><br><small>Loaned to Computer Science Fundamentals by the team over at Copyright and Creativity, this lesson exists to help students understand the challenges and beneﬁts of respecting ownership and copyright, particularly in digital environments. Students should be encouraged to respect artists’ rights as an important part of being an ethical digital citizen.</td><td>Digital Citizenship</td><td>{{ curriculum/unplugged/coursee_one_video_thumbnail }}</td>
   </tr>
     </tr>
          <tr>
-    <th rowspan="3" id="t06">Cursus F</th>
-           <td><a href= "https://studio.code.org/s/coursef-2021/lessons/6">F.6 -Verhalen uit de lege ruimte</a><br><i>*Benodigdheden: 6 enveloppen (ook geschikt: papier of indexkaarten, dubbelgevouwen)</i><br><small>Studenten gebruiken invulverhalen (vergelijkbaar met Mad Libs®) als context om te begrijpen hoe computers input van een gebruiker opnemen en opslaan, en deze later gebruiken als een programma wordt uitgevoerd.
-   </td><td>Variabelen</td><td>{{ curriculum/unplugged/coursef_one_video_thumbnail }}</td>  
+    <th rowspan="3" id="t06">Course F</th>
+           <td><a href= "https://studio.code.org/s/coursef-2022/lessons/6">F.6 -Blank Space Stories</a><br><i>*Supplies: 6 envelopes(also suitable:paper or index cards,folded in half)</i><br><small>Students will use fill-in-the-blank stories (similar to Mad Libs®) as a context for understanding how computers take and store input from a user, then use it later as a program runs.
+   </td><td>Variables</td><td>{{ curriculum/unplugged/coursef_one_video_thumbnail }}</td>
   </tr>
         <tr>
-    <td><a href="https://studio.code.org/s/coursef-2021/lessons/13">F.13 - Lussenpret</a><br><i>*Benodigdheden: Dobbelstenen (3 dobbelstenen/groep van 2-4)</i><br><small>We weten dat we met lussen dingen steeds opnieuw, maar nu gaan we leren hoe we lussen kunnen gebruiken waarin extra structuren zijn ingebouwd. Met deze nieuwe structuren kunnen leerlingen code maken die krachtiger en dynamischer is.</td><td>Voor lussen</td><td>{{ curriculum/unplugged/coursef_three_video_thumbnail }}</td>
+    <td><a href="https://studio.code.org/s/coursef-2021/lessons/13">F.13 - For Loop Fun</a><br><i>*Supplies: Dice (3 dice/group of 2-4)</i><br><small>We know that loops allow us to do things over and over again, but now we’re going to learn how to use loops that have extra structures built right in. These new structures will allow students to create code that is more powerful and dynamic.</td><td>For Loops</td><td>{{ curriculum/unplugged/coursef_three_video_thumbnail }}</td>
   </tr>
   <tr>
-    <td><a href="https://studio.code.org/s/coursef-2021/lessons/19">F.19 - Het internet</a><br><small>Ondanks dat veel mensen het internet dagelijks gebruiken, weten niet veel mensen hoe het werkt. In deze les doen de leerlingen alsof ze door het internet stromen, terwijl ze leren over verbindingen, URL's, IP-adressen en DNS.</td><td>Data</td><td>{{ curriculum/unplugged/coursef_two_video_thumbnail }}</td>
+    <td><a href="https://studio.code.org/s/coursef-2022/lessons/15">F.15 - The Internet</a><br><small>Even though many people use the internet daily, not very many know how it works. In deze les doen de leerlingen alsof ze door het internet stromen, terwijl ze leren over verbindingen, URL's, IP-adressen en DNS.</td><td>Data</td><td>{{ curriculum/unplugged/coursef_two_video_thumbnail }}</td>
   </tr>
 </table>
 
@@ -148,7 +149,7 @@ table, th, td {
 }
 th, td {
   padding: 5px;
-  text-align: left;    
+  text-align: left;
 }
 #t07 {
   width: 10%;
@@ -161,17 +162,17 @@ th, td {
     <th><center><big>Concept</th>
     <th width=65%><center><big>Lesplan <br>
 <small> Lesplan bevat aanvullende bronnen (dia's, video's, antwoordsleutels enz.).
-</th> 
-    <th><center><big>Bronnen</th>
+</th>
+    <th><center><big>Resources</th>
      <tr>
-    <th rowspan="2" id=t07 width=5%>Digitaal burgerschap</th>
+    <th rowspan="2" id=t07 width=5%>Digital Citizenship</th>
     <td><a href="https://curriculum.code.org/csf-19/coursef/18">Crowdsourcing</a></td> <td>{{ curriculum/unplugged/archive_one_video_thumbnail }}</td>
   </tr>
   <tr>
-      <td colspan="2">*Common Sense Education heeft een <a href="https://www.commonsense.org/education/digital-citizenship/curriculum">volledig Curriculum Digitaal Burgerschap</a> dat veel unplugged activiteiten bevat.</td>
+      <td colspan="2">*Common Sense Education has a <a href="https://www.commonsense.org/education/digital-citizenship/curriculum">full Digital Citizenship Curriculum</a> that includes many unplugged activities.</td>
     <tr>
     <th id=t07>Binary</th>
-        <td><a href="https://curriculum.code.org/csf-20/coursed/16/">Binaire afbeeldingen </a><br><small>*Benodigdheden: Optioneel - Groepjes van tegenover elkaar liggende items om aan de leerlingen te laten zien. Hoewel veel mensen bij binair denken aan uitsluitend nullen en enen, zullen de leerlingen kennismaken met het idee dat informatie kan worden weergegeven in een verscheidenheid van binaire opties. Deze les gaat nog een stap verder en laat zien hoe een computer nog complexere informatie (zoals afbeeldingen en kleuren) ook binair kan opslaan.</td><td>{{ curriculum/unplugged/coursed_four_video_thumbnail }}</td>
+        <td><a href="https://curriculum.code.org/csf-20/coursed/16/">Binary Images </a><br><small>*Supplies:Optional - Groupings of opposite items to display to students. Hoewel veel mensen bij binair denken aan uitsluitend nullen en enen, zullen de leerlingen kennismaken met het idee dat informatie kan worden weergegeven in een verscheidenheid van binaire opties. Deze les gaat nog een stap verder en laat zien hoe een computer nog complexere informatie (zoals afbeeldingen en kleuren) ook binair kan opslaan.</td><td>{{ curriculum/unplugged/coursed_four_video_thumbnail }}</td>
  </tr>
     <tr>
     <th id=t07>Lussen</th>

@@ -1,9 +1,5 @@
 <Gamelab>
   <config><![CDATA[{
-  "game_id": 50,
-  "created_at": "2022-04-01T20:41:39.000Z",
-  "level_num": "custom",
-  "user_id": 324,
   "properties": {
     "skin": "gamelab",
     "code_functions": {
@@ -72,7 +68,7 @@
     "encrypted_examples": "iSUxjYpSGr0vfiu9q2CBN9rD+WTXSUP/CAHoOE/PGGV+scR8W3FdvsNXZvUo\nyr31GAg+rz3CIY9xQV+a0dTenQ==\n",
     "parent_level_id": 18778,
     "name_suffix": "_vpl-summer-pilot-2022",
-    "map_reference": "/docs/concepts/game-lab/drawing-shapes/",
+    "map_reference": "/courses/vpl-csd-summer-pilot-2022/guides/drawing-shapes",
     "video_key": "csd_gamelab_draw_2",
     "disable_procedure_autopopulate": "false",
     "top_level_procedure_autopopulate": "false",
@@ -86,6 +82,10 @@
     "libraries_enabled": "false",
     "preload_asset_list": null
   },
+  "level_num": "custom",
+  "game_id": 50,
+  "created_at": "2022-04-01T20:41:39.000Z",
+  "user_id": 324,
   "published": true,
   "notes": "",
   "audit_log": "[{\"changed_at\":\"2022-04-01T20:41:39.649+00:00\",\"changed\":[\"cloned from \\\"CSD U3 drawing challenge 2_2022\\\"\"],\"cloned_from\":\"CSD U3 drawing challenge 2_2022\"}]"

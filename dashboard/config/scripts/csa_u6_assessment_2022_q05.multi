@@ -1,11 +1,18 @@
 name 'CSA U6 Assessment 2022 q05'
 
-wrong 'wrong'
-right 'right'
-wrong 'wrong'
-wrong 'wrong'
-wrong 'wrong'
+wrong '`13`'
+wrong '`11`'
+wrong '`7`'
+wrong '`12`'
+right '`14`'
 
 markdown <<MARKDOWN
-question
+Consider the following code segment.
+
+```
+String str = "CompSci Rocks!";
+int num = str.length();
+```
+
+What is the value of `num` when the code segment is executed?
 MARKDOWN

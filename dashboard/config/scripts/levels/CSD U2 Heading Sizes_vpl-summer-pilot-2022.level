@@ -1,9 +1,5 @@
 <Weblab>
   <config><![CDATA[{
-  "game_id": 58,
-  "created_at": "2022-04-01T20:30:30.000Z",
-  "level_num": "custom",
-  "user_id": 324,
   "properties": {
     "instructions_important": "false",
     "start_sources": "{\r\n  \"files\": [\r\n    {\r\n      \"name\": \"index.html\",\r\n      \"data\": \"<!DOCTYPE html> \\n<html>\\n  <head>\\n  </head>\\n  <body>\\n    <h3>Biggest</h3>\\n    <h6>Big</h6>\\n    <h4>Medium Big</h4>\\n    <h1>Medium Small</h1>\\n    <h5>Small</h5>\\n    <h2>Smallest</h2>\\n  </body>\\n</html>\"\r\n    }\r\n  ]\r\n}",
@@ -15,13 +11,17 @@
     "parent_level_id": 20008,
     "name_suffix": "_vpl-summer-pilot-2022",
     "reference_links": [
-      "/docs/concepts/html/html-tags/"
+      "/courses/vpl-csd-summer-pilot-2022/guides/html-tags"
     ],
-    "map_reference": "/docs/concepts/html/headings-and-paragraphs/",
+    "map_reference": "/courses/vpl-csd-summer-pilot-2022/guides/headings-and-paragraphs",
     "encrypted": "false",
     "validation_enabled": "true",
     "mini_rubric": "false"
   },
+  "level_num": "custom",
+  "game_id": 58,
+  "created_at": "2022-04-01T20:30:30.000Z",
+  "user_id": 324,
   "published": true,
   "notes": "",
   "audit_log": "[{\"changed_at\":\"2022-04-01T20:30:30.631+00:00\",\"changed\":[\"cloned from \\\"CSD U2 Heading Sizes_2022\\\"\"],\"cloned_from\":\"CSD U2 Heading Sizes_2022\"}]"

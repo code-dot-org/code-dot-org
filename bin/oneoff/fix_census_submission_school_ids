@@ -33,7 +33,7 @@ Census::CensusSubmission.
   puts "\tFound school ids: #{school_ids}"
   school_id = school_ids[0]
   #verify all are the same
-  if school_ids.all? {|id| id == school_id}
+  if school_ids.all?(school_id)
     attrs = {school_id: school_id}
     school_info = get_duplicate_school_info(attrs) || SchoolInfo.new(attrs)
     puts "\tSetting school_info to #{school_info.id}"

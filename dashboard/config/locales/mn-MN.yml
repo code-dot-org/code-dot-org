@@ -449,7 +449,6 @@ mn:
     popup:
       progress_for_user: "%{name}-н ахиц дэвшил"
       progress: Таны ахиц дэвшил
-      lines: 'Кодын нийт мөр: %{lines}'
       close: ХААХ
       mastery: Үзэл баримтлал
       puzzle_map: Үеүд
@@ -600,6 +599,7 @@ mn:
     no_primary_course: Кодын студийн хичээлийг оролдоорой
     choose_next_course: Доорхын нэгийг сонгож Кодын студийн хичээлийг оролдоорой
     print_certificate: Гэрчилгээг хэвлэх
+  certificate_hour_of_code: Кодын цаг
   move_students:
     new_section_dne: Уучлаарай, гэхдээ хэсэг %{new_section_code} оршихгүй байна. Өөр
       хэсгийн кодыг оруулаарай.
@@ -1255,7 +1255,7 @@ mn:
         kodable: Kodable
         scratch: Ноорог
         tynker: Tynker
-        other: 'Бусад:'
+        other: Бусад
       robotics:
         grok: Grok сурах
         kodable: Kodable
@@ -1265,7 +1265,7 @@ mn:
         sphero: Sphero
         raspberry: Raspberry Pi
         wonder: Гайхалтай семинар
-        other: 'Бусад:'
+        other: Бусад
       workshop_course:
         csf_af: КШУ-ны үндэс (А-F хичээл)
         csf_express: КШУ-ны үндэс (шуурхай сургалтын өмнөх ба шуурхай сургалт)
@@ -1318,3 +1318,5 @@ mn:
   page_not_found_button: Нүүр хуудас руу буцах
   copy: Хуулах
   teacher_feedback: Багшийн хариу үйлдэл
+  pixelation:
+    binary: Хоёрт

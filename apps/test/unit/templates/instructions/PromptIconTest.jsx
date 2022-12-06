@@ -13,7 +13,8 @@ describe('PromptIcon', () => {
         src={TEST_SRC_URL}
         id="prompt-icon"
         style={{
-          maxWidth: 50
+          maxWidth: 50,
+          marginLeft: 5
         }}
       />
     );

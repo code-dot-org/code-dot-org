@@ -25,7 +25,6 @@
 class LevelConceptDifficulty < ApplicationRecord
   include ConceptDifficulties
   belongs_to :level
-  validates :level, presence: true
 
   def serializable_hash(options=nil)
     super.compact.delete_if do |key, _|
@@ -43,7 +42,7 @@ class LevelConceptDifficulty < ApplicationRecord
     return super if new_record?
 
     # Otherwise, make sure we write `nil` over unpassed attributes
-    defaults = Hash[CONCEPTS.map {|concept| [concept, nil]}]
+    defaults = CONCEPTS.index_with(nil)
     super(defaults.merge(attrs))
   end
 

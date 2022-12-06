@@ -104,10 +104,10 @@ it:
         title: Mad G-Libs
         desc: L'astrazione è una delle abilità più importanti che un informatico deve possedere.  In questa attività i tuoi studenti analizzano storie per capirne le differenze, così che possano astrarre gli elementi comuni. Gli schemi di storia così ottenuti diventano dei modelli per divertirsi ad inventare nuove storie.
       ForLoopFun:
-        title: Divertiti usando i cicli con contatore
+        title: Divertirsi con i cicli con contatore
         desc: Sappiamo che i cicli permettono di svolgere azioni più e più volte, ma ora impariamo come usare i cicli con strutture aggiuntive.
       SongwritingWithParameters:
-        title: Composizione di Canzoni - Parametri
+        title: Scrittura musicale di un programma - Parametri
         desc: 'Una delle strutture più belle nell''informatica è la funzione.  Le funzioni (a volte chiamate procedure) sono dei mini-programmi che è possibile utilizzare più e più volte all''interno di un programma più grande. Questa lezione aiuta gli studenti a comprendere intuitivamente perché raggruppare blocchi di codice all''interno di funzioni è un''utile pratica.'
       BinaryImages:
         title: Immagini binarie
@@ -214,10 +214,10 @@ it:
         title: Variabili e buste
         desc: Le variabili consentono molta libertà nell'informatica.  Questa lezione aiuta a spiegare quali sono le variabili e come possiamo utilizzarle in diversi modi. Svolgi questa attività prima di (o in concomitanza con) la lezione sull'astrazione per comprendere a fondo come usare le variabili.
       courseF_unplugged_forLoopFun:
-        title: Divertiti usando i cicli con contatore
+        title: Divertirsi con i cicli con contatore
         desc: Sappiamo che i cicli permettono di svolgere azioni più e più volte, ma ora impariamo come usare i cicli con strutture aggiuntive.
       courseF_unplugged_songwritingParameters:
-        title: Composizione di Canzoni - Parametri
+        title: Scrittura musicale di un programma - Parametri
         desc: 'Una delle strutture più belle nell''informatica è la funzione.  Le funzioni (a volte chiamate procedure) sono dei mini-programmi che è possibile utilizzare più e più volte all''interno di un programma più grande. Questa lezione aiuta gli studenti a comprendere intuitivamente perché raggruppare blocchi di codice all''interno di funzioni è un''utile pratica.'
       courseB_unplugged_MRF_2018:
         title: I miei amici robotici
@@ -308,7 +308,7 @@ it:
         title: Immagini binarie
         desc: Anche se molti pensano al sistema binario come costituito rigorosamente da zeri e uni, nelle precedenti lezioni gli studenti hanno visto che le informazioni possono essere rappresentate in una varietà di opzioni binarie.  Questa lezione sviluppa ulteriormente questo concetto illustrando come un computer possa memorizzare informazioni ancora più complesse (ad esempio immagini e colori) in formato binario.
       courseE_unplugged_privateInformation_2019:
-        title: Cittadinanza digitale - Dati personali e altri dati
+        title: Dati personali e altri dati
         desc: Sviluppata da Common Sense Education, questa lezione tratta della differenza tra informazioni sicure da condividere online e informazioni che non lo sono.
       SongwritingParameters_2019:
         title: ' '
@@ -358,6 +358,7 @@ it:
         title: È fantastico creare e comportarsi lealmente
         desc: Questa lezione è un contributo del gruppo Copyright e Creatività (www.copyrightandcreativity.org) e serve per aiutare gli studenti a capire il processo di condivisione e ispirazione. A ciò si aggiunge la promozione della creatività e la necessità di essere corretti con coloro che danno vita ai contenuti creativi.
       GraphingData_2019:
+        title: Rappresentazione grafica dei dati
         desc: In questa lezione, gli studenti raccoglieranno i dati da un progetto del Play Lab o dello scenario globale reale e lo useranno per fare predizioni.
       courseE_unplugged_accessAbility_2019:
         title: Abilità di Accesso

@@ -35,6 +35,8 @@ class CurriculumReference < Level
     allow_blank: true
   }
 
+  REFERENCE_GUIDE_REGEX = /^\/courses\/(?<course_name>.+)\/guides\/(?<key>.+)\/?/
+
   def self.create_from_level_builder(params, level_params)
     create!(
       level_params.merge(
@@ -52,7 +54,17 @@ class CurriculumReference < Level
     properties['reference']
   end
 
+  def reference_guide
+    matches = REFERENCE_GUIDE_REGEX.match(href)
+    return nil unless matches
+    ReferenceGuide.find_by_course_name_and_key(matches[:course_name], matches[:key])
+  end
+
   def concept_level?
     true
+  end
+
+  def reference_guide_level?
+    return true if REFERENCE_GUIDE_REGEX.match(href)
   end
 end

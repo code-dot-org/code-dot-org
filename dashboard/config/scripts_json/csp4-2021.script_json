@@ -4,6 +4,16 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
+      "announcements": [
+        {
+          "notice": "Bring AP® Computer Science A to your students next year!",
+          "details": "Empower students with creative projects connected to the real world.  Check out our equity-driven curriculum and find summer professional learning opportunities that will prepare you to teach AP CSA this coming fall.",
+          "link": "https://code.org/educate/csa",
+          "type": "bullhorn",
+          "visibility": "Teacher-only",
+          "key": "b47bc1e8-a5ad-4ca6-902d-e8cd0d1fb8fe"
+        }
+      ],
       "curriculum_umbrella": "CSP",
       "has_lesson_plan": true,
       "has_verified_resources": true,
@@ -17,7 +27,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-04-26 17:17:00 UTC",
+    "serialized_at": "2022-09-28 14:31:42 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,

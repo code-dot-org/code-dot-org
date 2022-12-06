@@ -1,0 +1,17 @@
+{
+  "tr-TR": {
+    "data": {
+      "parent_category": {
+        "csp2021/IOC-2": {
+          "description": "Bilgisayar kullanımında yenilikler kişisel güvenlik ve kimliğiniz için riskler içerebilir."
+        },
+        "csp2021/DAT-1": {
+          "description": "Bilgisayarın verileri temsil etme biçimi, verilerin kullanıcı için yorumlanma ve görüntülenme biçiminden farklıdır. Programlar, verileri insanlar tarafından daha kolay anlaşılabilecek bir temsile dönüştürmek için kullanılır."
+        },
+        "ngss/ETS": {
+          "description": "Bilimde Mühendislik"
+        }
+      }
+    }
+  }
+}

@@ -138,8 +138,26 @@ export default class Neighborhood {
         this.controller.subtype.turnLeft(id);
         break;
       }
+      case NeighborhoodSignalType.SHOW_PAINTER: {
+        const {id} = signal.detail;
+        this.controller.showPegman(id);
+        break;
+      }
+      case NeighborhoodSignalType.HIDE_PAINTER: {
+        const {id} = signal.detail;
+        this.controller.hidePegman(id);
+        break;
+      }
+      case NeighborhoodSignalType.SHOW_BUCKETS: {
+        this.controller.subtype.setBucketVisibility(true);
+        break;
+      }
+      case NeighborhoodSignalType.HIDE_BUCKETS: {
+        this.controller.subtype.setBucketVisibility(false);
+        break;
+      }
       default:
-        console.log(signal.value);
+        // Ignore signals we don't know about.
         break;
     }
   }

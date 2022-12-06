@@ -3,29 +3,29 @@ include_recipe 'cdo-ruby'
 
 # Set up a minimal test Rackup app
 file '/home/kitchen/config.ru' do
-  content <<RUBY
-class HelloWorld
-  def self.call(env)
-    [200, {"Content-Type" => "text/plain"}, ["Hello world!"]]
-  end
-end
-run HelloWorld
-RUBY
+  content <<~RUBY
+    class HelloWorld
+      def self.call(env)
+        [200, {"Content-Type" => "text/plain"}, ["Hello world!"]]
+      end
+    end
+    run HelloWorld
+  RUBY
 end
 
 # Install Unicorn and configure as a service
 
 file '/home/kitchen/unicorn.rb' do
-  content <<RUBY
-listen '/run/unicorn/dashboard.sock'
-worker_processes 1
-pid "/home/kitchen/dashboard.pid"
-timeout 60
-preload_app true
-stderr_path '/home/kitchen/dashboard_unicorn_stderr.log'
-stdout_path '/home/kitchen/dashboard_unicorn_stdout.log'
-working_directory '/home/kitchen'
-RUBY
+  content <<~RUBY
+    listen '/run/unicorn/dashboard.sock'
+    worker_processes 1
+    pid "/home/kitchen/dashboard.pid"
+    timeout 60
+    preload_app true
+    stderr_path '/home/kitchen/dashboard_unicorn_stderr.log'
+    stdout_path '/home/kitchen/dashboard_unicorn_stdout.log'
+    working_directory '/home/kitchen'
+  RUBY
 end
 
 template "/etc/init.d/nginx_test" do
@@ -39,10 +39,10 @@ template "/etc/init.d/nginx_test" do
 end
 
 file '/home/kitchen/Gemfile' do
-  content <<RUBY
-source 'https://rubygems.org'
-gem 'unicorn', '~> 4.8.2'
-RUBY
+  content <<~RUBY
+    source 'https://rubygems.org'
+    gem 'unicorn', '~> 4.8.2'
+  RUBY
 end
 
 execute "bundle install" do

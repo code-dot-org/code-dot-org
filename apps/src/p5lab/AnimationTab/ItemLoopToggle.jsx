@@ -2,7 +2,7 @@
 import React from 'react';
 import {OverlayTrigger, Tooltip} from 'react-bootstrap';
 import PropTypes from 'prop-types';
-import Radium from 'radium';
+import style from './item-loop-toggle.module.scss';
 
 /**
  * The toggle that controls whether the animation loops frames.
@@ -30,21 +30,15 @@ class ItemLoopToggle extends React.Component {
     return (
       <OverlayTrigger overlay={tooltip} placement="bottom" delayShow={500}>
         <div
-          style={[styles.loopToggleStyle, this.props.style]}
+          style={this.props.style}
+          className={style.loopToggle}
           onClick={this.toggleClicked}
         >
-          <img src={iconImageSrc} style={styles.loopIconStyle} />
+          <img src={iconImageSrc} />
         </div>
       </OverlayTrigger>
     );
   }
 }
 
-const styles = {
-  loopToggleStyle: {
-    cursor: 'pointer',
-    float: 'left'
-  }
-};
-
-export default Radium(ItemLoopToggle);
+export default ItemLoopToggle;

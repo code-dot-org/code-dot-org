@@ -13,9 +13,11 @@
   %li
     Review the workshop agenda and resources posted on the
     - if @workshop.course == 'CS Principles'
-      =link_to('facilitator landing page', 'https://code.org/facilitator/csp') + '.'
-    - else
-      =link_to('facilitator landing page', ' https://code.org/facilitator/csd') + '.'
+      =link_to('facilitator landing page', 'https://code.org/educate/facilitator-landing/CSP') + '.'
+    - elsif @workshop.course == 'CS Discoveries'
+      =link_to('facilitator landing page', 'https://code.org/educate/facilitator-landing/CSD') + '.'
+    - elsif @workshop.course == 'Computer Science A'
+      =link_to('facilitator landing page', 'https://code.org/educate/facilitator-landing/CSA') + '.'
   %li
     Have quick questions about resources, agendas, or participant requests? Post them in the facilitator
     =link_to('Slack', 'https://codefacilitators6-12.slack.com/messages')

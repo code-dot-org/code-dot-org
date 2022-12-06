@@ -6,7 +6,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import PropTypes from 'prop-types';
-import Radium from 'radium';
+import Radium from 'radium'; // eslint-disable-line no-restricted-imports
 import ReactDatePicker from 'react-datepicker';
 import {DATE_FORMAT} from '../workshopConstants';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';

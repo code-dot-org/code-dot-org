@@ -8,8 +8,14 @@
 #To use a different locale, set it with `I18n.locale`:
 #I18n.locale = :es
 #This would use the information in config/locales/es.yml.
+#The following keys must be escaped otherwise they will not be retrieved by
+#the default I18n backend:
+#true, false, on, off, yes, no
+#Instead, surround them with single quotes.
+#en:
+#'true': 'foo'
 #To learn more, please read the Rails Internationalization guide
-#available at http://guides.rubyonrails.org/i18n.html.
+#available at https://guides.rubyonrails.org/i18n.html.
 th:
   errors:
     messages:
@@ -275,6 +281,7 @@ th:
       teach: "สอน"
       about: "เกี่ยวกับ"
       legal_privacy: "นโยบายความเป็นส่วนตัว"
+      legal_cookie_notice: "ประกาศเกี่ยวกับคุกกี้"
       legal_tos: "เงื่อนไขการให้บริการ"
     user:
       classroom: 'หน้าแรกของคุณครู'
@@ -322,7 +329,6 @@ th:
     popup:
       progress_for_user: "ความคืบหน้าของ %{name}"
       progress: 'ความคืบหน้าของคุณ'
-      lines: 'จำนวนบรรทัดของโค้ด: %{lines}'
       close: 'ปิด'
       mastery: 'แนวคิด'
       puzzle_map: 'ขั้นตอน'
@@ -405,6 +411,7 @@ th:
     no_primary_course: "ทดลองคอร์ส Code Studio"
     choose_next_course: "ทดลองเรียนคอร์ส Code Studio โดยเลือกจากรายการต่อไปนี้"
     print_certificate: "พิมพ์ใบรับรอง"
+  certificate_hour_of_code: "ช่วงเวลาของ Code"
   move_students:
     not_correct_participant_type: "คุณไม่สามารถย้ายผู้ใช้งานได้ เนื่องจากผู้ใช้งานเหล่านั้นยังไม่มีสิทธิ์เข้าร่วมในหมวดใหม่"
   share:
@@ -476,6 +483,11 @@ th:
       title: 'Dance Party'
     dance-2019:
       title: 'Dance Party'
+    hello-world:
+      title: 'สวัสดีชาวโลก'
+      body: 'เลือกธีมสนุกๆ จากสี่ธีมเพื่อเขียนโค้ดตัวอักษรแบบอินเทอร์แอคทีฟในโลกที่คุณสร้างขึ้น'
+    poem-art:
+      title: 'ภาพปกบทกวี'
     hoc:
       title: 'เขาวงกตสุดคลาสสิค'
       body: 'ลองศึกษาพื้นฐานของวิทยาการคอมพิวเตอร์ เพราะหลายล้านคนได้ลองแล้วด้วยตัวเอง'
@@ -654,10 +666,13 @@ th:
         math: 'คณิตศาสตร์'
         science: 'วิทยาศาสตร์'
         la: 'ศิลปะการใช้ภาษา'
+        other: "อาชีพอื่น ๆ"
       resources:
         kodable: 'Kodable'
+        other: "อาชีพอื่น ๆ"
       robotics:
         kodable: 'Kodable'
+        other: "อาชีพอื่น ๆ"
       workshop_course:
         csf_express: 'CS พื้นฐาน (Pre-Express หรือ Express)'
       email_opt_in:
@@ -674,3 +689,10 @@ th:
     link_your_email: "เชื่อมต่ออีเมลของคุณ"
     not_now: "ไม่ใช่ตอนนี้"
   teacher_feedback: "ข้อเสนอแนะของผู้สอน"
+  lesson_lock:
+    error:
+      no_updates: "ไม่มีการอัปเดตที่ต้องดำเนินการ"
+      missing_params: "ต้องระบุผู้ใช้ ระดับ และรหัสหน่วย"
+      cannot_view_locked_answers: "ไม่สามารถดูคำตอบขณะล็อกได้"
+      forbidden: "ผู้ใช้ไม่สามารถอัปเดตสถานะล็อกของนักเรียนได้"
+  reset_predict_progress_button: "ลบคำตอบ"

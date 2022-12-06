@@ -1,6 +1,6 @@
 name 'CSA U7L5-L5 CR_2022'
 display_name 'Code Review: Overriding Methods'
-description 'level description here'
+description 'Request a code review from your peers.'
 
 sublevels
 level 'CSA U7L5-L5a CR_2022'

@@ -1,5 +1,4 @@
 require_relative '../../shared/middleware/helpers/storage_id'
-require_relative '../../shared/middleware/helpers/projects'
 require 'cdo/aws/s3'
 require 'cdo/db'
 
@@ -35,23 +34,23 @@ class DeleteAccountsHelper
 
     @log.puts "Deleting project backed progress"
 
-    project_ids = Projects.table.where(storage_id: user.user_storage_id).map(:id)
+    project_ids = DASHBOARD_DB[:projects].where(storage_id: user.user_storage_id).map(:id)
     channel_count = project_ids.count
     encrypted_channel_ids = project_ids.map do |project_id|
       storage_encrypt_channel_id user.user_storage_id, project_id
     end
 
     # Clear potential PII from user's channels
-    Projects.table.
+    DASHBOARD_DB[:projects].
       where(id: project_ids).
       update(value: nil, updated_ip: '', updated_at: Time.now)
 
     # Clear any comments associated with specific versions of projects.
     # At time of writing, this feature is in use only in Javalab when a student
     # commits their code.
-    project_versions = ProjectVersion.where(project_id: project_ids)
-    project_versions.each {|version| version.update!(comment: nil)}
-    @log.puts "Cleared #{project_versions.count} ProjectVersion comments" if project_versions.count > 0
+    project_commits = ProjectCommit.where(project_id: project_ids)
+    project_commits.each {|version| version.update!(comment: nil)}
+    @log.puts "Cleared #{project_commits.count} ProjectCommit comments" if project_commits.count > 0
 
     # Clear S3 contents for user's channels
     @log.puts "Deleting S3 contents for #{channel_count} channels"
@@ -272,17 +271,30 @@ class DeleteAccountsHelper
     @log.puts "Cleared #{as_student_count} TeacherFeedback" if as_student_count > 0
   end
 
-  def purge_code_review_comments(user_id)
-    @log.puts "Removing CodeReviewComment"
-
-    comments = CodeReviewComment.with_deleted.where(commenter_id: user_id)
-    comments_count = comments.count
-    comments.each do |comment|
+  def clean_and_destroy_code_reviews(user_id)
+    # anonymize notes the user wrote
+    comments_written = CodeReviewComment.where(commenter_id: user_id)
+    comments_written_count = comments_written.count
+    comments_written.each do |comment|
       comment.comment = nil
-      comment.destroy
-      comment.save(validate: false)
+      comment.commenter_id = nil
+      comment.save!
     end
-    @log.puts "Cleared #{comments_count} CodeReviewComment" if comments_count > 0
+    comments_written.destroy_all
+    @log.puts "Cleared and deleted #{comments_written_count} CodeReviewComment" if comments_written_count > 0
+    # Clear comments and soft delete any code reviews for the user.
+    code_reviews = CodeReview.where(user_id: user_id)
+    code_reviews_count = code_reviews.count
+    code_reviews.each do |code_review|
+      next unless code_review.comments
+      code_review.comments.each do |comment|
+        comment.comment = nil
+        comment.save!
+      end
+    end
+    # soft delete the code reviews of the user. This also soft deletes any comments on those reviews.
+    code_reviews.destroy_all
+    @log.puts "Cleared and deleted #{code_reviews_count} CodeReview" if code_reviews_count > 0
   end
 
   def check_safety_constraints(user)
@@ -365,7 +377,7 @@ class DeleteAccountsHelper
     user.destroy
 
     purge_teacher_feedbacks(user.id)
-    purge_code_review_comments(user.id)
+    clean_and_destroy_code_reviews(user.id)
     remove_census_submissions(user_email) if user_email&.present?
     remove_email_preferences(user_email) if user_email&.present?
     anonymize_circuit_playground_discount_application(user)

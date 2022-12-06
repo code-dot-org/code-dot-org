@@ -144,6 +144,10 @@ kk:
             '"space"': кеңестік
             '"enter"': еңгізу
             '"x"': x
+      DansBlocks_setForegroundEffect2:
+        options:
+          EFFECT:
+            '"hearts"': жүрегтер
       gamelab_atTime:
         options:
           UNIT:
@@ -199,6 +203,12 @@ kk:
             '90': төмен
             '180': солға
             '270': жоғары
+      gamelab_makeSpritesWithSize:
+        options:
+          SIZE:
+            '30': small
+            '50': орта
+            '100': large
       gamelab_mirrorSprite:
         options:
           DIRECTION:
@@ -433,3 +443,7 @@ kk:
         text: алдыға қозғалу
       craft_placeTorch:
         text: Шам орнату
+      storylab_setForegroundEffect2:
+        options:
+          EFFECT:
+            '"hearts"': жүрегтер

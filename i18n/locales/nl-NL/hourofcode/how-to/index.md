@@ -8,9 +8,9 @@ title: Gebruiksaanwijzing voor 'Hour of Code'
 
 ### Wordt lid van de beweging en laat uw studenten met deze stappen kennis maken met informatica.
 
-Rekenkundig denken draagt bij aan vaardigheden voor het oplossen van problemen, logica, en creativiteit. En technologie verandert elke industrie op de planeet. Vandaag de dag dienen studenten te leren hoe ze technologie moeten creëren, niet alleen gebruiken. Door vroeg te beginnen leggen ze de basis voor succes in elk carrièrepad in de 21ste eeuw.
+Vandaag de dag dienen studenten te leren hoe ze technologie moeten creëren, niet alleen gebruiken.
 
-'Hour of Code' is een makkelijke en leuke manier om studenten kennis te laten maken met informatica, misschien wel voor de allereerste keer, en het is uitstekend geschikt voor lessen in de klas als naschoolse bijlessen. Take a look at our [participation guide if you still have questions]({{ localized_files/participation_guide }}).
+Trying an Hour of Code is a simple and fun way to introduce students to computer science, perhaps for the very first time! Find an activity that fits your setting, whether in-class or after-school, in-person or virtual. Take a look at our [participation guide if you still have questions]({{ localized_files/participation_guide }}) after checking out the steps below:
 
 - [Bekijk de tutorial van 'Hour of Code'](#how-to-video)
 - [Verken de activiteiten en tutorials](#explore-activities)
@@ -21,13 +21,11 @@ Rekenkundig denken draagt bij aan vaardigheden voor het oplossen van problemen, 
 - [Vier het succes van uw studenten](#celebrate)
 - [Other Hour of Code resources for educators](#other-resources)
 
-### Een 'Hour of Code' kan ook op afstand worden gehost. Bekijk om te beginnen onze [tips voor het hosten van een virtuele 'Hour of Code'](https://hourofcode.com/us/how-to/virtual).
-
 * * *
 
 <a id="how-to-video"></a>
 
-## 1. Bekijk de 'Hour of Code' video <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
+## 1. Bekijk de 'Hour of Code' video <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe> 
 
 * * *
 
@@ -39,7 +37,7 @@ We provide a variety of fun, [student-guided tutorials]({{ urls/learn }}) for al
 
 Verken de activiteiten en beslis vooraf of je een enkele tutorial voor al je leerlingen wilt, of datje ieder kind zijn eigen tutorial laat kiezen.
 
-[![](/images/fit-600/tutorials.png)]({{ urls/learn }})
+[![](/images/tutorials.png)]({{ urls/learn }})
 
 * * *
 
@@ -58,7 +56,7 @@ Verken de activiteiten en beslis vooraf of je een enkele tutorial voor al je lee
 
 ### Pick a day and time
 
-People around the world join in the Hour of Code celebration during CS Education Week (December 9-13) when the latest tutorials and activities are released. But you can do an Hour of Code any day of the year!
+People around the world join in the Hour of Code celebration during CS Education Week (December 5-11) when the latest tutorials and activities are released. But you can do an Hour of Code any day of the year!
 
 * * *
 
@@ -74,11 +72,11 @@ Promote the Hour of Code to other teachers who may want to join in on the fun! T
 
 ### Let Volunteers Know by Registering Your Event
 
-When you [sign-up your Hour of Code event](/), you’ll receive helpful email communications with news and tips for hosting a successful Hour of Code. It’s also how you can let local volunteers know your school is participating. Volunteers are a great resource and can come speak to your class about computer science or simply help your students with Hour of Code activities.
+When you [sign up your Hour of Code event](/#join), you’ll receive helpful email communications with news and tips for hosting a successful Hour of Code. It’s also how you can let local volunteers know your school is participating. Volunteers are a great resource and can come speak to your class about computer science or simply help your students with Hour of Code activities.
 
 ### Get your Students Excited
 
-Lead up to the event by sharing [inspirational videos](/promote/resources) highlighting diverse people and creative ways that computer science can be used. Or order inspirational posters for your classroom! Students are more excited to participate in a subject when they see people who look like them encouraging it.
+Lead up to the event by sharing [inspirational videos](/promote/resources) highlighting diverse people and creative ways that computer science can be used. Or print inspirational posters for your classroom! Students are more excited to participate in a subject when they see people who look like them encouraging it.
 
 {{ promote_new_posters }}
 
@@ -113,7 +111,7 @@ Het maakt niet uit als programmeren voor u en uw leerlingen nog nieuw is. Hier z
 
 Betrek de deelnemers bij de activiteit
 
-- Schrijf de link van de tutorial op een whiteboard. de link is te vinden in de [informatie over uw geselecteerde tutorial]({{ urls/learn }}) onder het aantal deelnemers.
+- Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial]({{ urls/learn }}).
 
 Wanneer uw studenten moeilijkheden tegenkomen kunt u gerust reageren met:
 
@@ -140,7 +138,6 @@ What if a student finishes early?
 
 - [Print certificates]({{ urls/certificates }}) for your students.
 - [Print "I did an Hour of Code!"]({{ urls/promote_stickers }}) stickers for your students.
-- [Bestel custom t-shirts](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) voor uw school.
 - Deel foto's en video's van uw CodeUur evenement op sociale media. Gebruik de hashtag #HourOfCode en @codeorg zodat wij ook uw succes kunnen zien!
 
 * * *
@@ -154,6 +151,6 @@ What if a student finishes early?
 
 ### Wat komt er na het CodeUur?
 
-Informatica hoeft niet te eindigen met de 'Hour of Code'. Ons curriculum bevindt zich op het web en is altijd gratis te gebruiken. [Leer hoe](/beyond) u uw school en studenten kennis kunt laten maken met CS.
+Computer science doesn’t have to end with the Hour of Code! [Learn how](/beyond) to bring CS to your school and students.
 
 {{ signup_button }}

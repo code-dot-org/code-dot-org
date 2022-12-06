@@ -27,7 +27,7 @@ def upload_translations(locale)
   system "crowdin --config #{CODEORG_CONFIG_FILE} --identity #{CODEORG_IDENTITY_FILE} -l #{locale} upload translations"
 end
 
-Languages.get_crowdin_name_and_locale.each do |prop|
+PegasusLanguages.get_crowdin_name_and_locale.each do |prop|
   locale = prop[:locale_s]
   language = prop[:crowdin_name_s]
   print "#{CLEAR}Redacting #{locale}"

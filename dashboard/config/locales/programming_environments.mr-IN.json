@@ -1,0 +1,67 @@
+{
+  "mr-IN": {
+    "data": {
+      "programming_environments": {
+        "weblab": {
+          "name": "वेब लॅब"
+        },
+        "gamelab": {
+          "categories": {
+            "drawing": {
+              "name": "चित्र काढणे"
+            },
+            "math": {
+              "name": "गणित"
+            },
+            "variables": {
+              "name": "व्हेरीएबल्स"
+            }
+          }
+        },
+        "applab": {
+          "description": "अॅप लॅब एक प्रोग्रामिंग वातावरण आहे जिथे तुम्ही साधे अॅप्स बनवू शकता. एखादे अॅप डिझाइन करा, ब्लॉक्ससह कोड किंवा JavaScript ते कार्य करण्यासाठी, नंतर तुमचा अॅप काही सेकंदात शेअर करा.",
+          "categories": {
+            "data": {
+              "name": "डेटा"
+            },
+            "math": {
+              "name": "गणित"
+            },
+            "variables": {
+              "name": "व्हेरीएबल्स"
+            }
+          }
+        },
+        "spritelab": {
+          "name": "स्प्राइट लॅब",
+          "categories": {
+            "actions": {
+              "name": "कृती"
+            },
+            "events": {
+              "name": "ईव्हेंट्स"
+            },
+            "loops": {
+              "name": "लूप्स"
+            },
+            "variables": {
+              "name": "व्हेरीएबल्स"
+            },
+            "math": {
+              "name": "गणित"
+            },
+            "logic": {
+              "name": "लॉजिक"
+            },
+            "text": {
+              "name": "टेक्स्ट"
+            }
+          }
+        },
+        "javalab": {
+          "name": "जावा लॅब"
+        }
+      }
+    }
+  }
+}

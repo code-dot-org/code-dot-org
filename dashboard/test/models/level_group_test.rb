@@ -609,4 +609,34 @@ level 'level1_copy2'"
       actual_survey_results[level1.id][:lesson_name]
     assert_equal [], actual_survey_results[level1.id][:levelgroup_results]
   end
+
+  test 'level group cannot contain level group' do
+    create :level_group, name: 'level group'
+
+    dsl_text = <<~DSL
+      name 'other level group'
+      page
+      level 'level group'
+    DSL
+
+    e = assert_raises do
+      LevelGroup.create_from_level_builder({}, {name: 'other level group', dsl_text: dsl_text})
+    end
+    assert_includes e.message, 'LevelGroup cannot contain level type level_group'
+  end
+
+  test 'level group cannot contain bubble choice' do
+    create :bubble_choice_level, name: 'bubble choice'
+
+    dsl_text = <<~DSL
+      name 'level group'
+      page
+      level 'bubble choice'
+    DSL
+
+    e = assert_raises do
+      LevelGroup.create_from_level_builder({}, {name: 'level group', dsl_text: dsl_text})
+    end
+    assert_includes e.message, 'LevelGroup cannot contain level type bubble_choice'
+  end
 end

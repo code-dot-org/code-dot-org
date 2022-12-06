@@ -60,7 +60,7 @@ Nếu bạn chỉ sử dụng một thiết bị hoặc đơn giản là muốn 
     Truyền cảm hứng cho trẻ bằng video về một trong số <a href="https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP">nhiều nghề nghiệp</a> có thể tận dụng kỹ năng khoa học máy tính
   </li>
   <li>
-    <a href="https://store.code.org/">Đặt mua một số sản phẩm quảng cáo</a>! Bạn có thể chọn áo thun, sticker, hoặc thậm chí là hình xăm tạm thời. Hãy chia sẻ ngay với trẻ để khiến các em hào hứng, hoặc để dành phần thưởng đặc biệt vào cuối Giờ lập trình của bạn.
+    <a href="https://store.code.org/">Đặt mua một số sản phẩm trang trí</a>! Bạn có thể chọn áo thun, sticker, hoặc thậm chí là hình xăm tạm thời. Hãy chia sẻ ngay với trẻ để khiến các em hào hứng, hoặc để dành phần thưởng đặc biệt vào cuối Giờ lập trình của bạn.
   </li>
 </ul>
 
@@ -109,7 +109,7 @@ Cuối cùng, khi trẻ gặp khó khăn, bạn có thể trả lời rằng:
     "Công nghệ không phải luôn luôn hoạt động theo ý chúng ta muốn."
   </li>
   <li>
-    "Học cách sử dụng một chương trình cũng giống như học một ngôn ngữ mới; bạn chưa thể thành thực ngay lập tức."
+    "Học cách sử dụng một chương trình cũng giống như học một ngôn ngữ mới; con chưa thể thành thục ngay lập tức được."
   </li>
 </ul>
 
@@ -142,7 +142,7 @@ Cuối cùng, khi trẻ gặp khó khăn, bạn có thể trả lời rằng:
   <a href="{{ urls/learn }}"><img src="/images/fit-600/Marketing/g8TUlHzF.jpeg" /></a>
 </p>
 
-<h2>Tiếp theo Hour of Code sẽ là gì?</h2>
+<h2>Sau Giờ lập trình sẽ là gì?</h2>
 
 <p spaces-before="0">
   Khoa học máy tính không nhất thiết phải kết thúc với Giờ lập trình! Mặc dù 90% các bậc phụ huynh muốn con mình được học khoa học máy tính nhưng hầu hết các trường học vẫn không dạy môn này. Để hỗ trợ, chương trình giảng dạy của chúng tôi trên nền tảng web và sử dụng miễn phí mãi mãi. <a href="https://code.org/yourschool">Tìm hiểu cách</a> đưa KHMT đến trường học của con bạn ngay hôm nay.

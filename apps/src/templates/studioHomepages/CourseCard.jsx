@@ -5,7 +5,7 @@ import color from '../../util/color';
 import FontAwesome from '../FontAwesome';
 import i18n from '@cdo/locale';
 import BlueHeader from '@cdo/static/small_blue_icons_fullwidth.png';
-import PurpleHeader from '@cdo/static/small_purple_icons_fullwidth.png';
+import PurpleHeader from '@cdo/static/small_purple_icons.png';
 
 /**
  * A card used on the homepage to display information about a particular course
@@ -13,6 +13,7 @@ import PurpleHeader from '@cdo/static/small_purple_icons_fullwidth.png';
  */
 class CourseCard extends Component {
   static propTypes = {
+    altText: PropTypes.string,
     title: PropTypes.string.isRequired,
     description: PropTypes.string.isRequired,
     link: PropTypes.string.isRequired,
@@ -22,6 +23,7 @@ class CourseCard extends Component {
 
   render() {
     const {
+      altText,
       title,
       description,
       link,
@@ -35,7 +37,7 @@ class CourseCard extends Component {
         <img
           src={isProfessionalLearningCourse ? BlueHeader : PurpleHeader}
           style={styles.image}
-          alt=""
+          alt={altText}
         />
         <div style={isRtl ? styles.titleRtl : styles.title}>{title}</div>
         <div style={styles.description}>
@@ -52,6 +54,10 @@ class CourseCard extends Component {
     );
   }
 }
+
+CourseCard.defaultProps = {
+  altText: ''
+};
 
 const styles = {
   card: {

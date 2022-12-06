@@ -5,6 +5,7 @@ bg:
       Advanced: Разширено
       Behaviors: Поведения
       Brushes: Четки
+      Category: Категория
       Color: Цвят
       Comment: Коментар
       Comments: Коментари
@@ -17,6 +18,7 @@ bg:
       Game/Score: Игра/резултат
       Games/Score: Игри/резултат
       Groups: Групи
+      Image: Изображение
       Input: Поле за въвеждане
       Location: Адрес
       Locations: Места

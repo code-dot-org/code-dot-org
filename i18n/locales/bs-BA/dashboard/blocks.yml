@@ -207,12 +207,6 @@ bs:
           UNIT:
             '"measures"': taktovi
             '"seconds"': sekunde
-      Dancelab_everySecondsRange:
-        text: 'svako {N} {UNIT} od {START} do {STOP} '
-        options:
-          UNIT:
-            measures: Taktovi
-            seconds: Sekunde
       Dancelab_everyVerseChorus:
         text: 'svako {UNIT} '
         options:
@@ -867,6 +861,13 @@ bs:
         text: postavka
       Dancelab_whenSetup2:
         text: postavka
+      DansBlocks_setForegroundEffect2:
+        options:
+          EFFECT:
+            '"bubbles"': Balončići
+            '"confetti"': Konfeti
+            '"hearts"': srca
+            '"rain"': kiša
       gamelab_atTime:
         options:
           UNIT:
@@ -1287,6 +1288,11 @@ bs:
             '8': '8'
             '9': '9'
             '10': '10'
+            '11': '11'
+            '12': '12'
+            '13': '13'
+            '14': '14'
+            '15': '15'
       RyanLab_moveForward:
         text: idi naprijed
       RyanLab_turnLeft:
@@ -1347,3 +1353,10 @@ bs:
         options:
           DIR:
             left: lijevo ↺
+      storylab_setForegroundEffect2:
+        options:
+          EFFECT:
+            '"bubbles"': Balončići
+            '"confetti"': Konfeti
+            '"hearts"': srca
+            '"rain"': kiša

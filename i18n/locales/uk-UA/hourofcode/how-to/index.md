@@ -1,51 +1,49 @@
 ---
-title: Hour of Code How-to Guide
+title: Керівництво з проведення «Години коду»
 ---
 
 {{ signup_button }}
 
 # How to plan your Hour of Code
 
-### Join the movement and introduce your students to computer science with these steps.
+### Приєднуйтесь до ініціативи та познайомте ваших учнів з інформатикою, виконавши наведені нижче кроки.
 
-Computational thinking helps nurture problem-solving skills, logic, and creativity. And technology is transforming every industry on the planet. Students today should learn how to create technology, not just use it. By starting early, they’ll have a foundation for success in any 21st-century career path.
+Сьогодні учні мають вчитися не лише використовувати технології, а й створювати їх.
 
-Trying an Hour of Code is a simple and fun way to introduce students to computer science, perhaps for the very first time, and it fits perfectly for both in-class and after-school settings. Take a look at our [participation guide if you still have questions]({{ localized_files/participation_guide }}).
+Участь у «Годині коду» – простий та цікавий спосіб познайомити вашу дитину з інформатикою, можливо, вперше! Виберіть заняття відповідно до ваших обставин: це можуть заняття під час або після уроків, очні або онлайн. Якщо після виконання наведених нижче кроків у вас залишилися питання, ознайомтесь з нашим [керівництвом з участі]({{ localized_files/participation_guide }}).
 
-- [Watch the Hour of Code how-to video](#how-to-video)
-- [Explore activities and tutorials](#explore-activities)
-- [Create your plan for the day](#create-your-plan)
+- [Перегляньте наше відеокерівництво щодо проведення «Години коду»](#how-to-video)
+- [Ознайомтеся з заняттями й навчальними посібниками](#explore-activities)
+- [Сторіть власний план заходу](#create-your-plan)
 - [Promote your Hour of Code](#promote-your-hour)
-- [How to start your Hour of Code strong](#how-to-start)
-- [Get coding](#code)
-- [Celebrate your students' success](#celebrate)
+- [Як ефективно розпочати «Годину коду»](#how-to-start)
+- [Програмуйте](#code)
+- [Відзначте успіхи своїх учнів](#celebrate)
 - [Інші ресурси Години коду для педагогів](#other-resources)
-
-### An Hour of Code can also be hosted remotely! To get started, check out our [tips for hosting a virtual Hour of Code event](https://hourofcode.com/us/how-to/virtual).
 
 * * *
 
 <a id="how-to-video"></a>
 
-## 1. Watch the Hour of Code how-to video <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
+## 1. Перегляньте наше відеокерівництво щодо проведення «Години коду» <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe> 
 
 * * *
 
 <a id="explore-activities"></a>
 
-## 2. Explore activities and tutorials
+## 2. Ознайомтеся з заняттями та навчальними посібниками
 
 We provide a variety of fun, [student-guided tutorials]({{ urls/learn }}) for all age groups and experience levels. It’s popular for students to try self-led tutorials, though many activities include lesson plans for teachers to guide discussion or extend the activity as well.
 
 Explore the activities and decide ahead of time if you want to choose a single tutorial for all of your students, or let each child pick their own.
 
-[![](/images/fit-600/tutorials.png)]({{ urls/learn }})
+[![](/images/tutorials.png)]({{ urls/learn }})
 
 * * *
 
 <a id="create-your-plan"></a>
 
-## 3. Create your plan for the day
+## 3. Створіть власний план заходу
 
 ### Think about your technology needs - computers are optional!
 
@@ -58,13 +56,13 @@ Explore the activities and decide ahead of time if you want to choose a single t
 
 ### Pick a day and time
 
-People around the world join in the Hour of Code celebration during CS Education Week (December 9-13) when the latest tutorials and activities are released. But you can do an Hour of Code any day of the year!
+Люди в усьому світі приєднуються до заходів «Години коду» під час Тижня вивчення інформатики (5–11 грудня), коли публікуються нові навчальні посібники та заняття. But you can do an Hour of Code any day of the year!
 
 * * *
 
 <a id="promote-your-hour"></a>
 
-## 4. Promote your Hour of Code
+## 4. Поширюйте інформацію про «Годину коду»
 
 Now that you've planned your event, it's time to start promoting it!
 
@@ -74,11 +72,11 @@ Promote the Hour of Code to other teachers who may want to join in on the fun! T
 
 ### Let Volunteers Know by Registering Your Event
 
-When you [sign-up your Hour of Code event](/), you’ll receive helpful email communications with news and tips for hosting a successful Hour of Code. It’s also how you can let local volunteers know your school is participating. Volunteers are a great resource and can come speak to your class about computer science or simply help your students with Hour of Code activities.
+Після реєстрації [вашого заходу «Години коду»](/#join) ви отримаєте електронні повідомлення з новинами та корисними порадами щодо успішного проведення «Години коду». It’s also how you can let local volunteers know your school is participating. Volunteers are a great resource and can come speak to your class about computer science or simply help your students with Hour of Code activities.
 
 ### Get your Students Excited
 
-Lead up to the event by sharing [inspirational videos](/promote/resources) highlighting diverse people and creative ways that computer science can be used. Or order inspirational posters for your classroom! Students are more excited to participate in a subject when they see people who look like them encouraging it.
+Lead up to the event by sharing [inspirational videos](/promote/resources) highlighting diverse people and creative ways that computer science can be used. Або надрукуйте для вашого класу мотиваційні плакати! Students are more excited to participate in a subject when they see people who look like them encouraging it.
 
 {{ promote_new_posters }}
 
@@ -88,7 +86,7 @@ Learn more about posters, videos, stickers and other ways to [promote your event
 
 <a id="how-to-start"></a>
 
-## 5. How to start your Hour of Code strong
+## 5. Як ефективно розпочати «Годину коду»
 
 Once your Hour of Code celebration has arrived, make sure you start your event strong with some of these tools and tips.
 
@@ -103,17 +101,17 @@ Invite a [local volunteer]({{ urls/volunteer_local }}) to inspire your students 
 
 - Explain ways that technology impacts our lives, with examples both boys and girls will care about (talk about saving lives, helping people, connecting people, etc.).
 - Разом з класом перелічіть повсякденні речі, які використовують код.
-- See tips for getting young women interested in computer science [here]({{ urls/girls }}).
+- [Тут]({{ urls/girls }}) наведено поради щодо того, як залучити до занять інформатикою молодих жінок.
 
 * * *
 
 <a id="code"></a>
 
-## 6. Get coding!
+## 6. Програмуйте!
 
 Скеруйте учнів до заняття
 
-- Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial]({{ urls/learn }}) under the number of participants.
+- Напишіть посилання на навчальний посібник на дошці. Знайдіть посилання, вказане в [інформації для вибраного навчального посібника]({{ urls/learn }}).
 
 Коли ваші учні стикаються з труднощами, є нормальним відповідати:
 
@@ -130,7 +128,7 @@ What if a student finishes early?
 
 <a id="celebrate"></a>
 
-## 7. Celebrate your students' success
+## 7. Відзначте успіхи своїх учнів
 
 [col-33]
 
@@ -140,7 +138,6 @@ What if a student finishes early?
 
 - [Print certificates]({{ urls/certificates }}) for your students.
 - [Print "I did an Hour of Code!"]({{ urls/promote_stickers }}) stickers for your students.
-- [Замовте спеціальні футболки](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) для своєї школи.
 - Поділіться фотографіями та відео вашого заходу Години коду в соціальних мережах. Використайте #HourOfCode та @codeorg, щоби ми також могли висвітити ваш успіх!
 
 * * *
@@ -154,6 +151,6 @@ What if a student finishes early?
 
 ### Що після Години коду?
 
-Computer science doesn’t have to end with the Hour of Code! Our curriculum is web-based and free to use, forever. [Learn how](/beyond) to bring CS to your school and students.
+Інформатика не повинна обмежуватися «Годиною коду»! [Дізнайтеся](/beyond), як популяризувати інформатику в школі й серед учнів.
 
 {{ signup_button }}

@@ -8,7 +8,10 @@ import EditEnrollmentNameDialog from './components/edit_enrollment_name_dialog';
 import Spinner from '../components/spinner';
 import WorkshopEnrollment from './components/workshop_enrollment';
 import WorkshopPanel from './WorkshopPanel';
-import {SubjectNames} from '@cdo/apps/generated/pd/sharedWorkshopConstants';
+import {
+  SubjectNames,
+  ActiveCoursesWithSurveys
+} from '@cdo/apps/generated/pd/sharedWorkshopConstants';
 import {
   shouldUseFoormSurvey,
   shouldShowSurveyResults
@@ -67,7 +70,13 @@ export default class EnrollmentsPanel extends React.Component {
   };
 
   handleClickChangeEnrollments = event => {
-    this.setState({enrollmentChangeDialogOpen: event.target.name});
+    const name = event.target.name;
+    if (
+      name === MOVE_ENROLLMENT_BUTTON_NAME ||
+      name === EDIT_ENROLLMENT_NAME_BUTTON_NAME
+    ) {
+      this.setState({enrollmentChangeDialogOpen: name});
+    }
   };
 
   handleChangeEnrollmentsCanceled = () => {
@@ -157,12 +166,13 @@ export default class EnrollmentsPanel extends React.Component {
       });
     } else {
       this.setState(state => {
-        state.selectedEnrollments.push({
+        const selectedEnrollments = state.selectedEnrollments.concat({
           id: enrollment.id,
           email: enrollment.email,
           first_name: enrollment.first_name,
           last_name: enrollment.last_name
         });
+        return {selectedEnrollments};
       });
     }
   };
@@ -185,9 +195,7 @@ export default class EnrollmentsPanel extends React.Component {
   };
 
   getViewSurveyUrl = (workshopId, course, subject, lastSessionDate) => {
-    if (
-      !['CS Discoveries', 'CS Principles', 'CS Fundamentals'].includes(course)
-    ) {
+    if (!ActiveCoursesWithSurveys.includes(course)) {
       return null;
     }
 

@@ -1,13 +1,11 @@
 import PropTypes from 'prop-types';
-import Radium from 'radium';
+import Radium from 'radium'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 import color from '../../util/color';
+import FontAwesome from '../../templates/FontAwesome';
 
 import {addMouseUpTouchEvent} from '../../dom';
 import {getOuterHeight, scrollBy} from './utils';
-
-const WIDTH = 20;
-const HEIGHT = WIDTH;
 
 // By how many pixels should we scroll when clicked?
 const SCROLL_BY = 100;
@@ -102,15 +100,34 @@ class ScrollButtons extends React.Component {
   };
 
   render() {
-    const upStyle = {
+    const showItems = this.props.isMinecraft
+      ? this.props.height > 50
+      : this.props.height > 20;
+    const centerItems = this.props.isMinecraft
+      ? this.props.height > 100
+      : this.props.height > 60;
+
+    let upStyle = {
       opacity: this.props.visible ? 1 : 0,
-      top: this.getMargin(),
-      margin: '0 0 3px 0'
+      top: 0,
+      margin: '0 0 3px 0',
+      left: centerItems ? '50%' : 25,
+      transform: 'translateX(-50%)'
     };
 
     const downStyle = {
       opacity: this.props.visible ? 1 : 0,
-      bottom: -(this.props.height - this.getMargin())
+      bottom: MARGIN,
+      right: centerItems ? '50%' : 25,
+      transform: 'translateX(50%)'
+    };
+
+    const minecraftButton = {
+      width: 40
+    };
+
+    const containerStyle = {
+      height: this.props.height
     };
 
     // for most tutorials, we have minimalist arrow elements. For
@@ -126,7 +143,7 @@ class ScrollButtons extends React.Component {
         }}
         key="scrollUp"
         onMouseDown={this.scrollStartUp}
-        style={[styles.all, upStyle]}
+        style={[styles.all, upStyle, minecraftButton]}
       >
         <img src="/blockly/media/1x1.gif" className="scroll-up-btn" />
       </button>
@@ -137,8 +154,13 @@ class ScrollButtons extends React.Component {
         }}
         key="scrollUp"
         onMouseDown={this.scrollStartUp}
-        style={[styles.all, styles.arrow, styles.arrowUp, upStyle]}
-      />
+        style={[styles.all, styles.arrowGlyph, upStyle]}
+      >
+        <FontAwesome
+          icon="caret-up"
+          style={{lineHeight: '22px', pointerEvents: 'none'}}
+        />
+      </div>
     );
 
     const downButton = this.props.isMinecraft ? (
@@ -150,7 +172,7 @@ class ScrollButtons extends React.Component {
         }}
         key="scrollDown"
         onMouseDown={this.scrollStartDown}
-        style={[styles.all, downStyle]}
+        style={[styles.all, downStyle, minecraftButton]}
       >
         <img src="/blockly/media/1x1.gif" className="scroll-down-btn" />
       </button>
@@ -162,15 +184,22 @@ class ScrollButtons extends React.Component {
         className="uitest-scroll-button-down"
         key="scrollDown"
         onMouseDown={this.scrollStartDown}
-        style={[styles.all, styles.arrow, styles.arrowDown, downStyle]}
-      />
+        style={[styles.all, styles.arrowGlyph, downStyle]}
+      >
+        <FontAwesome
+          icon="caret-down"
+          style={{lineHeight: '22px', pointerEvents: 'none'}}
+        />
+      </div>
     );
 
     return (
-      <div style={this.props.style}>
-        {upButton}
-        {downButton}
-      </div>
+      showItems && (
+        <div style={[containerStyle, this.props.style]}>
+          {upButton}
+          {downButton}
+        </div>
+      )
     );
   }
 }
@@ -181,25 +210,10 @@ const styles = {
     transition: 'opacity 200ms',
     margin: 0
   },
-  arrow: {
-    width: 0,
-    height: 0,
-    cursor: 'pointer',
-    borderStyle: 'solid',
-    borderColor: 'transparent',
-    borderRightWidth: WIDTH,
-    borderLeftWidth: WIDTH,
-    ':hover': {
-      filter: 'drop-shadow(2px 2px 5px rgba(0,0,0,0.3))'
-    }
-  },
-  arrowUp: {
-    borderBottomWidth: HEIGHT,
-    borderBottomColor: color.purple
-  },
-  arrowDown: {
-    borderTopWidth: HEIGHT,
-    borderTopColor: color.purple
+  arrowGlyph: {
+    fontSize: 50,
+    color: color.purple,
+    cursor: 'pointer'
   }
 };
 

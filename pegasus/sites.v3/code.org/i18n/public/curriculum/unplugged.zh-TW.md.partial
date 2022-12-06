@@ -21,9 +21,8 @@ theme: responsive
 <div style="clear: both;"></div>
 
 ***
-## 2021-22學年電腦科學基礎知識不插電版課程
-
-<a href="https://docs.google.com/document/d/19BIaGVliOZCciSDmuezFFUhhCjhrB2oXpVLn0cJAibc/preview" target="_blank">2021-22學年電腦科學基礎知識</a>課程如下所列。 <br><br>
+## 2022-23學年電腦科學基礎離線課程
+以下課程可以在<a href="https://docs.google.com/document/d/12j5IkeGEWeAmWnZY9krbNSo8oKOKT5nIQGUH5J7Si80/preview" target="_blank" rel="noopener noreferrer">2022-23學年電腦科學基礎</a>中找到。 <br><br>
 
 <style>
 table, th, td {
@@ -32,7 +31,7 @@ table, th, td {
 }
 th, td {
   padding: 5px;
-  text-align: left;    
+  text-align: left;
 }
 #t01 {
   width: 10%;
@@ -61,42 +60,73 @@ th, td {
 </style>
 <table style="width:100%">
   <tr>
-    <th><center><big>課程</th>
-    <th><center><big>教案</th> 
-    <th width=10%><center><big>概念</th>
-    <th width=20%><center><big>視頻</th>
+    <th><center><big>Course</th>
+    <th><center><big>Lesson Plan</th>
+    <th width=10%><center><big>Concept</th>
+    <th width=20%><center><big>Video</th>
      <tr>
-    <th rowspan="3" id="t01">課程 A</th>
-    <td width=40%><a href="https://studio.code.org/s/coursea-2021/lessons/3">A.3 - 快樂地圖</a><br><small>本節不插電課程要求團隊一起完成一項簡單的任務：引導「flurb」吃到水果。 學生們將練習書寫精確指令，並將指令轉為所提供的符號。 如果代碼中出現問題，學生們也應該一起來查找錯誤並構建解決方案。</td><td>排序</td> <td>{{ curriculum/unplugged/coursea_one_video_thumbnail }}</td>  </tr>  <tr>    <td width=40%><a href="https://studio.code.org/s/coursea-2021/lessons/7">A.7 - 快樂迴圈</a><br><small>該活動將重溫《快樂地圖》。 這一次，學生們將用他們的代碼解決更大、更長的難題，引導他們意識到結構的實用性，以更簡單的方式編寫更長的代碼。</td><td>迴圈</td> <td><img src="/images/a7.png" width="90%"></td>  <tr>    <td width=40%><a href="https://studio.code.org/s/coursea-2021/lessons/11">A.11 - 大事件初級版</a><br><small>事件是在預先編寫的演算法中添加多樣性的絕佳方法。 有時，你希望程式能夠在使用者恰好需要時，向使用者發出回應。 這便是事件的作用。</td><td>事件</td> <td>{{ curriculum/unplugged/coursea_three_video_thumbnail }}</td>  </tr>       <tr>    <th rowspan="3" id="t02">課程 B</th>    <td><a href="https://studio.code.org/s/courseb-2021/lessons/2">B.2 - 動起來， 動起來</a><br><small>本節課幫助學生們做好心理準備，迎接整個課程中將要遇到的程式設計練習。 學生們將分成小組，相互設計路線，透過移動身體從一個地方走到另一個地方，直至完成任務。</td><td>排序</td> <td>{{ curriculum/unplugged/courseb_one_video_thumbnail }}</td>
+    <th rowspan="3" id="t01">Course A</th>
+    <td width=40%><a href="https://studio.code.org/s/coursea-2022/lessons/3">A.3 - Happy Maps</a><br><small>This unplugged lesson brings together teams with a simple task: get the "flurb" to the fruit. 學生們將練習書寫精確指令，並將指令轉為所提供的符號。 If problems arise in the code, students should also work together to recognize bugs and build solutions.</td><td>Sequencing</td> <td>{{ curriculum/unplugged/coursea_one_video_thumbnail }}</td>
   </tr>
   <tr>
-    <td><a href="https://studio.code.org/s/courseb-2021/lessons/6">B.6 - 練習迴圈</a><br><small>當我們開始編寫更長、更有趣的程式時，我們的代碼通常會有大量重複。 在本節課中，學生們將透過觀察舞蹈中重複的動作模式，了解如何使用迴圈來更容易地傳達具有大量重複的指令。</td><td>迴圈</td> <td>{{ curriculum/unplugged/courseb_two_video_thumbnail }}</td>
+    <td width=40%><a href="https://studio.code.org/s/coursea-2022/lessons/7">A.7 - Happy Loops</a><br><small>This activity revisits Happy Maps. This time, student will be solving bigger, longer puzzles with their code, leading them to see utility in structures that let them write longer code in an easier way.</td><td>Loops</td> <td><img src="/images/a7.png" width="90%"></td>
   <tr>
-    <td><a href="https://studio.code.org/s/courseb-2021/lessons/10">B.10 - 適宜的應用</a><br><small>本節課讓學生們認識到電腦科學能夠在現實生活中幫助人們。 首先，學生們需要設身處地了解幾位元虛擬的智慧手機用戶，幫助他們找到滿足自身需求的「適宜的應用」。 然後，學生們發揮共情能力和創造力，創作自己的智慧手機應用，來滿足另一位用戶的需求。</td><td>計算的影響</td> <td><img src="/images/b10.png" width="90%"></td>
+    <td width=40%><a href="https://studio.code.org/s/coursea-2022/lessons/11">A.11 - The Big Event Jr.</a><br><small>Events are a great way to add variety to a pre-written algorithm. 有時，你希望程式能夠在使用者恰好需要時，向使用者發出回應。 That is what events are for.</td><td>Events</td> <td>{{ curriculum/unplugged/coursea_three_video_thumbnail }}</td>
   </tr>
        <tr>
-    <th rowspan="4" id="t03">課程 C</th>
-    <td><a href="https://studio.code.org/s/coursec-2021/lessons/2">C.2 - 我的機器人朋友初級版</a><br><i>*所需物品：塑膠杯（2-3人為一組，每組10個杯子）</i><br><small>學生們會使用一組符號代替代碼，設計演算法來指導「機器人」按照不同的模式堆疊杯子。 學生們將輪流扮演機器人參與活動，只對同伴定義的演算法做出響應。 這一部分教會學生們符號與動作之間的聯繫，演算法與程式之間的區別，以及調試的寶貴技能。</td><td>排序</td><td>{{ curriculum/unplugged/coursec_one_video_thumbnail }}</td>  </tr>   <tr>   <td><a href="https://studio.code.org/s/coursec-2021/lessons/7">C.7 - 我的迴圈機器人朋友初級版</a><br><i>*所需物品：紙杯（4人一組，每組20個杯子）</i><br><small>概述學生們在開始的《我的機器人朋友》活動的基礎上，處理更大更複雜的設計。 為了對「機器人」進行程式設計以完成這些更大的設計，學生們需要在他們的指令中識別出可以用迴圈代替的重複模式。</td><td>迴圈</td><td>{{ curriculum/unplugged/coursec_three_video_thumbnail }}</td>
-  </tr> 
-      <tr>
-   <td><a href="https://studio.code.org/s/coursec-2021/lessons/11">C.11 - 大事件</a><br><small>學生們很快便會了解到，事件是一個提高預先編寫的演算法靈活性的極佳方式。 有時，你希望程式能夠在使用者恰好需要時，向使用者發出回應。 事件可以讓程式更加有趣，互動性更強。</td><td>事件</td><td>{{ curriculum/unplugged/coursec_four_video_thumbnail }}</td>   </tr>        </tr>      <td><a href="https://studio.code.org/s/coursec-2021/lessons/15">C.15 - 二進位手鏈</a><br><i>*所需物品：記號筆。 備選物品 – 每個學生18顆黑色珠子/18顆白色珠子，1條尼龍刷</i><br><small>在電腦領域內，二進位極為重要。 今天大多數電腦以二進位形式存儲各種資訊。 該課程有助於展示電腦如何從現實生活中獲取資訊，並將其轉化為一系列的「開」和「關」。</td><td>二進位</td><td>{{ curriculum/unplugged/coursec_two_video_thumbnail }}</td>
+    <th rowspan="3" id="t02">Course B</th>
+    <td><a href="https://studio.code.org/s/courseb-2022/lessons/2">B.2 - Move It, Move It</a><br><small>This lesson will work to prepare students mentally for the coding exercises that they will encounter over the length of this course. In small teams, students will use physical activity to program their classmates to step carefully from place to place until a goal is achieved.</td><td>Sequencing</td> <td>{{ curriculum/unplugged/courseb_one_video_thumbnail }}</td>
   </tr>
-         <tr>
-    <th rowspan="3" id="t04">課程 D</th>
-    <td><a href="https://studio.code.org/s/coursed-2021/lessons/2">D.2 - 方格紙程式設計<br></a><small>透過相互「程式設計」畫圖，學生們有機會以有趣且容易理解的方式體驗程式設計的一些核心概念。 本節課首先讓學生們用符號來指導彼此在方格紙上塗上顏色，努力重現已有的圖畫。 如果時間允許，在課程結束時，匯總學生們獨立創作的圖畫。</td><td>排序</td><td>{{ curriculum/unplugged/coursed_one_video_thumbnail }}</td>  </tr>  <tr>    <td><a href="https://studio.code.org/s/coursed-2021/lessons/4">D.4 - 接力式程式設計<br></a><small>本活動將首先簡短學習調試和耐性，然後迅速進入爭分奪秒階段，學生們分成小組，合作編寫程式，一次一條指令。</td><td>排序</td><td>{{ curriculum/unplugged/coursed_two_video_thumbnail }}</td>      </tr>  <tr>    <td><a href="https://studio.code.org/s/coursed-2021/lessons/12">D.12 - 撲克牌條件陳述式</a><br><small>本節課將演示如何使用條件陳述式來根據特定資訊定制程式。 在編寫程式時，我們並不總是萬事俱備。 在不同的情況下，需要執行不同的操作，即使不清楚代碼運行時哪種情況為「真」。 這就是條件陳述式用到的場合。 條件陳述式允許電腦根據代碼運行時的「真」資訊作出決定。+</td><td>條件陳述式</td><td>{{ curriculum/unplugged/coursed_three_video_thumbnail }}</td>
-
-    </tr>
-         <tr>
-    <th rowspan="3" id="t05">課程 E</th>
-    <td><a href="https://studio.code.org/s/coursee-2021/lessons/7">E.7 - 數字共用</a><br><i>*所需物品：智慧手機或平板電腦</i><br><small>本課程源自版權和創意團隊，借鑒給電腦科學基礎知識課程，旨在幫助學生們了解尊重所有權和版權的挑戰和好處，尤其是數字領域內。 鼓勵學生們尊重創作人員的權利，這是有道德的數字公民應該具備的重要品質。 </td><td>數位公民</td><td>{{ curriculum/unplugged/coursee_one_video_thumbnail }}</td>  </tr>  <tr>    <td><a href="https://studio.code.org/s/coursee-2021/lessons/11">E.11 - 歌曲創作</a><br><small>在電腦科學中，其中一個最宏大的結構就是函數。 函數（有時稱為過程）是可以在大型程式中反復使用的小型程式。 這節課將幫助學生直觀地理解為什麼將代碼模組組合成函數非常實用。</td><td>函數</td><td>{{ curriculum/unplugged/coursee_two_video_thumbnail }}</td>
   <tr>
-    <td><a href="https://studio.code.org/s/coursee-2021/lessons/17">E.17 - 普及性設計</a><br><small>在本節課中，學生們將針對假設的應用，透過頭腦風暴和設計可訪問的解決方案，來了解普及性和同理心的意義。 </td><td>計算的影響</td><td><img src="/images/e18.png" width="90%"></td>
+    <td><a href="https://studio.code.org/s/courseb-2022/lessons/6">B.6 - Getting Loopy</a><br><small>As we start to write longer and more interesting programs, our code often contains a lot of repetition. In this lesson, students will learn about how loops can be used to more easily communicate instructions that have a lot of repetition by looking at the repeated patterns of movement in a dance.</td><td>Loops</td> <td>{{ curriculum/unplugged/courseb_two_video_thumbnail }}</td>
+  <tr>
+    <td><a href="https://studio.code.org/s/courseb-2022/lessons/10">B.10 - The Right App</a><br><small>This lesson has students recognize that computer science can help people in real life. 首先，學生們需要設身處地了解幾位元虛擬的智慧手機用戶，幫助他們找到滿足自身需求的「適宜的應用」。 Then, students exercise empathy and creativity to sketch their own smartphone app that addresses the needs of one additional user.</td><td>Impacts of Computing</td> <td><img src="/images/b10.png" width="90%"></td>
+  </tr>
+       <tr>
+    <th rowspan="4" id="t03">Course C</th>
+    <td><a href="https://studio.code.org/s/coursec-2022/lessons/2">C.2 - My Robotic Friends Jr.</a><br><i>*Supplies: Plastic cups (10/group of 2-3)</i><br><small>Using a set of symbols in place of code, students will design algorithms to instruct a "robot" to stack cups in different patterns. 學生們將輪流扮演機器人參與活動，只對同伴定義的演算法做出響應。 This segment teaches students the connection between symbols and actions, the difference between an algorithm and a program, and the valuable skill of debugging.</td><td>Sequencing</td><td>{{ curriculum/unplugged/coursec_one_video_thumbnail }}</td>
+  </tr>
+  <tr>
+   <td><a href="https://studio.code.org/s/coursec-2022/lessons/7">C.7 - My Loopy Robotic Friend Jr</a><br><i>*Supplies: Paper cups (20/group of 4)</i><br><small>Overview
+Building on the initial "My Robotic Friends" activity, students tackle larger and more complicated designs. In order to program their "robots" to complete these bigger designs, students will need to identify repeated patterns in their instructions that could be replaced with a loop.</td><td>Loops</td><td>{{ curriculum/unplugged/coursec_three_video_thumbnail }}</td>
+  </tr>
+      <tr>
+   <td><a href="https://studio.code.org/s/coursec-2022/lessons/11">C.11 - The Big Event</a><br><small>Students will soon learn that events are a great way to add flexibility to a pre-written algorithm. 有時，你希望程式能夠在使用者恰好需要時，向使用者發出回應。 Events can make your program more interesting and interactive.</td><td>Events</td><td>{{ curriculum/unplugged/coursec_four_video_thumbnail }}</td>
+   </tr>
+       </tr>
+     <td><a href="https://studio.code.org/s/coursec-2022/lessons/15">C.15 - Binary Bracelets</a><br><i>*Supplies: Markers. 備選物品 – 每個學生18顆黑色珠子/18顆白色珠子，1條尼龍刷</i><br><small>在電腦領域內，二進位極為重要。 今天大多數電腦以二進位形式存儲各種資訊。 This lesson helps demonstrate how it is possible to take something from real life and translate it into a series of ons and offs.</td><td>Binary</td><td>{{ curriculum/unplugged/coursec_two_video_thumbnail }}</td>
+  </tr>
+         <tr>
+    <th rowspan="3" id="t04">Course D</th>
+    <td><a href="https://studio.code.org/s/coursed-2022/lessons/2">D.2 - Graph Paper Programming<br></a><small>By "programming" one another to draw pictures, students get an opportunity to experience some of the core concepts of programming in a fun and accessible way. 本節課首先讓學生們用符號來指導彼此在方格紙上塗上顏色，努力重現已有的圖畫。 If there’s time, the lesson can conclude with images that the students create themselves.</td><td>Sequencing</td><td>{{ curriculum/unplugged/coursed_one_video_thumbnail }}</td>
+  </tr>
+  <tr>
+    <td><a href="https://studio.code.org/s/coursed-2022/lessons/4">D.4 - Relay Programming<br></a><small>This activity will begin with a short lesson on debugging and persistence, then will quickly move to a race against the clock as students break into teams and work together to write a program one instruction at a time.</td><td>Sequencing</td><td>{{ curriculum/unplugged/coursed_two_video_thumbnail }}</td>
+      </tr>
+  <tr>
+    <td><a href="https://studio.code.org/s/coursed-2022/lessons/12">D.12 - Conditionals with Cards</a><br><small>This lesson demonstrates how conditionals can be used to tailor a program to specific information. 在編寫程式時，我們並不總是萬事俱備。 在不同的情況下，需要執行不同的操作，即使不清楚代碼運行時哪種情況為「真」。 這就是條件陳述式用到的場合。 條件語句讓電腦可以根據運行代碼時為真的資訊做出決策。+</td><td>條件語句</td><td>{{ curriculum/unplugged/coursed_three_video_thumbnail }}</td>
+
+  </tr>
+  <tr>
+    <th rowspan="3" id="t05">課程E</th>
+    <td><a href="https://studio.code.org/s/coursee-2022/lessons/9">E.9 - Songwriting</a><br><small>電腦科學世界中最宏偉的結構之一是函數。 函數（有時稱為過程）是可以在大型程式中反復使用的小型程式。 本課將幫助學生直觀地理解為什麼將代碼塊組合成函數是如此有幫助的做法。</td><td>函數</td><td>{{ curriculum/unplugged/coursee_two_video_thumbnail }}</td>
+  </tr>
+  <tr>
+    <td><a href="https://studio.code.org/s/coursee-2022/lessons/15">E.15 - 為無障礙性設計</a><br><small>在本課中，學生將通過頭腦風暴和為假設的應用程式設計無障礙解決方案來瞭解無障礙性和共情的價值。</td><td>計算的影響</td><td><img src="/images/e18.png" width="90%"></td>
+  <tr>
+    <td><a href="https://studio.code.org/s/coursee-2022/lessons/16">E.16 - 數字共享</a><br><i>*用品：智慧手機或平板電腦</i><br><small>本課由版權和創意部門的團隊借給電腦科學基礎，旨在幫助學生理解尊重所有權和版權的挑戰和好處，特別是在數字環境中。 應鼓勵學生尊重藝術家的權利，這是成為有道德的數字公民的重要組成部分。</td><td>數位公民</td><td>{{ curriculum/unplugged/coursee_one_video_thumbnail }}</td>
   </tr>
     </tr>
          <tr>
-    <th rowspan="3" id="t06">課程 F</th>
-           <td><a href= "https://studio.code.org/s/coursef-2021/lessons/6">F.6 -空白空間的故事</a><br><i>*所需物品：6個信封（或者：白紙或索引卡，將其對折）</i><br><small>學生們將使用填空故事（類似于Mad Libs®）作為背景，了解電腦如何接收和存儲使用者的輸入資訊，及如何在程式運行中使用這些資訊。
-   </td><td>變數</td><td>{{ curriculum/unplugged/coursef_one_video_thumbnail }}</td>    </tr>        <tr>    <td><a href="https://studio.code.org/s/coursef-2021/lessons/13">F.13 - for迴圈的樂趣</a><br><i>*所需物品：骰子（2-4人為一組，每組3粒骰子）</i><br><small>我們知道，迴圈可以一遍又一遍地重複操作，但是現在我們要學習如何使用內置了其它結構的迴圈。 這些新的結構將會便於學生們創建更強大而動態的代碼。</td><td>For迴圈</td><td>{{ curriculum/unplugged/coursef_three_video_thumbnail }}</td>  </tr>  <tr>    <td><a href="https://studio.code.org/s/coursef-2021/lessons/19">F.19 - 互聯網</a><br><small>儘管很多人每天都在使用互聯網，但知道它工作原理的人並不多。 在本節課中，學生們將假裝在互聯網上穿流，同時學習網路連接、URL、IP位址和DNS。</td><td>數據</td><td>{{ curriculum/unplugged/coursef_two_video_thumbnail }}</td>  </tr>
+    <th rowspan="3" id="t06">Course F</th>
+           <td><a href= "https://studio.code.org/s/coursef-2022/lessons/6">F.6 -空白故事</a><br><i>*用品：6個信封（紙張或索引卡對折亦可）</i><br><small>學生將使用填空故事（類似于Mad Libs®）作為理解電腦如何從使用者獲取和存儲輸入，然後在程式運行時使用它。
+   </td><td>Variables</td><td>{{ curriculum/unplugged/coursef_one_video_thumbnail }}</td>
+  </tr>
+        <tr>
+    <td><a href="https://studio.code.org/s/coursef-2021/lessons/13">F.13 - For Loop Fun</a><br><i>*Supplies: Dice (3 dice/group of 2-4)</i><br><small>We know that loops allow us to do things over and over again, but now we’re going to learn how to use loops that have extra structures built right in. 這些新的結構讓學生可以創建更強大而動態的代碼。</td><td>For循環</td><td>{{ curriculum/unplugged/coursef_three_video_thumbnail }}</td>
+  </tr>
+  <tr>
+    <td><a href="https://studio.code.org/s/coursef-2022/lessons/15">F.19 - 互聯網</a><br><small>儘管很多人每天都在使用互聯網，但知道其工作原理的人並不是非常多 在本節課中，學生們將假裝在互聯網上穿流，同時學習網路連接、URL、IP位址和DNS。</td><td>數據</td><td>{{ curriculum/unplugged/coursef_two_video_thumbnail }}</td>  </tr>
 </table>
 
 <p style="clear:both"></p>
@@ -118,7 +148,7 @@ table, th, td {
 }
 th, td {
   padding: 5px;
-  text-align: left;    
+  text-align: left;
 }
 #t07 {
   width: 10%;
@@ -129,7 +159,17 @@ th, td {
 <table style="width:100%">
   <tr>
     <th><center><big>概念</th>    <th width=65%><center><big>教案<br><small>教案中包括其他資源（幻燈片、視頻、參考答案等等）。
-</th>     <th><center><big>資源</th>     <tr>    <th rowspan="2" id=t07 width=5%>數位公民</th>    <td><a href="https://curriculum.code.org/csf-19/coursef/18">眾包</a></td> <td>{{ curriculum/unplugged/archive_one_video_thumbnail }}</td>  </tr>  <tr>      <td colspan="2">*Common Sense Education開設<a href="https://www.commonsense.org/education/digital-citizenship/curriculum">全面的數位公民課程</a>，其中包括諸多不插電活動。</td>    <tr>    <th id=t07>二進位</th>        <td><a href="https://curriculum.code.org/csf-20/coursed/16/">二進位圖像</a><br><small>*所需物品：備選 - 向學生們展示對立項的分組。 儘管許多人認為二進位嚴格地說是0和1，但學生們將認識到資訊可以用各種二進位方式來表示。 這節課將更進一步深化這個概念，因為它闡述了電腦如何以二進位形式存儲更複雜的資訊（如圖像和顏色）。</td><td>{{ curriculum/unplugged/coursed_four_video_thumbnail }}</td>
+</th>
+    <th><center><big>Resources</th>
+     <tr>
+    <th rowspan="2" id=t07 width=5%>Digital Citizenship</th>
+    <td><a href="https://curriculum.code.org/csf-19/coursef/18">Crowdsourcing</a></td> <td>{{ curriculum/unplugged/archive_one_video_thumbnail }}</td>
+  </tr>
+  <tr>
+      <td colspan="2">*Common Sense Education has a <a href="https://www.commonsense.org/education/digital-citizenship/curriculum">full Digital Citizenship Curriculum</a> that includes many unplugged activities.</td>
+    <tr>
+    <th id=t07>Binary</th>
+        <td><a href="https://curriculum.code.org/csf-20/coursed/16/">Binary Images </a><br><small>*Supplies:Optional - Groupings of opposite items to display to students. 儘管許多人認為二進位嚴格地說是0和1，但學生們將認識到資訊可以用各種二進位方式來表示。 這節課將更進一步深化這個概念，因為它闡述了電腦如何以二進位形式存儲更複雜的資訊（如圖像和顏色）。</td><td>{{ curriculum/unplugged/coursed_four_video_thumbnail }}</td>
  </tr>
     <tr>
     <th id=t07>迴圈</th>

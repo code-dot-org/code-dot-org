@@ -16,6 +16,29 @@ import {
 
 describe('RecentCourses', () => {
   describe('Student Facing Courses', () => {
+    it('shows ViewFeedback when hasFeedback is true', () => {
+      const wrapper = shallow(
+        <RecentCourses
+          courses={[]}
+          topCourse={topCourse}
+          hasFeedback={true}
+          isProfessionalLearningCourse={false}
+        />
+      );
+      assert.equal(wrapper.find('ViewFeedback').length, 1);
+    });
+
+    it('shows ViewFeedback when hasFeedback is false', () => {
+      const wrapper = shallow(
+        <RecentCourses
+          courses={[]}
+          topCourse={topCourse}
+          hasFeedback={false}
+          isProfessionalLearningCourse={false}
+        />
+      );
+      assert.equal(wrapper.find('ViewFeedback').length, 0);
+    });
     it('shows SetUpCourses when there are no courses', () => {
       const wrapper = shallow(
         <RecentCourses courses={[]} topCourse={null} isTeacher />
@@ -167,6 +190,30 @@ describe('RecentCourses', () => {
         />
       );
       assert.equal(wrapper.find('SetUpCourses').length, 0);
+    });
+
+    it('shows ViewFeedback when hasFeedback is true', () => {
+      const wrapper = shallow(
+        <RecentCourses
+          courses={[]}
+          topCourse={topPlCourse}
+          hasFeedback={true}
+          isProfessionalLearningCourse={true}
+        />
+      );
+      assert.equal(wrapper.find('ViewFeedback').length, 1);
+    });
+
+    it('shows ViewFeedback when hasFeedback is false', () => {
+      const wrapper = shallow(
+        <RecentCourses
+          courses={[]}
+          topCourse={topPlCourse}
+          hasFeedback={false}
+          isProfessionalLearningCourse={true}
+        />
+      );
+      assert.equal(wrapper.find('ViewFeedback').length, 0);
     });
 
     it('sets header to professional learning header', () => {

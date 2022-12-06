@@ -41,7 +41,7 @@ class StandaloneVideo < Level
   validate :has_video_key?
 
   def has_video_key?
-    unless video_key.present?
+    if video_key.blank?
       errors.add :video_key, :blank
     end
   end

@@ -22,16 +22,11 @@
 #
 
 class Pd::WorkshopSurveyFoormSubmission < ApplicationRecord
-  belongs_to :foorm_submission, class_name: 'Foorm::Submission'
+  belongs_to :foorm_submission, class_name: 'Foorm::Submission', optional: true
   belongs_to :user
-  belongs_to :pd_session, class_name: 'Pd::Session'
+  belongs_to :pd_session, class_name: 'Pd::Session', optional: true
   belongs_to :pd_workshop, class_name: 'Pd::Workshop'
 
-  validates_presence_of(
-    :user_id,
-    :pd_workshop_id
-  )
-  validates :pd_workshop, presence: true
   validate :day_for_workshop
 
   def save_with_foorm_submission(answers, form_name, form_version)
@@ -69,7 +64,7 @@ class Pd::WorkshopSurveyFoormSubmission < ApplicationRecord
     if pd_workshop && !day.nil?
       session_count = pd_workshop.sessions.count
       if day > session_count
-        errors[:day] << "#{day} is not valid for workshop #{pd_workshop.id}"
+        errors.add(:day, "#{day} is not valid for workshop #{pd_workshop.id}")
         Honeybadger.notify("Foorm was submitted for day #{day} for workshop #{pd_workshop.id}, which only had #{session_count} sessions.")
       end
     end

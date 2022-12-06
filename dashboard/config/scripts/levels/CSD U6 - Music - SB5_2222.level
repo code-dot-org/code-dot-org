@@ -1,9 +1,5 @@
 <Applab>
   <config><![CDATA[{
-  "game_id": 41,
-  "created_at": "2022-04-08T17:07:36.000Z",
-  "level_num": "custom",
-  "user_id": 568,
   "properties": {
     "skin": "applab",
     "edit_code": true,
@@ -60,9 +56,9 @@
     "libraries_enabled": "false",
     "ai_enabled": "false",
     "reference_links": [
-      "/docs/concepts/maker-toolkit/playing-notes/",
-      "/docs/concepts/javascript/arrays/",
-      "/docs/concepts/javascript/modifying-arrays/"
+      "/courses/csd-2022/guides/playing-notes",
+      "/courses/csd-2022/guides/arrays",
+      "/courses/csd-2022/guides/modifying-arrays"
     ],
     "starter_assets": {
       "PurpleUI-17.png": "2969915f-0b92-4ad8-b89f-0879ad8f1f2f.png"
@@ -72,6 +68,10 @@
     "encrypted_examples": "q6P7Z/N9dy1/SnaRc6XU4Lenj+0+LfqROfR1+E63zJ8fKthloaIkm/9q1id2\nS8wW5CkKHThrw1jQgLN+TzcaFg==\n",
     "preload_asset_list": null
   },
+  "level_num": "custom",
+  "game_id": 41,
+  "created_at": "2022-04-08T17:07:36.000Z",
+  "user_id": 568,
   "published": true,
   "notes": "",
   "audit_log": "[{\"changed_at\":\"2022-04-08T17:07:36.837+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Music - SB5_2022\\\"\"],\"cloned_from\":\"CSD U6 - Music - SB5_2022\"}]"

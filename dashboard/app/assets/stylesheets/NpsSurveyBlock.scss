@@ -44,6 +44,7 @@ $box_shadow: rgba(255, 255, 255, 0.63);
   width: 200px;
   text-align: left;
   left: 20px;
+  font-size: 14px;
 }
 
 .nps-survey-rating-max {
@@ -52,6 +53,7 @@ $box_shadow: rgba(255, 255, 255, 0.63);
   width: 200px;
   text-align: right;
   right: 220px;
+  font-size: 14px;
 }
 
 .nps-survey-rating-root {
@@ -60,6 +62,10 @@ $box_shadow: rgba(255, 255, 255, 0.63);
   padding-top: 10px;
   padding-bottom: 5px;
   padding-left: 50px;
+
+  legend {
+    display: none;
+  }
 }
 
 .nps-survey-checkbox-material-decorator {

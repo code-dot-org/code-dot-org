@@ -475,7 +475,8 @@
           "hello_world_new": "Nytt Block!"
         },
         "helloworld_animals_sizes": {
-          "hello_world_new": "Nytt Block!"
+          "hello_world_new": "Nytt Block!",
+          "hello_world_new_block": "Nytt block!!!!"
         },
         "helloworld_animals_sounds": {
           "hello_world_new": "Nytt Block!"
@@ -632,6 +633,328 @@
         },
         "courseE_aboutme_2_2021": {
           "": "Klicka här!"
+        },
+        "CSD U3 debug_2022": {
+          "CSD_U3_rect_c1": "Här är koden"
+        },
+        "CSD U3 drawing challenge 2_2022": {
+          "CSD_U3_rect_c1": "Här är koden"
+        },
+        "CSD U3 drawing challenge 3_2022": {
+          "CSD_U3_rect_c1": "Här är koden"
+        },
+        "CSD U3 drawing practice 1_2022": {
+          "CSD_U3_rect_c1": "Här är koden"
+        },
+        "CSD U3 drawing practice 2_2022": {
+          "CSD_U3_rect_c1": "Här är koden"
+        },
+        "CSD U3 drawing practice 3_2022": {
+          "CSD_U3_rect_c1": "Här är koden"
+        },
+        "CSD U3 ellipse_2022": {
+          "CSD_U3_rect_c1": "Här är koden"
+        },
+        "CSD U3 fill_2022": {
+          "CSD_U3_rect_c1": "Här är koden"
+        },
+        "CSD U3 properties depth_2022": {
+          "CSD_U3_rect_c1": "Här är koden"
+        },
+        "CSD U3 properties tint_2022": {
+          "CSD_U3_rect_c1": "Här är koden"
+        },
+        "CSD U3 rect_2022": {
+          "CSD_U3_rect_c1": "Här är koden"
+        },
+        "CSD U3 sequence_2022": {
+          "CSD_U3_rect_c1": "Här är koden"
+        },
+        "CSD U3 shapes arc_2022": {
+          "CSD_U3_rect_c1": "Här är koden"
+        },
+        "CSD U3 shapes behind_2022": {
+          "CSD_U3_rect_c1": "Här är koden"
+        },
+        "CSD U3 shapes line_2022": {
+          "CSD_U3_rect_c1": "Här är koden"
+        },
+        "CSD U3 shapes missing_2022": {
+          "CSD_U3_rect_c1": "Här är koden"
+        },
+        "CSD U3 shapes polygon_2022": {
+          "CSD_U3_rect_c1": "Här är koden"
+        },
+        "CSD U3 shapes scene_2022": {
+          "CSD_U3_rect_c1": "Här är koden"
+        },
+        "CSD U3 shapes_2022": {
+          "CSD_U3_rect_c1": "Här är koden"
+        },
+        "CourseD_Dance_2020_012022": {
+          "dance_callout_01": "Välj din dansare här."
+        },
+        "CourseD_Dance_2020_022022": {
+          "dance_callout_11_a": "Lägg till det här blocket i ditt program.",
+          "arrow_buttons": "Tryck på piltangenterna för att kontrollera din dansare."
+        },
+        "CourseD_Dance_2020_042022": {
+          "dance_callout_02": "Lägg till detta block till ditt program!"
+        },
+        "CourseD_Dance_2020_052022": {
+          "dance_callout_05": "Lägg till en ny händelse i ditt program."
+        },
+        "CourseD_Dance_2020_062022": {
+          "dance_party_11_5_groups": "Nytt Block!"
+        },
+        "CourseD_Dance_2020_072022": {
+          "setprop_hint": "Nytt Block!"
+        },
+        "CourseD_Dance_2020_092022": {
+          "new_block_3": "Nytt Block!",
+          "new_block_4": "Nytt Block!"
+        },
+        "CourseF_outbreak2_-2022-2": {
+          "minitoolbox": "Klicka här för att utöka blocket.",
+          "pointerlocation": "Dra ett subject-block hit."
+        },
+        "Function intro Ryan2022": {
+          "Function_intro_Ryan_1": "Den här lilla instruktionen säger åt datorn att köra den STORA gruppen kod med samma namn i arbetsytan."
+        },
+        "MC_HOC_2017_03_Cole2022": {
+          "MC_HOC_2017_03_Cole_1": "Det här är en \"upprepa\"-loop!  Klicka på den i arbetsytan och lägg till kod som du vill köra om och om igen."
+        },
+        "MC_HOC_2017_04_Cole2022": {
+          "MC_HOC_2017_04_Cole_a": "Agenten kan sväva över vatten, men spelaren kan inte det!"
+        },
+        "MC_HOC_2017_06_Cole2022": {
+          "MC_HOC_2017_06_Cole_1": "Du kan inte kasta bort de här blocken, men du kan redigera dem!"
+        },
+        "MC_HOC_2017_Ali2022": {
+          "MC_HOC_2017_08_RY_1": "Agenten kan sväva över lava, men spelaren kan inte det!"
+        },
+        "Overworld Chop Trees2022": {
+          "craft_callout_preplaced": "Vi har lagt ut några block för att hjälpa dig komma igång"
+        },
+        "Overworld House Frame Chosen2022": {
+          "craft_callout_preplaced_house": "Den här koden kommer bygga ditt hus. Kan du avsluta det?"
+        },
+        "Overworld Move to Sheep2022": {
+          "craft_run_button_callout": "Tryck på \"Kör\" för att prova programmet",
+          "craft_drag_block_callout": "Dra ett 'gå framåt'-block och klicka i det under ett annat block."
+        },
+        "Overworld Place Wall2022": {
+          "craft_inside_repeat": "Upprepa handlingar genom att placera block här"
+        },
+        "Underground Avoiding Lava2022": {
+          "craft_callout_moveforward": "Den här koden håller koll efter lava. Kan du lägga till ett kommando för att gå framåt?"
+        },
+        "Underground Iron2022": {
+          "craft_what_is_iron": "Bryt järnet!"
+        },
+        "courseA_EOC_playlab_animals2022": {
+          "question_mark": "?"
+        },
+        "courseA_EOC_playlab_fantasy2022": {
+          "question_mark": "?"
+        },
+        "courseA_EOC_playlab_people2022": {
+          "question_mark": "?"
+        },
+        "courseD_bee_conditionals22022": {
+          "4_5_Bee_Conditionals_2_1": "Kom ihåg att kolla så att ALLA moln har en BLOMMA. Du behöver inte kolla efter bivaxkakor alls."
+        },
+        "courseD_bee_conditionals_challenge22022": {
+          "courseD_bee_conditionals_challenge2_1": "Använd den här slingan för att samla in all nektar (eller honung) från en blomma (eller vaxkaka)."
+        },
+        "helloworld_food_costumes_soccer-2022": {
+          "hello_world_new": "Nytt Block!"
+        },
+        "helloworld_food_costumes_space-2022": {
+          "hello_world_new": "Nytt Block!"
+        },
+        "helloworld_food_sizes_soccer-2022": {
+          "hello_world_new": "Nytt Block!",
+          "hello_world_new_block": "Nytt Block!"
+        },
+        "helloworld_food_sizes_space-2022": {
+          "hello_world_new": "Nytt Block!",
+          "hello_world_new_block": "Nytt Block!"
+        },
+        "helloworld_food_sounds_soccer-2022": {
+          "hello_world_new": "Nytt Block!"
+        },
+        "helloworld_food_sounds_space-2022": {
+          "hello_world_new": "Nytt Block!"
+        },
+        "CourseF_outbreak7_-2022-2": {
+          "costumes_tab": "Klicka här för att lägga till kostymer till ditt projekt."
+        },
+        "New Sprite Lab Project": {
+          "costumes_tab": "Klicka här för att lägga till kostymer till ditt projekt."
+        },
+        "courseE_aboutme_22022": {
+          "": "Klicka här för att lägga till kostymer till ditt projekt."
+        },
+        "coursee_helloworld_events": {
+          "hello_world_click_hint": "Lägg till det här händelseblocket på din arbetsyta."
+        },
+        "coursee_helloworld_freeplay": {
+          "costumes_tab": "Klicka här för att lägga till kostymer till ditt projekt."
+        },
+        "coursee_helloworld_say": {
+          "hello_world_say": "Använd detta block för att få sprites att tala.",
+          "hello_world_make_sprite": "Använd det här blocket för att skapa en sprite."
+        },
+        "helloworld_animals_backgrounds": {
+          "hw_background_location": "Använd det här blocket för att ställa in en ny bakgrund."
+        },
+        "helloworld_animals_behaviors": {
+          "hello_world_behavior_blocks": "Använd detta block med något av beteenden nedan."
+        },
+        "helloworld_animals_click": {
+          "hw_Run": "Klicka här för att köra koden."
+        },
+        "helloworld_animals_events": {
+          "hello_world_click_hint": "Lägg till det här händelseblocket på din arbetsyta."
+        },
+        "helloworld_animals_freeplay": {
+          "costumes_tab": "Klicka här för att lägga till kostymer till ditt projekt."
+        },
+        "helloworld_animals_location": {
+          "pin": "stift"
+        },
+        "helloworld_animals_multi": {
+          "pin": "stift"
+        },
+        "helloworld_animals_say": {
+          "hello_world_say": "Använd detta block för att få sprites att tala.",
+          "hello_world_make_sprite": "Använd det här blocket för att skapa en sprite."
+        },
+        "helloworld_emoji_backgrounds": {
+          "hw_background_location": "Använd det här blocket för att ställa in en ny bakgrund."
+        },
+        "helloworld_emoji_behaviors": {
+          "hello_world_behavior_blocks": "Använd detta block med något av beteenden nedan."
+        },
+        "helloworld_emoji_click": {
+          "hw_Run": "Klicka här för att köra koden."
+        },
+        "helloworld_emoji_events": {
+          "hello_world_click_hint": "Lägg till det här händelseblocket på din arbetsyta."
+        },
+        "helloworld_emoji_freeplay": {
+          "costumes_tab": "Klicka här för att lägga till kostymer till ditt projekt."
+        },
+        "helloworld_emoji_location": {
+          "pin": "stift"
+        },
+        "helloworld_emoji_multi": {
+          "pin": "stift"
+        },
+        "helloworld_emoji_say": {
+          "hello_world_say": "Använd detta block för att få sprites att tala.",
+          "hello_world_make_sprite": "Använd det här blocket för att skapa en sprite."
+        },
+        "helloworld_food_backgrounds": {
+          "hw_background_location": "Använd det här blocket för att ställa in en ny bakgrund."
+        },
+        "helloworld_food_backgrounds_soccer-2022": {
+          "hw_background_location": "Använd det här blocket för att ställa in en ny bakgrund."
+        },
+        "helloworld_food_backgrounds_space-2022": {
+          "hw_background_location": "Använd det här blocket för att ställa in en ny bakgrund."
+        },
+        "helloworld_food_behaviors": {
+          "hello_world_behavior_blocks": "Använd detta block med något av beteenden nedan."
+        },
+        "helloworld_food_behaviors_soccer-2022": {
+          "hello_world_behavior_blocks": "Använd detta block med något av beteenden nedan."
+        },
+        "helloworld_food_behaviors_space-2022": {
+          "hello_world_behavior_blocks": "Använd detta block med något av beteenden nedan."
+        },
+        "helloworld_food_click": {
+          "hw_Run": "Klicka här för att köra koden."
+        },
+        "helloworld_food_click_soccer-2022": {
+          "hw_Run": "Klicka här för att köra koden."
+        },
+        "helloworld_food_click_space-2022": {
+          "hw_Run": "Klicka här först!"
+        },
+        "helloworld_food_events": {
+          "hello_world_click_hint": "Lägg till det här händelseblocket på din arbetsyta."
+        },
+        "helloworld_food_events_soccer-2022": {
+          "hello_world_click_hint": "Lägg till det här händelseblocket på din arbetsyta."
+        },
+        "helloworld_food_events_space-2022": {
+          "hello_world_click_hint": "Lägg till det här händelseblocket på din arbetsyta."
+        },
+        "helloworld_food_freeplay": {
+          "costumes_tab": "Klicka här för att lägga till kostymer till ditt projekt."
+        },
+        "helloworld_food_freeplay_soccer-2022": {
+          "costumes_tab": "Klicka här för att lägga till kostymer till ditt projekt."
+        },
+        "helloworld_food_freeplay_space-2022": {
+          "costumes_tab": "Klicka här för att lägga till kostymer till ditt projekt."
+        },
+        "helloworld_food_location": {
+          "pin": "stift"
+        },
+        "helloworld_food_location_soccer-2022": {
+          "pin": "stift"
+        },
+        "helloworld_food_location_space-2022": {
+          "pin": "stift"
+        },
+        "helloworld_food_multi": {
+          "pin": "stift"
+        },
+        "helloworld_food_multi_soccer-2022": {
+          "pin": "stift"
+        },
+        "helloworld_food_multi_space-2022": {
+          "pin": "stift"
+        },
+        "helloworld_food_say": {
+          "hello_world_say": "Använd detta block för att få sprites att tala.",
+          "hello_world_make_sprite": "Använd det här blocket för att skapa en sprite."
+        },
+        "helloworld_food_say_soccer-2022": {
+          "hello_world_say": "Använd detta block för att få sprites att tala.",
+          "hello_world_make_sprite": "Använd det här blocket för att skapa en sprite."
+        },
+        "helloworld_food_say_space-2022": {
+          "hello_world_say": "Använd detta block för att få sprites att tala.",
+          "hello_world_make_sprite": "Använd det här blocket för att skapa en sprite."
+        },
+        "helloworld_retro_backgrounds": {
+          "hw_background_location": "Använd det här blocket för att ställa in en ny bakgrund."
+        },
+        "helloworld_retro_behaviors": {
+          "hello_world_behavior_blocks": "Använd detta block med något av beteenden nedan."
+        },
+        "helloworld_retro_click": {
+          "hw_Run": "Klicka här för att köra koden."
+        },
+        "helloworld_retro_events": {
+          "hello_world_click_hint": "Lägg till det här händelseblocket på din arbetsyta."
+        },
+        "helloworld_retro_freeplay": {
+          "costumes_tab": "Klicka här för att lägga till kostymer till ditt projekt."
+        },
+        "helloworld_retro_location": {
+          "pin": "stift"
+        },
+        "helloworld_retro_multi": {
+          "pin": "stift"
+        },
+        "helloworld_retro_say": {
+          "hello_world_say": "Använd detta block för att få sprites att tala.",
+          "hello_world_make_sprite": "Använd det här blocket för att skapa en sprite."
         }
       }
     }

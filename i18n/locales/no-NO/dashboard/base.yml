@@ -8,8 +8,14 @@
 #To use a different locale, set it with `I18n.locale`:
 #I18n.locale = :es
 #This would use the information in config/locales/es.yml.
+#The following keys must be escaped otherwise they will not be retrieved by
+#the default I18n backend:
+#true, false, on, off, yes, no
+#Instead, surround them with single quotes.
+#en:
+#'true': 'foo'
 #To learn more, please read the Rails Internationalization guide
-#available at http://guides.rubyonrails.org/i18n.html.
+#available at https://guides.rubyonrails.org/i18n.html.
 "no":
   errors:
     messages:
@@ -370,13 +376,13 @@
       starwars: 'Star Wars'
       starwarsblocks: 'Star Wars (blokker)'
       starwarsblocks_hour: 'Star Wars (blokker)'
+      thebadguys: 'Skurkene'
       loading: 'Laster...'
       weblab: 'Weblaboratoriet'
       view_all: 'Vis alle prosjekter...'
     popup:
       progress_for_user: "%{name}s fremgang"
       progress: 'Din fremdrift'
-      lines: 'Totalt antall linjer kode: %{lines}'
       close: 'LUKK'
       mastery: 'Konsepter'
       puzzle_map: 'Stadier'
@@ -486,6 +492,7 @@
     no_primary_course: "Prøv et kurs på Code Studio"
     choose_next_course: "Prøv et av Code Studio kursene ved å velge nedenfor"
     print_certificate: "Skriv ut diplom"
+  certificate_hour_of_code: "Kodetimen"
   move_students:
     new_section_dne: "Beklager, men seksjon %{new_section_code} finnes ikke. Legg inn en annen seksjonskode."
     section_code_cant_be_current_section: "Gjeldende seksjon kan ikke være den samme som den nye seksjonen."
@@ -953,13 +960,13 @@
         khan: 'Khan akademiet'
         kodable: 'Kodbart'
         scratch: 'Scratch'
-        other: "Annet:"
+        other: "Andre"
       robotics:
         grok: 'Grok-læring'
         kodable: 'Kodbart'
         microbit: 'Microbit'
         raspberry: 'Raspberry Pi'
-        other: "Annet:"
+        other: "Andre"
       workshop_course:
         csp: 'Prinsipper i informatikk'
       email_opt_in:
@@ -974,3 +981,5 @@
   page_not_found_button: "Returner hjem"
   copy: 'Kopier'
   confirm: 'Bekreft'
+  pixelation:
+    binary: "Binær"

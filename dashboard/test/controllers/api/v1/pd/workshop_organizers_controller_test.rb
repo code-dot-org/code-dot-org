@@ -14,7 +14,7 @@ class Api::V1::Pd::WorkshopOrganizersControllerTest < ::ActionController::TestCa
       create(:teacher)
     ]
 
-    sign_in (create :workshop_admin)
+    sign_in(create(:workshop_admin))
     get :index
     response = JSON.parse(@response.body)
 

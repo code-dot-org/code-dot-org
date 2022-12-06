@@ -134,23 +134,23 @@ class ScaryChangeDetector
   def detect_dropbox_conflicts
     changes = @added.grep(/'s conflicted copy/)
     unless changes.empty?
-      puts red <<-EOS
+      puts red <<~EOS
 
-        Looks like you are adding dropbox conflicted copy files.
-        This is probably a mistake.
+                Looks like you are adding dropbox conflicted copy files.
+                This is probably a mistake.
 
-#{changes.join("\n")}
+        #{changes.join("\n")}
 
-        Dropbox creates these files typically when 2 people change the same file at the same time.
-        See https://www.dropbox.com/help/syncing-uploads/conflicted-copy
+                Dropbox creates these files typically when 2 people change the same file at the same time.
+                See https://www.dropbox.com/help/syncing-uploads/conflicted-copy
 
-        Compare the file with its root (same filename minus the conflicted copy part). If they're identical,
-        it's safe to delete the copy.
-        Otherwise follow-up with the content editor mentioned in the copy and resolve the diff.
+                Compare the file with its root (same filename minus the conflicted copy part). If they're identical,
+                it's safe to delete the copy.
+                Otherwise follow-up with the content editor mentioned in the copy and resolve the diff.
 
-        If this change is intentional, you can bypass this message with the
-          --no-verify
-        flag.
+                If this change is intentional, you can bypass this message with the
+                  --no-verify
+                flag.
 
       EOS
       raise "Commit blocked."

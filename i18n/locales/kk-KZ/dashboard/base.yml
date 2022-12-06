@@ -8,8 +8,14 @@
 #To use a different locale, set it with `I18n.locale`:
 #I18n.locale = :es
 #This would use the information in config/locales/es.yml.
+#The following keys must be escaped otherwise they will not be retrieved by
+#the default I18n backend:
+#true, false, on, off, yes, no
+#Instead, surround them with single quotes.
+#en:
+#'true': 'foo'
 #To learn more, please read the Rails Internationalization guide
-#available at http://guides.rubyonrails.org/i18n.html.
+#available at https://guides.rubyonrails.org/i18n.html.
 kk:
   errors:
     messages:
@@ -229,7 +235,6 @@ kk:
     popup:
       progress_for_user: "%{name} сабақ оқу барысы"
       progress: 'Сіздің сабақ оқу барысыңыз'
-      lines: 'Жазылған жалпы код жолы: %{lines}'
       close: 'ЖАБУ'
       mastery: 'Ұғымдар'
       puzzle_map: 'Деңгейлер'
@@ -310,6 +315,7 @@ kk:
     no_primary_course: "Код Студиясы курсын байқап көру"
     choose_next_course: "Төмендегі Код Студиясы курсының біреуін байқап көріңіз"
     print_certificate: "Сертификатты басып шығару"
+  certificate_hour_of_code: "Код жазу Сағаты"
   move_students:
     student_not_found: "Бір немесе одан көбірек оқушы табылмады."
   share:
@@ -597,13 +603,18 @@ kk:
         math: 'Математика'
         science: 'Ғылым'
         la: 'Тіл Өнерлері'
+        other: "Басқасы"
       resources:
         kodable: 'Kodable'
+        other: "Басқасы"
       robotics:
         kodable: 'Kodable'
+        other: "Басқасы"
       email_opt_in:
         opt_in_yes: 'Иә'
         opt_in_no: 'Жоқ'
   cookie_banner:
     accept: 'Мен келісемін'
   copy: 'Көшіру'
+  pixelation:
+    binary: "Бинарлы"

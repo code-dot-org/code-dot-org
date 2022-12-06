@@ -1,11 +1,25 @@
 name 'CSA U7 Assessment 2022 q12'
 
-wrong 'wrong'
-right 'right'
-wrong 'wrong'
-wrong 'wrong'
-wrong 'wrong'
+wrong '`recurMethod("aa")`'
+wrong '`recurMethod("aba")`'
+right '`recurMethod("abc")`'
+wrong '`recurMethod("bba")`'
+wrong '`recurMethod("cba")`'
 
 markdown <<MARKDOWN
-question
+Consider the following recursive method.
+
+```
+public static boolean recurMethod(String str) {
+  if (str.length() <= 1) {
+    return true;
+  } else if (str.substring(0, 1).compareTo(str.substring(1, 2)) < 0) {
+    return recurMethod(str.substring(1));
+  } else {
+    return false;
+  }
+}
+```
+
+Which of the following method calls will return `true`?
 MARKDOWN

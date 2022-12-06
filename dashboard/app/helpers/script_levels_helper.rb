@@ -12,7 +12,7 @@ module ScriptLevelsHelper
         # users in or teaching sections with an enabled "lesson extras" flag
         enabled_for_lesson = script_level.script.lesson_extras_available &&
           !script_level.end_of_script?
-        enabled_for_user = current_user && current_user.section_for_script(script_level.script) &&
+        enabled_for_user = current_user&.section_for_script(script_level.script) &&
             current_user.section_for_script(script_level.script).lesson_extras
         enabled_for_teacher = current_user.try(:teacher?) &&
             current_user.sections.where(
@@ -55,7 +55,7 @@ module ScriptLevelsHelper
   end
 
   def tracking_pixel_url(script)
-    if script.name == Script::HOC_2013_NAME
+    if script.name == Unit::HOC_2013_NAME
       CDO.code_org_url '/api/hour/begin_codeorg.png'
     else
       CDO.code_org_url "/api/hour/begin_#{script.name}.png"

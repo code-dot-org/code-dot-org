@@ -1,71 +1,527 @@
 fil:
   data:
     progressions:
+      '"If/Else" with the Bee': '"Kung/Iba pa"  kasama ang Bee'
+      8-Bit Binary Number Widget: 8-Bit Binary Number na Widget
+      AI Lab and Isaac's Data: AI Lab at Data ni Isaac
+      AI Lab and Kim's Data: AI Lab at Data ni Kim
       AI Machine Learning - Video: AI Machine Learning - Video
+      'AI for Oceans: Fish vs Not Fish': 'AI sa Karagatan: Isda vs Hindi Isda'
+      'AI for Oceans: Types of Fish': 'AI sa Karagatan: Mga Uri ng Isda'
       'AI: Impact on Society - Video': 'AI: Epekto sa Lipunan - Video'
       'AI: Training Data & Bias - Video': 'AI: Data ng Pagsasanay at Bias - Video'
+      Accelerometer Events: Mga Event sa Accelerometer
+      Add Content and HTML: Magdagdag ng Nilalaman at HTML
+      Add Content and Structure to Your Page: Magdagdag ng Nilalaman at Istraktura sa Pahina Mo
+      Add Movement: Magdagdag ng Galaw
+      Add Sprites: Magdagdag ng Sprite
+      Add Style: Magdagdag ng Estilo
+      Add Style to Your Page: Magdagdag ng Estilo sa Pahina mo
+      Add Text: Magdagdag ng Text
+      Add a Welcome Screen: Magdagdag ng Welcome Screen
+      Adding Images: Magdagdag ng Mga Imahe
+      Adding New Screens: Magdagdag ng Mga Bagong Screen
+      Adding Pages: Pagdaragdag ng Mga Pahina
+      Adding Screens: Pagdaragdag ng Mga Screen
+      Alternative Datasets: Mga Alternatibong Dataset
+      Animate Your Scene: Pagalawin ang Eksena Mo
       App Lab Intro - Video: App Lab Intro - Video
+      'App Project: Screen Design': 'Proyekto ng App: Disenyo ng Screen'
+      'App: Choose a Kid''s Movie': 'App: Pumili ng Pelikulang Pambata'
+      'App: Friend Finder': 'App: Finder ng Kaibigan'
+      'App: Guess the Number': 'App: Hulaan ang Numero'
+      'App: How Many Countries': 'App: Ilang Bansa'
+      'App: Improved Pet App': 'App: Pinahusay na Pet App'
+      'App: Is It Your Birthday?': 'App: Kaarawan Mo ba?'
+      'App: My Famous Birthday': 'App: Sikat Kong Kaarawan'
+      'App: National Parks': 'App: Mga Pambansang Parke'
+      'App: Outfit Picker': 'App: Outfit Picker'
+      'App: Pet Chooser': 'App: Tagapili ng Alagang Hayop'
+      'App: Stamp Notebook': 'App: Notebook ng Stamp'
+      'App: Story Creator': 'App: Tagalikha ng Kwento'
+      'App: The Fastest Finger': 'App: Pinakamabilis na Daliri'
+      'App: Where Should I Live?': 'App: Saan Ako Dapat Maninirahan?'
       Arrays: Mga Array
+      Artist Intro with JR Hildebrand: Artist Intro kasama si JR Hildebrand
+      Artist Intro with JR Hildebrande: Artist Intro kasama si JR Hildebrande
       Artist Project: Proyekto ng Artista
       'Artist: Variables': 'Artist: Mga Variable'
       Assessment: Pagtatasa
+      Attribution: Pagtatalaga
       Back and Forth: Back and forth
+      Basic Conditionals: Pangunahing Mga Conditional
       Bass, Mid, and Treble: Bass, Mid, at Treble
+      Be a Super Digital Citizen: Maging Super Digital na Mamamayan
+      Begin planning your project: Simulan ang pagpaplano ng proyekto mo
+      Begin planning your project_2018: Simulan ang pagpaplano ng proyekto mo_2018
+      Binary Bracelets - Unplugged Activity: Mga Pangunahing Bracelet - Hindi Naka-plug na Aktibidad
+      Binary Number Widget: Widget ng Pangunahing Numero
       Binary Numbers: Binary na mga Numero
       Board Events: Mga Pangyayari sa Board
+      Board Input and Output: Input at Output ng Board
+      Book Recommender App: Book Recommender na App
+      Book Recommender Model Card: Book Recommender na Modelong Kard
+      Boolean Comparison: Paghahambing ng Boolean
+      Build a Platform Jumper: Bumuo ng Platform Jumper
+      Build a Screen: Bumuo ng Screen
+      Building a UI with Design Mode: Pagbuo ng UI gamit ang Design Mode
+      Building an App: Pagbuo ng isang App
+      Button Circuits: Mga Circuit ng Pindutan
+      CS Discoveries Post-Course Survey: Survey ng CS Discoveries Post-Course
+      CS Discoveries Post-course Survey: Survey ng CS Discoveries Post-course
+      CSD U3 Interactive Card Exemplar: CSD U3 Interactive Card Exemplar
+      CSD U3 platform intro: Intro ng CSD U3 na platform
+      'CSD: For Loop': 'CSD: Para sa Loop'
+      Cake Defender: Tagapagtanggol ng Keyk
+      Cake Survey: Survey ng Keyk
+      Challenge: Hamon
+      Challenge Levels: Mga Antas ng Hamon
+      'Challenge: Lists': 'Hamon: Mga listahan'
+      'Challenge: RGB Colors': 'Hamon: Mga Kulay ng RGB'
+      Challenges: Mga Hamon
+      Change: Baguhin
+      Check Your Work: Suriin ang Trabaho Mo
+      Check-In Survey: Check-In Survey
+      Checking for a Winner: Sinusuri ang isang Nanalo
+      'Choice Levels: Customize Your App': 'Mga Antas ng Pagpipilian: I-customize ang App Mo'
+      Choose Your Own Adventure: Piliin ang Sarili Mong Pakikipagsapalaran
+      Choosing Good IDs: Pagpili ng Magandang ID
+      Club Datasets: Mga Dataset ng Club
+      Code Prediction: Prediksiyon ng Code
+      Code Your Own Flappy Game: I-code ang Sarili Mong Flappy Game
+      Code Your Page: I-code ang Page Mo
+      Collector Game: Larong Kolektor
       Collision Detection: Pagtukoy sa mga Banggaan
       Collisions: Mga Banggaan
+      Collisions in Games: Mga banggaan sa Mga Laro
+      Color LEDs: Mga LED na may kulay
+      Combining Projects: Pagsasama-sama ng mga Proyekto
       Combining Representations: Pagsasama-sama ng mga Representasyon
+      Conditionals with Cards - Unplugged Activity: Mga Kondisyon na may Mga Kard - Aktibidad na Hindi Naka-plug
+      'Conditionals: If Statements': 'Mga Kondisyon: Kung na Mga Pahayag'
+      'Conditionals: If and If/Else Statements': 'Mga Conditional: Kung at Kung/Iba pa na Pahayag'
+      Control Your Player: Kontrolin ang Manlalaro Mo
+      'Course E: Play Lab Project': 'Kurso E: Play Lab na Proyekto'
+      'Course F: Artist Project': 'Kurso F: Proyekto ng Artista'
+      'Course F: Artist Project - Revise': 'Kurso F: Proyekto ng Artista - Baguhin'
+      'Course F: Play Lab Project': 'Kurso E: Play Lab na Proyekto'
+      'Course F: Play Lab Project - Revise': 'Kurso F: Play Lab na Proyekto - Baguhin'
+      Crack Random Substitution: Crack Random na Pagpapalit
+      Crack a Caesar Cipher: I-crack ang isang Caesar Cipher
+      Create Your Own Animation: Lumikha ng Sarili Mong Animation
+      Create Your Sprites: Lumikha ng mga Sprite Mo
+      Create a Background: Gumawa ng Background
+      Create a Google Form: Gumawa ng Google Form
+      Create a Story: Gumawa ng Kuwento
+      Create an App in App Lab: Gumawa ng App sa App Lab
+      Create your project: Gumawa ng proyekto mo
+      Customize: I-customize
+      Customize Your App: I-customize ang App Mo
       Dance Crews: Dance Crews
+      Data Visualization: Pagsasalarawan ng Data
+      De-bugging with the Step Button: Pag-debug gamit ang Step Button
       Debugging: Pagdedebug
+      Debugging with the Step Button: Pag-debug gamit ang Step Button
+      'Demo App: Interactive Card': 'Demo App: Interactive na Kard'
+      Demo Apps: Mga Demo App
       Design Mode: Mode ng Pag-disenyo
+      Design Your Game: Idisenyo ang Laro Mo
+      Design Your Prototype: Idisenyo ang Prototype Mo
+      Design a Screen for your App: Magdisenyo ng Screen sa App Mo
+      Design an AI App - AI Lab: Magdisenyo ng AI App - AI Lab
+      Design an AI App - App Lab: Magdisenyo ng AI App - App Lab
       Designing Screens with Code: Pagdidisenyo ng mga Screen gamit ang Code
+      Designing for Accessibility: Pagdidisenyo sa Accessibility
+      Digital Sharing - Unplugged Activity: Digital na Pagbabahagi - Hindi Naka-plug na Aktibidad
+      Draw Your Background: Iguhit ang Background Mo
+      Draw a Background: Gumuhit ng Background
       Drawing: Drowing
+      Driver Alert System: Alert System ng Driver
+      Escape Room Example: Halimbawa ng Escape Room
       Event Types: Mga Tipo ng Pangyayari
       Events: Mga event
+      Events and Linking Screens: Mga Event at Pag-uugnay ng Mga Screen
+      Events and Properties: Mga Event at Katangian
       Example: Halimbawa
+      Example Animated Scene: Halimbawa ng Animated na Eksena
+      Example App Types: Halimbawa ng Mga Uri ng App
+      'Example App: Zoo Classification': 'Halimbawang App: Klasipikasyon ng Zoo'
+      Example Apps: Mga Halimbawa ng App
+      Example Projects: Mga Halimbawa ng Proyekto
+      Example projects: Mga halimbawa ng proyekto
+      Exemplar Personal Websites: Mga Halimbawa ng Personal na Website
+      Expanding Personal Website: Pagpapalawak ng Personal na Website
+      Expanding Your Website: Pagpapalawak ng Website Mo
+      Experiment with Web Lab: Eksperimento sa Web Lab
+      Exploration: Pagtuklas
+      'Exploration: For Loops': 'Pagtuklas: Para sa mga Loop'
+      'Exploration: Rikki''s Poster': 'Pagtuklas: Poster ni Rikki'
+      'Exploration: Sample Apps': 'Pagtuklas: Halimbawa ng Mga App'
+      'Exploration: Sample Programs': 'Pagtuklas: Halimbawa ng Mga Programa'
+      'Exploration: Sample Project': 'Pagtuklas: Halimbawa ng Proyekto'
+      Exploring CS in Entertainment: Pagtuklas ng CS sa Libangan
+      Exploring more CSS: Pagtuklas ng higit pang CSS
       Extra: Ekstra
+      Extra Challenge: Dagdag na Hamon
+      'Extra Challenge: Sound Board': 'Dagdag na Hamon: Sound Board'
+      Final Room Escape App: Panghuling Room Escape na App
+      Find the Wizard: Hanapin ang Wizard
+      Finish a Screen: Tapusin ang isang Screen
+      Finish the Prototype: Tapusin ang Prototype
+      Finishing Functions: Pagtatapos ng Mga Function
+      Finishing Touches: Mga Pangwakas na Aksiyon
+      Flyer Game: Flyer Game
+      Follow the Algorithm - Unplugged Activity: Sundin ang Algorithm - Hindi Naka-plug na Aktibidad
+      Follow the Mouse: Sundin ang Mouse
+      Fonts and Style: Mga Font at Estilo
+      FoodFight: FoodFight
+      For Loop Fun - Unplugged Activity: Para sa Loop Fun - Hindi Naka-plug na Aktibidad
       For Loops: For Loops
+      For Loops and Color LEDs: Para sa mga Loop at mga Color LED
+      For Loops and Repeat Blocks: Para sa mga Loop at Inulit na mga Block
       Free Play: Libreng Laro
+      'Free Play: Make a Scene': 'Libreng Play: Gumawa ng Eksena'
+      'Free Play: Make an Interactive Scene': 'Libreng Play: Gumawa ng Interactive na Eksena'
+      Fruit and Veggie Explorer: Prutas at Gulay na Explorer
       Functions: Mga function
       Functions with Parameters: Mga function na meron mga parameter
       Get In Formation: Mag-formation
       Getters and Setters: Tagakuha at Taga-takda
       Getting Properties: Pagkuha ng mga Katangian
+      Graph Paper Programming - Unplugged Activity: Graph Paper Programming - Hindi Naka-plug na Aktibidad
+      Green Glass Door: Berdeng Pintuang Salamin
+      Guess The Number: Hulaan Ang Numero
       Headings: Mga Heading
       Hello World: Hello World
+      How to Create a Simple Function: Paano Gumawa ng Simpleng Function
+      How to Make a Sprite: Paano Gumawa ng Sprite
+      Ice Age Loops: Ice Age na mga Loop
+      Images and Sounds: Mga Larawan at Tunog
       Images in HTML: Mga Larawan sa HTML
+      Import Your Model: I-import ang Modelo Mo
+      Import a Model: Mag-import ng Modelo
+      Importing Your Model: Pag-import ng Modelo Mo
+      Improved Shoe Recommender: Pinahusay na Shoe Recommender
+      Incorporate Feedback: Isama ang Feedback
+      Innovation Research: Pananaliksik sa Inobasyon
+      Input Examples: Mga Halimbawa ng Input
+      Input with If-Else: Input na may Kung-Iba pa
+      InspirationalArtwork: InspirationalArtwork
+      Intro to Flyer Game: Panimula sa Larong Flyer
+      Intro to For Loops: Panimula sa mga Para sa Loop
+      Intro to Side Scrollers: Panimula sa Mga Side Scroller
+      Intro to Sprites: Intro sa Mga Sprite
+      Intro to Variables: Intro sa Mga Variable
+      Introducing Sprite Lab: Ipinapakilala ang Sprite Lab
       Introduction to Arrays: Introduksyon sa mga Array
+      Isaac's Survey Data: Data ng Survey ni Isaac
+      Iteration and Parameters: Pag-ulit at Mga Parameter
+      Keep On Dancing!: Magpatuloy sa Pagsasayaw!
       Keeping Data Secret: Pagiging Sekreto ng mga Datos
       Keyboard Input: Keyboard na Input
+      Kim's Survey: Survey ni Kim
+      Kim's Survey Data: Data ng Survey ni Kim
+      LED Apps: Mga App ng LED
+      Layout with CSS: Layout na may CSS
+      Learning from Simulations: Matuto sa Mga Simulation
       Lesson Extras: Mga Ekstrang Aralin
+      Level Overview: Pangkalahatang-ideya ng Antas
       Levels: Mga antas
+      Light Show: Light Show
+      Linking Pages: Pag-uugnay ng Mga Pahina
       Linking Screens: Pag-uugnay sa mga Screen
       Lists: Mga listahan
+      Looking for Patterns: Naghahanap ng mga Pattern
+      Looping: Looping
+      Loops with the Artist: Mga Loop sa Artista
+      Make Your Sprites: Gawin ang mga Sprite Mo
+      Make a Prediction: Gumawa ng Prediksiyon
+      Make an Interactive Card: Gumawa ng Interactive na Kard
+      Make it Interactive: Gawin itong Interactive
       Making Music: Paglikha ng Musika
+      Making Scenes: Paggawa ng mga Eksena
+      Making Songs: Paggawa ng mga Kanta
+      Making Sounds: Paggawa ng Tunog
+      Making an Interactive Card: Gumagawa ng Interactive na Kard
+      'Maze Intro: Programming with Blocks': 'Maze Intro: Programming gamit ang mga Block'
       Measures: Mga Measure
+      Medical Dataset Model Cards: Mga Modelong Kard ng Medical Dataset
+      Medical Priority App: Medikal na Priyoridad na App
       'Minecraft: Hero''s Journey': 'Minecraft: Ang Paglalakbay ng Bayani'
+      'Mini-Project: About Me': 'Mini-Project: Tungkol sa Akin'
+      'Mini-Project: Alien Dance Moves': 'Mini-Project: Mga Kilos ng Sayaw na Alien'
+      'Mini-Project: Alien Dance Party': 'Mini-Project: Dance Party ng Alien'
+      'Mini-Project: Create a Virtual Pet': 'Mini-Project: Gumawa ng Virtual Pet'
+      'Mini-Project: Outbreak Simulator': 'Mini-Project: Simulator ng Outbreak'
+      'Mini-Project: Royal Battle': 'Mini-Project: Royal na Labanan'
+      "Mini-Project: Snowflake #1": "Mini-Project: Piraso ng niyebe #1"
+      "Mini-Project: Snowflake #2": "Mini-Project: Piraso ng niyebe #2"
+      'Mini-Project: Swimming Fish': 'Mini-Project: Lumalangoy na Isda'
+      'Mini-Project: Swimming Fish (continued)': 'Mini-Project: Lumalangoy na Isda (ipinagpatuloy)'
+      'Mini-Project: User Input Programs': 'Mini-Project: Mga Programa sa Pag-input ng User'
+      'Mini-Project: Virtual Pet': 'Mini-Project: Virtual na Alaga'
+      'Mini-project: Chase Game': 'Mini-Project: Larong Habolan'
+      'Mini-project: Flappy Game': 'Mini-project: Flappy Game'
+      'Mini-project: Interactive Poster': 'Mini-project: Interactive na Poster'
+      'Mini-project: Jorge the Dog': 'Mini-project: Asong si Jorge'
+      'Mini-project: Sticker Art': 'Mini-project: Art ng Sticker'
+      'Mini-project: Sticker Design': 'Mini-project: Disenyo ng Sticker'
+      Modify simulation variables: Baguhin ang mga variable ng simulation
       More Buttons: Mas maraming button
+      More Input: Higit pang Input
+      More Parameters: Higit Pang Parameter
+      Motorcycle: Motorsiklo
+      Move It Move it Video  - Unplugged Activity: Move It Move it na Video  - Hindi Naka-plug na Aktibidad
+      Movement with the Counter Pattern: Paggalaw gamit ang Counter Pattern
+      Multiframe Animations: Mga Multiframe na Animation
+      Musical Arrays: Mga kaayusan ng Instrumento
+      My Loopy Robotic Friends - Unplugged Activity: Baliw na Mga Kaibigan Kong Robot - Naka-unplug na Aktibidad
+      My Online Neighborhood: Aking Online Na Kapitbahay
+      My Robotic Friends - Unplugged Activity: Mga Kaibigan Kong Robot - Hindi Naka-plug na Aktibidad
+      Nested Loops with the Bee: Naka-Nest na mga Loop sa Bee
+      New Challenge Introduction: Panimula ng Bagong Hamon
+      New Shapes: Mga Bagong Hugis
+      Orientation: Oryentasyon
       Overview: Buod
+      'Overview: Design Mode': 'Pangkalahatang-ideya: Mode ng Disenyo'
+      'Overview: If Statements': 'Pangkalahatang-ideya: Kung na Mga Pahayag'
+      'Overview: Images': 'Pangkalahatang-ideya: Mga larawan'
+      'Overview: onEvent': 'Pangkalahatang-ideya: onEvent'
+      'Overview: setPosition': 'Pangkalahatang-ideya: setPosition'
       Pair Programming: Pair programming
+      Pet Recommender: Tagarekomenda ng Alaga
+      Picturing Data: Paglalarawan ng Data
+      Pizza Party Data: Data ng Pizza Party
+      Pizza Recommendations: Mga Rekomendasyon sa Pizza
+      Plan Your Project: Planuhin ang Proyekto Mo
+      Plan Your Scene: Planuhin ang Eksena Mo
       Planning: Pagpaplano
+      Platform Jumper - Background and Variables: Jumper na Platform - Background at Mga Variable
+      Platform Jumper - Items: Jumper na Platform - Mga Item
+      Platform Jumper - Platforms: Jumper na Platform - Mga Platform
+      Platform Jumper - Player: Jumper na Platform - Manlalaro
+      Platform Jumper Review: Pagsusuri ng Platform na Jumper
+      Player Controls: Mga Kontrol ng Manlalaro
+      Playing Notes: Mga Tala ng Laro
+      Playing with Notes: Naglalaro sa Mga Tala
       Polling Events: Pag-poll ng mga Pangyayari
+      Post-Course Survey Instructions: Mga Instruksiyon sa Survey ng Post-Course
+      Practice: Pagsasanay
+      Predict: Hula
+      Prediction: Prediksiyon
+      Prepare for your presentation: Maghanda para sa presentasyon mo
+      Prepare for your presentation_2018: Maghanda para sa presentasyon mo_2018
+      Problem Solving: Paglutas ng Problema
+      Problem Solving Process for Programming: Proseso ng Paglutas ng Problema sa Programming
       Programming with Rey and BB-8: Pag-Program kasama sina Rey at BB-8
+      Programs that Repeat: Mga Programang Umuulit
+      Project: Proyekto
+      Project - Background and Variables: Proyekto - Background at Mga Variable
+      Project - Sprites and Interactions: Proyekto - Mga Sprite at Pakikipag-ugnayan
+      Project Guide: Gabay sa Proyekto
+      Project Work: Gawain ng Proyekto
       Properties: Mga katangian
+      Publishing Your Website: Pag-publish ng Website Mo
       Quarter Notes: Quarter Notes
+      Quick Check: Mabilisang Pagsusuri
+      RGB Exploration: Paggalugad ng RGB
+      Raspado Recommender: Raspado Recommender
+      Reading Sensors: Mga Sensor sa Pagbasa
+      Recognizing Expressions: Pagkilala sa mga Ekspresyon
+      Recognizing Fish: Pagkilala sa Isda
+      Recognizing Fish Features: Pagkilala sa Mga Tampok ng Isda
+      Recognizing Shapes: Pagkilala sa mga Hugis
       Reflection: Pagmumuni-muni
+      Relay Programming - Unplugged Activity: Relay Programming - Hindi Naka-plug na Aktibidad
+      Repeat Blocks: Ulitin ang mga Block
+      Repeat Blocks with BB-8: Ulitin ang Blocks na may BB-8
+      Repeat Blocks with the Artist: Ulitin ang mga Block kasama ang Artista
+      Repeat Unit Statements: Ulitin ang Mga Unit Statement
+      Repeat Until Statements: Ulitin Hanggang sa Mga Pahayag
       Representing Images: Pagkakatawan sa mga Larawan
       Review: Repasuhin
+      Review Your Animated Scene: Suriin ang Animated na Eksena Mo
+      Review Your App: Suriin ang App Mo
+      Review Your Game: Suriin ang Laro Mo
+      Review Your Page: Suriin ang Page Mo
+      Review Your Scene: Suriin ang Eksena Mo
+      'Review: CSS': 'Pagsusuri: CSS'
+      'Review: HTML': 'Pagsusuri: HTML'
+      Run a simulation: Magpatakbo ng simulation
+      Safari App: Safari App
+      Safari Model: Modelo ng Safari
+      Same Game: Parehong Laro
+      Sample Apps for Good: Mga Sample na Apps sa Kabutihan
+      Sample Games: Mga Sample na Laro
+      Sample Personal Web Pages: Mga Sample ng Personal na Web Page
+      Sample Personal Websites: Mga Sample na Personal na Website
+      Sample Programs: Mga Sample na Programa
+      Sample Web Page: Sample na Web Page
+      Sample Website: Sample na Website
+      Scoring & Scoreboard: Pagmamarka at Scoreboard
+      Screen Design: Disenyo ng Screen
+      Sensor Events: Mga Event sa Sensor
+      Sensors to Colors: Mga Sensor sa Kulay
+      Set Up Sprites: I-set Up ang mga Sprite
+      Setting Properties: Pagtatakda ng Mga Katangian
+      Shapes and the Draw Loop: Mga Hugis at ang Draw Loop
+      Share Your App: Ibahagi ang App Mo
+      Share Your Pages: Ibahagi ang Mga Page Mo
+      Share Your Stylesheets: Ibahagi ang Mga Stylesheet Mo
+      Shoe Recommendation Survey: Survey sa Rekomendasyon ng Sapatos
+      Shoe Recommender: Tagarekomenda ng Sapatos
+      Side Scroller: Scroller sa Gilid
+      Simple Circuits: Mga Simpleng Circuit
+      Skill Building: Pagbuo ng Kasanayan
+      Skill-Building: Pagbuo ng Kasanayan
+      Sliders: Mga Slider
+      Smart Bike - Blinkers: Smart na Bike - Mga Blinker
+      Social Sleuth: Social Sleuth
+      Songwriting - Functions Unplugged Activity: Pagsulat ng Kanta - Mga Function sa Hindi Naka-plug na Aktibidad
       Speed it Up, Slow it Down: Bilisan Ito, Bagalan Ito
       Sprite Lab Project: Proyekto sa Sprite Lab
       Sprite Movement: Galaw ng mga Sprite
+      Sprites and the Draw Loop: Mga Sprite at ang Draw Loop
+      Star Chaser: Star Chaser
+      Styling Text: Pag-istilo ng Text
+      Styling with Classes: Pag-istilo sa Mga Klase
+      Styling your Website: Pag-istilo ng Website mo
+      Teach A.I. a new word: Turuan ang AI ng bagong salita
       Teach AI a New Word: Turuan ang AI ng Bagong Salita
+      'Technique: Frequency Analysis': 'Teknik: Frequency Analysis'
+      Terminology Recap: Recap ng Terminolohiya
+      Text Compression: Compression ng Text
       The Animation Tab: Ang Animation na Tab
+      The Artist in Code Studio: Ang Artista sa Code Studio
+      The Big Event - Unplugged Activity: Ang Malaking Event - Hindi Naka-plug na Aktibidad
+      The Buzzer: Ang Buzzer
+      The Collector: Ang Taga-kolekta
       The Draw Loop: Ang Draw na Loop
+      The Harvester: Ang Taga-Ani
+      The Internet - Unplugged Activity: Ang Internet - Hindi Naka-plug na Aktibidad
+      The Power of Words - Unplugged Activity: Ang Kapangyarihan ng Salita - Hindi Naka-plug na Aktibidad
+      The Right App - Unplugged Activity: Ang Tamang App - Hindi Naka-plug na Aktibidad
+      Top Websites: Mga Nangungunang Website
+      Train AI to Clean the Ocean: Sanayin ang AI na Linisin ang Karagatan
+      Train a Model in AI Lab: Sanayin ang isang Modelo sa AI Lab
+      Train an AI to Clean the Ocean: Magsanay ng AI para Linisin ang Karagatan
+      UI Element Properties: Mga Katangian ng UI Elemento
+      Ultimate Shoe Recommender: Ultimate na Shoe Recommender
+      Unit 5 Lesson 1 Overview: Pangkalahatang-ideya ng Yunit 5 Aralin 1 
+      Upload Your Images: I-upload ang Mga Larawan Mo
+      User Interface: Interface ng User
+      Using Getters and Setters: Gamit ang Getters at Setters
+      Using HTML Tags: Paggamit ng HTML Tag
+      Using Random Numbers: Paggamit ng Random na mga Numero
+      Using Training Data: Paggamit ng Data ng Pagsasanay
+      Using the LED: Gamit ang LED
+      Using the Repeat Block: Gamit ang paulit-ulit na bloke
+      Using the Switch: Gamit ang Switch
       Variables: Mga variable
       Velocity: Belosidad
+      Velocity and the Counter Pattern: Bilis at ang Counter Pattern
       Video: Video
+      Video - Encryption and Public Keys: Video - Encryption at Mga Pampublikong Key
+      'Video - Maze Intro: Programming with Blocks': 'Video - Maze Intro: Programming gamit ang mga Block'
+      'Video:  Debugging with the Step Button': 'Video: Pag-debug gamit ang Step Button'
+      'Video:  Minecraft - The Agent': 'Video:  Minecraft - Ang Agent'
+      'Video:  Text  and Prompts': 'Video:  Text  at Mga Prompt'
+      'Video: "If/Else"': 'Video: "Kung/Iba pa"'
+      'Video: AI: What is Machine Learning?': 'Video: AI: Ano ang Machine Learning?'
+      'Video: Amazon and Data': 'Video: Amazon at Data'
+      'Video: Artist Intro with JR Hildebrand': 'Video: Intro ng Artista kasama si JR Hildebrand'
+      'Video: Artist Intro with JR Hildebrande': 'Video: Intro ng Artista kasama si JR Hildebrande'
+      'Video: Circuits and Logic': 'Video: Mga Circuit at Logic'
+      'Video: Code Your Own Flappy Game': 'Video: I-code ang Sarili Mong Flappy Game'
+      'Video: Conditionals: If Statements': 'Video: Mga Kondisyon: Kung na Mga Pahayag'
+      'Video: Conditionals: If and If/Else Statements': 'Video: Mga Conditional: Kung at Kung/Iba pa na Pahayag'
+      'Video: Dance Party Events': 'Video: Mga Event sa Dance Party'
+      'Video: Dance Party Measures': 'Video: Mga Sukat sa Dance Party'
+      'Video: Dance Party Party On!': 'Video: Dance Party Party Na!'
+      'Video: Dance Party Properties': 'Video: Mga Katangian ng Dance Party'
+      'Video: Dance Party Warm Up': 'Video: Warm Up ng Dance Party'
+      'Video: De-bugging with the Step Button': 'Video: De-bugging gamit ang Step Button'
+      'Video: Debugging': 'Video: Pag-dedebug'
+      'Video: Debugging with Scrat ': 'Video: Pag-debug gamit ang Scrat'
+      'Video: Debugging with the Step Button': 'Video: Pag-debug gamit ang Step Button'
+      'Video: Events': 'Video: Mga Event'
+      'Video: Follow The Digital Trail': 'Video: Sundan ang Digital Trail'
+      'Video: Getting Loopy': 'Video: Nagiging Loopy'
+      'Video: Happy Maps - Unplugged Activity': 'Video: Happy Maps - Hindi Naka-plug na Aktibidad'
+      'Video: Harvesting with Conditionals': 'Video: Pag-aani gamit ang Mga Conditional'
+      'Video: How Search Works': 'Video: Paano Gumagana ang Paghahanap'
+      'Video: How to Create a Simple Function': 'Video: Paano Gumawa ng Simpleng Function'
+      'Video: How to Make a Sprite': 'Video: Paano Gumawa ng Sprite'
+      'Video: IOSP Model': 'Video: IOSP na Modelo'
+      'Video: Ice Age Loops': 'Video: Ice Age na mga Loop'
+      'Video: Impact on Society': 'Video: Epekto sa Lipunan'
+      'Video: Impacts on Society': 'Video: Epekto sa Lipunan'
+      'Video: Intro to CSS - Part 1': 'Video: Panimula sa CSS - Bahagi 1'
+      'Video: Intro to CSS - Part 2': 'Video: Panimula sa CSS - Bahagi 2'
+      'Video: Intro to Design Mode': 'Video: Panimula sa Design Mode'
+      'Video: Introducing Sprite Lab': 'Video: Ipinapakilala ang Sprite Lab'
       'Video: Introduction to Arrays': 'Panimula o Introduksyon tungkol sa mga Arrays'
+      'Video: Introduction to Play Lab': 'Video: Panimula sa Play Lab'
+      'Video: Introduction to Variables': 'Video: Panimula sa Mga Variable'
+      'Video: Loops in Artist': 'Video: Mga Loop sa Artista'
+      'Video: Loops with the Artist': 'Video: Mga Loop kasama ang Artista'
+      'Video: Managing Disagreement': 'Video: Pamamahala ng Di-pagkakasundo'
+      'Video: Maze Intro - Programming with Blocks': 'Video: Maze Intro - Programming gamit ang mga Block'
+      'Video: Maze Intro - Programming with Blocks ': 'Video: Maze Intro - Programming gamit ang mga Block '
+      'Video: Maze Intro: Programming with Blocks': 'Video: Maze Intro: Programming gamit ang mga Block'
+      'Video: Measures': 'Video: Mga Panukala'
+      'Video: Minecraft - Congratulations': 'Video: Minecraft - Binabati kita'
+      'Video: Minecraft - Functions': 'Video: Minecraft - Mga Function'
+      'Video: Minecraft - Repeat Loops': 'Video: Minecraft - Ulitin ang Mga Loop'
+      'Video: Minecraft - The Agent': 'Video: Minecraft - Ang Agent'
+      'Video: Minecraft: Voyage Aquatic Conditionals': 'Video: Minecraft: Mga Conditional sa Paglalayag sa Aquatic'
+      'Video: Minecraft: Voyage Aquatic Congratulations': 'Video: Minecraft: Paglalayag sa Aquatic Congratulations'
+      'Video: Minecraft: Voyage Aquatic Introduction': 'Video: Minecraft: Panimula sa Paglalayag sa Aquatic'
+      'Video: Minecraft: Voyage Aquatic Repeat Until': 'Video: Minecraft: Ulitin ang Paglalayag sa Aquatic Hanggang'
+      'Video: Nested Loops': 'Video: Mga Naka-nest Loop'
+      'Video: Nested Loops with the Bee': 'Video: Naka-nest na mga Loop sa Bee'
+      'Video: Netflix and Data': 'Video: Netflix at Data'
+      'Video: Pair Programming': 'Video: Pair Programming'
+      'Video: Pair Programming ': 'Video: Pair Programming '
+      'Video: Programming with Blocks': 'Video: Programming gamit ang mga Block'
+      'Video: Programming with Rey and BB-8': 'Video: Programming kasama sina Rey at BB-8'
+      'Video: Properties': 'Video: Mga Katangian'
+      'Video: Publishing Your Website': 'Video: Pag-publish ng Website Mo'
+      'Video: Repeat Blocks': 'Video: Ulitin ang mga Block'
+      'Video: Repeat Blocks with BB-8': 'Video: Ulitin ang mga Block gamit ang BB-8'
+      'Video: Repeat Blocks with the Artist': 'Video: Ulitin ang mga Block kasama ang Artista'
+      'Video: Repeat Until Blocks': 'Video: Ulitin Hanggang Ma-block'
+      'Video: Repeat Until Statements': 'Video: Ulitin Hanggang sa Mga Pahayag'
+      'Video: Sprites in Action': 'Video: Mga Sprite sa Aksiyon'
+      'Video: Star Wars Project': 'Video: Star Wars na Proyekto'
+      'Video: Teamwork': 'Video: Teamwork'
+      'Video: Text and Prompts': 'Video: Text at Mga Prompt'
+      'Video: The Artist in Code Studio': 'Video: Ang Artista sa Code Studio'
+      'Video: The Big Event - Unplugged Activity': 'Video: Ang Malaking Event - Hindi Naka-plug na Aktibidad'
+      'Video: The Collector': 'Video: Ang Kolektor'
+      'Video: The Harvester': 'Video: Ang Mang-aani'
+      'Video: Training Data & Bias': 'Video: Data ng Pagsasanay at Pagkiling'
+      'Video: Training Data and Bias': 'Video: Data ng Pagsasanay at Pagkiling'
+      'Video: Unplugged Variables in Envelopes': 'Video: Mga Hindi Naka-plug na Variable sa Mga Sobre'
+      'Video: Using the Repeat Block': 'Video: Gamit ang Repeat Block'
+      'Video: Variables in Artist': 'Video: Mga Variable sa Artista'
+      'Video: Warm Up': 'Video: Warm Up'
+      'Video: Waze and Data': 'Video: Waze at Data'
+      'Video: What is Machine Learning?': 'Video: Ano ang Machine Learning?'
+      'Video: While Loops with the Farmer': 'Video: Habang Nakikipag-Loop sa Magsasaka'
+      'Video: Wrap-up': 'Video: Pag-wrap-up'
+      Warm Up: Warm Up
+      Website Project: Proyekto sa Website
+      Welcome to Monster Town: Maligayang pagdating sa Monster Town
       Where'd They Go?: Saan sila nagpunta?
       While Loops with the Farmer: Mga While Loops sa Farmer
+      'Widget: Text Compression': 'Widget: Compression ng Text'
       Wrap-up: Wrap-up
+      'You Choose: Improve Your App': 'Pinili Mo: Pagbutihin ang App Mo'
+      'You Choose: Restaurant Recommendations': 'Pinili Mo: Mga Rekomendasyon sa Restaurant'
+      Your Personal Website: Ang Personal na Website Mo
+      Your Team Project: Ang Proyekto ng Team Mo
+      Zoo Predictions: Mga Prediksiyon ng Zoo
+      getText vs getNumber: getText vs getNumber
+      isTouching: isTouching
+      setProperty: setProperty

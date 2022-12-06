@@ -1,4 +1,4 @@
-class Api::V1::SectionsController < Api::V1::JsonApiController
+class Api::V1::SectionsController < Api::V1::JSONApiController
   load_resource :section, find_by: :code, only: [:join, :leave]
   before_action :find_follower, only: :leave
   load_and_authorize_resource except: [:join, :leave, :membership, :valid_course_offerings, :create, :update, :require_captcha]
@@ -196,11 +196,11 @@ class Api::V1::SectionsController < Api::V1::JsonApiController
 
     participant_types =
       if current_user.permission?(UserPermission::PLC_REVIEWER) || current_user.permission?(UserPermission::UNIVERSAL_INSTRUCTOR) || current_user.permission?(UserPermission::LEVELBUILDER)
-        [SharedCourseConstants::PARTICIPANT_AUDIENCE.student, SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher, SharedCourseConstants::PARTICIPANT_AUDIENCE.facilitator]
+        [Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.student, Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher, Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.facilitator]
       elsif current_user.permission?(UserPermission::FACILITATOR)
-        [SharedCourseConstants::PARTICIPANT_AUDIENCE.student, SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher]
+        [Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.student, Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher]
       else
-        [SharedCourseConstants::PARTICIPANT_AUDIENCE.student]
+        [Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.student]
       end
 
     render json: {availableParticipantTypes: participant_types}
@@ -248,7 +248,7 @@ class Api::V1::SectionsController < Api::V1::JsonApiController
     render json: {result: 'success'}
   # if the group data is invalid we will get a record invalid exception
   rescue ActiveRecord::RecordInvalid
-    render json: {result: 'invalid groups'}, status: 400
+    render json: {result: 'invalid groups'}, status: :bad_request
   end
 
   # POST /api/v1/sections/<id>/code_review_enabled
@@ -282,11 +282,11 @@ class Api::V1::SectionsController < Api::V1::JsonApiController
         @course = UnitGroup.get_from_cache(course_id)
         return head :bad_request unless @course
         return head :forbidden unless @course.course_assignable?(current_user)
-        @unit = params[:unit_id] ? Script.get_from_cache(params[:unit_id]) : nil
+        @unit = params[:unit_id] ? Unit.get_from_cache(params[:unit_id]) : nil
         return head :bad_request if @unit && @course.id != @unit.unit_group.try(:id)
-      elsif course_version.content_root_type == 'Script'
+      elsif course_version.content_root_type == 'Unit'
         unit_id = course_version.content_root_id
-        @unit = Script.get_from_cache(unit_id)
+        @unit = Unit.get_from_cache(unit_id)
         return head :bad_request unless @unit
         return head :forbidden unless @unit.course_assignable?(current_user)
       end

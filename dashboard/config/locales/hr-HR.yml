@@ -260,7 +260,6 @@ hr:
     popup:
       progress_for_user: Napredak %{name}
       progress: Tvoj napredak
-      lines: 'Ukupno linija kôda: %{lines}'
       close: ZATVORI
       mastery: Pojmovi
       puzzle_map: Faze
@@ -355,6 +354,7 @@ hr:
     no_primary_course: Isprobaj tečaj Code Studio
     choose_next_course: Isprobaj tečaj Code Studio uz niže navedeni odabir
     print_certificate: Ispišite diplome
+  certificate_hour_of_code: Hour of Code
   share:
     title: Naučite o Code Studiu
     description: Svatko može učiti računarske znanosti, te izrađivati igre, aplikacije
@@ -463,6 +463,9 @@ hr:
       title: Laboratorij aplikacija
       audience: Dob 13+
       cta: Nauči kako
+    hello-world:
+      body: Odaberite između četiri zabavne teme za kodiranje interaktivnih likova
+        u svijetu koji stvorite.
     hoc:
       title: Klasični labirint
       body: Isprobajte osnove informatike. Milijuni su im dali šansu.
@@ -722,6 +725,7 @@ hr:
         music: Glazba
         art: Umjetnost
         other: 'Ostalo:'
+        na: Nije primjenjivo
       resources:
         bootstrap: Bootstrap
         codecademy: CodeCademy
@@ -730,7 +734,8 @@ hr:
         kodable: Kodable
         scratch: Scratch
         tynker: Tynker
-        other: 'Ostalo:'
+        other: Ostalo
+        na: Nije primjenjivo
       robotics:
         grok: Grok Learning
         kodable: Kodable
@@ -740,7 +745,8 @@ hr:
         sphero: Sphero
         raspberry: Raspberry Pi
         wonder: Wonder Workshop
-        other: 'Ostalo:'
+        other: Ostalo
+        na: Nije primjenjivo
       workshop_course:
         csf_af: Osnove RZ (Tečajevi A-F)
         csf_express: Osnove RZ (Pred-Brzi ili Brzi)
@@ -773,3 +779,11 @@ hr:
     link_your_email: Povežite svoj e-mail
     not_now: Ne sada
   code_org_logo_alt: Početna stranica Code.org
+  lesson_lock:
+    error:
+      no_updates: Nema ažuriranja za izvođenje
+      missing_params: Morate navesti ID korisnika, razine i jedinice
+      cannot_view_locked_answers: Ne možete vidjeti odgovore dok su zaključani
+      forbidden: Korisnik ne može ažurirati stanje zaključavanja učenika
+  pixelation:
+    binary: Binarno

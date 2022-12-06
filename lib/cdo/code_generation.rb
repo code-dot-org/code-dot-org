@@ -26,7 +26,7 @@ module CodeGeneration
           next if model_class.send :exists?, code_attribute.to_sym => code
         end
       end
-      next if reject_if && reject_if.call(code)
+      next if reject_if&.call(code)
 
       return code
     end

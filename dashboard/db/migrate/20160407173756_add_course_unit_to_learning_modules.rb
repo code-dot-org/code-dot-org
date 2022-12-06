@@ -11,7 +11,7 @@ class AddCourseUnitToLearningModules < ActiveRecord::Migration[4.2]
     Plc::CourseUnit.all.each do |unit|
       unit.plc_evaluation_questions.each do |question|
         question.plc_evaluation_answers.each do |answer|
-          answer.plc_learning_module.update! plc_course_unit_id: unit.id unless answer.plc_learning_module.nil?
+          answer.plc_learning_module&.update! plc_course_unit_id: unit.id
         end
       end
     end

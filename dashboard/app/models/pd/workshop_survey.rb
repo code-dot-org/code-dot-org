@@ -32,8 +32,6 @@ class Pd::WorkshopSurvey < ApplicationRecord
 
   belongs_to :pd_enrollment, class_name: "Pd::Enrollment"
 
-  validates_presence_of :pd_enrollment
-
   def self.required_fields
     [
       :will_teach,

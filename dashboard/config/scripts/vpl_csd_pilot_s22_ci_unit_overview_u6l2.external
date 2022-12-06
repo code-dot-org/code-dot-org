@@ -21,21 +21,15 @@ markdown <<MARKDOWN
 
 ### **Implementation guidance** 
 
-* ##### Complete Unit 1 Chapter 1 before starting this unit
+* ##### Complete the first three lessons of the Problem Solving and Computing unit before starting.
 
-* ##### This unit assumes students have completed Unit 3 Chapter 1 and all of Unit 4. Students without this background may struggle in this unit.
+* ##### This unit assumes students are familiar with App Lab, specifically using Design Mode to create a user interface and using Events to change the screen when clicking a button. This can be accomplished by having students complete the <a href="https://studio.code.org/s/applab-intro/lessons/1/levels/1" target="blank" rel="noopener noreferrer">App Lab Hour of Code</a> before starting this unit.
 
-* ##### This unit requires students to have access to Circuit Playground's - <a href="https://code.org/circuitplayground" target="blank" rel="noopener noreferrer"> click here </a> for more information about using Circuit Playground's in your classroom
+* ##### This unit requires students to have access to Circuit Playground's - <a href="https://code.org/circuitplayground" target="blank" rel="noopener noreferrer">Click here</a> for more information about using Circuit Playground's in your classroom
 
-* ##### This unit could be swapped out with Unit 7 - see the <a href="https://docs.google.com/document/d/1u-eIlB2cAwMuSckzbMWkteQIcsXgez7FTrbjP8PBB4o/preview" target="blank" rel="noopener noreferrer"> Implementation Guide  </a> for more information on this option
+* ##### Guidance for how to support students in programming levels and differentiate tasks are available in the <a href="https://docs.google.com/document/d/1WGywQ25khB6-FB20x6wO9dGVO9_qJlWkuLVLREJS4Jo/preview" target="blank" rel="noopener noreferrer">Programming Levels Guide</a> and <a href="https://docs.google.com/document/d/15Y6Mo3fMUtHq16SSskABgcYE-5xfk-Ewv0z_o4uaLdI/preview" target="blank" rel="noopener noreferrer">Differentiation Guide.</a>
 
-* ##### Guidance for how to support students in programming levels and differentiate tasks are available in the <a href="https://docs.google.com/document/d/1-mXz53CAQ1dy3-RVGkoUnR0hfAwdWeza4kch6NAvLb8/edit?usp=sharing" target="blank" rel="noopener noreferrer"> Debugging Guide</a> and <a href="https://docs.google.com/document/d/15Y6Mo3fMUtHq16SSskABgcYE-5xfk-Ewv0z_o4uaLdI/edit?usp=sharing" target="blank" rel="noopener noreferrer">Differentiation Guide</a>
- 
- * ##### You can learn more about the Maker App environment on p. 32 - <a href="https://studio.code.org/courses/csd-2021" target="blank" rel="noopener noreferrer"> Learning Tools <a href="https://docs.google.com/document/d/1VUbXHxXqHj5QCb4eSb756KKc7NDzbOLZUE5bPPQmJR8/edit?usp=sharing" target="blank" rel="noopener noreferrer"> </a>
-
-* ##### You can learn about the <a href="https://studio.code.org/courses/csd-2021" target="blank" rel="noopener noreferrer"> Problem Solving Process with Programming </a> on p. 41 <a href="https://docs.google.com/document/d/1VUbXHxXqHj5QCb4eSb756KKc7NDzbOLZUE5bPPQmJR8/edit?usp=sharing" target="blank" rel="noopener noreferrer"> </a>
-
-* ##### You can view the full <a href="https://docs.google.com/document/d/1VUbXHxXqHj5QCb4eSb756KKc7NDzbOLZUE5bPPQmJR8/edit?usp=sharing" target="blank" rel="noopener noreferrer">Curriculum Guide</a> and <a href="https://docs.google.com/document/d/112OA3_KbicOotqopqUyvXoWPWszz3_LHeMlg0ikCabk/edit?usp=sharing" target="blank" rel="noopener noreferrer">Implementation Guide</a> for more information about this unit. 
+* ##### You can view the full <a href="https://docs.google.com/document/d/1VUbXHxXqHj5QCb4eSb756KKc7NDzbOLZUE5bPPQmJR8/preview" target="blank" rel="noopener noreferrer">Curriculum Guide</a> and <a href="https://docs.google.com/document/d/112OA3_KbicOotqopqUyvXoWPWszz3_LHeMlg0ikCabk/preview" target="blank" rel="noopener noreferrer">Implementation Guide</a> for more information about this unit
 
 ### **Suggested time to complete the unit:** 6 weeks 
 ##### The suggested time is based on 225 instructional minutes per week. Visit the <a href="https://studio.code.org/s/csd6-2022" target="blank" rel="noopener noreferrer">Unit Overview Page</a> and use the unit calendar to adjust the instructional minutes to reflect the time you have with your students each week. 

@@ -107,7 +107,7 @@ class ExpiredDeletedAccountPurger
   end
 
   def check_constraints
-    if expired_soft_deleted_accounts.select(&:teacher?).count > @max_teachers_to_purge
+    if expired_soft_deleted_accounts.count(&:teacher?) > @max_teachers_to_purge
       raise SafetyConstraintViolation, "Found #{expired_soft_deleted_accounts.count} " \
         "teachers to purge, which exceeds the configured limit of " \
         "#{@max_teachers_to_purge}. Abandoning run."

@@ -145,6 +145,10 @@ hy:
             '"right"': ճիշտ
             '"space"': տարածություն
             '"x"': x
+      DansBlocks_setForegroundEffect2:
+        options:
+          EFFECT:
+            '"hearts"': hearts
       gamelab_atTime:
         options:
           UNIT:
@@ -428,3 +432,7 @@ hy:
         text: առաջ ընթանալ
       craft_placeTorch:
         text: Տեղ ջահը
+      storylab_setForegroundEffect2:
+        options:
+          EFFECT:
+            '"hearts"': hearts

@@ -1,0 +1,23 @@
+{
+  "de-DE": {
+    "data": {
+      "opportunity_standards": {
+        "ngss/3-5-ETS1-1": {
+          "description": "Definieren Sie ein einfaches Konstruktionsproblem, das einen Bedarf oder einen Wunsch widerspiegelt und bestimmte Erfolgskriterien sowie Einschränkungen in Bezug auf Material, Zeit oder Kosten enthält."
+        },
+        "ccmath/4.MD.5.b": {
+          "description": "Ein Winkel, der sich durch n Ein-Grad-Winkel dreht, hat ein Winkelmaß von n Grad."
+        },
+        "ngss/K-2-ETS1-1": {
+          "description": "Stellen Sie Fragen, machen Sie Beobachtungen und sammeln Sie Informationen über eine Situation, die man verändern möchte, um ein einfaches Problem zu definieren, das durch die Entwicklung eines neuen oder verbesserten Objekts oder Werkzeugs gelöst werden kann."
+        },
+        "ngss/K-2-ETS1-2": {
+          "description": "Entwickeln Sie eine einfache Skizze, Zeichnung oder ein physisches Modell, um zu veranschaulichen, wie die Form eines Objekts dazu beiträgt, dass es so funktioniert, wie es zur Lösung eines bestimmten Problems erforderlich ist."
+        },
+        "ccmath/2.MD.10": {
+          "description": "Ein Bilddiagramm und ein Balkendiagramm (mit einstelliger Skala) zeichnen, um einen Datensatz mit bis zu vier Kategorien darzustellen. Einfache Zusammensetzungs-, Zerlegungs- und Vergleichsprobleme4 unter Verwendung der in einem Balkendiagramm dargestellten Informationen lösen."
+        }
+      }
+    }
+  }
+}

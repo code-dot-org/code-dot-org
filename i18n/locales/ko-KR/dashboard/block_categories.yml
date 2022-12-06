@@ -5,12 +5,14 @@ ko:
       Advanced: 고급
       Behaviors: 행동
       Brushes: 브러시
+      Category: 범주
       Color: 색
       Comment: 댓글
       Comments: 의견
       Conditionals: 조건
       Dancers: 댄서
       Default: 기본값
+      Effects: 효과
       Events: 이벤트
       Functions: 함수
       'Functions ': "함수\n"

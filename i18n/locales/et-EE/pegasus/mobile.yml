@@ -800,6 +800,12 @@
   coursed-2021_gradelevel: 8.+ klassid
   coursee-2021_gradelevel: Vanusele 8-12
   coursef-2021_gradelevel: Vanusele 9-13
+  coursea-2022_gradelevel: Vanusele 4-7
+  courseb-2022_gradelevel: Vanuses 5-8
+  coursec-2022_gradelevel: Vanustele 6-10
+  coursed-2022_gradelevel: 8.+ klassid
+  coursee-2022_gradelevel: Vanusele 8-12
+  coursef-2022_gradelevel: Vanusele 9-13
   accelerated_gradelevel: "Vanustele 10-18"
   codeorg_platformtext: "Tänapäevased brauserid, nutitelefonid ja tahvelarvutid"
   codeintl_platformtext: "Tänapäevased brauserid, nutitelefonid ja tahvelarvutid"
@@ -1269,3 +1275,4 @@
   ai_in_partnership_with: "Koostöös: "
   ai_activity: "Tegevus"
   ai_description: "Kirjeldus"
+  hoc2022_landing_page_create_title: "Loo"

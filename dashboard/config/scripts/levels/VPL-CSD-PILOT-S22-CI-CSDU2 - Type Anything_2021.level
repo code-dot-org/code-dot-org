@@ -14,11 +14,11 @@
     "validation_enabled": "true",
     "teacher_markdown": "After giving students some time to explore the tool, ask them to share out anything that they have discovered.  The video on the next level will give them a short tour, so it's okay if they don't notice everything."
   },
-  "game_id": 58,
-  "published": true,
-  "created_at": "2022-03-20T17:30:26.000Z",
   "level_num": "custom",
+  "game_id": 58,
+  "created_at": "2022-03-20T17:30:26.000Z",
   "user_id": 155,
+  "published": true,
   "notes": "",
   "audit_log": "[{\"changed_at\":\"2022-03-20T17:30:26.664+00:00\",\"changed\":[\"cloned from \\\"CSDU2 - Type Anything_2021\\\"\"],\"cloned_from\":\"CSDU2 - Type Anything_2021\"},{\"changed_at\":\"2022-03-20 17:31:23 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":962,\"changed_by_email\":\"jess@code.org\"},{\"changed_at\":\"2022-03-23 00:29:28 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":962,\"changed_by_email\":\"jess@code.org\"}]"
 }]]></config>

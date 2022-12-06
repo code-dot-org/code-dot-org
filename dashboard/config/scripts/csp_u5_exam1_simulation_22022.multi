@@ -38,7 +38,7 @@ MARKDOWN
 teacher_markdown <<MARKDOWN
 **Explanation:** Since the value stored in `fullMeal` will be increased by 1 when this statement evaluates to true, it should evaluate to true 60 out of 100 times. Since a number chosen at random between 1 and 100 will be less than or equal to 60, 60 out of every 100 times, this expression can be used to make the simulation work as intended.
 
-Students practiced writing their own simulation program for rolling a dice in [Lesson 7 - Loops Practice](https://studio.code.org/s/csp5-2021/lessons/7). 
+Students practiced writing their own simulation program for rolling a dice in [Lesson 7 - Loops Practice](https://studio.code.org/s/csp5-2022/lessons/7).
 
 ::: details [**Essential Knowledge Connected To This Question**]
 

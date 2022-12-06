@@ -117,6 +117,7 @@ export const createStoreWithHiddenLesson = (viewAs, lessonId) => {
     }),
     progress: {
       scriptName: 'script-name',
+      scriptId: 17,
       unitProgressHasLoaded: true
     },
     currentUser: {
@@ -259,7 +260,7 @@ export const fakeProgressTableReduxInitialState = (
       lessonGroups: [],
       lessons: lessons,
       focusAreaLessonIds: [],
-      professionalLearningCourse: false
+      deeperLearningCourse: false
     },
     teacherSections: {
       sections: [{id: sectionId}],

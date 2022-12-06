@@ -232,12 +232,15 @@ You can include the [Hour of Code logo](https://hourofcode.com/us/promote/resour
 
 ## ಒಂದು ಗಂಟೆ ಸ್ವಯಂ ಮಾರ್ಗದರ್ಶಿ ಟ್ಯುಟೋರಿಯಲ್‌ಗಳ ವಿನ್ಯಾಸಕ್ಕೆ ಸಲಹೆಗಳು
 
-**ಚಟುವಟಿಕೆಯ ಕೊನೆಯಲ್ಲಿ ಪ್ರತಿಕ್ರಿಯೆಯನ್ನು ಅಳವಡಿಸಿ.** (ಉದಾ., "ನೀವು 10 ಹಂತಗಳನ್ನು ಮುಗಿಸಿದ್ದೀರಿ ಮತ್ತು ಲೂಪ್‌ಗಳ ಬಗ್ಗೆ ತಿಳಿದುಕೊಂಡಿದ್ದೀರಿ! ಒಳ್ಳೆಯ ಕೆಲಸ!”)
+**ಚಟುವಟಿಕೆಯ ಕೊನೆಯಲ್ಲಿ ಪ್ರತಿಕ್ರಿಯೆಯನ್ನು ಅಳವಡಿಸಿ.** (ಉದಾ., "ನೀವು 10 ಹಂತಗಳನ್ನು ಮುಗಿಸಿದ್ದೀರಿ ಮತ್ತು ಲೂಪ್‌ಗಳ ಬಗ್ಗೆ ತಿಳಿದುಕೊಂಡಿದ್ದೀರಿ! ಒಳ್ಳೆಯ ಕೆಲಸ!”) We don't want to prevent this usage, but we want to make sure the usage falls within a few limits:
 
-1. ಇದು ನಿಮ್ಮದೇ ಬ್ರ್ಯಾಂಡ್ ಹೆಸರು ಎಂದು ಭಾವಿಸುವ ರೀತಿಯಲ್ಲಿ "ಅವರ್ ಆಫ್ ಕೋಡ್" ಉಲ್ಲೇಖವನ್ನು ಮಾಡಬಾರದು. ಆದರೆ, ಅವರ್ ಆಫ್ ಕೋಡ್ ಎಂಬುದು ಬೇರುಮಟ್ಟದ ಚಳವಳಿ ಎಂಬುದನ್ನು ಉಲ್ಲೇಖಿಸಬೇಕು. ಉತ್ತಮ ಉದಾಹರಣೆ: "ACMECorp.com ನಲ್ಲಿ ಅವರ್ ಆಫ್ ಕೋಡ್™ ನಲ್ಲಿ ಭಾಗವಹಿಸಿ". ಕೆಟ್ಟ ಉದಾಹರಣೆ: "ಆಕ್ಮೆ ಕಾರ್ಪ್‌ನ ಅವರ್ ಆಫ್ ಕೋಡ್ ಅನ್ನು ಪ್ರಯತ್ನಿಸಿ"
-2. ನಿಮ್ಮ ವೆಬ್‌ಸೈಟ್ ಮತ್ತು ಆಪ್‌ ಒಳಗಿನ ವಿವರಗಳಲ್ಲಿ ನೀವು "ಅವರ್ ಆಫ್ ಕೋಡ್" ಅನ್ನು ನಮೂದಿಸುವ ಪ್ರಮುಖ ಸ್ಥಳದಲ್ಲೆಲ್ಲ "ಟಿಎಂ" ಸೂಪರ್‌ಸ್ಕ್ರಿಪ್ಟ್ ಅನ್ನು ಬಳಸಿ.
-3. ಈ ಮುಂದಿನವುಗಳನ್ನು ಹೇಳುವ ಅವರ್ ಆಫ್ ಕೋಡ್, ಸಿಎಸ್‌ಎಡ್‌ವೀಕ್ ಮತ್ತು Code.org ವೆಬ್‌ಸೈಟ್‌ಗಳನ್ನು ಸೇರಿಸಿ, ಭಾಷೆಯನ್ನು ಪುಟಕ್ಕೆ ಸೇರಿಸಿ (ಅಥವಾ ಫೂಟರ್‌ನಲ್ಲಿ). ಎ. “'[ಅವರ್ ಆಫ್ ಕೋಡ್‌](http://hourofcode.com)™' ಎಂಬುದು [ಕಂಪ್ಯೂಟರ್ ಸೈನ್ಸ್ ಎಜುಕೇಶನ್ ವೀಕ್](http://csedweek.org) ಮತ್ತು [Code.org](http://code.org) ಆರಂಭಿಸಿದ ರಾಷ್ಟ್ರಾದ್ಯಂತದ ಉಪಕ್ರಮವಾಗಿದ್ದು, ಒಂದು ಗಂಟೆ ಕಂಪ್ಯೂಟರ್ ಸೈನ್ಸ್ ಮತ್ತು ಕಂಪ್ಯೂಟರ್ ಪ್ರೋಗ್ರಾಮಿಂಗ್‌ ಅನ್ನು ಕೋಟ್ಯಂತರ ವಿದ್ಯಾರ್ಥಿಗಳಿಗೆ ಪರಿಚಯಿಸುವ ಉದ್ದೇಶವನ್ನು ಹೊಂದಿದೆ.”
-4. ಆಪ್ ಹೆಸರುಗಳಲ್ಲಿ "ಅವರ್ ಆಫ್ ಕೋಡ್" ಬಳಕೆ ಇಲ್ಲ.
+1. Use “Hour of Code” only in connection with non-commercial CS Education activities in the context of the Hour of Code campaign, and for no other purpose.
+2. Any reference to "Hour of Code" should be used in a fashion that doesn't suggest that it's your own brand name, but that it rather references the Hour of Code as a grassroots movement. Good example: "Participate in the Hour of Code ® at ACMECorp.com". Bad example: "Try Hour of Code by ACME Corp".
+3. Use a “®” superscript in the most prominent places you mention "Hour of Code", both on your web site and in app descriptions.
+4. Include language on the page (or in the footer), including links to the Hour of Code, CSEdWeek and Code.org web sites, that discloses both the following: a. Hour of Code® and Hora del Código® are registered trademarks of Code.org; and b. “The '[Hour of Code](http://hourofcode.com/) ® is a nationwide initiative by [Code.org](http://code.org/) to introduce millions of students to one hour of computer science and computer programming.”
+5. Do not use "Hour of Code" in app names.
+6. Do not use “Hour of Code” in connection with any commercial use or purpose (e.g., placing your Hour of Code activity behind a paywall; promoting another paid service as part of your Hour of Code activity; selling Hour of Code merchandise).
+7. Do not use “Hour of Code” in connection with any activity that requires a login or account creation.
 
 [**ಮೇಲಕ್ಕೆ ವಾಪಸಾಗಿ**](#top)
 

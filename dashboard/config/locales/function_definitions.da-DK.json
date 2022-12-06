@@ -2023,6 +2023,236 @@
               "width": "bredde"
             }
           }
+        },
+        "Artist Autorun Test": {
+          "draw a square": {
+            "name": "tegn en firkant"
+          }
+        },
+        "Auto Open Function Editor": {
+          "draw a shape": {
+            "parameters": {
+              "length": "længde"
+            }
+          }
+        },
+        "Course E: Artist Project_examples2022": {
+          "my function": {
+            "name": "min funktion"
+          }
+        },
+        "Course E: Frozen Project_examples2022": {
+          "draw a star": {
+            "name": "tegn en stjerne",
+            "parameters": {
+              "points": "point",
+              "length": "længde"
+            }
+          },
+          "draw a circle": {
+            "name": "tegn en cirkel"
+          },
+          "draw a pinwheel": {
+            "parameters": {
+              "length": "længde",
+              "repeat": "gentag"
+            }
+          },
+          "draw a triangle": {
+            "name": "tegn en trekant",
+            "parameters": {
+              "length": "længde"
+            }
+          },
+          "draw a shape": {
+            "parameters": {
+              "length": "længde"
+            }
+          },
+          "draw a house": {
+            "name": "tegn et hus",
+            "parameters": {
+              "length": "længde"
+            }
+          },
+          "draw a square": {
+            "name": "tegn en firkant",
+            "parameters": {
+              "length": "længde"
+            }
+          }
+        },
+        "CourseD_EOC_artist2022": {
+          "draw a star": {
+            "name": "tegn en stjerne",
+            "parameters": {
+              "points": "point",
+              "length": "længde"
+            }
+          },
+          "draw a circle": {
+            "name": "tegn en cirkel"
+          },
+          "draw a pinwheel": {
+            "parameters": {
+              "length": "længde",
+              "repeat": "gentag"
+            }
+          },
+          "draw a triangle": {
+            "name": "tegn en trekant",
+            "parameters": {
+              "length": "længde"
+            }
+          },
+          "draw a shape": {
+            "parameters": {
+              "length": "længde"
+            }
+          },
+          "draw a house": {
+            "name": "tegn et hus",
+            "parameters": {
+              "length": "længde"
+            }
+          },
+          "draw a square": {
+            "name": "tegn en firkant",
+            "parameters": {
+              "length": "længde"
+            }
+          }
+        },
+        "CourseD_EOC_artist_example20212022": {
+          "draw a star": {
+            "name": "tegn en stjerne",
+            "parameters": {
+              "points": "point",
+              "length": "længde"
+            }
+          },
+          "draw a circle": {
+            "name": "tegn en cirkel"
+          },
+          "draw a pinwheel": {
+            "parameters": {
+              "length": "længde",
+              "repeat": "gentag"
+            }
+          },
+          "draw a triangle": {
+            "name": "tegn en trekant",
+            "parameters": {
+              "length": "længde"
+            }
+          },
+          "draw a shape": {
+            "parameters": {
+              "length": "længde"
+            }
+          },
+          "draw a house": {
+            "name": "tegn et hus",
+            "parameters": {
+              "length": "længde"
+            }
+          },
+          "draw a square": {
+            "name": "tegn en firkant",
+            "parameters": {
+              "length": "længde"
+            }
+          }
+        },
+        "courseC_artist_prog32022": {
+          "draw flame": {
+            "parameters": {
+              "x": "x"
+            }
+          }
+        },
+        "courseC_data wizard2022": {
+          "do something": {
+            "name": "gør noget"
+          }
+        },
+        "courseE_artist_functions102022": {
+          "do something": {
+            "name": "gør noget"
+          }
+        },
+        "courseE_artist_functions22022": {
+          "draw a square": {
+            "name": "tegn en firkant"
+          }
+        },
+        "courseE_artist_functions32022": {
+          "draw a star": {
+            "name": "tegn en stjerne"
+          }
+        },
+        "courseE_artist_functions52022": {
+          "draw a star": {
+            "name": "tegn en stjerne"
+          }
+        },
+        "courseE_artist_functions82022": {
+          "do something": {
+            "name": "gør noget"
+          }
+        },
+        "courseE_artist_functions8a2022": {
+          "draw a square": {
+            "name": "tegn en firkant"
+          },
+          "do something": {
+            "name": "gør noget"
+          }
+        },
+        "courseE_artist_functions8b2022": {
+          "do something": {
+            "name": "gør noget"
+          }
+        },
+        "courseE_artist_functions8c2022": {
+          "do something": {
+            "name": "gør noget"
+          }
+        },
+        "courseE_artist_functions92022": {
+          "do something": {
+            "name": "gør noget"
+          }
+        },
+        "courseE_artist_functions_challenge12022": {
+          "do something": {
+            "name": "gør noget"
+          }
+        },
+        "courseE_artist_functions_challenge22022": {
+          "do something": {
+            "name": "gør noget"
+          }
+        },
+        "courseE_artist_functions_predict12022": {
+          "draw a square": {
+            "name": "tegn en firkant"
+          }
+        },
+        "courseE_artist_functions_predict22022": {
+          "do something": {
+            "name": "gør noget"
+          }
+        },
+        "courseF_apps_collector2022": {
+          "end game": {
+            "name": "afslut spil"
+          }
+        },
+        "courseF_apps_collector_-2022-2": {
+          "end game": {
+            "name": "afslut spil"
+          }
         }
       }
     }

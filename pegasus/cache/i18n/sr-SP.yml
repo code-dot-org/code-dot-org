@@ -770,6 +770,12 @@ sr-SP:
   coursed-2021_gradelevel: Узраст од 7 до 11 година
   coursee-2021_gradelevel: Годишта 8.-12.
   coursef-2021_gradelevel: Узраста 9.-13.
+  coursea-2022_gradelevel: Узраст од 4 до 7 година
+  courseb-2022_gradelevel: За године од 5 до 8
+  coursec-2022_gradelevel: Ages 6-10
+  coursed-2022_gradelevel: Узраст од 7 до 11 година
+  coursee-2022_gradelevel: Годишта 8.-12.
+  coursef-2022_gradelevel: Узраста 9.-13.
   accelerated_gradelevel: Узраст од 10 до 18 година
   codeorg_platformtext: Модерни претраживачи, паметни телефони, таблети
   codeintl_platformtext: Модерни претраживачи, паметни телефони, таблети
@@ -1117,3 +1123,4 @@ sr-SP:
   ai_in_partnership_with: Уз партнерство са
   ai_activity: Активност
   ai_description: Опис
+  hoc2022_landing_page_create_title: Креирај

@@ -934,6 +934,7 @@
   coursee-2020_name: Kurs E (2020)
   coursef-2020_name: Kurs F (2020)
   coursed-2021_name: Kurs D (2021)
+  coursed-2022_name: Kurs D (2021)
   express-2018_name: Ekspresskurs (2018)
   pre-express-2018_name: Ekspresskurs før ein kan lese (2018)
   express-2019_name: Ekspresskurs (2019)
@@ -1051,6 +1052,12 @@
   coursed-2021_gradelevel: 8.+ klasse
   coursee-2021_gradelevel: Alder 8–12 år
   coursef-2021_gradelevel: Alder 9-13 år
+  coursea-2022_gradelevel: Alder 4-7 år
+  courseb-2022_gradelevel: Alder 5-8 år
+  coursec-2022_gradelevel: Alder 6-10 år
+  coursed-2022_gradelevel: 8.+ klasse
+  coursee-2022_gradelevel: Alder 8–12 år
+  coursef-2022_gradelevel: Alder 9-13 år
   accelerated_gradelevel: "Frå 10+ år (etter Kurs 3)"
   codeorg_platformtext: "Moderne nettlesarar, smarttelefonar, nettbrett"
   codeintl_platformtext: "Moderne nettlesarar, smarttelefonar, nettbrett"
@@ -1642,3 +1649,4 @@
   ai_microsoft_thanks: "Vi takkar Microsoft for å støtte visjonen og målet vårt om å sikre at kvar barn har høvet til å lære programmering og dei ferdigheitene for å lukkast i det 21. århundre."
   ai_activity: "Aktivitet"
   ai_description: "Beskrivelse"
+  hoc2022_landing_page_create_title: "Opprett"

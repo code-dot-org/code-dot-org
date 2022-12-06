@@ -61,6 +61,7 @@ class XhrProxyController < ApplicationController
     api.uclassify.com
     api.waqi.info
     api.weather.gov
+    api.wolframalpha.com
     api.zippopotam.us
     bible-api.com
     ch.tetr.io
@@ -77,6 +78,7 @@ class XhrProxyController < ApplicationController
     deckofcardsapi.com
     distanza.org
     dweet.io
+    githubusercontent.com
     googleapis.com
     grobchess.com
     hubblesite.org
@@ -87,6 +89,7 @@ class XhrProxyController < ApplicationController
     lakeside-cs.org
     maker.ifttt.com
     myschoolapp.com
+    native-land.ca
     newsapi.org
     noaa.gov
     numbersapi.com

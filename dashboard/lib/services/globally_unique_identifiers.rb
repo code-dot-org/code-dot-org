@@ -21,8 +21,8 @@ module Services
     #
     # @see GloballyUniqueIdentifiers.find_vocab
     def self.build_vocab_key(vocab)
-      unless vocab&.course_version&.course_offering.present?
-        STDERR.puts "Vocabulary object #{vocab.key.inspect} is missing course version and/or offering"
+      if vocab&.course_version&.course_offering.blank?
+        warn "Vocabulary object #{vocab.key.inspect} is missing course version and/or offering"
         return
       end
 
@@ -40,7 +40,7 @@ module Services
     # @see GloballyUniqueIdentifiers.build_vocab_key
     def self.find_vocab(key)
       result = vocab_key_re.match(key)
-      return unless result.present?
+      return if result.blank?
 
       keys = result.named_captures
       course_version = CourseVersion.joins(:course_offering).
@@ -53,8 +53,8 @@ module Services
     #
     # @see GloballyUniqueIdentifiers.find_resource
     def self.build_resource_key(resource)
-      unless resource&.course_version&.course_offering.present?
-        STDERR.puts "Resource object #{resource.key.inspect} is missing course version and/or offering"
+      if resource&.course_version&.course_offering.blank?
+        warn "Resource object #{resource.key.inspect} is missing course version and/or offering"
         return
       end
 
@@ -72,7 +72,7 @@ module Services
     # @see GloballyUniqueIdentifiers.build_resource_key
     def self.find_resource(key)
       result = resource_key_re.match(key)
-      return unless result.present?
+      return if result.blank?
 
       keys = result.named_captures
       course_version = CourseVersion.joins(:course_offering).
@@ -88,8 +88,14 @@ module Services
     # building the regular expression because neither scripts nor lessons have
     # expression validation for their relevant identifiers.
     def self.build_lesson_key(lesson)
-      return unless lesson&.script.present?
+      return if lesson&.script.blank?
       [lesson.script.name, lesson.key].join('/')
+    end
+
+    # Returns a key which can be used by to globally and uniquely identify the
+    # given Reference Guide object
+    def self.build_reference_guide_key(reference_guide)
+      [reference_guide.course_offering_version, reference_guide.key].join('/')
     end
   end
 end

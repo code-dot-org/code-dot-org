@@ -3,12 +3,15 @@ import {makeEnum} from '../utils';
 const SET_CURRENT_USER_NAME = 'currentUser/SET_CURRENT_USER_NAME';
 const SET_USER_SIGNED_IN = 'currentUser/SET_USER_SIGNED_IN';
 const SET_USER_TYPE = 'currentUser/SET_USER_TYPE';
+const SET_USER_ROLE_IN_COURSE = 'currentUser/SET_USER_ROLE_IN_COURSE';
 const SET_HAS_SEEN_STANDARDS_REPORT =
   'currentUser/SET_HAS_SEEN_STANDARDS_REPORT';
 const SET_INITIAL_DATA = 'currentUser/SET_INITIAL_DATA';
 const SET_MUTE_MUSIC = 'currentUser/SET_MUTE_MUSIC';
 
 export const SignInState = makeEnum('Unknown', 'SignedIn', 'SignedOut');
+
+export const CourseRoles = makeEnum('Unknown', 'Instructor', 'Participant');
 
 // Action creators
 export const setCurrentUserName = userName => ({
@@ -28,6 +31,10 @@ export const setUserType = (userType, under13) => ({
   userType,
   under13
 });
+export const setUserRoleInCourse = userRoleInCourse => ({
+  type: SET_USER_ROLE_IN_COURSE,
+  userRoleInCourse
+});
 export const setInitialData = serverUser => ({
   type: SET_INITIAL_DATA,
   serverUser
@@ -41,6 +48,7 @@ const initialState = {
   userId: null,
   userName: null,
   userType: 'unknown',
+  userRoleInCourse: CourseRoles.Unknown,
   signInState: SignInState.Unknown,
   hasSeenStandardsReportInfo: false,
   isBackgroundMusicMuted: false,
@@ -74,6 +82,12 @@ export default function currentUser(state = initialState, action) {
       ...state,
       userType: action.userType,
       under13: action.under13
+    };
+  }
+  if (action.type === SET_USER_ROLE_IN_COURSE) {
+    return {
+      ...state,
+      userRoleInCourse: action.userRoleInCourse
     };
   }
   if (action.type === SET_MUTE_MUSIC) {

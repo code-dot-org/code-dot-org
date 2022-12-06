@@ -431,6 +431,7 @@ class LessonTest < ActiveSupport::TestCase
       purpose: 'example purpose'
     )
 
+    lesson.expects(:get_localized_property).with(:name)
     lesson.expects(:get_localized_property).with(:overview)
     lesson.expects(:get_localized_property).with(:purpose)
     lesson.expects(:get_localized_property).with(:preparation)
@@ -500,25 +501,6 @@ class LessonTest < ActiveSupport::TestCase
 
     levels_data = lesson.summarize_for_calendar
     assert_equal 30, levels_data[:duration]
-  end
-
-  test 'i18n_hash has correct value' do
-    script = create :script, name: 'dummy-script'
-    lesson_group = create :lesson_group, script: script
-    lesson = create :lesson, lesson_group: lesson_group, script: script, key: 'dummy-key', name: 'Dummy Name'
-    lesson.student_overview = 'student overview'
-    lesson.overview = 'teacher overview'
-
-    expected_i18n = {
-      'dummy-script' => {
-        'lessons' => {
-          'dummy-key' => {
-            'name' => 'Dummy Name',
-          }
-        }
-      }
-    }
-    assert_equal expected_i18n, lesson.i18n_hash
   end
 
   test 'seeding_key' do
@@ -760,30 +742,30 @@ class LessonTest < ActiveSupport::TestCase
   test 'lesson_plan_pdf_url supports new lesson plan PDFs' do
     old_lesson = create :lesson
     assert_equal(
-      old_lesson.lesson_plan_pdf_url,
-      "//test.code.org/curriculum/#{old_lesson.script.name}/1/Teacher.pdf"
+      "//test.code.org/curriculum/#{old_lesson.script.name}/1/Teacher.pdf",
+      old_lesson.lesson_plan_pdf_url
     )
 
     script = create :script, is_migrated: true
-    new_lesson = create :lesson, script: script, key: 'Some Verbose Lesson Name', has_lesson_plan: true
+    new_lesson = create :lesson, script: script, name: 'Some Verbose Lesson Name', has_lesson_plan: true
     assert_nil(new_lesson.lesson_plan_pdf_url)
 
     script.seeded_from = Time.now.to_s
     assert_equal(
-      new_lesson.lesson_plan_pdf_url,
-      "https://lesson-plans.code.org/#{script.name}/#{Time.parse(script.seeded_from).to_s(:number)}/teacher-lesson-plans/Some+Verbose+Lesson+Name.pdf"
+      "https://lesson-plans.code.org/#{script.name}/#{Time.parse(script.seeded_from).to_s(:number)}/teacher-lesson-plans/Some-Verbose-Lesson-Name.pdf",
+      new_lesson.lesson_plan_pdf_url
     )
   end
 
   test 'student_lesson_plan_pdf_url gets url for migrated script with student lesson plans' do
     script = create :script, is_migrated: true, include_student_lesson_plans: true
-    new_lesson = create :lesson, script: script, key: 'Some Verbose Lesson Name', has_lesson_plan: true
+    new_lesson = create :lesson, script: script, name: 'Some Verbose Lesson Name', has_lesson_plan: true
     assert_nil(new_lesson.student_lesson_plan_pdf_url)
 
     script.seeded_from = Time.now.to_s
     assert_equal(
-      new_lesson.student_lesson_plan_pdf_url,
-      "https://lesson-plans.code.org/#{script.name}/#{Time.parse(script.seeded_from).to_s(:number)}/student-lesson-plans/Some+Verbose+Lesson+Name.pdf"
+      "https://lesson-plans.code.org/#{script.name}/#{Time.parse(script.seeded_from).to_s(:number)}/student-lesson-plans/Some-Verbose-Lesson-Name-Student.pdf",
+      new_lesson.student_lesson_plan_pdf_url
     )
   end
 
@@ -918,8 +900,8 @@ class LessonTest < ActiveSupport::TestCase
 
   class LessonCopyTests < ActiveSupport::TestCase
     setup do
-      Script.any_instance.stubs(:write_script_json)
-      Script.stubs(:merge_and_write_i18n)
+      Unit.any_instance.stubs(:write_script_json)
+      Unit.stubs(:merge_and_write_i18n)
 
       @original_script = create :script, is_migrated: true
       @original_script.expects(:write_script_json).never
@@ -932,6 +914,14 @@ class LessonTest < ActiveSupport::TestCase
       course_offering = create :course_offering
       @destination_course_version = create :course_version, course_offering: course_offering, content_root: @destination_script, version_year: 2021
       @destination_lesson_group = create :lesson_group, script: @destination_script
+
+      @original_dlp_script = create :script, is_migrated: true, professional_learning_course: 'my-plc-course-for-dlp'
+      @original_dlp_script.expects(:write_script_json).never
+      @original_dlp_lesson_group = create :lesson_group, script: @original_dlp_script
+      @original_dlp_lesson = create :lesson, lesson_group: @original_lesson_group, script: @original_dlp_script, has_lesson_plan: true
+
+      @destination_dlp_script = create :script, is_migrated: true, professional_learning_course: 'my-plc-course-for-dlp-2'
+      @destination_dlp_lesson_group = create :lesson_group, script: @destination_dlp_script
     end
 
     test "can clone lesson into another script" do
@@ -967,6 +957,40 @@ class LessonTest < ActiveSupport::TestCase
       assert_equal @original_lesson.standards, copied_lesson.standards
       assert_equal @original_lesson.opportunity_standards, copied_lesson.opportunity_standards
       assert_equal @original_lesson.programming_expressions, copied_lesson.programming_expressions
+    end
+
+    test "can not clone deeper learning lesson into a non deeper learning script" do
+      raise = assert_raises do
+        @original_dlp_lesson.copy_to_unit(@destination_script, nil)
+      end
+      assert_equal 'Deeper learning lesson must be copied to deeper learning courses.', raise.message
+    end
+
+    test "can clone deeper learning lesson into another deeper learning script" do
+      lesson_activity = create :lesson_activity, lesson: @original_dlp_lesson
+      activity_section = create :activity_section, lesson_activity: lesson_activity
+      level1 = create :maze, name: 'level 1'
+      level2 = create :maze, name: 'level 2'
+      create :script_level, script: @original_dlp_script, lesson: @original_dlp_lesson, levels: [level1],
+             activity_section: activity_section, activity_section_position: 1
+      create :script_level, script: @original_dlp_script, lesson: @original_dlp_lesson, levels: [level2],
+             activity_section: activity_section, activity_section_position: 2
+      create :objective, lesson: @original_dlp_lesson, description: 'objective 1'
+      create :objective, lesson: @original_dlp_lesson, description: 'objective 2'
+      @original_dlp_lesson.standards = [create(:standard)]
+      @original_dlp_lesson.opportunity_standards = [create(:standard)]
+      @original_dlp_lesson.programming_expressions = [create(:programming_expression)]
+
+      @destination_dlp_script.expects(:write_script_json).once
+      copied_lesson = @original_dlp_lesson.copy_to_unit(@destination_dlp_script, nil)
+      assert_equal @destination_dlp_script, copied_lesson.script
+      assert_equal 2, copied_lesson.script_levels.length
+      assert_equal [level1, level2], copied_lesson.script_levels.map(&:level)
+      assert_equal 2, copied_lesson.objectives.length
+      assert_equal @original_dlp_lesson.objectives.map(&:description), copied_lesson.objectives.map(&:description)
+      assert_equal @original_dlp_lesson.standards, copied_lesson.standards
+      assert_equal @original_dlp_lesson.opportunity_standards, copied_lesson.opportunity_standards
+      assert_equal @original_dlp_lesson.programming_expressions, copied_lesson.programming_expressions
     end
 
     test "resource markdown is updated in activity sections when cloning lesson" do
@@ -1084,7 +1108,6 @@ class LessonTest < ActiveSupport::TestCase
       create :vocabulary, word: 'word one', course_version: @original_course_version, lessons: [@original_lesson]
 
       @destination_script.expects(:write_script_json).once
-      Script.expects(:merge_and_write_i18n).once
       destination_resource = create :resource, name: 'resource1', course_version: @destination_course_version
       destination_vocab = create :vocabulary, word: 'word one', course_version: @destination_course_version
       copied_lesson = @original_lesson.copy_to_unit(@destination_script)
@@ -1095,7 +1118,6 @@ class LessonTest < ActiveSupport::TestCase
 
     test "dots are stripped from cloned lesson key" do
       @destination_script.expects(:write_script_json).once
-      Script.expects(:merge_and_write_i18n).once
       @original_lesson.update!(name: 'Problem.Lesson.')
       copied_lesson = @original_lesson.copy_to_unit(@destination_script)
       assert_equal 'ProblemLesson', copied_lesson.key
@@ -1125,7 +1147,6 @@ class LessonTest < ActiveSupport::TestCase
       destination_script.expects(:write_script_json).once
       course_version_resource_count = course_version.resources.count
       course_version_vocab_count = course_version.vocabularies.count
-      Script.expects(:merge_and_write_i18n).once
       copied_lesson = original_lesson.copy_to_unit(destination_script)
       course_version.reload
 
@@ -1149,7 +1170,6 @@ class LessonTest < ActiveSupport::TestCase
       create :lesson_group, script: destination_script
 
       destination_script.expects(:write_script_json).once
-      Script.expects(:merge_and_write_i18n).once
       copied_lesson = original_lesson.copy_to_unit(destination_script)
 
       assert_equal destination_script, copied_lesson.script
@@ -1170,7 +1190,6 @@ class LessonTest < ActiveSupport::TestCase
         activity_section: existing_activity_section, activity_section_position: 1
 
       @destination_script.expects(:write_script_json).once
-      Script.expects(:merge_and_write_i18n).once
       copied_lesson = @original_lesson.copy_to_unit(@destination_script)
       @destination_script.reload
 
@@ -1215,7 +1234,6 @@ class LessonTest < ActiveSupport::TestCase
       create :lesson, script: @destination_script, lesson_group: @destination_lesson_group, has_lesson_plan: false, lockable: true, absolute_position: 3, relative_position: 1
 
       @destination_script.expects(:write_script_json).once
-      Script.expects(:merge_and_write_i18n).once
       copied_lesson = @original_lesson.copy_to_unit(@destination_script)
       @destination_script.reload
       assert_equal @destination_script, copied_lesson.script
@@ -1233,7 +1251,6 @@ class LessonTest < ActiveSupport::TestCase
       create :lesson, script: @destination_script, lesson_group: @destination_lesson_group, has_lesson_plan: false, lockable: true, absolute_position: 3, relative_position: 1
 
       @destination_script.expects(:write_script_json).once
-      Script.expects(:merge_and_write_i18n).once
       copied_lesson = @original_lesson.copy_to_unit(@destination_script)
       @destination_script.reload
       assert_equal @destination_script, copied_lesson.script
@@ -1264,7 +1281,7 @@ class LessonTest < ActiveSupport::TestCase
       @destination_script.lesson_groups = []
 
       @destination_script.expects(:write_script_json).once
-      Script.expects(:merge_and_write_i18n).twice
+      Unit.expects(:merge_and_write_i18n).once
       copied_lesson = @original_lesson.copy_to_unit(@destination_script)
       assert_equal 1, @destination_script.lesson_groups.count
       assert_equal 1, @destination_script.lessons.count

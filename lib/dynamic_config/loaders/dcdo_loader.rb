@@ -27,7 +27,7 @@ module DCDOLoader
   # k,v pairs to be sent to DCDO.set
   # @param yaml [String]
   def self.yaml_to_commands(yaml)
-    yaml = YAML.load(yaml)
+    yaml = YAML.safe_load(yaml)
     raise ArgumentError, "yaml should be a hash" unless yaml.is_a? Hash
     commands = []
 

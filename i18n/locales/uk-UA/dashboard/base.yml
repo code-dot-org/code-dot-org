@@ -8,8 +8,14 @@
 #To use a different locale, set it with `I18n.locale`:
 #I18n.locale = :es
 #This would use the information in config/locales/es.yml.
+#The following keys must be escaped otherwise they will not be retrieved by
+#the default I18n backend:
+#true, false, on, off, yes, no
+#Instead, surround them with single quotes.
+#en:
+#'true': 'foo'
 #To learn more, please read the Rails Internationalization guide
-#available at http://guides.rubyonrails.org/i18n.html.
+#available at https://guides.rubyonrails.org/i18n.html.
 uk:
   errors:
     messages:
@@ -396,7 +402,6 @@ uk:
     popup:
       progress_for_user: "Прогрес %{name}"
       progress: 'Ваш прогрес'
-      lines: 'Усього рядків коду: %{lines}'
       close: 'ЗАКРИТИ'
       mastery: 'Поняття'
       puzzle_map: 'Етапи'
@@ -515,6 +520,7 @@ uk:
     choose_next_course: "Спробуйте курс Студії коду, обравши один з варіантів"
     print_certificate: "Друкувати сертифікат"
   certificate_sponsor_message: "%{sponsor_name} зробив щедрий подарунок, щоб спонсорувати ваше навчання. "
+  certificate_hour_of_code: "Година коду"
   move_students:
     new_section_dne: "Вибачте, але групи %{new_section_code} не існує. Вкажіть інший код групи."
     section_code_cant_be_current_section: "Поточна група не може бути такою ж, як нова."
@@ -629,6 +635,8 @@ uk:
       title: 'Танцювальна вечірка'
     dance-2019:
       title: 'Танцювальна вечірка'
+    hello-world:
+      body: 'Виберіть одну з чотирьох цікавих тем для програмування інтерактивних персонажів у створеному вами світі.'
     hoc:
       title: 'Лабіринт'
       body: 'Спробуйте основи інформатики. Мільйони вже скористались цим шансом.'
@@ -787,14 +795,6 @@ uk:
     reminder_desc: 'Увага! Ми оновили <a href="%{tos_url}" target="_blank">Правила використання сервісу</a> та <a href="%{privacy_url}" target="_blank">Конфеденційність</a>. Будь ласка, прочитайте це перед тим, як погоджуватися з цип. Зверніть увагу на те, що інструменти для навчання JavaScript можуть бути недоступні для ваших учнів(студентів, дітей), через оновлення умов.'
     reminder_desc_markdown: Увага! Ми оновили [Правила використання сервісу](%{tos_url}) та [Конфеденційність](%{privacy_url}). Будь ласка, прочитайте це перед тим, як погоджуватися з цип. Зверніть увагу на те, що інструменти для навчання JavaScript можуть бути недоступні для ваших учнів(студентів, дітей), через оновлення умов.
     review_terms: "Переглянути оновлені домовленості"
-  donor_interstitial:
-    title: "Ваші безкоштовні курси з Інформатики стали можливими завдяки ..."
-    subtitle: "Ми хотіли б подякувати щедрим донорам, підтримка яких зробила можливим успіх Code.org. Ми прагнемо залишати Code.org безкоштовним для шкіл та студентів у всьому світі, завдяки постійній щедрості наших [донорів](%{donors_url})!"
-    local_supporters: "Місцеві спонсори"
-    global_supporters: "Глобальні спонсори"
-    support_codeorg_1: "Кожен долар, наданий Code.org, дає можливість більшій кількості учнів."
-    support_codeorg_2: "[Пожертвуйте зараз](%{donate_url}) для підтримки Code.org."
-    get_started: "Розпочинайте з Code.org"
   school_info_interstitial:
     title: "Ми хочемо принести Computer Science кожному студенту - допоможіть нам відслідковувати наш прогрес!"
     message: "Будь ласка, введіть дані вашої школи."
@@ -1017,6 +1017,7 @@ uk:
         music: 'Музика'
         art: 'Мистецтво'
         other: "Інше:"
+        na: 'Не застосовується'
       resources:
         bootstrap: 'Bootstrap'
         codecademy: 'CodeCademy'
@@ -1026,7 +1027,8 @@ uk:
         lightbot: 'Світлячок'
         scratch: 'Scratch'
         tynker: 'Tynker'
-        other: "Інше:"
+        other: "Інше"
+        na: 'Не застосовується'
       robotics:
         grok: 'Grok Learning'
         kodable: 'Kodable'
@@ -1036,7 +1038,8 @@ uk:
         sphero: 'Sphero'
         raspberry: 'Raspberry Pi'
         wonder: 'Wonder Workshop'
-        other: "Інше:"
+        other: "Інше"
+        na: 'Не застосовується'
       workshop_course:
         csf_af: 'Основи інформатики (Курси A-F)'
         csf_express: 'Основи інформатики (Вступ до прискорених та Прискорені)'
@@ -1077,3 +1080,11 @@ uk:
     link_your_email: "Прив'яжіть вашу ел. пошту"
     not_now: "Не зараз"
   teacher_feedback: "Відгук викладача"
+  lesson_lock:
+    error:
+      no_updates: "Немає оновлень для виконання"
+      missing_params: "Необхідно вказати ідентифікатори користувача, рівня та розділу"
+      cannot_view_locked_answers: "Неможливо переглянути відповіді, якщо вони заблоковані"
+      forbidden: "Користувач не може оновлювати стан блокування студента"
+  pixelation:
+    binary: "Двійкова система"

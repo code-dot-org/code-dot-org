@@ -15,28 +15,6 @@
         "artist"
       ],
       "project_widget_visible": true,
-      "teacher_resources": [
-        [
-          "lessonPlans",
-          "https://curriculum.code.org/csf-20/coursec/"
-        ],
-        [
-          "teacherForum",
-          "https://forum.code.org/c/csf"
-        ],
-        [
-          "vocabulary",
-          "https://curriculum.code.org/csf-20/coursec/vocab/"
-        ],
-        [
-          "standardMappings",
-          "https://curriculum.code.org/csf-20/coursec/standards/"
-        ],
-        [
-          "curriculumGuide",
-          "https://docs.google.com/document/d/1hstUHTGIdvtPP0TDdEfQeXG3zQ0q6ys237n2BY9CQmg/preview"
-        ]
-      ],
       "tts": true,
       "use_legacy_lesson_plans": true,
       "version_year": "2020"

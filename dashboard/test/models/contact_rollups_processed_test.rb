@@ -279,6 +279,7 @@ class ContactRollupsProcessedTest < ActiveSupport::TestCase
         'course_name' => [
           {'value' => 'csp-2020'},
           {'value' => 'csd-2019'},
+          {'value' => 'csa-2022'},
           {'value' => nil},
         ]
       }
@@ -339,7 +340,7 @@ class ContactRollupsProcessedTest < ActiveSupport::TestCase
       },
       {
         input: section_courses_input,
-        expected_output: {roles: 'CSD Teacher,CSP Teacher'}
+        expected_output: {roles: 'CSA Teacher,CSD Teacher,CSP Teacher'}
       },
       {
         input: section_curricula_input,

@@ -31,7 +31,7 @@ Pentru mai multe informații despre cum pot deveni angajații tăi voluntari ai 
 - Promovează Ora ta de cod și încurajeaza-i si pe alții
 - Încurajează IT-iștii companiei tale să ajute o scoală cu organizarea unei Ore de cod și astfel sa-i inspire pe elevi să studieze Tehnologia informatiei Ei se pot înscrie pentru a fi puși în legătură cu o clasă
 
-## 2. Urmărește acest clip video instructiv <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe>
+## 2. Urmărește acest clip video instructiv <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe>
 
 ## 3. Alege o activitate
 Avem o mare varietate de activități amuzante, pentru participanți de toate vârstele, create de diverși parteneri Încearcă-le acum!

@@ -1,6 +1,6 @@
 require 'cdo/firehose'
 
-class Api::V1::SectionsStudentsController < Api::V1::JsonApiController
+class Api::V1::SectionsStudentsController < Api::V1::JSONApiController
   load_and_authorize_resource :section
   load_resource :student, class: 'User', through: :section, parent: false, only: [:update, :remove]
 

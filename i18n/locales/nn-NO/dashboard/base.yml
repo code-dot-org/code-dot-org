@@ -8,8 +8,14 @@
 #To use a different locale, set it with `I18n.locale`:
 #I18n.locale = :es
 #This would use the information in config/locales/es.yml.
+#The following keys must be escaped otherwise they will not be retrieved by
+#the default I18n backend:
+#true, false, on, off, yes, no
+#Instead, surround them with single quotes.
+#en:
+#'true': 'foo'
 #To learn more, please read the Rails Internationalization guide
-#available at http://guides.rubyonrails.org/i18n.html.
+#available at https://guides.rubyonrails.org/i18n.html.
 nn:
   errors:
     messages:
@@ -395,13 +401,13 @@ nn:
       starwars: 'Star Wars'
       starwarsblocks: 'Star Wars (blokker)'
       starwarsblocks_hour: 'Star Wars (blokker)'
+      thebadguys: 'Skurkene'
       loading: 'Lastar...'
       weblab: 'Nett-lab'
       view_all: 'Sjå alle prosjekt...'
     popup:
       progress_for_user: "Framgangen til %{name}"
       progress: 'Framgangen din'
-      lines: 'Totalt tal på kodeliner: %{lines}'
       close: 'LUKK'
       mastery: 'Konsept'
       puzzle_map: 'Nivå'
@@ -514,6 +520,7 @@ nn:
     no_primary_course: "Prøv eit kurs frå Code Studio"
     choose_next_course: "Prøv eit kurs frå Code Studio ved å velje eit nedanfor"
     print_certificate: "Skriv ut sertifikat"
+  certificate_hour_of_code: "Kodetimen"
   move_students:
     new_section_dne: "Beklagar, men seksjon %{new_section_code} finns ikkje. Legg inn ein annan seksjonskode."
     section_code_cant_be_current_section: "Gjeldande seksjon kan ikkje vere den same som den nye seksjonen."
@@ -1007,7 +1014,7 @@ nn:
         kodable: 'Kodable'
         scratch: 'Scratch'
         tynker: 'Tynker'
-        other: "Anna:"
+        other: "Anna"
       robotics:
         grok: 'Grok Learning'
         kodable: 'Kodable'
@@ -1017,7 +1024,7 @@ nn:
         sphero: 'Sphero'
         raspberry: 'Raspberry Pi'
         wonder: 'Wonder Workshop'
-        other: "Anna:"
+        other: "Anna"
       workshop_course:
         csf_af: 'CS Fundamentals (Kurs A-F)'
         csf_express: 'CS Fundamentals (Pre-ekspresskurs og ekspresskurs)'
@@ -1051,3 +1058,5 @@ nn:
   copy: 'Kopier'
   confirm: 'Bekreft'
   teacher_feedback: "Tilbakemeldingar frå lærarar"
+  pixelation:
+    binary: "Binær"

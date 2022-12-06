@@ -8,8 +8,14 @@
 #To use a different locale, set it with `I18n.locale`:
 #I18n.locale = :es
 #This would use the information in config/locales/es.yml.
+#The following keys must be escaped otherwise they will not be retrieved by
+#the default I18n backend:
+#true, false, on, off, yes, no
+#Instead, surround them with single quotes.
+#en:
+#'true': 'foo'
 #To learn more, please read the Rails Internationalization guide
-#available at http://guides.rubyonrails.org/i18n.html.
+#available at https://guides.rubyonrails.org/i18n.html.
 nl:
   errors:
     messages:
@@ -355,6 +361,7 @@ nl:
       about: "Over"
       legal: "Privacy & juridisch"
       legal_privacy: "Privacybeleid"
+      legal_cookie_notice: "Cookiebeleid"
       legal_tos: "Gebruiksvoorwaarden"
     user:
       classroom: 'Startpagina voor de leerkracht'
@@ -409,7 +416,6 @@ nl:
     popup:
       progress_for_user: "%{name} de vooruitgang"
       progress: 'Jouw voortgang'
-      lines: 'Totaal aantal regels code: %{lines}'
       close: 'SLUITEN'
       mastery: 'Begrippen'
       puzzle_map: 'Niveaus'
@@ -523,6 +529,7 @@ nl:
     choose_next_course: "Probeer een Code Studio cursus door er hier onder één te kiezen"
     print_certificate: "print certificaat"
   certificate_sponsor_message: "%{sponsor_name} gaf het gulle geschenk om je leren te sponsoren."
+  certificate_hour_of_code: "Uur Code"
   move_students:
     new_section_dne: "Sorry, maar de groep %{new_section_code} bestaat niet. Vul een andere groepscode in."
     section_code_cant_be_current_section: "Het huidige onderdeel kan niet hetzelfde zijn als het nieuwe onderdeel."
@@ -634,6 +641,10 @@ nl:
       title: 'Dansfeest'
     dance-2019:
       title: 'Dansfeest'
+    hello-world:
+      title: 'Hallo Wereld'
+    poem-art:
+      title: 'Poëzie'
     hoc:
       title: 'Klassiek doolhof'
       body: 'Probeer de beginselen van de informatica. Miljoenen gingen je voor!'
@@ -779,13 +790,6 @@ nl:
     accept: "Accepteren"
     print: "Afdrukken"
     review_terms: "Herzie de aangepaste gebruiksvoorwaarden"
-  donor_interstitial:
-    title: "Je gratis informaticacursussen worden mogelijk gemaakt door..."
-    local_supporters: "Lokale ondersteuners"
-    global_supporters: "Globale ondersteuners"
-    support_codeorg_1: "Elke euro die Code.org ontvangt, geeft meer leerlingen kansen."
-    support_codeorg_2: "[Doneer nu](%{donate_url}) om Code.org te ondersteunen."
-    get_started: "Ga aan de slag op Code.org"
   school_info_interstitial:
     save: "Opslaan"
   race_interstitial:
@@ -920,14 +924,14 @@ nl:
         lightbot: 'LightBot'
         scratch: 'Scratch'
         tynker: 'Tynker'
-        other: "Anders:"
+        other: "Anders"
       robotics:
         kodable: 'Kodable'
         microbit: 'Microbit'
         ozobot: 'Ozobot'
         sphero: 'Sphero'
         raspberry: 'Raspberry Pi'
-        other: "Anders:"
+        other: "Anders"
       workshop_course:
         csp: 'CW Principes'
       email_opt_in:
@@ -950,3 +954,5 @@ nl:
     this_sprite: "deze sprite"
   unit_prefix: "Unit %{n}"
   teacher_feedback: "Docenten feedback"
+  pixelation:
+    binary: "Binaire"

@@ -1,0 +1,64 @@
+{
+  "hy-AM": {
+    "data": {
+      "programming_environments": {
+        "gamelab": {
+          "categories": {
+            "math": {
+              "name": "Մաթեմատիկա"
+            },
+            "variables": {
+              "name": "փոփոխականների"
+            },
+            "functions": {
+              "name": "գործառույթները"
+            }
+          }
+        },
+        "applab": {
+          "name": "App Lab",
+          "description": "App Lab է ծրագրավորման միջավայրի, որտեղ դուք կարող եք կատարել պարզ apps. Նախագծել է ծրագիր, օրենսգրքի բլոկների կամ Javascript, որպեսզի այն աշխատի, ապա կիսվել ձեր ծրագիրը վայրկյաններով.",
+          "categories": {
+            "math": {
+              "name": "Մաթեմատիկա"
+            },
+            "variables": {
+              "name": "փոփոխականների"
+            },
+            "functions": {
+              "name": "գործառույթները"
+            }
+          }
+        },
+        "spritelab": {
+          "categories": {
+            "actions": {
+              "name": "գործողություններ"
+            },
+            "events": {
+              "name": "Իրադարձություններ"
+            },
+            "loops": {
+              "name": "loops"
+            },
+            "variables": {
+              "name": "փոփոխականների"
+            },
+            "math": {
+              "name": "Մաթեմատիկա"
+            },
+            "logic": {
+              "name": "տրամաբանություն"
+            },
+            "functions": {
+              "name": "գործառույթները"
+            },
+            "text": {
+              "name": "տեքստ"
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -28,7 +28,7 @@
 #
 
 class SingleSectionExperiment < Experiment
-  belongs_to :section
+  belongs_to :section, optional: true
 
   def enabled?(user: nil, section: nil)
     return (!section.nil? && section_id == section.id) ||

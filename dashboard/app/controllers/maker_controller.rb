@@ -1,5 +1,3 @@
-require 'cdo/script_constants'
-
 class MakerController < ApplicationController
   authorize_resource class: :maker_discount, except: [:home, :setup, :login_code, :display_code, :confirm_login]
 
@@ -22,8 +20,8 @@ class MakerController < ApplicationController
   ScriptAndCourse = Struct.new(:script, :course)
 
   def self.maker_script(for_user)
-    maker_units = Script.maker_units(for_user).
-        sort_by(&:version_year).
+    maker_units = Unit.maker_units(for_user).
+        sort_by {|s| s.unit_group.version_year}.
         reverse.
         freeze
     csd_courses = UnitGroup.all_courses.select {|c| c.family_name == 'csd'}.freeze
@@ -100,7 +98,7 @@ class MakerController < ApplicationController
     # check to see if we have an existing application for any users associated with
     # this studio_person_id (in which case we can't start another)
     application = CircuitPlaygroundDiscountApplication.find_by_studio_person_id(current_user.studio_person_id)
-    return head :forbidden if application && application.has_confirmed_school?
+    return head :forbidden if application&.has_confirmed_school?
 
     # Create our application
     # For 2020, applications by default get the non "full discount" (ie, without shipping)

@@ -9,27 +9,24 @@ require_relative '../../dashboard/config/environment'
 def set_course_audiences
   raise unless Rails.application.config.levelbuilder_mode
 
-  Script.all.each do |script|
+  Unit.all.each do |script|
     # scripts in unit_groups get their audiences from their unit group
     next if script.unit_group
 
-    script.instructor_audience = if [].include?(script.name)
-                                   SharedCourseConstants::INSTRUCTOR_AUDIENCE.facilitator
-                                 elsif ['csd1-dlp-18', 'csd2-dlp-18', 'csd3-dlp-18', 'csd4-dlp-18', 'csd5-dlp-18',
-                                        'csd6-dlp-18', 'csp1-dlp-18', 'csp2-dlp-18', 'csp3-dlp-18', 'csp4-dlp-18',
-                                        'csp5-dlp-18', 'csp-create-dlp-18', 'csp-explore-dlp-18', 'csp-novice-18',
-                                        'csd-novice-18', 'csp-apprentice-18', 'csd-apprentice-18', 'fit-test',
-                                        'andrea-test', 'fit2019-novice', 'fit2019-apprentice', 'dlp19-csp-mod-fit',
-                                        'dlp19-csd-mod-fit', 'dlp19-csd-mod-w1', 'dlp19-csd-mod-w2', 'dlp19-csd-mod-w3',
-                                        'dlp19-csd-mod-w4', 'dlp19-csp-mod-w1', 'dlp19-csp-mod-w2', 'dlp19-csp-mod-w3',
-                                        'dlp19-csp-mod-w4', 'alltheplcthings', 'dlp21-csp-mod1', 'dlp21-csd-overview',
-                                        'dlp21-csp-overview', 'dlp21-csp-mod2', 'dlp21-csp-mod3', 'dlp21-csp-mod4',
-                                        'dlp21-csd-mod1', 'dlp21-csd-mod2', 'dlp21-csd-mod3', 'dlp21-csd-mod4'].include?(script.name)
-                                   SharedCourseConstants::INSTRUCTOR_AUDIENCE.plc_reviewer
-                                 elsif [].include?(script.name)
-                                   SharedCourseConstants::INSTRUCTOR_AUDIENCE.universal_instructor
+    # rubocop:disable Style/WordArray
+    script.instructor_audience = if ['csd1-dlp-18', 'csd2-dlp-18', 'csd3-dlp-18', 'csd4-dlp-18', 'csd5-dlp-18',
+                                     'csd6-dlp-18', 'csp1-dlp-18', 'csp2-dlp-18', 'csp3-dlp-18', 'csp4-dlp-18',
+                                     'csp5-dlp-18', 'csp-create-dlp-18', 'csp-explore-dlp-18', 'csp-novice-18',
+                                     'csd-novice-18', 'csp-apprentice-18', 'csd-apprentice-18', 'fit-test',
+                                     'andrea-test', 'fit2019-novice', 'fit2019-apprentice', 'dlp19-csp-mod-fit',
+                                     'dlp19-csd-mod-fit', 'dlp19-csd-mod-w1', 'dlp19-csd-mod-w2', 'dlp19-csd-mod-w3',
+                                     'dlp19-csd-mod-w4', 'dlp19-csp-mod-w1', 'dlp19-csp-mod-w2', 'dlp19-csp-mod-w3',
+                                     'dlp19-csp-mod-w4', 'alltheplcthings', 'dlp21-csp-mod1', 'dlp21-csd-overview',
+                                     'dlp21-csp-overview', 'dlp21-csp-mod2', 'dlp21-csp-mod3', 'dlp21-csp-mod4',
+                                     'dlp21-csd-mod1', 'dlp21-csd-mod2', 'dlp21-csd-mod3', 'dlp21-csd-mod4'].include?(script.name)
+                                   Curriculum::SharedCourseConstants::INSTRUCTOR_AUDIENCE.plc_reviewer
                                  else
-                                   SharedCourseConstants::INSTRUCTOR_AUDIENCE.teacher
+                                   Curriculum::SharedCourseConstants::INSTRUCTOR_AUDIENCE.teacher
                                  end
 
     script.participant_audience = if ['csd1-dlp-18', 'csd2-dlp-18', 'csd3-dlp-18', 'csd4-dlp-18', 'csd5-dlp-18',
@@ -42,12 +39,11 @@ def set_course_audiences
                                       'dlp19-csp-mod-w4', 'alltheplcthings', 'dlp21-csd-overview', 'dlp21-csp-overview',
                                       'dlp21-csp-mod2', 'dlp21-csp-mod3', 'dlp21-csp-mod4', 'dlp21-csd-mod1',
                                       'dlp21-csd-mod2', 'dlp21-csd-mod3', 'dlp21-csd-mod4'].include?(script.name)
-                                    SharedCourseConstants::PARTICIPANT_AUDIENCE.facilitator
-                                  elsif [].include?(script.name)
-                                    SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher
+                                    Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.facilitator
                                   else
-                                    SharedCourseConstants::PARTICIPANT_AUDIENCE.student
+                                    Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.student
                                   end
+    # rubocop:enable Style/WordArray
 
     script.update!(skip_name_format_validation: true)
     script.write_script_json
@@ -57,18 +53,12 @@ def set_course_audiences
     # default is instructor_audience teacher and participant_audience student so only need to update unit groups we want something else
     next unless ['self-paced-pl-csp-2021'].include?(course.name)
 
-    course.instructor_audience = if [].include?(course.name)
-                                   SharedCourseConstants::INSTRUCTOR_AUDIENCE.facilitator
-                                 elsif [].include?(course.name)
-                                   SharedCourseConstants::INSTRUCTOR_AUDIENCE.plc_reviewer
-                                 elsif ['self-paced-pl-csp-2021'].include?(course.name)
-                                   SharedCourseConstants::INSTRUCTOR_AUDIENCE.universal_instructor
+    course.instructor_audience = if ['self-paced-pl-csp-2021'].include?(course.name)
+                                   Curriculum::SharedCourseConstants::INSTRUCTOR_AUDIENCE.universal_instructor
                                  end
 
-    course.participant_audience = if [].include?(course.name)
-                                    SharedCourseConstants::PARTICIPANT_AUDIENCE.facilitator
-                                  elsif ['self-paced-pl-csp-2021'].include?(course.name)
-                                    SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher
+    course.participant_audience = if ['self-paced-pl-csp-2021'].include?(course.name)
+                                    Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher
                                   end
 
     course.save!

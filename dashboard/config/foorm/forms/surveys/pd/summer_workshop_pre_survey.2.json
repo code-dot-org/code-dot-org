@@ -161,6 +161,10 @@
                   "text": "AP Computer Science A"
                 },
                 {
+                  "value": "ap_csp",
+                  "text": "AP Computer Science Principles"
+                },
+                {
                   "value": "ap_calc",
                   "text": "AP Calculus (AB or BC)"
                 },
@@ -227,7 +231,7 @@
               ]
             }
           ],
-          "visibleIf": "{workshop_course} = 'CS Principles' or {workshop_course} = 'CS A'",
+          "visibleIf": "{workshop_course} = 'CS Principles' or {workshop_course} = 'Computer Science A'",
           "natalia_comment": "NOTE: re-used the CSP panel for CSA because they will use the same questions. Didn't change any of the technical names that include 'csp' inthe question name to preserve the ability to compare historical data - NATALIA"
         },
         {
@@ -310,7 +314,7 @@
               "type": "html",
               "name": "question7_csa",
               "visible": false,
-              "html": "<p><span style=\"background-color: #ffff00;\">&gt;&gt;IF CS A&lt;&lt;</span></p>"
+              "html": "<p><span style=\"background-color: #ffff00;\">&gt;&gt;IF Computer Science A&lt;&lt;</span></p>"
             },
             {
               "type": "checkbox",
@@ -408,7 +412,7 @@
             {
               "type": "radiogroup",
               "name": "certificate",
-              "title": "Does your state or district require you to have a specific certification to teach CSA?",
+              "title": "Do you have a certificate to teach CSA?",
               "visibleIf": "{certificate_required}='y' or {certificate_required}='not_sure'",
               "choices": [
                 {
@@ -426,7 +430,7 @@
               ]
             }
           ],
-          "visibleIf": "{workshop_course} = 'CS A'"
+          "visibleIf": "{workshop_course} = 'Computer Science A'"
         },
         {
           "type": "radiogroup",
@@ -546,12 +550,12 @@
               "type": "html",
               "name": "question_wrapup_csa",
               "visible": false,
-              "html": "<p><span style=\"background-color: #ffff00;\">&gt;&gt;IF CS A&lt;&lt;</span></p>"
+              "html": "<p><span style=\"background-color: #ffff00;\">&gt;&gt;IF Computer Science A&lt;&lt;</span></p>"
             },
             {
               "type": "rating",
               "name": "cs_knowledge",
-              "title": "How would you rate your overall knowledge of CS?",
+              "title": "How would you rate your overall knowledge of computer science?",
               "rateMin": 0,
               "rateMax": 6,
               "minRateDescription": "Very Low (e.g no prior knowledge)",
@@ -612,7 +616,7 @@
               ]
             }
           ],
-          "visibleIf": "{workshop_course} = 'CS A'"
+          "visibleIf": "{workshop_course} = 'Computer Science A'"
         },
         {
           "type": "radiogroup",

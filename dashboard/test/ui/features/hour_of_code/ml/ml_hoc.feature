@@ -15,6 +15,7 @@ Feature: Oceans ML HoC
 
     # Sorting Screen
     Then I click selector "button:contains(Run)" once I see it
+    And I wait for 30 seconds
     Then I click selector "button:contains(Continue)" once I see it
 
     # Pond Screen
@@ -37,6 +38,7 @@ Feature: Oceans ML HoC
 
     # Sorting Screen
     Then I click selector "button:contains(Run)" once I see it
+    And I wait for 30 seconds
     Then I click selector "button:contains(Continue)" once I see it
 
     # Pond Screen
@@ -54,6 +56,7 @@ Feature: Oceans ML HoC
 
     # Sorting Screen
     Then I click selector "button:contains(Run)" once I see it
+    And I wait for 30 seconds
     Then I click selector "button:contains(Continue)" once I see it
 
     # Pond Screen
@@ -71,6 +74,7 @@ Feature: Oceans ML HoC
 
     # Sorting Screen
     Then I click selector "button:contains(Run)" once I see it
+    And I wait for 30 seconds
     Then I click selector "button:contains(Continue)" once I see it
 
     # Pond Screen

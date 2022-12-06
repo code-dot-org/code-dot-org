@@ -1,7 +1,9 @@
 {
   "cancel": "Tühista",
+  "create": "Loo",
   "delete": "Kustuta",
   "import": "Impordi",
   "rename": "Nimeta ümber",
+  "submit": "Esita",
   "saving": "Salvestamine..."
 }

@@ -391,6 +391,7 @@ hy:
         csd_debugging: Debugging
         playlab_2021: Ներածություն Խաղալ Lab
         playlab_2021_reader: Ներածություն Խաղալ Lab
+        csp_applab_parameters: Գործառույթները պարամետրերով
     callout:
       text:
         drag_blocks: Քաշեք է մի «քայլ» թաղամաս եւ տալ այն ներքեւում մյուս թաղամաս

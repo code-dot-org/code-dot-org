@@ -1,6 +1,6 @@
 name 'CSA U7L9-L2_2022'
 display_name 'Trace Recursive Methods'
-description 'Trace recursive methods with Strings, arrays, or ArrayLists.'
+description 'Practice tracing recursive methods with `String`s, arrays, or `ArrayList`s.'
 
 sublevels
 level 'CSA U7L9-L2a_2022'

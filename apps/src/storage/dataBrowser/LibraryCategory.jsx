@@ -1,9 +1,9 @@
 import PropTypes from 'prop-types';
-import Radium from 'radium';
 import React from 'react';
-import color from '../../util/color';
 import FontAwesome from '../../templates/FontAwesome';
 import LibraryTable from './LibraryTable';
+import classNames from 'classnames';
+import style from './library-category.module.scss';
 
 class LibraryCategory extends React.Component {
   static propTypes = {
@@ -37,21 +37,20 @@ class LibraryCategory extends React.Component {
     return (
       <div>
         <a
-          style={styles.categoryName}
+          className={classNames(style.categoryName, 'uitest-dataset-category')}
           onClick={this.toggleCollapsed}
-          className="uitest-dataset-category"
         >
           <FontAwesome className="fa fa-fw" icon={icon} />
           <span>{this.props.name}</span>
-          <span style={styles.tableNumber}>
+          <span className={style.tableNumber}>
             {this.props.datasets.length}{' '}
             {this.props.datasets.length === 1 ? 'table' : 'tables'}
           </span>
         </a>
         {!this.state.collapsed && (
-          <div style={styles.collapsibleContainer}>
+          <div className={style.collapsibleContainer}>
             {this.props.description && (
-              <span style={styles.categoryDescription}>
+              <span className={style.categoryDescription}>
                 {this.props.description}
               </span>
             )}
@@ -69,28 +68,4 @@ class LibraryCategory extends React.Component {
   }
 }
 
-const styles = {
-  categoryName: {
-    fontFamily: '"Gotham 7r", sans-serif',
-    cursor: 'pointer',
-    color: color.dark_charcoal
-  },
-  tableNumber: {
-    float: 'right',
-    fontFamily: '"Gotham 4r", sans-serif',
-    color: color.light_gray
-  },
-  categoryDescription: {
-    fontFamily: '"Gotham 4r", sans-serif',
-    color: color.dark_charcoal
-  },
-  tableName: {
-    fontFamily: '"Gotham 5r", sans-serif',
-    color: color.cyan
-  },
-  collapsibleContainer: {
-    paddingLeft: '16px'
-  }
-};
-
-export default Radium(LibraryCategory);
+export default LibraryCategory;

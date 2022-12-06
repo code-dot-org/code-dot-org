@@ -1,9 +1,5 @@
 <Applab>
   <config><![CDATA[{
-  "game_id": 41,
-  "created_at": "2022-03-31T19:21:10.000Z",
-  "level_num": "custom",
-  "user_id": 155,
   "properties": {
     "skin": "applab",
     "edit_code": true,
@@ -56,17 +52,21 @@
     "name_suffix": "_2021",
     "long_instructions": "# Changing Screens On Click\r\n\r\nThe `setScreen` block will change your app to whichever screen you specify. If you place a `setScreen` block _inside_ an `onEvent` block, you can program your buttons to change to the correct screen.\r\n\r\n# Do This\r\n\r\nUsing the `onEvent` block that you've created, make your program change to the \"search\" screen when the `home_search_btn` is clicked.\r\n\r\n* **Drag out a `setScreen` block** an put it inside the `onEvent` block.\r\n* **Select \"search\"** from the `setScreen` dropdown.\r\n* **Run your app** and test the `home_search_btn` button.",
     "reference_links": [
-      "/docs/concepts/app-lab/responding-to-user-input/",
-      "/docs/concepts/app-lab/design-mode/importing-screens/",
-      "/docs/concepts/app-lab/multi-screen-apps/",
-      "/docs/concepts/app-lab/design-mode/",
-      "/docs/concepts/app-lab/design-mode/design-mode-elements/"
+      "/courses/vpl-csd-summer-pilot-ci-2022/guides/responding-to-user-input",
+      "/courses/vpl-csd-summer-pilot-ci-2022/guides/importing-screens",
+      "/courses/vpl-csd-summer-pilot-ci-2022/guides/multi-screen-apps",
+      "/courses/vpl-csd-summer-pilot-ci-2022/guides/design-mode",
+      "/courses/vpl-csd-summer-pilot-ci-2022/guides/design-mode-elements"
     ],
-    "map_reference": "/docs/concepts/app-lab/changing-screens/",
+    "map_reference": "/courses/vpl-csd-summer-pilot-ci-2022/guides/changing-screens",
     "mini_rubric": "false",
     "encrypted": "false",
     "preload_asset_list": null
   },
+  "level_num": "custom",
+  "game_id": 41,
+  "created_at": "2022-03-31T19:21:10.000Z",
+  "user_id": 155,
   "published": true,
   "notes": "",
   "audit_log": "[{\"changed_at\":\"2022-03-31T19:21:10.772+00:00\",\"changed\":[\"cloned from \\\"U4 Model Program 4_2021\\\"\"],\"cloned_from\":\"U4 Model Program 4_2021\"}]"

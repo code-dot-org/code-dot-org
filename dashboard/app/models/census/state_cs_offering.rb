@@ -15,7 +15,7 @@
 #
 
 class Census::StateCsOffering < ApplicationRecord
-  belongs_to :school, foreign_key: :state_school_id, primary_key: :state_school_id, required: true
+  belongs_to :school, foreign_key: :state_school_id, primary_key: :state_school_id
 
   validates_presence_of :course
   validates :school_year, presence: true, numericality: {greater_than_or_equal_to: 2015, less_than_or_equal_to: 2030}
@@ -177,12 +177,21 @@ class Census::StateCsOffering < ApplicationRecord
 
   # By default we treat the lack of state data for high schools as an
   # indication that the school doesn't teach cs. We aren't as confident
-  # that the state data is complete for the following states so we do
-  # not want to treat the lack of data as a no for those.
-  INFERRED_NO_EXCLUSION_LIST = [].freeze
+  # that the state data is complete for the following states in the associated
+  # years so we do not want to treat the lack of data as a no for those.
+  INFERRED_NO_EXCLUSION_LIST = %w(
+    AK:2021
+    CO:2021
+    DC:2021
+    HI:2021
+    ME:2021
+    MI:2021
+    MN:2021
+    NH:2021
+  ).freeze
 
-  def self.infer_no(state_code)
-    INFERRED_NO_EXCLUSION_LIST.exclude? state_code.upcase
+  def self.infer_no(state_code, school_year)
+    INFERRED_NO_EXCLUSION_LIST.exclude?("#{state_code.upcase}:#{school_year}")
   end
 
   def self.get_state_school_id(state_code, row_hash, school_year, update)

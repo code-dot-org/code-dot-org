@@ -2,7 +2,7 @@ require 'test_helper'
 
 class LevelsWithinLevelsTest < ActiveSupport::TestCase
   test 'cannot delete levels that other levels reference as children' do
-    child = create(:level, parent_levels: [create(:level)])
+    child = create(:multi, parent_levels: [create(:level)])
 
     refute child.destroy
 
@@ -12,7 +12,7 @@ class LevelsWithinLevelsTest < ActiveSupport::TestCase
   end
 
   test 'can delete levels that other levels reference as parents' do
-    child = create(:level)
+    child = create(:free_response)
     parent = create(:level, child_levels: [child])
 
     assert parent.destroy
@@ -22,7 +22,7 @@ class LevelsWithinLevelsTest < ActiveSupport::TestCase
   end
 
   test 'deleting a parent level will also remove associations' do
-    child = create(:level)
+    child = create(:multi)
     parent = create(:level, child_levels: [child])
     assert child.levels_parent_levels.present?
 
@@ -54,7 +54,7 @@ class LevelsWithinLevelsTest < ActiveSupport::TestCase
   test 'scoped parent/child relationships' do
     parent = create :level
 
-    contained = create :level
+    contained = create :free_response
     ParentLevelsChildLevel.create(
       parent_level: parent,
       child_level: contained,
@@ -104,25 +104,17 @@ class LevelsWithinLevelsTest < ActiveSupport::TestCase
     assert_equal [child1, child2, child3], parent.child_levels
   end
 
-  test 'all_descendant_levels works on self-referential project template levels' do
-    level_name = 'project-template-level'
-    level = create :level, name: level_name, properties: {project_template_level_name: level_name}
-    assert_equal level, level.project_template_level
-
-    assert_equal [], level.all_descendant_levels, 'omit self from descendant levels'
-  end
-
   test 'setup contained levels' do
     level = create :level
     assert_equal [], level.child_levels.contained
 
     # can add
-    first_contained = create :level
+    first_contained = create :multi
     level.update!(contained_level_names: [first_contained.name])
     assert_equal [first_contained], level.child_levels.contained
 
     # can reorder
-    second_contained = create :level
+    second_contained = create :free_response
     level.update!(contained_level_names: [first_contained.name, second_contained.name])
     assert_equal [first_contained, second_contained], level.child_levels.contained
     level.update!(contained_level_names: [second_contained.name, first_contained.name])
@@ -131,20 +123,25 @@ class LevelsWithinLevelsTest < ActiveSupport::TestCase
     # can remove
     level.update!(contained_level_names: [])
     assert_equal [], level.reload.child_levels.contained
+
+    # cannot add contained levels of other types
+    bogus_contained = create :match
+    refute level.update(contained_level_names: [bogus_contained.name])
+    assert_includes level.errors.full_messages.first, 'cannot add contained level of type Match'
   end
 
   test 'clone_child_levels clones child levels' do
     parent = create :level
-    child = create :level, name: 'child_level'
-    ParentLevelsChildLevel.create(parent_level: parent, child_level: child)
+    child = create :free_response, name: 'child_level'
+    assert ParentLevelsChildLevel.create(parent_level: parent, child_level: child)
     Level.clone_child_levels(parent, '_test_clone')
     assert_equal 'child_level_test_clone', parent.reload.child_levels.first.name
   end
 
   test 'clone_child_levels returns update params' do
     parent = create :level
-    child = create :level, name: 'child_level'
-    ParentLevelsChildLevel.create(
+    child = create :free_response, name: 'child_level'
+    assert ParentLevelsChildLevel.create(
       parent_level: parent,
       child_level: child,
       kind: ParentLevelsChildLevel::CONTAINED
@@ -176,5 +173,34 @@ class LevelsWithinLevelsTest < ActiveSupport::TestCase
 
     real_level.update!(project_template_level_name: nil)
     assert_nil real_level.project_template_level
+  end
+
+  test 'level cannot be its own project template level' do
+    level = create :level
+    refute level.update(project_template_level_name: level.name)
+    assert_includes level.errors.full_messages.first, 'level cannot be its own project template level'
+  end
+
+  test 'template level type must match level type' do
+    applab = create :applab
+    gamelab = create :gamelab
+
+    refute applab.update(project_template_level_name: gamelab.name)
+    assert_includes applab.errors.full_messages.first, 'template level type Gamelab does not match level type Applab'
+  end
+
+  test 'project template level cannot have its own project template level' do
+    project_backed_level = create :level, name: 'project backed'
+    template_level = create :level
+    project_backed_level.project_template_level_name = template_level.name
+    project_backed_level.save!
+
+    parent_level = create :level
+    refute parent_level.update(project_template_level_name: project_backed_level.name)
+    assert_includes parent_level.errors.full_messages.first, 'the project template level you have selected already has its own project template level'
+
+    template_template_level = create :level
+    refute template_level.update(project_template_level_name: template_template_level.name)
+    assert_includes template_level.errors.full_messages.first, 'this level is already a project template level of another level'
   end
 end

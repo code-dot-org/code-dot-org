@@ -257,7 +257,7 @@ end
 def convert_column_to_integer(column)
   column_as_integer = 0
   column.chars.reverse.each_with_index do |char, index|
-    column_as_integer += (char.ord - 'A'.ord + 1) * 26**index
+    column_as_integer += (char.ord - 'A'.ord + 1) * (26**index)
   end
   column_as_integer - 1
 end

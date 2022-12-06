@@ -31,7 +31,7 @@ Code.org mang đến cơ hội [kết nối]({{ urls/volunteer }}) với các l�
 - Quảng bá sự kiện [Giờ lập trình]({{ urls/promote }}) và khuyến khích những người khác tổ chức các sự kiện.
 - Khuyến khích các kỹ sư phần mềm tại doanh nghiệp của bạn đến dự giờ một lớp học địa phương để giúp dẫn dắt Giờ lập trình và truyền cảm hứng cho học sinh nghiên cứu khoa học máy tính. Họ có thể [đăng ký]({{ urls/volunteer_engineer }}) để được kết nối với một lớp học.
 
-## 2. Xem video hướng dẫn này <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe>
+## 2. Xem video hướng dẫn này <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe>
 
 ## 3. Chọn hoạt động
 Chúng tôi tổ chức nhiều [hoạt động thú vị kéo dài một giờ]({{ urls/learn }}) cho người tham gia ở mọi lứa tuổi, do nhiều đối tác tạo ra. [Hãy thử nhé!]({{ urls/learn }})

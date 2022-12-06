@@ -25,9 +25,9 @@ class Pd::Teachercon1819Registration < ApplicationRecord
   NO = 'No'.freeze
   YES_OR_NO = [YES, NO].freeze
 
-  belongs_to :pd_application, class_name: 'Pd::Application::ApplicationBase'
-  belongs_to :regional_partner, class_name: 'RegionalPartner'
-  belongs_to :user
+  belongs_to :pd_application, class_name: 'Pd::Application::ApplicationBase', optional: true
+  belongs_to :regional_partner, class_name: 'RegionalPartner', optional: true
+  belongs_to :user, optional: true
 
   after_create :update_application_status
   def update_application_status
@@ -150,7 +150,7 @@ class Pd::Teachercon1819Registration < ApplicationRecord
 
     # some fields are required based on the type of the associated application
 
-    if pd_application && pd_application.application_type === "Teacher"
+    if pd_application && pd_application.application_type == "Teacher"
       requireds.concat [
         :teacher_accept_seat,
         :how_many_hours,
@@ -158,7 +158,7 @@ class Pd::Teachercon1819Registration < ApplicationRecord
         :grading_system
       ]
 
-      if pd_application.course === "csp"
+      if pd_application.course == "csp"
         requireds.concat [
           :how_offer_csp,
           :have_taught_ap,

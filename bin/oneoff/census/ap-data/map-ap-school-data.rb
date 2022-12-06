@@ -1,6 +1,19 @@
 #!/usr/bin/env ruby
 
 require_relative '../../../../dashboard/config/environment'
+
+# This script depends on the StreetAddress gem; because it's the only thing in
+# our codebase that does and because these scripts are only included here for
+# posterity not for actual use, we don't currently install that gem.
+#
+# As-is, attempting to run this script will fail with the error:
+#
+#     cannot load such file -- street_address (LoadError)
+#
+# To restore, add the following line back to the Gemfile:
+#
+#     gem 'StreetAddress', require: "street_address"
+#
 require 'street_address'
 
 ap_data_by_address = {}

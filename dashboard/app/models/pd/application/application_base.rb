@@ -52,8 +52,8 @@ module Pd::Application
 
     has_many :emails, class_name: 'Pd::Application::Email', foreign_key: 'pd_application_id'
     has_and_belongs_to_many :tags, class_name: 'Pd::Application::Tag', foreign_key: 'pd_application_id', association_foreign_key: 'pd_application_tag_id'
-    belongs_to :user
-    belongs_to :regional_partner
+    belongs_to :user, optional: true
+    belongs_to :regional_partner, optional: true
 
     after_initialize :set_type_and_year
 
@@ -61,12 +61,12 @@ module Pd::Application
     validate :status_is_valid_for_application_type
     validates_presence_of :type
     validates_presence_of :user_id, unless: proc {|application| application.application_type == PRINCIPAL_APPROVAL_APPLICATION}
-    validates_presence_of :status, unless: proc {|application| application.application_type == PRINCIPAL_APPROVAL_APPLICATION}
+    validates_presence_of :status
     validates_inclusion_of :application_type, in: APPLICATION_TYPES
     validates_inclusion_of :application_year, in: APPLICATION_YEARS
 
-    # An application either has an "incomplete" or "unreviewed" state when created.
-    # The applied_at field gets set when the status becomes 'unreviewed' for the first time
+    # An application either has an 'incomplete', 'awaiting_admin_approval', or 'unreviewed' state when created.
+    # The applied_at field gets set when the status becomes 'unreviewed' or 'awaiting_admin_approval' for the first time
     before_save :set_applied_date, if: :status_changed?
 
     # After creation, an RP or admin can change the status to "accepted," which triggers update_accepted_data.
@@ -96,15 +96,19 @@ module Pd::Application
       self.application_type = nil
     end
 
-    # Creates the following methods: accepted? incomplete? pending? unreviewed? waitlisted?
-    %w(accepted incomplete pending unreviewed waitlisted).each do |attribute|
+    # Creates the following methods: accepted? incomplete? pending? unreviewed? waitlisted? pending_space_availability? awaiting_admin_approval?
+    %w(accepted incomplete pending unreviewed waitlisted pending_space_availability awaiting_admin_approval).each do |attribute|
       define_method(:"#{attribute}?") do
         status == attribute
       end
     end
 
+    def status_on_submit?
+      unreviewed? || awaiting_admin_approval?
+    end
+
     def set_applied_date
-      self.applied_at = Time.now if applied_at.nil? && unreviewed?
+      self.applied_at = Time.now if applied_at.nil? && status_on_submit?
     end
 
     def update_accepted_date
@@ -326,7 +330,10 @@ module Pd::Application
       numeric_scores = response_scores_hash.values.select do |score|
         score.is_a?(Numeric) || score =~ /^\d+$/
       end
-      numeric_scores.map(&:to_i).reduce(:+)
+
+      return nil if numeric_scores.empty?
+
+      numeric_scores.sum(&:to_i)
     end
 
     def course_name
@@ -355,7 +362,7 @@ module Pd::Application
     end
 
     def formatted_partner_contact_email
-      return nil unless regional_partner&.contact_email_with_backup.present?
+      return nil if regional_partner&.contact_email_with_backup.blank?
 
       if regional_partner.contact_name.present? && regional_partner.contact_email.present?
         "\"#{regional_partner.contact_name}\" <#{regional_partner.contact_email}>"

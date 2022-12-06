@@ -17,11 +17,11 @@
 #
 
 class CourseOffering < ApplicationRecord
-  include SharedCourseConstants
+  include Curriculum::SharedCourseConstants
 
-  has_many :course_versions
+  has_many :course_versions, -> {where(content_root_type: ['UnitGroup', 'Unit'])}
 
-  validates :category, acceptance: {accept: SharedCourseConstants::COURSE_OFFERING_CATEGORIES.to_h.keys.map(&:to_s), message: "must be one of the course offering categories. Expected one of: #{SharedCourseConstants::COURSE_OFFERING_CATEGORIES.to_h.keys.map(&:to_s)}. Got: \"%{value}\"."}
+  validates :category, acceptance: {accept: Curriculum::SharedCourseConstants::COURSE_OFFERING_CATEGORIES, message: "must be one of the course offering categories. Expected one of: #{Curriculum::SharedCourseConstants::COURSE_OFFERING_CATEGORIES}. Got: \"%{value}\"."}
 
   KEY_CHAR_RE = /[a-z0-9\-]/
   KEY_RE = /\A#{KEY_CHAR_RE}+\Z/
@@ -30,7 +30,7 @@ class CourseOffering < ApplicationRecord
     message: "must contain only lowercase alphabetic characters, numbers, and dashes; got \"%{value}\"."
 
   # Seeding method for creating / updating / deleting a CourseOffering and CourseVersion for the given
-  # potential content root, i.e. a Script or UnitGroup.
+  # potential content root, i.e. a Unit or UnitGroup.
   #
   # Examples:
   #
@@ -64,7 +64,7 @@ class CourseOffering < ApplicationRecord
   end
 
   def self.should_cache?
-    Script.should_cache?
+    Unit.should_cache?
   end
 
   def self.get_from_cache(key)
@@ -91,7 +91,7 @@ class CourseOffering < ApplicationRecord
   end
 
   def any_version_is_assignable_editor_experiment?(user)
-    course_versions.any? {|cv| cv.content_root.is_a?(Script) && cv.has_editor_experiment?(user)}
+    course_versions.any? {|cv| cv.content_root.is_a?(Unit) && cv.has_editor_experiment?(user)}
   end
 
   def self.assignable_course_offerings(user)
@@ -202,10 +202,14 @@ class CourseOffering < ApplicationRecord
   end
 
   def any_version_is_unit?
-    course_versions.any? {|cv| cv.content_root_type == 'Script'}
+    course_versions.any? {|cv| cv.content_root_type == 'Unit'}
   end
 
   def self.single_unit_course_offerings_containing_units(unit_ids)
     CourseOffering.all.select {|co| co.units_included_in_any_version?(unit_ids) && co.any_version_is_unit?}
+  end
+
+  def csd?
+    key == 'csd'
   end
 end

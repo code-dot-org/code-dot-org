@@ -26,13 +26,13 @@
 
 class Match < DSLDefined
   def dsl_default
-    <<~ruby
+    <<~RUBY
       name '#{DEFAULT_LEVEL_NAME}'
       title 'title'
       description 'description here'
       question 'Question'
       answer 'Answer 1'
-    ruby
+    RUBY
   end
 
   def questions

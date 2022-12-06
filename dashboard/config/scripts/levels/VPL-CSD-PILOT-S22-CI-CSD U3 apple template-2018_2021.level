@@ -42,20 +42,17 @@
     "top_level_procedure_autopopulate": "false",
     "parent_level_id": 20751,
     "name_suffix": "_2021",
-    "preload_asset_list": null,
     "encrypted": "false",
-    "encrypted_examples": [
-
-    ],
     "mini_rubric": "false",
     "libraries_enabled": "false",
-    "validation_enabled": "false"
+    "validation_enabled": "false",
+    "preload_asset_list": null
   },
-  "game_id": 50,
-  "published": true,
-  "created_at": "2022-03-30T02:09:37.000Z",
   "level_num": "custom",
+  "game_id": 50,
+  "created_at": "2022-03-30T02:09:37.000Z",
   "user_id": 155,
+  "published": true,
   "notes": "",
   "audit_log": "[{\"changed_at\":\"2022-03-30T02:09:37.446+00:00\",\"changed\":[\"cloned from \\\"CSD U3 apple template-2018_2021\\\"\"],\"cloned_from\":\"CSD U3 apple template-2018_2021\"},{\"changed_at\":\"2022-03-30 02:09:50 +0000\",\"changed\":[\"preload_asset_list\"],\"changed_by_id\":962,\"changed_by_email\":\"jess@code.org\"},{\"changed_at\":\"2022-03-30 02:11:31 +0000\",\"changed\":[\"start_blocks\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":962,\"changed_by_email\":\"jess@code.org\"},{\"changed_at\":\"2022-03-30 02:14:08 +0000\",\"changed\":[\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":962,\"changed_by_email\":\"jess@code.org\"}]"
 }]]></config>

@@ -14,5 +14,5 @@
 #
 
 class Pd::EnrollmentNotification < ApplicationRecord
-  belongs_to :enrollment, class_name: 'Pd::Enrollment', foreign_key: :pd_enrollment_id
+  belongs_to :enrollment, class_name: 'Pd::Enrollment', foreign_key: :pd_enrollment_id, optional: true
 end

@@ -1,161 +1,162 @@
 ---
-title: Hour of Code How-to Guide
+title: Guia d'Ús Hora del Codi
 layout: wide
 nav: how_to_nav
 ---
 
 {{ signup_button }}
 
-# How to plan your Hour of Code
+# Com planificar l'Hora del Codi
 
-### Join the movement and introduce your students to computer science with these steps.
+### Uniu-vos al moviment i presenteu les ciències informàtiques als vostres alumnes amb aquests passos.
 
-Computational thinking helps nurture problem-solving skills, logic, and creativity. And technology is transforming every industry on the planet. Students today should learn how to create technology, not just use it. By starting early, they’ll have a foundation for success in any 21st-century career path.
+Els alumnes d'avui haurien d'aprendre a crear tecnologia, no només a utilitzar-la.
 
-Trying an Hour of Code is a simple and fun way to introduce students to computer science, perhaps for the very first time, and it fits perfectly for both in-class and after-school settings. Take a look at our [participation guide if you still have questions]({{ localized_files/participation_guide }}).
+Provar una Hora del Codi és una forma senzilla i divertida de presentar les ciències informàtiques al vostre nen, potser per la primera vegada! Trobeu una activitat que encaixi amb el nostre entorn, tant si és a l'aula com després de l'aula, en persona o de forma virtual. Doneu un cop d'ull a la nostra [guia de participació si encara teniu preguntes]({{ localized_files/participation_guide }}) després de comprovar els passos següents:
 
-- [Watch the Hour of Code how-to video](#how-to-video)
-- [Explore activities and tutorials](#explore-activities)
-- [Create your plan for the day](#create-your-plan)
-- [Promote your Hour of Code](#promote-your-hour)
-- [How to start your Hour of Code strong](#how-to-start)
-- [Get coding](#code)
-- [Celebrate your students' success](#celebrate)
+- [Vegeu el vídeo de com fer servir l'Hora del Codi](#how-to-video)
+- [Exploreu activitats i tutorials](#explore-activities)
+- [Creeu el vostre pla del dia](#create-your-plan)
+- [Promocioneu la vostra Hora del Codi](#promote-your-hour)
+- [Com començar fort amb la vostra Hora del Codi](#how-to-start)
+- [Obtenir codificació](#code)
+- [Celebreu l'èxit dels vostres alumnes](#celebrate)
 - [Altres recursos de l'Hora del Codi per a educadors](#other-resources)
-
-### An Hour of Code can also be hosted remotely! To get started, check out our [tips for hosting a virtual Hour of Code event](https://hourofcode.com/us/how-to/virtual).
 
 * * *
 
 <a id="how-to-video"></a>
 
-## 1. Watch the Hour of Code how-to video <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
+## 1. Vegeu el vídeo de com fer servir l'Hora del Codi <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k
+" frameborder="0" allowfullscreen></iframe> 
 
 * * *
 
 <a id="explore-activities"></a>
 
-## 2. Explore activities and tutorials
+## 2. Exploreu activitats i tutorials
 
-We provide a variety of fun, [student-guided tutorials]({{ urls/learn }}) for all age groups and experience levels. It’s popular for students to try self-led tutorials, though many activities include lesson plans for teachers to guide discussion or extend the activity as well.
+Proporcionem una varietat de divertits, [tutorials guiats per a alumnes]({{ urls/learn }}) per a tots els grups d'edat i experiència. És popular per als estudiants provar els tutorials autodirigits a través de diverses activitats, inclosos els plans de lliçons per a professors per guiar debats o ampliar l'activitat.
 
-Explore the activities and decide ahead of time if you want to choose a single tutorial for all of your students, or let each child pick their own.
+Exploreu les activitats i decidiu amb temps si voleu escollir un tutorial únic per a tots els vostres alumnes o deixar que el nen esculli el seu.
 
-[![](/images/fit-600/tutorials.png)]({{ urls/learn }})
+[![](/images/tutorials.png
+)]({{ urls/learn }})
 
 * * *
 
 <a id="create-your-plan"></a>
 
-## 3. Create your plan for the day
+## 3. Creeu el vostre pla del dia
 
-### Think about your technology needs - computers are optional!
+### Penseu sobre les necessitats de tecnologia - els ordinadors són opcionals!
 
-- The best Hour of Code experience includes Internet-connected computers. But you don’t need a computer for every child, and you can even do the Hour of Code without a computer at all! For [unplugged activities](/learn), simply filter the Classroom Technology section to show options for “No computers or devices”.
-- Assegura't de provar els tutorials en els ordinadors o dispositius dels estudiants per garantir que funcionen correctament en navegadors amb so i vídeo. Have low bandwidth? Plan to show videos at the front of the class, so each student isn't downloading their own videos. Or try the offline tutorials.
-- Proporciona auriculars a la teva classe, o demana als estudiants que se'n portin de propis, si el tutorial que esculls funciona millor amb so.
-- Don't have enough devices? Use [pair programming](https://www.youtube.com/watch?v=vgkahOzFH2Q). Quan els estudiants s'associen, s'ajuden mútuament i depenen menys del professor. Ells veuen també que la informàtica és social i col·laborativa.
+- La millor experiència de l'Hora del Codi inclou ordinadors connectats a internet. Però no necessiteu un ordinador per a cada nen i fins i tot, podeu fer l'Hora del Codi sense cap ordinador! Per a [activitats sense connexió](/learn), simplement heu de filtrar la secció de Tecnologia a l'Aula per mostrar les opcions per a “Sense ordinadors o dispositius”. 
+- Assegureu-vos de provar els tutorials en els ordinadors o dispositius dels estudiants per garantir que funcionen correctament en navegadors amb so i vídeo. Teniu amplada de banda? Penseu a mostrar vídeos davant de la classe perquè cada alumne no els descarregui des del seu ordinador. O proveu els tutorials fora de línia.
+- Proporcioneu auriculars a la vostra classe, o demaneu als estudiants que portin els seus, si el tutorial que escolliu funciona millor amb so.
+- No teniu suficients dispositius? Utilitzeu [programació en parelles](https://www.youtube.com/watch?v=vgkahOzFH2Q). Quan els estudiants s'associen, s'ajuden mútuament i depenen menys del professor. També veuen que les ciències informàtiques són socials i col·laboratives.
 
-<img src="/images/fit-600/group_ipad.jpg" />
+<img src="/images/fit-600/group_ipad.jpg
+" />
 
-### Pick a day and time
+### Escolliu un dia i una hora
 
-People around the world join in the Hour of Code celebration during CS Education Week (December 9-13) when the latest tutorials and activities are released. But you can do an Hour of Code any day of the year!
+La gent del voltant del món s'uneix a la celebració de l'Hora del Codi durant la Setmana de l'Educació CI (desembre 5-11) quan els tutorials i les activitats més actuals es publiquen. Però podeu fer una Hora de Codi qualsevol dia de l'any!
 
 * * *
 
 <a id="promote-your-hour"></a>
 
-## 4. Promote your Hour of Code
+## 4. Promocioneu la vostra Hora de codi
 
-Now that you've planned your event, it's time to start promoting it!
+Ara que heu planificat un esdeveniment, és hora de començar a promocionar-lo!
 
-### Tell your School and Community
+### Expliqueu-ho a la vostra Escola i Comunitat
 
-Promote the Hour of Code to other teachers who may want to join in on the fun! This is also a great opportunity to reach out to your school’s PTSA or share in parent newsletters, letting them know their children may come home wanting to try more activities and tutorials!
+Promocioneu l'Hora de Codi a altres professors que puguin voler unir-se a la diversió! Aquesta també és una gran oportunitat per posar-vos en contacte amb l'AMPA de l'escola i compartir els butlletins dels pares i mares, per fer-los saber que els seus nens poden tornar a casa volent provar més activitats i tutorials!
 
-### Let Volunteers Know by Registering Your Event
+### Feu-ho saber als voluntaris registrant-vos al vostre esdeveniment
 
-When you [sign-up your Hour of Code event](/), you’ll receive helpful email communications with news and tips for hosting a successful Hour of Code. It’s also how you can let local volunteers know your school is participating. Volunteers are a great resource and can come speak to your class about computer science or simply help your students with Hour of Code activities.
+Quan us [registreu a un Esdeveniment de l'Hora del Codi](/#join), rebreu comunicacions útils per email amb notícies i recomanacions per acollir una Hora de Codi amb èxit. També una forma d'informar els voluntaris de la vostra escola és participar. Els voluntaris són un recurs genial i alguns poden parlar a l'aula sobre les ciències informàtiques o simplement ajudar als alumnes amb les activitats de l'Hora del Codi.
 
-### Get your Students Excited
+### Motiveu als vostres alumnes
 
-Lead up to the event by sharing [inspirational videos](/promote/resources) highlighting diverse people and creative ways that computer science can be used. Or order inspirational posters for your classroom! Students are more excited to participate in a subject when they see people who look like them encouraging it.
+Dirigiu l'esdeveniment compartint [vídeos inspiradors](/promote/resources) destacant persones diverses i formes creatives en què les ciències informàtiques poden ser utilitzades. O imprimiu cartells inspiradors per a la vostra aula! Els alumnes estan més motivats en participar en una assignatura quan veuen persones com ells animant.
 
 {{ promote_new_posters }}
 
-Learn more about posters, videos, stickers and other ways to [promote your event](/promote/resources#posters) to your community.
+Obtingueu més informació sobre cartells, vídeos, adhesius i altres formes de [promocionar el vostre esdeveniment](/promote/resources#posters) a la vostra comunitat. 
 
 * * *
 
 <a id="how-to-start"></a>
 
-## 5. How to start your Hour of Code strong
+## 5. Com començar fort amb la vostra Hora del Codi
 
-Once your Hour of Code celebration has arrived, make sure you start your event strong with some of these tools and tips.
+Quan la vostra celebració de l'Hora del Codi hagi arribat, assegureu-vos de començar el vostre esdeveniment fort amb algunes d'aquestes eines i recomanacions.
 
-Invite a [local volunteer]({{ urls/volunteer_local }}) to inspire your students by talking about the breadth of possibilities in computer science. There are thousands of volunteers around the world ready to help with your Hour of Code through either a classroom visit or video chat with your students!
+Convideu a [voluntaris locals]({{ urls/volunteer_local }}) per inspirar als alumnes parlant sobre la varietat de possibilitats en les ciències informàtiques. Hi ha milers de voluntaris arreu del món preparat per ajudar-vos amb la vostra Hora del Codi a través d'una visita a l'aula o vídeo xat amb els vostres alumnes!
 
-Show an inspirational video:
+Mostra vídeo inspirador.
 
-- The original Code.org launch video, featuring Bill Gates, Mark Zuckerberg, and NBA star Chris Bosh. (There are [1 minute](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 minute](https://www.youtube.com/watch?v=nKIu9yen5nc), and [9 minute](https://www.youtube.com/watch?v=dU1xS07N-FA) versions available)
-- Find more inspirational [resources]({{ urls/inspire }}) and [videos](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
+- El vídeo de llançament original Code.org, inclou Bill Gates, Mark Zuckerberg i l'estrella de l'NBA Chris Bosh. (Hi ha versions d'[1 minut](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 minuts](https://www.youtube.com/watch?v=nKIu9yen5nc) i [9 minuts](https://www.youtube.com/watch?v=dU1xS07N-FA) disponibles) 
+- Trobeu més [recursos inspiradors]({{ urls/inspire }}) i [videos](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP). 
 
-It’s okay if both you and your students are brand new to computer science. Here are some ideas to introduce your Hour of Code activity:
+Està bé si vosaltres i els vostres alumnes us estreneu en les ciències informàtiques. Aquí teniu algunes idees per presentar l'activitat de l'Hora del Codi:
 
-- Explain ways that technology impacts our lives, with examples both boys and girls will care about (talk about saving lives, helping people, connecting people, etc.).
-- As a class, list things that use code in everyday life.
-- See tips for getting young women interested in computer science [here]({{ urls/girls }}).
+- Expliqueu les formes en què la tecnologia pot tenir un impacte en les nostres vides, amb exemples que importaran als nens i nenes (parleu de salvar vides, ajudar a les persones, connectar amb persones, etc.).
+- Com a classe, feu una llista de coses que utilitzen codi en el dia a dia.
+- Vegeu recomanacions perquè les noies joves s'interessin en les ciències informàtiques [aquí]({{ urls/girls }}). 
 
 * * *
 
 <a id="code"></a>
 
-## 6. Get coding!
+## 6. Obteniu codis!
 
-Direct students to the activity
+Dirigiu els estudiants cap a l'activitat
 
-- Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial]({{ urls/learn }}) under the number of participants.
+- Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial]({{ urls/learn }}).
 
-When your students come across difficulties it's okay to respond:
+Quan els vostres alumnes trobin dificultats, podeu respondre:
 
 - "No ho sé. Esbrinem-ho junts."
 - "La tecnologia no sempre funciona com volem."
-- Aprendre a programar és com aprendre una nova llengua; no se n'aprèn de seguida!
+- "Aprendre a programar és com aprendre una nova llengua; no se n'aprèn de seguida."
 
-What if a student finishes early?
+Què passa si un alumne acaba aviat?
 
-- Students can see all tutorials and [try another Hour of Code activity]({{ urls/learn }}).
-- O bé, demaneu als estudiants que acaben aviat que ajudin els companys que estan tenint problemes amb l'activitat.
+- Els alumnes poden veure tots els tutorials i [provar una altra activitat d'Hora de Codi]({{ urls/learn }}).
+- O bé, demaneu als alumnes que acabin aviat que ajudin els companys que estan tenint problemes amb l'activitat.
 
 * * *
 
 <a id="celebrate"></a>
 
-## 7. Celebrate your students' success
+## 7. Celebreu l'èxit dels vostres alumnes
 
 [col-33]
 
-![](/images/fit-600/boy-certificate.jpg)
+![](/images/fit-600/boy-certificate.jpg
+)
 
 [/col-33]
 
-- [Print certificates]({{ urls/certificates }}) for your students.
-- [Print "I did an Hour of Code!"]({{ urls/promote_stickers }}) stickers for your students.
-- [Order custom t-shirts](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) for your school.
+- [Imprimiu certificats]({{ urls/certificates }}) per als vostres alumnes. 
+- [Imprimiu adhesius "He fet una Hora de Codi!"]({{ urls/promote_stickers }}) per als alumnes.
 - Comparteixi fotos i vídeos del seu esdeveniment de l'Hora del Codi a les xarxes socials utilitzant les etiquetes #HourOfCode i @codeorg per poder destacar el seu èxit!
 
 * * *
 
 <a id="other-resources"></a>
 
-## Altres recursos d'hores de codi per a educadors:
+## Altres recursos d'Hora de codi per a educadors:
 
-- Visit the [Hour of Code Teacher Forum](http://forum.code.org/c/plc/hour-of-code) to get advice, insight and support from other educators.
-- Review the [Hour of Code FAQ](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code).
+- Entreu al [Forum de Professors de l'Hora del Codi](http://forum.code.org/c/plc/hour-of-code) per obtenir consell i suport d'altres educadors.
+- Reviseu [les Preguntes Freqüents de l'Hora del Codi](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code).
 
 ### Què ve després de l'Hora del Codi?
 
-Computer science doesn’t have to end with the Hour of Code! Our curriculum is web-based and free to use, forever. [Learn how](/beyond) to bring CS to your school and students.
+Computer science doesn’t have to end with the Hour of Code! [Learn how](/beyond) to bring CS to your school and students.
 
 {{ signup_button }}

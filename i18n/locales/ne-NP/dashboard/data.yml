@@ -403,6 +403,7 @@ ne:
         playlab_2021: Introduction to Play Lab
         playlab_2021_reader: Introduction to Play Lab
         CSA-PL-debugging-temp: Initiation au débogage en Java Lab - temporaire
+        csp_applab_parameters: Functions with Parameters
     callout:
       text:
         drag_blocks: Drag a "move" block and snap it below the other block

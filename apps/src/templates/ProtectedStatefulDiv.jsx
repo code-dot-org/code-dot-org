@@ -1,12 +1,13 @@
 import _ from 'lodash';
 import React from 'react';
 import PropTypes from 'prop-types';
-import Radium from 'radium';
+import Radium from 'radium'; // eslint-disable-line no-restricted-imports
 
 /**
- * A div DOM element that will never update its contents and will throw an
- * exception if it is ever unmounted, enforcing that it must always be rendered
- * because its contents may contain state that the application is depending on.
+ * A div DOM element that will never update its contents unless canUpdate
+ * is assigned true. It will throw an exception if it is ever unmounted,
+ * enforcing that it must always be rendered because its contents may
+ * contain state that the application is depending on.
  *
  * Useful when React is wrapping external libraries or parts of our UI that are
  * not yet driven by React.
@@ -14,11 +15,16 @@ import Radium from 'radium';
 class ProtectedStatefulDiv extends React.Component {
   static propTypes = {
     contentFunction: PropTypes.func,
-    children: PropTypes.node
+    children: PropTypes.node,
+    canUpdate: PropTypes.bool
+  };
+
+  static defaultProps = {
+    canUpdate: false
   };
 
   shouldComponentUpdate() {
-    return false;
+    return this.props.canUpdate;
   }
 
   componentDidMount() {
@@ -46,7 +52,8 @@ class ProtectedStatefulDiv extends React.Component {
         {..._.omit(this.props, [
           'contentFunction',
           'radiumConfigContext',
-          'styleKeeperContext'
+          'styleKeeperContext',
+          'canUpdate'
         ])}
         ref="root"
       />

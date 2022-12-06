@@ -2,154 +2,776 @@
   "kk-KZ": {
     "data": {
       "lessons": {
+        "minecraft/Minecraft Hour of Code Designer": {
+          "name": "Minecraft кодтау сағатының дизайнеры"
+        },
+        "flappy/Flappy Code": {
+          "name": "Қанат Қағу Коды"
+        },
+        "hourofcode/Maze": {
+          "name": "Лабиринт"
+        },
+        "frozen/Artist": {
+          "name": "Анна және Эльзамен код жазыңыз"
+        },
+        "iceage/Ice Age Play Lab": {
+          "name": "Mұзды дәуірі ойын лабораториясы"
+        },
+        "artist/Artist": {
+          "name": "Кейіпкер"
+        },
         "gumball/Gumball Play Lab": {
+          "name": "Gumball ойын лабораториясы"
+        },
+        "mc/Hour of Code 2015": {
+          "name": "Minecraft Кодтау Сағаты"
+        },
+        "playlab/Play Lab": {
+          "name": "Ойындар Лабораториясы"
+        },
+        "outbreak/Outbreak": {
           "overview": "",
           "preparation": "",
           "purpose": "",
           "student_overview": ""
         },
-        "hoc-encryption/Simple Encryption": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
+        "infinity/Infinity": {
+          "name": "Диснейдің Шексіз Ойындар Лабораториясы"
         },
-        "starwars/Hour of Code 2015": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
+        "Hour of Code/Hour of Code 2013": {
+          "name": "Код Жазу Сағаты 2013"
         },
-        "hello-world-retro-2021/Hello World": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
+        "k5-onlinepd-2019/Loops": {
+          "name": "Ілмек"
         },
-        "text-compression/Text Compression": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
+        "k5-onlinepd-2019/Events": {
+          "name": "Шаралар"
         },
-        "dance-extras-2019/Dance Party - Go Further": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
+        "k5-onlinepd-2019/Conditionals": {
+          "name": "Шарттар"
         },
-        "oceans/Oceans": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
+        "k5-onlinepd-2019/Functions": {
+          "name": "Функциялар"
         },
-        "poem-art/lesson-1": {
-          "overview": "",
-          "preparation": "",
-          "student_overview": ""
+        "k5-onlinepd-2019/Variables": {
+          "name": "Айнымалылар"
         },
-        "coursed-2021/lesson-5": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
+        "k5-onlinepd-2019/For Loops": {
+          "name": "For ілмектері"
+        },
+        "coursed-2022/Graph Paper Programming": {
+          "name": "Миллиметрлік Бағдарламалау"
+        },
+        "coursed-2022/Relay Programming": {
+          "name": "Релелік Бағдарламалау"
+        },
+        "coursed-2022/Conditionals with Cards": {
+          "name": "Картаға қатысты шартты белгілер"
+        },
+        "coursef-2022/The Internet": {
+          "name": "Ғаламтор"
+        },
+        "coursee-2022/Songwriting": {
+          "name": "Ән Жазу"
+        },
+        "courseb-2022/Move It, Move It": {
+          "name": "Қозғал, Қозғал"
+        },
+        "courseb-2022/Getting Loopy": {
+          "name": "Ілмектерді үйрену"
+        },
+        "coursea-2022/Happy Maps": {
+          "name": "Көңілді Карталар"
+        },
+        "coursec-2022/The Big Event": {
+          "name": "Үлкен Оқиға"
+        },
+        "coursec-2022/Binary Bracelets": {
+          "name": "Екілік Білезіктер"
+        },
+        "csd3-2022/Variables": {
+          "name": "Айнымалылар"
+        },
+        "csd3-2022/Text": {
+          "name": "Мәтін"
+        },
+        "csd3-2022/Conditionals": {
+          "name": "Шарттар"
+        },
+        "csd3-2022/Functions": {
+          "name": "Функциялар"
+        },
+        "csd6-2022/Functions": {
+          "name": "Функциялар"
+        },
+        "courseb-2018/Move It, Move It": {
+          "name": "Қозғал, Қозғал"
+        },
+        "courseb-2018/Your Digital Footprint": {
+          "name": "Сіздің сандық іздеріңіз"
+        },
+        "coursea-2018/Programming: Happy Maps": {
+          "name": "Көңілді Карталар"
+        },
+        "coursea-2018/Going Places Safely": {
+          "name": "Қауіпсіз Жерді Табу"
+        },
+        "coursed-2018/Algorithms: Graph Paper Programming": {
+          "name": "Миллиметрлік Бағдарламалау"
+        },
+        "coursed-2018/Relay Programming": {
+          "name": "Релелік Бағдарламалау"
+        },
+        "coursed-2018/Conditionals with Cards": {
+          "name": "Картаға қатысты шартты белгілер"
+        },
+        "coursed-2018/Digital Citizenship": {
+          "name": "Сандық Азаматтық"
+        },
+        "coursed-2018/Unplugged: Binary": {
+          "name": "Екілік Суреттер"
+        },
+        "coursef-2018/Programming: My Robotic Friends": {
+          "name": "Менің Достарым Роботтар"
+        },
+        "coursef-2018/Building a Foundation": {
+          "name": "Ғимарат Салу"
+        },
+        "coursef-2018/Conditionals with Cards": {
+          "name": "Картаға қатысты шартты белгілер"
+        },
+        "coursef-2018/Envelope Variables": {
+          "name": "Конверт Айнымалылары"
+        },
+        "coursef-2018/For Loop Fun": {
+          "name": "Көңілді For циклі"
+        },
+        "express-2018/Graph Paper Programming": {
+          "name": "Миллиметрлік Бағдарламалау"
+        },
+        "express-2018/Relay Programming": {
+          "name": "Релелік Бағдарламалау"
+        },
+        "express-2018/Loops: Getting Loopy": {
+          "name": "Ілмектерді үйрену"
+        },
+        "express-2018/Conditionals with Cards": {
+          "name": "Картаға қатысты шартты белгілер"
+        },
+        "express-2018/Functions: Songwriting": {
+          "name": "Ән Жазу"
+        },
+        "express-2018/Events: The Big Event": {
+          "name": "Үлкен Оқиға"
+        },
+        "express-2018/Envelope Variables": {
+          "name": "Конверт Айнымалылары"
+        },
+        "express-2018/For Loop Fun": {
+          "name": "Көңілді For циклі"
+        },
+        "express-2018/Binary Bracelets": {
+          "name": "Екілік Білезіктер"
+        },
+        "express-2018/Unplugged: Binary": {
+          "name": "Екілік Суреттер"
+        },
+        "express-2018/Internet": {
+          "name": "Ғаламтор"
+        },
+        "express-2018/Crowdsourcing": {
+          "name": "Кроудсорсинг"
+        },
+        "coursee-2018/Programming: My Robotic Friends": {
+          "name": "Менің Достарым Роботтар"
+        },
+        "coursee-2018/Building a Foundation": {
+          "name": "Ғимарат Салу"
+        },
+        "coursee-2018/Conditionals with Cards": {
+          "name": "Картаға қатысты шартты белгілер"
+        },
+        "coursee-2018/Functions: Songwriting": {
+          "name": "Ән Жазу"
+        },
+        "coursee-2018/Internet": {
+          "name": "Ғаламтор"
+        },
+        "coursee-2018/Crowdsourcing": {
+          "name": "Кроудсорсинг"
+        },
+        "coursec-2018/Building a Foundation": {
+          "name": "Ғимарат Салу"
+        },
+        "coursec-2018/Loops: Getting Loopy": {
+          "name": "Ілмектерді үйрену"
+        },
+        "coursec-2018/Events: The Big Event": {
+          "name": "Үлкен Оқиға"
+        },
+        "coursec-2018/Binary Bracelets": {
+          "name": "Екілік Білезіктер"
+        },
+        "pre-express-2018/Move It, Move It": {
+          "name": "Қозғал, Қозғал"
+        },
+        "pre-express-2018/Your Digital Footprint": {
+          "name": "Сіздің сандық іздеріңіз"
+        },
+        "pre-express-2018/Spelling Bee": {
+          "name": "Сөз жазушы Ара"
+        },
+        "csd3-2018/Variables": {
+          "name": "Айнымалылар"
+        },
+        "csd3-2018/Conditionals": {
+          "name": "Шарттар"
+        },
+        "csd3-2018/Functions": {
+          "name": "Функциялар"
+        },
+        "csd6-2018/Functions with Parameters": {
+          "name": "Параметрлі Функциялар"
+        },
+        "csd2-2018/Lists": {
+          "name": "Тізімдер"
+        },
+        "coursea-2019/Going Places Safely": {
+          "name": "Қауіпсіз Жерді Табу"
+        },
+        "coursea-2019/Programming: Happy Maps": {
+          "name": "Көңілді Карталар"
+        },
+        "courseb-2019/Your Digital Footprint": {
+          "name": "Сіздің сандық іздеріңіз"
+        },
+        "courseb-2019/Move It, Move It": {
+          "name": "Қозғал, Қозғал"
+        },
+        "courseb-2019/Loops: Getting Loopy": {
+          "name": "Ілмектерді үйрену"
+        },
+        "coursed-2019/Algorithms: Graph Paper Programming": {
+          "name": "Миллиметрлік Бағдарламалау"
+        },
+        "coursed-2019/Relay Programming": {
+          "name": "Релелік Бағдарламалау"
+        },
+        "coursed-2019/Conditionals with Cards": {
+          "name": "Картаға қатысты шартты белгілер"
+        },
+        "coursed-2019/Unplugged: Binary": {
+          "name": "Екілік Суреттер"
+        },
+        "coursed-2019/Digital Citizenship": {
+          "name": "Сандық Азаматтық"
+        },
+        "coursef-2019/Envelope Variables": {
+          "name": "Конверт Айнымалылары"
+        },
+        "coursef-2019/For Loop Fun": {
+          "name": "Көңілді For циклі"
+        },
+        "coursef-2019/Internet": {
+          "name": "Ғаламтор"
+        },
+        "coursef-2019/Crowdsourcing": {
+          "name": "Кроудсорсинг"
+        },
+        "coursee-2019/Functions: Songwriting": {
+          "name": "Ән Жазу"
+        },
+        "coursec-2019/Binary Bracelets": {
+          "name": "Екілік Білезіктер"
+        },
+        "coursec-2019/Events: The Big Event": {
+          "name": "Үлкен Оқиға"
+        },
+        "pre-express-2019/Spelling Bee": {
+          "name": "Сөз жазушы Ара"
+        },
+        "csd3-2019/Variables": {
+          "name": "Айнымалылар"
+        },
+        "csd3-2019/Conditionals": {
+          "name": "Шарттар"
+        },
+        "csd3-2019/Functions": {
+          "name": "Функциялар"
+        },
+        "csd6-2019/Functions with Parameters": {
+          "name": "Параметрлі Функциялар"
+        },
+        "csd2-2019/Lists": {
+          "name": "Тізімдер"
+        },
+        "coursef-2017/Building a Foundation": {
+          "name": "Ғимарат Салу"
+        },
+        "coursef-2017/Algorithms: Tangrams": {
+          "name": "Алгоритмдер: Танграмдар"
+        },
+        "coursea-2017/Real-life Algorithms: Plant a Seed": {
+          "name": "Қолданыстағы Алгоритмдер: Тұқым Себу"
+        },
+        "pre-express-2017/Real-life Algorithms: Plant a Seed": {
+          "name": "Қолданыстағы Алгоритмдер: Тұқым Себу"
+        },
+        "pre-express-2017/Spelling Bee": {
+          "name": "Сөз жазушы Ара"
+        },
+        "coursee-2017/Building a Foundation": {
+          "name": "Ғимарат Салу"
+        },
+        "coursee-2017/Nested Loops": {
+          "name": "Кіріккен Циклдер"
+        },
+        "coursec-2017/Real-life Algorithms: Paper Planes": {
+          "name": "Қолданыстағы Алгоритмдер: Қағаз Ұшақтар"
+        },
+        "courseb-2017/Real-life Algorithms: Plant a Seed": {
+          "name": "Қолданыстағы Алгоритмдер: Тұқым Себу"
+        },
+        "coursed-2017/Nested Loops": {
+          "name": "Кіріккен Циклдер"
+        },
+        "express-2017/Introduction": {
+          "name": "Кіріспе"
+        },
+        "express-2017/Building a Foundation": {
+          "name": "Ғимарат Салу"
+        },
+        "express-2017/Nested Loops": {
+          "name": "Кіріккен Циклдер"
+        },
+        "csd3-2017/Variables": {
+          "name": "Айнымалылар"
+        },
+        "csd3-2017/Conditionals": {
+          "name": "Шарттар"
+        },
+        "csd3-2017/Functions": {
+          "name": "Функциялар"
+        },
+        "csd6-2017/Functions with Parameters_": {
+          "name": "Параметрлі Функциялар"
+        },
+        "csd2-2017/Lists": {
+          "name": "Тізімдер"
+        },
+        "course4/Unplugged: Tangrams": {
+          "name": "Kомпьютерсіз: Танграмдар"
+        },
+        "course4/Maze and Bee": {
+          "name": "Лабиринт және Ара"
+        },
+        "course4/Artist": {
+          "name": "Кейіпкер"
+        },
+        "course4/Unplugged: Envelope Variables": {
+          "name": "Kомпьютерсіз: Ауыспалы Айнымалылар"
+        },
+        "course4/Unplugged: Madlibs": {
+          "name": "Kомпьютерсіз: Мадлибс"
+        },
+        "course4/Artist: Variables": {
+          "name": "Кейіпкер: Айнымалылар"
+        },
+        "course4/Play Lab: Variables": {
+          "name": "Ойындар Лабораториясы: Айнымалылар"
+        },
+        "course4/Unplugged: For Loop Fun": {
+          "name": "Kомпьютерсіз: Көңілді For ілмектері"
+        },
+        "course4/Bee: For Loops": {
+          "name": "Ара: For ілмектері"
+        },
+        "course4/Artist: For Loops": {
+          "name": "Кейіпкер: For ілмектері"
+        },
+        "course4/Play Lab: For Loops": {
+          "name": "Ойындар Лабораториясы: For ілмектері"
+        },
+        "course4/Artist: Functions": {
+          "name": "Кейіпкер: Функциялар"
+        },
+        "course4/Unplugged: Songwriting with Parameters": {
+          "name": "Kомпьютерсіз: Параметрлермен Ән Жазу"
+        },
+        "course4/Artist: Functions with Parameters": {
+          "name": "Кейіпкер: Параметрлері бар Функциялар"
+        },
+        "course4/Play Lab: Functions with Parameters": {
+          "name": "Ойындар Лабораториясы: Параметрлері бар Функциялар"
+        },
+        "course4/Bee: Functions with Parameters": {
+          "name": "Ара: Параметрлері бар Функциялар"
+        },
+        "course4/Unplugged: Binary": {
+          "name": "Kомпьютерсіз: Екілік жүйе"
+        },
+        "course4/Artist Binary": {
+          "name": "Кейіпкер Екілік жүйе"
+        },
+        "course4/Super Challenge - Variables": {
+          "name": "Қиын жаттығулар - Aйнымалылар"
+        },
+        "course4/Super Challenge - For Loops": {
+          "name": "Қиын жаттығулар - For Ілмектері"
+        },
+        "course4/Super Challenge - Functions and Parameters": {
+          "name": "Қиын жаттығулар - Фунциялар және Параметрлер"
+        },
+        "course4/Extreme Challenge - Comprehensive": {
+          "name": "Өте Қиын жаттығулар - Kешенді"
+        },
+        "20-hour/Introduction to Computer Science": {
+          "name": "Информатика пәніне кіріспе"
+        },
+        "20-hour/The Maze": {
+          "name": "Лабиринт"
+        },
+        "20-hour/Computational Thinking": {
+          "name": "Есептегіштік ойлау"
+        },
+        "20-hour/Graph Paper Programming": {
+          "name": "Миллиметрлік Бағдарламалау"
+        },
+        "20-hour/The Artist": {
+          "name": "Кейіпкер"
+        },
+        "20-hour/Algorithms": {
+          "name": "Алгоритмдер"
+        },
+        "20-hour/The Artist 2": {
+          "name": "Кейіпкер 2"
+        },
+        "20-hour/Functions": {
+          "name": "Функциялар"
+        },
+        "20-hour/The Farmer": {
+          "name": "Фермер"
+        },
+        "20-hour/Conditionals": {
+          "name": "Шарттар"
+        },
+        "20-hour/The Artist 3": {
+          "name": "Кейіпкер 3"
+        },
+        "20-hour/Song Writing": {
+          "name": "Ән Жазу"
+        },
+        "20-hour/The Farmer 2": {
+          "name": "Фермер 2"
+        },
+        "20-hour/Abstraction": {
+          "name": "Абстракция"
+        },
+        "20-hour/The Artist 4": {
+          "name": "Кейіпкер 4"
+        },
+        "20-hour/Relay Programming": {
+          "name": "Релелік Бағдарламалау"
+        },
+        "20-hour/The Farmer 3": {
+          "name": "Фермер 3"
+        },
+        "20-hour/The Internet": {
+          "name": "Ғаламтор"
+        },
+        "20-hour/The Artist 5": {
+          "name": "Кейіпкер 5"
+        },
+        "20-hour/Wrap-up": {
+          "name": "Орау"
+        },
+        "course2/Graph Paper Programming": {
+          "name": "Миллиметрлік Бағдарламалау"
+        },
+        "course2/Real-life Algorithms: Paper Planes": {
+          "name": "Қолданыстағы Алгоритмдер: Қағаз Ұшақтар"
+        },
+        "course2/Maze: Sequence": {
+          "name": "Лабиринт: Тізбектер"
+        },
+        "course2/Artist: Sequence": {
+          "name": "Кейіпкер: Тізбектер"
+        },
+        "course2/Getting Loopy": {
+          "name": "Ілмектерді үйрену"
+        },
+        "course2/Maze: Loops": {
+          "name": "Лабиринт: Ілмектер"
+        },
+        "course2/Artist: Loops": {
+          "name": "Кейіпкер: Ілмектер"
+        },
+        "course2/Bee: Loops": {
+          "name": "Ара: Циклдер"
+        },
+        "course2/Relay programming": {
+          "name": "Релелік Бағдарламалау"
+        },
+        "course2/Bee: Debugging": {
+          "name": "Ара: Бағдарламаны ретке келтіру"
+        },
+        "course2/Artist: Debugging": {
+          "name": "Кейіпкер: Бағдарламаны ретке келтіру"
+        },
+        "course2/Conditionals": {
+          "name": "Шарттар"
+        },
+        "course2/Bee: Conditionals": {
+          "name": "Ара: Шарттар"
+        },
+        "course2/Binary Bracelets": {
+          "name": "Екілік Білезіктер"
+        },
+        "course2/The Big Event": {
+          "name": "Үлкен Оқиға"
+        },
+        "course2/Flappy": {
+          "name": "Flappy"
+        },
+        "course2/Studio: Create a Story": {
+          "name": "Ойындар Лабораториясы: Оқиға құрыңыз"
+        },
+        "course2/Your Digital Footprint": {
+          "name": "Сіздің сандық іздеріңіз"
+        },
+        "course2/Artist: Nested Loops": {
+          "name": "Кейіпкер: Біріккен Ілмектер"
+        },
+        "course3/Computational Thinking": {
+          "name": "Есептегіштік ойлау"
+        },
+        "course3/Maze": {
+          "name": "Лабиринт"
+        },
+        "course3/Artist": {
+          "name": "Кейіпкер"
+        },
+        "course3/Functional Suncatchers": {
+          "name": "Функционалдық Күн сәулесін аулаушы"
+        },
+        "course3/Artist: Functions": {
+          "name": "Кейіпкер: Функциялар"
+        },
+        "course3/Bee: Functions": {
+          "name": "Ара: Функциялар"
+        },
+        "course3/Bee: Conditionals": {
+          "name": "Ара: Шарттар"
+        },
+        "course3/Maze: Conditionals": {
+          "name": "Лабиринт: Шарттар"
+        },
+        "course3/Songwriting": {
+          "name": "Ән Жазу"
+        },
+        "course3/Dice Race": {
+          "name": "Ойын Сүйектерінің Жарысы"
+        },
+        "course3/Artist: Nested Loops": {
+          "name": "Кейіпкер: Біріккен Ілмектер"
+        },
+        "course3/Farmer: While Loops": {
+          "name": "Фермер: While (Шарт орындалғанша) Ілмектері"
+        },
+        "course3/Bee: Nested Loops": {
+          "name": "Ара: Біріккен Ілмектер"
+        },
+        "course3/Bee: Debugging": {
+          "name": "Ара: Бағдарламаны ретке келтіру"
+        },
+        "course3/Bounce": {
+          "name": "Секіру"
+        },
+        "course3/Studio: Create a Story": {
+          "name": "Ойындар Лабораториясы: Оқиға құрыңыз"
+        },
+        "course3/Studio: Create a Game": {
+          "name": "Ойындар Лабораториясы: Ойын Құру"
+        },
+        "course3/Internet": {
+          "name": "Ғаламтор"
+        },
+        "course3/Crowdsourcing": {
+          "name": "Кроудсорсинг"
+        },
+        "course3/Digital Citizenship": {
+          "name": "Сандық Азаматтық"
+        },
+        "course3/Artist: Patterns": {
+          "name": "Кейіпкер: Үлгілер"
+        },
+        "course1/Happy Maps": {
+          "name": "Көңілді Карталар"
+        },
+        "course1/Move it, Move it": {
+          "name": "Қозғал, Қозғал"
+        },
+        "course1/Jigsaw: Learn to drag and drop": {
+          "name": "Jigsaw: Жылжытуды үйрену"
+        },
+        "course1/Maze: Sequence": {
+          "name": "Лабиринт: Тізбектер"
+        },
+        "course1/Maze: Debugging": {
+          "name": "Лабиринт: Бағдарламаны ретке келтіру"
+        },
+        "course1/Real-life Algorithms: Plant a Seed": {
+          "name": "Қолданыстағы Алгоритмдер: Тұқым Себу"
+        },
+        "course1/Bee: Sequence": {
+          "name": "Ара: Тізбектер"
+        },
+        "course1/Artist: Sequence": {
+          "name": "Кейіпкер: Тізбектер"
+        },
+        "course1/Building a Foundation": {
+          "name": "Ғимарат Салу"
+        },
+        "course1/Artist: Shapes": {
+          "name": "Кейіпкер: Фигуралар"
+        },
+        "course1/Spelling Bee": {
+          "name": "Сөз жазушы Ара"
+        },
+        "course1/Getting Loopy": {
+          "name": "Ілмектерді үйрену"
+        },
+        "course1/Maze: Loops": {
+          "name": "Лабиринт: Ілмектер"
+        },
+        "course1/Bee: Loops": {
+          "name": "Ара: Циклдер"
+        },
+        "course1/The Big Event": {
+          "name": "Үлкен Оқиға"
+        },
+        "course1/Studio: Create a Story": {
+          "name": "Ойындар Лабораториясы: Оқиға құрыңыз"
+        },
+        "course1/Going Places Safely": {
+          "name": "Қауіпсіз Жерді Табу"
+        },
+        "course1/Artist: Loops": {
+          "name": "Кейіпкер: Ілмектер"
+        },
+        "jigsaw/Jigsaw": {
+          "name": "Бас қатырғыш"
+        },
+        "allthethings/Jigsaw": {
+          "name": "Бас қатырғыш"
+        },
+        "allthethings/Maze": {
+          "name": "Лабиринт"
+        },
+        "allthethings/Artist": {
+          "name": "Кейіпкер"
+        },
+        "allthethings/Bee": {
+          "name": "Ара"
+        },
+        "allthethings/Flappy": {
+          "name": "Flappy"
+        },
+        "allthethings/Bounce": {
+          "name": "Секіру"
+        },
+        "allthethings/Studio": {
+          "name": "Студия"
+        },
+        "allthethings/Minecraft": {
+          "name": "Minecraft"
+        },
+        "coursef-2021/For Loop Fun": {
+          "name": "Көңілді For циклі"
+        },
+        "coursef-2021/Internet": {
+          "name": "Ғаламтор"
+        },
+        "courseb-2021/Move It, Move It": {
+          "name": "Қозғал, Қозғал"
+        },
+        "courseb-2021/Loops: Getting Loopy": {
+          "name": "Ілмектерді үйрену"
+        },
+        "coursea-2021/Programming: Happy Maps": {
+          "name": "Көңілді Карталар"
+        },
+        "coursec-2021/Events: The Big Event": {
+          "name": "Үлкен Оқиға"
+        },
+        "coursec-2021/Binary Bracelets": {
+          "name": "Екілік Білезіктер"
         },
         "coursed-2021/Algorithms: Graph Paper Programming": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "coursed-2021/Introduction to Online Puzzles": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
+          "name": "Миллиметрлік Бағдарламалау"
         },
         "coursed-2021/Relay Programming": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "coursed-2021/Debugging in Collector": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "coursed-2021/Events in Bounce": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "coursed-2021/Build a Star Wars Game": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "coursed-2021/Dance Party": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "coursed-2021/Loops in Ice Age": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "coursed-2021/Loops in Artist": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "coursed-2021/Nested Loops in Bee": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
+          "name": "Релелік Бағдарламалау"
         },
         "coursed-2021/Conditionals with Cards": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
+          "name": "Картаға қатысты шартты белгілер"
         },
-        "coursed-2021/lesson-6": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
+        "coursee-2021/Functions: Songwriting": {
+          "name": "Ән Жазу"
         },
-        "coursed-2021/Conditionals in Bee": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
+        "csd6-2021/Functions with Parameters": {
+          "name": "Параметрлі Функциялар"
         },
-        "coursed-2021/While Loops in Farmer": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
+        "csd3-2021/Variables": {
+          "name": "Айнымалылар"
         },
-        "coursed-2021/Until Loops in Maze": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
+        "csd3-2021/Text": {
+          "name": "Мәтін"
         },
-        "coursed-2021/End of Course Project": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
+        "csd3-2021/Conditionals": {
+          "name": "Шарттар"
+        },
+        "csd3-2021/Functions": {
+          "name": "Функциялар"
+        },
+        "courseb-2020/Move It, Move It": {
+          "name": "Қозғал, Қозғал"
+        },
+        "courseb-2020/Loops: Getting Loopy": {
+          "name": "Ілмектерді үйрену"
+        },
+        "coursed-2020/Algorithms: Graph Paper Programming": {
+          "name": "Миллиметрлік Бағдарламалау"
+        },
+        "coursed-2020/Relay Programming": {
+          "name": "Релелік Бағдарламалау"
+        },
+        "coursed-2020/Conditionals with Cards": {
+          "name": "Картаға қатысты шартты белгілер"
+        },
+        "coursed-2020/Unplugged: Binary": {
+          "name": "Екілік Суреттер"
+        },
+        "coursec-2020/Binary Bracelets": {
+          "name": "Екілік Білезіктер"
+        },
+        "coursec-2020/Events: The Big Event": {
+          "name": "Үлкен Оқиға"
+        },
+        "coursee-2020/Functions: Songwriting": {
+          "name": "Ән Жазу"
+        },
+        "coursea-2020/Programming: Happy Maps": {
+          "name": "Көңілді Карталар"
+        },
+        "coursef-2020/Envelope Variables": {
+          "name": "Конверт Айнымалылары"
+        },
+        "coursef-2020/Internet": {
+          "name": "Ғаламтор"
+        },
+        "coursef-2020/For Loop Fun": {
+          "name": "Көңілді For циклі"
         }
       }
     }

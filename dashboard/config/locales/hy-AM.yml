@@ -222,7 +222,6 @@ hy:
     popup:
       progress_for_user: "%{name}-ի առաջընթացը"
       progress: Ձեր առաջընթացը
-      lines: 'Ընդհանուր կոդի տողերի քանակի: %{lines}'
       close: ՓԱԿԵԼ
       mastery: Concepts
       puzzle_map: փուլերը
@@ -315,6 +314,7 @@ hy:
     no_primary_course: Փորձեք մի Code Studio դասընթաց
     choose_next_course: Փորձեք մի օրենսգիրք Studio դասընթաց ընտրելով մեկը ստորեւ
     print_certificate: Տպել վկայական
+  certificate_hour_of_code: Կոդի ժամ
   move_students:
     new_section_dne: Sorry, but section %{new_section_code} does not exist. Please
       enter a different section code.
@@ -703,10 +703,13 @@ hy:
       subjects:
         cs: Համակարգչային գիտություն
         math: Մաթեմատիկա
+        other: Այլ
       resources:
         kodable: Kodable
+        other: Այլ
       robotics:
         kodable: Kodable
+        other: Այլ
       workshop_course:
         csp: "'16-'17 CS Principles"
       email_opt_in:
@@ -715,3 +718,5 @@ hy:
   cookie_banner:
     accept: Ես համաձայն եմ
   copy: պատճեն
+  pixelation:
+    binary: երկուական

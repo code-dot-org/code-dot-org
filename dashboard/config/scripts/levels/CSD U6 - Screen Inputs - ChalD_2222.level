@@ -1,9 +1,5 @@
 <Applab>
   <config><![CDATA[{
-  "game_id": 41,
-  "created_at": "2022-04-08T17:03:42.000Z",
-  "level_num": "custom",
-  "user_id": 1,
   "properties": {
     "skin": "applab",
     "code_functions": {
@@ -78,11 +74,11 @@
     "widget_mode": "false",
     "ai_enabled": "false",
     "reference_links": [
-      "/docs/concepts/javascript/variables/",
-      "/docs/concepts/app-lab/taking-input-with-getproperty/",
-      "/docs/concepts/app-lab/designing-screens-with-code/",
-      "/docs/concepts/javascript/if-statements/",
-      "/docs/concepts/javascript/booleans-and-comparison-operators/"
+      "/courses/csd-2022/guides/variables",
+      "/courses/csd-2022/guides/taking-input-with-getproperty",
+      "/courses/csd-2022/guides/designing-screens-with-code",
+      "/courses/csd-2022/guides/if-statements",
+      "/courses/csd-2022/guides/booleans-and-comparison-operators"
     ],
     "display_name": "Story Generator",
     "thumbnail_url": "https://images.code.org/15386bbb10862ae7af983232f7e169f3-image-1646246117203.gif",
@@ -92,6 +88,10 @@
     "encrypted_examples": "u5Hf+cDBLbBFzMj+Qq/Ik06r1pRDiyrKIqWd9yJT9Odj54Jn3EDy87ZKGVgL\nJLbdn9tV46tQxMAdzvjo4hupfA==\n",
     "preload_asset_list": null
   },
+  "level_num": "custom",
+  "game_id": 41,
+  "created_at": "2022-04-08T17:03:42.000Z",
+  "user_id": 1,
   "published": true,
   "notes": "",
   "audit_log": "[{\"changed_at\":\"2022-04-08T17:03:42.775+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Screen Inputs - ChalD_2022\\\"\"],\"cloned_from\":\"CSD U6 - Screen Inputs - ChalD_2022\"}]"

@@ -40,7 +40,7 @@ Te szerinted is lehetőségek tárházát nyitja ki az informatika tanulás a ta
 ## Kérdd fel a munkatársaidat önkéntesnek
 Mesélj barátaidnak, munkatársaidnak a "Hour of Code" kezdeményezésről. Tanárok ezrei várják az önkénteseket, szóval kérd meg őket, hogy [jelentkezzenek önkéntesnek](https://code.org/volunteer). Kérdd meg a munkáltatód, hogy szintén csatlakozzon! Küldd el felettesednek vagy munkáltatódnak ezt az[ e-mailt]({{ promote/sample_emails }}), hogy biztasd őket a csatlakozásra.
 
-## Hogyan készülj fel
+## Hogyan kell felkészülni?
 - [Válassz ki egy videót]({{ promote/videos }}), hogy lelkesítsd őket és megmutasd nekik, milyen is az Hour of Code.
 - Nézd meg az ["Hour of Code" önkénteseknek szóló segédletet](/files/hoc-volunteer-toolkit.pdf), mely egy összefoglaló mellett időtervet, előkészítő anyagokat és marketing anyagokat is tartalmaz. Minden ami szükséges készen áll a te önkénteskedésedhez!
 - Ha azt tervezed, hogy egy gyakorlatot fogsz a diákoknak bemutatni, fordíts legalább 30 percet a [ a gyakorlat ]({{ urls/learn }}) kipróbálására.
@@ -58,7 +58,7 @@ Ha te szervezel egy "Hour of Code" eseményt segítségként használd a lentebb
 | Idő          | Időrendi pontok                                                                                                                                                                                                                                                                                                                                                  |
 | ------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | 1-5 perc     | [Mutass be egy inspiráló videót]({{ promote/videos }}).                                                                                                                                                                                                                                                                                                          |
-| 5-10 perc    | Introduce yourself and learn more about the students: </ul><li>Mit dolgozol, mivel foglalkozol és mit szeretsz legjobban a munkádban?</li><li>Mi vagy ki inspirálta Önt?</li><li>Hogyan kezdődött az érdekelődése a számítástechnika iránt?</li><li>Volt mentora?</li><li>Ossz meg egy történetet arról, hogy az emberek miként függnek a technológiától.</li><br>Tegyen fel kérdéseket a diákoknak, és hagyjon időt a kérdezz-felelekre.</br> <li> Milyen munkák iránt érdeklődnek, mi a kedvenc technikai eszközük vagy alkalmazásuk, valamint mit gondolnak, az hogyan jöhetett létre? </li><li> Van-e valamilyen kérdésük?</ul> |
+| 5-10 perc    | Introduce yourself and learn more about the students: </ul><li>Mit dolgozol, mivel foglalkozol és mit szeretsz legjobban a munkádban?</li><li>Mi vagy ki inspirálta Önt?</li><li>Hogyan kezdődött az érdekelődése a számítástechnika iránt?</li><li>Volt-e mentora?</li><li>Ossz meg egy történetet arról, hogy az emberek miként függnek a technológiától.</li><br>Tegyen fel kérdéseket a diákoknak, és hagyjon időt a kérdezz-felelekre.</br> <li> Milyen munkák iránt érdeklődnek, mi a kedvenc technikai eszközük vagy alkalmazásuk, valamint mit gondolnak, az hogyan jöhetett létre? </li><li> Van-e valamilyen kérdésük?</ul> |
 | 30-60 perc   | **Code!** Walk around, answer questions, and guide them through tough puzzles. Próbáld meg nem egyből a megoldást elárulni, hanem inkább rávezető kérdéseket feltenni, ezáltal ráirányítva a megoldásra őket. Továbbá biztasd őket, hogy egymástól is bátran kérdezhetnek. Az egymástól való tanulás egy remek oktatási lehetőség.                               |
 | 1-3 perc     | Thank everyone and share inspirational parting words. Hand out any of your company swag (stickers are awesome)!                                                                                                                                                                                                                                                  |
 | Ezt követően | **Make a lasting change:** Talk to the teacher about turning the Hour of Code into a full computer science course! Látogass el az oktatóddal a [code.org/yourschool](https://code.org/yourschool) oldalra, hogy kitöltsétek mit is tanít ez az iskola ma, továbbá hogy meggyőzd őt a számítástechnikai eszközök használatának fontosságáról.                     |
@@ -71,19 +71,19 @@ Ha te szervezel egy "Hour of Code" eseményt segítségként használd a lentebb
 - Végezetül térj vissza egy hónap múlva: Esetleg a tanárt érdekli egy számítástechnikai kurzus? Oszd meg [segédleteinket és professzionális tanulási lehetőségeinket, hogy ezáltal segítsd őt](https://code.org/yourschool).
 
 ## Hogyan választhatnak ki egy vendégelőadó technikai önkéntesének
-- Tanárok az [önkéntestérkép](https://code.org/volunteer/local) segítségével online kereshetnek önkénteseket.
-- Próbáld meg profilodat a lehető legjobban kitölteni, ezzel növelve az esélyedet a kiválasztásra.
+- Tanárok az [önkéntestérkép](https://code.org/volunteer/local) segítségével keresnek önkénteseket.
+- Készíts egy lehető legteljesebb profilt, ezzel növeled az esélyedet a kiválasztásra.
 - Az oktató ezen az oldalon keresztül tud kapcsolatba lépni veled (email címedet nem osztjuk meg a tanárral). *If you are receiving too many requests from teachers, you can always update your preferences by clicking the link to edit your information or unsubscribe, provided at the bottom of any email from a teacher.*
 
-## Önkéntesség az "Hour of Code" alatt GYIK
+## Önkéntesség a Kódolás óráján - GYIK
 
 ### I haven't been contacted by a teacher yet. How can I still volunteer?
-Próbálj meg megkeresni iskolákat, intézményvezetőket és tanárokat felajánlva nekik segítségedet.
+Keress helyi iskolákat, hívd fel az igazgatót, a tanárt, az irodát és kérdezd meg miben tudnál segíteni.
 
-### Mennyi időbe telik egy osztály meglátogatása?
+### Mennyi ideig tart egy osztálylátogatás?
 Személyes látogatás általában 60-90 percet vesz igénybe, amíg egy virtuális látogatás 20-30 percig tart.
 
-### Milyen korcsoportnak megfelelő a Kódolás Órája esemény?
+### Melyik korcsoport számára megfelelő a Kódolás órája?
 Code.org and our partners design all the Hour of Code activities to engage students of all grade levels (K-12), boys and girls, from all backgrounds. Everyone, even adults can have fun playing!
 
 

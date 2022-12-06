@@ -1,0 +1,10 @@
+name 'CSA Pre-Survey q03_2022'
+question 'I can really be myself at school.'
+
+right 'Strongly agree'
+right 'Agree'
+right 'Slightly agree'
+right 'Neither'
+right 'Slightly disagree'
+right 'Disagree'
+right 'Strongly disagree'

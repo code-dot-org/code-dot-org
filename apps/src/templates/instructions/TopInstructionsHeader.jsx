@@ -21,7 +21,6 @@ function TopInstructionsHeader(props) {
     levelHasRubric,
     displayDocumentationTab,
     displayReviewTab,
-    displayCommitsAndReviewTab,
     isViewingAsTeacher,
     hasBackgroundMusic,
     fetchingData,
@@ -31,7 +30,6 @@ function TopInstructionsHeader(props) {
     handleCommentTabClick,
     handleDocumentationTabClick,
     handleReviewTabClick,
-    handleCommitsAndReviewTabClick,
     handleTeacherOnlyTabClick,
     handleClickCollapser,
     isMinecraft,
@@ -87,6 +85,7 @@ function TopInstructionsHeader(props) {
             headerHasFocus={false}
             onClick={handleDocumentationClick}
             isMinecraft={isMinecraft}
+            style={styles.documentationButton}
           />
         )}
         <div
@@ -131,6 +130,7 @@ function TopInstructionsHeader(props) {
               onClick={handleDocumentationTabClick}
               selected={tabSelected === TabType.DOCUMENTATION}
               text={i18n.documentation()}
+              teacherOnly={teacherOnly}
               isMinecraft={isMinecraft}
               isRtl={isRtl}
             />
@@ -141,16 +141,7 @@ function TopInstructionsHeader(props) {
               onClick={handleReviewTabClick}
               selected={tabSelected === TabType.REVIEW}
               text={i18n.review()}
-              isMinecraft={isMinecraft}
-              isRtl={isRtl}
-            />
-          )}
-          {displayCommitsAndReviewTab && (
-            <InstructionsTab
-              className="uitest-commitsAndReviewTab"
-              onClick={handleCommitsAndReviewTabClick}
-              selected={tabSelected === TabType.COMMITS_AND_REVIEW}
-              text={i18n.review()}
+              teacherOnly={teacherOnly}
               isMinecraft={isMinecraft}
               isRtl={isRtl}
             />
@@ -196,11 +187,14 @@ function TopInstructionsHeader(props) {
 
 const styles = {
   paneHeaderOverride: {
-    color: color.default_text
+    color: color.default_text,
+    display: 'flex',
+    width: '100%',
+    justifyContent: 'space-between'
   },
   audioRTL: {
     wrapper: {
-      float: 'left'
+      order: 5
     }
   },
   audio: {
@@ -217,18 +211,20 @@ const styles = {
   },
   audioLTR: {
     wrapper: {
-      float: 'right'
+      order: 5
     }
   },
   helpTabs: {
-    paddingTop: 6
+    paddingTop: 6,
+    width: '100%',
+    boxSizing: 'border-box',
+    display: 'flex',
+    minWidth: 100
   },
   helpTabsLtr: {
-    float: 'left',
     paddingLeft: 30
   },
   helpTabsRtl: {
-    float: 'right',
     paddingRight: 30
   },
   collapserIcon: {
@@ -257,6 +253,11 @@ const styles = {
         color: color.default_text
       }
     }
+  },
+  documentationButton: {
+    order: 4,
+    whiteSpace: 'nowrap',
+    minWidth: 'fit-content'
   }
 };
 
@@ -269,7 +270,6 @@ TopInstructionsHeader.propTypes = {
   levelHasRubric: PropTypes.bool,
   displayDocumentationTab: PropTypes.bool,
   displayReviewTab: PropTypes.bool,
-  displayCommitsAndReviewTab: PropTypes.bool,
   isViewingAsTeacher: PropTypes.bool,
   hasBackgroundMusic: PropTypes.bool.isRequired,
   fetchingData: PropTypes.bool,
@@ -279,7 +279,6 @@ TopInstructionsHeader.propTypes = {
   handleCommentTabClick: PropTypes.func.isRequired,
   handleDocumentationTabClick: PropTypes.func.isRequired,
   handleReviewTabClick: PropTypes.func.isRequired,
-  handleCommitsAndReviewTabClick: PropTypes.func.isRequired,
   handleTeacherOnlyTabClick: PropTypes.func.isRequired,
   handleClickCollapser: PropTypes.func.isRequired,
   isMinecraft: PropTypes.bool.isRequired,

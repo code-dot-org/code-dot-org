@@ -15,8 +15,8 @@
 # Join table.
 # Don't add anything to this model, beyond what's needed for serialization and seeding; used for convenience for ActiveRecord Import.
 class LevelsScriptLevel < ApplicationRecord
-  belongs_to :script_level
-  belongs_to :level
+  belongs_to :script_level, optional: true
+  belongs_to :level, optional: true
 
   # Used for seeding from JSON. Returns the full set of information needed to
   # uniquely identify this object as well as any other objects it belongs to.

@@ -76,10 +76,12 @@ bg:
       screenWidth: екранШирина
       set sides: задайте страни
       shout: викам
+      sides: страни
       size: размер
       speed: скорост
       startX: стартX
       startY: стартY
+      type: тип
       variable: променлива
       width: широчина
       wizard: магьосник

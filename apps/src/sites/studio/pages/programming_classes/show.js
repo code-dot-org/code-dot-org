@@ -18,6 +18,13 @@ $(document).ready(() => {
   const programmingEnvironmentTitle = getScriptData(
     'programmingEnvironmentTitle'
   );
+  const programmingEnvironmentName = getScriptData(
+    'programmingEnvironmentName'
+  );
+  const programmingEnvironmentLanguage = getScriptData(
+    'programmingEnvironmentLanguage'
+  );
+
   const categoriesForNavigation = getScriptData('categoriesForNavigation');
   const currentCategoryKey = hasScriptData('currentCategoryKey')
     ? getScriptData('currentCategoryKey')
@@ -30,7 +37,11 @@ $(document).ready(() => {
           categoriesForNavigation={categoriesForNavigation}
           currentCategoryKey={currentCategoryKey}
         >
-          <ProgrammingClassOverview programmingClass={programmingClass} />
+          <ProgrammingClassOverview
+            programmingClass={programmingClass}
+            programmingEnvironmentName={programmingEnvironmentName}
+            programmingEnvironmentLanguage={programmingEnvironmentLanguage}
+          />
         </PageContainer>
         <ExpandableImageDialog />
       </>

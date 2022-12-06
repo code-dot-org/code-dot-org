@@ -8,8 +8,14 @@
 #To use a different locale, set it with `I18n.locale`:
 #I18n.locale = :es
 #This would use the information in config/locales/es.yml.
+#The following keys must be escaped otherwise they will not be retrieved by
+#the default I18n backend:
+#true, false, on, off, yes, no
+#Instead, surround them with single quotes.
+#en:
+#'true': 'foo'
 #To learn more, please read the Rails Internationalization guide
-#available at http://guides.rubyonrails.org/i18n.html.
+#available at https://guides.rubyonrails.org/i18n.html.
 sq:
   errors:
     messages:
@@ -292,7 +298,6 @@ sq:
     popup:
       progress_for_user: "Progresi i %{name}"
       progress: 'Progresi yt'
-      lines: 'Totali i rreshtave të kodit: %{lines}'
       close: 'MBYLL'
       mastery: 'Konceptet'
       puzzle_map: 'Fazat'
@@ -381,6 +386,7 @@ sq:
     no_primary_course: "Provo një kurs të Code Studio"
     choose_next_course: "Provo një kurs nga Studio e Kodimit duke zgjedhur një më poshtë"
     print_certificate: "Printo Certifikatën"
+  certificate_hour_of_code: "Ora e Kodimit"
   move_students:
     new_section_dne: "Na vjen keq, por seksioni %{new_section_code} nuk ekziston. Ju lutem, jepni një tjetër kod seksioni."
     section_code_cant_be_current_section: "Seksioni aktual nuk mund të jetë i njëjtë me seksionin e ri."
@@ -733,11 +739,14 @@ sq:
         math: 'Matematikë'
         science: 'Shkencë'
         la: 'Gjuha e arteve'
+        other: "Të tjera/ë"
       resources:
         kodable: 'Kodable'
         lightbot: 'Lightbot'
+        other: "Të tjera/ë"
       robotics:
         kodable: 'Kodable'
+        other: "Të tjera/ë"
       email_opt_in:
         opt_in_yes: 'Po'
         opt_in_no: 'Jo'
@@ -745,3 +754,5 @@ sq:
     accept: 'Pranoj'
   copy: 'Kopjo'
   confirm: 'Konfirmo'
+  pixelation:
+    binary: "Binare"

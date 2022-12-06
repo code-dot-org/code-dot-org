@@ -1,9 +1,5 @@
 <Applab>
   <config><![CDATA[{
-  "game_id": 41,
-  "created_at": "2022-04-26T18:56:23.000Z",
-  "level_num": "custom",
-  "user_id": 832,
   "properties": {
     "skin": "applab",
     "code_functions": {
@@ -76,7 +72,7 @@
     "beginner_mode": "false",
     "fail_on_lint_errors": "true",
     "makerlab_enabled": "false",
-    "long_instructions": "# Do This\r\n\r\n* Run this program to see how it works. Notice that the `longestWord` function simply returns the word `\"unknown\"`.\r\n* Write the code for the `longestWord` function, using the comments and the code for `shortestWord` to help. When it works correctly this program should print the names of the longest state and dog names.\r\n\r\n<span style=\"color:red\"><i>Note: This is the same level as U7L3 - Level 5 in the CS Principles Curriculum.</i></span>",
+    "long_instructions": "# Do This\r\n\r\n* Run this program to see how it works. Notice that the `longestWord` function simply returns the word `\"unknown\"`.\r\n* Write the code for the `longestWord` function, using the comments and the code for `shortestWord` to help. When it works correctly this program should print the names of the longest state and dog names.\r\n\r\n<span style=\"color:red\"><i>Note: This is the same level as U7L3 - Level 5, **Choice A** in the CS Principles Curriculum.</i></span>",
     "parent_level_id": 18132,
     "mini_rubric": "false",
     "encrypted": "false",
@@ -90,9 +86,13 @@
     "name_suffix": "_2022",
     "preload_asset_list": null
   },
+  "game_id": 41,
   "published": true,
+  "created_at": "2022-04-26T18:56:23.000Z",
+  "level_num": "custom",
+  "user_id": 832,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-04-26T18:56:23.240+00:00\",\"changed\":[\"cloned from \\\"PL U7 Param Return Practice Part 5\\\"\"],\"cloned_from\":\"PL U7 Param Return Practice Part 5\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-04-26T18:56:23.240+00:00\",\"changed\":[\"cloned from \\\"PL U7 Param Return Practice Part 5\\\"\"],\"cloned_from\":\"PL U7 Param Return Practice Part 5\"},{\"changed_at\":\"2022-06-06 22:24:27 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":10559,\"changed_by_email\":\"aryanna@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>

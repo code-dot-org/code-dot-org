@@ -41,7 +41,7 @@ const initialState = {
   // These first fields never change after initialization
   currentLevelId: null,
   currentLessonId: null,
-  professionalLearningCourse: null,
+  deeperLearningCourse: null,
   // used on multi-page assessments
   saveAnswersBeforeNavigation: null,
   lessons: null,
@@ -93,9 +93,9 @@ export default function reducer(state = initialState, action) {
     return {
       ...state,
       currentLevelId: action.currentLevelId,
-      professionalLearningCourse: action.professionalLearningCourse,
+      deeperLearningCourse: action.deeperLearningCourse,
       saveAnswersBeforeNavigation: action.saveAnswersBeforeNavigation,
-      lessons: processedLessons(lessons, action.professionalLearningCourse),
+      lessons: processedLessons(lessons, action.deeperLearningCourse),
       lessonGroups: action.lessonGroups,
       peerReviewLessonInfo: action.peerReviewLessonInfo,
       scriptId: action.scriptId,
@@ -341,10 +341,10 @@ const userProgressFromServer = (state, dispatch, userId = null) => {
 
     // We are on an overview page if currentLevelId is undefined.
     const onOverviewPage = !state.currentLevelId;
-    // Show lesson plan links and other teacher info if teacher and on unit overview page.
+    // Show lesson plan links and other teacher info if instructor and on unit overview page.
     if (
-      (data.isTeacher || data.teacherViewingStudent) &&
-      !data.professionalLearningCourse &&
+      (data.isInstructor || data.teacherViewingStudent) &&
+      !data.deeperLearningCourse &&
       onOverviewPage
     ) {
       // Default to summary view if teacher is viewing their student, otherwise default to detail view.
@@ -388,7 +388,7 @@ const userProgressFromServer = (state, dispatch, userId = null) => {
 // Action creators
 export const initProgress = ({
   currentLevelId,
-  professionalLearningCourse,
+  deeperLearningCourse,
   saveAnswersBeforeNavigation,
   lessons,
   lessonGroups,
@@ -406,7 +406,7 @@ export const initProgress = ({
 }) => ({
   type: INIT_PROGRESS,
   currentLevelId,
-  professionalLearningCourse,
+  deeperLearningCourse,
   saveAnswersBeforeNavigation,
   lessons,
   lessonGroups,
@@ -522,6 +522,7 @@ const lessonFromLesson = lesson =>
     'lessonNumber',
     'lessonStartUrl',
     'lesson_plan_html_url',
+    'lesson_feedback_url',
     'student_lesson_plan_html_url',
     'description_student',
     'description_teacher'

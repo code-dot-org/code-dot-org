@@ -19,7 +19,7 @@ class Pd::DistrictPaymentTerm < ApplicationRecord
     RATE_DAILY = 'daily'.freeze
   ].freeze
 
-  belongs_to :school_district
+  belongs_to :school_district, optional: true
 
   validates_inclusion_of :rate_type, in: RATE_TYPES
 end

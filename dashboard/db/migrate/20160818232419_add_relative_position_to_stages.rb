@@ -6,7 +6,7 @@ class AddRelativePositionToStages < ActiveRecord::Migration[4.2]
     Stage.reset_column_information
     # Go through each script, and calculate relative_position for lockable/unlockable
     # stages
-    Script.all.each do |script|
+    Unit.all.each do |script|
       lockable_count = 0
       nonlockable_count = 0
       # depend on the fact that stages are ordered by absolute_position
@@ -28,7 +28,6 @@ class AddRelativePositionToStages < ActiveRecord::Migration[4.2]
       end
     end
     change_column_null :stages, :relative_position, false
-
   rescue
     # If an exception occurs, back out of this migration, but ignore any
     # exceptions generated there. Do the best you can.

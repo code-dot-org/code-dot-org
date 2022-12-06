@@ -22,7 +22,7 @@ def update_email(old_email, new_email)
   end
   puts "Update #{old_email} with #{new_email}? (y/N)"
 
-  unless STDIN.readline.strip.downcase == 'y'
+  unless STDIN.readline.strip.casecmp?('y')
     puts 'Canceled.'
     exit
   end
@@ -39,10 +39,10 @@ def update_email(old_email, new_email)
 end
 
 if ARGV.count != 2
-  puts <<EOS
-Usage: #{$0} old_email_address new_email_address
-  Updates all form data from the old_email_address with the new one.
-EOS
+  puts <<~EOS
+    Usage: #{$0} old_email_address new_email_address
+      Updates all form data from the old_email_address with the new one.
+  EOS
   exit(-1)
 end
 old_email, new_email = ARGV

@@ -4,7 +4,6 @@ import * as color from '../util/color';
 import {getAppWidth, APP_HEIGHT} from './constants';
 import React from 'react';
 import PropTypes from 'prop-types';
-import Radium from 'radium';
 import Visualization from './Visualization';
 import CompletionButton from '../templates/CompletionButton';
 import PlaySpaceHeader from './PlaySpaceHeader';
@@ -86,6 +85,8 @@ class ApplabVisualizationColumn extends React.Component {
       widgetMode
     } = this.props;
 
+    const maxWidth = !isResponsive ? {maxWidth: nonResponsiveWidth} : {};
+
     let visualization = [
       <Visualization key="1" />,
       isIframeEmbed && !isRunning && (
@@ -118,7 +119,7 @@ class ApplabVisualizationColumn extends React.Component {
       <div
         id="visualizationColumn"
         className={this.getClassNames()}
-        style={[!isResponsive && {maxWidth: nonResponsiveWidth}]}
+        style={maxWidth}
       >
         {!isReadOnlyWorkspace && (
           <PlaySpaceHeader
@@ -197,4 +198,4 @@ export default connect(state => ({
   playspacePhoneFrame: state.pageConstants.playspacePhoneFrame,
   pinWorkspaceToBottom: state.pageConstants.pinWorkspaceToBottom,
   widgetMode: state.pageConstants.widgetMode
-}))(Radium(ApplabVisualizationColumn));
+}))(ApplabVisualizationColumn);

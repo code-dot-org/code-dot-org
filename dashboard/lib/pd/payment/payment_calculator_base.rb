@@ -147,7 +147,7 @@ module Pd::Payment
     #   Map of enrollment id to raw attendance totals for that teacher.
     # @return [Array<TeacherSummary>] summary for each teacher.
     def construct_teacher_summaries(workshop_summary, raw_teacher_attendance)
-      enrollments_by_id = workshop_summary.workshop.enrollments.with_deleted.map {|e| [e.id, e]}.to_h
+      enrollments_by_id = workshop_summary.workshop.enrollments.with_deleted.index_by(&:id)
 
       # Generate a teacher summary for all teachers in raw attendance.
       raw_teacher_attendance.map do |enrollment_id, raw_attendance|
@@ -221,12 +221,12 @@ module Pd::Payment
       rate = district_payment_term.rate
 
       case district_payment_term.rate_type
-        when Pd::DistrictPaymentTerm::RATE_HOURLY
-          return hours * rate
-        when Pd::DistrictPaymentTerm::RATE_DAILY
-          return days * rate
-        else
-          raise "Unexpected district payment term rate type #{district_payment_term.rate_type} for id #{district_payment_term.id}"
+      when Pd::DistrictPaymentTerm::RATE_HOURLY
+        return hours * rate
+      when Pd::DistrictPaymentTerm::RATE_DAILY
+        return days * rate
+      else
+        raise "Unexpected district payment term rate type #{district_payment_term.rate_type} for id #{district_payment_term.id}"
       end
     end
   end

@@ -45,7 +45,7 @@ def main
   end
 
   print "Kill tests on #{rack_env}? (Y/N): "
-  return unless gets.chomp.upcase == 'Y'
+  return unless gets.chomp.casecmp?('Y')
 
   print_and_chat "killing tests via #{$0}"
   kill_tests

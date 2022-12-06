@@ -8,8 +8,14 @@
 #To use a different locale, set it with `I18n.locale`:
 #I18n.locale = :es
 #This would use the information in config/locales/es.yml.
+#The following keys must be escaped otherwise they will not be retrieved by
+#the default I18n backend:
+#true, false, on, off, yes, no
+#Instead, surround them with single quotes.
+#en:
+#'true': 'foo'
 #To learn more, please read the Rails Internationalization guide
-#available at http://guides.rubyonrails.org/i18n.html.
+#available at https://guides.rubyonrails.org/i18n.html.
 sv:
   errors:
     messages:
@@ -312,7 +318,6 @@ sv:
     popup:
       progress_for_user: "%{name}s framsteg"
       progress: 'Dina framsteg'
-      lines: 'Totalt antal rader kod: %{lines}'
       close: 'STÄNG'
       mastery: 'koncept'
       puzzle_map: 'Nivåer'
@@ -410,6 +415,7 @@ sv:
     no_primary_course: "Prova en kurs på Code Studio"
     choose_next_course: "Prova en Code Studio kurs genom att välja en nedan"
     print_certificate: "Skriv ut intyg"
+  certificate_hour_of_code: "Timmen med Kod"
   move_students:
     new_section_dne: "Ledsen, men avsnittet %{new_section_code} existerar inte. Ange koden för ett annat avsnitt."
     section_code_cant_be_current_section: "Det aktuella avsnittet kan inte vara samma som det nya avsnittet."
@@ -836,12 +842,12 @@ sv:
         codecademy: 'CodeCademy'
         khan: 'Khan Academy'
         kodable: 'Kodable'
-        other: "Övrigt:"
+        other: "Annat"
       robotics:
         kodable: 'Kodable'
         microbit: 'Microbit'
         raspberry: 'Raspberry Pi'
-        other: "Övrigt:"
+        other: "Annat"
       email_opt_in:
         opt_in_yes: 'Ja'
         opt_in_no: 'Nej'
@@ -854,3 +860,5 @@ sv:
     text: "**Är du förälder eller vårdnadshavare?** Koppla din e-post till det här kontot för att hålla dig uppdaterad om ditt barns framsteg och projekt!"
     link_your_email: "Koppla din e-postadress"
     not_now: "Inte nu"
+  pixelation:
+    binary: "Binära"

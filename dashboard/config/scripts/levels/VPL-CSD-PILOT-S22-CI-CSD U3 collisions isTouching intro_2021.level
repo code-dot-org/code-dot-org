@@ -65,24 +65,24 @@
     "parent_level_id": 20819,
     "name_suffix": "_2021",
     "reference_links": [
-      "/docs/concepts/game-lab/sprites/velocity/",
-      "/docs/concepts/javascript/booleans-and-comparison-operators/",
-      "/docs/concepts/javascript/if-statements/",
-      "/docs/concepts/javascript/if-else-statements/",
-      "/docs/concepts/game-lab/the-draw-loop/",
-      "/docs/concepts/game-lab/animation-tab/multi-frame-animations/"
+      "/courses/vpl-csd-summer-pilot-ci-2022/guides/velocity",
+      "/courses/vpl-csd-summer-pilot-ci-2022/guides/booleans-and-comparison-operators",
+      "/courses/vpl-csd-summer-pilot-ci-2022/guides/if-statements",
+      "/courses/vpl-csd-summer-pilot-ci-2022/guides/if-else-statements",
+      "/courses/vpl-csd-summer-pilot-ci-2022/guides/the-draw-loop",
+      "/courses/vpl-csd-summer-pilot-ci-2022/guides/multi-frame-animations"
     ],
-    "map_reference": "/docs/concepts/game-lab/sprites/collision-detection/",
+    "map_reference": "/courses/vpl-csd-summer-pilot-ci-2022/guides/collision-detection",
     "mini_rubric": "false",
     "encrypted": "false",
     "libraries_enabled": "false",
     "preload_asset_list": null
   },
-  "game_id": 50,
-  "published": true,
-  "created_at": "2022-03-30T19:48:05.000Z",
   "level_num": "custom",
+  "game_id": 50,
+  "created_at": "2022-03-30T19:48:05.000Z",
   "user_id": 324,
+  "published": true,
   "notes": "",
   "audit_log": "[{\"changed_at\":\"2022-03-30T19:48:05.291+00:00\",\"changed\":[\"cloned from \\\"CSD U3 collisions isTouching intro_2021\\\"\"],\"cloned_from\":\"CSD U3 collisions isTouching intro_2021\"},{\"changed_at\":\"2022-03-30 19:50:21 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":962,\"changed_by_email\":\"jess@code.org\"},{\"changed_at\":\"2022-03-30 19:52:13 +0000\",\"changed\":[\"code_functions\",\"start_blocks\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":962,\"changed_by_email\":\"jess@code.org\"},{\"changed_at\":\"2022-03-30 20:07:55 +0000\",\"changed\":[\"code_functions\",\"embed\",\"long_instructions\",\"validation_enabled\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":962,\"changed_by_email\":\"jess@code.org\"},{\"changed_at\":\"2022-03-30 20:56:29 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":962,\"changed_by_email\":\"jess@code.org\"}]"
 }]]></config>

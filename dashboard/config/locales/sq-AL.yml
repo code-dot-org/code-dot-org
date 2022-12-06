@@ -316,7 +316,6 @@ sq:
     popup:
       progress_for_user: Progresi i %{name}
       progress: Progresi yt
-      lines: 'Totali i rreshtave të kodit: %{lines}'
       close: MBYLL
       mastery: Konceptet
       puzzle_map: Fazat
@@ -417,6 +416,7 @@ sq:
     no_primary_course: Provo një kurs të Code Studio
     choose_next_course: Provo një kurs nga Studio e Kodimit duke zgjedhur një më poshtë
     print_certificate: Printo Certifikatën
+  certificate_hour_of_code: Ora e Kodimit
   move_students:
     new_section_dne: Na vjen keq, por seksioni %{new_section_code} nuk ekziston. Ju
       lutem, jepni një tjetër kod seksioni.
@@ -897,11 +897,14 @@ sq:
         math: Matematikë
         science: Shkencë
         la: Gjuha e arteve
+        other: Të tjera/ë
       resources:
         kodable: Kodable
         lightbot: Lightbot
+        other: Të tjera/ë
       robotics:
         kodable: Kodable
+        other: Të tjera/ë
       email_opt_in:
         opt_in_yes: Po
         opt_in_no: Jo
@@ -909,3 +912,5 @@ sq:
     accept: Pranoj
   copy: Kopjo
   confirm: Konfirmo
+  pixelation:
+    binary: Binare

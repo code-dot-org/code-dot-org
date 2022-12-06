@@ -987,7 +987,8 @@ export function generateDropletModeOptions(config) {
     },
     lockZeroParamFunctions: config.level.lockZeroParamFunctions,
     lockFunctionDropIntoKnownParams: config.lockFunctionDropIntoKnownParams,
-    paramButtonsForUnknownFunctions: true
+    paramButtonsForUnknownFunctions: true,
+    createSocketForKnownBlock: true
   };
 }
 

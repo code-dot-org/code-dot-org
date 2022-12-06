@@ -1,7 +1,6 @@
 import React from 'react';
 import color from '../util/color';
 import PropTypes from 'prop-types';
-import Radium from 'radium';
 import dom from '../dom';
 
 const style = {
@@ -47,7 +46,8 @@ class SpeedSlider extends React.Component {
     style: PropTypes.object,
     value: PropTypes.number.isRequired,
     lineWidth: PropTypes.number,
-    onChange: PropTypes.func.isRequired
+    onChange: PropTypes.func.isRequired,
+    className: PropTypes.string
   };
 
   state = {
@@ -152,7 +152,7 @@ class SpeedSlider extends React.Component {
     let clampedValue = this.clampValue(props.value);
     let knobXPosition = knobXMin + trackLength * clampedValue - knobWidth / 2;
     return (
-      <div id="slider-cell" style={props.style}>
+      <div id="slider-cell" style={props.style} className={props.className}>
         <svg width={knobXMax + 10} height="35" ref={el => (this.SVG_ = el)}>
           {/*<!-- Slow icon. -->*/}
           <clipPath id="slowClipPath">
@@ -206,4 +206,4 @@ class SpeedSlider extends React.Component {
   }
 }
 
-export default Radium(SpeedSlider);
+export default SpeedSlider;

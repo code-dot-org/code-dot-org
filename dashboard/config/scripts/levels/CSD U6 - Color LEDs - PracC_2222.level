@@ -81,13 +81,13 @@
     "widget_mode": "false",
     "ai_enabled": "false",
     "reference_links": [
-      "/docs/concepts/maker-toolkit/color-lights/",
-      "/docs/concepts/javascript/if-statements/",
-      "/docs/concepts/javascript/variables/",
-      "/docs/concepts/javascript/booleans-and-comparison-operators/",
-      "/docs/concepts/maker-toolkit/physical-input/",
-      "/docs/concepts/maker-toolkit/producing-output/",
-      "/docs/concepts/maker-toolkit/board-events/"
+      "/courses/csd-2022/guides/color-lights",
+      "/courses/csd-2022/guides/if-statements",
+      "/courses/csd-2022/guides/variables",
+      "/courses/csd-2022/guides/booleans-and-comparison-operators",
+      "/courses/csd-2022/guides/physical-input",
+      "/courses/csd-2022/guides/producing-output",
+      "/courses/csd-2022/guides/board-events"
     ],
     "callout_json": "[]",
     "start_blocks": "onEvent(\"onButton\", \"click\", function( ) {\r\n  //1) When you press the onButton, the alarm turns on with lights and sound\r\n  \r\n});\r\n\r\nonEvent(\"offButton\", \"click\", function( ) {\r\n  //2) When you press the offButton, all lights and sound turn off\r\n  \r\n});\r\n\r\n",
@@ -98,11 +98,11 @@
     "encrypted_examples": "hz2m3TbNkSY4HogiyTg9TKqvdFN6W/sU/GSCpbe1rpj5lPTI6G1XbUMRihHP\n8w6vfQH1D/bCSrqjCIkeo1hvSg==\n",
     "preload_asset_list": null
   },
-  "game_id": 41,
-  "published": true,
-  "created_at": "2022-04-08T17:03:06.000Z",
   "level_num": "custom",
+  "game_id": 41,
+  "created_at": "2022-04-08T17:03:06.000Z",
   "user_id": 1,
+  "published": true,
   "notes": "",
   "audit_log": "[{\"changed_at\":\"2022-04-08T17:03:06.460+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Color LEDs - PracC_2022\\\"\"],\"cloned_from\":\"CSD U6 - Color LEDs - PracC_2022\"},{\"changed_at\":\"2022-04-08 22:18:02 +0000\",\"changed\":[\"code_functions\",\"thumbnail_url\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-04-15 21:20:30 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>

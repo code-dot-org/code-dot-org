@@ -253,6 +253,11 @@ km:
             '"space"': លំហ​អាកាស
             '"x"': x
             '"y"': 'y'
+      DansBlocks_setForegroundEffect2:
+        options:
+          EFFECT:
+            '"hearts"': បេះដូង
+            '"rain"': ភ្លៀង
       gamelab_atTime:
         options:
           UNIT:
@@ -322,6 +327,12 @@ km:
             '90': ចុះ
             '180': ឆ្វេង
             '270': ឡើង
+      gamelab_makeSpritesWithSize:
+        options:
+          SIZE:
+            '30': small
+            '50': មធ្យម
+            '100': large
       gamelab_mirrorSprite:
         options:
           DIRECTION:
@@ -658,3 +669,8 @@ km:
         text: រំកិល​ទៅមុខ
       craft_placeTorch:
         text: ដាក់ភ្លើងគប់
+      storylab_setForegroundEffect2:
+        options:
+          EFFECT:
+            '"hearts"': បេះដូង
+            '"rain"': ភ្លៀង

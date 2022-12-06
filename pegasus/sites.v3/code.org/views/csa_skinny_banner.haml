@@ -1,0 +1,19 @@
+- if request.locale == "en-US" && !!DCDO.get('csa-skinny-banner', false)
+  = inline_css 'csa_skinny_banner.css'
+  - header_text = 'A new approach to AP® CSA!'
+  - text = "Creative projects and real world connections in our equity-driven curriculum"
+  - image = "/images/csa/csa-skinny-banner-image.png"
+
+  .csa-skinny-banner
+    %a{href: link_address, title: "Learn more about Code.org's AP® CSA curriculum"}
+      .wrapper
+        .text-wrapper
+          .header= header_text
+          .text= text
+        .img-wrapper
+          %img{src: image}
+        .button-wrapper
+          %button
+            #{button_label}
+
+  .clear

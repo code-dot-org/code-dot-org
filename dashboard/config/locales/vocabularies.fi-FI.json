@@ -35,14 +35,14 @@
         "debugging/gumball/unversioned": {
           "word": "Virheen etsintä"
         },
-        "debugging/aquatic/unversioned": {
-          "word": "Virheen etsintä"
-        },
         "condition/aquatic/unversioned": {
           "word": "Ehtolause"
         },
         "conditionals/aquatic/unversioned": {
           "word": "Ehtolausekkeet"
+        },
+        "debugging/aquatic/unversioned": {
+          "word": "Virheen etsintä"
         },
         "loops/aquatic/unversioned": {
           "word": "Silmukat"
@@ -59,6 +59,14 @@
         "debugging/starwarsblocks/unversioned": {
           "word": "Virheen etsintä"
         },
+        "event/outbreak/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "models_and_simulations/outbreak/unversioned": {
+          "word": "",
+          "definition": ""
+        },
         "code/sports/unversioned": {
           "word": "Koodi"
         },
@@ -71,8 +79,127 @@
         "debugging/basketball/unversioned": {
           "word": "Virheen etsintä"
         },
+        "debugging/coursed/2022": {
+          "word": "Virheen etsintä"
+        },
+        "conditionals/coursed/2022": {
+          "word": "Ehtolausekkeet"
+        },
+        "condition/coursed/2022": {
+          "word": "Ehtolause"
+        },
+        "variable/coursef/2022": {
+          "word": "Muuttuja"
+        },
+        "input/coursef/2022": {
+          "word": "Syöte"
+        },
+        "internet/coursef/2022": {
+          "word": "Internet"
+        },
+        "define/coursef/2022": {
+          "word": "Määritä"
+        },
+        "function/coursee/2022": {
+          "word": "Funktio"
+        },
+        "condition/coursee/2022": {
+          "word": "Ehtolause"
+        },
+        "conditionals/coursee/2022": {
+          "word": "Ehtolausekkeet"
+        },
+        "copyright/coursee/2022": {
+          "word": "Copyright"
+        },
+        "define/coursee/2022": {
+          "word": "Määritä"
+        },
+        "debugging/courseb/2022": {
+          "word": "Virheen etsintä"
+        },
+        "drop/courseb/2022": {
+          "word": "Pudota"
+        },
+        "debugging/express/2022": {
+          "word": "Virheen etsintä"
+        },
+        "condition/express/2022": {
+          "word": "Ehtolause"
+        },
+        "conditionals/express/2022": {
+          "word": "Ehtolausekkeet"
+        },
+        "function/express/2022": {
+          "word": "Funktio"
+        },
+        "variable/express/2022": {
+          "word": "Muuttuja"
+        },
+        "define/express/2022": {
+          "word": "Määritä"
+        },
+        "drop/pre-express/2022": {
+          "word": "Pudota"
+        },
+        "debugging/pre-express/2022": {
+          "word": "Virheen etsintä"
+        },
+        "debugging/coursea/2022": {
+          "word": "Virheen etsintä"
+        },
+        "drop/coursea/2022": {
+          "word": "Pudota"
+        },
+        "debugging/coursec/2022": {
+          "word": "Virheen etsintä"
+        },
+        "binary/coursec/2022": {
+          "word": "Binääri"
+        },
+        "input/csd/2022": {
+          "word": "Syöte"
+        },
+        "debugging/csd/2022": {
+          "word": "Virheen etsintä"
+        },
+        "variable/csd/2022": {
+          "word": "Muuttuja"
+        },
+        "condition/csd/2022": {
+          "word": "Ehtolause"
+        },
+        "conditionals/csd/2022": {
+          "word": "Ehtolausekkeet"
+        },
+        "abstraction/csd/2022": {
+          "word": "Abstraktio"
+        },
+        "function/csd/2022": {
+          "word": "Funktio"
+        },
+        "copyright/csd/2022": {
+          "word": "Copyright"
+        },
         "code/poem-art/unversioned": {
-          "word": "Koodi"
+          "word": "Koodi",
+          "definition": ""
+        },
+        "event/poem-art/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "program/poem-art/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "mood/poem-art/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "line/poem-art/unversioned": {
+          "word": "",
+          "definition": ""
         },
         "variable/coursef/2021": {
           "word": "Muuttuja"

@@ -8,8 +8,14 @@
 #To use a different locale, set it with `I18n.locale`:
 #I18n.locale = :es
 #This would use the information in config/locales/es.yml.
+#The following keys must be escaped otherwise they will not be retrieved by
+#the default I18n backend:
+#true, false, on, off, yes, no
+#Instead, surround them with single quotes.
+#en:
+#'true': 'foo'
 #To learn more, please read the Rails Internationalization guide
-#available at http://guides.rubyonrails.org/i18n.html.
+#available at https://guides.rubyonrails.org/i18n.html.
 bn:
   errors:
     messages:
@@ -246,6 +252,7 @@ bn:
     try_beta_courses: 'নতুন! প্রাথমিক শ্রেণীর  শিক্ষার্থীদের জন্য পরীক্ষামূলক কোর্স ব্যাবহার করে দেখুন।'
     use_as_teacher: 'শিক্ষক হিসেবে এই সাইটটি ব্যবহার করুন'
     your_gallery: সংগ্রহশালা
+  certificate_hour_of_code: "এক ঘন্টার কোড"
   gender:
     male: 'পুরুষ'
     female: 'মহিলা'
@@ -400,13 +407,18 @@ bn:
       subjects:
         cs: 'কম্পিউটার বিজ্ঞান'
         math: 'গণিত'
+        other: "অন্যান্য"
       resources:
         kodable: 'কোডাবল'
+        other: "অন্যান্য"
       robotics:
         kodable: 'কোডাবল'
+        other: "অন্যান্য"
       email_opt_in:
         opt_in_yes: '"হ্যাঁ"'
         opt_in_no: 'না'
   cookie_banner:
     accept: 'আমি একমত'
   copy: 'অনুলিপি'
+  pixelation:
+    binary: "দ্বি-আঙ্কিক"

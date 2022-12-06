@@ -1,7 +1,7 @@
 <Pixelation>
   <config><![CDATA[{
   "properties": {
-    "long_instructions": "# Do This\r\n\r\nPractice using 1 as \"on\" and 0 as \"off\" to complete the \"X\" shape. ",
+    "long_instructions": "# Do This\r\n\r\nUsing 1 as \"on\" and 0 as \"off\" to complete the \"X\" shape. ",
     "instructions_important": "false",
     "display_name": "Black and White Pixelation Widget",
     "version": "1",
@@ -24,6 +24,6 @@
   "level_num": "custom",
   "user_id": 106,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-05-05T16:58:41.034+00:00\",\"changed\":[\"cloned from \\\"CSD U5 black white images pixelation_2022\\\"\"],\"cloned_from\":\"CSD U5 black white images pixelation_2022\"},{\"changed_at\":\"2022-05-05 18:09:14 +0000\",\"changed\":[\"long_instructions\",\"short_instructions\"],\"changed_by_id\":962,\"changed_by_email\":\"jess@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-05-05T16:58:41.034+00:00\",\"changed\":[\"cloned from \\\"CSD U5 black white images pixelation_2022\\\"\"],\"cloned_from\":\"CSD U5 black white images pixelation_2022\"},{\"changed_at\":\"2022-05-05 18:09:14 +0000\",\"changed\":[\"long_instructions\",\"short_instructions\"],\"changed_by_id\":962,\"changed_by_email\":\"jess@code.org\"},{\"changed_at\":\"2022-05-06 14:41:02 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":962,\"changed_by_email\":\"jess@code.org\"}]"
 }]]></config>
 </Pixelation>

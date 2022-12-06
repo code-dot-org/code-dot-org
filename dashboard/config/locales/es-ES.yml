@@ -40,6 +40,7 @@ es:
           tienes correo electrónico)](%{url})
         username: nombre de usuario
         password: Contraseña
+        verified_teacher: Profesor Verificado
         password_confirmation: Confirmación de la contraseña
         current_password: Contraseña actual
         locale: Idioma
@@ -248,12 +249,11 @@ es:
     share_teacher_email_reg_partner_preference_no: 'No'
     share_teacher_email_reg_partner_preference_required: Debes especificar una preferencia
       de correo electrónico.
-    parent_account_checkbox: Som rodič/zákonný zástupca, ktorý sa prihlasuje v mene
-      svojho dieťaťa
-    parent_account_email_progress_permission: Môžeme vám poslať e-mail s príležitostnými
-      aktualizáciami o pokroku a projektoch vášho dieťaťa a aktualizáciami o kurze
-      a informatike? [(Pozrite si naše pravidlá ochrany osobných údajov)]%{privacy_policy_url}
-    parent_account_email_label: E-mail rodiča/zákonného zástupcu
+    parent_account_checkbox: Soy padre o tutor registrándose en lugar de mi hijo
+    parent_account_email_progress_permission: "¿Podemos enviarle emails con para contarle
+      sobre el rendimiento y los proyectos de su hijo? Tambien mandaremos informacion
+      sobre los cursos de ciencias computacionales [(Mira nuestra política de privacidad)](%{privacy_policy_url})"
+    parent_account_email_label: Correo electrónico del padre o tutor
   school_info:
     title: Información de la escuela (opcional)
     school_country: País en el que está la escuela
@@ -432,6 +432,7 @@ es:
       educate_beyond: Más allá de Code.org
       educate_inspire: Inspire a un estudiante
       educate_community: Comunidad en línea
+      educate_requirements: Requisitos Técnicos
       educate_tools: Herramientas y videos
       about_us: Acerca de nosotros
       about_leadership: Liderazgo
@@ -450,6 +451,7 @@ es:
       about: Acerca de
       legal: Privacidad y Legalidad
       legal_privacy: Política de Privacidad
+      legal_cookie_notice: Aviso de Cookies
       legal_tos: Términos de uso
     user:
       classroom: Página de inicio del maestro
@@ -506,7 +508,6 @@ es:
     popup:
       progress_for_user: progreso de %{name}
       progress: Tu progreso
-      lines: 'Total de líneas de código: %{lines}'
       close: CERRAR
       mastery: Conceptos
       puzzle_map: Etapas
@@ -673,6 +674,7 @@ es:
     print_certificate: Imprimir Certificado
   certificate_sponsor_message: "%{sponsor_name} hizo el generoso gesto de patrocinar
     tu aprendizaje."
+  certificate_hour_of_code: Hora del Código
   move_students:
     new_section_dne: Lo sentimos, pero no existe la sección %{new_section_code}. Ingresa
       un código de sección diferente.
@@ -757,6 +759,7 @@ es:
     try_hour_of_code: "¡Prueba una Hora de Code!"
     store: Tienda
     cookie_notice: Aviso de Cookies
+    view_code: Ver Código
   reference_area:
     title: "¿Necesitas ayuda?"
     subtitle: Ver estos vídeos y sugerencias
@@ -838,6 +841,13 @@ es:
       title: Fiesta de Baile
     dance-2019:
       title: Fiesta de Baile
+    hello-world:
+      title: Hola Mundo
+      body: Elige entre cuatro temas divertidos para codificar personajes interactivos
+        en un mundo creado por ti.
+    poem-art:
+      title: Arte del Poema
+      body: "¡Exprésate! Utiliza el código para crear poemas animados."
     hoc:
       title: Laberinto clásico
       body: Prueba los fundamentos de la Ciencia de la Computación. Millones lo han
@@ -1061,16 +1071,6 @@ es:
       podrían no estar disponibles para tus estudiantes si no aceptas explícitamente
       los términos actualizados.
     review_terms: Revisa los términos actualizados
-  donor_interstitial:
-    title: Tus cursos gratis de Ciencia de Computación son posible por...
-    subtitle: Agradecemos los donantes generosos cuyos apoyos hizo posible el éxito
-      de Code.org. Cometemos a hacer Code.org gratis para todas las escuelas y los
-      estudiantes, globalmente, ¡gracias a la generosidad de nuestros [donors](%{donors_url})!
-    local_supporters: Simpatizantes Locales
-    global_supporters: Simpatizantes Globales
-    support_codeorg_1: Cada dólar dado a Code.org trae oportunidad a más estudiantes.
-    support_codeorg_2: "[Dona ahora](%{donate_url}) para apoyar Code.org."
-    get_started: Empieza en Code.org
   school_info_interstitial:
     title: Queremos que cada estudiante pueda acceder a las Ciencias de la Computación.
       ¡Ayúdanos a seguir nuestro progreso!
@@ -1340,12 +1340,15 @@ es:
         not_listed: El término preferido no aparece
         none: Prefiero no contestar
       school_country:
+        barbados: Barbados
+        belize: Belice
         canada: Canadá
         chile: Chile
         colombia: Colombia
         israel: Israel
         malaysia: Malasia
         mexico: México
+        paraguay: Paraguay
         thailand: Tailandia
         uzbekistan: Uzbekistán
       ages:
@@ -1368,6 +1371,7 @@ es:
         music: Música
         art: Arte
         other: 'Otros:'
+        na: No aplicable
       resources:
         bootstrap: Bootstrap
         codecademy: CodeCademy
@@ -1377,7 +1381,8 @@ es:
         lightbot: Lightbot
         scratch: Scratch
         tynker: Tynker
-        other: 'Otros:'
+        other: Otros
+        na: No aplicable
       robotics:
         grok: Grok Learning
         kodable: Kodable
@@ -1387,7 +1392,8 @@ es:
         sphero: Sphero
         raspberry: Raspberry Pi
         wonder: Wonder Workshop
-        other: 'Otros:'
+        other: Otros
+        na: No aplicable
       workshop_course:
         csf_af: Fundamentos de Ciencias de la Computación (cursos A-F)
         csf_express: Fundamentos de Informática (Pre-Exprés o Exprés)
@@ -1467,3 +1473,12 @@ es:
   unit_prefix: Unidad %{n}
   code_org_logo_alt: Inicio de Code.org
   teacher_feedback: Retroalimentación del docente
+  lesson_lock:
+    error:
+      no_updates: No hay actualizaciones disponibles
+      missing_params: Debe proporcionar los ID de usuario, nivel y unidad
+      cannot_view_locked_answers: No se pueden ver las respuestas mientras están bloqueadas
+      forbidden: El usuario no puede actualizar el estado bloqueable del estudiante
+  reset_predict_progress_button: Borrar respuesta
+  pixelation:
+    binary: Binario

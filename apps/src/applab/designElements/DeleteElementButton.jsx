@@ -1,8 +1,8 @@
 import React from 'react';
-import color from '../../util/color';
 import commonStyles from '../../commonStyles';
 import PropTypes from 'prop-types';
-import Radium from 'radium';
+import classNames from 'classnames';
+import style from './delete-element-button.module.scss';
 
 /**
  * A delete button that will also ask for confirmation when shouldConfirm is
@@ -33,11 +33,12 @@ class DeleteElementButton extends React.Component {
   render() {
     if (this.state.confirming) {
       return (
-        <div style={[styles.right, styles.confirming]}>
+        <div className={classNames(style.right, style.confirming)}>
           Delete?
           <button
             type="button"
-            style={[commonStyles.button, styles.red]}
+            className={style.red}
+            style={commonStyles.button}
             onClick={this.finishDelete}
           >
             Yes
@@ -56,7 +57,8 @@ class DeleteElementButton extends React.Component {
       <div>
         <button
           type="button"
-          style={[commonStyles.button, styles.red, styles.right]}
+          style={commonStyles.button}
+          className={classNames(style.red, style.right)}
           onClick={this.handleDeleteInternal}
         >
           Delete
@@ -66,17 +68,4 @@ class DeleteElementButton extends React.Component {
   }
 }
 
-const styles = {
-  right: {
-    float: 'right'
-  },
-  confirming: {
-    marginLeft: 20
-  },
-  red: {
-    backgroundColor: color.red,
-    color: color.white
-  }
-};
-
-export default Radium(DeleteElementButton);
+export default DeleteElementButton;

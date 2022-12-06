@@ -9,7 +9,7 @@ class CreateUsersView < ActiveRecord::Migration[5.0]
 
   def down
     # Create the view again manually if the attempt to create it with Scenic failed.
-    DASHBOARD_REPORTING_DB_WRITER.run <<-multiline
+    DASHBOARD_REPORTING_DB_WRITER.run <<-MULTILINE
       CREATE OR REPLACE VIEW users_view AS
       SELECT
         users.id, studio_person_id,
@@ -25,6 +25,6 @@ class CreateUsersView < ActiveRecord::Migration[5.0]
       FROM users
       LEFT JOIN authentication_options
         ON users.primary_contact_info_id = authentication_options.id
-    multiline
+    MULTILINE
   end
 end

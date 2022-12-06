@@ -6,6 +6,7 @@ class HomeController < ApplicationController
   include UsersHelper
   include SurveyResultsHelper
   include TeacherApplicationHelper
+  include IncubatorHelper
 
   # Don't require an authenticity token on set_locale because we post to that
   # action from publicly cached page without a valid token. The worst case impact
@@ -104,7 +105,7 @@ class HomeController < ApplicationController
 
     @homepage_data = {}
     @homepage_data[:isEnglish] = request.language == 'en'
-    @homepage_data[:locale] = Script.locale_english_name_map[request.locale]
+    @homepage_data[:locale] = Unit.locale_english_name_map[request.locale]
     @homepage_data[:localeCode] = request.locale
     @homepage_data[:canViewAdvancedTools] = !(current_user.under_13? && current_user.terms_version.nil?)
     @homepage_data[:providers] = current_user.providers
@@ -129,7 +130,7 @@ class HomeController < ApplicationController
     exclude_primary_script = true
     @homepage_data[:courses] = current_user.recent_student_courses_and_units(exclude_primary_script)
 
-    @homepage_data[:hasFeedback] = current_user.student? && TeacherFeedback.has_feedback?(current_user.id)
+    @homepage_data[:hasFeedback] = TeacherFeedback.has_feedback?(current_user.id)
 
     script = Queries::ScriptActivity.primary_student_unit(current_user)
     if script
@@ -184,13 +185,14 @@ class HomeController < ApplicationController
       @homepage_data[:joined_student_sections] = current_user&.sections_as_student_participant&.map(&:summarize_without_students)
       @homepage_data[:joined_pl_sections] = current_user&.sections_as_pl_participant&.map(&:summarize_without_students)
       @homepage_data[:announcement] = DCDO.get('announcement_override', nil)
-      @homepage_data[:hiddenScripts] = current_user.get_hidden_script_ids
+      @homepage_data[:hiddenScripts] = current_user.get_hidden_unit_ids
       @homepage_data[:showCensusBanner] = show_census_banner
       @homepage_data[:showNpsSurvey] = show_nps_survey?
       @homepage_data[:showFinishTeacherApplication] = has_incomplete_application?
       @homepage_data[:showReturnToReopenedTeacherApplication] = has_reopened_application?
       @homepage_data[:donorBannerName] = donor_banner_name
       @homepage_data[:specialAnnouncement] = Announcements.get_announcement_for_page("/home")
+      @homepage_data[:showIncubatorBanner] = show_incubator_banner?
 
       if show_census_banner
         teachers_school = current_user.school_info.school

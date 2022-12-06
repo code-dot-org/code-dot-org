@@ -17,7 +17,7 @@ class AssignableCourseTests < ActiveSupport::TestCase
   end
 
   test 'course_assignable? is false if can not be instructor of course' do
-    pl_course = create :script, instructor_audience: SharedCourseConstants::INSTRUCTOR_AUDIENCE.facilitator, participant_audience: SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher
+    pl_course = create :script, instructor_audience: Curriculum::SharedCourseConstants::INSTRUCTOR_AUDIENCE.facilitator, participant_audience: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher
 
     refute pl_course.course_assignable?(@teacher)
   end

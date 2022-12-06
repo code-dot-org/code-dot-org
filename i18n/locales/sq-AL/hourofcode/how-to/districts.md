@@ -4,9 +4,9 @@ title: Ora e Kodimit Metoda për Shpërndarje
 
 {{ signup_button }}
 
-# How to involve your entire school district
+# Si t'i perfshini te gjitha shkollat ne komunen tuaj? 
 
-### Every school in your district can take part in the largest learning event in history.
+### Cdo shkolle ne komunen tuaj mund te marr pjese ne eventin me te madh te mesimit ne histori.
 
 * * *
 
@@ -16,27 +16,27 @@ title: Ora e Kodimit Metoda për Shpërndarje
 
 Share [this email]({{ promote/sample_emails }}) and [teacher how to guide]({{ urls/how_to_guide }}), or include a [short blurb]({{ promote/stats_url }}) in newsletters/district communications. <br />
 
-### 2. Provide a sample logistics plan for schools
+### Siguro nje plan te logjistikes per shkollat. 
 
-Share this [sample logistics plan]({{ hoc_logistics_plan }}) with schools to give them ideas of how to organize whole school participation. It’s as easy as doing it in every math class, homeroom period, or rotating throughout the week through the computer lab.
+Shperndaje [kete plan logjistik]({{ hoc_logistics_plan }}) me shkollat ne menyre qe te ju jepni atyre nje ide te te gjithe organizimit. Eshte aq e thjeshte sa mund te behet ne cdo klase matematike, ose ne klase/ne laboratorin kompjuterik kur te jete ne dispozicion per klasen tuaj. 
 
-### 3. Share on social media
+### Shperndaje ne rrjete sociale 
 
-Post to [Facebook](https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fhourofcode.com%2Fus) or [Twitter](https://twitter.com/intent/tweet?url=http%3A%2F%2Fhourofcode.com&text=I%27m%20participating%20in%20this%20year%27s%20%23HourOfCode%2C%20are%20you%3F%20%40codeorg&original_referer=https%3A%2F%2Fwww.google.com%2Furl%3Fq%3Dhttps%253A%252F%252Ftwitter.com%252Fshare%253Fhashtags%253D%2526amp%253Brelated%253Dcodeorg%2526amp%253Btext%253DI%252527m%252Bparticipating%252Bin%252Bthis%252Byear%252527s%252B%252523HourOfCode%25252C%252Bare%252Byou%25253F%252B%252540codeorg%2526amp%253Burl%253Dhttp%25253A%25252F%25252Fhourofcode.com%26sa%3DD%26sntz%3D1%26usg%3DAFQjCNE1GLTUbKZfMlEh9Aj5w0iswz6PYQ&related=codeorg&hashtags=). Or share one of these inspirational [pictures and quotes]({{ promote/resources_social }}) from world leaders, or [stats]({{ promote/stats_url }}).
+Posto ne Facebook ose Twitter Ose shperndaj nje nder keto fotografi dhe thenje inspiruese, nga lideret boterore. 
 
-### 4. Promote on your district’s homepage
+### 4. Promovoni ne faqen zyretare te komunes tuaj.
 
-Let visitors know about your participation and Hour of Code events. Link it to [Hour of Code]({{ urls/home }}).
+Njoftoj vizitoret rreth pjesemarrjes dhe ngjarjeve te Ores se Kodit. Lidhe me link me Oren e kodit.
 
-### 5. Host a district Hour of Code event
+### Organizo nje ngjarje te ores se kodit
 
-See our [event how to guide]({{ urls/how_to_events }}) for a sample run of show, media outreach kit, and other supports.
+Shihni guiden e eventit tone, per nje permbledhje te ngjarjes etj.
 
 ## Çfarë vjen pas Orës së Kodimit?
 
 Ora e Kodimit është thjesht hapi i parë i një udhëtimi për të mësuar më shumë se si teknologjia funksionon dhe se si të krijojmë një aplikacion software-ik. Për të vazhduar këtë udhëtim:
 
-- Encourage students to continue to [learn online]({{ urls/learn_beyond }}).
-- [Attend]({{ urls/professional_development_workshops }}) a 1-day, in-person workshop to receive instruction from an experienced computer science facilitator. (US educators only)
+- Inkurajo studentet te vazhdojne te mesojne online
+- Meso me shume rreth implementimit te nje ngjarje shkencash kompjuterike ne komunen tuaj. 
 
 {{ signup_button }}

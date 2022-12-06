@@ -26,23 +26,25 @@ class JavabuilderSessionsController < ApplicationController
     upload_project_files_and_render(session_id, project_files, encoded_payload)
   end
 
-  # GET /javabuilder/access_token_with_override_sources
-  def get_access_token_with_override_sources
+  # POST /javabuilder/access_token_with_override_sources
+  def access_token_with_override_sources
     unless has_required_params?([:overrideSources])
       return render status: :bad_request, json: {}
     end
     override_sources = params[:overrideSources]
+    # channel id is not required but can be included in order to retrieve assets
+    channel_id = params[:channelId]
 
     session_id = SecureRandom.uuid
     encoded_payload = get_encoded_payload({sid: session_id})
 
     level_id = params[:levelId].to_i
-    project_files = JavalabFilesHelper.get_project_files_with_override_sources(override_sources, level_id)
+    project_files = JavalabFilesHelper.get_project_files_with_override_sources(override_sources, level_id, channel_id)
     upload_project_files_and_render(session_id, project_files, encoded_payload)
   end
 
-  # GET /javabuilder/access_token_with_override_validation
-  def get_access_token_with_override_validation
+  # POST /javabuilder/access_token_with_override_validation
+  def access_token_with_override_validation
     unless has_required_params?([:channelId, :overrideValidation])
       return render status: :bad_request, json: {}
     end
@@ -74,9 +76,9 @@ class JavabuilderSessionsController < ApplicationController
     level_id = params[:levelId]
     options = params[:options]
     execution_type = params[:executionType]
-    use_dashboard_sources = 'false'
     mini_app_type = params[:miniAppType]
     options = options ? options.to_json : '{}'
+    can_access_dashboard_assets = !rack_env?(:development)
 
     # Set the IAT a little in the past to account for time drift between environments
     issued_at_time = (Time.now - 5.seconds).to_i
@@ -91,9 +93,9 @@ class JavabuilderSessionsController < ApplicationController
       level_id: level_id,
       execution_type: execution_type,
       mini_app_type: mini_app_type,
-      use_dashboard_sources: use_dashboard_sources,
       options: options,
-      verified_teachers: teacher_list
+      verified_teachers: teacher_list,
+      can_access_dashboard_assets: can_access_dashboard_assets
     }.merge(additional_payload)
 
     log_token_creation(payload)
@@ -101,18 +103,13 @@ class JavabuilderSessionsController < ApplicationController
   end
 
   def get_teacher_list
-    if current_user.permission?(UserPermission::LEVELBUILDER) ||
-      current_user.verified_teacher? ||
-      current_user.has_pilot_experiment?(CSA_PILOT) ||
-      current_user.has_pilot_experiment?(CSA_PILOT_FACILITATORS)
+    if current_user.verified_instructor?
       return [current_user.id]
     end
     teachers = []
-    current_user.teachers.each do |teacher|
-      next unless teacher.verified_teacher? ||
-        teacher.has_pilot_experiment?(CSA_PILOT) ||
-        teacher.has_pilot_experiment?(CSA_PILOT_FACILITATORS)
-      teachers << teacher.id
+    current_user.sections_as_student.each do |section|
+      next unless section.assigned_csa? && section.teacher&.verified_instructor?
+      teachers << section.teacher.id
     end
     teachers.uniq
   end

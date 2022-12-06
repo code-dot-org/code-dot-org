@@ -3,7 +3,7 @@
   %a{href: CDO.studio_url('/s/starwarsblocks')} Star Wars 
   tutorial is supported in the following languages
 %ul
-  - Languages.get_starwars_languages.each do |properties|
+  - PegasusLanguages.get_starwars_languages.each do |properties|
     - if properties[:starwars_b]
       %li= properties[:crowdin_name_s]
 
