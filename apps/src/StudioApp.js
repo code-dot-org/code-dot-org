@@ -1885,6 +1885,7 @@ StudioApp.prototype.fixViewportForSmallScreens_ = function(viewport, config) {
         screen.height
       }, scale: ${scale}`
     );
+    console.log(`device density is ${window.devicePixelRatio}`);
   }
 
   // Setting `minimum-scale=scale` means that we are unable to shrink the
