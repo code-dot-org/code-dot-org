@@ -18,6 +18,7 @@ import {AnalyticsContext} from './context';
 import TopButtons from './TopButtons';
 import Globals from './globals';
 import MusicBlocklyWorkspace from './blockly/MusicBlocklyWorkspace';
+import AppDefaults from './appDefaults';
 
 const baseUrl = 'https://curriculum.code.org/media/musiclab/';
 
@@ -51,6 +52,18 @@ class UnconnectedMusicView extends React.Component {
     this.codeHooks = {};
     this.musicBlocklyWorkspace = new MusicBlocklyWorkspace();
 
+    // Set default for instructions position.
+    let instructionsPosIndex = 1;
+    const defaultInstructionsPos = AppDefaults.getValue(
+      'instructions-position'
+    )?.toUpperCase();
+    if (defaultInstructionsPos) {
+      const posIndex = instructionPositionOrder.indexOf(defaultInstructionsPos);
+      if (posIndex !== -1) {
+        instructionsPosIndex = posIndex;
+      }
+    }
+
     this.state = {
       library: null,
       instructions: null,
@@ -60,7 +73,7 @@ class UnconnectedMusicView extends React.Component {
       updateNumber: 0,
       timelineAtTop: false,
       showInstructions: true,
-      instructionsPosIndex: 1
+      instructionsPosIndex
     };
   }
 
