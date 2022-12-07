@@ -20,8 +20,8 @@ mispipe "bundle install --verbose" ts
 set +x
 echo "
 bundler_use_sudo: false
-cloudfront_key_pair_id: darin-testing
-cloudfront_private_key: \"darin-testing\"
+cloudfront_key_pair_id: $CLOUDFRONT_KEY_PAIR_ID
+cloudfront_private_key: \"$CLOUDFRONT_PRIVATE_KEY\"
 ignore_eyes_mismatches: true
 disable_all_eyes_running: true
 use_my_apps: true
