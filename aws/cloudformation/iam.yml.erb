@@ -316,9 +316,25 @@ Resources:
             Condition:
               StringEquals:
                 SAML:aud: https://signin.aws.amazon.com/saml
+          - Effect: Allow
+            Principal: {Federated: accounts.google.com}
+            Action: sts:AssumeRoleWithWebIdentity
+            Condition:
+              StringEquals:
+                accounts.google.com:aud: '{{resolve:secretsmanager:admin/google_client_id}}'
+              ForAnyValue:StringEquals:
+                accounts.google.com:sub: !GetAtt ContributorGoogleIDs.value
       ManagedPolicyArns:
         - !Ref ContributorS3Policy
         - !Ref ContributorSecretsPolicy
+  
+  ContributorGoogleIDs:
+    Type: AWS::SSM::Parameter
+    Properties:
+      Name: /IAM/ContributorGoogleIDs
+      Type: StringList
+      Value: initial,value
+      Description: List of Google IDs of people being granted contributor access.
   
   ContributorS3Policy:
     Type: AWS::IAM::ManagedPolicy
