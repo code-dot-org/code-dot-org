@@ -1881,7 +1881,9 @@ StudioApp.prototype.fixViewportForSmallScreens_ = function(viewport, config) {
     width = MIN_WIDTH;
     scale = screenWidth / width;
     console.log(
-      `width: ${width}, screenWidth: ${screenWidth}, scale: ${scale}`
+      `width: ${width}, screen width: ${screen.width}, screen height: ${
+        screen.height
+      }, scale: ${scale}`
     );
   }
 
