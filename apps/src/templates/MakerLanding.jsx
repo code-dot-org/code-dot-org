@@ -3,6 +3,7 @@ import TopCourse from './studioHomepages/TopCourse';
 import VerticalImageResourceCardRow from './VerticalImageResourceCardRow';
 import shapes from './studioHomepages/shapes';
 import i18n from '@cdo/locale';
+import Notification, {NotificationType} from '@cdo/apps/templates/Notification';
 
 export default class MakerLanding extends Component {
   static propTypes = {
@@ -36,8 +37,15 @@ export default class MakerLanding extends Component {
       }
     ];
 
+    // decide whether notifications should go in container or not
     return (
       <div style={styles.container}>
+        <Notification
+          type={NotificationType.warning}
+          notice="Maker App Not Supported"
+          details="It's going away"
+          dismissible
+        />
         <h1 style={styles.title}>{i18n.makerPageTitle()}</h1>
         <TopCourse
           assignableName={topCourse.assignableName}
