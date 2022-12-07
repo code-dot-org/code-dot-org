@@ -402,7 +402,7 @@ def distribute_translations(upload_manifests)
       sanitize_file_and_write(loc_file, destination)
     end
 
-    ### Merge ml-playground datasets into apps' ailab JSON
+    ### Merge ml-playground datasets into apps' mlPlayground JSON
     Dir.glob("#{locale_dir}/external-sources/ml-playground/datasets/*.json") do |loc_file|
       ml_playground_path = "apps/i18n/mlPlayground/#{js_locale}.json"
       dataset_id = File.basename(loc_file, '.json')
