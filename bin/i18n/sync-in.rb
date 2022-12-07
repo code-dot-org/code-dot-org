@@ -127,7 +127,7 @@ def localize_docs
       )
 
       ### localize Programming Expressions
-      # expression_docs.properties["syntax"] is not translated as it is the JavaScript exprerssion syntax
+      # expression_docs.properties["syntax"] is not translated as it is the JavaScript expression syntax
       expressions_data = categories_data[category_key]["expressions"]
       category_for_navigation[:docs].each do |expression|
         expression_key = expression[:key]
@@ -144,7 +144,7 @@ def localize_docs
         )
 
         ### Localize Examples
-        # Programming expresions may have 0 or more examples.
+        # Programming expressions may have 0 or more examples.
         # Only example["name"] and example["description"] are translated. example["code"] is NOT translated.
         example_docs = expressions_data[expression_key]["examples"]
         expression_docs.properties['examples']&.each do |example|
