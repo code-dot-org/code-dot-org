@@ -128,7 +128,8 @@ steps:
       - name: mysql
         path: /var/lib/mysql
     environment:
-      # Each Drone secret below must be explicitly written to locals.yml in /docker/ui_tests.sh
+      # Each Drone secret below must be explicitly written to locals.yml in /docker/ui_tests.sh,
+      # with the execption of APPLITOOLS_API_KEY, which is added as a env variable specifically for Applitools to access
       CLOUDFRONT_KEY_PAIR_ID:
         from_secret: CLOUDFRONT_KEY_PAIR_ID
       CLOUDFRONT_PRIVATE_KEY:
@@ -147,6 +148,8 @@ steps:
         from_secret: SAUCE_ACCESS_KEY
       APPLITOOLS_EYES_API_KEY:
         from_secret: APPLITOOLS_EYES_API_KEY
+      APPLITOOLS_API_KEY:
+        from_secret: APPLITOOLS_EYES_API_KEY
     commands:
       # If running on EC2, get hostname from ec2 metadata
       - hostname=$(curl -s --max-time 3 http://169.254.169.254/latest/meta-data/public-hostname || echo $DRONE_RUNNER_HOSTNAME); echo "Running on $hostname"
@@ -155,6 +158,8 @@ steps:
       - cp -rn "$(pwd)/home/circleci/.rbenv" /home/circleci || true
       # Depended on by CircleUtils: https://github.com/code-dot-org/code-dot-org/blob/56c4061afb55432ba8ccecc72b5b960ebd9480aa/lib/cdo/circle_utils.rb#L19
       - export CIRCLE_SHA1=$DRONE_COMMIT
+      # Depended on by Applitools GitHub integration: https://applitools.com/docs/topics/integrations/github-integration-ci-setup.html
+      - export APPLITOOLS_BATCH_ID=$DRONE_COMMIT
       - EXIT_CODE=0
       - /entrypoint.sh docker/ui_tests.sh || EXIT_CODE=$?
       - while pgrep bash >/dev/null; do echo "found bash process; keeping container alive"; sleep 20; done
@@ -190,6 +195,6 @@ trigger:
     - pull_request
 ---
 kind: signature
-hmac: 9a3cc084d31be93648eb2c160aebf4626067ff42edd5d79d9e280ae8898d3894
+hmac: f51928d15a13bf64413dcba8a028358f2644271eb9669044b5800f5811705276
 
 ...
