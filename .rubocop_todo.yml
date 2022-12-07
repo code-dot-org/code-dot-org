@@ -332,19 +332,6 @@ Security/MarshalLoad:
 Style/AccessModifierDeclarations:
   Enabled: false
 
-# Offense count: 35
-# This cop supports safe auto-correction (--auto-correct).
-# Configuration parameters: EnforcedStyle.
-# SupportedStyles: separated, grouped
-Style/AccessorGrouping:
-  Enabled: false
-
-# Offense count: 20
-# This cop supports safe auto-correction (--auto-correct).
-# Configuration parameters: AllowOnConstant.
-Style/CaseEquality:
-  Enabled: false
-
 # Offense count: 68
 # This cop supports unsafe auto-correction (--auto-correct-all).
 Style/CaseLikeIf:
@@ -645,11 +632,6 @@ Style/SlicingWithRange:
 # This cop supports safe auto-correction (--auto-correct).
 # Configuration parameters: AllowModifier.
 Style/SoleNestedConditional:
-  Enabled: false
-
-# Offense count: 29
-# This cop supports safe auto-correction (--auto-correct).
-Style/StderrPuts:
   Enabled: false
 
 # Offense count: 314

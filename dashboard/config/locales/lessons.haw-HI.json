@@ -2,13 +2,7 @@
   "haw-HI": {
     "data": {
       "lessons": {
-        "hoc-encryption/Simple Encryption": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "text-compression/Text Compression": {
+        "outbreak/Outbreak": {
           "overview": "",
           "preparation": "",
           "purpose": "",

@@ -650,6 +650,8 @@ uz:
       title: 'Dance Party'
     dance-2019:
       title: 'Dance Party'
+    hello-world:
+      body: 'Siz yaratgan dunyoda interaktiv belgilarni dasturlash uchun to‘rtta qiziqarli mavzularni tanlang.'
     hoc:
       title: 'Klassik labirint'
       body: 'Informatika asoslari bilan tanishib ko‘ring. Millionlar buni uddalashdi.'
@@ -986,6 +988,7 @@ uz:
       colombian_school_city: 'Maktab shahri'
       colombian_school_municipality: 'Maktab munitsipaliteti'
       colombian_chilean_school_name: 'Maktab nomi'
+      chilean_school_id: 'Maktab ID'
       ages: 'Bu yil qaysi yosh(lar) ni o''qitasiz?'
       subjects: 'Bu yil qaysi fan(lar)ni o''qitasiz?'
       resources: 'Quyidagi CS (informatika) ta''lim manbalaridan qaysi birini ishlatasiz?'
@@ -1104,5 +1107,11 @@ uz:
     this_sprite: "bu sprayt"
   unit_prefix: "Bo'lim %{n}"
   teacher_feedback: "O‘qituvchilarning fikri"
+  lesson_lock:
+    error:
+      no_updates: "Amalga oshirish uchun yangilanishlar yo'q"
+      missing_params: "Foydalanuvchi, darajasi va birlik idlarini taqdim etishi kerak"
+      cannot_view_locked_answers: "Qulflangan paytda javoblarni ko'rib bo'lmaydi"
+      forbidden: "Foydalanuvchi talabaning qulflanadigan holatini yangilay olmaydi"
   pixelation:
     binary: "Binarli"

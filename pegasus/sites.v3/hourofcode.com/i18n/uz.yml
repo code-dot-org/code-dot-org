@@ -35,13 +35,16 @@ uz:
   africa_campaign_date_full: 1-31-oktyabr
   africa_campaign_date_year: 2022-yil
   africa_campaign_date_full_year: 2020-yil 11-31-oktyabr
-  hoc2022_header: Explore, Play, Create!
-  social_hoc2022_explore_play_create: Use computer science to explore, play, and create!
-  codeorg_homepage_hoc2022_body: Explore the universe, score a goal, bust a move —
-    there are so many ways to try computer science.
-  hoc2022_codeorg_title: Celebrate Hour of Code with NASA and more
-  hoc2022_codeorg_description: The 10th Hour of Code is out of this world! Come explore,
-    play, and create with us.
+  hoc2022_header: Taqdiq qiling, O'ynang, Yarating!
+  social_hoc2022_explore_play_create: Kompyuter fanlarini tadqiq qilish, o'ynash va
+    yaratish uchun foydalaning!
+  codeorg_homepage_hoc2022_body: Koinotni tadqiq qiling, gol uring, harakatga tushing
+    - kompyuter fanlarini sinab ko'rishning ko'plab usullari mavjud.
+  hoc2022_codeorg_title: Dasturlash Soatini NASA va boshqalar bilan nishonlang
+  hoc2022_codeorg_description: 10 - Dasturlash Soati bu dunyo yuzini ko'rdi! Keling,
+    biz bilan tadqiq qiling, o'ynang va yarating.
+  social_hoc2022_dance: Featuring Beyoncé, Harry Styles, Lizzo, Lil Nas X, Selena
+    Gomez, music from Disney's "Encanto," and more!
   social_hoc2021_cse: 'During the #HourOfCode, we''re celebrating #CSEverywhere. Discover
     the connections!'
   hoc2020_header: Bugun o‘rganing, ertangi kunni yanada yorqinroq qiling.
@@ -517,24 +520,27 @@ uz:
   front_join_us_challenge: Mashhur odam bilan sinfingiz uchun video chatni yutib oling!
     "
   front_join_us_learn_more: Ko‘proq ma'lumot olish.
-  cta_see_whats_new: See what's new
-  cta_try_more_activities: Try more activities
-  cta_try_an_activity: Try an activity
-  hoc_homepage_join_the_movement_heading: Join the movement
-  hoc_homepage_join_the_movement_description: Hour of Code is available year-round,
-    but every year in December your class can join millions of students around the
-    world celebrating Computer Science Education Week with the Hour of Code. Registration
-    for the annual celebration starts each year in October.
-  hoc_homepage_what_is_hoc_subhead: One-hour tutorials in over 45 languages. No experience
-    needed. Hour of Code activities are available for free year-round.
-  hoc_homepage_what_is_hoc_description: The Hour of Code is a one-hour introduction
-    to computer science, using fun tutorials to show that anybody can learn the basics.
-    This grassroots campaign is supported by over 400 partners and 200,000 educators
-    worldwide.
-  hoc_homepage_what_is_hoc_cta_how_to_guide: "[Read our How-to guide](%{howto_guide_url})
-    to plan an event for your class."
-  hoc_homepage_highlights_heading: Hour of Code highlights
-  hoc_homepage_organized_by: The Hour of Code is organized by [Code.org](%{codeorg_url}).
+  cta_see_whats_new: Nima yangiliklar borligini ko'ring
+  cta_try_more_activities: Koʻproq mashg'ulotlarni sinab koʻring
+  cta_try_an_activity: Mashg'ulotni sinab ko'ring
+  hoc_homepage_join_the_movement_heading: Harakatga qo'shiling
+  hoc_homepage_join_the_movement_description: Dasturlash Soati yil davomida mavjud
+    bo'lib, ammo har yili dekabr oyida sizning sinfingiz butun dunyo bo'ylab kompyuter
+    fanlari bo'yicha ta'lim haftaligini Dasturlash Soati bilan nishonlayotgan millionlab
+    o'quvchilarga qo'shilishi mumkin. Yillik bayramga ro'yxatdan o'tish har yili oktyabr
+    oyida boshlanadi.
+  hoc_homepage_what_is_hoc_subhead: 45 dan ortiq tildagi bir soatlik o'quv qo'llanmalari.
+    Tajriba kerak emas. Dasturlash Soati mashg'ulotlari yil davomida bepul.
+  hoc_homepage_what_is_hoc_description: Dasturlash Soati - bu kompyuter fanlariga
+    bir soatlik kirish bo'lib, unda har bir kishi boshlang'ich bilimlarni o'rganishi
+    mumkinligini ko'rsatish uchun qiziqarli darsliklardan foydalaniladi. Ushbu ommaviy
+    kampaniya butun dunyo bo'ylab 400 dan ortiq hamkorlar va 200 000 o'qituvchilar
+    tomonidan qo'llab-quvvatlanadi.
+  hoc_homepage_what_is_hoc_cta_how_to_guide: Sinfingiz uchun tadbir rejalashtirish
+    uchun [Amaliy qoʻllanmamizni oʻqing](%{howto_guide_url}).
+  hoc_homepage_highlights_heading: Dasturlash Soatining diqqatga sazovor joylari
+  hoc_homepage_organized_by: DAsturlash Soati [Code.org](%{codeorg_url}) tomonidan
+    tashkil etilgan.
   signup_closed: Kod soati uchun ro‘yxatdan o‘tish endi yopildi. Iltimos, keyingi
     kod soatiga yozilish uchun oktyabr oyida yana tekshiring. '
   signup_registration_not_required: Ishtirok etish uchun ro‘yxatdan o‘tishingiz shart
@@ -600,6 +606,7 @@ uz:
   signup_send_posters_address_placeholder: Ushbu manzil bizning xaritamizda joylashtirilmaydi
     '
   signup_event_type_in_school: Maktab
+  signup_event_type_after_school: After school program
   signup_event_type_out_of_school: Tashkilot/kompaniya '
   signup_event_type_at_home: Bosh sahifa
   signup_submit_census_label: Qabul qilish
@@ -1113,11 +1120,6 @@ uz:
     chiqing </a>'
   learn_banner_teachers_markdown: 'O''qituvchilar: [Host an hour](%{host_url}) yoki
     [read the How-To Guide](%{howto_url})'
-  learn_robotics_banner_heading: Robototexnika va sxemalar
-  learn_robotics_banner_blurb: Robotlar yoki hisoblash vositalaringiz bormi? Ulardan
-    quyida keltirilgan mashg‘ulotlarda foydalaning va har qanday yoshdagi talabalar
-    uchun amaliy Dasturlash soatini tashkil eting! Ba'zi harakatlar simulyatorni taklif
-    qiladi, bunda siz hech qanday qo'shimcha qurilmasiz boshlashingiz mumkin.
   tutorial_dance2019_name: Raqs Bazmi
   tutorial_danceparty_name: Raqs Bazmi
   tutorial_chibitronics_name: "Chibitronika\t yoritilgan hikoya"
@@ -10454,7 +10456,7 @@ uz:
   tutorial_robotical2_name: Hour of Code Activity 2 - the Marty Controller
   tutorial_robotical3_name: Hour of Code Activity 3 - Getting Started with Marty Blocks
     Jr
-  tutorial_blockscadvirus_name: Modeling a Virus with Code
+  tutorial_blockscadvirus_name: BlocksCAD Modeling a Virus with Code
   tutorial_robotical1_name: Hour of Code Activity 1 - Marty Unplugged
   tutorial_irobotshapes_name: 'Robotics for K-2: Robot Shapes'
   tutorial_irobotparts_name: 'Robotics for K-2: Robot Parts'
@@ -10666,10 +10668,12 @@ uz:
   tutorial_codespellsnexus_longdescription: Under the mentorship of a mysterious sock
     puppet, you must infiltrate and reprogram a super-intelligent 'Learn to Code'
     app that seeks global domination. Solve puzzles. Learn to code. Hack the Nexus.
-  tutorial_carnegieslime_longdescription: Super Slime Battle is a game that was co-designed
-    between researchers at Carnegie Mellon University and students from the Boys and
-    Girls Clubs of Western PA where students and their (co)robot partners must defend
-    their candy stash from oncoming baddies.
+  tutorial_carnegieslime_longdescription: Every year the Minions of Scarecorp try
+    to steal your candy crops. Booville High's Baddest Slimeball crew have come together
+    to protect the candy crops with slime weapons. Players play as teen monsters who
+    program their collaborative robot (aka 'cobot') pets to help take down the Minions
+    of Scarecorp who are after their town's candy harvest. Choose between four characters
+    and their cobotic pets.
   tutorial_ozotown_longdescription: The Ozobot Blockly OzoTown will teach advanced
     sequencing as students utilize logic, reasoning, and computer science skills to
     navigate real life scenarios. No bot needed!
@@ -11330,7 +11334,7 @@ uz:
   tutorial_clbinary_name: Learn How Binary Works with Computers using Minecraft
   tutorial_sascollabcode_name: 'SAS CodeSnaps: Collaborative coding for blind, low
     vision and sighted students'
-  tutorial_codecombatgoblins_name: 'CodeCombat: Goblins nn'' Glory'
+  tutorial_codecombatgoblins_name: 'CodeCombat: Goblins ''n'' Glory'
   tutorial_scratchstorytelling_name: Anything is Possible! Storytelling with Scratch
   tutorial_crayolasymbols_name: 'Unplugged Coding from Crayola Education: Visual Symbols
     Convey Meaning'
@@ -12101,7 +12105,7 @@ uz:
   tutorial_googlesuperhero_string_detail_programming_languages: Bloklar
   tutorial_googlename _string_detail_programming_languages: Bloklar
   tutorial_carnegiezillah_string_detail_programming_languages: Bloklar
-  tutorial_nasachspacejam_string_detail_programming_languages: JavaScript, P5
+  tutorial_nasachspacejam_string_detail_programming_languages: Bloklar
   tutorial_hatchxrsolar_string_detail_programming_languages: Bloklar
   tutorial_hatchxrspace_string_detail_programming_languages: Bloklar
   tutorial_hatchxrtrex_string_detail_programming_languages: Bloklar
@@ -12136,6 +12140,29 @@ uz:
   tutorial_nasapackage_string_detail_programming_languages: Bloklar
   tutorial_nasalunar_string_detail_programming_languages: Bloklar, JavaScript
   tutorial_meeestate_string_detail_programming_languages: Bloklar, Python
+  tutorial_imagipixelart_longdescription: Learn Python and create your own colorful
+    animations in this 1 hour crash course!
+  tutorial_imagipixelart_name: Code your own pixel art!
+  tutorial_imagipixelart_string_detail_grades: 2-8-sinflar
+  tutorial_imagipixelart_string_detail_platforms: ''
+  tutorial_imagipixelart_string_detail_programming_languages: typing
+  tutorial_imagipixelart_string_platforms: All modern browsers, iPad, Android tablets,
+    Windows phone, Android phone, iPhone
+  tutorial_kcjhealth_longdescription: 'Learn about data visualization, algorithmic
+    art and coding, while exploring SDG #3 ''Good Health and Well-Being''.'
+  tutorial_kcjhealth_name: The Health & Well-Being Challenge
+  tutorial_kcjhealth_string_detail_grades: 6+ sinflar
+  tutorial_kcjhealth_string_detail_platforms: ''
+  tutorial_kcjhealth_string_detail_programming_languages: Bloklar
+  tutorial_kcjhealth_string_platforms: Barcha zamonaviy brauzerlar
+  tutorial_msftwakanda_longdescription: 'Shuri, Okoye, and Riri must band together
+    to help Wakanda. Code your own action-packed activity inspired by Marvel Studios''
+    ''Black Panther: Wakanda Forever''!'
+  tutorial_msftwakanda_name: Long Live Wakanda
+  tutorial_msftwakanda_string_detail_grades: 6+ sinflar
+  tutorial_msftwakanda_string_detail_platforms: ''
+  tutorial_msftwakanda_string_detail_programming_languages: Bloklar
+  tutorial_msftwakanda_string_platforms: Barcha zamonaviy brauzerlar
   school_not_found_heading: Biz sizning maktabingizni topa olmadik. Iltimos, qo‘shimcha
     ma’lumot kiriting.
   school_name: Maktab nomi

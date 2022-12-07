@@ -4,6 +4,9 @@ kn:
     game:
       name:
         Unplug6: ಕಂಡೀಷನಲ್ಸ್‌
+    concept:
+      description:
+        loop_for: ಕೌಂಟರ್ ಬ್ಲಾಕ್
     level:
       instructions:
         maze_2_2: 'ತುಂಟ ಹಂದಿಯನ್ನು ಹಿಡಿಯಲು ನಿಮಗೆ ನನ್ನ ಸಹಾಯ ಬೇಕೆ? ಒಟ್ಟಾಗಿ ಹಲವು "ಮುಂದಕ್ಕೆ ಸಾಗಿ" ಬ್ಲಾಕ್‌ಗಳನ್ನು ಪೇರಿಸಿ ಮತ್ತು ನಾನು ಅಲ್ಲಿಗೆ ಹೋಗಲು ಸಹಾಯ ಮಾಡುವುದಕ್ಕಾಗಿ "ರನ್" ಒತ್ತಿ.'
@@ -83,6 +86,9 @@ kn:
         C4_conditionals: ಕಂಡೀಷನಲ್ಸ್‌
         CSF_a_b_artist_loops: ಆರ್ಟಿಸ್ಟ್‌ನಲ್ಲಿ ಲೂಪ್ಸ್
         CSF_artist_angles: ಆರ್ಟಿಸ್ಟ್‌ನಲ್ಲಿ ಆಂಗಲ್ಸ್
+        CSF_collector_k1_blocks: 'CS ಫಂಡಮೆಂಟಲ್ಸ್‌: ಕಲೆಕ್ಟರ್'
+        CSF_collector_repeat_loops: ಕಲೆಕ್ಟರ್ ರಿಪೀಟ್ ಲೂಪ್ಸ್
+        CSF_collector_text_blocks: 'CS ಫಂಡಮೆಂಟಲ್ಸ್‌: ಕಲೆಕ್ಟರ್'
         CSF_debugging_k1_blocks: ಡಿಬಗ್ ಮಾಡುವುದು
         CSF_debugging_text_blocks: ಡಿಬಗ್ ಮಾಡುವುದು
         frozen_intro: ಅವರ್ ಆಫ್‌ ಕೋಡ್ ಪರಿಚಯ
@@ -114,10 +120,13 @@ kn:
         mc_2017_puzzle_3: ಮೈನ್‌ಕ್ರಾಪ್ಟ್ ಅವರ್‌ ಆಫ್‌ ಕೋಡ್‌ - ರಿಪೀಟ್ ಲೂಪ್‌ಗಳು
         mc_2017_puzzle_8: ಮೈನ್‌ಕ್ರಾಪ್ಟ್ ಅವರ್‌ ಆಫ್‌ ಕೋಡ್‌ - ಫಂಕ್ಷನ್‌ಗಳು
         mc_2017_puzzle_12: ಮೈನ್‌ಕ್ರಾಪ್ಟ್ ಅವರ್‌ ಆಫ್‌ ಕೋಡ್‌ - ಫ್ರೀಪ್ಲೇ
+        CSF_scrat_loops_K1: ಐಸ್ ಏಜ್‌ನಲ್ಲಿ ಲೂಪ್ಸ್‌
+        CSF_scrat_loops_CF: ಐಸ್ ಏಜ್‌ನಲ್ಲಿ ಲೂಪ್ಸ್‌
         CSF_loops_AB: ಲೂಪ್‌ಗಳು
         CSF_StarWars_ProjectIntro: ಸ್ಟಾರ್ ವಾರ್ಸ್‌ ಪ್ರಾಜೆಕ್ಟ್‌ ಪರಿಚಯ
         c_and_c_great_to_create: ಫೇರ್ ಅನ್ನು ರಚಿಸಲು ಮತ್ತು ಪ್ಲೇ ಮಾಡಲು ಇದು ಅದ್ಭುತವಾಗಿದೆ
         c_and_c_digital_sharing: ಡಿಜಿಟಲ್ ಹಂಚಿಕೆ
+        repeat_block: ರಿಪೀಟ್ ಬ್ಲಾಕ್ ಬಳಸುವುದು
         csd_debugging: ಡಿಬಗ್ ಮಾಡುವುದು
         csf_private_and_personal_information: ಖಾಸಗಿ ಮತ್ತು ವೈಯಕ್ತಿಕ ಮಾಹಿತಿ
         outbreak_mike: ಮೈಕ್ - ಔಟ್‌ಬ್ರೇಕ್ ಸಿಮ್ಯುಲೇಟರ್ ಜೊತೆಗೆ ಕೋಡ್‌ಬೈಟ್ಸ್‌ ಎಪಿಸೋಡ್ 3
@@ -162,3 +171,8 @@ kn:
         CSA-PL-Printing-in-Java: ಜಾವಾದಲ್ಲಿ ಮುದ್ರಣ
         CSA-PL-multi-selection-statements: ಬಹು-ಆಯ್ಕೆ ಹೇಳಿಕೆಗಳು
         CS_Changing_Everything: ಕಂಪ್ಯೂಟರ್ ಸೈನ್ಸ್‌ ಬದಲಾಗುತ್ತಿದೆ
+    callout:
+      text:
+        repeat_blocks: '“ರಿಪೀಟ್” ಬ್ಲಾಕ್ ಅನ್ನು ಬಳಸಿ ಮತ್ತು ವರ್ಕ್‌ಸ್ಪೇಸ್‌ನಲ್ಲಿ ಬ್ಲಾಕ್‌ಗಳ ಸುತ್ತಲೂ ಅದನ್ನು ಸುತ್ತಿ'
+        repeat_blocks_2: (2) ಇಲ್ಲಿ “ರಿಪೀಟ್” ಬ್ಲಾಕ್ ಅನ್ನು ಮೂವ್ ಮಾಡಿ ಮತ್ತು ಒಳಗೆ ಗ್ರೇ ಬ್ಲಾಕ್‌ಗಳನ್ನು ಇರಿಸಿ
+        frozen_diamond_repeat: ಈ ಆಕಾರವನ್ನು ರಚಿಸಲು ರಿಪೀಟ್ ಬ್ಲಾಕ್ ಬಳಸಿ.

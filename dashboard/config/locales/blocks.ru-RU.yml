@@ -7,6 +7,8 @@ ru:
       AmysBlocks_setPromptWithChoices:
         text: запросить у пользователя {QUESTION} переменную {VAR} с параметрами выбора
           {A}{B}{C}
+      AmysBlocks_spriteSayVar:
+        text: "{SPRITE}сказать{TEXT1}"
       BadGuys_makeNewBadGuysSprite:
         text: сделать новые {ANIMATION_NAME} спрайт на {LOCATION}
       BadGuys_setSizeAll_dropdown:
@@ -1003,6 +1005,13 @@ ru:
             '"macklemore90"': Маклемор - Не Может Нас Удержать
             '"hammer"': MC Хаммер - Ты Не Можешь Трогать Это
             '"peas"': Черноглазый Горошек - У меня Есть это Чувство
+      DansBlocks_getMicroscope:
+        text: У микроскопа есть {INPUT1}
+        options:
+          INPUT1:
+            '1': лимонный сок
+            '3': пищевая сода
+            '5': оба
       DansBlocks_setForegroundEffect2:
         text: выполнить эффект  {EFFECT}
         options:
@@ -1015,12 +1024,21 @@ ru:
             '"starburst"': Вспышка звёздообразования
             '"glass"': Разбивающееся стекло
             '"twinkling"': Мерцание
-      FunctionBlocks_representManipulative:
+      DansBlocks_setMicroscope:
+        text: Установить Микроскоп на {INPUT1}
         options:
-          BEHAVIOR:
-            draggable(): допускающий перетаскивание
-            wandering(): хождение
-            shrinking(): сжимание
+          INPUT1:
+            '1': лимонный сок
+            '3': пищевая сода
+            '5': оба
+      FunctionBlocks_communicate:
+        text: Общение {VAR1} с {SPRITE1COSTUME}
+      FunctionBlocks_makeManipulative2:
+        text: создать {NUM} новых {ANIMATION_NAME} спрайтов  {BEHAVIOR}
+      FunctionBlocks_representManipulative:
+        text: представить {NUM} новых {ANIMATION_NAME} спрайтов [BEHAVIOR][2]
+      FunctionBlocks_spriteSayVar:
+        text: "{SPRITE}сказать{TEXT1}"
       gamelab_addBehaviorSimple:
         text: Спрайт {SPRITE} начинает {BEHAVIOR}
       gamelab_addTarget:
@@ -1385,6 +1403,7 @@ ru:
             "'sound://category_space/Pillars_SFX.mp3'": столпы
             "'sound://category_space/Southern_ring_SFX.mp3'": южная кольцевая туманность
             "'sound://category_space/Supernova_SFX.mp3'": сверхновая
+            "'sound://category_space/Tycho_SFX.mp3'": сверхновая Тихо
             "'sound://category_space/Whirlpool_galaxy_SFX.mp3'": галактика водоворот
       gamelab_playSpeech:
         text: воспроизвести речь {SOUND}
@@ -2063,8 +2082,41 @@ ru:
         text: задать для Города монстров {COUNT}монстров
       Outbreak_stopMoving:
         text: монстры перестают двигаться
+      ParticlesBlocks_getMicroscope:
+        text: У микроскопа есть {INPUT1}
+        options:
+          INPUT1:
+            '1': лимонный сок
+            '3': пищевая сода
+            '5': оба
+      ParticlesBlocks_setMicroscope:
+        text: Установить Микроскоп на {INPUT1}
+        options:
+          INPUT1:
+            '1': лимонный сок
+            '3': пищевая сода
+            '5': оба
       ParticlesBlocks_statesOfMatter:
         text: "{BEHAVIOR}"
+        options:
+          BEHAVIOR:
+            new Behavior(solid, []): твердый
+            new Behavior(liquid, []): жидкий
+            new Behavior(wandering, []): газ
+      ParticlesBlocks_statesOfMatter2:
+        text: Установить {COSTUME} поведение {BEHAVIOR}
+        options:
+          BEHAVIOR:
+            '"solid"': 'твердая частица '
+            '"liquid"': жидкая частица
+            '"gas"': газообразная частица
+      ParticlesBlocks_statesOfMatter_testing:
+        text: "[Testing] Установить {COSTUME} поведение {BEHAVIOR}"
+        options:
+          BEHAVIOR:
+            '"solid"': 'твердая частица '
+            '"liquid"': жидкая частица
+            '"gas"': газообразная частица
       Poetry_addFrame:
         text: установите кадр на {BRUSH}
         options:
@@ -2156,6 +2208,24 @@ ru:
             '"sound://category_achievements/peaceful_win_1.mp3"': Выигрыш
             '"sound://category_explosion/vibrant_game_arcade_game_negative_hit.mp3"': Вихрь
             '"sound://category_achievements/peaceful_win_6.mp3"': '"Китайские колокольчики"'
+      Poetry_playSoundOptionsSpace:
+        text: playSound {SOUND}
+        options:
+          SOUND:
+            "'sound://category_space/Blackhole_SFX.mp3'": черная дыра
+            "'sound://category_space/Bullet_cluster_SFX.mp3'": скопление галактик
+              Пуля
+            "'sound://category_space/Carina_SFX.mp3'": киль
+            "'sound://category_space/Cassiopeia_SFX.mp3'": кассиопея
+            "'sound://category_space/Crab_nebula_SFX.mp3'": крабовидная туманность
+            "'sound://category_space/Galactic_center_SFX.mp3'": центр галактики
+            "'sound://category_space/Launch_SFX.mp3'": запуск
+            "'sound://category_space/Lift_Off.mp3'": отрыв
+            "'sound://category_space/Pillars_SFX.mp3'": столпы
+            "'sound://category_space/Southern_ring_SFX.mp3'": южная кольцевая туманность
+            "'sound://category_space/Supernova_SFX.mp3'": сверхновая
+            "'sound://category_space/Tycho_SFX.mp3'": сверхновая Тихо
+            "'sound://category_space/Whirlpool_galaxy_SFX.mp3'": галактика водоворот
       Poetry_setAuthor:
         text: указать автора {AUTHOR}
       Poetry_setBackground:
@@ -2572,6 +2642,16 @@ ru:
             left: налево ↺
       storylab_clearHeadings:
         text: понятные заголовки
+      storylab_setForegroundEffect2:
+        text: выполнить эффект  {EFFECT}
+        options:
+          EFFECT:
+            '"bubbles"': Пузыри
+            '"confetti"': Конфетти
+            '"hearts"': сердца
+            '"rain"': дождь
+            '"starburst"': Вспышка звёздообразования
+            '"twinkling"': Мерцание
       storylab_setHeading:
         text: установить заголовок {HEADING}
       storylab_setPromptWithChoice:

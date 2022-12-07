@@ -8,6 +8,9 @@
         "csd-2022/lists": {
           "display_name": "Листи"
         },
+        "csd-2022/sprites": {
+          "display_name": "Сприти"
+        },
         "csd-2022/variables": {
           "display_name": "Променливи"
         }

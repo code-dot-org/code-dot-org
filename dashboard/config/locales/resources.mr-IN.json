@@ -625,8 +625,7 @@
           "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/"
         },
         "how_to_make_a_class_section_on_code_org/courseb/2022": {
-          "name": "Code.org वर क्लास सेक्शन कसा बनवायचा",
-          "url": "https://www.youtube.com/watch?v=ebQY8fb2OV4"
+          "name": "Code.org वर क्लास सेक्शन कसा बनवायचा"
         },
         "pair_programming/courseb/2022": {
           "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q"
@@ -1990,6 +1989,11 @@
         },
         "vocabulary_3/csd/2017": {
           "name": "शब्दसंग्रह"
+        },
+        "list_of_poems_1/poem-art/unversioned": {
+          "name": "",
+          "url": "",
+          "type": ""
         },
         "2021_change_log/coursef/2021": {
           "name": "2021 लॉग बदला",

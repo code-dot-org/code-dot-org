@@ -4,10 +4,12 @@ title: Hello World
 
 # Hello World!
 
-In Computer Science 101, the first program many students create is a simple one that outputs an iconic line of text: "Hello World!" Say hello to the world of computer science with this introductory activity that equips students with the basic coding skills and confidence to create apps. Choose from four fun themes to code interactive characters in a world you create!
+In Computer Science 101, the first program many students create is a simple one that outputs an iconic line of text: "Hello World!" Say hello to the world of computer science with this introductory activity that equips students with the basic coding skills and confidence to create apps. Choose from six fun themes to code interactive characters in a world you create!
 
 # Choose your Hello World theme
 
+{{ spritelab_module, title: "NEW! Space", color: "#d41f33", image: "images/csc/helloworld/helloworldspacetheme.png", url: "https://studio.code.org/s/hello-world-space-2022/reset" }}
+{{ spritelab_module, title: "NEW! Soccer", color: "#3ba467", image: "images/csc/helloworld/helloworldsoccertheme.png", url: "https://studio.code.org/s/hello-world-soccer-2022/reset" }}
 {{ spritelab_module, title: "Food", color: "#C14790", image: "images/csc/helloworld/helloworldhappyfoodtheme.png", url: "https://studio.code.org/s/hello-world-food-2021/reset" }}
 {{ spritelab_module, title: "Animals", color: "#00ADBC", image: "images/csc/helloworld/helloworldanimalstheme.png", url: "https://studio.code.org/s/hello-world-animals-2021/reset" }}
 {{ spritelab_module, title: "Retro", color: "#FFA400", image: "images/csc/helloworld/helloworldretrotheme.png", url: "https://studio.code.org/s/hello-world-retro-2021/reset" }}

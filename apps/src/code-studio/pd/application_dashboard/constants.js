@@ -65,7 +65,7 @@ export const ScholarshipStatusRequiredStatuses = ['accepted'];
  * Valid statuses for this year's applications.
  * Format per application type is {value: label}
  */
-export function getApplicationStatuses(type, addAutoEmail = true) {
+export function getApplicationStatuses(type, addAutoEmail = false) {
   if (type === 'teacher') {
     return {
       incomplete: 'Incomplete',

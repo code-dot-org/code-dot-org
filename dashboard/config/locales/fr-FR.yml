@@ -88,14 +88,14 @@ fr:
     submit: Ajouter un indice
   appname: Code.org
   stage: étape
-  stage_number: Leçon %{number}
+  stage_number: Leçon %{number} 
   puzzle: Énigme
   trophies: trophées
   courses: Cours
   courses_page:
     title_student: Apprendre l'Informatique
     title_teacher: Enseigner l'informatique
-  unplugged_activity: Activité "Déconnectée"
+  unplugged_activity: Activité Déconnectée
   of: de
   more: PLUS
   less: MOINS
@@ -442,6 +442,7 @@ fr:
       educate_beyond: Aller plus loin
       educate_inspire: Inspirer un élève
       educate_community: Communauté en ligne
+      educate_requirements: Pré-requis techniques
       educate_tools: Outils et vidéos
       about_us: À propos
       about_leadership: Équipe de direction
@@ -939,7 +940,7 @@ fr:
       body_short: Si vous n'avez pas d'ordinateurs, essayez ces leçons en mode "déconnecté"
         dans votre classe.
     unplugged_conditionals:
-      title: Instructions conditionnelles
+      title: Formules conditionnelles
       body: Découvre les algorithmes et les déclarations conditionnelles, dans cette
         activité "déconnectée", en t’appuyant sur un jeu de cartes.
     widgets:

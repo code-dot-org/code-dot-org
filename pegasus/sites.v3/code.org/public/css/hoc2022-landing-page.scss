@@ -145,37 +145,6 @@ header {
 
 main {
 
-  // NASA skinny banner
-  aside {
-    max-width: 970px;
-    background-color: $background_gray;
-    margin: 4em auto -2em;
-    padding: 1em;
-    background-color: $black;
-    color: $white;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    flex-wrap: wrap;
-    background-color: $black;
-    background-image: radial-gradient(white, rgba(255,255,255,.1) 2px, transparent 30px), radial-gradient(white, rgba(255,255,255,.05) 1px, transparent 10px), radial-gradient(white, rgba(255,255,255,.1) 2px, transparent 20px), radial-gradient(rgba(255,255,255,.4), rgba(255,255,255,.05) 2px, transparent 15px);
-    background-size: 550px 550px, 250px 250px, 350px 350px, 150px 150px;
-    background-position: 0 0, 140px 60px, 230px 270px, 0px 100px;
-
-    @media screen and (max-width: $width-md) {
-      width: 90%;
-    }
-
-    h1 {
-      color: $white;
-      margin: unset;
-    }
-
-    button {
-      margin: unset;
-    }
-  }
-
   hr {
     margin: 4em 0;
     border-top: 1px solid $lighter_gray;

@@ -38,7 +38,8 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom:10px"><strong>Petrecere dansantă</strong></h3>        <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">Programați o petrecere dansantă pe care să le-o trimiteți prietenilor. Cu Katy Perry, Shawn Mendes, Panic! At The Disco, Lil Nas X, Jonas Brothers, Nicki Minaj și alți 34 artiști!</div>        <a class="linktag" id="danceparty" href="/dance" target="_blank"><button>Încercați activitatea</button></a>
+        <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom:10px"><strong>Petrecere dansantă</strong></h3>        <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">Programați o petrecere dansantă pe care să le-o trimiteți prietenilor. Cu participarea Beyoncé, Harry Styles, Lizzo, Lil Nas X, Selena Gomez, muzică din „Encanto” de la Disney și mulți alții!</div>
+        <a class="linktag" id="danceparty" href="/dance" target="_blank"><button>Încearcă această activitate</button></a>
     </span>
   </div>
 </div>

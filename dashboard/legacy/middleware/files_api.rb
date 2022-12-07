@@ -450,7 +450,7 @@ class FilesApi < Sinatra::Base
     # 'replace' and 'currentVersion'.
     current_version = params['version'] || params['currentVersion']
     should_replace = params['replace'] == 'true'
-    version_to_replace = params['version'] || (should_replace && params['currentVersion']) unless endpoint === 'assets'
+    version_to_replace = params['version'] || (should_replace && params['currentVersion']) unless endpoint == 'assets'
 
     timestamp = params['firstSaveTimestamp']
     tab_id = params['tabId']
