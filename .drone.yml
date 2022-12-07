@@ -39,10 +39,10 @@ steps:
         path: /var/lib/mysql
     environment:
       # Each Drone secret below must be explicitly written to locals.yml in /docker/unit_tests.sh
-      # CLOUDFRONT_KEY_PAIR_ID:
-      #   from_secret: CLOUDFRONT_KEY_PAIR_ID
-      # CLOUDFRONT_PRIVATE_KEY:
-      #   from_secret: CLOUDFRONT_PRIVATE_KEY
+      CLOUDFRONT_KEY_PAIR_ID:
+        from_secret: CLOUDFRONT_KEY_PAIR_ID
+      CLOUDFRONT_PRIVATE_KEY:
+        from_secret: CLOUDFRONT_PRIVATE_KEY
     commands:
       # If running on EC2, get hostname from ec2 metadata
       - hostname=$(curl -s --max-time 3 http://169.254.169.254/latest/meta-data/public-hostname || echo $DRONE_RUNNER_HOSTNAME); echo "Running on $hostname"
@@ -129,10 +129,10 @@ steps:
         path: /var/lib/mysql
     environment:
       # Each Drone secret below must be explicitly written to locals.yml in /docker/ui_tests.sh
-      # CLOUDFRONT_KEY_PAIR_ID:
-      #   from_secret: CLOUDFRONT_KEY_PAIR_ID
-      # CLOUDFRONT_PRIVATE_KEY:
-      #   from_secret: CLOUDFRONT_PRIVATE_KEY
+      CLOUDFRONT_KEY_PAIR_ID:
+        from_secret: CLOUDFRONT_KEY_PAIR_ID
+      CLOUDFRONT_PRIVATE_KEY:
+        from_secret: CLOUDFRONT_PRIVATE_KEY
       PROPERTIES_ENCRYPTION_KEY:
         from_secret: PROPERTIES_ENCRYPTION_KEY
       FIREBASE_NAME:
