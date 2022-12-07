@@ -93,7 +93,7 @@ var copyrightStrings;
 /**
  * The minimum width of a playable whole blockly game.
  */
-const MIN_WIDTH = 1200;
+const MIN_WIDTH = 1400;
 const DEFAULT_MOBILE_NO_PADDING_SHARE_WIDTH = 400;
 export const MAX_VISUALIZATION_WIDTH = 400;
 export const MIN_VISUALIZATION_WIDTH = 200;
@@ -1878,9 +1878,11 @@ StudioApp.prototype.fixViewportForSmallScreens_ = function(viewport, config) {
   } else {
     // We want the longer edge, the width in landscape, to get MIN_WIDTH.
     let screenWidth = Math.max(screen.width, screen.height);
-
     width = MIN_WIDTH;
     scale = screenWidth / width;
+    console.log(
+      `width: ${width}, screenWidth: ${screenWidth}, scale: ${scale}`
+    );
   }
 
   // Setting `minimum-scale=scale` means that we are unable to shrink the
