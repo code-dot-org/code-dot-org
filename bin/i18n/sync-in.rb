@@ -95,7 +95,7 @@ def localize_docs
   # TODO: Adding spritelab and Javalab to translation pipeline
   # Currently supporting translations for applab, gamelab and weblab. NOT translating javalab and spritelab.
   # Javalab documentations exists in a different table because it has a different structure, more align with java.
-  # Spritlab uses trasnlatable block names, unlike JavaScript blocks.
+  # Spritelab uses translatable block names, unlike JavaScript blocks.
   localized_environments = %w(applab gamelab weblab)
 
   ### Localize Programming Environments
