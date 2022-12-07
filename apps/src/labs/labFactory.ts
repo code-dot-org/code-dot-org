@@ -1,7 +1,7 @@
 import Applab from "./Applab";
-import { AppOptions } from "./AppOptions";
+import { App } from "./AppOptions";
 import { Lab } from "./types";
 
-export default function labFactory({ appType }: AppOptions): Lab {
+export default function labFactory(appType: App): Lab {
   return new Applab()
 }

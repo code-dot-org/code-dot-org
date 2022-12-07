@@ -4,16 +4,17 @@
 
 const SafeMarkdown = require('@cdo/apps/templates/SafeMarkdown')
 
-import React, { useContext } from 'react'
+import React from 'react'
 import './components.scss'
-import { EditorContext } from './Editor'
-import { AppOptionsContext } from './LabManager'
 import { Asset } from './projectApi'
+import { useAppDispatch, useAppSelector } from './redux/hooks'
+import { setShow } from './redux/slices/editorSlice'
 
 export const EditorToggle = () => {
-  const { show, setShowEditor } = useContext(EditorContext)
+  const show = useAppSelector(state => state.editor.show)
+  const dispatch = useAppDispatch()
 
-  return <button onClick={() => setShowEditor(!show)}>toggle editor</button>
+  return <button onClick={() => dispatch(setShow(!show))}>toggle editor</button>
 }
 
 type VisualizationProps = {
@@ -35,7 +36,7 @@ export const RunButton = () => {
 }
 
 export const Instructions = () => {
-  const { longInstructions } = useContext(AppOptionsContext)
+  const { longInstructions } = useAppSelector(state => state.common.appOptions)
 
   return <SafeMarkdown markdown={longInstructions} className="instructions" />
 }

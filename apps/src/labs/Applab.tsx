@@ -1,14 +1,14 @@
-import React, { useContext } from 'react'
+import React from 'react'
 import { BlockFactory, DropletCategory } from './blocks'
-import { Visualization, RunButton, Instructions, EditorToggle, Console } from './Components'
-import { Editor, EditorContext, EditorType } from './Editor'
-import { UserOptionsContext } from './LabManager'
+import { Visualization, RunButton, Instructions, Console } from './Components'
+import { Editor, EditorType } from './Editor'
 import { PanelDirection, PanelManager } from "./Panels"
 import { fetchAssets, fetchProject } from './projectApi'
+import { useAppSelector } from './redux/hooks'
 import { Lab } from './types'
 
 const LeftPanel = () => {
-  const { assets } = useContext(UserOptionsContext)
+  const assets = useAppSelector(state => state.project.assets)
 
   return <PanelManager dir={PanelDirection.Vertical}>
     <Visualization assets={assets || []} />
@@ -24,7 +24,7 @@ type RightPanelProps = {
 // TODO: this can be used generically... do we want that, though?
 // maybe we need to abstract panel configuration/layout one level higher
 const RightPanel = ({ blockFactory, editorType }: RightPanelProps) => {
-  const { show: showEditor } = useContext(EditorContext)
+  const showEditor = useAppSelector(state => state.editor.show)
 
   return <PanelManager dir={PanelDirection.Vertical}>
     <Instructions />

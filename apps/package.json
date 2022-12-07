@@ -36,7 +36,10 @@
     "storybook:test": "grunt storybookTest"
   },
   "resolutions": {
-    "uglifyjs-webpack-plugin/uglify-js": "3.5.1"
+    "uglifyjs-webpack-plugin/uglify-js": "3.5.1",
+    "@types/react": "^18.0.21",
+    "@types/react-dom": "^18.0.6",
+    "@types/react-redux": "^7.1.24"
   },
   "devDependencies": {
     "@babel/core": "^7.18.10",
@@ -65,6 +68,7 @@
     "@code-dot-org/piskel": "0.13.0-cdo.9",
     "@code-dot-org/redactable-markdown": "0.4.0",
     "@react-bootstrap/pagination": "^1.0.0",
+    "@reduxjs/toolkit": "^1.9.1",
     "@storybook/addon-actions": "^6.5.10",
     "@storybook/addon-options": "^5.3.21",
     "@storybook/builder-webpack5": "^6.5.10",
@@ -185,7 +189,7 @@
     "react-onclickoutside": "~5.11.1",
     "react-paginate": "^6.3.0",
     "react-pointable": "^1.1.1",
-    "react-redux": "~4.4.9",
+    "react-redux": "^7.2.0",
     "react-router": "3.2.6",
     "react-select": "^1.2.1",
     "react-sticky": "^6.0.3",
@@ -256,6 +260,7 @@
     "@types/node": "^18.7.23",
     "@types/react": "^18.0.21",
     "@types/react-dom": "^18.0.6",
+    "@types/react-redux": "^7.1.24",
     "ace-builds": "^1.4.12",
     "blockly": "8.0.3",
     "crypto-js": "^3.1.9-1",
