@@ -463,7 +463,7 @@ def distribute_translations(upload_manifests)
 
     ### Docs
     Dir.glob("i18n/locales/#{locale}/docs/*.json") do |loc_file|
-      # Each programing environment file gets merged into programming_environments.{locale}.json
+      # Each programming environment file gets merged into programming_environments.{locale}.json
       relative_path = loc_file.delete_prefix(locale_dir)
       next unless file_changed?(locale, relative_path)
 
