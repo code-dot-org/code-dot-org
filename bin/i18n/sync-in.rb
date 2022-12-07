@@ -135,7 +135,7 @@ def localize_docs
         expressions_data.store(
           expression_key, {
             'content' => expression_docs.properties["content"],
-            'examples' => ({} unless expression_docs.properties['examples'].nil?),
+            'examples' => ({} unless expression_docs.properties["examples"].nil?),
             'palette_params' => ({} unless expression_docs.properties["palette_params"].nil?),
             'return_value' => expression_docs.properties["return_value"],
             'short_description' => expression_docs.properties["short_description"],
@@ -147,7 +147,7 @@ def localize_docs
         # Programming expressions may have 0 or more examples.
         # Only example["name"] and example["description"] are translated. example["code"] is NOT translated.
         example_docs = expressions_data[expression_key]["examples"]
-        expression_docs.properties['examples']&.each do |example|
+        expression_docs.properties["examples"]&.each do |example|
           unless example["name"].nil_or_empty? && example["description"].nil_or_empty?
             example_docs.store(
               example["name"], {
