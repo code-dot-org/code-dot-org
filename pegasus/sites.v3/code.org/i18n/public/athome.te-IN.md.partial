@@ -38,7 +38,8 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom:10px"><strong>డాన్స్ పార్టీ</strong></h3>        <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">స్నేహితులు మరియు కుటుంబంతో పంచుకోవడానికి ఒక డాన్స్ పార్టీ కోడ్ చేయండి. కాటి పెర్రీ, షాన్ మెండిస్, పానిక్‌లతో! డిస్కోలో, లిల్ నాస్ ఎక్స్, జోనాస్ బ్రదర్స్, నిక్కీ మినాజ్ మరియు మరో 34 మంది!</div>        <a class="linktag" id="danceparty" href="/dance" target="_blank"><button>Try activity</button></a>
+        <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom:10px"><strong>డాన్స్ పార్టీ</strong></h3>        <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">స్నేహితులు మరియు కుటుంబంతో పంచుకోవడానికి ఒక డాన్స్ పార్టీ కోడ్ చేయండి. బియాన్స్, హ్యారీ స్టైల్స్, లిజ్జో, లిల్ నాస్ ఎక్స్, సెలెనా గోమెజ్, డిస్నీ యొక్క “ఎన్కాంటో” నుండి సంగీతం మరియు మరింత మంది నటించారు!</div>
+        <a class="linktag" id="danceparty" href="/dance" target="_blank"><button>సూచించే ప్రయత్నించండి</button></a>
     </span>
   </div>
 </div>

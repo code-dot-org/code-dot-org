@@ -4,10 +4,10 @@ submittable 'true'
 anonymous 'true'
 
 page
-level 'book covers_l2_q1'
-level 'book covers_l2_q2'
-level 'book covers_l2_q3’
-level 'book covers_l2_q4’
-level 'book covers_l2_q5’
-level 'book covers_l2_q6’
+level ‘pilot2022_l3_q1'
+level ‘pilot2022_l3_q2’
+level ‘pilot2022_l3_q3’
+level ‘pilot2022_l3_q4’
+level ‘pilot2022_l3_q5’
+level ‘pilot2022_l3_q6’
 level 'particles_l3_q7'

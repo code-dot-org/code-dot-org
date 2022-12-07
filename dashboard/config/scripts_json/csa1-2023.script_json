@@ -15,7 +15,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-11-13 21:31:33 UTC",
+    "serialized_at": "2022-11-29 14:17:34 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -1427,10 +1427,6 @@
           {
             "type": "teachingTip",
             "markdown": "Collect the Software Engineering Skills handouts.\n\nStudents revisit these in Lesson 15 to reflect on their software engineering identity."
-          },
-          {
-            "type": "assessmentOpportunity",
-            "markdown": "The Software Engineering Skills handout can be used as a formative assessment to check that students can identify a software engineer's characteristics and skills and relate them to their own skills and identity."
           }
         ]
       },
@@ -1855,7 +1851,7 @@
       "key": "4ebf7f74-79fb-45bc-bb99-3050346dc929",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What did you notice about the code in this program?*\n* *What do you wonder about the code in this program?*\n\n**Discussion Goal:** Students notice two files in the program and that one has the main method while the other does not. Students notice that the class with the main method refers to the name of the other class and then performs an action. Students may wonder about the purpose of the file that does not have a main method or about the syntax and functionality of the code.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to define ***class*** and ***object***.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What did you notice about the code in this program?*\n* *What do you wonder about the code in this program?*\n\n**Discussion Goal:** Students notice two files in the program and that one has the `main` method while the other does not. Students notice that the class with the `main` method refers to the name of the other class and then performs an action. Students may wonder about the purpose of the file that does not have a `main` method or about the syntax and functionality of the code.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to define ***class*** and ***object***.",
         "tips": [
           {
             "type": "teachingTip",
@@ -1872,7 +1868,7 @@
       "key": "be1c173e-2b00-4d42-a0ff-5d532ab49848",
       "position": 6,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Do you think there is a limit to how many objects you can create from a class? Why or why not?*\n\n**Discussion Goal:** Students share their thoughts about whether or not they think there is a limit and justify their reasoning. Students should realize that they can create multiple objects from a class because the class is a blueprint for how objects should be created."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Explain the meaning of an instance of a class.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Do you think there is a limit to how many objects you can create from a class? Why or why not?*\n\n**Discussion Goal:** Students share their thoughts about whether or not they think there is a limit and justify their reasoning. Students should realize that they can create multiple objects from a class because the class is a blueprint for how objects should be created."
       },
       "seeding_key": {
         "activity_section.key": "be1c173e-2b00-4d42-a0ff-5d532ab49848",
@@ -2359,7 +2355,7 @@
       "key": "83c8f7a2-44b7-4d5b-9a2b-b0ed7269a6e4",
       "position": 7,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 2 on Code Studio to investigate the program by modifying the program as prompted and observing the results.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 2 on Code Studio to complete Levels 2 and 3. Students investigate the program by modifying the program as prompted and observing the results.",
         "progression_name": "Investigate and Modify: Painter Class Methods"
       },
       "seeding_key": {
@@ -2382,7 +2378,7 @@
       "key": "7bcdbe8f-cb47-4523-a833-bde861a8a06e",
       "position": 9,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the video – *Calling Methods*.\n\n**Do This:** Explain how to call a method:\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Specify the name of the object\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Use the ***dot operator***\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Specify the name of the method followed by an empty set of parentheses\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 3 to complete Levels 3 and 4. Students complete a Check for Understanding on Level 3, then continue to Level 4 to practice using some of the methods in the `Painter` class.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the video – *Calling Methods*.\n\n**Do This:** Explain how to call a method:\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Specify the name of the object\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Use the ***dot operator***\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Specify the name of the method followed by an empty set of parentheses\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 4 to complete Levels 4 and 5. Students complete a Check for Understanding on Level 4, then continue to Level 5 to practice using some of the methods in the `Painter` class.",
         "duration": "15",
         "name": "Calling Methods",
         "progression_name": "Practice: Painter Class Methods"
@@ -2541,7 +2537,7 @@
       "key": "14909c6f-b876-461f-8ba3-f2c3cafff871",
       "position": 6,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 2 on Code Studio to investigate the program by modifying the program as prompted and observing the results.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 2 on Code Studio to complete Levels 2, 3, and 4. Students investigate the program by modifying the program as prompted and observing the results.",
         "progression_name": "Investigate and Modify: Painting"
       },
       "seeding_key": {
@@ -2584,7 +2580,7 @@
       "key": "01d57c7e-fbbd-4244-964c-b4754052ca69",
       "position": 9,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 3 to complete Levels 3 and 4 on Code Studio. Students complete a Check for Understanding on Level 3, then continue to Level 4 to practice using some of the methods in the `Painter` class.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 5 to complete Levels 5 and 6 on Code Studio. Students complete a Check for Understanding on Level 5, then continue to Level 6 to practice using some of the methods in the `Painter` class.",
         "progression_name": "Practice: Moving and Painting",
         "tips": [
           {
@@ -4817,40 +4813,11 @@
       }
     },
     {
-      "key": "f3b0ecd7-0fbe-4203-b262-3a435c8cf5bb",
+      "key": "4d37ee8a-5db0-4a8d-aafd-1c26eeaa0aac",
       "position": 1,
       "properties": {
-        "description": "We have made a lot of progress writing algorithms using sequencing, selection, and iteration to help the Painter solve a variety of problems in The Neighborhood! We now also have multiple subclasses of our PainterPlus class to create specialized versions using inheritance.",
-        "name": "Glows, Grows, Want-to-Knows",
-        "remarks": true
-      },
-      "seeding_key": {
-        "activity_section.key": "f3b0ecd7-0fbe-4203-b262-3a435c8cf5bb",
-        "lesson_activity.key": "fb4d8d1c-972e-4336-ab2d-9f79dd1238c7"
-      }
-    },
-    {
-      "key": "bc5652d6-62d6-43ce-b4ab-d2a247247ed2",
-      "position": 2,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What was awesome about writing your code?*\n* *What is one action you can take to improve your code?*\n* *What questions do you have about today?*\n\n**Discussion Goal:** Students share aspects of their program they enjoyed or how they solved the problem and identify areas of improvement to strengthen their programming skills. Students also share any questions or misconceptions they may have.",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "Glows, Grows, Want-to-Knows is a strategy to help students identify their strengths and areas of improvement and share any questions or misconceptions."
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "bc5652d6-62d6-43ce-b4ab-d2a247247ed2",
-        "lesson_activity.key": "fb4d8d1c-972e-4336-ab2d-9f79dd1238c7"
-      }
-    },
-    {
-      "key": "4d37ee8a-5db0-4a8d-aafd-1c26eeaa0aac",
-      "position": 3,
-      "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson and the Question of the Day.",
+        "name": "Show What You Know Week",
         "tips": [
           {
             "type": "teachingTip",
@@ -4864,10 +4831,22 @@
       }
     },
     {
-      "key": "f391d056-4ded-43ab-9ab2-9fdeedc65d1d",
-      "position": 4,
+      "key": "ac69c3b8-2b6f-4a87-a4ad-89b0d11c5570",
+      "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary"
+        "description": "The next five lessons are an opportunity to Show What You Know! We begin with the unit project, then spend a day practicing answering AP-style free-response questions and wrapping up the unit with a multiple-choice assessment. You've learned so much in this unit, and now you're ready to show what you know!",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "ac69c3b8-2b6f-4a87-a4ad-89b0d11c5570",
+        "lesson_activity.key": "fb4d8d1c-972e-4336-ab2d-9f79dd1238c7"
+      }
+    },
+    {
+      "key": "f391d056-4ded-43ab-9ab2-9fdeedc65d1d",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Unit 1 Study Guide.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the Show What You Know Week.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the Asphalt Art Project.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary"
       },
       "seeding_key": {
         "activity_section.key": "f391d056-4ded-43ab-9ab2-9fdeedc65d1d",
@@ -4876,7 +4855,7 @@
     },
     {
       "key": "69edf532-31ae-4405-99b8-e9726e77204e",
-      "position": 5,
+      "position": 4,
       "properties": {
         "description": "---"
       },
@@ -4887,7 +4866,7 @@
     },
     {
       "key": "3d660461-9548-4fe9-ab0d-9c72a21c1f64",
-      "position": 6,
+      "position": 5,
       "properties": {
         "description": "*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*",
         "name": "Assessment: Check for Understanding",
@@ -5012,7 +4991,13 @@
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to develop their Asphalt Art Project.",
         "duration": "15",
         "name": "Development",
-        "progression_name": "Asphalt Art Project"
+        "progression_name": "Asphalt Art Project",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "You can refer students back to the [**Decomposition and Design**](https://studio.code.org/s/csa1-2023/lessons/13) lesson to recall how they broke down the murals to create the designs. Students may also want to save the `MuralPainter` to their Backpacks or copy some of its methods to use in the Asphalt Art Project."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "98897942-24d3-4ede-97fc-0ae26d955b55",
@@ -5587,7 +5572,7 @@
       "key": "b466c467-a715-410d-8759-f72b71af1401",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Show the video – *Unity and Safety Through Street Art in Norfolk, VA*.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Show the examples of asphalt art.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Asphalt Art Project Planning Guide.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** As a class, read through the Project Description on the first page of the Asphalt Art Project Planning Guide and review the rubric on the last page.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What do you notice about the project requirements and rubric? What does success look like for this project?*\n\n**Discussion Goal:** Students share what they notice about the project requirements and rubric and identify the components to implement in their program.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What barriers do you anticipate to achieving success on this project?*\n\n**Discussion Goal:** Students identify barriers they anticipate and share any questions they have about the project.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Show the video – *Unity and Safety Through Street Art in Norfolk, VA*.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Show the examples of asphalt art.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Asphalt Art Project Planning Guide.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the project requirements.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to read the rubric on pages 2 and 3.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What do you notice about the project requirements and rubric? What does success look like for this project?*\n\n**Discussion Goal:** Students share what they notice about the project requirements and rubric and identify the components to implement in their program.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What barriers do you anticipate to achieving success on this project?*\n\n**Discussion Goal:** Students identify barriers they anticipate and share any questions they have about the project.",
         "tips": [
           {
             "type": "teachingTip",
@@ -5626,7 +5611,13 @@
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to develop their Asphalt Art Project.",
         "duration": "20",
         "name": "Development",
-        "progression_name": "Asphalt Art Project"
+        "progression_name": "Asphalt Art Project",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "You can refer students back to the [**Decomposition and Design**](https://studio.code.org/s/csa1-2023/lessons/13) lesson to recall how they broke down the murals to create the designs. Students may also want to save the `MuralPainter` to their Backpacks or copy some of its methods to use in the Asphalt Art Project."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "2bc505dc-26c4-4fce-8cdb-4939fd4147ef",
@@ -5886,6 +5877,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U1L3 Exit_2023"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -5908,6 +5902,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L3 Skill Building_2023"
+        ],
         "progression": "Skill Building: Painter Objects"
       },
       "bonus": false,
@@ -5930,6 +5927,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U1L3 CFU_2023"
+        ],
         "progression": "Practice: Painter Objects"
       },
       "bonus": false,
@@ -5952,6 +5952,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L3-L5_2023"
+        ],
         "progression": "Practice: Painter Objects"
       },
       "bonus": false,
@@ -5974,6 +5977,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L3-L6_2023"
+        ],
         "progression": "Practice: Painter Objects"
       },
       "bonus": false,
@@ -5996,6 +6002,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U1L3-L7_2023"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -6065,6 +6074,31 @@
     {
       "chapter": 16,
       "position": 3,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSA U1L4-L2-2_2023"
+        ],
+        "progression": "Investigate and Modify: Painter Class Methods"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U1L4-L2-2_2023"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa1-2023",
+        "activity_section.key": "83c8f7a2-44b7-4d5b-9a2b-b0ed7269a6e4"
+      },
+      "level_keys": [
+        "CSA U1L4-L2-2_2023"
+      ]
+    },
+    {
+      "chapter": 17,
+      "position": 4,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
@@ -6088,8 +6122,8 @@
       ]
     },
     {
-      "chapter": 17,
-      "position": 4,
+      "chapter": 18,
+      "position": 5,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
@@ -6113,8 +6147,8 @@
       ]
     },
     {
-      "chapter": 18,
-      "position": 5,
+      "chapter": 19,
+      "position": 6,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
@@ -6138,7 +6172,7 @@
       ]
     },
     {
-      "chapter": 19,
+      "chapter": 20,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -6163,7 +6197,7 @@
       ]
     },
     {
-      "chapter": 20,
+      "chapter": 21,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -6188,8 +6222,58 @@
       ]
     },
     {
-      "chapter": 21,
+      "chapter": 22,
       "position": 3,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSA U1L5 Investigate-2_2023"
+        ],
+        "progression": "Investigate and Modify: Painting"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U1L5 Investigate-2_2023"
+        ],
+        "lesson.key": "lesson-15",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa1-2023",
+        "activity_section.key": "14909c6f-b876-461f-8ba3-f2c3cafff871"
+      },
+      "level_keys": [
+        "CSA U1L5 Investigate-2_2023"
+      ]
+    },
+    {
+      "chapter": 23,
+      "position": 4,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSA U1L5 Investigate-3_2023"
+        ],
+        "progression": "Investigate and Modify: Painting"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U1L5 Investigate-3_2023"
+        ],
+        "lesson.key": "lesson-15",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa1-2023",
+        "activity_section.key": "14909c6f-b876-461f-8ba3-f2c3cafff871"
+      },
+      "level_keys": [
+        "CSA U1L5 Investigate-3_2023"
+      ]
+    },
+    {
+      "chapter": 24,
+      "position": 5,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
@@ -6213,8 +6297,8 @@
       ]
     },
     {
-      "chapter": 22,
-      "position": 4,
+      "chapter": 25,
+      "position": 6,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
@@ -6238,8 +6322,8 @@
       ]
     },
     {
-      "chapter": 23,
-      "position": 5,
+      "chapter": 26,
+      "position": 7,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
@@ -6263,7 +6347,7 @@
       ]
     },
     {
-      "chapter": 24,
+      "chapter": 27,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -6288,7 +6372,7 @@
       ]
     },
     {
-      "chapter": 25,
+      "chapter": 28,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -6313,11 +6397,14 @@
       ]
     },
     {
-      "chapter": 26,
+      "chapter": 29,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L5-L2-2_2023"
+        ],
         "progression": "Investigate and Modify: Loops and Boolean Methods"
       },
       "bonus": false,
@@ -6335,11 +6422,14 @@
       ]
     },
     {
-      "chapter": 27,
+      "chapter": 30,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L5-L2-3_2023"
+        ],
         "progression": "Investigate and Modify: Loops and Boolean Methods"
       },
       "bonus": false,
@@ -6357,11 +6447,14 @@
       ]
     },
     {
-      "chapter": 28,
+      "chapter": 31,
       "position": 5,
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L5-L2-4_2023"
+        ],
         "progression": "Investigate and Modify: Loops and Boolean Methods"
       },
       "bonus": false,
@@ -6379,11 +6472,14 @@
       ]
     },
     {
-      "chapter": 29,
+      "chapter": 32,
       "position": 6,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U1L5-L3_2023"
+        ],
         "progression": "Practice: Using Loops and Boolean Methods"
       },
       "bonus": false,
@@ -6401,11 +6497,14 @@
       ]
     },
     {
-      "chapter": 30,
+      "chapter": 33,
       "position": 7,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L5-L4_2023"
+        ],
         "progression": "Practice: Using Loops and Boolean Methods"
       },
       "bonus": false,
@@ -6423,11 +6522,14 @@
       ]
     },
     {
-      "chapter": 31,
+      "chapter": 34,
       "position": 8,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U1L5-L5_2023"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -6445,7 +6547,7 @@
       ]
     },
     {
-      "chapter": 32,
+      "chapter": 35,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -6470,7 +6572,7 @@
       ]
     },
     {
-      "chapter": 33,
+      "chapter": 36,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -6495,7 +6597,7 @@
       ]
     },
     {
-      "chapter": 34,
+      "chapter": 37,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -6520,7 +6622,7 @@
       ]
     },
     {
-      "chapter": 35,
+      "chapter": 38,
       "position": 4,
       "activity_section_position": 1,
       "assessment": true,
@@ -6545,7 +6647,7 @@
       ]
     },
     {
-      "chapter": 36,
+      "chapter": 39,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -6570,7 +6672,7 @@
       ]
     },
     {
-      "chapter": 37,
+      "chapter": 40,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -6595,11 +6697,14 @@
       ]
     },
     {
-      "chapter": 38,
+      "chapter": 41,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L7-L2-2_2023"
+        ],
         "progression": "Investigate and Modify: Void Methods"
       },
       "bonus": false,
@@ -6617,11 +6722,14 @@
       ]
     },
     {
-      "chapter": 39,
+      "chapter": 42,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L7-L2-3_2023"
+        ],
         "progression": "Investigate and Modify: Void Methods"
       },
       "bonus": false,
@@ -6639,11 +6747,14 @@
       ]
     },
     {
-      "chapter": 40,
+      "chapter": 43,
       "position": 5,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U1L7-L3_2023"
+        ],
         "progression": "Practice: Writing Methods"
       },
       "bonus": false,
@@ -6661,11 +6772,14 @@
       ]
     },
     {
-      "chapter": 41,
+      "chapter": 44,
       "position": 6,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L7-L4_2023"
+        ],
         "progression": "Practice: Writing Methods"
       },
       "bonus": false,
@@ -6683,11 +6797,14 @@
       ]
     },
     {
-      "chapter": 42,
+      "chapter": 45,
       "position": 7,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L7-L5_2023"
+        ],
         "progression": "Practice: Writing Methods"
       },
       "bonus": false,
@@ -6705,11 +6822,14 @@
       ]
     },
     {
-      "chapter": 43,
+      "chapter": 46,
       "position": 8,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U1L7-L6_2023"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -6727,7 +6847,7 @@
       ]
     },
     {
-      "chapter": 44,
+      "chapter": 47,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -6752,7 +6872,7 @@
       ]
     },
     {
-      "chapter": 45,
+      "chapter": 48,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -6777,7 +6897,7 @@
       ]
     },
     {
-      "chapter": 46,
+      "chapter": 49,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -6802,7 +6922,7 @@
       ]
     },
     {
-      "chapter": 47,
+      "chapter": 50,
       "position": 4,
       "activity_section_position": 4,
       "assessment": false,
@@ -6827,7 +6947,7 @@
       ]
     },
     {
-      "chapter": 48,
+      "chapter": 51,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -6852,7 +6972,7 @@
       ]
     },
     {
-      "chapter": 49,
+      "chapter": 52,
       "position": 6,
       "activity_section_position": 1,
       "assessment": true,
@@ -6877,7 +6997,7 @@
       ]
     },
     {
-      "chapter": 50,
+      "chapter": 53,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -6902,7 +7022,7 @@
       ]
     },
     {
-      "chapter": 51,
+      "chapter": 54,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -6927,7 +7047,7 @@
       ]
     },
     {
-      "chapter": 52,
+      "chapter": 55,
       "position": 3,
       "activity_section_position": 1,
       "assessment": true,
@@ -6952,7 +7072,7 @@
       ]
     },
     {
-      "chapter": 53,
+      "chapter": 56,
       "position": 4,
       "activity_section_position": 2,
       "assessment": false,
@@ -6977,7 +7097,7 @@
       ]
     },
     {
-      "chapter": 54,
+      "chapter": 57,
       "position": 5,
       "activity_section_position": 1,
       "assessment": true,
@@ -7002,7 +7122,7 @@
       ]
     },
     {
-      "chapter": 55,
+      "chapter": 58,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -7027,7 +7147,7 @@
       ]
     },
     {
-      "chapter": 56,
+      "chapter": 59,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -7052,7 +7172,7 @@
       ]
     },
     {
-      "chapter": 57,
+      "chapter": 60,
       "position": 3,
       "activity_section_position": 1,
       "assessment": true,
@@ -7077,7 +7197,7 @@
       ]
     },
     {
-      "chapter": 58,
+      "chapter": 61,
       "position": 4,
       "activity_section_position": 2,
       "assessment": false,
@@ -7102,7 +7222,7 @@
       ]
     },
     {
-      "chapter": 59,
+      "chapter": 62,
       "position": 5,
       "activity_section_position": 1,
       "assessment": true,
@@ -7127,7 +7247,7 @@
       ]
     },
     {
-      "chapter": 60,
+      "chapter": 63,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -7152,11 +7272,14 @@
       ]
     },
     {
-      "chapter": 61,
+      "chapter": 64,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L11-L1-2_2023"
+        ],
         "progression": "Investigate and Modify: Decomposition"
       },
       "bonus": false,
@@ -7174,11 +7297,14 @@
       ]
     },
     {
-      "chapter": 62,
+      "chapter": 65,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L11-L1-3_2023"
+        ],
         "progression": "Investigate and Modify: Decomposition"
       },
       "bonus": false,
@@ -7196,11 +7322,14 @@
       ]
     },
     {
-      "chapter": 63,
+      "chapter": 66,
       "position": 4,
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L11-L1-4_2023"
+        ],
         "progression": "Investigate and Modify: Decomposition"
       },
       "bonus": false,
@@ -7218,11 +7347,14 @@
       ]
     },
     {
-      "chapter": 64,
+      "chapter": 67,
       "position": 5,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U1L11-L2_2023"
+        ],
         "progression": "Practice: Decomposing a Problem"
       },
       "bonus": false,
@@ -7240,11 +7372,14 @@
       ]
     },
     {
-      "chapter": 65,
+      "chapter": 68,
       "position": 6,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L11-L3_2023"
+        ],
         "progression": "Practice: Decomposing a Problem"
       },
       "bonus": false,
@@ -7262,11 +7397,14 @@
       ]
     },
     {
-      "chapter": 66,
+      "chapter": 69,
       "position": 7,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U1L11-L4_2023"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -7284,7 +7422,7 @@
       ]
     },
     {
-      "chapter": 67,
+      "chapter": 70,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -7309,7 +7447,7 @@
       ]
     },
     {
-      "chapter": 68,
+      "chapter": 71,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -7334,7 +7472,7 @@
       ]
     },
     {
-      "chapter": 69,
+      "chapter": 72,
       "position": 3,
       "activity_section_position": 1,
       "assessment": true,
@@ -7359,7 +7497,7 @@
       ]
     },
     {
-      "chapter": 70,
+      "chapter": 73,
       "position": 4,
       "activity_section_position": 2,
       "assessment": false,
@@ -7384,7 +7522,7 @@
       ]
     },
     {
-      "chapter": 71,
+      "chapter": 74,
       "position": 5,
       "activity_section_position": 1,
       "assessment": true,
@@ -7409,7 +7547,7 @@
       ]
     },
     {
-      "chapter": 72,
+      "chapter": 75,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -7434,7 +7572,7 @@
       ]
     },
     {
-      "chapter": 73,
+      "chapter": 76,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -7459,7 +7597,7 @@
       ]
     },
     {
-      "chapter": 74,
+      "chapter": 77,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -7667,6 +7805,18 @@
     },
     {
       "seeding_key": {
+        "level.key": "CSA U1L4-L2-2_2023",
+        "script_level.level_keys": [
+          "CSA U1L4-L2-2_2023"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa1-2023",
+        "activity_section.key": "83c8f7a2-44b7-4d5b-9a2b-b0ed7269a6e4"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "CSA U1L4-L3_2023",
         "script_level.level_keys": [
           "CSA U1L4-L3_2023"
@@ -7718,6 +7868,30 @@
         "level.key": "CSA U1L5 Investigate_2023",
         "script_level.level_keys": [
           "CSA U1L5 Investigate_2023"
+        ],
+        "lesson.key": "lesson-15",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa1-2023",
+        "activity_section.key": "14909c6f-b876-461f-8ba3-f2c3cafff871"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U1L5 Investigate-2_2023",
+        "script_level.level_keys": [
+          "CSA U1L5 Investigate-2_2023"
+        ],
+        "lesson.key": "lesson-15",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa1-2023",
+        "activity_section.key": "14909c6f-b876-461f-8ba3-f2c3cafff871"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U1L5 Investigate-3_2023",
+        "script_level.level_keys": [
+          "CSA U1L5 Investigate-3_2023"
         ],
         "lesson.key": "lesson-15",
         "lesson_group.key": "lessonGroup-3",
@@ -8388,6 +8562,18 @@
       }
     },
     {
+      "name": "[EXEMPLAR] Asphalt Art Project Planning Guide",
+      "url": "https://docs.google.com/document/d/1Q-9U42pzn0GQf6lPtE8IJhXZJdWExEFTsgIUky3o6fU/edit?usp=sharing",
+      "key": "_exemplar_asphalt_art_project_planning_guide_1",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Exemplar"
+      },
+      "seeding_key": {
+        "resource.key": "_exemplar_asphalt_art_project_planning_guide_1"
+      }
+    },
+    {
       "name": "[KEY] Decomposition",
       "url": "https://docs.google.com/document/d/1cFr0Wp8FlWJf4dNnuRKjDT0U2bFEGavtpUtcPqF2hh0/edit?usp=sharing",
       "key": "_key_decomposition",
@@ -8664,6 +8850,18 @@
       }
     },
     {
+      "name": "Asphalt Art Project",
+      "url": "https://docs.google.com/presentation/d/1en1KGgye2ImrJ4DDZasD8jvkRuoTdrnMVw_H9bpGEFM/edit?usp=sharing",
+      "key": "asphalt_art_project_1",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "asphalt_art_project_1"
+      }
+    },
+    {
       "name": "Asphalt Art Project Planning Guide",
       "url": "https://docs.google.com/document/d/1BOjhftweorWxLnUW6WszrEkXfBVfYJyhONU-T0UnyRI/edit?usp=sharing",
       "key": "asphalt_art_project_planning_guide",
@@ -8674,6 +8872,19 @@
       },
       "seeding_key": {
         "resource.key": "asphalt_art_project_planning_guide"
+      }
+    },
+    {
+      "name": "Asphalt Art Project Planning Guide",
+      "url": "https://docs.google.com/document/d/1hU2dlTMBbOASb3qRK_oiKgH5oOWFNS3SEbuESTyeNxE/edit?usp=sharing",
+      "key": "asphalt_art_project_planning_guide_1",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "asphalt_art_project_planning_guide_1"
       }
     },
     {
@@ -9298,6 +9509,19 @@
       }
     },
     {
+      "name": "Unit 1 Study Guide",
+      "url": "https://docs.google.com/document/d/1zu0zO0eRx602yY0-cTZK-cP0vEv6iXs9lcLkAGknNpQ/edit?usp=sharing",
+      "key": "unit_1_study_guide",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "unit_1_study_guide"
+      }
+    },
+    {
       "name": "Unity and Safety Through Street Art in Norfolk, VA",
       "url": "https://youtu.be/-gnXVMcg0yk",
       "key": "unity_and_safety_through_street_art_in_norfolk_va",
@@ -9585,6 +9809,12 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "lesson-13",
+        "resource.key": "unit_1_study_guide"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "lesson-14",
         "resource.key": "_key_u1l4_extra_practice"
       }
@@ -9713,6 +9943,24 @@
       "seeding_key": {
         "lesson.key": "lesson-21",
         "resource.key": "unlocking_assessments"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "resource.key": "_exemplar_asphalt_art_project_planning_guide_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "resource.key": "asphalt_art_project_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "resource.key": "asphalt_art_project_planning_guide_1"
       }
     },
     {

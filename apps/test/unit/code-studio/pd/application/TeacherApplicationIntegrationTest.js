@@ -60,7 +60,9 @@ describe('TeacherApplication', () => {
   });
 
   it('Does not set schoolId if not provided', () => {
-    const page = mount(<FindYourRegion {...defaultProps} />);
+    const page = mount(
+      <FindYourRegion {...defaultProps} data={{program: 'CSD'}} />
+    );
     expect(page.find('SchoolAutocompleteDropdown').prop('value')).to.equal(
       undefined
     );
@@ -68,7 +70,7 @@ describe('TeacherApplication', () => {
 
   it('Sets the school dropdown value from props', () => {
     const page = mount(
-      <FindYourRegion {...defaultProps} data={{school: '50'}} />
+      <FindYourRegion {...defaultProps} data={{program: 'CSD', school: '50'}} />
     );
     expect(page.find('SchoolAutocompleteDropdown').prop('value')).to.equal(
       '50'
@@ -80,7 +82,7 @@ describe('TeacherApplication', () => {
     sinon
       .stub(window.sessionStorage, 'getItem')
       .withArgs('TeacherApplication')
-      .returns({school: '25'});
+      .returns({program: 'CSD', school: '25'});
     const page = mount(
       <FindYourRegion
         {...defaultProps}

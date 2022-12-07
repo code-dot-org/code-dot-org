@@ -10,7 +10,7 @@ MAX_THREADS = 200
 LOG_INCREMENT = 1000
 
 if ARGV.length < 2 || ARGV.length.odd?
-  $stderr.puts "usage: #{$0} <regex1> <output1>.tsv [<regex2> <output2>.tsv] ..."
+  warn "usage: #{$0} <regex1> <output1>.tsv [<regex2> <output2>.tsv] ..."
   exit(1)
 end
 
