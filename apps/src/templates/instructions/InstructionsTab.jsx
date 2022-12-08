@@ -1,6 +1,8 @@
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import color from '../../util/color';
+import classNames from 'classnames';
+import moduleStyles from './instructions-tab.module.scss';
 
 const craftStyles = {
   text: {
@@ -55,16 +57,20 @@ export default class InstructionsTab extends Component {
         : styles.text)
     };
     return (
-      <div style={wrapperStyle}>
+      <button
+        style={wrapperStyle}
+        onClick={this.props.onClick}
+        className={classNames(moduleStyles.tabButton, 'no-mc')}
+        type="button"
+      >
         <a
           className={this.props.className}
-          onClick={this.props.onClick}
           style={combinedStyle}
           title={this.props.text}
         >
           {this.props.text}
         </a>
-      </div>
+      </button>
     );
   }
 }
@@ -90,7 +96,8 @@ const styles = {
   },
   tabWrapper: {
     overflow: 'hidden',
-    textOverflow: 'ellipsis'
+    textOverflow: 'ellipsis',
+    display: 'flex'
   },
   text: {
     color: color.charcoal
