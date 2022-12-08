@@ -147,6 +147,24 @@ class UnconnectedMusicView extends React.Component {
     this.player.clearAllSoundEvents();
   };
 
+  uploadSound = filename => {
+    console.log(filename);
+
+    const self = this;
+    var reader = new FileReader();
+    reader.onload = function(e) {
+      self.player.loadSoundFromBuffer(0, e.target.result);
+      /*
+        audioCtx.decodeAudioData(e.target.result).then(buffer => {
+          var soundSource = audioCtx.createBufferSource();
+          soundSource.buffer = buffer;
+        });
+      */
+    };
+
+    reader.readAsArrayBuffer(filename);
+  };
+
   onBlockSpaceChange = e => {
     // A drag event can leave the blocks in a temporarily unusable state,
     // e.g. when a disabled variable is dragged into a slot, it can still
@@ -403,7 +421,10 @@ class UnconnectedMusicView extends React.Component {
 
             <div id="blockly-area" className={moduleStyles.blocklyArea}>
               <div className={moduleStyles.topButtonsContainer}>
-                <TopButtons clearCode={this.clearCode} />
+                <TopButtons
+                  clearCode={this.clearCode}
+                  uploadSound={this.uploadSound}
+                />
               </div>
               <div id="blockly-div" />
             </div>
