@@ -7088,7 +7088,7 @@
         "courseE_artist_functions2": {
           "courseD_artist_functions2_b": "Fallið sem þú skrifar ætti ekki að innihalda allt forritið þitt, heldur aðeins þann hluta sem teiknar ferning með 100 díla hliðar.",
           "courseD_artist_functions2_c": "Notaðu græna `teikna ferning` kubbinn til að \"kalla á\" fallið þitt fyrir neðan `þegar keyrt` kubbinn. Annars mun kóðinn ekki keyra.\n\n<xml><block type=\"procedures_callnoreturn\" limit=\"2\"><mutation name=\"draw a square\"/></block></xml>",
-          "courseD_artist_functions2_a": "Forritið þitt ætti að:\n- Nota fall\n- Fara áfram 100 + 75 díla\n- Nota fall"
+          "courseD_artist_functions2_a": "Forritið þitt ætti að:\n\n-   Nota fall\n-   Fara áfram 100 + 75 díla\n-   Nota fall"
         },
         "courseE_artist_functions2_2018": {
           "courseD_artist_functions2_b": "Fallið sem þú skrifar ætti ekki að innihalda allt forritið þitt, heldur aðeins þann hluta sem teiknar ferning með 100 díla hliðar.",

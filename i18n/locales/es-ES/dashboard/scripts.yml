@@ -6615,3 +6615,10 @@ es:
           title: CSP Playground
           description_audience: Escritores de planes de estudio
           description_short: Para organizar las actualizaciones de las lecciones o los niveles entre las versiones del plan de estudios
+        devices-2022:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: 'Capítulo 1: Entradas y Salidas'
+            lessonGroup-4:
+              display_name: 'Capítulo 2: Desarrollo de prototipos físicos'
+          student_description: Esta unidad explora el papel de las plataformas de hardware en la informática y cómo los diferentes sensores pueden proporcionar una entrada y salida más eficaz que el tradicional teclado, ratón y monitor. Utilizando el Laboratorio de Aplicaciones y el Circuit Playground de Adafruit, desarrollarás programas que utilizan las mismas entradas y salidas de hardware que se ven en los dispositivos inteligentes, observando cómo un simple prototipo aproximado puede conducir a un producto terminado. La unidad concluye con un reto de diseño para utilizar el Circuit Playground como base para una innovación de su propio diseño.

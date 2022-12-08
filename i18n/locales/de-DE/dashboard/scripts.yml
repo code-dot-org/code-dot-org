@@ -4363,3 +4363,7 @@ de:
           description_audience: Lehrpan-Autoren
           description_short: Für die Bereitstellung von Aktualisierungen der Lektionen oder Stufen zwischen Lehrplanversionen
         csc-pilot-fa2022-particles: {}
+        devices-2022:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: 'Chapter 2: Aufbau von physischen Prototypen'

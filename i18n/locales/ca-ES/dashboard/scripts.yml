@@ -111,6 +111,10 @@ ca:
           description: Fes servir blocs de codi per portar al Steve o l'Alex a una aventura a través d'aquest món de Minecraft
           description_short: Explora el món de Minecraft a través del codi
           student_description: Fes servir blocs de codi per portar al Steve o l'Alex a una aventura a través d'aquest món de Minecraft
+        CSDU3-Draft:
+          description_short: Programació
+        TEMP CSD Unit 3:
+          description_short: Programació
         CSF_Secret_Sample:
           description_audience: De 8 a 18 anys
         cspunit1-support:
@@ -420,6 +424,8 @@ ca:
         coursed-2019:
           description_audience: De 7 a 11 anys
           lesson_groups:
+            csf_sequencing:
+              display_name: Seqüenciació
             csf_events:
               display_name: Esdeveniments
             csf_loops:
@@ -440,9 +446,12 @@ ca:
             csf_functions:
               display_name: Funcions
         express-2019:
+          description: Aprèn informàtica al teu ritme fent les lliçons que trobaràs a continuació! Aprèn a crear programes informàtics, desenvolupa les teves habilitats per resoldre problemes i completa els divertits reptes que aniràs trobant. Fes jocs i projectes creatius i comparteix-los amb els amics, la família i els professors.
           description_short: 'Una introducció a la informàtica: combina el millor del nostre currículum d''educació primària per alumnes més grans.'
           description_audience: De 9 a 18 anys
           lesson_groups:
+            csf_sequencing:
+              display_name: Seqüenciació
             csf_loops:
               display_name: Bucles
             csf_conditionals:
@@ -453,6 +462,7 @@ ca:
               display_name: Variables
             csf_for_loops:
               display_name: Per bucles
+          student_description: Aprèn informàtica al teu ritme fent les lliçons que trobaràs a continuació! Aprèn a crear programes informàtics, desenvolupa les teves habilitats per resoldre problemes i completa els divertits reptes que aniràs trobant. Fes jocs i projectes creatius i comparteix-los amb els amics, la família i els professors.
         andrea-test:
           lesson_groups:
             required:
@@ -467,6 +477,8 @@ ca:
           lesson_groups:
             csf_digcit:
               display_name: Ciutadania digital
+            csf_sequencing:
+              display_name: Seqüenciació
             csf_binary:
               display_name: Binari
             csf_loops:
@@ -481,6 +493,8 @@ ca:
           lesson_groups:
             csf_digcit:
               display_name: Ciutadania digital
+            csf_sequencing:
+              display_name: Seqüenciació
             csf_loops:
               display_name: Bucles
             csf_events:
@@ -490,18 +504,24 @@ ca:
           lesson_groups:
             csf_digcit:
               display_name: Ciutadania digital
+            csf_sequencing:
+              display_name: Seqüenciació
             csf_loops:
               display_name: Bucles
             csf_events:
               display_name: Esdeveniments
         pre-express-2019:
+          description: Aprèn informàtica al teu ritme fent les lliçons que trobaràs a continuació! Aprèn a crear programes informàtics, desenvolupa les teves habilitats per resoldre problemes i completa els divertits reptes que aniràs trobant. Fes jocs i projectes creatius i comparteix-los amb els amics, la família i els professors.
           description_short: 'Una introducció a la informàtica per a prelectors: combina el millor dels cursos de parvulari i primer.'
           description_audience: De 4 a 8 anys
           lesson_groups:
+            csf_sequencing:
+              display_name: Seqüenciació
             csf_loops:
               display_name: Bucles
             csf_events:
               display_name: Esdeveniments
+          student_description: Aprèn informàtica al teu ritme fent les lliçons que trobaràs a continuació! Aprèn a crear programes informàtics, desenvolupa les teves habilitats per resoldre problemes i completa els divertits reptes que aniràs trobant. Fes jocs i projectes creatius i comparteix-los amb els amics, la família i els professors.
         csp4-pilot:
           lesson_groups:
             csp_variables:
@@ -600,6 +620,8 @@ ca:
               display_name: Vista general
         csl-vn:
           lesson_groups:
+            csf_sequencing:
+              display_name: Seqüenciació
             csf_loops:
               display_name: Bucles
             csf_events:
@@ -681,6 +703,8 @@ ca:
               display_name: Funcions
         time4cs-control-unit-1:
           lesson_groups:
+            csf_sequencing:
+              display_name: Seqüenciació
             csf_loops:
               display_name: Bucles
             csf_conditionals:
@@ -691,6 +715,8 @@ ca:
               display_name: Ciutadania digital
         time4cs-experiment-unit-1:
           lesson_groups:
+            csf_sequencing:
+              display_name: Seqüenciació
             csf_loops:
               display_name: Bucles
             csf_conditionals:
@@ -723,6 +749,8 @@ ca:
           lesson_groups:
             csf_digcit:
               display_name: Ciutadania digital
+            csf_sequencing:
+              display_name: Seqüenciació
             csf_loops:
               display_name: Bucles
             csf_events:
@@ -732,6 +760,8 @@ ca:
           lesson_groups:
             csf_digcit:
               display_name: Ciutadania digital
+            csf_sequencing:
+              display_name: Seqüenciació
             csf_loops:
               display_name: Bucles
             csf_events:
@@ -742,6 +772,8 @@ ca:
           lesson_groups:
             csf_digcit:
               display_name: Ciutadania digital
+            csf_sequencing:
+              display_name: Seqüenciació
             csf_binary:
               display_name: Binari
             csf_loops:
@@ -751,6 +783,8 @@ ca:
         coursed-2020:
           description_audience: De 7 a 11 anys
           lesson_groups:
+            csf_sequencing:
+              display_name: Seqüenciació
             csf_events:
               display_name: Esdeveniments
             csf_loops:
@@ -781,9 +815,12 @@ ca:
             csf_for_loops:
               display_name: Per bucles
         express-2020:
+          description: Aprèn informàtica al teu ritme fent les lliçons que trobaràs a continuació! Aprèn a crear programes informàtics, desenvolupa les teves habilitats per resoldre problemes i completa els divertits reptes que aniràs trobant. Fes jocs i projectes creatius i comparteix-los amb els amics, la família i els professors.
           description_short: 'Una introducció a la informàtica: combina el millor del nostre currículum d''educació primària per alumnes més grans.'
           description_audience: De 9 a 18 anys
           lesson_groups:
+            csf_sequencing:
+              display_name: Seqüenciació
             csf_loops:
               display_name: Bucles
             csf_conditionals:
@@ -794,14 +831,19 @@ ca:
               display_name: Variables
             csf_for_loops:
               display_name: Per bucles
+          student_description: Aprèn informàtica al teu ritme fent les lliçons que trobaràs a continuació! Aprèn a crear programes informàtics, desenvolupa les teves habilitats per resoldre problemes i completa els divertits reptes que aniràs trobant. Fes jocs i projectes creatius i comparteix-los amb els amics, la família i els professors.
         pre-express-2020:
+          description: Aprèn informàtica al teu ritme fent les lliçons que trobaràs a continuació! Aprèn a crear programes informàtics, desenvolupa les teves habilitats per resoldre problemes i completa els divertits reptes que aniràs trobant. Fes jocs i projectes creatius i comparteix-los amb els amics, la família i els professors.
           description_short: 'Una introducció a la informàtica per a prelectors: combina el millor dels cursos de parvulari i primer.'
           description_audience: De 4 a 8 anys
           lesson_groups:
+            csf_sequencing:
+              display_name: Seqüenciació
             csf_loops:
               display_name: Bucles
             csf_events:
               display_name: Esdeveniments
+          student_description: Aprèn informàtica al teu ritme fent les lliçons que trobaràs a continuació! Aprèn a crear programes informàtics, desenvolupa les teves habilitats per resoldre problemes i completa els divertits reptes que aniràs trobant. Fes jocs i projectes creatius i comparteix-los amb els amics, la família i els professors.
         2021drafting:
           lesson_groups:
             introduction:
@@ -834,6 +876,8 @@ ca:
           lesson_groups:
             csf_digcit:
               display_name: Ciutadania digital
+            csf_sequencing:
+              display_name: Seqüenciació
             csf_loops:
               display_name: Bucles
             csf_events:
@@ -843,6 +887,8 @@ ca:
           lesson_groups:
             csf_digcit:
               display_name: Ciutadania digital
+            csf_sequencing:
+              display_name: Seqüenciació
             csf_loops:
               display_name: Bucles
             csf_events:
@@ -853,6 +899,8 @@ ca:
           lesson_groups:
             csf_digcit:
               display_name: Ciutadania digital
+            csf_sequencing:
+              display_name: Seqüenciació
             csf_binary:
               display_name: Binari
             csf_loops:
@@ -862,6 +910,8 @@ ca:
         coursed-2021:
           description_audience: De 7 a 11 anys
           lesson_groups:
+            csf_sequencing:
+              display_name: Seqüenciació
             csf_events:
               display_name: Esdeveniments
             csf_loops:
@@ -902,11 +952,14 @@ ca:
             lessonGroup-7:
               display_name: Ciutadania digital
         express-2021:
+          description: Aprèn informàtica al teu ritme fent les lliçons que trobaràs a continuació! Aprèn a crear programes informàtics, desenvolupa les teves habilitats per resoldre problemes i completa els divertits reptes que aniràs trobant. Fes jocs i projectes creatius i comparteix-los amb els amics, la família i els professors.
           description_short: 'Una introducció a la informàtica: combina el millor del nostre currículum d''educació primària per alumnes més grans.'
           description_audience: De 9 a 18 anys
           lesson_groups:
             csf_warmup:
-              display_name: Recapitulació
+              display_name: Escalfament
+            csf_sequencing:
+              display_name: Seqüenciació
             csf_loops:
               display_name: Bucles
             csf_conditionals:
@@ -919,15 +972,20 @@ ca:
               display_name: Per bucles
             lessonGroup-9:
               display_name: Esdeveniments
+          student_description: Aprèn informàtica al teu ritme fent les lliçons que trobaràs a continuació! Aprèn a crear programes informàtics, desenvolupa les teves habilitats per resoldre problemes i completa els divertits reptes que aniràs trobant. Fes jocs i projectes creatius i comparteix-los amb els amics, la família i els professors.
         pre-express-2021:
           title: Curs Exprés per pre-lectors (2021)
+          description: Aprèn informàtica al teu ritme fent les lliçons que trobaràs a continuació! Aprèn a crear programes informàtics, desenvolupa les teves habilitats per resoldre problemes i completa els divertits reptes que aniràs trobant. Fes jocs i projectes creatius i comparteix-los amb els amics, la família i els professors.
           description_short: 'Una introducció a la informàtica per a prelectors: combina el millor dels cursos de parvulari i primer.'
           description_audience: De 4 a 8 anys
           lesson_groups:
+            csf_sequencing:
+              display_name: Seqüenciació
             csf_loops:
               display_name: Bucles
             csf_events:
               display_name: Esdeveniments
+          student_description: Aprèn informàtica al teu ritme fent les lliçons que trobaràs a continuació! Aprèn a crear programes informàtics, desenvolupa les teves habilitats per resoldre problemes i completa els divertits reptes que aniràs trobant. Fes jocs i projectes creatius i comparteix-los amb els amics, la família i els professors.
         csf-2021-pilot:
           lesson_groups:
             ramp_up:
@@ -982,6 +1040,8 @@ ca:
           lesson_groups:
             csf_digcit:
               display_name: Ciutadania digital
+            csf_sequencing:
+              display_name: Seqüenciació
             csf_loops:
               display_name: Bucles
             csf_events:
@@ -990,6 +1050,8 @@ ca:
           description_audience: De 4 a 7 anys
         express-2022:
           lesson_groups:
+            csf_sequencing:
+              display_name: Seqüenciació
             lessonGroup-9:
               display_name: Esdeveniments
             csf_loops:
@@ -1002,6 +1064,8 @@ ca:
               display_name: Variables
             csf_for_loops:
               display_name: Per bucles
+          description: Aprèn informàtica al teu ritme fent les lliçons que trobaràs a continuació! Aprèn a crear programes informàtics, desenvolupa les teves habilitats per resoldre problemes i completa els divertits reptes que aniràs trobant. Fes jocs i projectes creatius i comparteix-los amb els amics, la família i els professors.
+          student_description: Aprèn informàtica al teu ritme fent les lliçons que trobaràs a continuació! Aprèn a crear programes informàtics, desenvolupa les teves habilitats per resoldre problemes i completa els divertits reptes que aniràs trobant. Fes jocs i projectes creatius i comparteix-los amb els amics, la família i els professors.
           description_short: 'Una introducció a la informàtica: combina el millor del nostre currículum d''educació primària per alumnes més grans.'
           description_audience: De 9 a 18 anys
         csp4-2022:
@@ -1022,6 +1086,8 @@ ca:
           lesson_groups:
             csf_digcit:
               display_name: Ciutadania digital
+            csf_sequencing:
+              display_name: Seqüenciació
             csf_loops:
               display_name: Bucles
             csf_events:
@@ -1031,6 +1097,8 @@ ca:
           lesson_groups:
             csf_digcit:
               display_name: Ciutadania digital
+            csf_sequencing:
+              display_name: Seqüenciació
             csf_loops:
               display_name: Bucles
             csf_events:
@@ -1041,6 +1109,8 @@ ca:
           lesson_groups:
             lessonGroup-6:
               display_name: Ciutadania digital
+            csf_sequencing:
+              display_name: Seqüenciació
             csf_events:
               display_name: Esdeveniments
             csf_loops:
@@ -1069,12 +1139,16 @@ ca:
           description_audience: De 9 a 13 anys
         pre-express-2022:
           lesson_groups:
+            csf_sequencing:
+              display_name: Seqüenciació
             csf_loops:
               display_name: Bucles
             csf_events:
               display_name: Esdeveniments
           description_audience: De 4 a 8 anys
           description_short: 'Una introducció a la informàtica per a prelectors: combina el millor dels cursos de parvulari i primer.'
+          description: Aprèn informàtica al teu ritme fent les lliçons que trobaràs a continuació! Aprèn a crear programes informàtics, desenvolupa les teves habilitats per resoldre problemes i completa els divertits reptes que aniràs trobant. Fes jocs i projectes creatius i comparteix-los amb els amics, la família i els professors.
+          student_description: Aprèn informàtica al teu ritme fent les lliçons que trobaràs a continuació! Aprèn a crear programes informàtics, desenvolupa les teves habilitats per resoldre problemes i completa els divertits reptes que aniràs trobant. Fes jocs i projectes creatius i comparteix-los amb els amics, la família i els professors.
         coursef-2022-pilot:
           lesson_groups:
             lessonGroup-7:

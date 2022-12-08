@@ -907,12 +907,14 @@
         "coursec-2022/Programming with Angry Birds": {
           "name": "Jahldor qushlar bilan dasturlash",
           "overview": "Jahldor qushlar o‘yinidagi obrazlardan foydalanib, talabalar qushni labirintning bir tomonidan boshqa tomonidagi cho‘chqaga qaratib harakatlantirish uchun ketma-ket algoritmlarni tuzib chiqadilar. Buni qilish uchun ular to‘g‘riga, chapga va keyin o‘ngga harakatlanadigan qilib kod bo‘limlarini chiziqli ketma-ketlikda taxlab chiqishadi.",
+          "preparation": "-   Sinfingiz da paydo bo'lgan muammolarni topish uchun jumboqlarni yeching.\n-   (ixtiyoriy) Sinfingiz bilan hal qilish uchun bir juft jumboq tanlang.",
           "purpose": "Bu darsda, talabalar biron komputer platformasida o‘zlarining debug qilish va dasturlash mahoratlarini oshiradilar. Bu boshqotirmalarning bo‘limlarga asoslangan shakli talabalarga sintaksisni mukammallashtirish haqida o‘ylamasdan ketma-ketlik va tushunchalar haqida o‘rganishga yordam beradi.",
           "student_overview": "Angry Birds bilan ketma-ketlik va algoritmlar haqida o‘rganing."
         },
         "coursec-2022/Debugging in Maze": {
           "name": "Debugging in Maze",
           "overview": "Debug qilish dasturlashni o‘rganishning muhim elementidir. Bu darsda, talabalar noto‘g‘ri yechilgan boshqotirmalarga duch kelishadi. Ular xatolikni topish uchun mavjud kodni qatorma-qator tekshirib chiqishadi, jumladan, noto‘g‘ri ishlatilgan sikllar, unutib qoldirilgan bo‘limlar, ortiqcha bo‘limlar va tartibdan tashqaridagi bo‘limlarni.",
+          "preparation": "-   Sinfingizda paydo bo'lgan muammolarni topish uchun jumboqlarni yeching.\n-   (ixtiyoriy) Sinfingiz bilan hal qilish uchun bir juft jumboq tanlang.\n-   Umumiy ko'rinish **\\*CS asoslari asosiy dars maslahatlari - Dars bo'yicha takliflar**\n-   Har bir o'quvchining o'ylashi uchun kundaligi borligiga ishonch hosil qiling.",
           "student_overview": "Boshqotirmalardagi muammolarni toping va debug qilish mahoratingizni amalda sinab ko‘ring."
         },
         "coursec-2022/Collecting Treasure with Laurel": {

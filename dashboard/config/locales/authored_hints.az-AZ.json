@@ -480,10 +480,8 @@
         },
         "courseC_artist_prog7_2021": {
           "courseC_artist_prog7_e": "Səhv etməkdən qorxmayın! Hələ tapmacanı həll etdiyinizi düşünməsəniz də, nə olacağını görmək üçün blok əlavə edib kodu işlədməyə çalışın.",
-          "courseC_artist_prog7_a": "Hər bucaq 45 və ya 90 dərəcədir",
-          "courseC_artist_prog7_b": "İlk addımda işləyir? \\\nİkinciyə necə?\nHarada səhv gedir?",
-          "courseC_artist_prog7_c": "Hansı bucağa ehtiyacınız olduğunu görmək üçün dönmə bloklarında açılan menyudan istifadə edə bilərsiniz!",
-          "courseC_artist_prog7_d": "İstəyəcəksən:\n\n-   önə doğru irəlilə\n-   45 dərəcə sağa dönün\n-   önə doğru irəlilə\n-   90 dərəcə sağa dönün\n-   önə doğru irəlilə\n-   45 dərəcə sağa dönün\n\nBu nümunəni 2 dəfə təkrarlayın!"
+          "courseC_artist_prog7_a": "Hər bir bucaq 45 və ya 90 dərəcədir.",
+          "courseC_artist_prog7_b": "İlk addımda işləyirmi?\\\nBəs ikincisidə?\\\nHarada səhv gedir?"
         },
         "courseC_collector_prog2": {
           "courseC_collector_prog2_b": "Səhv etməkdən qorxmayın! Hələ tapmacanı həll etdiyinizi düşünməsəniz də, nə olacağını görmək üçün blok əlavə edib kodu işlədməyə çalışın.",
@@ -6140,29 +6138,6 @@
         },
         "helloworld_food_click_space-2022": {
           "hw_click_sprites": "Proqram işləyərkən spritlərə klikləyin."
-        },
-        "courseC_artist_prog2_2021": {
-          "courseC_artist_prog2_a": "*\"Əgər <xml><block type=\"draw_move_by_constant\"><title name=\"DIR\">moveForward</title><title name=\"VALUE\">100</title></block></xml> blokunu istifadə etsən, 1 düz xətt çəkəcəm.\"*",
-          "courseC_artist_prog2_b": "Tini dönməkdə çətinlik çəkirsən? <xml><block type=\"draw_turn_by_constant_dropdown\"><title name=\"DIR\">turnRight</title><title name=\"VALUE\" config=\"45,60,90,120,180\">90</title></block></xml> blokundan istifadə et."
-        },
-        "courseC_artist_prog3_2021": {
-          "courseC_artist_prog3_a": "Bu pəncərəni yaratmaq üçün tərəfləri 100 piksel olan bir kvadrat çəkmək kifayətdir.\n\n-   önə doğru irəlilə\n-   dönmək\n-   önə doğru irəlilə\n-   dönmək\n-   önə doğru irəlilə\n-   dönmək\n-   önə doğru irəlilə",
-          "courseC_artist_prog3_b": "Daha qısa kod etmək istəyirsiniz? Bu tapmacada bir döngə istifadə etməyə çalışın."
-        },
-        "courseC_artist_prog4_2021": {
-          "courseC_artist_prog4_a": "Roketi bitirmək üçün yuxarıdakı üçbucağı çəkmək kifayətdir!",
-          "courseC_artist_prog4_b": "Hansı bucağa ehtiyacınız olduğunu görmək üçün \"dönüş\" bloklarında açılan menyudan istifadə edə bilərsiniz!",
-          "courseC_artist_prog4_c": "Üçbucaq çəkmək üçün sizə lazım olacaq:\n\n-   önə doğru irəlilə\n-   120 dərəcə sola dönün\n-   önə doğru irəlilə\n-   120 dərəcə sola dönün\n-   önə doğru irəlilə"
-        },
-        "courseC_artist_prog_challenge2a_2021": {
-          "courseC_artist_prog_challenge2_a": "Birinci xətti çəkdikdən sonra ikinci xəttinizi çəkməzdən əvvəl sola dönün.",
-          "courseC_artist_prog_challenge2_b": "İkinci xətti çəkdikdən sonra üçüncü xəttinizi çəkməzdən əvvəl sağa dönün."
-        },
-        "courseD_farmer_while2_2021": {
-          "courseD_farmer_while2_a": "Deşiyə çatmaq üçün sənə yalnız hərəkət etmək lazımdır."
-        },
-        "courseD_farmer_while3_2021": {
-          "courseD_farmer_while3_a": "Burada dövr sənə kodunu sadələşdirməyə kömək edə bilər."
         }
       }
     }

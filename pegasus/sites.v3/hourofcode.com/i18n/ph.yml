@@ -10455,10 +10455,12 @@ ph:
   tutorial_codespellsnexus_longdescription: Under the mentorship of a mysterious sock
     puppet, you must infiltrate and reprogram a super-intelligent 'Learn to Code'
     app that seeks global domination. Solve puzzles. Learn to code. Hack the Nexus.
-  tutorial_carnegieslime_longdescription: Super Slime Battle is a game that was co-designed
-    between researchers at Carnegie Mellon University and students from the Boys and
-    Girls Clubs of Western PA where students and their (co)robot partners must defend
-    their candy stash from oncoming baddies.
+  tutorial_carnegieslime_longdescription: Every year the Minions of Scarecorp try
+    to steal your candy crops. Booville High's Baddest Slimeball crew have come together
+    to protect the candy crops with slime weapons. Players play as teen monsters who
+    program their collaborative robot (aka 'cobot') pets to help take down the Minions
+    of Scarecorp who are after their town's candy harvest. Choose between four characters
+    and their cobotic pets.
   tutorial_ozotown_longdescription: The Ozobot Blockly OzoTown will teach advanced
     sequencing as students utilize logic, reasoning, and computer science skills to
     navigate real life scenarios. No bot needed!
@@ -11025,7 +11027,7 @@ ph:
   tutorial_codespeakpixel_string_detail_programming_languages: JavaScript
   tutorial_codespellsnexus_string_detail_programming_languages: Blocks, JavaScript,
     Racket
-  tutorial_carnegieslime_string_detail_programming_languages: Blocks
+  tutorial_carnegieslime_string_detail_programming_languages: blocks
   tutorial_ozotown_string_detail_programming_languages: Blocks
   tutorial_milnedash_string_detail_programming_languages: Blocks
   tutorial_microbitpet_string_detail_programming_languages: Python, MakeCode

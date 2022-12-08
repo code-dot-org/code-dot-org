@@ -814,13 +814,13 @@
           "Function_intro_Ryan_1": "Ez a kis utasítás azt mondja a számítógépnek, hogy futassa a NAGY kódtömböt ugyanazzal a névvel a munkaterületen."
         },
         "MC_HOC_2017_03_Cole_2021": {
-          "MC_HOC_2017_03_Cole_1": "Ez egy \"ismételd\" ciklus.  Vidd a munkaterületre, és add meg azt a kódot, amelyet újra és újra futtatni szeretnél."
+          "MC_HOC_2017_03_Cole_1": "Ez egy \"ismétlés\" ciklus.  Vidd a munkaterületre, és add meg azt a kódot, amelyet újra és újra futtatni szeretnél."
         },
         "MC_HOC_2017_04_Cole_2021": {
-          "MC_HOC_2017_04_Cole_a": "Az Agent tud a víz fölött lebegni, de a játékos nem!"
+          "MC_HOC_2017_04_Cole_a": "Az Ügynök tud a víz fölött lebegni, de a játékos nem!"
         },
         "MC_HOC_2017_06_Cole_2021": {
-          "MC_HOC_2017_06_Cole_1": "Ezeket a blokkokat nem dobhatod ki, de szerkesztheted őket!"
+          "MC_HOC_2017_06_Cole_1": "Ezeket a blokkokat nem dobhatod el, de szerkesztheted őket!"
         },
         "MC_HOC_2017_Ali_2021": {
           "MC_HOC_2017_08_RY_1": "Az Ügynök tud a láva fölött lebegni, de a játékos nem!  "
@@ -1377,12 +1377,6 @@
         },
         "coursea_maze_ramp1_2021": {
           "grade2_CaringForNewPet_0_1": "Miután a blokkokat egymáshoz csatlakoztattad, nyomj \"Futtatás\" gombra, hogy elinduljon a program!"
-        },
-        "Fish Tank 3-validated_2021": {
-          "spritelab_comment": "Ezt a blokkot arra használhatod, hogy saját magadnak vagy a tanárodnak megjegyzést írj arról, hogy a kód hogyan működik. "
-        },
-        "courseC_artist_prog2_2021": {
-          "slider": "Itt lelassíthatod a programodat."
         }
       }
     }

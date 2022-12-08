@@ -19,7 +19,7 @@
 ca:
   errors:
     messages:
-      not_saved: 'Si us plau corregeixi els errors següents:'
+      not_saved: 'Corregeix els errors següents:'
       too_young: 'Aquest contingut té restriccions d''edat en el lloc i no està disponible per als estudiants més joves.'
       teacher_must_accept_terms: 'Aquest contingut té restriccions d''edat en el lloc i no està disponible per als estudiants més joves. Demana el teu professor d''acceptar les condicions actualitzades del servei per poder accedir a aquest contingut. El teu professor pot fer-ho entreu al codi d''estudi i fent clic el botó "Revisió actualitzada termes" a la part superior de la pàgina principal de codi d''estudi.'
       pair_programmer: 'Actualment estàs programant en parella amb un estudiant que no té accés a aquest contingut. Per accedir a aquest contingut, atura la programació en parella i torna-hi.'
@@ -416,6 +416,7 @@ ca:
     make_my_own_app: 'Fer la meva aplicació'
     how_it_works: 'Com funciona'
     try_hour_of_code: 'Proveu una hora de codi!'
+    store: 'Botiga'
   reference_area:
     title: 'Necessites ajuda?'
     subtitle: 'Mira aquests vídeos i consells'

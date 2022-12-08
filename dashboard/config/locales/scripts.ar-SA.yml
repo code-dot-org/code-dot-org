@@ -5642,3 +5642,7 @@ ar:
           description_audience: كُتاب المقرر الدراسي
           description_short: لإجراء تحديثات مرحلية للدروس أو المستويات بين إصدارات
             المقررات الدراسية
+        devices-2022:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: 'الفصل 2: بناء نماذج أوليّة مادية'

@@ -1582,8 +1582,8 @@ fr:
             '"I''m a visitor in this town."': Je suis un visiteur dans cette ville.
             '"If we share, we''ll all have something to eat. "': Si on partage, on
               aura tous quelque chose à manger.
-            '"I''ll trick everyone into giving me their food."': Je vais faire un
-              tour à tout le monde pour les amener à me donner leur nourriture.
+            '"I''ll trick everyone into giving me their food."': Je vais jouer un
+              tour à tout le monde pour les faire me donner leur nourriture.
       gamelab_startAvoiding:
         text: "{SPRITE} se met à éviter {TARGET}"
       gamelab_startFollowing:

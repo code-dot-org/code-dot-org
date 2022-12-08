@@ -434,7 +434,7 @@
         },
         "Function intro Ryan_2021": {
           "Function_intro_Ryan_b": "Jika anda memanggil fungsi dengan betul, ini adalah laluan yang anda akan tempuh...",
-          "Function_intro_Ryan_a": "Anda boleh memanggil fungsi berkali-kali di dalam atur cara anda! Cuba panggilkan dua kali untuk menyelesaikan teka-teki ini."
+          "Function_intro_Ryan_a": "Anda boleh memanggil fungsi berkali-kali dalam atur cara anda! Cuba panggil fungsi sebanyak dua kali untuk menyelesaikan teka-teki ini."
         },
         "HOC 2018 Level_10": {
           "voyage_aquatic_10a": "Lihat **Tanlung Laut** ![](https://images.code.org/471b33234222ddffb463aeb65de6b371-image-1539183353423.net-resizeimage.png)? Bagaimanakah anda boleh menggunakan bersyarat dengan mereka untuk melalui Monumen Lautan?"
@@ -554,7 +554,7 @@
           "MC_HOC_2017_05_Cole_b": "Bawa Ejen menyeberangi sungai, bina jambatan semasa anda pergi."
         },
         "MC_HOC_2017_05_Cole_2021": {
-          "MC_HOC_2017_05_Cole_a": "Adakah anda tahu bahawa anda boleh meletakkan lebih daripada satu kod di dalam gelung? Cuba gerakkan ke hadapan **dan** letakkan papan dalam `berulang` untuk menyelesaikan teka-teki ini.",
+          "MC_HOC_2017_05_Cole_a": "Adakah anda tahu bahawa anda boleh meletakkan lebih daripada satu kod di dalam gelung? Cuba gerakkan ke hadapan **dan** letakkan papan di dalam `berulang` untuk menyelesaikan teka-teki ini.",
           "MC_HOC_2017_05_Cole_b": "Bawa Ejen menyeberangi sungai, bina jambatan semasa anda pergi."
         },
         "MC_HOC_2017_06_Cole": {
@@ -1087,7 +1087,7 @@
         "courseC_artist_prog7_2021": {
           "courseC_artist_prog7_a": "Setiap sudut ialah sama ada 45 atau 90 darjah.",
           "courseC_artist_prog7_c": "Anda boleh menggunakan menu ke bawah pada blok pusing untuk melihat sudut yang anda perlukan!",
-          "courseC_artist_prog7_e": "Jangan takut membuat kesilapan! Cuba tambahkan blok dan jalankan kod untuk melihat perkara yang akan berlaku, walaupun anda tidak fikir yang anda telah menyelesaikan teka-teki itu.",
+          "courseC_artist_prog7_e": "Jangan takut membuat kesilapan! Cuba tambahkan blok dan menjalankan kod untuk melihat perkara yang akan berlaku, walaupun anda tidak fikir yang anda telah menyelesaikan teka-teki itu.",
           "courseC_artist_prog7_b": "Adakah ia berfungsi pada langkah pertama?\\\nBagaimanakah dengan langkah kedua?\\\nDi manakah salahnya?",
           "courseC_artist_prog7_d": "Anda perlu:\n\n-   bergerak ke hadapan\n-   pusing kanan 45 darjah\n-   bergerak ke hadapan\n-   pusing kanan 90 darjah\n-   bergerak ke hadapan\n-   pusing kanan 45 darjah\n\nUlangi corak ini 2 kali!"
         },

@@ -3701,3 +3701,7 @@ hi:
           title: CSP प्लेग्राउंड
           description_audience: पाठ्यक्रम राईटरस
           description_short: पाठ्यचर्या संस्करणों के बीच पाठों या स्तरों के अद्यतनों के मंचन के लिए
+        devices-2022:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: 'अध्याय 2: भौतिक प्रारूप बनाना'

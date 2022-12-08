@@ -532,6 +532,7 @@
   dashboard_puzzle: "Puzzle"
   dashboard_question: "Pregunta"
   dashboard_correctness_correct: "Correcte"
+  dashboard_submission_in_progress: "En curs"
   stats_hoc_2013_heading: 'Increïbles estadístiques d''Hora de Codi de l''any passat. En només una setmana:'
   stats_hoc_2013_image_alt: "Estadístiques de 2013 d'Hora de Codi"
   dashboard_teacher: "Mestre"
@@ -1190,6 +1191,7 @@
   footer_about: "Quant a"
   footer_partners: "Socis"
   footer_donate: "Feu una donació"
+  footer_store: "Botiga"
   footer_support: "Suport"
   footer_terms: "Condicions"
   ai_for_oceans_lesson_plan: "unitat didàctica/lliço"
@@ -1208,3 +1210,4 @@
   hoc2022_landing_page_create_description: "Feu alguna cosa estranya i meravellosa!"
   hoc2022_landing_page_banner_alt_left: "Un alienígena ballant al costat de Saturn a l'espai"
   hoc2022_landing_page_banner_alt_right: "Un robot driblant una pilota de futbol a l'espai davant d'un coet enlairant"
+  try_it_yourself: "Prova-ho tu mateix!"

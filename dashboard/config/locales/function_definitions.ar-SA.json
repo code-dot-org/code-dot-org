@@ -3956,7 +3956,7 @@
             "name": "ارسم مربعاً"
           },
           "staggered squares": {
-            "name": "\nمربعات متعاقبة"
+            "name": "مربعات متعاقبة"
           }
         },
         "courseE_artist_functions8a_2021": {
@@ -4039,9 +4039,6 @@
         "courseE_artist_functions_predict1_2021": {
           "draw a square": {
             "name": "رسم مربع"
-          },
-          "draw ear stems": {
-            "name": "ارسم يد النظارة"
           }
         },
         "courseE_artist_functions_predict1_dani": {
@@ -4117,7 +4114,7 @@
             "name": "احصل على كل اليقطين"
           },
           "pick along path": {
-            "name": "التقط على امتداد المسار"
+            "name": "اختر على امتداد المسار"
           }
         },
         "courseE_farmer_functions3c_2021": {

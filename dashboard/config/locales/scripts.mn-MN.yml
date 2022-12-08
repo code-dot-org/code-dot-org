@@ -4541,3 +4541,7 @@ mn:
           title: КШУ-ны зарчмууд Хичээлийн дараах судалгаа
         csp-playground:
           title: CSP тоглоомын талбай
+        devices-2022:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: '2-р бүлэг: Биет ноорог үүсгэх'

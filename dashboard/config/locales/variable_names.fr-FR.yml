@@ -9,7 +9,7 @@ fr:
       Green: Vert
       Red: Rouge
       actor: acteur
-      age: age
+      age: âge
       animal1score: animal1score
       animal1speed: animal1vitesse
       animal2score: animal2score
@@ -68,6 +68,7 @@ fr:
       nectars: nectars
       object: objet
       padYOffset: padYOffset
+      parts: parties
       planet: planète
       player_score: joueur_score
       points: points

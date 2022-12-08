@@ -1572,7 +1572,7 @@ fr:
             csp_variables:
               display_name: Variables
             csp_conditionals:
-              display_name: Instructions conditionnelles
+              display_name: Formules conditionnelles
             csp_functions:
               display_name: Fonctions
             csp_project:
@@ -1622,7 +1622,7 @@ fr:
             csf_loops:
               display_name: Boucles
             csf_conditionals:
-              display_name: Instructions conditionnelles
+              display_name: Formules conditionnelles
             csf_binary:
               display_name: Binaire
             csf_digcit:
@@ -1664,7 +1664,7 @@ fr:
             csf_loops:
               display_name: Boucles
             csf_conditionals:
-              display_name: Instructions conditionnelles
+              display_name: Formules conditionnelles
             csf_functions:
               display_name: Fonctions
             csf_variables:
@@ -1850,7 +1850,7 @@ fr:
             csp_variables:
               display_name: Variables
             csp_conditionals:
-              display_name: Instructions conditionnelles
+              display_name: Formules conditionnelles
             csp_functions:
               display_name: Fonctions
             csp_project:
@@ -1988,7 +1988,7 @@ fr:
             csp_variables:
               display_name: Variables
             csp_conditionals:
-              display_name: Instructions conditionnelles
+              display_name: Formules conditionnelles
             csp_functions:
               display_name: Fonctions
             csp_project:
@@ -1999,7 +1999,7 @@ fr:
             csp_variables:
               display_name: Variables
             csp_conditionals:
-              display_name: Instructions conditionnelles
+              display_name: Formules conditionnelles
             csp_functions:
               display_name: Fonctions
             csp_project:
@@ -2012,7 +2012,7 @@ fr:
             csp_variables:
               display_name: Variables
             csp_conditionals:
-              display_name: Instructions conditionnelles
+              display_name: Formules conditionnelles
             csp_functions:
               display_name: Fonctions
             csp_project:
@@ -2036,7 +2036,7 @@ fr:
             csp_variables:
               display_name: Variables
             csp_conditionals:
-              display_name: Instructions conditionnelles
+              display_name: Formules conditionnelles
             csp_functions:
               display_name: Fonctions
             csp_project:
@@ -2054,7 +2054,7 @@ fr:
             csp_variables:
               display_name: Variables
             csp_conditionals:
-              display_name: Instructions conditionnelles
+              display_name: Formules conditionnelles
             csp_functions:
               display_name: Fonctions
             csp_project:
@@ -2065,7 +2065,7 @@ fr:
             csp_variables:
               display_name: Variables
             csp_conditionals:
-              display_name: Instructions conditionnelles
+              display_name: Formules conditionnelles
             csp_functions:
               display_name: Fonctions
             csp_project:
@@ -2076,7 +2076,7 @@ fr:
             csp_variables:
               display_name: Variables
             csp_conditionals:
-              display_name: Instructions conditionnelles
+              display_name: Formules conditionnelles
             csp_functions:
               display_name: Fonctions
             csp_project:
@@ -2334,7 +2334,7 @@ fr:
             csp_variables:
               display_name: Variables
             csp_conditionals:
-              display_name: Instructions conditionnelles
+              display_name: Formules conditionnelles
             csp_functions:
               display_name: Fonctions
             csp_project:
@@ -2347,7 +2347,7 @@ fr:
             csf_digcit:
               display_name: Citoyenneté Numérique
             csf_conditionals:
-              display_name: Instructions conditionnelles
+              display_name: Formules conditionnelles
             csf_nested_loops:
               display_name: Boucles Imbriquées
             csf_functions:
@@ -2378,7 +2378,7 @@ fr:
             csf_loops:
               display_name: Boucles
             csf_conditionals:
-              display_name: Instructions conditionnelles
+              display_name: Formules conditionnelles
             csf_events:
               display_name: Événements
             csf_sprites:
@@ -2397,7 +2397,7 @@ fr:
             csf_loops:
               display_name: Boucles
             csf_conditionals:
-              display_name: Instructions conditionnelles
+              display_name: Formules conditionnelles
             csf_events:
               display_name: Événements
             csf_sprites:
@@ -2425,7 +2425,7 @@ fr:
             csp_variables:
               display_name: Variables
             csp_conditionals:
-              display_name: Instructions conditionnelles
+              display_name: Formules conditionnelles
             csp_functions:
               display_name: Fonctions
             csp_project:
@@ -2586,7 +2586,7 @@ fr:
             csf_loops:
               display_name: Boucles
             csf_conditionals:
-              display_name: Instructions conditionnelles
+              display_name: Formules conditionnelles
             csf_binary:
               display_name: Binaire
             csf_digcit:
@@ -2649,7 +2649,7 @@ fr:
             csf_loops:
               display_name: Boucles
             csf_conditionals:
-              display_name: Instructions conditionnelles
+              display_name: Formules conditionnelles
             csf_functions:
               display_name: Fonctions
             csf_variables:
@@ -2932,7 +2932,7 @@ fr:
             csp_variables:
               display_name: Variables
             csp_conditionals:
-              display_name: Instructions conditionnelles
+              display_name: Formules conditionnelles
             csp_functions:
               display_name: Fonctions
             csp_project:
@@ -3050,7 +3050,7 @@ fr:
             csf_loops:
               display_name: Boucles
             csf_conditionals:
-              display_name: Instructions conditionnelles
+              display_name: Formules conditionnelles
             csf_binary:
               display_name: Binaire
             csf_digcit:
@@ -3072,7 +3072,7 @@ fr:
             csf_digcit:
               display_name: Citoyenneté Numérique
             csf_nested_loops:
-              display_name: Instructions conditionnelles
+              display_name: Formules conditionnelles
             csf_functions:
               display_name: Fonctions
             csf_impacts:
@@ -3081,7 +3081,9 @@ fr:
               display_name: Projet de fin de cours
             lessonGroup-7:
               display_name: L'impact de l'informatique
+          student_description: Mets-toi à coder avec les algorithmes, les événements, les boucles, les formules conditionnelles et les fonctions ! À la fin de ce cours, tu concevras et créera un jeu ou un dessin que tu pourras partager avec tes amis et ta famille.
         coursef-2021:
+          title: Cours F (2021)
           description_short: Apprends toutes les notions dans les Concepts Fondamentaux de l’Informatique et crée tes propres œuvres d’art, histoires ou jeux.
           description_audience: 'Àges : 9 à 13 ans'
           lesson_groups:
@@ -3091,6 +3093,8 @@ fr:
               display_name: Citoyenneté Numérique
             csf_variables:
               display_name: Les Boucles « Pour »
+            csf_data:
+              display_name: Données et Simulations
             csf_for_loops:
               display_name: Les Boucles « Pour »
             csf_sprites:
@@ -3116,7 +3120,7 @@ fr:
             csf_loops:
               display_name: Boucles
             csf_conditionals:
-              display_name: Instructions conditionnelles
+              display_name: Formules conditionnelles
             csf_functions:
               display_name: Fonctions
             csf_variables:
@@ -3604,7 +3608,7 @@ fr:
             csf_loops:
               display_name: Boucles
             csf_conditionals:
-              display_name: Instructions conditionnelles
+              display_name: Formules conditionnelles
             csf_functions:
               display_name: Fonctions
             csf_variables:
@@ -3638,7 +3642,7 @@ fr:
             csp_variables:
               display_name: Variables
             csp_conditionals:
-              display_name: Instructions conditionnelles
+              display_name: Formules conditionnelles
             csp_functions:
               display_name: Fonctions
             csp_project:
@@ -3734,7 +3738,7 @@ fr:
             csf_loops:
               display_name: Boucles
             csf_conditionals:
-              display_name: Instructions conditionnelles
+              display_name: Formules conditionnelles
             end_of_course_project:
               display_name: Projet de fin de cours
           title: Cours D (2022)
@@ -3753,12 +3757,14 @@ fr:
             csf_functions:
               display_name: Fonctions
             csf_nested_loops:
-              display_name: Instructions conditionnelles
+              display_name: Formules conditionnelles
             lessonGroup-7:
               display_name: L'impact de l'informatique
             end_of_course_project:
               display_name: Projet de fin de cours
+          title: Cours E (2022)
           description: Nous avons créé le cours E pour des élèves de CM1. Le cours commence par une introduction à l'outil de programmation Labo des Sprites. Les élèves apprendront à créer des projets amusants et interactifs qui renforceront ce qu'ils apprendront sur la sécurité en ligne. À la suite de ces leçons, les élèves se mettront à faire du codage plus complexe. Les élèves découvriront les boucles imbriquées, les fonctions et les formules conditionnelles. À la fin du cours, les élèves associeront ces notions pour résoudre des énigmes difficiles. Le cours se termine par un projet libre dans le cadre duquel les élèves créeront un jeu ou feront un dessin.
+          student_description: Mets-toi à coder avec les algorithmes, les événements, les boucles, les formules conditionnelles et les fonctions ! À la fin de ce cours, tu concevras et créera un jeu ou un dessin que tu pourras partager avec tes amis et ta famille.
           description_audience: 'Âge : 8 à 12 ans'
         coursef-2022:
           lesson_groups:
@@ -3768,6 +3774,8 @@ fr:
               display_name: Citoyenneté Numérique
             lessonGroup-8:
               display_name: Variables
+            csf_data:
+              display_name: Données et Simulations
             end_of_course_project:
               display_name: Projet de fin de cours
           description_short: Apprends toutes les notions dans les Concepts Fondamentaux de l’Informatique et crée tes propres œuvres d’art, histoires ou jeux.
@@ -3840,6 +3848,8 @@ fr:
               display_name: Sprites
             lessonGroup-8:
               display_name: Variables
+            csf_data:
+              display_name: Données et Simulations
             end_of_course_project:
               display_name: Projet de fin de cours
           description_audience: 'Àges : 9 à 13 ans'
@@ -4129,7 +4139,7 @@ fr:
             csp_variables:
               display_name: Variables
             csp_conditionals:
-              display_name: Instructions conditionnelles
+              display_name: Formules conditionnelles
             csp_functions:
               display_name: Fonctions
             csp_project:
@@ -4184,3 +4194,7 @@ fr:
           title: CSP Terrain de Jeux
           description_audience: Rédacteurs de programmes
           description_short: Pour effectuer des mises à jour de leçons ou de niveaux entre deux versions du programme de formation.
+        devices-2022:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: 'Chapitre 2 : Construction de Prototypes Physiques'

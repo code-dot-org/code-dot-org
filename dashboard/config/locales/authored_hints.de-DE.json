@@ -5500,8 +5500,8 @@
         },
         "courseD_bee_conditionals2": {
           "courseD_bee_conditionals2_hintVid1": "Brauchst du Hilfe? Sieh dir das Video an!",
-          "courseD_bee_conditionals2_a": "Manchmal ist eine Blüte da, manchmal nicht. Wenn du willst, dass dein Code in beiden Fällen läuft, verwende auf jeden Fall eine `if‘-Anweisung.",
-          "courseD_bee_conditionals2_b": "Du kannst eine `wiederhole`-Schleife` oder eine `solange ein Weg vor dir liegt` verwenden, um dich durch dieses Labyrinth zu bewegen.",
+          "courseD_bee_conditionals2_a": "Manchmal ist eine Blüte da, manchmal nicht. Wenn du willst, dass dein Code in beiden Fällen läuft, verwende auf jeden Fall eine \\`if‘-Anweisung.",
+          "courseD_bee_conditionals2_b": "Du kannst eine `wiederhole`-Schleife`oder eine`solange ein Weg vor dir liegt\\` verwenden, um dich durch dieses Labyrinth zu bewegen.",
           "courseD_bee_conditionals2_c": "Du brauchst nicht nach Honigwaben suchen. Unter den Wolken befinden sich nur Blüten oder leere Felder.",
           "courseD_bee_conditionals2_hintVid2": "In diesem Video findest du Hilfe zur Lösung dieser Aufgabe."
         },
@@ -5530,7 +5530,7 @@
         "courseD_bee_conditionals3": {
           "courseD_bee_conditionals3_hintVid1": "Brauchst du Hilfe? Sieh dir das Video an!",
           "courseD_bee_conditionals3_a": "Achte darauf, dass du mit einer \"if\"-Anweisung jedes Feld daraufhin überprüfst, ob es entweder eine Blüte oder nichts enthält.",
-          "courseD_bee_conditionals3_b": "Du kannst eine `wiederhole`- oder eine `solange`-Schleife verwenden, damit die Biene in Bewegung bleibt. Verwende die Schleife, die dir am besten gefällt!\n",
+          "courseD_bee_conditionals3_b": "Du kannst eine `wiederhole`- oder eine `solange`-Schleife verwenden, damit die Biene in Bewegung bleibt. Verwende die Schleife, die dir am besten gefällt!",
           "courseD_bee_conditionals3_c": "Hab keine Angst, einen Fehler zu machen! Versuche weitere Blöcke hinzuzufügen und den Code auszuführen, auch wenn du der Meinung bist, dass du das Rätsel noch nicht gelöst hast.",
           "courseD_bee_conditionals3_hintVid2": "In diesem Video findest du Hilfe zur Lösung dieser Aufgabe."
         },
@@ -5560,7 +5560,7 @@
           "courseD_bee_conditionals4_hintVid1": "Brauchst du Hilfe? Sieh dir das Video an!",
           "courseD_bee_conditionals4_a": "Du kannst jeden Platz immer noch so behandeln, als ob eine Wolke über ihm liegt, obwohl du den ganzen Weg übersehen kannst.",
           "courseD_bee_conditionals4_b": "Verwende eine `if`-Anweisung innerhalb deiner Schleife, um jedes Platz auf Nektar zu überprüfen.",
-          "courseD_bee_conditionals4_c": "Mit dem [blockly block][0] Baustein solltest du dich vorwärts bewegen und nach einer Blüte suchen. Wenn dort eine Blüte ist - was soll die Biene tun?",
+          "courseD_bee_conditionals4_c": "Mit dem <xml><block type=\"maze_untilBlocked\"/></xml> Baustein solltest du dich vorwärts bewegen und nach einer Blüte suchen. Wenn dort eine Blüte ist - was soll die Biene tun?",
           "courseD_bee_conditionals4_hintVid2": "In diesem Video findest du Hilfe zur Lösung dieser Aufgabe."
         },
         "courseD_bee_conditionals4_2018": {
@@ -5587,7 +5587,7 @@
         },
         "courseD_bee_conditionals5": {
           "courseD_bee_conditionals5_hintVid1": "Brauchst du Hilfe? Sieh dir das Video an!",
-          "courseD_bee_conditionals5_a": "Betrachte jede Seite des rechteckigen Pfades als einen eigenen Pfad. Baue eine geschachtelte Schleife auf, mit einem `wiederhole`-Baustein außen und einer `Solange ein Weg vor dir liegt‘-Schleife innen. Wie viele Wege muss die Biene entlangfliegen, wenn sie jede Seite mit einer Blüte anfliegen muss?",
+          "courseD_bee_conditionals5_a": "Betrachte jede Seite des rechteckigen Pfades als einen eigenen Pfad. Baue eine geschachtelte Schleife auf, mit einem `wiederhole`-Baustein außen und einer \\`Solange ein Weg vor dir liegt‘-Schleife innen. Wie viele Wege muss die Biene entlangfliegen, wenn sie jede Seite mit einer Blüte anfliegen muss?",
           "courseD_bee_conditionals5_c": "3 Seiten des Rechtecks haben Blüten, so dass der Code `wiederhole 3 mal` benötigt. Bei jeder Wiederholung muss die Biene den Weg weiterverfolgen, `solange ein Weg vor dir liegt`. Um den Weg weiter zu verfolgen, muss sich die Biene `vorwärts bewegen`. Während sie sich auf dem Weg befindet, muss die Biene nach Blüten Ausschau halten. `wenn an der Blume`, muss die Biene mit `hole Nektar`,Nektar holen.",
           "courseD_bee_conditionals5_b": "Im Baustein `solange ein Weg vor dir liegt`, musst du dich vorwärts bewegen und nach einer Blüte suchen. Wie prüfst du, ob eine Blüte vorhanden ist? Was tust du, wenn eine Blüte vorhanden ist?",
           "courseD_bee_conditionals5_hintVid2": "In diesem Video findest du Hilfe zur Lösung dieser Aufgabe."
@@ -7022,8 +7022,8 @@
         },
         "courseE_artist_functions2": {
           "courseD_artist_functions2_b": "Die Funktion, die du schreibst, sollte nicht dein ganzes Programm enthalten, sondern nur den Teil, der ein Quadrat mit 100 Pixel langen Seiten zeichnet.",
-          "courseD_artist_functions2_c": "Verwende den grünen Baustein `ein Quadrat zeichnen`, um deine Funktion unter dem Baustein `wenn ausgeführt wird` aufzurufen. Sonst wird der Code in deiner Funktion nicht ausgeführt. \n\n[blockly block][0]",
-          "courseD_artist_functions2_a": "Dein Programm sollte: \n\n- die Funktion verwenden \n- um 100 + 75 Pixel vorwärts bewegen\n- die Funktion verwenden"
+          "courseD_artist_functions2_c": "Verwende den grünen Baustein `ein Quadrat zeichnen`, um deine Funktion unter dem Baustein `wenn ausgeführt wird` aufzurufen. Sonst wird der Code in deiner Funktion nicht ausgeführt. \n\n<xml><block type=\"procedures_callnoreturn\" limit=\"2\"><mutation name=\"draw a square\"/></block></xml>",
+          "courseD_artist_functions2_a": "Dein Programm sollte: \n\n-   die Funktion verwenden \n-   um 100 + 75 Pixel vorwärts bewegen\n-   die Funktion verwenden"
         },
         "courseE_artist_functions2_2018": {
           "courseD_artist_functions2_b": "Die Funktion sollte nicht dein ganzes Programm enthalten, sondern nur den Teil, der ein Quadrat, dessen Seiten 100 Pixel lang sind, zeichnet.",

@@ -5576,7 +5576,7 @@
           "courseD_artist_binary8_c": "不要害怕犯错误! 即使你还没有解开这个关卡，尝试编写二进制文件并运行代码, 看看会发生什么。"
         },
         "courseD_bee_conditionals1_predict1": {
-          "courseD_bee_conditionals1_a": "在您尝试获取花蜜之前，您将需要使用“if”（如果）模块来查看是否有一朵花在云下面。\n"
+          "courseD_bee_conditionals1_a": "在您尝试获取花蜜之前，您将需要使用“if”（如果）模块来查看是否有一朵花在云下面。"
         },
         "courseD_bee_conditionals1_predict1_2018": {
           "courseD_bee_conditionals1_a": "在您尝试获取花蜜之前，您将需要使用“if”（如果）模块来查看是否有一朵花在云下面。"
@@ -5652,7 +5652,7 @@
           "courseD_bee_conditionals4_hintVid1": "需要入门帮助吗？ 看视频!",
           "courseD_bee_conditionals4_a": "哪怕可以看到整条路径，仍然可以当作每个空间上面有朵云来处理。",
           "courseD_bee_conditionals4_b": "在循环中使用`如果`语句检查每个空间是否有花蜜。 ",
-          "courseD_bee_conditionals4_c": "使用[blockly block][0]模块，您应该向前移动并找一朵花。如果有一朵花, 蜜蜂该怎么办？",
+          "courseD_bee_conditionals4_c": "使用<xml><block type=\"maze_untilBlocked\"/></xml>模块，您应该向前移动并找一朵花。如果有一朵花, 蜜蜂该怎么办？",
           "courseD_bee_conditionals4_hintVid2": "观看此视频帮助解决这个难题。"
         },
         "courseD_bee_conditionals4_2018": {
@@ -7116,7 +7116,7 @@
         "courseE_artist_functions2": {
           "courseD_artist_functions2_b": "您编写的函数不应包含整个程序, 只需绘制一个具有100像素边的正方形的部分。",
           "courseD_artist_functions2_c": "使用绿色`draw a square`（画一个正方形）模块，在`当运行时`模块下\"调用\"函数。否则，函数中的代码将不会运行。\n\n<xml><block type=\"procedures_callnoreturn\" limit=\"2\"><mutation name=\"draw a square\"/></block></xml>",
-          "courseD_artist_functions2_a": "你的程序应该：\n- 使用函数\n- 向前移动 100+75像素\n- 使用函数"
+          "courseD_artist_functions2_a": "你的程序应该：\n\n-   使用函数\n-   向前移动 100+75像素\n-   使用函数"
         },
         "courseE_artist_functions2_2018": {
           "courseD_artist_functions2_b": "您编写的函数不应包含整个程序, 只需绘制一个具有100像素边的正方形的部分。",

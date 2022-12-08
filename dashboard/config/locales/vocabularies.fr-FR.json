@@ -475,7 +475,7 @@
           "word": "Condition"
         },
         "conditionals/coursee/2022": {
-          "word": "Instructions conditionnelles",
+          "word": "Formules conditionnelles",
           "definition": "Déclarations qui s'exécutent que sous certaines conditions."
         },
         "while_loop/coursee/2022": {
@@ -609,7 +609,7 @@
           "definition": "Quelque chose qu'un programme vérifie pour voir si c'est vrai avant d'autoriser une action."
         },
         "conditionals/express/2022": {
-          "word": "Instructions conditionnelles",
+          "word": "Formules conditionnelles",
           "definition": "Déclarations qui s'exécutent que sous certaines conditions."
         },
         "while_loop/express/2022": {
@@ -822,7 +822,7 @@
           "word": "Condition"
         },
         "conditionals/csd/2022": {
-          "word": "Instructions conditionnelles"
+          "word": "Formules conditionnelles"
         },
         "abstraction/csd/2022": {
           "word": "Abstraction"
@@ -1243,7 +1243,7 @@
           "definition": "Quelque chose qu'un programme vérifie pour voir si c'est vrai avant d'autoriser une action."
         },
         "conditionals/express/2021": {
-          "word": "Instructions conditionnelles",
+          "word": "Formules conditionnelles",
           "definition": "Déclarations qui s'exécutent que sous certaines conditions."
         },
         "while_loop/express/2021": {
@@ -1365,7 +1365,7 @@
           "definition": "Quelque chose qu'un programme vérifie pour voir si c'est vrai avant d'autoriser une action."
         },
         "conditionals/coursee/2021": {
-          "word": "Instructions conditionnelles",
+          "word": "Formules conditionnelles",
           "definition": "Déclarations qui s'exécutent que sous certaines conditions."
         },
         "while_loop/coursee/2021": {
@@ -1423,7 +1423,7 @@
           "word": "Condition"
         },
         "conditionals/csd/2021": {
-          "word": "Instructions conditionnelles"
+          "word": "Formules conditionnelles"
         },
         "abstraction/csd/2021": {
           "word": "Abstraction"

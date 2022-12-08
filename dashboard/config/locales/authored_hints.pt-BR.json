@@ -5593,7 +5593,7 @@
         "courseD_bee_conditionals2": {
           "courseD_bee_conditionals2_hintVid1": "Precisa de ajuda para começar? Assista o vídeo!",
           "courseD_bee_conditionals2_a": "Às vezes uma flor vai estar lá, outras vezes não. Se você quiser que seu código seja executado em ambos os casos, certifique-se de usar uma instrução `se`.",
-          "courseD_bee_conditionals2_b": "Você pode usar um laço `repetir` ou` enquanto caminho pela frente` para percorrer este labirinto.",
+          "courseD_bee_conditionals2_b": "Você pode usar um laço `repetir` ou`enquanto caminho pela frente` para percorrer este labirinto.",
           "courseD_bee_conditionals2_c": "Você não precisa verificar se há favos de mel, só haverá flores ou espaços em branco sob as nuvens.",
           "courseD_bee_conditionals2_hintVid2": "Assista este vídeo para obter ajuda de como resolver este quebra-cabeça."
         },
@@ -7116,7 +7116,7 @@
         "courseE_artist_functions2": {
           "courseD_artist_functions2_b": "A função que você escreve não deve conter todo o seu programa, apenas a parte que desenha um quadrado com 100 lados de pixels.",
           "courseD_artist_functions2_c": "Use o bloco verde `desenhar um quadrado` para \"chamar\" sua função sob o bloco `quando executar`. Caso contrário, o código na sua função não será executado.\n\n<xml><block type=\"procedures_callnoreturn\" limit=\"2\"><mutation name=\"draw a square\"/></block></xml>",
-          "courseD_artist_functions2_a": "Seu programa deve: \n-Usar função\n- Mover para frente 100 + 75 pixels\n- Usar função"
+          "courseD_artist_functions2_a": "Seu programa deve: \n\\-Usar função\n\n-   Mover para frente 100 + 75 pixels\n-   Usar função"
         },
         "courseE_artist_functions2_2018": {
           "courseD_artist_functions2_b": "A função não deve conter todo o seu programa, apenas a parte que desenha um quadrado com 100 lados de pixels.",

@@ -8007,6 +8007,7 @@ en:
           description_audience: ''
           lesson_groups: {}
           name: dlp-csd-mod1-2022
+          lessons: {}
         dlp-csd-mod2-2022:
           title: 2022 CS Discoveries Deeper Learning Module A
           description: "## Completed module due by November 1, 2022"
@@ -8865,7 +8866,7 @@ en:
           title: CSC Bookcover
           description_audience: ''
           description_short: ''
-          description: 'this is an internal script as the source of truth for this lesson that will be reused in other CSC modules. '
+          description: ''
           student_description: ''
         csc-landmarks-pilot:
           lessons:
@@ -9274,3 +9275,26 @@ en:
           description_short: ''
           description: ''
           student_description: ''
+        devices-2022:
+          lessons: {}
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Introduction to App Lab
+            lessonGroup-3:
+              display_name: 'Chapter 1: Inputs and Outputs'
+            lessonGroup-4:
+              display_name: 'Chapter 2: Building Physical Prototypes'
+          name: devices-2022
+          title: Creating Apps for Devices
+          description_audience: ''
+          description_short: ''
+          description: |-
+            In the Creating Apps with Devices unit, students explore the role of physical devices in computing. Using App Lab and Adafruit’s Circuit Playground, students develop programs that utilize the same hardware inputs and outputs that you see in the smart devices, looking at how a simple rough prototype can lead to a finished product. Then, students explore how physical devices can be used to react to the world around them using a “maker” mindset to create prototypes with everyday materials.
+
+            **Implementation Guidance for Creating Apps with Devices**
+
+            -   This unit requires students to have access to Circuit Playground's - [click here][0] for more information about using Circuit Playground's in your classroom
+            -   Guidance for how to support students in programming levels and differentiate tasks are available in the [Programming Levels Guide][1] and [Differentiation Guide][2]
+
+            **Professional Development:** If you are interested in teaching this course, we recommend completing the free [Creating Apps with Devices Self-Paced Professional Development Module][3]. The module is designed to take 2 hours to complete. No previous experience with coding or AI is assumed.
+          student_description: This unit explores the role of hardware platforms in computing and how different sensors can provide more effective input and output than the traditional keyboard, mouse, and monitor. Using App Lab and Adafruit’s Circuit Playground, you’ll develop programs that utilize the same hardware inputs and outputs that you see in the smart devices, looking at how a simple rough prototype can lead to a finished product. The unit concludes with a design challenge to use the Circuit Playground as the basis for an innovation of your own design.

@@ -1504,8 +1504,6 @@ sq:
               name: Okładka
           name: csc-bookcover
           title: Okładka CSC
-          description: jest to wewnętrzny skrypt jako źródło prawdy dla tej lekcji,
-            który zostanie ponownie wykorzystany w innych modułach CSC.
         csp4-2023:
           lesson_groups:
             csp_variables:

@@ -3941,6 +3941,18 @@
               "length": "lengd",
               "sides": "hliðar"
             }
+          },
+          "small flower": {
+            "name": "lítið blóm"
+          },
+          "LOGIC FLOWERS2": {
+            "name": "BLÓM2"
+          },
+          "LOGIC FLOWER": {
+            "name": "BLÓM1"
+          },
+          "LOGIC FLOWERS": {
+            "name": "FLEIRI BLÓM"
           }
         },
         "Course F: Artist Project_Flowers_examples_2021": {

@@ -5056,7 +5056,7 @@
           "courseD_bee_conditionals4_hintVid1": "Potrzebujesz pomocy, aby zacząć? Obejrzyj film!",
           "courseD_bee_conditionals4_a": "Możesz traktować każde miejsce tak, jakby była nad nim chmura, nawet jeśli widzisz całą ścieżkę.",
           "courseD_bee_conditionals4_b": "Użyj instrukcji \"jeśli\" wewnątrz pętli, aby sprawdzić każde miejsce pod kątem nektaru.",
-          "courseD_bee_conditionals4_c": "Wykorzystując blok [blockly block][0], powinieneś przemieszczać się do przodu i wypatrywać kwiatka. Co powinna zrobić pszczółka, jeśli będzie kwiatek?",
+          "courseD_bee_conditionals4_c": "Wykorzystując blok <xml><block type=\"maze_untilBlocked\"/></xml>, powinieneś przemieszczać się do przodu i wypatrywać kwiatka. Co powinna zrobić pszczółka, jeśli będzie kwiatek?",
           "courseD_bee_conditionals4_hintVid2": "Obejrzyj ten film, jako pomoc w rozwiązaniu tej łamigłówki."
         },
         "courseD_bee_conditionals4_2018": {
@@ -6262,7 +6262,7 @@
         "courseE_artist_functions2": {
           "courseD_artist_functions2_b": "Funkcja, którą piszesz, nie powinna zawierać całego Twojego programu, tylko jego część, która rysuje kwadrat o bokach 100 pikseli.",
           "courseD_artist_functions2_c": "Użyj zielonego bloku \"narysuj kwadrat\", aby \"wywołać\" swoją funkcję pod blokiem \"po uruchomieniu\". W przeciwnym razie, kod Twojej funkcji nie uruchomi się. ",
-          "courseD_artist_functions2_a": "Twój program powinien:\n\n- uzyć funkcji, \n- przesunąć do przodu o 100 + 75 pikseli\n- użyć funkcji"
+          "courseD_artist_functions2_a": "Twój program powinien:\n\n-   uzyć funkcji, \n-   przesunąć do przodu o 100 + 75 pikseli\n-   użyć funkcji"
         },
         "courseE_artist_functions2_2018": {
           "courseD_artist_functions2_a": "Twój program powinien:\n\n-   uzyć funkcji, \n-   przesunąć się do przodu o 100 + 75 pikseli\n-   ponownie użyć funkcji",

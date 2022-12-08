@@ -3851,8 +3851,7 @@ az-AZ:
         - text: 'Heç nə baş verməyəcək. '
           feedback: Səhv. Fermer bir qalaq olduğu müddətcə kirdən təmizlənəcək, sonra
             yığın yox olanda dayanacaq
-        - text: Fermer heç vaxt çirki yığışdırmağı dayandırmayacaq.
-          feedback: Səhv. Fermer bir qalaq olduğu müddətcə kirdən təmizlənəcək, sonra
+        - feedback: Səhv. Fermer bir qalaq olduğu müddətcə kirdən təmizlənəcək, sonra
             yığın yox olanda dayanacaq
         - correct: true
           feedback: Düzgün!
@@ -3917,9 +3916,9 @@ az-AZ:
         - {}
         - {}
         - {}
-        - correct: true
-        questions:
         - {}
+        questions:
+        - text: '"İcra et" düyməsini basdıqda nə olacaq? '
       courseE_swim_fish_behavior_predict1_2021:
         answers:
         - text: 'Heç nə baş verməyəcək. '
@@ -3932,8 +3931,8 @@ az-AZ:
         - text: Çöp otu yanıb sönəcək.
           feedback: Yanlış. Çöp otu yuvarlanmağa başlayacaq
         questions:
-        - text: Aşağıdakı koda yaxından baxın. "Çalış" düyməsini basdıqdan sonra nə
-            olacaq?
+        - text: 'Aşağıdakı kodu diqqətlə nəzərdən keçir. "İcra et" düyməsini basdıqdan
+            sonra nə olacaq? '
       courseF_artist_practice:
         description: İndiyə qədər böyük iş! Sizin növbəti sessiya seçin. Mümkün qədər
           çox doldurun. Loop və rəssam ilə təcrübə saxlamağa davam edin!
