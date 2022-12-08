@@ -114,21 +114,27 @@ class CodeWorkspace extends React.Component {
     );
 
     return [
-      <PaneSection id="toolbox-header" key="toolbox-header">
-        <i
-          id="hide-toolbox-icon"
-          style={[commonStyles.hidden, chevronStyle]}
-          className="fa fa-chevron-circle-right"
-        />
+      <PaneSection
+        id="toolbox-header"
+        key="toolbox-header"
+        style={styles.toolboxHeaderContainer}
+      >
+        <span>
+          <i
+            id="hide-toolbox-icon"
+            style={[commonStyles.hidden, chevronStyle]}
+            className="fa fa-chevron-circle-right"
+          />
+        </span>
         <span style={textStyle}>
           {editCode ? i18n.toolboxHeaderDroplet() : i18n.toolboxHeader()}
         </span>
-        {settingsCog}
+        <span>{settingsCog}</span>
       </PaneSection>,
       <PaneSection
         id="show-toolbox-header"
         key="show-toolbox-header"
-        style={commonStyles.hidden}
+        style={{...styles.toolboxHeaderContainer, ...commonStyles.hidden}}
       >
         <span id="show-toolbox-click-target">
           <i
@@ -136,9 +142,9 @@ class CodeWorkspace extends React.Component {
             style={chevronStyle}
             className="fa fa-chevron-circle-right"
           />
-          <span>{i18n.showToolbox()}</span>
         </span>
-        {settingsCog}
+        <span>{i18n.showToolbox()}</span>
+        <span>{settingsCog}</span>
       </PaneSection>
     ];
   }
@@ -294,6 +300,11 @@ const styles = {
     padding: 5,
     opacity: 0.9,
     position: 'relative'
+  },
+  toolboxHeaderContainer: {
+    display: 'flex',
+    justifyContent: 'space-between',
+    alignItems: 'center'
   }
 };
 

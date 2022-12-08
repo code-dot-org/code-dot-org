@@ -12,7 +12,7 @@
     },
     "new_name": null,
     "family_name": "csc-function-machines-pilot",
-    "serialized_at": "2022-11-16 17:49:13 UTC",
+    "serialized_at": "2022-11-29 16:42:56 UTC",
     "published_state": "pilot",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -321,7 +321,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "Come up with some examples of “function machines” that students would be familiar with, for example putting dirty clothes into a washing machine and having clean clothes come out. Other examples:\n- Using a dehydrator to show the process of a grape becoming a raisin.\n- A vending machine takes in money and returns food or a drink.\n- Putting fruit into a blender and choosing one of the blender’s “functions” to output a smoothie.\n"
+            "markdown": "Come up with some examples of “function machines” that students would be familiar with, for example putting dirty clothes into a washing machine and having clean clothes come out. Other examples:\n- Putting cold food in a microwave and having it come out hot.\n- A vending machine takes in money and returns food or a drink.\n- Putting fruit into a blender and choosing one of the blender’s “functions” to output a smoothie.\n"
           }
         ]
       },

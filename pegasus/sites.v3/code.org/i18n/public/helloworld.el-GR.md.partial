@@ -20,20 +20,20 @@ In Computer Science 101, the first program many students create is a simple one 
 
 # Choose your Hello World theme
 
-{{ spritelab_module, title: "ΝΕΟ! Διάστημα", χρώμα: "#d41f33", εικόνα: "images/csc/helloworld/helloworldspacetheme.png", url: "https://studio.code.org/s/hello-world-space-2022/reset" }}
-{{ spritelab_module, title: "ΝΕΟ! Ποδόσφαιρο", χρώμα: "#3ba467", εικόνα: "images/csc/helloworld/helloworldsoccertheme.png", url: "https://studio.code.org/s/hello-world-soccer-2022/reset" }}
-{{ spritelab_module, title: "Φαγητό", χρώμα: "#C14790", εικόνα: "images/csc/helloworld/helloworldhappyfoodtheme.png", url: "https://studio.code.org/s/hello-world-food-2021/reset" }}
-{{ spritelab_module, title: "Ζώα", χρώμα: "#00ADBC", εικόνα: "images/csc/helloworld/helloworldanimalstheme.png", url: "https://studio.code.org/s/hello-world-animals-2021/reset" }}
-{{ spritelab_module, title: "Ρετρό", χρώμα: "#FFA400", εικόνα: "images/csc/helloworld/helloworldretrotheme.png", url: "https://studio.code.org/s/hello-world-retro-2021/reset" }}
-{{ spritelab_module, title: "Εμότζι", χρώμα: "#0094CA", εικόνα: "images/csc/helloworld/helloworldemojitheme.png", url: "https://studio.code.org/s/hello-world-emoji-2021/reset" }}
+{{ spritelab_module, title: "ΝΕΟ! Διάστημα", color: "#d41f33", image: "images/csc/helloworld/helloworldspacetheme.png", url: "https://studio.code.org/s/hello-world-space-2022/reset" }}
+{{ spritelab_module, title: "ΝΕΟ! Ποδόσφαιρο", color: "#3ba467", image: "images/csc/helloworld/helloworldsoccertheme.png", url: "https://studio.code.org/s/hello-world-soccer-2022/reset" }}
+{{ spritelab_module, title: "Φαγητό", color: "#C14790", image: "images/csc/helloworld/helloworldhappyfoodtheme.png", url: "https://studio.code.org/s/hello-world-food-2021/reset" }}
+{{ spritelab_module, title: "Ζώα", color: "#00ADBC", image: "images/csc/helloworld/helloworldanimalstheme.png", url: "https://studio.code.org/s/hello-world-animals-2021/reset" }}
+{{ spritelab_module, title: "Ρετρό", color: "#FFA400", image: "images/csc/helloworld/helloworldretrotheme.png", url: "https://studio.code.org/s/hello-world-retro-2021/reset" }}
+{{ spritelab_module, title: "Εμότζι", color: "#0094CA", image: "images/csc/helloworld/helloworldemojitheme.png", url: "https://studio.code.org/s/hello-world-emoji-2021/reset" }}
 {{ clearfix }}
 
-{{ teacher_info, heading: "Πλγροφορίες για τον δάσκαλο", title: "Πώς συνεχίζουμε να μαθαίνουμε μετά το Hello World", περιγραφή: "Το Hello World είναι το τέλειο πρώτο βήμα για την τάξη πριν δοκιμάσεις ανοιχτά έργα με το νέο μας πρόγραμμα, το CS Connections! Αφού μάθουν τα βασικά για την κωδικοποίηση, οι μαθητές θα μπορούν να συνεχίσουν με διαθεματικά έργα στο CS Connections.", button_text: "Μάθετε περισσότερα", url: "/educate/csc" }}
+{{ teacher_info, heading: "Πλγροφορίες για τον δάσκαλο", title: "Πώς συνεχίζουμε να μαθαίνουμε μετά το Hello World", description: "Το Hello World είναι το τέλειο πρώτο βήμα για την τάξη πριν δοκιμάσεις ανοιχτά έργα με το νέο μας πρόγραμμα, το CS Connections! Αφού μάθουν τα βασικά για την κωδικοποίηση, οι μαθητές θα μπορούν να συνεχίσουν με διαθεματικά έργα στο CS Connections.", button_text: "Μάθετε περισσότερα", url: "/educate/csc" }}
 
 ## Featured Student Creations
 
-{{ featured_project, τίτλος: "Τρόφιμα", συγγραφέας: "M", ηλικία: "13+", εικόνα: "images/csc/helloworld/cschelloworld_happyfood2.gif", url: "https://studio.code.org/projects/spritelab/sC_ZiNi_x5GUqsWHE2M4CrcbjU8XvtD3VNT7TM0Y0N8" }}
-{{ featured_project, τίτλος: "Εμότζι", συγγραφέας: "D", ηλικία: "8+", εικόνα: "images/csc/helloworld/cschelloworld_emoji.gif", url: "https://studio.code.org/projects/spritelab/9HGWXijqhLzaIIUQbPXlNmWgMO1SXzf3TvMHNtbOXmc" }}
-{{ featured_project, τίτλος: "Ζώα", συγγραφέας: "B", ηλικία: "18+", εικόνα: "images/csc/helloworld/cschelloworld_animals.gif", url: "https://studio.code.org/projects/spritelab/rYH8D8eAvWOjuiOpWbHzN4HAtis4ykKTIjGcNPP9zD4" }}
-{{ featured_project, τίτλος: "Ρετρό", συγγραφέας: "W", ηλικία: "13+", εικόνα: "images/csc/helloworld/cschelloworld_retro.gif", url: "https://studio.code.org/projects/spritelab/rYH8D8eAvWOjuiOpWbHzN7yo2E1S0q87VqlzaBz7oqo" }}
+{{ featured_project, title: "Φαγητό", author: "M", age: "13+", image: "images/csc/helloworld/cschelloworld_happyfood2.gif", url: "https://studio.code.org/projects/spritelab/sC_ZiNi_x5GUqsWHE2M4CrcbjU8XvtD3VNT7TM0Y0N8" }}
+{{ featured_project, title: "Εμότζι", author: "D", age: "8+", image: "images/csc/helloworld/cschelloworld_emoji.gif", url: "https://studio.code.org/projects/spritelab/9HGWXijqhLzaIIUQbPXlNmWgMO1SXzf3TvMHNtbOXmc" }}
+{{ featured_project, title: "Ζώα", author: "B", age: "18+", image: "images/csc/helloworld/cschelloworld_animals.gif", url: "https://studio.code.org/projects/spritelab/rYH8D8eAvWOjuiOpWbHzN4HAtis4ykKTIjGcNPP9zD4" }}
+{{ featured_project, title: "Ρετρό", author: "W", age: "13+", image: "images/csc/helloworld/cschelloworld_retro.gif", url: "https://studio.code.org/projects/spritelab/rYH8D8eAvWOjuiOpWbHzN7yo2E1S0q87VqlzaBz7oqo" }}
 {{ clearfix }}
