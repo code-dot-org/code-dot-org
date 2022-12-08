@@ -29,6 +29,10 @@ Parameters:
     Type: Number
     Description: Minimum number of idle servers available for future workloads.
     Default: 2
+  WorkerInstanceAMI:
+    Type: String
+    Description: Amazon Machine Image that Autoscaler uses to launch Worker EC2 Instances.
+    Default: ami-0aab355e1bfa1e72e
   WorkerInstanceType:
     Type: String
     Description: EC2 Instance Type that Autoscaler provisions to run Builds.
@@ -346,6 +350,12 @@ Resources:
               Value: true
 
             # BEGIN: Settings for the EC2 Instances that Drone Autoscaler provisions.
+
+            # Override the AMI that Drone Autoscaler specifies:
+            # https://github.com/drone/autoscaler/blob/master/drivers/amazon/util.go
+            -
+              Name: DRONE_AMAZON_IMAGE
+              Value: !Ref WorkerInstanceAMI
             -
               Name: DRONE_AMAZON_INSTANCE
               Value: !Ref WorkerInstanceType
