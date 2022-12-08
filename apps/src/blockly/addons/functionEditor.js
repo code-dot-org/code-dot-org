@@ -1,3 +1,5 @@
+import xml from '@cdo/apps/xml';
+
 // This class is not yet implemented. It is used for the modal function editor,
 // which is used by Sprite Lab and Artist.
 export default class FunctionEditor {
@@ -38,8 +40,11 @@ export default class FunctionEditor {
  */
 export function flyoutCategory(workspace) {
   // TODO: Add "Create a Function" button
-  const newFunctionDefinitionBlock = newDefinitionBlock();
+  const newFunctionDefinitionBlock = newDefinitionBlock(
+    Blockly.Msg['PROCEDURES_DEFNORETURN_PROCEDURE']
+  );
   console.warn('The modal function editor has not been fully implemented yet.');
+
   // Find all user-created procedure definitions in the workspace.
   // allProcedures returns a pair of arrays, but we only need the first.
   // The second contains procedures with return variables which we don't support.
@@ -56,17 +61,19 @@ export function allCallBlocks(procedures) {
   for (let i = 0; i < procedures.length; i++) {
     const name = procedures[i][0];
     const args = procedures[i][1];
-    const block = Blockly.utils.xml.createElement('block');
+
+    const block = xml.parseElement('<block></block>', true);
     block.setAttribute('type', 'procedures_callnoreturn');
     block.setAttribute('gap', 16);
-    const mutation = Blockly.utils.xml.createElement('mutation');
+
+    const mutation = xml.parseElement('<mutation></mutation>', true);
     mutation.setAttribute('name', name);
     block.appendChild(mutation);
+
     // The argument list is likely empty as we don't currently support
     // functions with parameters. This loop is needed if that changes.
     for (let j = 0; j < args.length; j++) {
-      const arg = Blockly.utils.xml.createElement('arg');
-      arg.setAttribute('name', args[j]);
+      const arg = xml.parseElement(`<arg name="${args[j]}"></arg>`, true);
       mutation.appendChild(arg);
     }
     blockElements.push(block);
@@ -74,22 +81,22 @@ export function allCallBlocks(procedures) {
   return blockElements;
 }
 
-export function newDefinitionBlock() {
+export function newDefinitionBlock(localizedNewFunctionString) {
   // Create a block with the following XML:
   // <block type="procedures_defnoreturn" gap="24">
   //     <field name="NAME">do something</field>
   // </block>
-  const blockElement = Blockly.utils.xml.createElement('block');
+  const blockElement = xml.parseElement('<block></block>', true);
   blockElement.setAttribute('type', 'procedures_defnoreturn');
   // Add slightly larger gap between system blocks and user calls.
   blockElement.setAttribute('gap', 24);
-  const nameField = Blockly.utils.xml.createElement('field');
-  nameField.setAttribute('name', 'NAME');
-  nameField.appendChild(
-    Blockly.utils.xml.createTextNode(
-      Blockly.Msg['PROCEDURES_DEFNORETURN_PROCEDURE']
-    )
+
+  const nameField = xml.parseElement(
+    `<field>${localizedNewFunctionString}</field>`,
+    true
   );
+  nameField.setAttribute('name', 'NAME');
   blockElement.appendChild(nameField);
+
   return blockElement;
 }

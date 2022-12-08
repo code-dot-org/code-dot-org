@@ -34,6 +34,7 @@
 #  index_pd_applications_on_type                 (type)
 #  index_pd_applications_on_user_id              (user_id)
 #
+# TODO [meg]: Remove or gut this model to finish deprecating facilitator applications
 
 module Pd::Application
   class FacilitatorApplicationBase < ApplicationBase
