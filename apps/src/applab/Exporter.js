@@ -166,8 +166,22 @@ export function getAppOptionsFile() {
   return `window.APP_OPTIONS = ${JSON.stringify(options)};`;
 }
 
-const fontAwesomeWOFFRelativeSourcePath = '/fonts/fontawesome-webfont.woff2';
-const fontAwesomeWOFFPath = 'applab/fontawesome-webfont.woff2';
+const fontAwesomeBrandsWOFFRelativeSourcePath = '/fonts/fa-brands-400.woff2';
+const fontAwesomeDuotoneWOFFRelativeSourcePath = '/fonts/fa-duotone-900.woff2';
+const fontAwesomeLightWOFFRelativeSourcePath = '/fonts/fa-light-300.woff2';
+const fontAwesomeRegularWOFFRelativeSourcePath = '/fonts/fa-regular-400.woff2';
+const fontAwesomeSharpSolidWOFFRelativeSourcePath =
+  '/fonts/fa-sharp-solid-900.woff2';
+const fontAwesomeSolidWOFFRelativeSourcePath = '/fonts/fa-solid-900.woff2';
+const fontAwesomeThinWOFFRelativeSourcePath = '/fonts/fa-thin-100.woff2';
+
+const fontAwesomeBrandsWOFFPath = 'applab/fa-brands-400.woff2';
+const fontAwesomeDuotoneWOFFPath = 'applab/fa-duotone-900.woff2';
+const fontAwesomeLightWOFFPath = 'applab/fa-light-300.woff2';
+const fontAwesomeRegularWOFFPath = 'applab/fa-regular-400.woff2';
+const fontAwesomeSharpSolidWOFFPath = 'applab/fa-sharp-solid-900.woff2';
+const fontAwesomeSolidWOFFPath = 'applab/fa-solid-900.woff2';
+const fontAwesomeThinWOFFPath = 'applab/fa-thin-100.woff2';
 
 /**
  * Retrieves the export config object.
@@ -189,7 +203,13 @@ export default {
       appName,
       exportConfigPath: exportConfig.path,
       htmlBody: transformedHTML,
-      fontPath: fontAwesomeWOFFPath
+      faBrandsPath: fontAwesomeBrandsWOFFPath,
+      faDuotonePath: fontAwesomeDuotoneWOFFPath,
+      faLightPath: fontAwesomeLightWOFFPath,
+      faRegularPath: fontAwesomeRegularWOFFPath,
+      faSharpSolidPath: fontAwesomeSharpSolidWOFFPath,
+      faSolidPath: fontAwesomeSolidWOFFPath,
+      faThinPath: fontAwesomeThinWOFFPath
     });
     var readme = exportProjectReadmeEjs({appName: appName});
     var cacheBust = '?__cb__=' + '' + new String(Math.random()).slice(2);
@@ -208,7 +228,31 @@ export default {
       },
       {
         dataType: 'binary',
-        url: fontAwesomeWOFFRelativeSourcePath + cacheBust
+        url: fontAwesomeBrandsWOFFRelativeSourcePath + cacheBust
+      },
+      {
+        dataType: 'binary',
+        url: fontAwesomeDuotoneWOFFRelativeSourcePath + cacheBust
+      },
+      {
+        dataType: 'binary',
+        url: fontAwesomeLightWOFFRelativeSourcePath + cacheBust
+      },
+      {
+        dataType: 'binary',
+        url: fontAwesomeRegularWOFFRelativeSourcePath + cacheBust
+      },
+      {
+        dataType: 'binary',
+        url: fontAwesomeSharpSolidWOFFRelativeSourcePath + cacheBust
+      },
+      {
+        dataType: 'binary',
+        url: fontAwesomeSolidWOFFRelativeSourcePath + cacheBust
+      },
+      {
+        dataType: 'binary',
+        url: fontAwesomeThinWOFFRelativeSourcePath + cacheBust
       }
     ];
 
@@ -231,7 +275,13 @@ export default {
       rewriteAssetUrls(appAssets, html)
     );
     const fontAwesomeCSS = exportFontAwesomeCssEjs({
-      fontPath: fontAwesomeWOFFPath
+      fontBrandsPath: fontAwesomeBrandsWOFFPath,
+      fontDuotonePath: fontAwesomeDuotoneWOFFPath,
+      fontLightPath: fontAwesomeLightWOFFPath,
+      fontRegularPath: fontAwesomeRegularWOFFPath,
+      fontSharpSolidPath: fontAwesomeSharpSolidWOFFPath,
+      fontSolidPath: fontAwesomeSolidWOFFPath,
+      fontThinPath: fontAwesomeThinWOFFPath
     });
     zip.file(mainProjectFilesPrefix + 'style.css', fontAwesomeCSS);
     zip.file(
@@ -275,7 +325,13 @@ export default {
           [applabLocale],
           [applabCSS],
           [commonCSS],
-          [fontAwesomeWOFF],
+          [fontAwesomeBrandsWOFF],
+          [fontAwesomeDuotoneWOFF],
+          [fontAwesomeLightWOFF],
+          [fontAwesomeRegularWOFF],
+          [fontAwesomeSharpSolidWOFF],
+          [fontAwesomeSolidWOFF],
+          [fontAwesomeThinWOFF],
           ...rest
         ) => {
           const appOptionsContents = getAppOptionsFile();
@@ -290,9 +346,34 @@ export default {
             ].join('\n')
           );
           zip.file(
-            mainProjectFilesPrefix + fontAwesomeWOFFPath,
-            fontAwesomeWOFF
+            mainProjectFilesPrefix + fontAwesomeBrandsWOFFPath,
+            fontAwesomeBrandsWOFF
           );
+          zip.file(
+            mainProjectFilesPrefix + fontAwesomeDuotoneWOFFPath,
+            fontAwesomeDuotoneWOFF
+          );
+          zip.file(
+            mainProjectFilesPrefix + fontAwesomeLightWOFFPath,
+            fontAwesomeLightWOFF
+          );
+          zip.file(
+            mainProjectFilesPrefix + fontAwesomeRegularWOFFPath,
+            fontAwesomeRegularWOFF
+          );
+          zip.file(
+            mainProjectFilesPrefix + fontAwesomeSharpSolidWOFFPath,
+            fontAwesomeSharpSolidWOFF
+          );
+          zip.file(
+            mainProjectFilesPrefix + fontAwesomeSolidWOFFPath,
+            fontAwesomeSolidWOFF
+          );
+          zip.file(
+            mainProjectFilesPrefix + fontAwesomeThinWOFFPath,
+            fontAwesomeThinWOFF
+          );
+
           rest.forEach(([data], index) => {
             zip.file(appAssets[index].zipPath, data, {binary: true});
           });
