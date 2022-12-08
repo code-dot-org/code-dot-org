@@ -1,5 +1,5 @@
 import React from 'react';
-import CourseRollup from '@cdo/apps/templates/courseRollupPages/CourseRollup';
+import CourseOrUnitRollup from '@cdo/apps/templates/courseRollupPages/CourseOrUnitRollup';
 import UnitRollup from '@cdo/apps/templates/courseRollupPages/UnitRollup';
 
 const defaultProps = {
@@ -193,31 +193,43 @@ const defaultProps = {
   }
 };
 
+export default {
+  title: 'CourseOrUnitRollup',
+  component: CourseOrUnitRollup
+};
+
+// Template
+const Template = args => (
+  <CourseOrUnitRollup
+    {...args}
+  />
+);
+
+// Stories
+export const CourseVocabulary = Template.bind({});
+
+export const CourseCode = Template.bind({});
+CourseCode.args = {
+  objectToRollUp: 'Code'
+};
+
+export const CourseResources = Template.bind({});
+CourseResources.args = {
+  objectToRollUp: 'Resources'
+};
+
+export const CourseStandards = Template.bind({});
+CourseStandards.args = {
+  objectToRollUp: 'Standards'
+};
+
+export const CourseStandards = Template.bind({});
+CourseStandards.args = {
+  objectToRollUp: 'Standards'
+};
 export default storybook => {
   storybook
-    .storiesOf('CourseRollup', module)
-    .withReduxStore()
-    .addStoryTable([
-      {
-        name: 'Course Vocabulary',
-        story: () => <CourseRollup {...defaultProps} />
-      },
-      {
-        name: 'Course Code',
-        story: () => <CourseRollup {...defaultProps} objectToRollUp={'Code'} />
-      },
-      {
-        name: 'Course Resources',
-        story: () => (
-          <CourseRollup {...defaultProps} objectToRollUp={'Resources'} />
-        )
-      },
-      {
-        name: 'Course Standards',
-        story: () => (
-          <CourseRollup {...defaultProps} objectToRollUp={'Standards'} />
-        )
-      },
+
       {
         name: 'Unit Vocabulary',
         story: () => (
