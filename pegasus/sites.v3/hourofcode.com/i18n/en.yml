@@ -7172,6 +7172,7 @@
   tutorial_nasapackage_string_detail_programming_languages: "Blocks"
   tutorial_nasalunar_string_detail_programming_languages: "Blocks, JavaScript"
   tutorial_meeestate_string_detail_programming_languages: "Blocks, Python"
+  
   tutorial_imagipixelart_longdescription: "Learn Python and create your own colorful animations in this 1 hour crash course!"
   tutorial_imagipixelart_name: "Code your own pixel art!"
   tutorial_imagipixelart_string_detail_grades: "Grades 2-8"
