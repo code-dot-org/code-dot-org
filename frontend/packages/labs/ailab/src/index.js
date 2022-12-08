@@ -14,7 +14,7 @@ import rootReducer, {
   setInstructionsDismissed,
   setFirehoseMetricsLogger
 } from "./redux";
-import { allDatasets } from "./datasetManifest";
+import { getDatasets } from "./datasetManifest";
 import { parseCSV } from "./csvReaderWrapper";
 import { parseJSON } from "./jsonReaderWrapper";
 import { TestDataLocations } from "./constants";
@@ -66,7 +66,7 @@ const processMode = mode => {
   if (mode) {
     // Load a single dataset immediately.
     if (mode.datasets && mode.datasets.length === 1) {
-      const item = allDatasets.filter(item => {
+      const item = getDatasets().filter(item => {
         return item.id === mode.datasets[0];
       })[0];
       store.dispatch(setSelectedCSV(assetPath + item.path));

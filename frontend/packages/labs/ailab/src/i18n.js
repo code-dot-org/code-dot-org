@@ -1,4 +1,4 @@
-import uiStrings from './i18n/ailab.json';
+import uiStrings from '../i18n/mlPlayground.json';
 import MessageFormat from 'messageformat'
 
 let messages;
