@@ -2,6 +2,15 @@
   "addCSSButton": "Dodaj CSS",
   "addImageButton": "Dodaj obraz",
   "addHTMLButton": "Dodaj HTML",
+  "currentProjectCapacity": "{currentMegabytes}MB z {totalMegabytes}MB używane",
+  "loadFailure": "Przykro nam, z jakiegoś powodu nie udało się załadować Web Lab. Błąd: {message}",
+  "refreshPreview": "Odśwież i zapisz",
+  "reloading": "Przeładowanie...",
+  "reset": "Zresetuj Web Lab",
+  "resetComplete": "Resetowanie Web Lab zakończone",
+  "resetFailure": "Nie udało się zresetować Web Lab: {message}.",
   "toggleInspectorOn": "Inspektor: Wył",
-  "toggleInspectorOff": "Inspektor: Wł."
+  "toggleInspectorOff": "Inspektor: Wł.",
+  "troubleshootingSupport": "Zapoznaj się z naszym artykułem pomocy technicznej [\"Rozwiązywanie problemów z laboratorium internetowym\"]({url}), aby uzyskać więcej informacji.",
+  "uploadError": "Błąd przesyłania"
 }

@@ -2326,6 +2326,7 @@ pl:
           title: Wykrywacz kolizji
         dance-2019:
           title: Potańcówka (2019)
+          description_short: Koduj imprezę taneczną, aby podzielić się nią ze znajomymi. Z udziałem Beyoncé, Harry Styles, Lizzo, Lil Nas X, Selena Gomez, muzyka z filmu Disneya „Encanto,” i więcej!
           description: Stwórz kod swojej własnej imprezy tanecznej i udostępnij ją swoim znajomym.
           student_description: Stwórz kod swojej własnej imprezy tanecznej i udostępnij ją swoim znajomym.
         k5-onlinepd-2019:
@@ -5084,16 +5085,24 @@ pl:
               name: Sparametryzowane konstruktory
             lesson-4:
               name: Zmienne
+            lesson-5:
+              name: Metody Accessor
             lesson-6:
               name: Dane użytkownika
             lesson-7:
               name: Operatory i wyrażenia
+            lesson-8:
+              name: Metody mutatorów
             lesson-9:
               name: Drukowanie obiektów
+            lesson-10:
+              name: Projekt zarządzania sklepem
             lesson-11:
               name: Praktyka FRQ
             lesson-12:
               name: Jednostka 2 Sprawdzian
+            lesson-13:
+              name: Projekt zarządzania sklepem [wersja 1-dniowa]
           lesson_groups:
             lessonGroup-2:
               display_name: Treści
@@ -5154,6 +5163,13 @@ pl:
             lesson-5:
               name: Użyj tablic, aby uzyskać losowe odpowiedzi
           title: AP CSA Magpie Lab
+          description: "Od Elizy w latach sześćdziesiątych po Siri i Watsona dzisiaj, pomysł rozmowy z komputerami w języku naturalnym fascynował ludzi. (I tak, odbyła się więcej niż jedna rozmowa między Elizą i Siri - wyszukaj „chatbot Eliza Siri”.) Podczas gdy przetwarzanie języka naturalnego (NLP) jest złożoną dziedziną, dość łatwo jest stworzyć prosty program odpowiadający na angielskie zdania.\n\n**Wymagania wstępne**\n\nPrzed wykonaniem tego ćwiczenia uczniowie powinni umieć:\n\n-   zlokalizować strony internetowe za pomocą przeglądarki internetowej\n-   uruchamiać i edytować programy w Java, które korzystają z klas\n-   śledzić kod\n-   odczytywać interfejsy API zarówno dla standardowych bibliotek Java, jak i lokalnego kodu "
+          student_description: |-
+            Od Elizy w latach sześćdziesiątych po Siri i Watsona dzisiaj, pomysł rozmowy z komputerami w języku naturalnym fascynował ludzi. Coraz więcej programów komputerowych pozwala ludziom na interakcję z nimi przez wpisanie zdań po angielsku. Dziedzina informatyki, która dotyczy sposobu, w jaki komputery mogą rozumieć język ludzki, nazywa się przetwarzaniem języka naturalnego (NLP).
+
+            NLP jest dziedziną, która stara się, aby komputery rozumiały naturalny (tj. ludzki) język. Istnieje wiele ekscytujących przełomów w tej dziedzinie.
+
+            Dla tego laboratorium, poznasz niektóre z podstaw NLP. Podczas odkrywania tego, będziesz pracować z różnymi metodami klasy 'Łańcuch ('String`) i ćwiczyć używając instrukcji 'jeśli" (`if\`). Będziesz śledzić metodę, aby znaleźć słowa w danych wejściowych użytkownika.
         emma:
           lessons:
             lesson-1:
@@ -5167,6 +5183,7 @@ pl:
             lesson-5:
               name: Aktywność otwarta
           title: Laboratorium przeglądu konsumentów AP CSA
+          description: "Consumer Review Lab zapewnia uczniom możliwość pracy nad większym zadaniem obejmującym wiele klas na początku kursu, zanim dowiedzą się, jak pisać własne klasy. Koncentrując się na wywoływaniu metod i wykorzystaniu struktur sterowania selekcją i iteracją, uczniowie zdobędą praktykę, która bezpośrednio odnosi się do pytań otwartych z zakresu **Metody i Struktury Sterujące**, z którymi zetkną się na egzaminie na koniec roku. Ponieważ uczniowie często zmagają się z metodami w klasie \"Łańcuch\" („String”), to laboratorium koncentruje się w szczególności na wywoływaniu tych metod i budowaniu łańcuchów w interesujący i angażujący sposób.\n\n### Połączenie w świecie rzeczywistym\n\nWszyscy regularnie korzystamy z recenzji, aby pomóc nam określić, który film zobaczyć, w którą grę wideo zagrać, a nawet jaką parę słuchawek kupić. Ale jak łatwo jest sfałszować recenzję? Prawda jest taka, że jest to niezwykle proste, a fałszywe recenzje mogą mieć znaczący wpływ na produkty, które są kupowane lub konsumowane, w tym filmy, które ludzie oglądają i restauracje, w których zdecydują się zjeść. Gdyby konsumenci wiedzieli, że recenzja, którą czytali i wykorzystują do podjęcia decyzji, pochodzi z programu komputerowego, a nie od człowieka, mogli by być mniej skłonni w to uwierzyć. \n\nJaką motywację mają ludzie do tworzenia fałszywych recenzji lub komentarzy i co należy zrobić, aby temu zapobiec, jeśli w ogóle? Jeśli technologia może być wykorzystana do tworzenia i publikowania pozytywnych recenzji własnych produktów firmy lub negatywnych recenzji konkurencji, jakie są tego konsekwencje etyczne?\n\nTworzenie fałszywych recenzji ma implikacje etyczne i ważne jest, aby podkreślić, że chociaż uczniowie przechodzą przez proces, aby zobaczyć jak można je generować, w żaden sposób nie opowiada się za tego typu zachowaniami. Jest to podobne do hakerów „białego kapelusza”, którzy muszą zrozumieć te same narzędzia i procesy hakerów przestępczych, aby wykonywać swoją pracę. Omów z uczniami obawy etyczne i to, jak zrozumienie tego procesu jest ważne dla zapobiegania niechcianym zachowaniom w Internecie. "
         csa-data-lab:
           lessons:
             lesson-1:
@@ -5242,13 +5259,21 @@ pl:
             lessonGroup-3:
               display_name: 'Rozdział 2: Budowanie prototypów fizycznych'
           name: physcomp-temp
+          description: |-
+            W jednostce Physical Computing (Informatyka z Urządzeniami Fizycznymi) uczniowie badają rolę urządzeń fizycznych w informatyce. Korzystając z App Lab i Adafruit Circuit Playground, uczniowie opracowują programy, które wykorzystują te same wejścia i wyjścia sprzętowe, które widzisz w inteligentnych urządzeniach, patrząc na to, jak prosty surowy prototyp może doprowadzić do gotowego produktu. Następnie uczniowie badają, w jaki sposób można wykorzystać urządzenia fizyczne do reagowania na otaczający ich świat, używając sposobu myślenia „twórcy” ("maker") do tworzenia prototypów z codziennych materiałów.
+
+            **Wskazówki dotyczące implementacji Informatyki z Urządzeniami Fizycznymi**
+
+            -   Ta jednostka wymaga, by uczniowie mieli dostęp do Circuit Playground - [kliknij tutaj](https://code.org/circuitplayground), aby uzyskać więcej informacji na temat korzystania z Circuit Playground w klasie
+            -   Wskazówki dotyczące wspierania uczniów na poziomach programowania i różnicowania zadań są dostępne w [Przewodniku po poziomach programowania](https://docs.google.com/document/d/1WGywQ25khB6-FB20x6wO9dGVO9_qJlWkuLVLREJS4Jo/preview) i [Przewodnik po różnicowaniu](https://docs.google.com/document/d/15Y6Mo3fMUtHq16SSskABgcYE-5xfk-Ewv0z_o4uaLdI/preview)
+
+            \*\* Rozwój zawodowy:\*\* Jeśli jesteś zainteresowany prowadzeniem tego kursu, zalecamy ukończenie bezpłatnego [Moduł rozwoju zawodowego, we własnym tempie, w zakresie informatyki z urządzeniami fizycznymi](<>). Moduł został zaprojektowany tak, aby trwał 2 godziny. Nie zakłada się wcześniejszego doświadczenia z kodowaniem lub sztuczną inteligencją.
         csc-bookcover:
           lessons:
             lesson-1:
               name: Okładka
           name: csc-bookcover
           title: Okładka CSC
-          description: jest to wewnętrzny skrypt jako źródło prawdy dla tej lekcji, który zostanie ponownie wykorzystany w innych modułach CSC.
         csc-landmarks-pilot:
           lessons:
             lesson-1:
@@ -5268,6 +5293,8 @@ pl:
               name: Lekcja cząstek 3
             lesson-5:
               name: Lekcja cząstek 4
+            lesson-6:
+              name: Testowanie Katie
           name: csd-playground
           title: Plac Zabaw CSP
         self-paced-pl-physical-computing1:
@@ -5392,7 +5419,13 @@ pl:
             lesson-1:
               name: Cząstki
         angelina-playground:
+          lessons:
+            lesson-1:
+              name: Stany rzeczy
+            lesson-2:
+              name: OG Stany rzeczy
           name: angelina-playground
+          title: Miejsce Angeliny do robienia rzeczy
         csc-pilot-fa2022-timecapsule:
           name: csc-pilot-fa2022-timecapsule
           title: Kapsuły czasu (jesień 2022 pilotaż)
@@ -5408,3 +5441,9 @@ pl:
         csc-pilot-fa2022-particles:
           name: csc-pilot-fa2022-particles
           title: 'Cząstki '
+        devices-2022:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: 'Rozdział 1: Dane i wyniki'
+            lessonGroup-4:
+              display_name: 'Rozdział 2: Budowanie prototypów fizycznych'

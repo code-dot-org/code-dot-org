@@ -10760,7 +10760,7 @@ zh-CN:
         - text: 企鹅
         - text: 青蛙
           correct: true
-        - {}
+        - text: 长颈鹿
         - {}
         questions:
         - {}
@@ -10770,7 +10770,7 @@ zh-CN:
         - text: 企鹅
         - text: 青蛙
           correct: true
-        - {}
+        - text: 长颈鹿
         - {}
         questions:
         - {}
@@ -10780,7 +10780,7 @@ zh-CN:
         - text: 企鹅
         - text: 青蛙
           correct: true
-        - {}
+        - text: 长颈鹿
         - {}
         questions:
         - {}
@@ -10790,7 +10790,7 @@ zh-CN:
           correct: true
         - text: 企鹅
         - text: 青蛙
-        - {}
+        - text: 长颈鹿
         - {}
         questions:
         - {}
@@ -10800,7 +10800,7 @@ zh-CN:
           correct: true
         - text: 企鹅
         - text: 青蛙
-        - {}
+        - text: 长颈鹿
         - {}
         questions:
         - {}
@@ -10810,7 +10810,7 @@ zh-CN:
           correct: true
         - text: 企鹅
         - text: 青蛙
-        - {}
+        - text: 长颈鹿
         - {}
         questions:
         - {}

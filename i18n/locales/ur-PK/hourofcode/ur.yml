@@ -44,8 +44,9 @@ ur:
   hoc2022_codeorg_title: NASA اور مزید کے ساتھ ور آف کوڈ کا جشن منائیں
   hoc2022_codeorg_description: دسواں آور آف کوڈ تو انتہائی حیرت انگیز ہے! آئیں ہمارے
     ساتھ دریافت کریں، کھیلیں، اور بنائیں۔
-  social_hoc2022_dance: Featuring Beyoncé, Harry Styles, Lizzo, Lil Nas X, Selena
-    Gomez, music from Disney's "Encanto," and more!
+  social_hoc2022_dance: دوستوں اور خاندان کے ساتھ اشتراک کرنے کے لئے ایک ڈانس پارٹی
+    کا کوڈ. بیونسے، ہیری سٹائل، لیزو، لیل ناس ایکس، Selena Gomez، ڈزنی کے “Encanto،”
+    اور زیادہ سے موسیقی کی خاصیت!
   social_hoc2021_cse: "#HourOfCode کے دوران، ہم ہر جگہ #CSE کا جشن منا رہے ہیں۔ کنکشن
     دریافت کریں!"
   hoc2020_header: اج سیکھیں، اور اپنا مستقبل روشن بنائیں.
@@ -9185,9 +9186,9 @@ ur:
   tutorial_eddog_name: Code a guard dog with Edison
   tutorial_microbit15_name: 'micro:bit: coding towards Global Goal 15, Life on Land'
   tutorial_unity_name: 'Unity Game Development Creator Kit: Beginner Code'
-  tutorial_blockscadtarget_name: Transformation Target Practice
+  tutorial_blockscadtarget_name: BlocksCAD Transformation Target Practice
   tutorial_tcadicicles_name: Designing Icicles With Codeblocks in Tinkercad
-  tutorial_blockscadscale_name: Scale City
+  tutorial_blockscadscale_name: BlocksCAD Scale City
   tutorial_tcadloops_name: Using Loops in Tinkercad to Design a Bursting Star
   tutorial_phidgets_name: A Phidgets Theremin with Processing
   tutorial_modvariables_name: Investigating Variables & Block Values using Cubelets
@@ -10063,7 +10064,7 @@ ur:
   tutorial_robotical2_name: Hour of Code Activity 2 - the Marty Controller
   tutorial_robotical3_name: Hour of Code Activity 3 - Getting Started with Marty Blocks
     Jr
-  tutorial_blockscadvirus_name: Modeling a Virus with Code
+  tutorial_blockscadvirus_name: BlocksCAD Modeling a Virus with Code
   tutorial_robotical1_name: Hour of Code Activity 1 - Marty Unplugged
   tutorial_irobotshapes_name: 'Robotics for K-2: Robot Shapes'
   tutorial_irobotparts_name: 'Robotics for K-2: Robot Parts'
@@ -10275,10 +10276,12 @@ ur:
   tutorial_codespellsnexus_longdescription: Under the mentorship of a mysterious sock
     puppet, you must infiltrate and reprogram a super-intelligent 'Learn to Code'
     app that seeks global domination. Solve puzzles. Learn to code. Hack the Nexus.
-  tutorial_carnegieslime_longdescription: Super Slime Battle is a game that was co-designed
-    between researchers at Carnegie Mellon University and students from the Boys and
-    Girls Clubs of Western PA where students and their (co)robot partners must defend
-    their candy stash from oncoming baddies.
+  tutorial_carnegieslime_longdescription: Every year the Minions of Scarecorp try
+    to steal your candy crops. Booville High's Baddest Slimeball crew have come together
+    to protect the candy crops with slime weapons. Players play as teen monsters who
+    program their collaborative robot (aka 'cobot') pets to help take down the Minions
+    of Scarecorp who are after their town's candy harvest. Choose between four characters
+    and their cobotic pets.
   tutorial_ozotown_longdescription: The Ozobot Blockly OzoTown will teach advanced
     sequencing as students utilize logic, reasoning, and computer science skills to
     navigate real life scenarios. No bot needed!
@@ -11765,7 +11768,7 @@ ur:
   tutorial_kcjhealth_name: The Health & Well-Being Challenge
   tutorial_kcjhealth_string_detail_grades: گریڈز6+ 11 اور اس سے زیادہ)
   tutorial_kcjhealth_string_detail_platforms: ''
-  tutorial_kcjhealth_string_detail_programming_languages: blocks
+  tutorial_kcjhealth_string_detail_programming_languages: بلاکس
   tutorial_kcjhealth_string_platforms: جدید براؤزر
   tutorial_msftwakanda_longdescription: 'Shuri, Okoye, and Riri must band together
     to help Wakanda. Code your own action-packed activity inspired by Marvel Studios''
@@ -11773,7 +11776,7 @@ ur:
   tutorial_msftwakanda_name: Long Live Wakanda
   tutorial_msftwakanda_string_detail_grades: گریڈز6+ 11 اور اس سے زیادہ)
   tutorial_msftwakanda_string_detail_platforms: ''
-  tutorial_msftwakanda_string_detail_programming_languages: blocks
+  tutorial_msftwakanda_string_detail_programming_languages: بلاکس
   tutorial_msftwakanda_string_platforms: جدید براؤزر
   school_not_found_heading: ہم آپ کا اسکول نہیں مل سکا. مزید معلومات درج کریں.
   school_name: سکول کا نام

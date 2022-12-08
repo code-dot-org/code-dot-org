@@ -1289,6 +1289,7 @@ he:
         denny-science-8: {}
         dance-2019:
           title: מסיבת ריקודים (2019)
+          description_short: קוד מסיבת ריקודים לחלוק עם חברים ובני משפחה. אמנים משתתפים ביונסה, הארי סטיילס, ליזו, ליל נס X, סלינה גומז, מוסיקה מתוך "Encanto" של דיסני ועוד!
           description: קודדו מסיבת ריקודים משלכם ושתפו עם חברים!
           student_description: קודדו מסיבת ריקודים משלכם ושתפו עם חברים!
         k5-onlinepd-2019:
@@ -2431,3 +2432,7 @@ he:
         csc-pilot-fa2022-ecosystem: {}
         csp-playground: {}
         csc-pilot-fa2022-particles: {}
+        devices-2022:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: 'פרק 2: יצור אב טיפוס פיזי'

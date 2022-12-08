@@ -22,7 +22,6 @@ export default class FormDataEdit extends React.Component {
     applicationId: PropTypes.string.isRequired,
     applicationData: PropTypes.shape({
       course_name: PropTypes.string,
-      application_type: PropTypes.oneOf(['Facilitator', 'Teacher']),
       form_data: PropTypes.object.isRequired
     }).isRequired
   };
@@ -107,7 +106,7 @@ export default class FormDataEdit extends React.Component {
             </tr>
             <tr>
               <td>Type: </td>
-              <td>{this.props.applicationData.application_type}</td>
+              <td>Teacher</td>
             </tr>
           </tbody>
         </Table>

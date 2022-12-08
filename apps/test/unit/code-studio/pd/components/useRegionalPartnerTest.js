@@ -5,7 +5,10 @@ import {expect} from '../../../../util/reconfiguredChai';
 import {mount} from 'enzyme';
 import sinon from 'sinon';
 import {useRegionalPartner} from '@cdo/apps/code-studio/pd/components/useRegionalPartner';
-import {PROGRAM_CSA} from '@cdo/apps/code-studio/pd/application/teacher/TeacherApplicationConstants';
+import {
+  PROGRAM_CSD,
+  PROGRAM_CSA
+} from '@cdo/apps/code-studio/pd/application/teacher/TeacherApplicationConstants';
 import _ from 'lodash';
 
 let regionalPartnerData, regionalPartnerError;
@@ -25,7 +28,11 @@ const getRegionalPartnerData = () => {
   return [regionalPartnerData, regionalPartnerError];
 };
 
-const GOOD_RESPONSE = {id: 1, name: 'reginald partner'};
+const GOOD_RESPONSE = {
+  id: 1,
+  name: 'reginald partner',
+  pl_programs_offered: ['CSA']
+};
 
 const mockApiResponse = (status = 200, body = {}) => {
   return new window.Response(JSON.stringify(body), {
@@ -96,6 +103,34 @@ describe('useRegionalPartner tests', () => {
     );
     expect(regionalPartner).to.equal(null);
     expect(regionalPartnerError).to.equal(true);
+    rendered.unmount();
+  });
+
+  it('returns No Partner if RP does not offer selected program', async () => {
+    let rendered;
+    fetch.resolves(mockApiResponse(200, GOOD_RESPONSE));
+    await act(async () => {
+      rendered = await mount(
+        <RegionalPartnerUser
+          data={{
+            school: '-1',
+            schoolZipCode: '12345',
+            schoolState: 'AK',
+            program: PROGRAM_CSD
+          }}
+        />
+      );
+      await clock.runAllAsync();
+    });
+
+    const [regionalPartner, regionalPartnerError] = getRegionalPartnerData(
+      rendered
+    );
+    expect(fetch).to.be.calledWith(
+      `/api/v1/pd/regional_partner_workshops/find?course=CS+Discoveries&subject=5-day+Summer&zip_code=12345&state=AK`
+    );
+    expect(regionalPartner).to.equal(null);
+    expect(regionalPartnerError).to.equal(false);
     rendered.unmount();
   });
 

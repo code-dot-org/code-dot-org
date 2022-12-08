@@ -3402,6 +3402,9 @@ id:
           title: Detektor Benturan
         dance-2019:
           title: Pesta Dansa (2019)
+          description_short: Buat Kode Pesta Dansa untuk dibagikan kepada teman-temanmu.
+            Menampilkan Beyonce, Harry Styles, Lizzo, Lil Nas X, Selena Gomez, musik
+            dari “Encanto” Disney, dan masih banyak lagi!
           description: Buat code pesta dansa Anda sendiri untuk dibagikan ke teman-teman
             Anda!
           student_description: Buat code pesta dansa Anda sendiri untuk dibagikan
@@ -5730,3 +5733,7 @@ id:
           description_audience: Penulis Kurikulum
           description_short: Untuk pembaruan tahapan atau level pembelajaran di antara
             versi kurikulum
+        devices-2022:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: 'Bab 2: Membangun Prototipe Fisik'

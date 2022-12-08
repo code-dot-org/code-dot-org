@@ -2426,6 +2426,7 @@ pt:
           title: Detector de colisão
         dance-2019:
           title: Festa de dança (2019)
+          description_short: Programe uma festa dançante para compartilhar com seus amigos. Com Beyoncé, Harry Styles, Lizzo, Lil Nas X, Selena Gomez, músicas de “Encanto” da Disney e muito mais!
           description: Crie sua própria dança para compartilhar com seus amigos.
           student_description: Crie sua própria dança para compartilhar com seus amigos.
         k5-onlinepd-2019:
@@ -4201,3 +4202,7 @@ pt:
           title: CSP Parque Infantil
           description_audience: Escritores de currículos
           description_short: Para escalonar as atualizações das lições ou os níveis entre versões de currículos
+        devices-2022:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: 'Capítulo 2: Construindo protótipos físicos'

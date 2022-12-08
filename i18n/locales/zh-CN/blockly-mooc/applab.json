@@ -11,6 +11,7 @@
   "confirmImportOverwrite": "导入此文件将覆盖此表中的现有数据，确定要继续吗？",
   "designWorkspaceHeader": "工作区域",
   "designElementPhotoSelectClickName": "更改",
+  "dropletBlock_console.log_param0": "消息",
   "dropletBlock_drawImage_param1": "x",
   "dropletBlock_drawImage_param2": "y",
   "dropletBlock_drawImage_param3": "宽度",

@@ -434,7 +434,7 @@
           "definition": "Bilgisayar ekranında kullanıcıdan giriş bekleyen bir ileti."
         },
         "input/coursef/2022": {
-          "word": "Giriş",
+          "word": "Girdi",
           "definition": "Bilgisayarların kullanıcılardan aldıkları bilgiler."
         },
         "models_and_simulations/coursef/2022": {
@@ -846,7 +846,7 @@
           "definition": "Yalnız iki seçenek kullanarak bilgileri temsil etmenin bir yolu."
         },
         "input/csd/2022": {
-          "word": "Giriş"
+          "word": "Girdi"
         },
         "processing/csd/2022": {
           "word": "İşleme"
@@ -953,7 +953,7 @@
           "definition": "Bilgisayar ekranında kullanıcıdan giriş bekleyen bir ileti."
         },
         "input/coursef/2021": {
-          "word": "Giriş",
+          "word": "Girdi",
           "definition": "Bilgisayarların kullanıcılardan aldıkları bilgiler."
         },
         "loop/coursef/2021": {
@@ -1495,7 +1495,7 @@
           "word": "Fonksiyon"
         },
         "input/csd/2021": {
-          "word": "Giriş"
+          "word": "Girdi"
         },
         "processing/csd/2021": {
           "word": "İşleme"

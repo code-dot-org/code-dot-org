@@ -2331,3 +2331,7 @@
           lesson_groups:
             csp_unit9_2020:
               display_name: "(gammel) Enhet 9: Data"
+        devices-2022:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: 'Kapittel 2: Bygge fysiske prototyper'

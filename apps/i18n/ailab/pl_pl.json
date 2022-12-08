@@ -14,103 +14,73 @@
     "medical_priority": {
       "fields": {
         "age": {
-          "type": "kategoryczny",
           "id": "wiek"
         },
         "gender": {
-          "type": "kategoryczny",
           "id": "płeć",
           "description": "Płeć pacjenta."
         },
-        "race": {
-          "type": "kategoryczny"
-        },
         "bleeding": {
-          "type": "kategoryczny",
           "id": "krwawienie"
         },
-        "shortness_of_breath": {
-          "type": "kategoryczny"
-        },
         "weight": {
-          "type": "kategoryczny",
           "id": "waga"
         },
-        "area_of_pain": {
-          "type": "kategoryczny"
-        },
         "decision": {
-          "type": "kategoryczny",
           "id": "decyzja"
         }
+      },
+      "card": {
+        "description": "Dane zebrane przez szpital na temat wszystkich pacjentów, którzy trafili na izbę przyjęć w ciągu jednego miesiąca."
       }
     },
     "exoplanets": {
       "fields": {
-        "Star host name": {
-          "type": "kategoryczny"
-        },
         "Number of stars": {
-          "type": "numeryczny",
           "id": "Liczba gwiazd"
         },
         "Number of planets": {
-          "type": "numeryczny",
           "id": "Liczba planet"
         },
-        "Discovery year": {
-          "type": "numeryczny"
-        },
-        "Orbit length in earth days": {
-          "type": "numeryczny"
-        },
-        "Size in earths": {
-          "type": "numeryczny"
-        },
-        "Mass in earths": {
-          "type": "numeryczny"
-        },
-        "Star temperature in kelvin": {
-          "type": "numeryczny"
-        },
-        "Star size in suns": {
-          "type": "numeryczny"
-        },
-        "Star mass in suns": {
-          "type": "numeryczny"
-        },
         "Star age in billions of years": {
-          "type": "numeryczny",
           "id": "Wiek gwiazd w miliardach lat"
+        }
+      },
+      "card": {
+        "description": "Ten zbiór danych to lista egzoplanet, które są planetami krążącymi wokół innych gwiazd. Dzięki tym danym można oszacować rozmiar egzoplanety, a także inne cechy.",
+        "context": {
+          "potentialUses": "Oszacuj rozmiar lub masę egzoplanety na podstawie rozmiaru, wieku lub innych aspektów gwiazdy, na których krąży.",
+          "potentialMisuses": "Próbuje zgadnąć, czy na planecie może istnieć życie."
         }
       }
     },
     "shoe_survey_toy": {
       "fields": {
         "spend time": {
-          "id": "spędzać czas",
-          "type": "kategoryczny"
+          "id": "spędzać czas"
         },
         "weather": {
-          "id": "pogoda",
-          "type": "kategoryczny"
+          "id": "pogoda"
         },
         "socks": {
-          "id": "skarpety",
-          "type": "kategoryczny"
+          "id": "skarpety"
         },
         "day": {
-          "id": "dzień",
-          "type": "kategoryczny"
+          "id": "dzień"
         },
         "notice shoes": {
-          "type": "kategoryczny",
           "description": "Obchodzi cię, czy ludzie zauważą Twoje buty?"
         },
         "shoe": {
           "id": "but",
-          "type": "kategoryczny",
           "description": "Jakie buty zamierzasz dziś założyć?"
+        }
+      },
+      "card": {
+        "description": "Ankieta na temat Twoich preferencji, aby pomóc polecić, jakie buty powinieneś nosić.",
+        "context": {
+          "potentialUses": "Poleć parę butów na podstawie osobistych pytań.",
+          "potentialMisuses": "Cokolwiek innego niż zamierzone zastosowania."
         }
       }
     },
@@ -118,2496 +88,1015 @@
       "fields": {
         "cilantro": {
           "id": "kolendra",
-          "type": "kategoryczny",
           "description": "Czy salsa zawiera kolendrę?"
         },
         "onion": {
           "id": "cebula",
-          "type": "kategoryczny",
           "description": "Czy salsa zawiera cebulę?"
         },
         "cumin": {
           "id": "kminek",
-          "type": "kategoryczny",
           "description": "Czy salsa zawiera kminek?"
         },
         "vinegar": {
           "id": "ocet",
-          "type": "kategoryczny",
           "description": "Czy salsa zawiera ocet?"
         },
         "avocado": {
           "id": "awokado",
-          "type": "kategoryczny",
           "description": "Czy salsa zawiera awokado?"
         },
         "corn": {
           "id": "kukurydza",
-          "type": "kategoryczny",
           "description": "Czy salsa zawiera kukurydzę?"
         },
         "beans": {
           "id": "fasolki",
-          "type": "kategoryczny",
           "description": "Czy salsa zawiera fasolę?"
         },
         "garlic": {
           "id": "czosnek",
-          "type": "kategoryczny",
           "description": "Czy salsa zawiera czosnek?"
         },
         "lime": {
           "id": "limonka",
-          "type": "kategoryczny",
           "description": "Czy salsa zawiera limonkę?"
         },
         "preference": {
           "id": "preferencje",
-          "type": "kategoryczny",
           "description": "Lubisz czy nie lubisz salsy?"
+        }
+      },
+      "card": {
+        "description": "Ankieta przeprowadzona wśród klientów sklepu taco na temat tego, czy lubią określone kombinacje salsy.",
+        "context": {
+          "potentialUses": "Pomóż w rekomendowaniu, jaki rodzaj salsy powinien zamówić nowy klient.",
+          "potentialMisuses": "Cokolwiek innego niż zalecenia dotyczące salsy."
         }
       }
     },
     "auto_mpg": {
       "fields": {
-        "mpg": {
-          "type": "numeryczny"
-        },
-        "cylinders": {
-          "type": "numeryczny"
-        },
-        "displacement": {
-          "type": "numeryczny"
-        },
-        "horsepower": {
-          "type": "numeryczny"
-        },
         "weight": {
-          "type": "numeryczny",
           "id": "waga"
-        },
-        "acceleration": {
-          "type": "numeryczny"
-        },
-        "model year": {
-          "type": "kategoryczny"
-        },
-        "car name": {
-          "type": "kategoryczny"
         }
       }
     },
     "bike_sharing": {
       "fields": {
         "index": {
-          "type": "numeryczny",
           "id": "indeks"
         },
         "Date": {
-          "type": "numeryczny",
           "id": "Data"
         },
         "Season": {
-          "type": "kategoryczny",
           "id": "Sezon",
           "description": "Pora roku: wiosna, lato, zima lub jesień."
         },
         "Year": {
-          "type": "kategoryczny",
           "id": "Rok",
           "description": "Rok (2011 lub 2012)."
         },
         "Month": {
-          "type": "kategoryczny",
           "id": "Miesiąc",
           "description": "Miesiąc: 1 (styczeń) do 12 (grudzień)."
         },
         "Holiday": {
-          "type": "kategoryczny",
           "description": "Niezależnie od tego, czy dzień jest świętem."
         },
         "Day of Week": {
-          "type": "kategoryczny",
           "id": "Dzień Tygodnia",
           "description": "Dzień tygodnia: 0 (niedziela) do 6 (sobota)."
-        },
-        "Workday": {
-          "type": "kategoryczny"
-        },
-        "Weather Description": {
-          "type": "kategoryczny"
-        },
-        "Average Temperature (Celsius)": {
-          "type": "numeryczny"
-        },
-        "Average \"Feels Like\" Temperature": {
-          "type": "numeryczny"
-        },
-        "Humidity (0 - 1)": {
-          "type": "numeryczny"
-        },
-        "Wind Speed": {
-          "type": "numeryczny"
-        },
-        "Number of Casual Users": {
-          "type": "numeryczny"
-        },
-        "Number of Registered Users": {
-          "type": "numeryczny"
-        },
-        "Total Users": {
-          "type": "numeryczny"
         }
       }
     },
     "poutine_toy": {
       "fields": {
         "mushrooms": {
-          "id": "grzyby",
-          "type": "kategoryczny"
+          "id": "grzyby"
         },
         "lobster": {
-          "id": "lobster",
-          "type": "kategoryczny"
-        },
-        "pork": {
-          "type": "kategoryczny"
+          "id": "lobster"
         },
         "bacon": {
-          "id": "boczek",
-          "type": "kategoryczny"
+          "id": "boczek"
         },
         "cheese": {
-          "id": "ser",
-          "type": "kategoryczny"
-        },
-        "gravy": {
-          "type": "kategoryczny"
-        },
-        "scallions": {
-          "type": "kategoryczny"
+          "id": "ser"
         },
         "meat": {
-          "id": "mięso",
-          "type": "kategoryczny"
-        },
-        "bell peppers": {
-          "type": "kategoryczny"
+          "id": "mięso"
         },
         "preference": {
-          "id": "preferencje",
-          "type": "kategoryczny"
+          "id": "preferencje"
         }
-      }
-    },
-    "club_biased_toy": {
-      "fields": {
-        "activity": {
-          "type": "kategoryczny"
-        },
-        "free time": {
-          "type": "numeryczny"
-        },
-        "personality": {
-          "type": "kategoryczny"
-        },
-        "element": {
-          "type": "kategoryczny"
-        },
-        "school minutes": {
-          "type": "numeryczny"
-        },
-        "make build": {
-          "type": "kategoryczny"
-        },
-        "meet people": {
-          "type": "kategoryczny"
-        },
-        "club": {
-          "type": "kategoryczny"
+      },
+      "card": {
+        "description": "Ankieta przeprowadzona wśród klientów restauracji na temat tego, czy lubią pewne kombinacje poutine.",
+        "context": {
+          "potentialUses": "Pomóż w rekomendowaniu, jaki rodzaj poutine powinien zamówić nowy klient.",
+          "potentialMisuses": "Cokolwiek innego niż zalecenia."
         }
       }
     },
     "loneliness_phobias": {
       "fields": {
         "Loneliness": {
-          "type": "kategoryczny",
           "id": "Samotność",
           "description": "Czuję się samotny w życiu."
         },
         "Flying": {
-          "type": "kategoryczny",
           "id": "Latanie",
           "description": "Boję się latania"
         },
         "Storm": {
-          "type": "kategoryczny",
           "id": "Sztorm",
           "description": "Boję się sztormów"
         },
         "Darkness": {
-          "type": "kategoryczny",
           "id": "Ciemność",
           "description": "Boję się ciemności"
         },
         "Heights": {
-          "type": "kategoryczny",
           "id": "Wysokości",
           "description": "Boję się wysokości"
         },
         "Spiders": {
-          "type": "kategoryczny",
           "id": "Pająki",
           "description": "Boję się pająków"
         },
         "Snakes": {
-          "type": "kategoryczny",
           "id": "Węże",
           "description": "Boję się węży"
         },
         "Rats": {
-          "type": "kategoryczny",
           "id": "Szczury",
           "description": "Boję się szczurów"
         },
         "Ageing": {
-          "type": "kategoryczny",
           "id": "Starzenie się",
           "description": "Boję się starzenia"
         },
         "Dangerous dogs": {
-          "type": "kategoryczny",
           "id": "Groźne psy",
           "description": "Boję się groźnych psów"
         },
         "Fear of public speaking": {
-          "type": "kategoryczny",
           "id": "Strach przed wystąpieniami publicznymi",
           "description": "Obawiam się wystąpień publicznych"
+        }
+      },
+      "card": {
+        "description": "Zbiór danych odpowiedzi ankietowych zebranych przez słowackich studentów w wieku 18-21 lat w FSEV UK. Większość odpowiedzi to rankingi na skali od 1 do 5. Na przykład „Ranga od 1 (zdecydowanie się nie zgadzam) do 5 (zdecydowanie się zgadzam): Często uczę się lub pracuję nawet w wolnym czasie”. Jest to podzbiór większego zbioru danych, który skupia się tylko na muzyce.",
+        "context": {
+          "potentialUses": "Na przykład, przewidzieć czyjeś cechy osobowości na podstawie innych cech."
         }
       }
     },
     "cookies_toy": {
       "fields": {
-        "chocolate chips": {
-          "type": "kategoryczny"
-        },
-        "raisins": {
-          "type": "kategoryczny"
-        },
-        "oatmeal": {
-          "type": "kategoryczny"
-        },
-        "m and ms": {
-          "type": "kategoryczny"
-        },
-        "ice cream on top": {
-          "type": "kategoryczny"
-        },
-        "frosting": {
-          "type": "kategoryczny"
-        },
         "preference": {
-          "id": "preferencje",
-          "type": "kategoryczny"
+          "id": "preferencje"
+        }
+      },
+      "card": {
+        "description": "Ankieta przeprowadzona wśród klientów sklepu z ciasteczkami na temat tego, czy lubią określone kombinacje ciasteczek.",
+        "context": {
+          "potentialUses": "Pomóż w rekomendowaniu, jaki rodzaj ciasteczek powinien kupić nowy klient."
         }
       }
     },
     "club_random_toy": {
       "fields": {
         "color": {
-          "id": "kolor",
-          "type": "kategoryczny"
+          "id": "kolor"
         },
         "music": {
-          "id": "muzyka",
-          "type": "kategoryczny"
+          "id": "muzyka"
         },
         "food": {
-          "id": "jedzenie",
-          "type": "kategoryczny"
-        },
-        "read vs tv": {
-          "type": "kategoryczny"
-        },
-        "club": {
-          "type": "kategoryczny"
+          "id": "jedzenie"
         }
       }
     },
     "insurance_cost": {
       "fields": {
         "age": {
-          "type": "numeryczny",
           "id": "wiek",
           "description": "wiek głównego beneficjenta."
         },
         "sex": {
-          "type": "kategoryczny",
           "id": "płeć"
         },
         "bmi": {
-          "type": "numeryczny",
           "id": "bmi",
           "description": "Wskaźnik masy ciała."
         },
         "children": {
-          "type": "numeryczny",
           "id": "dzieci",
           "description": "Liczba dzieci objętych ubezpieczeniem zdrowotnym."
         },
         "smoker": {
-          "type": "kategoryczny",
           "id": "palacz",
           "description": "Czy dana osoba pali, czy nie."
         },
         "region": {
-          "type": "kategoryczny",
           "id": "region"
         },
         "charges": {
-          "type": "numeryczny",
           "id": "opłaty"
+        }
+      },
+      "card": {
+        "description": "Koszty ubezpieczenia wraz z czynnikami takimi, jak liczba dzieci, lokalizacja, palacz/niepalący, wiek, seks, BMI.",
+        "context": {
+          "potentialUses": "Może być używany do przewidywania, czy ktoś jest palaczem na podstawie innych informacji ubezpieczeniowych"
         }
       }
     },
     "nutrition": {
       "fields": {
         "Category": {
-          "type": "kategoryczny",
           "id": "Kategoria",
           "description": "Ogólna kategoria żywności, do której a rzecz."
         },
         "Description": {
-          "type": "kategoryczny",
           "id": "Opis",
           "description": "Pełny opis rzeczy."
         },
         "Ash": {
-          "type": "numeryczny",
           "id": "Popiół",
           "description": "Zawartość popiołu reprezentuje całkowitą zawartość minerałów w żywności. Mierzone w gramach (g)."
         },
-        "Beta Carotene": {
-          "type": "numeryczny"
-        },
-        "Carbohydrate": {
-          "type": "numeryczny"
-        },
         "Cholesterol": {
-          "type": "numeryczny",
           "id": "Cholesterol"
         },
         "Fiber": {
-          "type": "numeryczny",
           "id": "Błonnik"
         },
         "Kilocalories": {
-          "type": "numeryczny",
           "id": "Kilokalorie"
         },
-        "Lutein and Zeaxanthin": {
-          "type": "numeryczny"
-        },
-        "Lycopene": {
-          "type": "numeryczny"
-        },
         "Manganese": {
-          "type": "numeryczny",
           "id": "Mangan"
         },
         "Niacin": {
-          "type": "numeryczny",
           "id": "Niacyna"
         },
-        "Protein": {
-          "type": "numeryczny"
-        },
         "Retinol": {
-          "type": "numeryczny",
           "id": "Retinol"
         },
-        "Riboflavin": {
-          "type": "numeryczny"
-        },
         "Selenium": {
-          "type": "numeryczny",
           "id": "Selen"
         },
-        "Sugar Total": {
-          "type": "numeryczny"
-        },
-        "Thiamin": {
-          "type": "numeryczny"
-        },
         "Water": {
-          "type": "numeryczny",
           "id": "Woda"
         },
         "Fat: Monosaturated Fat": {
-          "type": "numeryczny",
           "id": "Tłuszcz: Tłuszcz monosaturowany"
         },
-        "Fat: Polysaturated Fat": {
-          "type": "numeryczny"
-        },
-        "Fat: Saturated Fat": {
-          "type": "numeryczny"
-        },
-        "Fat: Total Lipid": {
-          "type": "numeryczny"
-        },
         "Major Minerals: Calcium": {
-          "type": "numeryczny",
           "id": "Główne minerały: wapń"
         },
         "Major Minerals: Copper": {
-          "type": "numeryczny",
           "id": "Główne minerały: miedź"
         },
         "Major Minerals: Iron": {
-          "type": "numeryczny",
           "id": "Główne minerały: żelazo"
         },
         "Major Minerals: Magnesium": {
-          "type": "numeryczny",
           "id": "Główne minerały: magnez"
         },
         "Major Minerals: Phosphorus": {
-          "type": "numeryczny",
           "id": "Główne minerały: fosfor"
         },
         "Major Minerals: Potassium": {
-          "type": "numeryczny",
           "id": "Główne minerały: Potas"
         },
         "Major Minerals: Sodium": {
-          "type": "numeryczny",
           "id": "Główne minerały: Sód"
         },
         "Major Minerals: Zinc": {
-          "type": "numeryczny",
           "id": "Główne minerały: cynk"
         },
         "Vitamins: Vitamin A - IU": {
-          "type": "numeryczny",
           "id": "Witaminy: Witamina A - IU"
         },
         "Vitamins: Vitamin A - RAE": {
-          "type": "numeryczny",
           "id": "Witaminy: Witamina A - RAE"
         },
         "Vitamins: Vitamin B12": {
-          "type": "numeryczny",
           "id": "Witaminy: Witamina B12"
         },
         "Vitamins: Vitamin B6": {
-          "type": "numeryczny",
           "id": "Witaminy: Witamina B6"
         },
         "Vitamins: Vitamin C": {
-          "type": "numeryczny",
           "id": "Witaminy: witamina C"
         },
         "Vitamins: Vitamin E": {
-          "type": "numeryczny",
           "id": "Witaminy: witamina E"
         },
         "Vitamins: Vitamin K": {
-          "type": "numeryczny",
           "id": "Witaminy: witamina K"
+        }
+      },
+      "card": {
+        "context": {
+          "potentialUses": "Na przykład określ, ile kalorii ma żywność na podstawie zawartości składników odżywczych."
         }
       }
     },
     "raspado_toy": {
       "fields": {
-        "pecan": {
-          "type": "kategoryczny"
-        },
         "strawberry": {
-          "id": "truskawka",
-          "type": "kategoryczny"
-        },
-        "vanilla": {
-          "type": "kategoryczny"
-        },
-        "mango": {
-          "type": "kategoryczny"
+          "id": "truskawka"
         },
         "lime": {
-          "id": "limonka",
-          "type": "kategoryczny"
-        },
-        "chili en polbo": {
-          "type": "kategoryczny"
-        },
-        "lechera": {
-          "type": "kategoryczny"
-        },
-        "coconut": {
-          "type": "kategoryczny"
+          "id": "limonka"
         },
         "preference": {
-          "id": "preferencje",
-          "type": "kategoryczny"
+          "id": "preferencje"
+        }
+      },
+      "card": {
+        "description": "Ankieta przeprowadzona wśród klientów sklepu raspado na temat tego, czy lubią pewne kombinacje raspado.",
+        "context": {
+          "potentialUses": "Pomóż w rekomendowaniu, jaki rodzaj raspado powinien zamówić nowy klient.",
+          "potentialMisuses": "Cokolwiek innego niż zalecenia."
         }
       }
     },
     "shapes_v2_toy": {
       "fields": {
         "sides": {
-          "id": "boki",
-          "type": "kategoryczny"
+          "id": "boki"
         },
         "symmetry": {
-          "id": "symetria",
-          "type": "kategoryczny"
+          "id": "symetria"
         },
         "equal sides": {
-          "id": "równe boki",
-          "type": "kategoryczny"
+          "id": "równe boki"
         },
         "equal angles": {
           "id": "równe kąty",
-          "type": "kategoryczny",
           "description": "Czy kształt ma wszystkie równe kąty?"
         },
         "has corners": {
           "id": "ma narożniki",
-          "type": "kategoryczny",
           "description": "Czy kształt ma rogi?"
         },
-        "border color": {
-          "type": "kategoryczny"
-        },
-        "fill color": {
-          "type": "kategoryczny"
-        },
-        "background color": {
-          "type": "kategoryczny"
-        },
         "size": {
-          "id": "rozmiar",
-          "type": "kategoryczny"
-        },
-        "shape": {
-          "type": "kategoryczny"
+          "id": "rozmiar"
         }
       }
     },
     "salad_toy": {
       "fields": {
         "tomato": {
-          "id": "pomidor",
-          "type": "kategoryczny"
+          "id": "pomidor"
         },
         "avocado": {
-          "id": "awokado",
-          "type": "kategoryczny"
-        },
-        "ranch": {
-          "type": "kategoryczny"
-        },
-        "italian dressing": {
-          "type": "kategoryczny"
+          "id": "awokado"
         },
         "chicken": {
-          "id": "kurczak",
-          "type": "kategoryczny"
-        },
-        "seeds": {
-          "type": "kategoryczny"
+          "id": "kurczak"
         },
         "fruit": {
-          "id": "owoc",
-          "type": "kategoryczny"
+          "id": "owoc"
         },
         "beans": {
-          "id": "fasolki",
-          "type": "kategoryczny"
+          "id": "fasolki"
         },
         "cheese": {
-          "id": "ser",
-          "type": "kategoryczny"
+          "id": "ser"
         },
         "preference": {
-          "id": "preferencje",
-          "type": "kategoryczny"
+          "id": "preferencje"
+        }
+      },
+      "card": {
+        "description": "Ankieta przeorowadzona wśród klientów restauracji na temat tego, czy lubią określone kombinacje sałatek.",
+        "context": {
+          "potentialUses": "Pomóż w rekomendowaniu, jaki rodzaj sałaty powinien zamówić nowy klient.",
+          "potentialMisuses": "Cokolwiek innego niż zalecenia."
         }
       }
     },
     "billionaires": {
       "fields": {
         "Rank": {
-          "type": "numeryczny",
           "id": "Pozycja"
         },
         "Year": {
-          "type": "kategoryczny",
           "id": "Rok"
         },
-        "Company Founding Year": {
-          "type": "numeryczny"
-        },
         "Company Name": {
-          "type": "kategoryczny",
           "id": "Nazwa firmy"
         },
-        "Company Relationship": {
-          "type": "kategoryczny"
-        },
-        "Company Sector": {
-          "type": "kategoryczny"
-        },
         "Company Type": {
-          "type": "kategoryczny",
           "id": "Rodzaj firmy"
         },
         "Age": {
-          "type": "numeryczny",
           "id": "Wiek"
         },
         "Gender": {
-          "type": "kategoryczny",
           "id": "Płeć"
         },
-        "Citizenship": {
-          "type": "kategoryczny"
-        },
-        "Country of Residence": {
-          "type": "kategoryczny"
-        },
         "Region": {
-          "type": "kategoryczny",
           "id": "Region"
-        },
-        "Type Of Wealth": {
-          "type": "kategoryczny"
-        },
-        "Net Worth In Billions": {
-          "type": "numeryczny"
-        },
-        "Wealth Category": {
-          "type": "kategoryczny"
-        },
-        "Wealth Industry": {
-          "type": "kategoryczny"
-        },
-        "Wealth Inherited": {
-          "type": "kategoryczny"
+        }
+      },
+      "card": {
+        "context": {
+          "potentialUses": "Przewiduj rodzaj bogactwa miliardera na podstawie innych funkcji."
         }
       }
     },
     "student_alcohol_consumption": {
       "fields": {
         "school": {
-          "type": "kategoryczny",
           "id": "szkoła"
         },
         "sex": {
-          "type": "kategoryczny",
           "id": "płeć"
         },
         "age": {
-          "type": "numeryczny",
           "id": "wiek"
         },
-        "address": {
-          "type": "kategoryczny"
-        },
-        "family size": {
-          "type": "kategoryczny"
-        },
-        "parent cohabitation status": {
-          "type": "kategoryczny"
-        },
-        "mother's education": {
-          "type": "kategoryczny"
-        },
-        "father's education": {
-          "type": "kategoryczny"
-        },
-        "mother's job": {
-          "type": "kategoryczny"
-        },
-        "father's job": {
-          "type": "kategoryczny"
-        },
-        "reason": {
-          "type": "kategoryczny"
-        },
-        "guardian": {
-          "type": "kategoryczny"
-        },
-        "traveltime": {
-          "type": "numeryczny"
-        },
-        "studytime": {
-          "type": "numeryczny"
-        },
-        "failures": {
-          "type": "numeryczny"
-        },
-        "school support": {
-          "type": "kategoryczny"
-        },
-        "family support": {
-          "type": "kategoryczny"
-        },
-        "paid": {
-          "type": "kategoryczny"
-        },
-        "activities": {
-          "type": "kategoryczny"
-        },
-        "nursery": {
-          "type": "kategoryczny"
-        },
-        "higher": {
-          "type": "kategoryczny"
-        },
-        "internet": {
-          "type": "kategoryczny"
-        },
-        "romantic": {
-          "type": "kategoryczny"
-        },
-        "family relationships": {
-          "type": "kategoryczny"
-        },
-        "freetime": {
-          "type": "kategoryczny"
-        },
-        "go out": {
-          "type": "kategoryczny"
-        },
-        "daily alcohol": {
-          "type": "kategoryczny"
-        },
-        "weekend alcohol": {
-          "type": "kategoryczny"
-        },
         "health": {
-          "type": "kategoryczny",
           "id": "zdrowie"
-        },
-        "absences": {
-          "type": "numeryczny"
-        },
-        "G1": {
-          "type": "numeryczny"
-        },
-        "G2": {
-          "type": "numeryczny"
-        },
-        "G3": {
-          "type": "numeryczny"
-        }
-      }
-    },
-    "icecream_toppings_toy": {
-      "fields": {
-        "Hot Fudge": {
-          "type": "kategoryczny"
-        },
-        "Sprinkles": {
-          "type": "kategoryczny"
-        },
-        "Whipped Cream": {
-          "type": "kategoryczny"
-        },
-        "Cherry": {
-          "type": "kategoryczny"
-        },
-        "Waffle Cone": {
-          "type": "kategoryczny"
-        },
-        "Preference": {
-          "type": "kategoryczny"
         }
       }
     },
     "naan_toy": {
       "fields": {
         "chicken": {
-          "id": "kurczak",
-          "type": "kategoryczny"
+          "id": "kurczak"
         },
         "lamb": {
-          "id": "owieczka",
-          "type": "kategoryczny"
+          "id": "owieczka"
         },
         "onion": {
-          "id": "cebula",
-          "type": "kategoryczny"
-        },
-        "potatoes": {
-          "type": "kategoryczny"
-        },
-        "nuts": {
-          "type": "kategoryczny"
-        },
-        "cherries": {
-          "type": "kategoryczny"
-        },
-        "shaved coconut": {
-          "type": "kategoryczny"
+          "id": "cebula"
         },
         "garlic": {
-          "id": "czosnek",
-          "type": "kategoryczny"
+          "id": "czosnek"
         },
         "cheese": {
-          "id": "ser",
-          "type": "kategoryczny"
+          "id": "ser"
         },
         "preference": {
-          "id": "preferencje",
-          "type": "kategoryczny"
+          "id": "preferencje"
+        }
+      },
+      "card": {
+        "description": "Ankieta przeprowadzona wśród klientów indyjskiej restauracji na temat tego, czy lubią pewne kombinacje naan.",
+        "context": {
+          "potentialUses": "Pomóż w rekomendowaniu, jaki rodzaj naan powinien zamówić nowy klient.",
+          "potentialMisuses": "Cokolwiek innego niż zalecenia."
         }
       }
     },
     "census_part": {
       "fields": {
         "age": {
-          "type": "numeryczny",
           "id": "wiek"
         },
-        "type of employment": {
-          "type": "kategoryczny"
-        },
-        "estimated number of people represented": {
-          "type": "numeryczny"
-        },
-        "education level": {
-          "type": "kategoryczny"
-        },
-        "marital status": {
-          "type": "kategoryczny"
-        },
-        "occupation": {
-          "type": "kategoryczny"
-        },
-        "relationship": {
-          "type": "kategoryczny"
-        },
-        "race": {
-          "type": "kategoryczny"
-        },
         "gender": {
-          "type": "kategoryczny",
           "id": "płeć"
-        },
-        "capital gains": {
-          "type": "numeryczny"
-        },
-        "capital losses": {
-          "type": "numeryczny"
-        },
-        "hours of work per week": {
-          "type": "numeryczny"
-        },
-        "native-country": {
-          "type": "kategoryczny"
-        },
-        "income": {
-          "type": "kategoryczny"
+        }
+      },
+      "card": {
+        "description": "Dane ze spisu powszechnego w USA z 1994 r., z danymi dotyczącymi dochodów, danych osobowych i pracy. Służą do przewidywania, czy dochód danej osoby przekracza 50 000 USD.",
+        "context": {
+          "potentialUses": "Przewiduj, czy dochód danej osoby przekracza, czy nie przekracza 50 000 USD na podstawie poziomu wykształcenia i wieku. Przedstaw nierówności dochodowe rasowe i płciowe.",
+          "potentialMisuses": "Wykorzystanie tego do czegoś takiego jak ustalenie, czy udzielić komuś pożyczki, może być głęboko niesprawiedliwe."
         }
       }
     },
     "loneliness_movies": {
       "fields": {
         "Loneliness": {
-          "type": "kategoryczny",
           "id": "Samotność",
           "description": "Czuję się samotny w życiu."
-        },
-        "Movies": {
-          "type": "kategoryczny"
-        },
-        "Horror": {
-          "type": "kategoryczny"
-        },
-        "Thriller": {
-          "type": "kategoryczny"
-        },
-        "Comedy": {
-          "type": "kategoryczny"
-        },
-        "Romantic": {
-          "type": "kategoryczny"
-        },
-        "Sci-fi": {
-          "type": "kategoryczny"
-        },
-        "War": {
-          "type": "kategoryczny"
-        },
-        "Fantasy/Fairy tales": {
-          "type": "kategoryczny"
-        },
-        "Animated": {
-          "type": "kategoryczny"
-        },
-        "Documentary": {
-          "type": "kategoryczny"
-        },
-        "Western": {
-          "type": "kategoryczny"
-        },
-        "Action": {
-          "type": "kategoryczny"
+        }
+      },
+      "card": {
+        "context": {
+          "potentialUses": "Na przykład, przewidzieć czyjeś cechy osobowości na podstawie innych cech."
         }
       }
     },
     "loneliness_interests": {
       "fields": {
         "Loneliness": {
-          "type": "kategoryczny",
           "id": "Samotność",
           "description": "Czuję się samotny w życiu."
         },
-        "History": {
-          "type": "kategoryczny"
-        },
-        "Psychology": {
-          "type": "kategoryczny"
-        },
-        "Politics": {
-          "type": "kategoryczny"
-        },
-        "Mathematics": {
-          "type": "kategoryczny"
-        },
-        "Physics": {
-          "type": "kategoryczny"
-        },
         "Internet": {
-          "type": "kategoryczny",
           "id": "Internet"
         },
-        "PC": {
-          "type": "kategoryczny"
-        },
-        "Economy Management": {
-          "type": "kategoryczny"
-        },
-        "Biology": {
-          "type": "kategoryczny"
-        },
-        "Chemistry": {
-          "type": "kategoryczny"
-        },
-        "Reading": {
-          "type": "kategoryczny"
-        },
-        "Geography": {
-          "type": "kategoryczny"
-        },
-        "Foreign languages": {
-          "type": "kategoryczny"
-        },
-        "Medicine": {
-          "type": "kategoryczny"
-        },
-        "Law": {
-          "type": "kategoryczny"
-        },
-        "Cars": {
-          "type": "kategoryczny"
-        },
-        "Art exhibitions": {
-          "type": "kategoryczny"
-        },
-        "Religion": {
-          "type": "kategoryczny"
-        },
-        "Countryside, outdoors": {
-          "type": "kategoryczny"
-        },
-        "Dancing": {
-          "type": "kategoryczny"
-        },
-        "Musical instruments": {
-          "type": "kategoryczny"
-        },
         "Writing": {
-          "type": "kategoryczny",
           "id": "Pisanie"
-        },
-        "Passive sport": {
-          "type": "kategoryczny"
-        },
-        "Active sport": {
-          "type": "kategoryczny"
-        },
-        "Gardening": {
-          "type": "kategoryczny"
-        },
-        "Celebrities": {
-          "type": "kategoryczny"
-        },
-        "Shopping": {
-          "type": "kategoryczny"
-        },
-        "Science and technology": {
-          "type": "kategoryczny"
-        },
-        "Theatre": {
-          "type": "kategoryczny"
-        },
-        "Fun with friends": {
-          "type": "kategoryczny"
-        },
-        "Adrenaline sports": {
-          "type": "kategoryczny"
-        },
-        "Pets": {
-          "type": "kategoryczny"
+        }
+      },
+      "card": {
+        "context": {
+          "potentialUses": "Na przykład, przewidzieć czyjeś cechy osobowości na podstawie innych cech."
         }
       }
     },
     "movies": {
       "fields": {
-        "Budget": {
-          "type": "numeryczny"
-        },
-        "Gross": {
-          "type": "numeryczny"
-        },
-        "Runtime": {
-          "type": "numeryczny"
-        },
         "Score": {
-          "type": "numeryczny",
           "id": "Wynik"
         },
-        "Company": {
-          "type": "kategoryczny"
-        },
         "Country": {
-          "type": "kategoryczny",
           "id": "Kraj"
         },
-        "Director": {
-          "type": "kategoryczny"
-        },
-        "Genre": {
-          "type": "kategoryczny"
-        },
         "Name": {
-          "type": "kategoryczny",
           "id": "Imię/Nazwisko"
         },
-        "Rating": {
-          "type": "kategoryczny"
-        },
-        "Released": {
-          "type": "kategoryczny"
-        },
         "Star": {
-          "type": "kategoryczny",
           "id": "Star"
         },
-        "Votes": {
-          "type": "numeryczny"
-        },
-        "Writer": {
-          "type": "kategoryczny"
-        },
         "Year": {
-          "type": "kategoryczny",
           "id": "Rok"
         }
-      }
-    },
-    "club_specific_toy": {
-      "fields": {
-        "activity": {
-          "type": "kategoryczny"
-        },
-        "pet you own": {
-          "type": "kategoryczny"
-        },
-        "favorite movie": {
-          "type": "kategoryczny"
-        },
-        "lunch food": {
-          "type": "kategoryczny"
-        },
-        "club": {
-          "type": "kategoryczny"
+      },
+      "card": {
+        "description": "Zbiór danych o filmach wytworzonych w latach 1986-2016, z numerami kasowymi, ocenami, wynikami IMDB i innymi.",
+        "context": {
+          "potentialUses": "Na przykład, określ kasę filmu według jego budżetu lub gatunku."
         }
       }
     },
     "songs": {
       "fields": {
-        "Genre": {
-          "type": "kategoryczny"
-        },
         "Artist": {
-          "id": "Artysta",
-          "type": "kategoryczny"
-        },
-        "Title": {
-          "type": "kategoryczny"
-        },
-        "Loudness score": {
-          "type": "numeryczny"
-        },
-        "Tempo in beats per minute": {
-          "type": "numeryczny"
-        },
-        "Duration in seconds": {
-          "type": "numeryczny"
+          "id": "Artysta"
         },
         "Year": {
-          "id": "Rok",
-          "type": "numeryczny"
-        },
-        "Weeks on the Billboard Top 100": {
-          "type": "numeryczny"
-        },
-        "Billboard rank peak": {
-          "type": "numeryczny"
+          "id": "Rok"
         }
       }
     },
     "safari_toy": {
       "fields": {
-        "lions": {
-          "type": "numeryczny"
-        },
-        "temperature": {
-          "type": "numeryczny"
-        },
         "people": {
-          "id": "osoby",
-          "type": "numeryczny"
-        },
-        "dayOfMonth": {
-          "type": "numeryczny"
-        },
-        "ticketRevenue": {
-          "type": "numeryczny"
-        },
-        "antelope": {
-          "type": "numeryczny"
+          "id": "osoby"
         },
         "rhino": {
-          "id": "nosorożec ",
-          "type": "numeryczny"
+          "id": "nosorożec "
         },
         "elephant": {
-          "id": "słoń",
-          "type": "numeryczny"
+          "id": "słoń"
         },
         "alligator": {
-          "id": "alligator",
-          "type": "numeryczny"
+          "id": "alligator"
         },
         "trees": {
-          "id": "drzewa",
-          "type": "numeryczny"
-        },
-        "mosquitos": {
-          "type": "numeryczny"
-        },
-        "overgrowthPercent": {
-          "type": "numeryczny"
+          "id": "drzewa"
+        }
+      },
+      "card": {
+        "description": "Dane zebrane z „African Safari Tours”, firmy oferującej wycieczki po równinach Serengeti w Afryce.",
+        "context": {
+          "potentialUses": "Może służyć do określenia najlepszego czasu na safari, aby upewnić się, że zobaczysz jak najwięcej dzikiej przyrody.",
+          "potentialMisuses": "Śledzone są tylko niektóre rodzaje zwierząt, więc unikaj wyciągania pochopnych wniosków na temat zwierząt, które nie są częścią tego zestawu (jak zebry czy hipopotamy)."
         }
       }
     },
     "abalone": {
       "fields": {
         "Sex": {
-          "type": "kategoryczny",
           "id": "Płeć"
         },
         "Length": {
-          "type": "numeryczny",
           "id": "Długość"
         },
         "Diameter": {
-          "type": "numeryczny",
           "id": "Średnica",
           "description": "Jego średnica w milimetrach."
         },
         "Height": {
-          "type": "numeryczny",
           "id": "Wysokość"
         },
-        "Whole weight": {
-          "type": "numeryczny"
-        },
-        "Shucked weight": {
-          "type": "numeryczny"
-        },
-        "Viscera weight": {
-          "type": "numeryczny"
-        },
-        "Shell weight": {
-          "type": "numeryczny"
-        },
         "Rings": {
-          "type": "numeryczny",
           "description": "Wiek w latach."
         }
-      }
-    },
-    "basketball_shots": {
-      "fields": {
-        "Away team alias": {
-          "type": "kategoryczny"
-        },
-        "Home team alias": {
-          "type": "kategoryczny"
-        },
-        "Time in seconds": {
-          "type": "numeryczny"
-        },
-        "Jersey number": {
-          "type": "numeryczny"
-        },
-        "Inches from left baseline": {
-          "type": "numeryczny"
-        },
-        "Inches from bottom sideline": {
-          "type": "numeryczny"
-        },
-        "Made or miss": {
-          "type": "kategoryczny"
+      },
+      "card": {
+        "context": {
+          "potentialUses": "Określ wiek uchowca."
         }
       }
     },
     "zoo": {
       "fields": {
-        "Animal Name": {
-          "type": "kategoryczny"
-        },
-        "Hair": {
-          "type": "kategoryczny"
-        },
-        "Feathers": {
-          "type": "kategoryczny"
-        },
-        "Eggs": {
-          "type": "kategoryczny"
-        },
-        "Milk": {
-          "type": "kategoryczny"
-        },
-        "Airborne": {
-          "type": "kategoryczny"
-        },
         "Aquatic": {
-          "type": "kategoryczny",
           "id": "Wodny"
-        },
-        "Predator": {
-          "type": "kategoryczny"
-        },
-        "Toothed": {
-          "type": "kategoryczny"
-        },
-        "Backbone": {
-          "type": "kategoryczny"
-        },
-        "Breathes": {
-          "type": "kategoryczny"
-        },
-        "Venomous": {
-          "type": "kategoryczny"
-        },
-        "Fins": {
-          "type": "kategoryczny"
-        },
-        "Legs": {
-          "type": "kategoryczny"
-        },
-        "Tail": {
-          "type": "kategoryczny"
-        },
-        "Domestic": {
-          "type": "kategoryczny"
-        },
-        "Catsize": {
-          "type": "kategoryczny"
-        },
-        "Class": {
-          "type": "kategoryczny"
         }
-      }
-    },
-    "club_sparse_toy": {
-      "fields": {
-        "activity": {
-          "type": "kategoryczny"
-        },
-        "personality": {
-          "type": "kategoryczny"
-        },
-        "element": {
-          "type": "kategoryczny"
-        },
-        "make build": {
-          "type": "kategoryczny"
-        },
-        "meet people": {
-          "type": "kategoryczny"
-        },
-        "club": {
-          "type": "kategoryczny"
+      },
+      "card": {
+        "context": {
+          "potentialUses": "Jest tu wiele potencjalnych etykiet, ale jednym łatwym dochodzeniem na początek jest próba znalezienia cech, które zwykle odnoszą się do jadowitego zwierzęcia.",
+          "potentialMisuses": "Jest to zbiór danych tylko 100 zwierząt, więc może być wiele zwierząt, które nie są odzwierciedlone w danych. Weź to z przymrużeniem oka!"
         }
       }
     },
     "poke_toy": {
       "fields": {
         "avocado": {
-          "id": "awokado",
-          "type": "kategoryczny"
+          "id": "awokado"
         },
         "onion": {
-          "id": "cebula",
-          "type": "kategoryczny"
-        },
-        "masago": {
-          "type": "kategoryczny"
+          "id": "cebula"
         },
         "wasabi": {
-          "id": "wasabi",
-          "type": "kategoryczny"
+          "id": "wasabi"
         },
         "ginger": {
-          "id": "imbir",
-          "type": "kategoryczny"
-        },
-        "seaweed": {
-          "type": "kategoryczny"
-        },
-        "furikake": {
-          "type": "kategoryczny"
-        },
-        "surimi": {
-          "type": "kategoryczny"
+          "id": "imbir"
         },
         "chili": {
-          "id": "chili",
-          "type": "kategoryczny"
+          "id": "chili"
         },
         "preference": {
-          "id": "preferencje",
-          "type": "kategoryczny"
+          "id": "preferencje"
         }
-      }
-    },
-    "housing_data": {
-      "fields": {
-        "Per Capita Crime Rate": {
-          "type": "numeryczny"
-        },
-        "Proportion of Residental Land Zoned for >25Kft": {
-          "type": "numeryczny"
-        },
-        "Proportion of non-retail business acres": {
-          "type": "numeryczny"
-        },
-        "Bounds Charles River?": {
-          "type": "kategoryczny"
-        },
-        "Nitric Oxide Concentration (PPM)": {
-          "type": "numeryczny"
-        },
-        "Rooms per dwelling": {
-          "type": "numeryczny"
-        },
-        "% of buildings pre-1940": {
-          "type": "numeryczny"
-        },
-        "Distance to employment centers": {
-          "type": "numeryczny"
-        },
-        "Accessibility to highways": {
-          "type": "numeryczny"
-        },
-        "Property tax": {
-          "type": "numeryczny"
-        },
-        "Student-teacher ratio": {
-          "type": "numeryczny"
-        },
-        "Weighted black population": {
-          "type": "numeryczny"
-        },
-        "Lower status population": {
-          "type": "numeryczny"
-        },
-        "Median home value": {
-          "type": "numeryczny"
+      },
+      "card": {
+        "description": "Badanie klientów w sklepie poke, czy lubią pewne kombinacje poke.",
+        "context": {
+          "potentialUses": "Pomóż w rekomendowaniu, jaki rodzaj poke powinien kupić nowy klient.",
+          "potentialMisuses": "Cokolwiek innego niż zalecenia."
         }
       }
     },
     "student_survey": {
       "fields": {
         "Music": {
-          "type": "kategoryczny",
           "id": "Muzyka"
         },
-        "Slow songs or fast songs": {
-          "type": "kategoryczny"
-        },
         "Dance": {
-          "type": "kategoryczny",
           "id": "Taniec"
         },
-        "Folk": {
-          "type": "kategoryczny"
-        },
         "Country": {
-          "type": "kategoryczny",
           "id": "Kraj"
         },
-        "Classical music": {
-          "type": "kategoryczny"
-        },
-        "Musical": {
-          "type": "kategoryczny"
-        },
-        "Pop": {
-          "type": "kategoryczny"
-        },
-        "Rock": {
-          "type": "kategoryczny"
-        },
-        "Metal or Hardrock": {
-          "type": "kategoryczny"
-        },
-        "Punk": {
-          "type": "kategoryczny"
-        },
-        "Hiphop, Rap": {
-          "type": "kategoryczny"
-        },
-        "Reggae, Ska": {
-          "type": "kategoryczny"
-        },
-        "Swing, Jazz": {
-          "type": "kategoryczny"
-        },
-        "Rock n roll": {
-          "type": "kategoryczny"
-        },
-        "Alternative": {
-          "type": "kategoryczny"
-        },
-        "Latino": {
-          "type": "kategoryczny"
-        },
-        "Techno, Trance": {
-          "type": "kategoryczny"
-        },
-        "Opera": {
-          "type": "kategoryczny"
-        },
-        "Movies": {
-          "type": "kategoryczny"
-        },
-        "Horror": {
-          "type": "kategoryczny"
-        },
-        "Thriller": {
-          "type": "kategoryczny"
-        },
-        "Comedy": {
-          "type": "kategoryczny"
-        },
-        "Romantic": {
-          "type": "kategoryczny"
-        },
-        "Sci-fi": {
-          "type": "kategoryczny"
-        },
-        "War": {
-          "type": "kategoryczny"
-        },
-        "Fantasy/Fairy tales": {
-          "type": "kategoryczny"
-        },
-        "Animated": {
-          "type": "kategoryczny"
-        },
-        "Documentary": {
-          "type": "kategoryczny"
-        },
-        "Western": {
-          "type": "kategoryczny"
-        },
-        "Action": {
-          "type": "kategoryczny"
-        },
-        "History": {
-          "type": "kategoryczny"
-        },
-        "Psychology": {
-          "type": "kategoryczny"
-        },
-        "Politics": {
-          "type": "kategoryczny"
-        },
-        "Mathematics": {
-          "type": "kategoryczny"
-        },
-        "Physics": {
-          "type": "kategoryczny"
-        },
         "Internet": {
-          "type": "kategoryczny",
           "id": "Internet"
         },
-        "PC": {
-          "type": "kategoryczny"
-        },
-        "Economy Management": {
-          "type": "kategoryczny"
-        },
-        "Biology": {
-          "type": "kategoryczny"
-        },
-        "Chemistry": {
-          "type": "kategoryczny"
-        },
-        "Reading": {
-          "type": "kategoryczny"
-        },
-        "Geography": {
-          "type": "kategoryczny"
-        },
-        "Foreign languages": {
-          "type": "kategoryczny"
-        },
-        "Medicine": {
-          "type": "kategoryczny"
-        },
-        "Law": {
-          "type": "kategoryczny"
-        },
-        "Cars": {
-          "type": "kategoryczny"
-        },
-        "Art exhibitions": {
-          "type": "kategoryczny"
-        },
-        "Religion": {
-          "type": "kategoryczny"
-        },
-        "Countryside, outdoors": {
-          "type": "kategoryczny"
-        },
-        "Dancing": {
-          "type": "kategoryczny"
-        },
-        "Musical instruments": {
-          "type": "kategoryczny"
-        },
         "Writing": {
-          "type": "kategoryczny",
           "id": "Pisanie"
         },
-        "Passive sport": {
-          "type": "kategoryczny"
-        },
-        "Active sport": {
-          "type": "kategoryczny"
-        },
-        "Gardening": {
-          "type": "kategoryczny"
-        },
-        "Celebrities": {
-          "type": "kategoryczny"
-        },
-        "Shopping": {
-          "type": "kategoryczny"
-        },
-        "Science and technology": {
-          "type": "kategoryczny"
-        },
-        "Theatre": {
-          "type": "kategoryczny"
-        },
-        "Fun with friends": {
-          "type": "kategoryczny"
-        },
-        "Adrenaline sports": {
-          "type": "kategoryczny"
-        },
-        "Pets": {
-          "type": "kategoryczny"
-        },
         "Flying": {
-          "type": "kategoryczny",
           "id": "Latanie",
           "description": "Boję się latania"
         },
         "Storm": {
-          "type": "kategoryczny",
           "id": "Sztorm",
           "description": "Boję się sztormów"
         },
         "Darkness": {
-          "type": "kategoryczny",
           "id": "Ciemność",
           "description": "Boję się ciemności"
         },
         "Heights": {
-          "type": "kategoryczny",
           "id": "Wysokości",
           "description": "Boję się wysokości"
         },
         "Spiders": {
-          "type": "kategoryczny",
           "id": "Pająki",
           "description": "Boję się pająków"
         },
         "Snakes": {
-          "type": "kategoryczny",
           "id": "Węże",
           "description": "Boję się węży"
         },
         "Rats": {
-          "type": "kategoryczny",
           "id": "Szczury",
           "description": "Boję się szczurów"
         },
         "Ageing": {
-          "type": "kategoryczny",
           "id": "Starzenie się",
           "description": "Boję się starzenia"
         },
         "Dangerous dogs": {
-          "type": "kategoryczny",
           "id": "Groźne psy",
           "description": "Boję się groźnych psów"
         },
         "Fear of public speaking": {
-          "type": "kategoryczny",
           "id": "Strach przed wystąpieniami publicznymi",
           "description": "Obawiam się wystąpień publicznych"
         },
-        "Smoking": {
-          "type": "kategoryczny"
-        },
-        "Alcohol": {
-          "type": "kategoryczny"
-        },
-        "Healthy eating": {
-          "type": "kategoryczny"
-        },
-        "Daily events": {
-          "type": "kategoryczny"
-        },
-        "Prioritising workload": {
-          "type": "kategoryczny"
-        },
-        "Writing notes": {
-          "type": "kategoryczny"
-        },
-        "Workaholism": {
-          "type": "kategoryczny"
-        },
-        "Thinking ahead": {
-          "type": "kategoryczny"
-        },
-        "Final judgement": {
-          "type": "kategoryczny"
-        },
-        "Reliability": {
-          "type": "kategoryczny"
-        },
-        "Keeping promises": {
-          "type": "kategoryczny"
-        },
-        "Loss of interest": {
-          "type": "kategoryczny"
-        },
-        "Friends versus money": {
-          "type": "kategoryczny"
-        },
-        "Funniness": {
-          "type": "kategoryczny"
-        },
-        "Fake": {
-          "type": "kategoryczny"
-        },
-        "Criminal damage": {
-          "type": "kategoryczny"
-        },
-        "Decision making": {
-          "type": "kategoryczny"
-        },
-        "Elections": {
-          "type": "kategoryczny"
-        },
-        "Self-criticism": {
-          "type": "kategoryczny"
-        },
-        "Judgment calls": {
-          "type": "kategoryczny"
-        },
-        "Hypochondria": {
-          "type": "kategoryczny"
-        },
         "Empathy": {
-          "type": "kategoryczny",
           "id": "Empatia"
         },
-        "Eating to survive": {
-          "type": "kategoryczny"
-        },
-        "Giving": {
-          "type": "kategoryczny"
-        },
-        "Compassion to animals": {
-          "type": "kategoryczny"
-        },
-        "Borrowed stuff": {
-          "type": "kategoryczny"
-        },
         "Loneliness": {
-          "type": "kategoryczny",
           "id": "Samotność",
           "description": "Czuję się samotny w życiu."
         },
-        "Cheating in school": {
-          "type": "kategoryczny"
-        },
-        "Health": {
-          "type": "kategoryczny"
-        },
-        "Changing the past": {
-          "type": "kategoryczny"
-        },
-        "God": {
-          "type": "kategoryczny"
-        },
-        "Dreams": {
-          "type": "kategoryczny"
-        },
-        "Charity": {
-          "type": "kategoryczny"
-        },
-        "Number of friends": {
-          "type": "kategoryczny"
-        },
-        "Punctuality": {
-          "type": "kategoryczny"
-        },
-        "Lying": {
-          "type": "kategoryczny"
-        },
-        "Waiting": {
-          "type": "kategoryczny"
-        },
-        "New environment": {
-          "type": "kategoryczny"
-        },
-        "Mood swings": {
-          "type": "kategoryczny"
-        },
-        "Appearence and gestures": {
-          "type": "kategoryczny"
-        },
-        "Socializing": {
-          "type": "kategoryczny"
-        },
         "Achievements": {
-          "type": "kategoryczny",
           "id": "Osiągnięcia"
         },
-        "Responding to a serious letter": {
-          "type": "kategoryczny"
-        },
-        "Children": {
-          "type": "kategoryczny"
-        },
-        "Assertiveness": {
-          "type": "kategoryczny"
-        },
-        "Getting angry": {
-          "type": "kategoryczny"
-        },
-        "Knowing the right people": {
-          "type": "kategoryczny"
-        },
-        "Public speaking": {
-          "type": "kategoryczny"
-        },
-        "Unpopularity": {
-          "type": "kategoryczny"
-        },
-        "Life struggles": {
-          "type": "kategoryczny"
-        },
-        "Happiness in life": {
-          "type": "kategoryczny"
-        },
-        "Energy levels": {
-          "type": "kategoryczny"
-        },
-        "Small - big dogs": {
-          "type": "kategoryczny"
-        },
-        "Personality": {
-          "type": "kategoryczny"
-        },
-        "Finding lost valuables": {
-          "type": "kategoryczny"
-        },
-        "Getting up": {
-          "type": "kategoryczny"
-        },
-        "Interests or hobbies": {
-          "type": "kategoryczny"
-        },
-        "Parents' advice": {
-          "type": "kategoryczny"
-        },
-        "Questionnaires or polls": {
-          "type": "kategoryczny"
-        },
-        "Internet usage": {
-          "type": "kategoryczny"
-        },
-        "Finances": {
-          "type": "kategoryczny"
-        },
-        "Shopping centres": {
-          "type": "kategoryczny"
-        },
-        "Branded clothing": {
-          "type": "kategoryczny"
-        },
-        "Entertainment spending": {
-          "type": "kategoryczny"
-        },
-        "Spending on looks": {
-          "type": "kategoryczny"
-        },
-        "Spending on gadgets": {
-          "type": "kategoryczny"
-        },
-        "Spending on healthy eating": {
-          "type": "kategoryczny"
-        },
         "Age": {
-          "type": "numeryczny",
           "id": "Wiek",
           "description": "Wiek"
         },
         "Height": {
-          "type": "numeryczny",
           "id": "Wysokość",
           "description": "Wysokość"
         },
-        "Weight": {
-          "type": "numeryczny"
-        },
-        "Number of siblings": {
-          "type": "numeryczny"
-        },
         "Gender": {
-          "type": "kategoryczny",
           "id": "Płeć",
           "description": "Płeć"
-        },
-        "Left - right handed": {
-          "type": "kategoryczny"
-        },
-        "Education": {
-          "type": "kategoryczny"
-        },
-        "Only child": {
-          "type": "kategoryczny"
-        },
-        "Village - town": {
-          "type": "kategoryczny"
-        },
-        "House - block of flats": {
-          "type": "kategoryczny"
         }
       }
     },
     "boba_toy": {
       "fields": {
-        "mango jelly": {
-          "type": "kategoryczny"
-        },
-        "regular boba": {
-          "type": "kategoryczny"
-        },
-        "lychee": {
-          "type": "kategoryczny"
-        },
-        "herbal": {
-          "type": "kategoryczny"
-        },
-        "red beans": {
-          "type": "kategoryczny"
-        },
-        "crystal boba": {
-          "type": "kategoryczny"
-        },
-        "sea salt cream": {
-          "type": "kategoryczny"
-        },
-        "vanilla": {
-          "type": "kategoryczny"
-        },
         "banana": {
-          "id": "banan",
-          "type": "kategoryczny"
+          "id": "banan"
         },
         "preference": {
-          "id": "preferencje",
-          "type": "kategoryczny"
+          "id": "preferencje"
+        }
+      },
+      "card": {
+        "description": "Ankieta przeprowadzona wśród klientów kawiarni z herbatą bąbelkową na temat tego, czy lubią pewne kombinacje herbaty bąbelkowej.",
+        "context": {
+          "potentialUses": "Pomóż w rekomendowaniu, jaki rodzaj herbaty bbelkowej powinien zamówić nowy klient.",
+          "potentialMisuses": "Wszystko inne niż zalecana herbata bąbelkowa."
         }
       }
     },
     "global_happiness_raw": {
       "fields": {
-        "Country name": {
-          "type": "kategoryczny"
-        },
         "Year": {
-          "type": "kategoryczny",
           "id": "Rok"
-        },
-        "Life Ladder": {
-          "type": "numeryczny"
-        },
-        "GDP per capita": {
-          "type": "numeryczny"
-        },
-        "Social support": {
-          "type": "numeryczny"
-        },
-        "Healthy life expectancy at birth": {
-          "type": "numeryczny"
-        },
-        "Freedom to make life choices": {
-          "type": "numeryczny"
-        },
-        "Generosity": {
-          "type": "numeryczny"
-        },
-        "Perceptions of corruption": {
-          "type": "numeryczny"
-        },
-        "Positive affect": {
-          "type": "numeryczny"
-        },
-        "Negative affect": {
-          "type": "numeryczny"
         }
       }
     },
     "heart": {
       "fields": {
         "Age": {
-          "type": "numeryczny",
           "id": "Wiek"
         },
         "Sex": {
-          "type": "kategoryczny",
           "id": "Płeć"
         },
-        "Chest Pain Type": {
-          "type": "kategoryczny"
-        },
-        "Resting Blood Pressure": {
-          "type": "numeryczny"
-        },
         "Cholesterol": {
-          "type": "numeryczny",
           "id": "Cholesterol"
-        },
-        "Fasting Blood Sugar > 120mg/dl": {
-          "type": "kategoryczny"
-        },
-        "Resting ECG Results": {
-          "type": "kategoryczny"
-        },
-        "Maximum Heart Rate Achieved": {
-          "type": "numeryczny"
-        },
-        "Exercise Induced Angina": {
-          "type": "kategoryczny"
-        },
-        "ST Depression Induced By Exercise Relative To Rest": {
-          "type": "numeryczny"
-        },
-        "Slope of Peak Exercise ST Segment": {
-          "type": "kategoryczny"
-        },
-        "Number of Major Vessels Colored by Flourosopy": {
-          "type": "numeryczny"
-        },
-        "Diagnosis of Heart Disease": {
-          "type": "kategoryczny"
         }
       }
     },
     "shapes_v1_toy": {
       "fields": {
         "sides": {
-          "id": "boki",
-          "type": "kategoryczny"
-        },
-        "border color": {
-          "type": "kategoryczny"
-        },
-        "fill color": {
-          "type": "kategoryczny"
+          "id": "boki"
         },
         "size": {
-          "id": "rozmiar",
-          "type": "kategoryczny"
-        },
-        "background color": {
-          "type": "kategoryczny"
-        },
-        "shape": {
-          "type": "kategoryczny"
+          "id": "rozmiar"
         }
       }
     },
     "pizza_toppings_toy": {
-      "fields": {
-        "Pepperoni": {
-          "type": "kategoryczny"
-        },
-        "Extra Cheese": {
-          "type": "kategoryczny"
-        },
-        "Broccoli": {
-          "type": "kategoryczny"
-        },
-        "Olives": {
-          "type": "kategoryczny"
-        },
-        "Sausage": {
-          "type": "kategoryczny"
-        },
-        "Anchovies": {
-          "type": "kategoryczny"
-        },
-        "Fried Chicken": {
-          "type": "kategoryczny"
-        },
-        "Peppers": {
-          "type": "kategoryczny"
-        },
-        "Ham": {
-          "type": "kategoryczny"
-        },
-        "Bacon": {
-          "type": "kategoryczny"
-        },
-        "Preference": {
-          "type": "kategoryczny"
-        }
-      }
-    },
-    "car_evaluation": {
-      "fields": {
-        "Buying Price": {
-          "type": "kategoryczny"
-        },
-        "Maintenance Cost": {
-          "type": "kategoryczny"
-        },
-        "Number Of Doors": {
-          "type": "kategoryczny"
-        },
-        "Number of Passengers": {
-          "type": "kategoryczny"
-        },
-        "Boot Size": {
-          "type": "kategoryczny"
-        },
-        "Safety Rating": {
-          "type": "kategoryczny"
-        },
-        "Car Acceptability": {
-          "type": "kategoryczny"
+      "card": {
+        "context": {
+          "potentialUses": "Pomóż w rekomendowaniu, jaki rodzaj pizzy powinien kupić nowy klient.",
+          "potentialMisuses": "Cokolwiek innego niż rekomendacje pizzy."
         }
       }
     },
     "loneliness_personality": {
       "fields": {
         "Loneliness": {
-          "type": "kategoryczny",
           "id": "Samotność",
           "description": "Czuję się samotny w życiu."
-        },
-        "Prioritising workload": {
-          "type": "kategoryczny"
-        },
-        "Workaholism": {
-          "type": "kategoryczny"
-        },
-        "Reliability": {
-          "type": "kategoryczny"
-        },
-        "Friends versus money": {
-          "type": "kategoryczny"
-        },
-        "Funniness": {
-          "type": "kategoryczny"
-        },
-        "Judgment calls": {
-          "type": "kategoryczny"
-        },
-        "Number of friends": {
-          "type": "kategoryczny"
-        },
-        "Waiting": {
-          "type": "kategoryczny"
-        },
-        "Socializing": {
-          "type": "kategoryczny"
-        },
-        "Assertiveness": {
-          "type": "kategoryczny"
+        }
+      },
+      "card": {
+        "description": "Zbiór danych odpowiedzi ankietowych zebranych przez słowackich studentów w wieku 18-21 lat w FSEV UK. Większość odpowiedzi to rankingi na skali od 1 do 5. Na przykład „Ranga od 1 (zdecydowanie się nie zgadzam) do 5 (zdecydowanie się zgadzam): Często uczę się lub pracuję nawet w wolnym czasie”. Jest to podzbiór większego zbioru danych, który koncentruje się tylko na stwierdzeniach osobowości.",
+        "context": {
+          "potentialUses": "Na przykład, przewidzieć czyjeś cechy osobowości na podstawie innych cech."
         }
       }
     },
     "thanksgiving": {
       "fields": {
         "Main dish": {
-          "type": "kategoryczny",
           "id": "Danie główne",
           "description": "Danie główne podawane do posiłku. Najprawdopodobniej indyk."
         },
         "Main dish cooking method": {
-          "type": "kategoryczny",
           "id": "Metoda przyrządzania dania głównego",
           "description": "Jak przyrządzono danie główne, m.in. pieczone, grilowane, smażone."
         },
         "Stuffing base": {
-          "type": "kategoryczny",
           "id": "Podstawa farszu",
           "description": "Jeśli podano farsz, jaki był jego główny składnik, lub żaden, jeśli nie podano farszu."
         },
         "Cranberry sauce": {
-          "type": "kategoryczny",
           "id": "Sos żurawinowy",
           "description": "Rodzaj podawanego sosu żurawinowego."
         },
         "Gravy": {
-          "type": "kategoryczny",
           "id": "Sos",
           "description": "Czy do posiłku podawano sos, czy nie."
         },
         "Brussel sprouts": {
-          "type": "kategoryczny",
           "id": "Brukselka",
           "description": "Niezależnie od tego, czy do posiłku podawano brukselkę."
         },
         "Carrots": {
-          "type": "kategoryczny",
           "id": "Marchewki",
           "description": "Niezależnie od tego, czy do posiłku podawano marchewkę."
         },
         "Cauliflower": {
-          "type": "kategoryczny",
           "id": "Kalafior",
           "description": "Niezależnie od tego, czy do posiłku podawano kalafior."
         },
         "Corn": {
-          "type": "kategoryczny",
           "id": "Kukurydza",
           "description": "Niezależnie od tego, czy do posiłku podawano kukurydzę."
         },
         "Cornbread": {
-          "type": "kategoryczny",
           "id": "Chleb kukurydziany",
           "description": "Niezależnie od tego, czy do posiłku podawano chleb kukurydziany."
         },
         "Fruit salad": {
-          "type": "kategoryczny",
           "id": "Sałatka owocowa",
           "description": "Niezależnie od tego, czy do posiłku podawano sałatkę owocową."
         },
         "Green beans/green bean casserole": {
-          "type": "kategoryczny",
           "id": "Zielona fasola/zapiekanka z zielonej fasoli",
           "description": "Niezależnie od tego, czy do posiłku podawano danie z zieloną fasolką."
         },
         "Mac and cheese": {
-          "type": "kategoryczny",
           "id": "Mac i ser",
           "description": "Niezależnie od tego, czy do posiłku podawano mac i ser."
         },
         "Mashed potatoes": {
-          "type": "kategoryczny",
           "id": "Puree ziemniaczane",
           "description": "Niezależnie od tego, czy do posiłku podawano puree ziemniaczane."
         },
         "Rolls/biscuits": {
-          "type": "kategoryczny",
           "id": "Rułki/herbatniki",
           "description": "Niezależnie od tego, czy do posiłku podawano bułki lub herbatniki."
         },
         "Squash": {
-          "type": "kategoryczny",
           "id": "Squash",
           "description": "Niezależnie od tego, czy do posiłku podawano squash."
         },
         "Vegetable salad": {
-          "type": "kategoryczny",
           "id": "Sałatka warzywna",
           "description": "Niezależnie od tego, czy do posiłku podawano sałatkę warzywną."
         },
         "Yams/sweet potato casserole": {
-          "type": "kategoryczny",
           "id": "YAMS/zapiekanka ze słodkich ziemniaków",
           "description": "Niezależnie od tego, czy do posiłku podawano YAMS/zapiekankę ze słodkich ziemniaków."
         },
         "Apple pie": {
-          "type": "kategoryczny",
           "id": "Szarlotka",
           "description": "Niezależnie od tego, czy jabłecznik był podawany jako deser."
         },
         "Buttermilk pie": {
-          "type": "kategoryczny",
           "id": "Ciasto maślankowe",
           "description": "Niezależnie od tego, czy ciasto maślankowe było podawane jako deser."
         },
         "Cherry pie": {
-          "type": "kategoryczny",
           "id": "Ciasto wiśniowe",
           "description": "Niezależnie od tego, czy ciasto wiśniowe było podawane jako deser."
         },
         "Chocolate pie": {
-          "type": "kategoryczny",
           "id": "Ciasto czekoladowe",
           "description": "Niezależnie od tego, czy ciasto czekoladowe było podawane jako deser."
         },
         "Coconut cream pie": {
-          "type": "kategoryczny",
           "id": "Ciasto z kremem kokosowym",
           "description": "Niezależnie od tego, czy ciasto z kremem kokosowym było podawane jako deser."
         },
         "Key lime pie": {
-          "type": "kategoryczny",
           "id": "Ciasto limonkowe",
           "description": "Niezależnie od tego, czy ciasto z limonką było podawane jako deser."
         },
         "Peach pie": {
-          "type": "kategoryczny",
           "id": "Ciasto brzoskwiniowe",
           "description": "Niezależnie od tego, czy brzoskwiniowe ciasto było podawane jako deser."
         },
         "Pecan pie": {
-          "type": "kategoryczny",
           "id": "Placek pekanowy",
           "description": "Niezależnie od tego, czy pikanowe ciasto było podawane jako deser."
         },
         "Pumpkin pie": {
-          "type": "kategoryczny",
           "id": "Ciasto z dyni",
           "description": "Niezależnie od tego, czy dyniowe ciasto było podawane jako deser."
         },
         "Sweet potato pie": {
-          "type": "kategoryczny",
           "id": "Ciasto ze słodkich ziemniaków",
           "description": "Niezależnie od tego, czy ciasto ze słodkich ziemniaków było podawane jako deser."
         },
         "Apple cobbler": {
-          "type": "kategoryczny",
           "id": "Cobbler jabłkowy",
           "description": "Niezależnie od tego, czy cobbler jabłkowy był podawany jako deser."
         },
         "Blondies": {
-          "type": "kategoryczny",
           "description": "Niezależnie od tego, czy ciasteczka były podawane jako deser."
         },
         "Brownies": {
-          "type": "kategoryczny",
           "id": "Ciasteczka",
           "description": "Niezależnie od tego, czy ciasteczka były podawane jako deser."
         },
         "Carrot cake": {
-          "type": "kategoryczny",
           "id": "Ciasto marchewkowe",
           "description": "Niezależnie od tego, czy ciasto marchewkowe było podawane jako deser."
         },
         "Cheesecake": {
-          "type": "kategoryczny",
           "id": "Sernik",
           "description": "Niezależnie od tego, czy ciasto wiśniowe było podawane jako deser."
         },
         "Cookies": {
-          "type": "kategoryczny",
           "id": "Ciasteczka",
           "description": "Niezależnie od tego, czy ciasteczka były podawane jako deser."
         },
         "Fudge": {
-          "type": "kategoryczny",
           "id": "Krówka",
           "description": "Niezależnie od tego, czy krówki były podawane jako deser."
         },
         "Ice cream": {
-          "type": "kategoryczny",
           "id": "Lody",
           "description": "Niezależnie od tego, czy lody były podawane jako deser."
         },
-        "Peach cobbler": {
-          "type": "kategoryczny"
-        },
         "US region": {
-          "type": "kategoryczny",
           "id": "Region US",
           "description": "Część kraju, z której pochodził uczestnik."
         }
-      }
-    },
-    "jeans": {
-      "fields": {
-        "Brand": {
-          "type": "kategoryczny"
-        },
-        "Style": {
-          "type": "kategoryczny"
-        },
-        "Mens or womens": {
-          "type": "kategoryczny"
-        },
-        "Cotton contents": {
-          "type": "numeryczny"
-        },
-        "Price in dollars": {
-          "type": "numeryczny"
-        },
-        "Max height of front pocket": {
-          "type": "numeryczny"
-        },
-        "Min height of front pocket": {
-          "type": "numeryczny"
-        },
-        "Front rivet height": {
-          "type": "numeryczny"
-        },
-        "Max width of front pocket": {
-          "type": "numeryczny"
-        },
-        "Min width of front pocket": {
-          "type": "numeryczny"
-        },
-        "Max width of back pocket": {
-          "type": "numeryczny"
-        },
-        "Min width of back pocket": {
-          "type": "numeryczny"
-        },
-        "Max height of back pocket": {
-          "type": "numeryczny"
-        },
-        "Min height of back pocket": {
-          "type": "numeryczny"
+      },
+      "card": {
+        "description": "Ankieta przeprowadzona przez FiveThrityEight, pytająca ludzi w całych Stanach Zjednoczonych, jakie potrawy mają na obiad w Święto Dziękczynienia.",
+        "context": {
+          "potentialUses": "Przewiduj, czy ktoś będzie miał konkretne jedzenie na Święto Dziękczynienia, w oparciu o region kraju, z którego pochodzą.",
+          "potentialMisuses": "Próbuję odgadnąć, z jakiego regionu ktoś pochodzi, tylko na podstawie pokarmów, jakie je w Święto Dziękczynienia."
         }
       }
     },
     "taco_toppings_toy": {
       "fields": {
-        "Ground Beef": {
-          "type": "kategoryczny"
-        },
         "Chicken": {
-          "id": "Kurczak",
-          "type": "kategoryczny"
-        },
-        "Hot Sauce": {
-          "type": "kategoryczny"
-        },
-        "Sour Cream": {
-          "type": "kategoryczny"
+          "id": "Kurczak"
         },
         "Cheese": {
-          "id": "Ser",
-          "type": "kategoryczny"
-        },
-        "Preference": {
-          "type": "kategoryczny"
+          "id": "Ser"
+        }
+      },
+      "card": {
+        "description": "Ankieta przeprowadzona wśród klientów sklepu z taco na temat tego, czy lubią określone kombinacje taco.",
+        "context": {
+          "potentialUses": "Pomóż w rekomendowaniu, jaki rodzaj taco powinien kupić nowy klient.",
+          "potentialMisuses": "Cokolwiek innego niż rekomendacje taco."
         }
       }
     },
     "loneliness_music": {
       "fields": {
         "Loneliness": {
-          "type": "kategoryczny",
           "id": "Samotność",
           "description": "Czuję się samotny w życiu."
         },
         "Music": {
-          "type": "kategoryczny",
           "id": "Muzyka"
         },
-        "Slow songs or fast songs": {
-          "type": "kategoryczny"
-        },
         "Dance": {
-          "type": "kategoryczny",
           "id": "Taniec"
         },
-        "Folk": {
-          "type": "kategoryczny"
-        },
         "Country": {
-          "type": "kategoryczny",
           "id": "Kraj"
-        },
-        "Classical music": {
-          "type": "kategoryczny"
-        },
-        "Musical": {
-          "type": "kategoryczny"
-        },
-        "Pop": {
-          "type": "kategoryczny"
-        },
-        "Rock": {
-          "type": "kategoryczny"
-        },
-        "Metal or Hardrock": {
-          "type": "kategoryczny"
-        },
-        "Punk": {
-          "type": "kategoryczny"
-        },
-        "Hiphop, Rap": {
-          "type": "kategoryczny"
-        },
-        "Reggae, Ska": {
-          "type": "kategoryczny"
-        },
-        "Swing, Jazz": {
-          "type": "kategoryczny"
-        },
-        "Rock n roll": {
-          "type": "kategoryczny"
-        },
-        "Alternative": {
-          "type": "kategoryczny"
-        },
-        "Latino": {
-          "type": "kategoryczny"
-        },
-        "Techno, Trance": {
-          "type": "kategoryczny"
-        },
-        "Opera": {
-          "type": "kategoryczny"
+        }
+      },
+      "card": {
+        "description": "Zbiór danych odpowiedzi ankietowych zebranych przez słowackich studentów w wieku 18-21 lat w FSEV UK. Większość odpowiedzi to rankingi na skali od 1 do 5. Na przykład „Ranga od 1 (zdecydowanie się nie zgadzam) do 5 (zdecydowanie się zgadzam): Często uczę się lub pracuję nawet w wolnym czasie”. Jest to podzbiór większego zbioru danych, który skupia się tylko na muzyce.",
+        "context": {
+          "potentialUses": "Na przykład, przewidzieć czyjeś cechy osobowości na podstawie innych cech."
+        }
+      }
+    },
+    "icecream_toppings_toy": {
+      "card": {
+        "description": "Ankieta przeprowadzona wśród klientów sklepu z lodarni na temat tego, czy lubią określone kombinacje lodów.",
+        "context": {
+          "potentialUses": "Pomóż w rekomendowaniu, jaki rodzaj lodów powinien kupić nowy klient."
+        }
+      }
+    },
+    "basketball_shots": {
+      "card": {
+        "description": "Ten zbiór danych zawiera każdą próbę 3-punktową podjętą podczas turnieju NCAA 2017. Dzięki tym danym można przewidzieć, czy strzał został wykonany, czy pominięty.",
+        "context": {
+          "potentialUses": "Przewiduj, czy 3-punktowy strzał został wykonany, czy pominięty."
         }
       }
     }

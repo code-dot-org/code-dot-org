@@ -250,11 +250,45 @@
     },
     "abalone": {
       "fields": {
+        "Sex": {
+          "id": "género",
+          "description": "El sexo del abulón: M, F o I (infante)."
+        },
         "Length": {
-          "id": "Extensión"
+          "id": "Extensión",
+          "description": "Su longitud en el punto más largo en milímetros."
+        },
+        "Diameter": {
+          "id": "Diámetro",
+          "description": "Su diámetro en milímetros."
         },
         "Height": {
-          "id": "Altura"
+          "id": "Altura",
+          "description": "Su altura con el caracol en el caparazón en milímetros. "
+        },
+        "Whole weight": {
+          "id": "Peso total",
+          "description": "El peso total del adulón en gramos."
+        },
+        "Shucked weight": {
+          "id": "Peso descascarado "
+        },
+        "Viscera weight": {
+          "id": "Peso de las vísceras",
+          "description": "El peso de las vísceras, en gramos."
+        },
+        "Shell weight": {
+          "id": "Peso de la cáscara",
+          "description": "El peso de la cáscara después de secarse, en gramos."
+        },
+        "Rings": {
+          "id": "Anillos",
+          "description": "La edad en años."
+        }
+      },
+      "card": {
+        "context": {
+          "potentialUses": "Determina la edad de un abulón."
         }
       }
     },
@@ -326,6 +360,9 @@
       "fields": {
         "Age": {
           "id": "Edad"
+        },
+        "Sex": {
+          "id": "género"
         }
       }
     },
