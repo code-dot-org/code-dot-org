@@ -2,8 +2,8 @@ import {
   init,
   track,
   Identify,
-  identify
-  // setUserId
+  identify,
+  setUserId
 } from '@amplitude/analytics-browser';
 import {currentLocation} from '@cdo/apps/utils';
 
@@ -34,8 +34,7 @@ class AnalyticsReporter {
   setUserProperties(userId, userType, signInState) {
     const identifyObj = new Identify();
     const formattedUserId = this.formatUserId(userId);
-    // Dont set user id pending privacy conversations
-    // setUserId(formattedUserId);
+    setUserId(formattedUserId);
     identifyObj.set('userType', userType);
     identifyObj.set('signInState', signInState);
 
