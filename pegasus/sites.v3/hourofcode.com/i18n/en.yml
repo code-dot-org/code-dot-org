@@ -6702,6 +6702,7 @@
   tutorial_nasapackage_name: "NASA: Package Delivery Drone Simulation Coding Activity "
   tutorial_nasalunar_name: "NASA: Lunar Coding Challenge"
   tutorial_meeestate_name: "Escape Estate"
+  
   tutorial_rpccw_longdescription: "Create your own character, design a T-shirt, and create some music. Earn badges for each completed project."
   tutorial_rpledfirefly_longdescription: "Use a Raspberry Pi Pico microcontroller and basic electronic components to create a blinking LED firefly. Write MicroPython code to light your firefly and create a switch from jumper wires to mimic fireflies in the wild when the switch is closed."
   tutorial_rpcharting_longdescription: "Discover the power of lists in the Python programming language by storing Olympic medal data then use the pygal library to create an interactive chart. Use data analysis skills to uncover patterns and anomalies."
@@ -6796,6 +6797,7 @@
   tutorial_nasapackage_longdescription: "In this activity, students use Scratch, Snap!, or another programming language to create an interactive simulation of a drone navigating around a geofenced area to deliver a package. The simulation engages students in computational thinking, problem solving, and real-world application of mathematics."
   tutorial_nasalunar_longdescription: "Students learn about the Artemis 1 mission and the NASA App Development Challenge (ADC). The goal is for students to follow-along steps we've created using Code.org's App Lab to learn basic programming utilizing block code. "
   tutorial_meeestate_longdescription: "Solve puzzles to escape from Dr. Breakowski's mysterious mansion in the new Minecraft Hour of Code: Escape Estate. Use coding and computational thinking to unlock secrets, open trap doors, and reveal hidden clues. Code your way out by dawn and earn a million emeralds! With coding in blocks or Python, Hour of Code offers a learning pathway for anyone to learn the basics of code."
+  tutorial_nafbrand_longdescription: "In Code your Brand, you will be creating a virtual contact file to create a personalized QR code with your contact details. After you complete this activity, you will be equipped with a modern business card that you can share while you're networking with people who can help or guide you in your career or college journey."
   tutorial_rpccw_string_detail_grades: "Grades 2-5"
   tutorial_rpledfirefly_string_detail_grades: "Grades 6-8"
   tutorial_rpcharting_string_detail_grades: "Grades 9+"
@@ -7196,6 +7198,13 @@
   tutorial_carnegieslime_string_platforms: "All modern browsers"
   tutorial_carnegieslime_name: "Super Slime Battle"
   tutorial_carnegieslime_string_detail_programming_languages: "blocks"
+  tutorial_nafbrand_name: "Code your Brand"
+  tutorial_nafbrand_longdescription: "In Code your Brand, you will be creating a virtual contact file to create a personalized QR code with your contact details. After you complete this activity, you will be equipped with a modern business card that you can share while you're networking with people who can help or guide you in your career or college journey."
+  tutorial_nafbrand_string_detail_grades: "Grades 9+"
+  tutorial_nafbrand_string_detail_platforms: ""
+  tutorial_nafbrand_string_detail_programming_languages: "Python"
+  tutorial_nafbrand_string_platforms: "All modern browsers, Android tablet, iPad, Windows phone, Android phone, iPhone"
+  
 
   school_not_found_heading: "We couldn't find your school. Please enter more information."
   school_name: "School name"
