@@ -15,6 +15,8 @@
 
 # NOTE: Unlike the other year-specific FiT Weekend Registration classes (Pd::FitWeekend1920Registration),
 # this class is in its own table and does not inherit from Pd::FitWeekendRegistrationBase.
+# TODO [meg]: Remove or gut this model to finish deprecating facilitator applications
+
 class Pd::FitWeekend1819Registration < ApplicationRecord
   include Pd::Form
 
