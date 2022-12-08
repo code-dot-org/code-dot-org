@@ -58,7 +58,7 @@ def main(options)
   ENV['BATCH_NAME'] = "#{GIT_BRANCH} | #{start_time}"
 
   open_log_files
-  configure_for_eyes if eyes?
+  # configure_for_eyes if eyes?
   report_tests_starting
   generate_status_page(start_time) if options.with_status_page
 
@@ -372,14 +372,14 @@ def eyes?
   $options.run_eyes_tests
 end
 
-def configure_for_eyes
-  # Generate a batch ID, unique to this test run.
-  # Each Eyes instance will use the same one so that tests from this
-  # run get grouped together. This gets used in eyes_steps.rb.
-  # See "Aggregating tests from different processes"
-  # http://support.applitools.com/customer/en/portal/articles/2516398-aggregating-tests-from-different-processes-machines
-  ENV['BATCH_ID'] = "#{GIT_BRANCH}_#{SecureRandom.uuid}".gsub(/[^\w-]+/, '_')
-end
+# def configure_for_eyes
+#   # Generate a batch ID, unique to this test run.
+#   # Each Eyes instance will use the same one so that tests from this
+#   # run get grouped together. This gets used in eyes_steps.rb.
+#   # See "Aggregating tests from different processes"
+#   # http://support.applitools.com/customer/en/portal/articles/2516398-aggregating-tests-from-different-processes-machines
+#   ENV['BATCH_ID'] = "#{GIT_BRANCH}_#{SecureRandom.uuid}".gsub(/[^\w-]+/, '_')
+# end
 
 def applitools_batch_url
   return nil unless eyes?
