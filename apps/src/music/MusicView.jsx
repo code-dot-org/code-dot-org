@@ -3,7 +3,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import {Provider, connect} from 'react-redux';
-import queryString from 'query-string';
 import Instructions from './Instructions';
 import SharePlaceholder from './SharePlaceholder';
 import Controls from './Controls';
@@ -136,9 +135,9 @@ class UnconnectedMusicView extends React.Component {
   };
 
   loadLibrary = async () => {
-    let parameters = queryString.parse(location.search);
-    const libraryFilename = parameters['library']
-      ? `music-library-${parameters['library']}.json`
+    const libraryParameter = AppConfig.getValue('library');
+    const libraryFilename = libraryParameter
+      ? `music-library-${libraryParameter}.json`
       : 'music-library.json';
     const response = await fetch(baseUrl + libraryFilename);
     const library = await response.json();
