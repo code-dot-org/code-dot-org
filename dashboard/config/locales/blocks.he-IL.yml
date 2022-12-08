@@ -341,7 +341,7 @@ he:
             "{x: 300, y: 300}": למטה מימין
             "{x: randomNumber(60, 340), y: randomNumber(60, 340)}": באקראי
       Dancelab_layoutSprites:
-        text: סדר {GROUP} כ {FORMAT}
+        text: סדר {GROUP} ב {FORMAT}
         options:
           GROUP:
             sprites: כולם
@@ -1133,7 +1133,7 @@ he:
             '9': '9'
             '10': '10'
       gamelab_isKeyPressed:
-        text: לחוץ
+        text: "{KEY} לחוץ"
         options:
           KEY:
             '"up"': למעלה
@@ -1293,8 +1293,12 @@ he:
             "'sound://category_animals/cat.mp3'": חתול
             "'sound://category_animals/cow.mp3'": פרה
             "'sound://category_animals/sheep.mp3'": כבשה
+            "'sound://category_animals/goat.mp3'": עז
             "'sound://category_animals/chicken.mp3'": תרנגולת
+            "'sound://category_animals/rooster.mp3'": תרנגול
+            "'sound://category_animals/elephant.mp3'": פיל
             "'sound://category_animals/dolphin.mp3'": דולפין
+            "'sound://category_animals/chick.mp3'": אפרוח
             "'sound://category_animals/dog.mp3'": כלב
             "'sound://category_collect/trill_stings.mp3'": סלסול
             "'sound://category_instrumental/harpe_pluck_1.mp3'": נבל
@@ -1328,12 +1332,14 @@ he:
             "'sound://category_space/Carina_SFX.mp3'": קארינה
             "'sound://category_space/Cassiopeia_SFX.mp3'": קסיופאה
             "'sound://category_space/Crab_nebula_SFX.mp3'": ערפילית הסרטן
+            "'sound://category_space/Galactic_center_SFX.mp3'": המרכז הגלקטי
             "'sound://category_space/Launch_SFX.mp3'": שיגור
             "'sound://category_space/Lift_Off.mp3'": המראה
             "'sound://category_space/Pillars_SFX.mp3'": עמודים
             "'sound://category_space/Southern_ring_SFX.mp3'": הטבעת הדרומית
             "'sound://category_space/Supernova_SFX.mp3'": סופרנובה
             "'sound://category_space/Tycho_SFX.mp3'": טיכו
+            "'sound://category_space/Whirlpool_galaxy_SFX.mp3'": גלקסיית המערבולת
       gamelab_playerBehaviors:
         options:
           BEHAVIOR:
@@ -1369,7 +1375,7 @@ he:
       gamelab_setBackground:
         text: קבע צבע רקע {COLOR}
       gamelab_setBackgroundImage:
-        text: הגדר רקע {IMG}
+        text: קבע רקע {IMG}
         options:
           IMG:
             '"https://studio.code.org/blockly/media/skins/studio/background_cave.png"': מערה
@@ -1379,13 +1385,14 @@ he:
             '"https://studio.code.org/blockly/media/skins/studio/background_desert.png"': מדבר
             '"https://studio.code.org/blockly/media/skins/studio/background_space.png"': גלקסיה
             '"https://studio.code.org/blockly/media/skins/studio/background_grid.png"': רשת
+            '"https://studio.code.org/api/v1/animation-library/cJKusc1WPgWvCvgdwRX1gk8Zk0FggcVj/category_backgrounds/meadow.png"': אחו
             '"https://studio.code.org/blockly/media/skins/studio/background_rainbow.png"': קשת
             '"https://studio.code.org/blockly/media/skins/studio/background_santa.png"': כוכבים
             '"https://studio.code.org/blockly/media/skins/studio/background_underwater.png"': תת-ימי
             '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': חורף
             undefined: אף אחד
       gamelab_setBackgroundImageAs:
-        text: הגדר רקע {IMG}
+        text: קבע רקע {IMG}
       gamelab_setDefaultSpriteSize:
         options:
           SIZE:
@@ -1440,11 +1447,15 @@ he:
       gamelab_showTitleScreen:
         text: הצג כותרת מסך {BREAK} כותרת {TITLE} טקסט {SUBTITLE}
       gamelab_spriteClicked:
-        text: "{CONDITION} {SPRITE} נלחץ"
+        text: כאשר לוחצים על {CONDITION} {SPRITE}
         options:
           CONDITION:
             '"when"': כאשר
             '"while"': כל עוד
+      gamelab_spriteSay:
+        text: "{SPRITE} אמור {SPEECH}"
+      gamelab_spriteThink:
+        text: "{SPRITE} חשוב {SPEECH}"
       gamelab_subjectSpritePointer:
         text: "{SPRITE}"
       gamelab_turn:
@@ -1500,7 +1511,9 @@ he:
       gamelab_whileUpArrow:
         text: בעוד חץ למעלה לחוץ
       gamelab_withPercentChance:
-        text: אם {NUM} אחוז סיכוי
+        text: |-
+          אם {NUM} אחוז סיכוי
+          {STATEMENT}
       gamelab_withPercentChanceDropdown:
         text: |2-
            {NUM} סיכוי
@@ -1720,6 +1733,7 @@ he:
         options:
           BG:
             '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': עיר
+            '"https://studio.code.org/api/v1/animation-library/cJKusc1WPgWvCvgdwRX1gk8Zk0FggcVj/category_backgrounds/meadow.png"': אחו
       Mikelab_setProp:
         options:
           PROPERTY:
@@ -1925,12 +1939,14 @@ he:
             "'sound://category_space/Carina_SFX.mp3'": קארינה
             "'sound://category_space/Cassiopeia_SFX.mp3'": קסיופאה
             "'sound://category_space/Crab_nebula_SFX.mp3'": ערפילית הסרטן
+            "'sound://category_space/Galactic_center_SFX.mp3'": המרכז הגלקטי
             "'sound://category_space/Launch_SFX.mp3'": שיגור
             "'sound://category_space/Lift_Off.mp3'": המראה
             "'sound://category_space/Pillars_SFX.mp3'": עמודים
             "'sound://category_space/Southern_ring_SFX.mp3'": הטבעת הדרומית
             "'sound://category_space/Supernova_SFX.mp3'": סופרנובה
             "'sound://category_space/Tycho_SFX.mp3'": טיכו
+            "'sound://category_space/Whirlpool_galaxy_SFX.mp3'": גלקסיית המערבולת
       Poetry_setBackground:
         text: קבע צבע רקע {COLOR}
       Poetry_setBackgroundEffect:
@@ -2093,6 +2109,8 @@ he:
             '0.75': most
             '0.5': half of
             '0.25': few
+      aalab_spriteSayChoices:
+        text: "{SPRITE} אמור {SPEECH}"
       binary_drawBin:
         text: לצייר בינארי {BIN}
       binary_drawBinScreen:
@@ -2249,4 +2267,4 @@ he:
       storylab_setSubheading:
         text: קבעו תת-כותרת {SUBHEADING}
       validation_validatedBackground:
-        text: הגדר רקע {IMG}
+        text: קבע רקע {IMG}

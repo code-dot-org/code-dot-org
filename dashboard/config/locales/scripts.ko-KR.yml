@@ -2707,6 +2707,8 @@ ko:
           title: 충돌 감지기
         dance-2019:
           title: 댄스 파티 (2019)
+          description_short: 댄스 파티를 코딩해서 친구들과 공유하세요. 비욘세, 해리 스타일스, 리조, 릴 나스 엑스, 셀레나
+            고메즈, 디즈니의 “엔칸토” 음악 등이 등장합니다!
           description: 나만의 댄스 파티의 코드를 만들고 친구와 공유하세요!
           student_description: 나만의 댄스 파티의 코드를 만들고 친구와 공유하세요!
         k5-onlinepd-2019:
@@ -4944,3 +4946,7 @@ ko:
           title: CSP 플레이그라운드
           description_audience: 커리큘럼 작성자
           description_short: 커리큘럼 버전 사이에 레슨 또는 레벨에 대한 스테이징 업데이트용
+        devices-2022:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: '챕터 2: 물리적 프로토타입 만들기'

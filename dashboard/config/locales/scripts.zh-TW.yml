@@ -2978,8 +2978,7 @@ zh-TW:
           title: 碰撞偵測器
         dance-2019:
           title: 舞蹈派對 2019
-          description_short: 精選 Katy Perry、 Shawn Mendes、Panic! At The Disco、Lil Nas
-            X、Jonas Brothers、Nicki Minaj，和其他 34 位名人！
+          description_short: 編寫一個舞蹈派對與你的朋友分享。裏面有碧昂絲、哈利·史泰爾斯、麗佐、納斯小子、塞萊娜·戈麥斯、迪士尼魔法滿屋的音樂等等！
           description: 寫個你自己的舞蹈程式，並分享給朋友們！
           student_description: 寫個你自己的舞蹈程式，並分享給朋友們！
         k5-onlinepd-2019:
@@ -5012,3 +5011,7 @@ zh-TW:
           title: CSP 遊樂場
           description_audience: 課程作者
           description_short: 用於課程版本之間的課程或級別分階段更新
+        devices-2022:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: 第 2 章：建立物理原型

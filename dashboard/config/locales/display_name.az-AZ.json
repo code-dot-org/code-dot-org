@@ -346,7 +346,6 @@
         "MC_HOC_2017_07_Cole_2021": "Qarlı Keçid",
         "MC_HOC_2017_10_RETRY_2021": "Mağara \n",
         "MC_HOC_2017_Ali_2021": "Cəhənnəm Qalası",
-        "MC_HOC_2017_FP20x20_2021": "Sərbəst oyun",
         "courseC_artist_prog_challenge1_2021": "Heyvan Evi",
         "courseC_artist_prog_challenge2a_2021": "Yol",
         "courseD_bee_nestedLoops8_2021": "Nektar yığ və bal düzəlt! ",
@@ -1126,7 +1125,8 @@
         "helloworld_food_sizes_soccer-2022": "Ölçü",
         "helloworld_food_sizes_space-2022": "Ölçü",
         "helloworld_food_sounds_soccer-2022": "Səslər",
-        "helloworld_food_sounds_space-2022": "Səslər"
+        "helloworld_food_sounds_space-2022": "Səslər",
+        "MC_HOC_2017_FP20x20_2021": "Sərbəst oyun"
       }
     }
   }

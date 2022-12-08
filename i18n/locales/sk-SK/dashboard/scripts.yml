@@ -1595,6 +1595,7 @@ sk:
               display_name: Prehľad
         dance-2019:
           title: Tanečná Párty
+          description_short: Nakódujte tanečnú párty a zdieľajte ju so svojimi priateľmi. Vystupujú Beyoncé, Harry Styles, Lizzo, Lil Nas X, Selena Gomez, hudba z Disney rozprávky „Encanto“ atď.!
           description: Nakóduj si vlastnú Tanečnú párty a zdieľaj ju s kamarátmi!
           student_description: Nakóduj si vlastnú Tanečnú párty a zdieľaj ju s kamarátmi!
         k5-onlinepd-2019:
@@ -3416,3 +3417,7 @@ sk:
         csp-playground:
           description_audience: Autori osnov
           description_short: Na prípravu aktualizácií hodín alebo úrovní medzi verziami učebných osnov
+        devices-2022:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: 'Kapitola 2: Vytváranie fyzických prototypov'

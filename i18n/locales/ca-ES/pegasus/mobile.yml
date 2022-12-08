@@ -532,6 +532,7 @@
   dashboard_puzzle: "Puzzle"
   dashboard_question: "Pregunta"
   dashboard_correctness_correct: "Correcte"
+  dashboard_submission_in_progress: "En curs"
   stats_hoc_2013_heading: 'Increïbles estadístiques d''Hora de Codi de l''any passat. En només una setmana:'
   stats_hoc_2013_image_alt: "Estadístiques de 2013 d'Hora de Codi"
   dashboard_teacher: "Mestre"
@@ -1053,6 +1054,7 @@
   alice_beyond_longdescription: "El projecte Alice utilitzant un entorn de programació innovadora per donar suport a la creació d'animacions 3D, proporciona eines i materials d'ensenyament i aprenentatge de pensament computacional, resolució de problemes i la programació informàtica a través d'un espectre d'edats i nivells de qualificació."
   sphero_beyond_longdescription: "Si ets educador o un pare, les lliçons SPRK donen als nens un divertit curs accelerat a la programació de robots de mentre  milloren les seves habilitats en matemàtiques i ciències."
   compatibility_hide_this_warning: "Amaga aquest avís"
+  compatibility_unsupported_browser_markdown: "El vostre navegador no és compatible. Sisplau, actualitzeu-lo a [un dels nostres navegadors compatibles](%{supported_browsers_url}). Podeu provar de veure la pàgina, però la funcionalitat es podria veure afectada."
   flappy_shortcode: "aleteig"
   header_courses: "cursos"
   header_course_catalog: "Catàleg de cursos"
@@ -1074,6 +1076,7 @@
   header_help_us: "Ajuda'ns"
   header_about: "Quant a"
   header_help_support: 'Ajuda i suport '
+  header_report_bug: "Informar d'un problema"
   header_legal_privacy: "Política de privadesa"
   header_legal_tos: "Condicions d'ús"
   user_header_label: "Hola %{username}"
@@ -1188,6 +1191,7 @@
   footer_about: "Quant a"
   footer_partners: "Socis"
   footer_donate: "Feu una donació"
+  footer_store: "Botiga"
   footer_support: "Suport"
   footer_terms: "Condicions"
   ai_for_oceans_lesson_plan: "unitat didàctica/lliço"
@@ -1206,3 +1210,4 @@
   hoc2022_landing_page_create_description: "Feu alguna cosa estranya i meravellosa!"
   hoc2022_landing_page_banner_alt_left: "Un alienígena ballant al costat de Saturn a l'espai"
   hoc2022_landing_page_banner_alt_right: "Un robot driblant una pilota de futbol a l'espai davant d'un coet enlairant"
+  try_it_yourself: "Prova-ho tu mateix!"

@@ -12328,7 +12328,7 @@ es-ES:
         display_name: Propiedades de Sprite
         description: Prueba las propiedades de los sprites que has aprendido aquí
       CSD Games variables practice_2021:
-        display_name: Variables Practicar
+        display_name: Variables - Práctica
         description: Elige una de las siguientes actividades para practicar el uso
           de variables.
       CSD Header Size MC_2018_2019_pilot_2021:
@@ -12676,14 +12676,14 @@ es-ES:
           Haz el Tuyo Propio
           Acabas de recorrer el plan de otra persona para crear un juego, así que ahora es el momento de hacer el tuyo propio. ¿Qué funciones o desafíos adicionales quieres crear?
       CSD games functions practice choice_2021:
-        display_name: Funciones Practicar
+        display_name: Funciones - Práctica
         description: Practica el uso de las funciones y aprende más sobre lo que las
           hace tan útiles.
       CSD games platform challenge choice_2021:
         display_name: Desafíos
         description: "¡Mejora tu juego con estos desafíos!"
       CSD web conditionals practice choice_2021:
-        display_name: Condicionales Practicar
+        display_name: Condicionales - Práctica
         description: Practica el uso de booleanos y condicionales con estas actividades.
       CSD web draw loop practice choice_2021:
         display_name: Practica
@@ -13431,7 +13431,7 @@ es-ES:
       CSD Games variables practice_2022:
         description: Elige una de las siguientes actividades para practicar el uso
           de variables.
-        display_name: Variables Practicar
+        display_name: Variables - Práctica
       CSD HTML project Lists_2022:
         description: Echa un vistazo a estas nuevas etiquetas que te permitirán añadir
           listas a tu página web.
@@ -15195,7 +15195,7 @@ es-ES:
           correct: true
         - text: I, II, y III
         questions:
-        - text: "¿Qué necesita saber un programador al crear un escuchador de eventos?
+        - text: "¿Qué necesita saber un programador al crear un detector de eventos?
             \ \n&nbsp;&nbsp;&nbsp;I. El evento que activará el cambio  \n&nbsp;&nbsp;&nbsp;II.
             Cuando se activará el evento en el programa    \n&nbsp;&nbsp;&nbsp;III.
             Qué debe hacer el programa cuando se dispara el evento"
@@ -15208,7 +15208,7 @@ es-ES:
           correct: true
         - text: I, II, y III
         questions:
-        - text: "¿Qué necesita saber un programador al crear un escuchador de eventos?
+        - text: "¿Qué necesita saber un programador al crear un detector de eventos?
             \ \n&nbsp;&nbsp;&nbsp;I. El evento que activará el cambio  \n&nbsp;&nbsp;&nbsp;II.
             Cuando se activará el evento en el programa    \n&nbsp;&nbsp;&nbsp;III.
             Qué debe hacer el programa cuando se dispara el evento"
@@ -15346,7 +15346,7 @@ es-ES:
       CSD games functions practice choice_2022:
         description: Practica el uso de las funciones y aprende más sobre lo que las
           hace tan útiles.
-        display_name: Funciones Practicar
+        display_name: Funciones - Práctica
       CSD games istouching challenge choice_2022:
         description: Prueba estos nuevos bloques y desafíos con colisiones.
         display_name: Desafíos de Colisión
@@ -15386,7 +15386,7 @@ es-ES:
         display_name: Desafíos de Condicionales
       CSD web conditionals practice choice_2022:
         description: Practica el uso de booleanos y condicionales con estas actividades.
-        display_name: Condicionales Practicar
+        display_name: Condicionales - Práctica
       CSD web draw loop challenge choice_2022:
         description: Prueba estos desafíos de bucles de dibujo.
         display_name: Desafíos del Bucle de Dibujo

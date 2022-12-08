@@ -2370,6 +2370,7 @@ de:
           title: Kollisions-Detektor
         dance-2019:
           title: Tanzparty (2019)
+          description_short: Programmiere eine Tanzparty, um sie mit Freunden und Familie zu teilen. Mit Beyoncé, Harry Styles, Lizzo, Lil Nas X, Selena Gomez, Musik aus Disneys „Encanto“ und mehr!
           description: Programmiere deine eigene Tanzparty, um sie mit deinen Freunden zu teilen!
           student_description: Programmiere deine eigene Tanzparty, um sie mit deinen Freunden zu teilen!
         k5-onlinepd-2019:
@@ -4362,3 +4363,7 @@ de:
           description_audience: Lehrpan-Autoren
           description_short: Für die Bereitstellung von Aktualisierungen der Lektionen oder Stufen zwischen Lehrplanversionen
         csc-pilot-fa2022-particles: {}
+        devices-2022:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: 'Chapter 2: Aufbau von physischen Prototypen'

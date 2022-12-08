@@ -1819,9 +1819,6 @@
         "courseA_EOC_playlab_people": {
           "question_mark": "?"
         },
-        "courseC_artist_prog2_2021": {
-          "slider": "Hér getur þú látið forritið þitt keyra hægar."
-        },
         "CSD U3 Variables Predict Where XY_2021": {
           "grid": "Smelltu hér til að sýna grindina."
         },
@@ -2278,6 +2275,9 @@
         },
         "helloworld_food_sounds_space-2022": {
           "hello_world_new": "Nýr kubbur!"
+        },
+        "courseC_artist_prog2_2021": {
+          "slider": "Hér getur þú látið forritið þitt keyra hægar."
         }
       }
     }

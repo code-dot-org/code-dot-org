@@ -2310,6 +2310,7 @@ ja:
           title: 衝突検知器
         dance-2019:
           title: ダンスパーティー (2019)
+          description_short: ダンスパーティーをコーディングして友達とシェアしよう。ビヨンセ、ハリー・スタイルズ、リッツォ、リル・ナズ・エックス、セレーナ・ゴメス、ディズニーの「エンカント」の音楽などをフィーチャー！
           description: 自分だけのダンスパーティーをプログラムして友達と共有しましょう。
           student_description: 自分だけのダンスパーティーをプログラムして友達と共有しましょう。
         k5-onlinepd-2019:
@@ -4205,3 +4206,7 @@ ja:
           title: CSPプレイグラウンド
           description_audience: カリキュラム ライター
           description_short: カリキュラムステージバージョン間でレッスンまたはレベルの更新を実施する場合
+        devices-2022:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: '第 2 章: 物理プロパティの構築'

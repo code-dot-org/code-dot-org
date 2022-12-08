@@ -55,7 +55,7 @@ gem 'rack-mini-profiler'
 
 group :development do
   gem 'annotate', '~> 3.1.1'
-  gem 'aws-google' # use Google Accounts for AWS access
+  gem 'aws-google', '~> 0.1.8' # use Google Accounts for AWS access
   gem 'web-console'
 end
 

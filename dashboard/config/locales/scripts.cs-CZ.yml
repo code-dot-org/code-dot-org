@@ -1604,6 +1604,9 @@ cs:
               display_name: Přehled
         dance-2019:
           title: Taneční večírek (2019)
+          description_short: Naprogramujte si taneční párty ke sdílení se svými přáteli.
+            K vidění a slyšení bude Beyoncé, Harry Styles, Lizzo, Lil Nas X, Selena
+            Gomez, hudba z Disneyho „Encanto,“ a další!
           description: Vytvoř si svůj vlastní taneční večírek a sdílej ho s kamarády!
           student_description: Vytvoř si svůj vlastní taneční večírek a sdílej ho
             s kamarády!
@@ -3182,3 +3185,7 @@ cs:
           description_audience: Pisatelé životopisů
           description_short: Na uvádění aktualizací lekcí nebo úrovní mezi verzemi
             životopisu
+        devices-2022:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: 'Kapitola 2: Stavba fyzického prototypu'
