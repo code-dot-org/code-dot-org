@@ -1,7 +1,7 @@
 import $ from 'jquery';
 import React from 'react';
 import ReactDOM from 'react-dom';
-import CourseRollup from '@cdo/apps/templates/courseRollupPages/CourseRollup';
+import CourseOrUnitRollup from '@cdo/apps/templates/courseRollupPages/CourseOrUnitRollup';
 import {Provider} from 'react-redux';
 import {getStore} from '@cdo/apps/code-studio/redux';
 
@@ -16,7 +16,7 @@ function initPage() {
 
   ReactDOM.render(
     <Provider store={store}>
-      <CourseRollup objectToRollUp={'Standards'} course={courseSummary} />
+      <CourseOrUnitRollup objectToRollUp={'Standards'} course={courseSummary} />
     </Provider>,
     document.getElementById('roll_up')
   );
