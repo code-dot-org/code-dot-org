@@ -22,18 +22,18 @@
     "rubric_key_concept": "Structure content on a web page using HTML (Add an image to a web page).  Accurately attribute others when using their work.",
     "mini_rubric": "true",
     "validation_enabled": "true",
-    "rubric_performance_level_1": "The image displays properly and an `alt` attribute gives a reasonable test description of the image.  No unnecessary code is included in the`img` tag.  There is accurate attribution and the image is named appropriately.",
+    "rubric_performance_level_1": "The image displays properly and an `alt` attribute gives a reasonable text description of the image.  No unnecessary code is included in the`img` tag.  There is accurate attribution and the image is named appropriately.",
     "rubric_performance_level_2": "The image displays properly and is being used according to its copyright license description.",
     "rubric_performance_level_3": "The `img` tag is used and a source address for the image is provided, but there may be minor syntax errors or misspellings that prevent the image from being displayed properly.  The image may not be available for legal use on the web page.",
-    "rubric_performance_level_4": "The `img` tag is not used or is not a source address given for the image.",
+    "rubric_performance_level_4": "The `img` tag is not used or no source address is given for the image.",
     "start_sources": "{\r\n  \"files\": [\r\n    {\r\n      \"name\": \"index.html\",\r\n      \"data\": \"<!DOCTYPE html> \\r\\n<html> \\r\\n<head>\\r\\n  <link rel=\\\"stylesheet\\\" href=\\\"aboutme.css\\\">\\r\\n<\\/head>\\r\\n <body>\\r\\n   <h1> All About Me! <\\/h1> \\r\\n \\r\\n    <h3>Cool Picture<\\/h3> \\r\\n  <\\/body> \\r\\n<\\/html>\"\r\n    },\r\n{\r\n      \"name\": \"aboutme.css\",\r\n      \"data\": \"p {\\r\\n\\r\\n}\\r\\nh1 {\\r\\n\\r\\n}\\r\\n}\"\r\n}\r\n  ]\r\n}"
   },
-  "level_num": "custom",
   "game_id": 58,
-  "created_at": "2022-03-30T23:32:34.000Z",
-  "user_id": 155,
   "published": true,
+  "created_at": "2022-03-30T23:32:34.000Z",
+  "level_num": "custom",
+  "user_id": 155,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-03-30T23:32:34.643+00:00\",\"changed\":[\"cloned from \\\"CSD U2 Image assessment_2021\\\"\"],\"cloned_from\":\"CSD U2 Image assessment_2021\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-03-30T23:32:34.643+00:00\",\"changed\":[\"cloned from \\\"CSD U2 Image assessment_2021\\\"\"],\"cloned_from\":\"CSD U2 Image assessment_2021\"},{\"changed_at\":\"2022-11-21 17:35:35 +0000\",\"changed\":[\"encrypted_examples\",\"rubric_performance_level_1\",\"rubric_performance_level_4\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
 </Weblab>
