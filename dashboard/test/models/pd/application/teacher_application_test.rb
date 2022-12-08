@@ -294,17 +294,6 @@ module Pd::Application
       assert_equal workshop_1, application_2.get_first_selected_workshop
     end
 
-    test 'can_see_locked_status? is always false' do
-      teacher = create :teacher
-      g1_program_manager = create :program_manager, regional_partner: create(:regional_partner, group: 1)
-      g3_program_manager = create :program_manager, regional_partner: create(:regional_partner, group: 3)
-      workshop_admin = create :workshop_admin
-
-      [teacher, g1_program_manager, g3_program_manager, workshop_admin].each do |user|
-        refute TeacherApplication.can_see_locked_status?(user)
-      end
-    end
-
     test 'columns_to_remove' do
       ['csp', 'csd'].each do |course|
         columns = TeacherApplication.columns_to_remove(course)
