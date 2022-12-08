@@ -36,7 +36,7 @@ class LoginTypePicker extends Component {
 
   reportLoginTypeSelection = provider => {
     analyticsReporter.sendEvent(LOGIN_TYPE_SELECTED_EVENT, {
-      'login type': provider
+      loginType: provider
     });
   };
 
