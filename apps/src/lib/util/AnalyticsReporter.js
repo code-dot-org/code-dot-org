@@ -8,7 +8,7 @@ import {
 import {currentLocation} from '@cdo/apps/utils';
 
 // A flag that can be toggled to send events regardless of environment
-const ALWAYS_PUT = false;
+const ALWAYS_SEND = false;
 
 const Environments = {
   production: 'production',
@@ -26,7 +26,7 @@ class AnalyticsReporter {
     const element = document.querySelector('script[data-amplitude-api-key]');
     const api_key = element ? element.dataset.amplitudeApiKey : '';
     // Let Amplitude handle missing/invalid keys.
-    if (this.shouldPutRecord(ALWAYS_PUT)) {
+    if (this.shouldPutRecord(ALWAYS_SEND)) {
       init(api_key);
     }
   }
@@ -38,7 +38,7 @@ class AnalyticsReporter {
     identifyObj.set('userType', userType);
     identifyObj.set('signInState', signInState);
 
-    if (!this.shouldPutRecord(ALWAYS_PUT)) {
+    if (!this.shouldPutRecord(ALWAYS_SEND)) {
       this.log(
         `User properties: userId: ${formattedUserId}, userType: ${userType}, signInState: ${signInState}`
       );
@@ -47,7 +47,7 @@ class AnalyticsReporter {
   }
 
   sendEvent(eventName, payload) {
-    if (this.shouldPutRecord(ALWAYS_PUT)) {
+    if (this.shouldPutRecord(ALWAYS_SEND)) {
       track(eventName, payload);
     } else {
       this.log(`${eventName}. Payload: ${JSON.stringify({payload})}`);
