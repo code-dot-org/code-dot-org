@@ -148,9 +148,7 @@ class Pd::Enrollment < ApplicationRecord
     end
   end
 
-  # Filters a list of enrollments for survey completion, for the workshop types we are able to filter for
-  # survey completion: CSD/CSP Summer, CSP Workshop for Returning Teachers, CSF Intro/Deep Dive, Counselor
-  # and Admin. We will always return [] for Academic year workshops as we want facilitators to handle those surveys.
+  # Filters a list of workshops user is enrolled in with (in)complete surveys (dependent on select_completed).
   # @param enrollments [Enumerable<Pd::Enrollment>] list of enrollments to filter.
   # @param select_completed [Boolean] if true, return only enrollments with completed surveys,
   #   otherwise return only those without completed surveys. Defaults to true.
@@ -159,12 +157,12 @@ class Pd::Enrollment < ApplicationRecord
     raise 'Expected enrollments to be an Enumerable list of Pd::Enrollment objects' unless
         enrollments.is_a?(Enumerable) && enrollments.all?(Pd::Enrollment)
 
-    # Local summer, CSP Workshop for Returning Teachers, or CSF Intro after 5/8/2020 will use Foorm for survey completion.
-    # CSF Deep Dive after 9/1 also uses Foorm. CSF District workshops will always use Foorm
+    # Filter out Local summer, CSP Workshop for Returning Teachers, and CSF Intro workshops before 5/8/2020 and
+    # CSF Deep Dive workshops before 9/1/2020 as they do not use Foorm for survey completion.
     foorm_enrollments = enrollments.select do |enrollment|
-      (enrollment.workshop.workshop_ending_date >= Date.new(2020, 5, 8) &&
-        (enrollment.workshop.csf_intro? || enrollment.workshop.local_summer? || enrollment.workshop.csp_wfrt?)) ||
-        (enrollment.workshop.workshop_ending_date >= Date.new(2020, 9, 1) && enrollment.workshop.csf_201?) || enrollment.workshop.csf_district?
+      !(enrollment.workshop.workshop_ending_date < Date.new(2020, 5, 8) &&
+        (enrollment.workshop.csf_intro? || enrollment.workshop.local_summer? || enrollment.workshop.csp_wfrt?)) &&
+        !(enrollment.workshop.workshop_ending_date < Date.new(2020, 9, 1) && enrollment.workshop.csf_201?)
     end
 
     # We do not want to check survey completion for the following workshop types: Legacy (non-Foorm) summer,
