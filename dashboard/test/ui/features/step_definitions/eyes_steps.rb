@@ -15,12 +15,6 @@ When(/^I open my eyes to test "([^"]*)"$/) do |test_name|
   next if CDO.disable_all_eyes_running
   ensure_eyes_available
 
-  batch = Applitools::BatchInfo.new(ENV['BATCH_NAME'])
-  batch.id = ENV['BATCH_ID']
-  @eyes.batch = batch
-
-  @eyes.branch_name = GitUtils.current_branch
-
   @original_browser = @browser
   config = {app_name: 'Code.org', test_name: test_name, driver: @browser}
   if @original_browser.capabilities.browser_name == 'chrome'
@@ -72,4 +66,9 @@ def ensure_eyes_available
   @eyes = Applitools::Selenium::Eyes.new
   @eyes.api_key = CDO.applitools_eyes_api_key
   @eyes.log_handler = Logger.new('../../log/eyes.log')
+
+  # Assign all Eyes test to an Applitools Batch identified by the current commit hash.
+  batch = Applitools::BatchInfo.new
+  batch.id = ENV['APPLITOOLS_BATCH_ID']
+  @eyes.batch = batch
 end
