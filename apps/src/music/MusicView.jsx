@@ -60,7 +60,8 @@ class UnconnectedMusicView extends React.Component {
       updateNumber: 0,
       timelineAtTop: false,
       showInstructions: true,
-      instructionsPosIndex: 1
+      instructionsPosIndex: 1,
+      currentUploadSoundIndex: 0
     };
   }
 
@@ -147,22 +148,30 @@ class UnconnectedMusicView extends React.Component {
     this.player.clearAllSoundEvents();
   };
 
-  uploadSound = filename => {
-    console.log(filename);
-
+  uploadSound = file => {
     const self = this;
     var reader = new FileReader();
     reader.onload = function(e) {
-      self.player.loadSoundFromBuffer(0, e.target.result);
-      /*
-        audioCtx.decodeAudioData(e.target.result).then(buffer => {
-          var soundSource = audioCtx.createBufferSource();
-          soundSource.buffer = buffer;
-        });
-      */
+      console.log(
+        'Loading',
+        file.name,
+        'into library item',
+        self.state.currentUploadSoundIndex
+      );
+
+      // The uploaded sound will replace a sound in the library.
+      self.player.loadSoundFromBuffer(
+        self.state.currentUploadSoundIndex,
+        e.target.result
+      );
+
+      // And if we upload again, we'll replace the next sound in the library.
+      self.setState({
+        currentUploadSoundIndex: self.state.currentUploadSoundIndex + 1
+      });
     };
 
-    reader.readAsArrayBuffer(filename);
+    reader.readAsArrayBuffer(file);
   };
 
   onBlockSpaceChange = e => {

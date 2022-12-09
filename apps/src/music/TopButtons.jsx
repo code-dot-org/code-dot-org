@@ -31,8 +31,6 @@ const TopButtons = ({clearCode, uploadSound}) => {
   };
 
   const onUploadClicked = () => {
-    console.log('INPUT VALUE: ', inputRef.current?.value);
-
     if (inputRef.current.files[0] === undefined) {
       return false;
     }
