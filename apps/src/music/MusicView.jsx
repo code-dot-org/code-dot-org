@@ -1,7 +1,6 @@
 /** @file Top-level view for Music */
 import React from 'react';
 import PropTypes from 'prop-types';
-import _ from 'lodash';
 import classNames from 'classnames';
 import {Provider, connect} from 'react-redux';
 import queryString from 'query-string';
@@ -34,6 +33,8 @@ const instructionPositionOrder = [
   InstructionsPositions.RIGHT
 ];
 
+const DEFAULT_GROUP_NAME = 'all';
+
 class UnconnectedMusicView extends React.Component {
   static propTypes = {
     // populated by Redux
@@ -45,30 +46,14 @@ class UnconnectedMusicView extends React.Component {
   constructor(props) {
     super(props);
 
-    this.codeAppRef = document.getElementById('codeApp');
     this.player = new MusicPlayer();
     this.analyticsReporter = new AnalyticsReporter();
     this.codeHooks = {};
     this.musicBlocklyWorkspace = new MusicBlocklyWorkspace();
 
-    // We have seen on Android devices that window.innerHeight will always be the
-    // same whether in landscape or portrait orientation.  Given that we tell
-    // users to rotate to landscape, adjust to match what we see on iOS devices.
-    const windowWidth = Math.max(window.innerWidth, window.innerHeight);
-    const windowHeight = Math.min(window.innerWidth, window.innerHeight);
-
-    // Set these values so that the first render can work with them.
-    // Note that appWidth/Height are the dimensions of the "codeApp" div
-    // which is the space allocated for an app.
     this.state = {
-      windowWidth,
-      windowHeight,
-      appWidth: this.codeAppRef.offsetWidth,
-      appHeight: this.codeAppRef.offsetHeight,
       library: null,
       instructions: null,
-      currentPanel: 'groups',
-      groupPanel: 'all',
       isPlaying: false,
       startPlayingAudioTime: null,
       currentAudioElapsedTime: 0,
@@ -93,24 +78,6 @@ class UnconnectedMusicView extends React.Component {
     window.addEventListener('beforeunload', () =>
       this.analyticsReporter.endSession()
     );
-
-    const windowWidth = Math.max(window.innerWidth, window.innerHeight);
-    const windowHeight = Math.min(window.innerWidth, window.innerHeight);
-
-    this.setState({
-      windowWidth,
-      windowHeight,
-      appWidth: this.codeAppRef.offsetWidth,
-      appHeight: this.codeAppRef.offsetHeight
-    });
-
-    const resizeThrottleWaitTime = 100;
-    this.resizeListener = _.throttle(this.onResize, resizeThrottleWaitTime);
-    window.addEventListener('resize', this.resizeListener);
-    if (window.visualViewport) {
-      window.visualViewport.addEventListener('resize', this.resizeListener);
-      window.visualViewport.addEventListener('scroll', this.resizeListener);
-    }
 
     document.body.addEventListener('keyup', this.handleKeyUp);
 
@@ -217,28 +184,6 @@ class UnconnectedMusicView extends React.Component {
     this.musicBlocklyWorkspace.saveCode();
   };
 
-  onResize = () => {
-    const windowWidth = window.innerWidth;
-    const windowHeight = window.innerHeight;
-
-    // We will likely use this logic, borrowed from other labs, once
-    // we revisit mobile support across many devices.
-    //const windowWidth = Math.max(window.innerWidth, window.innerHeight);
-    //const windowHeight = Math.min(window.innerWidth, window.innerHeight);
-
-    // Check that the window dimensions have actually changed to avoid
-    // unnecessary event-processing on iOS Safari.
-    if (
-      this.state.windowWidth !== windowWidth ||
-      this.state.windowHeight !== windowHeight
-    ) {
-      const appWidth = this.codeAppRef.offsetWidth;
-      const appHeight = this.codeAppRef.offsetHeight;
-
-      this.setState({windowWidth, windowHeight, appWidth, appHeight});
-    }
-  };
-
   setPlaying = play => {
     if (play) {
       this.playSong();
@@ -272,8 +217,6 @@ class UnconnectedMusicView extends React.Component {
     });
   };
 
-  triggerIdToEvent = id => `triggeredAtButton-${id}`;
-
   playSong = () => {
     this.player.stopSong();
 
@@ -306,11 +249,8 @@ class UnconnectedMusicView extends React.Component {
 
   getCurrentGroup = () => {
     const currentGroup =
-      this.state.groupPanel !== 'main' &&
       this.state.library &&
-      this.state.library.groups.find(
-        group => group.id === this.state.groupPanel
-      );
+      this.state.library.groups.find(group => group.id === DEFAULT_GROUP_NAME);
 
     return currentGroup;
   };

@@ -260,7 +260,7 @@ fr-FR:
   print_one_here_certificates: Imprimez-en un ici.
   enter_certificate_names: Saisissez jusqu'à 30 noms, **un par ligne**. Une page imprimable
     avec des certificats personnalisés %{script_name}  sera générée.
-  share_achievement: Partage ta réalisation
+  share_achievement: Partage ta réussite
   beyond_hour_message: Continue avec nos <a href='http://studio.code.org'>autres cours</a>,
     ou vois plus d'options pour <a href='/learn/beyond'>Apprendre au-delà d'une heure</a>.
   beyond_hour_message_markdown: Continuez à suivre nos [autres cours] (http://studio.code.org),
@@ -1297,7 +1297,7 @@ fr-FR:
   tynker_name: Construis ton propre jeu
   scratch_name: Deviens créatif avec le codage
   thinkersmith_name: Mes amis les robots
-  condcards_name: Instructions conditionnelles avec des cartes
+  condcards_name: Les instructions conditionnelles avec des cartes
   codehs_name: Apprends à coder avec le chien Karel
   codemonkey_name: CodeMonkey
   codeavengers_name: Construis un jeu avec JavaScript
@@ -1369,8 +1369,12 @@ fr-FR:
   courseb-2021_name: Cours B (2021)
   coursec-2021_name: Cours C (2021)
   coursed-2021_name: Cours D (2021)
+  coursee-2021_name: Cours E (2021)
+  coursef-2021_name: Cours F (2021)
   coursea-2022_name: Cours A (2022)
-  coursed-2022_name: Cours D (2021)
+  coursec-2022_name: Cours C (2022)
+  coursed-2022_name: Cours D (2022)
+  coursee-2022_name: Cours E (2022)
   express-2018_name: Cours Express (2018)
   pre-express-2018_name: Cours Express pour les Pré-lecteurs (2018)
   express-2019_name: Cour rapide (2019)
@@ -2451,7 +2455,7 @@ fr-FR:
     Avec Katy Perry, Shawn Mendes, Panic ! At The Disco, Lil Nas X, Jonas Brothers,
     Nicki Minaj, et 34 autres artistes !
   hoc_overview_dance_2022_subtitle: Organises une soirée dansante à partager avec
-    vos amis. Avec Beyoncé, Harry Styles, Lizzo, Lil Nas X, Selena Gomez, de la musique
+    tes amis. Avec Beyoncé, Harry Styles, Lizzo, Lil Nas X, Selena Gomez, de la musique
     de « Encanto » de Disney et bien plus encore !
   hoc_overview_hello_world_2022_subtitle: Choisis entre quatre activités amusantes
     pour programmer des personnages interactifs dans un monde que tu as créé!

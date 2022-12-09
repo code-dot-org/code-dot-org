@@ -12714,6 +12714,9 @@
         },
         "helloworld_food_say_space-2022": {
           "hello-world-first-solution-pizza": "要让精灵说些什么，可以像这样连接代码块：\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\"><next>  <block type=\"gamelab_makeNewSpriteAnon\">\n    <title name=\"ANIMATION_NAME\">\"face_pizza_1\"</title>\n    <value name=\"LOCATION\">\n      <block type=\"gamelab_location_picker\">\n        <title name=\"LOCATION\">{\"x\":200,\"y\":200}</title>\n      </block>\n    </value><next>  <block type=\"gamelab_spriteSay\">\n    <title name=\"SPEECH\">Hello, world!</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"face_pizza_1\"</title>\n      </block>\n    </value>\n  </block></next>\n  </block></next></block>\n</xml>"
+        },
+        "courseC_artist_loops7a2022": {
+          "courseC_artist_loops7a_a": "一个圆有360度。将转动的度数乘以重复的次数。它是否等于360？\n检查一下建议的旋转，看看这个方法是否可行。\n\n有一些例子，你可以开始试试。\n\n-   试着转60度，共转6次\n-   试着转45度，共转8次\n-   试着转30度，共转12次"
         }
       }
     }

@@ -739,7 +739,7 @@ fr:
       body: "Nous avons compilé une liste de leçons en mode \"déconnecté\" que vous pouvez utiliser en classe. Vous pouvez désormais enseigner les bases de l'informatique, que vous ayez ou non des ordinateurs dans votre classe ! Essayez d'utiliser ces leçons sous forme de cours indépendant ou sous forme de leçons complémentaires à l'un de vos cours d'informatique."
       body_short: "Si vous n'avez pas d'ordinateurs, essayez ces leçons en mode \"déconnecté\" dans votre classe."
     unplugged_conditionals:
-      title: "Instructions conditionnelles"
+      title: "Formules conditionnelles"
       body: "Découvre les algorithmes et les déclarations conditionnelles, dans cette activité \"déconnectée\", en t’appuyant sur un jeu de cartes."
     widgets:
       title: "Widgets"

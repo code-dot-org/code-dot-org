@@ -359,6 +359,12 @@
         "72c8cd33-c097-48d6-9178-3b146fdc243a": {
           "description": "So‘z va iboralarni saqlash uchun o‘zgaruvchilardan foydalaning."
         },
+        "29d1cbbf-aba5-45c8-ab1f-fc1ed266bb1b": {
+          "description": "Sprite Lab-da ball to'plash uchun spritlarni olib tashlash mumkin bo'lgan klik o'yinini yarating"
+        },
+        "9da7b378-c4e9-4184-b58a-61dfdad47357": {
+          "description": "Ma'lumotni saqlaydigan va vaqt o'tishi bilan o'zgarib turadigan o'zgaruvchi yarating"
+        },
         "8a99a9c0-2079-4c7e-a39c-188f940fcfe2": {
           "description": "Sun'iy intellektni boshqarish hayotida o‘ynaydigan rolni ko‘rib chiqing."
         },
@@ -587,8 +593,17 @@
         "fbaccfd8-2a19-449c-a260-3e0e4b6f0cc6": {
           "description": "Murakkab shakllarni oddiy qismlarga ajrating."
         },
+        "09012264-2762-4a05-a5e5-f5b826fe16ad": {
+          "description": "Yangi spritlar yarating va ularga kostyumlar va xatti-harakatlarni belgilang."
+        },
         "0e3791df-3c03-4b83-9943-d3b57110dea1": {
           "description": "\"sprite\"ni ekrandagi ko‘chirish va o‘zgartirish mumkin bo‘lgan belgi yoki obyekt sifatida belgilang."
+        },
+        "0b712f3f-c5fb-4d8d-8247-23bfa13c0139": {
+          "description": "Yangi spritlar yarating va ularga kostyumlar va xatti-harakatlarni belgilang."
+        },
+        "7ecf2549-51ae-4bcd-bc3a-d4fc6059b7bc": {
+          "description": "Spritlar va xatti-harakatlardan foydalanib animatsiya yarating."
         },
         "938b2178-a433-4324-ba73-b1b6f8e0c0be": {
           "description": "Vaqt o‘tgan voqealarga javob beradigan dasturlarni ishlab chiqish."
@@ -698,6 +713,12 @@
         "fdfbb07a-5a1c-459d-81ae-8b7c35da4ecc": {
           "description": "Funksiya dasturni soddalashtirishga yordam berishi mumkinligini anglang."
         },
+        "4d6b0001-0d41-45ae-8061-1c493e6976ee": {
+          "description": "Sprite Lab-da ball to'plash uchun spritlarni olib tashlash mumkin bo'lgan klik o'yinini yarating"
+        },
+        "54f59612-1695-4ba2-bbf4-c03862b02924": {
+          "description": "Ma'lumotni saqlaydigan va vaqt o'tishi bilan o'zgarib turadigan o'zgaruvchi yarating"
+        },
         "75953ae5-c4fa-40d3-85e1-deb508c32847": {
           "description": "Mavjud o‘zgaruvchilarga qiymatlarni belgilang."
         },
@@ -712,6 +733,12 @@
         },
         "d800c885-0e72-4325-a176-68612c826131": {
           "description": "Ish vaqti davomida miqdorlarni o‘zgartirish uchun o‘zgaruvchilarni ishlatishi mumkin bo‘lgan joylarni aniqlang."
+        },
+        "a75dc8b9-eebc-48cd-9495-289d69501b09": {
+          "description": "Turli qiymatlar bilan tsiklni bir necha marta o'zgartirish uchun for looplaridan foydalaning."
+        },
+        "d759d477-89f3-4ef8-b701-c4115a3258cd": {
+          "description": "Qachon for tsiklidan foydalanishni va qachon takrorlash va while sikllari kabi boshqa sikllardan foydalanishni bilib oling."
         },
         "546d4a38-5abb-402c-9e61-bef13a71001d": {
           "description": "Vaqt cheklanganligi yoki xatoliklar kabi to‘siqlarni yengib o‘tish."

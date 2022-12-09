@@ -627,6 +627,7 @@ zh-CN:
   volunteer_engineer_submission_distance_16: 10 英里
   volunteer_engineer_submission_distance_24: 15 英里
   volunteer_engineer_submission_distance_32: 20 英里
+  volunteer_engineer_submission_distance_80: 50英里
   volunteer_engineer_submission_num_volunteers_5: 5 名志愿者
   volunteer_engineer_submission_num_volunteers_10: 10 名志愿者
   volunteer_engineer_submission_num_volunteers_25: 25 名志愿者
@@ -1840,6 +1841,7 @@ zh-CN:
   hoc2022_mc_mee_title: 我的世界逃生庄园
   hoc2022_mc_mee_description: '在黎明前逃离神秘的豪宅，赚取一百万颗翡翠！新鲜出炉的我的世界编程一小时教程现已在《我的世界：教育版》中推出，适用于Windows、Mac、Chromebook、Ipad和移动设备。开始使用免费的教育工作者资源、培训和视频。 '
   hoc2022_mc_mee_timecraft_description: 在《我的世界：教育版》的这个免费编程课中，进行时间旅行，拯救未来。
+  footer_powered_by_aws: 亚马逊网络服务（Amazon Web Services）和“由AWS提供支持”徽标是Amazon.com，Inc.，或者其在美国/其他国家内的附属公司的商标。
   footer_built_on_github: 在微软的 GitHub 上构建
   codebytes_skinny_banner_title: 加入我们12月7-11日的 CodeBytes 直播迷你课程！
   codebytes_skinny_banner_description: '加入我们 CodeBytes 计算机科学教育周的每日课程，20分钟的交互式计算机科学课程。每天两次流媒体直播，CodeBytes
@@ -1898,6 +1900,8 @@ zh-CN:
   ai_ibm_machine_learning_for_kids: IBM：面向儿童的机器学习
   ai_ecs: ECS：人工智能 (AI)
   ai_ecs_description: 探索计算机科学（ECS）课程的新的替代课程单元。
+  ai_aiedu_intro: aiEDU：人工智能简介
+  ai_aiedu_intro_description: AI入门是一个免费、创新、与文化相关的课程，学生可以在其中培养关于人工智能的概念，以及如何在现实生活中使用它。
   ai_elements: 人工智能的要素
   ai_elements_description: Reaktor 和赫尔辛基大学创建的一系列免费在线课程。
   ai_cognimates: Cognimates
@@ -1924,3 +1928,6 @@ zh-CN:
   try_it_yourself: 自己试一试！
   try_an_activity: 尝试一个活动
   see_more_activities: 尝试更多活动
+  hoc2022_nasa_webb_alt_text: NASA詹姆斯·韦伯望远镜的插图
+  hoc2022_nasa_banner_heading: 加入NASA并观看关于太空计算机科学的《编程一小时》特别节目！
+  hoc2022_nasa_banner_description: 美国东部时间12月5日上午10点，在NASA STEM的YouTub频道上首播。

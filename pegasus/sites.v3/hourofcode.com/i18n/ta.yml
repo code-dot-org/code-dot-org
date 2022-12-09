@@ -44,8 +44,8 @@ ta:
   hoc2022_codeorg_title: நாசா மற்றும் பலவற்றுடன் ஹவர் ஆஃப் கோட் கொண்டாடுங்கள்
   hoc2022_codeorg_description: 10வது மணிநேரக் குறியீடு இந்த உலகில் இல்லை! எங்களுடன்
     ஆராயவும், விளையாடவும் மற்றும் உருவாக்கவும் வாருங்கள்.
-  social_hoc2022_dance: Featuring Beyoncé, Harry Styles, Lizzo, Lil Nas X, Selena
-    Gomez, music from Disney's "Encanto," and more!
+  social_hoc2022_dance: பியோன்சே இடம்பெறும், ஹாரி ஸ்டைல்ஸ், லிஸ்ஸோ, லில் நாஸ் எக்ஸ்,
+    செலினா கோம்ஸ், டிஸ்னியின் இருந்து இசை “Encanto,” மேலும்!
   social_hoc2021_cse: 'During the #HourOfCode, we''re celebrating #CSEverywhere. Discover
     the connections!'
   hoc2020_header: இன்று கற்றுக் கொள்ளுங்கள், நாளை பிரகாசமாக உருவாக்குங்கள்.
@@ -10308,7 +10308,7 @@ ta:
   tutorial_robotical2_name: Hour of Code Activity 2 - the Marty Controller
   tutorial_robotical3_name: Hour of Code Activity 3 - Getting Started with Marty Blocks
     Jr
-  tutorial_blockscadvirus_name: Modeling a Virus with Code
+  tutorial_blockscadvirus_name: BlocksCAD Modeling a Virus with Code
   tutorial_robotical1_name: Hour of Code Activity 1 - Marty Unplugged
   tutorial_irobotshapes_name: 'Robotics for K-2: Robot Shapes'
   tutorial_irobotparts_name: 'Robotics for K-2: Robot Parts'
@@ -10520,10 +10520,12 @@ ta:
   tutorial_codespellsnexus_longdescription: Under the mentorship of a mysterious sock
     puppet, you must infiltrate and reprogram a super-intelligent 'Learn to Code'
     app that seeks global domination. Solve puzzles. Learn to code. Hack the Nexus.
-  tutorial_carnegieslime_longdescription: Super Slime Battle is a game that was co-designed
-    between researchers at Carnegie Mellon University and students from the Boys and
-    Girls Clubs of Western PA where students and their (co)robot partners must defend
-    their candy stash from oncoming baddies.
+  tutorial_carnegieslime_longdescription: Every year the Minions of Scarecorp try
+    to steal your candy crops. Booville High's Baddest Slimeball crew have come together
+    to protect the candy crops with slime weapons. Players play as teen monsters who
+    program their collaborative robot (aka 'cobot') pets to help take down the Minions
+    of Scarecorp who are after their town's candy harvest. Choose between four characters
+    and their cobotic pets.
   tutorial_ozotown_longdescription: The Ozobot Blockly OzoTown will teach advanced
     sequencing as students utilize logic, reasoning, and computer science skills to
     navigate real life scenarios. No bot needed!
@@ -12008,7 +12010,7 @@ ta:
   tutorial_kcjhealth_name: The Health & Well-Being Challenge
   tutorial_kcjhealth_string_detail_grades: 6+ தரங்கள் (11 மற்றும் அதற்கு மேற்பட்டவை)
   tutorial_kcjhealth_string_detail_platforms: ''
-  tutorial_kcjhealth_string_detail_programming_languages: blocks
+  tutorial_kcjhealth_string_detail_programming_languages: தொகுதிகள்
   tutorial_kcjhealth_string_platforms: அனைத்து நவீன உலாவிகளும்
   tutorial_msftwakanda_longdescription: 'Shuri, Okoye, and Riri must band together
     to help Wakanda. Code your own action-packed activity inspired by Marvel Studios''
@@ -12016,7 +12018,7 @@ ta:
   tutorial_msftwakanda_name: Long Live Wakanda
   tutorial_msftwakanda_string_detail_grades: 6+ தரங்கள் (11 மற்றும் அதற்கு மேற்பட்டவை)
   tutorial_msftwakanda_string_detail_platforms: ''
-  tutorial_msftwakanda_string_detail_programming_languages: blocks
+  tutorial_msftwakanda_string_detail_programming_languages: தொகுதிகள்
   tutorial_msftwakanda_string_platforms: அனைத்து நவீன உலாவிகளும்
   school_not_found_heading: உங்கள் பள்ளியை எங்களால் காண இயலவில்லை. தயவுசெய்து மேலும்
     தகவல்களை உள்ளிடவும்.

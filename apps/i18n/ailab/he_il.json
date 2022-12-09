@@ -22,11 +22,24 @@
         "onion": {
           "id": "בצל"
         },
+        "avocado": {
+          "id": "אבוקדו"
+        },
         "corn": {
           "id": "תירס"
         },
+        "beans": {
+          "id": "שעועית"
+        },
         "lime": {
           "id": "ליים"
+        }
+      }
+    },
+    "bike_sharing": {
+      "card": {
+        "context": {
+          "potentialMisuses": " "
         }
       }
     },
@@ -34,6 +47,18 @@
       "fields": {
         "mushrooms": {
           "id": "פטריות"
+        },
+        "lobster": {
+          "id": "לובסטר"
+        },
+        "bacon": {
+          "id": "בייקון"
+        },
+        "cheese": {
+          "id": "גבינה"
+        },
+        "meat": {
+          "id": "בשר"
         }
       }
     },
@@ -55,12 +80,22 @@
         "age": {
           "id": "גיל"
         }
+      },
+      "card": {
+        "context": {
+          "potentialMisuses": " "
+        }
       }
     },
     "nutrition": {
       "fields": {
         "Description": {
           "id": "תיאור"
+        }
+      },
+      "card": {
+        "context": {
+          "potentialMisuses": " "
         }
       }
     },
@@ -80,11 +115,20 @@
     },
     "salad_toy": {
       "fields": {
+        "avocado": {
+          "id": "אבוקדו"
+        },
         "chicken": {
           "id": "תרנגולת"
         },
         "fruit": {
           "id": "פרי"
+        },
+        "beans": {
+          "id": "שעועית"
+        },
+        "cheese": {
+          "id": "גבינה"
         }
       }
     },
@@ -105,6 +149,15 @@
         },
         "age": {
           "id": "גיל"
+        },
+        "health": {
+          "id": "בריאות"
+        }
+      },
+      "card": {
+        "context": {
+          "potentialUses": " ",
+          "potentialMisuses": " "
         }
       }
     },
@@ -115,6 +168,9 @@
         },
         "onion": {
           "id": "בצל"
+        },
+        "cheese": {
+          "id": "גבינה"
         }
       }
     },
@@ -146,6 +202,11 @@
         "Star": {
           "id": "כוכב"
         }
+      },
+      "card": {
+        "context": {
+          "potentialMisuses": " "
+        }
       }
     },
     "songs": {
@@ -153,10 +214,24 @@
         "Artist": {
           "id": "אומן"
         }
+      },
+      "card": {
+        "context": {
+          "potentialMisuses": " "
+        }
       }
     },
     "safari_toy": {
       "fields": {
+        "people": {
+          "id": "אנשים"
+        },
+        "elephant": {
+          "id": "פיל"
+        },
+        "alligator": {
+          "id": "תנין"
+        },
         "trees": {
           "id": "עצים"
         }
@@ -167,12 +242,30 @@
         "Length": {
           "id": "אורך"
         }
+      },
+      "card": {
+        "context": {
+          "potentialMisuses": " "
+        }
+      }
+    },
+    "basketball_shots": {
+      "card": {
+        "context": {
+          "potentialMisuses": " "
+        }
       }
     },
     "poke_toy": {
       "fields": {
+        "avocado": {
+          "id": "אבוקדו"
+        },
         "onion": {
           "id": "בצל"
+        },
+        "ginger": {
+          "id": "ג'ינג'ר"
         }
       }
     },
@@ -212,12 +305,24 @@
         "Age": {
           "id": "גיל"
         }
+      },
+      "card": {
+        "context": {
+          "potentialMisuses": " "
+        }
       }
     },
     "shapes_v1_toy": {
       "fields": {
         "size": {
           "id": "גודל"
+        }
+      }
+    },
+    "jeans": {
+      "card": {
+        "context": {
+          "potentialMisuses": " "
         }
       }
     },

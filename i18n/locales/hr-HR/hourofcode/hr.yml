@@ -1459,12 +1459,12 @@ hr:
   tutorial_bcjs2_name: World of JavaScript 2
   tutorial_3dbearmars_name: The Mars Pioneers
   tutorial_bitsboxyak_name: Yak Attack! Make a Card with Typed Code
-  tutorial_blockscadbargraphs_name: Bar Graphs
-  tutorial_blockscadbirdhouses_name: Birdhouses
-  tutorial_blockscadclock_name: Analog Clock
-  tutorial_blockscaddinner_name: Dinner Robot
-  tutorial_blockscadicecream_name: Ice Cream Machine
-  tutorial_blockscadpizza_name: Pizza Printer
+  tutorial_blockscadbargraphs_name: BlocksCAD Bar Graphs
+  tutorial_blockscadbirdhouses_name: BlocksCAD Birdhouses
+  tutorial_blockscadclock_name: BlocksCAD Analog Clock
+  tutorial_blockscaddinner_name: BlocksCAD Dinner Robot
+  tutorial_blockscadicecream_name: BlocksCAD Ice Cream Machine
+  tutorial_blockscadpizza_name: BlocksCAD Pizza Printer
   tutorial_blockscadsugar_name: Sugar Cubes
   tutorial_bsgridlight_name: 'GridLight: Hello World'
   tutorial_bpartscratch_name: 'Art & Music: Color (Scratch)'
@@ -8745,9 +8745,9 @@ hr:
   tutorial_eddog_name: Code a guard dog with Edison
   tutorial_microbit15_name: 'micro:bit: coding towards Global Goal 15, Life on Land'
   tutorial_unity_name: 'Unity Game Development Creator Kit: Beginner Code'
-  tutorial_blockscadtarget_name: Transformation Target Practice
+  tutorial_blockscadtarget_name: BlocksCAD Transformation Target Practice
   tutorial_tcadicicles_name: Designing Icicles With Codeblocks in Tinkercad
-  tutorial_blockscadscale_name: Scale City
+  tutorial_blockscadscale_name: BlocksCAD Scale City
   tutorial_tcadloops_name: Using Loops in Tinkercad to Design a Bursting Star
   tutorial_phidgets_name: A Phidgets Theremin with Processing
   tutorial_modvariables_name: Investigating Variables & Block Values using Cubelets
@@ -9608,7 +9608,7 @@ hr:
   tutorial_robotical2_name: Hour of Code Activity 2 - the Marty Controller
   tutorial_robotical3_name: Hour of Code Activity 3 - Getting Started with Marty Blocks
     Jr
-  tutorial_blockscadvirus_name: Modeling a Virus with Code
+  tutorial_blockscadvirus_name: BlocksCAD Modeling a Virus with Code
   tutorial_robotical1_name: Hour of Code Activity 1 - Marty Unplugged
   tutorial_irobotshapes_name: 'Robotics for K-2: Robot Shapes'
   tutorial_irobotparts_name: 'Robotics for K-2: Robot Parts'
@@ -9820,10 +9820,12 @@ hr:
   tutorial_codespellsnexus_longdescription: Under the mentorship of a mysterious sock
     puppet, you must infiltrate and reprogram a super-intelligent 'Learn to Code'
     app that seeks global domination. Solve puzzles. Learn to code. Hack the Nexus.
-  tutorial_carnegieslime_longdescription: Super Slime Battle is a game that was co-designed
-    between researchers at Carnegie Mellon University and students from the Boys and
-    Girls Clubs of Western PA where students and their (co)robot partners must defend
-    their candy stash from oncoming baddies.
+  tutorial_carnegieslime_longdescription: Every year the Minions of Scarecorp try
+    to steal your candy crops. Booville High's Baddest Slimeball crew have come together
+    to protect the candy crops with slime weapons. Players play as teen monsters who
+    program their collaborative robot (aka 'cobot') pets to help take down the Minions
+    of Scarecorp who are after their town's candy harvest. Choose between four characters
+    and their cobotic pets.
   tutorial_ozotown_longdescription: The Ozobot Blockly OzoTown will teach advanced
     sequencing as students utilize logic, reasoning, and computer science skills to
     navigate real life scenarios. No bot needed!
@@ -10468,7 +10470,7 @@ hr:
   tutorial_edisonmusical_name: Edison's musical talents
   tutorial_codemonkeydiglit_name: Digital Literacy - Mini Course
   tutorial_bsdrockpaper_name: Rock, Paper, Scissors with Python
-  tutorial_microbitreaction_name: micro:bit reaction game
+  tutorial_microbitreaction_name: Igra brzine reakcije
   tutorial_kinderanimal_name: KIBO the Playful Animal
   tutorial_kindersinger_name: KIBO the Singer
   tutorial_microbitwwn_name: micro:bit which way now? activity
@@ -10505,7 +10507,7 @@ hr:
   tutorial_firiapythoncodex_name: Python with CodeX
   tutorial_bekidscoding_name: bekids Coding Challenges
   tutorial_rodocodehr_name: 'Rodocodo: Code Hour'
-  tutorial_microbitdice_name: micro:bit dice
+  tutorial_microbitdice_name: micro:bit igraće kocke
   tutorial_madflashcard_name: Deconstructing Code in a Flash(card)
   tutorial_madappwars_name: App Wars
   tutorial_kodablepuppies_name: 'Robots and Puppies '
@@ -10612,8 +10614,8 @@ hr:
   tutorial_bsdrockpaper_longdescription: Use the Python programming language to build
     a 'Rock, Paper, Scissors' game. Don't worry if you have never tried Python, we
     will walk you through each step.
-  tutorial_microbitreaction_longdescription: Make a micro:bit reaction game with real
-    physical switches made from scrap cardboard and kitchen foil.
+  tutorial_microbitreaction_longdescription: Napravi igru za mjerenje brzine reakcije
+    sa sklopkama koje možeš udarati koliko god hoćeš!
   tutorial_kinderanimal_longdescription: In this lesson, students will turn KIBO into
     a playful animal that moves in response to a program the children create. Students
     can also experiment with KIBO's input and output options to take it further.
@@ -10743,7 +10745,8 @@ hr:
     game for 4-11 year olds. It teaches the fundamentals of coding such as sequencing,
     debugging, loops and functions. It also teaches techniques for solving problems
     so children become more confident, independent learners.'
-  tutorial_microbitdice_longdescription: Shake your micro:bit to make random numbers.
+  tutorial_microbitdice_longdescription: Protresi micro:bit kako bi dobio slučajne
+    brojeve.
   tutorial_madflashcard_longdescription: This lesson exposes students to HTML and
     CSS code and provides them the opportunity to interact with it and see their results
     in real-time.
@@ -11303,7 +11306,7 @@ hr:
   tutorial_kcjhealth_name: The Health & Well-Being Challenge
   tutorial_kcjhealth_string_detail_grades: Ocjene 6+
   tutorial_kcjhealth_string_detail_platforms: ''
-  tutorial_kcjhealth_string_detail_programming_languages: blocks
+  tutorial_kcjhealth_string_detail_programming_languages: Blokovi
   tutorial_kcjhealth_string_platforms: All modern browsers
   tutorial_msftwakanda_longdescription: 'Shuri, Okoye, and Riri must band together
     to help Wakanda. Code your own action-packed activity inspired by Marvel Studios''
@@ -11311,7 +11314,7 @@ hr:
   tutorial_msftwakanda_name: Long Live Wakanda
   tutorial_msftwakanda_string_detail_grades: Ocjene 6+
   tutorial_msftwakanda_string_detail_platforms: ''
-  tutorial_msftwakanda_string_detail_programming_languages: blocks
+  tutorial_msftwakanda_string_detail_programming_languages: Blokovi
   tutorial_msftwakanda_string_platforms: All modern browsers
   school_not_found_heading: We couldn't find your school. Please enter more information.
   school_name: School name

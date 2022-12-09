@@ -1,9 +1,5 @@
 <GamelabJr>
   <config><![CDATA[{
-  "game_id": 64,
-  "created_at": "2022-11-01T23:06:10.000Z",
-  "level_num": "custom",
-  "user_id": 18528,
   "properties": {
     "encrypted": "false",
     "skin": "gamelab",
@@ -45,8 +41,12 @@
     "encrypted_examples": "LMZQ28R8efL8mm+QON0CjYh6B/jccpSKKsPp75dWoqhmqNbSP7Sjb0TWDXOV\nbVbIw00PbmgGTzDBn0+Ybg8IJA==\n",
     "preload_asset_list": null
   },
+  "level_num": "custom",
+  "game_id": 64,
+  "created_at": "2022-11-01T23:06:10.000Z",
+  "user_id": 18528,
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2022-11-01T23:06:10.332+00:00\",\"changed\":[\"cloned from \\\"csc_ecosystems_solution3B_2022\\\"\"],\"cloned_from\":\"csc_ecosystems_solution3B_2022\"}]",
+  "audit_log": "[{\"changed_at\":\"2022-11-01T23:06:10.332+00:00\",\"changed\":[\"cloned from \\\"csc_ecosystems_solution3B_2022\\\"\"],\"cloned_from\":\"csc_ecosystems_solution3B_2022\"},{\"changed_at\":\"2022-12-01 18:03:00 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
@@ -1684,7 +1684,7 @@
         <block type="gamelab_makeNumSprites">
           <field name="ANIMATION_NAME">"fish_10"</field>
           <value name="NUM">
-            <block type="math_number">
+            <block type="math_number" can_disconnect_from_parent="false">
               <field name="NUM">10</field>
             </block>
           </value>
@@ -1692,24 +1692,24 @@
         <block type="gamelab_setProp">
           <field name="PROPERTY">"scale"</field>
           <value name="SPRITE">
-            <block type="gamelab_allSpritesWithAnimation">
+            <block type="gamelab_allSpritesWithAnimation" can_disconnect_from_parent="false">
               <field name="ANIMATION">"fish_10"</field>
             </block>
           </value>
           <value name="VAL">
-            <block type="math_number">
+            <block type="math_number" can_disconnect_from_parent="false">
               <field name="NUM">50</field>
             </block>
           </value>
         </block>
         <block type="gamelab_addBehaviorSimple">
           <value name="SPRITE">
-            <block type="gamelab_allSpritesWithAnimation">
+            <block type="gamelab_allSpritesWithAnimation" can_disconnect_from_parent="false">
               <field name="ANIMATION">"fish_10"</field>
             </block>
           </value>
           <value name="BEHAVIOR">
-            <block type="gamelab_behavior_get">
+            <block type="gamelab_behavior_get" can_disconnect_from_parent="false">
               <mutation/>
               <field name="VAR" id="wandering">wandering</field>
             </block>
@@ -1718,7 +1718,7 @@
         <block type="variables_set">
           <field name="VAR">fishCaught</field>
           <value name="VALUE">
-            <block type="math_number">
+            <block type="math_number" can_disconnect_from_parent="false">
               <field name="NUM">0</field>
             </block>
           </value>
@@ -1726,7 +1726,7 @@
         <block type="math_change">
           <field name="VAR">fishCaught</field>
           <value name="DELTA">
-            <block type="math_number">
+            <block type="math_number" can_disconnect_from_parent="false">
               <field name="NUM">1</field>
             </block>
           </value>
@@ -1734,7 +1734,7 @@
         <block type="gamelab_everyInterval">
           <field name="UNIT">"seconds"</field>
           <value name="N">
-            <block type="math_number">
+            <block type="math_number" can_disconnect_from_parent="false">
               <field name="NUM">10</field>
             </block>
           </value>
@@ -1745,19 +1745,19 @@
         <block type="gamelab_makeNewSpriteAnon">
           <field name="ANIMATION_NAME">"boat-net"</field>
           <value name="LOCATION">
-            <block type="gamelab_location_picker">
+            <block type="gamelab_location_picker" can_disconnect_from_parent="false">
               <field name="LOCATION">{"x":1,"y":45}</field>
             </block>
           </value>
         </block>
         <block type="gamelab_addBehaviorSimple">
           <value name="SPRITE">
-            <block type="gamelab_allSpritesWithAnimation">
+            <block type="gamelab_allSpritesWithAnimation" can_disconnect_from_parent="false">
               <field name="ANIMATION">"boat-net"</field>
             </block>
           </value>
           <value name="BEHAVIOR">
-            <block type="gamelab_behavior_get">
+            <block type="gamelab_behavior_get" can_disconnect_from_parent="false">
               <mutation/>
               <field name="VAR" id="moving east">moving east</field>
             </block>
@@ -1765,7 +1765,7 @@
         </block>
         <block type="gamelab_destroy">
           <value name="THIS">
-            <block type="gamelab_allSpritesWithAnimation">
+            <block type="gamelab_allSpritesWithAnimation" can_disconnect_from_parent="false">
               <field name="ANIMATION">"boat-net"</field>
             </block>
           </value>

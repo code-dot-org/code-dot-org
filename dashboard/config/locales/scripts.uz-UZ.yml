@@ -5285,3 +5285,7 @@ uz:
           title: CS Principles Post-Course Survey
         csp-playground:
           title: CSP Playground
+        devices-2022:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: 'Chapter 2: Building Physical Prototypes'
