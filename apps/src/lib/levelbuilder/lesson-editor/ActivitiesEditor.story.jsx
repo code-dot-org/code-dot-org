@@ -19,6 +19,11 @@ import {
 } from '../../../../test/unit/lib/levelbuilder/lesson-editor/activitiesTestData';
 import {allowConsoleWarnings} from '../../../../test/util/testUtils';
 
+export default {
+  title: 'ActivitiesEditor',
+  component: ActivitiesEditor
+};
+
 const resourcesEditor = createResourcesReducer('lessonResource');
 
 const createStoreWithLessonPlan = () => {
@@ -59,44 +64,44 @@ const createStoreWithoutLessonPlan = () => {
   return store;
 };
 
-export default storybook => {
-  if (IN_UNIT_TEST) {
-    allowConsoleWarnings();
-  }
+if (IN_UNIT_TEST) {
+  allowConsoleWarnings();
+}
 
-  storybook.storiesOf('ActivitiesEditor', module).addStoryTable([
-    {
-      name: 'ActivitiesEditor For Lesson With Lesson Plan',
-      story: () => (
-        <Provider store={createStoreWithLessonPlan()}>
-          <ActivitiesEditor
-            hasLessonPlan={true}
-            allowMajorCurriculumChanges={true}
-          />
-        </Provider>
-      )
-    },
-    {
-      name: 'ActivitiesEditor For Lesson Without Lesson Plan',
-      story: () => (
-        <Provider store={createStoreWithoutLessonPlan()}>
-          <ActivitiesEditor
-            hasLessonPlan={false}
-            allowMajorCurriculumChanges={true}
-          />
-        </Provider>
-      )
-    },
-    {
-      name: 'ActivitiesEditor when major changes are not allowed',
-      story: () => (
-        <Provider store={createStoreWithoutLessonPlan()}>
-          <ActivitiesEditor
-            hasLessonPlan={true}
-            allowMajorCurriculumChanges={false}
-          />
-        </Provider>
-      )
-    }
-  ]);
+//
+// TEMPLATE
+//
+
+const TemplateWithLessonPlan = args => (
+  <Provider store={createStoreWithLessonPlan()}>
+    <ActivitiesEditor {...args} />
+  </Provider>
+);
+
+const TemplateWithoutLessonPlan = args => (
+  <Provider store={createStoreWithoutLessonPlan()}>
+    <ActivitiesEditor {...args} />
+  </Provider>
+);
+
+//
+// STORIES
+//
+
+export const ForLessonWithLessonPlan = TemplateWithLessonPlan.bind({});
+ForLessonWithLessonPlan.args = {
+  hasLessonPlan: true,
+  allowMajorCurriculumChanges: true
+};
+
+export const ForLessonWithoutLessonPlan = TemplateWithoutLessonPlan.bind({});
+ForLessonWithoutLessonPlan.args = {
+  hasLessonPlan: false,
+  allowMajorCurriculumChanges: true
+};
+
+export const WhenMajorChangesNotAllowed = TemplateWithoutLessonPlan.bind({});
+WhenMajorChangesNotAllowed.args = {
+  hasLessonPlan: true,
+  allowMajorCurriculumChanges: false
 };
