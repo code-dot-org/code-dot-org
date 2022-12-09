@@ -82,17 +82,12 @@ WebAudio.prototype.LoadSoundFromBuffer = function(buffer, callback) {
         callback(buffer);
       },
       function(e) {
-        console.log('error ' + e);
+        console.log('error ', e);
       }
     );
   } catch (e) {
     console.log('failed to decode', e);
   }
-
-  /*.then(buffer => {
-    var soundSource = audioCtx.createBufferSource();
-    soundSource.buffer = buffer;
-  });*/
 };
 
 WebAudio.prototype.PlaySoundByBuffer = function(
