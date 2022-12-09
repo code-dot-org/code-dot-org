@@ -20,9 +20,8 @@ module Api::V1::Pd
       application_data = empty_application_data
 
       ROLES.each do |role|
-        # count(locked_at) counts the non-null values in the locked_at column
         apps = get_applications_by_role(role, include_associations: false).
-          select(:status, "count(locked_at) AS locked, count(id) AS total").
+          select(:status, "count(id) AS total").
           group(:status)
 
         if regional_partner_value == REGIONAL_PARTNERS_NONE
@@ -32,11 +31,7 @@ module Api::V1::Pd
         end
 
         apps.group(:status).each do |group|
-          application_data[role][group.status] = if TEACHER_ROLES.include? role
-                                                   {total: group.total}
-                                                 else
-                                                   {total: group.total, locked: group.locked}
-                                                 end
+          application_data[role][group.status] = {total: group.total}
         end
       end
 
@@ -85,12 +80,7 @@ module Api::V1::Pd
         applications = applications.where(regional_partner_id: regional_partner_value == REGIONAL_PARTNERS_NONE ? nil : regional_partner_value)
       end
 
-      serializer =
-        if TYPES_BY_ROLE[role.to_sym] == FACILITATOR_APPLICATION_CLASS
-          FacilitatorApplicationCohortViewSerializer
-        elsif TYPES_BY_ROLE[role.to_sym] == TEACHER_APPLICATION_CLASS
-          TeacherApplicationCohortViewSerializer
-        end
+      serializer = TeacherApplicationCohortViewSerializer
 
       respond_to do |format|
         format.json do
@@ -104,25 +94,12 @@ module Api::V1::Pd
       end
     end
 
-    # GET /api/v1/pd/applications/fit_cohort
-    def fit_cohort
-      serialized_fit_cohort = FACILITATOR_APPLICATION_CLASS.fit_cohort(@applications).map do |application|
-        FitCohortViewSerializer.new(application, scope: {view: 'fit'}).attributes
-      end
-
-      render json: serialized_fit_cohort
-    end
-
     # PATCH /api/v1/pd/applications/1
     def update
       application_data = application_params.to_h
 
       if application_data[:status] != @application.status
         status_changed = true
-      end
-
-      if application_data[:fit_workshop_id] != @application.try(:fit_workshop_id)
-        fit_workshop_changed = true
       end
 
       if application_data[:pd_workshop_id] != @application.pd_workshop_id
@@ -154,21 +131,7 @@ module Api::V1::Pd
         application_data[interview_field] = application_data[interview_field].strip_utf8mb4 if application_data[interview_field]
       end
 
-      # only allow those with full management permission to lock/unlock and edit form data
       if current_user.workshop_admin?
-        if current_user.workshop_admin? && application_admin_params.key?(:locked)
-          # only current facilitator applications can be locked/unlocked
-          if @application.application_type == FACILITATOR_APPLICATION
-            # explicitly convert locked variable to boolean in case it is passed into this function as string
-            locked_param = ActiveModel::Type::Boolean.new.cast(application_admin_params[:locked])
-
-            if locked_param != @application.locked?
-              lock_changed = true
-              locked_param ? @application.lock! : @application.unlock!
-            end
-          end
-        end
-
         @application.form_data_hash = application_admin_params[:form_data] if application_admin_params.key?(:form_data)
       end
 
@@ -179,9 +142,7 @@ module Api::V1::Pd
       @application.update_scholarship_status(scholarship_status) if scholarship_status_changed
 
       @application.update_status_timestamp_change_log(current_user) if status_changed
-      @application.log_fit_workshop_change(current_user) if fit_workshop_changed
       @application.log_summer_workshop_change(current_user) if summer_workshop_changed
-      @application.update_lock_change_log(current_user) if lock_changed
 
       render json: @application, serializer: ApplicationSerializer
     end
@@ -199,7 +160,7 @@ module Api::V1::Pd
       # only workshop admins can see incomplete applications
       filtered_applications = @applications.where(
         application_year: APPLICATION_CURRENT_YEAR,
-        application_type: [TEACHER_APPLICATION, FACILITATOR_APPLICATION],
+        application_type: [TEACHER_APPLICATION],
         user: user
       )
       filtered_applications = filtered_applications.where.not(status: 'incomplete') unless current_user.workshop_admin?
@@ -258,17 +219,12 @@ module Api::V1::Pd
 
     def application_admin_params
       params.require(:application).tap do |application_params|
-        application_params.permit(:locked)
-
-        # Permit form_data: and everything under it
+        # Permit form_data and everything under it
         application_params.permit(:form_data).permit!
       end
     end
 
     TYPES_BY_ROLE = {
-      csf_facilitators: FACILITATOR_APPLICATION_CLASS,
-      csd_facilitators: FACILITATOR_APPLICATION_CLASS,
-      csp_facilitators: FACILITATOR_APPLICATION_CLASS,
       csd_teachers: TEACHER_APPLICATION_CLASS,
       csp_teachers: TEACHER_APPLICATION_CLASS,
       csa_teachers: TEACHER_APPLICATION_CLASS
@@ -282,8 +238,7 @@ module Api::V1::Pd
           app_data[role] = {}
           app_type.statuses.each do |status|
             app_data[role][status] = {
-              total: 0,
-              locked: 0
+              total: 0
             }
           end
         end

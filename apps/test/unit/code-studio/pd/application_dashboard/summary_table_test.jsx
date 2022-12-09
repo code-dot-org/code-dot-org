@@ -11,7 +11,7 @@ describe('SummaryTable', () => {
     assert(
       wrapper.containsMatchingElement(
         <tr>
-          <td>{getApplicationStatuses('teacher').unreviewed}</td>
+          <td>{getApplicationStatuses().unreviewed}</td>
           <td>{10}</td>
         </tr>
       ),
@@ -21,7 +21,7 @@ describe('SummaryTable', () => {
     assert(
       wrapper.containsMatchingElement(
         <tr>
-          <td>{getApplicationStatuses('teacher').accepted}</td>
+          <td>{getApplicationStatuses().accepted}</td>
           <td>{9}</td>
         </tr>
       ),
@@ -32,52 +32,6 @@ describe('SummaryTable', () => {
       wrapper.containsMatchingElement(
         <tr>
           <td>Total</td>
-          <td>{19}</td>
-        </tr>
-      ),
-      'Totals row computes correct sum'
-    );
-  });
-
-  it('computes total applications with locked counts', () => {
-    const wrapper = customShallow(
-      <SummaryTable
-        {...DEFAULT_PROPS}
-        canSeeLocked
-        applicationType="facilitator"
-      />
-    );
-
-    assert(
-      wrapper.containsMatchingElement(
-        <tr>
-          <td>{getApplicationStatuses('facilitator').unreviewed}</td>
-          <td>{1}</td>
-          <td>{9}</td>
-          <td>{10}</td>
-        </tr>
-      ),
-      'Unreviewed row matches data'
-    );
-
-    assert(
-      wrapper.containsMatchingElement(
-        <tr>
-          <td>{getApplicationStatuses('facilitator').accepted}</td>
-          <td>{2}</td>
-          <td>{7}</td>
-          <td>{9}</td>
-        </tr>
-      ),
-      'Accepted row matches data'
-    );
-
-    assert(
-      wrapper.containsMatchingElement(
-        <tr>
-          <td>Total</td>
-          <td>{3}</td>
-          <td>{16}</td>
           <td>{19}</td>
         </tr>
       ),
@@ -89,15 +43,12 @@ describe('SummaryTable', () => {
 const DEFAULT_PROPS = {
   caption: 'Test summary table',
   path: 'foo',
-  applicationType: 'teacher',
   data: {
     unreviewed: {
-      total: 10,
-      locked: 1
+      total: 10
     },
     accepted: {
-      total: 9,
-      locked: 2
+      total: 9
     }
   }
 };
