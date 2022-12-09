@@ -360,6 +360,7 @@ pt:
       educate_beyond: "Além do Code.org"
       educate_inspire: "Inspire um Estudante"
       educate_community: "Comunidade On-Line"
+      educate_requirements: "Requisitos Técnicos"
       educate_tools: "Vídeos e ferramentas"
       about_us: "Quem Somos"
       about_leadership: "Liderança"
@@ -586,6 +587,7 @@ pt:
     art_from_html_old: 'Minecraft&#8482; &copy; %{current_year} Microsoft. Todos os direitos reservados. Star Wars&#8482; &copy; %{current_year} Disney e Lucasfilm. Todos os direitos reservados. Frozen&#8482; &copy; %{current_year} Disney. Todos os direitos reservados. A Era do Gelo&#8482; &copy; %{current_year} 20th Century Fox. Todos os direitos reservados. Angry Birds&#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. Todos os direitos reservados. Plants vs. Zombies&#8482; &copy; %{current_year} Electronic Arts Inc. Todos os direitos reservados. O Incrível Mundo de Gumball é uma marca registrada e &copy; 2015 Cartoon Network.'
     code_from_html: 'A Code.org usa o p5.play, que tem a licensa <a href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html"> GNU LGPL 2.1</a>.'
     powered_by_aws: 'Powered by Amazon Web Services'
+    built_on_github: 'Construído no GitHub da Microsoft'
     google_copyright: '© Google Inc. usado com permissão. Google Classroom é uma marca registrada de Google Inc.'
     trademark: '&copy; Code.org, %{current_year}. Code.org&reg;, o logotipo da CODE e Hora do Código&reg; são marcas registradas da Code.org.'
     copyright: 'Direitos Autorais'
@@ -597,6 +599,7 @@ pt:
     tos_short: 'Termos'
     tos: 'Termos de Serviço'
     privacy: 'Política de Privacidade'
+    privacy_updated: 'Política de Privacidade Atualizada'
     secure: 'Versão Segura'
     report_abuse: 'Reportar abuso'
     built_on_code_studio: 'Criado no Code Studio'
@@ -672,6 +675,7 @@ pt:
       title: 'Festa dançante'
     hello-world:
       title: 'Olá Mundo'
+      body: 'Selecione entre quatro temas divertidos para codificar os personagens interativos em um mundo criado por você.'
     poem-art:
       title: 'Arte poética'
     hoc:

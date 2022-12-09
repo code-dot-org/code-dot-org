@@ -899,10 +899,6 @@
             '"confetti"': Konfetti
             '"hearts"': hjerter
             '"rain"': regn
-      FunctionBlocks_representManipulative:
-        options:
-          BEHAVIOR:
-            draggable(): er flyttbar
       gamelab_addTarget:
         options:
           OPT:
@@ -1482,6 +1478,8 @@
             '"sound://category_bell/long_bell_notification.mp3"': Bjelle
             '"sound://category_pop/bubble_pop_cluster_2.mp3"': Bobble
             '"sound://category_jump/vibrant_game_jumping_up_1.mp3"': Hopp
+      Poetry_playSoundOptionsSpace:
+        text: spillLyd {SOUND}
       Poetry_setBackground:
         text: sett bakgrunnsfarge {COLOR}
       Poetry_setBackgroundEffect:
@@ -1674,3 +1672,10 @@
           DIR:
             right: høyre ↻
             left: venstre ↺
+      storylab_setForegroundEffect2:
+        options:
+          EFFECT:
+            '"bubbles"': Bobler
+            '"confetti"': Konfetti
+            '"hearts"': hjerter
+            '"rain"': regn

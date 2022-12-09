@@ -4,6 +4,8 @@ ar:
     blocks:
       AmysBlocks_setPromptWithChoices:
         text: مستخدم فوري {QUESTION} للمتغير {VAR} مع خيارات {A}{B}{C}
+      AmysBlocks_spriteSayVar:
+        text: "{SPRITE}قُل{TEXT1}"
       BadGuys_makeNewBadGuysSprite:
         text: جعل جديده {ANIMATION_NAME} العفريت في {LOCATION}
       BadGuys_setSizeAll_dropdown:
@@ -1009,6 +1011,13 @@ ar:
             '"macklemore90"': Macklemore - Can't Hold Us
             '"hammer"': MC Hammer - U Can't Touch This
             '"peas"': The Black Eyed Peas - I Got a Feeling
+      DansBlocks_getMicroscope:
+        text: يحتوي المجهر على {INPUT1}
+        options:
+          INPUT1:
+            '1': عصير ليمون
+            '3': baking soda
+            '5': both
       DansBlocks_setForegroundEffect2:
         text: عمل {EFFECT} تأثير
         options:
@@ -1021,12 +1030,20 @@ ar:
             '"starburst"': النجمي
             '"glass"': زجاج محطم
             '"twinkling"': وميض
-      FunctionBlocks_representManipulative:
+      DansBlocks_setMicroscope:
         options:
-          BEHAVIOR:
-            draggable(): كونها قابلة للسحب
-            wandering(): التحرك
-            shrinking(): الانقباض
+          INPUT1:
+            '1': عصير ليمون
+            '3': baking soda
+            '5': both
+      FunctionBlocks_communicate:
+        text: التواصل {VAR1} مع {SPRITE1COSTUME}
+      FunctionBlocks_makeManipulative2:
+        text: اصنع {NUM} نقوش متحركة {ANIMATION_NAME} جديدة {BEHAVIOR}
+      FunctionBlocks_representManipulative:
+        text: قم بتمثيل {NUM} النقوش المتحركة {ANIMATION_NAME} الجديدة [BEHAVIOR][2]
+      FunctionBlocks_spriteSayVar:
+        text: "{SPRITE}قُل{TEXT1}"
       gamelab_addBehaviorSimple:
         text: العفريت {SPRITE} يبدا {BEHAVIOR}
       gamelab_addTarget:
@@ -1369,6 +1386,7 @@ ar:
             "'sound://category_space/Pillars_SFX.mp3'": ركائز
             "'sound://category_space/Southern_ring_SFX.mp3'": الحلقة الجنوبية
             "'sound://category_space/Supernova_SFX.mp3'": سوبرنوفا
+            "'sound://category_space/Tycho_SFX.mp3'": تايكو
       gamelab_playSpeech:
         text: ألعاب النطق {SOUND}
       gamelab_playerBehaviors:
@@ -1932,8 +1950,39 @@ ar:
         text: x إحداثيات {SPRITE}
       Mikelab_yLocationOf:
         text: إحداثيات Y من {SPRITE}
+      ParticlesBlocks_getMicroscope:
+        text: يحتوي المجهر على {INPUT1}
+        options:
+          INPUT1:
+            '1': عصير ليمون
+            '3': baking soda
+            '5': both
+      ParticlesBlocks_setMicroscope:
+        options:
+          INPUT1:
+            '1': عصير ليمون
+            '3': baking soda
+            '5': both
       ParticlesBlocks_statesOfMatter:
         text: "{BEHAVIOR}"
+        options:
+          BEHAVIOR:
+            new Behavior(solid, []): صلب
+            new Behavior(liquid, []): سائل
+            new Behavior(wandering, []): غاز
+      ParticlesBlocks_statesOfMatter2:
+        text: اضبط {COSTUME} إلى سلوك {BEHAVIOR}
+        options:
+          BEHAVIOR:
+            '"solid"': جسيم صلب
+            '"liquid"': جسيم سائل
+            '"gas"': جسيم غاز
+      ParticlesBlocks_statesOfMatter_testing:
+        options:
+          BEHAVIOR:
+            '"solid"': جسيم صلب
+            '"liquid"': جسيم سائل
+            '"gas"': جسيم غاز
       Poetry_addFrame:
         options:
           BRUSH:
@@ -2002,6 +2051,21 @@ ar:
             '"sound://category_achievements/peaceful_win_1.mp3"': فوز
             '"sound://category_explosion/vibrant_game_arcade_game_negative_hit.mp3"': دوامة
             '"sound://category_achievements/peaceful_win_6.mp3"': نغمات الرياح
+      Poetry_playSoundOptionsSpace:
+        text: بلاي ساوند {SOUND}
+        options:
+          SOUND:
+            "'sound://category_space/Blackhole_SFX.mp3'": ثقب أسود
+            "'sound://category_space/Bullet_cluster_SFX.mp3'": كتلة رصاص
+            "'sound://category_space/Carina_SFX.mp3'": كارينا
+            "'sound://category_space/Cassiopeia_SFX.mp3'": كاسيوبيا
+            "'sound://category_space/Crab_nebula_SFX.mp3'": كراب نيبولا
+            "'sound://category_space/Launch_SFX.mp3'": إطلاق
+            "'sound://category_space/Lift_Off.mp3'": انطلاق
+            "'sound://category_space/Pillars_SFX.mp3'": ركائز
+            "'sound://category_space/Southern_ring_SFX.mp3'": الحلقة الجنوبية
+            "'sound://category_space/Supernova_SFX.mp3'": سوبرنوفا
+            "'sound://category_space/Tycho_SFX.mp3'": تايكو
       Poetry_setAuthor:
         text: تحديد المنشيء{AUTHOR}
       Poetry_setBackground:
@@ -2331,6 +2395,16 @@ ar:
           DIR:
             right: إلى اليمين ↻
             left: إلى اليسار ↺
+      storylab_setForegroundEffect2:
+        text: عمل {EFFECT} تأثير
+        options:
+          EFFECT:
+            '"bubbles"': فقاعات
+            '"confetti"': قصاصات من الورق
+            '"hearts"': قلوب
+            '"rain"': مطر
+            '"starburst"': النجمي
+            '"twinkling"': وميض
       storylab_setHeading:
         text: ضبط عنوان {HEADING}
       storylab_setSubheading:

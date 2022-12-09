@@ -199,6 +199,10 @@
           "word": "Händelse",
           "definition": "En handling som gör att något händer."
         },
+        "models_and_simulations/outbreak/unversioned": {
+          "word": "",
+          "definition": ""
+        },
         "code/sports/unversioned": {
           "word": "Kod"
         },

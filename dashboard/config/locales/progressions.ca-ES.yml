@@ -3,7 +3,9 @@ ca:
   data:
     progressions:
       'Artist: Variables': 'Artista: Variables'
+      Assessment: Avaluació
       Bass, Mid, and Treble: Greus, mitjans i aguts
+      Challenge: Repte
       Dance Crews: Grups de dansa
       Debugging: Depuració
       Design Mode: Mode de disseny
@@ -15,12 +17,33 @@ ca:
       Functions: Funcions
       Functions with Parameters: Funcions amb Paràmetres
       Get In Formation: Posa't en formació
+      Lesson Extras: Lliçons addicionals
       Lists: Llistes
       Measures: Mesures
+      'Mini-Project: Royal Battle': 'Miniprojecte: Batalla real'
+      'Mini-project: Jorge the Dog': 'Miniprojecte: El gosset Jorge'
       Overview: Vista general
       Pair Programming: Programació per parelles
+      Practice: Pràctica
+      Programming with Rey and BB-8: Programació amb la Rey i el BB-8
       Quarter Notes: Notes negres
+      Reflection: Reflexió
+      Skill Building: Desenvolupament d'habilitats
       Speed it Up, Slow it Down: Vés més ràpid, vés més lent
+      The Harvester: La segadora
       Variables: Variables
+      Video: Vídeo
+      'Video: Debugging with the Step Button': 'Vídeo: Depurar amb el botó de pas'
+      'Video: Ice Age Loops': 'Vídeo: Bucles a l''Edat de gel'
+      'Video: Introduction to Play Lab': 'Vïdeo: Introducció al Laboratori de Jocs'
+      'Video: Loops in Artist': 'Vídeo: Bucles a l''Artista'
+      'Video: Programming with Blocks': 'Vídeo: Programació amb blocs'
+      'Video: Programming with Rey and BB-8': 'Vídeo: Programació amb la Rey i el
+        BB-8'
+      'Video: The Artist in Code Studio': 'Vídeo: L''artista a Code Studio'
+      'Video: The Collector': 'Vídeo: La col·leccionista'
+      'Video: The Harvester': 'Vídeo: La segadora'
+      'Video: Using the Repeat Block': 'Vídeo: El bloc de repetició'
+      Warm Up: Escalfament
       Where'd They Go?: A on han anat?
       Wrap-up: Recapitulació

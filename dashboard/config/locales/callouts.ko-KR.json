@@ -2532,6 +2532,9 @@
         },
         "helloworld_food_sounds_space-2022": {
           "hello_world_new": "새 블록!"
+        },
+        "helloworld_food_click_space-2022": {
+          "hw_Run": "먼저 여기를 클릭하세요!"
         }
       }
     }

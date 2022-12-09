@@ -869,12 +869,6 @@ bg:
             '"bubbles"': Балончета
             '"hearts"': сърца
             '"rain"': дъжд
-      FunctionBlocks_representManipulative:
-        options:
-          BEHAVIOR:
-            draggable(): може да се мести
-            wandering(): блуждаейки
-            shrinking(): смаляване
       gamelab_addBehaviorSimple:
         text: спрайт {SPRITE} започва да {BEHAVIOR}
       gamelab_allSpritesWithAnimation:
@@ -1104,6 +1098,11 @@ bg:
             "'sound://category_transition/trippy_robotic_transition.mp3'": роботски преход
             "'sound://category_retro/retro_game_ui_select_6.mp3'": изберете
             "'sound://category_digital/jump_7.mp3'": скок
+      gamelab_playSoundOptionsSoccer:
+        options:
+          SOUND:
+            "'sound://category_sports/Airhorn_SFX.mp3'": сирена
+            "'sound://category_sports/One_Whistle_SFX.mp3'": свиркане
       gamelab_playerBehaviors:
         options:
           BEHAVIOR:
@@ -1657,3 +1656,9 @@ bg:
           DIR:
             right: дясно ↻
             left: ляво ↺
+      storylab_setForegroundEffect2:
+        options:
+          EFFECT:
+            '"bubbles"': Балончета
+            '"hearts"': сърца
+            '"rain"': дъжд

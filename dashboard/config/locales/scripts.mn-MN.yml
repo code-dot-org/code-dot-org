@@ -4446,6 +4446,10 @@ mn:
           lesson_groups:
             lessonGroup-2:
               display_name: Судалгаа
+        csa2-2023:
+          lessons:
+            lesson-4:
+              name: Хувьсагчууд
         csd4-2023:
           lesson_groups:
             lessonGroup-2:
@@ -4535,3 +4539,9 @@ mn:
               display_name: Хичээлийн дараах судалгаа
         csp-post-survey-2023:
           title: КШУ-ны зарчмууд Хичээлийн дараах судалгаа
+        csp-playground:
+          title: CSP тоглоомын талбай
+        devices-2022:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: '2-р бүлэг: Биет ноорог үүсгэх'

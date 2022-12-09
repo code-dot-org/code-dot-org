@@ -10,6 +10,7 @@ import Notification from '@cdo/apps/templates/Notification';
 import * as color from '../util/color';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import {studio} from '@cdo/apps/lib/util/urlHelpers';
+import {currentLocation} from '@cdo/apps/utils';
 import PropTypes from 'prop-types';
 import queryString from 'query-string';
 import $ from 'jquery';
@@ -45,9 +46,9 @@ class RegionalPartnerSearch extends Component {
     let error = false;
     let loading = false;
 
-    const partnerId = queryString.parse(window.location.search).partner;
-    const zip = queryString.parse(window.location.search).zip;
-    const nominated = queryString.parse(window.location.search).nominated;
+    const partnerId = queryString.parse(currentLocation().search).partner;
+    const zip = queryString.parse(currentLocation().search).zip;
+    const nominated = queryString.parse(currentLocation().search).nominated;
 
     if (partnerId) {
       if (partnerId === '0') {

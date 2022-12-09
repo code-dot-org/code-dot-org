@@ -497,7 +497,8 @@ th:
     dance-2019:
       title: Dance Party
     hello-world:
-      title: Hello World
+      title: สวัสดีชาวโลก
+      body: เลือกธีมสนุกๆ จากสี่ธีมเพื่อเขียนโค้ดตัวอักษรแบบอินเทอร์แอคทีฟในโลกที่คุณสร้างขึ้น
     poem-art:
       title: ภาพปกบทกวี
     hoc:

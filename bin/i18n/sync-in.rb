@@ -123,11 +123,26 @@ def localize_external_sources
   Dir.glob(dataset_files).each do |dataset_file|
     original_dataset = JSON.parse(File.read(dataset_file))
 
-    # Currently only including fields for translation.
-    # Use field id as unique identifier.
-    fields_as_hash = original_dataset["fields"].map {|field| [field["id"], field]}.to_h
+    # Converts array to map and uses the field id as a unique identifier.
+    fields_as_hash = original_dataset["fields"].map do |field|
+      [
+        field["id"],
+        {
+          "id" => field["id"],
+          "description" => field["description"]
+        }
+      ]
+    end.to_h
+
     final_dataset = {
-      "fields" => fields_as_hash
+      "fields" => fields_as_hash,
+      "card" => {
+        "description" => original_dataset.dig("card", "description"),
+        "context" => {
+          "potentialUses" => original_dataset.dig("card", "context", "potentialUses"),
+          "potentialMisuses" => original_dataset.dig("card", "context", "potentialMisuses")
+        }
+      }
     }
 
     File.open(dataset_file, "w") do |f|
@@ -663,12 +678,19 @@ def localize_markdown_content
     hourofcode/unplugged-conditionals-with-cards.md.partial
     international/about.md.partial
     poetry.md.partial
+    ../views/hoc2022_create_activities.md.partial
+    ../views/hoc2022_play_activities.md.partial
+    ../views/hoc2022_explore_activities.md.partial
   ]
   markdown_files_to_localize.each do |path|
     original_path = File.join('pegasus/sites.v3/code.org/public', path)
     original_path_exists = File.exist?(original_path)
     puts "#{original_path} does not exist" unless original_path_exists
     next unless original_path_exists
+    # This reforms the `../` relative paths so they appear as though they are
+    # within the `public` path. This is a legacy solution to keep things clean
+    # when viewed by the translators in crowdin.
+    path = path[3...] if path.start_with? "../"
     # Remove the .partial if it exists
     source_path = File.join(I18N_SOURCE_DIR, 'markdown/public', File.dirname(path), File.basename(path, '.partial'))
     FileUtils.mkdir_p(File.dirname(source_path))

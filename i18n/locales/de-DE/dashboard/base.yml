@@ -45,6 +45,7 @@ de:
         personal_email_markdown: "Persönliche E-Mail-Adresse [((klick hier wenn Du keine E-Mail-Adresse hast)](%{url})"
         username: 'Benutzername'
         password: 'Passwort'
+        verified_teacher: 'Verifizierter Lehrer'
         password_confirmation: 'Passwort Bestätigung'
         current_password: 'Aktuelles Passwort'
         locale: 'Sprache'
@@ -270,6 +271,7 @@ de:
   teacher_mailer:
     new_teacher_subject: 'Willkommen bei Code.org!'
     delete_teacher_subject: 'Code.org Benachrichtigung: Dein Konto wurde gelöscht'
+    verified_teacher_subject: 'Code.org Verifikation - Das hat geklappt!'
   section:
     your_section:
       one: 'Dein Bereich:'
@@ -608,6 +610,7 @@ de:
     try_hour_of_code: 'Probiere die "Hour of Code" aus!'
     store: 'Geschäft'
     cookie_notice: 'Cookie-Meldung'
+    view_code: 'Zeige den Code'
   reference_area:
     title: 'Brauchst du Hilfe?'
     subtitle: 'Schau dir diese Videos und Hinweise an'
@@ -1047,12 +1050,15 @@ de:
         not_listed: 'Bevorzugter Termin nicht aufgeführt'
         none: 'Möchte ich nicht beantworten'
       school_country:
+        barbados: 'Barbados'
+        belize: 'Belize'
         canada: 'Kanada'
         chile: 'Chile'
         colombia: 'Kolumbien'
         israel: 'Israel'
         malaysia: 'Malaysien'
         mexico: 'Mexiko'
+        paraguay: 'Paraguay'
         thailand: 'Thailand'
         uzbekistan: 'Usbekistan'
       ages:
@@ -1160,4 +1166,20 @@ de:
       forbidden: "Benutzer kann den Sperrstatus des Schülers nicht aktualisieren"
   reset_predict_progress_button: "Antwort löschen"
   pixelation:
+    raw_format: "Raw-Format"
+    raw_format_alt: "Bits ohne Formatierung anzeigen"
+    readable_format: "Lesbares Format"
+    readable_format_alt: "Durch Pixel getrennte Bits anzeigen"
+    save_image: "Bild speichern"
+    actual_size: "Originalgröße"
+    image_file_format_header: "Bilddateiformat"
+    image_file_format_width: "Breite: 1 Byte"
+    image_file_format_height: "Höhe: 1 Byte"
+    image_file_format_bits_per_pixel: "Bit pro Pixel: 1 Byte"
+    image_file_format_data_a: "n Bit Pixeldaten"
+    image_file_format_data_b: "n = Breite * Höhe * Bit pro Pixel"
+    image_width: "Bildbreite"
+    image_height: "Bildhöhe"
+    bits_per_pixel_header: "Bit pro Pixel"
     binary: "Binärdatei"
+    hexadecimal: "Hexadezimal"

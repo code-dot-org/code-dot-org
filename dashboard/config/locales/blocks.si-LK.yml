@@ -503,3 +503,7 @@ si:
         text: ඉදිරියට යන්න
       craft_placeTorch:
         text: විදුලි පන්දමක් පිහිටුවන්න
+      storylab_setForegroundEffect2:
+        options:
+          EFFECT:
+            '"hearts"': හදවත්

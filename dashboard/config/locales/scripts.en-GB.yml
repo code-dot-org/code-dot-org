@@ -294,6 +294,10 @@ en-GB:
           lessons:
             lesson-6:
               name: Loops
+        csa2-2023:
+          lessons:
+            lesson-4:
+              name: Variables
         csp4-2023:
           lesson_groups:
             csp_variables:

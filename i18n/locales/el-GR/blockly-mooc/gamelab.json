@@ -1,4 +1,11 @@
 {
-  "foo":"foo",
-  "fooTooltip":"do foo"
+  "dropletBlock_createSprite_param2": "πλάτος",
+  "dropletBlock_createSprite_param3": "ύψος",
+  "dropletBlock_setCollider_param0": "τύπος",
+  "dropletBlock_setCollider_param4": "ύψος",
+  "dropletBlock_setColliderEach_param0": "τύπος",
+  "dropletBlock_setColliderEach_param4": "ύψος",
+  "errorLoadingAnimation": "Φαίνεται να αντιμετωπίζουμε κάποιο πρόβλημα στη φόρτωση της κίνησης \"{animationName}\". Επιβεβαιώστε ότι είστε συνδεδεμένοι στο διαδίκτυο και επιχειρήστε να ανανεώσετε τη σελίδα. Αν το πρόβλημα επιμείνει, τότε είναι πιθανόν η κίνηση αυτή να είναι χαλασμένη. Σε αυτή την περίπτωση, ίσως χρειαστεί να συνεχίσετε αφαιρώντας αυτήν την κίνηση.",
+  "reinfFeedbackMsg": "Τελειώσατε! Πατήστε \"Συνέχεια\" για να προχωρήσετε στο επόμενο επίπεδο.",
+  "shareGame": "Μοιράσου το παιχνίδι σου:"
 }

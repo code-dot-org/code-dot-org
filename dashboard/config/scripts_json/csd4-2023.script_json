@@ -14,7 +14,7 @@
     },
     "new_name": null,
     "family_name": "csd4",
-    "serialized_at": "2022-10-20 23:28:54 UTC",
+    "serialized_at": "2022-11-30 18:01:03 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -1536,13 +1536,7 @@
       "key": "6ec09e7a-34a8-4691-9fcc-f9a63cf90286",
       "position": 2,
       "properties": {
-        "description": "**Discuss:** Students should write their responses in their journal first, then share their ideas with a partner before discussing as a full class. Eventually, direct conversation towards the fact that to empathize with other people means to consider their wants, needs, or concerns.",
-        "tips": [
-          {
-            "type": "discussionGoal",
-            "markdown": "**Goal:** This discussion can be fairly free-flowing and open-ended. While you want to eventually arrive at a shared understanding of what it means to empathize, students will be working on their understanding of the word over the entire unit. There's no need to settle on a single fixed definition, so treat this discussion as an introduction to a theme of the unit.\n"
-          }
-        ]
+        "description": "**Discuss:** Students should write their responses in their journal first, then share their ideas with a partner before discussing as a full class. Eventually, direct conversation towards the fact that to empathize with other people means to consider their wants, needs, or concerns.\n\n**Discussion Goal**: This discussion can be fairly free-flowing and open-ended. While you want to eventually arrive at a shared understanding of what it means to empathize, students will be working on their understanding of the word over the entire unit. There's no need to settle on a single fixed definition, so treat this discussion as an introduction to a theme of the unit."
       },
       "seeding_key": {
         "activity_section.key": "6ec09e7a-34a8-4691-9fcc-f9a63cf90286",
@@ -1726,13 +1720,7 @@
       "key": "c8c1ba5d-3506-4d82-b0ee-7efd0d6436e8",
       "position": 2,
       "properties": {
-        "description": "**Discuss:** Have students journal their thoughts. As they share with their neighbors what they wrote, ask them to also discuss whether they care about a product being usable or looking good. After a couple of minutes allow a couple of partners to bubble up what they discussed.",
-        "tips": [
-          {
-            "type": "discussionGoal",
-            "markdown": "**Goal:** Highlight that there are many kinds of user needs that we need to empathize with as designers. In particular call out that usability of a product is an important and separate consideration from whether it is merely aesthetically pleasing.\r\n"
-          }
-        ]
+        "description": "**Discuss:** Have students journal their thoughts. As they share with their neighbors what they wrote, ask them to also discuss whether they care about a product being usable or looking good. After a couple of minutes allow a couple of partners to bubble up what they discussed.\n\n**Discussion Goal**: Highlight that there are many kinds of user needs that we need to empathize with as designers. In particular, call out that the usability of a product is an important and separate consideration from whether it is merely aesthetically pleasing."
       },
       "seeding_key": {
         "activity_section.key": "c8c1ba5d-3506-4d82-b0ee-7efd0d6436e8",
@@ -1915,13 +1903,7 @@
       "key": "816a8fae-8eea-4a23-8f4e-ad7d8ed2abb8",
       "position": 2,
       "properties": {
-        "description": "**Discuss:** Have students think silently before having them share with their tables and then the class as a whole.",
-        "tips": [
-          {
-            "type": "discussionGoal",
-            "markdown": "**Goal:** This should be a very quick introduction to the lesson. You are looking to call out that designing for other people requires you to consider their needs instead of your own, which can often be challenging. This discussion will lead into the video introduced just after the warm up.\r\n"
-          }
-        ]
+        "description": "**Discuss:** Have students think silently before having them share with their tables and then the class as a whole.\n\n**Discussion Goal**: This should be a very quick introduction to the lesson. You are looking to call out that designing for other people requires you to consider their needs instead of your own, which can often be challenging. This discussion will lead into the video introduced just after the warm-up."
       },
       "seeding_key": {
         "activity_section.key": "816a8fae-8eea-4a23-8f4e-ad7d8ed2abb8",
@@ -2202,13 +2184,7 @@
       "key": "b791db00-8437-45fe-8891-c46b99190326",
       "position": 2,
       "properties": {
-        "description": "**Discuss:** Allow students a minute to think silently before having them share with their tables and then the class as a whole.",
-        "tips": [
-          {
-            "type": "discussionGoal",
-            "markdown": "**Goal:** Students should reflect on how different voices helped elevate the ideas the group had and may have contributed to the product they will begin designing tomorrow. This attention to teamwork and valuing others ideas will be important throughout the unit as students work together to develop apps for others.\r\n"
-          }
-        ]
+        "description": "**Discuss:** Allow students a minute to think silently before having them share with their tables and then the class as a whole.\n\n**Discussion Goal**: Students should reflect on how different voices helped elevate the ideas the group had and may have contributed to the product they will begin designing tomorrow. This attention to teamwork and valuing others' ideas will be important throughout the unit as students work together to develop apps for others.\n\n"
       },
       "seeding_key": {
         "activity_section.key": "b791db00-8437-45fe-8891-c46b99190326",
@@ -2242,13 +2218,7 @@
       "key": "8df7b0f7-22c5-41d8-85d7-de65c112685b",
       "position": 3,
       "properties": {
-        "description": "**Discuss:** Allow students a minute to remind themselves of their work yesterday. Once they’ve written these notes in their journal, ask them to take turns sharing this information with their groups from yesterday.",
-        "tips": [
-          {
-            "type": "discussionGoal",
-            "markdown": "**Goal:** This is a quick refresher of the work that students did yesterday and an opportunity to share different product ideas before making a decision as a group in the first part of the activity.\r\n"
-          }
-        ]
+        "description": "**Discuss:** Allow students a minute to remind themselves of their work yesterday. Once they’ve written these notes in their journal, ask them to take turns sharing this information with their groups from yesterday.\n\n**Discussion Goal**: This is a quick refresher of the work that students did yesterday and an opportunity to share different product ideas before making a decision as a group in the first part of the activity.\n\n"
       },
       "seeding_key": {
         "activity_section.key": "8df7b0f7-22c5-41d8-85d7-de65c112685b",
@@ -2345,14 +2315,8 @@
       "key": "ad89431e-0d65-473c-908d-d69e5aa42ca0",
       "position": 1,
       "properties": {
-        "description": "**Prompt:** What was one challenge in designing a product for someone other than yourself? What was one activity from today or yesterday that made this challenge easier?",
-        "name": "Journal\r",
-        "tips": [
-          {
-            "type": "discussionGoal",
-            "markdown": "**Goal:** Answers will vary, especially if students are still learning to empathize with users other than themselves. Encourage students to see how brainstorming and collaborating with their peers can be helpful in generating ideas and thinking outside of their own experiences.\r\n"
-          }
-        ]
+        "description": "**Prompt:** What was one challenge in designing a product for someone other than yourself? What was one activity from today or yesterday that made this challenge easier?\n\n**Discussion Goal**: Answers will vary, especially if students are still learning to empathize with users other than themselves. Encourage students to see how brainstorming and collaborating with their peers can be helpful in generating ideas and thinking outside of their own experiences.\n\n",
+        "name": "Journal\r"
       },
       "seeding_key": {
         "activity_section.key": "ad89431e-0d65-473c-908d-d69e5aa42ca0",
@@ -2375,13 +2339,7 @@
       "key": "5c4ee35a-cde7-491b-a16f-930b0ff1df22",
       "position": 2,
       "properties": {
-        "description": "**Discuss:** Have students write down their responses in a journal, then ask students to share with the class. Keep a running list of responses on the board. Once everyone has had an opportunity to share, write down a proposed shared definition of an app as \"a piece of software designed for a purpose\".",
-        "tips": [
-          {
-            "type": "discussionGoal",
-            "markdown": "**Goal:** This discussion aims to introduce the definition of an app. Most suggestions students provide should be able to be tied to this definition. Apps can provide services, organize or provide information, or might just be a game or other form of entertainment. In all cases, you just want to establish an app as a piece of software built for a purpose.\r\n"
-          }
-        ]
+        "description": "**Discuss:** Have students write down their responses in a journal, then ask students to share with the class. Keep a running list of responses on the board. Once everyone has had an opportunity to share, write down a proposed shared definition of an app as \"a piece of software designed for a purpose\".\n\n**Discussion Goal**: This discussion aims to introduce the definition of an app. Most suggestions students provide should be able to be tied to this definition. Apps can provide services, organize or provide information, or might just be a game or other form of entertainment. In all cases, you just want to establish an app as a piece of software built for a purpose.\n\n"
       },
       "seeding_key": {
         "activity_section.key": "5c4ee35a-cde7-491b-a16f-930b0ff1df22",
@@ -2489,13 +2447,7 @@
       "key": "2eea1a31-5362-4d2b-8702-2dd6fdbd7925",
       "position": 6,
       "properties": {
-        "description": "**Discuss:** Have students discuss with their partner, then share ideas with the class.",
-        "tips": [
-          {
-            "type": "discussionGoal",
-            "markdown": "**Goal:** Encourage students to identify specific elements of the prototype that support their arguments, and to consider the user needs that this prototype might have been designed to address\r\n"
-          }
-        ]
+        "description": "**Discuss:** Have students discuss with their partner, then share ideas with the class.\n\n**Discussion Goal**: Encourage students to identify specific elements of the prototype that support their arguments, and to consider the user needs that this prototype might have been designed to address\n\n"
       },
       "seeding_key": {
         "activity_section.key": "2eea1a31-5362-4d2b-8702-2dd6fdbd7925",
@@ -2639,13 +2591,7 @@
       "key": "59e5017a-9870-46a1-82e3-85f344eeb17b",
       "position": 2,
       "properties": {
-        "description": "**Discuss:** Students should silently write down their ideas. Then move to a full class discussion of the types of issues students have had with apps in the past. Direct conversation towards what specifically about the user interface or user experience of the app was lacking, and follow up by asking how those aspects of the app could be improved.",
-        "tips": [
-          {
-            "type": "discussionGoal",
-            "markdown": "**Goal:** Explore how many of the issues we have when using an app can be solved with changes to the user interface. This is primarily a brainstorm and a way for students to make personal connections between the apps they use every day and the activity we’ll complete in class to help improve an app’s design and user interface.\r\n"
-          }
-        ]
+        "description": "**Discuss:** Students should silently write down their ideas. Then move to a full class discussion of the types of issues students have had with apps in the past. Direct conversation towards what specifically about the user interface or user experience of the app was lacking, and follow up by asking how those aspects of the app could be improved.\n\n**Discussion Goal**: Explore how many of the issues we have when using an app can be solved with changes to the user interface. This is primarily a brainstorm and a way for students to make personal connections between the apps they use every day and the activity we’ll complete in class to help improve an app’s design and user interface.\n\n"
       },
       "seeding_key": {
         "activity_section.key": "59e5017a-9870-46a1-82e3-85f344eeb17b",
@@ -2782,13 +2728,7 @@
       "key": "4ec25eec-a68a-445b-9298-7d82ae659c0f",
       "position": 2,
       "properties": {
-        "description": "**Discuss:** Have students write a response in their journal, then discuss with their neighbors. If time, have a full group discussion relating user feedback to the problem solving process.",
-        "tips": [
-          {
-            "type": "discussionGoal",
-            "markdown": "**Goal:** Students should gravitate towards placing user feedback in the Reflect or Try stages of the problem solving process. Try to guide the conversation towards what next-steps could be, emphasizing that the diagram has arrows going in both directions. Being flexible with this process is important when developing an app to meet user’s needs.\r\n\r\nFor example, if user feedback is in the Reflect stage, then you can move backwards to the Try stage to make quick changes and test again, or the feedback may cause you to move forward to the Define stage where you discovered a whole new user need that you’ve decided to address. \r\n"
-          }
-        ]
+        "description": "**Discuss:** Have students write a response in their journal, then discuss with their neighbors. If time, have a full group discussion relating user feedback to the problem-solving process.\n\n**Discussion Goal**: Students should gravitate towards placing user feedback in the Reflect or Try stages of the problem-solving process. Try to guide the conversation toward what the next steps could be, emphasizing that the diagram has arrows going in both directions. Being flexible with this process is important when developing an app to meet users’ needs.\n\nFor example, if user feedback is in the Reflect stage, then you can move backward to the Try stage to make quick changes and test again, or the feedback may cause you to move forward to the Define stage where you discovered a whole new user need that you’ve decided to address."
       },
       "seeding_key": {
         "activity_section.key": "4ec25eec-a68a-445b-9298-7d82ae659c0f",
@@ -2811,13 +2751,7 @@
       "key": "f6de7d53-d71a-47f4-b531-b694c8a1fab1",
       "position": 2,
       "properties": {
-        "description": "**Discuss:** Have students brainstorm in their journal, then discuss with a partner, then invite students to share out as a full group.",
-        "tips": [
-          {
-            "type": "discussionGoal",
-            "markdown": "**Goal:** There are many possible answers here, but it’s important to steer the class conversation towards the idea of a user interview. If we want to make an app for a certain group of people, we need to talk to them and make sure we understand their needs and interests when designing the app. If students don’t make this point explicitly, that’s okay - you should still mention it in the remarks that transition to the next activity.\r\n"
-          }
-        ]
+        "description": "**Discuss:** Have students brainstorm in their journal, then discuss with a partner, then invite students to share out as a full group.\n\n**Discussion Goal**: There are many possible answers here, but it’s important to steer the class conversation toward the idea of a user interview. If we want to make an app for a certain group of people, we need to talk to them and make sure we understand their needs and interests when designing the app. If students don’t make this point explicitly, that’s okay - you should still mention it in the remarks that transition to the next activity.\n\n"
       },
       "seeding_key": {
         "activity_section.key": "f6de7d53-d71a-47f4-b531-b694c8a1fab1",
@@ -2978,13 +2912,7 @@
       "key": "969879ce-612b-4d43-8ee6-4b82b7b9b5ab",
       "position": 2,
       "properties": {
-        "description": "**Discuss:** Have students journal, then share in their groups, then ask a few students to share with the class.",
-        "tips": [
-          {
-            "type": "discussionGoal",
-            "markdown": "**Goal:** Students are essentially predicting what they will do in the next few days. Answers will probably reflect activities from the last few lessons, such as developing a paper prototype, doing user testing, and responding to feedback.\r\n"
-          }
-        ]
+        "description": "**Discuss:** Have students journal, then share in their groups, then ask a few students to share with the class.\n\n**Discussion Goal**: Students are essentially predicting what they will do in the next few days. Answers will probably reflect activities from the last few lessons, such as developing a paper prototype, doing user testing, and responding to feedback.\n\n"
       },
       "seeding_key": {
         "activity_section.key": "969879ce-612b-4d43-8ee6-4b82b7b9b5ab",
@@ -3007,13 +2935,7 @@
       "key": "88d43cc4-b00b-48c6-ac46-d5f12b8a7332",
       "position": 2,
       "properties": {
-        "description": "**Discuss:** Have students share their ideas. You can record them on the board for reference throughout the class.",
-        "tips": [
-          {
-            "type": "discussionGoal",
-            "markdown": "**Goal:** Before sending students off to design their paper prototypes give them an opportunity to brainstorm attributes of effective designs. For example they may bring up\r\n\r\n* Simple interfaces\r\n* Reusing design elements\r\n* Placing common elements in the same place on each screen\r\n* Draw attention to what's important\r\n"
-          }
-        ]
+        "description": "**Discuss:** Have students share their ideas. You can record them on the board for reference throughout the class.\n\n**Discussion Goal**: Before sending students off to design their paper prototypes give them an opportunity to brainstorm attributes of effective designs. For example, they may bring up:\n\n* Simple interfaces\n* Reusing design elements\n* Placing common elements in the same place on each screen\n* Draw attention to what's important"
       },
       "seeding_key": {
         "activity_section.key": "88d43cc4-b00b-48c6-ac46-d5f12b8a7332",
@@ -3291,13 +3213,7 @@
       "key": "b62a56fb-bb27-4258-88bd-e59c0a56af80",
       "position": 2,
       "properties": {
-        "description": "**Discuss:** Ask students to share their reflections with the class.",
-        "tips": [
-          {
-            "type": "discussionGoal",
-            "markdown": "**Goal:** Highlight the difficulty in viewing projects from another person's perspective, especially when you are the one doing the creating. This is a skill students will need to continue to use in this unit. Call out skills like interpreting user needs from interviews and live tests, scoping large projects, designing user interfaces, and general organization that students will continue to use in the second chapter of the unit.\r\n"
-          }
-        ]
+        "description": "**Discuss:** Ask students to share their reflections with the class.\n\n**Discussion Goal**: Highlight the difficulty in viewing projects from another person's perspective, especially when you are the one doing the creating. This is a skill students will need to continue to use in this unit. Call out skills like interpreting user needs from interviews and live tests, scoping large projects, designing user interfaces, and general organization that students will continue to use in the second chapter of the unit.\n\n"
       },
       "seeding_key": {
         "activity_section.key": "b62a56fb-bb27-4258-88bd-e59c0a56af80",

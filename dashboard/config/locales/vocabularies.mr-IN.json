@@ -858,14 +858,24 @@
           "definition": "खास प्रोग्रॅमिंग न करूनसुद्धा कॉम्प्युटर्स पॅटर्न्स कसे ओळखतात आणि निर्णय कसे घेतात   "
         },
         "code/poem-art/unversioned": {
-          "word": "कोड"
+          "word": "कोड",
+          "definition": ""
         },
         "event/poem-art/unversioned": {
           "word": "इव्हेंट",
           "definition": "एखादी कृती ज्यामुळे काहीतरी घडते."
         },
         "program/poem-art/unversioned": {
-          "word": "प्रोग्रॅम"
+          "word": "प्रोग्रॅम",
+          "definition": ""
+        },
+        "mood/poem-art/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "line/poem-art/unversioned": {
+          "word": "",
+          "definition": ""
         },
         "sprite/coursef/2021": {
           "word": "स्प्राईट",

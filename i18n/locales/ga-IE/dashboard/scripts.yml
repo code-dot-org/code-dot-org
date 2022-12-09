@@ -2586,6 +2586,15 @@ ga:
               display_name: Ábhar
             lessonGroup-5:
               display_name: Ceachtanna Malartacha
+        csa2-2023:
+          lessons:
+            lesson-4:
+              name: Athróga
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Ábhar
+            lessonGroup-4:
+              display_name: Ceachtanna Malartacha
         csd4-2023:
           lesson_groups:
             lessonGroup-2:
@@ -2674,3 +2683,7 @@ ga:
               display_name: Suirbhé Iarchúrsa
         csp-post-survey-2023:
           title: 'Foras Feasa ar an Ríomheolaíocht: Suirbhé Iarchúrsa'
+        devices-2022:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: 'Caibidil 2: Fréamhshamhlacha Fisiceacha'
