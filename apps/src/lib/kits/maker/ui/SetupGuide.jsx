@@ -6,6 +6,8 @@ import SetupInstructions from '@cdo/apps/lib/kits/maker/ui/SetupInstructions';
 import Notification, {NotificationType} from '@cdo/apps/templates/Notification';
 import {isCodeOrgBrowser, getChromeVersion} from '../util/browserChecks';
 import applabI18n from '@cdo/applab/locale';
+import i18n from '@cdo/locale';
+import {MAKER_DEPRECATION_SUPPORT_URL} from '../util/makerConstants';
 
 const style = {
   twoColumns: {
@@ -56,44 +58,46 @@ export default class SetupGuide extends React.Component {
     // Experiment 'microbit', displays Circuit Playground and Micro:Bit descriptions.
     let isMicrobit = experiments.isEnabled('microbit');
     return (
-      <>
+      <div>
         {isCodeOrgBrowser() && (
           <Notification
             type={NotificationType.warning}
-            notice="Maker App Not Supported"
-            details="It's going away"
+            notice={i18n.makerSetupDeprecationWarningAppTitle()}
+            details={i18n.makerSetupDeprecationWarningAppDetails()}
+            detailsLinkText={i18n.makerDeprecationWarningLinkText()}
+            detailsLink={MAKER_DEPRECATION_SUPPORT_URL}
             dismissible
           />
         )}
-        {getChromeVersion() < 90 && (
+        {getChromeVersion() <= 90 && (
           <Notification
             type={NotificationType.warning}
-            notice="Chrome Version Not Supported"
-            details="You need to update"
+            notice={i18n.makerSetupDeprecationWarningOldChromeTitle()}
+            details={i18n.makerSetupDeprecationWarningOldChromeDetails()}
+            detailsLinkText={i18n.makerDeprecationWarningLinkText()}
+            detailsLink={MAKER_DEPRECATION_SUPPORT_URL}
             dismissible
           />
         )}
-        <div>
-          <h1>{applabI18n.makerSetupPageTitle()}</h1>
-          {isMicrobit ? (
-            <div style={style.twoColumns}>
-              <DescriptionCard
-                {...this.setupGuideContent('circuitPlayground')}
-                divStyle={style.descriptionFlexCard}
-              />
-              <DescriptionCard
-                {...this.setupGuideContent('microbit')}
-                divStyle={style.descriptionFlexCard}
-              />
-            </div>
-          ) : (
-            <DescriptionCard {...this.setupGuideContent('circuitPlayground')} />
-          )}
-          <div id="setup-status-mount">
-            <SetupInstructions />
+        <h1>{applabI18n.makerSetupPageTitle()}</h1>
+        {isMicrobit ? (
+          <div style={style.twoColumns}>
+            <DescriptionCard
+              {...this.setupGuideContent('circuitPlayground')}
+              divStyle={style.descriptionFlexCard}
+            />
+            <DescriptionCard
+              {...this.setupGuideContent('microbit')}
+              divStyle={style.descriptionFlexCard}
+            />
           </div>
+        ) : (
+          <DescriptionCard {...this.setupGuideContent('circuitPlayground')} />
+        )}
+        <div id="setup-status-mount">
+          <SetupInstructions />
         </div>
-      </>
+      </div>
     );
   }
 }
