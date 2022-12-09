@@ -14700,6 +14700,11 @@ react-transition-group@^2.0.0:
     prop-types "^15.6.2"
     react-lifecycles-compat "^3.0.4"
 
+react-typist-component@^1.0.5:
+  version "1.0.5"
+  resolved "https://registry.yarnpkg.com/react-typist-component/-/react-typist-component-1.0.5.tgz#e89f5e08919587da1aa6809670d48d6999d77cb0"
+  integrity sha512-UMMwkHFU7qiBA+w/knNMdNZ5lR184pb2cKOjBH7qZpW7ZVWxFZ+iwXXDwz+JpvO/iyGbMnfS8l643LDmcnE37Q==
+
 react-typist@^2.0.5:
   version "2.0.5"
   resolved "https://registry.yarnpkg.com/react-typist/-/react-typist-2.0.5.tgz#9830395a73a03e6368e1392ecb98edaa3a648e44"

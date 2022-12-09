@@ -3,8 +3,15 @@ import React, {useContext, useEffect, useState} from 'react';
 import classNames from 'classnames';
 import moduleStyles from './instructions.module.scss';
 import {AnalyticsContext} from './context';
+import Typist from 'react-typist-component';
 
-const Instructions = ({instructions, baseUrl, vertical, right}) => {
+const Instructions = ({
+  instructions,
+  baseUrl,
+  vertical,
+  right,
+  onInstructionsPresenting
+}) => {
   const [currentPanel, setCurrentPanel] = useState(0);
   const [showBigImage, setShowBigImage] = useState(false);
 
@@ -24,11 +31,16 @@ const Instructions = ({instructions, baseUrl, vertical, right}) => {
     if (nextPanelIndex !== null) {
       setCurrentPanel(nextPanelIndex);
       setShowBigImage(false);
+      onInstructionsPresenting(true);
     }
   };
 
   const imageClicked = () => {
     setShowBigImage(!showBigImage);
+  };
+
+  const onShowing = () => {
+    onInstructionsPresenting(false);
   };
 
   const analyticsReporter = useContext(AnalyticsContext);
@@ -99,14 +111,20 @@ const Instructions = ({instructions, baseUrl, vertical, right}) => {
                 )}
               </div>
             )}
-            <div
-              className={classNames(
-                moduleStyles.text,
-                vertical && moduleStyles.textVertical
-              )}
+            <Typist
+              typingDelay={25}
+              onTypingDone={index === currentPanel && onShowing}
+              key={currentPanel}
             >
-              {panel.text}
-            </div>
+              <div
+                className={classNames(
+                  moduleStyles.text,
+                  vertical && moduleStyles.textVertical
+                )}
+              >
+                {panel.text}
+              </div>
+            </Typist>
           </div>
         );
       })}
@@ -143,7 +161,8 @@ Instructions.propTypes = {
   instructions: PropTypes.object,
   baseUrl: PropTypes.string.isRequired,
   vertical: PropTypes.bool,
-  right: PropTypes.bool
+  right: PropTypes.bool,
+  onInstructionsPresenting: PropTypes.func.isRequired
 };
 
 export default Instructions;

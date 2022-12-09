@@ -60,7 +60,8 @@ class UnconnectedMusicView extends React.Component {
       updateNumber: 0,
       timelineAtTop: false,
       showInstructions: true,
-      instructionsPosIndex: 1
+      instructionsPosIndex: 1,
+      nonInstructionsOpacity: 0.3
     };
   }
 
@@ -297,6 +298,10 @@ class UnconnectedMusicView extends React.Component {
     );
   };
 
+  onInstructionsPresenting = active => {
+    this.setState({nonInstructionsOpacity: active ? 0.3 : 1});
+  };
+
   renderInstructions(position) {
     if (position === InstructionsPositions.TOP) {
       return (
@@ -310,6 +315,7 @@ class UnconnectedMusicView extends React.Component {
           <Instructions
             instructions={this.state.instructions}
             baseUrl={baseUrl}
+            onInstructionsPresenting={this.onInstructionsPresenting}
           />
           <div
             id="share-area"
@@ -339,6 +345,7 @@ class UnconnectedMusicView extends React.Component {
           baseUrl={baseUrl}
           vertical={true}
           right={position === InstructionsPositions.RIGHT}
+          onInstructionsPresenting={this.onInstructionsPresenting}
         />
       </div>
     );
@@ -356,6 +363,7 @@ class UnconnectedMusicView extends React.Component {
           moduleStyles.timelineArea,
           timelineAtTop ? moduleStyles.timelineTop : moduleStyles.timelineBottom
         )}
+        style={{opacity: this.state.nonInstructionsOpacity}}
       >
         <Controls
           isPlaying={this.state.isPlaying}
@@ -401,7 +409,11 @@ class UnconnectedMusicView extends React.Component {
               instructionsPosition === InstructionsPositions.LEFT &&
               this.renderInstructions(InstructionsPositions.LEFT)}
 
-            <div id="blockly-area" className={moduleStyles.blocklyArea}>
+            <div
+              id="blockly-area"
+              className={moduleStyles.blocklyArea}
+              style={{opacity: this.state.nonInstructionsOpacity}}
+            >
               <div className={moduleStyles.topButtonsContainer}>
                 <TopButtons clearCode={this.clearCode} />
               </div>
