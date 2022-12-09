@@ -38,7 +38,6 @@ export default class MakerLanding extends Component {
       }
     ];
 
-    // decide whether notifications should go in container or not
     return (
       <div style={styles.container}>
         <Notification

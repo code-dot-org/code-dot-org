@@ -56,7 +56,9 @@ export default class SetupGuide extends React.Component {
 
   render() {
     // Experiment 'microbit', displays Circuit Playground and Micro:Bit descriptions.
-    let isMicrobit = experiments.isEnabled('microbit');
+    const isMicrobit = experiments.isEnabled('microbit');
+    const chromeVersion = getChromeVersion();
+
     return (
       <div>
         {isCodeOrgBrowser() && (
@@ -69,7 +71,7 @@ export default class SetupGuide extends React.Component {
             dismissible
           />
         )}
-        {getChromeVersion() <= 90 && (
+        {chromeVersion && chromeVersion <= 90 && (
           <Notification
             type={NotificationType.warning}
             notice={i18n.makerSetupDeprecationWarningOldChromeTitle()}
