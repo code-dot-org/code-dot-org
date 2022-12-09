@@ -304,7 +304,7 @@ Resources:
         -
           Name: drone-autoscaler
           Essential: true
-          Image: drone/autoscaler:1.7.3
+          Image: drone/autoscaler:1.8.2
           MemoryReservation: 1024
           LogConfiguration:
             LogDriver: awslogs
