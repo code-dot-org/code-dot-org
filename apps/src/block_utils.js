@@ -553,6 +553,7 @@ const findAndRemoveInputConfig = (args, inputName) => {
   if (argIndex !== -1) {
     return args.splice(argIndex, 1)[0];
   }
+  // console.error(`Trying to find ${inputName}`, args);
   throw new Error(`${inputName} not found in args`);
 };
 
@@ -1008,7 +1009,13 @@ exports.createJsWrapperBlockCreator = function(
         strict: strictTypes.includes(thisType)
       });
     }
-    const inputConfigs = determineInputs(blockText, inputs, strictTypes);
+    let inputConfigs;
+    try {
+      inputConfigs = determineInputs(blockText, inputs, strictTypes);
+    } catch (error) {
+      console.error(`Error in block "${blockName}" parsing "${blockText}"`);
+      throw error;
+    }
     const inputRows = groupInputsByRow(inputConfigs, inputTypes);
     if (inputRows.length === 1) {
       inline = false;
@@ -1268,6 +1275,7 @@ exports.installCustomBlocks = function({
 
   const blocksByCategory = {};
   blockDefinitions.forEach(({name, pool, category, config, helperCode}) => {
+    // console.log(config, helperCode, pool);
     const blockName = createJsWrapperBlock(config, helperCode, pool);
     if (!blocksByCategory[category]) {
       blocksByCategory[category] = [];
