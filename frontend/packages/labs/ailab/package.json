@@ -1,6 +1,6 @@
 {
   "name": "@code-dot-org/ml-playground",
-  "version": "0.0.41",
+  "version": "0.0.43",
   "main": "dist/main.js",
   "repository": {
     "type": "git",
@@ -73,7 +73,7 @@
   },
   "files": [
     "dist/**/!(mainDev.js)",
-    "i18n/ailab.json",
+    "i18n/mlPlayground.json",
     "public/datasets/*.json"
   ],
   "dependencies": {
