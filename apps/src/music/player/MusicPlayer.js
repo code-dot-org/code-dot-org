@@ -66,13 +66,6 @@ export default class MusicPlayer {
 
     this.soundEvents.push(soundEvent);
 
-    // Sort the sounds by play time, earliest first, so that when we
-    // render the timeline, we can prioritize by play time when
-    // allocating rows to sounds.
-    this.soundEvents.sort(
-      (soundEventA, soundEventB) => soundEventA.when - soundEventB.when
-    );
-
     if (this.isPlaying) {
       this.playSoundEvent(soundEvent);
     }
