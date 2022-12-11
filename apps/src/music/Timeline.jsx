@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import UniqueSounds from './utils/uniqueSounds';
+import UniqueSounds from './utils/UniqueSounds';
 
 const barWidth = 60;
 
