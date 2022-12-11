@@ -228,7 +228,7 @@ class UnconnectedMusicView extends React.Component {
 
     this.player.playSong();
 
-    this.setState({isPlaying: true});
+    this.setState({isPlaying: true, currentAudioElapsedTime: 0});
 
     console.log('playSong', Blockly.getWorkspaceCode());
   };
