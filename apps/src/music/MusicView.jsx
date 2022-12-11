@@ -18,6 +18,7 @@ import {AnalyticsContext} from './context';
 import TopButtons from './TopButtons';
 import Globals from './globals';
 import MusicBlocklyWorkspace from './blockly/MusicBlocklyWorkspace';
+import SoundUploader from './utils/SoundUploader';
 
 const baseUrl = 'https://curriculum.code.org/media/musiclab/';
 
@@ -50,6 +51,7 @@ class UnconnectedMusicView extends React.Component {
     this.analyticsReporter = new AnalyticsReporter();
     this.codeHooks = {};
     this.musicBlocklyWorkspace = new MusicBlocklyWorkspace();
+    this.soundUploader = new SoundUploader(this.player);
 
     this.state = {
       library: null,
@@ -60,8 +62,7 @@ class UnconnectedMusicView extends React.Component {
       updateNumber: 0,
       timelineAtTop: false,
       showInstructions: true,
-      instructionsPosIndex: 1,
-      currentUploadSoundIndex: 0
+      instructionsPosIndex: 1
     };
   }
 
@@ -146,32 +147,6 @@ class UnconnectedMusicView extends React.Component {
     this.setPlaying(false);
 
     this.player.clearAllSoundEvents();
-  };
-
-  uploadSound = file => {
-    const self = this;
-    var reader = new FileReader();
-    reader.onload = function(e) {
-      console.log(
-        'Loading',
-        file.name,
-        'into library item',
-        self.state.currentUploadSoundIndex
-      );
-
-      // The uploaded sound will replace a sound in the library.
-      self.player.loadSoundFromBuffer(
-        self.state.currentUploadSoundIndex,
-        e.target.result
-      );
-
-      // And if we upload again, we'll replace the next sound in the library.
-      self.setState({
-        currentUploadSoundIndex: self.state.currentUploadSoundIndex + 1
-      });
-    };
-
-    reader.readAsArrayBuffer(file);
   };
 
   onBlockSpaceChange = e => {
@@ -432,7 +407,7 @@ class UnconnectedMusicView extends React.Component {
               <div className={moduleStyles.topButtonsContainer}>
                 <TopButtons
                   clearCode={this.clearCode}
-                  uploadSound={this.uploadSound}
+                  uploadSound={file => this.soundUploader.uploadSound(file)}
                 />
               </div>
               <div id="blockly-div" />
