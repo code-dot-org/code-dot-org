@@ -2528,7 +2528,7 @@
           "courseD_artist_binary8_c": "Neboj se dělat chyby! Zkus napsat kód a spusť ho, abys viděl(a), co se stane, i když jsi úlohu ještě nerozluštil(a)."
         },
         "courseD_bee_conditionals2": {
-          "courseD_bee_conditionals2_a": "Někdy tam květina bude a někdy nebude. Pokud chceš spustit svůj kód v obou případech, nezapomeň použít `když` příkaz.\n",
+          "courseD_bee_conditionals2_a": "Někdy tam květina bude a někdy nebude. Pokud chceš spustit svůj kód v obou případech, nezapomeň použít `když` příkaz.",
           "courseD_bee_conditionals2_c": "Nemusíš kontrolovat přítomnost pláství, pod mrakem může být jen květ nebo prázdný prostor."
         },
         "courseD_bee_conditionals2_2018": {
@@ -3179,7 +3179,7 @@
           "courseE_artist_functions1_b": "Je v pořádku, pokud se čáry překrývají."
         },
         "courseE_artist_functions2": {
-          "courseD_artist_functions2_a": "Váš program by měl:\n- použít funkci\n- posunout se vpřed o 100 + 75 pixelů\n- použít funkci"
+          "courseD_artist_functions2_a": "Váš program by měl:\n\n-   použít funkci\n-   posunout se vpřed o 100 + 75 pixelů\n-   použít funkci"
         },
         "courseE_artist_functions2_copy": {
           "courseD_artist_functions2_a": "Váš program by měl:\n- použít funkci\n- posunout se vpřed o 100 + 75 pixelů\n- použít funkci"

@@ -14,7 +14,7 @@
     },
     "new_name": null,
     "family_name": "csd2",
-    "serialized_at": "2022-10-20 20:40:02 UTC",
+    "serialized_at": "2022-11-29 18:44:32 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -3695,8 +3695,19 @@
       }
     },
     {
-      "key": "334270f2-4cb7-4cb8-ab6b-1fc4d689f528",
+      "key": "dcdd4828-3248-471d-939a-edd4f8124d4d",
       "position": 2,
+      "properties": {
+        "progression_name": "Sample Website"
+      },
+      "seeding_key": {
+        "activity_section.key": "dcdd4828-3248-471d-939a-edd4f8124d4d",
+        "lesson_activity.key": "43d6dc30-9304-42b4-a177-d25de8b0b401"
+      }
+    },
+    {
+      "key": "334270f2-4cb7-4cb8-ab6b-1fc4d689f528",
+      "position": 3,
       "properties": {
         "description": "**Discuss:** Have students share different stylings on the page.\n\n**Discussion Goal:** This discussion serves as a review of the CSS properties students have already learned and showcases some of the new properties they will be learning in this lesson. Some of the new properties showcased are:\n\n* Adding background colors to things\n* Being able to move things around on the page (the images to the left of the text)\n* Being able to add borders to and round corners of images"
       },
@@ -3707,7 +3718,7 @@
     },
     {
       "key": "15083466-46fe-425f-b322-0629b74edccd",
-      "position": 3,
+      "position": 4,
       "properties": {
         "description": "Today we are going to learn more properties we can use to style our web pages, which will  allow you to add some of the styles we listed in this discussion.",
         "remarks": true
@@ -3719,7 +3730,7 @@
     },
     {
       "key": "2436a0d7-577d-4366-8e43-c48648a3d4da",
-      "position": 4,
+      "position": 5,
       "properties": {
         "description": "**Question of the Day: How can we style the images and layouts of our pages?**"
       },
@@ -3747,19 +3758,8 @@
       }
     },
     {
-      "key": "3443c480-9c3d-45a9-8d78-605f86919103",
-      "position": 2,
-      "properties": {
-        "progression_name": "Sample Website"
-      },
-      "seeding_key": {
-        "activity_section.key": "3443c480-9c3d-45a9-8d78-605f86919103",
-        "lesson_activity.key": "9b7d9347-ba76-4a24-8e80-0328e74c039b"
-      }
-    },
-    {
       "key": "1660229b-38eb-4f0e-b337-75d8f1b1fd73",
-      "position": 3,
+      "position": 2,
       "properties": {
         "progression_name": "Exploration"
       },
@@ -3770,7 +3770,7 @@
     },
     {
       "key": "f34c5761-faf3-48a9-89df-980141afdd41",
-      "position": 4,
+      "position": 3,
       "properties": {
         "progression_name": "Skill Building"
       },
@@ -3781,7 +3781,7 @@
     },
     {
       "key": "262f7584-b3f8-4068-91d9-0b8e672ee9a1",
-      "position": 5,
+      "position": 4,
       "properties": {
         "progression_name": "Practice"
       },
@@ -3792,7 +3792,7 @@
     },
     {
       "key": "a8c4b0c0-84d5-4ef7-8795-0f08ddc610a7",
-      "position": 6,
+      "position": 5,
       "properties": {
         "progression_name": "Assessment",
         "tips": [
@@ -3809,7 +3809,7 @@
     },
     {
       "key": "153a2ceb-989c-4aa4-9abe-252d5c466739",
-      "position": 7,
+      "position": 6,
       "properties": {
         "progression_name": "Challenges"
       },
@@ -6778,9 +6778,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSD U2 Sample CSS layout_2023"
-        ],
         "progression": "Sample Website"
       },
       "bonus": false,
@@ -6791,7 +6788,7 @@
         "lesson.key": "Styling Elements with CSS",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csd2-2023",
-        "activity_section.key": "3443c480-9c3d-45a9-8d78-605f86919103"
+        "activity_section.key": "dcdd4828-3248-471d-939a-edd4f8124d4d"
       },
       "level_keys": [
         "CSD U2 Sample CSS layout_2023"
@@ -8446,7 +8443,7 @@
         "lesson.key": "Styling Elements with CSS",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csd2-2023",
-        "activity_section.key": "3443c480-9c3d-45a9-8d78-605f86919103"
+        "activity_section.key": "dcdd4828-3248-471d-939a-edd4f8124d4d"
       }
     },
     {

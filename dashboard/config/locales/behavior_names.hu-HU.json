@@ -1662,13 +1662,12 @@
           "spinning left": "forgatás balra",
           "spinning right": "forgatás jobbra",
           "shrinking": "zsugorodás",
-          "growing": "növekedni",
-          "moving south": "délre menni",
-          "moving north": "északra menni",
-          "jittering": "idegeskedni",
-          "moving west": "nyugatra menni",
-          "patrolling": "járőrözni",
-          "swimming left and right": "jobbra-balra úszkálni"
+          "growing": "növekedés",
+          "moving south": "mozgatás délre",
+          "moving north": "mozgatás északra",
+          "jittering": "remegés",
+          "moving west": "mozgatás nyugatra",
+          "patrolling": "járőrözés"
         },
         "CourseE_hoops": {
           "wandering": "kóborlás",
@@ -2012,17 +2011,16 @@
           "spinning right": "forgatás jobbra"
         },
         "Fish Tank 2-validated_2021": {
-          "shrinking": "zsugorodni",
-          "patrolling": "járőrözni",
-          "wandering": "vándorolni",
-          "growing": "növekedni",
-          "jittering": "idegeskedni",
-          "moving east": "keletre menni",
-          "moving north": "északra menni",
-          "moving south": "délre menni",
-          "moving west": "nyugatra menni",
-          "spinning right": "jobbra forogni",
-          "swimming left and right": "jobbra-balra úszás"
+          "shrinking": "zsugorodás",
+          "patrolling": "járőrözés",
+          "wandering": "kóborlás",
+          "growing": "növekedés",
+          "jittering": "remegés",
+          "moving east": "mozgatás keletre",
+          "moving north": "mozgatás északra",
+          "moving south": "mozgatás délre",
+          "moving west": "mozgatás nyugatra",
+          "spinning right": "forgatás jobbra"
         },
         "Fish Tank 3-validated_2019": {
           "shrinking": "zsugorodás",
@@ -2049,17 +2047,16 @@
           "spinning right": "forgatás jobbra"
         },
         "Fish Tank 3-validated_2021": {
-          "shrinking": "zsugorodni",
-          "patrolling": "járőrözni",
-          "wandering": "vándorolni",
-          "growing": "növekedni",
-          "jittering": "idegeskedni",
-          "moving east": "keletre menni",
-          "moving north": "északra menni",
-          "moving south": "délre menni",
-          "moving west": "nyugatra menni",
-          "spinning right": "jobbra forogni",
-          "swimming left and right": "jobbra-balra úszkálni"
+          "shrinking": "zsugorodás",
+          "patrolling": "járőrözés",
+          "wandering": "kóborlás",
+          "growing": "növekedés",
+          "jittering": "remegés",
+          "moving east": "mozgatás keletre",
+          "moving north": "mozgatás északra",
+          "moving south": "mozgatás délre",
+          "moving west": "mozgatás nyugatra",
+          "spinning right": "forgatás jobbra"
         },
         "Fish Tank 4-validated_2019": {
           "shrinking": "zsugorodás",
@@ -2086,17 +2083,16 @@
           "spinning right": "forgatás jobbra"
         },
         "Fish Tank 4-validated_2021": {
-          "shrinking": "zsugorodni",
-          "patrolling": "járőrözni",
-          "wandering": "vándorolni",
-          "growing": "növekedni",
-          "jittering": "idegeskedni",
-          "moving east": "keletre menni",
-          "moving north": "északra menni",
-          "moving south": "délre menni",
-          "moving west": "nyugatra menni",
-          "spinning right": "jobbra forogni",
-          "swimming left and right": "jobbra-balra úszkálni"
+          "shrinking": "zsugorodás",
+          "patrolling": "járőrözés",
+          "wandering": "kóborlás",
+          "growing": "növekedés",
+          "jittering": "remegés",
+          "moving east": "mozgatás keletre",
+          "moving north": "mozgatás északra",
+          "moving south": "mozgatás délre",
+          "moving west": "mozgatás nyugatra",
+          "spinning right": "forgatás jobbra"
         },
         "Fish Tank 5-validated_2019": {
           "shrinking": "zsugorodás",
@@ -2123,17 +2119,16 @@
           "spinning right": "forgatás jobbra"
         },
         "Fish Tank 5-validated_2021": {
-          "shrinking": "zsugorodni",
-          "patrolling": "járőrözni",
-          "wandering": "vándorolni",
-          "growing": "növekedni",
-          "jittering": "idegeskedni",
-          "moving east": "keletre menni",
-          "moving north": "északra menni",
-          "moving south": "délre menni",
-          "moving west": "nyugatra menni",
-          "spinning right": "jobbra forogni",
-          "swimming left and right": "jobbra-balra úszkálni"
+          "shrinking": "zsugorodás",
+          "patrolling": "járőrözés",
+          "wandering": "kóborlás",
+          "growing": "növekedés",
+          "jittering": "remegés",
+          "moving east": "mozgatás keletre",
+          "moving north": "mozgatás északra",
+          "moving south": "mozgatás délre",
+          "moving west": "mozgatás nyugatra",
+          "spinning right": "forgatás jobbra"
         },
         "Fish Tank 6-validated_2019": {
           "shrinking": "zsugorodás",
@@ -2160,17 +2155,16 @@
           "spinning right": "forgatás jobbra"
         },
         "Fish Tank 6-validated_2021": {
-          "shrinking": "zsugorodni",
-          "patrolling": "járőrözni",
-          "wandering": "vándorolni",
-          "growing": "növekedni",
-          "jittering": "idegeskedni",
-          "moving east": "keletre menni",
-          "moving north": "északra menni",
-          "moving south": "délre menni",
-          "moving west": "nyugatra menni",
-          "spinning right": "jobbra forogni",
-          "swimming left and right": "jobbra-balra úszkálni"
+          "shrinking": "zsugorodás",
+          "patrolling": "járőrözés",
+          "wandering": "kóborlás",
+          "growing": "növekedés",
+          "jittering": "remegés",
+          "moving east": "mozgatás keletre",
+          "moving north": "mozgatás északra",
+          "moving south": "mozgatás délre",
+          "moving west": "mozgatás nyugatra",
+          "spinning right": "forgatás jobbra"
         },
         "OPD-K5-spritelab-2": {
           "shrinking": "zsugorodás",

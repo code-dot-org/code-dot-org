@@ -2,7 +2,7 @@
 ca:
   errors:
     messages:
-      not_saved: 'Si us plau corregeixi els errors següents:'
+      not_saved: 'Corregeix els errors següents:'
       too_young: Aquest contingut té restriccions d'edat en el lloc i no està disponible
         per als estudiants més joves.
       teacher_must_accept_terms: Aquest contingut té restriccions d'edat en el lloc
@@ -482,6 +482,7 @@ ca:
     make_my_own_app: Fer la meva aplicació
     how_it_works: Com funciona
     try_hour_of_code: Proveu una hora de codi!
+    store: Botiga
   reference_area:
     title: Necessites ajuda?
     subtitle: Mira aquests vídeos i consells

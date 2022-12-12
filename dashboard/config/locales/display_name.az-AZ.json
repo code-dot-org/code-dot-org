@@ -325,8 +325,8 @@
         "helloworld_retro_costumes": "Kostyumlar",
         "helloworld_retro_location": "Zaman Hadisələri",
         "CDEF_video_SpritesInAction_2021": "Sprite Necə Hazırlanır ",
-        "CourseEF_video_IntroSpriteLab_2021": "Bu Sprite Laboratoriyasıdır",
-        "CourseEF_video_MakeSprite_2021": "Pəri Necə Hazırlanır",
+        "CourseEF_video_IntroSpriteLab_2021": "Bu Sprite Laboratoriyasıdır ",
+        "CourseEF_video_MakeSprite_2021": "Sprite Necə Hazırlanır ",
         "MC_HOC_2017_02_Cole": "Ferma",
         "MC_HOC_2017_02_Cole_2019": "Ferma",
         "MC_HOC_2017_02_Cole_2020": "Ferma",
@@ -344,9 +344,9 @@
         "MC_HOC_2017_05_Cole_2020": "Çay",
         "MC_HOC_2017_05_Cole_2021": "Çay",
         "MC_HOC_2017_07_Cole_2021": "Qarlı Keçid",
-        "MC_HOC_2017_10_RETRY_2021": "Mağara",
+        "MC_HOC_2017_10_RETRY_2021": "Mağara \n",
         "MC_HOC_2017_Ali_2021": "Cəhənnəm Qalası",
-        "courseC_artist_prog_challenge1_2021": "Heyvan evi",
+        "courseC_artist_prog_challenge1_2021": "Heyvan Evi",
         "courseC_artist_prog_challenge2a_2021": "Yol",
         "courseD_bee_nestedLoops8_2021": "Nektar yığ və bal düzəlt! ",
         "courseD_bee_nestedLoops9_2021": "Bal hazırla.",
@@ -845,7 +845,7 @@
         "Video: Intro to CSS_2021": "Video: CSS-ə giriş",
         "csd U3 conditional statements video_2021": "Video: Şərti Bəyanatlar",
         "csd u5 recommender sample_2021": "Nümunə Tətbiqlər",
-        "courseC_artist_prog7_2021": "Heyvan Adı Etiketi",
+        "courseC_artist_prog7_2021": "Ev heyvanı Adı Etiketi",
         "courseF_events_choice_conflict2": "Kiçilmək və Böyümək",
         "courseF_events_freeplay_food": "\nXoşbəxt yemək",
         "courseF_sprites_freeplay_food": "\nXoşbəxt yemək",
@@ -1126,7 +1126,7 @@
         "helloworld_food_sizes_space-2022": "Ölçü",
         "helloworld_food_sounds_soccer-2022": "Səslər",
         "helloworld_food_sounds_space-2022": "Səslər",
-        "ramp_artist_loops8_2021": "Səkkizbucaqlı"
+        "MC_HOC_2017_FP20x20_2021": "Sərbəst oyun"
       }
     }
   }

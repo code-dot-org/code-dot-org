@@ -5822,3 +5822,7 @@ pt:
           description_audience: Escritores de currículos
           description_short: Para escalonar as atualizações das lições ou os níveis
             entre versões de currículos
+        devices-2022:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: 'Capítulo 2: Construindo protótipos físicos'

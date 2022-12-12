@@ -1,8 +1,12 @@
 import React from 'react';
 import {shallow} from 'enzyme';
 import {assert} from 'chai';
+import {expect} from '../../../../util/reconfiguredChai';
 import {SummaryTable} from '../../../../../src/code-studio/pd/application_dashboard/summary_table';
 import {getApplicationStatuses} from '@cdo/apps/code-studio/pd/application_dashboard/constants';
+
+const getTableContents = wrapper =>
+  wrapper.find('td').map(tableContent => tableContent.text());
 
 describe('SummaryTable', () => {
   it('computes total applications', () => {
@@ -37,6 +41,18 @@ describe('SummaryTable', () => {
       ),
       'Totals row computes correct sum'
     );
+  });
+  it('does not show incomplete status by default', () => {
+    const wrapper = customShallow(<SummaryTable {...DEFAULT_PROPS} />);
+
+    expect(getTableContents(wrapper)).not.to.contain('Incomplete');
+  });
+  it('shows incomplete status if a workshop admin', () => {
+    const wrapper = customShallow(
+      <SummaryTable {...DEFAULT_PROPS} isWorkshopAdmin />
+    );
+
+    expect(getTableContents(wrapper)).to.contain('Incomplete');
   });
 });
 

@@ -13,7 +13,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-11-28 19:03:52 UTC",
+    "serialized_at": "2022-11-28 20:20:27 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -456,6 +456,28 @@
     },
     {
       "chapter": 7,
+      "position": 7,
+      "activity_section_position": 7,
+      "assessment": false,
+      "properties": {
+        "progression": "Student Samples"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-AYW-M3-AIMLSample"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "vpl-csd3-ayw-pilot-2022",
+        "activity_section.key": "ec473c1f-a898-4b17-9e05-1bb93a38f5be"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-AYW-M3-AIMLSample"
+      ]
+    },
+    {
+      "chapter": 8,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -480,7 +502,7 @@
       ]
     },
     {
-      "chapter": 8,
+      "chapter": 9,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -505,7 +527,7 @@
       ]
     },
     {
-      "chapter": 9,
+      "chapter": 10,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -530,7 +552,7 @@
       ]
     },
     {
-      "chapter": 10,
+      "chapter": 11,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -555,7 +577,7 @@
       ]
     },
     {
-      "chapter": 11,
+      "chapter": 12,
       "position": 5,
       "activity_section_position": 2,
       "assessment": false,
@@ -580,7 +602,7 @@
       ]
     },
     {
-      "chapter": 12,
+      "chapter": 13,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -671,6 +693,18 @@
         "level.key": "VPL-CSD-PILOT-S22-AYW-M3-PhysCompSample",
         "script_level.level_keys": [
           "VPL-CSD-PILOT-S22-AYW-M3-PhysCompSample"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "vpl-csd3-ayw-pilot-2022",
+        "activity_section.key": "ec473c1f-a898-4b17-9e05-1bb93a38f5be"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-AYW-M3-AIMLSample",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-AYW-M3-AIMLSample"
         ],
         "lesson.key": "lesson-3",
         "lesson_group.key": "lessonGroup-2",

@@ -2829,3 +2829,7 @@ ga:
               display_name: Suirbhé Iarchúrsa
         csp-post-survey-2023:
           title: 'Foras Feasa ar an Ríomheolaíocht: Suirbhé Iarchúrsa'
+        devices-2022:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: 'Caibidil 2: Fréamhshamhlacha Fisiceacha'

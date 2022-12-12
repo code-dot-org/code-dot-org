@@ -3828,25 +3828,49 @@
         "825e27c2-a198-45fc-9d3b-d262577a3bc7": {
           "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Symbol tugmachasi slaydni ko'rsatish\n\n**Display:** **\\*Belgili tugma** yoki ruxsat etilgan harakatlarni doskaga yozing – ular butun dars jarayonida ko‘rinadigan joyda ekanligiga ishonch hosil qiling. Sinfga , ular ushbu mashg'ulotda foydalanishlari mumkin bo'lgan faqat to'rtta faoliyat bo'lishini tushintiring\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\">. Ushbu qiyinchilik uchun ular o'zlarining robot do'stlariga faqat kalitda ko'rsatilgan buyruqlar yordamida ma'lum bir stakan to'plamini qurishni buyuradilar.\n\n**Model.** Ko'rsatmalar qanday ishlashini tushuntirish uchun oddiy namunani takrorlab algoritmini qanday yaratiib modellashtirirb va unga rioya qilishni sinfga orgating. Oldingizga bir blok  stakan qo'yish bilan boshlang.\n\n**Displey:** Modellashtirmoqchi  bo'lgan naqshni ko'taring. Oddiy uch stakan naqsh - boshlash uchun ajoyib joy.\n\n<img alt=\"\" src=\"https://curriculum.code.org/media/uploads/image_29uZ9YD.png\" style=\"max-width: 300px; hoshiya: 10px;\">\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Ko'rsatish**: \"Qadamlar ro'yxati\" slaydni ko'rish\n\n**Maslahat:** Sinfdan faqat ruxsat etilgan to'rtta ko'rsatmalardan foydalanib, birinchi ko'rsatma qanday bo'lishi kerakligini so'rang. Birinchi qadam \"kubokni ko'tarish\" bo'lishi kerak. Agar talabalar ro'yxatdan boshqa narsani taklif qilsalar, o'sha harakatni bajaring va ularga xatosini ko'rishga imkon bering. Agar ular ro'yxatda bo'lmagan narsani taklif qilsalar, nosozlikka aniq javob bering va buyruq tushunilmaganligini aniqlang.\n\nKubokni qo'lingizda ushlab, sinfdan birinchi stakan qo'yilgunga qadar sizga ko'rsatmalar berishni so'rang. Bu \"oldinga qadam qo'yish\" va \"orqaga qadam qo'yish\" ikkalasi ham stakan kengligining yarmini siljitishni anglatishini tushuntirish uchun ajoyib joy. Malumot uchun quyidagi rasmga qarang.\n\n[3 stakan naqsh] [0]\n\nTo'liq dizaynni tugatmaguningizcha sinfdan ko'rsatmalarni so'rashda davom eting.\n\nTo'plamingiz tugallangandan so'ng, ular sizga vazifani bajarish uchun qadamlar ro'yxatini berganligini ko'rsating. Bu algoritm. Algoritmlar fikr almashish uchun juda yaxshi, lekin ularni so'zma-so'z bayon qilish uzoq vaqt talab qilishi mumkin. Mana nima uchun ramzlar kerak! Agar algoritmni robot (yoki kompyuter) tushunadigan belgilarga aylantirsa, bu dasturlash deb ataladi.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: “Javob kaliti” slaydni ko‘rsating\n\n\\*\\* Ayting:\\*\\* _Bitta mumkin bo'lgan yechim quyidagicha ko'rinadi:_\n\n![3 stakan eritma](https://curriculum.code.org/media/uploads/image_xmBkoQZ_0OrQqsy.png)\n\n**Ko‘ngilli:** Sinfingiz  namunaviy dasturni tugatgandan so‘ng, o‘quvchilardan biri kelib, dastur haqiqatda ishlayotganiga ishonch hosil qilish uchun “robot” rolini o‘ynasin. Kodni \"ishlatish\" paytida ularni ko'rsatmalarni baland ovozda aytishga undang."
         },
+        "48318e9d-7631-4d07-ae07-155ddeefe482": {
+          "description": "#### Robotlaringizni dasturlash\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Ekran**: \"Robotlaringizni dasturlash\" slaydni ko'rsatish\n\n**Guruh:** Talabalarni 4 kishilik guruhlarga ajrating. Har bir guruh ikki juftga bo'linishi kerak - har bir juftlik o'z dasturini ishlab chiqsa, boshqa juftlik buni \"bajaradi\"."
+        },
+        "9f6dd3b2-d6b8-4680-b50e-84188effd916": {
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Show**: Muhokama slaydni ko'rsating\n\n**Muhokama:** Hamma ozini  robot sifatida sinab ko'rgandan so'ng, tajribalarini muhokama qilish uchun sinfni qayta yig'ing. Ushbu munozaraning maqsadi talabalarga robot va dasturchi sifatidagi tajribalari haqida fikr yuritish imkoniyatini berishdir. Savollar qasddan kengdir, lekin ular talabalarni aniq dastur yozish qiyinchiliklari va ko'rsatmalaringizni sharhlashda robot yoki kompyuterning cheklovlari haqida fikirlashi uchun mo'ljallangan. Xususan, sinfda muhokama qiling:"
+        },
+        "7733f15a-e54b-4bd2-9387-7fa23efccc01": {
+          "description": "-   _Ko'rsatmalarni tuzishda eng qiyin qismi qaysiedi?_\n\n-   _Robot bo'lganingizda, sizga berilgan ko'rsatmalarni bajarishda eng qiyin narsa nima edi?_"
+        },
+        "5d27fc68-b316-43d0-9f5a-31363b5ff264": {
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Show**: Muhokama (davomi) slaydni ko'rsatish\n\n-   _Robotingiz ularga amal qila boshlaganidan keyin kimdir sizning ko'rsatmalaringizda xato topdimi?_\n\n-   _B qanday xato?_\n\n-   _Nima uchun dasturni yozishda buni sezmadingiz deb o'ylaysiz?_"
+        },
         "e24379b7-bf97-4179-948d-ea5af39d8089": {
           "name": "Reflection",
           "tips": [
             null
           ]
         },
+        "71572e70-b82e-4aca-b685-910711e02c57": {
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Ko'rsatish**: Reflektsiya slaydni ko'rsatish\n\n**Ko'zda tuting:**\n_Robot sifatida ko'rmoqchi bo'lgan o'z stakanlaringizni chizing. Ushbu stakanlar to'plami uchun dastur yarata olasizmi?_"
+        },
         "3cb8c1e4-0403-4132-8933-b25bfb5c7985": {
-          "name": "O‘ylamoq"
+          "name": "O‘ylamoq",
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Displey**: “Reflect” slaydni ko‘rsatish\n\n**Mulohaza yuriting:** _Nega robotni “dasturlashda” unga aniq ko‘rsatmalar berish muhim?_"
         },
         "f200bbb3-21c5-4805-ae91-c6418a1309b7": {
-          "name": "Lug‘at"
+          "name": "Lug‘at",
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Show**: \"Lug'at\" slaydni ko'rsatish\n\n-   **Algoritm** - topshiriqni bajarish bosqichlari ro'yxati.\n-   **Xato** - dasturning to'g'ri ishlamayotgan qismi.\n-   **Debug** - Algoritm yoki dasturdagi muammolarni toping va tuzating.\n-   **Tartib** - Kompyuterlar ularni o'qiy olishi uchun buyruqlarni to'g'ri tartibda joylashtiring."
         },
         "b5199fed-e3e0-4a59-b01f-e9b40b861d5c": {
-          "name": "Kirish"
+          "name": "Kirish",
+          "description": "Ushbu dars talabalar  birinchi onlayn tadbir oldidan bir necha hafta davomida o'rgangan bir-biriga bog'liq bo'lmagan ko'plab g'oyalarga asoslanadi. Bu tushunchalarni (masalan, qat'iyatlilik, debbuge, algoritmlar va dasturlar) davra bo'ylab qo'llashingiz juda muhim, shunda sinfingiz onlayn ishida ham ulardan foyda olishi mumkin.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Show**: Muhokama slaydni ko'rsating\n\n**Displey** O‘quvchilarga oldingi darslarda qilgan“Robotlar mening  do‘stlarim” mashg‘ulotidagi stakanlarni ko‘rsating.\n\n**Muhokama:** Talabalarga “Robotlar mening do‘stlarim”da qo‘llanilgan belgilarni eslab qolishlarini so‘rang.\n\n-   _Robot turli strelkalarni o'qisa nima bo'ladi?_\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Korsatma**: Slaydni korsatish \"Debbuge boyicha maslahatlar\"\n\nTalabalarga muammolarni bartaraf etish bo'yicha maslahatlar  taklif qiling:\n\n-   _Birinchi bosqichda hammasi to'g'ri bo'lganmi?_\n-   _Ikkinchisi-chi?_\n-   _Qayerdadur notogri ketmadimi?_\n\n**O‘tish.** Talabalaringiz “Robot mening  do‘stlarim”ni eslab qolishlariga ishonch hosil qilsangiz, oraliq mashqqa o‘tishingiz mumkin."
+        },
+        "a18732fa-a8a6-4b88-9271-ac93e89a6d0f": {
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: O'tish harakati slaydni ko'rish\n\nUshbu qisqa mashg'ulot talabalarga qat'iyatlilik va nosozliklarni tuzatish , onlayn hal qilmoqchi bo'lgan jumboqlar bilan bog'lashga yordam beradi.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Labirint ko‘prigi slaydni ko‘rish\n\n**Displey:** Darsni ko‘rish uchun **\\*labirintga o‘tish sahifasi** nusxasini loyihalash. Quyidagi  konfiguratsiyada **\\*labirint bloklari** yordamida sahnada harakat bloklarini oldindan joylashtirganingizga ishonch hosil qiling (bu slaydda siz uchun allaqachon sozlangan):\n\n![](https://images.code.org/ac052e9d25e77dd800fbf18871bc5fcf-image-1611178828427.47.39.png)\n\n**Model:** Talabalarga sizda Code.org jumboqlarini onlayn yechish uchun  ish maydoni borligini ayting. Oʻqituvchi sifatida ularga siz SHUNDAY AQLLI ekanligingizni bildiring va bu jumboqni yechish uchun kerak boʻladigan barcha kodlarni allaqachon joylab qoʻying, soʻngra barmogʻingizni (yoki boshqa buyum) bilan harakatlantirib, “yugurish”ingizni kuzatishlarini soʻrang. , yoki boshqa  yo'l bilan.\n\nTez orada siz TNT blokiga duch kelasiz. Ko'ngilsizligingizni  ko'rsating.\n\n**Muhokama:**\n\n-   _Sizningcha, men hozir o'zimni qanday his qilyapman?_\n-   _Ketishim kerakmi?_\n-   _Barcha kodni tashlab, qaytadan boshlashim kerakmi?_\n\n**O'ylab ko'ring:** _TNT bilan toqnash kelmaslik  uchun bu dasturni qanday tuzatishim kerak?_\n\nSlaydda berilgan bloklardan foydalaning va talabalar yechimlarini namoyish qilish uchun ularni ish maydoniga torting.\n\n**Juftlik:** Talabalarga qushni TNTni chetlab o'tishni qanday erishish mumkinligi ustida ishlasin. Sinfingizga qarab, siz ulardan har bir xatoni birma-bir tuzatishni so'rashingiz mumkin (yakka holda) yoki  butun dasturni tuzatish uchun birgalikda ishlashni qulay his qilishlari mumkin.\n\n**Ulashish:** Bloklarni kerakli joyga ko‘chiririb otish uchun ko‘ngillilardan so‘rang. Sinf bilan  dasturni qayta-qayta \"ishhga tushiring\", qush undan talab qilinadigan narsani bajarmaguncha xatolarni tuzatingi. Qat'iylik, umidsizlik va nosozliklarni tuzatish tajribalarini ko'rsatishda davom eting.\n\nSinfingiz cho'chqaga etib kelganida, nafaqat ularning yutuqlarini, balki ularning qat'iyatini ham nishonlang!"
         },
         "3fa1b9bd-496c-4731-90d8-c5710952901e": {
           "tips": [
             null
           ]
+        },
+        "bcf5bd75-4b36-40fd-bbad-25d48ca1ad52": {
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Show**: Onlayn boshqotirmani tahminiy ko‘rib chiqish slayd\n\n**Model:** Sinf oldida bajarish uchun 5-jumboqni torting. Bu ular ko'prik mashqida ko'rgan jumboq bo'ladi. Sinf bilan bu jumboqni yechayotganingizda, o'quvchilarga xato qilish mumkin emasligini va muvaffaqiyatga erishishning yagona yo'li - qat'iyatli bo'lish ekanligini eslatib turing.\n\n**Muhokama:** _Bu jumboqni qanday yechishni kimdir esladimi?_\n\nO‘qituvchi sifatida, sizga o‘quvchilar o‘z o‘rindig‘ida o‘tirganda muammoni qanday yechish kerakligini eslatib qo‘yishadimi yoki  bloklarni birma-bir olib tashlash uchun kompyuter yoniga o‘tishadimi, buni o‘zingiz hal qilasiz.\n\n**O‘tish.** Talabalar onlayn boshqotirmani amalda ko‘rganlari uchun, ular mustaqil boshqotirma yechishga tayyor bo‘lishlari kerak. Laboratoriyaga boring yoki kompyuterlaringizni olib keling."
         },
         "bb92650a-2be6-4f30-b851-611c2401aa32": {
           "name": "Jahldor qushlar bilan dasturlash",
@@ -3858,22 +3882,31 @@
           "progression_name": "Malaka orttirish"
         },
         "757cf81a-cc11-4113-8734-0888328aba75": {
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: “8-daraja – Challenge” slaydni ko‘rsatish",
           "progression_name": "Chaqiriq (Challenge)"
         },
         "c0d3a625-32cc-4184-bf79-be7f1066ca97": {
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: “9-daraja – Challenge” slaydni ko‘rsatish",
           "progression_name": "Amaliyot"
         },
         "5c62deea-ea90-4eaa-9d64-de185304d795": {
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: “10-daraja – Challenge” slaydni ko‘rsatish",
           "progression_name": "Oldindan ko'rish"
         },
         "3d28912c-9140-40fb-af73-171c9a7e0176": {
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: “11-daraja – Challenge” slaydni ko‘rsatish",
           "progression_name": "Amaliyot"
         },
         "314f4a1b-1e3f-437f-805a-a0ecbfe8fa62": {
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: “Dars qo‘shimchalari” slaydni ko‘rsatish",
           "progression_name": "Dars qo‘shimchalari"
         },
+        "fe349de8-9eb2-4503-ae43-5a5241cf6786": {
+          "description": "**Dispatch:** O'qituvchilar informatika ta'limida muhim rol o'ynaydi va sinfda hamkorlik va jonli muhitni saqlab turadi. Onlayn faoliyat davomida o'qituvchining roli birinchi navbatda rag'batlantirish va qo'llab-quvvatlashdir. Onlayn darslar talabalarga yo'naltirilgan bo'lishi kerak, shuning uchun o'quvchilar adashib qolganda o'qituvchilar aralashmasligi kerak. Buni qanday qilish haqida ba'zi fikrlar:\n\n-   Iloji bo'lsa, dars davomida juft dasturlashdan foydalaning.\n-   Savollari/muammolari bo'lgan talabalarni sherigidan so'rashni boshlashga undang.\n-   Javobsiz savollarni eng yaqin guruhga yuborish mumkin, ular yechimini allaqachon bilishlari kerak.\n-   Talabalarga debbug jarayonidan foydalanishni eslating.\n-   Talabalardan o'zlari ko'rgan muammoni tasvirlab berishlarini so'rang. Uni nima qilishi kerak? Bu nima qiladi? Bu sizga nima deyapti?\n-   Hafsalasi pir bo'lgan o'quvchilarga umidsizlik o'rganish sari qadam ekanligini va qat'iyatlilik o'z samarasini berishini eslating.\n-   Agar talaba bularning barchasidan keyin hamon adashib qolgan bo'lsa,  xatoni o'zi aniqlashi uchun etakchi savollarni bering.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Show**: Muhokama slaydni ko'rsatish\n\n**Muhokama:** Talabalarni dars yakuni haqida ogohlantirgandan so'ng, ularning e'tiborini jalb qiling va ulardan hozirgina boshdan kechirganlari haqida o'ylab korishlarini so'rang.\n\n-   \\_ Jumboq paytida kimdir xafa bo'lganmi?\\_\n-   _Kimdir qat'iyatli bo'lish kerakligini payqaganmi?_\n\n**O‘tish.** Talabalarni o‘zlari uchun dars haqida o‘ylashga taklif qiling."
+        },
         "56c77c77-8074-4fec-b1ee-50ad68c2a10d": {
-          "name": "Reflection"
+          "name": "Reflection",
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Ko'rsatish**: Reflektsiya slaydni ko'rsatish\n\n**Ko'zda tuting:**\n_Nima uchun bloklarni ma'lum bir tartibda dasturlash muhim?_"
         },
         "1e38b7d2-95ff-48a4-92f2-b34838d662d6": {
           "description": "Ushbu mashg‘ulotlardan o‘quvchilar bilimini oshirish uchun foydalaning. Ular sinfdan tashqarida ishlatilishi mumkin.\n\n\\*\\* O‘zingizni yarating \\*\\* \n\n Kichik guruhlarda talabalarga o‘zlarining labirintlarini loyihalashtirishlariga  va ularni yechish uchun dasturlar yozish uchun bir-birlariga murojaat qilishlariga ruxsat bering. Qo‘shimcha ko‘ngil ochish uchun talabalar bilan cho‘chqa va qush kabi hayotiy labirintlarni yarating."
@@ -3894,6 +3927,7 @@
           "progression_name": "Malaka orttirish"
         },
         "c3c4cc5c-8b5b-4f3f-aa71-9c20db1f148c": {
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: “8-daraja – Challenge” slaydni ko‘rsatish",
           "progression_name": "Chaqiriq (Challenge)"
         },
         "840f0979-0841-4874-9b50-dfa816eb4930": {
@@ -3903,6 +3937,7 @@
           "progression_name": "Amaliyot"
         },
         "04d056ec-242f-479a-b11e-eee90775ef0f": {
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: “Dars qo‘shimchalari” slaydni ko‘rsatish",
           "progression_name": "Dars qo‘shimchalari"
         },
         "b29c4e41-3e9a-45c7-8132-e66d4af738b9": {
@@ -3930,6 +3965,7 @@
           "progression_name": "Malaka orttirish"
         },
         "eddda354-d5be-46f5-96fb-453befa94962": {
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: “8-daraja – Challenge” slaydni ko‘rsatish",
           "progression_name": "Chaqiriq (Challenge)"
         },
         "c6479440-7f5b-4d91-829d-92cc5daff4fc": {
@@ -3963,18 +3999,22 @@
           "progression_name": "Malaka orttirish"
         },
         "12b5328f-3f65-46e2-b3e7-9426b47e1f31": {
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: “8-daraja – Challenge” slaydni ko‘rsatish",
           "tips": [
             null
           ],
           "progression_name": "Chaqiriq (Challenge)"
         },
         "7bfffd70-d646-4e36-adc5-21d888afa1f0": {
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: “9-daraja – Challenge” slaydni ko‘rsatish",
           "progression_name": "Amaliyot"
         },
         "05c4267a-d165-4de4-a19c-a86d0ad3639f": {
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: “10-daraja – Challenge” slaydni ko‘rsatish",
           "progression_name": "Oldindan ko'rish"
         },
         "5e09ab58-a2b1-48ad-89fd-47565cfa09e3": {
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: “Dars qo‘shimchalari” slaydni ko‘rsatish",
           "progression_name": "Dars qo‘shimchalari"
         },
         "fb85f373-fbf3-4b4c-a7d4-878c77ab3d99": {
@@ -4037,6 +4077,7 @@
           "progression_name": "Amaliyot"
         },
         "a9c1c890-7b91-4f1a-a207-155306c84f5e": {
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: “Dars qo‘shimchalari” slaydni ko‘rsatish",
           "progression_name": "Dars qo‘shimchalari"
         },
         "58e08b96-df9d-4862-98c6-872f29a5e215": {
@@ -4067,6 +4108,7 @@
           "progression_name": "Oldindan ko'rish"
         },
         "d83224a8-1d43-4640-9bd6-929d52011c77": {
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: “Dars qo‘shimchalari” slaydni ko‘rsatish",
           "progression_name": "Dars qo‘shimchalari"
         },
         "63b4337c-4ae6-43ee-99ae-3f637cd0c29d": {
@@ -4166,6 +4208,7 @@
           "progression_name": "Mini-loyiha: Chase Game"
         },
         "f0b5eef7-fc2b-430a-84d1-0db90863beac": {
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: “Dars qo‘shimchalari” slaydni ko‘rsatish",
           "progression_name": "Dars qo‘shimchalari"
         },
         "6449b59e-03df-41af-9bea-a74772120074": {

@@ -2533,13 +2533,13 @@
         "courseE_artist_concept_challenge1_2018": "Hjálpaðu listamanninum að teikna þetta einstæða form. ",
         "courseE_artist_concept_challenge2": "Búðu til fimm hjóllaga mynstur með kóðanum fyrir neðan.",
         "courseE_artist_concept_challenge2_2018": "Búðu til fimm hjóllaga mynstur með kóðanum fyrir neðan.",
-        "courseE_artist_functions1": "Hjálpaðu uppvakningnum að teikna gleraugu með því að nota ferninga með 100 díla hliðar. \r\nBrúin milli glerja er 75 dílar á lengd.",
+        "courseE_artist_functions1": "Hjálpaðu uppvakningnum að teikna gleraugu með því að nota ferninga með 100 díla hliðar. \\\r\nBrúin milli glerja er 75 dílar á lengd.",
         "courseE_artist_functions10": "Í þetta sinn áttu að nota raðir af 8 sexhyrningum með 25 díla hliðar.",
         "courseE_artist_functions10_2018": "Í þetta sinn áttu að nota raðir af 8 sexhyrningum með 25 díla hliðar.",
         "courseE_artist_functions10_2019": "Í þetta sinn áttu að nota raðir af 8 sexhyrningum með 25 díla hliðar.",
         "courseE_artist_functions10_2020": "Í þetta sinn áttu að nota raðir af 8 sexhyrningum með 25 díla hliðar.",
         "courseE_artist_functions1_copy": "Hjálpaðu uppvakningnum að teikna gleraugu með því að nota ferninga með 100 díla hliðar. \r\nBrúin milli glerja er 75 dílar á lengd.",
-        "courseE_artist_functions2": "Í þetta skipti áttu að nota fallið `teikna ferning` til að búa til gleraugun.\n",
+        "courseE_artist_functions2": "Í þetta skipti áttu að nota fallið `teikna ferning` til að búa til gleraugun.",
         "courseE_artist_functions2_2018": "Í þetta skipti áttu að nota fallið `teikna ferning` til að búa til gleraugun. ",
         "courseE_artist_functions2_2019": "Í þetta skipti áttu að nota fallið `teikna ferning` til að búa til gleraugun. ",
         "courseE_artist_functions2_2020": "Í þetta skipti áttu að nota fallið `teikna ferning` til að búa til gleraugun. ",
@@ -4187,7 +4187,9 @@
         "ramp_artist_loops62022": "Breyttu lykkjunni svo hún teikni þessar tröppur.",
         "ramp_artist_loops72022": "Leitaðu að endurtekningu og styttu þennan kóða með því að nota lykkjur!",
         "ramp_artist_loops82022": "Leitaðu að endurtekningu og styttu þennan kóða með því að nota lykkjur.",
-        "ramp_artist_loops92022": "Leystu þessa þraut með því að teikna ferning."
+        "ramp_artist_loops92022": "Leystu þessa þraut með því að teikna ferning.",
+        "Course E: Frozen Project_examples_2021": "Þú ert að fara að byrja á lokaverkefninu. Áður en þú byrjar er gott ráð að skoða verkefnadæmin vel.",
+        "CourseE_Project_SpriteLab_cupcake_examples_2021": "Þú ert að fara að byrja á lokaverkefninu. Áður en þú byrjar er gott ráð að skoða verkefnadæmin vel."
       }
     }
   }

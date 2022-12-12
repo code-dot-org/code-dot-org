@@ -169,7 +169,7 @@ fr:
           (portions de code que l’on utilise encore et encore) pour créer des capteurs
           de soleil à l’aide de ficelles et de perles.
       SongwritingParameters:
-        title: Écriture de chansons
+        title: Écrire des chansons
         desc: Les élèves utilisent le concept de refrain dans une chanson pour apprendre
           ce que sont la définition et l’appel de fonctions.
       DiceRace:
@@ -388,7 +388,7 @@ fr:
           de problèmes répandue en informatique, et toute la classe accomplit ainsi
           une tâche plus efficacement que si un élève l'avait tentée seul.
       courseE_unplugged_songwriting:
-        title: Écriture de chansons
+        title: Écrire des chansons
         desc: Les élèves utilisent le concept de refrain dans une chanson pour apprendre
           ce que sont la définition et l’appel de fonctions.
       courseF_unplugged_tangrams:
@@ -456,7 +456,7 @@ fr:
         desc: Aujourd'hui, tu apprendras ce qu’il faut faire si quelqu'un devient
           méchant en ligne.
       Conditionals_2018:
-        title: Instructions conditionnelles
+        title: Formules conditionnelles
         desc: Pour mieux comprendre les déclarations conditionnelles, les élèves jouent
           à un jeu de cartes et créent des règles comme « Si je tire une carte rouge,
           je gagne un point », et « Si je tire une carte noire, tu gagnes un point
@@ -523,7 +523,7 @@ fr:
         title: 'traduction manquante : en-US.data.unplugged.courseB_unplugged_loopyMRF_2018.title'
         desc: 'traduction manquante : en-US.data.unplugged.courseB_unplugged_loopyMRF_2018.desc'
       Conditionals_2019:
-        title: Instructions conditionnelles
+        title: Formules conditionnelles
         desc: Pour mieux comprendre les déclarations conditionnelles, les élèves jouent
           à un jeu de cartes et créent des règles comme « Si je tire une carte rouge,
           je gagne un point », et « Si je tire une carte noire, tu gagnes un point
@@ -560,7 +560,7 @@ fr:
           ordinateur peut stocker des informations encore plus complexes (telles que
           les images et les couleurs) également en binaire.
       courseE_unplugged_privateInformation_2019:
-        title: 'traduction manquante : en-US.data.unplugged.courseE_unplugged_privateInformation_2018.title'
+        title: Informations Privées et Personnelles
         desc: Développée par Common Sense Education, cette leçon traite de la différence
           entre les informations qui peuvent être partagées, en toute sécurité, en
           ligne, et les informations qui ne le peuvent pas.
@@ -666,7 +666,7 @@ fr:
         desc: '_Note de Josh : contrairement à la première leçon, j’ai formaté celle-ci,
           simplement, comme une leçon débranchée typique.'
       timeforcs_demo_conditionals:
-        title: Instructions conditionnelles
+        title: Formules conditionnelles
         desc: Pour mieux comprendre les déclarations conditionnelles, les élèves jouent
           à un jeu de cartes et créent des règles comme « Si je tire une carte rouge,
           je gagne un point », et « Si je tire une carte noire, tu gagnes un point

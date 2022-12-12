@@ -19,19 +19,25 @@
   }
 
   .item {
-    display: none;
-    pointer-events: none;
+    display: flex;
+    pointer-events: auto;
     flex: 1;
+    opacity: 1;
 
     &.itemVertical {
       flex-direction: column;
       overflow: auto;
     }
 
-    &.visible {
-      display: flex;
-      opacity: 1;
-      pointer-events: auto;
+    .itemTitle {
+      font-size: 18px;
+      text-align: left;
+      overflow-wrap: break-word;
+      padding: 5px;
+
+      &Horizontal {
+        max-width: 140px;
+      }
     }
 
     .imageContainer {

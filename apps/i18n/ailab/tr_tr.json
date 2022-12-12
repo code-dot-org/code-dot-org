@@ -163,6 +163,97 @@
           "id": "zencefil"
         }
       }
+    },
+    "insurance_cost": {
+      "fields": {
+        "age": {
+          "id": "yaş"
+        }
+      }
+    },
+    "nutrition": {
+      "fields": {
+        "Category": {
+          "id": "Kategori"
+        },
+        "Description": {
+          "id": "Tanım"
+        }
+      }
+    },
+    "movies": {
+      "fields": {
+        "Score": {
+          "id": "Puan"
+        },
+        "Country": {
+          "id": "Ülke"
+        },
+        "Name": {
+          "id": "İsim"
+        },
+        "Star": {
+          "id": "Yıldız"
+        }
+      }
+    },
+    "songs": {
+      "fields": {
+        "Artist": {
+          "id": "Sanatçı"
+        }
+      }
+    },
+    "abalone": {
+      "fields": {
+        "Length": {
+          "id": "Uzunluk"
+        },
+        "Height": {
+          "id": "Yükseklik"
+        }
+      }
+    },
+    "student_survey": {
+      "fields": {
+        "Music": {
+          "id": "Müzik"
+        },
+        "Dance": {
+          "id": "Dans et"
+        },
+        "Country": {
+          "id": "Ülke"
+        },
+        "Internet": {
+          "id": "İnternet"
+        },
+        "Writing": {
+          "id": "Yazma"
+        },
+        "Achievements": {
+          "id": "Başarılar"
+        },
+        "Age": {
+          "id": "Yaş",
+          "description": "Yaş"
+        },
+        "Height": {
+          "id": "Yükseklik",
+          "description": "Yükseklik"
+        },
+        "Gender": {
+          "id": "Cinsiyet",
+          "description": "Cinsiyet"
+        }
+      }
+    },
+    "heart": {
+      "fields": {
+        "Age": {
+          "id": "Yaş"
+        }
+      }
     }
   }
 }

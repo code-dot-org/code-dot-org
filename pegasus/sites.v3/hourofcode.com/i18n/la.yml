@@ -11985,7 +11985,7 @@ la:
   tutorial_kcjhealth_name: The Health & Well-Being Challenge
   tutorial_kcjhealth_string_detail_grades: Grados 6+ (11 en adelante)
   tutorial_kcjhealth_string_detail_platforms: ''
-  tutorial_kcjhealth_string_detail_programming_languages: blocks
+  tutorial_kcjhealth_string_detail_programming_languages: Bloques
   tutorial_kcjhealth_string_platforms: Todos los navegadores modernos
   tutorial_msftwakanda_longdescription: 'Shuri, Okoye, and Riri must band together
     to help Wakanda. Code your own action-packed activity inspired by Marvel Studios''
@@ -11993,7 +11993,7 @@ la:
   tutorial_msftwakanda_name: Long Live Wakanda
   tutorial_msftwakanda_string_detail_grades: Grados 6+ (11 en adelante)
   tutorial_msftwakanda_string_detail_platforms: ''
-  tutorial_msftwakanda_string_detail_programming_languages: blocks
+  tutorial_msftwakanda_string_detail_programming_languages: Bloques
   tutorial_msftwakanda_string_platforms: Todos los navegadores modernos
   school_not_found_heading: No pudimos encontrar su escuela. Por favor, ingresa más
     información.

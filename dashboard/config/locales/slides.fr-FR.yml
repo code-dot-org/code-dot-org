@@ -243,13 +243,14 @@ fr:
         text: Amusons-nous avec les fonctions!
     loop_while:
       1:
-        text: 'Salut, je suis Makinde ! Découvrons le bloc «Tant que». '
+        text: 'Salut, moi, c''est Makinde ! On va découvrir le bloc « tant que ». '
       2:
-        text: Le bloc « Tant que » fera tout ce que tu mets dedans TANT QUE la condition
-          énoncée au-dessus reste VRAIE.
+        text: Le bloc « tant que » exécutera tout ce que tu mets dedans TANT QUE la
+          condition énoncée en haut reste VRAIE.
       3:
         text: Par exemple, si la fermière se tient sur un tas de terre, elle continuera
-          à enlever 1 pelletée TANT QUE il reste un tas de terre sous elle.
+          à enlever 1 pelletée à la fois TANT QU'il reste toujours un tas de terre
+          en dessous d'elle.
     loop_for:
       1:
         text: Salut, je suis Trina, et je travaille pour Pixar. J'ai travaillé sur
@@ -1234,14 +1235,14 @@ fr:
           de degrés. Amuse-toi bien en dessinant avec ton artiste !
     C3_artist_nested_loops:
       1:
-        text: Quand tu mets une boucle à l'intérieur d'une autre boucle, on appelle
-          ça une boucle imbriquée. Par exemple, ici, nous avons déjà le code pour
-          dessiner un triangle de 100 pixels de côté en utilisant le bloc « Répéter
-          » calé sur trois, une fois pour chaque côté du triangle.
+        text: 'Quand on met une boucle à l''intérieur d''une autre boucle, on appelle
+          ça une boucle imbriquée. Par exemple, ici, on a déjà le code pour dessiner
+          un triangle de 100 pixels de côté en utilisant le bloc « répéter » calé
+          sur trois fois, une fois pour chaque côté du triangle. '
       2:
-        text: Mais nous voulons dessiner six triangles. Pour faire cela, nous allons
-          prendre cette boucle et la placer dans un autre bloc « Répéter jusqu’à».
-          Plutôt cool!
+        text: 'Mais nous, on veut dessiner six triangles. Pour ce faire, on va prendre
+          cette boucle et la placer au sein d''autre bloc « répéter jusqu’à ». Plutôt
+          cool, non ? '
     C3_bee_conditionals:
       1:
         text: Il s'agit d’un bloc conditionnel. Il dit que SI il y a du nectar ou
@@ -1575,26 +1576,27 @@ fr:
           nid d'abeilles, faire du miel». La-la !
     C4_conditionals:
       1:
-        text: Nous avons un nouveau bloc qui s’appelle le bloc « Si/Sinon ». Il s'agit
-          d'une instruction conditionnelle, tout comme le bloc « Si » que tu as utilisé
-          dans le puzzle auparavant. Mais il y a maintenant une nouvelle partie en
-          bas qui dit « Sinon ». Le bloc « Si/Sinon » laisse l'abeille prendre une
-          décision entre deux séries d'actions. Si l'abeille est sur une fleur, l'abeille
-          va faire l'ensemble des actions que tu as mis dans la première partie où
-          il est dit « Faire ». Si l'abeille n’est pas sur une fleur, l'abeille va
-          faire l'ensemble des actions que tu mets dans le créneau « Sinon ».
+        text: On a ici un nouveau bloc qu'on appelle le bloc « Si/Sinon ». Il s'agit
+          d'une instruction conditionnelle, tout comme le bloc « Si » dont tu t'es
+          servi dans les casse-têtes précédents. Mais il y a maintenant une nouvelle
+          partie en bas qui indique « sinon ». Le bloc « Si/Sinon » permet à l'abeille
+          de choisir entre deux séries d'actions. Si l'abeille se retrouve sur une
+          fleur, l'abeille exécutera l'ensemble des actions que tu as mis dans la
+          première partie où il est indiqué de « faire ». Si l'abeille n’est pas sur
+          une fleur, elle exécutera l'ensemble d'actions que tu as mis dans l'espace
+          où il est indiqué « sinon ».
       2:
-        text: 'Les instructions « Si » sont la façon dont les ordinateurs sont capables
-          de prendre des décisions. Les humains mettent en place des conditions pour
-          l''ordinateur qui disent: si l’ordinateur rencontre cette situation, alors
-          il doit faire cette action. « Sinon », qui signifie simplement dans le cas
-          contraire, l’ordinateur doit faire cela. La partie supérieure de notre bloc
-          « Si/Sinon » dit « Si à une fleur ». Mais la partie supérieure de notre
-          bloc pourrait dire d’autres choses, comme « Si le nectar est égal à 2 »
-          ou « S''il y a un chemin devant », notre bloc se comportera de la même manière.
-          Si l’instruction dans la partie supérieure est vraie, alors elle fera la
-          première série d''actions. Mais si l''instruction dans la partie supérieure
-          est fausse, alors elle fera la deuxième série d''actions.'
+        text: Les instructions « Si » sont ce qui permet aux ordinateurs de prendre
+          des décisions. Les humains mettent en place des conditions pour un ordinateur
+          qui indiquent que si l'ordinateur rencontre telle situation, alors il doit
+          faire ceci. « Sinon », ce qui signifie simplement dans le cas contraire,
+          l’ordinateur doit faire cela. La partie supérieure de notre bloc « Si/Sinon
+          » indique « si à une fleur ». Mais la partie supérieure de notre bloc pourrait
+          indiquer autre chose, comme « si le nectar est égal à 2 » ou « s'il y a
+          un chemin devant », et notre bloc se comportera de la même manière. Si l'affirmation
+          dans la partie supérieure est vraie, alors il exécutera la première série
+          d'actions. Mais si l'affirmation dans la partie supérieure est fausse, alors
+          il exécutera la deuxième série d'actions.
     C4_for_loops:
       1:
         text: Quand tu utilises un bloc « répéter » pour créer une boucle dans ton

@@ -1818,7 +1818,7 @@
           "courseE_artist_functions1_b": "Rajzolhatsz egymást fedő vonalakat, hogy elkészítsd a szemüveged."
         },
         "courseE_artist_functions2": {
-          "courseD_artist_functions2_a": "A programodnak kell:\n- függvényt használni\n- előrehaladni 100 + 75 pixelt\n- függvényt használni"
+          "courseD_artist_functions2_a": "A programodnak kell:\n\n-   függvényt használni\n-   előrehaladni 100 + 75 pixelt\n-   függvényt használni"
         },
         "courseE_artist_functions2_2018": {
           "courseD_artist_functions2_a": "A programodnak kell:\n\n-   függvényt használni\n-   előrehaladni 100 + 75 pixelt\n-   függvényt használni"
@@ -3091,7 +3091,7 @@
           "voyage_aquatic_9a": "Micsoda gyönyörű korallzátony! A kék korall jelzi a **jobb** utat, de nehogy **balszerencsét** hozzon az itt hagyott vörös korall!"
         },
         "Function intro Ryan_2021": {
-          "Function_intro_Ryan_a": "A programodon belül többször is meghívhatsz egy függvényt.  A feladat megoldásához próbáld kétszer meghívni."
+          "Function_intro_Ryan_a": "A programodon belül többször is meghívhatsz egy függvényt.  A kirakós megoldásához próbáld kétszer meghívni."
         },
         "MC_HOC_2017_01_RETRY_2021": {
           "MC_HOC_2017_01_RETRY_a": "Húzz egy \"előrelépni\" blokkot az eszköztárból a munkaterületre, és illeszd a helyére az \"futtatáskor\" blokk mögé.",
@@ -3105,33 +3105,33 @@
         },
         "MC_HOC_2017_03_Cole_2021": {
           "MC_HOC_2017_03_Cole_a": "Miután az Agentet a nyomólapra vitted, a nyílgombokkal a játékost az iránytűhöz irányíthatod.",
-          "MC_HOC_2017_03_Cole_b": "Úgy érzed, túl sokáig tart a kódolás?  Próbáld ki az \"ismétleld\" ciklust, és találd ki, hogyan rövidítheted le a folyamatot!"
+          "MC_HOC_2017_03_Cole_b": "Úgy érzed, túl sokáig tart a kódolás?  Próbáld ki az \"ismétlés\" ciklust, és találd ki, hogyan rövidítheted le a folyamatot!"
         },
         "MC_HOC_2017_04POINT5_RYAN_2021": {
-          "MC_HOC_2017_04POINT5_RYAN_b": "Az Agent irányának módosításához használd a \"fordulj jobbra\" blokkot ",
+          "MC_HOC_2017_04POINT5_RYAN_b": "Az Agent irányának módosításához használd a \"fordulás jobbra\" blokkot ",
           "MC_HOC_2017_04POINT5_RYAN_a": "Az Agentnek csak az első nyomólapra kell eljutnia ahhoz, hogy keresztülengedje a baltához Alexet vagy Steve-et."
         },
         "MC_HOC_2017_04_Cole_2021": {
-          "MC_HOC_2017_04_Cole_a": "Az Agentnek 7-szer kell az \"előrelépni\" parancsot végrehajtania.  Hogyan kell használnod az \"ismételd\" ciklust ennek programozásához?",
+          "MC_HOC_2017_04_Cole_a": "Az Agentnek 7-szer kell \"előrelépni\" parancsot végrehajtania.  Hogyan használhatsz egy \"ismétlés\" ciklust ennek programozásához?",
           "MC_HOC_2017_04_Cole_c": "Nyomd meg a \"Futtatás\" gombot. \nA kódot akkor is futtathatod, ha nem helyes.  Futtasd és állítsd vissza a kódot újra és újra, amíg rá nem jössz a hibájára.",
           "MC_HOC_2017_04_Cole_b": "Amikor az Agent eljut a nyomólapra, kinyitja az ajtót a játékos előtt."
         },
         "MC_HOC_2017_05_Cole_2021": {
-          "MC_HOC_2017_05_Cole_a": "Tudtad, hogy egy ciklusba több kóddarabot is helyezhetsz?  A feladat megoldásához próbálj egy deszkát elhelyezni **és** előremenni egy \"ismételd\" ciklusban."
+          "MC_HOC_2017_05_Cole_a": "Tudtad, hogy egy ciklusba több kóddarabot is helyezhetsz?  A kirakós megoldásához próbálj egy deszkát elhelyezni **és** előremenni egy \"ismétlés\" ciklusban."
         },
         "MC_HOC_2017_06_Cole_2021": {
           "MC_HOC_2017_06_Cole_a": "Hányszor fut ez a ciklus?  És hányszor _kellene_ futnia?"
         },
         "MC_HOC_2017_07_Cole_2021": {
-          "MC_HOC_2017_07_Cole_a": "A feladat megoldásához találd ki, hogy mit csinál a \"tisztítsd meg az ösvényt\" függvény, és hívd meg annyiszor, amennyiszer szükséges az eszköztár kis zöld \"tisztítsd meg az ösvényt\" blokkjával.",
-          "MC_HOC_2017_07_Cole_b": "A feladat megoldásához próbáld keverni a függvénykblokkokat az eszköztár más blokkjaival."
+          "MC_HOC_2017_07_Cole_a": "A kirakós megoldásához találd ki, hogy mit csinál az \"út szabaddá tétele\" függvény, és hívd meg annyiszor, amennyiszer szükséges az eszköztár kis zöld \"út szabaddá tétele\" blokkjával.",
+          "MC_HOC_2017_07_Cole_b": "A kirakós megoldásához próbáld keverni a függvénykblokkokat az eszköztár más blokkjaival."
         },
         "MC_HOC_2017_10_RETRY_2021": {
-          "MC_HOC_2017_10_Cole_a": "A feladat megoldását a függvények használata nagyon megkönnyíti!"
+          "MC_HOC_2017_10_Cole_a": "A kirakós megoldásának megkönnyítéséhez használd a függvényeket!"
         },
         "MC_HOC_2017_Ali_2021": {
           "MC_HOC_2017_08_RY_a": "Nyomd meg a \"Futtatás\" gombot. \nA kódot akkor is futtathatod, ha nem helyes.  Futtasd és állítsd vissza a kódot újra és újra, amíg rá nem jössz a hibájára.",
-          "MC_HOC_2017_08_RY_b": "Ezt a feladatot RENGETEG módon meg lehet oldani.  Próbálj ki néhányat!"
+          "MC_HOC_2017_08_RY_b": "Ezt a kirakóst RENGETEG módon meg lehet oldani.  Próbálj ki néhányat!"
         },
         "MC_HOC_2017_FP20x20_2021": {
           "MC_HOC_2017_13_Cole_a": "Próbálj az Agenttel hidakat építtetni, hogy Alex vagy Steve túl tudjanak jutni a térkép szélein."
@@ -3246,10 +3246,12 @@
           "courseA_harvester_loops5_a": "Ha elakadnál, próbáld meg 2 részben megoldani a feladványt, az első rész a sarokig tart, a második a saroknál kezdődik."
         },
         "courseA_harvester_seq2_2021": {
-          "courseA_harvester_seq2_b": "Próbáld leírni a lépéseket papírra, hogy megtaláld a megoldást!"
+          "courseA_harvester_seq2_b": "Próbáld leírni a lépéseket papírra, hogy megtaláld a megoldást!",
+          "courseA_harvester_seq2_a": "Ne felejtsd el használni a <xml><block type=\"harvester_corn\"/></xml> blookot, hogy felszedd a kukoricát!"
         },
         "courseA_maze_seq10_2021": {
-          "courseA_maze_seq10_a": "Ha problémád lenne, először próbáld meg leírni a lépéseket egy darab papírra."
+          "courseA_maze_seq10_a": "Ha problémád lenne, először próbáld meg leírni a lépéseket egy darab papírra.",
+          "courseA_maze_seq10_b": "3 különböző irányba is mozognod kell ennek a feladványnak a megoldásához!"
         },
         "courseA_maze_seq10_dani": {
           "courseA_maze_seq10_a": "Ha problémád lenne, először próbáld meg leírni a lépéseket egy darab papírra.",
@@ -3257,14 +3259,16 @@
         },
         "courseA_maze_seq13_2021": {
           "courseA_maze_seq13_a": "Ha nem tiszta az út előtted, használd az ujjaidat, hogy megszámold, hány lépésből juthat el a madár a malacig.",
-          "courseA_maze_seq13_b": "Ne félj attól, hogy hibázol! Próbálj blokkokat hozzáadni, és futtasd a kódot, hogy lásd, mi történik."
+          "courseA_maze_seq13_b": "Ne félj attól, hogy hibázol! Próbálj blokkokat hozzáadni, és futtasd a kódot, hogy lásd, mi történik.",
+          "courseA_maze_seq13_c": "Ezek a <xml><block type=\"maze_moveNorth\"/></xml>\n\n<xml><block type=\"maze_moveEast\"/></xml> \n\nblokkok segíteni fognak, hogy közelebb kerül a malachoz."
         },
         "courseA_maze_seq1_2021": {
           "courseA_maze_seq1_a": "Ha nem mozdul a madár, ellenőrizd, hogy minden blokkot a helyére csatoltál-e a <xml>\n  <block type=\"when_run\"/>\n</xml> alatt",
           "courseA_maze_seq1_b": "A madárnak 3 lépést kell tennie nyugat felé, hogy elkapja a malacot. Használd ezt a blokkot:\n\n<xml><block type=\"maze_moveWest\"/></xml>"
         },
         "courseA_maze_seq5_2021": {
-          "1": "Próbáld leírni a lépéseket papírra, hogy megtaláld a megoldást!"
+          "1": "Próbáld leírni a lépéseket papírra, hogy megtaláld a megoldást!",
+          "2": "Ezt a blokkot kell használnod:\n\n<xml><block type=\"maze_moveSouth\"/></xml>"
         },
         "courseA_maze_seq5_dani": {
           "courseA_maze_seq5_a": "Próbáld leírni a lépéseket papírra, hogy megtaláld a megoldást!",
@@ -3375,8 +3379,8 @@
           "courseC_artist_loops5b_b": "Hogy a fenti mintához hasonlót csinálj, ugyanannyit kell visszafelé menned, mint amennyit előre mész. "
         },
         "courseC_artist_prog2_2021": {
-          "courseC_artist_prog2_a": "*\"Ha használod a <xml><block type=\"draw_move_by_constant\"><title name=\"DIR\">moveForward</title><title name=\"VALUE\">100</title></block></xml> blokkot, rajzolok egy vonalat.\"*",
-          "courseC_artist_prog2_b": "Baj van a bekanyarodással a sarkon? Használd a <xml><block type=\"draw_turn_by_constant_dropdown\"><title name=\"DIR\">turnRight</title><title name=\"VALUE\" config=\"45,60,90,120,180\">90</title></block></xml> blokkot!"
+          "courseC_artist_prog2_a": "Ha használod a 'lépj előre 100 pixelt' blokkot, automatikusan rajzolok egy vonalat.",
+          "courseC_artist_prog2_b": "Baj van a bekanyarodással a sarkon? Használd a 'fordulj jobbra 90 fokot' blokkot!"
         },
         "courseC_artist_prog3_2021": {
           "courseC_artist_prog3_a": "Hogy megrajzold az ablakot, rajzolj egy négyzetet, aminek minden oldala 100 képpont\n\n-   menj előre\n-   fordulj\n-   menj előre\n-   fordulj\n-   menj előre\n-   fordulj\n-   menj előre",
@@ -5023,6 +5027,46 @@
         "coursea_maze_ramp1_2021": {
           "courseC_maze_programming1_a": "Ha a madár nem ér el a malacig, ellenőrizd, hogy a két blookot megfelelően kapcsoltad-e össze, aztán kattints újra a \"Futtatás\" gombra!",
           "courseC_maze_programming1_b": "Ne félj hibázni! Próbálj ki valamit, és ha az nem működik, akkor próbálkozz valami mással!"
+        },
+        "courseA_harvester_seq10_2021": {
+          "courseA_harvester_seq10_a": "Elakadtál? Próbáld leírni a lépéseket egy papírra! ",
+          "courseA_harvester_seq10_b": "Először `menj keletre`, majd `menj északra`. Ezt ismételd kétszer. Ne felejtsd el, hogy közben az összes kukoricát be kell gyűjtened!",
+          "courseA_harvester_seq10_c": "Próbáld meg követni ezt az útvonalat, hogy felszedd az összes kukoricát!"
+        },
+        "courseA_harvester_seq1_2021": {
+          "courseA_harvester_seq1_a": "Használd ezt a blokkot, hogy az arató felszedje a kukoricát, amikor odaér hozzá!\n\n<xml>\n  <block type=\"harvester_corn\"/>\n</xml>",
+          "courseA_harvester_seq1_b": "Az aratónak 3 lépést kell tennie kelet felé, hogy eljusson a kukoricáig. Használd ezt a blokkot:\n\n<xml>\n  <block type=\"maze_moveEast\"/>\n</xml>"
+        },
+        "courseA_harvester_seq3_2021": {
+          "courseA_harvester_seq3_a": "Ugye emlékszel, hogy ezt a blokkot is használnod kell?\n\n<xml><block type=\"harvester_corn\"/></xml>",
+          "courseA_harvester_seq3_b": "Mondd ki hangosan a lépéseket, és rájössz, hogy mi a jó megoldás!"
+        },
+        "courseA_harvester_seq4_2021": {
+          "courseA_harvester_seq4_a": "Hányat kell lépni az aratónak a kukoricáig? Hány blokk van már most is ott a munkaterületen?",
+          "courseA_harvester_seq4_b": "Szükséged lesz öt `menj keletre` blokkra és egy `felszed kukorica` blokkra:\n\n<xml><block type=\"harvester_corn\"/></xml>"
+        },
+        "courseA_harvester_seq5_2021": {
+          "courseA_harvester_seq5_a": "Melyik blokk miatt indul el az arató rossz irányba?",
+          "courseA_harvester_seq5_b": "Egy blokkot el kell venned a kódból!",
+          "courseA_harvester_seq5_c": "Ezt a blokkot dobd ki a kódból!\n\n<xml><block type=\"maze_moveNorth\"/></xml>"
+        },
+        "courseA_harvester_seq6_2021": {
+          "courseA_harvester_seq6_a": "Ha elakadtál, próbáld hangosan kimondani a lépéseket. Segíthet kitalálni a helyes utat."
+        },
+        "courseA_harvester_seq7_2021": {
+          "courseA_harvester_seq7_a": "Próbáld meg 2 részletben megoldani a feladványt, az első rész a sarokig tart, a második a saroknál kezdődik.",
+          "courseA_harvester_seq7_b": "Gondban vagy? Ezt az utat kell megtennie az aratónak."
+        },
+        "courseA_harvester_seq8_2021": {
+          "courseA_harvester_seq8_a": "A végső kódban **4** mozgás blokk és **2** felszedés blokknak kell lennie."
+        },
+        "courseA_harvester_seq9_2021": {
+          "courseA_harvester_seq9_a": "Futtasd le néhányszor a kódot, hogy lásd, mi történik! Hol áll meg az arató?",
+          "courseA_harvester_seq9_b": "Ne felejtsd el összeszedni az összes kukoricát! Szükséged lesz **3** kukorica felszedése blokkra.",
+          "courseA_harvester_seq9_c": "Ezt az utat kell választanod, hogy felszedd az összes kukoricát."
+        },
+        "courseA_maze_seq5a_2021": {
+          "1": "Mondd ki hangosan a lépéseket, és rájössz, hogy mi a jó megoldás!"
         }
       }
     }
