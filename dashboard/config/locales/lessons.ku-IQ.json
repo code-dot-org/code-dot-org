@@ -2,6 +2,12 @@
   "ku-IQ": {
     "data": {
       "lessons": {
+        "outbreak/Outbreak": {
+          "overview": "",
+          "preparation": "",
+          "purpose": "",
+          "student_overview": ""
+        },
         "k5-onlinepd-2019/Loops": {
           "name": "گرێکان"
         },

@@ -39,8 +39,8 @@ theme: responsive
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
         <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom:10px"><strong>ダンスパーティー</strong></h3>
-        <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">お友達やご家族と共有するためのダンスパーティーコード Katy Perry、Shawn Mendes、Panic が入っています! At The Disco、Lil Nas X、Jonas Brothers、Nicki Minaj の他に 34 項目!</div>
-        <a class="linktag" id="danceparty" href="/dance" target="_blank"><button>アクティビティを試す</button></a>
+        <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">お友達やご家族と共有するためのダンスパーティーコード Beyoncé、Harry Styles、Lizzo、Lil Nas X、Selena Gomez、Disneyの「エンカント」の音楽などが登場！</div>
+        <a class="linktag" id="danceparty" href="/dance" target="_blank"><button>アクティビティを試します</button></a>
     </span>
   </div>
 </div>

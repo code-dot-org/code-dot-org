@@ -217,6 +217,7 @@
   "finalStage": "Congratulations! You have completed the final puzzle.",
   "finalStageTrophies": "Congratulations! You have completed the final puzzle and won {numTrophies, plural, one {a trophy} other {# trophies}}.",
   "finish": "Finish",
+  "function": "Function",
   "gdprDialogYes": "Yes",
   "gender": "Gender",
   "generatedCodeInfo": "Even top universities teach block-based coding (e.g., {berkeleyLink}, {harvardLink}). But under the bonnet, the blocks you have assembled can also be shown in JavaScript, the world's most widely used coding language:",

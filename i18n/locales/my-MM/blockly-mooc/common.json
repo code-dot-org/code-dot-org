@@ -378,6 +378,7 @@
   "findLocalClassDescription": "ကိုယ်တိုင်ကိုယ်ကျ လေ့လာဖို့ ဒေသတွင်း ကျောင်းပြင်ပအစီအစဉ်, နွေရာသီစခန်း သို့မဟုတ် ကျောင်းကို ရှာဖွေပါ.",
   "findLocalClassButton": "အတန်းတစ်တန်းရှာပါ",
   "finish": "ပြီးဆုံးပြီ",
+  "function": "လုပ်ဆောင်ချက်",
   "gender": "က်ား/မ",
   "generatedCodeInfo": "ထိပ်တန်းတက္ကသိုလ်တွေတောင်blockကိုအခြေခံတဲ့codingတွေသင်ပေးပါတယ်(သပမာ., {berkeleyLink}, {harvardLink})။သင်စုစည်းလိုက်တဲ့blocksတွေက ကမ္ဘာသုံးcoding languageဖြစ်တဲ့JavaScriptမှာလဲပြသနိုင်ပါတယ်:",
   "getDiscountCode": "Discount codeကို ရယူပါ",

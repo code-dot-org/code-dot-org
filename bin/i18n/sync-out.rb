@@ -181,6 +181,8 @@ def restore_redacted_files
           plugins << 'vocabularyDefinition'
         elsif original_path.starts_with? "i18n/locales/original/curriculum_content"
           plugins.push(*Services::I18n::CurriculumSyncUtils::REDACT_RESTORE_PLUGINS)
+        elsif %w(applab gamelab weblab).include?(File.basename(original_path, '.json'))
+          plugins << 'link'
         end
         RedactRestoreUtils.restore(original_path, translated_path, translated_path, plugins)
       end
@@ -445,6 +447,9 @@ def distribute_translations(upload_manifests)
       next unless file_changed?(locale, relative_path)
 
       destination_dir = "pegasus/sites.v3/code.org/i18n/public"
+      # The `views` path is actually outside of the `public` path, so when we
+      # see such files, we make sure we restore the `/..` to the destination.
+      destination_dir << "/.." if relative_path.start_with? "/views"
       relative_dir = File.dirname(relative_path)
       name = File.basename(loc_file, ".*")
       destination = File.join(destination_dir, relative_dir, "#{name}.#{locale}.md.partial")
@@ -527,7 +532,7 @@ end
 
 # For untranslated apps, copy English file for all locales
 def copy_untranslated_apps
-  untranslated_apps = %w(applab calc eval gamelab netsim weblab)
+  untranslated_apps = %w(calc eval netsim)
 
   PegasusLanguages.get_locale.each do |prop|
     next unless prop[:locale_s] != 'en-US'

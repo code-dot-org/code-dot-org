@@ -15,7 +15,7 @@
           "description": "Bugün, bir bilgisayarın anlayabileceği bir dizi talimat anlamına gelen \"kod\" ile yaratıcı olmak için başka bir fırsatımız daha olacağını açıklayın. Hangi boyama renklerini kullanacağınızı veya hangi kelimelerle yazacağınızı seçmenin yaratıcılığı ifade edebildiği gibi, hangi kodu yazacağınızı ve insanların onunla nasıl etkileşime girdiğini seçmek de yaratıcılığınızı ifade etmek için bir fırsat olabilir!\n\n**Kalkın ve dans edin:** Bugün kodlamayı dansı kullanarak nasıl daha yaratıcı şekillerde birleştirebileceğimizi sınıfa duyurun. Çocuklarınızı havaya sokmak için 10 saniye boyunca diş ipi dans hareketini, dab hareketini veya kendi yaratıcı dans hareketlerini yapmalarını isteyin. Başlamak için bu Spotify Çalma Listesinden (her yaş için) bir şarkı seçebilirsiniz. Sınıfınızın hareketlerini videoya kaydedin.\n\n![](https://curriculum.code.org/media/uploads/girls-flossing.2018-11-01-16_13_52_9Ot0bvX.gif)"
         },
         "7de94e25-7e33-4258-af1c-1e792ba78c5f": {
-          "name": "Dans Partisi - İleri Git",
+          "name": "Dans etmeye devam",
           "description": "#### Müzik Filtreleme\n\nBu öğretici, popüler sanatçıların şarkılarını içermektedir. Bu öğreticide şarkı listesinin önizlemesini almak için bu [Spotify Çalma Listesi (her yaş için)](https://open.spotify.com/playlist/2MiLztu5QGQERdEsZed81b?si=6cF0s1ETQf2vN_ea8B4fIw)'ne göz atın. Tüm şarkıların güvenli sürümlerini kullanmaktayız. 13 yaşından küçük öğrenciler için müziği bu filtrelenmiş listeyle sınırlandırıyoruz."
         },
         "69481dbf-6e15-4769-8840-992f641a75b1": {
@@ -1125,7 +1125,7 @@
         },
         "8581ae5d-4d2a-4221-b820-5920dd449b6c": {
           "name": "Giriş",
-          "description": "**Tartışma:**\n\n-   _Bir virüsün yayılması hakkında ne biliyoruz?_\n-   _Bir virüsün bir kasabada daha hızlı yayılmasına ne sebep olabilir?_\n-   _Bir virüsün yayılmasını yavaşlatmaya ne yardımcı olabilir?_\n\nBu tartışmanın amacı, öğrencilerin ön bilgilerini harekete geçirme ve fikirlerini tahtada görme fırsatına sahip olmalarıdır. Bu aynı zamanda virüslerin nasıl yayıldığına dair bazı yanlış bilgileri araştırma fırsatıdır."
+          "description": "**Tartışma:**\n\n- _Bir virüsün yayılması hakkında ne biliyoruz?_\n- _Bir virüsün bir kasabada daha hızlı yayılmasına ne sebep olabilir?_\n- _Bir virüsün yayılmasını yavaşlatmaya ne yardımcı olabilir?_\n\nBu tartışmanın amacı, öğrencilerin ön bilgilerini harekete geçirme ve fikirlerini tahtada görme fırsatına sahip olmalarıdır. Bu aynı zamanda virüslerin nasıl yayıldığına dair bazı yanlış bilgileri araştırma fırsatıdır."
         },
         "d63c77c1-4167-4360-ab98-25610934beda": {
           "name": "Salgın",
@@ -1157,11 +1157,11 @@
           "description": "_Simülasyonlar, gerçek dünyada gözlemlenmesi zor olabilecek şeyleri öğrenmenin harika bir yoludur. Bilim adamlarının sorunları çözmelerine, sorunun nasıl çözüleceğini tahmin etmelerine, yeni fikirleri güvenli ve verimli bir şekilde test etmelerine yardımcı olurlar. Simülasyonunuz, Canavar Şehri'ndeki bir virüs salgınının nasıl görünebileceğini göstermenin bir yoludur._"
         },
         "b3189fd8-5272-4de4-953a-f4848b2ddb5c": {
-          "description": "**Tartışma:**\n\n-   Simülasyonlar gerçek dünyada nasıl yardımcı olabilir?\n-   Simülasyonlar çevremizdeki dünyayı anlamamıza nasıl yardımcı olabilir?\n-   Simülasyonlar fikirleri test etme şeklimizi nasıl iyileştirebilir?\n\nTartışmanın amacı, öğrencilerin simülasyonların karmaşık sistemleri etkileşimli bir şekilde modellemenin yollarından biri olduğunu anlamalarıdır. Ayrıca simülasyonların insanların fikirleri hızlı, ucuz ve güvenli bir şekilde test etmesini nasıl sağladığını da görmeliler."
+          "description": "**Tartışma:**\n\n- Simülasyonlar gerçek dünyada nasıl yardımcı olabilir?\n- Simülasyonlar çevremizdeki dünyayı anlamamıza nasıl yardımcı olabilir?\n- Simülasyonlar fikirleri test etme şeklimizi nasıl iyileştirebilir?\n\nTartışmanın amacı, öğrencilerin simülasyonların karmaşık sistemleri etkileşimli bir şekilde modellemenin yollarından biri olduğunu anlamalarıdır. Ayrıca simülasyonların insanların fikirleri hızlı, ucuz ve güvenli bir şekilde test etmesini nasıl sağladığını da görmeliler."
         },
         "b8e884f1-eae0-4138-8778-0972f90e34d9": {
           "name": "Yansıma",
-          "description": "**Sorular:**\n\n-   Bu simülasyon gerçek dünyaya ne kadar benzer? Gerçek dünyadan ne kadar farklı?\n-   Simülasyonunuzda neyi değiştirmek/eklemek istersiniz?"
+          "description": "**Sorular:**\n\n- Bu simülasyon gerçek dünyaya ne kadar benzer? Gerçek dünyadan ne kadar farklı?\n- Simülasyonunuzda neyi değiştirmek/eklemek istersiniz?"
         },
         "21f43e64-dea3-4abc-8284-e055480370ce": {
           "name": "Giriş",
@@ -1455,7 +1455,7 @@
         },
         "54b95e4d-58b7-4551-9782-7ce134f4e457": {
           "name": "Heyecan Yaratın!",
-          "description": "\\*Motive edin:\\*\\* Öğrencilere bugünkü etkinliğin amaçlarını açıklayın. Öğrenciler, bir yapay zeka biçimi olan gerçek bir makine öğrenmesi modelini eğitmelerine olanak sağlayacak yeni bir aracı kullanmaya başlayacaklar. \n\n**Genel Destek:** Bir öğretmen olarak rolünüz, öncelikle öğrencileri eğitim boyunca desteklemektir. Aşağıda, seviyeleri ne olursa olsun öğrencilere yardımcı olacak birkaç ipucu verilmiştir.\n\n-   **Doğruluğunu Kontrol Etme** Bu ders, öğrencilere bu seviyeyi doğru bir şekilde tamamlayıp tamamlamadıklarını gösterecektir. Aktivitenin farklı kısımlarını hızlıca atlamak mümkündür. Öğrencileri bu ders boyunca videolar izleme, talimatları okuma ve farklı şeyleri deneme konusunda teşvik edin. Bulgularını dilediği zaman sizinle veya bir sınıf arkadaşı ile paylaşabilirler.\n-   **Arkadaşlarınızla İşbirliği:** Öğrencileri, yaşadıklarını deneyimi tartışmak için arkadaşlarıyla görüşmeye teşvik edin. Bu öğretici, videolar içerdiğinden ve öğrenciler bu videoları kulaklıklarıyla dinliyor olabileceğinden kendilerini \"bir balonun içinde\" gibi hissedebilirler. Yardıma ihtiyaçları olduklarında öğrencileri aktif olarak eşleştirerek bu durumu aşmaya yardımcı olun.\n-   **Talimatları okuyun:** Talimatlar genellikle seviyeyi nasıl tamamlayacağınız konusunda yardımcı ipuçları sağlar.\n-   **Geri dönün ve farklı şeyler deneyin:** Öğrenciler hızlı bir şekilde bitirirse, onları \"Daha Fazla Eğitim\"e geri dönmeye teşvik edin. Aktivitenin son bölümünde ise öğrenciler geri dönüp bir \"Yeni Kelime\" seçebilirler. Daha fazla eğitim verisi, makine öğrenimi modelini daha doğru ve tutarlı hale getirir. Öğrenciler, modellerini kasıtlı bir şekilde yanlış eğiterek veya hiç eğitmeyerek de öğrenebilirler.\n    **Video:** [Yapay Zeka: Makine Öğrenimi](https://www.youtube.com/watch?v=OeU5m6vRyCk) Bu etkinliğin ilk düzeyi, yapay zeka ve makine öğrenimi hakkında önemli bağlam sağlayan bir videodur. Videoyu sınıfça izleyin ve daha sonra öğrencilerin içerikle bağlantı kurmasına yardımcı olmak için bilgi alın.",
+          "description": "\\*Motive edin:\\*\\* Öğrencilere bugünkü etkinliğin amaçlarını açıklayın. Öğrenciler, bir yapay zeka biçimi olan gerçek bir makine öğrenmesi modelini eğitmelerine olanak sağlayacak yeni bir aracı kullanmaya başlayacaklar. \n\n**Genel Destek:** Bir öğretmen olarak rolünüz, öncelikle öğrencileri eğitim boyunca desteklemektir. Aşağıda, seviyeleri ne olursa olsun öğrencilere yardımcı olacak birkaç ipucu verilmiştir.\n\n-   **Doğruluğunu Kontrol Etme** Bu ders, öğrencilere bu seviyeyi doğru bir şekilde tamamlayıp tamamlamadıklarını söylemeyecektir. Aktivitenin farklı kısımlarını hızlıca atlamak mümkündür. Öğrencileri bu ders boyunca videolar izleme, talimatları okuma ve farklı şeyleri deneme konusunda teşvik edin. Bulgularını dilediği zaman sizinle veya bir sınıf arkadaşı ile paylaşabilirler.\n-   **Arkadaşlarınızla İşbirliği:** Öğrencileri, yaşadıklarını deneyimi tartışmak için arkadaşlarıyla görüşmeye teşvik edin. Bu öğretici, videolar içerdiğinden ve öğrenciler bu videoları kulaklıklarıyla dinliyor olabileceğinden kendilerini \"bir balonun içinde\" gibi hissedebilirler. Yardıma ihtiyaçları olduklarında öğrencileri aktif olarak eşleştirerek bu durumu aşmaya yardımcı olun.\n-   **Talimatları okuyun:** Talimatlar genellikle seviyeyi nasıl tamamlayacağınız konusunda yardımcı ipuçları sağlar.\n-   **Geri dönün ve farklı şeyler deneyin:** Öğrenciler hızlı bir şekilde bitirirse, onları \"Daha Fazla Eğitim\"e geri dönmeye teşvik edin. Aktivitenin son bölümünde ise öğrenciler geri dönüp bir \"Yeni Kelime\" seçebilirler. Daha fazla eğitim verisi, makine öğrenimi modelini daha doğru ve tutarlı hale getirir. Öğrenciler, modellerini kasıtlı bir şekilde yanlış eğiterek veya hiç eğitmeyerek de öğrenebilirler.\n    **Video:** [Yapay Zeka: Makine Öğrenimi](https://www.youtube.com/watch?v=OeU5m6vRyCk) Bu etkinliğin ilk düzeyi, yapay zeka ve makine öğrenimi hakkında önemli bağlam sağlayan bir videodur. Videoyu sınıfça izleyin ve daha sonra öğrencilerin içerikle bağlantı kurmasına yardımcı olmak için bilgi alın.",
           "tips": [
             "Yapay zekanın geleceği nasıl etkileyeceğini görmelerine yardımcı olmak için bu hikayeleri sınıfınızla paylaşabilirsiniz.\n\n-   [Yiyecek Atığı Ciddi Bir Sorun. Yapay Zeka Bunu Çözmeye Çalışıyor](https://singularityhub.com/2019/11/03/food-waste-is-a-serious-problem-ai-is-trying-to-solve-it/)\n-   [Yapay Zeka teknolojisi, bir kişinin yüzüne bakıp genetik bozuklukları tanımlayabilir](https://mashable.com/video/ai-identify-genetic-disorders-photo/?)\n-   \\[Bir Yapay Zeka Girişimi, Sadece 46 Günde Bir İlaç Adayını Nasıl Tasarladı[2]\n-   [MIT Yapay Zeka aracı meme kanserini 5 yıla kadar erken tahmin edebilir](https://techcrunch.com/2019/06/26/mit-ai-tool-can-predict-breast-cancer-up-to-5-years-early-works-equally-well-for-white-and-black-patients/)\n-   [Ordu kendi kendine gidebilen arabalarda hızını artırıyor](https://www.axios.com/us-army-military-casualties-autonomous-vehicles-1ff51e01-3b16-4a1c-9587-ce55dee74788.html?)\n-   [San Francisco, insanları suçla savaşırken önyargıyı azaltmak için yapay zeka kullanacağını söylüyor](https://www.theverge.com/2019/6/12/18663093/ai-sf-district-attorney-police-bias-race-charge-crime)\n-   [Yapay Zeka, bilim adamlarının taş tabletlerdeki antik Yunan metinleri restore etmelerine yardımcı oluyor](https://techcrunch.com/2019/10/18/ai-is-helping-scholars-restore-ancient-greek-texts-on-stone-tablets/)"
           ],
@@ -1471,7 +1471,7 @@
           ]
         },
         "5d09fa3e-63ce-4142-ac59-d893889ce78d": {
-          "description": "#### Seviye 2-4 - Okyanusu Temizlemek için Yapay Zekayı Eğitin\n\nÖğrenciler seviye 2-4'de kendi başlarına veya bir ortakla çalışabilirler. Yapay Zekayı programlarken bir görüntüyü \"balık\" veya \"balık değil\" olarak etiketlemek için düğmeleri kullanın. Her görüntü ve etiket, yapay zekayı aynı işlemi kendi başına yapması konusunda eğitmek için kullanılan verilerin bir parçası haline gelir. Yapay Zeka bir kez eğitildikten sonra yeni görseli kendi başına etiketlemeye çalışır, ardından eğitimine göre en yüksek \"balık\" olma olasılığına sahip olduğunu belirlediği bir seçki sunar. Nesneleri tutarlı bir şekilde doğru etiketleyen öğrenciler, çok fazla (veya herhangi bir) başka nesne olmadan farklı türde deniz canlılarıyla dolu bir okyanus görmelidir.",
+          "description": "#### Seviye 2-4 - Okyanusu Temizlemek için Yapay Zekayı Eğitin\n\nÖğrenciler seviye 2-4'de kendi başlarına veya bir ortakla çalışabilirler. Yapay Zekayı programlarken bir görüntüyü \"balık\" veya \"balık değil\" olarak etiketlemek için düğmeleri kullanın. Her görüntü ve etiket, yapay zekayı aynı işlemi kendi başına yapması konusunda eğitmek için kullanılan verilerin bir parçası haline gelir. Yapay Zeka bir kez eğitildikten sonra 100 yeni görseli kendi başına etiketlemeye çalışır, ardından eğitimine göre en yüksek \"balık\" olma olasılığına sahip olduğunu belirlediği bir seçki sunar. Nesneleri tutarlı bir şekilde doğru etiketleyen öğrenciler, çok fazla (veya herhangi bir) başka nesne olmadan farklı türde deniz canlılarıyla dolu bir okyanus görmelidir.",
           "progression_name": "Bir Yapay Zekayı Okyanusu Temizlemesi için Eğitin"
         },
         "917bb837-8f93-4a92-86dc-ed60980f680b": {
@@ -1851,7 +1851,7 @@
           "progression_name": "Video: Özellikler"
         },
         "617957c6-14b8-4db6-8018-1f81a191b624": {
-          "progression_name": "Özellikleri"
+          "progression_name": "Özellikler"
         },
         "63a3dd77-4375-473b-baa6-45c56d551354": {
           "tips": [
@@ -2665,6 +2665,9 @@
             "Flash Chat soruları, dersin daha büyük dünya ve öğrencilerin daha büyük geleceği ile nasıl ilgili olduğunu düşünerek büyük resmi kıvılcım amaçlamaktadır. Sınıfınızla ilgili bilgilerinizi kullanarak bunları sınıf olarak mı, grup halinde mi yoksa bir dirsek ortağıyla mı tartışmak istediğinize karar verin."
           ]
         },
+        "f26ccabe-2b34-481f-b142-b6227421df3e": {
+          "name": "Keşfet"
+        },
         "f8419af8-d199-4cb6-b4dc-ea619a1ea802": {
           "progression_name": "Örnek projeler"
         },
@@ -3156,6 +3159,9 @@
         },
         "6ef6c719-244f-449d-9d81-75283f9d48e4": {
           "description": "Dijital paylaşım ve yaratıcı haklar konusunda daha fazla ders bulmak için [Telif Hakkı & Yaratıcılık ]'ı[0] ziyaret ediniz."
+        },
+        "b032e6b2-4dfd-431c-a938-06a8bd4a8056": {
+          "name": "Keşfet"
         },
         "8c2b4d58-a189-4531-bc7c-bfcb4bce7ca8": {
           "progression_name": "Örnek Projeler"
@@ -4037,7 +4043,7 @@
           "tips": [
             "Dersin bu noktasından sonra talimatların daha az kuralcı olduğunu fark edebilirsiniz. Öğrencileri yaratıcı olmaları ve gösterilen yeni blokları keşfetmeleri konusunda teşvik edin. Belirli bir görevi çözmek yerine deneme yapmayı teşvik etmek için, bu andan itibaren öğrenci kodları **doğrulukları açısından kontrol edilmeyecek**"
           ],
-          "progression_name": "Özellikleri"
+          "progression_name": "Özellikler"
         },
         "0b074fdf-834b-4d06-a5da-6c7e0c670b05": {
           "description": "##### Parti Başladı!",
@@ -10452,6 +10458,7 @@
           ]
         },
         "73c2cb42-e6a3-4317-8aab-7196411578ab": {
+          "name": "AI Laboratuvarında Model Kartları",
           "tips": [
             null
           ]
@@ -12438,7 +12445,7 @@
           "progression_name": "Örnek Projeler"
         },
         "7ba3e3fc-9997-480c-86f7-54e100343b8a": {
-          "progression_name": "Grafik Lab Projesi"
+          "progression_name": "Hareketli Nesne Laboratuvar Projesi"
         },
         "919ce65a-2a03-4e80-9108-6243b5dd733f": {
           "name": "Sanatçı Projesi",
@@ -12652,7 +12659,7 @@
           "progression_name": "Örnek Projeler"
         },
         "b8f9aaae-501f-4c71-9df3-3250ffe49d6e": {
-          "progression_name": "Grafik Lab Projesi"
+          "progression_name": "Hareketli Nesne Laboratuvar Projesi"
         },
         "22ed3900-dd2a-4eec-99c1-69f131286de6": {
           "name": "Sanatçı Projesi",
@@ -12662,7 +12669,7 @@
           "progression_name": "Örnek Projeler"
         },
         "f0d08173-4d56-4bdc-8bd0-173ba4445206": {
-          "progression_name": "Grafik Lab Projesi"
+          "progression_name": "Hareketli Nesne Laboratuvar Projesi"
         },
         "9a803448-dc94-4fae-9c6e-9099f7a26bc2": {
           "name": "Sanatçı Projesi",
@@ -14932,7 +14939,7 @@
         },
         "a49bc6c2-1b76-476d-98cd-7f040e8853a7": {
           "name": "Şiir Sanatı",
-          "description": "#### Genel Destek\n\nBu etkinliğin sonunda öğrenciler seçtikleri şiirin görsel yorumunu temsil eden animasyonlu bir şiire sahip olacaklardır. Bu ders, öğrencilere kodlarını kurcalama ve en çok beğendikleri görsel efektleri bulma fırsatı vermek için tasarlanmıştır.\n\nOdanın etrafında dönerken öğrencileri şunları yapmaya teşvik edin:\n\n-   **Zaman Ayırın:** Seviyelerin çoğu, öğrencilerin şiirin havasına ilişkin yorumlarına uygun mükemmel efektleri bulmalarını gerektirir. Bir seviyede kalmak ve kodlarını kurcalamak son derece teşvik edilir.\n\n-   **Beğendiğiniz bir şiir bulun:** Yeni bir seviyedeki bir öğrenci için sergilenen şiir sadece bir öneridir. Oyun alanının üst kısmında önceden yüklenmiş şiirler içeren bir şiir açılır menüsü vardır. Öğrencilerden birkaç tanesini okumalarını ve kendilerine hitap eden birini bulmalarını isteyin. Daha sonra seçtikleri şiiri kodla canlandırmaya başlayabilirler. \n\n-   **Tamamlanmış bir seviyeyi gösterin:** Tamamen yeşil olan herhangi bir seviye balonu, öğrencinin o seviye için tüm gereklilikleri başarıyla tamamladığı anlamına gelir. Bir öğrenciden, yarattıklarını göstermek için yeşil bir baloncuğu tıklamasını isteyin.\n\nÖğrencinin kendini sıkışmış hissettiği zamanlar için:\n\n-   **Talimatları okuyun:** Talimatlar, seviyenin nasıl tamamlanacağına ilişkin madde işaretli noktalardır. Bir öğrenci sıkışmış hissediyorsa, talimatları yüksek sesle size okumasını ve talimatların söylediklerini kendi sözcükleriyle tekrar etmelerini isteyin.\n    -   <img src=\"https://images.code.org/5b99c663ad6632fe64c9da69d6805c2b-text-to-speech.PNG\" style=\"height: 25px;\"> Öğrenciler, talimatların yüksek sesle okunmasını dinlemek için bu metinden sese simgesine de tıklayabilir.\n-   <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> **İpuçları arayın**: Çoğu seviye, seviyenin nasıl geçileceğine dair daha açık ayrıntılar içeren en az bir ipucu içerir.\n-   **Hataları kutlayın:** Kodunuzda bir hata olması, kodlama sürecinin doğal bir parçasıdır. Program beklediklerini yapmıyorsa, öğrenciden önce size ne olmasını istediğini söylemesini isteyin, gerçekte ne olduğunu gözlemlemek için çalıştır'a tıklayın, ardından kodunda tutarsızlığa neden olan yeri bulun. Hata bulmayı ve hataları düzeltmeyi kutlamayı unutmayın. Hata almak, öğrencilerin daha karmaşık bir program oluşturmak için harika bir iş çıkardıkları anlamına gelir. "
+          "description": "#### Genel Destek\n\nBu etkinliğin sonunda öğrenciler seçtikleri şiirin görsel yorumunu temsil eden animasyonlu bir şiire sahip olacaklardır. Bu ders, öğrencilere kodlarını kurcalama ve en çok beğendikleri görsel efektleri bulma fırsatı vermek için tasarlanmıştır.\n\nOdanın etrafında dönerken öğrencileri şunları yapmaya teşvik edin:\n\n- **Zaman Ayırın:** Seviyelerin çoğu, öğrencilerin şiirin havasına ilişkin yorumlarına uygun mükemmel efektleri bulmalarını gerektirir. Bir seviyede kalmak ve kodlarını kurcalamak son derece teşvik edilir.\n\n- **Beğendiğiniz bir şiir bulun:** Yeni bir seviyedeki bir öğrenci için sergilenen şiir sadece bir öneridir. Oyun alanının üst kısmında önceden yüklenmiş şiirler içeren bir şiir açılır menüsü vardır. Öğrencilerden birkaç tanesini okumalarını ve kendilerine hitap eden birini bulmalarını isteyin. Daha sonra seçtikleri şiiri kodla canlandırmaya başlayabilirler. \n\n- **Tamamlanmış bir seviyeyi gösterin:** Tamamen yeşil olan herhangi bir seviye balonu, öğrencinin o seviye için tüm gereklilikleri başarıyla tamamladığı anlamına gelir. Bir öğrenciden, yarattıklarını göstermek için yeşil bir baloncuğu tıklamasını isteyin.\n\nÖğrencinin kendini sıkışmış hissettiği zamanlar için:\n\n- **Talimatları okuyun:** Talimatlar, seviyenin nasıl tamamlanacağına ilişkin madde işaretli noktalardır. Bir öğrenci sıkışmış hissediyorsa, talimatları yüksek sesle size okumasını ve talimatların söylediklerini kendi sözcükleriyle tekrar etmelerini isteyin.\n    -   <img src=\"https://images.code.org/5b99c663ad6632fe64c9da69d6805c2b-text-to-speech.PNG\" style=\"height: 25px;\"> Öğrenciler, talimatların yüksek sesle okunmasını dinlemek için bu metinden sese simgesine de tıklayabilir.\n-   <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> **İpuçları arayın**: Çoğu seviye, seviyenin nasıl geçileceğine dair daha açık ayrıntılar içeren en az bir ipucu içerir.\n- **Hataları kutlayın:** Kodunuzda bir hata olması, kodlama sürecinin doğal bir parçasıdır. Program beklediklerini yapmıyorsa, öğrenciden önce size ne olmasını istediğini söylemesini isteyin, gerçekte ne olduğunu gözlemlemek için çalıştır'a tıklayın, ardından kodunda tutarsızlığa neden olan yeri bulun. Hata bulmayı ve hataları düzeltmeyi kutlamayı unutmayın. Hata almak, öğrencilerin daha karmaşık bir program oluşturmak için harika bir iş çıkardıkları anlamına gelir. "
         },
         "065eda67-268c-4f91-9caf-efb2c34493fe": {
           "description": "#### Seviyeye Göre Destek\n\n**Seviye 1:** Öğrencileri şiiri okumaya teşvik edin. Ardından öğrencilerden seçtikleri şiirin tonuna uyan bir arka plan rengi veya efekti bulmalarını isteyin.\n\n**Seviye 2:** Bu örnekte, öğrenciler önce şiiri kendi başlarına okumalı, ardından Çalıştır'a basmalıdır. Öğrenciye programcının seçtiği ses ve efektlerin şiirin havasına uyup uymadığını sorabilirsiniz. Öğrencilerden cevaplarını detaylandırmalarını isteyin.\n\n**Seviye 3:** Bu seviye sesi tanıtır, öğrenciler varsa kulaklık kullanabilirler.\n\n**Seviye 4:** Öğrencilerden şiiri okumalarını ve şiirin ruh halinin değiştiği dizeyi veya şairin sunduğu yeni bir imge olup olmadığını bulmalarını isteyin. Şiirin tanımlanan satırlarına karşılık gelen efektler eklemek için olay bloğunu kullanın.\n\n**Seviye 5:** Bu örnekte öğrenciler önce şiiri kendi başlarına okumalı, ardından Çalıştır'a basmalıdır. Öğrenciye resimlerin şiirin sözleriyle uyuşup uyuşmadığını sorun. Cevaplarını detaylandırmalarını isteyin.\n\n**Seviye 6, 7, 8:** Genel Destek bölümündeki \"Hataları kutlayın\" bölümüne bakın. Öğrencileri, etkinlik bloklarıyla birden fazla geçiş içeren programlar oluşturmaya teşvik edin. \n\n**Seviye 9:** Öğrencileri, beğendiklerini bulmak için açılır menüdeki tüm şiirleri okumaya teşvik edin. Öğrencilere, bu son seviyede yaptıklarını arkadaşları ve aileleri ile paylaşabileceklerini söyleyin. Şimdi tüm kodlama ve ELA becerilerini bir araya getirme zamanı! "
@@ -17665,7 +17672,7 @@
         },
         "d3f08051-43ee-48aa-9154-f8b1f21a486f": {
           "description": "##### Seviye 11\n\n-   11-13 seviyeleri dansçıların özelliklerini (örn. boyut, renk) ayarlamakla ilgilidir.\n-   Teal `set` bloğunun dansçıların oluşturulduğu _after_ programında bir yere yerleştirildiğinden emin olmak önemlidir. Bu bulmacayı çözmek için programınızın herhangi bir yerine bir 'set boyutu' bloğu yerleştirin ve dansçılarınızın bazılarının boyutunu değiştirmek için kullanın. \n-   Grup olarak oluşturulan dansçıların varsayılan boyutu 30'dur. Diğer dansçıların varsayılan boyutu 100.\n\n##### Seviye 12\n\n-   Önceki seviyede olduğu gibi, yalnızca programınızdaki dansçıları yaptıktan sonra `set tonu (color)`bloğunu kullandığınızdan emin olun. Örneğin, programınızın `setup` alanına ilk adım olarak yerleştirilmesi hiçbir etkisi olmayacaktır.\n\n##### Seviye 13\n\n-   Doğru kodla dansçı döngüsünü farklı renkler, boyutlar veya dans hareketleriyle görmelisiniz.\n-   Bir teal `change`, bir teal `randomize` bloğu veya “her 2 ölçüm' bloğuna bağlı mor bir \\`sonsuza kadar yapmak' bloğu olduğundan emin olun. \n-   'sonsuza dek yap' bloklarının (Sonraki), (Önceki) veya (Rastgele) olarak ayarlandığından emin olun. Aksi takdirde, dansçı sadece set hareketini tekrar tekrar gerçekleştirecektir.\n-   Öğrencilerin bu seviyede yazdık**kod doğruluğu için kontrol edilmediğini unutmayın**. Bu, programı değiştirmese bile, her zaman seviyeyi geçecekleri anlamına gelir. Öğrenciler, kodlarını kendileri için ilginç şekillerde denemekten çekinmelidirler. Devam etmek için “Son” düğmesine tıklayın.\n-   'Her 2 önlem' bloğunun içinde yeni dansçılar yapmak programınızın aynı konumda (lar) da birden çok özdeş dansçı oluşturmasına neden olur ve istenmeyen sonuçlara yol açabilir!",
-          "progression_name": "Özellikleri"
+          "progression_name": "Özellikler"
         },
         "c7bb438d-7dd6-483a-954a-0431f8ece258": {
           "tips": [
@@ -18366,7 +18373,7 @@
           "tips": [
             "Dersin bu noktasından sonra talimatların daha az kuralcı olduğunu fark edebilirsiniz. Öğrencileri yaratıcı olmaları ve gösterilen yeni blokları keşfetmeleri konusunda teşvik edin. Belirli bir görevi çözmek yerine deneme yapmayı teşvik etmek için, bu andan itibaren öğrenci kodları **doğrulukları açısından kontrol edilmeyecek**"
           ],
-          "progression_name": "Özellikleri"
+          "progression_name": "Özellikler"
         },
         "97583afa-79d7-487a-a962-9366e1d17bba": {
           "description": "##### Parti Başladı!",
@@ -20292,6 +20299,7 @@
           ]
         },
         "30e5080a-05d0-4193-82e4-f7c81f1adb5c": {
+          "name": "AI Laboratuvarında Model Kartları",
           "tips": [
             null
           ]
@@ -24375,7 +24383,7 @@
           "progression_name": "Ölçü"
         },
         "a9494fa0-0b2b-4c5a-939e-c440bb5f4717": {
-          "progression_name": "Özellikleri"
+          "progression_name": "Özellikler"
         },
         "7a2b3e7f-2f8f-4592-a166-1d279f647fb2": {
           "progression_name": "Özet"

@@ -7,6 +7,7 @@ import {CourseBlocksIntl} from './CourseBlocks';
 import CoursesTeacherEnglish from './CoursesTeacherEnglish';
 import CoursesStudentEnglish from './CoursesStudentEnglish';
 import ProtectedStatefulDiv from '../ProtectedStatefulDiv';
+import SpecialAnnouncement from './SpecialAnnouncement';
 import {SpecialAnnouncementActionBlock} from './TwoColumnActionBlock';
 import Button from '@cdo/apps/templates/Button';
 import i18n from '@cdo/locale';
@@ -118,6 +119,7 @@ class Courses extends Component {
             {/* English, student.  (Also the default to be shown when signed out.) */}
             {isEnglish && !isTeacher && (
               <div className={'announcements'}>
+                <SpecialAnnouncement isTeacher={isTeacher} />
                 <CoursesStudentEnglish />
               </div>
             )}

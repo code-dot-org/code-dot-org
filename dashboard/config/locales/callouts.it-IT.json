@@ -1279,7 +1279,7 @@
           "snowflake_dropdown": "Usa questo elenco a discesa per creare fiocchi di neve di varie forme!"
         },
         "frozen line": {
-          "run": "Clicca su \"Esegui\" per provare il tuo programma",
+          "run": "Clicca su \"Esegui\" per provare il tuo programma!",
           "move_elsa_forward": "Per far muovere Elsa in avanti prendi il blocco \"vai avanti\" ed attaccalo sotto il blocco \"quando si clicca su 'Esegui' \""
         },
         "frozen perpendicular": {
@@ -1900,10 +1900,10 @@
           "hw_Run": "Clicca qui per eseguire il codice."
         },
         "helloworld_animals_events": {
-          "hello_world_click_hint": "Aggiungi questo blocco dell'evento al tuo spazio di lavoro."
+          "hello_world_click_hint": "Aggiungi questo blocco evento alla tua area di lavoro."
         },
         "helloworld_animals_freeplay": {
-          "costumes_tab": "Clicca qui per aggiungere indumenti al tuo progetto."
+          "costumes_tab": "Clicca qui per aggiungere costumi al tuo progetto."
         },
         "helloworld_animals_location": {
           "pin": "fissa"
@@ -1925,10 +1925,10 @@
           "hw_Run": "Clicca qui per eseguire il codice."
         },
         "helloworld_emoji_events": {
-          "hello_world_click_hint": "Aggiungi questo blocco dell'evento al tuo spazio di lavoro."
+          "hello_world_click_hint": "Aggiungi questo blocco evento alla tua area di lavoro."
         },
         "helloworld_emoji_freeplay": {
-          "costumes_tab": "Clicca qui per aggiungere indumenti al tuo progetto."
+          "costumes_tab": "Clicca qui per aggiungere costumi al tuo progetto."
         },
         "helloworld_emoji_location": {
           "pin": "fissa"
@@ -1950,10 +1950,10 @@
           "hw_Run": "Clicca qui per eseguire il codice."
         },
         "helloworld_food_events": {
-          "hello_world_click_hint": "Aggiungi questo blocco dell'evento al tuo spazio di lavoro."
+          "hello_world_click_hint": "Aggiungi questo blocco evento alla tua area di lavoro."
         },
         "helloworld_food_freeplay": {
-          "costumes_tab": "Clicca qui per aggiungere indumenti al tuo progetto."
+          "costumes_tab": "Clicca qui per aggiungere costumi al tuo progetto."
         },
         "helloworld_food_location": {
           "pin": "fissa"
@@ -1975,10 +1975,10 @@
           "hw_Run": "Clicca qui per eseguire il codice."
         },
         "helloworld_retro_events": {
-          "hello_world_click_hint": "Aggiungi questo blocco dell'evento al tuo spazio di lavoro."
+          "hello_world_click_hint": "Aggiungi questo blocco evento alla tua area di lavoro."
         },
         "helloworld_retro_freeplay": {
-          "costumes_tab": "Clicca qui per aggiungere indumenti al tuo progetto."
+          "costumes_tab": "Clicca qui per aggiungere costumi al tuo progetto."
         },
         "helloworld_retro_location": {
           "pin": "fissa"
@@ -2080,7 +2080,8 @@
           "CSD_U3_variables": "Inserire qui il numero"
         },
         "New Sprite Lab Project": {
-          "costumes_tab": "Clicca qui per aggiungere indumenti al tuo progetto."
+          "costumes_tab": "Clicca qui per aggiungere costumi al tuo progetto.",
+          "make_sprite": "Usa questi blocchi per creare un personaggio!"
         },
         "CSD U3 Variables Predict Where XY_2022": {
           "grid": "Clicca qui per mostrare la griglia."
@@ -2194,7 +2195,7 @@
           "pointerlocation": "Trascina qui un blocco soggetto."
         },
         "CourseF_outbreak7_-2022-2": {
-          "costumes_tab": "Clicca qui per aggiungere indumenti al tuo progetto."
+          "costumes_tab": "Clicca qui per aggiungere costumi al tuo progetto."
         },
         "Fish Tank 3-validated2022": {
           "spritelab_comment": "Usa questo blocco per lasciare a te e al tuo insegnante note su come funziona il tuo codice."
@@ -2390,7 +2391,7 @@
           "": "Non ci sono vincoli, di questi blocchi ne puoi usare quanti vuoi!"
         },
         "courseE_aboutme_22022": {
-          "": "Clicca qui per aggiungere indumenti al tuo progetto."
+          "": "Clicca qui per aggiungere costumi al tuo progetto."
         },
         "courseE_artist_functions22022": {
           "courseD_artist_functions2_1": "Quando verrà eseguito questo blocco verde, sarà eseguito tutto il codice contenuto nella funzione. Cosa dovrà fare l'artista dopo aver disegnato il primo quadrato?"
@@ -2564,10 +2565,10 @@
           "grade2_CaringForNewPet_0_1": "Dopo aver collegato insieme tutti i blocchi, premi \"Esegui\" per far partire il tuo programma."
         },
         "coursee_helloworld_events": {
-          "hello_world_click_hint": "Aggiungi questo blocco dell'evento al tuo spazio di lavoro."
+          "hello_world_click_hint": "Aggiungi questo blocco evento alla tua area di lavoro."
         },
         "coursee_helloworld_freeplay": {
-          "costumes_tab": "Clicca qui per aggiungere indumenti al tuo progetto."
+          "costumes_tab": "Clicca qui per aggiungere costumi al tuo progetto."
         },
         "coursee_helloworld_say": {
           "hello_world_say": "Usa questo blocco per fare in modo che i personaggi parlino.",
@@ -2598,16 +2599,16 @@
           "hello_world_new": "Nuovo blocco!"
         },
         "helloworld_food_events_soccer-2022": {
-          "hello_world_click_hint": "Aggiungi questo blocco dell'evento al tuo spazio di lavoro."
+          "hello_world_click_hint": "Aggiungi questo blocco evento alla tua area di lavoro."
         },
         "helloworld_food_events_space-2022": {
-          "hello_world_click_hint": "Aggiungi questo blocco dell'evento al tuo spazio di lavoro."
+          "hello_world_click_hint": "Aggiungi questo blocco evento alla tua area di lavoro."
         },
         "helloworld_food_freeplay_soccer-2022": {
-          "costumes_tab": "Clicca qui per aggiungere indumenti al tuo progetto."
+          "costumes_tab": "Clicca qui per aggiungere costumi al tuo progetto."
         },
         "helloworld_food_freeplay_space-2022": {
-          "costumes_tab": "Clicca qui per aggiungere indumenti al tuo progetto."
+          "costumes_tab": "Clicca qui per aggiungere costumi al tuo progetto."
         },
         "helloworld_food_location_soccer-2022": {
           "pin": "fissa"
@@ -2642,6 +2643,9 @@
         },
         "helloworld_food_sounds_space-2022": {
           "hello_world_new": "Nuovo blocco!"
+        },
+        "helloworld_food_click_space-2022": {
+          "hw_Run": "Per prima cosa clicca qui!"
         }
       }
     }

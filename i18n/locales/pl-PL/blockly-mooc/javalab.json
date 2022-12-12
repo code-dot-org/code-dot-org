@@ -76,6 +76,8 @@
   "feedbackBeginning": "To jest początek informacji zwrotnej dla Twojego projektu.",
   "feedbackBeginningPeer": "To jest początek opinii o projekcie {peerName}.",
   "illegalMethodAccess": "Próbowałeś uzyskać dostęp do metody, która jest blokowana przez naszą politykę bezpieczeństwa.\n{cause}",
+  "fileDeleteConfirm": "Czy na pewno chcesz usunąć następujące pliki z plecaka? Tej akcji nie można cofnąć.",
+  "fileDeleteError": "Wystąpił błąd podczas usuwania jednego lub więcej plików. Proszę, spróbuj ponownie. Pliki, których nie można usunąć:",
   "fileImportError": "Jedna lub więcej nazw plików jest zarezerwowanych przez Java Lab i nie można ich zaimportować do tego projektu. Pliki, których nie można zaimportować:",
   "fileImportWarning": "Masz co najmniej jedną zduplikowaną nazwę pliku między tym projektem a wybranymi plikami z plecaka. Zduplikowane nazwy plików to:",
   "fileImportWarningConfirm": "Czy chcesz zastąpić te pliki plikami z Twojego plecaka?",
@@ -146,6 +148,7 @@
   "unauthorizedJavabuilderConnectionTeacher": "Aby uruchomić swój kod w Java Lab, musisz zostać „zweryfikowany” lub dołączyć do sekcji CSA, należącej do zweryfikowanego nauczyciela. Przeczytaj [ten artykuł](https://support.code.org/hc/en-us/articles/115001550131), aby dowiedzieć się, jak zostać zweryfikowanym.",
   "unauthorizedJavabuilderConnectionStudent": "Aby uruchomić swój kod w Java Lab, musisz być przypisany do sekcji CSA, a Twój nauczyciel musi zostać „zweryfikowany”. Poproś nauczyciela o pomoc i spróbuj ponownie. Twój nauczyciel może znaleźć więcej informacji w [tym artykule.](https://support.code.org/hc/en-us/articles/115001550131)",
   "unknownError": "Ups. Natrafiliśmy na błąd po naszej stronie. Spróbuj ponownie uruchomić program. Jeśli ten błąd będzie się powtarzał, skontaktuj się z nami pod adresem support@code.org. Pamiętaj o podaniu w wiadomości identyfikatora połączenia {connectionId}.\n{type}",
+  "unsupportedMiniAppMessage": "Niezgodność typu poziomów: {miniAppType} projekty nie są obsługiwane na poziomie nie-{miniAppType} .",
   "userBlocked": "Uruchomiłeś kod zbyt wiele razy i Twoje konto zostało zablokowane. Skontaktuj się z support@code.org, aby odblokować swoje konto.",
   "youHaveProjectsToReview": "Masz projekty do sprawdzenia...",
   "yourPeer": "twój rówieśnik"

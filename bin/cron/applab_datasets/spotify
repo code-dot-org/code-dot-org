@@ -90,7 +90,7 @@ def get_playlist_data(chart_type, playlist_id)
 
   items = JSON.parse(response)['tracks']['items']
   columns = ['id', 'Track Name', 'Artist', 'Position']
-  columns.insert(4, 'Popularity') if chart_type === CHART_TYPE[:TOP] # Only include Popularity for Top Charts
+  columns.insert(4, 'Popularity') if chart_type == CHART_TYPE[:TOP] # Only include Popularity for Top Charts
 
   regex = generate_profanity_regex(items)
   records = {}
@@ -105,7 +105,7 @@ def get_playlist_data(chart_type, playlist_id)
     record.Position = id
     record['Track Name'] = track['name']
     record.Artist = track['artists'][0]['name'] # First will be main artist, featured artists included in record name
-    record.Popularity = track['popularity'] if chart_type === CHART_TYPE[:TOP]
+    record.Popularity = track['popularity'] if chart_type == CHART_TYPE[:TOP]
 
     records[id] = record.to_h.to_json
     id += 1

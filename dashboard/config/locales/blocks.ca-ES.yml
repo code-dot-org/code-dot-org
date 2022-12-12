@@ -2,6 +2,8 @@
 ca:
   data:
     blocks:
+      AmysBlocks_spriteSayVar:
+        text: "{SPRITE}dir{TEXT1}"
       Dancelab_alternateMoves:
         options:
           GROUP:
@@ -20,7 +22,7 @@ ca:
             MOVES.ClapHigh: aplaudir ben fort
             MOVES.Dab: Dansa d'amagar el cap
             MOVES.DoubleJam: Baixada doble
-            MOVES.Drop: Caiguda
+            MOVES.Drop: Deixar anar
             MOVES.Floss: Provocació
             MOVES.Fresh: Fresc
             MOVES.Clown: Pallasso
@@ -32,7 +34,7 @@ ca:
             MOVES.ClapHigh: aplaudir ben fort
             MOVES.Dab: Dansa d'amagar el cap
             MOVES.DoubleJam: Baixada doble
-            MOVES.Drop: Caiguda
+            MOVES.Drop: Deixar anar
             MOVES.Floss: Provocació
             MOVES.Fresh: Fresc
             MOVES.Clown: Pallasso
@@ -74,7 +76,7 @@ ca:
             MOVES.ClapHigh: aplaudir ben fort
             MOVES.Dab: Dansa d'amagar el cap
             MOVES.DoubleJam: Baixada doble
-            MOVES.Drop: Caiguda
+            MOVES.Drop: Deixar anar
             MOVES.Floss: Provocació
             MOVES.Fresh: Fresc
             MOVES.Clown: Pallasso
@@ -92,7 +94,7 @@ ca:
             MOVES.ClapHigh: aplaudir ben fort
             MOVES.Dab: Dansa d'amagar el cap
             MOVES.DoubleJam: Baixada doble
-            MOVES.Drop: Caiguda
+            MOVES.Drop: Deixar anar
             MOVES.Floss: Provocació
             MOVES.Fresh: Fresc
             MOVES.Clown: Pallasso
@@ -150,7 +152,7 @@ ca:
             MOVES.ClapHigh: aplaudir ben fort
             MOVES.Dab: Dansa d'amagar el cap
             MOVES.DoubleJam: Baixada doble
-            MOVES.Drop: Caiguda
+            MOVES.Drop: Deixar anar
             MOVES.Floss: Provocació
             MOVES.Fresh: Fresc
             MOVES.Clown: Pallasso
@@ -166,7 +168,7 @@ ca:
             MOVES.ClapHigh: aplaudir ben fort
             MOVES.Dab: Dansa d'amagar el cap
             MOVES.DoubleJam: Baixada doble
-            MOVES.Drop: Caiguda
+            MOVES.Drop: Deixar anar
             MOVES.Floss: Provocació
             MOVES.Fresh: Fresc
             MOVES.Clown: Pallasso
@@ -217,7 +219,7 @@ ca:
             MOVES.Clown: Pallasso
             MOVES.Dab: Dansa d'amagar el cap
             MOVES.DoubleJam: Baixada doble
-            MOVES.Drop: Caiguda
+            MOVES.Drop: Deixar anar
             MOVES.Floss: Provocació
             MOVES.Fresh: Fresc
             MOVES.Roll: Rodar per terra
@@ -705,12 +707,33 @@ ca:
         text: configuració
       Dancelab_whenSetup2:
         text: configuració
+      DansBlocks_getMicroscope:
+        text: El microscopi té {INPUT1}
+        options:
+          INPUT1:
+            '1': suc de llimona
+            '3': baking soda
+            '5': both
       DansBlocks_setForegroundEffect2:
         options:
           EFFECT:
             '"bubbles"': Bombolles
             '"confetti"': Confeti
             '"hearts"': cors
+      DansBlocks_setMicroscope:
+        options:
+          INPUT1:
+            '1': suc de llimona
+            '3': baking soda
+            '5': both
+      FunctionBlocks_communicate:
+        text: Comunicar {VAR1} amb {SPRITE1COSTUME}
+      FunctionBlocks_makeManipulative2:
+        text: fer {NUM} nou {ANIMATION_NAME} sprites  {BEHAVIOR}
+      FunctionBlocks_representManipulative:
+        text: representar {NUM} nou {ANIMATION_NAME} sprites [BEHAVIOR][2]
+      FunctionBlocks_spriteSayVar:
+        text: "{SPRITE}dir{TEXT1}"
       gamelab_addTarget:
         options:
           OPT:
@@ -819,6 +842,7 @@ ca:
             "'sound://category_space/Pillars_SFX.mp3'": pilars
             "'sound://category_space/Southern_ring_SFX.mp3'": anell del sud
             "'sound://category_space/Supernova_SFX.mp3'": supernova
+            "'sound://category_space/Tycho_SFX.mp3'": tycho
       gamelab_randColor:
         text: color aleatori
       gamelab_randomColor:
@@ -959,7 +983,7 @@ ca:
             MOVES.Clown: Pallasso
             MOVES.Dab: Dansa d'amagar el cap
             MOVES.DoubleJam: Baixada doble
-            MOVES.Drop: Caiguda
+            MOVES.Drop: Deixar anar
             MOVES.Floss: Provocació
             MOVES.Fresh: Fresc
             MOVES.Roll: Rodar per terra
@@ -1006,7 +1030,9 @@ ca:
             '"left"': fletxa esquerra
             '"right"': fletxa dreta
             '"w"': W
+            '"a"': A
             '"s"': S
+            '"d"': D
       Mikelab_whenKeyReleased:
         options:
           KEY:
@@ -1015,7 +1041,9 @@ ca:
             '"left"': fletxa esquerra
             '"right"': fletxa dreta
             '"w"': W
+            '"a"': A
             '"s"': S
+            '"d"': D
       Mikelab_whenYesNoClicked:
         options:
           KEY:
@@ -1028,6 +1056,38 @@ ca:
             '"down"': fletxa cap avall
             '"left"': fletxa esquerra
             '"right"': fletxa dreta
+      ParticlesBlocks_getMicroscope:
+        text: El microscopi té {INPUT1}
+        options:
+          INPUT1:
+            '1': suc de llimona
+            '3': baking soda
+            '5': both
+      ParticlesBlocks_setMicroscope:
+        options:
+          INPUT1:
+            '1': suc de llimona
+            '3': baking soda
+            '5': both
+      ParticlesBlocks_statesOfMatter:
+        options:
+          BEHAVIOR:
+            new Behavior(solid, []): sòlid
+            new Behavior(liquid, []): líquid
+            new Behavior(wandering, []): gas
+      ParticlesBlocks_statesOfMatter2:
+        text: Estableix {COSTUME} a {BEHAVIOR} comportament
+        options:
+          BEHAVIOR:
+            '"solid"': Partícula sòlida
+            '"liquid"': partícula líquida
+            '"gas"': partícula de gas
+      ParticlesBlocks_statesOfMatter_testing:
+        options:
+          BEHAVIOR:
+            '"solid"': Partícula sòlida
+            '"liquid"': partícula líquida
+            '"gas"': partícula de gas
       Poetry_addFrame:
         options:
           BRUSH:
@@ -1042,6 +1102,20 @@ ca:
         options:
           SOUND:
             '"sound://category_jump/vibrant_game_jumping_up_1.mp3"': salt
+      Poetry_playSoundOptionsSpace:
+        options:
+          SOUND:
+            "'sound://category_space/Blackhole_SFX.mp3'": forat negre
+            "'sound://category_space/Bullet_cluster_SFX.mp3'": clúster de bales
+            "'sound://category_space/Carina_SFX.mp3'": carina
+            "'sound://category_space/Cassiopeia_SFX.mp3'": cassiopea
+            "'sound://category_space/Crab_nebula_SFX.mp3'": nebulosa del cranc
+            "'sound://category_space/Launch_SFX.mp3'": llançar
+            "'sound://category_space/Lift_Off.mp3'": aixecar
+            "'sound://category_space/Pillars_SFX.mp3'": pilars
+            "'sound://category_space/Southern_ring_SFX.mp3'": anell del sud
+            "'sound://category_space/Supernova_SFX.mp3'": supernova
+            "'sound://category_space/Tycho_SFX.mp3'": tycho
       Poetry_setBackground:
         text: definir el color de fons {COLOR}
       Poetry_setBackgroundEffect:
@@ -1205,6 +1279,12 @@ ca:
           DIR:
             right: dreta ↻
             left: esquerra ↺
+      storylab_setForegroundEffect2:
+        options:
+          EFFECT:
+            '"bubbles"': Bombolles
+            '"confetti"': Confeti
+            '"hearts"': cors
       storylab_setHeading:
         text: establir encapçalament {HEADING}
       storylab_setSubheading:

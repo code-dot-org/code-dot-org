@@ -12,7 +12,7 @@
     },
     "new_name": null,
     "family_name": "csc-function-machines-pilot",
-    "serialized_at": "2022-11-03 21:52:51 UTC",
+    "serialized_at": "2022-11-29 16:42:56 UTC",
     "published_state": "pilot",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -73,7 +73,7 @@
     },
     {
       "key": "lesson-2",
-      "name": "Alien Riddles",
+      "name": "Detective Debugger",
       "absolute_position": 3,
       "lockable": false,
       "has_lesson_plan": true,
@@ -154,6 +154,7 @@
       "key": "ee6b375d-990e-43ed-9fdd-b726dd9435d9",
       "position": 1,
       "properties": {
+        "duration": 10,
         "name": "Warm Up"
       },
       "seeding_key": {
@@ -209,6 +210,7 @@
       "key": "a6f554e2-fa80-4aee-8010-66c0ab563bba",
       "position": 2,
       "properties": {
+        "duration": 25,
         "name": "Activity"
       },
       "seeding_key": {
@@ -319,7 +321,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "Come up with some examples of “function machines” that students would be familiar with, for example putting dirty clothes into a washing machine and having clean clothes come out. Other examples:\n- Using a dehydrator to show the process of a grape becoming a raisin.\n- A vending machine takes in money and returns food or a drink.\n- Putting fruit into a blender and choosing one of the blender’s “functions” to output a smoothie.\n"
+            "markdown": "Come up with some examples of “function machines” that students would be familiar with, for example putting dirty clothes into a washing machine and having clean clothes come out. Other examples:\n- Putting cold food in a microwave and having it come out hot.\n- A vending machine takes in money and returns food or a drink.\n- Putting fruit into a blender and choosing one of the blender’s “functions” to output a smoothie.\n"
           }
         ]
       },
@@ -364,8 +366,20 @@
       }
     },
     {
-      "key": "763d6832-236f-4fbf-8dbc-1ce2fa8b05a8",
+      "key": "8cf9edde-530e-4a54-a90e-fe6cabdc492b",
       "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Functions at NASA” video",
+        "progression_name": "Video"
+      },
+      "seeding_key": {
+        "activity_section.key": "8cf9edde-530e-4a54-a90e-fe6cabdc492b",
+        "lesson_activity.key": "fb7c3ee7-0390-4b93-aeb1-9eb06d872f2c"
+      }
+    },
+    {
+      "key": "763d6832-236f-4fbf-8dbc-1ce2fa8b05a8",
+      "position": 5,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Step 1: Observe” slide\n\n**Do This:** Handout out a [notecatcher](https://docs.google.com/document/d/1B30rMArFTCEcj6EKiMiBnWfo7-1LdIq7sQUC-R1_Ol4/template/preview\t\n) to each student. Explain to students that they will be using this handout as they move through the lessons."
       },
@@ -376,7 +390,7 @@
     },
     {
       "key": "bbe3909d-5576-4f21-8bb8-a71404774963",
-      "position": 5,
+      "position": 6,
       "properties": {
         "tips": [
           {
@@ -392,9 +406,9 @@
     },
     {
       "key": "307ec5a5-744f-4583-8e79-5ec1b34538d8",
-      "position": 6,
+      "position": 7,
       "properties": {
-        "description": "**Transition:** Have students move to their computers and sign in. All students should complete all levels in this section in order.\n\nStudents should complete the Skill Building levels and then spend any remaining time trying out their own functions in the final Free Play level.\n\n**Levels 1 - 3:** As you play with each machine, observe how it works. What is the function machine supposed to do? What code is running behind the scenes?\n"
+        "description": "**Transition:** Have students move to their computers and sign in. All students should complete all levels in this section in order.\n\nStudents should complete the Skill Building levels and then spend any remaining time trying out their own functions in the final Free Play level.\n\n**Levels 2 - 4:** As you play with each machine, observe how it works. What is the function machine supposed to do? What code is running behind the scenes?\n"
       },
       "seeding_key": {
         "activity_section.key": "307ec5a5-744f-4583-8e79-5ec1b34538d8",
@@ -403,8 +417,9 @@
     },
     {
       "key": "0eae42eb-7646-4f43-9cfd-d1fc42e8e194",
-      "position": 7,
+      "position": 8,
       "properties": {
+        "progression_name": "Skill Building"
       },
       "seeding_key": {
         "activity_section.key": "0eae42eb-7646-4f43-9cfd-d1fc42e8e194",
@@ -413,9 +428,10 @@
     },
     {
       "key": "3a1adaec-363a-4c27-ba64-15d588d7ee62",
-      "position": 8,
+      "position": 9,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 4 - Introducing Sprite Lab” video\n"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 5 - Introducing Sprite Lab” video\n",
+        "progression_name": "Video"
       },
       "seeding_key": {
         "activity_section.key": "3a1adaec-363a-4c27-ba64-15d588d7ee62",
@@ -424,9 +440,10 @@
     },
     {
       "key": "db95b38b-3586-41df-82b4-69cc05546908",
-      "position": 9,
+      "position": 10,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 5 - Your Workspace” slide\n\n**Level 5:** In this level, you can interact with the function machine _and_ check out the code. See if your predictions about each line of code were correct.\n\n"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 6 - Your Workspace” slide\n\n**Level 6:** In this level, you can interact with the function machine _and_ check out the code. See if your predictions about each line of code were correct.\n\n",
+        "progression_name": "Skill Building"
       },
       "seeding_key": {
         "activity_section.key": "db95b38b-3586-41df-82b4-69cc05546908",
@@ -435,9 +452,10 @@
     },
     {
       "key": "5bf5049f-19da-4a20-bb01-9e34e6c427d4",
-      "position": 10,
+      "position": 11,
       "properties": {
-        "description": "\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 6 - Sprites In Action” video\n"
+        "description": "\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 7 - Sprites In Action” video\n",
+        "progression_name": "Video"
       },
       "seeding_key": {
         "activity_section.key": "5bf5049f-19da-4a20-bb01-9e34e6c427d4",
@@ -446,9 +464,10 @@
     },
     {
       "key": "0ac4d82a-0d07-4553-9e51-e36d83905e55",
-      "position": 11,
+      "position": 12,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Step 2: Tinker” slide\n\n**Levels 7 - 9:** Now check out the code for your math machine and tinker with it. \n_Challenge: Can you make the machine add 2 and say the new output?_\n"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Step 2: Tinker” slide\n\n**Levels 8 - 10:** Now check out the code for your math machine and tinker with it. \n_Challenge: Can you make the machine add 2 and say the new output?_\n",
+        "progression_name": "Skill Building"
       },
       "seeding_key": {
         "activity_section.key": "0ac4d82a-0d07-4553-9e51-e36d83905e55",
@@ -457,9 +476,10 @@
     },
     {
       "key": "fefbc6ec-557b-49ef-9e17-a91d3eed6881",
-      "position": 12,
+      "position": 13,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Step 3: Build Your Own” slide\n\n**Level 10:** Time to show off your knowledge of function machines! Choose your own function for your machine to compute.\n\n"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Step 3: Build Your Own” slide\n\n**Level 11:** Time to show off your knowledge of function machines! Choose your own function for your machine to compute.\n\n",
+        "progression_name": "Free Play"
       },
       "seeding_key": {
         "activity_section.key": "fefbc6ec-557b-49ef-9e17-a91d3eed6881",
@@ -468,12 +488,24 @@
     },
     {
       "key": "66b24bee-a2a2-4009-be61-9ff073482306",
-      "position": 13,
+      "position": 14,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Alien Riddles” slide\n\n\n**Level 11:** The aliens have agreed to give us a clue for what they want!\n\nUnscramble the letters to reveal the clue:\n\nP C E A S \t\tC I E\t\tM R E C A"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Alien Riddles” slide\n\n\n**Level 12:** The aliens have agreed to give us a clue for what they want!\n\nUnscramble the letters to reveal the clue:\n\nP C E A S \t\tC I E\t\tM R E C A",
+        "progression_name": "Congratulations!"
       },
       "seeding_key": {
         "activity_section.key": "66b24bee-a2a2-4009-be61-9ff073482306",
+        "lesson_activity.key": "fb7c3ee7-0390-4b93-aeb1-9eb06d872f2c"
+      }
+    },
+    {
+      "key": "1f10d3d0-a646-428f-a649-3bee1472f5ec",
+      "position": 15,
+      "properties": {
+        "progression_name": "Student Survey"
+      },
+      "seeding_key": {
+        "activity_section.key": "1f10d3d0-a646-428f-a649-3bee1472f5ec",
         "lesson_activity.key": "fb7c3ee7-0390-4b93-aeb1-9eb06d872f2c"
       }
     },
@@ -556,7 +588,7 @@
       "key": "0d0f3053-29a9-48ac-8905-3a7b40b23fa5",
       "position": 5,
       "properties": {
-        "description": "**Discuss:** How can you predict the expected outputs?\n\n**Discussion Goal:** Students name different multiplication strategies. These should mostly be mental math strategies.\nSkip counting\nRepeated addition\nCommutative property \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Functions in Code.org” slide\n\n"
+        "description": "**Discuss:** How can you predict the expected outputs?\n\n**Discussion Goal:** Students name different multiplication strategies. These should mostly be mental math strategies.\n- Skip counting\n- Repeated addition\n- Commutative property \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Functions in Code.org” slide\n\n"
       },
       "seeding_key": {
         "activity_section.key": "0d0f3053-29a9-48ac-8905-3a7b40b23fa5",
@@ -617,8 +649,7 @@
       "key": "2342da78-47ef-4289-ade8-229bd86da279",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Code Your Alien Function Machine” slide\n\n**Transition:** Have students move to their computers and sign in. All students should complete all levels in this section in order.\n\n\n",
-        "name": "Code your Function Machine"
+        "name": "Code Your Function Machine"
       },
       "seeding_key": {
         "activity_section.key": "2342da78-47ef-4289-ade8-229bd86da279",
@@ -629,7 +660,8 @@
       "key": "b5fe5038-7682-4358-974c-2f6128c58707",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “Levels 1-2: Start Your Alien Function Machine” slide\n\n**Level 1-2:** Students select a background and alien sprite.\n"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “Levels 1-2: Start Your Alien Function Machine” slide\n\n**Transition:** Have students move to their computers and sign in. All students should complete all levels in this section in order.\n\n**Level 1-2:** Students select a background and alien sprite.\n",
+        "progression_name": "Skill Building"
       },
       "seeding_key": {
         "activity_section.key": "b5fe5038-7682-4358-974c-2f6128c58707",
@@ -640,7 +672,8 @@
       "key": "9de73aeb-7945-451a-a186-24729abfd276",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “Levels 3-4:Prompt For User Input” slide\n\n**Level 3-4:** Students set up a prompt user block."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “Levels 3-4:Prompt For User Input” slide\n\n**Level 3-4:** Students set up a prompt user block.",
+        "progression_name": "Skill Building"
       },
       "seeding_key": {
         "activity_section.key": "9de73aeb-7945-451a-a186-24729abfd276",
@@ -651,7 +684,8 @@
       "key": "2ac879fc-5b4f-4536-9731-a3055de14858",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Display:** Show “Level 5: Add an Event” slide\n\n**Level 5:** Students set up an event block."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Display:** Show “Level 5: Add an Event” slide\n\n**Level 5:** Students set up an event block.",
+        "progression_name": "Skill Building"
       },
       "seeding_key": {
         "activity_section.key": "2ac879fc-5b4f-4536-9731-a3055de14858",
@@ -662,7 +696,8 @@
       "key": "b72d5e74-ad97-4d59-8ac7-2e2fc6b7c86c",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “Level 6: Let’s Keep Coding” slide\n\n**Level 6:** From now on, your code will follow you from level to level. You will see any sprites you choose, or other design choices you make, as you go through each level. This way you can build the program you want!\n\n"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “Level 6: Let’s Keep Coding” slide\n\n**Level 6:** From now on, your code will follow you from level to level. You will see any sprites you choose, or other design choices you make, as you go through each level. This way you can build the program you want!\n\n",
+        "progression_name": "Let's Keep Coding!"
       },
       "seeding_key": {
         "activity_section.key": "b72d5e74-ad97-4d59-8ac7-2e2fc6b7c86c",
@@ -673,7 +708,8 @@
       "key": "9d3b547b-9065-4750-b023-f4d62e82033c",
       "position": 6,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “Level 7: Say Output” slide\n\n**Level 7:** Students add to the event block and have the alien say the output.\n"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “Level 7: Say Output” slide\n\n**Level 7:** Students add to the event block and have the alien say the output.\n",
+        "progression_name": "Skill Building"
       },
       "seeding_key": {
         "activity_section.key": "9d3b547b-9065-4750-b023-f4d62e82033c",
@@ -684,7 +720,8 @@
       "key": "9f716ff5-0075-40b6-97f6-2a4527738e69",
       "position": 7,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “Level 8-10 Add Your Function” slide\n\n**Level 8-10:** Students set up their function machine."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “Level 8-10 Add Your Function” slide\n\n**Level 8-10:** Students set up their function machine.",
+        "progression_name": "Skill Building"
       },
       "seeding_key": {
         "activity_section.key": "9f716ff5-0075-40b6-97f6-2a4527738e69",
@@ -695,7 +732,8 @@
       "key": "9fbd74ba-b952-41ae-9702-ff1e95faf004",
       "position": 8,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show Level 11 Congratulations!” slide\n\n**Level 11:** Celebrate your hard work with a well earned ice cream cone!"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show Level 11 Congratulations!” slide\n\n**Level 11:** Celebrate your hard work with a well earned ice cream cone!",
+        "progression_name": "Congratulations!"
       },
       "seeding_key": {
         "activity_section.key": "9fbd74ba-b952-41ae-9702-ff1e95faf004",
@@ -706,6 +744,7 @@
       "key": "e2157db5-08e5-43ad-8d9a-d1c2067ea6d7",
       "position": 9,
       "properties": {
+        "progression_name": "Student Survey",
         "tips": [
           {
             "type": "teachingTip",
@@ -785,7 +824,8 @@
       "position": 1,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “BEEP BEEP BEEP” slide\n\n**Do This:**  Read the slide and introduce the context for today’s lesson. Build excitement for today’s activity. \n\n**Say:** All of the alarm bells are going off on our spaceship. We can’t figure out what’s going on. Is it the aliens again? Our function machines aren’t working. HELP!\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Detective” slide\n\n**Transition:** Have students move to their computers and sign in. All students should complete all levels in this section in order.\n\n**Level 1-5:** Students debug various function machines. \n\n\n",
-        "name": "Detective"
+        "name": "Detective",
+        "progression_name": "Skill Building"
       },
       "seeding_key": {
         "activity_section.key": "c063bfb4-134d-4ab4-ae5c-acbee3f6db89",
@@ -796,7 +836,8 @@
       "key": "6860bd09-e2b0-4dc8-8572-c6a8f354d9b7",
       "position": 2,
       "properties": {
-        "description": "**Level 6:** This is a choice level. Students have the opportunity to debug with more function machines."
+        "description": "**Level 6:** This is a choice level. Students have the opportunity to debug with more function machines.",
+        "progression_name": "Choice Level"
       },
       "seeding_key": {
         "activity_section.key": "6860bd09-e2b0-4dc8-8572-c6a8f354d9b7",
@@ -823,10 +864,22 @@
       "key": "c60713d4-43e0-4974-881c-db7d653f8657",
       "position": 4,
       "properties": {
-        "description": "**Level 7:** Celebrate your hard work debugging all those function machines!"
+        "description": "**Level 7:** Celebrate your hard work debugging all those function machines!",
+        "progression_name": "Congratulations!"
       },
       "seeding_key": {
         "activity_section.key": "c60713d4-43e0-4974-881c-db7d653f8657",
+        "lesson_activity.key": "a6f554e2-fa80-4aee-8010-66c0ab563bba"
+      }
+    },
+    {
+      "key": "8d8cd1fb-b0b7-455d-b2c4-52aff96d03d8",
+      "position": 5,
+      "properties": {
+        "progression_name": "Student Survey"
+      },
+      "seeding_key": {
+        "activity_section.key": "8d8cd1fb-b0b7-455d-b2c4-52aff96d03d8",
         "lesson_activity.key": "a6f554e2-fa80-4aee-8010-66c0ab563bba"
       }
     },
@@ -892,7 +945,7 @@
       "key": "c08f5517-857e-4080-8590-79f6643fd213",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Step 1” slide\n\n**Do This:**  Show students the worksheet and explain the instructions. Students have two tasks to do each time they use a function machine. Task 1 is to fill in the table. Students should write in their assigned input, write the output they get from the machine, and then figure out what function the machine was computing. \n\n**Discuss:** How can you figure out what function a machine is computing?\n\n**Discussion Goal:** Figuring out the math of the function machine will require algebraic thinking. Talk about different strategies to figure out the math function:\nThink of it like division\nUse skip counting\nUse repeated addition\nUse fact families\nUse a multiplication table\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Step 2” slide\n\n**Do This:**  Continue showing students the worksheet and explaining the instructions. Step 2 is to fill in the 100’s chart. Each time students get an output they should color it in the 100’s chart. Ask students to search for patterns in the numbers that are colored in and not colored in.\n\n**Do This:**  Have students open up their project in a new tab on their computer so that it is displayed in presentation mode rather than having the code accessible during the presentation.  Ensure all students have their projects ready for presenting before moving on. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Time to Start Calculating!” slide\n\n**Do This:** Assign each student an input between 2 - 10. Write the input at the top of each student’s worksheet. Then, have students go around the classroom and start trying out their input on all the machines. Circulate while students try out their inputs on the machines to offer support.\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Step 1” slide\n\n**Do This:**  Show students the worksheet and explain the instructions. Students have two tasks to do each time they use a function machine. Task 1 is to fill in the table. Students should write in their assigned input, write the output they get from the machine, and then figure out what function the machine was computing. \n\n**Discuss:** \n- _How can you figure out what function a machine is computing?_ \n- _What is the function in the table computing?_\n\n**Discussion Goal:** Figuring out the math of the function machine will require algebraic thinking. Talk about different strategies to figure out the math function:\nThink of it like division\nUse skip counting\nUse repeated addition\nUse fact families\nUse a multiplication table\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Step 2” slide\n\n**Do This:**  Continue showing students the worksheet and explaining the instructions. Step 2 is to fill in the 100’s chart. Each time students get an output they should color it in the 100’s chart. Ask students to search for patterns in the numbers that are colored in and not colored in.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Time to Start Calculating!” slide\n\n**Do This:** **Assign each student an input between 2 - 10.** Write the input at the top of each student’s worksheet. Then, have students go around the classroom and start trying out their input on all the machines. Circulate while students try out their inputs on the machines to offer support.\n\n**Do This:**  Have students open up their project in a new tab on their computer so that it is displayed in presentation mode rather than having the code accessible during the presentation.  Ensure all students have their projects ready for presenting before moving on. \n\n",
         "duration": "15",
         "name": "Using Your Input"
       },
@@ -918,7 +971,7 @@
       "key": "9feb48d3-23d4-4195-96a3-dc180b5fe3e5",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Let’s figure out what the aliens want!” slide\n\n**Say:** Those tricky aliens said they wrote a secret code using all of the numbers they never output in their machines! I was able to convince them to only use numbers 1-40 at least. \n\n**Do This:** Have the class see which numbers were output and then deduce which numbers were not output. Have each group’s representative share out which numbers their group colored in.\n\n**Discuss:** _Which numbers did each group color in?_\n\n**Discussion Goal:** Each input group should share a pattern they discovered and color in their pattern on a class 100’s chart. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display [Optional]**: Show “Prime Numbers” slide\n\n**Do This [Optional]:** Discuss prime numbers. Prime numbers are the outputs that were never colored in!\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Crack the Code” slide\n\n**Do This:** Record all of the numbers that were never output in the left column. Write the numbers in numerical order! (The numbers should be: 2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37)\n\nCrack the code! Each number corresponds to a letter. Fill in each letter until you figure out the secret message! (The message is: We want real ice cream!!) The aliens want real ice cream, because it turns out that space ice is not very yummy!\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Let’s figure out what the aliens want!” slide\n\n**Say:** Those tricky aliens said they wrote a secret code using all of the numbers they never output in their machines! I was able to convince them to only use numbers 1-40 at least. \n\n**Do This:** Have the class see which numbers were output and then deduce which numbers were not output. Have each group’s representative share out which numbers their group colored in.\n\n**Discuss:** _Which numbers did each group color in?_\n\n**Discussion Goal:** Each input group should share a pattern they discovered and color in their pattern on a class 100’s chart. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display [Optional]**: Show “Prime Numbers” slide\n\n**Do This [Optional]:** Discuss prime numbers. Prime numbers are the outputs that were never colored in!\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Crack the Code” slide\n\n**Do This:** Record all of the numbers that were never output in the left column. Write the numbers in numerical order! (The numbers should be: 2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37)\n\nCrack the code! Each number corresponds to a letter. Fill in each letter until you figure out the secret message! (The message is: We want real ice cream!!) The aliens want real ice cream, because it turns out that space ice is not very yummy!\n\n\nOptional: <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Sundae addScoop Machine” slide\n\n**Do This:** Click the image on the slide to open up the **[Sundae addScoop Machine](https://studio.code.org/projects/spritelab/ad4T5RjLzVPCWbhHNuL25VAyDkd6MVtOaRA5OkewlAI)** project in code.org. Add scoops until you make your perfect ice cream sundae! Then, click “how it works” to view the code that created the addScoop Machine. Discuss the blocks that were used. \n",
         "duration": "10",
         "name": "Solving the Riddle"
       },
@@ -947,6 +1000,35 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_fm_pilot_into video"
+        ],
+        "progression": "Video"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csc_fm_pilot_into video"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "csc-function-machines-pilot",
+        "activity_section.key": "8cf9edde-530e-4a54-a90e-fe6cabdc492b"
+      },
+      "level_keys": [
+        "csc_fm_pilot_into video"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "csc_fm_addtwo"
+        ],
+        "progression": "Skill Building"
       },
       "bonus": false,
       "seeding_key": {
@@ -963,11 +1045,15 @@
       ]
     },
     {
-      "chapter": 2,
-      "position": 2,
+      "chapter": 3,
+      "position": 3,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_fm_addtwo_prompt"
+        ],
+        "progression": "Skill Building"
       },
       "bonus": false,
       "seeding_key": {
@@ -984,11 +1070,15 @@
       ]
     },
     {
-      "chapter": 3,
-      "position": 3,
+      "chapter": 4,
+      "position": 4,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_fm_observe_machine"
+        ],
+        "progression": "Skill Building"
       },
       "bonus": false,
       "seeding_key": {
@@ -1005,11 +1095,15 @@
       ]
     },
     {
-      "chapter": 4,
-      "position": 4,
+      "chapter": 5,
+      "position": 5,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CourseF_video_introSpriteLab_-2022-2"
+        ],
+        "progression": "Video"
       },
       "bonus": false,
       "seeding_key": {
@@ -1026,11 +1120,15 @@
       ]
     },
     {
-      "chapter": 5,
-      "position": 5,
+      "chapter": 6,
+      "position": 6,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_fm_observe_click10"
+        ],
+        "progression": "Skill Building"
       },
       "bonus": false,
       "seeding_key": {
@@ -1047,11 +1145,15 @@
       ]
     },
     {
-      "chapter": 6,
-      "position": 6,
+      "chapter": 7,
+      "position": 7,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_pilotVideo_events_-2022-2"
+        ],
+        "progression": "Video"
       },
       "bonus": false,
       "seeding_key": {
@@ -1068,11 +1170,15 @@
       ]
     },
     {
-      "chapter": 7,
-      "position": 7,
+      "chapter": 8,
+      "position": 8,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_fm_observe_click10_build"
+        ],
+        "progression": "Skill Building"
       },
       "bonus": false,
       "seeding_key": {
@@ -1089,11 +1195,15 @@
       ]
     },
     {
-      "chapter": 8,
-      "position": 8,
+      "chapter": 9,
+      "position": 9,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_fm_observe_click_build2"
+        ],
+        "progression": "Skill Building"
       },
       "bonus": false,
       "seeding_key": {
@@ -1110,11 +1220,15 @@
       ]
     },
     {
-      "chapter": 9,
-      "position": 9,
+      "chapter": 10,
+      "position": 10,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_fm_observe_click_represent"
+        ],
+        "progression": "Skill Building"
       },
       "bonus": false,
       "seeding_key": {
@@ -1131,11 +1245,15 @@
       ]
     },
     {
-      "chapter": 10,
-      "position": 10,
+      "chapter": 11,
+      "position": 11,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_fm_observe_click_represent_free_play"
+        ],
+        "progression": "Free Play"
       },
       "bonus": false,
       "seeding_key": {
@@ -1152,11 +1270,15 @@
       ]
     },
     {
-      "chapter": 11,
-      "position": 11,
+      "chapter": 12,
+      "position": 12,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_fm_markdown_lesson_one_congratulations_2022"
+        ],
+        "progression": "Congratulations!"
       },
       "bonus": false,
       "seeding_key": {
@@ -1173,11 +1295,40 @@
       ]
     },
     {
-      "chapter": 12,
+      "chapter": 13,
+      "position": 13,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "csc_fm_survey_L1"
+        ],
+        "progression": "Student Survey"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csc_fm_survey_L1"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "csc-function-machines-pilot",
+        "activity_section.key": "1f10d3d0-a646-428f-a649-3bee1472f5ec"
+      },
+      "level_keys": [
+        "csc_fm_survey_L1"
+      ]
+    },
+    {
+      "chapter": 14,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_fm_background"
+        ],
+        "progression": "Skill Building"
       },
       "bonus": false,
       "seeding_key": {
@@ -1194,11 +1345,15 @@
       ]
     },
     {
-      "chapter": 13,
+      "chapter": 15,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_fm_sprite"
+        ],
+        "progression": "Skill Building"
       },
       "bonus": false,
       "seeding_key": {
@@ -1215,11 +1370,15 @@
       ]
     },
     {
-      "chapter": 14,
+      "chapter": 16,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_fm_prompt_block"
+        ],
+        "progression": "Skill Building"
       },
       "bonus": false,
       "seeding_key": {
@@ -1236,11 +1395,15 @@
       ]
     },
     {
-      "chapter": 15,
+      "chapter": 17,
       "position": 4,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_fm_prompt_input"
+        ],
+        "progression": "Skill Building"
       },
       "bonus": false,
       "seeding_key": {
@@ -1257,11 +1420,15 @@
       ]
     },
     {
-      "chapter": 16,
+      "chapter": 18,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_fm_event"
+        ],
+        "progression": "Skill Building"
       },
       "bonus": false,
       "seeding_key": {
@@ -1278,11 +1445,15 @@
       ]
     },
     {
-      "chapter": 17,
+      "chapter": 19,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_fm_markdown_explain_template_2022"
+        ],
+        "progression": "Let's Keep Coding!"
       },
       "bonus": false,
       "seeding_key": {
@@ -1299,11 +1470,15 @@
       ]
     },
     {
-      "chapter": 18,
+      "chapter": 20,
       "position": 7,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_fm_name_say_input_output"
+        ],
+        "progression": "Skill Building"
       },
       "bonus": false,
       "seeding_key": {
@@ -1320,14 +1495,15 @@
       ]
     },
     {
-      "chapter": 19,
+      "chapter": 21,
       "position": 8,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
           "csc_fm_name_function"
-        ]
+        ],
+        "progression": "Skill Building"
       },
       "bonus": false,
       "seeding_key": {
@@ -1344,14 +1520,15 @@
       ]
     },
     {
-      "chapter": 20,
+      "chapter": 22,
       "position": 9,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
           "csc_fm_name_set_input"
-        ]
+        ],
+        "progression": "Skill Building"
       },
       "bonus": false,
       "seeding_key": {
@@ -1368,14 +1545,15 @@
       ]
     },
     {
-      "chapter": 21,
+      "chapter": 23,
       "position": 10,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "level_keys": [
           "csc_fm_show_input_output"
-        ]
+        ],
+        "progression": "Skill Building"
       },
       "bonus": false,
       "seeding_key": {
@@ -1392,11 +1570,15 @@
       ]
     },
     {
-      "chapter": 22,
+      "chapter": 24,
       "position": 11,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_fm_sprite_ice_cream"
+        ],
+        "progression": "Congratulations!"
       },
       "bonus": false,
       "seeding_key": {
@@ -1413,11 +1595,40 @@
       ]
     },
     {
-      "chapter": 23,
+      "chapter": 25,
+      "position": 12,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "csc_fm_survey_L2"
+        ],
+        "progression": "Student Survey"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csc_fm_survey_L2"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "csc-function-machines-pilot",
+        "activity_section.key": "e2157db5-08e5-43ad-8d9a-d1c2067ea6d7"
+      },
+      "level_keys": [
+        "csc_fm_survey_L2"
+      ]
+    },
+    {
+      "chapter": 26,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_fm_observer_zero_property"
+        ],
+        "progression": "Skill Building"
       },
       "bonus": false,
       "seeding_key": {
@@ -1434,11 +1645,15 @@
       ]
     },
     {
-      "chapter": 24,
+      "chapter": 27,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_fm_predict_zero_property"
+        ],
+        "progression": "Skill Building"
       },
       "bonus": false,
       "seeding_key": {
@@ -1455,11 +1670,15 @@
       ]
     },
     {
-      "chapter": 25,
+      "chapter": 28,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_fm_tinker_multiple_choice"
+        ],
+        "progression": "Skill Building"
       },
       "bonus": false,
       "seeding_key": {
@@ -1476,11 +1695,15 @@
       ]
     },
     {
-      "chapter": 26,
+      "chapter": 29,
       "position": 4,
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_fm_tinker_rename_function"
+        ],
+        "progression": "Skill Building"
       },
       "bonus": false,
       "seeding_key": {
@@ -1497,11 +1720,15 @@
       ]
     },
     {
-      "chapter": 27,
+      "chapter": 30,
       "position": 5,
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_fm_identity_property"
+        ],
+        "progression": "Skill Building"
       },
       "bonus": false,
       "seeding_key": {
@@ -1518,11 +1745,15 @@
       ]
     },
     {
-      "chapter": 28,
+      "chapter": 31,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_fm_choice_levels_2022"
+        ],
+        "progression": "Choice Level"
       },
       "bonus": false,
       "seeding_key": {
@@ -1539,14 +1770,15 @@
       ]
     },
     {
-      "chapter": 29,
+      "chapter": 32,
       "position": 7,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
           "csc_fm_markdown_2022"
-        ]
+        ],
+        "progression": "Congratulations!"
       },
       "bonus": false,
       "seeding_key": {
@@ -1561,9 +1793,46 @@
       "level_keys": [
         "csc_fm_markdown_2022"
       ]
+    },
+    {
+      "chapter": 33,
+      "position": 8,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "csc_fm_survey_L3"
+        ],
+        "progression": "Student Survey"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csc_fm_survey_L3"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "csc-function-machines-pilot",
+        "activity_section.key": "8d8cd1fb-b0b7-455d-b2c4-52aff96d03d8"
+      },
+      "level_keys": [
+        "csc_fm_survey_L3"
+      ]
     }
   ],
   "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "csc_fm_pilot_into video",
+        "script_level.level_keys": [
+          "csc_fm_pilot_into video"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "csc-function-machines-pilot",
+        "activity_section.key": "8cf9edde-530e-4a54-a90e-fe6cabdc492b"
+      }
+    },
     {
       "seeding_key": {
         "level.key": "csc_fm_addtwo",
@@ -1694,6 +1963,18 @@
         "lesson_group.key": "",
         "script.name": "csc-function-machines-pilot",
         "activity_section.key": "66b24bee-a2a2-4009-be61-9ff073482306"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csc_fm_survey_L1",
+        "script_level.level_keys": [
+          "csc_fm_survey_L1"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "csc-function-machines-pilot",
+        "activity_section.key": "1f10d3d0-a646-428f-a649-3bee1472f5ec"
       }
     },
     {
@@ -1830,6 +2111,18 @@
     },
     {
       "seeding_key": {
+        "level.key": "csc_fm_survey_L2",
+        "script_level.level_keys": [
+          "csc_fm_survey_L2"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "csc-function-machines-pilot",
+        "activity_section.key": "e2157db5-08e5-43ad-8d9a-d1c2067ea6d7"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "csc_fm_observer_zero_property",
         "script_level.level_keys": [
           "csc_fm_observer_zero_property"
@@ -1911,9 +2204,57 @@
         "script.name": "csc-function-machines-pilot",
         "activity_section.key": "c60713d4-43e0-4974-881c-db7d653f8657"
       }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csc_fm_survey_L3",
+        "script_level.level_keys": [
+          "csc_fm_survey_L3"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "csc-function-machines-pilot",
+        "activity_section.key": "8d8cd1fb-b0b7-455d-b2c4-52aff96d03d8"
+      }
     }
   ],
   "resources": [
+    {
+      "name": "[Key] Lesson 1 Note Catcher",
+      "url": "https://docs.google.com/document/d/1qttpJr-80aTjfvOli7jvEkYStqHairMvhhRZe8ho7WU/template/preview",
+      "key": "_key_lesson_1_note_catcher",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "_key_lesson_1_note_catcher"
+      }
+    },
+    {
+      "name": "[Key] Lesson 2 Note Catcher",
+      "url": "https://docs.google.com/document/d/1AlyYGHR9kqmoqFIcl1mdhwK3Gc4Krp7CFcebYnl5AGU/template/preview",
+      "key": "_key_lesson_2_note_catcher",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "_key_lesson_2_note_catcher"
+      }
+    },
+    {
+      "name": "[Key] Lesson 4 Note Catcher",
+      "url": "https://docs.google.com/document/d/1NSAQvmb8scPRAZeOe2QROa_IfhLJkomYfHud9C9Ns8M/template/preview",
+      "key": "_key_lesson_4_note_catcher",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "_key_lesson_4_note_catcher"
+      }
+    },
     {
       "name": "Freeze Dry Machine",
       "url": "https://studio.code.org/projects/spritelab/gI_omUMR_Xhe2vcCK2u1jpowVf40PUJAdijWG8a6c-k",
@@ -1978,6 +2319,12 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-1",
+        "resource.key": "_key_lesson_1_note_catcher"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
         "resource.key": "function_machine"
       }
     },
@@ -2002,6 +2349,12 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-3",
+        "resource.key": "_key_lesson_2_note_catcher"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
         "resource.key": "function_machine"
       }
     },
@@ -2009,6 +2362,12 @@
       "seeding_key": {
         "lesson.key": "lesson-3",
         "resource.key": "lesson_2_note_catcher"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "resource.key": "_key_lesson_4_note_catcher"
       }
     },
     {
@@ -2031,6 +2390,16 @@
 
   ],
   "vocabularies": [
+    {
+      "key": "_optional_prime_number",
+      "word": "[Optional] Prime number",
+      "definition": "Any number that only has two factors: 1 and itself.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "_optional_prime_number"
+      }
+    },
     {
       "key": "function",
       "word": "Function",
@@ -2111,6 +2480,12 @@
       "seeding_key": {
         "lesson.key": "lesson-2",
         "vocabulary.key": "function_math_"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "vocabulary.key": "_optional_prime_number"
       }
     }
   ],

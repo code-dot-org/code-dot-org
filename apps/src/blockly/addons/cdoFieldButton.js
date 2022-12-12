@@ -3,7 +3,7 @@ import GoogleBlockly from 'blockly/core';
 const CORNER_RADIUS = 3;
 const INNER_HEIGHT = 16;
 
-export default class FieldButton extends GoogleBlockly.Field {
+export default class CdoFieldButton extends GoogleBlockly.Field {
   constructor(title, opt_buttonHandler, opt_color, opt_changeHandler) {
     super('');
 

@@ -12,7 +12,7 @@
     },
     "new_name": null,
     "family_name": "csc-bookcover",
-    "serialized_at": "2022-11-02 20:31:11 UTC",
+    "serialized_at": "2022-11-29 14:07:51 UTC",
     "published_state": "pilot",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -151,7 +151,7 @@
       "key": "29c4edab-2385-4c81-adbb-b3e2ac09e014",
       "position": 2,
       "properties": {
-        "duration": 30,
+        "duration": 25,
         "name": "Main Activity"
       },
       "seeding_key": {
@@ -276,7 +276,7 @@
       "key": "e7b4f8ba-3357-4d03-8359-38a5b2b8d47b",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 1 - Exploration” slide\n\n**Do This**: Play through the provided Book Cover example level as a class. Have students reflect on what they see and compare it to the book covers they saw on the slide.\n\n**Discuss**: _How is this digital book cover similar to or different from a regular book cover?_\n\n"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 1 - Exploration” slide\n\n**Do This**: Play through the provided Book Cover example [level](https://studio.code.org/s/csc-bookcover/lessons/1/levels/1) as a class. Have students reflect on what they see and compare it to the book covers they saw on the slide.\n\n**Discuss**: _How is this digital book cover similar to or different from a regular book cover?_\n\n"
       },
       "seeding_key": {
         "activity_section.key": "e7b4f8ba-3357-4d03-8359-38a5b2b8d47b",
@@ -299,7 +299,7 @@
       "key": "bee79760-f43d-4b4f-b70d-304ab8b268ed",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 2 - Introducing Sprite Lab” video\n\n**Do This**: Decide beforehand whether you plan to show the videos to the whole class or have students watch them independently as they progress through the levels.\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 2 - Introducing Sprite Lab” video\n",
         "name": "Introduction to Sprite Lab",
         "progression_name": "Video"
       },
@@ -309,9 +309,27 @@
       }
     },
     {
-      "key": "086226d5-a173-4065-95f1-f6729dd488f3",
+      "key": "b4ea3ba6-296c-4043-910a-252150994045",
       "position": 5,
       "properties": {
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Decide beforehand whether you plan to show the videos to the whole class or have students watch them independently as they progress through the levels."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "b4ea3ba6-296c-4043-910a-252150994045",
+        "lesson_activity.key": "c209c7c2-d241-4402-b9e8-9817f27c32d9"
+      }
+    },
+    {
+      "key": "086226d5-a173-4065-95f1-f6729dd488f3",
+      "position": 6,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 3-9 - Skill Building” slide\n\n**Transition**: Have students move to their computer and sign in. All students should complete all levels in this section in order. \n\nStudents should complete the Skill Building levels and then spend any remaining time trying out their own code in the final Free Play level.\n",
+        "name": "Skill Building",
         "tips": [
           {
             "type": "teachingTip",
@@ -326,9 +344,8 @@
     },
     {
       "key": "76772f68-9581-462a-8965-3c4921adf3d6",
-      "position": 6,
+      "position": 7,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 3-9 - Skill Building” slide\n\n**Transition**: Have students move to their computer and sign in. All students should complete all levels in this section in order. \n\nStudents should complete the Skill Building levels and then spend any remaining time trying out their own code in the final Free Play level.\n",
         "name": "Holes",
         "progression_name": "Skill Building"
       },
@@ -339,7 +356,7 @@
     },
     {
       "key": "a33bb8cb-8f4e-4adf-9212-1fe814e46b8b",
-      "position": 7,
+      "position": 8,
       "properties": {
         "name": "New Kid",
         "progression_name": "Skill Building"
@@ -351,7 +368,7 @@
     },
     {
       "key": "8ab53d4a-e63a-43a1-803b-1bc1668b9bd3",
-      "position": 8,
+      "position": 9,
       "properties": {
         "progression_name": "Skill Building"
       },
@@ -362,7 +379,7 @@
     },
     {
       "key": "d094d6c6-d018-44a7-8491-7c242a9ee7e5",
-      "position": 9,
+      "position": 10,
       "properties": {
         "description": "\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 10 - Programming with Events” video\n",
         "progression_name": "Video"
@@ -374,7 +391,7 @@
     },
     {
       "key": "b61034bb-4a9f-4e63-a1aa-dc62e85d0f1a",
-      "position": 10,
+      "position": 11,
       "properties": {
         "name": "Wonder",
         "progression_name": "Predict",
@@ -392,7 +409,7 @@
     },
     {
       "key": "8eb09aa7-4007-4876-a268-07c2b3be8ffa",
-      "position": 11,
+      "position": 12,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 12-15 - Skill Building” slide\n",
         "name": "Front Desk",
@@ -405,7 +422,7 @@
     },
     {
       "key": "b4551d6d-7b2a-41e5-80ba-2b43fe548a1b",
-      "position": 12,
+      "position": 13,
       "properties": {
         "progression_name": "Skill Building"
       },
@@ -416,7 +433,7 @@
     },
     {
       "key": "b15b4141-45c5-45dc-b9a7-d449622765ba",
-      "position": 13,
+      "position": 14,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 16 - Free Play” slide\n\n\n",
         "name": "Free Play",
@@ -429,7 +446,7 @@
     },
     {
       "key": "b3f859ac-76ed-4d8a-a8fe-bb2ede1df723",
-      "position": 14,
+      "position": 15,
       "properties": {
         "description": "If a group or individual finishes early, encourage them to continue building a book cover project in the last level. If students aren’t sure what else to do, you can prompt them with questions:\n\n- What other sprites could you add to your book cover?\n- Have you looked through the costume library or tried drawing your own sprite costume?\n- What else could you have your sprites say?\n- Invite students to share ideas and to learn from each other. ",
         "tips": [
@@ -458,6 +475,17 @@
       }
     },
     {
+      "key": "ac408d83-6b3f-4dc5-a8d5-48c953a33397",
+      "position": 2,
+      "properties": {
+        "name": "Student Survey"
+      },
+      "seeding_key": {
+        "activity_section.key": "ac408d83-6b3f-4dc5-a8d5-48c953a33397",
+        "lesson_activity.key": "134c5037-af2a-4f91-9909-4af5337fab6d"
+      }
+    },
+    {
       "key": "7adf7548-dbc5-4ab0-ba62-247fb66b856f",
       "position": 1,
       "properties": {
@@ -474,7 +502,7 @@
       "key": "1e8054d5-aa89-4e27-9373-794df6e8e5e6",
       "position": 2,
       "properties": {
-        "description": "**Do This**: Hand out a [rubric](https://docs.google.com/document/d/1fEHKtMFE_uLJEP6YScvXV-LfOEqBz9QyW1NlKTQzveM/template/preview\t\n) and a [graphic organizer](https://docs.google.com/document/d/1r7dnygat_SH_us1TWYil-Bx5ulROZ2PDbF-Njcz27RM/template/preview\t\n) to each student.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Rubric” slide\n\n**Say:** Before you begin coding your own book cover, we are going to plan out what we want to animate. Let’s take a look at the rubric to see what your project will include.\n\n",
+        "description": "**Do This**: Hand out a [rubric](https://docs.google.com/document/d/1fEHKtMFE_uLJEP6YScvXV-LfOEqBz9QyW1NlKTQzveM/template/preview\t\n) and a [graphic organizer](https://docs.google.com/document/d/1r7dnygat_SH_us1TWYil-Bx5ulROZ2PDbF-Njcz27RM/template/preview\t\n) to each student.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Rubric” slide\n\n\n",
         "duration": "10",
         "name": "Plan Your Book Cover"
       },
@@ -484,8 +512,31 @@
       }
     },
     {
-      "key": "ade54f2d-56a2-459f-875a-48f7527de500",
+      "key": "3538f4f0-4e86-4b9e-9d4f-370ab1f8721a",
       "position": 3,
+      "properties": {
+        "description": "Before you begin coding your own book cover, we are going to plan out what we want to animate. Let’s take a look at the rubric to see what your project will include.\n\nThere are 7 different categories to keep in mind when designing your book cover; 4 of these are from our English standards and the other 3 are from our Computer Science standards. \n",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "3538f4f0-4e86-4b9e-9d4f-370ab1f8721a",
+        "lesson_activity.key": "f29a9986-f574-4294-b2aa-bb321176e29a"
+      }
+    },
+    {
+      "key": "88575cc2-a9c0-49a1-811f-d75c330b51c9",
+      "position": 4,
+      "properties": {
+        "description": "**Do This:** Read out each category box and each of the subsequent boxes that would earn students a 4 out of 4. Or summarize the requirements by reading out the bulleted list below:\n\n- Use engaging images to create a tone that matches the story, including characters and setting. \n\n- Write a 2-3 sentence plot synopsis that accurately represents the plot of the story without giving away the ending. \n\n- Introduce the main character and at least one supporting character. Have all characters say (or say and do) something based on the story’s plot. \n\n- Use at least 3 different event blocks, e.g when run, when sprite clicked, when prompt answered.\n\n- Debug your code.\n\n- Fill out your graphic organizer with details and plan out your dialogue. \n\n- Present or write a detailed explanation of how your Book Cover’s visual and multimedia elements relate directly to the plot."
+      },
+      "seeding_key": {
+        "activity_section.key": "88575cc2-a9c0-49a1-811f-d75c330b51c9",
+        "lesson_activity.key": "f29a9986-f574-4294-b2aa-bb321176e29a"
+      }
+    },
+    {
+      "key": "ade54f2d-56a2-459f-875a-48f7527de500",
+      "position": 5,
       "properties": {
         "tips": [
           {
@@ -501,7 +552,7 @@
     },
     {
       "key": "223c6557-2bcc-4cb6-8487-76edddc6fe83",
-      "position": 4,
+      "position": 6,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Code Your Own Book Cover Handout” slide\n\n**Say:** Start your planning by choosing the book that you’re going to use. On this handout, you will choose to feature two or more main characters having a conversation with each other. Make sure to draw the dialogue using speech bubbles and include a brief synopsis, which is a description of the plot.\n\n**Do This**: Give students about 10 minutes to plan their book cover. Circulate the room to support students in their brainstorming and planning. Remind students that the purpose of the book covers is to pique their classmates interest and motivate them to want to read the book based on the sprite’s dialogue and synopsis.\n\nPrompt students to ask themselves “Do my characters say or think something that represents a scene in the book?” Encourage students to include dialogue that reveals to the reader what the character is like, or how their actions lead to big events in the story. \n"
       },
@@ -512,7 +563,7 @@
     },
     {
       "key": "e4df7e6b-893f-490f-93a6-e2d08ed9af89",
-      "position": 5,
+      "position": 7,
       "properties": {
         "tips": [
           {
@@ -543,7 +594,7 @@
       "key": "834fe113-8e28-494b-9c49-2ec5af92cb3a",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Skill Building - Levels 1-8” slide\n\n**Transition**: Have students move to their computer and sign in. All students should complete all levels in this section in order. Students should complete the Skill Building levels and then spend any remaining time trying out their own code in the final Free Play level."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Skill Building - Levels 1-4” slide\n\n**Transition**: Have students move to their computer and sign in. All students should complete all levels in this section in order. Students should complete the Skill Building levels and then spend any remaining time trying out their own code in the final Free Play level."
       },
       "seeding_key": {
         "activity_section.key": "834fe113-8e28-494b-9c49-2ec5af92cb3a",
@@ -562,10 +613,22 @@
       }
     },
     {
-      "key": "f3886a91-78c8-4dc8-99e5-2dd41c23c21d",
+      "key": "e4e93995-6ff9-4974-91ed-d0e737c137f2",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Free Play - Level 9” slide\n\n**Do This:** If a student finishes early, encourage them to show their work to a partner. Invite students to share ideas and to learn from each other. After a brief discussion, students have the opportunity to finish their book cover and make any last revisions before next class.\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Choice Level - Level 5” slide\n\n**Level 5:** This is a choice level for students to customize their book covers. They can choose to add sounds, foreground effects, background effects and more! When students are done customizing their book cover they can move on to the final Free Play level to add finishing touches.\n",
+        "progression_name": "Extend Your Book Cover!"
+      },
+      "seeding_key": {
+        "activity_section.key": "e4e93995-6ff9-4974-91ed-d0e737c137f2",
+        "lesson_activity.key": "29c4edab-2385-4c81-adbb-b3e2ac09e014"
+      }
+    },
+    {
+      "key": "f3886a91-78c8-4dc8-99e5-2dd41c23c21d",
+      "position": 5,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Free Play - Level 6” slide\n\n**Do This:** If a student finishes early, encourage them to show their work to a partner. Invite students to share ideas and to learn from each other. After a brief discussion, students have the opportunity to finish their book cover and make any last revisions before next class.\n",
         "progression_name": "Free Play"
       },
       "seeding_key": {
@@ -583,6 +646,17 @@
       },
       "seeding_key": {
         "activity_section.key": "7ae9d047-7fb9-4c99-b75e-4bda9bd88dc1",
+        "lesson_activity.key": "ff97f59a-9751-4adf-8e84-93d862f8bf39"
+      }
+    },
+    {
+      "key": "7b367489-a145-4036-8d6c-ccd3ddbef230",
+      "position": 2,
+      "properties": {
+        "name": "Student Survey"
+      },
+      "seeding_key": {
+        "activity_section.key": "7b367489-a145-4036-8d6c-ccd3ddbef230",
         "lesson_activity.key": "ff97f59a-9751-4adf-8e84-93d862f8bf39"
       }
     },
@@ -672,7 +746,7 @@
       "key": "a323c20b-54b5-4097-80d9-fa8f0c68d360",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Final Thoughts” slide\n\n**Reflect**: \n- _Which of your classmates’ book cover captured your attention?_ \n- _What choices did they make in designing their cover?_ \n\n**Do This**: Have students discuss the reflection question in small groups, then bring the class together for a larger class discussion.\n\n**Discussion Goal**: They should also recognize that the same book cover can be designed differently by different people. For example, they may have designed a cover for the same book as a classmate but chosen a different background or sprites.\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Final Thoughts” slide\n\n**Reflect**: \n_You've probably heard the saying \"don't judge a book by its cover\". Think about the book covers that you and your classmates coded._ \n\n_Do you agree with the saying? Why or why not?_\n\n\n**Do This**: Have students discuss the reflection question in small groups, then bring the class together for a larger class discussion.\n\n**Discussion Goal**: Students should recognize that a book cover can convey some, but not all, information about a book. Also, the same book cover can be designed differently by different people. The book covers that students coded might be more helpful than a regular book cover in helping someone choose what book to read because they feature sprites and dialogue. \n",
         "duration": "10",
         "name": "Reflection"
       },
@@ -1085,6 +1159,30 @@
     },
     {
       "chapter": 17,
+      "position": 17,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "csc_bookcover_survey_L1"
+        ]
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csc_bookcover_survey_L1"
+        ],
+        "lesson.key": "Book Cover ",
+        "lesson_group.key": "",
+        "script.name": "csc-bookcover",
+        "activity_section.key": "ac408d83-6b3f-4dc5-a8d5-48c953a33397"
+      },
+      "level_keys": [
+        "csc_bookcover_survey_L1"
+      ]
+    },
+    {
+      "chapter": 18,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -1109,7 +1207,7 @@
       ]
     },
     {
-      "chapter": 18,
+      "chapter": 19,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -1134,7 +1232,7 @@
       ]
     },
     {
-      "chapter": 19,
+      "chapter": 20,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -1159,7 +1257,7 @@
       ]
     },
     {
-      "chapter": 20,
+      "chapter": 21,
       "position": 4,
       "activity_section_position": 4,
       "assessment": false,
@@ -1184,108 +1282,33 @@
       ]
     },
     {
-      "chapter": 21,
-      "position": 5,
-      "activity_section_position": 5,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "csc_bookcover_prop"
-        ],
-        "progression": "Skill Building"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "csc_bookcover_prop"
-        ],
-        "lesson.key": "lesson-1",
-        "lesson_group.key": "",
-        "script.name": "csc-bookcover",
-        "activity_section.key": "4370f514-0009-466e-bef0-dffccbcb861e"
-      },
-      "level_keys": [
-        "csc_bookcover_prop"
-      ]
-    },
-    {
       "chapter": 22,
-      "position": 6,
-      "activity_section_position": 6,
+      "position": 5,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
-          "csc_bookcover_clicksay"
+          "csc_bookcover_extensions_choice"
         ],
-        "progression": "Skill Building"
+        "progression": "Extend Your Book Cover!"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "csc_bookcover_clicksay"
+          "csc_bookcover_extensions_choice"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
         "script.name": "csc-bookcover",
-        "activity_section.key": "4370f514-0009-466e-bef0-dffccbcb861e"
+        "activity_section.key": "e4e93995-6ff9-4974-91ed-d0e737c137f2"
       },
       "level_keys": [
-        "csc_bookcover_clicksay"
+        "csc_bookcover_extensions_choice"
       ]
     },
     {
       "chapter": 23,
-      "position": 7,
-      "activity_section_position": 7,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "csc_bookcover_prompt"
-        ],
-        "progression": "Skill Building"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "csc_bookcover_prompt"
-        ],
-        "lesson.key": "lesson-1",
-        "lesson_group.key": "",
-        "script.name": "csc-bookcover",
-        "activity_section.key": "4370f514-0009-466e-bef0-dffccbcb861e"
-      },
-      "level_keys": [
-        "csc_bookcover_prompt"
-      ]
-    },
-    {
-      "chapter": 24,
-      "position": 8,
-      "activity_section_position": 8,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "csc_bookcover_promptanswered"
-        ],
-        "progression": "Skill Building"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "csc_bookcover_promptanswered"
-        ],
-        "lesson.key": "lesson-1",
-        "lesson_group.key": "",
-        "script.name": "csc-bookcover",
-        "activity_section.key": "4370f514-0009-466e-bef0-dffccbcb861e"
-      },
-      "level_keys": [
-        "csc_bookcover_promptanswered"
-      ]
-    },
-    {
-      "chapter": 25,
-      "position": 9,
+      "position": 6,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -1306,6 +1329,30 @@
       },
       "level_keys": [
         "csc_bookcover_freeplay"
+      ]
+    },
+    {
+      "chapter": 24,
+      "position": 7,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "csc_bookcover_survey_L2"
+        ]
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csc_bookcover_survey_L2"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "csc-bookcover",
+        "activity_section.key": "7b367489-a145-4036-8d6c-ccd3ddbef230"
+      },
+      "level_keys": [
+        "csc_bookcover_survey_L2"
       ]
     }
   ],
@@ -1504,6 +1551,18 @@
     },
     {
       "seeding_key": {
+        "level.key": "csc_bookcover_survey_L1",
+        "script_level.level_keys": [
+          "csc_bookcover_survey_L1"
+        ],
+        "lesson.key": "Book Cover ",
+        "lesson_group.key": "",
+        "script.name": "csc-bookcover",
+        "activity_section.key": "ac408d83-6b3f-4dc5-a8d5-48c953a33397"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "csc_bookcover_title",
         "script_level.level_keys": [
           "csc_bookcover_title"
@@ -1552,50 +1611,14 @@
     },
     {
       "seeding_key": {
-        "level.key": "csc_bookcover_prop",
+        "level.key": "csc_bookcover_extensions_choice",
         "script_level.level_keys": [
-          "csc_bookcover_prop"
+          "csc_bookcover_extensions_choice"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
         "script.name": "csc-bookcover",
-        "activity_section.key": "4370f514-0009-466e-bef0-dffccbcb861e"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "csc_bookcover_clicksay",
-        "script_level.level_keys": [
-          "csc_bookcover_clicksay"
-        ],
-        "lesson.key": "lesson-1",
-        "lesson_group.key": "",
-        "script.name": "csc-bookcover",
-        "activity_section.key": "4370f514-0009-466e-bef0-dffccbcb861e"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "csc_bookcover_prompt",
-        "script_level.level_keys": [
-          "csc_bookcover_prompt"
-        ],
-        "lesson.key": "lesson-1",
-        "lesson_group.key": "",
-        "script.name": "csc-bookcover",
-        "activity_section.key": "4370f514-0009-466e-bef0-dffccbcb861e"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "csc_bookcover_promptanswered",
-        "script_level.level_keys": [
-          "csc_bookcover_promptanswered"
-        ],
-        "lesson.key": "lesson-1",
-        "lesson_group.key": "",
-        "script.name": "csc-bookcover",
-        "activity_section.key": "4370f514-0009-466e-bef0-dffccbcb861e"
+        "activity_section.key": "e4e93995-6ff9-4974-91ed-d0e737c137f2"
       }
     },
     {
@@ -1608,6 +1631,18 @@
         "lesson_group.key": "",
         "script.name": "csc-bookcover",
         "activity_section.key": "f3886a91-78c8-4dc8-99e5-2dd41c23c21d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csc_bookcover_survey_L2",
+        "script_level.level_keys": [
+          "csc_bookcover_survey_L2"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "csc-bookcover",
+        "activity_section.key": "7b367489-a145-4036-8d6c-ccd3ddbef230"
       }
     }
   ],
@@ -2029,6 +2064,20 @@
         "lesson.key": "Sharing My Time Capsule (beta)",
         "framework.shortcode": "csta",
         "standard.shortcode": "1B-AP-12"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "framework.shortcode": "ccela",
+        "standard.shortcode": "5.RL.4"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "framework.shortcode": "ccela",
+        "standard.shortcode": "5.RL.7"
       }
     }
   ],

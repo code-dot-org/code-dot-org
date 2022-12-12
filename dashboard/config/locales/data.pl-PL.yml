@@ -963,6 +963,12 @@ pl:
         csa-pl-intro-to-equality: Wprowadzenie do równości
         csa-pl-intro-to-equals-method: Wprowadzenie do metody equals()
         csc_timecapsule_intro: Wprowadzenie do Kapsuły czasu
+        PL_Equity_in_CS_Education: Równość w edukacji informatycznej
+        csc_fm_pilot: Maszyny funkcyjne (Pilotaż)
+        csc_fm_pilot_v2: 'Wprowadzenie do maszyn funkcyjnych '
+        csc-sprite-lab-pixel-editor: Narysuj swojego duszka
+        csa-pl-intro-to-strings: Wprowadzenie do łańcuchów w Javie
+        csa-pl-compareTo: Metoda compareto ()
     callout:
       text:
         drag_blocks: Przeciągnij blok "idź" i przypnij go poniżej innego bloku

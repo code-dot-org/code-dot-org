@@ -715,6 +715,12 @@ en:
         csa-multi-select-pl: Multi-selection Statements in Java
         csc_timecapsule_intro: Time Capsule Introduction
         PL_Equity_in_CS_Education: Equity in CS Education
+        csc_fm_pilot: Function Machines (Pilot)
+        csc_fm_pilot_v2: 'Function Machines Intro '
+        csc-sprite-lab-pixel-editor: Draw Your Own Sprite
+        csa-pl-intro-to-strings: Introduction to Strings in Java
+        csa-pl-compareTo: The compareTo() method
+        csc-event-short-intro: Events Short Intro
     callout:
       text:
         drag_blocks: Drag a "move" block and snap it below the other block

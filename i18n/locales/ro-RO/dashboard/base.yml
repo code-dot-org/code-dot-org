@@ -664,6 +664,7 @@ ro:
       title: 'Petrecere dansantă'
     hello-world:
       title: 'Bună Lume'
+      body: 'Alege din patru teme distractive pentru a codifica personaje interactive într-o lume pe care o creezi tu.'
     poem-art:
       title: 'Arta Poeziei'
     hoc:

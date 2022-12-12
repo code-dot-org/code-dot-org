@@ -61,12 +61,12 @@ module Pd::Application
     validate :status_is_valid_for_application_type
     validates_presence_of :type
     validates_presence_of :user_id, unless: proc {|application| application.application_type == PRINCIPAL_APPROVAL_APPLICATION}
-    validates_presence_of :status, unless: proc {|application| application.application_type == PRINCIPAL_APPROVAL_APPLICATION}
+    validates_presence_of :status
     validates_inclusion_of :application_type, in: APPLICATION_TYPES
     validates_inclusion_of :application_year, in: APPLICATION_YEARS
 
-    # An application either has an "incomplete" or "unreviewed" state when created.
-    # The applied_at field gets set when the status becomes 'unreviewed' for the first time
+    # An application either has an 'incomplete', 'awaiting_admin_approval', or 'unreviewed' state when created.
+    # The applied_at field gets set when the status becomes 'unreviewed' or 'awaiting_admin_approval' for the first time
     before_save :set_applied_date, if: :status_changed?
 
     # After creation, an RP or admin can change the status to "accepted," which triggers update_accepted_data.
@@ -96,15 +96,19 @@ module Pd::Application
       self.application_type = nil
     end
 
-    # Creates the following methods: accepted? incomplete? pending? unreviewed? waitlisted? pending_space_availability?
-    %w(accepted incomplete pending unreviewed waitlisted pending_space_availability).each do |attribute|
+    # Creates the following methods: accepted? incomplete? pending? unreviewed? waitlisted? pending_space_availability? awaiting_admin_approval?
+    %w(accepted incomplete pending unreviewed waitlisted pending_space_availability awaiting_admin_approval).each do |attribute|
       define_method(:"#{attribute}?") do
         status == attribute
       end
     end
 
+    def status_on_submit?
+      unreviewed? || awaiting_admin_approval?
+    end
+
     def set_applied_date
-      self.applied_at = Time.now if applied_at.nil? && unreviewed?
+      self.applied_at = Time.now if applied_at.nil? && status_on_submit?
     end
 
     def update_accepted_date
@@ -252,10 +256,6 @@ module Pd::Application
       []
     end
 
-    def self.can_see_locked_status?(user)
-      false
-    end
-
     # Include additional text for all the multi-select fields that have the option
     def full_answers
       @full_answers ||= begin
@@ -286,20 +286,6 @@ module Pd::Application
 
     def generate_application_guid
       self.application_guid = SecureRandom.uuid
-    end
-
-    def locked?
-      locked_at.present?
-    end
-
-    def lock!
-      return if locked?
-      update! locked_at: Time.zone.now
-    end
-
-    def unlock!
-      return unless locked?
-      update! locked_at: nil
     end
 
     def email
@@ -373,10 +359,6 @@ module Pd::Application
       else
         []
       end
-    end
-
-    def update_lock_change_log(user)
-      update_status_timestamp_change_log(user, "Application is #{locked? ? 'locked' : 'unlocked'}")
     end
 
     # Record when the status changes and who changed it

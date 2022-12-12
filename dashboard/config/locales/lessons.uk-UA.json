@@ -11,6 +11,9 @@
         "flappy/Flappy Code": {
           "name": "Код Пурха"
         },
+        "hello-world-soccer-2022/Hello World: Food": {
+          "name": "Привіт Світ: Футбол"
+        },
         "hourofcode/Maze": {
           "name": "Лабіринт"
         },
@@ -27,7 +30,6 @@
           "name": "Ігрова студія Гамбола"
         },
         "dance/Dance Party": {
-          "name": "Танцювальна вечірка",
           "purpose": "Цей урок вводить основні концепції інформатики, пов'язані з кодуванням та програмуванням подій (з використанням блоків)."
         },
         "aquatic/Aquatic": {
@@ -35,6 +37,9 @@
         },
         "hoc-encryption/Simple Encryption": {
           "name": "Просте шифрування"
+        },
+        "hello-world-space-2022/Hello World: Food": {
+          "name": "Привіт Світ: Космос"
         },
         "starwars/Hour of Code 2015": {
           "name": "Зоряні війни: Закодуємо далеку Галактику (JavaScript)"
@@ -51,6 +56,12 @@
         "text-compression/Text Compression": {
           "name": "Стиснення тексту"
         },
+        "outbreak/Outbreak": {
+          "overview": "",
+          "preparation": "",
+          "purpose": "",
+          "student_overview": ""
+        },
         "infinity/Infinity": {
           "name": "Ігрова лабораторія Діснея Infinity"
         },
@@ -61,6 +72,7 @@
           "name": "Година коду 2013"
         },
         "dance-2019/Dance Party": {
+          "name": "Танцювальна вечірка",
           "purpose": "Цей урок вводить основні концепції інформатики, пов'язані з кодуванням та програмуванням подій (з використанням блоків)."
         },
         "k5-onlinepd-2019/Sequencing": {

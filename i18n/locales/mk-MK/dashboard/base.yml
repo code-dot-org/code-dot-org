@@ -26,6 +26,8 @@ mk:
   cancel: "Откажи"
   or: "или"
   continue: 'Продолжи'
+  signup_form:
+    email_preference_privacy: "(Погледнете ја нашата политика за приватност)"
   signin_form:
     submit: 'Најави се'
   signinsection:

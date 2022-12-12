@@ -38,7 +38,8 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom:10px"><strong>《舞会》</strong></h3>        <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">编程设计一款《舞会》游戏，与亲朋好友共享。 与凯蒂·佩里、肖恩·门德斯、 “迪斯科瘪三”乐队、利尔·纳斯·X、乔纳斯兄弟、妮琪·米娜及其他34余位大咖一起劲舞！</div>        <a class="linktag" id="danceparty" href="/dance" target="_blank"><button>尝试活动</button></a>
+        <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom:10px"><strong>《舞会》</strong></h3>        <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">编程设计一款《舞会》游戏，与亲朋好友共享。 精选碧昂斯、哈里·斯泰尔斯、丽佐、利尔·纳斯、赛琳娜·戈麦斯、迪士尼《魔法满屋》中的音乐等等！</div>
+        <a class="linktag" id="danceparty" href="/dance" target="_blank"><button>尝试活动</button></a>
     </span>
   </div>
 </div>

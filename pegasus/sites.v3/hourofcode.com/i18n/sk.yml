@@ -43,6 +43,8 @@ sk:
   hoc2022_codeorg_title: Oslávte Hodinu kódu s NASA atď.
   hoc2022_codeorg_description: 10. verzia Hodiny kódu je úžasná! Poďte s nami objavovať,
     hrať sa a tvoriť.
+  social_hoc2022_dance: Vystupujú Beyoncé, Harry Styles, Lizzo, Lil Nas X, Selena
+    Gomez, hudba z Disney rozprávky „Encanto“ atď.!
   social_hoc2021_cse: 'During the #HourOfCode, we''re celebrating #CSEverywhere. Discover
     the connections!'
   hoc2020_header: 'Uč sa už dnes a vytvor lepší zajtrajšok. '
@@ -574,6 +576,7 @@ sk:
   signup_send_posters_address_placeholder: Táto adresa nebude zverejnená na našej
     mape
   signup_event_type_in_school: V škole
+  signup_event_type_after_school: After school program
   signup_event_type_out_of_school: Mimo školu
   signup_event_type_at_home: Home
   signup_submit_census_label: Odoslať
@@ -1045,9 +1048,6 @@ sk:
     kódu</a> alebo <a id=''teacher_banner_howto''>si prečítajte návod, ako na to</a>'
   learn_banner_teachers_markdown: 'Učitelia: [Usporiadajte Hodinu kódu](%{host_url})
     alebo [si prečítajte návod, ako na to](%{howto_url})'
-  learn_robotics_banner_heading: ROBOTIKA
-  learn_robotics_banner_blurb: Máte roboty? Využite ich v aktivitách nižšie a vytvorte
-    pre študentov akéhokoľve veku Hodinu kódu s hmatateľným výsledkom!
   tutorial_dance2019_name: Tanečná párty
   tutorial_danceparty_name: Tanečná párty
   tutorial_chibitronics_name: 'Chibitronics: Illuminated Story'
@@ -1470,12 +1470,12 @@ sk:
   tutorial_bcjs2_name: World of JavaScript 2
   tutorial_3dbearmars_name: The Mars Pioneers
   tutorial_bitsboxyak_name: Yak Attack! Make a Card with Typed Code
-  tutorial_blockscadbargraphs_name: Bar Graphs
-  tutorial_blockscadbirdhouses_name: Birdhouses
-  tutorial_blockscadclock_name: Analog Clock
-  tutorial_blockscaddinner_name: Dinner Robot
-  tutorial_blockscadicecream_name: Ice Cream Machine
-  tutorial_blockscadpizza_name: Pizza Printer
+  tutorial_blockscadbargraphs_name: BlocksCAD Bar Graphs
+  tutorial_blockscadbirdhouses_name: BlocksCAD Birdhouses
+  tutorial_blockscadclock_name: BlocksCAD Analog Clock
+  tutorial_blockscaddinner_name: BlocksCAD Dinner Robot
+  tutorial_blockscadicecream_name: BlocksCAD Ice Cream Machine
+  tutorial_blockscadpizza_name: BlocksCAD Pizza Printer
   tutorial_blockscadsugar_name: Sugar Cubes
   tutorial_bsgridlight_name: 'GridLight: Hello World'
   tutorial_bpartscratch_name: 'Art & Music: Color (Scratch)'
@@ -8774,9 +8774,9 @@ sk:
   tutorial_eddog_name: Code a guard dog with Edison
   tutorial_microbit15_name: 'micro:bit: coding towards Global Goal 15, Life on Land'
   tutorial_unity_name: 'Unity Game Development Creator Kit: Beginner Code'
-  tutorial_blockscadtarget_name: Transformation Target Practice
+  tutorial_blockscadtarget_name: BlocksCAD Transformation Target Practice
   tutorial_tcadicicles_name: Designing Icicles With Codeblocks in Tinkercad
-  tutorial_blockscadscale_name: Scale City
+  tutorial_blockscadscale_name: BlocksCAD Scale City
   tutorial_tcadloops_name: Using Loops in Tinkercad to Design a Bursting Star
   tutorial_phidgets_name: A Phidgets Theremin with Processing
   tutorial_modvariables_name: Investigating Variables & Block Values using Cubelets
@@ -9647,7 +9647,7 @@ sk:
   tutorial_robotical2_name: Hour of Code Activity 2 - the Marty Controller
   tutorial_robotical3_name: Hour of Code Activity 3 - Getting Started with Marty Blocks
     Jr
-  tutorial_blockscadvirus_name: Modeling a Virus with Code
+  tutorial_blockscadvirus_name: BlocksCAD Modeling a Virus with Code
   tutorial_robotical1_name: Hour of Code Activity 1 - Marty Unplugged
   tutorial_irobotshapes_name: 'Robotics for K-2: Robot Shapes'
   tutorial_irobotparts_name: 'Robotics for K-2: Robot Parts'
@@ -9859,10 +9859,12 @@ sk:
   tutorial_codespellsnexus_longdescription: Under the mentorship of a mysterious sock
     puppet, you must infiltrate and reprogram a super-intelligent 'Learn to Code'
     app that seeks global domination. Solve puzzles. Learn to code. Hack the Nexus.
-  tutorial_carnegieslime_longdescription: Super Slime Battle is a game that was co-designed
-    between researchers at Carnegie Mellon University and students from the Boys and
-    Girls Clubs of Western PA where students and their (co)robot partners must defend
-    their candy stash from oncoming baddies.
+  tutorial_carnegieslime_longdescription: Every year the Minions of Scarecorp try
+    to steal your candy crops. Booville High's Baddest Slimeball crew have come together
+    to protect the candy crops with slime weapons. Players play as teen monsters who
+    program their collaborative robot (aka 'cobot') pets to help take down the Minions
+    of Scarecorp who are after their town's candy harvest. Choose between four characters
+    and their cobotic pets.
   tutorial_ozotown_longdescription: The Ozobot Blockly OzoTown will teach advanced
     sequencing as students utilize logic, reasoning, and computer science skills to
     navigate real life scenarios. No bot needed!
@@ -10530,7 +10532,7 @@ sk:
   tutorial_clbinary_name: Learn How Binary Works with Computers using Minecraft
   tutorial_sascollabcode_name: 'SAS CodeSnaps: Collaborative coding for blind, low
     vision and sighted students'
-  tutorial_codecombatgoblins_name: 'CodeCombat: Goblins nn'' Glory'
+  tutorial_codecombatgoblins_name: 'CodeCombat: Goblins ''n'' Glory'
   tutorial_scratchstorytelling_name: Anything is Possible! Storytelling with Scratch
   tutorial_crayolasymbols_name: 'Unplugged Coding from Crayola Education: Visual Symbols
     Convey Meaning'
@@ -11302,7 +11304,7 @@ sk:
   tutorial_googlesuperhero_string_detail_programming_languages: Bloky
   tutorial_googlename _string_detail_programming_languages: Bloky
   tutorial_carnegiezillah_string_detail_programming_languages: Bloky
-  tutorial_nasachspacejam_string_detail_programming_languages: JavaScript, P5
+  tutorial_nasachspacejam_string_detail_programming_languages: Bloky
   tutorial_hatchxrsolar_string_detail_programming_languages: Bloky
   tutorial_hatchxrspace_string_detail_programming_languages: Bloky
   tutorial_hatchxrtrex_string_detail_programming_languages: Bloky
@@ -11337,6 +11339,29 @@ sk:
   tutorial_nasapackage_string_detail_programming_languages: Bloky
   tutorial_nasalunar_string_detail_programming_languages: Bloky, JavaScript
   tutorial_meeestate_string_detail_programming_languages: Bloky, Python
+  tutorial_imagipixelart_longdescription: Learn Python and create your own colorful
+    animations in this 1 hour crash course!
+  tutorial_imagipixelart_name: Code your own pixel art!
+  tutorial_imagipixelart_string_detail_grades: 2. – 8. ročník
+  tutorial_imagipixelart_string_detail_platforms: ''
+  tutorial_imagipixelart_string_detail_programming_languages: typing
+  tutorial_imagipixelart_string_platforms: All modern browsers, iPad, Android tablets,
+    Windows phone, Android phone, iPhone
+  tutorial_kcjhealth_longdescription: 'Learn about data visualization, algorithmic
+    art and coding, while exploring SDG #3 ''Good Health and Well-Being''.'
+  tutorial_kcjhealth_name: The Health & Well-Being Challenge
+  tutorial_kcjhealth_string_detail_grades: 6. ročník a vyššie
+  tutorial_kcjhealth_string_detail_platforms: ''
+  tutorial_kcjhealth_string_detail_programming_languages: Bloky
+  tutorial_kcjhealth_string_platforms: Všetky moderné prehliadače
+  tutorial_msftwakanda_longdescription: 'Shuri, Okoye, and Riri must band together
+    to help Wakanda. Code your own action-packed activity inspired by Marvel Studios''
+    ''Black Panther: Wakanda Forever''!'
+  tutorial_msftwakanda_name: Long Live Wakanda
+  tutorial_msftwakanda_string_detail_grades: 6. ročník a vyššie
+  tutorial_msftwakanda_string_detail_platforms: ''
+  tutorial_msftwakanda_string_detail_programming_languages: Bloky
+  tutorial_msftwakanda_string_platforms: Všetky moderné prehliadače
   school_not_found_heading: Nemôžeme nájsť Vašu školu. Zadajte prosím Viac informácií.
   school_name: Názov školy
   school_name_error: Názov školy je povinný.

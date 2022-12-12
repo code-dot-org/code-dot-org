@@ -606,23 +606,44 @@
           "progression_name": "Compressão de texto"
         },
         "8581ae5d-4d2a-4221-b820-5920dd449b6c": {
-          "name": "Introdução"
+          "name": "Introdução",
+          "description": ""
         },
         "d63c77c1-4167-4360-ab98-25610934beda": {
           "name": "Epidemia",
+          "description": "",
           "progression_name": "Epidemia"
         },
         "385c2c6a-f7e4-4c90-b081-7030d22193ed": {
+          "description": "",
           "progression_name": "Seja bem-vindo à Monster Town"
         },
+        "60837b14-7f66-4848-9c51-1c6aa9a21ad9": {
+          "description": ""
+        },
+        "13a06294-2f2a-4661-9947-46ed5843913f": {
+          "description": ""
+        },
         "df13fa93-37df-4188-837d-462c48179625": {
+          "description": "",
           "progression_name": "Desenvolvimento de Habilidades"
+        },
+        "ae9fb00b-5b7e-4ecb-94c9-c778a2eba24e": {
+          "description": "",
+          "progression_name": ""
         },
         "0620e645-f84e-47ca-809b-3dcbe803d83e": {
           "progression_name": "Atividade livre"
         },
+        "3a53855f-2fc4-48f1-a05e-1bd8e2c265e0": {
+          "description": ""
+        },
+        "b3189fd8-5272-4de4-953a-f4848b2ddb5c": {
+          "description": ""
+        },
         "b8e884f1-eae0-4138-8778-0972f90e34d9": {
-          "name": "Reflexão"
+          "name": "Reflexão",
+          "description": ""
         },
         "21f43e64-dea3-4abc-8284-e055480370ce": {
           "name": "Introdução",
@@ -787,6 +808,10 @@
         "50216925-6742-400e-b45a-2de4cd3b63f2": {
           "name": "Resumo"
         },
+        "197fed33-dc42-4fc0-8d20-e84b09292caa": {
+          "name": "",
+          "description": ""
+        },
         "de7dca58-f7d8-448f-84cf-41d215d2bf11": {
           "description": "_Nesta atividade, você vai se divertir criando um mundo interativo, com personagens divertidos chamados de fadas. Você poderá fazer com que as fadas digam coisas com balões de texto semelhantes aos das histórias em quadrinho, e vai aprender a fazê-las responder automaticamente quando alguém clicar nelas._\n\n_Hoje, vocês vão escrever um “código”, que nada mais é do que uma série de instruções que o computador pode entender. Quando você escreve uma história, é preciso pensar cuidadosamente sobre as palavras que vai utilizar. Quando você escreve um código, você precisa pensar cuidadosamente sobre as instruções que vai dar ao seu computador._",
           "tips": [
@@ -794,17 +819,18 @@
           ]
         },
         "7acfc985-03d8-4d14-b244-203f8cbf4843": {
-          "description": "Veja aqui algumas dicas que podem ajudar os alunos de qualquer nível com os quais você esteja trabalhando \n\n-   \\*_Colabore com os colegas:_ Incentive os alunos a verificar com um colega os pontos em que tiverem problemas. Conforme a idade e a capacidade dos alunos, você pode considerar a formação de duplas formalmente na classe, para assistirem ao tutorial utilizando o [pair programmin][0].\n\n-   \\*_Leia as Instruções:_As instruções geralmente fornecem dicas úteis sobre como concluir o nível. Antes de dar a resposta aos alunos, certifique-se de que eles leram as instruções cuidadosamente, viram as dicas, os vídeos e outros códigos iniciais com atenção.\n\n-   <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> \\*_Problemas? Procure as dicas:_Cada nível inclui uma dica com orientações sobre como concluir o nível, incluindo blocos de código para o aluno experimentar. \n\n-   \\*_Não tenha pressa e experimente._As instruções geralmente dizem aos alunos o que fazer, mas eles também devem ter a opção de experimentar suas próprias ideias."
+          "name": "",
+          "description": "Veja aqui algumas dicas que podem ajudar os alunos de qualquer nível com os quais você esteja trabalhando \n\n- **Colabore com os colegas:* Incentive os alunos a verificar com um colega os pontos em que tiverem problemas. Conforme a idade e a capacidade dos alunos, você pode considerar a formação de duplas formalmente na classe, para assistirem ao tutorial utilizando o [pair programmin][0].\n\n- **Leia as Instruções:*As instruções geralmente fornecem dicas úteis sobre como concluir o nível. Antes de dar a resposta aos alunos, certifique-se de que eles leram as instruções cuidadosamente, viram as dicas, os vídeos e outros códigos iniciais com atenção.\n\n- <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> **Problemas? Procure as dicas:*Cada nível inclui uma dica com orientações sobre como concluir o nível, incluindo blocos de código para o aluno experimentar. \n\n- **Não tenha pressa e experimente.*As instruções geralmente dizem aos alunos o que fazer, mas eles também devem ter a opção de experimentar suas próprias ideias."
         },
         "1634ab74-919f-40fb-b2dc-8cd5701655a2": {
           "name": "Olá Mundo"
         },
         "2edc03d3-b9a7-4c1b-a046-16fa43b3a7a3": {
-          "description": "Se um grupo ou um aluno terminar mais cedo, estimule-os a continuar desenvolvendo o projeto no último nível. Se os alunos não tiverem entendido bem o que fazer, você pode fazer perguntas a eles: \n\n-   Que outras fadas você poderia adicionar ao seu projeto? \n-   Você já deu uma olhada na biblioteca de trajes ou experimentou seu próprio traje personalizado para fadas? \n-   O que mais sua fada poderia dizer? \n-   O que sua fada deve fazer quando alguém clicar nela? \n-   Convide os alunos a compartilharem ideias e aprenderem uns com os outros. Eles também podem assistir a outros tutoriais visitando a página [code.org/learn][0]."
+          "description": "Se um grupo ou um aluno terminar mais cedo, estimule-os a continuar desenvolvendo o projeto no último nível. Se os alunos não tiverem entendido bem o que fazer, você pode fazer perguntas a eles: \n\n- Que outras fadas você poderia adicionar ao seu projeto? \n- Você já deu uma olhada na biblioteca de trajes ou experimentou seu próprio traje personalizado para fadas? \n- O que mais sua fada poderia dizer? \n- O que sua fada deve fazer quando alguém clicar nela? \n- Convide os alunos a compartilharem ideias e aprenderem uns com os outros. Eles também podem assistir a outros tutoriais visitando a página [code.org/learn][0]."
         },
         "b68a11cc-930a-4803-beca-1d4f49ede378": {
           "name": "Reflexão",
-          "description": "#### Painel de discussão\n\nPeça aos alunos para refletirem sobre as atividades do dia. O que eles aprenderam sobre codificação? Fadas? Eventos? \n\nComo eles se sentem a respeito da ciência da computação e da codificação depois de uma hora de exploração? \n\n#### Próximos passos\n\nInforme aos alunos que, se eles tiverem gostado das atividades do dia, eles terão muitas opções para continuar gerando o código. Visite [CS Connections][0] para ver ideias sobre como integrar a ciência da computação a outros temas ou leia mais sobre as nossas [ofertas de curso para o nível fundamental][1]."
+          "description": "#### Painel de discussão \n\nPeça aos alunos para refletirem sobre as atividades do dia. O que eles aprenderam sobre codificação? Fadas? Eventos? \n\nComo eles se sentem a respeito da ciência da computação e da codificação depois de uma hora de exploração? \n\n#### Próximos passos \n\nInforme aos alunos que, se eles tiverem gostado das atividades do dia, eles terão muitas opções para continuar gerando o código. Visite [CS Connections][0] para ver ideias sobre como integrar a ciência da computação a outros temas ou leia mais sobre as nossas [ofertas de curso para o nível fundamental][1]."
         },
         "d6c0f379-8c4b-44a4-a027-b1b0d67a9605": {
           "progression_name": "Construindo uma Interface de Usuário com o Modo Design"
@@ -13646,7 +13672,7 @@
         },
         "a49bc6c2-1b76-476d-98cd-7f040e8853a7": {
           "name": "Arte poética",
-          "description": "#### Suporte Geral  No final desta atividade, os alunos terão um poema animado que representa a sua interpretação visual do poema que escolheram. Esta aula visa dar aos alunos a oportunidade de trabalhar com o seu código e encontrar os efeitos visuais que eles mais gostam.   Ao circular pela sala, incentive os alunos a: - **Não terem pressa:** A maioria dos níveis exige que os alunos encontrem os efeitos ideais para combinar com a sua interpretação do humor do poema. Manter-se em um nível e trabalhar com o seu código é muito  estimulante.   - **Encontre um poema que você gosta:** O poema que é apresentado para um aluno de um novo nível é apenas uma sugestão. Há um menu de poemas com poemas que foram previamente carregados na parte superior  do espaço lúdico. Peça aos alunos para lerem alguns deles e encontrarem um que tenha a ver com ele eles. Agora eles podem começar a animar o poema que escolheram com o código.   \\* **Mostre um nível completo:** Qualquer bolha de nível totalmente verde significa que o aluno completou com sucesso todos os requisitos para esse nível. Peça aos alunos para clicarem em uma bolha verde para mostrar o que eles criaram.   Para os momentos em que um aluno se sente empacado:  -  **Leia as Instruções:** As instruções são pontos com marcadores  sobre como completar o nível. Se um aluno se sentir empacado, peça-lhe para ler as instruções em voz alta para você e peça-lhe para repetir o que as instruções dizem com as suas próprias palavras.      -   \\<imgsrc=\"<https://images.code.org/5b99c663ad6632fe64c9da69d6805c2b-text-to-speech.PNG>\" style=\"height: 25px;\"> Students can also click on this text-to-speech icon to hear the instructions read aloud. -   <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> **Look for hints**: Most levels include at least one hint with more explicit details about how to pass the level.  -   **Celebrate bugs:** Getting a bug in your code is a natural part of the coding process. If the program isn’t doing what they expected, ask the student to first tell you what they want to happen, click run to observe what is actually happening, then find the place in their code that caused the discrepancy. Remember to celebrate finding bugs and fixing bugs. Getting a bug means students are doing a great job building a more complex program."
+          "description": "#### Suporte Geral  No final desta atividade, os alunos terão um poema animado que representa a sua interpretação visual do poema que escolheram. Esta aula visa dar aos alunos a oportunidade de trabalhar com o seu código e encontrar os efeitos visuais que eles mais gostam.   Ao circular pela sala, incentive os alunos a: - **Não terem pressa:** A maioria dos níveis exige que os alunos encontrem os efeitos ideais para combinar com a sua interpretação do humor do poema. Manter-se em um nível e trabalhar com o seu código é muito  estimulante.   - **Encontre um poema que você gosta:** O poema que é apresentado para um aluno de um novo nível é apenas uma sugestão. Há um menu de poemas com poemas que foram previamente carregados na parte superior  do espaço lúdico. Peça aos alunos para lerem alguns deles e encontrarem um que tenha a ver com ele eles. Agora eles podem começar a animar o poema que escolheram com o código.   * **Mostre um nível completo:** Qualquer bolha de nível totalmente verde significa que o aluno completou com sucesso todos os requisitos para esse nível. Peça aos alunos para clicarem em uma bolha verde para mostrar o que eles criaram.   Para os momentos em que um aluno se sente empacado:  -  **Leia as Instruções:** As instruções são pontos com marcadores  sobre como completar o nível. Se um aluno se sentir empacado, peça-lhe para ler as instruções em voz alta para você e peça-lhe para repetir o que as instruções dizem com as suas próprias palavras.      -   <imgsrc=\"https://images.code.org/5b99c663ad6632fe64c9da69d6805c2b-text-to-speech.PNG\" style=\"height: 25px;\"> Students can also click on this text-to-speech icon to hear the instructions read aloud. -   <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> **Look for hints**: Most levels include at least one hint with more explicit details about how to pass the level.  -   **Celebrate bugs:** Getting a bug in your code is a natural part of the coding process. If the program isn’t doing what they expected, ask the student to first tell you what they want to happen, click run to observe what is actually happening, then find the place in their code that caused the discrepancy. Remember to celebrate finding bugs and fixing bugs. Getting a bug means students are doing a great job building a more complex program.  "
         },
         "065eda67-268c-4f91-9caf-efb2c34493fe": {
           "description": "#### Suporte Para Cada Nível **Nível 1:** Incentive os alunos a lerem o poema. Em seguida, peça-lhes para encontrarem uma cor de fundo ou um efeito que corresponda ao tom do poema que escolheram.   **Nível 2:** Neste exemplo, os alunos devem ler o poema por conta própria e, depois pressionar Executar. Você pode perguntar aos alunos se o som e os efeitos que o programador escolheu combinam com o humor do poema. Peça aos alunos para elaborarem a sua resposta.   **Nível 3:** Este nível introduz o som e os alunos podem usar fones de ouvido se os tiverem.   **Nível 4:** Peça-lhes para lerem o poema e encontrarem a linha onde o humor do poema muda ou se há uma nova imagem que o poeta introduz. Use o bloco de eventos para adicionar os efeitos correspondentes às linhas identificadas do poema.   **Nível 5:** Neste exemplo, os alunos devem ler o poema por conta própria e depois pressionar Executar. Pergunte a eles  se as imagens combinam com as palavras do poema. Peça-lhes para elaborarem a sua resposta.   **Nível 6, 7, 8:** Ver \"Comemore os bugs\" na seção de Suporte Geral. Incentive os alunos a construírem programas com mais de uma transição com os seus blocos de eventos.   **Nível 9:** Incentive os alunos a lerem todos os poemas do menu suspenso para encontrarem um que eles gostam. Diga-lhes que eles podem compartilhar o que fazem neste nível final com os seus amigos e familiares. Chegou o momento de juntar todas as habilidades de codificação e ELA!"
@@ -13655,7 +13681,7 @@
           "description": "Se você gostou de aprender a codificar hoje, para continuar aprendendo, visite code.org/learn. Se você quiser compartilhar o que fez com os seus amigos e familiares, clique no botão \"Compartilhar\" e envie o link para quem você quiser!"
         },
         "8630a813-1b6c-49c5-a58b-d2dc5dcccd0a": {
-          "description": "#### (Opcional) Avaliação: Verifique se há Compreensão (4 minutos) Distribua duas notas adesivas para cada aluno."
+          "description": "####(Opcional) Avaliação: Verifique se há Compreensão (4 minutos) Distribua duas notas adesivas para cada aluno."
         },
         "901dbdcd-5c65-4f3d-8cb2-9c9e36a48c2f": {
           "description": "Você tem duas notas adesivas. Em uma delas, escreva algo que você aprendeu sobre codificação hoje.  Na outra, escreva algo que aprendeu sobre poesia hoje.   Vamos compartilhar com toda a classe levantando a mão para responder a esta pergunta: Agora, o que mais você espera que pode aprender sobre codificação e ciência da computação?"

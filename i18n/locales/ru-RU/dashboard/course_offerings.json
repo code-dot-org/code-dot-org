@@ -13,6 +13,8 @@
   "20-hour": "Ускоренное введение в курс информатики",
   "flappy": "Порхающий код",
   "jigsaw": "Головоломки",
+  "algebraa": "Информатика в Алгебре: Курс A",
+  "algebrab": "Информатика в Алгебре: Курс B",
   "algebra": "Информатика в алгебре",
   "applab-intro": "Введение в Лабораторию приложений",
   "aquatic": "Майнкрафт: Водное путешествие",
@@ -278,5 +280,7 @@
   "csd2": "csd2",
   "csd1": "csd1",
   "csd4": "csd4",
-  "hello-world-space": "hello-world-space"
+  "hello-world-space": "hello-world-space",
+  "hello-world-soccer": "Привет, мир: футбол",
+  "playground": "игровая площадка"
 }

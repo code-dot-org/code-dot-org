@@ -6,27 +6,25 @@ title: شكرًا للتسجيل لاستضافة حدث "ساعة من البر
 
 <br /> **تبدأ حملة "ساعة من البرمجة" في {{ campaign_date/full }} وسنكون على اتصال في حالة توفر دروس وبرامج تعليمية وتحديثات مثيرة أخرى جديدة. في أثناء ذلك، ما الذي يمكنك فعله الآن؟**
 
-تعبيرًا عن الشكر والامتنان لمنطمي "ساعة من البرمجة"، لدينا ملصق جديد يضم مالالا، ستيفن كيري، وشاكيرا وآخرين متاح للطلب على [خصم 50% على أمازون](https://www.amazon.com/promocode/A3QAYNZUZTSSNQ). هذه السنة،تأتي كل مجموعة مع 6 ملصقات و 126 ملصقًا أعلانيًا مكتوب عليها: "لقد شاركت في أنشطة ساعة من البرمجة". مع الخصم، يمكن أن تحصل عليها بأقل تكلفة ممكنة. الكمية محدودة، لذا بادر بطلب الملصقات. إذا لم تكن مقيمًا في الولايات المتحدة، فيمكنك [تنزيل وطباعة جميع الملصقات]({{ promotion/promote_posters_url }}).
-
 ## 1. انشر حملة "ساعة من البرمجة" في مدرستك ومجتمعك
 
-لقد انضممت إلى حركة "ساعة من البرمجة". أخبر أصدقاءك باستخدام **#ساعة_من_البرمجة**!
+You just joined the Hour of Code movement. Tell your friends with **#HourOfCode**!
 
-{{ social_media_hoc }} <br /> شجِّع الآخرين على المشاركة [بأمثلة البريد الإلكتروني هذه.]({{ promote/sample_emails }}) اتصل بمديرك واطلب من كل فصل دراسي في مدرستك الاشتراك. قم بإشراك المجموعات المحلية - نادي كشافة، كنيسة ، جامعة، مجموعة قدامى المحاربين، نقابة عمالية، أو حتى بعض الأصدقاء. لست بحاجة لأن تكون في المدرسة لتعلم مهارات جديدة. يمكنك دعوة سياسي محلي أو صانع سياسات لزيارة مدرستك أثناء القيام بأنشطة "ساعة من البرمجة". يمكن أن يساعد ذلك في بناء دعم لعلوم الحاسوب في منطقتك بعد ساعة واحدة فقط.
+{{ social_media_hoc }} <br /> Encourage others to participate [with our sample emails.]({{ promote/sample_emails }}) Contact your principal and challenge every classroom at your school to sign up. Recruit a local group — boy/girl scouts club, church, university, veterans group, labor union, or even some friends. لست بحاجة لأن تكون في المدرسة لتعلم مهارات جديدة. Invite a local politician or policy maker to visit your school for the Hour of Code. يمكن أن يساعد ذلك في بناء دعم لعلوم الحاسوب في منطقتك بعد ساعة واحدة فقط.
 
-استخدم هذه [الملصقات، واللافتات، ومقاطع الفيديو وغيرها]({{ promote/resources }}) لحدثك الخاص.
+Use these [posters, banners, stickers, videos and more]({{ promote/resources }}) for your own event.
 
 ## 2. اعثر على متطوع محلي لمساعدتك في هذا الحدث.
 
-[ابحث في خريطتنا للمتطوعين]({{ urls/volunteer_local }}) عن المتطوعين الذين يمكنهم زيارة فصلك الدراسي أو القيام بمحادثة عبر الفيديو عن بُعد لإلهام الطلاب حول تعدد الإمكانات عند دراسة علوم الحاسوب.
+[Search our volunteer map]({{ urls/volunteer_local }}) for volunteers who can visit your classroom or video chat remotely to inspire your students about the breadth of possibilities with computer science.
 
 ## 3. ضع خطة لحدث "ساعة من البرمجة"
 
-اختر [نشاط ساعة من البرمجة](https://hourofcode.com/learn) للفصول الدراسية و[راجع هذا الدليل الإرشادي]({{ urls/how_to_guide }}).
+Choose an [Hour of Code activity](https://hourofcode.com/learn) for your classroom and [review this how-to guide]({{ urls/how_to_guide }}).
 
 ### 4. وفِّر أدوات الدعم
 
-اطلب مواد لمساعدة الطلاب على التحمس لحدثك من خلال التوجه إلى موقع Code.org [متجر أمازون](https://www.amazon.com/stores/page/8557B2A6-EBF2-4C9F-95C5-C3256FBA0220). [اطلب الملصقات ](https://www.amazon.com/promocode/A3QAYNZUZTSSNQ) (واحصل على خصم إضافي بنسبة 50٪) ومجموعة ادوات "ساعة من البرمجة" والملصقات والمزيد! لكن يجب أن تبادر بالحجز والطلب، فالكمية محدودة.
+Order materials to help get students excited about your event by heading to the Code.org [Amazon store](https://www.amazon.com/stores/page/8557B2A6-EBF2-4C9F-95C5-C3256FBA0220). Order posters, Hour of Code kits, stickers, and more! But hurry, supplies are limited.
 
 # الاطلاع على المزيد من البرامج التعليمية
 

@@ -13,7 +13,7 @@
     },
     "new_name": null,
     "family_name": "vpl-csd",
-    "serialized_at": "2022-07-20 16:01:20 UTC",
+    "serialized_at": "2022-11-10 20:25:08 UTC",
     "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "facilitator",
@@ -659,7 +659,7 @@
       "key": "a3e633a4-8874-47dd-a603-61c82a6f06de",
       "position": 5,
       "properties": {
-        "progression_name": "Unit 6: Lesson 2 - Designing Screens with Code (~20 mins)"
+        "progression_name": "Unit 6: Lesson 3 - Updating Screen Elements (~20 mins)"
       },
       "seeding_key": {
         "activity_section.key": "a3e633a4-8874-47dd-a603-61c82a6f06de",
@@ -670,7 +670,7 @@
       "key": "9883ae18-9aa0-4bad-bca4-eb40d5870c38",
       "position": 6,
       "properties": {
-        "progression_name": "Unit 6: Lesson 3 - The Circuit Playground (~20 mins)"
+        "progression_name": "Unit 6: Lesson 2 - The Circuit Playground (~20 mins)"
       },
       "seeding_key": {
         "activity_section.key": "9883ae18-9aa0-4bad-bca4-eb40d5870c38",
@@ -681,7 +681,7 @@
       "key": "63d3c68f-11cb-412d-8e16-512dd561a74c",
       "position": 7,
       "properties": {
-        "progression_name": "Unit 6: Lesson 4 - Input Unplugged (~10 mins)"
+        "progression_name": "Unit 6: Lesson 4 - Board Events (~10 mins)"
       },
       "seeding_key": {
         "activity_section.key": "63d3c68f-11cb-412d-8e16-512dd561a74c",
@@ -712,6 +712,16 @@
       }
     },
     {
+      "key": "860bdcbf-d502-4640-98be-be9a63e21fb0",
+      "position": 10,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "860bdcbf-d502-4640-98be-be9a63e21fb0",
+        "lesson_activity.key": "e7733413-f659-421f-8e45-aa679beebf5e"
+      }
+    },
+    {
       "key": "935b9854-dee9-400c-bbed-6a8bc7cc07b4",
       "position": 1,
       "properties": {
@@ -737,7 +747,7 @@
       "key": "c7dde980-7092-4b8f-9a9f-629e55131bff",
       "position": 3,
       "properties": {
-        "progression_name": "Unit 6: Lesson 6 -  Getting Properties (~20 - 25 mins)"
+        "progression_name": "Unit 6: Lesson 8 -  Getting Screen Inputs (~20 - 25 mins)"
       },
       "seeding_key": {
         "activity_section.key": "c7dde980-7092-4b8f-9a9f-629e55131bff",
@@ -3253,7 +3263,7 @@
         "level_keys": [
           "VPL - CSD - Module 7 - CI_2022"
         ],
-        "progression": "Unit 6: Lesson 2 - Designing Screens with Code (~20 mins)"
+        "progression": "Unit 6: Lesson 3 - Updating Screen Elements (~20 mins)"
       },
       "bonus": false,
       "seeding_key": {
@@ -3278,7 +3288,7 @@
         "level_keys": [
           "VPL - CSD - Module 7 - CI - U6L2a_2022"
         ],
-        "progression": "Unit 6: Lesson 2 - Designing Screens with Code (~20 mins)"
+        "progression": "Unit 6: Lesson 3 - Updating Screen Elements (~20 mins)"
       },
       "bonus": false,
       "seeding_key": {
@@ -3303,7 +3313,7 @@
         "level_keys": [
           "VPL - CSD - M7 - U6L2 Level 2_2022"
         ],
-        "progression": "Unit 6: Lesson 2 - Designing Screens with Code (~20 mins)"
+        "progression": "Unit 6: Lesson 3 - Updating Screen Elements (~20 mins)"
       },
       "bonus": false,
       "seeding_key": {
@@ -3328,7 +3338,7 @@
         "level_keys": [
           "VPL - CSD - M7 - U6L2 Level 3_2022"
         ],
-        "progression": "Unit 6: Lesson 2 - Designing Screens with Code (~20 mins)"
+        "progression": "Unit 6: Lesson 3 - Updating Screen Elements (~20 mins)"
       },
       "bonus": false,
       "seeding_key": {
@@ -3353,7 +3363,7 @@
         "level_keys": [
           "VPL - CSD - M7 - U6L2 Level 4_2022"
         ],
-        "progression": "Unit 6: Lesson 2 - Designing Screens with Code (~20 mins)"
+        "progression": "Unit 6: Lesson 3 - Updating Screen Elements (~20 mins)"
       },
       "bonus": false,
       "seeding_key": {
@@ -3378,7 +3388,7 @@
         "level_keys": [
           "VPL - CSD - M7 U6L2 Level 5_2022"
         ],
-        "progression": "Unit 6: Lesson 2 - Designing Screens with Code (~20 mins)"
+        "progression": "Unit 6: Lesson 3 - Updating Screen Elements (~20 mins)"
       },
       "bonus": false,
       "seeding_key": {
@@ -3403,7 +3413,7 @@
         "level_keys": [
           "VPL - CSD Module  U6L2 Reflection_2022"
         ],
-        "progression": "Unit 6: Lesson 2 - Designing Screens with Code (~20 mins)"
+        "progression": "Unit 6: Lesson 3 - Updating Screen Elements (~20 mins)"
       },
       "bonus": false,
       "seeding_key": {
@@ -3428,7 +3438,7 @@
         "level_keys": [
           "VPL - CSD - Module 7 - CI - U6L3_2022"
         ],
-        "progression": "Unit 6: Lesson 3 - The Circuit Playground (~20 mins)"
+        "progression": "Unit 6: Lesson 2 - The Circuit Playground (~20 mins)"
       },
       "bonus": false,
       "seeding_key": {
@@ -3453,7 +3463,7 @@
         "level_keys": [
           "VPL - CSD - Module 7 - CI - U6L4_2022"
         ],
-        "progression": "Unit 6: Lesson 4 - Input Unplugged (~10 mins)"
+        "progression": "Unit 6: Lesson 4 - Board Events (~10 mins)"
       },
       "bonus": false,
       "seeding_key": {
@@ -3478,7 +3488,7 @@
         "level_keys": [
           "VPL - CSD - M7 U6L4 Level 2_2022"
         ],
-        "progression": "Unit 6: Lesson 4 - Input Unplugged (~10 mins)"
+        "progression": "Unit 6: Lesson 4 - Board Events (~10 mins)"
       },
       "bonus": false,
       "seeding_key": {
@@ -3503,7 +3513,7 @@
         "level_keys": [
           "VPL - CSD - M7 - U6L4 Level 3_2022"
         ],
-        "progression": "Unit 6: Lesson 4 - Input Unplugged (~10 mins)"
+        "progression": "Unit 6: Lesson 4 - Board Events (~10 mins)"
       },
       "bonus": false,
       "seeding_key": {
@@ -3528,7 +3538,7 @@
         "level_keys": [
           "VPL - CSD Module 8 U6L4 Reflection_2022"
         ],
-        "progression": "Unit 6: Lesson 4 - Input Unplugged (~10 mins)"
+        "progression": "Unit 6: Lesson 4 - Board Events (~10 mins)"
       },
       "bonus": false,
       "seeding_key": {
@@ -3653,7 +3663,7 @@
         "level_keys": [
           "VPL - CSD - Module 8 - U6L6_2022"
         ],
-        "progression": "Unit 6: Lesson 6 -  Getting Properties (~20 - 25 mins)"
+        "progression": "Unit 6: Lesson 8 -  Getting Screen Inputs (~20 - 25 mins)"
       },
       "bonus": false,
       "seeding_key": {
@@ -3678,7 +3688,7 @@
         "level_keys": [
           "VPL - CSD - Module 8 - U6L6 Lesson 2_2022"
         ],
-        "progression": "Unit 6: Lesson 6 -  Getting Properties (~20 - 25 mins)"
+        "progression": "Unit 6: Lesson 8 -  Getting Screen Inputs (~20 - 25 mins)"
       },
       "bonus": false,
       "seeding_key": {
@@ -3703,7 +3713,7 @@
         "level_keys": [
           "VPL - CSD - Module 8 - U6L6 Level 3_2022"
         ],
-        "progression": "Unit 6: Lesson 6 -  Getting Properties (~20 - 25 mins)"
+        "progression": "Unit 6: Lesson 8 -  Getting Screen Inputs (~20 - 25 mins)"
       },
       "bonus": false,
       "seeding_key": {
@@ -3728,7 +3738,7 @@
         "level_keys": [
           "VPL - CSD - Module 8 - U6L6 - Level 4_2022"
         ],
-        "progression": "Unit 6: Lesson 6 -  Getting Properties (~20 - 25 mins)"
+        "progression": "Unit 6: Lesson 8 -  Getting Screen Inputs (~20 - 25 mins)"
       },
       "bonus": false,
       "seeding_key": {
@@ -3753,7 +3763,7 @@
         "level_keys": [
           "VPL - CSD Module 8  U6L6 Reflection_2022"
         ],
-        "progression": "Unit 6: Lesson 6 -  Getting Properties (~20 - 25 mins)"
+        "progression": "Unit 6: Lesson 8 -  Getting Screen Inputs (~20 - 25 mins)"
       },
       "bonus": false,
       "seeding_key": {

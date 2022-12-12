@@ -55,7 +55,7 @@ gem 'rack-mini-profiler'
 
 group :development do
   gem 'annotate', '~> 3.1.1'
-  gem 'aws-google' # use Google Accounts for AWS access
+  gem 'aws-google', '~> 0.1.8' # use Google Accounts for AWS access
   gem 'web-console'
 end
 
@@ -246,6 +246,7 @@ group :development, :staging, :levelbuilder do
   gem 'rubocop', '1.28', require: false
   gem 'rubocop-performance', require: false
   gem 'rubocop-rails', require: false
+  gem 'rubocop-rails-accessibility', require: false
   gem 'scss_lint', require: false
 end
 

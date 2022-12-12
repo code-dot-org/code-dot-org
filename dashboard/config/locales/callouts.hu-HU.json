@@ -1207,7 +1207,7 @@
           "gradek_adventurer_loops2_1": "Ez a szám azt mondja el, hogy ezek közül a blokkok közül mennyit használhatsz a feladvány megoldásához."
         },
         "courseA_maze_ramp22022": {
-          "courseC_maze_programming2_1": "Ez itt a toolbox, de hívhatnánk szerszámosládának is. Extra blokkokat találhatsz itt, amikkel teljesítheted a feladatokat."
+          "courseC_maze_programming2_1": "Ez itt az eszköztár, de hívhatnánk akár szerszámosládának vagy toolboxnak is. Extra blokkokat találhatsz itt, amikkel teljesítheted a feladatokat."
         },
         "courseA_maze_seq12022": {
           "courseA_maze_seq1_1": "Kattints a villanykörtére, ha segítségre van szükséged!"
@@ -1368,6 +1368,15 @@
         },
         "helloworld_food_sounds_space-2022": {
           "hello_world_new": "Új blokk!"
+        },
+        "courseF_groups_size_-2022-2": {
+          "mini-toolbox-blue-button": "Kattints a kék gombra a kinyitáshoz és a bezáráshoz."
+        },
+        "coursea_maze_ramp12022": {
+          "grade2_CaringForNewPet_0_1": "Miután a blokkokat egymáshoz csatlakoztattad, nyomj \"Futtatás\" gombra, hogy elinduljon a program!"
+        },
+        "coursea_maze_ramp1_2021": {
+          "grade2_CaringForNewPet_0_1": "Miután a blokkokat egymáshoz csatlakoztattad, nyomj \"Futtatás\" gombra, hogy elinduljon a program!"
         }
       }
     }
