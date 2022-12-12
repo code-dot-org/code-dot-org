@@ -7504,3 +7504,11 @@ pl:
             Profesjonalnego rozwoju zawodowego we własnym tempie](<>). Moduł został
             zaprojektowany na 2 godziny. Nie zakłada się wcześniejszego doświadczenia
             z kodowaniem lub sztuczną inteligencją."
+        allthevalidation:
+          lessons:
+            lesson-1:
+              name: Walidacja Sprite Lab
+          name: allthevalidation
+          title: Cała walidacja
+          description: Jest to miejsce do tworzenia poziomów, aby udokumentować i
+            ujednolicić test walidacji Sprite Lab
