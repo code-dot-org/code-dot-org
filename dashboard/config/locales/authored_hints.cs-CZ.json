@@ -2336,7 +2336,7 @@
         "courseC_starWars_loops8": {
           "course_starWars_loops8_a": "Tahle úloha je lepší řešit po částech. Máš čas. Nemusíš to vyřešit na první pokus.",
           "course_starWars_loops8_b": "První část jsou podobné schody jako v předchozím problému. Jak se to řešilo před tím?",
-          "course_starWars_loops8_c": "Podívej se na plánek.\n\n[][0]"
+          "course_starWars_loops8_c": "Podívej se na plánek.\n\n![](https://images.code.org/7d696dd3b1e6984a1d6041f366d5c96b-image-1510198804955.37.04.png)"
         },
         "courseC_starWars_loops8_2018": {
           "course_starWars_loops8_a": "Tahle úloha je lepší řešit po částech. Máš čas. Nemusíš to vyřešit na první pokus.",
@@ -2528,7 +2528,7 @@
           "courseD_artist_binary8_c": "Neboj se dělat chyby! Zkus napsat kód a spusť ho, abys viděl(a), co se stane, i když jsi úlohu ještě nerozluštil(a)."
         },
         "courseD_bee_conditionals2": {
-          "courseD_bee_conditionals2_a": "Někdy tam květina bude a někdy nebude. Pokud chceš spustit svůj kód v obou případech, nezapomeň použít `když` příkaz.\n",
+          "courseD_bee_conditionals2_a": "Někdy tam květina bude a někdy nebude. Pokud chceš spustit svůj kód v obou případech, nezapomeň použít `když` příkaz.",
           "courseD_bee_conditionals2_c": "Nemusíš kontrolovat přítomnost pláství, pod mrakem může být jen květ nebo prázdný prostor."
         },
         "courseD_bee_conditionals2_2018": {
@@ -3179,7 +3179,7 @@
           "courseE_artist_functions1_b": "Je v pořádku, pokud se čáry překrývají."
         },
         "courseE_artist_functions2": {
-          "courseD_artist_functions2_a": "Váš program by měl:\n- použít funkci\n- posunout se vpřed o 100 + 75 pixelů\n- použít funkci"
+          "courseD_artist_functions2_a": "Váš program by měl:\n\n-   použít funkci\n-   posunout se vpřed o 100 + 75 pixelů\n-   použít funkci"
         },
         "courseE_artist_functions2_copy": {
           "courseD_artist_functions2_a": "Váš program by měl:\n- použít funkci\n- posunout se vpřed o 100 + 75 pixelů\n- použít funkci"
@@ -3904,7 +3904,7 @@
         },
         "courseC_maze_programming2_2021": {
           "courseC_maze_programming2_b": "Ujisti se, že všechny bloky byly kompletně spojeny k sobě, a pak znovu klikni na tlačítko \"Spustit\".",
-          "courseC_maze_programming2_a": "Abyste mohli použít blok <xml><block type=\"maze_moveForward\"/></xml>, vytáhněte jej z nástrojové krabičky a zacvakněte jej do bloku <xml><block type=\"when_run\"/></xml>."
+          "courseC_maze_programming2_a": "Aby se dal použít blok <xml><block type=\"maze_moveForward\"/></xml>, přetáhni ho ze sady nástrojů a připni k bloku <xml><block type=\"when_run\"/></xml>."
         },
         "courseC_maze_programming3_2021": {
           "courseC_maze_programming3_a": "Zkus nejdříve spustit kód a uvidíš, kde je chyba.",
@@ -5159,18 +5159,18 @@
           "courseC_PlayLab_events_challenge_c": "Můžeš taky zkusit změnit rychlost ostatních postav, když chceš, aby hra byla lehčí, nebo naopak náročnější.\n\n<xml>  <block type=\"studio_setSpriteSpeed\">\n    <title name=\"SPRITE\">0</title>\n    <title name=\"VALUE\">Studio.SpriteSpeed.FAST</title>\n  </block></xml>"
         },
         "courseC_artist_prog_challenge1_2021": {
-          "courseC_artist_prog_challenge1_a": "Toto můžete nakreslit jako obdélník s čárou uprostřed nebo jako jako dva různé čtverce!"
+          "courseC_artist_prog_challenge1_a": "Tohle můžeš nakreslit jako obdélník s čárou uprostřed nebo jako dva různé čtverce."
         },
         "courseC_artist_prog_challenge2a_2021": {
-          "courseC_artist_prog_challenge2_a": "Po nakreslení první čáry se otočte doleva, načež nakreslete druhou čáru.",
+          "courseC_artist_prog_challenge2_a": "Po nakreslení první čáry se otoč doleva a pak nakresli druhou čáru.",
           "courseC_artist_prog_challenge2_b": "Po nakreslení druhé čáry se otoč doprava a pak nakresli třetí čáru."
         },
         "courseC_collector_prog_challenge1_2021": {
-          "courseC_collector_prog_challenge1_a": "Abyste nasbírali další poklady navíc, můžete blok `sebrat` použít mnohokrát."
+          "courseC_collector_prog_challenge1_a": "Jestli chceš posbírat víc pokladu, můžeš použít velký počet bloků „sbírat“."
         },
         "courseC_collector_prog_challenge2_2021": {
-          "courseC_collector_prog_challenge1_a": "V každém prostoru můžete použít více než jen jeden blok `sbírat`.",
-          "courseC_collector_prog_challenge1_b": "Ztratili jste se?  Zkuste hlavolam vyřešit touto cestou!"
+          "courseC_collector_prog_challenge1_a": "Na každém políčku můžeš použít víc bloků „sbírat“.",
+          "courseC_collector_prog_challenge1_b": "Nevíš, kudy dál? Zkus k vyřešení úlohy použít tuhle cestu."
         },
         "courseC_harvester_loops_challenge2_2021": {
           "courseC_harvester_loops_challenge2_a": "Jeden ze způsobů řešení je postup cikcak. Jiný připomíná spirálu. Takovéhle úlohy je možné řešit mnoha různými způsoby. Jen nepolevuj!",
@@ -5179,23 +5179,23 @@
           "courseC_harvester_loops_challenge2_d": "Spirálový vzor se dá naprogramovat s pouhými 18 bloky.\n\n![](<https://images.code.org/0bfc0a0ed6783fae908368a6e6d12c02-image-1493501358990.18.52 PM.png>)"
         },
         "courseC_maze_debugging_challenge1_2021": {
-          "courseC_maze_debugging_challenge1_a": "Doleva nebo doprava? Je to na Vás!",
-          "courseC_maze_debugging_challenge1_b": "Scratova cesta má tvar obdélníku! Pokaždé se musí otočit stejně.",
-          "courseC_maze_debugging_challenge1_c": "Jestliže se Vám to nebude dařit, vždycky můžete začít znovu a najít novou cestu!"
+          "courseC_maze_debugging_challenge1_a": "Doleva, nebo doprava? Je to na tobě!",
+          "courseC_maze_debugging_challenge1_b": "Scratova cesta má tvar obdélníku. Pokaždé se musí otočit stejně.",
+          "courseC_maze_debugging_challenge1_c": "Pokud se někde zasekneš, vždycky můžeš začít znova od začátku a zkusit jinou cestu."
         },
         "courseC_maze_debugging_challenge2_2021": {
-          "courseC_maze_debugging_challenge2_b": "Jestliže se Vám to stále nedaří, zkuste kód ladit. Kde je něco špatně?",
-          "courseC_maze_debugging_challenge2_c": "Jsou dvě různé cesty, po kterých můžete postupovat pouhými pohyby dopředu a čtyřnásobným otočením. Jestliže najdete jeden způsob, jak použít cyklus, může jich být ještě víc!\n\n![](<https://images.code.org/8a4665671cda35fea1f629a5bcc39e26-image-1493502743154.48.05 PM.png>)"
+          "courseC_maze_debugging_challenge2_b": "Pokud se někde zasekneš, zkus kód ladit. Kde přesně je chyba?",
+          "courseC_maze_debugging_challenge2_c": "Jsou dvě různé cesty, po kterých můžeš jít jen pomocí posouvání dopředu a čtyř otočení. Pokud najdeš jeden způsob, jak použít cyklus, může jich být i víc.\n\n![](<https://images.code.org/8a4665671cda35fea1f629a5bcc39e26-image-1493502743154.48.05 PM.png>)"
         },
         "courseC_maze_loops_challenge1a_2021": {
           "courseC_maze_loops_challenge1_a": "Uvažuj o téhle cestě jako o dvou různých úsecích. Každý z nich má vzor, který můžeš opakovat.",
           "courseC_maze_loops_challenge1_b": "Vzpomeneš si, jak pomocí cyklů zopakovat schodišťový vzor?"
         },
         "courseC_maze_programming_challenge1_2021": {
-          "courseC_maze_programming_challenge1_a": "Je spousta způsobů, jak můžete prasátko pořídit. Použijte svůj prst k nalezení cesty a poté ji naprogramujte!"
+          "courseC_maze_programming_challenge1_a": "Je mnoho způsobů, jak se dostat k prasátku. Nejdřív cestu najdi prstem a pak ji naprogramuj."
         },
         "courseC_maze_programming_challenge2_2021": {
-          "courseC_maze_programming_challenge2_a": "_\"Jestliže mě budete posílat pozadu, dejte si pozor, abych dobře zatáčel!\"_",
+          "courseC_maze_programming_challenge2_a": "_\"Couvání může být náročné na orientaci, dávej pozor, ať správně odbočuji!\"_",
           "courseC_maze_programming_challenge2_b": "Nejkratší řešení používá jen 5 bloků, ale využívá tento blok:\n\n<xml><block type=\"controls_repeat_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>"
         },
         "courseD_artist_1_2021": {
@@ -5737,7 +5737,7 @@
           "iceage_hello2_a": "K vyřešení téhle úlohy bude potřeba, aby Sid něco řekl – k tomu slouží blok „postava 1 říká“. Taky Manny by měl něco říct – pomocí bloku „postava 2 říká“. "
         },
         "iceage_move_events": {
-          "iceage_move_events_a": "K vyřešení téhle úlohy je potřeba, aby každá událost „když ___ šipka“ měla připojený jiný příkaz „posuň postavu 1“. "
+          "iceage_move_events_a": "K vyřešení téhle úlohy je potřeba, aby každá událost „když \\_\\_\\_ šipka“ měla připojený jiný příkaz „posuň postavu 1“. "
         },
         "iceage_move_events_dani": {
           "iceage_move_events_a": "K vyřešení téhle úlohy je potřeba, aby každá událost „když \\_\\_\\_ šipka“ měla připojený jiný příkaz „posuň postavu 1“. "
@@ -5754,7 +5754,7 @@
         },
         "iceage_sound_and_points": {
           "iceage_sound_and_points_a": "Pod událost „když se postava 1 dotkne postavy 2“ je potřeba připojit dva odpovídající bloky.",
-          "iceage_sound_and_points_b": "K dokončení téhle úrovně je potřeba použít bloky „připsat bod“ a „přehrát \\_\\_\\_\\_ zvuk\\“."
+          "iceage_sound_and_points_b": "K dokončení téhle úrovně je potřeba použít bloky „připsat bod“ a „přehrát \\_\\_\\_\\_ zvuk\\\\“."
         },
         "iceage_sound_and_points_dani": {
           "iceage_sound_and_points_a": "Pod událost „když se postava 1 dotkne postavy 2“ je potřeba připojit dva odpovídající bloky.",
@@ -11208,7 +11208,7 @@
           "courseF_bee_variables_4_2021_1": "Namísto přičtení jedničky k proměnné přičtěte pokaždé dvojku."
         },
         "courseF_events_choice_pufferfish_-2022-2": {
-          "changeProp": "V tomto bloku budete potřebovat také:\n\n<xml><block type=\"gamelab_changePropBy\">\n      <title name=\"PROPERTY\">„měřítko“</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">„creature_18_1“</title>\n        </block>\n      </value>\n      <value name=\"VAL\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">5</title>\n        </block>\n      </value>\n    </block></xml>"
+          "changeProp": "Budete potřebovat také tento blok:\n\n<xml><block type=\"gamelab_changePropBy\">\n      <title name=\"PROPERTY\">\"scale\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"creature_18_1\"</title>\n        </block>\n      </value>\n      <value name=\"VAL\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">5</title>\n        </block>\n      </value>\n    </block></xml>"
         },
         "courseF_events_key_-2022-2": {
           "changePropBlock": "Budete potřebovat také tento blok:\n\n<xml><block type=\"gamelab_changePropBy\">\n      <title name=\"PROPERTY\">\"scale\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"creature_10_1\"</title>\n        </block>\n      </value>\n      <value name=\"VAL\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">???</title>\n        </block>\n      </value>\n    </block>\n    </xml>"
@@ -11217,7 +11217,7 @@
           "behavior_list": "Zkuste používat taková chování jako „pohyb na východ a zacyklení“, „otáčení doprava“, a „potulování se“."
         },
         "courseF_text_choice_multiprompt_-2022-2": {
-          "when_answered_var": "Zkuste změnit štítek proměnné v bloku `when answered` (`když je zodpovězeno`). Protože výzev je více, použijte štítek *poslední* výzvy, která bude zodpovězena.\n\n<xml><block type=\"gamelab_whenPromptAnswered\">\n      <value name=\"VAR\">\n        <block type=\"variables_get\" can_disconnect_from_parent=\"false\">\n          <title name=\"VAR\">???</title>\n        </block>\n      </value>\n    </block></xml>"
+          "when_answered_var": "Zkuste změnit štítek proměnné v bloku `when answered` (`při zodpovězení`). Protože výzev je více, použijte výzvu pro _poslední_ výzvu, která bude zodpovězena.\n\n<xml><block type=\"gamelab_whenPromptAnswered\">\n      <value name=\"VAR\">\n        <block type=\"variables_get\" can_disconnect_from_parent=\"false\">\n          <title name=\"VAR\">???</title>\n        </block>\n      </value>\n    </block></xml>"
         },
         "courseF_text_concat_-2022-2": {
           "prompt_example": "<xml>\n  <block type=\"when_run\" deletable=\"false\">\n    <next>\n      <block type=\"gamelab_setPrompt\">\n        <value name=\"QUESTION\">\n          <block type=\"text\">\n            <title name=\"TEXT\">What is your name?</title>\n          </block>\n        </value>\n        <value name=\"VAR\">\n          <block type=\"variables_get\" can_disconnect_from_parent=\"false\">\n            <title name=\"VAR\">name</title>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block>\n  <block type=\"gamelab_whenPromptAnswered\">\n    <value name=\"VAR\">\n      <block type=\"variables_get\" can_disconnect_from_parent=\"false\">\n        <title name=\"VAR\">name</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_printText\">\n        <value name=\"TEXT\">\n          <block type=\"gamelab_textJoin\">\n            <title name=\"TEXT1\">Hello, </title>\n            <value name=\"TEXT2\">\n              <block type=\"gamelab_textVariableJoin\">\n                <title name=\"VAR\">name</title>\n                <value name=\"TEXT2\">\n                  <block type=\"gamelab_textJoin\">\n                    <title name=\"TEXT1\">!</title>\n                  </block>\n                </value>\n              </block>\n            </value>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block>\n</xml>"

@@ -3278,24 +3278,23 @@ cs-CZ:
             klikneš na "Spustit"?
       courseC_multi_maze_debugging8_predict1_2021:
         answers:
-        - text: Scrat dosáhne na žalud. V kódu nejsou žádné chyby.
-          feedback: Nesprávně. Za prvé, Scrat se otočí nesprávným směrem, pak se Scrat
-            neposune dopředu dostatečněkrát na to, aby dosáhl na žalud.
+        - text: Scrat se dostane k žaludu. V kódu nejsou žádné chyby.
+          feedback: Špatně. Nejdřív se Scrat otočí nesprávným směrem a pak se neposune
+            dopředu tolikrát, aby dosáhl na žalud.
         - text: Scrat nedosáhne na žalud, protože se otočí nesprávným směrem.
           correct: true
           feedback: Správně. Nejdřív se Scrat otočí nesprávným směrem a pak se neposune
             dopředu tolikrát, aby došel až k žaludu.
-        - text: Scrat nedosáhne na žalud, protože není dostatek bloků `posuv dopředu`.
+        - text: Scrat nedojde k žaludu, protože v kódu není dost bloků „posuň se vpřed“.
           correct: true
           feedback: Správně. Nejdřív se Scrat otočí nesprávným směrem a pak se neposune
             dopředu tolikrát, aby došel až k žaludu.
         - text: Scrat se nepohne z prvního bloku.
-          feedback: V tomto kódu jsou dvě chyby. Za prvé se Scrat otočí nesprávným
-            směrem a poté se Scrat neposune dopředu dostatečněkrát na to, aby dosáhl
-            žaludu.
+          feedback: V tomhle kódu jsou dvě chyby. Nejdřív se Scrat otočí nesprávným
+            směrem a pak se neposune dopředu tolikrát, aby došel až k žaludu.
         questions:
-        - text: Vyhledejte chyby v tomto kódu. Dosáhne Scrat na žalud, nebo je nějaký
-            problém?
+        - text: Najdi v tomhle kódu chyby. Dojde Scrat až k žaludu, nebo je v kódu
+            nějaký problém?
       courseC_multi_maze_programming8_predict1_2021:
         answers:
         - text: Ptáček skončí jeden krok od prasátka.

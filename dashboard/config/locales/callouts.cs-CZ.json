@@ -1020,24 +1020,24 @@
           "courseC_PlayLab_events_challenge1_1": "Tenhle blok ti umožní přesouvat postavy do různých částí herního prostoru."
         },
         "courseC_collector_prog1_2021": {
-          "courseC_collector_prog1_1": "Vidíte v nástrojové krabičce nějaké nové bloky? Nemějte starosti, v další lekci Vám ukážeme, jak je používat."
+          "courseC_collector_prog1_1": "Vidíš v sadě nástrojů nějaké nové bloky? Žádný strach, v další lekci se dozvíš, jak je používat."
         },
         "courseC_collector_prog7_2021": {
-          "courseC_collector_prog7_1": "Jestliže potřebujete nějaké bloky, můžete je nabrat z nástrojové krabičky!"
+          "courseC_collector_prog7_1": "Pokud potřebuješ, můžeš si z nástrojové sady vzít víc bloků."
         },
         "courseC_harvester_loops1_2021": {
           "courseC_harvester_loops1_callout1": "Číslice 4 na dýni značí, že jsou k dispozici 4 dýně, které můžeš posbírat."
         },
         "courseC_maze_programming3_2021": {
-          "courseC_maze_programming3_2": "Do nástrojové krabičky můžete přetahovat další bloky, abyste je mohli vyhodit.",
-          "courseC_maze_programming3_3": "Tyto bloky jsou kamenné a nelze je zahodit."
+          "courseC_maze_programming3_2": "Nepotřebných bloků se můžeš zbavit tak,  že je přetáhneš do nástrojové sady.",
+          "courseC_maze_programming3_3": "Tyto bloky jsou z kamene a nelze je zahodit."
         },
         "courseC_maze_programming4_2021": {
-          "courseC_maze_programming4_1": "Toto je Váš limit bloků. Sděluje Vám, kolik těchto bloků Vám zbývá k použití."
+          "courseC_maze_programming4_1": "Tohle je tvůj limit bloků. Sděluje ti, kolik těchto bloků ti ještě zbývá k použití."
         },
         "courseC_maze_programming7_2021": {
-          "courseC_maze_programming7_1": "Toto je Váš první výzvový hlavolam! Ty jsou míněny tak, aby byly obtížné, a může být potřeba zkoušet je několikrát.",
-          "courseC_maze_programming7_2": "Tyto bloky jsou vyrobeny z kamene a nelze je vyhodit."
+          "courseC_maze_programming7_1": "Tohle je tvoje první úloha s výzvou. Je záměrně náročná a možná ji vyřešíš až na několikátý pokus.",
+          "courseC_maze_programming7_2": "Tyto bloky jsou vyrobeny z kamene a nelze je zahodit."
         },
         "courseD_artist_nestedLoops1a_2021": {
           "courseD_artist_nestedLoops1a_1": "K vyřešení téhle úlohy není potřeba používat barvy. Pokud ale barvy chceš, můžeš je nastavit jednoduše tímto blokem „náhodná barva“."
