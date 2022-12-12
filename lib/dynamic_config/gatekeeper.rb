@@ -68,7 +68,7 @@ class GatekeeperBase < DynamicConfigBase
     key = where_key(where)
     if rule_map.key? key
       rule_map.delete key
-      @datastore_cache.set(feature, rule_map)
+      @datastore_cache.set(feature, where: rule_map)
       return true
     end
     false
