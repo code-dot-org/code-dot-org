@@ -585,6 +585,7 @@ describe('entry tests', () => {
     'lessons/student_lesson_plan':
       './src/sites/studio/pages/lessons/student_lesson_plan.js',
     'musiclab/index': './src/sites/studio/pages/musiclab/index.js',
+    'musiclab/menu': './src/sites/studio/pages/musiclab/menu.js',
     'print_certificates/batch':
       './src/sites/studio/pages/print_certificates/batch.js',
     'programming_classes/show':
