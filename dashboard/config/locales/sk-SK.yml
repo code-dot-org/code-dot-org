@@ -426,6 +426,7 @@ sk:
       help_us: Pomôžte nám
       teach: Vyučujte
       about: O nás
+      legal: Súkromie a právne informácie
       legal_privacy: Zásady ochrany súkromia
       legal_tos: Podmienky používania služby
     user:
@@ -801,6 +802,8 @@ sk:
       title: Tanečná Párty
     hello-world:
       title: Ahoj Svet
+      body: Vyberte si zo štyroch zábavných tém na programovanie interaktívnych postáv
+        vo svete, ktorý vytvoríte.
     poem-art:
       title: Básnické umenie
     hoc:

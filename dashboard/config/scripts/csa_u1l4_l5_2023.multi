@@ -16,3 +16,7 @@ Which line(s) of code should replace `/* missing code*/` to produce the final st
 
 ![](https://images.code.org/76e75d1340f9ea36f6e364828228f831-image-1668530033670.png)
 MARKDOWN
+
+teacher_markdown <<MARKDOWN
+The `Painter` object needs to turn right after moving three spaces. To turn right, the `Painter` object must turn left three times. The `Painter` class does not have a `turnRight()` method.
+MARKDOWN

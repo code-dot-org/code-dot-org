@@ -759,7 +759,7 @@
         },
         "code/poem-art/unversioned": {
           "word": "Kod",
-          "definition": "(v) kompüter üçün təlimatlar yazmaq."
+          "definition": "(v) kompüter üçün təlimatlar yazmaq.\n\n"
         },
         "event/poem-art/unversioned": {
           "word": "Hadisə",
@@ -767,15 +767,15 @@
         },
         "program/poem-art/unversioned": {
           "word": "Proqram",
-          "definition": "Bir maşın tərəfindən idarə edilə bilən bir şeyə kodlaşdırılmış bir sıra addımlar."
+          "definition": "Bir maşın tərəfindən idarə edilə bilən bir şeyə kodlaşdırılmış bir sıra addımlar.\n"
         },
         "mood/poem-art/unversioned": {
           "word": "əhval",
-          "definition": "bir hissin, atmosferin və ya duyğunun sənətdə və ya yazıda ifadəsi."
+          "definition": "bir hissin, atmosferin və ya duyğunun sənətdə və ya yazıda ifadəsi.\n"
         },
         "line/poem-art/unversioned": {
           "word": "Xətt",
-          "definition": "(şeir yaradıcılığı) - cərgədə düzülmüş şeirin sağ kənarında bitən bölməsi."
+          "definition": "(şeir yaradıcılığı) - cərgədə düzülmüş şeirin sağ kənarında bitən bölməsi.\n"
         },
         "sprite/coursef/2021": {
           "word": "Sprayt",

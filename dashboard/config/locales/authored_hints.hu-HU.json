@@ -1830,7 +1830,7 @@
           "courseD_artist_functions2_a": "A programodnak kell:\n\n-   függvényt használni\n-   előrehaladni 100 + 75 pixelt\n-   függvényt használni"
         },
         "courseE_artist_functions2_copy": {
-          "courseD_artist_functions2_a": "A programodnak kell:\n\n-   függvényt használni\n-   előrehaladni 100 + 75 pixelt\n-   függvényt használni"
+          "courseD_artist_functions2_a": "A programodnak kell:\n- függvényt használni\n- előrehaladni 100 + 75 pixelt\n- függvényt használni"
         },
         "courseE_bee_functions7": {
           "courseE_bee_functions7_b": "Ne feledd, hogy a kódod a zöld blokkon belül építheted.\n\n![](https://images.code.org/8fe1fae5caf4ede3a9c9bd9f26940cde-image-1467996837459.gif)",
@@ -2839,7 +2839,7 @@
         "courseC_starWars_loops8_copy": {
           "course_starWars_loops8_a": "Próbálj kis részletekben gondolkodni! Ne kapkodj! Nem muszáj elsőre megoldanod a feladatot.",
           "course_starWars_loops8_b": "Gondolj a feladat első felére úgy, mint egy lépcsős feladatra. Hogyan csináltad meg korábban az ilyen feladatot?",
-          "course_starWars_loops8_c": "Nézz rá erre az útvonalra!\n\n![](https://images.code.org/7d696dd3b1e6984a1d6041f366d5c96b-image-1510198804955.37.04.png)"
+          "course_starWars_loops8_c": "Nézz rá erre az útvonalra!\n\n[][0]"
         },
         "courseC_starWars_loops9": {
           "course_starWars_loops9_b": "Az `ismétlés` ciklusba több blokkot is belerakhatsz.",
@@ -3246,10 +3246,12 @@
           "courseA_harvester_loops5_a": "Ha elakadnál, próbáld meg 2 részben megoldani a feladványt, az első rész a sarokig tart, a második a saroknál kezdődik."
         },
         "courseA_harvester_seq2_2021": {
-          "courseA_harvester_seq2_b": "Próbáld leírni a lépéseket papírra, hogy megtaláld a megoldást!"
+          "courseA_harvester_seq2_b": "Próbáld leírni a lépéseket papírra, hogy megtaláld a megoldást!",
+          "courseA_harvester_seq2_a": "Ne felejtsd el használni a <xml><block type=\"harvester_corn\"/></xml> blookot, hogy felszedd a kukoricát!"
         },
         "courseA_maze_seq10_2021": {
-          "courseA_maze_seq10_a": "Ha problémád lenne, először próbáld meg leírni a lépéseket egy darab papírra."
+          "courseA_maze_seq10_a": "Ha problémád lenne, először próbáld meg leírni a lépéseket egy darab papírra.",
+          "courseA_maze_seq10_b": "3 különböző irányba is mozognod kell ennek a feladványnak a megoldásához!"
         },
         "courseA_maze_seq10_dani": {
           "courseA_maze_seq10_a": "Ha problémád lenne, először próbáld meg leírni a lépéseket egy darab papírra.",
@@ -3257,14 +3259,16 @@
         },
         "courseA_maze_seq13_2021": {
           "courseA_maze_seq13_a": "Ha nem tiszta az út előtted, használd az ujjaidat, hogy megszámold, hány lépésből juthat el a madár a malacig.",
-          "courseA_maze_seq13_b": "Ne félj attól, hogy hibázol! Próbálj blokkokat hozzáadni, és futtasd a kódot, hogy lásd, mi történik."
+          "courseA_maze_seq13_b": "Ne félj attól, hogy hibázol! Próbálj blokkokat hozzáadni, és futtasd a kódot, hogy lásd, mi történik.",
+          "courseA_maze_seq13_c": "Ezek a <xml><block type=\"maze_moveNorth\"/></xml>\n\n<xml><block type=\"maze_moveEast\"/></xml> \n\nblokkok segíteni fognak, hogy közelebb kerül a malachoz."
         },
         "courseA_maze_seq1_2021": {
           "courseA_maze_seq1_a": "Ha nem mozdul a madár, ellenőrizd, hogy minden blokkot a helyére csatoltál-e a <xml>\n  <block type=\"when_run\"/>\n</xml> alatt",
           "courseA_maze_seq1_b": "A madárnak 3 lépést kell tennie nyugat felé, hogy elkapja a malacot. Használd ezt a blokkot:\n\n<xml><block type=\"maze_moveWest\"/></xml>"
         },
         "courseA_maze_seq5_2021": {
-          "1": "Próbáld leírni a lépéseket papírra, hogy megtaláld a megoldást!"
+          "1": "Próbáld leírni a lépéseket papírra, hogy megtaláld a megoldást!",
+          "2": "Ezt a blokkot kell használnod:\n\n<xml><block type=\"maze_moveSouth\"/></xml>"
         },
         "courseA_maze_seq5_dani": {
           "courseA_maze_seq5_a": "Próbáld leírni a lépéseket papírra, hogy megtaláld a megoldást!",
@@ -3859,7 +3863,7 @@
           "hello_world_click": "Csatlakoztass egy „Mondd” blokkot egy „Amikor rákattint” eseményblokk alá:\n\n<xml><block type=\"gamelab_spriteClicked\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"cuteanimals_seahorse\"</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_spriteSay\">\n        <title name=\"SPEECH\">Hello, ocean!</title>\n        <value name=\"SPRITE\">\n          <block type=\"gamelab_allSpritesWithAnimation\">\n            <title name=\"ANIMATION\">\"cuteanimals_seahorse\"</title>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block></xml>"
         },
         "helloworld_animals_location": {
-          "location_pin_hint": "Egy sprite helyének megváltoztatásához kattints a helyblokkon lévő tűre, majd kattints oda, ahová szeretné, hogy kerüljön."
+          "location_pin_hint": "Egy sprite helyének megváltoztatásához kattints a helyblokkon lévő tűre, majd kattints oda, ahová szeretné, hogy kerüljön.\n\n![](https://images.code.org/e3267d2b50f754befc63744be14287ac-image-1633360873408.gif)"
         },
         "helloworld_animals_multi": {
           "cat_xml": "Ügyelj arra, hogy a jelmezek minden blokkban azonosak legyenek."
@@ -3887,7 +3891,7 @@
           "hello_world_click": "Csatlakoztass egy „Mondd” blokkot egy „Amikor rákattint” eseményblokk alá:\n\n<xml><block type=\"gamelab_spriteClicked\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"emoji_06_1\"</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_spriteSay\">\n        <title name=\"SPEECH\">Look at that!</title>\n        <value name=\"SPRITE\">\n          <block type=\"gamelab_allSpritesWithAnimation\">\n            <title name=\"ANIMATION\">\"emoji_06_1\"</title>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block></xml>"
         },
         "helloworld_emoji_location": {
-          "location_pin_hint": "Egy sprite helyének megváltoztatásához kattints a helyblokkon lévő tűre, majd kattints oda, ahová szeretné, hogy kerüljön."
+          "location_pin_hint": "Egy sprite helyének megváltoztatásához kattints a helyblokkon lévő tűre, majd kattints oda, ahová szeretné, hogy kerüljön.\n\n![](https://images.code.org/e3267d2b50f754befc63744be14287ac-image-1633360873408.gif)"
         },
         "helloworld_emoji_multi": {
           "storyboard_costume": "Ellenőrizd, hogy mindegyik sprite ugyanazt a jelmezt viseli.\n<xml><block type=\"gamelab_spriteSay\">\n      <title name=\"SPEECH\">Look at me!</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"emoji_14_1\"</title>\n        </block>\n      </value>\n    </block></xml>"
@@ -3915,7 +3919,7 @@
           "hello_world_click": "Csatlakoztass egy „Mondd” blokkot egy „Amikor rákattint” eseményblokk alá:\n\n<xml><block type=\"gamelab_spriteClicked\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"face_burger_1\"</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_spriteSay\">\n        <title name=\"SPEECH\">Hello, world!</title>\n        <value name=\"SPRITE\">\n          <block type=\"gamelab_allSpritesWithAnimation\">\n            <title name=\"ANIMATION\">\"face_burger_1\"</title>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block></xml>"
         },
         "helloworld_food_location": {
-          "location_pin_hint": "Egy sprite helyének megváltoztatásához kattints a helyblokkon lévő tűre, majd kattints oda, ahová szeretné, hogy kerüljön."
+          "location_pin_hint": "Egy sprite helyének megváltoztatásához kattints a helyblokkon lévő tűre, majd kattints oda, ahová szeretné, hogy kerüljön.\n\n![](https://images.code.org/e3267d2b50f754befc63744be14287ac-image-1633360873408.gif)"
         },
         "helloworld_food_multi": {
           "storyboard_costume": "Ellenőrizd, hogy mindegyik sprite ugyanazt a jelmezt viseli.\n<xml><block type=\"gamelab_spriteSay\">\n      <title name=\"SPEECH\">Hello, broccoli!</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"face_carrot_1\"</title>\n        </block>\n      </value>\n    </block></xml>"
@@ -3943,7 +3947,7 @@
           "hello_world_click": "Csatlakoztass egy „Mondd” blokkot egy „Amikor rákattint” eseményblokk alá:\n\n<xml><block type=\"gamelab_spriteClicked\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"retro_powerup_heart\"</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_spriteSay\">\n        <title name=\"SPEECH\">POWERUP!</title>\n        <value name=\"SPRITE\">\n          <block type=\"gamelab_allSpritesWithAnimation\">\n            <title name=\"ANIMATION\">\"retro_powerup_heart\"</title>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block></xml>"
         },
         "helloworld_retro_location": {
-          "location_pin_hint": "Egy sprite helyének megváltoztatásához kattints a helyblokkon lévő tűre, majd kattints oda, ahová szeretné, hogy kerüljön."
+          "location_pin_hint": "Egy sprite helyének megváltoztatásához kattints a helyblokkon lévő tűre, majd kattints oda, ahová szeretné, hogy kerüljön.\n\n![](https://images.code.org/e3267d2b50f754befc63744be14287ac-image-1633360873408.gif)"
         },
         "helloworld_retro_multi": {
           "storyboard_costume": "Ellenőrizd, hogy mindegyik sprite ugyanazt a jelmezt viseli.\n<xml><block type=\"gamelab_spriteSay\">\n      <title name=\"SPEECH\">Hello!</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"retrocreature_16\"</title>\n        </block>\n      </value>\n    </block></xml>"
@@ -3956,8 +3960,8 @@
           "hw_retro_changePropBy": "Ha egy sprite méretét újra és újra meg akarod változtatni (eseményekkel), használd ezt a blokkot:\n\n<xml><block type=\"gamelab_changePropBy\">\n      <title name=\"PROPERTY\">\"scale\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"retrocreature_11_1\"</title>\n        </block>\n      </value>\n      <value name=\"VAL\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">10</title>\n        </block>\n      </value>\n    </block></xml>"
         },
         "poetry_hoc_addSprites": {
-          "location_hint": "Minden sprite-hoz tartozik egy **hely**. A helyet úgy állíthatod be, hogy rákattintasz az ezen a blokkon lévő tűre: \n\n<xml><block type=\"Poetry_makeNewSpriteAnon\"><title name=\"ANIMATION_NAME\">\"twinkling\\_star\"</title><title name=\"LOCATION\">{\"x\":200,\"y\":225}</title></block></xml>\n\n-   Kattints a ![](<https://images.code.org/e9531e292b034feef0f176d4f97ac47f-image-1634932451913.54.05 PM.png>) tűre a helyblokkon, majd válassz a sprite-odnak egy új pozíciót a képernyőn.\n-   Amikor a kód elkészült, nyomd meg a „Futtatás” gombot.",
-          "remove_hint": "Egy sprite-ot egy lehet távolítani egy bizonyos sorszámnál. A helyére tehetsz egy új sprite-ot: \n\n<xml><block type=\"Poetry_whenLineShows\"><title name=\"N\">3</title><next><block type=\"Poetry_destroy\"><title name=\"ANIMATION_NAME\">\"twinkling_star\"</title><next>\\<block type=\"Poetry_makeNewSpriteAnon\"><title name=\"ANIMATION_NAME\">\"night\\_moon\"</title><title name=\"LOCATION\">{\"x\":200,\"y\":225}</title></block></next></block></next></block></xml>"
+          "location_hint": "Minden sprite-hoz tartozik egy **hely**. A helyet úgy állíthatod be, hogy rákattintasz az ezen a blokkon lévő tűre: \n\n<xml><block type=\"Poetry_makeNewSpriteAnon\"><title name=\"ANIMATION_NAME\">\"twinkling_star\"</title><title name=\"LOCATION\">{\"x\":200,\"y\":225}</title></block></xml>\n\n-   Kattints a ![](<https://images.code.org/e9531e292b034feef0f176d4f97ac47f-image-1634932451913.54.05 PM.png>) tűre a helyblokkon, majd válassz a sprite-odnak egy új pozíciót a képernyőn.\n-   Amikor a kód elkészült, nyomd meg a „Futtatás” gombot.",
+          "remove_hint": "Egy sprite-ot egy lehet távolítani egy bizonyos sorszámnál. A helyére tehetsz egy új sprite-ot: \n\n<xml><block type=\"Poetry_whenLineShows\"><title name=\"N\">3</title><next><block type=\"Poetry_destroy\"><title name=\"ANIMATION_NAME\">\"twinkling_star\"</title><next><block type=\"Poetry_makeNewSpriteAnon\"><title name=\"ANIMATION_NAME\">\"night_moon\"</title><title name=\"LOCATION\">{\"x\":200,\"y\":225}</title></block></next></block></next></block></xml>"
         },
         "poetry_hoc_backgroundEffects": {
           "add_background_effect": "Keress egy ilyen háttérblokkot:\n<xml><block type=\"Poetry_setBackgroundEffect\"><title name=\"EFFECT\">\"colors\"</title><title name=\"PALETTE\">\"sunrise\"</title></block></xml>\n\nés keress egy ilyen szöveghatású blokkot, mint ez: \n\n<xml><block type=\"Poetry_setFontColor\"><value name=\"FILL\"><block type=\"colour_picker\"><title name=\"COLOUR\">#000099</title></block></value></block></xml>\n\nCsatlakoztasd ezeket a blokkokat az „Amikor fut” alatt a munkaterületen.",
@@ -3969,14 +3973,14 @@
           "more_events_hint": "Egynél több eseményt is használhatsz a programban. Próbálj meg két különböző hatású eseményt használni az új verssorokhoz. \n\n<xml><block type=\"Poetry_whenLineShows\"><title name=\"N\">2</title><next><block type=\"Poetry_setForegroundEffect\"><title name=\"EFFECT\">\"starburst\"</title></block></next></block></xml>\n\n<xml><block type=\"Poetry_whenLineShows\"><title name=\"N\">4</title><next><block type=\"Poetry_setForegroundEffect\"><title name=\"EFFECT\">\"bubbles\"</title></block></next></block></xml>"
         },
         "poetry_hoc_sounds": {
-          "poetry_sound_hint": "Keresd meg ezt a blokkot:\n<xml><block type=\"Poetry_playSound\"><title name=\"SOUND\">\"sound://category\\_background/typewriter.mp3\"</title></block></next></block></xml>\nvagy ezt a blokkot: \n\n<xml><block type=\"Poetry_playMusic\"><title name=\"SOUND\">\"sound://category_background/fire_burning.mp3\"</title></block></xml>\n\nCsatlakoztasd a Munkatérben az „Amikor fut” alatt.",
-          "more_code": "Adj a választott hanghoz további effekteket és színeket. \n<xml><block type=\"when_run\" movable=\"false\"><next><block type=\"Poetry_playSound\"><title name=\"SOUND\">\"sound://category_loops/vibrant_game_welcome_to_heaven_loop_1.mp3\"</title><next>\\<block type=\"Poetry_setBackgroundEffect\"><title name=\"EFFECT\">\"blooming\"</title><title name=\"PALETTE\">\"sunrise\"</title><next><block type=\"Poetry_setFontColor\"><value name=\"FILL\"><block type=\"colour_picker\"><title name=\"COLOUR\">#996633</title></block></value><next><block type=\"Poetry_setTextEffect\"><title name=\"EFFECT\">\"fade\"</title></block></next></block></next></block></next></block></next></block></xml>"
+          "poetry_sound_hint": "Keresd meg ezt a blokkot:\n<xml><block type=\"Poetry_playSound\"><title name=\"SOUND\">\"sound://category_background/typewriter.mp3\"</title></block></next></block></xml>\nvagy ezt a blokkot: \n\n<xml><block type=\"Poetry_playMusic\"><title name=\"SOUND\">\"sound://category_background/fire_burning.mp3\"</title></block></xml>\n\nCsatlakoztasd a Munkatérben az „Amikor fut” alatt.",
+          "more_code": "Adj a választott hanghoz további effekteket és színeket. \n<xml><block type=\"when_run\" movable=\"false\"><next><block type=\"Poetry_playSound\"><title name=\"SOUND\">\"sound://category_loops/vibrant_game_welcome_to_heaven_loop_1.mp3\"</title><next><block type=\"Poetry_setBackgroundEffect\"><title name=\"EFFECT\">\"blooming\"</title><title name=\"PALETTE\">\"sunrise\"</title><next><block type=\"Poetry_setFontColor\"><value name=\"FILL\"><block type=\"colour_picker\"><title name=\"COLOUR\">#996633</title></block></value><next><block type=\"Poetry_setTextEffect\"><title name=\"EFFECT\">\"fade\"</title></block></next></block></next></block></next></block></next></block></xml>"
         },
         "poetry_hoc_spriteBehaviors": {
-          "add_behavior": "Adj hozzá egy „Sprite keletkezik” blokkot a kódodhoz. Ellenőrizd, hogy már elkészítetted azt a sprite-ot, amelyhez viselkedést akarsz rendelni. \n\n<xml><block type=\"when_run\"><next><block type=\"Poetry_makeNewSpriteAnon\"><title name=\"ANIMATION_NAME\">\"smiling_sun\"</title><title name=\"LOCATION\">{\"x\":65,\"y\":105}</title><next>\\<block type=\"Poetry_startBehavior\"><title name=\"ANIMATION_NAME\">\"smiling_sun\"</title><title name=\"BEHAVIOR\">spinning_right</title></block></next></block></next></block></xml>"
+          "add_behavior": "Adj hozzá egy „Sprite keletkezik” blokkot a kódodhoz. Ellenőrizd, hogy már elkészítetted azt a sprite-ot, amelyhez viselkedést akarsz rendelni. \n\n<xml><block type=\"when_run\"><next><block type=\"Poetry_makeNewSpriteAnon\"><title name=\"ANIMATION_NAME\">\"smiling_sun\"</title><title name=\"LOCATION\">{\"x\":65,\"y\":105}</title><next><block type=\"Poetry_startBehavior\"><title name=\"ANIMATION_NAME\">\"smiling_sun\"</title><title name=\"BEHAVIOR\">spinning_right</title></block></next></block></next></block></xml>"
         },
         "poetry_hoc_spriteSizes": {
-          "size hint": "Keresd meg ezt a blokkot, és kattints a 150-re.\n<xml><block type=\"Poetry_setSize\"><title name=\"SPRITE\">\"ocean\\_wave\"</title><title name=\"VAL\">150</title></block></xml>\n\nMi történik, ha a szám 25? \n<xml><block type=\"Poetry_setSize\"><title name=\"SPRITE\">\"ocean\\_wave\"</title><title name=\"VAL\">25</title></block></xml>"
+          "size hint": "Keresd meg ezt a blokkot, és kattints a 150-re.\n<xml><block type=\"Poetry_setSize\"><title name=\"SPRITE\">\"ocean_wave\"</title><title name=\"VAL\">150</title></block></xml>\n\nMi történik, ha a szám 25? \n<xml><block type=\"Poetry_setSize\"><title name=\"SPRITE\">\"ocean_wave\"</title><title name=\"VAL\">25</title></block></xml>"
         },
         "2-3 Bee Functions 8": {
           "2-3_Bee_Functions_8_a": "Ha a feladat nehéznek tűnik elsőre, próbáld a függvényedet apránként felépíteni!\n\nAdj hozzá néhány blokkot, és próbáld ki. Adj hozzá továbbiakat, és tégy újra próbát. Idővel rátalálsz a tökéletes megoldásra!\n\n![](https://images.code.org/3875224b35889000a0998ca25cfa4ecf-image-1467996493914.gif)"
@@ -4943,10 +4947,10 @@
           "hello_world_click": "Csatlakoztass egy „Mondd” blokkot egy „Amikor rákattint” eseményblokk alá:\n\n<xml><block type=\"gamelab_spriteClicked\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"space_alien_ship\"</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_spriteSay\">\n        <title name=\"SPEECH\">Hello, world!</title>\n        <value name=\"SPRITE\">\n          <block type=\"gamelab_allSpritesWithAnimation\">\n            <title name=\"ANIMATION\">\"space_alien_ship\"</title>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block></xml>"
         },
         "helloworld_food_location_soccer-2022": {
-          "location_pin_hint": "Egy sprite helyének megváltoztatásához kattints a helyblokkon lévő tűre, majd kattints oda, ahová szeretné, hogy kerüljön."
+          "location_pin_hint": "Egy sprite helyének megváltoztatásához kattints a helyblokkon lévő tűre, majd kattints oda, ahová szeretné, hogy kerüljön.\n\n![](https://images.code.org/e3267d2b50f754befc63744be14287ac-image-1633360873408.gif)"
         },
         "helloworld_food_location_space-2022": {
-          "location_pin_hint": "Egy sprite helyének megváltoztatásához kattints a helyblokkon lévő tűre, majd kattints oda, ahová szeretné, hogy kerüljön."
+          "location_pin_hint": "Egy sprite helyének megváltoztatásához kattints a helyblokkon lévő tűre, majd kattints oda, ahová szeretné, hogy kerüljön.\n\n![](https://images.code.org/e3267d2b50f754befc63744be14287ac-image-1633360873408.gif)"
         },
         "helloworld_food_multi_soccer-2022": {
           "storyboard_costume": "Ellenőrizd, hogy mindegyik sprite ugyanazt a jelmezt viseli.\n<xml><block type=\"gamelab_spriteSay\">\n      <title name=\"SPEECH\">Goal!</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"soccer_ball\"</title>\n        </block>\n      </value>\n    </block></xml>"
@@ -4961,6 +4965,108 @@
         "helloworld_food_sizes_space-2022": {
           "storyboard_setProp": "Egy sprite méretének az egyszeri beállításához használhatod ezt a blokkot:\n\n<xml><block type=\"gamelab_spriteClicked\">\n  <field name=\"CONDITION\">\"when\"</field>\n  <value name=\"SPRITE\">\n    <block type=\"gamelab_allSpritesWithAnimation\" can_disconnect_from_parent=\"false\">\n      <field name=\"ANIMATION\">\"space_astronaut_1\"</field>\n    </block>\n  </value>\n  <next>\n    <block type=\"gamelab_setProp\">\n      <field name=\"PROPERTY\">\"scale\"</field>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\" can_disconnect_from_parent=\"false\">\n          <field name=\"ANIMATION\">\"space_astronaut_1\"</field>\n        </block>\n      </value>\n      <value name=\"VAL\">\n        <block type=\"math_number\" can_disconnect_from_parent=\"false\">\n          <field name=\"NUM\">50</field>\n        </block>\n      </value>\n    </block>\n  </next>\n</block></xml>",
           "storyboard_changePropBy": "Ha egy sprite méretét újra és újra meg akarod változtatni (eseményekkel), használd ezt a blokkot:\n\n<xml><block type=\"gamelab_spriteClicked\">\n  <field name=\"CONDITION\">\"when\"</field>\n  <value name=\"SPRITE\">\n    <block type=\"gamelab_allSpritesWithAnimation\" can_disconnect_from_parent=\"false\">\n      <field name=\"ANIMATION\">\"space_satellite\"</field>\n    </block>\n  </value>\n  <next>\n    <block type=\"gamelab_changePropBy\">\n      <field name=\"PROPERTY\">\"scale\"</field>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\" can_disconnect_from_parent=\"false\">\n          <field name=\"ANIMATION\">\"space_satellite\"</field>\n        </block>\n      </value>\n      <value name=\"VAL\">\n        <block type=\"math_number\" can_disconnect_from_parent=\"false\">\n          <field name=\"NUM\">10</field>\n        </block>\n      </value>\n    </block>\n  </next>\n</block></xml>"
+        },
+        "courseA_maze_ramp22022": {
+          "1": "A kódodnak így kéne kinéznie:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveEast\">\n        <next>\n          <block type=\"maze_moveEast\">\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseA_maze_ramp2_2021": {
+          "1": "A kódodnak így kéne kinéznie:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveEast\">\n        <next>\n          <block type=\"maze_moveEast\">\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseA_maze_ramp3a2022": {
+          "1": "A kódodnak így kéne kinéznie:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveEast\">\n        <next>\n          <block type=\"maze_moveEast\">\n            <next>\n              <block type=\"maze_moveNorth\"/>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseA_maze_ramp3a_2021": {
+          "1": "A kódodnak így kéne kinéznie:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveEast\">\n        <next>\n          <block type=\"maze_moveEast\">\n            <next>\n              <block type=\"maze_moveNorth\"/>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseA_maze_ramp3b2022": {
+          "1": "A kódodnak így kéne kinéznie:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveSouth\">\n        <next>\n          <block type=\"maze_moveWest\">\n            <next>\n              <block type=\"maze_moveWest\"/>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseA_maze_ramp3b_2021": {
+          "1": "A kódodnak így kéne kinéznie:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveSouth\">\n        <next>\n          <block type=\"maze_moveWest\">\n            <next>\n              <block type=\"maze_moveWest\"/>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseA_maze_ramp4a2022": {
+          "1": "A kódodnak így kéne kinéznie:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveEast\">\n        <next>\n          <block type=\"maze_moveEast\">\n            <next>\n              <block type=\"maze_moveSouth\"/>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseA_maze_ramp4a_2021": {
+          "1": "A kódodnak így kéne kinéznie:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveEast\">\n        <next>\n          <block type=\"maze_moveEast\">\n            <next>\n              <block type=\"maze_moveSouth\"/>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseA_maze_ramp5a2022": {
+          "1": "A kódodnak így kéne kinéznie:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveWest\">\n        <next>\n          <block type=\"maze_moveWest\">\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseA_maze_ramp5a_2021": {
+          "1": "A kódodnak így kéne kinéznie:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveWest\">\n        <next>\n          <block type=\"maze_moveWest\">\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseD_artist_nestedLoops52022": {
+          "courseD_artist_nestedLoops5_a": "Könnyű megcsinálni:\n\n- ismételd 4 alkalommal\n  - rajzolj egy kört\n  - ugorj előre 50 képpontot\n  - fordulj jobbra 90 fokkal"
+        },
+        "courseD_artist_nestedLoops72022": {
+          "courseD_artist_nestedLoops7_b": "Használj beágyazott ciklust, ahol a belső ciklus rajzolja meg a négyzetet.\n\n- ismételd 6 alkalommal\n  - rajzolj négyzetet\n  - ugorj előre **50 képpontot**\n  - fordulj **60 fokot**"
+        },
+        "courseD_artist_nestedLoops82022": {
+          "courseD_artist_nestedLoops8_c": "Haználj beágyazott ciklust:\n\n  - Ismételd 8 alkalommal\n    - rajzolj hatszöget\n    - ugorj előre 50 képpontot\n    - fordulj 45 fokot"
+        },
+        "courseD_artist_nestedLoops92022": {
+          "courseD_artist_nestedLoops9_c": "Két beágyazott ciklust használj:\n  - Ismételd 8 alkalommal\n    - rajzolj négyzetet\n    - ugorj előre 50 képpontot\n    - fordulj jobbra 45 fokot\n  - Ismételd 8 alkalommal\n    - rajzolj háromszöget\n    - ugorj előre 50 képpontot\n    - fordulj jobbra 45 fokot"
+        },
+        "courseF_groups_behaviors_-2022-2": {
+          "groups_click_hint": "Szükséged lesz egy eseményblokkra. A \"Futtatás\" gomb megnyomása után kattints rá a sprite-ra, hogy meggyőződj a helyes működésről!\n\n<xml>\n  <block type=\"gamelab_spriteClicked\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\" can_disconnect_from_parent=\"false\">\n        <title name=\"ANIMATION\">\"face_croissant_1\"</title>\n      </block>\n    </value>\n  </block>\n</xml>"
+        },
+        "courseF_groups_costume_-2022-2": {
+          "groups_click_hint": "Szükséged lesz egy eseményblokkra. A \"Futtatás\" gomb megnyomása után kattints rá a sprite-ra, hogy meggyőződj a helyes működésről!\n\n<xml>\n  <block type=\"gamelab_spriteClicked\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\" can_disconnect_from_parent=\"false\">\n        <title name=\"ANIMATION\">\"face_cupcake_1\"</title>\n      </block>\n    </value>\n  </block>\n</xml>"
+        },
+        "courseF_groups_say_-2022-2": {
+          "groups_click_hint": "Szükséged lesz egy eseményblokkra. A \"Futtatás\" gomb megnyomása után kattints rá a sprite-ra, hogy meggyőződj a helyes működésről!\n\n<xml>\n  <block type=\"gamelab_spriteClicked\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\" can_disconnect_from_parent=\"false\">\n        <title name=\"ANIMATION\">\"face_avocado_1\"</title>\n      </block>\n    </value>\n  </block>\n</xml>"
+        },
+        "courseF_groups_size_-2022-2": {
+          "expand_click_event": "Kattints a `+` gombra az esemény blokkon. Használd a belső gombot, hogy befejezd a programot.\n\n<xml>\n  <block type=\"gamelab_spriteClicked\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"face_strawberry_1\"</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_changePropBy\">\n        <title name=\"PROPERTY\">\"scale\"</title>\n        <value name=\"SPRITE\">\n          <block type=\"gamelab_clickedSpritePointer\"></block>\n        </value>\n        <value name=\"VAL\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">10</title>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "coursea_maze_ramp12022": {
+          "courseC_maze_programming1_a": "Ha a madár nem ér el a malacig, ellenőrizd, hogy a két blookot megfelelően kapcsoltad-e össze, aztán kattints újra a \"Futtatás\" gombra!",
+          "courseC_maze_programming1_b": "Ne félj hibázni! Próbálj ki valamit, és ha az nem működik, akkor próbálkozz valami mással!"
+        },
+        "coursea_maze_ramp1_2021": {
+          "courseC_maze_programming1_a": "Ha a madár nem ér el a malacig, ellenőrizd, hogy a két blookot megfelelően kapcsoltad-e össze, aztán kattints újra a \"Futtatás\" gombra!",
+          "courseC_maze_programming1_b": "Ne félj hibázni! Próbálj ki valamit, és ha az nem működik, akkor próbálkozz valami mással!"
+        },
+        "courseA_harvester_seq10_2021": {
+          "courseA_harvester_seq10_a": "Elakadtál? Próbáld leírni a lépéseket egy papírra! ",
+          "courseA_harvester_seq10_b": "Először `menj keletre`, majd `menj északra`. Ezt ismételd kétszer. Ne felejtsd el, hogy közben az összes kukoricát be kell gyűjtened!",
+          "courseA_harvester_seq10_c": "Próbáld meg követni ezt az útvonalat, hogy felszedd az összes kukoricát!"
+        },
+        "courseA_harvester_seq1_2021": {
+          "courseA_harvester_seq1_a": "Használd ezt a blokkot, hogy az arató felszedje a kukoricát, amikor odaér hozzá!\n\n<xml>\n  <block type=\"harvester_corn\"/>\n</xml>",
+          "courseA_harvester_seq1_b": "Az aratónak 3 lépést kell tennie kelet felé, hogy eljusson a kukoricáig. Használd ezt a blokkot:\n\n<xml>\n  <block type=\"maze_moveEast\"/>\n</xml>"
+        },
+        "courseA_harvester_seq3_2021": {
+          "courseA_harvester_seq3_a": "Ugye emlékszel, hogy ezt a blokkot is használnod kell?\n\n<xml><block type=\"harvester_corn\"/></xml>",
+          "courseA_harvester_seq3_b": "Mondd ki hangosan a lépéseket, és rájössz, hogy mi a jó megoldás!"
+        },
+        "courseA_harvester_seq4_2021": {
+          "courseA_harvester_seq4_a": "Hányat kell lépni az aratónak a kukoricáig? Hány blokk van már most is ott a munkaterületen?",
+          "courseA_harvester_seq4_b": "Szükséged lesz öt `menj keletre` blokkra és egy `felszed kukorica` blokkra:\n\n<xml><block type=\"harvester_corn\"/></xml>"
+        },
+        "courseA_harvester_seq5_2021": {
+          "courseA_harvester_seq5_a": "Melyik blokk miatt indul el az arató rossz irányba?",
+          "courseA_harvester_seq5_b": "Egy blokkot el kell venned a kódból!",
+          "courseA_harvester_seq5_c": "Ezt a blokkot dobd ki a kódból!\n\n<xml><block type=\"maze_moveNorth\"/></xml>"
+        },
+        "courseA_harvester_seq6_2021": {
+          "courseA_harvester_seq6_a": "Ha elakadtál, próbáld hangosan kimondani a lépéseket. Segíthet kitalálni a helyes utat."
+        },
+        "courseA_harvester_seq7_2021": {
+          "courseA_harvester_seq7_a": "Próbáld meg 2 részletben megoldani a feladványt, az első rész a sarokig tart, a második a saroknál kezdődik.",
+          "courseA_harvester_seq7_b": "Gondban vagy? Ezt az utat kell megtennie az aratónak."
+        },
+        "courseA_harvester_seq8_2021": {
+          "courseA_harvester_seq8_a": "A végső kódban **4** mozgás blokk és **2** felszedés blokknak kell lennie."
+        },
+        "courseA_harvester_seq9_2021": {
+          "courseA_harvester_seq9_a": "Futtasd le néhányszor a kódot, hogy lásd, mi történik! Hol áll meg az arató?",
+          "courseA_harvester_seq9_b": "Ne felejtsd el összeszedni az összes kukoricát! Szükséged lesz **3** kukorica felszedése blokkra.",
+          "courseA_harvester_seq9_c": "Ezt az utat kell választanod, hogy felszedd az összes kukoricát."
+        },
+        "courseA_maze_seq5a_2021": {
+          "1": "Mondd ki hangosan a lépéseket, és rájössz, hogy mi a jó megoldás!"
         }
       }
     }

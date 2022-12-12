@@ -176,6 +176,9 @@ export default class SmallFooter extends React.Component {
       },
       awsLogo: {
         width: 190
+      },
+      version: {
+        margin: 'auto 0'
       }
     };
 
@@ -200,7 +203,7 @@ export default class SmallFooter extends React.Component {
           {this.renderI18nDropdown()}
           {this.renderCopyright()}
           {!!this.props.unitYear && yearIsNumeric && (
-            <p>
+            <p style={styles.version}>
               {i18n.version()}: {this.props.unitYear}
             </p>
           )}

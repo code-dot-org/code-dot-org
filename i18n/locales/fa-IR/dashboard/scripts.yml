@@ -646,6 +646,9 @@ fa:
           lesson_groups:
             required:
               display_name: بررسی اجمالی
+        dance-2019:
+          title: جشن و رقص
+          description_short: یک Dance Party را کدنویسی کرده و با دوستان خود به اشتراک بگذارید. دوره‌ای با همراهی Beyoncé, Harry Styles, Lizzo, Lil Nas X, Selena Gomez همراه با موسیقی فیلم انکانتو کمپانی دیزنی و کلی چیز دیگه!
         csp4-preview:
           lesson_groups:
             csp_variables:
@@ -1091,20 +1094,43 @@ fa:
               name: معرفی اسپرایت ها
         csd-post-survey-2022:
           title: پرسشنامه پسادوره یافته های cs
+        vpl-csd1-ayw-pilot-2022:
+          lessons:
+            lesson-6:
+              name: افزونه دیباگ (رفع اشکال) ناهمزمان
         self-paced-pl-csd5-2022:
           title: آموزش هوش مصنوعی و یادگیری ماشینی
         csa-draft-pl:
           name: csa-draft-pl
+        vpl-csd2-ayw-pilot-2022:
+          lessons:
+            lesson-6:
+              name: ماژول 2 - کار ناهمزمان
         soccer:
           name: فوتبال
+          title: کد بازی فوتبال خود را بنویسید
+          description_short: یک بازی فوتبال بسازید
+          description: یک بازی فوتبال بسازید
         csa1-2023:
           lessons:
             lesson-2:
               name: آزمایشگاه جاوا
             lesson-6:
               name: حلقه‌ها
+        csa2-2023:
+          lessons:
+            lesson-4:
+              name: متغیرها
+        hello-world-space-2022:
+          title: 'سلام دنیا: فضا'
+        hello-world-soccer-2022:
+          title: 'سلام دنیا: فوتبال'
         csd1-2023:
           title: حل مسأله
+        csc-function-machines-pilot:
+          lessons:
+            lesson-1:
+              name: اون صدای چيه؟
         csp4-2023:
           lesson_groups:
             csp_variables:

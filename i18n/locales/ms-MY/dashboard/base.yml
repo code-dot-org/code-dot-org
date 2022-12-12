@@ -265,6 +265,7 @@ ms:
   teacher_mailer:
     new_teacher_subject: 'Selamat datang ke Code.org!'
     delete_teacher_subject: 'Pemberitahuan Code.org: Akaun anda telah dipadamkan'
+    verified_teacher_subject: 'Pengesahan Guru Code.org - Berjaya'
   section:
     your_section:
       one: 'Bahagian anda:'

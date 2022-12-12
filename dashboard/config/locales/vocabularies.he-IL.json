@@ -59,6 +59,14 @@
         "debugging/starwarsblocks/unversioned": {
           "word": "מציאת טעויות"
         },
+        "event/outbreak/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "models_and_simulations/outbreak/unversioned": {
+          "word": "",
+          "definition": ""
+        },
         "code/sports/unversioned": {
           "word": "קוד"
         },
@@ -201,10 +209,24 @@
           "definition": "כיצד מחשבים מזהים תבניות או מקבלים החלטות מבלי שתוכנתו לכך במפורש"
         },
         "code/poem-art/unversioned": {
-          "word": "קוד"
+          "word": "קוד",
+          "definition": ""
+        },
+        "event/poem-art/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "program/poem-art/unversioned": {
+          "word": "",
+          "definition": ""
         },
         "mood/poem-art/unversioned": {
-          "word": "אווירה"
+          "word": "אווירה",
+          "definition": ""
+        },
+        "line/poem-art/unversioned": {
+          "word": "",
+          "definition": ""
         },
         "sprite/coursef/2021": {
           "word": "ספרייט"

@@ -4,6 +4,8 @@ uz:
     blocks:
       AmysBlocks_setPromptWithChoices:
         text: "{A}{B}{C} tanlovli {VAR} o'zgaruvchisi uchun foydalanuvchidan {QUESTION} so'rovi"
+      AmysBlocks_spriteSayVar:
+        text: "{SPRITE}{TEXT1} deydi"
       BadGuys_makeNewBadGuysSprite:
         text: " {LOCATION} da yangi {ANIMATION_NAME} sprayt yaratish"
       BadGuys_setSizeAll_dropdown:
@@ -989,6 +991,13 @@ uz:
         text: o'rnatish
       Dancelab_whenSetup2:
         text: o'rnatish
+      DansBlocks_getMicroscope:
+        text: Mikroskopda {INPUT1} bor
+        options:
+          INPUT1:
+            '1': Limon sharbati
+            '3': baking soda
+            '5': both
       DansBlocks_setForegroundEffect2:
         options:
           EFFECT:
@@ -997,12 +1006,20 @@ uz:
             '"hearts"': yurak
             '"rain"': yomg‘ir
             '"starburst"': Yulduzlar to'plami
-      FunctionBlocks_representManipulative:
+      DansBlocks_setMicroscope:
         options:
-          BEHAVIOR:
-            draggable(): sudranuvchan
-            wandering(): daydish
-            shrinking(): kichrayish
+          INPUT1:
+            '1': Limon sharbati
+            '3': baking soda
+            '5': both
+      FunctionBlocks_communicate:
+        text: "{VAR1} bilan {SPRITE1COSTUME} o'rtasida aloqa bogʻlash"
+      FunctionBlocks_makeManipulative2:
+        text: "{NUM} ta yangi {ANIMATION_NAME} animatsiya yarating {BEHAVIOR}"
+      FunctionBlocks_representManipulative:
+        text: "{NUM} ta yangi {ANIMATION_NAME} animatsiya [BEHAVIOR][2] ifodalang"
+      FunctionBlocks_spriteSayVar:
+        text: "{SPRITE}{TEXT1} deydi"
       gamelab_addBehaviorSimple:
         text: " {SPRITE}  {BEHAVIOR} harakatini boshlaydi"
       gamelab_allSpritesWithAnimation:
@@ -1273,8 +1290,30 @@ uz:
             "'sound://category_digital/jump_7.mp3'": sakramoq
       gamelab_playSoundOptionsSoccer:
         text: " {SOUND} ijro etish"
+        options:
+          SOUND:
+            "'sound://category_sports/Airhorn_SFX.mp3'": Havoli signal
+            "'sound://category_sports/Crowd_Applause_SFX.mp3'": olqish
+            "'sound://category_sports/Crowd_Chant_SFX.mp3'": qo'shiq
+            "'sound://category_sports/Crowd_Cheer_SFX.mp3'": ура
+            "'sound://category_sports/Hitting_Soccer_Ball_SFX.mp3'": zarba
+            "'sound://category_sports/Double_Whistle_SFX.mp3'": ikki hushtak ovozi
+            "'sound://category_sports/One_Whistle_SFX.mp3'": hushtak
       gamelab_playSoundOptionsSpace:
         text: " {SOUND} ijro etish"
+        options:
+          SOUND:
+            "'sound://category_space/Blackhole_SFX.mp3'": qora tuynuk
+            "'sound://category_space/Bullet_cluster_SFX.mp3'": o'q to'plami
+            "'sound://category_space/Carina_SFX.mp3'": karina
+            "'sound://category_space/Cassiopeia_SFX.mp3'": lyutetsiy
+            "'sound://category_space/Crab_nebula_SFX.mp3'": krab ko'rinishidagi tumanlik
+            "'sound://category_space/Launch_SFX.mp3'": boshlash
+            "'sound://category_space/Lift_Off.mp3'": ko'tarilish payti
+            "'sound://category_space/Pillars_SFX.mp3'": ustunlar
+            "'sound://category_space/Southern_ring_SFX.mp3'": janubiy halqa
+            "'sound://category_space/Supernova_SFX.mp3'": eng yangi yulduz
+            "'sound://category_space/Tycho_SFX.mp3'": tycho
       gamelab_playerBehaviors:
         options:
           BEHAVIOR:
@@ -1737,6 +1776,38 @@ uz:
         text: "{SPRITE} x koordinatasi"
       Mikelab_yLocationOf:
         text: "{SPRITE} y koordinatasi"
+      ParticlesBlocks_getMicroscope:
+        text: Mikroskopda {INPUT1} bor
+        options:
+          INPUT1:
+            '1': Limon sharbati
+            '3': baking soda
+            '5': both
+      ParticlesBlocks_setMicroscope:
+        options:
+          INPUT1:
+            '1': Limon sharbati
+            '3': baking soda
+            '5': both
+      ParticlesBlocks_statesOfMatter:
+        options:
+          BEHAVIOR:
+            new Behavior(solid, []): qattiq
+            new Behavior(liquid, []): suyuq
+            new Behavior(wandering, []): gaz
+      ParticlesBlocks_statesOfMatter2:
+        text: "{COSTUME}ni {BEHAVIOR} holatiga oʻrnating"
+        options:
+          BEHAVIOR:
+            '"solid"': 'qattiq zarracha '
+            '"liquid"': suyuq zarracha
+            '"gas"': gaz zarrachasi
+      ParticlesBlocks_statesOfMatter_testing:
+        options:
+          BEHAVIOR:
+            '"solid"': 'qattiq zarracha '
+            '"liquid"': suyuq zarracha
+            '"gas"': gaz zarrachasi
       Poetry_addFrame:
         options:
           BRUSH:
@@ -1772,6 +1843,21 @@ uz:
             '"sound://category_bell/long_bell_notification.mp3"': qo‘ng‘iroq
             '"sound://category_pop/bubble_pop_cluster_2.mp3"': pufakchalar
             '"sound://category_jump/vibrant_game_jumping_up_1.mp3"': sakramoq
+      Poetry_playSoundOptionsSpace:
+        text: " {SOUND} ijro etish"
+        options:
+          SOUND:
+            "'sound://category_space/Blackhole_SFX.mp3'": qora tuynuk
+            "'sound://category_space/Bullet_cluster_SFX.mp3'": o'q to'plami
+            "'sound://category_space/Carina_SFX.mp3'": karina
+            "'sound://category_space/Cassiopeia_SFX.mp3'": lyutetsiy
+            "'sound://category_space/Crab_nebula_SFX.mp3'": krab ko'rinishidagi tumanlik
+            "'sound://category_space/Launch_SFX.mp3'": boshlash
+            "'sound://category_space/Lift_Off.mp3'": ko'tarilish payti
+            "'sound://category_space/Pillars_SFX.mp3'": ustunlar
+            "'sound://category_space/Southern_ring_SFX.mp3'": janubiy halqa
+            "'sound://category_space/Supernova_SFX.mp3'": eng yangi yulduz
+            "'sound://category_space/Tycho_SFX.mp3'": tycho
       Poetry_setBackground:
         text: orqa fonni {COLOR} ga o'rnatish
       Poetry_setBackgroundEffect:
@@ -2035,5 +2121,17 @@ uz:
           DIR:
             right: o‘ngga ↻
             left: chapga ↺
+      storylab_setForegroundEffect2:
+        options:
+          EFFECT:
+            '"bubbles"': Pufakchalar
+            '"confetti"': Konfetti
+            '"hearts"': yurak
+            '"rain"': yomg‘ir
+            '"starburst"': Yulduzlar to'plami
+      storylab_setHeading:
+        text: sarlavhani o'rnating {HEADING}
+      storylab_setSubheading:
+        text: Tag sarlavhani o‘rnating {SUBHEADING}
       validation_validatedBackground:
         text: orqa fonni {IMG} ga o'zgartirish

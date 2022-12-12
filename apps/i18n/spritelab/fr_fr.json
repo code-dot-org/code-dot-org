@@ -97,7 +97,7 @@
   "madlibNoSprites": "Votre invite est opérationnelle. Si elle fait ce que vous voulez, vous pouvez commencer à ajouter des sprites à votre projet. De quoi parle votre histoire ou votre poème ?",
   "madlibPrintVariable": "Apparemment, le chatbot répond, mais il n'a pas affiché ce que vous avez saisi dans l'invite. Assurez-vous d'avoir connecté la bonne étiquette **variable** à votre bloc `imprimer`.",
   "madlibPrintWhenAnswered": "Pour l'instant, le texte ne s'affiche qu'une seule fois. Assurez-vous qu'un bloc `imprimer` se trouve sous un autre bloc `lorsque répondu`. \n <xml><block type=\"gamelab_whenPromptAnswered\"><value name=\"VAR\"><block type=\"variables_get\" can_disconnect_from_parent=\"false\"><title name=\"VAR\">food</title></block></value></block></xml>",
-  "madlibTitleVariable": "Apparemment, vous avez ajouté un écran titre à votre programme, mais il ne comprend pas un texte d'invite. ",
+  "madlibTitleVariable": "Apparemment, vous avez ajouté un écran titre à votre programme, mais il n'inclut pas le texte de l'invite.",
   "moreSprites": "Vous devez créer plus de sprites.",
   "moveBothWays": "Votre sprite doit se déplacer dans un sens, et ensuite dans l'autre sens.",
   "moveSpriteByDrag": "Votre code est parfait ! Pour faire déplacer votre sprite, veuillez cliquer dessus pendant que le programme s'exécute.",

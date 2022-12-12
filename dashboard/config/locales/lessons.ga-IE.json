@@ -24,7 +24,7 @@
           "name": "Spraotharlann: Gumball"
         },
         "dance/Dance Party": {
-          "name": "Cóisir Dhamhsa"
+          "name": "Cóisir Dhamhsa (2018)"
         },
         "hoc-encryption/Simple Encryption": {
           "name": "Criptiú Simplí"
@@ -41,6 +41,12 @@
         "applab-intro/Intro to App Lab": {
           "name": "Buneolas ar an tSaotharlann Aipeanna"
         },
+        "outbreak/Outbreak": {
+          "overview": "",
+          "preparation": "",
+          "purpose": "",
+          "student_overview": ""
+        },
         "infinity/Infinity": {
           "name": "Spraotharlann Disney Infinity"
         },
@@ -48,7 +54,7 @@
           "name": "An Uair Chódála 2013"
         },
         "dance-2019/Dance Party": {
-          "name": "Cóisir Dhamhsa (2019)"
+          "name": "Cóisir Dhamhsa"
         },
         "oceans/Oceans": {
           "name": "AI ar son an Aigéin"

@@ -2,11 +2,11 @@
 title: Partneri
 ---
 
-The Hour of Code is driven by the Hour of Code Review Committee.
+Sat kodiranja vodi Odbor za reviziju Sata kodiranja.
 
-The [Review Committee]({{ urls/review_committee }}) is composed of 12 current and former educators across K-12 grade bands that assess and recommend activities using a rubric established by an advisory committee. These educators review student-led activities and teacher-led lesson plans submitted by hundreds of activity partners, evaluating the activities' educational value, ability to engage learners, and potential appeal to diverse sets of students.
+[Odbor za reviziju ]({{ urls/review_committee }}) sastoji se od 12 sadašnjih i bivših nastavnika iz razreda K-12 koji procjenjuju i preporučuju aktivnosti koristeći rubriku koju je uspostavio savjetodavni odbor. Ovi edukatori pregledavaju aktivnosti koje vode učenici i planove lekcija učitelja koje dostavljaju stotine partnera u aktivnostima, ocjenjujući obrazovnu vrijednost aktivnosti, sposobnost angažiranja učenika i potencijalnu privlačnost različitim grupama učenika.
 
-The committee's work and dedication have contributed to the success of the Hour of Code and its vision of offering an introduction to computer science for every student.
+Rad i predanost odbora pridonijeli su uspjehu Sata kodiranja i njegovoj viziji da svakom učeniku ponudi uvod u informatiku.
 
 # Glavni partneri i korporacije
 

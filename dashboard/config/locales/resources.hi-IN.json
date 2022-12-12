@@ -643,8 +643,7 @@
           "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/"
         },
         "how_to_make_a_class_section_on_code_org/courseb/2022": {
-          "name": "Code.org पर कक्षा अनुभाग कैसे बनाएं",
-          "url": "https://www.youtube.com/watch?v=ebQY8fb2OV4"
+          "name": "Code.org पर कक्षा अनुभाग कैसे बनाएं"
         },
         "pair_programming/courseb/2022": {
           "name": "जोड़ी प्रोग्रामिंग",
@@ -2321,7 +2320,8 @@
         },
         "list_of_poems_1/poem-art/unversioned": {
           "name": "कविताओं की सूची",
-          "url": "https://docs.google.com/presentation/d/1-IAPZSha9BzFtEHzqRKY2Gb8oa2O_ZNaX5RqHyuvBso/edit?usp=sharing"
+          "url": "https://docs.google.com/presentation/d/1-IAPZSha9BzFtEHzqRKY2Gb8oa2O_ZNaX5RqHyuvBso/edit?usp=sharing",
+          "type": ""
         },
         "2021_change_log/coursef/2021": {
           "name": "2021 चेंज लॉग",

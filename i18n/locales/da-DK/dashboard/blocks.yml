@@ -993,12 +993,6 @@ da:
             '"hearts"': hjerter
             '"rain"': regn
             '"starburst"': Starburst
-      FunctionBlocks_representManipulative:
-        options:
-          BEHAVIOR:
-            draggable(): kan flyttes
-            wandering(): vandrende
-            shrinking(): krymper
       gamelab_addBehaviorSimple:
         text: figur {SPRITE} begynder {BEHAVIOR}
       gamelab_addTarget:
@@ -1629,6 +1623,8 @@ da:
           SOUND:
             '"sound://category_bell/long_bell_notification.mp3"': klokke
             '"sound://category_jump/vibrant_game_jumping_up_1.mp3"': hop
+      Poetry_playSoundOptionsSpace:
+        text: afspil lyd {SOUND}
       Poetry_setBackground:
         text: indstil baggrundsfarve {COLOR}
       Poetry_setBackgroundEffect:
@@ -1892,5 +1888,13 @@ da:
           DIR:
             right: til højre ↻
             left: til venstre ↺
+      storylab_setForegroundEffect2:
+        options:
+          EFFECT:
+            '"bubbles"': Bobler
+            '"confetti"': Konfetti
+            '"hearts"': hjerter
+            '"rain"': regn
+            '"starburst"': Starburst
       validation_validatedBackground:
         text: sæt baggrund til {IMG}

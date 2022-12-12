@@ -169,13 +169,32 @@ class Pd::EnrollmentTest < ActiveSupport::TestCase
     enrollment.send_exit_survey
   end
 
-  test 'send_exit_survey sends email' do
+  test 'send_exit_survey does not send mail for workshops without exit survey URL' do
+    enrollment = create :pd_enrollment, user: create(:teacher)
+
+    Pd::Enrollment.any_instance.expects(:exit_survey_url).returns(nil)
+    Pd::WorkshopMailer.expects(:exit_survey).never
+
+    enrollment.send_exit_survey
+  end
+
+  test 'send_exit_survey tries to send email and, if successful, updates survey_sent_at ' do
     enrollment = create :pd_enrollment, user: create(:teacher)
 
     mock_mail = stub(deliver_now: nil)
     Pd::WorkshopMailer.expects(:exit_survey).once.returns(mock_mail)
 
     enrollment.send_exit_survey
+    assert_not_nil enrollment.reload.survey_sent_at
+  end
+
+  test 'send_exit_survey tries to send email and, if unsuccessful, does not update survey_sent_at' do
+    enrollment = create :pd_enrollment, user: create(:teacher)
+
+    Pd::WorkshopMailer.expects(:exit_survey).once.returns(nil)
+
+    enrollment.send_exit_survey
+    assert_nil enrollment.reload.survey_sent_at
   end
 
   test 'name is deprecated and calls through to full_name' do
