@@ -14,6 +14,7 @@
 #  index_pd_fit_weekend_registrations_on_pd_application_id  (pd_application_id)
 #  index_pd_fit_weekend_registrations_on_registration_year  (registration_year)
 #
+# TODO [meg]: Remove or gut this model to finish deprecating facilitator applications
 
 class Pd::FitWeekendRegistrationBase < ApplicationRecord
   include Pd::Form
@@ -28,11 +29,6 @@ class Pd::FitWeekendRegistrationBase < ApplicationRecord
 
   after_initialize :set_registration_year
   before_validation :set_registration_year
-
-  after_create :send_fit_weekend_confirmation_email
-  def send_fit_weekend_confirmation_email
-    Pd::FitWeekendRegistrationMailer.confirmation(self).deliver_now
-  end
 
   # Override in derived classes and set to valid value.
   # Setting to nil here fails those validations and prevents this base class from being saved.

@@ -256,10 +256,6 @@ module Pd::Application
       []
     end
 
-    def self.can_see_locked_status?(user)
-      false
-    end
-
     # Include additional text for all the multi-select fields that have the option
     def full_answers
       @full_answers ||= begin
@@ -290,20 +286,6 @@ module Pd::Application
 
     def generate_application_guid
       self.application_guid = SecureRandom.uuid
-    end
-
-    def locked?
-      locked_at.present?
-    end
-
-    def lock!
-      return if locked?
-      update! locked_at: Time.zone.now
-    end
-
-    def unlock!
-      return unless locked?
-      update! locked_at: nil
     end
 
     def email
@@ -377,10 +359,6 @@ module Pd::Application
       else
         []
       end
-    end
-
-    def update_lock_change_log(user)
-      update_status_timestamp_change_log(user, "Application is #{locked? ? 'locked' : 'unlocked'}")
     end
 
     # Record when the status changes and who changed it
