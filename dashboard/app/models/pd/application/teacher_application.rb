@@ -1029,9 +1029,9 @@ module Pd::Application
           if regional_partner&.frl_guardrail_percent
             regional_partner&.frl_guardrail_percent.to_i
           elsif school_stats&.rural_school?
-            40
+            REGIONAL_PARTNER_DEFAULT_GUARDRAILS[:frl_rural]
           else
-            50
+            REGIONAL_PARTNER_DEFAULT_GUARDRAILS[:frl_not_rural]
           end
 
         meets_scholarship_criteria_scores[:free_lunch_percent] =
@@ -1046,7 +1046,7 @@ module Pd::Application
                         school_stats&.urm_percent
         urg_percent_cutoff = regional_partner&.urg_guardrail_percent ?
                               regional_partner&.urg_guardrail_percent.to_i :
-                              50
+                              REGIONAL_PARTNER_DEFAULT_GUARDRAILS[:urg]
 
         meets_scholarship_criteria_scores[:underrepresented_minority_percent] =
           if urg_percent
