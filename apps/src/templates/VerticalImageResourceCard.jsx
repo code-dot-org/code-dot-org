@@ -108,7 +108,7 @@ class VerticalImageResourceCard extends Component {
             href={link}
             color={Button.ButtonColor.gray}
             text={buttonText}
-            style={[styles.button]}
+            style={{...styles.button}}
           />
         </div>
       </div>

@@ -1,0 +1,207 @@
+{
+  "script": {
+    "name": "allthevalidation",
+    "wrapup_video_id": null,
+    "login_required": false,
+    "properties": {
+      "is_course": true,
+      "is_migrated": true,
+      "version_year": "unversioned"
+    },
+    "new_name": null,
+    "family_name": "allthevalidation",
+    "serialized_at": "2022-11-30 15:43:15 UTC",
+    "published_state": "in_development",
+    "instruction_type": "teacher_led",
+    "instructor_audience": "teacher",
+    "participant_audience": "student",
+    "seeding_key": {
+      "script.name": "allthevalidation"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "",
+      "user_facing": false,
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_group.key": "",
+        "script.name": "allthevalidation"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "lesson-1",
+      "name": "Sprite Lab Validation",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "allthevalidation"
+      }
+    }
+  ],
+  "lesson_activities": [
+    {
+      "key": "ee0247b2-cf98-4013-9a1d-3b9518f66ec2",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "ee0247b2-cf98-4013-9a1d-3b9518f66ec2",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "allthevalidation"
+      }
+    }
+  ],
+  "activity_sections": [
+    {
+      "key": "fc88135b-9103-4f70-af0d-82694f7d00aa",
+      "position": 1,
+      "properties": {
+        "progression_name": "Template Level (to clone)"
+      },
+      "seeding_key": {
+        "activity_section.key": "fc88135b-9103-4f70-af0d-82694f7d00aa",
+        "lesson_activity.key": "ee0247b2-cf98-4013-9a1d-3b9518f66ec2"
+      }
+    },
+    {
+      "key": "03284b2f-aae7-41d6-9bcc-0871db6b5128",
+      "position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "03284b2f-aae7-41d6-9bcc-0871db6b5128",
+        "lesson_activity.key": "ee0247b2-cf98-4013-9a1d-3b9518f66ec2"
+      }
+    },
+    {
+      "key": "297bec50-2608-40d3-afb1-98c75b26e2ad",
+      "position": 3,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "297bec50-2608-40d3-afb1-98c75b26e2ad",
+        "lesson_activity.key": "ee0247b2-cf98-4013-9a1d-3b9518f66ec2"
+      }
+    },
+    {
+      "key": "130a3526-6840-4c18-9a1d-4d1fb4513ea4",
+      "position": 4,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "130a3526-6840-4c18-9a1d-4d1fb4513ea4",
+        "lesson_activity.key": "ee0247b2-cf98-4013-9a1d-3b9518f66ec2"
+      }
+    },
+    {
+      "key": "fc8d0a33-f207-41e3-aee0-928e8035715c",
+      "position": 5,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "fc8d0a33-f207-41e3-aee0-928e8035715c",
+        "lesson_activity.key": "ee0247b2-cf98-4013-9a1d-3b9518f66ec2"
+      }
+    },
+    {
+      "key": "b0ffce34-be41-4fb5-8a62-afece8230267",
+      "position": 6,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "b0ffce34-be41-4fb5-8a62-afece8230267",
+        "lesson_activity.key": "ee0247b2-cf98-4013-9a1d-3b9518f66ec2"
+      }
+    },
+    {
+      "key": "0a56b2fa-a0bc-4ece-b14f-19761911a5c7",
+      "position": 7,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "0a56b2fa-a0bc-4ece-b14f-19761911a5c7",
+        "lesson_activity.key": "ee0247b2-cf98-4013-9a1d-3b9518f66ec2"
+      }
+    }
+  ],
+  "script_levels": [
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Template Level (to clone)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "allthevalidation - template 1"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "allthevalidation",
+        "activity_section.key": "fc88135b-9103-4f70-af0d-82694f7d00aa"
+      },
+      "level_keys": [
+        "allthevalidation - template 1"
+      ]
+    }
+  ],
+  "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "allthevalidation - template 1",
+        "script_level.level_keys": [
+          "allthevalidation - template 1"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "allthevalidation",
+        "activity_section.key": "fc88135b-9103-4f70-af0d-82694f7d00aa"
+      }
+    }
+  ],
+  "resources": [
+
+  ],
+  "lessons_resources": [
+
+  ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+
+  ],
+  "lessons_standards": [
+
+  ],
+  "lessons_opportunity_standards": [
+
+  ]
+}

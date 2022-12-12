@@ -3,6 +3,8 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
+# PLACEHOLDER - Update when Web Serial documentation is finalized
+
 # Maker App Setup
 
 ##### Students will need to install the Maker App in order to complete the activities in the Physical Computing Unit of CS Discoveries. The Maker App is currently supported on Windows, Chrome OS, and Mac OS. There are slightly different software requirements depending on which OS you are using.

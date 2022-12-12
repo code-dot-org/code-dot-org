@@ -1,4 +1,5 @@
-@no_circle
+# Item to track renabling this: https://codedotorg.atlassian.net/browse/SL-375
+@no_circle @no_phone
 Feature: Finish Button
 
 Background:

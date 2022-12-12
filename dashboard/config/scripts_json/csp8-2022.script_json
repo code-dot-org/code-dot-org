@@ -31,7 +31,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-09-28 14:31:54 UTC",
+    "serialized_at": "2022-11-04 16:10:52 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -1219,7 +1219,7 @@
   ],
   "resources": [
     {
-      "name": "[KEY] Create PT Survival Guide 2021-22",
+      "name": "[KEY] Create PT Survival Guide",
       "url": "https://docs.google.com/document/d/1bAAyj1BFv4hPZlOnup2AZ1SqJMKNm3gjFQ6h4nZnkJA/edit?usp=sharing",
       "key": "_key_create_pt_survival_guide_2021-22",
       "properties": {
@@ -1301,7 +1301,7 @@
       }
     },
     {
-      "name": "Create PT Survival Guide 2021-22",
+      "name": "Create PT Survival Guide",
       "url": "https://docs.google.com/document/d/1G2m8yUqUdi-PI19cXMRmxtLjF2fqYXqwbdVZWhW2eLE/edit?usp=sharing",
       "key": "create_pt_survival_guide_2021-22",
       "properties": {

@@ -77,7 +77,23 @@ After setup, read about our [code styleguide](./STYLEGUIDE.md), our [test suites
 
 ### OS X Monterey - including Apple Silicon (M1)
 
-These steps are for OSX devices, including Apple Macbooks running on [Apple Silicon (M1)](https://en.wikipedia.org/wiki/Apple_silicon#M_series), which requires special consideration in order to run natively (without [Rosetta](https://en.wikipedia.org/wiki/Rosetta_(software))). These steps may need to change over time as 3rd party tools update to have versions compatible with the new architecture.
+These steps are for OSX devices, including Apple Macbooks running on [Apple Silicon (M1)](https://en.wikipedia.org/wiki/Apple_silicon#M_series). At this time, if you are using an M1 Macbook, we strongly recommend using Rosetta to set up an Intel-based development environment vs. trying to make things work with the ARM-based Apple Silicon environment.
+
+These steps may need to change over time as 3rd party tools update to have versions compatible with the new architecture.
+
+0. _(M1 Mac users only)_ Install Rosetta 2.
+
+  - Check if Rosetta is already installed: `/usr/bin/pgrep -q oahd && echo Yes || echo No`
+  - If not, install Rosetta using
+    - `softwareupdate --install-rosetta` (launches the Rosetta installer) or
+    - `/usr/sbin/softwareupdate --install-rosetta --agree-to-license` (skips installer and license agreement)
+  - Follow these steps to enable Rosetta:
+    - Select the app (Terminal) in Finder from Applications/Utilities.
+    - Right-click on the app (Terminal) and select `Get Info`.
+    - In `General`, check the `Open using Rosetta` checkbox.
+    - Close the Terminal and open it again.
+    - To verify that you are using a Rosetta terminal, run the command `arch` from the command line and it should output `i386`. The native terminal without Rosetta would output `arm64` for the above command. If you still do not see `i386` in the terminal then try restarting your machine. 
+
 
 1. Open your Terminal. These steps assume you are using **zsh**, the default shell for OSX.
 
@@ -105,7 +121,7 @@ These steps are for OSX devices, including Apple Macbooks running on [Apple Sili
 1. Install **rbenv** via `brew install rbenv`
 
 1. Install **Ruby**
-    1. For non-M1 systems, running `rbenv install` from the project root directory should be sufficient
+    1. For non-M1 systems (including M1 systems using Rosetta), running `rbenv install` from the project root directory should be sufficient.
     2. For Apple Silicon, special configuration is required to set *libffi* options correctly. The following is a single line to execute.
 
       ```sh
@@ -150,18 +166,7 @@ These steps are for OSX devices, including Apple Macbooks running on [Apple Sili
 
 1. Install [Google Chrome](https://www.google.com/chrome/), needed for some local app tests.
 
-1. For Apple Silicon (M1), return to the [Overview](#overview) to continue installation and clone the code-dot-org repo. After cloning, you will need to make the changes below to your [Gemfile.lock](Gemfile.lock) file to switch from `libv8` to `libv8-node` and upgrade `mini_racer`. These changes should not be committed and will unfortunately clutter your `git status`.
-
-   ```text
-   ...
-   libv8-node (15.14.0.0)
-   ...
-   mini_racer (0.4.0)
-     libv8-node (~> 15.14.0.0)
-   ...
-   ```
-
-Note that there are additional steps for Apple Silicon (M1) when it comes to `bundle install` and `bundle exec rake ...` commands, which are noted in their respective steps.
+1. Return to the [Overview](#overview) to continue installation and clone the code-dot-org repo. Note that there are additional steps for Apple Silicon (M1) when it comes to `bundle install` and `bundle exec rake ...` commands, which are noted in their respective steps.
 
 ### OS X Catalina
 

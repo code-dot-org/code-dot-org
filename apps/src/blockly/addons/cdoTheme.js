@@ -8,6 +8,9 @@ export default GoogleBlockly.Theme.defineTheme('modern', {
     },
     procedure_blocks: {
       colourPrimary: '#509918'
+    },
+    loop_blocks: {
+      colourPrimary: '#f218a2'
     }
   },
   categoryStyles: {},

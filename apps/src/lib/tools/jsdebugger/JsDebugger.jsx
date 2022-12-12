@@ -469,14 +469,21 @@ class JsDebugger extends React.Component {
           >
             {i18n.debugConsoleHeader()}
           </span>
-          <span className={styles.showHideIcon}>
+          <button
+            type="button"
+            className={classNames(
+              styles.showHideIcon,
+              styles.chevronButton,
+              !hasFocus && styles.chevronButtonUnfocused
+            )}
+            onClick={this.slideToggle}
+          >
             <FontAwesome
               icon={
                 this.state.open ? 'chevron-circle-down' : 'chevron-circle-up'
               }
-              onClick={this.slideToggle}
             />
-          </span>
+          </button>
           {this.props.debugButtons && (
             <PaneSection id="debug-commands-header">
               <FontAwesome
@@ -512,8 +519,13 @@ class JsDebugger extends React.Component {
                 this.state.watchersHidden && styles.watchersHidden
               )}
             >
-              <span
-                className={styles.showDebugWatchIcon}
+              <button
+                type="button"
+                className={classNames(
+                  styles.showDebugWatchIcon,
+                  styles.chevronButton,
+                  !hasFocus && styles.chevronButtonUnfocused
+                )}
                 onClick={() => {
                   // reset resizer-overridden styles
                   // (remove once resize logic migrated to React)
@@ -537,7 +549,7 @@ class JsDebugger extends React.Component {
                       : 'chevron-circle-right'
                   }
                 />
-              </span>
+              </button>
               <span className={classNames('header-text', styles.noUserSelect)}>
                 {this.state.watchersHidden
                   ? i18n.debugShowWatchHeader()

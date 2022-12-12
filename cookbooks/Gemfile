@@ -15,3 +15,5 @@ gem 'kitchen-ec2'
 
 # Provides `sftp` transport to test-kitchen for faster cookbook upload.
 gem 'kitchen-sync'
+
+gem 'json', '>= 2.3.0' # 2.3.0 resolved some Ruby 2.7 deprecation warnings

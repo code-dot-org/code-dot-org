@@ -14,6 +14,7 @@ import reducer, {
   setSections,
   selectSection,
   removeSection,
+  beginCreatingSection,
   beginEditingSection,
   editSectionProperties,
   cancelEditingSection,
@@ -298,6 +299,66 @@ describe('teacherSectionsRedux', () => {
     it('doesnt let you remove a non-existent section', () => {
       assert.throws(() => {
         reducer(stateWithSections, removeSection(1234));
+      });
+    });
+  });
+
+  describe('beginCreatingSection', () => {
+    it('populates sectionBeingEdited if no course provided', () => {
+      assert.isNull(initialState.sectionBeingEdited);
+      const state = reducer(initialState, beginCreatingSection());
+      assert.deepEqual(state.sectionBeingEdited, {
+        id: PENDING_NEW_SECTION_ID,
+        name: '',
+        loginType: undefined,
+        grade: '',
+        participantType: undefined,
+        providerManaged: false,
+        lessonExtras: true,
+        ttsAutoplayEnabled: false,
+        pairingAllowed: true,
+        sharingDisabled: false,
+        studentCount: 0,
+        code: '',
+        courseId: null,
+        courseOfferingId: null,
+        courseVersionId: null,
+        unitId: null,
+        hidden: false,
+        isAssigned: undefined,
+        restrictSection: false
+      });
+    });
+
+    it('populates sectionBeingEdited with provided course', () => {
+      assert.isNull(initialState.sectionBeingEdited);
+      const courseOfferingId = 1;
+      const courseVersionId = 2;
+      const unitId = 3;
+      const state = reducer(
+        initialState,
+        beginCreatingSection(courseOfferingId, courseVersionId, unitId)
+      );
+      assert.deepEqual(state.sectionBeingEdited, {
+        id: PENDING_NEW_SECTION_ID,
+        name: '',
+        loginType: undefined,
+        grade: '',
+        participantType: undefined,
+        providerManaged: false,
+        lessonExtras: true,
+        ttsAutoplayEnabled: false,
+        pairingAllowed: true,
+        sharingDisabled: false,
+        studentCount: 0,
+        code: '',
+        courseId: null,
+        courseOfferingId: courseOfferingId,
+        courseVersionId: courseVersionId,
+        unitId: unitId,
+        hidden: false,
+        isAssigned: undefined,
+        restrictSection: false
       });
     });
   });

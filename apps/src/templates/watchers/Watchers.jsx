@@ -328,12 +328,13 @@ class Watchers extends React.Component {
             const varValue = wv.get('lastValue');
             return (
               <div className="debug-watch-item" key={wv.get('uuid')}>
-                <div
+                <button
                   style={styles.watchRemoveButton}
                   onClick={() => this.props.remove(wv.get('expression'))}
+                  type="button"
                 >
                   ×
-                </div>
+                </button>
                 <div style={styles.watchItemDescription}>
                   <span className="watch-variable">{varName}</span>
                   <span className="watch-separator">: </span>
@@ -343,9 +344,13 @@ class Watchers extends React.Component {
             );
           })}
           <div style={styles.watchInputSection}>
-            <div style={styles.watchAddButton} onClick={this.addButtonClick}>
+            <button
+              style={styles.watchAddButton}
+              onClick={this.addButtonClick}
+              type="button"
+            >
               +
-            </div>
+            </button>
             <TetherComponent
               attachment="bottom left"
               targetAttachment="top left"
@@ -411,7 +416,9 @@ const styles = {
     backgroundColor: '#be0712',
     color: 'white',
     margin: 0,
-    padding: 0
+    padding: 0,
+    border: 'none',
+    borderRadius: 0
   },
   watchAddButton: {
     fontSize: 20,
@@ -424,7 +431,9 @@ const styles = {
     backgroundColor: '#1e93cd',
     color: 'white',
     margin: 0,
-    padding: 0
+    padding: 0,
+    border: 'none',
+    borderRadius: 0
   },
   watchItemDescription: {
     whiteSpace: 'nowrap',

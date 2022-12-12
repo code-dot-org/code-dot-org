@@ -728,10 +728,6 @@ def run_feature(browser, feature, options)
   run_environment['SKIP_I18N_INIT'] = 'true'
   run_environment['SKIP_DASHBOARD_ENABLE_PEGASUS'] = 'true'
 
-  # Force Applitools eyes to use a consistent host OS identifier for now
-  # BrowserStack was reporting Windows 6.0 and 6.1, causing different baselines
-  run_environment['APPLITOOLS_HOST_OS'] = browser['mobile'] ? 'iOS 11.3' : 'Windows 6x'
-
   max_reruns = how_many_reruns?(test_run_string)
 
   html_log = html_output_filename(test_run_string, options)

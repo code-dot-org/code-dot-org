@@ -28,7 +28,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-09-28 14:32:01 UTC",
+    "serialized_at": "2022-11-08 16:49:47 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -6189,6 +6189,18 @@
       }
     },
     {
+      "name": "Unit 6 Guide [Exemplar]",
+      "url": "https://docs.google.com/document/d/1jC9mAMdOqCFe3iZci0-gGroLP-KgYFws2uq16eksE8w",
+      "key": "unit_6_guide_exemplar_",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Exemplar"
+      },
+      "seeding_key": {
+        "resource.key": "unit_6_guide_exemplar_"
+      }
+    },
+    {
       "name": "Unit 6 Overview",
       "url": "https://docs.google.com/document/d/1836auHbzJtC_6S9DLmx5SJFUco3VMAs6-p7W76IjcOA/edit?usp=sharing",
       "key": "unit_6_overview",
@@ -6616,6 +6628,12 @@
     {
       "seeding_key": {
         "resource.key": "unit_6_guide",
+        "script.name": "csa6-2022"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "unit_6_guide_exemplar_",
         "script.name": "csa6-2022"
       }
     },

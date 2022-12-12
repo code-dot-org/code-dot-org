@@ -12,6 +12,11 @@ import isRtl, {setRtlFromDOM} from '@cdo/apps/code-studio/isRtlRedux';
 import {setPageConstants} from '@cdo/apps/redux/pageConstants';
 import TopInstructions from './TopInstructions';
 
+export default {
+  title: 'TopInstructions',
+  component: TopInstructions
+};
+
 /**
  * Initialize a Redux store for displaying instructions, including all required
  * reducers. Can optionally initialize the store to include a variety of
@@ -116,36 +121,37 @@ const createCommonStore = function(options = {}) {
   return store;
 };
 
-const STORIES = {
-  'CSF Instructions': {
-    isCSF: true
-  },
-  'CSF Instructions Right-to-Left': {
-    rtl: true,
-    isCSF: true
-  },
-  'CSD/CSP Instructions': {
-    isCSF: false
-  },
-  'CSD/CSP Instructions Right-to-Left': {
-    rtl: true,
-    isCSF: false
-  }
+// TEMPLATE
+
+const Template = args => {
+  const store = createCommonStore(args);
+  return (
+    <Provider store={store}>
+      <TopInstructions />
+    </Provider>
+  );
 };
 
-export default storybook => {
-  const stories = storybook.storiesOf('TopInstructions', module);
+// STORIES
 
-  Object.entries(STORIES).forEach(([name, options]) => {
-    stories.add(name, () => {
-      const store = createCommonStore(options);
-      return (
-        <Provider store={store}>
-          <TopInstructions />
-        </Provider>
-      );
-    });
-  });
+export const CSFInstructions = Template.bind({});
+CSFInstructions.args = {
+  isCSF: true
+};
 
-  return stories;
+export const CSFInstructionsRightToLeft = Template.bind({});
+CSFInstructionsRightToLeft.args = {
+  rtl: true,
+  isCSF: true
+};
+
+export const CSD_CSPInstructions = Template.bind({});
+CSD_CSPInstructions.args = {
+  isCSF: false
+};
+
+export const CSD_CSPInstructionsRightToLeft = Template.bind({});
+CSD_CSPInstructionsRightToLeft.args = {
+  rtl: true,
+  isCSF: false
 };

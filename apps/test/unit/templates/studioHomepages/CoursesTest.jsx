@@ -38,6 +38,7 @@ describe('Courses', () => {
       it('as student', () => {
         const wrapper = mountCourses({isEnglish, isTeacher: false});
         assertComponentsInOrder(wrapper, [
+          'SpecialAnnouncement',
           'CourseBlocksStudentGradeBands',
           'CourseBlocksHoc',
           'LocalClassActionBlock'

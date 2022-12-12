@@ -3,6 +3,14 @@ import React, {Component} from 'react';
 import i18n from '@cdo/locale';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 import {windowOpen} from '@cdo/apps/utils';
+import DropdownButton from '../DropdownButton';
+import Button from '../Button';
+import {
+  isGDocsUrl,
+  gDocsPdfUrl,
+  gDocsMsOfficeUrl,
+  gDocsCopyUrl
+} from './googleDocsUtils';
 
 export default class ResourceList extends Component {
   static propTypes = {
@@ -85,7 +93,7 @@ export default class ResourceList extends Component {
       >
         {resource.name}
       </a>
-      {resource.type && ` -  ${resource.type}`}
+      {resource.type && ` -  ${resource.type} `}
       {resource.download_url && (
         <span>
           {' ('}
@@ -97,6 +105,17 @@ export default class ResourceList extends Component {
           >{`${i18n.download()}`}</a>
           {')'}
         </span>
+      )}
+      {isGDocsUrl(resource.url) && (
+        <DropdownButton
+          text={i18n.makeACopy()}
+          color={Button.ButtonColor.gray}
+          size={Button.ButtonSize.small}
+        >
+          <a href={gDocsPdfUrl(resource.url)}>PDF</a>
+          <a href={gDocsMsOfficeUrl(resource.url)}>Microsoft Office</a>
+          <a href={gDocsCopyUrl(resource.url)}>Google Docs</a>
+        </DropdownButton>
       )}
     </li>
   );

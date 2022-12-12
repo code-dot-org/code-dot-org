@@ -530,11 +530,11 @@ function libraryREADME() {
 }
 
 function checkHeadingNotBlank() {
-  return getHeading() != null;
+  return getHeading() != '' && getHeading() != null;
 }
 
 function checkSubheadingNotBlank() {
-  return getSubheading() != null;
+  return getSubheading() != '' && getSubheading() != null;
 }
 
 function checkHeadingSpecificString(str) {

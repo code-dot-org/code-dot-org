@@ -10,6 +10,7 @@
     ],
     "helper_libraries": [
       "NativeSpriteLab",
+      "zForegroundEffects",
       "zStorybookModule-CSC"
     ],
     "use_default_sprites": "false",
@@ -25,7 +26,7 @@
     "never_autoplay_video": "true",
     "disable_param_editing": "true",
     "disable_if_else_editing": "false",
-    "include_shared_functions": "false",
+    "include_shared_functions": "true",
     "free_play": "false",
     "expand_debugger": "false",
     "debugger_disabled": "false",
@@ -34,24 +35,23 @@
     "mini_toolbox": "false",
     "hide_pause_button": "false",
     "project_template_level_name": "csc_bookcover_template2",
-    "authored_hints": "[]",
-    "long_instructions": "**Add Behaviors**\r\n\r\n\r\n\r\n",
+    "authored_hints": "[{\"hint_class\":\"bottom-out\",\"hint_markdown\":\"Make sure to add a `sprite begins` block and a `behavior` block to your code.\\n\\n<xml>\\n<block type=\\\"gamelab_addBehaviorSimple\\\">\\n  <value name=\\\"SPRITE\\\">\\n    <block type=\\\"gamelab_allSpritesWithAnimation\\\">\\n      <field name=\\\"ANIMATION\\\">\\\"face_peach_1\\\"</field>\\n    </block>\\n  </value>\\n  <value name=\\\"BEHAVIOR\\\">\\n    <block type=\\\"gamelab_behavior_get\\\">\\n      <mutation></mutation>\\n      <field name=\\\"VAR\\\" id=\\\"growing\\\">growing</field>\\n    </block>\\n  </value>\\n</block>\\n</xml>\\n\\n\",\"hint_id\":\"hint1\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/b403be14ec43bed8c004d6ed0a2f87cc/csc_bookcover_behavior.mp3\"}]",
+    "long_instructions": "**Make your sprites change with behaviors!**\r\n\r\n- Add a `sprite begins` block to your code\r\n- Connect one of the new behavior blocks to have your sprite begin changing\r\n- Try different behaviors until you find one that suits your book cover!\r\n\r\n**When you're finished:** You can return to the previous choice levels and choose another extension to add to your book cover!\r\n\r\n\r\n\r\n",
     "instructions_icon": "bear",
-    "video_key": "hello_world_events",
-    "validation_code": "//Make sure [CSC Module Helper Library] is included as a library in this level\r\nif (World.frameCount == 1) {\r\n  //Everything in this if-statement will just run once, during the first frame of your level\r\n  //README() //uncomment this to see the README for the helper library in the console of this level\r\n  //turnOnDebugging() //uncomment this to use a DEBUG global variable to control console.log statements in your code\r\n  \r\n  setFailTime(150); // Frames to wait before failing student\r\n  setDelayTime(90); // Frames to wait after success before stopping program\r\n  setupPrevious(); //Defines the validationProps.previous{} object. To use it, call updatePrevious() at the end of this box\r\n  \r\n  \r\n  addCriteria(function() {\r\n    return true;\r\n  }, \"noSprites\");  // include i18n feedback string\r\n}\r\n//Everything after this will run during each 'tick' of the draw loop in your level\r\n//Be careful about putting console.log statements here\r\n\r\n//Always have this first to get most up-to-date helper variables\r\ngetHelperVars();\r\n\r\n//This is what calls updateValidation in \r\n//https://github.com/code-dot-org/code-dot-org/blob/staging/apps/src/p5lab/spritelab/commands/validationCommands.js\r\n//To check the validation criteria\r\ncheck();\r\n\r\n//Always have this at end to store previous state in validationProps.previous\r\nupdatePrevious();",
     "display_name": "Behaviors",
-    "bubble_choice_description": "Add a behavior to your sprites to have them move around the screen",
+    "bubble_choice_description": "Add a behavior to your sprites to have them change on the screen",
     "preload_asset_list": null,
     "encrypted_examples": [
 
-    ]
+    ],
+    "thumbnail_url": "https://images.code.org/ac20ff31b180f005b6e58c030b16f240-Behaviors.gif"
   },
   "game_id": 64,
   "published": true,
   "created_at": "2022-11-04T00:28:55.000Z",
   "level_num": "custom",
   "user_id": 1196,
-  "audit_log": "[{\"changed_at\":\"2022-11-04T00:28:55.867+00:00\",\"changed\":[\"cloned from \\\"csc_bookcover_foreground\\\"\"],\"cloned_from\":\"csc_bookcover_foreground\"},{\"changed_at\":\"2022-11-04 00:29:22 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"authored_hints\",\"display_name\",\"bubble_choice_description\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-11-04 00:30:09 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2022-11-04T00:28:55.867+00:00\",\"changed\":[\"cloned from \\\"csc_bookcover_foreground\\\"\"],\"cloned_from\":\"csc_bookcover_foreground\"},{\"changed_at\":\"2022-11-04 00:29:22 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"authored_hints\",\"display_name\",\"bubble_choice_description\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-11-04 00:30:09 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-11-04 17:52:59 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"helper_libraries\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-11-04 17:53:45 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"include_shared_functions\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-11-04 17:56:05 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-11-04 18:03:21 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"video_key\",\"validation_code\",\"bubble_choice_description\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-11-04 18:15:46 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-11-04 19:11:47 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-11-04 20:21:35 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"authored_hints\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
@@ -124,6 +124,61 @@
               <field name="ANIMATION">"green_shirt_wave2"</field>
             </block>
           </value>
+        </block>
+        <block type="gamelab_addBehaviorSimple">
+          <value name="SPRITE">
+            <block type="gamelab_allSpritesWithAnimation">
+              <field name="ANIMATION">"green_shirt_wave2"</field>
+            </block>
+          </value>
+        </block>
+        <block type="gamelab_behavior_get">
+          <mutation/>
+          <field name="VAR" id="fluttering">fluttering</field>
+        </block>
+        <block type="gamelab_behavior_get">
+          <mutation/>
+          <field name="VAR" id="growing">growing</field>
+        </block>
+        <block type="gamelab_behavior_get">
+          <mutation/>
+          <field name="VAR" id="jittering">jittering</field>
+        </block>
+        <block type="gamelab_behavior_get">
+          <mutation/>
+          <field name="VAR" id="moving east and looping">moving east and looping</field>
+        </block>
+        <block type="gamelab_behavior_get">
+          <mutation/>
+          <field name="VAR" id="moving north and looping">moving north and looping</field>
+        </block>
+        <block type="gamelab_behavior_get">
+          <mutation/>
+          <field name="VAR" id="moving south and looping">moving south and looping</field>
+        </block>
+        <block type="gamelab_behavior_get">
+          <mutation/>
+          <field name="VAR" id="moving west and looping">moving west and looping</field>
+        </block>
+        <block type="gamelab_behavior_get">
+          <mutation/>
+          <field name="VAR" id="shrinking">shrinking</field>
+        </block>
+        <block type="gamelab_behavior_get">
+          <mutation/>
+          <field name="VAR" id="spinning left">spinning left</field>
+        </block>
+        <block type="gamelab_behavior_get">
+          <mutation/>
+          <field name="VAR" id="spinning right">spinning right</field>
+        </block>
+        <block type="gamelab_behavior_get">
+          <mutation/>
+          <field name="VAR" id="wandering">wandering</field>
+        </block>
+        <block type="gamelab_behavior_get">
+          <mutation/>
+          <field name="VAR" id="wobbling">wobbling</field>
         </block>
       </xml>
     </toolbox_blocks>

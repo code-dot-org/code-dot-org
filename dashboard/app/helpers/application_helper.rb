@@ -47,11 +47,6 @@ module ApplicationHelper
     end
   end
 
-  def check_mark_html
-    #raw "&#x2714;"
-    image_tag(image_url('white-checkmark.png'))
-  end
-
   def activity_css_class(user_level)
     best_activity_css_class([user_level])
   end

@@ -12,7 +12,7 @@
     },
     "new_name": null,
     "family_name": "dance-extras-2019",
-    "serialized_at": "2022-03-18 18:39:01 UTC",
+    "serialized_at": "2022-11-07 20:23:24 UTC",
     "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -37,7 +37,7 @@
   "lessons": [
     {
       "key": "Dance Party - Go Further",
-      "name": "Keep on Dancing (2019)",
+      "name": "Keep on Dancing",
       "absolute_position": 1,
       "lockable": false,
       "has_lesson_plan": true,

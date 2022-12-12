@@ -10,7 +10,7 @@
     },
     "new_name": null,
     "family_name": "csa-draft-pl",
-    "serialized_at": "2022-11-03 19:13:46 UTC",
+    "serialized_at": "2022-11-10 15:25:30 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "facilitator",
@@ -1322,6 +1322,31 @@
       "assessment": false,
       "properties": {
         "level_keys": [
+          "vpl-csa-module-6-2022-substring-method-video"
+        ],
+        "progression": "Strings in Unit 6 (~50 minutes)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "vpl-csa-module-6-2022-substring-method-video"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "csa-draft-pl",
+        "activity_section.key": "15d1e4b2-3819-4496-b82d-fd0c0857b3ff"
+      },
+      "level_keys": [
+        "vpl-csa-module-6-2022-substring-method-video"
+      ]
+    },
+    {
+      "chapter": 38,
+      "position": 6,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
           "vpl-csa-module-6-2022-u6l8-level1-clone"
         ],
         "progression": "Strings in Unit 6 (~50 minutes)"
@@ -1341,9 +1366,34 @@
       ]
     },
     {
-      "chapter": 38,
-      "position": 6,
-      "activity_section_position": 5,
+      "chapter": 39,
+      "position": 7,
+      "activity_section_position": 6,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "vpl-csa-module-6-2022-compareto-method-video"
+        ],
+        "progression": "Strings in Unit 6 (~50 minutes)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "vpl-csa-module-6-2022-compareto-method-video"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "csa-draft-pl",
+        "activity_section.key": "15d1e4b2-3819-4496-b82d-fd0c0857b3ff"
+      },
+      "level_keys": [
+        "vpl-csa-module-6-2022-compareto-method-video"
+      ]
+    },
+    {
+      "chapter": 40,
+      "position": 8,
+      "activity_section_position": 7,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1366,8 +1416,8 @@
       ]
     },
     {
-      "chapter": 39,
-      "position": 7,
+      "chapter": 41,
+      "position": 9,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -1388,27 +1438,6 @@
       },
       "level_keys": [
         "vpl-csa-module-6-wrap-up-2022"
-      ]
-    },
-    {
-      "chapter": 40,
-      "position": 8,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "vpl-csa-module-100-2023"
-        ],
-        "lesson.key": "lesson-5",
-        "lesson_group.key": "",
-        "script.name": "csa-draft-pl",
-        "activity_section.key": "9db87391-a37c-4f00-92f2-10cf810d8935"
-      },
-      "level_keys": [
-        "vpl-csa-module-100-2023"
       ]
     }
   ],
@@ -1847,9 +1876,33 @@
     },
     {
       "seeding_key": {
+        "level.key": "vpl-csa-module-6-2022-substring-method-video",
+        "script_level.level_keys": [
+          "vpl-csa-module-6-2022-substring-method-video"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "csa-draft-pl",
+        "activity_section.key": "15d1e4b2-3819-4496-b82d-fd0c0857b3ff"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "vpl-csa-module-6-2022-u6l8-level1-clone",
         "script_level.level_keys": [
           "vpl-csa-module-6-2022-u6l8-level1-clone"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "csa-draft-pl",
+        "activity_section.key": "15d1e4b2-3819-4496-b82d-fd0c0857b3ff"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "vpl-csa-module-6-2022-compareto-method-video",
+        "script_level.level_keys": [
+          "vpl-csa-module-6-2022-compareto-method-video"
         ],
         "lesson.key": "lesson-5",
         "lesson_group.key": "",
@@ -1879,18 +1932,6 @@
         "lesson_group.key": "",
         "script.name": "csa-draft-pl",
         "activity_section.key": "91881a37-7b22-437e-89ad-52f300fe323e"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "vpl-csa-module-100-2023",
-        "script_level.level_keys": [
-          "vpl-csa-module-100-2023"
-        ],
-        "lesson.key": "lesson-5",
-        "lesson_group.key": "",
-        "script.name": "csa-draft-pl",
-        "activity_section.key": "9db87391-a37c-4f00-92f2-10cf810d8935"
       }
     }
   ],

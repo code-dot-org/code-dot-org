@@ -10,6 +10,7 @@
     ],
     "helper_libraries": [
       "NativeSpriteLab",
+      "zForegroundEffects",
       "zStorybookModule-CSC"
     ],
     "use_default_sprites": "false",
@@ -34,13 +35,13 @@
     "mini_toolbox": "false",
     "hide_pause_button": "false",
     "project_template_level_name": "csc_bookcover_template2",
-    "authored_hints": "[]",
-    "long_instructions": "**Add Burst Effects**\r\n\r\n\r\n\r\n",
+    "authored_hints": "[{\"hint_class\":\"bottom-out\",\"hint_markdown\":\"Make sure to add a `create burst effect` block to your code.\\n\\n<xml>\\n<block type=\\\"gamelab_makeBurst\\\">\\n  <field name=\\\"EFFECT\\\">\\\"burst\\\"</field>\\n  <field name=\\\"ANIMATION_NAME\\\">\\\"book\\\"</field>\\n  <value name=\\\"NUM\\\">\\n    <block type=\\\"math_number\\\">\\n      <field name=\\\"NUM\\\">3</field>\\n    </block>\\n  </value>\\n</block>\\n</xml>\\n\",\"hint_id\":\"hint1\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/e20151e8abfbbce2b1d412b645b636e7/csc_bookcover_burst.mp3\"}]",
+    "long_instructions": "**Add Burst Effects** to create an exciting event for your book cover\r\n\r\n- Add a `create burst effect` block to your code\r\n- Choose a burst effect from the dropdown\r\n- Enter the number of sprites you'd like to appear in your affect\r\n- Choose the sprite you'd like to appear\r\n- Run your code to see the effect!\r\n\r\n**When you're finished:** You can return to the previous choice levels and choose another extension to add to your book cover!\r\n\r\n",
     "instructions_icon": "bear",
     "video_key": "hello_world_events",
-    "validation_code": "//Make sure [CSC Module Helper Library] is included as a library in this level\r\nif (World.frameCount == 1) {\r\n  //Everything in this if-statement will just run once, during the first frame of your level\r\n  //README() //uncomment this to see the README for the helper library in the console of this level\r\n  //turnOnDebugging() //uncomment this to use a DEBUG global variable to control console.log statements in your code\r\n  \r\n  setFailTime(150); // Frames to wait before failing student\r\n  setDelayTime(90); // Frames to wait after success before stopping program\r\n  setupPrevious(); //Defines the validationProps.previous{} object. To use it, call updatePrevious() at the end of this box\r\n  \r\n  \r\n  addCriteria(function() {\r\n    return true;\r\n  }, \"noSprites\");  // include i18n feedback string\r\n}\r\n//Everything after this will run during each 'tick' of the draw loop in your level\r\n//Be careful about putting console.log statements here\r\n\r\n//Always have this first to get most up-to-date helper variables\r\ngetHelperVars();\r\n\r\n//This is what calls updateValidation in \r\n//https://github.com/code-dot-org/code-dot-org/blob/staging/apps/src/p5lab/spritelab/commands/validationCommands.js\r\n//To check the validation criteria\r\ncheck();\r\n\r\n//Always have this at end to store previous state in validationProps.previous\r\nupdatePrevious();",
     "display_name": "Burst Effects",
     "bubble_choice_description": "Add burst effects to create new experiences on your book cover",
+    "thumbnail_url": "https://images.code.org/f661c24c9ac458e1b77cde7f3969a8a7-burst.gif",
     "preload_asset_list": null,
     "encrypted_examples": [
 
@@ -51,7 +52,7 @@
   "created_at": "2022-11-04T00:30:47.000Z",
   "level_num": "custom",
   "user_id": 1196,
-  "audit_log": "[{\"changed_at\":\"2022-11-04T00:30:47.793+00:00\",\"changed\":[\"cloned from \\\"csc_bookcover_behavior\\\"\"],\"cloned_from\":\"csc_bookcover_behavior\"},{\"changed_at\":\"2022-11-04 00:31:27 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"display_name\",\"bubble_choice_description\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2022-11-04T00:30:47.793+00:00\",\"changed\":[\"cloned from \\\"csc_bookcover_behavior\\\"\"],\"cloned_from\":\"csc_bookcover_behavior\"},{\"changed_at\":\"2022-11-04 00:31:27 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"display_name\",\"bubble_choice_description\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-11-04 18:38:57 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"validation_code\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2022-11-04 19:14:29 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-11-04 19:32:40 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-11-04 19:33:34 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-11-04 19:45:31 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"helper_libraries\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-11-04 20:14:12 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2022-11-04 20:16:11 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"authored_hints\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2022-11-04 20:16:58 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"authored_hints\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2022-11-04 20:18:30 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"authored_hints\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
@@ -85,6 +86,7 @@
             </block>
           </value>
         </block>
+        <block type="storylab_clearHeadings"/>
         <block type="gamelab_setBackgroundImageAs">
           <field name="IMG">"front_of_house"</field>
         </block>
@@ -122,6 +124,15 @@
           <value name="SPRITE">
             <block type="gamelab_allSpritesWithAnimation" can_disconnect_from_parent="false">
               <field name="ANIMATION">"green_shirt_wave2"</field>
+            </block>
+          </value>
+        </block>
+        <block type="gamelab_makeBurst">
+          <field name="EFFECT">"burst"</field>
+          <field name="ANIMATION_NAME">"book"</field>
+          <value name="NUM">
+            <block type="math_number">
+              <field name="NUM">3</field>
             </block>
           </value>
         </block>

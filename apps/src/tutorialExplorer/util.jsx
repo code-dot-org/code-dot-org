@@ -76,7 +76,13 @@ export function getTagString(prefix, tagString) {
     student_experience_comfortable: i18n.filterStudentExperienceComfortable(),
 
     'activity_type_online-tutorial': i18n.filterActivityTypeOnlineTutorial(),
-    'activity_type_lesson-plan': i18n.filterActivityTypeLessonPlan()
+    'activity_type_lesson-plan': i18n.filterActivityTypeLessonPlan(),
+
+    accessibility_screenreader: i18n.filterAccessibilityScreenReader(),
+    accessibility_tts: i18n.filterAccessibilityTTS(),
+    accessibility_keyboard: i18n.filterAccessibilityKeyboard(),
+    accessibility_captions: i18n.filterAccessibilityCaptions(),
+    accessibility_highcontrast: i18n.filterAccessibilityHighContrast()
   };
 
   return tagString

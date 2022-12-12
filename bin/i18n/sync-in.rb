@@ -32,6 +32,7 @@ def sync_in
   redact_level_content
   redact_block_content
   redact_script_and_course_content
+  redact_labs_content
   localize_markdown_content
   puts "Sync in completed successfully"
 rescue => e
@@ -122,11 +123,26 @@ def localize_external_sources
   Dir.glob(dataset_files).each do |dataset_file|
     original_dataset = JSON.parse(File.read(dataset_file))
 
-    # Currently only including fields for translation.
-    # Use field id as unique identifier.
-    fields_as_hash = original_dataset["fields"].map {|field| [field["id"], field]}.to_h
+    # Converts array to map and uses the field id as a unique identifier.
+    fields_as_hash = original_dataset["fields"].map do |field|
+      [
+        field["id"],
+        {
+          "id" => field["id"],
+          "description" => field["description"]
+        }
+      ]
+    end.to_h
+
     final_dataset = {
-      "fields" => fields_as_hash
+      "fields" => fields_as_hash,
+      "card" => {
+        "description" => original_dataset.dig("card", "description"),
+        "context" => {
+          "potentialUses" => original_dataset.dig("card", "context", "potentialUses"),
+          "potentialMisuses" => original_dataset.dig("card", "context", "potentialMisuses")
+        }
+      }
     }
 
     File.open(dataset_file, "w") do |f|
@@ -225,6 +241,17 @@ def get_i18n_strings(level)
     documents.each do |document|
       processed_doc = Nokogiri::HTML(document, &:noblanks)
       i18n_strings['placeholder_texts'].merge! get_all_placeholder_text_types(processed_doc)
+    end
+
+    # start_html
+    if level.start_html
+      start_html = Nokogiri::XML(level.start_html, &:noblanks)
+      i18n_strings['start_html'] = Hash.new unless level.start_html.empty?
+
+      # match any element that contains text
+      start_html.xpath('//*[text()[normalize-space()]]').each do |element|
+        i18n_strings['start_html'][element.text] = element.text
+      end
     end
 
     level_xml = Nokogiri::XML(level.to_xml, &:noblanks)
@@ -586,6 +613,23 @@ def redact_level_content
   end
 end
 
+# These files are synced in using the `bin/i18n-codeorg/in.sh` script.
+def redact_labs_content
+  puts "Redacting *labs content"
+
+  # Only CSD labs are redacted, since other labs were already part of the i18n pipeline and redaction would edit
+  # strings existing in crowdin already
+  redactable_labs = %w(applab gamelab weblab)
+
+  redactable_labs.each do |lab_name|
+    source_path = File.join(I18N_SOURCE_DIR, "blockly-mooc", lab_name + ".json")
+    backup_path = source_path.sub("source", "original")
+    FileUtils.mkdir_p(File.dirname(backup_path))
+    FileUtils.cp(source_path, backup_path)
+    RedactRestoreUtils.redact(source_path, source_path, ['link'])
+  end
+end
+
 def redact_block_content
   puts "Redacting block content"
 
@@ -645,12 +689,19 @@ def localize_markdown_content
     hourofcode/unplugged-conditionals-with-cards.md.partial
     international/about.md.partial
     poetry.md.partial
+    ../views/hoc2022_create_activities.md.partial
+    ../views/hoc2022_play_activities.md.partial
+    ../views/hoc2022_explore_activities.md.partial
   ]
   markdown_files_to_localize.each do |path|
     original_path = File.join('pegasus/sites.v3/code.org/public', path)
     original_path_exists = File.exist?(original_path)
     puts "#{original_path} does not exist" unless original_path_exists
     next unless original_path_exists
+    # This reforms the `../` relative paths so they appear as though they are
+    # within the `public` path. This is a legacy solution to keep things clean
+    # when viewed by the translators in crowdin.
+    path = path[3...] if path.start_with? "../"
     # Remove the .partial if it exists
     source_path = File.join(I18N_SOURCE_DIR, 'markdown/public', File.dirname(path), File.basename(path, '.partial'))
     FileUtils.mkdir_p(File.dirname(source_path))

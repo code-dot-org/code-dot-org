@@ -5,21 +5,35 @@ description 'description here'
 markdown <<MARKDOWN
 # Teamwork
 
-##### Fostering an inclusive culture and collaborating around computing are core practices in the CS K12 Framework. 
+#####  
 
-## The role of the teacher
+## What is my role as the teacher? 
 
 ##### Students may need guidance on effective strategies for teamwork and collaboration. For example, some students may suggest a "majority rules" approach to disagreement. Challenge students to think of how that may exclude valuable perspectives and whether there are better strategies that can incorporate the entire team's voice.
 
-## Teamwork in the curriculum
+## How do I support my students in working effectively as a team? 
 
-##### Opportunities for students to work in pairs or small teams are included throughout the CS Discoveries curriculum. Many of the end of unit projects are designed to be completed as small teams. To support student collaboration, you might consider having students complete a <a href="https://docs.google.com/document/d/1pfwrtSLjj1LCqneR_lmyUfw2z0UkkWSXTq48AxuIhyo/view" target="blank" rel="noopener noreferrer">Student Guide to Team Planning</a> before beginning a group project. 
+<img src="https://images.code.org/c0f27b3115d8f4fdd28c403338475725-image-1667760747079.jpg" alt="Five students work togther as a team." width="400px" style="border-radius:10px; float:right; margin: 0 0 40px 40px;">
 
-##### The curriculum includes a video series to support students in developing effective teamwork skills. These videos first appear in chapter 2 of the Web Design unit. If you are not teaching the Web Design unit, you might consider showing these videos before you start your first team project. You might also choose to revisit these videos each time you begin a new team project. 
+##### Students may have different ideas for the advantages of working on a team. You can help them see that **people can get more done in a team** and that **bringing in a diversity of ideas will make a project better.** Below are some strategies students may use to support effective teamwork: 
 
-## Let's watch the teamwork videos! 
+* ##### Have a plan.
+* ##### Give everyone a special role.
+* ##### Celebrate successes of your teammates.
+* ##### Have fun!
+* ##### Figure out everyone's strengths.
+* ##### Listen to and respect everyone's ideas.
+* ##### Be confident in sharing your idea
 
+##### Students should also understand that **disagreement is a normal part of teamwork** and have strategies for constructively dealing with disagreement in their teams.
 
+* ##### Appreciate that your team has lots of ideas, even if you don't agree with all of them.
+* ##### Be curious about the other ideas, and try to understand what is good about them.
+* ##### Compromise with your teammates, taking good parts of lots of ideas and putting them together.
+
+## How is teamwork connected to the curriculum?
+
+##### Fostering an inclusive culture and collaborating around computing are core practices in the CS K12 Framework. Opportunities for students to work in pairs or small teams are included throughout the curriculum. Many of the end of unit projects are designed to be completed as small teams. 
 
 
 MARKDOWN

@@ -21,7 +21,8 @@ function representManipulative_test(var1, s1costume, behavior) {
   var x = 20;
   var y = 400-20;
   for (counter_i = 0; counter_i < var1; counter_i++) {
-    var spriteId = createNewSprite({name: "manipulative" + counter_i}, s1costume, {"x": x, "y": y});
+    var spriteId = makeNewSpriteAnon(s1costume, ({"x":x,"y":y}));
+    //var spriteId = createNewSprite({name: "manipulative" + counter_i}, s1costume, {"x": x, "y": y});
     setProp(({id: spriteId}), "isManipulative", 47);
     //makeNewSpriteAnon(s1costume, {"x": x, "y": y});
     console.log();

@@ -46,7 +46,7 @@ class Bounce < Grid
     return unless skin && theme
     # the sports skin can have any theme except retro
     sport_skin_non_sport_theme = (
-      skin === "sports" && theme === "retro"
+      skin == "sports" && theme == "retro"
     )
 
     # the bounce and basketball skins can only have retro or basketball themes

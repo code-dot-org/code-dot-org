@@ -53,7 +53,6 @@ describe('Google Blockly Wrapper', () => {
       'FieldLabel',
       'FieldParameter',
       'FieldRectangularDropdown',
-      'FieldTextInput',
       'fish_locale',
       'Flyout',
       'FunctionalBlockUtils',

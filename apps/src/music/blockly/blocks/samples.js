@@ -1,6 +1,5 @@
 import {BlockTypes} from '../blockTypes';
-import {getStaticFilePath} from '@cdo/apps/music/utils';
-import {PLAY_ICON} from '@cdo/apps/music/constants';
+import Globals from '../../globals';
 
 // Examine chain of parents to see if one is 'when_run'.
 const isBlockInsideWhenRun = ctx => {
@@ -17,69 +16,16 @@ const isBlockInsideWhenRun = ctx => {
 export const playSound = {
   definition: {
     type: BlockTypes.PLAY_SOUND,
-    message0: '%1 play %2 at measure %3',
+    message0: 'play %1 at measure %2',
     args0: [
       {
-        type: 'field_image',
-        src: getStaticFilePath(PLAY_ICON),
-        width: 18,
-        height: 23,
-        alt: '*',
-        flipRtl: false,
-        name: 'image'
-      },
-      {
-        type: 'input_dummy',
-        name: 'sound'
-      },
-      {
-        type: 'input_value',
-        name: 'measure'
-      }
-    ],
-    inputsInline: true,
-    previousStatement: null,
-    nextStatement: null,
-    colour: 230,
-    tooltip: 'play sound',
-    helpUrl: '',
-    extensions: [
-      'dynamic_menu_extension',
-      'preview_extension',
-      'clear_preview_on_change_extension'
-    ]
-  },
-  generator: ctx =>
-    'MusicPlayer.playSoundAtMeasureById("' +
-    ctx.getFieldValue('sound') +
-    '", ' +
-    Blockly.JavaScript.valueToCode(
-      ctx,
-      'measure',
-      Blockly.JavaScript.ORDER_ASSIGNMENT
-    ) +
-    ', ' +
-    (isBlockInsideWhenRun(ctx) ? 'true' : 'false') +
-    ');\n'
-};
-
-export const playSample = {
-  definition: {
-    type: BlockTypes.PLAY_SAMPLE,
-    message0: '%1 play %2 at measure %3',
-    args0: [
-      {
-        type: 'field_image',
-        src: 'https://code.org/shared/images/play-button.png',
-        width: 15,
-        height: 20,
-        alt: '*',
-        flipRtl: false
-      },
-      {
-        type: 'input_value',
-        name: 'sample',
-        check: 'Sample'
+        type: 'field_sounds',
+        name: 'sound',
+        getLibrary: () => Globals.getLibrary(),
+        playPreview: (id, onStop) => {
+          Globals.getPlayer().previewSound(id, onStop);
+        },
+        currentValue: 'pop/cafe_beat'
       },
       {
         type: 'input_value',
@@ -94,12 +40,8 @@ export const playSample = {
     helpUrl: ''
   },
   generator: ctx =>
-    'MusicPlayer.playSoundAtMeasureByName("' +
-    Blockly.JavaScript.valueToCode(
-      ctx,
-      'sample',
-      Blockly.JavaScript.ORDER_ASSIGNMENT
-    ) +
+    'MusicPlayer.playSoundAtMeasureById("' +
+    ctx.getFieldValue('sound') +
     '", ' +
     Blockly.JavaScript.valueToCode(
       ctx,
@@ -109,23 +51,4 @@ export const playSample = {
     ', ' +
     (isBlockInsideWhenRun(ctx) ? 'true' : 'false') +
     ');\n'
-};
-
-export const sample = {
-  definition: {
-    type: BlockTypes.SAMPLE,
-    message0: '%1',
-    args0: [
-      {
-        type: 'field_label_serializable',
-        name: 'sample'
-      }
-    ],
-    output: 'Sample',
-    colour: 42
-  },
-  generator: ctx => [
-    ctx.getFieldValue('sample'),
-    Blockly.JavaScript.ORDER_ATOMIC
-  ]
 };

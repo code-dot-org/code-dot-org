@@ -346,7 +346,7 @@ exports.mathBlockXml = function(type, inputs, titles) {
 };
 
 /**
- * Generate xml for a functional defintion
+ * Generate xml for a functional definition
  * @param {string} name The name of the function
  * @param {string} outputType Function's output type
  * @param {Object<string, string>[]} argList Name and type for each arg
