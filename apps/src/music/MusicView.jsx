@@ -5,7 +5,6 @@ import classNames from 'classnames';
 import {Provider, connect} from 'react-redux';
 import queryString from 'query-string';
 import Instructions from './Instructions';
-import SharePlaceholder from './SharePlaceholder';
 import Controls from './Controls';
 import Timeline from './Timeline';
 import MusicPlayer from './player/MusicPlayer';
@@ -298,46 +297,23 @@ class UnconnectedMusicView extends React.Component {
   };
 
   renderInstructions(position) {
-    if (position === InstructionsPositions.TOP) {
-      return (
-        <div
-          id="instructions-area"
-          className={classNames(
-            moduleStyles.instructionsArea,
-            moduleStyles.instructionsTop
-          )}
-        >
-          <Instructions
-            instructions={this.state.instructions}
-            baseUrl={baseUrl}
-          />
-          <div
-            id="share-area"
-            className={classNames(
-              moduleStyles.shareArea,
-              moduleStyles.shareTop
-            )}
-          >
-            <SharePlaceholder />
-          </div>
-        </div>
-      );
-    }
-
     return (
       <div
         className={classNames(
           moduleStyles.instructionsArea,
-          moduleStyles.instructionsSide,
-          position === InstructionsPositions.LEFT
-            ? moduleStyles.instructionsLeft
-            : moduleStyles.instructionsRight
+          position === InstructionsPositions.TOP
+            ? moduleStyles.instructionsTop
+            : moduleStyles.instructionsSide,
+          position === InstructionsPositions.LEFT &&
+            moduleStyles.instructionsLeft,
+          position === InstructionsPositions.RIGHT &&
+            moduleStyles.instructionsRight
         )}
       >
         <Instructions
           instructions={this.state.instructions}
           baseUrl={baseUrl}
-          vertical={true}
+          vertical={position !== InstructionsPositions.TOP}
           right={position === InstructionsPositions.RIGHT}
         />
       </div>
