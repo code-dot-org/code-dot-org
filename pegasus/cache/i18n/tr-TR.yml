@@ -1304,7 +1304,11 @@ tr-TR:
   coursed-2021_name: Kurs D (2021)
   coursee-2021_name: Kurs E (2021)
   coursef-2021_name: Kurs F (2021)
-  coursed-2022_name: Kurs D (2021)
+  coursea-2022_name: Kurs A (2022)
+  courseb-2022_name: Kurs B (2022)
+  coursed-2022_name: Kurs D (2022)
+  coursee-2022_name: Kurs E (2022)
+  coursef-2022_name: Kurs F (2022)
   express-2018_name: Hızlı Kurs
   pre-express-2018_name: Okul Öncesi Çocuklar için Hızlandırılmış Kurs (2018)
   express-2019_name: Hızlandırılmış Kurs (2019)
@@ -1313,6 +1317,7 @@ tr-TR:
   pre-express-2020_name: Okul Öncesi Çocuklar için Hızlandırılmış Kurs (2020)
   express-2021_name: Hızlandırılmış Kurs (2021)
   pre-express-2021_name: Okul Öncesi Çocuklar için Hızlandırılmış Kurs (2021)
+  express-2022_name: Hızlandırılmış Kurs (2022)
   pre-express-2022_name: Okul Öncesi Çocuklar için Hızlandırılmış Kurs (2022)
   csd2_name: Ünite 2 - Ağ Geliştirme
   csd3_name: Ünite 3 - Animasyonlar ve Oyunlar
