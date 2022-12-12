@@ -49,7 +49,7 @@
   "scatterPlotLabel": "Información de la relación",
   "addFeatureButton": "Añadir una característica",
   "columnType_numerical": "numérico",
-  "columnType_categorical": "categórico",
+  "columnType_categórico": "categórico",
   "selectDatasetUploadFileButton": "Sube {fileType}",
   "selectDatasetErrorTooFewRows": "Por favor sube un {fileType} con al menos {count} filas.",
   "selectDatasetErrorTooFewColumns": "Por favor sube un {fileType} con al menos {count} columnas.",
@@ -332,92 +332,92 @@
     "zoo": {
       "fields": {
         "Animal Name": {
-          "type": "categorical",
+          "type": "categórico",
           "id": "Nombre del Animal",
           "description": "Nombre del animal."
         },
         "Hair": {
-          "type": "categorical",
+          "type": "categórico",
           "id": "Pelo",
           "description": "¿El animal tiene pelo?"
         },
         "Feathers": {
-          "type": "categorical",
+          "type": "categórico",
           "id": "Plumas",
           "description": "¿El animal tiene plumas?"
         },
         "Eggs": {
-          "type": "categorical",
+          "type": "categórico",
           "id": "Huevos",
           "description": "¿El animal pone huevos?"
         },
         "Milk": {
-          "type": "categorical",
+          "type": "categórico",
           "id": "Leche",
           "description": "¿El animal produce leche?"
         },
         "Airborne": {
-          "type": "categorical",
+          "type": "categórico",
           "id": "Aéreo",
           "description": "¿El animal vuela?"
         },
         "Aquatic": {
-          "type": "categorical",
+          "type": "categórico",
           "id": "Acuático",
           "description": "¿El animal vive en el agua?"
         },
         "Predator": {
-          "type": "categorical",
+          "type": "categórico",
           "id": "Depredador",
           "description": "¿El animal es un depredador?"
         },
         "Toothed": {
-          "type": "categorical",
+          "type": "categórico",
           "id": "Dentado",
           "description": "¿El animal tiene dientes?"
         },
         "Backbone": {
-          "type": "categorical",
+          "type": "categórico",
           "id": "Vertebrado",
           "description": "¿El animal es vertebrado?"
         },
         "Breathes": {
-          "type": "categorical",
+          "type": "categórico",
           "id": "Respira",
           "description": "¿El animal respira?"
         },
         "Venomous": {
-          "type": "categorical",
+          "type": "categórico",
           "id": "Venenoso",
           "description": "¿El animal es venenoso?"
         },
         "Fins": {
-          "type": "categorical",
+          "type": "categórico",
           "id": "Aletas",
           "description": "¿El animal tiene aletas?"
         },
         "Legs": {
-          "type": "categorical",
+          "type": "categórico",
           "id": "Patas",
           "description": "¿Cuántas patas tiene el animal?"
         },
         "Tail": {
-          "type": "categorical",
+          "type": "categórico",
           "id": "Cola",
           "description": "¿El animal tiene cola?"
         },
         "Domestic": {
-          "type": "categorical",
+          "type": "categórico",
           "id": "Doméstico",
           "description": "¿El animal es doméstico?"
         },
         "Catsize": {
-          "type": "categorical",
+          "type": "categórico",
           "id": "Tamaño de Gato",
           "description": "¿Es el animal de tamaño similar al de un gato?"
         },
         "Class": {
-          "type": "categorical",
+          "type": "categórico",
           "id": "Clase",
           "description": "¿Qué tipo de animal es?"
         }
