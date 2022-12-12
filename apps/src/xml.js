@@ -5,15 +5,16 @@ exports.serialize = function(node) {
 };
 
 /**
- * Parses a single root element string, wrapping it in an <xml/> element.
+ * Parses a single root element string, optionally wrapping it in an <xml/> element.
  * @param {string} text
+ * @param {?boolean} noWrap if true, don't wrap in <xml/> element
  * @return {Element}
  */
-exports.parseElement = function(text) {
+exports.parseElement = function(text, noWrap = false) {
   var parser = new DOMParser();
   text = text.trim();
   var dom =
-    text.indexOf('<xml') === 0
+    text.indexOf('<xml') === 0 || noWrap
       ? parser.parseFromString(text, 'text/xml')
       : parser.parseFromString('<xml>' + text + '</xml>', 'text/xml');
   var errors = dom.getElementsByTagName('parsererror');
