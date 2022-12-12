@@ -35,8 +35,8 @@
   "peerDependencies": {
     "lodash": "^4.17.5",
     "radium": "^0.25.2",
-    "react": "~15.4.0",
-    "react-dom": "~15.4.0"
+    "react": "~16.14.0",
+    "react-dom": "~16.14.0"
   },
   "devDependencies": {
     "@code-dot-org/redactable-markdown": "^0.4.0",
