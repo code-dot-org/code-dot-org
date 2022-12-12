@@ -122,7 +122,6 @@ class JoinSection extends React.Component {
             placeholder={i18n.joinSectionPlaceholder()}
           />
           <Button
-            __useDeprecatedTag
             onClick={this.joinSection}
             className="ui-test-join-section"
             color={Button.ButtonColor.gray}
