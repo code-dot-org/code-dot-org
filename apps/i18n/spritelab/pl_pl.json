@@ -252,5 +252,11 @@
   "cscParticlesCompleteAllTouches": "Upewnij się, że przechodzisz przez wszystkie etapy tego eksperymentu. Najpierw spójrz na cząstki wody pod mikroskopem, a następnie zmień stan wody z płomieniem, a na koniec spójrz na cząstki „pustej” szklanki pod mikroskopem",
   "cscParticlesCompleteAllChemTouches": "Upewnij się, że przechodzisz przez wszystkie etapy tego eksperymentu: Najpierw spójrz na cząstki soku z cytryny pod mikroskopem, następnie spowoduj zmianę chemiczną za pomocą sody oczyszczonej, a na koniec spójrz na cząstki nowej substancji pod mikroskopem",
   "cscParticlesNoLabSetupBlock": "Upewnij się, że dodałeś blok LabSetup do swojego programu.",
-  "cscBookcoverPromptNotInEvent": "Dodałeś blok drukowania do kodu, ale nie dołączyłeś go do bloku zdarzenia.\nUpewnij się, że blok drukowania jest dołączony pod blokiem zdarzenia `po odpowiedzi na monit`"
+  "cscLandmarkMissingEvent": "Pamiętaj, aby dodać blok z powiedzeniem w swoim bloku zdarzenia. Następnie użyj klawiszy strzałek, aby przenieść przewodnika do punktów orientacyjnych.",
+  "spriteSayUp": "Twój duszek nic nie powiedział, kiedy nacisnąłeś strzałkę w górę.",
+  "spriteSayDown": "Twój duszek nic nie powiedział, kiedy nacisnąłeś strzałkę w dół.",
+  "cscBookcoverMatchSpriteSpeech": "Upewnij się, że wszystkie kostiumy duszka pasują do siebie.",
+  "cscBookcoverPromptNotInEvent": "Dodałeś blok drukowania do kodu, ale nie dołączyłeś go do bloku zdarzenia.\nUpewnij się, że blok drukowania jest dołączony pod blokiem zdarzenia `po odpowiedzi na monit`",
+  "cscBookcoverPrintNotInEvent": "Dodałeś blok drukowania do kodu, ale nie dołączyłeś go do bloku zdarzenia.\nUpewnij się, że blok drukowania jest podłączony pod blokiem zdarzenia `kiedy odpowiedziano na zachętę`.",
+  "moveAndSpeak": "Upewnij się, że blok mowy jest podłączony pod blokiem zdarzenia `kiedy naciśnięta strzałka do góry`."
 }
