@@ -65,6 +65,7 @@
       # and staging environments
       # merge_lb_to_staging is also known as DTS or "deploy to staging"
       cronjob at:'35 7 * * 1-5', do:deploy_dir('bin', 'cron', 'merge_lb_to_staging')
+
       
       # This should be run after the commit_content job that happens on the levelbuilder
       # environment.
@@ -85,6 +86,7 @@
       cronjob at:'30 7 * * 1-5', do:deploy_dir('bin', 'cron', 'commit_content')
       cronjob at:'18 9 * * 1-5', do:deploy_dir('bin', 'cron', 'commit_content')
     end
+
 
     if node.chef_environment == 'production' # production daemon
       cronjob at:'30 14 * * *', do:dashboard_dir('bin','scheduled_pd_workshop_emails')
