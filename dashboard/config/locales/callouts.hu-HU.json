@@ -1396,14 +1396,8 @@
         "courseA_EOC_playlab_people2022": {
           "question_mark": "?"
         },
-        "courseB_artist_loops3_2021": {
-          "courseB_artist_loops3_1": "Ezekből az eszköztárban lévő blokkokból csak egyet használhatsz. Hogyan használod fel őket?"
-        },
-        "courseB_collector_loops1_2021": {
-          "courseB_collector_loops1_1": "Használd ezt a blokkot, hogy felszedd a kincset."
-        },
-        "courseB_playlab_events6_2021": {
-          "courseB_playlab_events6_a": "Használd a zöld legördülő menüt az irányok megváltoztatásához."
+        "courseD_collector_ramp8": {
+          "courseD_collector_ramp8_1": "Használd ezt a blokkot, hogy egy kincset felvegyél.  "
         }
       }
     }
