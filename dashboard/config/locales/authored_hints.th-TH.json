@@ -3186,7 +3186,7 @@
         "courseC_starWars_loops4_copy": {
           "courseC_starWars_loops4_c": "คลิกที่ลูกศรเล็กๆที่อยู่ติดกับคำว่า \"ซ้าย\" บนบล็อกหัน จะช่วยให้คุณสามารถเปลี่ยนเป็น \"ขวา\" ได้",
           "courseC_starWars_loops4_a": "ให้ใช้บล็อก `ทำซ้ำ` สองบล็อก",
-          "courseC_starWars_loops4_b": "ลูป `ทำซ้ำ` แต่ละลูปจะมีเพียงคำสั่งหนึ่งเดียวอยู่ภายใน คือ `ไปข้างหน้า`"
+          "courseC_starWars_loops4_b": "ลูป `ทำซ้ำ` แต่ละลูปจะมีเพียงคำสั่งหนึ่งเดียวอยู่ภายใน คือ ` ไปข้างหน้า `"
         },
         "courseC_starWars_loops5": {
           "courseC_starWars_loops5_b": "การที่จะเคลื่อนที่ไปด้านล่างได้นั้น คุณต้องหันก่อนแล้วเคลื่อนที่ไปข้างหน้า",
@@ -3194,7 +3194,7 @@
         },
         "courseC_starWars_loops5_copy": {
           "courseC_starWars_loops5_b": "การที่จะเคลื่อนที่ไปด้านล่างได้นั้น คุณต้องหันก่อนแล้วเคลื่อนที่ไปข้างหน้า",
-          "courseC_starWars_loops5_a": "โซลูชั่นที่ดีที่สุด คือดารใช้บล็อกหันหนึ่งครั้ง ตามด้วยบล็อก `ไปข้างหน้า` หนึ่งบล็อก แล้วตามด้วยบล็อกหันอีกหนึ่งครั้ง จบด้วยลูปหนึ่งลูป"
+          "courseC_starWars_loops5_a": "โซลูชั่นที่ดีที่สุด คือดารใช้บล็อกหันหนึ่งครั้ง ตามด้วยบล็อก ` ไปข้างหน้า ` หนึ่งบล็อก แล้วตามด้วยบล็อกหันอีกหนึ่งครั้ง จบด้วยลูปหนึ่งลูป"
         },
         "courseC_starWars_loops6": {
           "courseC_starWars_loops6_a": "ลองเขียนขั้นตอนการเคลื่อนไหวทั้งหมดลงบนกระดาษและมองหารูปแบบดู",
@@ -3718,7 +3718,7 @@
         },
         "courseD_bee_conditionals5_copy": {
           "courseD_bee_conditionals5_hintVid1": "ต้องการให้ช่วยอะไรไหมก่อนที่คุณจะเริ่ม? ลองดูวิดีโอซิ!",
-          "courseD_bee_conditionals5_a": "ให้คิดว่าทุกด้านของเส้นทางสี่เหลี่ยมผืนผ้าเป็นเส้นทางโดยตัวของมันเอง แล้วใช้ลูปซ้อนกันด้วยการใช้บล็อก `ทำซ้ำ` อยู่ด้านนอกและบล็อก\\` ขณะที่ยังมีทางข้างหน้า ' ลูปอยู่ข้างใน ให้ถามว่ามีวิถีทางกี่ทางที่ผึ้งต้องบินถ้าผึ้งต้องการบินไปมาทุกด้านที่มีดอกไม้?",
+          "courseD_bee_conditionals5_a": "ให้คิดว่าทุกด้านของเส้นทางสี่เหลี่ยมผืนผ้าเป็นเส้นทางโดยตัวของมันเอง แล้วใช้ลูปซ้อนกันด้วยการใช้บล็อก `ทำซ้ำ` อยู่ด้านนอกและบล็อก` ขณะที่ยังมีทางข้างหน้า ' ลูปอยู่ข้างใน ให้ถามว่ามีวิถีทางกี่ทางที่ผึ้งต้องบินถ้าผึ้งต้องการบินไปมาทุกด้านที่มีดอกไม้?",
           "courseD_bee_conditionals5_hintVid2": "ดูวิดีโอเรื่องนี้เพื่อช่วยในการแก้ปริศนา"
         },
         "courseD_bee_conditionals6": {
@@ -4420,7 +4420,7 @@
           "courseD_artist_functions2_c": "คุณต้องใช้บล็อกสีเขียว \"วาดสี่เหลี่ยมจัตุรัส\" เพื่อ \"เรียก\" ฟังก์ชันของคุณ ไม่เช่นนั้น โค้ดในฟังก์ชันของคุณจะไม่ทำงาน\n\n<xml><block type=\"procedures_callnoreturn\" limit=\"2\"><mutation name=\"draw a square\"/></block></xml>"
         },
         "courseE_artist_functions2_copy": {
-          "courseD_artist_functions2_a": "โปรแกรมของคุณควร:\n\n-   ใช้ฟังก์ชัน\n-   ย้ายไปข้างหน้า 100+75 พิกเซล\n-   ใช้ฟังก์ชัน"
+          "courseD_artist_functions2_a": "โปรแกรมของคุณควร:\n\n - ใช้ฟังก์ชัน\n - ย้ายไปข้างหน้า 100+75 พิกเซล\n - ใช้ฟังก์ชัน"
         },
         "courseE_artist_functions6": {
           "grade4_artist_functions_windows0_c": "ไม่ต้องกลัวว่าคุณจะทำผิด! ลองเพิ่มบล็อกเข้าไปและเรียกโค้ดมาใช้งาน เพื่อดูว่าจะเกิดอะไรขึ้นถึงแม้ว่าคุณยังจะแก้ปริศนาไม่ออกก็ตาม"
@@ -6696,7 +6696,7 @@
           "NEW_Course_4_Bee_For_Loops_7_a": "ลองใช้ตัวแปรตัวนับเพื่อคิดเลขดู\n\nคุณต้องทำอะไรกับตัวนับเมื่ออยู่ที่ดอกไม้แต่ละดอกเพื่อให้เท่ากับปริมาณน้ำหวานที่คุณต้องรวบรวม"
         },
         "OPD-K5-events-2": {
-          "courseC_flappy_events1_a": "![](https://images.code.org/5f1d0edf6ebb44d98ffdce623cfe0ad4-image-1501192487040.gif)"
+          "courseC_flappy_events1_a": "[][0]"
         },
         "OPD-K5-forloops-1": {
           "courseF_bee_for1_b": "คุณจะต้องใช้บล็อกสองบล็อกในลูป 'ทำซ้ำ' เพื่อรวบรวมน้ำหวานให้ได้ทั้งหมด"
@@ -6721,8 +6721,8 @@
           "courseF_bee_for7_c": "อย่าลืมใช้ตัวแปร `ตัวนับ` ในลูป `ทำซ้ำ` ของคุณ"
         },
         "OPD-K5-projects-2": {
-          "courseE_playLab_scaffold1_a": "บล็อก \\`กำหนดตัวละคร 1 เป็นภาพ ???’ นำมาใช้เพื่อเพิ่มตัวละครบนเวทีได้",
-          "courseE_playLab_scaffold1_b": "วางบล็อก `กำหนดตัวละคร` ไว้ใต้ \\`เมื่อเล่น’ เพื่อให้ตัวละครของคุณปรากฏที่จุดเริ่มต้นของโปรแกรม",
+          "courseE_playLab_scaffold1_a": "บล็อก `กำหนดตัวละคร 1 เป็นภาพ ???’ นำมาใช้เพื่อเพิ่มตัวละครบนเวทีได้",
+          "courseE_playLab_scaffold1_b": "วางบล็อก `กำหนดตัวละคร` ไว้ใต้ `เมื่อเล่น’ เพื่อให้ตัวละครของคุณปรากฏที่จุดเริ่มต้นของโปรแกรม",
           "courseE_playLab_scaffold1_c": "ใช้ `กำหนดพื้นหลัง ???` เพื่อเลือกพื้นหลังสำหรับฉากของคุณ"
         },
         "OPD-K5-projects-3": {
@@ -6733,7 +6733,7 @@
           "courseE_playLab_scaffold4_a": "ใช้ `ทำแต้ม` เพื่อเพิ่มแต้ม และ `ลบแต้ม` เพื่อลบแต้มออกหนึ่งแต้ม"
         },
         "OPD-K5-variables-6": {
-          "courseF_artist_variables4_b": "<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"variables_set\">\n        <title name=\"VAR\">length</title>\n        <value name=\"VALUE\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">50</title>\n          </block>\n        </value>\n        <next>\n          <block type=\"controls_repeat_ext\">\n            <value name=\"TIMES\">\n              <block type=\"math_number\">\n                <title name=\"NUM\">3</title>\n              </block>\n            </value>\n            <statement name=\"DO\">\n              <block type=\"controls_repeat_ext\">\n                <value name=\"TIMES\">\n                  <block type=\"math_number\">\n                    <title name=\"NUM\">3</title>\n                  </block>\n                </value>\n                <statement name=\"DO\">\n                  <block type=\"draw_move\">\n                    <title name=\"DIR\">moveForward</title>\n                    <value name=\"VALUE\">\n                      <block type=\"variables_get\">\n                        <title name=\"VAR\">length</title>\n                      </block>\n                    </value>\n                    <next>\n                      <block type=\"draw_turn\">\n                        <title name=\"DIR\">turnLeft</title>\n                        <value name=\"VALUE\">\n                          <block type=\"math_number\">\n                            <title name=\"NUM\">120</title>\n                          </block>\n                        </value>\n                      </block>\n                    </next>\n                  </block>\n                </statement>\n                <next>\n                  <block type=\"jump\">\n                    <title name=\"DIR\">jumpForward</title>\n                    <value name=\"VALUE\">\n                      <block type=\"variables_get\">\n                        <title name=\"VAR\">length</title>\n                      </block>\n                    </value>\n                    <next>\n                      <block type=\"draw_turn\">\n                        <title name=\"DIR\">turnRight</title>\n                        <value name=\"VALUE\">\n                          <block type=\"math_number\">\n                            <title name=\"NUM\">90</title>\n                          </block>\n                        </value>\n                        <next>\n                          <block type=\"jump\">\n                            <title name=\"DIR\">jumpForward</title>\n                            <value name=\"VALUE\">\n                              <block type=\"variables_get\">\n                                <title name=\"VAR\">length</title>\n                              </block>\n                            </value>\n                            <next>\n                              <block type=\"draw_turn\">\n                                <title name=\"DIR\">turnLeft</title>\n                                <value name=\"VALUE\">\n                                  <block type=\"math_number\">\n                                    <title name=\"NUM\">90</title>\n                                  </block>\n                                </value>\n                              </block>\n                            </next>\n                          </block>\n                        </next>\n                      </block>\n                    </next>\n                  </block>\n                </next>\n              </block>\n            </statement>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+          "courseF_artist_variables4_b": "[blockly block][0]"
         },
         "course1_artist_loops_challenge1": {
           "courseA_artist_loops_challenge1_b": "![](https://images.code.org/34f3bae38f77f07eaf455188c0b008e5-image-1491864823946.png)",
@@ -7910,7 +7910,7 @@
         "courseC_starWars_loops8_copy": {
           "course_starWars_loops8_a": "ลองนึกถึงปัญหานี้โดยแยกย่อยออกเป็นหลาย ๆ ส่วน ให้เวลากับมันหน่อย คุณไม่จำเป็นต้องแก้ปัญหานี้ให้ได้ตั้งแต่ลองครั้งแรกหรอกนะ!",
           "course_starWars_loops8_b": "ลองมองว่าครึ่งแรกของปัญหานี้เป็นเหมือนกับปัญหาขั้นบันได คุณเคยแก้ปัญหาคล้าย ๆ กับแบบนี้มาก่อนไหม",
-          "course_starWars_loops8_c": "ลองดูที่เส้นทางนี้\n\n![](https://images.code.org/7d696dd3b1e6984a1d6041f366d5c96b-image-1510198804955.37.04.png)"
+          "course_starWars_loops8_c": "ลองดูที่เส้นทางนี้\n\n[][0]"
         },
         "courseC_starWars_loops8_dani": {
           "course_starWars_loops8_a": "ลองนึกถึงปัญหานี้โดยแยกย่อยออกเป็นหลาย ๆ ส่วน ให้เวลากับมันหน่อย คุณไม่จำเป็นต้องแก้ปัญหานี้ให้ได้ตั้งแต่ลองครั้งแรกหรอกนะ!",
@@ -11447,6 +11447,12 @@
         "helloworld_food_sizes_space-2022": {
           "storyboard_setProp": "คุณสามารถใช้บล็อกนี้เพื่อตั้งค่าขนาดของสไปร์ทเพียงครั้งเดียวได้:\n\n<xml><block type=\"gamelab_spriteClicked\">\n  <field name=\"CONDITION\">\"when\"</field>\n  <value name=\"SPRITE\">\n    <block type=\"gamelab_allSpritesWithAnimation\" can_disconnect_from_parent=\"false\">\n      <field name=\"ANIMATION\">\"space_astronaut_1\"</field>\n    </block>\n  </value>\n  <next>\n    <block type=\"gamelab_setProp\">\n      <field name=\"PROPERTY\">\"scale\"</field>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\" can_disconnect_from_parent=\"false\">\n          <field name=\"ANIMATION\">\"space_astronaut_1\"</field>\n        </block>\n      </value>\n      <value name=\"VAL\">\n        <block type=\"math_number\" can_disconnect_from_parent=\"false\">\n          <field name=\"NUM\">50</field>\n        </block>\n      </value>\n    </block>\n  </next>\n</block></xml>",
           "storyboard_changePropBy": "หากคุณต้องการเปลี่ยนขนาดของสไปร์ทหลายๆครั้ง(ด้วยอีเวนต์) ให้ใช้บล็อกนี้:\n\n<xml><block type=\"gamelab_spriteClicked\">\n  <field name=\"CONDITION\">\"when\"</field>\n  <value name=\"SPRITE\">\n    <block type=\"gamelab_allSpritesWithAnimation\" can_disconnect_from_parent=\"false\">\n      <field name=\"ANIMATION\">\"space_satellite\"</field>\n    </block>\n  </value>\n  <next>\n    <block type=\"gamelab_changePropBy\">\n      <field name=\"PROPERTY\">\"scale\"</field>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\" can_disconnect_from_parent=\"false\">\n          <field name=\"ANIMATION\">\"space_satellite\"</field>\n        </block>\n      </value>\n      <value name=\"VAL\">\n        <block type=\"math_number\" can_disconnect_from_parent=\"false\">\n          <field name=\"NUM\">10</field>\n        </block>\n      </value>\n    </block>\n  </next>\n</block></xml>"
+        },
+        "helloworld_food_say_soccer-2022": {
+          "hello-world-first-solution-pizza": "เพื่อให้ผีสาดพูดอะไรบางอย่างเชื่อมต่อบล็อกของรหัสเช่นนี้:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\"><next>  <block type=\"gamelab_makeNewSpriteAnon\">\n    <title name=\"ANIMATION_NAME\">\"soccer_player_1\"</title>\n    <value name=\"LOCATION\">\n      <block type=\"gamelab_location_picker\">\n        <title name=\"LOCATION\">{\"x\":200,\"y\":200}</title>\n      </block>\n    </value><next>  <block type=\"gamelab_spriteSay\">\n    <title name=\"SPEECH\">Hello, world!</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"soccer_player_1\"</title>\n      </block>\n    </value>\n  </block></next>\n  </block></next></block>\n</xml>"
+        },
+        "helloworld_food_say_space-2022": {
+          "hello-world-first-solution-pizza": "เพื่อให้ผีสาดพูดอะไรบางอย่างเชื่อมต่อบล็อกของรหัสเช่นนี้:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\"><next>  <block type=\"gamelab_makeNewSpriteAnon\">\n    <title name=\"ANIMATION_NAME\">\"face_pizza_1\"</title>\n    <value name=\"LOCATION\">\n      <block type=\"gamelab_location_picker\">\n        <title name=\"LOCATION\">{\"x\":200,\"y\":200}</title>\n      </block>\n    </value><next>  <block type=\"gamelab_spriteSay\">\n    <title name=\"SPEECH\">Hello, world!</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"face_pizza_1\"</title>\n      </block>\n    </value>\n  </block></next>\n  </block></next></block>\n</xml>"
         }
       }
     }

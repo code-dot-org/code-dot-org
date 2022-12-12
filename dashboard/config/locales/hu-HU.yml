@@ -322,6 +322,7 @@ hu:
   teacher_mailer:
     new_teacher_subject: Üdvözlünk a Code.org-on!
     delete_teacher_subject: 'Code.org figyelmeztetés: a fiókod törölve lett'
+    verified_teacher_subject: Code.org tanári azonosítás - sikeres
   section:
     your_section:
       one: 'A szakaszod:'

@@ -74,7 +74,7 @@
           "type": "Vidéo"
         },
         "common_core_and_ngss_guidance/coursed/2022": {
-          "name": "Guide du tronc commun et de la NGSS ",
+          "name": "Tronc commun et directives de la NGSS ",
           "url": "https://docs.google.com/document/d/1SqD3MaRbGIONGs5bcL1YhHUFK92ZXFIufypr6UC8XYA/preview#heading=h.sw3rfp1nfbrp"
         },
         "cross-curricular_extension_activities/coursed/2022": {
@@ -97,7 +97,7 @@
           "url": "https://docs.google.com/document/d/1Z28A1yF6BZu3lIlVvvHo5UqBpyuc1hX8YVjIt3fwmY4/view"
         },
         "teacher_forum/coursed/2022": {
-          "name": "Forum des Enseignants",
+          "name": "Forum des enseignants",
           "url": "https://forum.code.org/c/csf/"
         },
         "virtual_lesson_modifications/coursed/2022": {
@@ -224,24 +224,24 @@
           "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/"
         },
         "conditionals_with_cards/coursed/2022": {
-          "name": "Instructions conditionnelles avec des cartes",
+          "name": "Les instructions conditionnelles avec des cartes",
           "url": "https://youtu.be/UymN4lTL50s"
         },
         "conditionals_with_cards_1/coursed/2022": {
-          "name": "Instructions conditionnelles avec des cartes",
+          "name": "Les instructions conditionnelles avec des cartes",
           "url": "https://www.youtube.com/watch?v=2m2Rn9VxHfU"
         },
         "conditionals_with_cards_2/coursed/2022": {
-          "name": "Instructions conditionnelles avec des cartes",
+          "name": "Les instructions conditionnelles avec des cartes",
           "url": "https://docs.google.com/document/d/1LAJIGKZkVE8Hx68qJZxOUyQ0iw1jhgIWSMGh_fv5zN0/edit",
           "type": "Évaluation"
         },
         "conditionals_with_cards_3/coursed/2022": {
-          "name": "Instructions conditionnelles avec des cartes",
+          "name": "Les instructions conditionnelles avec des cartes",
           "url": "https://youtu.be/TbUaEnAYPjI"
         },
         "conditionals_with_cards_4/coursed/2022": {
-          "name": "Instructions conditionnelles avec des cartes",
+          "name": "Les instructions conditionnelles avec des cartes",
           "url": "https://docs.google.com/document/d/1SsfkUoEg316vjBSxrRNLN4q4V2-yYW8HAK4m9snLtac/edit"
         },
         "conditionals_with_cards_sample_program/coursed/2022": {
@@ -252,7 +252,7 @@
           "type": "Guide projet"
         },
         "common_core_and_ngss_guidance/coursef/2022": {
-          "name": "Guide du tronc commun et de la NGSS ",
+          "name": "Tronc commun et directives de la NGSS ",
           "url": "https://docs.google.com/document/d/1SqD3MaRbGIONGs5bcL1YhHUFK92ZXFIufypr6UC8XYA/preview#heading=h.8jtw7rltkhe3"
         },
         "cross-curricular_extension_activities/coursef/2022": {
@@ -278,7 +278,7 @@
           "url": "https://studio.code.org/docs/spritelab/"
         },
         "teacher_forum/coursef/2022": {
-          "name": "Forum des Enseignants",
+          "name": "Forum des enseignants",
           "url": "https://forum.code.org/c/csf/"
         },
         "virtual_lesson_modifications/coursef/2022": {
@@ -391,7 +391,7 @@
           "type": "Rubrique"
         },
         "common_core_and_ngss_guidance/coursee/2022": {
-          "name": "Guide du tronc commun et de la NGSS ",
+          "name": "Tronc commun et directives de la NGSS ",
           "url": "https://docs.google.com/document/d/1SqD3MaRbGIONGs5bcL1YhHUFK92ZXFIufypr6UC8XYA/preview#heading=h.iamt4mqlkyt7"
         },
         "cross-curricular_extension_activities/coursee/2022": {
@@ -418,7 +418,7 @@
           "url": "https://studio.code.org/docs/spritelab/"
         },
         "teacher_forum/coursee/2022": {
-          "name": "Forum des Enseignants",
+          "name": "Forum des enseignants",
           "url": "https://forum.code.org/c/csf/"
         },
         "virtual_lesson_modifications/coursee/2022": {
@@ -474,7 +474,7 @@
           "type": "Rubrique"
         },
         "common_core_and_ngss_guidance/courseb/2022": {
-          "name": "Guide du tronc commun et de la NGSS ",
+          "name": "Tronc commun et directives de la NGSS ",
           "url": "https://docs.google.com/document/d/1SqD3MaRbGIONGs5bcL1YhHUFK92ZXFIufypr6UC8XYA/preview#heading=h.rar8dpsqsjqe"
         },
         "cross-curricular_extension_activities/courseb/2022": {
@@ -497,7 +497,7 @@
           "url": "https://docs.google.com/document/d/1Z28A1yF6BZu3lIlVvvHo5UqBpyuc1hX8YVjIt3fwmY4/view"
         },
         "teacher_forum/courseb/2022": {
-          "name": "Forum des Enseignants",
+          "name": "Forum des enseignants",
           "url": "https://forum.code.org/c/csf/"
         },
         "virtual_lesson_modifications/courseb/2022": {
@@ -553,8 +553,7 @@
           "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/"
         },
         "how_to_make_a_class_section_on_code_org/courseb/2022": {
-          "name": "Comment créer une section de classe sur Code.org",
-          "url": "https://www.youtube.com/watch?v=ebQY8fb2OV4"
+          "name": "Comment créer une section de classe sur Code.org"
         },
         "pair_programming/courseb/2022": {
           "name": "Programmation en Binôme",
@@ -591,20 +590,20 @@
           "type": "Vidéo"
         },
         "getting_loopy/courseb/2022": {
-          "name": "Tourner en Rond",
+          "name": "Affaire bouclée",
           "url": "https://youtu.be/JoKTqHCni0M"
         },
         "getting_loopy_1/courseb/2022": {
-          "name": "Tourner en Rond",
+          "name": "Affaire bouclée",
           "url": "https://docs.google.com/document/d/1SwYDo6fwkEZRRGogPozWBXCLLncddDS5dLNFgRDe6VQ/edit"
         },
         "getting_loopy_2/courseb/2022": {
-          "name": "Tourner en Rond",
+          "name": "Affaire bouclée",
           "url": "https://docs.google.com/document/d/1MG-vF7zU-abEPZ60bVcK4RhwZ4vfuknBfUkm-4tvoX8/edit",
           "type": "Évaluation"
         },
         "getting_loopy_3/courseb/2022": {
-          "name": "Tourner en Rond",
+          "name": "Affaire bouclée",
           "url": "https://docs.google.com/document/d/15YLSUX5TT6P9nRKW4tA0f9weEe0Qs4wV5Ylu08wzXFs/edit"
         },
         "cs_fundamentals_main_activity_tips/courseb/2022": {
@@ -650,7 +649,7 @@
           "url": "https://docs.google.com/document/d/1z2FgBWwUq6vxwWbnbiQC0EaEKxwgAqBdtTZzVi98xHA/preview"
         },
         "teacher_forum/express/2022": {
-          "name": "Forum des Enseignants",
+          "name": "Forum des enseignants",
           "url": "https://forum.code.org/c/csf/"
         },
         "unplugged_maze_blocks/express/2022": {
@@ -763,7 +762,7 @@
           "type": "Vidéo"
         },
         "common_core_and_ngss_guidance/coursea/2022": {
-          "name": "Guide du tronc commun et de la NGSS ",
+          "name": "Tronc commun et directives de la NGSS ",
           "url": "https://docs.google.com/document/d/1SqD3MaRbGIONGs5bcL1YhHUFK92ZXFIufypr6UC8XYA/preview#heading=h.vq4s1h2aaxxy"
         },
         "cross-curricular_extension_activities/coursea/2022": {
@@ -786,7 +785,7 @@
           "url": "https://docs.google.com/document/d/1Z28A1yF6BZu3lIlVvvHo5UqBpyuc1hX8YVjIt3fwmY4/view"
         },
         "teacher_forum/coursea/2022": {
-          "name": "Forum des Enseignants",
+          "name": "Forum des enseignants",
           "url": "https://forum.code.org/c/csf/"
         },
         "virtual_lesson_modifications/coursea/2022": {
@@ -926,7 +925,7 @@
           "url": "https://docs.google.com/document/d/13AiHjPrDE3DFnwH3qKnty6M3PbHsZcd-0YoZz4ZmC3E/template/preview"
         },
         "common_core_and_ngss_guidance/coursec/2022": {
-          "name": "Guide du tronc commun et de la NGSS ",
+          "name": "Tronc commun et directives de la NGSS ",
           "url": "https://docs.google.com/document/d/1SqD3MaRbGIONGs5bcL1YhHUFK92ZXFIufypr6UC8XYA/preview#heading=h.a5iytir4b96q"
         },
         "cross-curricular_extension_activities/coursec/2022": {
@@ -949,7 +948,7 @@
           "url": "https://docs.google.com/document/d/1Z28A1yF6BZu3lIlVvvHo5UqBpyuc1hX8YVjIt3fwmY4/view"
         },
         "teacher_forum/coursec/2022": {
-          "name": "Forum des Enseignants",
+          "name": "Forum des enseignants",
           "url": "https://forum.code.org/c/csf/"
         },
         "virtual_lesson_modifications/coursec/2022": {
@@ -1058,24 +1057,24 @@
           "url": "https://docs.google.com/document/d/177NVkzjc--XVvd5jssO5TZolUTzz9SD5pAw1DazflQ8/edit#heading=h.v577cjs0yrx5"
         },
         "binary_bracelets/coursec/2022": {
-          "name": "Les bracelets binaires",
+          "name": "Bracelets binaires",
           "url": "https://youtu.be/3S2YfoO4_CM"
         },
         "binary_bracelets_1/coursec/2022": {
-          "name": "Les bracelets binaires",
+          "name": "Bracelets binaires",
           "url": "https://www.youtube.com/watch?v=fDLkBqZpxWQ"
         },
         "binary_bracelets_2/coursec/2022": {
-          "name": "Les bracelets binaires",
+          "name": "Bracelets binaires",
           "url": "https://docs.google.com/document/d/1YV1Oer_1DMzilyHriimgPVZnaC6JUjU5YDE8Ui065hE/edit"
         },
         "binary_bracelets_3/coursec/2022": {
-          "name": "Les bracelets binaires",
+          "name": "Bracelets binaires",
           "url": "https://docs.google.com/document/d/14Huy1clX_WgDnQQFugnF5fwoF6POWRZ-8skc1Eyr4bU/edit",
           "type": "Évaluation"
         },
         "binary_bracelets_4/coursec/2022": {
-          "name": "Les bracelets binaires",
+          "name": "Bracelets binaires",
           "url": "https://docs.google.com/document/d/1EaTbrdNbGpY_mI-FfV0GZ2uHSfcQIGuAkXqd1qFkUbE/edit"
         },
         "bits_versus_bytes/coursec/2022": {
@@ -1446,7 +1445,7 @@
           "name": "Instructions « si »"
         },
         "conditionals/csd/2022": {
-          "name": "Instructions conditionnelles",
+          "name": "Formules conditionnelles",
           "url": "https://docs.google.com/presentation/d/12j4KMKOvDBSz5B5ekePOBcogSglhpK9QnDf3egXv3gc/template/preview"
         },
         "keyboard_input/csd/2022": {
@@ -2212,7 +2211,7 @@
           "name": "Mappages standard"
         },
         "teacher_forum/coursed/2018": {
-          "name": "Forum des Enseignants"
+          "name": "Forum des enseignants"
         },
         "vocabulary/coursed/2018": {
           "name": "Vocabulaire"
@@ -2236,7 +2235,7 @@
           "name": "Mappages standard"
         },
         "teacher_forum/express/2018": {
-          "name": "Forum des Enseignants"
+          "name": "Forum des enseignants"
         },
         "vocabulary/express/2018": {
           "name": "Vocabulaire"
@@ -2248,7 +2247,7 @@
           "name": "Mappages standard"
         },
         "teacher_forum/coursee/2018": {
-          "name": "Forum des Enseignants"
+          "name": "Forum des enseignants"
         },
         "vocabulary/coursee/2018": {
           "name": "Vocabulaire"
@@ -2260,7 +2259,7 @@
           "name": "Mappages standard"
         },
         "teacher_forum/coursec/2018": {
-          "name": "Forum des Enseignants"
+          "name": "Forum des enseignants"
         },
         "vocabulary/coursec/2018": {
           "name": "Vocabulaire"
@@ -2275,7 +2274,7 @@
           "name": "Mappages standard"
         },
         "teacher_forum_2/csd/2018": {
-          "name": "Forum des Enseignants"
+          "name": "Forum des enseignants"
         },
         "vocabulary_2/csd/2018": {
           "name": "Vocabulaire"
@@ -2390,7 +2389,7 @@
           "name": "Mappages standard"
         },
         "teacher_forum/coursed/2019": {
-          "name": "Forum des Enseignants"
+          "name": "Forum des enseignants"
         },
         "vocabulary/coursed/2019": {
           "name": "Vocabulaire"
@@ -2405,7 +2404,7 @@
           "name": "Mappages standard"
         },
         "teacher_forum/coursef/2019": {
-          "name": "Forum des Enseignants"
+          "name": "Forum des enseignants"
         },
         "vocabulary/coursef/2019": {
           "name": "Vocabulaire"
@@ -2420,7 +2419,7 @@
           "name": "Mappages standard"
         },
         "teacher_forum/coursee/2019": {
-          "name": "Forum des Enseignants"
+          "name": "Forum des enseignants"
         },
         "vocabulary/coursee/2019": {
           "name": "Vocabulaire"
@@ -2447,7 +2446,7 @@
           "name": "Mappages standard"
         },
         "teacher_forum/coursec/2019": {
-          "name": "Forum des Enseignants"
+          "name": "Forum des enseignants"
         },
         "vocabulary/coursec/2019": {
           "name": "Vocabulaire"
@@ -2556,7 +2555,7 @@
           "url": "https://curriculum.code.org/csd/unit3/standards/"
         },
         "teacher_forum_2/csd/2017": {
-          "name": "Forum des Enseignants"
+          "name": "Forum des enseignants"
         },
         "vocabulary_2/csd/2017": {
           "name": "Vocabulaire",
@@ -2652,14 +2651,15 @@
         },
         "list_of_poems_1/poem-art/unversioned": {
           "name": "Liste de poèmes",
-          "url": "https://docs.google.com/presentation/d/1-IAPZSha9BzFtEHzqRKY2Gb8oa2O_ZNaX5RqHyuvBso/edit?usp=sharing"
+          "url": "https://docs.google.com/presentation/d/1-IAPZSha9BzFtEHzqRKY2Gb8oa2O_ZNaX5RqHyuvBso/edit?usp=sharing",
+          "type": ""
         },
         "2021_change_log/coursef/2021": {
           "name": "Journal des modifications 2021 ",
           "url": "https://docs.google.com/document/d/1jYqOAMM7TPAscoSBSQmUt76F0Uid5t9UqpDnHS19z9I/preview"
         },
         "common_core_and_ngss_guidance/coursef/2021": {
-          "name": "Guide du tronc commun et de la NGSS ",
+          "name": "Tronc commun et directives de la NGSS ",
           "url": "https://docs.google.com/document/d/1SqD3MaRbGIONGs5bcL1YhHUFK92ZXFIufypr6UC8XYA/preview#heading=h.8jtw7rltkhe3"
         },
         "course_vocabulary/coursef/2021": {
@@ -2695,7 +2695,7 @@
           "url": "https://studio.code.org/docs/spritelab/"
         },
         "teacher_forum_1/coursef/2021": {
-          "name": "Forum des Enseignants",
+          "name": "Forum des enseignants",
           "url": "https://forum.code.org/c/csf/"
         },
         "virtual_lesson_modifications/coursef/2021": {
@@ -2876,7 +2876,7 @@
           "url": "https://docs.google.com/document/d/1jYqOAMM7TPAscoSBSQmUt76F0Uid5t9UqpDnHS19z9I/preview"
         },
         "common_core_and_ngss_guidance/courseb/2021": {
-          "name": "Guide du tronc commun et de la NGSS ",
+          "name": "Tronc commun et directives de la NGSS ",
           "url": "https://docs.google.com/document/d/1SqD3MaRbGIONGs5bcL1YhHUFK92ZXFIufypr6UC8XYA/preview#heading=h.rar8dpsqsjqe"
         },
         "course_vocabulary/courseb/2021": {
@@ -2908,7 +2908,7 @@
           "url": "https://docs.google.com/document/d/1Z28A1yF6BZu3lIlVvvHo5UqBpyuc1hX8YVjIt3fwmY4/view"
         },
         "teacher_forum_1/courseb/2021": {
-          "name": "Forum des Enseignants",
+          "name": "Forum des enseignants",
           "url": "https://forum.code.org/c/csf/"
         },
         "virtual_lesson_modifications/courseb/2021": {
@@ -3003,20 +3003,20 @@
           "type": "Vidéo"
         },
         "assessment-answer-getting-loopy/courseb/2021": {
-          "name": "Tourner en Rond",
+          "name": "Affaire bouclée",
           "url": "https://docs.google.com/document/d/15YLSUX5TT6P9nRKW4tA0f9weEe0Qs4wV5Ylu08wzXFs/edit"
         },
         "csf-getting-loopy-activity-worksheet/courseb/2021": {
-          "name": "Tourner en Rond",
+          "name": "Affaire bouclée",
           "url": "https://docs.google.com/document/d/1SwYDo6fwkEZRRGogPozWBXCLLncddDS5dLNFgRDe6VQ/edit"
         },
         "csf-getting-loopy-assessment/courseb/2021": {
-          "name": "Tourner en Rond",
+          "name": "Affaire bouclée",
           "url": "https://docs.google.com/document/d/1MG-vF7zU-abEPZ60bVcK4RhwZ4vfuknBfUkm-4tvoX8/edit",
           "type": "Évaluation"
         },
         "unplugged-video-getting-loopy/courseb/2021": {
-          "name": "Tourner en Rond",
+          "name": "Affaire bouclée",
           "url": "https://youtu.be/JoKTqHCni0M"
         },
         "csf-lesson-recommend/courseb/2021": {
@@ -3272,7 +3272,7 @@
           "url": "https://docs.google.com/document/d/1jYqOAMM7TPAscoSBSQmUt76F0Uid5t9UqpDnHS19z9I/preview"
         },
         "common_core_and_ngss_guidance/coursec/2021": {
-          "name": "Guide du tronc commun et de la NGSS ",
+          "name": "Tronc commun et directives de la NGSS ",
           "url": "https://docs.google.com/document/d/1SqD3MaRbGIONGs5bcL1YhHUFK92ZXFIufypr6UC8XYA/preview#heading=h.a5iytir4b96q"
         },
         "course_vocabulary/coursec/2021": {
@@ -3304,7 +3304,7 @@
           "url": "https://docs.google.com/document/d/1Z28A1yF6BZu3lIlVvvHo5UqBpyuc1hX8YVjIt3fwmY4/view"
         },
         "teacher_forum_1/coursec/2021": {
-          "name": "Forum des Enseignants",
+          "name": "Forum des enseignants",
           "url": "https://forum.code.org/c/csf/"
         },
         "virtual_lesson_modifications/coursec/2021": {
@@ -3415,15 +3415,15 @@
           "url": "https://docs.google.com/document/d/177NVkzjc--XVvd5jssO5TZolUTzz9SD5pAw1DazflQ8/edit#heading=h.v577cjs0yrx5"
         },
         "assessment-answer-binary-bracelets/coursec/2021": {
-          "name": "Les bracelets binaires",
+          "name": "Bracelets binaires",
           "url": "https://docs.google.com/document/d/1EaTbrdNbGpY_mI-FfV0GZ2uHSfcQIGuAkXqd1qFkUbE/edit"
         },
         "csf-binary-bracelets-activity/coursec/2021": {
-          "name": "Les bracelets binaires",
+          "name": "Bracelets binaires",
           "url": "https://docs.google.com/document/d/1YV1Oer_1DMzilyHriimgPVZnaC6JUjU5YDE8Ui065hE/edit"
         },
         "csf-binary-bracelets-assessment/coursec/2021": {
-          "name": "Les bracelets binaires",
+          "name": "Bracelets binaires",
           "url": "https://docs.google.com/document/d/14Huy1clX_WgDnQQFugnF5fwoF6POWRZ-8skc1Eyr4bU/edit",
           "type": "Évaluation"
         },
@@ -3432,11 +3432,11 @@
           "url": "https://www.youtube.com/watch?v=35vkaO_SgzI&feature=youtu.be"
         },
         "lesson-in-action-binary-bracelets/coursec/2021": {
-          "name": "Les bracelets binaires",
+          "name": "Bracelets binaires",
           "url": "https://www.youtube.com/watch?v=fDLkBqZpxWQ"
         },
         "unplugged-video-binary-bracelets/coursec/2021": {
-          "name": "Les bracelets binaires",
+          "name": "Bracelets binaires",
           "url": "https://youtu.be/3S2YfoO4_CM"
         },
         "play-lab-project-guide/coursec/2021": {
@@ -3452,7 +3452,7 @@
           "url": "https://docs.google.com/document/d/1jYqOAMM7TPAscoSBSQmUt76F0Uid5t9UqpDnHS19z9I/preview"
         },
         "common_core_and_ngss_guidance/coursed/2021": {
-          "name": "Guide du tronc commun et de la NGSS ",
+          "name": "Tronc commun et directives de la NGSS ",
           "url": "https://docs.google.com/document/d/1SqD3MaRbGIONGs5bcL1YhHUFK92ZXFIufypr6UC8XYA/preview#heading=h.sw3rfp1nfbrp"
         },
         "course_vocabulary/coursed/2021": {
@@ -3484,7 +3484,7 @@
           "url": "https://docs.google.com/document/d/1Z28A1yF6BZu3lIlVvvHo5UqBpyuc1hX8YVjIt3fwmY4/view"
         },
         "teacher_forum_1/coursed/2021": {
-          "name": "Forum des Enseignants",
+          "name": "Forum des enseignants",
           "url": "https://forum.code.org/c/csf/"
         },
         "virtual_lesson_modifications/coursed/2021": {
@@ -3619,15 +3619,15 @@
           "type": "Vidéo"
         },
         "assessment-answer-conditionals-cards/coursed/2021": {
-          "name": "Instructions conditionnelles avec des cartes",
+          "name": "Les instructions conditionnelles avec des cartes",
           "url": "https://docs.google.com/document/d/1SsfkUoEg316vjBSxrRNLN4q4V2-yYW8HAK4m9snLtac/edit"
         },
         "conditionals-with-cards-assessment-video/coursed/2021": {
-          "name": "Instructions conditionnelles avec des cartes",
+          "name": "Les instructions conditionnelles avec des cartes",
           "url": "https://youtu.be/TbUaEnAYPjI"
         },
         "csf-conditionals-with-cards-assessment/coursed/2021": {
-          "name": "Instructions conditionnelles avec des cartes",
+          "name": "Les instructions conditionnelles avec des cartes",
           "url": "https://docs.google.com/document/d/1LAJIGKZkVE8Hx68qJZxOUyQ0iw1jhgIWSMGh_fv5zN0/edit",
           "type": "Évaluation"
         },
@@ -3636,11 +3636,11 @@
           "url": "https://docs.google.com/document/d/151s4_0NuDhuzprjPGlDubPZodeJQCEJElsvdkSSqzPM/edit"
         },
         "lesson-in-action-conditional-cards/coursed/2021": {
-          "name": "Instructions conditionnelles avec des cartes",
+          "name": "Les instructions conditionnelles avec des cartes",
           "url": "https://www.youtube.com/watch?v=2m2Rn9VxHfU"
         },
         "unplugged-video-conditionals-cards/coursed/2021": {
-          "name": "Instructions conditionnelles avec des cartes",
+          "name": "Les instructions conditionnelles avec des cartes",
           "url": "https://youtu.be/UymN4lTL50s"
         },
         "course-d-project-planning-guide-1/coursed/2021": {
@@ -3659,7 +3659,7 @@
           "url": "https://docs.google.com/document/d/1z2FgBWwUq6vxwWbnbiQC0EaEKxwgAqBdtTZzVi98xHA/preview"
         },
         "teacher_forum_1/express/2021": {
-          "name": "Forum des Enseignants",
+          "name": "Forum des enseignants",
           "url": "https://forum.code.org/c/csf/"
         },
         "unplugged_maze_blocks/express/2021": {
@@ -3807,7 +3807,7 @@
           "url": "https://docs.google.com/document/d/1jYqOAMM7TPAscoSBSQmUt76F0Uid5t9UqpDnHS19z9I/preview"
         },
         "common_core_and_ngss_guidance/coursee/2021": {
-          "name": "Guide du tronc commun et de la NGSS ",
+          "name": "Tronc commun et directives de la NGSS ",
           "url": "https://docs.google.com/document/d/1SqD3MaRbGIONGs5bcL1YhHUFK92ZXFIufypr6UC8XYA/preview#heading=h.iamt4mqlkyt7"
         },
         "course_vocabulary/coursee/2021": {
@@ -3843,7 +3843,7 @@
           "url": "https://studio.code.org/docs/spritelab/"
         },
         "teacher_forum_1/coursee/2021": {
-          "name": "Forum des Enseignants",
+          "name": "Forum des enseignants",
           "url": "https://forum.code.org/c/csf/"
         },
         "virtual_lesson_modifications/coursee/2021": {
@@ -3851,7 +3851,7 @@
           "url": "https://docs.google.com/document/d/1vQPpivN-p1sQfT5TuiiEXU2Ppy9e6vikeIwfStWF_Vw/edit"
         },
         "follow_the_algorithm/coursee/2021": {
-          "name": "Suivez l'algorithme "
+          "name": "Suis l'Algorithme "
         },
         "sprite_lab_documentation/coursee/2021": {
           "name": "Documentation sur le Labo des Sprites",
@@ -3903,7 +3903,7 @@
           "url": "https://docs.google.com/document/d/1cRPELQ28TZMJhc68-eYP1D26Uqzcyfx4RDYuThZJGLo/edit"
         },
         "designing_for_accessibility_1/coursee/2021": {
-          "name": "Concevoir pour l'Accessibilité"
+          "name": "Conception Accessible"
         },
         "72_creative_ways_for_your_students_to_show_what_they_know/coursee/2021": {
           "name": "72 Façons Créatives pour Vos Élèves de Montrer Ce Qu'ils Savent"
@@ -4196,7 +4196,7 @@
           "type": "Guide projet"
         },
         "teacher_forum_1/csd/2021": {
-          "name": "Forum des Enseignants"
+          "name": "Forum des enseignants"
         },
         "drawing-shapes-exemplar-2020/csd/2021": {
           "name": "Dessiner des formes"
@@ -4648,7 +4648,7 @@
           "name": "Mappages standard"
         },
         "teacher_forum/coursed/2020": {
-          "name": "Forum des Enseignants"
+          "name": "Forum des enseignants"
         },
         "vocabulary/coursed/2020": {
           "name": "Vocabulaire"
@@ -4663,7 +4663,7 @@
           "name": "Mappages standard"
         },
         "teacher_forum/coursec/2020": {
-          "name": "Forum des Enseignants"
+          "name": "Forum des enseignants"
         },
         "vocabulary/coursec/2020": {
           "name": "Vocabulaire"
@@ -4678,7 +4678,7 @@
           "name": "Mappages standard"
         },
         "teacher_forum/coursee/2020": {
-          "name": "Forum des Enseignants"
+          "name": "Forum des enseignants"
         },
         "vocabulary/coursee/2020": {
           "name": "Vocabulaire"
@@ -4708,7 +4708,7 @@
           "name": "Mappages standard"
         },
         "teacher_forum/coursef/2020": {
-          "name": "Forum des Enseignants"
+          "name": "Forum des enseignants"
         },
         "vocabulary/coursef/2020": {
           "name": "Vocabulaire"

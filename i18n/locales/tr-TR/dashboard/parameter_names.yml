@@ -2,7 +2,7 @@ tr:
   data:
     parameter_names:
       "???": "???"
-      actor: aktör
+      actor: oyuncu
       color: renk
       counter: sayaç
       dir: dir

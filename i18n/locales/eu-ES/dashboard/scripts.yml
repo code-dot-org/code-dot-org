@@ -1016,6 +1016,10 @@ eu:
           lessons:
             lesson-6:
               name: Itzuliak
+        csa2-2023:
+          lessons:
+            lesson-4:
+              name: Aldagaiak
         csp4-2023:
           lesson_groups:
             csp_variables:

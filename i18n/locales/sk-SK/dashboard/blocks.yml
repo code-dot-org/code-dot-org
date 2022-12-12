@@ -4,6 +4,8 @@ sk:
     blocks:
       AmysBlocks_setPromptWithChoices:
         text: vyzvi užívateľa {QUESTION} pre premennú {VAR} s možnosťami {A}{B}{C}
+      AmysBlocks_spriteSayVar:
+        text: "{SPRITE}hovorí{TEXT1}"
       BadGuys_makeNewBadGuysSprite:
         text: vytvor novú postavu {ANIMATION_NAME} na {LOCATION}
       BadGuys_setSizeAll_dropdown:
@@ -993,6 +995,13 @@ sk:
             '"macklemore90"': Macklemore - Can't Hold Us
             '"hammer"': MC Hammer - U Can't Touch This
             '"peas"': The Black Eyed Peas - I Got a Feeling
+      DansBlocks_getMicroscope:
+        text: Mikroskop má {INPUT1}
+        options:
+          INPUT1:
+            '1': citrónová šťava
+            '3': baking soda
+            '5': both
       DansBlocks_setForegroundEffect2:
         text: vykonaj efekt {EFFECT}
         options:
@@ -1005,12 +1014,20 @@ sk:
             '"starburst"': Žiara
             '"glass"': Rozbíjanie skla
             '"twinkling"': Blikanie
-      FunctionBlocks_representManipulative:
+      DansBlocks_setMicroscope:
         options:
-          BEHAVIOR:
-            draggable(): je posúvateľný
-            wandering(): túlať sa
-            shrinking(): zmenšovať sa
+          INPUT1:
+            '1': citrónová šťava
+            '3': baking soda
+            '5': both
+      FunctionBlocks_communicate:
+        text: Komunikovať {VAR1} s {SPRITE1COSTUME}
+      FunctionBlocks_makeManipulative2:
+        text: vytvoriť {NUM} nové {ANIMATION_NAME} postavičky  {BEHAVIOR}
+      FunctionBlocks_representManipulative:
+        text: predstaviť {NUM} nové {ANIMATION_NAME} postavičky [BEHAVIOR][2]
+      FunctionBlocks_spriteSayVar:
+        text: "{SPRITE}hovorí{TEXT1}"
       gamelab_addBehaviorSimple:
         text: postava {SPRITE} začni {BEHAVIOR}
       gamelab_addTarget:
@@ -1361,6 +1378,7 @@ sk:
             "'sound://category_space/Pillars_SFX.mp3'": piliere
             "'sound://category_space/Southern_ring_SFX.mp3'": južný prstenec
             "'sound://category_space/Supernova_SFX.mp3'": supernova
+            "'sound://category_space/Tycho_SFX.mp3'": tycho
       gamelab_playSpeech:
         text: prehrať reč {SOUND}
       gamelab_playerBehaviors:
@@ -1906,6 +1924,38 @@ sk:
         text: y súradnica {SPRITE}
       Outbreak_beginCongregating:
         text: Príšerky sa začínajú zhromažďovať
+      ParticlesBlocks_getMicroscope:
+        text: Mikroskop má {INPUT1}
+        options:
+          INPUT1:
+            '1': citrónová šťava
+            '3': baking soda
+            '5': both
+      ParticlesBlocks_setMicroscope:
+        options:
+          INPUT1:
+            '1': citrónová šťava
+            '3': baking soda
+            '5': both
+      ParticlesBlocks_statesOfMatter:
+        options:
+          BEHAVIOR:
+            new Behavior(solid, []): plný
+            new Behavior(liquid, []): kvapalina
+            new Behavior(wandering, []): plyn
+      ParticlesBlocks_statesOfMatter2:
+        text: Nastaviť {COSTUME} na {BEHAVIOR} správanie
+        options:
+          BEHAVIOR:
+            '"solid"': 'tuhá častica '
+            '"liquid"': kvapalná častica
+            '"gas"': plynná častica
+      ParticlesBlocks_statesOfMatter_testing:
+        options:
+          BEHAVIOR:
+            '"solid"': 'tuhá častica '
+            '"liquid"': kvapalná častica
+            '"gas"': plynná častica
       Poetry_addFrame:
         options:
           BRUSH:
@@ -1976,6 +2026,21 @@ sk:
             '"sound://category_achievements/peaceful_win_1.mp3"': Win
             '"sound://category_explosion/vibrant_game_arcade_game_negative_hit.mp3"': Whirl
             '"sound://category_achievements/peaceful_win_6.mp3"': Wind Chimes
+      Poetry_playSoundOptionsSpace:
+        text: playSound {SOUND}
+        options:
+          SOUND:
+            "'sound://category_space/Blackhole_SFX.mp3'": čierna diera
+            "'sound://category_space/Bullet_cluster_SFX.mp3'": guľový klaster
+            "'sound://category_space/Carina_SFX.mp3'": člnok
+            "'sound://category_space/Cassiopeia_SFX.mp3'": cassiopeia
+            "'sound://category_space/Crab_nebula_SFX.mp3'": krabia hmlovina
+            "'sound://category_space/Launch_SFX.mp3'": spustiť
+            "'sound://category_space/Lift_Off.mp3'": zdvihnúť
+            "'sound://category_space/Pillars_SFX.mp3'": piliere
+            "'sound://category_space/Southern_ring_SFX.mp3'": južný prstenec
+            "'sound://category_space/Supernova_SFX.mp3'": supernova
+            "'sound://category_space/Tycho_SFX.mp3'": tycho
       Poetry_setAuthor:
         text: nastaviť autora {AUTHOR}
       Poetry_setBackground:
@@ -2354,6 +2419,16 @@ sk:
           DIR:
             right: vpravo ↻
             left: vľavo ↺
+      storylab_setForegroundEffect2:
+        text: vykonaj efekt {EFFECT}
+        options:
+          EFFECT:
+            '"bubbles"': Bubliny
+            '"confetti"': Konfety
+            '"hearts"': srdcia
+            '"rain"': dážď
+            '"starburst"': Žiara
+            '"twinkling"': Blikanie
       storylab_setHeading:
         text: nastaviť nadpis {HEADING}
       storylab_setSubheading:

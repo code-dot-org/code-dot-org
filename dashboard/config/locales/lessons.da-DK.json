@@ -20,9 +20,6 @@
         "gumball/Gumball Play Lab": {
           "name": "Gumball Play Lab"
         },
-        "dance/Dance Party": {
-          "name": "Dance Party"
-        },
         "aquatic/Aquatic": {
           "name": "Minecraft: Akvatisk rejse"
         },
@@ -35,11 +32,20 @@
         "playlab/Play Lab": {
           "name": "Play Lab"
         },
+        "outbreak/Outbreak": {
+          "overview": "",
+          "preparation": "",
+          "purpose": "",
+          "student_overview": ""
+        },
         "infinity/Infinity": {
           "name": "Disney Infinity Play Lab"
         },
         "Hour of Code/Hour of Code 2013": {
           "name": "Hour of Code 2013"
+        },
+        "dance-2019/Dance Party": {
+          "name": "Dance Party"
         },
         "k5-onlinepd-2019/Loops": {
           "name": "Løkker"

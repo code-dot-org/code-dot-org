@@ -431,6 +431,7 @@
   "finalStageTrophies": "Честитамо! Завршили сте последњи ниво и освојили {numTrophies, plural, one {a trophy} other {# trophies}}.",
   "finish": "Заврши",
   "forTeachersOnly": "Само за наставнике",
+  "function": "Функција",
   "gdprDialogYes": "Да",
   "gender": "Пол",
   "genderMale": "Мушко",

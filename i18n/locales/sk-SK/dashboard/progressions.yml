@@ -16,7 +16,7 @@ sk:
       Add Style to Your Page: Pridaj na svoju stránku štýl
       Add Text: Pridaj text
       Add a Welcome Screen: Pridaj uvítaciu obrazovku
-      Adding Images: Pridanie obrázkov
+      Adding Images: Pridávanie obrázkov
       Adding New Screens: Pridávanie nových obrazoviek
       Adding Pages: Pridávanie stránok
       Adding Screens: Pridanie obrazoviek
@@ -142,6 +142,7 @@ sk:
       Expanding Your Website: Rozšírenie tvojej webstránky
       Experiment with Web Lab: Experimentuj s Web Labom
       Exploration: Objavovanie
+      'Exploration: Adding Style': 'Skúmame: Pridávanie štýlov'
       'Exploration: For Loops': 'Objavovanie: Cykly for'
       'Exploration: Rikki''s Poster': 'Preskúmanie: Rikkiin plagát'
       'Exploration: Sample Apps': 'Objavovanie: Vzorové aplikácie'
@@ -269,7 +270,7 @@ sk:
       New Shapes: Nové tvary
       Orientation: Orientácia
       Overview: Prehľad
-      Pair Programming: Programovanie v páre
+      Pair Programming: Párové programovanie
       Pet Recommender: Odporúčanie domáceho zvieratka
       Picturing Data: Zobrazenie dát v grafoch
       Pizza Recommendations: Odporúčanie pizze
