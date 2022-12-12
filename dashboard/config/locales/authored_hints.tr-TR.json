@@ -1166,12 +1166,12 @@
           "harvey_tictactoe": "Atla bloğu ile başka alanlara gidebilirsiniz."
         },
         "course1_artist_loops_challenge3": {
-          "courseA_artist_loops_challenge2_a": "Bunun gibi bloklar: <xml><block type=\"simple_move_up_left\"/></xml> sanatçının bir eğimde hareket etmesine izin verir!",
+          "courseA_artist_loops_challenge2_a": "Bunun gibi bloklar:<xml>  <block type=\"simple_move_up_left\"/></xml> sanatçınızın eğik bir şekilde hareket etmesine izin verecek!",
           "courseA_artist_loops_challenge2_b": "Bir kuş evini bitirdikten sonra diğerine 'Atla'!",
           "courseA_artist_loops_challenge2_c": "Bu bulmaca için döngü içinde ÇOK FAZLA blok kullanman gerekecek."
         },
         "course1_artist_loops_challenge4": {
-          "courseB_artist_loops_challenge1_a": "Bunun gibi bloklar: <xml><block type=\"simple_move_up_left\"/></xml> sanatçının bir eğimde hareket etmesine izin verir!",
+          "courseB_artist_loops_challenge1_a": "Bunun gibi bloklar:<xml>  <block type=\"simple_move_up_right\"/></xml> sanatçınızın eğik bir şekilde hareket etmesine izin verecek!",
           "courseB_artist_loops_challenge1_b": "Bir zarı bitirdikten sonra diğerine 'Atla'!",
           "courseB_artist_loops_challenge1_c": "Bazı aynı çizgiler üzerinden geçerken  'ilerle' veya 'atla' bloklarından iki taneye ihtiyacın olacak. "
         },
@@ -2156,22 +2156,22 @@
           "courseB_artist_loops6_b": "Hareketleri bir kağıda yazmayı deneyin ve desene bakın."
         },
         "courseB_artist_loops7": {
-          "courseB_artist_loops7_a": "Bu meydan okuma dört döngü içerir, herbiri birbiri ardına kullanılır!",
+          "courseB_artist_loops7_a": "Bu meydan okuma birbiri ardına**4** döngü kullanır!",
           "courseB_artist_loops7_b": "Her döngünün, farklı bir yönde ilerleyen bir merdiven deseni oluşturduğunu unutmayın.",
           "courseB_artist_loops7_c": "Döngüler aşağıdaki gibi olmalıdır:\n\n-   Döngü 1\n    -   Sağ\n    -   Aşağı\n\n-   Döngü 2\n    -   Sağ\n    -   Yukarı\n\n-   Döngü 3\n    -   Sol\n    -   Yukarı\n\n-   Döngü 4\n    -   Sol\n    -   Aşağı"
         },
         "courseB_artist_loops7_2018": {
-          "courseB_artist_loops7_a": "Bu meydan okuma dört döngü içerir, herbiri birbiri ardına kullanılır!",
+          "courseB_artist_loops7_a": "Bu meydan okuma birbiri ardına**4** döngü kullanır!",
           "courseB_artist_loops7_b": "Her döngünün, farklı bir yönde ilerleyen bir merdiven deseni oluşturduğunu unutmayın.",
           "courseB_artist_loops7_c": "Döngüler aşağıdaki gibi olmalıdır:\n\n-   Döngü 1\n    -   Sağ\n    -   Aşağı\n\n-   Döngü 2\n    -   Sağ\n    -   Yukarı\n\n-   Döngü 3\n    -   Sol\n    -   Yukarı\n\n-   Döngü 4\n    -   Sol\n    -   Aşağı"
         },
         "courseB_artist_loops7_2019": {
-          "courseB_artist_loops7_a": "Bu meydan okuma dört döngü içerir, herbiri birbiri ardına kullanılır!",
+          "courseB_artist_loops7_a": "Bu meydan okuma birbiri ardına**4** döngü kullanır!",
           "courseB_artist_loops7_b": "Her döngünün, farklı bir yönde ilerleyen bir merdiven deseni oluşturduğunu unutmayın.",
           "courseB_artist_loops7_c": "Döngüler aşağıdaki gibi olmalıdır:\n\n-   Döngü 1\n    -   Sağ\n    -   Aşağı\n\n-   Döngü 2\n    -   Sağ\n    -   Yukarı\n\n-   Döngü 3\n    -   Sol\n    -   Yukarı\n\n-   Döngü 4\n    -   Sol\n    -   Aşağı"
         },
         "courseB_artist_loops7_2020": {
-          "courseB_artist_loops7_a": "Bu meydan okuma dört döngü içerir, herbiri birbiri ardına kullanılır!",
+          "courseB_artist_loops7_a": "Bu meydan okuma birbiri ardına**4** döngü kullanır!",
           "courseB_artist_loops7_b": "Her döngünün, farklı bir yönde ilerleyen bir merdiven deseni oluşturduğunu unutmayın.",
           "courseB_artist_loops7_c": "Döngüler aşağıdaki gibi olmalıdır:\n\n-   Döngü 1\n    -   Sağ\n    -   Aşağı\n\n-   Döngü 2\n    -   Sağ\n    -   Yukarı\n\n-   Döngü 3\n    -   Sol\n    -   Yukarı\n\n-   Döngü 4\n    -   Sol\n    -   Aşağı"
         },
@@ -2212,39 +2212,39 @@
           "courseB_artist_loops9_c": "Döngüyü nereye koyacağınızı bulamıyor musunuz? Kodu adım adım yazıp bir desen bulmayı deneyin."
         },
         "courseB_artist_loops_challenge1": {
-          "courseB_artist_loops_challenge1_a": "Bunun gibi bloklar: <xml><block type=\"simple_move_up_left\"/></xml> sanatçının bir eğimde hareket etmesine izin verir!",
+          "courseB_artist_loops_challenge1_a": "Bunun gibi bloklar:<xml>  <block type=\"simple_move_up_right\"/></xml> sanatçınızın eğik bir şekilde hareket etmesine izin verecek!",
           "courseB_artist_loops_challenge1_b": "Bir zarı bitirdikten sonra diğerine 'Atla'!",
           "courseB_artist_loops_challenge1_c": "Bazı aynı çizgiler üzerinden geçerken  'ilerle' veya 'atla' bloklarından iki taneye ihtiyacın olacak. "
         },
         "courseB_artist_loops_challenge1_2018": {
-          "courseB_artist_loops_challenge1_a": "Bunun gibi bloklar: <xml><block type=\"simple_move_up_left\"/></xml> sanatçının bir eğimde hareket etmesine izin verir!",
+          "courseB_artist_loops_challenge1_a": "Bunun gibi bloklar:<xml>  <block type=\"simple_move_up_right\"/></xml> sanatçınızın eğik bir şekilde hareket etmesine izin verecek!",
           "courseB_artist_loops_challenge1_b": "Bir zarı bitirdikten sonra diğerine 'Atla'!",
           "courseB_artist_loops_challenge1_c": "Bazı aynı çizgiler üzerinden geçerken  'ilerle' veya 'atla' bloklarından iki taneye ihtiyacın olacak. "
         },
         "courseB_artist_loops_challenge1_2019": {
-          "courseB_artist_loops_challenge1_a": "Bunun gibi bloklar: <xml><block type=\"simple_move_up_left\"/></xml> sanatçının bir eğimde hareket etmesine izin verir!",
+          "courseB_artist_loops_challenge1_a": "Bunun gibi bloklar:<xml>  <block type=\"simple_move_up_right\"/></xml> sanatçınızın eğik bir şekilde hareket etmesine izin verecek!",
           "courseB_artist_loops_challenge1_b": "Bir zarı bitirdikten sonra diğerine 'Atla'!",
           "courseB_artist_loops_challenge1_c": "Bazı aynı çizgiler üzerinden geçerken  'ilerle' veya 'atla' bloklarından iki taneye ihtiyacın olacak. "
         },
         "courseB_artist_loops_challenge1_2020": {
-          "courseB_artist_loops_challenge1_a": "Bunun gibi bloklar: <xml><block type=\"simple_move_up_left\"/></xml> sanatçının bir eğimde hareket etmesine izin verir!",
+          "courseB_artist_loops_challenge1_a": "Bunun gibi bloklar:<xml>  <block type=\"simple_move_up_right\"/></xml> sanatçınızın eğik bir şekilde hareket etmesine izin verecek!",
           "courseB_artist_loops_challenge1_b": "Bir zarı bitirdikten sonra diğerine 'Atla'!",
           "courseB_artist_loops_challenge1_c": "Bazı aynı çizgiler üzerinden geçerken  'ilerle' veya 'atla' bloklarından iki taneye ihtiyacın olacak. "
         },
         "courseB_artist_loops_challenge2": {
-          "courseB_artist_loops_challenge2_a": "Bir X çizmek için gerekli olan kod, sana zaten verilmiş durumda. Yapman gereken şey, X'i tekrar etmek ve sonraki noktaya atlamak.",
+          "courseB_artist_loops_challenge2_a": "Bir X çizme kodu size zaten verildi. Tek yapmanız gereken X'i tekrarlamak ve bir sonraki noktaya \"atlamak\".",
           "courseB_artist_loops_challenge2_b": "Atla bloğu ile başka alanlara gidebilirsiniz."
         },
         "courseB_artist_loops_challenge2_2018": {
-          "courseB_artist_loops_challenge2_a": "Bir X çizmek için gerekli olan kod, sana zaten verilmiş durumda. Yapman gereken şey, X'i tekrar etmek ve sonraki noktaya atlamak.",
+          "courseB_artist_loops_challenge2_a": "Bir X çizme kodu size zaten verildi. Tek yapmanız gereken X'i tekrarlamak ve bir sonraki noktaya \"atlamak\".",
           "courseB_artist_loops_challenge2_b": "Atla bloğu ile başka alanlara gidebilirsiniz."
         },
         "courseB_artist_loops_challenge2_2019": {
-          "courseB_artist_loops_challenge2_a": "Bir X çizmek için gerekli olan kod, sana zaten verilmiş durumda. Yapman gereken şey, X'i tekrar etmek ve sonraki noktaya atlamak.",
+          "courseB_artist_loops_challenge2_a": "Bir X çizme kodu size zaten verildi. Tek yapmanız gereken X'i tekrarlamak ve bir sonraki noktaya \"atlamak\".",
           "courseB_artist_loops_challenge2_b": "Atla bloğu ile başka alanlara gidebilirsiniz."
         },
         "courseB_artist_loops_challenge2_2020": {
-          "courseB_artist_loops_challenge2_a": "Bir X çizmek için gerekli olan kod, sana zaten verilmiş durumda. Yapman gereken şey, X'i tekrar etmek ve sonraki noktaya atlamak.",
+          "courseB_artist_loops_challenge2_a": "Bir X çizme kodu size zaten verildi. Tek yapmanız gereken X'i tekrarlamak ve bir sonraki noktaya \"atlamak\".",
           "courseB_artist_loops_challenge2_b": "Atla bloğu ile başka alanlara gidebilirsiniz."
         },
         "courseB_collector_loops1": {
@@ -9029,7 +9029,7 @@
         },
         "courseA_harvester_loops3_2021": {
           "courseA_harvester_loops3_a": "Size yardımcı olması için bunun gibi bir 'tekrarla' bloğu kullanın!\n\n<xml><block type=\"controls_repeat_simplified_dropdown\">\n    <title name=\"TIMES\" config=\"2-10\">4</title>\n  </block></xml>",
-          "courseA_harvester_loops3_b": "Tekrar etmek için, bir 'tekrar' döngüsü sürükle, sonra içine istediğin bloğu koy."
+          "courseA_harvester_loops3_b": "Kodu tekrarlamak için bir \"tekrar\" (<xml><block type=\"controls_repeat_simplified_dropdown\">\n    <title name=\"TIMES\" config=\"2-10\">4</title>\n  </block></xml> )döngüsünü dışarı sürükleyin, ardından istediğiniz bloğu bunun içine koyun."
         },
         "courseA_harvester_loops4_2021": {
           "courseA_harvester_loops4_a": "Ne olacağını görmek için 'Çalıştır'a basmaktan korkayın!",
@@ -9041,7 +9041,7 @@
           "courseA_harvester_loops5_c": "Mısırların hepsini toplamak için bu yolu kullanın!"
         },
         "courseA_harvester_loops5a_2021": {
-          "courseA_harvester_loops5a_a": "Birbiri ardına, birer `tekrarla` döngüsüne ihtiyacınız olacak.",
+          "courseA_harvester_loops5a_a": "Birbiri ardına bir \"tekrar\" <xml> <block type=\"controls_repeat_simplified_dropdown\">\n    <title name=\"TIMES\" config=\"2-10\">6</title>\n  </block></xml> döngüsüne ihtiyacınız olacak.",
           "courseA_harvester_loops5a_b": "Bir döngü 'Güneye doğru ilerle' \\[parçal blok\\[[0]'yı tekrar edecek ve diğeri de 'Doğuya doğru ilerle' <xml><block type=\"maze_moveEast\" limit=\"1\"/></xml>'u tekrar edecek.",
           "courseA_harvester_loops5a_c": "Önce bir yönde, daha sonra da diğerinde ilerlemek için bu yolu kullanın."
         },
@@ -9249,7 +9249,7 @@
           "courseB_artist_loops6_b": "Hareketleri bir kağıda yazmayı deneyin ve desene bakın."
         },
         "courseB_artist_loops7_2021": {
-          "courseB_artist_loops7_a": "Bu meydan okuma dört döngü içerir, herbiri birbiri ardına kullanılır!",
+          "courseB_artist_loops7_a": "Bu meydan okuma birbiri ardına**4** döngü kullanır!",
           "courseB_artist_loops7_b": "Her döngünün, farklı bir yönde ilerleyen bir merdiven deseni oluşturduğunu unutmayın.",
           "courseB_artist_loops7_c": "Döngüler aşağıdaki gibi olmalıdır:\n\n-   Döngü 1\n    -   Sağ\n    -   Aşağı\n\n-   Döngü 2\n    -   Sağ\n    -   Yukarı\n\n-   Döngü 3\n    -   Sol\n    -   Yukarı\n\n-   Döngü 4\n    -   Sol\n    -   Aşağı"
         },
@@ -9263,12 +9263,12 @@
           "courseB_artist_loops9_c": "Döngüyü nereye koyacağınızı bulamıyor musunuz? Kodu adım adım yazıp bir desen bulmayı deneyin."
         },
         "courseB_artist_loops_challenge1_2021": {
-          "courseB_artist_loops_challenge1_a": "Bunun gibi bloklar: <xml><block type=\"simple_move_up_left\"/></xml> sanatçının bir eğimde hareket etmesine izin verir!",
+          "courseB_artist_loops_challenge1_a": "Bunun gibi bloklar:<xml>  <block type=\"simple_move_up_right\"/></xml> sanatçınızın eğik bir şekilde hareket etmesine izin verecek!",
           "courseB_artist_loops_challenge1_b": "Bir zarı bitirdikten sonra diğerine 'Atla'!",
           "courseB_artist_loops_challenge1_c": "Bazı aynı çizgiler üzerinden geçerken  'ilerle' veya 'atla' bloklarından iki taneye ihtiyacın olacak. "
         },
         "courseB_artist_loops_challenge2_2021": {
-          "courseB_artist_loops_challenge2_a": "Bir X çizmek için gerekli olan kod, sana zaten verilmiş durumda. Yapman gereken şey, X'i tekrar etmek ve sonraki noktaya atlamak.",
+          "courseB_artist_loops_challenge2_a": "Bir X çizme kodu size zaten verildi. Tek yapmanız gereken X'i tekrarlamak ve bir sonraki noktaya \"atlamak\".",
           "courseB_artist_loops_challenge2_b": "Atla bloğu ile başka alanlara gidebilirsiniz."
         },
         "courseB_collector_loops10_2021": {
@@ -9365,12 +9365,12 @@
           "courseB_iceage_loops9_c": "Scrat meşe palamuduna ulaşmak için bu tolu takip etmeli."
         },
         "courseB_maze_seq1_2021": {
-          "courseB_maze_seq1_a": "Kuşun hareket etmesi için blokları 'çalıştığı zaman' <xml><block type=\"when_run\"/></xml> bloğuna birleştirin!",
-          "courseB_maze_seq1_b": "Kuşu domuza getirmek için, üç tane <xml><block type=\"maze_moveSouth\"/></xml> oku  dışarı sürükleyin ve 'çalıştığı zaman' <xml><block type=\"when_run\"/></xml> bloğu ile bağlayın. "
+          "courseB_maze_seq1_a": "Scrat'ı hareket ettirmek için blokları <xml><block type=\"when_run\"/></xml> bloğuna bağlayın!",
+          "courseB_maze_seq1_b": "Scrat'ı meşe palamuduna götürmek için bu <xml><block type=\"maze_moveSouth\"/></xml> oklardan üçünü dışarı sürükleyin ve <xml><block type=\"when_run\"/></xml> bloğuna bağlayın."
         },
         "courseB_maze_seq4_2021": {
           "courseB_maze_seq4_a": "Meşe palamuduna ulaşana kadar bir seferde bir talimat eklemeyi deneyin.",
-          "courseB_maze_seq4_b": "Bu bulmacayı çözmek için doğuya hareket etmek isteyeceksiniz"
+          "courseB_maze_seq4_b": "Bu bulmacayı çözmek için <xml><block type=\"maze_moveEast\"/></xml> bloğunu kullanmak isteyeceksiniz."
         },
         "courseB_maze_seq5_2021": {
           "courseB_maze_seq5_a": "Zorlandığınız durumlarda yolu kağıt üzerine çizmeyi deneyin.",
@@ -9401,7 +9401,7 @@
         },
         "courseB_maze_seq_challenge1_2021": {
           "courseB_maze_seq_challenge1_a": "En kısa yol bu sefer işe yaramayabilir.",
-          "courseB_maze_seq_challenge1_b": "<xml><block type=\"maze_moveWest\"/></xml>  bloğunu kullanarak ilerlemeyi deneyin."
+          "courseB_maze_seq_challenge1_b": "Başlamak için <xml><block type=\"maze_moveWest\"/></xml> bloğunu kullanmayı deneyin."
         },
         "courseB_maze_seq_challenge2_2021": {
           "courseB_maze_seq_challenge2_a": "Bu bulmacayı çözmek için blok eklemene veya kaldırmana gerek yok.",
@@ -9584,8 +9584,8 @@
           "courseC_artist_loops7a_a": "Dairenin iç açısı 360 derece olduğundan, dönüşteki açı değeri ve döngü sayının çarpımı 360'a eşit olmalıdır. Bunun nasıl çalıştığını görmek için önerilen rotayı kontrol edin!"
         },
         "courseC_artist_prog2_2021": {
-          "courseC_artist_prog2_a": "Eğer 'İleriye Taşı 100 Piksel' blokunu kullanırsan, otomatik olarak bir çizgi çizeceğim.",
-          "courseC_artist_prog2_b": "Köşeyi çevirirken sorun mu yaşıyorsunuz? `90 derece sağa dön` bloğunu kullanın."
+          "courseC_artist_prog2_a": "*\"Eğer <xml><block type=\"draw_move_by_constant\"><title name=\"DIR\">moveForward</title><title name=\"VALUE\">100</title></block></xml> bloğunu kullanırsanız, bir çizgi çizeceğim. “*",
+          "courseC_artist_prog2_b": "Köşeyi dönerken sorun mu yaşıyorsunuz?  <xml><block type=\"draw_turn_by_constant_dropdown\"><title name=\"DIR\">turnRight</title><title name=\"VALUE\" config=\"45,60,90,120,180\">90</title></block></xml> bloğunu kullanın."
         },
         "courseC_artist_prog3_2021": {
           "courseC_artist_prog3_a": "Bu pencereyi oluşturmak için kenarları 100 piksel olan bir kare çizin.\n\n-   ilerle\n-   dön\n-   ilerle\n-   dön\n-   ilerle\n-   dön\n-   ilerle",
@@ -10082,7 +10082,7 @@
           "courseD_bee_nestedLoops7_c": "Sahip olduğunuz üç bloğu aşağıdaki gibi iç içe yerleştirin:\n\n-   tekrar 4\n    -   tekrar 3\n        \\-tekrar 12\n            \\- nektar al\n        -   ilerle\n    -   sağa dön"
         },
         "courseD_bounce_events10s_2021": {
-          "courseD_bounce_events10s_a": "Kodunda bu olayların ikisini de bulundurmalısın:\n<xml><block type=\"bounce_whenBallInGoal\" deletable=\"false\"><next><block type=\"bounce_playSound\"><title name=\"SOUND\">Hışırtı</title><next><block type=\"bounce_incrementPlayerScore\"></block></next></block></next></block><block type=\"bounce_whenBallMissesPaddle\" deletable=\"false\"><next><block type=\"bounce_playSound\"><title name=\"SOUND\">Islık</title><next><block type=\"bounce_incrementOpponentScore\"></block></next></block></next>\\</block</xml>"
+          "courseD_bounce_events10s_a": "Kodunda bu olayların ikisini de bulundurmalısın:\n\n<xml><block type=\"bounce_whenBallInGoal\" deletable=\"false\"><next><block type=\"bounce_playSound\"><title name=\"SOUND\">swish</title><next><block type=\"bounce_incrementPlayerScore\"></block></next></block></next></block><block type=\"bounce_whenBallMissesPaddle\" deletable=\"false\"><next><block type=\"bounce_playSound\"><title name=\"SOUND\">whistle</title><next><block type=\"bounce_incrementOpponentScore\"></block></next></block></next></block></xml>"
         },
         "courseD_bounce_events11s_2021": {
           "courseD_bounce_events11s_a": "Oyun başladığında, sepeti vurduğunda ve el topu kaçırdığında topu atmalısın."
@@ -10092,18 +10092,18 @@
           "courseD_bounce_events12s_b": "Her atışın değerini 2 puan yapmayı ve takım logosunu sizin memleketinizin logosuyla değiştirmeyi deneyin!"
         },
         "courseD_bounce_events1s_2021": {
-          "courseD_bounce_events1s_a": "Bu oyunun çalışması için 'sola ilerle' bloğunu 'sol oka basıldığında' olayına eklemeniz gerekir:\n<xml> <block type=\"bounce_whenLeft\" deletable=\"false\" x=\"20\" y=\"20\">\n    <next>\n      <block type=\"bounce_moveLeft\"/>\n    </next>\n  </block>\n\n   </xml>",
+          "courseD_bounce_events1s_a": "Bu oyunun çalışması için 'sola ilerle' bloğunu 'sol oka basıldığında' olayına eklemeniz gerekir:\n\n<xml> <block type=\"bounce_whenLeft\" deletable=\"false\" x=\"20\" y=\"20\">\n    <next>\n      <block type=\"bounce_moveLeft\"/>\n    </next>\n  </block>\n\n   </xml>",
           "courseD_bounce_events1s_b": "Bu bulmacayı çözmek için \"Çalıştır\" düğmesine basmayı ve eli sepete almayı unutma."
         },
         "courseD_bounce_events2s_2021": {
-          "courseD_bounce_events2s_a": "Bunun çalışması için kodlanan 2 takım 'ilerle' olayına sahip olmanız gerekecek:\n\n<xml>\n<block type=\"bounce_whenLeft\" deletable=\"false\" x=\"20\" y=\"20\">\n<next>\n<block type=\"bounce_moveLeft\"/>\n</next>\n</block>\n<block type=\"bounce_whenRight\" deletable=\"false\" x=\"180\" y=\"20\">\n<next>\n<block type=\"bounce_moveRight\"/>\n</next>\n</block>\n</xml>"
+          "courseD_bounce_events2s_a": "Bunun çalışması için kodlanan 2 takım 'ilerle' olayına sahip olmanız gerekecek:\n\n<xml>\n  <block type=\"bounce_whenLeft\" deletable=\"false\" x=\"20\" y=\"20\">\n    <next>\n      <block type=\"bounce_moveLeft\"/>\n    </next>\n  </block>\n  <block type=\"bounce_whenRight\" deletable=\"false\" x=\"180\" y=\"20\">\n    <next>\n      <block type=\"bounce_moveRight\"/>\n    </next>\n  </block>\n</xml>"
         },
         "courseD_bounce_events5s_2021": {
           "courseD_bounce_events5s_a": "Bulmacayı çözmek için eli hareket ettirmeye gerek yok.",
-          "courseD_bounce_events5s_b": "Çalışma alanına bu kodu eklediğinizden emin olun:\n<xml>  <block type=\"bounce_whenPaddleCollided\" deletable=\"false\"> <next> <block type=\"bounce_bounceBall\"/></next></block></xml>"
+          "courseD_bounce_events5s_b": "Çalışma alanına bu kodu eklediğinizden emin olun:\n\n<xml>  <block type=\"bounce_whenPaddleCollided\" deletable=\"false\"> <next> <block type=\"bounce_bounceBall\"/></next></block></xml>"
         },
         "courseD_bounce_events6s_2021": {
-          "courseD_bounce_events6s_a": "Bunun gibi bir olayınız var mı?\n<xml><block type=\"bounce_whenWallCollided\" deletable=\"false\"><next><block type=\"bounce_bounceBall\"></block></next></block></block></xml>",
+          "courseD_bounce_events6s_a": "Buna benzeyen bir olayınız var mı?\n\n<xml><block type=\"bounce_whenWallCollided\" deletable=\"false\"><next><block type=\"bounce_bounceBall\"></block></next></block></block></xml>",
           "courseD_bounce_events6s_b": "Eğer kodu doğru yazdıysanız, kazanmak için eli hareket ettirmeniz gerekmez."
         },
         "courseD_bounce_events7s_2021": {
@@ -10264,12 +10264,12 @@
           "courseD_iceage_loops9_c": "Scrat meşe palamuduna ulaşmak için bu tolu takip etmeli."
         },
         "courseD_maze_intro4_2021": {
-          "courseC_maze_programming4_a": "Sağa veya sola Scrat'in bakış açısından dönebilirsiniz. Eğer yüzünüz sağa dönükse, sağa dönmek sizi aşağıya döndürecektir.",
+          "courseC_maze_programming4_a": "Sağa veya sola Red'in bakış açısından dönebilirsiniz. Eğer yüzünüz sağa dönükse, sağa dönmek sizi aşağıya döndürecektir.",
           "courseC_maze_programming4_b": "Yolu takip etmek için, ileri gidin ve bir yöne dönün, sonra yeniden hareket edin ve zıt yöne dönün. Palamuda ulaşmak için bir kez daha ileri gidin."
         },
         "courseD_maze_intro5a_2021": {
           "courseC_maze_programming5_a": "Kodunuzu satır satır çalıştırmak için \"Adım\" düğmesini kullanabilirsiniz. Sonrasında ne yapmanız gerektiğini anladınız mı?",
-          "courseC_maze_programming5_b": "Bu dönüşlerin Kırmızı'nın perspektifi olduğunu unutmayın.",
+          "courseC_maze_programming5_b": "Bu dönüşlerin Red'in perspektifi olduğunu unutmayın.",
           "courseC_maze_programming5_c": "Hata yapmaktan korkmayın! Bulmacayı henüz çözdüğünüzü düşünmeseniz bile, bloklar ekleyin ve ne olacağını görmek için kodu çalıştırın."
         },
         "courseD_maze_nestedLoops3_2021": {
@@ -10351,9 +10351,9 @@
           "courseE_artist_functions1_c": "Daha kısa bir kod için, gözlüğün kare çerçevelerini çizmek için \"tekrar\" döngüsü kullanabilirsiniz."
         },
         "courseE_artist_functions2_2021": {
-          "courseD_artist_functions2_b": "Fonksiyon bütün programı içermeyecek, sadece 100 piksel uzunluğundaki kenarlarını çizer.",
-          "courseD_artist_functions2_c": "'Çalıştığı zaman' bloğunun altına fonksiyonunuzu 'çalıştırmak' için yeşil 'bir kare çiz' bloğu kullanın. Aksi takdirde, fonksiyonunuzdaki kod çalışmayacak.",
-          "courseD_artist_functions2_a": "Programınız: \n\\-Fonksiyon kullanmalıdır.\n\n-   ileri 100 + 75 piksel ilerlemelidir\n-   Fonksiyon kullanmalıdır"
+          "courseD_artist_functions2_b": "İşlev, programınızın tamamını içermemeli, yalnızca 100 piksel kenarlı bir kare çizen kısmı içermelidir.",
+          "courseD_artist_functions2_c": "Fonksiyonunuzu “çağırmak” için yeşil \\`bir kare çiz' bloğunu kullandığınızdan emin olun. Aksi takdirde, fonksiyonunuzdaki kod çalışmaz.\n\n<xml><block type=\"procedures_callnoreturn\" limit=\"2\"><mutation name=\"draw a square\"/></block></xml>",
+          "courseD_artist_functions2_a": "Programınız:\n\n-   Fonksiyonunuzu kullanmalı\n-   100 + 75 piksel ileri gitmeli\n-   Fonksiyonunuzu tekrar kullanmalı"
         },
         "courseE_artist_functions2_dani": {
           "courseD_artist_functions2_b": "Yazdığınız fonksiyon bütün programı değil, sadece kenarları 100 piksel olan bir kare çizme kısmını kapsamalı.",
@@ -10389,7 +10389,7 @@
           "courseD_artist_functions8_d": "Bir kare satırı oluşturmak için:\n\n-   3 kez tekrarla\n    -   kenar uzunluğu **50 piksel** olan bir kare çiz\n    -   **100 piksel** ileri atla",
           "courseD_artist_functions8_b": "Bu resimdeki her bir satırı 3 kareden oluşan bir satır olarak düşünün. Kaç kare satırı var ve her birini çizmeye nereden başlamalısınız?\n\n![](<https://images.code.org/22a6f5cc5551371057244eee01955f8e-image-1493135135468.4.10 Hint Drawing.png>)",
           "courseD_artist_functions8_c": "Her bir aşamalı kare dizisinin sonunda sanatçı sıradaki aşamalı kare dizisini çizmeye başlamadan önce aşağı ve geri atlamalı.",
-          "courseD_artist_functions8_g": "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
+          "courseD_artist_functions8_g": "![](https://images.code.org/c5b48a0db328c6cb32a024d2bf9c00af-image-1493139855549.gif)"
         },
         "courseE_artist_functions8b_2021": {
           "courseD_artist_functions8_f": "Bunu doğru bir şekilde yapıyorsanız, yalnızca bir 'ileri git' bloğuna ihtiyacınız olacak!",
@@ -10424,12 +10424,12 @@
           "courseE_farmer_functions1a_b": "Balkabağına ulaşmak için \"kadar tekrarla\" bloğunu kullanın!"
         },
         "courseE_farmer_functions2b_2021": {
-          "courseE_farmer_functions2b_a": "İki yolun sonuna ulaşmak için 'bal kabağına kadar tekrarla''yı kullanabilirsiniz.",
+          "courseE_farmer_functions2b_a": "İki yolun da sonuna ulaşmak için 'balkabağına kadar tekrarla' yabilirsiniz.",
           "courseE_farmer_functions2b_b": "Bağlantı yolunda hiç mısır yok, yalnızca ilerleyebilir ve dönebilirsiniz.",
           "courseE_farmer_functions2b_c": "Mısırların tamamını toplamak için iki ayrı \"kadar tekrarla\" bloğuna ihtiyacınız var."
         },
         "courseE_farmer_functions2ba_2021": {
-          "courseE_farmer_functions2ba_a": "Nu fonksiyonu çağırmak için yeşil 'mısır ve bal kabağı' karesi kullanın."
+          "courseE_farmer_functions2ba_a": "Tüm kabakları aldığınızdan emin olmak için yeşil `tüm kabakları al` bloğunu kullanın!"
         },
         "courseE_farmer_functions3c1_2021": {
           "coursee_farmer_functions3c1_2018_a": "Bu bulmacayı çözmek için 'yol boyunca topla' fonksiyonunu üç kez kullanmanız gerekecektir.",
@@ -10456,13 +10456,13 @@
           "courseE_farmer_ramp11b_a": "Kodunuzu daha kısa yapmak için 'tekrar' döngüsünün içine 'süresince' döngüsü yerleştirebilirsiniz."
         },
         "courseE_farmer_ramp12_forswap_2021": {
-          "courseE_farmer_ramp12_b": "Çiftçiye kaç gere ilerleyip kaç marul almasını söylemek için tekrarla bloğuna ihtiyacın var."
+          "courseE_farmer_ramp12_b": "Yine de, çiftçiye kaç kez ilerleyip marul alması gerektiğini söylemek için tüm bunların dışında bir \"tekrar\" döngüsü kullanmanız gerekecek."
         },
         "courseE_farmer_ramp12c_2021": {
-          "courseE_farmer_ramp12b_b": "Yine de hala ilk 'kadar' döngüsünü kullanmaya ihtiyacınız olacak, sonra marula ulaştığınızda bir 'süresince' döngüsü kullanın."
+          "courseE_farmer_ramp12b_b": "Yine de önce bir `-e kadar` döngüsü kullanmanız gerekir, sonra marula ulaştığınızda bir `süresince` döngüsü kullanın."
         },
         "courseE_farmer_ramp12d_2021": {
-          "courseE_farmer_ramp12d_b": "Bulmacayı çözmek için yine de hala bir 'tekrar' döngüsünün içine 'kadar' ve 'süresince' döngülerinizi koymanız gerekir!"
+          "courseE_farmer_ramp12d_b": "Bu bulmacayı çözmek için yine de `-e kadar`ve `süresince` döngülerinizi bir \\`tekrar 'döngüsünün içine koymanız gerekecek!"
         },
         "courseE_farmer_ramp12e_2021": {
           "courseE_farmer_ramp12e_b": "Bu bulmacanın çözümü son bulmacanın çözümüne çok benziyor, fakat diğer yöne dönüyor."
@@ -11323,7 +11323,7 @@
           "courseB_artist_loops6_b": "Hareketleri bir kağıda yazmayı deneyin ve desene bakın."
         },
         "courseB_artist_loops72022": {
-          "courseB_artist_loops7_a": "Bu meydan okuma dört döngü içerir, herbiri birbiri ardına kullanılır!",
+          "courseB_artist_loops7_a": "Bu meydan okuma birbiri ardına**4** döngü kullanır!",
           "courseB_artist_loops7_b": "Her döngünün, farklı bir yönde ilerleyen bir merdiven deseni oluşturduğunu unutmayın.",
           "courseB_artist_loops7_c": "Döngüler aşağıdaki gibi olmalıdır:\n\n-   Döngü 1\n    -   Sağ\n    -   Aşağı\n\n-   Döngü 2\n    -   Sağ\n    -   Yukarı\n\n-   Döngü 3\n    -   Sol\n    -   Yukarı\n\n-   Döngü 4\n    -   Sol\n    -   Aşağı"
         },
@@ -11337,12 +11337,12 @@
           "courseB_artist_loops9_c": "Döngüyü nereye koyacağınızı bulamıyor musunuz? Kodu adım adım yazıp bir desen bulmayı deneyin."
         },
         "courseB_artist_loops_challenge12022": {
-          "courseB_artist_loops_challenge1_a": "Bunun gibi bloklar: <xml><block type=\"simple_move_up_left\"/></xml> sanatçının bir eğimde hareket etmesine izin verir!",
+          "courseB_artist_loops_challenge1_a": "Bunun gibi bloklar:<xml>  <block type=\"simple_move_up_right\"/></xml> sanatçınızın eğik bir şekilde hareket etmesine izin verecek!",
           "courseB_artist_loops_challenge1_b": "Bir zarı bitirdikten sonra diğerine 'Atla'!",
           "courseB_artist_loops_challenge1_c": "Bazı aynı çizgiler üzerinden geçerken  'ilerle' veya 'atla' bloklarından iki taneye ihtiyacın olacak. "
         },
         "courseB_artist_loops_challenge22022": {
-          "courseB_artist_loops_challenge2_a": "Bir X çizmek için gerekli olan kod, sana zaten verilmiş durumda. Yapman gereken şey, X'i tekrar etmek ve sonraki noktaya atlamak.",
+          "courseB_artist_loops_challenge2_a": "Bir X çizme kodu size zaten verildi. Tek yapmanız gereken X'i tekrarlamak ve bir sonraki noktaya \"atlamak\".",
           "courseB_artist_loops_challenge2_b": "Atla bloğu ile başka alanlara gidebilirsiniz."
         },
         "courseB_collector_loops102022": {

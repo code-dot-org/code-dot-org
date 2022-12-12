@@ -1333,9 +1333,7 @@ tr:
             '"South"': Güney
             '"West"': Batı
       gamelab_moveToward:
-        text: |-
-          {SPRITE} piksel {DISTANCE} doğru hareket ]
-           {SPRITE} hareket etsin {DISTANCE} piksel ileri {TARGET} e doğru
+        text: "{SPRITE} {TARGET} e doğru {DISTANCE} piksel ileri hareket etsin "
       gamelab_newSpritePointer:
         text: "{SPRITE}"
       gamelab_objectSpritePointer:

@@ -154,12 +154,12 @@
           "name": "Sanal Ders Değişiklikleri"
         },
         "password_power-up_if_then_scenarios/coursed/2022": {
-          "name": "Şifre Güçlendirme: Eğer... Sonra... Senaryolar",
+          "name": "Şifre Güçlendirme: Eğer... Sonra... Senaryoları",
           "url": "https://docs.google.com/document/d/1JeZtFU6hMFTYITAAPaA_CRmOVknvkcKZQszL6u7DRG4/edit",
           "type": "Çalışma Kağıdı"
         },
         "password_power-up_if_then_scenarios_1/coursed/2022": {
-          "name": "Şifre Güçlendirme: Eğer... Sonra... Senaryolar",
+          "name": "Şifre Güçlendirme: Eğer... Sonra... Senaryoları",
           "url": "https://docs.google.com/document/d/1yrL1rD9eCSEYAvsM8XiL5g-uKpqizYwAk73_6ddZOAQ/edit",
           "type": "Cevap Anahtarı"
         },
@@ -298,7 +298,7 @@
           "url": "https://open.spotify.com/playlist/2MiLztu5QGQERdEsZed81b?si=6cF0s1ETQf2vN_ea8B4fIw"
         },
         "feeling_faces/coursed/2022": {
-          "name": "His Yüzleri",
+          "name": "Hisseden Yüzler",
           "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/",
           "type": "Duygu Resimleri"
         },
@@ -426,9 +426,11 @@
           "type": "Slaytlar"
         },
         "blank_space_stories/coursef/2022": {
+          "name": "Boş Alan Hikayeleri",
           "url": "https://docs.google.com/document/d/1fJNyI0WQTi-Q-XMZDn9sIgD_o6KjGHwZesQRa93ko5E/template/preview"
         },
         "blank_space_stories_1/coursef/2022": {
+          "name": "Boş Alan Hikayeleri",
           "url": "https://docs.google.com/document/d/1mXI-U7ve1JjDchlyhjD53pkdSXKqeMemb7upFGareV4/template/preview",
           "type": "Cevap Anahtarı"
         },
@@ -697,22 +699,22 @@
           "name": "Sanal Ders Değişiklikleri"
         },
         "digital_trails_animal_tracks/courseb/2022": {
-          "name": "Dijital Yollar: Hayvan Parçaları",
+          "name": "Dijital İzler: Hayvan İzleri",
           "url": "https://docs.google.com/document/d/1WLUpUXDh1503PwlnJ06DqWr6KaiX7E8KOpDJjrCkLzM/",
           "type": "Öğrenci Notu"
         },
         "digital_trails_digital_trail_squares/courseb/2022": {
-          "name": "Dijital Parklar: Dijital Trail Kareler",
+          "name": "Dijital İzler: Dijital İz Kareleri",
           "url": "https://docs.google.com/document/d/1Ild_AQ98V1kXXvc-ncnC1cTNnIQrZUG_QS-ZiEi4EY8/edit",
           "type": "Öğrenci Notu"
         },
         "digital_trails_follow_the_digital_trail/courseb/2022": {
-          "name": "Dijital Trails: Dijital Yolu Takip Edin",
+          "name": "Dijital İzler: Dijital İzi Takip Edin",
           "url": "https://www.commonsense.org/education/videos/follow-the-digital-trail",
           "type": "Ders Videosu"
         },
         "digital_trails_lesson_slides/courseb/2022": {
-          "name": "Dijital Yollar: Ders Slaytları",
+          "name": "Dijital İzler: Ders Slaytları",
           "url": "https://docs.google.com/presentation/d/1jNMWXhnNjlqK44LQ_bpAtmDmdHPeYqJeVBwegi5BnM4/edit",
           "type": "Sunum Destesi"
         },
@@ -722,17 +724,17 @@
           "type": "Kaynak"
         },
         "move_it_move_it/courseb/2022": {
-          "name": "Çabuk, Çabuk Taşı",
+          "name": "Oynat, Oynat",
           "url": "https://docs.google.com/document/d/1xavPzpNq1GO7zzOzreES0Kl8FPcbjILFzfmORUqttcg/edit",
           "type": "Harita Aktivitesi"
         },
         "move_it_move_it_1/courseb/2022": {
-          "name": "Çabuk, Çabuk Taşı",
+          "name": "Oynat, Oynat",
           "url": "https://docs.google.com/document/d/1eOrX6kpPKLzUD3GpvGy9XxupnMZJrtaeh2bfe0zOz64/edit",
           "type": "Çalışma Kağıdı"
         },
         "move_it_move_it_2/courseb/2022": {
-          "name": "Çabuk, Çabuk Taşı",
+          "name": "Oynat, Oynat",
           "url": "https://docs.google.com/document/d/1bdGOgeZ9Z4MS_yxBLt-Mit2Rhr4rCNWL7HC-i1Qmpi4/edit",
           "type": "Çalışma Kağıdı Cevap Anahtarı"
         },
@@ -751,7 +753,7 @@
           "url": "https://studio.code.org/s/jigsaw"
         },
         "feeling_faces/courseb/2022": {
-          "name": "His Yüzleri",
+          "name": "Hisseden Yüzler",
           "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/",
           "type": "Duygu Resimleri"
         },
@@ -943,6 +945,7 @@
           "url": "https://docs.google.com/document/d/1cRPELQ28TZMJhc68-eYP1D26Uqzcyfx4RDYuThZJGLo/edit"
         },
         "text_and_prompts/express/2022": {
+          "name": "Metin ve Bilgi İstemleri",
           "url": "https://docs.google.com/presentation/d/1ImZg6MHmaj5ouvrYdgsungbeLXRDAu106-NXOroJg14/template/preview",
           "type": "Slaytlar"
         },
@@ -976,7 +979,7 @@
           "type": "Video"
         },
         "feeling_faces/pre-express/2022": {
-          "name": "His Yüzleri",
+          "name": "Hisseden Yüzler",
           "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/",
           "type": "Duygu Resimleri"
         },
@@ -991,7 +994,7 @@
           "type": "Öğrenci Videosu"
         },
         "wiggles_-_go_noodle/pre-express/2022": {
-          "name": "Wiggles - Go Noodle",
+          "name": "Wiggles - Haydi Noodle",
           "url": "https://app.gonoodle.com/channels/brainercise-with-mr-catman/shoulder-rock-n-roll",
           "type": "Video"
         },
@@ -1042,17 +1045,17 @@
           "type": "Sunum Destesi"
         },
         "safety_in_my_online_neighborhood_my_online_neighborhood/coursea/2022": {
-          "name": "Çevrimiçi Mahallemde Güvenlik: Çevrimiçi Mahallemim",
+          "name": "Çevrimiçi Mahallemde Güvenlik: Çevrimiçi Mahallem",
           "url": "https://www.commonsense.org/education/videos/my-online-neighborhood",
           "type": "Ders Videosu"
         },
         "safety_in_my_online_neighborhood_pause_and_think_moment/coursea/2022": {
-          "name": "Çevrimiçi Mahallemde Güvenlik: Duraklat ve Düşün Anını",
+          "name": "Çevrimiçi Mahallemde Güvenlik: Dur ve Düşün Anı",
           "url": "https://docs.google.com/document/d/1o95Q7OD2oF5e-lWxj31kKopfhQVYWDUmw6uDdm1RIIU/",
           "type": "Öğrenci Notu"
         },
         "safety_in_my_online_neighborhood_safety_it_rules_/coursea/2022": {
-          "name": "Çevrimiçi Mahallemde Güvenlik: Güvenlik: Bu Kurallar!",
+          "name": "Çevrimiçi Mahallemde Güvenlik: Güvenlik: En İyisi!",
           "url": "https://docs.google.com/document/d/1_fc870l0ndjhUMazjwLSaJOx9lIMsvbd3BYYEtLykIY/edit",
           "type": "Şiir Posteri"
         },
@@ -1137,7 +1140,7 @@
           "type": "Yönergeler"
         },
         "feeling_faces/coursea/2022": {
-          "name": "His Yüzleri",
+          "name": "Hisseden Yüzler",
           "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/",
           "type": "Duygu Resimleri"
         },
@@ -1227,12 +1230,12 @@
           "name": "Sanal Ders Değişiklikleri"
         },
         "putting_a_stop_to_online_meanness_lesson_slides/coursec/2022": {
-          "name": "Çevrimiçi Anlamlığa Durdurmak: Ders Slaytları",
+          "name": "Çevrimiçi Kabalığa DUR demek: Ders Slaytları",
           "url": "https://docs.google.com/presentation/d/1IXZ_WSxUuenF42ZzWk5pXTD8-Yy8P4nV2ihHd5-FotY/edit",
           "type": "Sunum Destesi"
         },
         "putting_a_stop_to_online_meanness_stop_online_meanness/coursec/2022": {
-          "name": "Çevrimiçi Ortalama Durdurmak: Online Ortalama Durdur",
+          "name": "Çevrimiçi Kabalığa DUR demek: Çevrimiçi Kabalığı DURDUR",
           "url": "https://docs.google.com/document/d/1gXXWbEocNfvw4fWdo7nQJ0r2FjoNeyElr8IcANUqLlo/edit?usp=sharing",
           "type": "Öğrenci Notu"
         },
@@ -3226,10 +3229,12 @@
           "type": "Çalışma Kağıdı"
         },
         "blank_space_stories/coursef/2021": {
+          "name": "Boş Alan Hikayeleri",
           "url": "https://docs.google.com/document/d/1mXI-U7ve1JjDchlyhjD53pkdSXKqeMemb7upFGareV4/template/preview",
           "type": "Cevap Anahtarı"
         },
         "blank_space_stories_-_worksheet/coursef/2021": {
+          "name": "Boş Alan Hikayeleri",
           "url": "https://docs.google.com/document/d/1fJNyI0WQTi-Q-XMZDn9sIgD_o6KjGHwZesQRa93ko5E/template/preview"
         },
         "variables_blank_space_stories/coursef/2021": {
@@ -3238,6 +3243,7 @@
           "type": "Slaytlar"
         },
         "text_and_prompts/coursef/2021": {
+          "name": "Metin ve Bilgi İstemleri",
           "url": "https://docs.google.com/presentation/d/1ImZg6MHmaj5ouvrYdgsungbeLXRDAu106-NXOroJg14/template/preview",
           "type": "Slaytlar"
         },
@@ -3416,22 +3422,22 @@
           "type": "Kaynak"
         },
         "digital-trails-animal-tracks/courseb/2021": {
-          "name": "Dijital Yollar: Hayvan Parçaları",
+          "name": "Dijital İzler: Hayvan İzleri",
           "url": "https://docs.google.com/document/d/1WLUpUXDh1503PwlnJ06DqWr6KaiX7E8KOpDJjrCkLzM/",
           "type": "Öğrenci Notu"
         },
         "digital-trails-digital-trail-squares/courseb/2021": {
-          "name": "Dijital Parklar: Dijital Trail Kareler",
+          "name": "Dijital İzler: Dijital İz Kareleri",
           "url": "https://docs.google.com/document/d/1Ild_AQ98V1kXXvc-ncnC1cTNnIQrZUG_QS-ZiEi4EY8/edit",
           "type": "Öğrenci Notu"
         },
         "digital-trails-follow-the-digital-trail/courseb/2021": {
-          "name": "Dijital Trails: Dijital Yolu Takip Edin",
+          "name": "Dijital İzler: Dijital İzi Takip Edin",
           "url": "https://www.commonsense.org/education/videos/follow-the-digital-trail",
           "type": "Ders Videosu"
         },
         "digital-trails-lesson-slides/courseb/2021": {
-          "name": "Dijital Yollar: Ders Slaytları",
+          "name": "Dijital İzler: Ders Slaytları",
           "url": "https://docs.google.com/presentation/d/1jNMWXhnNjlqK44LQ_bpAtmDmdHPeYqJeVBwegi5BnM4/edit",
           "type": "Sunum Destesi"
         },
@@ -3441,17 +3447,17 @@
           "type": "Kaynak"
         },
         "mimi-activity/courseb/2021": {
-          "name": "Çabuk, Çabuk Taşı",
+          "name": "Oynat, Oynat",
           "url": "https://docs.google.com/document/d/1xavPzpNq1GO7zzOzreES0Kl8FPcbjILFzfmORUqttcg/edit",
           "type": "Harita Aktivitesi"
         },
         "mimi-debugging/courseb/2021": {
-          "name": "Çabuk, Çabuk Taşı",
+          "name": "Oynat, Oynat",
           "url": "https://docs.google.com/document/d/1eOrX6kpPKLzUD3GpvGy9XxupnMZJrtaeh2bfe0zOz64/edit",
           "type": "Çalışma Kağıdı"
         },
         "mimi-teacher-puzzle/courseb/2021": {
-          "name": "Çabuk, Çabuk Taşı",
+          "name": "Oynat, Oynat",
           "url": "https://docs.google.com/document/d/1bdGOgeZ9Z4MS_yxBLt-Mit2Rhr4rCNWL7HC-i1Qmpi4/edit",
           "type": "Çalışma Kağıdı Cevap Anahtarı"
         },
@@ -3475,7 +3481,7 @@
           "type": "Yönergeler"
         },
         "feeling-faces-image/courseb/2021": {
-          "name": "His Yüzleri",
+          "name": "Hisseden Yüzler",
           "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/",
           "type": "Duygu Resimleri"
         },
@@ -3644,17 +3650,17 @@
           "type": "Sunum Destesi"
         },
         "safety-in-my-online-neighborhood-my-online-neighborhood/coursea/2021": {
-          "name": "Çevrimiçi Mahallemde Güvenlik: Çevrimiçi Mahallemim",
+          "name": "Çevrimiçi Mahallemde Güvenlik: Çevrimiçi Mahallem",
           "url": "https://www.commonsense.org/education/videos/my-online-neighborhood",
           "type": "Ders Videosu"
         },
         "safety-in-my-online-neighborhood-pause-and-think-moment/coursea/2021": {
-          "name": "Çevrimiçi Mahallemde Güvenlik: Duraklat ve Düşün Anını",
+          "name": "Çevrimiçi Mahallemde Güvenlik: Dur ve Düşün Anı",
           "url": "https://docs.google.com/document/d/1o95Q7OD2oF5e-lWxj31kKopfhQVYWDUmw6uDdm1RIIU/",
           "type": "Öğrenci Notu"
         },
         "safety-in-my-online-neighborhood-safety-it-rules/coursea/2021": {
-          "name": "Çevrimiçi Mahallemde Güvenlik: Güvenlik: Bu Kurallar!",
+          "name": "Çevrimiçi Mahallemde Güvenlik: Güvenlik: En İyisi!",
           "url": "https://docs.google.com/document/d/1_fc870l0ndjhUMazjwLSaJOx9lIMsvbd3BYYEtLykIY/edit",
           "type": "Şiir Posteri"
         },
@@ -3749,7 +3755,7 @@
           "type": "Yönergeler"
         },
         "feeling-faces-image/coursea/2021": {
-          "name": "His Yüzleri",
+          "name": "Hisseden Yüzler",
           "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/",
           "type": "Duygu Resimleri"
         },
@@ -3888,7 +3894,7 @@
           "type": "Kaynak"
         },
         "putting-a-stop-to-online-meanness-lesson-slides/coursec/2021": {
-          "name": "Çevrimiçi Anlamlığa Durdurmak: Ders Slaytları",
+          "name": "Çevrimiçi Kabalığı DURDURmak: Ders Slaytları",
           "url": "https://docs.google.com/presentation/d/1IXZ_WSxUuenF42ZzWk5pXTD8-Yy8P4nV2ihHd5-FotY/edit",
           "type": "Sunum Destesi"
         },
@@ -4107,12 +4113,12 @@
           "type": "Kaynak"
         },
         "password_power-up_if_then_scenarios/coursed/2021": {
-          "name": "Şifre Güçlendirme: Eğer... Sonra... Senaryolar",
+          "name": "Şifre Güçlendirme: Eğer... Sonra... Senaryoları",
           "url": "https://docs.google.com/document/d/1JeZtFU6hMFTYITAAPaA_CRmOVknvkcKZQszL6u7DRG4/edit",
           "type": "Çalışma Kağıdı"
         },
         "password_power-up_if_then_scenarios_answer_key/coursed/2021": {
-          "name": "Şifre Güçlendirme: Eğer... Sonra... Senaryolar",
+          "name": "Şifre Güçlendirme: Eğer... Sonra... Senaryoları",
           "url": "https://docs.google.com/document/d/1yrL1rD9eCSEYAvsM8XiL5g-uKpqizYwAk73_6ddZOAQ/edit",
           "type": "Cevap Anahtarı"
         },
@@ -4249,7 +4255,7 @@
           "type": "Cevap Anahtarı"
         },
         "feeling-faces-image/coursed/2021": {
-          "name": "His Yüzleri",
+          "name": "Hisseden Yüzler",
           "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/",
           "type": "Duygu Resimleri"
         },
@@ -4410,6 +4416,7 @@
           "url": "https://docs.google.com/document/d/1cRPELQ28TZMJhc68-eYP1D26Uqzcyfx4RDYuThZJGLo/edit"
         },
         "text_and_prompts/express/2021": {
+          "name": "Metin ve Bilgi İstemleri",
           "url": "https://docs.google.com/presentation/d/1ImZg6MHmaj5ouvrYdgsungbeLXRDAu106-NXOroJg14/template/preview",
           "type": "Slaytlar"
         },
@@ -4458,7 +4465,7 @@
           "type": "Öğretmen Videosu"
         },
         "feeling-faces-image/pre-express/2021": {
-          "name": "His Yüzleri",
+          "name": "Hisseden Yüzler",
           "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/",
           "type": "Duygu Resimleri"
         },
@@ -4468,7 +4475,7 @@
           "type": "Öğrenci Videosu"
         },
         "wiggles_-_go_noodle/pre-express/2021": {
-          "name": "Wiggles - Go Noodle",
+          "name": "Wiggles - Haydi Noodle",
           "url": "https://app.gonoodle.com/channels/brainercise-with-mr-catman/shoulder-rock-n-roll",
           "type": "Video"
         },
@@ -5045,11 +5052,11 @@
           "type": "Kaynak"
         },
         "loops_in_app_lab/csd/2021": {
-          "name": "For Döngüleri",
+          "name": "For (İçin) Döngüleri",
           "type": "Video"
         },
         "for_loops/csd/2021": {
-          "name": "For Döngüleri",
+          "name": "For (İçin) Döngüleri",
           "type": "Kaynak"
         },
         "modifying_arrays/csd/2021": {
