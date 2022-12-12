@@ -851,6 +851,7 @@ hr-HR:
         answers:
         - text: "/script_assets/k_1_images/artist_images/W-S-S.png"
         - text: "/script_assets/k_1_images/artist_images/E-S-S.png"
+          correct: true
         - text: "/script_assets/k_1_images/artist_images/S-E-E.png"
         - text: "/script_assets/k_1_images/artist_images/E-S.png"
         questions:
@@ -976,6 +977,7 @@ hr-HR:
       K-1 Maze Loops Multi 1:
         answers:
         - text: "/script_assets/k_1_images/move_blocks/r3_N.png"
+          correct: true
         - text: "/script_assets/k_1_images/artist_images/medium_rectangle.png"
         - text: "/script_assets/k_1_images/move_blocks/r4_N.png"
         questions:
@@ -987,6 +989,7 @@ hr-HR:
         - text: "/script_assets/k_1_images/move_blocks/r3_S.png"
         - text: "/script_assets/k_1_images/move_blocks/r3_ES.png"
         - text: "/script_assets/k_1_images/move_blocks/r3_SE.png"
+          correct: true
         questions:
         - text: Izaberite ispravan blok ponavljanja.
         title: Višestruki izbor
@@ -1029,6 +1032,7 @@ hr-HR:
         - text: "/script_assets/k_1_images/unplugged_images/poke-hole.png"
         - text: "/script_assets/k_1_images/unplugged_images/foot-in-shoe.png"
         - text: "/script_assets/k_1_images/unplugged_images/dirty-teeth.png"
+          correct: true
         questions:
         - text: Koji korak bi trebao biti na početku programa?
         title: Višestruki izbor
@@ -1037,6 +1041,7 @@ hr-HR:
         answers:
         - text: "/script_assets/k_1_images/unplugged_images/brush-teeth.png"
         - text: "/script_assets/k_1_images/unplugged_images/cover-seed.png"
+          correct: true
         - text: "/script_assets/k_1_images/unplugged_images/water-pot.png"
         questions:
         - text: Koji korak treba staviti na mjesto upitnika u ovom algoritmu?
