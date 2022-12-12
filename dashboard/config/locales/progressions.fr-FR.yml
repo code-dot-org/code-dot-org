@@ -179,6 +179,7 @@ fr:
       Finishing Touches: Terminer les touches
       Follow the Algorithm - Unplugged Activity: Suis l'Agorithme – Activité déconnectée
       Follow the Mouse: Suivre la souris
+      For Loop Fun - Unplugged Activity: "« Pour » s'amuser en boucle - Activité déconnectée"
       For Loops: Les Boucles « Pour »
       For Loops and Color LEDs: Les Boucles « Pour » et LEDs colorées
       For Loops and Repeat Blocks: Les Boucles « Pour » et Les Blocs « Répéter »
@@ -234,7 +235,7 @@ fr:
       'Mini-Project: Alien Dance Party': " Soirée Dansante des Extraterrestres"
       'Mini-Project: Create a Virtual Pet': 'Mini-Projet : Crées un animal de compagnie
         virtuel'
-      'Mini-Project: Outbreak Simulator': " Simulateur d'épidémie"
+      'Mini-Project: Outbreak Simulator': 'Mini-projet : Simulateur d''Épidémie'
       'Mini-Project: Royal Battle': 'Mini-projet : Bataille Royale'
       'Mini-Project: Snowflake #1': 'Mini-projet : Flocon de neige #1'
       'Mini-Project: Snowflake #2': 'Mini-projet : Flocon de neige #2'
@@ -332,6 +333,7 @@ fr:
       Robot Doodle: 'Gribouillis de Robot
 
 '
+      Run a simulation: Lancer une simulation
       Sample App: Appli d’exemple
       Sample Game: Jeu d’exemple
       Sample Personal Web Pages: Exemples de pages web personnelles
@@ -364,10 +366,13 @@ fr:
       The Big Event - Unplugged Activity: Le Grand Événement - Activité déconnectée
       The Draw Loop: La Boucle Dessiner
       The Harvester: L'Agricultrice
+      The Internet - Unplugged Activity: L'Internet - Activité déconnectée
       The Power of Words - Unplugged Activity: Le Pouvoir des Mots - Activité déconnectée
       The Right App - Unplugged Activity: La Bonne Appli - Activité Déconnectée
       Tour of Design Mode: Visite du mode création
+      Train AI to Clean the Ocean: Former l'IA pour nettoyer l'océan
       Train an AI to Clean the Ocean: Entraîner l'IA pour rendre l'océan propre
+      Using Training Data: Utiliser les données d'entraînement
       Using the Grid: Utiliser la grille
       Using the Repeat Block: Utiliser le Bloc Répéter
       Variables: Variables
@@ -383,8 +388,8 @@ fr:
       'Video:  Text  and Prompts': 'Vidéo : Texte et Invites '
       'Video: "If/Else"': 'Vidéo : « Si/Sinon »'
       'Video: "If/Else" Statements': 'Vidéo : Instructions conditionnelles « Si/Sinon »'
-      'Video: AI: What is Machine Learning?': 'Vidéo : IA : Qu''est-ce que l''apprentissage
-        automatique ? '
+      'Video: AI: What is Machine Learning?': 'Vidéo : IA : Qu''est-ce que l''apprentissage
+        automatique ? '
       'Video: Artist Intro with JR Hildebrand': 'Vidéo : Intro à l''Artiste avec JR
         Hildebrand'
       'Video: Artist Intro with JR Hildebrande': 'Vidéo : Intro à l''Artiste avec
@@ -425,7 +430,7 @@ fr:
       'Video: IOSP Model': 'Vidéo : Modèle IOSP'
       'Video: Ice Age Loops': 'Vidéo : Boucles l''Âge de glace'
       'Video: If/Else Statements': 'Vidéo : Instructions conditionnelles « Si/Sinon »'
-      'Video: Impacts on Society': 'Vidéo : Impacts sur la Société'
+      'Video: Impacts on Society': 'Vidéo : Impacts sur la Société'
       'Video: Intro to CSS - Part 1': 'Vidéo : Introduction au CSS - Partie 1'
       'Video: Intro to CSS - Part 2': 'Vidéo : Introduction au CSS - Partie 2'
       'Video: Intro to Web Lab - Part 1': 'Vidéo : Introduction au labo du web - Partie
@@ -460,6 +465,8 @@ fr:
         Aquatique – Répéter Jusqu''à'
       'Video: Nested Loops': 'Vidéo : Les boucles imbriquées'
       'Video: Nested Loops with the Bee': 'Vidéo : Les boucles imbriquées avec l''abeille '
+      'Video: Outbreak Simulator: Introduction': 'Vidéo : Simulateur d''Épidémie :
+        Introduction'
       'Video: Pair Programming': " Programmation en Binôme"
       'Video: Pair Programming ': 'Vidéo : Programmation en Binôme '
       'Video: Problem Solving Process': Processus de Résolution De Problème
@@ -482,7 +489,7 @@ fr:
         déconnectée '
       'Video: The Collector': 'Vidéo : La Collectionneuse'
       'Video: The Harvester': 'Vidéo : L''Agricultrice'
-      'Video: Training Data & Bias': 'Vidéo : Données de formation et préférences'
+      'Video: Training Data & Bias': 'Vidéo : Données d''entraînement et biais'
       'Video: Unplugged Variables in Envelopes': 'Vidéo : Variables déconnectées en
         enveloppes '
       'Video: Using the Repeat Block': 'Vidéo : Utiliser le Bloc Répéter'
