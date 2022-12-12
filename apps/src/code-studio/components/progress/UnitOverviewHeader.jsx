@@ -134,7 +134,7 @@ class UnitOverviewHeader extends Component {
       showRedirectWarning &&
       !dismissedRedirectWarning(courseName || scriptName);
 
-    // Get if the user is using an outdated script
+    // Detect if the user is using an outdated script
     const displayOutdatedCourseWarning = !!OUTDATED_SCRIPT_NAMES_AND_DESC[
       scriptName
     ];

@@ -74,7 +74,7 @@ class CoursesAToF extends Component {
 
 const LegacyCSFNotification = () => (
   <NotificationResponsive
-    type="bullhorn"
+    type="bullhorn_yellow"
     notice={i18n.courseBlocksLegacyNotificationSupportEndedHeading()}
     details={i18n.courseBlocksLegacyNotificationSupportEndedBody()}
     detailsLinkText={i18n.courseBlocksLegacyNotificationDetailsLinkText()}
