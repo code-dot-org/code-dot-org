@@ -770,8 +770,17 @@
         "a54509a7-dac6-4985-830d-91272c3de923": {
           "name": "Wrap Up"
         },
+        "4297e4f8-df09-4a0f-a1f1-6eebb5fb75b3": {
+          "name": "Isitish: Xuddi shu so'z. Turli Ma'no."
+        },
         "5d5fd9dd-ddf2-43b6-b079-90a4951fc484": {
           "name": "Ko‘ring: So‘z kuchi"
+        },
+        "a97a978a-4f85-4d03-b3aa-f9ade97cac23": {
+          "name": "Tekshiring: muammo nimada?"
+        },
+        "13324f62-aa57-47e7-a446-9f26c40da904": {
+          "name": "Yakunlash: chiziqni kesib o'tish"
         },
         "06eca5a9-6166-4def-972b-ecf15e73ee59": {
           "name": "Qo‘shimcha mashg‘ulotlar"
@@ -820,6 +829,9 @@
         },
         "5eb7bde7-0d2c-4816-b398-1c6a665cdeb9": {
           "name": "Wrap Up"
+        },
+        "39be02fb-09ad-4047-b301-1b645de2d50a": {
+          "name": "Kursikulyar imkoniyatlar"
         },
         "78530493-657f-4a50-bd1c-16933b560f2c": {
           "name": "Qizdirish"
@@ -1704,7 +1716,7 @@
           "name": "Tomosha qiling: Mening onlayn qo'shnim"
         },
         "d4e86a51-c366-4b84-81b5-4b956bdb42dc": {
-          "name": "O'qing: Xavfsizlik, bu qoidalar!"
+          "name": "O'qing: Xavfsizlik, qoidalari!"
         },
         "854011f5-d6d4-4b11-85de-33e29b599c5d": {
           "name": "Internet bilan: Sayohat qilishni organing"
@@ -1725,22 +1737,22 @@
           "name": "Qo‘shimcha mashg‘ulotlar"
         },
         "26024df9-6e4f-4347-a9e6-2d28952f5729": {
-          "name": "Qizdirish"
+          "name": "Mashq"
         },
         "cb29d1b2-f952-4f72-a718-43126699ac32": {
           "name": "Asosiy mashg‘ulot"
         },
         "05c730d2-8b63-47f0-ba9d-d664b50fa08c": {
-          "name": "Wrap Up"
+          "name": "Yakunlash"
         },
         "7544ca1c-bed3-4846-82dd-1e4efeb05aa6": {
           "name": "Qo‘shimcha mashg‘ulotlar"
         },
         "7b5c3e7f-91ea-4159-b8c7-2346bd035d2d": {
-          "name": "Qizdirish"
+          "name": "Mashq"
         },
         "f824456e-fbbf-4107-a086-86cb2c66cdd2": {
-          "name": "O‘tish mashg‘uloti - Birini tanlash"
+          "name": "Koprik faoliyati"
         },
         "64398eb7-46ab-4f42-97ad-3e90882fe3cd": {
           "name": "Asosiy mashg‘ulot"
@@ -1776,7 +1788,7 @@
           "name": "Wrap Up"
         },
         "b66f054d-7a1a-4d77-b19c-6b012d2b87a1": {
-          "name": "Qizdirish"
+          "name": "Mashq"
         },
         "3cab4fd7-471c-4ad2-bdd8-e65a69c74898": {
           "name": "Asosiy mashg‘ulot"
@@ -1819,6 +1831,9 @@
         },
         "70d17a47-00c8-41f8-aed2-f5aa76a2b9fb": {
           "name": "Wrap Up"
+        },
+        "51e205c0-25de-4ff0-8333-32f10f0f6215": {
+          "name": "Kurslararo imkoniyatlar"
         },
         "e68d3049-5654-4527-9c7b-8dc1426e138d": {
           "name": "Qizdirish"
