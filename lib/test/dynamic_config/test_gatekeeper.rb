@@ -54,7 +54,7 @@ class DynamicConfigGatekeeperTest < Minitest::Test
 
   def test_delete
     assert_raises ArgumentError do
-      @gatekeeper.delete(:invalid_key, {})
+      @gatekeeper.delete(:invalid_key, where: {})
     end
 
     @gatekeeper.stubs(:get_rule_map).returns({"[[\"type\",\"query\"]]" => true})
@@ -63,7 +63,7 @@ class DynamicConfigGatekeeperTest < Minitest::Test
     refute @gatekeeper.delete("valid key", where: {"nonexistent type" => "query"})
     refute @gatekeeper.delete("valid key", where: {"type" => "nonexistent query"})
 
-    @mock_datastore.expect(:set, true, ["valid key", {}])
+    @mock_datastore.expect(:set, true, ["valid key"], where: {})
     assert @gatekeeper.delete("valid key", where: {"type" => "query"})
 
     @mock_datastore.verify
