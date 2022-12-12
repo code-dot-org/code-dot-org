@@ -1,7 +1,7 @@
-{{ featured_tutorial, title: "Hello World: Soccer", body: "You're the team captain as you code interactive scenes on the soccer pitch. GOOOAAALLL!", image: "/images/hoc2022-hello-world-soccer.png", url: "https://studio.code.org/s/hello-world-soccer-2022/reset" }}
+{{ featured_tutorial, title: "你好世界：足球", body: "当你在足球场上编程交互场景时，你就是队长。 进球！", image: "/images/hoc2022-hello-world-soccer.png", url: "https://studio.code.org/s/hello-world-soccer-2022/reset" }}
 
-{{ featured_tutorial, title: "Sports", body: "Make a basketball game or mix and match across sports.", image: "/shared/images/courses/logo_tall_sports.jpg", url: "https://code.org/athletes" }}
+{{ featured_tutorial, title: "体育", body: "制作一款篮球游戏或多种运动的混合搭配。", image: "/shared/images/courses/logo_tall_sports.jpg", url: "https://code.org/athletes" }}
 
-{{ featured_tutorial, title: "Flappy Code", body: "Wanna write your own game in less than 10 minutes? Try our Flappy Code tutorial!", image: "/shared/images/courses/logo_tall_flappy.jpg", url: "https://studio.code.org/s/flappy/reset" }}
+{{ featured_tutorial, title: "像素鸟编程", body: "想在10分钟内编写自己的游戏？ 试试我们的像素鸟编程教程！", image: "/shared/images/courses/logo_tall_flappy.jpg", url: "https://studio.code.org/s/flappy/reset" }}
 
-{{ featured_tutorial, title: "Minecraft Hour of Code", body: "Minecraft is back for the Hour of Code with a brand new activity! Journey through Minecraft with code.", image: "/images/hoc2022-mc-escape.png", url: "https://aka.ms/HourofCode2022" }}
+{{ featured_tutorial, title: "我的世界编程一小时", body: "我的世界回到编程一小时，带来一个全新的活动！ 使用代码畅游我的世界。", image: "/images/hoc2022-mc-escape.png", url: "https://aka.ms/HourofCode2022" }}

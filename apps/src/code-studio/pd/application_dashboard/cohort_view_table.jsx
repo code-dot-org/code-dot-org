@@ -21,7 +21,6 @@ export class CohortViewTable extends React.Component {
   static propTypes = {
     data: PropTypes.array.isRequired,
     path: PropTypes.string.isRequired,
-    viewType: PropTypes.oneOf(['facilitator', 'teacher']).isRequired,
     regionalPartnerGroup: PropTypes.number,
     isWorkshopAdmin: PropTypes.bool,
     regionalPartnerFilter: RegionalPartnerPropType,
@@ -58,8 +57,6 @@ export class CohortViewTable extends React.Component {
   UNSAFE_componentWillUpdate() {
     this.constructColumns();
   }
-
-  showLocked = () => this.props.viewType === 'facilitator';
 
   constructColumns() {
     if (
@@ -135,9 +132,7 @@ export class CohortViewTable extends React.Component {
         },
         cell: {
           formatters: [
-            status =>
-              getApplicationStatuses(this.props.viewType)[status] ||
-              _.upperFirst(status)
+            status => getApplicationStatuses()[status] || _.upperFirst(status)
           ],
           transforms: [
             status => ({
@@ -148,46 +143,13 @@ export class CohortViewTable extends React.Component {
       }
     ];
 
-    if (this.props.viewType === 'teacher') {
-      columns.push({
-        property: 'friendly_scholarship_status',
-        header: {
-          label: 'Scholarship Teacher?',
-          transforms: [sortable]
-        }
-      });
-    }
-
-    if (this.showLocked()) {
-      columns.push({
-        property: 'locked',
-        header: {
-          label: 'Locked'
-        },
-        cell: {
-          formatters: [this.formatBoolean]
-        }
-      });
-    }
-
-    if (this.props.viewType === 'facilitator') {
-      columns.push(
-        {
-          property: 'assigned_fit',
-          header: {
-            label: 'Assigned FIT',
-            transforms: [sortable]
-          }
-        },
-        {
-          property: 'registered_fit',
-          header: {
-            label: 'Registered FIT',
-            transforms: [sortable]
-          }
-        }
-      );
-    }
+    columns.push({
+      property: 'friendly_scholarship_status',
+      header: {
+        label: 'Scholarship Teacher?',
+        transforms: [sortable]
+      }
+    });
 
     columns.push({
       property: 'assigned_workshop',

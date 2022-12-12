@@ -18,6 +18,7 @@ import ProjectTemplateWorkspaceIcon from './ProjectTemplateWorkspaceIcon';
 import {queryParams} from '../code-studio/utils';
 import WorkspaceAlert from '@cdo/apps/code-studio/components/WorkspaceAlert';
 import {closeWorkspaceAlert} from '../code-studio/projectRedux';
+import styleConstants from '@cdo/apps/styleConstants';
 
 class CodeWorkspace extends React.Component {
   static propTypes = {
@@ -103,7 +104,7 @@ class CodeWorkspace extends React.Component {
     const showSettingsCog = withSettingsCog && !readonlyWorkspace;
     const textStyle = showSettingsCog ? {paddingLeft: '2em'} : undefined;
     const chevronStyle = [
-      styles.chevron,
+      styles.chevronButton,
       runModeIndicators && isRunning && styles.runningIcon
     ];
 
@@ -114,31 +115,37 @@ class CodeWorkspace extends React.Component {
     );
 
     return [
-      <PaneSection id="toolbox-header" key="toolbox-header">
-        <i
-          id="hide-toolbox-icon"
-          style={[commonStyles.hidden, chevronStyle]}
-          className="fa fa-chevron-circle-right"
-        />
+      <PaneSection
+        id="toolbox-header"
+        key="toolbox-header"
+        style={styles.toolboxHeaderContainer}
+      >
+        <span>
+          <button
+            id="hide-toolbox-icon"
+            style={[commonStyles.hidden, chevronStyle]}
+            type="button"
+          >
+            <i className="fa fa-chevron-circle-right" />
+          </button>
+        </span>
         <span style={textStyle}>
           {editCode ? i18n.toolboxHeaderDroplet() : i18n.toolboxHeader()}
         </span>
-        {settingsCog}
+        <span>{settingsCog}</span>
       </PaneSection>,
       <PaneSection
         id="show-toolbox-header"
         key="show-toolbox-header"
-        style={commonStyles.hidden}
+        style={{...styles.toolboxHeaderContainer, ...commonStyles.hidden}}
       >
         <span id="show-toolbox-click-target">
-          <i
-            id="show-toolbox-icon"
-            style={chevronStyle}
-            className="fa fa-chevron-circle-right"
-          />
-          <span>{i18n.showToolbox()}</span>
+          <button id="show-toolbox-icon" style={chevronStyle} type="button">
+            <i className="fa fa-chevron-circle-right" />
+          </button>
+          <span className="show-toolbox-label">{i18n.showToolbox()}</span>
         </span>
-        {settingsCog}
+        <span>{settingsCog}</span>
       </PaneSection>
     ];
   }
@@ -269,12 +276,6 @@ const styles = {
   headerIcon: {
     fontSize: 18
   },
-  chevron: {
-    fontSize: 18,
-    ':hover': {
-      color: color.white
-    }
-  },
   runningIcon: {
     color: color.dark_charcoal
   },
@@ -294,6 +295,25 @@ const styles = {
     padding: 5,
     opacity: 0.9,
     position: 'relative'
+  },
+  chevronButton: {
+    padding: 0,
+    margin: 0,
+    border: 'none',
+    lineHeight: styleConstants['workspace-headers-height'] + 'px',
+    backgroundColor: 'transparent',
+    color: color.lighter_purple,
+    fontSize: 18,
+    ':hover': {
+      cursor: 'pointer',
+      color: color.white,
+      boxShadow: 'none'
+    }
+  },
+  toolboxHeaderContainer: {
+    display: 'flex',
+    justifyContent: 'space-between',
+    alignItems: 'center'
   }
 };
 

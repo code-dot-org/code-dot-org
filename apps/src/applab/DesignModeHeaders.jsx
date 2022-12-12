@@ -7,6 +7,7 @@ import color from '../util/color';
 import PaneHeader, {PaneButton, PaneSection} from '../templates/PaneHeader';
 import SettingsCog from '../lib/ui/SettingsCog';
 import ProjectTemplateWorkspaceIcon from '../templates/ProjectTemplateWorkspaceIcon';
+import classNames from 'classnames';
 
 export default class DesignModeHeaders extends React.Component {
   static propTypes = {
@@ -66,14 +67,16 @@ export default class DesignModeHeaders extends React.Component {
   render() {
     const styles = {
       toolboxHeader: {
-        display: this.props.isToolboxVisible ? 'block' : 'none',
+        display: this.props.isToolboxVisible ? 'flex' : 'none',
+        justifyContent: 'space-between',
         width: 270,
         borderRight: '1px solid gray',
         float: 'left'
       },
       showToolboxHeader: {
         float: 'left',
-        display: this.props.isToolboxVisible ? 'none' : 'block',
+        display: this.props.isToolboxVisible ? 'none' : 'flex',
+        justifyContent: 'space-between',
         paddingLeft: 10
       },
       showToolboxClickable: {
@@ -91,6 +94,9 @@ export default class DesignModeHeaders extends React.Component {
       assetsIcon: {
         fontSize: 18,
         verticalAlign: 'middle'
+      },
+      runningVersionHistoryButton: {
+        color: color.dark_charcoal
       }
     };
 
@@ -114,15 +120,21 @@ export default class DesignModeHeaders extends React.Component {
       >
         <PaneSection
           id="design-toolbox-header"
-          className="workspace-header"
+          className={classNames(
+            'workspace-header',
+            this.props.isRunning && 'is-running'
+          )}
           style={styles.toolboxHeader}
         >
-          {this.hideToolboxIcon()}
-          {settingsCog}
+          <span>{this.hideToolboxIcon()}</span>
           <span>{applabMsg.designToolboxHeader()}</span>
+          <span>{settingsCog}</span>
         </PaneSection>
         <PaneSection
-          className="workspace-header"
+          className={classNames(
+            'workspace-header',
+            this.props.isRunning && 'is-running'
+          )}
           style={styles.showToolboxHeader}
         >
           <span
@@ -132,19 +144,26 @@ export default class DesignModeHeaders extends React.Component {
             onClick={this.onToggleToolbox}
           >
             {this.showToolboxIcon()}
-            {msg.showToolbox()}
           </span>
-          {settingsCog}
+          <span>{msg.showToolbox()}</span>
+          <span>{settingsCog}</span>
         </PaneSection>
         <PaneButton
           id="design-mode-versions-header"
+          style={this.props.isRunning ? styles.runningVersionHistoryButton : {}}
           iconClass="fa fa-clock-o"
           label={msg.showVersionsHeader()}
           headerHasFocus={hasFocus}
           isRtl={this.props.isRtl}
           onClick={this.props.handleVersionHistory}
         />
-        <PaneSection id="design-workspace-header" className="workspace-header">
+        <PaneSection
+          id="design-workspace-header"
+          className={classNames(
+            'workspace-header',
+            this.props.isRunning && 'is-running'
+          )}
+        >
           {this.props.showProjectTemplateWorkspaceIcon && (
             <ProjectTemplateWorkspaceIcon />
           )}

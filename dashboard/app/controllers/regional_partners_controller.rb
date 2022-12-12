@@ -155,6 +155,8 @@ class RegionalPartnersController < ApplicationController
       :cohort_capacity_csp,
       :apps_open_date_teacher,
       :apps_close_date_teacher,
+      :urg_guardrail_percent,
+      :frl_guardrail_percent,
       :apps_open_date_csd_facilitator,
       :apps_open_date_csp_facilitator,
       :apps_close_date_csd_facilitator,
