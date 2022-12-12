@@ -980,7 +980,12 @@
   coursed-2020_name: Kurs D (2020)
   coursee-2020_name: Kurs E (2020)
   coursef-2020_name: Kurs F (2020)
+  coursea-2021_name: Kurs A (2021)
+  courseb-2021_name: Kurs B (2021)
+  coursec-2021_name: Kurs C (2021)
   coursed-2021_name: Kurs D (2021)
+  coursee-2021_name: Kurs E (2021)
+  coursef-2021_name: Kurs F (2021)
   coursed-2022_name: Kurs D (2021)
   express-2018_name: Hızlı Kurs
   pre-express-2018_name: Okul Öncesi Çocuklar için Hızlandırılmış Kurs (2018)
@@ -988,6 +993,7 @@
   pre-express-2019_name: Okul Öncesi Çocuklar için Hızlandırılmış Kurs (2019)
   express-2020_name: Hızlandırılmış Kurs (2020)
   pre-express-2020_name: Okul Öncesi Çocuklar için Hızlandırılmış Kurs (2020)
+  express-2021_name: Hızlandırılmış Kurs (2021)
   pre-express-2021_name: Okul Öncesi Çocuklar için Hızlandırılmış Kurs (2021)
   pre-express-2022_name: Okul Öncesi Çocuklar için Hızlandırılmış Kurs (2022)
   csd2_name: 'Ünite 2 - Ağ Geliştirme'
@@ -1012,7 +1018,7 @@
   gamelab_name: "Oyun Laboratuvarı"
   basketball_name: "Basketbol oyunu kodla"
   sports_name: "Kendi Spor Oyununu Kodla"
-  applab_gradelevel: "13 + Yaş grubu"
+  applab_gradelevel: "13 + Yaşlar"
   applab_shortdescription_congrats: "App Lab basit uygulamalar yapabileceğiniz bir uygulama geliştirme ortamıdır. Kod blokları ya da JavaScript ile bir uygulama yapın ve saniyeler içinde paylaşın"
   codeorg_gradelevel: "4-104 Yaş"
   codeintl_gradelevel: "4-104 Yaş"
@@ -1659,7 +1665,7 @@
   hoc2018_mc_teacher_guide: "Öğretmen kılavuzunu görüntüle"
   hoc2018_mc_minecraft_education: "Minecraft eğitim"
   hoc2018_mc_continue_learning: "Minecraft'la öğrenin."
-  hoc2018_mc_go_to_mc_education: "Minecraft Eğitime gidin"
+  hoc2018_mc_go_to_mc_education: "Minecraft Education'a gidin"
   hoc2018_mc_short_description: "Kod gücü ile hazine bulmak  ve sualtı dünyalarını keşfetmek için yaratıcılığınızı ve problem çözme becerilerinizi kullanın."
   hoc2018_mc_short_description_shorter: "Minecraft, Kodlama Saati için yepyeni bir etkinlikle geri döndü!"
   hoc2018_mc_journey: "Kod ile Minecraft'ta yolculuk."
@@ -1762,7 +1768,7 @@
   footer_blog: "Blog"
   footer_donate: "Bağış Yap"
   footer_store: "Mağaza"
-  footer_support: "Yardım ve Topluluk"
+  footer_support: "Destek"
   footer_terms: "Koşullar"
   ai_for_oceans: "Okyanuslar için Yapay Zeka\n"
   ai_for_oceans_lesson_plan: "ders planı"
@@ -1834,3 +1840,6 @@
   try_it_yourself: "Kendiniz deneyin!"
   try_an_activity: "Bir aktivite deneyin"
   see_more_activities: "Daha fazla etkinlik gör"
+  hoc2022_nasa_webb_alt_text: "NASA'nın James Webb teleskopunun çizimi"
+  hoc2022_nasa_banner_heading: "Uzayda bilgisayar bilimi hakkında özel bir Hour of Code özelliği için NASA'ya katılın!"
+  hoc2022_nasa_banner_description: "5 Aralık saat 10:00 ET(Eastern Time)  NASA STEM'in YouTube kanalında ilk gösterim."

@@ -3,10 +3,9 @@
  */
 import PropTypes from 'prop-types';
 import React from 'react';
-import {connect} from 'react-redux';
 import {Table, Button} from 'react-bootstrap';
 import {StatusColors, getApplicationStatuses} from './constants';
-import _ from 'lodash';
+import {difference, upperFirst} from 'lodash';
 import color from '@cdo/apps/util/color';
 
 const ApplicationDataPropType = PropTypes.shape({
@@ -16,22 +15,16 @@ const ApplicationDataPropType = PropTypes.shape({
 
 export class SummaryTable extends React.Component {
   static propTypes = {
-    canSeeLocked: PropTypes.bool,
     caption: PropTypes.string.isRequired,
-
-    // keys are available statuses: {status: ApplicationDataPropType}
     data: PropTypes.objectOf(ApplicationDataPropType),
     path: PropTypes.string.isRequired,
     id: PropTypes.string,
-    applicationType: PropTypes.oneOf(['teacher', 'facilitator']).isRequired
+    isWorkshopAdmin: PropTypes.bool
   };
 
   static contextTypes = {
     router: PropTypes.object.isRequired
   };
-
-  showLocked =
-    this.props.canSeeLocked && this.props.applicationType === 'facilitator';
 
   tableBody() {
     const totals = {
@@ -39,17 +32,20 @@ export class SummaryTable extends React.Component {
       all: 0
     };
 
-    const statusesInOrder = [
-      'incomplete',
-      'reopened',
-      'awaiting_admin_approval',
-      'unreviewed',
-      'pending',
-      'pending_space_availability',
-      'accepted',
-      'declined',
-      'withdrawn'
-    ];
+    const statusesInOrder = difference(
+      [
+        'incomplete',
+        'reopened',
+        'awaiting_admin_approval',
+        'unreviewed',
+        'pending',
+        'pending_space_availability',
+        'accepted',
+        'declined',
+        'withdrawn'
+      ],
+      this.props.isWorkshopAdmin ? [] : ['incomplete']
+    );
 
     const categoryRows = statusesInOrder.map((status, i) => {
       const statusData = this.props.data[status];
@@ -60,11 +56,8 @@ export class SummaryTable extends React.Component {
       return (
         <tr key={i}>
           <td style={{...styles.statusCell[status]}}>
-            {getApplicationStatuses(this.props.applicationType)[status] ||
-              _.upperFirst(status)}
+            {getApplicationStatuses()[status] || upperFirst(status)}
           </td>
-          {this.showLocked && <td>{currentLocked}</td>}
-          {this.showLocked && <td>{currentTotal - currentLocked}</td>}
           <td>{currentTotal}</td>
         </tr>
       );
@@ -74,8 +67,6 @@ export class SummaryTable extends React.Component {
       ...categoryRows,
       <tr key="totals-row" style={styles.totalsRow}>
         <td style={{textAlign: 'right'}}>Total</td>
-        {this.showLocked && <td>{totals.locked}</td>}
-        {this.showLocked && <td>{totals.all - totals.locked}</td>}
         <td>{totals.all}</td>
       </tr>
     ];
@@ -99,8 +90,6 @@ export class SummaryTable extends React.Component {
           <thead>
             <tr>
               <th>Status</th>
-              {this.showLocked && <th>Locked</th>}
-              {this.showLocked && <th>Unlocked</th>}
               <th>Count</th>
             </tr>
           </thead>
@@ -144,6 +133,4 @@ const styles = {
   }
 };
 
-export default connect(state => ({
-  canSeeLocked: state.applicationDashboard.permissions.lockApplication
-}))(SummaryTable);
+export default SummaryTable;

@@ -1366,7 +1366,7 @@ es:
         text: reproducirSonido {SOUND}
         options:
           SOUND:
-            "'sound://category_sports/Airhorn_SFX.mp3'": bocina de aire
+            "'sound://category_sports/Airhorn_SFX.mp3'": bocina
             "'sound://category_sports/Crowd_Applause_SFX.mp3'": aplauso
             "'sound://category_sports/Crowd_Chant_SFX.mp3'": canto
             "'sound://category_sports/Crowd_Cheer_SFX.mp3'": animar

@@ -5969,3 +5969,7 @@ de:
           description_audience: Lehrpan-Autoren
           description_short: Für die Bereitstellung von Aktualisierungen der Lektionen
             oder Stufen zwischen Lehrplanversionen
+        devices-2022:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: 'Chapter 2: Aufbau von physischen Prototypen'

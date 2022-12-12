@@ -427,6 +427,7 @@
   signup_registration_not_required: "You don't need to register to participate! The Hour of Code activities are available year-round. <a href='%{hoc_activities_url}'>Try an activity</a> or read our <a href='%{howto_guide_url}'>How-to guide</a> to plan an event for your class."
   signup_registration_not_required_markdown: "You don't need to register to participate! The Hour of Code activities are available year-round. [Try an activity](%{hoc_activities_url}) or read our [How-to guide](%{howto_guide_url}) to plan an event for your class."
   signup_registration_closed: "And every year in December, your class can join millions of students around the world celebrating Computer Science Education Week with the Hour of Code. We'll open registration for the annual celebration in October."
+  signup_registration_closed_2022_markdown: "Registration for this year's Hour of Code event map is currently closed, but you can still [host an Hour of Code](%{hoc_activities_url}) and join in the celebration on social media! Post fun pictures or video of your event using the #HourOfCode hashtag!"
   signup_header: 'Organize an Hour of Code during %{campaign_date}, and register it here.'
   signup_name_label: 'Your name'
   signup_name_error: 'Name is required.'
@@ -7189,6 +7190,12 @@
   tutorial_msftwakanda_string_detail_platforms: ""
   tutorial_msftwakanda_string_detail_programming_languages: blocks
   tutorial_msftwakanda_string_platforms: "All modern browsers"
+  tutorial_carnegieslime_name: "Super Slime Battle"
+  tutorial_carnegieslime_longdescription: "Every year the Minions of Scarecorp try to steal your candy crops. Booville High's Baddest Slimeball crew have come together to protect the candy crops with slime weapons. Players play as teen monsters who program their collaborative robot (aka 'cobot') pets to help take down the Minions of Scarecorp who are after their town's candy harvest. Choose between four characters and their cobotic pets."
+  tutorial_carnegieslime_string_detail_grades: "Grades 2-8"
+  tutorial_carnegieslime_string_platforms: "All modern browsers"
+  tutorial_carnegieslime_name: "Super Slime Battle"
+  tutorial_carnegieslime_string_detail_programming_languages: "blocks"
 
   school_not_found_heading: "We couldn't find your school. Please enter more information."
   school_name: "School name"

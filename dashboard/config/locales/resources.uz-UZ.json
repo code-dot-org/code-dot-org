@@ -588,22 +588,34 @@
         "the_big_event_courses_a_b_/courseb/2022": {
           "name": "Katta hodisa (Kurs A, B)"
         },
+        "all_resources/express/2022": {
+          "name": "Barcha manbalar"
+        },
+        "all_standards/express/2022": {
+          "name": "Barcha standartlar"
+        },
+        "all_vocabulary/express/2022": {
+          "name": "Barcha lug'at"
+        },
         "debugging_guide/express/2022": {
           "name": "Debaglash bo'yicha yo'riqlar",
           "url": "https://docs.google.com/document/d/1z2FgBWwUq6vxwWbnbiQC0EaEKxwgAqBdtTZzVi98xHA/preview"
         },
         "teacher_forum/express/2022": {
           "name": "O‘qituvchilar forumi",
-          "url": "https://forum.code.org/c/csf/"
+          "url": "https://forum.code.org/c/csf/",
+          "type": "Manba"
         },
         "unplugged_maze_blocks/express/2022": {
-          "name": "Kompyutersiz. Labirint bloklari"
+          "name": "Kompyutersiz. Labirint bloklari",
+          "type": "Manba"
         },
         "pair_programming/express/2022": {
           "name": "Juftlikda dasturlash",
           "type": "Video"
         },
         "unplugged_blocks_courses_c-f_/express/2022": {
+          "name": "O'chirilgan bloklar (C-F kurslari)",
           "url": "https://docs.google.com/document/d/1cRPELQ28TZMJhc68-eYP1D26Uqzcyfx4RDYuThZJGLo/edit"
         },
         "artist_introduction/express/2022": {
@@ -615,11 +627,16 @@
           "type": "Video"
         },
         "turns_angles_1/express/2022": {
-          "name": "Burilishlar va burchaklar"
+          "name": "Burilishlar va burchaklar",
+          "type": "Tarqatma"
         },
         "sprite_lab_documentation/express/2022": {
           "name": "Sprite Lab Documentation",
-          "url": "https://studio.code.org/docs/spritelab/"
+          "url": "https://studio.code.org/docs/spritelab/",
+          "type": "Manba"
+        },
+        "swimming_fish_teacher_sandbox/express/2022": {
+          "name": "Suzish uchun baliq o'qituvchisi Sandbox"
         },
         "sprites_in_action/express/2022": {
           "name": "Spraytlar amalda"
@@ -628,8 +645,14 @@
           "name": "Pauza qiling va o'ylang",
           "type": "Video"
         },
+        "dance_party_project_guide/express/2022": {
+          "name": "Raqs partiyasi loyihasi uchun qo'llanma",
+          "type": "Ishchi varaq"
+        },
         "open-ended_programming_levels/express/2022": {
-          "url": "https://docs.google.com/document/d/1f2ayrjpWKVWqydZWZFTtXbDWZDdKcNIg4kGaOLB2o3U/view"
+          "name": "Ochiq dasturlash darajalari",
+          "url": "https://docs.google.com/document/d/1f2ayrjpWKVWqydZWZFTtXbDWZDdKcNIg4kGaOLB2o3U/view",
+          "type": "Javob kaliti"
         },
         "spotify_playlist_all_ages_/express/2022": {
           "name": "Spotify qo'shiqlar ro'yxati (barcha yoshlar)"
@@ -649,7 +672,21 @@
         },
         "cs_fundamentals_final_project/express/2022": {
           "name": "CS asoslari yakuniy loyihasi",
-          "url": "https://docs.google.com/document/d/1QVcQX7czu6T2OL7742hRu-gXB_Fat_Q4bHM6zgb7bq0/"
+          "url": "https://docs.google.com/document/d/1QVcQX7czu6T2OL7742hRu-gXB_Fat_Q4bHM6zgb7bq0/",
+          "type": "Rubrika"
+        },
+        "csf_express_end_of_course_project_planning_guide/express/2022": {
+          "name": "CSF Ekspres Kursni tugatish loyihasini rejalashtirish bo'yicha qo'llanma",
+          "type": "Loyiha qo'llanma"
+        },
+        "all_resources/pre-express/2022": {
+          "name": "Barcha manbalar"
+        },
+        "all_standards/pre-express/2022": {
+          "name": "Barcha standartlar"
+        },
+        "all_vocabulary/pre-express/2022": {
+          "name": "Barcha lug'at"
         },
         "debugging_guide/pre-express/2022": {
           "name": "Debaglash bo'yicha yo'riqlar",
@@ -657,7 +694,8 @@
         },
         "teacher_forum/pre-express/2022": {
           "name": "O‘qituvchilar forumi",
-          "url": "https://forum.code.org/c/csf/"
+          "url": "https://forum.code.org/c/csf/",
+          "type": "Manba"
         },
         "20_20_20_rule/pre-express/2022": {
           "name": "20/20/20 Qoidasi",
@@ -845,6 +883,15 @@
           "name": "Artist loyihasini rejalashtirish bo'yicha yo'riqnoma",
           "url": "https://docs.google.com/document/d/13AiHjPrDE3DFnwH3qKnty6M3PbHsZcd-0YoZz4ZmC3E/template/preview"
         },
+        "all_resources/coursec/2022": {
+          "url": "/s/kurs-2022/resurslari"
+        },
+        "all_standards/coursec/2022": {
+          "url": "/s/kurs-2022/standartlari"
+        },
+        "all_vocabulary/coursec/2022": {
+          "url": "/s/coursea-2022/lugat"
+        },
         "common_core_and_ngss_guidance/coursec/2022": {
           "url": "https://docs.google.com/document/d/1SqD3MaRbGIONGs5bcL1YhHUFK92ZXFIufypr6UC8XYA/preview#heading=h.a5iytir4b96q"
         },
@@ -871,10 +918,15 @@
           "url": "https://forum.code.org/c/csf/"
         },
         "virtual_lesson_modifications/coursec/2022": {
-          "name": "Virtual dars modifikatsiyalari"
+          "name": "Virtual dars modifikatsiyalari",
+          "url": "https://docs.google.com/document/d/1p71nZ3SqyNNVIJtQwPA_LTdcnL9RDsxIo5mQe9Gd-hQ/view"
         },
         "putting_a_stop_to_online_meanness_stop_online_meanness/coursec/2022": {
           "type": "Talabalarga tarqatma materiallar"
+        },
+        "csf_-_course_c_-_slides_2022-2023/coursec/2022": {
+          "name": "CSF - Kurs C - Slaydlar 2022-2023",
+          "url": "https://docs.google.com/presentation/d/1gBtG-smXiAPsk5LJhkVsoX795WN18AZFRdml5uJynug/template/preview"
         },
         "my_robotic_friends/coursec/2022": {
           "name": "My Robotic Friends"

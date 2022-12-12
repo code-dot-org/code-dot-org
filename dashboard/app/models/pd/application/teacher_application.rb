@@ -1002,14 +1002,6 @@ module Pd::Application
       end
 
       meets_minimum_criteria_scores[:enough_course_hours] = responses[:enough_course_hours] == options[:enough_course_hours].first ? YES : NO
-      meets_minimum_criteria_scores[:replace_existing] =
-        if responses[:replace_existing] == YES
-          NO
-        elsif responses[:replace_existing] == TEXT_FIELDS[:i_dont_know_explain]
-          nil
-        else
-          YES
-        end
 
       # Section 7
       meets_minimum_criteria_scores[:committed] = responses[:committed] == options[:committed].first ? YES : NO
@@ -1028,21 +1020,19 @@ module Pd::Application
             nil
           end
 
-        meets_minimum_criteria_scores[:replace_existing] =
-          if responses[:principal_wont_replace_existing_course].start_with?(YES)
-            NO
-          elsif responses[:principal_wont_replace_existing_course] == TEXT_FIELDS[:i_dont_know_explain]
-            nil
-          else
-            YES
-          end
-
         school_stats = get_latest_school_stats(school_id)
 
         free_lunch_percent = responses[:principal_free_lunch_percent].present? ?
                                responses[:principal_free_lunch_percent].to_i :
                                school_stats&.frl_eligible_percent
-        free_lunch_percent_cutoff = school_stats&.rural_school? ? 40 : 50
+        free_lunch_percent_cutoff =
+          if regional_partner&.frl_guardrail_percent
+            regional_partner&.frl_guardrail_percent.to_i
+          elsif school_stats&.rural_school?
+            REGIONAL_PARTNER_DEFAULT_GUARDRAILS[:frl_rural]
+          else
+            REGIONAL_PARTNER_DEFAULT_GUARDRAILS[:frl_not_rural]
+          end
 
         meets_scholarship_criteria_scores[:free_lunch_percent] =
           if free_lunch_percent
@@ -1054,10 +1044,13 @@ module Pd::Application
         urg_percent = responses[:principal_underrepresented_minority_percent].present? ?
                         responses[:principal_underrepresented_minority_percent].to_i :
                         school_stats&.urm_percent
+        urg_percent_cutoff = regional_partner&.urg_guardrail_percent ?
+                              regional_partner&.urg_guardrail_percent.to_i :
+                              REGIONAL_PARTNER_DEFAULT_GUARDRAILS[:urg]
 
         meets_scholarship_criteria_scores[:underrepresented_minority_percent] =
           if urg_percent
-            urg_percent >= 50 ? YES : NO
+            urg_percent >= urg_percent_cutoff ? YES : NO
           else
             nil
           end

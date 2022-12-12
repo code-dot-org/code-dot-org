@@ -864,11 +864,11 @@ hi:
     करते हैं, खासकर क्योंकि हमे छात्रों को लॉग इन या रजिस्टर करवाने की आवश्यकता नहीं
     है।इसके परिणाम स्वरूप, हम एक ही समय में प्रतिभागियों की ओवर-गिनती और अंडर-गिनती
     करते हैं।सभी विवरण <a href='%{codeorg_url}/loc'>यहां</a> पढ़ें ।
-  hoc_faq_count_hoc_a_markdown: "  कोड का एक घंटा का ट्रैकर इस्तेमाल का सटीक माप नहीं
-    है। जब वे कोड का एक घंटा में हिस्सा ले रहे होते हैं तब हम हिस्सेदारी ट्रैक करने
-    के लिए विद्यार्थियों के विशिष्ट आईडी की गिनती ठीक से नहीं करते हैं, खास कर जब
-    हम विद्यार्थियों का लॉग इन या रजिस्टर करना ज़रूरी नहीं बनाते। इसीलिए, हम इसमें
-    भाग लेने वालों की संख्या को एक ही साथ कम और ज़्यादा गिनते हैं। सारा ब्यौरा [यहाँ](%{codeorg_url}/loc)
+  hoc_faq_count_hoc_a_markdown: "  ऑवर ऑफ़ कोड का ट्रैकर इस्तेमाल का सटीक माप नहीं
+    है। जब वे ऑवर ऑफ़ कोड में हिस्सा ले रहे होते हैं तब हम हिस्सेदारी ट्रैक करने के
+    लिए विद्यार्थियों के विशिष्ट आईडी की गिनती ठीक से नहीं करते हैं, खास कर जब हम
+    विद्यार्थियों का लॉग इन या रजिस्टर करना ज़रूरी नहीं बनाते। इसीलिए, हम इसमें भाग
+    लेने वालों की संख्या को एक ही साथ कम और ज़्यादा गिनते हैं। सारा ब्यौरा [यहाँ](%{codeorg_url}/loc)
     देखें।  "
   hoc_faq_one_hour_q: 'एक घंटे में कोई कितना सीख सकता है? '
   hoc_faq_one_hour_a: ऑवर ऑफ़ कोड का लक्ष्य किसी को एक घंटे में कंप्यूटर वैज्ञानिक
@@ -9882,10 +9882,12 @@ hi:
   tutorial_codespellsnexus_longdescription: Under the mentorship of a mysterious sock
     puppet, you must infiltrate and reprogram a super-intelligent 'Learn to Code'
     app that seeks global domination. Solve puzzles. Learn to code. Hack the Nexus.
-  tutorial_carnegieslime_longdescription: Super Slime Battle is a game that was co-designed
-    between researchers at Carnegie Mellon University and students from the Boys and
-    Girls Clubs of Western PA where students and their (co)robot partners must defend
-    their candy stash from oncoming baddies.
+  tutorial_carnegieslime_longdescription: Every year the Minions of Scarecorp try
+    to steal your candy crops. Booville High's Baddest Slimeball crew have come together
+    to protect the candy crops with slime weapons. Players play as teen monsters who
+    program their collaborative robot (aka 'cobot') pets to help take down the Minions
+    of Scarecorp who are after their town's candy harvest. Choose between four characters
+    and their cobotic pets.
   tutorial_ozotown_longdescription: The Ozobot Blockly OzoTown will teach advanced
     sequencing as students utilize logic, reasoning, and computer science skills to
     navigate real life scenarios. No bot needed!
@@ -11367,7 +11369,7 @@ hi:
   tutorial_kcjhealth_name: The Health & Well-Being Challenge
   tutorial_kcjhealth_string_detail_grades: ग्रेड 6+ (11 और ऊपर)
   tutorial_kcjhealth_string_detail_platforms: ''
-  tutorial_kcjhealth_string_detail_programming_languages: blocks
+  tutorial_kcjhealth_string_detail_programming_languages: ब्लॉक (क्राउडिन लिंक)
   tutorial_kcjhealth_string_platforms: All modern browsers
   tutorial_msftwakanda_longdescription: 'Shuri, Okoye, and Riri must band together
     to help Wakanda. Code your own action-packed activity inspired by Marvel Studios''
@@ -11375,7 +11377,7 @@ hi:
   tutorial_msftwakanda_name: Long Live Wakanda
   tutorial_msftwakanda_string_detail_grades: ग्रेड 6+ (11 और ऊपर)
   tutorial_msftwakanda_string_detail_platforms: ''
-  tutorial_msftwakanda_string_detail_programming_languages: blocks
+  tutorial_msftwakanda_string_detail_programming_languages: ब्लॉक (क्राउडिन लिंक)
   tutorial_msftwakanda_string_platforms: All modern browsers
   school_not_found_heading: हम आपका स्कूल नहीं ढूंढ सके।कृपया अधिक जानकारी दर्ज करें।
   school_name: स्कूल का नाम
