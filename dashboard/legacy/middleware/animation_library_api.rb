@@ -153,7 +153,7 @@ class AnimationLibraryApi < Sinatra::Base
       next unless animations_by_name[animation_name][extension].nil?
       # Populate sourceSize if not already present
       calculated_source_size = {}
-      if extension === 'png'
+      if extension == 'png'
         png_body = object_summary.object.get.body.read
         calculated_source_size = PngUtils.dimensions_from_png(png_body)
       end

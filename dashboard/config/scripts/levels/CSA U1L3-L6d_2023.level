@@ -5,7 +5,7 @@
     "long_instructions": "✅ **TO DO:** Run the program to observe the outcome. Then, instantiate the missing `Painter`(#e7e8ea) objects in the program.\r\n\r\n💡 **TIP:** Check out the **Help & Tips** tab ⬆️ for help with instantiating objects.\r\n\r\n📝 **COMMENT:** Be sure to add comments to note what your code does.\r\n\r\n🖥️ **TEST:** Test your program to check if your code achieves the expected result.\r\n\r\n🎉 **RUN:** Run your program to see the result of your code!\r\n\r\n## 🎯 Goal\r\n\r\n![](https://images.code.org/62d7166de58522f49e465938d7b495fc-image-1668481439778.gif)",
     "mini_rubric": "false",
     "submittable": "false",
-    "hide_share_and_remix": "false",
+    "hide_share_and_remix": "true",
     "csa_view_mode": "neighborhood",
     "display_name": "Painters and Traffic Cone",
     "serialized_maze": [
@@ -355,20 +355,20 @@
       }
     },
     "encrypted_exemplar_sources": "kq0Pf5c4aweori7RVLPa2YdCHg6i+267r90rZwE5q3QjjBR/PpJw16UPErsZ\nOeh47yiL/CDqKUPM9+e1AB1nx98KMzyvb9EuBUhDvGKTFT7rnwNxSgfa8moG\nn2Pp8gDIw5paOkMkR2saCInEWyHFHSlD3VCM9MmwXfDQZMfpGe46wSRznNS2\n2XKXCGE5mQz7cl85TYcyPr8sWIq99vGqJvRfqSAOYxUdMDczEBIbFIQ/QAYd\nSUM7G6Vc9l1re5hRxDo0Ht0Vn0rtV4vKDAGTgNKnRqV5FOBvzFA7saXU2l+b\nmWEQYv5dYCPZFU89WHNZ+risZCNkk+Bpr8cJcau/qNzoOD2qIwyVSui+RJkT\nMp+Tw9hgCT9q5orGsQuxoBGF5wLdbFpuj9/JaGychp9Z/8mihwrGQSCR5r1P\nZ8F7Mhl4kjk0VIzRDJPoot3jn3XqO0kLQ6fkAQv/dpUAB/kM1tenM1XVXyi+\nqDN4IfSgtDeeSDc+Kap91/jTOilrB+hYtewcc8mVgnnWktoKBCUdOlicDFmr\nxzt+KQY6SK+PadjOTdFNttMGnTUZtZWufxdyj6cVOhtcn0LKaVxU32bT67JV\n2ycxxUN5uSfwjglKhc5AqQ8gPBdtBvZfkawn1Y+2vFg0epX7/d+URqfVTFTw\nxF+q46KkuDnFleaoEGQF4NHqVH9P+Su8ao+HuwyJ4Jx4aekgEiZnHiO4DlVD\nZHasaLehhMSQ3aIowKnIAjxWHWjkDGVMWaZC6TsCOmA77rtNhcgOJBeAVMiw\nAgokCRseNRBmPqIHFTi2nop30I91BPwZ8IccN0AFyE9ZWX9Hp5TxxOdCH6Vx\nX8gfKDKJkQpkj3PhqehKbrI+emNbWhENNZCtdS15fPoePU2IeA2NYAXeCQix\n8gnSoPsOjgZtXujHvqtMHyzF9jpKItC9GHAEeLl/K3E1ktedF9S4SZ2zp8qA\nhgqHcsXm7F8N+Wo4AGIyzYlAeYODp/Wiw3K444S3L+4308r+i5LaJVFmnI01\nMvBuhHgE21haY9na2/DrpLgNwU4xrtwfgGrCoWfDEVRzzRfCbwBaKLYH8LpA\nuNiZzYxDsBfTYn9a6AbhGXYoBrEHXQnD3JchS2M/yCjXg24ivQ3qgprFKSFn\n+Gr5J8qMB/vojGVJmTpZ1w6BEo7lYMeMyNBf6MYIWeJZX9jazEG784JOBKaZ\nTA9VS3/7RFhcbyjkmMxuFuY5op1nR4DAZ8BGjTpOBAnWpfw3s2wjlq116cFX\niG6e0SmyUrsCfyIOWhSA954vHF+y71raNXXdX3Agnc4jVupegIaWPTPI3JfF\nX0b485kEnl1/iFHotZlv6NDf+qX9MafKPHkhAk/oQAm1pktxjHJZWDCFEBQt\nUqima023+35xbGgP+1h3/CtLThdhoz+p5q0VMXxAAN8j6QEt/Q==\n",
-    "encrypted_examples": [
-
-    ],
     "reference_links": [
       "/courses/csa-2023/guides/instantiating-objects"
     ],
     "bubble_choice_description": "Instantiate the missing `Painter` objects so they can navigate through The Neighborhood to reach the traffic cones.",
-    "thumbnail_url": "https://images.code.org/943475edcc2a9740461e0dec0db5072a-U1L4-L3d.gif"
+    "thumbnail_url": "https://images.code.org/943475edcc2a9740461e0dec0db5072a-U1L4-L3d.gif",
+    "encrypted_examples": [
+
+    ]
   },
   "game_id": 68,
   "published": true,
   "created_at": "2022-11-08T14:40:00.000Z",
   "level_num": "custom",
   "user_id": 16889,
-  "audit_log": "[{\"changed_at\":\"2022-11-08T14:40:00.341+00:00\",\"changed\":[\"cloned from \\\"CSA U1L3-L6c_2023\\\"\"],\"cloned_from\":\"CSA U1L3-L6c_2023\"},{\"changed_at\":\"2022-11-08 14:40:02 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-11-14 18:27:31 +0000\",\"changed\":[\"csa_view_mode\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-11-15 02:41:22 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\",\"serialized_maze\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-11-15 03:00:17 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-11-15 03:00:19 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-11-15 03:00:26 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-11-15 03:00:33 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-11-15 03:08:02 +0000\",\"changed\":[\"long_instructions\",\"serialized_maze\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-11-08T14:40:00.341+00:00\",\"changed\":[\"cloned from \\\"CSA U1L3-L6c_2023\\\"\"],\"cloned_from\":\"CSA U1L3-L6c_2023\"},{\"changed_at\":\"2022-11-08 14:40:02 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-11-14 18:27:31 +0000\",\"changed\":[\"csa_view_mode\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-11-15 02:41:22 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\",\"serialized_maze\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-11-15 03:00:17 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-11-15 03:00:19 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-11-15 03:00:26 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-11-15 03:00:33 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-11-15 03:08:02 +0000\",\"changed\":[\"long_instructions\",\"serialized_maze\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-11-15 23:15:42 +0000\",\"changed\":[\"hide_share_and_remix\",\"serialized_maze\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>
 </Javalab>

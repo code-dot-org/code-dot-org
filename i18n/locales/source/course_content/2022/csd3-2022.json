@@ -2678,7 +2678,7 @@
         "long_instructions": "Think about one difficult bug that you needed to fix in your program.  What was your process for finding and fixing the bug?"
       },
       "CSD U3 Test parameter FR_2022": {
-        "long_instructions": "Blocks such as `rect` and `velocityX` have parameters that let you give specific information about what they can do.  Choose a function from your program that could be improved with a parameter and explain how."
+        "long_instructions": "Blocks such as `rect` and `ellipse` have parameters that let you give specific information about what they can do.  Choose a function from your program that could be improved with a parameter and explain how."
       },
       "CSD U3 Test collaboration FR_2022": {
         "long_instructions": "How did you and your partner decide how to divide up the work to make this program?"
