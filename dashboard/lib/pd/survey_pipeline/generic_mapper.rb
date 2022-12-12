@@ -32,7 +32,7 @@ module Pd::SurveyPipeline
     def process_data(context)
       self.class.check_required_input_keys REQUIRED_INPUT_KEYS, context
 
-      results = map_reduce context.slice(*REQUIRED_INPUT_KEYS)
+      results = map_reduce(**context.slice(*REQUIRED_INPUT_KEYS))
 
       OUTPUT_KEYS.each do |key|
         context[key] ||= []
