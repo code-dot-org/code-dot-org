@@ -153,36 +153,33 @@ class RegionalPartnerSearch extends Component {
   render() {
     const partnerInfo = this.state.partnerInfo;
 
-    let workshopCollections = [
+    let courseWorkshops = [
       {
         key: 'CSD',
         name: ActiveCourseWorkshops.CSD,
         heading: `${ActiveCourseWorkshops.CSD} Workshops`,
-        workshops:
-          partnerInfo &&
-          partnerInfo.summer_workshops.filter(
-            workshop => workshop.course === ActiveCourseWorkshops.CSD
-          )
+        isOffered: partnerInfo?.pl_programs_offered?.includes(this.courseKey),
+        summerWorkshops: partnerInfo?.summer_workshops?.filter(
+          workshop => workshop.course === ActiveCourseWorkshops.CSD
+        )
       },
       {
         key: 'CSP',
         name: ActiveCourseWorkshops.CSP,
         heading: `${ActiveCourseWorkshops.CSP} Workshops`,
-        workshops:
-          partnerInfo &&
-          partnerInfo.summer_workshops.filter(
-            workshop => workshop.course === ActiveCourseWorkshops.CSP
-          )
+        isOffered: partnerInfo?.pl_programs_offered?.includes(this.courseKey),
+        summerWorkshops: partnerInfo?.summer_workshops?.filter(
+          workshop => workshop.course === ActiveCourseWorkshops.CSP
+        )
       },
       {
         key: 'CSA',
         name: ActiveCourseWorkshops.CSA,
         heading: `${ActiveCourseWorkshops.CSA} Workshops`,
-        workshops:
-          partnerInfo &&
-          partnerInfo.summer_workshops.filter(
-            workshop => workshop.course === ActiveCourseWorkshops.CSA
-          )
+        isOffered: partnerInfo?.pl_programs_offered?.includes(this.courseKey),
+        summerWorkshops: partnerInfo?.summer_workshops?.filter(
+          workshop => workshop.course === ActiveCourseWorkshops.CSA
+        )
       }
     ];
 
@@ -325,21 +322,19 @@ class RegionalPartnerSearch extends Component {
               partnerInfo.pl_programs_offered && (
                 <div>
                   <h3>Workshop information (hosted by {partnerInfo.name}):</h3>
-                  {workshopCollections.map((collection, collectionIndex) => {
-                    if (collection.workshops.length === 0) {
-                      // If no current workshops for a course
-                      if (
-                        partnerInfo.pl_programs_offered.includes(collection.key)
-                      ) {
+                  {courseWorkshops.map((currCourse, currCourseIndex) => {
+                    if (currCourse.summerWorkshops.length === 0) {
+                      // If no current workshops for the given course
+                      if (currCourse.isOffered) {
                         // If a program is offered but a workshop hasn't been scheduled yet
                         return (
                           <WorkshopCard
-                            key={collectionIndex}
+                            key={currCourseIndex}
                             style={workshopCollectionStyle}
                             content={
                               <>
                                 <h4>
-                                  {collection.name} Workshop details are coming
+                                  {currCourse.name} Workshop details are coming
                                   soon!
                                 </h4>
                                 <div>
@@ -357,14 +352,14 @@ class RegionalPartnerSearch extends Component {
                         // If a program is not offered
                         return (
                           <WorkshopCard
-                            key={collectionIndex}
+                            key={currCourseIndex}
                             style={workshopCollectionStyle}
                             content={
                               <>
-                                <h4>{collection.heading}</h4>
+                                <h4>{currCourse.heading}</h4>
                                 <div>
                                   This Regional Partner is not offering{' '}
-                                  {collection.name} workshops at this time.
+                                  {currCourse.name} workshops at this time.
                                   Code.org will review your application and
                                   contact you with options for joining the
                                   program hosted by a Regional Partner from a
@@ -375,24 +370,26 @@ class RegionalPartnerSearch extends Component {
                           />
                         );
                       }
-                    } else if (collection.workshops.length > 0) {
+                    } else if (currCourse.summerWorkshops.length > 0) {
                       // If workshops present for the given course
                       return (
                         <WorkshopCard
-                          key={collectionIndex}
+                          key={currCourseIndex}
                           style={workshopCollectionStyle}
                           content={
                             <>
-                              <h4>{collection.heading}</h4>
-                              {collection.workshops.map((workshop, index) => (
-                                <div key={index} style={styles.workshop}>
-                                  <div>
-                                    {workshop.workshop_date_range_string}
+                              <h4>{currCourse.heading}</h4>
+                              {currCourse.summerWorkshops.map(
+                                (workshop, index) => (
+                                  <div key={index} style={styles.workshop}>
+                                    <div>
+                                      {workshop.workshop_date_range_string}
+                                    </div>
+                                    <div>{workshop.location_name}</div>
+                                    <div>{workshop.location_address}</div>
                                   </div>
-                                  <div>{workshop.location_name}</div>
-                                  <div>{workshop.location_address}</div>
-                                </div>
-                              ))}
+                                )
+                              )}
                             </>
                           }
                         />
