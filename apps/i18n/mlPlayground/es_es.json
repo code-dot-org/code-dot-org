@@ -1,0 +1,514 @@
+{
+  "trainModelButtonText": "Entrenar",
+  "navigateForward": "Continuar",
+  "navigateBack": "Volver",
+  "tryAgain": "Intentar de nuevo",
+  "navigateDone": "Terminar",
+  "saveProgress": "Guardar",
+  "correctAnswer": "Correcto",
+  "incorrectAnswer": "Incorrecto",
+  "potentialUsesLabel": "Finalidad de Uso",
+  "potentialUsesDescription": "Describe el problema que crees que este modelo puede solucionar o una posible aplicación en la que alguien pueda usar este modelo.",
+  "potentialUsesPlaceholder": "Escribe una breve descripción.",
+  "potentialMisusesLabel": "Limitaciones y Advertencias",
+  "potentialMisusesDescription": "Describe cualquier limitación de como el modelo ha sido creado y como debe usarse. Puedes decir algo como \"Evita usar este modelo para...\" o \"Ten cuidado con...\". Algunas cuestiones importantes que considerar:",
+  "potentialMisusesDescriptionRepresent": "¿Representan los datos a todos los usuarios y escenarios posibles?",
+  "potentialMisusesDescriptionEnough": "¿Recogiste suficientes datos para confiar en la precisión del modelo?",
+  "potentialMisusesDescriptionSituations": "¿Hay situaciones en las que este modelo definitivamente no debería usarse?",
+  "potentialMisusesPlaceholder": "Escribe una breve descripción.",
+  "modelNameLabel": "Nombre del modelo",
+  "datasetDescriptionLabel": "Acerca de los Datos",
+  "datasetDescriptionPlaceholder": "¿Cómo se recopilaron los datos? ¿Quién los recopiló? ¿Cuándo se recopilaron?",
+  "saveModelColumnCountLabel": "Descripción de las Columnas",
+  "saveModelFieldRequired": "obligatorio",
+  "saveModelColumnTypeLabel": "etiqueta",
+  "saveModelColumnTypeFeature": "característica",
+  "modelCardAccuracy": "Precisión",
+  "modelCardIntendedUse": "Finalidad de uso",
+  "modelCardLimitations": "Limitaciones y Advertencias",
+  "modelCardDatasetDetails": "Acerca de los datos",
+  "modelCardDatasetDetailsSize": "Tamaño del conjunto de datos",
+  "modelCardDatasetDetailsSizeCount": "{rowCount} filas",
+  "modelCardFeaturesAndLabel": "Características y Etiquetas",
+  "modelCardLabel": "Etiqueta",
+  "modelCardPossibleValues": "Valores Posibles",
+  "modelCardPossibleValuesMinimum": "mín.",
+  "modelCardPossibleValuesMaximum": "máx.",
+  "modelCardFeatures": "Características",
+  "dataDisplayRowCount": "Hay {rowCount} filas de datos.",
+  "dataDisplayRowCountTruncated": "Hay {rowCount} filas de datos. (Mostrando las primeras {rowLimit} filas)",
+  "columnInspectorDataType": "Tipo de Dato",
+  "columnInspectorDescription": "Descripción",
+  "columnDetailsInformation": "Información de la columna",
+  "columnDetailsNumericalTypeError": "Columnas numéricas no pueden contener cadenas de caracteres.",
+  "columnDetailsMinimumValue": "mín.",
+  "columnDetailsMaximumValue": "máx.",
+  "columnDetailsValueRange": "rango",
+  "columnDetailsTooManyLabels": "{labelCount} valores han sido encontrados en esta columna. Se muestra un gráfico cuando hay {maxLabelCount} o menos.",
+  "selectLabelButton": "Selecciona una etiqueta",
+  "scatterPlotLabel": "Información de la relación",
+  "addFeatureButton": "Añadir una característica",
+  "columnType_numerical": "numérico",
+  "columnType_categorical": "categórico",
+  "selectDatasetUploadFileButton": "Sube {fileType}",
+  "selectDatasetErrorTooFewRows": "Por favor sube un {fileType} con al menos {count} filas.",
+  "selectDatasetErrorTooFewColumns": "Por favor sube un {fileType} con al menos {count} columnas.",
+  "dataCardWarningLargeDataset": "Advertencia: los conjuntos de datos con más de {rowCount} filas ralentizarán la experiencia del usuario.",
+  "dataCardRemovedRows": "{rowCount} {rowCount, plural, one {fila eliminada} other {filas eliminadas}} porque {rowCount, plural, one {contenia} other {contenian}} celdas vacías.",
+  "dataCardDefaultHeader": "Detalles",
+  "dataCardSource": "Fuente",
+  "dataCardRowCount": "Filas de datos",
+  "dataCardLastUpdated": "Última actualización",
+  "dataCardPotentialUses": "Usos posibles",
+  "dataCardPotentialMisuses": "Malos usos posibles",
+  "saveStatus_success": "¡Tu modelo ha sido guardado!",
+  "saveStatus_failure": "Ha habido un error. Tu modelo no se ha guardado. Por favor, inténtalo de nuevo.",
+  "saveStatus_piiProfanity": "Tu modelo no se pudo guardar porque contiene blasfemias o información personal identificable (por ejemplo, correo electrónico, dirección, número de teléfono).",
+  "trainModelHeading": "Entrenamiento",
+  "aiBotAltText": "Robot de I.A.",
+  "aiBotHeadAltText": "Cabeza del robot de I.A.",
+  "aiBotBodyAltText": "Cuerpo del robot de I.A.",
+  "aiBotBeamAltText": "Escáner del robot de I.A.",
+  "animationDescriptionsHeader": "Descripción de la animación",
+  "animationDescriptionsTraining": "Las filas etiquetadas del conjunto de datos de entrenamiento entran en la cabeza del robot de I.A.",
+  "animationDescriptionsTesting": "El robot de I.A. escanea las filas de datos sin etiquetar del conjunto de datos de prueba. Cada vez que una fila pasa por el escáner del robot de I.A., éste hace una predicción añadiendo un valor a la columna de la etiqueta.",
+  "generateResultsHeader": "Probando el modelo",
+  "resultsHeader": "Resultado",
+  "resultsAccuracy": "Precisión",
+  "resultsDetailsButton": "Detalles",
+  "resultsPreviousResults": "Resultados anteriores",
+  "resultsTableFeatureHeader": "Características",
+  "resultsTableActualValueHeader": "Real",
+  "resultsTablePredictedValueHeader": "Predicción de la I.A.",
+  "resultsTablePredictionRange": "Las predicciones son +/-{percentage}% del rango",
+  "predictHeader": "¡Pruébalo!",
+  "predictButton": "Predecir",
+  "predictAIBotPredicts": "La I.A. predice",
+  "predictPlaceholder": "mín. {minimum}, máx. {maximum}",
+  "crossTabRelationshipHeader": "Información de la relación",
+  "crossTabTooMuchData": "Los datos seleccionados son demasiado grandes para mostrarlos en una tabla.",
+  "uniqueOptionsWarningNotice": "Nota",
+  "uniqueOptionsWarningMessage": "Columnas de valores categóricos con más de {valueCount} valores únicos no pueden ser seleccionadas como una etiqueta o característica.",
+  "predictionStatement": "Predice {output} a partir de {inputs}",
+  "datasets": {
+    "medical_priority": {
+      "fields": {
+        "age": {
+          "id": "edad"
+        }
+      }
+    },
+    "shoe_survey_toy": {
+      "fields": {
+        "weather": {
+          "id": "clima"
+        },
+        "day": {
+          "id": "día"
+        },
+        "shoe": {
+          "id": "zapato"
+        }
+      }
+    },
+    "salsa_toy": {
+      "fields": {
+        "onion": {
+          "id": "cebolla"
+        },
+        "avocado": {
+          "id": "aguacate"
+        },
+        "corn": {
+          "id": "maíz"
+        },
+        "beans": {
+          "id": "alubias"
+        },
+        "lime": {
+          "id": "lima"
+        }
+      }
+    },
+    "poutine_toy": {
+      "fields": {
+        "mushrooms": {
+          "id": "setas"
+        },
+        "lobster": {
+          "id": "langosta"
+        },
+        "bacon": {
+          "id": "beicon"
+        },
+        "cheese": {
+          "id": "queso"
+        },
+        "meat": {
+          "id": "carne"
+        }
+      }
+    },
+    "club_random_toy": {
+      "fields": {
+        "color": {
+          "id": "color"
+        },
+        "music": {
+          "id": "música"
+        },
+        "food": {
+          "id": "comida"
+        }
+      }
+    },
+    "insurance_cost": {
+      "fields": {
+        "age": {
+          "id": "edad"
+        }
+      }
+    },
+    "nutrition": {
+      "fields": {
+        "Category": {
+          "id": "Categoría"
+        },
+        "Description": {
+          "id": "Descripción"
+        }
+      }
+    },
+    "raspado_toy": {
+      "fields": {
+        "strawberry": {
+          "id": "fresa"
+        },
+        "lime": {
+          "id": "lima"
+        }
+      }
+    },
+    "shapes_v2_toy": {
+      "fields": {
+        "sides": {
+          "id": "lados"
+        },
+        "size": {
+          "id": "tamaño"
+        }
+      }
+    },
+    "salad_toy": {
+      "fields": {
+        "tomato": {
+          "id": "tomate"
+        },
+        "avocado": {
+          "id": "aguacate"
+        },
+        "chicken": {
+          "id": "pollo"
+        },
+        "fruit": {
+          "id": "fruta"
+        },
+        "beans": {
+          "id": "alubias"
+        },
+        "cheese": {
+          "id": "queso"
+        }
+      }
+    },
+    "billionaires": {
+      "fields": {
+        "Age": {
+          "id": "Edad"
+        },
+        "Gender": {
+          "id": "Sexo"
+        }
+      }
+    },
+    "student_alcohol_consumption": {
+      "fields": {
+        "school": {
+          "id": "escuela"
+        },
+        "age": {
+          "id": "edad"
+        },
+        "health": {
+          "id": "salud"
+        }
+      }
+    },
+    "naan_toy": {
+      "fields": {
+        "chicken": {
+          "id": "pollo"
+        },
+        "lamb": {
+          "id": "cordero"
+        },
+        "onion": {
+          "id": "cebolla"
+        },
+        "cheese": {
+          "id": "queso"
+        }
+      }
+    },
+    "census_part": {
+      "fields": {
+        "age": {
+          "id": "edad"
+        }
+      }
+    },
+    "loneliness_interests": {
+      "fields": {
+        "Internet": {
+          "id": "Internet"
+        },
+        "Writing": {
+          "id": "Escribir"
+        }
+      }
+    },
+    "movies": {
+      "fields": {
+        "Score": {
+          "id": "Puntuación"
+        },
+        "Country": {
+          "id": "País"
+        },
+        "Name": {
+          "id": "Nombre"
+        },
+        "Star": {
+          "id": "Estrella"
+        }
+      }
+    },
+    "songs": {
+      "fields": {
+        "Artist": {
+          "id": "Artista"
+        }
+      }
+    },
+    "safari_toy": {
+      "fields": {
+        "people": {
+          "id": "personas"
+        },
+        "rhino": {
+          "id": "rinoceronte"
+        },
+        "elephant": {
+          "id": "elefante"
+        },
+        "alligator": {
+          "id": "caimán"
+        },
+        "trees": {
+          "id": "árboles"
+        }
+      }
+    },
+    "abalone": {
+      "fields": {
+        "Length": {
+          "id": "Extensión"
+        },
+        "Height": {
+          "id": "Alto"
+        }
+      }
+    },
+    "zoo": {
+      "fields": {
+        "Animal Name": {
+          "type": "categorical",
+          "id": "Nombre del Animal",
+          "description": "Nombre del animal."
+        },
+        "Hair": {
+          "type": "categorical",
+          "id": "Pelo",
+          "description": "¿El animal tiene pelo?"
+        },
+        "Feathers": {
+          "type": "categorical",
+          "id": "Plumas",
+          "description": "¿El animal tiene plumas?"
+        },
+        "Eggs": {
+          "type": "categorical",
+          "id": "Huevos",
+          "description": "¿El animal pone huevos?"
+        },
+        "Milk": {
+          "type": "categorical",
+          "id": "Leche",
+          "description": "¿El animal produce leche?"
+        },
+        "Airborne": {
+          "type": "categorical",
+          "id": "Aéreo",
+          "description": "¿El animal vuela?"
+        },
+        "Aquatic": {
+          "type": "categorical",
+          "id": "Acuático",
+          "description": "¿El animal vive en el agua?"
+        },
+        "Predator": {
+          "type": "categorical",
+          "id": "Depredador",
+          "description": "¿El animal es un depredador?"
+        },
+        "Toothed": {
+          "type": "categorical",
+          "id": "Dentado",
+          "description": "¿El animal tiene dientes?"
+        },
+        "Backbone": {
+          "type": "categorical",
+          "id": "Vertebrado",
+          "description": "¿El animal es vertebrado?"
+        },
+        "Breathes": {
+          "type": "categorical",
+          "id": "Respira",
+          "description": "¿El animal respira?"
+        },
+        "Venomous": {
+          "type": "categorical",
+          "id": "Venenoso",
+          "description": "¿El animal es venenoso?"
+        },
+        "Fins": {
+          "type": "categorical",
+          "id": "Aletas",
+          "description": "¿El animal tiene aletas?"
+        },
+        "Legs": {
+          "type": "categorical",
+          "id": "Patas",
+          "description": "¿Cuántas patas tiene el animal?"
+        },
+        "Tail": {
+          "type": "categorical",
+          "id": "Cola",
+          "description": "¿El animal tiene cola?"
+        },
+        "Domestic": {
+          "type": "categorical",
+          "id": "Doméstico",
+          "description": "¿El animal es doméstico?"
+        },
+        "Catsize": {
+          "type": "categorical",
+          "id": "Tamaño de Gato",
+          "description": "¿Es el animal de tamaño similar al de un gato?"
+        },
+        "Class": {
+          "type": "categorical",
+          "id": "Clase",
+          "description": "¿Qué tipo de animal es?"
+        }
+      }
+    },
+    "poke_toy": {
+      "fields": {
+        "avocado": {
+          "id": "aguacate"
+        },
+        "onion": {
+          "id": "cebolla"
+        },
+        "ginger": {
+          "id": "pelirroja"
+        }
+      }
+    },
+    "student_survey": {
+      "fields": {
+        "Music": {
+          "id": "Música"
+        },
+        "Dance": {
+          "id": "Baile"
+        },
+        "Country": {
+          "id": "País"
+        },
+        "Internet": {
+          "id": "Internet"
+        },
+        "Writing": {
+          "id": "Escribir"
+        },
+        "Empathy": {
+          "id": "Empatía"
+        },
+        "Achievements": {
+          "id": "Logros"
+        },
+        "Age": {
+          "id": "Edad",
+          "description": "Edad"
+        },
+        "Height": {
+          "id": "Alto",
+          "description": "Alto"
+        },
+        "Gender": {
+          "id": "Sexo",
+          "description": "Sexo"
+        }
+      }
+    },
+    "boba_toy": {
+      "fields": {
+        "banana": {
+          "id": "plátano"
+        }
+      }
+    },
+    "heart": {
+      "fields": {
+        "Age": {
+          "id": "Edad"
+        }
+      }
+    },
+    "shapes_v1_toy": {
+      "fields": {
+        "sides": {
+          "id": "lados"
+        },
+        "size": {
+          "id": "tamaño"
+        }
+      }
+    },
+    "loneliness_music": {
+      "fields": {
+        "Music": {
+          "id": "Música"
+        },
+        "Dance": {
+          "id": "Baile"
+        },
+        "Country": {
+          "id": "País"
+        }
+      }
+    }
+  }
+}
