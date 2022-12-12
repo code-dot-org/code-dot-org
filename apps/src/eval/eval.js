@@ -43,7 +43,7 @@ import {TestResults, ResultType} from '../constants';
 import canvg from 'canvg';
 // tests don't have svgelement
 import '../util/svgelement-polyfill';
-import {showDeprecatedLabWarning} from '../util/deprecatedLabWarning';
+import {showDeprecatedAlgebraLabWarning} from '../util/deprecatedLabWarning';
 
 var level;
 var skin;
@@ -150,7 +150,7 @@ Eval.init = function(config) {
 
   studioApp().setPageConstants(config);
 
-  showDeprecatedLabWarning('eval');
+  showDeprecatedAlgebraLabWarning();
 
   ReactDOM.render(
     <Provider store={getStore()}>

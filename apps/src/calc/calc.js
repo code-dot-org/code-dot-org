@@ -43,7 +43,7 @@ var Token = require('./token');
 var InputIterator = require('./inputIterator');
 
 import {TestResults, ResultType} from '../constants';
-import {showDeprecatedLabWarning} from '../util/deprecatedLabWarning';
+import {showDeprecatedAlgebraLabWarning} from '../util/deprecatedLabWarning';
 
 var level;
 var skin;
@@ -206,7 +206,7 @@ Calc.init = function(config) {
 
   studioApp().setPageConstants(config);
 
-  showDeprecatedLabWarning('calc');
+  showDeprecatedAlgebraLabWarning();
 
   ReactDOM.render(
     <Provider store={getStore()}>
