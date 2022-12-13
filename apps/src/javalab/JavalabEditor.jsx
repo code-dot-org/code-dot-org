@@ -714,6 +714,7 @@ class JavalabEditor extends React.Component {
                     <span>{fileMetadata[tabKey]}</span>
                     {activeTabKey === tabKey && !isReadOnlyWorkspace && (
                       <button
+                        aria-label="File options"
                         ref={`${tabKey}-file-toggle`}
                         type="button"
                         className={classNames(
