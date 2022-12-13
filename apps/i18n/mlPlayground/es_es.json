@@ -49,7 +49,7 @@
   "scatterPlotLabel": "Información de la relación",
   "addFeatureButton": "Añadir una característica",
   "columnType_numerical": "numérico",
-  "columnType_categórico": "categórico",
+  "columnType_categorical": "categórico",
   "selectDatasetUploadFileButton": "Sube {fileType}",
   "selectDatasetErrorTooFewRows": "Por favor sube un {fileType} con al menos {count} filas.",
   "selectDatasetErrorTooFewColumns": "Por favor sube un {fileType} con al menos {count} columnas.",
