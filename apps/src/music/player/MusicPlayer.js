@@ -1,6 +1,7 @@
 import {
   GetCurrentAudioTime,
   InitSound,
+  LoadSoundFromBuffer,
   PlaySound,
   StopSound,
   StopSoundByUniqueId
@@ -41,6 +42,10 @@ export default class MusicPlayer {
       .flat(2);
     InitSound(this.soundList);
     this.isInitialized = true;
+  }
+
+  loadSoundFromBuffer(id, buffer) {
+    LoadSoundFromBuffer(id, buffer);
   }
 
   playSoundAtMeasureById(id, measure, insideWhenRun) {
