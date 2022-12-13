@@ -1,5 +1,6 @@
 import moduleStyles from './toolbox.module.scss';
 import {BlockTypes} from './blockTypes';
+import AppConfig from '../appConfig';
 
 const baseCategoryCssConfig = {
   container: moduleStyles.toolboxCategoryContainer,
@@ -7,7 +8,7 @@ const baseCategoryCssConfig = {
   label: moduleStyles.toolboxLabel
 };
 
-export const baseToolbox = {
+const baseToolbox = {
   kind: 'categoryToolbox',
   contents: [
     {
@@ -193,8 +194,13 @@ export const baseToolbox = {
           type: 'logic_compare'
         }
       ]
-    },
+    }
+  ]
+};
 
+const baseToolboxSimple = {
+  kind: 'categoryToolbox',
+  contents: [
     {
       kind: 'category',
       name: 'Simple',
@@ -212,3 +218,11 @@ export const baseToolbox = {
     }
   ]
 };
+
+export function getBaseToolbox() {
+  if (AppConfig.getValue('blocks') === 'simple') {
+    return baseToolboxSimple;
+  }
+
+  return baseToolbox;
+}
