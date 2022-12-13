@@ -29,7 +29,9 @@ class Services::CSTAEnrollmentTest < ActiveSupport::TestCase
         'submission[17_city]' => 'Test City',
         'submission[17_state]' => 'WA',
         'submission[17_zip]' => '12345',
-        'submission[19]' => "Yes, I provide my consent."
+        'submission[19]' => "Yes, I provide my consent.",
+        'submission[25]' => "Role with Spaces",
+        'submission[22]' => "K-5, 6-8, ",
       }
     )
     expected_request.returns(success_response)
@@ -146,6 +148,8 @@ class Services::CSTAEnrollmentTest < ActiveSupport::TestCase
       city: 'Test City',
       state: 'WA',
       zip: '12345',
+      professional_role: 'Role with Spaces',
+      grades_teaching: 'K-5, 6-8, ',
       privacy_permission: true
     }
   end

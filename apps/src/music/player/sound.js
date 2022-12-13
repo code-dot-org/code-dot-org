@@ -19,6 +19,15 @@ export function InitSound(desiredSounds) {
   LoadSounds(desiredSounds);
 }
 
+export function LoadSoundFromBuffer(id, buffer) {
+  audioSystem.LoadSoundFromBuffer(
+    buffer,
+    function(id, buffer) {
+      audioSoundBuffers[id] = buffer;
+    }.bind(this, id)
+  );
+}
+
 export function GetCurrentAudioTime() {
   return audioSystem?.getCurrentTime();
 }

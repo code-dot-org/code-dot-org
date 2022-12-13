@@ -99,13 +99,6 @@ class EditSectionForm extends Component {
     });
   };
 
-  isOauthType(loginType) {
-    return [
-      SectionLoginType.google_classroom,
-      SectionLoginType.clever
-    ].includes(loginType);
-  }
-
   recordAutoplayToggleEvent = ttsAutoplayEnabled => {
     firehoseClient.putRecord(
       {
@@ -267,21 +260,21 @@ class EditSectionForm extends Component {
         </div>
         <DialogFooter>
           <Button
-            __useDeprecatedTag
             onClick={handleClose}
             text={i18n.dialogCancel()}
             size={Button.ButtonSize.large}
             color={Button.ButtonColor.gray}
             disabled={isSaveInProgress}
+            style={{margin: 0}}
           />
           <Button
-            __useDeprecatedTag
             className="uitest-saveButton"
             onClick={this.onSaveClick}
             text={i18n.save()}
             size={Button.ButtonSize.large}
             color={Button.ButtonColor.orange}
             disabled={isSaveInProgress}
+            style={{margin: 0}}
           />
         </DialogFooter>
         {this.state.showHiddenUnitWarning && (

@@ -1058,6 +1058,8 @@ en:
             '1': lemon juice
             '3': baking soda
             '5': both
+      DansBlocks_testRectangle:
+        text: 'make rectangle x: {X} y: {Y} w: {W} h: {H} color: {COLOR}'
       FunctionBlocks_addEightBlock:
         text: addEight
       FunctionBlocks_addFiveBlock:

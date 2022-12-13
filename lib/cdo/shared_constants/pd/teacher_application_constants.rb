@@ -15,6 +15,12 @@ module Pd
 
     YEAR = SharedApplicationConstants::APPLICATION_CURRENT_YEAR
 
+    REGIONAL_PARTNER_DEFAULT_GUARDRAILS = {
+      frl_rural: 40,
+      frl_not_rural: 50,
+      urg: 50
+    }
+
     SECTION_HEADERS = {
       choose_your_program: 'Choose Your Program',
       find_your_region: 'Find Your Region',
@@ -271,7 +277,6 @@ module Pd
       committed: YES_NO,
       enough_course_hours: YES_NO,
       previous_yearlong_cdo_pd: YES_NO,
-      replace_existing: YES_NO,
       principal_approval: YES_NO,
       principal_schedule_confirmed: YES_NO,
       # Scholarship requirements
@@ -290,7 +295,6 @@ module Pd
         :enough_course_hours,
         :committed,
         :previous_yearlong_cdo_pd,
-        :replace_existing,
         :principal_approval,
         :principal_schedule_confirmed,
       ],
@@ -299,7 +303,6 @@ module Pd
         :enough_course_hours,
         :committed,
         :previous_yearlong_cdo_pd,
-        :replace_existing,
         :principal_approval,
         :principal_schedule_confirmed,
       ],
@@ -310,7 +313,6 @@ module Pd
         :enough_course_hours,
         :committed,
         :previous_yearlong_cdo_pd,
-        :replace_existing,
         :principal_approval,
         :principal_schedule_confirmed,
       ]

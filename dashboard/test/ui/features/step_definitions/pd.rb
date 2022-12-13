@@ -1,8 +1,6 @@
 Given(/^I am a workshop administrator with some applications of each type and status$/) do
-  random_name = "TestWorkshopAdmin" + SecureRandom.hex(10)
   steps %Q{
-    And I create a teacher named "#{random_name}"
-    And I make the teacher a workshop admin
+    And I am a workshop administrator
     And I create some fake applications of each type and status
   }
 end
@@ -65,7 +63,7 @@ end
 
 Given(/^I delete the program manager, regional partner, teacher, and application$/) do
   browser_request(
-    url: '/api/test/create_teacher_application',
+    url: '/api/test/delete_rp_pm_teacher_application',
     method: 'POST',
     body: {pm_name: @pm_name, rp_id: @rp_id, teacher_id: @teacher_id, application_id: @application_id}
   )
