@@ -64,6 +64,7 @@ class JavalabFileExplorer extends Component {
     return (
       <div style={styles.main}>
         <button
+          aria-label="File explorer"
           type="button"
           onClick={this.toggleDropdown}
           style={{
