@@ -1116,7 +1116,7 @@ def press_keys(element, key)
 end
 
 def convert_keys(keys)
-  return keys[1..-1].to_sym if keys.start_with?(':')
+  return keys[1..].to_sym if keys.start_with?(':')
   keys.gsub!(/([^\\])\\n/, "\\1\n") # Cucumber does not convert captured \n to newline.
   keys.gsub!(/\\\\n/, "\\n") # Fix up escaped newline
   # Convert newlines to :enter keys.
