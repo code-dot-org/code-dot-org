@@ -44,3 +44,31 @@ export const triggeredAt = {
       \n`;
   }
 };
+
+export const triggeredAtSimple = {
+  definition: {
+    type: BlockTypes.TRIGGERED_AT_SIMPLE,
+    message0: '%1 triggered',
+    args0: [
+      {
+        type: 'input_dummy',
+        name: 'trigger'
+      }
+    ],
+    inputsInline: true,
+    nextStatement: null,
+    colour: 230,
+    tooltip: 'at trigger',
+    extensions: ['dynamic_trigger_extension']
+  },
+  generator: ctx => {
+    const varName = Blockly.JavaScript.nameDB_.getDistinctName(
+      'eventTime',
+      Blockly.Names.NameType.VARIABLE
+    );
+    return (
+      `${varName} = MusicPlayer.getPlayheadPosition();\n` +
+      `currentMeasureLocation = Math.ceil(${varName});\n`
+    );
+  }
+};

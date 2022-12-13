@@ -4,12 +4,13 @@ import {
   setCurrentLocationNextMeasure
 } from './blocks/samples';
 import {forLoop} from './blocks/control';
-import {triggeredAt, whenRun} from './blocks/events';
+import {whenRun, triggeredAt, triggeredAtSimple} from './blocks/events';
 
 // All blocks
 const blockList = [
   whenRun,
   triggeredAt,
+  triggeredAtSimple,
   playSound,
   playSoundAtCurrentLocation,
   setCurrentLocationNextMeasure,

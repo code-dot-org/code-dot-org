@@ -203,6 +203,17 @@ const baseToolboxSimple = {
   contents: [
     {
       kind: 'category',
+      name: 'Events',
+      cssConfig: baseCategoryCssConfig,
+      contents: [
+        {
+          kind: 'block',
+          type: BlockTypes.TRIGGERED_AT_SIMPLE
+        }
+      ]
+    },
+    {
+      kind: 'category',
       name: 'Simple',
       cssConfig: baseCategoryCssConfig,
       contents: [
