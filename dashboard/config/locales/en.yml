@@ -627,6 +627,7 @@ en:
     store: 'Store'
     cookie_notice: 'Cookie Notice'
     view_code: 'View Code'
+    locale_select: "Select language"
   reference_area:
     title: 'Need help?'
     subtitle: 'See these videos and hints'
