@@ -6,7 +6,7 @@ import { PanelManager } from "./Panels"
 import { fakeChannelIds } from "./projectApi"
 import { setAppOptions } from "./redux/slices/commonSlice"
 import { useAppDispatch, useAppSelector } from "./redux/hooks"
-import { setProjectState } from "./redux/slices/projectSlice"
+import { updateProjectState } from "./redux/slices/projectSlice"
 
 type LabManagerProps = {
   appOptions: AppOptions
@@ -17,18 +17,7 @@ export const LabManager = (props: LabManagerProps) => {
 
   const dispatch = useAppDispatch()
   dispatch(setAppOptions(props.appOptions))
-
-  // TODO: Find a better place/paradigm for this. 
-  // It's here because dispatch can only be used within components.
-  const loadProject = (channelId: string) => {
-    loadProjectData(channelId).then(result => {
-      dispatch(setProjectState({
-        assets: result.assets,
-        channelId,
-        project: result.project
-      }))
-    })
-  }
+  const loadProject = (channelId: string) => updateProjectState(dispatch, loadProjectData, channelId)
 
   // Channel ID is faked for now
   useEffect(() => {
