@@ -35,7 +35,7 @@ import JavalabEditorTabMenu from './JavalabEditorTabMenu';
 import JavalabFileExplorer from './JavalabFileExplorer';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import _ from 'lodash';
-import msg from '@cdo/locale';
+import i18n from '@cdo/locale';
 import javalabMsg from '@cdo/javalab/locale';
 import {
   getDefaultFileContents,
@@ -640,7 +640,7 @@ class JavalabEditor extends React.Component {
 
   editorHeaderText = () =>
     this.props.isReadOnlyWorkspace
-      ? msg.readonlyWorkspaceHeader()
+      ? i18n.readonlyWorkspaceHeader()
       : javalabMsg.editor();
 
   render() {
@@ -714,7 +714,7 @@ class JavalabEditor extends React.Component {
                     <span>{fileMetadata[tabKey]}</span>
                     {activeTabKey === tabKey && !isReadOnlyWorkspace && (
                       <button
-                        aria-label="File options"
+                        aria-label={i18n.fileOptions()}
                         ref={`${tabKey}-file-toggle`}
                         type="button"
                         className={classNames(
