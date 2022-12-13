@@ -17,6 +17,7 @@ import TopButtons from './TopButtons';
 import Globals from './globals';
 import MusicBlocklyWorkspace from './blockly/MusicBlocklyWorkspace';
 import AppConfig from './appConfig';
+import SoundUploader from './utils/SoundUploader';
 
 const baseUrl = 'https://curriculum.code.org/media/musiclab/';
 
@@ -49,6 +50,7 @@ class UnconnectedMusicView extends React.Component {
     this.analyticsReporter = new AnalyticsReporter();
     this.codeHooks = {};
     this.musicBlocklyWorkspace = new MusicBlocklyWorkspace();
+    this.soundUploader = new SoundUploader(this.player);
 
     // Set default for instructions position.
     let instructionsPosIndex = 1;
@@ -391,7 +393,10 @@ class UnconnectedMusicView extends React.Component {
 
             <div id="blockly-area" className={moduleStyles.blocklyArea}>
               <div className={moduleStyles.topButtonsContainer}>
-                <TopButtons clearCode={this.clearCode} />
+                <TopButtons
+                  clearCode={this.clearCode}
+                  uploadSound={file => this.soundUploader.uploadSound(file)}
+                />
               </div>
               <div id="blockly-div" />
             </div>
