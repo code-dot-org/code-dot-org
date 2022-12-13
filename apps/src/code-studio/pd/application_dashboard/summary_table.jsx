@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import {Table, Button} from 'react-bootstrap';
 import {StatusColors, getApplicationStatuses} from './constants';
-import _ from 'lodash';
+import {difference, upperFirst} from 'lodash';
 import color from '@cdo/apps/util/color';
 
 const ApplicationDataPropType = PropTypes.shape({
@@ -16,11 +16,10 @@ const ApplicationDataPropType = PropTypes.shape({
 export class SummaryTable extends React.Component {
   static propTypes = {
     caption: PropTypes.string.isRequired,
-
-    // keys are available statuses: {status: ApplicationDataPropType}
     data: PropTypes.objectOf(ApplicationDataPropType),
     path: PropTypes.string.isRequired,
-    id: PropTypes.string
+    id: PropTypes.string,
+    isWorkshopAdmin: PropTypes.bool
   };
 
   static contextTypes = {
@@ -33,17 +32,20 @@ export class SummaryTable extends React.Component {
       all: 0
     };
 
-    const statusesInOrder = [
-      'incomplete',
-      'reopened',
-      'awaiting_admin_approval',
-      'unreviewed',
-      'pending',
-      'pending_space_availability',
-      'accepted',
-      'declined',
-      'withdrawn'
-    ];
+    const statusesInOrder = difference(
+      [
+        'incomplete',
+        'reopened',
+        'awaiting_admin_approval',
+        'unreviewed',
+        'pending',
+        'pending_space_availability',
+        'accepted',
+        'declined',
+        'withdrawn'
+      ],
+      this.props.isWorkshopAdmin ? [] : ['incomplete']
+    );
 
     const categoryRows = statusesInOrder.map((status, i) => {
       const statusData = this.props.data[status];
@@ -54,7 +56,7 @@ export class SummaryTable extends React.Component {
       return (
         <tr key={i}>
           <td style={{...styles.statusCell[status]}}>
-            {getApplicationStatuses()[status] || -_.upperFirst(status)}
+            {getApplicationStatuses()[status] || upperFirst(status)}
           </td>
           <td>{currentTotal}</td>
         </tr>

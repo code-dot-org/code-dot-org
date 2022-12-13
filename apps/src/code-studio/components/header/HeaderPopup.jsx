@@ -1,11 +1,10 @@
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
+import color from '@cdo/apps/util/color';
 import progress from '../../progress';
 import MiniView from '../progress/MiniView';
 import i18n from '@cdo/locale';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
-import styles from './header-popup.module.scss';
-import classNames from 'classnames';
 
 export default class HeaderPopup extends Component {
   static propTypes = {
@@ -68,28 +67,24 @@ export default class HeaderPopup extends Component {
 
   render() {
     return (
-      <div>
+      <div style={styles.container}>
         {!this.state.open && (
-          <button
-            type="button"
-            className={classNames('header_popup_link', styles.headerItem)}
+          <div
+            style={styles.headerItem}
+            className="header_popup_link"
             onClick={this.handleClickOpen}
           >
-            <i className={classNames('fa fa-caret-down', styles.caret)} />
-            <div className={styles.more}>{i18n.moreAllCaps()}</div>
-          </button>
+            <i className="fa fa-caret-down" style={styles.caret} />
+            <div style={styles.more}>{i18n.moreAllCaps()}</div>
+          </div>
         )}
 
         {this.state.open && (
           <div>
-            <button
-              type="button"
-              className={styles.headerItem}
-              onClick={this.handleClickClose}
-            >
-              <i className={classNames('fa fa-caret-up', styles.caret)} />
-              <div className={styles.more}>{i18n.lessAllCaps()}</div>
-            </button>
+            <div style={styles.headerItem} onClick={this.handleClickClose}>
+              <i className="fa fa-caret-up" style={styles.caret} />
+              <div style={styles.more}>{i18n.lessAllCaps()}</div>
+            </div>
 
             <div className="header_popup" ref="headerPopup">
               <div
@@ -109,3 +104,19 @@ export default class HeaderPopup extends Component {
     );
   }
 }
+
+const styles = {
+  headerItem: {
+    textAlign: 'center',
+    cursor: 'pointer'
+  },
+  caret: {
+    fontSize: 40,
+    color: color.orange,
+    lineHeight: '10px'
+  },
+  more: {
+    fontSize: 10,
+    lineHeight: '10px'
+  }
+};
