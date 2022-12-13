@@ -1,1 +1,22 @@
 mk:
+  data:
+    shared_functions:
+      driving with arrow keys: возење со стрелките на тастатурата
+      fluttering: разлетувањето
+      growing: расте
+      jittering: нервоза
+      moving east: се движат на исток
+      moving east and looping: движејќи се на исток и јамкајќи
+      moving north: се движат на север
+      moving north and looping: движејќи се на север и јамкајќи
+      moving south: се движат на југ
+      moving south and looping: движење на југ и јамкање
+      moving west: се движи кон запад
+      moving west and looping: се движат на запад и looping
+      moving with arrow keys: се движат со стрелките на тастатурата
+      patrolling: патролирање
+      shrinking: намалување
+      spinning left: врти лево
+      spinning right: се врти десно
+      wandering: талкање
+      wobbling: колебливи

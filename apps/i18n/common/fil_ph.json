@@ -14,7 +14,7 @@
   "activityHeaderName": "{activityName}",
   "activityHeaderTime": " ({activityDuration} minuto)",
   "actions": "Mga aksyon",
-  "add": "Dagdagan (increase the content)\n\nLagyan (add something new)\n\nDuktungan (continue to add more )",
+  "add": "Magdagdag",
   "addingToTable": "Idinaragdag...",
   "additionalInformationHeader": "Karagdagang Impormasyon",
   "additionalInformationText": "Sa higit pang impormasyon, tingnan ang [{externalDocumentationUrl}]({externalDocumentationUrl})",

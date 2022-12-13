@@ -6,7 +6,7 @@
 - if block_data
   .courseblock-span3.courseblock-tall
     = link_to block_data[:url] do
-      = image_tag block_data[:image_url], height: '120px', width: '100%'
+      = image_tag block_data[:image_url], { height: '120px', width: '100%', alt: '' }
       .course-container
         %h3.heading= block_data[:title]
         - if block_data[:audience]

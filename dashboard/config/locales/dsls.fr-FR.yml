@@ -587,11 +587,11 @@ fr-FR:
           actions gérées par un ordinateur. Dans cette leçon, tu vas réagir différemment
           selon le bouton sur lequel on appuie. \n"
       BinaryBracelets-Unplugged:
-        markdown: "# Binaires Bracelets    Crée un bracelet qui représente ton nom
-          dans un système que les ordinateurs comprennent !   ![] (https://images.code.org/ed15a484276c0989e4adb5daf480f68a-image-1557870226222.png)\n"
+        markdown: "# Bracelets Binaires  \n\nCrée un bracelet qui représente ton nom
+          dans un système qu'un ordinateur peut comprendre !  \n\n![] (https://images.code.org/ed15a484276c0989e4adb5daf480f68a-image-1557870226222.png)\n"
       BinaryBracelets-Unplugged_2020:
-        markdown: "# Binaires Bracelets    Crée un bracelet qui représente ton nom
-          dans un système que les ordinateurs comprennent !   ![] (https://images.code.org/ed15a484276c0989e4adb5daf480f68a-image-1557870226222.png)\n"
+        markdown: "# Bracelets Binaires  \n\nCrée un bracelet qui représente ton nom
+          dans un système qu'un ordinateur peut comprendre !  \n\n![] (https://images.code.org/ed15a484276c0989e4adb5daf480f68a-image-1557870226222.png)\n"
       BinaryImages-Unplugged:
         markdown: "# Images Binaires    Exprime comment recréer une image seulement
           à l'aide de deux valeurs simples.\n"
@@ -1167,13 +1167,13 @@ fr-FR:
             sera lancée.
         title: Faites une prévision
       ConditionalsWithCards-Unplugged:
-        markdown: "# Conditionnelles avec des Cartes    Joue à un jeu de cartes et
-          crée des règles comme « Si je dessine un carton rouge, j'obtiens un point
-          » et « Si je dessine une carte noire, tu obtiens un point. »\n"
+        markdown: "# Les instructions conditionnelles avec des Cartes   \n\nJoue à
+          un jeu de cartes et crée des règles comme : « Si je tire une carte rouge,
+          je marque un point » et « Si je tire une carte noire, tu marques un point ».\n"
       ConditionalsWithCards-Unplugged_2020:
-        markdown: "# Conditionnelles avec des Cartes    Joue à un jeu de cartes et
-          crée des règles comme « Si je dessine un carton rouge, j'obtiens un point
-          » et « Si je dessine une carte noire, tu obtiens un point. »\n"
+        markdown: "# Les instructions conditionnelles avec des Cartes   \n\nJoue à
+          un jeu de cartes et crée des règles comme : « Si je tire une carte rouge,
+          je marque un point » et « Si je tire une carte noire, tu marques un point ».\n"
       Crowdsourcing-Unplugged:
         markdown: "# Production participative   Vois comment la production participative,
           une technique de résolution de problèmes commune en informatique, peut t'aider
@@ -1226,23 +1226,21 @@ fr-FR:
           style=\"float: left; margin: 10px\">\n<a href=\"9\">\n<h2>\nAccélèrer et
           ralentir\n</h2>\n\n<img src=\"https://images.code.org/d7f35c686ef0a9c5a6975889fd7c566b-image-1541746900730.gif\"></a>\n\n</div>\n"
       DesigningForAccessibilityMarkdownLevel_2019:
-        markdown: "# Concevoir pour l'Accessibilité   * Dans le monde de l'informatique,
-          **l'accessibilité** consiste à créer de la technologie pour les personnes
-          handicapées.   * Les handicaps sont physiques, auditifs, visuels et bien
-          d'autres.   * Les handicaps sont divers et affectent les gens de différentes
-          manières, notamment la façon dont ils utilisent la technologie comme **applications
-          pour smartphones**.   * La conception d'applications, accessibles pour les
-          personnes handicapées, améliorent ces mêmes applications pour tout le monde
-          aussi !   ![] (https://images.code.org/0c670d0d9078657a870df0ca799492cb-image-1557166420066.png)\n"
+        markdown: "# Conception Accessible\n\n* Dans le monde de l'informatique, **l'accessibilité**
+          fait référence à la création de technologies pour personnes handicapées.
+          \n* Un handicaps peut être physique, auditif, visuel ou tout autre.  \n*
+          Les handicaps sont variés et impactent différemment les personnes, notamment
+          la manière dont ils utilisent des technologies comme les **applis pour smartphones**.
+          \  \n* Concevoir des applications accessibles aux personnes handicapées,
+          cela améliore ces applications pour tout le reste du monde aussi !   \n\n![](https://images.code.org/0c670d0d9078657a870df0ca799492cb-image-1557166420066.png)"
       DesigningForAccessibilityMarkdownLevel_2019_2020:
-        markdown: "# Concevoir pour l'Accessibilité   * Dans le monde de l'informatique,
-          **l'accessibilité** consiste à créer de la technologie pour les personnes
-          handicapées.   * Les handicaps sont physiques, auditifs, visuels et bien
-          d'autres.   * Les handicaps sont divers et affectent les gens de différentes
-          manières, notamment la façon dont ils utilisent la technologie comme **applications
-          pour smartphones**.   * La conception d'applications, accessibles pour les
-          personnes handicapées, améliorent ces mêmes applications pour tout le monde
-          aussi !   ![] (https://images.code.org/0c670d0d9078657a870df0ca799492cb-image-1557166420066.png)\n"
+        markdown: "# Conception Accessible\n\n* Dans le monde de l'informatique, **l'accessibilité**
+          fait référence à la création de technologies pour personnes handicapées.
+          \n* Un handicaps peut être physique, auditif, visuel ou tout autre.  \n*
+          Les handicaps sont variés et impactent différemment les personnes, notamment
+          la manière dont ils utilisent des technologies comme les **applis pour smartphones**.
+          \  \n* Concevoir des applications accessibles aux personnes handicapées,
+          cela améliore ces applications pour tout le reste du monde aussi !   \n\n![](https://images.code.org/0c670d0d9078657a870df0ca799492cb-image-1557166420066.png)"
       DigitalCitizenship-Unplugged:
         markdown: "# Citoyenneté Numérique    Il n'est pas sûr de partager certaines
           informations, en ligne. Cette leçon t'aidera à apprendre la différence entre
@@ -1253,8 +1251,8 @@ fr-FR:
 
           Ajouter des informations à propos de vous en ligne crée une empreinte digital.
       DigitalSharing-Unplugged:
-        markdown: "# Partage Numérique   Dans cette leçon, tu examineras les défis
-          et les avantages du respect de la propriété et du droit d'auteur, en particulier
+        markdown: "# Partage Numérique   \n\nDans cette leçon, tu examineras les problèmes
+          et les avantages du respect de la propriété et du droit d'auteur, notamment
           dans les environnements numériques.\n"
       DigitalSharing-Unplugged_2020:
         markdown: "# Partage Numérique   Dans cette leçon, tu examineras les défis
@@ -1290,11 +1288,11 @@ fr-FR:
 
 '
       GraphPaperProgramming-Unplugged:
-        markdown: "# Programmation sur Papier Millimétré    Écris des algorithmes
-          que tes camarades de classe peuvent utiliser pour dessiner des images.\n"
+        markdown: "# Programmation sur Papier Millimétré    \n\nÉcris des algorithmes
+          que tes camarades de classe pourront utiliser pour faire des dessins."
       GraphPaperProgramming-Unplugged_2020:
-        markdown: "# Programmation sur Papier Millimétré    Écris des algorithmes
-          que tes camarades de classe peuvent utiliser pour dessiner des images.\n"
+        markdown: "# Programmation sur Papier Millimétré    \n\nÉcris des algorithmes
+          que tes camarades de classe pourront utiliser pour faire des dessins."
       HappyLoops-Unplugged:
         markdown: |
           # Joyeuses boucles
@@ -2359,15 +2357,15 @@ fr-FR:
           pas.   ![] (https://images.code.org/872576b170b9d8aec9b29f684a1ad94e-image-1557878406833.png)\n"
       PrivatePersonalInformation-Unplugged_2020:
         markdown: |-
-          # Information privée et personnelle
+          # Informations Privées et Personnelles
 
-          ## Quelles informations vous concernant pouvez-vous partager en ligne?
+          ## Quelles informations te concernant peux-tu partager en ligne ?
       RelayProgramming-Unplugged:
-        markdown: "# Programmation en Relais    Composez des équipes et travaillez
-          ensemble pour écrire des programmes qui dessinent des images.\n"
+        markdown: "# Programmation en Relais   \n\nFaites des équipes et travaillez
+          ensemble pour écrire des programmes font des dessins."
       RelayProgramming-Unplugged_2020:
-        markdown: "# Programmation en Relais    Composez des équipes et travaillez
-          ensemble pour écrire des programmes qui dessinent des images.\n"
+        markdown: "# Programmation en Relais   \n\nFaites des équipes et travaillez
+          ensemble pour écrire des programmes font des dessins."
       ScreenOutTheMean-Unplugged:
         markdown: |
           # Rejette les mechancetés
@@ -2380,11 +2378,11 @@ fr-FR:
         markdown: "# Jacques A Dit   Joue à un jeu et réfléchis aux commandes nécessaires
           pour obtenir le bon résultat.\n"
       Songwriting-Unplugged:
-        markdown: "# Écriture de Chansons   Utilise le concept du refrain, dans une
-          chanson, pour mieux comprendre la définition et l'appel des fonctions.\n"
+        markdown: "# Écrire des Chansons  \n\nUtilise la notion de refrain en chanson
+          pour en apprendre plus sur la définition et l'appel de fonctions.\n"
       Songwriting-Unplugged_2020:
-        markdown: "# Écriture de Chansons   Utilise le concept du refrain, dans une
-          chanson, pour mieux comprendre la définition et l'appel des fonctions.\n"
+        markdown: "# Écrire des Chansons  \n\nUtilise la notion de refrain en chanson
+          pour en apprendre plus sur la définition et l'appel de fonctions.\n"
       'Technique: Frequency Analysis':
         content1: description ici
         markdown: "# Cassé un chiffrement par substitution\n\nLa meilleure technique
@@ -2917,8 +2915,8 @@ fr-FR:
         - text: Regarde attentivement le code ci-dessous. Que va-t-il se passer lorsque
             tu cliques sur « Démarrer » ?
       courseD_EOC_2020:
-        description: Tu as finis la dernière leçon du Cours D! Choisis un projet à
-          créer.
+        description: Tu es arrivé à la dernière leçon du Cours D ! Choisis un projet
+          à créer.
         display_name: Projet de fin de cours
       courseD_multi_artist_binary8_predict1:
         answers:
@@ -2982,11 +2980,11 @@ fr-FR:
           correct: true
           feedback: Correct !
         - text: B
-          feedback: Incorrect. L'intérieur de la boucle fait un pentagone, et l'extérieur
-            le répète 4 fois dans un cercle.
+          feedback: Incorrect. La boucle intérieure fait un pentagone, et la boucle
+            extérieure le répète 4 fois dans un cercle.
         - text: C
-          feedback: Incorrect. L'intérieur de la boucle fait un pentagone, et l'extérieur
-            le répète 4 fois dans un cercle.
+          feedback: Incorrect. La boucle intérieure fait un pentagone, et la boucle
+            extérieure le répète 4 fois dans un cercle.
         - text: Je ne sais pas.
           feedback: L'intérieur de la boucle fait un pentagone, et l'extérieur le
             répète 4 fois dans un cercle.
@@ -2997,19 +2995,19 @@ fr-FR:
           src="https://images.code.org/635ac54ed7cb2e2d24eb341b3ec4eecb-image-1489120024059.12.00.png"
           width="80px" style="mix-blend-mode: multiply; clip: rect(0px,0px,0px,40px);"/></td></tr></table><br/><br/>'
         questions:
-        - text: Regarde bien le code ci-dessous. Quel dessin va faire ce programme
-            lorsque tu cliqueras sur "Démarrer"?
+        - text: Regarde attentivement le code ci-dessous. Quel dessin est-ce que ce
+            programme fera quand tu cliques sur « Démarrer » ?
       courseD_multi_artist_nestedLoops9_predict1_2018:
         answers:
         - text: A
           correct: true
           feedback: Correct !
         - text: B
-          feedback: Incorrect. L'intérieur de la boucle fait un pentagone, et l'extérieur
-            le répète 4 fois dans un cercle.
+          feedback: Incorrect. La boucle intérieure fait un pentagone, et la boucle
+            extérieure le répète 4 fois dans un cercle.
         - text: C
-          feedback: Incorrect. L'intérieur de la boucle fait un pentagone, et l'extérieur
-            le répète 4 fois dans un cercle.
+          feedback: Incorrect. La boucle intérieure fait un pentagone, et la boucle
+            extérieure le répète 4 fois dans un cercle.
         - text: Je ne sais pas.
           feedback: L'intérieur de la boucle fait un pentagone, et l'extérieur le
             répète 4 fois dans un cercle.
@@ -3020,19 +3018,19 @@ fr-FR:
           src="https://images.code.org/635ac54ed7cb2e2d24eb341b3ec4eecb-image-1489120024059.12.00.png"
           width="80px" style="mix-blend-mode: multiply; clip: rect(0px,0px,0px,40px);"/></td></tr></table><br/><br/>'
         questions:
-        - text: Regarde bien le code ci-dessous. Quel dessin va faire ce programme
-            lorsque tu cliqueras sur "Démarrer"?
+        - text: Regarde attentivement le code ci-dessous. Quel dessin est-ce que ce
+            programme fera quand tu cliques sur « Démarrer » ?
       courseD_multi_artist_nestedLoops9_predict1_2018_2019:
         answers:
         - text: A
           correct: true
           feedback: Correct !
         - text: B
-          feedback: Incorrect. L'intérieur de la boucle fait un pentagone, et l'extérieur
-            le répète 4 fois dans un cercle.
+          feedback: Incorrect. La boucle intérieure fait un pentagone, et la boucle
+            extérieure le répète 4 fois dans un cercle.
         - text: C
-          feedback: Incorrect. L'intérieur de la boucle fait un pentagone, et l'extérieur
-            le répète 4 fois dans un cercle.
+          feedback: Incorrect. La boucle intérieure fait un pentagone, et la boucle
+            extérieure le répète 4 fois dans un cercle.
         - text: Je ne sais pas.
           feedback: L'intérieur de la boucle fait un pentagone, et l'extérieur le
             répète 4 fois dans un cercle.
@@ -3043,19 +3041,19 @@ fr-FR:
           src="https://images.code.org/635ac54ed7cb2e2d24eb341b3ec4eecb-image-1489120024059.12.00.png"
           width="80px" style="mix-blend-mode: multiply; clip: rect(0px,0px,0px,40px);"/></td></tr></table><br/><br/>'
         questions:
-        - text: Regarde bien le code ci-dessous. Quel dessin va faire ce programme
-            lorsque tu cliqueras sur "Démarrer"?
+        - text: Regarde attentivement le code ci-dessous. Quel dessin est-ce que ce
+            programme fera quand tu cliques sur « Démarrer » ?
       courseD_multi_artist_nestedLoops9_predict1_2018_2019_2020:
         answers:
         - text: A
           correct: true
           feedback: Correct !
         - text: B
-          feedback: Incorrect. L'intérieur de la boucle fait un pentagone, et l'extérieur
-            le répète 4 fois dans un cercle.
+          feedback: Incorrect. La boucle intérieure fait un pentagone, et la boucle
+            extérieure le répète 4 fois dans un cercle.
         - text: C
-          feedback: Incorrect. L'intérieur de la boucle fait un pentagone, et l'extérieur
-            le répète 4 fois dans un cercle.
+          feedback: Incorrect. La boucle intérieure fait un pentagone, et la boucle
+            extérieure le répète 4 fois dans un cercle.
         - text: Je ne sais pas.
           feedback: L'intérieur de la boucle fait un pentagone, et l'extérieur le
             répète 4 fois dans un cercle.
@@ -3066,8 +3064,8 @@ fr-FR:
           src="https://images.code.org/635ac54ed7cb2e2d24eb341b3ec4eecb-image-1489120024059.12.00.png"
           width="80px" style="mix-blend-mode: multiply; clip: rect(0px,0px,0px,40px);"/></td></tr></table><br/><br/>'
         questions:
-        - text: Regarde bien le code ci-dessous. Quel dessin va faire ce programme
-            lorsque tu cliqueras sur "Démarrer"?
+        - text: Regarde attentivement le code ci-dessous. Quel dessin est-ce que ce
+            programme fera quand tu cliques sur « Démarrer » ?
       courseD_multi_bee_conditionals1_predict1:
         answers:
         - text: 'L''abeille bougera jusqu''au nuage et ne fera rien ensuite, peu importe
@@ -3087,10 +3085,10 @@ fr-FR:
             le nectar seulement si il y a une fleur sous le nuage.
         questions:
         - text: Le nuage bloque la vue. Il pourrait y avoir une fleur sous le nuage.
-            S'il y a une fleur, l'abeille devra y ramasser le nectar une fois. S'il
-            n'y a pas de fleur, l'abeille ne fera rien. Regarde bien le code suivant.
-            Qu'est ce que tu penses qu’il se passera après avoir appuyé sur "Démarrer"
-            ?
+            S'il y a une fleur, il faudra que l'abeille y récolte du nectar une fois.
+            S'il n'y a pas de fleur, l'abeille ne fera rien. Regarde bien le code
+            suivant. Qu'est ce que tu penses qui se passera après une fois que tu
+            cliques sur « Démarrer » ?
       courseD_multi_bee_conditionals1_predict1_2018:
         answers:
         - text: 'L''abeille bougera jusqu''au nuage et ne fera rien ensuite, peu importe
@@ -3110,10 +3108,10 @@ fr-FR:
             le nectar seulement si il y a une fleur sous le nuage.
         questions:
         - text: Le nuage bloque la vue. Il pourrait y avoir une fleur sous le nuage.
-            S'il y a une fleur, l'abeille devra y ramasser le nectar une fois. S'il
-            n'y a pas de fleur, l'abeille ne fera rien. Regarde bien le code suivant.
-            Qu'est ce que tu penses qu’il se passera après avoir appuyé sur "Démarrer"
-            ?
+            S'il y a une fleur, il faudra que l'abeille y récolte du nectar une fois.
+            S'il n'y a pas de fleur, l'abeille ne fera rien. Regarde bien le code
+            suivant. Qu'est ce que tu penses qui se passera après une fois que tu
+            cliques sur « Démarrer » ?
       courseD_multi_bee_conditionals1_predict1_2018_2019:
         answers:
         - text: 'L''abeille bougera jusqu''au nuage et ne fera rien ensuite, peu importe
@@ -3133,10 +3131,10 @@ fr-FR:
             le nectar seulement si il y a une fleur sous le nuage.
         questions:
         - text: Le nuage bloque la vue. Il pourrait y avoir une fleur sous le nuage.
-            S'il y a une fleur, l'abeille devra y ramasser le nectar une fois. S'il
-            n'y a pas de fleur, l'abeille ne fera rien. Regarde bien le code suivant.
-            Qu'est ce que tu penses qu’il se passera après avoir appuyé sur "Démarrer"
-            ?
+            S'il y a une fleur, il faudra que l'abeille y récolte du nectar une fois.
+            S'il n'y a pas de fleur, l'abeille ne fera rien. Regarde bien le code
+            suivant. Qu'est ce que tu penses qui se passera après une fois que tu
+            cliques sur « Démarrer » ?
       courseD_multi_bee_conditionals1_predict1_2018_2019_2020:
         answers:
         - text: 'L''abeille bougera jusqu''au nuage et ne fera rien ensuite, peu importe
@@ -3156,10 +3154,10 @@ fr-FR:
             le nectar seulement si il y a une fleur sous le nuage.
         questions:
         - text: Le nuage bloque la vue. Il pourrait y avoir une fleur sous le nuage.
-            S'il y a une fleur, l'abeille devra y ramasser le nectar une fois. S'il
-            n'y a pas de fleur, l'abeille ne fera rien. Regarde bien le code suivant.
-            Qu'est ce que tu penses qu’il se passera après avoir appuyé sur "Démarrer"
-            ?
+            S'il y a une fleur, il faudra que l'abeille y récolte du nectar une fois.
+            S'il n'y a pas de fleur, l'abeille ne fera rien. Regarde bien le code
+            suivant. Qu'est ce que tu penses qui se passera après une fois que tu
+            cliques sur « Démarrer » ?
       courseD_multi_bee_conditionals1_predict1_copy:
         answers:
         - text: 'L''abeille bougera jusqu''au nuage et ne fera rien ensuite, peu importe
@@ -3179,10 +3177,10 @@ fr-FR:
             le nectar seulement si il y a une fleur sous le nuage.
         questions:
         - text: Le nuage bloque la vue. Il pourrait y avoir une fleur sous le nuage.
-            S'il y a une fleur, l'abeille devra y ramasser le nectar une fois. S'il
-            n'y a pas de fleur, l'abeille ne fera rien. Regarde bien le code suivant.
-            Qu'est ce que tu penses qu’il se passera après avoir appuyé sur "Démarrer"
-            ?
+            S'il y a une fleur, il faudra que l'abeille y récolte du nectar une fois.
+            S'il n'y a pas de fleur, l'abeille ne fera rien. Regarde bien le code
+            suivant. Qu'est ce que tu penses qui se passera après une fois que tu
+            cliques sur « Démarrer » ?
       courseD_multi_bee_conditionals7_predict2:
         answers:
         - text: L'abeille ramassera le nectar de chaque fleur et le miel de chaque
@@ -4860,11 +4858,17 @@ fr-FR:
       csf_be_a_super_digital_citizen:
         content1: description ici
         markdown: |-
-          # Super citoyen numérique
+          # Super Citoyen Numérique
 
-          ## Comment être fort quand on est témoin de cyber-harcèlement ?
+          ## Comment bien réagir quand on est témoin de cyber-harcèlement ?
       csf_password_power-up:
         content1: description ici
+        markdown: "# Fais monter en puissance ton mot de passe \n\n## Conseils pour
+          retenir le mot de passe\n\n* Commence par une **phrase** facile à retenir.\n*
+          Seuls tes **parents** doivent le connaître.\n* N'utilise jamais d'informations
+          identifiantes **privées** dans ton mot de passe.\n* Crée des mots de passe
+          avec au moins **huit** caractères.\n* Mets-y des lettres, des chiffres et
+          des **symboles**. \n\n![](https://images.code.org/bfa69295fbf33c77ecdeb79b5498d8f7-image-1584751340896.png)\n"
       csf_putting_a_stop_to_online_meanness:
         content1: description ici
         markdown: "# STOP à la méchanceté\n\n## Que faut-il faire si quelqu'un est
@@ -5150,12 +5154,12 @@ fr-FR:
           actions gérées par un ordinateur. Dans cette leçon, tu vas réagir différemment
           selon le bouton sur lequel on appuie. \n"
       BinaryBracelets-Unplugged_2021:
-        markdown: "# Binaires Bracelets    \nCrée un bracelet qui représente ton nom
-          dans un système que les ordinateurs comprennent ! \n  ![] (https://images.code.org/ed15a484276c0989e4adb5daf480f68a-image-1557870226222.png)\n"
+        markdown: "# Bracelets Binaires  \n\nCrée un bracelet qui représente ton nom
+          dans un système qu'un ordinateur peut comprendre !  \n\n![] (https://images.code.org/ed15a484276c0989e4adb5daf480f68a-image-1557870226222.png)\n"
       ConditionalsWithCards-Unplugged_2021:
-        markdown: "# Conditions avec des Cartes    \n\nJoue à un jeu de cartes et
-          crée des règles comme « Si je dessine un carton rouge, j'obtiens un point
-          » et « Si je dessine une carte noire, tu obtiens un point. »\n"
+        markdown: "# Les instructions conditionnelles avec des Cartes   \n\nJoue à
+          un jeu de cartes et crée des règles comme : « Si je tire une carte rouge,
+          je marque un point » et « Si je tire une carte noire, tu marques un point ».\n"
       CourseF_outbreak_story:
         content1: description ici
         markdown: "# Éclosion : codez votre propre simulation\n\n## Bienvenue à Monster
@@ -5274,17 +5278,16 @@ fr-FR:
           personnes, ou partager un message sur ce que nous pouvons faire pour aider
           à garder les autres en bonne santé quand un virus arrive en ville. \n"
       DesigningForAccessibilityMarkdownLevel_2021:
-        markdown: "# Concevoir pour l'Accessibilité   * Dans le monde de l'informatique,
-          **l'accessibilité** consiste à créer de la technologie pour les personnes
-          handicapées.   * Les handicaps sont physiques, auditifs, visuels et bien
-          d'autres.   * Les handicaps sont divers et affectent les gens de différentes
-          manières, notamment la façon dont ils utilisent la technologie comme **applications
-          pour smartphones**.   * La conception d'applications, accessibles pour les
-          personnes handicapées, améliorent ces mêmes applications pour tout le monde
-          aussi !   ![] (https://images.code.org/0c670d0d9078657a870df0ca799492cb-image-1557166420066.png)\n"
+        markdown: "# Conception Accessible\n\n* Dans le monde de l'informatique, **l'accessibilité**
+          fait référence à la création de technologies pour personnes handicapées.
+          \n* Un handicaps peut être physique, auditif, visuel ou tout autre.  \n*
+          Les handicaps sont variés et impactent différemment les personnes, notamment
+          la manière dont ils utilisent des technologies comme les **applis pour smartphones**.
+          \  \n* Concevoir des applications accessibles aux personnes handicapées,
+          cela améliore ces applications pour tout le reste du monde aussi !   \n\n![](https://images.code.org/0c670d0d9078657a870df0ca799492cb-image-1557166420066.png)"
       DigitalSharing-Unplugged_2021:
-        markdown: "# Partage Numérique   \n\nDans cette leçon, tu examineras les défis
-          et les avantages du respect de la propriété et du droit d'auteur, en particulier
+        markdown: "# Partage Numérique   \n\nDans cette leçon, tu examineras les problèmes
+          et les avantages du respect de la propriété et du droit d'auteur, notamment
           dans les environnements numériques.\n"
       ForLoopFun-Unplugged_2021:
         markdown: "# Pour s'amuser en boucle\n   \nNous savons que les boucles nous
@@ -5295,7 +5298,7 @@ fr-FR:
           en programmation au travers d'une activité dansante."
       GraphPaperProgramming-Unplugged_2021:
         markdown: "# Programmation sur Papier Millimétré    \n\nÉcris des algorithmes
-          que tes camarades de classe peuvent utiliser pour dessiner des images.\n"
+          que tes camarades de classe pourront utiliser pour faire des dessins.\n"
       HappyMaps-Unplugged_2021:
         markdown: |
           # Cartes joyeuses
@@ -5383,15 +5386,15 @@ fr-FR:
           ## Que dois-tu faire quand quelqu'un utilise des paroles méchantes ou blessantes sur internet ?
       PrivatePersonalInformation-Unplugged_2021:
         markdown: |-
-          # Information privée et personnelle
+          # Informations Privées et Personnelles
 
-          ## Quelles informations vous concernant pouvez-vous partager en ligne?
+          ## Quelles informations te concernant peux-tu partager en ligne ?
       RelayProgramming-Unplugged_2021:
-        markdown: "# Programmation en Relais    \n\nComposez des équipes et travaillez
-          ensemble pour écrire des programmes qui dessinent des images.\n"
+        markdown: "# Programmation en Relais   \n\nFaites des équipes et travaillez
+          ensemble pour écrire des programmes font des dessins."
       Songwriting-Unplugged_2021:
-        markdown: "# Écriture de Chansons   Utilise le concept du refrain, dans une
-          chanson, pour mieux comprendre la définition et l'appel des fonctions.\n"
+        markdown: "# Écrire des Chansons  \n\nUtilise la notion de refrain en chanson
+          pour en apprendre plus sur la définition et l'appel de fonctions.\n"
       TheRightAppMarkdownLevel_2021:
         markdown: "# La Bonne Appli\n\n* Tout le monde utilise des ordinateurs de
           nos jours, et particulièrement des smartphones. \n* Les applis de smartphone
@@ -5496,7 +5499,7 @@ fr-FR:
         - text: Regarde attentivement le code ci-dessous. Que va-t-il se passer lorsque
             tu cliques sur « Démarrer » ?
       courseD_EOC_2021:
-        description: Tu as finis la dernière leçon du Cours D ! Choisis un projet
+        description: Tu es arrivé à la dernière leçon du Cours D ! Choisis un projet
           à créer.
         display_name: Projet de Fin de Cours
       courseD_multi_artist_nestedLoops9_predict1_2021:
@@ -5505,14 +5508,14 @@ fr-FR:
           correct: true
           feedback: Correct !
         - text: B
-          feedback: Incorrect. L'intérieur de la boucle fait un pentagone, et l'extérieur
-            le répète 4 fois dans un cercle.
+          feedback: Incorrect. La boucle intérieure fait un pentagone, et la boucle
+            extérieure le répète 4 fois dans un cercle.
         - text: C
-          feedback: Incorrect. L'intérieur de la boucle fait un pentagone, et l'extérieur
-            le répète 4 fois dans un cercle.
-        - text: Rien de ce qui figure ci-dessus
-          feedback: Incorrect. L'intérieur de la boucle fait un pentagone, et l'extérieur
-            le répète 4 fois dans un cercle.
+          feedback: Incorrect. La boucle intérieure fait un pentagone, et la boucle
+            extérieure le répète 4 fois dans un cercle.
+        - text: Aucune des réponses ci-dessus
+          feedback: Incorrect. La boucle intérieure fait un pentagone, et la boucle
+            extérieure le répète 4 fois dans un cercle.
         markdown: '<table><tr><td>A</td><td><img src="https://images.code.org/cfc3f8206438a60afe3be9afe7fc0a22-image-1489118742610.10.15.png"
           width="100px" style="mix-blend-mode: multiply;"/></td><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>B</td><td><img
           src="https://images.code.org/975b027684d2f5411b960bf82987663e-image-1489119999013.11.13.png"
@@ -5520,8 +5523,8 @@ fr-FR:
           src="https://images.code.org/635ac54ed7cb2e2d24eb341b3ec4eecb-image-1489120024059.12.00.png"
           width="80px" style="mix-blend-mode: multiply; clip: rect(0px,0px,0px,40px);"/></td></tr></table><br/><br/>'
         questions:
-        - text: Regarde bien le code ci-dessous. Quel dessin va faire ce programme
-            lorsque tu cliqueras sur "Démarrer"?
+        - text: Regarde attentivement le code ci-dessous. Quel dessin est-ce que ce
+            programme fera quand tu cliques sur « Démarrer » ?
       courseD_multi_bee_conditionals1_predict1_2021:
         answers:
         - text: 'L''abeille bougera jusqu''au nuage et ne fera rien ensuite, peu importe
@@ -5541,10 +5544,10 @@ fr-FR:
             de ramasser le nectar seulement si il y a une fleur sous le nuage.
         questions:
         - text: Le nuage bloque la vue. Il pourrait y avoir une fleur sous le nuage.
-            S'il y a une fleur, l'abeille devra y ramasser le nectar une fois. S'il
-            n'y a pas de fleur, l'abeille ne fera rien. Regarde bien le code suivant.
-            Qu'est ce que tu penses qu’il se passera après avoir appuyé sur "Démarrer"
-            ?
+            S'il y a une fleur, il faudra que l'abeille y récolte du nectar une fois.
+            S'il n'y a pas de fleur, l'abeille ne fera rien. Regarde bien le code
+            suivant. Qu'est ce que tu penses qui se passera après une fois que tu
+            cliques sur « Démarrer » ?
       courseD_multi_bee_conditionals1_predict1_dani:
         answers:
         - text: 'L''abeille bougera jusqu''au nuage et ne fera rien ensuite, peu importe
@@ -5564,10 +5567,10 @@ fr-FR:
             le nectar seulement si il y a une fleur sous le nuage.
         questions:
         - text: Le nuage bloque la vue. Il pourrait y avoir une fleur sous le nuage.
-            S'il y a une fleur, l'abeille devra y ramasser le nectar une fois. S'il
-            n'y a pas de fleur, l'abeille ne fera rien. Regarde bien le code suivant.
-            Qu'est ce que tu penses qu’il se passera après avoir appuyé sur "Démarrer"
-            ?
+            S'il y a une fleur, il faudra que l'abeille y récolte du nectar une fois.
+            S'il n'y a pas de fleur, l'abeille ne fera rien. Regarde bien le code
+            suivant. Qu'est ce que tu penses qui se passera après une fois que tu
+            cliques sur « Démarrer » ?
       courseD_multi_bee_conditionals7_predict2_2021:
         answers:
         - text: L'abeille récoltera le nectar de chaque fleur et fera du miel à chaque
@@ -5732,20 +5735,20 @@ fr-FR:
       courseE_multi_dance_events_predict1_2021:
         answers:
         - text: Rien ne se passera.
-          feedback: 'Incorrect. L''alien commencera à se déplacer de haut en bas sur
-            l''écran. '
-        - text: 'L''alien commencera à patrouiller de droite à gauche. '
-          feedback: 'Incorrect. L''alien commencera à se déplacer de haut en bas sur
-            l''écran. '
-        - text: 'L''alien commencera à se déplacer de haut en bas sur l''écran. '
+          feedback: 'Incorrect. L''extraterrestre se mettra à se déplacer de haut
+            en bas sur l''écran. '
+        - text: 'L''extraterrestre se mettra à patrouiller de droite à gauche. '
+          feedback: 'Incorrect. L''extraterrestre se mettra à se déplacer de haut
+            en bas sur l''écran. '
+        - text: 'L''extraterrestre se mettra à se déplacer de haut en bas sur l''écran. '
           correct: true
           feedback: Correct !
-        - text: 'L''alien disparaîtra du haut de l''écran. '
-          feedback: 'Incorrect. L''alien bleu commencera à se déplacer de haut en
-            bas sur l''écran. '
+        - text: L'extraterrestre disparaîtra du haut de l'écran.
+          feedback: 'Incorrect. L''extraterrestre bleu se mettra à se déplacer de
+            haut en bas sur l''écran. '
         questions:
-        - text: 'Regardez attentivement le code ci-dessous. Que se passera-t-il après
-            avoir cliqué sur l''alien ? '
+        - text: Regarde attentivement le code ci-dessous. Que se passera-t-il après
+            que tu cliques sur l'extraterrestre ?
       courseE_multi_farmer_functions11_predict_2021:
         answers:
         - text: L'agricultrice récoltera deux citrouilles.
@@ -5957,16 +5960,17 @@ fr-FR:
       csf_be_a_super_digital_citizen_2021:
         content1: description ici
         markdown: |-
-          # Super citoyen numérique
+          # Super Citoyen Numérique
 
-          ## Comment être fort quand on est témoin de cyber-harcèlement ?
+          ## Comment bien réagir quand on est témoin de cyber-harcèlement ?
       csf_password_power-up_2021:
         content1: description ici
-        markdown: "# Mets ton mot de passe\n\n## Conseils pour retenir le mot de passe\n\n*
-          Commencez par une **phrase** facile à retenir.\n* Seuls tes **parents**
-          doivent le connaître.\n* N'utilise jamais d'informations d'identité **privées**
-          dans ton mot de passe.\n* Créez des mots de passe avec au moins **huit**
-          caractères.\n* Mets-y des lettres, des chiffres et des **symboles**. \n\n![](https://images.code.org/bfa69295fbf33c77ecdeb79b5498d8f7-image-1584751340896.png)\n"
+        markdown: "# Fais monter en puissance ton mot de passe\n\n## Conseils pour
+          retenir le mot de passe\n\n* Commence par une **phrase** facile à retenir.\n*
+          Seuls tes **parents** doivent le connaître.\n* N'utilise jamais d'informations
+          identifiantes **privées** dans ton mot de passe.\n* Crée des mots de passe
+          avec au moins **huit** caractères.\n* Mets-y des lettres, des chiffres et
+          des **symboles**. \n\n![](https://images.code.org/bfa69295fbf33c77ecdeb79b5498d8f7-image-1584751340896.png)\n"
       csf_putting_a_stop_to_online_meanness_2021:
         content1: description ici
         markdown: "# STOP à la méchanceté\n\n## Que faut-il faire si quelqu'un est
@@ -6006,7 +6010,7 @@ fr-FR:
         display_name: Projet de fin de cours
       courseF_EOC_samples_2021:
         display_name: Projet de Fin de Cours
-        description: 'Tu es sur le point de commencer ton projet final. Avant de commencer,
+        description: 'Tu es sur le point d''entamer ton projet final. Avant de commencer,
           prends le temps d''examiner les exemples de projets. '
       courseF_variables_samples:
         description: 'Vous allez créer soit une carte de vœux, un chatbot ou une histoire
@@ -6028,11 +6032,11 @@ fr-FR:
         markdown: "\n# Mon quartier en ligne\n\n## Comment visiter des endroits en
           ligne en toute sécurité ? "
       courseF_intro_apps:
-        description: 'Bienvenue dans CS Fundamentals ! Ces projets ont tous été créés
-          avec Sprite Lab. Testez-les maintenant pour voir ce que l''on peut faire
-          avec. À la fin de ce cours, vous serez capable de réaliser vos propres projets
-          comme ceux-ci... et bien plus encore ! '
-        display_name: Applis Sprite Lab
+        description: 'Bienvenue aux Bases de l''Informatique ! Ces projets ont tous
+          été créés avec le Labo des Sprites. Teste-les maintenant pour voir ce qu''on
+          peut faire avec. À la fin de ce cours, tu seras capable de réaliser tes
+          propres projets comme ceux-ci... et bien plus encore ! '
+        display_name: Applis Labo des Sprites
         teacher_markdown: "# Présentation du niveau de choix\nLes niveaux de choix
           fournissent un menu de niveaux supplémentaires à faire par les étudiants.
           Ils doivent terminer au moins un des sous-niveaux ici, mais peuvent en suivre
@@ -6120,16 +6124,16 @@ fr-FR:
           avec les boucles et l''abeille ! '
         display_name: Entrainement avec l'abeille
       courseD_EOC_examples_2021:
-        description: 'Tu es sur le point de commencer ton projet final. Avant de commencer,
+        description: 'Tu es sur le point d''entamer ton projet final. Avant de commencer,
           prends le temps d''examiner les exemples de projets. '
         display_name: 'Exemples de projets '
       express_EOC_examples_2021:
-        description: 'Tu es sur le point de te lancer dans ton projet final. Avant
-          de commencer, prends le temps d''examiner les exemples de projets. '
+        description: 'Tu es sur le point d''entamer ton projet final. Avant de commencer,
+          prends le temps d''examiner les exemples de projets. '
         display_name: 'Exemples de projets '
       SimonSays-Unplugged_2021:
-        markdown: "# Suivez l'algorithme\n\nJouez à un jeu et réfléchissez aux commandes
-          nécessaires pour obtenir le bon résultat. "
+        markdown: "# Suis l'algorithme\n\nJoue à un jeu et réfléchis à quelles commandes
+          il faut utiliser pour obtenir le bon résultat. "
       courseF_sprites_practice:
         description: 'Excellent travail jusqu''à présent ! Choisis ta prochaine activité.
           Remplis-en autant que tu peux. Continue à t''entraîner avec les sprites
@@ -9190,7 +9194,7 @@ fr-FR:
         - {}
         - {}
         - {}
-        - text: Rien de ce qui figure ci-dessus
+        - text: Aucune des réponses ci-dessus
       CSD Games Properties multi predict_2022:
         answers:
         - {}
@@ -16071,8 +16075,8 @@ fr-FR:
           actions gérées par un ordinateur. Dans cette leçon, tu vas réagir différemment
           selon le bouton sur lequel on appuie. \n"
       BinaryBracelets-Unplugged2022:
-        markdown: "# Binaires Bracelets    Crée un bracelet qui représente ton nom
-          dans un système que les ordinateurs comprennent !   ![] (https://images.code.org/ed15a484276c0989e4adb5daf480f68a-image-1557870226222.png)\n"
+        markdown: "# Bracelets Binaires  \n\nCrée un bracelet qui représente ton nom
+          dans un système qu'un ordinateur peut comprendre !  \n\n![] (https://images.code.org/ed15a484276c0989e4adb5daf480f68a-image-1557870226222.png)\n"
       CSD End of Unit Survey - Unit 1 - IntroMD_2022:
         teacher_markdown: |-
           **Sondages de fin d'unité pour les enseignants : Pendant que vos élèves remplissent le questionnaire, nous vous serions reconnaissants de remplir un bref sondage pour les enseignants.
@@ -16081,9 +16085,9 @@ fr-FR:
       CSD Student End of Unit Survey - Unit 1_2022:
         title: Enquête de fin d'unité sur Découvertes en informatique !
       ConditionalsWithCards-Unplugged2022:
-        markdown: "# Conditionnelles avec des Cartes    Joue à un jeu de cartes et
-          crée des règles comme « Si je dessine un carton rouge, j'obtiens un point
-          » et « Si je dessine une carte noire, tu obtiens un point. »\n"
+        markdown: "# Les instructions conditionnelles avec des Cartes   \n\nJoue à
+          un jeu de cartes et crée des règles comme : « Si je tire une carte rouge,
+          je marque un point » et « Si je tire une carte noire, tu marques un point ».\n"
       CourseE_Artist_Practice_2022:
         description: 'Excellent travail jusqu''à présent ! Choisissez votre prochaine
           activité. Remplissez-en autant que vous le pouvez. Continuez à vous entraîner
@@ -16210,17 +16214,16 @@ fr-FR:
           personnes, ou partager un message sur ce que nous pouvons faire pour aider
           à garder les autres en bonne santé quand un virus arrive en ville. \n"
       DesigningForAccessibilityMarkdownLevel2022:
-        markdown: "# Concevoir pour l'Accessibilité   * Dans le monde de l'informatique,
-          **l'accessibilité** consiste à créer de la technologie pour les personnes
-          handicapées.   * Les handicaps sont physiques, auditifs, visuels et bien
-          d'autres.   * Les handicaps sont divers et affectent les gens de différentes
-          manières, notamment la façon dont ils utilisent la technologie comme **applications
-          pour smartphones**.   * La conception d'applications, accessibles pour les
-          personnes handicapées, améliorent ces mêmes applications pour tout le monde
-          aussi !   ![] (https://images.code.org/0c670d0d9078657a870df0ca799492cb-image-1557166420066.png)\n"
+        markdown: "# Conception Accessible\n\n* Dans le monde de l'informatique, **l'accessibilité**
+          fait référence à la création de technologies pour personnes handicapées.
+          \n* Un handicaps peut être physique, auditif, visuel ou tout autre.  \n*
+          Les handicaps sont variés et impactent différemment les personnes, notamment
+          la manière dont ils utilisent des technologies comme les **applis pour smartphones**.
+          \  \n* Concevoir des applications accessibles aux personnes handicapées,
+          cela améliore ces applications pour tout le reste du monde aussi !   \n\n![](https://images.code.org/0c670d0d9078657a870df0ca799492cb-image-1557166420066.png)"
       DigitalSharing-Unplugged2022:
-        markdown: "# Partage Numérique   Dans cette leçon, tu examineras les défis
-          et les avantages du respect de la propriété et du droit d'auteur, en particulier
+        markdown: "# Partage Numérique   \n\nDans cette leçon, tu examineras les problèmes
+          et les avantages du respect de la propriété et du droit d'auteur, notamment
           dans les environnements numériques.\n"
       EnvelopeVariables-Unplugged_2021_22022_2022_pilot_-2022-2:
         markdown: " Histoires d'espace vide\n\nDans cette leçon, vous apprendrez à
@@ -16230,8 +16233,8 @@ fr-FR:
         markdown: "# Affaire bouclée \n\nCette leçon introduit la notion de boucles
           en programmation au travers d'une activité dansante."
       GraphPaperProgramming-Unplugged2022:
-        markdown: "# Programmation sur Papier Millimétré    Écris des algorithmes
-          que tes camarades de classe peuvent utiliser pour dessiner des images.\n"
+        markdown: "# Programmation sur Papier Millimétré    \n\nÉcris des algorithmes
+          que tes camarades de classe pourront utiliser pour faire des dessins."
       HappyMaps-Unplugged2022:
         markdown: |
           # Cartes joyeuses
@@ -16262,15 +16265,15 @@ fr-FR:
           ## Que dois-tu faire quand quelqu'un utilise des paroles méchantes ou blessantes sur internet ?
       PrivatePersonalInformation-Unplugged2022:
         markdown: |-
-          # Information privée et personnelle
+          # Informations Privées et Personnelles
 
-          ## Quelles informations vous concernant pouvez-vous partager en ligne?
+          ## Quelles informations te concernant peux-tu partager en ligne ?
       RelayProgramming-Unplugged2022:
-        markdown: "# Programmation en Relais    Composez des équipes et travaillez
-          ensemble pour écrire des programmes qui dessinent des images.\n"
+        markdown: "# Programmation en Relais   \n\nFaites des équipes et travaillez
+          ensemble pour écrire des programmes font des dessins."
       Songwriting-Unplugged2022:
-        markdown: "# Écriture de Chansons   Utilise le concept du refrain, dans une
-          chanson, pour mieux comprendre la définition et l'appel des fonctions.\n"
+        markdown: "# Écrire des Chansons  \n\nUtilise la notion de refrain en chanson
+          pour en apprendre plus sur la définition et l'appel de fonctions.\n"
       TheRightAppMarkdownLevel2022:
         markdown: "# La Bonne Appli\n\n* Tout le monde utilise des ordinateurs de
           nos jours, et particulièrement des smartphones. \n* Les applis de smartphone
@@ -16381,12 +16384,12 @@ fr-FR:
         - text: Regarde attentivement le code ci-dessous. Que va-t-il se passer lorsque
             tu cliques sur « Démarrer » ?
       courseD_EOC2022:
-        description: Tu as finis la dernière leçon du Cours D! Choisis un projet à
-          créer.
+        description: Tu es arrivé à la dernière leçon du Cours D ! Choisis un projet
+          à créer.
         display_name: Projet de fin de cours
       courseD_EOC_examples2022:
-        description: 'Tu es sur le point de te lancer dans ton projet final. Avant
-          de commencer, prends le temps d''examiner les exemples de projets. '
+        description: 'Tu es sur le point d''entamer ton projet final. Avant de commencer,
+          prends le temps d''examiner les exemples de projets. '
         display_name: 'Exemples de projets '
       courseD_multi_artist_nestedLoops9_predict12022:
         answers:
@@ -16394,14 +16397,14 @@ fr-FR:
           correct: true
           feedback: Correct !
         - text: B
-          feedback: Incorrect. L'intérieur de la boucle fait un pentagone, et l'extérieur
-            le répète 4 fois dans un cercle.
+          feedback: Incorrect. La boucle intérieure fait un pentagone, et la boucle
+            extérieure le répète 4 fois dans un cercle.
         - text: C
-          feedback: Incorrect. L'intérieur de la boucle fait un pentagone, et l'extérieur
-            le répète 4 fois dans un cercle.
-        - text: Rien de ce qui figure ci-dessus
-          feedback: Incorrect. L'intérieur de la boucle fait un pentagone, et l'extérieur
-            le répète 4 fois dans un cercle.
+          feedback: Incorrect. La boucle intérieure fait un pentagone, et la boucle
+            extérieure le répète 4 fois dans un cercle.
+        - text: Aucune des réponses ci-dessus
+          feedback: Incorrect. La boucle intérieure fait un pentagone, et la boucle
+            extérieure le répète 4 fois dans un cercle.
         markdown: '<table><tr><td>A</td><td><img src="https://images.code.org/cfc3f8206438a60afe3be9afe7fc0a22-image-1489118742610.10.15.png"
           width="100px" style="mix-blend-mode: multiply;"/></td><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>B</td><td><img
           src="https://images.code.org/975b027684d2f5411b960bf82987663e-image-1489119999013.11.13.png"
@@ -16409,8 +16412,8 @@ fr-FR:
           src="https://images.code.org/635ac54ed7cb2e2d24eb341b3ec4eecb-image-1489120024059.12.00.png"
           width="80px" style="mix-blend-mode: multiply; clip: rect(0px,0px,0px,40px);"/></td></tr></table><br/><br/>'
         questions:
-        - text: Regarde bien le code ci-dessous. Quel dessin va faire ce programme
-            lorsque tu cliqueras sur "Démarrer"?
+        - text: Regarde attentivement le code ci-dessous. Quel dessin est-ce que ce
+            programme fera quand tu cliques sur « Démarrer » ?
       courseD_multi_bee_conditionals1_predict12022:
         answers:
         - text: 'L''abeille bougera jusqu''au nuage et ne fera rien ensuite, peu importe
@@ -16430,10 +16433,10 @@ fr-FR:
             de ramasser le nectar seulement si il y a une fleur sous le nuage.
         questions:
         - text: Le nuage bloque la vue. Il pourrait y avoir une fleur sous le nuage.
-            S'il y a une fleur, l'abeille devra y ramasser le nectar une fois. S'il
-            n'y a pas de fleur, l'abeille ne fera rien. Regarde bien le code suivant.
-            Qu'est ce que tu penses qu’il se passera après avoir appuyé sur "Démarrer"
-            ?
+            S'il y a une fleur, il faudra que l'abeille y récolte du nectar une fois.
+            S'il n'y a pas de fleur, l'abeille ne fera rien. Regarde bien le code
+            suivant. Qu'est ce que tu penses qui se passera après une fois que tu
+            cliques sur « Démarrer » ?
       courseD_multi_bee_conditionals7_predict22022:
         answers:
         - text: L'abeille récoltera le nectar de chaque fleur et fera du miel à chaque
@@ -16642,8 +16645,8 @@ fr-FR:
       courseF_EOC_examples2022_2022_pilot_-2022-2:
         display_name: Projet de fin de cours
       courseF_EOC_samples2022:
-        description: 'Tu es sur le point de te lancer dans ton projet final. Avant
-          de commencer, prends le temps d''examiner les exemples de projets. '
+        description: 'Tu es sur le point d''entamer ton projet final. Avant de commencer,
+          prends le temps d''examiner les exemples de projets. '
         display_name: Projet de fin de cours
       courseF_collector_samples_2022_pilot_-2022-2:
         display_name: 'Exploration - Exemples de programmes '
@@ -16682,7 +16685,7 @@ fr-FR:
         questions:
         - {}
       courseF_intro_apps2022_2022_pilot_-2022-2:
-        display_name: Applis Sprite Lab
+        display_name: Applis Labo des Sprites
       courseF_labels_predict_multi2022_2022_pilot_-2022-2:
         answers:
         - text: '"Une pizza, c''est parti !"'
@@ -16846,11 +16849,17 @@ fr-FR:
       csf_be_a_super_digital_citizen2022:
         content1: description ici
         markdown: |-
-          # Super citoyen numérique
+          # Super Citoyen Numérique
 
-          ## Comment être fort quand on est témoin de cyber-harcèlement ?
+          ## Comment bien réagir quand on est témoin de cyber-harcèlement ?
       csf_password_power-up2022:
         content1: description ici
+        markdown: "# Fais monter en puissance ton mot de passe \n\n## Conseils pour
+          retenir le mot de passe\n\n* Commence par une **phrase** facile à retenir.\n*
+          Seuls tes **parents** doivent le connaître.\n* N'utilise jamais d'informations
+          identifiantes **privées** dans ton mot de passe.\n* Crée des mots de passe
+          avec au moins **huit** caractères.\n* Mets-y des lettres, des chiffres et
+          des **symboles**. \n\n![](https://images.code.org/bfa69295fbf33c77ecdeb79b5498d8f7-image-1584751340896.png)\n"
       csf_putting_a_stop_to_online_meanness2022:
         content1: description ici
         markdown: "# STOP à la méchanceté\n\n## Que faut-il faire si quelqu'un est
@@ -16895,8 +16904,8 @@ fr-FR:
         description: Tu es arrivé à la fin du Cours E ! Choisis un projet à créer.
         display_name: Projet de fin de cours
       express_EOC_examples2022:
-        description: 'Tu es sur le point de te lancer dans ton projet final. Avant
-          de commencer, prends le temps d''examiner les exemples de projets. '
+        description: 'Tu es sur le point d''entamer ton projet final. Avant de commencer,
+          prends le temps d''examiner les exemples de projets. '
         display_name: 'Exemples de projets '
       grade2_multi_collector_A_predict12022:
         answers:

@@ -5733,3 +5733,7 @@ id:
           description_audience: Penulis Kurikulum
           description_short: Untuk pembaruan tahapan atau level pembelajaran di antara
             versi kurikulum
+        devices-2022:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: 'Bab 2: Membangun Prototipe Fisik'

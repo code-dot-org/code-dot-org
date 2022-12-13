@@ -4279,3 +4279,7 @@ ko:
           title: CSP 플레이그라운드
           description_audience: 커리큘럼 작성자
           description_short: 커리큘럼 버전 사이에 레슨 또는 레벨에 대한 스테이징 업데이트용
+        devices-2022:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: '챕터 2: 물리적 프로토타입 만들기'

@@ -4034,3 +4034,7 @@ ja:
           title: CSPプレイグラウンド
           description_audience: カリキュラム ライター
           description_short: カリキュラムステージバージョン間でレッスンまたはレベルの更新を実施する場合
+        devices-2022:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: '第 2 章: 物理プロパティの構築'

@@ -680,7 +680,7 @@
           "student_overview": "Aquí aprenderás sobre condicionales en el mundo de Minecraft."
         },
         "coursee-2022/Conditionals with the Farmer": {
-          "name": "Condicionales con Granjera",
+          "name": "Condicionales con la Granjera",
           "overview": "Esta lección introduce a los estudiantes a los bucles `mientras` y las sentencias `si / si no`. _Bucles mientras_ son bucles que repiten comandos mientras una condición sea cierta. Los bucles `mientras` se utilizan cuando el programador no conoce el número exacto de veces que los comandos deben ser repetidos, pero sí sabe la condición que debe ser cierta para que el bucle continúe. Las sentencias `si / si no` ofrecen flexibilidad en la programación al ejecutar el código solo si algo es cierto; de lo contrario, ejecuta otra cosa.",
           "preparation": "-   Juega con los rompecabezas para encontrar cualquier área potencialmente problemática para tu clase.\n-   Asegúrate de que cada estudiante tenga un diario de reflexión.",
           "purpose": "Esta lección introduce los bucles “mientras” y a las declaraciones “si/si no”.",
@@ -2200,7 +2200,7 @@
           "name": "Condicionales con tarjetas"
         },
         "coursef-2018/Conditionals in Farmer": {
-          "name": "Condicionales con Granjera"
+          "name": "Condicionales con la Granjera"
         },
         "coursef-2018/Functions in Minecraft": {
           "name": "Funciones con Minecraft"
@@ -2425,7 +2425,7 @@
           "name": "Condicionales con tarjetas"
         },
         "coursee-2018/Conditionals": {
-          "name": "Condicionales con Granjera"
+          "name": "Condicionales con la Granjera"
         },
         "coursee-2018/Private and Personal Information": {
           "name": "Información privada y personal"
@@ -3061,7 +3061,7 @@
           "name": "Condicionales en Minecraft: Voyage Aquatic"
         },
         "coursee-2019/Conditionals": {
-          "name": "Condicionales con Granjera"
+          "name": "Condicionales con la Granjera"
         },
         "coursee-2019/Simon Says": {
           "name": "Simón dice"
@@ -5698,7 +5698,7 @@
           "student_overview": "Aquí aprenderás sobre condicionales en el mundo de Minecraft."
         },
         "coursee-2021/Conditionals": {
-          "name": "Condicionales con Granjera",
+          "name": "Condicionales con la Granjera",
           "overview": "Esta lección introduce a los estudiantes a los bucles `mientras` y las sentencias `si / si no`. _Bucles mientras_ son bucles que repiten comandos mientras una condición sea cierta. Los bucles `mientras` se utilizan cuando el programador no conoce el número exacto de veces que los comandos deben ser repetidos, pero sí sabe la condición que debe ser cierta para que el bucle continúe. Las sentencias `si / si no` ofrecen flexibilidad en la programación al ejecutar el código solo si algo es cierto; de lo contrario, ejecuta otra cosa.",
           "preparation": "-   Juega con los rompecabezas para encontrar cualquier área potencialmente problemática para tu clase.\n-   Asegúrate de que cada estudiante tenga un diario de reflexión.",
           "purpose": "Esta lección introduce los bucles “mientras” y a las declaraciones “si/si no”.",
@@ -6897,7 +6897,7 @@
           "name": "Condicionales en Minecraft: Voyage Aquatic"
         },
         "coursee-2020/Conditionals": {
-          "name": "Condicionales con Granjera"
+          "name": "Condicionales con la Granjera"
         },
         "coursee-2020/Simon Says": {
           "name": "Simón dice"

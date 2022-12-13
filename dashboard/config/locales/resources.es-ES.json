@@ -2022,16 +2022,24 @@
           "url": "https://docs.google.com/document/d/15Y6Mo3fMUtHq16SSskABgcYE-5xfk-Ewv0z_o4uaLdI/preview"
         },
         "all_code_1/csd/2022": {
-          "name": "Todos los Códigos"
+          "name": "Todos los Códigos",
+          "url": "/s/csd3-2022/código"
         },
         "all_resources_1/csd/2022": {
-          "name": "Todos los Recursos"
+          "name": "Todos los Recursos",
+          "url": "/s/csd3-2022/recursos"
         },
         "all_standards_1/csd/2022": {
-          "name": "Todos los Estándares"
+          "name": "Todos los Estándares",
+          "url": "/s/csd3-2022/estándares"
         },
         "all_vocabulary_1/csd/2022": {
-          "name": "Todo el Vocabulario"
+          "name": "Todo el Vocabulario",
+          "url": "/s/csd3-2022/vocabulario"
+        },
+        "csd_programming_levels_guide/csd/2022": {
+          "name": "CSD Guía de Niveles de Programación ",
+          "url": "https://docs.google.com/document/d/1WGywQ25khB6-FB20x6wO9dGVO9_qJlWkuLVLREJS4Jo/preview"
         },
         "cs_in_entertainment/csd/2022": {
           "name": "Informática en el Entretenimiento",
@@ -2045,6 +2053,7 @@
         },
         "programming_for_entertainment/csd/2022": {
           "name": "Programación para el Entretenimiento",
+          "url": "https://docs.google.com/presentation/d/1ojnEhKkUISTCWmf6i_Y5eObbOdocNSrtAjhiWYZVSNU/template/preview",
           "type": "Diapositivas"
         },
         "drawing_shapes/csd/2022": {
@@ -2069,6 +2078,7 @@
         },
         "plotting_shapes/csd/2022": {
           "name": "Trazar formas",
+          "url": "https://docs.google.com/presentation/d/1B64fDQpLf4iuqXIEYYTjoPsNlt4MQ7hHElllX_5y61g/template/preview",
           "type": "Diapositivas"
         },
         "drawing_in_game_lab_-_part_1/csd/2022": {
@@ -2086,6 +2096,7 @@
         },
         "drawing_in_game_lab/csd/2022": {
           "name": "Dibujar en el Laboratorio de juegos",
+          "url": "https://docs.google.com/presentation/d/1Qh85JcZquHSfK2LB0-80ZH4u4e3kZ7Lrr4BiCeihtn0/template/preview",
           "type": "Diapositivas"
         },
         "shapes_and_parameters_1/csd/2022": {
