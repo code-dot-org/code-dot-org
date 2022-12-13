@@ -30,8 +30,8 @@ class Services::CSTAEnrollmentTest < ActiveSupport::TestCase
         'submission[17_state]' => 'WA',
         'submission[17_zip]' => '12345',
         'submission[19]' => "Yes, I provide my consent.",
-        'submission[20]' => "Role with Spaces",
-        'submission[21]' => "K-5, 6-8, ",
+        'submission[25]' => "Role with Spaces",
+        'submission[22]' => "K-5, 6-8, ",
       }
     )
     expected_request.returns(success_response)
