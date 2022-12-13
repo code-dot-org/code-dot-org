@@ -348,7 +348,7 @@
       if (
         window.Blockly &&
         Blockly.version === "Google" &&
-        Blockly.utils.global["PointerEvent"]
+        window["PointerEvent"]
       ) {
         touchMappings = {
           mousedown: "pointerdown",
