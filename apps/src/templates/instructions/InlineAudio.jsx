@@ -4,7 +4,6 @@ import Radium from 'radium'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 import {connect} from 'react-redux';
 import trackEvent from '../../util/trackEvent';
-import color from '../../util/color';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 import moduleStyles from './inline-audio.module.scss';
 import classNames from 'classnames';
@@ -79,7 +78,6 @@ class InlineAudio extends React.Component {
     audio: undefined,
     playing: false,
     error: false,
-    hover: false,
     loaded: false,
     autoplayed: false
   };
@@ -249,10 +247,6 @@ class InlineAudio extends React.Component {
     this.setState({playing: false});
   }
 
-  toggleHover = () => {
-    this.setState({hover: !this.state.hover});
-  };
-
   render() {
     if (
       this.props.textToSpeechEnabled &&
@@ -265,8 +259,6 @@ class InlineAudio extends React.Component {
         <button
           className={classNames('inline-audio', moduleStyles.inlineAudioButton)}
           style={[styles.wrapper, this.props.style && this.props.style.wrapper]}
-          onMouseOver={this.toggleHover}
-          onMouseOut={this.toggleHover}
           onClick={this.toggleAudio}
           type="button"
         >
@@ -274,9 +266,9 @@ class InlineAudio extends React.Component {
             style={[
               styles.button,
               styles.volumeButton,
-              this.props.style && this.props.style.button,
-              this.state.hover && styles.hover
+              this.props.style && this.props.style.button
             ]}
+            className={moduleStyles.iconWrapper}
             id="volume"
           >
             <i
@@ -288,12 +280,11 @@ class InlineAudio extends React.Component {
             />
           </div>
           <div
-            className="playPause"
+            className={classNames('playPause', moduleStyles.iconWrapper)}
             style={[
               styles.button,
               styles.playPauseButton,
-              this.props.style && this.props.style.button,
-              this.state.hover && styles.hover
+              this.props.style && this.props.style.button
             ]}
           >
             <i
@@ -328,7 +319,6 @@ const styles = {
   button: {
     cursor: 'pointer',
     float: 'left',
-    backgroundColor: color.lightest_purple,
     border: 'none',
     outline: 'none',
     width: 33,
@@ -349,10 +339,6 @@ const styles = {
     paddingRight: 8,
     paddingLeft: 8,
     color: '#4d575f'
-  },
-
-  hover: {
-    backgroundColor: color.cyan
   }
 };
 

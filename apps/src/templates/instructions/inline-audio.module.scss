@@ -1,5 +1,17 @@
 @import "../../mixins.scss";
+@import "color.scss";
 
 .inlineAudioButton {
   @include remove-button-styles;
+
+  .iconWrapper {
+    background-color: $lightest_purple;
+  }
+
+  &:hover,
+  &:focus {
+    .iconWrapper {
+      background-color: $cyan;
+    }
+  }
 }
