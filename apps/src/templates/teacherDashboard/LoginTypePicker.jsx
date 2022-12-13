@@ -118,7 +118,6 @@ class LoginTypePicker extends Component {
             </a>
           </div>
           <Button
-            __useDeprecatedTag
             onClick={handleCancel}
             text={i18n.dialogCancel()}
             size={Button.ButtonSize.large}
