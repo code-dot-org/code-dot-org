@@ -3847,13 +3847,14 @@ en:
         denny-science-copy:
           lesson_groups: {}
         dance-2019:
-          title: Dance Party (2019)
+          title: Dance Party
           description_audience: ''
-          description_short: Featuring Katy Perry, Shawn Mendes, Panic! At The Disco, Lil Nas X, Jonas Brothers, Nicki Minaj, and 34 more!
+          description_short: Code a Dance Party to share with friends and family. Featuring Beyoncé, Harry Styles, Lizzo, Lil Nas X, Selena Gomez, music from Disney's "Encanto," and more!
           description: Code your own dance party to share with your friends!
           lesson_groups: {}
           student_description: Code your own dance party to share with your friends!
           name: dance-2019
+          lessons: {}
         k5-onlinepd-2019:
           title: Teaching Computer Science Fundamentals (2019)
           description: Learn how to teach computer science using Code.org's Computer Science Fundamentals with this free, self-paced online course!
@@ -3871,13 +3872,14 @@ en:
           student_description: Learn how to teach computer science using Code.org's Computer Science Fundamentals with this free, self-paced online course!
           name: k5-onlinepd-2019
         dance-extras-2019:
-          title: Keep On Dancing (2019)
+          title: Keep On Dancing
           description: Go beyond the first hour with extended project ideas.
           description_short: Go beyond the Hour of Code with this follow-up activity to Code.org's Dance Party tutorial.
           description_audience: ''
           lesson_groups: {}
           student_description: Go beyond the first hour with extended project ideas.
           name: dance-extras-2019
+          lessons: {}
         csp10-pilot:
           title: Cybersecurity and Global Impacts
           description_audience: ''
@@ -8005,6 +8007,7 @@ en:
           description_audience: ''
           lesson_groups: {}
           name: dlp-csd-mod1-2022
+          lessons: {}
         dlp-csd-mod2-2022:
           title: 2022 CS Discoveries Deeper Learning Module A
           description: "## Completed module due by November 1, 2022"
@@ -8179,6 +8182,10 @@ en:
               name: 'Module 2 post-work: Understanding Unit 4 content'
             lesson-4:
               name: 'Module 4 post-work: 2D Arrays in Unit 5 and FRQs'
+            lesson-5:
+              name: 'Module 5 post-work: The Unit 5 Project'
+            lesson-6:
+              name: 'Module 6 post-work: String methods in Unit 6'
         csa-labs-2022:
           lesson_groups:
             lessonGroup-2:
@@ -8438,9 +8445,9 @@ en:
             lesson-13:
               name: Two-Way Selection Statements
             lesson-14:
-              name: Expanding Conditions
+              name: Instantiating Objects
             lesson-15:
-              name: Edge Cases
+              name: Methods with Parameters
             lesson-16:
               name: Open Source Code
             lesson-17:
@@ -8469,8 +8476,42 @@ en:
           description: "This unit exposes students to object-oriented programming principles as they explore The Neighborhood. Students learn fundamental Java concepts as they navigate and interact with The Neighborhood with `Painter` objects and create new types of `Painter`s to expand the capabilities of their programs. Students practice predicting the outcome of program code and use their `Painter` objects with conditional statements, `while` loops, and Boolean expressions to navigate mazes and create drawings. While students work with the `Painter`, they practice identifying syntax and logic errors to explain why code segments will not compile or work as intended. Additionally, students learn to document program code using comments to describe the behavior of specific code segments. Throughout this unit, students discover their identity as software engineers and use debugging strategies and code reviews to improve their programming skills.\n\n## Finished Teaching This Unit?\n\nAnswer this [**short survey**][0] to let the Code.org curriculum team know how the unit went."
           student_description: This unit exposes you to object-oriented programming principles as you explore The Neighborhood. You learn fundamental Java concepts as you navigate and interact with The Neighborhood with `Painter` objects and create new types of `Painter`s to expand the capabilities of your programs. You practice predicting the outcome of program code and use your `Painter` objects with conditional statements, `while` loops, and Boolean expressions to navigate mazes and create drawings. While you work with the `Painter`, you practice identifying syntax and logic errors to explain why code segments will not compile or work as intended. Additionally, you learn to document program code using comments to describe the behavior of specific code segments. Throughout this unit, you discover your identity as a software engineer and use debugging strategies and code reviews to improve your programming skills.
         csa2-2023:
-          lessons: {}
-          lesson_groups: {}
+          lessons:
+            lesson-1:
+              name: Attributes
+            lesson-2:
+              name: No-Argument Constructors
+            lesson-3:
+              name: Parameterized Constructors
+            lesson-4:
+              name: Variables
+            lesson-5:
+              name: Accessor Methods
+            lesson-6:
+              name: User Input
+            lesson-7:
+              name: Operators and Expressions
+            lesson-8:
+              name: Mutator Methods
+            lesson-9:
+              name: Printing Objects
+            lesson-10:
+              name: Store Management Project
+            lesson-11:
+              name: FRQ Practice
+            lesson-12:
+              name: Unit 2 Assessment
+            lesson-13:
+              name: Store Management Project [1-Day Version]
+            lesson-14:
+              name: The this Keyword
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Content
+            lessonGroup-3:
+              display_name: Show What You Know
+            lessonGroup-4:
+              display_name: Alternate Lessons
           name: csa2-2023
           title: Class Structure and Design
           description_audience: ''
@@ -8825,7 +8866,7 @@ en:
           title: CSC Bookcover
           description_audience: ''
           description_short: ''
-          description: 'this is an internal script as the source of truth for this lesson that will be reused in other CSC modules. '
+          description: ''
           student_description: ''
         csc-landmarks-pilot:
           lessons:
@@ -8835,12 +8876,14 @@ en:
               name: Local Storytellers
             lesson-4:
               name: Local Landmarks - Unplugged
+            lesson-5:
+              name: Local Storytellers
           lesson_groups: {}
           name: csc-landmarks-pilot
-          title: ''
+          title: Mapping Landmarks (Fall 2022 Pilot)
           description_audience: ''
           description_short: ''
-          description: 'Winter 2022 Pilot module - Historical Landmark and Mapping Module '
+          description: ''
           student_description: ''
         csc-playground:
           lessons:
@@ -8854,6 +8897,8 @@ en:
               name: Particles Lesson 3
             lesson-5:
               name: Particles Lesson 4
+            lesson-6:
+              name: Katie Testing
           lesson_groups: {}
           name: csc-playground
           title: CSC Playground
@@ -8927,6 +8972,8 @@ en:
               name: Where is it coming from?
             lesson-3:
               name: What Do They Want?
+            lesson-4:
+              name: The Secret Message
           lesson_groups: {}
           name: csc-function-machines-pilot
           title: Function Machines Pilot Module
@@ -9177,3 +9224,77 @@ en:
           description_short: ''
           description: ''
           student_description: ''
+        angelina-playground:
+          lessons:
+            lesson-1:
+              name: States of Matter
+            lesson-2:
+              name: OG States of Matter
+          lesson_groups: {}
+          name: angelina-playground
+          title: Angelina's Place To Do Stuff
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        csc-pilot-fa2022-timecapsule:
+          lessons: {}
+          lesson_groups: {}
+          name: csc-pilot-fa2022-timecapsule
+          title: Time Capsules (Fall 2022 Pilot)
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        csc-pilot-fa2022-ecosystem:
+          lessons: {}
+          lesson_groups: {}
+          name: csc-pilot-fa2022-ecosystem
+          title: Ecosystems (Fall 2022 Pilot)
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        csp-playground:
+          lessons: {}
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Variables EIPM (Erik)
+          name: csp-playground
+          title: CSP Playground
+          description_audience: Curriculum Writers
+          description_short: For staging updates to lessons or levels between curriculum versions
+          description: ''
+          student_description: ''
+        csc-pilot-fa2022-particles:
+          lessons: {}
+          lesson_groups: {}
+          name: csc-pilot-fa2022-particles
+          title: 'Particles '
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        devices-2022:
+          lessons: {}
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Introduction to App Lab
+            lessonGroup-3:
+              display_name: 'Chapter 1: Inputs and Outputs'
+            lessonGroup-4:
+              display_name: 'Chapter 2: Building Physical Prototypes'
+          name: devices-2022
+          title: Creating Apps for Devices
+          description_audience: ''
+          description_short: ''
+          description: |-
+            In the Creating Apps with Devices unit, students explore the role of physical devices in computing. Using App Lab and Adafruit’s Circuit Playground, students develop programs that utilize the same hardware inputs and outputs that you see in the smart devices, looking at how a simple rough prototype can lead to a finished product. Then, students explore how physical devices can be used to react to the world around them using a “maker” mindset to create prototypes with everyday materials.
+
+            **Implementation Guidance for Creating Apps with Devices**
+
+            -   This unit requires students to have access to Circuit Playground's - [click here][0] for more information about using Circuit Playground's in your classroom
+            -   Guidance for how to support students in programming levels and differentiate tasks are available in the [Programming Levels Guide][1] and [Differentiation Guide][2]
+
+            **Professional Development:** If you are interested in teaching this course, we recommend completing the free [Creating Apps with Devices Self-Paced Professional Development Module][3]. The module is designed to take 2 hours to complete. No previous experience with coding or AI is assumed.
+          student_description: This unit explores the role of hardware platforms in computing and how different sensors can provide more effective input and output than the traditional keyboard, mouse, and monitor. Using App Lab and Adafruit’s Circuit Playground, you’ll develop programs that utilize the same hardware inputs and outputs that you see in the smart devices, looking at how a simple rough prototype can lead to a finished product. The unit concludes with a design challenge to use the Circuit Playground as the basis for an innovation of your own design.

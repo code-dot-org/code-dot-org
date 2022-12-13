@@ -116,6 +116,7 @@ Scenario: Teacher saves, re-opens, and submits an application
   Then I am on "http://studio.code.org/pd/application/teacher"
   Then I wait until element "p" contains text "We found an application you started! Your saved responses have been loaded."
   And I see no difference for "Viewing previously-saved teacher application"
+  Then I close my eyes
 
   # Finish Section 2 which was started
   And I complete Section 2 of the teacher PD application

@@ -103,6 +103,7 @@ describe('Action Commands', () => {
         'direction',
         180
       ]);
+      commands.setProp.apply(coreLibrary, [{name: 'spriteName1'}, 'speed', 10]);
       coreLibrary.addSprite({name: 'spriteName2', location: {x: 200, y: 200}});
       commands.bounceOff.apply(coreLibrary, [
         {name: 'spriteName1'},
@@ -116,16 +117,7 @@ describe('Action Commands', () => {
       ).to.equal(0);
       expect(
         spriteCommands.getProp.apply(coreLibrary, [{name: 'spriteName1'}, 'x'])
-      ).to.equal(201);
-      expect(
-        spriteCommands.getProp.apply(coreLibrary, [
-          {name: 'spriteName2'},
-          'direction'
-        ])
-      ).to.equal(180);
-      expect(
-        spriteCommands.getProp.apply(coreLibrary, [{name: 'spriteName2'}, 'x'])
-      ).to.equal(199);
+      ).to.equal(189);
     });
 
     it('does not change direction if sprites are not touching', () => {

@@ -12,7 +12,8 @@ export const testSection = {
   ttsAutoplayEnabled: false,
   pairingAllowed: true,
   studentCount: 10,
-  code: 'PMTKVH'
+  code: 'PMTKVH',
+  participantType: 'student'
 };
 export const noStudentsSection = {
   id: 11,
@@ -28,7 +29,8 @@ export const noStudentsSection = {
   ttsAutoplayEnabled: false,
   pairingAllowed: true,
   studentCount: 0,
-  code: 'PMTKVH'
+  code: 'PMTKVH',
+  participantType: 'student'
 };
 
 export const courseOfferings = {

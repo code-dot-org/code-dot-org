@@ -260,7 +260,7 @@ fr-FR:
   print_one_here_certificates: Imprimez-en un ici.
   enter_certificate_names: Saisissez jusqu'à 30 noms, **un par ligne**. Une page imprimable
     avec des certificats personnalisés %{script_name}  sera générée.
-  share_achievement: Partage ta réalisation
+  share_achievement: Partage ta réussite
   beyond_hour_message: Continue avec nos <a href='http://studio.code.org'>autres cours</a>,
     ou vois plus d'options pour <a href='/learn/beyond'>Apprendre au-delà d'une heure</a>.
   beyond_hour_message_markdown: Continuez à suivre nos [autres cours] (http://studio.code.org),
@@ -692,6 +692,7 @@ fr-FR:
   video_title_marco_belinelli: Heure de Code avec Marco Belinelli
   video_title_chris_bosh: Chris Bosh à propos de l'informatique
   video_title_my_name_is_aracely: Je m’appelle Aracely
+  video_title_change_face_of_cs: Changer le visage de l'informatique
   video_1min: 1 minutes
   video_2min: 2 minutes
   video_3min: 3 min
@@ -1296,7 +1297,7 @@ fr-FR:
   tynker_name: Construis ton propre jeu
   scratch_name: Deviens créatif avec le codage
   thinkersmith_name: Mes amis les robots
-  condcards_name: Instructions conditionnelles avec des cartes
+  condcards_name: Les instructions conditionnelles avec des cartes
   codehs_name: Apprends à coder avec le chien Karel
   codemonkey_name: CodeMonkey
   codeavengers_name: Construis un jeu avec JavaScript
@@ -1368,8 +1369,12 @@ fr-FR:
   courseb-2021_name: Cours B (2021)
   coursec-2021_name: Cours C (2021)
   coursed-2021_name: Cours D (2021)
+  coursee-2021_name: Cours E (2021)
+  coursef-2021_name: Cours F (2021)
   coursea-2022_name: Cours A (2022)
-  coursed-2022_name: Cours D (2021)
+  coursec-2022_name: Cours C (2022)
+  coursed-2022_name: Cours D (2022)
+  coursee-2022_name: Cours E (2022)
   express-2018_name: Cours Express (2018)
   pre-express-2018_name: Cours Express pour les Pré-lecteurs (2018)
   express-2019_name: Cour rapide (2019)
@@ -1379,6 +1384,7 @@ fr-FR:
   express-2021_name: Cours Express (2021)
   pre-express-2021_name: Cours rapide pour les primo-lecteurs (2021)
   express-2022_name: Cours Express (2022)
+  pre-express-2022_name: Cours Express pour les Pré-lecteurs (2022)
   csd2_name: 'Unité 2 : Développement Web'
   csd3_name: 'Unité 3 : Animation et Jeux'
   accelerated_name: Cours accéléré
@@ -2325,6 +2331,7 @@ fr-FR:
   header_educate_beyond: Aller plus loin
   header_educate_inspire: Inspirer un élève
   header_educate_community: Communauté en ligne
+  header_educate_requirements: Pré-requis techniques
   header_educate_tools: Outils et vidéos
   header_about_us: À propos
   header_about_leadership: Équipe de direction
@@ -2447,8 +2454,13 @@ fr-FR:
   hoc_overview_dance_2019_subtitle: Code une Soirée Dansante à partager avec tes amis.
     Avec Katy Perry, Shawn Mendes, Panic ! At The Disco, Lil Nas X, Jonas Brothers,
     Nicki Minaj, et 34 autres artistes !
+  hoc_overview_dance_2022_subtitle: Organises une soirée dansante à partager avec
+    tes amis. Avec Beyoncé, Harry Styles, Lizzo, Lil Nas X, Selena Gomez, de la musique
+    de « Encanto » de Disney et bien plus encore !
   hoc_overview_hello_world_2022_subtitle: Choisis entre quatre activités amusantes
     pour programmer des personnages interactifs dans un monde que tu as créé!
+  hoc_overview_hello_world_2022_alt_text: Personnages animés d'astronautes et d'animaux
+    flottant autour d'une illustration de la Terre
   hoc_overview_title: Activités Hour of Code de Code.org
   hoc_overview_subtitle: <a href="https://hourofcode.com">Hour of Code</a> est un
     mouvement mondial qui touche des dizaines de millions d'étudiants dans plus de
@@ -2528,10 +2540,19 @@ fr-FR:
     vous, et participez à un atelier Hour of Code gratuit. Pour tous niveaux de compétence,
     et à partir de 6 ans.
   hoc2018_mc_educators_box3_button: Trouver un atelier
+  hoc2022_mc_educators_box3_desc_markdown: 'Utilisez-le sur demande [cours gratuit]
+    (%{free_course_link}) ou inscrivez l''ensemble de votre classe à un atelier Heure
+    de code en direct avec un professeur invité. Offert à plusieurs reprises pendant
+    la CSEW, du 6 au 11 décembre. '
+  hoc2022_mc_educators_box3_button: S'inscrire
   hoc2018_mc_educators_box4_title: Accéder à plus de ressources informatiques
   hoc2018_mc_educators_box4_desc: Générez du changement dans votre communauté, avec
     des compétences numériques et les ressources éducatives en informatique de Microsoft.
   hoc2018_mc_educators_box4_button: Explorer les ressources
+  hoc2022_mc_educators_box4_desc: Inspirez la passion des STEM aux élèves de la maternelle
+    à la 12e année grâce à un programme d'informatique de 200 heures, du bloc au python,
+    soutenu par un développement professionnel.
+  hoc2022_mc_educators_box4_button: Continuer l'apprentissage
   hoc2018_mc_watch_videos: Avant de commencer, regarde une de ces vidéos pour t'inspirer
   hoc2018_mc_videos_more: Plus de <a href='%{inspiring_videos_playlist}'> vidéos qui
     inspirent</a> et qui font intervenir des modèles de référence et des célébrités
@@ -2598,7 +2619,7 @@ fr-FR:
   hoc2018_dance_teacher_resources_tile2_title: Soirée Dansante Débranchée
   hoc2018_dance_teacher_resources_tile2_description: Pas besoin d’ordinateurs ! Apprenez
     les concepts de code informatique pour chorégraphier une Soirée Dansante ensemble.
-  hoc2018_dance_teacher_resources_tile2_button: Activité "Déconnectée"
+  hoc2018_dance_teacher_resources_tile2_button: Activité Déconnectée
   hoc2018_dance_featured_student_creations_title: Créations d’Élèves en vedette
   hoc2018_dance_videos_section_heading: Trouve de l’Inspiration
   hoc2018_dance_video_title_what_is_creativity: Qu'est-ce que la Créativité ?
@@ -2717,6 +2738,14 @@ fr-FR:
   hoc2021_mc_mee_ai_title: AI pour de bon
   hoc2021_mc_mee_ai_description: 'Explorez l''AI avec vos élèves et apprenez à coder
     dans Minecraft : Education Edition.'
+  hoc2022_mc_mee_title: Domaine d'évasion Minecraft
+  hoc2022_mc_mee_description: 'Échappez-vous du mystérieux manoir à l''aube et gagnez
+    un million d''émeraudes ! Le nouveau tutoriel Minecraft Hour of Code est désormais
+    disponible dans Minecraft : Education Edition et accessible via Windows, Mac,
+    Chromebook, Ipad et Mobile. Démarrez avec des supports éducatifs, des formations
+    et des vidéos gratuits. '
+  hoc2022_mc_mee_timecraft_description: 'Voyagez dans le temps pour sauver le futur
+    grâce à cette leçon de codage gratuite sur Minecraft : Education Edition.'
   footer_powered_by_aws: 'Amazon Web Services et le logo « Powered by AWS » sont des
     marques déposées d''Amazon.com, Inc. ou ses filiales aux États-Unis et/ou dans
     d''autres pays. '
@@ -2823,11 +2852,19 @@ fr-FR:
     y a tant de manières d''utiliser l''informatique!'
   hoc2022_cta_primary: Découvrez les nouveautés
   hoc2022_cta_secondary: Essayez d'autres activités
+  hoc2022_landing_page_explore_title: Explorer
   hoc2022_landing_page_explore_description: Grâce aux sciences informatiques, ouvrez
     les portes de nouveaux mondes !
+  hoc2022_landing_page_play_title: Jouer
   hoc2022_landing_page_play_description: Montrez de quoi vous êtes capable et marquez
     des points !
   hoc2022_landing_page_create_title: Créer
   hoc2022_landing_page_create_description: Créez des choses hors du commun et merveilleuses
     !
+  hoc2022_landing_page_banner_alt_left: Un extraterrestre dansant à côté de Saturne
+    dans l'espace
+  hoc2022_landing_page_banner_alt_right: Un robot jouant un ballon de football dans
+    l'espace devant une fusée qui décolle.
   try_it_yourself: Essaie toi-même !
+  try_an_activity: Essayes une activité
+  see_more_activities: Voir plus d'activités

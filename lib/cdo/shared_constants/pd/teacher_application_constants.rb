@@ -15,6 +15,12 @@ module Pd
 
     YEAR = SharedApplicationConstants::APPLICATION_CURRENT_YEAR
 
+    REGIONAL_PARTNER_DEFAULT_GUARDRAILS = {
+      frl_rural: 40,
+      frl_not_rural: 50,
+      urg: 50
+    }
+
     SECTION_HEADERS = {
       choose_your_program: 'Choose Your Program',
       find_your_region: 'Find Your Region',
@@ -166,6 +172,11 @@ module Pd
         csd_which_grades: "To which grades does your school plan to offer CS Discoveries in the #{YEAR} school year?",
         csp_which_grades: "To which grades does your school plan to offer CS Principles in the #{YEAR} school year?",
         csa_which_grades: "To which grades does your school plan to offer CSA in the #{YEAR} school year?",
+        csa_already_know: "Have you previously taught CS or have you learned CS yourself?",
+        csa_phone_screen: clean_multiline(
+          'Are you able to independently write a function (or procedure) with one or more
+          parameters and that uses conditional logic, loops, and an array (or list)?'
+        ),
         enough_course_hours: "Will you have more than {{min hours}} hours with your {{CS program}} section(s)?",
         replace_existing: "Will this course replace an existing computer science course in the master schedule? (Teacher's response)",
         previous_yearlong_cdo_pd: "Have you participated in previous yearlong Code.org Professional Learning Programs?",
@@ -261,10 +272,11 @@ module Pd
       csd_which_grades: YES_NO,
       csp_which_grades: YES_NO,
       csa_which_grades: YES_NO,
+      csa_already_know: YES_NO,
+      csa_phone_screen: YES_NO,
       committed: YES_NO,
       enough_course_hours: YES_NO,
       previous_yearlong_cdo_pd: YES_NO,
-      replace_existing: YES_NO,
       principal_approval: YES_NO,
       principal_schedule_confirmed: YES_NO,
       # Scholarship requirements
@@ -283,7 +295,6 @@ module Pd
         :enough_course_hours,
         :committed,
         :previous_yearlong_cdo_pd,
-        :replace_existing,
         :principal_approval,
         :principal_schedule_confirmed,
       ],
@@ -292,17 +303,16 @@ module Pd
         :enough_course_hours,
         :committed,
         :previous_yearlong_cdo_pd,
-        :replace_existing,
         :principal_approval,
         :principal_schedule_confirmed,
       ],
       criteria_score_questions_csa: [
         :csa_already_know,
+        :csa_phone_screen,
         :csa_which_grades,
         :enough_course_hours,
         :committed,
         :previous_yearlong_cdo_pd,
-        :replace_existing,
         :principal_approval,
         :principal_schedule_confirmed,
       ]

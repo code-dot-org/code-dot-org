@@ -106,7 +106,7 @@ class Ability
       can :read, UserPermission, user_id: user.id
       can [:show, :pull_review, :update], PeerReview, reviewer_id: user.id
       can :view_project_commits, User do |project_owner|
-        project_owner.id === user.id || can?(:code_review, project_owner)
+        project_owner.id == user.id || can?(:code_review, project_owner)
       end
 
       can :create, CodeReview do |code_review, project|

@@ -14,6 +14,6 @@
   "resetFailure": "Failed to reset Web Lab: {message}.",
   "toggleInspectorOn": "Inspector: Off",
   "toggleInspectorOff": "Inspector: On",
-  "troubleshootingSupport": "Please see our support article [\"Troubleshooting Web Lab problems\"]({url}) for more information.",
+  "troubleshootingSupport": "Please see our support article [\"Troubleshooting Web Lab problems\"][0] for more information.",
   "uploadError": "Upload Error"
 }
