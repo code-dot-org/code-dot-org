@@ -5,6 +5,7 @@ import {musicLabDarkTheme} from './themes';
 import {getBaseToolbox} from './toolbox';
 import {Triggers} from '../constants';
 import FieldSounds from './FieldSounds';
+import AppConfig from '../appConfig';
 
 export default class MusicBlocklyWorkspace {
   constructor() {
@@ -85,7 +86,7 @@ export default class MusicBlocklyWorkspace {
         };
       }
 
-      if (block.type === BlockTypes.TRIGGERED_AT) {
+      if ([BlockTypes.TRIGGERED_AT, BlockTypes.TRIGGERED_AT_SIMPLE].includes) {
         const id = block.getFieldValue('trigger');
         events[this.triggerIdToEvent(id)] = {
           code: Blockly.JavaScript.blockToCode(block)
@@ -135,7 +136,11 @@ export default class MusicBlocklyWorkspace {
   }
 
   resetCode() {
-    const defaultCode = require('@cdo/static/music/defaultCode.json');
+    const defaultCodeFilename =
+      AppConfig.getValue('blocks') === 'simple'
+        ? 'defaultCodeSimple'
+        : 'defaultCode';
+    const defaultCode = require(`@cdo/static/music/${defaultCodeFilename}.json`);
     Blockly.blockly_.serialization.workspaces.load(defaultCode, this.workspace);
     this.saveCode();
   }
