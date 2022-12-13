@@ -300,14 +300,6 @@ class Pd::Enrollment < ApplicationRecord
     end
   end
 
-  # Returns true if this enrollment is for a novice or apprentice facilitator (accepted this year)
-  # attending a local summer workshop as a participant to observe the facilitation techniques
-  def newly_accepted_facilitator?
-    workshop.local_summer? &&
-      workshop.school_year == APPLICATION_CURRENT_YEAR &&
-      FACILITATOR_APPLICATION_CLASS.where(user_id: user_id).first&.status == 'accepted'
-  end
-
   # Finds the application a user used for a workshop.
   # Returns the id if (a) the course listed on their application
   # matches the workshop course and user, or (b) a workshop id was
