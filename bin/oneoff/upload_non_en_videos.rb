@@ -3,7 +3,7 @@
 # and S3 as well as added to videos.csv.
 
 require 'google/apis'
-require 'google/apis/youtube_v3'
+require 'google-apis-youtube_v3'
 require 'google/api_client/client_secrets'
 require 'googleauth'
 require 'googleauth/stores/file_token_store'

@@ -43,7 +43,13 @@ gem 'redis', '~> 3.3.3'
 gem 'redis-slave-read', require: false, github: 'code-dot-org/redis-slave-read', ref: 'cfe1bd0f5cf65eee5b52560139cab133f22cb880'
 gem 'xxhash'
 
-gem 'google-api-client', '~> 0.23'
+# Google APIs. Formerly just the `google-api-client` gem
+# See https://github.com/googleapis/google-api-ruby-client/blob/main/google-api-client/OVERVIEW.md
+gem 'google-apis-core'
+
+gem 'google-apis-analytics_v3'
+gem 'google-apis-classroom_v1'
+gem 'google-apis-youtube_v3'
 
 # CSRF protection for Sinatra.
 gem 'rack_csrf'
