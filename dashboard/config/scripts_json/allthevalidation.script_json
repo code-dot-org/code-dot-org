@@ -10,7 +10,7 @@
     },
     "new_name": null,
     "family_name": "allthevalidation",
-    "serialized_at": "2022-11-30 15:43:15 UTC",
+    "serialized_at": "2022-12-03 19:34:24 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -158,6 +158,28 @@
       "level_keys": [
         "allthevalidation - template 1"
       ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Template Level (to clone)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "allthevalidation - checkUniqueTouchEvents"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "allthevalidation",
+        "activity_section.key": "fc88135b-9103-4f70-af0d-82694f7d00aa"
+      },
+      "level_keys": [
+        "allthevalidation - checkUniqueTouchEvents"
+      ]
     }
   ],
   "levels_script_levels": [
@@ -166,6 +188,18 @@
         "level.key": "allthevalidation - template 1",
         "script_level.level_keys": [
           "allthevalidation - template 1"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "allthevalidation",
+        "activity_section.key": "fc88135b-9103-4f70-af0d-82694f7d00aa"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "allthevalidation - checkUniqueTouchEvents",
+        "script_level.level_keys": [
+          "allthevalidation - checkUniqueTouchEvents"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
