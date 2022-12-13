@@ -41,6 +41,7 @@ class SubmissionStatusAssessmentsContainer extends Component {
   };
 
   render() {
+    // These allow the CSVLink to be styled as a button
     let className = classNames(
       moduleStyles.main,
       moduleStyles[Button.ButtonColor.gray],
@@ -52,6 +53,7 @@ class SubmissionStatusAssessmentsContainer extends Component {
         <div style={styles.buttonContainer}>
           <h2>{i18n.studentOverviewTableHeader()}</h2>
           <CSVLink
+            role="button"
             filename="assessments-submission-status.csv"
             data={this.props.studentExportableData}
             headers={CSV_SUBMISSION_STATUS_HEADERS}

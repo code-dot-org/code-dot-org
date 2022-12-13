@@ -78,6 +78,7 @@ class FeedbackDownload extends Component {
       onClickDownload
     } = this.props;
 
+    // These allow the CSVLink to be styled as a button
     let className = classNames(
       moduleStyles.main,
       moduleStyles[Button.ButtonColor.gray],
@@ -87,7 +88,7 @@ class FeedbackDownload extends Component {
     return (
       <div>
         <CSVLink
-          role={'button'}
+          role="button"
           filename={i18n.feedbackDownloadFileName({
             sectionName: sectionName,
             scriptName: scriptName,
