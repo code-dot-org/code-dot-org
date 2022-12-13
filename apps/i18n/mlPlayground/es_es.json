@@ -330,98 +330,88 @@
       }
     },
     "zoo": {
-      "fields": {
-        "Animal Name": {
-          "type": "categórico",
-          "id": "Nombre del Animal",
-          "description": "Nombre del animal."
-        },
-        "Hair": {
-          "type": "categórico",
-          "id": "Pelo",
-          "description": "¿El animal tiene pelo?"
-        },
-        "Feathers": {
-          "type": "categórico",
-          "id": "Plumas",
-          "description": "¿El animal tiene plumas?"
-        },
-        "Eggs": {
-          "type": "categórico",
-          "id": "Huevos",
-          "description": "¿El animal pone huevos?"
-        },
-        "Milk": {
-          "type": "categórico",
-          "id": "Leche",
-          "description": "¿El animal produce leche?"
-        },
-        "Airborne": {
-          "type": "categórico",
-          "id": "Aéreo",
-          "description": "¿El animal vuela?"
-        },
-        "Aquatic": {
-          "type": "categórico",
-          "id": "Acuático",
-          "description": "¿El animal vive en el agua?"
-        },
-        "Predator": {
-          "type": "categórico",
-          "id": "Depredador",
-          "description": "¿El animal es un depredador?"
-        },
-        "Toothed": {
-          "type": "categórico",
-          "id": "Dentado",
-          "description": "¿El animal tiene dientes?"
-        },
-        "Backbone": {
-          "type": "categórico",
-          "id": "Vertebrado",
-          "description": "¿El animal es vertebrado?"
-        },
-        "Breathes": {
-          "type": "categórico",
-          "id": "Respira",
-          "description": "¿El animal respira?"
-        },
-        "Venomous": {
-          "type": "categórico",
-          "id": "Venenoso",
-          "description": "¿El animal es venenoso?"
-        },
-        "Fins": {
-          "type": "categórico",
-          "id": "Aletas",
-          "description": "¿El animal tiene aletas?"
-        },
-        "Legs": {
-          "type": "categórico",
-          "id": "Patas",
-          "description": "¿Cuántas patas tiene el animal?"
-        },
-        "Tail": {
-          "type": "categórico",
-          "id": "Cola",
-          "description": "¿El animal tiene cola?"
-        },
-        "Domestic": {
-          "type": "categórico",
-          "id": "Doméstico",
-          "description": "¿El animal es doméstico?"
-        },
-        "Catsize": {
-          "type": "categórico",
-          "id": "Tamaño de Gato",
-          "description": "¿Es el animal de tamaño similar al de un gato?"
-        },
-        "Class": {
-          "type": "categórico",
-          "id": "Clase",
-          "description": "¿Qué tipo de animal es?"
-        }
+    "fields": {
+      "Animal Name": {
+        "id": "Nombre del Animal",
+        "description": "Nombre del animal."
+      },
+      "Hair": {
+        "id": "Pelo",
+        "description": "¿El animal tiene pelo?"
+      },
+      "Feathers": {
+        "id": "Plumas",
+        "description": "¿El animal tiene plumas?"
+      },
+      "Eggs": {
+        "id": "Huevos",
+      "description": "¿El animal pone huevos?"
+      },
+      "Milk": {
+        "id": "Leche",
+      "description": "¿El animal produce leche?"
+      },
+      "Airborne": {
+        "id": "Aéreo",
+        "description": "¿El animal vuela?"
+      },
+      "Aquatic": {
+        "id": "Acuático",
+        "description": "¿El animal vive en el agua?"
+      },
+      "Predator": {
+        "id": "Depredador",
+        "description": "¿El animal es un depredador?"
+      },
+      "Toothed": {
+        "id": "Dentado",
+        "description": "¿El animal tiene dientes?"
+      },
+      "Backbone": {
+        "id": "Vertebrado",
+        "description": "¿El animal es vertebrado?"
+      },
+      "Breathes": {
+        "id": "Respira",
+        "description": "¿El animal respira?"
+      },
+      "Venomous": {
+        "id": "Venenoso",
+        "description": "¿El animal es venenoso?"
+      },
+      "Fins": {
+        "id": "Aletas",
+        "description": "¿El animal tiene aletas?"
+      },
+      "Legs": {
+        "id": "Patas",
+        "description": "¿Cuántas patas tiene el animal?"
+      },
+      "Tail": {
+        "id": "Cola",
+        "description": "¿El animal tiene cola?"
+      },
+      "Domestic": {
+        "id": "Doméstico",
+        "description": "¿El animal es doméstico?"
+      },
+      "Catsize": {
+        "id": "Tamaño de Gato",
+        "description": "¿Es el animal de tamaño similar al de un gato?"
+      },
+      "Class": {
+        "id": "Clase",
+        "description": "¿Qué tipo de animal es?"
       }
+    },
+    "card": {
+      "description": "Un pequeño conjunto de datos de diferentes atributos de animales (si tienen pelo, plumas, dientes y más) usados para propósitos de clasificación. Casi todas las características son Yes/No excepto el Nombre del Animal, Clase y Número de Patas.",
+      "context": {
+        "potentialUses": "Hay muchas etiquetas posibles, pero una investigación fácil con la que puedes empezar es encontrar que características tienden a relacionarse con que un animal sea venenoso.",
+        "potentialMisuses": "Éste es un conjunto de datos de tan solo 100 animales, puede que haya muchos más animales que no aparezcan reflejados en los datos. ¡Usa los datos con cautela!"
+        }
+      },
+      "name": "Zoológico"
     },
     "poke_toy": {
       "fields": {
