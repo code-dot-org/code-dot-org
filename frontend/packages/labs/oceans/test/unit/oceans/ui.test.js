@@ -2,16 +2,13 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import {shallow} from 'enzyme';
 import sinon from 'sinon';
-import {
-  Button,
-  ConfirmationDialog,
-  Words,
-  wordSet,
-  Train,
-  Predict,
-  Pond,
-  Guide
-} from '@ml/oceans/ui';
+
+import Words, {wordSet} from "@ml/oceans/components/scenes/words";
+import Train from "@ml/oceans/components/scenes/train";
+import Predict from "@ml/oceans/components/scenes/predict";
+import Pond from "@ml/oceans/components/scenes/pond";
+
+import {Guide, Button, ConfirmationDialog} from '@ml/oceans/components/common';
 import guide from '@ml/oceans/models/guide';
 import soundLibrary from '@ml/oceans/models/soundLibrary';
 import train from '@ml/oceans/models/train';
@@ -19,7 +16,7 @@ import modeHelpers from '@ml/oceans/modeHelpers';
 import helpers from '@ml/oceans/helpers';
 import {setState, getState, resetState} from '@ml/oceans/state';
 import {AppMode, Modes} from '@ml/oceans/constants';
-import colors from '@ml/oceans/colors';
+import colors from '@ml/oceans/styles/colors';
 import I18n from '@ml/oceans/i18n';
 
 const DEFAULT_PROPS = {
