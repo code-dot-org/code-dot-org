@@ -4,6 +4,14 @@ const baseUrl = window.location.origin + '/musiclab';
 
 const optionsList = [
   {
+    name: 'blocks',
+    type: 'radio',
+    values: [
+      {value: 'advanced', description: 'The default set of advanced blocks.'},
+      {value: 'simple', description: 'A simple set of blocks.'}
+    ]
+  },
+  {
     name: 'instructions-position',
     type: 'radio',
     values: [
@@ -16,6 +24,14 @@ const optionsList = [
     name: 'library',
     type: 'string',
     description: 'Use a specific music library file.'
+  },
+  {
+    name: 'show-upload',
+    type: 'radio',
+    values: [
+      {value: 'false', description: "Default: don't show upload option."},
+      {value: 'true', description: 'Show upload option.'}
+    ]
   }
 ];
 
