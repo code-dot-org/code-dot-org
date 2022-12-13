@@ -804,8 +804,7 @@
         },
         "how_to_make_a_class_section_on_code_org/courseb/2022": {
           "name": "Cómo crear una sección de clase en Code.org",
-          "url": "https://www.youtube.com/watch?v=ebQY8fb2OV4",
-          "type": "Video para el docente"
+          "url": "https://youtu.be/4Wugxc80fNU"
         },
         "pair_programming/courseb/2022": {
           "name": "Programación en parejas",
@@ -912,13 +911,16 @@
           "type": "Guía de respuestas"
         },
         "all_resources/express/2022": {
-          "name": "Todos los Recursos"
+          "name": "Todos los Recursos",
+          "url": "/s/exprés-2022/recursos"
         },
         "all_standards/express/2022": {
-          "name": "Todos los Estándares"
+          "name": "Todos los Estándares",
+          "url": "/s/exprés-2022/normas"
         },
         "all_vocabulary/express/2022": {
-          "name": "Todo el Vocabulario"
+          "name": "Todo el Vocabulario",
+          "url": "/s/exprés-2022/vocab"
         },
         "debugging_guide/express/2022": {
           "name": "Guia de Depuración",
@@ -1073,15 +1075,15 @@
         },
         "all_resources/coursea/2022": {
           "name": "Todos los Recursos",
-          "url": "/s/coursoa-2022/recursos"
+          "url": "/s/cursoa-2022/recursos"
         },
         "all_standards/coursea/2022": {
           "name": "Todos los Estándares",
-          "url": "/s/coursoa-2022/normas"
+          "url": "/s/cursoa-2022/normas"
         },
         "all_vocabulary/coursea/2022": {
           "name": "Todo el Vocabulario",
-          "url": "/s/coursoa-2022/vocab"
+          "url": "/s/cursoa-2022/vocab"
         },
         "common_core_and_ngss_guidance/coursea/2022": {
           "name": "Guía de Common Core y NGSS",
@@ -1275,13 +1277,16 @@
           "type": "Guía de respuestas"
         },
         "all_resources/coursec/2022": {
-          "name": "Todos los Recursos"
+          "name": "Todos los Recursos",
+          "url": "/s/cursoc-2022/recursos"
         },
         "all_standards/coursec/2022": {
-          "name": "Todos los Estándares"
+          "name": "Todos los Estándares",
+          "url": "/s/cursoc-2022/normas"
         },
         "all_vocabulary/coursec/2022": {
-          "name": "Todo el Vocabulario"
+          "name": "Todo el Vocabulario",
+          "url": "/s/cursoc-2022/vocab"
         },
         "common_core_and_ngss_guidance/coursec/2022": {
           "name": "Guía de Common Core y NGSS",
@@ -1317,7 +1322,8 @@
           "type": "Recurso"
         },
         "virtual_lesson_modifications/coursec/2022": {
-          "name": "Modificaciones de las lecciones virtuales"
+          "name": "Modificaciones de las lecciones virtuales",
+          "url": "https://docs.google.com/document/d/1p71nZ3SqyNNVIJtQwPA_LTdcnL9RDsxIo5mQe9Gd-hQ/view"
         },
         "putting_a_stop_to_online_meanness_lesson_slides/coursec/2022": {
           "name": "Basta de maltrato en línea: diapositivas",
@@ -1330,6 +1336,7 @@
           "type": "Guía para el estudiante"
         },
         "csf_-_course_c_-_slides_2022-2023/coursec/2022": {
+          "name": "CSF - Curso C - Diapositivas 2022-2023",
           "type": "Diapositivas"
         },
         "my_robotic_friends/coursec/2022": {
@@ -1853,13 +1860,16 @@
           "type": "Diapositivas"
         },
         "all_resources_5/csd/2022": {
-          "name": "Todos los Recursos"
+          "name": "Todos los Recursos",
+          "url": "/s/csd1-2022/recursos"
         },
         "all_standards_5/csd/2022": {
-          "name": "Todos los Estándares"
+          "name": "Todos los Estándares",
+          "url": "/s/csd1-2022/normas"
         },
         "all_vocabulary_5/csd/2022": {
-          "name": "Todo el Vocabulario"
+          "name": "Todo el Vocabulario",
+          "url": "/s/csd1-2022/vocabulario"
         },
         "aluminum_boats/csd/2022": {
           "name": "Barcos de aluminio",
@@ -2045,6 +2055,7 @@
           "type": "Guía de Actividades"
         },
         "intro_to_problem_solving_newspapers_/csd/2022": {
+          "name": "Introducción a la Resolución de Problemas (Periódicos)",
           "url": "https://docs.google.com/presentation/d/1ArHAwZQQ9ptcWZQgjQKbN8N3uRjFphIZvDRoiqPLEuI/template/preview",
           "type": "Diapositivas"
         },
@@ -2059,6 +2070,7 @@
           "type": "Guía de Actividades"
         },
         "intro_to_problem_solving_spaghetti_/csd/2022": {
+          "name": "Introducción a la Resolución de Problemas (Espagueti)",
           "url": "https://docs.google.com/presentation/d/1v2LAJj8kTaRiuwCREkTpaoEWpw469czx3FaClScE2vQ/template/preview",
           "type": "Diapositivas"
         },
@@ -2077,6 +2089,8 @@
           "type": "Guía de Actividades"
         },
         "intro_to_problem_solving_paper_towels_/csd/2022": {
+          "name": "Introducción a la Resolución de Problemas (Torres de Papel)",
+          "url": "https://docs.google.com/presentation/d/13t_CP4Fx2s_h-PfJ2Wi4TA5ay_8IQHap4NO8Ds892cA/template/preview",
           "type": "Diapositivas"
         },
         "exploring_problem_solving_-_animal_theme/csd/2022": {
@@ -2095,6 +2109,8 @@
           "type": "Recurso"
         },
         "exploring_problem_solving_animals_/csd/2022": {
+          "name": "Explorando la Resolución de Problemas (Animales)",
+          "url": "https://docs.google.com/presentation/d/1QGTKTq86hJ8TLZl3mc4_WucYHE4sHkgSVp9Bif56Sxk/template/preview",
           "type": "Diapositivas"
         },
         "exploring_problem_solving_-_games_theme/csd/2022": {
@@ -2108,6 +2124,8 @@
           "type": "Guía de Actividades"
         },
         "exploring_problem_solving_games_/csd/2022": {
+          "name": "Exploración de la Resolución de Problemas (Juegos)",
+          "url": "https://docs.google.com/presentation/d/1u_-Gw3xJhfsOffpGtqyyKbqvjFNoLcAuozHh10enO0A/template/preview",
           "type": "Diapositivas"
         },
         "csd_guide_to_debugging/csd/2022": {
@@ -2575,16 +2593,20 @@
           "type": "Diapositivas"
         },
         "all_code/csd/2022": {
-          "name": "Todo el Código"
+          "name": "Todo el Código",
+          "url": "/s/csd2-2022/código"
         },
         "all_resources/csd/2022": {
-          "name": "Todos los Recursos"
+          "name": "Todos los Recursos",
+          "url": "/s/csd2-2022/recursos"
         },
         "all_standards/csd/2022": {
-          "name": "Todos los Estándares"
+          "name": "Todos los Estándares",
+          "url": "/s/csd2-2022/normas"
         },
         "all_vocabulary/csd/2022": {
-          "name": "Todo el Vocabulario"
+          "name": "Todo el Vocabulario",
+          "url": "/s/csd2-2022/vocabulario"
         },
         "exploring_web_pages/csd/2022": {
           "name": "Exploración de Páginas Web",
@@ -2598,6 +2620,7 @@
         },
         "exploring_web_pages_2/csd/2022": {
           "name": "Exploración de Páginas Web",
+          "url": "https://docs.google.com/presentation/d/1rNhplmXtb_pkCBQ9PwLE7-Fb30LPr9QDjMbYV5m0L38/template/preview",
           "type": "Diapositivas"
         },
         "exemplar_text_website/csd/2022": {
@@ -2622,6 +2645,7 @@
         },
         "intro_to_html/csd/2022": {
           "name": "Introducción a HTML",
+          "url": "https://docs.google.com/presentation/d/11PRWsqomAx0svoQg7nZIFNHrw0X9LqPS7kACX6kTMZY/template/preview",
           "type": "Diapositivas"
         },
         "headings_and_paragraphs/csd/2022": {
@@ -2641,6 +2665,7 @@
         },
         "headings/csd/2022": {
           "name": "Encabezados",
+          "url": "https://docs.google.com/presentation/d/1FKRGMP6kV3oZnz00kQFjLpNEVgyylQ2gFn5jP0qopeE/template/preview",
           "type": "Diapositivas"
         },
         "formatting_html/csd/2022": {
@@ -2680,10 +2705,12 @@
         },
         "mini-project_html_web_page/csd/2022": {
           "name": "Mini-proyecto: Página Web HTML",
+          "url": "https://docs.google.com/presentation/d/1-EoECfuGk508F5mDynPSIoBs239zCYXyD9RNCESZ0Bw/template/preview",
           "type": "Diapositivas"
         },
         "digital_footprint/csd/2022": {
           "name": "Huella Digital",
+          "url": "https://docs.google.com/presentation/d/1cA4I8OgJrqm-Bz8IZFVsPDjj_IkiT4S6vlu54pGKarA/template/preview",
           "type": "Diapositivas"
         },
         "social_sleuth/csd/2022": {
@@ -2718,6 +2745,7 @@
         },
         "styling_text_with_css/csd/2022": {
           "name": "Estilo de Texto con CSS",
+          "url": "https://docs.google.com/presentation/d/1BtifQt5gCAdI3wyzMpW0sdNdnA-6hVk3rdcNETG1oP0/template/preview",
           "type": "Diapositivas"
         },
         "peer_review_-_your_personal_style/csd/2022": {
@@ -2747,6 +2775,7 @@
         },
         "mini-project_your_personal_style/csd/2022": {
           "name": "Mini-Proyecto: Tu estilo personal",
+          "url": "https://docs.google.com/presentation/d/1LX6NzOZWylOLKPKoPm-SFKdKj6_raNSvQv6MugarH9k/template/preview",
           "type": "Diapositivas"
         },
         "creative_commons_overview/csd/2022": {
@@ -2766,6 +2795,7 @@
         },
         "intellectual_property/csd/2022": {
           "name": "Propiedad Intelectual",
+          "url": "https://docs.google.com/presentation/d/1-pZjNq_Yohai6HgWHZQUydrKU3LwqkENAZwJ-JBiRPM/template/preview",
           "type": "Diapositivas"
         },
         "creative_commons_search/csd/2022": {
@@ -2780,6 +2810,7 @@
         },
         "using_images/csd/2022": {
           "name": "Usando Imágenes",
+          "url": "https://docs.google.com/presentation/d/1q_u9skUeHGyRM5T9xbXAJBKnbj5-heI-0nsnySZNnEE/template/preview",
           "type": "Diapositivas"
         },
         "define_your_web_page/csd/2022": {
@@ -2794,6 +2825,7 @@
         },
         "websites_for_expression/csd/2022": {
           "name": "Sitios Web para la Expresión",
+          "url": "https://docs.google.com/presentation/d/1xULQRcqeI288kAZoPX0_oeemk5u5VKHc1G0yAGxo9Ao/template/preview",
           "type": "Diapositivas"
         },
         "body_styling/csd/2022": {
@@ -2808,6 +2840,7 @@
         },
         "styling_elements_with_css/csd/2022": {
           "name": "Estilos de Texto con CSS",
+          "url": "https://docs.google.com/presentation/d/1zbqMiuqfYAuz21chPD4qt-GceNA0T3wmfyl8SCt4jEs/template/preview",
           "type": "Diapositivas"
         },
         "personal_web_page_-_prepare/csd/2022": {
@@ -2821,6 +2854,8 @@
           "type": "Ejemplo"
         },
         "your_web_page_prepare/csd/2022": {
+          "name": "Tu Página Web: Preparación",
+          "url": "https://docs.google.com/presentation/d/1jVpNKzVN4kpLRU-QPYWFiYjLmv4GMZVzmXQV_oMLhws/template/preview",
           "type": "Diapositivas"
         },
         "extra_code_in_challenge_levels/csd/2022": {
@@ -2870,6 +2905,7 @@
         },
         "project_-_personal_web_page/csd/2022": {
           "name": "Proyecto - Página Web Personal",
+          "url": "https://docs.google.com/presentation/d/1RaUMZ1CxWmklck8g70oNcZmzUbqOaYFAkRFGR9JdUF8/template/preview",
           "type": "Diapositivas"
         },
         "websites_for_a_purpose/csd/2022": {
@@ -2884,6 +2920,7 @@
         },
         "websites_for_a_purpose_2/csd/2022": {
           "name": "Sitios web con un propósito",
+          "url": "https://docs.google.com/presentation/d/1MIFVttm0GFmNx58oducL80wvbINe9kxoLxzm3eNgw_o/template/preview",
           "type": "Diapositivas"
         },
         "video_managing_disagreement/csd/2022": {
@@ -2908,6 +2945,7 @@
         },
         "team_problem_solving/csd/2022": {
           "name": "Resolución de Problemas en Equipo",
+          "url": "https://docs.google.com/presentation/d/1BDdQ3ty6ZQSJHgG8Vrg-YHfghggET9xEOEO4_jT6N5E/template/preview",
           "type": "Diapositivas"
         },
         "internet_scavenger_hunt/csd/2022": {
@@ -2932,6 +2970,7 @@
         },
         "sources_and_research/csd/2022": {
           "name": "Fuentes e Investigación",
+          "url": "https://docs.google.com/presentation/d/1xEET7femGEeUi-pN8WmfwEkrRe69gsAEXEl-UZyfamE/template/preview",
           "type": "Diapositivas"
         },
         "classes/csd/2022": {
@@ -2941,6 +2980,7 @@
         },
         "css_classes/csd/2022": {
           "name": "Clases CSS",
+          "url": "https://docs.google.com/presentation/d/1dri4RfbdQypp4Lp0xrWCcyv7imvTithrDFcJA_i4RkM/template/preview",
           "type": "Diapositivas"
         },
         "plan_a_multi-page_website/csd/2022": {
@@ -2964,6 +3004,7 @@
         },
         "planning_a_multi-page_site/csd/2022": {
           "name": "Planificación de un Sitio Multi-páginas",
+          "url": "https://docs.google.com/presentation/d/1BPEWmTePdmhX1kiJnyWDOIf0x6pRllvQiv6cNaGpZCU/template/preview",
           "type": "Diapositivas"
         },
         "hyperlinks/csd/2022": {
@@ -2973,10 +3014,12 @@
         },
         "linking_pages/csd/2022": {
           "name": "Enlaces entre páginas",
+          "url": "https://docs.google.com/presentation/d/15R24kMhA1ows-bPCVV3zk-4G-DQUd1gfUbnSly17kiE/template/preview",
           "type": "Diapositivas"
         },
         "project_-_website_for_a_purpose/csd/2022": {
           "name": "Proyecto - Sitio web con un propósito",
+          "url": "https://docs.google.com/presentation/d/1YdcS3687xoe02HW_582S9Qh3nEj6H7SSrJQt-qSb7KE/template/preview",
           "type": "Diapositivas"
         },
         "peer_review_-_final_personal_website/csd/2022": {
@@ -3006,6 +3049,7 @@
         },
         "peer_review_and_final_touches/csd/2022": {
           "name": "Revisión de Compañeros y Ajustes Finales",
+          "url": "https://docs.google.com/presentation/d/1XouoXPdxXi99eegR5H42vBx_gp9fhx4914QBBPHtHxk/template/preview",
           "type": "Diapositivas"
         },
         "all_code_2/csd/2022": {

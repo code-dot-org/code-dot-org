@@ -1677,6 +1677,7 @@ is:
             required:
               display_name: Yfirlit
         dance-2019:
+          title: Danspartý
           description_short: Með Katy Perry, Shawn Mendes, Panic! At The Disco, Lil Nas X, Jonas Brothers, Nicki Minaj og 34 til viðbótar!
         k5-onlinepd-2019:
           lesson_groups:
@@ -1689,6 +1690,7 @@ is:
             k5_next_steps:
               display_name: Næstu skref
         dance-extras-2019:
+          title: Halda áfram að dansa
           description: Halda áfram eftir fyrstu klukkustundina með fleiri hugmyndir að verkefnum.
           student_description: Halda áfram eftir fyrstu klukkustundina með fleiri hugmyndir að verkefnum.
         csp4-preview:
@@ -2905,6 +2907,15 @@ is:
               display_name: Innihald
             lessonGroup-5:
               display_name: Annað kennsluefni
+        csa2-2023:
+          lessons:
+            lesson-4:
+              name: Breytur
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Innihald
+            lessonGroup-4:
+              display_name: Annað kennsluefni
         csd4-2023:
           lesson_groups:
             lessonGroup-2:
@@ -2991,3 +3002,7 @@ is:
               display_name: 'Eining 10: Netöryggi og mikilvægi þess'
             lessonGroup-2:
               display_name: Könnun eftir námskeið
+        devices-2022:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: 'Kafli 2: Smíði frumgerða vélbúnaðar'

@@ -312,3 +312,7 @@ my:
             "'sand'": သဲ
       craft_placeTorch:
         text: မီးတိုင်ကိုထားပါ
+      storylab_setForegroundEffect2:
+        options:
+          EFFECT:
+            '"rain"': မိုးရွာသည်

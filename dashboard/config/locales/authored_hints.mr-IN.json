@@ -1100,7 +1100,7 @@
         "courseC_starWars_loops8_copy": {
           "course_starWars_loops8_a": "या समस्येचा छोट्या भागांमध्ये विचार करण्याचा प्रयत्न करा. वेळ घ्या. तुम्ही पहिल्याच प्रयत्नात सोडवण्याची गरज नाही!",
           "course_starWars_loops8_b": "या कोड्याच्या पहिल्या भागाचा जिना पायरी कोडे असा विचार करा. तुम्ही ते पूर्वी कसे सोडवले आहे?",
-          "course_starWars_loops8_c": "हा मार्ग पहा.\n\n![](https://images.code.org/7d696dd3b1e6984a1d6041f366d5c96b-image-1510198804955.37.04.png)"
+          "course_starWars_loops8_c": "हा मार्ग पहा.\n\n[][0]"
         },
         "courseC_starWars_loops8_dani": {
           "course_starWars_loops8_a": "या समस्येचा छोट्या भागांमध्ये विचार करण्याचा प्रयत्न करा. वेळ घ्या. तुम्ही पहिल्याच प्रयत्नात सोडवण्याची गरज नाही!",
@@ -2281,20 +2281,20 @@
           "prompt_example": "<xml>\n  <block type=\"when_run\" deletable=\"false\">\n    <next>\n      <block type=\"gamelab_setPrompt\">\n        <value name=\"QUESTION\">\n          <block type=\"text\">\n            <title name=\"TEXT\">What is your name?</title>\n          </block>\n        </value>\n        <value name=\"VAR\">\n          <block type=\"variables_get\" can_disconnect_from_parent=\"false\">\n            <title name=\"VAR\">name</title>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block>\n  <block type=\"gamelab_whenPromptAnswered\">\n    <value name=\"VAR\">\n      <block type=\"variables_get\" can_disconnect_from_parent=\"false\">\n        <title name=\"VAR\">name</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_printText\">\n        <value name=\"TEXT\">\n          <block type=\"gamelab_textJoin\">\n            <title name=\"TEXT1\">Hello, </title>\n            <value name=\"TEXT2\">\n              <block type=\"gamelab_textVariableJoin\">\n                <title name=\"VAR\">name</title>\n                <value name=\"TEXT2\">\n                  <block type=\"gamelab_textJoin\">\n                    <title name=\"TEXT1\">!</title>\n                  </block>\n                </value>\n              </block>\n            </value>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block>\n</xml>"
         },
         "helloworld_animals_backgrounds": {
-          "hello_world_background": "तुम्ही `क्लिक केल्यावर` इव्हेंट ब्लॉकखाली `सेट बॅकग्राउंड` ब्लॉक कनेक्ट करून पार्श्वभूमी बदलू शकता:\n\n\\[ब्लॉकली ब्लॉक[0]"
+          "hello_world_background": "तुम्ही `क्लिक केल्यावर` इव्हेंट ब्लॉकखाली `सेट बॅकग्राउंड` ब्लॉक कनेक्ट करून पार्श्वभूमी बदलू शकता:\n\n<xml><block type=\"gamelab_spriteClicked\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"cuteanimals_hippo\"</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_setBackgroundImageAs\">\n        <title name=\"IMG\">\"gradient_30\"</title>\n      </block>\n    </next>\n  </block>\n</xml>"
         },
         "helloworld_animals_behaviors": {
-          "storyboard_behavior_example": "_टीप:_ स्प्राईटला वर्तन देण्यासाठी, तुम्हाला 'स्प्राईट बिगिन्स' ब्लॉक वापरणे आवश्यक आहे, जसे की 'उजवीकडे फिरणे'.\n\n\\[ब्लॉकली ब्लॉक[0]"
+          "storyboard_behavior_example": "_टीप:_ स्प्राईटला वर्तन देण्यासाठी, तुम्हाला 'स्प्राईट बिगिन्स' ब्लॉक वापरणे आवश्यक आहे, जसे की 'उजवीकडे फिरणे'.\n\n<xml><block type=\"gamelab_addBehaviorSimple\">\n            <value name=\"SPRITE\">\n              <block type=\"gamelab_allSpritesWithAnimation\">\n                <title name=\"ANIMATION\">\"cuteanimals_rooster_hello\"</title>\n              </block>\n            </value>\n            <value name=\"BEHAVIOR\">\n              <block type=\"gamelab_behavior_get\">\n                <mutation></mutation>\n                <title name=\"VAR\" id=\"spinning right\">spinning right</title>\n              </block>\n              </value></block></xml>"
         },
         "helloworld_animals_click": {
           "hw_no_changes": "तुम्हाला या स्तरावरील कोणताही कोड बदलण्याची आवश्यकता नाही.",
           "hw_click_sprites": "प्रोग्रॅम चालू असताना स्प्राईट्सवर क्लिक करा."
         },
         "helloworld_animals_costumes": {
-          "hello_world_costumes": "`क्लिक केल्यावर` इव्हेंट ब्लॉकखाली `चेंज कॉस्च्युम` ब्लॉक कनेक्ट करण्याचा प्रयत्न करा.\n\n\\[ब्लॉकली ब्लॉक[0]"
+          "hello_world_costumes": "`क्लिक केल्यावर` इव्हेंट ब्लॉकखाली `चेंज कॉस्च्युम` ब्लॉक कनेक्ट करण्याचा प्रयत्न करा.\n\n<xml><block type=\"gamelab_spriteClicked\" deletable=\"false\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\" can_disconnect_from_parent=\"false\">\n        <title name=\"ANIMATION\">\"\"cuteanimals_sheep\"</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_setAnimation\">\n        <title name=\"ANIMATION\">\"\"cuteanimals_sheep\"</title>\n        <value name=\"THIS\">\n          <block type=\"gamelab_allSpritesWithAnimation\">\n            <title name=\"ANIMATION\">\"\"cuteanimals_goat_hello\"</title>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block>\n</xml>"
         },
         "helloworld_animals_events": {
-          "hello_world_click": "इव्हेंट ब्लॉकच्या खाली `से` ब्लॉक कनेक्ट करा.\n\n\\[ब्लॉकली ब्लॉक[0]"
+          "hello_world_click": "इव्हेंट ब्लॉकच्या खाली `से` ब्लॉक कनेक्ट करा.\n\n<xml><block type=\"gamelab_spriteClicked\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"cuteanimals_seahorse\"</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_spriteSay\">\n        <title name=\"SPEECH\">Hello, ocean!</title>\n        <value name=\"SPRITE\">\n          <block type=\"gamelab_allSpritesWithAnimation\">\n            <title name=\"ANIMATION\">\"cuteanimals_seahorse\"</title>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block></xml>"
         },
         "helloworld_animals_location": {
           "location_pin_hint": "स्प्राईटचे स्थान बदलण्यासाठी, स्थान ब्लॉकवरील पिनवर क्लिक करा, त्यानंतर तुम्हाला ते कुठे जायचे आहे त्यावर क्लिक करा.\n\n![](https://images.code.org/e3267d2b50f754befc63744be14287ac-image-1633360873408.gif)"
@@ -2306,95 +2306,95 @@
           "hello-world-first-solution-bear": "अस्वलाला काहीतरी सांगण्यासाठी, याप्रमाणे कोडचे ब्लॉक्स जोडा:\n\n\\[ब्लॉकली ब्लॉक[0]"
         },
         "helloworld_animals_sizes": {
-          "storyboard_setProp": "स्प्राईटचा आकार फक्त एकदा सेट करण्यासाठी, तुम्ही हा ब्लॉक वापरू शकता:\n\n\\[ब्लॉकली ब्लॉक[0]",
-          "storyboard_changePropBy": "जर तुम्हाला स्प्राईटचा आकार वारंवार (इव्हेंटसह) बदलायचा असेल, तर हा ब्लॉक वापरा:\n\n\\[ब्लॉकली ब्लॉक[0]"
+          "storyboard_setProp": "स्प्राईटचा आकार फक्त एकदा सेट करण्यासाठी, तुम्ही हा ब्लॉक वापरू शकता:\n\n<xml><block type=\"gamelab_setProp\">\n      <title name=\"PROPERTY\">\"scale\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"cuteanimals_tiger\"</title>\n        </block>\n      </value>\n      <value name=\"VAL\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">50</title>\n        </block>\n      </value>\n    </block></xml>",
+          "storyboard_changePropBy": "जर तुम्हाला स्प्राईटचा आकार वारंवार (इव्हेंटसह) बदलायचा असेल, तर हा ब्लॉक वापरा:\n\n<xml><block type=\"gamelab_changePropBy\">\n      <title name=\"PROPERTY\">\"scale\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"cuteanimals_cheetah_hello\"</title>\n        </block>\n      </value>\n      <value name=\"VAL\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">10</title>\n        </block>\n      </value>\n    </block></xml>"
         },
         "helloworld_emoji_backgrounds": {
-          "hello_world_background": "तुम्ही `क्लिक केल्यावर` इव्हेंट ब्लॉकखाली `सेट बॅकग्राउंड` ब्लॉक कनेक्ट करून पार्श्वभूमी बदलू शकता:\n\n\\[ब्लॉकली ब्लॉक[0]"
+          "hello_world_background": "तुम्ही `क्लिक केल्यावर` इव्हेंट ब्लॉकखाली `सेट बॅकग्राउंड` ब्लॉक कनेक्ट करून पार्श्वभूमी बदलू शकता:\n\n<xml><block type=\"gamelab_spriteClicked\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"emoji_35_1\"</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_setBackgroundImageAs\">\n        <title name=\"IMG\">\"gradient_17_1\"</title>\n      </block>\n    </next>\n  </block>\n</xml>"
         },
         "helloworld_emoji_behaviors": {
-          "storyboard_behavior_example": "_टीप:_ स्प्राईटला वर्तन देण्यासाठी, तुम्हाला 'स्प्राईट बिगिन्स' ब्लॉक वापरणे आवश्यक आहे, जसे की 'उजवीकडे फिरणे'.\n\n\\[ब्लॉकली ब्लॉक[0]"
+          "storyboard_behavior_example": "_टीप:_ स्प्राईटला वर्तन देण्यासाठी, तुम्हाला 'स्प्राईट बिगिन्स' ब्लॉक वापरणे आवश्यक आहे, जसे की 'उजवीकडे फिरणे'.\n\n<xml><block type=\"gamelab_addBehaviorSimple\">\n            <value name=\"SPRITE\">\n              <block type=\"gamelab_allSpritesWithAnimation\">\n                <title name=\"ANIMATION\">\"emoji_05_1\"</title>\n              </block>\n            </value>\n            <value name=\"BEHAVIOR\">\n              <block type=\"gamelab_behavior_get\">\n                <mutation></mutation>\n                <title name=\"VAR\" id=\"spinning right\">spinning right</title>\n              </block>\n              </value></block></xml>"
         },
         "helloworld_emoji_click": {
           "hw_no_changes": "तुम्हाला या स्तरावरील कोणताही कोड बदलण्याची आवश्यकता नाही.",
           "hw_click_sprites": "प्रोग्रॅम चालू असताना स्प्राईट्सवर क्लिक करा."
         },
         "helloworld_emoji_costumes": {
-          "hello_world_costumes": "`क्लिक केल्यावर` इव्हेंट ब्लॉकखाली `चेंज कॉस्च्युम` ब्लॉक कनेक्ट करण्याचा प्रयत्न करा.\n\n\\[ब्लॉकली ब्लॉक[0]"
+          "hello_world_costumes": "`क्लिक केल्यावर` इव्हेंट ब्लॉकखाली `चेंज कॉस्च्युम` ब्लॉक कनेक्ट करण्याचा प्रयत्न करा.\n\n<xml><block type=\"gamelab_spriteClicked\" deletable=\"false\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\" can_disconnect_from_parent=\"false\">\n        <title name=\"ANIMATION\">\"emoji_18_1\"</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_setAnimation\">\n        <title name=\"ANIMATION\">\"emoji_25_1\"</title>\n        <value name=\"THIS\">\n          <block type=\"gamelab_allSpritesWithAnimation\">\n            <title name=\"ANIMATION\">\"emoji_18_1\"</title>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block>\n</xml>"
         },
         "helloworld_emoji_events": {
-          "hello_world_click": "इव्हेंट ब्लॉकच्या खाली `से` ब्लॉक कनेक्ट करा.\n\n\\[ब्लॉकली ब्लॉक[0]"
+          "hello_world_click": "इव्हेंट ब्लॉकच्या खाली `से` ब्लॉक कनेक्ट करा.\n\n<xml><block type=\"gamelab_spriteClicked\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"emoji_06_1\"</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_spriteSay\">\n        <title name=\"SPEECH\">Look at that!</title>\n        <value name=\"SPRITE\">\n          <block type=\"gamelab_allSpritesWithAnimation\">\n            <title name=\"ANIMATION\">\"emoji_06_1\"</title>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block></xml>"
         },
         "helloworld_emoji_location": {
           "location_pin_hint": "स्प्राईटचे स्थान बदलण्यासाठी, स्थान ब्लॉकवरील पिनवर क्लिक करा, त्यानंतर तुम्हाला ते कुठे जायचे आहे त्यावर क्लिक करा.\n\n![](https://images.code.org/e3267d2b50f754befc63744be14287ac-image-1633360873408.gif)"
         },
         "helloworld_emoji_multi": {
-          "storyboard_costume": "प्रत्येक स्प्राईटसाठी पोशाख जुळत असल्याचे सुनिश्चित करा.\n\\[ब्लॉकली ब्लॉक[0]"
+          "storyboard_costume": "प्रत्येक स्प्राईटसाठी पोशाख जुळत असल्याचे सुनिश्चित करा.\n<xml><block type=\"gamelab_spriteSay\">\n      <title name=\"SPEECH\">Look at me!</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"emoji_14_1\"</title>\n        </block>\n      </value>\n    </block></xml>"
         },
         "helloworld_emoji_say": {
           "hello-world-first-solution-emoji": "इमोजीला काहीतरी सांगण्यासाठी, याप्रमाणे कोडचे ब्लॉक कनेक्ट करा:\n\n\\[ब्लॉकली ब्लॉक[0]"
         },
         "helloworld_emoji_sizes": {
-          "storyboard_setProp": "स्प्राईटचा आकार फक्त एकदा सेट करण्यासाठी, तुम्ही हा ब्लॉक वापरू शकता:\n\n\\[ब्लॉकली ब्लॉक[0]",
-          "storyboard_changePropBy": "जर तुम्हाला स्प्राईटचा आकार वारंवार (इव्हेंटसह) बदलायचा असेल, तर हा ब्लॉक वापरा:\n\n\\[ब्लॉकली ब्लॉक[0]"
+          "storyboard_setProp": "स्प्राईटचा आकार फक्त एकदा सेट करण्यासाठी, तुम्ही हा ब्लॉक वापरू शकता:\n\n<xml><block type=\"gamelab_setProp\">\n      <title name=\"PROPERTY\">\"scale\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"emoji_17_1\"</title>\n        </block>\n      </value>\n      <value name=\"VAL\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">50</title>\n        </block>\n      </value>\n    </block></xml>",
+          "storyboard_changePropBy": "जर तुम्हाला स्प्राईटचा आकार वारंवार (इव्हेंटसह) बदलायचा असेल, तर हा ब्लॉक वापरा:\n\n<xml><block type=\"gamelab_changePropBy\">\n      <title name=\"PROPERTY\">\"scale\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"emoji_33_1\"</title>\n        </block>\n      </value>\n      <value name=\"VAL\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">10</title>\n        </block>\n      </value>\n    </block></xml>"
         },
         "helloworld_food_backgrounds": {
-          "hello_world_background": "तुम्ही `क्लिक केल्यावर` इव्हेंट ब्लॉकखाली `सेट बॅकग्राउंड` ब्लॉक कनेक्ट करून पार्श्वभूमी बदलू शकता:\n\n\\[ब्लॉकली ब्लॉक[0]"
+          "hello_world_background": "तुम्ही `क्लिक केल्यावर` इव्हेंट ब्लॉकखाली `सेट बॅकग्राउंड` ब्लॉक कनेक्ट करून पार्श्वभूमी बदलू शकता:\n\n<xml><block type=\"gamelab_spriteClicked\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"face_avocado_1\"</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_setBackgroundImageAs\">\n        <title name=\"IMG\">\"gradient_25_1\"</title>\n      </block>\n    </next>\n  </block>\n</xml>"
         },
         "helloworld_food_behaviors": {
-          "storyboard_behavior_example": "_टीप:_ स्प्राईटला वर्तन देण्यासाठी, तुम्हाला 'स्प्राईट बिगिन्स' ब्लॉक वापरणे आवश्यक आहे, जसे की 'उजवीकडे फिरणे'.\n\n\\[ब्लॉकली ब्लॉक[0]"
+          "storyboard_behavior_example": "_टीप:_ स्प्राईटला वर्तन देण्यासाठी, तुम्हाला 'स्प्राईट बिगिन्स' ब्लॉक वापरणे आवश्यक आहे, जसे की 'उजवीकडे फिरणे'.\n\n<xml><block type=\"gamelab_addBehaviorSimple\">\n            <value name=\"SPRITE\">\n              <block type=\"gamelab_allSpritesWithAnimation\">\n                <title name=\"ANIMATION\">\"face_burger_1\"</title>\n              </block>\n            </value>\n            <value name=\"BEHAVIOR\">\n              <block type=\"gamelab_behavior_get\">\n                <mutation></mutation>\n                <title name=\"VAR\" id=\"spinning right\">spinning right</title>\n              </block>\n              </value></block></xml>"
         },
         "helloworld_food_click": {
           "hw_no_changes": "तुम्हाला या स्तरावरील कोणताही कोड बदलण्याची आवश्यकता नाही.",
           "hw_click_sprites": "प्रोग्रॅम चालू असताना स्प्राईट्सवर क्लिक करा."
         },
         "helloworld_food_costumes": {
-          "hello_world_costumes": "`क्लिक केल्यावर` इव्हेंट ब्लॉकखाली `चेंज कॉस्च्युम` ब्लॉक कनेक्ट करण्याचा प्रयत्न करा.\n\n\\[ब्लॉकली ब्लॉक[0]"
+          "hello_world_costumes": "`क्लिक केल्यावर` इव्हेंट ब्लॉकखाली `चेंज कॉस्च्युम` ब्लॉक कनेक्ट करण्याचा प्रयत्न करा.\n\n<xml><block type=\"gamelab_spriteClicked\" deletable=\"false\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\" can_disconnect_from_parent=\"false\">\n        <title name=\"ANIMATION\">\"face_burger_1\"</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_setAnimation\">\n        <title name=\"ANIMATION\">\"face_taco_1\"</title>\n        <value name=\"THIS\">\n          <block type=\"gamelab_allSpritesWithAnimation\">\n            <title name=\"ANIMATION\">\"face_burger_1\"</title>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block>\n</xml>"
         },
         "helloworld_food_events": {
-          "hello_world_click": "इव्हेंट ब्लॉकच्या खाली `से` ब्लॉक कनेक्ट करा.\n\n\\[ब्लॉकली ब्लॉक[0]"
+          "hello_world_click": "इव्हेंट ब्लॉकच्या खाली `से` ब्लॉक कनेक्ट करा.\n\n<xml><block type=\"gamelab_spriteClicked\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"face_burger_1\"</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_spriteSay\">\n        <title name=\"SPEECH\">Hello, world!</title>\n        <value name=\"SPRITE\">\n          <block type=\"gamelab_allSpritesWithAnimation\">\n            <title name=\"ANIMATION\">\"face_burger_1\"</title>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block></xml>"
         },
         "helloworld_food_location": {
           "location_pin_hint": "स्प्राईटचे स्थान बदलण्यासाठी, स्थान ब्लॉकवरील पिनवर क्लिक करा, त्यानंतर तुम्हाला ते कुठे जायचे आहे त्यावर क्लिक करा.\n\n![](https://images.code.org/e3267d2b50f754befc63744be14287ac-image-1633360873408.gif)"
         },
         "helloworld_food_multi": {
-          "storyboard_costume": "प्रत्येक स्प्राईटसाठी पोशाख जुळत असल्याचे सुनिश्चित करा.\n\\[ब्लॉकली ब्लॉक[0]"
+          "storyboard_costume": "प्रत्येक स्प्राईटसाठी पोशाख जुळत असल्याचे सुनिश्चित करा.\n<xml><block type=\"gamelab_spriteSay\">\n      <title name=\"SPEECH\">Hello, broccoli!</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"face_carrot_1\"</title>\n        </block>\n      </value>\n    </block></xml>"
         },
         "helloworld_food_say": {
           "hello-world-first-solution-pizza": "पिझ्झा बनवण्यासाठी हे सांगण्यासाठी, कोडचे ब्लॉक्स यासारखे कनेक्ट करा:\n\n[ब्लॉकली ब्लॉक] [0]"
         },
         "helloworld_food_sizes": {
-          "storyboard_setProp": "स्प्राईटचा आकार फक्त एकदा सेट करण्यासाठी, तुम्ही हा ब्लॉक वापरू शकता:\n\n\\[ब्लॉकली ब्लॉक[0]",
-          "storyboard_changePropBy": "जर तुम्हाला स्प्राईटचा आकार वारंवार (इव्हेंटसह) बदलायचा असेल, तर हा ब्लॉक वापरा:\n\n\\[ब्लॉकली ब्लॉक[0]"
+          "storyboard_setProp": "स्प्राईटचा आकार फक्त एकदा सेट करण्यासाठी, तुम्ही हा ब्लॉक वापरू शकता:\n\n<xml><block type=\"gamelab_setProp\">\n      <title name=\"PROPERTY\">\"scale\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"face_strawberry_1\"</title>\n        </block>\n      </value>\n      <value name=\"VAL\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">50</title>\n        </block>\n      </value>\n    </block></xml>",
+          "storyboard_changePropBy": "जर तुम्हाला स्प्राईटचा आकार वारंवार (इव्हेंटसह) बदलायचा असेल, तर हा ब्लॉक वापरा:\n\n<xml><block type=\"gamelab_changePropBy\">\n      <title name=\"PROPERTY\">\"scale\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"face_strawberry_1\"</title>\n        </block>\n      </value>\n      <value name=\"VAL\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">10</title>\n        </block>\n      </value>\n    </block></xml>"
         },
         "helloworld_retro_backgrounds": {
-          "hello_world_background": "तुम्ही `क्लिक केल्यावर` इव्हेंट ब्लॉकखाली `सेट बॅकग्राउंड` ब्लॉक कनेक्ट करून पार्श्वभूमी बदलू शकता:\n\n\\[ब्लॉकली ब्लॉक[0]"
+          "hello_world_background": "तुम्ही `क्लिक केल्यावर` इव्हेंट ब्लॉकखाली `सेट बॅकग्राउंड` ब्लॉक कनेक्ट करून पार्श्वभूमी बदलू शकता:\n\n<xml><block type=\"gamelab_spriteClicked\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"retroship_21\"</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_setBackgroundImageAs\">\n        <title name=\"IMG\">\"background_landscape11_1\"</title>\n      </block>\n    </next>\n  </block>\n</xml>"
         },
         "helloworld_retro_behaviors": {
-          "storyboard_behavior_example": "_टीप:_ स्प्राईटला वर्तन देण्यासाठी, तुम्हाला 'स्प्राईट बिगिन्स' ब्लॉक वापरणे आवश्यक आहे, जसे की 'उजवीकडे फिरणे'.\n\n\\[ब्लॉकली ब्लॉक[0]"
+          "storyboard_behavior_example": "_टीप:_ स्प्राईटला वर्तन देण्यासाठी, तुम्हाला 'स्प्राईट बिगिन्स' ब्लॉक वापरणे आवश्यक आहे, जसे की 'उजवीकडे फिरणे'.\n\n<xml><block type=\"gamelab_addBehaviorSimple\">\n            <value name=\"SPRITE\">\n              <block type=\"gamelab_allSpritesWithAnimation\">\n                <title name=\"ANIMATION\">\"retrocreature_09_1\"</title>\n              </block>\n            </value>\n            <value name=\"BEHAVIOR\">\n              <block type=\"gamelab_behavior_get\">\n                <mutation></mutation>\n                <title name=\"VAR\" id=\"spinning right\">spinning right</title>\n              </block>\n              </value></block></xml>"
         },
         "helloworld_retro_click": {
           "hw_click_sprites": "प्रोग्रॅम चालू असताना स्प्राईट्सवर क्लिक करा.",
           "hw_no_changes": "तुम्हाला या स्तरावरील कोणताही कोड बदलण्याची आवश्यकता नाही."
         },
         "helloworld_retro_costumes": {
-          "hello_world_costumes": "`क्लिक केल्यावर` इव्हेंट ब्लॉकखाली `चेंज कॉस्च्युम` ब्लॉक कनेक्ट करण्याचा प्रयत्न करा.\n\n\\[ब्लॉकली ब्लॉक[0]"
+          "hello_world_costumes": "`क्लिक केल्यावर` इव्हेंट ब्लॉकखाली `चेंज कॉस्च्युम` ब्लॉक कनेक्ट करण्याचा प्रयत्न करा.\n\n<xml><block type=\"gamelab_spriteClicked\" deletable=\"false\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\" can_disconnect_from_parent=\"false\">\n        <title name=\"ANIMATION\">\"retrocreature_07_1\"</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_setAnimation\">\n        <title name=\"ANIMATION\">\"retrocreature_20_1\"</title>\n        <value name=\"THIS\">\n          <block type=\"gamelab_allSpritesWithAnimation\">\n            <title name=\"ANIMATION\">\"retrocreature_07_1\"</title>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block>\n</xml>"
         },
         "helloworld_retro_events": {
-          "hello_world_click": "इव्हेंट ब्लॉकच्या खाली `से` ब्लॉक कनेक्ट करा.\n\n\\[ब्लॉकली ब्लॉक[0]"
+          "hello_world_click": "इव्हेंट ब्लॉकच्या खाली `से` ब्लॉक कनेक्ट करा.\n\n<xml><block type=\"gamelab_spriteClicked\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"retro_powerup_heart\"</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_spriteSay\">\n        <title name=\"SPEECH\">POWERUP!</title>\n        <value name=\"SPRITE\">\n          <block type=\"gamelab_allSpritesWithAnimation\">\n            <title name=\"ANIMATION\">\"retro_powerup_heart\"</title>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block></xml>"
         },
         "helloworld_retro_location": {
           "location_pin_hint": "स्प्राईटचे स्थान बदलण्यासाठी, स्थान ब्लॉकवरील पिनवर क्लिक करा, त्यानंतर तुम्हाला ते कुठे जायचे आहे त्यावर क्लिक करा.\n\n![](https://images.code.org/e3267d2b50f754befc63744be14287ac-image-1633360873408.gif)"
         },
         "helloworld_retro_multi": {
-          "storyboard_costume": "प्रत्येक स्प्राईटसाठी पोशाख जुळत असल्याचे सुनिश्चित करा.\n\\[ब्लॉकली ब्लॉक[0]"
+          "storyboard_costume": "प्रत्येक स्प्राईटसाठी पोशाख जुळत असल्याचे सुनिश्चित करा.\n<xml><block type=\"gamelab_spriteSay\">\n      <title name=\"SPEECH\">Hello!</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"retrocreature_16\"</title>\n        </block>\n      </value>\n    </block></xml>"
         },
         "helloworld_retro_say": {
           "hello-world-first-solution-retrocreature": "प्राण्याला काहीतरी सांगण्यासाठी, याप्रमाणे कोडचे ब्लॉक्स जोडा:\n\n\\[ब्लॉकली ब्लॉक[0]"
         },
         "helloworld_retro_sizes": {
-          "hw_retro_setProp": "स्प्राईटचा आकार फक्त एकदा सेट करण्यासाठी, तुम्ही हा ब्लॉक वापरू शकता:\n\n\\[ब्लॉकली ब्लॉक[0]",
-          "hw_retro_changePropBy": "जर तुम्हाला स्प्राईटचा आकार वारंवार (इव्हेंटसह) बदलायचा असेल, तर हा ब्लॉक वापरा:\n\n\\[ब्लॉकली ब्लॉक[0]"
+          "hw_retro_setProp": "स्प्राईटचा आकार फक्त एकदा सेट करण्यासाठी, तुम्ही हा ब्लॉक वापरू शकता:\n\n<xml><block type=\"gamelab_setProp\">\n    <title name=\"PROPERTY\">\"scale\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"retro_purple_burst\"</title>\n      </block>\n    </value>\n    <value name=\"VAL\">\n      <block type=\"math_number\">\n        <title name=\"NUM\">50</title>\n      </block>\n    </value>\n  </block></xml>",
+          "hw_retro_changePropBy": "जर तुम्हाला स्प्राईटचा आकार वारंवार (इव्हेंटसह) बदलायचा असेल, तर हा ब्लॉक वापरा:\n\n<xml><block type=\"gamelab_changePropBy\">\n      <title name=\"PROPERTY\">\"scale\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"retrocreature_11_1\"</title>\n        </block>\n      </value>\n      <value name=\"VAL\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">10</title>\n        </block>\n      </value>\n    </block></xml>"
         },
         "courseA_artist_loops3_2021": {
           "courseA_artist_loops3_a": "काय चुकते आहे ते पहाण्यासाठी तुमच्या प्रोग्रॅममधून तुमच्या बोटाने हळूहळू मार्ग गिरवा.",
@@ -3006,7 +3006,7 @@
           "courseE_playLab_scaffold4_a": "पॉईंट जोडण्यासाठी `score point` वापरा आणि पॉईंट वजा करण्यासाठी `remove point` वापरा."
         },
         "OPD-K5-variables-6": {
-          "courseF_artist_variables4_b": "<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"variables_set\">\n        <title name=\"VAR\">length</title>\n        <value name=\"VALUE\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">50</title>\n          </block>\n        </value>\n        <next>\n          <block type=\"controls_repeat_ext\">\n            <value name=\"TIMES\">\n              <block type=\"math_number\">\n                <title name=\"NUM\">3</title>\n              </block>\n            </value>\n            <statement name=\"DO\">\n              <block type=\"controls_repeat_ext\">\n                <value name=\"TIMES\">\n                  <block type=\"math_number\">\n                    <title name=\"NUM\">3</title>\n                  </block>\n                </value>\n                <statement name=\"DO\">\n                  <block type=\"draw_move\">\n                    <title name=\"DIR\">moveForward</title>\n                    <value name=\"VALUE\">\n                      <block type=\"variables_get\">\n                        <title name=\"VAR\">length</title>\n                      </block>\n                    </value>\n                    <next>\n                      <block type=\"draw_turn\">\n                        <title name=\"DIR\">turnLeft</title>\n                        <value name=\"VALUE\">\n                          <block type=\"math_number\">\n                            <title name=\"NUM\">120</title>\n                          </block>\n                        </value>\n                      </block>\n                    </next>\n                  </block>\n                </statement>\n                <next>\n                  <block type=\"jump\">\n                    <title name=\"DIR\">jumpForward</title>\n                    <value name=\"VALUE\">\n                      <block type=\"variables_get\">\n                        <title name=\"VAR\">length</title>\n                      </block>\n                    </value>\n                    <next>\n                      <block type=\"draw_turn\">\n                        <title name=\"DIR\">turnRight</title>\n                        <value name=\"VALUE\">\n                          <block type=\"math_number\">\n                            <title name=\"NUM\">90</title>\n                          </block>\n                        </value>\n                        <next>\n                          <block type=\"jump\">\n                            <title name=\"DIR\">jumpForward</title>\n                            <value name=\"VALUE\">\n                              <block type=\"variables_get\">\n                                <title name=\"VAR\">length</title>\n                              </block>\n                            </value>\n                            <next>\n                              <block type=\"draw_turn\">\n                                <title name=\"DIR\">turnLeft</title>\n                                <value name=\"VALUE\">\n                                  <block type=\"math_number\">\n                                    <title name=\"NUM\">90</title>\n                                  </block>\n                                </value>\n                              </block>\n                            </next>\n                          </block>\n                        </next>\n                      </block>\n                    </next>\n                  </block>\n                </next>\n              </block>\n            </statement>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+          "courseF_artist_variables4_b": "[blockly block][0]"
         },
         "course1_artist_loops_challenge3": {
           "courseA_artist_loops_challenge2_a": "यासारखे ब्लॉक्स: <xml>  <block type=\"simple_move_up_left\"/></xml> तुमच्या आर्टीस्टला एका तिरक्या रेषेत जायला मदत करेल! "
@@ -10593,22 +10593,22 @@
           "courseF_bee_variables_4_2021_1": "व्हेरीएबलमध्ये 1 मिळवण्याऐवजी दरवेळी 2 मिळवा. "
         },
         "coursee_helloworld_events": {
-          "hello_world_click": "इव्हेंट ब्लॉकच्या खाली `से` ब्लॉक कनेक्ट करा.\n\n\\[ब्लॉकली ब्लॉक[0]"
+          "hello_world_click": "इव्हेंट ब्लॉकच्या खाली `से` ब्लॉक कनेक्ट करा.\n\n<xml><block type=\"gamelab_spriteClicked\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"face_burger_1\"</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_spriteSay\">\n        <title name=\"SPEECH\">Hello, world!</title>\n        <value name=\"SPRITE\">\n          <block type=\"gamelab_allSpritesWithAnimation\">\n            <title name=\"ANIMATION\">\"face_burger_1\"</title>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block></xml>"
         },
         "coursee_helloworld_say": {
           "hello-world-first-solution-pizza": "पिझ्झा बनवण्यासाठी हे सांगण्यासाठी, कोडचे ब्लॉक्स यासारखे कनेक्ट करा:\n\n[ब्लॉकली ब्लॉक] [0]"
         },
         "helloworld_food_backgrounds_soccer-2022": {
-          "hello_world_background": "तुम्ही `क्लिक केल्यावर` इव्हेंट ब्लॉकखाली `सेट बॅकग्राउंड` ब्लॉक कनेक्ट करून पार्श्वभूमी बदलू शकता:\n\n\\[ब्लॉकली ब्लॉक[0]"
+          "hello_world_background": "तुम्ही `क्लिक केल्यावर` इव्हेंट ब्लॉकखाली `सेट बॅकग्राउंड` ब्लॉक कनेक्ट करून पार्श्वभूमी बदलू शकता:\n\n<xml><block type=\"gamelab_spriteClicked\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"face_avocado_1\"</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_setBackgroundImageAs\">\n        <title name=\"IMG\">\"gradient_25_1\"</title>\n      </block>\n    </next>\n  </block>\n</xml>"
         },
         "helloworld_food_backgrounds_space-2022": {
-          "hello_world_background": "तुम्ही `क्लिक केल्यावर` इव्हेंट ब्लॉकखाली `सेट बॅकग्राउंड` ब्लॉक कनेक्ट करून पार्श्वभूमी बदलू शकता:\n\n\\[ब्लॉकली ब्लॉक[0]"
+          "hello_world_background": "तुम्ही `क्लिक केल्यावर` इव्हेंट ब्लॉकखाली `सेट बॅकग्राउंड` ब्लॉक कनेक्ट करून पार्श्वभूमी बदलू शकता:\n\n<xml><block type=\"gamelab_spriteClicked\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"face_avocado_1\"</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_setBackgroundImageAs\">\n        <title name=\"IMG\">\"gradient_25_1\"</title>\n      </block>\n    </next>\n  </block>\n</xml>"
         },
         "helloworld_food_behaviors_soccer-2022": {
-          "storyboard_behavior_example": "_टीप:_ स्प्राईटला वर्तन देण्यासाठी, तुम्हाला 'स्प्राईट बिगिन्स' ब्लॉक वापरणे आवश्यक आहे, जसे की 'उजवीकडे फिरणे'.\n\n\\[ब्लॉकली ब्लॉक[0]"
+          "storyboard_behavior_example": "_टीप:_ स्प्राईटला वर्तन देण्यासाठी, तुम्हाला 'स्प्राईट बिगिन्स' ब्लॉक वापरणे आवश्यक आहे, जसे की 'उजवीकडे फिरणे'.\n\n<xml><block type=\"gamelab_addBehaviorSimple\">\n            <value name=\"SPRITE\">\n              <block type=\"gamelab_allSpritesWithAnimation\">\n                <title name=\"ANIMATION\">\"face_burger_1\"</title>\n              </block>\n            </value>\n            <value name=\"BEHAVIOR\">\n              <block type=\"gamelab_behavior_get\">\n                <mutation></mutation>\n                <title name=\"VAR\" id=\"spinning right\">spinning right</title>\n              </block>\n              </value></block></xml>"
         },
         "helloworld_food_behaviors_space-2022": {
-          "storyboard_behavior_example": "_टीप:_ स्प्राईटला वर्तन देण्यासाठी, तुम्हाला 'स्प्राईट बिगिन्स' ब्लॉक वापरणे आवश्यक आहे, जसे की 'उजवीकडे फिरणे'.\n\n\\[ब्लॉकली ब्लॉक[0]"
+          "storyboard_behavior_example": "_टीप:_ स्प्राईटला वर्तन देण्यासाठी, तुम्हाला 'स्प्राईट बिगिन्स' ब्लॉक वापरणे आवश्यक आहे, जसे की 'उजवीकडे फिरणे'.\n\n<xml><block type=\"gamelab_addBehaviorSimple\">\n            <value name=\"SPRITE\">\n              <block type=\"gamelab_allSpritesWithAnimation\">\n                <title name=\"ANIMATION\">\"space_astronaut_cat\"</title>\n              </block>\n            </value>\n            <value name=\"BEHAVIOR\">\n              <block type=\"gamelab_behavior_get\">\n                <mutation></mutation>\n                <title name=\"VAR\" id=\"spinning right\">spinning right</title>\n              </block>\n              </value></block></xml>"
         },
         "helloworld_food_click_soccer-2022": {
           "hw_click_sprites": "प्रोग्रॅम चालू असताना स्प्राईट्सवर क्लिक करा.",
@@ -10619,16 +10619,16 @@
           "hw_no_changes": "तुम्हाला या स्तरावरील कोणताही कोड बदलण्याची आवश्यकता नाही."
         },
         "helloworld_food_costumes_soccer-2022": {
-          "hello_world_costumes": "`क्लिक केल्यावर` इव्हेंट ब्लॉकखाली `चेंज कॉस्च्युम` ब्लॉक कनेक्ट करण्याचा प्रयत्न करा.\n\n\\[ब्लॉकली ब्लॉक[0]"
+          "hello_world_costumes": "`क्लिक केल्यावर` इव्हेंट ब्लॉकखाली `चेंज कॉस्च्युम` ब्लॉक कनेक्ट करण्याचा प्रयत्न करा.\n\n<xml><block type=\"gamelab_spriteClicked\" deletable=\"false\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\" can_disconnect_from_parent=\"false\">\n        <title name=\"ANIMATION\">\"soccer_player_2\"</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_setAnimation\">\n        <title name=\"ANIMATION\">\"soccer_player_3\"</title>\n        <value name=\"THIS\">\n          <block type=\"gamelab_allSpritesWithAnimation\">\n            <title name=\"ANIMATION\">\"soccer_player_2\"</title>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block>\n</xml>"
         },
         "helloworld_food_costumes_space-2022": {
-          "hello_world_costumes": "`क्लिक केल्यावर` इव्हेंट ब्लॉकखाली `चेंज कॉस्च्युम` ब्लॉक कनेक्ट करण्याचा प्रयत्न करा.\n\n\\[ब्लॉकली ब्लॉक[0]"
+          "hello_world_costumes": "`क्लिक केल्यावर` इव्हेंट ब्लॉकखाली `चेंज कॉस्च्युम` ब्लॉक कनेक्ट करण्याचा प्रयत्न करा.\n\n<xml><block type=\"gamelab_spriteClicked\" deletable=\"false\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\" can_disconnect_from_parent=\"false\">\n        <title name=\"ANIMATION\">\"space_astronaut_3\"</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_setAnimation\">\n        <title name=\"ANIMATION\">\"space_astronaut_2\"</title>\n        <value name=\"THIS\">\n          <block type=\"gamelab_allSpritesWithAnimation\">\n            <title name=\"ANIMATION\">\"space_astronaut_3\"</title>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block>\n</xml>"
         },
         "helloworld_food_events_soccer-2022": {
-          "hello_world_click": "इव्हेंट ब्लॉकच्या खाली `से` ब्लॉक कनेक्ट करा.\n\n\\[ब्लॉकली ब्लॉक[0]"
+          "hello_world_click": "इव्हेंट ब्लॉकच्या खाली `से` ब्लॉक कनेक्ट करा.\n\n<xml><block type=\"gamelab_spriteClicked\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"face_burger_1\"</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_spriteSay\">\n        <title name=\"SPEECH\">Hello, world!</title>\n        <value name=\"SPRITE\">\n          <block type=\"gamelab_allSpritesWithAnimation\">\n            <title name=\"ANIMATION\">\"face_burger_1\"</title>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block></xml>"
         },
         "helloworld_food_events_space-2022": {
-          "hello_world_click": "इव्हेंट ब्लॉकच्या खाली `से` ब्लॉक कनेक्ट करा.\n\n\\[ब्लॉकली ब्लॉक[0]"
+          "hello_world_click": "इव्हेंट ब्लॉकच्या खाली `से` ब्लॉक कनेक्ट करा.\n\n<xml><block type=\"gamelab_spriteClicked\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"space_alien_ship\"</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_spriteSay\">\n        <title name=\"SPEECH\">Hello, world!</title>\n        <value name=\"SPRITE\">\n          <block type=\"gamelab_allSpritesWithAnimation\">\n            <title name=\"ANIMATION\">\"space_alien_ship\"</title>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block></xml>"
         },
         "helloworld_food_location_soccer-2022": {
           "location_pin_hint": "स्प्राईटचे स्थान बदलण्यासाठी, स्थान ब्लॉकवरील पिनवर क्लिक करा, त्यानंतर तुम्हाला ते कुठे जायचे आहे त्यावर क्लिक करा.\n\n![](https://images.code.org/e3267d2b50f754befc63744be14287ac-image-1633360873408.gif)"
@@ -10637,18 +10637,18 @@
           "location_pin_hint": "स्प्राईटचे स्थान बदलण्यासाठी, स्थान ब्लॉकवरील पिनवर क्लिक करा, त्यानंतर तुम्हाला ते कुठे जायचे आहे त्यावर क्लिक करा.\n\n![](https://images.code.org/e3267d2b50f754befc63744be14287ac-image-1633360873408.gif)"
         },
         "helloworld_food_multi_soccer-2022": {
-          "storyboard_costume": "प्रत्येक स्प्राईटसाठी पोशाख जुळत असल्याचे सुनिश्चित करा.\n\\[ब्लॉकली ब्लॉक[0]"
+          "storyboard_costume": "प्रत्येक स्प्राईटसाठी पोशाख जुळत असल्याचे सुनिश्चित करा.\n<xml><block type=\"gamelab_spriteSay\">\n      <title name=\"SPEECH\">Goal!</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"soccer_ball\"</title>\n        </block>\n      </value>\n    </block></xml>"
         },
         "helloworld_food_multi_space-2022": {
-          "storyboard_costume": "प्रत्येक स्प्राईटसाठी पोशाख जुळत असल्याचे सुनिश्चित करा.\n\\[ब्लॉकली ब्लॉक[0]"
+          "storyboard_costume": "प्रत्येक स्प्राईटसाठी पोशाख जुळत असल्याचे सुनिश्चित करा.\n<xml><block type=\"gamelab_spriteSay\">\n      <title name=\"SPEECH\">Hello, alien!</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"face_carrot_1\"</title>\n        </block>\n      </value>\n    </block></xml>"
         },
         "helloworld_food_sizes_soccer-2022": {
-          "storyboard_setProp": "स्प्राईटचा आकार फक्त एकदा सेट करण्यासाठी, तुम्ही हा ब्लॉक वापरू शकता:\n\n\\[ब्लॉकली ब्लॉक[0]",
-          "storyboard_changePropBy": "जर तुम्हाला स्प्राईटचा आकार वारंवार (इव्हेंटसह) बदलायचा असेल, तर हा ब्लॉक वापरा:\n\n\\[ब्लॉकली ब्लॉक[0]"
+          "storyboard_setProp": "स्प्राईटचा आकार फक्त एकदा सेट करण्यासाठी, तुम्ही हा ब्लॉक वापरू शकता:\n\n<xml><block type=\"gamelab_setProp\">\n      <title name=\"PROPERTY\">\"scale\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"face_strawberry_1\"</title>\n        </block>\n      </value>\n      <value name=\"VAL\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">50</title>\n        </block>\n      </value>\n    </block></xml>",
+          "storyboard_changePropBy": "जर तुम्हाला स्प्राईटचा आकार वारंवार (इव्हेंटसह) बदलायचा असेल, तर हा ब्लॉक वापरा:\n\n<xml><block type=\"gamelab_changePropBy\">\n      <title name=\"PROPERTY\">\"scale\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"face_strawberry_1\"</title>\n        </block>\n      </value>\n      <value name=\"VAL\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">10</title>\n        </block>\n      </value>\n    </block></xml>"
         },
         "helloworld_food_sizes_space-2022": {
-          "storyboard_setProp": "स्प्राईटचा आकार फक्त एकदा सेट करण्यासाठी, तुम्ही हा ब्लॉक वापरू शकता:\n\n\\[ब्लॉकली ब्लॉक[0]",
-          "storyboard_changePropBy": "जर तुम्हाला स्प्राईटचा आकार वारंवार (इव्हेंटसह) बदलायचा असेल, तर हा ब्लॉक वापरा:\n\n\\[ब्लॉकली ब्लॉक[0]"
+          "storyboard_setProp": "स्प्राईटचा आकार फक्त एकदा सेट करण्यासाठी, तुम्ही हा ब्लॉक वापरू शकता:\n\n<xml><block type=\"gamelab_spriteClicked\">\n  <field name=\"CONDITION\">\"when\"</field>\n  <value name=\"SPRITE\">\n    <block type=\"gamelab_allSpritesWithAnimation\" can_disconnect_from_parent=\"false\">\n      <field name=\"ANIMATION\">\"space_astronaut_1\"</field>\n    </block>\n  </value>\n  <next>\n    <block type=\"gamelab_setProp\">\n      <field name=\"PROPERTY\">\"scale\"</field>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\" can_disconnect_from_parent=\"false\">\n          <field name=\"ANIMATION\">\"space_astronaut_1\"</field>\n        </block>\n      </value>\n      <value name=\"VAL\">\n        <block type=\"math_number\" can_disconnect_from_parent=\"false\">\n          <field name=\"NUM\">50</field>\n        </block>\n      </value>\n    </block>\n  </next>\n</block></xml>",
+          "storyboard_changePropBy": "जर तुम्हाला स्प्राईटचा आकार वारंवार (इव्हेंटसह) बदलायचा असेल, तर हा ब्लॉक वापरा:\n\n<xml><block type=\"gamelab_spriteClicked\">\n  <field name=\"CONDITION\">\"when\"</field>\n  <value name=\"SPRITE\">\n    <block type=\"gamelab_allSpritesWithAnimation\" can_disconnect_from_parent=\"false\">\n      <field name=\"ANIMATION\">\"space_satellite\"</field>\n    </block>\n  </value>\n  <next>\n    <block type=\"gamelab_changePropBy\">\n      <field name=\"PROPERTY\">\"scale\"</field>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\" can_disconnect_from_parent=\"false\">\n          <field name=\"ANIMATION\">\"space_satellite\"</field>\n        </block>\n      </value>\n      <value name=\"VAL\">\n        <block type=\"math_number\" can_disconnect_from_parent=\"false\">\n          <field name=\"NUM\">10</field>\n        </block>\n      </value>\n    </block>\n  </next>\n</block></xml>"
         }
       }
     }

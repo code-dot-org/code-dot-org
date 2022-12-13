@@ -97,7 +97,7 @@
   "madlibNoSprites": "Prom anda sedang berfungsi. Jika ia seperti yang anda harapkan, anda boleh mula menambah pari-pari ke projek anda. Apakah cerita atau puisi anda?",
   "madlibPrintVariable": "Ia seolah-olah seperti chatbot bertindak balas, tetapi ia tidak mencetak apa yang anda taip ke dalam gesaan. Pastikan label **pemboleh ubah** yang betul disambungkan ke blok 'cetak'.",
   "madlibPrintWhenAnswered": "Buat masa ini anda hanya mencetak teks sekali sahaja. Pastikan blok 'cetak' berada di bawah blok 'bila dijawab'. \n <xml><block type=\"gamelab_whenPromptAnswered\"><value name=\"VAR\"><block type=\"variables_get\" can_disconnect_from_parent=\"false\"><title name=\"VAR\">food</title></block></value></block></xml>",
-  "madlibTitleVariable": "Ia kelihatan seperti anda menambah skrin tajuk pada program anda, tetapi tidak termasuk teks daripada prom. ",
+  "madlibTitleVariable": "Ia kelihatan seperti anda menambah skrin tajuk pada program anda, tetapi ia tidak termasuk teks daripada prom.",
   "moreSprites": "Anda perlu membuat lebih banyak pari-pari.",
   "moveBothWays": "Pari pari anda harus bergerak dalam satu arah, dan diikuti yang lain.",
   "moveSpriteByDrag": "Kod anda kelihatan hebat! Untuk menyeret pari-pari anda, klik padanya semasa atur cara berjalan.",

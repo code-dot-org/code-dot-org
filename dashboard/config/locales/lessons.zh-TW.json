@@ -12,14 +12,14 @@
         "minecraft/Minecraft Hour of Code Designer": {
           "name": "一小時玩 Minecraft 設計師",
           "overview": "在本課堂中，所有年齡的學生都會在安全且充滿支持的環境中，獲得程式編寫與電腦科學的新手體驗。本課堂適用於有能力閱讀的學生（6歲以上）。年齡較小的學生未必會完成教程，但是會在1小時解謎中獲得大量樂趣。大部分高中學生都會完成教程，並會在課堂結束時有一些時間玩自由探索關卡。",
-          "preparation": "### 一小時玩程式前一週\n\n-   複習[Hour of Code Eductor Guide](http://hourofcode.com/resources/how-to/)和[Best Practices from Successful Educators](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466)，便於開始計劃一小時玩程式活動。\n-   如果你想要得到禮物或課堂支持，[Register your Hour of Code event](http://hourofcode.com)。\n-   自己複習並完成線上教程：[Minecraft: Designer](https://studio.code.org/s/minecraft/lessons/1/levels/1)\n-   在要求學生完成之前，記得先測試一下。檢查自己的技術設備，並決定是否需要在編寫代碼前進行故障檢查。\n\n### 一小時玩程式前一天\n\n-   在本課程計畫結束時，列印一份或多份[Exit Ticket examples](https://docs.google.com/a/code.org/document/d/1ylIlO7Pppk6W3Jt58VHS5mjvnshg9URvj3iCU0Ok6qY/edit?usp=sharing)，或者自己編制。\n-   每個完成活動的學生都應該收到一張證書。提前為每個人[Print one](https://code.org/certificates?script=mc)，使之在一小時玩程式結束時更簡單。",
+          "preparation": "### 一小時玩程式前一週\n\n-   複習[Hour of Code Eductor Guide](http://hourofcode.com/resources/how-to/)和[Best Practices from Successful Educators](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466)，便於開始計劃一小時玩程式活動。\n-   如果你想要得到禮物或課堂支持，[Register your Hour of Code event](http://hourofcode.com)。\n-   自己複習並完成線上教程：[Minecraft: Designer](https://studio.code.org/s/minecraft/lessons/1/levels/1)\n-   在要求學生完成之前，記得先測試一下。檢查自己的技術設備，並決定是否需要在編寫代碼前進行故障檢查。\n\n### 一小時玩程式前一天\n\n-   在本課程計畫結束時，列印一份或多份[Exit Ticket examples](https://docs.google.com/a/code.org/document/d/1ylIlO7Pppk6W3Jt58VHS5mjvnshg9URvj3iCU0Ok6qY/edit?usp=sharing)，或者自己編制。\n-   每個完成活動的學生都應該收到一張證書。提前為每個人[Print one](https://studio.code.org/certificates/batch?course=bWM=)，使之在一小時玩程式結束時更簡單。",
           "purpose": "本課堂介紹核心的電腦科學概念：編寫程式與程式設計（使用積木），以及簡單的除錯技巧。",
           "student_overview": "在本課堂中，所有年齡的學生都會在安全且充滿支持的環境中，獲得程式編寫與電腦科學的新手體驗。本課堂適用於有能力閱讀的學生（6歲以上）。年齡較小的學生未必會完成教程，但是會在1小時解謎中獲得大量樂趣。大部分高中學生都會完成教程，並會在課堂結束時有一些時間玩自由探索關卡。"
         },
         "hero/Minecraft Hour of Code": {
           "name": "Minecraft：英雄之旅",
           "overview": "在本課堂中，所有年齡的學生都會在安全且充滿支持的環境中，獲得程式編寫與電腦科學的新手體驗。本課堂適用於有能力閱讀的學生（6歲以上）。年齡較小的學生未必會完成教程，但是會在1小時解謎中獲得大量樂趣。大部分高中學生都會完成教程，並會在課堂結束時有一些時間玩自由探索關卡。",
-          "preparation": "### 一小時玩程式前一週\n\n-   複習[Hour of Code Eductor Guide](http://hourofcode.com/resources/how-to/)和[Best Practices from Successful Educators](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466)，便於開始計劃一小時玩程式活動。\n-   如果你想要得到禮物或課堂支持，[Register your Hour of Code event](http://hourofcode.com)。\n-   自己複習並完成線上教程：[Minecraft: Hero's Journey](studio.code.org/s/hero/lessons/1/levels/1)\n-   在要求學生完成之前，記得先測試一下。檢查自己的技術設備，並決定是否需要在編寫代碼前進行故障檢查。\n\n### 一小時玩程式前一天\n\n-   在本課程計畫結束時，列印一份或多份[Exit Ticket examples](https://docs.google.com/a/code.org/document/d/1ylIlO7Pppk6W3Jt58VHS5mjvnshg9URvj3iCU0Ok6qY/edit?usp=sharing)，或者自己編制。\n-   每個完成活動的學生都應該收到一張證書。提前為每個學生[Print one](https://code.org/certificates?script=mc)，使之在一小時玩程式結束時更簡單。",
+          "preparation": "### 一小時玩程式前一週\n\n-   複習[Hour of Code Eductor Guide](http://hourofcode.com/resources/how-to/)和[Best Practices from Successful Educators](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466)，便於開始計劃一小時玩程式活動。\n-   如果你想要得到禮物或課堂支持，[Register your Hour of Code event](http://hourofcode.com)。\n-   自己複習並完成線上教程：[Minecraft: Hero's Journey](studio.code.org/s/hero/lessons/1/levels/1)\n-   在要求學生完成之前，記得先測試一下。檢查自己的技術設備，並決定是否需要在編寫代碼前進行故障檢查。\n\n### 一小時玩程式前一天\n\n-   在本課程計畫結束時，列印一份或多份[Exit Ticket examples](https://docs.google.com/a/code.org/document/d/1ylIlO7Pppk6W3Jt58VHS5mjvnshg9URvj3iCU0Ok6qY/edit?usp=sharing)，或者自己編制。\n-   每個完成活動的學生都應該收到一張證書。提前為每個學生[Print one](https://studio.code.org/certificates/batch?course=bWM=)，使之在一小時玩程式結束時更簡單。",
           "purpose": "本課介紹編碼和程式設計（使用模組）的核心電腦科學概念，簡單的調試技術以及函數的作用。",
           "student_overview": "在本課中，所有年齡段的學員都將在一個安全的支持性環境中獲得程式設計和電腦科學的入門經驗。"
         },
@@ -36,6 +36,7 @@
           "student_overview": "在本課堂中，學生會獲得電腦科學的新手體驗，並使用基本的積木程式碼製作遊戲。本課堂專門為中間年級（10-16 歲）的學生所設計，但是在使用提供的年齡差異建議後，也適用於年齡較小或較大的學生。"
         },
         "hello-world-soccer-2022/Hello World: Food": {
+          "name": "你好世界：足球",
           "overview": "在本課中，學生將在精靈圖實驗室通過程式設計學習電腦科學的基礎知識。精靈圖實驗室是一個可以用來創建富有想像力的有趣項目的工具。學生將學習創建和動畫化精靈圖，並使用事件使它們互動。 \n\n本課有多個版本。每個版本教授相同的概念，但擁有不同的圖像，以吸引不同的學生。更多資訊請訪問[Hello World著陸頁。](https://code.org/helloworld)",
           "preparation": "-   通過玩謎題為你的課堂尋找任何潛在的問題領域。\n-   使用[CS Connections](https://code.org/educate/csc)的資源，在初始教程之後制定更多的電腦科學學習計劃。",
           "purpose": "本課程旨在幫助學生在精靈圖實驗室中創建簡單的程式設計項目。通過這項技能，學生可以創建任何主題的項目，如另一個學校主題或與他們個人相關的東西。訪問[CS Connections](https://code.org/educate/csc)瞭解如何將電腦科學整合到其他學科的思路。"
@@ -69,7 +70,7 @@
         "artist/Artist": {
           "name": "藝術家",
           "overview": "在本課堂中，學生會控制藝術家完成畫面上的圖畫。這個藝術家舞台可讓學生製作越來越複雜的圖像，期間會使用新的積木，例如「move forward by 100 pixels」（向前移動 100 像素）與「turn right by 90 degrees」（向右旋轉 90 度）等。",
-          "preparation": "### 一小時玩程式前一週\n\n-   複習[Hour of Code Educator Guide](http://hourofcode.com/resources/how-to/)和[Best Practices from Successful Educators](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466)，便於開始計畫一小時玩程式活動。\n-   如果你想獲得材料或課堂支持，請[Register your Hour of Code event](http://hourofcode.com)。\n-   自己複習並完成線上教程：[Artist](https://studio.code.org/s/artist/lessons/1/levels/1)\n-   在要求學生完成之前，一定要先測試一下。檢查自己的技術設備，並決定是否需要在一小時玩程式前進行故障檢查。\n\n### 一小時玩程式前一天\n\n-   在本課程計畫結束時，列印一份或多份[Exit Ticket examples](https://docs.google.com/a/code.org/document/d/1ylIlO7Pppk6W3Jt58VHS5mjvnshg9URvj3iCU0Ok6qY/edit?usp=sharing)，或者自己編制。\n\n-   每個完成活動的學生都應該頒發一張[certificate](https://code.org/certificates)。提前為每個學生列印一張，使之在一小時玩程式結束時更簡單。\n\n-   通過謎題找到班級的任何潛在問題領域。  \n\n-   （可選）為你的班級獲取量角器，以視覺化他們完成謎題必須使用的角度。  \n\n-   為每個學生列印一份**轉彎和角 - 學生講義**。",
+          "preparation": "### 一小時玩程式前一週\n\n-   複習[Hour of Code Educator Guide](http://hourofcode.com/resources/how-to/)和[Best Practices from Successful Educators](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466)，便於開始計畫一小時玩程式活動。\n-   如果你想獲得材料或課堂支持，請[Register your Hour of Code event](http://hourofcode.com)。\n-   自己複習並完成線上教程：[Artist](https://studio.code.org/s/artist/lessons/1/levels/1)\n-   在要求學生完成之前，一定要先測試一下。檢查自己的技術設備，並決定是否需要在一小時玩程式前進行故障檢查。\n\n### 一小時玩程式前一天\n\n-   在本課程計畫結束時，列印一份或多份[Exit Ticket examples](https://docs.google.com/a/code.org/document/d/1ylIlO7Pppk6W3Jt58VHS5mjvnshg9URvj3iCU0Ok6qY/edit?usp=sharing)，或者自己編制。\n\n-   每個完成活動的學生都應該頒發一張[certificate](https://studio.code.org/certificates/batch)。提前為每個學生列印一張，使之在一小時玩程式結束時更簡單。\n\n-   通過謎題找到班級的任何潛在問題領域。  \n\n-   （可選）為你的班級獲取量角器，以視覺化他們完成謎題必須使用的角度。  \n\n-   為每個學生列印一份**轉彎和角 - 學生講義**。",
           "purpose": "本課將激發更多的程式設計創造力。這節課的目的是通過介紹程式設計模組和目標來增加關於排序的知識。在此例中，學生使用程式設計模組同時結合排序技能，學習圖元和角。此外，學生將能夠設想新的目標，如編碼藝術家畫一個正方形。",
           "student_overview": "為藝術家設計程式，製作漂亮的圖像。"
         },
@@ -81,7 +82,7 @@
           "student_overview": "在本課堂中，學生會獲得電腦科學的新手體驗，並使用基本的積木程式碼製作遊戲。本課堂專門為中間年級（10-16 歲）的學生所設計，但是在使用提供的年齡差異建議後，也適用於年齡較小或較大的學生。"
         },
         "dance/Dance Party": {
-          "name": "舞蹈派對",
+          "name": "舞蹈派對 2018",
           "overview": "在本課程中，所有年齡段的學習者都將在一個安全、支持性的環境中獲得編碼和電腦科學的入門體驗。本課是為所有需要閱讀的年齡段學習者而設計的。本活動需要有聲音，因為這個工具是為響應音樂而構建的。",
           "preparation": "### 一小時玩程式前一週\n\n-   請檢閱[Hour of Code Educator Guide](http://hourofcode.com/resources/how-to/)和[Best Practices from Successful Educators](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466)，以便開始計畫您的一小時程式設計課程活動。\n-   如果您想獲得課堂支援、折扣海報或參加機器人贈品活動（僅限美國），請[Register your Hour of Code event](http://hourofcode.com)。\n-   檢閱並完成自己的線上教學課程：[Dance Party](https://studio.code.org/s/dance/lessons/1/levels/1)\n-   務必先進行測試，再要求學生完成。檢查你的技術設備，決定是否需要在一小時程式設計課程之前，事先排解任何問題。\n-   檢閱補充課程計畫：[\"The Big Dance Party\"](studio.code.org/s/dance-unplugged/lessons/1)，以判定你是否想要在一小時玩程式之前，事先帶領大家進行此課程。\n\n### 一小時玩程式前一天\n\n-   每個完成活動的學生都應獲得[certificate](http://code.org/certificates)。事先為大家列印一張，這樣在“一小時玩程式”結束時就更加方便。\n-   （可選）鼓勵學生攜帶耳機在活動期間使用。",
           "purpose": "本課堂介紹核心的電腦科學概念：編寫程式與事件程式設計（使用積木）。",
@@ -107,6 +108,7 @@
           "student_overview": "本課堂會向學生介紹，需要使用加密與簡單技術破解秘密訊息。學生會自己嘗試破解一條訊息，這個訊息以經典的凱撒密碼，以及隨機替換式密碼加密。學生應該要深深明白，在這個運算工具強大的世代，加密技術將需要變得更成熟。本課堂最重要的一點，是瞭解在我們每天的一切網路生活中，加密怎樣和為甚麼扮演著重要角色，並瞭解製作良好的加密技術不是小事。學生會嘗試瞭解：我們面對強大的運算工具，而這些工具可用來破解加密內容，因此必須考慮如何製作強大的加密方式。在網際網路上傳送位元時需要保持私密，對所有上網的人來說都非常重要。"
         },
         "hello-world-space-2022/Hello World: Food": {
+          "name": "你好世界：太空",
           "overview": "在本課中，學生將在精靈圖實驗室通過程式設計學習電腦科學的基礎知識。精靈圖實驗室是一個可以用來創建富有想像力的有趣項目的工具。學生將學習創建和動畫化精靈圖，並使用事件使它們互動。 \n\n本課有多個版本。每個版本教授相同的概念，但擁有不同的圖像，以吸引不同的學生。更多資訊請訪問[Hello World著陸頁。](https://code.org/helloworld)",
           "preparation": "-   通過玩謎題為你的課堂尋找任何潛在的問題領域。\n-   使用[CS Connections](https://code.org/educate/csc)的資源，在初始教程之後制定更多的電腦科學學習計劃。",
           "purpose": "本課程旨在幫助學生在精靈圖實驗室中創建簡單的程式設計項目。通過這項技能，學生可以創建任何主題的項目，如另一個學校主題或與他們個人相關的東西。訪問[CS Connections](https://code.org/educate/csc)瞭解如何將電腦科學整合到其他學科的思路。"
@@ -126,7 +128,7 @@
         "mc/Hour of Code 2015": {
           "name": "一小時玩 Minecraft",
           "overview": "在本課堂中，所有年齡的學生都會在安全且充滿支持的環境中，獲得程式編寫與電腦科學的新手體驗。本課堂適用於有能力閱讀的學生（6歲以上）。年齡較小的學生未必會完成教程，但是會在1小時解謎中獲得大量樂趣。大部分高中學生都會完成教程，並會在課堂結束時有一些時間玩自由探索關卡。",
-          "preparation": "### 一小時玩程式前一週\n\n-   複習[Hour of Code Eductor Guide](http://hourofcode.com/resources/how-to/)和[Best Practices from Successful Educators](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466)，便於開始計劃一小時玩程式活動。\n-   如果你想要得到禮物或課堂支持，[Register your Hour of Code event](http://hourofcode.com)。\n-   自己複習並完成線上教程：[Minecraft: Adventurer](studio.code.org/s/mc/lessons/1/levels/1)\n-   在要求學生完成之前，記得先測試一下。檢查自己的技術設備，並決定是否需要在編寫代碼前進行故障檢查。\n\n### 一小時玩程式前一天\n\n-   在本課程計畫結束時，列印一份或多份[Exit Ticket examples](https://docs.google.com/a/code.org/document/d/1ylIlO7Pppk6W3Jt58VHS5mjvnshg9URvj3iCU0Ok6qY/edit?usp=sharing)，或者自己編制。\n-   每個完成活動的學生都應該收到一張證書。提前為每個學生[Print one](https://code.org/certificates?script=mc)，使之在一小時玩程式結束時更簡單。",
+          "preparation": "### 一小時玩程式前一週\n\n-   複習[Hour of Code Eductor Guide](http://hourofcode.com/resources/how-to/)和[Best Practices from Successful Educators](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466)，便於開始計劃一小時玩程式活動。\n-   如果你想要得到禮物或課堂支持，[Register your Hour of Code event](http://hourofcode.com)。\n-   自己複習並完成線上教程：[Minecraft: Adventurer](studio.code.org/s/mc/lessons/1/levels/1)\n-   在要求學生完成之前，記得先測試一下。檢查自己的技術設備，並決定是否需要在編寫代碼前進行故障檢查。\n\n### 一小時玩程式前一天\n\n-   在本課程計畫結束時，列印一份或多份[Exit Ticket examples](https://docs.google.com/a/code.org/document/d/1ylIlO7Pppk6W3Jt58VHS5mjvnshg9URvj3iCU0Ok6qY/edit?usp=sharing)，或者自己編制。\n-   每個完成活動的學生都應該收到一張證書。提前為每個學生[Print one](https://studio.code.org/certificates/batch?course=bWM=)，使之在一小時玩程式結束時更簡單。",
           "purpose": "本課堂介紹核心的電腦科學概念：編寫程式與程式設計（使用積木），以及簡單的除錯技巧。",
           "student_overview": "在本課堂中，所有年齡的學生都會在安全且充滿支持的環境中，獲得程式編寫與電腦科學的新手體驗。本課堂適用於有能力閱讀的學生（6歲以上）。年齡較小的學生未必會完成教程，但是會在1小時解謎中獲得大量樂趣。大部分高中學生都會完成教程，並會在課堂結束時有一些時間玩自由探索關卡。"
         },
@@ -172,7 +174,7 @@
         "sports/Sports": {
           "name": "編寫屬於你的運動遊戲程式",
           "overview": "在這項線上活動中，學生會學習甚麼是事件（event），以及電腦怎樣在程式（例如電子遊戲）中使用事件。學生會在各種謎題中，讓程式，對事件做出反應（例如按下箭頭按鈕後）。在謎題結束時，學生將有機會以不同的速度與聲音自訂遊戲。",
-          "preparation": "### 一小時玩程式前一週\n\n-   複習[Hour of Code Educator Guide](http://hourofcode.com/resources/how-to/)和[Best Practices from Successful Educators](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466)，便於開始計畫一小時玩程式活動。\n-   如果你想獲得材料或課堂支持，請[Register your Hour of Code event](http://hourofcode.com)。\n-   自己複習並完成線上教程：[Code Your Own Sports Game](https://studio.code.org/s/sports/lessons/1/levels/1)\n-   在要求學生完成之前，一定要先測試一下。檢查自己的技術設備，並決定是否需要在一小時玩程式前進行故障檢查。\n\n### 一小時玩程式前一天\n\n-   在本課程計畫結束時，列印一份或多份[Exit Ticket examples](https://docs.google.com/a/code.org/document/d/1ylIlO7Pppk6W3Jt58VHS5mjvnshg9URvj3iCU0Ok6qY/edit?usp=sharing)，或者自己編制。\n\n-   每個完成活動的學生都應該頒發一張[certificate](https://code.org/certificates)。提前為每個學生列印證書，使之在一小時玩程式結束時更簡單。\n\n-   閱讀“跳中的事件 - 它們是如何發生的？”幻燈片（將在下課時呈現給學生）。",
+          "preparation": "### 一小時玩程式前一週\n\n-   複習[Hour of Code Educator Guide](http://hourofcode.com/resources/how-to/)和[Best Practices from Successful Educators](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466)，便於開始計畫一小時玩程式活動。\n-   如果你想獲得材料或課堂支持，請[Register your Hour of Code event](http://hourofcode.com)。\n-   自己複習並完成線上教程：[Code Your Own Sports Game](https://studio.code.org/s/sports/lessons/1/levels/1)\n-   在要求學生完成之前，一定要先測試一下。檢查自己的技術設備，並決定是否需要在一小時玩程式前進行故障檢查。\n\n### 一小時玩程式前一天\n\n-   在本課程計畫結束時，列印一份或多份[Exit Ticket examples](https://docs.google.com/a/code.org/document/d/1ylIlO7Pppk6W3Jt58VHS5mjvnshg9URvj3iCU0Ok6qY/edit?usp=sharing)，或者自己編制。\n\n-   每個完成活動的學生都應該頒發一張[certificate](https://studio.code.org/certificates/batch)。提前為每個學生列印證書，使之在一小時玩程式結束時更簡單。\n\n-   閱讀“跳中的事件 - 它們是如何發生的？”幻燈片（將在下課時呈現給學生）。",
           "purpose": "這節課介紹了編碼和程式設計（使用模組）的核心電腦科學概念，以及簡單的調試技術。他們將瞭解到事件在電腦程式中非常常見，尤其是在電子遊戲中。  \n\n事件在電腦程式中非常常見，尤其是在電子遊戲中。  \n\n在本課中，學生將通過製作體育遊戲來加深對事件的理解。學生將學會讓運動器材對象按方向鍵移動，物件碰撞時發出聲音。最後，他們將定制自己的遊戲，使其更加獨特！",
           "student_overview": "有沒有想過，你可以在學校玩電子遊戲？在本課堂中，你將有機會製作自己的遊戲！"
         },
@@ -186,14 +188,14 @@
         "basketball/Bounce": {
           "name": "編寫你的籃球游戲",
           "overview": "在這項線上活動中，學生會學習甚麼是事件（event），以及電腦怎樣在程式（例如電子遊戲）中使用事件。學生會在各種謎題中，讓程式，對事件做出反應（例如按下箭頭按鈕後）。在謎題結束時，學生將有機會以不同的速度與聲音自訂遊戲。",
-          "preparation": "### 一小時玩程式前一週\n\n-   複習[Hour of Code Educator Guide](http://hourofcode.com/resources/how-to/)和[Best Practices from Successful Educators](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466)，便於開始計畫一小時玩程式活動。\n-   如果你想獲得材料或課堂支持，請[Register your Hour of Code event](http://hourofcode.com)。\n-   自己複習並完成線上教程：[Code Your Own Basketball Game](https://studio.code.org/s/basketball/lessons/1/levels/1)\n-   在要求學生完成之前，一定要先測試一下。檢查自己的技術設備，並決定是否需要在一小時玩程式前進行故障檢查。\n\n### 一小時玩程式前一天\n\n-   在本課程計畫結束時，列印一份或多份[Exit Ticket examples](https://docs.google.com/a/code.org/document/d/1ylIlO7Pppk6W3Jt58VHS5mjvnshg9URvj3iCU0Ok6qY/edit?usp=sharing)，或者自己編制。\n\n-   每個完成活動的學生都應該頒發一張[certificate](https://code.org/certificates)。提前為每個學生列印證書，使之在一小時玩程式結束時更簡單。\n\n-   閱讀“跳中的事件 - 它們是如何發生的？”幻燈片（將在下課時呈現給學生）。",
+          "preparation": "### 一小時玩程式前一週\n\n-   複習[Hour of Code Educator Guide](http://hourofcode.com/resources/how-to/)和[Best Practices from Successful Educators](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466)，便於開始計畫一小時玩程式活動。\n-   如果你想獲得材料或課堂支持，請[Register your Hour of Code event](http://hourofcode.com)。\n-   自己複習並完成線上教程：[Code Your Own Basketball Game](https://studio.code.org/s/basketball/lessons/1/levels/1)\n-   在要求學生完成之前，一定要先測試一下。檢查自己的技術設備，並決定是否需要在一小時玩程式前進行故障檢查。\n\n### 一小時玩程式前一天\n\n-   在本課程計畫結束時，列印一份或多份[Exit Ticket examples](https://docs.google.com/a/code.org/document/d/1ylIlO7Pppk6W3Jt58VHS5mjvnshg9URvj3iCU0Ok6qY/edit?usp=sharing)，或者自己編制。\n\n-   每個完成活動的學生都應該頒發一張[certificate](https://studio.code.org/certificates/batch)。提前為每個學生列印證書，使之在一小時玩程式結束時更簡單。\n\n-   閱讀“跳中的事件 - 它們是如何發生的？”幻燈片（將在下課時呈現給學生）。",
           "purpose": "這節課介紹編碼和程式編寫（使用模組）的核心電腦科學概念，以及簡單的調試技術。他們將瞭解事件在電腦程式中非常常見，尤其是在電子遊戲中。  \n\n學生將通過製作籃球遊戲來培養對事件的理解。學生將學習按方向鍵移動手，並在物體碰撞時發出聲音。最後，他們將定制自己的遊戲，使其更加獨特！",
           "student_overview": "有沒有想過，你可以在學校玩電子遊戲？在本課堂中，你將有機會製作自己的遊戲！"
         },
         "dance-extras-2019/Dance Party - Go Further": {
           "name": "舞蹈派對 - 深入學習",
           "overview": "在本課程中，所有年齡段的學習者都將在一個支持性的安全環境中獲得編碼和電腦科學的體驗。本課是為所有需要閱讀的年齡段學習者而設計的。本活動需要有聲音，因為這個工具是為響應音樂而構建的。",
-          "preparation": "#### 一小時玩程式前一週\n\n-   閱讀[Hour of Code Educator Guide](https://hourofcode.com/us/how-to)和[Best Practices from Successful Educators](https://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466)，以便開始規劃你的“一小時玩程式”活動。\n\n-   如果你想獲得課堂支持、打折海報或參加機器人贈品活動（僅限美國），請[Register your Hour of Code event](https://hourofcode.com/us)。\n\n-   自行觀看並完成線上教程：[Dance Party](https://studio.code.org/s/dance-2019)\n\n-   在讓學生完成教程之前，請務必先進行測試。\n\n-   檢查你的技術設備，並確定是否需要在“一小時玩程式”之前對所有問題進行排查。\n\n#### 一小時玩程式前一天\n\n-   每個完成活動的學生都應獲得[certificate](https://code.org/certificates)。提前為每個學生列印一張，這樣在“一小時玩程式”結束時就更加方便。\n\n-   （可選）鼓勵學生攜帶耳機以便在活動中使用。",
+          "preparation": "#### 一小時玩程式前一週\n\n-   閱讀[Hour of Code Educator Guide](https://hourofcode.com/us/how-to)和[Best Practices from Successful Educators](https://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466)，以便開始規劃你的“一小時玩程式”活動。\n\n-   如果你想獲得課堂支持、打折海報或參加機器人贈品活動（僅限美國），請[Register your Hour of Code event](https://hourofcode.com/us)。\n\n-   自行觀看並完成線上教程：[Dance Party](https://studio.code.org/s/dance-2019)\n\n-   在讓學生完成教程之前，請務必先進行測試。\n\n-   檢查你的技術設備，並確定是否需要在“一小時玩程式”之前對所有問題進行排查。\n\n#### 一小時玩程式前一天\n\n-   每個完成活動的學生都應獲得[certificate](https://studio.code.org/certificates/batch)。提前為每個學生列印一張，這樣在“一小時玩程式”結束時就更加方便。\n\n-   （可選）鼓勵學生攜帶耳機以便在活動中使用。",
           "purpose": "本課堂介紹核心的電腦科學概念：編寫程式與事件程式設計（使用積木）。",
           "student_overview": "所有年齡段的學習者都將在一個支持性的安全環境中獲得編碼和電腦科學的入門體驗。"
         },
@@ -201,7 +203,7 @@
           "name": "一小時玩程式 2013"
         },
         "dance-2019/Dance Party": {
-          "name": "舞蹈派對 2019",
+          "name": "舞蹈派對",
           "overview": "在本課程中，所有年齡段的學習者都將在一個安全、支持性的環境中獲得編碼和電腦科學的入門體驗。本課是為所有需要閱讀的年齡段學習者而設計的。本活動需要有聲音，因為這個工具是為響應音樂而構建的。",
           "preparation": "### 一小時玩程式前一週\n\n-   請檢閱[Hour of Code Educator Guide](http://hourofcode.com/resources/how-to/)和[Best Practices from Successful Educators](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466)，以便開始計畫您的一小時程式設計課程活動。\n-   如果您想獲得課堂支援、折扣海報或參加機器人贈品活動（僅限美國），請[Register your Hour of Code event](http://hourofcode.com)。\n-   檢閱並完成自己的線上教學課程：[Dance Party](https://studio.code.org/s/dance-2019)\n-   務必先進行測試，再要求學生完成。檢查您的技術設備，決定是否需要在一小時程式設計課程之前，事先排解任何問題。\n-   檢閱補充課程計畫：[\"Dance Party: Unplugged\"](https://studio.code.org/s/dance-unplugged/lessons/1)，以判定您是否想要在一小時玩程式之前，事先帶領大家進行此課程。\n\n### 一小時玩程式前一天\n\n-   每個完成活動的學生都應獲得證書。事先為大家[Print one](http://code.org/certificates)，這樣在“一小時玩程式”結束時就更加方便。\n-   （可選）鼓勵學生攜帶耳機在活動期間使用。",
           "purpose": "本課堂介紹核心的電腦科學概念：編寫程式與事件程式設計（使用積木）。",
@@ -210,7 +212,7 @@
         "oceans/Oceans": {
           "name": "在海洋中使用的 AI",
           "overview": "在本課中，所有年齡段的學習者都能在安全、支持性的環境中獲得編碼和電腦科學的入門體驗。首先，學生將物件分類為“魚”或“非魚”，試圖清除海洋中的垃圾。然後，學生將需要擴展他們的訓練資料集，以覆蓋水中的其他海洋生物。在活動的第二部分，學生將選擇他們自己的標籤以應用于隨機生成的魚的圖像。該訓練資料用於能夠自行標記新圖像的機器學習模型。",
-          "preparation": "### 一小時玩程式前一週\n\n-   閱讀[Hour of Code Educator Guide](http://hourofcode.com/resources/how-to/)，便於開始計畫一小時玩程式活動。\n-   [Register your Hour of Code event](http://hourofcode.com)。\n-   自己閱讀並完成線上教程。\n-   在要求學生完成之前，一定要先測試一下。檢查你的技術設備，並決定是否需要在一小時玩程式開始前進行故障檢查\n\n### 一小時玩程式前一天\n\n-   每位完成活動的學生都應收到一張證書。提前為每個學生列印一份[certificate](https://code.org/certificates?script=oceans)，這樣在一小時玩程式結束時就更加方便。",
+          "preparation": "### 一小時玩程式前一週\n\n-   閱讀[Hour of Code Educator Guide](http://hourofcode.com/resources/how-to/)，便於開始計畫一小時玩程式活動。\n-   [Register your Hour of Code event](http://hourofcode.com)。\n-   自己閱讀並完成線上教程。\n-   在要求學生完成之前，一定要先測試一下。檢查你的技術設備，並決定是否需要在一小時玩程式開始前進行故障檢查\n\n### 一小時玩程式前一天\n\n-   每位完成活動的學生都應收到一張證書。提前為每個學生列印一份[certificate](https://studio.code.org/certificates/batch?course=b2NlYW5z)，這樣在一小時玩程式結束時就更加方便。",
           "purpose": "本教程設計為向學生快速介紹 **機器學習**，這是 **人工智慧**。學生會瞭解 **訓練資料** 怎樣使機器學習模型能夠為資料分類。學生應在教程期間獲得正面體驗；而更重要的是，學生應受到激勵，繼續學習電腦科學。",
           "student_overview": "教程摘要：學生首先會把物件分類為「fish」（魚）或「not fish」（不是魚），從而嘗試清除海洋中的垃圾。然後，學生將需要擴充訓練資料集，加入屬於海洋的其他海洋生物。在活動的第 2 部分，學生會自行選擇標籤套用於隨機產生的魚中。這些訓練資料會在機器學習模型中使用，然後學習模型便應能夠自行標籤新的圖像。"
         },

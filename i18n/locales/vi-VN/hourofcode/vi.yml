@@ -51,6 +51,8 @@ vi:
   hoc2022_codeorg_title: Hãy ăn mừng Giờ lập trình cùng NASA và hơn thế nữa
   hoc2022_codeorg_description: Giờ lập trình lần thứ 10 đã bắt đầu rồi bạn ơi! Hãy
     cùng chúng tôi khám phá, vui chơi và sáng tạo nhé.
+  social_hoc2022_dance: Với sự góp mặt của Beyoncé, Harry Styles, Lizzo, Lil Nas X,
+    Selena Gomez, âm nhạc từ “Encanto” của Disney và nhiều nghệ sĩ khác!
   social_hoc2021_cse: 'During the #HourOfCode, we''re celebrating #CSEverywhere. Discover
     the connections!'
   hoc2020_header: Học lập trình hôm nay, xây dựng tươi lai tươi sáng hơn ngày mai.
@@ -608,6 +610,7 @@ vi:
   signup_send_posters_address_placeholder: Địa chỉ bạn cung cấp tuyệt đối không được
     chia sẻ trên trang của chúng tôi
   signup_event_type_in_school: Trong một trường học
+  signup_event_type_after_school: After school program
   signup_event_type_out_of_school: Bên ngoài trường học
   signup_event_type_at_home: Home
   signup_submit_census_label: Gửi đi/ Chấp nhận
@@ -1093,10 +1096,6 @@ vi:
     or <a id=''teacher_banner_howto''>read the How-To Guide</a>'
   learn_banner_teachers_markdown: 'Giáo viên: [Tổ chức một giờ](%{host_url}) hoặc
     [đọc Hướng dẫn thực hiện](%{howto_url})'
-  learn_robotics_banner_heading: Robotics and Circuits
-  learn_robotics_banner_blurb: Got robots or physical computing kits? Use them with
-    the activities below and make a tangible Hour of Code for students of any age!
-    Some activities even offer a simulator so you can get started without any hardware.
   tutorial_dance2019_name: Bữa Tiệc Khiêu Vũ 2019
   tutorial_danceparty_name: Dance Party
   tutorial_chibitronics_name: 'Chibitronics: Illuminated Story'
@@ -1518,12 +1517,12 @@ vi:
   tutorial_bcjs2_name: World of JavaScript 2
   tutorial_3dbearmars_name: The Mars Pioneers
   tutorial_bitsboxyak_name: Yak Attack! Make a Card with Typed Code
-  tutorial_blockscadbargraphs_name: Bar Graphs
-  tutorial_blockscadbirdhouses_name: Birdhouses
-  tutorial_blockscadclock_name: Analog Clock
-  tutorial_blockscaddinner_name: Dinner Robot
-  tutorial_blockscadicecream_name: Ice Cream Machine
-  tutorial_blockscadpizza_name: Pizza Printer
+  tutorial_blockscadbargraphs_name: BlocksCAD Bar Graphs
+  tutorial_blockscadbirdhouses_name: BlocksCAD Birdhouses
+  tutorial_blockscadclock_name: BlocksCAD Analog Clock
+  tutorial_blockscaddinner_name: BlocksCAD Dinner Robot
+  tutorial_blockscadicecream_name: BlocksCAD Ice Cream Machine
+  tutorial_blockscadpizza_name: BlocksCAD Pizza Printer
   tutorial_blockscadsugar_name: Sugar Cubes
   tutorial_bsgridlight_name: 'GridLight: Hello World'
   tutorial_bpartscratch_name: 'Art & Music: Color (Scratch)'
@@ -8797,9 +8796,9 @@ vi:
   tutorial_eddog_name: Code a guard dog with Edison
   tutorial_microbit15_name: 'micro:bit: coding towards Global Goal 15, Life on Land'
   tutorial_unity_name: 'Unity Game Development Creator Kit: Beginner Code'
-  tutorial_blockscadtarget_name: Transformation Target Practice
+  tutorial_blockscadtarget_name: BlocksCAD Transformation Target Practice
   tutorial_tcadicicles_name: Designing Icicles With Codeblocks in Tinkercad
-  tutorial_blockscadscale_name: Scale City
+  tutorial_blockscadscale_name: BlocksCAD Scale City
   tutorial_tcadloops_name: Using Loops in Tinkercad to Design a Bursting Star
   tutorial_phidgets_name: A Phidgets Theremin with Processing
   tutorial_modvariables_name: Investigating Variables & Block Values using Cubelets
@@ -9659,7 +9658,7 @@ vi:
   tutorial_robotical2_name: Hour of Code Activity 2 - the Marty Controller
   tutorial_robotical3_name: Hour of Code Activity 3 - Getting Started with Marty Blocks
     Jr
-  tutorial_blockscadvirus_name: Modeling a Virus with Code
+  tutorial_blockscadvirus_name: BlocksCAD Modeling a Virus with Code
   tutorial_robotical1_name: Hour of Code Activity 1 - Marty Unplugged
   tutorial_irobotshapes_name: 'Robotics for K-2: Robot Shapes'
   tutorial_irobotparts_name: 'Robotics for K-2: Robot Parts'
@@ -9871,10 +9870,12 @@ vi:
   tutorial_codespellsnexus_longdescription: Under the mentorship of a mysterious sock
     puppet, you must infiltrate and reprogram a super-intelligent 'Learn to Code'
     app that seeks global domination. Solve puzzles. Learn to code. Hack the Nexus.
-  tutorial_carnegieslime_longdescription: Super Slime Battle is a game that was co-designed
-    between researchers at Carnegie Mellon University and students from the Boys and
-    Girls Clubs of Western PA where students and their (co)robot partners must defend
-    their candy stash from oncoming baddies.
+  tutorial_carnegieslime_longdescription: Every year the Minions of Scarecorp try
+    to steal your candy crops. Booville High's Baddest Slimeball crew have come together
+    to protect the candy crops with slime weapons. Players play as teen monsters who
+    program their collaborative robot (aka 'cobot') pets to help take down the Minions
+    of Scarecorp who are after their town's candy harvest. Choose between four characters
+    and their cobotic pets.
   tutorial_ozotown_longdescription: The Ozobot Blockly OzoTown will teach advanced
     sequencing as students utilize logic, reasoning, and computer science skills to
     navigate real life scenarios. No bot needed!
@@ -10534,7 +10535,7 @@ vi:
   tutorial_clbinary_name: Learn How Binary Works with Computers using Minecraft
   tutorial_sascollabcode_name: 'SAS CodeSnaps: Collaborative coding for blind, low
     vision and sighted students'
-  tutorial_codecombatgoblins_name: 'CodeCombat: Goblins nn'' Glory'
+  tutorial_codecombatgoblins_name: Goblin và Glory
   tutorial_scratchstorytelling_name: Anything is Possible! Storytelling with Scratch
   tutorial_crayolasymbols_name: 'Unplugged Coding from Crayola Education: Visual Symbols
     Convey Meaning'
@@ -10708,12 +10709,14 @@ vi:
     Sphero BOLT! Explore how additive color theory works by adding different values
     of red, green, and blue to make many different colors. Learn how you can use your
     BOLT's sensors to measure its orientation and change colors.
-  tutorial_codecombatesports_longdescription: Competitive coding has never been so
-    epic! Learn the skills you need to play like the pros in our Esports Bootcamp.
-    No coding experience needed. Start by training in the dungeon and discovering
-    the coding strategies and tactics you'll need to compete. After honing your skills,
-    put your code to the test in our esports arena against other players worldwide!
-    Are you our next AI League grand champion?
+  tutorial_codecombatesports_longdescription: Mã hóa cạnh tranh chưa bao giờ hoành
+    tráng đến thế! Tìm hiểu các kỹ năng bạn cần để chơi như những người chuyên nghiệp
+    trong Esports Bootcamp của chúng tôi. Không cần kinh nghiệm viết mã. Bắt đầu bằng
+    cách đào tạo trong ngục tối và khám phá các chiến lược và chiến thuật mã hóa mà
+    bạn sẽ cần để cạnh tranh. Sau khi trau dồi kỹ năng, hãy đặt mã của bạn để thử
+    nghiệm trong đấu trường thể thao điện tử của chúng tôi với những người chơi khác
+    trên toàn thế giới! Bạn có phải là nhà vô địch Liên minh AI tiếp theo của chúng
+    tôi không?
   tutorial_spherodigdisplay_longdescription: Digital Displays are all around us, from
     phones to computer monitors to television to modern billboards. But how do they
     work? Dig into the graphic technology behind digital displays and get hands-on
@@ -10732,10 +10735,11 @@ vi:
     should have the opportunity to learn to code and aims to accomplish this using
     braille code blocks with SAS CodeSnaps - a collaborative coding environment that
     can get an entire classroom coding with just a single iPad and a Sphero robot.
-  tutorial_codecombatgoblins_longdescription: We need your help! Embark on an epic
-    quest where you take control of the game through your powers of programming. Become
-    the hero, unlock loot, and expand your arsenal of code to rescue the town. Then
-    use AI strategies to assemble a party for a final goblin boss battle!
+  tutorial_codecombatgoblins_longdescription: Chung tôi cân sự giup đơ của bạn!
+    Bắt tay vào một nhiệm vụ hoành tráng, nơi bạn kiểm soát trò chơi thông qua khả
+    năng lập trình của mình. Trở thành anh hùng, mở khóa chiến lợi phẩm và mở rộng
+    kho vũ khí mã của bạn để giải cứu thị trấn. Sau đó, sử dụng các chiến lược AI
+    để tập hợp một nhóm cho trận chiến trùm yêu tinh cuối cùng!
   tutorial_scratchstorytelling_longdescription: Animate your own story with Scratch!
     Add sprites, backgrounds, and interactive graphic effects to bring your story
     to life. Includes an educator facilitation guide, Scratch project tutorial, and
@@ -11304,7 +11308,7 @@ vi:
   tutorial_googlesuperhero_string_detail_programming_languages: Khối
   tutorial_googlename _string_detail_programming_languages: Khối
   tutorial_carnegiezillah_string_detail_programming_languages: Khối
-  tutorial_nasachspacejam_string_detail_programming_languages: JavaScript, P5
+  tutorial_nasachspacejam_string_detail_programming_languages: Khối
   tutorial_hatchxrsolar_string_detail_programming_languages: Khối
   tutorial_hatchxrspace_string_detail_programming_languages: Khối
   tutorial_hatchxrtrex_string_detail_programming_languages: Khối
@@ -11339,6 +11343,29 @@ vi:
   tutorial_nasapackage_string_detail_programming_languages: Khối
   tutorial_nasalunar_string_detail_programming_languages: Blocks, JavaScript
   tutorial_meeestate_string_detail_programming_languages: Blocks, Python
+  tutorial_imagipixelart_longdescription: Learn Python and create your own colorful
+    animations in this 1 hour crash course!
+  tutorial_imagipixelart_name: Code your own pixel art!
+  tutorial_imagipixelart_string_detail_grades: Grades 2-8
+  tutorial_imagipixelart_string_detail_platforms: ''
+  tutorial_imagipixelart_string_detail_programming_languages: typing
+  tutorial_imagipixelart_string_platforms: All modern browsers, iPad, Android tablets,
+    Windows phone, Android phone, iPhone
+  tutorial_kcjhealth_longdescription: 'Learn about data visualization, algorithmic
+    art and coding, while exploring SDG #3 ''Good Health and Well-Being''.'
+  tutorial_kcjhealth_name: The Health & Well-Being Challenge
+  tutorial_kcjhealth_string_detail_grades: Lớp 6+ (11 trở lên)
+  tutorial_kcjhealth_string_detail_platforms: ''
+  tutorial_kcjhealth_string_detail_programming_languages: Khối
+  tutorial_kcjhealth_string_platforms: Tất cả các trình duyệt hiện đại
+  tutorial_msftwakanda_longdescription: 'Shuri, Okoye, and Riri must band together
+    to help Wakanda. Code your own action-packed activity inspired by Marvel Studios''
+    ''Black Panther: Wakanda Forever''!'
+  tutorial_msftwakanda_name: Long Live Wakanda
+  tutorial_msftwakanda_string_detail_grades: Lớp 6+ (11 trở lên)
+  tutorial_msftwakanda_string_detail_platforms: ''
+  tutorial_msftwakanda_string_detail_programming_languages: Khối
+  tutorial_msftwakanda_string_platforms: Tất cả các trình duyệt hiện đại
   school_not_found_heading: We couldn't find your school. Please enter more information.
   school_name: School name
   school_name_error: School name is required.

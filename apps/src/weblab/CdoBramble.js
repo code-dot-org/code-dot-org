@@ -6,38 +6,6 @@ import logToCloud from '../logToCloud';
 import {Buffer} from 'buffer';
 
 import testImageAccess from '../code-studio/url_test';
-import firehoseClient from '../lib/util/firehose';
-
-// Some temporary logging to diagnose possible loading issues.
-function tempLog(event, data = null) {
-  firehoseClient.putRecord(
-    {
-      study: 'weblab_loading_investigation_2022',
-      event: event,
-      data: data,
-      is_cros: /\bCrOS\b/.test(navigator.userAgent)
-    },
-    {includeUserId: true}
-  );
-}
-
-// Test for whether we can reach the servers hosting the downloadable
-// JS and saving work.  Images are used to avoid CORS restrictions.
-function testReach() {
-  testImageAccess(
-    'https://downloads.computinginthecore.org/favicon.ico' +
-      '?' +
-      Math.random(),
-    () => tempLog('reachDownloads', true),
-    () => tempLog('reachDownloads', false)
-  );
-
-  testImageAccess(
-    'https://codeprojects.org/favicon.ico' + '?' + Math.random(),
-    () => tempLog('reachProjects', true),
-    () => tempLog('reachProjects', false)
-  );
-}
 
 const PageAction = makeEnum(
   logToCloud.PageAction.BrambleError,
@@ -85,15 +53,15 @@ export default class CdoBramble {
     let currentInitState = 'none';
 
     // Temporarily log the state.
-    tempLog('init');
+    this.tempLog('init');
 
     // Temporarily log the current state after 20 seconds.
     setTimeout(() => {
-      tempLog('after20', currentInitState);
+      this.tempLog('after20', currentInitState);
     }, 20 * 1000);
 
     // Temporarily test domain reachability.
-    testReach();
+    this.testReach();
 
     this.Bramble.load('#bramble', this.config());
 
@@ -105,7 +73,7 @@ export default class CdoBramble {
         });
 
         // Temporarily log and store the state.
-        tempLog('mountable');
+        this.tempLog('mountable');
         currentInitState = 'mountable';
       }
     });
@@ -118,7 +86,7 @@ export default class CdoBramble {
       this.invokeAll(this.onReadyCallbacks);
 
       // Temporarily log and store the state.
-      tempLog('ready');
+      this.tempLog('ready');
       currentInitState = 'ready';
     });
   }
@@ -730,7 +698,7 @@ export default class CdoBramble {
         });
 
         // Temporarily log the error.
-        tempLog('fileresetfail', err.message);
+        this.tempLog('fileresetfail', err.message);
       } else {
         this.logAction(PageAction.BrambleFilesystemResetSuccess);
       }
@@ -749,7 +717,7 @@ export default class CdoBramble {
     this.logAction(PageAction.BrambleError, {error: message});
 
     // Temporarily log the error.
-    tempLog('error', {message, code});
+    this.tempLog('error', {message, code});
 
     this.api.openFatalErrorDialog(
       message,
@@ -760,7 +728,30 @@ export default class CdoBramble {
   }
 
   logAction(actionName, value = {}) {
-    logToCloud.addPageAction(actionName, value);
+    this.api.addPageAction(actionName, value);
+  }
+
+  // Some temporary logging to diagnose possible loading issues.
+  tempLog(event, data = null) {
+    this.api.tempLog(event, data);
+  }
+
+  // Test for whether we can reach the servers hosting the downloadable
+  // JS and saving work.  Images are used to avoid CORS restrictions.
+  testReach() {
+    testImageAccess(
+      'https://downloads.computinginthecore.org/favicon.ico' +
+        '?' +
+        Math.random(),
+      () => this.tempLog('reachDownloads', true),
+      () => this.tempLog('reachDownloads', false)
+    );
+
+    testImageAccess(
+      'https://codeprojects.org/favicon.ico' + '?' + Math.random(),
+      () => this.tempLog('reachProjects', true),
+      () => this.tempLog('reachProjects', false)
+    );
   }
 
   isHtml(path) {

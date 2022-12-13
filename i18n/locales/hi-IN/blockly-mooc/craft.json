@@ -1,6 +1,7 @@
 {
   "absolute": "निरपेक्ष",
   "agentGenericFailureMessage": "कोडिंग करते रहो! एजेंट की मदद लेना याद रखना।",
+  "agentTooFewBlocksFailureMessage": "एक बार में एक ब्लॉक जोड़ने का प्रयास करें, एजेंट को सही जगह पर लाने के लिए।",
   "at": "पर",
   "blockActionAdd": "जोड़ें",
   "blockActionAttack": "हमला",
