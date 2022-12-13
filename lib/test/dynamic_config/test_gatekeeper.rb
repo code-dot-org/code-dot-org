@@ -63,7 +63,7 @@ class DynamicConfigGatekeeperTest < Minitest::Test
     refute @gatekeeper.delete("valid key", where: {"nonexistent type" => "query"})
     refute @gatekeeper.delete("valid key", where: {"type" => "nonexistent query"})
 
-    @mock_datastore.expect(:set, true, ["valid key"], where: {})
+    @mock_datastore.expect(:set, true, ["valid key", {}])
     assert @gatekeeper.delete("valid key", where: {"type" => "query"})
 
     @mock_datastore.verify
