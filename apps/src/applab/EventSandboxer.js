@@ -115,6 +115,19 @@ EventSandboxer.prototype.sandboxEvent = function(event) {
     newEvent.type = touchEvents[event.type];
     mouseEvent = event.changedTouches[0];
 
+    if (newEvent.type === 'mousedown') {
+      console.log('touch event - touchstart');
+      console.log(mouseEvent + '\n');
+    }
+    if (newEvent.type === 'mouseup') {
+      console.log('touch event - touchend');
+      console.log(mouseEvent + '\n');
+    }
+    if (newEvent.type === 'mousemove') {
+      console.log('touch event - touchmove');
+      console.log(mouseEvent + '\n');
+    }
+
     // Calculate and assign values that can be missing when touch is used.
     // We treat mouseEvent as read-only, so we will go ahead and write these
     // to the desired destination: newEvent.
@@ -126,6 +139,19 @@ EventSandboxer.prototype.sandboxEvent = function(event) {
     }
   } else {
     mouseEvent = event;
+
+    if (mouseEvent.type === 'mousedown') {
+      console.log('mouseEvent not touch event - mouse down');
+      console.log(mouseEvent);
+    }
+    if (mouseEvent.type === 'mouseup') {
+      console.log('mouseEvent not touch event - mouse up');
+      console.log(mouseEvent);
+    }
+    if (mouseEvent.type === 'mousemove') {
+      console.log('mouseEvent not touch event - mouse move');
+      console.log(mouseEvent);
+    }
   }
 
   // Convert x coordinates and then pass through to applabEvent:
@@ -150,23 +176,35 @@ EventSandboxer.prototype.sandboxEvent = function(event) {
     // The browser supports movementX and movementY natively.
     newEvent.movementX = mouseEvent.movementX;
     newEvent.movementY = mouseEvent.movementY;
-  } else if (newEvent.type === 'mousemove') {
-    var currentTargetId = event.currentTarget && event.currentTarget.id;
-    var lastEvent = this.lastMouseMoveEventMap_[currentTargetId];
-    if (currentTargetId && lastEvent) {
-      // Compute movementX and movementY from clientX and clientY.
-      newEvent.movementX = mouseEvent.clientX - lastEvent.clientX;
-      newEvent.movementY = mouseEvent.clientY - lastEvent.clientY;
-    } else {
-      // There has been no mousemove event on this element since the most recent
-      // mouseout event, or this element does not have an element id.
-      newEvent.movementX = 0;
-      newEvent.movementY = 0;
-    }
-    if (currentTargetId) {
-      this.lastMouseMoveEventMap_[currentTargetId] = mouseEvent;
-    }
   }
+  // else if (newEvent.type === 'mousemove') {
+  //   //console.log('inside newEvent.type === mousemove');
+  //   var currentTargetId = event.currentTarget && event.currentTarget.id;
+  //   var lastEvent = this.lastMouseMoveEventMap_[currentTargetId];
+  //   if (lastEvent) {
+  //     console.log('lastEvent.type');
+  //     console.log(lastEvent.type);
+  //   }
+  //   if (currentTargetId && lastEvent) {
+  //     // Compute movementX and movementY from clientX and clientY.
+  //     newEvent.movementX = mouseEvent.clientX - lastEvent.clientX;
+  //     newEvent.movementY = mouseEvent.clientY - lastEvent.clientY;
+  //   } else {
+  //     // There has been no mousemove event on this element since the most recent
+  //     // mouseout event, or this element does not have an element id.
+  //     newEvent.movementX = 0;
+  //     newEvent.movementY = 0;
+  //   }
+  //   if (currentTargetId) {
+  //     this.lastMouseMoveEventMap_[currentTargetId] = mouseEvent;
+  //   }
+  // } else if (mouseEvent.type === 'mousemove') {
+  //   console.log('mouseEvent.type === mousemove');
+  //   var currTargetId = event.currentTarget && event.currentTarget.id;
+  //   var laEvent = this.lastMouseMoveEventMap_[currTargetId];
+  //   console.log('lastEvent');
+  //   console.log(laEvent);
+  // }
   // Replace DOM elements with IDs and then add them to applabEvent:
   [
     'fromElement',
