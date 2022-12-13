@@ -109,11 +109,11 @@ The following table provides an overview of the licenses and restrictions govern
 |Code.org Materials     | Governing License and Restrictions |
 | ----------- | ----------- |
 | Code.org code-base on github  | [Apache 2.0 license](https://github.com/code-dot-org/code-dot-org/blob/staging/LICENSE) (code-base only; excludes videos, curriculum and tutorial materials, APIs, and other data described below) |
-| Code.org videos | Creative Commons BY-NC-ND 4.0 [licence](https://creativecommons.org/licenses/by-nc-nd/4.0/) (subject to express conditions below) |
-| Code.org curriculum and tutorial materials (other than proprietary videos and third-party artwork) | Creative Commons BY-NC-ND 4.0 [licence](https://creativecommons.org/licenses/by-nc-nd/4.0/) (subject to express conditions below) |
+| Code.org videos | [Creative Commons BY-NC-ND 4.0 license](https://creativecommons.org/licenses/by-nc-nd/4.0/) (subject to express conditions below) |
+| Code.org curriculum and tutorial materials (other than proprietary videos and third-party artwork) | [Creative Commons BY-NC-SA 4.0 licence](https://creativecommons.org/licenses/by-nc-sa/4.0/) (subject to express conditions below) |
 | Celebrity and other video and tutorial “cast” members’ likenesses and names | Not Applicable.  Can be used only as incorporated into Code.org materials  |
 | Artwork in Code.org tutorials (including third-party artwork or any other IP licensed to Code.org) | Not Applicable.  Can be used only as incorporated into Code.org materials |
-| JSON API | Creative Commons BY-NC-ND 4.0 [licence](https://creativecommons.org/licenses/by-nc-nd/4.0/) (subject to express conditions below)  |
+| JSON API | [Creative Commons BY-NC-SA 4.0 licence](https://creativecommons.org/licenses/by-nc-sa/4.0/) (subject to express conditions below)  |
 | Conference Board Data | The Conference Board Terms of Use (at [www.conference-board.org](https://www.conference-board.org/contact/index.cfm?id=1985))  |
 | Code.org trademarks | Not Applicable.  Require express written permission from Code.org |
 
