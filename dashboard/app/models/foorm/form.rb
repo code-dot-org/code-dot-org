@@ -66,7 +66,7 @@ class Foorm::Form < ApplicationRecord
 
   def validate_questions
     errors_arr = Foorm::Form.validate_questions(JSON.parse(questions))
-    errors_arr.each {|error| errors[:questions] << error}
+    errors_arr.each {|error| errors.add(:questions, error)}
   end
 
   def validate_published
@@ -74,7 +74,7 @@ class Foorm::Form < ApplicationRecord
 
     unless parsed_questions['published'].nil?
       if published != parsed_questions['published']
-        errors[:questions] << 'Mismatch between published state in questions and published state in model'
+        errors.add(:questions, 'Mismatch between published state in questions and published state in model')
       end
     end
   end

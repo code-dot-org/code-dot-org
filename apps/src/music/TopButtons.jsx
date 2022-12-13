@@ -1,13 +1,16 @@
-import React, {useContext, useState} from 'react';
+import React, {useContext, useState, useRef} from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import {AnalyticsContext} from './context';
 import moduleStyles from './topbuttons.module.scss';
 import FontAwesome from '../templates/FontAwesome';
+import AppConfig from './appConfig';
 
-const TopButtons = ({clearCode}) => {
+const TopButtons = ({clearCode, uploadSound}) => {
   const analyticsReporter = useContext(AnalyticsContext);
   const [shareMessageShowing, setShareMessageShowing] = useState(false);
+  const inputRef = useRef(null);
+  const showUploadSound = AppConfig.getValue('show-upload') === 'true';
 
   const startOverClicked = () => {
     analyticsReporter.onButtonClicked('start-over');
@@ -27,6 +30,14 @@ const TopButtons = ({clearCode}) => {
       analyticsReporter.onButtonClicked('share');
     }
     setShareMessageShowing(!shareMessageShowing);
+  };
+
+  const onUploadClicked = () => {
+    if (inputRef.current.files[0] === undefined) {
+      return false;
+    }
+
+    uploadSound(inputRef.current.files[0]);
   };
 
   return (
@@ -64,12 +75,32 @@ const TopButtons = ({clearCode}) => {
         <FontAwesome icon={'commenting'} />
         &nbsp; Feedback
       </button>
+      {showUploadSound && (
+        <fieldset>
+          <input
+            type="file"
+            id="audio-file"
+            ref={inputRef}
+            accept="audio/mpeg, audio/ogg, audio/*"
+            style={{width: 200}}
+          />
+          <button
+            onClick={onUploadClicked}
+            type="button"
+            id="compress_btn"
+            className={moduleStyles.button}
+          >
+            Upload
+          </button>
+        </fieldset>
+      )}
     </div>
   );
 };
 
 TopButtons.propTypes = {
-  clearCode: PropTypes.func.isRequired
+  clearCode: PropTypes.func.isRequired,
+  uploadSound: PropTypes.func.isRequired
 };
 
 export default TopButtons;
