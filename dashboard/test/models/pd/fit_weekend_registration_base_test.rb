@@ -41,14 +41,4 @@ class Pd::FitWeekendRegistrationBaseTest < ActiveSupport::TestCase
     refute registration.sanitize_form_data_hash.key?(:contact_first_name)
     refute registration.sanitize_form_data_hash.key?(:dietary_needs)
   end
-
-  test 'declining the registration does not affect the application status' do
-    [:accepted, :declined].each do |registration_status|
-      application = create(:pd_facilitator1920_application, :locked)
-      assert_equal 'accepted', application.status
-
-      create(:pd_fit_weekend1920_registration, pd_application: application, status: registration_status)
-      assert_equal 'accepted', application.reload.status
-    end
-  end
 end

@@ -15,6 +15,8 @@
 
 # NOTE: Unlike the other year-specific FiT Weekend Registration classes (Pd::FitWeekend1920Registration),
 # this class is in its own table and does not inherit from Pd::FitWeekendRegistrationBase.
+# TODO [meg]: Remove or gut this model to finish deprecating facilitator applications
+
 class Pd::FitWeekend1819Registration < ApplicationRecord
   include Pd::Form
 
@@ -25,14 +27,9 @@ class Pd::FitWeekend1819Registration < ApplicationRecord
   belongs_to :pd_application, class_name: 'Pd::Application::ApplicationBase', optional: true
 
   after_create :update_application_status
-  after_create :send_fit_weekend_confirmation_email
 
   def update_application_status
     pd_application.update!(status: 'withdrawn') unless accepted?
-  end
-
-  def send_fit_weekend_confirmation_email
-    Pd::FitWeekendRegistrationMailer.confirmation(self).deliver_now
   end
 
   def self.options
