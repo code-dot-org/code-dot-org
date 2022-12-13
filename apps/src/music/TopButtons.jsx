@@ -4,11 +4,13 @@ import classNames from 'classnames';
 import {AnalyticsContext} from './context';
 import moduleStyles from './topbuttons.module.scss';
 import FontAwesome from '../templates/FontAwesome';
+import AppConfig from './appConfig';
 
 const TopButtons = ({clearCode, uploadSound}) => {
   const analyticsReporter = useContext(AnalyticsContext);
   const [shareMessageShowing, setShareMessageShowing] = useState(false);
   const inputRef = useRef(null);
+  const showUploadSound = AppConfig.getValue('show-upload') === 'true';
 
   const startOverClicked = () => {
     analyticsReporter.onButtonClicked('start-over');
@@ -73,23 +75,25 @@ const TopButtons = ({clearCode, uploadSound}) => {
         <FontAwesome icon={'commenting'} />
         &nbsp; Feedback
       </button>
-      <fieldset>
-        <input
-          type="file"
-          id="audio-file"
-          ref={inputRef}
-          accept="audio/mpeg, audio/ogg, audio/*"
-          style={{width: 200}}
-        />
-        <button
-          onClick={onUploadClicked}
-          type="button"
-          id="compress_btn"
-          className={moduleStyles.button}
-        >
-          Upload
-        </button>
-      </fieldset>
+      {showUploadSound && (
+        <fieldset>
+          <input
+            type="file"
+            id="audio-file"
+            ref={inputRef}
+            accept="audio/mpeg, audio/ogg, audio/*"
+            style={{width: 200}}
+          />
+          <button
+            onClick={onUploadClicked}
+            type="button"
+            id="compress_btn"
+            className={moduleStyles.button}
+          >
+            Upload
+          </button>
+        </fieldset>
+      )}
     </div>
   );
 };
