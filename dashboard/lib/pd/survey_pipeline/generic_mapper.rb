@@ -68,12 +68,12 @@ module Pd::SurveyPipeline
       groups.each do |group_key, group_records|
         # Apply matched reducers on each group.
         # Add only non-empty result to the final summary.
-        map_config.each do |condition:, field:, reducers:|
-          next unless condition.call(group_key)
+        map_config.each do |rule|
+          next unless rule[:condition].call(group_key)
 
-          reducers.each do |reducer|
+          rule[:reducers].each do |reducer|
             # Only process values that are not nil
-            reducer_result = reducer.reduce group_records.pluck(field).compact
+            reducer_result = reducer.reduce group_records.pluck(rule[:field]).compact
             next if reducer_result.blank?
 
             summaries << group_key.merge({reducer: reducer.name, reducer_result: reducer_result})
