@@ -7,7 +7,7 @@ class MusiclabController < ApplicationController
   end
 
   def menu
-    view_options(full_width: false, responsive_content: true, no_padding_container: true)
+    view_options(full_width: true, responsive_content: true, no_padding_container: true)
   end
 
   # TODO: This is a temporary addition to serve the analytics API key
