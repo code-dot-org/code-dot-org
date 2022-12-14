@@ -147,7 +147,7 @@ export default class AnimationUpload extends React.Component {
         ...imageChecksInitialState,
         ...initialGeneratedMetadata,
         uploadStatus: Status.WAITING,
-        overwriteExistingAnimation: false
+        replaceExistingAnimation: false
       },
       () => {
         // If the user has already completed Step 2, we can already check whether the animation exists.
@@ -216,7 +216,7 @@ export default class AnimationUpload extends React.Component {
         metadata: '',
         destination: '',
         [ANIMATION_EXISTS_CHECK]: Status.WAITING,
-        overwriteExistingAnimation: false
+        replaceExistingAnimation: false
       },
       () => {
         if (this.state.availability === AnimationLocations.level) {
@@ -239,7 +239,7 @@ export default class AnimationUpload extends React.Component {
         category: value,
         metadata: '',
         [ANIMATION_EXISTS_CHECK]: Status.WAITING,
-        overwriteExistingAnimation: false
+        replaceExistingAnimation: false
       },
       () => {
         this.determineIfAnimationAlreadyExists(
@@ -318,7 +318,7 @@ export default class AnimationUpload extends React.Component {
       case Status.SUCCEEDED:
         return 'This path and filename are available.';
       case Status.ALERT:
-        return 'Filename already exists at this path. Would you like to overwrite the existing animation?';
+        return 'Filename already exists at this path. Would you like to replace the existing animation?';
       case Status.WAITING:
         return 'Select a file and destination above.';
     }
@@ -337,8 +337,8 @@ export default class AnimationUpload extends React.Component {
     }
   }
 
-  handleOverwriteExistingAnimation = event => {
-    this.setState({overwriteExistingAnimation: event.target.checked});
+  handleReplaceExistingAnimation = event => {
+    this.setState({replaceExistingAnimation: event.target.checked});
   };
 
   validImage = () => {
@@ -350,7 +350,7 @@ export default class AnimationUpload extends React.Component {
     const animationExistsCheckPassed =
       this.state[ANIMATION_EXISTS_CHECK] === Status.SUCCEEDED ||
       (this.state[ANIMATION_EXISTS_CHECK] === Status.ALERT &&
-        this.state.overwriteExistingAnimation);
+        this.state.replaceExistingAnimation);
 
     return statusChecksPassed && animationExistsCheckPassed;
   };
@@ -556,16 +556,16 @@ export default class AnimationUpload extends React.Component {
                   hideWaitingSteps={false}
                 />
                 {animationExistsStatus === Status.ALERT && (
-                  <div style={styles.animationOverwrite}>
+                  <div style={styles.animationReplace}>
                     <img src={this.getExistingAnimationSrc()} />
                     <label>
                       <input
                         type="checkbox"
                         style={styles.checkbox}
-                        value={this.state.overwriteExistingAnimation}
-                        onChange={this.handleOverwriteExistingAnimation}
+                        value={this.state.replaceExistingAnimation}
+                        onChange={this.handleReplaceExistingAnimation}
                       />
-                      Overwrite animation
+                      Replace animation
                     </label>
                   </div>
                 )}
@@ -641,7 +641,7 @@ const styles = {
   radioButton: {
     margin: 10
   },
-  animationOverwrite: {
+  animationReplace: {
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center'
