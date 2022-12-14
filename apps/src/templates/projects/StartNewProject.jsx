@@ -83,7 +83,6 @@ export default class StartNewProject extends React.Component {
 
         {canViewFullList && (
           <Button
-            __useDeprecatedTag
             id="uitest-view-full-list"
             onClick={this.toggleShowFullList}
             color={Button.ButtonColor.gray}
@@ -138,7 +137,8 @@ export default class StartNewProject extends React.Component {
 const styles = {
   button: {
     float: 'right',
-    marginRight: 1
+    margin: '0 1px 0 0',
+    padding: '0 24px'
   },
   headingStartNew: {
     paddingRight: 10,
