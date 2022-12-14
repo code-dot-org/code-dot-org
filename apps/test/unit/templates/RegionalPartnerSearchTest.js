@@ -14,13 +14,16 @@ const MINIMUM_PROPS = {
   responsiveSize: 'md'
 };
 
-const testSummerWorkshop = courseKey => {
-  return {
-    course: ActiveCourseWorkshops[courseKey],
-    workshop_date_range_string: 'Test dates',
-    location_name: 'Test location',
-    location_address: 'Test address'
-  };
+// All course types of which programs can be offered (i.e. CSD, CSP, and CSA)
+const ACTIVE_COURSES = Object.keys(ActiveCourseWorkshops);
+// Offer programs of all but the last active course type (i.e. offer CSD and CSP, not CSA)
+const OFFERED_PROGRAMS = ACTIVE_COURSES.slice(0, -1);
+// Workshop for the first offered program (i.e. CSD)
+const OFFERED_WORKSHOP = {
+  course: ActiveCourseWorkshops[OFFERED_PROGRAMS[0]],
+  workshop_date_range_string: 'Test CSD workshop dates',
+  location_name: 'Test CSD workshop location',
+  location_address: 'Test CSD workshop address'
 };
 
 const createServerResponses = (
@@ -120,37 +123,76 @@ describe('RegionalPartnerSearch', () => {
     expect(wrapper.find('WorkshopCard')).to.have.length(3);
   });
   it('shows Not Offering note on workshop card(s) for the program(s) not being offered when other programs are offered', () => {
-    // Offering CSD and CSP (with workshop(s) for CSD), and not offering CSA
-    createServerResponses(
-      server,
-      true,
-      false,
-      ['CSD', 'CSP'],
-      [testSummerWorkshop('CSD')]
-    );
+    createServerResponses(server, true, false, OFFERED_PROGRAMS, [
+      OFFERED_WORKSHOP
+    ]);
     const wrapper = isolateComponent(
       <RegionalPartnerSearch {...MINIMUM_PROPS} />
     );
     server.respond();
-    const workshopCards = wrapper.findAll('WorkshopCard');
-    expect(workshopCards.at(2).props.content.props.children).to.equal(
-      <>
-        <h4>{ActiveCourseWorkshops.CSA} Workshops</h4>
-        <div>
-          This Regional Partner is not offering {ActiveCourseWorkshops.CSA}
-          workshops at this time. Code.org will review your application and
-          contact you with options for joining the program hosted by a Regional
-          Partner from a different region.
-        </div>
-      </>
+
+    // Get the WorkshopCard of the course not being offered as a program
+    const notOfferedWorkshopCard = wrapper
+      .findAll('WorkshopCard')
+      .at(ACTIVE_COURSES.length - 1);
+    // Get WorkshopCard content
+    const notOfferedWorkshopCardContent = notOfferedWorkshopCard.props.content.props.children[1].props.children.toString();
+
+    // Ensure correct content for the WorkshopCard of the course not offered as a program
+    expect(notOfferedWorkshopCardContent).to.contain(
+      'This Regional Partner is not offering'
     );
-    // console.log(wrapper.debug());
-    // expect(wrapper).to.contain(
-    //   'This Regional Partner is not offering Computer Science A workshops at this time.'
-    // );
+    expect(notOfferedWorkshopCardContent).to.contain(
+      ActiveCourseWorkshops[ACTIVE_COURSES[ACTIVE_COURSES.length - 1]]
+    );
   });
-  // it('shows Details Coming Soon note on workshop card(s) for offered program(s) that do not currently have summer workshops', () => {
-  // });
-  // it('shows summer workshop details on workshop cards for offered programs with summer workshops', () => {
-  // });
+  it('shows Details Coming Soon note on workshop card(s) for offered program(s) that do not currently have summer workshops', () => {
+    createServerResponses(server, true, false, OFFERED_PROGRAMS, [
+      OFFERED_WORKSHOP
+    ]);
+    const wrapper = isolateComponent(
+      <RegionalPartnerSearch {...MINIMUM_PROPS} />
+    );
+    server.respond();
+
+    // Get the WorkshopCard of the offered course that does not have a workshop
+    const offeredNoWSWorkshopCard = wrapper.findAll('WorkshopCard').at(1);
+    // Get WorkshopCard content
+    const offeredNoWSWorkshopCardContent = offeredNoWSWorkshopCard.props.content.props.children[0].props.children.toString();
+
+    // Ensure correct content for the WorkshopCard of the offered program without a workshop
+    expect(offeredNoWSWorkshopCardContent).to.contain(
+      'Workshop details are coming soon!'
+    );
+    expect(offeredNoWSWorkshopCardContent).to.contain(
+      ActiveCourseWorkshops[OFFERED_PROGRAMS[1]]
+    );
+  });
+  it('shows summer workshop details on workshop cards for offered programs with summer workshops', () => {
+    createServerResponses(server, true, false, OFFERED_PROGRAMS, [
+      OFFERED_WORKSHOP
+    ]);
+    const wrapper = isolateComponent(
+      <RegionalPartnerSearch {...MINIMUM_PROPS} />
+    );
+    server.respond();
+
+    // Get the WorkshopCard of the offered course that has a workshop
+    const offeredWithWSWorkshopCard = wrapper.findAll('WorkshopCard').at(0);
+    // Get WorkshopCard heading
+    const offeredWithWSWorkshopCardHeading =
+      offeredWithWSWorkshopCard.props.content.props.children[0].props.children;
+    // Get WorkshopCard content
+    const offeredWithWSWorkshopCardContent =
+      offeredWithWSWorkshopCard.props.content.props.children[1][0].props
+        .children[1].props.children;
+
+    // Ensure correct heading and content for the WorkshopCard of the offered program with a workshop
+    expect(offeredWithWSWorkshopCardHeading).to.contain(
+      ActiveCourseWorkshops[OFFERED_PROGRAMS[0]]
+    );
+    expect(offeredWithWSWorkshopCardContent).to.contain(
+      OFFERED_WORKSHOP.location_name
+    );
+  });
 });
