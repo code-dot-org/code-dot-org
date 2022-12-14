@@ -21,9 +21,7 @@ export default class Timeline extends React.Component {
   }
 
   getEventHeight = () => {
-    const numUniqueSounds = this.uniqueSounds.getUniqueSounds(
-      this.props.songData.events
-    ).length;
+    const numUniqueSounds = this.currentUniqueSounds.length;
     const actualHeight = 110;
 
     // While we might not actually have this many rows to show,
@@ -44,9 +42,7 @@ export default class Timeline extends React.Component {
   };
 
   getUniqueIndexForEventId = id => {
-    return this.uniqueSounds
-      .getUniqueSounds(this.props.songData.events)
-      .indexOf(id);
+    return this.currentUniqueSounds.indexOf(id);
   };
 
   getVerticalOffsetForEventId = id => {
@@ -90,6 +86,14 @@ export default class Timeline extends React.Component {
 
     // Leave some vertical space between each event block.
     const eventVerticalSpace = 2;
+
+    // Let's cache the value of getUniqueSounds() so that the various helpers
+    // we call during render don't need to recalculate it.  This also ensures
+    // that we recalculate unique sounds, even when there are no entries to
+    // render.
+    this.currentUniqueSounds = this.uniqueSounds.getUniqueSounds(
+      this.props.songData.events
+    );
 
     return (
       <div
