@@ -931,7 +931,7 @@ FactoryGirl.define do
     end
   end
 
-  factory :pd_fit_weekend1920_registration, class: 'Pd::FitWeekendRegistrationBase' do
+  factory :pd_fit_weekend1920_registration, class: 'Pd::FitWeekend1920Registration' do
     transient do
       status :accepted
     end
