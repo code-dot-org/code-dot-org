@@ -157,8 +157,9 @@ class Pd::Enrollment < ApplicationRecord
     raise 'Expected enrollments to be an Enumerable list of Pd::Enrollment objects' unless
         enrollments.is_a?(Enumerable) && enrollments.all?(Pd::Enrollment)
 
-    # Filter out Local summer, CSP Workshop for Returning Teachers, and CSF Intro workshops before 5/8/2020 and
-    # CSF Deep Dive workshops before 9/1/2020 as they do not use Foorm for survey completion.
+    # Filter out Local summer, CSP Workshop for Returning Teachers, and CSF Intro workshops before 5/8/2020 (they
+    # do not use Foorm for survey completion); CSF Deep Dive workshops before 9/1/2020 (they do not use Foorm for
+    # survey completion); and Admin + Admin/Counselor workshops (they should not receive exit surveys at all).
     foorm_enrollments = enrollments.select do |enrollment|
       !(enrollment.workshop.workshop_ending_date < Date.new(2020, 5, 8) &&
         (enrollment.workshop.csf_intro? || enrollment.workshop.local_summer? || enrollment.workshop.csp_wfrt?)) &&
