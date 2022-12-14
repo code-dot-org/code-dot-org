@@ -527,6 +527,10 @@ et:
   signup_registration_closed: Iga aasta detsembrikuus võib teie klass liituda miljonitega
     õpilastega üle maailma ja tähistada Arvutiteaduse õpetamise nädalat KoodiTund
     abi. Avame registreerimise iga-aastasele üritusele oktoobris.
+  signup_registration_closed_2022_markdown: 'Registration for this year''s Hour of
+    Code event map is currently closed, but you can still [host an Hour of Code](%{hoc_activities_url})
+    and join in the celebration on social media! Post fun pictures or video of your
+    event using the #HourOfCode hashtag!'
   signup_header: Organiseeri KoodiTund vahemikus %{campaign_date} ja registreeri see
     siin.
   signup_name_label: Sinu nimi
