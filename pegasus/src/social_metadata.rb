@@ -174,6 +174,13 @@ def get_social_metadata_for_page(request)
         image: images[:hoc_2022_landing_page]
       }
     },
+    "maker" => {
+      "default" => {
+        title: hoc_s(:social_maker_title),
+        description: hoc_s(:social_maker_desc),
+        image: images[:maker_physical_computing]
+      }
+    },
   }
 
   if request.path == "/challenge" && request.site == "code.org"
@@ -200,6 +207,8 @@ def get_social_metadata_for_page(request)
     page = "cs-leaders-prize"
   elsif request.path == "/hourofcode2022" && request.site == "code.org"
     page = "hoc-2022-landing-page"
+  elsif request.path == "/maker" && request.site == "code.org"
+    page = "maker"
   else
     return {}
   end
