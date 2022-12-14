@@ -29,7 +29,7 @@ const createServerResponses = (
   const responseWithRP = {
     application_state: {
       state: applicationsClosed
-        ? WorkshopApplicationStates.opening_at
+        ? WorkshopApplicationStates.now_closed
         : WorkshopApplicationStates.currently_open
     },
     summer_workshops: summerWorkshops || [],
@@ -101,22 +101,20 @@ describe('RegionalPartnerSearch', () => {
     createServerResponses(server, true, true);
     const wrapper = shallow(<RegionalPartnerSearch {...MINIMUM_PROPS} />);
     server.respond();
-    expect(wrapper.find('h3')[0].text()).to.equal('aa');
+    expect(wrapper.find('WorkshopCard')).to.have.length(0);
   });
-
-  // it('shows no workshop cards if RP is found and applications are open, but RP is not offering programs', () => {
-  //   createServerResponses(server, true, false, []);
-  //   const wrapper = shallow(<RegionalPartnerSearch {...MINIMUM_PROPS} />);
-  //   server.respond();
-  //   expect(wrapper.find('WorkshopCard')).to.have.length(0);
-  // });
-  // it('shows workshop cards if RP found, applications are open, and RP is offering programs', () => {
-  //   createServerResponses(server, true, false);
-  //   const wrapper = shallow(<RegionalPartnerSearch {...MINIMUM_PROPS} />);
-  //   server.respond();
-  //   expect(wrapper.find('h3')).to.have.length(2);
-  //   expect(wrapper.find('WorkshopCard')).to.have.length(3);
-  // });
+  it('shows no workshop cards if RP is found and applications are open, but RP is not offering programs', () => {
+    createServerResponses(server, true, false);
+    const wrapper = shallow(<RegionalPartnerSearch {...MINIMUM_PROPS} />);
+    server.respond();
+    expect(wrapper.find('WorkshopCard')).to.have.length(0);
+  });
+  it('shows workshop cards if RP found, applications are open, and RP is offering programs', () => {
+    createServerResponses(server, true, false, ['CSD', 'CSP']);
+    const wrapper = shallow(<RegionalPartnerSearch {...MINIMUM_PROPS} />);
+    server.respond();
+    expect(wrapper.find('WorkshopCard')).to.have.length(3);
+  });
   // it('shows Not Offering note on workshop card(s) for the program(s) not being offered when other programs are offered', () => {
   //   createServerResponses(
   //     server,
@@ -125,10 +123,20 @@ describe('RegionalPartnerSearch', () => {
   //     ['CSD', 'CSP'],
   //     [testSummerWorkshop('CSD')]
   //   );
-  //   const wrapper = shallow(<RegionalPartnerSearch {...MINIMUM_PROPS} />);
-  //   server.respond();
-  //   const workshopCards = wrapper.find('WorkshopCard');
-  //   expect(workshopCards[0].content).to.contain('Workshop details are coming soon');
+  //   const wrapper = isolateComponent(
+  //     <RegionalPartnerSearch {...MINIMUM_PROPS} />
+  //   );
+  //   wrapper.setState({
+  //     partnerInfo: {
+  //       name: 'Reggie Partner',
+  //       application_state: {state: WorkshopApplicationStates.currently_open},
+  //       pl_programs_offered: ['CSD', 'CSP'],
+  //       summer_workshops: [testSummerWorkshop('CSD')]
+  //     },
+  //     applicationsClosed: false
+  //   });
+  //   console.log(wrapper.debug());
+  //   expect(wrapper.findAll('WorkshopCard')).to.have.length(3);
   // });
   // it('shows Details Coming Soon note on workshop card(s) for offered program(s) that do not currently have summer workshops', () => {
   // });

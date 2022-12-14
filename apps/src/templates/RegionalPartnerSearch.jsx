@@ -319,7 +319,7 @@ class RegionalPartnerSearch extends Component {
             </div>
 
             {appState !== WorkshopApplicationStates.now_closed &&
-              partnerInfo.pl_programs_offered && (
+              partnerInfo.pl_programs_offered?.length > 0 && (
                 <div>
                   <h3>Workshop information (hosted by {partnerInfo.name}):</h3>
                   {courseWorkshops.map((currCourse, currCourseIndex) => {
