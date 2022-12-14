@@ -6,6 +6,16 @@ GIT
       omniauth-oauth2 (>= 1.1, <= 1.5)
 
 GIT
+  remote: https://github.com/code-dot-org/aws-google.git
+  revision: 51414735e6ba517fa764f947f6af3cce5c474eed
+  branch: google-apis-core
+  specs:
+    aws-google (0.2.0)
+      aws-sdk-core (~> 3.130)
+      google-apis-core
+      launchy (~> 2)
+
+GIT
   remote: https://github.com/code-dot-org/petit.git
   revision: bbe411d61d3f78fff59d9fa79d21c14b1c635750
   specs:
@@ -253,10 +263,6 @@ GEM
     auto_strip_attributes (2.1.0)
       activerecord (>= 3.0)
     aws-eventstream (1.2.0)
-    aws-google (0.1.8)
-      aws-sdk-core (~> 3.130)
-      google-api-client (~> 0.23)
-      launchy (~> 2)
     aws-partitions (1.664.0)
     aws-sdk-acm (1.44.0)
       aws-sdk-core (~> 3, >= 3.119.0)
@@ -458,15 +464,11 @@ GEM
       railties (>= 3.2, < 8.0)
     fspath (3.1.0)
     gemoji (2.1.0)
-    gems (1.2.0)
     geocoder (1.6.4)
     get_process_mem (0.2.3)
     gherkin (5.1.0)
     globalid (1.0.0)
       activesupport (>= 5.0)
-    google-api-client (0.53.0)
-      google-apis-core (~> 0.1)
-      google-apis-generator (~> 0.1)
     google-apis-analytics_v3 (0.12.0)
       google-apis-core (>= 0.9.1, < 2.a)
     google-apis-classroom_v1 (0.21.0)
@@ -480,16 +482,8 @@ GEM
       retriable (>= 2.0, < 4.a)
       rexml
       webrick
-    google-apis-discovery_v1 (0.13.0)
-      google-apis-core (>= 0.9.1, < 2.a)
     google-apis-drive_v3 (0.32.0)
       google-apis-core (>= 0.9.1, < 2.a)
-    google-apis-generator (0.11.0)
-      activesupport (>= 5.0)
-      gems (~> 1.2)
-      google-apis-core (>= 0.9.1, < 2.a)
-      google-apis-discovery_v1 (~> 0.5)
-      thor (>= 0.20, < 2.a)
     google-apis-sheets_v4 (0.20.0)
       google-apis-core (>= 0.9.1, < 2.a)
     google-apis-youtube_v3 (0.25.0)
@@ -961,7 +955,7 @@ DEPENDENCIES
   addressable
   annotate (~> 3.1.1)
   auto_strip_attributes (~> 2.1)
-  aws-google (~> 0.1.8)
+  aws-google!
   aws-sdk-acm
   aws-sdk-cloudformation
   aws-sdk-cloudfront
