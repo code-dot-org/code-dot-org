@@ -931,12 +931,12 @@ FactoryGirl.define do
     end
   end
 
-  factory :pd_fit_weekend1920_registration, class: 'Pd::FitWeekend1920Registration' do
+  factory :pd_fit_weekend1920_registration, class: 'Pd::FitWeekendRegistrationBase' do
     transient do
       status :accepted
     end
 
-    association :pd_application, factory: :pd_facilitator1920_application
+    association :pd_application, factory: :pd_teacher_application
     form_data {build(:pd_fit_weekend1920_registration_hash, status).to_json}
   end
 
