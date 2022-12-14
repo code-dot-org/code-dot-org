@@ -88,7 +88,11 @@ export default class HeaderPopup extends Component {
           <div>
             <button
               type="button"
-              className={classNames('no-mc', styles.headerItem)}
+              className={classNames(
+                'no-mc',
+                styles.headerItem,
+                styles.headerItemLess
+              )}
               onClick={this.handleClickClose}
             >
               <i className={classNames('fa fa-caret-up', styles.caret)} />
