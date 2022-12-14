@@ -64,16 +64,17 @@ function TopInstructionsHeader(props) {
       isMinecraft={isMinecraft}
     >
       <div style={styles.paneHeaderOverride}>
-        {/* For CSF contained levels we use the same collapse function as CSD/CSP*/}
-        {collapsible &&
-          !isEmbedView &&
-          (isCSDorCSP || hasContainedLevels) &&
-          !dynamicInstructions && (
-            <CollapserIcon
-              id="ui-test-collapser"
-              isCollapsed={isCollapsed}
-              onClick={handleClickCollapser}
-              style={collapserIconStyles}
+        {/* For CSF contained levels we use the same audio button location as CSD/CSP*/}
+        {tabSelected === TabType.INSTRUCTIONS &&
+          ttsLongInstructionsUrl &&
+          (hasContainedLevels || isCSDorCSP) && (
+            <InlineAudio
+              src={ttsLongInstructionsUrl}
+              style={{
+                ...styles.audio,
+                ...(isRtl ? styles.audioRTL : styles.audioLTR)
+              }}
+              autoplayTriggerElementId="codeApp"
             />
           )}
         {documentationUrl && tabSelected !== TabType.COMMENTS && (
@@ -167,17 +168,16 @@ function TopInstructionsHeader(props) {
             isRtl={isRtl}
           />
         )}
-        {/* For CSF contained levels we use the same audio button location as CSD/CSP*/}
-        {tabSelected === TabType.INSTRUCTIONS &&
-          ttsLongInstructionsUrl &&
-          (hasContainedLevels || isCSDorCSP) && (
-            <InlineAudio
-              src={ttsLongInstructionsUrl}
-              style={{
-                ...styles.audio,
-                ...(isRtl ? styles.audioRTL : styles.audioLTR)
-              }}
-              autoplayTriggerElementId="codeApp"
+        {/* For CSF contained levels we use the same collapse function as CSD/CSP*/}
+        {collapsible &&
+          !isEmbedView &&
+          (isCSDorCSP || hasContainedLevels) &&
+          !dynamicInstructions && (
+            <CollapserIcon
+              id="ui-test-collapser"
+              isCollapsed={isCollapsed}
+              onClick={handleClickCollapser}
+              style={collapserIconStyles}
             />
           )}
       </div>
