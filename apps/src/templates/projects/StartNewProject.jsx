@@ -76,8 +76,6 @@ export default class StartNewProject extends React.Component {
 
     const PREREADER_PROJECT_TYPES = ['playlab_k1', 'artist_k1'];
 
-    const MATH_PROJECT_TYPES = ['calc', 'eval'];
-
     return (
       <div>
         <div style={styles.headingStartNew}>{i18n.projectStartNew()}</div>
@@ -129,12 +127,6 @@ export default class StartNewProject extends React.Component {
               description={i18n.projectGroupPreReader()}
               projectTypes={PREREADER_PROJECT_TYPES}
             />
-            {canViewAdvancedTools && (
-              <NewProjectButtons
-                description={i18n.projectGroupMath()}
-                projectTypes={MATH_PROJECT_TYPES}
-              />
-            )}
           </div>
         )}
         <div style={styles.spacer} />
