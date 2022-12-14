@@ -212,7 +212,20 @@ gem 'twilio-ruby' # SMS API for send-to-phone feature
 # - /dashboard/public/fonts/
 # - /pegasus/sites.v3/code.org/public/fonts/
 # - /pegasus/sites.v3/hourofcode/public/fonts/
-gem 'font-awesome-rails', '~> 4.7.0.8'
+# Also double check the next files. They are hosted locally from the font awesome web zip archive.
+# If updating - please move all @font-face{} to the pegasus/sites.v3/code.org/public/css/fonts.css and update the font path:
+#   pegasus/sites.v3/code.org/styles/030-fontAwesome-pro.css
+#   pegasus/sites.v3/code.org/styles/031-fontAwesome-v4-shims.css
+#   pegasus/sites.v3/code.org/styles_min/030-fontAwesome-pro.min.css
+#   pegasus/sites.v3/code.org/styles_min/031-fontAwesome-v4-shims.min.css
+# To make it clear - we serve font awesome via gem only in dashboard pages. Pegasus pages are all serve font awesome from our locally saved files.
+# (Because of the possible firewall issue on students side in case we serve fontAwesome from outer sources)
+
+# Important!!! To download this gem you should update your bundle config.
+# To do this just run ```$ bundle config dl.fontawesome.com token:SECRET_TOKEN``` from your console in the project folder.
+source "https://dl.fontawesome.com/basic/fontawesome-pro/ruby/" do
+  gem "font-awesome-pro-sass", "6.2.1"
+end
 
 gem 'sequel'
 gem 'user_agent_parser'
