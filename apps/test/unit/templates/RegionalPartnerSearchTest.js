@@ -1,7 +1,11 @@
 import React from 'react';
 import {shallow} from 'enzyme';
+import {isolateComponent} from 'isolate-react';
 import {UnconnectedRegionalPartnerSearch as RegionalPartnerSearch} from '@cdo/apps/templates/RegionalPartnerSearch';
-import {WorkshopApplicationStates} from '@cdo/apps/generated/pd/sharedWorkshopConstants';
+import {
+  WorkshopApplicationStates,
+  ActiveCourseWorkshops
+} from '@cdo/apps/generated/pd/sharedWorkshopConstants';
 import {expect} from '../../util/reconfiguredChai';
 import sinon from 'sinon';
 import * as utils from '@cdo/apps/utils';
@@ -10,14 +14,14 @@ const MINIMUM_PROPS = {
   responsiveSize: 'md'
 };
 
-// const testSummerWorkshop = courseKey => {
-//   return {
-//     course: ActiveCourseWorkshops[courseKey],
-//     workshop_date_range_string: 'Test dates',
-//     location_name: 'Test location',
-//     location_address: 'Test address'
-//   };
-// };
+const testSummerWorkshop = courseKey => {
+  return {
+    course: ActiveCourseWorkshops[courseKey],
+    workshop_date_range_string: 'Test dates',
+    location_name: 'Test location',
+    location_address: 'Test address'
+  };
+};
 
 const createServerResponses = (
   server,
@@ -115,29 +119,36 @@ describe('RegionalPartnerSearch', () => {
     server.respond();
     expect(wrapper.find('WorkshopCard')).to.have.length(3);
   });
-  // it('shows Not Offering note on workshop card(s) for the program(s) not being offered when other programs are offered', () => {
-  //   createServerResponses(
-  //     server,
-  //     true,
-  //     false,
-  //     ['CSD', 'CSP'],
-  //     [testSummerWorkshop('CSD')]
-  //   );
-  //   const wrapper = isolateComponent(
-  //     <RegionalPartnerSearch {...MINIMUM_PROPS} />
-  //   );
-  //   wrapper.setState({
-  //     partnerInfo: {
-  //       name: 'Reggie Partner',
-  //       application_state: {state: WorkshopApplicationStates.currently_open},
-  //       pl_programs_offered: ['CSD', 'CSP'],
-  //       summer_workshops: [testSummerWorkshop('CSD')]
-  //     },
-  //     applicationsClosed: false
-  //   });
-  //   console.log(wrapper.debug());
-  //   expect(wrapper.findAll('WorkshopCard')).to.have.length(3);
-  // });
+  it('shows Not Offering note on workshop card(s) for the program(s) not being offered when other programs are offered', () => {
+    // Offering CSD and CSP (with workshop(s) for CSD), and not offering CSA
+    createServerResponses(
+      server,
+      true,
+      false,
+      ['CSD', 'CSP'],
+      [testSummerWorkshop('CSD')]
+    );
+    const wrapper = isolateComponent(
+      <RegionalPartnerSearch {...MINIMUM_PROPS} />
+    );
+    server.respond();
+    const workshopCards = wrapper.findAll('WorkshopCard');
+    expect(workshopCards.at(2).props.content.props.children).to.equal(
+      <>
+        <h4>{ActiveCourseWorkshops.CSA} Workshops</h4>
+        <div>
+          This Regional Partner is not offering {ActiveCourseWorkshops.CSA}
+          workshops at this time. Code.org will review your application and
+          contact you with options for joining the program hosted by a Regional
+          Partner from a different region.
+        </div>
+      </>
+    );
+    // console.log(wrapper.debug());
+    // expect(wrapper).to.contain(
+    //   'This Regional Partner is not offering Computer Science A workshops at this time.'
+    // );
+  });
   // it('shows Details Coming Soon note on workshop card(s) for offered program(s) that do not currently have summer workshops', () => {
   // });
   // it('shows summer workshop details on workshop cards for offered programs with summer workshops', () => {
