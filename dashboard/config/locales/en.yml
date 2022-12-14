@@ -651,6 +651,8 @@ en:
       applab_unsupported_tablet: "App Lab works best on a desktop or laptop computer with a mouse and keyboard. You may experience issues using this tool on your current device."
       gamelab_unsupported_tablet: "Game Lab works best on a desktop or laptop computer with a mouse and keyboard. You may experience issues using this tool on your current device."
       weblab_unsupported_locale_storage: "You may experience issues using Web Lab in Private Browsing mode. Please reload your project in normal mode. Sorry for the inconvenience."
+  deprecation:
+    algebra_lab: "CS in Algebra curriculum and content is being deprecated.  Within the next few months, this lab will no longer be available.  Please check out [Bootstrap: Algebra](%{bootstrap_algebra_url}) instead. [Learn More](%{cs_algebra_url})."
   slow_loading: 'This is taking longer than usual...'
   try_reloading: 'Try reloading the page'
   next_stage: 'Finished! Continue to next lesson'
