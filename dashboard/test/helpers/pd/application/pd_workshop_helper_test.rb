@@ -99,7 +99,7 @@ module Pd::Application
 
       # 10 applications, still only 3 queries
       assert_queries 3 do
-        FACILITATOR_APPLICATION_CLASS.prefetch_associated_models(applications)
+        TEACHER_APPLICATION_CLASS.prefetch_associated_models(applications)
       end
 
       assert_queries 0 do
