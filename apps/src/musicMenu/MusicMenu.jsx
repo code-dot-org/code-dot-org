@@ -167,7 +167,7 @@ export default class MusicMenu extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className="main" style={{maxWidth: 970, margin: '0 auto 80px auto'}}>
         <h1>Music Lab options</h1>
         {this.renderResults()}
         {this.renderOptions()}
