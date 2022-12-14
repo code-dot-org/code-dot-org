@@ -1312,6 +1312,26 @@
   resolved "https://registry.yarnpkg.com/@blockly/plugin-scroll-options/-/plugin-scroll-options-3.0.3.tgz#71fddcb58a1a4e8e145e1c0e6ffc21d15adab951"
   integrity sha512-UxArVgFn/D23TKtW6CM3rPc9r7qzx/XnKmZZANPqOvNB3X1PdZbm8+EGHocdzZbcUqq+g+Xjb+O4PfkT0kfqag==
 
+"@blockly/theme-dark@^4.0.1":
+  version "4.0.1"
+  resolved "https://registry.yarnpkg.com/@blockly/theme-dark/-/theme-dark-4.0.1.tgz#cc1a83142556ff3667aeef3f4faddc6198cabd8f"
+  integrity sha512-OIfdnt3kvPnEW/TmfLPUftcekwoQGmxg/12LajYUdW9aOLMQaen16Vw0+BB8Q8zKInpxT6JCBYECilYRLY+RpA==
+
+"@blockly/theme-deuteranopia@^3.0.1":
+  version "3.0.1"
+  resolved "https://registry.yarnpkg.com/@blockly/theme-deuteranopia/-/theme-deuteranopia-3.0.1.tgz#a37b59baac5a537e5bf8571a5985dad59e956a1a"
+  integrity sha512-3zmkD3ERGAuKQjAeFFoNNAhfwmxFncXd3Mw5tHn64MlxguMJCKt7C4Siu6gRXGYpvukkpMUlbgklWyNz2okHng==
+
+"@blockly/theme-highcontrast@^3.0.1":
+  version "3.0.1"
+  resolved "https://registry.yarnpkg.com/@blockly/theme-highcontrast/-/theme-highcontrast-3.0.1.tgz#21d5d5927cacda15f89e6e1e0724047cebb6765d"
+  integrity sha512-HuEHKq7n2zTV1gb19SGjyKlCYjZeZSITWPIQeD5wfEVleOOy8z6zjLRZ9D7QoiL4ooFefWkx1kauVsWbaTqN5g==
+
+"@blockly/theme-tritanopia@^3.0.2":
+  version "3.0.2"
+  resolved "https://registry.yarnpkg.com/@blockly/theme-tritanopia/-/theme-tritanopia-3.0.2.tgz#bfca1db51c5dd883a9250bb4f21f072921a97648"
+  integrity sha512-soKspGnVLk+EVuWm8HfRSmZoK5NoThpgIS9uvctSNUaEB3Ritvf/feuqu4AFBEjwAUUgkY1SfW70200ZIXRY8g==
+
 "@cdo/interpreted@link:../dashboard/config/libraries":
   version "0.0.0"
   uid ""
