@@ -8,8 +8,7 @@ class RakeTaskEventLogger
     @start_time = 0
     @end_time = 0
     @rake_task = rake_task
-    # @enabled = not([:development, :test].include? rack_env)
-    @enabled = true
+    @enabled = !([:development, :test].include?(rack_env))
   end
 
   def start_task_logging
@@ -54,7 +53,6 @@ class RakeTaskEventLogger
             task_name: @rake_task.name,
             pid: Process.pid,
             invocation_chain: task_chain,
-            #task_source: @rake_task.source&.name,
             duration: duration,
             exception: exception&.to_s,
             exception_backtrace: exception&.backtrace,
@@ -63,7 +61,6 @@ class RakeTaskEventLogger
         }
       )
     rescue => e
-      puts "WTF"
       puts e.backtrace
       Honeybadger.notify(
         e,
