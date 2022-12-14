@@ -66,7 +66,11 @@ class ChallengeDialog extends React.Component {
         hideCloseButton={true}
         hideBackdrop={this.props.hideBackdrop}
       >
-        <img className="modal-image" src={this.props.avatar} />
+        <img
+          className="modal-image"
+          src={this.props.avatar}
+          alt={`The instructor, cheering for you!`}
+        />
         <div
           style={{
             ...styles.banner,
