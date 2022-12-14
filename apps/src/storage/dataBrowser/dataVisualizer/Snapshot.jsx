@@ -140,9 +140,11 @@ class Snapshot extends React.Component {
             <img
               style={{maxHeight: '50vh'}}
               src={this.state.imageSrc}
-              alt={`The ${this.props.chartTypeName} of ${
-                this.props.selectedOptions
-              } titled ${this.props.chartTitle}`}
+              alt={msg.dataVisualizerAltText({
+                chartType: this.props.chartTypeName,
+                values: this.props.selectedOptions,
+                title: this.props.chartTitle
+              })}
             />
             <p>
               {msg.dataVisualizerSnapshotDescription({
