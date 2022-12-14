@@ -103,6 +103,7 @@
     "eslint-config-prettier": "^3.6.0",
     "eslint-plugin-babel": "^4.1.2",
     "eslint-plugin-cdo-custom-rules": "file:./eslint",
+    "eslint-plugin-jsx-a11y": "^6.6.1",
     "eslint-plugin-mocha": "^4.12.1",
     "eslint-plugin-prettier": "^3.3.1",
     "eslint-plugin-react": "^7.11.0",
