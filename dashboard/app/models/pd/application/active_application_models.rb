@@ -17,11 +17,10 @@ module Pd
       PRINCIPAL_APPROVAL_FACTORY = :pd_principal_approval_application
       PRINCIPAL_APPROVAL_HASH_FACTORY = :pd_principal_approval_application_hash
 
-      FIT_WEEKEND_REGISTRATION_CLASS = Pd::FitWeekend1920Registration
+      FIT_WEEKEND_REGISTRATION_CLASS = Pd::FitWeekendRegistrationBase
 
       FIT_WEEKEND_REGISTRATION_FACTORY = :pd_fit_weekend1920_registration
       FIT_WEEKEND_REGISTRATION_SYMBOL = :pd_fit_weekend1920_registration
-      FIT_WEEKEND_REGISTRATION_HASH_FACTORY = :pd_fit_weekend1920_registration_hash
     end
   end
 end
