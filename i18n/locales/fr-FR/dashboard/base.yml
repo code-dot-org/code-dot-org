@@ -141,12 +141,12 @@ fr:
     email_signup: 'Inscrivez-vous avec votre adresse e-mail'
     student_count: '%{count} élèves se sont déjà inscrits.'
     teacher_count: '%{count} enseignants se sont déjà inscrits.'
-    overview: 'Inscrivez-vous pour suivre vos progression ou gérer votre classe. <a href="/">Vous pouvez parcourir les différentes étapes et les puzzles</a> sans compte, mais vous devez vous inscrire pour sauvegarder votre progression et vos projets.'
-    overview_markdown: 'Inscrivez-vous pour suivre vos progression ou gérer votre classe. [Vous pouvez parcourir les différentes étapes et les puzzles](/) sans compte, mais vous devez vous inscrire pour sauvegarder votre progression et vos projets.'
+    overview: 'Inscrivez-vous pour suivre vos progression ou gérer votre classe. <a href="/">Vous pouvez parcourir les différentes étapes et les casse-têtes</a> sans compte, mais vous devez vous inscrire pour sauvegarder votre progression et vos projets.'
+    overview_markdown: 'Inscrivez-vous pour suivre vos progression ou gérer votre classe. [Vous pouvez parcourir les différentes étapes et les casse-têtes](/) sans compte, mais vous devez vous inscrire pour sauvegarder votre progression et vos projets.'
     hoc_already_signed_up_heading: 'Commencez sans vous connecter'
     hoc_already_signed_up_content: 'Vous êtes inscrit pour enseigner une Hour of Code ! Vous et vos élèves n''avez pas besoin de vous connecter à Code Studio pour participer à cet événement. Pour commencer, <a href="https://code.org/learn">choisissez un didacticiel</a> pour votre classe et partagez le lien avec eux. <br/> <br/> Si vous avez apprécié Hour of Code et souhaitez aller plus loin, vous pouvez configurer un mot de passe et créer un compte Code Studio ci-dessous pour inscrire vos étudiants dans l''un de nos cours <a href="https://code.org/educate">  plus longs </a >.'
-    hoc_already_signed_up_content_post_hoc: 'Merci d’avoir animé Une Hour of Code. Pour vous connecter à Code Studio, vous aurez besoin d''un mot de passe pour votre compte. Cela vous permettra d’enregistrer votre progression et de gérer votre salle de classe. Vous serez en mesure d’assigner des cours aux élèves et de suivre leur évolution. <a href="%{studio_url}"> Vous pouvez également continuer à parcourir les différentes étapes et énigmes</a> sans créer de compte.'
-    hoc_already_signed_up_content_post_hoc_markdown: 'Je vous remercie d’avoir accueilli Une Heure De Code. Pour vous connecter à Code Studio, vous aurez besoin d'' un mot de passe pour votre compte. Cela vous permettra de sauvegarder votre progression et de gérer votre salle de classe. Vous serez en mesure d’assigner des cours aux élèves et suivre leurs évolutions. [vous pouvez également continuer à parcourir les différentes étapes et énigmes](%{studio_url}) sans créer un compte.'
+    hoc_already_signed_up_content_post_hoc: 'Merci d’avoir animé Une Hour of Code. Pour vous connecter à Code Studio, vous aurez besoin d''un mot de passe pour votre compte. Cela vous permettra d’enregistrer votre progression et de gérer votre salle de classe. Vous serez en mesure d’assigner des cours aux élèves et de suivre leur évolution. <a href="%{studio_url}"> Vous pouvez également continuer à parcourir les différentes étapes et casse-têtes</a> sans créer de compte.'
+    hoc_already_signed_up_content_post_hoc_markdown: 'Je vous remercie d’avoir accueilli Une Heure De Code. Pour vous connecter à Code Studio, vous aurez besoin d'' un mot de passe pour votre compte. Cela vous permettra de sauvegarder votre progression et de gérer votre salle de classe. Vous serez en mesure d’assigner des cours aux élèves et suivre leurs évolutions. [vous pouvez également continuer à parcourir les différentes étapes et casse-têtes](%{studio_url}) sans créer un compte.'
     teacher_educator_guide: 'Consultez le guide de l''enseignant'
     title: "S'inscrire sur Code.org"
     school_name: 'Nom de l''école (facultatif)'
@@ -167,10 +167,10 @@ fr:
     mismatch_password: "Les deux mots de passe ne sont pas identiques."
     student_consent: "Je confirme que j’ai l'autorisation de mes parents ou de mon tuteur légal d’utiliser les services de Code.org."
     agree_us_data_transfer_student: '**J''accepte que Code.org puisse transférer des données (y compris des données personnelles) de mon utilisation de ce site vers les États-Unis** afin d''héberger et de traiter lesdites données.'
-    agree_us_data_transfer_teacher: '**J''accepte que Code.org puisse transférer des données (y compris des données personnelles) de mon utilisation (et de celle de mes étudiants) de ce site vers les États-Unis** afin d''héberger et de traiter lesdites données.'
+    agree_us_data_transfer_teacher: '**J''accepte que Code.org puisse transférer des données (y compris des données personnelles) de mon utilisation (et de celle de mes élèves) de ce site vers les États-Unis** afin d''héberger et de traiter lesdites données.'
     data_collection_us: "Je comprends que Code.org est un site Web à but non lucratif hébergé aux États-Unis et que les lois régissant la collecte de données aux États-Unis peuvent différer des lois de mon pays."
     visit_privacy: 'Consultez [la politique de confidentialité](%{privacy_url}) de Code.org pour en savoir plus.'
-    student_terms_markdown: "Les adresses e-mail ne sont pas stockées dans un format qui nous permette de contacter les étudiants. Les étudiants ne recevront jamais d’e-mail de Code.org sauf lors de la procédure de récupération de mot de passe. Voir notre [politique de confidentialité](http://code.org/privacy) pour plus d'informations."
+    student_terms_markdown: "Les adresses e-mail ne sont pas stockées dans un format qui nous permette de contacter les élèves. Les élèves ne recevront jamais d’e-mail de Code.org sauf lors de la procédure de récupération de mot de passe. Voir notre [politique de confidentialité](http://code.org/privacy) pour plus d'informations."
     additional_information: "Nous avons besoin de quelques informations supplémentaires pour continuer l’inscription."
     user_type_button: "Mise à jour du type de compte"
     user_type_label: "Type de compte"
@@ -179,7 +179,7 @@ fr:
     user_type_student_ability_1: "Sauvegardez vos progrès et vos projets"
     user_type_student_ability_2: "Rejoignez la section de classe de votre professeur"
     user_type_teacher: "Professeur"
-    user_type_teacher_desc: "Tout ce dont les étudiants ont accès et bien d'autres :"
+    user_type_teacher_desc: "Tout ce dont les élèves ont accès et bien d'autres :"
     user_type_teacher_ability_1: "Créer des sections de classe"
     user_type_teacher_ability_2: "Donner et suivre les devoirs des élèves"
     user_type_teacher_ability_3: "S'inscrire à une formation professionnelle"
@@ -496,8 +496,8 @@ fr:
     create_personal_login_link_account: 'Vous pouvez choisir de vous connecter à un compte personnel dans la section « Gérer les comptes liés ».'
     create_personal_login_terms: "En créant un identifiant personnel, j'accepte les <a href='%{terms_of_service_url}', target='_blank'>termes et conditions</a> de Code.org. Je confirme que j'ai l'autorisation de mes parents ou de mon tuteur légal pour utiliser les services de Code.org même sans professeur."
     create_personal_login_terms_markdown: "En créant un login personnel, j'accepte les [termes et conditions](%{terms_of_service_url}) de Code.org . Si j'ai moins de 13 ans, je confirme en soumettant ce formulaire que j'ai l'autorisation des mes parents ou de mon tuteur légal pour utiliser les services de Code.org même sans un professeur."
-    create_personal_login_email_note: "Remarque : Les adresses e-mail ne sont pas stockées sous une forme qui permette de communiquer avec les élèves. Les étudiants ne recevront jamais d'e-mails de Code.org à l’exception de la récupération de mot de passe. Voyez notre <a href='%{privacy_policy_url}', target='_blank'>politique de confidentialité</a> pour plus d’informations."
-    create_personal_login_email_note_markdown: 'Remarque : Les adresses E-mail ne sont pas stockées sous une forme qui permet de communiquer avec les élèves. Les étudiants ne recevront jamais d''e-mails de Code.org à l’exception de la récupération de mot de passe. Consultez notre [politique de confidentialité](%{privacy_policy_url}) pour plus d’informations.'
+    create_personal_login_email_note: "Remarque : Les adresses e-mail ne sont pas stockées sous une forme qui permette de communiquer avec les élèves. Les élèves ne recevront jamais d'e-mails de Code.org à l’exception de la récupération de mot de passe. Voyez notre <a href='%{privacy_policy_url}', target='_blank'>politique de confidentialité</a> pour plus d’informations."
+    create_personal_login_email_note_markdown: 'Remarque : Les adresses E-mail ne sont pas stockées sous une forme qui permet de communiquer avec les élèves. Les élèves ne recevront jamais d''e-mails de Code.org à l’exception de la récupération de mot de passe. Consultez notre [politique de confidentialité](%{privacy_policy_url}) pour plus d’informations.'
     enter_new_login_info: 'Saisissez vos nouvelles informations de connexion'
     confirm_secret_words: 'Confirmez votre identité en entrant vos mots secrets actuels'
     parent_email_label: "E-mail du parent / tuteur (facultatif)"
@@ -562,7 +562,7 @@ fr:
     current_section_dne: "Désolé, la section %{current_section_code} n’existe pas. Veuillez saisir un code de section différent."
     student_ids_not_entered: "Veuillez fournir les IDs des élèves."
     student_not_found: "Un ou plusieurs élèves n'ont pas été trouvés."
-    all_students_must_be_in_current_section: "Tous les étudiants doivent être inscrits dans votre section."
+    all_students_must_be_in_current_section: "Tous les élèves doivent être inscrits dans votre section."
     already_enrolled_in_new_section: "Vous ne pouvez pas déplacer ces élèves car ils sont déjà dans une autre section."
     third_party_login: "Vous ne pouvez pas déplacer d’élèves dans une section qui est synchronisée avec l’outil d’un tiers."
     not_correct_participant_type: "Impossible de déplacer ces utilisateurs car ils n'ont pas les autorisations nécessaires pour participer à la nouvelle section."
@@ -813,7 +813,7 @@ fr:
   dialog:
     ok: "OK"
     startover_title: "Es-tu certain(e) de vouloir recommencer ?"
-    startover_body: "Cette action va réinitialiser le puzzle à son état de départ et supprimer tous les blocs que tu as ajoutés ou changés."
+    startover_body: "Cette action va réinitialiser le casse-tête à son état de départ et supprimer tous les blocs que tu as ajoutés ou changés."
     startover_ok: "Recommencer"
     startover_cancel: "Annuler"
   time:
@@ -843,7 +843,7 @@ fr:
     reminder_desc_markdown: Nous avons mis à jour nos [Conditions d’utilisation](%{tos_url}) et notre[Politique de confidentialité](%{privacy_url}). Veuillez les lire soigneusement avant de les accepter. Notez que nos outils pédagogiques JavaScript peuvent être indisponibles pour vos élèves avant votre acceptation expresse des conditions mises à jour.
     review_terms: "Consulter les éléments modifiés"
   school_info_interstitial:
-    title: "Nous voulons apporter l'Informatique à tous les étudiants - aidez-nous à suivre notre progression !"
+    title: "Nous voulons apporter l'Informatique à tous les élèves - aidez-nous à suivre notre progression !"
     message: "Veuillez saisir les informations de l’école ci-dessous."
     message_with_suggestion: "Veuillez vérifier que les informations suivantes soient correctes et corrigez-les si nécessaire."
     save: "Sauvegarder"
@@ -947,7 +947,7 @@ fr:
     capsule_title: 'Vous avez Internet ?'
     capsule_desc: 'Utilisez l''application en ligne [%{app_name}](%{url}).'
     instructions_headline: 'Pas d’Internet ?'
-    instructions: 'Instructions pour les enseignants : si vous avez un débit Internet faible, ces didacticiels Hour of  Code sont disponibles en téléchargement et utilisables hors ligne. Choisissez votre langue et votre plateforme, téléchargez et installez-les sur tous les ordinateurs dans votre salle de classe. Vous pouvez utiliser une clé USB pour les télécharger une seule fois et les installer ensuite sur chaque ordinateur. Remarque : les étudiants ne pourront pas se connecter à  Code Studio, ni enregistrer leur progression, ni imprimer les certificats. Les enseignants peuvent imprimer les certificats à l''avance <a href="%{url}">ici</a>.'
+    instructions: 'Instructions pour les enseignants : si vous avez un débit Internet faible, ces didacticiels Hour of  Code sont disponibles en téléchargement et utilisables hors ligne. Choisissez votre langue et votre plateforme, téléchargez et installez-les sur tous les ordinateurs dans votre salle de classe. Vous pouvez utiliser une clé USB pour les télécharger une seule fois et les installer ensuite sur chaque ordinateur. Remarque : les élèves ne pourront pas se connecter à  Code Studio, ni enregistrer leur progression, ni imprimer les certificats. Les enseignants peuvent imprimer les certificats à l''avance <a href="%{url}">ici</a>.'
     minecraft_name: 'Heure de Code Minecraft'
     starwars_blocks_name: 'Star Wars : Construire une Galaxie avec du Code (Blocks)'
     starwars_javascript_name: 'Star Wars : Construire une Galaxie avec du Code (JavaScript)'
@@ -1032,7 +1032,7 @@ fr:
       colombian_chilean_school_name: 'Nom de l''école'
       chilean_school_commune: 'Commune'
       chilean_school_id: 'Identifiant d''école'
-      ages: 'Quelle est la tranche d''âge de vos étudiants, cette année ?'
+      ages: 'Quelle est la tranche d''âge de vos élèves, cette année ?'
       subjects: 'Quelle(s) matière(s) enseignez-vous, cette année ?'
       resources: 'Parmi les ressources d’éducation en informatique suivantes, lesquelles utilisez-vous ?'
       robotics: 'Parmi les ressources d’éducation en robotique suivantes, lesquelles utilisez-vous ?'
