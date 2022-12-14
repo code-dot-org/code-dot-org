@@ -51,21 +51,23 @@ social:
         <div class="smalltext" style="color: #00adbc; text-align: left"><strong>One-to-two tours per week</strong></div>
         <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom:10px"><strong>Explore the universe with NASA's Chandra X-ray Observatory</strong></h3>
         <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">Tour NASA’s Chandra X-ray Observatory as we investigate hot regions of the Universe, from black holes to exploding stars!</div>
-       <a class="linktag" id="nasa-trip" href="https://chandra.si.edu/fieldtrip/" target="_blank"><button>View details</button></a>
+        <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px"><strong>2023 tour dates to be announced.</strong></div>
   </div>
 </div>
 </div>
 
 <div class="col-33" style="padding-bottom:15px">
   <div class="tutorial-tile" style="padding-right:20px">
-      <a class="linktag" id="spaceforce-trip" href="https://airtable.com/shroUKEV12uOQ2QUU" target="_blank">
-        <img class="tutorial-tile-img" src="/images/csjourneys/fill-485x235/space-force.jpg" style="max-width:100%; border: 0.5px solid #808080; border-radius: 15px 15px 0 0" alt="Monterey Bay Aquarium self-paced virtual tour">
+      <a class="linktag" id="irobot-trip" href="https://experience.irobot.com/irobot-education-virtual-museum-tours-2023" target="_blank">
+        <img class="tutorial-tile-img" src="/images/csjourneys/fill-485x235/iRobot-trip.png" style="max-width:100%; border: 0.5px solid #808080; border-radius: 15px 15px 0 0" alt="iRobot Tours">
       </a>
+
+
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
-        <div class="smalltext" style="color: #00adbc; text-align: left"><strong>December 9th, 11am-12pm EST</strong></div>
-        <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom:10px"><strong>Panel: STEM & CS in Space Force</strong></h3>
-        <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">Hear from two Space Force computer scientists, an engineer, and a space operator and learn how their STEM careers support the Space Force mission!</div>
-        <a class="linktag" id="spaceforce-trip" href="https://airtable.com/shroUKEV12uOQ2QUU" target="_blank"><button>View details</button></a>
+        <div class="smalltext" style="color: #00adbc; text-align: left"><strong>Select dates</strong></div>
+        <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom:10px"><strong>Go inside the iRobot Cool Stuff Museum</strong></h3>
+        <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">Join us in the iRobot Cool Stuff Museum, exploring 30 years of robotics history. See via our mobile robot as our guide brings robotics and computer science to life.</div>
+        <a class="linktag" id="irobot-trip" href="https://experience.irobot.com/irobot-education-virtual-museum-tours-2023" target="_blank"><button>View details</button></a>
   </div>
 </div>
 </div>
@@ -97,22 +99,6 @@ social:
         <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom:10px"><strong>Explore the technology of Amazon's Fulfillment Centers</strong></h3>
         <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">Discover how computer science, state-of-the-art engineering, and incredible people deliver customer orders at Amazon.</div>
         <a class="linktag" id="amazon-trip" href="https://www.amazonfutureengineer.com/fctours?utm_campaign=Code.org&utm_medium=Website&utm_source=FC%20Tours" target="_blank"><button>View details</button></a>
-  </div>
-</div>
-</div>
-
-<div class="col-33" style="padding-bottom:15px">
-  <div class="tutorial-tile" style="padding-right:20px">
-      <a class="linktag" id="irobot-trip" href="https://experience.irobot.com/irobot-education-virtual-museum-tours" target="_blank">
-        <img class="tutorial-tile-img" src="/images/csjourneys/fill-485x235/iRobot-trip.png" style="max-width:100%; border: 0.5px solid #808080; border-radius: 15px 15px 0 0" alt="iRobot Tours">
-      </a>
-
-
-    <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
-        <div class="smalltext" style="color: #00adbc; text-align: left"><strong>Select dates</strong></div>
-        <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom:10px"><strong>Go inside the iRobot Cool Stuff Museum</strong></h3>
-        <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">Join us in the iRobot Cool Stuff Museum, exploring 30 years of robotics history. See via our mobile robot as our guide brings robotics and computer science to life.</div>
-        <a class="linktag" id="irobot-trip" href="https://experience.irobot.com/irobot-education-virtual-museum-tours" target="_blank"><button>View details</button></a>
   </div>
 </div>
 </div>

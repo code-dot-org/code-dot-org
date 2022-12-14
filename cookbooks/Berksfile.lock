@@ -91,7 +91,7 @@ GRAPH
     sudo-user (>= 0.0.0)
     yarn (>= 0.0.0)
   cdo-authorized-keys (0.1.2)
-  cdo-awscli (0.1.20)
+  cdo-awscli (0.1.22)
     apt (>= 0.0.0)
     poise-python (>= 0.0.0)
     sudo-user (>= 0.0.0)
