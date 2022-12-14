@@ -153,35 +153,18 @@ class RegionalPartnerSearch extends Component {
   render() {
     const partnerInfo = this.state.partnerInfo;
 
-    let courseWorkshops = [
-      {
-        key: 'CSD',
-        name: ActiveCourseWorkshops.CSD,
-        heading: `${ActiveCourseWorkshops.CSD} Workshops`,
-        isOffered: partnerInfo?.pl_programs_offered?.includes(this.courseKey),
+    let courseWorkshops = [];
+    Object.keys(ActiveCourseWorkshops).forEach(courseKey => {
+      courseWorkshops.push({
+        key: courseKey,
+        name: ActiveCourseWorkshops[courseKey],
+        heading: `${ActiveCourseWorkshops[courseKey]} Workshops`,
+        isOffered: partnerInfo?.pl_programs_offered?.includes(courseKey),
         summerWorkshops: partnerInfo?.summer_workshops?.filter(
-          workshop => workshop.course === ActiveCourseWorkshops.CSD
+          workshop => workshop.course === ActiveCourseWorkshops[courseKey]
         )
-      },
-      {
-        key: 'CSP',
-        name: ActiveCourseWorkshops.CSP,
-        heading: `${ActiveCourseWorkshops.CSP} Workshops`,
-        isOffered: partnerInfo?.pl_programs_offered?.includes(this.courseKey),
-        summerWorkshops: partnerInfo?.summer_workshops?.filter(
-          workshop => workshop.course === ActiveCourseWorkshops.CSP
-        )
-      },
-      {
-        key: 'CSA',
-        name: ActiveCourseWorkshops.CSA,
-        heading: `${ActiveCourseWorkshops.CSA} Workshops`,
-        isOffered: partnerInfo?.pl_programs_offered?.includes(this.courseKey),
-        summerWorkshops: partnerInfo?.summer_workshops?.filter(
-          workshop => workshop.course === ActiveCourseWorkshops.CSA
-        )
-      }
-    ];
+      });
+    });
 
     const workshopCollectionStyle =
       this.props.responsiveSize === 'lg' ? styles.halfWidth : styles.fullWidth;
