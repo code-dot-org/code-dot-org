@@ -6,8 +6,6 @@ import {connect} from 'react-redux';
 import trackEvent from '../../util/trackEvent';
 import color from '../../util/color';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
-import moduleStyles from './inline-audio.module.scss';
-import classNames from 'classnames';
 
 // TODO (elijah): have these constants shared w/dashboard
 const VOICES = {
@@ -262,13 +260,12 @@ class InlineAudio extends React.Component {
       this.getAudioSrc()
     ) {
       return (
-        <button
-          className={classNames('inline-audio', moduleStyles.inlineAudioButton)}
+        <div
+          className="inline-audio"
           style={[styles.wrapper, this.props.style && this.props.style.wrapper]}
           onMouseOver={this.toggleHover}
           onMouseOut={this.toggleHover}
           onClick={this.toggleAudio}
-          type="button"
         >
           <div
             style={[
@@ -304,7 +301,7 @@ class InlineAudio extends React.Component {
               ]}
             />
           </div>
-        </button>
+        </div>
       );
     }
     return null;
