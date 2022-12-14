@@ -70,7 +70,6 @@
         <div>
           <button id="connect" class="btn btn-primary">Connect</button>
         </div>
-        <!-- TODO: Check copy -->
         <p id="success-message" style="display: none">
           <strong>You passed all checks! No further action is needed.</strong>
         </p>
@@ -97,6 +96,7 @@
 </div>
 <script>
   // TODO: Is there a way to use the existing code for this in apps directory?
+  // This is a promisifed version of a function that already exists.
   const TIMEOUT_MS = 3000;
   function testImageAccess(url, callback = () => {}) {
     return new Promise((resolve, reject) => {
@@ -162,9 +162,11 @@
   }
 
   function connect() {
+    setAttribute(
+      ".incomplete, .succeeded, .failed, #success-message, #fail-message",
+      { style: "display: none" }
+    );
     setAttribute(".loading", { style: "display: block" });
-    setAttribute(".incomplete", { style: "display: none" });
-    setAttribute(".failed", { style: "display: none" });
 
     const computingInTheCorePromise = testImageAccess(
       "https://downloads.computinginthecore.org/favicon.ico?" + Math.random(),
