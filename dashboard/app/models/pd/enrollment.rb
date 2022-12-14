@@ -161,6 +161,8 @@ class Pd::Enrollment < ApplicationRecord
     # do not use Foorm for survey completion); CSF Deep Dive workshops before 9/1/2020 (they do not use Foorm for
     # survey completion); and Admin + Admin/Counselor workshops (they should not receive exit surveys at all).
     foorm_enrollments = enrollments.select do |enrollment|
+      enrollment.workshop.course != Pd::Workshop::COURSE_ADMIN &&
+      enrollment.workshop.course != Pd::Workshop::COURSE_ADMIN_COUNSELOR &&
       !(enrollment.workshop.workshop_ending_date < Date.new(2020, 5, 8) &&
         (enrollment.workshop.csf_intro? || enrollment.workshop.local_summer? || enrollment.workshop.csp_wfrt?)) &&
         !(enrollment.workshop.workshop_ending_date < Date.new(2020, 9, 1) && enrollment.workshop.csf_201?)
