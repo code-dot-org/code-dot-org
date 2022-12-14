@@ -6,7 +6,7 @@ theme: responsive
 
 # Our Team
 
-<img src="/images/fit-1200/fullteam-2022.jpg" width="100%;" alt="Nearly 100 Code.org employees wearing matching blue and yellow t-shirts pose in a hotel conference room for the company's summer 2022 Codechella event" >
+<img src="/images/fit-1200/fullteam-2022.jpg" width="100%;" alt="<%=hoc_s(team_page_full_team_alt_text)%>" >
 
 
 <%= view :about_headshots, people:DB[:cdo_team].where(kind_s:'team') %>
