@@ -101,7 +101,8 @@ class Button extends React.Component {
     if (__useDeprecatedTag) {
       Tag = href ? 'a' : 'div';
     } else {
-      buttonStyle = {...style, boxShadow: 'none'};
+      // boxShadow should default to none, unless otherwise overridden
+      buttonStyle = {boxShadow: 'none', ...style};
     }
 
     if (download && Tag !== 'a') {
