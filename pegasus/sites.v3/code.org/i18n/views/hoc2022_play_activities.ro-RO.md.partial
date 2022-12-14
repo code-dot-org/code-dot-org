@@ -1,6 +1,6 @@
-{{ featured_tutorial, title: "Salutare Lume: Fotbal", body: "Ești căpitanul echipei și codifici scene interative pe terenul de fotfal. GOOOAAALLL!", image: "/images/hoc2022-hello-world-soccer.png", url: "https://studio.code.org/s/hello-world-soccer-2022/reset" }}
+{{ featured_tutorial, title: "Salutare Lume: Fotbal", body: „Ești căpitanul echipei și codifici scene interative pe terenul de fotbal. GOOOAAALLL!", image: "/images/hoc2022-hello-world-soccer.png", url: "https://studio.code.org/s/hello-world-soccer-2022/reset" }}
 
-{{ featured_tutorial, title: "Sport", body: "Crează un joc de basket sau combină dintre diverse sporturi.", image: "/shared/images/courses/logo_tall_sports.jpg", url: "https://code.org/athletes" }}
+{{ featured_tutorial, title: "Sport", body: "Crează un joc de basket sau combină dintre diverse sporturi.", imagine: "/shared/images/courses/logo_tall_sports.jpg", url: "https://code.org/athletes" }}
 
 {{ featured_tutorial, title: "Cod Flappy", body: "Vrei să îți scrii propriul joc în mai puțin de 10 minute? Încearcă Tutorialul nostru Codul Flappy!", image: "/shared/images/courses/logo_tall_flappy.jpg", url: "https://studio.code.org/s/flappy/reset" }}
 
