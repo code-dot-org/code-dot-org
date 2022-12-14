@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import moduleStyles from './collapser-icon.module.scss';
 
 const styles = {
   icon: {
@@ -22,18 +21,12 @@ function CollapserIcon({
   const iconClass = isCollapsed ? collapsedIconClass : expandedIconClass;
 
   return (
-    <button
+    <i
       id={id}
       onClick={onClick}
       role="button"
-      className={classNames(
-        iconClass + ' fa',
-        className,
-        moduleStyles.collapserIcon,
-        'no-mc'
-      )}
+      className={classNames(iconClass + ' fa', className)}
       style={{...style, ...styles.icon}}
-      type="button"
     />
   );
 }
