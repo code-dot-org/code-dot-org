@@ -29,7 +29,7 @@ const optionsList = [
     name: 'show-upload',
     type: 'radio',
     values: [
-      {value: 'false', description: "Default: don't show upload option."},
+      {value: 'false', description: "Don't show upload option."},
       {value: 'true', description: 'Show upload option.'}
     ]
   }
@@ -81,15 +81,17 @@ export default class MusicMenu extends React.Component {
       <div>
         {option.values.map(value => {
           return (
-            <div key={value.value}>
-              <input
-                type="radio"
-                style={{marginTop: -3, marginRight: 5}}
-                name={option.name}
-                value={value.value}
-                onChange={this.handleRadioChange}
-              />
-              <b>{value.value}</b>: {value.description}
+            <div key={value.value} style={{paddingBottom: 3}}>
+              <label>
+                <input
+                  type="radio"
+                  style={{marginTop: -3, marginRight: 5}}
+                  name={option.name}
+                  value={value.value}
+                  onChange={this.handleRadioChange}
+                />
+                {value.value}: {value.description}
+              </label>
             </div>
           );
         })}
@@ -114,7 +116,14 @@ export default class MusicMenu extends React.Component {
 
   renderResults() {
     return (
-      <div style={{fontSize: 18, margin: '20px 0'}}>
+      <div
+        style={{
+          fontSize: 18,
+          lineHeight: 1.5,
+          margin: '20px 0',
+          userSelect: 'all'
+        }}
+      >
         {baseUrl}?
         {optionsList
           .map(option => {
@@ -130,24 +139,30 @@ export default class MusicMenu extends React.Component {
   }
 
   renderOptions() {
-    return optionsList.map(option => {
-      return (
-        <div key={option.name}>
-          <input
-            type="checkbox"
-            name={option.name}
-            checked={this.state.checked[option.name]}
-            style={{marginTop: -3, marginRight: 5}}
-            onChange={e => this.handleCheckChange(e)}
-          />
-          {option.name}
-          <div style={{padding: 10}}>
-            {option.type === 'radio' && this.renderRadio(option)}
-            {option.type === 'string' && this.renderString(option)}
-          </div>
-        </div>
-      );
-    });
+    return (
+      <div style={{userSelect: 'none'}}>
+        {optionsList.map(option => {
+          return (
+            <div key={option.name}>
+              <label>
+                <input
+                  type="checkbox"
+                  name={option.name}
+                  checked={this.state.checked[option.name]}
+                  style={{marginTop: -3, marginRight: 5}}
+                  onChange={e => this.handleCheckChange(e)}
+                />
+                {option.name}
+              </label>
+              <div style={{padding: '5px 10px 15px 18px'}}>
+                {option.type === 'radio' && this.renderRadio(option)}
+                {option.type === 'string' && this.renderString(option)}
+              </div>
+            </div>
+          );
+        })}
+      </div>
+    );
   }
 
   render() {
