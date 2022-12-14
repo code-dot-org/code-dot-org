@@ -3,8 +3,13 @@ import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
 import Button from './Button';
 import i18n from '@cdo/locale';
-import {assignToSection} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
+import {
+  assignToSection,
+  testingFunction
+} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
+// KT added function ^^
 import ConfirmHiddenAssignment from '@cdo/apps/templates/courseOverview/ConfirmHiddenAssignment';
+import MultipleSectionsAssigner from '@cdo/apps/templates/MultipleSectionsAssigner';
 import {
   isScriptHiddenForSection,
   updateHiddenScript
@@ -23,16 +28,19 @@ class AssignButton extends React.Component {
     assignToSection: PropTypes.func.isRequired,
     hiddenLessonState: PropTypes.object,
     updateHiddenScript: PropTypes.func.isRequired,
-    isRtl: PropTypes.bool
+    isRtl: PropTypes.bool,
+    testingFunction: PropTypes.func.isRequired
   };
 
   state = {
-    confirmationDialogOpen: false
+    confirmationDialogOpen: false,
+    assignmentChoiceDialogOpen: false
   };
 
   onCloseDialog = () => {
     this.setState({
-      confirmationDialogOpen: false
+      confirmationDialogOpen: false,
+      assignmentChoiceDialogOpen: false
     });
   };
 
@@ -44,10 +52,18 @@ class AssignButton extends React.Component {
       courseVersionId,
       scriptId,
       assignToSection,
-      updateHiddenScript
+      updateHiddenScript,
+      testingFunction
     } = this.props;
     updateHiddenScript(sectionId, scriptId, false);
     assignToSection(
+      sectionId,
+      courseId,
+      courseOfferingId,
+      courseVersionId,
+      scriptId
+    );
+    testingFunction(
       sectionId,
       courseId,
       courseOfferingId,
@@ -59,12 +75,13 @@ class AssignButton extends React.Component {
   handleClick = () => {
     const {
       scriptId,
-      courseId,
-      courseOfferingId,
-      courseVersionId,
+      // courseId, - commented to avoid errors
+      // courseOfferingId,
+      // courseVersionId,
       sectionId,
-      hiddenLessonState,
-      assignToSection
+      hiddenLessonState
+      // assignToSection,
+      // testingFunction
     } = this.props;
     const isHiddenFromSection =
       sectionId &&
@@ -72,22 +89,38 @@ class AssignButton extends React.Component {
       hiddenLessonState &&
       isScriptHiddenForSection(hiddenLessonState, sectionId, scriptId);
     if (isHiddenFromSection) {
+      // this creates a popup
       this.setState({
         confirmationDialogOpen: true
       });
     } else {
-      assignToSection(
-        sectionId,
-        courseId,
-        courseOfferingId,
-        courseVersionId,
-        scriptId
+      this.setState({
+        assignmentChoiceDialogOpen: true
+      });
+      console.log(
+        'assignmentChoiceDialog ' + this.state.assignmentChoiceDialogOpen
       );
+      // Commented this out because it was making the popup close.
+      // assignToSection(
+      //   sectionId,
+      //   courseId,
+      //   courseOfferingId,
+      //   courseVersionId,
+      //   scriptId
+      // );
+      // testingFunction(
+      //   sectionId,
+      //   courseId,
+      //   courseOfferingId,
+      //   courseVersionId,
+      //   scriptId
+      // );
     }
   };
 
   render() {
     const {confirmationDialogOpen} = this.state;
+    const {assignmentChoiceDialogOpen} = this.state;
     const {assignmentName, sectionName, isRtl} = this.props;
 
     // Adjust styles if locale is RTL
@@ -107,6 +140,14 @@ class AssignButton extends React.Component {
             className={'uitest-assign-button'}
           />
         </div>
+        {assignmentChoiceDialogOpen && (
+          <MultipleSectionsAssigner
+            // sectionName={sectionName}
+            assignmentName={assignmentName}
+            onClose={this.onCloseDialog}
+            onConfirm={this.unhideAndAssign}
+          />
+        )}
         {confirmationDialogOpen && (
           <ConfirmHiddenAssignment
             sectionName={sectionName}
@@ -142,6 +183,7 @@ export default connect(
   }),
   {
     assignToSection,
-    updateHiddenScript
+    updateHiddenScript,
+    testingFunction
   }
 )(AssignButton);

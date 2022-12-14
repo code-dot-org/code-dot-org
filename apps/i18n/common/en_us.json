@@ -172,7 +172,7 @@
   "assigned": "Assigned",
   "assignedTo": "Assigned to",
   "assignedToWithColon": "Assigned to:",
-  "assignToSection": "Assign to section",
+  "assignToSection": "Assign to sections",
   "assignUnit": "Assign Unit",
   "assignedToNewerVersion": "Your teacher assigned you to a newer version of this course.",
   "assignmentSelectorCourse": "Select course",
@@ -2330,5 +2330,9 @@
   "yourSchoolTeacherButton": "Start teaching",
   "yourSchoolTeacherDesc": "Start teaching today, no computer science experience necessary",
   "yourSchoolTellUs": "Tell us about your school",
-  "zipOrCountry": "ZIP code or country"
+  "zipOrCountry": "ZIP code or country",
+  "chooseSectionsPrompt": "Which section(s) do you want to assign \"{assignmentName}\" to?",
+  "chooseSectionsDirections": "When you assign a curriculum to a section, that curriculum will be the first thing students see upon signing in. Changing the assigned curriculum will never affect students progress on other curriculum.",
+  "yourSectionsList": "Your Sections",
+  "confirmAssignment": "Confirm section assignments"
 }
