@@ -715,6 +715,11 @@
   footer_menu_privacy: 'Privacy Policy'
   footer_menu_cookie: 'Cookie Notice'
 
+  footer_menu_facebook: 'Code.org on Facebook'
+  footer_menu_twitter: 'Code.org on Twitter'
+  footer_menu_instagram: 'Code.org on Instagram'
+  footer_menu_medium: 'Code.org on Medium.com'
+
   learn_banner_heading: 'Hour of Code Activities'
   learn_banner_blurb: "Try a one-hour tutorial designed for all ages in over 45 languages.  Join millions of students and teachers in over 180 countries starting with an Hour of Code."
   learn_banner_beyond: "Want to keep learning?  <a id='learn_banner_beyond'>Go beyond an hour</a>"
