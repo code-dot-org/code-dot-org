@@ -125,6 +125,7 @@ class CodeWorkspace extends React.Component {
             id="hide-toolbox-icon"
             style={[commonStyles.hidden, chevronStyle]}
             type="button"
+            aria-label={i18n.hideToolboxAriaLabel()}
           >
             <i className="fa fa-chevron-circle-right" />
           </button>
@@ -140,7 +141,12 @@ class CodeWorkspace extends React.Component {
         style={{...styles.toolboxHeaderContainer, ...commonStyles.hidden}}
       >
         <span id="show-toolbox-click-target">
-          <button id="show-toolbox-icon" style={chevronStyle} type="button">
+          <button
+            id="show-toolbox-icon"
+            style={chevronStyle}
+            type="button"
+            aria-label={i18n.showToolbox()}
+          >
             <i className="fa fa-chevron-circle-right" />
           </button>
           <span className="show-toolbox-label">{i18n.showToolbox()}</span>
