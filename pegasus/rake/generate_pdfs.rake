@@ -2,6 +2,7 @@ require_relative '../../deployment'
 require 'cdo/chat_client'
 require 'cdo/rake_utils'
 require 'cdo/db'
+require lib_dir 'cdo/data/logging/rake_task_event_logger'
 
 PDFConversionInfo = Struct.new(:url_path, :src_files, :output_pdf_path)
 
@@ -51,6 +52,8 @@ end
 
 desc 'Generate PDFs for *.makepdf files and all state-facts pages.'
 task :generate_pdfs do
+  logger = RakeTaskEventLogger.new
+  logger.start_task_logging
   require_relative '../../pegasus/src/env'
   all_outfiles = []
   # Generate pdf for files that are appended with .makepdf
@@ -82,4 +85,5 @@ task :generate_pdfs do
   all_outfiles.each do |outfile|
     Rake::Task[outfile].invoke
   end
+  logger.end_task_logging
 end

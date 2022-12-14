@@ -1,4 +1,5 @@
 require 'cdo/google/drive'
+require lib_dir 'cdo/data/logging/rake_task_event_logger'
 
 # Given a line of yml in the form of key: value, wraps unquoted strings in
 # double quotes, escaping existing quotes. Does not touch already quoted or
@@ -35,6 +36,8 @@ end
 namespace :i18n do
   desc 'download the latest i18n gsheet'
   task :sync do
+    logger = RakeTaskEventLogger.new
+    logger.start_task_logging
     gsheet = 'Data/I18n'
     path = pegasus_dir('cache/i18n/en-US.yml')
 
@@ -55,5 +58,6 @@ namespace :i18n do
       hash_to_yml_with_quoted_values({'en-US' => en_us}, path)
       File.utime(File.atime(path), mtime, path)
     end
+    logger.end_task_logging
   end
 end
