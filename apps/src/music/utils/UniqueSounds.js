@@ -21,55 +21,64 @@ export default class UniqueSounds {
     // If a sound was showing previously, then we'll attempt to keep
     // it in the same row, though we won't have empty rows.
 
-    // First, generate a list of all unique sounds.
-    const uniqueSounds = [];
+    // First, generate a list of all current unique sounds.
+    const currentUniqueSounds = [];
     for (const songEvent of songDataEvents) {
       const id = songEvent.id;
-      if (uniqueSounds.indexOf(id) === -1) {
-        uniqueSounds.push(id);
+      if (currentUniqueSounds.indexOf(id) === -1) {
+        currentUniqueSounds.push(id);
       }
     }
 
-    // This is the actual output.  It will be the same length as uniqueSounds.
-    // Fill it with undefined entries.
-    let outputSounds = new Array(uniqueSounds.length).fill(undefined);
+    // This will eventually be the function output.
+    let arrangedSounds;
 
     // If we have a previous output from this function, then we'll attempt
     // to keep those entries in the same rows as they were before.
     if (this.previousUniqueSounds) {
+      // This is where we will store the output sounds.  It can be a sparse
+      // array.
+      const outputSounds = [];
+
       // For each of those previous entries...
       for (let i = 0; i < this.previousUniqueSounds.length; i++) {
         // ...if it's still in use...
-        if (uniqueSounds.indexOf(this.previousUniqueSounds[i]) !== -1) {
+        if (currentUniqueSounds.indexOf(this.previousUniqueSounds[i]) !== -1) {
           // ... put it back in that row.
           outputSounds[i] = this.previousUniqueSounds[i];
         }
       }
 
       // For each of our known current sounds...
-      for (let j = 0; j < uniqueSounds.length; j++) {
+      for (let j = 0; j < currentUniqueSounds.length; j++) {
         // ... if it's not yet in a row...
-        if (outputSounds.indexOf(uniqueSounds[j]) === -1) {
+        if (outputSounds.indexOf(currentUniqueSounds[j]) === -1) {
           // ...then put it in the first row available.
-          let row = outputSounds.findIndex(x => x === undefined);
-          outputSounds[row] = uniqueSounds[j];
+          const availableRowIndex = outputSounds.findIndex(
+            x => typeof x === 'undefined'
+          );
+          // If no empty rows are available, then put the sound at the end.
+          const row =
+            availableRowIndex === -1 ? outputSounds.length : availableRowIndex;
+
+          outputSounds[row] = currentUniqueSounds[j];
 
           // (One scenario where this helps is when a sound is renamed.
           // The new  entry will replace the old one in the same row.)
         }
       }
 
-      // Remove empty rows.
-      outputSounds = outputSounds.filter(s => {
-        return s !== undefined;
+      // Remove any empty rows.
+      arrangedSounds = outputSounds.filter(s => {
+        return typeof s !== 'undefined';
       });
     } else {
-      outputSounds = uniqueSounds;
+      arrangedSounds = currentUniqueSounds;
     }
 
     // Remember this set for next time.
-    this.previousUniqueSounds = outputSounds;
+    this.previousUniqueSounds = arrangedSounds;
 
-    return outputSounds;
+    return arrangedSounds;
   }
 }
