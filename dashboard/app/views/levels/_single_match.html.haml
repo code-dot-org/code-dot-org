@@ -3,7 +3,8 @@
 
   - if standalone && !(level.properties['options'].try(:[], 'hide_submit'))
     .buttons
-      = button_tag t('submit'), class: "btn btn-large btn-primary next-lesson submitButton"
+      %a.btn.btn-large.btn-primary.next-lesson.submitButton
+        =t('submit')
 
   %br/
 

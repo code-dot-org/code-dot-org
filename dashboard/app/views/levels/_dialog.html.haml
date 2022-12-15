@@ -4,15 +4,20 @@
 - unless app == 'external'
   .buttons{class: @level.properties['submittable'] == 'true' ? 'submittable' : nil}
     - if local_assigns[:previous_button]
-      = button_tag t('previous_page'), class: "btn btn-large btn-primary previousPageButton"
+      %a.btn.btn-large.btn-primary.previousPageButton
+        =t('previous_page')
     - if local_assigns[:next_button]
-      = button_tag t('next_page'), class: "btn btn-large btn-primary nextPageButton"
+      %a.btn.btn-large.btn-primary.nextPageButton
+        =t('next_page')
     - elsif local_assigns[:continue_button]
-      = button_tag t('continue'), class: "btn btn-large btn-primary next-lesson submitButton"
+      %a.btn.btn-large.btn-primary.next-lesson.submitButton
+        =t('continue')
     - else
-      = button_tag t('submit'), class: "btn btn-large btn-primary next-lesson submitButton"
+      %a.btn.btn-large.btn-primary.next-lesson.submitButton
+        =t('submit')
       - if @level.properties['submittable'] && !Policies::InlineAnswer.visible_for_script_level?(current_user, @script_level)
-        = button_tag t('unsubmit'), class: "btn btn-large btn-primary unsubmitButton"
+        %a.btn.btn-large.btn-primary.unsubmitButton{style: 'display: none'}
+          =t('unsubmit')
 .clear
 
 %script{src: webpack_asset_path('js/levels/_dialog.js')}
