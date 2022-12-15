@@ -97,9 +97,9 @@ class Link extends Component {
         <a href={link}>
           {isRtl && <FontAwesome icon={icon} style={styles.chevronRtl} />}
           <div style={styles.linkToViewAll}>{linkText}</div>
-        </a>
-        <a href={link} style={{textDecoration: 'none'}}>
-          {!isRtl && <FontAwesome icon={icon} style={styles.chevron} />}
+          <span style={{display: 'inline-block'}}>
+            {!isRtl && <FontAwesome icon={icon} style={styles.chevron} />}
+          </span>
         </a>
       </div>
     );
