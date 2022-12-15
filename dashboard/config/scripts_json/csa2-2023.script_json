@@ -15,7 +15,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-12-12 16:31:14 UTC",
+    "serialized_at": "2022-12-14 22:14:40 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -5634,15 +5634,12 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSA U2L5-L7_2023"
-        ],
         "progression": "Practice: The super Keyword"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "CSA U2L5-L7_2023"
+          "CSA U2L5-L7 Practice"
         ],
         "lesson.key": "lesson-6",
         "lesson_group.key": "lessonGroup-2",
@@ -5650,7 +5647,7 @@
         "activity_section.key": "662a6024-a28b-4533-ad81-d94a258c8eb6"
       },
       "level_keys": [
-        "CSA U2L5-L7_2023"
+        "CSA U2L5-L7 Practice"
       ]
     },
     {
@@ -5909,15 +5906,12 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSA U2L7-L7_2023"
-        ],
         "progression": "Practice: Accessor Methods"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "CSA U2L7-L7_2023"
+          "CSA U2L7-L7 Practice_2023"
         ],
         "lesson.key": "lesson-5",
         "lesson_group.key": "lessonGroup-2",
@@ -5925,7 +5919,7 @@
         "activity_section.key": "ccfb3738-4a25-4bba-b443-238b6e4ad11d"
       },
       "level_keys": [
-        "CSA U2L7-L7_2023"
+        "CSA U2L7-L7 Practice_2023"
       ]
     },
     {
@@ -5959,6 +5953,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L8-L1_2023"
+        ],
         "progression": "Predict and Run: Operators and Expressions"
       },
       "bonus": false,
@@ -5981,6 +5978,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L8-L2_2023"
+        ],
         "progression": "Investigate and Modify: Expressions"
       },
       "bonus": false,
@@ -6003,6 +6003,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L8-L3_2023"
+        ],
         "progression": "Investigate and Modify: Expressions"
       },
       "bonus": false,
@@ -6025,6 +6028,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L8-L4_2023"
+        ],
         "progression": "Investigate and Modify: Expressions"
       },
       "bonus": false,
@@ -6047,6 +6053,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L8-L5_2023"
+        ],
         "progression": "Investigate and Modify: Operators"
       },
       "bonus": false,
@@ -6069,6 +6078,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L8-L6_2023"
+        ],
         "progression": "Investigate and Modify: Operators"
       },
       "bonus": false,
@@ -6091,6 +6103,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U2L8-L7_2023"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -6113,6 +6128,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L9-L1_2023"
+        ],
         "progression": "Predict and Run: Mutator Methods"
       },
       "bonus": false,
@@ -6135,6 +6153,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L9-L2_2023"
+        ],
         "progression": "Investigate and Modify: Mutator Methods"
       },
       "bonus": false,
@@ -6157,6 +6178,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L9-L3_2023"
+        ],
         "progression": "Investigate and Modify: Mutator Methods"
       },
       "bonus": false,
@@ -6179,6 +6203,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L9-L4_2023"
+        ],
         "progression": "Skill Building: Mutator Methods"
       },
       "bonus": false,
@@ -6201,6 +6228,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U2L9-L5_2023"
+        ],
         "progression": "Practice: Mutator Methods"
       },
       "bonus": false,
@@ -6223,6 +6253,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L9-L6_2023"
+        ],
         "progression": "Practice: Mutator Methods"
       },
       "bonus": false,
@@ -6250,7 +6283,7 @@
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "CSA U2L9-L7_2023"
+          "CSA U2L9-L7 Practice"
         ],
         "lesson.key": "lesson-8",
         "lesson_group.key": "lessonGroup-2",
@@ -6258,7 +6291,7 @@
         "activity_section.key": "95648d42-81e6-4553-a73f-40d641bb2ff6"
       },
       "level_keys": [
-        "CSA U2L9-L7_2023"
+        "CSA U2L9-L7 Practice"
       ]
     },
     {
@@ -6267,6 +6300,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U2L9-L8_2023"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -6289,6 +6325,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L10-L1_2023"
+        ],
         "progression": "Predict and Run: Printing Objects"
       },
       "bonus": false,
@@ -6311,6 +6350,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L10-L2_2023"
+        ],
         "progression": "Investigate and Modify: Printing Objects"
       },
       "bonus": false,
@@ -6333,6 +6375,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L10-L3_2023"
+        ],
         "progression": "Investigate and Modify: Printing Objects"
       },
       "bonus": false,
@@ -6355,6 +6400,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U2L10-L4_2023"
+        ],
         "progression": "Practice: The toString() Method"
       },
       "bonus": false,
@@ -6377,6 +6425,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L10-L5_2023"
+        ],
         "progression": "Practice: The toString() Method"
       },
       "bonus": false,
@@ -6399,6 +6450,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L10-L6_2023"
+        ],
         "progression": "Practice: The toString() Method"
       },
       "bonus": false,
@@ -6421,6 +6475,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L10-L7_2023"
+        ],
         "progression": "Practice: The toString() Method"
       },
       "bonus": false,
@@ -6443,6 +6500,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U2L10-L8_2023"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -6465,6 +6525,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U2 Store Management Project_2023"
+        ],
         "progression": "Store Management Project"
       },
       "bonus": false,
@@ -6487,6 +6550,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA Unit 2 Assessment_2023"
+        ],
         "progression": "Unit 2 Assessment"
       },
       "bonus": false,
@@ -6509,6 +6575,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U2 Store Management Project 1-Day_2023"
+        ],
         "progression": "Store Management Project"
       },
       "bonus": false,
@@ -7021,9 +7090,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "CSA U2L5-L7_2023",
+        "level.key": "CSA U2L5-L7 Practice",
         "script_level.level_keys": [
-          "CSA U2L5-L7_2023"
+          "CSA U2L5-L7 Practice"
         ],
         "lesson.key": "lesson-6",
         "lesson_group.key": "lessonGroup-2",
@@ -7153,9 +7222,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "CSA U2L7-L7_2023",
+        "level.key": "CSA U2L7-L7 Practice_2023",
         "script_level.level_keys": [
-          "CSA U2L7-L7_2023"
+          "CSA U2L7-L7 Practice_2023"
         ],
         "lesson.key": "lesson-5",
         "lesson_group.key": "lessonGroup-2",
@@ -7333,9 +7402,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "CSA U2L9-L7_2023",
+        "level.key": "CSA U2L9-L7 Practice",
         "script_level.level_keys": [
-          "CSA U2L9-L7_2023"
+          "CSA U2L9-L7 Practice"
         ],
         "lesson.key": "lesson-8",
         "lesson_group.key": "lessonGroup-2",
