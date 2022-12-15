@@ -1,0 +1,33 @@
+<Javalab>
+  <config><![CDATA[{
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "**The Joyful Pastries food truck owner needs a way to easily print information about their `Dessert`(#e7e8ea) objects.**\r\n\r\n🎒 **IMPORT:** Import your `Dessert`(#e7e8ea) class from your **Backpack**.\r\n\r\n*Don't have it, or it doesn't work? That's ok! Copy the code from* <a href=\"https://studio.code.org/projects/javalab/TqgFTFY1-2ekAVuAuSNMvCCLdD_bjIRCAN6dCTPkIBU\" target=\"_blank\">***here***</a> *and paste it into a new file in your project.*\r\n\r\n✅ **TO DO #1:** Write a `toString()`(#e7e8ea) method in the `Dessert`(#e7e8ea) class that returns a `String`(#e7e8ea) containing the values assigned to the `flavor`(#e7e8ea) and `price`(#e7e8ea) instance variables.\r\n\r\n✅ **TO DO #2:** In `FoodTruckOwner.java`(#e7e8ea), instantiate and print a `Dessert`(#e7e8ea) object.\r\n\r\n::: details [**🔦 How should I format the `String`(#e7e8ea) to return?**]\r\n  \r\nThe `String`(#e7e8ea) that is returned from the `toString()`(#e7e8ea) should be formatted as:\r\n\r\n```\r\nFlavor: chocolate\r\nPrice: 2.75\r\n```\r\n:::\r\n&nbsp;\r\n\r\n💡 **TIP:** Check out the **Help & Tips** tab ⬆️ for help with writing a `toString()`(#e7e8ea) method.\r\n\r\n## ***Don't forget to . . .***\r\n\r\n![](https://images.code.org/eb2c8910ae2e150019b8e2177405d4af-image-1668191576873.png)",
+    "mini_rubric": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "csa_view_mode": "console",
+    "start_sources": {
+      "Runner.java": {
+        "text": "public class Runner {\n  public static void main(String[] args) {\n\n    /* ----------------------------------- TO DO -----------------------------------\n     * ✅ instructions for the student to complete\n     * -----------------------------------------------------------------------------\n     */\n\n\n\n    /* ----------------------------------- TO DO -----------------------------------\n     * ✅ instructions for the student to complete\n     * -----------------------------------------------------------------------------\n     *\n     * description of method to write\n     */\n\n    \n\n    \n    /* ---- 🔎 ADD YOUR CODE BELOW THIS LINE ---- */\n\n\n    \n    \n    \n  }\n}",
+        "isVisible": true,
+        "tabOrder": 0
+      }
+    },
+    "project_template_level_name": "CSA U2L10-Dessert PBT_2023",
+    "reference_links": [
+      "/courses/csa-2023/guides/the-tostring-method"
+    ],
+    "encrypted_exemplar_sources": "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\n9XixhA==\n",
+    "encrypted_examples": [
+
+    ]
+  },
+  "game_id": 68,
+  "published": true,
+  "created_at": "2022-12-07T20:01:05.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
+  "audit_log": "[{\"changed_at\":\"2022-12-07T20:01:05.014+00:00\",\"changed\":[\"cloned from \\\"CSA U2L10-L5d_2023\\\"\"],\"cloned_from\":\"CSA U2L10-L5d_2023\"},{\"changed_at\":\"2022-12-07 20:01:13 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-12-08 17:43:15 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-12-08 18:12:47 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-12-08 18:15:11 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-12-12 14:27:52 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+}]]></config>
+</Javalab>
