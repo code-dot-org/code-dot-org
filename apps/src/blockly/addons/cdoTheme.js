@@ -4,10 +4,7 @@ import DeuteranopiaTheme from '@blockly/theme-deuteranopia';
 import HighContrastTheme from '@blockly/theme-highcontrast';
 import TritanopiaTheme from '@blockly/theme-tritanopia';
 
-export const cdoBlockStyles = {
-  default: {
-    colourPrimary: '00b0bc'
-  },
+const coreBlocklyOverrides = {
   colour_blocks: {
     // Duplicates definition from core Blockly
     colourPrimary: '#0093c9'
@@ -35,6 +32,11 @@ export const cdoBlockStyles = {
   variable_blocks: {
     // Duplicates definition from core Blockly
     colourPrimary: '#9e6b93'
+  }
+};
+const cdoCustomStyles = {
+  default: {
+    colourPrimary: '00b0bc'
   },
   behavior_blocks: {
     colourPrimary: '#20cc4e'
@@ -59,6 +61,11 @@ export const cdoBlockStyles = {
   }
 };
 
+export const cdoBlockStyles = {
+  ...coreBlocklyOverrides,
+  ...cdoCustomStyles
+};
+
 export const CdoTheme = GoogleBlockly.Theme.defineTheme('modern', {
   base: GoogleBlockly.Themes.Classic,
   blockStyles: cdoBlockStyles,
@@ -81,20 +88,22 @@ export const CdoHighContrastTheme = GoogleBlockly.Theme.defineTheme(
   'cdoHighContrast',
   {
     base: HighContrastTheme,
-    blockStyles: cdoBlockStyles
+    blockStyles: {...HighContrastTheme.blockStyles, ...cdoCustomStyles}
   }
 );
 
 export const CdoDeuteranopiaTheme = GoogleBlockly.Theme.defineTheme(
   'cdoDeuteronopia',
   {
-    base: DeuteranopiaTheme
+    base: DeuteranopiaTheme,
+    blockStyles: {...DeuteranopiaTheme.blockStyles, ...cdoCustomStyles}
   }
 );
 
 export const CdoTritanopiaTheme = GoogleBlockly.Theme.defineTheme(
   'cdoTritanopia',
   {
-    base: TritanopiaTheme
+    base: TritanopiaTheme,
+    blockStyles: {...TritanopiaTheme.blockStyles, ...cdoCustomStyles}
   }
 );
