@@ -530,6 +530,14 @@
         }
       }
     },
+    "icecream_toppings_toy": {
+      "card": {
+        "description": "Ankieta przeprowadzona wśród klientów sklepu z lodarni na temat tego, czy lubią określone kombinacje lodów.",
+        "context": {
+          "potentialUses": "Pomóż w rekomendowaniu, jaki rodzaj lodów powinien kupić nowy klient."
+        }
+      }
+    },
     "naan_toy": {
       "fields": {
         "chicken": {
@@ -691,6 +699,14 @@
       "card": {
         "context": {
           "potentialUses": "Określ wiek uchowca."
+        }
+      }
+    },
+    "basketball_shots": {
+      "card": {
+        "description": "Ten zbiór danych zawiera każdą próbę 3-punktową podjętą podczas turnieju NCAA 2017. Dzięki tym danym można przewidzieć, czy strzał został wykonany, czy pominięty.",
+        "context": {
+          "potentialUses": "Przewiduj, czy 3-punktowy strzał został wykonany, czy pominięty."
         }
       }
     },
@@ -1081,22 +1097,6 @@
         "description": "Zbiór danych odpowiedzi ankietowych zebranych przez słowackich studentów w wieku 18-21 lat w FSEV UK. Większość odpowiedzi to rankingi na skali od 1 do 5. Na przykład „Ranga od 1 (zdecydowanie się nie zgadzam) do 5 (zdecydowanie się zgadzam): Często uczę się lub pracuję nawet w wolnym czasie”. Jest to podzbiór większego zbioru danych, który skupia się tylko na muzyce.",
         "context": {
           "potentialUses": "Na przykład, przewidzieć czyjeś cechy osobowości na podstawie innych cech."
-        }
-      }
-    },
-    "icecream_toppings_toy": {
-      "card": {
-        "description": "Ankieta przeprowadzona wśród klientów sklepu z lodarni na temat tego, czy lubią określone kombinacje lodów.",
-        "context": {
-          "potentialUses": "Pomóż w rekomendowaniu, jaki rodzaj lodów powinien kupić nowy klient."
-        }
-      }
-    },
-    "basketball_shots": {
-      "card": {
-        "description": "Ten zbiór danych zawiera każdą próbę 3-punktową podjętą podczas turnieju NCAA 2017. Dzięki tym danym można przewidzieć, czy strzał został wykonany, czy pominięty.",
-        "context": {
-          "potentialUses": "Przewiduj, czy 3-punktowy strzał został wykonany, czy pominięty."
         }
       }
     }

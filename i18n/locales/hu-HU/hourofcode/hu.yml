@@ -550,6 +550,10 @@ hu:
   signup_registration_closed: Az osztályod minden év decemberében világszerte több
     millió tanulóhoz csatlakozhat, akik a Kódolás órájával ünneplik a számítástechnika
     oktatásának hetét. Az évente tartott rendezvényre októberben kezdődik a regisztráció.
+  signup_registration_closed_2022_markdown: 'Registration for this year''s Hour of
+    Code event map is currently closed, but you can still [host an Hour of Code](%{hoc_activities_url})
+    and join in the celebration on social media! Post fun pictures or video of your
+    event using the #HourOfCode hashtag!'
   signup_header: Rendezd meg te is a Kódolás Óráját (%{campaign_date}), regisztrálj
     itt.
   signup_name_label: Név

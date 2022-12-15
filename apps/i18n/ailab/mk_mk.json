@@ -30,6 +30,22 @@
         }
       }
     },
+    "salsa_toy": {
+      "fields": {
+        "onion": {
+          "id": "кромид"
+        },
+        "avocado": {
+          "id": "авокадо"
+        },
+        "beans": {
+          "id": "грав\n"
+        },
+        "lime": {
+          "id": "лимета"
+        }
+      }
+    },
     "poutine_toy": {
       "fields": {
         "mushrooms": {
@@ -219,6 +235,16 @@
         }
       }
     },
+    "raspado_toy": {
+      "fields": {
+        "strawberry": {
+          "id": "јагода"
+        },
+        "lime": {
+          "id": "лимета"
+        }
+      }
+    },
     "salad_toy": {
       "fields": {
         "tomato": {
@@ -324,6 +350,25 @@
         }
       }
     },
+    "safari_toy": {
+      "fields": {
+        "people": {
+          "id": "луѓе"
+        },
+        "rhino": {
+          "id": "носорог"
+        },
+        "elephant": {
+          "id": "слон"
+        },
+        "alligator": {
+          "id": "алигатор"
+        },
+        "trees": {
+          "id": "дрвја"
+        }
+      }
+    },
     "club_sparse_toy": {
       "fields": {
         "activity": {
@@ -348,6 +393,26 @@
       },
       "card": {
         "description": "Zoey побара од сите во нејзината класа по англиски јазик да ја заврши анкетата и сите тие го направија!"
+      }
+    },
+    "poke_toy": {
+      "fields": {
+        "avocado": {
+          "id": "авокадо"
+        },
+        "onion": {
+          "id": "кромид"
+        },
+        "ginger": {
+          "id": "ѓумбир"
+        }
+      }
+    },
+    "student_survey": {
+      "fields": {
+        "Achievements": {
+          "id": "Постигувања"
+        }
       }
     },
     "loneliness_personality": {

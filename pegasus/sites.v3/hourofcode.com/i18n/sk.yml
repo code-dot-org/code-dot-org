@@ -532,6 +532,10 @@ sk:
   signup_registration_closed: A každý rok v decembri sa vaša trieda môže pridať k miliónom
     žiakov po celom svete, ktorí oslavujú Týždeň informatiky s Hodinou kódu. Registráciu
     na túto výročnú oslavu otvoríme v októbri. 
+  signup_registration_closed_2022_markdown: 'Registration for this year''s Hour of
+    Code event map is currently closed, but you can still [host an Hour of Code](%{hoc_activities_url})
+    and join in the celebration on social media! Post fun pictures or video of your
+    event using the #HourOfCode hashtag!'
   signup_header: Zorganizujte Hodinu kódu počas %{campaign_date} a zaregistrujte sa
     tu.
   signup_name_label: Vaše meno
