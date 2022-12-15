@@ -962,6 +962,7 @@
   "feedbackSaveError": "There's been an error saving your feedback. Please try to save again.",
   "fewerNumberOfBlocks": "Fewer than {numBlocks, plural, one {1 block} other {# blocks}} used!",
   "fields": "Fields",
+  "fileExplorer": "File explorer",
   "filter": "Filter",
   "filterByStudent": "Filter by student:",
   "filterByStage": "Filter by lesson:",
