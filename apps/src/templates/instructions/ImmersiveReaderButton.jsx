@@ -32,6 +32,7 @@ class ImmersiveReaderButton extends Component {
 
     return (
       <div
+        tabIndex="0"
         ref={el => (this.container = el)}
         className={'immersive-reader-button'}
         data-button-style={'icon'}
