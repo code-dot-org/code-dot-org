@@ -95,7 +95,9 @@ class Link extends Component {
     return (
       <div style={linkBoxStyle}>
         <a href={link}>
-          {isRtl && <FontAwesome icon={icon} style={styles.chevronRtl} />}
+          <span style={{display: 'inline-block'}}>
+            {isRtl && <FontAwesome icon={icon} style={styles.chevronRtl} />}
+          </span>
           <div style={styles.linkToViewAll}>{linkText}</div>
           <span style={{display: 'inline-block'}}>
             {!isRtl && <FontAwesome icon={icon} style={styles.chevron} />}
