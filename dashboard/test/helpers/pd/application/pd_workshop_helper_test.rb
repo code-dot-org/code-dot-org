@@ -97,8 +97,8 @@ module Pd::Application
         create TEACHER_APPLICATION_FACTORY, pd_workshop_id: workshops[i].id
       end
 
-      # 10 applications, still only 3 queries
-      assert_queries 3 do
+      # 10 applications, still only 5 queries
+      assert_queries 5 do
         TEACHER_APPLICATION_CLASS.prefetch_associated_models(applications)
       end
 
