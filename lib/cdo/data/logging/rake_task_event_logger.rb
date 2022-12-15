@@ -1,4 +1,3 @@
-require 'action_view'
 require lib_dir 'cdo/data/logging/timed_task_with_logging'
 class RakeTaskEventLogger
   STUDY_TABLE = 'rake_performance'.freeze
@@ -13,7 +12,6 @@ class RakeTaskEventLogger
   end
 
   def start_task_logging
-    puts "hello"
     @start_time = Time.new
     event = 'start'.freeze
     log_event(event)
@@ -63,7 +61,6 @@ class RakeTaskEventLogger
         }
       )
     rescue => e
-      puts e.backtrace
       Honeybadger.notify(
         e,
         error_message: "Failed to log rake task information",
