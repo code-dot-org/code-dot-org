@@ -15,7 +15,6 @@ const LessonLock = ({unitId, lessonId, isHidden}) => {
     <div style={styles.main}>
       <div style={styles.buttonContainer} className="uitest-locksettings">
         <Button
-          __useDeprecatedTag
           onClick={() => setDialogOpen(true)}
           color={Button.ButtonColor.gray}
           text={i18n.lockSettings()}
@@ -52,7 +51,8 @@ const styles = {
   button: {
     paddingLeft: 0,
     paddingRight: 0,
-    width: '100%'
+    width: '100%',
+    margin: '5px 0px 0px 0px'
   }
 };
 
