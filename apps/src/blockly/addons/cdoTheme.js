@@ -109,15 +109,6 @@ const cdoHighContrastStyles = {
 // styles for color vision deficiency themes
 const CVDStyles = {
   // colors chosen from 15-color palette for colorblindness at http://mkweb.bcgsc.ca/colorblind/palettes.mhtml#15-color-palette-for-colorbliness
-  colour_blocks: {
-    colourPrimary: '#009ffA' // bleu de france
-  },
-  loop_blocks: {
-    colourPrimary: '#EF0096' // persian rose
-  },
-  procedure_blocks: {
-    colourPrimary: '#003C86' // congress blue
-  },
   default: {
     colourPrimary: '00DCB5' // aquamarine
   },
@@ -134,13 +125,13 @@ const CVDStyles = {
     colourPrimary: '#FFCFE2' // azalea
   },
   sprite_blocks: {
-    colourPrimary: '#6A0213' // rosewood
+    colourPrimary: '#F60239' // tractor red
   },
   setup_blocks: {
     colourPrimary: 'FFAC3B' // frenzee - this color chosen from 24-color palette for color blindness at http://mkweb.bcgsc.ca/colorblind/palettes.mhtml#15-color-palette-for-colorbliness
   },
   world_blocks: {
-    colourPrimary: '#F60239' // tractor red
+    colourPrimary: '#6A0213' // rosewood
   }
 };
 
