@@ -133,8 +133,7 @@
           // Chrome initializes every iframe with an "about:blank" empty page
           // so we need to check that the readyState refers to the page we expect
           (iframeElement.src === "about:blank" ||
-            (iframeElement.src !== "about:blank" &&
-              iframeWindow.location.href !== "about:blank"))
+            iframeWindow.location.href !== "about:blank")
         ) {
           setAttribute(".iframe > .loading", { style: "display: none" });
           setAttribute(".iframe > .succeeded", {
