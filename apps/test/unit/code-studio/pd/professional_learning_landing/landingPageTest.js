@@ -84,7 +84,6 @@ describe('LastWorkshopSurveyBanner', () => {
     expect(
       wrapper.containsMatchingElement(
         <Button
-          __useDeprecatedTag
           href={TEST_SURVEY_URL}
           target="_blank"
           text={i18n.plLandingStartSurvey()}
