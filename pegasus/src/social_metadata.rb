@@ -10,6 +10,7 @@
 #   code.org/learn
 #   code.org/prize
 #   code.org/hourofcode2022
+#   code.org/maker
 #
 #   hourofcode.com/
 #   hourofcode.com/learn
@@ -50,6 +51,7 @@ def get_social_metadata_for_page(request)
     hoc_2022_social: {path: "/shared/images/social-media/hoc2022_social.png", width: 1200, height: 630},
     cs_leaders_prize: {path: "/images/social-media/cs-leaders-prize-opengraph.png", width: 1200, height: 630},
     hoc_2022_landing_page: {path: "/shared/images/social-media/hoc2022_social_landing_page.png", width: 1200, height: 630},
+    maker_physical_computing: {path: "/shared/images/social-media/maker_social.png", width: 1200, height: 630},
   }
 
   # Important:
@@ -172,6 +174,13 @@ def get_social_metadata_for_page(request)
         image: images[:hoc_2022_landing_page]
       }
     },
+    "maker" => {
+      "default" => {
+        title: hoc_s(:social_maker_title),
+        description: hoc_s(:social_maker_desc),
+        image: images[:maker_physical_computing]
+      }
+    },
   }
 
   if request.path == "/challenge" && request.site == "code.org"
@@ -198,6 +207,8 @@ def get_social_metadata_for_page(request)
     page = "cs-leaders-prize"
   elsif request.path == "/hourofcode2022" && request.site == "code.org"
     page = "hoc-2022-landing-page"
+  elsif request.path == "/maker" && request.site == "code.org"
+    page = "maker"
   else
     return {}
   end
