@@ -1,0 +1,40 @@
+<Javalab>
+  <config><![CDATA[{
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "**A game developer is creating a `Player`(#e7e8ea) class to represent a player in a game.**\r\n\r\n✅ **TO DO #1:** Write a mutator method called `setHighScore()`(#e7e8ea) in the `Player`(#e7e8ea) class to assign a new value to the `highScore`(#e7e8ea) instance variable.\r\n\r\n✅ **TO DO #2:** In `GameRunner.java`(#e7e8ea), assign a new value to the `tetrisChamp`(#e7e8ea) object's `highScore`(#e7e8ea) instance variable and print the updated value.\r\n\r\n1. Call the mutator method on the `tetrisChamp`(#e7e8ea) object.\r\n\r\n2. Call the accessor method on the `tetrisChamp`(#e7e8ea) object and print the result.\r\n\r\n💡 **TIP:** Check out the **Help & Tips** tab ⬆️ for help with writing a mutator method.\r\n\r\n## ***Don't forget to . . .***\r\n\r\n![](https://images.code.org/eb2c8910ae2e150019b8e2177405d4af-image-1668191576873.png)",
+    "mini_rubric": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "csa_view_mode": "console",
+    "start_sources": {
+      "GameRunner.java": {
+        "text": "public class GameRunner {\n  public static void main(String[] args) {\n\n    /* ----------------------------------- TO DO -----------------------------------\n     * ✅ Call the mutator method on the tetrisChamp object to assign a new value\n     * to its highScore instance variable, then print the updated value.\n     * -----------------------------------------------------------------------------\n     */\n\n    // Creates a Player object\n    Player tetrisChamp = new Player(682);\n\n    // Prints the current value assigned to highScore\n    System.out.println(\"Current High Score: \" + tetrisChamp.getHighScore());\n\n\n    \n    \n  }\n}",
+        "isVisible": true,
+        "tabOrder": 0
+      },
+      "Player.java": {
+        "text": "/*\n * Represents a player in a game\n */\npublic class Player {\n\n  private int highScore;   // A player's high score\n\n  /*\n   * Sets highScore to the specified high score\n   */\n  public Player(int highScore) {\n    this.highScore = highScore;\n  }\n\n  /*\n   * Returns the value assigned to highScore\n   */\n  public int getHighScore() {\n    return highScore;\n  }\n\n  /* ----------------------------------- TO DO -----------------------------------\n   * ✅ Write a mutator method to change the value assigned to highScore.\n   * -----------------------------------------------------------------------------\n   */\n\n\n\n  \n}",
+        "isVisible": true,
+        "tabOrder": 1
+      }
+    },
+    "display_name": "Player",
+    "bubble_choice_description": "A game developer is creating a `Player` class to represent a player in a game. Write a mutator method to change the value assigned to the `highScore` instance variable.",
+    "thumbnail_url": "https://images.code.org/b483d7b5d87cf8e39cb44f1f3b555f07-console.png",
+    "reference_links": [
+      "/courses/csa-2023/guides/mutator-methods"
+    ],
+    "encrypted_exemplar_sources": "e+HOol8MOSn6B+XHBYTP9uZkXWCv6C/sNRRlUAoDooWQPNzThdpDKQLQjAvJ\nbEyPRmZ/2Ft5GHAVp1UbuNSietOBuMklVGswcFOJfOX6je5LuZWX0ue+5W5v\nylUlhMu/i96pNkdtpfj5shXqzY0uVQ5L1wjabp5zIq3LRiRYDzJjnmG+fZPV\neKOLyGzRqYVXu4H6wnzL425DlPHfK43cA4VCrQvS1pGYOmLwC7QaE+ANaihF\nW+mPFaBdwxeEgXyYLJgUVzP1RSPRPQjyzAJRp1uiLi4pguquyQuLfUv+13uq\nvSjeQRwCOLfiBFYIJpHChjxN9LjiMy4zTs/uH7LApkP7CyHx1tgWu7h5TV0J\nRS654YzhbupawYwcw9cr36U4I3pybSalwLIQbDKJj/rt8f8lM2LQ+jrYeSrZ\n/qywg0OA0qCBkap1VF3O1Amykde7XkXJx17JU2l9Lw3CUdJ8K0JKkaY+OYHl\nV5PaC48lIGYFvnTQYnBFsYVCOeYbS9abkboXGBWB+XbSurfa6FFnWZ/kfosR\nSZPo6uMldLn6oro1pWEClMgb1+/BzG9g80L9KZJkheCzOfQKcCJju+Z2H17L\nlOUrJfFkFuNID5iovWu1caLhv/4i4iFyDBbKFGC8h/YGDUlwUu82WJHcrcbF\nCJnRG0YoHrw5/J1e7uxQeYy3F3YunBjVhWDSX7Rpp0Ho1go0ng9DxCw8J7ut\nHhUsFXrCf9l/gEAODbG8y2xTQfBQOMEyRliHU9VDUhNTijX9QhtrQxtKzfp5\nyVWRAiC/6GDui572dAXcUcpp5EAUZlPZOzgJ/LwWSRLDTeY3fnlWwIYjkXnO\nnoPVtCRLsNUfKA8Pu+9TPu9w7q31TjRbJsS8zL/X9Yvs8pKyvbXYAJ6uO/qx\nCJqCbpgwRTkz0BNwkYxLY8/iRj2ftX7Ob5RHQkGuTCUyCOH6xHA2bmYa7chz\nbB0OfZDdifglstiopyfrx2zRgZQg7DW7RBRMbTzEa3T4P5FEYNsYT2q/HpCz\nTlT+Dpf2W0x0aQnD1ObY48a3gM3gIuBOJzw07N6AsZpuUb7hbom3PZmRN87t\nYk77HD1C/WenFy3F2f4ryQ0NdMWWBqUocFEXQokjc/W5MafOuXsCeIwB/rLd\nlGg+KCkBzujzcTayMlO4XAjOeSnVyTnElf26MLOi3xhQAQ5KvNBcKaF76IxL\nKqcUi5Pir/KllxaclSAEzQmPxhut8Z/+p/rGTWU8Qg18m4ETsd2RpbxGqXWL\nbAvqYhBVSOeHTu2eBkEoNkdLVdk11wU5mr6FsEJ+VZUA3lduOZJoUHRdZyph\nNupp/ISMSB78W9ASSj4s3bnRQJMekWlw/PgTRr6kXsZwZGM3Ts4L59i+vmJM\nrN0tXJ4ez7jhUwKtEZE7lc4Avdf6mZ5KMg7x9d/fHbcwvPHy7MJ6iGVVUXPL\nmgH+ZyLQekloQ8G+2VRDvV980frzGLeUFSsrhyEN4jwEjxnJtbK1DEuXq3FJ\n6NSZiBjuAe57+2SHw8ZrnyVV46xfH5CraquoaVdVBbcZ6YE+pHF44IGjAZDZ\nWWqH7ItMvQ6Xbt9o83lhwGbTpc91YPS8YdQIfnEUPEzXcvdIRHI6bjjDcy2v\no6poCTnn3BXqwV6Jurke2dvhjNCwUAs7HL1Es6jOXOkltZjMHPA6Uc+yotMH\nTleGskRlvfPV69X75hOTl3B/G3kquMUv5v8vPS/HpC6bbV+X/4q02yiGPY8F\nIGniDD7gyiCsvDTChXRos1h3YSXq3N/omKfV4RzqfAEkSlbIWNQwXseupN2Y\nOcfWFUN98Wb7oPTO1Ux6LiZBZWTcBwMcyD9fXv6N1e5UB88f6sUM/1gaVltL\nkmkE9wQ/5iTqjwC4F8/mMwoLTNpuO/j6Sl84eJfJ3oMXAwnIm9xXZRi3UIEl\nL2J6w4+x/l7FIqg2TAvS855VQRc7t+nCqFZBbTot2oKuSvLaxi04mPi8nEx4\njq2iY43UUE+m6zOwxQSVOSPHQAixujLQ2q3kftQIaH6LTkoIo+a9GSwvJmhp\nBGn0ie8yr9au78vU5v49WIFTewf7QeyZkQwXx4IHa4goB4EzRYZ9xhqJOamB\nLMHhT3p3oGvHeXLKDOO+m2z1Ow2zC7OHNmUC72/Fl+sVzuqYBw4Xdg7/8ZGt\nuth0KoYroyfvm25GrObWvYB0ew1Zo1v9COmSkD4LA4aWQZ2vQwB/48WIDge6\nALrli6dfxjUhfmLWned2R/cEjbklA3XGmHUIT0M6Og==\n",
+    "encrypted_examples": [
+
+    ]
+  },
+  "game_id": 68,
+  "published": true,
+  "created_at": "2022-12-06T16:48:03.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
+  "audit_log": "[{\"changed_at\":\"2022-12-06T16:48:03.745+00:00\",\"changed\":[\"cloned from \\\"CSA U2L9-L4c_2023\\\"\"],\"cloned_from\":\"CSA U2L9-L4c_2023\"},{\"changed_at\":\"2022-12-06 16:48:05 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-12-06 21:06:02 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-12-06 21:08:36 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-12-06 21:15:06 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-12-06 21:48:44 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-12-06 21:49:57 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-12-08 17:05:07 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+}]]></config>
+</Javalab>

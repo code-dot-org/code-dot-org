@@ -12,6 +12,8 @@
  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
  * See the License for the specific language governing permissions and
  * limitations under the License.
+ *
+ * Eval is DEPRECATED
  */
 
 var Eval = module.exports;
@@ -41,6 +43,7 @@ import {TestResults, ResultType} from '../constants';
 import canvg from 'canvg';
 // tests don't have svgelement
 import '../util/svgelement-polyfill';
+import {showDeprecatedAlgebraLabWarning} from '../util/deprecatedLabWarning';
 
 var level;
 var skin;
@@ -146,6 +149,8 @@ Eval.init = function(config) {
   };
 
   studioApp().setPageConstants(config);
+
+  showDeprecatedAlgebraLabWarning();
 
   ReactDOM.render(
     <Provider store={getStore()}>
