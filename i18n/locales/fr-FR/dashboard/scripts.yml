@@ -73,9 +73,9 @@ fr:
           name: infini
         algebrademo:
           title: Démo de l'algèbre
-          description: Une poignée de puzzles pour montrer l'environnement et le langage de programmation utilisé dans Code.org CS en algèbre
-          description_short: Une poignée de puzzles pour montrer l'environnement et le langage de programmation utilisé dans Code.org CS en algèbre
-          student_description: Une poignée de puzzles pour montrer l'environnement et le langage de programmation utilisé dans Code.org CS en algèbre
+          description: Une poignée de casse-têtes pour montrer l'environnement et le langage de programmation utilisé dans Code.org CS en algèbre
+          description_short: Une poignée de casse-têtes pour montrer l'environnement et le langage de programmation utilisé dans Code.org CS en algèbre
+          student_description: Une poignée de casse-têtes pour montrer l'environnement et le langage de programmation utilisé dans Code.org CS en algèbre
         netsim:
           title: Simulateur d'Internet
         pixelation:
@@ -107,9 +107,9 @@ fr:
           name: flappy
         jigsaw:
           title: Puzzle
-          description: Essaie notre tutoriel pour les pièces de puzzle
-          description_short: Essaie notre tutoriel pour les pièces de puzzle
-          student_description: Essaie notre tutoriel pour les pièces de puzzle
+          description: Essaie notre tutoriel pour les pièces de casse-tête
+          description_short: Essaie notre tutoriel pour les pièces de casse-tête
+          student_description: Essaie notre tutoriel pour les pièces de casse-tête
           name: pièces de Puzzle
         step:
           title: Étape
@@ -122,15 +122,15 @@ fr:
           description_short: Découvre les bases des sciences informatiques grâce a de nombreux personnages rigolos !
           student_description: Découvre les bases des sciences informatiques grâce aux personnages de Angry Birds et de Plants vs  Zombies !
         CodeStudioPuzzleChallenge:
-          title: Défi des énigmes de Code Studio
-          description: Essayez ces amusantes énigmes de codage. Faites de votre mieux !
+          title: Défi des casse-têtes de Code Studio
+          description: Essayez ces amusantes casse-têtes de codage. Faites de votre mieux !
           description_short: Relevez le défi !
-          student_description: Essayez ces amusantes énigmes de codage. Faites de votre mieux !
+          student_description: Essayez ces amusantes casse-têtes de codage. Faites de votre mieux !
         Tutorial Video - Code Studio Puzzle Challenge:
           title: Tutoriel - Défi d'énigmes sur Code Studio
-          description: Essayez ces amusantes énigmes de codage. Faites de votre mieux !
+          description: Essayez ces amusantes casse-têtes de codage. Faites de votre mieux !
           description_short: Relevez le défi !
-          student_description: Essayez ces amusantes énigmes de codage. Faites de votre mieux !
+          student_description: Essayez ces amusantes casse-têtes de codage. Faites de votre mieux !
         algebraPD:
           title: Informatique en DP d'algèbre
         algPDmiami:
@@ -573,13 +573,13 @@ fr:
         applab-1hour:
           title: 1 Heure d'Atelier au Labo des Applis
           description_audience: Les Collégiens et les Lycéens
-          description: Cet atelier est conçu pour donner aux étudiants une introduction de base au Labo des Applis en 1 heure. Les étudiants devraient être en mesure de venir avec différents antécédents en informatique et avoir du plaisir à créer quelque chose.
-          student_description: Cet atelier est conçu pour donner aux étudiants une introduction de base au Labo des Applis en 1 heure. Les étudiants devraient être en mesure de venir avec différents antécédents en informatique et avoir du plaisir à créer quelque chose.
+          description: Cet atelier est conçu pour donner aux élèves une introduction de base au Labo des Applis en 1 heure. Les élèves devraient être en mesure de venir avec différents antécédents en informatique et avoir du plaisir à créer quelque chose.
+          student_description: Cet atelier est conçu pour donner aux élèves une introduction de base au Labo des Applis en 1 heure. Les élèves devraient être en mesure de venir avec différents antécédents en informatique et avoir du plaisir à créer quelque chose.
         applab-2hour:
           title: Atelier de 2 Heures au Labo des Applis
           description_audience: Les Collégiens et les Lycéens
-          description: Cet atelier est conçu pour donner aux étudiants une introduction de base au Labo des Applis en 2 heures. Les étudiants devraient être en mesure de venir avec différents antécédents en informatique et avoir du plaisir à créer quelque chose.
-          student_description: Cet atelier est conçu pour donner aux étudiants une introduction de base au Labo des Applis en 2 heures. Les étudiants devraient être en mesure de venir avec différents antécédents en informatique et avoir du plaisir à créer quelque chose.
+          description: Cet atelier est conçu pour donner aux élèves une introduction de base au Labo des Applis en 2 heures. Les élèves devraient être en mesure de venir avec différents antécédents en informatique et avoir du plaisir à créer quelque chose.
+          student_description: Cet atelier est conçu pour donner aux élèves une introduction de base au Labo des Applis en 2 heures. Les élèves devraient être en mesure de venir avec différents antécédents en informatique et avoir du plaisir à créer quelque chose.
         workshop-maker:
           title: Atelier Maker Toolkit
           description_audience: Enseignants participant à un Atelier Maker Toolkit, en personne
@@ -618,8 +618,8 @@ fr:
         csd3-old:
           title: CSD Unité 3 (OBSOLÈTE)
           description_short: 2016/2017 Ébauche de CSD Unité 3
-          description: Voici l'ébauche originale de CSD Unité 3, publiée à l'automne 2016. À moins que vous n'ayez des étudiants qui utilisent, actuellement, ce cours, vous devriez plutôt utiliser la version mise à jour de cette unité à studio.code.org/s/csd3-2019 - cette ébauche originale restera disponible jusqu'au 1er juillet 2017.
-          student_description: Voici l'ébauche originale de CSD Unité 3, publiée à l'automne 2016. À moins que vous n'ayez des étudiants qui utilisent, actuellement, ce cours, vous devriez plutôt utiliser la version mise à jour de cette unité à studio.code.org/s/csd3-2019 - cette ébauche originale restera disponible jusqu'au 1er juillet 2017.
+          description: Voici l'ébauche originale de CSD Unité 3, publiée à l'automne 2016. À moins que vous n'ayez des élèves qui utilisent, actuellement, ce cours, vous devriez plutôt utiliser la version mise à jour de cette unité à studio.code.org/s/csd3-2019 - cette ébauche originale restera disponible jusqu'au 1er juillet 2017.
+          student_description: Voici l'ébauche originale de CSD Unité 3, publiée à l'automne 2016. À moins que vous n'ayez des élèves qui utilisent, actuellement, ce cours, vous devriez plutôt utiliser la version mise à jour de cette unité à studio.code.org/s/csd3-2019 - cette ébauche originale restera disponible jusqu'au 1er juillet 2017.
         csd1-old:
           title: CSD Unité 1 (OBSOLÈTE)
           description_short: 2016/2017 Ébauche de CSD Uniét 1
@@ -660,7 +660,7 @@ fr:
           title: Cours B
           assignment_family_title: Cours B
           description_audience: 'Âges : 5 à 8 ans'
-          description_short: Une introduction à l'informatique pour les pré-lecteurs. (Semblable au Cours A, mais avec plus de variété pour les étudiants plus âgés.)
+          description_short: Une introduction à l'informatique pour les pré-lecteurs. (Semblable au Cours A, mais avec plus de variété pour les élèves plus âgés.)
           description: Apprends les bases de l'informatique et de la sécurité sur internet. À la fin du cours, crée ton propre jeu ou ta propre histoire que tu peux partager.
           student_description: Apprends les bases de l'informatique et de la sécurité sur internet. À la fin du cours, crée ton propre jeu ou ta propre histoire que tu peux partager.
         coursec-2017:
@@ -935,11 +935,11 @@ fr:
         csp3-a:
           title: CSP Unité 3 - Les Sous-Objectifs Groupe A
           description_short: Version alternative de l'unité CSP 3 pour le groupe d'expérimentation A sur les étiquettes de sous-objectif.  
-          description: Cette unité présente les concepts fondamentaux de la programmation informatique, pour les étudiants du Groupe A de Sous-Objectifs.
+          description: Cette unité présente les concepts fondamentaux de la programmation informatique, pour les élèves du Groupe A de Sous-Objectifs.
           lesson_groups:
             csp3_1:
               display_name: 'Chapitre 1 : Langages de Programmation et Algorithmes'
-          student_description: Cette unité présente les concepts fondamentaux de la programmation informatique, pour les étudiants du Groupe A de Sous-Objectifs.
+          student_description: Cette unité présente les concepts fondamentaux de la programmation informatique, pour les élèves du Groupe A de Sous-Objectifs.
         new-express:
           title: Nouveau Script Express
           lesson_groups:
@@ -999,8 +999,8 @@ fr:
               display_name: Évaluation du Chapitre
         pwc:
           title: Le Programme d'Études, Accède à Ton Potentiel, de PwC
-          description: Chez PwC, nous croyons que tous les étudiants ont le potentiel d'être les leaders et la main-d'œuvre axée sur la technologie de demain. Accède à Ton Potentiel est notre engagement d'aider à combler l'écart d'opportunités en dotant les jeunes, en particulier ceux des communautés défavorisées, des compétences financières, technologiques et de sélection de carrière dont ils ont besoin pour changer la trajectoire de leur vie. Dans le cadre de notre engagement, nous sommes ravis de lancer notre programme d'études de technologie et de carrières, Accède à Ton Potentiel, au collège.
-          student_description: Chez PwC, nous croyons que tous les étudiants ont le potentiel d'être les leaders et la main-d'œuvre axée sur la technologie de demain. Accède à Ton Potentiel est notre engagement d'aider à combler l'écart d'opportunités en dotant les jeunes, en particulier ceux des communautés défavorisées, des compétences financières, technologiques et de sélection de carrière dont ils ont besoin pour changer la trajectoire de leur vie. Dans le cadre de notre engagement, nous sommes ravis de lancer notre programme d'études de technologie et de carrières, Accède à Ton Potentiel, au collège.
+          description: Chez PwC, nous croyons que tous les élèves ont le potentiel d'être les leaders et la main-d'œuvre axée sur la technologie de demain. Accède à Ton Potentiel est notre engagement d'aider à combler l'écart d'opportunités en dotant les jeunes, en particulier ceux des communautés défavorisées, des compétences financières, technologiques et de sélection de carrière dont ils ont besoin pour changer la trajectoire de leur vie. Dans le cadre de notre engagement, nous sommes ravis de lancer notre programme d'études de technologie et de carrières, Accède à Ton Potentiel, au collège.
+          student_description: Chez PwC, nous croyons que tous les élèves ont le potentiel d'être les leaders et la main-d'œuvre axée sur la technologie de demain. Accède à Ton Potentiel est notre engagement d'aider à combler l'écart d'opportunités en dotant les jeunes, en particulier ceux des communautés défavorisées, des compétences financières, technologiques et de sélection de carrière dont ils ont besoin pour changer la trajectoire de leur vie. Dans le cadre de notre engagement, nous sommes ravis de lancer notre programme d'études de technologie et de carrières, Accède à Ton Potentiel, au collège.
         allthesurveys:
           title: Toutes les enquêtes
           description_short: Emplacement pour présenter et tester les enquêtes de Code.org
@@ -1031,9 +1031,9 @@ fr:
             cspSurvey:
               display_name: Enquête
         csp3-reovery:
-          title: récupération du travail des étudiants sur csp3 sous la mer
+          title: récupération du travail des élèves sur csp3 sous la mer
         csp3-recovery:
-          title: Récupération du travail des étudiants sur CSP3 sous la mer
+          title: Récupération du travail des élèves sur CSP3 sous la mer
         aws-demo:
           title: Démonstration de AWS
         valentine:
@@ -1141,8 +1141,8 @@ fr:
         csp-exam:
           title: Examen Préparatoire à CSP AP
           description_short: Examen Préparatoire à CSP AP
-          description: 'Cette page contient des copies de toutes les questions d''évaluation à choix multiples parues dans les unités 1 à 5 du cours. Les étudiants voudront, peut-être, s''entraîner pour l''examen à choix multiples en repassant ces petits tests.  '
-          student_description: 'Cette page contient des copies de toutes les questions d''évaluation à choix multiples parues dans les unités 1 à 5 du cours. Les étudiants voudront, peut-être, s''entraîner pour l''examen à choix multiples en repassant ces petits tests.  '
+          description: 'Cette page contient des copies de toutes les questions d''évaluation à choix multiples parues dans les unités 1 à 5 du cours. Les élèves voudront, peut-être, s''entraîner pour l''examen à choix multiples en repassant ces petits tests.  '
+          student_description: 'Cette page contient des copies de toutes les questions d''évaluation à choix multiples parues dans les unités 1 à 5 du cours. Les élèves voudront, peut-être, s''entraîner pour l''examen à choix multiples en repassant ces petits tests.  '
         coursec-2018:
           title: Cours C (2018)
           assignment_family_title: Cours C
@@ -1964,8 +1964,8 @@ fr:
         time4csdemo:
           title: Time4CS La Diversité de la Floride
           description_audience: CE2
-          description_short: Ce module se concentre sur les normes d'études scientifiques et sociales du CE2. En science, ils considèrent les normes de vie qui englobent les habitats, les écosystèmes, les espèces indigènes et les espèces envahissantes. En études sociales, les étudiants contemplent les branches du gouvernement de la Floride et la façon dont les citoyens de tous les jours peuvent influer sur les politiques locales et étatiques.
-          description: Ce module se concentre sur les normes d'études scientifiques et sociales du CE2. En science, ils considèrent les normes de vie qui englobent les habitats, les écosystèmes, les espèces indigènes et les espèces envahissantes. En études sociales, les étudiants contemplent les branches du gouvernement de la Floride et la façon dont les citoyens de tous les jours peuvent influer sur les politiques locales et étatiques.
+          description_short: Ce module se concentre sur les normes d'études scientifiques et sociales du CE2. En science, ils considèrent les normes de vie qui englobent les habitats, les écosystèmes, les espèces indigènes et les espèces envahissantes. En études sociales, les élèves contemplent les branches du gouvernement de la Floride et la façon dont les citoyens de tous les jours peuvent influer sur les politiques locales et étatiques.
+          description: Ce module se concentre sur les normes d'études scientifiques et sociales du CE2. En science, ils considèrent les normes de vie qui englobent les habitats, les écosystèmes, les espèces indigènes et les espèces envahissantes. En études sociales, les élèves contemplent les branches du gouvernement de la Floride et la façon dont les citoyens de tous les jours peuvent influer sur les politiques locales et étatiques.
           lesson_groups:
             ramp_up:
               display_name: Progression
@@ -1981,7 +1981,7 @@ fr:
               display_name: 'Collection 4 : L’Impact des Espèces Invasives (sur les Everglades)'
             time4cs_c5:
               display_name: 'Collection 5 : Les Citoyens Passent à l’Action'
-          student_description: Ce module se concentre sur les normes d'études scientifiques et sociales du CE2. En science, ils considèrent les normes de vie qui englobent les habitats, les écosystèmes, les espèces indigènes et les espèces envahissantes. En études sociales, les étudiants contemplent les branches du gouvernement de la Floride et la façon dont les citoyens de tous les jours peuvent influer sur les politiques locales et étatiques.
+          student_description: Ce module se concentre sur les normes d'études scientifiques et sociales du CE2. En science, ils considèrent les normes de vie qui englobent les habitats, les écosystèmes, les espèces indigènes et les espèces envahissantes. En études sociales, les élèves contemplent les branches du gouvernement de la Floride et la façon dont les citoyens de tous les jours peuvent influer sur les politiques locales et étatiques.
         csp1-pilot-staging:
           title: 'Unité 1: Bits et Octets'
           lesson_groups:
@@ -2094,7 +2094,7 @@ fr:
             cspSurvey:
               display_name: Enquête
         csp-post-survey-2018:
-          title: Enquête (2018 - 2019) Post-Cours auprès des étudiants de CSP
+          title: Enquête (2018 - 2019) Post-Cours auprès des élèves de CSP
           description_audience: Étudiants en CSP
           description_short: Enquête Post-Cours CSP auprès des Étudiants
           description: Bienvenue dans l'Enquête Post-Cours CS Principles de Code.org. Cette enquête prend environ 15 minutes. Tes réponses sont privées et anonymes -- ton professeur peut voir des résultats agrégés anonymes pour toute la classe. Les résultats sont essentiels pour ton professeur et Code.org afin de maintenir et d'améliorer le cours.  Merci pour ton temps et ta considération.
@@ -3062,7 +3062,7 @@ fr:
           student_description: Découvre les boucles, les instructions conditionnelles et les événements. Au-delà du codage, découvre aussi la citoyenneté numérique.
         coursee-2021:
           title: Cours E (2021)
-          description: Nous avons créé le cours E pour des élèves de CM1. Le cours commence par une introduction à l'outil de programmation Labo des Sprites. Les élèves apprendront à créer des projets amusants et interactifs qui renforceront ce qu'ils apprendront sur la sécurité en ligne. À la suite de ces leçons, les élèves se mettront à faire du codage plus complexe. Les élèves découvriront les boucles imbriquées, les fonctions et les formules conditionnelles. À la fin du cours, les élèves associeront ces notions pour résoudre des énigmes difficiles. Le cours se termine par un projet libre dans le cadre duquel les élèves créeront un jeu ou feront un dessin.
+          description: Nous avons créé le cours E pour des élèves de CM1. Le cours commence par une introduction à l'outil de programmation Labo des Sprites. Les élèves apprendront à créer des projets amusants et interactifs qui renforceront ce qu'ils apprendront sur la sécurité en ligne. À la suite de ces leçons, les élèves se mettront à faire du codage plus complexe. Les élèves découvriront les boucles imbriquées, les fonctions et les formules conditionnelles. À la fin du cours, les élèves associeront ces notions pour résoudre des casse-têtes difficiles. Le cours se termine par un projet libre dans le cadre duquel les élèves créeront un jeu ou feront un dessin.
           description_audience: 'Âge : 8 à 12 ans'
           lesson_groups:
             ramp_up:
@@ -3084,6 +3084,7 @@ fr:
           student_description: Mets-toi à coder avec les algorithmes, les événements, les boucles, les formules conditionnelles et les fonctions ! À la fin de ce cours, tu concevras et créera un jeu ou un dessin que tu pourras partager avec tes amis et ta famille.
         coursef-2021:
           title: Cours F (2021)
+          description: On a créé le Cours F pour des élèves de CM2. Le cours commence en examinant la manière dont les utilisateurs font des choix au sein des applications qu'ils utilisent. Les élèves apprendront ensuite à créer diverses applications avec le Labo des Sprites qui proposent aussi des choix aux utilisateurs. Plus on progresse vers la fin des leçons du cours, plus les élèves découvriront des notions avancées, dont les variables et les boucles « pour ». Les élèves jouiront d'une plus grande autonomie et de plus de choix tout au long de ce cours. À la fin du cours, les élèves auront créé des projets interactifs ou des œuvres d'art à partager avec leurs amis et leur famille.
           description_short: Apprends toutes les notions dans les Concepts Fondamentaux de l’Informatique et crée tes propres œuvres d’art, histoires ou jeux.
           description_audience: 'Àges : 9 à 13 ans'
           lesson_groups:
@@ -3107,6 +3108,7 @@ fr:
               display_name: supprimer
             lessonGroup-7:
               display_name: Citoyenneté Numérique
+          student_description: Apprends à coder avec les sprites, les variables et les boucles tout en parlant des impacts sociétaux de l'informatique et de l'internet. À la fin de ce cours, tu vas concevoir et créer un projet que tu pourras partager avec tes amis et ta famille par la suite.
         express-2021:
           title: Cours Express (2021)
           description: Apprends l'informatique en essayant les cours ici à ton propre rythme ! Apprends à créer des logiciels, développe des compétences de résolution de problèmes et plonge-toi dans des défis amusants ! Développe des jeux et des projets créatifs à partager avec tes amis, ta famille et tes enseignants.
@@ -3763,7 +3765,7 @@ fr:
             end_of_course_project:
               display_name: Projet de fin de cours
           title: Cours E (2022)
-          description: Nous avons créé le cours E pour des élèves de CM1. Le cours commence par une introduction à l'outil de programmation Labo des Sprites. Les élèves apprendront à créer des projets amusants et interactifs qui renforceront ce qu'ils apprendront sur la sécurité en ligne. À la suite de ces leçons, les élèves se mettront à faire du codage plus complexe. Les élèves découvriront les boucles imbriquées, les fonctions et les formules conditionnelles. À la fin du cours, les élèves associeront ces notions pour résoudre des énigmes difficiles. Le cours se termine par un projet libre dans le cadre duquel les élèves créeront un jeu ou feront un dessin.
+          description: Nous avons créé le cours E pour des élèves de CM1. Le cours commence par une introduction à l'outil de programmation Labo des Sprites. Les élèves apprendront à créer des projets amusants et interactifs qui renforceront ce qu'ils apprendront sur la sécurité en ligne. À la suite de ces leçons, les élèves se mettront à faire du codage plus complexe. Les élèves découvriront les boucles imbriquées, les fonctions et les formules conditionnelles. À la fin du cours, les élèves associeront ces notions pour résoudre des casse-têtes difficiles. Le cours se termine par un projet libre dans le cadre duquel les élèves créeront un jeu ou feront un dessin.
           student_description: Mets-toi à coder avec les algorithmes, les événements, les boucles, les formules conditionnelles et les fonctions ! À la fin de ce cours, tu concevras et créera un jeu ou un dessin que tu pourras partager avec tes amis et ta famille.
           description_audience: 'Âge : 8 à 12 ans'
         coursef-2022:
@@ -3778,6 +3780,7 @@ fr:
               display_name: Données et Simulations
             end_of_course_project:
               display_name: Projet de fin de cours
+          title: Cours F (2022)
           description_short: Apprends toutes les notions dans les Concepts Fondamentaux de l’Informatique et crée tes propres œuvres d’art, histoires ou jeux.
           description_audience: 'Àges : 9 à 13 ans'
         csp-post-survey-2021:
@@ -3852,6 +3855,7 @@ fr:
               display_name: Données et Simulations
             end_of_course_project:
               display_name: Projet de fin de cours
+          title: Cours F (2022)
           description_audience: 'Àges : 9 à 13 ans'
           description_short: Apprends toutes les notions dans les Concepts Fondamentaux de l’Informatique et crée tes propres œuvres d’art, histoires ou jeux.
         csa6-2022:

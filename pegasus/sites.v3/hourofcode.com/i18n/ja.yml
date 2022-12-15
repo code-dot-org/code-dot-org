@@ -459,6 +459,10 @@ ja:
     The Hour of Code activities are available year-round. [Try an activity](%{hoc_activities_url})
     or read our [How-to guide](%{howto_guide_url}) to plan an event for your class.
   signup_registration_closed: そして、あなたのクラスは、毎年12月に世界中の数百万人もの生徒たちがHour of Codeでコンピューターサイエンス教育週間をお祝いするのに加わることができます。その例祭への登録は10月に開始します。
+  signup_registration_closed_2022_markdown: 'Registration for this year''s Hour of
+    Code event map is currently closed, but you can still [host an Hour of Code](%{hoc_activities_url})
+    and join in the celebration on social media! Post fun pictures or video of your
+    event using the #HourOfCode hashtag!'
   signup_header: "%{campaign_date} の間に、Hour of Codeのイベントを開催する準備を終えたら、ここに登録しましょう！"
   signup_name_label: お名前
   signup_name_error: 名前が必要です。

@@ -4190,7 +4190,7 @@ tr-TR:
         markdown: |-
           # Süper Dijital Vatandaş
 
-          ## Siber zorbalık gördüğümüzde nasıl karşı çıkabiliriz?
+          ## Siber zorbalık gördüğümüzde nasıl dik durabiliriz?
       csf_password_power-up:
         content1: açıklama buraya
         markdown: |-
@@ -4208,7 +4208,7 @@ tr-TR:
       csf_putting_a_stop_to_online_meanness:
         content1: açıklama buraya
         markdown: |
-          # STOP Kötülüğe DUR de
+          # Zorbalığı DURDUR
 
           ## İnternette biri sana kötü davranıyorsa ne yapmalısın?
 
@@ -5786,7 +5786,7 @@ tr-TR:
         markdown: |-
           # Dijital İzi Takip Edin
 
-          ## Dijital ayak izinizde hangi bilgilere sahip olunabilir?
+          ## Dijital ayak izinizde hangi bilgiler olması doğrudur?
       csf_safety_in_my_online_neighborhood:
         markdown: |-
           # Çevrimiçi Komşum
@@ -5949,7 +5949,7 @@ tr-TR:
         markdown: |-
           #Grafik Kağıdı Programlama
 
-          Sınıf arkadaşlarınızı resimleri çizmek için kullanabileceği algoritmaları yazın.
+          Sınıf arkadaşlarınızın resimleri çizmek için kullanabileceği algoritmaları yazın.
       HappyMaps-Unplugged_2021:
         markdown: |-
           # Mutlu Haritalar
@@ -6074,7 +6074,7 @@ tr-TR:
         - text: BB-8 5 kez ilerler ve tüm metal parçalarını toplar
           correct: true
           feedback: Doğru!
-        - text: BB-8 yalnızca 3 birim ilerler.
+        - text: BB-8 sadece 3 boşluk hareket edecek.
           feedback: Yanlış. Tekrar bloğu, BB-8'in beş kez ilerlemesini sağlar.
         questions:
         - text: '"Çalıştır"a bastığınızda sizce ne olacak?'
@@ -6291,7 +6291,7 @@ tr-TR:
         - text: Kuş ilerleyecek ve TNT'ye çarpacak.
           feedback: Yanlış. Kod, güvenli bir yol varsa kuşun ilerlemesini ve sola
             dönmesini sağlar. Bunu, domuza ulaşana kadar yapmaya devam eder!
-        - text: Kuşlar yanlış yere dönüyor.
+        - text: Kuş yanlış yere döner.
           feedback: Kod, bir yol varsa kuşun ilerlemesini ve sola dönmesini sağlar.
             Bunu, domuza ulaşana kadar yapmaya devam eder!
         questions:
@@ -6522,12 +6522,12 @@ tr-TR:
         markdown: |-
           # Süper Dijital Vatandaş
 
-          ## Siber zorbalık gördüğümüzde nasıl karşı çıkabiliriz?
+          ## Siber zorbalık gördüğümüzde nasıl dik durabiliriz?
       csf_digital_trails_2021:
         markdown: |-
           # Dijital İzi Takip Edin
 
-          ## Dijital ayak izinizde hangi bilgilere sahip olunabilir?
+          ## Dijital ayak izinizde hangi bilgiler olması doğrudur?
       csf_password_power-up_2021:
         content1: açıklama buraya
         markdown: |-
@@ -6581,11 +6581,11 @@ tr-TR:
         questions:
         - text: Bu koda dikkatlice bakın. Sizce program çalıştığında ne olacak?
       courseF_intro_apps:
-        description: Bilgisayar Bilimi Temelleri'ne hoş geldiniz! Bu projelerin tamamı
-          Hareketli Nesne Laboratuvarı ile hazırlandı. Neler mümkün olduğunu görmek
+        description: Bilgisayar Bilimi Temelleri(CS Fundamentals)'ne hoş geldiniz!
+          Bu projelerin tamamı SpriteLab ile hazırlandı. Neler mümkün olduğunu görmek
           için hemen deneyin. Bu kursu tamamladığınızda bunun gibi ve daha birçok
           proje yapabileceksiniz.
-        display_name: Hareketli Nesne Laboratuvarı Uygulamaları
+        display_name: SpriteLab Uygulamaları
         teacher_markdown: |-
           # Tercih Seviyesine Genel Bakış
           Tercih seviyeleri, öğrencilerin tamamlayacağı ek seviyeleri içeren bir menü sağlar. Öğrenciler buradaki alt seviyelerden en az birini mutlaka tamamlamalıdır ancak istedikleri (veya sizin istediğiniz) kadarı üzerinde çalışabilirler.
@@ -6662,12 +6662,12 @@ tr-TR:
         markdown: |-
           # Özel ve Kişisel Bilgiler
 
-          ## Kendinizle ilgili hangi bilgileri İnternette paylaşmak uygun?
+          ## Kendinizle ilgili hangi bilgileri çevrimiçi paylaşmak uygun?
       SimonSays-Unplugged_2021:
         markdown: |-
           # Algoritmayı İzle
 
-          Bir oyun oynayın ve doğru sonu elde etmek için hangi komutların gerektiğini düşünün
+          Bir oyun oynayın ve doğru sonuça ulaşmak için hangi komutların gerektiğini düşünün
       courseD_EOC_examples_2021:
         description: Son projenize başlamak üzeresiniz. Başlamadan önce, örnek projelere
           bakmak için biraz zaman ayırın.
@@ -6878,7 +6878,7 @@ tr-TR:
         - {}
         - {}
       CSD U3 drawing practice choice_2021:
-        display_name: Egzersizler
+        display_name: Alıştırma
       CSD U3 game intro_2018_2019_pilot_2021:
         content1: açıklama buraya
       CSD U3 platform intro_2018_2019_pilot_2021:
@@ -6905,21 +6905,21 @@ tr-TR:
         - {}
         title: Bir Tahminde Bulun
       CSD games cake challenge choice_2021:
-        display_name: Meydan okuma
+        display_name: Mücadeleler
       CSD games functions practice choice_2021:
         display_name: Fonksiyonları Uygulama
       CSD games platform challenge choice_2021:
-        display_name: Meydan okuma
+        display_name: Mücadeleler
       CSD web conditionals practice choice_2021:
         display_name: 'Koşulları Uygulama
 
 '
       CSD web draw loop practice choice_2021:
-        display_name: Egzersizler
+        display_name: Alıştırma
       CSD web movement practice choice_2021:
-        display_name: Egzersizler
+        display_name: Alıştırma
       CSD web text practice choice_2021:
-        display_name: Egzersizler
+        display_name: Alıştırma
       csd-pre-survey-levelgroup_21_22:
         title: CS Keşifleri Öğrenci Ön Ders Değerlendirmesi
       PowerOfWords-Unplugged_2020:
@@ -7574,7 +7574,7 @@ tr-TR:
         - {}
         - {}
       CSD U3 drawing practice choice_2022:
-        display_name: Egzersizler
+        display_name: Alıştırma
       CSD U3 platform intro_2018_2019_pilot_2022:
         content1: açıklama buraya
       CSD U4 test feature match:
@@ -7866,29 +7866,29 @@ tr-TR:
         questions:
         - {}
       CSD U6 - Accelerometer - Chal_2222:
-        display_name: Zorluk Düzeyleri
+        display_name: Mücadele Düzeyleri
       CSD U6 - Board Inputs - Chal_2222:
-        display_name: Zorluk Düzeyleri
+        display_name: Mücadele Düzeyleri
       CSD U6 - Board Outputs - Chal_2222:
-        display_name: Zorluk Düzeyleri
+        display_name: Mücadele Düzeyleri
       CSD U6 - Color LEDs - Chal_2222:
-        display_name: Zorluk Düzeyleri
+        display_name: Mücadele Düzeyleri
       CSD U6 - Combine Inputs - Chal_2222:
-        display_name: Zorluk Düzeyleri
+        display_name: Mücadele Düzeyleri
       CSD U6 - If Variables - Chal_2222:
-        display_name: Zorluk Düzeyleri
+        display_name: Mücadele Düzeyleri
       CSD U6 - Music - Chal_2222:
-        display_name: Zorluk Düzeyleri
+        display_name: Mücadele Düzeyleri
       CSD U6 - Physical Input - Chal_2222:
-        display_name: Zorluk Düzeyleri
+        display_name: Mücadele Düzeyleri
       CSD U6 - Physical Output - Chal_2222:
-        display_name: Zorluk Düzeyleri
+        display_name: Mücadele Düzeyleri
       CSD U6 - Screen Inputs - Chal_2222:
-        display_name: Zorluk Düzeyleri
+        display_name: Mücadele Düzeyleri
       CSD U6 - Screen Outputs - Chal_2222:
-        display_name: Zorluk Düzeyleri
+        display_name: Mücadele Düzeyleri
       CSD U6 - Sensors - Chal_2222:
-        display_name: Zorluk Düzeyleri
+        display_name: Mücadele Düzeyleri
       CSD U6 setProperty predict multi_2222:
         answers:
         - {}
@@ -8025,21 +8025,21 @@ tr-TR:
         questions:
         - {}
       CSD games cake challenge choice_2022:
-        display_name: Meydan okuma
+        display_name: Mücadeleler
       CSD games functions practice choice_2022:
         display_name: Fonksiyonları Uygulama
       CSD games platform challenge choice_2022:
-        display_name: Meydan okuma
+        display_name: Mücadeleler
       CSD web conditionals practice choice_2022:
         display_name: 'Koşulları Uygulama
 
 '
       CSD web draw loop practice choice_2022:
-        display_name: Egzersizler
+        display_name: Alıştırma
       CSD web movement practice choice_2022:
-        display_name: Egzersizler
+        display_name: Alıştırma
       CSD web text practice choice_2022:
-        display_name: Egzersizler
+        display_name: Alıştırma
       CSP PD Example Question 1:
         answers:
         - {}
@@ -13541,7 +13541,7 @@ tr-TR:
         - correct: true
         - text: Asyalı
           correct: true
-        - text: Siyahi veya Afrika kökenli Amerikalı
+        - text: Siyah veya Afrikalı Amerikalı
           correct: true
         - correct: true
         - correct: true
@@ -14098,7 +14098,7 @@ tr-TR:
         - text: BB-8 5 kez ilerler ve tüm metal parçalarını toplar
           correct: true
           feedback: Doğru!
-        - text: BB-8 yalnızca 3 birim ilerler.
+        - text: BB-8 sadece 3 boşluk hareket edecek.
           feedback: Yanlış. Tekrar bloğu, BB-8'in beş kez ilerlemesini sağlar.
         questions:
         - text: '"Çalıştır"a bastığınızda sizce ne olacak?'
@@ -14294,7 +14294,7 @@ tr-TR:
         - text: Kuş ilerleyecek ve TNT'ye çarpacak.
           feedback: Yanlış. Kod, güvenli bir yol varsa kuşun ilerlemesini ve sola
             dönmesini sağlar. Bunu, domuza ulaşana kadar yapmaya devam eder!
-        - text: Kuşlar yanlış yere dönüyor.
+        - text: Kuş yanlış yere döner.
           feedback: Kod, bir yol varsa kuşun ilerlemesini ve sola dönmesini sağlar.
             Bunu, domuza ulaşana kadar yapmaya devam eder!
         questions:
@@ -14391,7 +14391,7 @@ tr-TR:
         questions:
         - {}
       courseF_intro_apps2022_2022_pilot_-2022-2:
-        display_name: Hareketli Nesne Laboratuvarı Uygulamaları
+        display_name: SpriteLab Uygulamaları
       courseF_labels_predict_multi2022_2022_pilot_-2022-2:
         answers:
         - text: '"Bir pizza hemen geliyor!"'
@@ -14553,12 +14553,12 @@ tr-TR:
         markdown: |-
           # Süper Dijital Vatandaş
 
-          ## Siber zorbalık gördüğümüzde nasıl karşı çıkabiliriz?
+          ## Siber zorbalık gördüğümüzde nasıl dik durabiliriz?
       csf_digital_trails2022:
         markdown: |-
           # Dijital İzi Takip Edin
 
-          ## Dijital ayak izinizde hangi bilgilere sahip olunabilir?
+          ## Dijital ayak izinizde hangi bilgiler olması doğrudur?
       csf_password_power-up2022:
         content1: açıklama buraya
         markdown: |-
@@ -14576,7 +14576,7 @@ tr-TR:
       csf_putting_a_stop_to_online_meanness2022:
         content1: açıklama buraya
         markdown: |
-          # STOP Kötülüğe DUR de
+          # Zorbalığı DURDUR
 
           ## İnternette biri sana kötü davranıyorsa ne yapmalısın?
 

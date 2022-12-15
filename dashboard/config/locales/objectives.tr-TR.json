@@ -432,7 +432,7 @@
           "description": "Zaman kısıtlamaları veya hatalar gibi engellerin üstesinden gelme."
         },
         "afa30921-d88a-4d96-a8d1-94de6acad10d": {
-          "description": "Hangi tür ifadelerin çevrimiçi olarak söylenemeyeceğine ve hangisinin olmadığına karar verin."
+          "description": "Ne tür ifadelerin çevrimiçi olarak söylenebileceğine ve hangilerinin söylenemeyeceğine karar verin."
         },
         "14b788f7-6566-40f5-8b91-a8c86d6d3afa": {
           "description": "Tasarım sürecinde kullanıcının önemini tanımlayabilecektir."
@@ -651,7 +651,7 @@
           "description": "Çevrimiçi olarak paylaştıkları bilgilerin dijital ayak izi veya “iz” bıraktığını öğrenin."
         },
         "7cc37ede-4e83-4881-9213-1746313de397": {
-          "description": "Hangi bilgilerin çevrimiçi paylaşılmak için sorun olduğunu keşfedin."
+          "description": "Hangi bilgilerin çevrimiçi paylaşılmak için uygun olduğunu keşfedin."
         },
         "1fb2f469-060b-4caf-ab67-28747acc0f00": {
           "description": "Bir dizi adım listesini bir dizi fiziksel harekete çevirme"
@@ -1119,10 +1119,10 @@
           "description": "Bilgisayar bilimi kavramlarını açık uçlu bir projede uygular."
         },
         "33b55b11-ca81-406f-be39-265e8f33d09d": {
-          "description": "S-T-O-P kullanarak, ortalama kelimelere çevrimiçi yanıt vermenin yollarını belirleyin."
+          "description": "D-U-R kullanarak, çevrimiçi olarak kaba kelimelere yanıt vermenin yollarını belirleyin"
         },
         "ce3ba860-7753-4c2c-a161-64d59903674a": {
-          "description": "Çevrimiçi alçaklığın neye benzediğini ve insanların nasıl hissettiğini anlayın."
+          "description": "Çevrimiçi kabalığın neye benzediğini ve insanların nasıl hissettiğini anlayın."
         },
         "87841dc9-5cfa-4c68-9c56-9ca76b2668f8": {
           "description": "Talimatları oluştururken doğruluğa dikkat etme"
@@ -1287,7 +1287,7 @@
           "description": "Sanal bir evcil hayvan tasarlarken ortaya çıkan sorunlara çözüm önerileri, beslemek gibi."
         },
         "8cbf109a-b450-420b-973a-db9efd47f61f": {
-          "description": "Hangi tür ifadelerin çevrimiçi olarak söylenemeyeceğine ve hangisinin olmadığına karar verin."
+          "description": "Ne tür ifadelerin çevrimiçi olarak söylenebileceğine ve hangilerinin söylenemeyeceğine karar verin."
         },
         "106cae6e-93eb-48ca-b7bf-c8017b52139d": {
           "description": "Bir değişken tanımlayın"
@@ -1407,7 +1407,7 @@
           "description": "Çevrimiçi olarak paylaştıkları bilgilerin dijital ayak izi veya “iz” bıraktığını öğrenin."
         },
         "5efa6c72-000c-40a0-ace0-55f47117305b": {
-          "description": "Hangi bilgilerin çevrimiçi paylaşılmak için sorun olduğunu keşfedin."
+          "description": "Hangi bilgilerin çevrimiçi paylaşılmak için uygun olduğunu keşfedin."
         },
         "d7a194a2-b69d-417f-8996-3f56c7bccd83": {
           "description": "Bir arkadaşı başlangıç konumundan hedefine ulaştırmak için bir adım listesi (algoritma) tanımlama"
@@ -1605,10 +1605,10 @@
           "description": "Zaman kısıtlamaları veya hatalar gibi engellerin üstesinden gelme."
         },
         "1b4ddab6-f8a7-436e-929d-8ea87e41575f": {
-          "description": "Çevrimiçi alçaklığın neye benzediğini ve insanların nasıl hissettiğini anlayın."
+          "description": "Çevrimiçi kabalığın neye benzediğini ve insanların nasıl hissettiğini anlayın."
         },
         "30ef895d-12fa-4348-8cd8-4c2bef269e9f": {
-          "description": "S-T-O-P kullanarak, ortalama kelimelere çevrimiçi yanıt vermenin yollarını belirleyin."
+          "description": "D-U-R-R kullanarak, ortalama kelimelere çevrimiçi yanıt vermenin yollarını belirleyin."
         },
         "0adaa1bc-6086-48ba-b99b-59ef1f4b0c69": {
           "description": "Talimatları oluştururken doğruluğa dikkat etme"
