@@ -8,7 +8,7 @@
 
       / Email
       .field
-        = label_tag t('signin_form.login_username')
+        = label_tag 'user_login', t('signin_form.login_username')
         - email = @email || ''
         = f.text_field :login, value: email, autofocus: email == ''
 
