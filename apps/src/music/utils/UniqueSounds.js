@@ -17,10 +17,6 @@ export default class UniqueSounds {
   // the same row.
 
   getUniqueSounds(songDataEvents) {
-    // Each unique sound gets its own row (and therefore color).
-    // If a sound was showing previously, then we'll attempt to keep
-    // it in the same row, though we won't have empty rows.
-
     // First, generate a list of all current unique sounds.
     const currentUniqueSounds = [];
     for (const songEvent of songDataEvents) {
@@ -31,54 +27,56 @@ export default class UniqueSounds {
     }
 
     // This will eventually be the function output.
-    let arrangedSounds;
+    let resultSounds;
 
     // If we have a previous output from this function, then we'll attempt
-    // to keep those entries in the same rows as they were before.
+    // to keep its sounds in the same rows as they were before.
     if (this.previousUniqueSounds) {
       // This is where we will store the output sounds.  It can be a sparse
-      // array.
+      // array since it will maintain existing sound positions if they
+      // were already positioned previously.
       const outputSounds = [];
 
-      // For each of those previous entries...
-      for (let i = 0; i < this.previousUniqueSounds.length; i++) {
-        // ...if it's still in use...
-        if (currentUniqueSounds.indexOf(this.previousUniqueSounds[i]) !== -1) {
-          // ... put it back in that row.
-          outputSounds[i] = this.previousUniqueSounds[i];
+      // This is an array of new sounds that we haven't seen previously.
+      const newSounds = [];
+
+      // For each current sound, either add it to outputSounds in its
+      // previous position, or track it in newSounds.
+      for (let currentUniqueSound of currentUniqueSounds) {
+        const previousIndex = this.previousUniqueSounds.indexOf(
+          currentUniqueSound
+        );
+        if (previousIndex !== -1) {
+          outputSounds[previousIndex] = currentUniqueSound;
+        } else {
+          newSounds.push(currentUniqueSound);
         }
       }
 
-      // For each of our known current sounds...
-      for (let j = 0; j < currentUniqueSounds.length; j++) {
-        // ... if it's not yet in a row...
-        if (outputSounds.indexOf(currentUniqueSounds[j]) === -1) {
-          // ...then put it in the first row available.
-          const availableRowIndex = outputSounds.findIndex(
-            x => typeof x === 'undefined'
-          );
-          // If no empty rows are available, then put the sound at the end.
-          const row =
-            availableRowIndex === -1 ? outputSounds.length : availableRowIndex;
-
-          outputSounds[row] = currentUniqueSounds[j];
-
-          // (One scenario where this helps is when a sound is renamed.
-          // The new  entry will replace the old one in the same row.)
-        }
+      // For each new sound, add it to the first empty position available,
+      // or otherwise put it at the end.  (One scenario where this helps
+      // is when a sound is renamed; the new entry will replace the old one
+      // in the same position.)
+      for (let newSound of newSounds) {
+        const availableRowIndex = outputSounds.findIndex(
+          x => typeof x === 'undefined'
+        );
+        const row =
+          availableRowIndex === -1 ? outputSounds.length : availableRowIndex;
+        outputSounds[row] = newSound;
       }
 
       // Remove any empty rows.
-      arrangedSounds = outputSounds.filter(s => {
+      resultSounds = outputSounds.filter(s => {
         return typeof s !== 'undefined';
       });
     } else {
-      arrangedSounds = currentUniqueSounds;
+      resultSounds = currentUniqueSounds;
     }
 
-    // Remember this set for next time.
-    this.previousUniqueSounds = arrangedSounds;
+    // Remember this result for next time.
+    this.previousUniqueSounds = resultSounds;
 
-    return arrangedSounds;
+    return resultSounds;
   }
 }

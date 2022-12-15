@@ -47,4 +47,24 @@ describe('Music uniqueSounds tests', function() {
     assert.deepEqual(uniqueSounds1, desiredOutput1);
     assert.deepEqual(uniqueSounds2, desiredOutput2);
   });
+
+  it('deleting an early entry shifts later entries up', function() {
+    const uniqueSounds = new UniqueSounds();
+
+    const songDataEvents1 = [{id: 'sound1'}, {id: 'sound2'}, {id: 'sound3'}];
+
+    const uniqueSounds1 = uniqueSounds.getUniqueSounds(songDataEvents1);
+
+    const desiredOutput1 = ['sound1', 'sound2', 'sound3'];
+
+    const songDataEvents2 = [{id: 'sound2'}, {id: 'sound3'}];
+
+    const uniqueSounds2 = uniqueSounds.getUniqueSounds(songDataEvents2);
+
+    // We removed sound1 and expect that the later sounds are shifted up.
+    const desiredOutput2 = ['sound2', 'sound3'];
+
+    assert.deepEqual(uniqueSounds1, desiredOutput1);
+    assert.deepEqual(uniqueSounds2, desiredOutput2);
+  });
 });
