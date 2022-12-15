@@ -11,7 +11,7 @@ import {
   $time
 } from './helpers';
 import {fishData} from '../utils/fishData';
-import colors from './colors';
+import colors from './styles/colors';
 import {predictFish} from './models/predict';
 import {
   loadAllFishPartImages,
