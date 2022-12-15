@@ -108,7 +108,7 @@ const cdoHighContrastStyles = {
 
 // styles for color vision deficiency themes
 const CVDStyles = {
-  // colors chosen from 15-color palette for colorblindness at http://mkweb.bcgsc.ca/colorblind/palettes.mhtml#15-color-palette-for-colorbliness
+  // colors chosen from 15-color or 24-color palette for colorblindness at http://mkweb.bcgsc.ca/colorblind/palettes.mhtml#15-color-palette-for-colorbliness
   default: {
     colourPrimary: '00DCB5' // aquamarine
   },
@@ -128,7 +128,7 @@ const CVDStyles = {
     colourPrimary: '#F60239' // tractor red
   },
   setup_blocks: {
-    colourPrimary: 'FFAC3B' // frenzee - this color chosen from 24-color palette for color blindness at http://mkweb.bcgsc.ca/colorblind/palettes.mhtml#15-color-palette-for-colorbliness
+    colourPrimary: 'FFAC3B' // frenzee
   },
   world_blocks: {
     colourPrimary: '#450270' // christalle
