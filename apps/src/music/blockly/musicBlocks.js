@@ -1,9 +1,21 @@
-import {playSound} from './blocks/samples';
+import {
+  playSound,
+  playSoundAtCurrentLocation,
+  setCurrentLocationNextMeasure
+} from './blocks/samples';
 import {forLoop} from './blocks/control';
-import {triggeredAt, whenRun} from './blocks/events';
+import {whenRun, triggeredAt, triggeredAtSimple} from './blocks/events';
 
 // All blocks
-const blockList = [whenRun, triggeredAt, playSound, forLoop];
+const blockList = [
+  whenRun,
+  triggeredAt,
+  triggeredAtSimple,
+  playSound,
+  playSoundAtCurrentLocation,
+  setCurrentLocationNextMeasure,
+  forLoop
+];
 
 const MUSIC_BLOCKS = {};
 
