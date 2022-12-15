@@ -114,7 +114,7 @@ describe('MarketingAnnouncementBanner', () => {
     const firehoseSpy = sinon.spy(firehoseClient, 'putRecord');
 
     const wrapper = setUp();
-    wrapper.find('a#announcement-button').simulate('click');
+    wrapper.find('button#announcement-button').simulate('click');
     expect(firehoseSpy.calledOnce);
     firehoseSpy.calledWith({
       study: 'teacher_signedin_homepage',
