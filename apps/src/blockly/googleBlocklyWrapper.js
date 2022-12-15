@@ -460,7 +460,7 @@ function initializeBlocklyWrapper(blocklyInstance) {
     createReadOnlyBlockSpace: (container, xml, options) => {
       const workspace = new Blockly.WorkspaceSvg({
         readOnly: true,
-        theme: CdoTheme,
+        theme: options.theme || CdoTheme,
         plugins: {},
         RTL: options.rtl
       });
@@ -530,6 +530,10 @@ function initializeBlocklyWrapper(blocklyInstance) {
       renderer: opt_options.renderer || 'cdo_renderer',
       comments: false
     };
+    // Users can change their active theme using the context menu. Use this setting, if present.
+    if (localStorage.blocklyTheme && options.theme.name !== 'musiclabdark') {
+      options.theme = this.themes[localStorage.blocklyTheme] || options.theme;
+    }
 
     // CDO Blockly takes assetUrl as an inject option, and it's used throughout
     // apps, so we should also set it here.
