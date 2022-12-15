@@ -20,7 +20,13 @@ import initializeGenerator from './addons/cdoGenerator';
 import CdoMetricsManager from './addons/cdoMetricsManager';
 import CdoRenderer from './addons/cdoRenderer';
 import CdoRendererZelos from './addons/cdoRendererZelos';
-import CdoTheme from './addons/cdoTheme';
+import {
+  CdoTheme,
+  CdoDarkTheme,
+  CdoDeuteranopiaTheme,
+  CdoHighContrastTheme,
+  CdoTritanopiaTheme
+} from './addons/cdoTheme';
 import initializeTouch from './addons/cdoTouch';
 import CdoTrashcan from './addons/cdoTrashcan';
 import * as cdoUtils from './addons/cdoUtils';
@@ -252,9 +258,18 @@ function initializeBlocklyWrapper(blocklyInstance) {
   blocklyWrapper.wrapSettableProperty('readOnly');
   blocklyWrapper.wrapSettableProperty('showUnusedBlocks');
   blocklyWrapper.wrapSettableProperty('typeHints');
+  blocklyWrapper.wrapSettableProperty('themes');
   blocklyWrapper.wrapSettableProperty('valueTypeTabShapeMap');
 
   blocklyWrapper.JavaScript = javascriptGenerator;
+  // Allows for dynamically setting the workspace theme with workspace.setTheme()
+  blocklyWrapper.themes = {
+    modern: CdoTheme,
+    dark: CdoDarkTheme,
+    deuteranopia: CdoDeuteranopiaTheme,
+    highContrast: CdoHighContrastTheme,
+    tritanopia: CdoTritanopiaTheme
+  };
 
   // Wrap SNAP_RADIUS property, and in the setter make sure we keep SNAP_RADIUS and CONNECTING_SNAP_RADIUS in sync.
   // See https://github.com/google/blockly/issues/2217
