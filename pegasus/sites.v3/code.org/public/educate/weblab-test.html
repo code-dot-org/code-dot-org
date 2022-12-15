@@ -121,14 +121,21 @@
     });
   }
 
-  function testIFrameAccess(successCallback, failureCallback) {
+  function testIframeAccess() {
     return new Promise((resolve, reject) => {
-      var iframe = document.getElementById("test-iframe");
-      var iframeDoc = iframe.contentDocument || iframe.contentWindow.document;
+      const iframeElement = document.getElementById("test-iframe");
+      const iframeWindow = iframeElement.contentWindow;
 
-      const checkIFrameLoaded = () => {
+      const checkIframeLoaded = () => {
         let elapsedTime = new Date().getTime() - startTime;
-        if (iframeDoc.readyState === "complete") {
+        if (
+          iframeWindow.document.readyState === "complete" &&
+          // Chrome initializes every iframe with an "about:blank" empty page
+          // so we need to check that the readyState refers to the page we expect
+          (iframeElement.src === "about:blank" ||
+            (iframeElement.src !== "about:blank" &&
+              iframeWindow.location.href !== "about:blank"))
+        ) {
           setAttribute(".iframe > .loading", { style: "display: none" });
           setAttribute(".iframe > .succeeded", {
             style: "display: block",
@@ -144,7 +151,7 @@
       };
 
       const startTime = new Date().getTime();
-      setInterval(checkIFrameLoaded, 100);
+      setInterval(checkIframeLoaded, 100);
     });
   }
 
@@ -204,7 +211,7 @@
     return Promise.all([
       computingInTheCorePromise,
       codeProjectsPromise,
-      testIFrameAccess(),
+      testIframeAccess(),
     ])
       .then(() => setAttribute("#success-message", { style: "display: block" }))
       .catch(() => setAttribute("#fail-message", { style: "display: block" }));
