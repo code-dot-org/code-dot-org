@@ -9,29 +9,13 @@ const coreBlocklyOverrides = {
     // Duplicates definition from core Blockly
     colourPrimary: '#0093c9'
   },
-  logic_blocks: {
-    // Duplicates definition from core Blockly
-    colourPrimary: '#5d80a3'
-  },
   loop_blocks: {
     // Intentionally overrides definition from core Blockly
     colourPrimary: '#f218a2'
   },
-  math_blocks: {
-    // Duplicates definition from core Blockly
-    colourPrimary: '#77669e'
-  },
   procedure_blocks: {
     // Intentionally overrides definition from core Blockly
     colourPrimary: '#509918'
-  },
-  text_blocks: {
-    // Duplicates definition from core Blockly
-    colourPrimary: '#5ba58c'
-  },
-  variable_blocks: {
-    // Duplicates definition from core Blockly
-    colourPrimary: '#9e6b93'
   }
 };
 const cdoCustomStyles = {
