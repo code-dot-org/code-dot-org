@@ -7,8 +7,7 @@ class RakeTaskEventLogger
     @start_time = 0
     @end_time = 0
     @rake_task = rake_task
-    @enabled = true
-    #@enabled = !([:development, :test].include?(rack_env))
+    @enabled = !([:development, :test].include?(rack_env))
   end
 
   def start_task_logging
