@@ -19,7 +19,6 @@ const Template = overrides => (
 );
 
 export const DialogOpen = Template.bind({});
-DialogOpen.args = {};
 
 export const DialogOpenPublishPending = Template.bind({});
 DialogOpenPublishPending.args = {
