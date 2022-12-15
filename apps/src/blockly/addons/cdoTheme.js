@@ -6,7 +6,7 @@ import TritanopiaTheme from '@blockly/theme-tritanopia';
 
 const coreBlocklyOverrides = {
   colour_blocks: {
-    // Duplicates definition from core Blockly
+    // Intentionally overrides definition from core Blockly
     colourPrimary: '#0093c9'
   },
   loop_blocks: {
@@ -68,11 +68,51 @@ export const CdoDarkTheme = GoogleBlockly.Theme.defineTheme('cdoDark', {
   blockStyles: cdoBlockStyles
 });
 
+const cdoHighContrastStyles = {
+  ...HighContrastTheme.blockStyles,
+  colour_blocks: {
+    // Intentionally overrides definition from core Blockly
+    colourPrimary: '#00b0bc'
+  },
+  loop_blocks: {
+    // Intentionally overrides definition from core Blockly
+    colourPrimary: '#B6127A'
+  },
+  procedure_blocks: {
+    // Intentionally overrides definition from core Blockly
+    colourPrimary: '#3C7312'
+  },
+  default: {
+    colourPrimary: '00848D'
+  },
+  behavior_blocks: {
+    colourPrimary: '#18993B'
+  },
+  dance_blocks: {
+    colourPrimary: '#572886'
+  },
+  event_blocks: {
+    colourPrimary: '#008D2F'
+  },
+  music_blocks: {
+    colourPrimary: '#454E7C'
+  },
+  sprite_blocks: {
+    colourPrimary: '#862830'
+  },
+  setup_blocks: {
+    colourPrimary: '#BD7B00'
+  },
+  world_blocks: {
+    colourPrimary: '#45457C'
+  }
+};
+
 export const CdoHighContrastTheme = GoogleBlockly.Theme.defineTheme(
   'cdoHighContrast',
   {
     base: HighContrastTheme,
-    blockStyles: {...HighContrastTheme.blockStyles, ...cdoCustomStyles}
+    blockStyles: cdoHighContrastStyles
   }
 );
 
