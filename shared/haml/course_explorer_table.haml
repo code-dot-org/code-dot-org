@@ -220,12 +220,12 @@
                   %br/
                   =course[:description2]
             - if course[:link]
-              %a.linktag{id: "link-#{course[:id]}", href: course[:link], style: "text-decoration: none"}
+              %a.linktag{id: "link-#{course[:id]}", href: course[:link], style: "text-decoration: none", 'aria-label': "Learn more about #{course[:name]}"}
                 %button.launch{style: "font-size: 12px"}
                   Learn more
             - if course[:course_link]
               &nbsp;
-              %a.linktag{id: "course-link-#{course[:id]}", href: course[:course_link]}
+              %a.linktag{id: "course-link-#{course[:id]}", href: course[:course_link], 'aria-label': "View course #{course[:name]}"}
                 %button.course-explorer-gray-button{style: "font-size: 12px"}
                   View course
         .arrow_box_close{style: "position: absolute; right: 10px; top: 0px; cursor: pointer", data: {courseindex: course[:regular_order]}}
@@ -260,7 +260,7 @@
           .title
             Professional Learning
         .right{style: 'float:right; margin-top: -26px;'}
-          %a.linktag#professional-learning{:href => CDO.code_org_url('/educate/professional-learning')}
+          %a.linktag#professional-learning{:href => CDO.code_org_url('/educate/professional-learning'), :'aria-label' => "Learn more about Professional Learning Opportunities"}
             .course-explorer-gray-button.professional-learning-button.mobile-button
               Learn more
     .cleardiv{style: "clear: both"}
@@ -324,7 +324,5 @@
         .title
           Professional Learning for all grade levels
       .right{style: 'float:right; margin-top: -26px;'}
-        %a.linktag#professional-learning-nonresponsive{:href => CDO.code_org_url('/educate/professional-learning')}
-          .course-explorer-gray-button.professional-learning-button
-            Learn more
+        %a.course-explorer-gray-button.professional-learning-button#professional-learning-nonresponsive{:href => CDO.code_org_url('/educate/professional-learning'), :style => "padding-top: 8px; padding-bottom: 8px; color: #5b6770", :'aria-label' => "Learn more about Professional Learning Opportunities"} Learn more
   .cleardiv{style: "clear: both"}
