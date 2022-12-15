@@ -19,6 +19,8 @@
 #  index_programming_expressions_on_programming_environment_id  (programming_environment_id)
 #  programming_environment_key                                  (programming_environment_id,key) UNIQUE
 #
+require 'honeybadger/ruby'
+
 class ProgrammingExpression < ApplicationRecord
   include CurriculumHelper
   include SerializedProperties
@@ -273,6 +275,10 @@ class ProgrammingExpression < ApplicationRecord
     )
     if i18n_examples != localized_examples
       localized_examples&.each do |example|
+        if example['name'].nil?
+          report_error_get_localized_examples_no_name(example)
+          next
+        end
         example_key = example['name'].to_sym
         unless i18n_examples[example_key].nil?
           example['name'] = i18n_examples[example_key][:name] unless i18n_examples[example_key][:name].nil?
@@ -283,6 +289,15 @@ class ProgrammingExpression < ApplicationRecord
       end
     end
     localized_examples
+  end
+
+  def report_error_get_localized_examples_no_name(example)
+    Honeybadger.notify(
+      "example needs a unique 'name', otherwise a translation cannot be shown",
+      context: {
+        example: example
+      }
+    )
   end
 
   def get_localized_params
