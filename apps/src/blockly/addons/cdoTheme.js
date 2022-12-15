@@ -131,7 +131,7 @@ const CVDStyles = {
     colourPrimary: 'FFAC3B' // frenzee - this color chosen from 24-color palette for color blindness at http://mkweb.bcgsc.ca/colorblind/palettes.mhtml#15-color-palette-for-colorbliness
   },
   world_blocks: {
-    colourPrimary: '#6A0213' // rosewood
+    colourPrimary: '#450270' // christalle
   }
 };
 
