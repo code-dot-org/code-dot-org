@@ -4,17 +4,15 @@ import DeuteranopiaTheme from '@blockly/theme-deuteranopia';
 import HighContrastTheme from '@blockly/theme-highcontrast';
 import TritanopiaTheme from '@blockly/theme-tritanopia';
 
+// Intentionally override definition from core Blockly
 const coreBlocklyOverrides = {
   colour_blocks: {
-    // Intentionally overrides definition from core Blockly
     colourPrimary: '#0093c9'
   },
   loop_blocks: {
-    // Intentionally overrides definition from core Blockly
     colourPrimary: '#f218a2'
   },
   procedure_blocks: {
-    // Intentionally overrides definition from core Blockly
     colourPrimary: '#509918'
   }
 };
@@ -108,18 +106,16 @@ const cdoHighContrastStyles = {
   }
 };
 
+// styles for color vision deficiency themes
 const CVDStyles = {
   // colors chosen from 15-color palette for colorblindness at http://mkweb.bcgsc.ca/colorblind/palettes.mhtml#15-color-palette-for-colorbliness
   colour_blocks: {
-    // Intentionally overrides definition from core Blockly
     colourPrimary: '#009ffA' // bleu de france
   },
   loop_blocks: {
-    // Intentionally overrides definition from core Blockly
     colourPrimary: '#EF0096' // persian rose
   },
   procedure_blocks: {
-    // Intentionally overrides definition from core Blockly
     colourPrimary: '#003C86' // congress blue
   },
   default: {
