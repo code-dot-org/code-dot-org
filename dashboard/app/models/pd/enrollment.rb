@@ -161,11 +161,7 @@ class Pd::Enrollment < ApplicationRecord
     # do not use Foorm for survey completion); CSF Deep Dive workshops before 9/1/2020 (they do not use Foorm for
     # survey completion); and Admin + Admin/Counselor workshops (they should not receive exit surveys at all).
     foorm_enrollments = enrollments.select do |enrollment|
-      enrollment.workshop.course != Pd::Workshop::COURSE_ADMIN &&
-      enrollment.workshop.course != Pd::Workshop::COURSE_ADMIN_COUNSELOR &&
-      !(enrollment.workshop.workshop_ending_date < Date.new(2020, 5, 8) &&
-        (enrollment.workshop.csf_intro? || enrollment.workshop.local_summer? || enrollment.workshop.csp_wfrt?)) &&
-        !(enrollment.workshop.workshop_ending_date < Date.new(2020, 9, 1) && enrollment.workshop.csf_201?)
+      !admin_workshop?(enrollment.workshop) && currently_receives_foorm_survey(enrollment.workshop)
     end
 
     # We do not want to check survey completion for the following workshop types: Legacy (non-Foorm) summer,
@@ -367,6 +363,24 @@ class Pd::Enrollment < ApplicationRecord
 
   def authorize_teacher_account
     user.permission = UserPermission::AUTHORIZED_TEACHER if user&.teacher? && [COURSE_CSD, COURSE_CSP, COURSE_CSA].include?(workshop.course)
+  end
+
+  # Returns true if the given workshop is an Admin or Admin/Counselor workshop
+  private_class_method def self.admin_workshop?(workshop)
+    workshop.course == Pd::Workshop::COURSE_ADMIN ||
+    workshop.course == Pd::Workshop::COURSE_ADMIN_COUNSELOR
+  end
+
+  # Returns if the given workshop uses Foorm for survey completion (assuming the workshop does receive exit
+  # surveys). Some types of workshops previously did not use Foorm before certain dates, so this returns
+  # false for:
+  # - CSF Deep Dive workshops before 9/1/2020
+  # - Local summer, CSP Workshop for Returning Teachers, and CSF Intro workshops before 5/8/2020
+  # And returns true otherwise.
+  private_class_method def self.currently_receives_foorm_survey(workshop)
+    !(workshop.workshop_ending_date < Date.new(2020, 9, 1) && workshop.csf_201?) &&
+    !(workshop.workshop_ending_date < Date.new(2020, 5, 8) &&
+    (workshop.csf_intro? || workshop.local_summer? || workshop.csp_wfrt?))
   end
 
   private_class_method def self.filter_for_foorm_survey_completion(enrollments, select_completed)
