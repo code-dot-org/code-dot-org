@@ -23,7 +23,8 @@ export class UnconnectedTwoColumnActionBlock extends Component {
         url: PropTypes.string.isRequired,
         text: PropTypes.string.isRequired,
         target: PropTypes.string,
-        id: PropTypes.string
+        id: PropTypes.string,
+        ariaLabel: PropTypes.string
       })
     ),
     backgroundColor: PropTypes.string,
@@ -81,8 +82,8 @@ export class UnconnectedTwoColumnActionBlock extends Component {
               {buttons.map((button, index) => (
                 <span key={index}>
                   <Button
-                    __useDeprecatedTag
                     href={button.url}
+                    ariaLabel={button.ariaLabel}
                     color={Button.ButtonColor.gray}
                     text={button.text}
                     target={button.target}
@@ -171,7 +172,8 @@ export class CscInfoActionBlock extends Component {
           {
             id: 'course_info_csc',
             url: pegasus('/educate/csc'),
-            text: i18n.learnMore()
+            text: i18n.learnMore(),
+            ariaLabel: i18n.learnMoreCsJourneys()
           }
         ]}
       />

@@ -39,6 +39,7 @@ const ButtonHeight = {
 class Button extends React.Component {
   static propTypes = {
     className: PropTypes.string,
+    ariaLabel: PropTypes.string,
     href: PropTypes.string,
     text: PropTypes.string,
     children: PropTypes.node,
@@ -72,6 +73,7 @@ class Button extends React.Component {
   render() {
     const {
       href,
+      ariaLabel,
       text,
       styleAsText,
       icon,
@@ -154,6 +156,7 @@ class Button extends React.Component {
         onKeyDown={this.onKeyDown}
         tabIndex={tabIndex}
         id={id}
+        aria-label={ariaLabel}
       >
         <div style={_.pick(style, ['textAlign'])}>
           {icon && (
