@@ -108,6 +108,56 @@ const cdoHighContrastStyles = {
   }
 };
 
+const CVDStyles = {
+  // colors chosen from 15-color palette for colorblindness at http://mkweb.bcgsc.ca/colorblind/palettes.mhtml#15-color-palette-for-colorbliness
+  colour_blocks: {
+    // Intentionally overrides definition from core Blockly
+    colourPrimary: '#009ffA' // bleu de france
+  },
+  loop_blocks: {
+    // Intentionally overrides definition from core Blockly
+    colourPrimary: '#EF0096' // persian rose
+  },
+  procedure_blocks: {
+    // Intentionally overrides definition from core Blockly
+    colourPrimary: '#003C86' // congress blue
+  },
+  default: {
+    colourPrimary: '00DCB5' // aquamarine
+  },
+  behavior_blocks: {
+    colourPrimary: '#00E307' // radioactive green
+  },
+  dance_blocks: {
+    colourPrimary: '#9400E6' // veronica
+  },
+  event_blocks: {
+    colourPrimary: '#008169' // deep sea
+  },
+  music_blocks: {
+    colourPrimary: '#FFCFE2' // azalea
+  },
+  sprite_blocks: {
+    colourPrimary: '#6A0213' // rosewood
+  },
+  setup_blocks: {
+    colourPrimary: 'FFAC3B' // frenzee - this color chosen from 24-color palette for color blindness at http://mkweb.bcgsc.ca/colorblind/palettes.mhtml#15-color-palette-for-colorbliness
+  },
+  world_blocks: {
+    colourPrimary: '#F60239' // tractor red
+  }
+};
+
+const cdoDeuteranopiaStyles = {
+  ...DeuteranopiaTheme.blockStyles,
+  ...CVDStyles
+};
+
+const cdoTritanopiaStyles = {
+  ...TritanopiaTheme.blockStyles,
+  ...CVDStyles
+};
+
 export const CdoHighContrastTheme = GoogleBlockly.Theme.defineTheme(
   'cdoHighContrast',
   {
@@ -120,7 +170,7 @@ export const CdoDeuteranopiaTheme = GoogleBlockly.Theme.defineTheme(
   'cdoDeuteronopia',
   {
     base: DeuteranopiaTheme,
-    blockStyles: {...DeuteranopiaTheme.blockStyles, ...cdoCustomStyles}
+    blockStyles: cdoDeuteranopiaStyles
   }
 );
 
@@ -128,6 +178,6 @@ export const CdoTritanopiaTheme = GoogleBlockly.Theme.defineTheme(
   'cdoTritanopia',
   {
     base: TritanopiaTheme,
-    blockStyles: {...TritanopiaTheme.blockStyles, ...cdoCustomStyles}
+    blockStyles: cdoTritanopiaStyles
   }
 );
