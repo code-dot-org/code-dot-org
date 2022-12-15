@@ -1,3 +1,5 @@
+require 'action_view/helpers/date_helper'
+require 'rake/task'
 module CustomRake
   class TimedTaskWithLogging < Rake::Task
     include ActionView::Helpers::DateHelper

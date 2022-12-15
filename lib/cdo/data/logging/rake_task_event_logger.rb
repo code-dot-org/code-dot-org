@@ -8,10 +8,12 @@ class RakeTaskEventLogger
     @start_time = 0
     @end_time = 0
     @rake_task = rake_task
-    @enabled = !([:development, :test].include?(rack_env))
+    @enabled = true
+    #@enabled = !([:development, :test].include?(rack_env))
   end
 
   def start_task_logging
+    puts "hello"
     @start_time = Time.new
     event = 'start'.freeze
     log_event(event)
@@ -33,7 +35,7 @@ class RakeTaskEventLogger
 
   def task_chain
     pre_requisites_split = @rake_task.inspect.split('=>')
-    if pre_requisites_split.!empty?
+    unless pre_requisites_split.empty?
       return pre_requisites_split[1]
     end
     return nil
