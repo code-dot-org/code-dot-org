@@ -633,6 +633,8 @@
   coursee_name: "Curs E"
   coursef-draft_name: Curs F
   coursef_name: "Curs F"
+  coursec-2021_name: Curs C (2021)
+  express-2021_name: Curs exprés (2021)
   accelerated_name: "Curs accelerat"
   express_name: "Curs exprés"
   20-hour_name: Curs accelerat
@@ -1055,6 +1057,7 @@
   sphero_beyond_longdescription: "Si ets educador o un pare, les lliçons SPRK donen als nens un divertit curs accelerat a la programació de robots de mentre  milloren les seves habilitats en matemàtiques i ciències."
   compatibility_hide_this_warning: "Amaga aquest avís"
   compatibility_unsupported_browser_markdown: "El vostre navegador no és compatible. Sisplau, actualitzeu-lo a [un dels nostres navegadors compatibles](%{supported_browsers_url}). Podeu provar de veure la pàgina, però la funcionalitat es podria veure afectada."
+  hourofcode_shortcode: "Codificar o programar"
   flappy_shortcode: "aleteig"
   header_courses: "cursos"
   header_course_catalog: "Catàleg de cursos"
@@ -1079,6 +1082,7 @@
   header_report_bug: "Informar d'un problema"
   header_legal_privacy: "Política de privadesa"
   header_legal_tos: "Condicions d'ús"
+  sprite_lab_documentation: "Documentació del Laboratori d'Sprites"
   user_header_label: "Hola %{username}"
   user_header_team: "Equip"
   user_header_settings: "El meu compte"
@@ -1198,6 +1202,7 @@
   ai_in_partnership_with: "En associació amb"
   ai_activity: "Activitat"
   ai_description: "Descripció"
+  footer_cookie_notice: "Política de galetes"
   hoc2022_banner_title: "Explora, Juga, Crea!"
   hoc2022_banner_description: "Explora l'univers, marca un gol, mou-te — hi ha tantes maneres de provar les ciències informàtiques!"
   hoc2022_cta_primary: "Vagueu les novetats"
@@ -1211,3 +1216,5 @@
   hoc2022_landing_page_banner_alt_left: "Un alienígena ballant al costat de Saturn a l'espai"
   hoc2022_landing_page_banner_alt_right: "Un robot driblant una pilota de futbol a l'espai davant d'un coet enlairant"
   try_it_yourself: "Prova-ho tu mateix!"
+  try_an_activity: "Proveu una activitat"
+  see_more_activities: "Veure més activitats"

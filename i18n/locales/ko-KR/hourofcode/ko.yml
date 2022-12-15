@@ -472,6 +472,10 @@ ko:
     읽어 학급을 위한 이벤트를 계획하세요.
   signup_registration_closed: 그래서 매년 12월 여러분의 학급은 전 세계 수백만 명의 학생들과 아워오브코드를 함께하며 컴퓨터
     과학 교육 주간을 기념할 수 있습니다. 연례 행사 참가 신청은 10월에 시작합니다.
+  signup_registration_closed_2022_markdown: 'Registration for this year''s Hour of
+    Code event map is currently closed, but you can still [host an Hour of Code](%{hoc_activities_url})
+    and join in the celebration on social media! Post fun pictures or video of your
+    event using the #HourOfCode hashtag!'
   signup_header: "%{campaign_date} 아워 오브 코드(Hour of Code)를 운영하시려면, 여기서 등록하세요."
   signup_name_label: 이름
   signup_name_error: 이름은 필수기재항목입니다.

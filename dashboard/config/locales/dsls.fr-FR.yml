@@ -95,7 +95,7 @@ fr-FR:
         - {}
         - {}
         - {}
-        content1: Fais correspondre les puzzles aux blocs
+        content1: Fais correspondre les casse-têtes aux blocs
         questions:
         - {}
         - {}
@@ -217,7 +217,7 @@ fr-FR:
         - {}
         - {}
         - {}
-        content1: Fais correspondre les puzzles aux blocs
+        content1: Fais correspondre les casse-têtes aux blocs
         questions:
         - {}
         - {}
@@ -437,7 +437,7 @@ fr-FR:
         - {}
         - {}
         questions:
-        - text: Quels blocs résoudront le puzzle ?
+        - text: Quels blocs résoudront le casse-tête ?
         title: Choix multiple des boucles de l’abeille
       4-5 maze conditionals multi 1:
         answers:
@@ -446,14 +446,14 @@ fr-FR:
         - {}
         - {}
         questions:
-        - text: Quels blocs permettent de résoudre le puzzle ?
+        - text: Quels blocs permettent de résoudre le casse-tête ?
         title: Choix multiple des instructions conditionnelles du labyrinthe
       4-5 maze match 1:
         answers:
         - {}
         - {}
         - {}
-        content1: Fais correspondre les puzzles aux blocs
+        content1: Fais correspondre les casse-têtes aux blocs
         questions:
         - {}
         - {}
@@ -466,7 +466,7 @@ fr-FR:
         - {}
         - {}
         questions:
-        - text: Quels blocs permettent de résoudre le puzzle ?
+        - text: Quels blocs permettent de résoudre le casse-tête ?
         title: Choix multiple du labyrinthe
       Begin planning your project:
         content1: description ici
@@ -1267,15 +1267,15 @@ fr-FR:
           en informatique. Cette leçon aide à expliquer ce que sont les variables
           et les différentes façons dont nous pouvons les utiliser.\n"
       ForLoopFun-Unplugged:
-        markdown: "# Les Boucles Pour Amusantes\n\nNous savons que les boucles « pour
-          » nous permettent de faire des choses encore et encore mais, maintenant,
-          nous allons apprendre à utiliser des boucles avec une structure supplémentaire
-          intégrée. \n"
+        markdown: "# « Pour » s'amuser en boucle\n\nOn sait que les boucles nous permettent
+          de répéter indéfiniment certaines choses, mais maintenant, on va apprendre
+          à utiliser des boucles avec une structure supplémentaire directement intégrée.
+          \n"
       ForLoopFun-Unplugged_2020:
-        markdown: "# Les Boucles Pour Amusantes\n\nNous savons que les boucles « pour
-          » nous permettent de faire des choses encore et encore mais, maintenant,
-          nous allons apprendre à utiliser des boucles avec une structure supplémentaire
-          intégrée. \n"
+        markdown: "# « Pour » s'amuser en boucle\n\nOn sait que les boucles nous permettent
+          de répéter indéfiniment certaines choses, mais maintenant, on va apprendre
+          à utiliser des boucles avec une structure supplémentaire directement intégrée.
+          \n"
       GettingLoopy-Unplugged:
         markdown: "# Affaire bouclée \n\nCette leçon introduit la notion de boucles
           en programmation au travers d'une activité dansante."
@@ -1331,7 +1331,7 @@ fr-FR:
           \n### Qu'est-ce qu'Internet Simulator ? Un aperçu :\n\nInternet Simulator
           est un outil développé par Code.org pour notre nouvelle classe de lycée
           [Principes informatiques] (https://code.org/educate/csp).Cet outil est conçu
-          pour permettre aux étudiants d'acquérir une expérience pratique en expérimentant
+          pour permettre aux élèves d'acquérir une expérience pratique en expérimentant
           (et en résolvant) différents types de problèmes associés aux ordinateurs
           en réseau. Le simulateur Internet est utilisé dans plusieurs leçons tout
           au long des unités 1 et 2 de notre programme pour construire successivement
@@ -1373,15 +1373,15 @@ fr-FR:
           Simulator dans une variété de configurations propices à l'enseignement de
           certains sujets. Mais si vous utilisez Internet Simulator pour la classe,
           vous devez connaître certains paramètres de l'interface utilisateur que
-          vous souhaiterez peut-être contrôler ou demander à vos étudiants de configurer
+          vous souhaiterez peut-être contrôler ou demander à vos élèves de configurer
           d'une manière particulière.\n\nPar exemple : l'une des fonctionnalités d'Internet
           Simulator est que vous pouvez afficher les représentations binaires, décimales,
           hexadécimales et ASCII de toutes les données que vous envoyez. Dans certaines
           configurations, l'utilisateur peut également définir la « taille de bloc
           » pour dicter la façon dont les bits sont interprétés. Pour une leçon de
           votre propre conception, vous pouvez choisir l'une des configurations que
-          nous avons fournies, mais vous devrez peut-être exiger que les étudiants
-          n'affichent qu'une représentation particulière des bits, ou peut-être souhaitez-vous
+          nous avons fournies, mais vous devrez peut-être exiger que les élèves n'affichent
+          qu'une représentation particulière des bits, ou peut-être souhaitez-vous
           que la taille du morceau soit définie sur une valeur particulière.\n\nLe
           point le plus important est que les configurations fournies ici sont censées
           être un point de départ pour l'enseignement d'un sujet particulier. Vous
@@ -1420,13 +1420,13 @@ fr-FR:
           À l'heure actuelle, nous n'avons malheureusement aucun moyen pour les personnes extérieures à Code.org de créer des configurations et des instructions spécifiques pour Internet Simulator. Nous avons essayé d'exposer une variété de configurations différentes qui peuvent, espérons-le, fonctionner pour votre classe et votre activité. À long terme, nous aimerions avoir un moyen de laisser les autres configurer l'outil.
 
           #### Mes élèves ne peuvent pas se voir lorsqu'ils accèdent à l'URL que je leur donne pour Internet Simulator. Comment faire ?
-          Pour qu'ils puissent se voir dans le hall d'Internet Simulator, ils doivent être dans la même section. Vérifiez que vous avez suivi les instructions de configuration de section de la page précédente et qu'ils aient bien rejoint ce code de section spécifique. De plus, certains étudiants peuvent se trouver dans plusieurs sections s'ils ont déjà suivi des cours avec Code.org, alors assurez-vous qu'ils connaissent le nom de votre section et qu'ils l'ont choisi dans la liste déroulante avant d'entrer dans le hall.
+          Pour qu'ils puissent se voir dans le hall d'Internet Simulator, ils doivent être dans la même section. Vérifiez que vous avez suivi les instructions de configuration de section de la page précédente et qu'ils aient bien rejoint ce code de section spécifique. De plus, certains élèves peuvent se trouver dans plusieurs sections s'ils ont déjà suivi des cours avec Code.org, alors assurez-vous qu'ils connaissent le nom de votre section et qu'ils l'ont choisi dans la liste déroulante avant d'entrer dans le hall.
       Internet-Unplugged:
-        markdown: "# L'Internet   Construis ton propre Internet, dans la salle de
-          classe, simplement à l'aide de morceaux de papier.\n"
+        markdown: "# L'Internet  \n\nConstruis ton propre Internet dans la salle classe
+          en utilisant tout simplement des morceaux de papier.\n"
       Internet-Unplugged_2020:
-        markdown: "# L'Internet   Construis ton propre Internet, dans la salle de
-          classe, simplement à l'aide de morceaux de papier.\n"
+        markdown: "# L'Internet  \n\nConstruis ton propre Internet dans la salle classe
+          en utilisant tout simplement des morceaux de papier.\n"
       K-1 Artist 1 Multi 1:
         answers:
         - {}
@@ -1434,7 +1434,7 @@ fr-FR:
         - {}
         - {}
         questions:
-        - text: Quels blocs permettent de résoudre ce puzzle ?
+        - text: Quels blocs permettent de résoudre ce casse-tête ?
         title: Choix multiple
       K-1 Artist 1 Multi 2:
         answers:
@@ -1712,7 +1712,7 @@ fr-FR:
           <br/>
           ***
           <br/>
-          Nous allons commencer par le séquençage. À la base, ce style d'informatique concerne les **séquences**. Une séquence est un ordre spécial que quelque chose suit. Dans ces énigmes, nous voulons trouver la bonne séquence d'instructions pour dire à l'ordinateur quoi faire. Cette liste d'instructions est appelée **algorithme**. Une fois que cet algorithme est codé dans un langage lisible par une machine, il devient un **programme**.
+          Nous allons commencer par le séquençage. À la base, ce style d'informatique concerne les **séquences**. Une séquence est un ordre spécial que quelque chose suit. Dans ces casse-têtes, nous voulons trouver la bonne séquence d'instructions pour dire à l'ordinateur quoi faire. Cette liste d'instructions est appelée **algorithme**. Une fois que cet algorithme est codé dans un langage lisible par une machine, il devient un **programme**.
           <br/>
           <br/>
 
@@ -1765,12 +1765,12 @@ fr-FR:
         markdown: |-
           # Leçon hors ligne : Happy Maps
 
-          Les sujets informatiques peuvent être présentés dans les cours hors ligne. On peut ensuite faire appel à des activités de transition pour passer plus tard aux leçons en ligne. En commençant par ces leçons hors ligne, vous présentez les concepts de manière amusante et conviviale. Ensuite, les étudiants se sentent déjà familiarisés avec le concept au moment où ils accèdent aux leçons en ligne et peuvent relier les leçons en ligne à l'activité hors ligne.
+          Les sujets informatiques peuvent être présentés dans les cours hors ligne. On peut ensuite faire appel à des activités de transition pour passer plus tard aux leçons en ligne. En commençant par ces leçons hors ligne, vous présentez les concepts de manière amusante et conviviale. Ensuite, les élèves se sentent déjà familiarisés avec le concept au moment où ils accèdent aux leçons en ligne et peuvent relier les leçons en ligne à l'activité hors ligne.
 
           Pour ces étapes de programmation que vous allez traverser, nous commencerons également par des exemples de cours hors ligne. Lisez le plan de cours suivant et regardez les vidéos qui l'accompagnent, en pensant à la façon dont vous le mettriez en œuvre dans votre classe avec vos élèves.
 
           ***
-          CS Fundamentals enseigne principalement aux étudiants à écrire des programmes informatiques. Pour ce faire, nous allons commencer par le **séquençage**.
+          CS Fundamentals enseigne principalement aux élèves à écrire des programmes informatiques. Pour ce faire, nous allons commencer par le **séquençage**.
           > **Le séquençage** décrit le processus simple de classement des étapes de manière linéaire.
 
           Par exemple:
@@ -1938,7 +1938,7 @@ fr-FR:
           ## Comment l'utiliser ?
           - Encouragez les élèves à garder leur journal à côté d'eux en tout temps lors du codage
           - Rappelez-leur qu'ils peuvent écrire des solutions à la main, puis encercler les récurrences pour trouver les meilleures opportunités pour les boucles et les fonctions
-          - Demandez aux élèves de copier les réponses aux énigmes dont ils pourraient avoir besoin dans les niveaux futurs
+          - Demandez aux élèves de copier les réponses aux casse-têtes dont ils pourraient avoir besoin dans les niveaux futurs
           - Demandez aux élèves de dessiner des émoticônes en haut des pages pour les aider à identifier ce qu'ils pensent des concepts
           - Terminez chaque leçon par une pensée ou une question à laquelle les élèves peuvent répondre par écrit afin de réfléchir à leur évolution pour la journée
 
@@ -1948,7 +1948,7 @@ fr-FR:
         markdown: |-
           # Guides de planification de la mise en œuvre des leçons
 
-          Le but de ces questions est de vous aider à réfléchir et à élaborer un plan détaillé sur la façon dont vous pourriez enseigner des leçons d'une manière qui tire parti des meilleures pratiques d'enseignement et soutient les étudiants. Réfléchissez à ces questions tout en continuant à apprendre les concepts de base du codage et les pratiques d'enseignement tout au long de ce cours de développement professionnel en ligne.
+          Le but de ces questions est de vous aider à réfléchir et à élaborer un plan détaillé sur la façon dont vous pourriez enseigner des leçons d'une manière qui tire parti des meilleures pratiques d'enseignement et soutient les élèves. Réfléchissez à ces questions tout en continuant à apprendre les concepts de base du codage et les pratiques d'enseignement tout au long de ce cours de développement professionnel en ligne.
 
           ## Leçons hors ligne
           Vous trouverez une version imprimable de cette ressource à la page 43 du <a href="https://docs.google.com/document/d/1UqCgO06NzB1L6y83fnwnUcYdKr3MooJAaUZajj48DnI/preview#heading=h.jhv35ofi4hkz" target="blank" rel= "noopener noreferrer">guide pédagogique</a>.
@@ -2100,7 +2100,7 @@ fr-FR:
 
           ## <a href="https://curriculum.code.org/csf-19/coursed/" target="blank" rel="noopener noreferrer">Cours D</a>
           - Leçon 1 (hors ligne) : Programmation sur papier millimétré
-          - Leçon 2 : Introduction aux puzzles en ligne
+          - Leçon 2 : Introduction aux casse-têtes en ligne
           - Leçon 3 : Programmation de relais
           - Leçon 4 : Débogage avec Laurel
 
@@ -2173,14 +2173,14 @@ fr-FR:
           **Ces leçons, loin de l'ordinateur, sont souvent utilisées pour présenter un nouveau concept de manière pratique et tangible.** Les élèves travailleront souvent avec un crayon et du papier ou des objets de manipulation physiques. Il s'agit d'opportunités kinesthésiques intentionnellement placées qui aident les élèves à digérer des concepts compliqués de manière à se rapporter à leur propre vie. Souvent, une leçon hors ligne ouvre la voie à une leçon ultérieure de renforcement des compétences en étudiant le même concept sur l'ordinateur.
 
           ## Leçons hors ligne -- Développement des compétences
-          **Ces leçons sont faites sur ordinateur et donnent aux étudiants une pratique structurée avec un nouvel outil ou un nouveau concept de programmation.** Ces progressions de puzzle commencent généralement par une séquence de puzzles pratiques qui augmentent progressivement jusqu'à atteindre un puzzle défi. Il y a souvent des énigmes supplémentaires après le défi qui deviennent intentionnellement plus faciles pour aider à renforcer l'efficacité et la confiance à la fin de la leçon.
+          **Ces leçons sont faites sur ordinateur et donnent aux élèves une pratique structurée avec un nouvel outil ou un nouveau concept de programmation.** Ces progressions de casse-tête commencent généralement par une séquence de casse-têtes pratiques qui augmentent progressivement jusqu'à atteindre un casse-tête défi. Il y a souvent des casse-têtes supplémentaires après le défi qui deviennent intentionnellement plus faciles pour aider à renforcer l'efficacité et la confiance à la fin de la leçon.
 
 
           ## Leçons hors ligne -- Application
-          **Ces leçons sont faites sur ordinateur et donnent aux étudiants un espace pour appliquer les concepts appris de manière créative.** Ces leçons guident généralement les étudiants à travers la création d'un mini-projet qui sera unique pour eux en fonction de leurs propres décisions créatives. Il n'y a pas de bonnes ou de mauvaises réponses ici !
+          **Ces leçons sont faites sur ordinateur et donnent aux élèves un espace pour appliquer les concepts appris de manière créative.** Ces leçons guident généralement les élèves à travers la création d'un mini-projet qui sera unique pour eux en fonction de leurs propres décisions créatives. Il n'y a pas de bonnes ou de mauvaises réponses ici !
 
           ## Projets de fin de cours
-          Chaque cours offre l'opportunité aux étudiants de prendre ce qu'ils ont appris à la fin d'une leçon et de les rassembler dans un projet unique qui représente leur propre créativité. Nous en apprendrons plus à leur sujet plus tard dans ce cours.
+          Chaque cours offre l'opportunité aux élèves de prendre ce qu'ils ont appris à la fin d'une leçon et de les rassembler dans un projet unique qui représente leur propre créativité. Nous en apprendrons plus à leur sujet plus tard dans ce cours.
       OPD-K5 using lesson plans:
         content1: description ici
         markdown: |-
@@ -2332,9 +2332,9 @@ fr-FR:
           faire si quelqu'un est méchant en ligne.\n"
       PowerOfWords-Unplugged_2020:
         markdown: |-
-          # Le pouvoir des mots
+          # Le Pouvoir des Mots
 
-          ## Que dois-tu faire quand quelqu'un utilise des paroles méchantes ou blessantes sur internet ?
+          ## Que dois-tu faire quand quelqu'un utilise des paroles méchantes ou blessantes sur internet ?
       PowerfulPasswords-Unplugged:
         markdown: |
           # Mot de passe puissant
@@ -3284,7 +3284,7 @@ fr-FR:
           feedback: Correct !
         - text: Je ne sais pas.
           feedback: L'abeille répète la boucle qui la fait avancer et prendre le nectar,
-            lui permettant ainsi de terminer le puzzle.
+            lui permettant ainsi de terminer le casse-tête.
         questions:
         - text: Regarde de près les boucles imbriquées ci-dessous. Que va-t-il se
             passer quand tu cliques sur « Démarrer » ?
@@ -3301,7 +3301,7 @@ fr-FR:
           feedback: Correct !
         - text: Je ne sais pas.
           feedback: L'abeille répète la boucle qui la fait avancer et prendre le nectar,
-            lui permettant ainsi de terminer le puzzle.
+            lui permettant ainsi de terminer le casse-tête.
         questions:
         - text: Regarde de près les boucles imbriquées ci-dessous. Que va-t-il se
             passer quand tu cliques sur « Démarrer » ?
@@ -3318,7 +3318,7 @@ fr-FR:
           feedback: Correct !
         - text: Je ne sais pas.
           feedback: L'abeille répète la boucle qui la fait avancer et prendre le nectar,
-            lui permettant ainsi de terminer le puzzle.
+            lui permettant ainsi de terminer le casse-tête.
         questions:
         - text: Regarde de près les boucles imbriquées ci-dessous. Que va-t-il se
             passer quand tu cliques sur « Démarrer » ?
@@ -3335,7 +3335,7 @@ fr-FR:
           feedback: Correct !
         - text: Je ne sais pas.
           feedback: L'abeille répète la boucle qui la fait avancer et prendre le nectar,
-            lui permettant ainsi de terminer le puzzle.
+            lui permettant ainsi de terminer le casse-tête.
         questions:
         - text: Regarde de près les boucles imbriquées ci-dessous. Que va-t-il se
             passer quand tu cliques sur « Démarrer » ?
@@ -3546,7 +3546,7 @@ fr-FR:
             donc le fermier essaiera de ramasser la citrouille à chaque étape, au
             lieu de le faire seulement à la fin.
         markdown: |+
-          Voici un nouveau type de puzzle qui utilise des blocs similaires à ce que tu as déjà vu. Essaie de prédire ce qu’il va se passer quand tu exécuteras le code ci-dessous.
+          Voici un nouveau type de casse-tête qui utilise des blocs similaires à ce que tu as déjà vu. Essaie de prédire ce qu’il va se passer quand tu exécuteras le code ci-dessous.
 
 
         questions:
@@ -3690,7 +3690,7 @@ fr-FR:
           feedback: Correct !
         - text: Le zombie arrivera jusqu'au tournesol.
           feedback: Incorrect. Dans ce code, il cherche à tourner à droite *avant*
-            de regarder s'il peut passer tout droit. C'est à cause de ça que le puzzle
+            de regarder s'il peut passer tout droit. C'est à cause de ça que le casse-tête
             échoue.
         - text: Le zombie va tourner à droite sur le premier chemin et tourner en
             rond pour toujours.
@@ -3699,7 +3699,7 @@ fr-FR:
             bloquer immédiatement.
         - text: Je ne sais pas.
           feedback: Dans ce code, il cherche à tourner à droite *avant* de regarder
-            s'il peut passer tout droit. C'est à cause de ça que le puzzle échoue.
+            s'il peut passer tout droit. C'est à cause de ça que le casse-tête échoue.
         questions:
         - text: Regarde attentivement le code ci-dessous. Que va-t-il se passer quand
             on clique sur « Démarrer »?
@@ -3862,7 +3862,7 @@ fr-FR:
         display_name: Projet de fin de cours
       courseE_multi_bee_functions_predict1:
         answers:
-        - text: Ce même programme fonctionnera pour résoudre ce puzzle, aussi.
+        - text: Ce même programme fonctionnera pour résoudre ce casse-tête, aussi.
           correct: true
           feedback: Correct! Cela ne change rien qu'il y ait une dose de miel différente.
             La fonction est programmé pour en tenir compte.
@@ -3873,12 +3873,13 @@ fr-FR:
           feedback: Incorrect. La fonction est programmée pour tenir compte de n'importe
             quelle dose de miel supérieur à 0.
         - text: Je ne sais pas.
-          feedback: Le programme fonctionnera pour résoudre le puzzle, aussi. Il est
-            programmé pour supporter n'importe quelle dose de miel supérieure à 0.
+          feedback: Le programme fonctionnera pour résoudre le casse-tête, aussi.
+            Il est programmé pour supporter n'importe quelle dose de miel supérieure
+            à 0.
         questions:
-        - text: Voici exactement le même programme que le dernier puzzle, mais la
-            dose de miel à ramasser a changé. Que va-t-il se passer lorsque tu vas
-            cliquer sur "Démarrer"?
+        - text: Voici exactement le même programme que le dernier casse-tête, mais
+            la dose de miel à ramasser a changé. Que va-t-il se passer lorsque tu
+            vas cliquer sur "Démarrer"?
       courseE_multi_farmer_functions11_predict:
         answers:
         - text: L'agricultrice récoltera deux citrouilles.
@@ -4078,7 +4079,7 @@ fr-FR:
           | Soit créatif en utilisant des fonctions ! | Essaie d'ajouter du texte ou un score à ce jeu ! |
 
       courseF_EOC_2020:
-        description: Tu as finis le Cours F! Choisis un projet à créer.
+        description: Tu es arrivé à la fin du Cours F ! Choisis un projet à créer.
         display_name: Projet de fin de cours
       courseF_bee_variables_8a_2018:
         answers:
@@ -4275,7 +4276,7 @@ fr-FR:
         markdown: "# Dans cette leçon...   ### À quoi pense-tu quand on parle de bugs?
           ### Quand la plupart des gens pensent à des bugs, ils pensent à des choses
           effrayantes, rampantes. En informatique, les bugs ne sont pas vivants, mais
-          ils peuvent tout de même poser des problèmes.   ### Les énigmes de cette
+          ils peuvent tout de même poser des problèmes.   ### Les casse-têtes de cette
           leçon ont déjà été résolues pour toi ! Mais, pas si vite - il semble qu'elles
           ne marchent pas encore. Les bugs se trouvent-ils derrière tout cela ? ---##
           Blocs de Know![](https://images.code.org/b2376dc67948e29247931dec5e9fef8f-image-1524678585868.png)![](https://images.code.org/bd2de01f2c3b86109329b10eb544a6e6-image-1524678600994.png)![](https://images.code.org/db76d28bb3dbabdb78edb2cf54c6cb11-image-1524678618646.png)\n"
@@ -4286,10 +4287,10 @@ fr-FR:
           d'arrêt et d'étape.** \n\n### Ce nouveau type de boucle `répéter` te donne
           plus de contrôle sur le moment où ta boucle démarre, s'arrête, et ce dont
           ta boucle devrait augmenter, à chaque fois qu'elle est exécutée.  \n\n###
-          Plus de contrôle signifie que tu peux résoudre des énigmes beaucoup plus
-          vite!   \n\n---   \n\n##**Vocabulaire à Connaître **\n\n### **Boucle pour**
-          - Les boucles pour sont des boucles qui ont un début, une fin et un incrément
-          prédéterminés (intervalle de pas)\n"
+          Plus de contrôle signifie que tu peux résoudre des casse-têtes beaucoup
+          plus vite!   \n\n---   \n\n##**Vocabulaire à Connaître **\n\n### **Boucle
+          pour** - Les boucles pour sont des boucles qui ont un début, une fin et
+          un incrément prédéterminés (intervalle de pas)\n"
       courseF_markdown_forloops_end_2019:
         content1: Page du Manuel du Test Markdown
         markdown: "# **Tu viens d'apprendre les « boucles pour » !** \n\n### **Les
@@ -4297,10 +4298,10 @@ fr-FR:
           d'arrêt et d'étape.** \n\n### Ce nouveau type de boucle `répéter` te donne
           plus de contrôle sur le moment où ta boucle démarre, s'arrête, et ce dont
           ta boucle devrait augmenter, à chaque fois qu'elle est exécutée.  \n\n###
-          Plus de contrôle signifie que tu peux résoudre des énigmes beaucoup plus
-          vite!   \n\n---   \n\n##**Vocabulaire à Connaître **\n\n### **Boucle pour**
-          - Les boucles pour sont des boucles qui ont un début, une fin et un incrément
-          prédéterminés (intervalle de pas)\n"
+          Plus de contrôle signifie que tu peux résoudre des casse-têtes beaucoup
+          plus vite!   \n\n---   \n\n##**Vocabulaire à Connaître **\n\n### **Boucle
+          pour** - Les boucles pour sont des boucles qui ont un début, une fin et
+          un incrément prédéterminés (intervalle de pas)\n"
       courseF_markdown_forloops_end_2019_2020:
         content1: Page du Manuel du Test Markdown
         markdown: "# **Tu viens d'apprendre les « boucles pour » !** \n\n### **Les
@@ -4308,31 +4309,31 @@ fr-FR:
           d'arrêt et d'étape.** \n\n### Ce nouveau type de boucle `répéter` te donne
           plus de contrôle sur le moment où ta boucle démarre, s'arrête, et ce dont
           ta boucle devrait augmenter, à chaque fois qu'elle est exécutée.  \n\n###
-          Plus de contrôle signifie que tu peux résoudre des énigmes beaucoup plus
-          vite!   \n\n---   \n\n##**Vocabulaire à Connaître **\n\n### **Boucle pour**
-          - Les boucles pour sont des boucles qui ont un début, une fin et un incrément
-          prédéterminés (intervalle de pas)\n"
+          Plus de contrôle signifie que tu peux résoudre des casse-têtes beaucoup
+          plus vite!   \n\n---   \n\n##**Vocabulaire à Connaître **\n\n### **Boucle
+          pour** - Les boucles pour sont des boucles qui ont un début, une fin et
+          un incrément prédéterminés (intervalle de pas)\n"
       courseF_markdown_forloops_intro:
         content1: Page du Manuel du Test Markdown
         markdown: "# **Dans cette leçon...**   \n\n### Aujourd'hui, tu apprendras
           un nouveau type de boucle de `répéter`. Voici un aperçu du bloc que tu utiliseras
           :   \n\n![](https://images.code.org/d9cb4b829fe4e688b10c19e879cf4a4b-image-1531938148965.png)\n\n###
           Grâce à cette boucle, tu as une solution *pour*  facilement résoudre des
-          énigmes comme celle-ci !   \n\n![](https://images.code.org/072230b389feb9c6c6998619a245b8af-image-1524773190948.png)\n"
+          casse-têtes comme celle-ci !   \n\n![](https://images.code.org/072230b389feb9c6c6998619a245b8af-image-1524773190948.png)\n"
       courseF_markdown_forloops_intro_2019:
         content1: Page du Manuel du Test Markdown
         markdown: "# **Dans cette leçon...**   \n\n### Aujourd'hui, tu apprendras
           un nouveau type de boucle de `répéter`. Voici un aperçu du bloc que tu utiliseras
           :   \n\n![](https://images.code.org/d9cb4b829fe4e688b10c19e879cf4a4b-image-1531938148965.png)\n\n###
           Grâce à cette boucle, tu as une solution *pour*  facilement résoudre des
-          énigmes comme celle-ci !   \n\n![](https://images.code.org/072230b389feb9c6c6998619a245b8af-image-1524773190948.png)\n"
+          casse-têtes comme celle-ci !   \n\n![](https://images.code.org/072230b389feb9c6c6998619a245b8af-image-1524773190948.png)\n"
       courseF_markdown_forloops_intro_2019_2020:
         content1: Page du Manuel du Test Markdown
         markdown: "# **Dans cette leçon...**   \n\n### Aujourd'hui, tu apprendras
           un nouveau type de boucle de `répéter`. Voici un aperçu du bloc que tu utiliseras
           :   \n\n![](https://images.code.org/d9cb4b829fe4e688b10c19e879cf4a4b-image-1531938148965.png)\n\n###
           Grâce à cette boucle, tu as une solution *pour*  facilement résoudre des
-          énigmes comme celle-ci !   \n\n![](https://images.code.org/072230b389feb9c6c6998619a245b8af-image-1524773190948.png)\n"
+          casse-têtes comme celle-ci !   \n\n![](https://images.code.org/072230b389feb9c6c6998619a245b8af-image-1524773190948.png)\n"
       courseF_markdown_loops_end:
         content1: Page du Manuel du Test Markdown
         markdown: "# **Tu viens d'apprendre les « boucles » !**  ### **Une boucle
@@ -4770,7 +4771,7 @@ fr-FR:
         - text: Je ne sais pas.
           feedback: 'Incorrect. Note que le bloc `aggréger` insère le nom fourni (Ali)
             dans la réponse du pirate. '
-        markdown: "**This puzzle uses a new block called the `ask` block.**\n\nThe
+        markdown: "**This casse-tête uses a new block called the `ask` block.**\n\nThe
           `ask` block stops the program and prompts the user to enter some text. \n\nWhatever
           text the user enters is then saved to the variable shown at the end of the
           `ask` block.  In this case, it's the variable `name`.\n"
@@ -5162,9 +5163,9 @@ fr-FR:
           je marque un point » et « Si je tire une carte noire, tu marques un point ».\n"
       CourseF_outbreak_story:
         content1: description ici
-        markdown: "# Éclosion : codez votre propre simulation\n\n## Bienvenue à Monster
-          Town !\nMonster Town était généralement un endroit heureux et sain. Les
-          monstres de Monster Town adoraient se promener pour rendre visite à leurs
+        markdown: "# Épidémie : Code ta propre simulation\n\n## Bienvenue à Monstreville!\nD'ordinaire,
+          Monstreville était une ville joyeuse et ses habitants étaient en bonne santé.
+          Les monstres de Monster Town aimaient se balader pour rendre visite à leurs
           amis. \n\n<img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
           style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
           style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
@@ -5177,9 +5178,9 @@ fr-FR:
           style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
           style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
           style=\"width:8%\">\n\nUn jour, l'un des monstres a commencé à se sentir
-          malade. Le monstre avait attrapé un **virus** ! Un virus est un petit germe
-          qui peut vous rendre malade. Les autres monstres n'étaient pas trop inquiets.
-          Ils ont continué à rendre visite à leurs amis. \n\n<img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          malade. Il avait attrapé un **virus** ! Un virus est un tout petit microbe
+          qui peut nous rendre malade. Les autres monstres n'étaient pas trop inquiets.
+          Ils continuaient à rendre visite à leurs amis.\n\n<img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
           style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
           style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
           style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
@@ -5190,9 +5191,9 @@ fr-FR:
           style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
           style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
           style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
-          style=\"width:8%\">\n\nPas longtemps après, deux autres monstres sont tombés
-          malades. C'était le même virus ! Il semble qu'ils aient attrapé le virus
-          de leur ami. \n\n<img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\">\n\nPeu de temps après, deux autres monstres sont tombés
+          malades. C'était le même virus ! Ils semblaient avoir attrapé le virus de
+          leur ami.\n\n<img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
           style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
           style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
           style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
@@ -5204,9 +5205,9 @@ fr-FR:
           style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
           style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
           style=\"width:8%\">\n\nLe virus s'est lentement propagé à d'autres monstres
-          qui se trouvaient à côté. Les monstres en bonne santé ont commencé à avoir
-          peur de tous tomber malade. Les monstres malades ont commencé à avoir peur
-          de transmettre le virus à tout le monde. \n\n<img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          qui se trouvaient non loin de là. Les monstres en bonne santé ont commencé
+          à craindre qu'ils tomberaient tous malades. Les monstres malades ont commencé
+          à craindre qu'ils transmettraient le virus aux autres.\n\n<img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
           style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
           style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
           style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
@@ -5218,65 +5219,64 @@ fr-FR:
           style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
           style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
           style=\"width:8%\">\n\n\n<div style=\"display: inline-block\">\n<img src=\"https://images.code.org/89376b9ebd5fcee77545f13a7a444430-image-1603135356392.png\"
-          style=\"float:right; width:30%\">\n\n## Arrêter la propagation\nHeureusement,
-          après avoir étudié le virus, les voisins de Monster Town ont fait une découverte
+          style=\"float:right; width:30%\">\n\n## Empêcher la propagation\nHeureusement,
+          après avoir étudié le virus, les voisins de Monstreville ont fait une découverte
           importante. Ils se sont rendu compte qu'ils étaient moins susceptibles de
-          propager le virus s'ils portaient des masques sur la bouche. Avec des masques
-          faciaux, les monstres malades étaient moins susceptibles de transmettre
-          le virus à des monstres sains. \n\n<img src=\"https://images.code.org/c98f28f9bf6a027143592109d59ee484-image-1603134766360.png\"
+          propager le virus s'ils portaient un masque sur la bouche. Avec leurs masques,
+          les monstres malades étaient moins susceptibles de transmettre le virus
+          aux monstres en bonne santé.\n\n<img src=\"https://images.code.org/c98f28f9bf6a027143592109d59ee484-image-1603134766360.png\"
           style=\"width:8%\"> <img src=\"https://images.code.org/bac9dbfaf1815c6627fc24e8e6db396d-image-1603134760456.png\"
           style=\"width:8%\">\n\n</div>\n\n<img src=\"https://images.code.org/ef7499758496b39bcccc24aabd2af5d7-image-1603137920037.2020-10-19
           16_04_58.gif\" style=\"float:left; width:25%; padding-right:25px\">\n\n##
-          Que va-t-il se passer ensuite?\n\nAujourd'hui, vous allez écrire du code
-          pour créer et exécuter votre propre **simulation** de l'épidémie de virus
-          à Monster Town. Une simulation est un modèle informatique d'un processus
-          ou d'un système. Apprenez à coder et à faire des prédictions sur ce qui
-          arrivera aux voisins de Monster Town. \n\n<img src=\"https://images.code.org/fcbfd250d58652bdfd6393ec4f2fe2dd-image-1603134705074.png\"
-          style=\"float:right; width:15%\">\n\n* *À quelle vitesse le virus se propagera-t-il
-          ?*\n\n* *Est-ce que tout le monde tombera malade ?*\n\n* *Comment les masques
-          faciaux vous aideront-ils?*\n\n\nLorsque vous aurez terminé, partagez votre
-          simulation avec les autres. Partagez votre message sur ce que vous pensez
-          que nous pouvons faire pour aider les autres à rester en bonne santé lorsqu'un
-          virus arrive en ville. "
+          Que va-t-il se passer ensuite ?\n\nAujourd'hui, tu vas écrire du code pour
+          créer et exécuter ta propre **simulation** de l'épidémie du virus à Monstreville.
+          \ Une simulation est un modèle informatique d'un processus ou d'un système.
+          Apprends à coder et à prédire ce qui arrivera aux habitants de Monstreville.\n\n<img
+          src=\"https://images.code.org/fcbfd250d58652bdfd6393ec4f2fe2dd-image-1603134705074.png\"
+          style=\"float:right; width:15%\">\n\n* *À quelle vitesse le virus se répandra-t-il
+          ?\n\n* *Tout le monde tombera-t-il malade ?\n\n* *Comment les masques aideront-ils
+          ?\n\n\nQuand tu auras terminé, partage ta simulation avec les autres. Partage
+          ce que tu penses qu'on pourrait faire pour aider les autres à rester en
+          bonne santé lorsqu'un virus arrive en ville. \n"
       CourseF_outbreak_story2:
         content1: description ici
-        markdown: "# Épidémie : Penser comme un scientifique\n\n<img src=\"https://images.code.org/89376b9ebd5fcee77545f13a7a444430-image-1603135356392.png\"
+        markdown: "# Épidémie : Réfléchir comme un scientifique\n\n<img src=\"https://images.code.org/89376b9ebd5fcee77545f13a7a444430-image-1603135356392.png\"
           style=\"float:right; width:30%\">\n\nLes simulations sont un excellent moyen
           d'apprendre des choses qui peuvent être difficiles à observer dans le monde
           réel. Elles aident les scientifiques à résoudre des problèmes et à tester
-          de nouvelles idées de manière sûre et efficace. Votre simulation est un
-          moyen de montrer à quoi pourrait ressembler une épidémie de virus dans Monster
-          Town.\n\n## Réinitialisation et rediffusion !\nMême lorsque vous écrivez
-          le code vous-même, il est impossible de savoir exactement ce qu'il se passera
-          lorsque vous appuierez sur \"démarrer\". Les monstres se déplacent au hasard,
-          vous ne savez donc pas si le virus va se propager rapidement ou lentement.
-          Chaque fois que vous modifiez votre code, veillez à exécuter votre simulation
-          plus d'une fois. Les choses ne se passeront pas deux fois de la même manière
-          !\n\n## Recueil de données\nEssayez de noter vos observations pendant que
-          vous lancer votre simulation. Vous pouvez compter le nombre de monstres
-          qui tombent malades ou utiliser un minuteur pour voir à quelle vitesse les
-          choses se passent. Par exemple, combien de temps faut-il généralement à
-          tous les monstres pour tomber malade si aucun n'a pas de masque ? \n\n##
-          Faire des prédictions\nSi vous comprenez votre modèle, vous pouvez l'utiliser
-          pour faire des prédictions. Vous pouvez même modifier le déroulement de
-          votre simulation et deviner ce qu'il se passera différemment. Par exemple
-          :\n* Que se passerait-il s'il y avait deux fois plus de monstres ?\n* Que
-          se passerait-il si la vitesse de déplacement des monstres était réduite
-          de moitié ?\n\n<img src=\"https://images.code.org/2e83373ffd346ce3f42917a0624d441c-image-1603749526420.png\"
-          style=\"float:right\">\n\n## Monster Town est-elle comme le monde réel ?\nIl
-          y a une limite au réalisme d'un modèle. \n* Quel est le point commun entre
-          votre simulation et les épidémies de virus du monde réel ?\n* Quelles sont
-          les différences ?\nLorsque vous aurez terminé cette activité, posez ces
-          questions à vos professeurs ou à votre famille !\n\n## Pouvons-nous faire
-          d'autres modèles ?\nVous avez déjà créé un modèle fonctionnel de l'épidémie
-          à Monster Town. Quelles sont les choses que votre simulation ne peut pas
-          faire ou montrer que vous aimeriez qu'elle puisse faire ou montrer ? Appuyez
-          sur la touche \"continuer\" et apprenez à faire modifications :\n* Augmentez
-          le nombre de monstres dans la simulation\n* Aidez les monstres à se remettre
-          du virus\n* Probabilité, immunité, vaccins, et bien d'autres chose encore
-          !\n\nVous pouvez également partager votre modèle de simulation avec d'autres
-          personnes, ou partager un message sur ce que nous pouvons faire pour aider
-          à garder les autres en bonne santé quand un virus arrive en ville. \n"
+          de nouvelles idées de manière sûre et efficace. Ta simulation est un moyen
+          de montrer à quoi pourrait ressembler une épidémie de virus dans Monstreville.\n\n##
+          Réinitialisation et rediffusion !\nMême lorsque tu écris le code toi-même,
+          il est impossible de savoir exactement ce qu'il se passera lorsqu'on appuie
+          sur « démarrer ». Les monstres se déplacent au hasard, on ne sait donc pas
+          si le virus va se propager rapidement ou lentement. Chaque fois que tu modifies
+          ton code, veille à exécuter ta simulation plus d'une fois. Les choses ne
+          se dérouleront pas deux fois de la même manière !\n\n## Récolte de données\n\nEssaye
+          de prendre note de tes observations quand tu lances ta simulation. Tu peux
+          compter le nombre de monstres qui tombent malades ou utiliser un minuteur
+          pour voir à quelle vitesse les choses se déroulent. Par exemple, combien
+          de temps faut-il généralement à tous les monstres pour tomber malade si
+          aucun ne porte de masque ? \n\n## Faire des prévisions\n\nSi tu comprends
+          ton modèle, tu peux l'utiliser pour faire des prévisions. Tu peux même modifier
+          le déroulement de ta simulation et deviner ce qu'il se va se passer différemment.
+          Par exemple :\n* Que se passerait-il s'il y avait deux fois plus de monstres ?\n*
+          Que se passerait-il si la vitesse de déplacement des monstres était réduite
+          d'une moitié ?\n\n<img src=\"https://images.code.org/2e83373ffd346ce3f42917a0624d441c-image-1603749526420.png\"
+          style=\"float:right\">\n\n## Monstreville, c'est comme le monde réel ? \nIl
+          y a des limites au réalisme que peut avoir modèle. \n* En quoi ta simulation
+          est-elle semblable aux les épidémies de virus du monde réel ?\n* En quoi
+          sont-elles toutefois différentes ?\n\nLorsque tu auras terminé cette activité,
+          pose ces questions à tes enseignants ou à ta famille !\n\n## Que peut-on
+          faire d'autre comme modèles de situations ?\nTu as déjà créé un modèle fonctionnel
+          d'épidémie à Monstreville. Quelles sont les choses que ta simulation ne
+          peut pas faire ou montrer que tu aimerais qu'elle puisse faire ou montrer ?
+          Appuie sur la touche « continuer » pour en apprendre encore plus sur la
+          modélisation :\n* Augmente le nombre de monstres dans la simulation\n* Aide
+          les monstres à se remettre du virus\n* Probabilité, immunité, vaccins, et
+          bien d'autres choses encore !\n\nTu peux aussi partager ta simulation modèle
+          avec d'autres personnes, ou partager un message sur ce que tu penses qu'on
+          peut faire pour aider à les autres à rester en bonne santé quand un virus
+          arrive en ville. \n"
       DesigningForAccessibilityMarkdownLevel_2021:
         markdown: "# Conception Accessible\n\n* Dans le monde de l'informatique, **l'accessibilité**
           fait référence à la création de technologies pour personnes handicapées.
@@ -5290,9 +5290,10 @@ fr-FR:
           et les avantages du respect de la propriété et du droit d'auteur, notamment
           dans les environnements numériques.\n"
       ForLoopFun-Unplugged_2021:
-        markdown: "# Pour s'amuser en boucle\n   \nNous savons que les boucles nous
-          permettent de faire des choses à répétition, mais, maintenant, nous allons
-          apprendre à les utiliser avec une structure supplémentaire intégrée.\n"
+        markdown: "# « Pour » s'amuser en boucle\n\nOn sait que les boucles nous permettent
+          de répéter indéfiniment certaines choses, mais maintenant, on va apprendre
+          à utiliser des boucles avec une structure supplémentaire directement intégrée.
+          \n"
       GettingLoopy-Unplugged_2021:
         markdown: "# Affaire bouclée \n\nCette leçon introduit la notion de boucles
           en programmation au travers d'une activité dansante."
@@ -5305,8 +5306,8 @@ fr-FR:
 
           Crée un algorithme pour faire traverser un labyrinthe à ton personnage.
       Internet-Unplugged_2021:
-        markdown: "# Internet   \nConstruis ton propre Internet, dans la salle de
-          classe, simplement à l'aide de morceaux de papier.\n"
+        markdown: "# L'Internet  \n\nConstruis ton propre Internet dans la salle classe
+          en utilisant tout simplement des morceaux de papier.\n"
       MoveItMoveIt-Unplugged_2021:
         markdown: |
           # Bouge, Bouge ton corps
@@ -5331,7 +5332,7 @@ fr-FR:
           <br/>
           ***
           <br/>
-          Nous allons commencer par le séquençage. À la base, ce style d'informatique concerne les **séquences**. Une séquence est un ordre spécial que quelque chose suit. Dans ces énigmes, nous voulons trouver la bonne séquence d'instructions pour dire à l'ordinateur quoi faire. Cette liste d'instructions est appelée **algorithme**. Une fois que cet algorithme est codé dans un langage lisible par une machine, il devient un **programme**.
+          Nous allons commencer par le séquençage. À la base, ce style d'informatique concerne les **séquences**. Une séquence est un ordre spécial que quelque chose suit. Dans ces casse-têtes, nous voulons trouver la bonne séquence d'instructions pour dire à l'ordinateur quoi faire. Cette liste d'instructions est appelée **algorithme**. Une fois que cet algorithme est codé dans un langage lisible par une machine, il devient un **programme**.
           <br/>
           <br/>
 
@@ -5381,9 +5382,9 @@ fr-FR:
           Dans la prochaine étape, nous allons ajouter de la complexité à nos programmes grâce à l'ajout de boucles.
       PowerOfWords-Unplugged_2021:
         markdown: |-
-          # Le pouvoir des mots
+          # Le Pouvoir des Mots
 
-          ## Que dois-tu faire quand quelqu'un utilise des paroles méchantes ou blessantes sur internet ?
+          ## Que dois-tu faire quand quelqu'un utilise des paroles méchantes ou blessantes sur internet ?
       PrivatePersonalInformation-Unplugged_2021:
         markdown: |-
           # Informations Privées et Personnelles
@@ -5682,7 +5683,7 @@ fr-FR:
             dès que le tas aura disparu.
           correct: true
           feedback: Correct !
-        - text: Le fermier n'enlèvera la terre qu'une seule fois.
+        - text: La fermière n'enlèvera la terre qu'une seule fois.
           feedback: Incorrect. La fermière continuera à enlever de la terre tant qu'il
             y aura un tas, puis s'arrêtera une fois que le tas aura disparu.
         questions:
@@ -5817,10 +5818,10 @@ fr-FR:
         - text: Regarde de près le code ci-dessous. Que va-t-il se passer une fois
             qu'on a cliqué sur « Démarrer » ?
       courseF_EOC_2021:
-        description: Tu as finis le Cours F ! Choisis un projet à créer.
+        description: Tu es arrivé à la fin du Cours F ! Choisis un projet à créer.
         display_name: Projet de Fin de Cours
       courseF_EOC_examples_2021:
-        description: Tu as finis le Cours F ! Choisis un projet à créer.
+        description: Tu es arrivé à la fin du Cours F ! Choisis un projet à créer.
         display_name: Projet de Fin de Cours
       courseF_events_predict_multi:
         answers:
@@ -5840,21 +5841,21 @@ fr-FR:
         - text: Lis le code, puis fais une prévision.
       courseF_labels_predict_multi:
         answers:
-        - text: '"Une pizza, c''est parti !"'
+        - text: "« Une pizza, ça arrive tout de suite ! »"
           feedback: 'Incorrect. Les libellés des variables ne correspondent pas. '
-        - text: '"Un menu, c''est parti !"'
-          feedback: 'Incorrect. Le libellé d''une variable n''est jamais imprimé. '
-        - text: '"Un plat, c''est parti !"'
-          feedback: 'Incorrect. Le libellé d''une variable n''est jamais imprimé. '
-        - text: '"Et c''est parti !"'
+        - text: "« Un repas, ça arrive tout de suite ! »"
+          feedback: Incorrect. Le libellé d'une variable ne s'imprime jamais.
+        - text: "« Une nourriture, ça arrive tout de suite ! »"
+          feedback: Incorrect. Le libellé d'une variable ne s'imprime jamais.
+        - text: "« Une , ça arrive tout de suite ! »"
           correct: true
-          feedback: 'Correct ! Les libellés des variables ne correspondent pas. '
+          feedback: 'Correct ! Les libellés des variables ne correspondent pas. '
         - text: Rien ne sera imprimé.
           feedback: 'Incorrect. L''événement et le bloc d''impression fonctionneront
             toujours. '
         questions:
-        - text: 'Ce code peut vous sembler familier, mais lisez-le attentivement.
-            Qu''est-ce qui sera imprimé si l''utilisateur tape « pizza » ? '
+        - text: 'Ce code peut paraître familier, mais lis-le attentivement. Qu''est-ce
+            qui sera imprimé si l''utilisateur tape « pizza » ? '
       courseF_multi_artist_variables3a_predict1_2021:
         answers:
         - text: L'artiste dessinera un triangle avec des côtés de 50 pixels.
@@ -5930,17 +5931,24 @@ fr-FR:
             que se passera-t-il après avoir répondu à la question ? '
       courseF_variables_stop:
         content1: description ici
-        markdown: "# Arrêtez !\n\n## Êtes-vous sûr d'être prêt à passer à autre chose
-          ?\n\n\nAu niveau suivant, vous commencerez à écrire le code de votre projet.
-          Cela fonctionne mieux si vous avez déjà un plan.\n\nVotre plan complété
-          doit inclure :\n\n<img src=\"https://images.code.org/b476ac330f2b66e44e02208fee386a56-image-1614802439867.png\"
-          style=\"float:left; height:70px; padding:10px\"/>\n\n* Le type de projet
-          que vous construisez. Par exemple, une carte de vœux, un chatbot ou une
-          histoire d'espace vide.\n* Une liste de questions que vous poserez à l'utilisateur.\n*
-          L'autre texte que vous afficherez à l'écran.\n* Une description ou un dessin
-          des sprites dont vous aurez besoin (et leurs comportements).\n\nSi vous
-          n'êtes pas sûr d'être prêt à passer à autre chose, voyez avec votre professeur
-          ! \n"
+        markdown: |-
+          # Stop !
+
+          ## Est-ce que tu es sûr d'être prêt à passer à autre chose ?
+
+
+          Dans le niveau suivant, tu vas te mettre à écrire le code pour ton projet. Ce sera bien plus facile si tu as déjà un plan.
+
+          Ton plan complet devrait comprendre :
+
+          <img src="https://images.code.org/b476ac330f2b66e44e02208fee386a56-image-1614802439867.png" style="float:left; height:70px; padding:10px"/>
+
+          * Le type de projet que tu vas développer. Comme par exemple une carte de vœux, un chatbot ou une histoire d'espace vide.
+          * Une liste des questions que tu vas poser à l'utilisateur.
+          * L'autre texte que tu vas afficher à l'écran.
+          * Une description ou un dessin des sprites dont tu vas avoir besoin (ainsi que leurs comportements).
+
+          Si tu n'es pas sûr si tu es prêt à passer à autre chose, vois avec ton instituteur !
       coursee_prediction_artistfunction2_2021:
         answers:
         - text: L’artiste résoudra ce casse-tête correctement.
@@ -6013,13 +6021,13 @@ fr-FR:
         description: 'Tu es sur le point d''entamer ton projet final. Avant de commencer,
           prends le temps d''examiner les exemples de projets. '
       courseF_variables_samples:
-        description: 'Vous allez créer soit une carte de vœux, un chatbot ou une histoire
-          d''espace vide. Avant de commencer, explorez les exemples de projets ci-dessous
-          pour voir ce que vous souhaitez créer. Appuyez sur \"Terminer\" lorsque
-          vous êtes prêt à commencer à planifier votre propre programme. '
+        description: 'Tu vas créer soit une carte de vœux, soit un chatbot, soit une
+          histoire d''espace vide. Avant de commencer, jette un œil aux exemples de
+          projets ci-dessous pour voir ce que tu pourrais vouloir créer. Appuie sur
+          « Terminer » quand tu es prêt à commencer à imaginer ton propre programme. '
         teacher_markdown: "# Présentation du niveau de choix\nLes niveaux de choix
-          fournissent un menu de niveaux supplémentaires à compléter par les étudiants.
-          Les étudiants doivent terminer au moins un des sous-niveaux ici, mais peuvent
+          fournissent un menu de niveaux supplémentaires à compléter par les élèves.
+          Les élèves doivent terminer au moins un des sous-niveaux ici, mais peuvent
           en suivre autant qu'ils le souhaitent ou que vous le souhaitez.\n\nIl est
           préférable que les élèves examine bien ces projets avant de décider ce qu'ils
           veulent créer. Vous pouvez les regarder ensemble en classe ou leur demander
@@ -6038,25 +6046,25 @@ fr-FR:
           propres projets comme ceux-ci... et bien plus encore ! '
         display_name: Applis Labo des Sprites
         teacher_markdown: "# Présentation du niveau de choix\nLes niveaux de choix
-          fournissent un menu de niveaux supplémentaires à faire par les étudiants.
-          Ils doivent terminer au moins un des sous-niveaux ici, mais peuvent en suivre
+          fournissent un menu de niveaux supplémentaires à faire par les élèves. Ils
+          doivent terminer au moins un des sous-niveaux ici, mais peuvent en suivre
           autant qu'ils le souhaitent (ou que vous le souhaitez).\n\nLes choix ici
-          amènent les étudiants à échantillonner des applications qu'ils peuvent explorer.
+          amènent les élèves à échantillonner des applications qu'ils peuvent explorer.
           Cette activité est destinée à être coordonnée avec la feuille de travail
           Exploring Apps, qui se trouve dans le [plan de cours](.././). "
       courseF_events_freeplay:
-        description: 'Maintenant, vous pouvez utiliser ce que vous avez appris pour
-          rendre votre projet encore meilleur ! Continuez à ajouter à votre programme
-          ou commencez quelque chose de nouveau ! '
+        description: 'Maintenant, tu peux utiliser ce que tu as appris pour rendre
+          ton projet encore meilleur ! Continue à ajouter à ton programme ou commence
+          quelque chose de nouveau ! '
         display_name: Événements - Jeu libre
       courseF_events_practice:
-        description: 'Excellent travail pour l''instant ! Choisissez votre prochaine
-          activité. Faites-en autant que vous le pouvez. Continuez à vous entraîner
-          avec des évènements ! '
-        display_name: 'Pratique des événements '
+        description: 'Excellent travail jusqu''à présent ! Choisis ta prochaine activité.
+          Complètes-en autant que tu peux. Continue à t''entraîner avec les sprites
+          et les comportements ! '
+        display_name: 'Entraînement avec les événements '
         teacher_markdown: |+
           # Présentation du niveau de choix
-          Les niveaux de choix fournissent un menu de niveaux supplémentaires à faire par les étudiants. Ils doivent finir au moins l'un des sous-niveaux ici, mais peuvent en suivre autant qu'ils le souhaitent ou que vous le souhaitez.
+          Les niveaux de choix fournissent un menu de niveaux supplémentaires à faire par les élèves. Ils doivent finir au moins l'un des sous-niveaux ici, mais peuvent en suivre autant qu'ils le souhaitent ou que vous le souhaitez.
 
           Vous pouvez utiliser les descriptions ci-dessous pour aider les élèves à choisir eux-mêmes leurs choix ou pour définir des attentes concernant le nombre de sous-niveaux qu'ils doivent terminer.
 
@@ -6067,13 +6075,13 @@ fr-FR:
 
 
       courseF_text_practice:
-        description: 'Excellent travail jusqu''à présent ! Choisissez votre prochaine
-          activité. Remplissez-en autant que vous le pouvez. Continuez à vous entraîner
-          avec du texte et des invites ! '
-        display_name: 'Entraînement avec du texte et des invites '
+        description: 'Excellent travail jusqu''ici ! Choisis ta prochaine activité.
+          Complètes-en autant que tu peux. Continue à t''entraîner avec les sprites
+          et les comportements ! '
+        display_name: 'Entraînement sur le texte et les invites '
         teacher_markdown: |-
           # Présentation du niveau de choix
-          Les niveaux de choix fournissent un menu de niveaux supplémentaires à faire par les étudiants. Ils doivent finir au moins un des sous-niveaux ici, mais peuvent en suivre autant qu'ils le souhaitent, ou que vous le souhaitez.
+          Les niveaux de choix fournissent un menu de niveaux supplémentaires à faire par les élèves. Ils doivent finir au moins un des sous-niveaux ici, mais peuvent en suivre autant qu'ils le souhaitent, ou que vous le souhaitez.
 
           Vous pouvez utiliser les descriptions ci-dessous pour aider les élèves à choisir eux-mêmes leurs choix ou pour définir des attentes concernant le nombre de sous-niveaux qu'ils doivent terminer.
 
@@ -6082,47 +6090,45 @@ fr-FR:
           | ***Type*** |**Review**|**Debug**|**Debug**|**Debug**|**Optional Content**|**Optional Content**|**Free Play**
           | ***Concept***|*print block, events*|*prompts, events*|*adding spaces*|*matching variable labels*|*title screen blocks*|*storing colors*|*no new content*
       EnvelopeVariables-Unplugged_2021_2:
-        markdown: " Histoires d'espace vide\n\nDans cette leçon, vous apprendrez à
-          utiliser et à écrire des histoires d'espace vide. Regardez cette vidéo pour
-          découvrir comment cela se connecte à l'informatique. "
+        markdown: "# Histoires d'espace vide\n\nDans cette leçon, tu vas apprendre
+          à utiliser et à écrire des histoires d'espace vide. Regarde cette vidéo
+          pour voir ce que cela a à voir avec l'informatique. "
       courseF_variables_projects:
-        description: 'Vous allez créer soit une carte de vœux, un chatbot ou une histoire
-          d''espace vide. Si vous avez déjà terminé la \"Partie 1\" de votre projet,
-          passez à la \"Partie 2\". '
-        display_name: Choisissez un projet
+        description: 'Tu vas créer soit une carte de vœux, soit un chatbot, soit une
+          histoire d''espace vide. Si tu as déjà terminé la \« 1ère Partie\ » de ton
+          projet, passe à la \« 2ème Partie\ ». '
+        display_name: Choisis un projet
         teacher_markdown: "# Présentation du niveau de choix\nLes niveaux de choix
-          fournissent un menu de niveaux supplémentaires à compléter par les étudiants.
+          fournissent un menu de niveaux supplémentaires à compléter par les élèves.
           Ils doivent faire au moins un des sous-niveaux ici, mais devraient être
           encouragés à en faire **deux** pour un même projet.\n\nIls peuvent avoir
           besoin d'instructions très claires pour comprendre comment naviguer dans
           les choix ici. Pour chacun des choix de projets, il existe ici deux sous-niveaux.
-          Pour commencer, les étudiants doivent choisir l'un des niveaux marqués \"Partie
+          Pour commencer, les élèves doivent choisir l'un des niveaux marqués \"Partie
           1\". Une fois qu'ils ont terminé ce niveau, ils doivent revenir ici et sélectionner
           \"Partie 2\" du *même* projet. Le premier niveau de chaque choix fournira
-          aux étudiants une rétroaction au fur et à mesure qu'ils assembleront les
-          éléments de base de leur projet. Le deuxième niveau est un \"jeu libre\"
-          qui est destiné à permettre aux étudiants d'apporter les modifications qu'ils
-          souhaitent à leur code. "
+          aux élèves une rétroaction au fur et à mesure qu'ils assembleront les éléments
+          de base de leur projet. Le deuxième niveau est un \"jeu libre\" qui est
+          destiné à permettre aux élèves d'apporter les modifications qu'ils souhaitent
+          à leur code. "
       courseF_artist_practice:
-        description: 'Excellent travail jusqu''à présent ! Choisissez votre prochaine
-          activité. Remplissez-en autant que vous le pouvez. Continuez à vous entraîner
-          avec les boucles et l''artiste ! '
-        display_name: Entrainement d'Artiste
+        description: 'Super travail jusqu''ici ! Choisis ta prochaine activité. Complètes-en
+          autant que tu peux. Continue à t''entraîner avec les boucles et l''artiste ! '
+        display_name: Entraînement avec l'Artiste
       courseF_beeFor_practice:
-        display_name: Entrainement avec l'abeille
-        description: 'Excellent travail jusqu''à présent ! Choisissez votre prochaine
-          activité. Remplissez-en autant que vous le pouvez. Continuez à vous entraîner
-          avec les boucles for et l''abeille ! '
+        display_name: Entraînement avec l'abeille
+        description: Super travail jusqu'à présent ! Choisis ta prochaine activité.
+          Complètes-en autant que tu peux. Continue à t'entraîner sur les boucles
+          avec l'abeille !
       courseF_beeVar_practice:
-        display_name: Entrainement avec l'abeille
-        description: 'Excellent travail jusqu''à présent ! Choisissez votre prochaine
-          activité. Remplissez-en autant que vous le pouvez. Continuez à vous entraîner
-          avec les variables et l''abeille ! '
+        display_name: Entraînement avec l'abeille
+        description: Super travail jusqu'ici ! Choisis ta prochaine activité. Complètes-en
+          autant que tu peux. Continue à t'entraîner sur les variables avec l'abeille !
       courseF_bee_practice:
-        description: 'Excellent travail jusqu''à présent ! Choisissez votre prochaine
-          activité. Remplissez-en autant que vous le pouvez. Continuez à vous entraîner
-          avec les boucles et l''abeille ! '
-        display_name: Entrainement avec l'abeille
+        description: Super travail jusqu'à présent ! Choisis ta prochaine activité.
+          Complètes-en autant que tu peux. Continue à t'entraîner sur les boucles
+          avec l'abeille !
+        display_name: Entraînement avec l'abeille
       courseD_EOC_examples_2021:
         description: 'Tu es sur le point d''entamer ton projet final. Avant de commencer,
           prends le temps d''examiner les exemples de projets. '
@@ -6135,13 +6141,13 @@ fr-FR:
         markdown: "# Suis l'algorithme\n\nJoue à un jeu et réfléchis à quelles commandes
           il faut utiliser pour obtenir le bon résultat. "
       courseF_sprites_practice:
-        description: 'Excellent travail jusqu''à présent ! Choisis ta prochaine activité.
-          Remplis-en autant que tu peux. Continue à t''entraîner avec les sprites
-          et les comportements ! '
-        display_name: Entraînement avec les sprites
+        description: 'Excellent travail jusqu''à présent ! Choisis ta prochaine activité.
+          Complètes-en autant que tu peux. Continue à t''entraîner avec les sprites
+          et les comportements ! '
+        display_name: Entraînement avec les Sprites
         teacher_markdown: |+
           # Aperçu du niveau de choix
-          Les niveaux de choix fournissent un menu de niveaux supplémentaires à compléter par les étudiants. Ils doivent terminer au moins un des sous-niveaux ici, mais peuvent en suivre autant qu'ils le souhaitent ou que vous le souhaitez.
+          Les niveaux de choix fournissent un menu de niveaux supplémentaires à compléter par les élèves. Ils doivent terminer au moins un des sous-niveaux ici, mais peuvent en suivre autant qu'ils le souhaitent ou que vous le souhaitez.
 
           Vous pouvez utiliser les descriptions ci-dessous pour aider les élèves à choisir eux-mêmes leurs choix ou pour définir des attentes concernant le nombre de sous-niveaux qu'ils doivent terminer.
 
@@ -6215,7 +6221,7 @@ fr-FR:
           class=\"level-image\">\n\n## A quoi sert ce cours en ligne ?\nIl sert d'introduction
           au programme et aux ressources des principes fondamentaux de l'informatique
           de Code.org pour les enseignants. En lisant, en visionnant des vidéos, en
-          faisant des puzzles interactifs et en réfléchissant à votre apprentissage,
+          faisant des casse-têtes interactifs et en réfléchissant à votre apprentissage,
           vous développerez votre propre compréhension de la façon d'enseigner les
           principes fondamentaux de l'informatique dans votre classe.\n\n## A qui
           s'adresse ce cours en ligne ?\nCe cours en ligne est conçu pour **les enseignants
@@ -6231,7 +6237,7 @@ fr-FR:
           professionnel approfondi et continu</a>.\n\n##Est-ce que je vais apprendre
           l'informatique grâce à ce cours en ligne ?\nBien qu'il existe des opportunités
           d'apprendre et de pratiquer les concepts de base du codage et de voir comment
-          ils sont présentés aux étudiants dans le programme, il ne s'agit pas d'une
+          ils sont présentés aux élèves dans le programme, il ne s'agit pas d'une
           introduction complète à l'informatique pour les adultes. À la fin du cours,
           nous fournirons d'autres ressources qui peuvent vous aider à approfondir
           les concepts de l'informatique.\n\n## Dois-je avoir de l'expérience pour
@@ -6452,7 +6458,7 @@ fr-FR:
           Chaque section est composée de **leçons**, qui représentent différents sujets et idées.
 
           ## Niveaux (bulles)
-          Chaque étape est composée de niveaux, qui ressemblent à des bulles. **Les diamants** représentent des niveaux comme celui-ci, qui contiennent des vidéos, des lectures ou des questions. Certains **cercles** sont des puzzles en ligne que vous compléterez pour pratiquer les concepts de codage. Les autres **cercles** sont des questions à réponse libre, auxquelles vous soumettrez une réponse et que vous réexaminerez plus tard. Les couleurs de la bulle changeront en fonction de votre progression. Dans ce cours de développement professionnel en ligne, vous verrez les types de bulles suivants :
+          Chaque étape est composée de niveaux, qui ressemblent à des bulles. **Les diamants** représentent des niveaux comme celui-ci, qui contiennent des vidéos, des lectures ou des questions. Certains **cercles** sont des casse-têtes en ligne que vous compléterez pour pratiquer les concepts de codage. Les autres **cercles** sont des questions à réponse libre, auxquelles vous soumettrez une réponse et que vous réexaminerez plus tard. Les couleurs de la bulle changeront en fonction de votre progression. Dans ce cours de développement professionnel en ligne, vous verrez les types de bulles suivants :
           <br/>
 
           <img src ="https://images.code.org/8b3fcfcf0120bed0dc34c014f1f81071-image-1548976153188.png" />
@@ -6488,14 +6494,14 @@ fr-FR:
           ## Soyez connectés
           - **Continuez à participer à la communauté d'apprentissage professionnel des enseignants de code.org :** Le forum que vous avez utilisé tout au long de ce cours sera une excellente ressource pour vous permettre d'aller de l'avant. Vous pouvez l'utiliser non seulement pour vous référer à votre apprentissage de ce cours, mais pour trouver un soutien tout au long de votre parcours, ou même pour offrir un soutien à d'autres qui ont besoin de votre expertise. Assurez-vous de le mettre en signet maintenant et visitez souvent : <a href="http://forum.code.org/c/csf" target="blank" rel="noopener noreferrer">http://forum.code.org /c/csf</a>.
           - **Connectez-vous avec <a href="http://twitter.com/teachcode" target="blank" rel="noopener noreferrer">@teachcode</a> sur Twitter.**
-          - **Rejoignez l'Association des professeurs d'informatique (CSTA) :** <a href="http://csta.acm.org/index.html" target="blank" rel="noopener noreferrer">Le CSTA</ a> est une communauté engagée d'éducateurs à travers le pays qui s'engage à apporter l'enseignement de l'informatique à leurs étudiants tout en sensibilisant le grand public au sujet. Ils organisent une conférence annuelle et ont également des sections qui organisent des réunions locales.
+          - **Rejoignez l'Association des professeurs d'informatique (CSTA) :** <a href="http://csta.acm.org/index.html" target="blank" rel="noopener noreferrer">Le CSTA</ a> est une communauté engagée d'éducateurs à travers le pays qui s'engage à apporter l'enseignement de l'informatique à leurs élèves tout en sensibilisant le grand public au sujet. Ils organisent une conférence annuelle et ont également des sections qui organisent des réunions locales.
 
 
           > Merci pour votre participation ! Nous avons hâte d'entendre comment vous implémentez l'informatique et Code Studio dans votre classe !
       OPD-K5 Outline_copy:
         markdown: "# Plan de cours\n\nLe cours est divisé en quatre parties conceptuelles,
           chacune contenant des leçons, avec différents « niveaux », qui sont familièrement
-          appelés bulles, étapes ou énigmes par les étudiants et les enseignants.
+          appelés bulles, étapes ou casse-têtes par les élèves et les enseignants.
           Voici un aperçu de ce que vous apprendrez si vous suivez le cours en entier
           :\n\n## Commencer\n\n### Leçon 1 : Bienvenue dans « Enseigner les principes
           fondamentaux de l'informatique » (15 minutes)\n- Revoir les détails du cours\n-
@@ -6505,15 +6511,15 @@ fr-FR:
           cours\n\n### Leçon 2 : Se familiariser avec les cours de base en informatique
           (15-20 minutes)\n- Se familiariser avec le contenu et l'organisation des
           cours Fondamentaux de l'informatique\n- Identifier quel cours est le plus
-          approprié pour vos étudiants\n- Comprendre l'importance de l'enseignant
-          dans le programme Fondamentaux de l'informatique\n- Comprendre différents
-          types de cours sur les fondamentaux de l'informatique\n\n## Concepts de
-          codage de base et pratiques d'enseignement\n\n### Leçon 3 : Séquençage (15-45
-          minutes)\n- Définir \"programme\" et \"algorithme\"\n- Trouver où le séquençage
-          est introduit dans les cours Fondamentaux de l'informatique\n- Utiliser
-          le moteur de programmation visuel Code.org pour écrire des programmes simples\n-
-          Explorer une leçon hors ligne sur le séquençage et réfléchir à son application
-          en classe\n- Réfléchir à la façon d'utiliser les plans de cours\n\n### Leçon
+          approprié pour vos élèves\n- Comprendre l'importance de l'enseignant dans
+          le programme Fondamentaux de l'informatique\n- Comprendre différents types
+          de cours sur les fondamentaux de l'informatique\n\n## Concepts de codage
+          de base et pratiques d'enseignement\n\n### Leçon 3 : Séquençage (15-45 minutes)\n-
+          Définir \"programme\" et \"algorithme\"\n- Trouver où le séquençage est
+          introduit dans les cours Fondamentaux de l'informatique\n- Utiliser le moteur
+          de programmation visuel Code.org pour écrire des programmes simples\n- Explorer
+          une leçon hors ligne sur le séquençage et réfléchir à son application en
+          classe\n- Réfléchir à la façon d'utiliser les plans de cours\n\n### Leçon
           4 : Boucles (15-45 minutes)\n- Définir des \"boucles\" et expliquer leur
           importance\n- Identifier où les boucles sont introduites dans les cours
           Fondamentaux de l'informatique\n- Explorer une leçon hors ligne sur les
@@ -6535,7 +6541,7 @@ fr-FR:
           S'entraîner à coder un projet\n\n## [Facultatif] Plonger plus profondément
           : cours E et F\nVous voudrez compléter cette section si vous enseignez les
           cours E ou F. Cette section aborde certains des concepts les plus difficiles
-          abordés dans ces cours pour les étudiants plus âgés.\n\n### Leçon 8 : Fonctions
+          abordés dans ces cours pour les élèves plus âgés.\n\n### Leçon 8 : Fonctions
           (30-45 minutes)\n- Voir si vous enseigneriez les cours E ou F aux élèves\n-
           Définir des « fonctions » et expliquer leur importance\n- Identifier où
           les fonctions sont introduites dans les cours Fondamentaux de l'informatique\n-
@@ -6576,8 +6582,8 @@ fr-FR:
 
           La recherche montre que la programmation par paires :
 
-          - Conduit à des programmes d'étudiants de meilleure qualité par rapport aux programmes d'étudiants non jumelés
-          - Réduit le soi-disant « écart de confiance » entre les étudiantes et les étudiants, tout en augmentant la confiance en la programmation de tous les étudiants
+          - Conduit à des programmes d'élèves de meilleure qualité par rapport aux programmes d'élèves non jumelés
+          - Réduit le soi-disant « écart de confiance » entre les étudiantes et les élèves, tout en augmentant la confiance en la programmation de tous les élèves
 
           Le National Center for Women & Information Technology (NCWIT) a un <a href="http://www.ncwit.org/sites/default/files/resources/pairprogramming_retainingwomencollaborativelearning_practice.pdf" target="blank" rel="noopener noreferrer ">une excellente ressource sur les avantages de la programmation en binôme</a>.
 
@@ -6587,7 +6593,7 @@ fr-FR:
 
           [Vous ne voyez pas la vidéo ? Cliquez ici](http://videos.code.org/2014/C1-pair-programming.mp4)
           <br/><br/>
-          La programmation en binôme est non seulement bénéfique pour les étudiants, mais elle est également pratiquée par certains programmeurs informatiques professionnels. Regardez cette vidéo pour apprendre à présenter la programmation en binôme à vos élèves.
+          La programmation en binôme est non seulement bénéfique pour les élèves, mais elle est également pratiquée par certains programmeurs informatiques professionnels. Regardez cette vidéo pour apprendre à présenter la programmation en binôme à vos élèves.
 
           <a href="https://www.youtube.com/watch?v=sxToW3ixrwo" target="blank" rel="noopener noreferrer">![](https://images.code.org/01da36dbe56da7986c3652991d4828e8-image -1571172869229.54.16 PM.png)</a>
 
@@ -6659,7 +6665,7 @@ fr-FR:
 
           <img src="https://images.code.org/06b4f5c946f2a47176706352d9dbbb56-image-1434152393531.JPG" width="450px" style="border-radius:10px; float:right; margin: 0 0 40px 40px;">
 
-          Dans les niveaux qui suivent, vous découvrirez un concept de codage à travers des leçons hors ligne, ainsi que des puzzles en ligne. Pour terminer un puzzle, vous devrez écrire du code à l'aide de blocs de code Blockly. Vous découvrirez également une pratique pédagogique clé.
+          Dans les niveaux qui suivent, vous découvrirez un concept de codage à travers des leçons hors ligne, ainsi que des casse-têtes en ligne. Pour terminer un casse-tête, vous devrez écrire du code à l'aide de blocs de code Blockly. Vous découvrirez également une pratique pédagogique clé.
 
           ## Concept de codage : séquençage
           - Vous pourrez définir "algorithme" et "programme"
@@ -6856,7 +6862,7 @@ fr-FR:
 
           Dans ces leçons, vous allez :
           - Définir et expliquer ce que signifie le concept de base, et pourquoi c'est important en informatique
-          - Écrire des programmes simples appliquant le concept (en utilisant la programmation visuelle pour résoudre des énigmes)
+          - Écrire des programmes simples appliquant le concept (en utilisant la programmation visuelle pour résoudre des casse-têtes)
           - Réfléchir à la façon dont vous pourriez intégrer ce concept dans votre enseignement
 
           ## Comment savoir si je dois passer à la leçon suivante ?
@@ -6864,7 +6870,7 @@ fr-FR:
           Au fur et à mesure que vous terminez chaque leçon, demandez-vous :
 
           - Pourrais-je définir et expliquer l'importance de ce concept de base particulier à quelqu'un qui ne connaît pas l'informatique ?
-          - Ai-je réussi à terminer les énigmes simples de cette leçon ?
+          - Ai-je réussi à terminer les casse-têtes simples de cette leçon ?
           - Ai-je quelques idées sur la façon dont je pourrais l'utiliser dans ma classe ?
 
           Si vous répondez oui à chaque question, passez à la leçon suivante. Si vous répondez non à l'une des questions, envisagez de revoir la leçon ou d'approfondir le sujet dans l'un des cours Fondamentaux de l'informatique avant de poursuivre.
@@ -6886,7 +6892,7 @@ fr-FR:
           Les initier à l'informatique dès la maternelle, lorsqu'ils n'ont pas à s'inscrire à un cours comme ils le pourraient au lycée, leur permet à tous de voir à quel point le sujet est accessible et de décider s'ils ça ou non.
 
           ### **C'est marrant !**
-          L'informatique donne aux étudiants l'opportunité de collaborer, d'être créatifs et de s'exprimer !
+          L'informatique donne aux élèves l'opportunité de collaborer, d'être créatifs et de s'exprimer !
 
           ### **Besoin de plus de conviction ?**
           Code.org propose de nombreuses ressources pour vous aider, ainsi que les élèves, votre administration, vos parents et votre entourage, à comprendre pourquoi l'informatique est importante en classe. Découvrez ci-dessous notre série de vidéos inspirantes, ainsi que certaines des statistiques et des preuves concernant l'éducation à l'informatique.
@@ -6913,8 +6919,8 @@ fr-FR:
 
           > <a href="http://forum.code.org/t/teaching-computer-science-your-plans/412" target="blank" rel="noopener noreferrer"><button class="plc"> Publiez votre programme >></button></a>
       courseF_sprites_freeplay:
-        description: C'est à votre tour de créer ce que vous voulez ! Quel genre de
-          projet ferez-vous ?
+        description: C'est ton tour maintenant, crée ce que tu veux ! Quel type de
+          projet vas-tu faire ?
         display_name: Sprites - Jeu libre
       OPD-K5 About:
         markdown: |-
@@ -6922,7 +6928,7 @@ fr-FR:
 
           ## Aperçu du cours
 
-          Ce cours est conçu comme une introduction au programme et aux ressources des principes fondamentaux de l'informatique de Code.org pour les enseignants. En lisant, en visionnant des vidéos, en complétant des puzzles interactifs et en réfléchissant à votre apprentissage, vous développerez votre propre compréhension tout en vous préparant à enseigner l'informatique dans votre classe.
+          Ce cours est conçu comme une introduction au programme et aux ressources des principes fondamentaux de l'informatique de Code.org pour les enseignants. En lisant, en visionnant des vidéos, en complétant des casse-têtes interactifs et en réfléchissant à votre apprentissage, vous développerez votre propre compréhension tout en vous préparant à enseigner l'informatique dans votre classe.
 
           ## Objectifs d'apprentissage
 
@@ -6949,7 +6955,7 @@ fr-FR:
 
           ## Aperçu du cours
 
-          Ce cours est conçu comme une introduction au programme et aux ressources des principes fondamentaux de l'informatique de Code.org pour les enseignants. En lisant, en visionnant des vidéos, en complétant des puzzles interactifs et en réfléchissant à votre apprentissage, vous développerez votre propre compréhension tout en vous préparant à enseigner l'informatique dans votre classe.
+          Ce cours est conçu comme une introduction au programme et aux ressources des principes fondamentaux de l'informatique de Code.org pour les enseignants. En lisant, en visionnant des vidéos, en complétant des casse-têtes interactifs et en réfléchissant à votre apprentissage, vous développerez votre propre compréhension tout en vous préparant à enseigner l'informatique dans votre classe.
 
           ## Objectifs d'apprentissage
 
@@ -6977,7 +6983,7 @@ fr-FR:
           Lorsque vous êtes connecté à Code.org en tant qu'enseignant, vous avez accès à de nombreuses fonctionnalités que vos élèves n'ont pas. Vous avez déjà vu comment trouver un cours, créer une section et affecter votre classe à cette section. Cependant, vous pouvez également :
 
           - **Suivre les progrès des élèves** : [Évaluer l'apprentissage](https://support.code.org/hc/en-us/articles/115000693231-Viewing-student-progress) de tous vos élèves.
-          - **Votre progression de cours** : affichez votre propre progression personnelle sur les leçons Code.org, en tant qu'apprenant. Vos élèves pourront également voir leur progression dans leurs comptes. Cependant, en tant qu'enseignant, vous pouvez également consulter les plans de cours et voir les solutions pour chaque puzzle.
+          - **Votre progression de cours** : affichez votre propre progression personnelle sur les leçons Code.org, en tant qu'apprenant. Vos élèves pourront également voir leur progression dans leurs comptes. Cependant, en tant qu'enseignant, vous pouvez également consulter les plans de cours et voir les solutions pour chaque casse-tête.
           - **Aide et communauté** : accédez à [support.code.org](https://support.code.org/), où vous pouvez poster des questions, répondre aux messages d'autres enseignants et lire les FAQ du personnel de Code.org . Sur cette page, vous pourrez également contacter directement Code.org pour toute question que vous pourriez avoir.
           - **Développement professionnel** : Accédez à une [formation en personne](https://code.org/professional-development-workshops) pour les enseignants.
           - **Conférenciers invités en informatique** : [Trouvez des professionnels intelligents, passionnés et engageants de l'industrie technologique] (https://code.org/volunteer/local) qui aimeraient parler à votre classe de leur travail.
@@ -6997,7 +7003,7 @@ fr-FR:
           Lorsque vous êtes connecté à Code.org en tant qu'enseignant, vous avez accès à de nombreuses fonctionnalités que vos élèves n'ont pas. Vous avez déjà vu comment trouver un cours, créer une section et affecter votre classe à cette section. Cependant, vous pouvez également :
 
           - **Suivre les progrès des élèves** : [Évaluer l'apprentissage](https://support.code.org/hc/en-us/articles/115000693231-Viewing-student-progress) de tous vos élèves.
-          - **Votre progression de cours** : affichez votre propre progression personnelle sur les leçons Code.org, en tant qu'apprenant. Vos élèves pourront également voir leur progression dans leurs comptes. Cependant, en tant qu'enseignant, vous pouvez également consulter les plans de cours et voir les solutions pour chaque puzzle.
+          - **Votre progression de cours** : affichez votre propre progression personnelle sur les leçons Code.org, en tant qu'apprenant. Vos élèves pourront également voir leur progression dans leurs comptes. Cependant, en tant qu'enseignant, vous pouvez également consulter les plans de cours et voir les solutions pour chaque casse-tête.
           - **Aide et communauté** : accédez à [support.code.org](https://support.code.org/), où vous pouvez poster des questions, répondre aux messages d'autres enseignants et lire les FAQ du personnel de Code.org . Sur cette page, vous pourrez également contacter directement Code.org pour toute question que vous pourriez avoir.
           - **Développement professionnel** : Accédez à une [formation en personne](https://code.org/professional-development-workshops) pour les enseignants.
           - **Conférenciers invités en informatique** : [Trouvez des professionnels intelligents, passionnés et engageants de l'industrie technologique] (https://code.org/volunteer/local) qui aimeraient parler à votre classe de leur travail.
@@ -7050,7 +7056,7 @@ fr-FR:
 
           ## Puzzles
 
-          Chaque étape est composée de niveaux que nous appelons __puzzles__, qui contiennent des vidéos, des lectures ou des questions individuelles. Les puzzles sont indiqués par des cercles avec des nombres. Les couleurs du cercle du puzzle changeront en fonction de vos progrès. Dans ce développement professionnel, vous verrez les types de cercles suivants :
+          Chaque étape est composée de niveaux que nous appelons __ casse-têtes__, qui contiennent des vidéos, des lectures ou des questions individuelles. Les casse-têtes sont indiqués par des cercles avec des nombres. Les couleurs du cercle du casse-tête changeront en fonction de vos progrès. Dans ce développement professionnel, vous verrez les types de cercles suivants :
           <br/>
 
           <img src ="https://images.code.org/8b3fcfcf0120bed0dc34c014f1f81071-image-1548976153188.png" />
@@ -7058,15 +7064,15 @@ fr-FR:
           <br/>
           <br/>
 
-          ## Accéder aux puzzles
+          ## Accéder aux casse-têtes
 
           On les trouve :
           <p>-Sur la page principale de développement professionnel</p>
-          <p>-Sur l'en-tête dans n'importe quel autre puzzle sur la même scène</p>
-          <p>-Depuis le menu déroulant de l'en-tête dans n'importe quel puzzle</p>
+          <p>-Sur l'en-tête dans n'importe quel autre casse-tête sur la même scène</p>
+          <p>-Depuis le menu déroulant de l'en-tête dans n'importe quel casse-tête</p>
 
           <h4><détails>
-          <summary style="color:#ffa400;">Cliquez ici pour en savoir plus sur l'accès aux puzzles</summary>
+          <summary style="color:#ffa400;">Cliquez ici pour en savoir plus sur l'accès aux casse-têtes</summary>
           <br>
           <div><em>Cliquez ensuite sur la flèche ci-dessus pour réduire la section</em></div>
           <br>
@@ -7075,12 +7081,12 @@ fr-FR:
 
           <br/>
 
-          ## Se déplacer entre les puzzles
+          ## Se déplacer entre les casse-têtes
 
-          Cliquez sur « Continuer » ou « Ressource suivante » après chaque puzzle pour passer au suivant, ou, passez à un nouveau puzzle en cliquant sur ce numéro dans l'en-tête, quand vous le voulez.
+          Cliquez sur « Continuer » ou « Ressource suivante » après chaque casse-tête pour passer au suivant, ou, passez à un nouveau casse-tête en cliquant sur ce numéro dans l'en-tête, quand vous le voulez.
 
           <h4><détails>
-          <summary style="color:#ffa400;">Cliquez ici pour en savoir plus sur le déplacement entre les puzzles</summary>
+          <summary style="color:#ffa400;">Cliquez ici pour en savoir plus sur le déplacement entre les casse-têtes</summary>
           <br>
           <div><em>Cliquez ensuite sur la flèche ci-dessus pour réduire la section</em></div>
           <br>
@@ -7113,7 +7119,7 @@ fr-FR:
 
           ## Puzzles
 
-          Chaque étape est composée de niveaux que nous appelons __puzzles__, qui contiennent des vidéos, des lectures ou des questions individuelles. Les puzzles sont indiqués par des cercles avec des nombres. Les couleurs du cercle du puzzle changeront en fonction de vos progrès. Dans ce développement professionnel, vous verrez les types de cercles suivants :
+          Chaque étape est composée de niveaux que nous appelons __ casse-têtes__, qui contiennent des vidéos, des lectures ou des questions individuelles. Les casse-têtes sont indiqués par des cercles avec des nombres. Les couleurs du cercle du casse-tête changeront en fonction de vos progrès. Dans ce développement professionnel, vous verrez les types de cercles suivants :
           <br/>
 
           <img src ="https://images.code.org/8b3fcfcf0120bed0dc34c014f1f81071-image-1548976153188.png" />
@@ -7121,15 +7127,15 @@ fr-FR:
           <br/>
           <br/>
 
-          ## Accéder aux puzzles
+          ## Accéder aux casse-têtes
 
           On les trouve :
           <p>-Sur la page principale de développement professionnel</p>
-          <p>-Sur l'en-tête dans n'importe quel autre puzzle sur la même scène</p>
-          <p>-Depuis le menu déroulant de l'en-tête dans n'importe quel puzzle</p>
+          <p>-Sur l'en-tête dans n'importe quel autre casse-tête sur la même scène</p>
+          <p>-Depuis le menu déroulant de l'en-tête dans n'importe quel casse-tête</p>
 
           <h4><détails>
-          <summary style="color:#ffa400;">Cliquez ici pour en savoir plus sur l'accès aux puzzles</summary>
+          <summary style="color:#ffa400;">Cliquez ici pour en savoir plus sur l'accès aux casse-têtes</summary>
           <br>
           <div><em>Cliquez ensuite sur la flèche ci-dessus pour réduire la section</em></div>
           <br>
@@ -7138,12 +7144,12 @@ fr-FR:
 
           <br/>
 
-          ## Se déplacer entre les puzzles
+          ## Se déplacer entre les casse-têtes
 
-          Cliquez sur « Continuer » ou « Ressource suivante » après chaque puzzle pour passer au suivant, ou, passez à un nouveau puzzle en cliquant sur ce numéro dans l'en-tête, quand vous le voulez.
+          Cliquez sur « Continuer » ou « Ressource suivante » après chaque casse-tête pour passer au suivant, ou, passez à un nouveau casse-tête en cliquant sur ce numéro dans l'en-tête, quand vous le voulez.
 
           <h4><détails>
-          <summary style="color:#ffa400;">Cliquez ici pour en savoir plus sur le déplacement entre les puzzles</summary>
+          <summary style="color:#ffa400;">Cliquez ici pour en savoir plus sur le déplacement entre les casse-têtes</summary>
           <br>
           <div><em>Cliquez ensuite sur la flèche ci-dessus pour réduire la section</em></div>
           <br>
@@ -7315,7 +7321,7 @@ fr-FR:
         markdown: |-
           # Démarrage > Plan du cours
 
-          Ce cours est divisé en onze étapes, chacune étant composée de « niveaux » ou « puzzles ». Voici un aperçu de ce que vous apprendrez si vous suivez le cours en entier :
+          Ce cours est divisé en onze étapes, chacune étant composée de « niveaux » ou «  casse-têtes ». Voici un aperçu de ce que vous apprendrez si vous suivez le cours en entier :
 
           ## Étape 1 : Démarrage (10-30 minutes)
 
@@ -7407,7 +7413,7 @@ fr-FR:
         markdown: |-
           # Démarrage > Plan du cours
 
-          Ce cours est divisé en onze étapes, chacune étant composée de « niveaux » ou « puzzles ». Voici un aperçu de ce que vous apprendrez si vous suivez le cours en entier :
+          Ce cours est divisé en onze étapes, chacune étant composée de « niveaux » ou «  casse-têtes ». Voici un aperçu de ce que vous apprendrez si vous suivez le cours en entier :
 
           ## Étape 1 : Démarrage (10-30 minutes)
 
@@ -7501,7 +7507,7 @@ fr-FR:
 
           Une stratégie de gestion de classe importante que de nombreux éducateurs utilisent est le regroupement stratégique. Chez Code.org, nous vous suggérons d'essayer la stratégie de regroupement stratégique utilisée dans les bureaux réels des plus grandes entreprises technologiques : la programmation en binôme.
 
-          >**La programmation en binôme** est lorsque deux étudiants utilisent un ordinateur pour écrire un programme ensemble. Le National Center for Women & Information Technology (NCWIT) a une [excellente ressource sur les avantages de la programmation en binôme] (http://www.ncwit.org/sites/default/files/resources/pairprogramming_retainingwomencollaborativelearning_practice.pdf).
+          >**La programmation en binôme** est lorsque deux élèves utilisent un ordinateur pour écrire un programme ensemble. Le National Center for Women & Information Technology (NCWIT) a une [excellente ressource sur les avantages de la programmation en binôme] (http://www.ncwit.org/sites/default/files/resources/pairprogramming_retainingwomencollaborativelearning_practice.pdf).
 
           La recherche montre que la programmation en binôme :
 
@@ -7527,7 +7533,7 @@ fr-FR:
 
           Une stratégie de gestion de classe importante que de nombreux éducateurs utilisent est le regroupement stratégique. Chez Code.org, nous vous suggérons d'essayer la stratégie de regroupement stratégique utilisée dans les bureaux réels des plus grandes entreprises technologiques : la programmation en binôme.
 
-          >**La programmation en binôme** est lorsque deux étudiants utilisent un ordinateur pour écrire un programme ensemble. Le National Center for Women & Information Technology (NCWIT) a une [excellente ressource sur les avantages de la programmation en binôme] (http://www.ncwit.org/sites/default/files/resources/pairprogramming_retainingwomencollaborativelearning_practice.pdf).
+          >**La programmation en binôme** est lorsque deux élèves utilisent un ordinateur pour écrire un programme ensemble. Le National Center for Women & Information Technology (NCWIT) a une [excellente ressource sur les avantages de la programmation en binôme] (http://www.ncwit.org/sites/default/files/resources/pairprogramming_retainingwomencollaborativelearning_practice.pdf).
 
           La recherche montre que la programmation en binôme :
 
@@ -7657,28 +7663,28 @@ fr-FR:
           <a class="btn btn-large btn-primary" href="https://form.jotform.com/90556900301146?user_id=<user_id/>">Répondre au pré-sondage</a>
       OPD-K5 Puzzles:
         markdown: |-
-          # Regarder vers l'avenir > Tout sur les puzzles
+          # Regarder vers l'avenir > Tout sur les casse-têtes
 
-          Dans les étapes qui suivent, vous allez utiliser Code.org pour apprendre les bases de l'informatique. Vous serez confronté à une série d'énigmes qui doivent être résolues. Pour ce faire, vous devrez écrire des programmes utilisant différents personnages pour atteindre différents objectifs. Nous nous entraînerons avec notre premier puzzle à l'étape 3. Mais avant d'y arriver, voici un aperçu des différents types de puzzles que vous et vos élèves rencontrerez :
+          Dans les étapes qui suivent, vous allez utiliser Code.org pour apprendre les bases de l'informatique. Vous serez confronté à une série d'énigmes qui doivent être résolues. Pour ce faire, vous devrez écrire des programmes utilisant différents personnages pour atteindre différents objectifs. Nous nous entraînerons avec notre premier casse-tête à l'étape 3. Mais avant d'y arriver, voici un aperçu des différents types de casse-têtes que vous et vos élèves rencontrerez :
 
-          ## Exemples de puzzles de labyrinthe
+          ## Exemples de casse-têtes de labyrinthe
 
           ![](//code.org/images/mockup_birds.png)
           ![](//code.org/images/pvz.png)
 
           Vous devrez amener l'oiseau en colère au cochon et vous devrez amener le zombie au tournesol.
 
-          ## Exemple de puzzle d'artiste
+          ## Exemple de casse-tête d'artiste
 
           ![](//code.org/images/artist.png)
 
           Vous devez faire dessiner par l'artiste sur les lignes grises en le déplaçant autour de la toile. Il tracera une ligne derrière lui partout où il ira.
 
-          ## Exemple de puzzle d'abeille
+          ## Exemple de casse-tête d'abeille
 
           ![](//code.org/images/bee.png)
 
-          Vous devrez déplacer l'abeille pour collecter tout le nectar et faire tout le miel. Les unités de nectar et de miel nécessaires pour chaque puzzle sont écrites dans le coin inférieur droit de chaque fleur ou rayon de miel.
+          Vous devrez déplacer l'abeille pour collecter tout le nectar et faire tout le miel. Les unités de nectar et de miel nécessaires pour chaque casse-tête sont écrites dans le coin inférieur droit de chaque fleur ou rayon de miel.
 
           ## Jouer au labo
 
@@ -7691,46 +7697,46 @@ fr-FR:
           ![](//code.org/images/flappy.png)
 
           Dans Flappy, vous créerez votre propre jeu d'oiseau Flappy.
-          Les énigmes qui ont précédé la création du jeu vous aident à apprendre les morceaux de code dont vous aurez besoin pour votre jeu.
+          Les casse-têtes qui ont précédé la création du jeu vous aident à apprendre les morceaux de code dont vous aurez besoin pour votre jeu.
 
           ## Rebondir
 
           ![](//code.org/images/bounce.png)
 
           Dans Bounce, vous pouvez créer votre propre jeu.
-          Tout comme dans Flappy, les énigmes menant à la création du jeu vous aident à apprendre les morceaux de code dont vous aurez besoin pour votre jeu.
+          Tout comme dans Flappy, les casse-têtes menant à la création du jeu vous aident à apprendre les morceaux de code dont vous aurez besoin pour votre jeu.
 
           * * *
 
-          Dans cette série, nous vous présenterons des puzzles de [CS Fundamentals] (http://code.org/educate/k5). Ces puzzles servent de didacticiels en ligne, aidant les étudiants à apprendre des concepts tels que les boucles, les événements, les conditions et les fonctions.
+          Dans cette série, nous vous présenterons des casse-têtes de [CS Fundamentals] (http://code.org/educate/k5). Ces casse-têtes servent de didacticiels en ligne, aidant les élèves à apprendre des concepts tels que les boucles, les événements, les conditions et les fonctions.
 
-          Au cours de cette expérience de développement professionnel, nous intercalerons plusieurs progressions de puzzle, vous donnant la chance de vous familiariser avec les concepts de programmation dans CS Fundamentals et les personnages dont vos étudiants tomberont amoureux. Pendant ce cours, vous remarquerez que vous vous déplacez rapidement entre différents environnements qu'il s'agisse d'amener l'oiseau en colère au cochon, de faire un dessin ou de faire récolter du nectar à une abeille. Ces transitions se produisent rapidement dans ce cours pour vous montrer une gamme des énigmes proposées dans CS Fundamentals. Vos élèves passeront plus de temps avec chaque environnement.
+          Au cours de cette expérience de développement professionnel, nous intercalerons plusieurs progressions de casse-tête, vous donnant la chance de vous familiariser avec les concepts de programmation dans CS Fundamentals et les personnages dont vos élèves tomberont amoureux. Pendant ce cours, vous remarquerez que vous vous déplacez rapidement entre différents environnements qu'il s'agisse d'amener l'oiseau en colère au cochon, de faire un dessin ou de faire récolter du nectar à une abeille. Ces transitions se produisent rapidement dans ce cours pour vous montrer une gamme des casse-têtes proposées dans CS Fundamentals. Vos élèves passeront plus de temps avec chaque environnement.
 
-          Si vous voulez faire la même chose qu'eux, vous pouvez toujours suivre les cours [CS Fundamentals](http://studio.code.org/) par vous-même à tout moment. Mais ce cours vous donnera une bonne idée de ce à quoi vous attendre en tirant pour vous quelques-uns des puzzles et des leçons les plus fondamentaux en peu de temps.
+          Si vous voulez faire la même chose qu'eux, vous pouvez toujours suivre les cours [CS Fundamentals](http://studio.code.org/) par vous-même à tout moment. Mais ce cours vous donnera une bonne idée de ce à quoi vous attendre en tirant pour vous quelques-uns des casse-têtes et des leçons les plus fondamentaux en peu de temps.
       OPD-K5 Puzzles_dani:
         markdown: |-
-          # Regarder vers l'avenir > Tout sur les puzzles
+          # Regarder vers l'avenir > Tout sur les casse-têtes
 
-          Dans les étapes qui suivent, vous allez utiliser Code.org pour apprendre les bases de l'informatique. Vous serez confronté à une série d'énigmes qui doivent être résolues. Pour ce faire, vous devrez écrire des programmes utilisant différents personnages pour atteindre différents objectifs. Nous nous entraînerons avec notre premier puzzle à l'étape 3. Mais avant d'y arriver, voici un aperçu des différents types de puzzles que vous et vos élèves rencontrerez :
+          Dans les étapes qui suivent, vous allez utiliser Code.org pour apprendre les bases de l'informatique. Vous serez confronté à une série d'énigmes qui doivent être résolues. Pour ce faire, vous devrez écrire des programmes utilisant différents personnages pour atteindre différents objectifs. Nous nous entraînerons avec notre premier casse-tête à l'étape 3. Mais avant d'y arriver, voici un aperçu des différents types de casse-têtes que vous et vos élèves rencontrerez :
 
-          ## Exemples de puzzles de labyrinthe
+          ## Exemples de casse-têtes de labyrinthe
 
           ![](//code.org/images/mockup_birds.png)
           ![](//code.org/images/pvz.png)
 
           Vous devrez amener l'oiseau en colère au cochon et vous devrez amener le zombie au tournesol.
 
-          ## Exemple de puzzle d'artiste
+          ## Exemple de casse-tête d'artiste
 
           ![](//code.org/images/artist.png)
 
           Vous devez faire dessiner par l'artiste sur les lignes grises en le déplaçant autour de la toile. Il tracera une ligne derrière lui partout où il ira.
 
-          ## Exemple de puzzle d'abeille
+          ## Exemple de casse-tête d'abeille
 
           ![](//code.org/images/bee.png)
 
-          Vous devrez déplacer l'abeille pour collecter tout le nectar et faire tout le miel. Les unités de nectar et de miel nécessaires pour chaque puzzle sont écrites dans le coin inférieur droit de chaque fleur ou rayon de miel.
+          Vous devrez déplacer l'abeille pour collecter tout le nectar et faire tout le miel. Les unités de nectar et de miel nécessaires pour chaque casse-tête sont écrites dans le coin inférieur droit de chaque fleur ou rayon de miel.
 
           ## Jouer au labo
 
@@ -7743,22 +7749,22 @@ fr-FR:
           ![](//code.org/images/flappy.png)
 
           Dans Flappy, vous créerez votre propre jeu d'oiseau Flappy.
-          Les énigmes qui ont précédé la création du jeu vous aident à apprendre les morceaux de code dont vous aurez besoin pour votre jeu.
+          Les casse-têtes qui ont précédé la création du jeu vous aident à apprendre les morceaux de code dont vous aurez besoin pour votre jeu.
 
           ## Rebondir
 
           ![](//code.org/images/bounce.png)
 
           Dans Bounce, vous pouvez créer votre propre jeu.
-          Tout comme dans Flappy, les énigmes menant à la création du jeu vous aident à apprendre les morceaux de code dont vous aurez besoin pour votre jeu.
+          Tout comme dans Flappy, les casse-têtes menant à la création du jeu vous aident à apprendre les morceaux de code dont vous aurez besoin pour votre jeu.
 
           * * *
 
-          Dans cette série, nous vous présenterons des puzzles de [CS Fundamentals] (http://code.org/educate/k5). Ces puzzles servent de didacticiels en ligne, aidant les étudiants à apprendre des concepts tels que les boucles, les événements, les conditions et les fonctions.
+          Dans cette série, nous vous présenterons des casse-têtes de [CS Fundamentals] (http://code.org/educate/k5). Ces casse-têtes servent de didacticiels en ligne, aidant les élèves à apprendre des concepts tels que les boucles, les événements, les conditions et les fonctions.
 
-          Au cours de cette expérience de développement professionnel, nous intercalerons plusieurs progressions de puzzle, vous donnant la chance de vous familiariser avec les concepts de programmation dans CS Fundamentals et les personnages dont vos étudiants tomberont amoureux. Pendant ce cours, vous remarquerez que vous vous déplacez rapidement entre différents environnements qu'il s'agisse d'amener l'oiseau en colère au cochon, de faire un dessin ou de faire récolter du nectar à une abeille. Ces transitions se produisent rapidement dans ce cours pour vous montrer une gamme des énigmes proposées dans CS Fundamentals. Vos élèves passeront plus de temps avec chaque environnement.
+          Au cours de cette expérience de développement professionnel, nous intercalerons plusieurs progressions de casse-tête, vous donnant la chance de vous familiariser avec les concepts de programmation dans CS Fundamentals et les personnages dont vos élèves tomberont amoureux. Pendant ce cours, vous remarquerez que vous vous déplacez rapidement entre différents environnements qu'il s'agisse d'amener l'oiseau en colère au cochon, de faire un dessin ou de faire récolter du nectar à une abeille. Ces transitions se produisent rapidement dans ce cours pour vous montrer une gamme des casse-têtes proposées dans CS Fundamentals. Vos élèves passeront plus de temps avec chaque environnement.
 
-          Si vous voulez faire la même chose qu'eux, vous pouvez toujours suivre les cours [CS Fundamentals](http://studio.code.org/) par vous-même à tout moment. Mais ce cours vous donnera une bonne idée de ce à quoi vous attendre en tirant pour vous quelques-uns des puzzles et des leçons les plus fondamentaux en peu de temps.
+          Si vous voulez faire la même chose qu'eux, vous pouvez toujours suivre les cours [CS Fundamentals](http://studio.code.org/) par vous-même à tout moment. Mais ce cours vous donnera une bonne idée de ce à quoi vous attendre en tirant pour vous quelques-uns des casse-têtes et des leçons les plus fondamentaux en peu de temps.
       OPD-K5 Stage10Start:
         markdown: |-
           # Prochaines étapes > Passons en revue
@@ -7838,7 +7844,7 @@ fr-FR:
           - Différencier entre "codage" et "informatique"
           - Expliquer les avantages de commencer à coder en utilisant la programmation visuelle
 
-          > **Conseil pédagogique :** Bien que l'informatique puisse être une discipline riche et complexe, chez Code.org, nous reconnaissons que les enseignants et les étudiants doivent maîtriser les bases avant de se lancer dans des projets de niveau supérieur. Ce cours en ligne vous enseigne, en tant qu'enseignant, ces bases afin que vous puissiez également aider vos élèves à le faire.
+          > **Conseil pédagogique :** Bien que l'informatique puisse être une discipline riche et complexe, chez Code.org, nous reconnaissons que les enseignants et les élèves doivent maîtriser les bases avant de se lancer dans des projets de niveau supérieur. Ce cours en ligne vous enseigne, en tant qu'enseignant, ces bases afin que vous puissiez également aider vos élèves à le faire.
 
           Dans l'étape suivante, nous vous présenterons brièvement quelques cadres de réflexion sur le reste du contenu de ce cours. Ensuite, nous plongerons et commencerons à apprendre l'informatique.
       OPD-K5 Stage2Go_dani:
@@ -7854,7 +7860,7 @@ fr-FR:
           - Différencier entre "codage" et "informatique"
           - Expliquer les avantages de commencer à coder en utilisant la programmation visuelle
 
-          > **Conseil pédagogique :** Bien que l'informatique puisse être une discipline riche et complexe, chez Code.org, nous reconnaissons que les enseignants et les étudiants doivent maîtriser les bases avant de se lancer dans des projets de niveau supérieur. Ce cours en ligne vous enseigne, en tant qu'enseignant, ces bases afin que vous puissiez également aider vos élèves à le faire.
+          > **Conseil pédagogique :** Bien que l'informatique puisse être une discipline riche et complexe, chez Code.org, nous reconnaissons que les enseignants et les élèves doivent maîtriser les bases avant de se lancer dans des projets de niveau supérieur. Ce cours en ligne vous enseigne, en tant qu'enseignant, ces bases afin que vous puissiez également aider vos élèves à le faire.
 
           Dans l'étape suivante, nous vous présenterons brièvement quelques cadres de réflexion sur le reste du contenu de ce cours. Ensuite, nous plongerons et commencerons à apprendre l'informatique.
       OPD-K5 Stage2Overview:
@@ -7897,11 +7903,11 @@ fr-FR:
         markdown: |-
           # Séquençage > Réfléchir
 
-          Toutes nos félicitations ! Vous venez d'écrire du code. Vous êtes officiellement programmeur ! Notre plate-forme enregistre le nombre de lignes de code que vous avez écrites et vous le dira après chaque puzzle !
+          Toutes nos félicitations ! Vous venez d'écrire du code. Vous êtes officiellement programmeur ! Notre plate-forme enregistre le nombre de lignes de code que vous avez écrites et vous le dira après chaque casse-tête !
 
           ---
 
-          Avez-vous remarqué que le dernier puzzle était un peu plus difficile ? C'était un puzzle **défi**. Les casse-têtes sont destinés à repousser les limites de ce que les élèves vont faire. Nous indiquons clairement qu'ils doivent être tentés, sans forcément être terminés pour réussir le cours.
+          Avez-vous remarqué que le dernier casse-tête était un peu plus difficile ? C'était un casse-tête **défi**. Les casse-têtes sont destinés à repousser les limites de ce que les élèves vont faire. Nous indiquons clairement qu'ils doivent être tentés, sans forcément être terminés pour réussir le cours.
 
           <img src="https://images.code.org/e3b9903cf4acc68be5c01c4118b3d53d-image-1434152749660.JPG" width="450px" style="margin-right:45px; border-radius:10px;">
 
@@ -7912,11 +7918,11 @@ fr-FR:
         markdown: |-
           # Séquençage > Réfléchir
 
-          Toutes nos félicitations ! Vous venez d'écrire du code. Vous êtes officiellement programmeur ! Notre plate-forme enregistre le nombre de lignes de code que vous avez écrites et vous le dira après chaque puzzle !
+          Toutes nos félicitations ! Vous venez d'écrire du code. Vous êtes officiellement programmeur ! Notre plate-forme enregistre le nombre de lignes de code que vous avez écrites et vous le dira après chaque casse-tête !
 
           ---
 
-          Avez-vous remarqué que le dernier puzzle était un peu plus difficile ? C'était un puzzle **défi**. Les casse-têtes sont destinés à repousser les limites de ce que les élèves vont faire. Nous indiquons clairement qu'ils doivent être tentés, sans forcément être terminés pour réussir le cours.
+          Avez-vous remarqué que le dernier casse-tête était un peu plus difficile ? C'était un casse-tête **défi**. Les casse-têtes sont destinés à repousser les limites de ce que les élèves vont faire. Nous indiquons clairement qu'ils doivent être tentés, sans forcément être terminés pour réussir le cours.
 
           <img src="https://images.code.org/e3b9903cf4acc68be5c01c4118b3d53d-image-1434152749660.JPG" width="450px" style="margin-right:45px; border-radius:10px;">
 
@@ -7935,7 +7941,7 @@ fr-FR:
           - Écrirez des programmes à l'aide de blocs de code
           - Réfléchirez à leur application en classe
 
-          > **À quoi s'attendre à ce stade :** Dans les niveaux qui suivent, nous commencerons par un plan de cours hors ligne pour vous présenter un concept, pour modéliser la façon dont vous présenteriez des idées aux élèves de votre classe. Ensuite, nous vous fournirons des instructions vidéo et vous présenterons une série de puzzles et vous demanderons d'appliquer votre apprentissage. Pour terminer un puzzle, vous devrez écrire du code à l'aide de blocs de code Blockly. Ces leçons proviennent du cours A, qui s'adresse aux élèves de la maternelle. Nous terminerons par une occasion de réfléchir à la manière dont vous pourriez enseigner ce concept à vos élèves. Vous devriez passer entre 10 et 30 minutes sur cette étape.
+          > **À quoi s'attendre à ce stade :** Dans les niveaux qui suivent, nous commencerons par un plan de cours hors ligne pour vous présenter un concept, pour modéliser la façon dont vous présenteriez des idées aux élèves de votre classe. Ensuite, nous vous fournirons des instructions vidéo et vous présenterons une série de casse-têtes et vous demanderons d'appliquer votre apprentissage. Pour terminer un casse-tête, vous devrez écrire du code à l'aide de blocs de code Blockly. Ces leçons proviennent du cours A, qui s'adresse aux élèves de la maternelle. Nous terminerons par une occasion de réfléchir à la manière dont vous pourriez enseigner ce concept à vos élèves. Vous devriez passer entre 10 et 30 minutes sur cette étape.
 
           Prêt ? C'est parti !
       OPD-K5 Stage3Start_dani:
@@ -7950,7 +7956,7 @@ fr-FR:
           - Écrirez des programmes à l'aide de blocs de code
           - Réfléchirez à leur application en classe
 
-          > **À quoi s'attendre à ce stade :** Dans les niveaux qui suivent, nous commencerons par un plan de cours hors ligne pour vous présenter un concept, pour modéliser la façon dont vous présenteriez des idées aux élèves de votre classe. Ensuite, nous vous fournirons des instructions vidéo et vous présenterons une série de puzzles et vous demanderons d'appliquer votre apprentissage. Pour terminer un puzzle, vous devrez écrire du code à l'aide de blocs de code Blockly. Ces leçons proviennent du cours A, qui s'adresse aux élèves de la maternelle. Nous terminerons par une occasion de réfléchir à la manière dont vous pourriez enseigner ce concept à vos élèves. Vous devriez passer entre 10 et 30 minutes sur cette étape.
+          > **À quoi s'attendre à ce stade :** Dans les niveaux qui suivent, nous commencerons par un plan de cours hors ligne pour vous présenter un concept, pour modéliser la façon dont vous présenteriez des idées aux élèves de votre classe. Ensuite, nous vous fournirons des instructions vidéo et vous présenterons une série de casse-têtes et vous demanderons d'appliquer votre apprentissage. Pour terminer un casse-tête, vous devrez écrire du code à l'aide de blocs de code Blockly. Ces leçons proviennent du cours A, qui s'adresse aux élèves de la maternelle. Nous terminerons par une occasion de réfléchir à la manière dont vous pourriez enseigner ce concept à vos élèves. Vous devriez passer entre 10 et 30 minutes sur cette étape.
 
           Prêt ? C'est parti !
       OPD-K5 Stage4Go:
@@ -7990,7 +7996,7 @@ fr-FR:
           ***
 
           > ## Réflexion
-          > Comment expliqueriez-vous le concept de boucles à vos étudiants ?<br><br> [Partagez vos impressions sur notre forum.](http://forum.code.org/t/teaching-loops-and-efficiency/405 /1)
+          > Comment expliqueriez-vous le concept de boucles à vos élèves ?<br><br> [Partagez vos impressions sur notre forum.](http://forum.code.org/t/teaching-loops-and-efficiency/405 /1)
 
           > <a href="http://forum.code.org/t/teaching-loops-and-efficiency/405/1" target="blank" rel="noopener noreferrer"><button class="plc"> Discuter dans les forums >></button></a>
 
@@ -8032,7 +8038,7 @@ fr-FR:
           ***
 
           > ## Réflexion
-          > Comment expliqueriez-vous le concept de boucles à vos étudiants ?<br><br> [Partagez vos impressions sur notre forum.](http://forum.code.org/t/teaching-loops-and-efficiency/405 /1)
+          > Comment expliqueriez-vous le concept de boucles à vos élèves ?<br><br> [Partagez vos impressions sur notre forum.](http://forum.code.org/t/teaching-loops-and-efficiency/405 /1)
 
           > <a href="http://forum.code.org/t/teaching-loops-and-efficiency/405/1" target="blank" rel="noopener noreferrer"><button class="plc"> Discuter dans les forums >></button></a>
 
@@ -8068,7 +8074,7 @@ fr-FR:
           - Serez formé à coder des boucles simples
           - Réfléchirez à leur application en classe
 
-          > **À quoi s'attendre à ce stade :** Dans les niveaux qui suivent, nous présenterons une leçon hors ligne et une série d'énigmes du cours C (destiné au niveau 2) qui se concentrent sur le concept de boucles. Pour terminer un puzzle, vous devrez écrire du code à l'aide d'une programmation visuelle basée sur des blocs. Nous terminerons par une occasion de réfléchir. Vous devriez passer entre 20 et 45 minutes sur cette étape.
+          > **À quoi s'attendre à ce stade :** Dans les niveaux qui suivent, nous présenterons une leçon hors ligne et une série d'énigmes du cours C (destiné au niveau 2) qui se concentrent sur le concept de boucles. Pour terminer un casse-tête, vous devrez écrire du code à l'aide d'une programmation visuelle basée sur des blocs. Nous terminerons par une occasion de réfléchir. Vous devriez passer entre 20 et 45 minutes sur cette étape.
 
           Prêt? Allons-y!
       OPD-K5 Stage4Start_dani:
@@ -8084,7 +8090,7 @@ fr-FR:
           - Serez formé à coder des boucles simples
           - Réfléchirez à leur application en classe
 
-          > **À quoi s'attendre à ce stade :** Dans les niveaux qui suivent, nous présenterons une leçon hors ligne et une série d'énigmes du cours C (destiné au niveau 2) qui se concentrent sur le concept de boucles. Pour terminer un puzzle, vous devrez écrire du code à l'aide d'une programmation visuelle basée sur des blocs. Nous terminerons par une occasion de réfléchir. Vous devriez passer entre 20 et 45 minutes sur cette étape.
+          > **À quoi s'attendre à ce stade :** Dans les niveaux qui suivent, nous présenterons une leçon hors ligne et une série d'énigmes du cours C (destiné au niveau 2) qui se concentrent sur le concept de boucles. Pour terminer un casse-tête, vous devrez écrire du code à l'aide d'une programmation visuelle basée sur des blocs. Nous terminerons par une occasion de réfléchir. Vous devriez passer entre 20 et 45 minutes sur cette étape.
 
           Prêt? Allons-y!
       OPD-K5 Stage5Go:
@@ -8305,7 +8311,7 @@ fr-FR:
           - Vous entrainerez à coder des fonctions simples
           - Réfléchirez à l'application en classe
 
-          > **À quoi s'attendre à ce stade :** Tout d'abord, vous examinerez une leçon hors ligne du cours E (destiné au CM1) qui présente les fonctions. Ensuite, vous découvrirez les fonctions grâce à la vidéo et vous entraînerez à utiliser des fonctions dans une variété de puzzles. Vous réfléchirez ensuite à votre pratique. Vous devriez passer entre 20 et 45 minutes sur cette étape.
+          > **À quoi s'attendre à ce stade :** Tout d'abord, vous examinerez une leçon hors ligne du cours E (destiné au CM1) qui présente les fonctions. Ensuite, vous découvrirez les fonctions grâce à la vidéo et vous entraînerez à utiliser des fonctions dans une variété de casse-têtes. Vous réfléchirez ensuite à votre pratique. Vous devriez passer entre 20 et 45 minutes sur cette étape.
 
           Prêt ? C'est parti !
       OPD-K5 Stage6Start_copy:
@@ -8329,7 +8335,7 @@ fr-FR:
           - Vous entrainerez à coder des fonctions simples
           - Réfléchirez à l'application en classe
 
-          > **À quoi s'attendre à ce stade :** Tout d'abord, vous examinerez une leçon hors ligne du cours E (destiné au CM1) qui présente les fonctions. Ensuite, vous découvrirez les fonctions grâce à la vidéo et vous entraînerez à utiliser des fonctions dans une variété de puzzles. Vous réfléchirez ensuite à votre pratique. Vous devriez passer entre 20 et 45 minutes sur cette étape.
+          > **À quoi s'attendre à ce stade :** Tout d'abord, vous examinerez une leçon hors ligne du cours E (destiné au CM1) qui présente les fonctions. Ensuite, vous découvrirez les fonctions grâce à la vidéo et vous entraînerez à utiliser des fonctions dans une variété de casse-têtes. Vous réfléchirez ensuite à votre pratique. Vous devriez passer entre 20 et 45 minutes sur cette étape.
 
           Prêt ? C'est parti !
       OPD-K5 Stage7Go:
@@ -8425,7 +8431,7 @@ fr-FR:
           - Vous entrainez à coder des événements simples
           - Réfléchissez à leur application en classe
 
-          >**À quoi s'attendre à ce stade :** Vous commencerez par une leçon hors ligne du cours C (destinée au CE1) présentant des événements. Ensuite, vous explorerez quelques énigmes du cours F (destinés au CM2) qui vous permettront d'expérimenter avec des blocs d'événements. Nous terminerons par une occasion de réfléchir. Vous devriez passer entre 20 et 45 minutes sur cette étape.
+          >**À quoi s'attendre à ce stade :** Vous commencerez par une leçon hors ligne du cours C (destinée au CE1) présentant des événements. Ensuite, vous explorerez quelques casse-têtes du cours F (destinés au CM2) qui vous permettront d'expérimenter avec des blocs d'événements. Nous terminerons par une occasion de réfléchir. Vous devriez passer entre 20 et 45 minutes sur cette étape.
 
           Prêt ? Allons-y !
       OPD-K5 Stage7Start_dani:
@@ -8443,7 +8449,7 @@ fr-FR:
           - Vous entrainez à coder des événements simples
           - Réfléchissez à leur application en classe
 
-          >**À quoi s'attendre à ce stade :** Vous commencerez par une leçon hors ligne du cours C (destinée au CE1) présentant des événements. Ensuite, vous explorerez quelques énigmes du cours F (destinés au CM2) qui vous permettront d'expérimenter avec des blocs d'événements. Nous terminerons par une occasion de réfléchir. Vous devriez passer entre 20 et 45 minutes sur cette étape.
+          >**À quoi s'attendre à ce stade :** Vous commencerez par une leçon hors ligne du cours C (destinée au CE1) présentant des événements. Ensuite, vous explorerez quelques casse-têtes du cours F (destinés au CM2) qui vous permettront d'expérimenter avec des blocs d'événements. Nous terminerons par une occasion de réfléchir. Vous devriez passer entre 20 et 45 minutes sur cette étape.
 
           Prêt ? Allons-y !
       OPD-K5 Stage8Go:
@@ -8699,13 +8705,13 @@ fr-FR:
           Nous définissons la « maîtrise » comme étant capable de faire ce qui suit :
 
           - Définir et expliquer ce que signifie le concept de base, et pourquoi il est important en informatique
-          - Écrire des programmes simples appliquant le concept (en utilisant la programmation visuelle pour résoudre des énigmes)
+          - Écrire des programmes simples appliquant le concept (en utilisant la programmation visuelle pour résoudre des casse-têtes)
           - Réfléchir à la façon dont vous pourriez intégrer le concept dans votre pratique
 
           Utilisez cette liste comme rubrique tout au long du cours. Au fur et à mesure que vous terminez chaque étape, demandez-vous :
 
           - Puis-je définir et expliquer l'importance de ce concept de base particulier à un niveau débutant ?
-          - Ai-je réussi à terminer les énigmes simples de cette étape ?
+          - Ai-je réussi à terminer les casse-têtes simples de cette étape ?
           - Ai-je quelques idées sur la façon dont je pourrais l'utiliser dans ma classe ?
 
           Si vous répondez oui à chaque question, passez à l'étape suivante. Si vous répondez non à l'une des questions, envisagez de revisiter la scène ou d'explorer davantage le sujet du côté étudiant de Code Studio avant de continuer.
@@ -8740,13 +8746,13 @@ fr-FR:
           Nous définissons la « maîtrise » comme étant capable de faire ce qui suit :
 
           - Définir et expliquer ce que signifie le concept de base, et pourquoi il est important en informatique
-          - Écrire des programmes simples appliquant le concept (en utilisant la programmation visuelle pour résoudre des énigmes)
+          - Écrire des programmes simples appliquant le concept (en utilisant la programmation visuelle pour résoudre des casse-têtes)
           - Réfléchir à la façon dont vous pourriez intégrer le concept dans votre pratique
 
           Utilisez cette liste comme rubrique tout au long du cours. Au fur et à mesure que vous terminez chaque étape, demandez-vous :
 
           - Puis-je définir et expliquer l'importance de ce concept de base particulier à un niveau débutant ?
-          - Ai-je réussi à terminer les énigmes simples de cette étape ?
+          - Ai-je réussi à terminer les casse-têtes simples de cette étape ?
           - Ai-je quelques idées sur la façon dont je pourrais l'utiliser dans ma classe ?
 
           Si vous répondez oui à chaque question, passez à l'étape suivante. Si vous répondez non à l'une des questions, envisagez de revisiter la scène ou d'explorer davantage le sujet du côté étudiant de Code Studio avant de continuer.
@@ -16089,14 +16095,13 @@ fr-FR:
           un jeu de cartes et crée des règles comme : « Si je tire une carte rouge,
           je marque un point » et « Si je tire une carte noire, tu marques un point ».\n"
       CourseE_Artist_Practice_2022:
-        description: 'Excellent travail jusqu''à présent ! Choisissez votre prochaine
-          activité. Remplissez-en autant que vous le pouvez. Continuez à vous entraîner
-          avec les boucles et l''artiste ! '
-        display_name: Entrainement d'Artiste
+        description: 'Super travail jusqu''ici ! Choisis ta prochaine activité. Complètes-en
+          autant que tu peux. Continue à t''entraîner avec les boucles et l''artiste ! '
+        display_name: Entraînement avec l'Artiste
       CourseE_Lesson_11_Artist_Practice_2022:
-        display_name: Entrainement d'Artiste
+        display_name: Entraînement avec l'Artiste
       CourseE_Lesson_7_Artist_Practice_2022:
-        display_name: Entrainement d'Artiste
+        display_name: Entraînement avec l'Artiste
       CourseF_outbreak_story2022_2022_pilot_-2022-2:
         content1: description ici
         markdown: "# Épidémie : Code ta propre simulation\n\n## Bienvenue à Monstreville!\nD'ordinaire,
@@ -16176,43 +16181,43 @@ fr-FR:
           bonne santé lorsqu'un virus arrive en ville. \n"
       CourseF_outbreak_story22022_2022_pilot_-2022-2:
         content1: description ici
-        markdown: "# Épidémie : Penser comme un scientifique\n\n<img src=\"https://images.code.org/89376b9ebd5fcee77545f13a7a444430-image-1603135356392.png\"
+        markdown: "# Épidémie : Réfléchir comme un scientifique\n\n<img src=\"https://images.code.org/89376b9ebd5fcee77545f13a7a444430-image-1603135356392.png\"
           style=\"float:right; width:30%\">\n\nLes simulations sont un excellent moyen
           d'apprendre des choses qui peuvent être difficiles à observer dans le monde
           réel. Elles aident les scientifiques à résoudre des problèmes et à tester
-          de nouvelles idées de manière sûre et efficace. Votre simulation est un
-          moyen de montrer à quoi pourrait ressembler une épidémie de virus dans Monster
-          Town.\n\n## Réinitialisation et rediffusion !\nMême lorsque vous écrivez
-          le code vous-même, il est impossible de savoir exactement ce qu'il se passera
-          lorsque vous appuierez sur \"démarrer\". Les monstres se déplacent au hasard,
-          vous ne savez donc pas si le virus va se propager rapidement ou lentement.
-          Chaque fois que vous modifiez votre code, veillez à exécuter votre simulation
-          plus d'une fois. Les choses ne se passeront pas deux fois de la même manière
-          !\n\n## Recueil de données\nEssayez de noter vos observations pendant que
-          vous lancer votre simulation. Vous pouvez compter le nombre de monstres
-          qui tombent malades ou utiliser un minuteur pour voir à quelle vitesse les
-          choses se passent. Par exemple, combien de temps faut-il généralement à
-          tous les monstres pour tomber malade si aucun n'a pas de masque ? \n\n##
-          Faire des prédictions\nSi vous comprenez votre modèle, vous pouvez l'utiliser
-          pour faire des prédictions. Vous pouvez même modifier le déroulement de
-          votre simulation et deviner ce qu'il se passera différemment. Par exemple
-          :\n* Que se passerait-il s'il y avait deux fois plus de monstres ?\n* Que
-          se passerait-il si la vitesse de déplacement des monstres était réduite
-          de moitié ?\n\n<img src=\"https://images.code.org/2e83373ffd346ce3f42917a0624d441c-image-1603749526420.png\"
-          style=\"float:right\">\n\n## Monster Town est-elle comme le monde réel ?\nIl
-          y a une limite au réalisme d'un modèle. \n* Quel est le point commun entre
-          votre simulation et les épidémies de virus du monde réel ?\n* Quelles sont
-          les différences ?\nLorsque vous aurez terminé cette activité, posez ces
-          questions à vos professeurs ou à votre famille !\n\n## Pouvons-nous faire
-          d'autres modèles ?\nVous avez déjà créé un modèle fonctionnel de l'épidémie
-          à Monster Town. Quelles sont les choses que votre simulation ne peut pas
-          faire ou montrer que vous aimeriez qu'elle puisse faire ou montrer ? Appuyez
-          sur la touche \"continuer\" et apprenez à faire modifications :\n* Augmentez
-          le nombre de monstres dans la simulation\n* Aidez les monstres à se remettre
-          du virus\n* Probabilité, immunité, vaccins, et bien d'autres chose encore
-          !\n\nVous pouvez également partager votre modèle de simulation avec d'autres
-          personnes, ou partager un message sur ce que nous pouvons faire pour aider
-          à garder les autres en bonne santé quand un virus arrive en ville. \n"
+          de nouvelles idées de manière sûre et efficace. Ta simulation est un moyen
+          de montrer à quoi pourrait ressembler une épidémie de virus dans Monstreville.\n\n##
+          Réinitialisation et rediffusion !\nMême lorsque tu écris le code toi-même,
+          il est impossible de savoir exactement ce qu'il se passera lorsqu'on appuie
+          sur « démarrer ». Les monstres se déplacent au hasard, on ne sait donc pas
+          si le virus va se propager rapidement ou lentement. Chaque fois que tu modifies
+          ton code, veille à exécuter ta simulation plus d'une fois. Les choses ne
+          se dérouleront pas deux fois de la même manière !\n\n## Récolte de données\n\nEssaye
+          de prendre note de tes observations quand tu lances ta simulation. Tu peux
+          compter le nombre de monstres qui tombent malades ou utiliser un minuteur
+          pour voir à quelle vitesse les choses se déroulent. Par exemple, combien
+          de temps faut-il généralement à tous les monstres pour tomber malade si
+          aucun ne porte de masque ? \n\n## Faire des prévisions\n\nSi tu comprends
+          ton modèle, tu peux l'utiliser pour faire des prévisions. Tu peux même modifier
+          le déroulement de ta simulation et deviner ce qu'il se va se passer différemment.
+          Par exemple :\n* Que se passerait-il s'il y avait deux fois plus de monstres ?\n*
+          Que se passerait-il si la vitesse de déplacement des monstres était réduite
+          d'une moitié ?\n\n<img src=\"https://images.code.org/2e83373ffd346ce3f42917a0624d441c-image-1603749526420.png\"
+          style=\"float:right\">\n\n## Monstreville, c'est comme le monde réel ? \nIl
+          y a des limites au réalisme que peut avoir modèle. \n* En quoi ta simulation
+          est-elle semblable aux les épidémies de virus du monde réel ?\n* En quoi
+          sont-elles toutefois différentes ?\n\nLorsque tu auras terminé cette activité,
+          pose ces questions à tes enseignants ou à ta famille !\n\n## Que peut-on
+          faire d'autre comme modèles de situations ?\nTu as déjà créé un modèle fonctionnel
+          d'épidémie à Monstreville. Quelles sont les choses que ta simulation ne
+          peut pas faire ou montrer que tu aimerais qu'elle puisse faire ou montrer ?
+          Appuie sur la touche « continuer » pour en apprendre encore plus sur la
+          modélisation :\n* Augmente le nombre de monstres dans la simulation\n* Aide
+          les monstres à se remettre du virus\n* Probabilité, immunité, vaccins, et
+          bien d'autres choses encore !\n\nTu peux aussi partager ta simulation modèle
+          avec d'autres personnes, ou partager un message sur ce que tu penses qu'on
+          peut faire pour aider à les autres à rester en bonne santé quand un virus
+          arrive en ville. \n"
       DesigningForAccessibilityMarkdownLevel2022:
         markdown: "# Conception Accessible\n\n* Dans le monde de l'informatique, **l'accessibilité**
           fait référence à la création de technologies pour personnes handicapées.
@@ -16226,9 +16231,9 @@ fr-FR:
           et les avantages du respect de la propriété et du droit d'auteur, notamment
           dans les environnements numériques.\n"
       EnvelopeVariables-Unplugged_2021_22022_2022_pilot_-2022-2:
-        markdown: " Histoires d'espace vide\n\nDans cette leçon, vous apprendrez à
-          utiliser et à écrire des histoires d'espace vide. Regardez cette vidéo pour
-          découvrir comment cela se connecte à l'informatique. "
+        markdown: "# Histoires d'espace vide\n\nDans cette leçon, tu vas apprendre
+          à utiliser et à écrire des histoires d'espace vide. Regarde cette vidéo
+          pour voir ce que cela a à voir avec l'informatique. "
       GettingLoopy-Unplugged2022:
         markdown: "# Affaire bouclée \n\nCette leçon introduit la notion de boucles
           en programmation au travers d'une activité dansante."
@@ -16241,8 +16246,8 @@ fr-FR:
 
           Crée un algorithme pour faire traverser un labyrinthe à ton personnage.
       Internet-Unplugged2022_2022_pilot_-2022-2:
-        markdown: "# L'Internet   Construis ton propre Internet, dans la salle de
-          classe, simplement à l'aide de morceaux de papier.\n"
+        markdown: "# L'Internet  \n\nConstruis ton propre Internet dans la salle classe
+          en utilisant tout simplement des morceaux de papier.\n"
       MoveItMoveIt-Unplugged2022:
         markdown: |
           # Bouge, Bouge ton corps
@@ -16260,9 +16265,9 @@ fr-FR:
           Apprends à programmer en codant pour tes amis !
       PowerOfWords-Unplugged2022_2022_pilot_-2022-2:
         markdown: |-
-          # Le pouvoir des mots
+          # Le Pouvoir des Mots
 
-          ## Que dois-tu faire quand quelqu'un utilise des paroles méchantes ou blessantes sur internet ?
+          ## Que dois-tu faire quand quelqu'un utilise des paroles méchantes ou blessantes sur internet ?
       PrivatePersonalInformation-Unplugged2022:
         markdown: |-
           # Informations Privées et Personnelles
@@ -16651,15 +16656,15 @@ fr-FR:
       courseF_collector_samples_2022_pilot_-2022-2:
         display_name: 'Exploration - Exemples de programmes '
       courseF_events_freeplay2022_2022_pilot_-2022-2:
-        description: 'Maintenant, vous pouvez utiliser ce que vous avez appris pour
-          rendre votre projet encore meilleur ! Continuez à ajouter à votre programme
-          ou commencez quelque chose de nouveau ! '
+        description: 'Maintenant, tu peux utiliser ce que tu as appris pour rendre
+          ton projet encore meilleur ! Continue à ajouter à ton programme ou commence
+          quelque chose de nouveau ! '
         display_name: Événements - Jeu libre
       courseF_events_practice2022_2022_pilot_-2022-2:
-        description: 'Excellent travail pour l''instant ! Choisissez votre prochaine
-          activité. Faites-en autant que vous le pouvez. Continuez à vous entraîner
-          avec des évènements ! '
-        display_name: 'Pratique des événements '
+        description: 'Excellent travail jusqu''à présent ! Choisis ta prochaine activité.
+          Complètes-en autant que tu peux. Continue à t''entraîner avec les sprites
+          et les comportements ! '
+        display_name: 'Entraînement avec les événements '
       courseF_events_predict_multi2022_2022_pilot_-2022-2:
         answers:
         - text: Le sprite va juste tournoyer à droite.
@@ -16688,21 +16693,21 @@ fr-FR:
         display_name: Applis Labo des Sprites
       courseF_labels_predict_multi2022_2022_pilot_-2022-2:
         answers:
-        - text: '"Une pizza, c''est parti !"'
+        - text: "« Une pizza, ça arrive tout de suite ! »"
           feedback: 'Incorrect. Les libellés des variables ne correspondent pas. '
-        - text: '"Un menu, c''est parti !"'
-          feedback: 'Incorrect. Le libellé d''une variable n''est jamais imprimé. '
-        - text: '"Un plat, c''est parti !"'
-          feedback: 'Incorrect. Le libellé d''une variable n''est jamais imprimé. '
-        - text: '"Et c''est parti !"'
+        - text: "« Un repas, ça arrive tout de suite ! »"
+          feedback: Incorrect. Le libellé d'une variable ne s'imprime jamais.
+        - text: "« Une nourriture, ça arrive tout de suite ! »"
+          feedback: Incorrect. Le libellé d'une variable ne s'imprime jamais.
+        - text: "« Une , ça arrive tout de suite ! »"
           correct: true
-          feedback: 'Correct ! Les libellés des variables ne correspondent pas. '
+          feedback: 'Correct ! Les libellés des variables ne correspondent pas. '
         - text: Rien ne sera imprimé.
           feedback: 'Incorrect. L''événement et le bloc d''impression fonctionneront
             toujours. '
         questions:
-        - text: 'Ce code peut vous sembler familier, mais lisez-le attentivement.
-            Qu''est-ce qui sera imprimé si l''utilisateur tape « pizza » ? '
+        - text: 'Ce code peut paraître familier, mais lis-le attentivement. Qu''est-ce
+            qui sera imprimé si l''utilisateur tape « pizza » ? '
       courseF_multi_artist_variables3a_predict12022:
         answers:
         - text: L'artiste dessinera un triangle avec des côtés de 50 pixels.
@@ -16743,14 +16748,14 @@ fr-FR:
         - text: Lis le code ci-dessous. Que va-t-il se passer quand tu cliques su
             « Démarrer » ?
       courseF_sprites_freeplay2022_2022_pilot_-2022-2:
-        description: C'est à votre tour de créer ce que vous voulez ! Quel genre de
-          projet ferez-vous ?
+        description: C'est ton tour maintenant, crée ce que tu veux ! Quel type de
+          projet vas-tu faire ?
         display_name: Sprites - Jeu libre
       courseF_sprites_practice2022_2022_pilot_-2022-2:
-        description: 'Excellent travail jusqu''à présent ! Choisis ta prochaine activité.
-          Remplis-en autant que tu peux. Continue à t''entraîner avec les sprites
-          et les comportements ! '
-        display_name: Entraînement avec les sprites
+        description: 'Excellent travail jusqu''à présent ! Choisis ta prochaine activité.
+          Complètes-en autant que tu peux. Continue à t''entraîner avec les sprites
+          et les comportements ! '
+        display_name: Entraînement avec les Sprites
       courseF_sprites_predict_multi2022_2022_pilot_-2022-2:
         answers:
         - text: 'Les deux avions se déplaceront d''une case le long de la grille,
@@ -16770,10 +16775,10 @@ fr-FR:
         questions:
         - text: Lis le code, puis fais une prévision.
       courseF_text_practice2022_2022_pilot_-2022-2:
-        description: 'Excellent travail jusqu''à présent ! Choisissez votre prochaine
-          activité. Remplissez-en autant que vous le pouvez. Continuez à vous entraîner
-          avec du texte et des invites ! '
-        display_name: 'Entraînement avec du texte et des invites '
+        description: 'Excellent travail jusqu''ici ! Choisis ta prochaine activité.
+          Complètes-en autant que tu peux. Continue à t''entraîner avec les sprites
+          et les comportements ! '
+        display_name: 'Entraînement sur le texte et les invites '
       courseF_variables2_predict2_multi2022_-2022-2:
         answers:
         - correct: true
@@ -16807,29 +16812,36 @@ fr-FR:
             clavier. Le bloc « imprimer » affiche du texte à l''écran. Fais une prévision :
             que se passera-t-il après avoir répondu à la question ? '
       courseF_variables_projects2022_2022_pilot_-2022-2:
-        description: 'Vous allez créer soit une carte de vœux, un chatbot ou une histoire
-          d''espace vide. Si vous avez déjà terminé la \"Partie 1\" de votre projet,
-          passez à la \"Partie 2\". '
-        display_name: Choisissez un projet
+        description: 'Tu vas créer soit une carte de vœux, soit un chatbot, soit une
+          histoire d''espace vide. Si tu as déjà terminé la \« 1ère Partie\ » de ton
+          projet, passe à la \« 2ème Partie\ ». '
+        display_name: Choisis un projet
       courseF_variables_samples2022_2022_pilot_-2022-2:
-        description: 'Vous allez créer soit une carte de vœux, un chatbot ou une histoire
-          d''espace vide. Avant de commencer, explorez les exemples de projets ci-dessous
-          pour voir ce que vous souhaitez créer. Appuyez sur \"Terminer\" lorsque
-          vous êtes prêt à commencer à planifier votre propre programme. '
+        description: 'Tu vas créer soit une carte de vœux, soit un chatbot, soit une
+          histoire d''espace vide. Avant de commencer, jette un œil aux exemples de
+          projets ci-dessous pour voir ce que tu pourrais vouloir créer. Appuie sur
+          « Terminer » quand tu es prêt à commencer à imaginer ton propre programme. '
         display_name: 'Exploration - Exemples de programmes '
       courseF_variables_stop2022_2022_pilot_-2022-2:
         content1: description ici
-        markdown: "# Arrêtez !\n\n## Êtes-vous sûr d'être prêt à passer à autre chose
-          ?\n\n\nAu niveau suivant, vous commencerez à écrire le code de votre projet.
-          Cela fonctionne mieux si vous avez déjà un plan.\n\nVotre plan complété
-          doit inclure :\n\n<img src=\"https://images.code.org/b476ac330f2b66e44e02208fee386a56-image-1614802439867.png\"
-          style=\"float:left; height:70px; padding:10px\"/>\n\n* Le type de projet
-          que vous construisez. Par exemple, une carte de vœux, un chatbot ou une
-          histoire d'espace vide.\n* Une liste de questions que vous poserez à l'utilisateur.\n*
-          L'autre texte que vous afficherez à l'écran.\n* Une description ou un dessin
-          des sprites dont vous aurez besoin (et leurs comportements).\n\nSi vous
-          n'êtes pas sûr d'être prêt à passer à autre chose, voyez avec votre professeur
-          ! \n"
+        markdown: |-
+          # Stop !
+
+          ## Est-ce que tu es sûr d'être prêt à passer à autre chose ?
+
+
+          Dans le niveau suivant, tu vas te mettre à écrire le code pour ton projet. Ce sera bien plus facile si tu as déjà un plan.
+
+          Ton plan complet devrait comprendre :
+
+          <img src="https://images.code.org/b476ac330f2b66e44e02208fee386a56-image-1614802439867.png" style="float:left; height:70px; padding:10px"/>
+
+          * Le type de projet que tu vas développer. Comme par exemple une carte de vœux, un chatbot ou une histoire d'espace vide.
+          * Une liste des questions que tu vas poser à l'utilisateur.
+          * L'autre texte que tu vas afficher à l'écran.
+          * Une description ou un dessin des sprites dont tu vas avoir besoin (ainsi que leurs comportements).
+
+          Si tu n'es pas sûr si tu es prêt à passer à autre chose, vois avec ton instituteur !
       coursee_prediction_artistfunction22022:
         answers:
         - text: L’artiste résoudra ce casse-tête correctement.

@@ -66,9 +66,9 @@ tr:
           name: cebir
         infinity:
           title: Disney Infinity Play Laboratuarı
-          description: Bir hikaye ya da Disney Infinity karakteriyle bir oyun yaratmak için Play Lab'i kullanın.
-          description_short: Bir hikaye ya da Disney Infinity karakteriyle bir oyun yaratmak için Play Lab'i kullanın.
-          student_description: Bir hikaye ya da Disney Infinity karakteriyle bir oyun yaratmak için Play Lab'i kullanın.
+          description: Disney Infinity karakteriyle bir hikaye ya da  bir oyun yaratmak için Play Lab'i kullanın.
+          description_short: Disney Infinity karakteriyle bir hikaye ya da  bir oyun yaratmak için Play Lab'i kullanın.
+          student_description: Disney Infinity karakteriyle bir hikaye ya da  bir oyun yaratmak için Play Lab'i kullanın.
           name: sonsuzluk
         algebrademo:
           title: Cebir Demo
@@ -2161,7 +2161,7 @@ tr:
             csf_data:
               display_name: Veri
             csf_for_loops:
-              display_name: For Döngüleri
+              display_name: For (İçin) Döngüleri
             csf_internet:
               display_name: İnternet
             csf_sprites:
@@ -2208,7 +2208,7 @@ tr:
             csf_digcit:
               display_name: Sayısal Vatandaşlık
             csf_impacts:
-              display_name: Bilgisayarın Etkileri
+              display_name: Bilişimin Etkileri
             csf_nested_loops:
               display_name: İç İçe Döngüler
             csf_functions:
@@ -2235,7 +2235,7 @@ tr:
             csf_variables:
               display_name: Değişkenler
             csf_for_loops:
-              display_name: For Döngüleri
+              display_name: For (İçin) Döngüleri
             csf_sprites:
               display_name: Hareketli Nesneler
           student_description: Aşağıdaki dersleri kendi hızınızda deneyerek bilgisayar bilimi öğrenin! Bilgisayar programları oluşturmayı, problem çözme becerileri geliştirmeyi ve eğlenceli zorluklarla çalışmayı öğrenin! Arkadaşlarınız, aileniz ve öğretmenlerinizle paylaşmak için oyunlar ve yaratıcı projeler yapın.
@@ -2332,7 +2332,7 @@ tr:
             csf_loops:
               display_name: Döngüler
             csf_impacts:
-              display_name: Bilgisayarın Etkileri
+              display_name: Bilişimin Etkileri
             csf_events:
               display_name: Olaylar
           student_description: Bilgisayar bilimi ve internet güvenliğinin temellerini öğren. Kursun sonunda, kendine ait ve paylaşabileceğin bir oyun ya da hikaye oluştur.
@@ -2994,7 +2994,7 @@ tr:
             csf_digcit:
               display_name: Sayısal Vatandaşlık
             csf_impacts:
-              display_name: Bilgisayarın Etkileri
+              display_name: Bilişimin Etkileri
             ramp_up:
               display_name: Arttır
         time4cs-experiment-unit-1:
@@ -3013,7 +3013,7 @@ tr:
             csf_digcit:
               display_name: Sayısal Vatandaşlık
             csf_impacts:
-              display_name: Bilgisayarın Etkileri
+              display_name: Bilişimin Etkileri
             ramp_up:
               display_name: Arttır
         csp7-pilot:
@@ -3193,7 +3193,7 @@ tr:
             csf_loops:
               display_name: Döngüler
             csf_impacts:
-              display_name: Bilgisayarın Etkileri
+              display_name: Bilişimin Etkileri
             csf_events:
               display_name: Olaylar
           student_description: Bilgisayar bilimi ve internet güvenliğinin temellerini öğren. Kursun sonunda, kendine ait ve paylaşabileceğin bir oyun ya da hikaye oluştur.
@@ -3256,7 +3256,7 @@ tr:
             csf_functions:
               display_name: Fonksiyonlar
             csf_impacts:
-              display_name: Bilgisayarın Etkileri
+              display_name: Bilişimin Etkileri
             end_of_course_project:
               display_name: Ders Projesinin Sonu
           student_description: Algoritmalar, döngüler, koşullar ve olaylarla kodlamaya başlayın ve daha sonra fonksiyonlara geçin. Bu kursun ikinci kısmında, arkadaşlarınız ve ailenizle paylaşabileceğiniz bir bitirme projesi tasarlayın ve oluşturun.
@@ -3275,7 +3275,7 @@ tr:
             csf_data:
               display_name: Veri
             csf_for_loops:
-              display_name: For Döngüleri
+              display_name: For (İçin) Döngüleri
             csf_sprites:
               display_name: Hareketli Nesneler
             end_of_course_project:
@@ -3301,7 +3301,7 @@ tr:
             csf_variables:
               display_name: Değişkenler
             csf_for_loops:
-              display_name: For Döngüleri
+              display_name: For (İçin) Döngüleri
             csf_sprites:
               display_name: Hareketli Nesneler
             end_of_course_project:
@@ -3806,7 +3806,7 @@ tr:
             csf_loops:
               display_name: Döngüler
             csf_impacts:
-              display_name: Bilgisayarın Etkileri
+              display_name: Bilişimin Etkileri
             csf_events:
               display_name: Olaylar
             lessonGroup-6:
@@ -3877,13 +3877,13 @@ tr:
             csf_functions:
               display_name: Fonksiyonlar
             csf_impacts:
-              display_name: Bilgisayarın Etkileri
+              display_name: Bilişimin Etkileri
             end_of_course_project:
               display_name: Ders Projesinin Sonu
             lessonGroup-8:
               display_name: Kaldırıldı
             lessonGroup-7:
-              display_name: Bilgisayarın Etkileri
+              display_name: Bilişimin Etkileri
           name: kurse-2021
           student_description: Algoritmalar, olaylar, döngüler, koşullar ve işlevlerle kodlamaya başlayın! Bu kursun sonunda arkadaşlarınız ve ailenizle paylaşabileceğiniz bir oyun veya çizim tasarlayın ve oluşturun.
         coursef-2021:
@@ -3897,13 +3897,13 @@ tr:
             csf_digcit:
               display_name: Sayısal Vatandaşlık
             csf_variables:
-              display_name: For Döngüleri
+              display_name: For (İçin) Döngüleri
             csf_data:
               display_name: Veri ve simülasyonlar
             csf_for_loops:
-              display_name: For Döngüleri
+              display_name: For (İçin) Döngüleri
             csf_sprites:
-              display_name: Bilgisayarın Etkileri
+              display_name: Bilişimin Etkileri
             end_of_course_project:
               display_name: Ders Projesinin Sonu
             lessonGroup-8:
@@ -3933,7 +3933,7 @@ tr:
             csf_variables:
               display_name: Değişkenler
             csf_for_loops:
-              display_name: For Döngüleri
+              display_name: For (İçin) Döngüleri
             csf_sprites:
               display_name: Hareketli Nesneler
             end_of_course_project:
@@ -4937,7 +4937,7 @@ tr:
         coursea-2022:
           lesson_groups:
             csf_digcit:
-              display_name: Sayısal Vatandaşlık
+              display_name: Dijital Vatandaşlık
             csf_sequencing:
               display_name: Sıralama
             csf_loops:
@@ -4946,6 +4946,7 @@ tr:
               display_name: Olaylar
             lessonGroup-5:
               display_name: Ders Projesinin Sonu
+          title: Kurs A (2022)
           description: Kurs A, Anaokulu öğrencileri de dahil olmak üzere yeni başlayan okuyucular için bir bilgisayar bilimi müfredatı sunar. Öğrenciler, döngüler ve olaylar gibi komutları kullanarak programlamayı öğreneceklerdir. Bu kursta yer alan dersler ayrıca öğrencilere başkalarıyla anlamlı bir şekilde işbirliği yapmayı, farklı problem çözme tekniklerini araştırmayı, zorlu görevler karşısında ısrar etmeyi ve internet güvenliği hakkında bilgi edinmeyi öğretir.
           student_description: Bilgisayar bilimi ve internet güvenliğinin temellerini öğren. Kursun sonunda, kendine ait ve paylaşabileceğin bir oyun ya da hikaye oluştur.
           description_short: Okumaya yeni başlayanlar için bilgisayar bilimine giriş.
@@ -4967,9 +4968,10 @@ tr:
             csf_variables:
               display_name: Değişkenler
             csf_for_loops:
-              display_name: For Döngüleri
+              display_name: For (İçin) Döngüleri
             end_of_course_project:
               display_name: Ders Projesinin Sonu
+          title: Hızlandırılmış Kurs (2022)
           description: Aşağıdaki dersleri kendi hızınızda deneyerek bilgisayar bilimi öğrenin! Bilgisayar programları oluşturmayı, problem çözme becerileri geliştirmeyi ve eğlenceli zorluklarla çalışmayı öğrenin! Arkadaşlarınız, aileniz ve öğretmenlerinizle paylaşmak için oyunlar ve yaratıcı projeler yapın.
           student_description: Aşağıdaki dersleri kendi hızınızda deneyerek bilgisayar bilimi öğrenin! Bilgisayar programları oluşturmayı, problem çözme becerileri geliştirmeyi ve eğlenceli zorluklarla çalışmayı öğrenin! Arkadaşlarınız, aileniz ve öğretmenlerinizle paylaşmak için oyunlar ve yaratıcı projeler yapın.
           description_short: 'Bilgisayar bilimlerine giriş: ilköğretim müfredatımızın en iyilerini daha eski öğrenciler için birleştirir.'
@@ -5035,11 +5037,12 @@ tr:
             csf_loops:
               display_name: Döngüler
             csf_impacts:
-              display_name: Bilgisayarın Etkileri
+              display_name: Bilişimin Etkileri
             csf_events:
               display_name: Olaylar
             lessonGroup-6:
               display_name: Ders Projesinin Sonu
+          title: Kurs B (2022)
           description: Kurs B'yi birinci sınıf öğrencilerini düşünerek geliştirdik. Kurs B'deki kavramlar Kurs A'dakilerle paralel olsa da, öğrenciler daha karmaşık, bağlantısız etkinlikler öğrenir ve çok çeşitli bulmacalar üzerinde çalışır. Öğrenciler programlamanın temellerini, işbirliği tekniklerini, araştırma ve eleştirel düşünme becerilerini, zorluklar karşısında direnmeyi ve internet güvenliğini öğreneceklerdir. Bu dersin sonunda öğrenciler Play Lab programlama ortamında oyunlar oluştururlar.
           student_description: Bilgisayar bilimi ve internet güvenliğinin temellerini öğren. Kursun sonunda, kendine ait ve paylaşabileceğin bir oyun ya da hikaye oluştur.
           description_short: Okul öncesi çocuklar için bilgisayar bilimine giriş. Kurs A ile benzer ancak ilave kavram derinliği vardır.
@@ -5123,7 +5126,7 @@ tr:
               display_name: Koşullar
             end_of_course_project:
               display_name: Ders Projesinin Sonu
-          title: Kurs D (2021)
+          title: Kurs D (2022)
           description: Üçüncü sınıftaki öğrenciler için D kursu oluşturduk. Kurs, döngüler ve olaylar da dahil olmak üzere önceki kurslarda bulunan kavramların gözden geçirilmesiyle başlar. Daha sonra, öğrenciler algoritmalar, iç içe döngüler, while döngüleri, koşullu ifadeler ve daha fazlası hakkındaki anlayışlarını geliştireceklerdir.
           student_description: Döngüler, şartlar, ve olaylar hakkında bilgi edinin. Kodlamanın ötesinde, dijital vatandaşlık hakkında bilgi edinin.
           description_short: Koşullu ifadeleri öğrenin. Kendi sanatını, oyunlarını ve hatta bir dans partisi oluştur.
@@ -5141,9 +5144,10 @@ tr:
             csf_nested_loops:
               display_name: Koşullar
             lessonGroup-7:
-              display_name: Bilgisayarın Etkileri
+              display_name: Bilişimin Etkileri
             end_of_course_project:
               display_name: Ders Projesinin Sonu
+          title: Kurs E (2022)
           description: Dördüncü sınıftaki öğrenciler için Kurs E'yi oluşturduk. Kurs, Sprite Lab programlama aracına giriş ile başlar. Öğrenciler, çevrimiçi güvenlik hakkında öğreneceklerini pekiştiren eğlenceli, etkileşimli projeler yapmayı öğrenecekler. Bu derslerin ardından, öğrenciler daha karmaşık kodlama ile meşgul olacaklar. Öğrenciler iç içe döngüler, işlevler ve koşullu ifadeler hakkında bilgi edinecekler. Kursun sonunda öğrenciler zorlu bulmacaları çözmek için bu kavramları birleştirecekler. Kurs, öğrencilerin bir oyun veya çizim yaptıkları açık uçlu bir proje ile sona erer.
           student_description: Algoritmalar, olaylar, döngüler, koşullar ve işlevlerle kodlamaya başlayın! Bu kursun sonunda arkadaşlarınız ve ailenizle paylaşabileceğiniz bir oyun veya çizim tasarlayın ve oluşturun.
           description_short: Hareketli nesne, iç içe döngüler, ve fonksiyonların temellerini öğrenin.
@@ -5160,6 +5164,7 @@ tr:
               display_name: Veri ve simülasyonlar
             end_of_course_project:
               display_name: Ders Projesinin Sonu
+          title: Kurs F (2022)
           description_short: Bilgisayar biliminin temellerini öğrenin ve kendi oyunlarınızı, hikayelerinizi ve sanatınızı oluşturun.
           description_audience: 'Yaş: 9-13'
         csp-post-survey-2021:
@@ -5184,6 +5189,7 @@ tr:
             csf_events:
               display_name: Olaylar
           name: ön-ekspres-2022
+          title: Okul Öncesi Çocuklar için Hızlandırılmış Kurs (2022)
           description_audience: 'Yaş: 4-8'
           description_short: 'Okul öncesi çocuklar için bilgisayar bilimlerine giriş: anaokulu ve birinci sınıf derslerimizin en iyisini birleştirir.'
           description: Aşağıdaki dersleri kendi hızınızda deneyerek bilgisayar bilimi öğrenin! Bilgisayar programları oluşturmayı, problem çözme becerileri geliştirmeyi ve eğlenceli zorluklarla çalışmayı öğrenin! Arkadaşlarınız, aileniz ve öğretmenlerinizle paylaşmak için oyunlar ve yaratıcı projeler yapın.
@@ -5333,6 +5339,7 @@ tr:
             end_of_course_project:
               display_name: Ders Projesinin Sonu
           name: kursf-2022-pilot
+          title: Kurs F (2022)
           description_audience: 'Yaş: 9-13'
           description_short: Bilgisayar biliminin temellerini öğrenin ve kendi oyunlarınızı, hikayelerinizi ve sanatınızı oluşturun.
           description: "Beşinci sınıftaki öğrenciler için Kurs F'yi oluşturduk. Kurs, kullanıcıların kullandıkları uygulamalarda nasıl seçim yaptıklarına bakarak başlar. Öğrenciler daha sonra kullanıcı için seçenekler de sunan çeşitli Sprite Lab uygulamaları yapmayı öğrenirler. Kursun sonraki derslerinde, öğrenciler çeşitli bağlamlardaki değişkenleri öğreneceklerdir. Öğrencilere bu kurs boyunca daha fazla özerklik ve daha fazla seçenek verilir. Kursun sonunda öğrenciler, arkadaşları ve aileleri ile paylaşmak üzere etkileşimli projeler oluşturmuş olacaklardır.\n\n## İlkbahar 2022 Açık Önizleme\n\nKurs F'nin bu yeni versiyonu üç yeni ders içeriyor ve geri bildiriminize ihtiyacımız var! Yeni dersler şunlardır:\n\n-   Ders 9 - Çok Sayıda Karakter - [geri bildirimde bulunun](https://docs.google.com/forms/d/e/1FAIpQLSdgGilUP1l2i7Cie_kojOBjq_UMVDA8O1NFX4hLt4Ts4IMvnQ/viewform)\n-   Ders 10 - Değişkenlerle Sayma - [geri bildirimde bulun](https://docs.google.com/forms/d/e/1FAIpQLSeuqnSbdJEgUY9paU2HNLN0RymYogBIRYrAtttTg826QXjK0w/viewform)\n-   Ders 11 - Mini Proje: Koleksiyoncu Oyunu - [geri bildirimde bulunun](https://docs.google.com/forms/d/e/1FAIpQLSe5IU4p57sowVOUuJyk_1Nv_R8XwELRwto75zPdre50aYy9DA/viewform)\n\nLütfen bu yeni derslerin bugün ile Temmuz 2022 arasında değişebileceğini unutmayın. Her türlü geri bildirim için teşekkür ederiz. A-E of CS Fundamentals (2022) Kursları Temmuz 2022'de başlayacaktır.\n\nAyrıca Kurs F'deki tüm dersleri kapsayan eksiksiz bir slayt destesi ekledik. Ders slaytlarıyla ilgili [geri bildirimlerinizi](https://docs.google.com/forms/d/e/1FAIpQLScDJ_UUYW1fw36uCiupsB96F8O8zoiSuppGQ7YrQfVn0ma_5w/viewform) de bekliyoruz!"
@@ -5650,7 +5657,7 @@ tr:
           description: Müfredat sürümleri değişirken derslerin veya seviyelerin güncellemelerini hazırlamak için
           lessons:
             lesson-7:
-              name: Spritese Giriş
+              name: Hareketli Nesnelere Giriş
             lesson-8:
               name: Fiziksel Bilişim PSP
         csc-pilot-2022-ecosystems:

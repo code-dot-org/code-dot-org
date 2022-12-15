@@ -894,6 +894,7 @@ ca:
             csf_events:
               display_name: Esdeveniments
         coursec-2021:
+          title: Curs C (2021)
           description_short: Apreneu els conceptes bàsics de la informàtica i creeu el vostre propi art, històries i jocs.
           description_audience: De 6 a 10 anys
           lesson_groups:
@@ -952,6 +953,7 @@ ca:
             lessonGroup-7:
               display_name: Ciutadania digital
         express-2021:
+          title: Curs exprés (2021)
           description: Aprèn informàtica al teu ritme fent les lliçons que trobaràs a continuació! Aprèn a crear programes informàtics, desenvolupa les teves habilitats per resoldre problemes i completa els divertits reptes que aniràs trobant. Fes jocs i projectes creatius i comparteix-los amb els amics, la família i els professors.
           description_short: 'Una introducció a la informàtica: combina el millor del nostre currículum d''educació primària per alumnes més grans.'
           description_audience: De 9 a 18 anys
