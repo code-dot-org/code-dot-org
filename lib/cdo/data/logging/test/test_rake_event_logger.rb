@@ -29,7 +29,7 @@ class RakeEventLoggerTest < ActiveSupport::TestCase
   end
 
   def test_logger_throwing_an_exception_on_healthy_task
-    # 1) Verify that the task tried to logg the beginning
+    # 1) Verify that the task tried to log the beginning
     # 2) Verify that the task tried to log an end even when the logger failed
     # 3) Verify that an exception was not logged
     # 4) Make sure the task finishes without exceptions
