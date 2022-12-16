@@ -1,0 +1,33 @@
+@import 'color.scss', 'font.scss', 'imports/_breakpoints.scss';
+
+.pl-banner-superhero.homepage {
+  max-width: 960px;
+  margin: 2em auto 5em;
+
+  img {
+    position: absolute;
+    top: -48px;
+    z-index: -1;
+  }
+
+  h1, h2 {
+    text-align: left;
+    color: $white;
+    max-width: 490px;
+  }
+
+  h1 {
+    font-size: 3em;
+    margin: 0;
+  }
+
+  h2 {
+    margin: 1em 0;
+    font-family: $gotham-regular;
+  }
+
+  .action {
+    text-align: left;
+  }
+}
+
