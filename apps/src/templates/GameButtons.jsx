@@ -68,13 +68,13 @@ export const UnconnectedGameButtons = props => (
   <div>
     <ProtectedStatefulDiv id="gameButtons">
       {!props.noRunResetButton && (
-        <RunButton
-          hidden={props.hideRunButton}
-          runButtonText={props.runButtonText}
-        />
-      )}
-      {!props.noRunResetButton && (
-        <ResetButton hidden={props.hideResetButton} />
+        <>
+          <RunButton
+            hidden={props.hideRunButton}
+            runButtonText={props.runButtonText}
+          />
+          <ResetButton hidden={props.hideResetButton} />
+        </>
       )}
       {
         ' ' /* Explicitly insert whitespace so that this behaves like our ejs file*/
