@@ -692,9 +692,9 @@
   dashboard_progress_not_started: "Başlatılmadı"
   dashboard_progress_in_progress: "İşlem devam ediyor"
   dashboard_progress_not_completed: "tamamlanmadı"
-  dashboard_progress_completed_too_many_blocks: "tamamlanmadı, fazla blok var"
+  dashboard_progress_completed_too_many_blocks: "tamamlandı, fazla blok var"
   dashboard_progress_completed_perfect: "tamamlandı, harika"
-  dashboard_progress_furthest_level_attempted: "denenen en yüksek seviye"
+  dashboard_progress_furthest_level_attempted: "en yüksek seviye denendi"
   dashboard_progress_submitted: "gönderildi"
   dashboard_progress_view: 'İlerlemeyi Görüntüle'
   dashboard_progress_student_in_script: "İlerleme bilgilerini %{script_name} %{student_name} için"
@@ -857,7 +857,7 @@
   hoc2014_try_new_tutorials: "Yeni Kod Saati eğitimlerimizi deneyin"
   hoc2014_try_new_tutorial: "Yeni Kod Saati eğitimimizi beta halinde deneyin"
   hoc2014_try_scrat: "Angry Birds, PvZ  ve Scrat"
-  hoc2014_try_frozen: "Karlar Ülkesi'nden Anna ve Elsa ile birlikte bir sanatçı"
+  hoc2014_try_frozen: "Frozen'dan Anna ve Elsa ile birlikte bir sanatçı"
   carousel_heading_codeorg: "Code.org eğitimleri"
   carousel_heading_codeorg_any_device: "Code.org tarafından (bütün cihazlar için) eğitimler"
   carousel_heading_3rd_party: "Üçüncü taraf eğitimleri"
@@ -932,7 +932,7 @@
   projguts_name: "Taş,Kağıt, Makas"
   hourofcode_name: "Klasik Labirent"
   playlab_name: "Oyun Laboratuvarı"
-  infinity_name: "Sınırsız oyun laboratuarı"
+  infinity_name: "Infinity Play Lab"
   artist_name: "Sanatçı"
   monstercoding_name: "Gizemli Ada Kodlama Macerası"
   allcancode_name: "Çalış Maco!"
@@ -986,7 +986,11 @@
   coursed-2021_name: Kurs D (2021)
   coursee-2021_name: Kurs E (2021)
   coursef-2021_name: Kurs F (2021)
-  coursed-2022_name: Kurs D (2021)
+  coursea-2022_name: Kurs A (2022)
+  courseb-2022_name: Kurs B (2022)
+  coursed-2022_name: Kurs D (2022)
+  coursee-2022_name: Kurs E (2022)
+  coursef-2022_name: Kurs F (2022)
   express-2018_name: Hızlı Kurs
   pre-express-2018_name: Okul Öncesi Çocuklar için Hızlandırılmış Kurs (2018)
   express-2019_name: Hızlandırılmış Kurs (2019)
@@ -995,6 +999,7 @@
   pre-express-2020_name: Okul Öncesi Çocuklar için Hızlandırılmış Kurs (2020)
   express-2021_name: Hızlandırılmış Kurs (2021)
   pre-express-2021_name: Okul Öncesi Çocuklar için Hızlandırılmış Kurs (2021)
+  express-2022_name: Hızlandırılmış Kurs (2022)
   pre-express-2022_name: Okul Öncesi Çocuklar için Hızlandırılmış Kurs (2022)
   csd2_name: 'Ünite 2 - Ağ Geliştirme'
   csd3_name: 'Ünite 3 - Animasyonlar ve Oyunlar'
@@ -1500,7 +1505,7 @@
   header_about_team: "Tam takım"
   header_about_news: "Haber odası"
   header_about_evaluation: "Değerlendirme"
-  header_about_jobs: "İş Olanakları"
+  header_about_jobs: "Kariyer"
   header_about_contact: "Bize Ulaşın"
   header_about_faqs: "SSS"
   header_learn: "Öğren"
@@ -1577,7 +1582,7 @@
   applab_tile_start_tutorial: "Başlayın"
   applab_tile_teacher_guide: "Öğretmen kılavuzunu görüntüle"
   aquatic_name: 'Minecraft: Su Yolculuğu'
-  account_sign_up_email_opt_in: "Size kurslarımızdaki yenilikler, yerel fırsatlar veya diğer bilgisayar bilimi haberleriyle ilgili e-posta gönderebilir miyiz?"
+  account_sign_up_email_opt_in: "Size kurslarımızdaki yenilikler, yerel fırsatlar veya diğer bilgisayar bilimi haberleriyle ilgili e-posta gönderebilir miyiz? (kabaca ayda bir)"
   account_sign_up_child_accept_terms: "Code.org hizmetlerini kullanmam için ebeveynlerimin veya yasal vasimin izni olduğunu onaylıyorum."
   hoc_overview_dance_title: "Dans Partisi"
   hoc_overview_dance_subtitle: "Arkadaşlarınızla paylaşmak için bir Dans Partisi kodlayın. Katy Perry, Madonna, J. Balvin, Sia, Keith Urban, Ciara ve 25 daha fazlası!"

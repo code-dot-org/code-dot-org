@@ -548,6 +548,10 @@ tr:
   signup_registration_closed: Ve her yıl Aralık ayında, sınıfınız Hour of Code ile
     Bilgisayar Bilimi Eğitim Haftası'nı kutlayan milyonlarca öğrenciye katılabilir.
     Yıllık kutlama için Ekim ayında kayıt açacağız.
+  signup_registration_closed_2022_markdown: 'Registration for this year''s Hour of
+    Code event map is currently closed, but you can still [host an Hour of Code](%{hoc_activities_url})
+    and join in the celebration on social media! Post fun pictures or video of your
+    event using the #HourOfCode hashtag!'
   signup_header: "%{campaign_date} tarihlerinde bir Hour of Code organize edin ve
     buradan kaydolun."
   signup_name_label: İsminiz
@@ -3031,24 +3035,24 @@ tr:
     olması optimal, ancak gerekli değildir.
   tutorial_highseas_longdescription: Bir ortam yaratmak için bir okyanus dalgasını
     canlandırın, sonra açık denizlerde gerçekleşen bir hikayeyi anlatın.
-  tutorial_capython_longdescription: Python öğrenmek için etkileyici ve basit bir
-    dildir. Kaplumbağalar arkadaşlarınızın yardımıyla eğlenceli görüntüler oluştururken
-    modüller, işlevler, döngüler ve listeler hakkında bilgi edinin. Geometri hiç bu
-    kadar eğlenceli olmamıştı!
+  tutorial_capython_longdescription: Python öğrenmesi ilgi çekici ve basit bir dildir.  Kaplumbağa
+    arkadaşlarınızın yardımıyla eğlenceli görüntüler oluştururken modülleri, işlevleri,
+    döngüleri ve listeleri kullanmayı öğrenin.  Geometri hiç bu kadar eğlenceli olmamıştı!
   tutorial_frzn_longdescription: Buzun sihrini ve güzelliğini keşfettikleri macerada
     Anna ve Elsa’ya katılmak için kodu kullanalım! Buzda kaydıkça kar taneleri ve
     değişik desenler oluşturup bir kış diyarı yaratabilir ve sonra arkadaşlarınızla
     paylaşabilirsiniz!
-  tutorial_cocom_longdescription: senin kahraman seçin ve Kithgard Dungeon dev devriye,
-    lav çukurları ve lazer ışınları aracılığıyla yol kodlamak. , Üst seviye taşlar
-    kazanmak ve yeni programlama güçler kilidini sihirli öğeleri yağma!
+  tutorial_cocom_longdescription: Kahramanınızı seçin ve Kithgard Dungeon'ın dev devriyeleri,
+    lav çukurları ve lazer ışınları arasında kod yazın.  Yeni programlama güçlerinin
+    kilidini açmak için seviye atlayın, değerli taşlar kazanın ve sihirli öğeleri
+    yağmalayın!
   tutorial_play-lab_longdescription: Play Lab ile bir hikaye yaratın ya da oyun yapın!
     Hayvanları, korsanları, zombileri, ninjaları ve daha fazla karakteri hareket ettirin,
     ses çıkarmalarını sağlayın, onlara puan toplatın ve hatta ateş topları attırın!
-  tutorial_boxisland_longdescription: Kutu Adası'nda seyahat edin ve tüm yıldızları
-    toplayın! Kutu Adası, heyecan verici bir ada macerasında çocukları kendine çeken
-    güzel bir mobil kodlama oyunudur. Bu yazıda, temel algoritmaları, dizileri, döngüleri
-    ve koşullu ifadeleri öğreneceksiniz!
+  tutorial_boxisland_longdescription: Box Island'da bir geziye çıkın ve tüm yıldızları
+    toplayın!  Box Island, çocukları büyüleyici adada heyecan verici bir maceraya
+    götüren güzel bir mobil kodlama oyunudur.  Bu eğitimde algoritmaların, dizilerin,
+    döngülerin ve koşullu ifadelerin temellerini öğreneceksiniz!
   tutorial_textcomp_longdescription: 'Bir noktada bitleri gönderme hızında fiziksel
     bir sınıra erişiriz ve büyük miktarda bilgiyi daha hızlı göndermek istiyorsak,
     aynı bilgiyi daha az bitle temsil etmenin bir yolunu bulmalı, yani verileri sıkıştırmalıyız.
@@ -3062,28 +3066,29 @@ tr:
     bilgi gönderirken gizliliğe duyulan ihtiyaç hakkında yeterli derecede bilgi sahibi
     olmalıdır ve güçlü bilişim araçları çağında şifreleme tekniklerinin daha sofistike
     olması gerektiğini öğrenmelidir.
-  tutorial_kanopixel_longdescription: Her yaştan yaratıcılar, gerçek bir programlama
-    dilinde kodlamayı öğrenir ve kodlarıyla birlikte 13 resim dizisi çizerek komutlarını
-    hayata geçirirler. Pong ve diğer retro oyunlardan 8-bit sanat ve Minecraft vasıtasıyla
-    video oyun sanat tarihi hakkında bilgi edinecekler, bilgisayar bilimleriyle sanat,
-    tarih ve hikaye anlatımı yapacaklar. Uygulama esnektir - bir veya birden çok oturumda
-    1 saat veya birkaç saat geçirebilirsiniz. Öğrenciler, zorluklar içerisinde Pixel
-    Hack'ı kendi başlarına kendi başlarına kullanarak tamamlayabilir veya Pixel Hack'ı
-    kapsamlı bir eğitimci kılavuzu olan önerilerle dolu bir öğretim görevlisi yolculuğuna
-    dönüştürebilirler. Öğrenciler, Pixel Hacker Sertifikası kazanmak için zorluklarımızı
-    çiğneyerek kendi yaratıcı yeteneklerini eklemeye teşvik edilecektir.
-  tutorial_foos_longdescription: Bulmaca çözmek için sevimli Foos programlayın. Daha
-    sonra oyun yapmak ve paylaşmak için Foo Studio'ya girin. Her yerde herkes, The
-    Foos ödüllü "sözcüksüz" arayüzüyle kodlamayı öğrenebilir. Şimdi oyna!
-  tutorial_tynkerdd_longdescription: Kendi özel ejderhanı tasarla, sonra eğlenceli
-    bulmacalarla hazine ve madeni paralar arayışında rehberlik etmek için programlamayı
-    kullanın! Karmaşık kaleler arasında dolaşmanız, power-up'lar bulmanız ve tüm hazineyi
-    almak için şövalyeleri ele geçirmeniz gerekecek.
-  tutorial_tynkerana_longdescription: Saniye, dakikalık ve saatli el hareketli bir
-    analog saat oluşturmak için matematik ve geometri bilgilerinizi kullanın. Her
-    elin hangi vakitte olduğuna bağlı olarak açılacağı açı hesaplamalısınız. İşiniz
-    bittiğinde, kendi çalar saatinizi hazırlamak için gün boyunca yapmanız gerekenleri
-    hatırlatıcılar ekleyebilirsiniz!
+  tutorial_kanopixel_longdescription: Her yaştan içerik oluşturucu, gerçek bir programlama
+    dilinde kodlamayı öğrenir ve kod içeren 13 resimlik bir dizi çizerek komutlarının
+    hayata geçmesini izler.  Bilgisayar bilimini sanat, tarih ve hikaye anlatımıyla
+    bir araya getirerek, 8-bit sanat ve Minecraft aracılığıyla Pong ve diğer retro
+    oyunlardan video oyun sanatı tarihini öğrenecekler.  Uygulama esnektir; bir veya
+    birden fazla oturumda 1 veya birkaç saat harcayabilirsiniz.  Öğrenciler, zorluklar
+    içinde rehberlik kullanarak Pixel Hack'i kendi başlarına tamamlayabilir veya Pixel
+    Hack'i önerilerle dolu kapsamlı bir eğitimci kılavuzuyla eğitmen liderliğindeki
+    bir yolculuğa dönüştürebilirsiniz.  Öğrenciler, Pixel Hacker Sertifikası kazanmak
+    için zorluklarımızı hackleyerek kendi yaratıcı yeteneklerini katmaya teşvik edilecek.
+  tutorial_foos_longdescription: Sıralama ve döngüler gibi temel bilgisayar bilimi
+    kavramlarını öğreten bulmacaları çözmek için sevimli Foos'u kodlayın.  CodeSpark
+    Academy'nin ödüllü "kelimesiz" arayüzü ile herkes her yerde kodlamayı öğrenebilir.  Acemi
+    kodlayıcılar ve ön okuyucular hoş geldiniz!
+  tutorial_tynkerdd_longdescription: Kendi özel ejderinizi tasarlayın, ardından ona
+    hazine ve madeni para arayışında eğlenceli bulmacalarda rehberlik etmek için programlamayı
+    kullanın!  Tüm hazineyi almak için karmaşık kalelerde gezinmeniz, güçlendiriciler
+    bulmanız ve şövalyeleri fethetmeniz gerekecek.
+  tutorial_tynkerana_longdescription: Hareket eden saniye, yelkovan ve akrep ile çalışan
+    bir analog saat oluşturmak için matematik ve geometri bilginizi kullanın.  Saatin
+    kaç olduğuna bağlı olarak her bir ibrenin göstermesi gereken açıyı hesaplamanız
+    gerekecek.  İşiniz bittiğinde, kendi çalar saatinizi yapmak için gün boyunca yapmanız
+    gerekenler hakkında hatırlatıcılar ekleyebilirsiniz!
   tutorial_vidcard_longdescription: |-
     JavaScript ile nasıl bir tebrik kartı hazırlayacağınızı öğrenin!
 
@@ -3095,10 +3100,9 @@ tr:
   tutorial_spritebox_longdescription: 'Üç farkı dünyadan yıldız toplayarak, Koş, atla
     ve yolunu kodla ve bitiş çizgisine gel! Swift, Java veya Icons ile sıralamayı,
     hata ayaklamayı, döngüleri ve kodlamayı öğren. '
-  tutorial_tynkerch_longdescription: Bilgisayarı kötü amaçlı bir virüsten kurtarın!
-    Virüsleri silerek, kapıları açarak, labirentleri çözerek ve portallar arasında
-    gezinerek sistemin içine girmeniz gerekecek. Virüslere ve aksaklıklara dikkat
-    edin!
+  tutorial_tynkerch_longdescription: Bilgisayarı kötü amaçlı bir virüsten kurtarın!  Virüsleri
+    silerek, kapıları açarak, labirentleri çözerek ve portallar arasında gezinerek
+    sistemi hacklemeniz gerekecek.  Virüslere ve hatalara dikkat edin!
   tutorial_lightbot_longdescription: Lightbot, oyunculara bulmacaları çözmek için
     programlama mantığı kullanmasını isteyen bir oyundur! Her seviyedeki tüm mavi
     kiremitleri aydınlatmaya Lightbot'a rehberlik ederek temel kodlama konseptleri

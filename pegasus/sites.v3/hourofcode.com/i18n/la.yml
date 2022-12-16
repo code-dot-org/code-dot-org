@@ -555,6 +555,10 @@ la:
     de estudiantes de todo el mundo que celebran La Semana por la Educación en Ciencias
     de la Computación con la Hora del Código. Abriremos la inscripción para la celebración
     anual en octubre.
+  signup_registration_closed_2022_markdown: 'Registration for this year''s Hour of
+    Code event map is currently closed, but you can still [host an Hour of Code](%{hoc_activities_url})
+    and join in the celebration on social media! Post fun pictures or video of your
+    event using the #HourOfCode hashtag!'
   signup_header: Organiza una Hora del Código del %{campaign_date} y regístrate.
   signup_name_label: Tu nombre
   signup_name_error: El nombre es obligatorio.

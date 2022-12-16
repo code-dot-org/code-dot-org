@@ -535,6 +535,10 @@ is:
     í för með miljónum nemenda um allan heim er þeir fagna Viku tölvunarfræðináms
     með því að gera verkefni í Klukkustund kóðunar. Við munum opna fyrir skráningu
     formlegra viðburða í október.
+  signup_registration_closed_2022_markdown: 'Registration for this year''s Hour of
+    Code event map is currently closed, but you can still [host an Hour of Code](%{hoc_activities_url})
+    and join in the celebration on social media! Post fun pictures or video of your
+    event using the #HourOfCode hashtag!'
   signup_header: Skipulegðu Klukkustund kóðunar %{campaign_date} og skráðu það hér.
   signup_name_label: Nafn þitt
   signup_name_error: Nafn er nauðsynlegt.

@@ -1377,6 +1377,27 @@
         },
         "coursea_maze_ramp1_2021": {
           "grade2_CaringForNewPet_0_1": "Miután a blokkokat egymáshoz csatlakoztattad, nyomj \"Futtatás\" gombra, hogy elinduljon a program!"
+        },
+        "courseA_EOC_playlab_animals": {
+          "question_mark": "?"
+        },
+        "courseA_EOC_playlab_animals2022": {
+          "question_mark": "?"
+        },
+        "courseA_EOC_playlab_fantasy": {
+          "question_mark": "?"
+        },
+        "courseA_EOC_playlab_fantasy2022": {
+          "question_mark": "?"
+        },
+        "courseA_EOC_playlab_people": {
+          "question_mark": "?"
+        },
+        "courseA_EOC_playlab_people2022": {
+          "question_mark": "?"
+        },
+        "courseD_collector_ramp8": {
+          "courseD_collector_ramp8_1": "Használd ezt a blokkot, hogy egy kincset felvegyél.  "
         }
       }
     }

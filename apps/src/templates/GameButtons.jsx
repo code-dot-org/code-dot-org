@@ -26,7 +26,7 @@ export const RunButton = Radium(props => (
     style={props.style}
   >
     <div>{props.runButtonText || msg.runProgram()}</div>
-    <img src={blankImg} className="run26" />
+    <img src={blankImg} className="run26" alt="" />
   </button>
 ));
 RunButton.propTypes = {
@@ -50,7 +50,7 @@ export const ResetButton = Radium(props => (
     style={[commonStyles.hidden, props.style]}
   >
     <div>{!props.hideText && msg.resetProgram()}</div>
-    <img src={blankImg} className="reset26" />
+    <img src={blankImg} className="reset26" alt="" />
   </button>
 ));
 ResetButton.propTypes = {
