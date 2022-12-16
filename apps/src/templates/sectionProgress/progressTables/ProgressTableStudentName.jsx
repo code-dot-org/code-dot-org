@@ -115,6 +115,8 @@ const styles = {
     paddingRight: 8,
     fontSize: 20,
     verticalAlign: 'middle',
-    width: 11
+    width: 11,
+    boxSizing: 'content-box',
+    textAlign: 'left'
   }
 };

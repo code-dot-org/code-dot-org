@@ -1,0 +1,5 @@
+@import "../../mixins.scss";
+
+.inlineAudioButton {
+  @include remove-button-styles(inherit, inherit, inherit);
+}
