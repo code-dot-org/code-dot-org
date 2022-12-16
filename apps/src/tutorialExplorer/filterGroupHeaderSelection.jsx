@@ -47,14 +47,13 @@ export default class FilterGroupHeaderSelection extends React.Component {
       <div style={{...styles.container, ...this.props.containerStyle}}>
         <div style={styles.flexContainer}>
           {this.props.filterGroup.entries.map((item, index) => (
-            <button
+            <div
               key={item.name}
-              type="button"
               onClick={this.handleChange.bind(this, item.name)}
               style={{...styles.item, ...this.itemStyle(index)}}
             >
               {item.text}
-            </button>
+            </div>
           ))}
         </div>
       </div>
@@ -67,6 +66,7 @@ const styles = {
     display: 'inline-block',
     marginTop: 6,
     overflow: 'hidden',
+    height: 34,
     lineHeight: '34px',
     border: 'solid 1px #a2a2a2',
     borderRadius: 5
@@ -86,12 +86,7 @@ const styles = {
     flex: 1,
     userSelect: 'none',
     boxSizing: 'border-box',
-    border: 'none',
-    borderLeft: 'solid 1px white',
-    borderRadius: 0,
-    padding: 0,
-    display: 'flex',
-    justifyContent: 'center'
+    borderLeft: 'solid 1px white'
   },
   select: {
     backgroundColor: '#2799a4',
