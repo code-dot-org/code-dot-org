@@ -9821,26 +9821,62 @@ en:
         vpl-csd5-ayw-pilot-2022:
           lessons:
             lesson-1:
-              name: 'Part 1: Synchronous Session'
+              name: Workshop Opener
             lesson-2:
-              name: 'Part 2: Asynchronous Post-Work'
-          lesson_groups: {}
+              name: Content Workshop
+            lesson-3:
+              name: Supporting Equity
+            lesson-4:
+              name: Closing
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Part 1: Synchronous Session'
+            lessonGroup-3:
+              display_name: 'Part 2: Asynchronous Post-Work'
           name: vpl-csd5-ayw-pilot-2022
           title: CS Discoveries Virtual Module 5
           description_audience: ''
           description_short: ''
-          description: ''
-          student_description: ''
+          description: |-
+            **Participants will:**
+
+            * Build confidence and skill in core computer science concepts.
+            * Describe ways to improve access and diversity in CS at their schools.
+            * Identify strategies to reduce stereotype threat in their CS classrooms.
+          student_description: |-
+            **You will:**
+
+            * Build confidence and skill in core computer science concepts.
+            * Describe ways to improve access and diversity in CS at your school.
+            * Identify strategies to reduce stereotype threat in your CS classroom.
         vpl-csd6-ayw-pilot-2022:
           lessons:
             lesson-1:
-              name: 'Part 1: Synchronous Session'
+              name: Workshop Opener
             lesson-2:
-              name: 'Part 2: Asynchronous Post-Work'
-          lesson_groups: {}
+              name: Content Workshop
+            lesson-3:
+              name: Supporting Student Learning
+            lesson-4:
+              name: Closing
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Part 1: Synchronous Session'
+            lessonGroup-3:
+              display_name: 'Part 2: Asynchronous Post-Work'
           name: vpl-csd6-ayw-pilot-2022
           title: CS Discoveries Virtual Module 6
           description_audience: ''
           description_short: ''
-          description: ''
-          student_description: ''
+          description: |-
+            **Participants will:**
+
+            * Build confidence and skill in core computer science concepts.
+            * Reflect on their role in supporting student learning.
+            * Practice their responses to common classroom scenarios.
+          student_description: |-
+            **You will:**
+
+            * Build confidence and skill in core computer science concepts.
+            * Reflect on your role in supporting student learning.
+            * Practice your responses to common classroom scenarios.
