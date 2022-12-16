@@ -34,9 +34,9 @@ MONITORING_GROUPS = {
   'acquisition-products' => ['Acquisition Products'],
   'ap-csa' => ['CSA Curriculum'],
   'csc' => ['CSC Curriculum'],
-  'disco-party' => ['CSD Curriculum'],
   'csf' => ['CSF Curriculum'],
   'cspalooza' => ['CSP Curriculum'],
+  'disco-party' => ['CSD Curriculum'],
   'facilitator-things' => ['Facilitators', 'PNP Andrea'],
   'hour-of-code' => ['Hour of Code'],
   'infrastructure' => ['Infrastructure'],
@@ -66,16 +66,16 @@ GROUP_FILTERS = {
   'EdPop Tawny' => '9638169070477',
   'Facilitators' => '9638169070477',
   'Hour of Code' => '9690110143757',
+  'Infrastructure' => '9811556471309',
   'International' => '360086130812',
   'International Partnerships' => '360086130812',
-  'Infrastructure' => '9811556471309',
   'Media' => '47756566',
   'Platform Team' => '360086130792',
   'PLC Teachers' => '9638169070477',
   'PNP Andrea' => '1900013935647',
   'Programs (PNP) Team' => '8163316698253',
   'Student Learning' => '9612070142733',
-  'Teacher Tools' => '360082967212',
+  'Teacher Tools' => '360082967212'
 }
 
 # Slack room -> username of a code.org email
