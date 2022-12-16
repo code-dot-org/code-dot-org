@@ -1,6 +1,10 @@
 {
   "pages": {
-    "homepage": ["hoc2022-soon-hoc", "hoc2022-actual-hoc", "pl-launch-2023-superhero"]
+    "homepage": [
+      "hoc2022-soon-hoc",
+      "hoc2022-actual-hoc",
+      "pl-launch-superhero"
+    ]
   },
 
   "banners": {
@@ -68,7 +72,7 @@
         }
       ]
     },
-    "pl-launch-2023-superhero": {
+    "pl-launch-superhero": {
       "dcdo": "pl-launch-hero-banner",
       "class": "pl-banner-superhero homepage",
       "desktopImage": "/images/hoc2022-codeorg-hero-banner-02.png",
