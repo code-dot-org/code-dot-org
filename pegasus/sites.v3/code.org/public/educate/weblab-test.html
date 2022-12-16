@@ -55,15 +55,6 @@
                   <p class="failed" style="display: none">Failed</p>
                 </td>
               </tr>
-              <tr>
-                <td>Able to load an iFrame</td>
-                <td class="iframe">
-                  <p class="incomplete">Not complete</p>
-                  <p class="loading" style="display: none">Connecting...</p>
-                  <p class="succeeded" style="display: none">Success</p>
-                  <p class="failed" style="display: none">Failed</p>
-                </td>
-              </tr>
             </tbody>
           </table>
         </div>
@@ -86,13 +77,11 @@
             >) if you have any questions.
           </p>
         </div>
-        <iframe id="test-iframe" src="/" style="display: none"></iframe>
       </div>
     </div>
   </div>
 </div>
 <script>
-  const TIMEOUT_MS = 3000;
   function testImageAccess(url, callback = () => {}) {
     return new Promise((resolve, reject) => {
       const element = new Image();
@@ -113,50 +102,11 @@
           callback(new Error());
           reject();
         }
-      }, TIMEOUT_MS);
+      }, 3000);
 
       // store a reference to the element so it doesn't get collected
       window.testImages = window.testImages || [];
       window.testImages.push(element);
-    });
-  }
-
-  function testIframeAccess(successCallback, failureCallback) {
-    return new Promise((resolve, reject) => {
-      try {
-        const iframeElement = document.getElementById("test-iframe");
-        const iframeWindow = iframeElement.contentWindow;
-
-        const checkIframeLoaded = () => {
-          let elapsedTime = new Date().getTime() - startTime;
-          throw Error();
-          if (
-            iframeWindow.document.readyState === "complete" &&
-            // Chrome initializes every iframe with an "about:blank" empty page
-            // so we need to check that the readyState refers to the page we expect
-            (iframeElement.src === "about:blank" ||
-              iframeWindow.location.href !== "about:blank")
-          ) {
-            successCallback();
-            resolve();
-          } else if (elapsedTime > TIMEOUT_MS) {
-            failureCallback();
-            reject();
-          }
-        };
-
-        const startTime = new Date().getTime();
-        setInterval(() => {
-          try {
-            checkIframeLoaded();
-          } catch (err) {
-            failureCallback();
-            reject(err);
-          }
-        }, 100);
-      } catch (err) {
-        reject(err);
-      }
     });
   }
 
@@ -213,29 +163,9 @@
       }
     );
 
-    const iframePromise = testIframeAccess(
-      () => {
-        setAttribute(".iframe > .loading", { style: "display: none" });
-        setAttribute(".iframe > .succeeded", {
-          style: "display: block",
-        });
-      },
-      () => {
-        setAttribute(".iframe > .loading", { style: "display: none" });
-        setAttribute(".iframe > .failed", {
-          style: "display: block",
-        });
-      }
-    );
-
-    return Promise.all([
-      computingInTheCorePromise,
-      codeProjectsPromise,
-      testIframeAccess(),
-    ])
+    return Promise.all([computingInTheCorePromise, codeProjectsPromise])
       .then(() => setAttribute("#success-message", { style: "display: block" }))
-      .catch((err) => {
-        console.log("ERR here: ", err);
+      .catch(() => {
         setAttribute("#fail-message", { style: "display: block" });
       });
   }
