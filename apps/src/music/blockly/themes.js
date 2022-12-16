@@ -1,4 +1,4 @@
-import CdoTheme from '@cdo/apps/blockly/addons/cdoTheme';
+import DarkTheme from '@blockly/theme-dark';
 import GoogleBlockly from 'blockly/core';
 import {cdoBlockStyles} from '../../blockly/addons/cdoTheme.js';
 
@@ -13,7 +13,7 @@ const componentStyles = {
 export const musicLabDarkTheme = GoogleBlockly.Theme.defineTheme(
   'musicLabDark',
   {
-    base: CdoTheme,
+    base: DarkTheme,
     blockStyles,
     categoryStyles,
     componentStyles,
