@@ -237,6 +237,7 @@
   "dependencies": {
     "@amplitude/analytics-browser": "^1.5.4",
     "@blockly/field-grid-dropdown": "~2.0.2",
+    "@blockly/keyboard-navigation": "0.3.2",
     "@blockly/plugin-scroll-options": "~3.0.3",
     "@blockly/theme-dark": "^4.0.1",
     "@blockly/theme-deuteranopia": "^3.0.1",
