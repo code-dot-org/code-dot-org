@@ -48,6 +48,7 @@ const styles = {
     marginLeft: 15,
     marginRight: 15
   },
+  // Using 'margin' instead of 'marginTop' intentionally to override styling
   button: {
     paddingLeft: 0,
     paddingRight: 0,
