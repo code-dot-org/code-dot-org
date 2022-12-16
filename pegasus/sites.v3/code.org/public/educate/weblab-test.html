@@ -121,36 +121,42 @@
     });
   }
 
-  function testIframeAccess() {
+  function testIframeAccess(successCallback, failureCallback) {
     return new Promise((resolve, reject) => {
-      const iframeElement = document.getElementById("test-iframe");
-      const iframeWindow = iframeElement.contentWindow;
+      try {
+        const iframeElement = document.getElementById("test-iframe");
+        const iframeWindow = iframeElement.contentWindow;
 
-      const checkIframeLoaded = () => {
-        let elapsedTime = new Date().getTime() - startTime;
-        if (
-          iframeWindow.document.readyState === "complete" &&
-          // Chrome initializes every iframe with an "about:blank" empty page
-          // so we need to check that the readyState refers to the page we expect
-          (iframeElement.src === "about:blank" ||
-            iframeWindow.location.href !== "about:blank")
-        ) {
-          setAttribute(".iframe > .loading", { style: "display: none" });
-          setAttribute(".iframe > .succeeded", {
-            style: "display: block",
-          });
-          resolve();
-        } else if (elapsedTime > TIMEOUT_MS) {
-          setAttribute(".iframe > .loading", { style: "display: none" });
-          setAttribute(".iframe > .failed", {
-            style: "display: block",
-          });
-          reject();
-        }
-      };
+        const checkIframeLoaded = () => {
+          let elapsedTime = new Date().getTime() - startTime;
+          throw Error();
+          if (
+            iframeWindow.document.readyState === "complete" &&
+            // Chrome initializes every iframe with an "about:blank" empty page
+            // so we need to check that the readyState refers to the page we expect
+            (iframeElement.src === "about:blank" ||
+              iframeWindow.location.href !== "about:blank")
+          ) {
+            successCallback();
+            resolve();
+          } else if (elapsedTime > TIMEOUT_MS) {
+            failureCallback();
+            reject();
+          }
+        };
 
-      const startTime = new Date().getTime();
-      setInterval(checkIframeLoaded, 100);
+        const startTime = new Date().getTime();
+        setInterval(() => {
+          try {
+            checkIframeLoaded();
+          } catch (err) {
+            failureCallback();
+            reject(err);
+          }
+        }, 100);
+      } catch (err) {
+        reject(err);
+      }
     });
   }
 
@@ -207,13 +213,31 @@
       }
     );
 
+    const iframePromise = testIframeAccess(
+      () => {
+        setAttribute(".iframe > .loading", { style: "display: none" });
+        setAttribute(".iframe > .succeeded", {
+          style: "display: block",
+        });
+      },
+      () => {
+        setAttribute(".iframe > .loading", { style: "display: none" });
+        setAttribute(".iframe > .failed", {
+          style: "display: block",
+        });
+      }
+    );
+
     return Promise.all([
       computingInTheCorePromise,
       codeProjectsPromise,
       testIframeAccess(),
     ])
       .then(() => setAttribute("#success-message", { style: "display: block" }))
-      .catch(() => setAttribute("#fail-message", { style: "display: block" }));
+      .catch((err) => {
+        console.log("ERR here: ", err);
+        setAttribute("#fail-message", { style: "display: block" });
+      });
   }
   $(function () {
     $("#connect").click(function () {
