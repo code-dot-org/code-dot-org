@@ -15,7 +15,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-12-14 22:14:40 UTC",
+    "serialized_at": "2022-12-15 15:35:50 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -5634,6 +5634,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L5-L7 Practice"
+        ],
         "progression": "Practice: The super Keyword"
       },
       "bonus": false,
@@ -5906,6 +5909,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L7-L7 Practice_2023"
+        ],
         "progression": "Practice: Accessor Methods"
       },
       "bonus": false,
@@ -6278,6 +6284,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L9-L7 Practice"
+        ],
         "progression": "Practice: Mutator Methods"
       },
       "bonus": false,
@@ -6475,15 +6484,12 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSA U2L10-L7_2023"
-        ],
         "progression": "Practice: The toString() Method"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "CSA U2L10-L7_2023"
+          "CSA U2L10-L7 Practice"
         ],
         "lesson.key": "lesson-9",
         "lesson_group.key": "lessonGroup-2",
@@ -6491,7 +6497,7 @@
         "activity_section.key": "43aad906-82b6-4f44-b573-bac932a37015"
       },
       "level_keys": [
-        "CSA U2L10-L7_2023"
+        "CSA U2L10-L7 Practice"
       ]
     },
     {
@@ -7498,9 +7504,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "CSA U2L10-L7_2023",
+        "level.key": "CSA U2L10-L7 Practice",
         "script_level.level_keys": [
-          "CSA U2L10-L7_2023"
+          "CSA U2L10-L7 Practice"
         ],
         "lesson.key": "lesson-9",
         "lesson_group.key": "lessonGroup-2",
