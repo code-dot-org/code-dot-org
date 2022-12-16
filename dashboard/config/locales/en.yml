@@ -692,44 +692,44 @@ en:
       body_short: "Design an app, code with blocks or JavaScript to make it work, then share your app in seconds."
       audience: 'Ages 13+'
       cta: 'Learn how'
-      image_alt: 'A purple bunny is wearing a rocket powered backpack.'
+      image_alt: 'A purple bunny wearing a rocket powered backpack.'
     applab-intro:
       image_alt: 'A hand is tapping the center of a smartphone screen. Light and sparkles are coming out of the screen.'
     aquatic:
       title: "Minecraft"
       image_alt: 'Steve and Alex from Minecraft are looking at you.'
     artist:
-      image_alt: 'A cartoonish person standing on a piece of paper is holding a huge pencil and drawing a triangle.'
+      image_alt: 'A cartoonish person holding a huge pencil and drawing a triangle.'
     conditionals:
-      image_alt: 'Two hands are shuffling a deck of playing cards.'
+      image_alt: 'Two hands shuffling a deck of playing cards.'
     course1:
       image_alt: 'The Code.org bumble bee and orange fish standing in front of some code.'
     course2:
-      image_alt: 'A collage of Code.org puzzles which have a green wizard, artist, and orange fish.'
+      image_alt: 'A collage of Code.org puzzles showing a green wizard, artist, and orange fish.'
     course3:
-      image_alt: 'A collage of Code.org puzzles which have a game, zombie, and ninja.'
+      image_alt: 'A collage of Code.org puzzles showing a game, zombie, and ninja.'
     course4:
-      image_alt: 'A collage of Code.org puzzles which have soccer, pets, and an artist.'
+      image_alt: 'A collage of Code.org puzzles showing soccer, pets, and an artist.'
     coursea:
-      image_alt: 'A collage of Code.org puzzles which have an elephant and a squirrel.'
+      image_alt: 'A collage of Code.org puzzles showing an elephant and a squirrel.'
     courseb:
-      image_alt: 'A collage of Code.org puzzles which have an explorer, gems, and a flower.'
+      image_alt: 'A collage of Code.org puzzles showing an explorer, gems, and a flower.'
     coursec:
-      image_alt: 'A collage of Code.org puzzles which have a squirrel, binary numbers, and a red bird from the game Angry Birds.'
+      image_alt: 'A collage of Code.org puzzles showing a squirrel, binary numbers, and a red bird from the game Angry Birds.'
     coursed:
-      image_alt: 'A collage of Code.org puzzles which have a bee, flowers, honey, and a green pig from the game Angry Birds.'
+      image_alt: 'A collage of Code.org puzzles showing a bee, flowers, honey, and a green pig from the game Angry Birds.'
     coursee:
-      image_alt: 'A collage of Code.org puzzles which have a person holding a shovel, pumpkin, orchard, and cow.'
+      image_alt: 'A collage of Code.org puzzles showing a person holding a shovel, pumpkin, orchard, and cow.'
     coursef:
-      image_alt: 'A collage of Code.org puzzles which have colorful geometric shapes, a red pirate, and an artist.'
+      image_alt: 'A collage of Code.org puzzles showing colorful geometric shapes, a red pirate, and an artist.'
     dance-2019:
       title: 'Dance Party'
-      image_alt: 'A happy cat, sloth, and shark are dancing.'
+      image_alt: 'A happy cat, sloth, and shark dancing.'
     dance-2022:
-      image_alt: 'A green alien and robot are dancing with Saturn in the background.'
+      image_alt: 'A green alien and robot dancing with Saturn in the background.'
     dance:
       title: 'Dance Party'
-      image_alt: 'A cool cat and happy shark are dancing at a party.'
+      image_alt: 'A cool cat and happy shark dancing at a party.'
     donate:
       image_alt: 'A child pointing at a laptop screen showing a Code.org puzzle.'
     elementary:
@@ -769,16 +769,16 @@ en:
     hoc:
       title: 'Classic Maze'
       body: 'Try the basics of computer science. Millions have given it a shot.'
-      image_alt: 'A collage of code, Mark Zuckerberg, and Angry Birds.'
+      image_alt: 'A collage of images showing code, Mark Zuckerberg, and Angry Birds.'
     hourofcode:
-      image_alt: 'A collage of code, Mark Zuckerberg, and Angry Birds.'
+      image_alt: 'A collage of images showing code, Mark Zuckerberg, and Angry Birds.'
     hoc2014:
       try_new_tutorial: 'Try our new Hour of Code tutorial in beta'
       try_frozen: 'Artist with Anna and Elsa, from Frozen'
     infinity:
       title: "Infinity Play Lab"
       body: "Use Play Lab to create a story or game starring Disney Infinity characters."
-      image_alt: 'Five characters from the Froze, Tangled, and Big Hero 6.'
+      image_alt: 'Five characters from the Froze, Tangled, and Big Hero 6 standing together.'
     map:
       image_alt: 'A grey image of the United States with about 20 states highlighted in purple.'
     mc_escape:
@@ -795,7 +795,7 @@ en:
     oceans:
       image_alt: 'A robot in the ocean scanning various sea creatures.'
     playlab:
-      image_alt: 'A blue cat, goofy dog, and prehistoric weasel.'
+      image_alt: 'An image collage showing a blue cat, goofy dog, and prehistoric weasel.'
     poem-art:
       title: 'Poem Art'
       body: 'Express yourself! Use code to create animated poems.'
@@ -811,20 +811,20 @@ en:
     sports:
       title: "Sports"
       body: "Make a basketball game or mix and match across sports."
-      image_alt: 'The NBA and WNBA logos. A football, soccer ball, hockey puck, and basketball.'
+      image_alt: 'The NBA and WNBA logos displayed next to a football, soccer ball, hockey puck, and basketball.'
     starwars:
       title: "Star Wars"
       image_alt: 'R2-D2, Leia, Rey, and BB-8 standing in a desert.'
     text-compression:
       title: "Text Compression"
       body: "In this lesson, students will use the Text Compression Widget to compress text by substituting patterns with symbols."
-      image_alt: 'An image showing text being compressed by replacing whole words with a single symbol.'
+      image_alt: 'Text being compressed by replacing whole words with a single symbol.'
     weblab:
       title: "Web Lab (beta)"
       body: "Web Lab is a programming environment where you can make simple web pages using HTML and CSS. Design your web pages and share your site in seconds."
       audience: "Ages 13+"
       cta: "Learn how"
-      image_alt: 'A computer screen with HTML code on it.'
+      image_alt: 'A computer screen displaying HTML code.'
     widgets:
       title: "Widgets"
       body: "Students can explore concepts from our Computer Science Principles course hands-on using these digital tools. Use the widgets on their own, or create a single-concept lesson for your class."
