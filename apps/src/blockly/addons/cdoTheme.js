@@ -44,13 +44,16 @@ const cdoCustomStyles = {
   }
 };
 
+// takes a hex rgb value such as '#5b67a5' and darkens the color by decreasing
+// each color channel by 25%, e.g., to '#454e7c'
 const convertToHighContrast = hexColor => {
   const red = darkenValue(hexColor.substring(1, 3));
   const green = darkenValue(hexColor.substring(3, 5));
   const blue = darkenValue(hexColor.substring(5, 7));
-  return red + green + blue;
+  return `#${red}${green}${blue}`;
 };
 
+// decreases a 2-digit hex value to 75% of its value
 const darkenValue = hexValue => {
   const dec = Math.round(parseInt(hexValue, 16) * 0.75);
   let darkenHexValue = dec.toString(16);
