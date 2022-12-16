@@ -3,18 +3,8 @@ title: Learn about Physical Computing
 video_player: true
 theme: responsive
 style_min: true
-social:
-  "og:title": "I'm a Maker | Physical Computing"
-  "og:description": "Become a Maker with Code.org resources and courses on physical computing."
-  "og:image": "https://code.org/images/ai/exploring-ai.png"
-  "og:image:width": 1200
-  "og:image:height": 630
-  "twitter:image:src": "https://code.org/images/ai/exploring-ai.png"
-  "og:video": ""
-  "og:video:width": ""
-  "og:video:height": ""
-  "og:video:type": ""
 ---
+
 {{ ai_header_stylesheets_links }}
 <link href="/css/video-responsive.css" rel="stylesheet">
 <style>html {scroll-behavior: smooth}</style>
