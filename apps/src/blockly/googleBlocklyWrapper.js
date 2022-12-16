@@ -3,6 +3,7 @@ import {
   ScrollBlockDragger,
   ScrollOptions
 } from '@blockly/plugin-scroll-options';
+import {NavigationController} from '@blockly/keyboard-navigation';
 import {BlocklyVersion} from '@cdo/apps/constants';
 import styleConstants from '@cdo/apps/styleConstants';
 import * as utils from '@cdo/apps/utils';
@@ -549,7 +550,10 @@ function initializeBlocklyWrapper(blocklyInstance) {
     }px)`;
     blocklyWrapper.isStartMode = !!opt_options.editBlocks;
     const workspace = blocklyWrapper.blockly_.inject(container, options);
-
+    // Initialize plugin.
+    const navigationController = new NavigationController();
+    navigationController.init();
+    navigationController.addWorkspace(workspace);
     if (!blocklyWrapper.isStartMode) {
       workspace.addChangeListener(Blockly.Events.disableOrphans);
     }
