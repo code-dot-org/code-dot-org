@@ -16,9 +16,10 @@ const coreBlocklyOverrides = {
     colourPrimary: '#509918'
   }
 };
+
 const cdoCustomStyles = {
   default: {
-    colourPrimary: '00b0bc'
+    colourPrimary: '#00b0bc'
   },
   behavior_blocks: {
     colourPrimary: '#20cc4e'
@@ -43,67 +44,39 @@ const cdoCustomStyles = {
   }
 };
 
-export const cdoBlockStyles = {
-  ...coreBlocklyOverrides,
-  ...cdoCustomStyles
+const convertToHighContrast = hexColor => {
+  const red = darkenValue(hexColor.substring(1, 3));
+  const green = darkenValue(hexColor.substring(3, 5));
+  const blue = darkenValue(hexColor.substring(5, 7));
+  return red + green + blue;
 };
 
-export const CdoTheme = GoogleBlockly.Theme.defineTheme('modern', {
-  base: GoogleBlockly.Themes.Classic,
-  blockStyles: cdoBlockStyles,
-  categoryStyles: {},
-  componentStyles: {
-    toolboxBackgroundColour: '#DDDDDD'
-  },
-  fontStyle: {
-    family: '"Gotham 4r", sans-serif'
-  },
-  startHats: null
-});
+const darkenValue = hexValue => {
+  const dec = Math.round(parseInt(hexValue, 16) * 0.75);
+  let darkenHexValue = dec.toString(16);
+  let len = darkenHexValue.length;
+  for (let i = 0; i < 2 - len; i++) {
+    darkenHexValue = '0' + darkenHexValue;
+  }
+  return darkenHexValue;
+};
 
-export const CdoDarkTheme = GoogleBlockly.Theme.defineTheme('cdoDark', {
-  base: DarkTheme,
-  blockStyles: cdoBlockStyles
-});
+const getCdoHighContrastStylesObject = obj => {
+  let highConstrastObj = {};
+  Object.keys(obj).forEach(key => {
+    highConstrastObj[key] = {
+      colourPrimary: convertToHighContrast(obj[key].colourPrimary)
+    };
+  });
+  return highConstrastObj;
+};
 
 const cdoHighContrastStyles = {
   ...HighContrastTheme.blockStyles,
-  colour_blocks: {
-    // Intentionally overrides definition from core Blockly
-    colourPrimary: '#00b0bc'
-  },
-  loop_blocks: {
-    // Intentionally overrides definition from core Blockly
-    colourPrimary: '#B6127A'
-  },
-  procedure_blocks: {
-    // Intentionally overrides definition from core Blockly
-    colourPrimary: '#3C7312'
-  },
-  default: {
-    colourPrimary: '00848D'
-  },
-  behavior_blocks: {
-    colourPrimary: '#18993B'
-  },
-  dance_blocks: {
-    colourPrimary: '#572886'
-  },
-  event_blocks: {
-    colourPrimary: '#008D2F'
-  },
-  music_blocks: {
-    colourPrimary: '#454E7C'
-  },
-  sprite_blocks: {
-    colourPrimary: '#862830'
-  },
-  setup_blocks: {
-    colourPrimary: '#BD7B00'
-  },
-  world_blocks: {
-    colourPrimary: '#45457C'
-  }
+  ...getCdoHighContrastStylesObject({
+    ...coreBlocklyOverrides,
+    ...cdoCustomStyles
+  })
 };
 
 // styles for color vision deficiency themes
@@ -144,6 +117,29 @@ const cdoTritanopiaStyles = {
   ...TritanopiaTheme.blockStyles,
   ...CVDStyles
 };
+
+export const cdoBlockStyles = {
+  ...coreBlocklyOverrides,
+  ...cdoCustomStyles
+};
+
+export const CdoTheme = GoogleBlockly.Theme.defineTheme('modern', {
+  base: GoogleBlockly.Themes.Classic,
+  blockStyles: cdoBlockStyles,
+  categoryStyles: {},
+  componentStyles: {
+    toolboxBackgroundColour: '#DDDDDD'
+  },
+  fontStyle: {
+    family: '"Gotham 4r", sans-serif'
+  },
+  startHats: null
+});
+
+export const CdoDarkTheme = GoogleBlockly.Theme.defineTheme('cdoDark', {
+  base: DarkTheme,
+  blockStyles: cdoBlockStyles
+});
 
 export const CdoHighContrastTheme = GoogleBlockly.Theme.defineTheme(
   'cdoHighContrast',
