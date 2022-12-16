@@ -1,4 +1,5 @@
 import GoogleBlockly from 'blockly/core';
+import msg from '@cdo/locale';
 
 /**
  * Adds a copy command to the block context menu. After switching to v7,
@@ -8,7 +9,7 @@ import GoogleBlockly from 'blockly/core';
 const registerBlockCopyToStorage = function() {
   const copyToStorageOption = {
     displayText: function() {
-      return 'Copy';
+      return msg.copy();
     },
     preconditionFn: function(scope) {
       if (scope.block.isDeletable() && scope.block.isMovable()) {
@@ -36,7 +37,7 @@ const registerBlockCopyToStorage = function() {
 const registerBlockPasteFromStorage = function() {
   const pasteFromStorageOption = {
     displayText: function() {
-      return 'Paste';
+      return msg.paste();
     },
     preconditionFn: function(scope) {
       const copyData = localStorage.getItem('blocklyStash');
@@ -184,6 +185,159 @@ const registerUnshadow = function() {
   GoogleBlockly.ContextMenuRegistry.registry.register(unshadowOption);
 };
 
+/**
+ * Change workspace theme to modern CdoTheme
+ */
+const registerDefaultTheme = function() {
+  const restoreThemeOption = {
+    displayText: function() {
+      return (
+        (isCurrentTheme('modern') ? '✓ ' : `${msg.enable()} `) +
+        msg.blocklyClassicTheme()
+      );
+    },
+    preconditionFn: function(scope) {
+      if (isMusicLabTheme(scope.workspace)) {
+        return 'hidden';
+      } else if (isCurrentTheme('modern')) {
+        return 'disabled';
+      } else {
+        return 'enabled';
+      }
+    },
+    callback: function(scope) {
+      localStorage.setItem('blocklyTheme', 'modern');
+      scope.workspace.setTheme(Blockly.themes.modern);
+    },
+    scopeType: GoogleBlockly.ContextMenuRegistry.ScopeType.WORKSPACE,
+    id: 'defaultTheme',
+    weight: 10
+  };
+  GoogleBlockly.ContextMenuRegistry.registry.register(restoreThemeOption);
+};
+
+/**
+ * Change workspace theme to CdoDarkTheme
+ */
+const registerDarkTheme = function() {
+  const darkThemeOption = {
+    displayText: function() {
+      return (
+        (isCurrentTheme('dark') ? '✓ ' : `${msg.enable()} `) +
+        msg.blocklyDarkTheme()
+      );
+    },
+    preconditionFn: function(scope) {
+      if (isMusicLabTheme(scope.workspace)) {
+        return 'hidden';
+      } else if (isCurrentTheme('dark')) {
+        return 'disabled';
+      } else {
+        return 'enabled';
+      }
+    },
+    callback: function(scope) {
+      localStorage.setItem('blocklyTheme', 'dark');
+      scope.workspace.setTheme(Blockly.themes.dark);
+    },
+    scopeType: GoogleBlockly.ContextMenuRegistry.ScopeType.WORKSPACE,
+    id: 'darkTheme',
+    weight: 11
+  };
+  GoogleBlockly.ContextMenuRegistry.registry.register(darkThemeOption);
+};
+
+/**
+ * Change workspace theme to CdoHighContrastTheme
+ */
+const registerHighContrastTheme = function() {
+  const highContrastThemeOption = {
+    displayText: function() {
+      return (
+        (isCurrentTheme('highContrast') ? '✓ ' : `${msg.enable()} `) +
+        msg.blocklyHighContrastTheme()
+      );
+    },
+    preconditionFn: function(scope) {
+      if (isMusicLabTheme(scope.workspace)) {
+        return 'hidden';
+      } else if (isCurrentTheme('highContrast')) {
+        return 'disabled';
+      } else {
+        return 'enabled';
+      }
+    },
+    callback: function(scope) {
+      localStorage.setItem('blocklyTheme', 'highContrast');
+      scope.workspace.setTheme(Blockly.themes.highContrast);
+    },
+    scopeType: GoogleBlockly.ContextMenuRegistry.ScopeType.WORKSPACE,
+    id: 'highContrastTheme',
+    weight: 12
+  };
+  GoogleBlockly.ContextMenuRegistry.registry.register(highContrastThemeOption);
+};
+
+/**
+ * Change workspace theme to CdoHighContrastTheme
+ */
+const registerDeuteranopiaTheme = function() {
+  const deuteranopiaThemeOption = {
+    displayText: function() {
+      return (
+        (isCurrentTheme('deuteranopia') ? '✓ ' : `${msg.enable()} `) +
+        msg.blocklyDeuteranopiaTheme()
+      );
+    },
+    preconditionFn: function(scope) {
+      if (isMusicLabTheme(scope.workspace)) {
+        return 'hidden';
+      } else if (isCurrentTheme('deuteranopia')) {
+        return 'disabled';
+      } else {
+        return 'enabled';
+      }
+    },
+    callback: function(scope) {
+      localStorage.setItem('blocklyTheme', 'deuteranopia');
+      scope.workspace.setTheme(Blockly.themes.deuteranopia);
+    },
+    scopeType: GoogleBlockly.ContextMenuRegistry.ScopeType.WORKSPACE,
+    id: 'deuteranopiaTheme',
+    weight: 13
+  };
+  GoogleBlockly.ContextMenuRegistry.registry.register(deuteranopiaThemeOption);
+};
+
+/**
+ * Change workspace theme to CdoHighContrastTheme
+ */
+const registerTritanopiaTheme = function() {
+  const tritanopiaThemeOption = {
+    displayText: function() {
+      return (
+        (isCurrentTheme('tritanopia') ? '✓ ' : `${msg.enable()} `) +
+        msg.blocklyTritanopiaTheme()
+      );
+    },
+    preconditionFn: function(scope) {
+      if (isMusicLabTheme(scope.workspace)) {
+        return 'hidden';
+      } else {
+        return 'enabled';
+      }
+    },
+    callback: function(scope) {
+      localStorage.setItem('blocklyTheme', 'tritanopia');
+      scope.workspace.setTheme(Blockly.themes.tritanopia);
+    },
+    scopeType: GoogleBlockly.ContextMenuRegistry.ScopeType.WORKSPACE,
+    id: 'tritanopiaTheme',
+    weight: 14
+  };
+  GoogleBlockly.ContextMenuRegistry.registry.register(tritanopiaThemeOption);
+};
+
 const registerAllContextMenuItems = function() {
   registerBlockCopyToStorage();
   registerBlockPasteFromStorage();
@@ -192,6 +346,11 @@ const registerAllContextMenuItems = function() {
   registerEditable();
   registerShadow();
   registerUnshadow();
+  registerDefaultTheme();
+  registerDarkTheme();
+  registerHighContrastTheme();
+  registerDeuteranopiaTheme();
+  registerTritanopiaTheme();
 };
 
 function canBeShadow(block) {
@@ -212,6 +371,14 @@ function nonShadowChildCount(block) {
 
 function hasShadowChildren(block) {
   return shadowChildCount(block) > 0;
+}
+
+function isCurrentTheme(theme) {
+  return localStorage.getItem('blocklyTheme') === theme;
+}
+
+function isMusicLabTheme(workspace) {
+  return workspace.getTheme().name === 'musiclabdark';
 }
 
 exports.registerAllContextMenuItems = registerAllContextMenuItems;
