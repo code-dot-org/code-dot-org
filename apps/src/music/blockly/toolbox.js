@@ -224,6 +224,23 @@ const baseToolboxSimple = {
         {
           kind: 'block',
           type: BlockTypes.SET_CURRENT_LOCATION_NEXT_MEASURE
+        },
+        {
+          kind: 'block',
+          type: 'controls_repeat_ext',
+          fields: {
+            OP: 'TIMES'
+          },
+          inputs: {
+            TIMES: {
+              shadow: {
+                type: 'math_number',
+                fields: {
+                  NUM: 2
+                }
+              }
+            }
+          }
         }
       ]
     }
