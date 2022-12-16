@@ -86,12 +86,14 @@ const styles = {
     flex: 1,
     userSelect: 'none',
     boxSizing: 'border-box',
+    margin: 0,
     border: 'none',
     borderLeft: 'solid 1px white',
     borderRadius: 0,
     padding: 0,
     display: 'flex',
-    justifyContent: 'center'
+    justifyContent: 'center',
+    alignItems: 'center'
   },
   select: {
     backgroundColor: '#2799a4',
