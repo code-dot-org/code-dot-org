@@ -161,7 +161,6 @@ export const PaneButton = Radium(function(props) {
       className={divClassNames}
       role="button"
       tabIndex="0"
-      aria-label={props.ariaLabel}
       id={props.id}
       style={style}
       onKeyDown={props.isDisabled ? () => {} : onKeyDownWrapper}
@@ -177,7 +176,6 @@ export const PaneButton = Radium(function(props) {
   );
 });
 PaneButton.propTypes = {
-  ariaLabel: PropTypes.string,
   headerHasFocus: PropTypes.bool.isRequired,
   iconClass: PropTypes.string,
   icon: PropTypes.element,
