@@ -1523,7 +1523,7 @@
         },
         "2a0e6d6d-f8b2-4f88-86e2-1b4c8c2ee300": {
           "name": "Ejemplo 2: Uso de la visión de la Información para mejorar el modelo",
-          "description": "Añadir más datos de entrenamiento no sólo cambia los resultados, sino también los datos mostrados en la visión de la información. A veces, el gráfico de resultados que se muestra puede aclarar por qué los resultados no coinciden con las expectativas.\n\nConsideremos un estudiante que quiere entrenar a la Inteligencia Artificial para que reconozca a los peces \"enfadados\".\nQuiere conseguirlo seleccionando cualquier pez con cejas que apunten hacia dentro y bocas fruncidas. Etiquetarán a un pez como \"enfadado\" si tiene una combinación de estos rasgos:\n\n| \"Angry\" eyes: ![](https://curriculum.code.org/media/uploads/eyes11.png)![](https://curriculum.code.org/media/uploads/eyes17.png) \"Angry\" mouths: ![](https://curriculum.code.org/media/uploads/mouth11.png)![](https://curriculum.code.org/media/uploads/mouth9.png)![](https://curriculum.code.org/media/uploads/mouth12.png)![](https://curriculum.code.org/media/uploads/mouth6.png) |\n| --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |\n\n¿Puede la Inteligencia Artificial averiguar lo que hace el alumno sin ser programada explícitamente? Depende de la cantidad de datos de entrenamiento que proporcione el alumno y de la calidad de los datos del conjunto. \n\n| \"Angry\" fish - training: 30                                                       | \"Angry\" fish - training: 200                                               |\n| --------------------------------------------------------------------------------- | -------------------------------------------------------------------------- |\n| <img src=\"https://curriculum.code.org/media/uploads/30_foyL4uc.png\" width=\"4000\"> | <img src=\"https://curriculum.code.org/media/uploads/200.png\" width=\"4000\"> |\n\n| \\_Aquí, podemos ver que la Inteligencia Artificial captó enseguida que los \"ojos\" eran el rasgo más importante, pero seguido de cerca por el \"color\", no por la \"boca\". En la imagen de la izquierda hay algunos peces de color púrpura que tienen bocas diferentes a las que el alumno tenía como objetivo. ¿Quizás muchos de los peces \"enfadados\" que el alumno seleccionó inicialmente eran morados? Una forma de mejorar el modelo sería continuar el entrenamiento, asegurándose de seguir hasta que varios peces morados \"no enfadados\" hayan sido etiquetados correctamente."
+          "description": "Añadir más datos de entrenamiento no sólo cambia los resultados, sino también los datos mostrados en la visión de la información. A veces, el gráfico de resultados que se muestra puede aclarar por qué los resultados no coinciden con las expectativas.\n\nConsideremos un estudiante que quiere entrenar a la Inteligencia Artificial para que reconozca a los peces \"enfadados\".\nQuiere conseguirlo seleccionando cualquier pez con cejas que apunten hacia dentro y bocas fruncidas. Etiquetarán a un pez como \"enfadado\" si tiene una combinación de estos rasgos:\n\n| \"Angry\" eyes: ![](https://curriculum.code.org/media/uploads/eyes11.png)![](https://curriculum.code.org/media/uploads/eyes17.png) \"Angry\" mouths: ![](https://curriculum.code.org/media/uploads/mouth11.png)![](https://curriculum.code.org/media/uploads/mouth9.png)![](https://curriculum.code.org/media/uploads/mouth12.png)![](https://curriculum.code.org/media/uploads/mouth6.png) |\n| --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |\n\n¿Puede la Inteligencia Artificial averiguar lo que hace el alumno sin ser programada explícitamente? Depende de la cantidad de datos de entrenamiento que proporcione el alumno y de la calidad de los datos del conjunto. \n\n| \"Angry\" fish - training: 30                                                       | \"Angry\" fish - training: 200                                               |\n| --------------------------------------------------------------------------------- | -------------------------------------------------------------------------- |\n| <img src=\"https://curriculum.code.org/media/uploads/30_foyL4uc.png\" width=\"4000\"> | <img src=\"https://curriculum.code.org/media/uploads/200.png\" width=\"4000\"> |\n\n\\| \\_Aquí, podemos ver que la Inteligencia Artificial captó enseguida que los \"ojos\" eran el rasgo más importante, pero seguido de cerca por el \"color\", no por la \"boca\". En la imagen de la izquierda hay algunos peces de color púrpura que tienen bocas diferentes a las que el alumno tenía como objetivo. ¿Quizás muchos de los peces \"enfadados\" que el alumno seleccionó inicialmente eran morados? Una forma de mejorar el modelo sería continuar el entrenamiento, asegurándose de seguir hasta que varios peces morados \"no enfadados\" hayan sido etiquetados correctamente."
         },
         "e9aff97e-cad0-44f6-a38c-acea877cab0f": {
           "name": "Calentamiento"
@@ -8187,12 +8187,12 @@
           "name": "Programación con Parámetros",
           "description": "**Agrupar:** Coloca a los estudiantes en parejas para la actividad de programación. \n\n**Transición:** Mueve a los estudiantes a Code Studio.",
           "tips": [
-            null
+            "**Guía para Programación de Niveles:** En la [Guía para Programación de Niveles del CDS](https://docs.google.com/document/d/1WGywQ25khB6-FB20x6wO9dGVO9_qJlWkuLVLREJS4Jo/preview) se proporciona orientación adicional para la programación de niveles. Este documento incluye estrategias y mejores prácticas para facilitar la programación de niveles con los alumnos."
           ]
         },
         "8edada5b-86d6-4a42-ac50-b07edf4532b9": {
           "tips": [
-            null
+            "**Normalizar los Errores y Apoyar la Depuración:** A medida que los niveles de programación se vuelven más complejos, los estudiantes pueden encontrarse con errores en su código que necesitan solucionar. Si esto ocurre con frecuencia, puede ser una experiencia desmoralizadora para los alumnos y puede afectar a su autoestima de lo capaces que son en clase. \n\nPara contrarrestar esto, recomendamos normalizar los fallos y errores como algo que le ocurre a todo el mundo, es sólo parte del proceso. Puedes mostrar a los alumnos nuestro [Vídeo de Depuración](https://www.youtube.com/watch?v=auv10y-dN4s), que incluye a varios alumnos normalizando errores y discutiendo estrategias de depuración que los alumnos pueden utilizar. Además, considera la posibilidad de mostrar la [Guía del Alumno para la Depuración](https://docs.google.com/document/d/1wNwoKDyoUas5GGkhqGmNN1u0XGQEdeOMWhSziyYIf8o/edit#) para que los alumnos la consulten a lo largo de la unidad y de tener a su disposición las [Hojas Trimestrales de Informe de Errores](https://docs.google.com/document/d/1M6mnq73DfyvzasucVAwfL-gjl2JqVPzjy_fRx5j4j7c/preview)."
           ],
           "progression_name": "Desarrollo de Habilidades"
         },
@@ -8238,12 +8238,12 @@
           "name": "Programación con Variables",
           "description": "**Transición:** Envía a los alumnos a Code Studio.",
           "tips": [
-            null
+            "**Guía para Programación de Niveles:** En la [Guía para Programación de Niveles del CDS](https://docs.google.com/document/d/1WGywQ25khB6-FB20x6wO9dGVO9_qJlWkuLVLREJS4Jo/preview) se proporciona orientación adicional para la programación de niveles. Este documento incluye estrategias y mejores prácticas para facilitar la programación de niveles con los alumnos."
           ]
         },
         "d26059f8-ed8e-47d8-a1e4-00864675f48b": {
           "tips": [
-            null
+            "**Facilitando los Niveles de Predicción:** Los niveles de predicción son una gran oportunidad para que los estudiantes piensen críticamente sobre el código y participen en debates en clase. Considera la posibilidad de que los alumnos piensen en su propia predicción y la comenten con un compañero antes de escribir su respuesta. Una vez que hayan ejecutado el código, reúne a la clase para un debate completo en grupo en el que se analice en qué se parecían o diferenciaban sus predicciones del programa resultante. Aprovecha esta oportunidad para abordar cualquier idea errónea que los alumnos puedan haber tenido inicialmente sobre el código.\n\n**Precaución: Las Entradas de Predicción ¡No se Pueden Borrar!** Una vez que introduzcas una respuesta en la casilla de predicción, no podrás restablecerla. Esto puede dificultar la repetición de este proceso con varias clases. En su lugar, se recomienda introducir un texto ficticio como \"Debate en clase\" y ejecutar el código. De esta forma, la respuesta no se \"estropea\" para futuras clases. Sin embargo, esto significa que tendrás que hacer un seguimiento de las predicciones por separado, como en una pizarra o en un documento."
           ],
           "progression_name": "Predicción"
         },
@@ -8304,7 +8304,7 @@
           "name": "Programando Imágenes",
           "description": "**Transición:** Cambia a los alumnos a Code Studio",
           "tips": [
-            null
+            "**Guía para Programación de Niveles:** En la [Guía para Programación de Niveles del CDS](https://docs.google.com/document/d/1WGywQ25khB6-FB20x6wO9dGVO9_qJlWkuLVLREJS4Jo/preview) se proporciona orientación adicional para la programación de niveles. Este documento incluye estrategias y mejores prácticas para facilitar la programación de niveles con los alumnos."
           ]
         },
         "30726a72-deac-4fe2-b10e-fed405d0536c": {
@@ -8359,7 +8359,7 @@
         "a84eba1a-65fd-4b4f-8d51-ef8d0f9f3041": {
           "description": "**Transición:** Envia a los estudiantes a Code Studio",
           "tips": [
-            null
+            "**Guía para Programación de Niveles:** En la [Guía para Programación de Niveles del CDS](https://docs.google.com/document/d/1WGywQ25khB6-FB20x6wO9dGVO9_qJlWkuLVLREJS4Jo/preview) se proporciona orientación adicional para la programación de niveles. Este documento incluye estrategias y mejores prácticas para facilitar la programación de niveles con los alumnos."
           ]
         },
         "11981557-3131-4ac6-acbc-71778988951f": {
@@ -8429,7 +8429,7 @@
         "a748f14d-ac72-4518-affc-f8afdbd5f545": {
           "description": "**Transición:** Envía a los alumnos a Code Studio.",
           "tips": [
-            null
+            "**Guía para Programación de Niveles:** En la [Guía para Programación de Niveles del CDS](https://docs.google.com/document/d/1WGywQ25khB6-FB20x6wO9dGVO9_qJlWkuLVLREJS4Jo/preview) se proporciona orientación adicional para la programación de niveles. Este documento incluye estrategias y mejores prácticas para facilitar la programación de niveles con los alumnos."
           ]
         },
         "e2958d9a-e321-4132-8424-6103f6e7f76b": {
@@ -8460,7 +8460,8 @@
           ]
         },
         "a1b6c071-7374-44ea-86f5-4edfcf34e891": {
-          "name": "Diario"
+          "name": "Diario",
+          "description": "![Una escena bidimensional con un robot melocotón, un alien púrpura en el suelo y un alien rosa agazapado en una roca flotante sobre ellos. El alienígena rosa tiene una burbuja de diálogo vacía junto a la cabeza, como si fuera a empezar a hablar, pero la burbuja está vacía](https://curriculum.code.org/media/uploads/Screen-Shot-2020-04-01-at-3.51.06-AM.png).\n\n**Mostrar:** Muestra el dibujo animado para que lo vean los alumnos.\n\n**Preguntar:** Mira el dibujo animado que se hizo en el Laboratorio de juegos. ¿Qué crees que debería decir el extraterrestre?\n\n**Compartir:** Pide a los voluntarios que expongan sus ideas."
         },
         "7dd7eab6-5bb3-4df8-a6be-b3b0338028d4": {
           "description": "Nos hemos divertido mucho dibujando cosas y usando nuestros sprites, pero ha faltado una cosa en nuestros dibujos del Laboratorio de Juegos: ¡texto! Hoy vamos a aprender a añadir texto a los proyectos del Laboratorio de Juegos."
@@ -8471,7 +8472,7 @@
         "143eb56e-c445-4fde-a1f6-845371db821c": {
           "description": "**Transición:** Envía a los alumnos a Code Studio.",
           "tips": [
-            null
+            "**Guía para Programación de Niveles:** En la [Guía para Programación de Niveles del CDS](https://docs.google.com/document/d/1WGywQ25khB6-FB20x6wO9dGVO9_qJlWkuLVLREJS4Jo/preview) se proporciona orientación adicional para la programación de niveles. Este documento incluye estrategias y mejores prácticas para facilitar la programación de niveles con los alumnos."
           ]
         },
         "1248d040-dd08-49f6-b5ee-07852b579c56": {
@@ -8518,7 +8519,7 @@
         "773f3c7e-a2a9-4c2d-8a88-5050f38d0d1f": {
           "description": "**Pregunta del Día: ¿Cómo podemos utilizar el Laboratorio de Juegos para expresar nuestra creatividad?**",
           "tips": [
-            null
+            "**Facilitando Mini-Proyectos:** Los Mini-Proyectos actúan como puntos de control en el plan de estudios y cubren el subconjunto de habilidades que los estudiantes han visto hasta ahora en la unidad. Están diseñados para 1-2 días de duración como una forma de comprobar si los estudiantes entienden bien el contenido del curso hasta el momento. Puedes decidir ampliar estos proyectos como una forma de apoyar o desafiar a los estudiantes, lo que podría permitirte revisar conceptos difíciles o apoyar a los estudiantes que pueden haber perdido lecciones y están tratando de ponerse al día. Sin embargo, te recomendamos que decidas esto con antelación y que seas firme con los estudiantes sobre el tiempo que tienen para cada proyecto; de lo contrario, es fácil que los proyectos se alarguen durante varios días y que el trabajo de los estudiantes se extienda más allá del alcance de este proyecto."
           ]
         },
         "576907fe-bf93-4136-b9cb-e36310bca046": {
@@ -8532,7 +8533,7 @@
         },
         "449a73b9-9e17-4a54-bbc6-8eacad2cfd30": {
           "tips": [
-            null
+            "**Estrategias de Depuración:** A medida que los alumnos diseñan e implementan sus propias ideas de proyecto, pueden encontrarse con nuevos errores que necesitan solucionar y tú puedes encontrarte mirando código completamente desconocido mientras los alumnos buscan ayuda para solucionar sus errores. Para ayudar a suavizar la experiencia de depuración, considera las siguientes estrategias:\n\n-   Revisa la [Guía del Docente para la Depuración](https://docs.google.com/document/d/1-mXz53CAQ1dy3-RVGkoUnR0hfAwdWeza4kch6NAvLb8/edit) para ver algunas preguntas comunes y estrategias para ayudar a los alumnos a depurar su código.\n-   Pide a los alumnos que sigan los pasos de la [Guía del Alumno para la Depuración](https://docs.google.com/document/d/1wNwoKDyoUas5GGkhqGmNN1u0XGQEdeOMWhSziyYIf8o/edit#) y que utilicen las [Hojas de Informe de Fallos](https://docs.google.com/document/d/1M6mnq73DfyvzasucVAwfL-gjl2JqVPzjy_fRx5j4j7c/preview) como paso inicial en el proceso de depuración. Esto ayuda a los alumnos a preparar y comunicar su problema antes de pedir ayuda.\n-   Si los alumnos aún no lo han visto, considera la posibilidad de mostrar a la clase el [Vídeo de Depuración](https://www.youtube.com/watch?v=auv10y-dN4s) para reforzar las mejores prácticas de depuración.\n\n**Profundizar:** Considera la posibilidad de proporcionar a los alumnos un objeto con el que hablar como parte del proceso de depuración. Esto se conoce a veces como \"Depuración de Patos de Goma\" (Rubber Duck Debugging); puedes obtener más información en el sitio web <https://rubberduckdebugging.com/>"
           ],
           "progression_name": "Crea un Fondo"
         },
@@ -8592,7 +8593,7 @@
         },
         "aea2bc61-b817-404c-90e4-7fcadd60412a": {
           "tips": [
-            null
+            "**Guía para Programación de Niveles:** En la [Guía para Programación de Niveles del CDS](https://docs.google.com/document/d/1WGywQ25khB6-FB20x6wO9dGVO9_qJlWkuLVLREJS4Jo/preview) se proporciona orientación adicional para la programación de niveles. Este documento incluye estrategias y mejores prácticas para facilitar la programación de niveles con los alumnos."
           ],
           "progression_name": "Exploración"
         },
@@ -8648,7 +8649,7 @@
         "286a1590-1a6c-4029-91c1-9166ef1ff766": {
           "description": "**Transición:** Envía a los alumnos a Code Studio.",
           "tips": [
-            null
+            "**Guía para Programación de Niveles:** En la [Guía para Programación de Niveles del CDS](https://docs.google.com/document/d/1WGywQ25khB6-FB20x6wO9dGVO9_qJlWkuLVLREJS4Jo/preview) se proporciona orientación adicional para la programación de niveles. Este documento incluye estrategias y mejores prácticas para facilitar la programación de niveles con los alumnos."
           ]
         },
         "d63180f7-6d8c-4704-a4d5-ea038e0ae74d": {
@@ -8702,10 +8703,11 @@
         "d4023790-1810-4ddd-a510-133df9586856": {
           "description": "**Pregunta del Día: ¿Cómo podemos combinar diferentes patrones de programación para hacer una animación completa?**",
           "tips": [
-            null
+            "**Facilitando Mini-Proyectos:** Los Mini-Proyectos actúan como puntos de control en el plan de estudios y cubren el subconjunto de habilidades que los estudiantes han visto hasta ahora en la unidad. Están diseñados para 1-2 días de duración como una forma de comprobar si los estudiantes entienden bien el contenido del curso hasta el momento. Puedes decidir ampliar estos proyectos como una forma de apoyar o desafiar a los estudiantes, lo que podría permitirte revisar conceptos difíciles o apoyar a los estudiantes que pueden haber perdido lecciones y están tratando de ponerse al día. Sin embargo, te recomendamos que decidas esto con antelación y que seas firme con los estudiantes sobre el tiempo que tienen para cada proyecto; de lo contrario, es fácil que los proyectos se alarguen durante varios días y que el trabajo de los estudiantes se extienda más allá del alcance de este proyecto."
           ]
         },
         "539b36c9-fdb1-4f96-af81-fe2ceda35ba6": {
+          "description": "**Distribuir:** (Opcional) reparte copias de la guía de actividad. Los alumnos pueden utilizar esta hoja para planificar la animación que crearán al final de esta lección, pero la planificación también se puede completar en papel de borrador.",
           "tips": [
             null
           ]
@@ -8725,7 +8727,7 @@
         },
         "4d82a10e-f3f1-4e52-a97a-d0ec605c3a84": {
           "tips": [
-            null
+            "**Estrategias de Depuración:** A medida que los alumnos diseñan e implementan sus propias ideas de proyecto, pueden encontrarse con nuevos errores que necesitan solucionar y tú puedes encontrarte mirando código completamente desconocido mientras los alumnos buscan ayuda para solucionar sus errores. Para ayudar a suavizar la experiencia de depuración, considera las siguientes estrategias:\n\n-   Revisa la [Guía del Docente para la Depuración](https://docs.google.com/document/d/1-mXz53CAQ1dy3-RVGkoUnR0hfAwdWeza4kch6NAvLb8/edit) para ver algunas preguntas comunes y estrategias para ayudar a los alumnos a depurar su código.\n-   Pide a los alumnos que sigan los pasos de la [Guía del Alumno para la Depuración](https://docs.google.com/document/d/1wNwoKDyoUas5GGkhqGmNN1u0XGQEdeOMWhSziyYIf8o/edit#) y que utilicen las [Hojas de Informe de Fallos](https://docs.google.com/document/d/1M6mnq73DfyvzasucVAwfL-gjl2JqVPzjy_fRx5j4j7c/preview) como paso inicial en el proceso de depuración. Esto ayuda a los alumnos a preparar y comunicar su problema antes de pedir ayuda.\n-   Si los alumnos aún no lo han visto, considera la posibilidad de mostrar a la clase el [Vídeo de Depuración](https://www.youtube.com/watch?v=auv10y-dN4s) para reforzar las mejores prácticas de depuración.\n\n**Profundizar:** Considera la posibilidad de proporcionar a los alumnos un objeto con el que hablar como parte del proceso de depuración. Esto se conoce a veces como \"Depuración de Patos de Goma\" (Rubber Duck Debugging); puedes obtener más información en el sitio web <https://rubberduckdebugging.com/>"
           ],
           "progression_name": "Añadir Sprites"
         },
@@ -8784,7 +8786,7 @@
           "name": "Condicionales",
           "description": "**Transición:** Envía a los alumnos a Code Studio.",
           "tips": [
-            null
+            "**Guía para Programación de Niveles:** En la [Guía para Programación de Niveles del CDS](https://docs.google.com/document/d/1WGywQ25khB6-FB20x6wO9dGVO9_qJlWkuLVLREJS4Jo/preview) se proporciona orientación adicional para la programación de niveles. Este documento incluye estrategias y mejores prácticas para facilitar la programación de niveles con los alumnos."
           ]
         },
         "ed3cc380-cd93-4699-9f7c-878fd09f8b03": {
@@ -8849,7 +8851,7 @@
           "name": "Entrada de teclado",
           "description": "**Transición:** Envía a los estudiantes a Code Studio",
           "tips": [
-            null
+            "**Guía para Programación de Niveles:** En la [Guía para Programación de Niveles del CDS](https://docs.google.com/document/d/1WGywQ25khB6-FB20x6wO9dGVO9_qJlWkuLVLREJS4Jo/preview) se proporciona orientación adicional para la programación de niveles. Este documento incluye estrategias y mejores prácticas para facilitar la programación de niveles con los alumnos."
           ]
         },
         "4975dfd3-be92-408b-9518-8a4cae7701a9": {
@@ -8892,14 +8894,16 @@
         },
         "ac698d02-ec2a-44b9-bee2-9889a2b5317d": {
           "name": "If/Else y más Entradas",
+          "description": "**Transición:** Cambia la clase a Code Studio,  pide a los alumnos que completen el nivel de predicción como clase o en pequeños grupos, y a continuación hablen sobre lo que han encontrado.",
           "tips": [
-            null
+            "**Guía para Programación de Niveles:** En la [Guía para Programación de Niveles del CDS](https://docs.google.com/document/d/1WGywQ25khB6-FB20x6wO9dGVO9_qJlWkuLVLREJS4Jo/preview) se proporciona orientación adicional para la programación de niveles. Este documento incluye estrategias y mejores prácticas para facilitar la programación de niveles con los alumnos."
           ]
         },
         "1069a7b9-54f5-4414-bec3-3a7b86d799a1": {
           "progression_name": "Predicción"
         },
         "71dc54d3-ec2d-4193-84cd-9e994129aa36": {
+          "description": "**Vídeo:** Ver el vídeo en clase y repasar juntos las preguntas para el debate.\n\n**Preguntas a considerar con el video:**\n\n-   ¿Cuál es un ejemplo de cuándo necesitarías una sentencia \"if/else\"?",
           "tips": [
             "**Objetivo**\n\nAsegúrate de que los alumnos piensan en situaciones en las que quieren que ocurran dos cosas diferentes, dependiendo de la situación. Por ejemplo, pueden decir que quieren una animación si el sprite se mueve hacia la izquierda y otra diferente si el sprite se mueve hacia la derecha. Desafía a los alumnos a que piensen cuándo utilizarán simplemente un bloque `if` y cuándo es necesario un bloque `ifelse`."
           ],
@@ -8952,14 +8956,17 @@
           "progression_name": "Aplicación de Demostración: Tarjeta Interactiva"
         },
         "6fc9f0d1-23f2-45bf-879f-69b222793806": {
+          "description": "**Debatir:** Pide a los alumnos que compartan sus observaciones y análisis del programa. \n\nAnima a la clase a considerar que hay múltiples enfoques para programar cualquier cosa, pero que puede haber pistas sobre cómo se creó algo. En particular, cuando estén compartiendo sus reflexiones pídeles que especifiquen lo siguiente:\n\n-   Pistas que sugieran que se utilizó un sprite\n-   Pistas que sugieran el uso de una condicional\n-   Pistas que sugieran que se utilizó un patrón iterador\n\n**Mostrar:** Muestra a los alumnos la rúbrica y la lista de control del alumno.  Revisa los diferentes componentes de la rúbrica con ellos para asegurarte de que entienden los componentes del proyecto.\n\n**Objetivo:** Los estudiantes deben planear lo que quieren crear antes de ir al ordenador, así una vez que lleguen al ordenador sólo tienen que ejecutar el plan.",
           "tips": [
             null
           ]
         },
         "0320f16b-06ce-44af-b1bd-20794feb5a52": {
-          "name": "Sin Conexión: Planificación de Tarjetas Interactivas"
+          "name": "Sin Conexión: Planificación de Tarjetas Interactivas",
+          "description": "**Distribuir:** Reparte la guía de proyecto a los alumnos. Los alumnos la utilizarán para definir sus proyectos antes de crearlos. Dales tiempo para que hagan una lluvia de ideas sobre el tipo de tarjeta que quieren crear y quién será el destinatario. \n\nDistribuye también una copia de la Lista de Control del Estudiante a cada alumno. Los estudiantes pueden utilizarla para autoevaluarse y reflexionar mientras desarrollan su proyecto.\n\n#### Pasos\n\n1.  La primera capa de la tarjeta interactiva es un fondo dibujado sólo con los comandos del apartado Dibujo. El anverso de la Guía de Actividad proporciona una cuadrícula para que los estudiantes diseñen su fondo, una tabla de referencia de comandos de dibujo y un área para que los alumnos tomen notas y escriban pseudocódigo.\n\n2.  A continuación, los alumnos piensan en los sprites que necesitarán, rellenando una tabla con la etiqueta, las imágenes y las propiedades de cada sprite.\n\n3.  Por último, los alumnos estudian las condicionales que necesitarán para que su tarjeta sea interactiva."
         },
         "cb1ab56b-9c53-4c57-8de4-a618898990ee": {
+          "name": "Creación de la Tarjeta Interactiva (Nivel 2 - 7)",
           "description": "**Transición:** Una vez que los alumnos han completado su hoja de planificación, es el momento de dirigirse al sitio web Code.org. La secuencia de nivel corto pide a los estudiantes que completen cada elemento de su proyecto."
         },
         "c0090e7c-168b-4591-9c94-d636a0033dbe": {
@@ -8970,7 +8977,7 @@
         },
         "4e0723c7-38ba-4d47-82fa-957aed03bab9": {
           "tips": [
-            null
+            "**Estrategias de Depuración:** A medida que los alumnos diseñan e implementan sus propias ideas de proyecto, pueden encontrarse con nuevos errores que necesitan solucionar y tú puedes encontrarte mirando código completamente desconocido mientras los alumnos buscan ayuda para solucionar sus errores. Para ayudar a suavizar la experiencia de depuración, considera las siguientes estrategias:\n\n-   Revisa la [Guía del Docente para la Depuración](https://docs.google.com/document/d/1-mXz53CAQ1dy3-RVGkoUnR0hfAwdWeza4kch6NAvLb8/edit) para ver algunas preguntas comunes y estrategias para ayudar a los alumnos a depurar su código.\n-   Pide a los alumnos que sigan los pasos de la [Guía del Alumno para la Depuración](https://docs.google.com/document/d/1wNwoKDyoUas5GGkhqGmNN1u0XGQEdeOMWhSziyYIf8o/edit#) y que utilicen las [Hojas de Informe de Fallos](https://docs.google.com/document/d/1M6mnq73DfyvzasucVAwfL-gjl2JqVPzjy_fRx5j4j7c/preview) como paso inicial en el proceso de depuración. Esto ayuda a los alumnos a preparar y comunicar su problema antes de pedir ayuda.\n-   Si los alumnos aún no lo han visto, considera la posibilidad de mostrar a la clase el [Vídeo de Depuración](https://www.youtube.com/watch?v=auv10y-dN4s) para reforzar las mejores prácticas de depuración.\n\n**Profundizar:** Considera la posibilidad de proporcionar a los alumnos un objeto con el que hablar como parte del proceso de depuración. Esto se conoce a veces como \"Depuración de Patos de Goma\" (Rubber Duck Debugging); puedes obtener más información en el sitio web <https://rubberduckdebugging.com/>"
           ],
           "progression_name": "Trabajo del proyecto"
         },
@@ -9015,11 +9022,13 @@
           "description": "Una forma de simplificar estas instrucciones es simplemente decirle a nuestro \"sprite\" que siga moviéndose 1 o 2, o los pasos que queramos. Como humanos, esto haría que las instrucciones fueran más fáciles de entender, y como vamos a ver hay una forma similar de hacer nuestro código más simple también."
         },
         "e16bcb96-aa05-4fb1-8ac9-d3908e077e9a": {
+          "description": "**Transición:** Cambia los alumnos a Code Studio",
           "tips": [
-            null
+            "**Guía para Programación de Niveles:** En la [Guía para Programación de Niveles del CDS](https://docs.google.com/document/d/1WGywQ25khB6-FB20x6wO9dGVO9_qJlWkuLVLREJS4Jo/preview) se proporciona orientación adicional para la programación de niveles. Este documento incluye estrategias y mejores prácticas para facilitar la programación de niveles con los alumnos."
           ]
         },
         "66c70a69-b26c-448c-bda8-2276640f676f": {
+          "description": "**Circular:** Estos niveles introducen las propiedades velocidadX, velocidadY y rotaciónVelocidad que acabas de comentar con los alumnos.  Comprueba con los alumnos cómo lo están haciendo y lleva un registro de cuándo han terminado todos el nivel 10.",
           "progression_name": "Desarrollo de Habilidades"
         },
         "6bfb34b7-8459-40b8-8d0b-72a3527e83c6": {
@@ -9144,13 +9153,13 @@
         "4d0e1b05-6764-45b5-85f0-d956e11f0704": {
           "description": "**Pregunta del Día:  ¿Cómo se pueden utilizar los nuevos tipos de movimiento de los sprites y la detección de colisiones para crear un juego?**",
           "tips": [
-            null
+            "**Facilitando Mini-Proyectos:** Los Mini-Proyectos actúan como puntos de control en el plan de estudios y cubren el subconjunto de habilidades que los estudiantes han visto hasta ahora en la unidad. Están diseñados para 1-2 días de duración como una forma de comprobar si los estudiantes entienden bien el contenido del curso hasta el momento. Puedes decidir ampliar estos proyectos como una forma de apoyar o desafiar a los estudiantes, lo que podría permitirte revisar conceptos difíciles o apoyar a los estudiantes que pueden haber perdido lecciones y están tratando de ponerse al día. Sin embargo, te recomendamos que decidas esto con antelación y que seas firme con los estudiantes sobre el tiempo que tienen para cada proyecto; de lo contrario, es fácil que los proyectos se alarguen durante varios días y que el trabajo de los estudiantes se extienda más allá del alcance de este proyecto."
           ]
         },
         "847ce2b1-b2de-4932-af9c-ad5b8ca0499b": {
           "description": "**Distribuir:** (Opcional) repartir copias de la guía de actividad. Los alumnos pueden utilizar esta hoja para planificar el Desplazamiento Lateral que crearán al final de esta lección, pero la planificación también puede completarse en papel de borrador.\n\n**Transición** Envía a los estudiantes a Code Studio.",
           "tips": [
-            null
+            "**Estrategias de Depuración:** A medida que los alumnos diseñan e implementan sus propias ideas de proyecto, pueden encontrarse con nuevos errores que necesitan solucionar y tú puedes encontrarte mirando código completamente desconocido mientras los alumnos buscan ayuda para solucionar sus errores. Para ayudar a suavizar la experiencia de depuración, considera las siguientes estrategias:\n\n-   Revisa la [Guía del Docente para la Depuración](https://docs.google.com/document/d/1-mXz53CAQ1dy3-RVGkoUnR0hfAwdWeza4kch6NAvLb8/edit) para ver algunas preguntas comunes y estrategias para ayudar a los alumnos a depurar su código.\n-   Pide a los alumnos que sigan los pasos de la [Guía del Alumno para la Depuración](https://docs.google.com/document/d/1wNwoKDyoUas5GGkhqGmNN1u0XGQEdeOMWhSziyYIf8o/edit#) y que utilicen las [Hojas de Informe de Fallos](https://docs.google.com/document/d/1M6mnq73DfyvzasucVAwfL-gjl2JqVPzjy_fRx5j4j7c/preview) como paso inicial en el proceso de depuración. Esto ayuda a los alumnos a preparar y comunicar su problema antes de pedir ayuda.\n-   Si los alumnos aún no lo han visto, considera la posibilidad de mostrar a la clase el [Vídeo de Depuración](https://www.youtube.com/watch?v=auv10y-dN4s) para reforzar las mejores prácticas de depuración.\n\n**Profundizar:** Considera la posibilidad de proporcionar a los alumnos un objeto con el que hablar como parte del proceso de depuración. Esto se conoce a veces como \"Depuración de Patos de Goma\" (Rubber Duck Debugging); puedes obtener más información en el sitio web <https://rubberduckdebugging.com/>"
           ]
         },
         "1e49d8c1-a9ea-489d-ac88-fd9f334b8118": {
@@ -9180,6 +9189,9 @@
         "9b4d9c9b-6e76-4901-9e47-28a6530bbde5": {
           "description": "**Pregunta del Día:  ¿Cómo se pueden utilizar los nuevos tipos de movimiento de los sprites y la detección de colisiones para crear un juego?**\n\n**Sugerencia:** ¿Qué dificultad encontraste en la creación de este juego?  ¿Cuál es tu consejo para alguien que tenga el mismo desafío?"
         },
+        "fd996d24-c10f-42f8-81ea-d73816e91478": {
+          "description": "\\*\\* Mostrar:\\*\\* Muestra a la clase las dos imágenes de una rana saltando.\n\n![Una animación de una rana saltando con un movimiento muy lineal](https://curriculum.code.org/media/uploads/triangleJump.gif) ![Una animación de una rana saltando con un movimiento más matizado que parece más realista y afectado por la gravedad](https://curriculum.code.org/media/uploads/curveJump.gif)."
+        },
         "e7ed2e9a-6688-484c-aeba-a34d2d77650f": {
           "description": "**Sugerencia:** Aquí hay dos imágenes de una rana saltando.  La primera es de desplazamiento lateral.  ¿Tienes alguna idea de cómo hacer el segundo tipo de salto?"
         },
@@ -9198,7 +9210,7 @@
         "3f6d101f-bccb-4a4d-9b16-5db525802046": {
           "description": "**Transición:** Cambia los alumnos a Code Studio.",
           "tips": [
-            null
+            "**Guía para Programación de Niveles:** En la [Guía para Programación de Niveles del CDS](https://docs.google.com/document/d/1WGywQ25khB6-FB20x6wO9dGVO9_qJlWkuLVLREJS4Jo/preview) se proporciona orientación adicional para la programación de niveles. Este documento incluye estrategias y mejores prácticas para facilitar la programación de niveles con los alumnos."
           ]
         },
         "5cb88190-4077-42c3-8202-97e9e6eaf470": {
@@ -9247,6 +9259,7 @@
           "description": "Vamos a seguir aprendiendo algunas herramientas más en el Laboratorio de Juegos, pero mientras lo hacemos, recuerda lo que hemos visto hoy. Para crear nuevos tipos de programas no siempre es necesario aprender nuevos bloques. La mayoría de las veces la creatividad de la programación proviene de aprender a combinar cosas que ya conoces de formas nuevas y creativas."
         },
         "fc153167-32a3-4078-aa3c-c34b69b29131": {
+          "description": "**Visualizar**: Muestra la imagen animada. También está disponible como nivel en code studio.\n\n![Un emoji jirafa se mueve por la pantalla hacia un emoji mono inmóvil. Al tocar el emoji del mono, tanto el mono como la jirafa continúan moviéndose por la pantalla](https://curriculum.code.org/media/uploads/collision.gif).\n\n**Sugerencia:** Utilizando los bloques que ya sabemos usar, ¿cómo podríamos crear la interacción de sprites que podemos ver en este programa?",
           "progression_name": "Predicción de Código"
         },
         "23d7a87f-664b-4fb0-b2e9-d2e1acbee2d8": {
@@ -9308,13 +9321,13 @@
         "19ffef2d-aa7f-40fd-bb4b-b075ac7306c4": {
           "description": "\\*\\*Pregunta del Día:  ¿Cómo se pueden utilizar los nuevos tipos de colisiones y la simulación del movimiento para crear un juego?",
           "tips": [
-            null
+            "**Facilitando Mini-Proyectos:** Los Mini-Proyectos actúan como puntos de control en el plan de estudios y cubren el subconjunto de habilidades que los estudiantes han visto hasta ahora en la unidad. Están diseñados para 1-2 días de duración como una forma de comprobar si los estudiantes entienden bien el contenido del curso hasta el momento. Puedes decidir ampliar estos proyectos como una forma de apoyar o desafiar a los estudiantes, lo que podría permitirte revisar conceptos difíciles o apoyar a los estudiantes que pueden haber perdido lecciones y están tratando de ponerse al día. Sin embargo, te recomendamos que decidas esto con antelación y que seas firme con los estudiantes sobre el tiempo que tienen para cada proyecto; de lo contrario, es fácil que los proyectos se alarguen durante varios días y que el trabajo de los estudiantes se extienda más allá del alcance de este proyecto."
           ]
         },
         "1acd883d-261b-4c22-8a50-167d3ab9832f": {
           "description": "**Distribuye:** (Opcional) reparte copias de la guía del proyecto. Los alumnos pueden utilizar esta hoja para planificar el Juego de Voladores que crearán al final de esta lección, pero la planificación también puede completarse en papel de borrador.\n\n**Transición** Envía a los estudiantes a Code Studio.",
           "tips": [
-            null
+            "**Estrategias de Depuración:** A medida que los alumnos diseñan e implementan sus propias ideas de proyecto, pueden encontrarse con nuevos errores que necesitan solucionar y tú puedes encontrarte mirando código completamente desconocido mientras los alumnos buscan ayuda para solucionar sus errores. Para ayudar a suavizar la experiencia de depuración, considera las siguientes estrategias:\n\n-   Revisa la [Guía del Docente para la Depuración](https://docs.google.com/document/d/1-mXz53CAQ1dy3-RVGkoUnR0hfAwdWeza4kch6NAvLb8/edit) para ver algunas preguntas comunes y estrategias para ayudar a los alumnos a depurar su código.\n-   Pide a los alumnos que sigan los pasos de la [Guía del Alumno para la Depuración](https://docs.google.com/document/d/1wNwoKDyoUas5GGkhqGmNN1u0XGQEdeOMWhSziyYIf8o/edit#) y que utilicen las [Hojas de Informe de Fallos](https://docs.google.com/document/d/1M6mnq73DfyvzasucVAwfL-gjl2JqVPzjy_fRx5j4j7c/preview) como paso inicial en el proceso de depuración. Esto ayuda a los alumnos a preparar y comunicar su problema antes de pedir ayuda.\n-   Si los alumnos aún no lo han visto, considera la posibilidad de mostrar a la clase el [Vídeo de Depuración](https://www.youtube.com/watch?v=auv10y-dN4s) para reforzar las mejores prácticas de depuración.\n\n**Profundizar:** Considera la posibilidad de proporcionar a los alumnos un objeto con el que hablar como parte del proceso de depuración. Esto se conoce a veces como \"Depuración de Patos de Goma\" (Rubber Duck Debugging); puedes obtener más información en el sitio web <https://rubberduckdebugging.com/>"
           ]
         },
         "85a46b73-ffbc-44e4-b2aa-dd717a558478": {
@@ -9385,7 +9398,7 @@
         },
         "3bcae8d2-a829-4fab-aef2-444e9e331654": {
           "tips": [
-            null
+            "**Nivel 7: Funciones en Contexto**\n\nEn estos niveles, los alumnos utilizarán funciones para organizar el código dentro de un juego sencillo. Aunque no es idéntico al desplazamiento lateral, muchas de las habilidades y usos de las funciones en estos niveles pueden y deben utilizarse cuando completen su desplazamiento lateral."
           ],
           "progression_name": "Juego de Coleccionista"
         },
@@ -9553,18 +9566,20 @@
           "description": "**Pregunta del Día: ¿Cómo pueden ayudar las cinco prácticas de la informática (resolución de problemas, persistencia, comunicación, colaboración y creatividad) a los programadores a completar grandes proyectos?**"
         },
         "4cedbe11-f01d-4877-8772-99baae5c7d46": {
+          "description": "**Agrupar:** Este proyecto puede realizarse individualmente o en parejas. A tu criterio, también puedes hacer que los alumnos formen grupos más grandes.",
           "tips": [
             null
           ]
         },
         "cd32a6fd-953a-44c7-a55a-4c8bbdda4db2": {
-          "name": "Revisión de la Guía de Proyecto"
+          "name": "Revisión de la Guía de Proyecto",
+          "description": "**Distribuir:** Cada estudiante o grupo de estudiantes debe recibir una copia de la guía de proyecto. En clase, repasar los diferentes pasos del proyecto y dónde aparecen en la guía del proyecto.\n\n**Distribuir:** Entrega a cada estudiante una copia de la rúbrica o lista de control del estudiante para que sepan desde el principio qué componentes del proyecto vas a buscar."
         },
         "2f874f2f-5f9e-4d5a-a84f-61151378280c": {
           "name": "Define - Juego Scope",
           "description": "**Circular:** Los alumnos deben dedicar los primeros 15-20 minutos a practicar los juegos de muestra, repasar los trabajos anteriores y debatir en grupo el tipo de juego que les gustaría construir. Si lo desean, pueden dibujar ideas en papel de borrador o en sus diarios.",
           "tips": [
-            null
+            "**Lluvia de Ideas en Clase:** Antes de pasar a los proyectos individuales, valora la posibilidad de dirigir una lluvia de ideas en clase sobre cómo podrían ser algunos proyectos de ejemplo que se ajusten a estos criterios. También puedes mostrar una o dos de las aplicaciones de ejemplo para inspirar la lluvia de ideas. Con estas ideas, a los alumnos les resultará más fácil hacerse con una idea inicial para su proyecto."
           ],
           "progression_name": "Ejemplos de Juegos"
         },
@@ -9584,7 +9599,7 @@
         },
         "0296c25a-c7e0-4f70-9254-e3742c469a84": {
           "tips": [
-            null
+            "**Estrategias de Depuración:** A medida que los alumnos diseñan e implementan sus propias ideas de proyecto, pueden encontrarse con nuevos errores que necesitan solucionar y tú puedes encontrarte mirando código completamente desconocido mientras los alumnos buscan ayuda para solucionar sus errores. Para ayudar a suavizar la experiencia de depuración, considera las siguientes estrategias:\n\n-   Revisa la [Guía del Docente para la Depuración](https://docs.google.com/document/d/1-mXz53CAQ1dy3-RVGkoUnR0hfAwdWeza4kch6NAvLb8/edit) para ver algunas preguntas comunes y estrategias para ayudar a los alumnos a depurar su código.\n-   Pide a los alumnos que sigan los pasos de la [Guía del Alumno para la Depuración](https://docs.google.com/document/d/1wNwoKDyoUas5GGkhqGmNN1u0XGQEdeOMWhSziyYIf8o/edit#) y que utilicen las [Hojas de Informe de Fallos](https://docs.google.com/document/d/1M6mnq73DfyvzasucVAwfL-gjl2JqVPzjy_fRx5j4j7c/preview) como paso inicial en el proceso de depuración. Esto ayuda a los alumnos a preparar y comunicar su problema antes de pedir ayuda.\n-   Si los alumnos aún no lo han visto, considera la posibilidad de mostrar a la clase el [Vídeo de Depuración](https://www.youtube.com/watch?v=auv10y-dN4s) para reforzar las mejores prácticas de depuración.\n\n**Profundizar:** Considera la posibilidad de proporcionar a los alumnos un objeto con el que hablar como parte del proceso de depuración. Esto se conoce a veces como \"Depuración de Patos de Goma\" (Rubber Duck Debugging); puedes obtener más información en el sitio web <https://rubberduckdebugging.com/>"
           ],
           "progression_name": "Proyecto - Ejecución en Segundo plano y Variables"
         },
@@ -9615,6 +9630,7 @@
         },
         "574e77dd-d6f7-4d59-80db-f24e54851aa1": {
           "name": "Reflexionar",
+          "description": "Envía a los alumnos a Code Studio para que completen una rápida encuesta al final de la unidad. Aunque sus respuestas son anónimas, los datos recopilados estarán disponibles una vez que al menos cinco estudiantes hayan completado la encuesta.",
           "progression_name": "Encuesta Final de la Unidad"
         },
         "324ed892-67b4-45b3-96d1-5e0ea6563e2e": {
@@ -9905,7 +9921,7 @@
         "8600f333-fd3e-46ab-81ab-764018ab6813": {
           "description": "**Pregunta del Día: ¿Cómo puedo utilizar HTML para transmitir un valor personal?**",
           "tips": [
-            null
+            "**Facilitando Mini-Proyectos:** Los Mini-Proyectos actúan como puntos de control en el plan de estudios y cubren el subconjunto de habilidades que los estudiantes han visto hasta ahora en la unidad. Están diseñados para 1-2 días de duración como una forma de comprobar si los estudiantes entienden bien el contenido del curso hasta el momento. Puedes decidir ampliar estos proyectos como una forma de apoyar o desafiar a los estudiantes, lo que podría permitirte revisar conceptos difíciles o apoyar a los estudiantes que pueden haber perdido lecciones y están tratando de ponerse al día. Sin embargo, te recomendamos que decidas esto con antelación y que seas firme con los estudiantes sobre el tiempo que tienen para cada proyecto; de lo contrario, es fácil que los proyectos se alarguen durante varios días y que el trabajo de los estudiantes se extienda más allá del alcance de este proyecto."
           ]
         },
         "32634985-c350-44e6-b1e7-de7dfd36da1d": {
@@ -9934,7 +9950,7 @@
         },
         "4337c14f-b8d6-42b7-88c9-8bb6d6a68f15": {
           "tips": [
-            null
+            "**Estrategias de Depuración:** A medida que los alumnos diseñan e implementan sus propias ideas de proyecto, pueden encontrarse con nuevos errores que necesitan solucionar y tú puedes encontrarte mirando código completamente desconocido mientras los alumnos buscan ayuda para solucionar sus errores. Para ayudar a suavizar la experiencia de depuración, considera las siguientes estrategias:\n\n-   Revisa la [Guía del Docente para la Depuración](https://docs.google.com/document/d/1-mXz53CAQ1dy3-RVGkoUnR0hfAwdWeza4kch6NAvLb8/edit) para ver algunas preguntas comunes y estrategias para ayudar a los alumnos a depurar su código.\n-   Pide a los alumnos que sigan los pasos de la [Guía del Alumno para la Depuración](https://docs.google.com/document/d/1wNwoKDyoUas5GGkhqGmNN1u0XGQEdeOMWhSziyYIf8o/edit#) y que utilicen las [Hojas de Informe de Fallos](https://docs.google.com/document/d/1M6mnq73DfyvzasucVAwfL-gjl2JqVPzjy_fRx5j4j7c/preview) como paso inicial en el proceso de depuración. Esto ayuda a los alumnos a preparar y comunicar su problema antes de pedir ayuda.\n-   Si los alumnos aún no lo han visto, considera la posibilidad de mostrar a la clase el [Vídeo de Depuración](https://www.youtube.com/watch?v=auv10y-dN4s) para reforzar las mejores prácticas de depuración.\n\n**Profundizar:** Considera la posibilidad de proporcionar a los alumnos un objeto con el que hablar como parte del proceso de depuración. Esto se conoce a veces como \"Depuración de Patos de Goma\" (Rubber Duck Debugging); puedes obtener más información en el sitio web <https://rubberduckdebugging.com/>"
           ],
           "progression_name": "Programa tu Página"
         },
@@ -10039,7 +10055,7 @@
           "name": "Laboratorio Web: Introducción a CSS",
           "description": "**Agrupar:** Poner a los estudiantes en parejas.\n\n**Transición:** Envía a los estudiantes a Code Studio.\n\nPermite a los estudiantes explorar la página web de ejemplo en Code Studio.",
           "tips": [
-            null
+            "**Guía para Programación de Niveles:** En la [Guía para Programación de Niveles del CDS](https://docs.google.com/document/d/1WGywQ25khB6-FB20x6wO9dGVO9_qJlWkuLVLREJS4Jo/preview) se proporciona orientación adicional para la programación de niveles. Este documento incluye estrategias y mejores prácticas para facilitar la programación de niveles con los alumnos."
           ],
           "progression_name": "Ejemplo de Sitio Web"
         },
@@ -10065,7 +10081,7 @@
         },
         "2f24bcd8-4cad-4f5e-8e48-e447e7f11643": {
           "tips": [
-            null
+            "**Normalizar los Errores y Apoyar la Depuración:** A medida que los niveles de programación se vuelven más complejos, los estudiantes pueden encontrarse con errores en su código que necesitan solucionar. Si esto ocurre con frecuencia, puede ser una experiencia desmoralizadora para los alumnos y puede afectar a su autoestima de lo capaces que son en clase. \n\nPara contrarrestar esto, recomendamos normalizar los fallos y errores como algo que le ocurre a todo el mundo, es sólo parte del proceso. Puedes mostrar a los alumnos nuestro [Vídeo de Depuración](https://www.youtube.com/watch?v=auv10y-dN4s), que incluye a varios alumnos normalizando errores y discutiendo estrategias de depuración que los alumnos pueden utilizar. Además, considera la posibilidad de mostrar la [Guía del Alumno para la Depuración](https://docs.google.com/document/d/1wNwoKDyoUas5GGkhqGmNN1u0XGQEdeOMWhSziyYIf8o/edit#) para que los alumnos la consulten a lo largo de la unidad y de tener a su disposición las [Hojas Trimestrales de Informe de Errores](https://docs.google.com/document/d/1M6mnq73DfyvzasucVAwfL-gjl2JqVPzjy_fRx5j4j7c/preview)."
           ],
           "progression_name": "Desarrollo de Habilidades"
         },
@@ -10161,7 +10177,7 @@
         },
         "64552bfc-d25b-4850-921a-2bc32d6d450d": {
           "tips": [
-            null
+            "**Estrategias de Depuración:** A medida que los alumnos diseñan e implementan sus propias ideas de proyecto, pueden encontrarse con nuevos errores que necesitan solucionar y tú puedes encontrarte mirando código completamente desconocido mientras los alumnos buscan ayuda para solucionar sus errores. Para ayudar a suavizar la experiencia de depuración, considera las siguientes estrategias:\n\n-   Revisa la [Guía del Docente para la Depuración](https://docs.google.com/document/d/1-mXz53CAQ1dy3-RVGkoUnR0hfAwdWeza4kch6NAvLb8/edit) para ver algunas preguntas comunes y estrategias para ayudar a los alumnos a depurar su código.\n-   Pide a los alumnos que sigan los pasos de la [Guía del Alumno para la Depuración](https://docs.google.com/document/d/1wNwoKDyoUas5GGkhqGmNN1u0XGQEdeOMWhSziyYIf8o/edit#) y que utilicen las [Hojas de Informe de Fallos](https://docs.google.com/document/d/1M6mnq73DfyvzasucVAwfL-gjl2JqVPzjy_fRx5j4j7c/preview) como paso inicial en el proceso de depuración. Esto ayuda a los alumnos a preparar y comunicar su problema antes de pedir ayuda.\n-   Si los alumnos aún no lo han visto, considera la posibilidad de mostrar a la clase el [Vídeo de Depuración](https://www.youtube.com/watch?v=auv10y-dN4s) para reforzar las mejores prácticas de depuración.\n\n**Profundizar:** Considera la posibilidad de proporcionar a los alumnos un objeto con el que hablar como parte del proceso de depuración. Esto se conoce a veces como \"Depuración de Patos de Goma\" (Rubber Duck Debugging); puedes obtener más información en el sitio web <https://rubberduckdebugging.com/>"
           ],
           "progression_name": "Añade Contenido y Estructura a tu Página"
         },
@@ -10282,7 +10298,7 @@
           "description": "**Transición:** Envía a los alumnos a Code Studio.",
           "tips": [
             "A medida que los estudiantes comienzan a utilizar imágenes, pueden tener problemas a la hora de encontrar el tamaño adecuado para sus páginas.  En estas dos lecciones, los alumnos aprenderán a cambiar el tamaño de sus imágenes con CSS.  Por ahora, los alumnos pueden utilizar un redimensionador de imágenes en línea, como el que se encuentra en <https://resizeimage.net/>, para cambiar el tamaño de las imágenes.  También pueden utilizar el atributo [\\`height\\`](/docs/weblab/height/) o [\\`width\\`](/docs/weblab/width/) dentro de la etiqueta [\\`img\\`](/docs/weblab/img/) para cambiar su tamaño mientras se carga la página.",
-            null
+            "**Guía para Programación de Niveles:** En la [Guía para Programación de Niveles del CDS](https://docs.google.com/document/d/1WGywQ25khB6-FB20x6wO9dGVO9_qJlWkuLVLREJS4Jo/preview) se proporciona orientación adicional para la programación de niveles. Este documento incluye estrategias y mejores prácticas para facilitar la programación de niveles con los alumnos."
           ]
         },
         "314d9957-e9b4-45c0-9440-7462d749c5b3": {
@@ -10402,7 +10418,7 @@
           "name": "Laboratorio Web: Estilos de Elementos con CSS",
           "description": "**Transición:** Envía a los alumnos a Code Studio.",
           "tips": [
-            null
+            "**Guía para Programación de Niveles:** En la [Guía para Programación de Niveles del CDS](https://docs.google.com/document/d/1WGywQ25khB6-FB20x6wO9dGVO9_qJlWkuLVLREJS4Jo/preview) se proporciona orientación adicional para la programación de niveles. Este documento incluye estrategias y mejores prácticas para facilitar la programación de niveles con los alumnos."
           ]
         },
         "8eec073a-68eb-4b40-a842-51b58a4e1e2b": {
@@ -10500,7 +10516,7 @@
         },
         "523e9cfe-861d-487e-b922-43f06047aa06": {
           "tips": [
-            null
+            "**Estrategias de Depuración:** A medida que los alumnos diseñan e implementan sus propias ideas de proyecto, pueden encontrarse con nuevos errores que necesitan solucionar y tú puedes encontrarte mirando código completamente desconocido mientras los alumnos buscan ayuda para solucionar sus errores. Para ayudar a suavizar la experiencia de depuración, considera las siguientes estrategias:\n\n-   Revisa la [Guía del Docente para la Depuración](https://docs.google.com/document/d/1-mXz53CAQ1dy3-RVGkoUnR0hfAwdWeza4kch6NAvLb8/edit) para ver algunas preguntas comunes y estrategias para ayudar a los alumnos a depurar su código.\n-   Pide a los alumnos que sigan los pasos de la [Guía del Alumno para la Depuración](https://docs.google.com/document/d/1wNwoKDyoUas5GGkhqGmNN1u0XGQEdeOMWhSziyYIf8o/edit#) y que utilicen las [Hojas de Informe de Fallos](https://docs.google.com/document/d/1M6mnq73DfyvzasucVAwfL-gjl2JqVPzjy_fRx5j4j7c/preview) como paso inicial en el proceso de depuración. Esto ayuda a los alumnos a preparar y comunicar su problema antes de pedir ayuda.\n-   Si los alumnos aún no lo han visto, considera la posibilidad de mostrar a la clase el [Vídeo de Depuración](https://www.youtube.com/watch?v=auv10y-dN4s) para reforzar las mejores prácticas de depuración.\n\n**Profundizar:** Considera la posibilidad de proporcionar a los alumnos un objeto con el que hablar como parte del proceso de depuración. Esto se conoce a veces como \"Depuración de Patos de Goma\" (Rubber Duck Debugging); puedes obtener más información en el sitio web <https://rubberduckdebugging.com/>"
           ],
           "progression_name": "Proyecto de Sitio Web"
         },
@@ -10779,7 +10795,7 @@
           "name": "Clases",
           "description": "**Transición:** Envía a los alumnos a Code Studio.",
           "tips": [
-            null
+            "**Guía para Programación de Niveles:** En la [Guía para Programación de Niveles del CDS](https://docs.google.com/document/d/1WGywQ25khB6-FB20x6wO9dGVO9_qJlWkuLVLREJS4Jo/preview) se proporciona orientación adicional para la programación de niveles. Este documento incluye estrategias y mejores prácticas para facilitar la programación de niveles con los alumnos."
           ]
         },
         "50267ce0-8ebd-4e17-ad3d-5e44db1604da": {
@@ -10889,7 +10905,7 @@
           "name": "Web Lab",
           "description": "**Agrupar:** Permite que los estudiantes continúen en sus parejas.\n\n**Transición:** Envía a los estudiantes a Code Studio.",
           "tips": [
-            null
+            "**Guía para Programación de Niveles:** En la [Guía para Programación de Niveles del CDS](https://docs.google.com/document/d/1WGywQ25khB6-FB20x6wO9dGVO9_qJlWkuLVLREJS4Jo/preview) se proporciona orientación adicional para la programación de niveles. Este documento incluye estrategias y mejores prácticas para facilitar la programación de niveles con los alumnos."
           ]
         },
         "a5a3020f-a679-4d10-8be2-2e66108f91c8": {
@@ -10945,7 +10961,7 @@
         },
         "3a14abd4-7d6f-4742-be18-b32c2faaf3b4": {
           "tips": [
-            null
+            "**Estrategias de Depuración:** A medida que los alumnos diseñan e implementan sus propias ideas de proyecto, pueden encontrarse con nuevos errores que necesitan solucionar y tú puedes encontrarte mirando código completamente desconocido mientras los alumnos buscan ayuda para solucionar sus errores. Para ayudar a suavizar la experiencia de depuración, considera las siguientes estrategias:\n\n-   Revisa la [Guía del Docente para la Depuración](https://docs.google.com/document/d/1-mXz53CAQ1dy3-RVGkoUnR0hfAwdWeza4kch6NAvLb8/edit) para ver algunas preguntas comunes y estrategias para ayudar a los alumnos a depurar su código.\n-   Pide a los alumnos que sigan los pasos de la [Guía del Alumno para la Depuración](https://docs.google.com/document/d/1wNwoKDyoUas5GGkhqGmNN1u0XGQEdeOMWhSziyYIf8o/edit#) y que utilicen las [Hojas de Informe de Fallos](https://docs.google.com/document/d/1M6mnq73DfyvzasucVAwfL-gjl2JqVPzjy_fRx5j4j7c/preview) como paso inicial en el proceso de depuración. Esto ayuda a los alumnos a preparar y comunicar su problema antes de pedir ayuda.\n-   Si los alumnos aún no lo han visto, considera la posibilidad de mostrar a la clase el [Vídeo de Depuración](https://www.youtube.com/watch?v=auv10y-dN4s) para reforzar las mejores prácticas de depuración.\n\n**Profundizar:** Considera la posibilidad de proporcionar a los alumnos un objeto con el que hablar como parte del proceso de depuración. Esto se conoce a veces como \"Depuración de Patos de Goma\" (Rubber Duck Debugging); puedes obtener más información en el sitio web <https://rubberduckdebugging.com/>"
           ],
           "progression_name": "Añadir Contenido y HTML"
         },
@@ -11261,7 +11277,7 @@
         "e397d996-dc5b-42de-89ef-703458ff0392": {
           "name": "Primeros pasos",
           "tips": [
-            null
+            "**Lluvia de Ideas en Clase:** Antes de pasar a los proyectos individuales, valora la posibilidad de dirigir una lluvia de ideas en clase sobre cómo podrían ser algunos proyectos de ejemplo que se ajusten a estos criterios. También puedes mostrar una o dos de las aplicaciones de ejemplo para inspirar la lluvia de ideas. Con estas ideas, a los alumnos les resultará más fácil hacerse con una idea inicial para su proyecto."
           ]
         },
         "eab2969e-cf85-4bb7-a74c-1c509d246353": {
@@ -11341,7 +11357,7 @@
         },
         "0b0c2586-ba90-460b-a640-d63de42be967": {
           "tips": [
-            null
+            "**Personalización de las Reglas:** Las reglas del contrato de equipo son lo suficientemente generales como para funcionar en la mayoría de las aulas, pero para que sea más impactante, deberías considerar personalizar el contrato para incluir las reglas de tu aula o colegio.\n\n**Recursos del Proyecto de Equipo:** Considera la posibilidad de mostrar estos dos vídeos a la clase en esta fase de la lección y de volver a verlos a lo largo de la unidad:\n\n-   [Cómo Funciona el Trabajo en Equipo](https://www.youtube.com/watch?v=qkw4pDV5Lec)\n-   [Gestionando los Desacuerdos](https://www.youtube.com/watch?v=6GgrUeVT-xs)\n\nDependiendo de tus objetivos con este proyecto, considera la posibilidad de que los equipos completen una [Guía del Alumno para la Planificación en Equipo](https://docs.google.com/document/d/1pfwrtSLjj1LCqneR_lmyUfw2z0UkkWSXTq48AxuIhyo/edit#), que refuerza el mensaje del vídeo"
           ]
         },
         "3173ec10-2796-4f59-bb12-649e5b83e6fb": {
@@ -11491,8 +11507,9 @@
           "progression_name": "Vídeo: Introducción al Modo de Diseño"
         },
         "95d0c831-8b6a-4a34-80b1-92befbf89ba0": {
+          "description": "**Code Studio:** Pide a los alumnos que se conecten a sus ordenadores y abran Code Studio.",
           "tips": [
-            null
+            "**Facilitando los Niveles de Programación:** Estos niveles de programación están diseñados para continuar enseñando nuevos conocimientos y bloques a través de la exploración, ensayo y error, y el uso de ejemplos trabajados a partir de código pre-suministrado. Los estudiantes todavía se están familiarizando con los conceptos de la lección y necesitarán un fuerte apoyo a lo largo de estos niveles para aumentar su confianza, depurar su código y consolidar su comprensión. \n\nPiensa en la posibilidad de que los alumnos completen los niveles en parejas utilizando **Programación en Parejas**, que hace que los alumnos utilicen un ordenador e intercambien entre ser Conductor o Navegador. Este proceso se destaca en [este vídeo](https://www.youtube.com/watch?v=q7d_JtyCq1A), que puedes mostrar a la clase. Puedes hacer que los alumnos cambien de rol en función de un temporizador, o que cambien cada vez que completen un nivel."
           ]
         },
         "0244527b-aac8-48c8-8c0f-02f3c490b4be": {
@@ -11548,14 +11565,16 @@
           ]
         },
         "17a2215c-52ce-485c-a518-493e2d778803": {
+          "description": "**Vídeo:** Muestra a los alumnos el vídeo Eventos en el Laboratorio de Aplicaciones",
           "progression_name": "Vídeo: Eventos en Laboratorio de Aplicaciones"
         },
         "59bb3ddc-28e7-4257-9245-68d4d48bf3d2": {
-          "name": "Sucesos en Laboratorio de Aplicaciones"
+          "name": "Sucesos en Laboratorio de Aplicaciones",
+          "description": "**Code Studio:** Pide a los alumnos que se conecten a sus ordenadores y abran Code Studio. Si has utilizado Programación en Parejas en lecciones anteriores, piensa en la posibilidad de que los alumnos lo utilicen a lo largo de estos niveles."
         },
         "18fa3b5b-05e0-44ed-bfb4-609b70d19e3d": {
           "tips": [
-            null
+            "**Normalizar los Errores y Apoyar la Depuración:** A medida que los niveles de programación se vuelven más complejos, los estudiantes pueden encontrarse con errores en su código que necesitan solucionar. Si esto ocurre con frecuencia, puede ser una experiencia desmoralizadora para los alumnos y puede afectar a su autoestima de lo capaces que son en clase. \n\nPara contrarrestar esto, recomendamos normalizar los fallos y errores como algo que le ocurre a todo el mundo, es sólo parte del proceso. Puedes mostrar a los alumnos nuestro [Vídeo de Depuración](https://www.youtube.com/watch?v=auv10y-dN4s), que incluye a varios alumnos normalizando errores y discutiendo estrategias de depuración que los alumnos pueden utilizar. Además, considera la posibilidad de mostrar la [Guía del Alumno para la Depuración](https://docs.google.com/document/d/1wNwoKDyoUas5GGkhqGmNN1u0XGQEdeOMWhSziyYIf8o/edit#) para que los alumnos la consulten a lo largo de la unidad y de tener a su disposición las [Hojas Trimestrales de Informe de Errores](https://docs.google.com/document/d/1M6mnq73DfyvzasucVAwfL-gjl2JqVPzjy_fRx5j4j7c/preview)."
           ],
           "progression_name": "Añadiendo Pantallas"
         },
@@ -11714,6 +11733,7 @@
           ]
         },
         "1fdbfa90-7ada-4d4d-b4e6-1828a81c606b": {
+          "description": "**Code Studio:** Pide a los alumnos que se conecten a Code Studio y completen una breve encuesta sobre la unidad.  Aunque sus respuestas son anónimas, los datos obtenidos estarán disponibles una vez que al menos cinco estudiantes hayan completado la encuesta.",
           "progression_name": "Encuesta Final de la Unidad"
         },
         "4650c6de-71ab-47d0-bea2-61ff838fba65": {
@@ -11827,7 +11847,7 @@
         "9ae0e497-0968-45f0-aa40-82f5d1d01712": {
           "description": "**Transición:** Envía a los estudiantes a Code Studio",
           "tips": [
-            null
+            "**Guía para Programación de Niveles:** En la [Guía para Programación de Niveles del CDS](https://docs.google.com/document/d/1WGywQ25khB6-FB20x6wO9dGVO9_qJlWkuLVLREJS4Jo/preview) se proporciona orientación adicional para la programación de niveles. Este documento incluye estrategias y mejores prácticas para facilitar la programación de niveles con los alumnos."
           ]
         },
         "c77e40a7-1e58-48b3-a333-c458c9983ef8": {
@@ -11839,7 +11859,7 @@
         },
         "a0549135-da45-4397-be95-1aad863b37d2": {
           "tips": [
-            null
+            "**Normalizar los Errores y Apoyar la Depuración:** A medida que los niveles de programación se vuelven más complejos, los estudiantes pueden encontrarse con errores en su código que necesitan solucionar. Si esto ocurre con frecuencia, puede ser una experiencia desmoralizadora para los alumnos y puede afectar a su autoestima de lo capaces que son en clase. \n\nPara contrarrestar esto, recomendamos normalizar los fallos y errores como algo que le ocurre a todo el mundo, es sólo parte del proceso. Puedes mostrar a los alumnos nuestro [Vídeo de Depuración](https://www.youtube.com/watch?v=auv10y-dN4s), que incluye a varios alumnos normalizando errores y discutiendo estrategias de depuración que los alumnos pueden utilizar. Además, considera la posibilidad de mostrar la [Guía del Alumno para la Depuración](https://docs.google.com/document/d/1wNwoKDyoUas5GGkhqGmNN1u0XGQEdeOMWhSziyYIf8o/edit#) para que los alumnos la consulten a lo largo de la unidad y de tener a su disposición las [Hojas Trimestrales de Informe de Errores](https://docs.google.com/document/d/1M6mnq73DfyvzasucVAwfL-gjl2JqVPzjy_fRx5j4j7c/preview)."
           ],
           "progression_name": "Desarrollo de Habilidades"
         },
@@ -11861,7 +11881,7 @@
         "d95e3c69-5b66-4c2c-a137-0fa48ecf0dfc": {
           "description": "**Transición:** Envía a los estudiantes a Code Studio",
           "tips": [
-            null
+            "**Guía para Programación de Niveles:** En la [Guía para Programación de Niveles del CDS](https://docs.google.com/document/d/1WGywQ25khB6-FB20x6wO9dGVO9_qJlWkuLVLREJS4Jo/preview) se proporciona orientación adicional para la programación de niveles. Este documento incluye estrategias y mejores prácticas para facilitar la programación de niveles con los alumnos."
           ]
         },
         "0570736b-7259-4187-8305-3dabf7ee65a8": {
@@ -11896,7 +11916,7 @@
         "94238b4f-60fa-4645-8cd3-13120815edef": {
           "description": "**Transición:** Envía a los estudiantes a Code Studio",
           "tips": [
-            null
+            "**Guía para Programación de Niveles:** En la [Guía para Programación de Niveles del CDS](https://docs.google.com/document/d/1WGywQ25khB6-FB20x6wO9dGVO9_qJlWkuLVLREJS4Jo/preview) se proporciona orientación adicional para la programación de niveles. Este documento incluye estrategias y mejores prácticas para facilitar la programación de niveles con los alumnos."
           ]
         },
         "e9d45b03-0bff-41bc-9727-8e21f8f0256a": {
@@ -11966,7 +11986,7 @@
         },
         "1ae47ba4-9015-40e9-93fd-605c972cdf5d": {
           "tips": [
-            null
+            "**Facilitando Mini-Proyectos:** Los Mini-Proyectos actúan como puntos de control en el plan de estudios y cubren el subconjunto de habilidades que los estudiantes han visto hasta ahora en la unidad. Están diseñados para 1-2 días de duración como una forma de comprobar si los estudiantes entienden bien el contenido del curso hasta el momento. Puedes decidir ampliar estos proyectos como una forma de apoyar o desafiar a los estudiantes, lo que podría permitirte revisar conceptos difíciles o apoyar a los estudiantes que pueden haber perdido lecciones y están tratando de ponerse al día. Sin embargo, te recomendamos que decidas esto con antelación y que seas firme con los estudiantes sobre el tiempo que tienen para cada proyecto; de lo contrario, es fácil que los proyectos se alarguen durante varios días y que el trabajo de los estudiantes se extienda más allá del alcance de este proyecto."
           ]
         },
         "68996d30-3dce-47d9-86e1-678c8164023b": {
@@ -12000,7 +12020,7 @@
         },
         "4045ce4e-232d-49f8-b831-12073f3d9495": {
           "tips": [
-            null
+            "**Guía para Programación de Niveles:** En la [Guía para Programación de Niveles del CDS](https://docs.google.com/document/d/1WGywQ25khB6-FB20x6wO9dGVO9_qJlWkuLVLREJS4Jo/preview) se proporciona orientación adicional para la programación de niveles. Este documento incluye estrategias y mejores prácticas para facilitar la programación de niveles con los alumnos."
           ]
         },
         "39019e91-9bb5-46f0-80c8-1b28ede42c68": {
@@ -12033,7 +12053,7 @@
         },
         "57cb955d-f937-4b8c-990b-0ceeac0bd2a3": {
           "tips": [
-            null
+            "**Guía para Programación de Niveles:** En la [Guía para Programación de Niveles del CDS](https://docs.google.com/document/d/1WGywQ25khB6-FB20x6wO9dGVO9_qJlWkuLVLREJS4Jo/preview) se proporciona orientación adicional para la programación de niveles. Este documento incluye estrategias y mejores prácticas para facilitar la programación de niveles con los alumnos."
           ]
         },
         "47cf28d0-a32f-46bb-89b5-c3488628a1fd": {
@@ -12065,7 +12085,7 @@
         },
         "b9330fe8-365a-492e-b155-48d1aa4b993e": {
           "tips": [
-            null
+            "**Guía para Programación de Niveles:** En la [Guía para Programación de Niveles del CDS](https://docs.google.com/document/d/1WGywQ25khB6-FB20x6wO9dGVO9_qJlWkuLVLREJS4Jo/preview) se proporciona orientación adicional para la programación de niveles. Este documento incluye estrategias y mejores prácticas para facilitar la programación de niveles con los alumnos."
           ]
         },
         "a43fd1ca-e808-415f-8b73-ecc0caf330e2": {
@@ -12134,6 +12154,9 @@
           ],
           "progression_name": "Interacción entre Dispositivo y Persona"
         },
+        "1370ac6b-ceff-421e-b3b7-1b710bfcfb48": {
+          "description": "**Estrategias de Depuración:** A medida que los alumnos diseñan e implementan sus propias ideas de proyecto, pueden encontrarse con nuevos errores que necesitan solucionar y tú puedes encontrarte mirando código completamente desconocido mientras los alumnos buscan ayuda para solucionar sus errores. Para ayudar a suavizar la experiencia de depuración, considera las siguientes estrategias:\n\n-   Revisa la [Guía del Docente para la Depuración](https://docs.google.com/document/d/1-mXz53CAQ1dy3-RVGkoUnR0hfAwdWeza4kch6NAvLb8/edit) para ver algunas preguntas comunes y estrategias para ayudar a los alumnos a depurar su código.\n-   Pide a los alumnos que sigan los pasos de la [Guía del Alumno para la Depuración](https://docs.google.com/document/d/1wNwoKDyoUas5GGkhqGmNN1u0XGQEdeOMWhSziyYIf8o/edit#) y que utilicen las [Hojas de Informe de Fallos](https://docs.google.com/document/d/1M6mnq73DfyvzasucVAwfL-gjl2JqVPzjy_fRx5j4j7c/preview) como paso inicial en el proceso de depuración. Esto ayuda a los alumnos a preparar y comunicar su problema antes de pedir ayuda.\n-   Si los alumnos aún no lo han visto, considera la posibilidad de mostrar a la clase el [Vídeo de Depuración](https://www.youtube.com/watch?v=auv10y-dN4s) para reforzar las mejores prácticas de depuración.\n\n**Profundizar:** Considera la posibilidad de proporcionar a los alumnos un objeto con el que hablar como parte del proceso de depuración. Esto se conoce a veces como \"Depuración de Patos de Goma\" (Rubber Duck Debugging); puedes obtener más información en el sitio web <https://rubberduckdebugging.com/>"
+        },
         "2e59bfde-65a5-450d-9701-426f7353a617": {
           "name": "Actividad de cierre"
         },
@@ -12155,7 +12178,7 @@
         },
         "b46cfe31-9b5e-4820-b368-fc8a4fa139a7": {
           "tips": [
-            null
+            "**Guía para Programación de Niveles:** En la [Guía para Programación de Niveles del CDS](https://docs.google.com/document/d/1WGywQ25khB6-FB20x6wO9dGVO9_qJlWkuLVLREJS4Jo/preview) se proporciona orientación adicional para la programación de niveles. Este documento incluye estrategias y mejores prácticas para facilitar la programación de niveles con los alumnos."
           ]
         },
         "9c9c1c7f-db27-4c84-941c-4dd1e3b2ce3c": {
@@ -12190,7 +12213,7 @@
         },
         "b8a6fe12-b039-4ae6-b8af-7ca83f2cf8f4": {
           "tips": [
-            null
+            "**Guía para Programación de Niveles:** En la [Guía para Programación de Niveles del CDS](https://docs.google.com/document/d/1WGywQ25khB6-FB20x6wO9dGVO9_qJlWkuLVLREJS4Jo/preview) se proporciona orientación adicional para la programación de niveles. Este documento incluye estrategias y mejores prácticas para facilitar la programación de niveles con los alumnos."
           ]
         },
         "8fbee503-556a-40cd-be06-2fe300b09ef5": {
@@ -12220,7 +12243,7 @@
         "b29096d1-be92-43d1-b40d-48dc44779fcb": {
           "name": "Crear música",
           "tips": [
-            null
+            "**Guía para Programación de Niveles:** En la [Guía para Programación de Niveles del CDS](https://docs.google.com/document/d/1WGywQ25khB6-FB20x6wO9dGVO9_qJlWkuLVLREJS4Jo/preview) se proporciona orientación adicional para la programación de niveles. Este documento incluye estrategias y mejores prácticas para facilitar la programación de niveles con los alumnos."
           ]
         },
         "b7df2f8f-c61b-45b6-ad12-400fe0b5dc66": {
@@ -12272,7 +12295,7 @@
         },
         "48fd15be-8f76-4d8e-9fa3-90bfc4b890eb": {
           "tips": [
-            null
+            "**Guía para Programación de Niveles:** En la [Guía para Programación de Niveles del CDS](https://docs.google.com/document/d/1WGywQ25khB6-FB20x6wO9dGVO9_qJlWkuLVLREJS4Jo/preview) se proporciona orientación adicional para la programación de niveles. Este documento incluye estrategias y mejores prácticas para facilitar la programación de niveles con los alumnos."
           ]
         },
         "5c0e38f9-bfaf-4555-8051-d867140232fc": {
@@ -12332,7 +12355,7 @@
         },
         "e5f4b521-ba78-4410-9629-f6a72ecb4114": {
           "tips": [
-            null
+            "**Facilitando Mini-Proyectos:** Los Mini-Proyectos actúan como puntos de control en el plan de estudios y cubren el subconjunto de habilidades que los estudiantes han visto hasta ahora en la unidad. Están diseñados para 1-2 días de duración como una forma de comprobar si los estudiantes entienden bien el contenido del curso hasta el momento. Puedes decidir ampliar estos proyectos como una forma de apoyar o desafiar a los estudiantes, lo que podría permitirte revisar conceptos difíciles o apoyar a los estudiantes que pueden haber perdido lecciones y están tratando de ponerse al día. Sin embargo, te recomendamos que decidas esto con antelación y que seas firme con los estudiantes sobre el tiempo que tienen para cada proyecto; de lo contrario, es fácil que los proyectos se alarguen durante varios días y que el trabajo de los estudiantes se extienda más allá del alcance de este proyecto."
           ]
         },
         "13377864-9faa-4893-b0c2-262903a7710e": {
@@ -12347,7 +12370,7 @@
         },
         "48b11d9f-9819-4e81-86c0-5d57b093334b": {
           "tips": [
-            null
+            "**Estrategias de Depuración:** A medida que los alumnos diseñan e implementan sus propias ideas de proyecto, pueden encontrarse con nuevos errores que necesitan solucionar y tú puedes encontrarte mirando código completamente desconocido mientras los alumnos buscan ayuda para solucionar sus errores. Para ayudar a suavizar la experiencia de depuración, considera las siguientes estrategias:\n\n-   Revisa la [Guía del Docente para la Depuración](https://docs.google.com/document/d/1-mXz53CAQ1dy3-RVGkoUnR0hfAwdWeza4kch6NAvLb8/edit) para ver algunas preguntas comunes y estrategias para ayudar a los alumnos a depurar su código.\n-   Pide a los alumnos que sigan los pasos de la [Guía del Alumno para la Depuración](https://docs.google.com/document/d/1wNwoKDyoUas5GGkhqGmNN1u0XGQEdeOMWhSziyYIf8o/edit#) y que utilicen las [Hojas de Informe de Fallos](https://docs.google.com/document/d/1M6mnq73DfyvzasucVAwfL-gjl2JqVPzjy_fRx5j4j7c/preview) como paso inicial en el proceso de depuración. Esto ayuda a los alumnos a preparar y comunicar su problema antes de pedir ayuda.\n-   Si los alumnos aún no lo han visto, considera la posibilidad de mostrar a la clase el [Vídeo de Depuración](https://www.youtube.com/watch?v=auv10y-dN4s) para reforzar las mejores prácticas de depuración.\n\n**Profundizar:** Considera la posibilidad de proporcionar a los alumnos un objeto con el que hablar como parte del proceso de depuración. Esto se conoce a veces como \"Depuración de Patos de Goma\" (Rubber Duck Debugging); puedes obtener más información en el sitio web <https://rubberduckdebugging.com/>"
           ],
           "progression_name": "Arte Interactivo"
         },
@@ -12357,7 +12380,7 @@
         "c960fb55-e814-4e24-a9d4-07f5875c76f9": {
           "description": "**Transición:** Envía a los estudiantes a Code Studio",
           "tips": [
-            null
+            "**Guía para Programación de Niveles:** En la [Guía para Programación de Niveles del CDS](https://docs.google.com/document/d/1WGywQ25khB6-FB20x6wO9dGVO9_qJlWkuLVLREJS4Jo/preview) se proporciona orientación adicional para la programación de niveles. Este documento incluye estrategias y mejores prácticas para facilitar la programación de niveles con los alumnos."
           ]
         },
         "e64406a9-57fb-477d-bdc7-3921a12129cb": {
@@ -12387,7 +12410,7 @@
         "9cc97556-4746-41d2-aacd-4520dec3be96": {
           "description": "**Transición:** Envía a los estudiantes a Code Studio",
           "tips": [
-            null
+            "**Guía para Programación de Niveles:** En la [Guía para Programación de Niveles del CDS](https://docs.google.com/document/d/1WGywQ25khB6-FB20x6wO9dGVO9_qJlWkuLVLREJS4Jo/preview) se proporciona orientación adicional para la programación de niveles. Este documento incluye estrategias y mejores prácticas para facilitar la programación de niveles con los alumnos."
           ]
         },
         "1fc60f0f-8066-4a49-86d7-2f3dda01d427": {
@@ -12433,7 +12456,7 @@
         },
         "5be532a8-3a04-478b-8840-962b2c499894": {
           "tips": [
-            null
+            "**Estrategias de Depuración:** A medida que los alumnos diseñan e implementan sus propias ideas de proyecto, pueden encontrarse con nuevos errores que necesitan solucionar y tú puedes encontrarte mirando código completamente desconocido mientras los alumnos buscan ayuda para solucionar sus errores. Para ayudar a suavizar la experiencia de depuración, considera las siguientes estrategias:\n\n-   Revisa la [Guía del Docente para la Depuración](https://docs.google.com/document/d/1-mXz53CAQ1dy3-RVGkoUnR0hfAwdWeza4kch6NAvLb8/edit) para ver algunas preguntas comunes y estrategias para ayudar a los alumnos a depurar su código.\n-   Pide a los alumnos que sigan los pasos de la [Guía del Alumno para la Depuración](https://docs.google.com/document/d/1wNwoKDyoUas5GGkhqGmNN1u0XGQEdeOMWhSziyYIf8o/edit#) y que utilicen las [Hojas de Informe de Fallos](https://docs.google.com/document/d/1M6mnq73DfyvzasucVAwfL-gjl2JqVPzjy_fRx5j4j7c/preview) como paso inicial en el proceso de depuración. Esto ayuda a los alumnos a preparar y comunicar su problema antes de pedir ayuda.\n-   Si los alumnos aún no lo han visto, considera la posibilidad de mostrar a la clase el [Vídeo de Depuración](https://www.youtube.com/watch?v=auv10y-dN4s) para reforzar las mejores prácticas de depuración.\n\n**Profundizar:** Considera la posibilidad de proporcionar a los alumnos un objeto con el que hablar como parte del proceso de depuración. Esto se conoce a veces como \"Depuración de Patos de Goma\" (Rubber Duck Debugging); puedes obtener más información en el sitio web <https://rubberduckdebugging.com/>"
           ],
           "progression_name": "Prototipo de una Innovación"
         },
@@ -12534,6 +12557,7 @@
           ]
         },
         "514d167e-9739-4856-9308-39bce3beb983": {
+          "name": "Nivel 3- Reconocer las expresiones de los peces",
           "progression_name": "Reconocimiento de Expresiones"
         },
         "a6f7adf9-fc91-4fb7-88c5-e87b81a0842e": {
@@ -12909,7 +12933,7 @@
         },
         "6d9af5ce-913c-4c16-8a89-081c23545139": {
           "tips": [
-            null
+            "**Normalizar los Errores y Apoyar la Depuración:** A medida que los niveles de programación se vuelven más complejos, los estudiantes pueden encontrarse con errores en su código que necesitan solucionar. Si esto ocurre con frecuencia, puede ser una experiencia desmoralizadora para los alumnos y puede afectar a su autoestima de lo capaces que son en clase. \n\nPara contrarrestar esto, recomendamos normalizar los fallos y errores como algo que le ocurre a todo el mundo, es sólo parte del proceso. Puedes mostrar a los alumnos nuestro [Vídeo de Depuración](https://www.youtube.com/watch?v=auv10y-dN4s), que incluye a varios alumnos normalizando errores y discutiendo estrategias de depuración que los alumnos pueden utilizar. Además, considera la posibilidad de mostrar la [Guía del Alumno para la Depuración](https://docs.google.com/document/d/1wNwoKDyoUas5GGkhqGmNN1u0XGQEdeOMWhSziyYIf8o/edit#) para que los alumnos la consulten a lo largo de la unidad y de tener a su disposición las [Hojas Trimestrales de Informe de Errores](https://docs.google.com/document/d/1M6mnq73DfyvzasucVAwfL-gjl2JqVPzjy_fRx5j4j7c/preview)."
           ],
           "progression_name": "Añadiendo Nuevas Pantallas"
         },
@@ -23049,6 +23073,7 @@
           ]
         },
         "1ce2130f-e735-4060-811f-b8c87e6f74b0": {
+          "name": "Nivel 3- Reconocer las expresiones de los peces",
           "progression_name": "Reconocimiento de Expresiones"
         },
         "01e90cb3-4a6f-46ed-9a4e-4e7524589e47": {
@@ -24919,7 +24944,7 @@
         },
         "020265fb-ab0b-4d77-8cf9-30fb0228a37b": {
           "name": "Diario",
-          "description": "**Sugerencia:** Pide a tus alumnos que reflexionen sobre su desarrollo en las [[cinco prácticas de  Descubrimientos CS]](https://docs.google.com/document/d/1FhHPqlC6dU_z9retuBYb-duUwyKpnjwuEgjF4zfdhvI/edit#heading=h.5u3d4jfozbgc) (Resolución de Problemas, Persistencia, Creatividad, Colaboración, Comunicación). Elige una de las siguientes indicaciones según consideres oportuno.\n\n-   Elige una de las cinco prácticas en las que crees que has demostrado crecimiento en esta lección. Escribe algo que hayas hecho que ejemplifique esta práctica.\n\n-   Elige una práctica en la que creas que puedes seguir creciendo. ¿Qué es lo que te gustaría hacer mejor?\n\n-   Elige una práctica que te haya parecido especialmente importante para la actividad que hemos realizado hoy. ¿Por qué era tan importante?"
+          "description": "**Sugerencia:** Pide a tus alumnos que reflexionen sobre su desarrollo en las [\\[cinco prácticas de  Descubrimientos CS\\]](https://docs.google.com/document/d/1FhHPqlC6dU_z9retuBYb-duUwyKpnjwuEgjF4zfdhvI/edit#heading=h.5u3d4jfozbgc) (Resolución de Problemas, Persistencia, Creatividad, Colaboración, Comunicación). Elige una de las siguientes indicaciones según consideres oportuno.\n\n-   Elige una de las cinco prácticas en las que crees que has demostrado crecimiento en esta lección. Escribe algo que hayas hecho que ejemplifique esta práctica.\n\n-   Elige una práctica en la que creas que puedes seguir creciendo. ¿Qué es lo que te gustaría hacer mejor?\n\n-   Elige una práctica que te haya parecido especialmente importante para la actividad que hemos realizado hoy. ¿Por qué era tan importante?"
         },
         "5cf3a5e9-20b3-4eb3-bc30-8f7676bfbfc8": {
           "name": "¿Qué hace un sensor?",
