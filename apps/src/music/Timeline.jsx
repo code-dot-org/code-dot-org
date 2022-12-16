@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
 import React from 'react';
+import UniqueSounds from './utils/UniqueSounds';
 
 const barWidth = 60;
 
@@ -13,8 +14,14 @@ export default class Timeline extends React.Component {
     sounds: PropTypes.array
   };
 
+  constructor(props) {
+    super(props);
+
+    this.uniqueSounds = new UniqueSounds();
+  }
+
   getEventHeight = () => {
-    const numUniqueSounds = this.getUniqueSounds().length;
+    const numUniqueSounds = this.currentUniqueSounds.length;
     const actualHeight = 110;
 
     // While we might not actually have this many rows to show,
@@ -34,20 +41,8 @@ export default class Timeline extends React.Component {
     return Math.floor(actualHeight / numSoundsToShow);
   };
 
-  getUniqueSounds = () => {
-    // Each unique sound gets its own color/row.
-    const uniqueSounds = [];
-    for (const songEvent of this.props.songData.events) {
-      const id = songEvent.id;
-      if (uniqueSounds.indexOf(id) === -1) {
-        uniqueSounds.push(id);
-      }
-    }
-    return uniqueSounds;
-  };
-
   getUniqueIndexForEventId = id => {
-    return this.getUniqueSounds().indexOf(id);
+    return this.currentUniqueSounds.indexOf(id);
   };
 
   getVerticalOffsetForEventId = id => {
@@ -91,6 +86,14 @@ export default class Timeline extends React.Component {
 
     // Leave some vertical space between each event block.
     const eventVerticalSpace = 2;
+
+    // Let's cache the value of getUniqueSounds() so that the various helpers
+    // we call during render don't need to recalculate it.  This also ensures
+    // that we recalculate unique sounds, even when there are no entries to
+    // render.
+    this.currentUniqueSounds = this.uniqueSounds.getUniqueSounds(
+      this.props.songData.events
+    );
 
     return (
       <div

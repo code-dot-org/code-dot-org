@@ -42,7 +42,6 @@ export class UnconnectedRetryProjectSaveDialog extends Component {
         </div>
         <DialogFooter rightAlign={true}>
           <Button
-            __useDeprecatedTag
             text={i18n.retryProjectSaveDialogButton()}
             onClick={this.handleClick}
             color={Button.ButtonColor.orange}
