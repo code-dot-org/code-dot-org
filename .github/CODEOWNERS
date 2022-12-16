@@ -31,3 +31,14 @@
 
 # Database Migration Service (Redshift replication) configuration
 /aws/dms/                   @code-dot-org/red-team
+
+
+##################
+# infrastructure #
+##################
+
+/.github/                   @code-dot-org/infrastructure
+/aws/                       @code-dot-org/infrastructure
+/cookbooks/                 @code-dot-org/infrastructure
+.drone.yml                  @code-dot-org/infrastructure
+.ruby-version               @code-dot-org/infrastructure
