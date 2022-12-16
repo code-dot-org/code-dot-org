@@ -2,7 +2,7 @@
 @import "color.scss";
 
 .inlineAudioButton {
-  @include remove-button-styles;
+  @include remove-button-styles(inherit, inherit, inherit);
 
   .iconWrapper {
     background-color: $lightest_purple;

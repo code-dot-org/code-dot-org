@@ -44,6 +44,7 @@ export default class InstructionsTab extends Component {
     };
     const combinedStyle = {
       ...this.props.style,
+      ...styles.text,
       ...(this.props.selected
         ? this.props.teacherOnly
           ? styles.teacherHighlighted
@@ -54,7 +55,7 @@ export default class InstructionsTab extends Component {
         ? styles.teacherText
         : this.props.isMinecraft
         ? craftStyles.text
-        : styles.text)
+        : styles.defaultText)
     };
     return (
       <button
@@ -96,11 +97,14 @@ const styles = {
   },
   tabWrapper: {
     overflow: 'hidden',
-    textOverflow: 'ellipsis',
     display: 'flex'
   },
-  text: {
+  defaultText: {
     color: color.charcoal
+  },
+  text: {
+    textOverflow: 'ellipsis',
+    overflow: 'hidden'
   },
   teacherText: {
     color: color.lightest_cyan

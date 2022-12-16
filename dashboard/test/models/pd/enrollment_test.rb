@@ -336,13 +336,28 @@ class Pd::EnrollmentTest < ActiveSupport::TestCase
     assert_equal [], Pd::Enrollment.filter_for_survey_completion([enrollment], false)
   end
 
-  test 'academic year survey filter' do
+  test 'csd academic year survey not filtered out' do
+    workshop = create :csd_academic_year_workshop
+    teacher = create :teacher
+    enrollment = create :pd_enrollment, :from_user, user: teacher, workshop: workshop
+
+    assert_equal [enrollment], Pd::Enrollment.filter_for_survey_completion([enrollment], false)
+  end
+
+  test 'csp academic year survey not filtered out' do
     workshop = create :csp_academic_year_workshop
     teacher = create :teacher
     enrollment = create :pd_enrollment, :from_user, user: teacher, workshop: workshop
 
-    # academic year surveys should always return [] since we do not show post-surveys in the dashboard
-    assert_equal [], Pd::Enrollment.filter_for_survey_completion([enrollment], false)
+    assert_equal [enrollment], Pd::Enrollment.filter_for_survey_completion([enrollment], false)
+  end
+
+  test 'csa academic year survey not filtered out' do
+    workshop = create :csa_academic_year_workshop
+    teacher = create :teacher
+    enrollment = create :pd_enrollment, :from_user, user: teacher, workshop: workshop
+
+    assert_equal [enrollment], Pd::Enrollment.filter_for_survey_completion([enrollment], false)
   end
 
   test 'enrolling in class automatically enrolls in online learning' do

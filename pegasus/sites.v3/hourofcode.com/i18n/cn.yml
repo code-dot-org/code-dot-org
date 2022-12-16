@@ -455,6 +455,10 @@ cn:
     或阅读我们的 <a href='%{howto_guide_url}'>操作指南</a> 为您所在的课堂筹备一次活动。
   signup_registration_not_required_markdown: 您无需注册，即可参加全年的编程一小时各项活动！[体验活动](%{hoc_activities_url})或阅读我们的[操作指南](%{howto_guide_url})，为您所在的课堂筹备一次活动。
   signup_registration_closed: 每年的12月，你的班级都可以加入世界各地数以百万计的学生，一起庆祝计算机科学教育周。我们将在10月开始登记年度庆典活动。
+  signup_registration_closed_2022_markdown: 'Registration for this year''s Hour of
+    Code event map is currently closed, but you can still [host an Hour of Code](%{hoc_activities_url})
+    and join in the celebration on social media! Post fun pictures or video of your
+    event using the #HourOfCode hashtag!'
   signup_header: 在%{campaign_date} 期间主持编程一小时，并在这里登记。
   signup_name_label: 您的姓名
   signup_name_error: 名称是必填的。

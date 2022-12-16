@@ -541,6 +541,10 @@ nl:
     bij miljoenen leerlingen over de hele wereld die de computerwetenschappelijke
     onderwijsweek vieren met de Hour of Code. We openen de inschrijving voor de jaarlijkse
     viering in oktober.
+  signup_registration_closed_2022_markdown: 'Registration for this year''s Hour of
+    Code event map is currently closed, but you can still [host an Hour of Code](%{hoc_activities_url})
+    and join in the celebration on social media! Post fun pictures or video of your
+    event using the #HourOfCode hashtag!'
   signup_header: Organiseer een 'Hour of Code' tijdens %{campaign_date}, en meld hem
     hier aan.
   signup_name_label: Je naam
