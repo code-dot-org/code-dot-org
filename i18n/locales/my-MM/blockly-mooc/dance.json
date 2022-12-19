@@ -1,1 +1,13 @@
-{}
+{
+  "danceFeedbackNeedNewDancer": "အက သမားရှိဖို့ရန်လိုအပ်ပါတယ်။",
+  "danceFeedbackNoDancers": "သင့်မှာ အကသမားများမရှိပါ။",
+  "danceFeedbackNoBackground": "သင် Background effect ထည့်ရန်လိုအပ်ပါသည်။",
+  "danceFeedbackTooManyDancers": "သတိပြုပါ။ အကယ်၍ သင်သည် 'make a new'  block inside 'every 2 measures' တွင်ထည့်ပါက အကသမား အများကြီးဖန်တီးနိုင်မည်ဖြစ်သည်။",
+  "danceFeedbackUseSetSize": "အကသမား ပိုသေးစေဖို့ block ရန် 'set backup_dancer2 size` အသုံးပြုပါ ",
+  "danceFeedbackUseSetTint": "အကသမား၏ အရောင်ပြောင်းမှုကို block ရန် 'set tint'အသုံးပြုပါ။",
+  "danceFeedbackUseStartMapping": " ထည့်ကြည်ပါ <xml><block type=\"Dancelab_startMapping\"><title name=\"SPRITE\">right_unicorn</title><title name=\"PROPERTY\">\"scale\"</title><title name=\"RANGE\">\"bass\"</title></block></xml> သင့် ပရိုဂရမ် block ပါ။",
+  "danceFeedbackStartNewMove": "လေးကြိမ်မြောက် တိုင်းတာပြီးနောက် သင့်အကသမားများသည် ရွေ့လျားခြင်းအသစ်မပြုလုပ်နေပါ။",
+  "danceFeedbackNeedDifferentDance": "မတူညီသော အက ကိုအသုံးပြုရန်လိုအပ်သည်။ ",
+  "danceFeedbackNeedEveryTwoMeasures": " သင်သည် `every 2 measures` block အသုံးပြုနေသည်ကိုသေချာပါစေ။",
+  "danceFeedbackNeedMakeANewDancer": "ဒုတိယ အကသမားကိုဖန်တီးဖို့ရန်အတွက် `make a new` block ကိုအသုံးပြုပါ။"
+}

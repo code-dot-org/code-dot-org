@@ -227,6 +227,23 @@
         }
       }
     },
+    "club_biased_toy": {
+      "fields": {
+        "activity": {
+          "id": "aktivita"
+        },
+        "club": {
+          "id": "krúžok",
+          "description": "Na aký krúžok sa chcš prihlásiť alebo na aký už chodíš?"
+        }
+      },
+      "card": {
+        "context": {
+          "potentialUses": "Otázky pomôžu odporučiť krúžok, na ktorý sa máš prihlásiť, na základe tvojich záujmov a osobnosti.",
+          "potentialMisuses": "Údaje pochádzajú len od ľudí z našej školy a komunity – používaj ich obozretne v iných školách."
+        }
+      }
+    },
     "loneliness_phobias": {
       "fields": {
         "Loneliness": {
@@ -292,14 +309,31 @@
     "club_random_toy": {
       "fields": {
         "color": {
-          "id": "farba"
+          "id": "farba",
+          "description": "Ktorá z týchto farieb sa ti páči najviac?"
         },
         "music": {
-          "id": "hudba"
+          "id": "hudba",
+          "description": "Ktorý z týchto hudobných žánrov máš najradšej?"
         },
         "food": {
           "id": "jedlo",
           "description": "Ktoré z týchto druhov jedál máš najradšej?"
+        },
+        "read vs tv": {
+          "id": "čítanie alebo TV",
+          "description": "Čo si myslíš o nasledujúcom výroku: „Radšej budem čítať ako pozerať televíziu.“?"
+        },
+        "club": {
+          "id": "krúžok",
+          "description": "Na aký krúžok sa chcš prihlásiť alebo na aký už chodíš?"
+        }
+      },
+      "card": {
+        "description": "Isaac a jeho štyria súrodenci požiadali všetkých vo svojich triedach, aby vyplnili dotazník. Získali tak množstvo údajov od ľudí z rôznych skupín.",
+        "context": {
+          "potentialUses": "Otázky pomôžu odporučiť krúžok, na ktorý sa máš prihlásiť, na základe tvojich záujmov a osobnosti.",
+          "potentialMisuses": "Údaje pochádzajú len od ľudí z našej školy a komunity – používaj ich obozretne v iných školách."
         }
       }
     },
@@ -630,8 +664,127 @@
           "id": "veľkosť rodiny",
           "description": "Veľkosť rodiny: LE3 (menej ako 3) a GT3 (viac ako 3)"
         },
+        "parent cohabitation status": {
+          "id": "stav spolužitia rodičov",
+          "description": "Či ich rodičia žijú spolu (T) alebo oddelene (A)"
+        },
+        "mother's education": {
+          "id": "vzdelanie matky",
+          "description": "Vzdelanie matky od 0 (žiadne) do 4 (vysokoškolské vzdelanie)."
+        },
+        "father's education": {
+          "id": "vzdelanie otca",
+          "description": "Vzdelanie otca od 0 (žiadne) do 4 (vysokoškolské vzdelanie)"
+        },
+        "mother's job": {
+          "id": "zamestnanie matky",
+          "description": "Typ zamestnania matky."
+        },
+        "father's job": {
+          "id": "zamestnanie otca",
+          "description": "Typ zamestnania otca."
+        },
+        "reason": {
+          "id": "dôvod",
+          "description": "Dôvod výberu tejto školy."
+        },
+        "guardian": {
+          "id": "opatrovník",
+          "description": "Opatrovník študenta."
+        },
+        "traveltime": {
+          "id": "čas dochádzky",
+          "description": "Čas dochádzania študenta do školy v hodinách."
+        },
+        "studytime": {
+          "id": "študijný čas",
+          "description": "Týždenný čas štúdia študenta od 1 do 10 hodín."
+        },
+        "failures": {
+          "id": "neúspechy",
+          "description": "Počet predchádzajúcich neúspechov na hodinách (0 až 4)."
+        },
+        "school support": {
+          "id": "podpora školy",
+          "description": "Dodatočná vzdelávacia podpora zo strany školy."
+        },
+        "family support": {
+          "id": "podpora rodiny",
+          "description": "Dodatočná vzdelávacia podpora zo strany rodiny."
+        },
+        "paid": {
+          "id": "platené",
+          "description": "Dodatočné platené kurzy."
+        },
+        "activities": {
+          "id": "aktivity",
+          "description": "Mimoškolské aktivity."
+        },
+        "nursery": {
+          "id": "škôlka",
+          "description": "Navštevovaná materská škola."
+        },
+        "higher": {
+          "id": "vyššie vzdelanie",
+          "description": "Chce pokračovať na vysokej škole."
+        },
+        "internet": {
+          "id": "internet",
+          "description": "Prístup na internet doma."
+        },
+        "romantic": {
+          "id": "romantický vzťah",
+          "description": "Je v romantickom vzťahu."
+        },
+        "family relationships": {
+          "id": "rodinné vzťahy",
+          "description": "Kvalita rodinných vzťahov: 1 (veľmi zlé) až 5 (výborné)."
+        },
+        "freetime": {
+          "id": "voľný čas",
+          "description": "Voľný čas po škole: 1 (veľmi málo) až 5 (veľmi veľa)."
+        },
+        "go out": {
+          "id": "chodí von",
+          "description": "Ako často študenti chodia von s priateľmi: 1 (veľmi zriedka) až 5 (veľmi často)."
+        },
+        "daily alcohol": {
+          "id": "alkohol cez všedný deň",
+          "description": "Spotreba alkoholu vo všedný deň: 1 (veľmi nízka) až 5 (veľmi vysoká)."
+        },
+        "weekend alcohol": {
+          "id": "alkohol cez víkend",
+          "description": "Spotreba alkoholu cez víkend: 1 (veľmi nízka) až 5 (veľmi vysoká)"
+        },
         "health": {
-          "id": "zdravie"
+          "id": "zdravie",
+          "description": "Zdravotný stav: 1 (veľmi zlý) až 5 (veľmi dobrý)"
+        },
+        "absences": {
+          "id": "absencie",
+          "description": "Počet absencií v škole."
+        },
+        "G1": {
+          "id": "G1",
+          "description": "Známka za prvý semester."
+        },
+        "G2": {
+          "id": "G2",
+          "description": "Známka za druhý semester."
+        },
+        "G3": {
+          "id": "G3",
+          "description": "Výsledná známka"
+        }
+      },
+      "card": {
+        "description": "Obsahuje individuálne odpovede na sociálny prieskum medzi portugalskými stredoškolákmi, v ktorom sa sledovali sociálne informácie, informácie o pohlaví a štúdiu."
+      }
+    },
+    "icecream_toppings_toy": {
+      "fields": {
+        "Preference": {
+          "id": "Preferencia"
         }
       }
     },
@@ -777,6 +930,37 @@
         }
       }
     },
+    "club_specific_toy": {
+      "fields": {
+        "activity": {
+          "id": "aktivita",
+          "description": "Ktoré z týchto aktivít si vykonával/a v priebehu posledného mesiaca?"
+        },
+        "pet you own": {
+          "id": "tvoje domáce zvieratko",
+          "description": "Ktoré z týchto domácich zvierat vlastníš?"
+        },
+        "favorite movie": {
+          "id": "obľúbený film",
+          "description": "Ktorý z týchto filmov sa ti páči najviac?"
+        },
+        "lunch food": {
+          "id": "jedlo na obed",
+          "description": "Ktoré z týchto jedál by ti chutilo na obed?"
+        },
+        "club": {
+          "id": "krúžok",
+          "description": "Na aký krúžok sa chcš prihlásiť alebo na aký už chodíš?"
+        }
+      },
+      "card": {
+        "description": "Kim sa spýtala svojej staršej sestry, aké otázky by mala do prieskumu zahrnúť, a potom ho poslala e-mailom priateľom svojej sestry na súkromnej univerzite, na ktorú chodí.",
+        "context": {
+          "potentialUses": "Otázky pomôžu odporučiť krúžok, na ktorý sa máš prihlásiť, na základe tvojich záujmov a osobnosti.",
+          "potentialMisuses": "Údaje pochádzajú len od ľudí z našej školy a komunity – používaj ich obozretne v iných školách."
+        }
+      }
+    },
     "songs": {
       "fields": {
         "Artist": {
@@ -856,6 +1040,23 @@
       "fields": {
         "Aquatic": {
           "id": "Vodný"
+        }
+      }
+    },
+    "club_sparse_toy": {
+      "fields": {
+        "activity": {
+          "id": "aktivita"
+        },
+        "club": {
+          "id": "krúžok",
+          "description": "Na aký krúžok sa chcš prihlásiť alebo na aký už chodíš?"
+        }
+      },
+      "card": {
+        "context": {
+          "potentialUses": "Otázky pomôžu odporučiť krúžok, na ktorý sa máš prihlásiť, na základe tvojich záujmov a osobnosti.",
+          "potentialMisuses": "Údaje pochádzajú len od ľudí z našej školy a komunity – používaj ich obozretne v iných školách."
         }
       }
     },
@@ -980,10 +1181,47 @@
     "student_survey": {
       "fields": {
         "Music": {
-          "id": "Hudba"
+          "id": "Hudba",
+          "description": "Baví ma počúvať hudbu"
+        },
+        "Slow songs or fast songs": {
+          "id": "Pomalé skladby alebo rýchle skladby",
+          "description": "Dávam prednosť rýchlej hudbe"
+        },
+        "Dance": {
+          "description": "Páči sa mi tanečná hudba"
+        },
+        "Folk": {
+          "id": "Folk",
+          "description": "Páči sa mi folková hudba"
         },
         "Country": {
-          "id": "Krajina"
+          "id": "Krajina",
+          "description": "Páči sa mi country"
+        },
+        "Classical music": {
+          "id": "Klasická hudba",
+          "description": "Páči sa mi klasická hudba"
+        },
+        "Musical": {
+          "id": "Muzikál",
+          "description": "Páčia sa mi muzikály"
+        },
+        "Pop": {
+          "id": "Pop",
+          "description": "Páči sa mi populárna hudba"
+        },
+        "Rock": {
+          "id": "Rock",
+          "description": "Páči sa mi rocková hudba"
+        },
+        "Metal or Hardrock": {
+          "id": "Metal alebo hard rock",
+          "description": "Páči sa mi metal alebo hard rock"
+        },
+        "Punk": {
+          "id": "Punk",
+          "description": "Páči sa mi punková hudba"
         },
         "Hiphop, Rap": {
           "id": "Hip-hop, Rap",
@@ -1202,6 +1440,33 @@
         "Anchovies": {
           "id": "Ančovičky",
           "description": "Boli na pizzi ančovičky?"
+        },
+        "Fried Chicken": {
+          "id": "Vyprážané kurča",
+          "description": "Bolo na pizzi vyprážané kurča?"
+        },
+        "Peppers": {
+          "id": "Paprika",
+          "description": "Bola na pizzi paprika?"
+        },
+        "Ham": {
+          "id": "Šunka",
+          "description": "Bola na pizzi šunka?"
+        },
+        "Bacon": {
+          "id": "Slanina",
+          "description": "Bola na pizzi slanina?"
+        },
+        "Preference": {
+          "id": "Preferencia",
+          "description": "Chutila ti pizza?"
+        }
+      },
+      "card": {
+        "description": "Prieskum medzi zákazníkmi v pizzerii o tom, či majú alebo nemajú radi určité kombinácie prísad na pizzi.",
+        "context": {
+          "potentialUses": "Pomôž novému zákazníkovi vybrať, aký druh pizze by si mal objednať.",
+          "potentialMisuses": "Čokoľvek iné ako odporúčania týkajúce sa pizze."
         }
       }
     },
@@ -1382,6 +1647,13 @@
         }
       }
     },
+    "taco_toppings_toy": {
+      "fields": {
+        "Preference": {
+          "id": "Preferencia"
+        }
+      }
+    },
     "loneliness_music": {
       "fields": {
         "Loneliness": {
@@ -1389,10 +1661,47 @@
           "description": "Cítim sa osamelo."
         },
         "Music": {
-          "id": "Hudba"
+          "id": "Hudba",
+          "description": "Baví ma počúvať hudbu"
+        },
+        "Slow songs or fast songs": {
+          "id": "Pomalé skladby alebo rýchle skladby",
+          "description": "Dávam prednosť rýchlej hudbe"
+        },
+        "Dance": {
+          "description": "Páči sa mi tanečná hudba"
+        },
+        "Folk": {
+          "id": "Folk",
+          "description": "Páči sa mi folková hudba"
         },
         "Country": {
-          "id": "Krajina"
+          "id": "Krajina",
+          "description": "Páči sa mi country"
+        },
+        "Classical music": {
+          "id": "Klasická hudba",
+          "description": "Páči sa mi klasická hudba"
+        },
+        "Musical": {
+          "id": "Muzikál",
+          "description": "Páčia sa mi muzikály"
+        },
+        "Pop": {
+          "id": "Pop",
+          "description": "Páči sa mi populárna hudba"
+        },
+        "Rock": {
+          "id": "Rock",
+          "description": "Páči sa mi rocková hudba"
+        },
+        "Metal or Hardrock": {
+          "id": "Metal alebo hard rock",
+          "description": "Páči sa mi metal alebo hard rock"
+        },
+        "Punk": {
+          "id": "Punk",
+          "description": "Páči sa mi punková hudba"
         },
         "Hiphop, Rap": {
           "id": "Hip-hop, Rap",

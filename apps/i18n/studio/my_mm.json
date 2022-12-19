@@ -1,4 +1,7 @@
 {
+  "add": "ထည့်ပါ",
+  "ask": "မေးပါ",
+  "calloutPutCommandsHereRunStart": "jasdlkjf",
   "catActions": "လုပ်​ဆောင်ချက်များ",
   "catControl": "Loops",
   "catLogic": "Logic",
@@ -33,6 +36,7 @@
   "playSoundWinPoint2": "အနိုင်ရသံ 2 ဖွင့်ပါ",
   "playSoundWood": "သစ်သားသံ ဖွင့်ပါ",
   "playSoundRandom": "ကြုံရာ အသံ ဖွင့်ပါ",
+  "saySpriteChoices_9": "ဘယ်နေရာ",
   "score": "ရမှတ်",
   "showTitleScreenText": "text",
   "whenDown": "အောက်မျှား နှိပ်လျှင်",
