@@ -9805,7 +9805,7 @@ en:
             - This unit requires students to have access to Circuit Playground's - [click here](https://code.org/circuitplayground) for more information about using Circuit Playground's in your classroom
             - Guidance for how to support students in programming levels and differentiate tasks are available in the [Programming Levels Guide](https://docs.google.com/document/d/1WGywQ25khB6-FB20x6wO9dGVO9_qJlWkuLVLREJS4Jo/preview) and [Differentiation Guide](https://docs.google.com/document/d/15Y6Mo3fMUtHq16SSskABgcYE-5xfk-Ewv0z_o4uaLdI/preview)
 
-            **Professional Development:** If you are interested in teaching this course, we recommend completing the free [Creating Apps for Devices Self-Paced Professional Development Module](). The module is designed to take 2 hours to complete. No previous experience with coding or AI is assumed.
+            **Professional Development:** If you are interested in teaching this course, we recommend completing the free [Creating Apps for Devices Self-Paced Professional Development Module](https://studio.code.org/courses/self-paced-pl-physical-computing-2022). The module is designed to take 2 hours to complete. No previous experience with coding or devices is assumed.
           student_description: This unit explores the role of hardware platforms in computing and how different sensors can provide more effective input and output than the traditional keyboard, mouse, and monitor. Using App Lab and Adafruit’s Circuit Playground, you’ll develop programs that utilize the same hardware inputs and outputs that you see in the smart devices, looking at how a simple rough prototype can lead to a finished product. The unit concludes with a design challenge to use the Circuit Playground as the basis for an innovation of your own design.
         allthevalidation:
           lessons:
@@ -9828,6 +9828,8 @@ en:
               name: Supporting Equity
             lesson-4:
               name: Closing
+            lesson-5:
+              name: Asynchronous Curriculum Investigation
           lesson_groups:
             lessonGroup-2:
               display_name: 'Part 1: Synchronous Session'
@@ -9859,6 +9861,8 @@ en:
               name: Supporting Student Learning
             lesson-4:
               name: Closing
+            lesson-5:
+              name: Asynchronous Curriculum Investigation
           lesson_groups:
             lessonGroup-2:
               display_name: 'Part 1: Synchronous Session'
