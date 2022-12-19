@@ -201,7 +201,7 @@
           "description": "Construire un programme en utilisant des structures qui répètent des zones de code"
         },
         "fcc0109d-8a25-4194-8a5c-69985bac106c": {
-          "description": "Améliorer le code existant en trouvant des zones de répétition et en les déplaçant dans des structures en boucle"
+          "description": "Améliorer le code existant en trouvant des zones de répétition et en les déplaçant vers des structures mise en boucle"
         },
         "c2ec43ae-26ae-48df-8657-373765b01821": {
           "description": "Faire la différence entre les commandes qui doivent être répétées en boucles et les commandes qui doivent être utilisées seules."
@@ -762,7 +762,7 @@
           "description": "Construire un programme en utilisant des structures qui répètent des zones de code"
         },
         "65939b9f-ba0f-4834-8f54-24419c9391e5": {
-          "description": "Améliorer le code existant en trouvant des zones de répétition et en les déplaçant dans des structures en boucle"
+          "description": "Améliorer le code existant en trouvant des zones de répétition et en les déplaçant vers des structures mise en boucle"
         },
         "3a06cce8-584a-431c-8cca-05ad9b0df32d": {
           "description": "Identifier les avantages de l'utilisation d'une structure de boucle au lieu de la répétition manuelle."
@@ -792,7 +792,7 @@
           "description": "Identifier les actions qui aux événements d'entrée."
         },
         "37987315-bfd5-46fd-9faa-9e480ef816b2": {
-          "description": "Créer une histoire animée et interactive à l'aide de séquences et de gestionnaires d'événements."
+          "description": "Créer une histoire animée et interactive en utilisant des séquences et des gestionnaires d'événements."
         },
         "fb6ff331-603c-4310-83e8-77e3e606edfe": {
           "description": "Partager un artefact créatif avec d'autres élèves."
@@ -858,7 +858,7 @@
           "description": "Identifier un code répétitif et réduire plusieurs actions en une seule boucle."
         },
         "a28f100d-9129-44e2-ae89-93a0e4da1ef2": {
-          "description": "Améliorer le code existant en trouvant des zones de répétition et en les déplaçant dans des structures en boucle"
+          "description": "Améliorer le code existant en trouvant des zones de répétition et en les déplaçant vers des structures mise en boucle"
         },
         "b55b43b6-9b0d-4703-be2e-9525b05c0a26": {
           "description": "Construire un programme en utilisant des structures qui répètent des zones de code"
@@ -888,7 +888,7 @@
           "description": "Répéter les commandes données par un instructeur."
         },
         "946d56ae-8a81-476c-93ab-6d5eff1f9633": {
-          "description": "Créer une histoire animée et interactive à l'aide de séquences et de gestionnaires d'événements."
+          "description": "Créer une histoire animée et interactive en utilisant des séquences et des gestionnaires d'événements."
         },
         "ab8e0f55-bcb7-4af5-813f-df7d9629e21f": {
           "description": "Partager un artefact créatif avec d'autres élèves."
@@ -1347,7 +1347,7 @@
           "description": "Construire un programme en utilisant des structures qui répètent des zones de code"
         },
         "381b89ab-336f-41cd-b755-78142a1f1f90": {
-          "description": "Améliorer le code existant en trouvant des zones de répétition et en les déplaçant dans des structures en boucle"
+          "description": "Améliorer le code existant en trouvant des zones de répétition et en les déplaçant vers des structures mise en boucle"
         },
         "632bd918-c124-4f4c-892e-980cdc07b3bf": {
           "description": "Identifier les avantages de l'utilisation d'une structure de boucle au lieu de la répétition manuelle."
@@ -1377,7 +1377,7 @@
           "description": "Identifier les actions qui aux événements d'entrée."
         },
         "b366b41e-9396-4c1b-9d35-164052448c1c": {
-          "description": "Créer une histoire animée et interactive à l'aide de séquences et de gestionnaires d'événements."
+          "description": "Créer une histoire animée et interactive en utilisant des séquences et des gestionnaires d'événements."
         },
         "0e6bc093-532a-4e2d-bf3a-dcd7d62a1d93": {
           "description": "Partager un artefact créatif avec d'autres élèves."
@@ -1575,7 +1575,7 @@
           "description": "Construire un programme en utilisant des structures qui répètent des zones de code"
         },
         "982d25cd-d5ff-491b-8505-be2606ba0a5e": {
-          "description": "Améliorer le code existant en trouvant des zones de répétition et en les déplaçant dans des structures en boucle"
+          "description": "Améliorer le code existant en trouvant des zones de répétition et en les déplaçant vers des structures mise en boucle"
         },
         "d0dae7ad-246b-4f90-8800-8cc9f1de25aa": {
           "description": "Identifier les avantages de l'utilisation d'une structure de boucle au lieu de la répétition manuelle."
@@ -1845,7 +1845,7 @@
           "description": "Construire un programme en utilisant des structures qui répètent des zones de code"
         },
         "b6f41a7c-0967-4986-b7b6-910819b28396": {
-          "description": "Améliorer le code existant en trouvant des zones de répétition et en les déplaçant dans des structures en boucle"
+          "description": "Améliorer le code existant en trouvant des zones de répétition et en les déplaçant vers des structures mise en boucle"
         },
         "442a1fcc-3ffc-4e3a-9c55-9cfd94d281e1": {
           "description": "Identifier les avantages de l'utilisation d'une structure de boucle au lieu de la répétition manuelle."
@@ -1875,7 +1875,7 @@
           "description": "Identifier les actions qui aux événements d'entrée."
         },
         "2fa04500-f1d4-4924-aa39-70292711d432": {
-          "description": "Créer une histoire animée et interactive à l'aide de séquences et de gestionnaires d'événements."
+          "description": "Créer une histoire animée et interactive en utilisant des séquences et des gestionnaires d'événements."
         },
         "22d77ea2-3a62-4e21-b71f-f484fe90ec39": {
           "description": "Partager un artefact créatif avec d'autres élèves."

@@ -138,7 +138,7 @@ fr:
           seulement à 36 degrés après avoir dessiné chaque triangle. Combien de fois
           faut-il le répéter ? (Indice : après 360 degrés de rotation, le dessin fera
           un cercle complet)'
-        turtle_4_5: 'Voici le même code de l''énigme précédente, mais en répétant
+        turtle_4_5: 'Voici le même code de l'' casse-tête précédente, mais en répétant
           les virages 36 fois. De combien de degrés doivent-être les virages ? (Indice
           : après 360 degrés de rotation, le dessin fera un cercle complet)'
         turtle_4_6: En utilisant seulement 3 blocs, peux-tu dessiner un carré avec

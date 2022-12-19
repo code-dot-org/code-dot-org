@@ -118,10 +118,12 @@
           "url": "https://docs.google.com/document/d/1yrL1rD9eCSEYAvsM8XiL5g-uKpqizYwAk73_6ddZOAQ/edit"
         },
         "password_power-up_lesson_quiz/coursed/2022": {
+          "name": "",
           "url": "https://docs.google.com/forms/d/1OBS37DZUmIxM4ZciCD6qWFMam3_u8djgZNJd9IOK6Zs/copy",
           "type": "Ressource"
         },
         "password_power-up_lesson_quiz_1/coursed/2022": {
+          "name": "",
           "url": "https://www.commonsense.org/education/digital-citizenship/quiz/password-power-up-lesson-quiz"
         },
         "password_power-up_lesson_slides/coursed/2022": {
@@ -568,7 +570,8 @@
         },
         "move_it_move_it/courseb/2022": {
           "name": "Bouge, Bouge ton corps",
-          "url": "https://docs.google.com/document/d/1xavPzpNq1GO7zzOzreES0Kl8FPcbjILFzfmORUqttcg/edit"
+          "url": "https://docs.google.com/document/d/1xavPzpNq1GO7zzOzreES0Kl8FPcbjILFzfmORUqttcg/edit",
+          "type": "Schématiser l'activité"
         },
         "move_it_move_it_1/courseb/2022": {
           "name": "Bouge, Bouge ton corps",
@@ -681,7 +684,7 @@
         "the_big_event_courses_a_b_/courseb/2022": {
           "name": "Le Grand Événement (Cours A, B)",
           "url": "https://docs.google.com/document/d/1A9yAObCTJwHsIKtaBZY8KaGwgbxbfolpbIpeJfZRgvs/edit",
-          "type": "Image de la manette"
+          "type": "Image de la télécommande"
         },
         "play_lab_project_planning_guide/courseb/2022": {
           "name": "Guide de planification du projet Play Lab",
@@ -858,7 +861,7 @@
           "type": "Vidéo pour la leçon"
         },
         "safety_in_my_online_neighborhood_pause_and_think_moment/coursea/2022": {
-          "name": "Sécurité dans mon quartier en ligne : Moment de pause et de réflexion ",
+          "name": "La sécurité dans mon quartier en ligne : S'arrêter et réfléchir un instant",
           "url": "https://docs.google.com/document/d/1o95Q7OD2oF5e-lWxj31kKopfhQVYWDUmw6uDdm1RIIU/"
         },
         "safety_in_my_online_neighborhood_safety_it_rules_/coursea/2022": {
@@ -932,11 +935,11 @@
           "type": "Ressource"
         },
         "happy_map_cards_xl/coursea/2022": {
-          "name": "Imprimés XL de la Carte Joyeuse",
+          "name": "Fiches Cartes Joyeuses XL ",
           "url": "https://docs.google.com/document/d/1ohSi_DzymdRdN66NVMAI-KI6LuaB3srbUMnpG74aPM8/edit"
         },
         "happy_map_game_pieces_bonus_pack/coursea/2022": {
-          "name": "Paquet Bonus de Pièces du Jeu de la Carte Joyeuse",
+          "name": "Pack Bonus de Pièces de Jeu Cartes Joyeuses",
           "url": "https://docs.google.com/document/d/14qEVzSR7pr0slqkRn2WM8XxVyeDhdmfhtsmTrERCTNs/edit"
         },
         "feeling_faces/coursea/2022": {
@@ -944,7 +947,7 @@
           "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/"
         },
         "pair-programming/coursea/2022": {
-          "name": "Programmation en Binôme",
+          "name": "Programmation en Binômes",
           "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q",
           "type": "Vidéo"
         },
@@ -975,7 +978,7 @@
         "the_big_event_courses_a_b_/coursea/2022": {
           "name": "Le Grand Événement (Cours A, B)",
           "url": "https://docs.google.com/document/d/1A9yAObCTJwHsIKtaBZY8KaGwgbxbfolpbIpeJfZRgvs/edit",
-          "type": "Image de la manette"
+          "type": "Image de la télécommande"
         },
         "cs_fundamentals_main_activity_tips/coursea/2022": {
           "name": "CS Fundamentals Conseils pour l'Activité Principale",
@@ -3202,7 +3205,8 @@
         },
         "mimi-activity/courseb/2021": {
           "name": "Bouge, Bouge ton corps",
-          "url": "https://docs.google.com/document/d/1xavPzpNq1GO7zzOzreES0Kl8FPcbjILFzfmORUqttcg/edit"
+          "url": "https://docs.google.com/document/d/1xavPzpNq1GO7zzOzreES0Kl8FPcbjILFzfmORUqttcg/edit",
+          "type": "Schématiser l'activité"
         },
         "mimi-debugging/courseb/2021": {
           "name": "Bouge, Bouge ton corps",
@@ -3312,7 +3316,7 @@
         "the_big_event_courses_a_b_/courseb/2021": {
           "name": "Le Grand Événement (Cours A, B)",
           "url": "https://docs.google.com/document/d/1A9yAObCTJwHsIKtaBZY8KaGwgbxbfolpbIpeJfZRgvs/edit",
-          "type": "Image de la manette"
+          "type": "Image de la télécommande"
         },
         "unplugged-video-big-event/courseb/2021": {
           "name": "Le Grand Événement",
@@ -3392,7 +3396,7 @@
           "type": "Vidéo pour la leçon"
         },
         "safety-in-my-online-neighborhood-pause-and-think-moment/coursea/2021": {
-          "name": "Sécurité dans mon quartier en ligne : Moment de pause et de réflexion ",
+          "name": "La sécurité dans mon quartier en ligne : S'arrêter et réfléchir un instant",
           "url": "https://docs.google.com/document/d/1o95Q7OD2oF5e-lWxj31kKopfhQVYWDUmw6uDdm1RIIU/"
         },
         "safety-in-my-online-neighborhood-safety-it-rules/coursea/2021": {
@@ -3476,11 +3480,11 @@
           "type": "Ressource"
         },
         "happy-map-cards-xl/coursea/2021": {
-          "name": "Imprimés XL de la Carte Joyeuse",
+          "name": "Fiches Cartes Joyeuses XL ",
           "url": "https://docs.google.com/document/d/1ohSi_DzymdRdN66NVMAI-KI6LuaB3srbUMnpG74aPM8/edit"
         },
         "happy-map-game-pieces-bonus-pack/coursea/2021": {
-          "name": "Paquet Bonus de Pièces du Jeu de la Carte Joyeuse",
+          "name": "Pack Bonus de Pièces de Jeu Cartes Joyeuses",
           "url": "https://docs.google.com/document/d/14qEVzSR7pr0slqkRn2WM8XxVyeDhdmfhtsmTrERCTNs/edit"
         },
         "feeling-faces-image/coursea/2021": {
@@ -3488,7 +3492,7 @@
           "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/"
         },
         "pair-programming/coursea/2021": {
-          "name": "Programmation en Binôme",
+          "name": "Programmation en Binômes",
           "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q",
           "type": "Vidéo"
         },
@@ -3534,7 +3538,7 @@
         "the_big_event_courses_a_b_/coursea/2021": {
           "name": "Le Grand Événement (Cours A, B)",
           "url": "https://docs.google.com/document/d/1A9yAObCTJwHsIKtaBZY8KaGwgbxbfolpbIpeJfZRgvs/edit",
-          "type": "Image de la manette"
+          "type": "Image de la télécommande"
         },
         "unplugged-video-big-event/coursea/2021": {
           "name": "Le Grand Événement",
@@ -3823,10 +3827,12 @@
           "url": "https://docs.google.com/document/d/1yrL1rD9eCSEYAvsM8XiL5g-uKpqizYwAk73_6ddZOAQ/edit"
         },
         "password_power-up_lesson_quiz/coursed/2021": {
+          "name": "",
           "url": "https://docs.google.com/forms/d/1OBS37DZUmIxM4ZciCD6qWFMam3_u8djgZNJd9IOK6Zs/copy",
           "type": "Ressource"
         },
         "password_power-up_lesson_quiz_answer_key/coursed/2021": {
+          "name": "",
           "url": "https://www.commonsense.org/education/digital-citizenship/quiz/password-power-up-lesson-quiz"
         },
         "password_power-up_lesson_slides/coursed/2021": {

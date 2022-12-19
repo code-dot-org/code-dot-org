@@ -141,7 +141,7 @@
         },
         "sports/Sports": {
           "name": "Coder ton propre jeu de sports",
-          "overview": "Dans cette activité en ligne, les élèves apprendront ce que sont les événements et comment les ordinateurs les utilisent dans des programmes comme les jeux vidéo. Les élèves travailleront à travers des casse-têtes, faisant réagir le programme aux événements (tels que les boutons fléchés quand ils sont pressés.) À la fin de l'énigme, les élèves auront la possibilité de personnaliser leur jeu avec des vitesses et des sons différents.",
+          "overview": "Dans cette activité en ligne, les élèves apprendront ce que sont les événements et comment les ordinateurs les utilisent dans des programmes comme les jeux vidéo. Les élèves travailleront à travers des casse-têtes, faisant réagir le programme aux événements (tels que les boutons fléchés quand ils sont pressés.) À la fin de l' casse-tête, les élèves auront la possibilité de personnaliser leur jeu avec des vitesses et des sons différents.",
           "student_overview": "Est-ce que tu as déjà voulu pouvoir jouer aux jeux vidéos à l'école ? Dans cette leçon, tu apprendras à créer le tien !"
         },
         "infinity/Infinity": {
@@ -150,7 +150,7 @@
           "student_overview": "Durant ce cours, les apprenants seront initiés à l'informatique et créeront leur propre jeu à l'aide d'un code de base."
         },
         "basketball/Bounce": {
-          "overview": "Dans cette activité en ligne, les élèves apprendront ce que sont les événements et comment les ordinateurs les utilisent dans des programmes comme les jeux vidéo. Les élèves travailleront à travers des casse-têtes, faisant réagir le programme aux événements (tels que les boutons fléchés quand ils sont pressés.) À la fin de l'énigme, les élèves auront la possibilité de personnaliser leur jeu avec des vitesses et des sons différents.",
+          "overview": "Dans cette activité en ligne, les élèves apprendront ce que sont les événements et comment les ordinateurs les utilisent dans des programmes comme les jeux vidéo. Les élèves travailleront à travers des casse-têtes, faisant réagir le programme aux événements (tels que les boutons fléchés quand ils sont pressés.) À la fin de l' casse-tête, les élèves auront la possibilité de personnaliser leur jeu avec des vitesses et des sons différents.",
           "student_overview": "Est-ce que tu as déjà voulu pouvoir jouer aux jeux vidéos à l'école ? Dans cette leçon, tu apprendras à créer le tien !"
         },
         "dance-extras-2019/Dance Party - Go Further": {
@@ -395,7 +395,7 @@
         "coursed-2022/Loops in Ice Age": {
           "name": "Les boucles dans l'Âge de Glace",
           "overview": "Cette leçon de **mise en contexte/développement des compétences** initiera les élèves rapidement aux boucles.",
-          "purpose": "Dans cette leçon, les élèves iront plus loin dans leur apprentissage sur les boucles et la façon de les mettre en application dans du code Blockly. L'utilisation de boucles est une compétence importante dans la programmation, car la répétition manuelle des commandes est fastidieuse et inefficace. Avec les casse-têtes de Code.org, les élèves apprendront à ajouter des instructions aux boucles existantes, à rassembler du code répété dans des boucles, et à reconnaître des modèles qui doivent être répétés.",
+          "purpose": "Dans cette leçon, les élèves en apprendront davantage sur les boucles et comment les utiliser au sein du code Blockly. Savoir utiliser les boucles est une compétence importante en programmation, car répéter manuellement les commandes devient rapidement fastidieux et inefficace. Au travers de ces casse-têtes Code.org, les élèves apprendront à ajouter des instructions à des boucles existantes, à réunir du code qui se répète au sein de boucles, et à reconnaître des schémas récurrents qui ont besoin d'être répétés.",
           "student_overview": "Dans cette leçon, vous utiliserez le bloc de répétition pour aider Scrat à atteindre le gland aussi efficacement que possible."
         },
         "coursed-2022/Drawing Shapes with Loops": {
@@ -419,7 +419,7 @@
         "coursed-2022/Looking Ahead with Minecraft": {
           "name": "Anticiper l'avenir avec Minecraft",
           "overview": "Cette leçon de **développement des compétences** donne l'occasion aux élèves de mettre en pratique les idées qu'ils ont apprises jusqu'à lors, ainsi que d'avoir une première expérience des conditionnels !",
-          "purpose": "Cette série d'énigmes permettra de consolider et de s'appuyer sur les aquis des boucles pour présenter les conditions. En jumelant ces deux concepts, les élèves seront en mesure d'explorer le potentiel de création de programmes complexes et novateurs dans un environnement nouveau et passionnant.",
+          "purpose": "Cette série d' casse-têtes permettra de consolider et de s'appuyer sur les aquis des boucles pour présenter les conditions. En jumelant ces deux concepts, les élèves seront en mesure d'explorer le potentiel de création de programmes complexes et novateurs dans un environnement nouveau et passionnant.",
           "student_overview": "Évite la lave ! Ici, tu vas commencer à en apprendre plus sur les conditionnels dans le monde de Minecraft."
         },
         "coursed-2022/If/Else with Bee": {
@@ -437,7 +437,7 @@
         "coursed-2022/Until Loops in Maze": {
           "name": "Les Boucles Jusqu'à dans le Labyrinthe",
           "overview": "Dans cette leçon de **développement des compétences**, les élèves découvriront les boucles « jusqu'à ». Les élèves créeront des programmes dans lesquels le personnage principal répétera des actions « jusqu'à » ce qu'il atteigne le point d'arrêt souhaité.",
-          "purpose": "Cette série d'énigmes permettra de consolider et de s'appuyer sur les connaissances des boucles, en y ajoutant la condition \"until\" (tant que). En jumelant ces concepts, les élèves seront en mesure d'explorer le potentiel de création de programmes complexes et novateurs.",
+          "purpose": "Cette série d' casse-têtes permettra de consolider et de s'appuyer sur les connaissances des boucles, en y ajoutant la condition \"until\" (tant que). En jumelant ces concepts, les élèves seront en mesure d'explorer le potentiel de création de programmes complexes et novateurs.",
           "student_overview": "Tu peux faire des choses incroyables en utilisant les boucles « jusqu'à » !"
         },
         "coursed-2022/End of Course Project": {
@@ -545,7 +545,7 @@
         "coursee-2022/Private and Personal Information": {
           "name": "Informations Privées et Personnelles ",
           "overview": " [![common sense education](https://curriculum.code.org/static/img/common_sense_education.png)](https://www.commonsense.org)\n\nCette leçon a été créée à l'origine par Common Sense Education. [En savoir plus.](https://www.commonsense.org/education/digital-citizenship/curriculum)\n\nIl est naturel que nos élèves souhaitent communiquer avec les autres et partager des choses. Mais le partage en ligne comporte certains risques. Comment peut-on aider les enfants à établir des relations fortes, positives et sûres en ligne ? Aidez vos élèves à faire la différence entre ce qui est simplement personnel et ce qui vaut mieux garder privé pour soi. ",
-          "preparation": "-   Réviser les supports pédagogiques.\n-   Imprimez le(s) document(s) pour chaque élève. ",
+          "preparation": "-   Examinez les matériaux pédagogiques.\n-   Imprimez le(s) polycopié(s) à distribuer à chaque élève. ",
           "purpose": "Le Programme de Citoyenneté Numérique de Common Sense Education aborde six sujets clés, en se basant sur les dernières recherches au sujet des enfants, des médias et de la technologie. Cette leçon est axée sur la vie privée et la sécurité. Les élèves apprendront à protéger leurs informations personnelles et à mieux comprendre leurs droits en matière de confidentialité des données afin de pouvoir défendre leurs intérêts et ceux des autres.",
           "student_overview": "L'internet, c'est amusant et passionnant ; mais il faut savoir rester en sécurité aussi. Cette leçon va t'enseigner la différence entre les informations que tu peux partager en toute sécurité, et celles qui doivent rester privées."
         },
@@ -574,7 +574,7 @@
         "coursee-2022/Fancy Shapes using Nested Loops": {
           "name": "Formes Fantaisistes avec les Boucles Imbriquées",
           "overview": "Dans cette leçon de \\*\\*développement des compétences, les élèves créeront des designs complexes en utilisant l'Artiste. La leçon se termine en donnant l'occasion aux élèves de créer leurs propres designs.",
-          "purpose": "Dans cette activité en ligne, les élèves créeront des modèles dans l'Artiste qu'ils pourront partager fièrement avec leurs proches. Le but de cette activité est d'utiliser des boucles imbriquées comme un moyen d'inspirer les élèves, qui ont un esprit artistique, à voir le codage comme un autre exutoire créatif. Cette série d'énigmes a été réalisé pour développer des compétences de pensée critique, une compréhension de la géométrie élémentaire et la créativité -- le tout, dans le cadre de boucles imbriquées !",
+          "purpose": "Dans cette activité en ligne, les élèves créeront des modèles dans l'Artiste qu'ils pourront partager fièrement avec leurs proches. Le but de cette activité est d'utiliser des boucles imbriquées comme un moyen d'inspirer les élèves, qui ont un esprit artistique, à voir le codage comme un autre exutoire créatif. Cette série d' casse-têtes a été réalisé pour développer des compétences de pensée critique, une compréhension de la géométrie élémentaire et la créativité -- le tout, dans le cadre de boucles imbriquées !",
           "student_overview": "Plus de boucles imbriquées ! Cette fois, tu dois faire un dessin ÉTONNANT avec des boucles imbriquées."
         },
         "coursee-2022/Mini-Project: Design a Snowflake": {
@@ -603,7 +603,7 @@
         "coursee-2022/Conditionals in Minecraft: Voyage Aquatic": {
           "name": "Les Formules Conditionnelles dans Minecraft : Voyage Aquatique",
           "preparation": "-   Résolvez les casse-têtes associées à cette leçon pour trouver les problèmes potentiels pour votre classe.\n-   Assurez-vous que chaque élève ait bien un journal de réflexion. ",
-          "purpose": "Cette série d'énigmes permettra de consolider et de s'appuyer sur les aquis des boucles pour présenter les conditions. En jumelant ces deux concepts, les élèves seront en mesure d'explorer le potentiel de création de programmes complexes et novateurs dans un environnement nouveau et passionnant.",
+          "purpose": "Cette série d' casse-têtes permettra de consolider et de s'appuyer sur les aquis des boucles pour présenter les conditions. En jumelant ces deux concepts, les élèves seront en mesure d'explorer le potentiel de création de programmes complexes et novateurs dans un environnement nouveau et passionnant.",
           "student_overview": "Ici, tu découvriras les conditions dans le monde de Minecraft."
         },
         "coursee-2022/Conditionals with the Farmer": {
@@ -637,8 +637,8 @@
         "courseb-2022/Digital Trails": {
           "name": "Traces Numériques",
           "overview": " [![Common sense education](https://curriculum.code.org/static/img/common_sense_education.png)](https://www.commonsense.org)\n\nCette leçon a été créée à l'origine par Common Sense Education. [En savoir plus.](https://www.commonsense.org/education/digital-citizenship/curriculum)\n\nEst-ce que ce que l'on fait en ligne reste toujours en ligne ? Les élèves apprendront que les informations qu'ils partagent en ligne laissent une empreinte numérique ou une « trace ». Selon la façon dont ils la gèrent, cette trace peut être grande ou petite, nuisible ou utile. Les élèves compareront différentes traces et exerceront leur esprit critique concernant les types d'informations qu'ils souhaitent laisser derrière eux. ",
-          "preparation": "-   Réviser les supports pédagogiques.\n-   Imprimez le(s) document(s) pour chaque élève. ",
-          "purpose": "Common Sense Education a créé cette leçon pour enseigner aux élèves les « empreintes numériques » et les informations qu'ils peuvent avoir dans la leur. ",
+          "preparation": "-   Examinez les matériaux pédagogiques.\n-   Imprimez le(s) polycopié(s) à distribuer à chaque élève. ",
+          "purpose": "Le programme de citoyenneté numérique de Common Sense aborde six sujets clés, et repose sur les toutes dernières recherches sur les enfants, les médias et les technologies. Cette leçon se concentre sur l'empreinte numérique et l'identité. Les élèves examinent les avantages et les risques du partage en ligne et sont réfléchissent à l'impact que jouer un personnage en ligne peut avoir sur la perception soi, la réputation et les relations de quelqu'un.",
           "student_overview": "Apprends tout au sujet de ta trace numérique et comment rester en sécurité lorsque tu visites des sites Web. "
         },
         "courseb-2022/Move It, Move It": {
@@ -694,7 +694,7 @@
           "name": "Dessiner des Jardins avec des Boucles",
           "overview": "Dans cette leçon de **développement des compétences**, les élèves apprendront à dessiner des images en suivant des séquences d'instructions simples. Ici, les élèves utiliseront des boucles pour créer des motifs récurrents.",
           "preparation": "-   Résolvez les casse-têtes avant la leçon pour trouver les problèmes potentiels pour votre classe.\n-   Revoir **\\*Conseils d'activité principale de CS Fundamentals - Recommandations de leçon**.\n-   Assurez-vous que chaque élève ait bien un journal de réflexion. ",
-          "purpose": "Cette leçon donne une perspective différente sur la façon dont les boucles peuvent créer des éléments dans la programmation. Les élèves testeront leurs capacités de pensée critique en évaluant le code donné et en déterminant ce qui doit être ajouté afin de résoudre l'énigme. Ici, les élèves peuvent également réfléchir à l'inefficacité de la programmation sans boucles, en raison du nombre important de blocs dont le programme aurait besoin sans l'aide de boucles `répéter`.",
+          "purpose": "Cette leçon donne une perspective différente sur la façon dont les boucles peuvent créer des éléments dans la programmation. Les élèves testeront leurs capacités de pensée critique en évaluant le code donné et en déterminant ce qui doit être ajouté afin de résoudre l' casse-tête. Ici, les élèves peuvent également réfléchir à l'inefficacité de la programmation sans boucles, en raison du nombre important de blocs dont le programme aurait besoin sans l'aide de boucles `répéter`.",
           "student_overview": "Utilise des schémas récurrents et des boucles pour finir les images."
         },
         "courseb-2022/The Right App": {
@@ -715,7 +715,7 @@
           "name": "Mini-Projet : Une Bataille Royale avec les Événements",
           "overview": "Dans ce **mini-projet**, les élèves auront l'occasion d'apprendre à utiliser les événements dans le Labo Jeux et d'appliquer toutes les connaissances de codage qu'ils auront acquises pour créer un jeu animé.",
           "preparation": "-   Résolvez les casse-têtes pour trouver les problèmes potentiels pour votre classe.\n-   (Facultatif) Choisissez quelques casse-têtes à faire en groupe avec votre classe.\n-   Revoir **\\*Conseils d'activité principale de CS Fundamentals - Recommandations de leçon**.\n-   Assurez-vous que chaque élève ait bien un journal de réflexion. ",
-          "purpose": "Dans cette activité en ligne, les élèves apprendront à utiliser les événements dans le Labo du Jeu. Ils commenceront par former le chevalier de sorte qu'il se déplace lorsqu'une touche fléchée est enfoncée, et termineront avec la possibilité de mettre en valeur le reste des compétences qu'ils ont acquises, tout au long de ce cours, y compris la séquence et la boucle, dans le cadre de l'énigme du jeu libre final.",
+          "purpose": "Dans cette activité en ligne, les élèves apprendront à utiliser les événements dans le Labo du Jeu. Ils commenceront par former le chevalier de sorte qu'il se déplace lorsqu'une touche fléchée est enfoncée, et termineront avec la possibilité de mettre en valeur le reste des compétences qu'ils ont acquises, tout au long de ce cours, y compris la séquence et la boucle, dans le cadre de l' casse-tête du jeu libre final.",
           "student_overview": "Utilise des événements pour créer une histoire ou un jeu interactif."
         },
         "courseb-2022/End of Course Project": {
@@ -771,6 +771,7 @@
           "name": "Les Sprites en Action",
           "overview": "Dans cette leçon de **développement des compétences**, les élèves passeront par une série de niveaux de programmation sur ordinateur, en terminant par une tâche « jeu libre » ouverte où ils pourront construire ce qu'ils veulent. Les élèves écriront des programmes et découvriront les deux concepts qui sont au cœur du Labo des Sprites : les sprites et les comportements.",
           "preparation": "Naviguez à travers les niveaux et passez en revue les diapositives de la leçon. ",
+          "purpose": "",
           "student_overview": "Vous passerez par différents niveaux de programmation et terminerez sur une tâche « jeu libre » ouverte où vous pourrez créer ce que vous voulez. "
         },
         "express-2022/Virtual Pet with Sprite Lab": {
@@ -818,7 +819,7 @@
           "name": "Anticiper l'avenir avec Minecraft",
           "overview": "Cette leçon de **développement des compétences** donne l'occasion aux élèves de mettre en pratique les idées qu'ils ont apprises jusqu'à lors, ainsi que d'avoir une première expérience des conditionnels !",
           "preparation": "-   Parcourez les casse-têtes associées à cette leçon pour trouver les problèmes potentiels pour votre classe.\n-   Assurez-vous que chaque élève ait bien un journal de réflexion. ",
-          "purpose": "Cette série d'énigmes permettra de consolider et de s'appuyer sur les aquis des boucles pour présenter les conditions. En jumelant ces deux concepts, les élèves seront en mesure d'explorer le potentiel de création de programmes complexes et novateurs dans un environnement nouveau et passionnant.",
+          "purpose": "Cette série d' casse-têtes permettra de consolider et de s'appuyer sur les aquis des boucles pour présenter les conditions. En jumelant ces deux concepts, les élèves seront en mesure d'explorer le potentiel de création de programmes complexes et novateurs dans un environnement nouveau et passionnant.",
           "student_overview": "Évite la lave ! Ici, tu vas commencer à en apprendre plus sur les conditionnels dans le monde de Minecraft."
         },
         "express-2022/If/Else with Bee": {
@@ -839,7 +840,7 @@
           "name": "Les Formules Conditionnelles dans Minecraft : Voyage Aquatique",
           "overview": "Dans cette leçon de **définition de contexte**, les élèves auront l'occasion de mettre en pratique les connaissances qu'ils ont acquises jusqu'à présent, ainsi que d'avoir un aperçu des formules conditionnelles !",
           "preparation": "-   Parcourez les casse-têtes associées à cette leçon pour trouver les problèmes potentiels pour votre classe.\n-   Assurez-vous que chaque élève ait bien un journal de réflexion. ",
-          "purpose": "Cette série d'énigmes permettra de consolider et de s'appuyer sur les aquis des boucles et des conditions. En jumelant ces deux concepts, les élèves seront en mesure d'explorer le potentiel de création de programmes complexes et novateurs dans un environnement nouveau et passionnant.",
+          "purpose": "Cette série d' casse-têtes permettra de consolider et de s'appuyer sur les aquis des boucles et des conditions. En jumelant ces deux concepts, les élèves seront en mesure d'explorer le potentiel de création de programmes complexes et novateurs dans un environnement nouveau et passionnant.",
           "student_overview": "Ici, tu vas utiliser des conditions dans le monde de Minecraft."
         },
         "express-2022/Until Loops in Maze": {
@@ -958,7 +959,7 @@
         "pre-express-2022/Drawing Gardens with Loops": {
           "name": "Dessiner des Jardins avec des Boucles",
           "overview": "Dans cette leçon de **développement des compétences**, les élèves apprendront à dessiner des images mettant en boucle des séquences simples d'instructions. Ici, les élèves utilisent des boucles pour créer des schémas récurrents. À la fin de cette leçon, les élèves auront l'occasion de créer leurs propres images.",
-          "purpose": "Cette leçon donne une perspective différente sur la façon dont les boucles peuvent créer des éléments dans la programmation. Les élèves testeront leurs capacités de pensée critique en évaluant le code donné et en déterminant ce qui doit être ajouté afin de résoudre l'énigme. Ici, les élèves peuvent également réfléchir à l'inefficacité de la programmation sans boucles, en raison du nombre important de blocs dont le programme aurait besoin sans l'aide de boucles `répéter`.",
+          "purpose": "Cette leçon donne une perspective différente sur la façon dont les boucles peuvent créer des éléments dans la programmation. Les élèves testeront leurs capacités de pensée critique en évaluant le code donné et en déterminant ce qui doit être ajouté afin de résoudre l' casse-tête. Ici, les élèves peuvent également réfléchir à l'inefficacité de la programmation sans boucles, en raison du nombre important de blocs dont le programme aurait besoin sans l'aide de boucles `répéter`.",
           "student_overview": "Utilise des schémas récurrents et des boucles pour finir les images."
         },
         "pre-express-2022/On the Move with Events": {
@@ -970,7 +971,7 @@
         "pre-express-2022/A Royal Battle with Events": {
           "name": "Une Bataille Royale en utilisant les Événements",
           "overview": "Dans ce **mini-projet**, les élèves auront l'occasion d'apprendre à utiliser les événements dans le Labo Jeux et d'appliquer toutes les connaissances de codage qu'ils auront acquises pour créer un jeu animé.",
-          "purpose": "Dans cette activité en ligne, les élèves apprendront à utiliser les événements dans le Labo du Jeu. Ils commenceront par former le chevalier de sorte qu'il se déplace lorsqu'une touche fléchée est enfoncée, et termineront avec la possibilité de mettre en valeur le reste des compétences qu'ils ont acquises, tout au long de ce cours, y compris la séquence et la boucle, dans le cadre de l'énigme du jeu libre final.",
+          "purpose": "Dans cette activité en ligne, les élèves apprendront à utiliser les événements dans le Labo du Jeu. Ils commenceront par former le chevalier de sorte qu'il se déplace lorsqu'une touche fléchée est enfoncée, et termineront avec la possibilité de mettre en valeur le reste des compétences qu'ils ont acquises, tout au long de ce cours, y compris la séquence et la boucle, dans le cadre de l' casse-tête du jeu libre final.",
           "student_overview": "Utilise des événements pour créer une histoire ou un jeu interactif."
         },
         "coursea-2022/Safety in My Online Neighborhood": {
@@ -1025,35 +1026,35 @@
         "coursea-2022/Loops with Scrat": {
           "name": "Les Boucles avec Scrat",
           "overview": "Dans cette leçon de **développement des compétences**, les élèves travailleront la notion de boucles avec des casse-têtes de programmation où le but est d'aider l'écureuil à parvenir au gland. ",
-          "preparation": "-   Examinez la précédente leçon hors ligne et élaborez des questions pour rappeler aux élèves pourquoi on utilise des boucles.\n-   (Facultatif) Choisissez quelques casse-têtes à faire avec toute la classe.\n-   Rassemblez des fournitures de précédentes Happy Loop, à réutiliser pour s'échauffer.\n-   Assurez-vous que chaque élève ait bien un journal de réflexion. ",
-          "purpose": "Dans cette leçon, les élèves iront plus loin dans leur apprentissage sur les boucles et la façon de les mettre en application dans du code Blockly. L'utilisation de boucles est une compétence importante dans la programmation, car la répétition manuelle des commandes est fastidieuse et inefficace. Avec les casse-têtes de Code.org, les élèves apprendront à ajouter des instructions aux boucles existantes, à rassembler du code répété dans des boucles, et à reconnaître des modèles qui doivent être répétés.",
+          "preparation": "-   Examinez la précédente leçon déconnectée et élaborez des questions qui vous permettront de rappeler aux élèves pourquoi on utilise les boucles. \n-   (Facultatif) Choisissez quelques casse-têtes à faire avec toute la classe.\n-   Rassemblez le matériel utilisé dans les précédentes Boucles Joyeuses, à réutiliser pour un échauffement.\n-   Assurez-vous que chaque élève ait bien un journal de réflexion. ",
+          "purpose": "Dans cette leçon, les élèves en apprendront davantage sur les boucles et comment les utiliser au sein du code Blockly. Savoir utiliser les boucles est une compétence importante en programmation, car répéter manuellement les commandes devient rapidement fastidieux et inefficace. Au travers de ces casse-têtes Code.org, les élèves apprendront à ajouter des instructions à des boucles existantes, à réunir du code qui se répète au sein de boucles, et à reconnaître des schémas récurrents qui ont besoin d'être répétés.",
           "student_overview": "Aide Scrat couvrir plus de terrain en utilisant des boucles."
         },
         "coursea-2022/Loops with Laurel": {
           "name": "Les Boucles avec Laurel",
           "overview": "Dans cette leçon de **développement des compétences**, les élèves continueront à découvrir la notion de boucles. Ici, les élèves utiliseront les boucles pour récolter du trésor dans des espaces type grottes ouvertes.",
-          "preparation": "-   Résolvez les casse-têtes pour identifier des problèmes potentiels pour votre classe.\n-   (Facultatif) Choisissez quelques casse-têtes à faire en groupe avec votre classe.\n-   Revoir **\\*Recommandations de cours CSF**\n-   Assurez-vous que chaque élève ait bien un journal de réflexion ",
+          "preparation": "-   Jouez aux casse-têtes pour identifier tous potentiels problèmes pour votre classe.\n-   (Facultatif) Choisissez quelques casse-têtes à faire en groupe en classe.\n-   Étudiez les \\*_\\\\_Conseils de leçons sur les bases de l'informatique\\*\n-   Assurez-vous que chaque élève ait bien un journal de réflexion ",
           "purpose": "Cette leçon donne aux élèves plus de pratique avec les boucles et présente un nouveau bloc, « obtenir un trésor ». Le bloc fonctionne de la même manière que « cueillette de maïs » dans Harvester. Ces casse-têtes sont plus ouvertes, donnant aux élèves plus de flexibilité pour leurs solutions finales. ",
           "student_overview": "Aide Laurel l'aventurière à récolter le trésor sous-terrain."
         },
         "coursea-2022/Ocean Scene with Loops": {
           "name": "Scène de l'Océan avec Boucles",
           "overview": "Dans cette leçon de **développement des compétences**, les élèves apprendront à dessiner des images mettant en boucle des séquences simples d'instructions. Ici, les boucles créent des motifs récurrents. À la fin de cette leçon, les élèves auront l'occasion de créer leurs propres images.",
-          "preparation": "-   Résolvez les casse-têtes pour trouver les problèmes potentiels pour votre classe.\n-   Revoir **\\*Recommandations de cours CSF**.\n-   Assurez-vous que chaque élève ait bien un journal de réflexion. ",
+          "preparation": "-   Jouez aux casse-têtes pour identifier tous potentiels problèmes pour votre classe.\n-   Étudiez les \\*_\\\\_Conseils de leçons sur les bases de l'informatique\\*\n-   Assurez-vous que chaque élève ait bien un journal de réflexion ",
           "purpose": "Cette leçon offre une autre perspective sur comment les boucles peuvent créer des choses en programmation. Ici, les élèves peuvent également réfléchir à l'inefficacité de la programmation sans boucle, en raison du nombre important de blocs dont le programme aurait besoin sans l'aide des boucles `répéter`.",
           "student_overview": "Utilise des boucles et des schémas récurrents pour finir les images."
         },
         "coursea-2022/The Big Event Jr": {
           "name": "Le Grand Événement Jr.",
           "overview": "Dans cette **leçon de mise en contexte**, la classe fera l'expérience de la notion d'événements au travers d'un jeu où ils se déplaceront ou crieront  lorsque vous appuyez sur des boutons sur une télécommande géante. ",
-          "preparation": "-   Préparez-vous à projeter **\\*Image du contrôleur**.\n-   Imprimez une **\\*Évaluation** par élève.\n-   Assurez-vous que chaque élève ait bien un journal de réflexion. ",
+          "preparation": "-   Préparez-vous à projeter l'**\\*Image de la télécommande**.\n-   Imprimez une **\\*Évaluation** par élève.\n-   Assurez-vous que chaque élève ait bien un journal de réflexion. ",
           "purpose": "Aujourd'hui, les élèves apprendront à distinguer les événements des actions. Les élèves verront les activités interrompues en appuyant sur un \"bouton\" d'une télécommande en papier. En voyant cet événement, la classe réagira avec une action unique. Les événements sont largement utilisés dans la programmation et devraient être facilement reconnaissables après cette leçon. ",
           "student_overview": "Bouge et crie lorsque tes enseignants appuient sur les boutons d'une télécommande géante."
         },
         "coursea-2022/Mini-Project: On the Move with Play Lab": {
           "name": "Mini-Projet : En route avec le Labo Jeux",
           "overview": "Dans ce **mini-projet**, les élèves utiliseront les événements dans le Labo Jeux et mettront en pratique toutes les compétences de codage qu'ils ont apprises pour créer un jeu animé. Il est temps de faire preuve de créativité et de créer une histoire dans le Labo Jeux !",
-          "preparation": "-   Résolvez les casse-têtes pour identifier des problèmes potentiels pour votre classe.\n-   (Facultatif) Choisissez quelques casse-têtes à faire en groupe avec votre classe.\n-   Revoir **\\*Recommandations de cours CSF**\n-   Assurez-vous que chaque élève ait bien un journal de réflexion ",
+          "preparation": "-   Jouez aux casse-têtes pour identifier tous potentiels problèmes pour votre classe.\n-   (Facultatif) Choisissez quelques casse-têtes à faire en groupe en classe.\n-   Étudiez les \\*_\\\\_Conseils de leçons sur les bases de l'informatique\\*\n-   Assurez-vous que chaque élève ait bien un journal de réflexion ",
           "purpose": "Les élèves approfondiront leur compréhension des événements en utilisant le Labo Jeux aujourd'hui. Les événements sont très fréquents dans la plupart des programmes informatiques. Dans cette activité, les élèves utiliseront les événements pour faire se déplacer un personnage sur l'écran, faire des sons et changer d'arrière-plan en fonction des événements initiés par l'utilisateur.",
           "student_overview": "Crée ton jeu ou ta propre histoire."
         },
@@ -1140,7 +1141,7 @@
         "coursec-2022/Mini-Project: Chase Game": {
           "name": "Mini-Projet : Jouer à la Chasse",
           "overview": "Cette leçon associe **le développement des compétences** autour des événements à un **mini-projet** dans le cadre duquel les élèves auront l'occasion de créer leur propre jeu animé. ",
-          "purpose": "Ici, les élèves développeront leur compréhension des événements en utilisant le Labo du Jeu. Les élèves utiliseront les événements pour faire bouger les personnages sur l'écran, créer des bruits et modifier les arrière-plans en fonction des entrées de l'utilisateur. À la fin de la séquence de l'énigme, les élèves auront l'occasion de partager leurs projets.  ",
+          "purpose": "Ici, les élèves développeront leur compréhension des événements en utilisant le Labo du Jeu. Les élèves utiliseront les événements pour faire bouger les personnages sur l'écran, créer des bruits et modifier les arrière-plans en fonction des entrées de l'utilisateur. À la fin de la séquence de l' casse-tête, les élèves auront l'occasion de partager leurs projets.  ",
           "student_overview": "C'est l'heure d'être inventif et de créer un jeu dans le Labo Jeux !"
         },
         "coursec-2022/Picturing Data": {
@@ -4447,8 +4448,8 @@
         "courseb-2021/Digital Trails": {
           "name": "Traces Numériques",
           "overview": " [![Common sense education](https://curriculum.code.org/static/img/common_sense_education.png)](https://www.commonsense.org)\n\nCette leçon a été créée à l'origine par Common Sense Education. [En savoir plus.](https://www.commonsense.org/education/digital-citizenship/curriculum)\n\nEst-ce que ce que l'on fait en ligne reste toujours en ligne ? Les élèves apprendront que les informations qu'ils partagent en ligne laissent une empreinte numérique ou une « trace ». Selon la façon dont ils la gèrent, cette trace peut être grande ou petite, nuisible ou utile. Les élèves compareront différentes traces et exerceront leur esprit critique concernant les types d'informations qu'ils souhaitent laisser derrière eux. ",
-          "preparation": "-   Réviser les supports pédagogiques.\n-   Imprimez le(s) document(s) pour chaque élève. ",
-          "purpose": "Common Sense Education a créé cette leçon pour enseigner aux élèves les « empreintes numériques » et les informations qu'ils peuvent avoir dans la leur. ",
+          "preparation": "-   Examinez les matériaux pédagogiques.\n-   Imprimez le(s) polycopié(s) à distribuer à chaque élève. ",
+          "purpose": "Le programme de citoyenneté numérique de Common Sense aborde six sujets clés, et repose sur les toutes dernières recherches sur les enfants, les médias et les technologies. Cette leçon se concentre sur l'empreinte numérique et l'identité. Les élèves examinent les avantages et les risques du partage en ligne et sont réfléchissent à l'impact que jouer un personnage en ligne peut avoir sur la perception soi, la réputation et les relations de quelqu'un.",
           "student_overview": "Apprends tout au sujet de ta trace numérique et comment rester en sécurité lorsque tu visites des sites Web. "
         },
         "courseb-2021/Move It, Move It": {
@@ -4504,7 +4505,7 @@
           "name": "Dessiner des Jardins avec des Boucles",
           "overview": "Dans cette leçon de **développement des compétences**, les élèves apprendront à dessiner des images en suivant des séquences d'instructions simples. Ici, les élèves utiliseront des boucles pour créer des motifs récurrents.",
           "preparation": "-   Résolvez les casse-têtes avant la leçon pour trouver les problèmes potentiels pour votre classe.\n-   Revoir **\\*Conseils d'activité principale de CS Fundamentals - Recommandations de leçon**.\n-   Assurez-vous que chaque élève ait bien un journal de réflexion. ",
-          "purpose": "Cette leçon donne une perspective différente sur la façon dont les boucles peuvent créer des éléments dans la programmation. Les élèves testeront leurs capacités de pensée critique en évaluant le code donné et en déterminant ce qui doit être ajouté afin de résoudre l'énigme. Ici, les élèves peuvent également réfléchir à l'inefficacité de la programmation sans boucles, en raison du nombre important de blocs dont le programme aurait besoin sans l'aide de boucles `répéter`.",
+          "purpose": "Cette leçon donne une perspective différente sur la façon dont les boucles peuvent créer des éléments dans la programmation. Les élèves testeront leurs capacités de pensée critique en évaluant le code donné et en déterminant ce qui doit être ajouté afin de résoudre l' casse-tête. Ici, les élèves peuvent également réfléchir à l'inefficacité de la programmation sans boucles, en raison du nombre important de blocs dont le programme aurait besoin sans l'aide de boucles `répéter`.",
           "student_overview": "Utilise des schémas récurrents et des boucles pour finir les images."
         },
         "courseb-2021/The Right App": {
@@ -4525,7 +4526,7 @@
           "name": "Mini-Projet : Une Bataille Royale avec les Événements",
           "overview": "Dans ce **mini-projet**, les élèves auront l'occasion d'apprendre à utiliser les événements dans le Labo Jeux et d'appliquer toutes les connaissances de codage qu'ils auront acquises pour créer un jeu animé.",
           "preparation": "-   Résolvez les casse-têtes pour trouver les problèmes potentiels pour votre classe.\n-   (Facultatif) Choisissez quelques casse-têtes à faire en groupe avec votre classe.\n-   Revoir **\\*Conseils d'activité principale de CS Fundamentals - Recommandations de leçon**.\n-   Assurez-vous que chaque élève ait bien un journal de réflexion. ",
-          "purpose": "Dans cette activité en ligne, les élèves apprendront à utiliser les événements dans le Labo du Jeu. Ils commenceront par former le chevalier de sorte qu'il se déplace lorsqu'une touche fléchée est enfoncée, et termineront avec la possibilité de mettre en valeur le reste des compétences qu'ils ont acquises, tout au long de ce cours, y compris la séquence et la boucle, dans le cadre de l'énigme du jeu libre final.",
+          "purpose": "Dans cette activité en ligne, les élèves apprendront à utiliser les événements dans le Labo du Jeu. Ils commenceront par former le chevalier de sorte qu'il se déplace lorsqu'une touche fléchée est enfoncée, et termineront avec la possibilité de mettre en valeur le reste des compétences qu'ils ont acquises, tout au long de ce cours, y compris la séquence et la boucle, dans le cadre de l' casse-tête du jeu libre final.",
           "student_overview": "Utilise des événements pour créer une histoire ou un jeu interactif."
         },
         "courseb-2021/lesson-1": {
@@ -4587,35 +4588,35 @@
         "coursea-2021/Loops in Ice Age": {
           "name": "Les Boucles avec Scrat",
           "overview": "Dans cette leçon de **développement des compétences**, les élèves travailleront la notion de boucles avec des casse-têtes de programmation où le but est d'aider l'écureuil à parvenir au gland. ",
-          "preparation": "-   Examinez la précédente leçon hors ligne et élaborez des questions pour rappeler aux élèves pourquoi on utilise des boucles.\n-   (Facultatif) Choisissez quelques casse-têtes à faire avec toute la classe.\n-   Rassemblez des fournitures de précédentes Happy Loop, à réutiliser pour s'échauffer.\n-   Assurez-vous que chaque élève ait bien un journal de réflexion. ",
-          "purpose": "Dans cette leçon, les élèves iront plus loin dans leur apprentissage sur les boucles et la façon de les mettre en application dans du code Blockly. L'utilisation de boucles est une compétence importante dans la programmation, car la répétition manuelle des commandes est fastidieuse et inefficace. Avec les casse-têtes de Code.org, les élèves apprendront à ajouter des instructions aux boucles existantes, à rassembler du code répété dans des boucles, et à reconnaître des modèles qui doivent être répétés.",
+          "preparation": "-   Examinez la précédente leçon déconnectée et élaborez des questions qui vous permettront de rappeler aux élèves pourquoi on utilise les boucles. \n-   (Facultatif) Choisissez quelques casse-têtes à faire avec toute la classe.\n-   Rassemblez le matériel utilisé dans les précédentes Boucles Joyeuses, à réutiliser pour un échauffement.\n-   Assurez-vous que chaque élève ait bien un journal de réflexion. ",
+          "purpose": "Dans cette leçon, les élèves en apprendront davantage sur les boucles et comment les utiliser au sein du code Blockly. Savoir utiliser les boucles est une compétence importante en programmation, car répéter manuellement les commandes devient rapidement fastidieux et inefficace. Au travers de ces casse-têtes Code.org, les élèves apprendront à ajouter des instructions à des boucles existantes, à réunir du code qui se répète au sein de boucles, et à reconnaître des schémas récurrents qui ont besoin d'être répétés.",
           "student_overview": "Aide Scrat couvrir plus de terrain en utilisant des boucles."
         },
         "coursea-2021/Loops in Collector": {
           "name": "Les Boucles avec Laurel",
           "overview": "Dans cette leçon de **développement des compétences**, les élèves continueront à découvrir la notion de boucles. Ici, les élèves utiliseront les boucles pour récolter du trésor dans des espaces type grottes ouvertes.",
-          "preparation": "-   Résolvez les casse-têtes pour identifier des problèmes potentiels pour votre classe.\n-   (Facultatif) Choisissez quelques casse-têtes à faire en groupe avec votre classe.\n-   Revoir **\\*Recommandations de cours CSF**\n-   Assurez-vous que chaque élève ait bien un journal de réflexion ",
+          "preparation": "-   Jouez aux casse-têtes pour identifier tous potentiels problèmes pour votre classe.\n-   (Facultatif) Choisissez quelques casse-têtes à faire en groupe en classe.\n-   Étudiez les \\*_\\\\_Conseils de leçons sur les bases de l'informatique\\*\n-   Assurez-vous que chaque élève ait bien un journal de réflexion ",
           "purpose": "Cette leçon donne aux élèves plus de pratique avec les boucles et présente un nouveau bloc, « obtenir un trésor ». Le bloc fonctionne de la même manière que « cueillette de maïs » dans Harvester. Ces casse-têtes sont plus ouvertes, donnant aux élèves plus de flexibilité pour leurs solutions finales. ",
           "student_overview": "Aide Laurel l'aventurière à récolter le trésor sous-terrain."
         },
         "coursea-2021/Ocean Scene with Loops": {
           "name": "Scène de l'Océan avec Boucles",
           "overview": "Dans cette leçon de **développement des compétences**, les élèves apprendront à dessiner des images mettant en boucle des séquences simples d'instructions. Ici, les boucles créent des motifs récurrents. À la fin de cette leçon, les élèves auront l'occasion de créer leurs propres images.",
-          "preparation": "-   Résolvez les casse-têtes pour trouver les problèmes potentiels pour votre classe.\n-   Revoir **\\*Recommandations de cours CSF**.\n-   Assurez-vous que chaque élève ait bien un journal de réflexion. ",
+          "preparation": "-   Jouez aux casse-têtes pour identifier tous potentiels problèmes pour votre classe.\n-   Étudiez les \\*_\\\\_Conseils de leçons sur les bases de l'informatique\\*\n-   Assurez-vous que chaque élève ait bien un journal de réflexion ",
           "purpose": "Cette leçon offre une autre perspective sur comment les boucles peuvent créer des choses en programmation. Ici, les élèves peuvent également réfléchir à l'inefficacité de la programmation sans boucle, en raison du nombre important de blocs dont le programme aurait besoin sans l'aide des boucles `répéter`.",
           "student_overview": "Utilise des boucles et des schémas récurrents pour finir les images."
         },
         "coursea-2021/Events: The Big Event": {
           "name": "Le Grand Événement Jr.",
           "overview": "Dans cette **leçon de mise en contexte**, la classe fera l'expérience de la notion d'événements au travers d'un jeu où ils se déplaceront ou crieront  lorsque vous appuyez sur des boutons sur une télécommande géante. ",
-          "preparation": "-   Préparez-vous à projeter **\\*Image du contrôleur**.\n-   Imprimez une **\\*Évaluation** par élève.\n-   Assurez-vous que chaque élève ait bien un journal de réflexion. ",
+          "preparation": "-   Préparez-vous à projeter l'**\\*Image de la télécommande**.\n-   Imprimez une **\\*Évaluation** par élève.\n-   Assurez-vous que chaque élève ait bien un journal de réflexion. ",
           "purpose": "Aujourd'hui, les élèves apprendront à distinguer les événements des actions. Les élèves verront les activités interrompues en appuyant sur un \"bouton\" d'une télécommande en papier. En voyant cet événement, la classe réagira avec une action unique. Les événements sont largement utilisés dans la programmation et devraient être facilement reconnaissables après cette leçon. ",
           "student_overview": "Bouge et crie lorsque tes enseignants appuient sur les boutons d'une télécommande géante."
         },
         "coursea-2021/Events in Play Lab": {
           "name": "Mini-Projet : En route avec le Labo Jeux",
           "overview": "Dans ce **mini-projet**, les élèves utiliseront les événements dans le Labo Jeux et mettront en pratique toutes les compétences de codage qu'ils ont apprises pour créer un jeu animé. Il est temps de faire preuve de créativité et de créer une histoire dans le Labo Jeux !",
-          "preparation": "-   Résolvez les casse-têtes pour identifier des problèmes potentiels pour votre classe.\n-   (Facultatif) Choisissez quelques casse-têtes à faire en groupe avec votre classe.\n-   Revoir **\\*Recommandations de cours CSF**\n-   Assurez-vous que chaque élève ait bien un journal de réflexion ",
+          "preparation": "-   Jouez aux casse-têtes pour identifier tous potentiels problèmes pour votre classe.\n-   (Facultatif) Choisissez quelques casse-têtes à faire en groupe en classe.\n-   Étudiez les \\*_\\\\_Conseils de leçons sur les bases de l'informatique\\*\n-   Assurez-vous que chaque élève ait bien un journal de réflexion ",
           "purpose": "Les élèves approfondiront leur compréhension des événements en utilisant le Labo Jeux aujourd'hui. Les événements sont très fréquents dans la plupart des programmes informatiques. Dans cette activité, les élèves utiliseront les événements pour faire se déplacer un personnage sur l'écran, faire des sons et changer d'arrière-plan en fonction des événements initiés par l'utilisateur.",
           "student_overview": "Crée ton jeu ou ta propre histoire."
         },
@@ -4714,7 +4715,7 @@
           "name": "Mini-Projet : Jouer à la Chasse",
           "overview": "Cette leçon associe **le développement des compétences** autour des événements à un **mini-projet** dans le cadre duquel les élèves auront l'occasion de créer leur propre jeu animé. ",
           "preparation": "-   Parcourez les casse-têtes pour trouver des problèmes potentiels pour votre groupe scolaire.\n-   Assurez-vous que chaque élève ait bien un journal de réflexion. ",
-          "purpose": "Ici, les élèves développeront leur compréhension des événements en utilisant le Labo du Jeu. Les élèves utiliseront les événements pour faire bouger les personnages sur l'écran, créer des bruits et modifier les arrière-plans en fonction des entrées de l'utilisateur. À la fin de la séquence de l'énigme, les élèves auront l'occasion de partager leurs projets.  ",
+          "purpose": "Ici, les élèves développeront leur compréhension des événements en utilisant le Labo du Jeu. Les élèves utiliseront les événements pour faire bouger les personnages sur l'écran, créer des bruits et modifier les arrière-plans en fonction des entrées de l'utilisateur. À la fin de la séquence de l' casse-tête, les élèves auront l'occasion de partager leurs projets.  ",
           "student_overview": "C'est l'heure d'être inventif et de créer un jeu dans le Labo Jeux !"
         },
         "coursec-2021/Picturing Data": {
@@ -4798,7 +4799,7 @@
           "name": "Les boucles dans l'Âge de Glace",
           "overview": "Cette leçon de **mise en contexte/développement des compétences** initiera les élèves rapidement aux boucles.",
           "preparation": "-   (Facultatif) Choisissez quelques casse-têtes à faire en groupe avec votre classe.\n-   Assurez-vous que chaque élève ait bien un journal de réflexion. ",
-          "purpose": "Dans cette leçon, les élèves iront plus loin dans leur apprentissage sur les boucles et la façon de les mettre en application dans du code Blockly. L'utilisation de boucles est une compétence importante dans la programmation, car la répétition manuelle des commandes est fastidieuse et inefficace. Avec les casse-têtes de Code.org, les élèves apprendront à ajouter des instructions aux boucles existantes, à rassembler du code répété dans des boucles, et à reconnaître des modèles qui doivent être répétés.",
+          "purpose": "Dans cette leçon, les élèves en apprendront davantage sur les boucles et comment les utiliser au sein du code Blockly. Savoir utiliser les boucles est une compétence importante en programmation, car répéter manuellement les commandes devient rapidement fastidieux et inefficace. Au travers de ces casse-têtes Code.org, les élèves apprendront à ajouter des instructions à des boucles existantes, à réunir du code qui se répète au sein de boucles, et à reconnaître des schémas récurrents qui ont besoin d'être répétés.",
           "student_overview": "Dans cette leçon, vous utiliserez le bloc de répétition pour aider Scrat à atteindre le gland aussi efficacement que possible."
         },
         "coursed-2021/Loops in Artist": {
@@ -4826,7 +4827,7 @@
           "name": "Anticiper l'avenir avec Minecraft",
           "overview": "Cette leçon de **développement des compétences** donne l'occasion aux élèves de mettre en pratique les idées qu'ils ont apprises jusqu'à lors, ainsi que d'avoir une première expérience des conditionnels !",
           "preparation": "-   Résolvez les casse-têtes associées à cette leçon pour trouver les problèmes potentiels pour votre classe.\n-   Assurez-vous que chaque élève ait bien un journal de réflexion. ",
-          "purpose": "Cette série d'énigmes permettra de consolider et de s'appuyer sur les aquis des boucles pour présenter les conditions. En jumelant ces deux concepts, les élèves seront en mesure d'explorer le potentiel de création de programmes complexes et novateurs dans un environnement nouveau et passionnant.",
+          "purpose": "Cette série d' casse-têtes permettra de consolider et de s'appuyer sur les aquis des boucles pour présenter les conditions. En jumelant ces deux concepts, les élèves seront en mesure d'explorer le potentiel de création de programmes complexes et novateurs dans un environnement nouveau et passionnant.",
           "student_overview": "Évite la lave ! Ici, tu vas commencer à en apprendre plus sur les conditionnels dans le monde de Minecraft."
         },
         "coursed-2021/Conditionals in Bee": {
@@ -4847,7 +4848,7 @@
           "name": "Les Boucles Jusqu'à dans le Labyrinthe",
           "overview": "Dans cette leçon de **développement des compétences**, les élèves découvriront les boucles « jusqu'à ». Les élèves créeront des programmes dans lesquels le personnage principal répétera des actions « jusqu'à » ce qu'il atteigne le point d'arrêt souhaité.",
           "preparation": "-   Parcourez les casse-têtes pour trouver des problèmes potentiels pour votre groupe scolaire.\n-   Assurez-vous que chaque élève ait bien un journal de réflexion. ",
-          "purpose": "Cette série d'énigmes permettra de consolider et de s'appuyer sur les connaissances des boucles, en y ajoutant la condition \"until\" (tant que). En jumelant ces concepts, les élèves seront en mesure d'explorer le potentiel de création de programmes complexes et novateurs.",
+          "purpose": "Cette série d' casse-têtes permettra de consolider et de s'appuyer sur les connaissances des boucles, en y ajoutant la condition \"until\" (tant que). En jumelant ces concepts, les élèves seront en mesure d'explorer le potentiel de création de programmes complexes et novateurs.",
           "student_overview": "Tu peux faire des choses incroyables en utilisant les boucles « jusqu'à » !"
         },
         "coursed-2021/End of Course Project": {
@@ -4902,6 +4903,7 @@
           "name": "Les Sprites en Action",
           "overview": "Dans cette leçon de **développement des compétences**, les élèves passeront par une série de niveaux de programmation sur ordinateur, en terminant par une tâche « jeu libre » ouverte où ils pourront construire ce qu'ils veulent. Les élèves écriront des programmes et découvriront les deux concepts qui sont au cœur du Labo des Sprites : les sprites et les comportements.",
           "preparation": "Naviguez à travers les niveaux et passez en revue les diapositives de la leçon. ",
+          "purpose": "",
           "student_overview": "Vous passerez par différents niveaux de programmation et terminerez sur une tâche « jeu libre » ouverte où vous pourrez créer ce que vous voulez. "
         },
         "express-2021/Virtual Pet with Sprite Lab": {
@@ -4950,7 +4952,7 @@
           "name": "Anticiper l'avenir avec Minecraft",
           "overview": "Cette leçon de **développement des compétences** donne l'occasion aux élèves de mettre en pratique les idées qu'ils ont apprises jusqu'à lors, ainsi que d'avoir une première expérience des conditionnels !",
           "preparation": "-   Parcourez les casse-têtes associées à cette leçon pour trouver les problèmes potentiels pour votre classe.\n-   Assurez-vous que chaque élève ait bien un journal de réflexion. ",
-          "purpose": "Cette série d'énigmes permettra de consolider et de s'appuyer sur les aquis des boucles pour présenter les conditions. En jumelant ces deux concepts, les élèves seront en mesure d'explorer le potentiel de création de programmes complexes et novateurs dans un environnement nouveau et passionnant.",
+          "purpose": "Cette série d' casse-têtes permettra de consolider et de s'appuyer sur les aquis des boucles pour présenter les conditions. En jumelant ces deux concepts, les élèves seront en mesure d'explorer le potentiel de création de programmes complexes et novateurs dans un environnement nouveau et passionnant.",
           "student_overview": "Évite la lave ! Ici, tu vas commencer à en apprendre plus sur les conditionnels dans le monde de Minecraft."
         },
         "express-2021/If/Else with Bee": {
@@ -4971,7 +4973,7 @@
           "name": "Les Formules Conditionnelles dans Minecraft : Voyage Aquatique",
           "overview": "Dans cette leçon de **définition de contexte**, les élèves auront l'occasion de mettre en pratique les connaissances qu'ils ont acquises jusqu'à présent, ainsi que d'avoir un aperçu des formules conditionnelles !",
           "preparation": "-   Parcourez les casse-têtes associées à cette leçon pour trouver les problèmes potentiels pour votre classe.\n-   Assurez-vous que chaque élève ait bien un journal de réflexion. ",
-          "purpose": "Cette série d'énigmes permettra de consolider et de s'appuyer sur les aquis des boucles et des conditions. En jumelant ces deux concepts, les élèves seront en mesure d'explorer le potentiel de création de programmes complexes et novateurs dans un environnement nouveau et passionnant.",
+          "purpose": "Cette série d' casse-têtes permettra de consolider et de s'appuyer sur les aquis des boucles et des conditions. En jumelant ces deux concepts, les élèves seront en mesure d'explorer le potentiel de création de programmes complexes et novateurs dans un environnement nouveau et passionnant.",
           "student_overview": "Ici, tu vas utiliser des conditions dans le monde de Minecraft."
         },
         "express-2021/Until Loops in Maze": {
@@ -5090,7 +5092,7 @@
         "pre-express-2021/Drawing Gardens with Loops": {
           "name": "Dessiner des Jardins avec des Boucles",
           "overview": "Dans cette leçon de **développement des compétences**, les élèves apprendront à dessiner des images mettant en boucle des séquences simples d'instructions. Ici, les élèves utilisent des boucles pour créer des schémas récurrents. À la fin de cette leçon, les élèves auront l'occasion de créer leurs propres images.",
-          "purpose": "Cette leçon donne une perspective différente sur la façon dont les boucles peuvent créer des éléments dans la programmation. Les élèves testeront leurs capacités de pensée critique en évaluant le code donné et en déterminant ce qui doit être ajouté afin de résoudre l'énigme. Ici, les élèves peuvent également réfléchir à l'inefficacité de la programmation sans boucles, en raison du nombre important de blocs dont le programme aurait besoin sans l'aide de boucles `répéter`.",
+          "purpose": "Cette leçon donne une perspective différente sur la façon dont les boucles peuvent créer des éléments dans la programmation. Les élèves testeront leurs capacités de pensée critique en évaluant le code donné et en déterminant ce qui doit être ajouté afin de résoudre l' casse-tête. Ici, les élèves peuvent également réfléchir à l'inefficacité de la programmation sans boucles, en raison du nombre important de blocs dont le programme aurait besoin sans l'aide de boucles `répéter`.",
           "student_overview": "Utilise des schémas récurrents et des boucles pour finir les images."
         },
         "pre-express-2021/On the Move with Events": {
@@ -5102,7 +5104,7 @@
         "pre-express-2021/A Royal Battle with Events": {
           "name": "Une Bataille Royale en utilisant les Événements",
           "overview": "Dans ce **mini-projet**, les élèves auront l'occasion d'apprendre à utiliser les événements dans le Labo Jeux et d'appliquer toutes les connaissances de codage qu'ils auront acquises pour créer un jeu animé.",
-          "purpose": "Dans cette activité en ligne, les élèves apprendront à utiliser les événements dans le Labo du Jeu. Ils commenceront par former le chevalier de sorte qu'il se déplace lorsqu'une touche fléchée est enfoncée, et termineront avec la possibilité de mettre en valeur le reste des compétences qu'ils ont acquises, tout au long de ce cours, y compris la séquence et la boucle, dans le cadre de l'énigme du jeu libre final.",
+          "purpose": "Dans cette activité en ligne, les élèves apprendront à utiliser les événements dans le Labo du Jeu. Ils commenceront par former le chevalier de sorte qu'il se déplace lorsqu'une touche fléchée est enfoncée, et termineront avec la possibilité de mettre en valeur le reste des compétences qu'ils ont acquises, tout au long de ce cours, y compris la séquence et la boucle, dans le cadre de l' casse-tête du jeu libre final.",
           "student_overview": "Utilise des événements pour créer une histoire ou un jeu interactif."
         },
         "coursee-2021/Simon Says": {
@@ -5133,7 +5135,7 @@
         "coursee-2021/Private and Personal Information": {
           "name": "Informations Privées et Personnelles ",
           "overview": " [![common sense education](https://curriculum.code.org/static/img/common_sense_education.png)](https://www.commonsense.org)\n\nCette leçon a été créée à l'origine par Common Sense Education. [En savoir plus.](https://www.commonsense.org/education/digital-citizenship/curriculum)\n\nIl est naturel que nos élèves souhaitent communiquer avec les autres et partager des choses. Mais le partage en ligne comporte certains risques. Comment peut-on aider les enfants à établir des relations fortes, positives et sûres en ligne ? Aidez vos élèves à faire la différence entre ce qui est simplement personnel et ce qui vaut mieux garder privé pour soi. ",
-          "preparation": "-   Réviser les supports pédagogiques.\n-   Imprimez le(s) document(s) pour chaque élève. ",
+          "preparation": "-   Examinez les matériaux pédagogiques.\n-   Imprimez le(s) polycopié(s) à distribuer à chaque élève. ",
           "purpose": "Le Programme de Citoyenneté Numérique de Common Sense Education aborde six sujets clés, en se basant sur les dernières recherches au sujet des enfants, des médias et de la technologie. Cette leçon est axée sur la vie privée et la sécurité. Les élèves apprendront à protéger leurs informations personnelles et à mieux comprendre leurs droits en matière de confidentialité des données afin de pouvoir défendre leurs intérêts et ceux des autres.",
           "student_overview": "L'internet, c'est amusant et passionnant ; mais il faut savoir rester en sécurité aussi. Cette leçon va t'enseigner la différence entre les informations que tu peux partager en toute sécurité, et celles qui doivent rester privées."
         },
@@ -5157,7 +5159,7 @@
         "coursee-2021/Nested Loops in Artist": {
           "name": "Formes Fantaisistes avec les Boucles Imbriquées",
           "overview": "Dans cette leçon de \\*\\*développement des compétences, les élèves créeront des designs complexes en utilisant l'Artiste. La leçon se termine en donnant l'occasion aux élèves de créer leurs propres designs.",
-          "purpose": "Dans cette activité en ligne, les élèves créeront des modèles dans l'Artiste qu'ils pourront partager fièrement avec leurs proches. Le but de cette activité est d'utiliser des boucles imbriquées comme un moyen d'inspirer les élèves, qui ont un esprit artistique, à voir le codage comme un autre exutoire créatif. Cette série d'énigmes a été réalisé pour développer des compétences de pensée critique, une compréhension de la géométrie élémentaire et la créativité -- le tout, dans le cadre de boucles imbriquées !",
+          "purpose": "Dans cette activité en ligne, les élèves créeront des modèles dans l'Artiste qu'ils pourront partager fièrement avec leurs proches. Le but de cette activité est d'utiliser des boucles imbriquées comme un moyen d'inspirer les élèves, qui ont un esprit artistique, à voir le codage comme un autre exutoire créatif. Cette série d' casse-têtes a été réalisé pour développer des compétences de pensée critique, une compréhension de la géométrie élémentaire et la créativité -- le tout, dans le cadre de boucles imbriquées !",
           "student_overview": "Plus de boucles imbriquées ! Cette fois, tu dois faire un dessin ÉTONNANT avec des boucles imbriquées."
         },
         "coursee-2021/Nested Loops in Frozen": {
@@ -5187,7 +5189,7 @@
           "name": "Les Formules Conditionnelles dans Minecraft : Voyage Aquatique",
           "overview": "Dans cette leçon de **définition de contexte**, les élèves auront l'occasion de mettre en pratique les connaissances qu'ils ont acquises jusqu'à présent, ainsi que d'avoir un aperçu des formules conditionnelles !",
           "preparation": "-   Résolvez les casse-têtes associées à cette leçon pour trouver les problèmes potentiels pour votre classe.\n-   Assurez-vous que chaque élève ait bien un journal de réflexion. ",
-          "purpose": "Cette série d'énigmes permettra de consolider et de s'appuyer sur les aquis des boucles pour présenter les conditions. En jumelant ces deux concepts, les élèves seront en mesure d'explorer le potentiel de création de programmes complexes et novateurs dans un environnement nouveau et passionnant.",
+          "purpose": "Cette série d' casse-têtes permettra de consolider et de s'appuyer sur les aquis des boucles pour présenter les conditions. En jumelant ces deux concepts, les élèves seront en mesure d'explorer le potentiel de création de programmes complexes et novateurs dans un environnement nouveau et passionnant.",
           "student_overview": "Ici, tu découvriras les conditions dans le monde de Minecraft."
         },
         "coursee-2021/Conditionals": {
