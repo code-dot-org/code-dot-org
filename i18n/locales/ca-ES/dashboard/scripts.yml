@@ -179,8 +179,14 @@ ca:
           description_short: Apreneu els conceptes bàsics de la informàtica i creeu el vostre propi art, històries i jocs.
         coursee-draft:
           description_short: Apreneu els conceptes bàsics de la informàtica i creeu el vostre propi art, històries i jocs.
+          lesson_groups:
+            end_of_course_project:
+              display_name: Projecte de final de curs
         coursef-draft:
           description_short: Apreneu els conceptes bàsics de la informàtica i creeu el vostre propi art, històries i jocs.
+          lesson_groups:
+            end_of_course_project:
+              display_name: Projecte de final de curs
         classic-hoc-impact-study:
           description_short: Prova els conceptes bàsics de la informàtica amb personatges divertits!
         hoc-impact-study:
@@ -193,6 +199,10 @@ ca:
           lesson_groups:
             required:
               display_name: Vista general
+        csf2harvey:
+          lesson_groups:
+            end_of_course_project:
+              display_name: Projecte de final de curs
         csp5-support:
           lesson_groups:
             required:
@@ -222,11 +232,17 @@ ca:
           assignment_family_title: Curs E
           description_audience: De 8 a 12 anys
           description_short: Cobriu ràpidament els conceptes del curs C i D i seguiu amb les funcions.
+          lesson_groups:
+            end_of_course_project:
+              display_name: Projecte de final de curs
         coursef-2017:
           title: Curs F
           assignment_family_title: Curs F
           description_audience: De 9 a 13 anys
           description_short: Apreneu tots els conceptes dels Fonaments de la informàtica i creeu el vostre propi art, històries i jocs.
+          lesson_groups:
+            end_of_course_project:
+              display_name: Projecte de final de curs
         cspnovice:
           lesson_groups:
             required:
@@ -280,14 +296,41 @@ ca:
           assignment_family_title: Curs exprés
           description_audience: De 9 a 18 anys
           description_short: 'Una introducció a la informàtica: combina el millor del nostre currículum d''educació primària per alumnes més grans.'
+          lesson_groups:
+            end_of_course_project:
+              display_name: Projecte de final de curs
         pre-express-2017:
           title: Prelector exprés
           assignment_family_title: Prelector exprés
           description_audience: De 4 a 8 anys
           description_short: 'Una introducció a la informàtica per a prelectors: combina el millor dels cursos de parvulari i primer.'
+        e-f-ramp:
+          lesson_groups:
+            end_of_course_project:
+              display_name: Projecte de final de curs
+        new-express:
+          lesson_groups:
+            end_of_course_project:
+              display_name: Projecte de final de curs
+        new-e:
+          lesson_groups:
+            end_of_course_project:
+              display_name: Projecte de final de curs
+        new-f:
+          lesson_groups:
+            end_of_course_project:
+              display_name: Projecte de final de curs
         hero:
           description: Minecraft torna amb l'Hora del Codi amb una activitat nova de trinca! Viatja a través de Minecraft amb el codi.
           student_description: Minecraft torna amb l'Hora del Codi amb una activitat nova de trinca! Viatja a través de Minecraft amb el codi.
+        course-e-2018:
+          lesson_groups:
+            end_of_course_project:
+              display_name: Projecte de final de curs
+        course-f-2018:
+          lesson_groups:
+            end_of_course_project:
+              display_name: Projecte de final de curs
         coursea-2018:
           assignment_family_title: Curs A
           description_short: Una introducció a la informàtica per prelectors.
@@ -310,10 +353,16 @@ ca:
         coursee-2018:
           assignment_family_title: Curs E
           description_audience: De 8 a 12 anys
+          lesson_groups:
+            end_of_course_project:
+              display_name: Projecte de final de curs
         coursef-2018:
           assignment_family_title: Curs F
           description_short: Apreneu tots els conceptes dels Fonaments de la informàtica i creeu el vostre propi art, històries i jocs.
           description_audience: De 9 a 13 anys
+          lesson_groups:
+            end_of_course_project:
+              display_name: Projecte de final de curs
         csd1-dlp-18:
           lesson_groups:
             required:
@@ -416,11 +465,13 @@ ca:
             csf_variables:
               display_name: Variables
             csf_for_loops:
-              display_name: Per bucles
+              display_name: Bucles "for"
             csf_internet:
               display_name: Internet
             csf_digcit:
               display_name: Ciutadania digital
+            end_of_course_project:
+              display_name: Projecte de final de curs
         coursed-2019:
           description_audience: De 7 a 11 anys
           lesson_groups:
@@ -436,6 +487,8 @@ ca:
               display_name: Binari
             csf_digcit:
               display_name: Ciutadania digital
+            end_of_course_project:
+              display_name: Projecte de final de curs
         coursee-2019:
           description_audience: De 8 a 12 anys
           lesson_groups:
@@ -445,6 +498,8 @@ ca:
               display_name: Bucles imbricats
             csf_functions:
               display_name: Funcions
+            end_of_course_project:
+              display_name: Projecte de final de curs
         express-2019:
           description: Aprèn informàtica al teu ritme fent les lliçons que trobaràs a continuació! Aprèn a crear programes informàtics, desenvolupa les teves habilitats per resoldre problemes i completa els divertits reptes que aniràs trobant. Fes jocs i projectes creatius i comparteix-los amb els amics, la família i els professors.
           description_short: 'Una introducció a la informàtica: combina el millor del nostre currículum d''educació primària per alumnes més grans.'
@@ -461,7 +516,7 @@ ca:
             csf_variables:
               display_name: Variables
             csf_for_loops:
-              display_name: Per bucles
+              display_name: Bucles "for"
           student_description: Aprèn informàtica al teu ritme fent les lliçons que trobaràs a continuació! Aprèn a crear programes informàtics, desenvolupa les teves habilitats per resoldre problemes i completa els divertits reptes que aniràs trobant. Fes jocs i projectes creatius i comparteix-los amb els amics, la família i els professors.
         andrea-test:
           lesson_groups:
@@ -485,6 +540,8 @@ ca:
               display_name: Bucles
             csf_events:
               display_name: Esdeveniments
+            end_of_course_project:
+              display_name: Projecte de final de curs
         gamelab:
           title: Laboratori de jocs
         coursea-2019:
@@ -701,6 +758,8 @@ ca:
               display_name: Bucles imbricats
             csf_functions:
               display_name: Funcions
+            end_of_course_project:
+              display_name: Projecte de final de curs
         time4cs-control-unit-1:
           lesson_groups:
             csf_sequencing:
@@ -780,6 +839,8 @@ ca:
               display_name: Bucles
             csf_events:
               display_name: Esdeveniments
+            end_of_course_project:
+              display_name: Projecte de final de curs
         coursed-2020:
           description_audience: De 7 a 11 anys
           lesson_groups:
@@ -795,6 +856,8 @@ ca:
               display_name: Binari
             csf_digcit:
               display_name: Ciutadania digital
+            end_of_course_project:
+              display_name: Projecte de final de curs
         coursee-2020:
           description_audience: De 8 a 12 anys
           lesson_groups:
@@ -804,6 +867,8 @@ ca:
               display_name: Bucles imbricats
             csf_functions:
               display_name: Funcions
+            end_of_course_project:
+              display_name: Projecte de final de curs
         coursef-2020:
           description_short: Apreneu tots els conceptes dels Fonaments de la informàtica i creeu el vostre propi art, històries i jocs.
           description_audience: De 9 a 13 anys
@@ -813,7 +878,9 @@ ca:
             csf_variables:
               display_name: Variables
             csf_for_loops:
-              display_name: Per bucles
+              display_name: Bucles "for"
+            end_of_course_project:
+              display_name: Projecte de final de curs
         express-2020:
           description: Aprèn informàtica al teu ritme fent les lliçons que trobaràs a continuació! Aprèn a crear programes informàtics, desenvolupa les teves habilitats per resoldre problemes i completa els divertits reptes que aniràs trobant. Fes jocs i projectes creatius i comparteix-los amb els amics, la família i els professors.
           description_short: 'Una introducció a la informàtica: combina el millor del nostre currículum d''educació primària per alumnes més grans.'
@@ -830,7 +897,9 @@ ca:
             csf_variables:
               display_name: Variables
             csf_for_loops:
-              display_name: Per bucles
+              display_name: Bucles "for"
+            end_of_course_project:
+              display_name: Projecte de final de curs
           student_description: Aprèn informàtica al teu ritme fent les lliçons que trobaràs a continuació! Aprèn a crear programes informàtics, desenvolupa les teves habilitats per resoldre problemes i completa els divertits reptes que aniràs trobant. Fes jocs i projectes creatius i comparteix-los amb els amics, la família i els professors.
         pre-express-2020:
           description: Aprèn informàtica al teu ritme fent les lliçons que trobaràs a continuació! Aprèn a crear programes informàtics, desenvolupa les teves habilitats per resoldre problemes i completa els divertits reptes que aniràs trobant. Fes jocs i projectes creatius i comparteix-los amb els amics, la família i els professors.
@@ -882,6 +951,8 @@ ca:
               display_name: Bucles
             csf_events:
               display_name: Esdeveniments
+            lessonGroup-5:
+              display_name: Projecte de final de curs
         courseb-2021:
           description_audience: De 5 a 8 anys
           lesson_groups:
@@ -893,6 +964,8 @@ ca:
               display_name: Bucles
             csf_events:
               display_name: Esdeveniments
+            lessonGroup-6:
+              display_name: Projecte de final de curs
         coursec-2021:
           title: Curs C (2021)
           description_short: Apreneu els conceptes bàsics de la informàtica i creeu el vostre propi art, històries i jocs.
@@ -908,6 +981,8 @@ ca:
               display_name: Bucles
             csf_events:
               display_name: Esdeveniments
+            end_of_course_project:
+              display_name: Projecte de final de curs
         coursed-2021:
           description_audience: De 7 a 11 anys
           lesson_groups:
@@ -923,6 +998,8 @@ ca:
               display_name: Binari
             csf_digcit:
               display_name: Ciutadania digital
+            end_of_course_project:
+              display_name: Projecte de final de curs
             lessonGroup-6:
               display_name: Ciutadania digital
         coursee-2021:
@@ -936,6 +1013,8 @@ ca:
               display_name: Condicionals
             csf_functions:
               display_name: Funcions
+            end_of_course_project:
+              display_name: Projecte de final de curs
         coursef-2021:
           description_short: Apreneu tots els conceptes dels Fonaments de la informàtica i creeu el vostre propi art, històries i jocs.
           description_audience: De 9 a 13 anys
@@ -943,9 +1022,11 @@ ca:
             csf_digcit:
               display_name: Ciutadania digital
             csf_variables:
-              display_name: Per bucles
+              display_name: Bucles "for"
             csf_for_loops:
-              display_name: Per bucles
+              display_name: Bucles "for"
+            end_of_course_project:
+              display_name: Projecte de final de curs
             lessonGroup-8:
               display_name: Variables
             lessonGroup-9:
@@ -971,7 +1052,9 @@ ca:
             csf_variables:
               display_name: Variables
             csf_for_loops:
-              display_name: Per bucles
+              display_name: Bucles "for"
+            end_of_course_project:
+              display_name: Projecte de final de curs
             lessonGroup-9:
               display_name: Esdeveniments
           student_description: Aprèn informàtica al teu ritme fent les lliçons que trobaràs a continuació! Aprèn a crear programes informàtics, desenvolupa les teves habilitats per resoldre problemes i completa els divertits reptes que aniràs trobant. Fes jocs i projectes creatius i comparteix-los amb els amics, la família i els professors.
@@ -1038,6 +1121,8 @@ ca:
           lesson_groups:
             lessonGroup-3:
               display_name: Variables
+            lessonGroup-4:
+              display_name: Projecte de final de curs
         coursea-2022:
           lesson_groups:
             csf_digcit:
@@ -1048,6 +1133,8 @@ ca:
               display_name: Bucles
             csf_events:
               display_name: Esdeveniments
+            lessonGroup-5:
+              display_name: Projecte de final de curs
           description_short: Una introducció a la informàtica per prelectors.
           description_audience: De 4 a 7 anys
         express-2022:
@@ -1065,7 +1152,9 @@ ca:
             csf_variables:
               display_name: Variables
             csf_for_loops:
-              display_name: Per bucles
+              display_name: Bucles "for"
+            end_of_course_project:
+              display_name: Projecte de final de curs
           description: Aprèn informàtica al teu ritme fent les lliçons que trobaràs a continuació! Aprèn a crear programes informàtics, desenvolupa les teves habilitats per resoldre problemes i completa els divertits reptes que aniràs trobant. Fes jocs i projectes creatius i comparteix-los amb els amics, la família i els professors.
           student_description: Aprèn informàtica al teu ritme fent les lliçons que trobaràs a continuació! Aprèn a crear programes informàtics, desenvolupa les teves habilitats per resoldre problemes i completa els divertits reptes que aniràs trobant. Fes jocs i projectes creatius i comparteix-los amb els amics, la família i els professors.
           description_short: 'Una introducció a la informàtica: combina el millor del nostre currículum d''educació primària per alumnes més grans.'
@@ -1094,6 +1183,8 @@ ca:
               display_name: Bucles
             csf_events:
               display_name: Esdeveniments
+            lessonGroup-6:
+              display_name: Projecte de final de curs
           description_audience: De 5 a 8 anys
         coursec-2022:
           lesson_groups:
@@ -1105,6 +1196,8 @@ ca:
               display_name: Bucles
             csf_events:
               display_name: Esdeveniments
+            end_of_course_project:
+              display_name: Projecte de final de curs
           description_short: Apreneu els conceptes bàsics de la informàtica i creeu el vostre propi art, històries i jocs.
           description_audience: De 6 a 10 anys
         coursed-2022:
@@ -1119,6 +1212,8 @@ ca:
               display_name: Bucles
             csf_conditionals:
               display_name: Condicionals
+            end_of_course_project:
+              display_name: Projecte de final de curs
           description_audience: De 7 a 11 anys
         coursee-2022:
           lesson_groups:
@@ -1130,6 +1225,8 @@ ca:
               display_name: Funcions
             csf_nested_loops:
               display_name: Condicionals
+            end_of_course_project:
+              display_name: Projecte de final de curs
           description_audience: De 8 a 12 anys
         coursef-2022:
           lesson_groups:
@@ -1137,6 +1234,8 @@ ca:
               display_name: Ciutadania digital
             lessonGroup-8:
               display_name: Variables
+            end_of_course_project:
+              display_name: Projecte de final de curs
           description_short: Apreneu tots els conceptes dels Fonaments de la informàtica i creeu el vostre propi art, històries i jocs.
           description_audience: De 9 a 13 anys
         pre-express-2022:
@@ -1157,6 +1256,8 @@ ca:
               display_name: Ciutadania digital
             lessonGroup-8:
               display_name: Variables
+            end_of_course_project:
+              display_name: Projecte de final de curs
           description_audience: De 9 a 13 anys
           description_short: Apreneu tots els conceptes dels Fonaments de la informàtica i creeu el vostre propi art, històries i jocs.
         vpl-csd1-ayw-pilot-2022:

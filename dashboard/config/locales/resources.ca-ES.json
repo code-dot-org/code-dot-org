@@ -263,7 +263,7 @@
           "type": "Vídeo"
         },
         "making_sprites/coursef/2022": {
-          "name": "Fem sprites",
+          "name": "Creació d'sprites",
           "type": "Diapositives"
         },
         "blank_space_stories_1/coursef/2022": {
@@ -565,6 +565,7 @@
           "url": "https://docs.google.com/document/d/1cRPELQ28TZMJhc68-eYP1D26Uqzcyfx4RDYuThZJGLo/edit"
         },
         "text_and_prompts/express/2022": {
+          "name": "Text i preguntes",
           "type": "Diapositives"
         },
         "variables/express/2022": {
@@ -1045,9 +1046,11 @@
           "type": "Diapositives"
         },
         "sprite_properties/csd/2022": {
+          "name": "Propietats de l'sprite",
           "type": "Recurs"
         },
         "sprite_properties_1/csd/2022": {
+          "name": "Propietats de l'sprite",
           "type": "Diapositives"
         },
         "text/csd/2022": {
@@ -2113,7 +2116,7 @@
           "type": "Vídeo"
         },
         "making_sprites/coursef/2021": {
-          "name": "Fem sprites",
+          "name": "Creació d'sprites",
           "type": "Diapositives"
         },
         "sprite_lab_documentation/coursef/2021": {
@@ -2147,6 +2150,7 @@
           "type": "Diapositives"
         },
         "text_and_prompts/coursef/2021": {
+          "name": "Text i preguntes",
           "type": "Diapositives"
         },
         "mini_project_user_input_programs/coursef/2021": {
@@ -2812,7 +2816,7 @@
           "url": "https://studio.code.org/levels/18623"
         },
         "making_sprites/express/2021": {
-          "name": "Fem sprites",
+          "name": "Creació d'sprites",
           "url": "https://docs.google.com/presentation/d/1u8gueXrKIKoYNgTxbr3bIvmbVlCsJcVT7qcDeqsOh1U/template/preview",
           "type": "Diapositives"
         },
@@ -2869,6 +2873,7 @@
           "url": "https://docs.google.com/document/d/1cRPELQ28TZMJhc68-eYP1D26Uqzcyfx4RDYuThZJGLo/edit"
         },
         "text_and_prompts/express/2021": {
+          "name": "Text i preguntes",
           "type": "Diapositives"
         },
         "variables_video/express/2021": {
@@ -3339,11 +3344,11 @@
           "type": "Recurs"
         },
         "loops_in_app_lab/csd/2021": {
-          "name": "Per bucles",
+          "name": "Bucles \"for\"",
           "type": "Vídeo"
         },
         "for_loops/csd/2021": {
-          "name": "Per bucles",
+          "name": "Bucles \"for\"",
           "type": "Recurs"
         },
         "modifying_arrays/csd/2021": {
@@ -3462,6 +3467,7 @@
           "type": "Recurs"
         },
         "sprite_properties/csd/2021": {
+          "name": "Propietats de l'sprite",
           "type": "Recurs"
         },
         "youtube-flipbook/csd/2021": {
