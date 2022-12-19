@@ -3,6 +3,7 @@ import DarkTheme from '@blockly/theme-dark';
 import DeuteranopiaTheme from '@blockly/theme-deuteranopia';
 import HighContrastTheme from '@blockly/theme-highcontrast';
 import TritanopiaTheme from '@blockly/theme-tritanopia';
+import {convertToHighContrast} from './cdoUtils.js';
 
 // Intentionally override definition from core Blockly
 const coreBlocklyOverrides = {
@@ -42,34 +43,6 @@ const cdoCustomStyles = {
   world_blocks: {
     colourPrimary: '#5b5ba5'
   }
-};
-
-const PERCENT_OF_ORIGINAL_RED = 0.6;
-const PERCENT_OF_ORIGINAL_GREEN = 0.45;
-const PERCENT_OF_ORIGINAL_BLUE = 0.6;
-
-// takes a hex rgb value such as '#5b67a5' and darkens the color by decreasing
-// each color channel by (1 - PERCENT_OF_ORIGINAL_<COLOR>)
-const convertToHighContrast = hexColor => {
-  const red = darkenValue(hexColor.substring(1, 3), PERCENT_OF_ORIGINAL_RED);
-  const green = darkenValue(
-    hexColor.substring(3, 5),
-    PERCENT_OF_ORIGINAL_GREEN
-  );
-  const blue = darkenValue(hexColor.substring(5, 7), PERCENT_OF_ORIGINAL_BLUE);
-
-  return `#${red}${green}${blue}`;
-};
-
-// decreases a 2-digit hex value to PERCENT_OF_ORIGINAL of its value
-const darkenValue = (hexValue, percentOfOriginal) => {
-  const dec = Math.round(parseInt(hexValue, 16) * percentOfOriginal);
-  let darkenHexValue = dec.toString(16);
-  let len = darkenHexValue.length;
-  for (let i = 0; i < 2 - len; i++) {
-    darkenHexValue = '0' + darkenHexValue;
-  }
-  return darkenHexValue;
 };
 
 const getCdoHighContrastStylesObject = obj => {
