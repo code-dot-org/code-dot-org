@@ -30,6 +30,7 @@ class HiddenForSectionToggle extends React.Component {
     return (
       <div style={mainStyle} className="uitest-togglehidden">
         <Button
+          __useDeprecatedTag
           onClick={() => !disabled && onChange('visible')}
           text={i18n.visible()}
           color={Button.ButtonColor.gray}
@@ -38,6 +39,7 @@ class HiddenForSectionToggle extends React.Component {
           style={{...styles.button, ...styles.leftButton}}
         />
         <Button
+          __useDeprecatedTag
           onClick={() => !disabled && onChange('hidden')}
           text={i18n.hidden()}
           color={Button.ButtonColor.gray}
@@ -53,7 +55,9 @@ class HiddenForSectionToggle extends React.Component {
 const styles = {
   main: {
     wrap: 'nowrap',
-    margin: '5px 15px'
+    marginTop: 5,
+    marginLeft: 15,
+    marginRight: 15
   },
   disabled: {
     opacity: 0.5
@@ -63,8 +67,7 @@ const styles = {
     paddingLeft: 0,
     paddingRight: 0,
     boxSizing: 'border-box',
-    width: '50%',
-    margin: '5px 0px'
+    width: '50%'
   },
   leftButton: {
     borderTopRightRadius: 0,
