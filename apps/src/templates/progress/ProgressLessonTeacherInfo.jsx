@@ -102,6 +102,7 @@ class ProgressLessonTeacherInfo extends React.Component {
         {lesson.lesson_plan_html_url && (
           <div style={styles.buttonContainer}>
             <Button
+              __useDeprecatedTag
               href={lesson.lesson_plan_html_url}
               text={i18n.viewLessonPlan()}
               icon="file-text"
@@ -114,6 +115,7 @@ class ProgressLessonTeacherInfo extends React.Component {
         {lesson.student_lesson_plan_html_url && (
           <div style={styles.buttonContainer}>
             <Button
+              __useDeprecatedTag
               href={lesson.student_lesson_plan_html_url}
               text={i18n.studentResources()}
               icon="file-text"
@@ -145,6 +147,7 @@ class ProgressLessonTeacherInfo extends React.Component {
         {lesson.lesson_feedback_url && (
           <div style={styles.buttonContainer}>
             <Button
+              __useDeprecatedTag
               href={lesson.lesson_feedback_url}
               text={i18n.rateThisLesson()}
               icon="bar-chart"
@@ -172,10 +175,8 @@ const styles = {
     marginLeft: 15,
     marginRight: 15
   },
-  // Using 'margin' instead of 'marginTop' intentionally to override styling
   button: {
     width: '100%',
-    margin: '5px 0px 0px 0px',
     paddingLeft: 0,
     paddingRight: 0
   }
