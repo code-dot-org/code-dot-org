@@ -10949,3 +10949,15 @@ es-MX:
             un simple prototipo aproximado puede conducir a un producto terminado.
             La unidad concluye con un reto de diseño para utilizar el Circuit Playground
             como base para una innovación de su propio diseño.
+        vpl-csd5-ayw-pilot-2022:
+          lessons:
+            lesson-1:
+              name: 'Parte 1: Sesión Sincrónica'
+            lesson-2:
+              name: 'Parte 2: Post-Trabajo Asíncrono'
+        vpl-csd6-ayw-pilot-2022:
+          lessons:
+            lesson-1:
+              name: 'Parte 1: Sesión Sincrónica'
+            lesson-2:
+              name: 'Parte 2: Post-Trabajo Asíncrono'
