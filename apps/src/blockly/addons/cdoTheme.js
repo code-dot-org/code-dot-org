@@ -44,18 +44,26 @@ const cdoCustomStyles = {
   }
 };
 
+const PERCENT_OF_ORIGINAL_RED = 0.6;
+const PERCENT_OF_ORIGINAL_GREEN = 0.45;
+const PERCENT_OF_ORIGINAL_BLUE = 0.6;
+
 // takes a hex rgb value such as '#5b67a5' and darkens the color by decreasing
-// each color channel by 25%, e.g., to '#454e7c'
+// each color channel by (1 - PERCENT_OF_ORIGINAL_<COLOR>)
 const convertToHighContrast = hexColor => {
-  const red = darkenValue(hexColor.substring(1, 3));
-  const green = darkenValue(hexColor.substring(3, 5));
-  const blue = darkenValue(hexColor.substring(5, 7));
+  const red = darkenValue(hexColor.substring(1, 3), PERCENT_OF_ORIGINAL_RED);
+  const green = darkenValue(
+    hexColor.substring(3, 5),
+    PERCENT_OF_ORIGINAL_GREEN
+  );
+  const blue = darkenValue(hexColor.substring(5, 7), PERCENT_OF_ORIGINAL_BLUE);
+
   return `#${red}${green}${blue}`;
 };
 
-// decreases a 2-digit hex value to 75% of its value
-const darkenValue = hexValue => {
-  const dec = Math.round(parseInt(hexValue, 16) * 0.75);
+// decreases a 2-digit hex value to PERCENT_OF_ORIGINAL of its value
+const darkenValue = (hexValue, percentOfOriginal) => {
+  const dec = Math.round(parseInt(hexValue, 16) * percentOfOriginal);
   let darkenHexValue = dec.toString(16);
   let len = darkenHexValue.length;
   for (let i = 0; i < 2 - len; i++) {
