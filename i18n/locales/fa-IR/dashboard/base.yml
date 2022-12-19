@@ -343,6 +343,7 @@ fa:
       professional_learning: "یادگیری پیشرفته"
       documentation: "مستندات"
       tutorials: "آموزش‌ها"
+      sprite_lab_documentation: "مستندات آزمایشگاه اسپرایت"
       web_lab_documentation: "مستندات آزمایشگاه وب"
       educate_overview: "مروری بر مربی"
       educate_elementary: "مدرسه ابتدایی"
@@ -369,7 +370,9 @@ fa:
       help_us: "به ما کمک کنید"
       teach: "آموزش"
       about: "درباره"
+      legal: "حریم خصوصی و مسائل حقوقی"
       legal_privacy: "قوانین حفظ حریم خصوصی"
+      legal_cookie_notice: "اطلاعیه کوکی"
       legal_tos: "شرایط"
     user:
       classroom: 'صفحه اصلی معلم'
@@ -411,10 +414,12 @@ fa:
       poetry: 'شعر'
       scratch: 'اسکرچ (چرکنویس)'
       sports: 'ورزش'
+      spritelab: 'آزمایشگاه اسپرایت'
       starwars: 'جنگ ستارگان'
       thebadguys: 'رفقای بد'
       loading: 'در حال بارگذاری...'
       weblab: 'آزمایشگاه شبکه'
+      view_all: 'مشاهده همه پروژه‌ها...'
     popup:
       progress_for_user: "درصد پیشرفت %{name}"
       progress: 'پیشرفت شما'
@@ -567,6 +572,7 @@ fa:
     art_from_html_old: 'ماینکرافت&#8482;&copy;%{current_year} مایکروسافت. تمام حقوق محفوظ است. جنگ ستارگان&#8482;&copy;%{current_year} دیزنی و لوکاس فیلم. تمام حقوق محفوظ است. فروزن (یخ‌زده)&#8482;&copy;%{current_year} دیزنی. تمام حقوق محفوظ است. عصر یخبندان&#8482;&copy;%{current_year} فاکس قرن بیستم. تمام حقوق محفوظ است. انگری بردز (پرندگان خشمگین)&#8482;&copy; 2009-%{current_year} شرکت تفریحی روویو با مسئولیت محدود. تمام حقوق محفوظ است. گیاهان علیه زامبی‌ها&#8482;&copy;%{current_year} شرکت الکترونیک آرتز. تمام حقوق محفوظ است. رفقای بد دریم ورکز&copy;%{current_year}دریم ورکز. تمام حقوق محفوظ است.'
     code_from_html: 'Code.org از p5.play استفاده می‌کند که تحت لیسانس <a href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html">GNU LGPL 2.1</a> قرار دارد'
     powered_by_aws: 'قدرت گرفته شده توسط وب سرویس های آمازون'
+    built_on_github: 'ساخته‌شده در GitHub از طریق مایکروسافت'
     google_copyright: '&copy; گوگل. با کسب مجوز استفاده شده است. گوگل کلاس‌روم (کلاس درس گوگل) یکی از علائم تجاری تحت تملک شرکت گوگل است.'
     trademark: '&copy; Code.org, %{current_year}. Code.org&reg;, لوگوی کد نویسی و ساعت کد نویسی &reg; علائم تجاری Code.org هستند.'
     copyright: 'حق کپی برداری و نشر'
@@ -584,6 +590,8 @@ fa:
     make_my_own_app: 'برنامه ی خودم را بساز'
     how_it_works: 'چگونه کار می کند'
     try_hour_of_code: 'یک ساعت کدنویسی را امتحان کن!'
+    store: 'فروشگاه'
+    cookie_notice: 'اطلاعیه کوکی'
     view_code: 'مشاهده کد'
   reference_area:
     title: 'کمک نیاز دارید؟'
