@@ -1733,6 +1733,21 @@ a.download-video {
     font-family: $gotham-bold;
     margin: 5px 0;
     width: $button-width;
+
+    &:hover {
+      background-color: $brand_secondary_dark;
+    }
+    &:focus {
+      border: 3px solid $brand_primary_default;
+    }
+
+    &:disabled {
+      color: $neutral_dark20;
+      border-color: $neutral_dark20;
+      background-color: $neutral_light;
+      @include box-shadow(none);
+      cursor: not-allowed;
+    }
   }
 
   .blue-button {
@@ -2168,6 +2183,21 @@ a.download-video {
       background-color: $brand_secondary_default;
       border: 2px solid $brand_secondary_default;
       color: $neutral_light;
+
+      &:hover {
+        background-color: $brand_secondary_dark;
+      }
+      &:focus {
+        border: 3px solid $brand_primary_default;
+      }
+
+      &:disabled {
+        color: $neutral_dark20;
+        border-color: $neutral_dark20;
+        background-color: $neutral_light;
+        @include box-shadow(none);
+        cursor: not-allowed;
+      }
     }
   }
 
