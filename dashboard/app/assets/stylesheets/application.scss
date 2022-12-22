@@ -1696,6 +1696,9 @@ a.download-video {
       height: 40px;
       padding: 0 6px;
     }
+    input {
+      background-color: $neutral_light;
+    }
 
     label {
       color: $neutral_dark;
@@ -1729,7 +1732,7 @@ a.download-video {
     align-self: flex-end;
     background-color: $brand_secondary_default;
     border: 2px solid $brand_secondary_default;
-    color: $neutral_light;
+    color: $neutral_white;
     font-family: $gotham-bold;
     margin: 5px 0;
     width: $button-width;
@@ -1742,9 +1745,9 @@ a.download-video {
     }
 
     &:disabled {
-      color: $neutral_dark20;
+      color: $neutral_white;
       border-color: $neutral_dark20;
-      background-color: $neutral_light;
+      background-color: $neutral_dark20;
       @include box-shadow(none);
       cursor: not-allowed;
     }
@@ -1755,7 +1758,7 @@ a.download-video {
     border: 1px solid $blue;
   }
   .neutral-button {
-    background-color: $neutral_light;
+    background-color: $neutral_white;
     border: 2px solid $neutral_dark;
     color: $neutral_dark;
 
@@ -1770,7 +1773,7 @@ a.download-video {
     &:disabled {
       color: $neutral_dark20;
       border-color: $neutral_dark20;
-      background-color: $neutral_light;
+      background-color: $neutral_white;
       @include box-shadow(none);
       cursor: not-allowed;
     }
@@ -1868,7 +1871,6 @@ a.download-video {
   .signup-header {
     margin: 0;
     flex-grow: 1;
-    text-align: center;
   }
 
   .signup, .finish-signup {
@@ -2168,6 +2170,10 @@ a.download-video {
     display: flex;
     align-items: center;
 
+    input {
+      background-color: $neutral_light;
+    }
+
     input[type=text] {
       flex-grow: 2;
       height: 40px;
@@ -2182,7 +2188,7 @@ a.download-video {
       margin-right: 0;
       background-color: $brand_secondary_default;
       border: 2px solid $brand_secondary_default;
-      color: $neutral_light;
+      color: $neutral_white;
 
       &:hover {
         background-color: $brand_secondary_dark;
@@ -2192,9 +2198,9 @@ a.download-video {
       }
 
       &:disabled {
-        color: $neutral_dark20;
+        color: $neutral_white;
         border-color: $neutral_dark20;
-        background-color: $neutral_light;
+        background-color: $neutral_dark20;
         @include box-shadow(none);
         cursor: not-allowed;
       }
@@ -2206,7 +2212,7 @@ a.download-video {
     width: 100%;
     margin: 5px 0;
     color: $neutral_dark;
-    background-color: $neutral_light;
+    background-color: $neutral_white;
     border: 2px solid $neutral_dark;
     border-radius: 4px;
 
@@ -2221,7 +2227,7 @@ a.download-video {
     &:disabled {
       color: $neutral_dark20;
       border-color: $neutral_dark20;
-      background-color: $neutral_light;
+      background-color: $neutral_white;
       @include box-shadow(none);
       cursor: not-allowed;
     }

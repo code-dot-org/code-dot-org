@@ -49,16 +49,15 @@ p {
 }
 
 #signup {
-  .signup-header {
-    text-align: unset;
-  }
   a {
     font-family: $gotham-bold;
     font-size:  1em;
     color: $brand_secondary_dark;
   }
   .signup {
-
+    input {
+      background-color: $neutral_light;
+    }
     .signup-field-label {
       label {
         color: $neutral_dark;
@@ -72,7 +71,7 @@ p {
       margin-right: 0;
       background-color: $brand_secondary_default;
       border: 2px solid $brand_secondary_default;
-      color: $neutral_light;
+      color: $neutral_white;
 
       &:hover {
         background-color: $brand_secondary_dark;
@@ -82,10 +81,9 @@ p {
       }
 
       &:disabled {
-        color: $neutral_dark20;
+        color: $neutral_white;
         border-color: $neutral_dark20;
-        background-color: $neutral_light;
-        //@include box-shadow(none);
+        background-color: $neutral_dark20;
         cursor: not-allowed;
       }
     }
