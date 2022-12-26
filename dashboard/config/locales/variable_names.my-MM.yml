@@ -2,8 +2,11 @@
 my:
   data:
     variable_names:
+      actor: ဇာတ်ကောင်
       age: အသက်
+      left: ဘယ်ဘက်သို့
       repeat: ထပ်မံ ပြုလုပ်ပါ
+      right: ညာဘက်သို့
       score: ရမှတ်
       variable: variable
       x: "×"
