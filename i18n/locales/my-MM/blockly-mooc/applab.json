@@ -10,5 +10,10 @@
   "dropletBlock_setRGB_param3": "အနီ",
   "dropletBlock_setRGB_param4": "အစိမ်း",
   "dropletBlock_setRGB_param5": "အပြာရောင်",
-  "dropletBlock_substring_param1": "ပြီးပါပြီ"
+  "dropletBlock_substring_param1": "ပြီးပါပြီ",
+  "dropletBlock_turnRight_description": "လိပ်ကို တိကျသေချာသောထောင့်အနေအထား၏ ညာဘက်သို့လှည့်ပါ။ လိပ်၏အနေအထားမှာ တူညီနေရပါမယ်။",
+  "dropletBlock_turnRight_param0_description": "ညာဘက်ထောင့်သို့ ရွှေ့ရန်",
+  "dropletBlock_turnTo_description": "လိပ်၏လမ်းကြောင်းကို တိကျသေချာသောထောင့်အနေအထားသို့ပြောင်းပါ။ ၀ သည် အပေါ်ဘက်၊ ၉၀ သည် ညာဘက်၊ ၁၈၀ သည် အောက်ဘက်၊ ၂၇၀ သည် ညာဘက်ဖြစ်ပါသည်။",
+  "dropletBlock_turnTo_param0_description": "လိပ်၏ဦးတည်ချက်သတ်မှတ်ရန် ထောင့်အသစ်။",
+  "dropletBlock_updateRecord_description": "အပ်လပ်(ဘ်)၏ အချက်အလက်ကို အသုံးပြု၍ ဇယားကွက်တွင်ပေးထားသောမှတ်တမ်းကို နာမည်အသစ်ဖြင့် အဆင့်မြင့်ပါ။ မှတ်တမ်းသည် ၎င်း၏ အိုင်ဒီအကွက်ဖြင့် ထူးခြာစွာခွဲထွက်နေရပါမည်။  ခေါ်ဆိုမှုပြီးဆုံးပါက ပြန်လည်ခေါ်ဆိုခြင်းလုပ်ဆောင်ချက်ကို ခေါ်ပြီးပြီဖြစ်ပါသည်။"
 }
