@@ -5357,6 +5357,12 @@ pl:
               display_name: Projekt
             lessonGroup-5:
               display_name: Ankieta po odbyciu kursu
+            lessonGroup-6:
+              display_name: Ankieta poprzedzająca jednostkę
+          lessons:
+            lesson-1:
+              name: Listy, pętle i przejścia przed ankietą
+          name: csp5-2023
         csp6-2023:
           lesson_groups:
             csp_unit6_2020:
@@ -5418,6 +5424,8 @@ pl:
           lessons:
             lesson-1:
               name: Cząstki
+            lesson-3:
+              name: Sprite Lab Building Demo
         angelina-playground:
           lessons:
             lesson-1:
@@ -5442,6 +5450,9 @@ pl:
           name: csc-pilot-fa2022-particles
           title: 'Cząstki '
         devices-2022:
+          lessons:
+            lesson-11:
+              name: Proces rozwiązywania problemów z programowaniem
           lesson_groups:
             lessonGroup-3:
               display_name: 'Rozdział 1: Dane i wyniki'
@@ -5457,3 +5468,9 @@ pl:
           name: allthevalidation
           title: Cała walidacja
           description: Jest to miejsce do tworzenia poziomów, aby udokumentować i ujednolicić test walidacji Sprite Lab
+        vpl-csd5-ayw-pilot-2022:
+          name: vpl-csd4-ayw-pilot-2022
+          title: Odkrycia Informatyki wirtualny moduł 5
+        vpl-csd6-ayw-pilot-2022:
+          name: vpl-csd4-ayw-pilot-2022
+          title: Odkrycia Informatyki wirtualny moduł 6
