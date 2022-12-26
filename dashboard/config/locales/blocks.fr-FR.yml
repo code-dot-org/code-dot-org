@@ -1888,11 +1888,11 @@ fr:
           TEXT1:
             '"Balancing on the "': '"Balancing on the"'
             '"A chubby cat "': '"A chubby cat"'
-            '"The "': '"The "'
+            '"The "': "\"The « "
           TEXT2:
-            '" fence"': '" fence"'
+            '" fence"':  » fence"
             '""': '""'
-            '" breeze blows"': '" breeze blows"'
+            '" breeze blows"':  » breeze blows"
       Mikelab_randomColor:
         text: couleur aléatoire
       Mikelab_removeBehaviorSimple:

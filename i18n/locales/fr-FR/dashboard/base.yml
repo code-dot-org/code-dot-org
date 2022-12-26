@@ -21,7 +21,7 @@ fr:
     messages:
       not_saved: 'Veuillez corriger les erreurs suivantes:'
       too_young: 'Ce contenu est soumis à des restrictions d''age et n''est pas disponible pour les jeunes élèves.'
-      teacher_must_accept_terms: 'Ce contenu est soumis à des restrictions d''age et n''est pas disponible pour les jeunes élèves. Demandez à votre professeur d''approuver les nouvelles conditions d''utilisation pour vous donner l''accès à ce contenu. Votre professeur peut le faire en se connectant sur Code Studio et en cliquant sur le bouton "Voir les conditions mises à jour" en haut de la page d''accueil de Code Studio.'
+      teacher_must_accept_terms: 'Ce contenu est soumis à des restrictions d''age et n''est pas disponible pour les jeunes élèves. Demandez à votre professeur d''approuver les nouvelles conditions d''utilisation pour vous donner l''accès à ce contenu. Votre professeur peut le faire en se connectant sur Code Studio et en cliquant sur le bouton « Voir les conditions mises à jour » en haut de la page d''accueil de Code Studio.'
       pair_programmer: 'Vous êtes en train de programmer avec un élève qui n''a pas accès à ce contenu. Pour accéder à ce contenu, arrêtez la programmation en binôme et essayez à nouveau.'
   activerecord:
     errors:
@@ -78,7 +78,7 @@ fr:
     code:
       title: 'Rejoindre un groupe de classe sur Code.Org'
       placeholder: "Code de la section (ABCDEF)"
-      instructions: "Merci d'entrer votre code à 6 caractères que votre professeur vous a donné (exemple : \"ABCDEF\") pour rejoindre son groupe de classe."
+      instructions: "Merci d'entrer votre code à 6 caractères que votre professeur vous a donné (exemple : « ABCDEF ») pour rejoindre son groupe de classe."
       instructions_short: "Entrez le code à 6 caractères de votre groupe de classe"
       submit: 'Rejoindre'
   add_hint_form:
@@ -736,11 +736,11 @@ fr:
     unplugged:
       title: "Leçons en mode « déconnecté »"
       audience: "À partir de 4 ans"
-      body: "Nous avons compilé une liste de leçons en mode \"déconnecté\" que vous pouvez utiliser en classe. Vous pouvez désormais enseigner les bases de l'informatique, que vous ayez ou non des ordinateurs dans votre classe ! Essayez d'utiliser ces leçons sous forme de cours indépendant ou sous forme de leçons complémentaires à l'un de vos cours d'informatique."
-      body_short: "Si vous n'avez pas d'ordinateurs, essayez ces leçons en mode \"déconnecté\" dans votre classe."
+      body: "Nous avons compilé une liste de leçons en mode « déconnecté » que vous pouvez utiliser en classe. Vous pouvez désormais enseigner les bases de l'informatique, que vous ayez ou non des ordinateurs dans votre classe ! Essayez d'utiliser ces leçons sous forme de cours indépendant ou sous forme de leçons complémentaires à l'un de vos cours d'informatique."
+      body_short: "Si vous n'avez pas d'ordinateurs, essayez ces leçons en mode « déconnecté » dans votre classe."
     unplugged_conditionals:
       title: "Formules conditionnelles"
-      body: "Découvre les algorithmes et les déclarations conditionnelles, dans cette activité \"déconnectée\", en t’appuyant sur un jeu de cartes."
+      body: "Découvre les algorithmes et les déclarations conditionnelles, dans cette activité « déconnectée », en t’appuyant sur un jeu de cartes."
     widgets:
       title: "Widgets"
       body: "Les élèves peuvent découvrir les concepts de notre cours pratique sur les Principes de l'Informatique en utilisant ces outils numériques. Utilisez les widgets directement, ou bien créez une leçon focalisant sur un seul concept, pour votre classe."
@@ -834,12 +834,12 @@ fr:
     tos: "Conditions Générales d'Utilisation"
     privacy: "Politique de confidentialité"
     privacy_notice: "Déclaration de confidentialité"
-    accept_label: 'J''accepte les <a href="%{tos_url}" target="_blank"> Conditions d’Utilisation</a> et la<a href="%{privacy_url}" target="_blank"> Politique de Confidentialité</a>'
+    accept_label: 'J''accepte les <a href="%{tos_url} » target="_blank"> Conditions d’Utilisation</a> et la<a href="%{privacy_url} » target="_blank"> Politique de Confidentialité</a>'
     accept_label_markdown: J'accepte la mise à jour des [Conditions d’utilisation](%{tos_url}) et de la[Politique de confidentialité](%{privacy_url})
     accept_tos: En vous inscrivant sur Corde.org, vous acceptez nos [Terms of Service](%{tos_url}) et [Privacy Policy](%{privacy_url}).
     accept: "Accepter "
     print: "Imprimer"
-    reminder_desc: 'Nous avons mis à jour nos <a href="%{tos_url}" target="_blank">Conditions d’utilisation</a> et notre<a href="%{privacy_url}" target="_blank">Politique de confidentialité</a>. Veuillez les lire soigneusement avant de les accepter. Notez que nos outils pédagogiques JavaScript peuvent être indisponibles pour vos élèves avant votre acceptation expresse des conditions mises à jour.'
+    reminder_desc: 'Nous avons mis à jour nos <a href="%{tos_url} » target="_blank">Conditions d’utilisation</a> et notre<a href="%{privacy_url} » target="_blank">Politique de confidentialité</a>. Veuillez les lire soigneusement avant de les accepter. Notez que nos outils pédagogiques JavaScript peuvent être indisponibles pour vos élèves avant votre acceptation expresse des conditions mises à jour.'
     reminder_desc_markdown: Nous avons mis à jour nos [Conditions d’utilisation](%{tos_url}) et notre[Politique de confidentialité](%{privacy_url}). Veuillez les lire soigneusement avant de les accepter. Notez que nos outils pédagogiques JavaScript peuvent être indisponibles pour vos élèves avant votre acceptation expresse des conditions mises à jour.
     review_terms: "Consulter les éléments modifiés"
   school_info_interstitial:
@@ -1144,7 +1144,7 @@ fr:
       error_wrong_provider: 'Mauvais fournisseur. Veuillez vous assurez que vous vous connectez avec Google.'
       error_invalid_user: 'Identifiant invalide. Veuillez vous reconnecter.'
       error_no_code: 'Veuillez entrer votre code de connexion.'
-      confirm_login: 'Sélectionnez "Confirmer" pour vous connecter avec votre compte Google.'
+      confirm_login: 'Sélectionnez « Confirmer » pour vous connecter avec votre compte Google.'
   parent_email_banner:
     text: "**Êtes-vous un parent ou un tuteur ?** Associez votre adresse électronique à ce compte afin de rester informé des progrès et des projets de votre enfant !** "
     link_your_email: "Associez votre adresse électronique"
