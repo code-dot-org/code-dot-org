@@ -261,7 +261,7 @@ ca:
         Unplug9: Programació en relleus
         Unplug10: Internet
         Unplug11: Recapitulació
-        C1_happy_maps_unplugged: Mapes feliços
+        C1_happy_maps_unplugged: Mapes Feliços
         C1_moveitmoveit_unplugged: Mou-lo, Mou-lo
         C1_bigevent_unplugged: El gran esdeveniment
         C1_getting_loopy: Fent bucles
@@ -365,6 +365,8 @@ ca:
         mc_if_statements: Minecraft - Condicionals amb si
         mc_congrats_share: Minecraft - Enhorabona
         mc_congrats_no_share: Minecraft - Enhorabona
+        mc_2017_agent_intro: L'Hora del Codi amb Minecraft - L'agent
+        mc_2017_puzzle_1: L'Hora del Codi amb Minecraft - L'agent
         CSF_skinOverview_Harvester: L'agricultora
         CSF_harvester_skinOverview_K-1: L'agricultora
         CSF_scrat_loops_K1: Bucles a l'Edat de Gel
@@ -373,11 +375,15 @@ ca:
         CSF_SpriteLabIntro_CDEF: El Laboratori d'Sprites
         CDEF_Video_SpritesInAction: Sprites en acció
         CSF_SpriteLab_SpritesInAction_CDEF: Sprites en acció
+        mc_2018_intro: 'Introducció a Minecraft: Viatge aquàtic'
         csd_pair_programming: Programació per parelles
         csd_applab_parameters: Funcions amb Paràmetres
+        CSF_Going_Places_Safely: El meu barri d'internet
         CSF_Spritelab_MakeSprite_v2: Com crear un sprite
         CSF_SpriteLab_SpritesInAction_v2: Sprites en acció
         csd_debugging: Depuració
+        csf_my_online_neighborhood_2020: El meu barri d'internet
+        csf21pilot_prompts: 'Laboratori d''Sprites: Text i preguntes'
         playlab_2021: Introducció a Play Lab
         playlab_2021_reader: Introducció a Play Lab
         csp_applab_parameters: Funcions amb Paràmetres

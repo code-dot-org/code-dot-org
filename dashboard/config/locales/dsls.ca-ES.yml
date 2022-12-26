@@ -1271,21 +1271,21 @@ ca-ES:
         - {}
       courseC_multi_maze_debugging8_predict1_2018_2019_2020:
         answers:
-        - text: L'Scrat arribarà al gla. Aquest codi no conté errors.
+        - text: L'Scrat arribarà a la gla. Aquest codi no conté errors.
           feedback: Incorrecte. Primer, l'Scrat gira en la direcció equivocada i,
-            després, no avança prou vegades per arribar al gla.
-        - text: L'Scrat no arribarà al gla perquè girarà en la direcció equivocada.
+            després, no avança prou vegades per arribar a la gla.
+        - text: L'Scrat no arribarà a la gla perquè girarà en la direcció equivocada.
           correct: true
           feedback: Correcte! Primer, l'Scrat gira en la direcció equivocada i, després,
-            no avança prou vegades per arribar al gla.
-        - text: L'Scrat no arribarà al gla perquè no hi ha suficients blocs d'"avançar".
+            no avança prou vegades per arribar a la gla.
+        - text: L'Scrat no arribarà a la gla perquè no hi ha suficients blocs d'"avançar".
           correct: true
           feedback: Correcte! Primer, l'Scrat gira en la direcció equivocada i, després,
-            no avança prou vegades per arribar al gla.
+            no avança prou vegades per arribar a la gla.
         - feedback: En aquest codi hi ha dos errors. Primer, l'Scrat gira en la direcció
-            equivocada i, després, no avança prou vegades per arribar al gla.
+            equivocada i, després, no avança prou vegades per arribar a la gla.
         questions:
-        - text: Busca els errors d'aquest codi. L'Scrat aconseguirà arribar al gla,
+        - text: Busca els errors d'aquest codi. L'Scrat aconseguirà arribar a la gla,
             o hi ha algun problema?
       courseC_multi_maze_programming8_predict1:
         answers:
@@ -1689,7 +1689,7 @@ ca-ES:
           feedback: Correcte!
         - {}
         questions:
-        - text: Fixa't bé en els bucles aniuats que hi ha a continuació. Què passarà
+        - text: Fixa't bé en els bucles imbricats que hi ha a continuació. Què passarà
             quan facis clic a "Exectuar"?
       courseD_multi_bee_nestedLoops2_predict1_2018:
         answers:
@@ -1704,7 +1704,7 @@ ca-ES:
           feedback: Correcte!
         - {}
         questions:
-        - text: Fixa't bé en els bucles aniuats que hi ha a continuació. Què passarà
+        - text: Fixa't bé en els bucles imbricats que hi ha a continuació. Què passarà
             quan facis clic a "Exectuar"?
       courseD_multi_bee_nestedLoops2_predict1_2018_2019:
         answers:
@@ -1719,7 +1719,7 @@ ca-ES:
           feedback: Correcte!
         - {}
         questions:
-        - text: Fixa't bé en els bucles aniuats que hi ha a continuació. Què passarà
+        - text: Fixa't bé en els bucles imbricats que hi ha a continuació. Què passarà
             quan facis clic a "Exectuar"?
       courseD_multi_bee_nestedLoops2_predict1_2018_2019_2020:
         answers:
@@ -1734,7 +1734,7 @@ ca-ES:
           feedback: Correcte!
         - {}
         questions:
-        - text: Fixa't bé en els bucles aniuats que hi ha a continuació. Què passarà
+        - text: Fixa't bé en els bucles imbricats que hi ha a continuació. Què passarà
             quan facis clic a "Exectuar"?
       courseD_multi_bee_nestedLoops9_predict2:
         answers:
@@ -2709,22 +2709,22 @@ ca-ES:
         - {}
       courseC_multi_maze_debugging8_predict1_2021:
         answers:
-        - text: L'Scrat arribarà al gla. Aquest codi no conté errors.
+        - text: L'Scrat arribarà a la gla. Aquest codi no conté errors.
           feedback: Incorrecte. Primer, l'Scrat gira en la direcció equivocada i,
-            després, no avança prou vegades per arribar al gla.
-        - text: L'Scrat no arribarà al gla perquè girarà en la direcció equivocada.
+            després, no avança prou vegades per arribar a la gla.
+        - text: L'Scrat no arribarà a la gla perquè girarà en la direcció equivocada.
           correct: true
           feedback: Correcte! Primer, l'Scrat gira en la direcció equivocada i, després,
-            no avança prou vegades per arribar al gla.
-        - text: L'Scrat no arribarà al gla perquè no hi ha suficients blocs d'"avançar".
+            no avança prou vegades per arribar a la gla.
+        - text: L'Scrat no arribarà a la gla perquè no hi ha suficients blocs d'"avançar".
           correct: true
           feedback: Correcte! Primer, l'Scrat gira en la direcció equivocada i, després,
-            no avança prou vegades per arribar al gla.
+            no avança prou vegades per arribar a la gla.
         - text: L'Scrat no es mourà del primer bloc.
           feedback: En aquest codi hi ha dos errors. Primer, l'Scrat gira en la direcció
-            equivocada i, després, no avança prou vegades per arribar al gla.
+            equivocada i, després, no avança prou vegades per arribar a la gla.
         questions:
-        - text: Busca els errors d'aquest codi. L'Scrat aconseguirà arribar al gla,
+        - text: Busca els errors d'aquest codi. L'Scrat aconseguirà arribar a la gla,
             o hi ha algun problema?
       courseC_multi_maze_programming8_predict1_2021:
         answers:
@@ -2988,7 +2988,7 @@ ca-ES:
           feedback: Incorrecte.  L'abella enllaça l'acció en bucle d'avançar i recollir
             nèctar, i aconsegueix resoldre el trencaclosques.
         questions:
-        - text: Fixa't bé en els bucles aniuats que hi ha a continuació. Què passarà
+        - text: Fixa't bé en els bucles imbricats que hi ha a continuació. Què passarà
             quan facis clic a "Exectuar"?
       courseD_multi_bee_nestedLoops9_predict2_2021:
         answers:
@@ -10091,22 +10091,22 @@ ca-ES:
         - {}
       courseC_multi_maze_debugging8_predict12022:
         answers:
-        - text: L'Scrat arribarà al gla. Aquest codi no conté errors.
+        - text: L'Scrat arribarà a la gla. Aquest codi no conté errors.
           feedback: Incorrecte. Primer, l'Scrat gira en la direcció equivocada i,
-            després, no avança prou vegades per arribar al gla.
-        - text: L'Scrat no arribarà al gla perquè girarà en la direcció equivocada.
+            després, no avança prou vegades per arribar a la gla.
+        - text: L'Scrat no arribarà a la gla perquè girarà en la direcció equivocada.
           correct: true
           feedback: Correcte! Primer, l'Scrat gira en la direcció equivocada i, després,
-            no avança prou vegades per arribar al gla.
-        - text: L'Scrat no arribarà al gla perquè no hi ha suficients blocs d'"avançar".
+            no avança prou vegades per arribar a la gla.
+        - text: L'Scrat no arribarà a la gla perquè no hi ha suficients blocs d'"avançar".
           correct: true
           feedback: Correcte! Primer, l'Scrat gira en la direcció equivocada i, després,
-            no avança prou vegades per arribar al gla.
+            no avança prou vegades per arribar a la gla.
         - text: L'Scrat no es mourà del primer bloc.
           feedback: En aquest codi hi ha dos errors. Primer, l'Scrat gira en la direcció
-            equivocada i, després, no avança prou vegades per arribar al gla.
+            equivocada i, després, no avança prou vegades per arribar a la gla.
         questions:
-        - text: Busca els errors d'aquest codi. L'Scrat aconseguirà arribar al gla,
+        - text: Busca els errors d'aquest codi. L'Scrat aconseguirà arribar a la gla,
             o hi ha algun problema?
       courseC_multi_maze_programming8_predict12022:
         answers:
@@ -10217,7 +10217,7 @@ ca-ES:
           feedback: Incorrecte.  L'abella enllaça l'acció en bucle d'avançar i recollir
             nèctar, i aconsegueix resoldre el trencaclosques.
         questions:
-        - text: Fixa't bé en els bucles aniuats que hi ha a continuació. Què passarà
+        - text: Fixa't bé en els bucles imbricats que hi ha a continuació. Què passarà
             quan facis clic a "Exectuar"?
       courseD_multi_bee_nestedLoops9_predict22022:
         answers:
@@ -10550,12 +10550,16 @@ ca-ES:
         display_name: Propietats de l'sprite
       courseAB_EOC2022:
         display_name: Projecte de final de curs
+        description: Has arribat a la darrera lliçó! Tria quin projecte vols crear.
       courseAB_EOC_2021:
         display_name: Projecte de final de curs
+        description: Has arribat a la darrera lliçó! Tria quin projecte vols crear.
       courseB_EOC2022:
         display_name: Projecte de final de curs
+        description: Has arribat a la darrera lliçó! Tria quin projecte vols crear.
       courseB_EOC_2021:
         display_name: Projecte de final de curs
+        description: Has arribat a la darrera lliçó! Tria quin projecte vols crear.
       courseD_EOC2022:
         display_name: Projecte de final de curs
       courseD_EOC_2020:
@@ -10617,3 +10621,185 @@ ca-ES:
         description: Estàs a punt de començar el projecte final. Abans de posar-t'hi,
           dona un cop d'ulls als projectes d'exemple.
         display_name: Projectes d'exemple
+      BigEvent-Unplugged:
+        markdown: |-
+          # El gran esdeveniment
+
+          En informàtica, els esdeveniments són accions de les quals l'ordinador va fent seguiment. En aquesta lliçó, reaccionaràs d'una manera diferent, segons quin botó es premi.
+      BigEvent-Unplugged2022:
+        markdown: |-
+          # El gran esdeveniment
+
+          En informàtica, els esdeveniments són accions de les quals l'ordinador va fent seguiment. En aquesta lliçó, reaccionaràs d'una manera diferent, segons quin botó es premi.
+      BigEvent-Unplugged_2020:
+        markdown: |-
+          # El gran esdeveniment
+
+          En informàtica, els esdeveniments són accions de les quals l'ordinador va fent seguiment. En aquesta lliçó, reaccionaràs d'una manera diferent, segons quin botó es premi.
+      BigEvent-Unplugged_2021:
+        markdown: |-
+          # El gran esdeveniment
+
+          En informàtica, els esdeveniments són accions de les quals l'ordinador va fent seguiment. En aquesta lliçó, reaccionaràs d'una manera diferent, segons quin botó es premi.
+      Dance_Party_extras_intro:
+        markdown: "# Que el ritme no pari!\nA la segona part, crearàs el teu propi
+          projecte. Aquí no hi ha trencaclosques, sinó un munt de projectes que t’ensenyen
+          maneres diferents de fer festes de ball més complexes. \nPots fer aquests
+          nivells _en l’ordre que vulguis_. Pots saltar d’un a l’altre per veure com
+          es fa alguna cosa en un nivell anterior, o combinar els conceptes de diferents
+          projectes. Prova’ls tots, tria’n el que més t’agradi, i afegeix-hi el que
+          vulguis per fer-lo únic.\n\n\n<div class=\"clearfix\"></div>\n\n<div style=\"float:
+          left; margin: 10px\">\n<a href=\"2\">\n<h2>\nTothom al seu lloc\n</h2>\n\n<img
+          src=\"https://images.code.org/70ad4cbc12321f301d43161f847bdee4-image-1541746835274.gif\"></a>\n\n</div>\n\n<div
+          style=\"float: left; margin: 10px\">\n<a href=\"3\">\n<h2>\nA on han anat?\n</h2>\n\n<img
+          src=\"https://images.code.org/524010de61c9af76e98bd2a5ccdba461-image-1541746855689.gif\"></a>\n\n</div>\n\n<div
+          style=\"float: left; margin: 10px\">\n<a href=\"4\">\n<h2>\nGrups de dansa\n</h2>\n\n<img
+          src=\"https://images.code.org/f4ccfd43f9a15d68a339b449be8e96c3-image-1541746870889.gif\"></a>\n\n</div>\n\n<div
+          style=\"float: left; margin: 10px\">\n<a href=\"5\">\n<h2>\nNotes negres\n</h2>\n\n<img
+          src=\"https://images.code.org/6b538efe77ea6e19f1428f7c0e45c621-image-1541746886875.gif\"></a>\n\n</div>\n\n<div
+          style=\"float: left; margin: 10px\">\n<a href=\"6\">\n<h2>\nGreus, mitjans
+          i aguts\n</h2>\n\n<img src=\"https://images.code.org/3825556a395fd31bc4f767ca7ea5c566-image-1541746894197.gif\"></a>\n\n</div>\n\n<div
+          style=\"float: left; margin: 10px\">\n<a href=\"7\">\n<h2>\nAra ràpid, ara
+          lent\n</h2>\n\n<img src=\"https://images.code.org/d7f35c686ef0a9c5a6975889fd7c566b-image-1541746900730.gif\"></a>\n\n</div>"
+      Dance_Party_extras_intro_2019:
+        markdown: "# Que el ritme no pari!\n\nA la segona part, crearàs el teu propi
+          projecte. Aquí no hi ha trencaclosques, sinó un munt de projectes que t’ensenyen
+          maneres diferents de fer festes de ball més complexes.\n\nPots fer aquests
+          nivells _en l’ordre que vulguis_. Pots saltar d’un a l’altre per veure com
+          es fa alguna cosa en un nivell anterior, o combinar els conceptes de diferents
+          projectes. Prova’ls tots, tria’n el que més t’agradi, i afegeix-hi el que
+          vulguis per fer-lo únic. \n\n<div class=\"clearfix\"></div>\n\n\n<div style=\"float:
+          left; margin: 10px\">\n<a href=\"2\">\n<h2>\nAnada i tornada\n</h2>\n\n<img
+          src=\"https://images.code.org/2ecaa2dc4e7c6f672ced7e043d8ae0ff-image-1573667207373.gif\"></a>\n\n</div>\n\n<div
+          style=\"float: left; margin: 10px\">\n<a href=\"3\">\n<h2>\nMés botons\n</h2>\n\n<img
+          src=\"https://images.code.org/b25c6c68477a794c3086cf1169a5782f-image-1573666336377.gif\"></a>\n\n</div>\n<div
+          style=\"float: left; margin: 10px\">\n<a href=\"4\">\n<h2>\nTothom al seu
+          lloc\n</h2>\n\n<img src=\"https://images.code.org/70ad4cbc12321f301d43161f847bdee4-image-1541746835274.gif\"></a>\n\n</div>\n\n<div
+          style=\"float: left; margin: 10px\">\n<a href=\"5\">\n<h2>\nA on han anat?\n</h2>\n\n<img
+          src=\"https://images.code.org/524010de61c9af76e98bd2a5ccdba461-image-1541746855689.gif\"></a>\n\n</div>\n\n<div
+          style=\"float: left; margin: 10px\">\n<a href=\"6\">\n<h2>\nGrups de dansa\n</h2>\n\n<img
+          src=\"https://images.code.org/f4ccfd43f9a15d68a339b449be8e96c3-image-1541746870889.gif\"></a>\n\n</div>\n\n<div
+          style=\"float: left; margin: 10px\">\n<a href=\"7\">\n<h2>\nNotes negres\n</h2>\n\n<img
+          src=\"https://images.code.org/6b538efe77ea6e19f1428f7c0e45c621-image-1541746886875.gif\"></a>\n\n</div>\n\n<div
+          style=\"float: left; margin: 10px\">\n<a href=\"8\">\n<h2>\nGreus, mitjans
+          i aguts\n</h2>\n\n<img src=\"https://images.code.org/3825556a395fd31bc4f767ca7ea5c566-image-1541746894197.gif\"></a>\n\n</div>\n\n<div
+          style=\"float: left; margin: 10px\">\n<a href=\"9\">\n<h2>\nAra ràpid, ara
+          lent\n</h2>\n\n<img src=\"https://images.code.org/d7f35c686ef0a9c5a6975889fd7c566b-image-1541746900730.gif\"></a>\n\n</div>"
+      GettingLoopy-Unplugged:
+        markdown: |-
+          # Fent bucles
+
+          Aquesta lliçó introdueix el concepte de programació dels bucles per mitjà d'una activitat de ball.
+      GettingLoopy-Unplugged2022:
+        markdown: |-
+          # Fent bucles
+
+          Aquesta lliçó introdueix el concepte de programació dels bucles per mitjà d'una activitat de ball.
+      GettingLoopy-Unplugged_2020:
+        markdown: |-
+          # Fent bucles
+
+          Aquesta lliçó introdueix el concepte de programació dels bucles per mitjà d'una activitat de ball.
+      GettingLoopy-Unplugged_2021:
+        markdown: |-
+          # Fent bucles
+
+          Aquesta lliçó introdueix el concepte de programació dels bucles per mitjà d'una activitat de ball.
+      HappyMaps-Unplugged:
+        markdown: |-
+          # Mapes alegres
+
+          Crea un algorisme per moure un personatge per un laberint.
+      HappyMaps-Unplugged2022:
+        markdown: |-
+          # Mapes alegres
+
+          Crea un algorisme per moure un personatge per un laberint.
+      HappyMaps-Unplugged_2020:
+        markdown: |-
+          # Mapes alegres
+
+          Crea un algorisme per moure un personatge per un laberint.
+      HappyMaps-Unplugged_2021:
+        markdown: |-
+          # Mapes alegres
+
+          Crea un algorisme per moure un personatge per un laberint.
+      MoveItMoveIt-Unplugged:
+        markdown: |-
+          # A moure's!
+
+
+          Fes servir un mapa i dona ordres per arribar a l'objectiu.
+      MoveItMoveIt-Unplugged2022:
+        markdown: |-
+          # A moure's!
+
+
+          Fes servir un mapa i dona ordres per arribar a l'objectiu.
+      MoveItMoveIt-Unplugged_2020:
+        markdown: |-
+          # A moure's!
+
+
+          Fes servir un mapa i dona ordres per arribar a l'objectiu.
+      MoveItMoveIt-Unplugged_2021:
+        markdown: |-
+          # A moure's!
+
+
+          Fes servir un mapa i dona ordres per arribar a l'objectiu.
+      TheRightAppMarkdownLevel2022:
+        markdown: "# L'aplicació correcta\n\n* Avui dia, tothom fa sevir ordinadors,
+          i especialment telèfons intel·ligents. \n* Les aplicacions per a mòbil ens
+          ajuden a fer coses com ara parlar amb els amics, escoltar música, comprar
+          o navegar per internet.\n* És important que els programadors entenguin les
+          necessitats dels usuarios i les tinguin presents quan dissenyen les aplicacions.\n\n![](https://images.code.org/fb17eeb9238d2f26c6ab40c9841517a7-image-1555611687284.png)"
+      TheRightAppMarkdownLevel_2019:
+        markdown: "# L'aplicació correcta\n\n* Avui dia, tothom fa sevir ordinadors,
+          i especialment telèfons intel·ligents. \n* Les aplicacions per a mòbil ens
+          ajuden a fer coses com ara parlar amb els amics, escoltar música, comprar
+          o navegar per internet.\n* És important que els programadors entenguin les
+          necessitats dels usuarios i les tinguin presents quan dissenyen les aplicacions.\n\n![](https://images.code.org/fb17eeb9238d2f26c6ab40c9841517a7-image-1555611687284.png)"
+      TheRightAppMarkdownLevel_2019_2020:
+        markdown: "# L'aplicació correcta\n\n* Avui dia, tothom fa sevir ordinadors,
+          i especialment telèfons intel·ligents. \n* Les aplicacions per a mòbil ens
+          ajuden a fer coses com ara parlar amb els amics, escoltar música, comprar
+          o navegar per internet.\n* És important que els programadors entenguin les
+          necessitats dels usuarios i les tinguin presents quan dissenyen les aplicacions.\n\n![](https://images.code.org/fb17eeb9238d2f26c6ab40c9841517a7-image-1555611687284.png)"
+      TheRightAppMarkdownLevel_2021:
+        markdown: "# L'aplicació correcta\n\n* Avui dia, tothom fa sevir ordinadors,
+          i especialment telèfons intel·ligents. \n* Les aplicacions per a mòbil ens
+          ajuden a fer coses com ara parlar amb els amics, escoltar música, comprar
+          o navegar per internet.\n* És important que els programadors entenguin les
+          necessitats dels usuarios i les tinguin presents quan dissenyen les aplicacions.\n\n![](https://images.code.org/fb17eeb9238d2f26c6ab40c9841517a7-image-1555611687284.png)"
+      csf_digital_trails:
+        markdown: |-
+          # Segueix el rastre digital
+
+          ## Quina informació és segura de tenir a la petjada digital?
+      csf_digital_trails2022:
+        markdown: |-
+          # Segueix el rastre digital
+
+          ## Quina informació és segura de tenir a la petjada digital?
+      csf_digital_trails_2021:
+        markdown: |-
+          # Segueix el rastre digital
+
+          ## Quina informació és segura de tenir a la petjada digital?
+      csf_safety_in_my_online_neighborhood:
+        markdown: |-
+          # El meu barri d'internet
+
+          ## Com naveguem per internet de manera segura?
+      csf_safety_in_my_online_neighborhood2022:
+        markdown: |-
+          # El meu barri d'internet
+
+          ## Com naveguem per internet de manera segura?
+      csf_safety_in_my_online_neighborhood_2021:
+        markdown: |-
+          # El meu barri d'internet
+
+          ## Com naveguem per internet de manera segura?

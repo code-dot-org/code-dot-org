@@ -27,7 +27,8 @@
           "type": "Vídeo de l'estudiant"
         },
         "csf-turns-angles-doc/artist/unversioned": {
-          "name": "Girs i angles"
+          "name": "Girs i angles",
+          "type": "Fitxa de l'alumne"
         },
         "csf-turns-angles-video/artist/unversioned": {
           "name": "Girs i angles",
@@ -43,6 +44,12 @@
         },
         "video-text-compression/text-compression/unversioned": {
           "type": "Vídeo"
+        },
+        "events-in-bounce-how-do-they-happen/sports/unversioned": {
+          "type": "Diapositives"
+        },
+        "events-in-bounce-how-do-they-happen/basketball/unversioned": {
+          "type": "Diapositives"
         },
         "dance-party-playlist/dance-extras-2019/unversioned": {
           "name": "Llista de reproducció d'Spotify (per totes les edats)",
@@ -62,10 +69,15 @@
           "type": "Vídeo"
         },
         "common_core_and_ngss_guidance/coursed/2022": {
+          "name": "Guia de Common Core i NGSS",
           "type": "Recurs"
         },
         "cross-curricular_extension_activities/coursed/2022": {
+          "name": "Activitats d'ampliació multidisciplinàries",
           "type": "Recurs"
+        },
+        "curriculum_guide/coursed/2022": {
+          "name": "Guia del pla d'estudis"
         },
         "debugging_guide/coursed/2022": {
           "name": "Guia de depuració",
@@ -76,6 +88,7 @@
           "type": "Recurs"
         },
         "lesson_type_guide/coursed/2022": {
+          "name": "Guia de tipus de lliçons",
           "type": "Recurs"
         },
         "teacher_forum/coursed/2022": {
@@ -209,12 +222,15 @@
           "name": "Condicionals amb targetes"
         },
         "common_core_and_ngss_guidance/coursef/2022": {
+          "name": "Guia de Common Core i NGSS",
           "type": "Recurs"
         },
         "cross-curricular_extension_activities/coursef/2022": {
+          "name": "Activitats d'ampliació multidisciplinàries",
           "type": "Recurs"
         },
         "curriculum_guide/coursef/2022": {
+          "name": "Guia del pla d'estudis",
           "type": "Recurs"
         },
         "debugging_guide/coursef/2022": {
@@ -224,6 +240,9 @@
         "implementation_guide/coursef/2022": {
           "name": "Guia d'implementació",
           "type": "Recurs"
+        },
+        "lesson_type_guide/coursef/2022": {
+          "name": "Guia de tipus de lliçons"
         },
         "sprite_lab_documentation/coursef/2022": {
           "name": "Documentació del Laboratori d'Sprites",
@@ -304,10 +323,15 @@
           "name": "Internet"
         },
         "common_core_and_ngss_guidance/coursee/2022": {
+          "name": "Guia de Common Core i NGSS",
           "type": "Recurs"
         },
         "cross-curricular_extension_activities/coursee/2022": {
+          "name": "Activitats d'ampliació multidisciplinàries",
           "type": "Recurs"
+        },
+        "curriculum_guide/coursee/2022": {
+          "name": "Guia del pla d'estudis"
         },
         "debugging_guide/coursee/2022": {
           "name": "Guia de depuració",
@@ -318,6 +342,7 @@
           "type": "Recurs"
         },
         "lesson_type_guide/coursee/2022": {
+          "name": "Guia de tipus de lliçons",
           "type": "Recurs"
         },
         "sprite_lab_documentation/coursee/2022": {
@@ -330,8 +355,14 @@
           "url": "https://forum.code.org/c/csf/",
           "type": "Recurs"
         },
+        "private_and_personal_information_exit_ticket/coursee/2022": {
+          "type": "Fitxa de l'alumne"
+        },
         "private_and_personal_information_lesson_quiz_1/coursee/2022": {
           "type": "Respostes"
+        },
+        "private_and_personal_information_lesson_slides/coursee/2022": {
+          "type": "Diapositives"
         },
         "private_and_personal_information_private_and_personal_information/coursee/2022": {
           "type": "Vídeo de l'estudiant"
@@ -355,7 +386,8 @@
         },
         "turns_angles/coursee/2022": {
           "name": "Girs i angles",
-          "url": "https://docs.google.com/document/d/1JDeb07W7myaLu7Wjd-fPM8whSaO8aw37m9SJ_7B4Su4/edit"
+          "url": "https://docs.google.com/document/d/1JDeb07W7myaLu7Wjd-fPM8whSaO8aw37m9SJ_7B4Su4/edit",
+          "type": "Fitxa de l'alumne"
         },
         "turns_angles_1/coursee/2022": {
           "name": "Girs i angles",
@@ -381,10 +413,15 @@
           "type": "Recurs"
         },
         "common_core_and_ngss_guidance/courseb/2022": {
+          "name": "Guia de Common Core i NGSS",
           "type": "Recurs"
         },
         "cross-curricular_extension_activities/courseb/2022": {
+          "name": "Activitats d'ampliació multidisciplinàries",
           "type": "Recurs"
+        },
+        "curriculum_guide/courseb/2022": {
+          "name": "Guia del pla d'estudis"
         },
         "debugging_guide/courseb/2022": {
           "name": "Guia de depuració",
@@ -395,12 +432,25 @@
           "type": "Recurs"
         },
         "lesson_type_guide/courseb/2022": {
+          "name": "Guia de tipus de lliçons",
           "type": "Recurs"
         },
         "teacher_forum/courseb/2022": {
           "name": "Fòrum del professor",
           "url": "https://forum.code.org/c/csf/",
           "type": "Recurs"
+        },
+        "digital_trails_animal_tracks/courseb/2022": {
+          "type": "Fitxa de l'alumne"
+        },
+        "digital_trails_digital_trail_squares/courseb/2022": {
+          "type": "Fitxa de l'alumne"
+        },
+        "digital_trails_follow_the_digital_trail/courseb/2022": {
+          "type": "Vídeo de la lliçó"
+        },
+        "digital_trails_lesson_slides/courseb/2022": {
+          "type": "Diapositives"
         },
         "feeling_faces_emotion_image/courseb/2022": {
           "type": "Recurs"
@@ -469,6 +519,9 @@
           "url": "https://www.youtube.com/watch?v=rgbZAWnOWOo",
           "type": "Vídeo"
         },
+        "the_right_app_scenarios/courseb/2022": {
+          "type": "Diapositives"
+        },
         "the_big_event/courseb/2022": {
           "name": "El gran esdeveniment"
         },
@@ -478,6 +531,9 @@
         },
         "the_big_event_2/courseb/2022": {
           "name": "El gran esdeveniment"
+        },
+        "the_big_event_courses_a_b_/courseb/2022": {
+          "type": "Imatge del comandament"
         },
         "play_lab_project_planning_guide/courseb/2022": {
           "type": "Llibret"
@@ -616,10 +672,17 @@
           "type": "Vídeo"
         },
         "common_core_and_ngss_guidance/coursea/2022": {
+          "name": "Guia de Common Core i NGSS",
+          "url": "https://docs.google.com/document/d/1SqD3MaRbGIONGs5bcL1YhHUFK92ZXFIufypr6UC8XYA/preview#heading=h.vq4s1h2aaxxy",
           "type": "Recurs"
         },
         "cross-curricular_extension_activities/coursea/2022": {
+          "name": "Activitats d'ampliació multidisciplinàries",
+          "url": "https://docs.google.com/document/d/1MRlHy_3VgLXKZwjeB0VmI8HWuPvupZODsslPnA7KYAY/preview",
           "type": "Recurs"
+        },
+        "curriculum_guide/coursea/2022": {
+          "name": "Guia del pla d'estudis"
         },
         "debugging_guide/coursea/2022": {
           "name": "Guia de depuració",
@@ -630,6 +693,7 @@
           "type": "Recurs"
         },
         "lesson_type_guide/coursea/2022": {
+          "name": "Guia de tipus de lliçons",
           "type": "Recurs"
         },
         "teacher_forum/coursea/2022": {
@@ -637,12 +701,33 @@
           "url": "https://forum.code.org/c/csf/",
           "type": "Recurs"
         },
+        "safety_in_my_online_neighborhood_lesson_slides/coursea/2022": {
+          "name": "Seguretat al meu barri d'internet: diapositives de la lliçó",
+          "url": "https://docs.google.com/presentation/d/1VFaxU6S0hsDgyCtaPhVFf9xpign__BXdvT0ypQq1gBs/edit",
+          "type": "Diapositives"
+        },
+        "safety_in_my_online_neighborhood_my_online_neighborhood/coursea/2022": {
+          "name": "Seguretat al meu barri d'internet: El meu barri d'internet",
+          "url": "https://docs.google.com/presentation/d/1VFaxU6S0hsDgyCtaPhVFf9xpign__BXdvT0ypQq1gBs/edit",
+          "type": "Vídeo de la lliçó"
+        },
+        "safety_in_my_online_neighborhood_pause_and_think_moment/coursea/2022": {
+          "name": "Seguretat al meu barri d'internet: Moment de pausa i reflexió",
+          "url": "https://docs.google.com/document/d/1o95Q7OD2oF5e-lWxj31kKopfhQVYWDUmw6uDdm1RIIU/",
+          "type": "Fitxa de l'alumne"
+        },
+        "safety_in_my_online_neighborhood_safety_it_rules_/coursea/2022": {
+          "name": "Seguretat al meu barri d'internet: La seguretat és el primer!",
+          "url": "https://docs.google.com/document/d/1_fc870l0ndjhUMazjwLSaJOx9lIMsvbd3BYYEtLykIY/edit",
+          "type": "Pòster del poema"
+        },
         "20_20_20_rule/coursea/2022": {
           "name": "La regla del 20/20/20",
           "url": "http://www.anthro.com/blog/2013/10/how-to-prevent-eye-strain-with-the-20-20-20-rule#.WOU39BLyu35",
           "type": "Recurs"
         },
         "getting_started_-_creating_a_class_section/coursea/2022": {
+          "name": "Primers passos - Com crear una secció de classe",
           "type": "Vídeo"
         },
         "pair_programming/coursea/2022": {
@@ -651,23 +736,34 @@
           "type": "Vídeo de l'estudiant"
         },
         "wiggles-go_noodle/coursea/2022": {
+          "name": "A bellugar-se - Go Noodle",
           "url": "https://app.gonoodle.com/channels/brainercise-with-mr-catman/shoulder-rock-n-roll",
           "type": "Vídeo"
         },
         "feeling_faces_-_emotion_image/coursea/2022": {
+          "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/view",
           "type": "Recurs"
         },
         "happy_map_cards/coursea/2022": {
+          "name": "Targetes de Mapes Feliços",
+          "url": "https://docs.google.com/document/d/15uNhf_dISlr0ZT5j3sBu-z3I7v_v5Av9H5jsdLXhE8c/edit",
           "type": "Fitxa d'exercicis"
         },
+        "happy_map_cards_1/coursea/2022": {
+          "name": "Targetes de Mapes Feliços",
+          "url": "https://docs.google.com/document/d/1faZj8Szk1st2pMg2f_2S0jXgoGXgbfqOFxbJ6f3LnH0/edit"
+        },
         "happy_maps/coursea/2022": {
-          "name": "Mapes feliços"
+          "name": "Mapes Feliços",
+          "url": "https://youtu.be/hrnhiKAQ1_k"
         },
         "wiggles_-_gonoodle/coursea/2022": {
           "url": "https://app.gonoodle.com/channels/brainercise-with-mr-catman/shoulder-rock-n-roll",
           "type": "Vídeo"
         },
         "debugging_with_the_step_button/coursea/2022": {
+          "name": "Depurar amb el botó de pas",
+          "url": "https://videos.code.org/csf/debugging-k1-blocks.mp4",
           "type": "Vídeo"
         },
         "feeling_faces_emotion_image/coursea/2022": {
@@ -677,7 +773,13 @@
           "type": "Recurs"
         },
         "happy_map_cards_xl/coursea/2022": {
+          "name": "Targetes de Mapes Feliços XL",
+          "url": "https://docs.google.com/document/d/1ohSi_DzymdRdN66NVMAI-KI6LuaB3srbUMnpG74aPM8/edit",
           "type": "Fitxa d'exercicis"
+        },
+        "happy_map_game_pieces_bonus_pack/coursea/2022": {
+          "name": "**\\*Paquet addicional de peces del joc Mapes Feliços** ",
+          "url": "https://docs.google.com/document/d/14qEVzSR7pr0slqkRn2WM8XxVyeDhdmfhtsmTrERCTNs/edit"
         },
         "feeling_faces/coursea/2022": {
           "name": "Cares d'emocions",
@@ -685,10 +787,12 @@
           "type": "Imatges d'emocions"
         },
         "pair-programming/coursea/2022": {
+          "name": "Programació per parelles",
           "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q",
           "type": "Vídeo"
         },
         "csf_lesson_recommendations/coursea/2022": {
+          "name": "Recomanacions per les lliçons de Fonaments de la Informàtica",
           "type": "Recurs"
         },
         "pause_and_think_online/coursea/2022": {
@@ -697,7 +801,8 @@
           "type": "Vídeo"
         },
         "the_big_event/coursea/2022": {
-          "name": "El gran esdeveniment"
+          "name": "El gran esdeveniment",
+          "url": "https://youtu.be/u0WV9shCoak"
         },
         "the_big_event_1/coursea/2022": {
           "name": "El gran esdeveniment",
@@ -706,17 +811,29 @@
         "the_big_event_2/coursea/2022": {
           "name": "El gran esdeveniment"
         },
+        "the_big_event_courses_a_b_/coursea/2022": {
+          "type": "Imatge del comandament"
+        },
         "artist_project_planning_guide/coursea/2022": {
+          "name": "Guia de planificació de projectes amb l'Artista",
+          "url": "https://docs.google.com/document/d/16jZwjsALk--UIsqN0i35odey5dei1-uHGCTl8x23B2M/template/preview",
           "type": "Llibret"
         },
         "artist_project_planning_guide_1/coursea/2022": {
+          "name": "Guia de planificació de projectes amb l'Artista",
+          "url": "https://docs.google.com/document/d/13AiHjPrDE3DFnwH3qKnty6M3PbHsZcd-0YoZz4ZmC3E/template/preview",
           "type": "Respostes"
         },
         "common_core_and_ngss_guidance/coursec/2022": {
+          "name": "Guia de Common Core i NGSS",
           "type": "Recurs"
         },
         "cross-curricular_extension_activities/coursec/2022": {
+          "name": "Activitats d'ampliació multidisciplinàries",
           "type": "Recurs"
+        },
+        "curriculum_guide/coursec/2022": {
+          "name": "Guia del pla d'estudis"
         },
         "debugging_guide_1/coursec/2022": {
           "name": "Guia de depuració",
@@ -727,12 +844,19 @@
           "type": "Recurs"
         },
         "lesson_type_guide/coursec/2022": {
+          "name": "Guia de tipus de lliçons",
           "type": "Recurs"
         },
         "teacher_forum/coursec/2022": {
           "name": "Fòrum del professor",
           "url": "https://forum.code.org/c/csf/",
           "type": "Recurs"
+        },
+        "putting_a_stop_to_online_meanness_lesson_slides/coursec/2022": {
+          "type": "Diapositives"
+        },
+        "putting_a_stop_to_online_meanness_stop_online_meanness/coursec/2022": {
+          "type": "Fitxa de l'alumne"
         },
         "csf_-_course_c_-_slides_2022-2023/coursec/2022": {
           "type": "Diapositives"
@@ -779,10 +903,12 @@
         },
         "turns_angles_1/coursec/2022": {
           "name": "Girs i angles",
-          "url": "https://docs.google.com/document/d/1JDeb07W7myaLu7Wjd-fPM8whSaO8aw37m9SJ_7B4Su4/edit"
+          "url": "https://docs.google.com/document/d/1JDeb07W7myaLu7Wjd-fPM8whSaO8aw37m9SJ_7B4Su4/edit",
+          "type": "Fitxa de l'alumne"
         },
         "the_big_event/coursec/2022": {
-          "name": "El gran esdeveniment"
+          "name": "El gran esdeveniment",
+          "url": "https://youtu.be/u0WV9shCoak"
         },
         "the_big_event_1/coursec/2022": {
           "name": "El gran esdeveniment",
@@ -1405,6 +1531,9 @@
         "updating_your_prototype_1/csd/2022": {
           "type": "Diapositives"
         },
+        "app_presentation_template/csd/2022": {
+          "type": "Diapositives"
+        },
         "project_-_app_presentation/csd/2022": {
           "type": "Diapositives"
         },
@@ -1697,6 +1826,9 @@
         "ai_code_of_ethics/csd/2022": {
           "type": "Diapositives"
         },
+        "ai_ethics_research_reflection/csd/2022": {
+          "type": "Fitxa de l'alumne"
+        },
         "ethics_ai_equal_access_and_algorithmic_bias/csd/2022": {
           "type": "Vídeo"
         },
@@ -1874,6 +2006,9 @@
         "vocabulary/csd/2018": {
           "name": "Vocabulari"
         },
+        "curriculum_guide/coursea/2019": {
+          "name": "Guia del pla d'estudis"
+        },
         "lesson_plans/coursea/2019": {
           "name": "Plans d'estudi"
         },
@@ -1882,6 +2017,9 @@
         },
         "vocabulary/coursea/2019": {
           "name": "Vocabulari"
+        },
+        "curriculum_guide/courseb/2019": {
+          "name": "Guia del pla d'estudis"
         },
         "lesson_plans/courseb/2019": {
           "name": "Plans d'estudi"
@@ -1892,6 +2030,9 @@
         "vocabulary/courseb/2019": {
           "name": "Vocabulari"
         },
+        "curriculum_guide/coursed/2019": {
+          "name": "Guia del pla d'estudis"
+        },
         "lesson_plans/coursed/2019": {
           "name": "Plans d'estudi"
         },
@@ -1901,6 +2042,9 @@
         "vocabulary/coursed/2019": {
           "name": "Vocabulari"
         },
+        "curriculum_guide/coursef/2019": {
+          "name": "Guia del pla d'estudis"
+        },
         "lesson_plans/coursef/2019": {
           "name": "Plans d'estudi"
         },
@@ -1909,6 +2053,9 @@
         },
         "vocabulary/coursef/2019": {
           "name": "Vocabulari"
+        },
+        "curriculum_guide/coursee/2019": {
+          "name": "Guia del pla d'estudis"
         },
         "lesson_plans/coursee/2019": {
           "name": "Plans d'estudi"
@@ -1927,6 +2074,9 @@
         },
         "vocabulary/express/2019": {
           "name": "Vocabulari"
+        },
+        "curriculum_guide/coursec/2019": {
+          "name": "Guia del pla d'estudis"
         },
         "lesson_plans/coursec/2019": {
           "name": "Plans d'estudi"
@@ -2060,9 +2210,11 @@
           "type": "Diapositives"
         },
         "2021_change_log/coursef/2021": {
+          "name": "Registre de canvis 2021",
           "type": "Recurs"
         },
         "common_core_and_ngss_guidance/coursef/2021": {
+          "name": "Guia de Common Core i NGSS",
           "type": "Recurs"
         },
         "course_vocabulary/coursef/2021": {
@@ -2070,6 +2222,7 @@
           "type": "Recurs"
         },
         "cross-curricular_extension_activities_1/coursef/2021": {
+          "name": "Activitats d'ampliació multidisciplinàries",
           "type": "Recurs"
         },
         "csta_standards_mapping/coursef/2021": {
@@ -2077,6 +2230,7 @@
           "type": "Recurs"
         },
         "curriculum_guide_1/coursef/2021": {
+          "name": "Guia del pla d'estudis",
           "type": "Recurs"
         },
         "debugging_guide/coursef/2021": {
@@ -2088,6 +2242,7 @@
           "type": "Recurs"
         },
         "lesson_type_guide/coursef/2021": {
+          "name": "Guia de tipus de lliçons",
           "type": "Recurs"
         },
         "sprite_lab_documentation_1/coursef/2021": {
@@ -2204,15 +2359,19 @@
           "type": "Fitxa d'exercicis"
         },
         "2021_change_log/courseb/2021": {
+          "name": "Registre de canvis 2021",
           "type": "Recurs"
         },
         "common_core_and_ngss_guidance/courseb/2021": {
+          "name": "Guia de Common Core i NGSS",
           "type": "Recurs"
         },
         "course_vocabulary/courseb/2021": {
+          "name": "Vocabulari del curs",
           "type": "Recurs"
         },
         "cross-curricular_extension_activities/courseb/2021": {
+          "name": "Activitats d'ampliació multidisciplinàries",
           "type": "Recurs"
         },
         "csta_standards_mapping/courseb/2021": {
@@ -2220,6 +2379,7 @@
           "type": "Recurs"
         },
         "curriculum_guide_1/courseb/2021": {
+          "name": "Guia del pla d'estudis",
           "type": "Recurs"
         },
         "debugging_guide/courseb/2021": {
@@ -2231,6 +2391,7 @@
           "type": "Recurs"
         },
         "lesson_type_guide/courseb/2021": {
+          "name": "Guia de tipus de lliçons",
           "type": "Recurs"
         },
         "teacher_forum_1/courseb/2021": {
@@ -2240,6 +2401,18 @@
         },
         "virtual_lesson_modifications/courseb/2021": {
           "type": "Recurs"
+        },
+        "digital-trails-animal-tracks/courseb/2021": {
+          "type": "Fitxa de l'alumne"
+        },
+        "digital-trails-digital-trail-squares/courseb/2021": {
+          "type": "Fitxa de l'alumne"
+        },
+        "digital-trails-follow-the-digital-trail/courseb/2021": {
+          "type": "Vídeo de la lliçó"
+        },
+        "digital-trails-lesson-slides/courseb/2021": {
+          "type": "Diapositives"
         },
         "feeling_faces_emotion_image/courseb/2021": {
           "type": "Recurs"
@@ -2308,12 +2481,18 @@
           "url": "https://www.youtube.com/watch?v=rgbZAWnOWOo",
           "type": "Vídeo"
         },
+        "the-right-app-scenarios/courseb/2021": {
+          "type": "Diapositives"
+        },
         "assessment-answer-big-event/courseb/2021": {
           "name": "El gran esdeveniment"
         },
         "csf-the-big-event-assessment/courseb/2021": {
           "name": "El gran esdeveniment",
           "type": "Avaluació"
+        },
+        "the_big_event_courses_a_b_/courseb/2021": {
+          "type": "Imatge del comandament"
         },
         "unplugged-video-big-event/courseb/2021": {
           "name": "El gran esdeveniment",
@@ -2326,22 +2505,31 @@
           "type": "Respostes"
         },
         "2021_change_log/coursea/2021": {
+          "name": "Registre de canvis 2021",
           "type": "Recurs"
         },
         "common_core_and_ngss_guidance/coursea/2021": {
+          "name": "Guia de Common Core i NGSS",
+          "url": "https://docs.google.com/document/d/1SqD3MaRbGIONGs5bcL1YhHUFK92ZXFIufypr6UC8XYA/preview#heading=h.vq4s1h2aaxxy",
           "type": "Recurs"
         },
         "course_vocabulary/coursea/2021": {
+          "name": "Vocabulari del curs",
+          "url": "https://studio.code.org/s/coursea-2021/vocab",
           "type": "Recurs"
         },
         "cross-curricular_extension_activities/coursea/2021": {
+          "name": "Activitats d'ampliació multidisciplinàries",
+          "url": "https://docs.google.com/document/d/1MRlHy_3VgLXKZwjeB0VmI8HWuPvupZODsslPnA7KYAY/preview",
           "type": "Recurs"
         },
         "csta_standards_mapping/coursea/2021": {
           "name": "Estàndards de la CSTA",
+          "url": "https://studio.code.org/s/coursea-2021/standards",
           "type": "Recurs"
         },
         "curriculum_guide_1/coursea/2021": {
+          "name": "Guia del pla d'estudis",
           "type": "Recurs"
         },
         "debugging_guide/coursea/2021": {
@@ -2353,6 +2541,7 @@
           "type": "Recurs"
         },
         "lesson_type_guide/coursea/2021": {
+          "name": "Guia de tipus de lliçons",
           "type": "Recurs"
         },
         "teacher_forum_1/coursea/2021": {
@@ -2361,7 +2550,28 @@
           "type": "Recurs"
         },
         "virtual_lesson_modifications/coursea/2021": {
+          "url": "https://docs.google.com/document/d/1jap518hJg74YGea9zTrW4qE_Qa53IbJ3SHKrPB_Hars/edit",
           "type": "Recurs"
+        },
+        "safety-in-my-online-neighborhood-lesson-slides/coursea/2021": {
+          "name": "Seguretat al meu barri d'internet: diapositives de la lliçó",
+          "url": "https://docs.google.com/presentation/d/1VFaxU6S0hsDgyCtaPhVFf9xpign__BXdvT0ypQq1gBs/edit",
+          "type": "Diapositives"
+        },
+        "safety-in-my-online-neighborhood-my-online-neighborhood/coursea/2021": {
+          "name": "Seguretat al meu barri d'internet: El meu barri d'internet",
+          "url": "https://docs.google.com/presentation/d/1VFaxU6S0hsDgyCtaPhVFf9xpign__BXdvT0ypQq1gBs/edit",
+          "type": "Vídeo de la lliçó"
+        },
+        "safety-in-my-online-neighborhood-pause-and-think-moment/coursea/2021": {
+          "name": "Seguretat al meu barri d'internet: Moment de pausa i reflexió",
+          "url": "https://docs.google.com/document/d/1o95Q7OD2oF5e-lWxj31kKopfhQVYWDUmw6uDdm1RIIU/",
+          "type": "Fitxa de l'alumne"
+        },
+        "safety-in-my-online-neighborhood-safety-it-rules/coursea/2021": {
+          "name": "Seguretat al meu barri d'internet: La seguretat és el primer!",
+          "url": "https://docs.google.com/document/d/1_fc870l0ndjhUMazjwLSaJOx9lIMsvbd3BYYEtLykIY/edit",
+          "type": "Pòster del poema"
         },
         "20_20_20_rule/coursea/2021": {
           "name": "La regla del 20/20/20",
@@ -2369,6 +2579,7 @@
           "type": "Recurs"
         },
         "how_to_make_a_class_section_on_code_org/coursea/2021": {
+          "name": "Primers passos - Com crear una secció de classe",
           "type": "Vídeo"
         },
         "pair-programming-vid/coursea/2021": {
@@ -2377,17 +2588,26 @@
           "type": "Vídeo de l'estudiant"
         },
         "wiggles-go_noodle/coursea/2021": {
+          "name": "A bellugar-se - Go Noodle",
           "url": "https://app.gonoodle.com/channels/brainercise-with-mr-catman/shoulder-rock-n-roll",
           "type": "Vídeo"
         },
+        "activity-answer-happy-maps/coursea/2021": {
+          "name": "Targetes de Mapes Feliços",
+          "url": "https://docs.google.com/document/d/1faZj8Szk1st2pMg2f_2S0jXgoGXgbfqOFxbJ6f3LnH0/edit"
+        },
         "feeling_faces_-_emotion_image/coursea/2021": {
+          "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/view",
           "type": "Recurs"
         },
         "happy-map-cards/coursea/2021": {
+          "name": "Targetes de Mapes Feliços",
+          "url": "https://docs.google.com/document/d/15uNhf_dISlr0ZT5j3sBu-z3I7v_v5Av9H5jsdLXhE8c/edit",
           "type": "Fitxa d'exercicis"
         },
         "unplugged-video-happy-maps/coursea/2021": {
-          "name": "Mapes feliços"
+          "name": "Mapes Feliços",
+          "url": "https://youtu.be/hrnhiKAQ1_k"
         },
         "20_20_20_rule_1/coursea/2021": {
           "name": "La regla del 20/20/20",
@@ -2399,6 +2619,8 @@
           "type": "Vídeo"
         },
         "csf_debugging_k1_blocks/coursea/2021": {
+          "name": "Depurar amb el botó de pas",
+          "url": "https://videos.code.org/csf/debugging-k1-blocks.mp4",
           "type": "Vídeo"
         },
         "feeling_faces_emotion_image/coursea/2021": {
@@ -2411,7 +2633,13 @@
           "type": "Recurs"
         },
         "happy-map-cards-xl/coursea/2021": {
+          "name": "Targetes de Mapes Feliços XL",
+          "url": "https://docs.google.com/document/d/1ohSi_DzymdRdN66NVMAI-KI6LuaB3srbUMnpG74aPM8/edit",
           "type": "Fitxa d'exercicis"
+        },
+        "happy-map-game-pieces-bonus-pack/coursea/2021": {
+          "name": "**\\*Paquet addicional de peces del joc Mapes Feliços** ",
+          "url": "https://docs.google.com/document/d/14qEVzSR7pr0slqkRn2WM8XxVyeDhdmfhtsmTrERCTNs/edit"
         },
         "feeling-faces-image/coursea/2021": {
           "name": "Cares d'emocions",
@@ -2419,10 +2647,12 @@
           "type": "Imatges d'emocions"
         },
         "pair-programming/coursea/2021": {
+          "name": "Programació per parelles",
           "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q",
           "type": "Vídeo"
         },
         "csf_lesson_recommendations/coursea/2021": {
+          "name": "Recomanacions per les lliçons de Fonaments de la Informàtica",
           "type": "Recurs"
         },
         "feeling_faces_emotion_image_2/coursea/2021": {
@@ -2434,6 +2664,7 @@
           "type": "Vídeo"
         },
         "csf_lesson_recommendations_1/coursea/2021": {
+          "name": "Recomanacions per les lliçons de Fonaments de la Informàtica",
           "type": "Recurs"
         },
         "feeling_faces_emotion_image_3/coursea/2021": {
@@ -2449,31 +2680,44 @@
         "feeling_faces_-_emotion_image_2/coursea/2021": {
           "type": "Recurs"
         },
+        "the_big_event_courses_a_b_/coursea/2021": {
+          "type": "Imatge del comandament"
+        },
         "unplugged-video-big-event/coursea/2021": {
-          "name": "El gran esdeveniment"
+          "name": "El gran esdeveniment",
+          "url": "https://youtu.be/u0WV9shCoak"
         },
         "csf_lesson_recommendations_2/coursea/2021": {
+          "name": "Recomanacions per les lliçons de Fonaments de la Informàtica",
           "type": "Recurs"
         },
         "feeling_faces_-_emotion_image_3/coursea/2021": {
           "type": "Recurs"
         },
         "artist_project_planning_guide/coursea/2021": {
+          "name": "Guia de planificació de projectes amb l'Artista",
+          "url": "https://docs.google.com/document/d/16jZwjsALk--UIsqN0i35odey5dei1-uHGCTl8x23B2M/template/preview",
           "type": "Llibret"
         },
         "artist_project_planning_guide_1/coursea/2021": {
+          "name": "Guia de planificació de projectes amb l'Artista",
+          "url": "https://docs.google.com/document/d/13AiHjPrDE3DFnwH3qKnty6M3PbHsZcd-0YoZz4ZmC3E/template/preview",
           "type": "Respostes"
         },
         "2021_change_log/coursec/2021": {
+          "name": "Registre de canvis 2021",
           "type": "Recurs"
         },
         "common_core_and_ngss_guidance/coursec/2021": {
+          "name": "Guia de Common Core i NGSS",
           "type": "Recurs"
         },
         "course_vocabulary/coursec/2021": {
+          "name": "Vocabulari del curs",
           "type": "Recurs"
         },
         "cross-curricular_extension_activities/coursec/2021": {
+          "name": "Activitats d'ampliació multidisciplinàries",
           "type": "Recurs"
         },
         "csta_standards_mapping/coursec/2021": {
@@ -2481,6 +2725,7 @@
           "type": "Recurs"
         },
         "curriculum_guide_1/coursec/2021": {
+          "name": "Guia del pla d'estudis",
           "type": "Recurs"
         },
         "debugging_guide_1/coursec/2021": {
@@ -2492,6 +2737,7 @@
           "type": "Recurs"
         },
         "lesson_type_guide/coursec/2021": {
+          "name": "Guia de tipus de lliçons",
           "type": "Recurs"
         },
         "teacher_forum_1/coursec/2021": {
@@ -2501,6 +2747,12 @@
         },
         "virtual_lesson_modifications/coursec/2021": {
           "type": "Recurs"
+        },
+        "putting-a-stop-to-online-meanness-lesson-slides/coursec/2021": {
+          "type": "Diapositives"
+        },
+        "putting-a-stop-to-online-meanness-stop-online-meanness/coursec/2021": {
+          "type": "Fitxa de l'alumne"
         },
         "csf-mrf-cup-spacing/coursec/2021": {
           "name": "Els meus amics robòtics"
@@ -2539,7 +2791,8 @@
         },
         "csf-turns-angles-doc/coursec/2021": {
           "name": "Girs i angles",
-          "url": "https://docs.google.com/document/d/1JDeb07W7myaLu7Wjd-fPM8whSaO8aw37m9SJ_7B4Su4/edit"
+          "url": "https://docs.google.com/document/d/1JDeb07W7myaLu7Wjd-fPM8whSaO8aw37m9SJ_7B4Su4/edit",
+          "type": "Fitxa de l'alumne"
         },
         "csf-turns-angles-video/coursec/2021": {
           "name": "Girs i angles",
@@ -2557,7 +2810,8 @@
           "type": "Avaluació"
         },
         "unplugged-video-big-event/coursec/2021": {
-          "name": "El gran esdeveniment"
+          "name": "El gran esdeveniment",
+          "url": "https://youtu.be/u0WV9shCoak"
         },
         "open-ended_programming_levels/coursec/2021": {
           "type": "Respostes"
@@ -2598,15 +2852,19 @@
           "type": "Fitxa d'exercicis"
         },
         "2021_change_log/coursed/2021": {
+          "name": "Registre de canvis 2021",
           "type": "Recurs"
         },
         "common_core_and_ngss_guidance/coursed/2021": {
+          "name": "Guia de Common Core i NGSS",
           "type": "Recurs"
         },
         "course_vocabulary/coursed/2021": {
+          "name": "Vocabulari del curs",
           "type": "Recurs"
         },
         "cross-curricular_extension_activities/coursed/2021": {
+          "name": "Activitats d'ampliació multidisciplinàries",
           "type": "Recurs"
         },
         "csta_standards_mapping/coursed/2021": {
@@ -2614,6 +2872,7 @@
           "type": "Recurs"
         },
         "curriculum_guide_1/coursed/2021": {
+          "name": "Guia del pla d'estudis",
           "type": "Recurs"
         },
         "debugging_guide/coursed/2021": {
@@ -2625,6 +2884,7 @@
           "type": "Recurs"
         },
         "lesson_type_guide/coursed/2021": {
+          "name": "Guia de tipus de lliçons",
           "type": "Recurs"
         },
         "teacher_forum_1/coursed/2021": {
@@ -2935,9 +3195,11 @@
           "type": "Vídeo"
         },
         "2021_change_log/coursee/2021": {
+          "name": "Registre de canvis 2021",
           "type": "Recurs"
         },
         "common_core_and_ngss_guidance/coursee/2021": {
+          "name": "Guia de Common Core i NGSS",
           "type": "Recurs"
         },
         "course_vocabulary/coursee/2021": {
@@ -2945,6 +3207,7 @@
           "type": "Recurs"
         },
         "cross-curricular_extension_activities/coursee/2021": {
+          "name": "Activitats d'ampliació multidisciplinàries",
           "type": "Recurs"
         },
         "csta_standards_mapping/coursee/2021": {
@@ -2952,6 +3215,7 @@
           "type": "Recurs"
         },
         "curriculum_guide_1/coursee/2021": {
+          "name": "Guia del pla d'estudis",
           "type": "Recurs"
         },
         "debugging_guide/coursee/2021": {
@@ -2963,6 +3227,7 @@
           "type": "Recurs"
         },
         "lesson_type_guide/coursee/2021": {
+          "name": "Guia de tipus de lliçons",
           "type": "Recurs"
         },
         "sprite_lab_documentation_1/coursee/2021": {
@@ -2990,8 +3255,14 @@
           "name": "Nivell de prova: Peixos, a nedar!",
           "url": "https://studio.code.org/levels/18623"
         },
+        "private-and-personal-information-exit-ticket/coursee/2021": {
+          "type": "Fitxa de l'alumne"
+        },
         "private-and-personal-information-lesson-quiz-answer-key/coursee/2021": {
           "type": "Respostes"
+        },
+        "private-and-personal-information-lesson-slides/coursee/2021": {
+          "type": "Diapositives"
         },
         "private-and-personal-information-private-and-personal-information/coursee/2021": {
           "type": "Vídeo de l'estudiant"
@@ -3011,7 +3282,8 @@
         },
         "csf-turns-angles-doc/coursee/2021": {
           "name": "Girs i angles",
-          "url": "https://docs.google.com/document/d/1JDeb07W7myaLu7Wjd-fPM8whSaO8aw37m9SJ_7B4Su4/edit"
+          "url": "https://docs.google.com/document/d/1JDeb07W7myaLu7Wjd-fPM8whSaO8aw37m9SJ_7B4Su4/edit",
+          "type": "Fitxa de l'alumne"
         },
         "csf-turns-angles-video/coursee/2021": {
           "name": "Girs i angles",
@@ -3162,6 +3434,9 @@
         "ai_code_of_ethics/csd/2021": {
           "type": "Diapositives"
         },
+        "ai_ethics_research_reflection/csd/2021": {
+          "type": "Fitxa de l'alumne"
+        },
         "ethics_ai_equal_access_and_algorithmic_bias/csd/2021": {
           "type": "Vídeo"
         },
@@ -3262,6 +3537,9 @@
         },
         "responding_to_user_input/csd/2021": {
           "type": "Recurs"
+        },
+        "app-presentation-template/csd/2021": {
+          "type": "Diapositives"
         },
         "circuit_playground_1/csd/2021": {
           "type": "Recurs"
@@ -3644,6 +3922,9 @@
         "vocabulary/express/2020": {
           "name": "Vocabulari"
         },
+        "curriculum_guide/courseb/2020": {
+          "name": "Guia del pla d'estudis"
+        },
         "lesson_plans/courseb/2020": {
           "name": "Plans d'estudi"
         },
@@ -3652,6 +3933,9 @@
         },
         "vocabulary/courseb/2020": {
           "name": "Vocabulari"
+        },
+        "curriculum_guide/coursed/2020": {
+          "name": "Guia del pla d'estudis"
         },
         "lesson_plans/coursed/2020": {
           "name": "Plans d'estudi"
@@ -3662,6 +3946,9 @@
         "vocabulary/coursed/2020": {
           "name": "Vocabulari"
         },
+        "curriculum_guide/coursec/2020": {
+          "name": "Guia del pla d'estudis"
+        },
         "lesson_plans/coursec/2020": {
           "name": "Plans d'estudi"
         },
@@ -3670,6 +3957,9 @@
         },
         "vocabulary/coursec/2020": {
           "name": "Vocabulari"
+        },
+        "curriculum_guide/coursee/2020": {
+          "name": "Guia del pla d'estudis"
         },
         "lesson_plans/coursee/2020": {
           "name": "Plans d'estudi"
@@ -3680,6 +3970,9 @@
         "vocabulary/coursee/2020": {
           "name": "Vocabulari"
         },
+        "curriculum_guide/coursea/2020": {
+          "name": "Guia del pla d'estudis"
+        },
         "lesson_plans/coursea/2020": {
           "name": "Plans d'estudi"
         },
@@ -3688,6 +3981,9 @@
         },
         "vocabulary/coursea/2020": {
           "name": "Vocabulari"
+        },
+        "curriculum_guide/coursef/2020": {
+          "name": "Guia del pla d'estudis"
         },
         "lesson_plans/coursef/2020": {
           "name": "Plans d'estudi"

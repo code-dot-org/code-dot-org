@@ -273,7 +273,7 @@ ca:
     access_denied: No tens accés a aquest %{model}.
   nav:
     header:
-      finished_hoc: He acabat la meva Hora de Codi
+      finished_hoc: He acabat!
       sign_in_to_save: Inicia la sessió per a desar el progrés
       course_catalog: Catàleg de cursos
       project_gallery: Projectes
@@ -323,7 +323,7 @@ ca:
       gamelab: Laboratori de jocs
       iceage: Edat de gel
       infinity: Infinit
-      minecraft_adventurer: Aventurer Minecraft
+      minecraft_adventurer: 'Minecraft: L''aventurer'
       minecraft_designer: Minecraft
       playlab: Play Lab
       spritelab: Laboratori de personatges
@@ -468,6 +468,7 @@ ca:
     code_from_html: Code.org fa servir p5.play, sota llicència de <a href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html">the
       GNU LGPL 2.1</a>.
     powered_by_aws: Funciona amb Amazon Web Services
+    built_on_github: Fet amb GitHub de Microsoft
     trademark: "&copy; Code.org, %{current_year}. Code.org&reg;, el logotip de CODE
       i de l'Hora del Codi&reg; són marques registrades de Code.org."
     copyright: Copyright
@@ -495,10 +496,11 @@ ca:
     direction: Direcció de Començament (en graus)
   video:
     tab: Vídeo.
-    notes: Cap vídeo? Mostra les notes.
+    notes: No hi ha vídeo? Mostra les notes.
     notes_coming_soon: Notes per a aquest vídeo molt aviat.
     autoplay_option: Reprodueix automàticament els vídeos
     download: Descarregar vídeo
+    show_notes: Mostrar notes
     label: Vídeo
   compatibility:
     upgrade:

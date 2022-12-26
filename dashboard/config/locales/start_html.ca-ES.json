@@ -38,7 +38,8 @@
           "4": "4",
           "8": "8",
           "10": "10",
-          "12": "12"
+          "12": "12",
+          "?": "?"
         },
         "CSD U1 processing guess_2022": {
           "text": "text",
@@ -46,7 +47,8 @@
           "4": "4",
           "8": "8",
           "10": "10",
-          "12": "12"
+          "12": "12",
+          "?": "?"
         },
         "CSD U1 processing live_2021": {
           "bear": "Ós"
@@ -771,6 +773,21 @@
         },
         "ml-models in applab-choice predict typos_2022": {
           "1": "1"
+        },
+        "CSD U6 - Screen Outputs - ChalB_2222": {
+          "?": "?"
+        },
+        "CSD U6 emotion machine example": {
+          "?": "?"
+        },
+        "CSD U6 emotion machine example_2018": {
+          "?": "?"
+        },
+        "CSD U6 emotion machine example_2019": {
+          "?": "?"
+        },
+        "CSD U6 emotion machine example_2021": {
+          "?": "?"
         }
       }
     }

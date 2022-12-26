@@ -66,8 +66,8 @@
         "Dance_Party_extras_layout_2019": "Tothom al seu lloc",
         "Dance_Party_extras_on_beat": "Greus, mitjans i aguts",
         "Dance_Party_extras_on_beat_2019": "Greus, mitjans i aguts",
-        "Dance_Party_extras_speed": "Vés més ràpid, vés més lent",
-        "Dance_Party_extras_speed_2019": "Vés més ràpid, vés més lent",
+        "Dance_Party_extras_speed": "Ara ràpid, ara lent",
+        "Dance_Party_extras_speed_2019": "Ara ràpid, ara lent",
         "Dance_Party_extras_visible": "A on han anat?",
         "Dance_Party_extras_visible_2019": "A on han anat?",
         "courseF_bee_for5_2021": "Variables",
@@ -366,7 +366,20 @@
         "courseF_text_review": "Esdeveniments de temps",
         "courseF_text_review_-2022-2": "Esdeveniments de temps",
         "helloworld_emoji_location": "Esdeveniments de temps",
-        "helloworld_retro_location": "Esdeveniments de temps"
+        "helloworld_retro_location": "Esdeveniments de temps",
+        "Dance_Party_extras_mixed_2019": "Més botons",
+        "courseA_EOC_artist_1": "Artista: Zoo",
+        "courseA_EOC_artist_12022": "Artista: Zoo",
+        "courseA_EOC_artist_2": "Artista: Jardí",
+        "courseA_EOC_artist_22022": "Artista: Jardí",
+        "courseA_EOC_artist_3": "Artista: Espai",
+        "courseA_EOC_artist_32022": "Artista: Espai",
+        "courseA_EOC_playlab_animals": "Laboratori de Jocs: Animals",
+        "courseA_EOC_playlab_animals2022": "Laboratori de Jocs: Animals",
+        "courseA_EOC_playlab_fantasy": "Laboratori de Jocs: Fantasia",
+        "courseA_EOC_playlab_fantasy2022": "Laboratori de Jocs: Fantasia",
+        "courseA_EOC_playlab_people": "Laboratori de Jocs: Persones",
+        "courseA_EOC_playlab_people2022": "Laboratori de Jocs: Persones"
       }
     }
   }
