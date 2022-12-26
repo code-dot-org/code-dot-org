@@ -259,6 +259,7 @@ zh-TW:
   teacher_mailer:
     new_teacher_subject: 歡迎來到 Code.org ！
     delete_teacher_subject: Code.org 通知：你的帳戶已被刪除
+    verified_teacher_subject: Code.org 教師驗證 - 成功
   section:
     your_section:
       one: 你的學習小組：
@@ -623,6 +624,7 @@ zh-TW:
     store: 商店
     cookie_notice: Cookie通知
     view_code: 檢視程式碼
+    locale_select: 選擇語言
   reference_area:
     title: 需要幫忙？
     subtitle: 看看這些影片和提示
@@ -647,6 +649,8 @@ zh-TW:
       applab_unsupported_tablet: 在桌上電腦使用 App Lab 是比較建議的方式，有滑鼠、鍵盤的平板上也可以。在你目前的裝置上使用，可能會遇到一些操作上的問題。
       gamelab_unsupported_tablet: 在桌上電腦使用 Game Lab 是比較建議的方式，有滑鼠、鍵盤的平板上也可以。在你目前的裝置上使用，可能會遇到一些操作上的問題。
       weblab_unsupported_locale_storage: 很抱歉，在這個瀏覽器上使用隱藏模式，會導致載入 Web Lab 時發生問題，請將瀏覽器切換回正常模式，造成不便請見諒。
+  deprecation:
+    algebra_lab: 代數裡的 CS 課程和內容將被廢除。在未來幾個月內，將不再在這個 lab 裡提供。請轉往查看 [Bootstrap：代數](%{bootstrap_algebra_url}。[了解更多](%{cs_algebra_url})。
   slow_loading: 請再等等，這次讀取的時間比較久一點.......
   try_reloading: 請重新載入頁面
   next_stage: 完成！繼續下個關卡
@@ -1068,6 +1072,8 @@ zh-TW:
         not_listed: 不在清單裡
         none: 不想回答
       school_country:
+        barbados: 巴巴多斯
+        belize: 伯利茲
         canada: Canada
         chile: Chile
         colombia: 哥倫比亞
@@ -1185,4 +1191,21 @@ zh-TW:
       forbidden: 用戶無法更新學生的可鎖定狀態
   reset_predict_progress_button: 刪除答案
   pixelation:
+    raw_format: 原始格式
+    raw_format_alt: 查看無任何格式的位元
+    readable_format: 可讀格式
+    readable_format_alt: 按像素分隔檢視位元
+    save_image: 儲存圖片
+    actual_size: 實際大小
+    image_file_format_header: 圖片檔案格式
+    image_file_format_width: 寬度：1 字節
+    image_file_format_height: 高度：1 字節
+    image_file_format_bits_per_pixel: 每像素位元數：1 字節
+    image_file_format_data_a: n 位元像素數據
+    image_file_format_data_b: n = 寬度 * 高度 * 每像素的位元
+    image_width: 圖片寬度
+    image_height: 圖片高度
+    bits_per_pixel_header: 每像素位元數
     binary: 二進制（Binary）
+    hexadecimal: 十六進制
+    pixel_format_header: 像素格式
