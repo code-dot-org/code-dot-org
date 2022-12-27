@@ -49,9 +49,9 @@ class ContentContainer extends Component {
       <div style={[boxStyles, bottomMargin]}>
         {(heading || (link && linkText)) && (
           <div style={styles.headingBox}>
-            <div style={isRtl ? styles.headingTextRtl : styles.headingText}>
+            <h4 style={isRtl ? styles.headingTextRtl : styles.headingText}>
               {heading}
-            </div>
+            </h4>
             {showLinkTop && (
               <Link link={link} linkText={linkText} isRtl={isRtl} />
             )}
@@ -127,18 +127,17 @@ const styles = {
     position: 'relative'
   },
   headingText: {
-    fontFamily: 'Gotham 4r',
+    // fontFamily: 'Gotham 4r',
     fontSize: 24,
     lineHeight: '26px',
-    color: color.charcoal,
+    color: color.neutral_dark,
     float: 'left',
     paddingRight: 20
   },
   headingTextRtl: {
-    fontFamily: 'Gotham 4r',
     fontSize: 24,
     lineHeight: '26px',
-    color: color.charcoal,
+    color: color.neutral_dark,
     float: 'right',
     paddingLeft: 20
   },
@@ -181,7 +180,7 @@ const styles = {
     clear: 'both'
   },
   linkToViewAll: {
-    color: color.teal,
+    color: color.neutral_dark,
     fontSize: 14,
     fontFamily: 'Gotham 4r',
     marginTop: -2,
@@ -189,14 +188,14 @@ const styles = {
   },
   chevron: {
     display: 'inline',
-    color: color.teal,
+    color: color.neutral_dark,
     fontSize: 10,
     fontWeight: 'bold',
     marginLeft: 15
   },
   chevronRtl: {
     display: 'inline',
-    color: color.teal,
+    color: color.neutral_dark,
     fontSize: 10,
     fontWeight: 'bold',
     marginRight: 15

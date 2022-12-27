@@ -19,7 +19,9 @@ const ButtonColor = {
   white: 'white',
   red: 'red',
   green: 'green',
-  purple: 'purple'
+  purple: 'purple',
+  brandSecondaryDefault: 'brand-secondary-default',
+  neutralDark: 'neutral-dark'
 };
 
 const ButtonSize = {

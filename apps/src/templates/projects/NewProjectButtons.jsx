@@ -134,7 +134,7 @@ class NewProjectButtons extends React.Component {
     const thumbnailStyle = isRtl ? styles.thumbnailRtl : styles.thumbnail;
 
     return (
-      <div style={styles.fullsize}>
+      <div className="start-project-button" style={styles.fullsize}>
         {description && <div style={styles.description}>{description}</div>}
         {_.chunk(projectTypes, TILES_PER_ROW).map(
           (projectTypesRow, rowIndex) => (

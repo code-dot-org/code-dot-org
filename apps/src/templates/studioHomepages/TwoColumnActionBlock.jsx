@@ -83,7 +83,7 @@ export class UnconnectedTwoColumnActionBlock extends Component {
                   <Button
                     __useDeprecatedTag
                     href={button.url}
-                    color={Button.ButtonColor.gray}
+                    color={Button.ButtonColor.brandSecondaryDefault}
                     text={button.text}
                     target={button.target}
                     id={button.id}
@@ -234,10 +234,11 @@ const styles = {
     fontSize: 24,
     lineHeight: '26px',
     fontFamily: 'Gotham 4r',
-    color: color.charcoal
+    color: color.neutral_dark
   },
   textItem: {
-    backgroundColor: color.teal,
+    border: `1px solid ${color.neutral_dark}`,
+    backgroundColor: color.neutral_light,
     padding: 25,
     minHeight: 281,
     boxSizing: 'border-box'
@@ -248,7 +249,7 @@ const styles = {
     fontSize: 27,
     lineHeight: 1.2,
     fontFamily: '"Gotham 7r", sans-serif',
-    color: color.white
+    color: color.neutral_dark
   },
   subHeadingSmallFont: {
     paddingRight: 0,
@@ -256,7 +257,7 @@ const styles = {
     fontSize: 25,
     lineHeight: 1.2,
     fontFamily: '"Gotham 7r", sans-serif',
-    color: color.white
+    color: color.neutral_dark
   },
   image: {
     width: 485,
@@ -269,7 +270,7 @@ const styles = {
     fontSize: 14,
     fontFamily: 'Gotham 4r',
     lineHeight: '22px',
-    color: color.white
+    color: color.neutral_dark
   },
   clear: {
     clear: 'both'

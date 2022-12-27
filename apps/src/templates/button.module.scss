@@ -202,6 +202,51 @@ a:visited,
     }
   }
 
+  // Phase 1 - Colors
+  &.brand-secondary-default {
+    color: $neutral_white;
+    background-color: $brand_secondary_default;
+    border-radius: 4px;
+
+    &:hover {
+      box-shadow: none;
+      color: $white;
+      border-color: $brand_secondary_dark;
+      background-color: $brand_secondary_dark;
+    }
+
+    &:focus {
+      border: 3px solid $brand_primary_default;
+    }
+
+    &:disabled,
+    &[disabled] {
+      background-color: $neutral_dark20;
+    }
+  }
+
+  &.neutral-dark {
+    color: $neutral_dark;
+    background-color: $neutral_white;
+    border: 2px solid $neutral_dark;
+    border-radius: 4px;
+
+    &:hover {
+      background-color: $neutral_dark10;
+    }
+
+    &:focus {
+      border: 3px solid $brand_primary_default;
+    }
+
+    &:disabled {
+      color: $neutral_dark20;
+      border-color: $neutral_dark20;
+      background-color: $neutral_white;
+      cursor: not-allowed;
+    }
+  }
+
   // Button sizes.
   &.default {
     height: $button-height-default;
