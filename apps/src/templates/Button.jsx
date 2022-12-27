@@ -45,7 +45,7 @@ class Button extends React.Component {
     text: PropTypes.string,
     children: PropTypes.node,
     size: PropTypes.oneOf(Object.keys(ButtonSize)),
-    color: PropTypes.oneOf(Object.keys(ButtonColor)),
+    color: PropTypes.oneOf(Object.values(ButtonColor)),
     styleAsText: PropTypes.bool,
     icon: PropTypes.string,
     iconClassName: PropTypes.string,

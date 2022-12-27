@@ -203,14 +203,14 @@ const styles = {
   labHeading: {
     textAlign: 'left',
     fontSize: 24,
-    color: color.charcoal,
+    color: color.neutral_dark,
     marginBottom: 0,
     paddingBottom: 0,
     paddingTop: 0,
     float: 'left'
   },
   viewMore: {
-    color: color.teal,
+    color: color.neutral_dark,
     float: 'right',
     marginTop: 35,
     cursor: 'pointer',

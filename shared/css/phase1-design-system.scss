@@ -91,27 +91,6 @@ p {
 }
 
 #homepage-container {
-  #classroom-sections {
-    table {
-      th {
-        color: $neutral_white !important;
-        background-color: $neutral_dark !important;
-        i {
-          color: $neutral_white !important;
-        }
-      }
-      td {
-        color: $neutral_dark;
-        background-color: $neutral_light;
-
-        i {
-          color: $neutral_dark !important;
-        }
-
-      }
-    }
-  }
-
   .project_card {
     > div {
       background-color: $neutral_light !important;
@@ -127,6 +106,27 @@ p {
     div {
       background-color: $neutral_light !important;
       color: $neutral_dark !important;
+    }
+  }
+}
+
+#classroom-sections, #uitest-personal-projects {
+  table {
+    th {
+      color: $neutral_white !important;
+      background-color: $neutral_dark !important;
+      i {
+        color: $neutral_white !important;
+      }
+    }
+    td {
+      color: $neutral_dark;
+      background-color: $neutral_light;
+
+      i {
+        color: $neutral_dark !important;
+      }
+
     }
   }
 }
