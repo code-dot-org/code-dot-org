@@ -34,7 +34,7 @@ h6 {
   font-family: $gotham-bold;
 }
 
-.courseblock-tall {
+.tutorial-block, .courseblock-tall {
   background-color: $neutral_light;
 }
 
@@ -129,4 +129,114 @@ p {
 
     }
   }
+}
+
+.courseexplorer {
+  .grouprow {
+    background-color: $neutral_dark;
+    h6 {
+      color: $neutral_white;
+    }
+  }
+  .graderow {
+    background-color: $neutral_light !important;
+    &.numbered {
+      color: $neutral_dark;
+    }
+  }
+
+  .courserow {
+    background-color: $neutral_dark70;
+  }
+
+  .arrow_box {
+    background-color: $neutral_white;
+    .arrow_box_content {
+      color: $neutral_dark;
+      .description, a {
+        color: $neutral_dark;
+        a {
+          font-family: $gotham-extra-bold;
+          text-decoration: underline;
+        }
+      }
+      .launch {
+        font-family: $gotham-bold;
+        font-size: 1em !important;
+        padding: 10px 20px;
+        height: auto;
+        margin-right: 0;
+        background-color: $brand_secondary_default;
+        border: 2px solid $brand_secondary_default;
+        color: $neutral_white;
+
+        &:hover {
+          background-color: $brand_secondary_dark;
+        }
+        &:focus {
+          border: 3px solid $brand_primary_default;
+        }
+
+        &:disabled {
+          color: $neutral_white;
+          border-color: $neutral_dark20;
+          background-color: $neutral_dark20;
+          cursor: not-allowed;
+        }
+      }
+
+      .course-explorer-gray-button {
+        font-family: $gotham-bold;
+        font-size: 1em !important;
+        color: $neutral_dark;
+        background-color: $neutral_white;
+        border: 2px solid $neutral_dark;
+        border-radius: 4px;
+
+        &:hover {
+          background-color: $neutral_dark10;
+        }
+
+        &:focus {
+          border: 3px solid $brand_primary_default;
+        }
+
+        &:disabled {
+          color: $neutral_dark20;
+          border-color: $neutral_dark20;
+          background-color: $neutral_white;
+          cursor: not-allowed;
+        }
+      }
+    }
+  }
+
+  .professional-learning {
+    background-color: $brand_primary_default;
+    color: $neutral_white;
+
+    .course-explorer-gray-button {
+      font-family: $gotham-bold;
+      font-size: .8em !important;
+      background-color: $brand_primary_default;
+      border: 2px solid $neutral_white;
+      color: $neutral_white;
+      box-shadow: none;
+
+      &:hover {
+        background-color: $brand_primary_dark;
+      }
+      &:focus {
+        border: 3px solid $brand_primary_default;
+      }
+
+      &:disabled {
+        color: $neutral_white;
+        border-color: $neutral_dark20;
+        background-color: $neutral_dark20;
+        cursor: not-allowed;
+      }
+    }
+  }
+
 }

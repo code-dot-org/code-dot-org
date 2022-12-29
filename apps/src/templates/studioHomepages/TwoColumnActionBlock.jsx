@@ -23,7 +23,8 @@ export class UnconnectedTwoColumnActionBlock extends Component {
         url: PropTypes.string.isRequired,
         text: PropTypes.string.isRequired,
         target: PropTypes.string,
-        id: PropTypes.string
+        id: PropTypes.string,
+        color: PropTypes.oneOf(Object.values(Button.ButtonColor))
       })
     ),
     backgroundColor: PropTypes.string,
@@ -83,7 +84,9 @@ export class UnconnectedTwoColumnActionBlock extends Component {
                   <Button
                     __useDeprecatedTag
                     href={button.url}
-                    color={Button.ButtonColor.brandSecondaryDefault}
+                    color={
+                      button.color || Button.ButtonColor.brandSecondaryDefault
+                    }
                     text={button.text}
                     target={button.target}
                     id={button.id}
@@ -152,7 +155,8 @@ export class AdministratorResourcesActionBlock extends Component {
           {
             id: 'your_school_administrators',
             url: pegasus('/administrators'),
-            text: i18n.yourSchoolAdminButton()
+            text: i18n.yourSchoolAdminButton(),
+            color: Button.ButtonColor.neutralDark
           }
         ]}
       />
@@ -237,7 +241,7 @@ const styles = {
     color: color.neutral_dark
   },
   textItem: {
-    border: `1px solid ${color.neutral_dark}`,
+    border: `1px solid ${color.neutral_dark20}`,
     backgroundColor: color.neutral_light,
     padding: 25,
     minHeight: 281,
