@@ -238,5 +238,40 @@ p {
       }
     }
   }
+}
 
+.hoc-overview-page {
+  color: $neutral_dark;
+  font-size: 14px;
+
+  .hoc-skinny-banner {
+    p {
+      color: #fff;
+    }
+  }
+
+  .tutorial-gray {
+    font-family: $gotham-bold;
+    font-size: 1em !important;
+    padding: 10px 20px;
+    height: auto;
+    margin-right: 0;
+    background-color: $brand_secondary_default;
+    border: 2px solid $brand_secondary_default;
+    color: $neutral_white;
+
+    &:hover {
+      background-color: $brand_secondary_dark;
+    }
+    &:focus {
+      border: 3px solid $brand_primary_default;
+    }
+
+    &:disabled {
+      color: $neutral_white;
+      border-color: $neutral_dark20;
+      background-color: $neutral_dark20;
+      cursor: not-allowed;
+    }
+  }
 }

@@ -12,9 +12,11 @@ theme: responsive
 - js_locale = request.locale.to_s.downcase.tr('-', '_')
 %script{src: webpack_asset_path("js/#{js_locale}/common_locale.js")}
 
-%div{dir: language_dir_class}
+%link{href: "/shared/css/phase1-design-system.css", rel: "stylesheet"}
 
-  %h1= I18n.t(:hoc_overview_title)
+%div.hoc-overview-page{dir: language_dir_class}
+
+  %h2= I18n.t(:hoc_overview_title)
   %aside.hoc-skinny-banner
     .wrapper
       %h1=hoc_s(:hoc2022_codeorg_title)
