@@ -93,6 +93,10 @@ module.exports.initCourseExplorer = function() {
   $('.arrow_box_close').click(function() {
     const courseIndex = $(this).attr('data-courseindex');
     $('.courseextra-' + courseIndex).slideUp();
+    $(`.course-${courseIndex} .clicktag`).css(
+      'background-color',
+      color.neutral_dark70
+    );
     $('.course-' + courseIndex + ' .arrow-down').css('display', 'inline-block');
     $('.course-' + courseIndex + ' .arrow-up').hide();
     courseShowingIndex = -1;

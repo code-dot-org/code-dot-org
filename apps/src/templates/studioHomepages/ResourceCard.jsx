@@ -94,7 +94,7 @@ class ResourceCard extends Component {
 const styles = {
   card: {
     height: 250,
-    width: 300,
+    width: 308,
     background: color.neutral_light,
     border: `1px solid ${color.neutral_dark20}`
   },
