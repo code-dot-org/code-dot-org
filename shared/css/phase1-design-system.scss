@@ -244,16 +244,46 @@ p {
   color: $neutral_dark;
   font-size: 14px;
 
+  h3 {
+    color: $neutral_dark;
+  }
+
   .hoc-skinny-banner {
     p {
       color: #fff;
     }
   }
 
+  .tutorial-info {
+    background-color: $neutral_light;
+    border: 1px solid $neutral_dark20;
+
+    .tutorial-info-guide a {
+      color: $brand_secondary_default;
+    }
+  }
+
+  .full-resource-block {
+    border: 1px solid $neutral_dark20;
+    > a {
+      > img {
+        border: none !important;
+      }
+    }
+
+    .activities-info {
+      border-left: 1px solid $neutral_dark20;
+      background-color: $neutral_light;
+      color: $neutral_dark;
+      h2 {
+        color: $neutral_dark;
+      }
+    }
+  }
   .tutorial-gray {
     font-family: $gotham-bold;
     font-size: 1em !important;
-    padding: 10px 20px;
+    padding: 10px 16px;
     height: auto;
     margin-right: 0;
     background-color: $brand_secondary_default;
@@ -272,6 +302,12 @@ p {
       border-color: $neutral_dark20;
       background-color: $neutral_dark20;
       cursor: not-allowed;
+    }
+  }
+
+  .course-container {
+    .teacher-guide a {
+      color: $brand_secondary_default;
     }
   }
 }
