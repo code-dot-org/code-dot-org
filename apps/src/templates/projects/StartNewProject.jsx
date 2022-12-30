@@ -85,7 +85,7 @@ export default class StartNewProject extends React.Component {
           <Button
             id="uitest-view-full-list"
             onClick={this.toggleShowFullList}
-            color={Button.ButtonColor.gray}
+            color={Button.ButtonColor.neutralDark}
             icon={showFullList ? 'caret-up' : 'caret-down'}
             text={showFullList ? i18n.hideFullList() : i18n.viewFullList()}
             style={styles.button}
@@ -145,7 +145,7 @@ const styles = {
     paddingBottom: 10,
     fontSize: 16,
     fontFamily: '"Gotham 4r"',
-    color: color.charcoal,
+    color: color.neutral_dark,
     marginBottom: -10
   },
   spacer: {
