@@ -29,6 +29,13 @@
   padding: 3px 6px;
   font-size: 14px;
   min-width: 120px;
+
+  &:disabled {
+    cursor: not-allowed;
+    &:active {
+      border: none !important;
+    }
+  }
 }
 
 #continueButton {
