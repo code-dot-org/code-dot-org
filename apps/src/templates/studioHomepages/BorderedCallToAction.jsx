@@ -97,8 +97,8 @@ const styles = {
     flexShrink: 0,
     marginLeft: extraSpace,
     marginRight: extraSpace,
-    paddingLeft: extraSpace,
-    paddingRight: extraSpace
+    paddingLeft: 16,
+    paddingRight: 16
   }
 };
 

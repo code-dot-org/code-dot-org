@@ -173,7 +173,7 @@ const styles = {
     lineHeight: '22px',
     fontFamily: 'Gotham 4r',
     zIndex: 2,
-    color: color.charcoal,
+    color: color.neutral_dark,
     width: '100%',
     marginTop: -10,
     marginBottom: 10,
@@ -182,7 +182,7 @@ const styles = {
   linkToViewAll: {
     color: color.neutral_dark,
     fontSize: 14,
-    fontFamily: 'Gotham 4r',
+    fontFamily: `'Gotham 5r', sans-serif`,
     marginTop: -2,
     display: 'inline'
   },

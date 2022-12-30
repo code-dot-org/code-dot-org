@@ -56,7 +56,7 @@ export class UnconnectedTwoColumnActionBlock extends Component {
 
     return (
       <div id={id} style={styles.container}>
-        {heading && <div style={styles.heading}>{heading}</div>}
+        {heading && <h4 style={styles.heading}>{heading}</h4>}
         <div style={styles.container}>
           {responsiveSize === 'lg' && (
             <div style={{float, width}}>

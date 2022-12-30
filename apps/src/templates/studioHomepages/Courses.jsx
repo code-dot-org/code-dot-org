@@ -96,6 +96,7 @@ class Courses extends Component {
               __useDeprecatedTag
               href="/users/sign_up"
               color={Button.ButtonColor.gray}
+              style={styles.headerButton}
               text={buttonText}
             />
           )}
@@ -141,6 +142,13 @@ class Courses extends Component {
 const styles = {
   content: {
     maxWidth: styleConstants['content-width']
+  },
+  headerButton: {
+    margin: 'unset',
+    backgroundColor: '#FFFFFF',
+    borderColor: '#FFFFFF',
+    color: '#292F36',
+    fontFamily: `"Gotham 5r", sans-serif`
   }
 };
 

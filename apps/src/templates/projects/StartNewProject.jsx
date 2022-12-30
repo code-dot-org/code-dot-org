@@ -78,7 +78,12 @@ export default class StartNewProject extends React.Component {
 
     return (
       <div>
-        <div style={styles.headingStartNew}>{i18n.projectStartNew()}</div>
+        <h4
+          className="start-new-project-section-heading"
+          style={styles.headingStartNew}
+        >
+          {i18n.projectStartNew()}
+        </h4>
         <NewProjectButtons projectTypes={defaultProjectTypes} />
 
         {canViewFullList && (
@@ -138,7 +143,7 @@ const styles = {
   button: {
     float: 'right',
     margin: '0 1px 0 0',
-    padding: '0 24px'
+    padding: '0 16px'
   },
   headingStartNew: {
     paddingRight: 10,

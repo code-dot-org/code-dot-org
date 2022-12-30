@@ -223,6 +223,7 @@ a:visited,
     &:disabled,
     &[disabled] {
       background-color: $neutral_dark20;
+      border: none;
     }
   }
 

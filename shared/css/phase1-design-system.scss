@@ -211,6 +211,7 @@ p {
       font-size: .8em !important;
       background-color: $brand_primary_default;
       border: 2px solid $neutral_white;
+      border-radius: 4px;
       color: $neutral_white;
       box-shadow: none;
 
@@ -299,6 +300,16 @@ p {
   .course-container {
     .teacher-guide a {
       color: $brand_secondary_default;
+    }
+  }
+}
+
+#projects-page {
+  .container {
+    .start-new-project-section-heading {
+      font-family: $barlow-medium !important;
+      font-size: 1.5em !important;
+      line-height: 1.2 !important;
     }
   }
 }
