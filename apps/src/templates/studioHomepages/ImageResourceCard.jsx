@@ -71,7 +71,7 @@ const styles = {
     marginBottom: 20,
     borderStyle: 'solid',
     borderWidth: 1,
-    borderColor: color.neutral_dark,
+    borderColor: color.neutral_dark20,
     background: color.neutral_light,
     color: color.neutral_dark
   },
