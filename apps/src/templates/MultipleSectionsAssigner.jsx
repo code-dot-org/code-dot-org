@@ -1,22 +1,53 @@
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
+import {connect} from 'react-redux';
 import color from '@cdo/apps/util/color';
 import i18n from '@cdo/locale';
 import BaseDialog from '@cdo/apps/templates/BaseDialog';
 import Button from '@cdo/apps/templates/Button';
+import {sectionForDropdownShape} from '@cdo/apps/templates/teacherDashboard/shapes';
+import TeacherSectionOption from './TeacherSectionOption';
+// import {selectSection} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 
 /**
  * Confirmation dialog for when assigning a script or course from the course or script overview page
  */
-export default class MultipleSectionsAssigner extends Component {
+class MultipleSectionsAssigner extends Component {
   static propTypes = {
     assignmentName: PropTypes.string.isRequired,
     onClose: PropTypes.func.isRequired,
-    onConfirm: PropTypes.func.isRequired
+    onConfirm: PropTypes.func.isRequired,
+    forceReload: PropTypes.bool,
+    courseOfferingId: PropTypes.number,
+    courseVersionId: PropTypes.number,
+    scriptId: PropTypes.number,
+    // Redux
+    sections: PropTypes.arrayOf(sectionForDropdownShape).isRequired,
+
+    // Redux and from Section Assigner
+    // selectSection: PropTypes.func.isRequired,
+    selectedSectionId: PropTypes.number
+  };
+
+  chooseMenuItem = section => {
+    console.log(section + 'was clicked');
   };
 
   render() {
-    const {assignmentName, onClose, onConfirm} = this.props;
+    const {
+      sections,
+      assignmentName,
+      onClose,
+      onConfirm
+      //   forceReload,
+      //   courseOfferingId,
+      //   courseVersionId,
+      //   scriptId,
+      //   selectedSectionId
+    } = this.props;
+    //const selectedSection = sections.find(
+    //  section => section.id === selectedSectionId
+    //);
 
     return (
       <BaseDialog isOpen={true} handleClose={onClose}>
@@ -26,6 +57,15 @@ export default class MultipleSectionsAssigner extends Component {
         <div style={styles.content}>{i18n.chooseSectionsDirections()}</div>
         <div style={styles.header} className="uitest-confirm-assignment-dialog">
           {i18n.yourSectionsList()}
+        </div>
+        <div>
+          {sections &&
+            sections.map(section => (
+              <TeacherSectionOption
+                section={section}
+                onClick={() => this.chooseMenuItem(section)}
+              />
+            ))}
         </div>
         <div style={{textAlign: 'right'}}>
           <Button
@@ -68,3 +108,10 @@ const styles = {
     borderColor: color.lighter_gray
   }
 };
+
+// Export unconnected dialog for unit testing - KT note, don't know why I need this...
+export const UnconnectedMultipleSectionsAssigner = MultipleSectionsAssigner;
+
+export default connect(state => ({
+  // add code here
+}))(MultipleSectionsAssigner);

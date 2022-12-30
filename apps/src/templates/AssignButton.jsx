@@ -5,7 +5,8 @@ import Button from './Button';
 import i18n from '@cdo/locale';
 import {
   assignToSection,
-  testingFunction
+  testingFunction,
+  sectionsForDropdown
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 // KT added function ^^
 import ConfirmHiddenAssignment from '@cdo/apps/templates/courseOverview/ConfirmHiddenAssignment';
@@ -14,6 +15,7 @@ import {
   isScriptHiddenForSection,
   updateHiddenScript
 } from '@cdo/apps/code-studio/hiddenLessonRedux';
+import {sectionForDropdownShape} from '@cdo/apps/templates/teacherDashboard/shapes';
 
 class AssignButton extends React.Component {
   static propTypes = {
@@ -29,7 +31,8 @@ class AssignButton extends React.Component {
     hiddenLessonState: PropTypes.object,
     updateHiddenScript: PropTypes.func.isRequired,
     isRtl: PropTypes.bool,
-    testingFunction: PropTypes.func.isRequired
+    testingFunction: PropTypes.func.isRequired,
+    sectionsForDropdown: PropTypes.arrayOf(sectionForDropdownShape).isRequired
   };
 
   state = {
@@ -121,7 +124,12 @@ class AssignButton extends React.Component {
   render() {
     const {confirmationDialogOpen} = this.state;
     const {assignmentChoiceDialogOpen} = this.state;
-    const {assignmentName, sectionName, isRtl} = this.props;
+    const {
+      assignmentName,
+      sectionName,
+      isRtl,
+      sectionsForDropdown
+    } = this.props;
 
     // Adjust styles if locale is RTL
     const buttonMarginStyle = isRtl
@@ -146,6 +154,7 @@ class AssignButton extends React.Component {
             assignmentName={assignmentName}
             onClose={this.onCloseDialog}
             onConfirm={this.unhideAndAssign}
+            sections={sectionsForDropdown}
           />
         )}
         {confirmationDialogOpen && (
@@ -177,9 +186,15 @@ const styles = {
 export const UnconnectedAssignButton = AssignButton;
 
 export default connect(
-  state => ({
+  (state, ownProps) => ({
     hiddenLessonState: state.hiddenLesson,
-    isRtl: state.isRtl
+    isRtl: state.isRtl,
+    sectionsForDropdown: sectionsForDropdown(
+      state.teacherSections,
+      ownProps.courseOfferingId,
+      ownProps.courseVersionId,
+      state.progress.scriptId
+    )
   }),
   {
     assignToSection,
