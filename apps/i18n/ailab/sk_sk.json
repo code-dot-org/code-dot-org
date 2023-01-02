@@ -203,26 +203,50 @@
     "poutine_toy": {
       "fields": {
         "mushrooms": {
-          "id": "huby"
+          "id": "huby",
+          "description": "Obsahuje poutine aj huby?"
         },
         "lobster": {
-          "id": "homár"
+          "id": "homár",
+          "description": "Obsahuje poutine aj homára?"
+        },
+        "pork": {
+          "id": "bravčové",
+          "description": "Obsahuje poutine aj bravčové?"
         },
         "bacon": {
-          "id": "slanina"
+          "id": "slanina",
+          "description": "Obsahuje poutine aj slaninu?"
         },
         "cheese": {
-          "id": "syr"
+          "id": "syr",
+          "description": "Obsahuje poutine aj syrovú polevu?"
+        },
+        "gravy": {
+          "id": "omáčka",
+          "description": "Obsahuje poutine aj omáčku?"
+        },
+        "scallions": {
+          "id": "šalotky",
+          "description": "Obsahuje poutine aj šalotku?"
         },
         "meat": {
-          "id": "mäso"
+          "id": "mäso",
+          "description": "Obsahuje poutine aj mäso?"
+        },
+        "bell peppers": {
+          "id": "paprika",
+          "description": "Obsahuje poutine aj papriku?"
         },
         "preference": {
-          "id": "preferencia"
+          "id": "preferencia",
+          "description": "Chutí ti poutine?"
         }
       },
       "card": {
+        "description": "Prieskum medzi zákazníkmi v reštaurácii o tom, či majú alebo nemajú radi určité kombinácie poutine.",
         "context": {
+          "potentialUses": "Pomôž novému zákazníkovi vybrať, aký druh poutine by si mal objednať.",
           "potentialMisuses": "Čokoľvek iné ako odporúčania."
         }
       }
@@ -231,6 +255,13 @@
       "fields": {
         "activity": {
           "id": "aktivita"
+        },
+        "make build": {
+          "description": "Čo si myslíš o nasledujúcom výroku: „Páči sa mi robiť a tvoriť veci vlastnými rukami.“?"
+        },
+        "meet people": {
+          "id": "spoznávanie ľudí",
+          "description": "Čo si myslíš o nasledujúcom výroku: „Páči sa mi učiť sa novým veciam a spoznávať nových ľudí.“?"
         },
         "club": {
           "id": "krúžok",
@@ -526,35 +557,78 @@
     "shapes_v2_toy": {
       "fields": {
         "sides": {
-          "id": "Strany"
+          "id": "Strany",
+          "description": "Počet strán, ktoré má tvar"
+        },
+        "border color": {
+          "id": "farba ohraničenia",
+          "description": "Farba obrysu tvaru"
+        },
+        "fill color": {
+          "id": "farba výplne",
+          "description": "Farba vnútorného priestoru tvaru"
+        },
+        "background color": {
+          "id": "farba pozadia",
+          "description": "Farba pozadia za tvarom"
         },
         "size": {
-          "id": "veľkosť"
+          "id": "veľkosť",
+          "description": "Buď veľké, alebo malé"
+        },
+        "shape": {
+          "id": "tvar",
+          "description": "Typ tvaru"
+        }
+      },
+      "card": {
+        "description": "Extrahované prvky z množiny vizuálnych údajov predstavujúcej rôzne tvary.",
+        "context": {
+          "potentialUses": "Používa sa na trénovanie AI Bota na klasifikáciu tvarov."
         }
       }
     },
     "salad_toy": {
       "fields": {
         "tomato": {
-          "id": "paradajka"
+          "id": "paradajka",
+          "description": "Obsahuje šalát paradajky?"
         },
         "avocado": {
-          "id": "avokádo"
+          "id": "avokádo",
+          "description": "Obsahuje šalát avokádo?"
+        },
+        "ranch": {
+          "id": "omáčka ranch",
+          "description": "Obsahuje šalát omáčku ranch?"
+        },
+        "italian dressing": {
+          "id": "taliansky dresing",
+          "description": "Obsahuje šalát taliansky dresing?"
         },
         "chicken": {
-          "id": "kurča"
+          "id": "kurča",
+          "description": "Obsahuje šalát kuracie mäso?"
+        },
+        "seeds": {
+          "id": "semienka",
+          "description": "Obsahuje šalát semienka?"
         },
         "fruit": {
-          "id": "ovocie"
+          "id": "ovocie",
+          "description": "Obsahuje šalát ovocie?"
         },
         "beans": {
-          "id": "fazuľa"
+          "id": "fazuľa",
+          "description": "Obsahuje šalát fazuľu?"
         },
         "cheese": {
-          "id": "syr"
+          "id": "syr",
+          "description": "Obsahuje šalát syr?"
         },
         "preference": {
-          "id": "preferencia"
+          "id": "preferencia",
+          "description": "Chutí ti šalát?"
         }
       },
       "card": {
@@ -897,14 +971,137 @@
           "id": "Osamelosť",
           "description": "Cítim sa osamelo."
         },
+        "History": {
+          "id": "História",
+          "description": "Páči sa mi história"
+        },
+        "Psychology": {
+          "id": "Psychológia",
+          "description": "Páči sa mi psychológia"
+        },
+        "Politics": {
+          "id": "Politika",
+          "description": "Páči sa mi politika"
+        },
+        "Mathematics": {
+          "id": "Matematika",
+          "description": "Páči sa mi matematika"
+        },
+        "Physics": {
+          "id": "Fyzika",
+          "description": "Páči sa mi fyzika"
+        },
         "Internet": {
-          "id": "Internet"
+          "id": "Internet",
+          "description": "Páči sa mi surfovanie na internete"
+        },
+        "PC": {
+          "id": "Počítače",
+          "description": "Páči sa mi používanie počítača"
+        },
+        "Economy Management": {
+          "id": "Ekonomický manažment",
+          "description": "Páči sa mi ekonomický manažment"
+        },
+        "Biology": {
+          "id": "Biológia",
+          "description": "Páči sa mi biológia"
+        },
+        "Chemistry": {
+          "id": "Chémia",
+          "description": "Páči sa mi chémia"
+        },
+        "Reading": {
+          "id": "Čítanie",
+          "description": "Páči sa mi čítanie"
+        },
+        "Geography": {
+          "id": "Geografia",
+          "description": "Páči sa mi geografia"
+        },
+        "Foreign languages": {
+          "id": "Cudzie jazyky",
+          "description": "Páči sa mi učenie cudzích jazykov "
+        },
+        "Medicine": {
+          "id": "Medicína",
+          "description": "Páči sa mi medicína"
+        },
+        "Law": {
+          "id": "Právo",
+          "description": "Páči sa mi právo"
+        },
+        "Cars": {
+          "id": "Autá",
+          "description": "Páčia sa mi autá "
+        },
+        "Art exhibitions": {
+          "id": "Výstavy umeleckých diel",
+          "description": "Páčia sa mi výstavy umeleckých diel"
+        },
+        "Religion": {
+          "id": "Náboženstvo",
+          "description": "Páči sa mi náboženstvo"
+        },
+        "Countryside, outdoors": {
+          "id": "Život na vidieku, outdoorové aktivity",
+          "description": "Páči sa mi život na vidieku, outdoorové aktivity"
+        },
+        "Dancing": {
+          "id": "Tanec",
+          "description": "Páči sa mi tanec"
+        },
+        "Musical instruments": {
+          "id": "Hudobné nástroje",
+          "description": "Páčia sa mi hudobné nástroje"
         },
         "Writing": {
-          "id": "Písanie"
+          "id": "Písanie",
+          "description": "Písanie"
+        },
+        "Passive sport": {
+          "id": "Pasívne športy",
+          "description": "Páčia sa mi pasívne športy"
+        },
+        "Active sport": {
+          "id": "Aktívne športovanie",
+          "description": "Páči sa mi aktívne športovanie"
+        },
+        "Gardening": {
+          "id": "Práce na záhrade",
+          "description": "Páčia sa mi práce na záhrade"
+        },
+        "Celebrities": {
+          "id": "Celebrity",
+          "description": "Páčia sa mi celebrity"
+        },
+        "Shopping": {
+          "id": "Nakupovanie",
+          "description": "Páči sa mi nakupovanie"
+        },
+        "Science and technology": {
+          "id": "Veda a technológie",
+          "description": "Páčia sa mi veda a technológie"
+        },
+        "Theatre": {
+          "id": "Divadlo",
+          "description": "Páči sa mi divadlo"
+        },
+        "Fun with friends": {
+          "id": "Zábava s priateľmi",
+          "description": "Páči sa mi zábava s priateľmi"
+        },
+        "Adrenaline sports": {
+          "id": "Adrenalínové športy",
+          "description": "Páčia sa mi adrenalínové športy"
+        },
+        "Pets": {
+          "id": "Domáce zvieratá",
+          "description": "Páčia sa mi domáce zvieratá"
         }
       },
       "card": {
+        "description": "Množina údajov z prieskumu zozbieraných slovenskými študentmi vo veku 18 – 21 rokov na FSEV UK. Väčšina odpovedí je hodnotená na stupnici od 1 do 5. Napríklad: „Ohodnoťte od 1 (rozhodne nesúhlasím) do 5 (rozhodne súhlasím): Často študujem alebo pracujem aj vo voľnom čase“. Ide o podmnožinu väčšej množiny údajov, ktorá sa zameriava len na osobné záujmy",
         "context": {
           "potentialUses": "Napríklad predpovedať osobnostné črty niekoho na základe iných vlastností.",
           "potentialMisuses": "Používanie demografických informácií z obmedzenej množiny údajov na vytváranie predpokladov o podskupinách ľudí: napríklad otázky týkajúce sa predpovedí o tom, ktoré pohlavie má väčšiu pravdepodobnosť, že sa niečoho bude báť."
@@ -918,6 +1115,9 @@
         },
         "Country": {
           "id": "Krajina"
+        },
+        "Genre": {
+          "id": "Žáner"
         },
         "Name": {
           "id": "Meno"
@@ -963,11 +1163,47 @@
     },
     "songs": {
       "fields": {
+        "Genre": {
+          "id": "Žáner",
+          "description": "Žáner skladby."
+        },
         "Artist": {
-          "id": "Umelec"
+          "id": "Umelec",
+          "description": "Meno interpreta."
+        },
+        "Title": {
+          "id": "Názov",
+          "description": "Názov skladby."
+        },
+        "Loudness score": {
+          "id": "Hodnotenie hlasitosti",
+          "description": "Hodnotenie hlasitosti skladby, kde nízke záporné čísla ako -13 znamenajú relatívne tichý zvuk a vysoké záporné čísla ako -5 znamenajú relatívne hlasný zvuk."
+        },
+        "Tempo in beats per minute": {
+          "id": "Tempo v úderoch za minútu",
+          "description": "Tempo skladby v úderoch za minútu (BPM). Vyššie čísla znamenajú rýchlejšie a energickejšie skladby."
+        },
+        "Duration in seconds": {
+          "id": "Trvanie v sekundách",
+          "description": "Dĺžka skladby v sekundách."
         },
         "Year": {
-          "id": "Rok"
+          "id": "Rok",
+          "description": "Rok vydania skladby."
+        },
+        "Weeks on the Billboard Top 100": {
+          "id": "Týždne v rebríčku Billboard Top 100",
+          "description": "Celkový počet týždňov, počas ktorých sa skladba nachádzala v rebríčku Billboard Top 100."
+        },
+        "Billboard rank peak": {
+          "id": "Najvyššia priečka v rebríčku Billboard",
+          "description": "Najvyššia pozícia, ktorú skladba dosiahla v rebríčku Billboard Top 100."
+        }
+      },
+      "card": {
+        "description": "Náhodný výber populárnych piesní s informáciami o rebríčku Billboard Top 100 a ďalšími charakteristikami.",
+        "context": {
+          "potentialUses": "Predpovedaj, akým veľkým hitom sa skladba stala na základe jej žánru a ďalších faktorov."
         }
       }
     },
@@ -1048,12 +1284,20 @@
         "activity": {
           "id": "aktivita"
         },
+        "make build": {
+          "description": "Čo si myslíš o nasledujúcom výroku: „Páči sa mi robiť a tvoriť veci vlastnými rukami.“?"
+        },
+        "meet people": {
+          "id": "spoznávanie ľudí",
+          "description": "Čo si myslíš o nasledujúcom výroku: „Páči sa mi učiť sa novým veciam a spoznávať nových ľudí.“?"
+        },
         "club": {
           "id": "krúžok",
           "description": "Na aký krúžok sa chcš prihlásiť alebo na aký už chodíš?"
         }
       },
       "card": {
+        "description": "Zoey požiadala všetkých na hodine angličtiny, aby vyplnili dotazník, a všetci ho vyplnili!",
         "context": {
           "potentialUses": "Otázky pomôžu odporučiť krúžok, na ktorý sa máš prihlásiť, na základe tvojich záujmov a osobnosti.",
           "potentialMisuses": "Údaje pochádzajú len od ľudí z našej školy a komunity – používaj ich obozretne v iných školách."
@@ -1303,11 +1547,133 @@
           "id": "Akčné",
           "description": "Páčia sa mi akčné filmy"
         },
+        "History": {
+          "id": "História",
+          "description": "Páči sa mi história"
+        },
+        "Psychology": {
+          "id": "Psychológia",
+          "description": "Páči sa mi psychológia"
+        },
+        "Politics": {
+          "id": "Politika",
+          "description": "Páči sa mi politika"
+        },
+        "Mathematics": {
+          "id": "Matematika",
+          "description": "Páči sa mi matematika"
+        },
+        "Physics": {
+          "id": "Fyzika",
+          "description": "Páči sa mi fyzika"
+        },
         "Internet": {
-          "id": "Internet"
+          "id": "Internet",
+          "description": "Páči sa mi surfovanie na internete"
+        },
+        "PC": {
+          "id": "Počítače",
+          "description": "Páči sa mi používanie počítača"
+        },
+        "Economy Management": {
+          "id": "Ekonomický manažment",
+          "description": "Páči sa mi ekonomický manažment"
+        },
+        "Biology": {
+          "id": "Biológia",
+          "description": "Páči sa mi biológia"
+        },
+        "Chemistry": {
+          "id": "Chémia",
+          "description": "Páči sa mi chémia"
+        },
+        "Reading": {
+          "id": "Čítanie",
+          "description": "Páči sa mi čítanie"
+        },
+        "Geography": {
+          "id": "Geografia",
+          "description": "Páči sa mi geografia"
+        },
+        "Foreign languages": {
+          "id": "Cudzie jazyky",
+          "description": "Páči sa mi učenie cudzích jazykov "
+        },
+        "Medicine": {
+          "id": "Medicína",
+          "description": "Páči sa mi medicína"
+        },
+        "Law": {
+          "id": "Právo",
+          "description": "Páči sa mi právo"
+        },
+        "Cars": {
+          "id": "Autá",
+          "description": "Páčia sa mi autá "
+        },
+        "Art exhibitions": {
+          "id": "Výstavy umeleckých diel",
+          "description": "Páčia sa mi výstavy umeleckých diel"
+        },
+        "Religion": {
+          "id": "Náboženstvo",
+          "description": "Páči sa mi náboženstvo"
+        },
+        "Countryside, outdoors": {
+          "id": "Život na vidieku, outdoorové aktivity",
+          "description": "Páči sa mi život na vidieku, outdoorové aktivity"
+        },
+        "Dancing": {
+          "id": "Tanec",
+          "description": "Páči sa mi tanec"
+        },
+        "Musical instruments": {
+          "id": "Hudobné nástroje",
+          "description": "Páčia sa mi hudobné nástroje"
         },
         "Writing": {
-          "id": "Písanie"
+          "id": "Písanie",
+          "description": "Písanie"
+        },
+        "Passive sport": {
+          "id": "Pasívne športy",
+          "description": "Páčia sa mi pasívne športy"
+        },
+        "Active sport": {
+          "id": "Aktívne športovanie",
+          "description": "Páči sa mi aktívne športovanie"
+        },
+        "Gardening": {
+          "id": "Práce na záhrade",
+          "description": "Páčia sa mi práce na záhrade"
+        },
+        "Celebrities": {
+          "id": "Celebrity",
+          "description": "Páčia sa mi celebrity"
+        },
+        "Shopping": {
+          "id": "Nakupovanie",
+          "description": "Páči sa mi nakupovanie"
+        },
+        "Science and technology": {
+          "id": "Veda a technológie",
+          "description": "Páčia sa mi veda a technológie"
+        },
+        "Theatre": {
+          "id": "Divadlo",
+          "description": "Páči sa mi divadlo"
+        },
+        "Fun with friends": {
+          "id": "Zábava s priateľmi",
+          "description": "Páči sa mi zábava s priateľmi"
+        },
+        "Adrenaline sports": {
+          "id": "Adrenalínové športy",
+          "description": "Páčia sa mi adrenalínové športy"
+        },
+        "Pets": {
+          "id": "Domáce zvieratá",
+          "description": "Páčia sa mi domáce zvieratá"
         },
         "Flying": {
           "id": "Lietanie",
@@ -1408,10 +1774,34 @@
     "shapes_v1_toy": {
       "fields": {
         "sides": {
-          "id": "Strany"
+          "id": "Strany",
+          "description": "Počet strán, ktoré má tvar"
+        },
+        "border color": {
+          "id": "farba ohraničenia",
+          "description": "Farba obrysu tvaru"
+        },
+        "fill color": {
+          "id": "farba výplne",
+          "description": "Farba vnútorného priestoru tvaru"
         },
         "size": {
-          "id": "veľkosť"
+          "id": "veľkosť",
+          "description": "Buď veľké, alebo malé"
+        },
+        "background color": {
+          "id": "farba pozadia",
+          "description": "Farba pozadia za tvarom"
+        },
+        "shape": {
+          "id": "tvar",
+          "description": "Typ tvaru"
+        }
+      },
+      "card": {
+        "description": "Extrahované prvky z množiny vizuálnych údajov predstavujúcej rôzne tvary.",
+        "context": {
+          "potentialUses": "Používa sa na trénovanie AI Bota na klasifikáciu tvarov."
         }
       }
     },

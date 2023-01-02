@@ -7,6 +7,14 @@
   "catVariables": "Variables",
   "designWorkspaceHeader": "Workspace: ",
   "dropletBlock_drawImage_param1": "×",
+  "dropletBlock_radioButton_param2": "အုပ်စု",
+  "dropletBlock_setBlue_param3": "အပြာရောင်တန်ဖိုး",
+  "dropletBlock_setChecked_param1": "စစ်ဆေးပြီးပြီ။",
+  "dropletBlock_setGreen_param3": "အစိမ်းရောင်တန်ဖိုး",
+  "dropletBlock_setKeyValue_param1_description": "သိမ်းဆည်းထားရမယ့် အချက်အလက်တွေပေါ့။",
+  "dropletBlock_setKeyValueSync_param1": "တန်ဖိုး",
+  "dropletBlock_setKeyValueSync_param1_description": "သိမ်းဆည်းထားရမယ့် အချက်အလက်တွေပေါ့။",
+  "dropletBlock_setNumber_description": "ဖော်ပြထားတဲ့အရာအတွက် နံပါတ်တန်ဖိုး သတ်မှတ်ပေးပါ။",
   "dropletBlock_setRGB_param3": "အနီ",
   "dropletBlock_setRGB_param4": "အစိမ်း",
   "dropletBlock_setRGB_param5": "အပြာရောင်",
@@ -15,5 +23,6 @@
   "dropletBlock_turnRight_param0_description": "ညာဘက်ထောင့်သို့ ရွှေ့ရန်",
   "dropletBlock_turnTo_description": "လိပ်၏လမ်းကြောင်းကို တိကျသေချာသောထောင့်အနေအထားသို့ပြောင်းပါ။ ၀ သည် အပေါ်ဘက်၊ ၉၀ သည် ညာဘက်၊ ၁၈၀ သည် အောက်ဘက်၊ ၂၇၀ သည် ညာဘက်ဖြစ်ပါသည်။",
   "dropletBlock_turnTo_param0_description": "လိပ်၏ဦးတည်ချက်သတ်မှတ်ရန် ထောင့်အသစ်။",
-  "dropletBlock_updateRecord_description": "အပ်လပ်(ဘ်)၏ အချက်အလက်ကို အသုံးပြု၍ ဇယားကွက်တွင်ပေးထားသောမှတ်တမ်းကို နာမည်အသစ်ဖြင့် အဆင့်မြင့်ပါ။ မှတ်တမ်းသည် ၎င်း၏ အိုင်ဒီအကွက်ဖြင့် ထူးခြာစွာခွဲထွက်နေရပါမည်။  ခေါ်ဆိုမှုပြီးဆုံးပါက ပြန်လည်ခေါ်ဆိုခြင်းလုပ်ဆောင်ချက်ကို ခေါ်ပြီးပြီဖြစ်ပါသည်။"
+  "dropletBlock_updateRecord_description": "အပ်လပ်(ဘ်)၏ အချက်အလက်ကို အသုံးပြု၍ ဇယားကွက်တွင်ပေးထားသောမှတ်တမ်းကို နာမည်အသစ်ဖြင့် အဆင့်မြင့်ပါ။ မှတ်တမ်းသည် ၎င်း၏ အိုင်ဒီအကွက်ဖြင့် ထူးခြာစွာခွဲထွက်နေရပါမည်။  ခေါ်ဆိုမှုပြီးဆုံးပါက ပြန်လည်ခေါ်ဆိုခြင်းလုပ်ဆောင်ချက်ကို ခေါ်ပြီးပြီဖြစ်ပါသည်။",
+  "note": "မှတ်ချက်"
 }

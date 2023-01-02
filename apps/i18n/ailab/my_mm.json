@@ -1,113 +1,17 @@
 {
+  "selectDataset": "သင်အသုံးပြုလိုသော ဒေတာအစုအဖွဲ့ကို ရွေးခြယ်ပါ။",
   "datasets": {
-    "medical_priority": {
+    "shapes_v2_toy": {
       "fields": {
-        "age": {
-          "id": "အသက်"
+        "size": {
+          "id": "အရွယ်အစား"
         }
       }
     },
-    "shoe_survey_toy": {
+    "shapes_v1_toy": {
       "fields": {
-        "weather": {
-          "id": "မိုး​လေဝသ"
-        }
-      }
-    },
-    "insurance_cost": {
-      "fields": {
-        "age": {
-          "id": "အသက်"
-        }
-      }
-    },
-    "nutrition": {
-      "fields": {
-        "Description": {
-          "id": "ဖော်ပြချက်"
-        }
-      }
-    },
-    "salad_toy": {
-      "fields": {
-        "chicken": {
-          "id": "ကြက်ကလေး"
-        }
-      }
-    },
-    "billionaires": {
-      "fields": {
-        "Age": {
-          "id": "အသက်"
-        },
-        "Gender": {
-          "id": "က်ား/မ"
-        }
-      }
-    },
-    "student_alcohol_consumption": {
-      "fields": {
-        "age": {
-          "id": "အသက်"
-        }
-      }
-    },
-    "naan_toy": {
-      "fields": {
-        "chicken": {
-          "id": "ကြက်ကလေး"
-        }
-      }
-    },
-    "census_part": {
-      "fields": {
-        "age": {
-          "id": "အသက်"
-        }
-      }
-    },
-    "movies": {
-      "fields": {
-        "Score": {
-          "id": "အမှတ်"
-        },
-        "Country": {
-          "id": "နိုင်ငံ"
-        },
-        "Name": {
-          "id": "အမည္"
-        }
-      }
-    },
-    "student_survey": {
-      "fields": {
-        "Country": {
-          "id": "နိုင်ငံ"
-        },
-        "Achievements": {
-          "id": "တိုးတက်မှုများ"
-        },
-        "Age": {
-          "id": "အသက်",
-          "description": "အသက်"
-        },
-        "Gender": {
-          "id": "က်ား/မ",
-          "description": "က်ား/မ"
-        }
-      }
-    },
-    "heart": {
-      "fields": {
-        "Age": {
-          "id": "အသက်"
-        }
-      }
-    },
-    "loneliness_music": {
-      "fields": {
-        "Country": {
-          "id": "နိုင်ငံ"
+        "size": {
+          "id": "အရွယ်အစား"
         }
       }
     }
