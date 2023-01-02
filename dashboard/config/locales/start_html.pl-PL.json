@@ -860,7 +860,10 @@
           "long": "długi",
           "low": "niski",
           "high": "wysoki",
-          "pulse": "puls"
+          "pulse": "puls",
+          "LED Controls": "Sterowanie LED",
+          "Press the left buttonto control the buzzer": "Naciśnij lewy przycisk, aby sterować brzęczykiem",
+          "Use the toggle switch to control the LED": "Użyj przełącznika, aby sterować LED"
         },
         "CSD U6 - Combine Inputs - ChalG_2222": {
           "Red": "Czerwona/Czerwone",
@@ -883,7 +886,8 @@
         },
         "CSD U6 - Combine Inputs - PracD_2222": {
           "quiet": "cichy",
-          "Test": "Test"
+          "Test": "Test",
+          "loud": "głośno"
         },
         "CSD U6 - Combine Inputs - SB2_2222": {
           "short": "krótki",
@@ -1528,7 +1532,8 @@
           "constant": "stała",
           "pulse": "puls",
           "Press board buttons to turn buzzer on and off. ": "Naciśnij przyciski tablicy, aby włączyć i wyłączyć brzęczyk. ",
-          "Use the toggle switch to turn the LED on and off.": "Użyj przełącznika, aby włączyć i wyłączyć diodę LED."
+          "Use the toggle switch to turn the LED on and off.": "Użyj przełącznika, aby włączyć i wyłączyć diodę LED.",
+          "LED Controls": "Sterowanie LED"
         },
         "CSD U6 getters debug_2018": {
           "fast": "szybko",
@@ -1540,7 +1545,8 @@
           "constant": "stała",
           "pulse": "puls",
           "Press board buttons to turn buzzer on and off. ": "Naciśnij przyciski tablicy, aby włączyć i wyłączyć brzęczyk. ",
-          "Use the toggle switch to turn the LED on and off.": "Użyj przełącznika, aby włączyć i wyłączyć diodę LED."
+          "Use the toggle switch to turn the LED on and off.": "Użyj przełącznika, aby włączyć i wyłączyć diodę LED.",
+          "LED Controls": "Sterowanie LED"
         },
         "CSD U6 getters debug_2019": {
           "fast": "szybko",
@@ -1552,7 +1558,8 @@
           "constant": "stała",
           "pulse": "puls",
           "Press board buttons to turn buzzer on and off. ": "Naciśnij przyciski tablicy, aby włączyć i wyłączyć brzęczyk. ",
-          "Use the toggle switch to turn the LED on and off.": "Użyj przełącznika, aby włączyć i wyłączyć diodę LED."
+          "Use the toggle switch to turn the LED on and off.": "Użyj przełącznika, aby włączyć i wyłączyć diodę LED.",
+          "LED Controls": "Sterowanie LED"
         },
         "CSD U6 getters debug_2021": {
           "fast": "szybko",
@@ -1564,7 +1571,8 @@
           "constant": "stała",
           "pulse": "puls",
           "Press board buttons to turn buzzer on and off. ": "Naciśnij przyciski tablicy, aby włączyć i wyłączyć brzęczyk. ",
-          "Use the toggle switch to turn the LED on and off.": "Użyj przełącznika, aby włączyć i wyłączyć diodę LED."
+          "Use the toggle switch to turn the LED on and off.": "Użyj przełącznika, aby włączyć i wyłączyć diodę LED.",
+          "LED Controls": "Sterowanie LED"
         },
         "CSD U6 interval": {
           "short": "krótki",
@@ -2907,7 +2915,8 @@
           "Pet Recommendation: Fish!": "Rekomendacja zwierzęcia domowego: Ryba!",
           "Pet Recommendation: Iguana!": "Rekomendacja zwierzęcia domowego: Iguana!",
           "Pet Recommendation: Parakeet": "Rekomendacja zwierzęcia domowego: Papużka",
-          "Pet Recommendation: Dog!": "Rekomendacja zwierzęcia domowego: Pies!"
+          "Pet Recommendation: Dog!": "Rekomendacja zwierzęcia domowego: Pies!",
+          "Sort Of": "Coś w rodzaju"
         },
         "ml-models in applab-choice if quotes_2022": {
           "3": "3",
@@ -2923,7 +2932,8 @@
           "Pet Recommendation: Fish!": "Rekomendacja zwierzęcia domowego: Ryba!",
           "Pet Recommendation: Iguana!": "Rekomendacja zwierzęcia domowego: Iguana!",
           "Pet Recommendation: Parakeet": "Rekomendacja zwierzęcia domowego: Papużka",
-          "Pet Recommendation: Dog!": "Rekomendacja zwierzęcia domowego: Pies!"
+          "Pet Recommendation: Dog!": "Rekomendacja zwierzęcia domowego: Pies!",
+          "Sort Of": "Coś w rodzaju"
         },
         "ml-models in applab-choice if wrong place": {
           "3": "3",
@@ -2939,7 +2949,8 @@
           "Pet Recommendation: Fish!": "Rekomendacja zwierzęcia domowego: Ryba!",
           "Pet Recommendation: Iguana!": "Rekomendacja zwierzęcia domowego: Iguana!",
           "Pet Recommendation: Parakeet": "Rekomendacja zwierzęcia domowego: Papużka",
-          "Pet Recommendation: Dog!": "Rekomendacja zwierzęcia domowego: Pies!"
+          "Pet Recommendation: Dog!": "Rekomendacja zwierzęcia domowego: Pies!",
+          "Sort Of": "Coś w rodzaju"
         },
         "ml-models in applab-choice if wrong place_2022": {
           "3": "3",
@@ -2955,7 +2966,8 @@
           "Pet Recommendation: Fish!": "Rekomendacja zwierzęcia domowego: Ryba!",
           "Pet Recommendation: Iguana!": "Rekomendacja zwierzęcia domowego: Iguana!",
           "Pet Recommendation: Parakeet": "Rekomendacja zwierzęcia domowego: Papużka",
-          "Pet Recommendation: Dog!": "Rekomendacja zwierzęcia domowego: Pies!"
+          "Pet Recommendation: Dog!": "Rekomendacja zwierzęcia domowego: Pies!",
+          "Sort Of": "Coś w rodzaju"
         },
         "ml-models in applab-choice intended warnings": {
           "3": "3",
@@ -2975,7 +2987,8 @@
           "Pet Recommendation: Iguana!": "Rekomendacja zwierzęcia domowego: Iguana!",
           "Pet Recommendation: Parakeet": "Rekomendacja zwierzęcia domowego: Papużka",
           "Pet Recommendation: Dog!": "Rekomendacja zwierzęcia domowego: Pies!",
-          "Intended Uses": "Zamierzone użycia"
+          "Intended Uses": "Zamierzone użycia",
+          "Sort Of": "Coś w rodzaju"
         },
         "ml-models in applab-choice intended warnings_2022": {
           "3": "3",
@@ -2995,7 +3008,8 @@
           "Pet Recommendation: Iguana!": "Rekomendacja zwierzęcia domowego: Iguana!",
           "Pet Recommendation: Parakeet": "Rekomendacja zwierzęcia domowego: Papużka",
           "Pet Recommendation: Dog!": "Rekomendacja zwierzęcia domowego: Pies!",
-          "Intended Uses": "Zamierzone użycia"
+          "Intended Uses": "Zamierzone użycia",
+          "Sort Of": "Coś w rodzaju"
         },
         "ml-models in applab-choice predict typos": {
           "3": "3",
@@ -3011,7 +3025,8 @@
           "Pet Recommendation: Fish!": "Rekomendacja zwierzęcia domowego: Ryba!",
           "Pet Recommendation: Iguana!": "Rekomendacja zwierzęcia domowego: Iguana!",
           "Pet Recommendation: Parakeet": "Rekomendacja zwierzęcia domowego: Papużka",
-          "Pet Recommendation: Dog!": "Rekomendacja zwierzęcia domowego: Pies!"
+          "Pet Recommendation: Dog!": "Rekomendacja zwierzęcia domowego: Pies!",
+          "Sort Of": "Coś w rodzaju"
         },
         "ml-models in applab-choice predict typos_2022": {
           "3": "3",
@@ -3027,7 +3042,8 @@
           "Pet Recommendation: Fish!": "Rekomendacja zwierzęcia domowego: Ryba!",
           "Pet Recommendation: Iguana!": "Rekomendacja zwierzęcia domowego: Iguana!",
           "Pet Recommendation: Parakeet": "Rekomendacja zwierzęcia domowego: Papużka",
-          "Pet Recommendation: Dog!": "Rekomendacja zwierzęcia domowego: Pies!"
+          "Pet Recommendation: Dog!": "Rekomendacja zwierzęcia domowego: Pies!",
+          "Sort Of": "Coś w rodzaju"
         },
         "ml-models in applab-zoo assessment": {
           "Yes": "Tak",
@@ -3879,6 +3895,23 @@
           "Recommend Shoes!": "Poleć buty!",
           "Another Recommendation!": "Kolejna rekomendacja!",
           "We Recommend...": "Polecamy..."
+        },
+        "CSD U6 - Board Inputs - A_2222": {
+          "Mood Descriptor": "Deskryptor nastroju"
+        },
+        "CSD U6 - Board Inputs - PracA_2222": {
+          "This is a Label": "To jest etykieta"
+        },
+        "CSD U6 - Board Inputs - SB4_2222": {
+          "Nothing to see here...": "Nie ma tu nic do oglądania...",
+          "The Password is \"Sushi\"": "Hasło to „Sushi”"
+        },
+        "CSD U6 - Combine Inputs - ChalA_2222": {
+          "Excited": "Podniecony",
+          "Relaxed": "Zrelaksowany"
+        },
+        "CSD U6 - If Variables - SB7_2222": {
+          "psst... come closer...": "psst... podejdź bliżej..."
         }
       }
     }
