@@ -6,7 +6,16 @@
           "name": "Web Lab",
           "categories": {
             "html_tags": {
-              "name": "HTML tag-y"
+              "name": "HTML tag-y",
+              "expressions": {
+                "title": {
+                  "examples": {
+                    "Title": {
+                      "name": "Názov"
+                    }
+                  }
+                }
+              }
             }
           }
         },
