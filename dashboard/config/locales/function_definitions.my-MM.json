@@ -416,11 +416,31 @@
         "courseF_artist_fwp1": {
           "do something": {
             "name": "တစ်ခုခုကို ပြုလုပ်ပါ"
+          },
+          "checker": {
+            "parameters": {
+              "size": "အရွယ်အစား"
+            }
+          },
+          "Make gingham": {
+            "parameters": {
+              "size": "အရွယ်အစား"
+            }
           }
         },
         "courseF_artist_fwp2": {
           "do something": {
             "name": "တစ်ခုခုကို ပြုလုပ်ပါ"
+          },
+          "checker": {
+            "parameters": {
+              "size": "အရွယ်အစား"
+            }
+          },
+          "Make gingham": {
+            "parameters": {
+              "size": "အရွယ်အစား"
+            }
           }
         },
         "courseF_artist_fwp7": {
@@ -659,6 +679,32 @@
           "patrol": {
             "parameters": {
               "actor": "ဇာတ်ကောင်"
+            }
+          }
+        },
+        "InspirationalArtwork": {
+          "draw spiral circle": {
+            "parameters": {
+              "size": "အရွယ်အစား"
+            }
+          }
+        },
+        "InspirationalArtwork_2018": {
+          "draw spiral circle": {
+            "parameters": {
+              "size": "အရွယ်အစား"
+            }
+          }
+        },
+        "courseF_artist_fwp3": {
+          "draw a square2": {
+            "parameters": {
+              "size": "အရွယ်အစား"
+            }
+          },
+          "filled square": {
+            "parameters": {
+              "size": "အရွယ်အစား"
             }
           }
         }

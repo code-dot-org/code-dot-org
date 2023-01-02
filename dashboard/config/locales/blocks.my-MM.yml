@@ -36,10 +36,16 @@ my:
         options:
           MOVE:
             MOVES.Rest: ဘာမှမရှိ
+      Dancelab_changePropBy:
+        options:
+          PROPERTY:
+            '"scale"': အရွယ်အစား
       Dancelab_changePropEachBy:
         options:
           GROUP:
             sprites: အားလုံး
+          PROPERTY:
+            '"scale"': အရွယ်အစား
       Dancelab_doMoveEachLR:
         options:
           GROUP:
@@ -50,6 +56,10 @@ my:
         options:
           MOVE:
             MOVES.Rest: ဘာမှမရှိ
+      Dancelab_getProp:
+        options:
+          PROPERTY:
+            '"scale"': အရွယ်အစား
       Dancelab_ifDanceIs:
         options:
           DANCE:
@@ -128,14 +138,26 @@ my:
         options:
           EFFECT:
             '"none"': ဘာမှမရှိ
+      Dancelab_setProp:
+        options:
+          PROPERTY:
+            '"scale"': အရွယ်အစား
       Dancelab_setPropEach:
         options:
           GROUP:
             sprites: အားလုံး
+          PROPERTY:
+            '"scale"': အရွယ်အစား
+      Dancelab_setPropRandom:
+        options:
+          PROPERTY:
+            '"scale"': အရွယ်အစား
       Dancelab_setPropRandomEach:
         options:
           GROUP:
             sprites: အားလုံး
+          PROPERTY:
+            '"scale"': အရွယ်အစား
       Dancelab_setTintEach:
         options:
           THIS:
@@ -154,14 +176,26 @@ my:
             sprites: အားလုံး
           VISIBILITY:
             'true': မြင်နိုင်သော
+      Dancelab_startMapping:
+        options:
+          PROPERTY:
+            '"scale"': အရွယ်အစား
       Dancelab_startMappingEach:
         options:
           GROUP:
             sprites: အားလုံး
+          PROPERTY:
+            '"scale"': အရွယ်အစား
+      Dancelab_stopMapping:
+        options:
+          PROPERTY:
+            '"scale"': အရွယ်အစား
       Dancelab_stopMappingEach:
         options:
           GROUP:
             sprites: အားလုံး
+          PROPERTY:
+            '"scale"': အရွယ်အစား
       Dancelab_translateStrings:
         options:
           STRING:
@@ -180,11 +214,19 @@ my:
         options:
           EFFECT:
             '"rain"': မိုးရွာသည်
+      gamelab_changePropBy:
+        options:
+          PROPERTY:
+            '"scale"': အရွယ်အစား
       gamelab_checkTouching:
         options:
           CONDITION:
             '"when"': အချိန်
             '"while"': စဉ်တွင်
+      gamelab_getProp:
+        options:
+          PROPERTY:
+            '"scale"': အရွယ်အစား
       gamelab_isKeyPressed:
         options:
           KEY:
@@ -257,13 +299,23 @@ my:
             '50': small
             '75': အလယ်အလတ်
             '100': large
+      gamelab_setProp:
+        options:
+          PROPERTY:
+            '"scale"': အရွယ်အစား
       gamelab_setProp_dropdown:
         options:
+          PROPERTY:
+            '"scale"': အရွယ်အစား
           SIZE:
             '25': extra small
             '50': small
             '75': အလယ်အလတ်
             '100': large
+      gamelab_setSizes:
+        options:
+          PROPERTY:
+            '"scale"': အရွယ်အစား
       gamelab_setSpeed_dropdown:
         options:
           SIZE:
@@ -298,11 +350,19 @@ my:
             '"left"': ဘယ်ဘက်သို့
             '"right"': ညာဘက်သို့
             '"space"': အာကာသ
+      Mikelab_changePropBy:
+        options:
+          PROPERTY:
+            '"scale"': အရွယ်အစား
       Mikelab_createNewSprite:
         options:
           LOCATION:
             "{x: 100, y: 200}": ဘယ်ဘက်သို့
             "{x: 300, y: 200}": ညာဘက်သို့
+      Mikelab_getProp:
+        options:
+          PROPERTY:
+            '"scale"': အရွယ်အစား
       Mikelab_groupChangeAnim:
         options:
           SELECT:
@@ -311,6 +371,8 @@ my:
         options:
           SELECT:
             '"all"': အားလုံး
+          PROPERTY:
+            '"scale"': အရွယ်အစား
       Mikelab_groupCreateNewSprite:
         options:
           LOCATION:
@@ -320,6 +382,10 @@ my:
         options:
           SELECT:
             '"all"': အားလုံး
+      Mikelab_groupGetProp:
+        options:
+          PROPERTY:
+            '"scale"': အရွယ်အစား
       Mikelab_groupRemoveAllBehaviors:
         options:
           SELECT:
@@ -336,6 +402,8 @@ my:
         options:
           SELECT:
             '"all"': အားလုံး
+          PROPERTY:
+            '"scale"': အရွယ်အစား
       Mikelab_groupSetTint:
         options:
           SELECT:
@@ -350,6 +418,10 @@ my:
         options:
           BG:
             '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': မြို့
+      Mikelab_setProp:
+        options:
+          PROPERTY:
+            '"scale"': အရွယ်အစား
       Mikelab_showScoreboard:
         options:
           CORNER:

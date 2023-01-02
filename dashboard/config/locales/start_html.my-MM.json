@@ -659,6 +659,69 @@
         },
         "ml-model cards-book recommender model card_2022": {
           "Silly": "စဉ်းစားဉာဏ်မရှိသော"
+        },
+        "CSD U6 - Sensors - SB1_2222": {
+          "value": "တန်ဖိုး"
+        },
+        "CSD U6 - Sensors - SB2_2222": {
+          "value": "တန်ဖိုး"
+        },
+        "CSD U6 - Sensors - SB3_2222": {
+          "value": "တန်ဖိုး"
+        },
+        "CSD U6 - Sensors - SB4.1_2222": {
+          "value": "တန်ဖိုး"
+        },
+        "CSD U6 - Sensors - SB4_2222": {
+          "value": "တန်ဖိုး"
+        },
+        "CSD U6 analog change": {
+          "value": "တန်ဖိုး"
+        },
+        "CSD U6 analog change_2018": {
+          "value": "တန်ဖိုး"
+        },
+        "CSD U6 analog change_2019": {
+          "value": "တန်ဖိုး"
+        },
+        "CSD U6 analog change_2021": {
+          "value": "တန်ဖိုး"
+        },
+        "CSD U6 analog data": {
+          "value": "တန်ဖိုး"
+        },
+        "CSD U6 analog data_2018": {
+          "value": "တန်ဖိုး"
+        },
+        "CSD U6 analog data_2019": {
+          "value": "တန်ဖိုး"
+        },
+        "CSD U6 analog data_2021": {
+          "value": "တန်ဖိုး"
+        },
+        "CSD U6 analog light": {
+          "value": "တန်ဖိုး"
+        },
+        "CSD U6 analog light_2018": {
+          "value": "တန်ဖိုး"
+        },
+        "CSD U6 analog light_2019": {
+          "value": "တန်ဖိုး"
+        },
+        "CSD U6 analog light_2021": {
+          "value": "တန်ဖိုး"
+        },
+        "CSD U6 analog sound": {
+          "value": "တန်ဖိုး"
+        },
+        "CSD U6 analog sound_2018": {
+          "value": "တန်ဖိုး"
+        },
+        "CSD U6 analog sound_2019": {
+          "value": "တန်ဖိုး"
+        },
+        "CSD U6 analog sound_2021": {
+          "value": "တန်ဖိုး"
         }
       }
     }
