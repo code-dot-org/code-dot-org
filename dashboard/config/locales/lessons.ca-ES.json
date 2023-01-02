@@ -205,6 +205,7 @@
           "name": "Projecte de final de curs"
         },
         "coursee-2022/Private and Personal Information": {
+          "preparation": "-   Reviseu els materials didàctics.\n-   Imprimiu fitxes per cada alumne.",
           "purpose": "El pla d'estudis de Ciutadania Digital de Common Sense toca sis temes centrals fonamentats en els estudis més recents sobre infants, mitjans i teconogia. Aquesta lliçó se centra en la privacitat i la seguretat. Els alumnes aprendran a protegir la seva informació personal i aprofundiran en els drets de privacitat que protegeixen les seves dades per poder defensar-se a si mateixos i als altres."
         },
         "coursee-2022/Swimming Fish with Sprite Lab": {
@@ -241,11 +242,25 @@
         "coursee-2022/End of Course Project": {
           "name": "Projecte de final de curs"
         },
+        "courseb-2022/Digital Trails": {
+          "overview": "[![Common sense education](https://curriculum.code.org/static/img/common_sense_education.png)](https://www.commonsense.org)\n\nAquesta lliçó ha estat desenvolupada originalment per Common Sense Education. [Més informació].[2]\n\nEl que fas a internet sempre es queda a internet? Els alumnes aprendran que la informació que comparteixen a internet deixa una petjada digital o “rastre”. Segons com el gestionin, aquest rastre podrà ser gran o petit, útil o perjudicial. Els alumnes compraran diversos rastres i aplicaran el pensament crític per reflexionar sobre quins tipus d’informació volen deixar pel camí.",
+          "preparation": "-   Reviseu els materials didàctics.\n-   Imprimiu fitxes per cada alumne.",
+          "purpose": "El pla d'estudis de Ciutadania Digital de Common Sense toca sis temes centrals fonamentats en els estudis més recents sobre infants, mitjans i teconogia. Aquesta lliçó se centra en la petjada digital i la identitat. Els alumnes reflexionaran sobre els beneficis i els riscos de compartir informació per internet i veuran com el perfil digital pot afectar el concepte de la identitat, la reputació i les relacions de les persones.",
+          "student_overview": "Descobreix la teva petjada digital i com visitar pàgines web de manera segura. "
+        },
         "courseb-2022/Move It, Move It": {
-          "name": "Mou-lo, Mou-lo"
+          "name": "Mou-lo, Mou-lo",
+          "overview": "En aquesta lliçó de **definició de context**, els alumnes programaran els seus companys perquè avancin amb cura per una gran quadrícula feta a terra.",
+          "preparation": "-   Mireu el **\\*Vídeo del professor**\n-   Imprimiu (o prepareu-vos per mostrar) una **\\*Fitxa de treball amb respostes**\n-   Imprimiu una **\\*Activitat de mapa**i una **\\*Fitxa de treball** per cada grup de 2-3 alumnes\n-   Prepareu papers en blanc per completar la resta de la quadrícula a terra (en necessitareu entre 4 i 7 per grup)",
+          "purpose": "Els alumnes faran servir el moviment físic per programar els seus companys de classe, i en fer-ho es trobaran amb problemes i emocions semblants als que sentiran quan comencin a programar a l’ordinador. Trobar-se amb aquestes pressions en un entorn divertit i obert ajudarà a rebaixar-ne la intensitat i els permetrà posar en pràctica les habilitats necessàries abans de trobar-se amb problemes tot sols.",
+          "student_overview": "Programa els teus companys perquè avancin d'un lloc a un altre."
         },
         "courseb-2022/Sequencing with Angry Birds": {
-          "purpose": "En aquesta lliçó, els estudiants desenvoluparan les seves habilitats de programació i depuració en una plataforma informàtica. El format en blocs d'aquests trencaclosques els ajudaran a aprendre sobre seqüències i conceptes sense haver de preocupar-se per perfeccionar la sintaxi."
+          "name": "Seqüenciació amb Angry Birds",
+          "overview": "En aquesta lliçó de **desenvolupament d'habilitats**, els estudiants crearan algorismes de seqüenciació per moure un ocell des d'un cantó d'un laberint fins al porquet que hi ha a l'altra banda. Per fer-ho, apilaran blocs de codi en una seqüència lineal.",
+          "preparation": "-   Si els vostres alumnes encara no saben arrossegar i deixar anar, potser us anirà bé que facin un exercici de **\\*Pràctica d’arrossegar i deixar anar** abans de començar aquesta lliçó.\n-   Mireu el vídeo del professor **\\*Com fer una secció de classe a Code.org**. Crea la teva secció de classe a Code.org i assegureu-vos que cada alumne tingui una targeta amb el codi d’accés.\n-   Demaneu a l’informàtic de l’escola que afegeixi un accés directe a la secció de classe a l’escriptori de l’ordinador.\n-   Assegureu-vos que els alumnes tinguin les seves llibretes.",
+          "purpose": "En aquesta lliçó, els estudiants desenvoluparan les seves habilitats de programació i depuració en una plataforma informàtica. El format en blocs d'aquests trencaclosques els ajudaran a aprendre sobre seqüències i conceptes sense haver de preocupar-se per perfeccionar la sintaxi.",
+          "student_overview": "Ajuda l'Angry Bird vermell a seguir el camí fins al porquet dolentot."
         },
         "courseb-2022/Programming with Angry Birds": {
           "name": "Programació amb Angry Birds",
@@ -535,7 +550,7 @@
         },
         "coursea-2022/Happy Maps": {
           "name": "Mapes Feliços",
-          "overview": "En aquesta lliçó de \\*\\*definició de context\", es fan equips per dur a terme una tasca senzilla: portar el \"Flurb\" fins a la fruita. Els alumnes practicaran escrivint instruccions precises alhora que tradueixen les instruccions en els símbols que se'ls proporciona.",
+          "overview": "En aquesta lliçó de **definició de context**, es fan equips per dur a terme una tasca senzilla: portar el \"Flurb\" fins a la fruita. Els alumnes practicaran escrivint instruccions precises alhora que tradueixen les instruccions en els símbols que se'ls proporciona.",
           "preparation": "-   Imprimiu una **\\*Fitxa de treball** i un joc de materials **\\*Manipulatius** per cada grup de 2-3 alumnes.\n-   Assegureu-vos que cada alumne tingui el seu diari de reflexió.",
           "purpose": "Si els alumnes entenen la diferència entre planificar una seqüència i codificar aquesta seqüència en el llenguatge adequat, el salt dels algorismes a la programació no els hauria de costar gaire.  Aquesta activitat els ajudarà a posar en pràctica la lectura i l'escriptura de codi amb símbols.",
           "student_overview": "Escriu instruccions per portar el Flurb fins a la fruita."
@@ -687,6 +702,9 @@
         },
         "courseb-2018/Events in Play Lab": {
           "name": "Una batalla real amb esdeveniments"
+        },
+        "coursea-2018/Sequencing in Maze": {
+          "name": "Seqüenciació amb Angry Birds"
         },
         "coursea-2018/Programming: Happy Maps": {
           "name": "Mapes Feliços"
@@ -987,6 +1005,9 @@
         },
         "courseb-2019/Move It, Move It": {
           "name": "Mou-lo, Mou-lo"
+        },
+        "courseb-2019/Sequencing in Maze": {
+          "name": "Seqüenciació amb Angry Birds"
         },
         "courseb-2019/Programming in Maze": {
           "name": "Programació amb Angry Birds"
@@ -1710,11 +1731,25 @@
         "coursef-2021/End of Course Project": {
           "name": "Projecte de final de curs"
         },
+        "courseb-2021/Digital Trails": {
+          "overview": "[![Common sense education](https://curriculum.code.org/static/img/common_sense_education.png)](https://www.commonsense.org)\n\nAquesta lliçó ha estat desenvolupada originalment per Common Sense Education. [Més informació].[2]\n\nEl que fas a internet sempre es queda a internet? Els alumnes aprendran que la informació que comparteixen a internet deixa una petjada digital o “rastre”. Segons com el gestionin, aquest rastre podrà ser gran o petit, útil o perjudicial. Els alumnes compraran diversos rastres i aplicaran el pensament crític per reflexionar sobre quins tipus d’informació volen deixar pel camí.",
+          "preparation": "-   Reviseu els materials didàctics.\n-   Imprimiu fitxes per cada alumne.",
+          "purpose": "El pla d'estudis de Ciutadania Digital de Common Sense toca sis temes centrals fonamentats en els estudis més recents sobre infants, mitjans i teconogia. Aquesta lliçó se centra en la petjada digital i la identitat. Els alumnes reflexionaran sobre els beneficis i els riscos de compartir informació per internet i veuran com el perfil digital pot afectar el concepte de la identitat, la reputació i les relacions de les persones.",
+          "student_overview": "Descobreix la teva petjada digital i com visitar pàgines web de manera segura. "
+        },
         "courseb-2021/Move It, Move It": {
-          "name": "Mou-lo, Mou-lo"
+          "name": "Mou-lo, Mou-lo",
+          "overview": "En aquesta lliçó de **definició de context**, els alumnes programaran els seus companys perquè avancin amb cura per una gran quadrícula feta a terra.",
+          "preparation": "-   Mireu el **\\*Vídeo del professor**\n-   Imprimiu (o prepareu-vos per mostrar) una **\\*Fitxa de treball amb respostes**\n-   Imprimiu una **\\*Activitat de mapa**i una **\\*Fitxa de treball** per cada grup de 2-3 alumnes\n-   Prepareu papers en blanc per completar la resta de la quadrícula a terra (en necessitareu entre 4 i 7 per grup)",
+          "purpose": "Els alumnes faran servir el moviment físic per programar els seus companys de classe, i en fer-ho es trobaran amb problemes i emocions semblants als que sentiran quan comencin a programar a l’ordinador. Trobar-se amb aquestes pressions en un entorn divertit i obert ajudarà a rebaixar-ne la intensitat i els permetrà posar en pràctica les habilitats necessàries abans de trobar-se amb problemes tot sols.",
+          "student_overview": "Programa els teus companys perquè avancin d'un lloc a un altre."
         },
         "courseb-2021/Sequencing in Maze": {
-          "purpose": "En aquesta lliçó, els estudiants desenvoluparan les seves habilitats de programació i depuració en una plataforma informàtica. El format en blocs d'aquests trencaclosques els ajudaran a aprendre sobre seqüències i conceptes sense haver de preocupar-se per perfeccionar la sintaxi."
+          "name": "Seqüenciació amb Angry Birds",
+          "overview": "En aquesta lliçó de **desenvolupament d'habilitats**, els estudiants crearan algorismes de seqüenciació per moure un ocell des d'un cantó d'un laberint fins al porquet que hi ha a l'altra banda. Per fer-ho, apilaran blocs de codi en una seqüència lineal.",
+          "preparation": "-   Si els vostres alumnes encara no saben arrossegar i deixar anar, potser us anirà bé que facin un exercici de **\\*Pràctica d’arrossegar i deixar anar** abans de començar aquesta lliçó.\n-   Mireu el vídeo del professor **\\*Com fer una secció de classe a Code.org**. Crea la teva secció de classe a Code.org i assegureu-vos que cada alumne tingui una targeta amb el codi d’accés.\n-   Demaneu a l’informàtic de l’escola que afegeixi un accés directe a la secció de classe a l’escriptori de l’ordinador.\n-   Assegureu-vos que els alumnes tinguin les seves llibretes.",
+          "purpose": "En aquesta lliçó, els estudiants desenvoluparan les seves habilitats de programació i depuració en una plataforma informàtica. El format en blocs d'aquests trencaclosques els ajudaran a aprendre sobre seqüències i conceptes sense haver de preocupar-se per perfeccionar la sintaxi.",
+          "student_overview": "Ajuda l'Angry Bird vermell a seguir el camí fins al porquet dolentot."
         },
         "courseb-2021/Programming in Maze": {
           "name": "Programació amb Angry Birds",
@@ -1762,7 +1797,7 @@
         },
         "coursea-2021/Programming: Happy Maps": {
           "name": "Mapes Feliços",
-          "overview": "En aquesta lliçó de \\*\\*definició de context\", es fan equips per dur a terme una tasca senzilla: portar el \"Flurb\" fins a la fruita. Els alumnes practicaran escrivint instruccions precises alhora que tradueixen les instruccions en els símbols que se'ls proporciona.",
+          "overview": "En aquesta lliçó de **definició de context**, es fan equips per dur a terme una tasca senzilla: portar el \"Flurb\" fins a la fruita. Els alumnes practicaran escrivint instruccions precises alhora que tradueixen les instruccions en els símbols que se'ls proporciona.",
           "preparation": "-   Imprimiu una **\\*Fitxa de treball** i un joc de materials **\\*Manipulatius** per cada grup de 2-3 alumnes.\n-   Assegureu-vos que cada alumne tingui el seu diari de reflexió.",
           "purpose": "Si els alumnes entenen la diferència entre planificar una seqüència i codificar aquesta seqüència en el llenguatge adequat, el salt dels algorismes a la programació no els hauria de costar gaire.  Aquesta activitat els ajudarà a posar en pràctica la lectura i l'escriptura de codi amb símbols.",
           "student_overview": "Escriu instruccions per portar el Flurb fins a la fruita."
@@ -2166,6 +2201,7 @@
           "student_overview": "Aprèn a crear i editar sprites."
         },
         "coursee-2021/Private and Personal Information": {
+          "preparation": "-   Reviseu els materials didàctics.\n-   Imprimiu fitxes per cada alumne.",
           "purpose": "El pla d'estudis de Ciutadania Digital de Common Sense toca sis temes centrals fonamentats en els estudis més recents sobre infants, mitjans i teconogia. Aquesta lliçó se centra en la privacitat i la seguretat. Els alumnes aprendran a protegir la seva informació personal i aprofundiran en els drets de privacitat que protegeixen les seves dades per poder defensar-se a si mateixos i als altres."
         },
         "coursee-2021/Nested Loops in Frozen": {
@@ -2308,6 +2344,9 @@
         },
         "courseb-2020/Move It, Move It": {
           "name": "Mou-lo, Mou-lo"
+        },
+        "courseb-2020/Sequencing in Maze": {
+          "name": "Seqüenciació amb Angry Birds"
         },
         "courseb-2020/Programming in Maze": {
           "name": "Programació amb Angry Birds"

@@ -414,6 +414,7 @@
         },
         "common_core_and_ngss_guidance/courseb/2022": {
           "name": "Guia de Common Core i NGSS",
+          "url": "https://docs.google.com/document/d/1SqD3MaRbGIONGs5bcL1YhHUFK92ZXFIufypr6UC8XYA/preview#heading=h.rar8dpsqsjqe",
           "type": "Recurs"
         },
         "cross-curricular_extension_activities/courseb/2022": {
@@ -441,32 +442,47 @@
           "type": "Recurs"
         },
         "digital_trails_animal_tracks/courseb/2022": {
+          "name": "Rastres digitals: Petjades d'animals",
+          "url": "https://docs.google.com/document/d/1WLUpUXDh1503PwlnJ06DqWr6KaiX7E8KOpDJjrCkLzM/",
           "type": "Fitxa de l'alumne"
         },
         "digital_trails_digital_trail_squares/courseb/2022": {
+          "name": "Rastres digitals: Quadrats del rastre digital",
+          "url": "https://docs.google.com/document/d/1Ild_AQ98V1kXXvc-ncnC1cTNnIQrZUG_QS-ZiEi4EY8/edit",
           "type": "Fitxa de l'alumne"
         },
         "digital_trails_follow_the_digital_trail/courseb/2022": {
+          "name": "Rastres digitals: Seguim el rastre digital",
+          "url": "https://www.commonsense.org/education/videos/follow-the-digital-trail",
           "type": "Vídeo de la lliçó"
         },
         "digital_trails_lesson_slides/courseb/2022": {
+          "name": "Rastres digitals: Diapositives de la lliçó",
+          "url": "https://docs.google.com/presentation/d/1jNMWXhnNjlqK44LQ_bpAtmDmdHPeYqJeVBwegi5BnM4/edit",
           "type": "Diapositives"
         },
         "feeling_faces_emotion_image/courseb/2022": {
+          "name": "Imatge de cares d'emoció",
+          "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/edit",
           "type": "Recurs"
         },
         "move_it_move_it/courseb/2022": {
-          "name": "Mou-lo, Mou-lo"
+          "name": "Mou-lo, Mou-lo",
+          "url": "https://docs.google.com/document/d/1xavPzpNq1GO7zzOzreES0Kl8FPcbjILFzfmORUqttcg/edit",
+          "type": "Mapa de l'activitat"
         },
         "move_it_move_it_1/courseb/2022": {
           "name": "Mou-lo, Mou-lo",
+          "url": "https://docs.google.com/document/d/1eOrX6kpPKLzUD3GpvGy9XxupnMZJrtaeh2bfe0zOz64/edit",
           "type": "Fitxa d'exercicis"
         },
         "move_it_move_it_2/courseb/2022": {
-          "name": "Mou-lo, Mou-lo"
+          "name": "Mou-lo, Mou-lo",
+          "url": "https://docs.google.com/document/d/1bdGOgeZ9Z4MS_yxBLt-Mit2Rhr4rCNWL7HC-i1Qmpi4/edit"
         },
         "move_it_move_it_3/courseb/2022": {
           "name": "Mou-te, mou-te",
+          "url": "http://youtu.be/aV4rqNUG-Jw?list=PL2DhNKNdmOtqBgWyF5kmy2oPh0U-Zfv2G",
           "type": "Vídeo del professor"
         },
         "20_20_20_rule/courseb/2022": {
@@ -492,6 +508,7 @@
           "type": "Llibret"
         },
         "feeling_faces_-_emotion_image/courseb/2022": {
+          "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/edit",
           "type": "Recurs"
         },
         "stevie_and_the_big_project/courseb/2022": {
@@ -736,7 +753,7 @@
           "type": "Vídeo de l'estudiant"
         },
         "wiggles-go_noodle/coursea/2022": {
-          "name": "A bellugar-se - Go Noodle",
+          "name": "Ganes de bellugar-se - Go Noodle",
           "url": "https://app.gonoodle.com/channels/brainercise-with-mr-catman/shoulder-rock-n-roll",
           "type": "Vídeo"
         },
@@ -767,9 +784,12 @@
           "type": "Vídeo"
         },
         "feeling_faces_emotion_image/coursea/2022": {
+          "name": "Imatge de cares d'emoció",
+          "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/edit",
           "type": "Recurs"
         },
         "feeling_faces_-_emotion_image_1/coursea/2022": {
+          "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/edit",
           "type": "Recurs"
         },
         "happy_map_cards_xl/coursea/2022": {
@@ -2364,10 +2384,12 @@
         },
         "common_core_and_ngss_guidance/courseb/2021": {
           "name": "Guia de Common Core i NGSS",
+          "url": "https://docs.google.com/document/d/1SqD3MaRbGIONGs5bcL1YhHUFK92ZXFIufypr6UC8XYA/preview#heading=h.rar8dpsqsjqe",
           "type": "Recurs"
         },
         "course_vocabulary/courseb/2021": {
           "name": "Vocabulari del curs",
+          "url": "https://studio.code.org/s/courseb-2021/vocab",
           "type": "Recurs"
         },
         "cross-curricular_extension_activities/courseb/2021": {
@@ -2376,10 +2398,12 @@
         },
         "csta_standards_mapping/courseb/2021": {
           "name": "Estàndards de la CSTA",
+          "url": "https://studio.code.org/s/courseb-2021/standards",
           "type": "Recurs"
         },
         "curriculum_guide_1/courseb/2021": {
           "name": "Guia del pla d'estudis",
+          "url": "https://docs.google.com/document/d/19BIaGVliOZCciSDmuezFFUhhCjhrB2oXpVLn0cJAibc/preview",
           "type": "Recurs"
         },
         "debugging_guide/courseb/2021": {
@@ -2400,35 +2424,51 @@
           "type": "Recurs"
         },
         "virtual_lesson_modifications/courseb/2021": {
+          "url": "https://docs.google.com/document/d/1uR3JBx-UWSomzLMGgH8xPbeU720RsUECNufH7VObUgk/edit",
           "type": "Recurs"
         },
         "digital-trails-animal-tracks/courseb/2021": {
+          "name": "Rastres digitals: Petjades d'animals",
+          "url": "https://docs.google.com/document/d/1WLUpUXDh1503PwlnJ06DqWr6KaiX7E8KOpDJjrCkLzM/",
           "type": "Fitxa de l'alumne"
         },
         "digital-trails-digital-trail-squares/courseb/2021": {
+          "name": "Rastres digitals: Quadrats del rastre digital",
+          "url": "https://docs.google.com/document/d/1Ild_AQ98V1kXXvc-ncnC1cTNnIQrZUG_QS-ZiEi4EY8/edit",
           "type": "Fitxa de l'alumne"
         },
         "digital-trails-follow-the-digital-trail/courseb/2021": {
+          "name": "Rastres digitals: Seguim el rastre digital",
+          "url": "https://www.commonsense.org/education/videos/follow-the-digital-trail",
           "type": "Vídeo de la lliçó"
         },
         "digital-trails-lesson-slides/courseb/2021": {
+          "name": "Rastres digitals: Diapositives de la lliçó",
+          "url": "https://docs.google.com/presentation/d/1jNMWXhnNjlqK44LQ_bpAtmDmdHPeYqJeVBwegi5BnM4/edit",
           "type": "Diapositives"
         },
         "feeling_faces_emotion_image/courseb/2021": {
+          "name": "Imatge de cares d'emoció",
+          "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/edit",
           "type": "Recurs"
         },
         "mimi-activity/courseb/2021": {
-          "name": "Mou-lo, Mou-lo"
+          "name": "Mou-lo, Mou-lo",
+          "url": "https://docs.google.com/document/d/1xavPzpNq1GO7zzOzreES0Kl8FPcbjILFzfmORUqttcg/edit",
+          "type": "Mapa de l'activitat"
         },
         "mimi-debugging/courseb/2021": {
           "name": "Mou-lo, Mou-lo",
+          "url": "https://docs.google.com/document/d/1eOrX6kpPKLzUD3GpvGy9XxupnMZJrtaeh2bfe0zOz64/edit",
           "type": "Fitxa d'exercicis"
         },
         "mimi-teacher-puzzle/courseb/2021": {
-          "name": "Mou-lo, Mou-lo"
+          "name": "Mou-lo, Mou-lo",
+          "url": "https://docs.google.com/document/d/1bdGOgeZ9Z4MS_yxBLt-Mit2Rhr4rCNWL7HC-i1Qmpi4/edit"
         },
         "teacher-video-move-it/courseb/2021": {
           "name": "Mou-te, mou-te",
+          "url": "http://youtu.be/aV4rqNUG-Jw?list=PL2DhNKNdmOtqBgWyF5kmy2oPh0U-Zfv2G",
           "type": "Vídeo del professor"
         },
         "20_20_20_rule/courseb/2021": {
@@ -2454,6 +2494,7 @@
           "type": "Llibret"
         },
         "feeling_faces_-_emotion_image/courseb/2021": {
+          "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/edit",
           "type": "Recurs"
         },
         "stevie_and_the_big_project/courseb/2021": {
@@ -2530,6 +2571,7 @@
         },
         "curriculum_guide_1/coursea/2021": {
           "name": "Guia del pla d'estudis",
+          "url": "https://docs.google.com/document/d/19BIaGVliOZCciSDmuezFFUhhCjhrB2oXpVLn0cJAibc/preview",
           "type": "Recurs"
         },
         "debugging_guide/coursea/2021": {
@@ -2588,7 +2630,7 @@
           "type": "Vídeo de l'estudiant"
         },
         "wiggles-go_noodle/coursea/2021": {
-          "name": "A bellugar-se - Go Noodle",
+          "name": "Ganes de bellugar-se - Go Noodle",
           "url": "https://app.gonoodle.com/channels/brainercise-with-mr-catman/shoulder-rock-n-roll",
           "type": "Vídeo"
         },
@@ -2624,12 +2666,17 @@
           "type": "Vídeo"
         },
         "feeling_faces_emotion_image/coursea/2021": {
+          "name": "Imatge de cares d'emoció",
+          "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/edit",
           "type": "Recurs"
         },
         "feeling_faces_-_emotion_image_1/coursea/2021": {
+          "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/edit",
           "type": "Recurs"
         },
         "feeling_faces_emotion_image_1/coursea/2021": {
+          "name": "Imatge de cares d'emoció",
+          "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/edit",
           "type": "Recurs"
         },
         "happy-map-cards-xl/coursea/2021": {
@@ -2656,6 +2703,8 @@
           "type": "Recurs"
         },
         "feeling_faces_emotion_image_2/coursea/2021": {
+          "name": "Imatge de cares d'emoció",
+          "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/edit",
           "type": "Recurs"
         },
         "common-sense-media-pause-think/coursea/2021": {
@@ -2668,6 +2717,8 @@
           "type": "Recurs"
         },
         "feeling_faces_emotion_image_3/coursea/2021": {
+          "name": "Imatge de cares d'emoció",
+          "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/edit",
           "type": "Recurs"
         },
         "assessment-answer-big-event/coursea/2021": {
@@ -2678,6 +2729,7 @@
           "type": "Avaluació"
         },
         "feeling_faces_-_emotion_image_2/coursea/2021": {
+          "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/edit",
           "type": "Recurs"
         },
         "the_big_event_courses_a_b_/coursea/2021": {
@@ -2692,6 +2744,7 @@
           "type": "Recurs"
         },
         "feeling_faces_-_emotion_image_3/coursea/2021": {
+          "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/edit",
           "type": "Recurs"
         },
         "artist_project_planning_guide/coursea/2021": {
@@ -2726,6 +2779,7 @@
         },
         "curriculum_guide_1/coursec/2021": {
           "name": "Guia del pla d'estudis",
+          "url": "https://docs.google.com/document/d/19BIaGVliOZCciSDmuezFFUhhCjhrB2oXpVLn0cJAibc/preview",
           "type": "Recurs"
         },
         "debugging_guide_1/coursec/2021": {
@@ -2800,6 +2854,7 @@
           "type": "Vídeo de l'estudiant"
         },
         "feeling_faces_emotion_image/coursec/2021": {
+          "name": "Imatge de cares d'emoció",
           "type": "Recurs"
         },
         "assessment-answer-big-event/coursec/2021": {
@@ -2873,6 +2928,7 @@
         },
         "curriculum_guide_1/coursed/2021": {
           "name": "Guia del pla d'estudis",
+          "url": "https://docs.google.com/document/d/19BIaGVliOZCciSDmuezFFUhhCjhrB2oXpVLn0cJAibc/preview",
           "type": "Recurs"
         },
         "debugging_guide/coursed/2021": {
@@ -3185,7 +3241,7 @@
           "type": "Vídeo de l'estudiant"
         },
         "wiggles_-_go_noodle/pre-express/2021": {
-          "name": "A bellugar-se - Go Noodle",
+          "name": "Ganes de bellugar-se - Go Noodle",
           "url": "https://app.gonoodle.com/channels/brainercise-with-mr-catman/shoulder-rock-n-roll",
           "type": "Vídeo"
         },
@@ -3216,6 +3272,7 @@
         },
         "curriculum_guide_1/coursee/2021": {
           "name": "Guia del pla d'estudis",
+          "url": "https://docs.google.com/document/d/19BIaGVliOZCciSDmuezFFUhhCjhrB2oXpVLn0cJAibc/preview",
           "type": "Recurs"
         },
         "debugging_guide/coursee/2021": {
