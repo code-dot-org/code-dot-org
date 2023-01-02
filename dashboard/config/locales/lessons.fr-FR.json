@@ -658,43 +658,43 @@
         "courseb-2022/Programming with Angry Birds": {
           "name": "Programmer avec Angry Birds",
           "overview": "Dans cette leçon de **développement des compétences**, les élèves continueront à travailler les algorithmes séquentiels.",
-          "preparation": "-   Parcourez les casse-têtes pour trouver des problèmes potentiels pour votre classe.\n-   Recherchez ou réimprimez les fournitures pour **\\*Happy Maps**.\n-   Assurez-vous que chaque élève ait bien un journal de réflexion.\n-   Coupez suffisamment de **\\*Manipulatifs** de chaque direction (N, S, E, O) pour donner deux ensembles à chaque paire d'élèves (si vous choisissez l'option de transition #1). ",
-          "purpose": "Dans cette leçon, les étlèves développeront leurs compétences en programmation sur une plate-forme informatique. Le format basé sur des blocs de ces casse-têtes les aide à apprendre la séquence et les concepts, sans avoir à se soucier de perfectionner la syntaxe. ",
+          "preparation": "-   Jouez aux casse-têtes pour voir s'il pourrait y avoir des problèmes potentiels pour votre classe.\n-   Trouvez ou réimprimez les fournitures pour les **\\*Cartes Joyeuses**.\n-   Assurez-vous que chaque élève ait bien un journal de réflexion.\n-   Découpez suffisamment de **\\*Manipulatifs** de chaque direction (N, S, E, O) pour en donner deux ensembles à chaque paire d'élèves (si vous choisissez l'option de transition #1). ",
+          "purpose": "Dans cette leçon, les élèves développeront leurs compétences en programmation sur une plate-forme informatique. Le format en blocs de ces casse-têtes les aidera à se familiariser avec le séquencement et les notions, sans avoir à se soucier de perfectionner la syntaxe. ",
           "student_overview": "Crée des programmes pour aider l'_Angry Bird_ à traverser le labyrinthe."
         },
         "courseb-2022/Programming with Harvester": {
           "name": "Programmer avec l'Agricultrice",
           "overview": "Dans cette leçon de **développement des compétences**, les élèves mettront en pratique les notions de programmation qu'ils ont apprises avec le monde de l'Agricultrice. Les élèves continueront à développer des compétences en algorithmes séquentiels et commenceront à utiliser le processus de débogage. ",
-          "preparation": "-   Parcourez les casse-têtes pour trouver des problèmes potentiels pour votre classe.\n-   Assurez-vous que chaque élève ait bien un journal de réflexion. ",
+          "preparation": "-   Jouez aux casse-têtes pour identifier tous problèmes potentiels que votre classe pourrait rencontrer.\n-   Assurez-vous que chaque élève ait bien un journal de réflexion. ",
           "purpose": "Dans cette leçon, les élèves développeront des compétences de débogage et continueront à développer leurs compétences en programmation.",
           "student_overview": "Aide l'Agricultrice à ramasser des légumes le long d'un chemin."
         },
         "courseb-2022/Getting Loopy": {
           "name": "Affaire bouclée",
           "overview": "Dans cette leçon de **mise en contexte**, les élèves apprendront à utiliser les boucles pour communiquer plus facilement des instructions en observant les schémas de mouvement répétitifs d'une danse.",
-          "preparation": "-   Préparez-vous à afficher la **\\*Feuille de travail** aux élèves.\n-   Imprimez une **\\*Évaluation** par élève.\n-   Assurez-vous que chaque élève ait bien un journal de réflexion.",
-          "purpose": "À ce stade du cours, les élèves devraient être à l'aise avec la programmation d'un ensemble d'instructions linéaires qui comprend souvent des modèles qui se répètent plusieurs fois et, comme ils doivent faire des programmes toujours plus complexes et intéressants, la duplication manuelle de ce code devient lourde et inefficace. Pour leur permettre d'écrire des programmes plus puissants, nous devrons nous appuyer sur des structures qui vont au-delà de cette liste linéaire. Les boucles permettent aux élèves de structurer leur code de manière à se répéter. Dans cette leçon, nous nous concentrerons sur l'identification des modèles de mouvement physique avant de retourner sur l'ordinateur pour rechercher des modèles dans notre code. ",
+          "preparation": "-   Préparez-vous à afficher la **\\*Fiche de travail** pour les élèves.\n-   Imprimez une **\\*Évaluation** par élève.\n-   Assurez-vous que chaque élève ait bien un journal de réflexion.",
+          "purpose": "À ce stade du cours, les élèves devraient être à l'aise avec la programmation d'ensembles d'instructions linéaires. Ceux-ci comprennent souvent des schémas qui se répètent plusieurs fois et, au fur et à mesure que les élèves voudront créer des programmes toujours plus complexes et intéressants, la duplication manuelle de ce code deviendra lourde et inefficace. Pour leur permettre d'écrire des programmes plus puissants, il va falloir s'appuyer sur des structures qui vont au-delà de cette liste linéaire. Les boucles permettent aux élèves de structurer leur code de sorte qu'il se répète. Dans cette leçon, on va se concentrer sur l'identification de motifs récurrents dans des mouvements physiques avant de retourner sur l'ordinateur pour chercher des motifs au sein de notre code. ",
           "student_overview": "Dans cette leçon, on va faire une fête dansante en utilisant des boucles répéter !"
         },
         "courseb-2022/Loops with Harvester": {
           "name": "Les Boucles avec l'Agricultrice",
           "overview": "Dans cette leçon de **développement des compétences**, les élèves aideront l'agricultrice à récolter des cultures en utilisant des boucles. ",
-          "preparation": "-   Résolvez les casse-têtes pour trouver les problèmes potentiels pour votre classe.\n-   Revoir **\\*Conseils d'activité principale de CS Fundamentals - Recommandations de leçon**.\n-   Assurez-vous que chaque élève ait bien un journal de réflexion.\n-   (Facultatif) Choisissez quelques casse-têtes à faire en groupe avec votre classe.\n-   (Facultatif) Si vous ne l'avez pas déjà fait, imprimez et découpez des blocs de **\\*Manipulatifs** pour vous préparer à l'une des activités de transition de cette leçon. ",
-          "purpose": "Dans cette leçon, les élèves en apprendront davantage sur les boucles et comment les implémenter dans le code Blockly. L'utilisation de boucles est une compétence importante en programmation car la répétition manuelle des commandes est fastidieuse et inefficace. Avec les casse-têtes Code.org, les élèves apprendront à ajouter des instructions aux boucles existantes, à rassembler le code répété en boucles et à reconnaître les modèles qui doivent être bouclés. ",
+          "preparation": "-   Jouez aux casse-têtes pour identifier tous problèmes potentiels pour votre classe.\n-   Étudiez les **\\*Conseils d'activité principale Bases de l'Informatique - Recommandations pour les leçons**.\n-   Assurez-vous que chaque élève ait bien un journal de réflexion.\n-   (Facultatif) Choisissez quelques casse-têtes à faire en groupe avec votre classe.\n-   (Facultatif) Si vous ne l'avez pas déjà fait, imprimez et découpez des blocs de **\\*Manipulatifs** pour vous préparer à l'une des activités de transition de cette leçon. ",
+          "purpose": "Dans cette leçon, les élèves en apprendront davantage sur les boucles et comment les implémenter dans le code Blockly. L'utilisation de boucles est une compétence importante en programmation car la répétition manuelle des commandes est fastidieuse et inefficace. Avec les casse-têtes Code.org, les élèves apprendront à ajouter des instructions aux boucles existantes, à rassembler le code répété en boucles et à reconnaître les schémas qui doivent être bouclés. ",
           "student_overview": "Aide l'Agricultrice à récolter encore plus, en utilisant des boucles !"
         },
         "courseb-2022/Loops with Laurel": {
           "name": "Les Boucles avec Laurel",
           "overview": "Dans cette leçon de **développement des compétences**, les élèves continueront à découvrir la notion de boucles. Ici, Laurel l'Aventurière utilise les boucles pour récolter du trésor dans des espaces type grottes ouvertes. ",
-          "preparation": "-   Résolvez les casse-têtes pour trouver les problèmes potentiels pour votre classe.\n-   (Facultatif) Choisissez quelques casse-têtes à faire en groupe avec votre classe.\n-   Revoir **\\*Conseils d'activité principale de CS Fundamentals - Recommandations de cours**\n-   Assurez-vous que chaque élève ait bien un journal de réflexion. ",
-          "purpose": "Cette leçon permet aux élèves d'avoir plus de pratique avec les boucles et les encourage à mettre plusieurs blocs à l'intérieur d'une «  répétition » alors qu'ils essaient de récolter autant de trésors que possible.",
+          "preparation": "-   Jouez aux casse-têtes pour identifier tous potentiels problèmes pour votre classe.\n-   (Facultatif) Choisissez quelques casse-têtes à faire en groupe en classe.\n-   Étudiez les **\\***\\*Conseils d'activité principale des Bases de l'Informatique - Recommandations de cours\\*\\*\\*\n-   Assurez-vous que chaque élève ait bien un journal de réflexion ",
+          "purpose": "Cette leçon permet aux élèves d'avoir plus de pratique avec les boucles et les pousse à mettre plusieurs blocs à l'intérieur d'une consigne « répéter » pendant qu'ils essaient de récolter autant de trésor que possible.",
           "student_overview": "Programme Laurel l'Aventurière à ramasser du trésor dans une grotte ouverte."
         },
         "courseb-2022/Drawing Gardens with Loops": {
           "name": "Dessiner des Jardins avec des Boucles",
           "overview": "Dans cette leçon de **développement des compétences**, les élèves apprendront à dessiner des images en suivant des séquences d'instructions simples. Ici, les élèves utiliseront des boucles pour créer des motifs récurrents.",
-          "preparation": "-   Résolvez les casse-têtes avant la leçon pour trouver les problèmes potentiels pour votre classe.\n-   Revoir **\\*Conseils d'activité principale de CS Fundamentals - Recommandations de leçon**.\n-   Assurez-vous que chaque élève ait bien un journal de réflexion. ",
-          "purpose": "Cette leçon donne une perspective différente sur la façon dont les boucles peuvent créer des éléments dans la programmation. Les élèves testeront leurs capacités de pensée critique en évaluant le code donné et en déterminant ce qui doit être ajouté afin de résoudre l' casse-tête. Ici, les élèves peuvent également réfléchir à l'inefficacité de la programmation sans boucles, en raison du nombre important de blocs dont le programme aurait besoin sans l'aide de boucles `répéter`.",
+          "preparation": "-   Jouez aux casse-têtes avant la leçon pour identifier tous problèmes potentiels pour votre classe.\n-   Revoir **\\*Conseils d'activité principale pour les Bases de l'Informatique - Recommandations de leçon**.\n-   Assurez-vous que chaque élève ait bien un journal de réflexion. ",
+          "purpose": "Cette leçon donne un autre point de vue sur comment les boucles peuvent créer des choses dans la programmation. Les élèves testeront leur esprit critique en évaluant le code donné et en déterminant ce qui doit être ajouté afin de résoudre le casse-tête. Ici, les élèves pourront également réfléchir à l'inefficacité de la programmation sans boucles, en raison du nombre important de blocs dont le programme aurait besoin sans l'aide de boucles `répéter`.",
           "student_overview": "Utilise des schémas récurrents et des boucles pour finir les images."
         },
         "courseb-2022/The Right App": {
@@ -729,7 +729,7 @@
           "name": "Programmer avec Angry Birds",
           "overview": "Dans cette leçon de **développement des compétences**, les élèves développeront des algorithmes séquentiels afin de déplacer l'oiseau d'un côté du labyrinthe vers le cochon qui se trouve de l'autre côté. Pour ce faire, ils empileront des blocs de code ensemble, dans une séquence linéaire, qui feront avancer, tourner à gauche ou tourner à droite les personnages.",
           "preparation": "-   Résolvez les casse-têtes pour trouver les problèmes potentiels pour votre classe.\n-   (Facultatif) Choisissez quelques casse-têtes à faire en groupe avec votre classe.\n-   Assurez-vous que chaque élève ait bien un journal de réflexion. ",
-          "purpose": "Dans cette leçon, les étlèves développeront leurs compétences en programmation sur une plate-forme informatique. Le format basé sur des blocs de ces casse-têtes les aide à apprendre la séquence et les concepts, sans avoir à se soucier de perfectionner la syntaxe. ",
+          "purpose": "Dans cette leçon, les élèves développeront leurs compétences en programmation sur une plate-forme informatique. Le format en blocs de ces casse-têtes les aidera à se familiariser avec le séquencement et les notions, sans avoir à se soucier de perfectionner la syntaxe. ",
           "student_overview": "Apprends tout sur les séquences et les algorithmes avec _Angry Birds_."
         },
         "express-2022/Debugging in Maze": {
@@ -948,7 +948,7 @@
         "pre-express-2022/Loops with Laurel": {
           "name": "Les Boucles avec Laurel",
           "overview": "Dans cette leçon, les élèves en apprendront plus sur la notion de boucles. Ici, Laurel l'Aventurière utilise des boucles pour collectionner des trésors dans des grottes ouvertes. On introduit un nouveau  bloc « ramasser le trésor » pour l'aider dans son parcours.",
-          "purpose": "Cette leçon permet aux élèves d'avoir plus de pratique avec les boucles et les encourage à mettre plusieurs blocs à l'intérieur d'une «  répétition » alors qu'ils essaient de récolter autant de trésors que possible."
+          "purpose": "Cette leçon permet aux élèves d'avoir plus de pratique avec les boucles et les pousse à mettre plusieurs blocs à l'intérieur d'une consigne « répéter » pendant qu'ils essaient de récolter autant de trésor que possible."
         },
         "pre-express-2022/Ocean Scene with Loops": {
           "name": "Scène de l'Océan avec Boucles",
@@ -959,7 +959,7 @@
         "pre-express-2022/Drawing Gardens with Loops": {
           "name": "Dessiner des Jardins avec des Boucles",
           "overview": "Dans cette leçon de **développement des compétences**, les élèves apprendront à dessiner des images mettant en boucle des séquences simples d'instructions. Ici, les élèves utilisent des boucles pour créer des schémas récurrents. À la fin de cette leçon, les élèves auront l'occasion de créer leurs propres images.",
-          "purpose": "Cette leçon donne une perspective différente sur la façon dont les boucles peuvent créer des éléments dans la programmation. Les élèves testeront leurs capacités de pensée critique en évaluant le code donné et en déterminant ce qui doit être ajouté afin de résoudre l' casse-tête. Ici, les élèves peuvent également réfléchir à l'inefficacité de la programmation sans boucles, en raison du nombre important de blocs dont le programme aurait besoin sans l'aide de boucles `répéter`.",
+          "purpose": "Cette leçon donne un autre point de vue sur comment les boucles peuvent créer des choses dans la programmation. Les élèves testeront leur esprit critique en évaluant le code donné et en déterminant ce qui doit être ajouté afin de résoudre le casse-tête. Ici, les élèves pourront également réfléchir à l'inefficacité de la programmation sans boucles, en raison du nombre important de blocs dont le programme aurait besoin sans l'aide de boucles `répéter`.",
           "student_overview": "Utilise des schémas récurrents et des boucles pour finir les images."
         },
         "pre-express-2022/On the Move with Events": {
@@ -4469,43 +4469,43 @@
         "courseb-2021/Programming in Maze": {
           "name": "Programmer avec Angry Birds",
           "overview": "Dans cette leçon de **développement des compétences**, les élèves continueront à travailler les algorithmes séquentiels.",
-          "preparation": "-   Parcourez les casse-têtes pour trouver des problèmes potentiels pour votre classe.\n-   Recherchez ou réimprimez les fournitures pour **\\*Happy Maps**.\n-   Assurez-vous que chaque élève ait bien un journal de réflexion.\n-   Coupez suffisamment de **\\*Manipulatifs** de chaque direction (N, S, E, O) pour donner deux ensembles à chaque paire d'élèves (si vous choisissez l'option de transition #1). ",
-          "purpose": "Dans cette leçon, les étlèves développeront leurs compétences en programmation sur une plate-forme informatique. Le format basé sur des blocs de ces casse-têtes les aide à apprendre la séquence et les concepts, sans avoir à se soucier de perfectionner la syntaxe. ",
+          "preparation": "-   Jouez aux casse-têtes pour voir s'il pourrait y avoir des problèmes potentiels pour votre classe.\n-   Trouvez ou réimprimez les fournitures pour les **\\*Cartes Joyeuses**.\n-   Assurez-vous que chaque élève ait bien un journal de réflexion.\n-   Découpez suffisamment de **\\*Manipulatifs** de chaque direction (N, S, E, O) pour en donner deux ensembles à chaque paire d'élèves (si vous choisissez l'option de transition #1). ",
+          "purpose": "Dans cette leçon, les élèves développeront leurs compétences en programmation sur une plate-forme informatique. Le format en blocs de ces casse-têtes les aidera à se familiariser avec le séquencement et les notions, sans avoir à se soucier de perfectionner la syntaxe. ",
           "student_overview": "Crée des programmes pour aider l'_Angry Bird_ à traverser le labyrinthe."
         },
         "courseb-2021/Programming in Harvester": {
           "name": "Programmer avec l'Agricultrice",
           "overview": "Dans cette leçon de **développement des compétences**, les élèves mettront en pratique les notions de programmation qu'ils ont apprises avec le monde de l'Agricultrice. Les élèves continueront à développer des compétences en algorithmes séquentiels et commenceront à utiliser le processus de débogage. ",
-          "preparation": "-   Parcourez les casse-têtes pour trouver des problèmes potentiels pour votre classe.\n-   Assurez-vous que chaque élève ait bien un journal de réflexion. ",
+          "preparation": "-   Jouez aux casse-têtes pour identifier tous problèmes potentiels que votre classe pourrait rencontrer.\n-   Assurez-vous que chaque élève ait bien un journal de réflexion. ",
           "purpose": "Dans cette leçon, les élèves développeront des compétences de débogage et continueront à développer leurs compétences en programmation.",
           "student_overview": "Aide l'Agricultrice à ramasser des légumes le long d'un chemin."
         },
         "courseb-2021/Loops: Getting Loopy": {
           "name": "Affaire bouclée",
           "overview": "Dans cette leçon de **mise en contexte**, les élèves apprendront à utiliser les boucles pour communiquer plus facilement des instructions en observant les schémas de mouvement répétitifs d'une danse.",
-          "preparation": "-   Préparez-vous à afficher la **\\*Feuille de travail** aux élèves.\n-   Imprimez une **\\*Évaluation** par élève.\n-   Assurez-vous que chaque élève ait bien un journal de réflexion.",
-          "purpose": "À ce stade du cours, les élèves devraient être à l'aise avec la programmation d'un ensemble d'instructions linéaires qui comprend souvent des modèles qui se répètent plusieurs fois et, comme ils doivent faire des programmes toujours plus complexes et intéressants, la duplication manuelle de ce code devient lourde et inefficace. Pour leur permettre d'écrire des programmes plus puissants, nous devrons nous appuyer sur des structures qui vont au-delà de cette liste linéaire. Les boucles permettent aux élèves de structurer leur code de manière à se répéter. Dans cette leçon, nous nous concentrerons sur l'identification des modèles de mouvement physique avant de retourner sur l'ordinateur pour rechercher des modèles dans notre code. ",
+          "preparation": "-   Préparez-vous à afficher la **\\*Fiche de travail** pour les élèves.\n-   Imprimez une **\\*Évaluation** par élève.\n-   Assurez-vous que chaque élève ait bien un journal de réflexion.",
+          "purpose": "À ce stade du cours, les élèves devraient être à l'aise avec la programmation d'ensembles d'instructions linéaires. Ceux-ci comprennent souvent des schémas qui se répètent plusieurs fois et, au fur et à mesure que les élèves voudront créer des programmes toujours plus complexes et intéressants, la duplication manuelle de ce code deviendra lourde et inefficace. Pour leur permettre d'écrire des programmes plus puissants, il va falloir s'appuyer sur des structures qui vont au-delà de cette liste linéaire. Les boucles permettent aux élèves de structurer leur code de sorte qu'il se répète. Dans cette leçon, on va se concentrer sur l'identification de motifs récurrents dans des mouvements physiques avant de retourner sur l'ordinateur pour chercher des motifs au sein de notre code. ",
           "student_overview": "Dans cette leçon, on va faire une fête dansante en utilisant des boucles répéter !"
         },
         "courseb-2021/Loops in Harvester": {
           "name": "Les Boucles avec l'Agricultrice",
           "overview": "Dans cette leçon de **développement des compétences**, les élèves aideront l'agricultrice à récolter des cultures en utilisant des boucles. ",
-          "preparation": "-   Résolvez les casse-têtes pour trouver les problèmes potentiels pour votre classe.\n-   Revoir **\\*Conseils d'activité principale de CS Fundamentals - Recommandations de leçon**.\n-   Assurez-vous que chaque élève ait bien un journal de réflexion.\n-   (Facultatif) Choisissez quelques casse-têtes à faire en groupe avec votre classe.\n-   (Facultatif) Si vous ne l'avez pas déjà fait, imprimez et découpez des blocs de **\\*Manipulatifs** pour vous préparer à l'une des activités de transition de cette leçon. ",
-          "purpose": "Dans cette leçon, les élèves en apprendront davantage sur les boucles et comment les implémenter dans le code Blockly. L'utilisation de boucles est une compétence importante en programmation car la répétition manuelle des commandes est fastidieuse et inefficace. Avec les casse-têtes Code.org, les élèves apprendront à ajouter des instructions aux boucles existantes, à rassembler le code répété en boucles et à reconnaître les modèles qui doivent être bouclés. ",
+          "preparation": "-   Jouez aux casse-têtes pour identifier tous problèmes potentiels pour votre classe.\n-   Étudiez les **\\*Conseils d'activité principale Bases de l'Informatique - Recommandations pour les leçons**.\n-   Assurez-vous que chaque élève ait bien un journal de réflexion.\n-   (Facultatif) Choisissez quelques casse-têtes à faire en groupe avec votre classe.\n-   (Facultatif) Si vous ne l'avez pas déjà fait, imprimez et découpez des blocs de **\\*Manipulatifs** pour vous préparer à l'une des activités de transition de cette leçon. ",
+          "purpose": "Dans cette leçon, les élèves en apprendront davantage sur les boucles et comment les implémenter dans le code Blockly. L'utilisation de boucles est une compétence importante en programmation car la répétition manuelle des commandes est fastidieuse et inefficace. Avec les casse-têtes Code.org, les élèves apprendront à ajouter des instructions aux boucles existantes, à rassembler le code répété en boucles et à reconnaître les schémas qui doivent être bouclés. ",
           "student_overview": "Aide l'Agricultrice à récolter encore plus, en utilisant des boucles !"
         },
         "courseb-2021/Loops in Collector": {
           "name": "Les Boucles avec Laurel",
           "overview": "Dans cette leçon de **développement des compétences**, les élèves continueront à découvrir la notion de boucles. Ici, Laurel l'Aventurière utilise les boucles pour récolter du trésor dans des espaces type grottes ouvertes. ",
-          "preparation": "-   Résolvez les casse-têtes pour trouver les problèmes potentiels pour votre classe.\n-   (Facultatif) Choisissez quelques casse-têtes à faire en groupe avec votre classe.\n-   Revoir **\\*Conseils d'activité principale de CS Fundamentals - Recommandations de cours**\n-   Assurez-vous que chaque élève ait bien un journal de réflexion. ",
-          "purpose": "Cette leçon permet aux élèves d'avoir plus de pratique avec les boucles et les encourage à mettre plusieurs blocs à l'intérieur d'une «  répétition » alors qu'ils essaient de récolter autant de trésors que possible.",
+          "preparation": "-   Jouez aux casse-têtes pour identifier tous potentiels problèmes pour votre classe.\n-   (Facultatif) Choisissez quelques casse-têtes à faire en groupe en classe.\n-   Étudiez les **\\***\\*Conseils d'activité principale des Bases de l'Informatique - Recommandations de cours\\*\\*\\*\n-   Assurez-vous que chaque élève ait bien un journal de réflexion ",
+          "purpose": "Cette leçon permet aux élèves d'avoir plus de pratique avec les boucles et les pousse à mettre plusieurs blocs à l'intérieur d'une consigne « répéter » pendant qu'ils essaient de récolter autant de trésor que possible.",
           "student_overview": "Programme Laurel l'Aventurière à ramasser du trésor dans une grotte ouverte."
         },
         "courseb-2021/Loops in Artist": {
           "name": "Dessiner des Jardins avec des Boucles",
           "overview": "Dans cette leçon de **développement des compétences**, les élèves apprendront à dessiner des images en suivant des séquences d'instructions simples. Ici, les élèves utiliseront des boucles pour créer des motifs récurrents.",
-          "preparation": "-   Résolvez les casse-têtes avant la leçon pour trouver les problèmes potentiels pour votre classe.\n-   Revoir **\\*Conseils d'activité principale de CS Fundamentals - Recommandations de leçon**.\n-   Assurez-vous que chaque élève ait bien un journal de réflexion. ",
-          "purpose": "Cette leçon donne une perspective différente sur la façon dont les boucles peuvent créer des éléments dans la programmation. Les élèves testeront leurs capacités de pensée critique en évaluant le code donné et en déterminant ce qui doit être ajouté afin de résoudre l' casse-tête. Ici, les élèves peuvent également réfléchir à l'inefficacité de la programmation sans boucles, en raison du nombre important de blocs dont le programme aurait besoin sans l'aide de boucles `répéter`.",
+          "preparation": "-   Jouez aux casse-têtes avant la leçon pour identifier tous problèmes potentiels pour votre classe.\n-   Revoir **\\*Conseils d'activité principale pour les Bases de l'Informatique - Recommandations de leçon**.\n-   Assurez-vous que chaque élève ait bien un journal de réflexion. ",
+          "purpose": "Cette leçon donne un autre point de vue sur comment les boucles peuvent créer des choses dans la programmation. Les élèves testeront leur esprit critique en évaluant le code donné et en déterminant ce qui doit être ajouté afin de résoudre le casse-tête. Ici, les élèves pourront également réfléchir à l'inefficacité de la programmation sans boucles, en raison du nombre important de blocs dont le programme aurait besoin sans l'aide de boucles `répéter`.",
           "student_overview": "Utilise des schémas récurrents et des boucles pour finir les images."
         },
         "courseb-2021/The Right App": {
@@ -4721,14 +4721,14 @@
         "coursec-2021/Picturing Data": {
           "name": "Se représenter les Données",
           "overview": "Les élèves récolteront des données issues d'un projet Labo Jeux et les visualiseront à l'aide de différents graphiques dans cette leçon **exploratoire**.",
-          "preparation": "-   Imprimez une **\\*feuille de travail** pour chaque élève.\n-   Essayez la leçon d'aujourd'hui sur Code Studio. Ceci est destiné à être utilisé comme un outil pour l'activité d'aujourd'hui. Soyez prêt à le projeter dans la classe ou à permettre aux élèves de le visiter sur leur propre ordinateur.\n-   Assurez-vous que chaque élève ait bien un journal de réflexion.",
+          "preparation": "-   Imprimez une **\\*fiche de travail** pour chaque élève.\n-   Essayez la leçon d'aujourd'hui sur Code Studio. Ceci est destiné à être utilisé comme un outil pour l'activité d'aujourd'hui. Soyez prêt à le projeter dans la classe ou à permettre aux élèves de le visiter sur leur propre ordinateur.\n-   Assurez-vous que chaque élève ait bien un journal de réflexion.",
           "purpose": "Les ordinateurs ont été créés pour aider à traiter les données. Il existe une quantité croissante de données dans le monde, il est donc important de pouvoir les lire et les analyser. Cette leçon est là pour s'assurer que les élèves sachent bien recueillir, visualiser et analyser un petit ensemble de données.",
           "student_overview": "On peut utiliser les données pour comprendre notre monde et répondre à des questions intéressantes. "
         },
         "coursec-2021/Binary Bracelets": {
           "name": "Bracelets binaires",
           "overview": "Cette leçon **exploratoire** présente la notion du « binaire », c'est-à-dire la façon dont les ordinateurs stockent aujourd'hui toutes sortes d'informations.",
-          "preparation": "-   (Facultatif) Regardez la vidéo **\\*Leçon en action**.\n-   Rassemblez des marqueurs pour les bracelets. D'autres décorations comme des perles et des cure-pipes sont facultatives.\n-   Imprimez une **\\*feuille de travail** et une **\\*évaluation** par élève.\n-   Assurez-vous que chaque élève ait bien un journal de réflexion.\n-   (Facultatif) Écrivez un petit message au tableau en binaire. ",
+          "preparation": "-   (Facultatif) Regardez la vidéo **\\*Leçon en action**.\n-   Rassemblez des marqueurs pour les bracelets. D'autres décorations comme des perles et des cure-pipes sont facultatives.\n-   Imprimez une **\\*fiche de travail** et une **\\*évaluation** par élève.\n-   Assurez-vous que chaque élève ait bien un journal de réflexion.\n-   (Facultatif) Écrivez un petit message au tableau en binaire. ",
           "purpose": "Dans cette leçon, les élèves apprendront comment les informations sont représentées de manière à ce qu'un ordinateur puisse les interpréter et les stocker. Lors de l'apprentissage du binaire, les élèves auront la possibilité d'écrire des codes et de les partager avec leurs camarades sous forme de messages secrets. Cela peut ensuite être relié à la façon dont les ordinateurs lisent un programme, le traduisent en binaire, utilisent les informations d'une manière ou d'une autre, puis répondent de façon à être compris des humains. Par exemple, lorsque nous tapons une phrase dans un document puis que nous appuyons sur enregistrer, un ordinateur traduit la phrase en binaire, stocke les informations, puis publie un message indiquant que le document a été bien enregistré. ",
           "student_overview": "Crée ton propre bracelet binaire et apprends comment les ordinateurs se souviennent des informations !"
         },
@@ -4749,7 +4749,7 @@
         "coursed-2021/Algorithms: Graph Paper Programming": {
           "name": "Programmation sur papier quadrillé",
           "overview": "Dans cette leçon de **mise en contexte**, les élèves utilisent des symboles pour se demander entre eux de colorier des carrés sur du papier millimétré. En se « programmant » les uns les autres pour faire des dessins, les élèves auront l'occasion de découvrir certaines notions fondamentales de la programmation de manière accessible et amusante. ",
-          "preparation": "-   (Facultatif) Regardez la vidéo **\\*Leçon en action**.\n-   Imprimez une **\\*feuille de travail** et **\\*évaluation** pour chaque élève.\n-   Assurez-vous que chaque élève ait bien un journal de réflexion. ",
+          "preparation": "-   (Facultatif) Regardez la vidéo **\\*Leçon en action**.\n-   Imprimez une **\\*fiche de travail** et **\\*évaluation** pour chaque élève.\n-   Assurez-vous que chaque élève ait bien un journal de réflexion. ",
           "purpose": "L'objectif de cette activité est de développer des compétences de pensée critique et d'excitation pour le cours, tout en introduisant certains des concepts fondamentaux de programmation qui seront utilisés tout au long du cours. En introduisant des concepts de base, tels que le séquençage et les algorithmes, à la classe, dans une activité débranchée, les élèves qui sont intimidés par les ordinateurs peuvent encore construire une base de compréhension sur ces sujets. Dans cette leçon, les élèves apprendront comment développer un algorithme et l'encoder dans un programme. ",
           "student_overview": "Dans cette leçon, tu vas programmer tes camarades de classe pour leur faire faire des dessins !"
         },
@@ -4861,7 +4861,7 @@
           "name": "Programmer avec Angry Birds",
           "overview": "Dans cette leçon de **développement des compétences**, les élèves développeront des algorithmes séquentiels afin de déplacer l'oiseau d'un côté du labyrinthe vers le cochon qui se trouve de l'autre côté. Pour ce faire, ils empileront des blocs de code ensemble, dans une séquence linéaire, qui feront avancer, tourner à gauche ou tourner à droite les personnages.",
           "preparation": "-   Résolvez les casse-têtes pour trouver les problèmes potentiels pour votre classe.\n-   (Facultatif) Choisissez quelques casse-têtes à faire en groupe avec votre classe.\n-   Assurez-vous que chaque élève ait bien un journal de réflexion. ",
-          "purpose": "Dans cette leçon, les étlèves développeront leurs compétences en programmation sur une plate-forme informatique. Le format basé sur des blocs de ces casse-têtes les aide à apprendre la séquence et les concepts, sans avoir à se soucier de perfectionner la syntaxe. ",
+          "purpose": "Dans cette leçon, les élèves développeront leurs compétences en programmation sur une plate-forme informatique. Le format en blocs de ces casse-têtes les aidera à se familiariser avec le séquencement et les notions, sans avoir à se soucier de perfectionner la syntaxe. ",
           "student_overview": "Apprends tout sur les séquences et les algorithmes avec _Angry Birds_."
         },
         "express-2021/Debugging with Scrat": {
@@ -5081,7 +5081,7 @@
         "pre-express-2021/Loops with Laurel": {
           "name": "Les Boucles avec Laurel",
           "overview": "Dans cette leçon, les élèves en apprendront plus sur la notion de boucles. Ici, Laurel l'Aventurière utilise des boucles pour collectionner des trésors dans des grottes ouvertes. On introduit un nouveau  bloc « ramasser le trésor » pour l'aider dans son parcours.",
-          "purpose": "Cette leçon permet aux élèves d'avoir plus de pratique avec les boucles et les encourage à mettre plusieurs blocs à l'intérieur d'une «  répétition » alors qu'ils essaient de récolter autant de trésors que possible."
+          "purpose": "Cette leçon permet aux élèves d'avoir plus de pratique avec les boucles et les pousse à mettre plusieurs blocs à l'intérieur d'une consigne « répéter » pendant qu'ils essaient de récolter autant de trésor que possible."
         },
         "pre-express-2021/Ocean Scene with Loops": {
           "name": "Scène de l'Océan avec Boucles",
@@ -5092,7 +5092,7 @@
         "pre-express-2021/Drawing Gardens with Loops": {
           "name": "Dessiner des Jardins avec des Boucles",
           "overview": "Dans cette leçon de **développement des compétences**, les élèves apprendront à dessiner des images mettant en boucle des séquences simples d'instructions. Ici, les élèves utilisent des boucles pour créer des schémas récurrents. À la fin de cette leçon, les élèves auront l'occasion de créer leurs propres images.",
-          "purpose": "Cette leçon donne une perspective différente sur la façon dont les boucles peuvent créer des éléments dans la programmation. Les élèves testeront leurs capacités de pensée critique en évaluant le code donné et en déterminant ce qui doit être ajouté afin de résoudre l' casse-tête. Ici, les élèves peuvent également réfléchir à l'inefficacité de la programmation sans boucles, en raison du nombre important de blocs dont le programme aurait besoin sans l'aide de boucles `répéter`.",
+          "purpose": "Cette leçon donne un autre point de vue sur comment les boucles peuvent créer des choses dans la programmation. Les élèves testeront leur esprit critique en évaluant le code donné et en déterminant ce qui doit être ajouté afin de résoudre le casse-tête. Ici, les élèves pourront également réfléchir à l'inefficacité de la programmation sans boucles, en raison du nombre important de blocs dont le programme aurait besoin sans l'aide de boucles `répéter`.",
           "student_overview": "Utilise des schémas récurrents et des boucles pour finir les images."
         },
         "pre-express-2021/On the Move with Events": {
