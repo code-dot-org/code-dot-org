@@ -10,7 +10,7 @@
   "confirmClearTable": "Tüm verileri tablodan silmeyi gerçekten istiyor musun? Bu eylemi geri alamazsın.",
   "confirmImportOverwrite": "Bu dosyayı içe aktarırsanız tabloda var olan verilerin üstüne yazılır. Devam etmek istediğinize emin misiniz?",
   "designWorkspaceHeader": "Çalışma alanı",
-  "designElementPhotoSelectClickName": "Değiştirin",
+  "designElementPhotoSelectClickName": "Değiştir",
   "dropletBlock_console.log_param0": "masaj",
   "dropletBlock_drawImage_param1": "x",
   "dropletBlock_drawImage_param2": "y",

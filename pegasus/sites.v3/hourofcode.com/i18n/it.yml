@@ -563,6 +563,10 @@ it:
     di studenti in tutto il mondo per celebrare la Computer Science Education Week
     con l'Ora del Codice. Apriremo le iscrizioni per il festeggiamento annuale in
     ottobre.
+  signup_registration_closed_2022_markdown: 'Registration for this year''s Hour of
+    Code event map is currently closed, but you can still [host an Hour of Code](%{hoc_activities_url})
+    and join in the celebration on social media! Post fun pictures or video of your
+    event using the #HourOfCode hashtag!'
   signup_header: |-
     Organizza un'Ora del Codice nel periodo %{campaign_date} e registrati qui.
 

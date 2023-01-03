@@ -550,6 +550,10 @@ hi:
   signup_registration_closed: और हर साल दिसंबर में आपकी कक्षा दूनिया भर के लाखो विद्यार्थी
     के साथ कंप्यूटर विज्ञान शिक्षा सप्ताह ऑवर ऑफ़ कोड के साथ माना सकती है।हम अक्टूबर
     में वार्षिक उत्सव के लिए पंजीकरण चालू करेंगे।
+  signup_registration_closed_2022_markdown: 'Registration for this year''s Hour of
+    Code event map is currently closed, but you can still [host an Hour of Code](%{hoc_activities_url})
+    and join in the celebration on social media! Post fun pictures or video of your
+    event using the #HourOfCode hashtag!'
   signup_header: "%{campaign_date} के दौरान एक ऑवर ऑफ़ कोड व्यवस्थित करें, और इसे यहां
     रजिस्ट करें।"
   signup_name_label: आपका नाम

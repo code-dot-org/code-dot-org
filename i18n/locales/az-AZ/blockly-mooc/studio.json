@@ -689,7 +689,7 @@
   "setPosition": "% 1 mövqeyinə ayarlandı",
   "setSprite": "qoy",
   "setSpriteN": "aktyor seç{spriteIndex}",
-  "setSpritePosition": "aktyoru% 1-dən% 2-yə qoyun",
+  "setSpritePosition": "aktyoru%1-dən%2-yə qoyun",
   "setDroidN": "droidi təyin et{spriteIndex}",
   "soccerboy": "futbolçu oğlan",
   "soccergirl": "futbolçu qız",
