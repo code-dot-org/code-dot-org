@@ -13,7 +13,7 @@ You can do Code.org development using OSX, Ubuntu, or Windows (running Ubuntu in
 
      ```sh
      ruby --version  # --> ruby 2.7.5
-     node --version  # --> v14.17.1
+     node --version  # --> v16.19.0
      yarn --version  # --> 1.22.5
      ```
 
@@ -152,7 +152,7 @@ These steps may need to change over time as 3rd party tools update to have versi
        ```sh
        arch -arch x86_64 zsh
        # You are now in a new shell, run `arch` to confirm
-       nvm install # or `nvm install 14.17.1`
+       nvm install # or `nvm install 16.19.0`
        exit
        # You are now back in the original shell, run `arch` to confirm
        nvm use && nvm alias default $(cat ./.nvmrc)
@@ -249,7 +249,7 @@ These steps may need to change over time as 3rd party tools update to have versi
 
     1. Pick up those changes: `source ~/.bash_profile`
 1. Install Node and yarn
-    1. `nvm install 14.17.1 && nvm alias default 14.17.1` this command should make this version the default version and print something like: `Creating default alias: default -> 14.17.1 (-> v14.17.1)`
+    1. `nvm install 16.19.0 && nvm alias default 16.19.0` this command should make this version the default version and print something like: `Creating default alias: default -> 16.19.0 (-> v16.19.0)`
     1. `npm install -g yarn@1.22.5`.
     1. (Note: You will have to come back to this step after you clone your repository) Reinstall node_modules `cd apps; yarn; cd ..`
 1. Install OpenSSL:
@@ -300,7 +300,7 @@ Note: Virtual Machine Users should check the [Alternative note](#alternative-use
         ```
 1. Install Node and Nodejs
     1. Install the latest version of [Node Version Manager (nvm)](https://github.com/nvm-sh/nvm)
-    1. `nvm install v14.17.1 && nvm alias default 14.17.1` Install nodejs v14.17.1  
+    1. `nvm install v16.19.0 && nvm alias default 16.19.0` Install nodejs v16.19.0
     1. `node --version` Double check the version of node you are using. If it is wrong, then try restarting your terminal.
 1. Ensure rbenv and ruby-build are properly installed
     1. run `rbenv init` and follow the instructions.
