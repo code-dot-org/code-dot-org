@@ -265,8 +265,8 @@
           "b63151482630edd1589a9ac24d107c49": "Bu benim! Rikki! Kodlama yapmayı, Thuy ile takılmayı ve dondurmayı yemeyi severim!",
           "810896b14fc6615f0c76628b9b6a727e": "Bu, benim en iyi arkadaşım Thuy! Sporda gerçekten de çok iyi!",
           "6f97975a0bda0c9219915161149cbb26": "Bu, benim bilgisayarım! HER zaman onda kodlama yaparım!",
-          "8e985f60f328934accd78e7649584840": "Dondurma en sevdiğim tatlı!",
-          "31ba97bb501bb1f5b448221be09bad32": "Bu benim corgi'm, Lollipop! Ona kodlamayı öğretmeliyim!"
+          "8e985f60f328934accd78e7649584840": "Dondurma benim en sevdiğim ikramdır!",
+          "31ba97bb501bb1f5b448221be09bad32": "Bu benim corgi cinsi köpeğim, Lollipop! Ona kodlamayı öğretmeliyim!"
         },
         "courseE_aboutme_3_2021": {
           "ed076287532e86365e841e92bfc50d8c": "Merhaba Dünya!"
@@ -279,7 +279,7 @@
           "6ae99d4d2de5e3cbd29fec87ae7d76eb": "Hey!"
         },
         "courseF_apps_aquarium": {
-          "83e4a96aed96436c621b9809e258b309": "balıklar",
+          "83e4a96aed96436c621b9809e258b309": "balık",
           "8a52e7a8d3b4c955d6f7927c6ba3fe72": "yaratık",
           "795f3202b17cb6bc3d4b771d8c6c9eaf": "diğer",
           "f655df68ec33643278de7e69794e8d76": "Sanal Akvaryum",
@@ -296,7 +296,7 @@
         },
         "courseF_apps_card": {
           "ff4d94eeb46da1dbec33fa9cfc2749ee": "Kimin doğum günü?",
-          "d1210f945885351b13feb9bbb868aeef": "Kaç yaşına girecek?",
+          "d1210f945885351b13feb9bbb868aeef": "Kaç yaşında olacaklar?",
           "e243ac4e74cc5a76adbecf3b4daa1906": "benim sorum"
         },
         "courseF_apps_chatbot": {
@@ -317,13 +317,13 @@
           "88794317e8c695bbc7bc7d2f35792c7f": "Bir cismin adını yaz:",
           "2f6e9ffcbb531b9f8983aef3ae4242ac": "Bir vücut bölümü yaz:",
           "e522ee28f39133b45497637539ff429b": "Bir sayı yaz:",
-          "7c9fbd20ed3a7bcfad08351050ffe0ff": " oyun.",
+          "7c9fbd20ed3a7bcfad08351050ffe0ff": " oyunlar.",
           "5306eed2fd2c43fe033efd6016c0c38b": " ayaklı yarış!",
           "e243ac4e74cc5a76adbecf3b4daa1906": "benim sorum"
         },
         "courseF_editable_card": {
           "ff4d94eeb46da1dbec33fa9cfc2749ee": "Kimin doğum günü?",
-          "d1210f945885351b13feb9bbb868aeef": "Kaç yaşına girecek?",
+          "d1210f945885351b13feb9bbb868aeef": "Kaç yaşında olacaklar?",
           "e243ac4e74cc5a76adbecf3b4daa1906": "benim sorum"
         },
         "courseF_editable_chatbot": {
@@ -345,7 +345,7 @@
           "88794317e8c695bbc7bc7d2f35792c7f": "Bir cismin adını yaz:",
           "2f6e9ffcbb531b9f8983aef3ae4242ac": "Bir vücut bölümü yaz:",
           "e522ee28f39133b45497637539ff429b": "Bir sayı yaz:",
-          "7c9fbd20ed3a7bcfad08351050ffe0ff": " oyun.",
+          "7c9fbd20ed3a7bcfad08351050ffe0ff": " oyunlar.",
           "5306eed2fd2c43fe033efd6016c0c38b": " ayaklı yarış!",
           "e243ac4e74cc5a76adbecf3b4daa1906": "benim sorum"
         },
@@ -372,7 +372,7 @@
         },
         "courseF_text_choice_multiprompt": {
           "ff4d94eeb46da1dbec33fa9cfc2749ee": "Kimin doğum günü?",
-          "d1210f945885351b13feb9bbb868aeef": "Kaç yaşına girecek?"
+          "d1210f945885351b13feb9bbb868aeef": "Kaç yaşında olacaklar?"
         },
         "courseF_text_choice_title": {
           "e243ac4e74cc5a76adbecf3b4daa1906": "benim sorum"
@@ -389,19 +389,23 @@
           "e243ac4e74cc5a76adbecf3b4daa1906": "benim sorum"
         },
         "courseF_variables_card_finish": {
-          "e243ac4e74cc5a76adbecf3b4daa1906": "benim sorum"
+          "e243ac4e74cc5a76adbecf3b4daa1906": "benim sorum",
+          "464a456e0747ec9b09fc9afc6fbd13ed": "doğum günün için ne istiyorsun?"
         },
         "courseF_variables_chatbot": {
           "e243ac4e74cc5a76adbecf3b4daa1906": "benim sorum"
         },
         "courseF_variables_chatbot_finish": {
-          "e243ac4e74cc5a76adbecf3b4daa1906": "benim sorum"
+          "e243ac4e74cc5a76adbecf3b4daa1906": "benim sorum",
+          "46463b2e9f71f2f15b7238f56f09ba30": "Son",
+          "c757766b0a7e2017c79e1c94f60e44f7": "Sohbet ettiğiniz için teşekkürler!"
         },
         "courseF_variables_madlib": {
           "e243ac4e74cc5a76adbecf3b4daa1906": "benim sorum"
         },
         "courseF_variables_madlib_finish": {
-          "e243ac4e74cc5a76adbecf3b4daa1906": "benim sorum"
+          "e243ac4e74cc5a76adbecf3b4daa1906": "benim sorum",
+          "50d489a15105b987ec6d4410900c95dd": "Bir eylem sözcüğü girin:"
         },
         "CourseF_Project_SpriteLab_2021": {
           "6e41661ddc1edd50b00b7c607cdcec1a": "tercih 1",
@@ -644,7 +648,7 @@
         "courseF_apps_aquarium2022": {
           "f655df68ec33643278de7e69794e8d76": "Sanal Akvaryum",
           "a1a2a07348784279a1e7a6f46dc7e353": "Ne katacaksınız?",
-          "83e4a96aed96436c621b9809e258b309": "balıklar",
+          "83e4a96aed96436c621b9809e258b309": "balık",
           "8a52e7a8d3b4c955d6f7927c6ba3fe72": "yaratık",
           "795f3202b17cb6bc3d4b771d8c6c9eaf": "diğer",
           "0d3e73168beb875063ea0f0302fe32bd": "Hangi balık?",
@@ -654,7 +658,7 @@
         "courseF_apps_aquarium_-2022-2": {
           "f655df68ec33643278de7e69794e8d76": "Sanal Akvaryum",
           "a1a2a07348784279a1e7a6f46dc7e353": "Ne katacaksınız?",
-          "83e4a96aed96436c621b9809e258b309": "balıklar",
+          "83e4a96aed96436c621b9809e258b309": "balık",
           "8a52e7a8d3b4c955d6f7927c6ba3fe72": "yaratık",
           "795f3202b17cb6bc3d4b771d8c6c9eaf": "diğer",
           "0d3e73168beb875063ea0f0302fe32bd": "Hangi balık?",
@@ -663,12 +667,12 @@
         },
         "courseF_apps_card2022": {
           "ff4d94eeb46da1dbec33fa9cfc2749ee": "Kimin doğum günü?",
-          "d1210f945885351b13feb9bbb868aeef": "Kaç yaşına girecek?",
+          "d1210f945885351b13feb9bbb868aeef": "Kaç yaşında olacaklar?",
           "e243ac4e74cc5a76adbecf3b4daa1906": "benim sorum"
         },
         "courseF_apps_card_-2022-2": {
           "ff4d94eeb46da1dbec33fa9cfc2749ee": "Kimin doğum günü?",
-          "d1210f945885351b13feb9bbb868aeef": "Kaç yaşına girecek?",
+          "d1210f945885351b13feb9bbb868aeef": "Kaç yaşında olacaklar?",
           "e243ac4e74cc5a76adbecf3b4daa1906": "benim sorum"
         },
         "courseF_apps_chatbot2022": {
@@ -712,7 +716,7 @@
           "88794317e8c695bbc7bc7d2f35792c7f": "Bir cismin adını yaz:",
           "2f6e9ffcbb531b9f8983aef3ae4242ac": "Bir vücut bölümü yaz:",
           "e522ee28f39133b45497637539ff429b": "Bir sayı yaz:",
-          "7c9fbd20ed3a7bcfad08351050ffe0ff": " oyun.",
+          "7c9fbd20ed3a7bcfad08351050ffe0ff": " oyunlar.",
           "5306eed2fd2c43fe033efd6016c0c38b": " ayaklı yarış!",
           "e243ac4e74cc5a76adbecf3b4daa1906": "benim sorum"
         },
@@ -723,13 +727,13 @@
           "88794317e8c695bbc7bc7d2f35792c7f": "Bir cismin adını yaz:",
           "2f6e9ffcbb531b9f8983aef3ae4242ac": "Bir vücut bölümü yaz:",
           "e522ee28f39133b45497637539ff429b": "Bir sayı yaz:",
-          "7c9fbd20ed3a7bcfad08351050ffe0ff": " oyun.",
+          "7c9fbd20ed3a7bcfad08351050ffe0ff": " oyunlar.",
           "5306eed2fd2c43fe033efd6016c0c38b": " ayaklı yarış!",
           "e243ac4e74cc5a76adbecf3b4daa1906": "benim sorum"
         },
         "courseF_editable_card_-2022-2": {
           "ff4d94eeb46da1dbec33fa9cfc2749ee": "Kimin doğum günü?",
-          "d1210f945885351b13feb9bbb868aeef": "Kaç yaşına girecek?",
+          "d1210f945885351b13feb9bbb868aeef": "Kaç yaşında olacaklar?",
           "e243ac4e74cc5a76adbecf3b4daa1906": "benim sorum"
         },
         "courseF_editable_chatbot_-2022-2": {
@@ -751,7 +755,7 @@
           "88794317e8c695bbc7bc7d2f35792c7f": "Bir cismin adını yaz:",
           "2f6e9ffcbb531b9f8983aef3ae4242ac": "Bir vücut bölümü yaz:",
           "e522ee28f39133b45497637539ff429b": "Bir sayı yaz:",
-          "7c9fbd20ed3a7bcfad08351050ffe0ff": " oyun.",
+          "7c9fbd20ed3a7bcfad08351050ffe0ff": " oyunlar.",
           "5306eed2fd2c43fe033efd6016c0c38b": " ayaklı yarış!",
           "e243ac4e74cc5a76adbecf3b4daa1906": "benim sorum"
         },
@@ -782,7 +786,7 @@
         },
         "courseF_text_choice_multiprompt_-2022-2": {
           "ff4d94eeb46da1dbec33fa9cfc2749ee": "Kimin doğum günü?",
-          "d1210f945885351b13feb9bbb868aeef": "Kaç yaşına girecek?"
+          "d1210f945885351b13feb9bbb868aeef": "Kaç yaşında olacaklar?"
         },
         "courseF_text_choice_title_-2022-2": {
           "e243ac4e74cc5a76adbecf3b4daa1906": "benim sorum"
@@ -799,19 +803,23 @@
           "e243ac4e74cc5a76adbecf3b4daa1906": "benim sorum"
         },
         "courseF_variables_card_finish_-2022-2": {
-          "e243ac4e74cc5a76adbecf3b4daa1906": "benim sorum"
+          "e243ac4e74cc5a76adbecf3b4daa1906": "benim sorum",
+          "464a456e0747ec9b09fc9afc6fbd13ed": "doğum günün için ne istiyorsun?"
         },
         "courseF_variables_chatbot_-2022-2": {
           "e243ac4e74cc5a76adbecf3b4daa1906": "benim sorum"
         },
         "courseF_variables_chatbot_finish_-2022-2": {
-          "e243ac4e74cc5a76adbecf3b4daa1906": "benim sorum"
+          "e243ac4e74cc5a76adbecf3b4daa1906": "benim sorum",
+          "46463b2e9f71f2f15b7238f56f09ba30": "Son",
+          "c757766b0a7e2017c79e1c94f60e44f7": "Sohbet ettiğiniz için teşekkürler!"
         },
         "courseF_variables_madlib_-2022-2": {
           "e243ac4e74cc5a76adbecf3b4daa1906": "benim sorum"
         },
         "courseF_variables_madlib_finish_-2022-2": {
-          "e243ac4e74cc5a76adbecf3b4daa1906": "benim sorum"
+          "e243ac4e74cc5a76adbecf3b4daa1906": "benim sorum",
+          "50d489a15105b987ec6d4410900c95dd": "Bir eylem sözcüğü girin:"
         },
         "courseF_variables_predict_-2022-2": {
           "f6429fe0f1a76611670df7e1234af936": "Adın ne?"

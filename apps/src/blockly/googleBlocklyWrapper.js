@@ -226,12 +226,12 @@ function initializeBlocklyWrapper(blocklyInstance) {
   // because the alias name is not the same as the underlying property name.
   Object.defineProperty(blocklyWrapper, 'mainBlockSpace', {
     get: function() {
-      return this.blockly_.mainWorkspace;
+      return this.blockly_.getMainWorkspace();
     }
   });
   Object.defineProperty(blocklyWrapper, 'mainBlockSpaceEditor', {
     get: function() {
-      return this.blockly_.mainWorkspace;
+      return this.blockly_.getMainWorkspace();
     }
   });
   Object.defineProperty(blocklyWrapper, 'SVG_NS', {

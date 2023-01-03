@@ -2,9 +2,10 @@ import CustomMarshalingInterpreter from '../../lib/tools/jsinterpreter/CustomMar
 import {BlockTypes} from './blockTypes';
 import {MUSIC_BLOCKS} from './musicBlocks';
 import {musicLabDarkTheme} from './themes';
-import {baseToolbox} from './toolbox';
+import {getBaseToolbox} from './toolbox';
 import {Triggers} from '../constants';
 import FieldSounds from './FieldSounds';
+import AppConfig from '../appConfig';
 
 export default class MusicBlocklyWorkspace {
   constructor() {
@@ -41,7 +42,7 @@ export default class MusicBlocklyWorkspace {
     Blockly.blockly_.fieldRegistry.register('field_sounds', FieldSounds);
 
     this.workspace = Blockly.inject(container, {
-      toolbox: baseToolbox,
+      toolbox: getBaseToolbox(),
       grid: {spacing: 20, length: 0, colour: '#444', snap: true},
       theme: musicLabDarkTheme,
       renderer: 'cdo_renderer_zelos'
@@ -85,7 +86,7 @@ export default class MusicBlocklyWorkspace {
         };
       }
 
-      if (block.type === BlockTypes.TRIGGERED_AT) {
+      if ([BlockTypes.TRIGGERED_AT, BlockTypes.TRIGGERED_AT_SIMPLE].includes) {
         const id = block.getFieldValue('trigger');
         events[this.triggerIdToEvent(id)] = {
           code: Blockly.JavaScript.blockToCode(block)
@@ -135,7 +136,11 @@ export default class MusicBlocklyWorkspace {
   }
 
   resetCode() {
-    const defaultCode = require('@cdo/static/music/defaultCode.json');
+    const defaultCodeFilename =
+      AppConfig.getValue('blocks') === 'simple'
+        ? 'defaultCodeSimple'
+        : 'defaultCode';
+    const defaultCode = require(`@cdo/static/music/${defaultCodeFilename}.json`);
     Blockly.blockly_.serialization.workspaces.load(defaultCode, this.workspace);
     this.saveCode();
   }

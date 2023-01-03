@@ -98,14 +98,6 @@
       .span5
         = f.select :age, age_options, include_blank: true
 
-    .row#gender-dropdown{style: "display: none;"}
-      .span3.signup-field-label
-        = f.label :gender, t('signup_form.gender')
-      - if @user.errors[:gender].present?
-        %span.error= @user.errors[:gender].join(', ')
-      .span5
-        = f.select :gender, gender_options
-
     .row#school-info-section{style: "display: none;"}
       .span10
         -# Mount point for React SchoolInfoInputs component.

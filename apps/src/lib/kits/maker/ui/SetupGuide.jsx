@@ -33,7 +33,7 @@ export default class SetupGuide extends React.Component {
           id: 'microbit-description',
           title: applabI18n.makerSetupMicrobitTitle(),
           href: 'https://microbit.org/',
-          imgSrc: '../assets/maker/microbit-drawing-green.png',
+          imgSrc: '/blockly/media/maker/microbit-drawing-green.png',
           description: applabI18n.makerSetupMicrobitDescription(),
           imgStyle: style.microbitImg
         };
@@ -43,7 +43,7 @@ export default class SetupGuide extends React.Component {
           title: applabI18n.makerSetupCircuitPlaygroundTitle(),
           href:
             'https://learn.adafruit.com/introducing-circuit-playground/overview',
-          imgSrc: '../assets/maker/circuit-playground-x-1.png',
+          imgSrc: '/blockly/media/maker/circuit-playground-x-1.png',
           description: applabI18n.makerSetupCircuitPlaygroundDescription(),
           imgStyle: style.circuitPlaygroundImg
         };

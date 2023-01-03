@@ -720,6 +720,7 @@ en:
         csc-sprite-lab-pixel-editor: Draw Your Own Sprite
         csa-pl-intro-to-strings: Introduction to Strings in Java
         csa-pl-compareTo: The compareTo() method
+        csc-event-short-intro: Events Short Intro
     callout:
       text:
         drag_blocks: Drag a "move" block and snap it below the other block

@@ -284,7 +284,7 @@ tr:
         Unplug10: İnternet
         Unplug11: Özet
         C1_happy_maps_unplugged: Mutlu Haritalar
-        C1_moveitmoveit_unplugged: Çabuk, Çabuk Taşı
+        C1_moveitmoveit_unplugged: Oynat, Oynat
         C1_bigevent_unplugged: Büyük Olay
         C1_getting_loopy: Döngüselleşme
         C1_pair_programming: Eşli Programlama
@@ -339,9 +339,9 @@ tr:
         C4_bee_conditional: Arı Koşullandırmaları
         C4_variables_artist: Değişkenler - Sanatçı
         C4_variables_playlab: Değişkenler - Oyun laboratuarı
-        C4_for_loops: For Döngüleri
-        C4_for_loops_bee: For Döngüleri
-        C4_for_loops_no_bee: For Döngüleri
+        C4_for_loops: For (İçin) Döngüleri
+        C4_for_loops_bee: For (İçin) Döngüleri
+        C4_for_loops_no_bee: For (İçin) Döngüleri
         C4_math_artist: Matematik ile Sanatçı'yı programla
         C4_function_edit: Fonksiyonları düzenleme
         C4_function_create: Fonksiyonları Oluşturma
@@ -350,7 +350,7 @@ tr:
         C4_unplugged_algorithms: Tangramlar ile algoritmalar
         C4_unplugged_madlibs: Çılgın Kütüphaneler
         C4_unplugged_variables: Zarfların içindeki Değişkenler
-        C4_unplugged_forloops: For Döngüleri
+        C4_unplugged_forloops: For (İçin) Döngüleri
         C4_unplugged_parameters: Parametrelerle Şarkı Yazmak
         C4_unplugged_binary: İkili
         CSF_a_b_artist_loops: Sanatçı- Döngüler
@@ -362,8 +362,8 @@ tr:
         CSF_debugging_k1_blocks: Hata Ayıklama
         CSF_debugging_text_blocks: Hata Ayıklama
         CSF_EF_cs_matters: Bilgisayar Bilimi Önemlidir
-        CSF_maze_intro_k1_blocks: Kod Stüdyosu tanıtımı
-        CSF_maze_intro_text_blocks: Kod Stüdyosu tanıtımı
+        CSF_maze_intro_k1_blocks: Code Studio tanıtımı
+        CSF_maze_intro_text_blocks: Code Studio tanıtımı
         CSF_my_robotic_friends: Robot dostlarım
         CSF_Power_of_Words: Kelimelerin Gücü
         CSF_Super_Digital_Citizen: Süper Dijital Vatandaş
@@ -508,9 +508,9 @@ tr:
         csd_applab_parameters: Fonksiyon parametreleri
         csd_applab_loops: Uygulama Laboratuvarındaki Döngüler
         csd_problem_solving_process: Problem çözme süreci
-        CSF_Going_Places_Safely: Online Mahallem
+        CSF_Going_Places_Safely: Çevrimiçi Mahallem
         CSF_SpriteLab_Intro_v2: Hareketli Nesne Laboratuvarı Tanıtımı
-        CSF_Spritelab_MakeSprite_v2: Nesne Oluşturma
+        CSF_Spritelab_MakeSprite_v2: Hareketli Nesne Oluşturma
         CSF_SpriteLab_SpritesInAction_v2: Eylem halindeki Hareketli Nesneler
         csd_debugging: Hata Ayıklama
         csd_applab_designmode_short: Uygulama Laboratuvarı Tasarım Modu
@@ -530,7 +530,7 @@ tr:
         hoc_dance_measures_2019: Dans Partisi 2019 - Ölçütler
         hoc_dance_properties_2019: Dans Partisi 2019 - Özellikler
         csd_what_computers_do: Bilgisayarlar Ne Yapar?
-        csf_my_online_neighborhood_2020: Online Mahallem
+        csf_my_online_neighborhood_2020: Çevrimiçi Mahallem
         csf_follow_the_digital_trail: Dijital İzi Takip Edin
         csf_private_and_personal_information: Özel ve Kişisel Bilgiler
         csd_what_computers_are: Bilgisayar nedir?
