@@ -45,46 +45,29 @@ const sectionDataNotEmpty = {
   assignmentPath: ['/s/coursea']
 };
 
-export default storybook => {
-  storybook.storiesOf('SectionActionDropdown', module).addStoryTable([
-    {
-      name: 'Archived Section',
-      description: 'Should have "Restore Section" option',
-      story: () => {
-        const store = createStore(combineReducers({teacherSections}));
-        store.dispatch(setSections([sectionDataHidden]));
-        return (
-          <Provider store={store}>
-            <SectionActionDropdown sectionData={sectionDataHidden} />
-          </Provider>
-        );
-      }
-    },
-    {
-      name: 'Shown Section',
-      description: 'Should have "Restore Section" option',
-      story: () => {
-        const store = createStore(combineReducers({teacherSections}));
-        store.dispatch(setSections([sectionDataShown]));
-        return (
-          <Provider store={store}>
-            <SectionActionDropdown sectionData={sectionDataShown} />
-          </Provider>
-        );
-      }
-    },
-    {
-      name: 'Not-Empty Class',
-      description: 'studentCount > 0, show "Archive Section" option',
-      story: () => {
-        const store = createStore(combineReducers({teacherSections}));
-        store.dispatch(setSections([sectionDataNotEmpty]));
-        return (
-          <Provider store={store}>
-            <SectionActionDropdown sectionData={sectionDataNotEmpty} />
-          </Provider>
-        );
-      }
-    }
-  ]);
+export default {
+  title: 'SectionActionDropdown',
+  component: SectionActionDropdown
 };
+
+const Template = args => {
+  const store = createStore(combineReducers({teacherSections}));
+  store.dispatch(setSections([args.sectionData]));
+  return (
+    <Provider store={store}>
+      <SectionActionDropdown sectionData={args.sectionData} />
+    </Provider>
+  );
+};
+
+// Should have "Restore Section" option
+export const ArchivedSection = Template.bind({});
+ArchivedSection.args = {sectionData: sectionDataHidden};
+
+// Should not have "Restore Section" option
+export const ShownSection = Template.bind({});
+ShownSection.args = {sectionData: sectionDataShown};
+
+// studentCount > 0, show "Archive Section" option
+export const NotEmptyClass = Template.bind({});
+NotEmptyClass.args = {sectionData: sectionDataNotEmpty};
