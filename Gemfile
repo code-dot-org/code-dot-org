@@ -61,7 +61,7 @@ gem 'rack-mini-profiler'
 
 group :development do
   gem 'annotate', '~> 3.1.1'
-  gem 'aws-google', github: 'code-dot-org/aws-google', branch: 'google-apis-core'
+  gem 'aws-google', '~> 0.2.0'
   gem 'web-console'
 end
 
