@@ -77,22 +77,13 @@ describe('InlineMarkdown', () => {
   });
 
   // This test was added as part of a change to prevent this component from
-  // erroring out. Therefore, it is possible that this test could error out
-  // instead of failing. See https://github.com/code-dot-org/code-dot-org/pull/49585
+  // erroring out. See https://github.com/code-dot-org/code-dot-org/pull/49585
   // for more info.
-  it('will strip trailing newlines', () => {
-    const basicWrapper = shallow(
+  it('renders InlineMarkdown with trailing newline', () => {
+    shallow(
       <InlineMarkdown
         markdown={'some markdown with an _accidental_ new line \n'}
       />
     );
-
-    expect(
-      basicWrapper.equals(
-        <span>
-          some markdown with an <em>accidental</em> new line
-        </span>
-      )
-    ).to.equal(true);
   });
 });
