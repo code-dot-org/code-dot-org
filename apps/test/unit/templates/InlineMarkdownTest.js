@@ -75,4 +75,20 @@ describe('InlineMarkdown', () => {
       'block html is ignored'
     ).to.equal(true);
   });
+
+  it('will strip trailing newlines', () => {
+    const basicWrapper = shallow(
+      <InlineMarkdown
+        markdown={'some markdown with an _accidental_ new line \n'}
+      />
+    );
+
+    expect(
+      basicWrapper.equals(
+        <span>
+          some markdown with an <em>accidental</em> new line
+        </span>
+      )
+    ).to.equal(true);
+  });
 });
