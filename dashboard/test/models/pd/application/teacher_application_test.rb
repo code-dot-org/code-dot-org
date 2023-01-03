@@ -207,7 +207,7 @@ module Pd::Application
         regional_partner_workshop_ids: workshops.map(&:id),
         able_to_attend_multiple: (
         # Select all but the first. Expect the first selected to be returned below
-        workshops[1..-1].map do |workshop|
+        workshops[1..].map do |workshop|
           "#{workshop.friendly_date_range} in #{workshop.location_address} hosted by Code.org"
         end
         )
