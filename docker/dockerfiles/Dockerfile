@@ -44,7 +44,7 @@ RUN apt-get update && \
       libssl-dev \
       curl \
       libreadline-dev \
-      python python-dev \
+      python3 python3-dev \
       vim
 
 # install node
