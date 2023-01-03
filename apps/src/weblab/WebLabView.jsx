@@ -128,11 +128,6 @@ class WebLabView extends React.Component {
                       ? this.props.onEndFullScreenPreview
                       : this.props.onStartFullScreenPreview
                   }
-                  ariaLabel={
-                    this.props.isFullScreenPreviewOn
-                      ? weblabMsg.closeFullscreenPreview()
-                      : weblabMsg.openFullscreenPreview()
-                  }
                   label=""
                 />
                 {!this.props.isFullScreenPreviewOn && (

@@ -594,6 +594,7 @@
   "dateSeenByStudent": "Date Seen By Student",
   "dateUpdatedByTeacher": "Date Updated By Teacher",
   "dateWithColon": "Date:",
+  "debugArea": "Debug Area",
   "debugConsoleHeader": "Debug Console",
   "debugCommandsHeaderWhenOpen": "Debug Commands",
   "debugCommandsHeaderWhenClosed": "Show Debug Commands",
