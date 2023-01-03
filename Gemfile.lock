@@ -242,7 +242,7 @@ GEM
       activerecord (>= 4.2)
     addressable (2.8.1)
       public_suffix (>= 2.0.2, < 6.0)
-    aes_key_wrap (1.0.1)
+    aes_key_wrap (1.1.0)
     afm (0.2.2)
     annotate (3.1.1)
       activerecord (>= 3.2, < 7.0)
@@ -318,7 +318,7 @@ GEM
       coderay (>= 1.0.0)
       erubi (>= 1.0.0)
       rack (>= 0.9.0)
-    bindata (2.4.10)
+    bindata (2.4.14)
     binding_of_caller (0.8.0)
       debug_inspector (>= 0.0.1)
     bootstrap-sass (2.3.2.2)
@@ -539,10 +539,11 @@ GEM
     jquery-ui-rails (6.0.1)
       railties (>= 3.2.16)
     json (2.6.2)
-    json-jwt (1.10.0)
+    json-jwt (1.15.3)
       activesupport (>= 4.2)
       aes_key_wrap
       bindata
+      httpclient
     json-schema (2.8.1)
       addressable (>= 2.4)
     jsonapi-renderer (0.2.2)
