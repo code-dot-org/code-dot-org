@@ -76,6 +76,10 @@ describe('InlineMarkdown', () => {
     ).to.equal(true);
   });
 
+  // This test was added as part of a change to prevent this component from
+  // erroring out. Therefore, it is possible that this test could error out
+  // instead of failing. See https://github.com/code-dot-org/code-dot-org/pull/49585
+  // for more info.
   it('will strip trailing newlines', () => {
     const basicWrapper = shallow(
       <InlineMarkdown
