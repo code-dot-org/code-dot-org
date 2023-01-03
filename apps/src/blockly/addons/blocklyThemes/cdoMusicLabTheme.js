@@ -1,6 +1,6 @@
 import DarkTheme from '@blockly/theme-dark';
 import GoogleBlockly from 'blockly/core';
-import {cdoBlockStyles} from '../../blockly/addons/cdoTheme.js';
+import {cdoBlockStyles} from './cdoTheme.js';
 
 const blockStyles = cdoBlockStyles;
 const categoryStyles = {};

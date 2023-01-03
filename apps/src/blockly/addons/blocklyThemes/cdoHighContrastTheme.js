@@ -1,5 +1,5 @@
 import HighContrastTheme from '@blockly/theme-highcontrast';
-import {convertToHighContrast} from './cdoUtils.js';
+import {convertToHighContrast} from '../cdoUtils.js';
 import GoogleBlockly from 'blockly/core';
 import {cdoCustomStyles, coreBlocklyOverrides} from './cdoTheme.js';
 
