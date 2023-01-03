@@ -1166,12 +1166,12 @@
           "harvey_tictactoe": "Atla bloğu ile başka alanlara gidebilirsiniz."
         },
         "course1_artist_loops_challenge3": {
-          "courseA_artist_loops_challenge2_a": "Bunun gibi bloklar: <xml><block type=\"simple_move_up_left\"/></xml> sanatçının bir eğimde hareket etmesine izin verir!",
+          "courseA_artist_loops_challenge2_a": "Bunun gibi bloklar:<xml>  <block type=\"simple_move_up_left\"/></xml> sanatçınızın eğik bir şekilde hareket etmesine izin verecek!",
           "courseA_artist_loops_challenge2_b": "Bir kuş evini bitirdikten sonra diğerine 'Atla'!",
           "courseA_artist_loops_challenge2_c": "Bu bulmaca için döngü içinde ÇOK FAZLA blok kullanman gerekecek."
         },
         "course1_artist_loops_challenge4": {
-          "courseB_artist_loops_challenge1_a": "Bunun gibi bloklar: <xml><block type=\"simple_move_up_left\"/></xml> sanatçının bir eğimde hareket etmesine izin verir!",
+          "courseB_artist_loops_challenge1_a": "Bunun gibi bloklar:<xml>  <block type=\"simple_move_up_right\"/></xml> sanatçınızın eğik bir şekilde hareket etmesine izin verecek!",
           "courseB_artist_loops_challenge1_b": "Bir zarı bitirdikten sonra diğerine 'Atla'!",
           "courseB_artist_loops_challenge1_c": "Bazı aynı çizgiler üzerinden geçerken  'ilerle' veya 'atla' bloklarından iki taneye ihtiyacın olacak. "
         },
@@ -2156,22 +2156,22 @@
           "courseB_artist_loops6_b": "Hareketleri bir kağıda yazmayı deneyin ve desene bakın."
         },
         "courseB_artist_loops7": {
-          "courseB_artist_loops7_a": "Bu meydan okuma dört döngü içerir, herbiri birbiri ardına kullanılır!",
+          "courseB_artist_loops7_a": "Bu meydan okuma birbiri ardına**4** döngü kullanır!",
           "courseB_artist_loops7_b": "Her döngünün, farklı bir yönde ilerleyen bir merdiven deseni oluşturduğunu unutmayın.",
           "courseB_artist_loops7_c": "Döngüler aşağıdaki gibi olmalıdır:\n\n-   Döngü 1\n    -   Sağ\n    -   Aşağı\n\n-   Döngü 2\n    -   Sağ\n    -   Yukarı\n\n-   Döngü 3\n    -   Sol\n    -   Yukarı\n\n-   Döngü 4\n    -   Sol\n    -   Aşağı"
         },
         "courseB_artist_loops7_2018": {
-          "courseB_artist_loops7_a": "Bu meydan okuma dört döngü içerir, herbiri birbiri ardına kullanılır!",
+          "courseB_artist_loops7_a": "Bu meydan okuma birbiri ardına**4** döngü kullanır!",
           "courseB_artist_loops7_b": "Her döngünün, farklı bir yönde ilerleyen bir merdiven deseni oluşturduğunu unutmayın.",
           "courseB_artist_loops7_c": "Döngüler aşağıdaki gibi olmalıdır:\n\n-   Döngü 1\n    -   Sağ\n    -   Aşağı\n\n-   Döngü 2\n    -   Sağ\n    -   Yukarı\n\n-   Döngü 3\n    -   Sol\n    -   Yukarı\n\n-   Döngü 4\n    -   Sol\n    -   Aşağı"
         },
         "courseB_artist_loops7_2019": {
-          "courseB_artist_loops7_a": "Bu meydan okuma dört döngü içerir, herbiri birbiri ardına kullanılır!",
+          "courseB_artist_loops7_a": "Bu meydan okuma birbiri ardına**4** döngü kullanır!",
           "courseB_artist_loops7_b": "Her döngünün, farklı bir yönde ilerleyen bir merdiven deseni oluşturduğunu unutmayın.",
           "courseB_artist_loops7_c": "Döngüler aşağıdaki gibi olmalıdır:\n\n-   Döngü 1\n    -   Sağ\n    -   Aşağı\n\n-   Döngü 2\n    -   Sağ\n    -   Yukarı\n\n-   Döngü 3\n    -   Sol\n    -   Yukarı\n\n-   Döngü 4\n    -   Sol\n    -   Aşağı"
         },
         "courseB_artist_loops7_2020": {
-          "courseB_artist_loops7_a": "Bu meydan okuma dört döngü içerir, herbiri birbiri ardına kullanılır!",
+          "courseB_artist_loops7_a": "Bu meydan okuma birbiri ardına**4** döngü kullanır!",
           "courseB_artist_loops7_b": "Her döngünün, farklı bir yönde ilerleyen bir merdiven deseni oluşturduğunu unutmayın.",
           "courseB_artist_loops7_c": "Döngüler aşağıdaki gibi olmalıdır:\n\n-   Döngü 1\n    -   Sağ\n    -   Aşağı\n\n-   Döngü 2\n    -   Sağ\n    -   Yukarı\n\n-   Döngü 3\n    -   Sol\n    -   Yukarı\n\n-   Döngü 4\n    -   Sol\n    -   Aşağı"
         },
@@ -2212,39 +2212,39 @@
           "courseB_artist_loops9_c": "Döngüyü nereye koyacağınızı bulamıyor musunuz? Kodu adım adım yazıp bir desen bulmayı deneyin."
         },
         "courseB_artist_loops_challenge1": {
-          "courseB_artist_loops_challenge1_a": "Bunun gibi bloklar: <xml><block type=\"simple_move_up_left\"/></xml> sanatçının bir eğimde hareket etmesine izin verir!",
+          "courseB_artist_loops_challenge1_a": "Bunun gibi bloklar:<xml>  <block type=\"simple_move_up_right\"/></xml> sanatçınızın eğik bir şekilde hareket etmesine izin verecek!",
           "courseB_artist_loops_challenge1_b": "Bir zarı bitirdikten sonra diğerine 'Atla'!",
           "courseB_artist_loops_challenge1_c": "Bazı aynı çizgiler üzerinden geçerken  'ilerle' veya 'atla' bloklarından iki taneye ihtiyacın olacak. "
         },
         "courseB_artist_loops_challenge1_2018": {
-          "courseB_artist_loops_challenge1_a": "Bunun gibi bloklar: <xml><block type=\"simple_move_up_left\"/></xml> sanatçının bir eğimde hareket etmesine izin verir!",
+          "courseB_artist_loops_challenge1_a": "Bunun gibi bloklar:<xml>  <block type=\"simple_move_up_right\"/></xml> sanatçınızın eğik bir şekilde hareket etmesine izin verecek!",
           "courseB_artist_loops_challenge1_b": "Bir zarı bitirdikten sonra diğerine 'Atla'!",
           "courseB_artist_loops_challenge1_c": "Bazı aynı çizgiler üzerinden geçerken  'ilerle' veya 'atla' bloklarından iki taneye ihtiyacın olacak. "
         },
         "courseB_artist_loops_challenge1_2019": {
-          "courseB_artist_loops_challenge1_a": "Bunun gibi bloklar: <xml><block type=\"simple_move_up_left\"/></xml> sanatçının bir eğimde hareket etmesine izin verir!",
+          "courseB_artist_loops_challenge1_a": "Bunun gibi bloklar:<xml>  <block type=\"simple_move_up_right\"/></xml> sanatçınızın eğik bir şekilde hareket etmesine izin verecek!",
           "courseB_artist_loops_challenge1_b": "Bir zarı bitirdikten sonra diğerine 'Atla'!",
           "courseB_artist_loops_challenge1_c": "Bazı aynı çizgiler üzerinden geçerken  'ilerle' veya 'atla' bloklarından iki taneye ihtiyacın olacak. "
         },
         "courseB_artist_loops_challenge1_2020": {
-          "courseB_artist_loops_challenge1_a": "Bunun gibi bloklar: <xml><block type=\"simple_move_up_left\"/></xml> sanatçının bir eğimde hareket etmesine izin verir!",
+          "courseB_artist_loops_challenge1_a": "Bunun gibi bloklar:<xml>  <block type=\"simple_move_up_right\"/></xml> sanatçınızın eğik bir şekilde hareket etmesine izin verecek!",
           "courseB_artist_loops_challenge1_b": "Bir zarı bitirdikten sonra diğerine 'Atla'!",
           "courseB_artist_loops_challenge1_c": "Bazı aynı çizgiler üzerinden geçerken  'ilerle' veya 'atla' bloklarından iki taneye ihtiyacın olacak. "
         },
         "courseB_artist_loops_challenge2": {
-          "courseB_artist_loops_challenge2_a": "Bir X çizmek için gerekli olan kod, sana zaten verilmiş durumda. Yapman gereken şey, X'i tekrar etmek ve sonraki noktaya atlamak.",
+          "courseB_artist_loops_challenge2_a": "Bir X çizme kodu size zaten verildi. Tek yapmanız gereken X'i tekrarlamak ve bir sonraki noktaya \"atlamak\".",
           "courseB_artist_loops_challenge2_b": "Atla bloğu ile başka alanlara gidebilirsiniz."
         },
         "courseB_artist_loops_challenge2_2018": {
-          "courseB_artist_loops_challenge2_a": "Bir X çizmek için gerekli olan kod, sana zaten verilmiş durumda. Yapman gereken şey, X'i tekrar etmek ve sonraki noktaya atlamak.",
+          "courseB_artist_loops_challenge2_a": "Bir X çizme kodu size zaten verildi. Tek yapmanız gereken X'i tekrarlamak ve bir sonraki noktaya \"atlamak\".",
           "courseB_artist_loops_challenge2_b": "Atla bloğu ile başka alanlara gidebilirsiniz."
         },
         "courseB_artist_loops_challenge2_2019": {
-          "courseB_artist_loops_challenge2_a": "Bir X çizmek için gerekli olan kod, sana zaten verilmiş durumda. Yapman gereken şey, X'i tekrar etmek ve sonraki noktaya atlamak.",
+          "courseB_artist_loops_challenge2_a": "Bir X çizme kodu size zaten verildi. Tek yapmanız gereken X'i tekrarlamak ve bir sonraki noktaya \"atlamak\".",
           "courseB_artist_loops_challenge2_b": "Atla bloğu ile başka alanlara gidebilirsiniz."
         },
         "courseB_artist_loops_challenge2_2020": {
-          "courseB_artist_loops_challenge2_a": "Bir X çizmek için gerekli olan kod, sana zaten verilmiş durumda. Yapman gereken şey, X'i tekrar etmek ve sonraki noktaya atlamak.",
+          "courseB_artist_loops_challenge2_a": "Bir X çizme kodu size zaten verildi. Tek yapmanız gereken X'i tekrarlamak ve bir sonraki noktaya \"atlamak\".",
           "courseB_artist_loops_challenge2_b": "Atla bloğu ile başka alanlara gidebilirsiniz."
         },
         "courseB_collector_loops1": {
@@ -5277,16 +5277,16 @@
           "courseD_bee_conditionals_challenge1_b": "Bu bulmacada her alanda çiçek, petek olabilir ya da hiçbir şey olmayabilir. Bu demektir ki her karede eğer/değilse (if/else) koşulunu tekrarlayabilirsin."
         },
         "courseD_bee_conditionals_challenge2": {
-          "courseD_bee_conditionals_challenge1_b": "Tıpkı \"çiçekteyse\" bloğu gibi \"while nektar>0\" içindeki kod yalnızca arı çiçekteyse çalışır. Farkı ise içindeki kodun nektar kalmayıncaya kadar çalışacak olmasıdır. Bu deseni deneyin:\n\n<xml>  <block type=\"bee_whileNectarAmount\">\n    <title name=\"ARG1\">nectarRemaining</title>\n    <title name=\"OP\">&gt;</title>\n    <title name=\"ARG2\">0</title>                    <statement name=\"DO\">\n                      <block type=\"maze_nectar\"/>\n                    </statement>\n  </block></xml>"
+          "courseD_bee_conditionals_challenge1_b": "Tıpkı \"çiçekteyse\" bloğu gibi \"while nektar>0\" içindeki kod yalnızca arı çiçekteyse çalışır. Farkı ise içindeki kodun nektar kalmayıncaya kadar çalışacak olmasıdır. Bu deseni deneyin:\n\n<xml>  <block type=\"bee_whileNectarAmount\">\n    <title name=\"ARG1\">nectarRemaining</title>\n    <title name=\"OP\">></title>\n    <title name=\"ARG2\">0</title>                    <statement name=\"DO\">\n                      <block type=\"maze_nectar\"/>\n                    </statement>\n  </block></xml>"
         },
         "courseD_bee_conditionals_challenge2_2018": {
-          "courseD_bee_conditionals_challenge1_b": "Tıpkı \"çiçekteyse\" bloğu gibi \"while nektar>0\" içindeki kod yalnızca arı çiçekteyse çalışır. Farkı ise içindeki kodun nektar kalmayıncaya kadar çalışacak olmasıdır. Bu deseni deneyin:\n\n<xml>  <block type=\"bee_whileNectarAmount\">\n    <title name=\"ARG1\">nectarRemaining</title>\n    <title name=\"OP\">&gt;</title>\n    <title name=\"ARG2\">0</title>                    <statement name=\"DO\">\n                      <block type=\"maze_nectar\"/>\n                    </statement>\n  </block></xml>"
+          "courseD_bee_conditionals_challenge1_b": "Tıpkı \"çiçekteyse\" bloğu gibi \"while nektar>0\" içindeki kod yalnızca arı çiçekteyse çalışır. Farkı ise içindeki kodun nektar kalmayıncaya kadar çalışacak olmasıdır. Bu deseni deneyin:\n\n<xml>  <block type=\"bee_whileNectarAmount\">\n    <title name=\"ARG1\">nectarRemaining</title>\n    <title name=\"OP\">></title>\n    <title name=\"ARG2\">0</title>                    <statement name=\"DO\">\n                      <block type=\"maze_nectar\"/>\n                    </statement>\n  </block></xml>"
         },
         "courseD_bee_conditionals_challenge2_2019": {
-          "courseD_bee_conditionals_challenge1_b": "Tıpkı \"çiçekteyse\" bloğu gibi \"while nektar>0\" içindeki kod yalnızca arı çiçekteyse çalışır. Farkı ise içindeki kodun nektar kalmayıncaya kadar çalışacak olmasıdır. Bu deseni deneyin:\n\n<xml>  <block type=\"bee_whileNectarAmount\">\n    <title name=\"ARG1\">nectarRemaining</title>\n    <title name=\"OP\">&gt;</title>\n    <title name=\"ARG2\">0</title>                    <statement name=\"DO\">\n                      <block type=\"maze_nectar\"/>\n                    </statement>\n  </block></xml>"
+          "courseD_bee_conditionals_challenge1_b": "Tıpkı \"çiçekteyse\" bloğu gibi \"while nektar>0\" içindeki kod yalnızca arı çiçekteyse çalışır. Farkı ise içindeki kodun nektar kalmayıncaya kadar çalışacak olmasıdır. Bu deseni deneyin:\n\n<xml>  <block type=\"bee_whileNectarAmount\">\n    <title name=\"ARG1\">nectarRemaining</title>\n    <title name=\"OP\">></title>\n    <title name=\"ARG2\">0</title>                    <statement name=\"DO\">\n                      <block type=\"maze_nectar\"/>\n                    </statement>\n  </block></xml>"
         },
         "courseD_bee_conditionals_challenge2_2020": {
-          "courseD_bee_conditionals_challenge1_b": "Tıpkı \"çiçekteyse\" bloğu gibi \"while nektar>0\" içindeki kod yalnızca arı çiçekteyse çalışır. Farkı ise içindeki kodun nektar kalmayıncaya kadar çalışacak olmasıdır. Bu deseni deneyin:\n\n<xml>  <block type=\"bee_whileNectarAmount\">\n    <title name=\"ARG1\">nectarRemaining</title>\n    <title name=\"OP\">&gt;</title>\n    <title name=\"ARG2\">0</title>                    <statement name=\"DO\">\n                      <block type=\"maze_nectar\"/>\n                    </statement>\n  </block></xml>"
+          "courseD_bee_conditionals_challenge1_b": "Tıpkı \"çiçekteyse\" bloğu gibi \"while nektar>0\" içindeki kod yalnızca arı çiçekteyse çalışır. Farkı ise içindeki kodun nektar kalmayıncaya kadar çalışacak olmasıdır. Bu deseni deneyin:\n\n<xml>  <block type=\"bee_whileNectarAmount\">\n    <title name=\"ARG1\">nectarRemaining</title>\n    <title name=\"OP\">></title>\n    <title name=\"ARG2\">0</title>                    <statement name=\"DO\">\n                      <block type=\"maze_nectar\"/>\n                    </statement>\n  </block></xml>"
         },
         "courseD_bee_debugging_challenge1": {
           "courseD_bee_debugging_challenge1_a": "Bu programın neden ilk yarısı çalıştı? Arıların neden geriye gitmeleri gerektiği hakkında düşünün. Çiçeklerin üzerinden her geçtiklerinde arılar ne kadar nektar toplarlar?",
@@ -8805,18 +8805,18 @@
           "hint1": "Olay bloğundaki \"+\" düğmesine tıklayın. \"kostüm değiştir\" bloğundaki boş alanı, içerideki \"konu\" bloğuyla doldurun.\n\n<xml><block type=\"gamelab_checkTouching\"><title name=\"CONDITION\">\"when\"</title><value name=\"SPRITE1\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"healthy\"</title></block></value><value name=\"SPRITE2\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"sick\"</title></block></value><next><block type=\"gamelab_setAnimation\"><title name=\"ANIMATION\">\"sick\"</title><value name=\"THIS\"><block type=\"gamelab_subjectSpritePointer\"></block></value></block></next></block></xml>"
         },
         "CourseF_outbreak3": {
-          "hint1": "Canavarlara maske takmak için, \"kostümüdeğiştir\" bloğunu \"tıklandığı zaman\" olayı ile birlikte kullanın:\n\n<xml><block type=\"gamelab_spriteClicked\"><title name=\"CONDITION\">\"when\"</title><value name=\"SPRITE\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"healthy\"</title></block></value><next><block type=\"gamelab_setAnimation\"><title name=\"ANIMATION\">\"healthy_mask\"</title></block></next></block></xml>\n\nKüçük kırmızı \"tıklandığı zaman\" bloğunu da sürüklemeyi unutmayın!",
-          "hint2": "Bu seviyenin yeni kodu şöyle görünmeli:\n\n<xml><block type=\"gamelab_spriteClicked\"><title name=\"CONDITION\">\"when\"</title><value name=\"SPRITE\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"healthy\"</title></block></value><next><block type=\"gamelab_setAnimation\"><title name=\"ANIMATION\">\"healthy_mask\"</title><value name=\"THIS\"><block type=\"gamelab_clickedSpritePointer\"></block></value></block></next></block><block type=\"gamelab_spriteClicked\"><title name=\"CONDITION\">\"when\"</title><value name=\"SPRITE\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"sick\"</title></block></value><next><block type=\"gamelab_setAnimation\"><title name=\"ANIMATION\">\"sick_mask\"</title><value name=\"THIS\"><block type=\"gamelab_clickedSpritePointer\"></block></value></block></next></block></xml>"
+          "hint1": "Canavarlara maske takmak için, \"kostümüdeğiştir\" bloğunu \"tıklandığı zaman\" olayı ile birlikte kullanın:\n\n<xml><block type=\"gamelab_spriteClicked\"><title name=\"CONDITION\">\"when\"</title><value name=\"SPRITE\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"healthy\"</title></block></value><next><block type=\"gamelab_setAnimation\"><title name=\"ANIMATION\">\"healthy\\_mask\"</title></block></next></block></xml>\n\nKüçük kırmızı \"tıklandığı zaman\" bloğunu da sürüklemeyi unutmayın!",
+          "hint2": "Bu seviyenin yeni kodu şöyle görünmeli:\n\n<xml><block type=\"gamelab_spriteClicked\"><title name=\"CONDITION\">\"when\"</title><value name=\"SPRITE\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"healthy\"</title></block></value><next><block type=\"gamelab_setAnimation\"><title name=\"ANIMATION\">\"healthy_mask\"</title><value name=\"THIS\">\\<block type=\"gamelab_clickedSpritePointer\"></block></value></block></next></block><block type=\"gamelab_spriteClicked\"><title name=\"CONDITION\">\"when\"</title><value name=\"SPRITE\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"sick\"</title></block></value><next><block type=\"gamelab_setAnimation\"><title name=\"ANIMATION\">\"sick_mask\"</title><value name=\"THIS\">\\<block type=\"gamelab_clickedSpritePointer\"></block></value></block></next></block></xml>"
         },
         "CourseF_outbreak4": {
           "challenge": "## Başka bir zorluk mu arıyorsunuz?\n\nCanavarların daha hızlı veya daha yavaş hareket etmesini de sağlayabilirsiniz.\n\n1.  Bu blokta \"Düzenle\"ye tıklayın <xml><block type=\"gamelab_behavior_get\"><mutation></mutation><title name=\"VAR\">wandering</title></block></xml>\n2.  Bu bloktaki sayıyı artırın veya azaltın:\n\n<xml><block type=\"gamelab_moveForward\"><value name=\"SPRITE\"><block type=\"sprite_parameter_get\"><title name=\"VAR\">this sprite</title></block></value><value name=\"DISTANCE\"><block type=\"math_number\"><title name=\"NUM\">1</title></block></value></block>\n</xml>\n\nCanavarların daha yavaş hareket etmesini sağlamak için, \"0.5\" veya \"0.25\" gibi bir ondalık sayı seçin. Daha hızlı hareket etmelerini sağlamak için 1'den büyük herhangi bir sayı seçin."
         },
         "CourseF_outbreak6": {
           "hint2": "\"eğer olasılık\" bloğu içindeki diğer \"eylem\" bloklarına geçtiğinizden emin olun:\n\n<xml><block type=\"gamelab_checkTouching\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE1\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"healthy\"</title>\n      </block>\n    </value>\n    <value name=\"SPRITE2\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"sick\"</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_withPercentChanceDropdown\">\n      <title name=\"NUM\">90</title>\n        <statement name=\"STATEMENT\">\n          <block type=\"gamelab_setAnimation\">\n            <title name=\"ANIMATION\">\"sick\"</title>\n            <value name=\"THIS\">\n              <block type=\"gamelab_subjectSpritePointer\"></block>\n            </value>\n          </block>\n        </statement>\n      </block>\n    </next>\n  </block>\n</xml>",
-          "hint1": "Sağlıklı ve enfekte hareketli nesneler arasındaki tüm olası \"dokunma\" kombinasyonlarını kontrol etmek için 3 tane daha \"dokunduğu zaman\" olayı eklemeniz gerekecek.\n\n<xml><block type=\"gamelab_checkTouching\">\n      <title name=\"CONDITION\">\"when\"</title>\n      <value name=\"SPRITE1\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"healthy_mask\"</title>\n        </block>\n      </value>\n      <value name=\"SPRITE2\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"sick\"</title>\n        </block>\n      </value><next>\n      <block type=\"gamelab_withPercentChanceDropdown\">\n      <title name=\"NUM\">75</title>\n      <statement name=\"STATEMENT\"></statement></block></next>\n    </block><block type=\"gamelab_checkTouching\">\n      <title name=\"CONDITION\">\"when\"</title>\n      <value name=\"SPRITE1\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"healthy\"</title>\n        </block>\n      </value>\n      <value name=\"SPRITE2\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"sick_mask\"</title>\n        </block>\n      </value><next>\n      <block type=\"gamelab_withPercentChanceDropdown\">\n      <title name=\"NUM\">25</title>\n      <statement name=\"STATEMENT\"></statement></block></next>\n    </block><block type=\"gamelab_checkTouching\">\n      <title name=\"CONDITION\">\"when\"</title>\n      <value name=\"SPRITE1\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"healthy_mask\"</title>\n        </block>\n      </value>\n      <value name=\"SPRITE2\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"sick_mask\"</title>\n        </block>\n      </value><next>\n      <block type=\"gamelab_withPercentChanceDropdown\">\n      <title name=\"NUM\">10</title>\n      <statement name=\"STATEMENT\"></statement></block></next>\n    </block></xml>"
+          "hint1": "Sağlıklı ve enfekte hareketli nesneler arasındaki tüm olası \"dokunma\" kombinasyonlarını kontrol etmek için 3 tane daha \"dokunduğu zaman\" olayı eklemeniz gerekecek.\n\n<xml><block type=\"gamelab_checkTouching\">\n      <title name=\"CONDITION\">\"when\"</title>\n      <value name=\"SPRITE1\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"healthy_mask\"</title>\n        </block>\n      </value>\n      <value name=\"SPRITE2\">\n        \\<block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"sick\"</title>\n        </block>\n      </value><next>\n      <block type=\"gamelab_withPercentChanceDropdown\">\n      <title name=\"NUM\">75</title>\n      <statement name=\"STATEMENT\"></statement></block></next>\n    </block><block type=\"gamelab_checkTouching\">\n      <title name=\"CONDITION\">\"when\"</title>\n      <value name=\"SPRITE1\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"healthy\"</title>\n        </block>\n      </value>\n      <value name=\"SPRITE2\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"sick_mask\"</title>\n        </block>\n      </value><next>\n      \\<block type=\"gamelab_withPercentChanceDropdown\">\n      <title name=\"NUM\">25</title>\n      <statement name=\"STATEMENT\"></statement></block></next>\n    </block><block type=\"gamelab_checkTouching\">\n      <title name=\"CONDITION\">\"when\"</title>\n      <value name=\"SPRITE1\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"healthy_mask\"</title>\n        </block>\n      </value>\n      <value name=\"SPRITE2\">\n        \\<block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"sick_mask\"</title>\n        </block>\n      </value><next>\n      \\<block type=\"gamelab_withPercentChanceDropdown\">\n      <title name=\"NUM\">10</title>\n      <statement name=\"STATEMENT\"></statement></block></next>\n    </block></xml>"
         },
         "CourseF_outbreak7": {
-          "whenclicked": "## Aşılar\n\nCanavarlara tıklamayla aşı verme simülasyonu yapabilirsiniz. Bunu yapmak için, bu olayda \"kostüm değiştir\" bloğunu kullanın:\n\n<xml><block type=\"gamelab_spriteClicked\">\n      <title name=\"CONDITION\">\"when\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"healthy_mask\"</title>\n        </block>\n      </value>\n    </block></xml>",
+          "whenclicked": "## Aşılar\n\nCanavarlara tıklamayla aşı verme simülasyonu yapabilirsiniz. Bunu yapmak için, bu olayda \"kostüm değiştir\" bloğunu kullanın:\n\n<xml><block type=\"gamelab_spriteClicked\">\n      <title name=\"CONDITION\">\"when\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"healthy\\_mask\"</title>\n        </block>\n      </value>\n    </block></xml>",
           "verionhistory": "Takıldınız mı? Kodunuzu istediğiniz zaman sıfırlayabilirsiniz. Aşağıdaki \"Sürüm Geçmişi\"ne tıklayıp ardından \"Baştan Başla\"yı seçmeniz yeterli olacaktır."
         },
         "Function intro Ryan_2021": {
@@ -9029,7 +9029,7 @@
         },
         "courseA_harvester_loops3_2021": {
           "courseA_harvester_loops3_a": "Size yardımcı olması için bunun gibi bir 'tekrarla' bloğu kullanın!\n\n<xml><block type=\"controls_repeat_simplified_dropdown\">\n    <title name=\"TIMES\" config=\"2-10\">4</title>\n  </block></xml>",
-          "courseA_harvester_loops3_b": "Tekrar etmek için, bir 'tekrar' döngüsü sürükle, sonra içine istediğin bloğu koy."
+          "courseA_harvester_loops3_b": "Kodu tekrarlamak için bir \"tekrar\" (<xml><block type=\"controls_repeat_simplified_dropdown\">\n    <title name=\"TIMES\" config=\"2-10\">4</title>\n  </block></xml> )döngüsünü dışarı sürükleyin, ardından istediğiniz bloğu bunun içine koyun."
         },
         "courseA_harvester_loops4_2021": {
           "courseA_harvester_loops4_a": "Ne olacağını görmek için 'Çalıştır'a basmaktan korkayın!",
@@ -9041,7 +9041,7 @@
           "courseA_harvester_loops5_c": "Mısırların hepsini toplamak için bu yolu kullanın!"
         },
         "courseA_harvester_loops5a_2021": {
-          "courseA_harvester_loops5a_a": "Birbiri ardına, birer `tekrarla` döngüsüne ihtiyacınız olacak.",
+          "courseA_harvester_loops5a_a": "Birbiri ardına bir \"tekrar\" <xml> <block type=\"controls_repeat_simplified_dropdown\">\n    <title name=\"TIMES\" config=\"2-10\">6</title>\n  </block></xml> döngüsüne ihtiyacınız olacak.",
           "courseA_harvester_loops5a_b": "Bir döngü 'Güneye doğru ilerle' \\[parçal blok\\[[0]'yı tekrar edecek ve diğeri de 'Doğuya doğru ilerle' <xml><block type=\"maze_moveEast\" limit=\"1\"/></xml>'u tekrar edecek.",
           "courseA_harvester_loops5a_c": "Önce bir yönde, daha sonra da diğerinde ilerlemek için bu yolu kullanın."
         },
@@ -9249,7 +9249,7 @@
           "courseB_artist_loops6_b": "Hareketleri bir kağıda yazmayı deneyin ve desene bakın."
         },
         "courseB_artist_loops7_2021": {
-          "courseB_artist_loops7_a": "Bu meydan okuma dört döngü içerir, herbiri birbiri ardına kullanılır!",
+          "courseB_artist_loops7_a": "Bu meydan okuma birbiri ardına**4** döngü kullanır!",
           "courseB_artist_loops7_b": "Her döngünün, farklı bir yönde ilerleyen bir merdiven deseni oluşturduğunu unutmayın.",
           "courseB_artist_loops7_c": "Döngüler aşağıdaki gibi olmalıdır:\n\n-   Döngü 1\n    -   Sağ\n    -   Aşağı\n\n-   Döngü 2\n    -   Sağ\n    -   Yukarı\n\n-   Döngü 3\n    -   Sol\n    -   Yukarı\n\n-   Döngü 4\n    -   Sol\n    -   Aşağı"
         },
@@ -9263,12 +9263,12 @@
           "courseB_artist_loops9_c": "Döngüyü nereye koyacağınızı bulamıyor musunuz? Kodu adım adım yazıp bir desen bulmayı deneyin."
         },
         "courseB_artist_loops_challenge1_2021": {
-          "courseB_artist_loops_challenge1_a": "Bunun gibi bloklar: <xml><block type=\"simple_move_up_left\"/></xml> sanatçının bir eğimde hareket etmesine izin verir!",
+          "courseB_artist_loops_challenge1_a": "Bunun gibi bloklar:<xml>  <block type=\"simple_move_up_right\"/></xml> sanatçınızın eğik bir şekilde hareket etmesine izin verecek!",
           "courseB_artist_loops_challenge1_b": "Bir zarı bitirdikten sonra diğerine 'Atla'!",
           "courseB_artist_loops_challenge1_c": "Bazı aynı çizgiler üzerinden geçerken  'ilerle' veya 'atla' bloklarından iki taneye ihtiyacın olacak. "
         },
         "courseB_artist_loops_challenge2_2021": {
-          "courseB_artist_loops_challenge2_a": "Bir X çizmek için gerekli olan kod, sana zaten verilmiş durumda. Yapman gereken şey, X'i tekrar etmek ve sonraki noktaya atlamak.",
+          "courseB_artist_loops_challenge2_a": "Bir X çizme kodu size zaten verildi. Tek yapmanız gereken X'i tekrarlamak ve bir sonraki noktaya \"atlamak\".",
           "courseB_artist_loops_challenge2_b": "Atla bloğu ile başka alanlara gidebilirsiniz."
         },
         "courseB_collector_loops10_2021": {
@@ -9365,12 +9365,12 @@
           "courseB_iceage_loops9_c": "Scrat meşe palamuduna ulaşmak için bu tolu takip etmeli."
         },
         "courseB_maze_seq1_2021": {
-          "courseB_maze_seq1_a": "Kuşun hareket etmesi için blokları 'çalıştığı zaman' <xml><block type=\"when_run\"/></xml> bloğuna birleştirin!",
-          "courseB_maze_seq1_b": "Kuşu domuza getirmek için, üç tane <xml><block type=\"maze_moveSouth\"/></xml> oku  dışarı sürükleyin ve 'çalıştığı zaman' <xml><block type=\"when_run\"/></xml> bloğu ile bağlayın. "
+          "courseB_maze_seq1_a": "Scrat'ı hareket ettirmek için blokları <xml><block type=\"when_run\"/></xml> bloğuna bağlayın!",
+          "courseB_maze_seq1_b": "Scrat'ı meşe palamuduna götürmek için bu <xml><block type=\"maze_moveSouth\"/></xml> oklardan üçünü dışarı sürükleyin ve <xml><block type=\"when_run\"/></xml> bloğuna bağlayın."
         },
         "courseB_maze_seq4_2021": {
           "courseB_maze_seq4_a": "Meşe palamuduna ulaşana kadar bir seferde bir talimat eklemeyi deneyin.",
-          "courseB_maze_seq4_b": "Bu bulmacayı çözmek için doğuya hareket etmek isteyeceksiniz"
+          "courseB_maze_seq4_b": "Bu bulmacayı çözmek için <xml><block type=\"maze_moveEast\"/></xml> bloğunu kullanmak isteyeceksiniz."
         },
         "courseB_maze_seq5_2021": {
           "courseB_maze_seq5_a": "Zorlandığınız durumlarda yolu kağıt üzerine çizmeyi deneyin.",
@@ -9401,7 +9401,7 @@
         },
         "courseB_maze_seq_challenge1_2021": {
           "courseB_maze_seq_challenge1_a": "En kısa yol bu sefer işe yaramayabilir.",
-          "courseB_maze_seq_challenge1_b": "<xml><block type=\"maze_moveWest\"/></xml>  bloğunu kullanarak ilerlemeyi deneyin."
+          "courseB_maze_seq_challenge1_b": "Başlamak için <xml><block type=\"maze_moveWest\"/></xml> bloğunu kullanmayı deneyin."
         },
         "courseB_maze_seq_challenge2_2021": {
           "courseB_maze_seq_challenge2_a": "Bu bulmacayı çözmek için blok eklemene veya kaldırmana gerek yok.",
@@ -9584,8 +9584,8 @@
           "courseC_artist_loops7a_a": "Dairenin iç açısı 360 derece olduğundan, dönüşteki açı değeri ve döngü sayının çarpımı 360'a eşit olmalıdır. Bunun nasıl çalıştığını görmek için önerilen rotayı kontrol edin!"
         },
         "courseC_artist_prog2_2021": {
-          "courseC_artist_prog2_a": "Eğer 'İleriye Taşı 100 Piksel' blokunu kullanırsan, otomatik olarak bir çizgi çizeceğim.",
-          "courseC_artist_prog2_b": "Köşeyi çevirirken sorun mu yaşıyorsunuz? `90 derece sağa dön` bloğunu kullanın."
+          "courseC_artist_prog2_a": "*\"Eğer <xml><block type=\"draw_move_by_constant\"><title name=\"DIR\">moveForward</title><title name=\"VALUE\">100</title></block></xml> bloğunu kullanırsanız, bir çizgi çizeceğim. “*",
+          "courseC_artist_prog2_b": "Köşeyi dönerken sorun mu yaşıyorsunuz?  <xml><block type=\"draw_turn_by_constant_dropdown\"><title name=\"DIR\">turnRight</title><title name=\"VALUE\" config=\"45,60,90,120,180\">90</title></block></xml> bloğunu kullanın."
         },
         "courseC_artist_prog3_2021": {
           "courseC_artist_prog3_a": "Bu pencereyi oluşturmak için kenarları 100 piksel olan bir kare çizin.\n\n-   ilerle\n-   dön\n-   ilerle\n-   dön\n-   ilerle\n-   dön\n-   ilerle",
@@ -10060,7 +10060,7 @@
           "courseD_bee_conditionals_challenge1_b": "Bu bulmacada her alanda çiçek, petek olabilir ya da hiçbir şey olmayabilir. Bu demektir ki her karede eğer/değilse (if/else) koşulunu tekrarlayabilirsin."
         },
         "courseD_bee_conditionals_challenge2_2021": {
-          "courseD_bee_conditionals_challenge1_b": "Tıpkı \"çiçekteyse\" bloğu gibi \"while nektar>0\" içindeki kod yalnızca arı çiçekteyse çalışır. Farkı ise içindeki kodun nektar kalmayıncaya kadar çalışacak olmasıdır. Bu deseni deneyin:\n\n<xml>  <block type=\"bee_whileNectarAmount\">\n    <title name=\"ARG1\">nectarRemaining</title>\n    <title name=\"OP\">&gt;</title>\n    <title name=\"ARG2\">0</title>                    <statement name=\"DO\">\n                      <block type=\"maze_nectar\"/>\n                    </statement>\n  </block></xml>"
+          "courseD_bee_conditionals_challenge1_b": "Tıpkı \"çiçekteyse\" bloğu gibi \"while nektar>0\" içindeki kod yalnızca arı çiçekteyse çalışır. Farkı ise içindeki kodun nektar kalmayıncaya kadar çalışacak olmasıdır. Bu deseni deneyin:\n\n<xml>  <block type=\"bee_whileNectarAmount\">\n    <title name=\"ARG1\">nectarRemaining</title>\n    <title name=\"OP\">></title>\n    <title name=\"ARG2\">0</title>                    <statement name=\"DO\">\n                      <block type=\"maze_nectar\"/>\n                    </statement>\n  </block></xml>"
         },
         "courseD_bee_nestedLoops1_2021": {
           "courseD_bee_nestedLoops1_a": "İşe yaramadı mı? Satır satır ne olduğunu görmek için \"Adım\" düğmesini kullanmayı deneyin.",
@@ -10082,7 +10082,7 @@
           "courseD_bee_nestedLoops7_c": "Sahip olduğunuz üç bloğu aşağıdaki gibi iç içe yerleştirin:\n\n-   tekrar 4\n    -   tekrar 3\n        \\-tekrar 12\n            \\- nektar al\n        -   ilerle\n    -   sağa dön"
         },
         "courseD_bounce_events10s_2021": {
-          "courseD_bounce_events10s_a": "Kodunda bu olayların ikisini de bulundurmalısın:\n<xml><block type=\"bounce_whenBallInGoal\" deletable=\"false\"><next><block type=\"bounce_playSound\"><title name=\"SOUND\">Hışırtı</title><next><block type=\"bounce_incrementPlayerScore\"></block></next></block></next></block><block type=\"bounce_whenBallMissesPaddle\" deletable=\"false\"><next><block type=\"bounce_playSound\"><title name=\"SOUND\">Islık</title><next><block type=\"bounce_incrementOpponentScore\"></block></next></block></next>\\</block</xml>"
+          "courseD_bounce_events10s_a": "Kodunda bu olayların ikisini de bulundurmalısın:\n\n<xml><block type=\"bounce_whenBallInGoal\" deletable=\"false\"><next><block type=\"bounce_playSound\"><title name=\"SOUND\">swish</title><next><block type=\"bounce_incrementPlayerScore\"></block></next></block></next></block><block type=\"bounce_whenBallMissesPaddle\" deletable=\"false\"><next><block type=\"bounce_playSound\"><title name=\"SOUND\">whistle</title><next><block type=\"bounce_incrementOpponentScore\"></block></next></block></next></block></xml>"
         },
         "courseD_bounce_events11s_2021": {
           "courseD_bounce_events11s_a": "Oyun başladığında, sepeti vurduğunda ve el topu kaçırdığında topu atmalısın."
@@ -10092,18 +10092,18 @@
           "courseD_bounce_events12s_b": "Her atışın değerini 2 puan yapmayı ve takım logosunu sizin memleketinizin logosuyla değiştirmeyi deneyin!"
         },
         "courseD_bounce_events1s_2021": {
-          "courseD_bounce_events1s_a": "Bu oyunun çalışması için 'sola ilerle' bloğunu 'sol oka basıldığında' olayına eklemeniz gerekir:\n<xml> <block type=\"bounce_whenLeft\" deletable=\"false\" x=\"20\" y=\"20\">\n    <next>\n      <block type=\"bounce_moveLeft\"/>\n    </next>\n  </block>\n\n   </xml>",
+          "courseD_bounce_events1s_a": "Bu oyunun çalışması için 'sola ilerle' bloğunu 'sol oka basıldığında' olayına eklemeniz gerekir:\n\n<xml> <block type=\"bounce_whenLeft\" deletable=\"false\" x=\"20\" y=\"20\">\n    <next>\n      <block type=\"bounce_moveLeft\"/>\n    </next>\n  </block>\n\n   </xml>",
           "courseD_bounce_events1s_b": "Bu bulmacayı çözmek için \"Çalıştır\" düğmesine basmayı ve eli sepete almayı unutma."
         },
         "courseD_bounce_events2s_2021": {
-          "courseD_bounce_events2s_a": "Bunun çalışması için kodlanan 2 takım 'ilerle' olayına sahip olmanız gerekecek:\n\n<xml>\n<block type=\"bounce_whenLeft\" deletable=\"false\" x=\"20\" y=\"20\">\n<next>\n<block type=\"bounce_moveLeft\"/>\n</next>\n</block>\n<block type=\"bounce_whenRight\" deletable=\"false\" x=\"180\" y=\"20\">\n<next>\n<block type=\"bounce_moveRight\"/>\n</next>\n</block>\n</xml>"
+          "courseD_bounce_events2s_a": "Bunun çalışması için kodlanan 2 takım 'ilerle' olayına sahip olmanız gerekecek:\n\n<xml>\n  <block type=\"bounce_whenLeft\" deletable=\"false\" x=\"20\" y=\"20\">\n    <next>\n      <block type=\"bounce_moveLeft\"/>\n    </next>\n  </block>\n  <block type=\"bounce_whenRight\" deletable=\"false\" x=\"180\" y=\"20\">\n    <next>\n      <block type=\"bounce_moveRight\"/>\n    </next>\n  </block>\n</xml>"
         },
         "courseD_bounce_events5s_2021": {
           "courseD_bounce_events5s_a": "Bulmacayı çözmek için eli hareket ettirmeye gerek yok.",
-          "courseD_bounce_events5s_b": "Çalışma alanına bu kodu eklediğinizden emin olun:\n<xml>  <block type=\"bounce_whenPaddleCollided\" deletable=\"false\"> <next> <block type=\"bounce_bounceBall\"/></next></block></xml>"
+          "courseD_bounce_events5s_b": "Çalışma alanına bu kodu eklediğinizden emin olun:\n\n<xml>  <block type=\"bounce_whenPaddleCollided\" deletable=\"false\"> <next> <block type=\"bounce_bounceBall\"/></next></block></xml>"
         },
         "courseD_bounce_events6s_2021": {
-          "courseD_bounce_events6s_a": "Bunun gibi bir olayınız var mı?\n<xml><block type=\"bounce_whenWallCollided\" deletable=\"false\"><next><block type=\"bounce_bounceBall\"></block></next></block></block></xml>",
+          "courseD_bounce_events6s_a": "Buna benzeyen bir olayınız var mı?\n\n<xml><block type=\"bounce_whenWallCollided\" deletable=\"false\"><next><block type=\"bounce_bounceBall\"></block></next></block></block></xml>",
           "courseD_bounce_events6s_b": "Eğer kodu doğru yazdıysanız, kazanmak için eli hareket ettirmeniz gerekmez."
         },
         "courseD_bounce_events7s_2021": {
@@ -10264,12 +10264,12 @@
           "courseD_iceage_loops9_c": "Scrat meşe palamuduna ulaşmak için bu tolu takip etmeli."
         },
         "courseD_maze_intro4_2021": {
-          "courseC_maze_programming4_a": "Sağa veya sola Scrat'in bakış açısından dönebilirsiniz. Eğer yüzünüz sağa dönükse, sağa dönmek sizi aşağıya döndürecektir.",
+          "courseC_maze_programming4_a": "Sağa veya sola Red'in bakış açısından dönebilirsiniz. Eğer yüzünüz sağa dönükse, sağa dönmek sizi aşağıya döndürecektir.",
           "courseC_maze_programming4_b": "Yolu takip etmek için, ileri gidin ve bir yöne dönün, sonra yeniden hareket edin ve zıt yöne dönün. Palamuda ulaşmak için bir kez daha ileri gidin."
         },
         "courseD_maze_intro5a_2021": {
           "courseC_maze_programming5_a": "Kodunuzu satır satır çalıştırmak için \"Adım\" düğmesini kullanabilirsiniz. Sonrasında ne yapmanız gerektiğini anladınız mı?",
-          "courseC_maze_programming5_b": "Bu dönüşlerin Kırmızı'nın perspektifi olduğunu unutmayın.",
+          "courseC_maze_programming5_b": "Bu dönüşlerin Red'in perspektifi olduğunu unutmayın.",
           "courseC_maze_programming5_c": "Hata yapmaktan korkmayın! Bulmacayı henüz çözdüğünüzü düşünmeseniz bile, bloklar ekleyin ve ne olacağını görmek için kodu çalıştırın."
         },
         "courseD_maze_nestedLoops3_2021": {
@@ -10351,9 +10351,9 @@
           "courseE_artist_functions1_c": "Daha kısa bir kod için, gözlüğün kare çerçevelerini çizmek için \"tekrar\" döngüsü kullanabilirsiniz."
         },
         "courseE_artist_functions2_2021": {
-          "courseD_artist_functions2_b": "Fonksiyon bütün programı içermeyecek, sadece 100 piksel uzunluğundaki kenarlarını çizer.",
-          "courseD_artist_functions2_c": "'Çalıştığı zaman' bloğunun altına fonksiyonunuzu 'çalıştırmak' için yeşil 'bir kare çiz' bloğu kullanın. Aksi takdirde, fonksiyonunuzdaki kod çalışmayacak.",
-          "courseD_artist_functions2_a": "Programınız: \n\\-Fonksiyon kullanmalıdır.\n\n-   ileri 100 + 75 piksel ilerlemelidir\n-   Fonksiyon kullanmalıdır"
+          "courseD_artist_functions2_b": "İşlev, programınızın tamamını içermemeli, yalnızca 100 piksel kenarlı bir kare çizen kısmı içermelidir.",
+          "courseD_artist_functions2_c": "Fonksiyonunuzu “çağırmak” için yeşil \\`bir kare çiz' bloğunu kullandığınızdan emin olun. Aksi takdirde, fonksiyonunuzdaki kod çalışmaz.\n\n<xml><block type=\"procedures_callnoreturn\" limit=\"2\"><mutation name=\"draw a square\"/></block></xml>",
+          "courseD_artist_functions2_a": "Programınız:\n\n-   Fonksiyonunuzu kullanmalı\n-   100 + 75 piksel ileri gitmeli\n-   Fonksiyonunuzu tekrar kullanmalı"
         },
         "courseE_artist_functions2_dani": {
           "courseD_artist_functions2_b": "Yazdığınız fonksiyon bütün programı değil, sadece kenarları 100 piksel olan bir kare çizme kısmını kapsamalı.",
@@ -10389,7 +10389,7 @@
           "courseD_artist_functions8_d": "Bir kare satırı oluşturmak için:\n\n-   3 kez tekrarla\n    -   kenar uzunluğu **50 piksel** olan bir kare çiz\n    -   **100 piksel** ileri atla",
           "courseD_artist_functions8_b": "Bu resimdeki her bir satırı 3 kareden oluşan bir satır olarak düşünün. Kaç kare satırı var ve her birini çizmeye nereden başlamalısınız?\n\n![](<https://images.code.org/22a6f5cc5551371057244eee01955f8e-image-1493135135468.4.10 Hint Drawing.png>)",
           "courseD_artist_functions8_c": "Her bir aşamalı kare dizisinin sonunda sanatçı sıradaki aşamalı kare dizisini çizmeye başlamadan önce aşağı ve geri atlamalı.",
-          "courseD_artist_functions8_g": "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
+          "courseD_artist_functions8_g": "![](https://images.code.org/c5b48a0db328c6cb32a024d2bf9c00af-image-1493139855549.gif)"
         },
         "courseE_artist_functions8b_2021": {
           "courseD_artist_functions8_f": "Bunu doğru bir şekilde yapıyorsanız, yalnızca bir 'ileri git' bloğuna ihtiyacınız olacak!",
@@ -10424,12 +10424,12 @@
           "courseE_farmer_functions1a_b": "Balkabağına ulaşmak için \"kadar tekrarla\" bloğunu kullanın!"
         },
         "courseE_farmer_functions2b_2021": {
-          "courseE_farmer_functions2b_a": "İki yolun sonuna ulaşmak için 'bal kabağına kadar tekrarla''yı kullanabilirsiniz.",
+          "courseE_farmer_functions2b_a": "İki yolun da sonuna ulaşmak için 'balkabağına kadar tekrarla' yabilirsiniz.",
           "courseE_farmer_functions2b_b": "Bağlantı yolunda hiç mısır yok, yalnızca ilerleyebilir ve dönebilirsiniz.",
           "courseE_farmer_functions2b_c": "Mısırların tamamını toplamak için iki ayrı \"kadar tekrarla\" bloğuna ihtiyacınız var."
         },
         "courseE_farmer_functions2ba_2021": {
-          "courseE_farmer_functions2ba_a": "Nu fonksiyonu çağırmak için yeşil 'mısır ve bal kabağı' karesi kullanın."
+          "courseE_farmer_functions2ba_a": "Tüm kabakları aldığınızdan emin olmak için yeşil `tüm kabakları al` bloğunu kullanın!"
         },
         "courseE_farmer_functions3c1_2021": {
           "coursee_farmer_functions3c1_2018_a": "Bu bulmacayı çözmek için 'yol boyunca topla' fonksiyonunu üç kez kullanmanız gerekecektir.",
@@ -10456,13 +10456,13 @@
           "courseE_farmer_ramp11b_a": "Kodunuzu daha kısa yapmak için 'tekrar' döngüsünün içine 'süresince' döngüsü yerleştirebilirsiniz."
         },
         "courseE_farmer_ramp12_forswap_2021": {
-          "courseE_farmer_ramp12_b": "Çiftçiye kaç gere ilerleyip kaç marul almasını söylemek için tekrarla bloğuna ihtiyacın var."
+          "courseE_farmer_ramp12_b": "Yine de, çiftçiye kaç kez ilerleyip marul alması gerektiğini söylemek için tüm bunların dışında bir \"tekrar\" döngüsü kullanmanız gerekecek."
         },
         "courseE_farmer_ramp12c_2021": {
-          "courseE_farmer_ramp12b_b": "Yine de hala ilk 'kadar' döngüsünü kullanmaya ihtiyacınız olacak, sonra marula ulaştığınızda bir 'süresince' döngüsü kullanın."
+          "courseE_farmer_ramp12b_b": "Yine de önce bir `-e kadar` döngüsü kullanmanız gerekir, sonra marula ulaştığınızda bir `süresince` döngüsü kullanın."
         },
         "courseE_farmer_ramp12d_2021": {
-          "courseE_farmer_ramp12d_b": "Bulmacayı çözmek için yine de hala bir 'tekrar' döngüsünün içine 'kadar' ve 'süresince' döngülerinizi koymanız gerekir!"
+          "courseE_farmer_ramp12d_b": "Bu bulmacayı çözmek için yine de `-e kadar`ve `süresince` döngülerinizi bir \\`tekrar 'döngüsünün içine koymanız gerekecek!"
         },
         "courseE_farmer_ramp12e_2021": {
           "courseE_farmer_ramp12e_b": "Bu bulmacanın çözümü son bulmacanın çözümüne çok benziyor, fakat diğer yöne dönüyor."
@@ -10641,7 +10641,7 @@
           "when_answered_var": "\"Cevaplandığında\" bloğundaki değişkenin etiketini değiştirmeyi deneyin. Birden çok istem olduğundan, yanıtlanacak _son_ istem için olan etiketi kullanın.\n\n<xml><block type=\"gamelab_whenPromptAnswered\">\n      <value name=\"VAR\">\n        <block type=\"variables_get\" can_disconnect_from_parent=\"false\">\n          <title name=\"VAR\">???</title>\n        </block>\n      </value>\n    </block></xml>"
         },
         "helloworld_animals_backgrounds": {
-          "hello_world_background": "Bir \"tıklandığı zaman\" olay bloğunun altına bir \"arka planı ayarla\" bloğu bağlayarak arka planı değiştirebilirsiniz:\n\n<xml><block type=\"gamelab_spriteClicked\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"cuteanimals_hippo\"</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_setBackgroundImageAs\">\n        <title name=\"IMG\">\"gradient_30\"</title>\n      </block>\n    </next>\n  </block>\n</xml>"
+          "hello_world_background": "Bir \"tıklandığı zaman\" olay bloğunun altına bir \"arka planı ayarla\" bloğu bağlayarak arka planı değiştirebilirsiniz:\n\n<xml><block type=\"gamelab_spriteClicked\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"cuteanimals_hippo\"</title>\n      </block>\n    </value>\n    <next>\n      \\<block type=\"gamelab_setBackgroundImageAs\">\n        <title name=\"IMG\">\"gradient\\_30\"</title>\n      </block>\n    </next>\n  </block>\n</xml>"
         },
         "helloworld_animals_behaviors": {
           "storyboard_behavior_example": "_Not:_ Bir hareketli nesneye bir davranış vermek için, yeşil davranış bloklarından biri ile bir \"hareketli nesne başlar\" bloğu kullanmanız gerekir, örneğin \"sağa dönme\".\n\n<xml><block type=\"gamelab_addBehaviorSimple\">\n            <value name=\"SPRITE\">\n              <block type=\"gamelab_allSpritesWithAnimation\">\n                <title name=\"ANIMATION\">\"cuteanimals_rooster_hello\"</title>\n              </block>\n            </value>\n            <value name=\"BEHAVIOR\">\n              <block type=\"gamelab_behavior_get\">\n                <mutation></mutation>\n                <title name=\"VAR\" id=\"spinning right\">spinning right</title>\n              </block>\n              </value></block></xml>"
@@ -10651,10 +10651,10 @@
           "hw_click_sprites": "Program çalışırken hareketli nesnelere tıklayın."
         },
         "helloworld_animals_costumes": {
-          "hello_world_costumes": "\"Tıklandığı zaman\" olay bloğunun altına bir \"kostüm değiştir\" bloğu bağlamayı deneyin.\n\n<xml><block type=\"gamelab_spriteClicked\" deletable=\"false\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\" can_disconnect_from_parent=\"false\">\n        <title name=\"ANIMATION\">\"\"cuteanimals_sheep\"</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_setAnimation\">\n        <title name=\"ANIMATION\">\"\"cuteanimals_sheep\"</title>\n        <value name=\"THIS\">\n          <block type=\"gamelab_allSpritesWithAnimation\">\n            <title name=\"ANIMATION\">\"\"cuteanimals_goat_hello\"</title>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block>\n</xml>"
+          "hello_world_costumes": "\"Tıklandığı zaman\" olay bloğunun altına bir \"kostüm değiştir\" bloğu bağlamayı deneyin.\n\n<xml><block type=\"gamelab_spriteClicked\" deletable=\"false\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\" can_disconnect_from_parent=\"false\">\n        <title name=\"ANIMATION\">\"\"cuteanimals_sheep\"</title>\n      </block>\n    </value>\n    <next>\n      \\<block type=\"gamelab_setAnimation\">\n        <title name=\"ANIMATION\">\"\"cuteanimals_sheep\"</title>\n        <value name=\"THIS\">\n          \\<block type=\"gamelab_allSpritesWithAnimation\">\n            <title name=\"ANIMATION\">\"\"cuteanimals_goat_hello\"</title>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block>\n</xml>"
         },
         "helloworld_animals_events": {
-          "hello_world_click": "\"Tıklandığı zaman\" olay bloğunun altına bir \"söyle\" bloğu bağlayın:\n\n<xml><block type=\"gamelab_spriteClicked\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"cuteanimals_seahorse\"</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_spriteSay\">\n        <title name=\"SPEECH\">Hello, ocean!</title>\n        <value name=\"SPRITE\">\n          <block type=\"gamelab_allSpritesWithAnimation\">\n            <title name=\"ANIMATION\">\"cuteanimals_seahorse\"</title>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block></xml>"
+          "hello_world_click": "\"Tıklandığı zaman\" olay bloğunun altına bir \"söyle\" bloğu bağlayın:\n\n<xml><block type=\"gamelab_spriteClicked\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"cuteanimals_seahorse\"</title>\n      </block>\n    </value>\n    <next>\n      \\<block type=\"gamelab_spriteSay\">\n        <title name=\"SPEECH\">Hello, ocean!</title>\n        <value name=\"SPRITE\">\n          <block type=\"gamelab_allSpritesWithAnimation\">\n            <title name=\"ANIMATION\">\"cuteanimals\\_seahorse\"</title>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block></xml>"
         },
         "helloworld_animals_location": {
           "location_pin_hint": "Bir hareketli nesnenin konumunu değiştirmek için konum bloğundaki pine tıklayın, ardından gitmesini istediğiniz yere tıklayın.\n\n![](https://images.code.org/e3267d2b50f754befc63744be14287ac-image-1633360873408.gif)"
@@ -10666,7 +10666,7 @@
           "hello-world-first-solution-bear": "Ayının bir şey söylemesini sağlamak için kodun bloklarını şöyle bağlayın:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\"><next>  <block type=\"gamelab_makeNewSpriteAnon\">\n    <title name=\"ANIMATION_NAME\">\"cuteanimals_bear\"</title>\n    <value name=\"LOCATION\">\n      <block type=\"gamelab_location_picker\">\n        <title name=\"LOCATION\">{\"x\":200,\"y\":200}</title>\n      </block>\n    </value><next>  <block type=\"gamelab_spriteSay\">\n    <title name=\"SPEECH\">Hello, world!</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"cuteanimals_bear\"</title>\n      </block>\n    </value>\n  </block></next>\n  </block></next></block>\n</xml>"
         },
         "helloworld_animals_sizes": {
-          "storyboard_setProp": "Bir hareketli nesnenin boyutunu bir kez ayarlamak için bu bloğu kullanabilirsiniz:\n\n<xml><block type=\"gamelab_setProp\">\n      <title name=\"PROPERTY\">\"scale\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"cuteanimals_tiger\"</title>\n        </block>\n      </value>\n      <value name=\"VAL\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">50</title>\n        </block>\n      </value>\n    </block></xml>",
+          "storyboard_setProp": "Bir hareketli nesnenin boyutunu bir kez ayarlamak için bu bloğu kullanabilirsiniz:\n\n<xml><block type=\"gamelab_setProp\">\n      <title name=\"PROPERTY\">\"scale\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"cuteanimals_tiger\"</title>\n        </block>\n      </value>\n      <value name=\"VAL\">\n        \\<block type=\"math_number\">\n          <title name=\"NUM\">50</title>\n        </block>\n      </value>\n    </block></xml>",
           "storyboard_changePropBy": "Hareketli nesnenin boyutunu tekrar tekrar değiştirmek isterseniz (olaylarla) bu bloğu kullanın:\n\n<xml><block type=\"gamelab_changePropBy\">\n      <title name=\"PROPERTY\">\"scale\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"cuteanimals_cheetah_hello\"</title>\n        </block>\n      </value>\n      <value name=\"VAL\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">10</title>\n        </block>\n      </value>\n    </block></xml>"
         },
         "helloworld_emoji_backgrounds": {
@@ -10728,7 +10728,7 @@
           "storyboard_changePropBy": "Hareketli nesnenin boyutunu tekrar tekrar değiştirmek isterseniz (olaylarla) bu bloğu kullanın:\n\n<xml><block type=\"gamelab_changePropBy\">\n      <title name=\"PROPERTY\">\"scale\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"face_strawberry_1\"</title>\n        </block>\n      </value>\n      <value name=\"VAL\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">10</title>\n        </block>\n      </value>\n    </block></xml>"
         },
         "helloworld_retro_backgrounds": {
-          "hello_world_background": "Bir \"tıklandığı zaman\" olay bloğunun altına bir \"arka planı ayarla\" bloğu bağlayarak arka planı değiştirebilirsiniz:\n\n<xml><block type=\"gamelab_spriteClicked\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"retroship_21\"</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_setBackgroundImageAs\">\n        <title name=\"IMG\">\"background_landscape11_1\"</title>\n      </block>\n    </next>\n  </block>\n</xml>"
+          "hello_world_background": "Bir \"tıklandığı zaman\" olay bloğunun altına bir \"arka planı ayarla\" bloğu bağlayarak arka planı değiştirebilirsiniz:\n\n<xml><block type=\"gamelab_spriteClicked\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"retroship_21\"</title>\n      </block>\n    </value>\n    <next>\n      \\<block type=\"gamelab_setBackgroundImageAs\">\n        <title name=\"IMG\">\"background_landscape11_1\"</title>\n      </block>\n    </next>\n  </block>\n</xml>"
         },
         "helloworld_retro_behaviors": {
           "storyboard_behavior_example": "_Not:_ Bir hareketli nesneye bir davranış vermek için, yeşil davranış bloklarından biri ile bir \"hareketli nesne başlar\" bloğu kullanmanız gerekir, örneğin \"sağa dönme\".\n\n<xml><block type=\"gamelab_addBehaviorSimple\">\n            <value name=\"SPRITE\">\n              <block type=\"gamelab_allSpritesWithAnimation\">\n                <title name=\"ANIMATION\">\"retrocreature_09_1\"</title>\n              </block>\n            </value>\n            <value name=\"BEHAVIOR\">\n              <block type=\"gamelab_behavior_get\">\n                <mutation></mutation>\n                <title name=\"VAR\" id=\"spinning right\">spinning right</title>\n              </block>\n              </value></block></xml>"
@@ -10747,7 +10747,7 @@
           "location_pin_hint": "Bir hareketli nesnenin konumunu değiştirmek için konum bloğundaki pine tıklayın, ardından gitmesini istediğiniz yere tıklayın.\n\n![](https://images.code.org/e3267d2b50f754befc63744be14287ac-image-1633360873408.gif)"
         },
         "helloworld_retro_multi": {
-          "storyboard_costume": "Kostümlerin her hareketli nesne için eşleştiğinden emin olun.\n<xml><block type=\"gamelab_spriteSay\">\n      <title name=\"SPEECH\">Hello!</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"retrocreature_16\"</title>\n        </block>\n      </value>\n    </block></xml>"
+          "storyboard_costume": "Kostümlerin her hareketli nesne için eşleştiğinden emin olun.\n<xml><block type=\"gamelab_spriteSay\">\n      <title name=\"SPEECH\">Hello!</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"retrocreature\\_16\"</title>\n        </block>\n      </value>\n    </block></xml>"
         },
         "helloworld_retro_say": {
           "hello-world-first-solution-retrocreature": "Yaratığın bir şey söylemesini sağlamak için kodun bloklarını şöyle bağlayın:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\"><next>  <block type=\"gamelab_makeNewSpriteAnon\">\n    <title name=\"ANIMATION_NAME\">\"retrocreature_18_1\"</title>\n    <value name=\"LOCATION\">\n      <block type=\"gamelab_location_picker\">\n        <title name=\"LOCATION\">{\"x\":200,\"y\":200}</title>\n      </block>\n    </value><next>  <block type=\"gamelab_spriteSay\">\n    <title name=\"SPEECH\">Hello, world!</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"retrocreature_18_1\"</title>\n      </block>\n    </value>\n  </block></next>\n  </block></next></block>\n</xml>"
@@ -10757,8 +10757,8 @@
           "hw_retro_changePropBy": "Hareketli nesnenin boyutunu tekrar tekrar değiştirmek isterseniz (olaylarla) bu bloğu kullanın:\n\n<xml><block type=\"gamelab_changePropBy\">\n      <title name=\"PROPERTY\">\"scale\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"retrocreature_11_1\"</title>\n        </block>\n      </value>\n      <value name=\"VAL\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">10</title>\n        </block>\n      </value>\n    </block></xml>"
         },
         "poetry_hoc_addSprites": {
-          "location_hint": "Her hareketli nesnenin bir **konumu** vardır. Bu bloktaki pine tıklayarak konumu ayarlayabilirsiniz:\n\n<xml><block type=\"Poetry_makeNewSpriteAnon\"><title name=\"ANIMATION_NAME\">\"twinkling_star\"</title><title name=\"LOCATION\">{\"x\":200,\"y\":225}</title></block></xml>\n\n-   Konum bloğundaki pine ![](<https://images.code.org/e9531e292b034feef0f176d4f97ac47f-image-1634932451913.54.05 PM.png>) tıklayın ve ardından hareketli nesneniz için ekranda yeni bir konum seçin.\n-   Kodunuz bittiğinde \"Çalıştır\" düğmesine basın.",
-          "remove_hint": "Belirli bir dize numarasındaki bir hareketli nesneyikaldırabilirsiniz. Onun yerine yeni bir hareketli nesne ekleyebilirsiniz:\n\n<xml><block type=\"Poetry_whenLineShows\"><title name=\"N\">3</title><next><block type=\"Poetry_destroy\"><title name=\"ANIMATION_NAME\">\"twinkling_star\"</title><next><block type=\"Poetry_makeNewSpriteAnon\"><title name=\"ANIMATION_NAME\">\"night_moon\"</title><title name=\"LOCATION\">{\"x\":200,\"y\":225}</title></block></next></block></next></block></xml>"
+          "location_hint": "Her hareketli nesnenin bir **konumu** vardır. Bu bloktaki pine tıklayarak konumu ayarlayabilirsiniz:\n\n<xml><block type=\"Poetry_makeNewSpriteAnon\"><title name=\"ANIMATION_NAME\">\"twinkling\\_star\"</title><title name=\"LOCATION\">{\"x\":200,\"y\":225}</title></block></xml>\n\n-   Konum bloğundaki pine ![](<https://images.code.org/e9531e292b034feef0f176d4f97ac47f-image-1634932451913.54.05 PM.png>) tıklayın ve ardından hareketli nesneniz için ekranda yeni bir konum seçin.\n-   Kodunuz bittiğinde \"Çalıştır\" düğmesine basın.",
+          "remove_hint": "Belirli bir dize numarasındaki bir hareketli nesneyikaldırabilirsiniz. Onun yerine yeni bir hareketli nesne ekleyebilirsiniz:\n\n<xml><block type=\"Poetry_whenLineShows\"><title name=\"N\">3</title><next><block type=\"Poetry_destroy\"><title name=\"ANIMATION_NAME\">\"twinkling_star\"</title><next>\\<block type=\"Poetry_makeNewSpriteAnon\"><title name=\"ANIMATION_NAME\">\"night\\_moon\"</title><title name=\"LOCATION\">{\"x\":200,\"y\":225}</title></block></next></block></next></block></xml>"
         },
         "poetry_hoc_backgroundEffects": {
           "add_background_effect": "Bunun gibi bir arka plan bloğu bulun:\n<xml><block type=\"Poetry_setBackgroundEffect\"><title name=\"EFFECT\">\"colors\"</title><title name=\"PALETTE\">\"sunrise\"</title></block></xml>\n\nve bunun gibi bir metin efekti bloğu bulun:\n\n<xml><block type=\"Poetry_setFontColor\"><value name=\"FILL\"><block type=\"colour_picker\"><title name=\"COLOUR\">#000099</title></block></value></block></xml>\n\nBu blokları Çalışma Alanınızda \"çalıştığı zaman\" altına bağlayın.",
@@ -10770,14 +10770,14 @@
           "more_events_hint": "Programınızda birden fazla olay kullanabilirsiniz. Şiirdeki yeni dizelere uygun farklı efektlere sahip iki olay kullanmayı deneyin.\n\n<xml><block type=\"Poetry_whenLineShows\"><title name=\"N\">2</title><next><block type=\"Poetry_setForegroundEffect\"><title name=\"EFFECT\">\"starburst\"</title></block></next></block></xml>\n\n<xml><block type=\"Poetry_whenLineShows\"><title name=\"N\">4</title><next><block type=\"Poetry_setForegroundEffect\"><title name=\"EFFECT\">\"bubbles\"</title></block></next></block></xml>"
         },
         "poetry_hoc_sounds": {
-          "poetry_sound_hint": "Bu bloğu bulun:\n<xml><block type=\"Poetry_playSound\"><title name=\"SOUND\">\"sound://category_background/typewriter.mp3\"</title></block></next></block></xml>\nya da bu bloğu: \n\n<xml><block type=\"Poetry_playMusic\"><title name=\"SOUND\">\"sound://category_background/fire_burning.mp3\"</title></block></xml>\n\nÇalışma Alanızda \"çalıştığı zaman\" bloğunun altına bağlayın.",
-          "more_code": "Seçtiğiniz sese uyum sağlamak için daha fazla efekt ve renk ekleyin.\n<xml><block type=\"when_run\" movable=\"false\"><next><block type=\"Poetry_playSound\"><title name=\"SOUND\">\"sound://category_loops/vibrant_game_welcome_to_heaven_loop_1.mp3\"</title><next><block type=\"Poetry_setBackgroundEffect\"><title name=\"EFFECT\">\"blooming\"</title><title name=\"PALETTE\">\"sunrise\"</title><next><block type=\"Poetry_setFontColor\"><value name=\"FILL\"><block type=\"colour_picker\"><title name=\"COLOUR\">#996633</title></block></value><next><block type=\"Poetry_setTextEffect\"><title name=\"EFFECT\">\"fade\"</title></block></next></block></next></block></next></block></next></block></xml>"
+          "poetry_sound_hint": "Bu bloğu bulun:\n<xml><block type=\"Poetry_playSound\"><title name=\"SOUND\">\"sound://category\\_background/typewriter.mp3\"</title></block></next></block></xml>\nya da bu bloğu: \n\n<xml><block type=\"Poetry_playMusic\"><title name=\"SOUND\">\"sound://category_background/fire_burning.mp3\"</title></block></xml>\n\nÇalışma Alanızda \"çalıştığı zaman\" bloğunun altına bağlayın.",
+          "more_code": "Seçtiğiniz sese uyum sağlamak için daha fazla efekt ve renk ekleyin.\n<xml><block type=\"when_run\" movable=\"false\"><next><block type=\"Poetry_playSound\"><title name=\"SOUND\">\"sound://category_loops/vibrant_game_welcome_to_heaven_loop_1.mp3\"</title><next>\\<block type=\"Poetry_setBackgroundEffect\"><title name=\"EFFECT\">\"blooming\"</title><title name=\"PALETTE\">\"sunrise\"</title><next><block type=\"Poetry_setFontColor\"><value name=\"FILL\"><block type=\"colour_picker\"><title name=\"COLOUR\">#996633</title></block></value><next><block type=\"Poetry_setTextEffect\"><title name=\"EFFECT\">\"fade\"</title></block></next></block></next></block></next></block></next></block></xml>"
         },
         "poetry_hoc_spriteBehaviors": {
-          "add_behavior": "Kodunuza bir \"hareketli nesne başlar\" bloğu ekleyin. Davranış kazandırdığınız hareketli nesneyi halihazırda oluşturduğunuzdan emin olun.\n\n<xml><block type=\"when_run\"><next><block type=\"Poetry_makeNewSpriteAnon\"><title name=\"ANIMATION_NAME\">\"smiling_sun\"</title><title name=\"LOCATION\">{\"x\":65,\"y\":105}</title><next><block type=\"Poetry_startBehavior\"><title name=\"ANIMATION_NAME\">\"smiling_sun\"</title><title name=\"BEHAVIOR\">spinning_right</title></block></next></block></next></block></xml>"
+          "add_behavior": "Kodunuza bir \"hareketli nesne başlar\" bloğu ekleyin. Davranış kazandırdığınız hareketli nesneyi halihazırda oluşturduğunuzdan emin olun.\n\n<xml><block type=\"when_run\"><next><block type=\"Poetry_makeNewSpriteAnon\"><title name=\"ANIMATION_NAME\">\"smiling_sun\"</title><title name=\"LOCATION\">{\"x\":65,\"y\":105}</title><next>\\<block type=\"Poetry_startBehavior\"><title name=\"ANIMATION_NAME\">\"smiling_sun\"</title><title name=\"BEHAVIOR\">spinning_right</title></block></next></block></next></block></xml>"
         },
         "poetry_hoc_spriteSizes": {
-          "size hint": "Bu bloğu bulun ve \"150\"ye tıklayın.\n<xml><block type=\"Poetry_setSize\"><title name=\"SPRITE\">\"ocean_wave\"</title><title name=\"VAL\">150</title></block></xml>\n\nSayı \"25\" olduğunda ne olur? \n<xml><block type=\"Poetry_setSize\"><title name=\"SPRITE\">\"ocean_wave\"</title><title name=\"VAL\">25</title></block></xml>"
+          "size hint": "Bu bloğu bulun ve \"150\"ye tıklayın.\n<xml><block type=\"Poetry_setSize\"><title name=\"SPRITE\">\"ocean\\_wave\"</title><title name=\"VAL\">150</title></block></xml>\n\nSayı \"25\" olduğunda ne olur? \n<xml><block type=\"Poetry_setSize\"><title name=\"SPRITE\">\"ocean\\_wave\"</title><title name=\"VAL\">25</title></block></xml>"
         },
         "New Minecraft Hero Project": {
           "MC_HOC_2017_13_Cole_a": "Alex veya Steve'in harita kenarlarının dışında yürüyebilmesi için Agent'a bazı köprüler inşa ettirmeyi dene."
@@ -10898,18 +10898,18 @@
           "hint1": "Olay bloğundaki \"+\" düğmesine tıklayın. \"kostüm değiştir\" bloğundaki boş alanı, içerideki \"konu\" bloğuyla doldurun.\n\n<xml><block type=\"gamelab_checkTouching\"><title name=\"CONDITION\">\"when\"</title><value name=\"SPRITE1\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"healthy\"</title></block></value><value name=\"SPRITE2\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"sick\"</title></block></value><next><block type=\"gamelab_setAnimation\"><title name=\"ANIMATION\">\"sick\"</title><value name=\"THIS\"><block type=\"gamelab_subjectSpritePointer\"></block></value></block></next></block></xml>"
         },
         "CourseF_outbreak3_-2022-2": {
-          "hint1": "Canavarlara maske takmak için, \"kostümüdeğiştir\" bloğunu \"tıklandığı zaman\" olayı ile birlikte kullanın:\n\n<xml><block type=\"gamelab_spriteClicked\"><title name=\"CONDITION\">\"when\"</title><value name=\"SPRITE\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"healthy\"</title></block></value><next><block type=\"gamelab_setAnimation\"><title name=\"ANIMATION\">\"healthy_mask\"</title></block></next></block></xml>\n\nKüçük kırmızı \"tıklandığı zaman\" bloğunu da sürüklemeyi unutmayın!",
-          "hint2": "Bu seviyenin yeni kodu şöyle görünmeli:\n\n<xml><block type=\"gamelab_spriteClicked\"><title name=\"CONDITION\">\"when\"</title><value name=\"SPRITE\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"healthy\"</title></block></value><next><block type=\"gamelab_setAnimation\"><title name=\"ANIMATION\">\"healthy_mask\"</title><value name=\"THIS\"><block type=\"gamelab_clickedSpritePointer\"></block></value></block></next></block><block type=\"gamelab_spriteClicked\"><title name=\"CONDITION\">\"when\"</title><value name=\"SPRITE\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"sick\"</title></block></value><next><block type=\"gamelab_setAnimation\"><title name=\"ANIMATION\">\"sick_mask\"</title><value name=\"THIS\"><block type=\"gamelab_clickedSpritePointer\"></block></value></block></next></block></xml>"
+          "hint1": "Canavarlara maske takmak için, \"kostümüdeğiştir\" bloğunu \"tıklandığı zaman\" olayı ile birlikte kullanın:\n\n<xml><block type=\"gamelab_spriteClicked\"><title name=\"CONDITION\">\"when\"</title><value name=\"SPRITE\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"healthy\"</title></block></value><next><block type=\"gamelab_setAnimation\"><title name=\"ANIMATION\">\"healthy\\_mask\"</title></block></next></block></xml>\n\nKüçük kırmızı \"tıklandığı zaman\" bloğunu da sürüklemeyi unutmayın!",
+          "hint2": "Bu seviyenin yeni kodu şöyle görünmeli:\n\n<xml><block type=\"gamelab_spriteClicked\"><title name=\"CONDITION\">\"when\"</title><value name=\"SPRITE\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"healthy\"</title></block></value><next><block type=\"gamelab_setAnimation\"><title name=\"ANIMATION\">\"healthy_mask\"</title><value name=\"THIS\">\\<block type=\"gamelab_clickedSpritePointer\"></block></value></block></next></block><block type=\"gamelab_spriteClicked\"><title name=\"CONDITION\">\"when\"</title><value name=\"SPRITE\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"sick\"</title></block></value><next><block type=\"gamelab_setAnimation\"><title name=\"ANIMATION\">\"sick_mask\"</title><value name=\"THIS\">\\<block type=\"gamelab_clickedSpritePointer\"></block></value></block></next></block></xml>"
         },
         "CourseF_outbreak4_-2022-2": {
           "challenge": "## Başka bir zorluk mu arıyorsunuz?\n\nCanavarların daha hızlı veya daha yavaş hareket etmesini de sağlayabilirsiniz.\n\n1.  Bu blokta \"Düzenle\"ye tıklayın <xml><block type=\"gamelab_behavior_get\"><mutation></mutation><title name=\"VAR\">wandering</title></block></xml>\n2.  Bu bloktaki sayıyı artırın veya azaltın:\n\n<xml><block type=\"gamelab_moveForward\"><value name=\"SPRITE\"><block type=\"sprite_parameter_get\"><title name=\"VAR\">this sprite</title></block></value><value name=\"DISTANCE\"><block type=\"math_number\"><title name=\"NUM\">1</title></block></value></block>\n</xml>\n\nCanavarların daha yavaş hareket etmesini sağlamak için, \"0.5\" veya \"0.25\" gibi bir ondalık sayı seçin. Daha hızlı hareket etmelerini sağlamak için 1'den büyük herhangi bir sayı seçin."
         },
         "CourseF_outbreak6_-2022-2": {
           "hint2": "\"eğer olasılık\" bloğu içindeki diğer \"eylem\" bloklarına geçtiğinizden emin olun:\n\n<xml><block type=\"gamelab_checkTouching\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE1\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"healthy\"</title>\n      </block>\n    </value>\n    <value name=\"SPRITE2\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"sick\"</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_withPercentChanceDropdown\">\n      <title name=\"NUM\">90</title>\n        <statement name=\"STATEMENT\">\n          <block type=\"gamelab_setAnimation\">\n            <title name=\"ANIMATION\">\"sick\"</title>\n            <value name=\"THIS\">\n              <block type=\"gamelab_subjectSpritePointer\"></block>\n            </value>\n          </block>\n        </statement>\n      </block>\n    </next>\n  </block>\n</xml>",
-          "hint1": "Sağlıklı ve enfekte hareketli nesneler arasındaki tüm olası \"dokunma\" kombinasyonlarını kontrol etmek için 3 tane daha \"dokunduğu zaman\" olayı eklemeniz gerekecek.\n\n<xml><block type=\"gamelab_checkTouching\">\n      <title name=\"CONDITION\">\"when\"</title>\n      <value name=\"SPRITE1\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"healthy_mask\"</title>\n        </block>\n      </value>\n      <value name=\"SPRITE2\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"sick\"</title>\n        </block>\n      </value><next>\n      <block type=\"gamelab_withPercentChanceDropdown\">\n      <title name=\"NUM\">75</title>\n      <statement name=\"STATEMENT\"></statement></block></next>\n    </block><block type=\"gamelab_checkTouching\">\n      <title name=\"CONDITION\">\"when\"</title>\n      <value name=\"SPRITE1\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"healthy\"</title>\n        </block>\n      </value>\n      <value name=\"SPRITE2\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"sick_mask\"</title>\n        </block>\n      </value><next>\n      <block type=\"gamelab_withPercentChanceDropdown\">\n      <title name=\"NUM\">25</title>\n      <statement name=\"STATEMENT\"></statement></block></next>\n    </block><block type=\"gamelab_checkTouching\">\n      <title name=\"CONDITION\">\"when\"</title>\n      <value name=\"SPRITE1\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"healthy_mask\"</title>\n        </block>\n      </value>\n      <value name=\"SPRITE2\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"sick_mask\"</title>\n        </block>\n      </value><next>\n      <block type=\"gamelab_withPercentChanceDropdown\">\n      <title name=\"NUM\">10</title>\n      <statement name=\"STATEMENT\"></statement></block></next>\n    </block></xml>"
+          "hint1": "Sağlıklı ve enfekte hareketli nesneler arasındaki tüm olası \"dokunma\" kombinasyonlarını kontrol etmek için 3 tane daha \"dokunduğu zaman\" olayı eklemeniz gerekecek.\n\n<xml><block type=\"gamelab_checkTouching\">\n      <title name=\"CONDITION\">\"when\"</title>\n      <value name=\"SPRITE1\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"healthy_mask\"</title>\n        </block>\n      </value>\n      <value name=\"SPRITE2\">\n        \\<block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"sick\"</title>\n        </block>\n      </value><next>\n      <block type=\"gamelab_withPercentChanceDropdown\">\n      <title name=\"NUM\">75</title>\n      <statement name=\"STATEMENT\"></statement></block></next>\n    </block><block type=\"gamelab_checkTouching\">\n      <title name=\"CONDITION\">\"when\"</title>\n      <value name=\"SPRITE1\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"healthy\"</title>\n        </block>\n      </value>\n      <value name=\"SPRITE2\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"sick_mask\"</title>\n        </block>\n      </value><next>\n      \\<block type=\"gamelab_withPercentChanceDropdown\">\n      <title name=\"NUM\">25</title>\n      <statement name=\"STATEMENT\"></statement></block></next>\n    </block><block type=\"gamelab_checkTouching\">\n      <title name=\"CONDITION\">\"when\"</title>\n      <value name=\"SPRITE1\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"healthy_mask\"</title>\n        </block>\n      </value>\n      <value name=\"SPRITE2\">\n        \\<block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"sick_mask\"</title>\n        </block>\n      </value><next>\n      \\<block type=\"gamelab_withPercentChanceDropdown\">\n      <title name=\"NUM\">10</title>\n      <statement name=\"STATEMENT\"></statement></block></next>\n    </block></xml>"
         },
         "CourseF_outbreak7_-2022-2": {
-          "whenclicked": "## Aşılar\n\nCanavarlara tıklamayla aşı verme simülasyonu yapabilirsiniz. Bunu yapmak için, bu olayda \"kostüm değiştir\" bloğunu kullanın:\n\n<xml><block type=\"gamelab_spriteClicked\">\n      <title name=\"CONDITION\">\"when\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"healthy_mask\"</title>\n        </block>\n      </value>\n    </block></xml>",
+          "whenclicked": "## Aşılar\n\nCanavarlara tıklamayla aşı verme simülasyonu yapabilirsiniz. Bunu yapmak için, bu olayda \"kostüm değiştir\" bloğunu kullanın:\n\n<xml><block type=\"gamelab_spriteClicked\">\n      <title name=\"CONDITION\">\"when\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"healthy\\_mask\"</title>\n        </block>\n      </value>\n    </block></xml>",
           "verionhistory": "Takıldınız mı? Kodunuzu istediğiniz zaman sıfırlayabilirsiniz. Aşağıdaki \"Sürüm Geçmişi\"ne tıklayıp ardından \"Baştan Başla\"yı seçmeniz yeterli olacaktır."
         },
         "Function intro Ryan2022": {
@@ -11323,7 +11323,7 @@
           "courseB_artist_loops6_b": "Hareketleri bir kağıda yazmayı deneyin ve desene bakın."
         },
         "courseB_artist_loops72022": {
-          "courseB_artist_loops7_a": "Bu meydan okuma dört döngü içerir, herbiri birbiri ardına kullanılır!",
+          "courseB_artist_loops7_a": "Bu meydan okuma birbiri ardına**4** döngü kullanır!",
           "courseB_artist_loops7_b": "Her döngünün, farklı bir yönde ilerleyen bir merdiven deseni oluşturduğunu unutmayın.",
           "courseB_artist_loops7_c": "Döngüler aşağıdaki gibi olmalıdır:\n\n-   Döngü 1\n    -   Sağ\n    -   Aşağı\n\n-   Döngü 2\n    -   Sağ\n    -   Yukarı\n\n-   Döngü 3\n    -   Sol\n    -   Yukarı\n\n-   Döngü 4\n    -   Sol\n    -   Aşağı"
         },
@@ -11337,12 +11337,12 @@
           "courseB_artist_loops9_c": "Döngüyü nereye koyacağınızı bulamıyor musunuz? Kodu adım adım yazıp bir desen bulmayı deneyin."
         },
         "courseB_artist_loops_challenge12022": {
-          "courseB_artist_loops_challenge1_a": "Bunun gibi bloklar: <xml><block type=\"simple_move_up_left\"/></xml> sanatçının bir eğimde hareket etmesine izin verir!",
+          "courseB_artist_loops_challenge1_a": "Bunun gibi bloklar:<xml>  <block type=\"simple_move_up_right\"/></xml> sanatçınızın eğik bir şekilde hareket etmesine izin verecek!",
           "courseB_artist_loops_challenge1_b": "Bir zarı bitirdikten sonra diğerine 'Atla'!",
           "courseB_artist_loops_challenge1_c": "Bazı aynı çizgiler üzerinden geçerken  'ilerle' veya 'atla' bloklarından iki taneye ihtiyacın olacak. "
         },
         "courseB_artist_loops_challenge22022": {
-          "courseB_artist_loops_challenge2_a": "Bir X çizmek için gerekli olan kod, sana zaten verilmiş durumda. Yapman gereken şey, X'i tekrar etmek ve sonraki noktaya atlamak.",
+          "courseB_artist_loops_challenge2_a": "Bir X çizme kodu size zaten verildi. Tek yapmanız gereken X'i tekrarlamak ve bir sonraki noktaya \"atlamak\".",
           "courseB_artist_loops_challenge2_b": "Atla bloğu ile başka alanlara gidebilirsiniz."
         },
         "courseB_collector_loops102022": {
@@ -12075,7 +12075,7 @@
           "courseD_bee_conditionals_challenge1_b": "Bu bulmacada her alanda çiçek, petek olabilir ya da hiçbir şey olmayabilir. Bu demektir ki her karede eğer/değilse (if/else) koşulunu tekrarlayabilirsin."
         },
         "courseD_bee_conditionals_challenge22022": {
-          "courseD_bee_conditionals_challenge1_b": "Tıpkı \"çiçekteyse\" bloğu gibi \"while nektar>0\" içindeki kod yalnızca arı çiçekteyse çalışır. Farkı ise içindeki kodun nektar kalmayıncaya kadar çalışacak olmasıdır. Bu deseni deneyin:\n\n<xml>  <block type=\"bee_whileNectarAmount\">\n    <title name=\"ARG1\">nectarRemaining</title>\n    <title name=\"OP\">&gt;</title>\n    <title name=\"ARG2\">0</title>                    <statement name=\"DO\">\n                      <block type=\"maze_nectar\"/>\n                    </statement>\n  </block></xml>"
+          "courseD_bee_conditionals_challenge1_b": "Tıpkı \"çiçekteyse\" bloğu gibi \"while nektar>0\" içindeki kod yalnızca arı çiçekteyse çalışır. Farkı ise içindeki kodun nektar kalmayıncaya kadar çalışacak olmasıdır. Bu deseni deneyin:\n\n<xml>  <block type=\"bee_whileNectarAmount\">\n    <title name=\"ARG1\">nectarRemaining</title>\n    <title name=\"OP\">></title>\n    <title name=\"ARG2\">0</title>                    <statement name=\"DO\">\n                      <block type=\"maze_nectar\"/>\n                    </statement>\n  </block></xml>"
         },
         "courseD_bee_nestedLoops12022": {
           "courseD_bee_nestedLoops1_a": "İşe yaramadı mı? Satır satır ne olduğunu görmek için \"Adım\" düğmesini kullanmayı deneyin.",
@@ -12665,7 +12665,7 @@
           "location_pin_hint": "Bir hareketli nesnenin konumunu değiştirmek için konum bloğundaki pine tıklayın, ardından gitmesini istediğiniz yere tıklayın.\n\n![](https://images.code.org/e3267d2b50f754befc63744be14287ac-image-1633360873408.gif)"
         },
         "helloworld_food_multi_soccer-2022": {
-          "storyboard_costume": "Kostümlerin her hareketli nesne için eşleştiğinden emin olun.\n<xml><block type=\"gamelab_spriteSay\">\n      <title name=\"SPEECH\">Goal!</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"soccer_ball\"</title>\n        </block>\n      </value>\n    </block></xml>"
+          "storyboard_costume": "Kostümlerin her hareketli nesne için eşleştiğinden emin olun.\n<xml><block type=\"gamelab_spriteSay\">\n      <title name=\"SPEECH\">Goal!</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"soccer\\_ball\"</title>\n        </block>\n      </value>\n    </block></xml>"
         },
         "helloworld_food_multi_space-2022": {
           "storyboard_costume": "Kostümlerin her hareketli nesne için eşleştiğinden emin olun.\n<xml><block type=\"gamelab_spriteSay\">\n      <title name=\"SPEECH\">Hello, alien!</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"face_carrot_1\"</title>\n        </block>\n      </value>\n    </block></xml>"
@@ -12676,7 +12676,7 @@
         },
         "helloworld_food_sizes_space-2022": {
           "storyboard_setProp": "Bir hareketli nesnenin boyutunu bir kez ayarlamak için bu bloğu kullanabilirsiniz:\n\n<xml><block type=\"gamelab_spriteClicked\">\n  <field name=\"CONDITION\">\"when\"</field>\n  <value name=\"SPRITE\">\n    <block type=\"gamelab_allSpritesWithAnimation\" can_disconnect_from_parent=\"false\">\n      <field name=\"ANIMATION\">\"space_astronaut_1\"</field>\n    </block>\n  </value>\n  <next>\n    <block type=\"gamelab_setProp\">\n      <field name=\"PROPERTY\">\"scale\"</field>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\" can_disconnect_from_parent=\"false\">\n          <field name=\"ANIMATION\">\"space_astronaut_1\"</field>\n        </block>\n      </value>\n      <value name=\"VAL\">\n        <block type=\"math_number\" can_disconnect_from_parent=\"false\">\n          <field name=\"NUM\">50</field>\n        </block>\n      </value>\n    </block>\n  </next>\n</block></xml>",
-          "storyboard_changePropBy": "Hareketli nesnenin boyutunu tekrar tekrar değiştirmek isterseniz (olaylarla) bu bloğu kullanın:\n\n<xml><block type=\"gamelab_spriteClicked\">\n  <field name=\"CONDITION\">\"when\"</field>\n  <value name=\"SPRITE\">\n    <block type=\"gamelab_allSpritesWithAnimation\" can_disconnect_from_parent=\"false\">\n      <field name=\"ANIMATION\">\"space_satellite\"</field>\n    </block>\n  </value>\n  <next>\n    <block type=\"gamelab_changePropBy\">\n      <field name=\"PROPERTY\">\"scale\"</field>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\" can_disconnect_from_parent=\"false\">\n          <field name=\"ANIMATION\">\"space_satellite\"</field>\n        </block>\n      </value>\n      <value name=\"VAL\">\n        <block type=\"math_number\" can_disconnect_from_parent=\"false\">\n          <field name=\"NUM\">10</field>\n        </block>\n      </value>\n    </block>\n  </next>\n</block></xml>"
+          "storyboard_changePropBy": "Hareketli nesnenin boyutunu tekrar tekrar değiştirmek isterseniz (olaylarla) bu bloğu kullanın:\n\n<xml><block type=\"gamelab_spriteClicked\">\n  <field name=\"CONDITION\">\"when\"</field>\n  <value name=\"SPRITE\">\n    <block type=\"gamelab_allSpritesWithAnimation\" can_disconnect_from_parent=\"false\">\n      <field name=\"ANIMATION\">\"space_satellite\"</field>\n    </block>\n  </value>\n  <next>\n    \\<block type=\"gamelab_changePropBy\">\n      <field name=\"PROPERTY\">\"scale\"</field>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\" can_disconnect_from_parent=\"false\">\n          <field name=\"ANIMATION\">\"space_satellite\"</field>\n        </block>\n      </value>\n      <value name=\"VAL\">\n        \\<block type=\"math_number\" can_disconnect_from\\_parent=\"false\">\n          <field name=\"NUM\">10</field>\n        </block>\n      </value>\n    </block>\n  </next>\n</block></xml>"
         },
         "helloworld_food_say_soccer-2022": {
           "hello-world-first-solution-pizza": "Sprite'ın bir şey söylemesini sağlamak için kod bloklarını şu şekilde bağlayın:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\"><next>  <block type=\"gamelab_makeNewSpriteAnon\">\n    <title name=\"ANIMATION_NAME\">\"soccer_player_1\"</title>\n    <value name=\"LOCATION\">\n      <block type=\"gamelab_location_picker\">\n        <title name=\"LOCATION\">{\"x\":200,\"y\":200}</title>\n      </block>\n    </value><next>  <block type=\"gamelab_spriteSay\">\n    <title name=\"SPEECH\">Hello, world!</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"soccer_player_1\"</title>\n      </block>\n    </value>\n  </block></next>\n  </block></next></block>\n</xml>"

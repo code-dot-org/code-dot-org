@@ -81,10 +81,6 @@
                 .labelblock
                   = t('signup_form.age')
                 = f.select :age, User::AGE_DROPDOWN_OPTIONS, include_blank: true, class: 'fieldblock'
-              .itemblock
-                .labelblock
-                  = t('signup_form.gender')
-                = f.select :gender, gender_options
             %br/
             = submit_tag 'Register', class: 'btn btn-primary'
 

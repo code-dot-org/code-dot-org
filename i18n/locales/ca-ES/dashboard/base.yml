@@ -247,6 +247,7 @@ ca:
       project_gallery: "Projectes"
       help_support: "Ajuda i suport"
       report_bug: "Informar d'un problema"
+      sprite_lab_documentation: "Documentació del Laboratori d'Sprites"
       educate_hoc: "L'hora del codi"
       about_us: "Sobre nosaltres"
       about_leadership: "Lideratge"
@@ -264,6 +265,7 @@ ca:
       teach: "Ensenya"
       about: "Quant a"
       legal_privacy: "Política de privadesa"
+      legal_cookie_notice: "Política de galetes"
       legal_tos: "Condicions d'ús"
     user:
       classroom: 'Pàgina d''inici de mestre'
@@ -417,6 +419,7 @@ ca:
     how_it_works: 'Com funciona'
     try_hour_of_code: 'Proveu una hora de codi!'
     store: 'Botiga'
+    cookie_notice: 'Política de galetes'
   reference_area:
     title: 'Necessites ajuda?'
     subtitle: 'Mira aquests vídeos i consells'

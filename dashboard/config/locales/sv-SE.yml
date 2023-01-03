@@ -15,17 +15,33 @@ sv:
         parprogrammeringen och försök igen.
   activerecord:
     errors:
+      models:
+        user:
+          attributes:
+            reset_password_token:
+              invalid: är ogiltig. Observera att varje länk bara kan användas en gång
+                för att återställa ditt lösenord, och bara den senast skickade länken
+                fungerar.
       messages:
         blank: krävs
+        blank_plural: krävs
+        invalid: är ogiltig
+        invalid_plural: är ogiltiga
     attributes:
       user:
         name: Visat namn
+        name_example: Visningsnamn (t.ex. "Cool Coder" eller "JohanS")
         email: E-post
         parent_email: Förälder/vårdnadshavares e-postadress
+        personal_email: Personlig e-postadress <a href="%{url}">(klicka här om du
+          inte har en e-postadress)</a>
+        personal_email_markdown: Personlig e-postadress [(klicka här om du inte har
+          en e-postadress)] (%{url})
         username: 'användarnamn
 
 '
         password: Lösenord
+        verified_teacher: Verified lärare
         password_confirmation: Lösenordsbekräftelse
         current_password: Nuvarande lösenord
         locale: språk
@@ -33,6 +49,15 @@ sv:
         gender: Kön
         edit_header: Redigera kontouppgifter
         finish_sign_up_header: Fortsätt färdigställa ditt konto
+        finish_sign_up_subheader: Fyll i följande information för att slutföra skapandet
+          av ett Code.org-konto för <strong>%{email}</strong>.
+        finish_sign_up_subheader_markdown: Fyll i följande information för att slutföra
+          skapandet av ett Code.org-konto för **%{email}**.
+        finish_sign_up_subheader_provider: Fyll i följande information för att slutföra
+          skapandet av ett Code.org-konto med <strong>%{provider}</strong> för <strong>%{email}</strong>.
+        finish_sign_up_subheader_provider_markdown: Fyll i följande information för
+          att slutföra skapandet av ett Code.org-konto med **%{provider}** för **%{email}**.
+        reset_password_token: Länken för återställning av lösenord som du har följt
         error:
           future: kan inte vara i framtiden
   beta: beta
@@ -45,6 +70,7 @@ sv:
   previous_page: Föregående sida
   next_page: Nästa sida
   next_resource: Nästa resurs
+  done_with_module: Färdig med denna inlärningsmodul
   cancel: Avbryt
   okay: Okej
   or: eller
@@ -52,6 +78,7 @@ sv:
   join_section:
     code:
       placeholder: Avsnitt kod (ABCDEF)
+      submit: Gå med
   add_hint_form:
     placeholder: Skriv in ditt tips här
     submit: Lägg till tips
@@ -158,6 +185,7 @@ sv:
       kurs och datavetenskap? [(Se vår integritetspolicy)] (%{privacy_policy_url})
     parent_account_email_label: Förälder/vårdnadshavare
   school_info:
+    title: Skolinformation (valfritt)
     school_country: Skolans land
     select_school_type: Skoltyp
     private: Privat

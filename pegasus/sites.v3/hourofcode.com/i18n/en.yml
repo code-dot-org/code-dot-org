@@ -94,6 +94,9 @@
   social_coldplay_title: "Create with Coldplay & Code.org"
   social_coldplay_desc: "Show us your best moves! Code, dance, share with the world, and you could win."
 
+  social_maker_title: "I'm a Maker!"
+  social_maker_desc: "Code.org physical computing and maker resources for grades 6-12."
+
   hoc_live: 'Hour of Code Live'
   hoc_live_sign_up_title: 'Sign up for Hour of Code Live'
   hoc_live_learn_title: 'Learn with Hour of Code Live'
@@ -714,6 +717,11 @@
   footer_menu_terms: 'Terms'
   footer_menu_privacy: 'Privacy Policy'
   footer_menu_cookie: 'Cookie Notice'
+
+  footer_menu_facebook: 'Code.org on Facebook'
+  footer_menu_twitter: 'Code.org on Twitter'
+  footer_menu_instagram: 'Code.org on Instagram'
+  footer_menu_medium: 'Code.org on Medium.com'
 
   learn_banner_heading: 'Hour of Code Activities'
   learn_banner_blurb: "Try a one-hour tutorial designed for all ages in over 45 languages.  Join millions of students and teachers in over 180 countries starting with an Hour of Code."
@@ -7254,6 +7262,9 @@
   dont_know: "I don't know"
 
   language_label: "Language"
+
+  team_page_full_team_alt_text: "Nearly 100 Code.org employees in matching blue and yellow t-shirts pose in a hotel conference room for the company's summer 2022 Codechella event."
+  careers_page_code_pride_alt_text: "Two feminine-presenting employees smile while holding the ends of a Code.org-branded rainbow banner. Behind them, several people are wearing Code.org shirts and waving rainbow flags while walking alongside a multi-colored Volkswagen bug."
 
   language_code:
     ar: "Arabic"
