@@ -31,45 +31,56 @@ STATUSES_TO_REPORT = %w(new open)
 # Slack room -> Zendesk group mappings to report on
 MONITORING_GROUPS = {
   # 'slack-room-name' => ['Zendesk group name', 'Zendesk group name', ...]
-  'ap-csa-pilot' => ['CSA Curric.'],
-  'csf' => ['CSF'],
-  'cspalooza' => ['CSP'],
-  'developers' => ['Developers'],
-  'cs-discoveries' => ['CSD'],
   'acquisition-products' => ['Acquisition Products'],
-  'edpop' => ['EdPop Dana', 'EdPop Desiree', 'EdPop Kristyn', 'EdPop Tawny', 'EdPop Alicia', 'EdPop Danielle'],
-  'facilitator-things' => ['PnP Andrea'],
-  'foundations' => ['Accounts'],
+  'ap-csa' => ['CSA Curriculum'],
+  'cs-discoveries' => ['CSD Curriculum'],
+  'csc' => ['CSC Curriculum'],
+  'csf' => ['CSF Curriculum'],
+  'cspalooza' => ['CSP Curriculum'],
+  'facilitator-things' => ['Facilitators', 'PNP Andrea'],
   'hour-of-code' => ['Hour of Code'],
-  'international' => ['International'],
+  'infrastructure' => ['Infrastructure'],
+  'international' => ['International Partnerships', 'International'],
   'marketing' => ['Media'],
-  'product' => ['Product'],
-  'programsnpartners_theluau' => ['PNP'],
-  'regional_managers' => ['Outreach'],
+  'platform-team' => ['Platform Team'],
+  'programsnpartners_theluau' => ['Programs (PNP) Team'],
+  'reaching-out' => ['Adoption and Outreach Team', 'Ed Programs', 'EdPop Alicia', 'EdPop Dana', 'EdPop Danielle', 'EdPop Desiree', 'EdPop Kristyn', 'EdPop Tawny', 'PLC Teachers'],
   'student-learning' => ['Student Learning'],
   'teacher-tools' => ['Teacher Tools']
 }
 
 # Zendesk group -> Zendesk filter id mappings for helpful links (optional)
 GROUP_FILTERS = {
-  'Account' => '360086130792',
-  'CSA Engineering' => '360217870791',
-  'CSD' => '83142177',
-  'CSF' => '278602768',
-  'CSP' => '45749787',
-  'Developers' => '47222126',
+  'Acquisition Products' => '360057951072',
+  'Adoption and Outreach Team' => '11480578768781',
+  'CSA Curriculum' => '360202873512',
+  'CSC Curriculum' => '9834973821325',
+  'CSD Curriculum' => '83142177',
+  'CSF Curriculum' => '278602768',
+  'CSP Curriculum' => '45749787',
+  'Ed Programs' => '9638169070477',
+  'EdPop Alicia' => '9638169070477',
+  'EdPop Dana' => '9638169070477',
+  'EdPop Danielle' => '9638169070477',
+  'EdPop Desiree' => '9638169070477',
+  'EdPop Kristyn' => '9638169070477',
+  'EdPop Tawny' => '9638169070477',
+  'Facilitators' => '9638169070477',
+  'Hour of Code' => '9690110143757',
+  'Infrastructure' => '9811556471309',
   'International' => '360086130812',
+  'International Partnerships' => '360086130812',
   'Media' => '47756566',
-  'PLC Tools' => '114103940251',
-  'Product' => '360007773991',
-  '*Labs' => '301129028',
+  'Platform Team' => '360086130792',
+  'PLC Teachers' => '9638169070477',
+  'PNP Andrea' => '1900013935647',
+  'Programs (PNP) Team' => '8163316698253',
+  'Student Learning' => '9612070142733',
+  'Teacher Tools' => '360082967212'
 }
 
 # Slack room -> username of a code.org email
-MONITORING_USERS = {
-  'outreach_honky-tonk' => ['zendesk-outreach'],
-  'pl-team-only' => ['zendesk-pl']
-}
+MONITORING_USERS = {}
 
 class Zendesk
   include HTTParty
