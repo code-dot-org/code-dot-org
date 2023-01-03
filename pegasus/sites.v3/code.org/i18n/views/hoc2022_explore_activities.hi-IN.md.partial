@@ -1,4 +1,4 @@
-{{ featured_tutorial, title: "Hello World: Space", body: "पात्रों और ध्वनियों के साथ इंटरगैलेक्टिक दृश्य बनाएं जो आप कहेंगे, \"Hello worlds!\"", image: "/images/hoc2022-hello-world-space.png", url: "https://studio.code.org/s/hello-world-space-2022/reset" }}
+{{ featured_tutorial, title: "हेल्लो वर्ल्डस: स्पेस", body: "पात्रों और ध्वनियों के साथ इंटरगैलेक्टिक दृश्य बनाएं जो आप कहेंगे, \"हेल्लो वर्ल्डस!\"", image: "/images/hoc2022-hello-world-space.png", url: "https://studio.code.org/s/hello-world-space-2022/reset" }}
 
 {{ featured_tutorial, title: "NASA's Space Jam", body: "इस प्रक्रिया में संगीत, खगोल विज्ञान और कोडिंग के बारे में सीखते हुए एक ऐसा सौर मंडल बनाएं जो वास्तव में हिला दे!", image: "/images/hoc2022-nasa-space-jam.png", url: "https://chandra.si.edu/sound/code/" }}
 

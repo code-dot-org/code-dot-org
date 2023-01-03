@@ -1,5 +1,6 @@
 import moduleStyles from './toolbox.module.scss';
 import {BlockTypes} from './blockTypes';
+import AppConfig from '../appConfig';
 
 const baseCategoryCssConfig = {
   container: moduleStyles.toolboxCategoryContainer,
@@ -7,7 +8,7 @@ const baseCategoryCssConfig = {
   label: moduleStyles.toolboxLabel
 };
 
-export const baseToolbox = {
+const baseToolbox = {
   kind: 'categoryToolbox',
   contents: [
     {
@@ -196,3 +197,60 @@ export const baseToolbox = {
     }
   ]
 };
+
+const baseToolboxSimple = {
+  kind: 'categoryToolbox',
+  contents: [
+    {
+      kind: 'category',
+      name: 'Events',
+      cssConfig: baseCategoryCssConfig,
+      contents: [
+        {
+          kind: 'block',
+          type: BlockTypes.TRIGGERED_AT_SIMPLE
+        }
+      ]
+    },
+    {
+      kind: 'category',
+      name: 'Simple',
+      cssConfig: baseCategoryCssConfig,
+      contents: [
+        {
+          kind: 'block',
+          type: BlockTypes.PLAY_SOUND_AT_CURRENT_LOCATION
+        },
+        {
+          kind: 'block',
+          type: BlockTypes.SET_CURRENT_LOCATION_NEXT_MEASURE
+        },
+        {
+          kind: 'block',
+          type: 'controls_repeat_ext',
+          fields: {
+            OP: 'TIMES'
+          },
+          inputs: {
+            TIMES: {
+              shadow: {
+                type: 'math_number',
+                fields: {
+                  NUM: 2
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  ]
+};
+
+export function getBaseToolbox() {
+  if (AppConfig.getValue('blocks') === 'simple') {
+    return baseToolboxSimple;
+  }
+
+  return baseToolbox;
+}
