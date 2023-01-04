@@ -759,6 +759,7 @@ pl:
     store: Skład
     cookie_notice: Informacja o plikach cookie
     view_code: Obejrzyj kod
+    locale_select: Wybierz język
   reference_area:
     title: Czy potrzebujesz pomocy?
     subtitle: Zobacz te filmiki i wskazówki
@@ -791,6 +792,11 @@ pl:
       weblab_unsupported_locale_storage: Mogą wystąpić problemy w czasie używania
         Web Lab w trybie prywatnego przeglądania. Prosimy o przeładowanie projektu
         w zwykłym trybie przeglądarki. Przepraszamy za niedogodności.
+  deprecation:
+    algebra_lab: 'Program nauczania i treści informatyki w algebrze są przestarzałe.
+      W ciągu najbliższych kilku miesięcy, to laboratorium nie będzie już dostępne.
+      Proszę sprawdzić zamiast tego [Bootstrap: Algebra] (%{bootstrap_algebra_url}).
+      [Dowiedz się więcej] (%{cs_algebra_url}).'
   slow_loading: To trwa dłużej niż zwykle...
   try_reloading: Spróbuj odświeżyć stronę
   next_stage: Skończyłeś! Przejdź do następnego etapu
@@ -833,33 +839,18 @@ pl:
         aby działała, następnie natychmiast udostępnij swoją aplikację.
       audience: Wiek 13+
       cta: Zobacz instrukcję
-    dance:
-      title: Potańcówka
+    aquatic:
+      title: Minecraft
     dance-2019:
       title: Potańcówka
-    hello-world:
-      title: Witaj świecie
-      body: Wybierz jeden z czterech zabawnych motywów, aby zakodować interaktywne
-        postacie w tworzonym przez siebie świecie.
-    poem-art:
-      title: 'Sztuka poezji '
-      body: Wyraź siebie! Użyj kodu do tworzenia animowanych wierszy.
-    hoc:
-      title: Klasyczny labirynt
-      body: Wypróbuj podstawy informatyki. Miliony dały im już szansę.
+    dance:
+      title: Potańcówka
     flappy:
       title: Kod Flappiego
       body: Czy chciałbyś utworzyć własną grę w mniej niż 10 minut? Wypróbuj nasz
         samouczek dla kodowania Flappiego!
-    20-hour:
-      title: Przyspieszony kurs
-      body: Ten 20-godzinny godzinny kurs pokrywa podstawowe pojęcia z zakresu informatyki
-        i programowania z kursów 2-4. Kurs jest przeznaczony dla uczniów w wieku 10-18
-        lat. Przejrzyj bogatsze w doświadczenia kursy 2-4!
-      body_short: Poznaj podstawy informatyki w przyspieszonej wersji kursów 2-4.
-    hoc2014:
-      try_new_tutorial: Wypróbuj nasz nowy samouczek Godziny Kodowania w wersji beta
-      try_frozen: Artysta z Anną i Elsą, z Frozen
+    frozen:
+      title: Kraina lodu (Frozen)
     gallery:
       title: Galeria
       body: Zobacz galerię aplikacji i artystycznych obrazów utworzonych przez naszych
@@ -871,20 +862,23 @@ pl:
         ze sobą.
       audience: Wiek 13+
       cta: Zobacz instrukcję
+    hello-world:
+      title: Witaj świecie
+      body: Wybierz jeden z czterech zabawnych motywów, aby zakodować interaktywne
+        postacie w tworzonym przez siebie świecie.
+    hero:
+      title: Minecraft
+      body: Minecraft powraca na Godzinę Kodowania z najnowszą serią zadań! Koduj
+        podróżując po świecie Minecraftu.
     hoc-encryption:
       title: Proste szyfrowanie
       body: Uczniowie poznają techniki tworzenia i łamania zaszyfrowanych wiadomości.
-    weblab:
-      title: Laboratorium Sieci (beta)
-      body: Web Lab (Laboratorium sieci) to środowisko programowania, w którym możesz
-        tworzyć proste strony internetowe za pomocą HTML i CSS. Zaprojektuj swoją
-        stronę i udostępnij ją natychmiast.
-      audience: Wiek 13+
-      cta: Zobacz instrukcję
-    frozen:
-      title: Kraina lodu (Frozen)
-    starwars:
-      title: Gwiezdne Wojny
+    hoc:
+      title: Klasyczny labirynt
+      body: Wypróbuj podstawy informatyki. Miliony dały im już szansę.
+    hoc2014:
+      try_new_tutorial: Wypróbuj nasz nowy samouczek Godziny Kodowania w wersji beta
+      try_frozen: Artysta z Anną i Elsą, z Frozen
     infinity:
       title: Infinity Play Lab
       body: Użyj Play Lab, by utworzyć historyjkę lub grę z postaciami z Disney Infinity
@@ -896,19 +890,36 @@ pl:
       title: Minecraft
       body: Zaprogramuj zwierzęta i inne stworzenia Minecraftu we własnej wersji gry
         Minecrafta.
-    aquatic:
-      title: Minecraft
-    hero:
-      title: Minecraft
-      body: Minecraft powraca na Godzinę Kodowania z najnowszą serią zadań! Koduj
-        podróżując po świecie Minecraftu.
+    poem-art:
+      title: 'Sztuka poezji '
+      body: Wyraź siebie! Użyj kodu do tworzenia animowanych wierszy.
     sports:
       title: Zawody
       body: Stwórz grę w koszykówkę lub mieszankę różnych sportów.
+    starwars:
+      title: Gwiezdne Wojny
     text-compression:
       title: Kompresja tekstu
       body: Na tej lekcji uczniowie użyją Widżetu Kompresji Tekstu, by skompresować
         tekst, zastępując wzorce symbolami.
+    weblab:
+      title: Laboratorium Sieci (beta)
+      body: Web Lab (Laboratorium sieci) to środowisko programowania, w którym możesz
+        tworzyć proste strony internetowe za pomocą HTML i CSS. Zaprojektuj swoją
+        stronę i udostępnij ją natychmiast.
+      audience: Wiek 13+
+      cta: Zobacz instrukcję
+    widgets:
+      title: Widżety
+      body: Uczniowie mogą odkrywać pojęcia z naszego kursu Zasady Informatyki w praktyczny
+        sposób, za pomocą tych narzędzi cyfrowych. Użyj samych widżetów lub stwórz
+        jednowymiarową lekcję dla swojej klasy.
+      audience: W wieku 14+
+      cta: Zobacz instrukcję
+    unplugged_conditionals:
+      title: Zdania z warunkami
+      body: Poznawaj algorytmy i wyrażenia warunkowe w tej aktywności bez komputera,
+        przy użyciu talii kart.
     unplugged:
       title: Lekcje nie wymagające komputera
       audience: Wiek 4+
@@ -918,17 +929,12 @@ pl:
         kursie lub jako dodatku w jakimkolwiek kursie.
       body_short: Jeżeli nie macie dostępu do komputerów, to wypróbujcie w klasie
         te lekcje bez komputerów.
-    unplugged_conditionals:
-      title: Zdania z warunkami
-      body: Poznawaj algorytmy i wyrażenia warunkowe w tej aktywności bez komputera,
-        przy użyciu talii kart.
-    widgets:
-      title: Widżety
-      body: Uczniowie mogą odkrywać pojęcia z naszego kursu Zasady Informatyki w praktyczny
-        sposób, za pomocą tych narzędzi cyfrowych. Użyj samych widżetów lub stwórz
-        jednowymiarową lekcję dla swojej klasy.
-      audience: W wieku 14+
-      cta: Zobacz instrukcję
+    20-hour:
+      title: Przyspieszony kurs
+      body: Ten 20-godzinny godzinny kurs pokrywa podstawowe pojęcia z zakresu informatyki
+        i programowania z kursów 2-4. Kurs jest przeznaczony dla uczniów w wieku 10-18
+        lat. Przejrzyj bogatsze w doświadczenia kursy 2-4!
+      body_short: Poznaj podstawy informatyki w przyspieszonej wersji kursów 2-4.
   landing:
     prerelease_tutorial: Ten poradnik występuje w wersji **beta**. Podlega on weryfikacji
       w oparciu o otrzymane informacje zwrotne i wprowadzane są poprawki.
