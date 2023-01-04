@@ -98,7 +98,8 @@ class UnconnectedMusicView extends React.Component {
       this.setState({library});
       this.musicBlocklyWorkspace.init(
         document.getElementById('blockly-div'),
-        this.onBlockSpaceChange
+        this.onBlockSpaceChange,
+        this.player
       );
       this.player.initialize(library);
       setInterval(this.updateTimer, 1000 / 30);
