@@ -61,6 +61,7 @@ class XhrProxyController < ApplicationController
     api.uclassify.com
     api.waqi.info
     api.weather.gov
+    api.weatherapi.com
     api.wolframalpha.com
     api.zippopotam.us
     bible-api.com
@@ -114,7 +115,6 @@ class XhrProxyController < ApplicationController
     theunitedstates.io
     transitchicago.com
     vpic.nhtsa.dot.gov
-    weatherapi.com
     wikipedia.org
     worldclockapi.com
     worldtimeapi.org
