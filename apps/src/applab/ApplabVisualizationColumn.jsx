@@ -37,6 +37,30 @@ class ApplabVisualizationColumn extends React.Component {
     widgetMode: PropTypes.bool
   };
 
+  componentDidMount() {
+    this.visualizationColumn.addEventListener(
+      'touchmove',
+      this.preventBehavior,
+      {
+        passive: false
+      }
+    );
+  }
+
+  componentWillUnmount() {
+    this.visualizationColumn.removeEventListener(
+      'touchmove',
+      this.preventBehavior,
+      {
+        passive: false
+      }
+    );
+  }
+
+  preventBehavior = e => {
+    e.preventDefault();
+  };
+
   getClassNames() {
     const {
       visualizationHasPadding,
@@ -120,6 +144,9 @@ class ApplabVisualizationColumn extends React.Component {
         id="visualizationColumn"
         className={this.getClassNames()}
         style={maxWidth}
+        ref={el => {
+          this.visualizationColumn = el;
+        }}
       >
         {!isReadOnlyWorkspace && (
           <PlaySpaceHeader
