@@ -456,6 +456,7 @@ applabCommands.dot = function(opts) {
 
 applabCommands.penUp = function(opts) {
   var ctx = applabTurtle.getTurtleContext();
+  console.log('penUp() called');
   if (ctx) {
     if (ctx.strokeStyle !== 'rgba(255, 255, 255, 0)') {
       Applab.turtle.penUpColor = ctx.strokeStyle;
@@ -466,6 +467,7 @@ applabCommands.penUp = function(opts) {
 
 applabCommands.penDown = function(opts) {
   var ctx = applabTurtle.getTurtleContext();
+  console.log('penDown() called');
   if (ctx && Applab.turtle.penUpColor) {
     ctx.strokeStyle = Applab.turtle.penUpColor;
     delete Applab.turtle.penUpColor;
