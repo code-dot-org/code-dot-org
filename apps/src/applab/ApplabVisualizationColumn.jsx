@@ -115,7 +115,6 @@ class ApplabVisualizationColumn extends React.Component {
         />
       )
     ];
-    this.visual = visualization;
 
     // Share view still uses image for phone frame. Would eventually like it to
     // use same code
@@ -134,6 +133,7 @@ class ApplabVisualizationColumn extends React.Component {
         </PhoneFrame>
       );
     }
+    this.visual = visualization;
 
     return (
       <div
