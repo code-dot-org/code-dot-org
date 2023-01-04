@@ -796,31 +796,17 @@ sk:
         tak aby to fungovala, potom zdieľaj aplikáciu v priebehu niekoľkých sekúnd.
       audience: Vek 13+
       cta: Nauč sa ako
-    dance:
-      title: Tanečná Párty
+    aquatic:
+      title: Minecraft
     dance-2019:
       title: Tanečná Párty
-    hello-world:
-      title: Ahoj Svet
-      body: Vyberte si zo štyroch zábavných tém na programovanie interaktívnych postáv
-        vo svete, ktorý vytvoríte.
-    poem-art:
-      title: Básnické umenie
-    hoc:
-      title: Klasické bludisko
-      body: Vyskúšaj si základy informatiky. Milióny študentov jej dali šancu.
+    dance:
+      title: Tanečná Párty
     flappy:
       title: Flappy kód
       body: Chceš napísať vlastnú hru za menej než 10 minút? Vyskúšaj náš Flappy kód!
-    20-hour:
-      title: Zrýchlený kurz
-      body: Tento 20-hodinový kurz pokrýva základné koncepty informatiky a programovania
-        obsiahnuté v kurzoch 2-4. Kurz je určený pre žiakov vo veku 10 - 18 rokov,
-        ale určite pobaví študentov všetkých vekových kategórií!
-      body_short: Nauč sa základy informatiky v zrýchlenej verzii kurzov 2-4.
-    hoc2014:
-      try_new_tutorial: Skúste náš nový kurz Hodina Kódu v betaverzii
-      try_frozen: Umelec s Annou a Elsou z Frozen
+    frozen:
+      title: Frozen
     gallery:
       title: Galéria
       body: Zobraziť galériu aplikácií a obrázkov vytvorených našimi užívateľmi
@@ -830,20 +816,23 @@ sk:
         animácie a hry s postavami a predmetmi, ktoré na seba reagujú.
       audience: Vek 13+
       cta: Nauč sa ako
+    hello-world:
+      title: Ahoj Svet
+      body: Vyberte si zo štyroch zábavných tém na programovanie interaktívnych postáv
+        vo svete, ktorý vytvoríte.
+    hero:
+      title: Minecraft
+      body: Minecraft je späť v Hodine Kódu s úplne novou aktivitou! Prejdi sa po
+        Minecrafte s kódom.
     hoc-encryption:
       title: Jednoduché šifrovanie
       body: Študenti sa naučia metódy na vytvorenie a prelomenie zašifrovaných správ.
-    weblab:
-      title: Web Lab (beta)
-      body: Web Lab je programovacie prostredie, v ktorom môžeš vytvárať jednoduché
-        webové stránky pomocou HTML a CSS. Vytvor si vlastné webové stránky a zdieľaj
-        ich už za pár sekúnd.
-      audience: Vek 13+
-      cta: Nauč sa ako
-    frozen:
-      title: Frozen
-    starwars:
-      title: Star Wars
+    hoc:
+      title: Klasické bludisko
+      body: Vyskúšaj si základy informatiky. Milióny študentov jej dali šancu.
+    hoc2014:
+      try_new_tutorial: Skúste náš nový kurz Hodina Kódu v betaverzii
+      try_frozen: Umelec s Annou a Elsou z Frozen
     infinity:
       title: Infinity Play Lab
       body: Použi Play Lab a vytvor príbeh alebo hru s Disney postavičkami.
@@ -853,31 +842,24 @@ sk:
     minecraft2016:
       title: Minecraft
       body: Naprogramuj zvieratá a iné postavy a vytvor svoju vlastnú verziu hry Minecraft.
-    aquatic:
-      title: Minecraft
-    hero:
-      title: Minecraft
-      body: Minecraft je späť v Hodine Kódu s úplne novou aktivitou! Prejdi sa po
-        Minecrafte s kódom.
+    poem-art:
+      title: Básnické umenie
     sports:
       title: Športy
       body: Vytvor basketbalový zápas alebo pospájaj a pomiešaj viaceré športy.
+    starwars:
+      title: Star Wars
     text-compression:
       title: Kompresia textu
       body: V tejto lekcii študenti použijú nástroj Kompresia textu na kompresiu textu
         pomocou nahradenia opakujúcich sa vzorov symbolmi.
-    unplugged:
-      title: Lekcie bez počítača
-      audience: Vek 4+
-      body: Pripravili sme pre vás zoznam hodín, ktoré môžete vo svojej triede realizovať
-        aj bez použitia počítača alebo iných zariadení. Teraz môžete učiť základy
-        informatiky či v triede máte počítače alebo nie! Vyskúšajte tieto hodiny ako
-        samostatné kurzy alebo doplnkové hodiny v iných kurzoch informatiky.
-      body_short: Ak nemáte počítač, vyskúšajte s triedou tieto Lekcie bez počítača.
-    unplugged_conditionals:
-      title: Podmienené príkazy
-      body: Nauč sa viac o algoritmoch a podmienkach pomocou balíčka kariet. Počítač
-        nepotrebuješ!
+    weblab:
+      title: Web Lab (beta)
+      body: Web Lab je programovacie prostredie, v ktorom môžeš vytvárať jednoduché
+        webové stránky pomocou HTML a CSS. Vytvor si vlastné webové stránky a zdieľaj
+        ich už za pár sekúnd.
+      audience: Vek 13+
+      cta: Nauč sa ako
     widgets:
       title: Widgety
       body: Študenti môžu použitím týchto digitálnych nástrojovpreskúmať koncepty
@@ -886,6 +868,24 @@ sk:
         Vašu triedu.
       audience: Vek 14+
       cta: Nauč sa ako
+    unplugged_conditionals:
+      title: Podmienené príkazy
+      body: Nauč sa viac o algoritmoch a podmienkach pomocou balíčka kariet. Počítač
+        nepotrebuješ!
+    unplugged:
+      title: Lekcie bez počítača
+      audience: Vek 4+
+      body: Pripravili sme pre vás zoznam hodín, ktoré môžete vo svojej triede realizovať
+        aj bez použitia počítača alebo iných zariadení. Teraz môžete učiť základy
+        informatiky či v triede máte počítače alebo nie! Vyskúšajte tieto hodiny ako
+        samostatné kurzy alebo doplnkové hodiny v iných kurzoch informatiky.
+      body_short: Ak nemáte počítač, vyskúšajte s triedou tieto Lekcie bez počítača.
+    20-hour:
+      title: Zrýchlený kurz
+      body: Tento 20-hodinový kurz pokrýva základné koncepty informatiky a programovania
+        obsiahnuté v kurzoch 2-4. Kurz je určený pre žiakov vo veku 10 - 18 rokov,
+        ale určite pobaví študentov všetkých vekových kategórií!
+      body_short: Nauč sa základy informatiky v zrýchlenej verzii kurzov 2-4.
   landing:
     prerelease_tutorial: Tento tutoriál je v **beta** verzii a je predmetom revízie
       a vylepšení, ktoré sú vykonané na základe pripomienok.
