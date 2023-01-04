@@ -15,7 +15,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-12-15 15:35:50 UTC",
+    "serialized_at": "2022-12-18 13:41:12 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -73,7 +73,7 @@
       "relative_position": 1,
       "properties": {
         "overview": "**How can I represent the attributes an object should have in a class?**\n\nIn this lesson, students expand on what they learned about classes in the previous unit to declare instance variables to represent an object's attributes. As students learn about instance variables, they discover the difference between `public` and `private` access and identify the need for encapsulation. Students also revisit inheritance to recall that subclasses share the attributes and behaviors of a class and practice declaring instance variables in a single class and in a superclass and subclass.",
-        "preparation": "* Preview the *Instance Variables and Attributes* video\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-unit-2-lesson-3-attributes/36395/2) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
+        "preparation": "* Print copies of the Unit 2 Guide (one for each student)\n* Preview the *Instance Variables and Attributes* video\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-unit-2-lesson-3-attributes/36395/2) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
         "student_overview": "**How can I represent the attributes an object should have in a class?**\n\nYou previously learned that a class is a blueprint that defines the attributes and behaviors an object should have. In this lesson, you expand on what you learned about classes in the previous unit to declare instance variables to represent an object's attributes. As you learn about instance variables, you discover the difference between `public` and `private` access and identify the need for encapsulation. You also revisit inheritance to recall that subclasses share the attributes and behaviors of a class and practice declaring instance variables in a single class and in a superclass and subclass."
       },
       "seeding_key": {
@@ -943,7 +943,7 @@
       "key": "c24a5b38-344b-46f6-b70c-8206917b3cd5",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives and the Question of the Day.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day.",
         "duration": "5",
         "name": "Introduction"
       },
@@ -1165,11 +1165,11 @@
       "key": "ef92120f-308e-42a6-b1f4-a7a4f01969e5",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What did we learn today?*\n* *So what?*\n* *Now what?*\n\n**Discussion Goal:** Students highlight the concepts and vocabulary they learned in this lesson, such as instance variables and encapsulation. Students also recall the difference between `public` and `private` access and might also make connections with the attributes in the `Painter` class. They should realize that they now have the knowledge to start designing their own classes from scratch instead of depending only on existing classes.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson and the Question of the Day.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What did we learn today?*\n* *So what?*\n* *Now what?*\n\n**Discussion Goal:** Students highlight the concepts and vocabulary they learned in this lesson, such as instance variables and encapsulation. Students also recall the difference between `public` and `private` access and might also make connections with the attributes in the `Painter` class. They should realize that they now have the knowledge to start designing their own classes from scratch instead of depending only on existing classes.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.",
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "The Unit 2 Guide includes an end-of-lesson reflection prompt for students to reflect on the lesson and the progress they made in developing their software engineering skills and characteristics. Have students respond to the reflection prompt after reviewing the concepts covered in this lesson to help them process and reflect on their personal growth."
+            "markdown": "The Unit 2 Guide includes the Question of the Day and an end-of-lesson reflection prompt for students to summarize what they have learned and reflect on their progress. Have students respond to these prompts after reviewing the concepts covered in this lesson to help them process and make meaningful connections with the new content."
           }
         ]
       },
@@ -1287,7 +1287,7 @@
       "key": "d43c5902-08f0-4a95-86b7-dcc187374ab5",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives and the Question of the Day.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day.",
         "duration": "5",
         "name": "Introduction"
       },
@@ -1502,11 +1502,11 @@
       "key": "97ba1afe-03ff-4493-88d2-652c5a51a8ae",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student an index card or piece of scrap paper.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to write a question on their index card using one of the question stems. Have students turn to a neighbor and take turns asking and answering their questions.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson and the Question of the Day.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student an index card or piece of scrap paper.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to write a question on their index card using one of the question stems. Have students turn to a neighbor and take turns asking and answering their questions.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.",
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "The Unit 2 Guide includes an end-of-lesson reflection prompt for students to reflect on the lesson and the progress they made in developing their software engineering skills and characteristics. Have students respond to the reflection prompt after reviewing the concepts covered in this lesson to help them process and reflect on their personal growth."
+            "markdown": "The Unit 2 Guide includes the Question of the Day and an end-of-lesson reflection prompt for students to summarize what they have learned and reflect on their progress. Have students respond to these prompts after reviewing the concepts covered in this lesson to help them process and make meaningful connections with the new content."
           }
         ]
       },
@@ -1596,7 +1596,7 @@
       "key": "0045c972-767a-49b2-a046-f1a1b27d539d",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives and the Question of the Day.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day.",
         "duration": "5",
         "name": "Introduction"
       },
@@ -1734,12 +1734,12 @@
       "key": "120a47f4-35b0-4e30-a2e2-7a4db27cc534",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What did we learn today?*\n* *So what?*\n* *Now what?*\n\n**Discussion Goal:** Students highlight the concepts and vocabulary they learned in this lesson, such as parameterized constructor, formal parameter, and actual parameter. Students also recall that formal parameters are local variables and explain how the values of the actual parameters are copied to the formal parameters. They should realize that parameterized constructors can provide multiple options for instantiating objects based on the needs of the program.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson and the Question of the Day.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What did we learn today?*\n* *So what?*\n* *Now what?*\n\n**Discussion Goal:** Students highlight the concepts and vocabulary they learned in this lesson, such as parameterized constructor, formal parameter, and actual parameter. Students also recall that formal parameters are local variables and explain how the values of the actual parameters are copied to the formal parameters. They should realize that parameterized constructors can provide multiple options for instantiating objects based on the needs of the program.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.",
         "name": "Three W's",
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "The Unit 2 Guide includes an end-of-lesson reflection prompt for students to reflect on the lesson and the progress they made in developing their software engineering skills and characteristics. Have students respond to the reflection prompt after reviewing the concepts covered in this lesson to help them process and reflect on their personal growth."
+            "markdown": "The Unit 2 Guide includes the Question of the Day and an end-of-lesson reflection prompt for students to summarize what they have learned and reflect on their progress. Have students respond to these prompts after reviewing the concepts covered in this lesson to help them process and make meaningful connections with the new content."
           }
         ]
       },
@@ -1829,7 +1829,7 @@
       "key": "501aa0e3-9c5d-4e21-971b-59d88f854707",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives and the Question of the Day.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day.",
         "duration": "5",
         "name": "Introduction"
       },
@@ -2010,11 +2010,11 @@
       "key": "55a8e3b9-c07f-4e8b-8565-ba0c9ffadf34",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson and the Question of the Day.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.",
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "The Unit 2 Guide includes an end-of-lesson reflection prompt for students to reflect on the lesson and the progress they made in developing their software engineering skills and characteristics. Have students respond to the reflection prompt after reviewing the concepts covered in this lesson to help them process and reflect on their personal growth."
+            "markdown": "The Unit 2 Guide includes the Question of the Day and an end-of-lesson reflection prompt for students to summarize what they have learned and reflect on their progress. Have students respond to these prompts after reviewing the concepts covered in this lesson to help them process and make meaningful connections with the new content."
           }
         ]
       },
@@ -2092,7 +2092,7 @@
       "key": "53e34144-2d9b-4e4d-ade9-4f26ace37806",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives and the Question of the Day.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day.",
         "duration": "5",
         "name": "Introduction"
       },
@@ -2243,12 +2243,12 @@
       "key": "adb4cbae-e597-4302-baca-bb4704ed4c8c",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Designate four corners or areas in the classroom for each constructor signature. Have students go to the corner they think is the correct constructor for the constructor call.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Explain the correct constructor signature. Have students work with the students at their corner to develop an explanation for why their corner is correct or incorrect. Ask students to share their explanations with the class.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson and the Question of the Day.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Designate four corners or areas in the classroom for each constructor signature. Have students go to the corner they think is the correct constructor for the constructor call.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Explain the correct constructor signature. Have students work with the students at their corner to develop an explanation for why their corner is correct or incorrect. Ask students to share their explanations with the class.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.",
         "name": "Constructor Corners",
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "The Unit 2 Guide includes an end-of-lesson reflection prompt for students to reflect on the lesson and the progress they made in developing their software engineering skills and characteristics. Have students respond to the reflection prompt after reviewing the concepts covered in this lesson to help them process and reflect on their personal growth."
+            "markdown": "The Unit 2 Guide includes the Question of the Day and an end-of-lesson reflection prompt for students to summarize what they have learned and reflect on their progress. Have students respond to these prompts after reviewing the concepts covered in this lesson to help them process and make meaningful connections with the new content."
           }
         ]
       },
@@ -2327,7 +2327,7 @@
       "key": "9e3430f7-9a20-4d45-9c60-c4019aa11c0b",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives and the Question of the Day.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day.",
         "duration": "5",
         "name": "Introduction"
       },
@@ -2465,12 +2465,12 @@
       "key": "84541318-6c68-4609-9f45-81f1989170b7",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *This code segment is supposed to swap the values in variables `firstNumber` and `secondNumber`, but it has an error. What do we need to add, remove, or change to correct this code segment?*\n\n**Discussion Goal:** Students suggest adding a temporary variable to perform the swap. The value stored in `firstNumber` should be copied to the temporary variable. The value stored in `secondNumber` can then be copied to the `firstNumber` variable, and then the value stored in the temporary variable can be copied to the `secondNumber` variable.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson and the Question of the Day.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *This code segment is supposed to swap the values in variables `firstNumber` and `secondNumber`, but it has an error. What do we need to add, remove, or change to correct this code segment?*\n\n**Discussion Goal:** Students suggest adding a temporary variable to perform the swap. The value stored in `firstNumber` should be copied to the temporary variable. The value stored in `secondNumber` can then be copied to the `firstNumber` variable, and then the value stored in the temporary variable can be copied to the `secondNumber` variable.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.",
         "name": "Swapping Values",
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "The Unit 2 Guide includes an end-of-lesson reflection prompt for students to reflect on the lesson and the progress they made in developing their software engineering skills and characteristics. Have students respond to the reflection prompt after reviewing the concepts covered in this lesson to help them process and reflect on their personal growth."
+            "markdown": "The Unit 2 Guide includes the Question of the Day and an end-of-lesson reflection prompt for students to summarize what they have learned and reflect on their progress. Have students respond to these prompts after reviewing the concepts covered in this lesson to help them process and make meaningful connections with the new content."
           }
         ]
       },
@@ -2577,7 +2577,7 @@
       "key": "d218c9c0-e29b-497e-bcee-dae6adb153a2",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives and the Question of the Day.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day.",
         "duration": "5",
         "name": "Introduction"
       },
@@ -2771,11 +2771,11 @@
       "key": "f9fdec5e-76d9-43d4-ae2b-e31d56b4f231",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson and the Question of the Day.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.",
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "The Unit 2 Guide includes an end-of-lesson reflection prompt for students to reflect on the lesson and the progress they made in developing their software engineering skills and characteristics. Have students respond to the reflection prompt after reviewing the concepts covered in this lesson to help them process and reflect on their personal growth."
+            "markdown": "The Unit 2 Guide includes the Question of the Day and an end-of-lesson reflection prompt for students to summarize what they have learned and reflect on their progress. Have students respond to these prompts after reviewing the concepts covered in this lesson to help them process and make meaningful connections with the new content."
           }
         ]
       },
@@ -2882,7 +2882,7 @@
       "key": "c6bda1ca-04e9-4912-a11d-d0d98c8c2d07",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives and the Question of the Day.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day.",
         "duration": "5",
         "name": "Introduction"
       },
@@ -3076,11 +3076,11 @@
       "key": "db64fbf6-2a93-4935-8e9c-116c7e23e90b",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What did we learn today?*\n* *So what?*\n* *Now what?*\n\n**Discussion Goal:** Students highlight the concepts and vocabulary they learned in this lesson, such as the mod ( `%` ) operator and compound assignment operator. Students also recall the result of dividing two `int` values and the difference between dividing an `int` and a `double` value by `0`.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson and the Question of the Day.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What did we learn today?*\n* *So what?*\n* *Now what?*\n\n**Discussion Goal:** Students highlight the concepts and vocabulary they learned in this lesson, such as the mod ( `%` ) operator and compound assignment operator. Students also recall the result of dividing two `int` values and the difference between dividing an `int` and a `double` value by `0`.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.",
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "The Unit 2 Guide includes an end-of-lesson reflection prompt for students to reflect on the lesson and the progress they made in developing their software engineering skills and characteristics. Have students respond to the reflection prompt after reviewing the concepts covered in this lesson to help them process and reflect on their personal growth."
+            "markdown": "The Unit 2 Guide includes the Question of the Day and an end-of-lesson reflection prompt for students to summarize what they have learned and reflect on their progress. Have students respond to these prompts after reviewing the concepts covered in this lesson to help them process and make meaningful connections with the new content."
           }
         ]
       },
@@ -3170,7 +3170,7 @@
       "key": "3f35677c-f05e-47d0-b19e-27030840dfdc",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives and the Question of the Day.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day.",
         "duration": "5",
         "name": "Introduction"
       },
@@ -3432,11 +3432,11 @@
       "key": "f83b1951-da92-4539-b5f7-0df361e15bca",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson and the Question of the Day.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.",
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "The Unit 2 Guide includes an end-of-lesson reflection prompt for students to reflect on the lesson and the progress they made in developing their software engineering skills and characteristics. Have students respond to the reflection prompt after reviewing the concepts covered in this lesson to help them process and reflect on their personal growth."
+            "markdown": "The Unit 2 Guide includes the Question of the Day and an end-of-lesson reflection prompt for students to summarize what they have learned and reflect on their progress. Have students respond to these prompts after reviewing the concepts covered in this lesson to help them process and make meaningful connections with the new content."
           }
         ]
       },
@@ -3526,7 +3526,7 @@
       "key": "f87ee452-1189-4f0f-8d24-37d7150f8549",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives and the Question of the Day.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day.",
         "duration": "5",
         "name": "Introduction"
       },
@@ -3711,12 +3711,12 @@
       "key": "c76006eb-1e85-4016-af70-7959ced94a44",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson and the Question of the Day.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.",
         "name": "Show What You Know Week",
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "The Unit 2 Guide includes an end-of-lesson reflection prompt for students to reflect on the lesson and the progress they made in developing their software engineering skills and characteristics. Have students respond to the reflection prompt after reviewing the concepts covered in this lesson to help them process and reflect on their personal growth."
+            "markdown": "The Unit 2 Guide includes the Question of the Day and an end-of-lesson reflection prompt for students to summarize what they have learned and reflect on their progress. Have students respond to these prompts after reviewing the concepts covered in this lesson to help them process and make meaningful connections with the new content."
           }
         ]
       },
@@ -6484,6 +6484,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L10-L7 Practice"
+        ],
         "progression": "Practice: The toString() Method"
       },
       "bonus": false,
@@ -8253,6 +8256,32 @@
       }
     },
     {
+      "name": "Unit 2 Guide",
+      "url": "https://docs.google.com/document/d/1-S72OY0oA4-p2c4jwqdYl4pGX7j-lf5g86toG9gqxdI/edit?usp=sharing",
+      "key": "unit_2_guide",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "unit_2_guide"
+      }
+    },
+    {
+      "name": "Unit 2 Study Guide",
+      "url": "https://docs.google.com/document/d/1k2hoP7Zjy0Z1LYYqjNTM4_MIYXAeeVlw-abhc93B72g/edit?usp=sharing",
+      "key": "unit_2_study_guide",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "unit_2_study_guide"
+      }
+    },
+    {
       "name": "Unlocking Assessments",
       "url": "https://support.code.org/hc/en-us/articles/115001331951-Using-lock-settings-for-assessments-and-surveys",
       "key": "unlocking_assessments",
@@ -8300,6 +8329,12 @@
       "seeding_key": {
         "lesson.key": "lesson-1",
         "resource.key": "u2l1_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "resource.key": "unit_2_guide"
       }
     },
     {
@@ -8424,6 +8459,12 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "lesson-14",
+        "resource.key": "unit_2_guide"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "lesson-2",
         "resource.key": "_key_u2l2_extra_practice"
       }
@@ -8448,6 +8489,12 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "lesson-2",
+        "resource.key": "unit_2_guide"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "lesson-3",
         "resource.key": "_key_u2l3_extra_practice"
       }
@@ -8468,6 +8515,12 @@
       "seeding_key": {
         "lesson.key": "lesson-3",
         "resource.key": "u2l3_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "resource.key": "unit_2_guide"
       }
     },
     {
@@ -8498,6 +8551,12 @@
       "seeding_key": {
         "lesson.key": "lesson-4",
         "resource.key": "u2l6_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "resource.key": "unit_2_guide"
       }
     },
     {
@@ -8538,6 +8597,12 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "lesson-5",
+        "resource.key": "unit_2_guide"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "lesson-6",
         "resource.key": "_key_u2l5_extra_practice"
       }
@@ -8556,6 +8621,12 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "lesson-6",
+        "resource.key": "unit_2_guide"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "lesson-7",
         "resource.key": "_key_u2l8_extra_practice"
       }
@@ -8570,6 +8641,12 @@
       "seeding_key": {
         "lesson.key": "lesson-7",
         "resource.key": "u2l8_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-7",
+        "resource.key": "unit_2_guide"
       }
     },
     {
@@ -8604,6 +8681,12 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "lesson-8",
+        "resource.key": "unit_2_guide"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "lesson-9",
         "resource.key": "_key_u2l10_extra_practice"
       }
@@ -8624,6 +8707,18 @@
       "seeding_key": {
         "lesson.key": "lesson-9",
         "resource.key": "u2l10_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-9",
+        "resource.key": "unit_2_guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-9",
+        "resource.key": "unit_2_study_guide"
       }
     }
   ],
