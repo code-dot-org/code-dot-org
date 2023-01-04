@@ -114,6 +114,7 @@ class XhrProxyController < ApplicationController
     theunitedstates.io
     transitchicago.com
     vpic.nhtsa.dot.gov
+    weatherapi.com
     wikipedia.org
     worldclockapi.com
     worldtimeapi.org
