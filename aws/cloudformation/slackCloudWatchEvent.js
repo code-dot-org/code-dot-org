@@ -1,5 +1,5 @@
 // Send Auto Scaling notifications to production channel.
-const slack_url = `https://hooks.slack.com/services/${process.env.SLACK_ENDPOINT}`;
+const slack_url = `https://hooks.slack.com/services/${process.env.SLACK_ENDPOINT}`; // eslint-disable-line no-undef
 
 // Map Auto Scaling Group name prefixes to Slack channel targets.
 const channelMap = {
