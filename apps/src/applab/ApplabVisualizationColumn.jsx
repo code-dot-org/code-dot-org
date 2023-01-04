@@ -36,7 +36,7 @@ class ApplabVisualizationColumn extends React.Component {
     awaitingContainedResponse: PropTypes.bool.isRequired,
     widgetMode: PropTypes.bool
   };
-
+  /*
   componentDidMount() {
     this.visual.focus();
 
@@ -54,7 +54,7 @@ class ApplabVisualizationColumn extends React.Component {
   preventBehavior = e => {
     e.preventDefault();
   };
-
+  */
   getClassNames() {
     const {
       visualizationHasPadding,
@@ -133,7 +133,7 @@ class ApplabVisualizationColumn extends React.Component {
         </PhoneFrame>
       );
     }
-    this.visual = visualization;
+    // this.visual = visualization;
 
     return (
       <div

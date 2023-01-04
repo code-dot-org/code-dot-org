@@ -487,6 +487,13 @@ StudioApp.prototype.init = function(config) {
       </div>
     );
   }
+  let vizColumn = document.getElementById('visualizationColumn');
+  StudioApp.prototype.preventBehavior = function(e) {
+    e.preventDefault();
+  };
+  vizColumn.addEventListener('touchmove', this.preventBehavior, {
+    passive: false
+  });
 
   window.addEventListener('resize', this.onResize.bind(this));
   window.addEventListener(RESIZE_VISUALIZATION_EVENT, e => {
