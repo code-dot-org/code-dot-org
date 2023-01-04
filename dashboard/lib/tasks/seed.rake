@@ -5,7 +5,8 @@ require '../lib/cdo/git_utils'
 require '../lib/cdo/rake_utils'
 require '../lib/cdo/hash_utils'
 require '../lib/cdo/data/csv_to_sql_table'
-
+require lib_dir 'cdo/data/logging/rake_task_event_logger'
+include TimedTaskWithLogging
 # Enables timed_task to be used in place of task when defining rake tasks, which prints
 # how long the task took to stdout.
 module CustomRake
@@ -28,39 +29,39 @@ namespace :seed do
   include TimedTask
   verbose false
 
-  timed_task check_migrations: :environment do
+  timed_task_with_logging check_migrations: :environment do
     ActiveRecord::Migration.check_pending!
   end
 
-  timed_task videos: :environment do
+  timed_task_with_logging videos: :environment do
     Video.setup
   end
 
-  timed_task concepts: :environment do
+  timed_task_with_logging concepts: :environment do
     Concept.setup
   end
 
-  timed_task games: :environment do
+  timed_task_with_logging games: :environment do
     Game.setup
   end
 
-  timed_task donors: :environment do
+  timed_task_with_logging donors: :environment do
     Donor.setup
   end
 
-  timed_task donor_schools: :environment do
+  timed_task_with_logging donor_schools: :environment do
     DonorSchool.setup
   end
 
-  timed_task foorm_libraries: :environment do
+  timed_task_with_logging foorm_libraries: :environment do
     Foorm::Library.setup
   end
 
-  timed_task foorm_forms: :environment do
+  timed_task_with_logging foorm_forms: :environment do
     Foorm::Form.setup
   end
 
-  timed_task foorms: :environment do
+  timed_task_with_logging foorms: :environment do
     Foorm::Library.setup
     Foorm::Form.setup
   end
@@ -183,7 +184,7 @@ namespace :seed do
   # seeding levels or other dependencies. For use in development. Examples:
   # rake seed:single_script SCRIPT_NAME=express-2019
   # rake seed:single_script SCRIPT_NAME="csp*-2020"
-  timed_task single_script: :environment do
+  timed_task_with_logging single_script: :environment do
     script_name = ENV['SCRIPT_NAME']
     raise "must specify SCRIPT_NAME=" unless script_name
     script_files = Dir.glob("config/scripts_json/#{script_name}.script_json")
@@ -192,25 +193,25 @@ namespace :seed do
     update_scripts(script_files: script_files)
   end
 
-  timed_task scripts: SCRIPTS_DEPENDENCIES do
+  timed_task_with_logging scripts: SCRIPTS_DEPENDENCIES do
     update_scripts(incremental: false)
   end
 
-  timed_task scripts_incremental: SCRIPTS_DEPENDENCIES do
+  timed_task_with_logging scripts_incremental: SCRIPTS_DEPENDENCIES do
     update_scripts(incremental: true)
   end
 
-  timed_task scripts_ui_tests: SCRIPTS_DEPENDENCIES do
+  timed_task_with_logging scripts_ui_tests: SCRIPTS_DEPENDENCIES do
     update_scripts(script_files: UI_TEST_SCRIPTS)
   end
 
-  timed_task courses: :environment do
+  timed_task_with_logging courses: :environment do
     Dir.glob(UnitGroup.file_path('**')).sort.map do |path|
       UnitGroup.load_from_path(path)
     end
   end
 
-  timed_task courses_ui_tests: :environment do
+  timed_task_with_logging courses_ui_tests: :environment do
     # seed those courses that are needed for UI tests
     %w(allthethingscourse csp-2017 csp-2019).each do |course_name|
       UnitGroup.load_from_path("config/courses/#{course_name}.course")
@@ -230,7 +231,7 @@ namespace :seed do
   end
 
   # explicit execution of "seed:dsls"
-  timed_task dsls: :environment do
+  timed_task_with_logging dsls: :environment do
     DSLDefined.transaction do
       level_md5s_by_name = Hash[DSLDefined.pluck(:name, :md5)]
 
@@ -262,31 +263,31 @@ namespace :seed do
     end
   end
 
-  timed_task blocks: :environment do
+  timed_task_with_logging blocks: :environment do
     Block.load_records
   end
 
-  timed_task shared_blockly_functions: :environment do
+  timed_task_with_logging shared_blockly_functions: :environment do
     SharedBlocklyFunction.load_records
   end
 
-  timed_task libraries: :environment do
+  timed_task_with_logging libraries: :environment do
     Library.load_records
   end
 
   # Generate the database entry from the custom levels json file.
   # Optionally limit to a single level via LEVEL_NAME= env variable.
-  timed_task custom_levels: :environment do
+  timed_task_with_logging custom_levels: :environment do
     level_name = ENV['LEVEL_NAME']
     LevelLoader.load_custom_levels(level_name)
   end
 
-  timed_task deprecated_blockly_levels: :environment do
+  timed_task_with_logging deprecated_blockly_levels: :environment do
     Services::DeprecatedLevelLoader.load_blockly_levels
   end
 
   # Seeds the data in callouts
-  timed_task callouts: :environment do
+  timed_task_with_logging callouts: :environment do
     Callout.transaction do
       Callout.reset_db
       # TODO: If the id of the callout is important, specify it in the tsv
@@ -295,83 +296,83 @@ namespace :seed do
     end
   end
 
-  timed_task course_offerings: :environment do
+  timed_task_with_logging course_offerings: :environment do
     CourseOffering.seed_all
   end
 
-  timed_task course_offerings_ui_tests: :environment do
+  timed_task_with_logging course_offerings_ui_tests: :environment do
     %w(ui-test-course ui-test-csa-family-script ui-test-teacher-pl-course ui-test-facilitator-pl-course).each do |course_offering_name|
       CourseOffering.seed_record("test/ui/config/course_offerings/#{course_offering_name}.json")
     end
   end
 
-  timed_task reference_guides: :environment do
+  timed_task_with_logging reference_guides: :environment do
     ReferenceGuide.seed_all
   end
 
   # Seeds Standards
-  timed_task standards: :environment do
+  timed_task_with_logging standards: :environment do
     Framework.seed_all
     StandardCategory.seed_all
     Standard.seed_all
   end
 
-  timed_task code_docs: :environment do
+  timed_task_with_logging code_docs: :environment do
     ProgrammingEnvironment.seed_all
     ProgrammingExpression.seed_all
     ProgrammingClass.seed_all
   end
 
-  timed_task data_docs: :environment do
+  timed_task_with_logging data_docs: :environment do
     DataDoc.seed_all
   end
 
   # Seeds the data in school_districts
-  timed_task school_districts: :environment do
+  timed_task_with_logging school_districts: :environment do
     SchoolDistrict.seed_all
   end
 
   # Seeds the data in schools
-  timed_task schools: :environment do
+  timed_task_with_logging schools: :environment do
     School.seed_all
   end
 
-  timed_task ap_school_codes: :environment do
+  timed_task_with_logging ap_school_codes: :environment do
     Census::ApSchoolCode.seed
   end
 
-  timed_task ap_cs_offerings: :environment do
+  timed_task_with_logging ap_cs_offerings: :environment do
     Census::ApCsOffering.seed
   end
 
-  timed_task ib_school_codes: :environment do
+  timed_task_with_logging ib_school_codes: :environment do
     Census::IbSchoolCode.seed
   end
 
-  timed_task ib_cs_offerings: :environment do
+  timed_task_with_logging ib_cs_offerings: :environment do
     Census::IbCsOffering.seed
   end
 
-  timed_task state_cs_offerings: :environment do
+  timed_task_with_logging state_cs_offerings: :environment do
     Census::StateCsOffering.seed
   end
 
   # Seed school course offering data where the courses are taught by outside curriculum providers, such as TEALS.
-  timed_task other_curriculum_offerings: :environment do
+  timed_task_with_logging other_curriculum_offerings: :environment do
     Census::OtherCurriculumOffering.seed
   end
 
-  timed_task sample_data: :environment do
+  timed_task_with_logging sample_data: :environment do
     SampleData.seed
   end
 
-  timed_task mega_section: :environment do
+  timed_task_with_logging mega_section: :environment do
     MegaSection.seed
   end
 
   MAX_LEVEL_SOURCES = 10_000
   desc "calculate solutions (ideal_level_source) for levels based on most popular correct solutions (very slow)"
-  timed_task ideal_solutions: :environment do
+  timed_task_with_logging ideal_solutions: :environment do
     require 'benchmark'
     Level.where_we_want_to_calculate_ideal_level_source.each do |level|
       next if level.try(:free_play?)
@@ -386,7 +387,7 @@ namespace :seed do
     end
   end
 
-  timed_task :import_users, [:file] => :environment do |_t, args|
+  timed_task_with_logging :import_users, [:file] => :environment do |_t, args|
     CSV.read(args[:file], {col_sep: "\t", headers: true}).each do |row|
       User.create!(
         provider: User::PROVIDER_MANUAL,
@@ -399,15 +400,17 @@ namespace :seed do
     end
   end
 
-  timed_task secret_words: :environment do
+  timed_task_with_logging secret_words: :environment do
     SecretWord.setup
+    puts "done"
   end
 
-  timed_task secret_pictures: :environment do
+  timed_task_with_logging secret_pictures: :environment do
     SecretPicture.setup
+    puts "done"
   end
 
-  timed_task restricted_section: :environment do
+  timed_task_with_logging restricted_section: :environment do
     name = "Fake Section Cap Teacher"
     email = "Fake-User-Email-Created-#{Time.now.to_i}_#{rand(1_000_000)}@test.xx"
     password = "#{name}password"
@@ -437,7 +440,7 @@ namespace :seed do
     end
   end
 
-  timed_task :cached_ui_test do
+  timed_task_with_logging :cached_ui_test do
     HASH_FILE = 'db/ui_test_data.hash'
 
     # patterns are relative to dashboard directory
@@ -466,7 +469,7 @@ namespace :seed do
     sh('mysqldump -u root -B dashboard_test > db/ui_test_data.sql')
   end
 
-  timed_task :import_pegasus_data do
+  timed_task_with_logging :import_pegasus_data do
     db = DASHBOARD_DB
     table_prefix = "google_sheets_shared_"
     files_to_import = %w[data/cdo-languages.csv data/cdo-donors.csv]
@@ -478,14 +481,14 @@ namespace :seed do
   DEFAULT_SEED_TASKS = [:adhoc, :test].include?(rack_env) ? UI_TEST_SEED_TASKS : FULL_SEED_TASKS
 
   desc "seed the data needed for this type of environment by default"
-  timed_task default: DEFAULT_SEED_TASKS
+  timed_task_with_logging default: DEFAULT_SEED_TASKS
   desc "seed all dashboard data"
-  timed_task all: FULL_SEED_TASKS
-  timed_task ui_test: UI_TEST_SEED_TASKS
+  timed_task_with_logging all: FULL_SEED_TASKS
+  timed_task_with_logging ui_test: UI_TEST_SEED_TASKS
 
   desc "seed all dashboard data that has changed since last seed"
-  timed_task incremental: [:check_migrations, :videos, :concepts, :scripts_incremental, :callouts, :school_districts, :schools, :secret_words, :secret_pictures, :courses, :ap_school_codes, :ap_cs_offerings, :ib_school_codes, :ib_cs_offerings, :state_cs_offerings, :donors, :donor_schools, :foorms, :import_pegasus_data]
+  timed_task_with_logging incremental: [:check_migrations, :videos, :concepts, :scripts_incremental, :callouts, :school_districts, :schools, :secret_words, :secret_pictures, :courses, :ap_school_codes, :ap_cs_offerings, :ib_school_codes, :ib_cs_offerings, :state_cs_offerings, :donors, :donor_schools, :foorms, :import_pegasus_data]
 
   desc "seed only dashboard data required for tests"
-  timed_task test: [:check_migrations, :videos, :games, :concepts, :secret_words, :secret_pictures, :school_districts, :schools, :standards, :foorms, :import_pegasus_data]
+  timed_task_with_logging test: [:check_migrations, :videos, :games, :concepts, :secret_words, :secret_pictures, :school_districts, :schools, :standards, :foorms, :import_pegasus_data]
 end

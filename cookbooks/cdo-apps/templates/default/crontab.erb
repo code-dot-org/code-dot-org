@@ -1,4 +1,12 @@
 <%
+  # This file contains the cron schedules for our various persistent and
+  # non-persistent servers. All times are UTC.
+  #
+  # None of these schedules, unless specifically noted, needs to change for
+  # dayling savings time.
+  #
+  # CRONJOB TIME SYNTAX: https://help.ubuntu.com/community/CronHowto
+
   require 'shellwords'
 
   $crontab = []
@@ -41,11 +49,9 @@
     $crontab.join("\n")
   end
 
-  # CRONJOB TIME SYNTAX: https://help.ubuntu.com/community/CronHowto
-
   # for multi-instance envs (ie production) there should be one daemon,
   # so cronjobs that run once per environment go here (standalone env
-  # instances are all their own daemon)
+  # instances (ie staging, test) are all their own daemon)
   if node['cdo-apps']['daemon']
     if node.chef_environment == 'staging' && node.name == 'staging' # 'real' staging only
       cronjob at:'@reboot', do:home_dir('.dropbox-dist', 'dropboxd')
@@ -57,16 +63,15 @@
       cronjob at:'*/2 * * * *', do:pegasus_dir('sites','virtual','collate_pdfs')
       cronjob at:'0 14,15 * * *', do:deploy_dir('bin', 'cron', 'update_dotd')
       cronjob at:'0 * * * *', do:deploy_dir('bin', 'cron', 'start_broken_link_checker'), notify:'dev+crontab@code.org'
-      # Disabled during HoC
-      # cronjob at:'30 7 * * 1-5', do:deploy_dir('bin', 'cron', 'commit_content')
+      cronjob at:'30 7 * * 1-5', do:deploy_dir('bin', 'cron', 'commit_content')
       cronjob at:'*/1 * * * *', do:deploy_dir('bin', 'cron', 'update_dts')
       cronjob at:'0 17 * * *', do:deploy_dir('bin', 'cron', 'commit_trusted_proxies')
       
       # This should be run after the commit_content job that happens on both the levelbuilder
       # and staging environments
       # merge_lb_to_staging is also known as DTS or "deploy to staging"
-      # Disabled during HoC
-      # cronjob at:'35 7 * * 1-5', do:deploy_dir('bin', 'cron', 'merge_lb_to_staging')
+      cronjob at:'35 7 * * 1-5', do:deploy_dir('bin', 'cron', 'merge_lb_to_staging')
+
       
       # This should be run after the commit_content job that happens on the levelbuilder
       # environment.
@@ -83,11 +88,11 @@
       cronjob at:'*/5 * * * *', do:deploy_dir('bin', 'snapshot')
     end
 
-    # Disabled during HoC
-    # if node.chef_environment == 'levelbuilder'
-    #   cronjob at:'30 7 * * 1-5', do:deploy_dir('bin', 'cron', 'commit_content')
-    #   cronjob at:'18 9 * * 1-5', do:deploy_dir('bin', 'cron', 'commit_content')
-    # end
+    if node.chef_environment == 'levelbuilder'
+      cronjob at:'30 7 * * 1-5', do:deploy_dir('bin', 'cron', 'commit_content')
+      cronjob at:'18 9 * * 1-5', do:deploy_dir('bin', 'cron', 'commit_content')
+    end
+
 
     if node.chef_environment == 'production' # production daemon
       cronjob at:'30 14 * * *', do:dashboard_dir('bin','scheduled_pd_workshop_emails')
@@ -116,7 +121,7 @@
       cronjob at:'0 0 * * *', do:deploy_dir('bin', 'cron', 'build_contact_rollups_v2')
       cronjob at:'0 2 * * *', do:deploy_dir('bin', 'cron', 'hoc_student_name_cleanup')
 
-      # RDS backup window is 08:50-09:20, so by 11:50 backups should definitely be ready
+      # RDS backup window is 05:17-05:47 UTC, so by 11:50 backups should definitely be ready
       cronjob at:'50 11 * * *', do:deploy_dir('bin', 'cron', 'push_latest_aurora_backup_to_secondary_account')
     end
 

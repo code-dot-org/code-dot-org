@@ -132,18 +132,24 @@
       "comment_Variables": null,
       "functionParams_none": null,
       "callMyFunction": null,
-      "comment": null
+      "comment": null,
+      "createEdgeSprites": null
     },
     "expand_debugger": "false",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "encrypted_examples": [
+
+    ],
+    "libraries_enabled": "false",
+    "validation_enabled": "false"
   },
-  "level_num": "custom",
   "game_id": 50,
-  "created_at": "2022-03-30T23:42:37.000Z",
-  "user_id": 324,
   "published": true,
+  "created_at": "2022-03-30T23:42:37.000Z",
+  "level_num": "custom",
+  "user_id": 324,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-03-30T23:42:37.461+00:00\",\"changed\":[\"cloned from \\\"CSD U3 game template_2021\\\"\"],\"cloned_from\":\"CSD U3 game template_2021\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-03-30T23:42:37.461+00:00\",\"changed\":[\"cloned from \\\"CSD U3 game template_2021\\\"\"],\"cloned_from\":\"CSD U3 game template_2021\"},{\"changed_at\":\"2022-12-15 16:48:19 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Gamelab>

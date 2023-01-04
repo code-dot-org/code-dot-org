@@ -76,10 +76,6 @@ Lint/ConstantDefinitionInBlock:
 Lint/DuplicateBranch:
   Enabled: false
 
-# Offense count: 5
-Lint/DuplicateMethods:
-  Enabled: false
-
 # Offense count: 120
 # Configuration parameters: AllowComments, AllowEmptyLambdas.
 Lint/EmptyBlock:
@@ -133,10 +129,6 @@ Lint/RescueException:
 # Offense count: 95
 # This cop supports safe auto-correction (--auto-correct).
 Lint/ScriptPermission:
-  Enabled: false
-
-# Offense count: 1
-Lint/StructNewOverride:
   Enabled: false
 
 # Offense count: 696
@@ -226,10 +218,6 @@ Rails/AssertNot:
 # Configuration parameters: EnforcedStyle, AllowToTime.
 # SupportedStyles: strict, flexible
 Rails/Date:
-  Enabled: false
-
-# Offense count: 9
-Rails/DeprecatedActiveModelErrorsMethods:
   Enabled: false
 
 # Offense count: 478
@@ -621,11 +609,6 @@ Style/RescueModifier:
 # Configuration parameters: EnforcedStyle.
 # SupportedStyles: implicit, explicit
 Style/RescueStandardError:
-  Enabled: false
-
-# Offense count: 38
-# This cop supports unsafe auto-correction (--auto-correct-all).
-Style/SlicingWithRange:
   Enabled: false
 
 # Offense count: 38

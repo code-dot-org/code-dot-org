@@ -97,7 +97,7 @@ export class Summary extends React.Component {
               caption="CS Discoveries Teachers"
               data={this.state.applications['csd_teachers']}
               path="csd_teachers"
-              applicationType="teacher"
+              isWorkshopAdmin={this.props.isWorkshopAdmin}
             />
           </Col>
           <Col sm={6}>
@@ -106,7 +106,7 @@ export class Summary extends React.Component {
               caption="CS Principles Teachers"
               data={this.state.applications['csp_teachers']}
               path="csp_teachers"
-              applicationType="teacher"
+              isWorkshopAdmin={this.props.isWorkshopAdmin}
             />
           </Col>
           <Col sm={6}>
@@ -115,7 +115,7 @@ export class Summary extends React.Component {
               caption="Computer Science A Teachers"
               data={this.state.applications['csa_teachers']}
               path="csa_teachers"
-              applicationType="teacher"
+              isWorkshopAdmin={this.props.isWorkshopAdmin}
             />
           </Col>
         </Row>

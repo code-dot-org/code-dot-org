@@ -585,6 +585,7 @@ describe('entry tests', () => {
     'lessons/student_lesson_plan':
       './src/sites/studio/pages/lessons/student_lesson_plan.js',
     'musiclab/index': './src/sites/studio/pages/musiclab/index.js',
+    'musiclab/menu': './src/sites/studio/pages/musiclab/menu.js',
     'print_certificates/batch':
       './src/sites/studio/pages/print_certificates/batch.js',
     'programming_classes/show':
@@ -811,8 +812,6 @@ describe('entry tests', () => {
       './src/sites/studio/pages/pd/teachercon_survey/new.js',
     'pd/application_dashboard/index':
       './src/sites/studio/pages/pd/application_dashboard/index.js',
-    'pd/application/facilitator_application/new':
-      './src/sites/studio/pages/pd/application/facilitator_application/new.js',
     'pd/application/teacher_application/new':
       './src/sites/studio/pages/pd/application/teacher_application/new.js',
     'pd/application/principal_approval_application/new':
