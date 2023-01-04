@@ -52,7 +52,7 @@ CleverClassroomSelectSection.args = {provider: OAuthSectionTypes.clever};
 const LoadingTemplate = args => <RosterDialog rosterProvider={args.provider} />;
 
 export const GoogleClassroomLoading = LoadingTemplate.bind({});
-GoogleClassroomSelectSection.args = {
+GoogleClassroomLoading.args = {
   provider: OAuthSectionTypes.google_classroom
 };
 
