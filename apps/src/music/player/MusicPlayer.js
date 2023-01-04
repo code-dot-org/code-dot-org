@@ -1,6 +1,7 @@
 import {
   GetCurrentAudioTime,
   InitSound,
+  LoadSoundFromBuffer,
   PlaySound,
   StopSound,
   StopSoundByUniqueId
@@ -43,6 +44,10 @@ export default class MusicPlayer {
     this.isInitialized = true;
   }
 
+  loadSoundFromBuffer(id, buffer) {
+    LoadSoundFromBuffer(id, buffer);
+  }
+
   playSoundAtMeasureById(id, measure, insideWhenRun) {
     if (!this.isInitialized) {
       console.log('MusicPlayer not initialized');
@@ -65,13 +70,6 @@ export default class MusicPlayer {
     };
 
     this.soundEvents.push(soundEvent);
-
-    // Sort the sounds by play time, earliest first, so that when we
-    // render the timeline, we can prioritize by play time when
-    // allocating rows to sounds.
-    this.soundEvents.sort(
-      (soundEventA, soundEventB) => soundEventA.when - soundEventB.when
-    );
 
     if (this.isPlaying) {
       this.playSoundEvent(soundEvent);

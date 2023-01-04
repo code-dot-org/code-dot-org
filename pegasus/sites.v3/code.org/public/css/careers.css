@@ -163,6 +163,17 @@ ul li:before {
   margin-right: 12px;
 }
 
+.careers__unifying-approach {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.careers__unifying-approach img {
+  margin-top: 1.5em;
+}
+
 @media screen and (max-width: 970px) {
   .careers__banner {
     background-position-x: 125%;
@@ -192,6 +203,10 @@ ul li:before {
 
   .careers__benefit__icon img {
     width: 48px;
+  }
+
+  .careers__unifying-approach {
+    justify-content: center;
   }
 }
 

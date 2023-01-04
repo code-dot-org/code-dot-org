@@ -3,7 +3,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import {Provider, connect} from 'react-redux';
-import queryString from 'query-string';
 import Instructions from './Instructions';
 import Controls from './Controls';
 import Timeline from './Timeline';
@@ -17,6 +16,8 @@ import {AnalyticsContext} from './context';
 import TopButtons from './TopButtons';
 import Globals from './globals';
 import MusicBlocklyWorkspace from './blockly/MusicBlocklyWorkspace';
+import AppConfig from './appConfig';
+import SoundUploader from './utils/SoundUploader';
 
 const baseUrl = 'https://curriculum.code.org/media/musiclab/';
 
@@ -49,6 +50,19 @@ class UnconnectedMusicView extends React.Component {
     this.analyticsReporter = new AnalyticsReporter();
     this.codeHooks = {};
     this.musicBlocklyWorkspace = new MusicBlocklyWorkspace();
+    this.soundUploader = new SoundUploader(this.player);
+
+    // Set default for instructions position.
+    let instructionsPosIndex = 1;
+    const defaultInstructionsPos = AppConfig.getValue(
+      'instructions-position'
+    )?.toUpperCase();
+    if (defaultInstructionsPos) {
+      const posIndex = instructionPositionOrder.indexOf(defaultInstructionsPos);
+      if (posIndex !== -1) {
+        instructionsPosIndex = posIndex;
+      }
+    }
 
     this.state = {
       library: null,
@@ -59,7 +73,7 @@ class UnconnectedMusicView extends React.Component {
       updateNumber: 0,
       timelineAtTop: false,
       showInstructions: true,
-      instructionsPosIndex: 1
+      instructionsPosIndex
     };
   }
 
@@ -122,9 +136,9 @@ class UnconnectedMusicView extends React.Component {
   };
 
   loadLibrary = async () => {
-    let parameters = queryString.parse(location.search);
-    const libraryFilename = parameters['library']
-      ? `music-library-${parameters['library']}.json`
+    const libraryParameter = AppConfig.getValue('library');
+    const libraryFilename = libraryParameter
+      ? `music-library-${libraryParameter}.json`
       : 'music-library.json';
     const response = await fetch(baseUrl + libraryFilename);
     const library = await response.json();
@@ -227,7 +241,7 @@ class UnconnectedMusicView extends React.Component {
 
     this.player.playSong();
 
-    this.setState({isPlaying: true});
+    this.setState({isPlaying: true, currentAudioElapsedTime: 0});
 
     console.log('playSong', Blockly.getWorkspaceCode());
   };
@@ -379,7 +393,10 @@ class UnconnectedMusicView extends React.Component {
 
             <div id="blockly-area" className={moduleStyles.blocklyArea}>
               <div className={moduleStyles.topButtonsContainer}>
-                <TopButtons clearCode={this.clearCode} />
+                <TopButtons
+                  clearCode={this.clearCode}
+                  uploadSound={file => this.soundUploader.uploadSound(file)}
+                />
               </div>
               <div id="blockly-div" />
             </div>
