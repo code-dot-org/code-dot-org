@@ -23,6 +23,9 @@ import UnitCalendar from './UnitCalendar';
 import color from '@cdo/apps/util/color';
 import EndOfLessonDialog from '@cdo/apps/templates/EndOfLessonDialog';
 import {PublishedState} from '@cdo/apps/generated/curriculum/sharedCourseConstants';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+
+const UNIT_OVERVIEW_PAGE_VISITED_EVENT = 'Unit Overview Page Visited';
 
 /**
  * Lesson progress component used in level header and script overview.
@@ -59,6 +62,7 @@ class UnitOverview extends React.Component {
     publishedState: PropTypes.oneOf(Object.values(PublishedState)),
 
     // redux provided
+    unitTitle: PropTypes.string.isRequired,
     scriptId: PropTypes.number.isRequired,
     scriptName: PropTypes.string.isRequired,
     viewAs: PropTypes.oneOf(Object.values(ViewType)).isRequired,
@@ -72,6 +76,10 @@ class UnitOverview extends React.Component {
     const showRedirectDialog =
       props.redirectScriptUrl && props.redirectScriptUrl.length > 0;
     this.state = {showRedirectDialog};
+
+    analyticsReporter.sendEvent(UNIT_OVERVIEW_PAGE_VISITED_EVENT, {
+      'unit name': props.unitTitle
+    });
   }
 
   onCloseRedirectDialog = () => {
@@ -213,6 +221,7 @@ const styles = {
 
 export const UnconnectedUnitOverview = Radium(UnitOverview);
 export default connect((state, ownProps) => ({
+  unitTitle: state.progress.unitTitle,
   scriptId: state.progress.scriptId,
   scriptName: state.progress.scriptName,
   viewAs: state.viewAs,
