@@ -189,48 +189,66 @@
         "conditionals_with_cards_sample_program/coursed/2022": {
           "name": "Kartalar bilan shartli bayonotlar. Dastur namunasi"
         },
+        "all_standards/coursef/2022": {
+          "name": "Barcha standartlar"
+        },
+        "all_vocabulary/coursef/2022": {
+          "name": "Barcha lug'at"
+        },
         "common_core_and_ngss_guidance/coursef/2022": {
-          "url": "https://docs.google.com/document/d/1SqD3MaRbGIONGs5bcL1YhHUFK92ZXFIufypr6UC8XYA/preview#heading=h.8jtw7rltkhe3"
+          "name": "Umumiy yadro va NGSS ko'rsatmalari",
+          "url": "https://docs.google.com/document/d/1SqD3MaRbGIONGs5bcL1YhHUFK92ZXFIufypr6UC8XYA/preview#heading=h.8jtw7rltkhe3",
+          "type": "Manba"
         },
         "cross-curricular_extension_activities/coursef/2022": {
-          "url": "https://docs.google.com/document/d/1MRlHy_3VgLXKZwjeB0VmI8HWuPvupZODsslPnA7KYAY/preview"
+          "name": "O‘quv dasturlarini kengaytirish bo‘yicha tadbirlar",
+          "url": "https://docs.google.com/document/d/1MRlHy_3VgLXKZwjeB0VmI8HWuPvupZODsslPnA7KYAY/preview",
+          "type": "Manba"
         },
         "curriculum_guide/coursef/2022": {
-          "name": "O‘quv qo‘llanma"
+          "name": "O‘quv qo‘llanma",
+          "type": "Manba"
         },
         "debugging_guide/coursef/2022": {
           "name": "Debaglash bo'yicha yo'riqlar",
-          "url": "https://docs.google.com/document/d/1_UFVNtS0_f7aH79WtSEAR0niLy-KPwX1xNiXllOBviE/preview"
+          "url": "https://docs.google.com/document/d/1_UFVNtS0_f7aH79WtSEAR0niLy-KPwX1xNiXllOBviE/preview",
+          "type": "Manba"
         },
         "implementation_guide/coursef/2022": {
           "name": "Implementation Guide",
-          "url": "https://docs.google.com/document/d/1I04szlSMuDlFLH_pidEC-huk_-t6ig09pBSyMv1Z3pw/preview"
+          "url": "https://docs.google.com/document/d/1I04szlSMuDlFLH_pidEC-huk_-t6ig09pBSyMv1Z3pw/preview",
+          "type": "Manba"
         },
         "lesson_type_guide/coursef/2022": {
           "name": "Dars turi yo'rigi"
         },
         "sprite_lab_documentation/coursef/2022": {
           "name": "Sprite Lab Documentation",
-          "url": "https://studio.code.org/docs/spritelab/"
+          "url": "https://studio.code.org/docs/spritelab/",
+          "type": "Manba"
         },
         "teacher_forum/coursef/2022": {
           "name": "O‘qituvchilar forumi",
-          "url": "https://forum.code.org/c/csf/"
+          "url": "https://forum.code.org/c/csf/",
+          "type": "Manba"
         },
         "virtual_lesson_modifications/coursef/2022": {
           "name": "Virtual dars modifikatsiyalari"
         },
         "the_power_of_words_lesson_quiz/coursef/2022": {
           "name": "So‘z kuchi: Dars bo'yicha test",
-          "url": "https://docs.google.com/forms/d/1OKy2U3F37NSgCBUez9XMi0UJtlHKPXIe_rxy0l_KEOg/copy"
+          "url": "https://docs.google.com/forms/d/1OKy2U3F37NSgCBUez9XMi0UJtlHKPXIe_rxy0l_KEOg/copy",
+          "type": "Manba"
         },
         "the_power_of_words_lesson_quiz_1/coursef/2022": {
           "name": "So‘z kuchi: Dars bo'yicha test",
-          "url": "https://www.commonsense.org/education/digital-citizenship/quiz/the-power-of-words-lesson-quiz"
+          "url": "https://www.commonsense.org/education/digital-citizenship/quiz/the-power-of-words-lesson-quiz",
+          "type": "Javob kaliti"
         },
         "the_power_of_words_lesson_slides/coursef/2022": {
           "name": "So‘z kuchi: Dars slaydlari",
-          "url": "https://docs.google.com/presentation/d/1kUVxRuQ_CUDpeSm3Sqg4yyueITjc3qQMUpSTi0WP4so/edit"
+          "url": "https://docs.google.com/presentation/d/1kUVxRuQ_CUDpeSm3Sqg4yyueITjc3qQMUpSTi0WP4so/edit",
+          "type": "Slaydlar"
         },
         "the_power_of_words_the_power_of_words/coursef/2022": {
           "name": "So‘z kuchi: So‘z kuchi",
@@ -239,15 +257,22 @@
         },
         "the_power_of_words_words_can_hurt/coursef/2022": {
           "name": "So‘z kuchi: So‘z bilan yaralash mumkin",
-          "url": "https://docs.google.com/document/d/1gJcgF03GdltY81jfccsl-tOpgwxMfHI5S1KvzhEhyIw/edit"
+          "url": "https://docs.google.com/document/d/1gJcgF03GdltY81jfccsl-tOpgwxMfHI5S1KvzhEhyIw/edit",
+          "type": "Tarqatma"
+        },
+        "csf_-_course_f_-_slides_2022-2023/coursef/2022": {
+          "name": "CSF - Kurs F - Slaydlar 2022-2023",
+          "type": "Slaydlar"
         },
         "exploring_apps/coursef/2022": {
           "name": "Exploring Apps",
-          "url": "https://docs.google.com/document/d/1CMFO9cWrBa0E97raNZnEXHC5e2WHrprMokSW5jmJzDs/template/preview"
+          "url": "https://docs.google.com/document/d/1CMFO9cWrBa0E97raNZnEXHC5e2WHrprMokSW5jmJzDs/template/preview",
+          "type": "Manba"
         },
         "exploring_apps_1/coursef/2022": {
           "name": "Exploring Apps",
-          "url": "https://docs.google.com/document/d/1Vjn1DhjZm17C-Hde97yDHyeFxMzdPlR6Q-rESZgHw2s/template/preview"
+          "url": "https://docs.google.com/document/d/1Vjn1DhjZm17C-Hde97yDHyeFxMzdPlR6Q-rESZgHw2s/template/preview",
+          "type": "Javob kaliti"
         },
         "introducing_sprite_lab_1/coursef/2022": {
           "name": "Sprite laboratoriyasi bilan tanishish",
@@ -259,10 +284,14 @@
           "url": "https://docs.google.com/presentation/d/1u8gueXrKIKoYNgTxbr3bIvmbVlCsJcVT7qcDeqsOh1U/template/preview"
         },
         "blank_space_stories/coursef/2022": {
-          "url": "https://docs.google.com/document/d/1fJNyI0WQTi-Q-XMZDn9sIgD_o6KjGHwZesQRa93ko5E/template/preview"
+          "name": "Bo'sh kosmik hikoyalar",
+          "url": "https://docs.google.com/document/d/1fJNyI0WQTi-Q-XMZDn9sIgD_o6KjGHwZesQRa93ko5E/template/preview",
+          "type": "Faoliyat bo'yicha qo'llanma"
         },
         "blank_space_stories_1/coursef/2022": {
-          "url": "https://docs.google.com/document/d/1mXI-U7ve1JjDchlyhjD53pkdSXKqeMemb7upFGareV4/template/preview"
+          "name": "Bo'sh kosmik hikoyalar",
+          "url": "https://docs.google.com/document/d/1mXI-U7ve1JjDchlyhjD53pkdSXKqeMemb7upFGareV4/template/preview",
+          "type": "Javob kaliti"
         },
         "mini_project_user_input_programs/coursef/2022": {
           "url": "https://docs.google.com/presentation/d/1AGDl6WPPsPId6J3GXjySlvFJMaLDnt0P9Tu6ujjZeG0/edit#slide=id.gc6acec9c41_0_68"
@@ -278,7 +307,8 @@
         },
         "running_simulations/coursef/2022": {
           "name": "Running Simulations",
-          "url": "https://docs.google.com/document/d/1sgUd9UcthM3M-A1EKX1m3AwsgLrivx0jF0i-e_79kk8/edit"
+          "url": "https://docs.google.com/document/d/1sgUd9UcthM3M-A1EKX1m3AwsgLrivx0jF0i-e_79kk8/edit",
+          "type": "Ishchi varaq"
         },
         "ai_impact_on_society/coursef/2022": {
           "name": "AI: Jamiyatga ta'siri",
@@ -734,7 +764,7 @@
           "url": "/s/kurs-2022/standartlar"
         },
         "all_vocabulary/coursea/2022": {
-          "name": "Hamma Lug‘at",
+          "name": "Barcha lug'at",
           "url": "/s/coursea-2022/lugat"
         },
         "common_core_and_ngss_guidance/coursea/2022": {
@@ -752,17 +782,17 @@
           "url": "https://docs.google.com/document/d/12j5IkeGEWeAmWnZY9krbNSo8oKOKT5nIQGUH5J7Si80/preview"
         },
         "debugging_guide/coursea/2022": {
-          "name": "Debaglash bo'yicha yo'riqlar",
+          "name": "Debugging bo'yicha yo'riqlar",
           "url": "https://docs.google.com/document/d/1_UFVNtS0_f7aH79WtSEAR0niLy-KPwX1xNiXllOBviE/preview",
           "type": "Resurslar"
         },
         "implementation_guide/coursea/2022": {
-          "name": "Implementation Guide",
+          "name": "Amalga oshirish boyicha qollanma",
           "url": "https://docs.google.com/document/d/1I04szlSMuDlFLH_pidEC-huk_-t6ig09pBSyMv1Z3pw/preview",
           "type": "Resurslar"
         },
         "lesson_type_guide/coursea/2022": {
-          "name": "Dars turi yo'rigi",
+          "name": "Dars turi bo'yicha qo'llanma",
           "url": "https://docs.google.com/document/d/1Z28A1yF6BZu3lIlVvvHo5UqBpyuc1hX8YVjIt3fwmY4/view",
           "type": "Resurslar"
         },
@@ -820,7 +850,7 @@
           "name": "Quvnoq harita Game Pieces"
         },
         "happy_maps/coursea/2022": {
-          "name": "Xursand Xaritalar"
+          "name": "Quvnoq Xaritalar"
         },
         "unplugged_blockly_blocks_grades_k-1_/coursea/2022": {
           "name": "Kompyutersiz mashq. Blockly bloklari (4-7 yosh)",
@@ -853,10 +883,17 @@
           "name": "Feeling Faces"
         },
         "pair-programming/coursea/2022": {
+          "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q",
           "type": "Video"
+        },
+        "csf_lesson_recommendations/coursea/2022": {
+          "name": "Dars uchun tavsiyalar",
+          "url": "https://docs.google.com/document/d/1N3aiitOxz_cut1AQn90g1nYJouKT5dC_4m1M0KFNzP8/edit?usp=sharing",
+          "type": "Resurslar"
         },
         "pause_and_think_online/coursea/2022": {
           "name": "Pauza qiling va o'ylang",
+          "url": "https://www.youtube.com/watch?v=rgbZAWnOWOo",
           "type": "Video"
         },
         "the_big_event/coursea/2022": {
@@ -877,11 +914,13 @@
         },
         "artist_project_planning_guide/coursea/2022": {
           "name": "Artist loyihasini rejalashtirish bo'yicha yo'riqnoma",
-          "url": "https://docs.google.com/document/d/16jZwjsALk--UIsqN0i35odey5dei1-uHGCTl8x23B2M/template/preview"
+          "url": "https://docs.google.com/document/d/16jZwjsALk--UIsqN0i35odey5dei1-uHGCTl8x23B2M/template/preview",
+          "type": "Qollanma"
         },
         "artist_project_planning_guide_1/coursea/2022": {
           "name": "Artist loyihasini rejalashtirish bo'yicha yo'riqnoma",
-          "url": "https://docs.google.com/document/d/13AiHjPrDE3DFnwH3qKnty6M3PbHsZcd-0YoZz4ZmC3E/template/preview"
+          "url": "https://docs.google.com/document/d/13AiHjPrDE3DFnwH3qKnty6M3PbHsZcd-0YoZz4ZmC3E/template/preview",
+          "type": "Javob kaliti"
         },
         "all_resources/coursec/2022": {
           "url": "/s/kurs-2022/resurslari"

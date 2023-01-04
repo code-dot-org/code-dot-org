@@ -4,7 +4,7 @@ maintainer_email 'dev@code.org'
 license          'All rights reserved'
 description      'Installs/Configures AWS command line interface'
 long_description File.read(File.join(File.dirname(__FILE__), 'README.md'))
-version          '0.1.20'
+version          '0.1.26'
 
 depends 'apt'
 depends 'poise-python'

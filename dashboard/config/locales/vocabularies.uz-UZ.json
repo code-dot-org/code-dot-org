@@ -374,13 +374,15 @@
           "definition": "Ekrandagi grafika; joylashuv, harakat va tashqi ko‘rinish kabi xususiyatlarga ega bo‘ladi."
         },
         "user/coursef/2022": {
-          "word": "Foydalanuvchi"
+          "word": "Foydalanuvchi",
+          "definition": "Ob'ektni, jumladan, dasturiy ta'minot va apparatni ishlatadigan kishi."
         },
         "algorithm/coursef/2022": {
           "word": "Algoritm"
         },
         "behavior/coursef/2022": {
-          "word": "Harakatlar/O‘zini tutish"
+          "word": "Harakatlar/O‘zini tutish",
+          "definition": "Sprite laboratoriyasida sprayt to'xtatish buyurilmaguncha doimiy ravishda bajaradigan harakat."
         },
         "program/coursef/2022": {
           "word": "Dastur",
@@ -394,8 +396,16 @@
           "word": "O‘zgaruvchi",
           "definition": "Dasturda ishlatilgan biror ma'lumot yoki qiymat uchun nom."
         },
+        "prompt/coursef/2022": {
+          "word": "Tezkor",
+          "definition": "Kompyuter ekranida foydalanuvchi kiritishni kutayotgan xabar."
+        },
         "input/coursef/2022": {
           "word": "Kiritish"
+        },
+        "models_and_simulations/coursef/2022": {
+          "word": "Modellar va simulyatsiyalar",
+          "definition": "real hayotda eksperiment o'tkazish uchun xarajatlar, vaqt va xavf-xatarsiz uning xatti-harakatlarini o'rganish uchun haqiqiy dunyo hodisasining asosiy xususiyatlarini takrorlaydigan yoki taqlid qiladigan dastur."
         },
         "machine_learning/coursef/2022": {
           "word": "Mashinalar o‘rganishi",
@@ -772,11 +782,16 @@
           "definition": "Kompyuter buyruqlarni o‘qishi uchun buyruqlarni to‘g‘ri tartibda qo‘yish."
         },
         "persistence/coursec/2022": {
-          "word": "Qat'iylik"
+          "word": "Qat'iylik",
+          "definition": "Taslim bo'lmaslik."
         },
         "programming/coursec/2022": {
           "word": "Dasturlash (Programming)",
           "definition": "Dastur yaratish san'ati."
+        },
+        "angle/coursec/2022": {
+          "word": "Burchak",
+          "definition": "-   **Burchak** - Shaklning ikki tomoni birikadigan joyi, darajasi bilan o'lchanadi"
         },
         "loop/coursec/2022": {
           "word": "Sikl",

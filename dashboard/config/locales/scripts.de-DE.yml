@@ -4628,6 +4628,8 @@ de:
           name: coursed-2021
         coursee-2021:
           title: Kurs E (2021)
+          description_short: Erlernen Sie die Grundlagen von Grafikobjekten, Nested
+            Loops und Funktionen.
           description_audience: 'Alter: 8-12'
           lesson_groups:
             ramp_up:
@@ -4735,10 +4737,13 @@ de:
               display_name: Einführung
             outbreak:
               display_name: Ausbruchssimulation
+            introduction:
+              display_name: Einführung in Grafikobjekte-Labor
             lessonGroup-3:
               display_name: Variablen
             Sprites:
               display_name: Sprites
+              description: Erlerne die Grundlagen des Codierens mit Grafikobjekten!
             variables:
               display_name: Variablen
         csd4-preview-2021:
@@ -4865,12 +4870,20 @@ de:
           name: k5-onlinepd-2021
         haikubot-pilot:
           lesson_groups:
+            rampup:
+              description: Erlerne die Grundlagen des Codierens mit Grafikobjekten
+                und Text!
+            Lesson 1:
+              description: Erlerne die Grundlagen des Codierens mit Grafikobjekten
+                und Text!
             Lesson 3:
               display_name: Lektion 3
             Lesson 4:
               display_name: Lektion 4
             Lesson 5:
               display_name: Lektion 5
+          student_description: Benutze Grafikobjekte-Labor, um einen Haiku-Bot zu
+            erstellen!
         outbreakmodule:
           lesson_groups:
             Outbreak Module:
@@ -5425,6 +5438,8 @@ de:
               display_name: Auswirkungen der Datenverarbeitung
             end_of_course_project:
               display_name: Projekt am Ende des Kurses
+          description_short: Erlernen Sie die Grundlagen von Grafikobjekten, Nested
+            Loops und Funktionen.
           description_audience: 'Alter: 8-12'
         coursef-2022:
           lesson_groups:

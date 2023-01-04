@@ -38,7 +38,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-09-28 14:32:09 UTC",
+    "serialized_at": "2022-12-16 20:54:12 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -1208,19 +1208,6 @@
       },
       "seeding_key": {
         "lesson_activity.key": "16e5bfe9-a20f-474f-934f-e109c2a6d33f",
-        "lesson.key": "Physical Outputs and LEDs",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "csd6-2022"
-      }
-    },
-    {
-      "key": "9b29cc4c-555f-4b71-9dfc-0ac54fe7db2b",
-      "position": 4,
-      "properties": {
-        "name": "Lesson Feedback"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "9b29cc4c-555f-4b71-9dfc-0ac54fe7db2b",
         "lesson.key": "Physical Outputs and LEDs",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "csd6-2022"
@@ -4394,17 +4381,6 @@
       "seeding_key": {
         "activity_section.key": "bfba76c0-3ffa-403b-b4d0-9e962d6b85ca",
         "lesson_activity.key": "16e5bfe9-a20f-474f-934f-e109c2a6d33f"
-      }
-    },
-    {
-      "key": "b3a69fce-9cb6-4117-9f01-7e7b4b0c82f1",
-      "position": 1,
-      "properties": {
-        "description": "Please let us know how this lesson went!\n\n- [**Report a Typo / Bug / Unclear Directions**](https://docs.google.com/forms/d/e/1FAIpQLScLFkt7rtQSeHB3AtYpYuENtiwl3kRD1qg8J02bxS0ow5l42A/viewform?usp=sf_link)\n- [**Submit General Feedback on the Lesson**](https://docs.google.com/forms/d/e/1FAIpQLSfROQdamfLnHVn11tsjHsGPElKhC5LzDfHFEqhaj0igtsqHAA/viewform?usp=sf_link)\n- [**Share Takeaways and Experiences in the Forum!**](https://forum.code.org/c/csd-unit-6-pilot/442)"
-      },
-      "seeding_key": {
-        "activity_section.key": "b3a69fce-9cb6-4117-9f01-7e7b4b0c82f1",
-        "lesson_activity.key": "9b29cc4c-555f-4b71-9dfc-0ac54fe7db2b"
       }
     },
     {

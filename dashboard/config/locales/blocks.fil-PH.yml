@@ -516,7 +516,7 @@ fil:
       Dancelab_onPointerUp:
         text: sa panturo up
       Dancelab_randomColor:
-        text: iba-ibang kulay
+        text: kahit anong kulay
       Dancelab_setBackground:
         text: set background color {COLOR}
       Dancelab_setBackgroundEffect:
@@ -1413,9 +1413,9 @@ fil:
       gamelab_printText:
         text: print {TEXT}
       gamelab_randColor:
-        text: iba-ibang kulay
+        text: kahit anong kulay
       gamelab_randomColor:
-        text: iba-ibang kulay
+        text: kahit anong kulay
       gamelab_randomLocation:
         text: random na lokasyon
       gamelab_removeAllBehaviors:
@@ -1892,7 +1892,7 @@ fil:
       Mikelab_location_picker:
         text: "{LOCATION}"
       Mikelab_randomColor:
-        text: iba-ibang kulay
+        text: kahit anong kulay
       Mikelab_removeBehaviorSimple:
         text: sprite {SPRITE} tumitigil {BEHAVIOR}
       Mikelab_repeatUntilComplete:

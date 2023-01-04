@@ -1,0 +1,5 @@
+@import "../mixins.scss";
+
+.collapserIcon {
+  @include remove-button-styles(inherit);
+}
