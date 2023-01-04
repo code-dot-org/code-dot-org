@@ -17,7 +17,7 @@ const createdPartitions = {};
 
 exports.handler = (event, context, callback) => {
   console.log("Request received:\n", JSON.stringify(event));
-  process.on('uncaughtException', e => callback(e));
+  process.on('uncaughtException', e => callback(e)); // eslint-disable-line no-undef
   function result(e) {
     if (event.Records) {return null;}
     return {
@@ -63,14 +63,14 @@ exports.handler = (event, context, callback) => {
     .then((_)=> {
       if (event.tasks || createdPartitions[date.join()]) {return;}
       return glue.getPartition({
-        DatabaseName: process.env.ATHENA_DB,
-        TableName: process.env.ATHENA_TABLE,
+        DatabaseName: process.env.ATHENA_DB, // eslint-disable-line no-undef
+        TableName: process.env.ATHENA_TABLE, // eslint-disable-line no-undef
         PartitionValues: date
       }).promise().catch((e)=>{
         if (e.code === 'EntityNotFoundException') {
           return glue.createPartition({
-            DatabaseName: process.env.ATHENA_DB,
-            TableName: process.env.ATHENA_TABLE,
+            DatabaseName: process.env.ATHENA_DB, // eslint-disable-line no-undef
+            TableName: process.env.ATHENA_TABLE, // eslint-disable-line no-undef
             PartitionInput: {
               Values: date,
               StorageDescriptor: {

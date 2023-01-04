@@ -17,6 +17,7 @@ exports.handler = function (event, context) {
   var instanceId = event.ResourceProperties.InstanceId;
 
   // Optional resource property, default to true.
+  /* eslint-disable no-prototype-builtins*/
   var waitImageAvailable = event.ResourceProperties.hasOwnProperty('WaitImageAvailable') ?
     event.ResourceProperties.WaitImageAvailable : true;
 
