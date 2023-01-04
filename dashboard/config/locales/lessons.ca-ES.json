@@ -3,35 +3,70 @@
     "data": {
       "lessons": {
         "dance-extras/Dance Party - Go Further": {
-          "purpose": "Aquesta lliçó introdueix els conceptes bàsics de la informàtica quant a codificació i programació d'esdeveniments (amb blocs)."
+          "overview": "En aquesta lliçó, els alumnes de totes les edats s’iniciaran en la programació i la informàtica en un ambient segur i de suport. Aquesta lliçó s’ha dissenyat per alumnes de totes les edats, però per fer-la cal llegir. Per fer aquesta activitat, fa falta so, ja que l’eina está dissenyada per reaccionar a la música.",
+          "purpose": "Aquesta lliçó introdueix els conceptes bàsics de la informàtica quant a codificació i programació d'esdeveniments (amb blocs).",
+          "student_overview": "En aquesta lliçó, els alumnes de totes les edats s’iniciaran en la programació i la informàtica en un ambient segur i de suport. Aquesta lliçó s’ha dissenyat per alumnes de totes les edats, però per fer-la cal llegir. Per fer aquesta activitat, fa falta so, ja que l’eina está dissenyada per reaccionar a la música."
+        },
+        "minecraft/Minecraft Hour of Code Designer": {
+          "overview": "En aquesta lliçó, els alumnes de totes les edats s’iniciaran en la programació i la informàtica en un ambient segur i de suport. Aquesta lliçó funciona molt bé amb alumnes d’edat suficient per saber llegir (a partir de 6 anys). Els més petits probablement no acabaran el tutorial, però s’ho passaran d’allò més bé fent els trencaclosques durant una hora. La majoria dels alumnes de secundària acabaran el tutorial i tindran temps de jugar amb el nivell de joc lliure al final.",
+          "preparation": "### Una setmana abans de l’Hora del Codi\n\n-   Reviseu la [Guia del professor de l’Hora del Codi](http://hourofcode.com/resources/how-to/) i les [Millors pràctiques de professors efectius](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) per començar a planificar l’esdeveniment de l’Hora del Codi.\n-   [Registreu l’esdeveniment de l’Hora del Codi](http://hourofcode.com) si voleu rebre obsequis o suport per la classe.\n-   Reviseu i completeu el tutorial en línia: [Minecraft: Dissenyador](https://studio.code.org/s/minecraft/lessons/1/levels/1) \n-   Assegureu-vos de provar-lo abans de demanar als alumnes que el facin. Comproveu els vostres equips i decidiu si us cal resoldre alguna incidència abans de fer l’Hora del Codi.\n\n### Un dia abans de l’Hora del Codi\n\n-   Imprimiu un o més [Exemples de tiquets de sortida](https://docs.google.com/a/code.org/document/d/1ylIlO7Pppk6W3Jt58VHS5mjvnshg9URvj3iCU0Ok6qY/edit?usp=sharing) al final d’aquesta planificació, o dissenyeu-los vosaltres mateixos.\n-   Cada alumne que acabi l’activitat rebrà un certificat. [Imprimiu-ne un](https://studio.code.org/certificates/batch?course=bWM=) per tots perquè us sigui més fàcil repartir-los al final de l’Hora del Codi.",
+          "purpose": "Aquesta lliçó introdueix els conceptes informàtics principals de la programació i la codificació (amb blocs), així com tècniques senzilles de depuració.",
+          "student_overview": "En aquesta lliçó, els alumnes de totes les edats s’iniciaran en la programació i la informàtica en un ambient segur i de suport. Aquesta lliçó funciona molt bé amb alumnes d’edat suficient per saber llegir (a partir de 6 anys). Els més petits probablement no acabaran el tutorial, però s’ho passaran d’allò més bé fent els trencaclosques durant una hora. La majoria dels alumnes de secundària acabaran el tutorial i tindran temps de jugar amb el nivell de joc lliure al final."
+        },
+        "hero/Minecraft Hour of Code": {
+          "name": "Minecraft: El viatge de l'heroi",
+          "overview": "En aquesta lliçó, els alumnes de totes les edats s’iniciaran en la programació i la informàtica en un ambient segur i de suport. Aquesta lliçó funciona molt bé amb alumnes d’edat suficient per saber llegir (a partir de 6 anys). Els més petits probablement no acabaran el tutorial, però s’ho passaran d’allò més bé fent els trencaclosques durant una hora. La majoria dels alumnes de secundària acabaran el tutorial i tindran temps de jugar amb el nivell de joc lliure al final.",
+          "preparation": "### Una setmana abans de l’Hora del Codi\n\n-   Reviseu la [Guia del professor de l’Hora del Codi](http://hourofcode.com/resources/how-to/) i les [Millors pràctiques de professors efectius](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) per començar a planificar l’esdeveniment de l’Hora del Codi.\n-   [Registreu l’esdeveniment de l’Hora del Codi](http://hourofcode.com) si voleu rebre obsequis o suport per la classe.\n-   Reviseu i completeu el tutorial en línia: [Minecraft: El viatge de l'heroi](studio.code.org/s/hero/lessons/1/levels/1) \n-   Assegureu-vos de provar-lo abans de demanar als alumnes que el facin. Comproveu els vostres equips i decidiu si us cal resoldre alguna incidència abans de fer l’Hora del Codi.\n\n### Un dia abans de l’Hora del Codi\n\n-   Imprimiu un o més [Exemples de tiquets de sortida](https://docs.google.com/a/code.org/document/d/1ylIlO7Pppk6W3Jt58VHS5mjvnshg9URvj3iCU0Ok6qY/edit?usp=sharing) al final d’aquesta planificació, o dissenyeu-los vosaltres mateixos.\n-   Cada alumne que acabi l’activitat rebrà [un certificat](https://studio.code.org/certificates/batch?course=bWM=). Imprimiu-ne un per tots perquè us sigui més fàcil repartir-los al final de l’Hora del Codi.",
+          "purpose": "Aquesta lliçó introdueix els conceptes informàtics principals de la programació i la codificació (amb blocs), ensenya tècniques senzilles de depuració, i demostra com d’útils poden ser les funcions.",
+          "student_overview": "En aquesta lliçó, s'introdueix als alumnes de totes les edats a la programació i la informàtica en un entorn segur i de suport. "
         },
         "flappy/Flappy Code": {
-          "name": "Codi Flappy"
+          "name": "Codi Flappy",
+          "purpose": "Aquesta lliçó introdueix els conceptes informàtics principals de la programació i la codificació (amb blocs), així com tècniques senzilles de depuració."
         },
         "hourofcode/Maze": {
-          "name": "Laberint"
+          "name": "Laberint",
+          "purpose": "Aquesta lliçó introdueix els conceptes informàtics principals de la programació i la codificació (amb blocs), així com tècniques senzilles de depuració."
         },
         "frozen/Artist": {
-          "name": "Codi amb Anna i Elsa"
+          "name": "Codi amb Anna i Elsa",
+          "purpose": "Aquesta lliçó introdueix els conceptes informàtics principals de la programació i la codificació (amb blocs), així com tècniques senzilles de depuració."
+        },
+        "iceage/Ice Age Play Lab": {
+          "purpose": "Aquesta lliçó introdueix els conceptes informàtics principals de la programació i la codificació (amb blocs), així com tècniques senzilles de depuració."
         },
         "artist/Artist": {
           "name": "Artista",
           "student_overview": "Progamar l'Artista per crear unes imatges precioses."
         },
+        "gumball/Gumball Play Lab": {
+          "purpose": "Aquesta lliçó introdueix els conceptes informàtics principals de la programació i la codificació (amb blocs), així com tècniques senzilles de depuració."
+        },
         "dance/Dance Party": {
-          "purpose": "Aquesta lliçó introdueix els conceptes bàsics de la informàtica quant a codificació i programació d'esdeveniments (amb blocs)."
+          "overview": "En aquesta lliçó, els alumnes de totes les edats s’iniciaran en la programació i la informàtica en un ambient segur i de suport. Aquesta lliçó s’ha dissenyat per alumnes de totes les edats, però per fer-la cal llegir. Per fer aquesta activitat, fa falta so, ja que l’eina está dissenyada per reaccionar a la música.",
+          "purpose": "Aquesta lliçó introdueix els conceptes bàsics de la informàtica quant a codificació i programació d'esdeveniments (amb blocs).",
+          "student_overview": "En aquesta lliçó, els alumnes de totes les edats s’iniciaran en la programació i la informàtica en un ambient segur i de suport. Aquesta lliçó s’ha dissenyat per alumnes de totes les edats, però per fer-la cal llegir. Per fer aquesta activitat, fa falta so, ja que l’eina está dissenyada per reaccionar a la música."
         },
         "aquatic/Aquatic": {
-          "name": "Minecraft: Viatge aquàtic"
+          "name": "Minecraft: Viatge aquàtic",
+          "overview": "En aquesta lliçó, els alumnes de totes les edats s’iniciaran en la programació i la informàtica en un ambient segur i de suport. Aquesta lliçó funciona molt bé amb alumnes d’edat suficient per saber llegir (a partir de 6 anys). Els més petits probablement no acabaran el tutorial, però s’ho passaran d’allò més bé fent els trencaclosques durant una hora. La majoria dels alumnes de secundària acabaran el tutorial i tindran temps de jugar amb el nivell de joc lliure al final.",
+          "preparation": "### Una setmana abans de l’Hora del Codi\n\n-   Reviseu la [Guia del professor de l’Hora del Codi](http://hourofcode.com/resources/how-to/) i les [Millors pràctiques de professors efectius](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) per començar a planificar l’esdeveniment de l’Hora del Codi.\n-   [Registreu l’esdeveniment de l’Hora del Codi](http://hourofcode.com) si voleu rebre obsequis o suport per la classe.\n-   Reviseu i completeu el tutorial en línia: [Minecraft: Viatge aquàtic](http://studio.code.org/s/aquatic/lessons/1/levels/1) \n-   Assegureu-vos de provar-lo abans de demanar als alumnes que el facin. Comproveu els vostres equips i decidiu si us cal resoldre alguna incidència abans de fer l’Hora del Codi.\n\n### Un dia abans de l’Hora del Codi\n\n-   Imprimiu un o més [Exemples de tiquets de sortida](https://docs.google.com/a/code.org/document/d/1ylIlO7Pppk6W3Jt58VHS5mjvnshg9URvj3iCU0Ok6qY/edit?usp=sharing) al final d’aquesta planificació, o dissenyeu-los vosaltres mateixos.\n-   Cada alumne que acabi l’activitat rebrà un certificat. [Imprimiu-ne un](https://studio.code.org/certificates/batch?course=bWM=) per tots perquè us sigui més fàcil repartir-los al final de l’Hora del Codi.",
+          "purpose": "Aquesta lliçó introdueix els conceptes informàtics principals de la programació i la codificació (amb blocs), així com tècniques senzilles de depuració i condicionals. Aquests trencaclosques ajudaran a consolidar i ampliar el coneixement sobre bucles i a introduir els condicionals. En combinar aquests dos conceptes, els alumnes exploraran el potencial de crear programes divertits i innovadors en un entorn nou i emocionant.",
+          "student_overview": "En aquesta lliçó, s'introdueix als alumnes de totes les edats a la programació i la informàtica en un entorn segur i de suport. "
         },
         "hello-world-space-2022/Hello World: Food": {
           "name": "Hola Món: Espai"
         },
         "mc/Hour of Code 2015": {
-          "name": "Hora del Codi de Minecraft"
+          "name": "Hora del Codi amb Minecraft",
+          "overview": "En aquesta lliçó, els alumnes de totes les edats s’iniciaran en la programació i la informàtica en un ambient segur i de suport. Aquesta lliçó funciona molt bé amb alumnes d’edat suficient per saber llegir (a partir de 6 anys). Els més petits probablement no acabaran el tutorial, però s’ho passaran d’allò més bé fent els trencaclosques durant una hora. La majoria dels alumnes de secundària acabaran el tutorial i tindran temps de jugar amb el nivell de joc lliure al final.",
+          "preparation": "### Una setmana abans de l’Hora del Codi\n\n-   Reviseu la [Guia del professor de l’Hora del Codi](http://hourofcode.com/resources/how-to/) i les [Millors pràctiques de professors efectius](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) per començar a planificar l’esdeveniment de l’Hora del Codi.\n-   [Registreu l’esdeveniment de l’Hora del Codi](http://hourofcode.com) si voleu rebre obsequis o suport per la classe.\n-   Reviseu i completeu el tutorial en línia: [Minecraft: L'aventurer](studio.code.org/s/mc/lessons/1/levels/1) \n-   Assegureu-vos de provar-lo abans de demanar als alumnes que el facin. Comproveu els vostres equips i decidiu si us cal resoldre alguna incidència abans de fer l’Hora del Codi.\n\n### Un dia abans de l’Hora del Codi\n\n-   Imprimiu un o més [Exemples de tiquets de sortida](https://docs.google.com/a/code.org/document/d/1ylIlO7Pppk6W3Jt58VHS5mjvnshg9URvj3iCU0Ok6qY/edit?usp=sharing) al final d’aquesta planificació, o dissenyeu-los vosaltres mateixos.\n-   Cada alumne que acabi l’activitat rebrà [un certificat](https://studio.code.org/certificates/batch?course=bWM=). Imprimiu-ne un per tots perquè us sigui més fàcil repartir-los al final de l’Hora del Codi.",
+          "purpose": "Aquesta lliçó introdueix els conceptes informàtics principals de la programació i la codificació (amb blocs), així com tècniques senzilles de depuració.",
+          "student_overview": "En aquesta lliçó, els alumnes de totes les edats s’iniciaran en la programació i la informàtica en un ambient segur i de suport. Aquesta lliçó funciona molt bé amb alumnes d’edat suficient per saber llegir (a partir de 6 anys). Els més petits probablement no acabaran el tutorial, però s’ho passaran d’allò més bé fent els trencaclosques durant una hora. La majoria dels alumnes de secundària acabaran el tutorial i tindran temps de jugar amb el nivell de joc lliure al final."
         },
         "playlab/Play Lab": {
-          "name": "Play Lab"
+          "name": "Play Lab",
+          "purpose": "Aquesta lliçó introdueix els conceptes informàtics principals de la programació i la codificació (amb blocs), així com tècniques senzilles de depuració."
         },
         "outbreak/Outbreak": {
           "overview": "",
@@ -40,17 +75,24 @@
           "student_overview": ""
         },
         "infinity/Infinity": {
-          "name": "Disney infinit Play Lab"
+          "name": "Disney infinit Play Lab",
+          "purpose": "Aquesta lliçó introdueix els conceptes informàtics principals de la programació i la codificació (amb blocs), així com tècniques senzilles de depuració."
         },
         "dance-extras-2019/Dance Party - Go Further": {
-          "purpose": "Aquesta lliçó introdueix els conceptes bàsics de la informàtica quant a codificació i programació d'esdeveniments (amb blocs)."
+          "overview": "En aquesta lliçó, els alumnes de totes les edats seguiran aprenent sobre programació i informàtica en un ambient segur i de suport. Aquesta lliçó s’ha dissenyat per alumnes de totes les edats, però per fer-la cal llegir. Per fer aquesta activitat, fa falta so, ja que l’eina está dissenyada per reaccionar a la música.",
+          "preparation": "### Una setmana abans de l’Hora del Codi\n\n-   Reviseu la [Guia del professor de l’Hora del Codi](https://hourofcode.com/us/how-to) i les [Millors pràctiques de professors efectius](https://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) per començar a planificar l’esdeveniment de l’Hora del Codi.\n\n-   [Registreu l’esdeveniment de l’Hora del Codi](https://hourofcode.com/us) si voleu rebre suport per la classe, pòsters amb descomptes o participar en el sorteig de robòtica (només als EUA).\n\n-   Reviseu i completeu el tutorial en línia: [Festa de ball](https://studio.code.org/s/dance-2019) \n\n-   Assegureu-vos de provar-lo abans de demanar als alumnes que el facin.\n\n-   Comproveu els vostres equips i decidiu si us cal resoldre alguna incidència abans de fer l’Hora del Codi.\n\n### Un dia abans de l’Hora del Codi\n\n-   Cada alumne que acabi l’activitat rebrà un [certificat](https://studio.code.org/certificates/batch). Imprimiu-ne un 4 per tots perquè us sigui més fàcil repartir-los al final de l’Hora del Codi.\n\n-   (Opcional) Animeu els alumnes a portar auriculars per fer-los servir durant l’activitat.",
+          "purpose": "Aquesta lliçó introdueix els conceptes bàsics de la informàtica quant a codificació i programació d'esdeveniments (amb blocs).",
+          "student_overview": "Els alumnes de totes les edats segueixen aprenent sobre programació i informàtica en un entorn segur i de suport. "
         },
         "Hour of Code/Hour of Code 2013": {
           "name": "Hora de codi 2013"
         },
         "dance-2019/Dance Party": {
           "name": "Festa de ball",
-          "purpose": "Aquesta lliçó introdueix els conceptes bàsics de la informàtica quant a codificació i programació d'esdeveniments (amb blocs)."
+          "overview": "En aquesta lliçó, els alumnes de totes les edats s’iniciaran en la programació i la informàtica en un ambient segur i de suport. Aquesta lliçó s’ha dissenyat per alumnes de totes les edats, però per fer-la cal llegir. Per fer aquesta activitat, fa falta so, ja que l’eina está dissenyada per reaccionar a la música.",
+          "preparation": "### Una setmana abans de l’Hora del Codi\n\n-   Reviseu la [Guia del professor de l’Hora del Codi](http://hourofcode.com/resources/how-to/) i les [Millors pràctiques de professors efectius](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) per començar a planificar l’esdeveniment de l’Hora del Codi.\n-   [Registreu l’esdeveniment de l’Hora del Codi](http://hourofcode.com) si voleu rebre suport per la classe, pòsters amb descomptes o participar en el sorteig de robòtica (només als EUA).\n-   Reviseu i completeu el tutorial en línia: [Festa de ball](https://studio.code.org/s/dance-2019) \n-   Reviseu la planificació de lliçó complementària, [“Festa de ball: sense connexió”](https://studio.code.org/s/dance-unplugged/lessons/1) per decidir si voleu fer-la abans de l’Hora del Codi.\n\n### Un dia abans de l’Hora del Codi\n\n-   Cada alumne que acabi l’activitat rebrà un certificat. [Imprimiu-ne un](http://code.org/certificates) per tots perquè us sigui més fàcil repartir-los al final de l’Hora del Codi.\n-   (Opcional) Animeu els alumnes a portar auriculars per fer-los servir durant l’activitat.",
+          "purpose": "Aquesta lliçó introdueix els conceptes bàsics de la informàtica quant a codificació i programació d'esdeveniments (amb blocs).",
+          "student_overview": "En aquesta lliçó, els alumnes de totes les edats s’iniciaran en la programació i la informàtica en un ambient segur i de suport. Aquesta lliçó s’ha dissenyat per alumnes de totes les edats, però per fer-la cal llegir. Per fer aquesta activitat, fa falta so, ja que l’eina está dissenyada per reaccionar a la música."
         },
         "k5-onlinepd-2019/Sequencing": {
           "name": "Seqüenciació"
@@ -71,16 +113,31 @@
           "name": "Variables"
         },
         "k5-onlinepd-2019/For Loops": {
-          "name": "Per bucles"
+          "name": "Bucles \"for\""
         },
         "k5-onlinepd-2019/Sprite Lab": {
           "name": "Laboratori de personatges"
         },
+        "K5-OnlinePD/Getting Started": {
+          "name": "Primers passos"
+        },
         "K5-OnlinePD/Computer Science Fundamentals": {
           "name": "Fonaments de la informàtica"
         },
+        "K5-OnlinePD/Next Steps": {
+          "name": "Propers passos"
+        },
+        "kodea-pd-2021/Getting Started": {
+          "name": "Primers passos"
+        },
         "kodea-pd-2021/Computer Science Fundamentals": {
           "name": "Fonaments de la informàtica"
+        },
+        "kodea-pd-2021/Next Steps": {
+          "name": "Propers passos"
+        },
+        "coursed-2022/Password Power-Up": {
+          "purpose": "El pla d'estudis de Ciutadania Digital de Common Sense toca sis temes centrals fonamentats en els estudis més recents sobre infants, mitjans i teconogia. Aquesta lliçó se centra en la privacitat i la seguretat. Els alumnes aprendran a protegir la seva informació personal i aprofundiran en els drets de privacitat que protegeixen les seves dades per poder defensar-se a si mateixos i als altres."
         },
         "coursed-2022/Graph Paper Programming": {
           "name": "Programació de paper quadriculat"
@@ -95,13 +152,32 @@
           "student_overview": "Estem de celebració! En aquesta lliçó, programaràs la teva pròpia festa de ball interactiva."
         },
         "coursed-2022/Loops in Ice Age": {
-          "name": "Bucles a l'Edat de Gel"
+          "name": "Bucles a l'Edat de Gel",
+          "purpose": "En aquesta lliçó, els alumnes aprofundiran en els bucles i aprendran a implementar-los en el codi de Blockly. En programació, és important fer saber fer servir els bucles, ja que repetir manualment les ordres és feixuc i poc eficient. Amb aquests trencaclosques de Code.org, els alumnes aprendran a afegir instruccions a bucles existents, a agrupar codis repetits en bucles, i a reconèixer patrons que cal repetir."
+        },
+        "coursed-2022/Nested Loops in Maze": {
+          "name": "Bucles imbricats al laberint"
         },
         "coursed-2022/Conditionals with Cards": {
           "name": "Condicionals amb targetes"
         },
+        "coursed-2022/Looking Ahead with Minecraft": {
+          "name": "Mirem endavant amb Minecraft"
+        },
+        "coursed-2022/If/Else with Bee": {
+          "name": "If/else amb l'abella"
+        },
+        "coursed-2022/While Loops in Farmer": {
+          "name": "Bucles \"while\" amb la pagesa"
+        },
+        "coursed-2022/Until Loops in Maze": {
+          "name": "Bucles \"until\" al laberint"
+        },
+        "coursed-2022/End of Course Project": {
+          "name": "Projecte de final de curs"
+        },
         "coursef-2022/Making Sprites": {
-          "name": "Fem sprites",
+          "name": "Creació d'sprites",
           "overview": "En aquesta lliçó de **desenvolupament d'habilitats**, els alumnes completaran una sèrie de nivells de programació a l'ordinador i acabaran amb una tasca de joc lliure en què podran construir el que vulguin. Escriuran programes i aprendran sobre els dos conceptes prinicpals del Laboratori d'Sprites: els sprites i els comportaments.",
           "preparation": "Repasseu els nivells i les **\\*diapositives de la lliçó**.",
           "purpose": "Aquesta lliçó està dissenyada per introduir els alumnes a la programació al Laboratori d'Sprites. Començaran a entendre el model de programació d'aquesta eina i exploraran com la poden fer servir per expressar-se.",
@@ -119,10 +195,18 @@
           "student_overview": "Crea una mascota virtual interactiva que tingui l'aspecte i el comportament que vulguis! Dona vida pròpia a la teva mascota!"
         },
         "coursef-2022/Text and Prompts": {
+          "name": "Text i preguntes",
           "preparation": "Repasseu els nivells i les diapositives de la lliçó."
         },
         "coursef-2022/The Internet": {
           "name": "Internet"
+        },
+        "coursef-2022/End of Course Project": {
+          "name": "Projecte de final de curs"
+        },
+        "coursee-2022/Private and Personal Information": {
+          "preparation": "-   Reviseu els materials didàctics.\n-   Imprimiu fitxes per cada alumne.",
+          "purpose": "El pla d'estudis de Ciutadania Digital de Common Sense toca sis temes centrals fonamentats en els estudis més recents sobre infants, mitjans i teconogia. Aquesta lliçó se centra en la privacitat i la seguretat. Els alumnes aprendran a protegir la seva informació personal i aprofundiran en els drets de privacitat que protegeixen les seves dades per poder defensar-se a si mateixos i als altres."
         },
         "coursee-2022/Swimming Fish with Sprite Lab": {
           "name": "Peixos, a nedar! al Laboratori d'Sprites",
@@ -131,7 +215,7 @@
         },
         "coursee-2022/Mini-Project: Design a Snowflake": {
           "overview": "En aquesta lliçó de **miniprojecte**, els alumnes faran una sèrie d'exercicis per crear imatges de flocs de neu amb els personatges de les pel·lícules de _Frozen_.",
-          "student_overview": "L'_Anna_ i l'_Elsa_ són unes patinadores sobre gel fantàstiques, però necessiten que les ajudis a crear patrons al gel. Fes servir bucles aniuats per crear unes formes súper guapes!"
+          "student_overview": "L'_Anna_ i l'_Elsa_ són unes patinadores sobre gel fantàstiques, però necessiten que les ajudis a crear patrons al gel. Fes servir bucles imbricats per crear unes formes súper guapes!"
         },
         "coursee-2022/Songwriting": {
           "name": "Composició de cançons"
@@ -143,7 +227,7 @@
           "student_overview": "Sabeu com fer servir funcions per fer el codi més eficient?"
         },
         "coursee-2022/Functions with Artist": {
-          "name": "Funcions amb l'Artista",
+          "name": "Funcions amb l'artista",
           "overview": "En aquesta lliçó de **desenvolupament d'habilitats**, els alumnes faran servir funcions amb l'Artista.",
           "purpose": "Un dels objectius més importants d'aquesta lliçó és que els alumnes tinguin un espai per crear alguna cosa de què se sentin orgullosos. Aquests trencaclosques avancen de manera que les imatges són cada vegada més complexes, però cada trencaclosques nou es basa en l'anterior. Al final de la lliçó, els alumnes se sentiran segurs i orgullosos del seu esforç.",
           "student_overview": "Fes servir funcions per fer dibuixos complicats més fàcilment!"
@@ -152,41 +236,99 @@
           "name": "El condicionals a Minecraft: Viatge aquàtic"
         },
         "coursee-2022/Functions with Harvester": {
-          "name": "Funcions amb La segadora",
-          "student_overview": "Les funcions t'estalviaran molta feina mentre ajudes la grangera amb la seva collita!"
+          "name": "Funcions amb l'agricultora",
+          "student_overview": "Les funcions t'estalviaran molta feina mentre ajudes la pagesa amb la seva collita!"
+        },
+        "coursee-2022/End of Course Project": {
+          "name": "Projecte de final de curs"
+        },
+        "courseb-2022/Digital Trails": {
+          "overview": "[![Common sense education](https://curriculum.code.org/static/img/common_sense_education.png)](https://www.commonsense.org)\n\nAquesta lliçó ha estat desenvolupada originalment per Common Sense Education. [Més informació].[2]\n\nEl que fas a internet sempre es queda a internet? Els alumnes aprendran que la informació que comparteixen a internet deixa una petjada digital o “rastre”. Segons com el gestionin, aquest rastre podrà ser gran o petit, útil o perjudicial. Els alumnes compraran diversos rastres i aplicaran el pensament crític per reflexionar sobre quins tipus d’informació volen deixar pel camí.",
+          "preparation": "-   Reviseu els materials didàctics.\n-   Imprimiu fitxes per cada alumne.",
+          "purpose": "El pla d'estudis de Ciutadania Digital de Common Sense toca sis temes centrals fonamentats en els estudis més recents sobre infants, mitjans i teconogia. Aquesta lliçó se centra en la petjada digital i la identitat. Els alumnes reflexionaran sobre els beneficis i els riscos de compartir informació per internet i veuran com el perfil digital pot afectar el concepte de la identitat, la reputació i les relacions de les persones.",
+          "student_overview": "Descobreix la teva petjada digital i com visitar pàgines web de manera segura. "
         },
         "courseb-2022/Move It, Move It": {
-          "name": "Mou-lo, Mou-lo"
+          "name": "Mou-lo, Mou-lo",
+          "overview": "En aquesta lliçó de **definició de context**, els alumnes programaran els seus companys perquè avancin amb cura per una gran quadrícula feta a terra.",
+          "preparation": "-   Mireu el **\\*Vídeo del professor**\n-   Imprimiu (o prepareu-vos per mostrar) una **\\*Fitxa de treball amb respostes**\n-   Imprimiu una **\\*Activitat amb mapa**i una **\\*Fitxa de treball** per cada grup de 2-3 alumnes\n-   Prepareu papers en blanc per completar la resta de la quadrícula a terra (en necessitareu entre 4 i 7 per grup)",
+          "purpose": "Els alumnes faran servir el moviment físic per programar els seus companys de classe, i en fer-ho es trobaran amb problemes i emocions semblants als que sentiran quan comencin a programar a l’ordinador. Trobar-se amb aquestes pressions en un entorn divertit i obert ajudarà a rebaixar-ne la intensitat i els permetrà posar en pràctica les habilitats necessàries abans de trobar-se amb problemes tot sols.",
+          "student_overview": "Programa els teus companys perquè avancin d'un lloc a un altre."
         },
         "courseb-2022/Sequencing with Angry Birds": {
-          "purpose": "En aquesta lliçó, els estudiants desenvoluparan les seves habilitats de programació i depuració en una plataforma informàtica. El format en blocs d'aquests trencaclosques els ajudaran a aprendre sobre seqüències i conceptes sense haver de preocupar-se per perfeccionar la sintaxi."
+          "name": "Seqüenciació amb Angry Birds",
+          "overview": "En aquesta lliçó de **desenvolupament d'habilitats**, els estudiants crearan algorismes de seqüenciació per moure un ocell des d'un cantó d'un laberint fins al porquet que hi ha a l'altra banda. Per fer-ho, apilaran blocs de codi en una seqüència lineal.",
+          "preparation": "-   Si els vostres alumnes encara no saben arrossegar i deixar anar, potser us anirà bé que facin un exercici de **\\*Pràctica d’arrossegar i deixar anar** abans de començar aquesta lliçó.\n-   Mireu el vídeo del professor **\\*Com fer un apartat de classe a Code.org**. Crea el teu apartat de classe a Code.org i assegureu-vos que cada alumne tingui una targeta amb el codi d’accés.\n-   Demaneu a l’informàtic de l’escola que afegeixi un accés directe a la secció de classe a l’escriptori de l’ordinador.\n-   Assegureu-vos que els alumnes tinguin les seves llibretes.",
+          "purpose": "En aquesta lliçó, els estudiants desenvoluparan les seves habilitats de programació i depuració en una plataforma informàtica. El format en blocs d'aquests trencaclosques els ajudaran a aprendre sobre seqüències i conceptes sense haver de preocupar-se per perfeccionar la sintaxi.",
+          "student_overview": "Ajuda l'Angry Bird vermell a seguir el camí fins al porquet dolentot."
         },
         "courseb-2022/Programming with Angry Birds": {
           "name": "Programació amb Angry Birds",
           "overview": "En aquesta lliçó de **desenvolupament d'habilitats**, els estudiants seguirant desenvolupant algorismes seqüencials.",
-          "purpose": "En aquesta lliçó, els estudiants desenvoluparan les seves habilitats de programació en una plataforma informàtica. El format en blocs d'aquests trencaclosques els ajudarà a aprendre sobre seqüències i conceptes sense haver de preocupar-se per perfeccionar la sintaxi."
+          "preparation": "-   Feu els trencaclosques per trobar qualsevol punt que pugui presentar problemes a la classe.\n-   Traieu o torneu a imprimir els materials dels **\\*Mapes feliços**.\n-   Assegureu-vos que cada alumne tingui el seu Diari de Reflexió.\n-   Retalleu suficients materials **\\*Manipulatius** de cada direcció (N, S, E, O) per donar-ne dos a cada parella d’alumnes (si escolliu l’opció pont 1).",
+          "purpose": "En aquesta lliçó, els estudiants desenvoluparan les seves habilitats de programació en una plataforma informàtica. El format en blocs d'aquests trencaclosques els ajudarà a aprendre sobre seqüències i conceptes sense haver de preocupar-se per perfeccionar la sintaxi.",
+          "student_overview": "Crea programes per ajudar _l'Angry Bird_ a moure's pel laberint."
         },
         "courseb-2022/Programming with Harvester": {
-          "name": "Programació amb la segadora",
+          "name": "Programació amb l'Agricultora",
+          "overview": "En aquesta lliçó de **desenvolupament d'habilitats**, els alumnes aplicaran els conceptes de programació que han après a l'entorn de l'Agricultora. Seguiran desenvolupant el seu coneixement sobre algorismes seqüencials i començaran a fer servir el procés de depuració.",
+          "preparation": "-   Repasseu els trencaclosques per trobar qualsevol punt que pugui presentar problemes a la classe.\n-   Assegureu-vos que cada alumne tingui el seu diari de reflexió.",
           "purpose": "En aquesta lliçó, els alumnes desenvoluparan habilitats de depuració i continuaran desenvolupant les seves habilitats de programació.",
-          "student_overview": "Ajuda la Segadora a collir verdures pel camí."
+          "student_overview": "Ajuda l'Agricultura a collir verdures pel camí."
         },
         "courseb-2022/Getting Loopy": {
-          "name": "Fent bucles"
+          "name": "Fent bucles",
+          "overview": "En aquesta lliçó de **definició de context**, els alumnes aprendran a utilitzar bucles per comunicar més fàcilment instruccions mirant els patrons repetits d'un ball.",
+          "preparation": "-   Prepareu-vos per ensenyar la **\\*fitxa de treball** als alumbes.\n-   Imprimiu una **\\*Avaluació** per alumne.\n-   Assegureu-vos que cada alumne tingui un diari de reflexió.",
+          "purpose": "A aquestes alçades del curs, els alumnes haurien de sentir-se còmodes programant una sèrie d’instruccions lineals. Sovint, els conjunts d’instruccions lineals inclouen patrons que es repeteixen diverses vegades, i a mesura que els alumnes comencin a escriure programes més complexos i interessants, duplicar el codi de manera manual es farà feixuc i ineficient. Per ajudar els alumnes a escriure programes més potents, haurem de fer servir estructures que se surtin d’aquesta llista lineal única. Els bucles permeten estructurar el codi de manera que es repeteixi. En aquesta lliçó, ens centrarem en identificar patrons en moviments físics abans de passar a l’ordinador per buscar patrons al codi.",
+          "student_overview": "En aquesta lliçó, farem una festa de ball utilitzant bucles de repetició!"
+        },
+        "courseb-2022/Loops with Harvester": {
+          "name": "Bucles amb l'Agricultora",
+          "overview": "En aquesta lliçó de**desenvolupament d'habilitats**, els alumnes ajudaran l'agricultora a collir els cultius fent servir bucles.",
+          "preparation": "-   Feu els trencaclosques per trobar qualsevol punt que pugui presentar problemes a la classe.\n-   Repasseu les **\\*Recomanacions de la lliçó – Consells per l’activitat principal de Fonaments de la Informàtica**.\n-   Assegureu-vos que els alumnes tinguin el seu diari de reflexió.\n-   (Opcional) Trieu un parell de trencaclosques per fer tota la classe junts.\n-   (Opcional) Si encara no ho heu fet, imprimiu i retalleu els blocs dels materials **\\*Manipulatius** per preparar una de les activitats de pont d’aquesta lliçó.",
+          "purpose": "En aquesta lliçó, els alumnes aprofundiran en els bucles i aprendran a implementar-los en el codi de Blockly. En programació, és important fer saber fer servir els bucles, ja que repetir manualment les ordres és feixuc i poc eficient. Amb els trencaclosques de Code.org, els alumnes aprendran a afegir instruccions a bucles existents, a agrupar codis repetits en bucles, i a reconèixer patrons que cal repetir en bucles.",
+          "student_overview": "Ajuda l'Agricultora a collir-ne encara més fent servir bucles!"
         },
         "courseb-2022/Loops with Laurel": {
           "name": "Bucles amb la Laurel",
-          "purpose": "Aquesta lliçó permet als alumnes practicar una mica més amb els bucles, i els anima a posar diversos blocs dins d'una \"repetició\" mentre intenten agafar tants tresors com puguin."
+          "overview": "En aquesta lliçó de **desenvolupament d'habilitats**, els alumnes seguiran aprenent sobre el concepte dels bucles. Aquí, la Laurel l'aventurera fa servir bucles per agafar tresors en espais oberts on hi ha coves. ",
+          "preparation": "-   Repasseu els trencaclosques per trobar qualsevol punt que pugui presentar problemes a la classe.\n-   (Opcional) Esculliu un parell de trencaclosques per fer en grup amb tota la classe.\n-   Repasseu les **\\*Recomanacions de la lliçó – Consells per l’activitat principal de Fonaments de la Informàtica**\n-   Assegureu-vos que cada alumne tingui el seu diari de reflexió.",
+          "purpose": "Aquesta lliçó permet als alumnes practicar una mica més amb els bucles, i els anima a posar diversos blocs dins d'una \"repetició\" mentre intenten agafar tants tresors com puguin.",
+          "student_overview": "Programa la Laurel l'aventurera per recollir tresors en una cova oberta."
         },
         "courseb-2022/Drawing Gardens with Loops": {
           "name": "Dibuixar jardins amb bucles",
+          "overview": "En aquesta lliçó de **desenvolupament d'habilitats**, els alumnes aprenen a dibuixar imatges fent bucles amb seqüències senzilles d'instruccions. Aquí, els alumnes fan servir els bucles per crear patrons. ",
+          "preparation": "-   Repasseu els trencaclosques abans de la lliçó per trobar qualsevol punt que pugui presentar problemes a la classe.\n-   Repasseu les **\\*Consells per a l'activitat principal d'informàtica - Recomanacions per les lliçons**.\n-   Assegureu-vos que cada alumne tingui el seu diari de reflexió.",
           "purpose": "Aquesta lliçó proporciona una perspectiva diferent de com, en programació, els bucles poden crear coses. Els alumnes posaran a prova el seu pensament crític avaluant els codis que se'ls doni i decidint què cal afegir-hi per resoldre el trencaclosques. També podran reflexionar sobre la ineficiència de programar sense bucles, ja que, si no fos pels bucles de \"repetició\", faria falta afegir molts blocs al programa.",
           "student_overview": "Fes servir patrons i bucles per acabar les imatges."
         },
+        "courseb-2022/The Right App": {
+          "overview": "En aquesta lliçó **d'exploració**, els alumnes empatitzen amb diversos usuaris de telèfons intel·ligents ficticis per ajudar-los a trobar \"l'aplicació adequada\" per allò que necessiten.",
+          "preparation": "-   Llegiu les notes del ponent al **\\*mòdul de diapositives**.\n-   Prepareu materials de dibuix suficients per tots els alumnes.\n-   Assegureu-vos que cada alumne tingui el seu diari de reflexió.",
+          "purpose": "Avui, la informàtica és més accessible que mai. Tot tipus de persones fan servir programes en molts dispositius diferents, especialment telèfons intel·ligents, per trobar informació, comunicar-se i divertir-se. Les experiències i les necessitats són tan diverses que és important que els joves programadors empatitzin amb les persones i identifiquin solucions tenint-los presents.",
+          "student_overview": "Dibuixa la teva pròpia aplicació pel mòbil."
+        },
+        "courseb-2022/The Big Event Jr": {
+          "overview": "En aquesta lliçó de **definició de context**, la classe experimentarà amb el concepte dels esdeveniments a través d'un joc en què es mouen o criden quan algú prem els botons d'un comandament enorme.",
+          "preparation": "-   Prepareu-vos per projectar la **\\*Imatge del comandament**.\n-   Imprimiu una **\\*Avaluació** per alumne.\n-   Assegureu-vos que cada alumne tingui un diari de reflexió.",
+          "purpose": "Avui, els alumnes aprendran a distingir els esdeveniments de les accions. Veuran com prémer un \"botó\" un comandament de paper interromp certes activitats. En veure aquest esdeveniment, la classe reaccionarà amb una acció única. Els esdeveniments s'utilitzen molt en programació, i al final d'aquesta lliçó, els alumnes haurien de saber reconèixer-los fàcilment.",
+          "student_overview": "Mou-te o crida quan el professor premi botons en un comandament gegant."
+        },
         "courseb-2022/Mini-Project: A Royal Battle with Events": {
+          "name": "Miniprojecte: Una batalla real amb esdeveniments",
           "overview": "En aquest **miniprojecte**, els alumnes aprendran a fer servir esdeveniments al Laboratori de Jocs i aplicaran les habilitats de programació que han adquirit fins ara per crear un joc animat.",
+          "preparation": "-   Repasseu els trencaclosques per trobar qualsevol punt que pugui presentar problemes a la classe.\n-   (Opcional) Esculliu un parell de trencaclosques per fer en grup amb tota la classe.\n-   Repasseu les **\\*Recomanacions de la lliçó – Consells per l’activitat principal de Fonaments de la Informàtica**\n-   Assegureu-vos que cada alumne tingui el seu diari de reflexió.",
           "purpose": "En aquesta activitat en línia, els alumnes aprendran a utilitzar esdeveniments al Laboratori de Jocs. Començaran configurant el cavaller perquè es mogui en prémer una tecla de fletxa, i després podran demostrar la resta d'habilitats que han adquirit al llarg d'aquest curs, com l'ús de seqüències i bucles, al trencaclosques de joc lliure que hi ha al final.",
           "student_overview": "Fes servir esdeveniments per crear una història o un joc interactiu."
+        },
+        "courseb-2022/End of Course Project": {
+          "name": "Projecte de final de curs",
+          "overview": "En aquesta lliçó de **projecte**, els alumnes apliquen el que han après sobre seqüenciació i esdeveniments en un projecte lliure al Laboratori de Jocs.",
+          "preparation": "-   Programeu els vostres propis projectes al Laboratori de Jocs amb antelació per inspirar els alumnes!",
+          "purpose": "Aquesta lliçó dona als alumnes una última oportunitat per utilitzar les seves habilitats informàtiques que han adquirit de manera creativa.",
+          "student_overview": "Crea la teva pròpia història o joc."
         },
         "express-2022/Programming with Angry Birds": {
           "name": "Programació amb Angry Birds",
@@ -215,14 +357,14 @@
           "student_overview": "Progamar l'Artista per crear unes imatges precioses."
         },
         "express-2022/Swimming Fish in Sprite Lab": {
-          "name": "Peixos, a nedar!, al el Laboratori d'Sprites",
+          "name": "Peixos, a nedar!, al Laboratori d'Sprites",
           "overview": "En aquesta lliçó de **desenvolupament d'habilitats**, els alumnes programaran una escena submarina animada senzilla.",
           "preparation": "-   Repasseu els trencaclosques per trobar qualsevol punt que pugui presentar problemes a la classe.\n-   Assegureu-vos que cada alumne tingui el seu diari de reflexió.",
           "purpose": "Aquesta lliçó està dissenyada per començar a aprendre el vocabulari bàsic del Laboratori d'Sprites i a aplicar els conceptes apresos en altres entorns a aquesta eina. Mitjançant la creació d'una peixera, els alumnes començaran a comprendre el model de programació d'aquesta eina, i descobriran maneres de fer-la servir per expressar-se.",
           "student_overview": "Aprèn a crear i editar sprites."
         },
         "express-2022/Making Sprites": {
-          "name": "Fem sprites",
+          "name": "Creació d'sprites",
           "overview": "En aquesta lliçó de **desenvolupament d'habilitats**, els alumnes completaran una sèrie de nivells de programació a l'ordinador i acabaran amb una tasca de joc lliure en què podran construir el que vulguin. Escriuran programes i aprendran sobre els dos conceptes prinicpals del Laboratori d'Sprites: els sprites i els comportaments.",
           "preparation": "Repasseu els nivells i les **\\*diapositives de la lliçó**.",
           "purpose": "Aquesta lliçó està dissenyada per introduir els alumnes a la programació al Laboratori d'Sprites. Començaran a entendre el model de programació d'aquesta eina i exploraran com la poden fer servir per expressar-se.",
@@ -257,50 +399,55 @@
           "student_overview": "Fer servir bucles per ajudar el _BB-8_ a travessar els laberints! "
         },
         "express-2022/Mini-Project: Sticker Art": {
-          "name": "Miniprojecte: Art amb enganxines",
+          "name": "Miniprojecte: Art amb adhesius",
           "overview": "Aquesta lliçó de **miniprojecte** aprofundeix en la comprensió dels bucles. Els alumnes crearan una obra d'art única amb l'Artista.",
           "preparation": "-   Practiqueu creant el vostre propi disseny. Preneu nota de les diferències entre aquests nivells i tots els anteriors.\n-   Assegureu-vos que els alumnes tinguin el seu diari de reflexió.",
           "purpose": "Aquesta sèrie destaca la utilitat dels bucles per fer dissenys creatius i personals.  \n\nEs planteja com una seqüència recolzada per projectes i permet als alumnes que avancin progressivament a partir de les tasques que van fent per crear uns artefactes increïbles."
         },
         "express-2022/Nested Loops in Maze": {
+          "name": "Bucles imbricats al laberint",
           "preparation": "-   Repasseu els trencaclosques per trobar qualsevol punt que pugui presentar problemes a la classe.\n-   Assegureu-vos que cada alumne tingui el seu diari de reflexió.",
-          "purpose": "En aquesta introducció als bucles aniuats, els alumnes hauran de sortir de la seva zona de confort per crear solucions més eficients per als trencaclosques.\n\nEn els trencaclosques anteriors, els bucles han fet que els alumnes detectessin les repeticions. Aquí, aprendran a reconèixer els patrons que hi ha _a dins_ dels patrons repetits per crear bucles aniuats. En aquesta etapa, comencem animant els alumnes a intentar resoldre un trencaclosques en què el codi és pesat i difícil d'escriure a la manera llarga. Després d'un vídeo d'introducció als bucles aniuats, se'ls ensenya un exemple i se'ls demana que prediguin què passa si fiquem un bucle dins d'un altre. Aquesta progressió fa que els alumnes puguin practicar per assimilar i aprofundir en els seus coneixements sobre bucles en programació.",
-          "student_overview": "Bucles dins de bucles que estan dins d'altres bucles. Què vol dir tot això? Amb aquest lliçó aprendreu què passa quan es crea un bucle aniuat."
+          "purpose": "En aquesta introducció als bucles imbricats, els alumnes hauran de sortir de la seva zona de confort per crear solucions més eficients per als trencaclosques.\n\nEn els trencaclosques anteriors, els bucles han fet que els alumnes detectessin les repeticions. Aquí, aprendran a reconèixer els patrons que hi ha _a dins_ dels patrons repetits per crear bucles imbricats. En aquesta etapa, comencem animant els alumnes a intentar resoldre un trencaclosques en què el codi és pesat i difícil d'escriure a la manera llarga. Després d'un vídeo d'introducció als bucles imbricats, se'ls ensenya un exemple i se'ls demana que prediguin què passa si fiquem un bucle dins d'un altre. Aquesta progressió fa que els alumnes puguin practicar per assimilar i aprofundir en els seus coneixements sobre bucles en programació.",
+          "student_overview": "Bucles dins de bucles que estan dins d'altres bucles. Què vol dir tot això? Amb aquest lliçó aprendràs què passa quan es crea un bucle imbricat."
         },
         "express-2022/Snowflakes with Anna and Elsa": {
           "name": "Flocs de neu amb l'Anna i l'Elsa",
           "overview": "En aquesta lliçó de **miniprojecte**, els alumnes faran una sèrie d'exercicis per crear imatges de flocs de neu amb els personatges de les pel·lícules de _Frozen_.",
           "preparation": "-   Repasseu la lliçó per trobar qualsevol punt que pugui presentar problemes a la classe.\n-   Assegureu-vos que cada alumne tingui el seu diari de reflexió.",
-          "student_overview": "L'_Anna_ i l'_Elsa_ són unes patinadores sobre gel fantàstiques, però necessiten que les ajudis a crear patrons al gel. Fes servir bucles aniuats per crear unes formes súper guapes!"
+          "student_overview": "L'_Anna_ i l'_Elsa_ són unes patinadores sobre gel fantàstiques, però necessiten que les ajudis a crear patrons al gel. Fes servir bucles imbricats per crear unes formes súper guapes!"
         },
         "express-2022/Looking Ahead with Minecraft": {
+          "name": "Mirem endavant amb Minecraft",
           "preparation": "-   Repasseu els trencaclosques relacionats amb aquesta lliçó per trobar qualsevol punt que pugui presentar problemes a la classe.\n-   Assegureu-vos que cada alumne tingui el seu diari de reflexió."
         },
         "express-2022/If/Else with Bee": {
+          "name": "If/else amb l'abella",
           "preparation": "-   Repasseu els trencaclosques per trobar qualsevol punt que pugui presentar problemes a la classe.\n-   Assegureu-vos que cada alumne tingui el seu diari de reflexió.",
           "purpose": "Els alumnes practicaran l'ús de condicionals en els seus programes. Els blocs si / si no els ajudaran a fer un programa més flexible. L'abella només recollirà nèctar _si_ (_if_) hi ha una flor, o només farà mel _si_ (_if_) hi ha un rusc."
         },
         "express-2022/While Loops in Farmer": {
+          "name": "Bucles \"while\" amb la pagesa",
           "preparation": "-   Repasseu els trencaclosques per trobar qualsevol punt que pugui presentar problemes a la classe.\n-   Assegureu-vos que cada alumne tingui el seu diari de reflexió."
         },
         "express-2022/Conditionals in Minecraft: Voyage Aquatic": {
           "name": "El condicionals a Minecraft: Viatge aquàtic",
-          "overview": "En aquesta lliçó de \\*\\*definició de context\", els alumnes podran practicar el contingut que han après fins ara, a més de començar a fer una ullada als condicionals.",
+          "overview": "En aquesta lliçó de **definició de context**, els alumnes podran practicar el contingut que han après fins ara, a més de començar a donar una ullada als condicionals.",
           "preparation": "-   Repasseu els trencaclosques relacionats amb aquesta lliçó per trobar qualsevol punt que pugui presentar problemes a la classe.\n-   Assegureu-vos que cada alumne tingui el seu diari de reflexió.",
           "purpose": "Aquest conjunt de trencaclosques servirà per consolidar i desenvolupar el coneixement sobre bucles i condicionals. En combinar aquests dos conceptes, els alumnes descobriran el potencial de crear programes divertits i innovadors en un entorn nou i emocionant.",
           "student_overview": "Aquí aprendrem a fer servir condicionals en el món de Minecraft."
         },
         "express-2022/Until Loops in Maze": {
+          "name": "Bucles \"until\" al laberint",
           "overview": "En aquesta lliçó de **desenvolupament d'habilitats**, els alumnes aprendran sobre els bucles until. Els alumnes crearan programes en què el personatge principal repeteix accions fins que arriben al punt d'aturada desitjat.",
           "preparation": "-   Repasseu els trencaclosques per trobar qualsevol punt que pugui presentar problemes a la classe.\n-   Assegureu-vos que cada alumne tingui el seu diari de reflexió.",
           "purpose": "Aquest conjunt de trencaclosques servirà per consolidar i desenvolupar el coneixement sobre bucles afegint-hi el condicional until. En combinar aquests conceptes, els alumnes descobriran el potencial de crear programes complexos i innovadors.",
           "student_overview": "Amb els bucles until podràs fer coses increïbles!"
         },
         "express-2022/Harvesting with Conditionals": {
-          "name": "Collir amb condicionals",
+          "name": "Fem la collita amb condicionals",
           "overview": "Els alumnes practicaran amb els bucles while, els bucles until i les declaracions if / else (si / si no). Tots aquests blocs fan servir condicionals. En practicar amb tots tres, aprendran a escriure un codi complex i flexible.",
           "preparation": "-   Repasseu la lliçó per trobar qualsevol punt que pugui presentar problemes a la classe.\n-   Assegureu-vos que cada alumne tingui un Diari de Reflexió.",
-          "purpose": "Practicar l'ús de condicionals en diferents escenaris ajuda l'alumne a entendre millor què poden fer els condicionals. A la lliçó anterior, només havien fet servir condicionals per moure's per un laberint. En aquesta lliçó, utilitzaran condicionals per ajudar la grangera a saber quan collir la collita. Sorgiran nous patrons, i hauran de posar en pràctica la creativitat i el pensament lògic per determinar les condicions en què s'ha d'executar i repetir el codi.",
+          "purpose": "Practicar l'ús de condicionals en diferents escenaris ajuda l'alumne a entendre millor què poden fer els condicionals. A la lliçó anterior, només havien fet servir condicionals per moure's per un laberint. En aquesta lliçó, utilitzaran condicionals per ajudar la pagesa a saber quan segar la collita. Sorgiran nous patrons, i hauran de posar en pràctica la creativitat i el pensament lògic per determinar les condicions en què s'ha d'executar i repetir el codi.",
           "student_overview": "No sempre està clar quan cal fer servir cada condicional. Amb aquesta lliçó agafaràs pràctica decidint què fer."
         },
         "express-2022/Functions in Minecraft": {
@@ -311,39 +458,44 @@
           "student_overview": "Sabeu com fer servir funcions per fer el codi més eficient?"
         },
         "express-2022/Functions with Harvester": {
-          "name": "Funcions amb La segadora",
-          "overview": "En aquesta lliçó de **desenvolupament d'habilitats**, els alumnes faran servir condicionals amb funcions per collir collites a La segadora.",
+          "name": "Funcions amb l'agricultora",
+          "overview": "En aquesta lliçó de **desenvolupament d'habilitats**, els alumnes faran servir condicionals amb funcions per collir collites a l'Agricultora.",
           "preparation": "-   Repasseu els trencaclosques per trobar qualsevol punt que pugui presentar problemes a la classe.\n-   Assegureu-vos que cada alumne tingui el seu diari de reflexió.",
           "purpose": "Aquesta lliçó està pensada per animar els alumnes a fer servir les funcions de maneres més creatives. Aprendran que hi ha moltes maneres d'abordar un problema, però que n'hi ha que són més eficients que d'altres. Aquests trencaclosques estan pensats per millorar les habilitats de resolució de problemes i de pensament crític.",
-          "student_overview": "Les funcions t'estalviaran molta feina mentre ajudes la grangera amb la seva collita!"
+          "student_overview": "Les funcions t'estalviaran molta feina mentre ajudes la pagesa amb la seva collita!"
         },
         "express-2022/Functions with Artist": {
-          "name": "Funcions amb l'Artista",
+          "name": "Funcions amb l'artista",
           "overview": "En aquesta lliçó de **desenvolupament d'habilitats**, els alumnes faran servir funcions amb l'Artista.",
           "preparation": "-   Repasseu els trencaclosques per trobar qualsevol punt que pugui presentar problemes a la classe.\n-   Assegureu-vos que cada alumne tingui el seu diari de reflexió.",
           "purpose": "Un dels objectius més importants d'aquesta lliçó és que els alumnes tinguin un espai per crear alguna cosa de què se sentin orgullosos. Aquests trencaclosques avancen de manera que les imatges són cada vegada més complexes, però cada trencaclosques nou es basa en l'anterior. Al final de la lliçó, els alumnes se sentiran segurs i orgullosos del seu esforç.",
           "student_overview": "Fes servir funcions per fer dibuixos complicats més fàcilment!"
         },
         "express-2022/Text and Prompts": {
+          "name": "Text i preguntes",
           "preparation": "Repasseu els nivells i les diapositives de la lliçó."
         },
         "express-2022/Using Variables with the Artist": {
-          "name": "Ús de variables amb l'Artista",
+          "name": "Fem servir variables amb l'artista",
           "preparation": "-   Repasseu els trencaclosques per trobar qualsevol punt que pugui presentar problemes a la classe.\n-   Assegureu-vos que cada alumne tingui el seu diari de reflexió."
         },
         "express-2022/Variables with the Bee": {
+          "name": "Variables amb l'abella",
           "preparation": "-   Repasseu els trencaclosques per trobar qualsevol punt que pugui presentar problemes a la classe.\n-   Assegureu-vos que cada alumne tingui el seu diari de reflexió.",
           "purpose": "Aquesta lliçó demostra en quins sentits el codi amb valors canviants pot ser útil i prepara els alumnes per entendre com funcionen els bucles for en les lliçons següents."
         },
         "express-2022/For Loops with Bee": {
+          "name": "Bucles \"for\" amb l'abella",
           "preparation": "-   Repasseu els trencaclosques per trobar qualsevol punt que pugui presentar problemes a la classe.\n-   Assegureu-vos que cada alumne tingui el seu diari de reflexió.",
           "purpose": "El concepte d'avui, els loops for, és molt important en informàtica. A més de fer-se servir molt, el procés d'aprendre a fer servir els bucles for reforça l'aprenentatge d'altres conceptes importants (com les variables i els paràmetres). Els alumnes podran posar en pràctica el pensament crític per resoldre problemes en què hauran de determinar els valors inicials, finals i esglaonats per a cada bucle. Aquest concepte també integra moltes matemàtiques, o sigui que, si voleu, podeu aprofitar i combinar-lo amb una lliçó de matemàtiques per proporcionar una experiència d'aprenentatge encara més profunda.",
           "student_overview": "Zzz! En aquests trencaclosques, hauràs de guiar una abella fins al nèctar i la mel fent servir bucles for!"
         },
         "express-2022/For Loops with Artist": {
+          "name": "Funcions amb l'artista",
           "preparation": "-   Repasseu la lliçó per trobar qualsevol punt que pugui presentar problemes a la classe.\n-   Assegureu-vos que cada alumne tingui el seu diari de reflexió."
         },
         "express-2022/End of Course Project": {
+          "name": "Projecte de final de curs",
           "preparation": "-   Dediqueu un temps a crear el vostre propi projecte amb les dues eienes del projecte que tenen disponibles els alumnes. Familiaritzeu-vos amb les capacitats i limitacions de cada eina.\n-   Modifiqueu la \\*_\\\\_rúbrica d'avaluació\\* de manera que reflecteixi els objectius de la vostra classe i imprimiu-ne una còpia per cada alumne o grup.\n-   Modifiqueu la **\\*guia de planificació del projecte** de manera que s'escaigui per la vostra classe i imprimiu-ne una per cada alumne o grup."
         },
         "pre-express-2022/Learn to Drag and Drop": {
@@ -355,10 +507,10 @@
         },
         "pre-express-2022/Sequencing with Scrat": {
           "name": "Seqüenciació amb l'Scrat",
-          "overview": "En aquesta lliçó de **desenvolupament d'habilitats**, els estudiants crearan algorismes de seqüenciació per moure un esquirol des d'un cantó d'un laberint fins al gla que hi ha a l'altra banda. Per fer-ho, apilaran blocs de codi en una seqüència lineal.",
+          "overview": "En aquesta lliçó de **desenvolupament d'habilitats**, els estudiants crearan algorismes de seqüenciació per moure un esquirol des d'un cantó d'un laberint fins a la gla que hi ha a l'altra banda. Per fer-ho, apilaran blocs de codi en una seqüència lineal.",
           "preparation": "-   Assegureu-vos que cada estudiant tingui el seu propi diari de reflexió.",
           "purpose": "En aquesta lliçó, els estudiants desenvoluparan les seves habilitats de programació i depuració en una plataforma informàtica. El format en blocs d'aquests trencaclosques els ajudaran a aprendre sobre seqüències i conceptes sense haver de preocupar-se per perfeccionar la sintaxi.",
-          "student_overview": "Programa l'Scrat per portar-lo fins el gla."
+          "student_overview": "Programa l'Scrat per portar-lo fins a la gla."
         },
         "pre-express-2022/Programming with Angry Birds": {
           "name": "Programació amb Angry Birds",
@@ -373,15 +525,15 @@
           "purpose": "Per tal de facilitar la transferència de coneixements, aquesta lliçó ofereix als alumnes un entorn nou on practicar les habilitats que han estat aprenent. Els més incondicionals de La guerra de les galàxies saltaran d'alegria quan vegin aquests trencaclosques. Cada trencaclosques de la sèrie s'ha afegit per aprofundir en la comprensió dels conceptes bàsics que hauran de fer servir al llarg d'aquest curs."
         },
         "pre-express-2022/Programming with Harvester": {
-          "name": "Programació amb la segadora",
-          "overview": "En aquesta lliçó de **desenvolupament d'habilitats**, els alumnes aplicaran els conceptes de programació que han après en l'entorn de la Segadora. Continuaran desenvolupant les habilitats relacionades amb els algorismes seqüencials i començaran a fer servir el procés de depuració.",
+          "name": "Programació amb l'Agricultora",
+          "overview": "En aquesta lliçó de **desenvolupament d'habilitats**, els alumnes aplicaran els conceptes de programació que han après en l'entorn de l'Agricultora. Continuaran desenvolupant les habilitats relacionades amb els algorismes seqüencials i començaran a fer servir el procés de depuració.",
           "preparation": "-   Repasseu els trencaclosques per trobar qualsevol punt que pugui presentar problemes a la classe.\n-   Assegureu-vos que cada alumne tingui el seu diari de reflexió.",
           "purpose": "En aquesta lliçó, els alumnes desenvoluparan habilitats de depuració i continuaran desenvolupant les seves habilitats de programació.",
-          "student_overview": "Ajuda la Segadora a collir verdures pel camí."
+          "student_overview": "Ajuda l'Agricultura a collir verdures pel camí."
         },
         "pre-express-2022/Loops with Scrat": {
           "name": "Bucles amb l'Scrat",
-          "overview": "En aquesta lliçó de **desenvolupament d'habilitats**, els alumnes practicaran amb el concepte de bucles mentre programen trencaclosques que tenen com a objectiu ajudar l'esquirol a arribar al gla.",
+          "overview": "En aquesta lliçó de **desenvolupament d'habilitats**, els alumnes practicaran amb el concepte de bucles mentre programen trencaclosques que tenen com a objectiu ajudar l'esquirol a arribar a la gla.",
           "preparation": "-   (Opcional) Tria un parell de trencaclosques per fer en grup amb tota la classe.\n-   Assegura't que cada alumne tingui el seu diari de reflexió.",
           "purpose": "En aquesta lliçó, els alumnes aprofundiran en els bucles i aprendran a implementar-los en el codi de Blockly. En programació, és important fer saber fer servir els _bucles_, ja que repetir manualment les ordres és feixuc i poc eficient. Amb aquests trencaclosques de Code.org, els alumnes aprendran a afegir instruccions a bucles existents, a agrupar codis repetits en bucles, i a reconèixer patrons que cal repetir.",
           "student_overview": "Fes servir els bucles per ajudar l'Scrat a cobrir més terreny."
@@ -420,42 +572,95 @@
           "purpose": "En aquesta activitat en línia, els alumnes aprendran a utilitzar esdeveniments al Laboratori de Jocs. Començaran configurant el cavaller perquè es mogui en prémer una tecla de fletxa, i després podran demostrar la resta d'habilitats que han adquirit al llarg d'aquest curs, com l'ús de seqüències i bucles, al trencaclosques de joc lliure que hi ha al final.",
           "student_overview": "Fes servir esdeveniments per crear una història o un joc interactiu."
         },
+        "coursea-2022/Safety in My Online Neighborhood": {
+          "name": "Seguretat al meu barri d'internet",
+          "overview": "[![common sense education](https://curriculum.code.org/static/img/common_sense_education.png)](https://www.commonsense.org)\n\nAquesta lliçó és una creació original de Common Sense Education. [Saber-ne més.](https://www.commonsense.org/education/digital-citizenship/curriculum)\n\nEl poder d'internet permet els alumnes experimentar i visitar llocs que potser no podrien veure en persona. Però, igual que passa quan viatgem pel món real, és important anar amb compte quan viatgem per internet. En aquesta excursió virtual, els alumnes podran posar en pràctica la seguretat en les seves aventures a internet.",
+          "preparation": "-   Repasseu els materials didàctics.\n-   Imprimiu una o diverses fitxes per cada alumne.\n-   (Opcional) Imprimiu el pòster del poema per penjar-lo a l'aula.",
+          "purpose": "El pla d'estudis de Ciutadania Digital de Common Sense toca sis temes centrals fonamentats en els estudis més recents sobre infants, mitjans i teconogia. Aquesta lliçó se centra en la privacitat i la seguretat. Els alumnes aprendran a protegir la seva informació personal i aprofundiran en els drets de privacitat que protegeixen les seves dades per poder defensar-se a si mateixos i als altres.",
+          "student_overview": "Aprèn a navegar per internet de manera segura."
+        },
         "coursea-2022/Learn to Drag and Drop": {
           "name": "Aprèn a arrossegar i deixar anar",
           "overview": "Aquesta lliçó de **desenvolupament d'habilitats** ajuda els estudiants a fer-se una idea de com funcionen les coses al laboratori d'informàtica. Comença amb una breu conversa sobre com cal comportar-se, i tot seguit els explica com fer servir l'ordinador per fer els trencaclosques en línia.",
+          "preparation": "-   Mireu el vídeo del professor **\\*Com crear una secció de classe** a Code.org. Creeu la vostra pròpia secció de classe a Code.org i assegureu-vos que cada alumne tingui una targeta amb el seu codi d'accés.\n-   Assegureu-vos que els alumnes podran accedir a la Lliçó 2 des dels seus dispositius. Valoreu si voleu amagar les lliçons futures per evitar que els alumnes avancin massa ràpid.\n-   Demaneu a l'informàtic de l'escola que afegeixi un enllaç ràpid per la secció de la vostra classe a l'escriptori de l'ordinador.\n-   Reviseu el lloc web de Common Sense Education per obtenir més contingut sobre seguretat en línia.",
           "purpose": "L'objectiu principal d'aquesta lliçó és desenvolupar l'experiència dels estudiants amb l'ordinador. En cobrir les funcions més bàsiques de l'ordinador, com ara fer clic i arrossegar i deixar anar, proporcionem un punt de partida més igualitari de cara als trencaclosques que hauran de fer. Aquesta lliçó també és un bon moment per introduir la terminologia bàsica de les parts de l'ordinador, entre elles el \"ratolí\", el \"ratolí tàctil\" o la \"pantalla tàctil\", segons el dispositiu que feu servir.",
           "student_overview": "Fes clic i arrossega per completar els trencaclosques."
         },
         "coursea-2022/Happy Maps": {
-          "name": "Mapes feliços"
+          "name": "Mapes Feliços",
+          "overview": "En aquesta lliçó de **definició de context**, es fan equips per dur a terme una tasca senzilla: portar el \"Flurb\" fins a la fruita. Els alumnes practicaran escrivint instruccions precises alhora que tradueixen les instruccions en els símbols que se'ls proporciona.",
+          "preparation": "-   Imprimiu una **\\*Fitxa de treball** i un joc de materials **\\*Manipulatius** per cada grup de 2-3 alumnes.\n-   Assegureu-vos que cada alumne tingui el seu diari de reflexió.",
+          "purpose": "Si els alumnes entenen la diferència entre planificar una seqüència i codificar aquesta seqüència en el llenguatge adequat, el salt dels algorismes a la programació no els hauria de costar gaire.  Aquesta activitat els ajudarà a posar en pràctica la lectura i l'escriptura de codi amb símbols.",
+          "student_overview": "Escriu instruccions per portar el Flurb fins a la fruita."
         },
         "coursea-2022/Sequencing with Scrat": {
           "name": "Seqüenciació amb l'Scrat",
-          "overview": "En aquesta lliçó de **desenvolupament d'habilitats**, els estudiants crearan algorismes de seqüenciació per moure un esquirol des d'un cantó d'un laberint fins al gla que hi ha a l'altra banda. Per fer-ho, apilaran blocs de codi en una seqüència lineal.",
+          "overview": "En aquesta lliçó de **desenvolupament d'habilitats**, els estudiants crearan algorismes de seqüenciació per moure un esquirol des d'un cantó d'un laberint fins a la gla que hi ha a l'altra banda. Per fer-ho, apilaran blocs de codi en una seqüència lineal.",
+          "preparation": "-   Retalleu blocs de direccions dels materials **\\*Manipulatius** per fer-los servir a l'activitat de pont dels Mapes Feliços.\n-   Assegureu-vos que cada alumne tingui el seu diari de reflexió.",
           "purpose": "En aquesta lliçó, els estudiants desenvoluparan les seves habilitats de programació i depuració en una plataforma informàtica. El format en blocs d'aquests trencaclosques els ajudaran a aprendre sobre seqüències i conceptes sense haver de preocupar-se per perfeccionar la sintaxi.",
-          "student_overview": "Programa l'Scrat per portar-lo fins el gla."
+          "student_overview": "Programa l'Scrat per portar-lo fins a la gla."
         },
         "coursea-2022/Programming with Scrat": {
+          "name": "Programació amb l'Scrat",
           "overview": "En aquesta lliçó de **desenvolupament d'habilitats**, els estudiants seguirant desenvolupant algorismes seqüencials.",
-          "purpose": "En aquesta lliçó, els estudiants desenvoluparan les seves habilitats de programació i depuració en una plataforma informàtica. El format en blocs d'aquests trencaclosques els ajudaran a aprendre sobre seqüències i conceptes sense haver de preocupar-se per perfeccionar la sintaxi."
+          "preparation": "-   Repasseu els trencaclosques per trobar qualsevol punt que pugui presentar problemes a la classe.\n-   (Opcional) Esculliu un parell de trencaclosques per fer en grup amb tota la classe.\n-   Assegureu-vos que cada alumne tingui el seu diari de reflexió.",
+          "purpose": "En aquesta lliçó, els estudiants desenvoluparan les seves habilitats de programació i depuració en una plataforma informàtica. El format en blocs d'aquests trencaclosques els ajudaran a aprendre sobre seqüències i conceptes sense haver de preocupar-se per perfeccionar la sintaxi.",
+          "student_overview": "Escriu programes per ajudar l'Scrat a arribar a la gla."
         },
         "coursea-2022/Programming with Rey and BB-8": {
-          "name": "Programació amb la Rey i el BB-8"
+          "name": "Programació amb la Rey i el BB-8",
+          "overview": "En aquesta lliçó de **desenvolupament d'habilitats**, els alumnes faran servir les habilitats de programació que acaben d'adquirir de maneres més complexes per obrir-se pas per un camí difícil amb el _BB-8_.",
+          "preparation": "-   Repasseu els trencaclosques d'aquesta lliçó per trobar qualsevol punt que pugui presentar problemes a la classe.\n-   Repasseu les **\\*Consells per a l'activitat principal d'informàtica - Recomanacions per les lliçons**.\n-   Assegureu-vos que cada alumne tingui el seu diari de reflexió.",
+          "purpose": "Per tal de facilitar la transferència de coneixements, aquesta lliçó ofereix als alumnes un entorn nou on practicar les habilitats que han estat aprenent. Els més incondicionals de _La guerra de les galàxies_ saltaran d'alegria quan vegin aquests trencaclosques. Cada trencaclosques de la sèrie s'ha afegit per aprofundir en la comprensió dels conceptes bàsics que hauran de fer servir al llarg d'aquest curs.",
+          "student_overview": "Ajuda el BB-8 recollir la ferralla."
+        },
+        "coursea-2022/Happy Loops": {
+          "name": "Mapes Feliços",
+          "overview": "Aquesta lliçó de **definició de context** és un repàs de l'activitat dels Mapes Feliços. Aquesta vegada, els alumnes faran servir bucles per resoldre trencaclosques més grans i llargs amb el seu codi.",
+          "preparation": "-   Imprimiu una **\\*Fitxa de treball** per ensenyar-la a la classe.\n-   Per cada grup de 2 o 3, imprimiu un de cada dels materials següents: **\\*Peces de joc, \\*Fitxa de treball XL, i \\*Paquet de materials manipulatius addicionals**.\n-   Assegureu-vos que cada alumne tingui el seu diari de reflexió.",
+          "purpose": "Aquesta lliçó serveix per introduir els bucles. Els bucles permeten els alumnes simplificar el codi agrupant les ordres que s'han de repetir. Desenvoluparan les seves habilitats de pensament crític en detectar la repetició dels moviments dels seus companys i determinar quantes vegades cal repetir les ordres. Veure els \"Mapes Feliços\" una altra vegada els permetrà relacionar conceptes anteriors, com la seqüenciació, amb el concepte nou dels bucles de repetició.",
+          "student_overview": "Fes servir bucles per ajudar el Flurb a resoldre problemes més grans."
         },
         "coursea-2022/Loops with Scrat": {
           "name": "Bucles amb l'Scrat",
+          "overview": "En aquesta lliçó de **desenvolupament d'habilitats**, els alumnes practicaran fent bucles mentre programen trencaclosques que tenen com a objectiu ajudar l'esquirol a arribar a la gla.",
+          "preparation": "-   Repasseu la lliçó sense connexió anterior i feu preguntes que facin recordar als alumnes per què fem servir bucles.\n-   (Opcional) Trieu un parell de trencaclosques per fer amb tota la classe.\n-   Recolliu materials dels Bucles Feliços anteriors per fer-los servir com escalfament.\n-   Assegureu-vos que cada alumne tingui el seu diari de reflexió.",
+          "purpose": "En aquesta lliçó, els alumnes aprofundiran en els bucles i aprendran a implementar-los en el codi de Blockly. En programació, és important fer saber fer servir els bucles, ja que repetir manualment les ordres és feixuc i poc eficient. Amb aquests trencaclosques de Code.org, els alumnes aprendran a afegir instruccions a bucles existents, a agrupar codis repetits en bucles, i a reconèixer patrons que cal repetir.",
           "student_overview": "Fes servir els bucles per ajudar l'Scrat a cobrir més terreny."
         },
         "coursea-2022/Loops with Laurel": {
-          "name": "Bucles amb la Laurel"
+          "name": "Bucles amb la Laurel",
+          "overview": "En aquesta lliçó de **desenvolupament d'habilitats**, els alumnes seguiran aprenent sobre el concepte dels bucles. Aquí, els faran servir per agafar tresors en espais oberts on hi ha coves.",
+          "preparation": "-   Repasseu els trencaclosques per trobar qualsevol punt que pugui presentar problemes a la classe.\n-   (Opcional) Esculliu un parell de trencaclosques per fer en grup amb tota la classe.\n-   Repasseu les **\\*Recomanacions per lliçons de Fonaments de la Informàtica**\n-   Assegureu-vos que cada alumne tingui el seu diari de reflexió",
+          "purpose": "Aquesta lliçó permet els alumnes seguir posant en pràctica els bucles i introdueix un bloc nou, \"agafar tresor\". Aquest bloc funciona igual que el bloc \"collir blat\" de l'Agricultora. Aquests trencaclosques són més oberts i donen als alumnes més flexibilitat per arribar a la solució final.",
+          "student_overview": "Ajuda la Laurel, l'aventurera, a agafar el tresor subterrani."
         },
         "coursea-2022/Ocean Scene with Loops": {
           "name": "Escena de l'oceà amb bucles",
+          "overview": "En aquesta lliçó de **desenvolupament d'habilitats**, els alumnes aprendran a dibuixar imatges fent bucles de seqüències d'instruccions senzilles. Aquí, els bucles fan patrons. Al final de la lliçó, els alumnes crearan les seves pròpies imatges.",
+          "preparation": "-   Repasseu els trencaclosques per trobar qualsevol punt que pugui presentar problemes a la classe.\n-   Repasseu les **\\*Recomanacions per les lliçons de Fonaments de la Informàtica**.\n-   Assegureu-vos que cada alumne tingui el seu diari de reflexió.",
+          "purpose": "Aquesta lliçó proporciona una perspectiva diferent de com, en programació, els bucles poden crear coses. Els alumnes també podran reflexionar sobre la ineficiència de programar sense bucles, ja que, si no fos pels bucles de \"repetició\", faria falta afegir molts blocs al programa.",
           "student_overview": "Fes servir bucles i patrons per acabar les imatges."
         },
+        "coursea-2022/The Big Event Jr": {
+          "overview": "En aquesta lliçó de **definició de context**, la classe experimentarà amb el concepte dels esdeveniments a través d'un joc en què es mouen o criden quan algú prem els botons d'un comandament enorme.",
+          "preparation": "-   Prepareu-vos per projectar la **\\*Imatge del comandament**.\n-   Imprimiu una **\\*Avaluació** per alumne.\n-   Assegureu-vos que cada alumne tingui un diari de reflexió.",
+          "purpose": "Avui, els alumnes aprendran a distingir els esdeveniments de les accions. Veuran com prémer un \"botó\" un comandament de paper interromp certes activitats. En veure aquest esdeveniment, la classe reaccionarà amb una acció única. Els esdeveniments s'utilitzen molt en programació, i al final d'aquesta lliçó, els alumnes haurien de saber reconèixer-los fàcilment.",
+          "student_overview": "Mou-te i crida quan el professor premi botons en un comandament gegant."
+        },
         "coursea-2022/Mini-Project: On the Move with Play Lab": {
+          "name": "Miniprojecte: A moure's!, amb el Laboratori de Jocs",
+          "overview": "En aquest **miniprojecte**, els alumnes faran servir esdeveniments al Laboratori de Jocs i aplicaran les habilitats de programació que han adquirit fins ara per crear un joc animat. És el moment de posar-se creatiu i crear una història al Laboratori de Jocs!",
+          "preparation": "-   Repasseu els trencaclosques per trobar qualsevol punt que pugui presentar problemes a la classe.\n-   (Opcional) Esculliu un parell de trencaclosques per fer en grup amb tota la classe.\n-   Repasseu les **\\*Recomanacions per lliçons de Fonaments de la Informàtica**.\n-   Assegureu-vos que cada alumne tingui el seu diari de reflexió.",
           "purpose": "Avui, els alumnes faran servir el Laboratori de Jocs per reforçar la comprensió dels esdeveniments. Els esdeveniments són molt freqüents en la majoria de programes informàtics. En aquesta activitat, els alumnes aprendran a fer-los servir per fer que un personatge es mogui per la pantalla o faci sorolls i a canviar el fons a partir d'esdeveniments iniciats per l'usuari.",
           "student_overview": "Crea el teu propi joc o història."
+        },
+        "coursea-2022/End of Course Project": {
+          "name": "Projecte de final de curs",
+          "overview": "En aquesta lliçó de **projecte**, els alumnes apliquen el que han après sobre seqüenciació i bucles amb l'Artista.",
+          "preparation": "-   Escriviu i programeu la vostra historia amb l'Artista amb antelació per inspirar els alumnes!",
+          "purpose": "Aquesta lliçó dona als alumnes una última oportunitat per utilitzar les seves habilitats informàtiques que han adquirit de manera creativa.",
+          "student_overview": "Explica una història amb l'Artista!"
         },
         "coursec-2022/Programming with Angry Birds": {
           "name": "Programació amb Angry Birds",
@@ -481,7 +686,7 @@
           "student_overview": "Fer servir bucles per ajudar el _BB-8_ a travessar els laberints! "
         },
         "coursec-2022/Mini-Project: Sticker Art": {
-          "name": "Miniprojecte: Art amb enganxines",
+          "name": "Miniprojecte: Art amb adhesius",
           "overview": "Aquesta lliçó de **miniprojecte** aprofundeix en la comprensió dels bucles a partir d'allò que han après en les lliçons anteriors. Els alumnes crearan una obra d'art única amb l'Artista.",
           "purpose": "Aquesta sèrie destaca la utilitat dels bucles per fer dissenys creatius i personals.  \n\nEs planteja com una seqüència recolzada per projectes i permet als alumnes que avancin progressivament a partir de les tasques que van fent per crear uns artefactes increïbles."
         },
@@ -491,8 +696,14 @@
         "coursec-2022/Binary Bracelets": {
           "name": "Polseres binàries"
         },
+        "coursec-2022/End of Course Project": {
+          "name": "Projecte de final de curs"
+        },
         "csd3-2022/Variables": {
           "name": "Variables"
+        },
+        "csd3-2022/Sprite Properties": {
+          "name": "Propietats de l'sprite"
         },
         "csd3-2022/Text": {
           "name": "Text"
@@ -515,6 +726,9 @@
         "courseb-2018/Your Digital Footprint": {
           "name": "La vostra empremta digital"
         },
+        "courseb-2018/Programming in Ice Age": {
+          "name": "Programació amb l'Scrat"
+        },
         "courseb-2018/Programming with Rey and BB-8": {
           "name": "Programació amb la Rey i el BB-8"
         },
@@ -530,17 +744,26 @@
         "courseb-2018/Events in Play Lab": {
           "name": "Una batalla real amb esdeveniments"
         },
+        "coursea-2018/Sequencing in Maze": {
+          "name": "Seqüenciació amb Angry Birds"
+        },
         "coursea-2018/Programming: Happy Maps": {
-          "name": "Mapes feliços"
+          "name": "Mapes Feliços"
         },
         "coursea-2018/Programming in Maze": {
           "name": "Programació amb Angry Birds"
         },
         "coursea-2018/Programming in Harvester": {
-          "name": "Programació amb la segadora"
+          "name": "Programació amb l'Agricultora"
         },
         "coursea-2018/Going Places Safely": {
           "name": "Anar als llocs amb precaució"
+        },
+        "coursea-2018/Loops: Happy Loops": {
+          "name": "Mapes Feliços"
+        },
+        "coursea-2018/Loops in Harvester": {
+          "name": "Bucles amb l'Agricultora"
         },
         "coursea-2018/Loops in Collector": {
           "name": "Bucles amb la Laurel"
@@ -560,14 +783,26 @@
         "coursed-2018/Loops in Ice Age": {
           "name": "Bucles a l'Edat de Gel"
         },
+        "coursed-2018/Nested Loops in Bee": {
+          "name": "Bucles imbricats al laberint"
+        },
         "coursed-2018/Nested Loops in Frozen": {
           "name": "Flocs de neu amb l'Anna i l'Elsa"
+        },
+        "coursed-2018/While Loops in Farmer": {
+          "name": "Bucles \"while\" amb la pagesa"
+        },
+        "coursed-2018/Until Loops in Maze": {
+          "name": "Bucles \"until\" al laberint"
         },
         "coursed-2018/Conditionals with Cards": {
           "name": "Condicionals amb targetes"
         },
+        "coursed-2018/Conditionals in Bee": {
+          "name": "If/else amb l'abella"
+        },
         "coursed-2018/Conditionals & Loops in Harvester": {
-          "name": "Collir amb condicionals"
+          "name": "Fem la collita amb condicionals"
         },
         "coursed-2018/Digital Citizenship": {
           "name": "Ciutadania digital"
@@ -587,8 +822,17 @@
         "coursef-2018/Programming in Artist": {
           "name": "Fem art amb codi"
         },
+        "coursef-2018/Nested Loops in Bee/Zombie": {
+          "name": "Bucles imbricats al laberint"
+        },
         "coursef-2018/Conditionals with Cards": {
           "name": "Condicionals amb targetes"
+        },
+        "coursef-2018/For Loops in Bee": {
+          "name": "Bucles \"for\" amb l'abella"
+        },
+        "coursef-2018/For Loops in Artist": {
+          "name": "Funcions amb l'artista"
         },
         "express-2018/Graph Paper Programming": {
           "name": "Programació de paper quadriculat"
@@ -614,17 +858,32 @@
         "express-2018/Loops in Artist": {
           "name": "Art amb enganxines fet amb bucles"
         },
+        "express-2018/Concept Practice with Minecraft ": {
+          "name": "Mirem endavant amb Minecraft"
+        },
+        "express-2018/Until Loops in Maze": {
+          "name": "Bucles \"until\" al laberint"
+        },
         "express-2018/Conditionals with Cards": {
           "name": "Condicionals amb targetes"
         },
+        "express-2018/Conditionals in Bee": {
+          "name": "If/else amb l'abella"
+        },
         "express-2018/Conditionals & Loops in Harvester": {
-          "name": "Collir amb condicionals"
+          "name": "Fem la collita amb condicionals"
         },
         "express-2018/Functions: Songwriting": {
           "name": "Composició de cançons"
         },
         "express-2018/Events: The Big Event": {
           "name": "El gran esdeveniment"
+        },
+        "express-2018/For Loops in Bee": {
+          "name": "Bucles \"for\" amb l'abella"
+        },
+        "express-2018/For Loops in Artist": {
+          "name": "Funcions amb l'artista"
         },
         "express-2018/Binary Bracelets": {
           "name": "Polseres binàries"
@@ -650,6 +909,9 @@
         "coursee-2018/Programming in Artist": {
           "name": "Fem art amb codi"
         },
+        "coursee-2018/Nested Loops": {
+          "name": "Bucles imbricats al laberint"
+        },
         "coursee-2018/Conditionals with Cards": {
           "name": "Condicionals amb targetes"
         },
@@ -660,10 +922,10 @@
           "name": "Funcions a Minecraft"
         },
         "coursee-2018/Functions in Harvester": {
-          "name": "Funcions amb La segadora"
+          "name": "Funcions amb l'agricultora"
         },
         "coursee-2018/Functions in Artist": {
-          "name": "Funcions amb l'Artista"
+          "name": "Funcions amb l'artista"
         },
         "coursee-2018/Internet": {
           "name": "Internet"
@@ -698,6 +960,9 @@
         "coursec-2018/Events: The Big Event": {
           "name": "El gran esdeveniment"
         },
+        "coursec-2018/Looking Ahead": {
+          "name": "Mirem endavant amb Minecraft"
+        },
         "coursec-2018/Binary Bracelets": {
           "name": "Polseres binàries"
         },
@@ -709,6 +974,9 @@
         },
         "pre-express-2018/Your Digital Footprint": {
           "name": "La vostra empremta digital"
+        },
+        "pre-express-2018/Programming in Ice Age": {
+          "name": "Programació amb l'Scrat"
         },
         "pre-express-2018/Programming with Rey and BB-8": {
           "name": "Programació amb la Rey i el BB-8"
@@ -750,13 +1018,19 @@
           "name": "Aprèn a arrossegar i deixar anar"
         },
         "coursea-2019/Programming: Happy Maps": {
-          "name": "Mapes feliços"
+          "name": "Mapes Feliços"
         },
         "coursea-2019/Sequencing with Scrat": {
           "name": "Seqüenciació amb l'Scrat"
         },
+        "coursea-2019/Programming in Ice Age": {
+          "name": "Programació amb l'Scrat"
+        },
         "coursea-2019/Programming with Rey and BB-8": {
           "name": "Programació amb la Rey i el BB-8"
+        },
+        "coursea-2019/Loops: Happy Loops": {
+          "name": "Mapes Feliços"
         },
         "coursea-2019/Loops in Ice Age": {
           "name": "Bucles amb l'Scrat"
@@ -776,14 +1050,20 @@
         "courseb-2019/Move It, Move It": {
           "name": "Mou-lo, Mou-lo"
         },
+        "courseb-2019/Sequencing in Maze": {
+          "name": "Seqüenciació amb Angry Birds"
+        },
         "courseb-2019/Programming in Maze": {
           "name": "Programació amb Angry Birds"
         },
         "courseb-2019/Programming in Harvester": {
-          "name": "Programació amb la segadora"
+          "name": "Programació amb l'Agricultora"
         },
         "courseb-2019/Loops: Getting Loopy": {
           "name": "Fent bucles"
+        },
+        "courseb-2019/Loops in Harvester": {
+          "name": "Bucles amb l'Agricultora"
         },
         "courseb-2019/Loops in Collector": {
           "name": "Bucles amb la Laurel"
@@ -803,11 +1083,23 @@
         "coursed-2019/Loops in Ice Age": {
           "name": "Bucles a l'Edat de Gel"
         },
+        "coursed-2019/Nested Loops in Bee": {
+          "name": "Bucles imbricats al laberint"
+        },
         "coursed-2019/Conditionals with Cards": {
           "name": "Condicionals amb targetes"
         },
+        "coursed-2019/Conditionals in Bee": {
+          "name": "If/else amb l'abella"
+        },
+        "coursed-2019/While Loops in Farmer": {
+          "name": "Bucles \"while\" amb la pagesa"
+        },
+        "coursed-2019/Until Loops in Maze": {
+          "name": "Bucles \"until\" al laberint"
+        },
         "coursed-2019/Conditionals & Loops in Harvester": {
-          "name": "Collir amb condicionals"
+          "name": "Fem la collita amb condicionals"
         },
         "coursed-2019/Unplugged: Binary": {
           "name": "Imatges binàries"
@@ -824,6 +1116,15 @@
         "coursef-2019/Learning Sprites with Sprite Lab": {
           "name": "Peixos, a nedar! al Laboratori d'Sprites"
         },
+        "coursef-2019/Nested Loops in the Maze": {
+          "name": "Bucles imbricats al laberint"
+        },
+        "coursef-2019/For Loops in Bee": {
+          "name": "Bucles \"for\" amb l'abella"
+        },
+        "coursef-2019/For Loops in Artist": {
+          "name": "Funcions amb l'artista"
+        },
         "coursef-2019/Internet": {
           "name": "Internet"
         },
@@ -833,11 +1134,17 @@
         "coursef-2019/Crowdsourcing": {
           "name": "Col·laboració oberta"
         },
+        "coursef-2019/End of Course Project": {
+          "name": "Projecte de final de curs"
+        },
         "coursee-2019/Conditionals in Minecraft: Voyage Aquatic": {
           "name": "El condicionals a Minecraft: Viatge aquàtic"
         },
         "coursee-2019/Learning Sprites with Sprite Lab": {
           "name": "Peixos, a nedar! al Laboratori d'Sprites"
+        },
+        "coursee-2019/Nested Loops in Bee": {
+          "name": "Bucles imbricats al laberint"
         },
         "coursee-2019/Functions: Songwriting": {
           "name": "Composició de cançons"
@@ -846,10 +1153,13 @@
           "name": "Funcions a Minecraft"
         },
         "coursee-2019/Functions in Harvester": {
-          "name": "Funcions amb La segadora"
+          "name": "Funcions amb l'agricultora"
         },
         "coursee-2019/Functions in Artist": {
-          "name": "Funcions amb l'Artista"
+          "name": "Funcions amb l'artista"
+        },
+        "coursee-2019/End of Course Project": {
+          "name": "Projecte de final de curs"
         },
         "express-2019/Dance Party": {
           "name": "Festa de ball"
@@ -872,29 +1182,50 @@
         "express-2019/Loops in Artist": {
           "name": "Art amb enganxines fet amb bucles"
         },
+        "express-2019/Nested Loops in Bee": {
+          "name": "Bucles imbricats al laberint"
+        },
         "express-2019/Nested Loops in Frozen": {
           "name": "Flocs de neu amb l'Anna i l'Elsa"
+        },
+        "express-2019/Concept Practice with Minecraft ": {
+          "name": "Mirem endavant amb Minecraft"
+        },
+        "express-2019/Conditionals in Bee": {
+          "name": "If/else amb l'abella"
         },
         "express-2019/Conditionals in Minecraft: Voyage Aquatic": {
           "name": "El condicionals a Minecraft: Viatge aquàtic"
         },
+        "express-2019/Until Loops in Maze": {
+          "name": "Bucles \"until\" al laberint"
+        },
         "express-2019/Conditionals & Loops in Harvester": {
-          "name": "Collir amb condicionals"
+          "name": "Fem la collita amb condicionals"
         },
         "express-2019/Functions in Minecraft": {
           "name": "Funcions a Minecraft"
         },
         "express-2019/Functions in Harvester": {
-          "name": "Funcions amb La segadora"
+          "name": "Funcions amb l'agricultora"
         },
         "express-2019/Functions in Artist": {
-          "name": "Funcions amb l'Artista"
+          "name": "Funcions amb l'artista"
+        },
+        "express-2019/For Loops in Bee": {
+          "name": "Bucles \"for\" amb l'abella"
+        },
+        "express-2019/For Loops in Artist": {
+          "name": "Funcions amb l'artista"
         },
         "express-2019/Learning Sprites with Sprite Lab": {
-          "name": "Peixos, a nedar!, al el Laboratori d'Sprites"
+          "name": "Peixos, a nedar!, al Laboratori d'Sprites"
         },
         "express-2019/Virtual Pet with Sprite Lab": {
           "name": "Mascota virtual al Laboratori d'Sprites"
+        },
+        "express-2019/Build A Project": {
+          "name": "Projecte de final de curs"
         },
         "coursec-2019/Programming in Maze": {
           "name": "Programació amb Angry Birds"
@@ -914,11 +1245,17 @@
         "coursec-2019/Loops with Rey and BB-8": {
           "name": "Bucles amb la Rey i el BB-8"
         },
+        "coursec-2019/Looking Ahead": {
+          "name": "Mirem endavant amb Minecraft"
+        },
         "coursec-2019/Sticker Art with Loops": {
           "name": "Art amb enganxines fet amb bucles"
         },
         "coursec-2019/Events: The Big Event": {
           "name": "El gran esdeveniment"
+        },
+        "coursec-2019/End of Course Project: Create a Play Lab Game": {
+          "name": "Projecte de final de curs"
         },
         "pre-express-2019/Learn to Drag and Drop": {
           "name": "Aprèn a arrossegar i deixar anar"
@@ -933,7 +1270,7 @@
           "name": "Programació amb la Rey i el BB-8"
         },
         "pre-express-2019/Programming in Harvester": {
-          "name": "Programació amb la segadora"
+          "name": "Programació amb l'Agricultora"
         },
         "pre-express-2019/Spelling Bee": {
           "name": "Abella ortogràfica"
@@ -1034,6 +1371,9 @@
         "coursed-2017/Nested Loops": {
           "name": "Bucles imbricats"
         },
+        "coursed-2017/While Loops in Farmer": {
+          "name": "Bucles \"while\" amb la pagesa"
+        },
         "express-2017/Introduction": {
           "name": "Introducció"
         },
@@ -1045,6 +1385,12 @@
         },
         "express-2017/Nested Loops": {
           "name": "Bucles imbricats"
+        },
+        "express-2017/While Loops in Farmer": {
+          "name": "Bucles \"while\" amb la pagesa"
+        },
+        "express-2017/Until Loops in Maze": {
+          "name": "Bucles \"until\" al laberint"
         },
         "csd3-2017/Variables": {
           "name": "Variables"
@@ -1299,7 +1645,7 @@
           "name": "Artista: patrons"
         },
         "course1/Happy Maps": {
-          "name": "Mapes feliços"
+          "name": "Mapes Feliços"
         },
         "course1/Move it, Move it": {
           "name": "Mou-te, mou-te"
@@ -1393,7 +1739,7 @@
           "name": "Laboratori de personatges"
         },
         "coursef-2021/lesson-7": {
-          "name": "Fem sprites",
+          "name": "Creació d'sprites",
           "overview": "En aquesta lliçó de **desenvolupament d'habilitats**, els alumnes completaran una sèrie de nivells de programació a l'ordinador i acabaran amb una tasca de joc lliure en què podran construir el que vulguin. Escriuran programes i aprendran sobre els dos conceptes prinicpals del Laboratori d'Sprites: els sprites i els comportaments.",
           "preparation": "Repasseu els nivells i les **\\*diapositives de la lliçó**.",
           "purpose": "Aquesta lliçó està dissenyada per introduir els alumnes a la programació al Laboratori d'Sprites. Començaran a entendre el model de programació d'aquesta eina i exploraran com la poden fer servir per expressar-se.",
@@ -1411,83 +1757,204 @@
           "student_overview": "Crea una mascota virtual interactiva que tingui l'aspecte i el comportament que vulguis! Dona vida pròpia a la teva mascota!"
         },
         "coursef-2021/lesson-10": {
+          "name": "Text i preguntes",
           "preparation": "Repasseu els nivells i les diapositives de la lliçó."
         },
         "coursef-2021/Variables that Change in Artist": {
-          "name": "Ús de variables amb l'Artista"
+          "name": "Fem servir variables amb l'artista"
+        },
+        "coursef-2021/Variables that Change in Bee": {
+          "name": "Variables amb l'abella"
+        },
+        "coursef-2021/For Loops in Bee": {
+          "name": "Bucles \"for\" amb l'abella"
+        },
+        "coursef-2021/For Loops in Artist": {
+          "name": "Funcions amb l'artista"
         },
         "coursef-2021/Internet": {
           "name": "Internet"
         },
+        "coursef-2021/End of Course Project": {
+          "name": "Projecte de final de curs"
+        },
+        "courseb-2021/Digital Trails": {
+          "overview": "[![Common sense education](https://curriculum.code.org/static/img/common_sense_education.png)](https://www.commonsense.org)\n\nAquesta lliçó ha estat desenvolupada originalment per Common Sense Education. [Més informació].[2]\n\nEl que fas a internet sempre es queda a internet? Els alumnes aprendran que la informació que comparteixen a internet deixa una petjada digital o “rastre”. Segons com el gestionin, aquest rastre podrà ser gran o petit, útil o perjudicial. Els alumnes compraran diversos rastres i aplicaran el pensament crític per reflexionar sobre quins tipus d’informació volen deixar pel camí.",
+          "preparation": "-   Reviseu els materials didàctics.\n-   Imprimiu fitxes per cada alumne.",
+          "purpose": "El pla d'estudis de Ciutadania Digital de Common Sense toca sis temes centrals fonamentats en els estudis més recents sobre infants, mitjans i teconogia. Aquesta lliçó se centra en la petjada digital i la identitat. Els alumnes reflexionaran sobre els beneficis i els riscos de compartir informació per internet i veuran com el perfil digital pot afectar el concepte de la identitat, la reputació i les relacions de les persones.",
+          "student_overview": "Descobreix la teva petjada digital i com visitar pàgines web de manera segura. "
+        },
         "courseb-2021/Move It, Move It": {
-          "name": "Mou-lo, Mou-lo"
+          "name": "Mou-lo, Mou-lo",
+          "overview": "En aquesta lliçó de **definició de context**, els alumnes programaran els seus companys perquè avancin amb cura per una gran quadrícula feta a terra.",
+          "preparation": "-   Mireu el **\\*Vídeo del professor**\n-   Imprimiu (o prepareu-vos per mostrar) una **\\*Fitxa de treball amb respostes**\n-   Imprimiu una **\\*Activitat amb mapa**i una **\\*Fitxa de treball** per cada grup de 2-3 alumnes\n-   Prepareu papers en blanc per completar la resta de la quadrícula a terra (en necessitareu entre 4 i 7 per grup)",
+          "purpose": "Els alumnes faran servir el moviment físic per programar els seus companys de classe, i en fer-ho es trobaran amb problemes i emocions semblants als que sentiran quan comencin a programar a l’ordinador. Trobar-se amb aquestes pressions en un entorn divertit i obert ajudarà a rebaixar-ne la intensitat i els permetrà posar en pràctica les habilitats necessàries abans de trobar-se amb problemes tot sols.",
+          "student_overview": "Programa els teus companys perquè avancin d'un lloc a un altre."
         },
         "courseb-2021/Sequencing in Maze": {
-          "purpose": "En aquesta lliçó, els estudiants desenvoluparan les seves habilitats de programació i depuració en una plataforma informàtica. El format en blocs d'aquests trencaclosques els ajudaran a aprendre sobre seqüències i conceptes sense haver de preocupar-se per perfeccionar la sintaxi."
+          "name": "Seqüenciació amb Angry Birds",
+          "overview": "En aquesta lliçó de **desenvolupament d'habilitats**, els estudiants crearan algorismes de seqüenciació per moure un ocell des d'un cantó d'un laberint fins al porquet que hi ha a l'altra banda. Per fer-ho, apilaran blocs de codi en una seqüència lineal.",
+          "preparation": "-   Si els vostres alumnes encara no saben arrossegar i deixar anar, potser us anirà bé que facin un exercici de **\\*Pràctica d’arrossegar i deixar anar** abans de començar aquesta lliçó.\n-   Mireu el vídeo del professor **\\*Com fer un apartat de classe a Code.org**. Crea el teu apartat de classe a Code.org i assegureu-vos que cada alumne tingui una targeta amb el codi d’accés.\n-   Demaneu a l’informàtic de l’escola que afegeixi un accés directe a la secció de classe a l’escriptori de l’ordinador.\n-   Assegureu-vos que els alumnes tinguin les seves llibretes.",
+          "purpose": "En aquesta lliçó, els estudiants desenvoluparan les seves habilitats de programació i depuració en una plataforma informàtica. El format en blocs d'aquests trencaclosques els ajudaran a aprendre sobre seqüències i conceptes sense haver de preocupar-se per perfeccionar la sintaxi.",
+          "student_overview": "Ajuda l'Angry Bird vermell a seguir el camí fins al porquet dolentot."
         },
         "courseb-2021/Programming in Maze": {
           "name": "Programació amb Angry Birds",
           "overview": "En aquesta lliçó de **desenvolupament d'habilitats**, els estudiants seguirant desenvolupant algorismes seqüencials.",
-          "purpose": "En aquesta lliçó, els estudiants desenvoluparan les seves habilitats de programació en una plataforma informàtica. El format en blocs d'aquests trencaclosques els ajudarà a aprendre sobre seqüències i conceptes sense haver de preocupar-se per perfeccionar la sintaxi."
+          "preparation": "-   Feu els trencaclosques per trobar qualsevol punt que pugui presentar problemes a la classe.\n-   Traieu o torneu a imprimir els materials dels **\\*Mapes feliços**.\n-   Assegureu-vos que cada alumne tingui el seu Diari de Reflexió.\n-   Retalleu suficients materials **\\*Manipulatius** de cada direcció (N, S, E, O) per donar-ne dos a cada parella d’alumnes (si escolliu l’opció pont 1).",
+          "purpose": "En aquesta lliçó, els estudiants desenvoluparan les seves habilitats de programació en una plataforma informàtica. El format en blocs d'aquests trencaclosques els ajudarà a aprendre sobre seqüències i conceptes sense haver de preocupar-se per perfeccionar la sintaxi.",
+          "student_overview": "Crea programes per ajudar _l'Angry Bird_ a moure's pel laberint."
         },
         "courseb-2021/Programming in Harvester": {
-          "name": "Programació amb la segadora",
+          "name": "Programació amb l'Agricultora",
+          "overview": "En aquesta lliçó de **desenvolupament d'habilitats**, els alumnes aplicaran els conceptes de programació que han après a l'entorn de l'Agricultora. Seguiran desenvolupant el seu coneixement sobre algorismes seqüencials i començaran a fer servir el procés de depuració.",
+          "preparation": "-   Repasseu els trencaclosques per trobar qualsevol punt que pugui presentar problemes a la classe.\n-   Assegureu-vos que cada alumne tingui el seu diari de reflexió.",
           "purpose": "En aquesta lliçó, els alumnes desenvoluparan habilitats de depuració i continuaran desenvolupant les seves habilitats de programació.",
-          "student_overview": "Ajuda la Segadora a collir verdures pel camí."
+          "student_overview": "Ajuda l'Agricultura a collir verdures pel camí."
         },
         "courseb-2021/Loops: Getting Loopy": {
-          "name": "Fent bucles"
+          "name": "Fent bucles",
+          "overview": "En aquesta lliçó de **definició de context**, els alumnes aprendran a utilitzar bucles per comunicar més fàcilment instruccions mirant els patrons repetits d'un ball.",
+          "preparation": "-   Prepareu-vos per ensenyar la **\\*fitxa de treball** als alumbes.\n-   Imprimiu una **\\*Avaluació** per alumne.\n-   Assegureu-vos que cada alumne tingui un diari de reflexió.",
+          "purpose": "A aquestes alçades del curs, els alumnes haurien de sentir-se còmodes programant una sèrie d’instruccions lineals. Sovint, els conjunts d’instruccions lineals inclouen patrons que es repeteixen diverses vegades, i a mesura que els alumnes comencin a escriure programes més complexos i interessants, duplicar el codi de manera manual es farà feixuc i ineficient. Per ajudar els alumnes a escriure programes més potents, haurem de fer servir estructures que se surtin d’aquesta llista lineal única. Els bucles permeten estructurar el codi de manera que es repeteixi. En aquesta lliçó, ens centrarem en identificar patrons en moviments físics abans de passar a l’ordinador per buscar patrons al codi.",
+          "student_overview": "En aquesta lliçó, farem una festa de ball utilitzant bucles de repetició!"
+        },
+        "courseb-2021/Loops in Harvester": {
+          "name": "Bucles amb l'Agricultora",
+          "overview": "En aquesta lliçó de**desenvolupament d'habilitats**, els alumnes ajudaran l'agricultora a collir els cultius fent servir bucles.",
+          "preparation": "-   Feu els trencaclosques per trobar qualsevol punt que pugui presentar problemes a la classe.\n-   Repasseu les **\\*Recomanacions de la lliçó – Consells per l’activitat principal de Fonaments de la Informàtica**.\n-   Assegureu-vos que els alumnes tinguin el seu diari de reflexió.\n-   (Opcional) Trieu un parell de trencaclosques per fer tota la classe junts.\n-   (Opcional) Si encara no ho heu fet, imprimiu i retalleu els blocs dels materials **\\*Manipulatius** per preparar una de les activitats de pont d’aquesta lliçó.",
+          "purpose": "En aquesta lliçó, els alumnes aprofundiran en els bucles i aprendran a implementar-los en el codi de Blockly. En programació, és important fer saber fer servir els bucles, ja que repetir manualment les ordres és feixuc i poc eficient. Amb els trencaclosques de Code.org, els alumnes aprendran a afegir instruccions a bucles existents, a agrupar codis repetits en bucles, i a reconèixer patrons que cal repetir en bucles.",
+          "student_overview": "Ajuda l'Agricultora a collir-ne encara més fent servir bucles!"
         },
         "courseb-2021/Loops in Collector": {
           "name": "Bucles amb la Laurel",
-          "purpose": "Aquesta lliçó permet als alumnes practicar una mica més amb els bucles, i els anima a posar diversos blocs dins d'una \"repetició\" mentre intenten agafar tants tresors com puguin."
+          "overview": "En aquesta lliçó de **desenvolupament d'habilitats**, els alumnes seguiran aprenent sobre el concepte dels bucles. Aquí, la Laurel l'aventurera fa servir bucles per agafar tresors en espais oberts on hi ha coves. ",
+          "preparation": "-   Repasseu els trencaclosques per trobar qualsevol punt que pugui presentar problemes a la classe.\n-   (Opcional) Esculliu un parell de trencaclosques per fer en grup amb tota la classe.\n-   Repasseu les **\\*Recomanacions de la lliçó – Consells per l’activitat principal de Fonaments de la Informàtica**\n-   Assegureu-vos que cada alumne tingui el seu diari de reflexió.",
+          "purpose": "Aquesta lliçó permet als alumnes practicar una mica més amb els bucles, i els anima a posar diversos blocs dins d'una \"repetició\" mentre intenten agafar tants tresors com puguin.",
+          "student_overview": "Programa la Laurel l'aventurera per recollir tresors en una cova oberta."
         },
         "courseb-2021/Loops in Artist": {
           "name": "Dibuixar jardins amb bucles",
+          "overview": "En aquesta lliçó de **desenvolupament d'habilitats**, els alumnes aprenen a dibuixar imatges fent bucles amb seqüències senzilles d'instruccions. Aquí, els alumnes fan servir els bucles per crear patrons. ",
+          "preparation": "-   Repasseu els trencaclosques abans de la lliçó per trobar qualsevol punt que pugui presentar problemes a la classe.\n-   Repasseu les **\\*Consells per a l'activitat principal d'informàtica - Recomanacions per les lliçons**.\n-   Assegureu-vos que cada alumne tingui el seu diari de reflexió.",
           "purpose": "Aquesta lliçó proporciona una perspectiva diferent de com, en programació, els bucles poden crear coses. Els alumnes posaran a prova el seu pensament crític avaluant els codis que se'ls doni i decidint què cal afegir-hi per resoldre el trencaclosques. També podran reflexionar sobre la ineficiència de programar sense bucles, ja que, si no fos pels bucles de \"repetició\", faria falta afegir molts blocs al programa.",
           "student_overview": "Fes servir patrons i bucles per acabar les imatges."
         },
+        "courseb-2021/The Right App": {
+          "overview": "En aquesta lliçó **d'exploració**, els alumnes empatitzen amb diversos usuaris de telèfons intel·ligents ficticis per ajudar-los a trobar \"l'aplicació adequada\" per allò que necessiten.",
+          "preparation": "-   Llegiu les notes del ponent al **\\*mòdul de diapositives**.\n-   Prepareu materials de dibuix suficients per tots els alumnes.\n-   Assegureu-vos que cada alumne tingui el seu diari de reflexió.",
+          "purpose": "Avui, la informàtica és més accessible que mai. Tot tipus de persones fan servir programes en molts dispositius diferents, especialment telèfons intel·ligents, per trobar informació, comunicar-se i divertir-se. Les experiències i les necessitats són tan diverses que és important que els joves programadors empatitzin amb les persones i identifiquin solucions tenint-los presents.",
+          "student_overview": "Dibuixa la teva pròpia aplicació pel mòbil."
+        },
+        "courseb-2021/Events: The Big Event": {
+          "overview": "En aquesta lliçó de **definició de context**, la classe experimentarà amb el concepte dels esdeveniments a través d'un joc en què es mouen o criden quan algú prem els botons d'un comandament enorme.",
+          "preparation": "-   Prepareu-vos per projectar la **\\*Imatge del comandament**.\n-   Imprimiu una **\\*Avaluació** per alumne.\n-   Assegureu-vos que cada alumne tingui un diari de reflexió.",
+          "purpose": "Avui, els alumnes aprendran a distingir els esdeveniments de les accions. Veuran com prémer un \"botó\" un comandament de paper interromp certes activitats. En veure aquest esdeveniment, la classe reaccionarà amb una acció única. Els esdeveniments s'utilitzen molt en programació, i al final d'aquesta lliçó, els alumnes haurien de saber reconèixer-los fàcilment.",
+          "student_overview": "Mou-te o crida quan el professor premi botons en un comandament gegant."
+        },
         "courseb-2021/Events in Play Lab": {
+          "name": "Miniprojecte: Una batalla real amb esdeveniments",
           "overview": "En aquest **miniprojecte**, els alumnes aprendran a fer servir esdeveniments al Laboratori de Jocs i aplicaran les habilitats de programació que han adquirit fins ara per crear un joc animat.",
+          "preparation": "-   Repasseu els trencaclosques per trobar qualsevol punt que pugui presentar problemes a la classe.\n-   (Opcional) Esculliu un parell de trencaclosques per fer en grup amb tota la classe.\n-   Repasseu les **\\*Recomanacions de la lliçó – Consells per l’activitat principal de Fonaments de la Informàtica**\n-   Assegureu-vos que cada alumne tingui el seu diari de reflexió.",
           "purpose": "En aquesta activitat en línia, els alumnes aprendran a utilitzar esdeveniments al Laboratori de Jocs. Començaran configurant el cavaller perquè es mogui en prémer una tecla de fletxa, i després podran demostrar la resta d'habilitats que han adquirit al llarg d'aquest curs, com l'ús de seqüències i bucles, al trencaclosques de joc lliure que hi ha al final.",
           "student_overview": "Fes servir esdeveniments per crear una història o un joc interactiu."
+        },
+        "courseb-2021/lesson-1": {
+          "name": "Projecte de final de curs",
+          "overview": "En aquesta lliçó de **projecte**, els alumnes apliquen el que han après sobre seqüenciació i esdeveniments en un projecte lliure al Laboratori de Jocs.",
+          "preparation": "-   Programeu els vostres propis projectes al Laboratori de Jocs amb antelació per inspirar els alumnes!",
+          "purpose": "Aquesta lliçó dona als alumnes una última oportunitat per utilitzar les seves habilitats informàtiques que han adquirit de manera creativa.",
+          "student_overview": "Crea la teva pròpia història o joc."
+        },
+        "coursea-2021/Safety in My Online Neighborhood": {
+          "name": "Seguretat al meu barri d'internet",
+          "overview": "[![common sense education](https://curriculum.code.org/static/img/common_sense_education.png)](https://www.commonsense.org)\n\nAquesta lliçó és una creació original de Common Sense Education. [Saber-ne més.](https://www.commonsense.org/education/digital-citizenship/curriculum)\n\nEl poder d'internet permet els alumnes experimentar i visitar llocs que potser no podrien veure en persona. Però, igual que passa quan viatgem pel món real, és important anar amb compte quan viatgem per internet. En aquesta excursió virtual, els alumnes podran posar en pràctica la seguretat en les seves aventures a internet.",
+          "preparation": "-   Repasseu els materials didàctics.\n-   Imprimiu una o diverses fitxes per cada alumne.\n-   (Opcional) Imprimiu el pòster del poema per penjar-lo a l'aula.",
+          "purpose": "El pla d'estudis de Ciutadania Digital de Common Sense toca sis temes centrals fonamentats en els estudis més recents sobre infants, mitjans i teconogia. Aquesta lliçó se centra en la privacitat i la seguretat. Els alumnes aprendran a protegir la seva informació personal i aprofundiran en els drets de privacitat que protegeixen les seves dades per poder defensar-se a si mateixos i als altres.",
+          "student_overview": "Aprèn a navegar per internet de manera segura."
         },
         "coursea-2021/Learn to Drag and Drop": {
           "name": "Aprèn a arrossegar i deixar anar",
           "overview": "Aquesta lliçó de **desenvolupament d'habilitats** ajuda els estudiants a fer-se una idea de com funcionen les coses al laboratori d'informàtica. Comença amb una breu conversa sobre com cal comportar-se, i tot seguit els explica com fer servir l'ordinador per fer els trencaclosques en línia.",
+          "preparation": "-   Mireu el vídeo del professor **\\*Com crear una secció de classe** a Code.org. Creeu la vostra pròpia secció de classe a Code.org i assegureu-vos que cada alumne tingui una targeta amb el seu codi d'accés.\n-   Assegureu-vos que els alumnes podran accedir a la Lliçó 2 des dels seus dispositius. Valoreu si voleu amagar les lliçons futures per evitar que els alumnes avancin massa ràpid.\n-   Demaneu a l'informàtic de l'escola que afegeixi un enllaç ràpid per la secció de la vostra classe a l'escriptori de l'ordinador.\n-   Reviseu el lloc web de Common Sense Education per obtenir més contingut sobre seguretat en línia.",
           "purpose": "L'objectiu principal d'aquesta lliçó és desenvolupar l'experiència dels estudiants amb l'ordinador. En cobrir les funcions més bàsiques de l'ordinador, com ara fer clic i arrossegar i deixar anar, proporcionem un punt de partida més igualitari de cara als trencaclosques que hauran de fer. Aquesta lliçó també és un bon moment per introduir la terminologia bàsica de les parts de l'ordinador, entre elles el \"ratolí\", el \"ratolí tàctil\" o la \"pantalla tàctil\", segons el dispositiu que feu servir.",
           "student_overview": "Fes clic i arrossega per completar els trencaclosques."
         },
         "coursea-2021/Programming: Happy Maps": {
-          "name": "Mapes feliços"
+          "name": "Mapes Feliços",
+          "overview": "En aquesta lliçó de **definició de context**, es fan equips per dur a terme una tasca senzilla: portar el \"Flurb\" fins a la fruita. Els alumnes practicaran escrivint instruccions precises alhora que tradueixen les instruccions en els símbols que se'ls proporciona.",
+          "preparation": "-   Imprimiu una **\\*Fitxa de treball** i un joc de materials **\\*Manipulatius** per cada grup de 2-3 alumnes.\n-   Assegureu-vos que cada alumne tingui el seu diari de reflexió.",
+          "purpose": "Si els alumnes entenen la diferència entre planificar una seqüència i codificar aquesta seqüència en el llenguatge adequat, el salt dels algorismes a la programació no els hauria de costar gaire.  Aquesta activitat els ajudarà a posar en pràctica la lectura i l'escriptura de codi amb símbols.",
+          "student_overview": "Escriu instruccions per portar el Flurb fins a la fruita."
         },
         "coursea-2021/Sequencing with Scrat": {
           "name": "Seqüenciació amb l'Scrat",
-          "overview": "En aquesta lliçó de **desenvolupament d'habilitats**, els estudiants crearan algorismes de seqüenciació per moure un esquirol des d'un cantó d'un laberint fins al gla que hi ha a l'altra banda. Per fer-ho, apilaran blocs de codi en una seqüència lineal.",
+          "overview": "En aquesta lliçó de **desenvolupament d'habilitats**, els estudiants crearan algorismes de seqüenciació per moure un esquirol des d'un cantó d'un laberint fins a la gla que hi ha a l'altra banda. Per fer-ho, apilaran blocs de codi en una seqüència lineal.",
+          "preparation": "-   Retalleu blocs de direccions dels materials **\\*Manipulatius** per fer-los servir a l'activitat de pont dels Mapes Feliços.\n-   Assegureu-vos que cada alumne tingui el seu diari de reflexió.",
           "purpose": "En aquesta lliçó, els estudiants desenvoluparan les seves habilitats de programació i depuració en una plataforma informàtica. El format en blocs d'aquests trencaclosques els ajudaran a aprendre sobre seqüències i conceptes sense haver de preocupar-se per perfeccionar la sintaxi.",
-          "student_overview": "Programa l'Scrat per portar-lo fins el gla."
+          "student_overview": "Programa l'Scrat per portar-lo fins a la gla."
         },
         "coursea-2021/Programming in Ice Age": {
+          "name": "Programació amb l'Scrat",
           "overview": "En aquesta lliçó de **desenvolupament d'habilitats**, els estudiants seguirant desenvolupant algorismes seqüencials.",
-          "purpose": "En aquesta lliçó, els estudiants desenvoluparan les seves habilitats de programació i depuració en una plataforma informàtica. El format en blocs d'aquests trencaclosques els ajudaran a aprendre sobre seqüències i conceptes sense haver de preocupar-se per perfeccionar la sintaxi."
+          "preparation": "-   Repasseu els trencaclosques per trobar qualsevol punt que pugui presentar problemes a la classe.\n-   (Opcional) Esculliu un parell de trencaclosques per fer en grup amb tota la classe.\n-   Assegureu-vos que cada alumne tingui el seu diari de reflexió.",
+          "purpose": "En aquesta lliçó, els estudiants desenvoluparan les seves habilitats de programació i depuració en una plataforma informàtica. El format en blocs d'aquests trencaclosques els ajudaran a aprendre sobre seqüències i conceptes sense haver de preocupar-se per perfeccionar la sintaxi.",
+          "student_overview": "Escriu programes per ajudar l'Scrat a arribar a la gla."
         },
         "coursea-2021/Programming with Rey and BB-8": {
-          "name": "Programació amb la Rey i el BB-8"
+          "name": "Programació amb la Rey i el BB-8",
+          "overview": "En aquesta lliçó de **desenvolupament d'habilitats**, els alumnes faran servir les habilitats de programació que acaben d'adquirir de maneres més complexes per obrir-se pas per un camí difícil amb el _BB-8_.",
+          "preparation": "-   Repasseu els trencaclosques d'aquesta lliçó per trobar qualsevol punt que pugui presentar problemes a la classe.\n-   Repasseu les **\\*Consells per a l'activitat principal d'informàtica - Recomanacions per les lliçons**.\n-   Assegureu-vos que cada alumne tingui el seu diari de reflexió.",
+          "purpose": "Per tal de facilitar la transferència de coneixements, aquesta lliçó ofereix als alumnes un entorn nou on practicar les habilitats que han estat aprenent. Els més incondicionals de _La guerra de les galàxies_ saltaran d'alegria quan vegin aquests trencaclosques. Cada trencaclosques de la sèrie s'ha afegit per aprofundir en la comprensió dels conceptes bàsics que hauran de fer servir al llarg d'aquest curs.",
+          "student_overview": "Ajuda el BB-8 recollir la ferralla."
+        },
+        "coursea-2021/Loops: Happy Loops": {
+          "name": "Mapes Feliços",
+          "overview": "Aquesta lliçó de **definició de context** és un repàs de l'activitat dels Mapes Feliços. Aquesta vegada, els alumnes faran servir bucles per resoldre trencaclosques més grans i llargs amb el seu codi.",
+          "preparation": "-   Imprimiu una **\\*Fitxa de treball** per ensenyar-la a la classe.\n-   Per cada grup de 2 o 3, imprimiu un de cada dels materials següents: **\\*Peces de joc, \\*Fitxa de treball XL, i \\*Paquet de materials manipulatius addicionals**.\n-   Assegureu-vos que cada alumne tingui el seu diari de reflexió.",
+          "purpose": "Aquesta lliçó serveix per introduir els bucles. Els bucles permeten els alumnes simplificar el codi agrupant les ordres que s'han de repetir. Desenvoluparan les seves habilitats de pensament crític en detectar la repetició dels moviments dels seus companys i determinar quantes vegades cal repetir les ordres. Veure els \"Mapes Feliços\" una altra vegada els permetrà relacionar conceptes anteriors, com la seqüenciació, amb el concepte nou dels bucles de repetició.",
+          "student_overview": "Fes servir bucles per ajudar el Flurb a resoldre problemes més grans."
         },
         "coursea-2021/Loops in Ice Age": {
           "name": "Bucles amb l'Scrat",
+          "overview": "En aquesta lliçó de **desenvolupament d'habilitats**, els alumnes practicaran fent bucles mentre programen trencaclosques que tenen com a objectiu ajudar l'esquirol a arribar a la gla.",
+          "preparation": "-   Repasseu la lliçó sense connexió anterior i feu preguntes que facin recordar als alumnes per què fem servir bucles.\n-   (Opcional) Trieu un parell de trencaclosques per fer amb tota la classe.\n-   Recolliu materials dels Bucles Feliços anteriors per fer-los servir com escalfament.\n-   Assegureu-vos que cada alumne tingui el seu diari de reflexió.",
+          "purpose": "En aquesta lliçó, els alumnes aprofundiran en els bucles i aprendran a implementar-los en el codi de Blockly. En programació, és important fer saber fer servir els bucles, ja que repetir manualment les ordres és feixuc i poc eficient. Amb aquests trencaclosques de Code.org, els alumnes aprendran a afegir instruccions a bucles existents, a agrupar codis repetits en bucles, i a reconèixer patrons que cal repetir.",
           "student_overview": "Fes servir els bucles per ajudar l'Scrat a cobrir més terreny."
         },
         "coursea-2021/Loops in Collector": {
-          "name": "Bucles amb la Laurel"
+          "name": "Bucles amb la Laurel",
+          "overview": "En aquesta lliçó de **desenvolupament d'habilitats**, els alumnes seguiran aprenent sobre el concepte dels bucles. Aquí, els faran servir per agafar tresors en espais oberts on hi ha coves.",
+          "preparation": "-   Repasseu els trencaclosques per trobar qualsevol punt que pugui presentar problemes a la classe.\n-   (Opcional) Esculliu un parell de trencaclosques per fer en grup amb tota la classe.\n-   Repasseu les **\\*Recomanacions per lliçons de Fonaments de la Informàtica**\n-   Assegureu-vos que cada alumne tingui el seu diari de reflexió",
+          "purpose": "Aquesta lliçó permet els alumnes seguir posant en pràctica els bucles i introdueix un bloc nou, \"agafar tresor\". Aquest bloc funciona igual que el bloc \"collir blat\" de l'Agricultora. Aquests trencaclosques són més oberts i donen als alumnes més flexibilitat per arribar a la solució final.",
+          "student_overview": "Ajuda la Laurel, l'aventurera, a agafar el tresor subterrani."
         },
         "coursea-2021/Ocean Scene with Loops": {
           "name": "Escena de l'oceà amb bucles",
+          "overview": "En aquesta lliçó de **desenvolupament d'habilitats**, els alumnes aprendran a dibuixar imatges fent bucles de seqüències d'instruccions senzilles. Aquí, els bucles fan patrons. Al final de la lliçó, els alumnes crearan les seves pròpies imatges.",
+          "preparation": "-   Repasseu els trencaclosques per trobar qualsevol punt que pugui presentar problemes a la classe.\n-   Repasseu les **\\*Recomanacions per les lliçons de Fonaments de la Informàtica**.\n-   Assegureu-vos que cada alumne tingui el seu diari de reflexió.",
+          "purpose": "Aquesta lliçó proporciona una perspectiva diferent de com, en programació, els bucles poden crear coses. Els alumnes també podran reflexionar sobre la ineficiència de programar sense bucles, ja que, si no fos pels bucles de \"repetició\", faria falta afegir molts blocs al programa.",
           "student_overview": "Fes servir bucles i patrons per acabar les imatges."
         },
+        "coursea-2021/Events: The Big Event": {
+          "overview": "En aquesta lliçó de **definició de context**, la classe experimentarà amb el concepte dels esdeveniments a través d'un joc en què es mouen o criden quan algú prem els botons d'un comandament enorme.",
+          "preparation": "-   Prepareu-vos per projectar la **\\*Imatge del comandament**.\n-   Imprimiu una **\\*Avaluació** per alumne.\n-   Assegureu-vos que cada alumne tingui un diari de reflexió.",
+          "purpose": "Avui, els alumnes aprendran a distingir els esdeveniments de les accions. Veuran com prémer un \"botó\" un comandament de paper interromp certes activitats. En veure aquest esdeveniment, la classe reaccionarà amb una acció única. Els esdeveniments s'utilitzen molt en programació, i al final d'aquesta lliçó, els alumnes haurien de saber reconèixer-los fàcilment.",
+          "student_overview": "Mou-te i crida quan el professor premi botons en un comandament gegant."
+        },
         "coursea-2021/Events in Play Lab": {
+          "name": "Miniprojecte: A moure's!, amb el Laboratori de Jocs",
+          "overview": "En aquest **miniprojecte**, els alumnes faran servir esdeveniments al Laboratori de Jocs i aplicaran les habilitats de programació que han adquirit fins ara per crear un joc animat. És el moment de posar-se creatiu i crear una història al Laboratori de Jocs!",
+          "preparation": "-   Repasseu els trencaclosques per trobar qualsevol punt que pugui presentar problemes a la classe.\n-   (Opcional) Esculliu un parell de trencaclosques per fer en grup amb tota la classe.\n-   Repasseu les **\\*Recomanacions per lliçons de Fonaments de la Informàtica**.\n-   Assegureu-vos que cada alumne tingui el seu diari de reflexió.",
           "purpose": "Avui, els alumnes faran servir el Laboratori de Jocs per reforçar la comprensió dels esdeveniments. Els esdeveniments són molt freqüents en la majoria de programes informàtics. En aquesta activitat, els alumnes aprendran a fer-los servir per fer que un personatge es mogui per la pantalla o faci sorolls i a canviar el fons a partir d'esdeveniments iniciats per l'usuari.",
           "student_overview": "Crea el teu propi joc o història."
+        },
+        "coursea-2021/lesson-1": {
+          "name": "Projecte de final de curs",
+          "overview": "En aquesta lliçó de **projecte**, els alumnes apliquen el que han après sobre seqüenciació i bucles amb l'Artista.",
+          "preparation": "-   Escriviu i programeu la vostra historia amb l'Artista amb antelació per inspirar els alumnes!",
+          "purpose": "Aquesta lliçó dona als alumnes una última oportunitat per utilitzar les seves habilitats informàtiques que han adquirit de manera creativa.",
+          "student_overview": "Explica una història amb l'Artista!"
         },
         "coursec-2021/Programming in Maze": {
           "name": "Programació amb Angry Birds",
@@ -1514,7 +1981,7 @@
           "student_overview": "Fer servir bucles per ajudar el _BB-8_ a travessar els laberints! "
         },
         "coursec-2021/Sticker Art with Loops": {
-          "name": "Miniprojecte: Art amb enganxines",
+          "name": "Miniprojecte: Art amb adhesius",
           "overview": "Aquesta lliçó de **miniprojecte** aprofundeix en la comprensió dels bucles a partir d'allò que han après en les lliçons anteriors. Els alumnes crearan una obra d'art única amb l'Artista.",
           "preparation": "-   Practiqueu creant el vostre propi disseny. Preneu nota de les diferències entre aquests nivells i tots els anteriors.\n-   Assegureu-vos que els alumnes tinguin el seu diari de reflexió.",
           "purpose": "Aquesta sèrie destaca la utilitat dels bucles per fer dissenys creatius i personals.  \n\nEs planteja com una seqüència recolzada per projectes i permet als alumnes que avancin progressivament a partir de les tasques que van fent per crear uns artefactes increïbles."
@@ -1524,6 +1991,12 @@
         },
         "coursec-2021/Binary Bracelets": {
           "name": "Polseres binàries"
+        },
+        "coursec-2021/End of Course Project: Create a Play Lab Game": {
+          "name": "Projecte de final de curs"
+        },
+        "coursed-2021/lesson-5": {
+          "purpose": "El pla d'estudis de Ciutadania Digital de Common Sense toca sis temes centrals fonamentats en els estudis més recents sobre infants, mitjans i teconogia. Aquesta lliçó se centra en la privacitat i la seguretat. Els alumnes aprendran a protegir la seva informació personal i aprofundiran en els drets de privacitat que protegeixen les seves dades per poder defensar-se a si mateixos i als altres."
         },
         "coursed-2021/Algorithms: Graph Paper Programming": {
           "name": "Programació de paper quadriculat"
@@ -1538,10 +2011,29 @@
           "student_overview": "Estem de celebració! En aquesta lliçó, programaràs la teva pròpia festa de ball interactiva."
         },
         "coursed-2021/Loops in Ice Age": {
-          "name": "Bucles a l'Edat de Gel"
+          "name": "Bucles a l'Edat de Gel",
+          "purpose": "En aquesta lliçó, els alumnes aprofundiran en els bucles i aprendran a implementar-los en el codi de Blockly. En programació, és important fer saber fer servir els bucles, ja que repetir manualment les ordres és feixuc i poc eficient. Amb aquests trencaclosques de Code.org, els alumnes aprendran a afegir instruccions a bucles existents, a agrupar codis repetits en bucles, i a reconèixer patrons que cal repetir."
+        },
+        "coursed-2021/Nested Loops in Bee": {
+          "name": "Bucles imbricats al laberint"
         },
         "coursed-2021/Conditionals with Cards": {
           "name": "Condicionals amb targetes"
+        },
+        "coursed-2021/lesson-6": {
+          "name": "Mirem endavant amb Minecraft"
+        },
+        "coursed-2021/Conditionals in Bee": {
+          "name": "If/else amb l'abella"
+        },
+        "coursed-2021/While Loops in Farmer": {
+          "name": "Bucles \"while\" amb la pagesa"
+        },
+        "coursed-2021/Until Loops in Maze": {
+          "name": "Bucles \"until\" al laberint"
+        },
+        "coursed-2021/End of Course Project": {
+          "name": "Projecte de final de curs"
         },
         "express-2021/Programming with Angry Birds": {
           "name": "Programació amb Angry Birds",
@@ -1572,14 +2064,14 @@
           "student_overview": "Progamar l'Artista per crear unes imatges precioses."
         },
         "express-2021/Swimming Fish in Sprite Lab": {
-          "name": "Peixos, a nedar!, al el Laboratori d'Sprites",
+          "name": "Peixos, a nedar!, al Laboratori d'Sprites",
           "overview": "En aquesta lliçó de **desenvolupament d'habilitats**, els alumnes programaran una escena submarina animada senzilla.",
           "preparation": "-   Repasseu els trencaclosques per trobar qualsevol punt que pugui presentar problemes a la classe.\n-   Assegureu-vos que cada alumne tingui el seu diari de reflexió.",
           "purpose": "Aquesta lliçó està dissenyada per començar a aprendre el vocabulari bàsic del Laboratori d'Sprites i a aplicar els conceptes apresos en altres entorns a aquesta eina. Mitjançant la creació d'una peixera, els alumnes començaran a comprendre el model de programació d'aquesta eina, i descobriran maneres de fer-la servir per expressar-se.",
           "student_overview": "Aprèn a crear i editar sprites."
         },
         "express-2021/lesson-2": {
-          "name": "Fem sprites",
+          "name": "Creació d'sprites",
           "overview": "En aquesta lliçó de **desenvolupament d'habilitats**, els alumnes completaran una sèrie de nivells de programació a l'ordinador i acabaran amb una tasca de joc lliure en què podran construir el que vulguin. Escriuran programes i aprendran sobre els dos conceptes prinicpals del Laboratori d'Sprites: els sprites i els comportaments.",
           "preparation": "Repasseu els nivells i les **\\*diapositives de la lliçó**.",
           "purpose": "Aquesta lliçó està dissenyada per introduir els alumnes a la programació al Laboratori d'Sprites. Començaran a entendre el model de programació d'aquesta eina i exploraran com la poden fer servir per expressar-se.",
@@ -1614,51 +2106,56 @@
           "student_overview": "Fer servir bucles per ajudar el _BB-8_ a travessar els laberints! "
         },
         "express-2021/Sticker Art with Loops": {
-          "name": "Miniprojecte: Art amb enganxines",
+          "name": "Miniprojecte: Art amb adhesius",
           "overview": "Aquesta lliçó de **miniprojecte** aprofundeix en la comprensió dels bucles. Els alumnes crearan una obra d'art única amb l'Artista.",
           "preparation": "-   Practiqueu creant el vostre propi disseny. Preneu nota de les diferències entre aquests nivells i tots els anteriors.\n-   Assegureu-vos que els alumnes tinguin el seu diari de reflexió.",
           "purpose": "Aquesta sèrie destaca la utilitat dels bucles per fer dissenys creatius i personals.  \n\nEs planteja com una seqüència recolzada per projectes i permet als alumnes que avancin progressivament a partir de les tasques que van fent per crear uns artefactes increïbles."
         },
         "express-2021/Nested Loops in Maze": {
+          "name": "Bucles imbricats al laberint",
           "preparation": "-   Repasseu els trencaclosques per trobar qualsevol punt que pugui presentar problemes a la classe.\n-   Assegureu-vos que cada alumne tingui el seu diari de reflexió.",
-          "purpose": "En aquesta introducció als bucles aniuats, els alumnes hauran de sortir de la seva zona de confort per crear solucions més eficients per als trencaclosques.\n\nEn els trencaclosques anteriors, els bucles han fet que els alumnes detectessin les repeticions. Aquí, aprendran a reconèixer els patrons que hi ha _a dins_ dels patrons repetits per crear bucles aniuats. En aquesta etapa, comencem animant els alumnes a intentar resoldre un trencaclosques en què el codi és pesat i difícil d'escriure a la manera llarga. Després d'un vídeo d'introducció als bucles aniuats, se'ls ensenya un exemple i se'ls demana que prediguin què passa si fiquem un bucle dins d'un altre. Aquesta progressió fa que els alumnes puguin practicar per assimilar i aprofundir en els seus coneixements sobre bucles en programació.",
-          "student_overview": "Bucles dins de bucles que estan dins d'altres bucles. Què vol dir tot això? Amb aquest lliçó aprendreu què passa quan es crea un bucle aniuat."
+          "purpose": "En aquesta introducció als bucles imbricats, els alumnes hauran de sortir de la seva zona de confort per crear solucions més eficients per als trencaclosques.\n\nEn els trencaclosques anteriors, els bucles han fet que els alumnes detectessin les repeticions. Aquí, aprendran a reconèixer els patrons que hi ha _a dins_ dels patrons repetits per crear bucles imbricats. En aquesta etapa, comencem animant els alumnes a intentar resoldre un trencaclosques en què el codi és pesat i difícil d'escriure a la manera llarga. Després d'un vídeo d'introducció als bucles imbricats, se'ls ensenya un exemple i se'ls demana que prediguin què passa si fiquem un bucle dins d'un altre. Aquesta progressió fa que els alumnes puguin practicar per assimilar i aprofundir en els seus coneixements sobre bucles en programació.",
+          "student_overview": "Bucles dins de bucles que estan dins d'altres bucles. Què vol dir tot això? Amb aquest lliçó aprendràs què passa quan es crea un bucle imbricat."
         },
         "express-2021/Snowflakes with Anna and Elsa": {
           "name": "Flocs de neu amb l'Anna i l'Elsa",
           "overview": "En aquesta lliçó de **miniprojecte**, els alumnes faran una sèrie d'exercicis per crear imatges de flocs de neu amb els personatges de les pel·lícules de _Frozen_.",
           "preparation": "-   Repasseu la lliçó per trobar qualsevol punt que pugui presentar problemes a la classe.\n-   Assegureu-vos que cada alumne tingui el seu diari de reflexió.",
-          "purpose": "Amb aquests exercicis, els alumnes practicaran l'aniuament de bucles mentre creen imatges que els agradarà compartir.\n\nA partir d'una sèrie d'instruccions, pendran les seves pròpies decisions per crear dissenys pensats per repetir-se. Després els modificaran de diverses maneres per acabar creant una obra d'art totalment única.",
-          "student_overview": "L'_Anna_ i l'_Elsa_ són unes patinadores sobre gel fantàstiques, però necessiten que les ajudis a crear patrons al gel. Fes servir bucles aniuats per crear unes formes súper guapes!"
+          "purpose": "Amb aquests exercicis, els alumnes practicaran l'imbricament de bucles mentre creen imatges que els agradarà compartir.\n\nA partir d'una sèrie d'instruccions, pendran les seves pròpies decisions per crear dissenys pensats per repetir-se. Després els modificaran de diverses maneres per acabar creant una obra d'art totalment única.",
+          "student_overview": "L'_Anna_ i l'_Elsa_ són unes patinadores sobre gel fantàstiques, però necessiten que les ajudis a crear patrons al gel. Fes servir bucles imbricats per crear unes formes súper guapes!"
         },
         "express-2021/Looking Ahead with Minecraft ": {
+          "name": "Mirem endavant amb Minecraft",
           "preparation": "-   Repasseu els trencaclosques relacionats amb aquesta lliçó per trobar qualsevol punt que pugui presentar problemes a la classe.\n-   Assegureu-vos que cada alumne tingui el seu diari de reflexió."
         },
         "express-2021/If/Else with Bee": {
+          "name": "If/else amb l'abella",
           "preparation": "-   Repasseu els trencaclosques per trobar qualsevol punt que pugui presentar problemes a la classe.\n-   Assegureu-vos que cada alumne tingui el seu diari de reflexió.",
           "purpose": "Els alumnes practicaran l'ús de condicionals en els seus programes. Els blocs si / si no els ajudaran a fer un programa més flexible. L'abella només recollirà nèctar _si_ (_if_) hi ha una flor, o només farà mel _si_ (_if_) hi ha un rusc."
         },
         "express-2021/While Loops with the Farmer": {
+          "name": "Bucles \"while\" amb la pagesa",
           "preparation": "-   Repasseu els trencaclosques per trobar qualsevol punt que pugui presentar problemes a la classe.\n-   Assegureu-vos que cada alumne tingui el seu diari de reflexió."
         },
         "express-2021/Conditionals in Minecraft: Voyage Aquatic": {
           "name": "El condicionals a Minecraft: Viatge aquàtic",
-          "overview": "En aquesta lliçó de \\*\\*definició de context\", els alumnes podran practicar el contingut que han après fins ara, a més de començar a fer una ullada als condicionals.",
+          "overview": "En aquesta lliçó de **definició de context**, els alumnes podran practicar el contingut que han après fins ara, a més de començar a donar una ullada als condicionals.",
           "preparation": "-   Repasseu els trencaclosques relacionats amb aquesta lliçó per trobar qualsevol punt que pugui presentar problemes a la classe.\n-   Assegureu-vos que cada alumne tingui el seu diari de reflexió.",
           "purpose": "Aquest conjunt de trencaclosques servirà per consolidar i desenvolupar el coneixement sobre bucles i condicionals. En combinar aquests dos conceptes, els alumnes descobriran el potencial de crear programes divertits i innovadors en un entorn nou i emocionant.",
           "student_overview": "Aquí aprendrem a fer servir condicionals en el món de Minecraft."
         },
         "express-2021/Until Loops in Maze": {
+          "name": "Bucles \"until\" al laberint",
           "overview": "En aquesta lliçó de **desenvolupament d'habilitats**, els alumnes aprendran sobre els bucles until. Els alumnes crearan programes en què el personatge principal repeteix accions fins que arriben al punt d'aturada desitjat.",
           "preparation": "-   Repasseu els trencaclosques per trobar qualsevol punt que pugui presentar problemes a la classe.\n-   Assegureu-vos que cada alumne tingui el seu diari de reflexió.",
           "purpose": "Aquest conjunt de trencaclosques servirà per consolidar i desenvolupar el coneixement sobre bucles afegint-hi el condicional until. En combinar aquests conceptes, els alumnes descobriran el potencial de crear programes complexos i innovadors.",
           "student_overview": "Amb els bucles until podràs fer coses increïbles!"
         },
         "express-2021/Harvesting with Conditionals": {
-          "name": "Collir amb condicionals",
+          "name": "Fem la collita amb condicionals",
           "overview": "Els alumnes practicaran amb els bucles while, els bucles until i les declaracions if / else (si / si no). Tots aquests blocs fan servir condicionals. En practicar amb tots tres, aprendran a escriure un codi complex i flexible.",
           "preparation": "-   Repasseu la lliçó per trobar qualsevol punt que pugui presentar problemes a la classe.\n-   Assegureu-vos que cada alumne tingui un Diari de Reflexió.",
-          "purpose": "Practicar l'ús de condicionals en diferents escenaris ajuda l'alumne a entendre millor què poden fer els condicionals. A la lliçó anterior, només havien fet servir condicionals per moure's per un laberint. En aquesta lliçó, utilitzaran condicionals per ajudar la grangera a saber quan collir la collita. Sorgiran nous patrons, i hauran de posar en pràctica la creativitat i el pensament lògic per determinar les condicions en què s'ha d'executar i repetir el codi.",
+          "purpose": "Practicar l'ús de condicionals en diferents escenaris ajuda l'alumne a entendre millor què poden fer els condicionals. A la lliçó anterior, només havien fet servir condicionals per moure's per un laberint. En aquesta lliçó, utilitzaran condicionals per ajudar la pagesa a saber quan segar la collita. Sorgiran nous patrons, i hauran de posar en pràctica la creativitat i el pensament lògic per determinar les condicions en què s'ha d'executar i repetir el codi.",
           "student_overview": "No sempre està clar quan cal fer servir cada condicional. Amb aquesta lliçó agafaràs pràctica decidint què fer."
         },
         "express-2021/Functions in Minecraft": {
@@ -1669,39 +2166,44 @@
           "student_overview": "Sabeu com fer servir funcions per fer el codi més eficient?"
         },
         "express-2021/Functions with Artist": {
-          "name": "Funcions amb l'Artista",
+          "name": "Funcions amb l'artista",
           "overview": "En aquesta lliçó de **desenvolupament d'habilitats**, els alumnes faran servir funcions amb l'Artista.",
           "preparation": "-   Repasseu els trencaclosques per trobar qualsevol punt que pugui presentar problemes a la classe.\n-   Assegureu-vos que cada alumne tingui el seu diari de reflexió.",
           "purpose": "Un dels objectius més importants d'aquesta lliçó és que els alumnes tinguin un espai per crear alguna cosa de què se sentin orgullosos. Aquests trencaclosques avancen de manera que les imatges són cada vegada més complexes, però cada trencaclosques nou es basa en l'anterior. Al final de la lliçó, els alumnes se sentiran segurs i orgullosos del seu esforç.",
           "student_overview": "Fes servir funcions per fer dibuixos complicats més fàcilment!"
         },
         "express-2021/Functions with Harvester": {
-          "name": "Funcions amb La segadora",
-          "overview": "En aquesta lliçó de **desenvolupament d'habilitats**, els alumnes faran servir condicionals amb funcions per collir collites a La segadora.",
+          "name": "Funcions amb l'agricultora",
+          "overview": "En aquesta lliçó de **desenvolupament d'habilitats**, els alumnes faran servir condicionals amb funcions per collir collites a l'Agricultora.",
           "preparation": "-   Repasseu els trencaclosques per trobar qualsevol punt que pugui presentar problemes a la classe.\n-   Assegureu-vos que cada alumne tingui el seu diari de reflexió.",
           "purpose": "Aquesta lliçó està pensada per animar els alumnes a fer servir les funcions de maneres més creatives. Aprendran que hi ha moltes maneres d'abordar un problema, però que n'hi ha que són més eficients que d'altres. Aquests trencaclosques estan pensats per millorar les habilitats de resolució de problemes i de pensament crític.",
-          "student_overview": "Les funcions t'estalviaran molta feina mentre ajudes la grangera amb la seva collita!"
+          "student_overview": "Les funcions t'estalviaran molta feina mentre ajudes la pagesa amb la seva collita!"
         },
         "express-2021/lesson-4": {
+          "name": "Text i preguntes",
           "preparation": "Repasseu els nivells i les diapositives de la lliçó."
         },
         "express-2021/Variables with Artist": {
-          "name": "Ús de variables amb l'Artista",
+          "name": "Fem servir variables amb l'artista",
           "preparation": "-   Repasseu els trencaclosques per trobar qualsevol punt que pugui presentar problemes a la classe.\n-   Assegureu-vos que cada alumne tingui el seu diari de reflexió."
         },
         "express-2021/Changing Variables with Bee": {
+          "name": "Variables amb l'abella",
           "preparation": "-   Repasseu els trencaclosques per trobar qualsevol punt que pugui presentar problemes a la classe.\n-   Assegureu-vos que cada alumne tingui el seu diari de reflexió.",
           "purpose": "Aquesta lliçó demostra en quins sentits el codi amb valors canviants pot ser útil i prepara els alumnes per entendre com funcionen els bucles for en les lliçons següents."
         },
         "express-2021/For Loops with Bee": {
+          "name": "Bucles \"for\" amb l'abella",
           "preparation": "-   Repasseu els trencaclosques per trobar qualsevol punt que pugui presentar problemes a la classe.\n-   Assegureu-vos que cada alumne tingui el seu diari de reflexió.",
           "purpose": "El concepte d'avui, els loops for, és molt important en informàtica. A més de fer-se servir molt, el procés d'aprendre a fer servir els bucles for reforça l'aprenentatge d'altres conceptes importants (com les variables i els paràmetres). Els alumnes podran posar en pràctica el pensament crític per resoldre problemes en què hauran de determinar els valors inicials, finals i esglaonats per a cada bucle. Aquest concepte també integra moltes matemàtiques, o sigui que, si voleu, podeu aprofitar i combinar-lo amb una lliçó de matemàtiques per proporcionar una experiència d'aprenentatge encara més profunda.",
           "student_overview": "Zzz! En aquests trencaclosques, hauràs de guiar una abella fins al nèctar i la mel fent servir bucles for!"
         },
         "express-2021/For Loops with Artist": {
+          "name": "Funcions amb l'artista",
           "preparation": "-   Repasseu la lliçó per trobar qualsevol punt que pugui presentar problemes a la classe.\n-   Assegureu-vos que cada alumne tingui el seu diari de reflexió."
         },
         "express-2021/End of Course Project": {
+          "name": "Projecte de final de curs",
           "preparation": "-   Dediqueu un temps a crear el vostre propi projecte amb les dues eienes del projecte que tenen disponibles els alumnes. Familiaritzeu-vos amb les capacitats i limitacions de cada eina.\n-   Modifiqueu la \\*_\\\\_rúbrica d'avaluació\\* de manera que reflecteixi els objectius de la vostra classe i imprimiu-ne una còpia per cada alumne o grup.\n-   Modifiqueu la **\\*guia de planificació del projecte** de manera que s'escaigui per la vostra classe i imprimiu-ne una per cada alumne o grup."
         },
         "pre-express-2021/Learn to Drag and Drop": {
@@ -1713,10 +2215,10 @@
         },
         "pre-express-2021/Sequencing with Scrat": {
           "name": "Seqüenciació amb l'Scrat",
-          "overview": "En aquesta lliçó de **desenvolupament d'habilitats**, els estudiants crearan algorismes de seqüenciació per moure un esquirol des d'un cantó d'un laberint fins al gla que hi ha a l'altra banda. Per fer-ho, apilaran blocs de codi en una seqüència lineal.",
+          "overview": "En aquesta lliçó de **desenvolupament d'habilitats**, els estudiants crearan algorismes de seqüenciació per moure un esquirol des d'un cantó d'un laberint fins a la gla que hi ha a l'altra banda. Per fer-ho, apilaran blocs de codi en una seqüència lineal.",
           "preparation": "-   Assegureu-vos que cada estudiant tingui el seu propi diari de reflexió.",
           "purpose": "En aquesta lliçó, els estudiants desenvoluparan les seves habilitats de programació i depuració en una plataforma informàtica. El format en blocs d'aquests trencaclosques els ajudaran a aprendre sobre seqüències i conceptes sense haver de preocupar-se per perfeccionar la sintaxi.",
-          "student_overview": "Programa l'Scrat per portar-lo fins el gla."
+          "student_overview": "Programa l'Scrat per portar-lo fins a la gla."
         },
         "pre-express-2021/Programming in with Angry Birds": {
           "name": "Programació amb Angry Birds",
@@ -1731,15 +2233,15 @@
           "purpose": "Per tal de facilitar la transferència de coneixements, aquesta lliçó ofereix als alumnes un entorn nou on practicar les habilitats que han estat aprenent. Els més incondicionals de La guerra de les galàxies saltaran d'alegria quan vegin aquests trencaclosques. Cada trencaclosques de la sèrie s'ha afegit per aprofundir en la comprensió dels conceptes bàsics que hauran de fer servir al llarg d'aquest curs."
         },
         "pre-express-2021/Programming in Harvester": {
-          "name": "Programació amb la segadora",
-          "overview": "En aquesta lliçó de **desenvolupament d'habilitats**, els alumnes aplicaran els conceptes de programació que han après en l'entorn de la Segadora. Continuaran desenvolupant les habilitats relacionades amb els algorismes seqüencials i començaran a fer servir el procés de depuració.",
+          "name": "Programació amb l'Agricultora",
+          "overview": "En aquesta lliçó de **desenvolupament d'habilitats**, els alumnes aplicaran els conceptes de programació que han après en l'entorn de l'Agricultora. Continuaran desenvolupant les habilitats relacionades amb els algorismes seqüencials i començaran a fer servir el procés de depuració.",
           "preparation": "-   Repasseu els trencaclosques per trobar qualsevol punt que pugui presentar problemes a la classe.\n-   Assegureu-vos que cada alumne tingui el seu diari de reflexió.",
           "purpose": "En aquesta lliçó, els alumnes desenvoluparan habilitats de depuració i continuaran desenvolupant les seves habilitats de programació.",
-          "student_overview": "Ajuda la Segadora a collir verdures pel camí."
+          "student_overview": "Ajuda l'Agricultura a collir verdures pel camí."
         },
         "pre-express-2021/Loops with Scrat": {
           "name": "Bucles amb l'Scrat",
-          "overview": "En aquesta lliçó de **desenvolupament d'habilitats**, els alumnes practicaran amb el concepte de bucles mentre programen trencaclosques que tenen com a objectiu ajudar l'esquirol a arribar al gla.",
+          "overview": "En aquesta lliçó de **desenvolupament d'habilitats**, els alumnes practicaran amb el concepte de bucles mentre programen trencaclosques que tenen com a objectiu ajudar l'esquirol a arribar a la gla.",
           "preparation": "-   (Opcional) Tria un parell de trencaclosques per fer en grup amb tota la classe.\n-   Assegura't que cada alumne tingui el seu diari de reflexió.",
           "purpose": "En aquesta lliçó, els alumnes aprofundiran en els bucles i aprendran a implementar-los en el codi de Blockly. En programació, és important fer saber fer servir els _bucles_, ja que repetir manualment les ordres és feixuc i poc eficient. Amb aquests trencaclosques de Code.org, els alumnes aprendran a afegir instruccions a bucles existents, a agrupar codis repetits en bucles, i a reconèixer patrons que cal repetir.",
           "student_overview": "Fes servir els bucles per ajudar l'Scrat a cobrir més terreny."
@@ -1786,9 +2288,13 @@
           "purpose": "Aquesta lliçó està dissenyada per començar a aprendre el vocabulari bàsic del Laboratori d'Sprites i a aplicar els conceptes apresos en altres entorns a aquesta eina. Mitjançant la creació d'una peixera, els alumnes començaran a comprendre el model de programació d'aquesta eina, i descobriran maneres de fer-la servir per expressar-se.",
           "student_overview": "Aprèn a crear i editar sprites."
         },
+        "coursee-2021/Private and Personal Information": {
+          "preparation": "-   Reviseu els materials didàctics.\n-   Imprimiu fitxes per cada alumne.",
+          "purpose": "El pla d'estudis de Ciutadania Digital de Common Sense toca sis temes centrals fonamentats en els estudis més recents sobre infants, mitjans i teconogia. Aquesta lliçó se centra en la privacitat i la seguretat. Els alumnes aprendran a protegir la seva informació personal i aprofundiran en els drets de privacitat que protegeixen les seves dades per poder defensar-se a si mateixos i als altres."
+        },
         "coursee-2021/Nested Loops in Frozen": {
           "overview": "En aquesta lliçó de **miniprojecte**, els alumnes faran una sèrie d'exercicis per crear imatges de flocs de neu amb els personatges de les pel·lícules de _Frozen_.",
-          "student_overview": "L'_Anna_ i l'_Elsa_ són unes patinadores sobre gel fantàstiques, però necessiten que les ajudis a crear patrons al gel. Fes servir bucles aniuats per crear unes formes súper guapes!"
+          "student_overview": "L'_Anna_ i l'_Elsa_ són unes patinadores sobre gel fantàstiques, però necessiten que les ajudis a crear patrons al gel. Fes servir bucles imbricats per crear unes formes súper guapes!"
         },
         "coursee-2021/Functions: Songwriting": {
           "name": "Composició de cançons"
@@ -1800,24 +2306,30 @@
           "student_overview": "Sabeu com fer servir funcions per fer el codi més eficient?"
         },
         "coursee-2021/Functions in Artist": {
-          "name": "Funcions amb l'Artista",
+          "name": "Funcions amb l'artista",
           "overview": "En aquesta lliçó de **desenvolupament d'habilitats**, els alumnes faran servir funcions amb l'Artista.",
           "purpose": "Un dels objectius més importants d'aquesta lliçó és que els alumnes tinguin un espai per crear alguna cosa de què se sentin orgullosos. Aquests trencaclosques avancen de manera que les imatges són cada vegada més complexes, però cada trencaclosques nou es basa en l'anterior. Al final de la lliçó, els alumnes se sentiran segurs i orgullosos del seu esforç.",
           "student_overview": "Fes servir funcions per fer dibuixos complicats més fàcilment!"
         },
         "coursee-2021/Conditionals in Minecraft: Voyage Aquatic": {
           "name": "El condicionals a Minecraft: Viatge aquàtic",
-          "overview": "En aquesta lliçó de \\*\\*definició de context\", els alumnes podran practicar el contingut que han après fins ara, a més de començar a fer una ullada als condicionals."
+          "overview": "En aquesta lliçó de **definició de context**, els alumnes podran practicar el contingut que han après fins ara, a més de començar a donar una ullada als condicionals."
         },
         "coursee-2021/Functions in Harvester": {
-          "name": "Funcions amb La segadora",
-          "student_overview": "Les funcions t'estalviaran molta feina mentre ajudes la grangera amb la seva collita!"
+          "name": "Funcions amb l'agricultora",
+          "student_overview": "Les funcions t'estalviaran molta feina mentre ajudes la pagesa amb la seva collita!"
+        },
+        "coursee-2021/End of Course Project": {
+          "name": "Projecte de final de curs"
         },
         "csd6-2021/Functions with Parameters": {
           "name": "Funcions amb Paràmetres"
         },
         "csd3-2021/Variables": {
           "name": "Variables"
+        },
+        "csd3-2021/Sprite Properties": {
+          "name": "Propietats de l'sprite"
         },
         "csd3-2021/Text": {
           "name": "Text"
@@ -1876,41 +2388,65 @@
         "express-2020/Sticker Art with Loops": {
           "name": "Art amb enganxines fet amb bucles"
         },
+        "express-2020/Nested Loops in Maze": {
+          "name": "Bucles imbricats al laberint"
+        },
         "express-2020/Snowflakes with Anna and Elsa": {
           "name": "Flocs de neu amb l'Anna i l'Elsa"
+        },
+        "express-2020/If/Else with Bee": {
+          "name": "If/else amb l'abella"
         },
         "express-2020/Conditionals in Minecraft: Voyage Aquatic": {
           "name": "El condicionals a Minecraft: Viatge aquàtic"
         },
+        "express-2020/Until Loops in Maze": {
+          "name": "Bucles \"until\" al laberint"
+        },
         "express-2020/Harvesting with Conditionals": {
-          "name": "Collir amb condicionals"
+          "name": "Fem la collita amb condicionals"
         },
         "express-2020/Functions in Minecraft": {
           "name": "Funcions a Minecraft"
         },
         "express-2020/Functions with Harvester": {
-          "name": "Funcions amb La segadora"
+          "name": "Funcions amb l'agricultora"
         },
         "express-2020/Functions with Artist": {
-          "name": "Funcions amb l'Artista"
+          "name": "Funcions amb l'artista"
+        },
+        "express-2020/For Loops with Bee": {
+          "name": "Bucles \"for\" amb l'abella"
+        },
+        "express-2020/For Loops with Artist": {
+          "name": "Funcions amb l'artista"
         },
         "express-2020/Swimming Fish in Sprite Lab": {
-          "name": "Peixos, a nedar!, al el Laboratori d'Sprites"
+          "name": "Peixos, a nedar!, al Laboratori d'Sprites"
         },
         "express-2020/Virtual Pet with Sprite Lab": {
           "name": "Mascota virtual al Laboratori d'Sprites"
         },
+        "express-2020/End of Course Project": {
+          "name": "Projecte de final de curs"
+        },
         "courseb-2020/Move It, Move It": {
           "name": "Mou-lo, Mou-lo"
+        },
+        "courseb-2020/Sequencing in Maze": {
+          "name": "Seqüenciació amb Angry Birds"
         },
         "courseb-2020/Programming in Maze": {
           "name": "Programació amb Angry Birds"
         },
         "courseb-2020/Programming in Harvester": {
-          "name": "Programació amb la segadora"
+          "name": "Programació amb l'Agricultora"
         },
         "courseb-2020/Loops: Getting Loopy": {
           "name": "Fent bucles"
+        },
+        "courseb-2020/Loops in Harvester": {
+          "name": "Bucles amb l'Agricultora"
         },
         "courseb-2020/Loops in Collector": {
           "name": "Bucles amb la Laurel"
@@ -1933,14 +2469,29 @@
         "coursed-2020/Loops in Ice Age": {
           "name": "Bucles a l'Edat de Gel"
         },
+        "coursed-2020/Nested Loops in Bee": {
+          "name": "Bucles imbricats al laberint"
+        },
         "coursed-2020/Conditionals with Cards": {
           "name": "Condicionals amb targetes"
         },
+        "coursed-2020/Conditionals in Bee": {
+          "name": "If/else amb l'abella"
+        },
+        "coursed-2020/While Loops in Farmer": {
+          "name": "Bucles \"while\" amb la pagesa"
+        },
+        "coursed-2020/Until Loops in Maze": {
+          "name": "Bucles \"until\" al laberint"
+        },
         "coursed-2020/Conditionals & Loops in Harvester": {
-          "name": "Collir amb condicionals"
+          "name": "Fem la collita amb condicionals"
         },
         "coursed-2020/Unplugged: Binary": {
           "name": "Imatges binàries"
+        },
+        "coursed-2020/End of Course Project": {
+          "name": "Projecte de final de curs"
         },
         "coursec-2020/Programming in Maze": {
           "name": "Programació amb Angry Birds"
@@ -1960,17 +2511,26 @@
         "coursec-2020/Loops with Rey and BB-8": {
           "name": "Bucles amb la Rey i el BB-8"
         },
+        "coursec-2020/Looking Ahead": {
+          "name": "Mirem endavant amb Minecraft"
+        },
         "coursec-2020/Sticker Art with Loops": {
           "name": "Art amb enganxines fet amb bucles"
         },
         "coursec-2020/Events: The Big Event": {
           "name": "El gran esdeveniment"
         },
+        "coursec-2020/End of Course Project: Create a Play Lab Game": {
+          "name": "Projecte de final de curs"
+        },
         "coursee-2020/Conditionals in Minecraft: Voyage Aquatic": {
           "name": "El condicionals a Minecraft: Viatge aquàtic"
         },
         "coursee-2020/Learning Sprites with Sprite Lab": {
           "name": "Peixos, a nedar! al Laboratori d'Sprites"
+        },
+        "coursee-2020/Nested Loops in Bee": {
+          "name": "Bucles imbricats al laberint"
         },
         "coursee-2020/Functions: Songwriting": {
           "name": "Composició de cançons"
@@ -1979,22 +2539,34 @@
           "name": "Funcions a Minecraft"
         },
         "coursee-2020/Functions in Harvester": {
-          "name": "Funcions amb La segadora"
+          "name": "Funcions amb l'agricultora"
         },
         "coursee-2020/Functions in Artist": {
-          "name": "Funcions amb l'Artista"
+          "name": "Funcions amb l'artista"
+        },
+        "coursee-2020/End of Course Project": {
+          "name": "Projecte de final de curs"
+        },
+        "coursea-2020/Safety in My Online Neighborhood": {
+          "name": "Seguretat al meu barri d'internet"
         },
         "coursea-2020/Learn to Drag and Drop": {
           "name": "Aprèn a arrossegar i deixar anar"
         },
         "coursea-2020/Programming: Happy Maps": {
-          "name": "Mapes feliços"
+          "name": "Mapes Feliços"
         },
         "coursea-2020/Sequencing with Scrat": {
           "name": "Seqüenciació amb l'Scrat"
         },
+        "coursea-2020/Programming in Ice Age": {
+          "name": "Programació amb l'Scrat"
+        },
         "coursea-2020/Programming with Rey and BB-8": {
           "name": "Programació amb la Rey i el BB-8"
+        },
+        "coursea-2020/Loops: Happy Loops": {
+          "name": "Mapes Feliços"
         },
         "coursea-2020/Loops in Ice Age": {
           "name": "Bucles amb l'Scrat"
@@ -2014,11 +2586,23 @@
         "coursef-2020/Learning Sprites with Sprite Lab": {
           "name": "Peixos, a nedar! al Laboratori d'Sprites"
         },
+        "coursef-2020/Nested Loops in the Maze": {
+          "name": "Bucles imbricats al laberint"
+        },
         "coursef-2020/Internet": {
           "name": "Internet"
         },
+        "coursef-2020/For Loops in Bee": {
+          "name": "Bucles \"for\" amb l'abella"
+        },
+        "coursef-2020/For Loops in Artist": {
+          "name": "Funcions amb l'artista"
+        },
         "coursef-2020/Virtual Pet": {
           "name": "Mascota virtual al Laboratori d'Sprites"
+        },
+        "coursef-2020/End of Course Project": {
+          "name": "Projecte de final de curs"
         }
       }
     }
