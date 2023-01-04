@@ -36,25 +36,30 @@ class ApplabVisualizationColumn extends React.Component {
     awaitingContainedResponse: PropTypes.bool.isRequired,
     widgetMode: PropTypes.bool
   };
-  /*
   componentDidMount() {
-    this.visual.focus();
-
-    this.visual.addEventListener('touchmove', this.preventBehavior, {
-      passive: false
-    });
+    this.visualizationColumn.addEventListener(
+      'touchmove',
+      this.preventBehavior,
+      {
+        passive: false
+      }
+    );
   }
 
   componentWillUnmount() {
-    this.visual.removeEventListener('touchmove', this.preventBehavior, {
-      passive: false
-    });
+    this.visualizationColumn.removeEventListener(
+      'touchmove',
+      this.preventBehavior,
+      {
+        passive: false
+      }
+    );
   }
 
   preventBehavior = e => {
     e.preventDefault();
   };
-  */
+
   getClassNames() {
     const {
       visualizationHasPadding,
@@ -133,13 +138,14 @@ class ApplabVisualizationColumn extends React.Component {
         </PhoneFrame>
       );
     }
-    // this.visual = visualization;
-
     return (
       <div
         id="visualizationColumn"
         className={this.getClassNames()}
         style={maxWidth}
+        ref={el => {
+          this.visualizationColumn = el;
+        }}
       >
         {!isReadOnlyWorkspace && (
           <PlaySpaceHeader
