@@ -955,8 +955,8 @@
         "courseF_apps_collector": {
           "move a sprite, changing its direction randomly": "yönünü rastgele değiştirerek hareketli nesneyi hareket ettirin",
           "move a sprite to the left across the screen": "hareketli nesneyi ekran boyunca sola hareket ettirin",
-          "Move a sprite to the left across the screen. If it goes off the left side of the screen it moves to the right side of the screen.": "Bir hareketli nesneyi ekran boyunca sola hareket ettirin. Ekranın sol tarafından çıkarsa ekranın sağ tarafına doğru hareket eder.",
-          "randomly move the sprite up or down": "hareketli nesneyi rastgelen aşağı veya yukarı hareket ettirin",
+          "Move a sprite to the left across the screen. If it goes off the left side of the screen it moves to the right side of the screen.": "Bir hareketli grafiği ekranda sola doğru hareket ettirin. Ekranın sol tarafından çıkarsa, ekranın sağ tarafına geçer.",
+          "randomly move the sprite up or down": "hareketli nesneyi rastgele aşağı veya yukarı hareket ettirin",
           "move a sprite to the right across the screen": "hareketli nesneyi ekran boyunca sağa hareket ettirin",
           "rotate a sprite to its left": "hareketli nesneyi soluna döndürün",
           "rotate a sprite to its right": "hareketli nesneyi sağına döndürün",
@@ -2589,8 +2589,8 @@
         "courseF_apps_collector2022": {
           "move a sprite, changing its direction randomly": "yönünü rastgele değiştirerek hareketli nesneyi hareket ettirin",
           "move a sprite to the left across the screen": "hareketli nesneyi ekran boyunca sola hareket ettirin",
-          "Move a sprite to the left across the screen. If it goes off the left side of the screen it moves to the right side of the screen.": "Bir hareketli nesneyi ekran boyunca sola hareket ettirin. Ekranın sol tarafından çıkarsa ekranın sağ tarafına doğru hareket eder.",
-          "randomly move the sprite up or down": "hareketli nesneyi rastgelen aşağı veya yukarı hareket ettirin",
+          "Move a sprite to the left across the screen. If it goes off the left side of the screen it moves to the right side of the screen.": "Bir hareketli grafiği ekranda sola doğru hareket ettirin. Ekranın sol tarafından çıkarsa, ekranın sağ tarafına geçer.",
+          "randomly move the sprite up or down": "hareketli nesneyi rastgele aşağı veya yukarı hareket ettirin",
           "move a sprite to the right across the screen": "hareketli nesneyi ekran boyunca sağa hareket ettirin",
           "rotate a sprite to its left": "hareketli nesneyi soluna döndürün",
           "rotate a sprite to its right": "hareketli nesneyi sağına döndürün",
@@ -2605,8 +2605,8 @@
         "courseF_apps_collector_-2022-2": {
           "move a sprite, changing its direction randomly": "yönünü rastgele değiştirerek hareketli nesneyi hareket ettirin",
           "move a sprite to the left across the screen": "hareketli nesneyi ekran boyunca sola hareket ettirin",
-          "Move a sprite to the left across the screen. If it goes off the left side of the screen it moves to the right side of the screen.": "Bir hareketli nesneyi ekran boyunca sola hareket ettirin. Ekranın sol tarafından çıkarsa ekranın sağ tarafına doğru hareket eder.",
-          "randomly move the sprite up or down": "hareketli nesneyi rastgelen aşağı veya yukarı hareket ettirin",
+          "Move a sprite to the left across the screen. If it goes off the left side of the screen it moves to the right side of the screen.": "Bir hareketli grafiği ekranda sola doğru hareket ettirin. Ekranın sol tarafından çıkarsa, ekranın sağ tarafına geçer.",
+          "randomly move the sprite up or down": "hareketli nesneyi rastgele aşağı veya yukarı hareket ettirin",
           "move a sprite to the right across the screen": "hareketli nesneyi ekran boyunca sağa hareket ettirin",
           "rotate a sprite to its left": "hareketli nesneyi soluna döndürün",
           "rotate a sprite to its right": "hareketli nesneyi sağına döndürün",
