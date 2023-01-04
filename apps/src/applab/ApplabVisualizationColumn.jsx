@@ -37,6 +37,24 @@ class ApplabVisualizationColumn extends React.Component {
     widgetMode: PropTypes.bool
   };
 
+  componentDidMount() {
+    this.visual.focus();
+
+    this.visual.addEventListener('touchmove', this.preventBehavior, {
+      passive: false
+    });
+  }
+
+  componentWillUnmount() {
+    this.visual.removeEventListener('touchmove', this.preventBehavior, {
+      passive: false
+    });
+  }
+
+  preventBehavior = e => {
+    e.preventDefault();
+  };
+
   getClassNames() {
     const {
       visualizationHasPadding,
@@ -97,6 +115,8 @@ class ApplabVisualizationColumn extends React.Component {
         />
       )
     ];
+    this.visual = visualization;
+
     // Share view still uses image for phone frame. Would eventually like it to
     // use same code
     if (playspacePhoneFrame) {
