@@ -545,6 +545,10 @@ pl:
   signup_registration_closed: Co roku w grudniu twoja klasa może dołączyć do milionów
     studentów z całego świata świętujących Tydzień Edukacji Informatycznej z godziną
     kodowania. Otworzymy rejestrację na doroczną uroczystość w październiku.
+  signup_registration_closed_2022_markdown: 'Registration for this year''s Hour of
+    Code event map is currently closed, but you can still [host an Hour of Code](%{hoc_activities_url})
+    and join in the celebration on social media! Post fun pictures or video of your
+    event using the #HourOfCode hashtag!'
   signup_header: Zorganizuj Godzinę Kodowania %{campaign_date} i zarejestruj ją tutaj.
   signup_name_label: Twoje imię i nazwisko
   signup_name_error: Wymagane jest nazwisko.

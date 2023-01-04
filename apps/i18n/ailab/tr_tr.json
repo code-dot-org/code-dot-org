@@ -7,6 +7,13 @@
   "selectedFeatureNumerical": "Az önce sayısal bir özellik seçtiniz.",
   "selectedFeatureCategorical": "Az önce kategorik bir özellik seçtiniz.",
   "datasets": {
+    "medical_priority": {
+      "fields": {
+        "age": {
+          "id": "yaş"
+        }
+      }
+    },
     "shoe_survey_toy": {
       "fields": {
         "weather": {
@@ -71,6 +78,23 @@
         }
       }
     },
+    "insurance_cost": {
+      "fields": {
+        "age": {
+          "id": "yaş"
+        }
+      }
+    },
+    "nutrition": {
+      "fields": {
+        "Category": {
+          "id": "Kategori"
+        },
+        "Description": {
+          "id": "Tanım"
+        }
+      }
+    },
     "raspado_toy": {
       "fields": {
         "strawberry": {
@@ -78,6 +102,16 @@
         },
         "lime": {
           "id": "Misket limonu"
+        }
+      }
+    },
+    "shapes_v2_toy": {
+      "fields": {
+        "sides": {
+          "id": "kenarlar"
+        },
+        "size": {
+          "id": "boyut"
         }
       }
     },
@@ -100,6 +134,16 @@
         },
         "cheese": {
           "id": "peynir\n"
+        }
+      }
+    },
+    "billionaires": {
+      "fields": {
+        "Age": {
+          "id": "Yaş"
+        },
+        "Gender": {
+          "id": "Cinsiyet"
         }
       }
     },
@@ -132,52 +176,20 @@
         }
       }
     },
-    "safari_toy": {
-      "fields": {
-        "people": {
-          "id": "insanlar"
-        },
-        "rhino": {
-          "id": "gergedan"
-        },
-        "elephant": {
-          "id": "fil"
-        },
-        "alligator": {
-          "id": "Timsah"
-        },
-        "trees": {
-          "id": "ağaçlar "
-        }
-      }
-    },
-    "poke_toy": {
-      "fields": {
-        "avocado": {
-          "id": "avokado"
-        },
-        "onion": {
-          "id": "soğan"
-        },
-        "ginger": {
-          "id": "zencefil"
-        }
-      }
-    },
-    "insurance_cost": {
+    "census_part": {
       "fields": {
         "age": {
           "id": "yaş"
         }
       }
     },
-    "nutrition": {
+    "loneliness_interests": {
       "fields": {
-        "Category": {
-          "id": "Kategori"
+        "Internet": {
+          "id": "İnternet"
         },
-        "Description": {
-          "id": "Tanım"
+        "Writing": {
+          "id": "Yazma"
         }
       }
     },
@@ -204,6 +216,25 @@
         }
       }
     },
+    "safari_toy": {
+      "fields": {
+        "people": {
+          "id": "insanlar"
+        },
+        "rhino": {
+          "id": "gergedan"
+        },
+        "elephant": {
+          "id": "fil"
+        },
+        "alligator": {
+          "id": "Timsah"
+        },
+        "trees": {
+          "id": "ağaçlar "
+        }
+      }
+    },
     "abalone": {
       "fields": {
         "Length": {
@@ -211,6 +242,26 @@
         },
         "Height": {
           "id": "Yükseklik"
+        }
+      }
+    },
+    "zoo": {
+      "fields": {
+        "Aquatic": {
+          "id": "Su"
+        }
+      }
+    },
+    "poke_toy": {
+      "fields": {
+        "avocado": {
+          "id": "avokado"
+        },
+        "onion": {
+          "id": "soğan"
+        },
+        "ginger": {
+          "id": "zencefil"
         }
       }
     },
@@ -248,10 +299,40 @@
         }
       }
     },
+    "boba_toy": {
+      "fields": {
+        "banana": {
+          "id": "muz"
+        }
+      }
+    },
     "heart": {
       "fields": {
         "Age": {
           "id": "Yaş"
+        }
+      }
+    },
+    "shapes_v1_toy": {
+      "fields": {
+        "sides": {
+          "id": "kenarlar"
+        },
+        "size": {
+          "id": "boyut"
+        }
+      }
+    },
+    "loneliness_music": {
+      "fields": {
+        "Music": {
+          "id": "Müzik"
+        },
+        "Dance": {
+          "id": "Dans et"
+        },
+        "Country": {
+          "id": "Ülke"
         }
       }
     }

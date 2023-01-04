@@ -352,12 +352,23 @@ en:
           student_description: 'Phase 2 Online: Blended Summer Study'
         allthethings:
           title: All the Things!
-          description: All the level types for UI testing. Please sign in to test applab levels (By design, applab levels only work if signed in. Normally, we make people sign in, but this is only enforceable for a whole script and would be annoying to do for this script).
+          description: |-
+            Hi there! This is a special unit that Code.org uses for User Interface (UI) testing. None of the lessons or levels in this unit are meant to be used in classrooms!
+
+            If you're not a code.org engineer but managed to discover this unit: congratulations! It's like you discovered a secret on our website! But if you're looking for more info about our curricula or tools, we recommend checking out [https://code.org/educate/][0] instead.
+
+            If you are a code.org engineer: this script contains all the level types for UI testing. Please sign in to test applab levels (By design, applab levels only work if signed in. Normally, we make people sign in, but this is only enforceable for a whole script and would be annoying to do for this script).
           description_short: All the level types for UI testing
           description_audience: ''
           lesson_groups: {}
-          student_description: All the level types for UI testing. Please sign in to test applab levels (By design, applab levels only work if signed in. Normally, we make people sign in, but this is only enforceable for a whole script and would be annoying to do for this script).
+          student_description: |-
+            Hi there! This is a special unit that Code.org uses for User Interface (UI) testing. None of the lessons or levels in this unit are meant to be used in classrooms!
+
+            If you're not a code.org engineer but managed to discover this unit: congratulations! It's like you discovered a secret on our website! But if you're looking for more info about our curricula or tools, we recommend checking out [https://code.org/educate/][0] instead.
+
+            If you are a code.org engineer: this script contains all the level types for UI testing. Please sign in to test applab levels (By design, applab levels only work if signed in. Normally, we make people sign in, but this is only enforceable for a whole script and would be annoying to do for this script).
           name: allthethings
+          lessons: {}
         algebraPD2b:
           title: Computer Science in Algebra PD
           description: 'Phase 2 Online: Blended Summer Study'
@@ -7999,6 +8010,7 @@ en:
           description_audience: ''
           lesson_groups: {}
           name: dlp-csd-overview-2022
+          lessons: {}
         dlp-csd-mod1-2022:
           title: 2022 CS Discoveries Deeper Learning FiT Module
           description: ''
@@ -8473,8 +8485,8 @@ en:
           title: Object-Oriented Programming
           description_audience: ''
           description_short: Students learn fundamental Java concepts, discover their identity as software engineers, and use debugging strategies and code reviews to improve their programming skills.
-          description: "This unit exposes students to object-oriented programming principles as they explore The Neighborhood. Students learn fundamental Java concepts as they navigate and interact with The Neighborhood with `Painter` objects and create new types of `Painter`s to expand the capabilities of their programs. Students practice predicting the outcome of program code and use their `Painter` objects with conditional statements, `while` loops, and Boolean expressions to navigate mazes and create drawings. While students work with the `Painter`, they practice identifying syntax and logic errors to explain why code segments will not compile or work as intended. Additionally, students learn to document program code using comments to describe the behavior of specific code segments. Throughout this unit, students discover their identity as software engineers and use debugging strategies and code reviews to improve their programming skills.\n\n## Finished Teaching This Unit?\n\nAnswer this [**short survey**][0] to let the Code.org curriculum team know how the unit went."
-          student_description: This unit exposes you to object-oriented programming principles as you explore The Neighborhood. You learn fundamental Java concepts as you navigate and interact with The Neighborhood with `Painter` objects and create new types of `Painter`s to expand the capabilities of your programs. You practice predicting the outcome of program code and use your `Painter` objects with conditional statements, `while` loops, and Boolean expressions to navigate mazes and create drawings. While you work with the `Painter`, you practice identifying syntax and logic errors to explain why code segments will not compile or work as intended. Additionally, you learn to document program code using comments to describe the behavior of specific code segments. Throughout this unit, you discover your identity as a software engineer and use debugging strategies and code reviews to improve your programming skills.
+          description: "This unit introduces students to object-oriented programming principles as they explore The Neighborhood and discover their identity as a software engineer. Students learn fundamental Java concepts as they navigate and paint in The Neighborhood with `Painter` objects and extend the `Painter` class to expand the capabilities of their programs. Students practice predicting the outcome of program code and developing algorithms using sequencing, selection, and iteration to navigate mazes and paint murals. Students also learn to document program code using comments to describe the behavior of specific code segments and conduct code reviews to receive feedback from their peers.\n\n::: details [**\U0001F3AF Unit Objectives**]\n\n### _By the end of this unit, students will be able to . . ._\n\n-   Use inheritance to create subclasses that extend an existing class\n\n-   Write methods with and without parameters to perform a specific task\n\n-   Implement algorithms sequencing, selection, and iteration\n\n-   Write clear and readable code using methods, control structures, and comments\n\n-   Improve a program through iterative development based on feedback\n    :::\n\n## Finished Teaching This Unit?\n\nAnswer this [**short survey**][0] to let the Code.org curriculum team know how the unit went."
+          student_description: "This unit introduces you to object-oriented programming principles as you explore The Neighborhood and discover your identity as a software engineer. You learn fundamental Java concepts as you navigate and paint in The Neighborhood with `Painter` objects and extend the `Painter` class to expand the capabilities of your programs. You practice predicting the outcome of program code and developing algorithms using sequencing, selection, and iteration to navigate mazes and paint murals. You also learn to document program code using comments to describe the behavior of specific code segments and conduct code reviews to receive feedback from your peers.\n\n::: details [**\U0001F3AF Unit Objectives**]\n\n### _By the end of this unit, you will be able to . . ._\n\n-   Use inheritance to create subclasses that extend an existing class\n\n-   Write methods with and without parameters to perform a specific task\n\n-   Implement algorithms sequencing, selection, and iteration\n\n-   Write clear and readable code using methods, control structures, and comments\n\n-   Improve a program through iterative development based on feedback\n    :::"
         csa2-2023:
           lessons:
             lesson-1:
@@ -8516,8 +8528,8 @@ en:
           title: Class Structure and Design
           description_audience: ''
           description_short: Students develop an understanding of data encapsulation and object-oriented design decisions.
-          description: "This unit expands on the object-oriented programming principles introduced in Unit 1 to explore design principles as students develop classes with attributes and behaviors and work with primitive and object data. Students learn to work with variables and user input as they develop and utilize classes and objects to represent desserts, customers, and food trucks for the Project Mercury Pastries Food Truck business. As students work with the `Dessert` class, they build on their knowledge of inheritance to design subclasses that represent specific types of desserts. While working with variables, students learn to create and evaluate expressions using assignment and relational operators and trace code segments to determine the result of output. Throughout this unit, students continue to develop software engineering skills as they learn to use UML diagrams to represent classes and the DRY principle to refactor program code.\n\n### AP Classroom Personal Progress Checks\n\nTo assign questions from the AP Classroom Question Bank that align with this unit, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements on the unit's [**Standards**][0] page. You can find instructions and video demonstrations to do this on [**AP Central**][1].\n\nThe following Personal Progress Checks in AP Classroom can be assigned during the Show What You Know week:\n\n-   Personal Progress Check 1\n-   Personal Progress Check 5\n-   Personal Progress Check 9\n\n**_Note:_** _Some Learning Objectives and Essential Knowledge statements in the suggested Personal Progress Checks are covered in later units._\n\n## Finished Teaching This Unit?\n\nAnswer this [**short survey**][2] to let the Code.org curriculum team know how the unit went."
-          student_description: This unit expands on the object-oriented programming principles introduced in Unit 1 to explore design principles as you develop classes with attributes and behaviors and work with primitive and object data. You learn to work with variables and user input as you develop and utilize classes and objects to represent desserts, customers, and food trucks for the Project Mercury Pastries Food Truck business. As you work with the `Dessert` class, you build on your knowledge of inheritance to design subclasses that represent specific types of desserts. While working with variables, you learn to create and evaluate expressions using assignment and relational operators and trace code segments to determine the result of output. Throughout this unit, you continue to develop software engineering skills as you learn to use UML diagrams to represent classes and the DRY principle to refactor program code.
+          description: "This unit expands on the object-oriented programming principles introduced in Unit 1 to explore design principles as students develop classes with attributes and behaviors and work with primitive and object data. Students learn to write no-argument constructors to assign default values and parameterized constructors to assign specific values to an object's instance variables. They explore how the `this` keyword can be used to reduce ambiguity and redundancies in their program and how the `super` keyword can be used to call a superclass constructor or method. Students also learn how to work with variables and write expressions using arithmetic and compound assignment operators and practice tracing code segments to determine the output. After working with instance variables and constructors, they write accessor and mutator methods to work with the values assigned to an object's instance variables and `toString()` methods to display information about an object to the console. Throughout this unit, students continue to develop software engineering skills as they learn to make design decisions and use inheritance to create class hierarchies.\n\n::: details [**\U0001F3AF Unit Objectives**]\n\n### _By the end of this unit, students will be able to . . ._\n\n-   Represent attributes of an object using instance variables\n\n-   Write no-argument and parameterized constructors to set the state of an object\n\n-   Use the `super` keyword to refer to the superclass in constructors and methods\n\n-   Write expressions using arithmetic operators and compound assignment operators with variables and object data\n\n-   Write accessor and mutator methods to obtain and modify object data\n\n-   Write `toString()` methods and use escape sequences to display and format information about an object to the console\n    :::\n     \n\n::: details [**✅ AP Classroom Personal Progress Checks**]\n\nTo assign questions from the AP Classroom Question Bank that align with this unit, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements on the unit's [**Standards**][0] page. You can find instructions and video demonstrations to do this on [**AP Central**][1].\n\nThe following Personal Progress Checks in AP Classroom can be assigned during the Show What You Know week:\n\n-   Personal Progress Check 1\n\n-   Personal Progress Check 5\n\n-   Personal Progress Check 9\n\n**_Note:_** _Some Learning Objectives and Essential Knowledge statements in the suggested Personal Progress Checks are covered in later units._\n:::\n\n## Finished Teaching This Unit?\n\nAnswer this [**short survey**][2] to let the Code.org curriculum team know how the unit went."
+          student_description: "This unit expands on the object-oriented programming principles introduced in Unit 1 to explore design principles as you develop classes with attributes and behaviors and work with primitive and object data. You learn to work with variables and user input as you develop and utilize classes and objects to represent desserts, customers, and food trucks for the Project Mercury Pastries Food Truck business. As you work with the `Dessert` class, you build on your knowledge of inheritance to design subclasses that represent specific types of desserts. While working with variables, you learn to create and evaluate expressions using assignment and relational operators and trace code segments to determine the result of output. Throughout this unit, you continue to develop software engineering skills as you learn to use UML diagrams to represent classes and the DRY principle to refactor program code.\n\n::: details [**\U0001F3AF Unit Objectives**]\n\n### _By the end of this unit, you will be able to . . ._\n\n-   Represent attributes of an object using instance variables\n\n-   Write no-argument and parameterized constructors to set the state of an object\n\n-   Use the `super` keyword to refer to the superclass in constructors and methods\n\n-   Write expressions using arithmetic operators and compound assignment operators with variables and object data\n\n-   Write accessor and mutator methods to obtain and modify object data\n\n-   Write `toString()` methods and use escape sequences to display and format information about an object to the console\n    :::"
         csa3-2023:
           lessons: {}
           lesson_groups: {}
@@ -9037,11 +9049,19 @@ en:
               display_name: Project
             lessonGroup-5:
               display_name: Post-Course Survey
+            lessonGroup-6:
+              display_name: Pre-Unit Survey
           title: Lists, Loops, and Traversals ('22-'23)
           description: This unit introduces lists, loops, and traversals, and explores the way they can be used to build apps that store and process large amounts of information. Learn to program with the data library in App Lab and complete a 5-day hackathon project at the end of the unit where you can design a program about any topic of your choosing.
           student_description: This unit introduces lists, loops, and traversals, and explores the way they can be used to build apps that store and process large amounts of information. Learn to program with the data library in App Lab and complete a 5-day hackathon project at the end of the unit where you can design a program about any topic of your choosing.
           description_short: Learn how to build apps that use lists, loops, and traversals to store and process large amounts of information.
           description_audience: ''
+          lessons:
+            lesson-1:
+              name: Lists, Loops, and Traversals Pre-Survey
+            lesson-2:
+              name: Reflection and Interest Inventory
+          name: csp5-2023
         csp6-2023:
           lesson_groups:
             csp_unit6_2020:
@@ -9217,6 +9237,8 @@ en:
           lessons:
             lesson-1:
               name: Particles
+            lesson-3:
+              name: Sprite Lab Building Demo
           lesson_groups: {}
           name: amy-playground
           title: Amy's Place To Do Stuff
@@ -9230,6 +9252,8 @@ en:
               name: States of Matter
             lesson-2:
               name: OG States of Matter
+            lesson-3:
+              name: CTF Flash Talk
           lesson_groups: {}
           name: angelina-playground
           title: Angelina's Place To Do Stuff
@@ -9276,7 +9300,9 @@ en:
           description: ''
           student_description: ''
         devices-2022:
-          lessons: {}
+          lessons:
+            lesson-11:
+              name: Problem Solving Process with Programming
           lesson_groups:
             lessonGroup-2:
               display_name: Introduction to App Lab
@@ -9289,12 +9315,85 @@ en:
           description_audience: ''
           description_short: ''
           description: |-
-            In the Creating Apps with Devices unit, students explore the role of physical devices in computing. Using App Lab and Adafruit’s Circuit Playground, students develop programs that utilize the same hardware inputs and outputs that you see in the smart devices, looking at how a simple rough prototype can lead to a finished product. Then, students explore how physical devices can be used to react to the world around them using a “maker” mindset to create prototypes with everyday materials.
+            In the Creating Apps for Devices unit, students explore the role of physical devices in computing. Using App Lab and Adafruit’s Circuit Playground, students develop programs that utilize the same hardware inputs and outputs that you see in the smart devices, looking at how a simple rough prototype can lead to a finished product. Then, students explore how physical devices can be used to react to the world around them using a “maker” mindset to create prototypes with everyday materials.
 
-            **Implementation Guidance for Creating Apps with Devices**
+            **Implementation Guidance for Creating Apps for Devices**
 
             -   This unit requires students to have access to Circuit Playground's - [click here][0] for more information about using Circuit Playground's in your classroom
             -   Guidance for how to support students in programming levels and differentiate tasks are available in the [Programming Levels Guide][1] and [Differentiation Guide][2]
 
-            **Professional Development:** If you are interested in teaching this course, we recommend completing the free [Creating Apps with Devices Self-Paced Professional Development Module][3]. The module is designed to take 2 hours to complete. No previous experience with coding or AI is assumed.
+            **Professional Development:** If you are interested in teaching this course, we recommend completing the free [Creating Apps for Devices Self-Paced Professional Development Module][3]. The module is designed to take 2 hours to complete. No previous experience with coding or AI is assumed.
           student_description: This unit explores the role of hardware platforms in computing and how different sensors can provide more effective input and output than the traditional keyboard, mouse, and monitor. Using App Lab and Adafruit’s Circuit Playground, you’ll develop programs that utilize the same hardware inputs and outputs that you see in the smart devices, looking at how a simple rough prototype can lead to a finished product. The unit concludes with a design challenge to use the Circuit Playground as the basis for an innovation of your own design.
+        allthevalidation:
+          lessons:
+            lesson-1:
+              name: Sprite Lab Validation
+          lesson_groups: {}
+          name: allthevalidation
+          title: All The Validation
+          description_audience: ''
+          description_short: ''
+          description: This is a place to create levels to document and unit test Sprite Lab validation
+          student_description: ''
+        vpl-csd5-ayw-pilot-2022:
+          lessons:
+            lesson-1:
+              name: Workshop Opener
+            lesson-2:
+              name: Content Workshop
+            lesson-3:
+              name: Supporting Equity
+            lesson-4:
+              name: Closing
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Part 1: Synchronous Session'
+            lessonGroup-3:
+              display_name: 'Part 2: Asynchronous Post-Work'
+          name: vpl-csd5-ayw-pilot-2022
+          title: CS Discoveries Virtual Module 5
+          description_audience: ''
+          description_short: ''
+          description: |-
+            **Participants will:**
+
+            -   Build confidence and skill in core computer science concepts.
+            -   Describe ways to improve access and diversity in CS at their schools.
+            -   Identify strategies to reduce stereotype threat in their CS classrooms.
+          student_description: |-
+            **You will:**
+
+            -   Build confidence and skill in core computer science concepts.
+            -   Describe ways to improve access and diversity in CS at your school.
+            -   Identify strategies to reduce stereotype threat in your CS classroom.
+        vpl-csd6-ayw-pilot-2022:
+          lessons:
+            lesson-1:
+              name: Workshop Opener
+            lesson-2:
+              name: Content Workshop
+            lesson-3:
+              name: Supporting Student Learning
+            lesson-4:
+              name: Closing
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Part 1: Synchronous Session'
+            lessonGroup-3:
+              display_name: 'Part 2: Asynchronous Post-Work'
+          name: vpl-csd6-ayw-pilot-2022
+          title: CS Discoveries Virtual Module 6
+          description_audience: ''
+          description_short: ''
+          description: |-
+            **Participants will:**
+
+            -   Build confidence and skill in core computer science concepts.
+            -   Reflect on their role in supporting student learning.
+            -   Practice their responses to common classroom scenarios.
+          student_description: |-
+            **You will:**
+
+            -   Build confidence and skill in core computer science concepts.
+            -   Reflect on your role in supporting student learning.
+            -   Practice your responses to common classroom scenarios.

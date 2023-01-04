@@ -1185,7 +1185,7 @@
         },
         "New Artist Project": {
           "draw a star": {
-            "name": "dessine une étoile",
+            "name": "dessiner une étoile",
             "description": "dessiner une étoile d'un nombre de branches donné et avec des côtés d'une longueur donnée",
             "parameters": {
               "points": "points",
@@ -1193,7 +1193,7 @@
             }
           },
           "draw a circle": {
-            "name": "dessine un cercle",
+            "name": "dessiner un cercle",
             "description": "dessiner un cercle d'un rayon donné",
             "parameters": {
               "radius": "rayon"
@@ -1208,7 +1208,7 @@
             }
           },
           "draw a triangle": {
-            "name": "dessine un triangle",
+            "name": "dessiner un triangle",
             "parameters": {
               "length": "longueur"
             }
@@ -1221,7 +1221,7 @@
             }
           },
           "draw a house": {
-            "name": "dessine une maison",
+            "name": "dessiner une maison",
             "parameters": {
               "length": "longueur"
             }
@@ -3920,7 +3920,7 @@
           },
           "draw a circle": {
             "name": "dessiner un cercle",
-            "description": "dessine un cercle en respectant le rayon indiqué",
+            "description": "dessiner un cercle d'un rayon donné",
             "parameters": {
               "radius": "rayon"
             }
@@ -3930,7 +3930,7 @@
             "parameters": {
               "sides": "côtés",
               "length": "longueur",
-              "repeat": "repeat"
+              "repeat": "répéter"
             }
           },
           "draw a triangle": {

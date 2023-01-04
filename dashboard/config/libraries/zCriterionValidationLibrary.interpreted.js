@@ -45,6 +45,10 @@ function member(elt, array) {
   return false;
 }
 
+function checkSpriteExists(id) {
+  return member(id, getSpriteIdsInUse());
+}
+
 /**
 Updates several helper variables that are used in validation code:
 - spriteIds - an array of all the current sprite IDs
@@ -293,12 +297,15 @@ SPRITE VALIDATION
  }, "changeLocation");  // include i18n feedback string
  */
 function checkMovedSpritePin(spriteId) {
-  var sprite = {id: spriteId};
-  var spriteX = getProp(sprite, "x");
-  var spriteY = getProp(sprite, "y");
-  if(spriteX != 200 || spriteY != 200) {
-    return true;
+  if (checkSpriteExists(spriteId)) {
+    var sprite = {id: spriteId};
+    var spriteX = getProp(sprite, "x");
+    var spriteY = getProp(sprite, "y");
+    if(spriteX != 200 || spriteY != 200) {
+      return true;
+ 	}
   }
+  return false;
 }
 
 
@@ -314,13 +321,16 @@ function checkMovedSpritePin(spriteId) {
   }, "useSetpropBlock");
  */
 function checkNotDefaultSize(spriteId) {
-  var sprite = {id: spriteId};
-  var spriteScale = getProp(sprite, "scale");
-  if(spriteScale != 100) {
-    return true;
-  } else {
-  	return false;
+  if (checkSpriteExists(spriteId)) {
+    var sprite = {id: spriteId};
+    var spriteScale = getProp(sprite, "scale");
+    if(spriteScale != 100) {
+      return true;
+    } else {
+      return false;
+    }
   }
+  return false;
 }
 
 //Checks if the sprite has been changed from the default costume
@@ -338,13 +348,16 @@ function checkNotDefaultSize(spriteId) {
  }, "cscLandmarkChangeCostume");  // include i18n feedback string
  */
 function checkNotDefaultCostume(spriteId, defaultCostume) {
-  var sprite = {id: spriteId};
-  var spriteCostume = getProp(sprite, "costume");
-  if(spriteCostume != defaultCostume) {
-    return true;
-  } else {
-    return false;
+  if (checkSpriteExists(spriteId)) {
+    var sprite = {id: spriteId};
+    var spriteCostume = getProp(sprite, "costume");
+    if(spriteCostume != defaultCostume) {
+      return true;
+    } else {
+      return false;
+    }
   }
+  return false;
 }
 
 
@@ -557,7 +570,10 @@ function checkThisSpriteClickedThisFrame(spriteId) {
   }, "cscLandmarkBackgroundStoryteller");  // include i18n feedback string
   */
 function checkNewBackground() {
-  return getBackground() != validationProps.previous.background;
+  if (getBackground() != '' && getBackground() != null) {
+  	return getBackground() != validationProps.previous.background;
+  }
+  return false;
 }
 
 //Checks if n unique touch events have happened
@@ -1023,4 +1039,66 @@ function checkStudentVariableChangedThisFrame(variableName) {
     return false;
   }
   return validationProps.variableValues[variableName] != validationProps.previous.variableValues[variableName];
+}
+
+/**
+ * Checks that the last thing printed by the user contains a given string. For example, if this criterion function was passed the string "example", then the criterion function would return true if the user printed "this is an example" or "example" but not "examp".
+ * @param {string} string - the string to search for in the last print statement
+ * @returns {boolean} true if the statement printed by a print block contains <string>
+ * @see [Click here for example](https://levelbuilder-studio.code.org/levels/43122)
+ * @example
+ addCriteria(function() {
+   return checkLastPrintStatementContains(example);
+ }, "genericFailure");
+ */
+
+function checkLastPrintStatementContains(string) {
+  	if (printLog.length > 0) {
+		return printLog[printLog.length - 1].indexOf(string) !== -1;
+    }
+  	return false;
+}
+
+/**
+ * Checks that a user caused a sprite to move with the arrow keys by detecting arrow keypresses and comparing the position of each sprite between the previous and current frames.
+ * @returns {boolean} true if the any sprite moved in the same frame that a user pressed an arrow key
+ * @see [Click here for example](https://levelbuilder-studio.code.org/levels/43127)
+ * @example
+ addCriteria(function() {
+   return checkInteractiveSpriteMovement()
+ }, "genericFailure");
+ */
+
+function checkInteractiveSpriteMovement() {
+  	// Uses functions from the NativeSpriteLab helper library to detect if a user pressed a key this frame
+	var keyPressedNow = isKeyPressed("up") || isKeyPressed("down") || isKeyPressed("left") || isKeyPressed("right");
+
+  	var spriteIds = getSpriteIdsInUse();
+ 
+  	if(!validationProps.previous) {
+      	validationProps.previous = {};
+    }
+  	for (i=0; i<spriteIds.length; i++) {
+      var currentX = getProp({id: spriteIds[i]}, "x");
+      var currentY = getProp({id: spriteIds[i]}, "y");
+
+      // Performs 2 checks: 1. Did the user press a key this frame? 2. Did the sprites position change from the last frame?
+      if (
+        validationProps.previous[spriteIds[i]] &&
+        (currentX != validationProps.previous[spriteIds[i]].x || currentY != validationProps.previous[spriteIds[i]].y) &&
+        keyPressedNow
+      ) {
+      	return true;
+      }
+
+      // Update validationProps.previous for the next position comparison
+      validationProps.previous[spriteIds[i]] = {
+      	x: currentX,
+        y: currentY,
+      };
+    }
+}
+
+function checkUsedWhenRun() {
+	console.log(getEventLog());
 }

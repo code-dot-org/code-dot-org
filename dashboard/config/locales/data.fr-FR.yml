@@ -21,7 +21,7 @@ fr:
         Artist4: L'Artiste 4
         Unplug9: Programmation de relais
         Farmer3: Le Fermier 3
-        Unplug10: Internet et les réseaux connectés
+        Unplug10: L'Internet
         Artist5: L'Artiste 5
         Unplug11: Résumé et ouverture
         MazeEC: Le labyrinthe
@@ -73,12 +73,12 @@ fr:
         maze_2_7: Aide-moi à bannir ce méchant cochon en utilisant le plus petit nombre
           de blocs. Essaie d’utiliser plus d'un bloc «Répéter plusieurs fois».
         maze_2_8: 'Lorsqu''un bloc est gris, cela signifie que tu ne peux pas le supprimer.
-          Résous ce puzzle en utilisant le bloc «Répéter» qui se répète 3 fois. Essaie
-          de mettre ces 3 blocs dans le bloc gris «Répéter»: se déplacer, se déplacer,
-          tourner.'
+          Résous ce casse-tête en utilisant le bloc «Répéter» qui se répète 3 fois.
+          Essaie de mettre ces 3 blocs dans le bloc gris «Répéter»: se déplacer, se
+          déplacer, tourner.'
         maze_2_9: Ok, essaie le nouveau bloc «Répéter jusqu'à»- il se répétera jusqu'à
           ce que j'atteigne ce cochon agaçant.
-        maze_2_10: OK, une dernière fois pour s'entraîner - peux-tu résoudre ce puzzle
+        maze_2_10: OK, une dernière fois pour s'entraîner - peux-tu résoudre ce casse-tête
           à l'aide de seulement 4 blocs?
         maze_2_11: Chère personne.  Moi zombie. Moi faim. Devoir...atteindre...tournesol...
           Peux-tu me faire aller là-bas avec seulement 5 blocs ?
@@ -87,8 +87,8 @@ fr:
         maze_2_13: 'Utilise le nouveau bloc «Si» pour me laisser décider quand tourner.
           Indice: tu n’as besoin que d''un bloc supplémentaire, mais apprends comment
           nous avons fait, pour pouvoir le refaire tout seul la prochaine fois.'
-        maze_2_14: OK, c'est la même chose que le puzzle précédent, mais tu dois te
-          rappeler comment tu as utilisé le bloc «Si» et le bloc «Répéter» ensemble.
+        maze_2_14: OK, c'est la même chose que le casse-tête précédent, mais tu dois
+          te rappeler comment tu as utilisé le bloc «Si» et le bloc «Répéter» ensemble.
         maze_2_15: Moi veux tournesol ! Utilise un bloc «Si» pour m'y amener avec
           le plus petit nombre de blocs possible.
         maze_2_16: OK, nous allons le refaire encore une fois pour nous entraîner
@@ -134,7 +134,7 @@ fr:
         turtle_4_3: OK, voici le code que tu as écrit pour dessiner un seul triangle.
           Peux-tu ajouter un bloc «Répéter» et «Tourner» pour faire une jolie fleur
           ?
-        turtle_4_4: 'Voici le même code que le puzzle précédent, mais en tournant
+        turtle_4_4: 'Voici le même code que le casse-tête précédent, mais en tournant
           seulement à 36 degrés après avoir dessiné chaque triangle. Combien de fois
           faut-il le répéter ? (Indice : après 360 degrés de rotation, le dessin fera
           un cercle complet)'
@@ -143,15 +143,15 @@ fr:
           : après 360 degrés de rotation, le dessin fera un cercle complet)'
         turtle_4_6: En utilisant seulement 3 blocs, peux-tu dessiner un carré avec
           des bords de 20 pixels?
-        turtle_4_7: 'Voici le code pour dessiner le carré du dernier puzzle. Peux-tu
+        turtle_4_7: 'Voici le code pour dessiner le carré du dernier casse-tête. Peux-tu
           le répéter pour dessiner 10 carrés adjacents comme une échelle ? Indice
           : tu as besoin de seulement 2 blocs de plus.'
-        turtle_4_8: Voici la solution du puzzle précédent. Peux-tu ajouter seulement
+        turtle_4_8: Voici la solution du casse-tête précédent. Peux-tu ajouter seulement
           2 blocs de plus pour compléter le dessin ?
-        turtle_4_9: Voici la solution du puzzle précédent. De combien de degrés dois-tu
-          tourner pour terminer le dessin ? (Tu devras probablement deviner quelques
-          fois)
-        turtle_4_10: Voici la solution du puzzle précédent. Combien de fois dois-tu
+        turtle_4_9: Voici la solution du casse-tête précédent. De combien de degrés
+          dois-tu tourner pour terminer le dessin ? (Tu devras probablement deviner
+          quelques fois)
+        turtle_4_10: Voici la solution du casse-tête précédent. Combien de fois dois-tu
           répéter pour terminer le dessin ?
         turtle_4_11: Essaie de modifier les numéros dans les blocs «Tourner» et «Répéter»
           pour faire des modèles différents. Ou bien, essaie de changer le reste du
@@ -249,7 +249,7 @@ fr:
           quelques nouveaux blocs.
         maze_karel_2_10: Déplace-moi à travers le champ, et utilise ces deux fonctions
           pour m'aider à supprimer tous les tas et remplir tous les trous.
-        turtle_3_1: Ce puzzle te montre comment les fonctions « Dessiner un carré »
+        turtle_3_1: Ce casse-tête te montre comment les fonctions « Dessiner un carré »
           et « Tracer un cercle » sont définies.  Définir une fonction ne fait pas
           fonctionner ses blocs.  Tu dois retirer le bloc « Dessiner un carré » pour
           vraiment dessiner un carré.
@@ -344,7 +344,7 @@ fr:
         jigsaw_10: Mets les blocs dans l'ordre pour former l'image
         jigsaw_11: Mets les blocs dans l'ordre par numéro croissant
         jigsaw_12: Mets ces blocs dans l'ordre par numéro croissant
-        jigsaw_13: Répare le puzzle !
+        jigsaw_13: Répare le casse-tête !
         mazestep_1: Description de l'étape du labyrinthe ici
         mazestep_2: Description de l'étape du labyrinthe ici
         mazestep_3: Description de l'étape du labyrinthe ici
@@ -594,7 +594,7 @@ fr:
         C2_maze_intro: Introduction au Dédale
         C2_artist_intro: Introduction à l'Artiste
         C2_zuck_repeat_loop: Labyrinthe et boucles
-        C2_artist_loops: Boucles d'Artiste
+        C2_artist_loops: Les Boucles avec l'Artiste
         C2_artist_debugging: Débogage de l’artiste
         C2_bee_loops: Abeilles et boucles
         C2_bee_debugging: Débogage d'Abeilles
@@ -640,7 +640,7 @@ fr:
         C4_conditionals: Formules conditionnelles
         C4_unplugged_algorithms: Algorithmes avec des Tangrams
         C4_unplugged_madlibs: Mad Libs (histoire à trous)
-        C4_unplugged_variables: Variables en Enveloppes
+        C4_unplugged_variables: Variables en enveloppes
         C4_unplugged_forloops: Les Boucles « Pour »
         C4_unplugged_parameters: La composition de chansons avec des paramètres
         C4_unplugged_binary: Binaire
@@ -667,7 +667,7 @@ fr:
         playlab_intro: Introduction au Labo Jeux
         playlab_events: Évènements du Labo de jeux
         playlab_repeat_forever: Répétition à l’infinie du Labo de jeux
-        tutorial_puzzle_challenge: Tutoriel Défi du puzzle
+        tutorial_puzzle_challenge: Tutoriel Défi du casse-tête
         infinity_playlab_intro: Labo de jeux - Introduction
         infinity_playlab_events: Labo de jeux - Événements
         infinity_playlab_repeat_forever: Labo de jeux  - Répétition à l’infinie
@@ -833,8 +833,8 @@ fr:
           des activités « débranchées » ?'
         cs-principles-intro-to-objects: 'Les Principes de l''Informatique : Initiation
           aux Objets'
-        oceans_machine_learning: Apprentissage Automatique
-        oceans_training_data: Les Données D'Entraînement
+        oceans_machine_learning: L'Apprentissage Automatique
+        oceans_training_data: Données d'entraînement
         oceans_societal_implications: Implications Sociétales
         hoc_dance_congrats_2019: Soirée Dansante 2019 - C’est party !
         hoc_dance_warmup_2019: Soirée Dansante 2019 - Échauffement
@@ -905,6 +905,7 @@ fr:
           poésie
         poetry_module_conditionals: Conditions - Codage avec poésie
         poemart_intro: Introduction à l'art de la poésie
+        outbreak_intro: 'Simulation d''Épidémie : Introduction'
         CSA-PL-debugging-temp: Initiation au débogage dans Java Lab - temp
         csd_u6_circuit_playground: L'Informatique Physique
         csd_u6_input_output: Entrée et Sortie
@@ -918,11 +919,11 @@ fr:
         run: Clique sur « Démarrer » pour tester ton programme.
         watch_again: Clique ici pour revoir la vidéo
         gray_block_explanation: Les blocs qui sont gris ne peuvent pas être supprimés.
-          Peux-tu résoudre le puzzle de toute façon ?
+          Peux-tu résoudre le casse-tête de toute façon ?
         show_code_explanation: Clique ici pour voir le code du programme que tu es
           en train de faire
-        instructions_repeat_explanation: Les instructions de chaque puzzle sont reprises
-          ici
+        instructions_repeat_explanation: Les instructions de chaque casse-tête sont
+          reprises ici
         category_explanation: Tu as toujours les mêmes blocs mais ceux-ci sont désormais
           organisés en catégories.
         set_sprite_image: Attache un bloc « Définir l'image du personnage » au bloc
@@ -948,7 +949,7 @@ fr:
         degrees_per_side: Divise 360 par le nombre de côtés pour obtenir la taille
           de chaque angle en degrés.
         set_sides: Utilise ce bloc pour définir le nombre de « Côtés » nécessaires
-          pour terminer ce puzzle.
+          pour terminer ce casse-tête.
         set_length: Utilise ce bloc pour définir la valeur correcte de la « Longueur ».
         which_equation: Quelle équation rend chaque côté plus court pour les formes
           ayant plus de côtés ?
@@ -956,12 +957,12 @@ fr:
         actions_category: La boîte à outils a un nouvel aspect ! Les blocs «Actions
           » sont maintenant ici.
         draw_square_hint: 'Indice : Utilise la boucle carrés que tu viens de faire
-          dans le puzzle précédent.'
+          dans le casse-tête précédent.'
         edit_function: Clique ici pour modifier ta fonction.
         create_function: Clique ici pour ouvrir la fenêtre « Fonctions » et clique
           ensuite sur le bouton « Créer une fonction ».
         house_hint: Ce n'est pas grave si l'image ne ressemble pas encore à une maison.
-          Nous arrangerons cela dans le prochain puzzle.
+          Nous arrangerons cela dans le prochain casse-tête.
         edit_draw_square: Utilise ce bouton pour modifier la fonction et ajouter la
           boucle.
         edit_get_nectar: Utilise ce bouton pour modifier la fonction et changer la

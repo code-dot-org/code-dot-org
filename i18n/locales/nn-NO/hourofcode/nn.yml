@@ -531,6 +531,10 @@ nn:
   signup_registration_closed: Og kvart år i desember kan klassen din bli med millionar
     av elevar frå heile verda i feiringa av kodeveka med Kodetimen. Vi opnar opp for
     den årlege registreringa i oktober.
+  signup_registration_closed_2022_markdown: 'Registration for this year''s Hour of
+    Code event map is currently closed, but you can still [host an Hour of Code](%{hoc_activities_url})
+    and join in the celebration on social media! Post fun pictures or video of your
+    event using the #HourOfCode hashtag!'
   signup_header: Organiser ein Kodetime i perioda %{campaign_date}, og registrer den
     her.
   signup_name_label: Namnet ditt

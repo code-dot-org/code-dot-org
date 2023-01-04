@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-11-18 00:40:26 UTC",
+    "serialized_at": "2022-12-09 19:24:04 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -29,9 +29,21 @@
   },
   "lesson_groups": [
     {
-      "key": "csp_lists",
+      "key": "lessonGroup-6",
       "user_facing": true,
       "position": 1,
+      "properties": {
+        "display_name": "Pre-Unit Survey"
+      },
+      "seeding_key": {
+        "lesson_group.key": "lessonGroup-6",
+        "script.name": "csp5-2023"
+      }
+    },
+    {
+      "key": "csp_lists",
+      "user_facing": true,
+      "position": 2,
       "properties": {
         "display_name": "Lists",
         "description": "### Unit Philosophy and Pedagogy\n\n* **Independent Creation and The Hackathon Project:** Much like the project in Unit 4, the \"Hackathon\" project in this unit is designed as an opportunity for students to creatively and independently build something with their programming skills. While students are asked to include some technical requirements in their program to ensure they demonstrate mastery of new programming concepts, they have free rein to choose the goals, design, and implementation of their project. To avoid asking students to complete a major programming project right before the Create PT, this hackathon is the most \"Create-PT-like\" project of the course. It is the best chance for students to practice skills like budgeting time or scoping an open-ended project. In many classrooms, if you maintain the recommended pacing of the course, this project serves as an excellent end to the first semester.\n\n* **Growing Comfort with EIPM:** By Unit 5, students (and teachers!) should be developing greater comfort with the flow of EIPM lessons. Students may begin to anticipate that sequences build towards an independent Make lesson or look forward to stepping away from computers to Explore. A nice feature of EIPM is that you will find strategies and modifications to each lesson type that work best for your students. Keep an eye out for how you and your students are developing comfort with EIPM and note strategies that help meet your classroom's needs.\n\n* **Programming with Real-world Data:** The Data Library is a new feature in App Lab for the 2020-21 school year and was designed to let students program with data from the real world. This tool aims to motivate students to build new kinds of data-powered apps that they find personally interesting. This tool also facilitates programming with lists of information since students will need to manipulate lists of data to incorporate the different data sources. Encourage students to use datasets they find personally relevant as they draw on their creative ideas for bringing data to life.\n\n\n\n### Major Assessment and Projects\n\nThe unit project asks students to spend five days as part of a \"Hackathon\" project that they have nearly complete independence to scope and design. Students must choose one dataset from the Data Library in AppLab to be a component of their project to demonstrate what they have learned about lists and list processing; otherwise, scoping the project is completely up to them. Students submit their app, project guide, and written responses to reflection questions about how the app is designed and the development process they used to make it. Students will also complete an end-of-unit assessment aligned with CS Principles framework objectives covered in this unit.\n\n### AP Connections\n\nThis unit and unit project helps build towards the enduring understandings listed below. For a detailed mapping of units to Learning Objectives and EKs, please see the \"Standards\" page for this unit.\n\n* CRD-2: Developers create and innovate using an iterative design process that is user-focused, incorporating implementation/feedback cycles, which leaves ample room for experimentation and risk-taking.\n* AAP-1: To find specific solutions to generalizable problems, programmers represent and organize data in multiple ways.\n* AAP-2: The way statements are sequenced and combined in a program determines the computed result. Programs incorporate iteration and selection constructs to represent repetition and make decisions to handle varied input values.\n* AAP-3: Programmers break down problems into smaller and more manageable pieces. By creating procedures and leveraging parameters, programmers generalize processes that they can reuse. Procedures allow programmers to draw upon existing code that has already been tested, allowing them to write programs more quickly and more confidently.\n\nThis unit includes content from the following topics from the AP CS Principles Framework. For more detailed information on topic coverage in the course review [Code.org CSP Topic Coverage](https://docs.google.com/document/d/1RniAGymLBBpIpDaNNR5Ea8CgiiUKv0tMvaDixSj6m_Q/edit?usp=sharing).\n\n* 3.2 Data Abstraction\n* 3.4 Strings\n* 3.8 Iteration\n* 3.10 Lists\n* 3.16 Simulations\n\nThe College Board has supplied formative Create PT questions to help prepare students to complete the Create Task. We recommend that students complete the following prompts with the unit project. More information can be found in Code.org CS Principles Topic Coverage.\n\n* 3.b.i\n* 3.b.ii\n* 3.b.iii\n* 3.b.iv\n* 3.b.v"
@@ -44,7 +56,7 @@
     {
       "key": "csp_loops",
       "user_facing": true,
-      "position": 2,
+      "position": 3,
       "properties": {
         "display_name": "Loops"
       },
@@ -56,7 +68,7 @@
     {
       "key": "csp_traversals",
       "user_facing": true,
-      "position": 3,
+      "position": 4,
       "properties": {
         "display_name": "Traversals"
       },
@@ -68,7 +80,7 @@
     {
       "key": "csp_project",
       "user_facing": true,
-      "position": 4,
+      "position": 5,
       "properties": {
         "display_name": "Project"
       },
@@ -80,7 +92,7 @@
     {
       "key": "lessonGroup-5",
       "user_facing": true,
-      "position": 5,
+      "position": 6,
       "properties": {
         "display_name": "Post-Course Survey"
       },
@@ -92,12 +104,42 @@
   ],
   "lessons": [
     {
+      "key": "lesson-1",
+      "name": "Lists, Loops, and Traversals Pre-Survey",
+      "absolute_position": 1,
+      "lockable": true,
+      "has_lesson_plan": false,
+      "relative_position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-6",
+        "script.name": "csp5-2023"
+      }
+    },
+    {
+      "key": "lesson-2",
+      "name": "Reflection and Interest Inventory",
+      "absolute_position": 2,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-6",
+        "script.name": "csp5-2023"
+      }
+    },
+    {
       "key": "Lists Explore",
       "name": "Lists Explore",
-      "absolute_position": 1,
+      "absolute_position": 3,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 1,
+      "relative_position": 2,
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "Students will learn the ways that lists are created, accessed, and changed through a teacher-guided activity using plastic baggies and pieces of paper. The lesson begins with a brief reflection on the value of lists. Students then complete the main activity which introduces the syntax to use lists and the ways they can be used. To wrap up students watch two short videos on lists and record the main concepts in their journals.",
@@ -115,10 +157,10 @@
     {
       "key": "Lists Investigate",
       "name": "Lists Investigate",
-      "absolute_position": 2,
+      "absolute_position": 4,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 2,
+      "relative_position": 3,
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "In this lesson students work with partners to investigate three different apps that use lists. Students first explore all three apps without seeing the code to notice similarities and predict how they will work. Then they explore the code itself and make additions and modifications to the apps. To conclude the lesson, students review and discuss common programming patterns with conditionals.",
@@ -135,10 +177,10 @@
     {
       "key": "Lists Practice",
       "name": "Lists Practice",
-      "absolute_position": 3,
+      "absolute_position": 5,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 3,
+      "relative_position": 4,
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "Practice the basics of lists including creating lists and accessing, inserting, and removing elements from lists. ",
@@ -155,10 +197,10 @@
     {
       "key": "Lists Make",
       "name": "Lists Make",
-      "absolute_position": 4,
+      "absolute_position": 6,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 4,
+      "relative_position": 5,
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "Using Programming Patterns and a step-by-step approach students make their own version of a Reminder app. At the beginning of the lesson students are able to explore a working version of the app. They are then given the design elements of the app but begin with a blank screen. Students use an Activity Guide to go through the high level steps they should use to develop their app but leaves it to them to decide how to write the code. At the end students submit their apps which can be assessed using a provided rubric.",
@@ -175,10 +217,10 @@
     {
       "key": "Loops Explore",
       "name": "Loops Explore",
-      "absolute_position": 5,
+      "absolute_position": 7,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 5,
+      "relative_position": 6,
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "Students begin the lesson by discussing the purpose of loops before completing the unplugged activity. This activity involves moving a \"robot\" around a game board while practicing tracing blocks of code by hand. To conclude, the lesson is wrapped up with a vocabulary discussion and a video.  ",
@@ -196,10 +238,10 @@
     {
       "key": "Loops Investigate",
       "name": "Loops Investigate",
-      "absolute_position": 6,
+      "absolute_position": 8,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 6,
+      "relative_position": 7,
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "Students practice using the for loop in order to repeatedly run pieces of code. The lesson begins with a quick investigation of an app that flips coins. After that code investigation students complete another investigation with an app that uses loops to update screen elements. ",
@@ -216,10 +258,10 @@
     {
       "key": "Loops Practice",
       "name": "Loops Practice",
-      "absolute_position": 7,
+      "absolute_position": 9,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 7,
+      "relative_position": 8,
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "Students practice the basics of loops including using while loops, for loops, and updating multiple screen elements with a for loop. Along the way students develop debugging practices with loops.",
@@ -236,10 +278,10 @@
     {
       "key": "Loops Make",
       "name": "Loops Make",
-      "absolute_position": 8,
+      "absolute_position": 10,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 8,
+      "relative_position": 9,
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "Using Programming Patterns and a step-by-step approach students make their own version of a Lock Screen Maker app. At the beginning of the lesson students are able to explore a working version of the app. They are then given the design elements of the app but begin with minimal starting code. A progression of levels guides students on the high level steps they should use to develop their app but leaves it to them to decide how to write the code. At the end students submit their apps which can be assessed using a provided rubric.",
@@ -256,10 +298,10 @@
     {
       "key": "Traversals Explore",
       "name": "Traversals Explore",
-      "absolute_position": 9,
+      "absolute_position": 11,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 9,
+      "relative_position": 10,
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "The lesson begins with a quick review of lists and loops before moving into the main activity. Here students explore the concept with the Traversal Machine, a physical model of traversal using a for loop. ",
@@ -277,10 +319,10 @@
     {
       "key": "Traversals Investigate",
       "name": "Traversals Investigate",
-      "absolute_position": 10,
+      "absolute_position": 12,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 10,
+      "relative_position": 11,
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "In this lesson students work with partners to investigate three different apps that use traversal to access items in a lists. Students first explore all three apps without seeing the code to notice similarities and predict how they will work. Then they explore the code itself and make additions and modifications to the apps. To conclude the lesson, students review and discuss common programming patterns with traversals.",
@@ -297,10 +339,10 @@
     {
       "key": "Traversals Practice",
       "name": "Traversals Practice",
-      "absolute_position": 11,
+      "absolute_position": 13,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 11,
+      "relative_position": 12,
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "Students practice traversing lists, filtering and reducing lists, and using the data import tools. Along the way students develop debugging practices with traversals.",
@@ -317,10 +359,10 @@
     {
       "key": "Traversals Make",
       "name": "Traversals Make",
-      "absolute_position": 12,
+      "absolute_position": 14,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 12,
+      "relative_position": 13,
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "Using Programming Patterns and a step-by-step approach students make their own version of a Random Forecaster app. At the beginning of the lesson students are able to explore a working version of the app. They are then given the design elements of the app but begin with a blank screen. Students use an Activity Guide to go through the high level steps they should use to develop their app but leaves it to them to decide how to write the code. At the end students submit their apps which can be assessed using a provided rubric.",
@@ -337,10 +379,10 @@
     {
       "key": "Project   Hackathon Part 1",
       "name": "Project   Hackathon Part 1",
-      "absolute_position": 13,
+      "absolute_position": 15,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 13,
+      "relative_position": 14,
       "properties": {
         "assessment": true,
         "creative_commons_license": "Creative Commons BY-NC-SA",
@@ -358,10 +400,10 @@
     {
       "key": "Project   Hackathon Part 2",
       "name": "Project   Hackathon Part 2",
-      "absolute_position": 14,
+      "absolute_position": 16,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 14,
+      "relative_position": 15,
       "properties": {
         "assessment": true,
         "creative_commons_license": "Creative Commons BY-NC-SA",
@@ -379,10 +421,10 @@
     {
       "key": "Project   Hackathon Part 3",
       "name": "Project   Hackathon Part 3",
-      "absolute_position": 15,
+      "absolute_position": 17,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 15,
+      "relative_position": 16,
       "properties": {
         "assessment": true,
         "creative_commons_license": "Creative Commons BY-NC-SA",
@@ -400,10 +442,10 @@
     {
       "key": "Project   Hackathon Part 4",
       "name": "Project   Hackathon Part 4",
-      "absolute_position": 16,
+      "absolute_position": 18,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 16,
+      "relative_position": 17,
       "properties": {
         "assessment": true,
         "creative_commons_license": "Creative Commons BY-NC-SA",
@@ -421,10 +463,10 @@
     {
       "key": "Project   Hackathon Part 5",
       "name": "Project   Hackathon Part 5",
-      "absolute_position": 17,
+      "absolute_position": 19,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 17,
+      "relative_position": 18,
       "properties": {
         "assessment": true,
         "creative_commons_license": "Creative Commons BY-NC-SA",
@@ -442,10 +484,10 @@
     {
       "key": "Assessment Day",
       "name": "Assessment Day",
-      "absolute_position": 18,
+      "absolute_position": 20,
       "lockable": true,
       "has_lesson_plan": true,
-      "relative_position": 18,
+      "relative_position": 19,
       "properties": {
         "assessment": true,
         "creative_commons_license": "Creative Commons BY-NC-SA",
@@ -462,10 +504,10 @@
     {
       "key": "CS Principles Post-Course Survey",
       "name": "CS Principles Post-Course Survey",
-      "absolute_position": 19,
+      "absolute_position": 21,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 19,
+      "relative_position": 20,
       "properties": {
       },
       "seeding_key": {
@@ -476,6 +518,30 @@
     }
   ],
   "lesson_activities": [
+    {
+      "key": "0e9cb6e5-8b41-45d5-8d06-64b5c1f2e87f",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "0e9cb6e5-8b41-45d5-8d06-64b5c1f2e87f",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-6",
+        "script.name": "csp5-2023"
+      }
+    },
+    {
+      "key": "8464983c-2276-478e-a968-ebe31d8ad04c",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "8464983c-2276-478e-a968-ebe31d8ad04c",
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-6",
+        "script.name": "csp5-2023"
+      }
+    },
     {
       "key": "392de4d7-6cea-474c-b950-7d9c228fa50d",
       "position": 1,
@@ -1486,6 +1552,27 @@
     }
   ],
   "activity_sections": [
+    {
+      "key": "9e4d45a0-2964-470e-ab1d-64b5047141b5",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "9e4d45a0-2964-470e-ab1d-64b5047141b5",
+        "lesson_activity.key": "0e9cb6e5-8b41-45d5-8d06-64b5c1f2e87f"
+      }
+    },
+    {
+      "key": "24560c05-9432-4ed3-8534-909fbcb44f7c",
+      "position": 1,
+      "properties": {
+        "progression_name": "Reflection and Interest Inventory"
+      },
+      "seeding_key": {
+        "activity_section.key": "24560c05-9432-4ed3-8534-909fbcb44f7c",
+        "lesson_activity.key": "8464983c-2276-478e-a968-ebe31d8ad04c"
+      }
+    },
     {
       "key": "a5138800-d9f7-4111-8413-02438d174bb6",
       "position": 1,
@@ -3880,6 +3967,93 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSP Unit 5 Pre-Unit Survey_2023"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-6",
+        "script.name": "csp5-2023",
+        "activity_section.key": "9e4d45a0-2964-470e-ab1d-64b5047141b5"
+      },
+      "level_keys": [
+        "CSP Unit 5 Pre-Unit Survey_2023"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Reflection and Interest Inventory"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csp-u5-presurvey-issues"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-6",
+        "script.name": "csp5-2023",
+        "activity_section.key": "24560c05-9432-4ed3-8534-909fbcb44f7c"
+      },
+      "level_keys": [
+        "csp-u5-presurvey-issues"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Reflection and Interest Inventory"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csp-u5-presurvey-datasets-interesting"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-6",
+        "script.name": "csp5-2023",
+        "activity_section.key": "24560c05-9432-4ed3-8534-909fbcb44f7c"
+      },
+      "level_keys": [
+        "csp-u5-presurvey-datasets-interesting"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 3,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Reflection and Interest Inventory"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csp-u5-presurvey-datasets-wishlist"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-6",
+        "script.name": "csp5-2023",
+        "activity_section.key": "24560c05-9432-4ed3-8534-909fbcb44f7c"
+      },
+      "level_keys": [
+        "csp-u5-presurvey-datasets-wishlist"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
         "level_keys": [
           "csp-20-21-u5-assess-lists2022_2023"
         ],
@@ -3900,7 +4074,7 @@
       ]
     },
     {
-      "chapter": 2,
+      "chapter": 6,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -3925,7 +4099,7 @@
       ]
     },
     {
-      "chapter": 3,
+      "chapter": 7,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -3950,7 +4124,7 @@
       ]
     },
     {
-      "chapter": 4,
+      "chapter": 8,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -3975,7 +4149,7 @@
       ]
     },
     {
-      "chapter": 5,
+      "chapter": 9,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -4000,7 +4174,7 @@
       ]
     },
     {
-      "chapter": 6,
+      "chapter": 10,
       "position": 5,
       "activity_section_position": 2,
       "assessment": false,
@@ -4025,7 +4199,7 @@
       ]
     },
     {
-      "chapter": 7,
+      "chapter": 11,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4050,7 +4224,7 @@
       ]
     },
     {
-      "chapter": 8,
+      "chapter": 12,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -4075,7 +4249,7 @@
       ]
     },
     {
-      "chapter": 9,
+      "chapter": 13,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -4100,7 +4274,7 @@
       ]
     },
     {
-      "chapter": 10,
+      "chapter": 14,
       "position": 4,
       "activity_section_position": 2,
       "assessment": false,
@@ -4125,7 +4299,7 @@
       ]
     },
     {
-      "chapter": 11,
+      "chapter": 15,
       "position": 5,
       "activity_section_position": 3,
       "assessment": false,
@@ -4150,7 +4324,7 @@
       ]
     },
     {
-      "chapter": 12,
+      "chapter": 16,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -4175,7 +4349,7 @@
       ]
     },
     {
-      "chapter": 13,
+      "chapter": 17,
       "position": 7,
       "activity_section_position": 2,
       "assessment": false,
@@ -4200,7 +4374,7 @@
       ]
     },
     {
-      "chapter": 14,
+      "chapter": 18,
       "position": 8,
       "activity_section_position": 1,
       "assessment": false,
@@ -4225,7 +4399,7 @@
       ]
     },
     {
-      "chapter": 15,
+      "chapter": 19,
       "position": 9,
       "activity_section_position": 2,
       "assessment": false,
@@ -4250,7 +4424,7 @@
       ]
     },
     {
-      "chapter": 16,
+      "chapter": 20,
       "position": 10,
       "activity_section_position": 3,
       "assessment": false,
@@ -4275,7 +4449,7 @@
       ]
     },
     {
-      "chapter": 17,
+      "chapter": 21,
       "position": 11,
       "activity_section_position": 1,
       "assessment": false,
@@ -4300,7 +4474,7 @@
       ]
     },
     {
-      "chapter": 18,
+      "chapter": 22,
       "position": 12,
       "activity_section_position": 1,
       "assessment": true,
@@ -4325,7 +4499,7 @@
       ]
     },
     {
-      "chapter": 19,
+      "chapter": 23,
       "position": 13,
       "activity_section_position": 2,
       "assessment": true,
@@ -4350,7 +4524,7 @@
       ]
     },
     {
-      "chapter": 20,
+      "chapter": 24,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4375,7 +4549,7 @@
       ]
     },
     {
-      "chapter": 21,
+      "chapter": 25,
       "position": 2,
       "activity_section_position": 1,
       "assessment": true,
@@ -4400,7 +4574,7 @@
       ]
     },
     {
-      "chapter": 22,
+      "chapter": 26,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -4425,7 +4599,7 @@
       ]
     },
     {
-      "chapter": 23,
+      "chapter": 27,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4450,7 +4624,7 @@
       ]
     },
     {
-      "chapter": 24,
+      "chapter": 28,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -4475,7 +4649,7 @@
       ]
     },
     {
-      "chapter": 25,
+      "chapter": 29,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -4500,7 +4674,7 @@
       ]
     },
     {
-      "chapter": 26,
+      "chapter": 30,
       "position": 4,
       "activity_section_position": 1,
       "assessment": true,
@@ -4525,7 +4699,7 @@
       ]
     },
     {
-      "chapter": 27,
+      "chapter": 31,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4550,7 +4724,7 @@
       ]
     },
     {
-      "chapter": 28,
+      "chapter": 32,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -4575,7 +4749,7 @@
       ]
     },
     {
-      "chapter": 29,
+      "chapter": 33,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -4600,7 +4774,7 @@
       ]
     },
     {
-      "chapter": 30,
+      "chapter": 34,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -4625,7 +4799,7 @@
       ]
     },
     {
-      "chapter": 31,
+      "chapter": 35,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -4650,7 +4824,7 @@
       ]
     },
     {
-      "chapter": 32,
+      "chapter": 36,
       "position": 6,
       "activity_section_position": 2,
       "assessment": false,
@@ -4675,7 +4849,7 @@
       ]
     },
     {
-      "chapter": 33,
+      "chapter": 37,
       "position": 7,
       "activity_section_position": 3,
       "assessment": false,
@@ -4700,7 +4874,7 @@
       ]
     },
     {
-      "chapter": 34,
+      "chapter": 38,
       "position": 8,
       "activity_section_position": 1,
       "assessment": false,
@@ -4725,7 +4899,7 @@
       ]
     },
     {
-      "chapter": 35,
+      "chapter": 39,
       "position": 9,
       "activity_section_position": 2,
       "assessment": false,
@@ -4750,7 +4924,7 @@
       ]
     },
     {
-      "chapter": 36,
+      "chapter": 40,
       "position": 10,
       "activity_section_position": 1,
       "assessment": true,
@@ -4775,7 +4949,7 @@
       ]
     },
     {
-      "chapter": 37,
+      "chapter": 41,
       "position": 11,
       "activity_section_position": 2,
       "assessment": true,
@@ -4800,7 +4974,7 @@
       ]
     },
     {
-      "chapter": 38,
+      "chapter": 42,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4825,7 +4999,7 @@
       ]
     },
     {
-      "chapter": 39,
+      "chapter": 43,
       "position": 2,
       "activity_section_position": 1,
       "assessment": true,
@@ -4850,7 +5024,7 @@
       ]
     },
     {
-      "chapter": 40,
+      "chapter": 44,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -4875,7 +5049,7 @@
       ]
     },
     {
-      "chapter": 41,
+      "chapter": 45,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4900,7 +5074,7 @@
       ]
     },
     {
-      "chapter": 42,
+      "chapter": 46,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -4925,7 +5099,7 @@
       ]
     },
     {
-      "chapter": 43,
+      "chapter": 47,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -4950,7 +5124,7 @@
       ]
     },
     {
-      "chapter": 44,
+      "chapter": 48,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -4975,7 +5149,7 @@
       ]
     },
     {
-      "chapter": 45,
+      "chapter": 49,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -5000,7 +5174,7 @@
       ]
     },
     {
-      "chapter": 46,
+      "chapter": 50,
       "position": 6,
       "activity_section_position": 2,
       "assessment": false,
@@ -5025,7 +5199,7 @@
       ]
     },
     {
-      "chapter": 47,
+      "chapter": 51,
       "position": 7,
       "activity_section_position": 1,
       "assessment": true,
@@ -5050,7 +5224,7 @@
       ]
     },
     {
-      "chapter": 48,
+      "chapter": 52,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5075,7 +5249,7 @@
       ]
     },
     {
-      "chapter": 49,
+      "chapter": 53,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -5100,7 +5274,7 @@
       ]
     },
     {
-      "chapter": 50,
+      "chapter": 54,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -5125,7 +5299,7 @@
       ]
     },
     {
-      "chapter": 51,
+      "chapter": 55,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -5150,7 +5324,7 @@
       ]
     },
     {
-      "chapter": 52,
+      "chapter": 56,
       "position": 5,
       "activity_section_position": 2,
       "assessment": false,
@@ -5175,7 +5349,7 @@
       ]
     },
     {
-      "chapter": 53,
+      "chapter": 57,
       "position": 6,
       "activity_section_position": 3,
       "assessment": false,
@@ -5200,7 +5374,7 @@
       ]
     },
     {
-      "chapter": 54,
+      "chapter": 58,
       "position": 7,
       "activity_section_position": 1,
       "assessment": false,
@@ -5225,7 +5399,7 @@
       ]
     },
     {
-      "chapter": 55,
+      "chapter": 59,
       "position": 8,
       "activity_section_position": 1,
       "assessment": true,
@@ -5250,7 +5424,7 @@
       ]
     },
     {
-      "chapter": 56,
+      "chapter": 60,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5275,7 +5449,7 @@
       ]
     },
     {
-      "chapter": 57,
+      "chapter": 61,
       "position": 2,
       "activity_section_position": 1,
       "assessment": true,
@@ -5300,7 +5474,7 @@
       ]
     },
     {
-      "chapter": 58,
+      "chapter": 62,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5325,7 +5499,7 @@
       ]
     },
     {
-      "chapter": 59,
+      "chapter": 63,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5350,7 +5524,7 @@
       ]
     },
     {
-      "chapter": 60,
+      "chapter": 64,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5375,7 +5549,7 @@
       ]
     },
     {
-      "chapter": 61,
+      "chapter": 65,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -5400,7 +5574,7 @@
       ]
     },
     {
-      "chapter": 62,
+      "chapter": 66,
       "position": 2,
       "activity_section_position": 1,
       "assessment": true,
@@ -5425,7 +5599,7 @@
       ]
     },
     {
-      "chapter": 63,
+      "chapter": 67,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -5450,7 +5624,7 @@
       ]
     },
     {
-      "chapter": 64,
+      "chapter": 68,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5476,6 +5650,54 @@
     }
   ],
   "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "CSP Unit 5 Pre-Unit Survey_2023",
+        "script_level.level_keys": [
+          "CSP Unit 5 Pre-Unit Survey_2023"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-6",
+        "script.name": "csp5-2023",
+        "activity_section.key": "9e4d45a0-2964-470e-ab1d-64b5047141b5"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csp-u5-presurvey-issues",
+        "script_level.level_keys": [
+          "csp-u5-presurvey-issues"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-6",
+        "script.name": "csp5-2023",
+        "activity_section.key": "24560c05-9432-4ed3-8534-909fbcb44f7c"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csp-u5-presurvey-datasets-interesting",
+        "script_level.level_keys": [
+          "csp-u5-presurvey-datasets-interesting"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-6",
+        "script.name": "csp5-2023",
+        "activity_section.key": "24560c05-9432-4ed3-8534-909fbcb44f7c"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csp-u5-presurvey-datasets-wishlist",
+        "script_level.level_keys": [
+          "csp-u5-presurvey-datasets-wishlist"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-6",
+        "script.name": "csp5-2023",
+        "activity_section.key": "24560c05-9432-4ed3-8534-909fbcb44f7c"
+      }
+    },
     {
       "seeding_key": {
         "level.key": "csp-20-21-u5-assess-lists2022_2023",
