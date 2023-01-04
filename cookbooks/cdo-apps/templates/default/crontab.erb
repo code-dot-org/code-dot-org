@@ -1,4 +1,12 @@
 <%
+  # This file contains the cron schedules for our various persistent and
+  # non-persistent servers. All times are UTC.
+  #
+  # None of these schedules, unless specifically noted, needs to change for
+  # dayling savings time.
+  #
+  # CRONJOB TIME SYNTAX: https://help.ubuntu.com/community/CronHowto
+
   require 'shellwords'
 
   $crontab = []
@@ -41,11 +49,9 @@
     $crontab.join("\n")
   end
 
-  # CRONJOB TIME SYNTAX: https://help.ubuntu.com/community/CronHowto
-
   # for multi-instance envs (ie production) there should be one daemon,
   # so cronjobs that run once per environment go here (standalone env
-  # instances are all their own daemon)
+  # instances (ie staging, test) are all their own daemon)
   if node['cdo-apps']['daemon']
     if node.chef_environment == 'staging' && node.name == 'staging' # 'real' staging only
       cronjob at:'@reboot', do:home_dir('.dropbox-dist', 'dropboxd')
@@ -115,7 +121,7 @@
       cronjob at:'0 0 * * *', do:deploy_dir('bin', 'cron', 'build_contact_rollups_v2')
       cronjob at:'0 2 * * *', do:deploy_dir('bin', 'cron', 'hoc_student_name_cleanup')
 
-      # RDS backup window is 08:50-09:20, so by 11:50 backups should definitely be ready
+      # RDS backup window is 05:17-05:47 UTC, so by 11:50 backups should definitely be ready
       cronjob at:'50 11 * * *', do:deploy_dir('bin', 'cron', 'push_latest_aurora_backup_to_secondary_account')
     end
 
