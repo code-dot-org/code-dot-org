@@ -177,13 +177,8 @@ EventSandboxer.prototype.sandboxEvent = function(event) {
     newEvent.movementX = mouseEvent.movementX;
     newEvent.movementY = mouseEvent.movementY;
   } else if (newEvent.type === 'mousemove') {
-    //console.log('inside newEvent.type === mousemove');
     var currentTargetId = event.currentTarget && event.currentTarget.id;
     var lastEvent = this.lastMouseMoveEventMap_[currentTargetId];
-    // if (lastEvent) {
-    //   console.log('lastEvent.type');
-    //   console.log(lastEvent.type);
-    // }
     if (currentTargetId && lastEvent) {
       // Compute movementX and movementY from clientX and clientY.
       newEvent.movementX = mouseEvent.clientX - lastEvent.clientX;
@@ -198,7 +193,7 @@ EventSandboxer.prototype.sandboxEvent = function(event) {
       this.lastMouseMoveEventMap_[currentTargetId] = mouseEvent;
     }
   }
-  // else if (mouseEvent.type === 'mousemove') {
+
   // Replace DOM elements with IDs and then add them to applabEvent:
   [
     'fromElement',
