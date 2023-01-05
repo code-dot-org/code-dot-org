@@ -127,7 +127,6 @@ const styles = {
     position: 'relative'
   },
   headingText: {
-    // fontFamily: 'Gotham 4r',
     fontSize: 24,
     lineHeight: '26px',
     color: color.neutral_dark,

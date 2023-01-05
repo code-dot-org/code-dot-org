@@ -13,6 +13,7 @@ import Button from '@cdo/apps/templates/Button';
 import i18n from '@cdo/locale';
 import styleConstants from '@cdo/apps/styleConstants';
 import shapes from './shapes';
+import color from '../../util/color';
 
 class Courses extends Component {
   static propTypes = {
@@ -145,9 +146,9 @@ const styles = {
   },
   headerButton: {
     margin: 'unset',
-    backgroundColor: '#FFFFFF',
-    borderColor: '#FFFFFF',
-    color: '#292F36',
+    backgroundColor: color.white,
+    borderColor: color.white,
+    color: color.neutral_dark,
     fontFamily: `"Gotham 5r", sans-serif`
   }
 };

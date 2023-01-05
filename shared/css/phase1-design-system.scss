@@ -54,16 +54,19 @@ p {
     font-size:  1em;
     color: $brand_secondary_dark;
   }
+
   .signup {
     input {
       background-color: $neutral_light;
     }
+
     .signup-field-label {
       label {
         color: $neutral_dark;
         font-family: $gotham-bold;
       }
     }
+
     .submit {
       font-family: $gotham-bold;
       padding: 10px 20px;
@@ -95,6 +98,7 @@ p {
     > div {
       background-color: $neutral_light !important;
     }
+
     div {
       color: $neutral_dark !important;
     }
@@ -106,10 +110,12 @@ p {
     th {
       color: $neutral_white !important;
       background-color: $neutral_dark !important;
+
       i {
         color: $neutral_white !important;
       }
     }
+
     td {
       color: $neutral_dark;
       background-color: $neutral_light;
@@ -117,7 +123,6 @@ p {
       i {
         color: $neutral_dark !important;
       }
-
     }
   }
 }
@@ -125,12 +130,15 @@ p {
 .courseexplorer {
   .grouprow {
     background-color: $neutral_dark;
+
     h6 {
       color: $neutral_white;
     }
   }
+
   .graderow {
     background-color: $neutral_light !important;
+
     &.numbered {
       color: $neutral_dark;
     }
@@ -142,15 +150,19 @@ p {
 
   .arrow_box {
     background-color: $neutral_white;
+
     .arrow_box_content {
       color: $neutral_dark;
+
       .description, a {
         color: $neutral_dark;
+
         a {
           font-family: $gotham-extra-bold;
           text-decoration: underline;
         }
       }
+
       .launch {
         font-family: $gotham-bold;
         font-size: 1em !important;
@@ -164,6 +176,7 @@ p {
         &:hover {
           background-color: $brand_secondary_dark;
         }
+
         &:focus {
           border: 3px solid $brand_primary_default;
         }
@@ -218,6 +231,7 @@ p {
       &:hover {
         background-color: $brand_primary_dark;
       }
+
       &:focus {
         border: 3px solid $brand_primary_default;
       }
@@ -242,7 +256,7 @@ p {
 
   .hoc-skinny-banner {
     p {
-      color: #fff;
+      color: $white;
     }
   }
 
@@ -257,6 +271,7 @@ p {
 
   .full-resource-block {
     border: 1px solid $neutral_dark20;
+
     > a {
       > img {
         border: none !important;
@@ -267,11 +282,13 @@ p {
       border-left: 1px solid $neutral_dark20;
       background-color: $neutral_light;
       color: $neutral_dark;
+
       h2 {
         color: $neutral_dark;
       }
     }
   }
+
   .tutorial-gray {
     font-family: $gotham-bold;
     font-size: 1em !important;
@@ -285,6 +302,7 @@ p {
     &:hover {
       background-color: $brand_secondary_dark;
     }
+
     &:focus {
       border: 3px solid $brand_primary_default;
     }
@@ -306,7 +324,7 @@ p {
 
 #projects-page {
   .container {
-    .start-new-project-section-heading {
+    .new-project-heading {
       font-family: $barlow-medium !important;
       font-size: 1.5em !important;
       line-height: 1.2 !important;

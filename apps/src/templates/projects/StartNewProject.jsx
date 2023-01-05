@@ -78,10 +78,7 @@ export default class StartNewProject extends React.Component {
 
     return (
       <div>
-        <h4
-          className="start-new-project-section-heading"
-          style={styles.headingStartNew}
-        >
+        <h4 className="new-project-heading" style={styles.headingStartNew}>
           {i18n.projectStartNew()}
         </h4>
         <NewProjectButtons projectTypes={defaultProjectTypes} />
