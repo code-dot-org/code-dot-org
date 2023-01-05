@@ -796,8 +796,6 @@ describe('entry tests', () => {
   var professionalDevelopmentEntries = {
     'code.org/public/learn/local':
       './src/sites/code.org/pages/public/learn/local.js',
-    'code.org/views/professional_learning_apply_banner':
-      './src/sites/code.org/pages/views/professional_learning_apply_banner.js',
 
     'pd/_jotform_loader': './src/sites/studio/pages/pd/_jotform_loader.js',
     'pd/_jotform_embed': './src/sites/studio/pages/pd/_jotform_embed.js',
