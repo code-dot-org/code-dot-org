@@ -619,7 +619,10 @@ function checkUniqueTouchEvents(n, delayTime) {
  }, "noEvents");
  */
 function checkAtLeastNEvents(n) {
-  return eventLog.length >= n;
+  if (eventLog) {
+      return eventLog.length >= n;
+  }
+  return false;
 }
 
 //Checks if a prompt appeared with an event

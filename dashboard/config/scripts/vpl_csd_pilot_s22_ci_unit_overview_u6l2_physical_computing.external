@@ -5,7 +5,7 @@ description 'description here'
 markdown <<MARKDOWN
 # Unit Overview
 
-##### In the Physical Computing unit, students explore the role of physical devices in computing. Using App Lab and Adafruit’s Circuit Playground, students develop programs that utilize the same hardware inputs and outputs that you see in the smart devices, looking at how a simple rough prototype can lead to a finished product. Then, students explore how physical devices can be used to react to the world around them using a “maker” mindset to create prototypes with everyday materials.
+##### In the Creating Apps with Devices unit, students explore the role of physical devices in computing. Using App Lab and Adafruit’s Circuit Playground, students develop programs that utilize the same hardware inputs and outputs that you see in the smart devices, looking at how a simple rough prototype can lead to a finished product. Then, students explore how physical devices can be used to react to the world around them using a “maker” mindset to create prototypes with everyday materials.
 
 ## Students will:
 * ##### Design and build a physical computing device that integrates physical inputs and outputs with digital apps. 
@@ -19,26 +19,26 @@ markdown <<MARKDOWN
 
 <img src="https://images.code.org/23b0c0fba77d686d247d41e79f932f68-image-1648881074935.png" alt="Image of a small circuit board"  style="padding-left: 120px; height: 250px; clear: both; margin: 0 20px 20px 0;">
 
-## Do I need a class set of Circuit Playgrounds to teach the Physical Computing Unit?
+## Do I need a class set of Circuit Playgrounds to teach the Creating Apps with Devices unit?
 
-##### **YES**, you will need a class set of Circuit Playgrounds to teach the Physical Computing unit. 
+##### **YES**, you will need a class set of Circuit Playgrounds to teach the Creating Apps with Devices unit. 
 
 ##### **<a href="https://code.org/circuitplayground" target="blank" rel="noopener noreferrer" >Click here</a> to learn more about purchasing the Circuit Playground.**
 
-## Are there prerequisites for the Physical Computing Unit? 
+## Are there prerequisites for the Creating Apps with Devices Unit? 
 
-##### There are **no prerequisites** for this unit. The Physical Computing Unit is designed for both students with and without prior experience with computer science and programming. 
-
-
-## Is the Physical Computing Unit mapped to standards? 
-
-##### The Physical Computing unit was written using both the K-12 Framework for Computer Science and the **2017 CSTA standards** as guidance. Currently, every lesson maps to the relevant 2017 CSTA standards. The summary of of all CSTA 2017 mappings can be found at Link that opens in a new tab: <a href="studio.code.org/courses/csd6-2022/standards" target="blank" rel="noopener noreferrer">studio.code.org/courses/csd6-2022/standards</a>. 
+##### There are **no prerequisites** for this unit. The Creating Apps with Devices unit is designed for both students with and without prior experience with computer science and programming. 
 
 
-## How much time do I need to teach the Physical Computing Unit?
+## Is the Creating Apps with Devices unit mapped to standards? 
+
+##### The Creating Apps with Devices unit was written using both the K-12 Framework for Computer Science and the **2017 CSTA standards** as guidance. Currently, every lesson maps to the relevant 2017 CSTA standards. The summary of of all CSTA 2017 mappings can be found at <a href="https://studio.code.org/s/devices-2022/standards" target="blank" rel="noopener noreferrer">https://studio.code.org/s/devices-2022/standards</a>. 
+
+
+## How much time do I need to teach the Creating Apps with Devices unit?
 
 #### **Time needed to teach this unit:** 6 weeks 
-##### The recommended time is based on 225 instructional minutes per week. Visit the <a href="https://studio.code.org/s/csd6-2022" target="blank" rel="noopener noreferrer">Unit Overview Page</a> and use the unit calendar to adjust the instructional minutes to reflect the time you have with your students each week. 
+##### The recommended time is based on 225 instructional minutes per week. Visit the <a href="https://studio.code.org/s/devices-2022" target="blank" rel="noopener noreferrer">Unit Overview Page</a> and use the unit calendar to adjust the instructional minutes to reflect the time you have with your students each week. 
 
 
 

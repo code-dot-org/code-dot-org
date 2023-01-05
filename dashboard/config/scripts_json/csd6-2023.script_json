@@ -14,7 +14,7 @@
     },
     "new_name": null,
     "family_name": "csd6",
-    "serialized_at": "2022-10-14 22:35:52 UTC",
+    "serialized_at": "2023-01-03 23:25:55 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -1579,10 +1579,6 @@
           {
             "type": "teachingTip",
             "markdown": "**Facilitating Predict Levels:** Predict levels are a great opportunity for students to think critically about code and engage in class discussions. Consider having students think of their own prediction and discuss with a partner before typing in their response. Once they're run the code, bring the class together for a full-group discussion to discuss how their predictions were similar or different from the resulting program. Use this as an opportunity to address any misconceptions that students may have had about the code initially.\n\n**Caution: Predict Entries Can't Be Deleted!** Once you enter an answer into the predict box, you are not able to reset it. This can make it difficult to repeat this process with multiple classes. Instead, we recommend entering dummy text like \"Class discussion\" and running the code. This way, the answer isn't \"spoiled\" for future classes. However, this means you will need to keep track of predictions separately such as on a whiteboard or in a document.\n\n**Digging Deeper:** For more tips about programming levels, see the [CSD Guide to Programming Levels](https://docs.google.com/document/d/1WGywQ25khB6-FB20x6wO9dGVO9_qJlWkuLVLREJS4Jo/preview). This document includes strategies and best-practices for facilitating programming levels with students."
-          },
-          {
-            "type": "discussionGoal",
-            "markdown": "When the button on the screen is clicked, the code will turn on a small red LED near the USB plug of the circuit playground. Students may have expected one of the larger LED lights to turn on, so they may not immediately notice the smaller red LED. "
           }
         ]
       },
@@ -1595,6 +1591,7 @@
       "key": "77c6cfab-5bc6-478b-9ac1-d0250bcfe592",
       "position": 5,
       "properties": {
+        "description": "**Discussion Goal:** When the button on the screen is clicked, the code will turn on a small red LED near the USB plug of the circuit playground. Students may have expected one of the larger LED lights to turn on, so they may not immediately notice the smaller red LED.\n\n",
         "progression_name": "Skill Building",
         "tips": [
           {
@@ -1612,13 +1609,7 @@
       "key": "bb36fd6b-4d9f-43b0-8297-f7ca75f6dfab",
       "position": 6,
       "properties": {
-        "progression_name": "Predict",
-        "tips": [
-          {
-            "type": "discussionGoal",
-            "markdown": "This code uses the buzzer on the Circuit Playground to create a sound. The first number in the frequency block controls the note of the buzzer - low numbers create lower bass notes, and high numbers create higher frequency sounds. Students will explore these frequencies in the next few levels"
-          }
-        ]
+        "progression_name": "Predict"
       },
       "seeding_key": {
         "activity_section.key": "bb36fd6b-4d9f-43b0-8297-f7ca75f6dfab",
@@ -1629,6 +1620,7 @@
       "key": "40460e69-5f6d-4c48-bc35-468b891bb345",
       "position": 7,
       "properties": {
+        "description": "**Discussion Goal:** This code uses the buzzer on the Circuit Playground to create a sound. The first number in the frequency block controls the note of the buzzer - low numbers create lower bass notes, and high numbers create higher-frequency sounds. Students will explore these frequencies in the next few levels\n\n",
         "progression_name": "Skill Building",
         "tips": [
           {
@@ -1760,17 +1752,7 @@
       "key": "2afcd9d2-15fe-4b1a-b4a5-cbfe56868beb",
       "position": 2,
       "properties": {
-        "progression_name": "Predict",
-        "tips": [
-          {
-            "type": "discussionGoal",
-            "markdown": "Students are familiar with design mode to set up the user interface of their app, but this level introduces how to change design elements with code. Students can hover over elements to see their IDs and use that to inform their guesses. When they press Run, the code will run slowly and highlight each line as it runs so students can see step-by-step what each line does. This can be helpful when discussing their prediction and matching the result to specific lines of code."
-          },
-          {
-            "type": "teachingTip",
-            "markdown": "**Design Mode Review:** If students need a review on Design Mode and Events in App Lab, consider showing students the following videos:\n\n- [Intro to Design Mode](https://youtu.be/jiX1dST2PCw)\n- [Events in App Lab](https://youtu.be/npa2r4t6y2A)\n\nAs an ongoing resources for students, consider printing or displaying the following Help and Tip pages for students:\n- [Design Mode](https://drive.google.com/file/d/1WvW6pkUseGiXOg3TgeNAFPg-VwK65gjN/view?usp=sharing)\n- [Design Mode Elements](https://drive.google.com/file/d/1_freDr5sGWMgTKwDH0kFJwkKXjzVCoE_/view?usp=sharing)\n- [Responding to User Input](https://drive.google.com/file/d/1zTyBx7l2RiRLcB9AjRZZ314PL6kvY_-D/view)\n- [Changing Screens](https://drive.google.com/file/d/1d9yygBuMPaCOPP3fraA3oacuy_RD9iNB/view)"
-          }
-        ]
+        "progression_name": "Predict"
       },
       "seeding_key": {
         "activity_section.key": "2afcd9d2-15fe-4b1a-b4a5-cbfe56868beb",
@@ -1778,8 +1760,25 @@
       }
     },
     {
-      "key": "b9f90f92-2b52-4761-9c84-77e8347a8d18",
+      "key": "03278a3b-07ca-427b-bba6-f612ce85641d",
       "position": 3,
+      "properties": {
+        "description": "**Discussion Goal:** Students are familiar with design mode to set up the user interface of their app, but this level introduces how to change design elements with code. Students can hover over elements to see their IDs and use that to inform their guesses. When they press Run, the code will run slowly and highlight each line as it runs so students can see step-by-step what each line does. This can be helpful when discussing their prediction and matching the result to specific lines of code.\n\n",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Design Mode Review:** If students need a review on Design Mode and Events in App Lab, consider showing students the following videos:\n\n- [Intro to Design Mode](https://youtu.be/jiX1dST2PCw)\n- [Events in App Lab](https://youtu.be/npa2r4t6y2A)\n\nAs an ongoing resources for students, consider printing or displaying the following Help and Tip pages for students:\n- [Design Mode](https://drive.google.com/file/d/1WvW6pkUseGiXOg3TgeNAFPg-VwK65gjN/view?usp=sharing)\n- [Design Mode Elements](https://drive.google.com/file/d/1_freDr5sGWMgTKwDH0kFJwkKXjzVCoE_/view?usp=sharing)\n- [Responding to User Input](https://drive.google.com/file/d/1zTyBx7l2RiRLcB9AjRZZ314PL6kvY_-D/view)\n- [Changing Screens](https://drive.google.com/file/d/1d9yygBuMPaCOPP3fraA3oacuy_RD9iNB/view)"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "03278a3b-07ca-427b-bba6-f612ce85641d",
+        "lesson_activity.key": "ef228e96-6d57-4955-bfe6-6018ab3eb223"
+      }
+    },
+    {
+      "key": "b9f90f92-2b52-4761-9c84-77e8347a8d18",
+      "position": 4,
       "properties": {
         "progression_name": "Skill Building",
         "tips": [
@@ -1796,7 +1795,7 @@
     },
     {
       "key": "63faa9e4-f867-4df4-a6cd-3a82564e27ad",
-      "position": 4,
+      "position": 5,
       "properties": {
         "progression_name": "Practice"
       },
@@ -1807,7 +1806,7 @@
     },
     {
       "key": "4b5a2132-ec79-4501-9e2b-ef426200d79a",
-      "position": 5,
+      "position": 6,
       "properties": {
         "progression_name": "Assessment",
         "tips": [
@@ -1824,7 +1823,7 @@
     },
     {
       "key": "40c3f3c8-789a-4e1c-a434-e23b9dcb8995",
-      "position": 6,
+      "position": 7,
       "properties": {
         "progression_name": "Challenge"
       },
@@ -1932,13 +1931,7 @@
       "key": "1c43ad1e-1a7b-4870-89c9-279057dbf786",
       "position": 2,
       "properties": {
-        "progression_name": "Predict",
-        "tips": [
-          {
-            "type": "discussionGoal",
-            "markdown": "This code uses an event to detect user input, but it waits for an event on the circuit playground instead of the screen. When students run the code, nothing will happen until they press the left button on their circuit playground. Once they do, the red LED will light up. If student’s boards aren’t working, have them [press the Setup button](https://images.code.org/48fc6b4a015ff8c2505e6dee20b46782-setup-button.PNG) in the maker app or visit [https://studio.code.org/maker/setup](https://studio.code.org/maker/setup) on a Chromebook."
-          }
-        ]
+        "progression_name": "Predict"
       },
       "seeding_key": {
         "activity_section.key": "1c43ad1e-1a7b-4870-89c9-279057dbf786",
@@ -1949,6 +1942,7 @@
       "key": "20b40aa0-f69d-4e4e-b829-78e7e8ab5505",
       "position": 3,
       "properties": {
+        "description": "**Discussion Goal:** This code uses an event to detect user input, but it waits for an event on the circuit playground instead of the screen. When students run the code, nothing will happen until they press the left button on their circuit playground. Once they do, the red LED will light up. If student’s boards aren’t working, have them [press the Setup button](https://images.code.org/48fc6b4a015ff8c2505e6dee20b46782-setup-button.PNG) in the maker app or visit [https://studio.code.org/maker/setup](https://studio.code.org/maker/setup) on a Chromebook.",
         "progression_name": "Skill Building"
       },
       "seeding_key": {
@@ -2067,13 +2061,7 @@
       "key": "32356439-f863-4ad2-b7c1-ded8b6823f97",
       "position": 2,
       "properties": {
-        "progression_name": "Predict",
-        "tips": [
-          {
-            "type": "discussionGoal",
-            "markdown": "Students should notice that the names in the var blocks are repeated in the code. They may guess that the numbers assigned to these names at the top will be substituted in farther down the code. Even if students aren't sure what the screen will look like, they may be more sure that the rectangles will all look the same because they have the same width and height"
-          }
-        ]
+        "progression_name": "Predict"
       },
       "seeding_key": {
         "activity_section.key": "32356439-f863-4ad2-b7c1-ded8b6823f97",
@@ -2084,6 +2072,7 @@
       "key": "3697d252-b37c-4aa1-a52d-69ad8391df3d",
       "position": 3,
       "properties": {
+        "description": "**Discussion Goal:** Students should notice that the names in the var blocks are repeated in the code. They may guess that the numbers assigned to these names at the top will be substituted in farther down the code. Even if students aren't sure what the screen will look like, they may be more sure that the rectangles will all look the same because they have the same width and height\n\n",
         "progression_name": "Skill Building"
       },
       "seeding_key": {
@@ -2168,13 +2157,7 @@
       "key": "bcf13a9c-0288-4a64-a026-f055e1b48f50",
       "position": 9,
       "properties": {
-        "progression_name": "Predict",
-        "tips": [
-          {
-            "type": "discussionGoal",
-            "markdown": "Students should notice that both if-statements use the value 315, and some students might use their mouse cursor to hover over the app and notice that 315 is close to the horizon created by the hills and trees. Students should also notice that the background changes between two different colors - orange and gray. Connecting these two observations together, students might predict that this will change when the \"sun sets\" behind the horizon, changing colors between day (orange) and night (gray)."
-          }
-        ]
+        "progression_name": "Predict"
       },
       "seeding_key": {
         "activity_section.key": "bcf13a9c-0288-4a64-a026-f055e1b48f50",
@@ -2185,6 +2168,7 @@
       "key": "fdd87251-141b-4349-8c23-22f0ab397375",
       "position": 10,
       "properties": {
+        "description": "**Discussion Goal:** Students should notice that both if-statements use the value 315, and some students might use their mouse cursor to hover over the app and notice that 315 is close to the horizon created by the hills and trees. Students should also notice that the background changes between two different colors - orange and gray. Connecting these two observations together, students might predict that this will change when the \"sun sets\" behind the horizon, changing colors between day (orange) and night (gray).\n\n",
         "progression_name": "Skill Building"
       },
       "seeding_key": {
@@ -2522,17 +2506,7 @@
       "key": "13746c6c-224e-438f-9ef1-542780725604",
       "position": 2,
       "properties": {
-        "progression_name": "Predict",
-        "tips": [
-          {
-            "type": "contentCorner",
-            "markdown": "**List Terminology:** A list in javascript is formally called an **array**. The `colorLEDs[x]` block uses an array to access each LED.  The number inside the [square brackets] is called the **index**. We might say `colorLEDs[0]` represents the LED at index 0, or `colorLEDs[5]` represents the LED at index 5. \n\nArrays are discussed in more depth in a later lesson and students do not need to have a strong understanding of arrays by the end of this lesson. At a bare minimum, students should understand that the “first” LED starts at index 0, and the “last” LED is at index 9."
-          },
-          {
-            "type": "discussionGoal",
-            "markdown": "Students may be able to guess the behavior of the code, but they may be slightly off in predicting which lights will light up. There isn't a clear orientation on the circuit playground, but students should be able to \"work backwards\" to determine which lights are which. Students may also notice that the lights start with 0, which is the \"first\" light on the board."
-          }
-        ]
+        "progression_name": "Predict"
       },
       "seeding_key": {
         "activity_section.key": "13746c6c-224e-438f-9ef1-542780725604",
@@ -2540,8 +2514,25 @@
       }
     },
     {
-      "key": "af066ab5-1d48-4d3e-9481-bfa4b2abf578",
+      "key": "cb56134a-2fba-4397-a9d7-90a4b6958498",
       "position": 3,
+      "properties": {
+        "description": "**Discussion Goal:** Students may be able to guess the behavior of the code, but they may be slightly off in predicting which lights will light up. There isn't a clear orientation on the circuit playground, but students should be able to \"work backwards\" to determine which lights are which. Students may also notice that the lights start with 0, which is the \"first\" light on the board.\n\n",
+        "tips": [
+          {
+            "type": "contentCorner",
+            "markdown": "**List Terminology:** A list in javascript is formally called an **array**. The `colorLEDs[x]` block uses an array to access each LED.  The number inside the [square brackets] is called the **index**. We might say `colorLEDs[0]` represents the LED at index 0, or `colorLEDs[5]` represents the LED at index 5. \n\nArrays are discussed in more depth in a later lesson and students do not need to have a strong understanding of arrays by the end of this lesson. At a bare minimum, students should understand that the “first” LED starts at index 0, and the “last” LED is at index 9."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "cb56134a-2fba-4397-a9d7-90a4b6958498",
+        "lesson_activity.key": "0673f188-cec4-4191-b204-00d400784710"
+      }
+    },
+    {
+      "key": "af066ab5-1d48-4d3e-9481-bfa4b2abf578",
+      "position": 4,
       "properties": {
         "progression_name": "Skill Building"
       },
@@ -2552,7 +2543,7 @@
     },
     {
       "key": "dc13d38f-05be-414c-b7c3-6c4c7f97665b",
-      "position": 4,
+      "position": 5,
       "properties": {
         "progression_name": "Practice"
       },
@@ -2563,7 +2554,7 @@
     },
     {
       "key": "6cd0e9ee-1c82-4619-a941-9d019e79859c",
-      "position": 5,
+      "position": 6,
       "properties": {
         "progression_name": "Assessment",
         "tips": [
@@ -2580,7 +2571,7 @@
     },
     {
       "key": "0ac1c240-b737-473f-bf30-930138b0c2cd",
-      "position": 6,
+      "position": 7,
       "properties": {
         "progression_name": "Challenge"
       },
@@ -2679,13 +2670,7 @@
       "key": "11872946-77c5-4f4c-a809-61a35c229dc8",
       "position": 2,
       "properties": {
-        "progression_name": "Predict",
-        "tips": [
-          {
-            "type": "discussionGoal",
-            "markdown": "Two new code blocks are introduced in this level: `getProperty` and `getText`. Students may notice these new blocks are being used with variables, and may predict they are being used to get user input from the screen. They may also notice there are new design elements: text inputs, dropdowns, and sliders. Try to push students to notice that the variables from `getText` and `getProperty` are used again later in the code to update the screen using `setText` and `setProperty` blocks."
-          }
-        ]
+        "progression_name": "Predict"
       },
       "seeding_key": {
         "activity_section.key": "11872946-77c5-4f4c-a809-61a35c229dc8",
@@ -2696,6 +2681,7 @@
       "key": "cb778ba9-1952-4aac-8b47-99e2d0438098",
       "position": 3,
       "properties": {
+        "description": "**Discussion Goal:** Two new code blocks are introduced in this level: `getProperty` and `getText`. Students may notice these new blocks are being used with variables, and may predict they are being used to get user input from the screen. They may also notice there are new design elements: text inputs, dropdowns, and sliders. Try to push students to notice that the variables from `getText` and `getProperty` are used again later in the code to update the screen using `setText` and `setProperty` blocks.",
         "progression_name": "Skill Building"
       },
       "seeding_key": {
@@ -2885,13 +2871,7 @@
       "key": "f5707c8f-97b4-4dc0-be4f-72b21ff3bee5",
       "position": 2,
       "properties": {
-        "progression_name": "Predict",
-        "tips": [
-          {
-            "type": "discussionGoal",
-            "markdown": "Student responses may include:\n- The screen is using a dropdown menu and a `getProperty` block for input to see whether the LED should blink or pulse\n- The screen is using a label and a `setText` block for output to display whether the light is on or off\n- The circuit playground is using the buttons and an `onBoardEvent` block for input to turn on or off the lights\n- The circuit playground is using the `colorLEDs` blocks as output to turn on the lights\n\nStudents will also need their circuit playgrounds for this level. If student’s boards aren’t working, have them [press the Setup button](https://images.code.org/48fc6b4a015ff8c2505e6dee20b46782-setup-button.PNG) in the maker app or visit [https://studio.code.org/maker/setup](https://studio.code.org/maker/setup) on a Chromebook."
-          }
-        ]
+        "progression_name": "Predict"
       },
       "seeding_key": {
         "activity_section.key": "f5707c8f-97b4-4dc0-be4f-72b21ff3bee5",
@@ -2902,6 +2882,7 @@
       "key": "39203d9c-db43-44a9-8083-b87ed8e0dc75",
       "position": 3,
       "properties": {
+        "description": "**Discussion Goal:** Student responses may include:\n- The screen is using a dropdown menu and a `getProperty` block for input to see whether the LED should blink or pulse\n- The screen is using a label and a `setText` block for output to display whether the light is on or off\n- The circuit playground is using the buttons and an `onBoardEvent` block for input to turn on or off the lights\n- The circuit playground is using the `colorLEDs` blocks as output to turn on the lights\n\nStudents will also need their circuit playgrounds for this level. If student’s boards aren’t working, have them [press the Setup button](https://images.code.org/48fc6b4a015ff8c2505e6dee20b46782-setup-button.PNG) in the maker app or visit [https://studio.code.org/maker/setup](https://studio.code.org/maker/setup) on a Chromebook.",
         "progression_name": "Skill Building"
       },
       "seeding_key": {
@@ -3370,13 +3351,7 @@
       "key": "2b077763-3c65-4aca-a00f-c07ef3fe85e2",
       "position": 2,
       "properties": {
-        "progression_name": "Predict",
-        "tips": [
-          {
-            "type": "discussionGoal",
-            "markdown": "There are three sensors on the circuit playground: a light sensor, a sound sensor, and a temperature sensor. Encourage students to relate the sensors to their own senses and interact with the circuit playground that way - for example, what happens when we show or hide things from the circuit playground? What happens when the volume changes near the circuit playground?\n\nThrough experimentation, students should notice that the minimum value is 0 and the maximum value is 1023. Students may also notice that one sensor (temperature) doesn't seem to change very much."
-          }
-        ]
+        "progression_name": "Predict"
       },
       "seeding_key": {
         "activity_section.key": "2b077763-3c65-4aca-a00f-c07ef3fe85e2",
@@ -3387,6 +3362,7 @@
       "key": "786cc03e-6862-4e5e-acf4-2fce259e0670",
       "position": 3,
       "properties": {
+        "description": "**Discussion Goal:** There are three sensors on the circuit playground: a light sensor, a sound sensor, and a temperature sensor. Encourage students to relate the sensors to their own senses and interact with the circuit playground that way - for example, what happens when we show or hide things from the circuit playground? What happens when the volume changes near the circuit playground?\n\nThrough experimentation, students should notice that the minimum value is 0 and the maximum value is 1023. Students may also notice that one sensor (temperature) doesn't seem to change very much.",
         "progression_name": "Skill Building"
       },
       "seeding_key": {
@@ -3544,13 +3520,7 @@
       "key": "203ae818-f561-434e-9c7b-91654a27b4ac",
       "position": 2,
       "properties": {
-        "progression_name": "Predict",
-        "tips": [
-          {
-            "type": "discussionGoal",
-            "markdown": "The accelerometer has two properties: the `roll` and `pitch`. The `roll` corresponds to tilting left and right, and `pitch` corresponds to tilting forwards and backwards. Students should notice this if they're holding their circuit playground level to the ground with the USB cable pointing away from them so all the lettering appears correctly. Students may also experiment with moving their circuit playground in the physical space - moving it up and down or left and right - but this doesn't affect the accelerometer. Only rotating and tilting the circuit playground will change the roll and pitch."
-          }
-        ]
+        "progression_name": "Predict"
       },
       "seeding_key": {
         "activity_section.key": "203ae818-f561-434e-9c7b-91654a27b4ac",
@@ -3561,6 +3531,7 @@
       "key": "519e872f-5eae-4462-bec6-81c547bd82b9",
       "position": 3,
       "properties": {
+        "description": "**Discussion Goal:** The accelerometer has two properties: the `roll` and `pitch`. The `roll` corresponds to tilting left and right, and `pitch` corresponds to tilting forwards and backwards. Students should notice this if they're holding their circuit playground level to the ground with the USB cable pointing away from them so all the lettering appears correctly. Students may also experiment with moving their circuit playground in the physical space - moving it up and down or left and right - but this doesn't affect the accelerometer. Only rotating and tilting the circuit playground will change the roll and pitch.",
         "progression_name": "Skill Building"
       },
       "seeding_key": {
@@ -3674,13 +3645,7 @@
       "key": "26e386cd-cc52-4d66-a426-242978d78a67",
       "position": 2,
       "properties": {
-        "progression_name": "Predict",
-        "tips": [
-          {
-            "type": "discussionGoal",
-            "markdown": "Students will have a tough time predicting their results here, but that's okay - it's more important that they realize that there should be matching sounds between the left buttons and the right buttons. When students run the code, they can press the buttons multiple times to try and find the matching pairs. They should discover the following pairs create the same sounds:\n\n- 261 <> C4\n- 329 <> E4\n- 493 <> B4\n- 392 <> G4\n\nAs students will discover soon, these frequencies correspond to musical notes like they might see on a piano. For now, they should leave this level understanding that certain frequencies correspond to certain \"notes\"."
-          }
-        ]
+        "progression_name": "Predict"
       },
       "seeding_key": {
         "activity_section.key": "26e386cd-cc52-4d66-a426-242978d78a67",
@@ -3691,6 +3656,7 @@
       "key": "d20d2495-ab29-4e1a-b094-5d91ae766d4d",
       "position": 3,
       "properties": {
+        "description": "**Discussion Goal:** Students will have a tough time predicting their results here, but that's okay - it's more important that they realize that there should be matching sounds between the left buttons and the right buttons. When students run the code, they can press the buttons multiple times to try and find the matching pairs. They should discover the following pairs create the same sounds:\n\n- 261 <> C4\n- 329 <> E4\n- 493 <> B4\n- 392 <> G4\n\nAs students will discover soon, these frequencies correspond to musical notes as they might see on a piano. For now, they should leave this level understanding that certain frequencies correspond to certain \"notes\".",
         "progression_name": "Investigate"
       },
       "seeding_key": {
@@ -3713,13 +3679,7 @@
       "key": "ea335cc2-ac20-4c63-a529-e0b2196386de",
       "position": 5,
       "properties": {
-        "progression_name": "Predict",
-        "tips": [
-          {
-            "type": "discussionGoal",
-            "markdown": "This level formally introduces students to arrays, which are like lists. Students have already been using arrays without realizing it - the [`colorLeds`(#f78183)](/docs/applab/colorLeds/) are an array of lights on the Circuit Playground. The array in this level works similar to the colorLeds. Help students notice the following:\n- Both arrays use square brackets `[]` with numbers inside to represent the position in the array\n- Both arrays seem to start with 0\n- The `notes` array is defined at the top of the code with a `var` block, but `colorLEDs` aren't defined anyway\n\nStudents will learn more about arrays in the video in the next lesson"
-          }
-        ]
+        "progression_name": "Predict"
       },
       "seeding_key": {
         "activity_section.key": "ea335cc2-ac20-4c63-a529-e0b2196386de",
@@ -3730,6 +3690,7 @@
       "key": "0d4e238a-65f6-4721-bc62-6cb5876fc639",
       "position": 6,
       "properties": {
+        "description": "**Discussion Goal:** This level formally introduces students to arrays, which are like lists. Students have already been using arrays without realizing it - the [`colorLeds`(#f78183)](/docs/applab/colorLeds/) are an array of lights on the Circuit Playground. The array in this level works similarly to the colorLeds. Help students notice the following:\n- Both arrays use square brackets `[]` with numbers inside to represent the position in the array\n- Both arrays seem to start with 0\n- The `notes` array is defined at the top of the code with a `var` block, but `colorLEDs` aren't defined anyway\n\nStudents will learn more about arrays in the video in the next lesson",
         "progression_name": "Video - Introduction to Arrays",
         "tips": [
           {
@@ -3865,13 +3826,7 @@
       "key": "eb4d0aed-6b4b-44da-a4a1-1e256b479006",
       "position": 2,
       "properties": {
-        "progression_name": "Predict",
-        "tips": [
-          {
-            "type": "discussionGoal",
-            "markdown": "Students might predict that the screen will update with button presses and the emoji and background colors will change. They may notice that `updateScreen()` appears in three places: within the two button events, and as a larger green block at the bottom of the code. It's okay if they're not completely sure how the green block is working, and they may try to describe what's happening by relating to variables - that a variable can be used in place of a value, and maybe `updateScreen()` is being used as a placeholder for the code at the bottom of the screen. Guide students to notice this is useful because the same code can be used in two different places (the left button and the right button).\n\nIt's okay to not come to a firm conclusion, since students will watch a video in the next level that explains Functions and how to use them in code."
-          }
-        ]
+        "progression_name": "Predict"
       },
       "seeding_key": {
         "activity_section.key": "eb4d0aed-6b4b-44da-a4a1-1e256b479006",
@@ -3882,6 +3837,7 @@
       "key": "06178f87-f662-4b08-9e51-73985f41ea22",
       "position": 3,
       "properties": {
+        "description": "**Discussion Goal:** Students might predict that the screen will update with button presses and the emoji and background colors will change. They may notice that `updateScreen()` appears in three places: within the two button events, and as a larger green block at the bottom of the code. It's okay if they're not completely sure how the green block is working, and they may try to describe what's happening by relating to variables - that a variable can be used in place of a value, and maybe `updateScreen()` is being used as a placeholder for the code at the bottom of the screen. Guide students to notice this is useful because the same code can be used in two different places (the left button and the right button).\n\nIt's okay to not come to a firm conclusion since students will watch a video in the next level that explains Functions and how to use them in code.",
         "progression_name": "Video - Functions",
         "tips": [
           {
@@ -3910,13 +3866,7 @@
       "key": "586d401d-3741-4ad5-900c-d9c5abbaa53f",
       "position": 5,
       "properties": {
-        "progression_name": "Predict",
-        "tips": [
-          {
-            "type": "discussionGoal",
-            "markdown": "Students should notice that the left and right buttons are used, and that the function at the bottom is using the accelerometer to move something on the screen. Students may predict that the function changes depending on which button is pressed - the left button moves the purple bug, and the right button moves the orange bug. Students may also notice that the function has a variable, `bug`, that is included at the top of the function and used throughout. \n\nIn the next level, students will watch a video describing how these functions work and how `bug` is a **parameter** that can be used to change the behavior of a function when the function is called, like moving the orange bug or purple bug."
-          }
-        ]
+        "progression_name": "Predict"
       },
       "seeding_key": {
         "activity_section.key": "586d401d-3741-4ad5-900c-d9c5abbaa53f",
@@ -3927,6 +3877,7 @@
       "key": "794beadf-beda-4b70-86f9-f711aaae1f86",
       "position": 6,
       "properties": {
+        "description": "**Discussion Goal:** Students should notice that the left and right buttons are used, and that the function at the bottom is using the accelerometer to move something on the screen. Students may predict that the function changes depending on which button is pressed - the left button moves the purple bug, and the right button moves the orange bug. Students may also notice that the function has a variable, `bug`, that is included at the top of the function and used throughout. \n\nIn the next level, students will watch a video describing how these functions work and how `bug` is a **parameter** that can be used to change the behavior of a function when the function is called, like moving the orange bug or purple bug.",
         "progression_name": "Video - Parameters",
         "tips": [
           {
