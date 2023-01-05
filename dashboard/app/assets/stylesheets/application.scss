@@ -503,7 +503,7 @@ html, body {
   min-height: $footer_min_height;
   padding-top: $footer_padding-top;
   font-size: 14px;
-  background-color: $dark_color;
+  background-color: $darkest_gray;
   color: $header_text;
   a:link, a:visited, a:hover, a:active {
     font-family: $gotham-regular;
@@ -532,7 +532,7 @@ html, body {
   }
   .dim {
     display: inline-block;
-    opacity: 0.5;
+    opacity: 0.8;
   }
 
   .container {

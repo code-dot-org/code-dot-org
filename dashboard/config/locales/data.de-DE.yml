@@ -841,8 +841,11 @@ de:
         csd_how_teamwork_works: Wie Teamarbeit funktioniert
         codebreak_e10: 'Folge 10.0: Künstliche Intelligenz mit Kat Graham und Kate
           Park'
+        csf21pilot_events: 'Video: Grafikobjekte in Aktion'
+        csf21pilot_prompts: 'Grafikobjekte-Labor: Text und Aufforderungen'
         outbreak_mike: CodeBytes Episode 3 mit Mike – Ausbruchssimulator
         csd_ml_import_model: Importieren eines KI-Modells
+        csf_lots_of_sprites: 'Video: Jede Menge Grafikobjekte'
         playlab_2021: Einführung ins Spielelabor
         playlab_2021_reader: Einführung ins Spielelabor
         PL_CSD_TeacherTips_Advise: Tipps für Lehrer – Ratschläge für neue Lehrer
@@ -892,6 +895,7 @@ de:
         CSA-PL-Printing-in-Java: Drucken in Java
         CSA-PL-multi-selection-statements: Mehrfachauswahl-Anweisungen
         CS_Changing_Everything: Informatik verändert alles
+        csc-sprite-lab-pixel-editor: Zeichne dein eigenes Grafikobjekt
     callout:
       text:
         drag_blocks: Ziehe einen "vorwärts bewegen"-Baustein und lasse ihn unter den

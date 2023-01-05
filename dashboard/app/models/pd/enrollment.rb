@@ -148,9 +148,7 @@ class Pd::Enrollment < ApplicationRecord
     end
   end
 
-  # Filters a list of enrollments for survey completion, for the workshop types we are able to filter for
-  # survey completion: CSD/CSP Summer, CSP Workshop for Returning Teachers, CSF Intro/Deep Dive, Counselor
-  # and Admin. We will always return [] for Academic year workshops as we want facilitators to handle those surveys.
+  # Filters a list of workshops user is enrolled in with (in)complete surveys (dependent on select_completed).
   # @param enrollments [Enumerable<Pd::Enrollment>] list of enrollments to filter.
   # @param select_completed [Boolean] if true, return only enrollments with completed surveys,
   #   otherwise return only those without completed surveys. Defaults to true.
@@ -159,12 +157,11 @@ class Pd::Enrollment < ApplicationRecord
     raise 'Expected enrollments to be an Enumerable list of Pd::Enrollment objects' unless
         enrollments.is_a?(Enumerable) && enrollments.all?(Pd::Enrollment)
 
-    # Local summer, CSP Workshop for Returning Teachers, or CSF Intro after 5/8/2020 will use Foorm for survey completion.
-    # CSF Deep Dive after 9/1 also uses Foorm. CSF District workshops will always use Foorm
+    # Filter out Local summer, CSP Workshop for Returning Teachers, and CSF Intro workshops before 5/8/2020 (they
+    # do not use Foorm for survey completion); CSF Deep Dive workshops before 9/1/2020 (they do not use Foorm for
+    # survey completion); and Admin + Admin/Counselor workshops (they should not receive exit surveys at all).
     foorm_enrollments = enrollments.select do |enrollment|
-      (enrollment.workshop.workshop_ending_date >= Date.new(2020, 5, 8) &&
-        (enrollment.workshop.csf_intro? || enrollment.workshop.local_summer? || enrollment.workshop.csp_wfrt?)) ||
-        (enrollment.workshop.workshop_ending_date >= Date.new(2020, 9, 1) && enrollment.workshop.csf_201?) || enrollment.workshop.csf_district?
+      !admin_workshop?(enrollment.workshop) && currently_receives_foorm_survey(enrollment.workshop)
     end
 
     # We do not want to check survey completion for the following workshop types: Legacy (non-Foorm) summer,
@@ -300,14 +297,6 @@ class Pd::Enrollment < ApplicationRecord
     end
   end
 
-  # Returns true if this enrollment is for a novice or apprentice facilitator (accepted this year)
-  # attending a local summer workshop as a participant to observe the facilitation techniques
-  def newly_accepted_facilitator?
-    workshop.local_summer? &&
-      workshop.school_year == APPLICATION_CURRENT_YEAR &&
-      FACILITATOR_APPLICATION_CLASS.where(user_id: user_id).first&.status == 'accepted'
-  end
-
   # Finds the application a user used for a workshop.
   # Returns the id if (a) the course listed on their application
   # matches the workshop course and user, or (b) a workshop id was
@@ -366,6 +355,24 @@ class Pd::Enrollment < ApplicationRecord
 
   def authorize_teacher_account
     user.permission = UserPermission::AUTHORIZED_TEACHER if user&.teacher? && [COURSE_CSD, COURSE_CSP, COURSE_CSA].include?(workshop.course)
+  end
+
+  # Returns true if the given workshop is an Admin or Admin/Counselor workshop
+  private_class_method def self.admin_workshop?(workshop)
+    workshop.course == Pd::Workshop::COURSE_ADMIN ||
+    workshop.course == Pd::Workshop::COURSE_ADMIN_COUNSELOR
+  end
+
+  # Returns if the given workshop uses Foorm for survey completion (assuming the workshop does receive exit
+  # surveys). Some types of workshops previously did not use Foorm before certain dates, so this returns
+  # false for:
+  # - CSF Deep Dive workshops before 9/1/2020
+  # - Local summer, CSP Workshop for Returning Teachers, and CSF Intro workshops before 5/8/2020
+  # And returns true otherwise.
+  private_class_method def self.currently_receives_foorm_survey(workshop)
+    !(workshop.workshop_ending_date < Date.new(2020, 9, 1) && workshop.csf_201?) &&
+    !(workshop.workshop_ending_date < Date.new(2020, 5, 8) &&
+    (workshop.csf_intro? || workshop.local_summer? || workshop.csp_wfrt?))
   end
 
   private_class_method def self.filter_for_foorm_survey_completion(enrollments, select_completed)

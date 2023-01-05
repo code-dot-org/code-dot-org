@@ -563,6 +563,10 @@ vi:
     cùng hàng triệu học sinh trên toàn thế giới kỷ niệm Tuần lễ Giáo dục về Khoa học
     Máy tính với Giờ Lập Trình. Chúng tôi sẽ mở đợt đăng ký tham gia lễ kỷ niệm hàng
     năm vào Tháng 10.
+  signup_registration_closed_2022_markdown: 'Registration for this year''s Hour of
+    Code event map is currently closed, but you can still [host an Hour of Code](%{hoc_activities_url})
+    and join in the celebration on social media! Post fun pictures or video of your
+    event using the #HourOfCode hashtag!'
   signup_header: Tổ chức một sự kiện Hour of Code vào %{campaign_date}, và đăng ký
     nó ở đây.
   signup_name_label: Tên của bạn

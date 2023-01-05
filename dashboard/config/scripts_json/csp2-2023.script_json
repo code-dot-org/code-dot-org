@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-10-19 18:15:15 UTC",
+    "serialized_at": "2023-01-04 04:34:23 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -914,7 +914,7 @@
       "key": "4998ead4-1bcf-46f1-b31c-96ee5e4b4b0f",
       "position": 2,
       "properties": {
-        "description": "Why learn about how the Internet works? As Vint Cerf Says: \"You can't escape from contact with the Internet. So why not get to know it?\" But you don't have to take Vint Cerf's word for it. Some of the largest issues facing society hinge on an understanding of how the Internet functions.\n\nAt the end of this unit you will do a project focusing on a societal issue. As you go through these lessons keep you ears and eyes open for how things work.\n\nMany of the issues are related to people taking advantage of the open protocols that make the Internet function and present us with tricky dilemmas. We will learn about protocols later in this unit. \n\nFor example, there are two major issues to think about:\n\n* Net Neutrality is a raging legal debate about the principle that Internet service providers should enable access to all content and applications regardless of the source, and without favoring or blocking particular products or websites.\n\n* Internet Censorship is the attempt to control or suppress of what can be accessed, published, or viewed on the Internet by certain people. This can be used to protect people (i.e. to not allow access to child pornography) but can also be used to limit free speech.\n\nIn order to have an informed opinion, it helps to understand the technical underpinnings of how the internet works.\n\nFinally, a major issue that our society faces is that far too few people actually understand how the Internet works! We are going to change that over the next few lessons.",
+        "description": "Why learn about how the Internet works? As Vint Cerf Says: \"You can't escape from contact with the Internet. So why not get to know it?\" But you don't have to take Vint Cerf's word for it. Some of the largest issues facing society hinge on an understanding of how the Internet functions.\n\nAt the end of this unit you will do a project focusing on a societal issue. As you go through these lessons keep you ears and eyes open for how things work.\n\nMany of the issues are related to people taking advantage of the open protocols that make the Internet function and present us with tricky dilemmas. We will learn about protocols later in this unit. \n\nFor example, there are two major issues to think about:\n\n* Net Neutrality is a raging legal debate about the principle that Internet service providers should enable access to all content and applications regardless of the source, and without favoring or blocking particular products or websites.\n\n* Internet Censorship is the attempt to control or suppress what can be accessed, published, or viewed on the Internet by certain people. This can be used to protect people (i.e. to not allow access to child pornography) but can also be used to limit free speech.\n\nIn order to have an informed opinion, it helps to understand the technical underpinnings of how the internet works.\n\nFinally, a major issue that our society faces is that far too few people actually understand how the Internet works! We are going to change that over the next few lessons.",
         "remarks": true
       },
       "seeding_key": {
@@ -1275,7 +1275,7 @@
       "key": "55025009-a15e-4fe1-bc16-0402b68af9af",
       "position": 1,
       "properties": {
-        "description": "Today we saw a lot of really important principles that are important on the Internet. The first is that if we want to talk to each other we need to know who messages are going from and to. The other is that we all are going to need to be using the same set of rules if we want to communicate with one another. Let's watch a video about these concepts.",
+        "description": "Today we saw a lot of really important principles that apply to the Internet. The first is that if we want to talk to each other we need to know who messages are going from and to. The other is that we all are going to need to be using the same set of rules if we want to communicate with one another. Let's watch a video about these concepts.",
         "remarks": true
       },
       "seeding_key": {
@@ -1320,7 +1320,7 @@
       "key": "466e1135-b202-4481-a161-0c824f9c7643",
       "position": 5,
       "properties": {
-        "description": "Today we took an important step in learning about the Internet. We saw that it's not just important to build a network connecting all these devices, but we need open and shared rules, or protocols, for how these devices will communicate. In coming lessons we'll be learning more about the protocols on the Internet.",
+        "description": "Today we took an important step in learning about the Internet. We saw that it's not just important to build a network connecting all these devices, but we need open and shared rules, or protocols, for how these devices will communicate. In coming lessons we'll be learning more about the protocols the Internet runs on.",
         "remarks": true
       },
       "seeding_key": {
@@ -2385,6 +2385,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U2L1 Internet Simulator: Sending Text_2023"
+        ],
         "progression": "Internet Simulator"
       },
       "bonus": false,
@@ -2407,6 +2410,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U2L1 CFU how use internet_2023"
+        ],
         "progression": "Check For Understanding"
       },
       "bonus": false,
@@ -2429,6 +2435,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U2L1 CFU paths_2023"
+        ],
         "progression": "Check For Understanding"
       },
       "bonus": false,
@@ -2451,6 +2460,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U2L2 CSP Internet Simulator Broadcast_2023"
+        ],
         "progression": "Internet Simulator"
       },
       "bonus": false,
@@ -2473,6 +2485,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U2L2 CSP CFU IP Addresses2022_2023"
+        ],
         "progression": "Check For Understanding"
       },
       "bonus": false,
@@ -2495,6 +2510,9 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U2L2 CSP CFU IP works_2023"
+        ],
         "progression": "Check For Understanding"
       },
       "bonus": false,
@@ -2517,6 +2535,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U1L3 CSP Internet Simulator Routers_2023"
+        ],
         "progression": "Internet Simulator"
       },
       "bonus": false,
@@ -2539,6 +2560,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U2L3 CSP CFU Routers2022_2023"
+        ],
         "progression": "Check For Understanding"
       },
       "bonus": false,
@@ -2561,6 +2585,9 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U2L3 CSP CFU Redundancy_2023"
+        ],
         "progression": "Check For Understanding"
       },
       "bonus": false,
@@ -2583,6 +2610,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U1L4 CSP Internet Simulator Packets 2_2023"
+        ],
         "progression": "Internet Simulator"
       },
       "bonus": false,
@@ -2605,6 +2635,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U2L4 Multiple Choice packets2022_2023"
+        ],
         "progression": "Check For Understanding"
       },
       "bonus": false,
@@ -2627,6 +2660,9 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U2L4 CSP CFU terms2022_2023"
+        ],
         "progression": "Check For Understanding"
       },
       "bonus": false,
@@ -2649,6 +2685,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U1L5 CSP Internet Simulator DNS_2023"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2670,6 +2709,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U2L4 CSP CFU scale2022_2023"
+        ],
         "progression": "Check For Understanding"
       },
       "bonus": false,
@@ -2692,6 +2734,9 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U2L5 CSP CFU subgroups_2023"
+        ],
         "progression": "Check For Understanding"
       },
       "bonus": false,
@@ -2714,6 +2759,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "Student End of Unit Survey_csp2_2023"
+        ],
         "progression": "End-of-Unit Survey"
       },
       "bonus": false,
@@ -2736,6 +2784,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSP Unit 2 MC Assessment 2022_2023"
+        ],
         "progression": "Unit 2 Exam"
       },
       "bonus": false,

@@ -14,10 +14,10 @@ fr:
           productif que d'attendre des occasions plus avancées futures.
       Unplug2:
         title: Algorithmique
-        desc: Seulement munis de papier et de feutres, les étudiants vont apprendre
-          les quatre étapes de la pensée computationnelle. Après une brève introduction,
+        desc: Seulement munis de papier et de feutres, les élèves vont apprendre les
+          quatre étapes de la pensée computationnelle. Après une brève introduction,
           ils seront séparées en groupes pour créer des instructions à partir desquelles
-          d'autres étudiants devront dessiner un monstre précis (extrait d'un catalogue
+          d'autres élèves devront dessiner un monstre précis (extrait d'un catalogue
           de monstres pré-établis). L'intégralité de cette tâche doit être décomposée,
           puis les équipes étudieront les monstres du catalogue pour trouver un schéma,
           s'écarter des détails des différents monstres, puis utiliser ces informations
@@ -27,7 +27,7 @@ fr:
           représente-t-il ce que la première équipe avait prévu ?
       Unplug3:
         title: Programmation sur papier quadrillé
-        desc: En se programmant les uns les autres pour créer des images, les étudiants
+        desc: En se programmant les uns les autres pour créer des images, les élèves
           commenceront à comprendre ce qu'est réellement la programmation. Au début
           du cours, les élèves devront échanger des instructions pour colorier chaque
           carré d'une feuille de papier quadrillé, afin de reproduire une image existante.
@@ -211,7 +211,7 @@ fr:
           leurs différences, afin de pouvoir en faire abstraction. Ces histoires abrégées
           deviennent des modèles pour de nouvelles histoires folles et amusantes.
       ForLoopFun:
-        title: Jouer avec les Boucles « Pour »
+        title: "« Pour » s'amuser en boucle"
         desc: Nous savons que les boucles nous permettent de répéter des choses encore
           et encore, mais désormais nous allons apprendre à utiliser les boucles avec
           des structures supplémentaires intégrées.
@@ -405,7 +405,7 @@ fr:
           la leçon sur l'abstraction pour vraiment permettre aux élèves de comprendre
           le concept.
       courseF_unplugged_forLoopFun:
-        title: Jouer avec les Boucles « Pour »
+        title: "« Pour » s'amuser en boucle"
         desc: Nous savons que les boucles nous permettent de répéter des choses encore
           et encore, mais désormais nous allons apprendre à utiliser les boucles avec
           des structures supplémentaires intégrées.
@@ -504,7 +504,7 @@ fr:
         desc: Prêtée aux Notions Fondamentales de l’Informatique par l'équipe de Copyright
           and Creativity, cette leçon a pour but d'aider les élèves à comprendre les
           défis et les avantages du respect de la propriété et du droit d'auteur,
-          en particulier dans les environnements numériques. Les étudiants devraient
+          en particulier dans les environnements numériques. Les élèves devraient
           être encouragés à respecter les droits des artistes, qui constituent un
           élément important de leur citoyenneté numérique.
       RelayProgramming_2018:
@@ -572,7 +572,7 @@ fr:
         desc: Prêtée aux Notions Fondamentales de l’Informatique par l'équipe de Copyright
           and Creativity, cette leçon a pour but d'aider les élèves à comprendre les
           défis et les avantages du respect de la propriété et du droit d'auteur,
-          en particulier dans les environnements numériques. Les étudiants devraient
+          en particulier dans les environnements numériques. Les élèves devraient
           être encouragés à respecter les droits des artistes, qui constituent un
           élément important de leur citoyenneté numérique.
       Internet_2019:

@@ -6256,6 +6256,8 @@ es:
               name: Laboratorio Java
             lesson-6:
               name: Bucles
+            lesson-8:
+              name: Métodos de escritura
           lesson_groups:
             lessonGroup-2:
               display_name: Encuesta
@@ -6268,8 +6270,14 @@ es:
           title: Programación Orientada a Objetos
         csa2-2023:
           lessons:
+            lesson-1:
+              name: Atributos
             lesson-4:
               name: Variables
+            lesson-9:
+              name: Imprimiendo objetos
+            lesson-12:
+              name: Evaluación de la unidad 2
           lesson_groups:
             lessonGroup-2:
               display_name: Contenido
@@ -6468,6 +6476,16 @@ es:
           lessons:
             lesson-1:
               name: Hitos de EE.UU.
+        csc-playground:
+          lessons:
+            lesson-2:
+              name: Partículas - Lección 1
+            lesson-3:
+              name: Partículas - Lección 2
+            lesson-4:
+              name: Partículas - Lección 3
+            lesson-5:
+              name: Partículas - Lección 4
         csc-function-machines-pilot:
           lessons:
             lesson-1:
@@ -6611,10 +6629,34 @@ es:
           title: 'Módulo 2: Navegando por Code.org'
         self-paced-pl-csa3-2023:
           title: Soporte para la programación basada en texto
+        csa-examples-22:
+          lessons:
+            lesson-1:
+              name: 'Unidad 1: Proyectos'
+            lesson-2:
+              name: 'Unidad 2: Proyectos'
+            lesson-3:
+              name: 'Unidad 3: Proyectos'
+            lesson-4:
+              name: 'Unidad 4: Proyectos'
+            lesson-5:
+              name: 'Unidad 5: Proyectos'
+            lesson-6:
+              name: 'Unidad 6: Proyectos'
+            lesson-7:
+              name: 'Unidad 7: Proyectos'
+            lesson-8:
+              name: 'Unidad 8: Proyectos'
+        amy-playground:
+          lessons:
+            lesson-1:
+              name: Partículas
         csp-playground:
           title: CSP Playground
           description_audience: Escritores de planes de estudio
           description_short: Para organizar las actualizaciones de las lecciones o los niveles entre las versiones del plan de estudios
+        csc-pilot-fa2022-particles:
+          title: Partículas
         devices-2022:
           lesson_groups:
             lessonGroup-3:

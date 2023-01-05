@@ -4,7 +4,7 @@
   text-align: center;
   cursor: pointer;
   background-color: transparent;
-  padding: 0;
+  padding: 2px 0 2px 0;
   border: none;
   color: color.$orange;
   &:hover {
@@ -12,6 +12,10 @@
     box-shadow: none;
     color: color.$white;
   }
+}
+
+.headerItemLess {
+  padding: 2px;
 }
 
 .caret {

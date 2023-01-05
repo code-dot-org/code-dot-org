@@ -12,20 +12,27 @@ ca:
       Drawing: Dibuix
       Events: Esdeveniments
       Example: Exemple
+      Exploration: Exploració
       For Loops: Per bucles
       Free Play: Joc lliure
+      'Free Play: Make a Scene': 'Joc lliure: Fem una escena'
+      'Free Play: Make an Interactive Scene': 'Joc lliure: Fem una escena interactiva'
       Functions: Funcions
       Functions with Parameters: Funcions amb Paràmetres
       Get In Formation: Posa't en formació
       Lesson Extras: Lliçons addicionals
       Lists: Llistes
-      Measures: Mesures
+      Measures: Compassos
+      'Mini-Project: Create a Virtual Pet': 'Mini-Projecte: Fem una mascota virtual'
       'Mini-Project: Royal Battle': 'Miniprojecte: Batalla real'
+      'Mini-Project: Sticker Art': 'Miniprojecte: Art amb enganxines'
       'Mini-project: Jorge the Dog': 'Miniprojecte: El gosset Jorge'
       Overview: Vista general
       Pair Programming: Programació per parelles
       Practice: Pràctica
+      Prediction: Predicció
       Programming with Rey and BB-8: Programació amb la Rey i el BB-8
+      Properties: Propietats
       Quarter Notes: Notes negres
       Reflection: Reflexió
       Skill Building: Desenvolupament d'habilitats
@@ -33,13 +40,27 @@ ca:
       The Harvester: La segadora
       Variables: Variables
       Video: Vídeo
+      'Video: Artist Intro with JR Hildebrand': 'Vídeo: Introducció a l''Artista amb
+        J. R. Hildebrand'
+      'Video: Dance Party Events': 'Vídeo: Festa de ball - Esdeveniments'
+      'Video: Dance Party Measures': 'Vídeo: Festa de ball - Compassos'
+      'Video: Dance Party Party On!': 'Vídeo: Festa de ball - Que comenci la festa!'
+      'Video: Dance Party Properties': 'Vídeo: Festa de ball - Propietats'
+      'Video: Dance Party Warm Up': 'Vídeo: Festa de ball - Escalfament'
+      'Video: Debugging with Scrat ': 'Vídeo: Depuració amb l''Scrat '
       'Video: Debugging with the Step Button': 'Vídeo: Depurar amb el botó de pas'
+      'Video: How to Make a Sprite': 'Vídeo: Com fer un sprite'
       'Video: Ice Age Loops': 'Vídeo: Bucles a l''Edat de gel'
+      'Video: Introducing Sprite Lab': 'Vídeo: Introducció al Laboratori d''Sprites'
       'Video: Introduction to Play Lab': 'Vïdeo: Introducció al Laboratori de Jocs'
       'Video: Loops in Artist': 'Vídeo: Bucles a l''Artista'
+      'Video: Maze Intro - Programming with Blocks': 'Vídeo: Introducció al laberint
+        - Programació amb blocs'
       'Video: Programming with Blocks': 'Vídeo: Programació amb blocs'
       'Video: Programming with Rey and BB-8': 'Vídeo: Programació amb la Rey i el
         BB-8'
+      'Video: Repeat Blocks with BB-8': 'Vídeo: Blocs de repetició amb el BB-8'
+      'Video: Sprites in Action': 'Vídeo: Sprites en acció'
       'Video: The Artist in Code Studio': 'Vídeo: L''artista a Code Studio'
       'Video: The Collector': 'Vídeo: La col·leccionista'
       'Video: The Harvester': 'Vídeo: La segadora'

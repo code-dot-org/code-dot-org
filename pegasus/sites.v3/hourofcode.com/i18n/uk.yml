@@ -536,6 +536,10 @@ uk:
   signup_registration_closed: Щороку в грудні ваш клас може приєднатися до мільйонів
     учнів у всьому світі, які відзначають Тиждень інформатики з "Годиною коду". Реєстрацію
     на щорічне святкування буде відкрито у жовтні.
+  signup_registration_closed_2022_markdown: 'Registration for this year''s Hour of
+    Code event map is currently closed, but you can still [host an Hour of Code](%{hoc_activities_url})
+    and join in the celebration on social media! Post fun pictures or video of your
+    event using the #HourOfCode hashtag!'
   signup_header: Організуйте захід Години коду протягом %{campaign_date}, та зареєструйте
     його тут.
   signup_name_label: Ваше ім'я
