@@ -5,9 +5,14 @@ description 'description here'
 markdown <<MARKDOWN
 # Unit Structure
 
+## Introduction to App Lab
+
+##### This unit assumes students are already familiar with App Lab, so we recommend starting with the App Lab Hour of Code which is included as the first lesson in the unit. If your students are already familiar with App Lab, you may decide to skip this lesson. <a href="https://support.code.org/hc/en-us/articles/115001479372-How-can-I-hide-certain-units-or-lessons-from-my-students" target="blank" rel="noopener noreferrer">Click here</a> to learn more about skipping this lesson, allowing your classes to start right away with Chapter 1: Inputs and Outputs.
+
+
 ## Chapters
 
-##### The Physical Computing Unit is divided into **two chapters.** Each chapter includes several small projects and activities that provide an opportunity for students to practice new skills. If you are short on time, you may choose to complete only the first chapter of the unit.
+##### The Creating Apps with Devices unit is divided into **two chapters.** Each chapter includes several small projects and activities that provide an opportunity for students to practice new skills. If you are short on time, you may choose to complete only the first chapter of the unit.
 
 <details>
 <summary><strong>Chapter 1: Inputs and Outputs</strong></summary>
