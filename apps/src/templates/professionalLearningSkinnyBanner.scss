@@ -56,7 +56,7 @@ $width-sm: 640px; // Mobile
 
     @media screen and (max-width: $width-sm) {
       justify-content: center;
-      padding: 1em 2em 2em;
+      padding: 1.5em 2em 2em;
     }
   }
 
@@ -80,12 +80,17 @@ $width-sm: 640px; // Mobile
   h1 {
     color: black;
     position: relative;
+    font-family: "Gotham 4r", sans-serif;
     font-size: 18px;
     margin: 0;
-    font-family: "Gotham 4r", sans-serif;
 
     @media screen and (max-width: $width-md) {
       color: white;
+    }
+
+    @media screen and (max-width: $width-sm) {
+      margin-bottom: 0.5em;
+      line-height: 1.4;
     }
   }
 
