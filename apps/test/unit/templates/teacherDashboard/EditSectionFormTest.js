@@ -1,5 +1,5 @@
 import React from 'react';
-import {mount} from 'enzyme';
+import {mount, shallow} from 'enzyme';
 import sinon from 'sinon';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import {assert} from '../../../util/reconfiguredChai';
@@ -410,7 +410,7 @@ describe('EditSectionForm', () => {
   });
 
   it('sends completed event when save is clicked', () => {
-    const wrapper = mount(
+    const wrapper = shallow(
       <EditSectionForm
         isNewSection={true}
         title="Create a new section"
@@ -447,7 +447,7 @@ describe('EditSectionForm', () => {
   });
 
   it('sends cancelled event when cancel is clicked', () => {
-    const wrapper = mount(
+    const wrapper = shallow(
       <EditSectionForm
         isNewSection={true}
         title="Create a new section"
