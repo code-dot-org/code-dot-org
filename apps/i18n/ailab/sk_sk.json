@@ -58,14 +58,36 @@
     },
     "shoe_survey_toy": {
       "fields": {
+        "spend time": {
+          "id": "trávenie času",
+          "description": "Kde budeš dnes tráviť najviac času?"
+        },
         "weather": {
-          "id": "počasie"
+          "id": "počasie",
+          "description": "Aké je dnes počasie?"
+        },
+        "socks": {
+          "id": "ponožky",
+          "description": "Budeš mať na nohách ponožky?"
         },
         "day": {
-          "id": "deň"
+          "id": "deň",
+          "description": "Ako môžeš opísať svoj dnešný deň?"
+        },
+        "notice shoes": {
+          "id": "všímanie si topánok",
+          "description": "Záleží ti na tom, či si ľudia všimnú tvoje topánky?"
         },
         "shoe": {
-          "id": "topánka"
+          "id": "topánka",
+          "description": "Aké topánky si dnes plánuješ obuť?"
+        }
+      },
+      "card": {
+        "description": "Prieskum zameraný na tvoje preferencie, ktorý ti pomôže odporučiť, aké topánky si máš obuť.",
+        "context": {
+          "potentialUses": "Odporúč pár topánok na základe osobných otázok.",
+          "potentialMisuses": "Čokoľvek iné ako zamýšľané použitie."
         }
       }
     },
@@ -625,21 +647,47 @@
     },
     "raspado_toy": {
       "fields": {
+        "pecan": {
+          "id": "pekanové orechy",
+          "description": "Obsahuje raspado aj polevu z pekanových orechov?"
+        },
         "strawberry": {
-          "id": "jahoda"
+          "id": "jahoda",
+          "description": "Obsahuje raspado aj jahodovú polevu?"
         },
         "vanilla": {
-          "id": "vanilka"
+          "id": "vanilka",
+          "description": "Obsahuje raspado aj vanilkovú polevu?"
+        },
+        "mango": {
+          "id": "mango",
+          "description": "Obsahuje raspado aj mangovú polevu?"
         },
         "lime": {
-          "id": "limetka"
+          "id": "limetka",
+          "description": "Obsahuje raspado aj limetkovú polevu?"
+        },
+        "chili en polbo": {
+          "id": "chili en polvo",
+          "description": "Obsahuje raspado aj polevu z chili en polvo?"
+        },
+        "lechera": {
+          "id": "lechera",
+          "description": "Obsahuje raspado aj polevu z lechery?"
+        },
+        "coconut": {
+          "id": "kokos",
+          "description": "Obsahuje raspado aj kokosovú polevu?"
         },
         "preference": {
-          "id": "preferencia"
+          "id": "preferencia",
+          "description": "Chutí ti raspado?"
         }
       },
       "card": {
+        "description": "Prieskum medzi zákazníkmi v predajni s raspado o tom, či im chutia určité kombinácie raspado.",
         "context": {
+          "potentialUses": "Pomôž novému zákazníkovi vybrať, aký druh raspado by si mal objednať.",
           "potentialMisuses": "Čokoľvek iné ako odporúčania."
         }
       }
@@ -649,6 +697,22 @@
         "sides": {
           "id": "Strany",
           "description": "Počet strán, ktoré má tvar"
+        },
+        "symmetry": {
+          "id": "symetria",
+          "description": "Je tvar symetrický (napríklad keď ho preložíš na polovicu, získaš rovnaké tvary)"
+        },
+        "equal sides": {
+          "id": "rovnaké strany",
+          "description": "Má tvar všetky strany rovnaké?"
+        },
+        "equal angles": {
+          "id": "rovnaké uhly",
+          "description": "Má tvar všetky uhly rovnaké?"
+        },
+        "has corners": {
+          "id": "má rohy",
+          "description": "Má tvar rohy?"
         },
         "border color": {
           "id": "farba ohraničenia",
@@ -1309,23 +1373,71 @@
     },
     "movies": {
       "fields": {
+        "Budget": {
+          "id": "Rozpočet",
+          "description": "Rozpočet filmu v USD. Filmy bez údajov o rozpočte tu majú hodnotu 0."
+        },
+        "Gross": {
+          "id": "Hrubé tržby",
+          "description": "Tržby filmu v USD."
+        },
+        "Runtime": {
+          "id": "Dĺžka",
+          "description": "Ako dlho trvá film v minútach."
+        },
         "Score": {
-          "id": "Skóre"
+          "id": "Skóre",
+          "description": "Hodnotenie filmu používateľmi IMDb."
+        },
+        "Company": {
+          "id": "Spoločnosť",
+          "description": "Produkčná spoločnosť."
         },
         "Country": {
-          "id": "Krajina"
+          "id": "Krajina",
+          "description": "Krajina pôvodu filmu."
+        },
+        "Director": {
+          "id": "Režisér",
+          "description": "Režisér filmu."
         },
         "Genre": {
-          "id": "Žáner"
+          "id": "Žáner",
+          "description": "Žáner filmu."
         },
         "Name": {
-          "id": "Meno"
+          "id": "Meno",
+          "description": "Názov filmu."
+        },
+        "Rating": {
+          "id": "Rating",
+          "description": "Rating MPAA od G (pre všetky vekové kategórie) po NC-17 (nevhodné pre deti do 17 rokov)."
+        },
+        "Released": {
+          "id": "Vydaný",
+          "description": "Mesiac, v ktorom bol vydaný."
         },
         "Star": {
-          "id": "Star"
+          "id": "Star",
+          "description": "Herec alebo herečka v hlavnej úlohe."
+        },
+        "Votes": {
+          "id": "Hlasy",
+          "description": "Počet hlasov, ktoré film získal na IMDB."
+        },
+        "Writer": {
+          "id": "Scenár",
+          "description": "Scenárista filmu."
         },
         "Year": {
-          "id": "Rok"
+          "id": "Rok",
+          "description": "Rok, v ktorom bol vydaný."
+        }
+      },
+      "card": {
+        "description": "Množina údajov o filmoch vydaných v rokoch 1986 – 2016 s údajmi o tržbách, hodnoteniach, hodnotení na IMDB a ďalšími údajmi.",
+        "context": {
+          "potentialUses": "Urči napríklad tržby filmu podľa jeho rozpočtu alebo žánru."
         }
       }
     },
@@ -1563,8 +1675,72 @@
           "id": "Perie",
           "description": "Má zviera perie?"
         },
+        "Eggs": {
+          "id": "Vajcia",
+          "description": "Znáša toto zviera vajcia?"
+        },
+        "Milk": {
+          "id": "Mlieko",
+          "description": "Dáva toto zviera mlieko?"
+        },
+        "Airborne": {
+          "id": "Lietanie",
+          "description": "Lieta toto zviera?"
+        },
         "Aquatic": {
-          "id": "Vodný"
+          "id": "Vodný",
+          "description": "Žije toto zviera vo vode?"
+        },
+        "Predator": {
+          "id": "Dravec",
+          "description": "Je toto zviera dravec?"
+        },
+        "Toothed": {
+          "id": "Zuby",
+          "description": "Má toto zviera zuby?"
+        },
+        "Backbone": {
+          "id": "Chrbtica",
+          "description": "Má toto zviera chrbticu?"
+        },
+        "Breathes": {
+          "id": "Dýchanie",
+          "description": "Dýcha toto zviera?"
+        },
+        "Venomous": {
+          "id": "Jedovatosť",
+          "description": "Je toto zviera jedovaté?"
+        },
+        "Fins": {
+          "id": "Plutvy",
+          "description": "Má toto zviera plutvy?"
+        },
+        "Legs": {
+          "id": "Nohy",
+          "description": "Koľko nôh má toto zviera?"
+        },
+        "Tail": {
+          "id": "Chvost",
+          "description": "Má toto zviera chvost?"
+        },
+        "Domestic": {
+          "id": "Zdomácnenosť",
+          "description": "Je toto zviera zdomácnené?"
+        },
+        "Catsize": {
+          "id": "Mačacia veľkosť",
+          "description": "Je toto zviera veľké asi ako mačka?"
+        },
+        "Class": {
+          "id": "Trieda",
+          "description": "O aký druh zvieraťa ide?"
+        }
+      },
+      "card": {
+        "description": "Malá množina údajov s rôznymi atribútmi zvierat (či majú srsť, perie, zuby a iné), ktorá sa používa na účely klasifikácie. Takmer všetky vlastnosti sú typu áno/nie okrem mena zvieraťa, triedy a počtu nôh.",
+        "context": {
+          "potentialUses": "Existuje veľa možných označení, ale jedným z jednoduchých spôsobov, ako začať, je pokúsiť sa zistiť, ktoré vlastnosti súvisia s tým, že zviera je jedovaté.",
+          "potentialMisuses": "Táto množina údajov zahŕňa len 100 zvierat, takže môže existovať veľa zvierat, ktoré sa v údajoch nezobrazujú. Ber to s rezervou!"
         }
       }
     },
@@ -2634,7 +2810,8 @@
           "description": "Cítim sa osamelo."
         },
         "Prioritising workload": {
-          "id": "Stanovenie priorít pri práci"
+          "id": "Stanovenie priorít pri práci",
+          "description": "Snažím sa robiť úlohy čo najskôr a nenechávať ich na poslednú chvíľu"
         },
         "Workaholism": {
           "id": "Workoholizmus",
@@ -2674,6 +2851,7 @@
         }
       },
       "card": {
+        "description": "Množina údajov z prieskumu zozbieraných slovenskými študentmi vo veku 18 – 21 rokov na FSEV UK. Väčšina odpovedí je hodnotená na stupnici od 1 do 5. Napríklad: „Ohodnoťte od 1 (rozhodne nesúhlasím) do 5 (rozhodne súhlasím): Často študujem alebo pracujem aj vo voľnom čase“. Ide o podmnožinu väčšej množiny údajov, ktorá sa zameriava len na povahové charakteristiky.",
         "context": {
           "potentialUses": "Napríklad predpovedať osobnostné črty niekoho na základe iných vlastností.",
           "potentialMisuses": "Používanie demografických informácií z obmedzenej množiny údajov na vytváranie predpokladov o podskupinách ľudí: napríklad otázky týkajúce sa predpovedí o tom, ktoré pohlavie má väčšiu pravdepodobnosť, že sa niečoho bude báť."
@@ -2911,8 +3089,36 @@
     },
     "taco_toppings_toy": {
       "fields": {
+        "Ground Beef": {
+          "id": "Mleté hovädzie",
+          "description": "Obsahovalo taco mleté hovädzie mäso?"
+        },
+        "Chicken": {
+          "id": "Kuracie",
+          "description": "Obsahovalo taco kuracie mäso?"
+        },
+        "Hot Sauce": {
+          "id": "Pikantná omáčka",
+          "description": "Obsahovalo taco pikantnú omáčku?"
+        },
+        "Sour Cream": {
+          "id": "Kyslá smotana",
+          "description": "Obsahovalo taco kyslú smotanu?"
+        },
+        "Cheese": {
+          "id": "Syr",
+          "description": "Obsahovalo taco syr?"
+        },
         "Preference": {
-          "id": "Preferencia"
+          "id": "Preferencia",
+          "description": "Chutilo ti taco?"
+        }
+      },
+      "card": {
+        "description": "Prieskum medzi zákazníkmi v taco reštaurácii o tom, či im chutia určité kombinácie taco.",
+        "context": {
+          "potentialUses": "Pomôž novému zákazníkovi vybrať, aký druh taco by si mal objednať.",
+          "potentialMisuses": "Čokoľvek iné ako odporúčania týkajúce sa taco."
         }
       }
     },
@@ -3003,6 +3209,61 @@
         "context": {
           "potentialUses": "Napríklad predpovedať osobnostné črty niekoho na základe iných vlastností.",
           "potentialMisuses": "Používanie demografických informácií z obmedzenej množiny údajov na vytváranie predpokladov o podskupinách ľudí: napríklad otázky týkajúce sa predpovedí o tom, ktoré pohlavie má väčšiu pravdepodobnosť, že sa niečoho bude báť."
+        }
+      }
+    },
+    "exoplanets": {
+      "fields": {
+        "Star host name": {
+          "id": "Názov hostiteľskej hviezdy",
+          "description": "Názov hviezdy, okolo ktorej táto exoplanéta obieha."
+        },
+        "Number of stars": {
+          "id": "Počet hviezd",
+          "description": "Počet hviezd v systéme exoplanéty."
+        },
+        "Number of planets": {
+          "id": "Počet planét",
+          "description": "Počet planét v systéme exoplanéty."
+        },
+        "Discovery year": {
+          "id": "Rok objavenia",
+          "description": "Rok objavenia tejto exoplanéty."
+        },
+        "Orbit length in earth days": {
+          "id": "Dĺžka obežnej dráhy v pozemských dňoch",
+          "description": "Ako dlho trvá, kým táto planéta obehne okolo svojej hostiteľskej hviezdy, merané v pozemských dňoch."
+        },
+        "Size in earths": {
+          "id": "Veľkosť v porovnaní so Zemou",
+          "description": "Relatívna veľkosť tejto exoplanéty v porovnaní so Zemou."
+        },
+        "Mass in earths": {
+          "id": "Hmotnosť v porovnaní so Zemou",
+          "description": "Relatívna hmotnosť tejto exoplanéty v porovnaní so Zemou."
+        },
+        "Star temperature in kelvin": {
+          "id": "Teplota hviezdy v stupňoch Kelvina",
+          "description": "Teplota hostiteľskej hviezdy v stupňoch Kelvina."
+        },
+        "Star size in suns": {
+          "id": "Veľkosť hviezdy v porovnaní so Slnkom",
+          "description": "Relatívna veľkosť hostiteľskej hviezdy v porovnaní so Slnkom."
+        },
+        "Star mass in suns": {
+          "id": "Hmotnosť hviezdy v porovnaní so Slnkom",
+          "description": "Relatívna hmotnosť hostiteľskej hviezdy v porovnaní so Slnkom."
+        },
+        "Star age in billions of years": {
+          "id": "Vek hviezdy v miliardách rokov",
+          "description": "Vek hostiteľskej hviezdy."
+        }
+      },
+      "card": {
+        "description": "Táto množina údajov je zoznamom exoplanét, teda planét obiehajúcich okolo iných hviezd. Pomocou týchto údajov je možné odhadnúť veľkosť exoplanéty, ako aj ďalšie charakteristiky.",
+        "context": {
+          "potentialUses": "Skús odhadnúť veľkosť alebo hmotnosť exoplanéty na základe veľkosti, veku alebo iných aspektov hviezdy, okolo ktorej obieha.",
+          "potentialMisuses": "Skús odhadnúť, či by na planéte mohol existovať život."
         }
       }
     }
