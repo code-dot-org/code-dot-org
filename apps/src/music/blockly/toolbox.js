@@ -266,8 +266,8 @@ export function getToolbox() {
 
   if (AppConfig.getValue('blocks') === 'tracks') {
     return generateToolbox({
-      Play: [BlockTypes.PLAY_SOUND_IN_TRACK, BlockTypes.REST_IN_TRACK],
       Tracks: [BlockTypes.NEW_TRACK_AT_START, BlockTypes.NEW_TRACK_AT_MEASURE],
+      Play: [BlockTypes.PLAY_SOUND_IN_TRACK, BlockTypes.REST_IN_TRACK],
       Control: ['controls_repeat_ext'],
       Math: ['math_arithmetic', 'math_random_int', 'math_modulo'],
       Logic: ['controls_if', 'logic_compare']

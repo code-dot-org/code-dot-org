@@ -33,7 +33,7 @@ export default class MusicBlocklyWorkspace {
       'default_track_name_extension',
       function() {
         this.getField('trackName').setValue(
-          `track ${player.getTrackCount() + 1}`
+          `track ${Object.keys(player.getTracksMetadata()).length + 1}`
         );
       }
     );

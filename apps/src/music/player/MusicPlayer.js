@@ -155,14 +155,22 @@ export default class MusicPlayer {
     this.soundEvents = this.soundEvents.filter(
       soundEvent => !soundEvent.insideWhenRun
     );
-    this.clearTracksData();
+    Object.keys(this.tracksMetadata).forEach(trackId => {
+      if (this.tracksMetadata[trackId].insideWhenRun) {
+        delete this.tracksMetadata[trackId];
+      }
+    });
   }
 
   clearTriggeredEvents() {
     this.soundEvents = this.soundEvents.filter(
       soundEvent => soundEvent.insideWhenRun
     );
-    this.clearTracksData();
+    Object.keys(this.tracksMetadata).forEach(trackId => {
+      if (!this.tracksMetadata[trackId].insideWhenRun) {
+        delete this.tracksMetadata[trackId];
+      }
+    });
   }
 
   clearAllSoundEvents() {
@@ -308,8 +316,8 @@ export default class MusicPlayer {
     this.tracksMetadata = {};
   }
 
-  getTrackCount() {
-    return Object.keys(this.tracksMetadata).length;
+  getTracksMetadata() {
+    return this.tracksMetadata;
   }
 
   getLengthForId(id) {
