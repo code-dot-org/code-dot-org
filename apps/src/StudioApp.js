@@ -1878,6 +1878,7 @@ StudioApp.prototype.fixViewportForSmallScreens_ = function(viewport, config) {
   } else {
     // We want the longer edge, the width in landscape, to get MIN_WIDTH.
     let screenWidth = Math.max(screen.width, screen.height);
+
     width = MIN_WIDTH;
     scale = screenWidth / width;
   }
