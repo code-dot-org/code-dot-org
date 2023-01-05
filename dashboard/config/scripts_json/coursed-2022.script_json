@@ -15,7 +15,7 @@
     },
     "new_name": null,
     "family_name": "coursed",
-    "serialized_at": "2022-06-29 14:54:32 UTC",
+    "serialized_at": "2023-01-03 22:34:14 UTC",
     "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -2288,7 +2288,7 @@
       "key": "2f77a890-cf45-4d1a-a4ca-d12e723d8d6f",
       "position": 1,
       "properties": {
-        "description": "\n\n \n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\n\n**Reflect:**\n\n\n - *Why is it important to NOT share private information online?* \n- *How do you know if information is private?*",
+        "description": "\n\n \n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\n\n**Reflect:**\n\n\n - *What type of game did you create today?* \n- *What did you like about your classmates' games?*",
         "name": "Reflection"
       },
       "seeding_key": {
