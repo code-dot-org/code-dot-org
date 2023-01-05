@@ -966,6 +966,7 @@
   "fewerNumberOfBlocks": "Fewer than {numBlocks, plural, one {1 block} other {# blocks}} used!",
   "fields": "Fields",
   "fileExplorer": "File explorer",
+  "fileOptions": "File options",
   "filter": "Filter",
   "filterByStudent": "Filter by student:",
   "filterByStage": "Filter by lesson:",
