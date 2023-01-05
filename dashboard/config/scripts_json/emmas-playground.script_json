@@ -10,7 +10,7 @@
     },
     "new_name": null,
     "family_name": "emmas-playground",
-    "serialized_at": "2022-10-25 21:07:26 UTC",
+    "serialized_at": "2023-01-03 16:15:49 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -47,6 +47,21 @@
         "lesson_group.key": "",
         "script.name": "emmas-playground"
       }
+    },
+    {
+      "key": "lesson-2",
+      "name": "NEW- Function Machines",
+      "absolute_position": 2,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "emmas-playground"
+      }
     }
   ],
   "lesson_activities": [
@@ -61,6 +76,18 @@
         "lesson_group.key": "",
         "script.name": "emmas-playground"
       }
+    },
+    {
+      "key": "d759c825-683d-4798-abb9-41ec3e009687",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "d759c825-683d-4798-abb9-41ec3e009687",
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "emmas-playground"
+      }
     }
   ],
   "activity_sections": [
@@ -72,6 +99,16 @@
       "seeding_key": {
         "activity_section.key": "4fe42c1d-2805-4720-8e0e-6b87bb42a1b6",
         "lesson_activity.key": "1b63a389-4467-4ab2-bb9d-7e9530d8c527"
+      }
+    },
+    {
+      "key": "fc354211-6180-48c0-8d3a-fc3ca027c734",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "fc354211-6180-48c0-8d3a-fc3ca027c734",
+        "lesson_activity.key": "d759c825-683d-4798-abb9-41ec3e009687"
       }
     }
   ],
@@ -226,6 +263,9 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_fm_show_input_output_test_clone"
+        ]
       },
       "bonus": false,
       "seeding_key": {
