@@ -72,13 +72,15 @@ if (IN_UNIT_TEST) {
 // TEMPLATE
 //
 
-const TemplateWithLessonPlan = args => (
+// Note the template names reference whether the store has a lesson plan, which
+// is different from whether the hasLessonPlan prop is true or false.
+const TemplateStoreWithLessonPlan = args => (
   <Provider store={createStoreWithLessonPlan()}>
     <ActivitiesEditor {...args} />
   </Provider>
 );
 
-const TemplateWithoutLessonPlan = args => (
+const TemplateStoreWithoutLessonPlan = args => (
   <Provider store={createStoreWithoutLessonPlan()}>
     <ActivitiesEditor {...args} />
   </Provider>
@@ -88,19 +90,23 @@ const TemplateWithoutLessonPlan = args => (
 // STORIES
 //
 
-export const ForLessonWithLessonPlan = TemplateWithLessonPlan.bind({});
+export const ForLessonWithLessonPlan = TemplateStoreWithLessonPlan.bind({});
 ForLessonWithLessonPlan.args = {
   hasLessonPlan: true,
   allowMajorCurriculumChanges: true
 };
 
-export const ForLessonWithoutLessonPlan = TemplateWithoutLessonPlan.bind({});
+export const ForLessonWithoutLessonPlan = TemplateStoreWithoutLessonPlan.bind(
+  {}
+);
 ForLessonWithoutLessonPlan.args = {
   hasLessonPlan: false,
   allowMajorCurriculumChanges: true
 };
 
-export const WhenMajorChangesNotAllowed = TemplateWithoutLessonPlan.bind({});
+export const WhenMajorChangesNotAllowed = TemplateStoreWithoutLessonPlan.bind(
+  {}
+);
 WhenMajorChangesNotAllowed.args = {
   hasLessonPlan: true,
   allowMajorCurriculumChanges: false
