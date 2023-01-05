@@ -13,11 +13,14 @@ remote_file '/tmp/awscli-bundle.zip' do
 end
 
 archive_file '/tmp/awscli-bundle.zip' do
-  destination '/tmp/'
+  # note that we can't just write to tmp directly; we have to specify an output
+  # directory here, even though the zipfile contains a top-level directory.
+  # This means we end up deviating very slightly from the instructions.
+  destination '/tmp/awscli'
 end
 
 execute 'install AWS CLI' do
-  cwd '/tmp/awscli-bundle'
+  cwd '/tmp/awscli/awscli-bundle'
   command '/usr/bin/python2.7 install -i /usr/local/aws -b /usr/local/bin/aws'
 end
 
