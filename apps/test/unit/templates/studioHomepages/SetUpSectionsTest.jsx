@@ -45,5 +45,7 @@ describe('SetUpSections', () => {
       'Section Setup Started',
       {}
     ]);
+
+    analyticsSpy.retore();
   });
 });
