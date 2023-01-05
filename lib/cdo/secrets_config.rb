@@ -85,13 +85,17 @@ module Cdo
           stack_specific_secret_path = Cdo::SecretsConfig.stack_specific_secret_path(key)
           if value.is_a?(Secret)
             begin
+              # First try looking for a Stack-specific secret.
               cdo_secrets.get!(stack_specific_secret_path)
             rescue Aws::SecretsManager::Errors::ResourceNotFoundException => error
+              # Fall back to looking up a secret shared by all deployments with the same environment-type
+              # ('development', 'test', 'production', etc.).
               CDO.log.info error
               cdo_secrets.get!(value.key)
             end
           else
-            # TODO: do we need to modify this use case as well to get a stack specific secret?
+            # TODO: Do we need to modify this use case as well to get a stack specific secret?
+            CDO.log.info "This weird code path was used for CDO configuration setting: #{key} / value: #{value}"
             value.to_s.gsub(SECRET_REGEX) {cdo_secrets.get!($1)}
           end
         end
