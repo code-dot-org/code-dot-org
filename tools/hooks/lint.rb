@@ -11,7 +11,7 @@ def filter_eslint_apps(modified_files)
   modified_files.select do |f|
     f.match?(/apps\/.*\.(js|jsx)$/) &&  # match javascript in the apps directory
       !(f.include?('apps/lib/') ||      # exclude 3rd party libraries
-        f.end_with('.min.js'))          # exclude minified javascript
+        f.end_with?('.min.js'))          # exclude minified javascript
   end
 end
 
