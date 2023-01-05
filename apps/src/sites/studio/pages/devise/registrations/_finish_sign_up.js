@@ -23,6 +23,7 @@ const STUDENT_ONLY_FIELDS = [
 ];
 
 const ACCOUNT_TYPE_PICKED_EVENT = 'Account Type Picked';
+const SCHOOL_ID_CHANGED_EVENT = 'School ID Changed';
 const SIGN_UP_FINISHED_EVENT = 'Sign Up Finished';
 
 // Values loaded from scriptData are always initial values, not the latest
@@ -91,9 +92,12 @@ $(document).ready(() => {
     }
 
     alreadySubmitted = true;
-    // Clean up school data and set age for teachers.
+    // Clean up school data, log if school was not specified, and set age for teachers.
     if (user_type === 'teacher') {
       cleanSchoolInfo();
+      if (!schoolData.ncesSchoolId) {
+        logSchoolId('');
+      }
       $('#user_age').val('21+');
     }
     analyticsReporter.sendEvent(SIGN_UP_FINISHED_EVENT);
@@ -271,6 +275,7 @@ $(document).ready(() => {
   function onSchoolChange(_, event) {
     schoolData.ncesSchoolId = event ? event.value : '';
     renderSchoolInfo();
+    logSchoolId(schoolData.ncesSchoolId);
   }
 
   function onSchoolNotFoundChange(field, event) {
@@ -281,5 +286,11 @@ $(document).ready(() => {
       };
     }
     renderSchoolInfo();
+  }
+
+  function logSchoolId(schoolId) {
+    analyticsReporter.sendEvent(SCHOOL_ID_CHANGED_EVENT, {
+      school: schoolId
+    });
   }
 });
