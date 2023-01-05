@@ -2,14 +2,47 @@ import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 //import PopUpMenu from '../../lib/ui/PopUpMenu';
 //import FontAwesome from './../FontAwesome';
-// import color from '@cdo/apps/util/color';
+import color from '@cdo/apps/util/color';
 import {sectionForDropdownShape} from './teacherDashboard/shapes';
 
 // All this was borrowed from TeacherSectionSelector
 export default class TeacherSectionOption extends Component {
   static propTypes = {
     section: sectionForDropdownShape,
-    onClick: PropTypes.func.isRequired
+    onClick: PropTypes.func.isRequired,
+    checked: PropTypes.bool
+  };
+
+  state = {
+    isChecked: this.props.section.isAssigned
+  };
+
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      isSelected: props.section.isAssigned
+    };
+  }
+
+  renderCheckbox = () => {
+    const {section} = this.props;
+    console.log(section);
+    console.log(
+      `${section.name}  ${
+        section.isAssigned ? ' is assigned' : ' is NOT assigned'
+      }`
+    );
+    // const defaultValue = section.isAssigned;
+    console.log(this.state);
+    return (
+      <input
+        type="checkbox"
+        checked={this.state.isSelected}
+        onChange={this.changeAssignment}
+        style={styles.checkbox}
+      />
+    );
   };
 
   render() {
@@ -23,20 +56,32 @@ export default class TeacherSectionOption extends Component {
 
     // go to TeacherSectionSelectorMenuItem to see what they return
     // I made this more simple
-    return <span>{section.name}</span>;
+    return (
+      <div>
+        <span>{this.renderCheckbox()}</span>
+        {section.name}
+      </div>
+    );
   }
 }
 
-// const styles = {
-//   item: {
-//     height: 28,
-//     lineHeight: '28px',
-//     width: 270,
-//     fontSize: 14,
-//     fontFamily: '"Gotham 4r", sans-serif',
-//     whiteSpace: 'nowrap',
-//     overflow: 'hidden',
-//     textOverflow: 'ellipsis',
-//     paddingLeft: 10
-//   }
-// };
+const styles = {
+  item: {
+    height: 28,
+    lineHeight: '28px',
+    width: 270,
+    fontSize: 14,
+    fontFamily: '"Gotham 4r", sans-serif',
+    whiteSpace: 'nowrap',
+    overflow: 'hidden',
+    textOverflow: 'ellipsis',
+    paddingLeft: 10
+  },
+  checkboxIcon: {
+    color: color.lighter_gray
+  },
+  checkbox: {
+    height: 20,
+    width: 20
+  }
+};

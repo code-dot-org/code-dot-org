@@ -64,6 +64,7 @@ class MultipleSectionsAssigner extends Component {
               <TeacherSectionOption
                 section={section}
                 onClick={() => this.chooseMenuItem(section)}
+                editedValue={section.isAssigned}
               />
             ))}
         </div>
