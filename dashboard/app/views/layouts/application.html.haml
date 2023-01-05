@@ -1,5 +1,5 @@
 !!! 5
-%html{dir: locale_dir}
+%html{dir: locale_dir, lang: locale}
   %head
     = render partial: 'i18n/crowdin_in_context_tool'
     = render inline: File.read(Rails.root.join('..', 'shared', 'haml', 'onetrust_cookie_scripts.haml')), type: :haml, locals: {dashboard: true}
