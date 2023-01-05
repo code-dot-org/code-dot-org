@@ -1880,11 +1880,6 @@ StudioApp.prototype.fixViewportForSmallScreens_ = function(viewport, config) {
     let screenWidth = Math.max(screen.width, screen.height);
     width = MIN_WIDTH;
     scale = screenWidth / width;
-    console.log(
-      `width: ${width}, screen width: ${screen.width}, screen height: ${
-        screen.height
-      }, scale: ${scale}`
-    );
   }
 
   // Setting `minimum-scale=scale` means that we are unable to shrink the
