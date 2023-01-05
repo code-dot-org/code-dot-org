@@ -5988,16 +5988,16 @@ fr-FR:
         - text: Laurel ramassera 4 pièces de trésor avec ce code.
           feedback: Incorrect. Laurel essaie de ramasser des diamants où il n'y en
             a pas et cela provoque une erreur.
-        - text: Incorrect. Laurel va essayer de ramasser du trésor là où il n'y en
-            a pas, ce qui provoquera une erreur.
+        - text: Laurel va essayer de ramasser du trésor là où il n'y en a pas, ce
+            qui va provoquer une erreur.
           correct: true
           feedback: Correct !
         - text: Laurel ramassera tout le trésor.
-          feedback: Incorrect. Laurel va essayer de ramasser du trésor là où il n'y
-            en a pas, ce qui provoquera une erreur.
+          feedback: Incorrect. Laurel essaie de ramasser des diamants où il n'y en
+            a pas et cela provoque une erreur.
         - text: 'Laurel ramassera 1 pièce de trésor en utilisant ce code. '
-          feedback: Incorrect. Laurel va essayer de ramasser du trésor là où il n'y
-            en a pas, ce qui provoquera une erreur.
+          feedback: Incorrect. Laurel essaie de ramasser des diamants où il n'y en
+            a pas et cela provoque une erreur.
         questions:
         - text: Regarde attentivement ce code. Que penses-tu qu'il va se passer lorsqu'on
             exécute le programme ?

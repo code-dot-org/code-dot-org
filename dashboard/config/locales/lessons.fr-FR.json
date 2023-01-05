@@ -700,28 +700,28 @@
         "courseb-2022/The Right App": {
           "name": "La Bonne Appli",
           "overview": "Dans cette leçon **d'exploration**, les élèves auront à faire preuve d'empathie envers plusieurs utilisateurs fictifs de smartphone afin de les aider à trouver la « bonne appli » qui répond à leurs besoins.",
-          "preparation": "-   Lisez les notes du conférencier dans le **\\*slide deck**.\n-   Préparez suffisamment de matériel de croquis/dessin pour tous les élèves.\n-   Assurez-vous que chaque élève ait bien un journal de réflexion. ",
-          "purpose": "Aujourd'hui, l'informatique est plus accessible que jamais. Des personnes de tous horizons utilisent des logiciels sur de nombreux appareils différents, en particulier les smartphones, pour l'information, la communication et le divertissement. Parce que les gens ont des expériences et des besoins si divers, il est important pour les informaticiens en herbe de les comprendre et les prendre en compte en développant des solutions. ",
+          "preparation": "-   Lisez les notes du conférencier dans le **\\*deck des diapos**.\n-   Préparez suffisamment de matériel de croquis/dessin pour tous les élèves.\n-   Assurez-vous que chaque élève ait bien un journal de réflexion. ",
+          "purpose": "Aujourd'hui, l'informatique est plus accessible que jamais. Des personnes de tous horizons utilisent des logiciels sur de nombreux appareils différents, en particulier les smartphones, pour l'information, la communication et le divertissement. Parce que les gens ont des expériences et des besoins si divers, il est important pour les informaticiens en herbe de les comprendre et de les prendre en compte lorsqu'ils développent des solutions. ",
           "student_overview": "Dessine les grandes lignes de ta propre appli pour smartphone."
         },
         "courseb-2022/The Big Event Jr": {
           "name": "Le Grand Événement Jr.",
           "overview": "Dans cette **leçon de mise en contexte**, la classe fera l'expérience de la notion d'événements au travers d'un jeu où ils se déplaceront ou crieront  lorsque vous appuyez sur des boutons sur une télécommande géante. ",
-          "preparation": "-   Préparez-vous à projeter **\\*Image du contrôleur**.\n-   Imprimez une **\\*Évaluation** par élève.\n-   Assurez-vous que chaque élève ait bien un journal de réflexion. ",
+          "preparation": "-   Préparez-vous à projeter **\\*Image de la télécommande**.\n-   Imprimez une **\\*Évaluation** par élève.\n-   Assurez-vous que chaque élève ait bien un journal de réflexion. ",
           "purpose": "Aujourd'hui, les élèves apprendront à distinguer les événements des actions. Les élèves verront les activités interrompues en appuyant sur un «  bouton » d'une télécommande en papier. En voyant cet événement, la classe réagira avec une action unique. Les événements sont largement utilisés dans la programmation et devraient être facilement reconnaissables après cette leçon. ",
           "student_overview": "Déplace-toi et crie lorsque ton professeur appuie sur les boutons d'une télécommande géante."
         },
         "courseb-2022/Mini-Project: A Royal Battle with Events": {
           "name": "Mini-Projet : Une Bataille Royale avec les Événements",
           "overview": "Dans ce **mini-projet**, les élèves auront l'occasion d'apprendre à utiliser les événements dans le Labo Jeux et d'appliquer toutes les connaissances de codage qu'ils auront acquises pour créer un jeu animé.",
-          "preparation": "-   Résolvez les casse-têtes pour trouver les problèmes potentiels pour votre classe.\n-   (Facultatif) Choisissez quelques casse-têtes à faire en groupe avec votre classe.\n-   Revoir **\\*Conseils d'activité principale de CS Fundamentals - Recommandations de leçon**.\n-   Assurez-vous que chaque élève ait bien un journal de réflexion. ",
-          "purpose": "Dans cette activité en ligne, les élèves apprendront à utiliser les événements dans le Labo du Jeu. Ils commenceront par former le chevalier de sorte qu'il se déplace lorsqu'une touche fléchée est enfoncée, et termineront avec la possibilité de mettre en valeur le reste des compétences qu'ils ont acquises, tout au long de ce cours, y compris la séquence et la boucle, dans le cadre de l' casse-tête du jeu libre final.",
+          "preparation": "-   Jouez aux casse-têtes pour identifier tous potentiels problèmes pour votre classe.\n-   (Facultatif) Choisissez quelques casse-têtes à faire en groupe en classe.\n-   Étudiez les **\\***\\*Conseils d'activité principale des Bases de l'Informatique - Recommandations de cours\\*\\*\\*\n-   Assurez-vous que chaque élève ait bien un journal de réflexion ",
+          "purpose": "Dans cette activité en ligne, les élèves apprendront à utiliser les événements dans le Labo Jeux. Ils commenceront par apprendre au chevalier à se déplacer lorsqu'une touche fléchée est enfoncée, et termineront avec la possibilité de mettre en valeur le reste des compétences qu'ils ont acquises, tout au long de ce cours, y compris le séquencement et les boucles, dans le cadre du casse-tête en jeu libre de la fin. ",
           "student_overview": "Utilise des événements pour créer une histoire ou un jeu interactif."
         },
         "courseb-2022/End of Course Project": {
           "name": "Projet de fin de cours",
           "overview": "Dans cette leçon **projet**, les élèves mettront en pratique ce qu'ils ont appris sur le séquençage et les événements dans un projet libre avec le Labo Jeux.",
-          "preparation": "-   Codez vos propres projets Play Lab à l'avance pour inspirer les élèves !",
+          "preparation": "-   Codez vos propres projets Labo Jeux à l'avance pour servir d'inspiration aux élèves !",
           "purpose": "Cette leçon donne aux élèves une dernière occasion d'utiliser de manière créative leurs nouvelles compétences en informatique. ",
           "student_overview": "Crée ton propre jeu ou ta propre histoire. "
         },
@@ -971,7 +971,7 @@
         "pre-express-2022/A Royal Battle with Events": {
           "name": "Une Bataille Royale en utilisant les Événements",
           "overview": "Dans ce **mini-projet**, les élèves auront l'occasion d'apprendre à utiliser les événements dans le Labo Jeux et d'appliquer toutes les connaissances de codage qu'ils auront acquises pour créer un jeu animé.",
-          "purpose": "Dans cette activité en ligne, les élèves apprendront à utiliser les événements dans le Labo du Jeu. Ils commenceront par former le chevalier de sorte qu'il se déplace lorsqu'une touche fléchée est enfoncée, et termineront avec la possibilité de mettre en valeur le reste des compétences qu'ils ont acquises, tout au long de ce cours, y compris la séquence et la boucle, dans le cadre de l' casse-tête du jeu libre final.",
+          "purpose": "Dans cette activité en ligne, les élèves apprendront à utiliser les événements dans le Labo Jeux. Ils commenceront par apprendre au chevalier à se déplacer lorsqu'une touche fléchée est enfoncée, et termineront avec la possibilité de mettre en valeur le reste des compétences qu'ils ont acquises, tout au long de ce cours, y compris le séquencement et les boucles, dans le cadre du casse-tête en jeu libre de la fin. ",
           "student_overview": "Utilise des événements pour créer une histoire ou un jeu interactif."
         },
         "coursea-2022/Safety in My Online Neighborhood": {
@@ -4511,28 +4511,28 @@
         "courseb-2021/The Right App": {
           "name": "La Bonne Appli",
           "overview": "Dans cette leçon **d'exploration**, les élèves auront à faire preuve d'empathie envers plusieurs utilisateurs fictifs de smartphone afin de les aider à trouver la « bonne appli » qui répond à leurs besoins.",
-          "preparation": "-   Lisez les notes du conférencier dans le **\\*slide deck**.\n-   Préparez suffisamment de matériel de croquis/dessin pour tous les élèves.\n-   Assurez-vous que chaque élève ait bien un journal de réflexion. ",
-          "purpose": "Aujourd'hui, l'informatique est plus accessible que jamais. Des personnes de tous horizons utilisent des logiciels sur de nombreux appareils différents, en particulier les smartphones, pour l'information, la communication et le divertissement. Parce que les gens ont des expériences et des besoins si divers, il est important pour les informaticiens en herbe de les comprendre et les prendre en compte en développant des solutions. ",
+          "preparation": "-   Lisez les notes du conférencier dans le **\\*deck des diapos**.\n-   Préparez suffisamment de matériel de croquis/dessin pour tous les élèves.\n-   Assurez-vous que chaque élève ait bien un journal de réflexion. ",
+          "purpose": "Aujourd'hui, l'informatique est plus accessible que jamais. Des personnes de tous horizons utilisent des logiciels sur de nombreux appareils différents, en particulier les smartphones, pour l'information, la communication et le divertissement. Parce que les gens ont des expériences et des besoins si divers, il est important pour les informaticiens en herbe de les comprendre et de les prendre en compte lorsqu'ils développent des solutions. ",
           "student_overview": "Dessine les grandes lignes de ta propre appli pour smartphone."
         },
         "courseb-2021/Events: The Big Event": {
           "name": "Le Grand Événement Jr.",
           "overview": "Dans cette **leçon de mise en contexte**, la classe fera l'expérience de la notion d'événements au travers d'un jeu où ils se déplaceront ou crieront  lorsque vous appuyez sur des boutons sur une télécommande géante. ",
-          "preparation": "-   Préparez-vous à projeter **\\*Image du contrôleur**.\n-   Imprimez une **\\*Évaluation** par élève.\n-   Assurez-vous que chaque élève ait bien un journal de réflexion. ",
+          "preparation": "-   Préparez-vous à projeter **\\*Image de la télécommande**.\n-   Imprimez une **\\*Évaluation** par élève.\n-   Assurez-vous que chaque élève ait bien un journal de réflexion. ",
           "purpose": "Aujourd'hui, les élèves apprendront à distinguer les événements des actions. Les élèves verront les activités interrompues en appuyant sur un «  bouton » d'une télécommande en papier. En voyant cet événement, la classe réagira avec une action unique. Les événements sont largement utilisés dans la programmation et devraient être facilement reconnaissables après cette leçon. ",
           "student_overview": "Déplace-toi et crie lorsque ton professeur appuie sur les boutons d'une télécommande géante."
         },
         "courseb-2021/Events in Play Lab": {
           "name": "Mini-Projet : Une Bataille Royale avec les Événements",
           "overview": "Dans ce **mini-projet**, les élèves auront l'occasion d'apprendre à utiliser les événements dans le Labo Jeux et d'appliquer toutes les connaissances de codage qu'ils auront acquises pour créer un jeu animé.",
-          "preparation": "-   Résolvez les casse-têtes pour trouver les problèmes potentiels pour votre classe.\n-   (Facultatif) Choisissez quelques casse-têtes à faire en groupe avec votre classe.\n-   Revoir **\\*Conseils d'activité principale de CS Fundamentals - Recommandations de leçon**.\n-   Assurez-vous que chaque élève ait bien un journal de réflexion. ",
-          "purpose": "Dans cette activité en ligne, les élèves apprendront à utiliser les événements dans le Labo du Jeu. Ils commenceront par former le chevalier de sorte qu'il se déplace lorsqu'une touche fléchée est enfoncée, et termineront avec la possibilité de mettre en valeur le reste des compétences qu'ils ont acquises, tout au long de ce cours, y compris la séquence et la boucle, dans le cadre de l' casse-tête du jeu libre final.",
+          "preparation": "-   Jouez aux casse-têtes pour identifier tous potentiels problèmes pour votre classe.\n-   (Facultatif) Choisissez quelques casse-têtes à faire en groupe en classe.\n-   Étudiez les **\\***\\*Conseils d'activité principale des Bases de l'Informatique - Recommandations de cours\\*\\*\\*\n-   Assurez-vous que chaque élève ait bien un journal de réflexion ",
+          "purpose": "Dans cette activité en ligne, les élèves apprendront à utiliser les événements dans le Labo Jeux. Ils commenceront par apprendre au chevalier à se déplacer lorsqu'une touche fléchée est enfoncée, et termineront avec la possibilité de mettre en valeur le reste des compétences qu'ils ont acquises, tout au long de ce cours, y compris le séquencement et les boucles, dans le cadre du casse-tête en jeu libre de la fin. ",
           "student_overview": "Utilise des événements pour créer une histoire ou un jeu interactif."
         },
         "courseb-2021/lesson-1": {
           "name": "Projet de fin de cours",
           "overview": "Dans cette leçon **projet**, les élèves mettront en pratique ce qu'ils ont appris sur le séquençage et les événements dans un projet libre avec le Labo Jeux.",
-          "preparation": "-   Codez vos propres projets Play Lab à l'avance pour inspirer les élèves !",
+          "preparation": "-   Codez vos propres projets Labo Jeux à l'avance pour servir d'inspiration aux élèves !",
           "purpose": "Cette leçon donne aux élèves une dernière occasion d'utiliser de manière créative leurs nouvelles compétences en informatique. ",
           "student_overview": "Crée ton propre jeu ou ta propre histoire. "
         },
@@ -5104,7 +5104,7 @@
         "pre-express-2021/A Royal Battle with Events": {
           "name": "Une Bataille Royale en utilisant les Événements",
           "overview": "Dans ce **mini-projet**, les élèves auront l'occasion d'apprendre à utiliser les événements dans le Labo Jeux et d'appliquer toutes les connaissances de codage qu'ils auront acquises pour créer un jeu animé.",
-          "purpose": "Dans cette activité en ligne, les élèves apprendront à utiliser les événements dans le Labo du Jeu. Ils commenceront par former le chevalier de sorte qu'il se déplace lorsqu'une touche fléchée est enfoncée, et termineront avec la possibilité de mettre en valeur le reste des compétences qu'ils ont acquises, tout au long de ce cours, y compris la séquence et la boucle, dans le cadre de l' casse-tête du jeu libre final.",
+          "purpose": "Dans cette activité en ligne, les élèves apprendront à utiliser les événements dans le Labo Jeux. Ils commenceront par apprendre au chevalier à se déplacer lorsqu'une touche fléchée est enfoncée, et termineront avec la possibilité de mettre en valeur le reste des compétences qu'ils ont acquises, tout au long de ce cours, y compris le séquencement et les boucles, dans le cadre du casse-tête en jeu libre de la fin. ",
           "student_overview": "Utilise des événements pour créer une histoire ou un jeu interactif."
         },
         "coursee-2021/Simon Says": {

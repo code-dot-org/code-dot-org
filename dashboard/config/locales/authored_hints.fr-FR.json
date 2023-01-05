@@ -951,7 +951,7 @@
         "OPD-K5-variables-6": {
           "courseF_artist_variables4_a": "Votre code ne sera pas très différent de ce qu'il était dans la dernière casse-tête, sauf que tu devras tourner l'artiste pour qu'il saute vers le bas, puis le retourner pour te préparer à dessiner le triangle suivant.\n",
           "courseF_artist_variables4_c": "Voici le modèle que ton artiste suivra : \n\n[][0]",
-          "courseF_artist_variables4_b": "[blockly block][0]"
+          "courseF_artist_variables4_b": "[bloc blockly][0]"
         },
         "OPD-K5-variables-7": {
           "courseF_artist_variables5_a": "La seconde moitié de ton code devrait ressembler de près à la première moitié, sauf que tu tourneras_à gauche_, sauteras, puis tourneras _à droite_.",
@@ -5639,7 +5639,7 @@
           "courseD_bee_conditionals4_hintVid1": "Besoin d'aide pour démarrer? Regarde la vidéo!",
           "courseD_bee_conditionals4_a": "Tu peux toujours traiter chaque case comme s'il y avait un nuage par-dessus, même si tu peux voir tout le chemin.",
           "courseD_bee_conditionals4_b": "Utilise une indication « si » à l'intérieur de ta boucle pour voir dans chaque case s'il n'y a pas du nectar.",
-          "courseD_bee_conditionals4_c": "En utilisant le bloc [blockly block][0], tu dois pouvoir avancer et vérifier si une fleur est présente. S'il y a une fleur, qu'est ce que l'abeille doit faire?",
+          "courseD_bee_conditionals4_c": "En utilisant le bloc [bloc blockly][0], tu dois pouvoir avancer et vérifier si une fleur est présente. S'il y a une fleur, qu'est ce que l'abeille doit faire?",
           "courseD_bee_conditionals4_hintVid2": "Regarde cette vidéo pour t'aider à résoudre ce casse-tête."
         },
         "courseD_bee_conditionals5": {
@@ -5908,13 +5908,13 @@
           "courseD_bounce_events1s_b": "N'oublie pas d'appuyer sur « Démarrer » et de mettre la main sur le panier pour résoudre ce casse-tête."
         },
         "courseD_bounce_events2s_2018": {
-          "courseD_bounce_events2s_a": "Tu vas avoir besoin de deux ensembles d'événements `déplacer` codés pour que tout fonctionne bien :   \n\n[blockly block] [0]"
+          "courseD_bounce_events2s_a": "Tu vas avoir besoin de deux ensembles d'événements `déplacer` codés pour que tout fonctionne bien :   \n\n[bloc blockly] [0]"
         },
         "courseD_bounce_events2s_2019": {
-          "courseD_bounce_events2s_a": "Tu vas avoir besoin de deux ensembles d'événements `déplacer` codés pour que tout fonctionne bien :   \n\n[blockly block] [0]"
+          "courseD_bounce_events2s_a": "Tu vas avoir besoin de deux ensembles d'événements `déplacer` codés pour que tout fonctionne bien :   \n\n[bloc blockly] [0]"
         },
         "courseD_bounce_events2s_2020": {
-          "courseD_bounce_events2s_a": "Tu vas avoir besoin de deux ensembles d'événements `déplacer` codés pour que tout fonctionne bien :   \n\n[blockly block] [0]"
+          "courseD_bounce_events2s_a": "Tu vas avoir besoin de deux ensembles d'événements `déplacer` codés pour que tout fonctionne bien :   \n\n[bloc blockly] [0]"
         },
         "courseD_bounce_events5s_2018": {
           "courseD_bounce_events5s_a": "Tu n'as pas besoin de déplacer la main pour résoudre ce casse-tête.",
@@ -7100,7 +7100,7 @@
         },
         "courseE_artist_functions2_copy": {
           "courseD_artist_functions2_b": "La fonction que tu écris ne doit pas contenir tout ton programme, seulement la partie qui dessine un carré de 100 pixels de côté.",
-          "courseD_artist_functions2_c": "Utilise le bloc vert `Dessiner un carré` pour « appeler » ta fonction après le bloc `quand l'exécution commence`. Sinon, le code de ta fonction ne sera pas exécuté.\n\n[blockly block][0]\n",
+          "courseD_artist_functions2_c": "Utilise le bloc vert `Dessiner un carré` pour « appeler » ta fonction après le bloc `quand l'exécution commence`. Sinon, le code de ta fonction ne sera pas exécuté.\n\n[bloc blockly][0]\n",
           "courseD_artist_functions2_a": "Ton programme devrait:\n- Utiliser une fonction\n- Avancer de 100 + 75 pixels\n- Utiliser une fonction"
         },
         "courseE_artist_functions3": {
@@ -9487,92 +9487,92 @@
         "courseC19_playLab_EOC2_2021": {
           "courseE_playLab_scaffold1_b": "Tu devrais avoir 4 blocs d'évènements `Lorsque flêche`, avec une direction pour bouger sous chacun d'eux.",
           "courseE_playLab_scaffold1_c": "Une fois que tu as terminé, tu devrais pouvoir déplacer ton héros avec les touches fléchées !",
-          "playlab_up": "Pour déplacer ton acteur vers le haut, tu peux connecter ces blocs : \n<xml>\n  <block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">up</title>\n    <next>\n      <block type=\"studio_move\">\n        <title name=\"SPRITE\">0</title>\n        <title name=\"DIR\">1</title>\n      </block>\n    </next>\n  </block>\n  </xml>",
-          "playlab_down": "Pour déplacer ton acteur vers le bas, tu peux connecter ces blocs : \n<xml>\n  <block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">down</title>\n    <next>\n      <block type=\"studio_move\">\n        <title name=\"SPRITE\">0</title>\n        <title name=\"DIR\">4</title>\n      </block>\n    </next>\n  </block>\n  </xml>",
-          "playlab_left": "Pour déplacer ton acteur vers la gauche, tu peux connecter ces blocs : \n<xml>\n  <block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">left</title>\n    <next>\n      <block type=\"studio_move\">\n        <title name=\"SPRITE\">0</title>\n        <title name=\"DIR\">8</title>\n      </block>\n    </next>\n  </block>\n  </xml>",
-          "playlab_right": "Pour déplacer ton acteur vers la droite, tu peux connecter ces blocs : \n<xml>\n  <block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">right</title>\n    <next>\n      <block type=\"studio_move\">\n        <title name=\"SPRITE\">0</title>\n        <title name=\"DIR\">2</title>\n      </block>\n    </next>\n  </block>\n  </xml> "
+          "playlab_up": "Pour déplacer ton acteur vers le haut, tu peux connecter ces blocs : \n[bloc blockly][0]",
+          "playlab_down": "Pour déplacer ton acteur vers le bas, tu peux connecter ces blocs : \n[bloc blockly][0]",
+          "playlab_left": "Pour déplacer ton acteur vers la gauche, tu peux connecter ces blocs : \n[bloc blockly][0]",
+          "playlab_right": "Pour déplacer ton acteur vers la droite, tu peux connecter ces blocs : \n[bloc blockly][0] "
         },
         "courseC19_playLab_EOC4_2021": {
           "courseE_playLab_scaffold4_a": "Utiliser `marquer 1 point` pour ajouter un point, et `enlever 1 point` pour en retirer un."
         },
         "courseC_PlayLab_events1_2021": {
-          "courseC_PlayLab_events1_a": "Attache ce bloc au bloc ˋquand l’exécution commence\\` :\n\n<xml>\n  <block type=\"studio_saySpriteChoices\">\n    <title name=\"SPRITE\">0</title>\n    <title name=\"VALUE\">Hi there.</title>\n  </block>\n</xml>"
+          "courseC_PlayLab_events1_a": "Attache ce bloc au bloc ˋquand l’exécution commence` :\n\n[bloc blockly][0]"
         },
         "courseC_PlayLab_events2_2021": {
-          "courseC_PlayLab_events2_a": "Attache deux de ces blocs au bloc ˋquand l’exécution commence\\` :\n\n<xml>\n  <block type=\"studio_saySpriteChoices\">\n    <title name=\"SPRITE\">0</title>\n    <title name=\"VALUE\">Hi there.</title>\n  </block>\n</xml>",
-          "courseC_PlayLab_events2_b": "Utilise le menu déroulant du deuxième bloc ˋl’acteur \\_\\_ dit\\` pour changer l'acteur qui parle."
+          "courseC_PlayLab_events2_a": "Attache deux de ces blocs au bloc ˋquand l’exécution commence` :\n\n[bloc blockly][0]",
+          "courseC_PlayLab_events2_b": "Utilise le menu déroulant du deuxième bloc ˋl’acteur __ dit` pour changer l'acteur qui parle."
         },
         "courseC_PlayLab_events3_2021": {
           "courseC_PlayLab_events3_a": "Tu n'as besoin de déplacer Jorge que d’environ 25 pixels vers la droite pour résoudre ce casse-tête.",
           "courseC_PlayLab_events3_b": "Y a-t-il un bloc dans la boîte à outils qui semble pouvoir déplacer un acteur ?",
-          "courseC_PlayLab_events3_c": "Attache ce bloc au bloc ˋquand l’exécution commence\\` :\n\n<xml>\n<block type=\"studio_moveDistance\">\n    <title name=\"SPRITE\">0</title>\n    <title name=\"DIR\">2</title>\n    <title name=\"DISTANCE\">25</title>\n  </block>\n</xml>"
+          "courseC_PlayLab_events3_c": "Attache ce bloc au bloc ˋquand l’exécution commence` :\n\n[bloc blockly][0]"
         },
         "courseC_PlayLab_events4_2021": {
           "courseC_PlayLab_events4_b": "Quand on clique sur « Démarrer », il faut que Jorge se déplace de **100** pixels vers la droite pour atteindre Olive la chatte.",
-          "courseC_PlayLab_events4_a": "Il va te falloir connecter un bloc ˋl’acteur \\_\\_ dit`à l’événement ˋlorsque l’acteur touche` pour résoudre ce casse-tête."
+          "courseC_PlayLab_events4_a": "Il va te falloir connecter un bloc ˋl’acteur __ dit` à l’événement ˋlorsque l’acteur touche` pour résoudre ce casse-tête."
         },
         "courseC_PlayLab_events5_2021": {
-          "courseC_PlayLab_events5_a": "Il va te falloir cliquer sur le menu déroulant dans le bloc ˋl’acteur dit\\` pour trouver le texte « Quoi de neuf ? ». ",
+          "courseC_PlayLab_events5_a": "Il va te falloir cliquer sur le menu déroulant dans le bloc ˋl’acteur dit` pour trouver le texte « Quoi de neuf ? ». ",
           "courseC_PlayLab_events5_b": "Clique sur Octavia quand tu exécutes ton programme pour vérifier qu’il fonctionne bien !"
         },
         "courseC_PlayLab_events6_2021": {
           "courseC_PlayLab_events6_a": "Chaque bloc vert `quand flèche` devrait avoir une action qui s'y rattache en-dessous de lui.",
-          "courseC_PlayLab_events6_b": "Utilise le menu déroulant du bloc ˋdéplacer l’acteur 1\\` pour modifier le sens dans lequel Waddles se déplace.",
+          "courseC_PlayLab_events6_b": "Utilise le menu déroulant du bloc ˋdéplacer l’acteur 1` pour modifier le sens dans lequel Waddles se déplace.",
           "courseC_PlayLab_events6_c": "Quand tu as fini, tu devrais pouvoir déplacer Waddles en utilisant les touches fléchées sur ton clavier !"
         },
         "courseC_PlayLab_events7_2021": {
-          "courseC_PlayLab_events7_a": "Utilise et le bloc ˋdéplacer l’acteur 2 vers le haut de 400 pixels`et le bloc ˋdéplacer l’acteur 2 vers le bas de 400 pixels` au sein de la boucle ˋrépéter à l’infini\\` pour résoudre ce casse-tête. ",
+          "courseC_PlayLab_events7_a": "Utilise et le bloc ˋdéplacer l’acteur 2 vers le haut de 400 pixels` et le bloc ˋdéplacer l’acteur 2 vers le bas de 400 pixels` au sein de la boucle ˋrépéter à l’infini` pour résoudre ce casse-tête. ",
           "courseC_PlayLab_events7_b": "La boucle ˋrépéter à l’infiniˋ n’a pas besoin d’être connectée à d’autres blocs événement ; elle s’exécutera toute seule."
         },
         "courseC_PlayLab_events8_2021": {
-          "courseC_PlayLab_events8_a": "Tu devras connecter des blocs au bloc ˋlorsque l’acteur touche\\` pour que tout marche correctement.",
-          "courseC_PlayLab_events8_b": "Les blocs ˋl’acteur dit`et ˋjouer un son` dans la boîte à outils devraient t’aider !"
+          "courseC_PlayLab_events8_a": "Tu devras connecter des blocs au bloc ˋlorsque l’acteur touche` pour que tout marche correctement.",
+          "courseC_PlayLab_events8_b": "Les blocs ˋl’acteur dit` et ˋjouer un son` dans la boîte à outils devraient t’aider !"
         },
         "courseC_PlayLab_events9_2021": {
-          "courseC_PlayLab_events9_a": "Le bloc ˋmarquer un point\\` t’aidera à résoudre ce casse-tête.",
-          "courseC_PlayLab_events9_b": "Assure-toi que ton nouveau bloc ˋlorsque l’acteur touche\\` désigne l’acteur **1** et l’acteur **3**.",
-          "courseC_PlayLab_events9_c": "Tu peux avoir plus d’un événement ˋquand l’acteur touche\\` à la fois dans ton espace de travail, donc tu n’as pas besoin de supprimer le premier !"
+          "courseC_PlayLab_events9_a": "Le bloc ˋmarquer un point` t’aidera à résoudre ce casse-tête.",
+          "courseC_PlayLab_events9_b": "Assure-toi que ton nouveau bloc ˋlorsque l’acteur touche` désigne l’acteur **1** et l’acteur **3**.",
+          "courseC_PlayLab_events9_c": "Tu peux avoir plus d’un événement ˋquand l’acteur touche` à la fois dans ton espace de travail, donc tu n’as pas besoin de supprimer le premier !"
         },
         "courseC_PlayLab_eventsA_2021": {
-          "courseC_PlayLab_eventsA_a": "Utilise le bloc ˋdéfinir un arrière-plan`et le bloc ˋaffecter à l’acteur une vitesse ____` pour résoudre ce casse-tête.",
-          "courseC_PlayLab_eventsA_b": "Il va notamment te falloir faire glisser un bloc ˋquand l’exécution commence\\` dans ton espace de travail pour résoudre ce casse-tête."
+          "courseC_PlayLab_eventsA_a": "Utilise le bloc ˋdéfinir un arrière-plan` et le bloc ˋaffecter à l’acteur une vitesse ____` pour résoudre ce casse-tête.",
+          "courseC_PlayLab_eventsA_b": "Il va notamment te falloir faire glisser un bloc ˋquand l’exécution commence` dans ton espace de travail pour résoudre ce casse-tête."
         },
         "courseC_PlayLab_eventsA_embed_2021": {
-          "courseC_PlayLab_eventsA_a": "Utilise les touches fléchées pour déplacer le pingouin. Tu n'as pas besoin d'écrire de code pour terminer ce niveau."
+          "courseC_PlayLab_eventsA_a": "Utilise les touches fléchées pour déplacer le pingouin. Tu n'as pas besoin d'écrire de code pour terminer ce niveau.\n"
         },
         "courseC_PlayLab_eventsFP_2021": {
-          "idea1": "_Besoin d'une idée ?_   \n\n **Qui est là ?** Fais apparaître des personnages avec des images aléatoires, pour que personne ne puisse savoir qui va apparaître ensuite.    \n\n<img src= « https://images.code.org/dbd6ece9d0fb213039ea5dccb91fc425-image-1563577859889.gif » style=\"width: 200px\">",
-          "idea2": "_Besoin d'une idée ?_   \n\n**Partir à l'Aventure** - Change l'arrière-plan, puis fais parler les personnages de l'endroit où ils se trouvent désormais.\n\n<img src= « https://images.code.org/a7f740d73074deb128cdc2826abda9e6-image-1563576781779.gif » style=\"width: 200px\">",
+          "idea1": "_Besoin d'une idée ?_   \n\n **Qui est là ?** Fais apparaître des personnages avec des images aléatoires, pour que personne ne puisse savoir qui va apparaître ensuite.    \n\n<img src= « https://images.code.org/dbd6ece9d0fb213039ea5dccb91fc425-image-1563577859889.gif » style=\"width: 200px\">\n",
+          "idea2": "_Besoin d'une idée ?_   \n\n**Partir à l'Aventure** - Change l'arrière-plan, puis fais parler les personnages de l'endroit où ils se trouvent désormais.\n\n<img src= « https://images.code.org/a7f740d73074deb128cdc2826abda9e6-image-1563576781779.gif » style=\"width: 200px\">\n",
           "idea3": "_Besoin d’une idée ?_\n\n**Pinball** - Fais se déplacer un personnage en utilisant les touches fléchées (utilise des blocs ˋquand flèche vers le haut`, ˋquand flèche vers le bas`), puis fais jouer des sons aléatoires quand il rentre dans d’autres personnages sur l’écran."
         },
         "courseC_PlayLab_events_challenge1_2021": {
-          "courseC_PlayLab_events_challenge_a": "Tu peux utiliser ce bloc pour déplacer les acteurs à différents endroits de l’espace de jeu.\n\n<xml> <block type=\"studio_setSpritePosition\">\n    <title name=\"SPRITE\">0</title>\n    <title name=\"VALUE\">12</title>\n  </block></xml>",
-          "courseC_PlayLab_events_challenge_b": "Essaie d’utiliser \\`affecter à l’acteur 1 la position du milieu à gaucheˋ quand il touche un des autres acteurs. Cela réinitialisera le jeu pour que le joueur puisse continuer à essayer !",
-          "courseC_PlayLab_events_challenge_c": "Tu pourrais essayer de modifier la vitesse des différents acteurs pour rendre le jeu plus facile ou plus difficile !\n\n<xml>  <block type=\"studio_setSpriteSpeed\">\n\n<title name=\"SPRITE\">0</title>\n<title name=\"VALUE\">Studio.SpriteSpeed.FAST</title>\n</block></xml>"
+          "courseC_PlayLab_events_challenge_a": "Tu peux utiliser ce bloc pour déplacer les acteurs à différents endroits de l’espace de jeu.\n\n[bloc blockly][0]",
+          "courseC_PlayLab_events_challenge_b": "Essaie d’utiliser `affecter à l’acteur 1 la position du milieu à gaucheˋ quand il touche un des autres acteurs. Cela réinitialisera le jeu pour que le joueur puisse continuer à essayer !",
+          "courseC_PlayLab_events_challenge_c": "Tu pourrais essayer de modifier la vitesse des différents acteurs pour rendre le jeu plus facile ou plus difficile !\n\n<xml>  <block type=\"studio_setSpriteSpeed\">\n<title name=\"SPRITE\">0</title>\n<title name=\"VALUE\">Studio.SpriteSpeed.FAST</title>\n</block></xml>"
         },
         "courseC_artist_loops1a_2021": {
-          "courseC_artist_loops1a_a": "Voici le premier bloc dont tu auras besoin :\n\n<xml>\n  <block type=\"jump_to\">\n    <title name=\"VALUE\">13</title>\n  </block>\n</xml>",
-          "courseC_artist_loops1a_b": "Utilise ce bloc pour dessiner l’autocollant !\n\n<xml>\n<block type=\"sticker\">\n    <title name=\"VALUE\">Bird</title>\n  </block>\n</xml>"
+          "courseC_artist_loops1a_a": "Voici le premier bloc dont tu auras besoin :\n\n[bloc blockly][0]",
+          "courseC_artist_loops1a_b": "Utilise ce bloc pour dessiner l’autocollant !\n\n[bloc blockly][0]"
         },
         "courseC_artist_loops1b_2021": {
-          "courseC_artist_loops1b_a": "Voici le premier bloc dont tu auras besoin :   \n\n<xml>\n  <block type=\"draw_turn_by_constant_dropdown\">\n    <title name=\"DIR\">???</title>\n    <title name=\"VALUE\" config=\"45,60,90,120,180\">???</title>\n  </block>\n</xml>\n\nTu peux choisir soit la gauche, soit la droite, et n'importe quel degré."
+          "courseC_artist_loops1b_a": "C'est le premier bloc dont tu auras besoin :    \n\n[bloc blockly][0]\n\nTu peux choisir gauche ou droite et n'importe quel nombre de degrés.\n"
         },
         "courseC_artist_loops2a_2021": {
-          "courseC_artist_loops2a_a": "À l'intérieur de ta boucle, il va te falloir sauter au milieu, puis tourner, puis dessiner un autocollant. ",
-          "courseC_artist_loops2a_b": "Clique sur le numéro en haut de la boucle « répéter » pour modifier le nombre de fois qu’elle se répète."
+          "courseC_artist_loops2a_a": "À l'intérieur de ta boucle, il faudra sauter au milieu, puis tourner, puis dessiner un autocollant. ",
+          "courseC_artist_loops2a_b": "Clique sur le nombre en haut de la boucle ˋrepeat` pour modifier le nombre de fois qu’elle se répète."
         },
         "courseC_artist_loops3a_2021": {
-          "courseC_artist_loops3a_a": "Tu n'auras qu'à ajouter un seul bloc à l’intérieur de ta boucle, à la suite de l’autocollant d’oiseau.",
-          "courseC_artist_loops3a_b": "Ton programme devrait ressembler à ça !\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"controls_repeat\">\n        <title name=\"TIMES\">???</title>\n        <statement name=\"DO\">\n          <block type=\"jump_to\">\n            <title name=\"VALUE\">13</title>\n            <next>\n              <block type=\"draw_turn_by_constant_dropdown\">\n                <title name=\"DIR\">???</title>\n                <title name=\"VALUE\" config=\"1,2,5,10,12,20,30,45,60,90,120,180\">???</title>\n                <next>\n                  <block type=\"sticker\">\n                    <title name=\"VALUE\">Cat</title>\n                    <next>\n                      <block type=\"sticker\">\n                        <title name=\"VALUE\">Dog</title>\n                      </block>\n                    </next>\n                  </block>\n                </next>\n              </block>\n            </next>\n          </block>\n        </statement>\n      </block>\n    </next>\n  </block>\n</xml>\n\nUtilise tous les autocollants que tu veux !"
+          "courseC_artist_loops3a_a": "Tu devras ajouter seulement un bloc à l’intérieur de ta boucle après le premier autocollant.",
+          "courseC_artist_loops3a_b": "Ton programme devrait ressembler à ça !\n\n[bloc blockly][0]\n\nUtilise les autocollants que tu veux !"
         },
         "courseC_artist_loops4a_2021": {
-          "courseC_artist_loops4a_a": "Utilise ce bloc pour sauter vers l'avant :\n\n<xml>\n<block type=\"jump_by_constant\">\n    <title name=\"DIR\">jumpForward</title>\n    <title name=\"VALUE\">???</title>\n  </block>\n</xml>\n\nN’oublie pas de régler la distance !",
-          "courseC_artist_loops4a_b": "Ton programme devrait ressembler à ça ! \n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"controls_repeat\">\n        <title name=\"TIMES\">???</title>\n        <statement name=\"DO\">\n          <block type=\"jump_to\">\n            <title name=\"VALUE\">13</title>\n            <next>\n              <block type=\"draw_turn_by_constant_dropdown\">\n                <title name=\"DIR\">???</title>\n                <title name=\"VALUE\" config=\"1,2,5,10,12,20,30,45,60,90,120,180\">???</title>\n                <next>\n                  <block type=\"sticker\">\n                    <title name=\"VALUE\">Cat</title>\n                    <next>\n                      <block type=\"jump_by_constant\">\n                        <title name=\"DIR\">jumpForward</title>\n                        <title name=\"VALUE\">???</title>\n                        <next>\n                          <block type=\"sticker\">\n                            <title name=\"VALUE\">Dog</title>\n                          </block>\n                        </next>\n                      </block>\n                    </next>\n                  </block>\n                </next>\n              </block>\n            </next>\n          </block>\n        </statement>\n      </block>\n    </next>\n  </block>\n</xml>"
+          "courseC_artist_loops4a_a": "Utilise ce bloc pour sauter vers l'avant :\n\n[bloc blockly][0]\n\nN’oublie pas de régler la distance !",
+          "courseC_artist_loops4a_b": "Ton programme devrait ressembler à ça i!\n\n[bloc blockly][0]"
         },
         "courseC_artist_loops5b_2021": {
-          "courseC_artist_loops5b_a": "Utilise ce bloc pour définir le schéma récurrent de tes lignes :\n\n<xml>\n<block type=\"draw_line_style_pattern\">\n    <title name=\"VALUE\">DEFAULT</title>\n  </block>\n</xml>",
-          "courseC_artist_loops5b_b": "Pour réaliser un design comme celui-ci ci-dessus, il va te falloir reculer de du même montant que tu avances.",
-          "courseC_artist_loops5b_c": "Ton programme devrait ressembler à ça ! \n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"draw_line_style_pattern\">\n        <title name=\"VALUE\">rainbowLine</title>\n        <next>\n          <block type=\"controls_repeat\">\n            <title name=\"TIMES\">4</title>\n            <statement name=\"DO\">\n              <block type=\"jump_to\">\n                <title name=\"VALUE\">13</title>\n                <next>\n                  <block type=\"draw_move_by_constant\">\n                    <title name=\"DIR\">moveForward</title>\n                    <title name=\"VALUE\">???</title>\n                    <next>\n                      <block type=\"draw_move_by_constant\">\n                        <title name=\"DIR\">moveBackward</title>\n                        <title name=\"VALUE\">???</title>\n                        <next>\n                          <block type=\"draw_turn_by_constant_dropdown\">\n                            <title name=\"DIR\">???</title>\n                            <title name=\"VALUE\" config=\"1,2,5,10,12,20,30,45,60,90,120,180\">???</title>\n                            <next>\n                              <block type=\"sticker\">\n                                <title name=\"VALUE\">Cat</title>\n                                <next>\n                                  <block type=\"jump_by_constant\">\n                                    <title name=\"DIR\">jumpForward</title>\n                                    <title name=\"VALUE\">???</title>\n                                    <next>\n                                      <block type=\"sticker\">\n                                        <title name=\"VALUE\">Dog</title>\n                                      </block>\n                                    </next>\n                                  </block>\n                                </next>\n                              </block>\n                            </next>\n                          </block>\n                        </next>\n                      </block>\n                    </next>\n                  </block>\n                </next>\n              </block>\n            </statement>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+          "courseC_artist_loops5b_a": "Utilise ce bloc pour définir le schéma récurrent de tes lignes :\n\n[bloc blockly][0]",
+          "courseC_artist_loops5b_b": "Pour réaliser un dessin comme celui, ci-dessus, tu devras reculer de la même distance que tu avances.",
+          "courseC_artist_loops5b_c": "Ton programme devrait ressembler à ça !\n\n[bloc blockly][0]"
         },
         "courseC_artist_loops6a_2021": {
           "courseC_artist_loops6a_a": "Pour créer un design comme celui ci-dessus, saute en avant de moins de 75 pixels entre chaque autocollant."
@@ -9581,20 +9581,20 @@
           "courseC_artist_loops7a_a": "Il y a 360 degrés dans un cercle. Multiplie les degrés de ta rotation par le nombre de fois que tu répètes.\nEst-ce égal à 360 ?\nVérifie les rotations suggérées pour voir si ça marche !"
         },
         "courseC_artist_prog2_2021": {
-          "courseC_artist_prog2_a": "*« Si tu utilises le bloc <xml><block type=\"draw_move_by_constant\"><title name=\"DIR\">moveForward</title><title name=\"VALUE\">100</title></block></xml>, je tracerai une ligne. »*",
-          "courseC_artist_prog2_b": "Tu as du mal à tourner au coin ? Utilise le bloc <xml><block type=\"draw_turn_by_constant_dropdown\"><title name=\"DIR\">turnRight</title><title name=\"VALUE\" config=\"45,60,90,120,180\">90</title></block></xml>."
+          "courseC_artist_prog2_a": "_« Si tu utilises le bloc [bloc blockly][0], je tracerai une ligne. »_",
+          "courseC_artist_prog2_b": "Tu as du mal à tourner au coin ? Utilise le bloc [bloc blockly][0]."
         },
         "courseC_artist_prog3_2021": {
-          "courseC_artist_prog3_a": "Pour faire cette fenêtre, dessine simplement un carré avec des côtés de 100 pixels.\n\n-   avance\n-   tourne\n-   avance\n-   tourne\n-   avance\n-   tourne\n-   avance",
+          "courseC_artist_prog3_a": "Pour faire cette fenêtre, dessine simplement un carré avec des côtés de 100 pixels.\n\n- avance\n- tourne\n- avance\n- tourne\n- avance\n- tourne\n- avance",
           "courseC_artist_prog3_b": "Tu veux rendre ton code plus court ? Essaie d'utiliser une boucle pour ce casse-tête. "
         },
         "courseC_artist_prog4_2021": {
           "courseC_artist_prog4_a": "Pour terminer la fusée, retrace tout simplement le triangle en haut !",
           "courseC_artist_prog4_b": "Tu peux utiliser le menu déroulant sur les blocs « tourner » pour voir de quel angle tu as besoin !",
-          "courseC_artist_prog4_c": "Pour dessiner ce triangle, il va te falloir :\n\n-   avancer\n-   tourner à gauche de 120 degrés\n-   avancer\n-   tourner à gauche de 120 degrés\n-   avancer"
+          "courseC_artist_prog4_c": "Pour dessiner ce triangle, il va te falloir :\n\n- avancer\n- tourner à gauche de 120 degrés\n- avancer\n- tourner à gauche de 120 degrés\n- avancer"
         },
         "courseC_artist_prog5_2021": {
-          "courseC_artist_prog5_a": "Fais glisser le curseur vers la gauche afin de ralentir suffisamment ton code pour pouvoir voir ligne par ligne là où les choses tournent mal.",
+          "courseC_artist_prog5_a": "Fais glisser le curseur à gauche jusqu’à pouvoir exécuter ton code ligne par ligne pour voir où les choses tournent mal.",
           "courseC_artist_prog5_b": "N'aie pas peur de faire des erreurs ! Essaie d'ajouter des blocs et d'exécuter ton code, pour voir ce qui se passe, même si tu ne penses pas avoir encore résolu le casse-tête.",
           "courseC_artist_prog5_c": "Tu peux utiliser les menus déroulants dans les blocs pour modifier ce qu’ils font !",
           "courseC_artist_prog5_d": "Chaque virage devrait être de 90 degrés vers la droite."
@@ -9602,14 +9602,14 @@
         "courseC_artist_prog6_2021": {
           "courseC_artist_prog6_a": "L’artiste est déjà tourné dans le bon sens pour dessiner sa première ligne.",
           "courseC_artist_prog6_b": "Le losange n’est en fait qu’un carré qui tient sur un coin.",
-          "courseC_artist_prog6_c": "Comme ce losange est aussi un carré, assure-toi de tourner de 90 degrés à chaque coin."
+          "courseC_artist_prog6_c": "Comme ce diamant est aussi un carré, tourne-le bien à 90 degrés dans les coins."
         },
         "courseC_artist_prog7_2021": {
           "courseC_artist_prog7_a": "Chaque angle fait soit 45, soit 90 degrés.",
           "courseC_artist_prog7_c": "Tu peux utiliser le menu déroulant sur les blocs « tourner » pour voir de quel angle tu as besoin !",
           "courseC_artist_prog7_e": "N'aie pas peur de faire des erreurs ! Essaie d'ajouter des blocs et d'exécuter ton code, pour voir ce qui se passe, même si tu ne penses pas avoir encore résolu le casse-tête.",
           "courseC_artist_prog7_b": "Est-ce que tout se passe bien à la première étape ?\nEt à la deuxième ?\nOù est-ce que ça tourne mal ?",
-          "courseC_artist_prog7_d": "Il va te falloir :\n\n-   avancer\n-   tourner à droite de 45 degrés\n-   avancer\n-   tourner à droite de 90 degrés\n-   avancer\n-   tourner à droite de 45 degrés\n\nRépète 2 fois ce schéma !"
+          "courseC_artist_prog7_d": "Il va te falloir :\n\n- avancer\n- tourner à droite de 45 degrés\n- avancer\n- tourner à droite de 90 degrés\n- avancer\n- tourner à droite de 45 degrés\n\nRépète 2 fois ce schéma !"
         },
         "courseC_artist_prog_challenge1_2021": {
           "courseC_artist_prog_challenge1_a": "Tu peux dessiner cela comme un rectangle avec une ligne au milieu ou comme deux carrés !"
@@ -9619,18 +9619,18 @@
           "courseC_artist_prog_challenge2_b": "Après avoir dessiné la deuxième ligne, tourne-toi vers la droite avant de dessiner ta troisième ligne."
         },
         "courseC_collector_loops_challenge2_2021": {
-          "courseC_maze_loops_challenge2_b": "Utilise des boucles pour ne pas être à court de blocs ˋcollecter\\` !"
+          "courseC_maze_loops_challenge2_b": "Utilise des boucles pour ne pas être à court de blocs ˋcollecter` !"
         },
         "courseC_collector_prog1_2021": {
-          "courseC_collector_prog1_a": "Une fois que tu te trouves sur une case avec du trésor, utilise le bloc <xml><block type=\"collector_collect\"/></xml> pour le ramasser.",
+          "courseC_collector_prog1_a": "Une fois que tu te trouves sur une case avec du trésor, utilise le bloc [bloc blockly][0] pour le ramasser.",
           "courseC_collector_prog1_b": "La solution la plus simple serait d’avancer une fois puis de ramasser le trésor."
         },
         "courseC_collector_prog2_2021": {
-          "courseC_collector_prog2_a": "Tu peux utiliser quatre blocs <xml><block type=\"maze_move\"><title name=\"DIR\">moveForward</title></block></xml> ou utiliser le bloc <xml><block type=\"controls_repeat_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> pour rendre ton programme plus court.",
+          "courseC_collector_prog2_a": "Tu peux utiliser quatre blocs [bloc blockly][0] ou utiliser le bloc [bloc blockly][1] pour rendre ton programme plus court.",
           "courseC_collector_prog2_b": "N'aie pas peur de faire des erreurs ! Essaie d'ajouter des blocs et d'exécuter ton code, pour voir ce qui se passe, même si tu ne penses pas avoir encore résolu le casse-tête."
         },
         "courseC_collector_prog3_2021": {
-          "courseC_collector_prog3_a": "Le programme n’exécutera que les blocs qui sont connectés au bloc <xml><block type=\"when_run\"/></xml>.",
+          "courseC_collector_prog3_a": "Le programme n’exécutera que les blocs qui sont connectés au bloc [bloc blockly][0].",
           "courseC_collector_prog3_b": "Essaie d’utiliser le bouton « Étape » pour exécuter ton code ligne par ligne. Est-ce que tu vois où le code tourne mal ?",
           "courseC_collector_prog3_c": "Si tu as du mal à résoudre ce casse-tête, essaie en écrivant les déplacements sur une feuille de papier."
         },
@@ -9655,18 +9655,18 @@
           "courseC_collector_prog7_c": "Tu as du mal à trouver un parcours qui te permettra de ramasser tout le trésor ? Essaie ce chemin !"
         },
         "courseC_collector_prog_challenge1_2021": {
-          "courseC_collector_prog_challenge1_a": "Tu peux utiliser le bloc ˋramasser\\` plusieurs fois pour collecter les diamants supplémentaires."
+          "courseC_collector_prog_challenge1_a": "Tu peux utiliser le bloc ˋramasser` plusieurs fois pour collecter les diamants supplémentaires."
         },
         "courseC_collector_prog_challenge2_2021": {
-          "courseC_collector_prog_challenge1_a": "Tu peux utiliser plus d’un bloc ˋramasser\\` sur chaque case.",
+          "courseC_collector_prog_challenge1_a": "Tu peux utiliser plus d’un bloc ˋramasser` sur chaque case.",
           "courseC_collector_prog_challenge1_b": "Tu es perdu ? Essaie de suivre ce chemin pour résoudre le casse-tête !"
         },
         "courseC_flappy_events1_2021": {
-          "courseC_flappy_events1_a": "![](https://images.code.org/5f1d0edf6ebb44d98ffdce623cfe0ad4-image-1501192487040.gif)"
+          "courseC_flappy_events1_a": "[][0]"
         },
         "courseC_flappy_events2_2021": {
-          "courseC_flappy_events2_a": "Le bloc que tu as besoin d'ajouter s’appelle ˋdéfinir la vitesse\\`. ",
-          "courseC_flappy_events2_b": "Connecte le bloc ˋdéfinir la vitesse\\` au bloc ˋquand l’exécution commenceˋ pour résoudre ce casse-tête."
+          "courseC_flappy_events2_a": "Le bloc que tu as besoin d'ajouter s’appelle ˋdéfinir la vitesse`. ",
+          "courseC_flappy_events2_b": "Connecte le bloc ˋdéfinir la vitesse` au bloc ˋquand l’exécution commenceˋ pour résoudre ce casse-tête."
         },
         "courseC_flappy_events3_2021": {
           "courseC_flappy_events3_a": "Si quelque chose ne fonctionne pas correctement, assure-toi que tes blocs sont connectés aux bons événements dans l’espace de travail."
@@ -9675,13 +9675,13 @@
           "courseC_flappy_events4_a": "Connecte le bloc « terminer le jeu » à « au contact d’un obstacle » pour résoudre ce casse-tête."
         },
         "courseC_flappy_events5_2021": {
-          "courseC_flappy_events5_a": "Il va te falloir utiliser le bloc ˋmarquer un point\\` pour réussir ce niveau."
+          "courseC_flappy_events5_a": "Il va te falloir utiliser le bloc ˋmarquer un point` pour réussir ce niveau."
         },
         "courseC_flappy_events6_2021": {
-          "courseC_flappy_events6_a": "Essaie de connecter le bloc ˋfaire une \\_\\_\\_\\_ de battements d’ailesˋ à l’événement ˋlors d’un clic\\`."
+          "courseC_flappy_events6_a": "Essaie de connecter le bloc ˋfaire une ____ de battements d’ailesˋ à l’événement ˋlors d’un clic`."
         },
         "courseC_flappy_events7_2021": {
-          "courseC_flappy_events7_a": "Tu peux modifier le fond d'écran en utilisant le bloc ˋdéfinir un arrière-plan\\`. "
+          "courseC_flappy_events7_a": "Tu peux modifier le fond d'écran en utilisant le bloc ˋdéfinir un arrière-plan`. "
         },
         "courseC_flappy_events8_2021": {
           "courseC_flappy_events8_a": "Essaie de connecter un deuxième bloc `définir l'arrière-plan` sous l'évènement `au passage d'un obstacle` pour réussir ce niveau."
@@ -9690,13 +9690,13 @@
           "courseC_flappy_events9_a": "Connecte le bloc `mettre le score à 0` à l'évènement `au contact d'un obstacle` pour réussir ce niveau."
         },
         "courseC_harvester_loops1_2021": {
-          "courseC_harvester_loops1_a": "Une fois que tu t’es déplacé vers une citrouille, utilise <xml><block type=\"harvester_pumpkin\"/></xml> pour la récolter.",
-          "courseC_harvester_loops1_b": "Tu peux utiliser une boucle avec le bloc <xml><block type=\"harvester_pumpkin\"/></xml> pour récolter plus d’une citrouille se trouvant dans une même case."
+          "courseC_harvester_loops1_a": "Une fois que tu t’es déplacé vers une citrouille, utilise [bloc blockly][0] pour la récolter.",
+          "courseC_harvester_loops1_b": "Tu peux utiliser une boucle avec le bloc [bloc blockly][0] pour récolter plus d’une citrouille se trouvant dans une même case."
         },
         "courseC_harvester_loops2_2021": {
           "courseC_harvester_loops2_a": "Si tu te retrouves coincé, essaie d'écrire les étapes sur une feuille de papier et de trouver des schémas récurrents.",
           "courseC_harvester_loops2_b": "Tu auras besoin de mettre une boucle `répéter` à la suite d'une autre.",
-          "courseC_harvester_loops2_c": "Une boucle répétera la commande `avancer`, et l'autre répétera la commande 'récolter la citrouille\\`."
+          "courseC_harvester_loops2_c": "Une boucle répétera la commande `avancer`, et l'autre répétera la commande 'récolter la citrouille`."
         },
         "courseC_harvester_loops3_2021": {
           "courseC_harvester_loops3_a": "N'aie pas peur de faire des erreurs ! Essaie d'ajouter des blocs et d'exécuter ton code, pour voir ce qui se passe, même si tu ne penses pas avoir encore résolu le casse-tête.",
@@ -9718,7 +9718,7 @@
         },
         "courseC_harvester_loops7_2021": {
           "courseC_harvester_loops7_a": "Tu peux résoudre ce casse-tête de deux façons, en ramassant d'abord le maïs ou d'abord les citrouilles.",
-          "courseC_harvester_loops7_b": "Tu auras besoin de plusieurs boucles ˋrépéter\\` pour résoudre ce casse-tête."
+          "courseC_harvester_loops7_b": "Tu auras besoin de plusieurs boucles ˋrépéter` pour résoudre ce casse-tête."
         },
         "courseC_harvester_loops8_2021": {
           "courseC_harvester_loops8_a": "Est-ce que ce motif en marche d'escalier ressemble à celui d'autres casse-têtes ? Les déplacements devraient être similaires aussi, mais surtout n'oublie pas de ramasser les cultures en chemin.",
@@ -9726,27 +9726,27 @@
         },
         "courseC_harvester_loops_challenge1a_2021": {
           "courseC_harvester_loops_challenge1_a": "C'est trop compliqué sans boucles!",
-          "courseC_harvester_loops_challenge1_b": "Tu peux répéter ˋavancer`et ˋrécolter le maïs` autant de fois que nécessaire, puis ˋtourner à droite\\` dans chaque coin.",
-          "courseC_harvester_loops_challenge1_c": "Le meilleur moyen de récolter le maïs au milieu est d’utiliser un bloc ˋrépéter`à l’intérieur d’un autre bloc ˋrépéter`.\n\n<xml><block type=\"controls_repeat\">\n        <title name=\"TIMES\">2</title>\n        <statement name=\"DO\">\n          <block type=\"controls_repeat\">\n            <title name=\"TIMES\">4</title>\n            <statement name=\"DO\">\n              <block type=\"maze_move\">\n                <title name=\"DIR\">moveForward</title>\n                <next>\n                  <block type=\"harvester_corn\"/>\n                </next>\n              </block>\n            </statement>\n            <next>\n              <block type=\"maze_turn\">\n                <title name=\"DIR\">turnRight</title>\n              </block>\n            </next>\n          </block>\n        </statement>\n        </block></xml>"
+          "courseC_harvester_loops_challenge1_b": "Tu peux répéter ˋavancer` et ˋrécolter le maïs` autant de fois que nécessaire, puis ˋtourner à droite` dans chaque coin.",
+          "courseC_harvester_loops_challenge1_c": "Le meilleur moyen de récolter le maïs au milieu est d’utiliser un bloc ˋrépéter` à l’intérieur d’un autre bloc ˋrépéter`.\n\n[bloc blockly][0]"
         },
         "courseC_harvester_loops_challenge2_2021": {
           "courseC_harvester_loops_challenge2_a": "Utiliser un zig-zag est un moyen de résoudre ceci. Une spirale peut être un autre moyen ! Il y a plusieurs solutions pour un casse-tête comme celui-ci. Sois perseverant !",
-          "courseC_harvester_loops_challenge2_b": "Tu peux répéter ˋavancer`et ˋrécolter la laitue` autant de fois que nécessaire, puis ˋtourner\\` dans chaque coin.",
-          "courseC_harvester_loops_challenge2_c": "Le modèle zig-zag peut être répété 2 fois pour terminer le casse-tête avec juste 20 blocs!\n\n![](<https://images.code.org/26cfaf6fe4a275e266b51e9ef3711171-image-1493502306380.18.52 PM copy.png>)",
-          "courseC_harvester_loops_challenge2_d": "Le modèle spirale peut être codé avec juste 18 blocs!\n\n![](<https://images.code.org/0bfc0a0ed6783fae908368a6e6d12c02-image-1493501358990.18.52 PM.png>)"
+          "courseC_harvester_loops_challenge2_b": "Tu peux répéter ˋavancer` et ˋrécolter la laitue` autant de fois que nécessaire, puis ˋtourner` dans chaque coin.",
+          "courseC_harvester_loops_challenge2_c": "Le modèle zig-zag peut être répété 2 fois pour terminer le casse-tête avec juste 20 blocs!\n\n[][0]",
+          "courseC_harvester_loops_challenge2_d": "Le modèle spirale peut être codé avec juste 18 blocs!\n\n[][0]"
         },
         "courseC_maze_debugging1_2021": {
-          "courseC_maze_debugging1_a": "-   Est-ce que tout se passe bien après la première étape ?\n-   Est-ce que ça continue à bien se passer après la seconde ?\n-   Où est-ce que les choses tournent mal ?",
+          "courseC_maze_debugging1_a": "- Est-ce que tout se passe bien après la première étape ?\n- Est-ce que ça continue à bien se passer après la seconde ?\n- Où est-ce que les choses tournent mal ?",
           "courseC_maze_debugging1_b": "Tu as besoin d'ajouter un bloc pour terminer ce casse-tête."
         },
         "courseC_maze_debugging2_2021": {
           "courseC_maze_debugging2_a": "Il y a beaucoup de code qui peut te servir dans l'espace de travail. Évite de tout effacer pour ne pas avoir à recommencer à zéro !",
-          "courseC_maze_debugging2_b": "-   Est-ce que tout se passe bien après la première étape ?\n-   Est-ce que ça continue à bien se passer après la seconde ?\n-   Où est-ce que les choses tournent mal ?",
-          "courseC_maze_debugging2_c": "Tu ne vois pas ce qui ne va pas ? Essaie d’exécuter le code deux ou trois fois pour voir ce qui se passe."
+          "courseC_maze_debugging2_b": "- Est-ce que tout se passe bien après la première étape ?\n- Est-ce que ça continue à bien se passer après la seconde ?\n- Où est-ce que les choses tournent mal ?",
+          "courseC_maze_debugging2_c": "Tu ne vois pas le problème ? Essaie d’exécuter le code une ou deux fois pour voir ce qu'il se passe."
         },
         "courseC_maze_debugging3_2021": {
-          "courseC_maze_debugging3_a": "Pour enlever un bloc du milieu de ton code, déplace tous les autres blocs vers un autre endroit dans l'espace de travail.\n\nRamène le bloc que tu souhaites enlever à la boite à outils.\n\nEnfin, ramène les autres blocs là où ils appartiennent.\n\n![](https://images.code.org/bbafa5a100505b2b99a3f43ad3195471-image-1479933232821.gif)",
-          "courseC_maze_debugging3_b": "Tu ne vois pas ce qui ne va pas ? Essaie d’exécuter le code deux ou trois fois pour voir ce qui se passe."
+          "courseC_maze_debugging3_a": "Pour enlever un bloc du milieu de ton code, déplace tous les autres blocs vers un autre endroit dans l'espace de travail.\n\nRamène le bloc que tu souhaites enlever à la boite à outils.\n\nEnfin, ramène les autres blocs là où ils appartiennent.\n\n[][0]",
+          "courseC_maze_debugging3_b": "Tu ne vois pas le problème ? Essaie d’exécuter le code une ou deux fois pour voir ce qu'il se passe."
         },
         "courseC_maze_debugging4_2021": {
           "courseC_maze_debugging4_a": "Utilise le bouton « Étape » pour visualiser les instructions pas à pas. Est-ce que cela t'aide à trouver la ligne de code qui pose problème ?",
@@ -9758,22 +9758,22 @@
           "courseC_maze_debugging5_b": "Essaie de dire à haute voix ce qu'il faudrait que Scrat fasse. S'agit-il de la même chose que le code dans l'espace de travail ? Qu'est-ce qui ne va pas ?"
         },
         "courseC_maze_debugging6_2021": {
-          "courseC_maze_debugging6_a": "-   Qu'est censé faire Scrat ?\n-   Que fait Scrat ? \n-   Qu'est-ce que ça t'indique ? ",
-          "courseC_maze_debugging6_b": "Une fois que tu as trouvé et corrigé le premier bug, passe à nouveau en mode débogage pour trouver le second.\n\nRépète ce processus jusqu'à ce que le programme fonctionne !"
+          "courseC_maze_debugging6_a": "- Qu'est censé faire Scrat ?\n- Que fait Scrat ? \n- Qu'est-ce que ça t'indique ? ",
+          "courseC_maze_debugging6_b": "Une fois que tu as trouvé et corrigé le premier bug, passe à nouveau en mode débogage pour trouver le second.\n\nRépète ce processus jusqu'à ce que le programme fonctionne  !"
         },
         "courseC_maze_debugging7_2021": {
-          "courseC_maze_debugging7_a": "-   Est-ce que tout va bien après la première étape ?\n-   Et après la deuxième ? \n-   Où est-ce que ça tourne mal ?",
-          "courseC_maze_debugging7_b": "N'oublie pas d'utiliser le bouton « Étape » pour faire visualiser le déroulement du programme ligne par ligne !",
+          "courseC_maze_debugging7_a": "- Est-ce que tout va bien après la première étape ?\n- Et après la deuxième ? \n- Où est-ce que ça tourne mal ?",
+          "courseC_maze_debugging7_b": "N'oublie pas d'utiliser le bouton « Étape » pour pouvoir visualiser le déroulement du programme ligne par ligne !",
           "courseC_maze_debugging7_c": "Une fois que tu as trouvé et corrigé le premier bug, assure-toi de passer à nouveau en mode débogage pour trouver le suivant.\n\nRépète le processus jusqu'à ce que le programme fonctionne !"
         },
         "courseC_maze_debugging_challenge1_2021": {
-          "courseC_maze_debugging_challenge1_a": "Gauche ou droite? C'est à toi de décider!",
+          "courseC_maze_debugging_challenge1_a": "Gauche ou droite ? C'est à toi de décider !",
           "courseC_maze_debugging_challenge1_b": "Le chemin de Scrat est de forme rectangulaire ! Il doit tourner du même côté à chaque fois .",
-          "courseC_maze_debugging_challenge1_c": "Si tu te retrouves bloqué, tu peux toujours redémarrer et trouver un nouveau chemin!"
+          "courseC_maze_debugging_challenge1_c": "Si tu te retrouves coincé, tu peux toujours recommencer et trouver un nouveau chemin !"
         },
         "courseC_maze_debugging_challenge2_2021": {
           "courseC_maze_debugging_challenge2_b": "Si tu te retrouves bloqué, essaie de déboguer le code. Où est-ce que cela ne va pas ?",
-          "courseC_maze_debugging_challenge2_c": "Tu peux suivre deux chemins différents, simplement en avançant et en tournant quatre fois. Si tu trouves un moyen pour utiliser une boucle, il y en a peut-être plus !\n\n![](<https://images.code.org/8a4665671cda35fea1f629a5bcc39e26-image-1493502743154.48.05 PM.png>)"
+          "courseC_maze_debugging_challenge2_c": "Tu peux suivre deux chemins différents, simplement en avançant et en tournant quatre fois. Si tu trouves un moyen pour utiliser une boucle, il y en a peut-être plus !\n\n[][0]"
         },
         "courseC_maze_loops_challenge1a_2021": {
           "courseC_maze_loops_challenge1_a": "Pense à ce chemin comme étant 2 différentes parties. Chacune d'elles a un motif qui se répète.",
@@ -9783,16 +9783,16 @@
           "courseC_maze_programming1_0": "Assure-toi que tous les blocs ont bien été reliés entre eux, puis rappuie sur « Démarrer »."
         },
         "courseC_maze_programming2_2021": {
-          "courseC_maze_programming2_a": "Pour utiliser un bloc <xml><block type=\"maze_moveForward\"/></xml>, fais le glisser depuis la boite à outils et attache le au bloc <xml><block type=\"when_run\"/></xml>.",
+          "courseC_maze_programming2_a": "Pour utiliser un bloc [bloc blockly][0], fais le glisser depuis la boite à outils et attache le au bloc [bloc blockly][1].",
           "courseC_maze_programming2_b": "Assure-toi que tous les blocs ont bien été reliés entre eux, puis rappuie sur « Démarrer »."
         },
         "courseC_maze_programming3_2021": {
-          "courseC_maze_programming3_a": "Essaie d'exécuter le code d'abord pour voir ce qui ne va pas.",
-          "courseC_maze_programming3_b": "![](https://images.code.org/afddde0e99d5d270c658de0c03dd6e2c-image-1481174000309.gif)\n\nPour enlever un bloc du milieu de ton code, déplace tous les autres blocs autre part dans l'espace de travail.\n\nRemets le bloc que tu souhaites enlever dans la boite à outil.\n\nEnfin, remets les autres blocs à leur place."
+          "courseC_maze_programming3_a": "Essaie d'abord d'exécuter le code pour voir ce qui ne va pas.",
+          "courseC_maze_programming3_b": "[][0]\n\nPour enlever un bloc du milieu de ton code, déplace tous les autres blocs autre part dans l'espace de travail.\n\nRemets le bloc que tu souhaites enlever dans la boite à outil.\n\nEnfin, remets les autres blocs à leur place."
         },
         "courseC_maze_programming4_2021": {
           "courseC_maze_programming4_a": "N'oublie pas que quand tu tournes, tu tournes du point de vue de _l' oiseau_. Si tu tournes à droite, l'oiseau se dirigera vers le bas.",
-          "courseC_maze_programming4_b": "Pour parcourir le chemin:\n\n-   Avance\n-   Tourne dans un sens\n-   Avance\n-   Tourne dans l'autre sens\n-   Avance"
+          "courseC_maze_programming4_b": "Pour parcourir le chemin:\n\n- Avance\n- Tourne dans un sens\n- Avance\n- Tourne dans l'autre sens\n- Avance"
         },
         "courseC_maze_programming5_2021": {
           "courseC_maze_programming5_a": "Essaie d'utiliser le bouton « Étape » pour exécuter ton code ligne par ligne. Peux-tu deviner ce qu'il faut faire à chaque étape ?",
@@ -9818,16 +9818,16 @@
         },
         "courseC_maze_programming_challenge2_2021": {
           "courseC_maze_programming_challenge2_a": "_« Si tu me veux me faire aller en arrière, fais bien attention à me tourner dans le bon sens ! »_",
-          "courseC_maze_programming_challenge2_b": "La solution la plus rapide n'utilise que 5 blocs, mais elle comprend ce bloc : \n\n<xml><block type=\"controls_repeat_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>"
+          "courseC_maze_programming_challenge2_b": "La solution la plus courte n'utilise que 5 blocs, mais elle comprend ce bloc : \n\n[bloc blockly][0]"
         },
         "courseC_starWars_loops10_2021": {
           "courseC_starWars_loops10_a": "N'y a-t-il pas une espèce de schéma récurrent ici sous forme d'un énorme escalier ? Vois si tu peux utiliser ce que tu as appris dans les casse-têtes précédents pour t'occuper de tous les tournants.",
           "courseC_starWars_loops10_b": "Si tu veux utiliser moins de code, tu peux ajouter une boucle « répéter » à l'intérieur d'une autre !\\\nCela s'appelle une **boucle emboîtée**.",
-          "courseC_starWars_loops10_c": "N’aie pas peur de faire des erreurs ! Exécute le code pour voir ce qui se passe, même si tu n’as pas encore résolu le casse-tête."
+          "courseC_starWars_loops10_c": "N’aie pas peur de faire une erreur ! Exécute le code pour voir ce qu'il se passe, même si tu n’as pas encore résolu l' casse-tête."
         },
         "courseC_starWars_loops1_2021": {
           "courseC_starWars_loops1_a": "Lorsque BB-8 roule par-dessus la ferraille, il la ramasse automatiquement.",
-          "courseC_starWars_loops1_b": "N’aie pas peur de faire des erreurs ! Exécute le code pour voir ce qui se passe, même si tu n’as pas encore résolu le casse-tête.",
+          "courseC_starWars_loops1_b": "N’aie pas peur de faire une erreur ! Exécute le code pour voir ce qu'il se passe, même si tu n’as pas encore résolu l' casse-tête.",
           "courseC_starWars_loops1_c": "Il va te falloir `avancer` 5 fois pour résoudre ce casse-tête."
         },
         "courseC_starWars_loops2_2021": {
@@ -9864,7 +9864,7 @@
         "courseC_starWars_loops7_2021": {
           "courseC_starWars_loops7_a": "Ce schéma récurrent à l'air plus compliqué qu'il ne l'est réellement ! Commence avec un simple schéma en escalier. Est-ce que ça s'occupe de toute la ferraille ?",
           "courseC_starWars_loops7_b": "Si tu as du mal à comprendre ce casse-tête, essaie d’écrire toutes les étapes sur une feuille de papier et de chercher un schéma récurrent.",
-          "courseC_starWars_loops7_c": "N’aie pas peur de faire des erreurs ! Exécute le code pour voir ce qui se passe, même si tu n’as pas encore résolu le casse-tête."
+          "courseC_starWars_loops7_c": "N’aie pas peur de faire une erreur ! Exécute le code pour voir ce qu'il se passe, même si tu n’as pas encore résolu l' casse-tête."
         },
         "courseC_starWars_loops7_dani": {
           "courseC_starWars_loops7_a": "Ce schéma récurrent à l'air plus compliqué qu'il ne l'est réellement ! Commence avec un simple schéma en escalier. Est-ce que ça s'occupe de toute la ferraille ?",
@@ -9874,7 +9874,7 @@
         "courseC_starWars_loops8_2021": {
           "course_starWars_loops8_a": "Essaie de réfléchir à ce problème en différentes petites étapes. Prends ton temps. Tu n'as pas besoin de le résoudre du premier coup !",
           "course_starWars_loops8_b": "Envisage la première moitié de ce problème comme un problème en escalier. Comment as-tu résolu cela auparavant ?",
-          "course_starWars_loops8_c": "Regarde ce parcours.\n\n![](https://images.code.org/7d696dd3b1e6984a1d6041f366d5c96b-image-1510198804955.37.04.png)"
+          "course_starWars_loops8_c": "Regarde ce parcours.\n\n[][0]"
         },
         "courseC_starWars_loops8_dani": {
           "course_starWars_loops8_a": "Essaie de réfléchir à ce problème en différentes petites étapes. Prends ton temps. Tu n'as pas besoin de le résoudre du premier coup !",
@@ -9883,7 +9883,7 @@
         },
         "courseC_starWars_loops9_2021": {
           "course_starWars_loops9_b": "Tu peux mettre plus d’un bloc au sein d’une boucle « répéter ».",
-          "course_starWars_loops9_c": "Tu n'as pas besoin de tourner à gauche pour résoudre ce casse-tête. Tous tes tournants peuvent se faire à droite.\n\n![](https://images.code.org/3dd00d424aa4112934053548b48bbb69-image-1510198997590.40.57.png)"
+          "course_starWars_loops9_c": "Tu n'as pas besoin de tourner à gauche pour résoudre ce casse-tête. Tous tes tournants peuvent se faire à droite.\n\n[][0]"
         },
         "courseD_artist_1_2021": {
           "courseD_artist_project1_a": "Utilise le menu déroulant du bloc « tourner » pour choisir l'angle dont tu as besoin !",
@@ -10022,7 +10022,7 @@
           "courseD_bee_conditionals4_hintVid1": "Besoin d'aide pour démarrer? Regarde la vidéo!",
           "courseD_bee_conditionals4_a": "Tu peux toujours traiter chaque case comme s'il y avait un nuage par-dessus, même si tu peux voir tout le chemin.",
           "courseD_bee_conditionals4_b": "Utilise une indication « si » à l'intérieur de ta boucle pour voir dans chaque case s'il n'y a pas du nectar.",
-          "courseD_bee_conditionals4_c": "En utilisant le bloc [blockly block][0], tu dois pouvoir avancer et vérifier si une fleur est présente. S'il y a une fleur, qu'est ce que l'abeille doit faire?",
+          "courseD_bee_conditionals4_c": "En utilisant le bloc [bloc blockly][0], tu dois pouvoir avancer et vérifier si une fleur est présente. S'il y a une fleur, qu'est ce que l'abeille doit faire?",
           "courseD_bee_conditionals4_hintVid2": "Regarde cette vidéo pour t'aider à résoudre ce casse-tête."
         },
         "courseD_bee_conditionals5_2021": {
@@ -10093,7 +10093,7 @@
           "courseD_bounce_events1s_b": "N'oublie pas d'appuyer sur « Démarrer » et de mettre la main sur le panier pour résoudre ce casse-tête."
         },
         "courseD_bounce_events2s_2021": {
-          "courseD_bounce_events2s_a": "Tu vas avoir besoin de deux ensembles d'événements `déplacer` codés pour que tout fonctionne bien :   \n\n[blockly block] [0]"
+          "courseD_bounce_events2s_a": "Tu vas avoir besoin de deux ensembles d'événements `déplacer` codés pour que tout fonctionne bien :   \n\n[bloc blockly] [0]"
         },
         "courseD_bounce_events5s_2021": {
           "courseD_bounce_events5s_a": "Tu n'as pas besoin de déplacer la main pour résoudre ce casse-tête.",
@@ -10354,7 +10354,7 @@
         },
         "courseE_artist_functions2_dani": {
           "courseD_artist_functions2_b": "La fonction que tu écris ne doit pas contenir tout ton programme, seulement la partie qui dessine un carré de 100 pixels de côté.",
-          "courseD_artist_functions2_c": "Utilise le bloc vert `Dessiner un carré` pour « appeler » ta fonction après le bloc `quand l'exécution commence`. Sinon, le code de ta fonction ne sera pas exécuté.\n\n[blockly block][0]",
+          "courseD_artist_functions2_c": "Utilise le bloc vert `Dessiner un carré` pour « appeler » ta fonction après le bloc `quand l'exécution commence`. Sinon, le code de ta fonction ne sera pas exécuté.\n\n[bloc blockly][0]",
           "courseD_artist_functions2_a": "Ton programme devrait:\n\n-   Utiliser une fonction\n-   Avancer de 100 + 75 pixels\n-   Utiliser une fonction"
         },
         "courseE_artist_functions3_dani": {
@@ -10657,7 +10657,7 @@
           "location_pin_hint": "Pour modifier l'emplacement d'un sprite, cliquez sur l'épingle qui se trouve sur le bloc d'emplacement, puis cliquez à l'endroit où vous voulez le placer.\n\n![](https://images.code.org/e3267d2b50f754befc63744be14287ac-image-1633360873408.gif)"
         },
         "helloworld_animals_multi": {
-          "cat_xml": "Veillez à ce que les costumes soient adaptés à chaque bloc.\n\n[blockly block] [0]"
+          "cat_xml": "Veillez à ce que les costumes soient adaptés à chaque bloc.\n\n[bloc blockly] [0]"
         },
         "helloworld_animals_say": {
           "hello-world-first-solution-bear": "Pour amener l'ours à parler, connectez les blocs de code de la manière suivante :\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\"><next>  <block type=\"gamelab_makeNewSpriteAnon\">\n    <title name=\"ANIMATION_NAME\">\"cuteanimals_bear\"</title>\n    <value name=\"LOCATION\">\n      <block type=\"gamelab_location_picker\">\n        <title name=\"LOCATION\">{\"x\":200,\"y\":200}</title>\n      </block>\n    </value><next>  <block type=\"gamelab_spriteSay\">\n    <title name=\"SPEECH\">Hello, world!</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"cuteanimals_bear\"</title>\n      </block>\n    </value>\n  </block></next>\n  </block></next></block>\n</xml>"
@@ -10759,22 +10759,22 @@
         },
         "poetry_hoc_backgroundEffects": {
           "add_background_effect": "Trouvez un bloc d'arrière-plan semblable à celui-ci :\n<xml><block type=\"Poetry_setBackgroundEffect\"><title name=\"EFFECT\">\"colors\"</title><title name=\"PALETTE\">\"sunrise\"</title></block></xml>\n\net trouvez un bloc d'effet de texte semblable à celui-ci : \n\n<xml><block type=\"Poetry_setFontColor\"><value name=\"FILL\"><block type=\"colour_picker\"><title name=\"COLOUR\">#000099</title></block></value></block></xml>\n\nConnectez ces blocs à la section `lorsqu'on exécute` dans votre espace de travail.",
-          "add_more_effects": "Ajoutez plus de couleurs ou d'effets pour vous rapprocher le plus possible de l'ambiance de ce poème.\n\n[blockly block] [0]"
+          "add_more_effects": "Ajoutez plus de couleurs ou d'effets pour vous rapprocher le plus possible de l'ambiance de ce poème.\n\n[bloc blockly] [0]"
         },
         "poetry_hoc_events1": {
-          "do_effect_hint": "Ce nouveau bloc `faire effet` ajoutera une seule fois un nouvel effet. \n[blockly block] [0]\n\nVous pouvez empiler plus d'un bloc `faire effet` les uns sur les autres pour que l'effet dure plus longtemps. \n<xml><block type=\"Poetry_whenLineShows\"><title name=\"N\">0</title><next><block type=\"Poetry_setForegroundEffect\"><title name=\"EFFECT\">\"twinkling\"</title><next><block type=\"Poetry_setForegroundEffect\"><title name=\"EFFECT\">\"twinkling\"</title><next><block type=\"Poetry_setForegroundEffect\"><title name=\"EFFECT\">\"twinkling\"</title></block></next></block></next></block></next></block></xml>",
+          "do_effect_hint": "Ce nouveau bloc `faire effet` ajoutera une seule fois un nouvel effet. \n[bloc blockly] [0]\n\nVous pouvez empiler plus d'un bloc `faire effet` les uns sur les autres pour que l'effet dure plus longtemps. \n<xml><block type=\"Poetry_whenLineShows\"><title name=\"N\">0</title><next><block type=\"Poetry_setForegroundEffect\"><title name=\"EFFECT\">\"twinkling\"</title><next><block type=\"Poetry_setForegroundEffect\"><title name=\"EFFECT\">\"twinkling\"</title><next><block type=\"Poetry_setForegroundEffect\"><title name=\"EFFECT\">\"twinkling\"</title></block></next></block></next></block></next></block></xml>",
           "background_effect_hint": "Vous pouvez ajouter d'autres effets sous un bloc d'événement avec un code qui ressemble à celui-ci :\n<xml><block type=\"Poetry_whenLineShows\"><title name=\"N\">4</title><next><block type=\"Poetry_setBackgroundEffect\">\n    <title name=\"EFFECT\">\"ripples\"</title>\n    <title name=\"PALETTE\">\"sky\"</title>\n  </block></next></block></xml>",
           "more_events_hint": "Vous pouvez utiliser plus d'un événement dans votre programme. Essayez d'utiliser deux événements avec des effets différents qui correspondent aux nouvelles lignes du poème. \n\n<xml><block type=\"Poetry_whenLineShows\"><title name=\"N\">2</title><next><block type=\"Poetry_setForegroundEffect\"><title name=\"EFFECT\">\"starburst\"</title></block></next></block></xml>\n\n<xml><block type=\"Poetry_whenLineShows\"><title name=\"N\">4</title><next><block type=\"Poetry_setForegroundEffect\"><title name=\"EFFECT\">\"bubbles\"</title></block></next></block></xml>"
         },
         "poetry_hoc_sounds": {
           "poetry_sound_hint": "Trouvez ce bloc :\n<xml><block type=\"Poetry_playSound\"><title name=\"SOUND\">\"sound://category_background/typewriter.mp3\"</title></block></next></block></xml>\nou ce bloc : \n\n<xml><block type=\"Poetry_playMusic\"><title name=\"SOUND\">\"sound://category_background/fire_burning.mp3\"</title></block></xml>\n\nConnectez-le à la section `lorsqu'on exécute` dans votre espace de travail.",
-          "more_code": "Ajoutez plus d'effets et de couleurs pour correspondre au son que vous avez choisi.\n[blockly block] [0]"
+          "more_code": "Ajoutez plus d'effets et de couleurs pour correspondre au son que vous avez choisi.\n[bloc blockly] [0]"
         },
         "poetry_hoc_spriteBehaviors": {
-          "add_behavior": "Ajoutez un bloc `lancement du sprite` à votre code. Assurez-vous d'avoir déjà créé le sprite pour lequel vous voulez définir le comportement.\n\n[blockly block] [0]"
+          "add_behavior": "Ajoutez un bloc `lancement du sprite` à votre code. Assurez-vous d'avoir déjà créé le sprite pour lequel vous voulez définir le comportement.\n\n[bloc blockly] [0]"
         },
         "poetry_hoc_spriteSizes": {
-          "size hint": "Trouvez ce bloc et cliquez sur `150`.\n[blockly block] [0]\n\nQue se passe-t-il lorsque le nombre est `25` ? \n<xml><block type=\"Poetry_setSize\"><title name=\"SPRITE\">\"ocean_wave\"</title><title name=\"VAL\">25</title></block></xml>"
+          "size hint": "Trouvez ce bloc et cliquez sur `150`.\n[bloc blockly] [0]\n\nQue se passe-t-il lorsque le nombre est `25` ? \n<xml><block type=\"Poetry_setSize\"><title name=\"SPRITE\">\"ocean_wave\"</title><title name=\"VAL\">25</title></block></xml>"
         },
         "New Minecraft Hero Project": {
           "MC_HOC_2017_13_Cole_a": "Essaie de faire construire des ponts à l'Agent afin qu'Alex ou Steve puissent se déplacer au-delà des bords de la carte."
@@ -11560,81 +11560,81 @@
         },
         "courseC19_playLab_EOC22022": {
           "courseE_playLab_scaffold1_b": "Tu devrais avoir 4 blocs d'évènements `Lorsque flêche`, avec une direction pour bouger sous chacun d'eux.",
-          "playlab_up": "Pour déplacer ton acteur vers le haut, tu peux connecter ces blocs : \n<xml>\n  <block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">up</title>\n    <next>\n      <block type=\"studio_move\">\n        <title name=\"SPRITE\">0</title>\n        <title name=\"DIR\">1</title>\n      </block>\n    </next>\n  </block>\n  </xml>",
-          "playlab_down": "Pour déplacer ton acteur vers le bas, tu peux connecter ces blocs : \n<xml>\n  <block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">down</title>\n    <next>\n      <block type=\"studio_move\">\n        <title name=\"SPRITE\">0</title>\n        <title name=\"DIR\">4</title>\n      </block>\n    </next>\n  </block>\n  </xml>",
-          "playlab_left": "Pour déplacer ton acteur vers la gauche, tu peux connecter ces blocs : \n<xml>\n  <block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">left</title>\n    <next>\n      <block type=\"studio_move\">\n        <title name=\"SPRITE\">0</title>\n        <title name=\"DIR\">8</title>\n      </block>\n    </next>\n  </block>\n  </xml>",
-          "playlab_right": "Pour déplacer ton acteur vers la droite, tu peux connecter ces blocs : \n<xml>\n  <block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">right</title>\n    <next>\n      <block type=\"studio_move\">\n        <title name=\"SPRITE\">0</title>\n        <title name=\"DIR\">2</title>\n      </block>\n    </next>\n  </block>\n  </xml> ",
+          "playlab_up": "Pour déplacer ton acteur vers le haut, tu peux connecter ces blocs : \n[bloc blockly][0]",
+          "playlab_down": "Pour déplacer ton acteur vers le bas, tu peux connecter ces blocs : \n[bloc blockly][0]",
+          "playlab_left": "Pour déplacer ton acteur vers la gauche, tu peux connecter ces blocs : \n[bloc blockly][0]",
+          "playlab_right": "Pour déplacer ton acteur vers la droite, tu peux connecter ces blocs : \n[bloc blockly][0] ",
           "courseE_playLab_scaffold1_c": "Lorsque tu as terminé, tu devrais pouvoir bouger ton héros avec les flèches!"
         },
         "courseC19_playLab_EOC42022": {
           "courseE_playLab_scaffold4_a": "Utiliser `marquer 1 point` pour ajouter un point, et `enlever 1 point` pour en retirer un."
         },
         "courseC_PlayLab_events12022": {
-          "courseC_PlayLab_events1_a": "Attache ce bloc au bloc ˋquand l’exécution commence\\` :\n\n<xml>\n  <block type=\"studio_saySpriteChoices\">\n    <title name=\"SPRITE\">0</title>\n    <title name=\"VALUE\">Hi there.</title>\n  </block>\n</xml>"
+          "courseC_PlayLab_events1_a": "Attache ce bloc au bloc ˋquand l’exécution commence` :\n\n[bloc blockly][0]"
         },
         "courseC_PlayLab_events22022": {
-          "courseC_PlayLab_events2_a": "Attache deux de ces blocs au bloc ˋquand l’exécution commence\\` :\n\n<xml>\n  <block type=\"studio_saySpriteChoices\">\n    <title name=\"SPRITE\">0</title>\n    <title name=\"VALUE\">Hi there.</title>\n  </block>\n</xml>",
-          "courseC_PlayLab_events2_b": "Utilise le menu déroulant du deuxième bloc ˋl’acteur \\_\\_ dit\\` pour changer l'acteur qui parle."
+          "courseC_PlayLab_events2_a": "Attache deux de ces blocs au bloc ˋquand l’exécution commence` :\n\n[bloc blockly][0]",
+          "courseC_PlayLab_events2_b": "Utilise le menu déroulant du deuxième bloc ˋl’acteur __ dit` pour changer l'acteur qui parle."
         },
         "courseC_PlayLab_events32022": {
           "courseC_PlayLab_events3_a": "Tu n'as besoin de déplacer Jorge que d’environ 25 pixels vers la droite pour résoudre ce casse-tête.",
           "courseC_PlayLab_events3_b": "Y a-t-il un bloc dans la boîte à outils qui semble pouvoir déplacer un acteur ?",
-          "courseC_PlayLab_events3_c": "Attache ce bloc au bloc ˋquand l’exécution commence\\` :\n\n<xml>\n<block type=\"studio_moveDistance\">\n    <title name=\"SPRITE\">0</title>\n    <title name=\"DIR\">2</title>\n    <title name=\"DISTANCE\">25</title>\n  </block>\n</xml>"
+          "courseC_PlayLab_events3_c": "Attache ce bloc au bloc ˋquand l’exécution commence` :\n\n[bloc blockly][0]"
         },
         "courseC_PlayLab_events42022": {
           "courseC_PlayLab_events4_b": "Quand on clique sur « Démarrer », il faut que Jorge se déplace de **100** pixels vers la droite pour atteindre Olive la chatte.",
-          "courseC_PlayLab_events4_a": "Il va te falloir connecter un bloc ˋl’acteur \\_\\_ dit`à l’événement ˋlorsque l’acteur touche` pour résoudre ce casse-tête."
+          "courseC_PlayLab_events4_a": "Il va te falloir connecter un bloc ˋl’acteur __ dit` à l’événement ˋlorsque l’acteur touche` pour résoudre ce casse-tête."
         },
         "courseC_PlayLab_events52022": {
-          "courseC_PlayLab_events5_a": "Il va te falloir cliquer sur le menu déroulant dans le bloc ˋl’acteur dit\\` pour trouver le texte « Quoi de neuf ? ». ",
+          "courseC_PlayLab_events5_a": "Il va te falloir cliquer sur le menu déroulant dans le bloc ˋl’acteur dit` pour trouver le texte « Quoi de neuf ? ». ",
           "courseC_PlayLab_events5_b": "Clique sur Octavia quand tu exécutes ton programme pour vérifier qu’il fonctionne bien !"
         },
         "courseC_PlayLab_events62022": {
           "courseC_PlayLab_events6_a": "Chaque bloc vert `quand flèche` devrait avoir une action qui s'y rattache en-dessous de lui.",
-          "courseC_PlayLab_events6_b": "Utilise le menu déroulant du bloc ˋdéplacer l’acteur 1\\` pour modifier le sens dans lequel Waddles se déplace.",
+          "courseC_PlayLab_events6_b": "Utilise le menu déroulant du bloc ˋdéplacer l’acteur 1` pour modifier le sens dans lequel Waddles se déplace.",
           "courseC_PlayLab_events6_c": "Quand tu as fini, tu devrais pouvoir déplacer Waddles en utilisant les touches fléchées sur ton clavier !"
         },
         "courseC_PlayLab_events72022": {
-          "courseC_PlayLab_events7_a": "Utilise et le bloc ˋdéplacer l’acteur 2 vers le haut de 400 pixels`et le bloc ˋdéplacer l’acteur 2 vers le bas de 400 pixels` au sein de la boucle ˋrépéter à l’infini\\` pour résoudre ce casse-tête. ",
+          "courseC_PlayLab_events7_a": "Utilise et le bloc ˋdéplacer l’acteur 2 vers le haut de 400 pixels` et le bloc ˋdéplacer l’acteur 2 vers le bas de 400 pixels` au sein de la boucle ˋrépéter à l’infini` pour résoudre ce casse-tête. ",
           "courseC_PlayLab_events7_b": "La boucle ˋrépéter à l’infiniˋ n’a pas besoin d’être connectée à d’autres blocs événement ; elle s’exécutera toute seule."
         },
         "courseC_PlayLab_events82022": {
-          "courseC_PlayLab_events8_a": "Tu devras connecter des blocs au bloc ˋlorsque l’acteur touche\\` pour que tout marche correctement.",
-          "courseC_PlayLab_events8_b": "Les blocs ˋl’acteur dit`et ˋjouer un son` dans la boîte à outils devraient t’aider !"
+          "courseC_PlayLab_events8_a": "Tu devras connecter des blocs au bloc ˋlorsque l’acteur touche` pour que tout marche correctement.",
+          "courseC_PlayLab_events8_b": "Les blocs ˋl’acteur dit` et ˋjouer un son` dans la boîte à outils devraient t’aider !"
         },
         "courseC_PlayLab_events92022": {
-          "courseC_PlayLab_events9_a": "Le bloc ˋmarquer un point\\` t’aidera à résoudre ce casse-tête.",
-          "courseC_PlayLab_events9_b": "Assure-toi que ton nouveau bloc ˋlorsque l’acteur touche\\` désigne l’acteur **1** et l’acteur **3**.",
-          "courseC_PlayLab_events9_c": "Tu peux avoir plus d’un événement ˋquand l’acteur touche\\` à la fois dans ton espace de travail, donc tu n’as pas besoin de supprimer le premier !"
+          "courseC_PlayLab_events9_a": "Le bloc ˋmarquer un point` t’aidera à résoudre ce casse-tête.",
+          "courseC_PlayLab_events9_b": "Assure-toi que ton nouveau bloc ˋlorsque l’acteur touche` désigne l’acteur **1** et l’acteur **3**.",
+          "courseC_PlayLab_events9_c": "Tu peux avoir plus d’un événement ˋquand l’acteur touche` à la fois dans ton espace de travail, donc tu n’as pas besoin de supprimer le premier !"
         },
         "courseC_PlayLab_eventsA2022": {
-          "courseC_PlayLab_eventsA_a": "Utilise le bloc ˋdéfinir un arrière-plan`et le bloc ˋaffecter à l’acteur une vitesse ____` pour résoudre ce casse-tête.",
-          "courseC_PlayLab_eventsA_b": "Il va notamment te falloir faire glisser un bloc ˋquand l’exécution commence\\` dans ton espace de travail pour résoudre ce casse-tête."
+          "courseC_PlayLab_eventsA_a": "Utilise le bloc ˋdéfinir un arrière-plan` et le bloc ˋaffecter à l’acteur une vitesse ____` pour résoudre ce casse-tête.",
+          "courseC_PlayLab_eventsA_b": "Il va notamment te falloir faire glisser un bloc ˋquand l’exécution commence` dans ton espace de travail pour résoudre ce casse-tête."
         },
         "courseC_PlayLab_eventsA_embed2022": {
-          "courseC_PlayLab_eventsA_a": "Utilise les touches fléchées pour déplacer le pingouin. Tu n'as pas besoin d'écrire de code pour terminer ce niveau."
+          "courseC_PlayLab_eventsA_a": "Utilise les touches fléchées pour déplacer le pingouin. Tu n'as pas besoin d'écrire de code pour terminer ce niveau.\n"
         },
         "courseC_PlayLab_eventsFP2022": {
-          "idea1": "_Besoin d'une idée ?_   \n\n **Qui est là ?** Fais apparaître des personnages avec des images aléatoires, pour que personne ne puisse savoir qui va apparaître ensuite.    \n\n<img src= « https://images.code.org/dbd6ece9d0fb213039ea5dccb91fc425-image-1563577859889.gif » style=\"width: 200px\">",
-          "idea2": "_Besoin d'une idée ?_   \n\n**Partir à l'Aventure** - Change l'arrière-plan, puis fais parler les personnages de l'endroit où ils se trouvent désormais.\n\n<img src= « https://images.code.org/a7f740d73074deb128cdc2826abda9e6-image-1563576781779.gif » style=\"width: 200px\">",
+          "idea1": "_Besoin d'une idée ?_   \n\n **Qui est là ?** Fais apparaître des personnages avec des images aléatoires, pour que personne ne puisse savoir qui va apparaître ensuite.    \n\n<img src= « https://images.code.org/dbd6ece9d0fb213039ea5dccb91fc425-image-1563577859889.gif » style=\"width: 200px\">\n",
+          "idea2": "_Besoin d'une idée ?_   \n\n**Partir à l'Aventure** - Change l'arrière-plan, puis fais parler les personnages de l'endroit où ils se trouvent désormais.\n\n<img src= « https://images.code.org/a7f740d73074deb128cdc2826abda9e6-image-1563576781779.gif » style=\"width: 200px\">\n",
           "idea3": "_Besoin d’une idée ?_\n\n**Pinball** - Fais se déplacer un personnage en utilisant les touches fléchées (utilise des blocs ˋquand flèche vers le haut`, ˋquand flèche vers le bas`), puis fais jouer des sons aléatoires quand il rentre dans d’autres personnages sur l’écran."
         },
         "courseC_PlayLab_events_challenge12022": {
-          "courseC_PlayLab_events_challenge_a": "Tu peux utiliser ce bloc pour déplacer les acteurs à différents endroits de l’espace de jeu.\n\n<xml> <block type=\"studio_setSpritePosition\">\n    <title name=\"SPRITE\">0</title>\n    <title name=\"VALUE\">12</title>\n  </block></xml>",
-          "courseC_PlayLab_events_challenge_b": "Essaie d’utiliser \\`affecter à l’acteur 1 la position du milieu à gaucheˋ quand il touche un des autres acteurs. Cela réinitialisera le jeu pour que le joueur puisse continuer à essayer !",
-          "courseC_PlayLab_events_challenge_c": "Tu pourrais essayer de modifier la vitesse des différents acteurs pour rendre le jeu plus facile ou plus difficile !\n\n<xml>  <block type=\"studio_setSpriteSpeed\">\n\n<title name=\"SPRITE\">0</title>\n<title name=\"VALUE\">Studio.SpriteSpeed.FAST</title>\n</block></xml>"
+          "courseC_PlayLab_events_challenge_a": "Tu peux utiliser ce bloc pour déplacer les acteurs à différents endroits de l’espace de jeu.\n\n[bloc blockly][0]",
+          "courseC_PlayLab_events_challenge_b": "Essaie d’utiliser `affecter à l’acteur 1 la position du milieu à gaucheˋ quand il touche un des autres acteurs. Cela réinitialisera le jeu pour que le joueur puisse continuer à essayer !",
+          "courseC_PlayLab_events_challenge_c": "Tu pourrais essayer de modifier la vitesse des différents acteurs pour rendre le jeu plus facile ou plus difficile !\n\n<xml>  <block type=\"studio_setSpriteSpeed\">\n<title name=\"SPRITE\">0</title>\n<title name=\"VALUE\">Studio.SpriteSpeed.FAST</title>\n</block></xml>"
         },
         "courseC_PlayLab_events_lesson_extras": {
-          "courseC_PlayLab_events_challenge_a": "Tu peux utiliser ce bloc pour déplacer les acteurs à différents endroits de l’espace de jeu.\n\n<xml> <block type=\"studio_setSpritePosition\">\n    <title name=\"SPRITE\">0</title>\n    <title name=\"VALUE\">12</title>\n  </block></xml>",
-          "courseC_PlayLab_events_challenge_b": "Essaie d’utiliser \\`affecter à l’acteur 1 la position du milieu à gaucheˋ quand il touche un des autres acteurs. Cela réinitialisera le jeu pour que le joueur puisse continuer à essayer !",
-          "courseC_PlayLab_events_challenge_c": "Tu pourrais essayer de modifier la vitesse des différents acteurs pour rendre le jeu plus facile ou plus difficile !\n\n<xml>  <block type=\"studio_setSpriteSpeed\">\n\n<title name=\"SPRITE\">0</title>\n<title name=\"VALUE\">Studio.SpriteSpeed.FAST</title>\n</block></xml>"
+          "courseC_PlayLab_events_challenge_a": "Tu peux utiliser ce bloc pour déplacer les acteurs à différents endroits de l’espace de jeu.\n\n[bloc blockly][0]",
+          "courseC_PlayLab_events_challenge_b": "Essaie d’utiliser `affecter à l’acteur 1 la position du milieu à gaucheˋ quand il touche un des autres acteurs. Cela réinitialisera le jeu pour que le joueur puisse continuer à essayer !",
+          "courseC_PlayLab_events_challenge_c": "Tu pourrais essayer de modifier la vitesse des différents acteurs pour rendre le jeu plus facile ou plus difficile !\n\n<xml>  <block type=\"studio_setSpriteSpeed\">\n<title name=\"SPRITE\">0</title>\n<title name=\"VALUE\">Studio.SpriteSpeed.FAST</title>\n</block></xml>"
         },
         "courseC_artist_loops1a2022": {
-          "courseC_artist_loops1a_a": "Voici le premier bloc dont tu auras besoin :\n\n<xml>\n  <block type=\"jump_to\">\n    <title name=\"VALUE\">13</title>\n  </block>\n</xml>",
-          "courseC_artist_loops1a_b": "Utilise ce bloc pour dessiner l’autocollant !\n\n<xml>\n<block type=\"sticker\">\n    <title name=\"VALUE\">Bird</title>\n  </block>\n</xml>"
+          "courseC_artist_loops1a_a": "Voici le premier bloc dont tu auras besoin :\n\n[bloc blockly][0]",
+          "courseC_artist_loops1a_b": "Utilise ce bloc pour dessiner l’autocollant !\n\n[bloc blockly][0]"
         },
         "courseC_artist_loops1b2022": {
-          "courseC_artist_loops1b_a": "Voici le premier bloc dont tu auras besoin :   \n\n<xml>\n  <block type=\"draw_turn_by_constant_dropdown\">\n    <title name=\"DIR\">???</title>\n    <title name=\"VALUE\" config=\"45,60,90,120,180\">???</title>\n  </block>\n</xml>\n\nTu peux choisir soit la gauche, soit la droite, et n'importe quel degré."
+          "courseC_artist_loops1b_a": "Voici le premier bloc dont tu auras besoin :   \n\n[bloc blockly][0]\n\nTu peux choisir soit la gauche, soit la droite, et n'importe quel degré.\n"
         },
         "courseC_artist_loops2a2022": {
           "courseC_artist_loops2a_a": "À l'intérieur de ta boucle, il va te falloir sauter au milieu, puis tourner, puis dessiner un autocollant.",
@@ -11642,32 +11642,32 @@
         },
         "courseC_artist_loops3a2022": {
           "courseC_artist_loops3a_a": "Tu n'auras qu'à ajouter un seul bloc à l’intérieur de ta boucle, à la suite de l’autocollant d’oiseau.",
-          "courseC_artist_loops3a_b": "Ton programme devrait avoir l'air de ceci !\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"controls_repeat\">\n        <title name=\"TIMES\">???</title>\n        <statement name=\"DO\">\n          <block type=\"jump_to\">\n            <title name=\"VALUE\">13</title>\n            <next>\n              <block type=\"draw_turn_by_constant_dropdown\">\n                <title name=\"DIR\">???</title>\n                <title name=\"VALUE\" config=\"1,2,5,10,12,20,30,45,60,90,120,180\">???</title>\n                <next>\n                  <block type=\"sticker\">\n                    <title name=\"VALUE\">Cat</title>\n                    <next>\n                      <block type=\"sticker\">\n                        <title name=\"VALUE\">Dog</title>\n                      </block>\n                    </next>\n                  </block>\n                </next>\n              </block>\n            </next>\n          </block>\n        </statement>\n      </block>\n    </next>\n  </block>\n</xml>\n\nTu peux utiliser tous les autocollants que tu veux !"
+          "courseC_artist_loops3a_b": "Ton programme devrait avoir l'air de ceci !\n\n[bloc blockly][0]\n\nTu peux utiliser tous les autocollants que tu veux !\n\n"
         },
         "courseC_artist_loops4a2022": {
-          "courseC_artist_loops4a_a": "Utilise ce bloc pour sauter vers l'avant :\n\n<xml>\n<block type=\"jump_by_constant\">\n    <title name=\"DIR\">jumpForward</title>\n    <title name=\"VALUE\">???</title>\n  </block>\n</xml>\n\nN’oublie pas de régler la distance !",
-          "courseC_artist_loops4a_b": "Ton programme devrait ressembler à ça ! \n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"controls_repeat\">\n        <title name=\"TIMES\">???</title>\n        <statement name=\"DO\">\n          <block type=\"jump_to\">\n            <title name=\"VALUE\">13</title>\n            <next>\n              <block type=\"draw_turn_by_constant_dropdown\">\n                <title name=\"DIR\">???</title>\n                <title name=\"VALUE\" config=\"1,2,5,10,12,20,30,45,60,90,120,180\">???</title>\n                <next>\n                  <block type=\"sticker\">\n                    <title name=\"VALUE\">Cat</title>\n                    <next>\n                      <block type=\"jump_by_constant\">\n                        <title name=\"DIR\">jumpForward</title>\n                        <title name=\"VALUE\">???</title>\n                        <next>\n                          <block type=\"sticker\">\n                            <title name=\"VALUE\">Dog</title>\n                          </block>\n                        </next>\n                      </block>\n                    </next>\n                  </block>\n                </next>\n              </block>\n            </next>\n          </block>\n        </statement>\n      </block>\n    </next>\n  </block>\n</xml>"
+          "courseC_artist_loops4a_a": "Utilise ce bloc pour sauter vers l'avant :\n\n[bloc blockly][0]\n\nN’oublie pas de régler la distance !",
+          "courseC_artist_loops4a_b": "Ton programme devrait ressembler à ça ! \n\n[bloc blockly][0]"
         },
         "courseC_artist_loops5b2022": {
-          "courseC_artist_loops5b_a": "Utilise ce bloc pour définir le schéma récurrent de tes lignes :\n\n<xml>\n<block type=\"draw_line_style_pattern\">\n    <title name=\"VALUE\">DEFAULT</title>\n  </block>\n</xml>",
+          "courseC_artist_loops5b_a": "Utilise ce bloc pour définir le schéma récurrent de tes lignes :\n\n[bloc blockly][0]",
           "courseC_artist_loops5b_b": "Pour réaliser un design comme celui-ci ci-dessus, il va te falloir reculer de du même montant que tu avances.",
-          "courseC_artist_loops5b_c": "Ton programme devrait ressembler à ça ! \n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"draw_line_style_pattern\">\n        <title name=\"VALUE\">rainbowLine</title>\n        <next>\n          <block type=\"controls_repeat\">\n            <title name=\"TIMES\">4</title>\n            <statement name=\"DO\">\n              <block type=\"jump_to\">\n                <title name=\"VALUE\">13</title>\n                <next>\n                  <block type=\"draw_move_by_constant\">\n                    <title name=\"DIR\">moveForward</title>\n                    <title name=\"VALUE\">???</title>\n                    <next>\n                      <block type=\"draw_move_by_constant\">\n                        <title name=\"DIR\">moveBackward</title>\n                        <title name=\"VALUE\">???</title>\n                        <next>\n                          <block type=\"draw_turn_by_constant_dropdown\">\n                            <title name=\"DIR\">???</title>\n                            <title name=\"VALUE\" config=\"1,2,5,10,12,20,30,45,60,90,120,180\">???</title>\n                            <next>\n                              <block type=\"sticker\">\n                                <title name=\"VALUE\">Cat</title>\n                                <next>\n                                  <block type=\"jump_by_constant\">\n                                    <title name=\"DIR\">jumpForward</title>\n                                    <title name=\"VALUE\">???</title>\n                                    <next>\n                                      <block type=\"sticker\">\n                                        <title name=\"VALUE\">Dog</title>\n                                      </block>\n                                    </next>\n                                  </block>\n                                </next>\n                              </block>\n                            </next>\n                          </block>\n                        </next>\n                      </block>\n                    </next>\n                  </block>\n                </next>\n              </block>\n            </statement>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+          "courseC_artist_loops5b_c": "Ton programme devrait ressembler à ça ! \n\n[bloc blockly][0]"
         },
         "courseC_artist_loops6a2022": {
           "courseC_artist_loops6a_a": "Pour créer un design comme celui ci-dessus, saute en avant de moins de 75 pixels entre chaque autocollant."
         },
         "courseC_artist_prog22022": {
-          "courseC_artist_prog2_a": "*« Si tu utilises le bloc <xml><block type=\"draw_move_by_constant\"><title name=\"DIR\">moveForward</title><title name=\"VALUE\">100</title></block></xml>, je tracerai une ligne. »*",
-          "courseC_artist_prog2_b": "Tu as du mal à tourner au coin ? Utilise le bloc <xml><block type=\"draw_turn_by_constant_dropdown\"><title name=\"DIR\">turnRight</title><title name=\"VALUE\" config=\"45,60,90,120,180\">90</title></block></xml>."
+          "courseC_artist_prog2_a": "_« Si tu utilises le bloc [bloc blockly][0], je tracerai une ligne. »_",
+          "courseC_artist_prog2_b": "Tu as du mal à tourner au coin ? Utilise le bloc [bloc blockly][0]."
         },
         "courseC_artist_prog32022": {
-          "courseC_artist_prog3_a": "Pour faire cette fenêtre, dessine simplement un carré avec des côtés de 100 pixels.\n\n-   avance\n-   tourne\n-   avance\n-   tourne\n-   avance\n-   tourne\n-   avance",
+          "courseC_artist_prog3_a": "Pour faire cette fenêtre, dessine simplement un carré avec des côtés de 100 pixels.\n\n- avance\n- tourne\n- avance\n- tourne\n- avance\n- tourne\n- avance",
           "courseC_artist_prog3_b": "Tu veux rendre ton code plus court ? Essaie en utilisant une boucle."
         },
         "courseC_artist_prog42022": {
           "courseC_artist_prog4_a": "Pour terminer la fusée, retrace tout simplement le triangle en haut !",
           "courseC_artist_prog4_b": "Tu peux utiliser le menu déroulant sur les blocs « tourner » pour voir de quel angle tu as besoin !",
-          "courseC_artist_prog4_c": "Pour dessiner ce triangle, il va te falloir :\n\n-   avancer\n-   tourner à gauche de 120 degrés\n-   avancer\n-   tourner à gauche de 120 degrés\n-   avancer"
+          "courseC_artist_prog4_c": "Pour dessiner ce triangle, il va te falloir :\n\n- avancer\n- tourner à gauche de 120 degrés\n- avancer\n- tourner à gauche de 120 degrés\n- avancer"
         },
         "courseC_artist_prog52022": {
           "courseC_artist_prog5_a": "Fais glisser le curseur à gauche jusqu’à pouvoir exécuter ton code ligne par ligne afin de voir où les choses tournent mal.",
@@ -11684,7 +11684,7 @@
           "courseC_artist_prog7_a": "Chaque angle fait soit 45, soit 90 degrés.",
           "courseC_artist_prog7_b": "Est-ce que tout se passe bien à la première étape ?\nEt à la deuxième ?\nOù est-ce que ça tourne mal ?",
           "courseC_artist_prog7_c": "Tu peux utiliser le menu déroulant sur les blocs « tourner » pour voir de quel angle tu as besoin !",
-          "courseC_artist_prog7_d": "Il va te falloir :\n\n-   avancer\n-   tourner à droite de 45 degrés\n-   avancer\n-   tourner à droite de 90 degrés\n-   avancer\n-   tourner à droite de 45 degrés\n\nRépète 2 fois ce schéma !",
+          "courseC_artist_prog7_d": "Il va te falloir :\n\n- avancer\n- tourner à droite de 45 degrés\n- avancer\n- tourner à droite de 90 degrés\n- avancer\n- tourner à droite de 45 degrés\n\nRépète 2 fois ce schéma !",
           "courseC_artist_prog7_e": "N'aie pas peur de faire des erreurs ! Essaie d'ajouter des blocs et d'exécuter ton code, pour voir ce qui se passe, même si tu ne penses pas avoir encore résolu le casse-tête."
         },
         "courseC_artist_prog_challenge12022": {
@@ -11695,18 +11695,18 @@
           "courseC_artist_prog_challenge2_b": "Après avoir dessiné la deuxième ligne, tourne-toi vers la droite avant de dessiner ta troisième ligne."
         },
         "courseC_collector_loops_challenge22022": {
-          "courseC_maze_loops_challenge2_b": "Utilise des boucles pour ne pas être à court de blocs ˋcollecter\\` !"
+          "courseC_maze_loops_challenge2_b": "Utilise des boucles pour ne pas être à court de blocs ˋcollecter` !"
         },
         "courseC_collector_prog12022": {
-          "courseC_collector_prog1_a": "Une fois que tu te trouves sur une case avec du trésor, utilise le bloc <xml><block type=\"collector_collect\"/></xml> pour le ramasser.",
+          "courseC_collector_prog1_a": "Une fois que tu te trouves sur une case avec du trésor, utilise le bloc [bloc blockly][0] pour le ramasser.",
           "courseC_collector_prog1_b": "La solution la plus simple serait d’avancer une fois puis de ramasser le trésor."
         },
         "courseC_collector_prog22022": {
-          "courseC_collector_prog2_a": "Tu peux utiliser quatre blocs <xml><block type=\"maze_move\"><title name=\"DIR\">moveForward</title></block></xml> ou utiliser le bloc <xml><block type=\"controls_repeat_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> pour rendre ton programme plus court.",
+          "courseC_collector_prog2_a": "Tu peux utiliser quatre blocs [bloc blockly][0] ou utiliser le bloc [bloc blockly][1] pour rendre ton programme plus court.",
           "courseC_collector_prog2_b": "N'aie pas peur de faire des erreurs ! Essaie d'ajouter des blocs et d'exécuter ton code, pour voir ce qui se passe, même si tu ne penses pas avoir encore résolu le casse-tête."
         },
         "courseC_collector_prog32022": {
-          "courseC_collector_prog3_a": "Le programme n’exécutera que les blocs qui sont connectés au bloc <xml><block type=\"when_run\"/></xml>.",
+          "courseC_collector_prog3_a": "Le programme n’exécutera que les blocs qui sont connectés au bloc [bloc blockly][0].",
           "courseC_collector_prog3_b": "Essaie d’utiliser le bouton « Étape » pour exécuter ton code ligne par ligne. Est-ce que tu vois où le code tourne mal ?",
           "courseC_collector_prog3_c": "Si tu as du mal à résoudre ce casse-tête, essaie en écrivant les déplacements sur une feuille de papier."
         },
@@ -11731,33 +11731,33 @@
           "courseC_collector_prog7_c": "Tu as du mal à trouver un parcours qui te permettra de ramasser tout le trésor ? Essaie ce chemin !"
         },
         "courseC_collector_prog_challenge12022": {
-          "courseC_collector_prog_challenge1_a": "Tu peux utiliser le bloc ˋramasser\\` plusieurs fois pour collecter les diamants supplémentaires."
+          "courseC_collector_prog_challenge1_a": "Tu peux utiliser le bloc ˋramasser` plusieurs fois pour collecter les diamants supplémentaires."
         },
         "courseC_collector_prog_challenge22022": {
-          "courseC_collector_prog_challenge1_a": "Tu peux utiliser plus d’un bloc ˋramasser\\` sur chaque case.",
+          "courseC_collector_prog_challenge1_a": "Tu peux utiliser plus d’un bloc ˋramasser` sur chaque case.",
           "courseC_collector_prog_challenge1_b": "Tu es perdu ? Essaie de suivre ce chemin pour résoudre le casse-tête !"
         },
         "courseC_flappy_events12022": {
-          "courseC_flappy_events1_a": "![](https://images.code.org/5f1d0edf6ebb44d98ffdce623cfe0ad4-image-1501192487040.gif)"
+          "courseC_flappy_events1_a": "[][0]"
         },
         "courseC_flappy_events22022": {
-          "courseC_flappy_events2_a": "Le bloc que tu as besoin d'ajouter s’appelle ˋdéfinir la vitesse\\`. ",
-          "courseC_flappy_events2_b": "Connecte le bloc ˋdéfinir la vitesse\\` au bloc ˋquand l’exécution commenceˋ pour résoudre ce casse-tête."
+          "courseC_flappy_events2_a": "Le bloc que tu as besoin d'ajouter s’appelle ˋdéfinir la vitesse`. ",
+          "courseC_flappy_events2_b": "Connecte le bloc ˋdéfinir la vitesse` au bloc ˋquand l’exécution commenceˋ pour résoudre ce casse-tête."
         },
         "courseC_flappy_events32022": {
           "courseC_flappy_events3_a": "Si quelque chose ne fonctionne pas correctement, assure-toi que tes blocs sont connectés aux bons événements dans l’espace de travail."
         },
         "courseC_flappy_events42022": {
-          "courseC_flappy_events4_a": "Connecte le bloc ˋterminer le jeuˋ à ˋau contact d’un obstacle\\` pour résoudre ce casse-tête."
+          "courseC_flappy_events4_a": "Connecte le bloc ˋterminer le jeuˋ à ˋau contact d’un obstacle` pour résoudre ce casse-tête."
         },
         "courseC_flappy_events52022": {
-          "courseC_flappy_events5_a": "Il va te falloir utiliser le bloc ˋmarquer un point\\` pour réussir ce niveau."
+          "courseC_flappy_events5_a": "Il va te falloir utiliser le bloc ˋmarquer un point` pour réussir ce niveau."
         },
         "courseC_flappy_events62022": {
-          "courseC_flappy_events6_a": "Essaie de connecter le bloc ˋfaire une \\_\\_\\_\\_ de battements d’ailesˋ à l’événement ˋlors d’un clic\\`."
+          "courseC_flappy_events6_a": "Essaie de connecter le bloc ˋfaire une ____ de battements d’ailesˋ à l’événement ˋlors d’un clic`."
         },
         "courseC_flappy_events72022": {
-          "courseC_flappy_events7_a": "Tu peux modifier le fond d'écran en utilisant le bloc ˋdéfinir un arrière-plan\\`. "
+          "courseC_flappy_events7_a": "Tu peux modifier le fond d'écran en utilisant le bloc ˋdéfinir un arrière-plan`. "
         },
         "courseC_flappy_events82022": {
           "courseC_flappy_events8_a": "Essaie de connecter un deuxième bloc `définir l'arrière-plan` sous l'évènement `au passage d'un obstacle` pour réussir ce niveau."
@@ -11766,13 +11766,13 @@
           "courseC_flappy_events9_a": "Connecte le bloc `mettre le score à 0` à l'évènement `au contact d'un obstacle` pour réussir ce niveau."
         },
         "courseC_harvester_loops12022": {
-          "courseC_harvester_loops1_a": "Une fois que tu t’es déplacé vers une citrouille, utilise <xml><block type=\"harvester_pumpkin\"/></xml> pour la récolter.",
-          "courseC_harvester_loops1_b": "Tu peux utiliser une boucle avec le bloc <xml><block type=\"harvester_pumpkin\"/></xml> pour récolter plus d’une citrouille se trouvant dans une même case."
+          "courseC_harvester_loops1_a": "Une fois que tu t’es déplacé vers une citrouille, utilise [bloc blockly][0] pour la récolter.",
+          "courseC_harvester_loops1_b": "Tu peux utiliser une boucle avec le bloc [bloc blockly][0] pour récolter plus d’une citrouille se trouvant dans une même case."
         },
         "courseC_harvester_loops22022": {
           "courseC_harvester_loops2_a": "Si tu te retrouves coincé, essaie d'écrire les étapes sur une feuille de papier et de trouver des schémas récurrents.",
           "courseC_harvester_loops2_b": "Tu auras besoin de mettre une boucle `répéter` à la suite d'une autre.",
-          "courseC_harvester_loops2_c": "Une boucle répétera la commande `avancer`, et l'autre répétera la commande 'récolter la citrouille\\`."
+          "courseC_harvester_loops2_c": "Une boucle répétera la commande `avancer`, et l'autre répétera la commande 'récolter la citrouille`."
         },
         "courseC_harvester_loops32022": {
           "courseC_harvester_loops3_a": "N'aie pas peur de faire des erreurs ! Essaie d'ajouter des blocs et d'exécuter ton code, pour voir ce qui se passe, même si tu ne penses pas avoir encore résolu le casse-tête.",
@@ -11794,7 +11794,7 @@
         },
         "courseC_harvester_loops72022": {
           "courseC_harvester_loops7_a": "Tu peux résoudre ce casse-tête de deux façons, en ramassant d'abord le maïs ou d'abord les citrouilles.",
-          "courseC_harvester_loops7_b": "Tu auras besoin de plusieurs boucles ˋrépéter\\` pour résoudre ce casse-tête."
+          "courseC_harvester_loops7_b": "Tu auras besoin de plusieurs boucles ˋrépéter` pour résoudre ce casse-tête."
         },
         "courseC_harvester_loops82022": {
           "courseC_harvester_loops8_a": "Est-ce que ce motif en marche d'escalier ressemble à celui d'autres casse-têtes ? Les déplacements devraient être similaires aussi, mais surtout n'oublie pas de ramasser les cultures en chemin.",
@@ -11802,26 +11802,26 @@
         },
         "courseC_harvester_loops_challenge1a2022": {
           "courseC_harvester_loops_challenge1_a": "C'est trop compliqué sans boucles!",
-          "courseC_harvester_loops_challenge1_b": "Tu peux répéter ˋavancer`et ˋrécolter le maïs` autant de fois que nécessaire, puis ˋtourner à droite\\` dans chaque coin.",
-          "courseC_harvester_loops_challenge1_c": "Le meilleur moyen de récolter le maïs au milieu est d’utiliser un bloc ˋrépéter`à l’intérieur d’un autre bloc ˋrépéter`.\n\n<xml><block type=\"controls_repeat\">\n        <title name=\"TIMES\">2</title>\n        <statement name=\"DO\">\n          <block type=\"controls_repeat\">\n            <title name=\"TIMES\">4</title>\n            <statement name=\"DO\">\n              <block type=\"maze_move\">\n                <title name=\"DIR\">moveForward</title>\n                <next>\n                  <block type=\"harvester_corn\"/>\n                </next>\n              </block>\n            </statement>\n            <next>\n              <block type=\"maze_turn\">\n                <title name=\"DIR\">turnRight</title>\n              </block>\n            </next>\n          </block>\n        </statement>\n        </block></xml>"
+          "courseC_harvester_loops_challenge1_b": "Tu peux répéter ˋavancer` et ˋrécolter le maïs` autant de fois que nécessaire, puis ˋtourner à droite` dans chaque coin.",
+          "courseC_harvester_loops_challenge1_c": "Le meilleur moyen de récolter le maïs au milieu est d’utiliser un bloc ˋrépéter` à l’intérieur d’un autre bloc ˋrépéter`.\n\n[bloc blockly][0]"
         },
         "courseC_harvester_loops_challenge22022": {
           "courseC_harvester_loops_challenge2_a": "Utiliser un zig-zag est un moyen de résoudre ceci. Une spirale peut être un autre moyen ! Il y a plusieurs solutions pour un casse-tête comme celui-ci. Sois perseverant !",
-          "courseC_harvester_loops_challenge2_b": "Tu peux répéter ˋavancer`et ˋrécolter la laitue` autant de fois que nécessaire, puis ˋtourner\\` dans chaque coin.",
-          "courseC_harvester_loops_challenge2_c": "Le modèle zig-zag peut être répété 2 fois pour terminer le casse-tête avec juste 20 blocs!\n\n![](<https://images.code.org/26cfaf6fe4a275e266b51e9ef3711171-image-1493502306380.18.52 PM copy.png>)",
-          "courseC_harvester_loops_challenge2_d": "Le modèle spirale peut être codé avec juste 18 blocs!\n\n![](<https://images.code.org/0bfc0a0ed6783fae908368a6e6d12c02-image-1493501358990.18.52 PM.png>)"
+          "courseC_harvester_loops_challenge2_b": "Tu peux répéter ˋavancer` et ˋrécolter la laitue` autant de fois que nécessaire, puis ˋtourner` dans chaque coin.",
+          "courseC_harvester_loops_challenge2_c": "Le modèle zig-zag peut être répété 2 fois pour terminer le casse-tête avec juste 20 blocs!\n\n[][0]",
+          "courseC_harvester_loops_challenge2_d": "Le modèle spirale peut être codé avec juste 18 blocs!\n\n[][0]"
         },
         "courseC_maze_debugging12022": {
-          "courseC_maze_debugging1_a": "-   Est-ce que tout se passe bien après la première étape ?\n-   Est-ce que ça continue à bien se passer après la seconde ?\n-   Où est-ce que les choses tournent mal ?",
+          "courseC_maze_debugging1_a": "- Est-ce que tout se passe bien après la première étape ?\n- Est-ce que ça continue à bien se passer après la seconde ?\n- Où est-ce que les choses tournent mal ?",
           "courseC_maze_debugging1_b": "Tu as besoin d'ajouter un bloc pour terminer ce casse-tête."
         },
         "courseC_maze_debugging22022": {
           "courseC_maze_debugging2_a": "Il y a beaucoup de code qui peut te servir dans l'espace de travail. Évite de tout effacer pour ne pas avoir à recommencer à zéro !",
-          "courseC_maze_debugging2_b": "-   Est-ce que tout se passe bien après la première étape ?\n-   Est-ce que ça continue à bien se passer après la seconde ?\n-   Où est-ce que les choses tournent mal ?",
+          "courseC_maze_debugging2_b": "- Est-ce que tout se passe bien après la première étape ?\n- Est-ce que ça continue à bien se passer après la seconde ?\n- Où est-ce que les choses tournent mal ?",
           "courseC_maze_debugging2_c": "Tu ne vois pas ce qui ne va pas ? Essaie d’exécuter le code deux ou trois fois pour voir ce qui se passe."
         },
         "courseC_maze_debugging32022": {
-          "courseC_maze_debugging3_a": "Pour enlever un bloc du milieu de ton code, déplace tous les autres blocs vers un autre endroit dans l'espace de travail.\n\nRamène le bloc que tu souhaites enlever à la boite à outils.\n\nEnfin, ramène les autres blocs là où ils appartiennent.\n\n![](https://images.code.org/bbafa5a100505b2b99a3f43ad3195471-image-1479933232821.gif)",
+          "courseC_maze_debugging3_a": "Pour enlever un bloc du milieu de ton code, déplace tous les autres blocs vers un autre endroit dans l'espace de travail.\n\nRamène le bloc que tu souhaites enlever à la boite à outils.\n\nEnfin, ramène les autres blocs là où ils appartiennent.\n\n[][0]",
           "courseC_maze_debugging3_b": "Tu ne vois pas ce qui ne va pas ? Essaie d’exécuter le code deux ou trois fois pour voir ce qui se passe."
         },
         "courseC_maze_debugging42022": {
@@ -11834,11 +11834,11 @@
           "courseC_maze_debugging5_b": "Essaie de dire à haute voix ce qu'il faudrait que Scrat fasse. S'agit-il de la même chose que le code dans l'espace de travail ? Qu'est-ce qui ne va pas ?"
         },
         "courseC_maze_debugging62022": {
-          "courseC_maze_debugging6_a": "-   Qu'est censé faire Scrat ?\n-   Que fait Scrat ? \n-   Qu'est-ce que ça t'indique ? ",
+          "courseC_maze_debugging6_a": "- Qu'est censé faire Scrat ?\n- Que fait Scrat ? \n- Qu'est-ce que ça t'indique ? ",
           "courseC_maze_debugging6_b": "Une fois que tu as trouvé et corrigé le premier bug, passe à nouveau en mode débogage pour trouver le second.\n\nRépète ce processus jusqu'à ce que le programme fonctionne !"
         },
         "courseC_maze_debugging72022": {
-          "courseC_maze_debugging7_a": "-   Est-ce que tout va bien après la première étape ?\n-   Et après la deuxième ? \n-   Où est-ce que ça tourne mal ?",
+          "courseC_maze_debugging7_a": "- Est-ce que tout va bien après la première étape ?\n- Et après la deuxième ? \n- Où est-ce que ça tourne mal ?",
           "courseC_maze_debugging7_b": "N'oublie pas d'utiliser le bouton « Étape » pour faire visualiser le déroulement du programme ligne par ligne !",
           "courseC_maze_debugging7_c": "Une fois que tu as trouvé et corrigé le premier bug, assure-toi de passer à nouveau en mode débogage pour trouver le suivant.\n\nRépète le processus jusqu'à ce que le programme fonctionne !"
         },
@@ -11849,7 +11849,7 @@
         },
         "courseC_maze_debugging_challenge22022": {
           "courseC_maze_debugging_challenge2_b": "Si tu te retrouves bloqué, essaie de déboguer le code. Où est-ce que cela ne va pas ?",
-          "courseC_maze_debugging_challenge2_c": "Tu peux suivre deux chemins différents, simplement en avançant et en tournant quatre fois. Si tu trouves un moyen pour utiliser une boucle, il y en a peut-être plus !\n\n![](<https://images.code.org/8a4665671cda35fea1f629a5bcc39e26-image-1493502743154.48.05 PM.png>)"
+          "courseC_maze_debugging_challenge2_c": "Tu peux suivre deux chemins différents, simplement en avançant et en tournant quatre fois. Si tu trouves un moyen pour utiliser une boucle, il y en a peut-être plus !\n\n[][0]"
         },
         "courseC_maze_loops_challenge1a2022": {
           "courseC_maze_loops_challenge1_a": "Pense à ce chemin comme étant 2 différentes parties. Chacune d'elles a un motif qui se répète.",
@@ -11859,16 +11859,16 @@
           "courseC_maze_programming1_0": "Assure-toi que tous les blocs ont bien été reliés entre eux, puis rappuie sur « Démarrer »."
         },
         "courseC_maze_programming22022": {
-          "courseC_maze_programming2_a": "Pour utiliser un bloc <xml><block type=\"maze_moveForward\"/></xml>, fais le glisser depuis la boite à outils et attache le au bloc <xml><block type=\"when_run\"/></xml>.",
+          "courseC_maze_programming2_a": "Pour utiliser un bloc [bloc blockly][0], fais le glisser depuis la boite à outils et attache le au bloc [bloc blockly][1].",
           "courseC_maze_programming2_b": "Assure-toi que tous les blocs ont bien été reliés entre eux, puis rappuie sur « Démarrer »."
         },
         "courseC_maze_programming32022": {
           "courseC_maze_programming3_a": "Essaie d'abord d'exécuter le code pour voir ce qui ne va pas.",
-          "courseC_maze_programming3_b": "![](https://images.code.org/afddde0e99d5d270c658de0c03dd6e2c-image-1481174000309.gif)\n\nPour enlever un bloc du milieu de ton code, déplace tous les autres blocs autre part dans l'espace de travail.\n\nRemets le bloc que tu souhaites enlever dans la boite à outil.\n\nEnfin, remets les autres blocs à leur place."
+          "courseC_maze_programming3_b": "[][0]\n\nPour enlever un bloc du milieu de ton code, déplace tous les autres blocs autre part dans l'espace de travail.\n\nRemets le bloc que tu souhaites enlever dans la boite à outil.\n\nEnfin, remets les autres blocs à leur place."
         },
         "courseC_maze_programming42022": {
           "courseC_maze_programming4_a": "N'oublie pas que quand tu tournes, tu tournes du point de vue de _l' oiseau_. Si tu tournes à droite, l'oiseau se dirigera vers le bas.",
-          "courseC_maze_programming4_b": "Pour parcourir le chemin:\n\n-   Avance\n-   Tourne dans un sens\n-   Avance\n-   Tourne dans l'autre sens\n-   Avance"
+          "courseC_maze_programming4_b": "Pour parcourir le chemin:\n\n- Avance\n- Tourne dans un sens\n- Avance\n- Tourne dans l'autre sens\n- Avance"
         },
         "courseC_maze_programming52022": {
           "courseC_maze_programming5_a": "Essaie d'utiliser le bouton « Étape » pour exécuter ton code ligne par ligne. Peux-tu deviner ce qu'il faut faire à chaque étape ?",
@@ -11894,7 +11894,7 @@
         },
         "courseC_maze_programming_challenge22022": {
           "courseC_maze_programming_challenge2_a": "_« Si tu me veux me faire aller en arrière, fais bien attention à me tourner dans le bon sens ! »_",
-          "courseC_maze_programming_challenge2_b": "La solution la plus rapide n'utilise que 5 blocs, mais elle comprend ce bloc : \n\n<xml><block type=\"controls_repeat_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>"
+          "courseC_maze_programming_challenge2_b": "La solution la plus rapide n'utilise que 5 blocs, mais elle comprend ce bloc : \n\n[bloc blockly][0]"
         },
         "courseC_starWars_loops102022": {
           "courseC_starWars_loops10_a": "N'y a-t-il pas une espèce de schéma récurrent ici sous forme d'un énorme escalier ? Vois si tu peux utiliser ce que tu as appris dans les casse-têtes précédents pour t'occuper de tous les tournants.",
@@ -11929,11 +11929,11 @@
         "courseC_starWars_loops82022": {
           "course_starWars_loops8_a": "Essaie de réfléchir à ce problème en différentes petites étapes. Prends ton temps. Tu n'as pas besoin de le résoudre du premier coup !",
           "course_starWars_loops8_b": "Envisage la première moitié de ce problème comme un problème en escalier. Comment as-tu résolu cela auparavant ?",
-          "course_starWars_loops8_c": "Regarde ce parcours.\n\n![](https://images.code.org/7d696dd3b1e6984a1d6041f366d5c96b-image-1510198804955.37.04.png)"
+          "course_starWars_loops8_c": "Regarde ce parcours.\n\n[][0]"
         },
         "courseC_starWars_loops92022": {
           "course_starWars_loops9_b": "Tu peux mettre plus d’un bloc au sein d’une boucle « répéter ».",
-          "course_starWars_loops9_c": "Tu n'as pas besoin de tourner à gauche pour résoudre ce casse-tête. Tous tes tournants peuvent se faire à droite.\n\n![](https://images.code.org/3dd00d424aa4112934053548b48bbb69-image-1510198997590.40.57.png)"
+          "course_starWars_loops9_c": "Tu n'as pas besoin de tourner à gauche pour résoudre ce casse-tête. Tous tes tournants peuvent se faire à droite.\n\n[][0]"
         },
         "courseD_artist_12022": {
           "courseD_artist_project1_a": "Utilise le menu déroulant du bloc « tourner » pour choisir l'angle dont tu as besoin !",
@@ -12108,7 +12108,7 @@
           "courseD_bounce_events1s_b": "N'oublie pas d'appuyer sur « Démarrer » et de mettre la main sur le panier pour résoudre ce casse-tête."
         },
         "courseD_bounce_events2s2022": {
-          "courseD_bounce_events2s_a": "Tu vas avoir besoin de deux ensembles d'événements `déplacer` codés pour que tout fonctionne bien :   \n\n[blockly block] [0]"
+          "courseD_bounce_events2s_a": "Tu vas avoir besoin de deux ensembles d'événements `déplacer` codés pour que tout fonctionne bien :   \n\n[bloc blockly] [0]"
         },
         "courseD_bounce_events5s2022": {
           "courseD_bounce_events5s_a": "Tu n'as pas besoin de déplacer la main pour résoudre ce casse-tête.",
