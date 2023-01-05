@@ -6,6 +6,7 @@ import SchoolInfoInputs from '@cdo/apps/templates/SchoolInfoInputs';
 import getScriptData from '@cdo/apps/util/getScriptData';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 import experiments from '@cdo/apps/util/experiments';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 
 const TEACHER_ONLY_FIELDS = [
   '#teacher-name-label',
@@ -20,6 +21,8 @@ const STUDENT_ONLY_FIELDS = [
   '#parent-email-container',
   '#student-gdpr'
 ];
+
+const ACCOUNT_TYPE_PICKED_EVENT = 'Account Type Picked';
 
 // Values loaded from scriptData are always initial values, not the latest
 // (possibly unsaved) user-edited values on the form.
@@ -195,6 +198,9 @@ $(document).ready(() => {
       study_group: 'experiment-v4',
       event: 'select-' + type,
       data_string: signUpUID
+    });
+    analyticsReporter.sendEvent(ACCOUNT_TYPE_PICKED_EVENT, {
+      'account type': type
     });
   }
 
