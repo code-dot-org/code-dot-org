@@ -144,13 +144,16 @@ class EditSectionForm extends Component {
   recordSectionSetupExitEvent = eventName => {
     const {section, courseOfferings, isNewSection} = this.props;
 
-    const courseName = courseOfferings.hasOwnProperty(section.courseOfferingId)
-      ? courseOfferings[section.courseOfferingId].display_name
-      : '';
+    const course = courseOfferings.hasOwnProperty(section.courseOfferingId)
+      ? courseOfferings[section.courseOfferingId]
+      : null;
+    const courseName = course ? course.display_name : null;
+    const courseId = course ? course.id : null;
 
     if (isNewSection) {
       analyticsReporter.sendEvent(eventName, {
-        sectionCurriculum: courseName,
+        sectionCurriculumLocalizedName: courseName,
+        sectionCurriculum: courseId,
         sectionGrade: section.grade,
         sectionLockSelection: section.restrictSection,
         sectionName: section.name,

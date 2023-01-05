@@ -435,7 +435,8 @@ describe('EditSectionForm', () => {
     assert(analyticsSpy.calledOnce);
     assert.equal(analyticsSpy.getCall(0).firstArg, 'Section Setup Completed');
     assert.deepEqual(analyticsSpy.getCall(0).lastArg, {
-      sectionCurriculum:
+      sectionCurriculum: courseOfferings[testSection.courseOfferingId].id,
+      sectionCurriculumLocalizedName:
         courseOfferings[testSection.courseOfferingId].display_name,
       sectionGrade: testSection.grade,
       sectionLockSelection: testSection.restrictSection,
@@ -472,7 +473,8 @@ describe('EditSectionForm', () => {
     assert(analyticsSpy.calledOnce);
     assert.equal(analyticsSpy.getCall(0).firstArg, 'Section Setup Cancelled');
     assert.deepEqual(analyticsSpy.getCall(0).lastArg, {
-      sectionCurriculum:
+      sectionCurriculum: courseOfferings[testSection.courseOfferingId].id,
+      sectionCurriculumLocalizedName:
         courseOfferings[testSection.courseOfferingId].display_name,
       sectionGrade: testSection.grade,
       sectionLockSelection: testSection.restrictSection,
