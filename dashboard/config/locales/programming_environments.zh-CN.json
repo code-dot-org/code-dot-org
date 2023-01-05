@@ -167,6 +167,9 @@
             "ui_controls": {
               "name": "UI控制",
               "expressions": {
+                "button": {
+                  "short_description": "在屏幕上创建一个按钮，在默认位置 (0,0) 显示所提供的文本并引用所用的ID。"
+                },
                 "onEvent": {
                   "examples": {
                     "Shrink and Grow": {
@@ -192,6 +195,13 @@
             "canvas": {
               "name": "画布",
               "expressions": {
+                "circle": {
+                  "palette_params": {
+                    "radius": {
+                      "description": "圆的半径，以像素为单位。"
+                    }
+                  }
+                },
                 "getAlpha": {
                   "palette_params": {
                     "imageData": {
@@ -319,7 +329,12 @@
               }
             },
             "turtle": {
-              "name": "海龟"
+              "name": "海龟",
+              "expressions": {
+                "arcLeft": {
+                  "short_description": "以平滑的圆弧向前和向左移动海龟。"
+                }
+              }
             },
             "control": {
               "name": "控制",
@@ -370,6 +385,9 @@
                 },
                 "declareAssign_x": {
                   "short_description": "声明并给一个变量分派上初值。"
+                },
+                "declareAssign_list_123": {
+                  "short_description": "声明数组并赋值给变量"
                 },
                 "addPair": {
                   "return_value": "没有"
