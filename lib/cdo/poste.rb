@@ -112,7 +112,7 @@ module Poste
   class Template
     def initialize(path)
       @path = path
-      @template_type = File.extname(path)[1..-1]
+      @template_type = File.extname(path)[1..]
       @header, @html, @text = parse_template(File.read(path))
     end
 
