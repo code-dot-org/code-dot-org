@@ -23,6 +23,7 @@ const STUDENT_ONLY_FIELDS = [
 ];
 
 const ACCOUNT_TYPE_PICKED_EVENT = 'Account Type Picked';
+const SIGN_UP_FINISHED_EVENT = 'Sign Up Finished';
 
 // Values loaded from scriptData are always initial values, not the latest
 // (possibly unsaved) user-edited values on the form.
@@ -95,6 +96,7 @@ $(document).ready(() => {
       cleanSchoolInfo();
       $('#user_age').val('21+');
     }
+    analyticsReporter.sendEvent(SIGN_UP_FINISHED_EVENT);
   });
 
   function cleanSchoolInfo() {
