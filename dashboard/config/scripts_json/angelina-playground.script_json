@@ -10,7 +10,7 @@
     },
     "new_name": null,
     "family_name": "angelina-playground",
-    "serialized_at": "2022-12-10 20:29:56 UTC",
+    "serialized_at": "2023-01-04 20:50:07 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -74,6 +74,21 @@
       },
       "seeding_key": {
         "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "angelina-playground"
+      }
+    },
+    {
+      "key": "lesson-4",
+      "name": "CSS Grid",
+      "absolute_position": 4,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 4,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-4",
         "lesson_group.key": "",
         "script.name": "angelina-playground"
       }
@@ -899,6 +914,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CTF Trivia 22"
+        ],
         "progression": "Trivia Challenges"
       },
       "bonus": false,
@@ -921,6 +939,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CTF Cryptography 22"
+        ],
         "progression": "Cryptography Challenges"
       },
       "bonus": false,
@@ -943,6 +964,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CTF Recon 22"
+        ],
         "progression": "Reconnaissance Challenges"
       },
       "bonus": false,

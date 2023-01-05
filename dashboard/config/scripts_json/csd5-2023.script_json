@@ -16,7 +16,7 @@
     },
     "new_name": null,
     "family_name": "csd5",
-    "serialized_at": "2022-09-19 22:46:19 UTC",
+    "serialized_at": "2023-01-03 23:07:10 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -1187,13 +1187,7 @@
       "key": "0c7a7d20-8025-45c6-a622-46d82516c042",
       "position": 3,
       "properties": {
-        "description": "**Discuss:** Give students a few minutes to think on their own about what data is, and then allow them to share quietly with a partner.  After all students have had a chance to speak to each other, share as a whole class, writing the ideas down in the front of the classroom.",
-        "tips": [
-          {
-            "type": "discussionGoal",
-            "markdown": "**Goal:** Students should understand that data is information that has been collected about the world.  They should see that data could be any type of information, not just numbers.  \r\n"
-          }
-        ]
+        "description": "**Discuss:** Give students a few minutes to think on their own about what data is, and then allow them to share quietly with a partner.  After all students have had a chance to speak to each other, share as a whole class, writing their ideas down in the front of the classroom.\n\n**Discussion Goal:** Students should understand that data is information that has been collected about the world. They should see that data could be any type of information, not just numbers."
       },
       "seeding_key": {
         "activity_section.key": "0c7a7d20-8025-45c6-a622-46d82516c042",
@@ -1392,7 +1386,7 @@
         "tips": [
           {
             "type": "assessmentOpportunity",
-            "markdown": "**Goal:** Students should understand that different representations are good for solving different problems. As they explain which representations are better or worse, make sure that they are justifying their choices within the context of particular problems they were asked to solve in the activity.  They should recognize that each representation had advantages and disadvantages for different problems, and identify how the nature of each problem lent itself to a particular representation.\r\n"
+            "markdown": "Students should understand that different representations are good for solving different problems. As they explain which representations are better or worse, make sure that they are justifying their choices within the context of particular problems they were asked to solve in the activity.  They should recognize that each representation had advantages and disadvantages for different problems, and identify how the nature of each problem lent itself to a particular representation.\n"
           }
         ]
       },
@@ -1441,13 +1435,7 @@
       "key": "a8c6b544-f1d2-43fe-9d18-8e206e987f34",
       "position": 2,
       "properties": {
-        "description": "**Discuss:** Students should brainstorm silently, then share with their tables, then finally share as a class. Write down ideas in a table at the front of the room as ideas are shared.",
-        "tips": [
-          {
-            "type": "discussionGoal",
-            "markdown": "<img src=\"https://cdo-curriculum.s3.amazonaws.com/media/uploads/20170314_125652.jpg\" style=\"height:150px;float:right;\">\r\n\r\n**Goal:** Students should see that the same information can be represented in lots of different ways. They might come up with saying \"Yes\" or \"No\" in many different languages, thumbs up vs. thumbs down, plus or minus, up arrow vs. down arrow, shaking head up and down vs side to side etc. Prompt students with examples if they don't understand that they need pairs of responses.\r\n\r\nYour board might look like this after writing responses.\r\n"
-          }
-        ]
+        "description": "**Discuss:** Students should brainstorm silently, then share with their tables, then finally share as a class. Write down ideas in a table at the front of the room as ideas are shared.\n\n**Discussion Goal:** <img src=\"https://cdo-curriculum.s3.amazonaws.com/media/uploads/20170314_125652.jpg\" style=\"height:150px;float:right;margin-left:10px\"> Students should see that the same information can be represented in lots of different ways. They might come up with saying \"Yes\" or \"No\" in many different languages, thumbs up vs. thumbs down, plus or minus, up arrow vs. down arrow, shaking head up and down vs side to side etc. Prompt students with examples if they don't understand that they need pairs of responses.\n\nYour board might look like this after writing responses."
       },
       "seeding_key": {
         "activity_section.key": "a8c6b544-f1d2-43fe-9d18-8e206e987f34",
@@ -1458,13 +1446,7 @@
       "key": "5773b2f8-6358-4f3d-8fa7-9b1d7b556e87",
       "position": 3,
       "properties": {
-        "description": "**Prompt:** Each row in our table is a different \"system\" but they all represent the same information. Why do you think we have so many different systems to represent the same information?",
-        "tips": [
-          {
-            "type": "discussionGoal",
-            "markdown": "**Goal:** This conversation sets you up to make another important point, that different systems are created for different contexts. Today you're going to ask students to make a system for what will seem like a very arbitrary context, a deck of animal cards. Lean on the fact that they'll have brainstormed lots of \"weird arbitrary systems\" in this warm-up. That's because there's different contexts in which they're used. In the subsequent lesson you can call out how designing systems for wires with electricity in them is just as weird and arbitrary.\r\n"
-          }
-        ]
+        "description": "**Prompt:** Each row in our table is a different \"system\" but they all represent the same information. Why do you think we have so many different systems to represent the same information?\n\n**Discussion Goal:** This conversation sets you up to make another important point, that different systems are created for different contexts. Today you're going to ask students to make a system for what will seem like a very arbitrary context, a deck of animal cards. Lean on the fact that they'll have brainstormed lots of \"weird arbitrary systems\" in this warm-up. That's because there are different contexts in which they're used. In the subsequent lesson, you can call out how designing systems for wires with electricity in them is just as weird and arbitrary."
       },
       "seeding_key": {
         "activity_section.key": "5773b2f8-6358-4f3d-8fa7-9b1d7b556e87",
@@ -1812,13 +1794,7 @@
       "key": "ea536482-92d9-492f-b481-eabb942b151a",
       "position": 3,
       "properties": {
-        "description": "**Discuss:** Have students brainstorm silently, then share with a partner, then discuss as a whole class.",
-        "tips": [
-          {
-            "type": "discussionGoal",
-            "markdown": "**Goal:** The aim is to point out how daunting representing this complex piece of information might be. Be prepared as you're presenting students this challenge to normalize the fact that it is really hard but still give them a chance.\r\n"
-          }
-        ]
+        "description": "**Discuss:** Have students brainstorm silently, then share with a partner, then discuss as a whole class.\n\n**Discussion Goal:** The aim is to point out how daunting representing this complex piece of information might be. Be prepared as you're presenting students with this challenge to normalize the fact that it is really hard but still give them a chance."
       },
       "seeding_key": {
         "activity_section.key": "ea536482-92d9-492f-b481-eabb942b151a",
@@ -1840,13 +1816,7 @@
       "key": "b6d5c3dc-2ba4-410a-812e-af9d1f3ba833",
       "position": 5,
       "properties": {
-        "description": "**Discuss:** You may choose to run this as a second silent brainstorm or else just immediately discuss as a whole class.",
-        "tips": [
-          {
-            "type": "discussionGoal",
-            "markdown": "**Goal:** These images are intended to visually demonstrate the idea of breaking images up into smaller pieces. Students should hopefully recognize that what they are looking at is a binary system (black and white) and so with the right system they should be able to represent the last images. You should be prepared to acknowledge that while the last image is lower quality, the same ideas could probably be used to make the original. It is on their screen after all!\r\n"
-          }
-        ]
+        "description": "**Discuss:** You may choose to run this as a second silent brainstorm or else just immediately discuss it as a whole class.\n\n**Discussion Goal:** These images are intended to visually demonstrate the idea of breaking images up into smaller pieces. Students should hopefully recognize that what they are looking at is a binary system (black and white) and so with the right system they should be able to represent the last images. You should be prepared to acknowledge that while the last image is of lower quality, the same ideas could probably be used to make the original. It is on their screen after all!"
       },
       "seeding_key": {
         "activity_section.key": "b6d5c3dc-2ba4-410a-812e-af9d1f3ba833",
@@ -2028,14 +1998,8 @@
       "key": "81cdf36f-a140-4c4d-a6ef-d37ee74bab5f",
       "position": 1,
       "properties": {
-        "description": "**Prompt:** Create a list of all the information you might want to represent to a computer as a number. Here's some ideas to get you started\n\n* An online store (what kinds of numbers does a store keep track of?)\n* A social media profile (what things about you or your friends are numbers?)\n\n**Discuss:** Students should brainstorm independently, then share with a partner, then finally discuss as a whole class.",
-        "name": "Journal\r",
-        "tips": [
-          {
-            "type": "discussionGoal",
-            "markdown": "**Goal:** In this and the following lessons students will be learning a new system to represent numbers using on-off signals. Motivate this activity by thinking back to the kinds of information students eventually will want to represent with this system. If students need help brainstorming give them a couple examples, e.g. age, their height, their birthday, the number of friends they have, the cost of items, an item's rating, etc.  \r\n"
-          }
-        ]
+        "description": "**Prompt:** Create a list of all the information you might want to represent to a computer as a number. Here are some ideas to get you started\n\n* An online store (what kinds of numbers does a store keep track of?)\n* A social media profile (what things about you or your friends are numbers?)\n\n**Discuss:** Students should brainstorm independently, then share with a partner, then finally discuss as a whole class.\n\n**Discussion Goal:** In this and the following lessons students will be learning a new system to represent numbers using on-off signals. Motivate this activity by thinking back to the kinds of information students eventually will want to represent with this system. If students need help brainstorming give them a couple of examples, e.g. age, height, their birthday, the number of friends they have, the cost of items, an item's rating, etc.",
+        "name": "Journal\r"
       },
       "seeding_key": {
         "activity_section.key": "81cdf36f-a140-4c4d-a6ef-d37ee74bab5f",
@@ -2126,13 +2090,7 @@
       "key": "d862a4ba-7e56-416a-9a7f-f7f31baa042a",
       "position": 5,
       "properties": {
-        "description": "**Discuss:** Allow students to check with other pairs and try to find another way to represent the numbers before regrouping and discussing as a class.",
-        "tips": [
-          {
-            "type": "discussionGoal",
-            "markdown": "**Goal** After some discussion, students should note that there is only one way to represent any particular number in this system.  This is an important point to bring out because it would be confusing if two patterns meant the same thing.\r\n"
-          }
-        ]
+        "description": "**Discuss:** Allow students to check with other pairs and try to find another way to represent the numbers before regrouping and discussing as a class.\n\n**Discussion Goal:** After some discussion, students should note that there is only one way to represent any particular number in this system. This is an important point to bring out because it would be confusing if two patterns meant the same thing."
       },
       "seeding_key": {
         "activity_section.key": "d862a4ba-7e56-416a-9a7f-f7f31baa042a",
@@ -2155,13 +2113,7 @@
       "key": "38132c52-00ea-4b1d-814f-12c0bfbd5d1f",
       "position": 7,
       "properties": {
-        "description": "**Circulate**: Allow students to complete the top half of the worksheet with the support of the widget. When both students in a pair have finished, have them trade papers to decode the other person's profile. When they finish, have them trade back and verify the answers were correct.\n\n**Challenge:** If students have finished encoding and decoding their Binary profiles, have them create a new question that they can trade with another student in the room.\n\n**Prompt:** The last question on this activity guide uses an 8-bit number, even though we haven't talked about how to represent these numbers yet. Do you think we can figure out what numbers are needed for 8-bit numbers? How?",
-        "tips": [
-          {
-            "type": "discussionGoal",
-            "markdown": "**Goal** Students should recognize that the patterns of the numbers and the rules that they follow can help them determine the next numbers in the sequence. For an 8-bit number, starting from the left, the pattern goes **128 | 64 | 32 | 16 | 8 | 4 | 2 | 1**.  \r\n  "
-          }
-        ]
+        "description": "**Circulate**: Allow students to complete the top half of the worksheet with the support of the widget. When both students in a pair have finished, have them trade papers to decode the other person's profile. When they finish, have them trade back and verify the answers were correct.\n\n**Challenge:** If students have finished encoding and decoding their Binary profiles, have them create a new question that they can trade with another student in the room.\n\n**Prompt:** The last question on this activity guide uses an 8-bit number, even though we haven't talked about how to represent these numbers yet. Do you think we can figure out what numbers are needed for 8-bit numbers? How?\n\n**Discussion Goal:** Students should recognize that the patterns of the numbers and the rules that they follow can help them determine the next numbers in the sequence. For an 8-bit number, starting from the left, the pattern goes **128 | 64 | 32 | 16 | 8 | 4 | 2 | 1**."
       },
       "seeding_key": {
         "activity_section.key": "38132c52-00ea-4b1d-814f-12c0bfbd5d1f",
@@ -2229,14 +2181,8 @@
       "key": "f4d471c8-b9e2-4aa5-b3e6-b399e5f356f9",
       "position": 4,
       "properties": {
-        "description": "**Questions to Consider with Video:**\n- Why are all the types of data on the computer stored as numbers?\n- If everything is stored as a number, how do you think the computer tell the difference between numbers, letters, images, and sound?",
-        "progression_name": "Binary and Data",
-        "tips": [
-          {
-            "type": "discussionGoal",
-            "markdown": "The goal of this discussion is to have the students think more deeply about the purpose of binary. \n\nFor the first question, they may want to return to their ASCII character sheets and see how the computer would interpret the same binary sequence as a number. For their image representation, they may wonder whether it is even useful to interpret the binary sequences as numbers. In the end, the purpose of defining all data as numbers is less about the \"reality\" of what the ones and zeros represent, and more about how binary is traditionally interpreted.\n\nFor the second question, allow students to think of different ways that the computer would distinguish between different types of data. While it's not necessary for students to come up with any specific answer, challenge them in any ways that involve human interpretation of context, such as knowing that a name is most likely text and age is most likely a number. Assure them that they will look at the problem again in a couple of lessons."
-          }
-        ]
+        "description": "**Questions to Consider with Video:**\n- Why are all the types of data on the computer stored as numbers?\n- If everything is stored as a number, how do you think the computer tell the difference between numbers, letters, images, and sound?\n\n**Discussion Goal:** The goal of this discussion is to have the students think more deeply about the purpose of binary.\n\n- For the first question, they may want to return to their ASCII character sheets and see how the computer would interpret the same binary sequence as a number. For their image representation, they may wonder whether it is even useful to interpret the binary sequences as numbers. In the end, the purpose of defining all data as numbers is less about the \"reality\" of what the ones and zeros represent, and more about how binary is traditionally interpreted.\n\n- For the second question, allow students to think of different ways that the computer would distinguish between different types of data. While it's not necessary for students to come up with any specific answer, challenge them in any ways that involve human interpretation of context, such as knowing that a name is most likely text and age is most likely a number. Assure them that they will look at the problem again in a couple of lessons.",
+        "progression_name": "Binary and Data"
       },
       "seeding_key": {
         "activity_section.key": "f4d471c8-b9e2-4aa5-b3e6-b399e5f356f9",
@@ -2259,13 +2205,7 @@
       "key": "bea6eaeb-b64b-41f5-9998-5c016ebb0a4f",
       "position": 2,
       "properties": {
-        "description": "**Discuss:** Give students a chance to think on their own, then talk in table groups before opening up to a full class discussion.",
-        "tips": [
-          {
-            "type": "discussionGoal",
-            "markdown": "**Goal:** Students should note that without knowing which code is being used, they can't know for sure what the binary means.  Specifically, they may see that the code could be the character \"C\" in ASCII or the number 67 as a binary number.  In fact, it could be a code that they haven't seen before, in which case it could mean anything.\r\n"
-          }
-        ]
+        "description": "**Discuss:** Give students a chance to think on their own, then talk in table groups before opening up to a full class discussion.\n\n**Discussion Goal:** Students should note that without knowing which code is being used, they can't know for sure what the binary means. Specifically, they may see that the code could be the character \"C\" in ASCII or the number 67 as a binary number. In fact, it could be a code that they haven't seen before, in which case it could mean anything."
       },
       "seeding_key": {
         "activity_section.key": "bea6eaeb-b64b-41f5-9998-5c016ebb0a4f",
@@ -2276,13 +2216,7 @@
       "key": "cdd9889e-58cf-417c-929e-e85813ff17a0",
       "position": 3,
       "properties": {
-        "description": "**Prompt:** Tell students that this friend has told you that this code represents a number, but nothing else. What do you think this number could represent for your friend?",
-        "tips": [
-          {
-            "type": "discussionGoal",
-            "markdown": "**Goal:**  Push students past the answer that the number is just 67. One way to do this to note that if a stranger approached them and said \"67\" out of the blue, would they know what that person was talking about? \r\n\r\nStudents should come up with some different possible meanings of the number, such as an age, a temperature, an address, etc. The larger realization should be that, without context, the number could mean many things.\r\n\r\n"
-          }
-        ]
+        "description": "**Prompt:** Tell students that this friend has told you that this code represents a number, but nothing else. What do you think this number could represent for your friend?\n\n**Discussion Goal:** Push students past the answer that the number is just 67. One way to do this is to note that if a stranger approached them and said \"67\" out of the blue, would they know what that person was talking about?\n\nStudents should come up with some different possible meanings of the number, such as an age, a temperature, an address, etc. The larger realization should be that, without context, the number could mean many things."
       },
       "seeding_key": {
         "activity_section.key": "cdd9889e-58cf-417c-929e-e85813ff17a0",
@@ -2339,13 +2273,7 @@
       "key": "66f82836-4eae-4f77-9f6c-03ef73ad9a18",
       "position": 3,
       "properties": {
-        "description": "**Discuss:** Let students talk with a partner before bringing to a full group. Ask a few students to share their ideas before continuing to the student record example.",
-        "tips": [
-          {
-            "type": "discussionGoal",
-            "markdown": "**Goal** Encourage students to make connections between the previous lesson, where they made numerical binary profiles as practice, and this more realistic scenario of keeping track of student information for a school. Encourage students to think beyond just numerical data - for example, a school may need to keep a picture of you for your ID, and your name and address, and other information.\r\n\r\nIt’s okay for students to be less sure about how the information should be tracked. Students may suggest keeping a long list or having a large table. When punchcards are introduced later, make connections back to these suggestions and note any similarities between students’ ideas and the punchcard.\r\n\r\n"
-          }
-        ]
+        "description": "**Discuss:** Let students talk with a partner before bringing them to a full group. Ask a few students to share their ideas before continuing to the student record example.\n\n**Discussion Goal:** Encourage students to make connections between the previous lesson, where they made numerical binary profiles as practice, and this more realistic scenario of keeping track of student information for a school. Encourage students to think beyond just numerical data - for example, a school may need to keep a picture of you for your ID, your name and address, and other information.\n\nIt’s okay for students to be less sure about how the information should be tracked. Students may suggest keeping a long list or having a large table. When punchcards are introduced later, make connections back to these suggestions and note any similarities between students’ ideas and the punchcard."
       },
       "seeding_key": {
         "activity_section.key": "66f82836-4eae-4f77-9f6c-03ef73ad9a18",
@@ -2493,13 +2421,7 @@
       "key": "ebd4a612-b846-439b-ad41-434666f3d353",
       "position": 2,
       "properties": {
-        "description": "**Discuss:** Have students write their responses individually in their journals, then share with a neighbor before finally having a full-class discussion.",
-        "tips": [
-          {
-            "type": "discussionGoal",
-            "markdown": "**Goal:** Students should determine that not all information in this record should be made public, but that there are also times when this information could be useful to specific people. For example: maybe allergies or emergency contact shouldn’t be available widely, but they could be useful for a teacher in case there’s an issue. There is no definitive right-or-wrong answer to this - it's more important to let students explain their reasoning and hear different opinions that may cause them to consider new situations for how this information could be used."
-          }
-        ]
+        "description": "**Discuss:** Have students write their responses individually in their journals, then share with a neighbor before finally having a full-class discussion.\n\n**Discussion Goal:** Students should determine that not all information in this record should be made public, but that there are also times when this information could be useful to specific people. For example: maybe allergies or emergency contact shouldn’t be available widely, but they could be useful for a teacher in case there’s an issue. There is no definitive right-or-wrong answer to this - it's more important to let students explain their reasoning and hear different opinions that may cause them to consider new situations for how this information could be used."
       },
       "seeding_key": {
         "activity_section.key": "ebd4a612-b846-439b-ad41-434666f3d353",
@@ -2652,13 +2574,7 @@
       "key": "46629ebd-249a-4107-944d-7455764bb5bb",
       "position": 2,
       "properties": {
-        "description": "**Discuss:** Have students reflect individually before sharing with a partner and as a class.",
-        "tips": [
-          {
-            "type": "discussionGoal",
-            "markdown": "**Goal:** Students may come up with a variety of ideas beyond medical or personal information, such as personal profile pictures, family income information, or ancestral or historical information. Encourage them to reflect on situations where it would be inappropriate for that information to be used to make a decision."
-          }
-        ]
+        "description": "**Discuss:** Have students reflect individually before sharing with a partner and as a class.\n\n**Discussion Goal:** Students may come up with a variety of ideas beyond medical or personal information, such as personal profile pictures, family income information, or ancestral or historical information. Encourage them to reflect on situations where it would be inappropriate for that information to be used to make a decision."
       },
       "seeding_key": {
         "activity_section.key": "46629ebd-249a-4107-944d-7455764bb5bb",
@@ -2681,13 +2597,7 @@
       "key": "dd01cfb9-7d26-4bd6-afc1-f84694ec7727",
       "position": 2,
       "properties": {
-        "description": "**Discuss:** Have students write in their journals individually, then call on different students to share items from their list with the whole class. Keep track of the items they suggest in front of the room.",
-        "tips": [
-          {
-            "type": "discussionGoal",
-            "markdown": "**Goal:** Students may remember that they’ve represented personal information like names, age, weight, etc using binary systems. They’ve also represented images using pixels, and represented text using ASCII. This brainstorm helps students review all of the tasks from this past unit, which they will need to rely on for today’s project."
-          }
-        ]
+        "description": "**Discuss:** Have students write in their journals individually, then call on different students to share items from their list with the whole class. Keep track of the items they suggest in front of the room.\n\n**Discussion Goal:** Students may remember that they’ve represented personal information like names, age, weight, etc using binary systems. They’ve also represented images using pixels, and represented text using ASCII. This brainstorm helps students review all of the tasks from this past unit, which they will need to rely on for today’s project."
       },
       "seeding_key": {
         "activity_section.key": "dd01cfb9-7d26-4bd6-afc1-f84694ec7727",
@@ -2800,13 +2710,7 @@
       "key": "a5eb9a5e-00c1-4444-9d84-ef2b3541f00d",
       "position": 7,
       "properties": {
-        "description": "**Step 5 - Full Class Activity - Agree on Classwide Punch Card:**  Have partners share the categories of information they wish to represent, recording them in the front of the room. Have the class decide what information they want to use for each number, their word, and their image.",
-        "tips": [
-          {
-            "type": "discussionGoal",
-            "markdown": "**Possible Systems:** Here's one possible system for the punch cards\r\n\r\n* Number 1: Temperature that day\r\n* Number 2: How many other people are there\r\n* Number 3: How long you're there in hours\r\n* Characters 1-10: Name of activity or location\r\n* Image: Image of the activity\r\n\r\n\r\n**Facilitating the Discussion:** Students will likely want to create systems that work really well for their information but not a classmates. Emphasize that systems are only useful if they're universal. A system that only works for one person isn't very useful and all systems will involve some tradeoffs.\r\n\r\n"
-          }
-        ]
+        "description": "**Step 5 - Full Class Activity - Agree on Classwide Punch Card:**  Have partners share the categories of information they wish to represent, recording them in the front of the room. Have the class decide what information they want to use for each number, their word, and their image.\n\n**Discussion Goal:** Here's one possible system for the punch cards\n\n* Number 1: Temperature that day\n* Number 2: How many other people are there\n* Number 3: How long you're there in hours\n* Characters 1-10: Name of activity or location\n* Image: Image of the activity\n\n**Facilitating the Discussion:** Students will likely want to create systems that work really well for their information but not a classmate's. Emphasize that systems are only useful if they're universal. A system that only works for one person isn't very useful and all systems will involve some tradeoffs."
       },
       "seeding_key": {
         "activity_section.key": "a5eb9a5e-00c1-4444-9d84-ef2b3541f00d",
@@ -2891,13 +2795,7 @@
       "key": "f55fa9cb-53a3-4411-985d-617f89828dc2",
       "position": 2,
       "properties": {
-        "description": "**Prompt** In your journal, when was the last time that you looked for information on the Internet?  Why did you need it?",
-        "tips": [
-          {
-            "type": "discussionGoal",
-            "markdown": "The goal of this discussion is for students to realize that they use the Internet as an information resource to help them solve problems in their own lives.  As the students brainstorm why they go online, encourage them to frame their information search as one step in problem solving.\r\n"
-          }
-        ]
+        "description": "**Prompt** In your journal, when was the last time that you looked for information on the Internet?  Why did you need it?\n\n\n"
       },
       "seeding_key": {
         "activity_section.key": "f55fa9cb-53a3-4411-985d-617f89828dc2",
@@ -2908,7 +2806,7 @@
       "key": "872e8a1d-96d3-4da0-82f0-ab813f6641c0",
       "position": 3,
       "properties": {
-        "description": "**Discuss**: Have students journal individually, then share with a neighbor, and finally discuss as a whole class."
+        "description": "**Discuss**: Have students journal individually, then share with a neighbor, and finally discuss as a whole class.\n\n**Discussion Goal:** The goal of this discussion is for students to realize that they use the Internet as an information resource to help them solve problems in their own lives. As the students brainstorm why they go online, encourage them to frame their information search as one step in problem-solving.\n"
       },
       "seeding_key": {
         "activity_section.key": "872e8a1d-96d3-4da0-82f0-ab813f6641c0",
@@ -2988,13 +2886,7 @@
       "key": "e226e1af-53fd-4948-a919-0c4b2dc7d107",
       "position": 5,
       "properties": {
-        "description": "Allow students to share out their responses and discuss as a class.",
-        "tips": [
-          {
-            "type": "discussionGoal",
-            "markdown": "Students should understand that it’s not just about having an opinion about what should be built, but to use data data to help decide what the city needs most.\r\n\r\n"
-          }
-        ]
+        "description": "Allow students to share out their responses and discuss them as a class.\n\n**Discussion Goal:** Students should understand that it’s not just about having an opinion about what should be built, but using data to help decide what the city needs most.\n\n"
       },
       "seeding_key": {
         "activity_section.key": "e226e1af-53fd-4948-a919-0c4b2dc7d107",
@@ -3069,13 +2961,7 @@
       "key": "a5f630e2-cf3b-4667-86c1-7b9c0d60fb60",
       "position": 11,
       "properties": {
-        "description": "**Share Out:** Have groups share out their decisions, as well as the reasons and data that support them. Assure them that it's fine to have multiple answers, as long as data is being used to support their ideas.",
-        "tips": [
-          {
-            "type": "discussionGoal",
-            "markdown": "Students should understand and be comfortable with the fact that the decisions that we make from data involve interpretation and prioritization.  They should be able to support their decisions using the data the class found.\r\n"
-          }
-        ]
+        "description": "**Share Out:** Have groups share out their decisions, as well as the reasons and data that support them. Assure them that it's fine to have multiple answers, as long as data is being used to support their ideas.\n\n**Discussion Goal:** Students should understand and be comfortable with the fact that the decisions that we make from data involve interpretation and prioritization. They should be able to support their decisions using the data the class found.\n\n"
       },
       "seeding_key": {
         "activity_section.key": "a5f630e2-cf3b-4667-86c1-7b9c0d60fb60",
@@ -3144,13 +3030,7 @@
       "key": "ec3558f8-f509-4949-8ea3-403b259fbf54",
       "position": 3,
       "properties": {
-        "description": "**Discuss**: Have students journal individually, then share with a neighbor, and finally discuss as a whole class. You can record their ideas on the board to refer back to later in the class.",
-        "tips": [
-          {
-            "type": "discussionGoal",
-            "markdown": "Students should understand that different forms of data make it easier for people to make decisions.  They should also see that people often do best with visuals, such as the bar chart, while computer do better with numbers, such as the table.\r\n"
-          }
-        ]
+        "description": "**Discuss**: Have students journal individually, then share with a neighbor, and finally discuss as a whole class. You can record their ideas on the board to refer back to later in the class.\n\n**Discussion Goal:** Students should understand that different forms of data make it easier for people to make decisions. They should also see that people often do best with visuals, such as the bar chart, while computers do better with numbers, such as the table.\n\n"
       },
       "seeding_key": {
         "activity_section.key": "ec3558f8-f509-4949-8ea3-403b259fbf54",
@@ -3247,13 +3127,7 @@
       "key": "b3fcb62f-e858-40df-a6ce-e809cf7484f3",
       "position": 6,
       "properties": {
-        "description": "**Prompt** Ask students to discuss in pairs why the chart looks the way it does and why wasn't the computer able to put everything into the correct category. Have students share their answers with the class.",
-        "tips": [
-          {
-            "type": "discussionGoal",
-            "markdown": "Students should notice that the computer used all the answers in the chart, even the ones that were irrelevant. Students should also notice that it didn’t correct any spelling or fix any differences in capitalization - for example, “Cheese” and “cheese” appear as two separate rows on the chart.\r\n\r\n"
-          }
-        ]
+        "description": "**Prompt** Ask students to discuss in pairs why the chart looks the way it does and why wasn't the computer able to put everything into the correct category. Have students share their answers with the class.\n\n**Discussion Goal:** Students should notice that the computer used all the answers in the chart, even the ones that were irrelevant. Students should also notice that it didn’t correct any spelling or fix any differences in capitalization - for example, “Cheese” and “cheese” appear as two separate rows on the chart.\n\n"
       },
       "seeding_key": {
         "activity_section.key": "b3fcb62f-e858-40df-a6ce-e809cf7484f3",
@@ -3304,13 +3178,7 @@
       "key": "5109512e-ec7e-4dbc-97fe-33c8d7defede",
       "position": 10,
       "properties": {
-        "description": "**Prompt:** This was a lot of work, and it was only about twenty votes.  How much time do you think it would take to clean the data for a nationwide survey?  Can you think of any ways to make sure that we got clean data from the beginning, to save us all of this work?",
-        "tips": [
-          {
-            "type": "discussionGoal",
-            "markdown": "In the end, students should realize that constraining a user's choices can help with this - for example, by using multiple choice rather than a write in answer. They may also bring up ignoring capitalization so “cheese” and “Cheese” aren’t two different results.\r\n  "
-          }
-        ]
+        "description": "**Prompt:** This was a lot of work, and it was only about twenty votes.  How much time do you think it would take to clean the data for a nationwide survey?  Can you think of any ways to make sure that we got clean data from the beginning, to save us all of this work?\n\n**Discussion Goal:** In the end, students should realize that constraining a user's choices can help with this - for example, by using multiple choice rather than a write-in answer. They may also bring up ignoring capitalization so “cheese” and “Cheese” aren’t two different results.\n\n"
       },
       "seeding_key": {
         "activity_section.key": "5109512e-ec7e-4dbc-97fe-33c8d7defede",
@@ -3391,13 +3259,7 @@
       "key": "817bfb20-6cb2-4dcf-9885-2bb2443b8b1d",
       "position": 4,
       "properties": {
-        "description": "**Share Out:** Have students share their choices and why.",
-        "tips": [
-          {
-            "type": "discussionGoal",
-            "markdown": "There is no one recommendation that is correct, but make sure students understand that although chocolate was the most popular cake flavor and cream cheese was the most popular icing flavor, only one person chose a chocolate cake with cream cheese icing.  \r\n\r\nIt's not enough to look at the two answers in isolation.  For example, if two cakes are chosen, chocolate cake with chocolate icing and carrot cake with cream cheese icing is much better than chocolate with cream cheese and carrot with chocolate.  Looking at the relationships between answers helps to see which choices go well together.\r\n\r\n"
-          }
-        ]
+        "description": "**Share Out:** Have students share their choices and why.\n\n**Discussion Goals:** There is no one recommendation that is correct, but make sure students understand that although chocolate was the most popular cake flavor and cream cheese was the most popular icing flavor, only one person chose a chocolate cake with cream cheese icing.\n\nIt's not enough to look at the two answers in isolation. For example, if two cakes are chosen, chocolate cake with chocolate icing and carrot cake with cream cheese icing is much better than chocolate with cream cheese and carrot with chocolate. Looking at the relationships between answers helps to see which choices go well together."
       },
       "seeding_key": {
         "activity_section.key": "817bfb20-6cb2-4dcf-9885-2bb2443b8b1d",
@@ -3482,13 +3344,7 @@
       "key": "73f4427f-2de0-4ba0-8239-d349acb2abb2",
       "position": 5,
       "properties": {
-        "description": "**Share-Out:** Allow students time to write down their answer, then check with their group before sharing out as a class.",
-        "tips": [
-          {
-            "type": "discussionGoal",
-            "markdown": "Students should use the chart to find relationships between the preferences so that they can differentiate between subgroups. They may note that although people who chose cats tended to choose art, people who chose dogs tended to like music.\r\n\r\nMake sure that the class produces examples of the predictions working in both directions (pet to activity and activity to pet).  For example, people who like video games are likely to prefer dogs.\r\n"
-          }
-        ]
+        "description": "**Share-Out:** Allow students time to write down their answers, then check with their group before sharing them out as a class.\n\n**Discussion Goal:** Students should use the chart to find relationships between the preferences so that they can differentiate between subgroups. They may note that although people who chose cats tended to choose art, people who chose dogs tended to like music.\n\nMake sure that the class produces examples of the predictions working in both directions (pet to activity and activity to pet). For example, people who like video games are likely to prefer dogs."
       },
       "seeding_key": {
         "activity_section.key": "73f4427f-2de0-4ba0-8239-d349acb2abb2",
@@ -3538,13 +3394,7 @@
       "key": "dc5902ff-04f2-49b3-9c0c-d28c2e7f1098",
       "position": 9,
       "properties": {
-        "description": "Give students time to answer this on their activity guide, then have students share their thoughts with the class.",
-        "tips": [
-          {
-            "type": "discussionGoal",
-            "markdown": "Although there is no \"right\" answer to this question, students should realize that finding relationships between preferences may help them to predict one preference from knowing another.  This could be for a recommendation engine, to place ads, or to promote particular social media posts.\r\n\r\n"
-          }
-        ]
+        "description": "Give students time to answer this on their activity guide, then have students share their thoughts with the class.\n\n**Discussion Goal:** Although there is no \"right\" answer to this question, students should realize that finding relationships between preferences may help them to predict one preference from knowing another. This could be for a recommendation engine, to place ads, or to promote particular social media posts.\n\n"
       },
       "seeding_key": {
         "activity_section.key": "dc5902ff-04f2-49b3-9c0c-d28c2e7f1098",
@@ -3596,13 +3446,7 @@
       "key": "255559a4-1fcf-4a83-a71b-87b2f679f032",
       "position": 2,
       "properties": {
-        "description": "**Discuss:** Invite a few students to share some of what they wrote with the class. There's no need to explore this question in great detail since you'll be able to return to it at the end of the class.",
-        "tips": [
-          {
-            "type": "discussionGoal",
-            "markdown": "**Goal:** This should be a really quick opening conversation and it's entirely fine if students don't have any decisions they're currently making using data. You might point out a couple of examples (e.g. looking at weather to decide what to wear or review data about a product online) but it's fine to just use this to open the class and return to the question later.\r\n"
-          }
-        ]
+        "description": "**Discuss:** Invite a few students to share some of what they wrote with the class. There's no need to explore this question in great detail since you'll be able to return to it at the end of the class.\n\n**Discussion Goal:** This should be a really quick opening conversation and it's entirely fine if students don't have any decisions they're currently making using data. You might point out a couple of examples (e.g. looking at the weather to decide what to wear or reviewing data about a product online) but it's fine to just use this to open the class and return to the question later."
       },
       "seeding_key": {
         "activity_section.key": "255559a4-1fcf-4a83-a71b-87b2f679f032",
@@ -3742,13 +3586,7 @@
       "key": "aba08d58-2b72-4dbb-b4ef-d1a8cb1c55d5",
       "position": 1,
       "properties": {
-        "description": "**Discuss:** Do two people need to make the same decision from the same data? Have students reflect and share their responses with the class",
-        "tips": [
-          {
-            "type": "discussionGoal",
-            "markdown": "**Goal:** This is a fairly nuanced question masquerading as a simple yes / no. Ask students to reflect on moments in today's activities where they think the data was more open to interpretation (e.g. locker decisions) and when it might be more cut and dried (e.g. when to post). While the goal of this discussion is to highlight the fact that two people shouldn't need to come to same conclusion from the same data, follow-ups are necessary to make this conversation most effective.\r\n"
-          }
-        ]
+        "description": "**Discuss:** Do two people need to make the same decision from the same data? Have students reflect and share their responses with the class.\n\n**Discussion Goal:** This is a fairly nuanced question masquerading as a simple yes / no. Ask students to reflect on moments in today's activities where they think the data was more open to interpretation (e.g. locker decisions) and when it might be more cut and dried (e.g. when to post). While the goal of this discussion is to highlight the fact that two people shouldn't need to come to the same conclusion from the same data, follow-ups are necessary to make this conversation most effective."
       },
       "seeding_key": {
         "activity_section.key": "aba08d58-2b72-4dbb-b4ef-d1a8cb1c55d5",
@@ -3771,13 +3609,7 @@
       "key": "38a5ab92-addf-46ba-9ca0-a9daae70875a",
       "position": 3,
       "properties": {
-        "description": "**Discuss:** Have students share their responses",
-        "tips": [
-          {
-            "type": "discussionGoal",
-            "markdown": "**Goal:** This conversation can look back at moments when students wanted more or different data to help make their decisions. For example you might want to know where your friend's lockers are before deciding which one you want. This discussion leads into the concluding remarks of the lesson.\r\n"
-          }
-        ]
+        "description": "**Discuss:** Have students share their responses.\n\n**Discussion Goal:** This conversation can look back at moments when students wanted more or different data to help make their decisions. For example, you might want to know where your friend's lockers are before deciding which one you want. This discussion leads into the concluding remarks of the lesson."
       },
       "seeding_key": {
         "activity_section.key": "38a5ab92-addf-46ba-9ca0-a9daae70875a",
@@ -3801,13 +3633,7 @@
       "position": 1,
       "properties": {
         "description": "**Prompt:** Imagine you were going to program a computer to automatically select clothing from your closet for you in the morning. What kinds of data would this computer need? What kinds of rules would you want it to use?",
-        "name": "Journal\r",
-        "tips": [
-          {
-            "type": "discussionGoal",
-            "markdown": "**Goal:** This discussion may be hard to keep small but the point is just to get students thinking about the fact that computers need data (inputs) and rules (i.e. an algorithm) for making a decision (output). So long as students have had a chance to see an example of those three components of the input-output-store-process model of the computer it's fine to move on. That said, here's some ideas students might mention\r\n\r\n* Inputs: The temperature, the weather, what kinds of events you have today, etc.\r\n* Rules: If temperature less than 60 bring a jacket, if fancy event put out fancy clothes, if sunny bring sunglasses, etc.\r\n"
-          }
-        ]
+        "name": "Journal\r"
       },
       "seeding_key": {
         "activity_section.key": "c3b72729-ae46-403b-8c95-804639148542",
@@ -3818,7 +3644,7 @@
       "key": "23b0be65-0d79-4f89-ace5-5ddbbaf728c0",
       "position": 2,
       "properties": {
-        "description": "**Discuss:** Students should silently develop responses in their journals, then share in small groups, then discuss with the whole class."
+        "description": "**Discuss:** Students should silently develop responses in their journals, then share in small groups, then discuss with the whole class.\n\n**Discussion Goal:** This discussion may be hard to keep small but the point is just to get students thinking about the fact that computers need data (inputs) and rules (i.e. an algorithm) for making a decision (output). So long as students have had a chance to see an example of those three components of the input-output-store-process model of the computer it's fine to move on. That said, here are some ideas students might mention:\n\n* Inputs: The temperature, the weather, what kinds of events you have today, etc.\n* Rules: If temperature less than 60 bring a jacket, if fancy event put out fancy clothes, if sunny bring sunglasses, etc."
       },
       "seeding_key": {
         "activity_section.key": "23b0be65-0d79-4f89-ace5-5ddbbaf728c0",
@@ -3887,13 +3713,7 @@
       "key": "263cf13a-af1f-4749-b788-09a290bf7a53",
       "position": 4,
       "properties": {
-        "description": "**Prompt:** Based on what you see in the cross-tabulation tables, why do you think that someone created the first rule of the algorithm? Can you think of a different rule?",
-        "tips": [
-          {
-            "type": "discussionGoal",
-            "markdown": "Ensure that students understand that the rule is based on the first row of the \"Vacation and Food\" table.  There is no one \"correct\" rule based on the data, but someone who prefers ice cream seems very likely to prefer the beach and somewhat likely to prefer an amusement park.\r\n"
-          }
-        ]
+        "description": "**Prompt:** Based on what you see in the cross-tabulation tables, why do you think that someone created the first rule of the algorithm? Can you think of a different rule?\n\n**Discussion Goal:** Ensure that students understand that the rule is based on the first row of the \"Vacation and Food\" table. There is no one \"correct\" rule based on the data, but someone who prefers ice cream seems very likely to prefer the beach and somewhat likely to prefer an amusement park.\n\n"
       },
       "seeding_key": {
         "activity_section.key": "263cf13a-af1f-4749-b788-09a290bf7a53",
@@ -3937,13 +3757,7 @@
       "key": "155a56eb-59e2-4953-bd1b-ecf404d61cb2",
       "position": 2,
       "properties": {
-        "description": " **Prompt:** Students can respond either in the Reflection section of the activity guide or in their journals:\n\n",
-        "tips": [
-          {
-            "type": "discussionGoal",
-            "markdown": "Students should understand that automating decisions is convenient in many situations but may lose some elements that humans would consider in a decision. For example\n\n* Collecting data that's already clean limits what you might collect.\n* Automating decisions means sometimes you get a decision you wouldn't have made on your own\n\nThere are cases where we might want to automate a decision though. For example\n\n* Where a human might forget / get bored (e.g. automatically re-ordering food when your fridge is low, turning on / off A/C as temperature changes)\n* When there's lots of data to consider for a simple decision (e.g. looking through lots of products to find the one with the lowest price)\n\n"
-          }
-        ]
+        "description": " **Prompt:** Students can respond either in the Reflection section of the activity guide or in their journals:\n\n"
       },
       "seeding_key": {
         "activity_section.key": "155a56eb-59e2-4953-bd1b-ecf404d61cb2",
@@ -3954,7 +3768,7 @@
       "key": "63aaa5cd-270e-4ee4-8bd0-05d46338520e",
       "position": 3,
       "properties": {
-        "description": "* What is a disadvantage of using an algorithm to make decisions?\r\n* What types of decisions would you not want a computer to make automatically?"
+        "description": "* What is a disadvantage of using an algorithm to make decisions?\n* What types of decisions would you not want a computer to make automatically?\n\n**Discussion Goal:** Students should understand that automating decisions is convenient in many situations but may lose some elements that humans would consider in a decision. For example: \n\n* Collecting data that's already clean limits what you might collect.\n* Automating decisions means sometimes you get a decision you wouldn't have made on your own\n\nThere are cases where we might want to automate a decision though. For example:\n\n* Where a human might forget / get bored (e.g. automatically re-ordering food when your fridge is low, turning on / off A/C as temperature changes)\n* When there's lots of data to consider for a simple decision (e.g. looking through lots of products to find the one with the lowest price)"
       },
       "seeding_key": {
         "activity_section.key": "63aaa5cd-270e-4ee4-8bd0-05d46338520e",
@@ -3977,13 +3791,7 @@
       "key": "7fe44970-7e7f-474d-bee0-ebbad5839388",
       "position": 2,
       "properties": {
-        "description": "**Discuss:** Have students journal individually, then share with a neighbor, and finally discuss as a whole class. You can record their ideas on the board to refer back to later in the class.",
-        "tips": [
-          {
-            "type": "discussionGoal",
-            "markdown": "**Goal:** This is primarily a brainstorm. Some students may bring a lot more prior knowledge than others to the class and at this point they haven’t been explicitly taught anything about data collection outside of surveys. Aim primarily just to get ideas out and set the stage for the lesson. You’re aiming to change focus from surveys that 10-20 people take to the vast amounts of data they might know is collected by modern technological tools.\r\n"
-          }
-        ]
+        "description": "**Discuss:** Have students journal individually, then share with a neighbor, and finally discuss as a whole class. You can record their ideas on the board to refer back to later in the class.\n\n**Discussion Goal:** This is primarily a brainstorm. Some students may bring a lot more prior knowledge than others to the class and at this point, they haven’t been explicitly taught anything about data collection outside of surveys. Aim primarily just to get ideas out and set the stage for the lesson. You’re aiming to change focus from surveys that 10-20 people take to the vast amounts of data they might know is collected by modern technological tools."
       },
       "seeding_key": {
         "activity_section.key": "7fe44970-7e7f-474d-bee0-ebbad5839388",
@@ -4070,13 +3878,7 @@
       "key": "aa7fa8d9-5d96-4ce5-a716-5281f0deda11",
       "position": 5,
       "properties": {
-        "description": "**Discuss:** Have students answer the third question about Netflix. Allow students to share with a partner, then discuss with a group the types of data that Netflix collects to help it make recommendations.",
-        "tips": [
-          {
-            "type": "discussionGoal",
-            "markdown": "**Goal:** Students should understand that Netflix bases its suggestions not only on the survey data that users create, but also on the behavior of users as they use the site, such as what they watch and the ratings they give various videos.\r\n\r\n"
-          }
-        ]
+        "description": "**Discuss:** Have students answer the third question about Netflix. Allow students to share with a partner, then discuss with a group the types of data that Netflix collects to help it make recommendations.\n\n**Discussion Goal:** Students should understand that Netflix bases its suggestions not only on the survey data that users create, but also on the behavior of users as they use the site, such as what they watch and the ratings they give various videos."
       },
       "seeding_key": {
         "activity_section.key": "aa7fa8d9-5d96-4ce5-a716-5281f0deda11",
@@ -4100,13 +3902,7 @@
       "key": "2c9ac9aa-8200-4095-9719-a7ce390eeba4",
       "position": 7,
       "properties": {
-        "description": "**Discuss:** Allow students to share with a partner, then lead a short discussion on the types of data that Waze collects to help it find the best route.",
-        "tips": [
-          {
-            "type": "discussionGoal",
-            "markdown": "**Goal:** Students should note that while some data is being intentionally added by the users, Waze also collects GPS/location data on each user without the user's active input.  Sensor data, such as time, temperature, and location, are automatically collected by computers without a user actively adding them.\r\n"
-          }
-        ]
+        "description": "**Discuss:** Allow students to share with a partner, then lead a short discussion on the types of data that Waze collects to help it find the best route.\n\n**Discussion Goal:** Students should note that while some data is being intentionally added by the users, Waze also collects GPS/location data on each user without the user's active input. Sensor data, such as time, temperature, and location, are automatically collected by computers without a user actively adding them."
       },
       "seeding_key": {
         "activity_section.key": "2c9ac9aa-8200-4095-9719-a7ce390eeba4",
@@ -4130,13 +3926,7 @@
       "key": "3ef5fb20-d0b3-4449-be12-8fd836e9fe4d",
       "position": 9,
       "properties": {
-        "description": "**Discuss:** Allow students to share with a partner, then lead a short discussion on the types of data that Amazon collects to help it find the best products to suggest.",
-        "tips": [
-          {
-            "type": "discussionGoal",
-            "markdown": "**Goal:** There are a few different aspects of the Amazon video that may be of interest.  \r\n\r\n* Just looking at something online produces data that can be used by advertisers or others.\r\n* Amazon decides what you might buy by looking at similar users and using their behavior to predict yours\r\n* Different types of data, such as \"clicks\", \"likes\" and \"purchases\", may be weighted differently\r\n* The user's needs are not the priority.  The advertiser's needs are. \r\n\r\nAny of these topics are relevant to the lesson, but the most important thing for students to realize is that they are not always aware when they are producing data.\r\n"
-          }
-        ]
+        "description": "**Discuss:** Allow students to share with a partner, then lead a short discussion on the types of data that Amazon collects to help it find the best products to suggest.\n\n**Discussion Goal:** There are a few different aspects of the Amazon video that may be of interest.\n\n* Just looking at something online produces data that can be used by advertisers or others.\n* Amazon decides what you might buy by looking at similar users and using their behavior to predict yours\n* Different types of data, such as \"clicks\", \"likes\" and \"purchases\", may be weighted differently\n* The user's needs are not the priority. The advertiser's needs are.\n\nAny of these topics are relevant to the lesson, but the most important thing for students to realize is that they are not always aware when they are producing data."
       },
       "seeding_key": {
         "activity_section.key": "3ef5fb20-d0b3-4449-be12-8fd836e9fe4d",
@@ -4183,13 +3973,7 @@
       "key": "884c9ae6-c5ec-460a-8377-4ea20c8bcbdb",
       "position": 2,
       "properties": {
-        "description": "**Discuss:** Ask students to share their ideas with their classmates.",
-        "tips": [
-          {
-            "type": "discussionGoal",
-            "markdown": "**Goal:** This prompt is meant to help students make connections between their personal experiences with data collecting services and what they have learned in this lesson.  The goal here is to connect the examples students saw in today’s lesson to other apps, websites, or services that they may be aware of. If you need to prompt students you might suggest they think of social media websites, media websites, useful apps they or their family uses, etc.\r\n"
-          }
-        ]
+        "description": "**Discuss:** Ask students to share their ideas with their classmates.\n\n**Discussion Goal:** This prompt is meant to help students make connections between their personal experiences with data-collecting services and what they have learned in this lesson. The goal here is to connect the examples students saw in today’s lesson to other apps, websites, or services that they may be aware of. If you need to prompt students you might suggest they think of social media websites, media websites, useful apps they or their family uses, etc."
       },
       "seeding_key": {
         "activity_section.key": "884c9ae6-c5ec-460a-8377-4ea20c8bcbdb",
@@ -4213,13 +3997,7 @@
       "position": 1,
       "properties": {
         "description": "**Prompt:** Has a computer ever made a recommendation for you? How do you think it learned how to do this?",
-        "name": "Journal\r",
-        "tips": [
-          {
-            "type": "discussionGoal",
-            "markdown": "**Goal:** Answers may vary and may depend on prior experiences students have with recommendation systems or other types of artificial intelligence. Try to stear the discussion towards conversations around the role that humans play in machines learning. It's ok if the discussion here is short - you are setting the stage for the upcoming activity. \r\n"
-          }
-        ]
+        "name": "Journal\r"
       },
       "seeding_key": {
         "activity_section.key": "73c9a62c-824a-4981-bd1c-c86f6b54bde5",
@@ -4230,7 +4008,7 @@
       "key": "086595a7-799d-425a-82f5-ac9f6356d941",
       "position": 2,
       "properties": {
-        "description": "**Discuss:** Have students brainstorm silently on their own, then have them share with neighbors, and finally have them share out with the room."
+        "description": "**Discuss:** Have students brainstorm silently on their own, then have them share with neighbors, and finally have them share out with the room.\n\n**Discussion Goal:** Answers may vary and may depend on prior experiences students have with recommendation systems or other types of artificial intelligence. Try to steer the discussion toward conversations around the role that humans play in machine learning. It's ok if the discussion here is short - you are setting the stage for the upcoming activity."
       },
       "seeding_key": {
         "activity_section.key": "086595a7-799d-425a-82f5-ac9f6356d941",
@@ -4324,13 +4102,7 @@
       "key": "4f679233-1dfa-4564-9b48-ca168ebf215b",
       "position": 5,
       "properties": {
-        "description": "**Prompt:** How do you think your training data influenced the results that A.I. produced?",
-        "tips": [
-          {
-            "type": "discussionGoal",
-            "markdown": "**Goal:** Get students to reflect on their experience so far. It is important at this point that they realize the labeling they are doing is actually programming the computer. The examples they show A.I. are the \"training data\".\r\n"
-          }
-        ]
+        "description": "**Prompt:** How do you think your training data influenced the results that A.I. produced?\n\n**Discussion Goal:** Get students to reflect on their experience so far. It is important at this point that they realize the labeling they are doing is actually programming the computer. The examples they show A.I. are the \"training data\"."
       },
       "seeding_key": {
         "activity_section.key": "4f679233-1dfa-4564-9b48-ca168ebf215b",
@@ -4371,13 +4143,7 @@
       "key": "871f70f2-ac4a-4932-b699-a665af5fa52d",
       "position": 8,
       "properties": {
-        "description": "**Prompt:** How could biased data result in problems for artificial intelligence? What are ways to address this?",
-        "tips": [
-          {
-            "type": "discussionGoal",
-            "markdown": "**Goal:** At this point, students should have some preliminary thoughts on how biased data leads to problems for artificial intelligence. They may bring up that if the data sets are trained incorrectly, there will be incorrect or misinterpreted conclusions. It can be addressed through diverse training sets. The following video dives into this subject further. \r\n"
-          }
-        ]
+        "description": "**Prompt:** How could biased data result in problems for artificial intelligence? What are ways to address this?\n\n**Discussion Goal:** At this point, students should have some preliminary thoughts on how biased data leads to problems for artificial intelligence. They may bring up that if the data sets are trained incorrectly, there will be incorrect or misinterpreted conclusions. It can be addressed through diverse training sets. The following video dives into this subject further."
       },
       "seeding_key": {
         "activity_section.key": "871f70f2-ac4a-4932-b699-a665af5fa52d",
@@ -4464,13 +4230,7 @@
       "key": "5bed6072-6659-4ef9-a852-d419e9561557",
       "position": 2,
       "properties": {
-        "description": "**Discuss:** Have students write independently first, then have students share with a partner and add any new examples to their list. Then ask students to share with the whole class.",
-        "tips": [
-          {
-            "type": "discussionGoal",
-            "markdown": "**Goal:** This quick review serves to remind students of the types of problems that they can solve with data before they move onto defining their own data problem. Some examples that students may come up with include:\n\n- Which pizza should we order?\n- Which ice cream should we choose?\n- What video should WebPix recommend?\n- Which route should a driver take?\n- Which product should Nyle recommend?"
-          }
-        ]
+        "description": "**Discuss:** Have students write independently first, then have students share with a partner and add any new examples to their list. Then ask students to share with the whole class.\n\n**Discussion Goal:** This quick review serves to remind students of the types of problems that they can solve with data before they move on to defining their own data problem. Some examples that students may come up with include:\n\n* Which pizza should we order?\n* Which ice cream should we choose?\n* What video should WebPix recommend?\n* Which route should a driver take?\n* Which product should Nyle recommend?"
       },
       "seeding_key": {
         "activity_section.key": "5bed6072-6659-4ef9-a852-d419e9561557",
@@ -4551,13 +4311,7 @@
       "key": "2647e933-4099-489e-9ff8-418d6411cc5b",
       "position": 4,
       "properties": {
-        "description": "**Starting Off:** Have students answer the following question on their project guide:\n\n- What choice does the app help the user to make?\n- What data does it use to make that recommendation?\n- How do you think the creators of the app decided on the algorithm that they use to make the choice?",
-        "tips": [
-          {
-            "type": "discussionGoal",
-            "markdown": "The first two questions are fairly straightforward. The app helps the user to choose a vacation spot, and it uses data about the user's food, superpower, and animal preferences.\n\nThe next question asks students to think about how algorithms are chosen. In a previous lesson, students designed an algorithm for this app by looking at cross-tabulation tables for people who had expressed different preferences. Remind students that the creators can use data they have collected to create their algorithm, rather than just making up their rules from their assumptions about the world."
-          }
-        ]
+        "description": "**Starting Off:** Have students answer the following question on their project guide:\n\n- What choice does the app help the user to make?\n- What data does it use to make that recommendation?\n- How do you think the creators of the app decided on the algorithm that they use to make the choice?\n\n**Discussion Goal:** The first two questions are fairly straightforward. The app helps the user to choose a vacation spot, and it uses data about the user's food, superpower, and animal preferences.\n\nThe next question asks students to think about how algorithms are chosen. In a previous lesson, students designed an algorithm for this app by looking at cross-tabulation tables for people who had expressed different preferences. Remind students that the creators can use data they have collected to create their algorithm, rather than just making up their rules from their assumptions about the world."
       },
       "seeding_key": {
         "activity_section.key": "2647e933-4099-489e-9ff8-418d6411cc5b",
@@ -4812,6 +4566,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U5 black white images pixelation_2023"
+        ],
         "progression": "Representing Images"
       },
       "bonus": false,
@@ -4834,6 +4591,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U5 black white images pixelation 2_2023"
+        ],
         "progression": "Representing Images"
       },
       "bonus": false,
@@ -4856,6 +4616,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U5 black white images pixelation 3_2023"
+        ],
         "progression": "Representing Images"
       },
       "bonus": false,
@@ -4878,6 +4641,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U5 black white images pixelation 4_2023"
+        ],
         "progression": "Representing Images"
       },
       "bonus": false,
@@ -4900,6 +4666,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U5 black white images pixelation 5_2023"
+        ],
         "progression": "Representing Images"
       },
       "bonus": false,
@@ -4922,6 +4691,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U5 binary widget_2023"
+        ],
         "progression": "Binary Number Widget"
       },
       "bonus": false,
@@ -4944,6 +4716,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U5 binary video_2023"
+        ],
         "progression": "Binary and Data"
       },
       "bonus": false,
@@ -4966,6 +4741,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U5 binary 8 bits_2023"
+        ],
         "progression": "8-Bit Binary Number Widget"
       },
       "bonus": false,
@@ -4988,6 +4766,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "csd-pulse-check-survey-1-levelgroup U5Ch1_2023"
+        ],
         "progression": "Reflection"
       },
       "bonus": false,
@@ -5010,6 +4791,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U5 Pizza_2023"
+        ],
         "progression": "Pizza Party Data"
       },
       "bonus": false,
@@ -5032,6 +4816,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U5 Netflix Data Video_2023"
+        ],
         "progression": "Video: Netflix and Data"
       },
       "bonus": false,
@@ -5054,6 +4841,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U5 Waze Data Video_2023"
+        ],
         "progression": "Video: Waze and Data"
       },
       "bonus": false,
@@ -5076,6 +4866,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U5 Amazon Data Video_2023"
+        ],
         "progression": "Video: Amazon and Data"
       },
       "bonus": false,
@@ -5098,6 +4891,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Oceans_Video_Machine_Learning_2023"
+        ],
         "progression": "Video: What is Machine Learning?"
       },
       "bonus": false,
@@ -5120,6 +4916,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Oceans_FishVTrash_2023"
+        ],
         "progression": "AI for Oceans: Fish vs Not Fish"
       },
       "bonus": false,
@@ -5142,6 +4941,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Oceans_CreaturesVTrashDemo_2023"
+        ],
         "progression": "AI for Oceans: Fish vs Not Fish"
       },
       "bonus": false,
@@ -5164,6 +4966,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Oceans_CreaturesVTrash_2023"
+        ],
         "progression": "AI for Oceans: Fish vs Not Fish"
       },
       "bonus": false,
@@ -5186,6 +4991,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Oceans_Video_Training_Data_2023"
+        ],
         "progression": "Video: Training Data and Bias"
       },
       "bonus": false,
@@ -5208,6 +5016,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Oceans_Short_2023"
+        ],
         "progression": "AI for Oceans: Types of Fish"
       },
       "bonus": false,
@@ -5230,6 +5041,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Oceans_Long_2023"
+        ],
         "progression": "AI for Oceans: Types of Fish"
       },
       "bonus": false,
@@ -5252,6 +5066,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Oceans_Video_Societal_Implications_2023"
+        ],
         "progression": "Video: Impact on Society"
       },
       "bonus": false,
@@ -5274,6 +5091,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csd u5 recommender sample_2023"
+        ],
         "progression": "Sample App"
       },
       "bonus": false,
@@ -5296,6 +5116,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "Student End of Unit Survey_csd5_2023"
+        ],
         "progression": "End-Of-Unit Survey"
       },
       "bonus": false,
@@ -5318,6 +5141,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSD U5 test_2023"
+        ]
       },
       "bonus": false,
       "seeding_key": {
