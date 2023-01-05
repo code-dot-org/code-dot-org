@@ -46,6 +46,6 @@ describe('SetUpSections', () => {
       {}
     ]);
 
-    analyticsSpy.retore();
+    analyticsSpy.restore();
   });
 });
