@@ -152,7 +152,7 @@ gem 'phantomjs', '~> 1.9.7.1'
 gem 'gemoji'
 
 # Authentication and permissions.
-gem 'cancancan', '~> 3.0.0'
+gem 'cancancan', '~> 3.1.0'
 gem 'devise', '~> 4.7.0'
 gem 'devise_invitable', '~> 2.0.2'
 
@@ -189,7 +189,7 @@ gem 'redcarpet', '~> 3.3.4'
 
 gem 'geocoder'
 
-gem 'mini_magick', ">=4.9.4"
+gem 'mini_magick', ">=4.10.0"
 gem 'rmagick', '~> 4.2.5'
 
 gem 'acts_as_list'
