@@ -12,6 +12,7 @@ import ImplementationPlan from './ImplementationPlan';
 import ProfessionalLearningProgramRequirements from './ProfessionalLearningProgramRequirements';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 import {reload} from '@cdo/apps/utils';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 /* global ga */
 
 const submitButtonText = 'Complete and Send';
@@ -30,6 +31,9 @@ const autoComputedFields = [
   'regionalPartnerId',
   'regionalPartnerWorkshopIds'
 ];
+
+const APPLICATION_SAVED_EVENT = 'Application Saved';
+const APPLICATION_SUBMITTED_EVENT = 'Application Submitted';
 
 const sendFirehoseEvent = (userId, event) => {
   firehoseClient.putRecord(
@@ -76,11 +80,13 @@ const TeacherApplication = props => {
     reload();
 
     sendFirehoseEvent(userId, 'submitted-teacher-application');
+    analyticsReporter.sendEvent(APPLICATION_SUBMITTED_EVENT);
   };
 
   const onSuccessfulSave = () => {
     // only send firehose event on the first save of the teacher application
     !savedStatus && sendFirehoseEvent(userId, 'saved-teacher-application');
+    analyticsReporter.sendEvent(APPLICATION_SAVED_EVENT);
   };
 
   const onSetPage = newPage => {
