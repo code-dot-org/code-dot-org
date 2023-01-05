@@ -266,7 +266,8 @@ const styles = {
   image: {
     width: 485,
     minHeight: 260,
-    height: 281
+    height: 279,
+    border: `1px solid ${color.neutral_dark20}`
   },
   description: {
     paddingRight: 10,

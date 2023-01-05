@@ -146,7 +146,7 @@ class ProjectAppTypeArea extends React.Component {
           <Button
             __useDeprecatedTag
             onClick={this.loadMore}
-            color={Button.ButtonColor.gray}
+            color={Button.ButtonColor.neutralDark}
             icon="plus-circle"
             text={i18n.viewMore()}
             style={styles.buttonRightMargin}
@@ -155,7 +155,7 @@ class ProjectAppTypeArea extends React.Component {
         <Button
           __useDeprecatedTag
           href="#top"
-          color={Button.ButtonColor.gray}
+          color={Button.ButtonColor.neutralDark}
           icon="chevron-circle-up"
           text={i18n.backToTop()}
         />

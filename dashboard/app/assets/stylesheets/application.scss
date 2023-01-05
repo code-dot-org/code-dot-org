@@ -1703,6 +1703,7 @@ a.download-video {
     label {
       color: $neutral_dark;
       font-size: 1em;
+      max-width: 20%;
       line-height: 1.2;
       font-family: $gotham-bold;
     }
@@ -1739,9 +1740,10 @@ a.download-video {
 
     &:hover {
       background-color: $brand_secondary_dark;
+      border-color: $brand_secondary_dark;
     }
     &:focus {
-      border: 3px solid $brand_primary_default;
+      border-color: $brand_primary_default;
     }
 
     &:disabled {
@@ -1767,7 +1769,7 @@ a.download-video {
     }
 
     &:focus {
-      border: 3px solid $brand_primary_default;
+      border-color: $brand_primary_default;
     }
 
     &:disabled {
@@ -2192,9 +2194,10 @@ a.download-video {
 
       &:hover {
         background-color: $brand_secondary_dark;
+        border-color: $brand_secondary_dark;
       }
       &:focus {
-        border: 3px solid $brand_primary_default;
+        border-color: $brand_primary_default;
       }
 
       &:disabled {
@@ -2221,7 +2224,7 @@ a.download-video {
     }
 
     &:focus {
-      border: 3px solid $brand_primary_default;
+      border-color: $brand_primary_default;
     }
 
     &:disabled {

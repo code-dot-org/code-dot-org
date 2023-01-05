@@ -13,6 +13,12 @@ body {
 
 h1, h2, h3 {
   font-family: $barlow-semibold;
+  margin-bottom: 1em;
+}
+
+h1 {
+  font-size: 3em;
+  color: $neutral-dark;
 }
 
 h2 {
@@ -25,6 +31,7 @@ h4 {
   font-family: $barlow-medium;
   font-size: 1.5em;
   line-height: 1.2;
+  margin-bottom: 1em;
 }
 
 h6 {
@@ -49,6 +56,9 @@ p {
 }
 
 #signup {
+  p {
+    font-size: 14px;
+  }
   a {
     font-family: $gotham-bold;
     font-size:  1em;
@@ -64,6 +74,7 @@ p {
       label {
         color: $neutral_dark;
         font-family: $gotham-bold;
+        font-size: 1em;
       }
     }
 
@@ -78,9 +89,10 @@ p {
 
       &:hover {
         background-color: $brand_secondary_dark;
+        border-color: $brand_secondary_dark;
       }
       &:focus {
-        border: 3px solid $brand_primary_default;
+        border-color: $brand_primary_default;
       }
 
       &:disabled {
@@ -154,6 +166,10 @@ p {
     .arrow_box_content {
       color: $neutral_dark;
 
+      .description {
+        font-size: 14px;
+      }
+
       .description, a {
         color: $neutral_dark;
 
@@ -175,10 +191,11 @@ p {
 
         &:hover {
           background-color: $brand_secondary_dark;
+          border-color: $brand_secondary_dark;
         }
 
         &:focus {
-          border: 3px solid $brand_primary_default;
+          border-color: $brand_primary_default;
         }
 
         &:disabled {
@@ -202,7 +219,7 @@ p {
         }
 
         &:focus {
-          border: 3px solid $brand_primary_default;
+          border-color: $brand_primary_default;
         }
 
         &:disabled {
@@ -233,7 +250,7 @@ p {
       }
 
       &:focus {
-        border: 3px solid $brand_primary_default;
+        border: 2px solid $brand_primary_default;
       }
 
       &:disabled {
@@ -304,7 +321,7 @@ p {
     }
 
     &:focus {
-      border: 3px solid $brand_primary_default;
+      border-color: $brand_primary_default;
     }
 
     &:disabled {

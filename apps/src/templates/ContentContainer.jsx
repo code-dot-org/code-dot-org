@@ -94,7 +94,7 @@ class Link extends Component {
 
     return (
       <div style={linkBoxStyle}>
-        <a href={link}>
+        <a style={styles.linkTag} href={link}>
           <span style={{display: 'inline-block'}}>
             {isRtl && <FontAwesome icon={icon} style={styles.chevronRtl} />}
           </span>
@@ -177,6 +177,9 @@ const styles = {
     marginTop: -10,
     marginBottom: 10,
     clear: 'both'
+  },
+  linkTag: {
+    color: color.neutral_dark
   },
   linkToViewAll: {
     color: color.neutral_dark,

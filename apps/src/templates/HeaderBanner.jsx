@@ -119,13 +119,13 @@ const styles = {
     maxWidth: styleConstants['content-width']
   },
   bannerHeading: {
-    fontFamily: '"Gotham 7r", sans-serif',
+    fontFamily: '"Barlow Semibold", sans-serif',
     color: color.white,
     fontSize: 32,
     lineHeight: '40px'
   },
   bannerHeadingShort: {
-    fontFamily: '"Gotham 7r", sans-serif',
+    fontFamily: '"Barlow Semibold", sans-serif',
     color: color.white,
     fontSize: 32,
     lineHeight: '40px'
