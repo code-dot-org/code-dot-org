@@ -10,7 +10,7 @@
     },
     "new_name": null,
     "family_name": "angelina-playground",
-    "serialized_at": "2022-10-31 19:00:14 UTC",
+    "serialized_at": "2023-01-04 20:50:07 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -62,6 +62,36 @@
         "lesson_group.key": "",
         "script.name": "angelina-playground"
       }
+    },
+    {
+      "key": "lesson-3",
+      "name": "CTF Flash Talk",
+      "absolute_position": 3,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 3,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "angelina-playground"
+      }
+    },
+    {
+      "key": "lesson-4",
+      "name": "CSS Grid",
+      "absolute_position": 4,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 4,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "angelina-playground"
+      }
     }
   ],
   "lesson_activities": [
@@ -88,6 +118,18 @@
         "lesson_group.key": "",
         "script.name": "angelina-playground"
       }
+    },
+    {
+      "key": "458fbc93-ddf9-4ea7-889d-c6d08289e56f",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "458fbc93-ddf9-4ea7-889d-c6d08289e56f",
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "angelina-playground"
+      }
     }
   ],
   "activity_sections": [
@@ -110,6 +152,39 @@
         "activity_section.key": "59eadfd3-43bd-4608-ae74-8763daf78b0b",
         "lesson_activity.key": "889092de-266a-4959-8ef5-177592f16b97"
       }
+    },
+    {
+      "key": "13a3c920-5774-4483-8939-a14351a17f40",
+      "position": 1,
+      "properties": {
+        "progression_name": "Trivia Challenges"
+      },
+      "seeding_key": {
+        "activity_section.key": "13a3c920-5774-4483-8939-a14351a17f40",
+        "lesson_activity.key": "458fbc93-ddf9-4ea7-889d-c6d08289e56f"
+      }
+    },
+    {
+      "key": "cfe0cbd9-94cf-4ab1-b6e2-b05511159bf8",
+      "position": 2,
+      "properties": {
+        "progression_name": "Cryptography Challenges"
+      },
+      "seeding_key": {
+        "activity_section.key": "cfe0cbd9-94cf-4ab1-b6e2-b05511159bf8",
+        "lesson_activity.key": "458fbc93-ddf9-4ea7-889d-c6d08289e56f"
+      }
+    },
+    {
+      "key": "767cdacb-8eeb-4c0b-91f0-427e33d7dcf9",
+      "position": 3,
+      "properties": {
+        "progression_name": "Reconnaissance Challenges"
+      },
+      "seeding_key": {
+        "activity_section.key": "767cdacb-8eeb-4c0b-91f0-427e33d7dcf9",
+        "lesson_activity.key": "458fbc93-ddf9-4ea7-889d-c6d08289e56f"
+      }
     }
   ],
   "script_levels": [
@@ -119,6 +194,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_Particles_StatesOfMatter_L1"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -140,6 +218,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_Paricles_StatesOfMatter_Predict"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -161,6 +242,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_Paricles_StatesOfMatter_L2"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -182,6 +266,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_Particles_StatesOfMatter_L3-Solid"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -203,6 +290,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_Paricles_StatesOfMatter_L4"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -224,6 +314,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_Paricles_StatesOfMatter_L5"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -245,6 +338,9 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_Paricles_StatesOfMatter_L6"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -266,6 +362,9 @@
       "activity_section_position": 8,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_Particles_StatesOfMatter_L7-Liquid"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -287,6 +386,9 @@
       "activity_section_position": 9,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_Paricles_StatesOfMatter_L8"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -308,6 +410,9 @@
       "activity_section_position": 10,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_Paricles_StatesOfMatter_L9"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -329,6 +434,9 @@
       "activity_section_position": 11,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_Particles_StatesOfMatter_L10-Gas"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -350,6 +458,9 @@
       "activity_section_position": 12,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_Paricles_StatesOfMatter_L11"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -371,6 +482,9 @@
       "activity_section_position": 13,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_Paricles_StatesOfMatter_L12"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -392,6 +506,9 @@
       "activity_section_position": 14,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_Paricles_StatesOfMatter_L13A Challenge"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -413,6 +530,9 @@
       "activity_section_position": 15,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_Paricles_StatesOfMatter_L12 Challenge"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -434,6 +554,9 @@
       "activity_section_position": 16,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_Paricles_StatesOfMatter_L14 Challenge"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -455,6 +578,9 @@
       "activity_section_position": 17,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_Paricles_StatesOfMatter_L15 Challenge"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -476,6 +602,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_Paricles_StatesOfMatter_Predict_-particles"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -497,6 +626,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_Particles_StatesOfMatter_L7-Liquid_-particles"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -518,6 +650,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_particles_solid_predict"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -539,6 +674,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_Particles_StatesOfMatter_L3-Solid_-particles"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -560,6 +698,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_particles_gas_predict"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -581,6 +722,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_Particles_StatesOfMatter_L10-Gas_-particles"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -602,6 +746,9 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_particles_your turn"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -623,6 +770,9 @@
       "activity_section_position": 8,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CourseF_video_introSpriteLab_-2022-2"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -644,6 +794,9 @@
       "activity_section_position": 9,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_Paricles_StatesOfMatter_setbackground"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -665,6 +818,9 @@
       "activity_section_position": 10,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_Paricles_StatesOfMatter_createSprites"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -686,6 +842,9 @@
       "activity_section_position": 11,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_Paricles_StatesOfMatter_magnifyingCutout"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -707,6 +866,9 @@
       "activity_section_position": 12,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_Paricles_StatesOfMatter_addBehavior"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -728,6 +890,9 @@
       "activity_section_position": 13,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "states of matter matching"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -741,6 +906,81 @@
       },
       "level_keys": [
         "states of matter matching"
+      ]
+    },
+    {
+      "chapter": 31,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CTF Trivia 22"
+        ],
+        "progression": "Trivia Challenges"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CTF Trivia 22"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "angelina-playground",
+        "activity_section.key": "13a3c920-5774-4483-8939-a14351a17f40"
+      },
+      "level_keys": [
+        "CTF Trivia 22"
+      ]
+    },
+    {
+      "chapter": 32,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CTF Cryptography 22"
+        ],
+        "progression": "Cryptography Challenges"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CTF Cryptography 22"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "angelina-playground",
+        "activity_section.key": "cfe0cbd9-94cf-4ab1-b6e2-b05511159bf8"
+      },
+      "level_keys": [
+        "CTF Cryptography 22"
+      ]
+    },
+    {
+      "chapter": 33,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CTF Recon 22"
+        ],
+        "progression": "Reconnaissance Challenges"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CTF Recon 22"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "angelina-playground",
+        "activity_section.key": "767cdacb-8eeb-4c0b-91f0-427e33d7dcf9"
+      },
+      "level_keys": [
+        "CTF Recon 22"
       ]
     }
   ],
@@ -1103,6 +1343,42 @@
         "lesson_group.key": "",
         "script.name": "angelina-playground",
         "activity_section.key": "59eadfd3-43bd-4608-ae74-8763daf78b0b"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CTF Trivia 22",
+        "script_level.level_keys": [
+          "CTF Trivia 22"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "angelina-playground",
+        "activity_section.key": "13a3c920-5774-4483-8939-a14351a17f40"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CTF Cryptography 22",
+        "script_level.level_keys": [
+          "CTF Cryptography 22"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "angelina-playground",
+        "activity_section.key": "cfe0cbd9-94cf-4ab1-b6e2-b05511159bf8"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CTF Recon 22",
+        "script_level.level_keys": [
+          "CTF Recon 22"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "angelina-playground",
+        "activity_section.key": "767cdacb-8eeb-4c0b-91f0-427e33d7dcf9"
       }
     }
   ],

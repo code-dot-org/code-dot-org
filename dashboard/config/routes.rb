@@ -38,6 +38,7 @@ Dashboard::Application.routes.draw do
 
     get "/incubator", to: "incubator#index"
     get "/musiclab", to: "musiclab#index"
+    get "/musiclab/menu", to: "musiclab#menu"
     get "/musiclab/analytics_key", to: "musiclab#get_analytics_key"
 
     resources :activity_hints, only: [:update]

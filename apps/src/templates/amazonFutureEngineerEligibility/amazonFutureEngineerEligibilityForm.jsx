@@ -94,7 +94,7 @@ export default class AmazonFutureEngineerEligibilityForm extends React.Component
   handleMultiSelectGradeBands = index => {
     let gradeBands = [...this.state.gradeBands];
     gradeBands[index] = !gradeBands[index];
-    this.setState(gradeBands);
+    this.setState({gradeBands});
   };
 
   resetSchool = () =>

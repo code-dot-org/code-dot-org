@@ -38,22 +38,19 @@
     "solution_image_url": "https://d3p74s6bwmy6t9.cloudfront.net/aac2dae95cf01b265f8d45310f9c25bb=levelbuilder/37068.png",
     "parent_level_id": 21569,
     "encrypted": "false",
-    "encrypted_examples": [
-
-    ],
     "hint_prompt_attempts_threshold": "1",
     "show_type_hints": "false",
     "validation_enabled": "false",
     "enable_download_image": "false",
     "preload_asset_list": null
   },
-  "game_id": 23,
-  "published": true,
-  "created_at": "2022-01-06T19:49:00.000Z",
   "level_num": "custom",
+  "game_id": 23,
+  "created_at": "2022-01-06T19:49:00.000Z",
   "user_id": 285,
+  "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-01-06T19:49:00.930+00:00\",\"changed\":[\"cloned from \\\"courseE_artist_functions5_2021\\\"\"],\"cloned_from\":\"courseE_artist_functions5_2021\"},{\"changed_at\":\"2022-03-22 20:15:09 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2022-03-22 20:26:29 +0000\",\"changed\":[\"initialization_blocks\",\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"predraw_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2022-03-22 20:27:30 +0000\",\"changed\":[\"initialization_blocks\",\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"predraw_blocks\",\"encrypted_examples\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2022-03-22 20:42:10 +0000\",\"changed\":[\"initialization_blocks\",\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"predraw_blocks\",\"encrypted_examples\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2022-03-22 20:44:08 +0000\",\"changed\":[\"initialization_blocks\",\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"predraw_blocks\",\"encrypted_examples\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2022-03-22 20:44:57 +0000\",\"changed\":[\"initialization_blocks\",\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"predraw_blocks\",\"encrypted_examples\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2022-03-22 20:48:04 +0000\",\"changed\":[\"initialization_blocks\",\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"predraw_blocks\",\"encrypted_examples\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2022-03-22 21:12:20 +0000\",\"changed\":[\"initialization_blocks\",\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"predraw_blocks\",\"encrypted_examples\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2022-03-22 21:13:36 +0000\",\"changed\":[\"initialization_blocks\",\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"predraw_blocks\",\"encrypted_examples\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2022-03-22 21:14:14 +0000\",\"changed\":[\"initialization_blocks\",\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"predraw_blocks\",\"encrypted_examples\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2022-01-06T19:49:00.930+00:00\",\"changed\":[\"cloned from \\\"courseE_artist_functions5_2021\\\"\"],\"cloned_from\":\"courseE_artist_functions5_2021\"},{\"changed_at\":\"2022-03-22 20:15:09 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2022-03-22 20:26:29 +0000\",\"changed\":[\"initialization_blocks\",\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"predraw_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2022-03-22 20:27:30 +0000\",\"changed\":[\"initialization_blocks\",\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"predraw_blocks\",\"encrypted_examples\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2022-03-22 20:42:10 +0000\",\"changed\":[\"initialization_blocks\",\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"predraw_blocks\",\"encrypted_examples\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2022-03-22 20:44:08 +0000\",\"changed\":[\"initialization_blocks\",\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"predraw_blocks\",\"encrypted_examples\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2022-03-22 20:44:57 +0000\",\"changed\":[\"initialization_blocks\",\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"predraw_blocks\",\"encrypted_examples\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2022-03-22 20:48:04 +0000\",\"changed\":[\"initialization_blocks\",\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"predraw_blocks\",\"encrypted_examples\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2022-03-22 21:12:20 +0000\",\"changed\":[\"initialization_blocks\",\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"predraw_blocks\",\"encrypted_examples\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2022-03-22 21:13:36 +0000\",\"changed\":[\"initialization_blocks\",\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"predraw_blocks\",\"encrypted_examples\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2022-03-22 21:14:14 +0000\",\"changed\":[\"initialization_blocks\",\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"predraw_blocks\",\"encrypted_examples\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2023-01-04 16:37:03 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2023-01-04 16:39:07 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"}]",
   "level_concept_difficulty": {
     "sequencing": 4,
     "debugging": 4,
@@ -86,31 +83,31 @@
             </block>
           </next>
         </block>
-        <block type="procedures_defnoreturn" movable="false" editable="false" y="300">
+        <block type="procedures_defnoreturn" editable="false">
           <mutation/>
-          <title name="NAME">draw a star</title>
+          <field name="NAME">draw a star</field>
           <statement name="STACK">
-            <block type="draw_colour" id="draw-color" movable="false" editable="false">
+            <block type="draw_colour" editable="false" can_disconnect_from_parent="false" id="draw-color">
               <value name="COLOUR">
                 <block type="colour_picker">
-                  <title name="COLOUR">#ffffff</title>
+                  <field name="COLOUR">#ffffff</field>
                 </block>
               </value>
               <next>
-                <block type="controls_repeat" movable="false" editable="false">
-                  <title name="TIMES">8</title>
+                <block type="controls_repeat" editable="false" can_disconnect_from_parent="false">
+                  <field name="TIMES">8</field>
                   <statement name="DO">
-                    <block type="draw_move_by_constant" movable="false" editable="false">
-                      <title name="DIR">moveForward</title>
-                      <title name="VALUE">25</title>
+                    <block type="draw_move_by_constant" editable="false" can_disconnect_from_parent="false">
+                      <field name="DIR">moveForward</field>
+                      <field name="VALUE">25</field>
                       <next>
-                        <block type="draw_move_by_constant" movable="false" editable="false">
-                          <title name="DIR">moveBackward</title>
-                          <title name="VALUE">25</title>
+                        <block type="draw_move_by_constant" editable="false" can_disconnect_from_parent="false">
+                          <field name="DIR">moveBackward</field>
+                          <field name="VALUE">25</field>
                           <next>
-                            <block type="draw_turn_by_constant" movable="false" editable="false">
-                              <title name="DIR">turnRight</title>
-                              <title name="VALUE">45</title>
+                            <block type="draw_turn_by_constant" editable="false" can_disconnect_from_parent="false">
+                              <field name="DIR">turnRight</field>
+                              <field name="VALUE">45</field>
                             </block>
                           </next>
                         </block>
