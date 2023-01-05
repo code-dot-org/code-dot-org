@@ -5469,8 +5469,14 @@ pl:
           title: Cała walidacja
           description: Jest to miejsce do tworzenia poziomów, aby udokumentować i ujednolicić test walidacji Sprite Lab
         vpl-csd5-ayw-pilot-2022:
+          lessons:
+            lesson-3:
+              name: Wspieranie równości
           name: vpl-csd4-ayw-pilot-2022
           title: Odkrycia Informatyki wirtualny moduł 5
         vpl-csd6-ayw-pilot-2022:
+          lessons:
+            lesson-3:
+              name: Wspieranie uczenia się uczniów
           name: vpl-csd4-ayw-pilot-2022
           title: Odkrycia Informatyki wirtualny moduł 6
