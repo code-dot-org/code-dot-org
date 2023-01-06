@@ -91,7 +91,7 @@ GRAPH
     sudo-user (>= 0.0.0)
     yarn (>= 0.0.0)
   cdo-authorized-keys (0.1.2)
-  cdo-awscli (0.1.26)
+  cdo-awscli (0.1.28)
     apt (>= 0.0.0)
     sudo-user (>= 0.0.0)
   cdo-cloudwatch-agent (0.1.15)
