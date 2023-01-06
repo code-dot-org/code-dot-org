@@ -12,7 +12,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-10-24 19:59:55 UTC",
+    "serialized_at": "2023-01-06 01:56:14 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -23,13 +23,14 @@
   },
   "lesson_groups": [
     {
-      "key": "",
-      "user_facing": false,
+      "key": "lessonGroup-2",
+      "user_facing": true,
       "position": 1,
       "properties": {
+        "display_name": "Getting Started with Code.org"
       },
       "seeding_key": {
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "self-paced-pl-physical-computing1"
       }
     }
@@ -43,18 +44,18 @@
       "has_lesson_plan": false,
       "relative_position": 1,
       "properties": {
-        "overview": "**You will:**\n\n* Get an introduction to Code.org and CS Discoveries.\n\n**Suggested Time:** 8 minutes",
-        "student_overview": "**You will:**\n\n* Get an introduction to Code.org and CS Discoveries.\n\n**Suggested Time:** 8 minutes"
+        "overview": "**You will:**\n\n* Get an introduction to Code.org's mission.\n\n**Suggested Time:** 15 minutes",
+        "student_overview": "**You will:**\n\n* Get an introduction to Code.org's mission.\n\n**Suggested Time:** 15 minutes"
       },
       "seeding_key": {
         "lesson.key": "Welcome to Codeorg",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "self-paced-pl-physical-computing1"
       }
     },
     {
       "key": "Navigating the Codeorg learning platform",
-      "name": "Navigating the Code.org learning platform",
+      "name": "Navigating the Code.org Learning Platform",
       "absolute_position": 2,
       "lockable": false,
       "has_lesson_plan": false,
@@ -65,41 +66,41 @@
       },
       "seeding_key": {
         "lesson.key": "Navigating the Codeorg learning platform",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "self-paced-pl-physical-computing1"
       }
     },
     {
       "key": "Navigating lesson plans and resources",
-      "name": "Navigating lesson plans and resources",
+      "name": "Navigating Lesson Plans and Resources",
       "absolute_position": 3,
       "lockable": false,
       "has_lesson_plan": false,
       "relative_position": 3,
       "properties": {
-        "overview": "**You will:**\n\n* Locate and use course lesson plans and teacher resources.\n\n**Suggested time:** 25 minutes",
-        "student_overview": "**You will:**\n\n* Locate and use course lesson plans and teacher resources.\n\n**Suggested time:** 25 minutes"
+        "overview": "**You will:**\n\n* Locate and use course lesson plans and teacher resources.\n\n**Suggested time:** 20 minutes",
+        "student_overview": "**You will:**\n\n* Locate and use course lesson plans and teacher resources.\n\n**Suggested time:** 20 minutes"
       },
       "seeding_key": {
         "lesson.key": "Navigating lesson plans and resources",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "self-paced-pl-physical-computing1"
       }
     },
     {
       "key": "Navigating support",
-      "name": "Navigating support",
+      "name": "Navigating Support",
       "absolute_position": 4,
       "lockable": false,
       "has_lesson_plan": false,
       "relative_position": 4,
       "properties": {
-        "overview": "**You will:**\n\n* Access support while teaching CS Discoveries. \n\n**Suggested time:** 15 minutes",
-        "student_overview": "**You will:**\n\n* Access support while teaching CS Discoveries. \n\n**Suggested time:** 15 minutes"
+        "overview": "**You will:**\n\n* Access support while teaching Code.org curricula. \n\n**Suggested time:** 15 minutes",
+        "student_overview": "**You will:**\n\n* Access support while teaching Code.org curricula. \n\n**Suggested time:** 15 minutes"
       },
       "seeding_key": {
         "lesson.key": "Navigating support",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "self-paced-pl-physical-computing1"
       }
     }
@@ -113,7 +114,7 @@
       "seeding_key": {
         "lesson_activity.key": "c2beedd2-4769-4e2f-899c-11eca7a772cf",
         "lesson.key": "Welcome to Codeorg",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "self-paced-pl-physical-computing1"
       }
     },
@@ -125,7 +126,7 @@
       "seeding_key": {
         "lesson_activity.key": "0821395c-1d1d-4529-b9cc-9a0b15aa0ab9",
         "lesson.key": "Navigating the Codeorg learning platform",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "self-paced-pl-physical-computing1"
       }
     },
@@ -137,7 +138,7 @@
       "seeding_key": {
         "lesson_activity.key": "ed040438-e2dd-4a9f-8a0a-a3c2cb5938e4",
         "lesson.key": "Navigating lesson plans and resources",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "self-paced-pl-physical-computing1"
       }
     },
@@ -149,7 +150,7 @@
       "seeding_key": {
         "lesson_activity.key": "8171591c-b25c-4fc2-bb0c-0f44cf7bdb3a",
         "lesson.key": "Navigating support",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "self-paced-pl-physical-computing1"
       }
     }
@@ -181,7 +182,7 @@
       "key": "c626864a-6f66-47c3-8a4d-9fd71ce40209",
       "position": 3,
       "properties": {
-        "progression_name": "Welcome to CS Discoveries"
+        "progression_name": "Welcome to Creating Apps for Devices"
       },
       "seeding_key": {
         "activity_section.key": "c626864a-6f66-47c3-8a4d-9fd71ce40209",
@@ -258,7 +259,7 @@
       "key": "f501834c-64b3-41f6-9ad6-d7e7b7dccd12",
       "position": 2,
       "properties": {
-        "progression_name": "Explore course lesson plans"
+        "progression_name": "Explore Course Lesson Plans"
       },
       "seeding_key": {
         "activity_section.key": "f501834c-64b3-41f6-9ad6-d7e7b7dccd12",
@@ -269,7 +270,7 @@
       "key": "349db564-64f2-47df-b3d2-f4400c4cd3af",
       "position": 3,
       "properties": {
-        "progression_name": "Explore additional teacher resources"
+        "progression_name": "Explore Additional Teacher Resources"
       },
       "seeding_key": {
         "activity_section.key": "349db564-64f2-47df-b3d2-f4400c4cd3af",
@@ -328,7 +329,7 @@
           "SP-VPL-21-mod1-Overview-Welcome_physical-computing"
         ],
         "lesson.key": "Welcome to Codeorg",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "self-paced-pl-physical-computing1",
         "activity_section.key": "e306a408-5e37-41ae-ad75-44eb1908f360"
       },
@@ -353,7 +354,7 @@
           "SP-VPL-21-mod1-welcome-vid_physical-computing"
         ],
         "lesson.key": "Welcome to Codeorg",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "self-paced-pl-physical-computing1",
         "activity_section.key": "efbb3faa-946f-4fd1-8ad3-7afa1ee5fa81"
       },
@@ -378,7 +379,7 @@
           "SP-VPL-21-mod1-CSisFoundational_physical-computing"
         ],
         "lesson.key": "Welcome to Codeorg",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "self-paced-pl-physical-computing1",
         "activity_section.key": "efbb3faa-946f-4fd1-8ad3-7afa1ee5fa81"
       },
@@ -395,7 +396,7 @@
         "level_keys": [
           "SP-VPL-21-mod1-Advice-TipVid_physical-computing"
         ],
-        "progression": "Welcome to CS Discoveries"
+        "progression": "Welcome to Creating Apps for Devices"
       },
       "bonus": false,
       "seeding_key": {
@@ -403,7 +404,7 @@
           "SP-VPL-21-mod1-Advice-TipVid_physical-computing"
         ],
         "lesson.key": "Welcome to Codeorg",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "self-paced-pl-physical-computing1",
         "activity_section.key": "c626864a-6f66-47c3-8a4d-9fd71ce40209"
       },
@@ -420,7 +421,7 @@
         "level_keys": [
           "SP-VPL-21-mod1-AboutCSD_physical-computing"
         ],
-        "progression": "Welcome to CS Discoveries"
+        "progression": "Welcome to Creating Apps for Devices"
       },
       "bonus": false,
       "seeding_key": {
@@ -428,7 +429,7 @@
           "SP-VPL-21-mod1-AboutCSD_physical-computing"
         ],
         "lesson.key": "Welcome to Codeorg",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "self-paced-pl-physical-computing1",
         "activity_section.key": "c626864a-6f66-47c3-8a4d-9fd71ce40209"
       },
@@ -453,7 +454,7 @@
           "SP-VPL-21-mod2-Overview-WebsiteNavigation_physical-computing"
         ],
         "lesson.key": "Navigating the Codeorg learning platform",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "self-paced-pl-physical-computing1",
         "activity_section.key": "845a5222-3681-4305-b271-0795bc30ad63"
       },
@@ -478,7 +479,7 @@
           "SP-VPL-21-mod2-tour-vid_physical-computing"
         ],
         "lesson.key": "Navigating the Codeorg learning platform",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "self-paced-pl-physical-computing1",
         "activity_section.key": "13a4bfd8-099f-414e-b52d-9716db7a4423"
       },
@@ -503,7 +504,7 @@
           "SP-VPL-21-mod2-Task-VerifiedTeacher_physical-computing"
         ],
         "lesson.key": "Navigating the Codeorg learning platform",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "self-paced-pl-physical-computing1",
         "activity_section.key": "13a4bfd8-099f-414e-b52d-9716db7a4423"
       },
@@ -528,7 +529,7 @@
           "SP-VPL-21-mod2-ClassSection-vid_physical-computing"
         ],
         "lesson.key": "Navigating the Codeorg learning platform",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "self-paced-pl-physical-computing1",
         "activity_section.key": "1d5b1c1e-6a31-4f44-8e47-c8bfd5c63253"
       },
@@ -553,7 +554,7 @@
           "SP-VPL-21-mod2-Task-ClassSection_physical-computing"
         ],
         "lesson.key": "Navigating the Codeorg learning platform",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "self-paced-pl-physical-computing1",
         "activity_section.key": "1d5b1c1e-6a31-4f44-8e47-c8bfd5c63253"
       },
@@ -578,7 +579,7 @@
           "SP-VPL_21-mod2-MakeAPlan-StudentLogIn_physical-computing"
         ],
         "lesson.key": "Navigating the Codeorg learning platform",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "self-paced-pl-physical-computing1",
         "activity_section.key": "1d5b1c1e-6a31-4f44-8e47-c8bfd5c63253"
       },
@@ -603,7 +604,7 @@
           "SP-VPL-21-mod2-StudentExperience-vid_physical-computing"
         ],
         "lesson.key": "Navigating the Codeorg learning platform",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "self-paced-pl-physical-computing1",
         "activity_section.key": "a03129a5-fd29-4d5d-b25a-3cc0e693b3c6"
       },
@@ -628,7 +629,7 @@
           "SP-VPL-21-mod2-Task-StudentView_physical-computing"
         ],
         "lesson.key": "Navigating the Codeorg learning platform",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "self-paced-pl-physical-computing1",
         "activity_section.key": "a03129a5-fd29-4d5d-b25a-3cc0e693b3c6"
       },
@@ -653,7 +654,7 @@
           "SP-VPL-21-mod2-ProgessAndFeedback-vid_physical-computing"
         ],
         "lesson.key": "Navigating the Codeorg learning platform",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "self-paced-pl-physical-computing1",
         "activity_section.key": "f5583894-7ca5-42ac-8cc3-b167ff44192b"
       },
@@ -678,7 +679,7 @@
           "SP-VPL-21-mod2-progress-c4u_physical-computing"
         ],
         "lesson.key": "Navigating the Codeorg learning platform",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "self-paced-pl-physical-computing1",
         "activity_section.key": "f5583894-7ca5-42ac-8cc3-b167ff44192b"
       },
@@ -703,7 +704,7 @@
           "SP-VPL-21-mod2-feedback-c4u_physical-computing"
         ],
         "lesson.key": "Navigating the Codeorg learning platform",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "self-paced-pl-physical-computing1",
         "activity_section.key": "f5583894-7ca5-42ac-8cc3-b167ff44192b"
       },
@@ -728,7 +729,7 @@
           "SP-VPL-21-mod2-TeachersInClassrooms_physical-computing"
         ],
         "lesson.key": "Navigating lesson plans and resources",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "self-paced-pl-physical-computing1",
         "activity_section.key": "947c5578-de1d-40c8-b4e9-d9ca295325aa"
       },
@@ -745,7 +746,7 @@
         "level_keys": [
           "SP-VPL-21-mod2-NavigatingLessonPlans_physical-computing"
         ],
-        "progression": "Explore course lesson plans"
+        "progression": "Explore Course Lesson Plans"
       },
       "bonus": false,
       "seeding_key": {
@@ -753,7 +754,7 @@
           "SP-VPL-21-mod2-NavigatingLessonPlans_physical-computing"
         ],
         "lesson.key": "Navigating lesson plans and resources",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "self-paced-pl-physical-computing1",
         "activity_section.key": "f501834c-64b3-41f6-9ad6-d7e7b7dccd12"
       },
@@ -770,7 +771,7 @@
         "level_keys": [
           "SP-VPL-21-mod2-ExploreLessonPlan_physical-computing"
         ],
-        "progression": "Explore course lesson plans"
+        "progression": "Explore Course Lesson Plans"
       },
       "bonus": false,
       "seeding_key": {
@@ -778,7 +779,7 @@
           "SP-VPL-21-mod2-ExploreLessonPlan_physical-computing"
         ],
         "lesson.key": "Navigating lesson plans and resources",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "self-paced-pl-physical-computing1",
         "activity_section.key": "f501834c-64b3-41f6-9ad6-d7e7b7dccd12"
       },
@@ -795,7 +796,7 @@
         "level_keys": [
           "SP-VPL_21-mod2-MakeAPlan-LessonPlanning_physical-computing"
         ],
-        "progression": "Explore course lesson plans"
+        "progression": "Explore Course Lesson Plans"
       },
       "bonus": false,
       "seeding_key": {
@@ -803,7 +804,7 @@
           "SP-VPL_21-mod2-MakeAPlan-LessonPlanning_physical-computing"
         ],
         "lesson.key": "Navigating lesson plans and resources",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "self-paced-pl-physical-computing1",
         "activity_section.key": "f501834c-64b3-41f6-9ad6-d7e7b7dccd12"
       },
@@ -820,7 +821,7 @@
         "level_keys": [
           "SP-VPL-21-mod2-NavigatingTeacherResources_physical-computing"
         ],
-        "progression": "Explore additional teacher resources"
+        "progression": "Explore Additional Teacher Resources"
       },
       "bonus": false,
       "seeding_key": {
@@ -828,7 +829,7 @@
           "SP-VPL-21-mod2-NavigatingTeacherResources_physical-computing"
         ],
         "lesson.key": "Navigating lesson plans and resources",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "self-paced-pl-physical-computing1",
         "activity_section.key": "349db564-64f2-47df-b3d2-f4400c4cd3af"
       },
@@ -845,7 +846,7 @@
         "level_keys": [
           "SP-VPL-21-mod2-UnitCalendar_physical-computing"
         ],
-        "progression": "Explore additional teacher resources"
+        "progression": "Explore Additional Teacher Resources"
       },
       "bonus": false,
       "seeding_key": {
@@ -853,7 +854,7 @@
           "SP-VPL-21-mod2-UnitCalendar_physical-computing"
         ],
         "lesson.key": "Navigating lesson plans and resources",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "self-paced-pl-physical-computing1",
         "activity_section.key": "349db564-64f2-47df-b3d2-f4400c4cd3af"
       },
@@ -878,7 +879,7 @@
           "SP-VPL-21-mod2-TaskResources_physical-computing"
         ],
         "lesson.key": "Navigating support",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "self-paced-pl-physical-computing1",
         "activity_section.key": "5e6b36e1-4fd6-4ee9-8aac-a2a5b04665da"
       },
@@ -903,7 +904,7 @@
           "SP-VPL-21-mod2-navigating support_physical-computing"
         ],
         "lesson.key": "Navigating support",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "self-paced-pl-physical-computing1",
         "activity_section.key": "6e806641-a9ed-4210-9f42-2929a6501c5a"
       },
@@ -928,7 +929,7 @@
           "SP-VPL-21-mod2-ReadSupportArticles_physical-computing"
         ],
         "lesson.key": "Navigating support",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "self-paced-pl-physical-computing1",
         "activity_section.key": "6e806641-a9ed-4210-9f42-2929a6501c5a"
       },
@@ -953,7 +954,7 @@
           "SP-VPL-21-mod2-ReportAProblem_physical-computing"
         ],
         "lesson.key": "Navigating support",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "self-paced-pl-physical-computing1",
         "activity_section.key": "6e806641-a9ed-4210-9f42-2929a6501c5a"
       },
@@ -978,7 +979,7 @@
           "SP-VPL-21-mod2-JoinTheTeacherCommunity_physical-computing"
         ],
         "lesson.key": "Navigating support",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "self-paced-pl-physical-computing1",
         "activity_section.key": "6e806641-a9ed-4210-9f42-2929a6501c5a"
       },
@@ -1003,7 +1004,7 @@
           "SP-VPL-21-mod2-Support-c4u_physical-computing"
         ],
         "lesson.key": "Navigating support",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "self-paced-pl-physical-computing1",
         "activity_section.key": "6e806641-a9ed-4210-9f42-2929a6501c5a"
       },
@@ -1028,7 +1029,7 @@
           "SP-VPL-CSD-21-Navigation-Mod2_physical-computing"
         ],
         "lesson.key": "Navigating support",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "self-paced-pl-physical-computing1",
         "activity_section.key": "c26bf3ad-70bd-4ab3-8a5f-5eacdfb9d38c"
       },
@@ -1045,7 +1046,7 @@
           "SP-VPL-21-mod1-Overview-Welcome_physical-computing"
         ],
         "lesson.key": "Welcome to Codeorg",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "self-paced-pl-physical-computing1",
         "activity_section.key": "e306a408-5e37-41ae-ad75-44eb1908f360"
       }
@@ -1057,7 +1058,7 @@
           "SP-VPL-21-mod1-welcome-vid_physical-computing"
         ],
         "lesson.key": "Welcome to Codeorg",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "self-paced-pl-physical-computing1",
         "activity_section.key": "efbb3faa-946f-4fd1-8ad3-7afa1ee5fa81"
       }
@@ -1069,7 +1070,7 @@
           "SP-VPL-21-mod1-CSisFoundational_physical-computing"
         ],
         "lesson.key": "Welcome to Codeorg",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "self-paced-pl-physical-computing1",
         "activity_section.key": "efbb3faa-946f-4fd1-8ad3-7afa1ee5fa81"
       }
@@ -1081,7 +1082,7 @@
           "SP-VPL-21-mod1-Advice-TipVid_physical-computing"
         ],
         "lesson.key": "Welcome to Codeorg",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "self-paced-pl-physical-computing1",
         "activity_section.key": "c626864a-6f66-47c3-8a4d-9fd71ce40209"
       }
@@ -1093,7 +1094,7 @@
           "SP-VPL-21-mod1-AboutCSD_physical-computing"
         ],
         "lesson.key": "Welcome to Codeorg",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "self-paced-pl-physical-computing1",
         "activity_section.key": "c626864a-6f66-47c3-8a4d-9fd71ce40209"
       }
@@ -1105,7 +1106,7 @@
           "SP-VPL-21-mod2-Overview-WebsiteNavigation_physical-computing"
         ],
         "lesson.key": "Navigating the Codeorg learning platform",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "self-paced-pl-physical-computing1",
         "activity_section.key": "845a5222-3681-4305-b271-0795bc30ad63"
       }
@@ -1117,7 +1118,7 @@
           "SP-VPL-21-mod2-tour-vid_physical-computing"
         ],
         "lesson.key": "Navigating the Codeorg learning platform",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "self-paced-pl-physical-computing1",
         "activity_section.key": "13a4bfd8-099f-414e-b52d-9716db7a4423"
       }
@@ -1129,7 +1130,7 @@
           "SP-VPL-21-mod2-Task-VerifiedTeacher_physical-computing"
         ],
         "lesson.key": "Navigating the Codeorg learning platform",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "self-paced-pl-physical-computing1",
         "activity_section.key": "13a4bfd8-099f-414e-b52d-9716db7a4423"
       }
@@ -1141,7 +1142,7 @@
           "SP-VPL-21-mod2-ClassSection-vid_physical-computing"
         ],
         "lesson.key": "Navigating the Codeorg learning platform",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "self-paced-pl-physical-computing1",
         "activity_section.key": "1d5b1c1e-6a31-4f44-8e47-c8bfd5c63253"
       }
@@ -1153,7 +1154,7 @@
           "SP-VPL-21-mod2-Task-ClassSection_physical-computing"
         ],
         "lesson.key": "Navigating the Codeorg learning platform",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "self-paced-pl-physical-computing1",
         "activity_section.key": "1d5b1c1e-6a31-4f44-8e47-c8bfd5c63253"
       }
@@ -1165,7 +1166,7 @@
           "SP-VPL_21-mod2-MakeAPlan-StudentLogIn_physical-computing"
         ],
         "lesson.key": "Navigating the Codeorg learning platform",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "self-paced-pl-physical-computing1",
         "activity_section.key": "1d5b1c1e-6a31-4f44-8e47-c8bfd5c63253"
       }
@@ -1177,7 +1178,7 @@
           "SP-VPL-21-mod2-StudentExperience-vid_physical-computing"
         ],
         "lesson.key": "Navigating the Codeorg learning platform",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "self-paced-pl-physical-computing1",
         "activity_section.key": "a03129a5-fd29-4d5d-b25a-3cc0e693b3c6"
       }
@@ -1189,7 +1190,7 @@
           "SP-VPL-21-mod2-Task-StudentView_physical-computing"
         ],
         "lesson.key": "Navigating the Codeorg learning platform",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "self-paced-pl-physical-computing1",
         "activity_section.key": "a03129a5-fd29-4d5d-b25a-3cc0e693b3c6"
       }
@@ -1201,7 +1202,7 @@
           "SP-VPL-21-mod2-ProgessAndFeedback-vid_physical-computing"
         ],
         "lesson.key": "Navigating the Codeorg learning platform",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "self-paced-pl-physical-computing1",
         "activity_section.key": "f5583894-7ca5-42ac-8cc3-b167ff44192b"
       }
@@ -1213,7 +1214,7 @@
           "SP-VPL-21-mod2-progress-c4u_physical-computing"
         ],
         "lesson.key": "Navigating the Codeorg learning platform",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "self-paced-pl-physical-computing1",
         "activity_section.key": "f5583894-7ca5-42ac-8cc3-b167ff44192b"
       }
@@ -1225,7 +1226,7 @@
           "SP-VPL-21-mod2-feedback-c4u_physical-computing"
         ],
         "lesson.key": "Navigating the Codeorg learning platform",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "self-paced-pl-physical-computing1",
         "activity_section.key": "f5583894-7ca5-42ac-8cc3-b167ff44192b"
       }
@@ -1237,7 +1238,7 @@
           "SP-VPL-21-mod2-TeachersInClassrooms_physical-computing"
         ],
         "lesson.key": "Navigating lesson plans and resources",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "self-paced-pl-physical-computing1",
         "activity_section.key": "947c5578-de1d-40c8-b4e9-d9ca295325aa"
       }
@@ -1249,7 +1250,7 @@
           "SP-VPL-21-mod2-NavigatingLessonPlans_physical-computing"
         ],
         "lesson.key": "Navigating lesson plans and resources",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "self-paced-pl-physical-computing1",
         "activity_section.key": "f501834c-64b3-41f6-9ad6-d7e7b7dccd12"
       }
@@ -1261,7 +1262,7 @@
           "SP-VPL-21-mod2-ExploreLessonPlan_physical-computing"
         ],
         "lesson.key": "Navigating lesson plans and resources",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "self-paced-pl-physical-computing1",
         "activity_section.key": "f501834c-64b3-41f6-9ad6-d7e7b7dccd12"
       }
@@ -1273,7 +1274,7 @@
           "SP-VPL_21-mod2-MakeAPlan-LessonPlanning_physical-computing"
         ],
         "lesson.key": "Navigating lesson plans and resources",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "self-paced-pl-physical-computing1",
         "activity_section.key": "f501834c-64b3-41f6-9ad6-d7e7b7dccd12"
       }
@@ -1285,7 +1286,7 @@
           "SP-VPL-21-mod2-NavigatingTeacherResources_physical-computing"
         ],
         "lesson.key": "Navigating lesson plans and resources",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "self-paced-pl-physical-computing1",
         "activity_section.key": "349db564-64f2-47df-b3d2-f4400c4cd3af"
       }
@@ -1297,7 +1298,7 @@
           "SP-VPL-21-mod2-UnitCalendar_physical-computing"
         ],
         "lesson.key": "Navigating lesson plans and resources",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "self-paced-pl-physical-computing1",
         "activity_section.key": "349db564-64f2-47df-b3d2-f4400c4cd3af"
       }
@@ -1309,7 +1310,7 @@
           "SP-VPL-21-mod2-TaskResources_physical-computing"
         ],
         "lesson.key": "Navigating support",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "self-paced-pl-physical-computing1",
         "activity_section.key": "5e6b36e1-4fd6-4ee9-8aac-a2a5b04665da"
       }
@@ -1321,7 +1322,7 @@
           "SP-VPL-21-mod2-navigating support_physical-computing"
         ],
         "lesson.key": "Navigating support",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "self-paced-pl-physical-computing1",
         "activity_section.key": "6e806641-a9ed-4210-9f42-2929a6501c5a"
       }
@@ -1333,7 +1334,7 @@
           "SP-VPL-21-mod2-ReadSupportArticles_physical-computing"
         ],
         "lesson.key": "Navigating support",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "self-paced-pl-physical-computing1",
         "activity_section.key": "6e806641-a9ed-4210-9f42-2929a6501c5a"
       }
@@ -1345,7 +1346,7 @@
           "SP-VPL-21-mod2-ReportAProblem_physical-computing"
         ],
         "lesson.key": "Navigating support",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "self-paced-pl-physical-computing1",
         "activity_section.key": "6e806641-a9ed-4210-9f42-2929a6501c5a"
       }
@@ -1357,7 +1358,7 @@
           "SP-VPL-21-mod2-JoinTheTeacherCommunity_physical-computing"
         ],
         "lesson.key": "Navigating support",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "self-paced-pl-physical-computing1",
         "activity_section.key": "6e806641-a9ed-4210-9f42-2929a6501c5a"
       }
@@ -1369,7 +1370,7 @@
           "SP-VPL-21-mod2-Support-c4u_physical-computing"
         ],
         "lesson.key": "Navigating support",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "self-paced-pl-physical-computing1",
         "activity_section.key": "6e806641-a9ed-4210-9f42-2929a6501c5a"
       }
@@ -1381,7 +1382,7 @@
           "SP-VPL-CSD-21-Navigation-Mod2_physical-computing"
         ],
         "lesson.key": "Navigating support",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "self-paced-pl-physical-computing1",
         "activity_section.key": "c26bf3ad-70bd-4ab3-8a5f-5eacdfb9d38c"
       }
