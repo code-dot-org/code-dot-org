@@ -869,7 +869,7 @@
   "enableMakerDialogTitle": "Enable Maker Toolkit?",
   "enableMakerDialogWarningOnlyCP": "Warning: Your app will NOT work unless you have an Adafruit Circuit Playground board.",
   "enableMakerDialogWarning": "Warning: Your app will NOT work unless you have an Adafruit Circuit Playground or micro:bit board.",
-  "enableMakerDialogDescription": "Maker Toolkit is a feature used our physical computing curriculum. See the setup page for more details:",
+  "enableMakerDialogDescription": "Maker Toolkit is a feature used in our physical computing curriculum. See the setup page for more details:",
   "enableMakerDialogSetupPageLinkText": "Maker Toolkit Setup",
   "enablePairProgramming": "Allow students to Pair Program?",
   "encrypted": "encrypted",
