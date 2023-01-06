@@ -140,7 +140,6 @@ class FirebaseHelper
   end
 
   def self.create_client
-    raise "CDO.firebase_name not defined" unless CDO.firebase_name
     raise "CDO.firebase_secret not defined" unless CDO.firebase_secret
     Firebase::Client.new \
       CDO.firebase_url,
