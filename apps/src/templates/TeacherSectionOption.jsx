@@ -9,21 +9,24 @@ import {sectionForDropdownShape} from './teacherDashboard/shapes';
 export default class TeacherSectionOption extends Component {
   static propTypes = {
     section: sectionForDropdownShape,
-    onClick: PropTypes.func.isRequired,
+    // onClick: PropTypes.func.isRequired,
     checked: PropTypes.bool
-  };
-
-  state = {
-    isChecked: this.props.section.isAssigned
   };
 
   constructor(props) {
     super(props);
 
     this.state = {
-      isSelected: props.section.isAssigned
+      isChecked: this.props.section.isAssigned
     };
   }
+
+  boxChecked = () => {
+    this.setState(state => {
+      state.isChecked = !state.isChecked;
+      return state;
+    });
+  };
 
   renderCheckbox = () => {
     const {section} = this.props;
@@ -38,8 +41,8 @@ export default class TeacherSectionOption extends Component {
     return (
       <input
         type="checkbox"
-        checked={this.state.isSelected}
-        onChange={this.changeAssignment}
+        checked={this.state.isChecked}
+        onChange={this.boxChecked}
         style={styles.checkbox}
       />
     );
