@@ -150,6 +150,14 @@ module Cdo
       end
     end
 
+    def firebase_url
+      DCDO.get('firebase_url', "https://#{CDO.firebase_name}.firebaseio.com/")
+    end
+
+    def firebase_shared_url
+      DCDO.get('firebase_shared_url', 'https://cdo-v3-shared.firebaseio.com/')
+    end
+
     def javabuilder_upload_url(path = '', scheme = '')
       if rack_env?(:development)
         # On localhost, we default to using the "test" Javabuilder stack. To point
