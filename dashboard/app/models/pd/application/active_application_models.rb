@@ -3,8 +3,9 @@ module Pd
     module ActiveApplicationModels
       # The application current year constant controls logic in several places:
       # - changes the set of applications retrieved for the application dashboard (archives old ones)
-      # - the constant is used for displaying the school year in the application form
-      # - two scripts (teacher_applications_to_gdrive and scheduled_pd_application_emails) use the constant
+      # - used to display the school year in the application form
+      # - used to determine the current summer workshops year in summer_workshops_to_gdrive script
+      # - used in two other scripts (teacher_applications_to_gdrive and scheduled_pd_application_emails)
       # - used for regional partner workshop enrollment counts
       APPLICATION_CURRENT_YEAR = Pd::SharedApplicationConstants::APPLICATION_CURRENT_YEAR
 
