@@ -75,7 +75,7 @@
     "pl-launch-superhero": {
       "dcdo": "pl-launch-hero-banner",
       "class": "pl-banner-superhero homepage",
-      "desktopImage": "/images/hoc2022-codeorg-hero-banner-02.png",
+      "desktopImage": "/images/pl-superhero-banner-yellow-bg.svg",
       "actions": [
         {
           "type": "heading",
@@ -87,7 +87,11 @@
         },
         {
           "type": "image",
-          "url": "/images/marketing/homepage-csa-right.svg"
+          "url": "/images/pl-superhero-girl.png"
+        },
+        {
+          "type": "image-tablet",
+          "url": "/images/pl-superhero-girl-tablet.png"
         },
         {
           "type": "cta_button_solid_yellow",
