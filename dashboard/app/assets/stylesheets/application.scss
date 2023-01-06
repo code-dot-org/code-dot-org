@@ -857,7 +857,7 @@ $default-modal-width: 640px;
 .modal {
   @media screen and (max-height: 600px) {
     max-height: 80vh;
-    overflow-y: scroll;
+    overflow-y: auto;
   }
 
   a:hover:not(.btn) {
