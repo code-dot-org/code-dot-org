@@ -558,10 +558,12 @@ const FormController = props => {
       const currentPageValid =
         validateOnSubmitOnly || validateCurrentPageRequiredFields();
       if (currentPageValid) {
-        analyticsReporter.sendEvent(PAGE_CHANGED_EVENT, {
-          'current application page': currentPage + 1,
-          'new application page': newPage + 1
-        });
+        if (currentPage !== newPage) {
+          analyticsReporter.sendEvent(PAGE_CHANGED_EVENT, {
+            'current application page': currentPage + 1,
+            'new application page': newPage + 1
+          });
+        }
 
         setCurrentPage(newPage);
 
