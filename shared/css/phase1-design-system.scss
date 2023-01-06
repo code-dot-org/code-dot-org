@@ -55,6 +55,10 @@ p {
   color: $neutral_dark;
 }
 
+#signin {
+  flex-grow: unset;
+}
+
 #signup {
   p {
     font-size: 14px;
@@ -168,6 +172,10 @@ p {
 
       .description {
         font-size: 14px;
+
+        li, a {
+          font-size: 14px;
+        }
       }
 
       .description, a {
@@ -277,6 +285,10 @@ p {
     }
   }
 
+  > a {
+    color: $brand_secondary_default;
+  }
+
   .tutorial-info {
     background-color: $neutral_light;
     border: 1px solid $neutral_dark20;
@@ -318,6 +330,7 @@ p {
 
     &:hover {
       background-color: $brand_secondary_dark;
+      border-color: $brand_secondary_dark;
     }
 
     &:focus {
@@ -345,6 +358,23 @@ p {
       font-family: $barlow-medium !important;
       font-size: 1.5em !important;
       line-height: 1.2 !important;
+    }
+
+    #uitest-public-projects {
+      .viewMoreLink {
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}
+
+.newProject-button-tile {
+  &:hover {
+    border-color: $neutral_dark70 !important;
+    div {
+      color: $neutral_dark70 !important;
     }
   }
 }

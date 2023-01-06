@@ -142,6 +142,7 @@ class NewProjectButtons extends React.Component {
               {projectTypesRow.map((projectType, index) => (
                 <a key={index} href={'/projects/' + projectType + '/new'}>
                   <div
+                    className="newProject-button-tile"
                     style={[
                       styles.tile,
                       index < TILES_PER_ROW - 1 && styles.tilePadding
