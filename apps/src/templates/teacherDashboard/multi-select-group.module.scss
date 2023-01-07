@@ -1,0 +1,41 @@
+@import "color.scss";
+
+.multiSelectGroup {
+  fieldset div {
+    display: inline;
+    margin: 0 5px;
+  }
+
+  fieldset div label {
+    display: inline-block;
+    background-color: $white;
+    border: 2px solid $black;
+    color: $black;
+    border-radius: 25px;
+    white-space: nowrap;
+    margin: 3px 0;
+    padding: 8px 12px;
+    cursor: pointer;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  fieldset div input[type="checkbox"] {
+    position: absolute;
+    opacity: 0;
+  }
+
+  fieldset div input[type="checkbox"]:checked + label {
+    border: 2px solid $teal;
+    background-color: $teal;
+    color: #fff;
+  }
+
+  fieldset div input[type="checkbox"]:focus + label {
+    border: 2px solid #e9a1ff; // FIXME
+  }
+}
