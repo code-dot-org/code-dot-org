@@ -75,8 +75,8 @@ For the very best experience with all Code.org content, we recommend consulting 
 | **Optional**                                                                             | `https://www.google-analytics.com`<br/>`https://www.googleoptimize.com`                                               |
 | **To use YouTube hosted videos (Enhanced Privacy Mode)**                                 | `https://youtube-nocookie.com/*`<br/>`https://*.googlevideo.com/*`<br/>`https://*.ytimg.com/*`                                                         |
 | **To use Code.org hosted videos**                                                        | `https://videos.code.org` |
-| **To use Internet Simulator**                                                            | `https://api.pusherapp.com`<br/>`wss://ws.pusherapp.com:443`                                                                                   |
-| **To use Web Lab**                                                                       | `https://downloads.computinginthecore.org`<br/>`https://codeprojects.org`                                                                                       |
+| **To use Internet Simulator**                                                            | `https://api.pusherapp.com`<br/>`wss://ws.pusherapp.com:443`                                                                                           |
+| **To use Web Lab**                                                                       | `https://downloads.computinginthecore.org`<br/>`https://codeprojects.org`                                                                              |
 | **To use Google Classroom Share Button**                                                 | `https://apis.google.com`                                                                                                                              |
 | **To use App Lab datasets** | `https://*.firebaseio.com`<br />`wss://*.firebaseio.com` |
 
