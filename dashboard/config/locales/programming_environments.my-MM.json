@@ -7,11 +7,54 @@
         },
         "gamelab": {
           "categories": {
+            "game_lab": {
+              "expressions": {
+                "playSound": {
+                  "short_description": "MP3အသံဖိုင်ကိုသတ်မှတ်ထား​သောURLမှဖွင့်မည်."
+                },
+                "showMobileControls": {
+                  "content": "play space အောက်တွင် မြင်ရသော မိုဘိုင်းထိန်းချုပ်မှုများကို ပြောင်းလဲပါ။",
+                  "short_description": "play space အောက်တွင် မြင်ရသော မိုဘိုင်းထိန်းချုပ်မှုများကို ပြောင်းလဲပါ။"
+                }
+              }
+            },
+            "sprites": {
+              "expressions": {
+                "sprite.height": {
+                  "return_value": "Sprite ၏အနံကိုထည်ပါ။"
+                },
+                "sprite.width": {
+                  "return_value": "Sprite၏အလျားကိုထည့်ပါ။"
+                }
+              }
+            },
             "drawing": {
               "name": "ပုံ​ရေးဆွဲခြင်း"
             },
             "math": {
-              "name": "သင်္ချာ"
+              "name": "သင်္ချာ",
+              "expressions": {
+                "randomNumber": {
+                  "palette_params": {
+                    "min": {
+                      "description": "အနည်းဆုံးပြန်သွားနိုင်မယ့်အ​ရေအတွက်"
+                    },
+                    "max": {
+                      "description": "အများဆုံးပြန်သွားနိုင်မယ့်အ​ရေအတွက်"
+                    }
+                  }
+                },
+                "randomNumber_min_max": {
+                  "palette_params": {
+                    "min": {
+                      "description": "အနည်းဆုံးပြန်သွားနိုင်မယ့်အ​ရေအတွက်"
+                    },
+                    "max": {
+                      "description": "အများဆုံးပြန်သွားနိုင်မယ့်အ​ရေအတွက်"
+                    }
+                  }
+                }
+              }
             },
             "variables": {
               "name": "Variables"
@@ -20,11 +63,91 @@
         },
         "applab": {
           "categories": {
+            "ui_controls": {
+              "expressions": {
+                "onEvent": {
+                  "palette_params": {
+                    "callback": {
+                      "type": "လုပ်ဆောင်ချက်"
+                    }
+                  }
+                },
+                "playSound": {
+                  "short_description": "MP3အသံဖိုင်ကိုသတ်မှတ်ထား​သောURLမှဖွင့်မည်."
+                }
+              }
+            },
+            "data": {
+              "expressions": {
+                "getPrediction": {
+                  "palette_params": {
+                    "callback": {
+                      "type": "လုပ်ဆောင်ချက်"
+                    }
+                  }
+                },
+                "setKeyValue": {
+                  "palette_params": {
+                    "value": {
+                      "description": "သိမ်းဆည်းထားရမယ့် အချက်အလက်တွေပေါ့။"
+                    }
+                  }
+                }
+              }
+            },
+            "turtle": {
+              "expressions": {
+                "turnRight": {
+                  "short_description": "လိပ်ကို တိကျသေချာသောထောင့်အနေအထား၏ ညာဘက်သို့လှည့်ပါ။ လိပ်၏အနေအထားမှာ တူညီနေရပါမယ်။"
+                },
+                "turnTo": {
+                  "short_description": "လိပ်၏လမ်းကြောင်းကို တိကျသေချာသောထောင့်အနေအထားသို့ပြောင်းပါ။ ၀ သည် အပေါ်ဘက်၊ ၉၀ သည် ညာဘက်၊ ၁၈၀ သည် အောက်ဘက်၊ ၂၇၀ သည် ညာဘက်ဖြစ်ပါသည်။"
+                }
+              }
+            },
+            "control": {
+              "expressions": {
+                "timedLoop": {
+                  "palette_params": {
+                    "callback": {
+                      "type": "လုပ်ဆောင်ချက်"
+                    }
+                  }
+                }
+              }
+            },
             "math": {
-              "name": "သင်္ချာ"
+              "name": "သင်္ချာ",
+              "expressions": {
+                "randomNumber_min_max": {
+                  "palette_params": {
+                    "min": {
+                      "description": "အနည်းဆုံးပြန်သွားနိုင်မယ့်အ​ရေအတွက်"
+                    },
+                    "max": {
+                      "description": "အများဆုံးပြန်သွားနိုင်မယ့်အ​ရေအတွက်"
+                    }
+                  }
+                },
+                "randomNumber": {
+                  "palette_params": {
+                    "min": {
+                      "description": "အနည်းဆုံးပြန်သွားနိုင်မယ့်အ​ရေအတွက်"
+                    },
+                    "max": {
+                      "description": "အများဆုံးပြန်သွားနိုင်မယ့်အ​ရေအတွက်"
+                    }
+                  }
+                }
+              }
             },
             "variables": {
-              "name": "Variables"
+              "name": "Variables",
+              "expressions": {
+                "addPair": {
+                  "return_value": "ဘာမှမရှိ"
+                }
+              }
             }
           }
         },

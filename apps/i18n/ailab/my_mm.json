@@ -1,4 +1,5 @@
 {
+  "selectDataset": "သင်အသုံးပြုလိုသော ဒေတာအစုအဖွဲ့ကို ရွေးခြယ်ပါ။",
   "datasets": {
     "medical_priority": {
       "fields": {
@@ -25,6 +26,13 @@
       "fields": {
         "Description": {
           "id": "ဖော်ပြချက်"
+        }
+      }
+    },
+    "shapes_v2_toy": {
+      "fields": {
+        "size": {
+          "id": "အရွယ်အစား"
         }
       }
     },
@@ -101,6 +109,13 @@
       "fields": {
         "Age": {
           "id": "အသက်"
+        }
+      }
+    },
+    "shapes_v1_toy": {
+      "fields": {
+        "size": {
+          "id": "အရွယ်အစား"
         }
       }
     },

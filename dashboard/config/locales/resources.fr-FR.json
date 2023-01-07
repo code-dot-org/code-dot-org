@@ -118,10 +118,12 @@
           "url": "https://docs.google.com/document/d/1yrL1rD9eCSEYAvsM8XiL5g-uKpqizYwAk73_6ddZOAQ/edit"
         },
         "password_power-up_lesson_quiz/coursed/2022": {
+          "name": "",
           "url": "https://docs.google.com/forms/d/1OBS37DZUmIxM4ZciCD6qWFMam3_u8djgZNJd9IOK6Zs/copy",
           "type": "Ressource"
         },
         "password_power-up_lesson_quiz_1/coursed/2022": {
+          "name": "",
           "url": "https://www.commonsense.org/education/digital-citizenship/quiz/password-power-up-lesson-quiz"
         },
         "password_power-up_lesson_slides/coursed/2022": {
@@ -545,30 +547,31 @@
           "name": "Modifications pour les leçons virtuelles "
         },
         "digital_trails_animal_tracks/courseb/2022": {
-          "name": "Sentiers numériques : traces d'animaux ",
+          "name": "Pistes numériques : Traces d'animaux ",
           "url": "https://docs.google.com/document/d/1WLUpUXDh1503PwlnJ06DqWr6KaiX7E8KOpDJjrCkLzM/"
         },
         "digital_trails_digital_trail_squares/courseb/2022": {
-          "name": "Sentiers numériques : carrés de sentiers numériques ",
+          "name": "Pistes numériques : Cases de pistes numériques ",
           "url": "https://docs.google.com/document/d/1Ild_AQ98V1kXXvc-ncnC1cTNnIQrZUG_QS-ZiEi4EY8/edit"
         },
         "digital_trails_follow_the_digital_trail/courseb/2022": {
-          "name": " Suivez la Traînée Digitale",
+          "name": "Pistes numériques : Suivre la piste numérique",
           "url": "https://www.commonsense.org/education/videos/follow-the-digital-trail",
           "type": "Vidéo pour la leçon"
         },
         "digital_trails_lesson_slides/courseb/2022": {
-          "name": "Sentiers numériques : diapositives de cours",
+          "name": "Pistes numériques : Diapositives des leçons",
           "url": "https://docs.google.com/presentation/d/1jNMWXhnNjlqK44LQ_bpAtmDmdHPeYqJeVBwegi5BnM4/edit"
         },
         "feeling_faces_emotion_image/courseb/2022": {
-          "name": "Image d'émotions de visages expressifs",
+          "name": "Image émotive de visages expressifs",
           "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/edit",
           "type": "Ressource"
         },
         "move_it_move_it/courseb/2022": {
           "name": "Bouge, Bouge ton corps",
-          "url": "https://docs.google.com/document/d/1xavPzpNq1GO7zzOzreES0Kl8FPcbjILFzfmORUqttcg/edit"
+          "url": "https://docs.google.com/document/d/1xavPzpNq1GO7zzOzreES0Kl8FPcbjILFzfmORUqttcg/edit",
+          "type": "Schématiser l'activité"
         },
         "move_it_move_it_1/courseb/2022": {
           "name": "Bouge, Bouge ton corps",
@@ -583,12 +586,12 @@
           "url": "http://youtu.be/aV4rqNUG-Jw?list=PL2DhNKNdmOtqBgWyF5kmy2oPh0U-Zfv2G"
         },
         "20_20_20_rule/courseb/2022": {
-          "name": "Toutes les 20 minutes, regardez 20 secondes à plus de 5 mètres hors de l'écran",
+          "name": "Toutes les 20 minutes, passez 20 secondes à regarder à plus de 5 mètres en dehors de l'écran",
           "url": "http://www.anthro.com/blog/2013/10/how-to-prevent-eye-strain-with-the-20-20-20-rule#.WOU39BLyu35",
           "type": "Ressource"
         },
         "drag_and_drop_practice/courseb/2022": {
-          "name": "Entrainement au glisser-déposer ",
+          "name": "Entraînement au glisser-déposer ",
           "url": "https://studio.code.org/s/jigsaw"
         },
         "feeling_faces/courseb/2022": {
@@ -603,11 +606,11 @@
           "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q"
         },
         "unplugged_blockly_blocks_grades_k-1_/courseb/2022": {
-          "name": "Blocs Blockly Débranchés (NIveaux Maternelle - CP)",
+          "name": "Blocs Blockly Déconnectés (Niveaux Maternelle - CP)",
           "url": "https://docs.google.com/presentation/d/1PoSQZUCUj6yw6g1yZImaHu5Gn4Gdok0iDmrrmXInavQ/edit"
         },
         "wiggles_-_gonoodle/courseb/2022": {
-          "name": "Wiggles - GoNoodle",
+          "name": "Gigotage - GoNoodle",
           "url": "https://app.gonoodle.com/channels/brainercise-with-mr-catman/shoulder-rock-n-roll",
           "type": "Vidéo"
         },
@@ -616,12 +619,12 @@
           "url": "https://docs.google.com/document/d/1ah3Alc68karxsADBVpCQkzlFAmqO6aTO9QUpZiIQ7BE/edit"
         },
         "feeling_faces_-_emotion_image/courseb/2022": {
-          "name": "Image d'émotions - Visages expressifs",
+          "name": "Image émotive - Visages expressifs",
           "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/edit",
           "type": "Ressource"
         },
         "happy_map_game_pieces/courseb/2022": {
-          "name": "Pièces du Jeu de la Carte Joyeuse",
+          "name": "Pièces de Jeu Cartes Joyeuses",
           "url": "https://docs.google.com/document/d/19dHJCfmQNs3meKN3sTL91qsfmHYjZCYfbFq91J4fj3k/edit"
         },
         "stevie_and_the_big_project/courseb/2022": {
@@ -653,7 +656,7 @@
           "url": "https://docs.google.com/document/d/15YLSUX5TT6P9nRKW4tA0f9weEe0Qs4wV5Ylu08wzXFs/edit"
         },
         "cs_fundamentals_main_activity_tips/courseb/2022": {
-          "name": "CS Fundamentals Conseils pour l'Activité Principale",
+          "name": "Conseils pour l'Activité Principale des Bases de l'Informatique",
           "url": "https://docs.google.com/document/d/1N3aiitOxz_cut1AQn90g1nYJouKT5dC_4m1M0KFNzP8/edit?usp=sharing"
         },
         "pause_and_think_online/courseb/2022": {
@@ -681,14 +684,14 @@
         "the_big_event_courses_a_b_/courseb/2022": {
           "name": "Le Grand Événement (Cours A, B)",
           "url": "https://docs.google.com/document/d/1A9yAObCTJwHsIKtaBZY8KaGwgbxbfolpbIpeJfZRgvs/edit",
-          "type": "Image de la manette"
+          "type": "Image de la télécommande"
         },
         "play_lab_project_planning_guide/courseb/2022": {
-          "name": "Guide de planification du projet Play Lab",
+          "name": "Guide de planification du projet Labo Jeux",
           "url": "https://docs.google.com/document/d/1XiBMkmdQtaCYcaQsGnoY32tGimfiGgBEwenuAadEqT8/template/preview"
         },
         "play_lab_project_planning_guide_1/courseb/2022": {
-          "name": "Guide de planification du projet Play Lab",
+          "name": "Guide de planification du projet Labo Jeux",
           "url": "https://docs.google.com/document/d/1CK-fZ7le7tv6mIR9hZ8MHmaSSkI2uFfyH3W_DFfew2c/template/preview"
         },
         "debugging_guide/express/2022": {
@@ -787,7 +790,7 @@
           "type": "Ressource"
         },
         "20_20_20_rule/pre-express/2022": {
-          "name": "Toutes les 20 minutes, regardez 20 secondes à plus de 5 mètres hors de l'écran",
+          "name": "Toutes les 20 minutes, passez 20 secondes à regarder à plus de 5 mètres en dehors de l'écran",
           "url": "http://www.anthro.com/blog/2013/10/how-to-prevent-eye-strain-with-the-20-20-20-rule#.WOU39BLyu35",
           "type": "Vidéo"
         },
@@ -858,7 +861,7 @@
           "type": "Vidéo pour la leçon"
         },
         "safety_in_my_online_neighborhood_pause_and_think_moment/coursea/2022": {
-          "name": "Sécurité dans mon quartier en ligne : Moment de pause et de réflexion ",
+          "name": "La sécurité dans mon quartier en ligne : S'arrêter et réfléchir un instant",
           "url": "https://docs.google.com/document/d/1o95Q7OD2oF5e-lWxj31kKopfhQVYWDUmw6uDdm1RIIU/"
         },
         "safety_in_my_online_neighborhood_safety_it_rules_/coursea/2022": {
@@ -867,7 +870,7 @@
           "type": "Poster pour le poème"
         },
         "20_20_20_rule/coursea/2022": {
-          "name": "Toutes les 20 minutes, regardez 20 secondes à plus de 5 mètres hors de l'écran",
+          "name": "Toutes les 20 minutes, passez 20 secondes à regarder à plus de 5 mètres en dehors de l'écran",
           "url": "http://www.anthro.com/blog/2013/10/how-to-prevent-eye-strain-with-the-20-20-20-rule#.WOU39BLyu35",
           "type": "Ressource"
         },
@@ -886,7 +889,7 @@
           "type": "Vidéo"
         },
         "feeling_faces_-_emotion_image/coursea/2022": {
-          "name": "Image d'émotions - Visages expressifs",
+          "name": "Image émotive - Visages expressifs",
           "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/view",
           "type": "Ressource"
         },
@@ -899,7 +902,7 @@
           "url": "https://docs.google.com/document/d/1faZj8Szk1st2pMg2f_2S0jXgoGXgbfqOFxbJ6f3LnH0/edit"
         },
         "happy_map_game_pieces/coursea/2022": {
-          "name": "Pièces du Jeu de la Carte Joyeuse",
+          "name": "Pièces de Jeu Cartes Joyeuses",
           "url": "https://docs.google.com/document/d/19dHJCfmQNs3meKN3sTL91qsfmHYjZCYfbFq91J4fj3k/edit"
         },
         "happy_maps/coursea/2022": {
@@ -908,11 +911,11 @@
           "type": "Vidéo déconnectée"
         },
         "unplugged_blockly_blocks_grades_k-1_/coursea/2022": {
-          "name": "Blocs Blockly Débranchés (NIveaux Maternelle - CP)",
+          "name": "Blocs Blockly Déconnectés (Niveaux Maternelle - CP)",
           "url": "https://docs.google.com/presentation/d/1PoSQZUCUj6yw6g1yZImaHu5Gn4Gdok0iDmrrmXInavQ/edit"
         },
         "wiggles_-_gonoodle/coursea/2022": {
-          "name": "Wiggles - GoNoodle",
+          "name": "Gigotage - GoNoodle",
           "url": "https://app.gonoodle.com/channels/brainercise-with-mr-catman/shoulder-rock-n-roll",
           "type": "Vidéo"
         },
@@ -922,21 +925,21 @@
           "type": "Vidéo"
         },
         "feeling_faces_emotion_image/coursea/2022": {
-          "name": "Image d'émotions de visages expressifs",
+          "name": "Image émotive de visages expressifs",
           "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/edit",
           "type": "Ressource"
         },
         "feeling_faces_-_emotion_image_1/coursea/2022": {
-          "name": "Image d'émotions - Visages expressifs",
+          "name": "Image émotive - Visages expressifs",
           "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/edit",
           "type": "Ressource"
         },
         "happy_map_cards_xl/coursea/2022": {
-          "name": "Imprimés XL de la Carte Joyeuse",
+          "name": "Fiches Cartes Joyeuses XL ",
           "url": "https://docs.google.com/document/d/1ohSi_DzymdRdN66NVMAI-KI6LuaB3srbUMnpG74aPM8/edit"
         },
         "happy_map_game_pieces_bonus_pack/coursea/2022": {
-          "name": "Paquet Bonus de Pièces du Jeu de la Carte Joyeuse",
+          "name": "Pack Bonus de Pièces de Jeu Cartes Joyeuses",
           "url": "https://docs.google.com/document/d/14qEVzSR7pr0slqkRn2WM8XxVyeDhdmfhtsmTrERCTNs/edit"
         },
         "feeling_faces/coursea/2022": {
@@ -944,7 +947,7 @@
           "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/"
         },
         "pair-programming/coursea/2022": {
-          "name": "Programmation en Binôme",
+          "name": "Programmation en Binômes",
           "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q",
           "type": "Vidéo"
         },
@@ -975,10 +978,10 @@
         "the_big_event_courses_a_b_/coursea/2022": {
           "name": "Le Grand Événement (Cours A, B)",
           "url": "https://docs.google.com/document/d/1A9yAObCTJwHsIKtaBZY8KaGwgbxbfolpbIpeJfZRgvs/edit",
-          "type": "Image de la manette"
+          "type": "Image de la télécommande"
         },
         "cs_fundamentals_main_activity_tips/coursea/2022": {
-          "name": "CS Fundamentals Conseils pour l'Activité Principale",
+          "name": "Conseils pour l'Activité Principale des Bases de l'Informatique",
           "url": "https://docs.google.com/document/d/1N3aiitOxz_cut1AQn90g1nYJouKT5dC_4m1M0KFNzP8/edit?usp=sharing"
         },
         "artist_project_planning_guide/coursea/2022": {
@@ -1063,7 +1066,7 @@
           "url": "https://docs.google.com/presentation/d/1k_7SSLsm-E4aisa9-LmbsCVzH6J-8yGD9T2LwPb2v48/edit"
         },
         "cs_fundamentals_main_activity_tips/coursec/2022": {
-          "name": "CS Fundamentals Conseils pour l'Activité Principale",
+          "name": "Conseils pour l'Activité Principale des Bases de l'Informatique",
           "url": "https://docs.google.com/document/d/1N3aiitOxz_cut1AQn90g1nYJouKT5dC_4m1M0KFNzP8/edit?usp=sharing"
         },
         "debugging_guide/coursec/2022": {
@@ -1157,7 +1160,7 @@
           "url": "https://www.youtube.com/watch?v=35vkaO_SgzI&feature=youtu.be"
         },
         "play_lab_project_planning_guide/coursec/2022": {
-          "name": "Guide de planification du projet Play Lab",
+          "name": "Guide de planification du projet Labo Jeux",
           "url": "https://docs.google.com/document/d/1qT5Zz1Pec5wuvLSTRfSMJSW5r1LjmWKqoK75Lz1ZYTs/edit"
         },
         "play_lab_project_planning_guide_exemplar_/coursec/2022": {
@@ -3179,30 +3182,31 @@
           "type": "Ressource"
         },
         "digital-trails-animal-tracks/courseb/2021": {
-          "name": "Sentiers numériques : traces d'animaux ",
+          "name": "Pistes numériques : Traces d'animaux ",
           "url": "https://docs.google.com/document/d/1WLUpUXDh1503PwlnJ06DqWr6KaiX7E8KOpDJjrCkLzM/"
         },
         "digital-trails-digital-trail-squares/courseb/2021": {
-          "name": "Sentiers numériques : carrés de sentiers numériques ",
+          "name": "Pistes numériques : Cases de pistes numériques ",
           "url": "https://docs.google.com/document/d/1Ild_AQ98V1kXXvc-ncnC1cTNnIQrZUG_QS-ZiEi4EY8/edit"
         },
         "digital-trails-follow-the-digital-trail/courseb/2021": {
-          "name": " Suivez la Traînée Digitale",
+          "name": "Pistes numériques : Suivre la piste numérique",
           "url": "https://www.commonsense.org/education/videos/follow-the-digital-trail",
           "type": "Vidéo pour la leçon"
         },
         "digital-trails-lesson-slides/courseb/2021": {
-          "name": "Sentiers numériques : diapositives de cours",
+          "name": "Pistes numériques : Diapositives des leçons",
           "url": "https://docs.google.com/presentation/d/1jNMWXhnNjlqK44LQ_bpAtmDmdHPeYqJeVBwegi5BnM4/edit"
         },
         "feeling_faces_emotion_image/courseb/2021": {
-          "name": "Image d'émotions de visages expressifs",
+          "name": "Image émotive de visages expressifs",
           "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/edit",
           "type": "Ressource"
         },
         "mimi-activity/courseb/2021": {
           "name": "Bouge, Bouge ton corps",
-          "url": "https://docs.google.com/document/d/1xavPzpNq1GO7zzOzreES0Kl8FPcbjILFzfmORUqttcg/edit"
+          "url": "https://docs.google.com/document/d/1xavPzpNq1GO7zzOzreES0Kl8FPcbjILFzfmORUqttcg/edit",
+          "type": "Schématiser l'activité"
         },
         "mimi-debugging/courseb/2021": {
           "name": "Bouge, Bouge ton corps",
@@ -3217,7 +3221,7 @@
           "url": "http://youtu.be/aV4rqNUG-Jw?list=PL2DhNKNdmOtqBgWyF5kmy2oPh0U-Zfv2G"
         },
         "20_20_20_rule/courseb/2021": {
-          "name": "Toutes les 20 minutes, regardez 20 secondes à plus de 5 mètres hors de l'écran",
+          "name": "Toutes les 20 minutes, passez 20 secondes à regarder à plus de 5 mètres en dehors de l'écran",
           "url": "http://www.anthro.com/blog/2013/10/how-to-prevent-eye-strain-with-the-20-20-20-rule#.WOU39BLyu35",
           "type": "Ressource"
         },
@@ -3226,7 +3230,7 @@
           "url": "https://www.youtube.com/watch?v=ebQY8fb2OV4"
         },
         "course-ab-blockly-blocks/courseb/2021": {
-          "name": "Blocs Blockly Débranchés (NIveaux Maternelle - CP)",
+          "name": "Blocs Blockly Déconnectés (Niveaux Maternelle - CP)",
           "url": "https://docs.google.com/presentation/d/1PoSQZUCUj6yw6g1yZImaHu5Gn4Gdok0iDmrrmXInavQ/edit"
         },
         "feeling-faces-image/courseb/2021": {
@@ -3234,7 +3238,7 @@
           "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/"
         },
         "jigsaw/courseb/2021": {
-          "name": "Entrainement au glisser-déposer ",
+          "name": "Entraînement au glisser-déposer ",
           "url": "https://studio.code.org/s/jigsaw"
         },
         "pair-programming-vid/courseb/2021": {
@@ -3242,7 +3246,7 @@
           "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q"
         },
         "wiggles_-_gonoodle/courseb/2021": {
-          "name": "Wiggles - GoNoodle",
+          "name": "Gigotage - GoNoodle",
           "url": "https://app.gonoodle.com/channels/brainercise-with-mr-catman/shoulder-rock-n-roll",
           "type": "Vidéo"
         },
@@ -3251,12 +3255,12 @@
           "url": "https://docs.google.com/document/d/1ah3Alc68karxsADBVpCQkzlFAmqO6aTO9QUpZiIQ7BE/edit"
         },
         "feeling_faces_-_emotion_image/courseb/2021": {
-          "name": "Image d'émotions - Visages expressifs",
+          "name": "Image émotive - Visages expressifs",
           "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/edit",
           "type": "Ressource"
         },
         "happy-map-game-pieces/courseb/2021": {
-          "name": "Pièces du Jeu de la Carte Joyeuse",
+          "name": "Pièces de Jeu Cartes Joyeuses",
           "url": "https://docs.google.com/document/d/19dHJCfmQNs3meKN3sTL91qsfmHYjZCYfbFq91J4fj3k/edit"
         },
         "stevie_and_the_big_project/courseb/2021": {
@@ -3288,7 +3292,7 @@
           "type": "Vidéo déconnectée"
         },
         "csf-lesson-recommend/courseb/2021": {
-          "name": "CS Fundamentals Conseils pour l'Activité Principale",
+          "name": "Conseils pour l'Activité Principale des Bases de l'Informatique",
           "url": "https://docs.google.com/document/d/1N3aiitOxz_cut1AQn90g1nYJouKT5dC_4m1M0KFNzP8/edit?usp=sharing"
         },
         "common-sense-media-pause-think/courseb/2021": {
@@ -3312,7 +3316,7 @@
         "the_big_event_courses_a_b_/courseb/2021": {
           "name": "Le Grand Événement (Cours A, B)",
           "url": "https://docs.google.com/document/d/1A9yAObCTJwHsIKtaBZY8KaGwgbxbfolpbIpeJfZRgvs/edit",
-          "type": "Image de la manette"
+          "type": "Image de la télécommande"
         },
         "unplugged-video-big-event/courseb/2021": {
           "name": "Le Grand Événement",
@@ -3320,11 +3324,11 @@
           "type": "Vidéo"
         },
         "play_lab_project_planning_guide/courseb/2021": {
-          "name": "Guide de planification du projet Play Lab",
+          "name": "Guide de planification du projet Labo Jeux",
           "url": "https://docs.google.com/document/d/1XiBMkmdQtaCYcaQsGnoY32tGimfiGgBEwenuAadEqT8/template/preview"
         },
         "play_lab_project_planning_guide_1/courseb/2021": {
-          "name": "Guide de planification du projet Play Lab",
+          "name": "Guide de planification du projet Labo Jeux",
           "url": "https://docs.google.com/document/d/1CK-fZ7le7tv6mIR9hZ8MHmaSSkI2uFfyH3W_DFfew2c/template/preview"
         },
         "2021_change_log/coursea/2021": {
@@ -3392,7 +3396,7 @@
           "type": "Vidéo pour la leçon"
         },
         "safety-in-my-online-neighborhood-pause-and-think-moment/coursea/2021": {
-          "name": "Sécurité dans mon quartier en ligne : Moment de pause et de réflexion ",
+          "name": "La sécurité dans mon quartier en ligne : S'arrêter et réfléchir un instant",
           "url": "https://docs.google.com/document/d/1o95Q7OD2oF5e-lWxj31kKopfhQVYWDUmw6uDdm1RIIU/"
         },
         "safety-in-my-online-neighborhood-safety-it-rules/coursea/2021": {
@@ -3401,7 +3405,7 @@
           "type": "Poster pour le poème"
         },
         "20_20_20_rule/coursea/2021": {
-          "name": "Toutes les 20 minutes, regardez 20 secondes à plus de 5 mètres hors de l'écran",
+          "name": "Toutes les 20 minutes, passez 20 secondes à regarder à plus de 5 mètres en dehors de l'écran",
           "url": "http://www.anthro.com/blog/2013/10/how-to-prevent-eye-strain-with-the-20-20-20-rule#.WOU39BLyu35",
           "type": "Ressource"
         },
@@ -3424,7 +3428,7 @@
           "url": "https://docs.google.com/document/d/1faZj8Szk1st2pMg2f_2S0jXgoGXgbfqOFxbJ6f3LnH0/edit"
         },
         "feeling_faces_-_emotion_image/coursea/2021": {
-          "name": "Image d'émotions - Visages expressifs",
+          "name": "Image émotive - Visages expressifs",
           "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/view",
           "type": "Ressource"
         },
@@ -3433,7 +3437,7 @@
           "url": "https://docs.google.com/document/d/15uNhf_dISlr0ZT5j3sBu-z3I7v_v5Av9H5jsdLXhE8c/edit"
         },
         "happy-map-game-pieces/coursea/2021": {
-          "name": "Pièces du Jeu de la Carte Joyeuse",
+          "name": "Pièces de Jeu Cartes Joyeuses",
           "url": "https://docs.google.com/document/d/19dHJCfmQNs3meKN3sTL91qsfmHYjZCYfbFq91J4fj3k/edit"
         },
         "unplugged-video-happy-maps/coursea/2021": {
@@ -3442,16 +3446,16 @@
           "type": "Vidéo déconnectée"
         },
         "20_20_20_rule_1/coursea/2021": {
-          "name": "Toutes les 20 minutes, regardez 20 secondes à plus de 5 mètres hors de l'écran",
+          "name": "Toutes les 20 minutes, passez 20 secondes à regarder à plus de 5 mètres en dehors de l'écran",
           "url": "http://www.anthro.com/blog/2013/10/how-to-prevent-eye-strain-with-the-20-20-20-rule#.WOU39BLyu35",
           "type": "Ressource"
         },
         "course-ab-blockly-blocks/coursea/2021": {
-          "name": "Blocs Blockly Débranchés (NIveaux Maternelle - CP)",
+          "name": "Blocs Blockly Déconnectés (Niveaux Maternelle - CP)",
           "url": "https://docs.google.com/presentation/d/1PoSQZUCUj6yw6g1yZImaHu5Gn4Gdok0iDmrrmXInavQ/edit"
         },
         "wiggles_-_gonoodle/coursea/2021": {
-          "name": "Wiggles - GoNoodle",
+          "name": "Gigotage - GoNoodle",
           "url": "https://app.gonoodle.com/channels/brainercise-with-mr-catman/shoulder-rock-n-roll",
           "type": "Vidéo"
         },
@@ -3461,26 +3465,26 @@
           "type": "Vidéo"
         },
         "feeling_faces_emotion_image/coursea/2021": {
-          "name": "Image d'émotions de visages expressifs",
+          "name": "Image émotive de visages expressifs",
           "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/edit",
           "type": "Ressource"
         },
         "feeling_faces_-_emotion_image_1/coursea/2021": {
-          "name": "Image d'émotions - Visages expressifs",
+          "name": "Image émotive - Visages expressifs",
           "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/edit",
           "type": "Ressource"
         },
         "feeling_faces_emotion_image_1/coursea/2021": {
-          "name": "Image d'émotions de visages expressifs",
+          "name": "Image émotive de visages expressifs",
           "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/edit",
           "type": "Ressource"
         },
         "happy-map-cards-xl/coursea/2021": {
-          "name": "Imprimés XL de la Carte Joyeuse",
+          "name": "Fiches Cartes Joyeuses XL ",
           "url": "https://docs.google.com/document/d/1ohSi_DzymdRdN66NVMAI-KI6LuaB3srbUMnpG74aPM8/edit"
         },
         "happy-map-game-pieces-bonus-pack/coursea/2021": {
-          "name": "Paquet Bonus de Pièces du Jeu de la Carte Joyeuse",
+          "name": "Pack Bonus de Pièces de Jeu Cartes Joyeuses",
           "url": "https://docs.google.com/document/d/14qEVzSR7pr0slqkRn2WM8XxVyeDhdmfhtsmTrERCTNs/edit"
         },
         "feeling-faces-image/coursea/2021": {
@@ -3488,7 +3492,7 @@
           "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/"
         },
         "pair-programming/coursea/2021": {
-          "name": "Programmation en Binôme",
+          "name": "Programmation en Binômes",
           "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q",
           "type": "Vidéo"
         },
@@ -3498,7 +3502,7 @@
           "type": "Ressource"
         },
         "feeling_faces_emotion_image_2/coursea/2021": {
-          "name": "Image d'émotions de visages expressifs",
+          "name": "Image émotive de visages expressifs",
           "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/edit",
           "type": "Ressource"
         },
@@ -3513,7 +3517,7 @@
           "type": "Ressource"
         },
         "feeling_faces_emotion_image_3/coursea/2021": {
-          "name": "Image d'émotions de visages expressifs",
+          "name": "Image émotive de visages expressifs",
           "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/edit",
           "type": "Ressource"
         },
@@ -3527,14 +3531,14 @@
           "type": "Évaluation"
         },
         "feeling_faces_-_emotion_image_2/coursea/2021": {
-          "name": "Image d'émotions - Visages expressifs",
+          "name": "Image émotive - Visages expressifs",
           "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/edit",
           "type": "Ressource"
         },
         "the_big_event_courses_a_b_/coursea/2021": {
           "name": "Le Grand Événement (Cours A, B)",
           "url": "https://docs.google.com/document/d/1A9yAObCTJwHsIKtaBZY8KaGwgbxbfolpbIpeJfZRgvs/edit",
-          "type": "Image de la manette"
+          "type": "Image de la télécommande"
         },
         "unplugged-video-big-event/coursea/2021": {
           "name": "Le Grand Événement",
@@ -3542,7 +3546,7 @@
           "type": "Vidéo déconnectée"
         },
         "csf-lesson-recommend/coursea/2021": {
-          "name": "CS Fundamentals Conseils pour l'Activité Principale",
+          "name": "Conseils pour l'Activité Principale des Bases de l'Informatique",
           "url": "https://docs.google.com/document/d/1N3aiitOxz_cut1AQn90g1nYJouKT5dC_4m1M0KFNzP8/edit?usp=sharing"
         },
         "csf_lesson_recommendations_2/coursea/2021": {
@@ -3551,7 +3555,7 @@
           "type": "Ressource"
         },
         "feeling_faces_-_emotion_image_3/coursea/2021": {
-          "name": "Image d'émotions - Visages expressifs",
+          "name": "Image émotive - Visages expressifs",
           "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/edit",
           "type": "Ressource"
         },
@@ -3656,7 +3660,7 @@
           "url": "https://docs.google.com/presentation/d/1k_7SSLsm-E4aisa9-LmbsCVzH6J-8yGD9T2LwPb2v48/edit"
         },
         "csf-lesson-recommend/coursec/2021": {
-          "name": "CS Fundamentals Conseils pour l'Activité Principale",
+          "name": "Conseils pour l'Activité Principale des Bases de l'Informatique",
           "url": "https://docs.google.com/document/d/1N3aiitOxz_cut1AQn90g1nYJouKT5dC_4m1M0KFNzP8/edit?usp=sharing"
         },
         "debugging_guide/coursec/2021": {
@@ -3686,7 +3690,7 @@
           "url": "https://www.youtube.com/watch?v=sPKXZBL_Yvs"
         },
         "feeling_faces_emotion_image/coursec/2021": {
-          "name": "Image d'émotions de visages expressifs",
+          "name": "Image émotive de visages expressifs",
           "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs",
           "type": "Ressource"
         },
@@ -3752,7 +3756,7 @@
           "type": "Vidéo déconnectée"
         },
         "play-lab-project-guide/coursec/2021": {
-          "name": "Guide de planification du projet Play Lab",
+          "name": "Guide de planification du projet Labo Jeux",
           "url": "https://docs.google.com/document/d/1qT5Zz1Pec5wuvLSTRfSMJSW5r1LjmWKqoK75Lz1ZYTs/edit"
         },
         "play-lab-project-planning-guide-exemplar/coursec/2021": {
@@ -3823,10 +3827,12 @@
           "url": "https://docs.google.com/document/d/1yrL1rD9eCSEYAvsM8XiL5g-uKpqizYwAk73_6ddZOAQ/edit"
         },
         "password_power-up_lesson_quiz/coursed/2021": {
+          "name": "",
           "url": "https://docs.google.com/forms/d/1OBS37DZUmIxM4ZciCD6qWFMam3_u8djgZNJd9IOK6Zs/copy",
           "type": "Ressource"
         },
         "password_power-up_lesson_quiz_answer_key/coursed/2021": {
+          "name": "",
           "url": "https://www.commonsense.org/education/digital-citizenship/quiz/password-power-up-lesson-quiz"
         },
         "password_power-up_lesson_slides/coursed/2021": {
@@ -4112,7 +4118,7 @@
           "type": "Ressource"
         },
         "20_20_20_rule/pre-express/2021": {
-          "name": "Toutes les 20 minutes, regardez 20 secondes à plus de 5 mètres hors de l'écran",
+          "name": "Toutes les 20 minutes, passez 20 secondes à regarder à plus de 5 mètres en dehors de l'écran",
           "url": "http://www.anthro.com/blog/2013/10/how-to-prevent-eye-strain-with-the-20-20-20-rule#.WOU39BLyu35",
           "type": "Vidéo"
         },

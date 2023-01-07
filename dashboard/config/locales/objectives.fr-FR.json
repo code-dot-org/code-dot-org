@@ -201,7 +201,7 @@
           "description": "Construire un programme en utilisant des structures qui répètent des zones de code"
         },
         "fcc0109d-8a25-4194-8a5c-69985bac106c": {
-          "description": "Améliorer le code existant en trouvant des zones de répétition et en les déplaçant dans des structures en boucle"
+          "description": "Améliorer le code existant en trouvant des zones de répétition et en les déplaçant vers des structures mise en boucle"
         },
         "c2ec43ae-26ae-48df-8657-373765b01821": {
           "description": "Faire la différence entre les commandes qui doivent être répétées en boucles et les commandes qui doivent être utilisées seules."
@@ -312,7 +312,7 @@
           "description": "Utiliser des variables conjointement avec des invites."
         },
         "3606812b-a55f-4eb9-8a40-a9ca52df3726": {
-          "description": "Faire et tester une prédiction en modifiant les variables de simulation "
+          "description": "Faire et tester une prévision en modifiant les variables de simulation "
         },
         "7f41cf27-501d-4676-9ca7-9fcc15161d54": {
           "description": "Créer un graphique à double ligne pour comparer les données de deux sources différentes "
@@ -369,7 +369,7 @@
           "description": "Faire la différence entre les commandes qui doivent être répétées en boucles et les commandes qui doivent être utilisées seules."
         },
         "3fac17b3-f27c-4f5c-98f1-a43e3e18d4e0": {
-          "description": "Compter le nombre de fois qu'une action doit être répétée et le représenter comme une boucle."
+          "description": "Compter le nombre de fois qu'une action doit être répétée et représenter cela sous forme de boucle."
         },
         "81e6c614-6b5d-43db-8178-3adf983eb5b6": {
           "description": "Diviser les tâches complexes en sections reproductibles plus petites."
@@ -441,7 +441,7 @@
           "description": "Apprendre à planifier à l'avance pour une mission en cours."
         },
         "4bf451c9-a1ce-4e40-95a6-10c911a081bf": {
-          "description": "Apprenez que les informations qu'ils partagent en ligne laissent une empreinte numérique ou une « trace ». "
+          "description": "Faites-les apprendre que les informations qu'ils partagent en ligne laissent une empreinte numérique ou une « trace ». "
         },
         "7cc37ede-4e83-4881-9213-1746313de397": {
           "description": "Découvrez quelles informations peuvent être partagées en ligne. "
@@ -450,16 +450,16 @@
           "description": "Traduire une liste d'étapes en une série d'actions physiques "
         },
         "8a9a5295-648e-47f2-baec-c5a360f2788a": {
-          "description": "Définir une liste d'étapes (algorithme) pour amener un ami de sa position de départ à son objectif "
+          "description": "Définir une liste d'étapes (algorithme) pour amener un ami de son point de départ à son but"
         },
         "ab239024-3c6d-4db1-8c7c-2572c316dc75": {
           "description": "Identifier et corriger les erreurs dans l'exécution d'un algorithme "
         },
         "9c04f7e1-5859-4e61-9ae0-630df254a9aa": {
-          "description": "Établissez un modèle des bons comportements en salle informatique "
+          "description": "Montrez les bons comportements en salle informatique "
         },
         "c78930e6-cbb5-418c-8ca3-9124e79570cd": {
-          "description": "Expérimentez des actions de programmation standard, basées sur des blocs, tels que : cliquer, glisser-déposer, etc. "
+          "description": "Testez des actions de programmation normales basées sur les blocs, telles que : cliquer, glisser-déposer, etc. "
         },
         "0ad6ceff-faa1-40ea-a688-7ad92308dca3": {
           "description": "Construire un programme en réorganisant des mouvements séquentiels."
@@ -480,16 +480,16 @@
           "description": "Convertir une série d'actions multiples en une seule boucle."
         },
         "76138142-0691-4645-8e78-5dbb1c19eab0": {
-          "description": "Traduire un programme d'image en une danse du monde réel."
+          "description": "Traduire un programme d'images en une danse dans la vraie vie. "
         },
         "ad9095b2-5de7-41af-89b9-aac0f2fd0726": {
           "description": "Répéter les actions initiées par l'instructeur."
         },
         "2b7ac17e-7e3a-44b5-8c46-e28eec5af112": {
-          "description": "Décomposer une longue séquence d'instructions en la plus petite séquence reproductible possible."
+          "description": "Décomposer une longue séquence d'instructions en la plus petite séquence répétable possible."
         },
         "4d6affaa-f8b0-4dbc-a436-4dccf8c57fc1": {
-          "description": "Employer une combinaison de commandes séquentielles et en boucle pour atteindre la fin d'un labyrinthe."
+          "description": "Employer un mélange de commandes séquentielles et en boucle pour parvenir à la fin d'un labyrinthe."
         },
         "be1a4163-770d-4fbd-85a1-4c18198d5c94": {
           "description": "Créer un programme pour une tâche donnée qui boucle une séquence de commandes."
@@ -501,10 +501,10 @@
           "description": "Identifier les avantages de l'utilisation d'une structure de boucle au lieu de la répétition manuelle."
         },
         "6baba9ab-130e-4a58-bf30-7cee60bacb18": {
-          "description": "Décomposer une longue séquence d'instructions en la plus petite séquence reproductible possible."
+          "description": "Décomposer une longue séquence d'instructions en la plus petite séquence répétable possible."
         },
         "54ae27f7-71b5-41ce-a67a-61d15e520bc3": {
-          "description": "Compter le nombre de fois qu'une action doit être répétée et le représenter comme une boucle."
+          "description": "Compter le nombre de fois qu'une action doit être répétée et représenter cela sous forme de boucle."
         },
         "5f8621d2-481c-487d-a2e1-90d7fd15b929": {
           "description": "Créer un programme qui dessine des formes complexes en répétant de simples séquences."
@@ -540,7 +540,7 @@
           "description": "Partager un artefact créatif avec d'autres élèves."
         },
         "0e1a61eb-eb48-4c3b-ab89-5b19ef6c6977": {
-          "description": "Appliquer des concepts informatiques dans un projet ouvert. "
+          "description": "Mettre en pratique des notions d'informatique dans un projet libre. "
         },
         "3aa63e80-f3d8-4043-811d-5b275f168499": {
           "description": "Surmonter les obstacles tels que les contraintes de temps ou les bugs."
@@ -606,7 +606,7 @@
           "description": "Développer des programmes qui répondent aux commentaires des utilisateurs"
         },
         "1d64ca6b-c3c3-41c5-b923-280bf46dbdc9": {
-          "description": "Employer une combinaison de commandes séquentielles et en boucle pour atteindre la fin d'un labyrinthe."
+          "description": "Employer un mélange de commandes séquentielles et en boucle pour parvenir à la fin d'un labyrinthe."
         },
         "8a54dbc1-2cc5-4fbe-a69d-1fcdeb521415": {
           "description": "Décomposer une longue séquence d'instructions en la plus grande séquence reproductible."
@@ -732,10 +732,10 @@
           "description": "Utilisez la bonne terminologie quand vous faites référence à une souris d'ordinateur, un trackpad ou un écran tactile. "
         },
         "1527c354-dff7-4d8c-94f7-8b55d5bc3099": {
-          "description": "Établissez un modèle des bons comportements en salle informatique "
+          "description": "Montrez les bons comportements en salle informatique "
         },
         "fc61a33c-e645-4600-b2d3-70bb8e46a938": {
-          "description": "Expérimentez des actions de programmation standard, basées sur des blocs, tels que : cliquer, glisser-déposer, etc. "
+          "description": "Testez des actions de programmation normales basées sur les blocs, telles que : cliquer, glisser-déposer, etc. "
         },
         "26c1a686-8627-439a-b7f9-3e42d80d4a6c": {
           "description": "Construire un programme d'ordinateur à partir d'une série d'instructions écrites"
@@ -762,16 +762,16 @@
           "description": "Construire un programme en utilisant des structures qui répètent des zones de code"
         },
         "65939b9f-ba0f-4834-8f54-24419c9391e5": {
-          "description": "Améliorer le code existant en trouvant des zones de répétition et en les déplaçant dans des structures en boucle"
+          "description": "Améliorer le code existant en trouvant des zones de répétition et en les déplaçant vers des structures mise en boucle"
         },
         "3a06cce8-584a-431c-8cca-05ad9b0df32d": {
           "description": "Identifier les avantages de l'utilisation d'une structure de boucle au lieu de la répétition manuelle."
         },
         "d7a5432f-6854-483b-8a5b-fcb1844dd603": {
-          "description": "Décomposer une longue séquence d'instructions en la plus petite séquence reproductible possible."
+          "description": "Décomposer une longue séquence d'instructions en la plus petite séquence répétable possible."
         },
         "356a5953-6822-4156-b54f-e5f2095156e1": {
-          "description": "Compter le nombre de fois qu'une action doit être répétée et le représenter comme une boucle."
+          "description": "Compter le nombre de fois qu'une action doit être répétée et représenter cela sous forme de boucle."
         },
         "e8114e57-1426-4241-9cbb-dc57a3edadab": {
           "description": "Décomposer une forme en sa plus grande séquence reproductible."
@@ -783,7 +783,7 @@
           "description": "Créer un programme qui dessine des formes complexes en répétant de simples séquences."
         },
         "448fabd8-2154-4840-9807-b0b79bab8c96": {
-          "description": "Compter le nombre de fois qu'une action doit être répétée et le représenter comme une boucle."
+          "description": "Compter le nombre de fois qu'une action doit être répétée et représenter cela sous forme de boucle."
         },
         "f2e5268e-cbce-4db0-abb3-e2b6a65684d8": {
           "description": "Décomposer une forme en sa plus grande séquence reproductible."
@@ -792,7 +792,7 @@
           "description": "Identifier les actions qui aux événements d'entrée."
         },
         "37987315-bfd5-46fd-9faa-9e480ef816b2": {
-          "description": "Créer une histoire animée et interactive à l'aide de séquences et de gestionnaires d'événements."
+          "description": "Créer une histoire animée et interactive en utilisant des séquences et des gestionnaires d'événements."
         },
         "fb6ff331-603c-4310-83e8-77e3e606edfe": {
           "description": "Partager un artefact créatif avec d'autres élèves."
@@ -831,10 +831,10 @@
           "description": "Décoder et exécuter un programme créé par quelqu'un d'autre"
         },
         "25a06d14-94e5-41a1-b199-2d8ef7041b0f": {
-          "description": "Expérimentez des actions de programmation standard, basées sur des blocs, tels que : cliquer, glisser-déposer, etc. "
+          "description": "Testez des actions de programmation normales basées sur les blocs, telles que : cliquer, glisser-déposer, etc. "
         },
         "2e7e4324-ea3b-4e18-a61a-0e449579669a": {
-          "description": "Établissez un modèle des bons comportements en salle informatique "
+          "description": "Montrez les bons comportements en salle informatique "
         },
         "81b0eb83-7612-4f91-91d1-f6dd25afebb6": {
           "description": "Construire un programme en réorganisant les mouvements séquentiels"
@@ -858,13 +858,13 @@
           "description": "Identifier un code répétitif et réduire plusieurs actions en une seule boucle."
         },
         "a28f100d-9129-44e2-ae89-93a0e4da1ef2": {
-          "description": "Améliorer le code existant en trouvant des zones de répétition et en les déplaçant dans des structures en boucle"
+          "description": "Améliorer le code existant en trouvant des zones de répétition et en les déplaçant vers des structures mise en boucle"
         },
         "b55b43b6-9b0d-4703-be2e-9525b05c0a26": {
           "description": "Construire un programme en utilisant des structures qui répètent des zones de code"
         },
         "95c27888-7fcc-4606-8647-b8d7aca4841c": {
-          "description": "Décomposer une longue séquence d'instructions en la plus petite séquence reproductible possible."
+          "description": "Décomposer une longue séquence d'instructions en la plus petite séquence répétable possible."
         },
         "afb9f46f-81f6-4f0a-a017-4e9c5fd5c7f6": {
           "description": "Identifier les avantages de l'utilisation d'une structure de boucle au lieu de la répétition manuelle."
@@ -876,7 +876,7 @@
           "description": "Créer un programme qui dessine des formes complexes en répétant de simples séquences."
         },
         "eb0c126b-1a28-4a64-81a8-84713ba12efb": {
-          "description": "Compter le nombre de fois qu'une action doit être répétée et le représenter comme une boucle."
+          "description": "Compter le nombre de fois qu'une action doit être répétée et représenter cela sous forme de boucle."
         },
         "11ae4f6e-9a22-4fe7-b476-d0251076f65b": {
           "description": "S'entraîner à différencier des actions prédéfinies et des actions axées sur des événements."
@@ -888,7 +888,7 @@
           "description": "Répéter les commandes données par un instructeur."
         },
         "946d56ae-8a81-476c-93ab-6d5eff1f9633": {
-          "description": "Créer une histoire animée et interactive à l'aide de séquences et de gestionnaires d'événements."
+          "description": "Créer une histoire animée et interactive en utilisant des séquences et des gestionnaires d'événements."
         },
         "ab8e0f55-bcb7-4af5-813f-df7d9629e21f": {
           "description": "Partager un artefact créatif avec d'autres élèves."
@@ -900,7 +900,7 @@
           "description": "Surmonter les obstacles tels que les contraintes de temps ou les bugs."
         },
         "6619f367-009a-49ca-9d78-582a2ff9ad5e": {
-          "description": "Appliquer des concepts informatiques dans un projet ouvert. "
+          "description": "Mettre en pratique des notions d'informatique dans un projet libre. "
         },
         "33b55b11-ca81-406f-be39-265e8f33d09d": {
           "description": "Identifiez des façons de répondre aux mots méchants en ligne, en utilisant S-T-O-P. "
@@ -951,7 +951,7 @@
           "description": "Écrire des instructions qui utilisent des boucles pour répéter des modèles"
         },
         "00417e59-53f6-4f10-9e17-ae69f9e5db7b": {
-          "description": "Employer une combinaison de commandes séquentielles et en boucle pour atteindre la fin d'un labyrinthe."
+          "description": "Employer un mélange de commandes séquentielles et en boucle pour parvenir à la fin d'un labyrinthe."
         },
         "b2de5b75-e224-4eee-aa3a-ab51792f3dea": {
           "description": "Décomposer une longue séquence d'instructions en la plus grande séquence reproductible."
@@ -1002,7 +1002,7 @@
           "description": "Créez un graphique à barres et un camembert pour représenter des données simples."
         },
         "b1760cb7-8bc1-4f45-85a4-f8231785ab7e": {
-          "description": "Faites des comparaisons entre les visualisations de données faites par d'autres et utilisez-les pour faire une prédiction. "
+          "description": "Faites des comparaisons entre les visualisations de données faites par d'autres et utilisez-les pour faire une prévision. "
         },
         "e77eca08-1bf5-47df-a660-6c5ba38d4fec": {
           "description": "Recueillir et enregistrer des données sur des quantités d'objets réels ou de personnages sur un écran"
@@ -1155,7 +1155,7 @@
           "description": "Créer un graphique à double ligne pour comparer les données de deux sources différentes "
         },
         "16dabf47-0051-4143-834c-067bb8fb605c": {
-          "description": "Faire et tester une prédiction en modifiant les variables de simulation "
+          "description": "Faire et tester une prévision en modifiant les variables de simulation "
         },
         "f748f186-f152-468e-9f51-48bee23c44db": {
           "description": "Discutez du rôle que joue l'intelligence artificielle dans leur vie."
@@ -1188,13 +1188,13 @@
           "description": "Articuler le processus de conception et la façon dont il a contribué à façonner le projet final terminé."
         },
         "e66808ba-0c59-48f7-93c3-f5267f7b3de9": {
-          "description": "Apprenez que les informations qu'ils partagent en ligne laissent une empreinte numérique ou une « trace ». "
+          "description": "Faites-les apprendre que les informations qu'ils partagent en ligne laissent une empreinte numérique ou une « trace ». "
         },
         "5efa6c72-000c-40a0-ace0-55f47117305b": {
           "description": "Découvrez quelles informations peuvent être partagées en ligne. "
         },
         "d7a194a2-b69d-417f-8996-3f56c7bccd83": {
-          "description": "Définir une liste d'étapes (algorithme) pour amener un ami de sa position de départ à son objectif "
+          "description": "Définir une liste d'étapes (algorithme) pour amener un ami de son point de départ à son but"
         },
         "5c532776-e5e5-4e5e-b3f1-15f01eb66449": {
           "description": "Traduire une liste d'étapes en une série d'actions physiques "
@@ -1203,10 +1203,10 @@
           "description": "Identifier et corriger les erreurs dans l'exécution d'un algorithme "
         },
         "567921b7-1dc5-4b17-9c16-0bbcd785a498": {
-          "description": "Établissez un modèle des bons comportements en salle informatique "
+          "description": "Montrez les bons comportements en salle informatique "
         },
         "32056e13-2c3f-4ef7-8ada-49b29cac5f59": {
-          "description": "Expérimentez des actions de programmation standard, basées sur des blocs, tels que : cliquer, glisser-déposer, etc. "
+          "description": "Testez des actions de programmation normales basées sur les blocs, telles que : cliquer, glisser-déposer, etc. "
         },
         "fae372cb-4b72-4b35-abd6-e2424e54d791": {
           "description": "Traduire les mouvements en une série de commandes."
@@ -1227,7 +1227,7 @@
           "description": "Répéter les actions initiées par l'instructeur."
         },
         "368e8edc-290d-4737-a616-a543e5298c66": {
-          "description": "Traduire un programme d'image en une danse du monde réel."
+          "description": "Traduire un programme d'images en une danse dans la vraie vie. "
         },
         "ddb96aa7-a52d-41d7-b253-8f0d1533e093": {
           "description": "Convertir une série d'actions multiples en une seule boucle."
@@ -1236,22 +1236,22 @@
           "description": "Identifier les avantages de l'utilisation d'une structure de boucle au lieu de la répétition manuelle."
         },
         "b8432810-ae14-4baf-9acb-e56ad1f8995f": {
-          "description": "Décomposer une longue séquence d'instructions en la plus petite séquence reproductible possible."
+          "description": "Décomposer une longue séquence d'instructions en la plus petite séquence répétable possible."
         },
         "8293f536-510e-44a0-880b-397b3f97deeb": {
           "description": "Créer un programme pour une tâche donnée qui boucle une séquence de commandes."
         },
         "cb89ffb0-ef91-48ea-a77a-90e59e45c73e": {
-          "description": "Employer une combinaison de commandes séquentielles et en boucle pour atteindre la fin d'un labyrinthe."
+          "description": "Employer un mélange de commandes séquentielles et en boucle pour parvenir à la fin d'un labyrinthe."
         },
         "1a658eb5-9957-4d23-9736-ba85ea545c5e": {
           "description": "Identifier les avantages de l'utilisation d'une structure de boucle au lieu de la répétition manuelle."
         },
         "b46842b6-02c4-4fd5-abff-6180d77a5c55": {
-          "description": "Décomposer une longue séquence d'instructions en la plus petite séquence reproductible possible."
+          "description": "Décomposer une longue séquence d'instructions en la plus petite séquence répétable possible."
         },
         "f7153703-ec15-4ce5-943e-02e2f2ebcfef": {
-          "description": "Compter le nombre de fois qu'une action doit être répétée et le représenter comme une boucle."
+          "description": "Compter le nombre de fois qu'une action doit être répétée et représenter cela sous forme de boucle."
         },
         "8b2f225a-f9d2-4ac4-9adf-bc978b347f34": {
           "description": "Décomposer une forme en sa plus grande séquence reproductible."
@@ -1287,7 +1287,7 @@
           "description": "Partager un artefact créatif avec d'autres élèves."
         },
         "8023306a-d106-4097-8205-5bc1e92ffade": {
-          "description": "Appliquer des concepts informatiques dans un projet ouvert. "
+          "description": "Mettre en pratique des notions d'informatique dans un projet libre. "
         },
         "ae68c8b9-0188-48da-a066-b89a819b67e2": {
           "description": "Surmonter les obstacles tels que les contraintes de temps ou les bugs."
@@ -1317,10 +1317,10 @@
           "description": "Identifier et corriger les bugs ou les erreurs dans les instructions séquencées"
         },
         "9cf70e8b-6934-4329-88cc-9b936c7042e3": {
-          "description": "Établissez un modèle des bons comportements en salle informatique "
+          "description": "Montrez les bons comportements en salle informatique "
         },
         "6df3d067-06bb-4e95-856f-ef980543a15e": {
-          "description": "Expérimentez des actions de programmation standard, basées sur des blocs, tels que : cliquer, glisser-déposer, etc. "
+          "description": "Testez des actions de programmation normales basées sur les blocs, telles que : cliquer, glisser-déposer, etc. "
         },
         "768eac27-12a4-4a5f-96d6-80bcf4fc8947": {
           "description": "Construire un programme en réorganisant les mouvements séquentiels"
@@ -1347,16 +1347,16 @@
           "description": "Construire un programme en utilisant des structures qui répètent des zones de code"
         },
         "381b89ab-336f-41cd-b755-78142a1f1f90": {
-          "description": "Améliorer le code existant en trouvant des zones de répétition et en les déplaçant dans des structures en boucle"
+          "description": "Améliorer le code existant en trouvant des zones de répétition et en les déplaçant vers des structures mise en boucle"
         },
         "632bd918-c124-4f4c-892e-980cdc07b3bf": {
           "description": "Identifier les avantages de l'utilisation d'une structure de boucle au lieu de la répétition manuelle."
         },
         "ea6a44e1-0175-4ecc-a257-4489b703c063": {
-          "description": "Décomposer une longue séquence d'instructions en la plus petite séquence reproductible possible."
+          "description": "Décomposer une longue séquence d'instructions en la plus petite séquence répétable possible."
         },
         "a49fa168-3cd7-4918-a60a-4c4031dd0116": {
-          "description": "Compter le nombre de fois qu'une action doit être répétée et le représenter comme une boucle."
+          "description": "Compter le nombre de fois qu'une action doit être répétée et représenter cela sous forme de boucle."
         },
         "97a73553-b88a-4b23-9b9f-0ef644cfcb4c": {
           "description": "Décomposer une forme en sa plus grande séquence reproductible."
@@ -1377,13 +1377,13 @@
           "description": "Identifier les actions qui aux événements d'entrée."
         },
         "b366b41e-9396-4c1b-9d35-164052448c1c": {
-          "description": "Créer une histoire animée et interactive à l'aide de séquences et de gestionnaires d'événements."
+          "description": "Créer une histoire animée et interactive en utilisant des séquences et des gestionnaires d'événements."
         },
         "0e6bc093-532a-4e2d-bf3a-dcd7d62a1d93": {
           "description": "Partager un artefact créatif avec d'autres élèves."
         },
         "7267ef0f-cb1a-42c2-aa5c-40cd949c9479": {
-          "description": "Appliquer des concepts informatiques dans un projet ouvert. "
+          "description": "Mettre en pratique des notions d'informatique dans un projet libre. "
         },
         "0f72a34c-2667-4593-8f6f-ff11b0a92ec8": {
           "description": "Surmonter les obstacles tels que les contraintes de temps ou les bugs."
@@ -1443,7 +1443,7 @@
           "description": "Décomposer une longue séquence d'instructions en la plus grande séquence reproductible."
         },
         "8e76410f-b4db-446b-88c0-00013d9c05bd": {
-          "description": "Employer une combinaison de commandes séquentielles et en boucle pour atteindre la fin d'un labyrinthe."
+          "description": "Employer un mélange de commandes séquentielles et en boucle pour parvenir à la fin d'un labyrinthe."
         },
         "ff15ce2c-8445-442a-89f0-7a50e741850a": {
           "description": "Écrire un programme pour une tâche donnée qui boucle une seule commande."
@@ -1491,7 +1491,7 @@
           "description": "Créez un graphique à barres et un camembert pour représenter des données simples."
         },
         "0ca67e69-bff3-4d30-96d3-3f53299353cc": {
-          "description": "Faites des comparaisons entre les visualisations de données faites par d'autres et utilisez-les pour faire une prédiction. "
+          "description": "Faites des comparaisons entre les visualisations de données faites par d'autres et utilisez-les pour faire une prévision. "
         },
         "9a785141-1fe6-4728-996c-2fbb8781b62c": {
           "description": "Encoder des lettres en binaire."
@@ -1575,7 +1575,7 @@
           "description": "Construire un programme en utilisant des structures qui répètent des zones de code"
         },
         "982d25cd-d5ff-491b-8505-be2606ba0a5e": {
-          "description": "Améliorer le code existant en trouvant des zones de répétition et en les déplaçant dans des structures en boucle"
+          "description": "Améliorer le code existant en trouvant des zones de répétition et en les déplaçant vers des structures mise en boucle"
         },
         "d0dae7ad-246b-4f90-8800-8cc9f1de25aa": {
           "description": "Identifier les avantages de l'utilisation d'une structure de boucle au lieu de la répétition manuelle."
@@ -1695,7 +1695,7 @@
           "description": "Décomposer une longue séquence d'instructions en la plus grande séquence reproductible."
         },
         "19dc83bf-d44c-4e6b-a7ac-c11ada6cb656": {
-          "description": "Employer une combinaison de commandes séquentielles et en boucle pour atteindre la fin d'un labyrinthe."
+          "description": "Employer un mélange de commandes séquentielles et en boucle pour parvenir à la fin d'un labyrinthe."
         },
         "7304a528-6a3a-4670-9e66-1438d26c3fc2": {
           "description": "Identifier les avantages de l'utilisation d'une structure de boucle au lieu de la répétition manuelle."
@@ -1815,10 +1815,10 @@
           "description": "Utilisez la bonne terminologie quand vous faites référence à une souris d'ordinateur, un trackpad ou un écran tactile. "
         },
         "565151fd-85db-44eb-9cfc-ccbe279cf49a": {
-          "description": "Établissez un modèle des bons comportements en salle informatique "
+          "description": "Montrez les bons comportements en salle informatique "
         },
         "af0ee86d-cae1-4a66-93c6-8030f2c36f47": {
-          "description": "Expérimentez des actions de programmation standard, basées sur des blocs, tels que : cliquer, glisser-déposer, etc. "
+          "description": "Testez des actions de programmation normales basées sur les blocs, telles que : cliquer, glisser-déposer, etc. "
         },
         "a5a52414-42a7-4b32-897b-819a70572328": {
           "description": "Traduire les mouvements en une série de commandes."
@@ -1845,16 +1845,16 @@
           "description": "Construire un programme en utilisant des structures qui répètent des zones de code"
         },
         "b6f41a7c-0967-4986-b7b6-910819b28396": {
-          "description": "Améliorer le code existant en trouvant des zones de répétition et en les déplaçant dans des structures en boucle"
+          "description": "Améliorer le code existant en trouvant des zones de répétition et en les déplaçant vers des structures mise en boucle"
         },
         "442a1fcc-3ffc-4e3a-9c55-9cfd94d281e1": {
           "description": "Identifier les avantages de l'utilisation d'une structure de boucle au lieu de la répétition manuelle."
         },
         "8fef5927-aacf-4340-b4c3-d221ebe3f13a": {
-          "description": "Décomposer une longue séquence d'instructions en la plus petite séquence reproductible possible."
+          "description": "Décomposer une longue séquence d'instructions en la plus petite séquence répétable possible."
         },
         "2ebb5323-fe4a-4611-9fbf-01444afb8720": {
-          "description": "Compter le nombre de fois qu'une action doit être répétée et le représenter comme une boucle."
+          "description": "Compter le nombre de fois qu'une action doit être répétée et représenter cela sous forme de boucle."
         },
         "6aac3c12-4427-43d1-877c-727d0665ab49": {
           "description": "Décomposer une forme en sa plus grande séquence reproductible."
@@ -1863,7 +1863,7 @@
           "description": "Créer un programme qui dessine des formes complexes en répétant de simples séquences."
         },
         "57f261f3-7603-47fc-b704-9d99a4c4c00a": {
-          "description": "Compter le nombre de fois qu'une action doit être répétée et le représenter comme une boucle."
+          "description": "Compter le nombre de fois qu'une action doit être répétée et représenter cela sous forme de boucle."
         },
         "066b586a-0b6b-4a9f-875d-ce788d7f2197": {
           "description": "Décomposer une forme en sa plus grande séquence reproductible."
@@ -1875,7 +1875,7 @@
           "description": "Identifier les actions qui aux événements d'entrée."
         },
         "2fa04500-f1d4-4924-aa39-70292711d432": {
-          "description": "Créer une histoire animée et interactive à l'aide de séquences et de gestionnaires d'événements."
+          "description": "Créer une histoire animée et interactive en utilisant des séquences et des gestionnaires d'événements."
         },
         "22d77ea2-3a62-4e21-b71f-f484fe90ec39": {
           "description": "Partager un artefact créatif avec d'autres élèves."
@@ -1908,7 +1908,7 @@
           "description": "Combiner des formes simples dans des concepts complexes avec des boucles imbriquées."
         },
         "da653a73-7c1c-4402-ab24-e14e4adf72d1": {
-          "description": "Compter le nombre de fois qu'une action doit être répétée et le représenter comme une boucle."
+          "description": "Compter le nombre de fois qu'une action doit être répétée et représenter cela sous forme de boucle."
         },
         "5b77c883-5479-4cfe-a31a-605957dd083d": {
           "description": "Diviser les tâches complexes en sections reproductibles plus petites."
