@@ -78,7 +78,7 @@ For the very best experience with all Code.org content, we recommend consulting 
 | **To use Internet Simulator**                                                            | `https://api.pusherapp.com`<br/>`wss://ws.pusherapp.com:443`                                                                                           |
 | **To use Web Lab**                                                                       | `https://downloads.computinginthecore.org`<br/>`https://codeprojects.org`                                                                              |
 | **To use Google Classroom Share Button**                                                 | `https://apis.google.com`                                                                                                                              |
-
+| **To use App Lab datasets**                                                 | `https://*.firebaseio.com`                                                                                                                              |
 ## Mobile and Tablet Support Details
 
 All CS Discoveries, CS Principles, and Intro to App Lab courses are not compatible with tablets or mobile devices - a full keyboard and mouse (or touchpad, like on MacBooks) are required. Most tablets are not supported, with the following exceptions:
