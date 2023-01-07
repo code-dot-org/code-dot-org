@@ -50,7 +50,8 @@ class DCDOBase < DynamicConfigBase
       'ceos-for-cs-banner-govs': DCDO.get('ceos-for-cs-banner-govs', false),
       'webserial-on-chromeos': DCDO.get('webserial-on-chromeos', true),
       'cs-leaders-prize': DCDO.get('cs-leaders-prize', false),
-      'csta-form-extension': DCDO.get('csta-form-extension', false)
+      'csta-form-extension': DCDO.get('csta-form-extension', false),
+      'pl-launch-hero-banner': DCDO.get('pl-launch-hero-banner', false)
     }
   end
 end
