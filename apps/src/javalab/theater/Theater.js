@@ -29,9 +29,9 @@ export default class Theater {
     switch (data.value) {
       case TheaterSignalType.AUDIO_URL: {
         // Wait for the audio to load before starting playback
+        this.getAudioElement().oncanplaythrough = () => this.startPlayback();
         this.getAudioElement().src =
           data.detail.url + this.getCacheBustSuffix();
-        this.getAudioElement().oncanplaythrough = () => this.startPlayback();
         break;
       }
       case TheaterSignalType.VISUAL_URL: {
@@ -46,14 +46,20 @@ export default class Theater {
         this.openPhotoPrompter(data.detail.prompt);
         break;
       }
+      case TheaterSignalType.NO_AUDIO: {
+        // there is no audio associated with the video, trigger startPlayback so we don't wait for the audio file
+        this.startPlayback();
+        break;
+      }
       default:
         break;
     }
   }
 
   startPlayback() {
+    console.log(`in startPlayback`);
     this.loadEventsFinished++;
-    // We expect exactly 2 responses from Javabuilder. One for audio and one for video.
+    // We expect exactly 2 responses from Javabuilder. One for audio (or the NO_AUDIO signal) and one for video.
     // Wait for both to respond and load before starting playback.
     if (this.loadEventsFinished > 1) {
       this.getImgElement().style.visibility = 'visible';
