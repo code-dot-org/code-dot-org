@@ -84,7 +84,7 @@ const LegacyCSFNotification = () => (
     buttons={[
       {
         text: i18n.courseBlocksLegacyNotificationButtonCourses14(),
-        link: pegasus('/educate/curriculum/cs-fundamentals-international'),
+        link: pegasus('/educate/curriculum/elementary-school'),
         newWindow: true
       },
       {
