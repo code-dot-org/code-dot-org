@@ -271,9 +271,18 @@ applabCommands.moveTo = function(opts) {
   var ctx = applabTurtle.getTurtleContext();
   if (ctx) {
     ctx.beginPath();
+    // console.log(
+    //   'before ctx.moveTo call - print Applab.turtle.x and Applab.turtle.y'
+    // );
+    //console.log(Applab.turtle.x + ' ' + Applab.turtle.y);
     ctx.moveTo(Applab.turtle.x, Applab.turtle.y);
     Applab.turtle.x = opts.x;
     Applab.turtle.y = opts.y;
+    // console.log(
+    //   'after ctx.moveTo call - print Applab.turtle.x and Applab.turtle.y'
+    // );
+    // console.log(Applab.turtle.x + ' ' + Applab.turtle.y);
+    //console.log('calling lineto function');
     ctx.lineTo(Applab.turtle.x, Applab.turtle.y);
     ctx.stroke();
     applabTurtle.updateTurtleImage();
@@ -455,16 +464,21 @@ applabCommands.dot = function(opts) {
 };
 
 applabCommands.penUp = function(opts) {
+  console.log('penup called');
   var ctx = applabTurtle.getTurtleContext();
   if (ctx) {
+    // console.log(ctx);
+    // console.log(ctx.strokeStyle);
     if (ctx.strokeStyle !== 'rgba(255, 255, 255, 0)') {
       Applab.turtle.penUpColor = ctx.strokeStyle;
       ctx.strokeStyle = 'rgba(255, 255, 255, 0)';
     }
+    //console.log(ctx.strokeStyle);
   }
 };
 
 applabCommands.penDown = function(opts) {
+  console.log('pendown called');
   var ctx = applabTurtle.getTurtleContext();
   if (ctx && Applab.turtle.penUpColor) {
     ctx.strokeStyle = Applab.turtle.penUpColor;
@@ -1458,7 +1472,10 @@ applabCommands.onEventFired = function(opts, e) {
 };
 
 applabCommands.onEvent = function(opts) {
+  // console.log('inside applabCommands.onEvent');
+  // console.log(opts);
   var divApplab = document.getElementById('divApplab');
+  //console.log(divApplab);
   // Special case the id of 'body' to mean the app's container (divApplab)
   // TODO (cpirich): apply this logic more broadly (setStyle, etc.)
   if (opts.elementId === 'body') {
@@ -1518,12 +1535,32 @@ applabCommands.onEvent = function(opts) {
       case 'change':
       case 'keyup':
       case 'dblclick':
-      case 'mousedown':
-      case 'mouseup':
       case 'mouseover':
       case 'mouseout':
       case 'keydown':
       case 'keypress':
+      case 'mousedown':
+        domElement.addEventListener(
+          opts.eventName,
+          applabCommands.onEventFired.bind(this, opts)
+        );
+        // Touch events will be mapped to mouse events in the EventSandboxer
+        domElement.addEventListener(
+          'touchstart',
+          applabCommands.onEventFired.bind(this, opts)
+        );
+        break;
+      case 'mouseup':
+        domElement.addEventListener(
+          opts.eventName,
+          applabCommands.onEventFired.bind(this, opts)
+        );
+        // Touch events will be mapped to mouse events in the EventSandboxer
+        domElement.addEventListener(
+          'touchend',
+          applabCommands.onEventFired.bind(this, opts)
+        );
+        break;
       case 'input':
         // For now, we're not tracking how many of these we add and we don't allow
         // the user to detach the handler. We detach all listeners by cloning the
@@ -1534,18 +1571,24 @@ applabCommands.onEvent = function(opts) {
         );
 
         // Touch events will be mapped to mouse events in the EventSandboxer
-        if (opts.eventName === 'mousedown') {
-          domElement.addEventListener(
-            'touchstart',
-            applabCommands.onEventFired.bind(this, opts)
-          );
-        }
-        if (opts.eventName === 'mouseup') {
-          domElement.addEventListener(
-            'touchend',
-            applabCommands.onEventFired.bind(this, opts)
-          );
-        }
+        // if (opts.eventName === 'mousedown') {
+        //   domElement.addEventListener(
+        //     'touchstart',
+        //     applabCommands.onEventFired.bind(this, opts)
+        //   );
+        // }
+        // if (opts.eventName === 'mouseup') {
+        //   domElement.addEventListener(
+        //     'touchend',
+        //     applabCommands.onEventFired.bind(this, opts)
+        //   );
+        // }
+        // if (opts.eventName === 'mousemove') {
+        //   domElement.addEventListener(
+        //     'touchmove',
+        //     applabCommands.onEventFired.bind(this, opts)
+        //   );
+        // }
         // To allow INPUT type="range" (Slider) events to work on downlevel browsers, we need to
         // register a 'change' listener whenever an 'input' listner is requested.  Downlevel
         // browsers typically only sent 'change' events.

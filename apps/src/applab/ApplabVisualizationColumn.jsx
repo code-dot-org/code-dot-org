@@ -37,6 +37,30 @@ class ApplabVisualizationColumn extends React.Component {
     widgetMode: PropTypes.bool
   };
 
+  componentDidMount() {
+    this.visualizationColumn.addEventListener(
+      'touchmove',
+      this.preventBehavior,
+      {
+        passive: false
+      }
+    );
+  }
+
+  componentWillUnmount() {
+    this.visualizationColumn.removeEventListener(
+      'touchmove',
+      this.preventBehavior,
+      {
+        passive: false
+      }
+    );
+  }
+
+  preventBehavior = e => {
+    e.preventDefault();
+  };
+
   getClassNames() {
     const {
       visualizationHasPadding,
@@ -120,6 +144,9 @@ class ApplabVisualizationColumn extends React.Component {
         id="visualizationColumn"
         className={this.getClassNames()}
         style={maxWidth}
+        ref={el => {
+          this.visualizationColumn = el;
+        }}
       >
         {!isReadOnlyWorkspace && (
           <PlaySpaceHeader
@@ -134,9 +161,7 @@ class ApplabVisualizationColumn extends React.Component {
             <ResetButton hideText style={styles.resetButton} />
           </div>
         )}
-        {/* The playspace phone frame has a run/reset button, so we don't need to render and hide
-            run/reset in GameButtons */}
-        <GameButtons noRunResetButton={playspacePhoneFrame}>
+        <GameButtons>
           {/* This div is used to control whether or not our finish button is centered*/}
           <div style={this.getCompletionButtonSyle()}>
             <CompletionButton />

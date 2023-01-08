@@ -114,6 +114,22 @@ EventSandboxer.prototype.sandboxEvent = function(event) {
   if (touchEvents[event.type]) {
     newEvent.type = touchEvents[event.type];
     mouseEvent = event.changedTouches[0];
+    if (newEvent.type === 'mousedown') {
+      console.log('touch event - touchstart');
+      console.log(mouseEvent);
+      console.log(Applab.turtle.x + ' ' + Applab.turtle.y);
+      Applab.turtle.x = (mouseEvent.clientX - this.xOffset_) / this.xScale_;
+      Applab.turtle.y = (mouseEvent.clientY - this.yOffset_) / this.yScale_;
+      console.log(Applab.turtle.x + ' ' + Applab.turtle.y);
+    }
+    if (newEvent.type === 'mouseup') {
+      console.log('touch event - touchend');
+      console.log(mouseEvent);
+    }
+    if (newEvent.type === 'mousemove') {
+      console.log('touch event - touchmove');
+      console.log(mouseEvent);
+    }
 
     // Calculate and assign values that can be missing when touch is used.
     // We treat mouseEvent as read-only, so we will go ahead and write these
@@ -126,6 +142,18 @@ EventSandboxer.prototype.sandboxEvent = function(event) {
     }
   } else {
     mouseEvent = event;
+    if (mouseEvent.type === 'mousedown') {
+      console.log('mouseEvent not touch event - mouse down');
+      console.log(mouseEvent);
+    }
+    if (mouseEvent.type === 'mouseup') {
+      console.log('mouseEvent not touch event - mouse up');
+      console.log(mouseEvent);
+    }
+    if (mouseEvent.type === 'mousemove') {
+      console.log('mouseEvent not touch event - mouse move');
+      console.log(mouseEvent);
+    }
   }
 
   // Convert x coordinates and then pass through to applabEvent:
