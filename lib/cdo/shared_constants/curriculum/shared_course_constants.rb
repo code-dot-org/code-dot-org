@@ -69,6 +69,7 @@ module Curriculum
       csf
       csc
       aiml
+      maker
       hoc
       csf_international
       math
