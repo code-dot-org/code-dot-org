@@ -370,8 +370,11 @@ ca:
         CSF_scrat_loops_K1: Bucles a l'Edat de Gel
         CSF_scrat_loops_CF: Bucles a l'Edat de Gel
         CSF_loops_AB: Bucles
+        CDEF_Video_SpritesInAction: Sprites en acció
+        CSF_SpriteLab_SpritesInAction_CDEF: Sprites en acció
         csd_pair_programming: Programació per parelles
         csd_applab_parameters: Funcions amb Paràmetres
+        CSF_SpriteLab_SpritesInAction_v2: Sprites en acció
         csd_debugging: Depuració
         playlab_2021: Introducció a Play Lab
         playlab_2021_reader: Introducció a Play Lab

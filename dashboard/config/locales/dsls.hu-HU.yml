@@ -664,6 +664,8 @@ hu-HU:
 
           *[A Weboldalak Célja - Tevékenységi Útmutató]
           (https://docs.google.com/document/d/16M-x8qNr0tdpfoHqyKo4sdbTzFOy5rKp8IBYmTQ7xkU/export?format=pdf)
+        teacher_markdown: "* [A weboldalak célja - Példa](https://docs.google.com/document/d/1wgsW8XNLrXeelcoMLLjp0kVgiJ-pnBivrvfcyL06b-A/edit)([PDF](https://docs.google.com/document/d/1wgsW8XNLrXeelcoMLLjp0kVgiJ-pnBivrvfcyL06b-A/export?format=pdf)
+          | [DOCX](https://docs.google.com/document/d/1wgsW8XNLrXeelcoMLLjp0kVgiJ-pnBivrvfcyL06b-A/export?format=doc))\n"
       CSD U2 L2 Overview:
         content1: a leírás itt található
         markdown: "# Áttekintés\n\nEz a lecke a weboldalakat, mint személyes kifejezésmódot
@@ -675,6 +677,9 @@ hu-HU:
           \n## Szótár\n\n* **Weboldal Tartalom** - A weblapon szereplő nyers szöveg,
           képek és más elemek\n\n## Források\n\n*[Személyes Weboldal Vázlat - Tevékenységi
           Útmutató]\n(https://docs.google.com/document/d/1wnK0ntxFWvUyuEB6SksiTtUDqrEhZZn3VPLWynz-fV4/export?format=pdf)"
+        teacher_markdown: "* [Saját weboldal vázlata](https://docs.google.com/document/d/10zHN3SErzKQLNEvr8e0j2UVjPCR5oSQdrfoFpbZbJiU/edit?usp=sharing)
+          - Exemplar ([PDF](https://docs.google.com/document/d/10zHN3SErzKQLNEvr8e0j2UVjPCR5oSQdrfoFpbZbJiU/export?format=pdf)
+          | [DOCX](https://docs.google.com/document/d/10zHN3SErzKQLNEvr8e0j2UVjPCR5oSQdrfoFpbZbJiU/export?format=doc))\n"
       CSD U2 L3 Overview:
         content1: a leírás itt található
         markdown: |-
@@ -2336,13 +2341,25 @@ hu-HU:
         - {}
       courseD_multi_collector_debugging10_predict1:
         answers:
-        - {}
-        - {}
-        - correct: true
+        - text: Laurel rossz irányba fordul a saroknál.
+          feedback: A megoldásod csak részben jó, a ciklus valóban nem fut le elégszer,
+            de van egy nagyobb gond is.
+        - text: 'A ciklus nem fut le elégszer ahhoz, hogy Laurel eljusson az összes
+            kincshez. '
+          feedback: Részben helyes csak a megoldásod, mert a négyzet rajzolásakor
+            nem jó az elfordulás iránya.
+        - text: Laurel rossz irányba fordul *és* a ciklus nem ismétlődik elégszer
+            ahhoz, hogy Laurel megszerezze az összes kincset.
+          correct: true
           feedback: Helyes!
         - text: Nem tudom.
+          feedback: Laurel rossz irányba fordul *és* a ciklus nem ismétlődik elégszer
+            ahhoz, hogy Laurel megszerezze az összes kincset.
         questions:
-        - {}
+        - text: 'Nézd meg alaposan az alábbi kódot. Miért nem gyűjti össze Laurel
+            az összes kincset, amikor a "Futtatás” gombra kattintasz? Figyelem: Ez
+            egy trükkös kérdés, feltétlenül olvasd el az összes lehetőséget, mielőtt
+            válaszolnál!'
       courseD_multi_farmer_condLoops9_predict1:
         answers:
         - {}
@@ -2381,13 +2398,28 @@ hu-HU:
         - {}
       courseD_multi_farmer_ramp13:
         answers:
-        - {}
-        - correct: true
+        - text: A gazda elmegy az út végére, és felszedi a tököt.
+          feedback: Nem jó! A `felszed tök` blokk az ismétléses cikluson belül van,
+            így a gazda minden lépés után tököt akar felszedni, de tök csak az út
+            legvégén van.
+        - text: A gazda minden négyzetről megpróbál tököt felszedni, ezért el sem
+            jut az út végén a  tökhöz.
+          correct: true
           feedback: Helyes!
-        - {}
+        - text: A gazda négy négyzetet előrelép, aztán megpróbálja felszedni a tököt.
+          feedback: Nem jó! A `felszed tök` blokk az ismétléses cikluson belül van,
+            így a gazda minden lépés után tököt akar felszedni, de tök csak az út
+            legvégén van.
         - text: Nem tudom.
+          feedback: A `felszed tök` blokk az ismétléses cikluson belül van, így a
+            gazda minden lépés után tököt akar felszedni, de tök csak az út legvégén
+            van.
         questions:
         - {}
+        markdown: 'Itt egy új feladattípus, ami hasonló blokkokat használ, mint amikkel
+          már korábban megismerkedtél. Kitalálod, hogy mi történik az alábbi kód futtatásakor?
+
+'
       courseD_multi_farmer_while10_predict2:
         answers:
         - {}
@@ -2462,11 +2494,16 @@ hu-HU:
         - {}
       courseD_multi_maze_until10_predict2:
         answers:
-        - correct: true
+        - text: A zombi azonnal jobbra fordul, és elakad.
+          correct: true
           feedback: Helyes!
-        - {}
-        - {}
+        - feedback: Rossz válasz. Ebben a kódban *előbb* próbál jobbra fordulni, minthogy
+            leellenőrizné, hogy van-e út előre. Emiatt hibás a megoldás.
+        - feedback: Rossz válasz. A zombi csak azt nézi meg, hogy van-e út jobbra
+            vagy előrefelé. Soha nem néz balra, ezért akad el a pályán.
         - text: Nem tudom.
+          feedback: Ebben a kódban *előbb* próbál jobbra fordulni, minthogy leellenőrizné,
+            hogy van-e út előre. Emiatt hibás a megoldás.
         questions:
         - {}
       courseD_multi_maze_until10_predict2_2018:
@@ -3588,8 +3625,12 @@ hu-HU:
             a programot?
       courseAB_EOC_2021:
         display_name: Kurzus Projekt vége
+        description: Elértél a tanfolyam utolsó leckéjéhez! Válassz egy projektet,
+          amit elkészítesz!
       courseB_EOC_2021:
         display_name: Kurzus Projekt vége
+        description: Elértél a tanfolyam utolsó leckéjéhez! Válassz egy projektet,
+          amit elkészítesz!
       courseF_EOC_samples_2021:
         display_name: Kurzus Projekt vége
       CSD U3 Collisions SFLP:
@@ -3951,7 +3992,7 @@ hu-HU:
 
           * [Bemenet és Kimenet - Tevékenységi Útmutató]
           (https://docs.google.com/document/d/1ObS_kxkXoueaotPYFAEkcCDzn690zumqoLLnrU5kY2Q/export?format=pdf)
-        teacher_markdown: "[Bemenet és Kimenet - Példány](https://docs.google.com/document/d/1WbKCLz7VgLOJCHFcz8cnxFi4ibEXhBZYQEsDidEi8XY/edit?usp=sharing)
+        teacher_markdown: "[Bemenet és Kimenet - Minták](https://docs.google.com/document/d/1WbKCLz7VgLOJCHFcz8cnxFi4ibEXhBZYQEsDidEi8XY/edit?usp=sharing)
           - Tevékenységi Útmutató ([PDF](https://docs.google.com/document/d/1WbKCLz7VgLOJCHFcz8cnxFi4ibEXhBZYQEsDidEi8XY/export?format=pdf)
           | [DOCX](https://docs.google.com/document/d/1WbKCLz7VgLOJCHFcz8cnxFi4ibEXhBZYQEsDidEi8XY/export?format=doc))"
       CSD U1 Lesson 6 Overview:
@@ -3975,7 +4016,7 @@ hu-HU:
         markdown: |-
           # Áttekintés
 
-          Ebben a leckében megtanulod a számítógépek milyen fajta információt tárolnak és a tárolás hogyan válik kritikus részévé az információ feldolgozásnak.
+          Ebben a leckében megtanulod, hogy a számítógépek milyen típusú információkat tárolnak, és ez a tárolás hogyan válik az információ feldolgozásnak fontos részévé.
 
           ## Forrrások
 
@@ -5303,12 +5344,12 @@ hu-HU:
         - {}
       Unit 1 Lesson 1 Overview:
         markdown: "# Áttekintés\n\nAz osztály csoportokban dolgozva fog egy alumínium
-          hajót tervezni, ami minél több fillért fog megtartani. A lecke végén a csoportok
-          reflektálnak a tapasztalataikra, és kapcsolatot teremtenek azokkal a problémamegoldási
-          típusokkal, amelyeket a kurzus hátralévő részében alkalmazni fognak. \n\n##
-          Források\n* [Alumínium Hajók]\n(https://docs.google.com/document/d/1C5RMzH0811r8e2XdVbWV-GANm3uIar2_N8hI9jqX2rk/export?format=pdf)
+          hajót tervezni, a lehető legtakarékosabb módob. A lecke végén a csoportok
+          beszámolnak a tapasztalataikról, és megbeszélik a problémamegoldási javaslataikat,
+          hogy azokat a kurzus hátralévő részében alkalmazzák. \n\n## Források\n*
+          [Alumínium Hajók]\n(https://docs.google.com/document/d/1C5RMzH0811r8e2XdVbWV-GANm3uIar2_N8hI9jqX2rk/export?format=pdf)
           - Tevékenységi Útmutató (mentés [MS Word]-ként)\n(https://docs.google.com/document/d/1C5RMzH0811r8e2XdVbWV-GANm3uIar2_N8hI9jqX2rk/export?format=doc),
-          [Goggle Doc]\n(https://docs.google.com/document/d/1C5RMzH0811r8e2XdVbWV-GANm3uIar2_N8hI9jqX2rk/copy))\n"
+          [Google Doc]\n(https://docs.google.com/document/d/1C5RMzH0811r8e2XdVbWV-GANm3uIar2_N8hI9jqX2rk/copy))\n"
         teacher_markdown: |
           [key]
 
@@ -5334,7 +5375,7 @@ hu-HU:
       Unit 1 Lesson 3 Overview:
         markdown: |-
           # Áttekintés
-          Ebben a leckében a problémamegoldási folyamatot fogod alkalmazni különböző problémákra, felfedezve, hogy az egyes lépések hogyan segítenek kidolgozni és javítani a problémák megoldásában.
+          Ebben a leckében a problémamegoldási folyamatot fogod alkalmazni különböző problémákra, felfedezve, hogy az egyes lépések hogyan segítenek a problémák megoldásában, vagy a hibák javításában.
 
           ## Források
 
@@ -5352,7 +5393,7 @@ hu-HU:
           ## Források
           *[Mi az a Számítógép - Tevékenységi Útmutató]
           (https://docs.google.com/document/d/1g4dPcsx2xADEZI0FiMYApLr0hh3_-89NDWd2y86sS6I/export?format=pdf)
-        teacher_markdown: "[Mi az a Számítógép - Példány](https://docs.google.com/document/d/19QfEaVJcF85W6iZwITFIcPycO11znVjYTAaKO78VPH0/edit?usp=sharing)
+        teacher_markdown: "[Mi az a Számítógép - Minták](https://docs.google.com/document/d/19QfEaVJcF85W6iZwITFIcPycO11znVjYTAaKO78VPH0/edit?usp=sharing)
           - Tevékenységi Útmutató ([PDF](https://docs.google.com/document/d/19QfEaVJcF85W6iZwITFIcPycO11znVjYTAaKO78VPH0/export?format=pdf)
           | [DOCX] (https://docs.google.com/document/d/19QfEaVJcF85W6iZwITFIcPycO11znVjYTAaKO78VPH0/export?format=doc))"
       aiml-ch1-pulse-survey-q1_2021:
@@ -11119,8 +11160,12 @@ hu-HU:
           ## Milyen információk azok, amik online megosztása rendben van?
       courseAB_EOC2022:
         display_name: Kurzus Projekt vége
+        description: Elértél a tanfolyam utolsó leckéjéhez! Válassz egy projektet,
+          amit elkészítesz!
       courseB_EOC2022:
         display_name: Kurzus Projekt vége
+        description: Elértél a tanfolyam utolsó leckéjéhez! Válassz egy projektet,
+          amit elkészítesz!
       courseC_multi_artist_prog6_predict12022:
         answers:
         - text: A művész olyan háromszöget rajzol, amelyiknek mindhárom oldala egyenlő
@@ -11525,3 +11570,17 @@ hu-HU:
           projekteket készíteni, mint ezek... és még sok mást is tudni fogsz!
       csd-pre-survey-levelgroup_21_22_2022:
         title: Számítástechnika felfedezése c. tanfolyam előzetes felmérése
+      GettingLoopy-Unplugged_2021:
+        markdown: |
+          # Ismétlődések
+
+          Ez a leckbe bemutatja az ismétlődések szerepét a programozásban, méghozzá egy kis tánc segítségével.
+      TheRightAppMarkdownLevel_2021:
+        markdown: |
+          # A megfelelő alkalmazás
+
+          * Ma már mindenki használ számítógépet, különösen okostelefont.
+          * Az okostelefonos alkalmazások segítenek az embereknek, hogy beszélgessenek a barátokkal, zenét hallgassanak, vásárloljanak, vagy csak egyszerűen böngésszenek az interneten.
+          * Fontos, hogy a programozók megértsék a felhasználók igényeit, és ezeket szem előtt tartva tervezzenek alkalmazásokat!
+
+          ![](https://images.code.org/fb17eeb9238d2f26c6ab40c9841517a7-image-1555611687284.png)

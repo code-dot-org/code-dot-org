@@ -255,7 +255,7 @@
           "name": "Değişkenler"
         },
         "k5-onlinepd-2019/For Loops": {
-          "name": "For Döngüleri"
+          "name": "For (İçin) Döngüleri"
         },
         "k5-onlinepd-2019/Sprite Lab": {
           "name": "Hareketli Nesne Laboratuvarı"
@@ -401,7 +401,7 @@
         "coursed-2022/Password Power-Up": {
           "name": "Şifre Güçlendirme",
           "overview": " [![sağduyu eğitimi](https://curriculum.code.org/static/img/common_sense_education.png)](https://www.commonsense.org)\n\nBu ders başlangıçta [Common Sense Education](https://www.commonsense.org/education/digital-citizenship/curriculum)tarafından oluşturulmuştur.\n\nDaha güçlü, daha güvenli çevrimiçi şifreler herkes için iyi bir fikirdir. Ama çocuklara daha iyi şifreler oluşturmalarına ve onları hatırlamalarına nasıl yardımcı olabiliriz? Çocukların hem güvenli hem de akılda kalıcı şifreler oluşturmalarına yardımcı olmak için bu derste ipuçlarını kullanın.",
-          "preparation": "-   Öğretim materyallerini gözden geçirin.\n-   Her öğrenci için baskı sadaka (ler).\n-   Öğrenciler için yazı kağıdı veya not defteri hazırlar.",
+          "preparation": "-   Öğretim materyallerini gözden geçirin.\n-   Her öğrenci için çıktı (lar).\n-   Öğrenciler için yazı kağıdı veya not defteri hazırlar.",
           "purpose": "Common Sense'in Dijital Vatandaşlık Müfredatı, çocuklar, medya ve teknoloji üzerine yapılan en son araştırmalara dayanan altı temel konuya değinmektedir. Bu ders Gizlilik ve Güvenlik üzerine yoğunlaşmaktadır. Öğrenciler kişisel bilgileri nasıl koruyacaklarını öğrenirler ve veri gizliliği haklarını daha derinlemesine anlayarak kendileri ve başkalarını savunabilirler.",
           "student_overview": "Bu derste, şifrelerinizin bilgilerinizi nasıl koruduğunu ve nasıl iyi bir şifre oluşturulacağını öğreneceksiniz."
         },
@@ -412,7 +412,7 @@
           "student_overview": "Bu derste, resimleri çizmesi için sınıf arkadaşınızı programlayacaksınız!"
         },
         "coursed-2022/Introduction to Online Puzzles": {
-          "name": "Online Bulmacalara Giriş",
+          "name": "Çevrimiçi Bulmacalara Giriş",
           "overview": "Bu bulmaca setinde, öğrenciler Code.org'un çevrimiçi çalışma alanına giriş (veya sınıf tecrübesine göre inceleme) ile başlayacaklar. Çalışma alanının, \\`Çalıştır',' Sıfırla', ve 'Adım' düğmeleri gibi temel işlevselliğine işaret eden videolar olacaktır. Ayrıca bu videolarda da tartışılmıştır: Blockly bloklarını sürükleme, Blockly bloklarını silme ve Blockly bloklarını bağlama. Sonra, öğrenciler labirentte _sequencing_ ve _debug_ becerilerini uygulayacaklardır. Oradan, öğrenciler _loops_'un temellerini öğrendiğinde Koleksiyoner, Sanatçı ve Biçerdöver gibi yeni bulmaca türlerini görecekler.",
           "purpose": "Her sınıfın her konu için bir anlama spektrumu olduğunu biliyoruz. Sınıfınızdaki bazı öğrenciler, bilgisayar dâhisi olabilirken, diğerleri pek de çok deneyimli olmayabilir. Eşit bir oynama (ve öğrenme) alanı oluşturmak için, Kurs D için bu \"Aşamayı Arttır\"ı geliştirdik. Bu, Code.org ve temel bilgisayar bilimi kavramlarının nasıl kullanılacağına dair bir giriş veya bir gözden geçirme olarak kullanılabilir. Bu aşama, Kurs D'ye başlamak için gereken tüm ön şartları kapsar.",
           "student_overview": "Bu ders, bu kursta ihtiyacınız olan becerilere çalışmanızı sağlayacak."
@@ -424,13 +424,13 @@
           "student_overview": "Kod ile çizimler yaptığınız kursun başını hatırlayın. Bu derste, çok benzer bir şey yapmak için bir takımla birlikte çalışacaksınız!"
         },
         "coursed-2022/Debugging with Laurel": {
-          "name": "Toplayıcıda Hata Ayıklama",
+          "name": "Laurel ile Hata Ayıklama",
           "overview": "Bu çevirim içi etkinlikte, öğrenciler 'toplayıcı' ortamında hata ayıklama üzerinde çalışacaklar. Öğrenciler, basit algoritmalar, döngüler ve iç içe döngüler ile bulmacaları çözmek için kod okuma ve düzenleme alıştırması yapacaklar.",
           "purpose": "Bu dersin amacı öğrencilere yeni bir beceri öğrenirken başarısızlığın normal olduğunu öğretmektir. Öğrencilere çalışmayan önceden yazılı programlar verilecektir. Bu programları düzeltmeleri istenecektir. Hata ayıklama adı verilen bu süreç öğrencilere temel problem çözme ve eleştirel düşünme becerilerini öğretir. Öğrenciler daha zor ve daha zor programlama projelerine devam ettikleri için bu beceriler aktarılır.",
           "student_overview": "Kodlama esnasında hiç problem yaşadınız mı? Bu ders, size, hata ayıklamanın sırlarını öğretecek. Hata ayıklama, kodunuzdaki hataları bulma ve düzeltme sürecidir."
         },
         "coursed-2022/Events in Bounce": {
-          "name": "Sıçrama Olayları",
+          "name": "Bounce'daki Etkinlikler",
           "overview": "Bu çevrim içi etkinlikte, öğrenciler, olayların ne olduğunu, bilgisayarın video oyunlar gibi programlarda olayları nasıl kullandığını öğrenirler. Öğrenciler, olaylara (yön düğmelerine basmak gibi) tepki veren program yapmak için bulmacalar üzerinde çalışırlar. Bulmacanın sonunda, öğrencilerin, oyunlarında farklı hızları ve sesleri kullanabilecekleri fırsatları olacak.",
           "purpose": "Bilgisayar programlarında, özellikle de video oyunlarında olaylar çok yaygındır.  \n\nBu derste öğrenciler, spor temelli bir oyun yaparak olayları daha iyi anlayacaklar. Öğrenciler, paletlerini ok anahtarlarına göre hareket ettirmeyi ve nesneler çarpıştığında ses çıkarmayı öğrenecekler. En sonunda oyunlarını benzersiz yapmak için onu kişiselleştirmeyi öğrenecekler.",
           "student_overview": "Hiç okulda bilgisayar oyunları oynamayı dilediniz mi? Bu derste kendi oyununuzu oluşturacaksınız!"
@@ -454,7 +454,7 @@
           "student_overview": "Bu derste Scrat'in mümkün olduğunca etkili bir şekilde meşe palamuduna ulaşmasına yardım etmek için tekrar bloğunu kullanacaksınız."
         },
         "coursed-2022/Drawing Shapes with Loops": {
-          "name": "Sanatçıların Döngüleri",
+          "name": "Döngüler ile Şekiller Çizme",
           "overview": "Bu ders, önceki derslerden döngülerin anlaşılmasına katkıda bulunur ve öğrenciye tam anlamıyla yaratıcı olma şansını verir. Bu aktivite, ekstra problem-çözme pratiği için bir hata ayıklama egzersizi olarak da kullanılır.",
           "purpose": "Bu seri, öğrencilerin 'repeat\\` döngülerinin neden uzun boydan üstün olduğunu düşünmelerini sağlamak için bir dizi bulmacayla döngülerin gücünü vurgular.",
           "student_overview": "Bu derste döngüler, Sanatçı ile süper resimler yapmayı kolaylaştırır."
@@ -472,19 +472,19 @@
           "student_overview": "Yalnızca kesin şartlar altında puan kazanacağınız bir oyunu oynama zaman geldi!"
         },
         "coursed-2022/Looking Ahead with Minecraft": {
-          "name": "Geleceğe bakış",
+          "name": "Minecraft ile ileriye bakmak",
           "overview": "Bu ders, aslında Minecraft takımında Kod Saati için oluşturuldu. Öğrencilerin, şu ana kadar öğrendikleri fikirleri pratiğe dökme ve ayrıca koşullara şöyle bir göz atma şansı olacak!",
           "purpose": "Bu bulmaca dizisi, döngüler hakkındaki bilgilerini pekiştirmeye ve arttırmaya yarayacaktır, ve koşulları tanıtacaktır. Bu iki kavramı birbiri ile eşleştirerek öğrenciler, yeni ve heyecan verici bir ortamda eğlenceli ve yenilikçi programlar oluşturma potansiyelini keşfedebilecekler.",
           "student_overview": "Lavdan Kaçının! Burada Minecraft dünyasındaki koşulları öğrenmeye başlayacaksınız."
         },
         "coursed-2022/If/Else with Bee": {
-          "name": "Koşullar-Arı",
+          "name": "Arı ile \"Eğer/Başka\"",
           "overview": "Bu noktaya kadar öğrenciler her çalıştırıldığında aynı biçimde çalışan kod yazıyor - güvenilir, ama bu çok esnek değildir. Bu derste, sınıfınız, koşullu koşullarla kodlamaya başlayacak ve programın karşılaştığı özel koşullara bağlı olarak farklı biçimde çalışan kod yazmalarına izin verecektir.",
           "purpose": "“Kartlı Şartlar” programında koşullara tanıtıldıktan sonra öğrenciler şimdi programlarında bunları kullanarak pratik yapacaklar. “if/else” blokları daha esnek bir program sağlar. Arı sadece nektar toplayacak _if_ bir çiçek var ya da bal yapmak _if_ bir petek var. ",
           "student_overview": "Şimdi koşulları anladığınıza göre, nektar ve balı toplaması için arıyı programlama zamanı. "
         },
         "coursed-2022/While Loops in Farmer": {
-          "name": "Çiftçi Döngüleri",
+          "name": "Farmer'da Süresince Döngüleri",
           "overview": "Bu **beceri geliştirme** dersinde, öğrenciler Farmer'da çukurları doldurmak ve toprak kazmak için çalışacaklar, ancak deliklerin boyutunu veya toprak yığınlarının yüksekliğini bilemeyecekler. Bu bulmacaları çözmek için öğrenciler yeni bir tür döngü kullanacaklar.",
           "purpose": "Öğrencileriniz döngü bilgilerini derinleştirmeye devam ettikçe, bir komutun tekrarlanması gereken sorunlarla karşılaşacaklardır, ancak kaç kez tekrarlanması gerektiği bilinmemektedir. Bu sırada döngüler devreye giriyor. Bugünün dersinde, öğrenciler, yeni başlayanların koşullara dayalı döngüler anlayışını geliştirecek ve genel olarak döngüler bilgisini genişletecektir. ",
           "student_overview": "Döngüler kodlama için oldukça kullanışlıdır. Bu ders size yeni bir döngüyü öğretecek: süresince (while) döngüleri!"
@@ -504,9 +504,9 @@
         },
         "coursef-2022/The Power of Words": {
           "name": "Kelimelerin gücü",
-          "overview": "[![common sense education](https://curriculum.code.org/static/img/common_sense_education.png)](https://www.commonsense.org)\n\nBu dersi ilk olarak Common Sense Education oluşturmuştur. [Daha fazla bilgi edinin.](https://www.commonsense.org/education/digital-citizenship/curriculum)\n\nÇocuklar büyüdükçe, doğal olarak daha fazla çevrimiçi iletişim kurmaya başlayacaklar. Ancak gördükleri şeylerin bazıları onları incitebilir, üzebilir, öfkelendirebilir ve hatta korkutabilir. Öğrencilerinizin başkaları için empati kurmalarına ve siber zorbalıkla karşılaştıklarında kullanacakları stratejileri öğrenmelerine yardımcı olun.",
-          "preparation": "-   Öğretim materyallerini gözden geçirin.\n-   Her öğrenci için baskı sadaka (ler).\n-   Sınıf için uzun bir dize (veya ip) ve kağıt hazırlayın.",
-          "purpose": "Common Sense'in Dijital Vatandaşlık Müfredatı, çocuklar, medya ve teknoloji üzerine yapılan en son araştırmalara dayanan altı temel konuya değinmektedir. Bu ders Siberzorbalık, Dijital Dram ve Nefret Konuşması üzerine yoğunlaşmaktadır. Öğrenciler bu zorlu konuları ele alır ve olumlu, destekleyici çevrimiçi topluluklar oluşturmak ve çevrimiçi zulümle mücadele etmek için astarların aktif rolünü oynarlar.",
+          "overview": "[![common sense education](https://curriculum.code.org/static/img/common_sense_education.png)](https://www.commonsense.org)\n\nBu ders Common Sense Education tarafından oluşturulmuştur. [Daha fazla bilgi edinin.](https://www.commonsense.org/education/digital-citizenship/curriculum)\n\nÇocuklar büyüdükçe, doğal olarak daha fazla çevrimiçi iletişim kurmaya başlayacaklar. Ancak gördükleri şeylerin bazıları onları incitebilir, üzebilir, öfkelendirebilir ve hatta korkutabilir. Öğrencilerinizin başkaları için empati kurmalarına ve siber zorbalıkla karşılaştıklarında kullanacakları stratejileri öğrenmelerine yardımcı olun.",
+          "preparation": "-   Öğretim materyallerini gözden geçirin.\n-   Her öğrenci için çıktı(lar).\n-   Sınıf için uzun bir dize (veya ip) ve kağıt hazırlayın.",
+          "purpose": "Common Sense'in Dijital Vatandaşlık Müfredatı, çocuklar, medya ve teknoloji üzerine yapılan en son araştırmalara dayanan altı temel konuya değinmektedir. Bu ders Siberzorbalık, Dijital Dram ve Nefret Konuşması üzerine yoğunlaşmaktadır. Öğrenciler bu zorlu konuları ele alır ve olumlu, destekleyici çevrimiçi topluluklar oluşturmak ve çevrimiçi zulümle mücadele etmek için dik duranların aktif rolünü oynarlar.",
           "student_overview": "Zorbalık hiçbir zaman iyi değildir. Bu ders, size, çevrimiçi ortamda neyi söylemenin doğru ve neyi söylemenin yanlış olduğunu öğretecektir."
         },
         "coursef-2022/Introducing Sprite Lab": {
@@ -538,11 +538,13 @@
           "student_overview": "Bu derste öğrenciler, istedikleri gibi görünen ve davranan etkileşimli bir Sanal Evcil Hayvan oluşturacaktır. Öğrenciler, kendi evcil hayvanının görünümünü istediği gibi yapmak için Hareketli Nesne Laboratuvarının \"Müşteriler\" aracını kullanacaktır. Sonrasında, evcil hayvanlarına istedikleri yaşamı vermek için öğrendikleri olayları, davranışları ve diğer kavramları kullanacaktır."
         },
         "coursef-2022/Blank Space Stories": {
+          "name": "Boş Alan Hikayeleri",
           "overview": "Bu **bağlam belirleme** dersinde öğrenciler, bilgisayarların bir kullanıcıdan gelen girdileri nasıl alıp depoladığını anlamak için dolgu hikayelerini (Mad Libs®'e benzer) kullanacak ve daha sonra bunu programda nasıl çalıştığına bağlı olarak kullanacaktır.",
           "preparation": "6 zarf elde edin (aynı zamanda uygun: kağıt veya indeks kartları, ikiye katlanmış). \n\n-   Her zarfın önünü büyük harflerle etiketleyin: nesne, sıvı, sayı, sıfat, gövde parçası, sayı\n-   Öğrencinin kopyalarını yazdırın **\\\\ \\*çalışma sayfası** (veya dijital sürümü LMS'nize gönderin).",
           "purpose": "Bu ders, öğrenciler programlamaya geri döndüğünde değişkenlerin nasıl çalıştığını anlamaya yardımcı olacak ortak bir bağlam sağlar."
         },
         "coursef-2022/Text and Prompts": {
+          "name": "Metin ve Bilgi İstemleri",
           "preparation": "Seviyeleri ile oynayın ve ders slaytlarını gözden geçirin.",
           "purpose": "Bu derste değişkenler veri depolamak ve değiştirmek için kullanılacaktır. Bu noktada öğrenciler sadece değerleri değiştirmeden depolayıp geri alacaklardır. Daha sonraki derslerde öğrenciler sayısal değerleri saklar ve zamanla değiştirerek oyundaki oyuncunun puanı gibi şeyleri takip eder."
         },
@@ -550,6 +552,15 @@
           "name": "Mini Proje: Kullanıcı Giriş Programları",
           "preparation": "-   Planlama kılavuzunu yazdırın veya her öğrenciye dijital bir kopyasını dağıtın. Sınıfınıza uyacak herhangi bir değişiklik yapmak isterseniz, vaktinden önce gözden geçirin.\n\n-   Öğrencilerin takip etmesi gereken akışa aşina olmak için önceden seviye 3'teki seçenekleri gözden geçirin.\n\n-   Bu ders birden fazla sınıf dönemine kadar uzanma potansiyeline sahiptir. Sonuçlarını zamanından önce planlamayı düşünün.",
           "purpose": "Bu ders yeni becerileri veya kavramları tanıtmaz, ancak bunun yerine öğrendiklerini yaratıcı bir şekilde uygulama fırsatı verir."
+        },
+        "coursef-2022/[New] Lots of Sprites": {
+          "name": "Bir sürü hareketli nesne"
+        },
+        "coursef-2022/[New] Counting with Variables": {
+          "name": "Değişkenlerle Sayma"
+        },
+        "coursef-2022/[New] Mini-Project: Collector Game": {
+          "name": "Mini-Proje: Koleksiyoncu Oyunu"
         },
         "coursef-2022/Simulating Experiments": {
           "name": "Deneyleri Benzetme",
@@ -587,15 +598,15 @@
         },
         "coursee-2022/Be A Super Digital Citizen": {
           "name": "Süper Bir Dijital Vatandaş Olun",
-          "overview": "[![common sense education](https://curriculum.code.org/static/img/common_sense_education.png)](https://www.commonsense.org)\n\nBu dersi ilk olarak Common Sense Education oluşturmuştur. [Daha fazla bilgi edinin.](https://www.commonsense.org/education/digital-citizenship/curriculum)\n\nÇevrimiçi araçlar çocuklara güç verirken büyük sorumlulukları da beraberinde getirir. Ancak çocuklar siber zorbalıkla karşılaştıklarında ne yapacaklarını her zaman biliyor mu? Karşı çıkmaktan ihtiyacı olanlara yardım etmeye kadar her şey dahil olmak üzere, öğrencilerinize hareket geçme ve çatışmaları çözmeye dair uygun yolları gösterin.",
+          "overview": "[![common sense education](https://curriculum.code.org/static/img/common_sense_education.png)](https://www.commonsense.org)\n\nBu ders Common Sense Education tarafından oluşturmuştur. [Daha fazla bilgi edinin.](https://www.commonsense.org/education/digital-citizenship/curriculum)\n\nÇevrimiçi araçlar çocuklara güç verirken büyük sorumlulukları da beraberinde getirir. Ancak çocuklar siber zorbalıkla karşılaştıklarında ne yapacaklarını her zaman biliyor mu? Öğrencilerinize, dik durmaktan ihtiyacı olanlara yardım etmeye kadar, harekete geçmenin ve çatışmaları çözmenin uygun yollarını gösterin.",
           "preparation": "-   Öğretim materyallerini gözden geçirin.\n-   Her öğrenci için çalışma kağıtlarını yazdırın.\n-   Öğrenciler için renkli kalemler veya keçeli kalemler hazırlayın.",
-          "purpose": "Common Sense'in Dijital Vatandaşlık Müfredatı, çocuklar, medya ve teknoloji üzerine yapılan en son araştırmalara dayanan altı temel konuya değinmektedir. Bu ders Siberzorbalık, Dijital Dram ve Nefret Konuşması üzerine yoğunlaşmaktadır. Öğrenciler bu zorlu konuları ele alır ve olumlu, destekleyici çevrimiçi topluluklar oluşturmak ve çevrimiçi zulümle mücadele etmek için astarların aktif rolünü oynarlar.",
+          "purpose": "Common Sense'in Dijital Vatandaşlık Müfredatı, çocuklar, medya ve teknoloji üzerine yapılan en son araştırmalara dayanan altı temel konuya değinmektedir. Bu ders Siberzorbalık, Dijital Dram ve Nefret Konuşması üzerine yoğunlaşmaktadır. Öğrenciler bu zorlu konuları ele alır ve olumlu, destekleyici çevrimiçi topluluklar oluşturmak ve çevrimiçi zulümle mücadele etmek için dik duranların aktif rolünü oynarlar.",
           "student_overview": "Siber zorbalığa şahit olduğunuzda nasıl karşı çıkabileceğinizi öğrenin."
         },
         "coursee-2022/Private and Personal Information": {
           "name": "Özel ve Kişisel Bilgiler",
           "overview": " [![common sense education](https://curriculum.code.org/static/img/common_sense_education.png)](https://www.commonsense.org)\n\nBu dersi ilk olarak Common Sense Education oluşturmuştur. [Daha fazla bilgi edinin.](https://www.commonsense.org/education/digital-citizenship/curriculum)\n\nBaşkalarıyla paylaşmak ve bağlantı kurmak öğrencilerimizin doğasında var. Ancak çevrimiçi paylaşım bazı risklerle birlikte gelir. Çocukların çevrimiçi ortamda güçlü, olumlu ve güvenli ilişkiler kurmalarına nasıl yardımcı olabiliriz? Öğrencilerinizin kişisel olan bilgiler ve gizli tutulması daha iyi olan bilgiler arasındaki farkı öğrenmelerine yardımcı olun.",
-          "preparation": "-   Öğretim materyallerini gözden geçirin.\n-   Her öğrenci için baskı sadaka (ler).",
+          "preparation": "-   Öğretim materyallerini gözden geçirin.\n-   Her öğrenci için çıktı(lar) alın.",
           "purpose": "Common Sense'in Dijital Vatandaşlık Müfredatı, çocuklar, medya ve teknoloji üzerine yapılan en son araştırmalara dayanan altı temel konuya değinmektedir. Bu ders Gizlilik ve Güvenlik üzerine yoğunlaşmaktadır. Öğrenciler kişisel bilgileri nasıl koruyacaklarını öğrenirler ve veri gizliliği haklarını daha derinlemesine anlayarak kendileri ve başkalarını savunabilirler.",
           "student_overview": "İnternet eğlenceli ve heyecanlıdır, fakat güvende kalmak da önemlidir. Bu ders size, paylaşmanın güvenli olduğu bilgi ile özel bilgi arasındaki farkı öğretecek."
         },
@@ -630,6 +641,7 @@
           "student_overview": "Daha iç içe döngüler! Bu sefer, iç içe geçmiş döngülerle biraz İLGİNÇ çizimler yapacaksınız."
         },
         "coursee-2022/Mini-Project: Design a Snowflake": {
+          "name": "Mini Proje: Bir Kar Tanesi Tasarlayın",
           "overview": "Şimdi, öğrenciler döngülerini nasıl kademe kademe yapacaklarını bildiklerine göre çok güzel şeyler oluşturabilirler. Bu ders, öğrencilerin Anna ve Elsa'nın mükemmel buz pateni yapma becerilerini kullanarak kendi hazır resim dosyalarını oluşturmaları için bir dizi alıştırma yapmalarını sağlayacak!",
           "preparation": "-   Sınıfınız için varsa bir potansiyel sorun alanını bulmak üzere bulmacalarla oynayın. \n-   Her öğrencinin bir düşünce günlüğü olduğundan emin olun.",
           "purpose": "Bu derste öğrenciler, paylaşmaktan heyecan duyacakları görüntüler oluşturmak için iç içe döngüleri kullanma becerilerini uygulayacaklar.",
@@ -699,13 +711,13 @@
         },
         "courseb-2022/Digital Trails": {
           "name": "Dijital İzler",
-          "overview": " [![sağduyu eğitimi](https://curriculum.code.org/static/img/common_sense_education.png)](https://www.commonsense.org)\n\nBu ders aslen Sağduyu Eğitimi tarafından oluşturulmuştur. [Daha fazla bilgi edinin.](https://www.commonsense.org/education/digital-citizenship/curriculum)\n\nonline ne her zaman çevrimiçi kalmak mı? Öğrenciler, çevrimiçi olarak paylaştıkları bilgilerin dijital bir ayak izi veya “iz” bıraktığını öğrenirler. Nasıl yönettiklerine bağlı olarak, bu iz büyük veya küçük, zararlı veya yararlı olabilir. Öğrenciler farklı yolları karşılaştırır ve geride bırakmak istedikleri bilgileri eleştirel düşünürler.",
-          "preparation": "-   Öğretim materyallerini gözden geçirin.\n-   Her öğrenci için baskı sadaka (ler).",
-          "purpose": "Common Sense'in Dijital Vatandaşlık Müfredatı, çocuklar, medya ve teknoloji üzerine yapılan en son araştırmalara dayanan altı temel konuya değinmektedir. Bu ders Dijital Ayak İzi ve Kimlik üzerine yoğunlaşmaktadır. Öğrenciler çevrimiçi paylaşımın yararlarını ve risklerini göz önünde bulundurur ve dijital bir kişinin kişinin kendini, itibarını ve ilişkilerini nasıl etkileyebileceğini keşfedeceklerdir.",
+          "overview": " [![sağduyu eğitimi](https://curriculum.code.org/static/img/common_sense_education.png)](https://www.commonsense.org)\n\nBu ders aslen Common Sense Education tarafından oluşturulmuştur. [Daha fazla bilgi edinin.](https://www.commonsense.org/education/digital-citizenship/curriculum)\n\nÇevrimiçi yaptığınız şey her zaman çevrimiçi mi kalıyor? Öğrenciler, çevrimiçi paylaştıkları bilgilerin dijital bir ayak izi veya \"iz\" bıraktığını öğrenirler. Nasıl yönettiklerine bağlı olarak, bu iz büyük ya da küçük, zararlı ya da yararlı olabilir. Öğrenciler farklı izleri karşılaştırır ve geride ne tür bilgiler bırakmak istedikleri konusunda eleştirel düşünürler.",
+          "preparation": "-   Öğretim materyallerini gözden geçirin.\n-   Her öğrenci için çıktı(lar) alın.",
+          "purpose": "Common Sense'in Dijital Vatandaşlık Müfredatı, çocuklar, medya ve teknoloji üzerine yapılan en son araştırmalara dayanan altı temel konuya değinmektedir. Bu ders Dijital Ayak İzi ve Kimlik üzerine yoğunlaşmaktadır. Öğrenciler, çevrimiçi paylaşımın yararlarını ve risklerini göz önünde bulundurur ve dijital bir kişinin benlik algısını, itibarını ve ilişkilerini nasıl etkileyebileceğini keşfeder.",
           "student_overview": "Dijital ayak izinizi ve web sitelerini ziyaret ederken nasıl güvenli kalacağınızı öğrenin. "
         },
         "courseb-2022/Move It, Move It": {
-          "name": "Çabuk, Çabuk Taşı",
+          "name": "Oynat, Oynat",
           "overview": "Bu ders, bu kursun süresi boyunca kodlama egzersizleri için öğrencileri zihinsel olarak hazırlamaya çalışacaktır. Öğrenciler, küçük takımlar halinde, bir hedefe ulaşılana kadar sınıf arkadaşlarının bir yerden bir yere dikkatli bir şekilde ilerlemesi için programlamak üzere fiziksel aktiviteyi kullanacaktır.",
           "preparation": "-   **\\\\ \\*Öğretmen Video**\n-   Yazdır (veya başka bir şekilde görüntülemek için hazırlanır) **\\\\ \\*Çalışma Sayfası Cevap Anahtarı**\n-   Bir yazdır **\\\\ \\*Harita Etkinliği** ve bir**\\\\ \\*Çalışma Sayfası** 2-3 öğrenci grubu başına\n-   Boş kağıtlar hazırla yürüyüş ızgarasının geri kalanını doldurmak için (grup başına 4-7 gereklidir)",
           "purpose": "Sınıf arkadaşlarını programlamak için fiziksel hareketi kullanarak, öğrenciler bir bilgisayarda kodlamaya başladıklarında hissedeceklerine benzer konular ve duygularla karşılaşacaklardır. Bu streslerle eğlenceli ve açık bir ortamda karşılaşmak, yoğunluğu hafifletmeye ve öğrencilerin kendi başlarına sorunlarla karşılaşmadan önce gerekli becerileri uygulamalarına yardımcı olacaktır.",
@@ -719,10 +731,10 @@
           "student_overview": "Kırmızı Angry Bird'ün yaramaz domuza giden yolu takip etmesine yardım et."
         },
         "courseb-2022/Programming with Angry Birds": {
-          "name": "Labirentte Programlama",
+          "name": "Angry Birds ile Programlama",
           "overview": "Buz Devri oyununun karakterlerini kullanarak öğrenciler, bir Scrat'i labirentin bir tarafından diğer taraftaki meşe palamuduna ulaştırmak için sıralı algoritmalar geliştireceklerdir. Bunu yapmak için öğrenciler, lineer bir sırada kod bloklarını biraraya getirecek, böylelikle bunları ileri doğru hareket ettirecek, sola ve sağa döndürecek.",
           "preparation": "-   Sınıfınız için olası sorunlu alanları bulmak için bulmacaları oynayın.\n-   **\\\\ \\*Happy Maps** için malzemeleri bulun veya yeniden yazdırın.\n-   Her öğrencinin bir Yansıma Dergisi olduğundan emin olun.\n-   Her yön (N, S, E, W) her öğrenciye iki set vermek için yeterli **\\\\ \\* Manipülatifler** kesin (Köprüleme Seçeneği #1 seçeneğini seçerseniz).",
-          "purpose": "Bu derste öğrenciler bilgisayar platformunda programlama becerilerini geliştireceklerdir. Bu bulmacaların blok tabanlı biçimi, öğrencilerin sözdizimini mükemmelleştirme konusunda endişelenmeden diziyi ve kavramlar hakkında bilgi edinmelerine yardımcı olur.",
+          "purpose": "Bu derste öğrenciler bir bilgisayar platformunda programlama becerilerini geliştireceklerdir. Bu bulmacaların blok tabanlı formatı, öğrencilerin sözdizimini mükemmelleştirme endişesi duymadan dizi ve kavramları öğrenmelerine yardımcı olur.",
           "student_overview": "Angry Bird'ün labirentten ilerlemesine yardım etmek için programlar oluşturun."
         },
         "courseb-2022/Programming with Harvester": {
@@ -747,14 +759,14 @@
           "student_overview": "Döngüleri kullanarak Hasatçının daha fazla toplamasına yardım et!"
         },
         "courseb-2022/Loops with Laurel": {
-          "name": "Toplayıcıda Döngüler",
+          "name": "Laurel ile Döngüler",
           "overview": "Bu derste öğrenciler, döngü kavramlarını öğrenmeye devam eder. Burada Maceracı Laurel, açık mağara alanlarında hazine toplamak için döngüleri kullanır. Yeni bir 'hazineyi al' bloğu, macerasında ona yardım etmek için getirilir.",
           "preparation": "-   Sınıfınız için olası sorunlu alanları bulmak için bulmacaları oynayın.\n-   (İsteğe bağlı) Sınıfınızla bir grup olarak yapmak için birkaç bulmaca seçin.\n-   İnceleme **\\\\ \\*CS Temelleri Ana Etkinlik İpuçları - Ders Önerileri**\n-   Her öğrencinin bir yansıma dergisi olduğundan emin olun.",
           "purpose": "Bu ders, öğrencilere döngülerle daha fazla uygulama sağlar ve mümkün olduğunca çok hazine toplamaya çalıştıkları için bir 'tekrarlama' nın içine birden fazla blok koymaya teşvik eder.",
           "student_overview": "Maceracı Laurel'in açık bir mağarada hazine toplaması için programla."
         },
         "courseb-2022/Drawing Gardens with Loops": {
-          "name": "Sanatçıların Döngüleri",
+          "name": "Döngülerle Bahçeler çizmek",
           "overview": "Döngülere geri dönen öğrenciler, basit talimat dizilerini tekrarlayarak resim çizmeyi öğrenirler. Bir önceki takılı olan derste, bir labirentten geçip hazineyi toplamak için ilmekler kullanıldı. Burada, döngüler desenler yaratıyor. Bu aşamanın sonunda öğrencilere döngüler kullanarak kendi görüntülerini oluşturma imkanı verilecek.",
           "preparation": "-   Sınıfınız için potansiyel sorun alanlarını bulmak için dersten önce bulmacaları oynayın.\n-   İnceleme **\\\\ \\*CS Temelleri Ana Etkinlik İpuçları - Ders Önerileri**.\n-   Her öğrencinin bir yansıma dergisi olduğundan emin olun.",
           "purpose": "Bu ders, bu şeyleri programlamada hangi döngülerin oluşturabileceğine dair farklı bir bakış açısı verir. Öğrenciler, verilen kodu değerlendirerek ve bulmacayı çözmek için neyin eklenmesi gerektiğini belirleyerek eleştirel düşünme becerilerini test edecekler. Öğrenciler, ayrıca, 'tekrarla' döngülerinin yardımı olmadan program için gerekli olan bloklar yüzünden buradaki döngüler olmadan programlamanın etkisizliği üzerine kafa yorar.",
@@ -775,6 +787,7 @@
           "student_overview": "Öğretmeniniz uzaktan düğmelere bastığında hareket edin veya seslenin."
         },
         "courseb-2022/Mini-Project: A Royal Battle with Events": {
+          "name": "Mini Proje: Etkinliklerle Kraliyet Savaşı",
           "overview": "Bu çevrimiçi etkinlikte, öğrenciler, Play Lab'da etkinliklerin nasıl kullanılacağını öğrenmek ve öğrendikleri bütün kodlama becerilerini hareketli bir oyun oluşturmak amacıyla uygulamak için fırsat bulacak. Yaratıcı olma ve Play Lab'da bir oyun yapma zamanı!",
           "preparation": "-   Sınıfınız için olası sorunlu alanları bulmak için bulmacaları oynayın.\n-   (İsteğe bağlı) Sınıfınızla bir grup olarak yapmak için birkaç bulmaca seçin.\n-   İnceleme **\\\\ \\*CS Temelleri Ana Etkinlik İpuçları - Ders Önerileri**.\n-   Her öğrencinin bir yansıma dergisi olduğundan emin olun.",
           "purpose": "Bu çevrimiçi aktivitede öğrenciler, Oyun Laboratuvarında olayları nasıl kullanacaklarını öğrenecekler. Bir ok anahtarına basıldığında şövalyeyi hareket etmesini öğreterek başlayacaklar, daha sonra son ücretsiz oyun bulmacasının bir kısmı olarak, dizi ve döngü sağlama dahil olmak üzere bu derste öğrendikleri becerilerin geri kalanını gösterme olanağı ile sonlanacaktır. ",
@@ -788,10 +801,10 @@
           "student_overview": "Kendi hikayenizi veya oyununuzu oluşturun."
         },
         "express-2022/Programming with Angry Birds": {
-          "name": "Labirentte Programlama",
-          "overview": "Angry Birds oyununun karakterlerini kullanarak öğrenciler, bir kuşu labirentin bir tarafından diğer taraftaki domuza götürmek için sıralı algoritmalar geliştireceklerdir. Bunu yapmak için öğrenciler, lineer bir sırada kod bloklarını biraraya getirecek.",
+          "name": "Angry Birds ile Programlama",
+          "overview": "Bu **beceri geliştirme** dersinde öğrenciler, bir kuşu labirentin bir tarafından diğer taraftaki domuza taşımak için sıralı algoritmalar geliştirecekler. Bunu yapmak için, kod bloklarını doğrusal bir sırayla istifleyerek düz hareket etmelerini, sola dönmelerini veya sağa dönmelerini sağlayacaklar.",
           "preparation": "-   Sınıfınız için olası sorunlu alanları bulmak için bulmacaları oynayın.\n-   (İsteğe bağlı) Sınıfınızla bir grup olarak yapmak için birkaç bulmaca seçin. \n-   Her öğrencinin bir yansıma dergisi olduğundan emin olun.",
-          "purpose": "Bu derste öğrenciler bilgisayar platformunda programlama becerilerini geliştireceklerdir. Bu bulmacaların blok tabanlı biçimi, öğrencilerin sözdizimini mükemmelleştirme konusunda endişelenmeden diziyi ve kavramlar hakkında bilgi edinmelerine yardımcı olur.",
+          "purpose": "Bu derste öğrenciler bir bilgisayar platformunda programlama becerilerini geliştireceklerdir. Bu bulmacaların blok tabanlı formatı, öğrencilerin sözdizimini mükemmelleştirme endişesi duymadan dizi ve kavramları öğrenmelerine yardımcı olur.",
           "student_overview": "Angry Birds ile sıraları ve algoritmaları öğrenin."
         },
         "express-2022/Debugging in Maze": {
@@ -802,14 +815,14 @@
           "student_overview": "Bulmacalardaki problemleri bulun ve hata ayıklama becerilerinizi uygulayın."
         },
         "express-2022/Collecting Treasure with Laurel": {
-          "name": "Koleksiyoncu programlama",
+          "name": "Laurel ile Hazine Toplama",
           "overview": "Bu bulmaca serisinde öğrenciler, algoritmaları ve hata ayıklamayı daha da anlamaya devam edecektir. Yeni bir karakter, Maceracı Laurel ile öğrenciler, bir yolda yürürken Laurel'in hazine toplamasını sağlamak için sıralı algoritmalar oluşturacaktır.",
           "preparation": "-   Sınıfınız için potansiyel sorunlu alanları bulmak için bulmacaları oynayın.\n-   Her öğrencinin bir Yansıma Dergisi olduğundan emin olun.",
           "purpose": "Bu derste öğrenciler programlama becerilerini yeni bir karakter kullanarak uygulayacaklardır, _Laurel the Adventurer_. Birisi programlamaya başladığında, bir makinenin okuyabileceği bir şeyi kullanarak talimatları belirli bir sırayla bir araya getirirler. Programlama kullanımı sayesinde öğrenciler, bir bilgisayarın talimatlar ve düzenin nasıl gezindiği konusunda bir anlayış geliştireceklerdir. Farklı bir bulmaca hedefi ile yeni bir karakter kullanmak öğrencilerin programlama sıralama ve algoritmalar ile deneyim kapsamlarını genişletmelerine yardımcı olacaktır.",
           "student_overview": "_Laurel Adventurer_ değerli taşlar toplamak yardımcı olmak için algoritmalar yaz!"
         },
         "express-2022/Creating Art with Code": {
-          "name": "Sanatçı Programlama",
+          "name": "Kod ile Sanat Yaratma",
           "overview": "Bu derste öğrenciler, ekrandaki çizimleri tamamlaması için Sanatçının kontrolünü ele alacaktır. Bu Sanatçı aşaması, öğrencilerin, '100 piksel ileri hareket et' ve '90 derece sağa dön' gibi yeni blokları kullanarak giderek artan karmaşıklıkta resimleri oluşturmasına olanak sağlayacaktır.",
           "preparation": "-   Sınıfınız için olası sorunlu alanları bulmak için bulmacaları oynayın.\n-   (İsteğe bağlı) Bulmacaları tamamlamak için kullanmaları gereken açıları görselleştirmek için sınıfınızın iletkenlerini edinin.\n-   Her öğrenci için bir **\\\\ \\*Öğrenci El Kitabı** yazdırın.",
           "purpose": "Öğrencilerin sıralama ile ilgili önceki deneyimlerini geliştirerek, bu ders, kodlama ile yaratıcılığa daha fazla ilham vermeye çalışacaktır. Bu dersin amacı, yeni blokları ve hedefleri tanıtarak sıralama hakkındaki bilgileri pekiştirmektir. Bu durumda öğrenciler, aynı zamanda sıralama becerilerini uygulayarak, yeni blokları kullanarak pikseller ve açılar hakkında daha fazla şey öğrenir. Ayrıca öğrenciler, bir kare çizmek için Oyuncu kodlama gibi yeni hedefleri görselleştirebilecektir.",
@@ -858,6 +871,7 @@
           "student_overview": "Döngüleri kullanarak BB-8'in labirentten geçmesine yardım edin! "
         },
         "express-2022/Mini-Project: Sticker Art": {
+          "name": "Mini proje: Etiket Sanatı",
           "overview": "Az sayıda blok ve dijital etiketleri kullanarak kendi mükemmel tasarımlarını yaptıkça öğrencilerinizin ne kadar neşelendiğine bakın! Bu ders, önceki derslerden döngülerin anlaşılmasını geliştirir ve öğrencilere gerçek bir yaratıcı olma şansını verir. Bu aktivite, portföyler veya anne-baba/öğretmen konferansları için  eserler üretmek için mükemmeldir.",
           "preparation": "-   Kendi tasarımını yapmak için pratik yap. Bu seviyelerin daha önce gelen her şeyden nasıl farklı olduğunu not edin.\n-   Her öğrencinin bir Yansıma Dergisi olduğundan emin olun.",
           "purpose": "Bu seri, yaratıcı ve kişisel tasarımların olduğu döngülerin gücünü vurgular.  \n\nProje tarafından desteklenen bir sıra olarak önerilen bu ilerleme, öğrencilerin kendi çalışmalarının üzerine inşa etmelerine ve harika eserler yaratmalarına olanak sağlayacaktır.",
@@ -877,21 +891,21 @@
           "student_overview": "Anna ve Elsa'nın mükemmel buz pateni yapma becerileri var ancak buzda desenler oluşturmak için yardımınıza ihtiyaçları var. Süper MUHTEŞEM bir şey oluşturmak için içiçe döngüleri kullanın."
         },
         "express-2022/Looking Ahead with Minecraft": {
-          "name": "Geleceğe bakış",
+          "name": "Minecraft ile ileriye bakmak",
           "overview": "Bu ders, aslında Minecraft takımında Kod Saati için oluşturuldu. Öğrencilerin, şu ana kadar öğrendikleri fikirleri pratiğe dökme ve ayrıca koşullara şöyle bir göz atma şansı olacak!",
           "preparation": "-   Sınıfınız için olası sorunlu alanları bulmak için bu dersle ilişkili bulmacaları oynayın.\n-   Her öğrencinin bir Yansıma Dergisi olduğundan emin olun.",
           "purpose": "Bu bulmaca dizisi, döngüler hakkındaki bilgilerini pekiştirmeye ve arttırmaya yarayacaktır, ve koşulları tanıtacaktır. Bu iki kavramı birbiri ile eşleştirerek öğrenciler, yeni ve heyecan verici bir ortamda eğlenceli ve yenilikçi programlar oluşturma potansiyelini keşfedebilecekler.",
           "student_overview": "Lavdan Kaçının! Burada Minecraft dünyasındaki koşulları öğrenmeye başlayacaksınız."
         },
         "express-2022/If/Else with Bee": {
-          "name": "Koşullar-Arı",
+          "name": "Arı ile \"Eğer/Başka\"",
           "overview": "Bu noktaya kadar öğrenciler her çalıştırıldığında aynı biçimde çalışan kod yazıyor - güvenilir, ama bu çok esnek değildir. Bu derste, sınıfınız, koşullu koşullarla kodlamaya başlayacak ve programın karşılaştığı özel koşullara bağlı olarak farklı biçimde çalışan kod yazmalarına izin verecektir.",
           "preparation": "-   Sınıfınız için olası sorunlu alanları bulmak için bulmacaları oynayın.\n-   Her öğrencinin bir Yansıma Dergisi olduğundan emin olun.",
           "purpose": "Öğrenciler programlarında şartları kullanma pratiği yapabileceklerdir. if/else blokları daha esnek bir programa izin verecektir. Arı sadece nektar toplayacak _if_ bir çiçek var ya da bal yapmak _if_ bir petek var. ",
           "student_overview": "Şimdi koşulları anladığınıza göre, nektar ve balı toplaması için arıyı programlama zamanı. "
         },
         "express-2022/While Loops in Farmer": {
-          "name": "Çiftçi Döngüleri",
+          "name": "Farmer'da Süresince Döngüleri",
           "overview": "Bu **beceri geliştirme** dersinde, öğrenciler Farmer'da çukurları doldurmak ve toprak kazmak için çalışacaklar, ancak deliklerin boyutunu veya toprak yığınlarının yüksekliğini bilemeyecekler. Bu bulmacaları çözmek için öğrenciler yeni bir tür döngü kullanacaklar.",
           "preparation": "-   Sınıfınız için olası sorunlu alanları bulmak için bulmacaları oynayın.\n-   Her öğrencinin bir Yansıma Dergisi olduğundan emin olun.",
           "purpose": "Öğrencileriniz döngü bilgilerini derinleştirmeye devam ettikçe, bir komutun tekrarlanması gereken sorunlarla karşılaşacaklardır, ancak kaç kez tekrarlanması gerektiği bilinmemektedir. Bu sırada döngüler devreye giriyor. Bugünün dersinde, öğrenciler, yeni başlayanların koşullara dayalı döngüler anlayışını geliştirecek ve genel olarak döngüler bilgisini genişletecektir. ",
@@ -940,10 +954,15 @@
           "student_overview": "Fonksiyonlar ile daha karmaşık çizimleri daha kolay yapın!"
         },
         "express-2022/Text and Prompts": {
+          "name": "Metin ve Bilgi İstemleri",
           "preparation": "Seviyeleri ile oynayın ve ders slaytlarını gözden geçirin.",
           "purpose": "Bu derste değişkenler veri depolamak ve değiştirmek için kullanılacaktır. Bu noktada öğrenciler sadece değerleri değiştirmeden depolayıp geri alacaklardır. Daha sonraki derslerde öğrenciler sayısal değerleri saklar ve zamanla değiştirerek oyundaki oyuncunun puanı gibi şeyleri takip eder."
         },
+        "express-2022/[New] Counting with Variables": {
+          "name": "Değişkenlerle Sayma"
+        },
         "express-2022/Using Variables with the Artist": {
+          "name": "Değişkenleri Sanatçı ile Kullanma",
           "overview": "Bu derste öğrenciler, Sanatçı çevresindeki değişkenleri kullanarak tekrar eden tasarımların oluşturulmasını tecrübe edecekler. Öğrenciler, kodların daha kolay yazılmasını ve okunması daha kolay hale getirilebilmesi için değişkenlerin nasıl kullanılacağını öğrenecek. Kılavuzlu bulmacalardan sonra, öğrenciler öğrendiklerini göstermek ve kendi tasarımlarını oluşturmak için serbest seviye seviyesinde sona ereceklerdir.",
           "preparation": "-   Sınıfınız için olası sorunlu alanları bulmak için bulmacaları oynayın.\n-   Her öğrencinin bir Yansıma Dergisi olduğundan emin olun.",
           "purpose": "Değişkenler aslında, programınızı çalıştırdığınız sırada bilinmeyen değerlere yönelik veya bir programın yürütülmesi sırasında değişebilen değerlere yönelik yer tutuculardır. Bunlar dinamik kod oluşturmak bakımından oldukça önemlidir, zira bunlar, çok sayıda potansiyel modifikasyona bağlı olarak programınızın değişmesini ve gelişmesini sağlar. Bu aşama, değişkenlerin ayarlanması ve kullanılmasına dair en temel yeterlilikleri kullanarak, değişkenleri kullanmak konusunda destek verir.",
@@ -957,7 +976,7 @@
           "student_overview": "Bu arı, değişkenleri sever!"
         },
         "express-2022/For Loops with Bee": {
-          "name": "Arı ile For Döngüleri",
+          "name": "Arı ile For (İçin) Döngüleri",
           "overview": "Arı özelliğiyle bu ders, döngüler ve daha karmaşık bulmacaları çözmek için artan bir değişken kullanmaya odaklanıyor. Öğrenciler önceki derslerdeki döngüleri inceleyerek başlayacak, ardından döngüleri kullanarak karmaşık problemleri daha etkili bir şekilde çözmeye başlayacak.",
           "preparation": "-   Sınıfınız için olası sorunlu alanları bulmak için bulmacaları oynayın.\n-   Her öğrencinin bir Yansıma Dergisi olduğundan emin olun.",
           "purpose": "Günümüzün kavramı, döngüler için bilgisayar bilimlerinde çok önemli bir konudur. Sadece yaygın olarak kullanılmakla kalmaz, döngüler için öğrenme süreci diğer önemli kavramların (değişkenler ve parametreler gibi) öğrenilmesini artırır. Öğrenciler her bir for döngüsünün başlangıç, bitiş ve basamak değerlerini belirleyerek problemler üzerinden eleştirel düşünme çalışmalarına sahip olacaklardır. Bu konsept de çok sayıda matematik kullanır, bu nedenle daha derin bir öğrenme deneyimi için matematik dersi ile eşleştirmekten çekinmeyin.",
@@ -979,8 +998,8 @@
         },
         "pre-express-2022/Learn to Drag and Drop": {
           "name": "Sürükleyip Bırakmayı Öğrenin",
-          "overview": "Bu ders öğrencilere bilgisayar laboratuvarında oldukları zaman beklentinin ne olduğu hakkında bir fikir verecektir. Bilgisayar laboratuvarında sergileyecekleri davranışlar hakkında kısa bir tartışma ile başlar, daha sonra bir bilgisayar kullanarak çevrim içi bulmacaları tamamlayarak ilerleyecekler.",
-          "preparation": "-   **\\\\ \\*Code.org'da Sınıf Bölümü Nasıl Yapılır - Öğretmen videosunu izleyin. Code.org'da kendi sınıf bölümünüzü oluşturun ve her öğrencinin üzerinde \\*\\*parola** bulunan bir kart olduğundan emin olun.\n-   Öğrencilerin ders 2'ye cihazlarından erişebileceklerinden emin olun. Öğrencilerin çok hızlı ilerlemelerini önlemek için gelecekteki dersleri gizlemek isteyip istemediğinizi düşünün.\n-   Okul BT kişisinin sınıf bölümünüz için bilgisayar masaüstüne hızlı bir bağlantı eklemesini sağlar.\n-   Daha fazla çevrimiçi güvenlik içeriği için Common Sense Education web sitesini inceleyin.",
+          "overview": "Bu **beceri geliştirme** dersi, öğrencilere bilgisayar laboratuvarına gittiklerinde neyle karşılaşacakları konusunda bir fikir verecektir. Onlara bilgisayar laboratuvarı kurallarını tanıtan kısa bir tartışma ile başlar, ardından çevrimiçi bulmacaları tamamlamak için bilgisayar kullanmaya başlarlar.",
+          "preparation": "-   **\\\\ \\*Code.org'da Sınıf Bölümü Nasıl Yapılır - Öğretmen videosunu izleyin. Code.org'da kendi sınıf bölümünüzü oluşturun ve her öğrencinin üzerinde \\*\\*parola** bulunan bir kartı olduğundan emin olun.\n-   Öğrencilerin ders 2'ye cihazlarından erişebileceklerinden emin olun. Öğrencilerin çok hızlı ilerlemelerini önlemek için gelecekteki dersleri gizlemek isteyip istemediğinizi düşünün.\n-   Okul BT kişisinin sınıf bölümünüz için bilgisayar masaüstüne hızlı bir bağlantı eklemesini sağlayın.\n-   Daha fazla çevrimiçi güvenlik içeriği için Common Sense Education web sitesini inceleyin.",
           "purpose": "Bu dersin temel amacı öğrencilerin bilgisayar deneyimlerini geliştirmektir. Tıklama, sürükleme ve bırakma gibi en temel bilgisayar işlevlerini kapsayarak, gelecekteki bulmacalar için sınıfta daha eşit bir oyun alanı oluşturuyoruz. Bu ders aynı zamanda cihazlarınıza bağlı olarak “fare”, “trackpad” veya “dokunmatik ekran” da dahil olmak üzere temel bilgisayar donanımı terminolojisini tanıtmak için harika bir fırsat sunar.",
           "student_overview": "Bulmacaları tamamlamak için tıklayıp sürükleyin."
         },
@@ -992,7 +1011,7 @@
           "student_overview": "Meşe palamuduna ulaşması için Scrat'i programlayın."
         },
         "pre-express-2022/Programming with Angry Birds": {
-          "name": "Labirentte Programlama",
+          "name": "Angry Birds ile Programlama",
           "overview": "Buz Devri oyununun karakterlerini kullanarak öğrenciler, bir Scrat'i labirentin bir tarafından diğer taraftaki meşe palamuduna ulaştırmak için sıralı algoritmalar geliştireceklerdir. Bunu yapmak için öğrenciler, lineer bir sırada kod bloklarını biraraya getirecek, böylelikle bunları ileri doğru hareket ettirecek, sola ve sağa döndürecek.",
           "preparation": "-   Sınıfınız için olası sorunlu alanları bulmak için dersi oynayın.\n-   (İsteğe bağlı) Sınıfınızla bir grup olarak yapmak için birkaç bulmaca seçin.\n-   Her öğrencinin bir Yansıma Dergisi olduğundan emin olun.",
           "purpose": "Bu derste öğrenciler, bir bilgisayar platformunda programlama ve hata ayıklama becerilerini geliştirecektir. Bu bulmacaların blok temelli formatı, söz dizimini mükemmelleştirme hakkında endişe duymadan, öğrencilerin dizi ve kavramları öğrenmesine yardım eder."
@@ -1018,34 +1037,34 @@
           "student_overview": "Döngüleri kullanarak Scrat'in daha fazla yol katetmesine yardım edin."
         },
         "pre-express-2022/Loops with Laurel": {
-          "name": "Toplayıcıda Döngüler",
+          "name": "Laurel ile Döngüler",
           "overview": "Bu derste öğrenciler, döngü kavramlarını öğrenmeye devam eder. Burada Maceracı Laurel, açık mağara alanlarında hazine toplamak için döngüleri kullanır. Yeni bir 'hazineyi al' bloğu, macerasında ona yardım etmek için getirilir.",
           "preparation": "-   Sınıfınız için olası sorunlu alanları bulmak için bulmacaları oynayın.\n-   (İsteğe bağlı) Sınıfınızla bir grup olarak yapmak için birkaç bulmaca seçin.\n-   Her öğrencinin bir Yansıma Dergisi olduğundan emin olun.",
           "purpose": "Bu ders, öğrencilere döngülerle daha fazla uygulama sağlar ve mümkün olduğunca çok hazine toplamaya çalıştıkları için bir 'tekrarlama' nın içine birden fazla blok koymaya teşvik eder."
         },
         "pre-express-2022/Ocean Scene with Loops": {
-          "name": "Sanatçıların Döngüleri",
+          "name": "Döngüler ile okyanus sahnesi",
           "overview": "Döngülere geri dönen öğrenciler, basit talimat dizilerini tekrarlayarak resim çizmeyi öğrenirler. Bir önceki takılı olan derste, bir labirentten geçip hazineyi toplamak için ilmekler kullanıldı. Burada, döngüler desenler yaratıyor. Bu aşamanın sonunda öğrencilere döngüler kullanarak kendi görüntülerini oluşturma imkanı verilecek.",
           "preparation": "-   Sınıfınız için olası sorunlu alanları bulmak için bulmacaları oynayın.\n-   Her öğrencinin bir Yansıma Dergisi olduğundan emin olun.",
           "purpose": "Bu ders, bu şeyleri programlamada hangi döngülerin oluşturabileceğine dair farklı bir bakış açısı verir. Öğrenciler, ayrıca, 'tekrarla' döngülerinin yardımı olmadan program için gerekli olan bloklar yüzünden buradaki döngüler olmadan programlamanın etkisizliği üzerine kafa yorar.",
           "student_overview": "Resimleri tamamlamak için döngüleri ve desenleri kullanın."
         },
         "pre-express-2022/Drawing Gardens with Loops": {
-          "name": "Sanatçıların Döngüleri",
+          "name": "Döngülerle Bahçeler çizmek",
           "overview": "Döngülere geri dönen öğrenciler, basit talimat dizilerini tekrarlayarak resim çizmeyi öğrenirler. Bir önceki takılı olan derste, bir labirentten geçip hazineyi toplamak için ilmekler kullanıldı. Burada, döngüler desenler yaratıyor. Bu aşamanın sonunda öğrencilere döngüler kullanarak kendi görüntülerini oluşturma imkanı verilecek.",
           "preparation": "-   Sınıfınız için olası sorunlu alanları bulmak için dersi oynayın.\n-   Her öğrencinin bir yansıma dergisi olduğundan emin olun.",
           "purpose": "Bu ders, bu şeyleri programlamada hangi döngülerin oluşturabileceğine dair farklı bir bakış açısı verir. Öğrenciler, verilen kodu değerlendirerek ve bulmacayı çözmek için neyin eklenmesi gerektiğini belirleyerek eleştirel düşünme becerilerini test edecekler. Öğrenciler, ayrıca, 'tekrarla' döngülerinin yardımı olmadan program için gerekli olan bloklar yüzünden buradaki döngüler olmadan programlamanın etkisizliği üzerine kafa yorar.",
           "student_overview": "Resimleri bitirmek için desenleri ve döngüleri kullanın."
         },
         "pre-express-2022/On the Move with Events": {
-          "name": "Play Lab' da Olaylar",
+          "name": "Etkinliklerle Hareket halinde",
           "overview": "Bu çevrimiçi etkinlikte, öğrenciler, Play Lab' da, olayların nasıl kullanılacağını öğrenme şansına sahip olacaklar. Ve hareketli bir oyun oluşturmak için, öğrendikleri kodlama becerilerinin tamamını uygulayabilecekler. Şimdi, Play Lab' da bir hikaye oluşturmanın ve yaratıcı olmanın zamanı!",
           "preparation": "-   Sınıfınız için olası sorunlu alanları bulmak için bulmacaları oynayın.\n-   (İsteğe bağlı) Sınıfınızla bir grup olarak yapmak için birkaç bulmaca seçin.\n-   Her öğrencinin bir Yansıma Dergisi olduğundan emin olun",
           "purpose": "Ogrenciler bugun Play Lab i kullanarak olaylari ileri seviyede anlamalarini gelistirecekler. Olgular cogu bilgisayar programlarinda baya yaygin olarak kullanilir. Bu aktivitede, ogrenciler ekran etrafinda hareket eden, ses cikaran, ve arkaplani degistiren kullanici tarafindan baslatilan karakterler olusturmak icin olgulari kullanacaklar.",
           "student_overview": "Kendi oyununuzu veya hikayenizi oluşturun."
         },
         "pre-express-2022/A Royal Battle with Events": {
-          "name": "Play Lab' da Olaylar",
+          "name": "Etkinliklerle Kraliyet Savaşı",
           "overview": "Bu çevrimiçi etkinlikte, öğrenciler, Play Lab'da etkinliklerin nasıl kullanılacağını öğrenmek ve öğrendikleri bütün kodlama becerilerini hareketli bir oyun oluşturmak amacıyla uygulamak için fırsat bulacak. Yaratıcı olma ve Play Lab'da bir oyun yapma zamanı!",
           "preparation": "-   Sınıfınız için olası sorunlu alanları bulmak için bulmacaları oynayın.\n-   (İsteğe bağlı) Sınıfınızla bir grup olarak yapmak için birkaç bulmaca seçin.\n-   Her öğrencinin bir yansıma dergisi olduğundan emin olun.",
           "purpose": "Bu çevrimiçi aktivitede öğrenciler, Oyun Laboratuvarında olayları nasıl kullanacaklarını öğrenecekler. Bir ok anahtarına basıldığında şövalyeyi hareket etmesini öğreterek başlayacaklar, daha sonra son ücretsiz oyun bulmacasının bir kısmı olarak, dizi ve döngü sağlama dahil olmak üzere bu derste öğrendikleri becerilerin geri kalanını gösterme olanağı ile sonlanacaktır. ",
@@ -1053,14 +1072,14 @@
         },
         "coursea-2022/Safety in My Online Neighborhood": {
           "name": "Çevrimiçi Mahallemde Güvenlik",
-          "overview": "[![sağduyu eğitimi](https://curriculum.code.org/static/img/common_sense_education.png)](https://www.commonsense.org)\n\nBu ders aslen Sağduyu Eğitimi tarafından oluşturulmuştur. [Daha fazla bilgi edinin.](https://www.commonsense.org/education/digital-citizenship/curriculum)\n\nİnternetin gücü öğrencilerin bizzat göremeyecekleri yerleri deneyimlemelerine ve ziyaret etmelerine olanak tanır. Ancak, gerçek dünyada seyahat etmek gibi, çevrimiçi seyahat ederken güvende olmak önemlidir. Bu sanal saha gezisinde, çocuklar çevrimiçi maceralarda güvende kalmayı deneyebilirler.",
-          "preparation": "-   Öğretim materyallerini gözden geçirin.\n-   Her öğrenci için baskı sadaka (ler).\n-   (İsteğe Bağlı) Sınıf gösterimi için şiir posteri.",
+          "overview": "[![sağduyu eğitimi](https://curriculum.code.org/static/img/common_sense_education.png)](https://www.commonsense.org)\n\nBu ders aslen Common Sense Education tarafından oluşturulmuştur. [Daha fazla bilgi edinin.](https://www.commonsense.org/education/digital-citizenship/curriculum)\n\nİnternetin gücü öğrencilerin bizzat göremeyecekleri yerleri deneyimlemelerine ve ziyaret etmelerine olanak tanır. Ancak, gerçek dünyada seyahat etmek gibi, çevrimiçi seyahat ederken güvende olmak önemlidir. Bu sanal saha gezisinde, çocuklar çevrimiçi maceralarda güvende kalmayı deneyebilirler.",
+          "preparation": "-   Öğretim materyallerini gözden geçirin.\n-   Her öğrenci için çıktı(lar).\n-   (İsteğe Bağlı) Sınıf gösterimi için şiir posteri.",
           "purpose": "Common Sense'in Dijital Vatandaşlık Müfredatı, çocuklar, medya ve teknoloji üzerine yapılan en son araştırmalara dayanan altı temel konuya değinmektedir. Bu ders Gizlilik ve Güvenlik üzerine yoğunlaşmaktadır. Öğrenciler kişisel bilgileri nasıl koruyacaklarını öğrenirler ve veri gizliliği haklarını daha derinlemesine anlayarak kendileri ve başkalarını savunabilirler.",
           "student_overview": "Çevrimiçi bir yerlere güvenli bir şekilde nasıl gidileceğini öğrenin."
         },
         "coursea-2022/Learn to Drag and Drop": {
           "name": "Sürükleyip Bırakmayı Öğrenin",
-          "overview": "Bu ders öğrencilere bilgisayar laboratuvarında oldukları zaman beklentinin ne olduğu hakkında bir fikir verecektir. Bilgisayar laboratuvarında sergileyecekleri davranışlar hakkında kısa bir tartışma ile başlar, daha sonra bir bilgisayar kullanarak çevrim içi bulmacaları tamamlayarak ilerleyecekler.",
+          "overview": "Bu **beceri geliştirme** dersi, öğrencilere bilgisayar laboratuvarına gittiklerinde neyle karşılaşacakları konusunda bir fikir verecektir. Onlara bilgisayar laboratuvarı kurallarını tanıtan kısa bir tartışma ile başlar, ardından çevrimiçi bulmacaları tamamlamak için bilgisayar kullanmaya başlarlar.",
           "preparation": "-   Code.org - Öğretmen Video - **\\\\ \\*Sınıf Nasıl Yapılır Bölümü** izleyin. Code.org'da kendi sınıf bölümünüzü oluşturun ve her öğrencinin üzerinde parola olan bir kart olduğundan emin olun.\n-   Öğrencilerin ders 2'ye cihazlarından erişebileceklerinden emin olun. Öğrencilerin çok hızlı ilerlemelerini önlemek için gelecekteki dersleri gizlemek isteyip istemediğinizi düşünün.\n-   Okul BT kişisinin sınıf bölümünüz için bilgisayar masaüstüne hızlı bir bağlantı eklemesini sağlar.\n-   Daha fazla çevrimiçi güvenlik içeriği için Common Sense Education web sitesini inceleyin.",
           "purpose": "Bu dersin temel amacı öğrencilerin bilgisayar deneyimlerini geliştirmektir. Tıklama, sürükleme ve bırakma gibi en temel bilgisayar işlevlerini kapsayarak, gelecekteki bulmacalar için sınıfta daha eşit bir oyun alanı oluşturuyoruz. Bu ders aynı zamanda cihazlarınıza bağlı olarak “fare”, “trackpad” veya “dokunmatik ekran” da dahil olmak üzere temel bilgisayar donanımı terminolojisini tanıtmak için harika bir fırsat sunar.",
           "student_overview": "Bulmacaları tamamlamak için tıklayıp sürükleyin."
@@ -1094,7 +1113,7 @@
           "student_overview": "BB-8'e hurda metal toplamada yardım edin."
         },
         "coursea-2022/Happy Loops": {
-          "name": "Döngüler: Mutlu Döngüler",
+          "name": "Mutlu Döngüler",
           "overview": "Döngüler programlamada çok yardımcı ve güçlü birer araçtır. Döngülerin nasıl yardımcı olduğu anlamaları için öğrenciler, sıradan problemleri çözmek için en kolay yolu bulmaları gerekecek.",
           "preparation": "-   Sınıf\n    için görüntülemek için bir **\\\\ \\*Çalışma sayfası** yazdırın - 2-3 gruba her grup başına, her birini yazdırın: **\\\\ \\*Oyun parçaları,\\\\ \\*XL Çalışma Sayfası ve\\\\ \\*Bonus Paketi Manipülatifleri**.\n-   Her öğrencinin bir Yansıma Dergisi olduğundan emin olun.",
           "purpose": "Bu ders, döngülere bir giriş olarak hizmet eder. Döngüler, öğrencilerin, tekrarlanması gereken komutları gruplayarak kodlarını basitleştirmesine olanak sağlar. Öğrenciler, sınıf arkadaşlarının hareketlerindeki tekrarı fark ederek ve komutların kaç kere tekrarlandığını belirleyerek eleştirel düşünme becerilerini geliştirecektir. Tekrar \"Mutlu Haritalara\" bakarak, öğrenciler, sıralama gibi eski kavramları tekrarla döngülerinin yeni kavramı ile ilişkilendirme şansını edinecektir.",
@@ -1108,14 +1127,14 @@
           "student_overview": "Döngüleri kullanarak Scrat'in daha fazla yol katetmesine yardım edin."
         },
         "coursea-2022/Loops with Laurel": {
-          "name": "Toplayıcıda Döngüler",
+          "name": "Laurel ile Döngüler",
           "overview": "Bu derste öğrenciler, döngüler kavramını öğrenmeye devam eder. Önceki derste bir labirentte hareket ederek ve mısır toplayarak öğrencilere döngüler öğretilmiştir. Burada döngüler, açık mağara alanlarında hazine toplamak için kullanılır.",
           "preparation": "-   Sınıfınız için olası sorunlu alanları bulmak için bulmacaları oynayın.\n-   (İsteğe bağlı) Sınıfınızla bir grup olarak yapmak için birkaç bulmaca seçin.\n-   İnceleme **\\\\ \\*CSF Ders Önerileri**\n-   Her öğrencinin bir yansıma dergisi olduğundan emin olun",
           "purpose": "Bu ders, öğrencilerin döngülerle daha fazla pratik yapmasını sağlar ve 'hazineyi al' olan yeni bir bloğu tanıtır. Blok, Hasatçıda 'mısırı topla' ile yapıldığı gibi işe yarar. Bu bulmacalar daha açıktır, böylelikle nihai çözümler için öğrencilere daha fazla esneklik sağlar.",
           "student_overview": "Maceracı Laurel'e yeraltındaki hazineyi toplamada yardım edin."
         },
         "coursea-2022/Ocean Scene with Loops": {
-          "name": "Sanatçıların Döngüleri",
+          "name": "Döngüler ile okyanus sahnesi",
           "overview": "Döngülere geri dönen öğrenciler, basit talimat dizilerini tekrarlayarak resim çizmeyi öğrenirler. Bir önceki takılı olan derste, bir labirentten geçip hazineyi toplamak için ilmekler kullanıldı. Burada, döngüler desenler yaratıyor. Bu aşamanın sonunda öğrencilere döngüler kullanarak kendi görüntülerini oluşturma imkanı verilecek.",
           "preparation": "-   Sınıfınız için olası sorunlu alanları bulmak için bulmacaları oynayın.\n-   İnceleme **\\\\ \\*CSF Ders Önerileri**.\n-   Her öğrencinin bir yansıma dergisi olduğundan emin olun.",
           "purpose": "Bu ders, döngülerin programlamada nasıl şeyler oluşturabileceğine dair farklı bir bakış açısı kazandırır. Öğrenciler ayrıca, programın 'tekrar' döngülerinin yardımı olmadan kaç blok gerektireceğinden dolayı döngüler olmadan programlamanın verimsizliğini de yansıtabilirler.",
@@ -1129,6 +1148,7 @@
           "student_overview": "Öğretmenleriniz uzaktan düğmelere bastığında hareket edip seslenin."
         },
         "coursea-2022/Mini-Project: On the Move with Play Lab": {
+          "name": "Mini Proje: Play Lab ile Hareket halinde",
           "overview": "Bu çevrimiçi etkinlikte, öğrenciler, Play Lab' da, olayların nasıl kullanılacağını öğrenme şansına sahip olacaklar. Ve hareketli bir oyun oluşturmak için, öğrendikleri kodlama becerilerinin tamamını uygulayabilecekler. Şimdi, Play Lab' da bir hikaye oluşturmanın ve yaratıcı olmanın zamanı!",
           "preparation": "-   Sınıfınız için olası sorunlu alanları bulmak için bulmacaları oynayın.\n-   (İsteğe bağlı) Sınıfınızla bir grup olarak yapmak için birkaç bulmaca seçin.\n-   İnceleme **\\\\ \\*CSF Ders Önerileri**.\n-   Her öğrencinin bir yansıma dergisi olduğundan emin olun.",
           "purpose": "Ogrenciler bugun Play Lab i kullanarak olaylari ileri seviyede anlamalarini gelistirecekler. Olgular cogu bilgisayar programlarinda baya yaygin olarak kullanilir. Bu aktivitede, ogrenciler ekran etrafinda hareket eden, ses cikaran, ve arkaplani degistiren kullanici tarafindan baslatilan karakterler olusturmak icin olgulari kullanacaklar.",
@@ -1142,10 +1162,10 @@
           "student_overview": "Sanatçı ile bir hikaye anlatın!"
         },
         "coursec-2022/Putting a STOP to Online Meanness": {
-          "name": "Çevrimiçi Kötülüğe bir DUR deme",
-          "overview": " [![sağduyu eğitimi](https://curriculum.code.org/static/img/common_sense_education.png)](https://www.commonsense.org)\n\nBu ders aslen Sağduyu Eğitimi tarafından oluşturulmuştur. [Daha fazla bilgi edinin.](https://www.commonsense.org/education/digital-citizenship/curriculum)\n\nİnternet her türlü ilginç insanla doludur, ancak bazen bazıları birbirlerine acımasız olabilir. Bu rol oynama ile öğrencilerinizin neden çevrimiçi olarak ortalama olmanın yüz yüze olduğundan daha kolay olduğunu ve çevrimiçi alçaklığı gördüklerinde nasıl başa çıkacaklarını anlamalarına yardımcı olun.",
-          "preparation": "-   Öğretim materyallerini gözden geçirin.\n-   Her öğrenci için baskı sadaka (ler).\n-   Doldurulmuş bir hayvan veya oyuncak sınıfına getirin.",
-          "purpose": "Common Sense'in Dijital Vatandaşlık Müfredatı, çocuklar, medya ve teknoloji üzerine yapılan en son araştırmalara dayanan altı temel konuya değinmektedir. Bu ders Siberzorbalık, Dijital Dram ve Nefret Konuşması üzerine yoğunlaşmaktadır. Öğrenciler bu zorlu konuları ele alır ve olumlu, destekleyici çevrimiçi topluluklar oluşturmak ve çevrimiçi zulümle mücadele etmek için astarların aktif rolünü oynarlar.",
+          "name": "Çevrimiçi Kabalığa bir DUR deme",
+          "overview": " [![sağduyu eğitimi](https://curriculum.code.org/static/img/common_sense_education.png)](https://www.commonsense.org)\n\nBu ders aslen Common Sense Education tarafından oluşturulmuştur. [Daha fazla bilgi edinin.](https://www.commonsense.org/education/digital-citizenship/curriculum)\n\nİnternet her türlü ilginç insanla doludur, ancak bazen bazıları birbirlerine acımasız olabilir. Bu rol oynama ile öğrencilerinizin neden çevrimiçi olarak ortalama olmanın yüz yüze olduğundan daha kolay olduğunu ve çevrimiçi kabalığı gördüklerinde nasıl başa çıkacaklarını anlamalarına yardımcı olun.",
+          "preparation": "-   Öğretim materyallerini gözden geçirin.\n-   Her öğrenci için çıktı(lar).\n-   Doldurulmuş bir hayvan veya oyuncağı sınıfa getirin.",
+          "purpose": "Common Sense'in Dijital Vatandaşlık Müfredatı, çocuklar, medya ve teknoloji üzerine yapılan en son araştırmalara dayanan altı temel konuya değinmektedir. Bu ders Siberzorbalık, Dijital Dram ve Nefret Konuşması üzerine yoğunlaşmaktadır. Öğrenciler bu zorlu konuları ele alır ve olumlu, destekleyici çevrimiçi topluluklar oluşturmak ve çevrimiçi zulümle mücadele etmek için dik duranların aktif rolünü oynarlar.",
           "student_overview": "Bu derste, kötülüğün ne olduğunu ve bununla çevrimiçi ortamda karşılaşırsanız ne yapacağınızı öğreneceksiniz."
         },
         "coursec-2022/My Robotic Friends Jr": {
@@ -1153,7 +1173,7 @@
           "student_overview": "Bu derste, sınıf arkadaşlarınız robotmuş gibi davranacaksınız ve istiflenmiş kupa desenleri oluşturmaları için onları programlayacaksınız."
         },
         "coursec-2022/Programming with Angry Birds": {
-          "name": "Labirentte Programlama",
+          "name": "Angry Birds ile Programlama",
           "overview": "Angry Birds oyununun karakterlerini kullanarak öğrenciler, bir kuşu labirentin bir tarafından diğer taraftaki domuza ulaştırmak için sıralı algoritmalar geliştireceklerdir. Bunu yapmak için öğrenciler, lineer bir sırada kod bloklarını biraraya getirecek, böylelikle bunları ileri doğru hareket ettirecek, sola ve sağa döndürecek.",
           "purpose": "Bu derste öğrenciler, bir bilgisayar platformunda programlama ve hata ayıklama becerilerini geliştirecektir. Bu bulmacaların blok temelli formatı, söz dizimini mükemmelleştirme hakkında endişe duymadan, öğrencilerin dizi ve kavramları öğrenmesine yardım eder.",
           "student_overview": "Angry Birds ile sıraları ve algoritmaları öğrenin."
@@ -1165,13 +1185,13 @@
           "student_overview": "Bulmacalardaki problemleri bulun ve hata ayıklama becerilerinizi uygulayın."
         },
         "coursec-2022/Collecting Treasure with Laurel": {
-          "name": "Koleksiyoncu programlama",
+          "name": "Laurel ile Hazine Toplama",
           "overview": "Bu bulmaca serisinde öğrenciler, algoritmaları ve hata ayıklamayı daha da anlamaya devam edecektir. Yeni bir karakter, Maceracı Laurel ile öğrenciler, bir yolda yürürken Laurel'in hazine toplamasını sağlamak için sıralı algoritmalar oluşturacaktır.",
           "purpose": "Bu derste öğrenciler yeni bir karakter olan Maceracı Laurel ile programlama becerilerini uygulayacaklardır. Birisi programlamaya başladığında, bir makinenin okuyabileceği bir şeyi kullanarak talimatları belirli bir sırayla bir araya getirirler. Programlama kullanımı sayesinde öğrenciler, bir bilgisayarın talimatlar ve düzenin nasıl gezindiği konusunda bir anlayış geliştireceklerdir. Farklı bir bulmaca hedefi ile yeni bir karakter kullanmak öğrencilerin programlama sıralama ve algoritmalar ile deneyim kapsamlarını genişletmelerine yardımcı olacaktır.",
           "student_overview": "Maceracı Laurel'in bir sürü değerli taş toplamasına yardım etmek için algoritmalar yazın!"
         },
         "coursec-2022/Creating Art with Code": {
-          "name": "Sanatçı Programlama",
+          "name": "Kod ile Sanat Yaratma",
           "overview": "Bu derste öğrenciler, ekrandaki çizimleri tamamlaması için Sanatçının kontrolünü ele alacaktır. Bu Sanatçı aşaması, öğrencilerin, '100 piksel ileri hareket et' ve '90 derece sağa dön' gibi yeni blokları kullanarak giderek artan karmaşıklıkta resimleri oluşturmasına olanak sağlayacaktır.",
           "preparation": "-   Sınıfınız için olası sorunlu alanları bulmak için bulmacaları oynayın.\n-   (İsteğe bağlı) Bulmacaları tamamlamak için kullanmaları gereken açıları görselleştirmek için sınıfınızın iletkenlerini edinin.\n-   Her öğrenci için bir **\\\\ \\*Öğrenci El Kitabı** yazdırın.",
           "purpose": "Öğrencilerin sıralama ile ilgili önceki deneyimlerini geliştirerek, bu ders, kodlama ile yaratıcılığa daha fazla ilham vermeye çalışacaktır. Bu dersin amacı, yeni blokları ve hedefleri tanıtarak sıralama hakkındaki bilgileri pekiştirmektir. Bu durumda öğrenciler, aynı zamanda sıralama becerilerini uygulayarak, yeni blokları kullanarak pikseller ve açılar hakkında daha fazla şey öğrenir. Ayrıca öğrenciler, bir kare çizmek için Oyuncu kodlama gibi yeni hedefleri görselleştirebilecektir.",
@@ -1195,6 +1215,7 @@
           "student_overview": "Hasatçının biraz sebze toplamasına yardım etmek için döngüleri kullanalım!"
         },
         "coursec-2022/Mini-Project: Sticker Art": {
+          "name": "Mini proje: Etiket Sanatı",
           "overview": "Bu **mini proje** dersi, önceki derslerden gelen döngülerin anlaşılmasına dayanır. Öğrenciler Sanatçı ile benzersiz sanat eserleri yaratacaklardır.",
           "purpose": "Bu seri, yaratıcı ve kişisel tasarımların olduğu döngülerin gücünü vurgular.  \n\nProje tarafından desteklenen bir sıra olarak önerilen bu ilerleme, öğrencilerin kendi çalışmalarının üzerine inşa etmelerine ve harika eserler yaratmalarına olanak sağlayacaktır.",
           "student_overview": "Bu derste döngüler, Sanatçı ile daha güzel resimler yapmayı kolaylaştırır."
@@ -1251,7 +1272,7 @@
           "name": "Numaraları temsil eden"
         },
         "csd5-2022/Combining Representations": {
-          "name": "İfadeleri birleştirme"
+          "name": "Temsillerin Birleştirilmesi"
         },
         "csd5-2022/Keeping Data Secret": {
           "name": "Verileri Gizli Tutmak"
@@ -1478,6 +1499,9 @@
         "csd4-2022/Testing the App": {
           "name": "Uygulamayı Test Etmek"
         },
+        "csd4-2022/Updating Your Prototype": {
+          "name": "Prototipinizi Güncelleme"
+        },
         "csd4-2022/Project - App Presentation": {
           "name": "Proje - Uygulama Sunumu"
         },
@@ -1491,7 +1515,7 @@
           "name": "Çember Oyun Alanı"
         },
         "csd6-2022/Board Events": {
-          "name": "Kurul Etkinlikleri"
+          "name": "Devre kartı Etkinlikleri"
         },
         "csd6-2022/Color LEDs": {
           "name": "Renkli LED'ler"
@@ -1527,7 +1551,7 @@
           "name": "Bilgisayar Bilimi Keşifleri Kurs Sonrası Anketi"
         },
         "courseb-2018/Move It, Move It": {
-          "name": "Çabuk, Çabuk Taşı"
+          "name": "Oynat, Oynat"
         },
         "courseb-2018/Sequencing with Scrat": {
           "name": "Scrat ile Sıralama"
@@ -1548,16 +1572,16 @@
           "name": "Scrat ile Döngüler"
         },
         "courseb-2018/Loops in Collector": {
-          "name": "Toplayıcıda Döngüler"
+          "name": "Laurel ile Döngüler"
         },
         "courseb-2018/Loops in Artist": {
-          "name": "Sanatçıların Döngüleri"
+          "name": "Döngülerle Bahçeler çizmek"
         },
         "courseb-2018/Events: The Big Event": {
           "name": "Büyük Olay Jr."
         },
         "courseb-2018/Events in Play Lab": {
-          "name": "Play Lab' da Olaylar"
+          "name": "Etkinliklerle Kraliyet Savaşı"
         },
         "coursea-2018/Debugging: Unspotted Bugs": {
           "name": "Bulunamamış hatalar"
@@ -1575,7 +1599,7 @@
           "name": "Mutlu Haritalar"
         },
         "coursea-2018/Programming in Maze": {
-          "name": "Labirentte Programlama"
+          "name": "Angry Birds ile Programlama"
         },
         "coursea-2018/Programming in Harvester": {
           "name": "Hasatçı ile Programlama"
@@ -1584,43 +1608,43 @@
           "name": "Biryerlere Güvenle Gitmek"
         },
         "coursea-2018/Loops: Happy Loops": {
-          "name": "Döngüler: Mutlu Döngüler"
+          "name": "Mutlu Döngüler"
         },
         "coursea-2018/Loops in Harvester": {
           "name": "Hasatçı ile Döngüler"
         },
         "coursea-2018/Loops in Collector": {
-          "name": "Toplayıcıda Döngüler"
+          "name": "Laurel ile Döngüler"
         },
         "coursea-2018/Loops in Artist": {
-          "name": "Sanatçıların Döngüleri"
+          "name": "Döngüler ile okyanus sahnesi"
         },
         "coursea-2018/Events: The Big Event": {
           "name": "Büyük Olay Jr."
         },
         "coursea-2018/Events in Play Lab": {
-          "name": "Play Lab' da Olaylar"
+          "name": "Etkinliklerle Hareket halinde"
         },
         "coursed-2018/Algorithms: Graph Paper Programming": {
           "name": "Grafik Kağıdı Programlama"
         },
         "coursed-2018/Introduction to Online Puzzles": {
-          "name": "Online Bulmacalara Giriş"
+          "name": "Çevrimiçi Bulmacalara Giriş"
         },
         "coursed-2018/Relay Programming": {
           "name": "Röle Programlama"
         },
         "coursed-2018/Debugging in Collector": {
-          "name": "Toplayıcıda Hata Ayıklama"
+          "name": "Laurel ile Hata Ayıklama"
         },
         "coursed-2018/Events in Bounce": {
-          "name": "Sıçrama Olayları"
+          "name": "Bounce'daki Etkinlikler"
         },
         "coursed-2018/Loops in Ice Age": {
           "name": "Buz Devrindeki Döngüler"
         },
         "coursed-2018/Loops in Artist": {
-          "name": "Sanatçıların Döngüleri"
+          "name": "Döngüler ile Şekiller Çizme"
         },
         "coursed-2018/Nested Loops in Bee": {
           "name": "Labirentte İçiçe Döngüler"
@@ -1632,7 +1656,7 @@
           "name": "Frozen'da İç İçe Döngüler"
         },
         "coursed-2018/While Loops in Farmer": {
-          "name": "Çiftçi Döngüleri"
+          "name": "Farmer'da Süresince Döngüleri"
         },
         "coursed-2018/Until Loops in Maze": {
           "name": "Labirentte Bitiş Döngüleri"
@@ -1641,7 +1665,7 @@
           "name": "Kartlarla Koşullu Önermeler"
         },
         "coursed-2018/Conditionals in Bee": {
-          "name": "Koşullar-Arı"
+          "name": "Arı ile \"Eğer/Başka\""
         },
         "coursed-2018/Conditionals & Loops in Harvester": {
           "name": "Koşullarla Hasat Etme"
@@ -1671,13 +1695,13 @@
           "name": "Scrat ile Hata Ayıklama"
         },
         "coursef-2018/Programming in Artist": {
-          "name": "Sanatçı Programlama"
+          "name": "Kod ile Sanat Yaratma"
         },
         "coursef-2018/Loops: My Loopy Robotic Friends": {
-          "name": "Döngüler: Loopy robot dostlarım"
+          "name": "Loopy Robotik Arkadaşlarım"
         },
         "coursef-2018/Loops in Artist": {
-          "name": "Sanatçıların Döngüleri"
+          "name": "Döngüler ile Şekiller Çizme"
         },
         "coursef-2018/Nested Loops in Bee/Zombie": {
           "name": "Labirentte İçiçe Döngüler"
@@ -1713,7 +1737,7 @@
           "name": "Şununla Say Döngüsü Eğlencesi"
         },
         "coursef-2018/For Loops in Bee": {
-          "name": "Arı ile For Döngüleri"
+          "name": "Arı ile For (İçin) Döngüleri"
         },
         "coursef-2018/For Loops in Artist": {
           "name": "Sanatçı-Şununla say Döngüleri"
@@ -1752,10 +1776,10 @@
           "name": "Scrat ile Hata Ayıklama"
         },
         "express-2018/Programming in Collector": {
-          "name": "Koleksiyoncu programlama"
+          "name": "Laurel ile Hazine Toplama"
         },
         "express-2018/Programming in Artist": {
-          "name": "Sanatçı Programlama"
+          "name": "Kod ile Sanat Yaratma"
         },
         "express-2018/Loops: Getting Loopy": {
           "name": "Döngüselleşme"
@@ -1770,13 +1794,13 @@
           "name": "Telif Hakkı ve Yaratıcılık"
         },
         "express-2018/Concept Practice with Minecraft ": {
-          "name": "Geleceğe bakış"
+          "name": "Minecraft ile ileriye bakmak"
         },
         "express-2018/Nested Loops in Bee": {
           "name": "Arı -içiçe döngüler"
         },
         "express-2018/While Loops in Farmer": {
-          "name": "Çiftçi Döngüleri"
+          "name": "Çiftçi ile While (Süresince) Döngüleri"
         },
         "express-2018/Until Loops in Maze": {
           "name": "Labirentte Bitiş Döngüleri"
@@ -1785,7 +1809,7 @@
           "name": "Kartlarla Koşullu Önermeler"
         },
         "express-2018/Conditionals in Bee": {
-          "name": "Koşullar-Arı"
+          "name": "Arı ile \"Eğer/Başka\""
         },
         "express-2018/Conditionals & Loops in Harvester": {
           "name": "Koşullarla Hasat Etme"
@@ -1833,7 +1857,7 @@
           "name": "Şununla Say Döngüsü Eğlencesi"
         },
         "express-2018/For Loops in Bee": {
-          "name": "Arı ile For Döngüleri"
+          "name": "Arı ile For (İçin) Döngüleri"
         },
         "express-2018/For Loops in Artist": {
           "name": "Sanatçı-Şununla say Döngüleri"
@@ -1890,13 +1914,13 @@
           "name": "Scrat ile Hata Ayıklama"
         },
         "coursee-2018/Programming in Artist": {
-          "name": "Sanatçı Programlama"
+          "name": "Kod ile Sanat Yaratma"
         },
         "coursee-2018/Loops: My Loopy Robotic Friends": {
-          "name": "Döngüler: Loopy robot dostlarım"
+          "name": "Loopy Robotik Arkadaşlarım"
         },
         "coursee-2018/Loops in Artist": {
-          "name": "Sanatçıların Döngüleri"
+          "name": "Döngüler ile Şekiller Çizme"
         },
         "coursee-2018/Nested Loops": {
           "name": "Labirentte İçiçe Döngüler"
@@ -1965,7 +1989,7 @@
           "name": "Bir Temel Oluşturma"
         },
         "coursec-2018/Programming in Maze": {
-          "name": "Labirentte Programlama"
+          "name": "Angry Birds ile Programlama"
         },
         "coursec-2018/Debugging in Maze": {
           "name": "Labirentte Hata Ayıklama"
@@ -1974,10 +1998,10 @@
           "name": "Kağıt Uçaklar"
         },
         "coursec-2018/Programming in Collector": {
-          "name": "Koleksiyoncu programlama"
+          "name": "Laurel ile Hazine Toplama"
         },
         "coursec-2018/Programming in Artist": {
-          "name": "Sanatçı Programlama"
+          "name": "Kod ile Sanat Yaratma"
         },
         "coursec-2018/Loops: Getting Loopy": {
           "name": "Döngüselleşme"
@@ -2004,7 +2028,7 @@
           "name": "Play Lab' da Olaylar"
         },
         "coursec-2018/Looking Ahead": {
-          "name": "Geleceğe bakış"
+          "name": "Minecraft ile ileriye bakmak"
         },
         "coursec-2018/Binary Bracelets": {
           "name": "İkilik Bileklikler"
@@ -2016,7 +2040,7 @@
           "name": "Stevie ve büyük proje"
         },
         "pre-express-2018/Move It, Move It": {
-          "name": "Çabuk, Çabuk Taşı"
+          "name": "Oynat, Oynat"
         },
         "pre-express-2018/Sequencing with Scrat": {
           "name": "Scrat ile Sıralama"
@@ -2037,16 +2061,16 @@
           "name": "Scrat ile Döngüler"
         },
         "pre-express-2018/Loops in Collector": {
-          "name": "Toplayıcıda Döngüler"
+          "name": "Laurel ile Döngüler"
         },
         "pre-express-2018/Loops in Artist": {
-          "name": "Sanatçıların Döngüleri"
+          "name": "Döngülerle Bahçeler çizmek"
         },
         "pre-express-2018/Events: The Big Event": {
           "name": "Büyük Olay Jr."
         },
         "pre-express-2018/Events in Play Lab": {
-          "name": "Play Lab' da Olaylar"
+          "name": "Etkinliklerle Kraliyet Savaşı"
         },
         "pre-express-2018/Spelling Bee": {
           "name": "Heceleme Yarışması"
@@ -2133,7 +2157,7 @@
           "name": "Bağımsız (Unplugged) Girdi"
         },
         "csd6-2018/Board Events": {
-          "name": "Kurul Etkinlikleri"
+          "name": "Devre kartı Etkinlikleri"
         },
         "csd6-2018/Getting Properties": {
           "name": "Özelikleri Alma"
@@ -2190,7 +2214,7 @@
           "name": "Verileri Gizli Tutmak"
         },
         "csd5-2018/Combining Representations": {
-          "name": "İfadeleri birleştirme"
+          "name": "Temsillerin Birleştirilmesi"
         },
         "csd5-2018/Project - Create a Representation": {
           "name": "Proje - bir ifade oluşturun"
@@ -2361,34 +2385,34 @@
           "name": "Rey ve BB-8 ile programlama"
         },
         "coursea-2019/Loops: Happy Loops": {
-          "name": "Döngüler: Mutlu Döngüler"
+          "name": "Mutlu Döngüler"
         },
         "coursea-2019/Loops in Ice Age": {
           "name": "Scrat ile Döngüler"
         },
         "coursea-2019/Loops in Collector": {
-          "name": "Toplayıcıda Döngüler"
+          "name": "Laurel ile Döngüler"
         },
         "coursea-2019/Ocean Scene with Loops": {
-          "name": "Sanatçıların Döngüleri"
+          "name": "Döngüler ile okyanus sahnesi"
         },
         "coursea-2019/Events: The Big Event": {
           "name": "Büyük Olay Jr."
         },
         "coursea-2019/Events in Play Lab": {
-          "name": "Play Lab' da Olaylar"
+          "name": "Etkinliklerle Hareket halinde"
         },
         "courseb-2019/Your Digital Footprint": {
           "name": "Dijital İziniz"
         },
         "courseb-2019/Move It, Move It": {
-          "name": "Çabuk, Çabuk Taşı"
+          "name": "Oynat, Oynat"
         },
         "courseb-2019/Sequencing in Maze": {
           "name": "Angry Birds ile Dizileme"
         },
         "courseb-2019/Programming in Maze": {
-          "name": "Labirentte Programlama"
+          "name": "Angry Birds ile Programlama"
         },
         "courseb-2019/Programming in Harvester": {
           "name": "Hasatçı ile Programlama"
@@ -2400,10 +2424,10 @@
           "name": "Hasatçı ile Döngüler"
         },
         "courseb-2019/Loops in Collector": {
-          "name": "Toplayıcıda Döngüler"
+          "name": "Laurel ile Döngüler"
         },
         "courseb-2019/Loops in Artist": {
-          "name": "Sanatçıların Döngüleri"
+          "name": "Döngülerle Bahçeler çizmek"
         },
         "courseb-2019/The Right App": {
           "name": "Doğru Uygulama"
@@ -2412,22 +2436,22 @@
           "name": "Büyük Olay Jr."
         },
         "courseb-2019/Events in Play Lab": {
-          "name": "Play Lab' da Olaylar"
+          "name": "Etkinliklerle Kraliyet Savaşı"
         },
         "coursed-2019/Algorithms: Graph Paper Programming": {
           "name": "Grafik Kağıdı Programlama"
         },
         "coursed-2019/Introduction to Online Puzzles": {
-          "name": "Online Bulmacalara Giriş"
+          "name": "Çevrimiçi Bulmacalara Giriş"
         },
         "coursed-2019/Relay Programming": {
           "name": "Röle Programlama"
         },
         "coursed-2019/Debugging in Collector": {
-          "name": "Toplayıcıda Hata Ayıklama"
+          "name": "Laurel ile Hata Ayıklama"
         },
         "coursed-2019/Events in Bounce": {
-          "name": "Sıçrama Olayları"
+          "name": "Bounce'daki Etkinlikler"
         },
         "coursed-2019/Build a Star Wars Game": {
           "name": "Star Wars oyunu oluştur"
@@ -2436,7 +2460,7 @@
           "name": "Buz Devrindeki Döngüler"
         },
         "coursed-2019/Loops in Artist": {
-          "name": "Sanatçıların Döngüleri"
+          "name": "Döngüler ile Şekiller Çizme"
         },
         "coursed-2019/Nested Loops in Bee": {
           "name": "Labirentte İçiçe Döngüler"
@@ -2445,10 +2469,10 @@
           "name": "Kartlarla Koşullu Önermeler"
         },
         "coursed-2019/Conditionals in Bee": {
-          "name": "Koşullar-Arı"
+          "name": "Arı ile \"Eğer/Başka\""
         },
         "coursed-2019/While Loops in Farmer": {
-          "name": "Çiftçi Döngüleri"
+          "name": "Farmer'da Süresince Döngüleri"
         },
         "coursed-2019/Until Loops in Maze": {
           "name": "Labirentte Bitiş Döngüleri"
@@ -2502,7 +2526,7 @@
           "name": "Şununla Say Döngüsü Eğlencesi"
         },
         "coursef-2019/For Loops in Bee": {
-          "name": "Arı ile For Döngüleri"
+          "name": "Arı ile For (İçin) Döngüleri"
         },
         "coursef-2019/For Loops in Artist": {
           "name": "Sanatçı-Şununla say Döngüleri"
@@ -2586,16 +2610,16 @@
           "name": "Dans Partisi"
         },
         "express-2019/Programming in Maze": {
-          "name": "Labirentte Programlama"
+          "name": "Angry Birds ile Programlama"
         },
         "express-2019/Debugging in Maze": {
           "name": "Scrat ile Hata Ayıklama"
         },
         "express-2019/Programming in Collector": {
-          "name": "Koleksiyoncu programlama"
+          "name": "Laurel ile Hazine Toplama"
         },
         "express-2019/Programming in Artist": {
-          "name": "Sanatçı Programlama"
+          "name": "Kod ile Sanat Yaratma"
         },
         "express-2019/Loops with Rey and BB-8": {
           "name": "Rey ve BB-8 ile döngüler"
@@ -2610,13 +2634,13 @@
           "name": "Frozen'da İç İçe Döngüler"
         },
         "express-2019/Concept Practice with Minecraft ": {
-          "name": "Geleceğe bakış"
+          "name": "Minecraft ile ileriye bakmak"
         },
         "express-2019/Conditionals in Bee": {
-          "name": "Koşullar-Arı"
+          "name": "Arı ile \"Eğer/Başka\""
         },
         "express-2019/While Loops in Farmer": {
-          "name": "Çiftçi Döngüleri"
+          "name": "Çiftçi ile While (Süresince) Döngüleri"
         },
         "express-2019/Conditionals in Minecraft: Voyage Aquatic": {
           "name": "Minecraft'ta Koşullar: Su Yolculuğu"
@@ -2646,7 +2670,7 @@
           "name": "Sanatçı ile Değişkenleri Değiştirme"
         },
         "express-2019/For Loops in Bee": {
-          "name": "Arı ile For Döngüleri"
+          "name": "Arı ile For (İçin) Döngüleri"
         },
         "express-2019/For Loops in Artist": {
           "name": "Sanatçı-Şununla say Döngüleri"
@@ -2673,16 +2697,16 @@
           "name": "Güçlü Şifreler"
         },
         "coursec-2019/Programming in Maze": {
-          "name": "Labirentte Programlama"
+          "name": "Angry Birds ile Programlama"
         },
         "coursec-2019/Debugging in Maze": {
           "name": "Labirentte Hata Ayıklama"
         },
         "coursec-2019/Programming in Collector": {
-          "name": "Koleksiyoncu programlama"
+          "name": "Laurel ile Hazine Toplama"
         },
         "coursec-2019/Programming in Artist": {
-          "name": "Sanatçı Programlama"
+          "name": "Kod ile Sanat Yaratma"
         },
         "coursec-2019/Binary Bracelets": {
           "name": "İkilik Bileklikler"
@@ -2694,7 +2718,7 @@
           "name": "Döngüler ile Ürünleri Hasat Etme"
         },
         "coursec-2019/Looking Ahead": {
-          "name": "Geleceğe bakış"
+          "name": "Minecraft ile ileriye bakmak"
         },
         "coursec-2019/Sticker Art with Loops": {
           "name": "Sanatçıların Döngüleri"
@@ -2721,7 +2745,7 @@
           "name": "Scrat ile Sıralama"
         },
         "pre-express-2019/Programming in Maze": {
-          "name": "Labirentte Programlama"
+          "name": "Angry Birds ile Programlama"
         },
         "pre-express-2019/Programming with Rey and BB-8": {
           "name": "Rey ve BB-8 ile programlama"
@@ -2736,19 +2760,19 @@
           "name": "Scrat ile Döngüler"
         },
         "pre-express-2019/Loops in Collector": {
-          "name": "Toplayıcıda Döngüler"
+          "name": "Laurel ile Döngüler"
         },
         "pre-express-2019/Ocean Scene with Loops": {
-          "name": "Sanatçıların Döngüleri"
+          "name": "Döngüler ile okyanus sahnesi"
         },
         "pre-express-2019/Loops in Artist": {
-          "name": "Sanatçıların Döngüleri"
+          "name": "Döngülerle Bahçeler çizmek"
         },
         "pre-express-2019/Tell a Story in Play Lab": {
-          "name": "Play Lab' da Olaylar"
+          "name": "Etkinliklerle Hareket halinde"
         },
         "pre-express-2019/Make a Game in Play Lab": {
-          "name": "Play Lab' da Olaylar"
+          "name": "Etkinliklerle Kraliyet Savaşı"
         },
         "csd3-2019/Programming for Entertainment": {
           "name": "Eğlence için programlama"
@@ -2829,7 +2853,7 @@
           "name": "Bağımsız (Unplugged) Girdi"
         },
         "csd6-2019/Board Events": {
-          "name": "Kurul Etkinlikleri"
+          "name": "Devre kartı Etkinlikleri"
         },
         "csd6-2019/Getting Properties": {
           "name": "Özelikleri Alma"
@@ -2931,7 +2955,7 @@
           "name": "Verileri Gizli Tutmak"
         },
         "csd5-2019/Combining Representations": {
-          "name": "İfadeleri birleştirme"
+          "name": "Temsillerin Birleştirilmesi"
         },
         "csd5-2019/Project - Create a Representation": {
           "name": "Proje - bir ifade oluşturun"
@@ -3054,7 +3078,7 @@
           "name": "Algoritmalar: Tangramlar"
         },
         "coursef-2017/Introduction": {
-          "name": "Online Bulmacalara Giriş"
+          "name": "Çevrimiçi Bulmacalara Giriş"
         },
         "coursef-2017/The Power of Words": {
           "name": "Dijital Vatandaşlık: Kelimelerin Gücü"
@@ -3219,7 +3243,7 @@
           "name": "Algoritmalar: Zar yarışı"
         },
         "coursee-2017/Introduction": {
-          "name": "Online Bulmacalara Giriş"
+          "name": "Çevrimiçi Bulmacalara Giriş"
         },
         "coursee-2017/Conditionals": {
           "name": "Çiftçi'de Koşullar"
@@ -3354,10 +3378,10 @@
           "name": "Programlama: Grafik Kağıdı ile Programlama"
         },
         "coursed-2017/Introduction": {
-          "name": "Online Bulmacalara Giriş"
+          "name": "Çevrimiçi Bulmacalara Giriş"
         },
         "coursed-2017/Events in Bounce": {
-          "name": "Sıçrama Olayları"
+          "name": "Bounce'daki Etkinlikler"
         },
         "coursed-2017/Nested Loops": {
           "name": "İç İçe Döngüler"
@@ -3375,7 +3399,7 @@
           "name": "Toplayıcıda Hata Ayıklama"
         },
         "coursed-2017/While Loops in Farmer": {
-          "name": "Çiftçi Döngüleri"
+          "name": "Farmer'da Süresince Döngüleri"
         },
         "coursed-2017/Conditionals with Cards": {
           "name": "Eğer/Değilse: Kartlarla Koşullar"
@@ -3444,13 +3468,13 @@
           "name": "Flappy Olayları"
         },
         "express-2017/Events in Bounce": {
-          "name": "Sıçrama Olayları"
+          "name": "Bounce'daki Etkinlikler"
         },
         "express-2017/Conditionals: Conditionals with Cards": {
           "name": "Koşullar: Kartlarla Koşullar"
         },
         "express-2017/While Loops in Farmer": {
-          "name": "Çiftçi Döngüleri"
+          "name": "Farmer'da Süresince Döngüleri"
         },
         "express-2017/Until Loops in Maze": {
           "name": "Labirentte Bitiş Döngüleri"
@@ -3585,7 +3609,7 @@
           "name": "Bağımsız (Unplugged) Girdi"
         },
         "csd6-2017/Board Events_": {
-          "name": "Kurul Etkinlikleri"
+          "name": "Devre kartı Etkinlikleri"
         },
         "csd6-2017/Getting Properties_": {
           "name": "Özelikleri Alma"
@@ -3708,7 +3732,7 @@
           "name": "Verileri Gizli Tutmak"
         },
         "csd5-2017/Combining Representations": {
-          "name": "İfadeleri birleştirme"
+          "name": "Temsillerin Birleştirilmesi"
         },
         "csd5-2017/Project - Create a Representation": {
           "name": "Proje - bir ifade oluşturun"
@@ -4275,17 +4299,19 @@
         },
         "coursef-2021/lesson-2": {
           "name": "Kelimelerin gücü",
-          "overview": "[![common sense education](https://curriculum.code.org/static/img/common_sense_education.png)](https://www.commonsense.org)\n\nBu dersi ilk olarak Common Sense Education oluşturmuştur. [Daha fazla bilgi edinin.](https://www.commonsense.org/education/digital-citizenship/curriculum)\n\nÇocuklar büyüdükçe, doğal olarak daha fazla çevrimiçi iletişim kurmaya başlayacaklar. Ancak gördükleri şeylerin bazıları onları incitebilir, üzebilir, öfkelendirebilir ve hatta korkutabilir. Öğrencilerinizin başkaları için empati kurmalarına ve siber zorbalıkla karşılaştıklarında kullanacakları stratejileri öğrenmelerine yardımcı olun.",
-          "preparation": "-   Öğretim materyallerini gözden geçirin.\n-   Her öğrenci için baskı sadaka (ler).\n-   Sınıf için uzun bir dize (veya ip) ve kağıt hazırlayın.",
-          "purpose": "Common Sense'in Dijital Vatandaşlık Müfredatı, çocuklar, medya ve teknoloji üzerine yapılan en son araştırmalara dayanan altı temel konuya değinmektedir. Bu ders Siberzorbalık, Dijital Dram ve Nefret Konuşması üzerine yoğunlaşmaktadır. Öğrenciler bu zorlu konuları ele alır ve olumlu, destekleyici çevrimiçi topluluklar oluşturmak ve çevrimiçi zulümle mücadele etmek için astarların aktif rolünü oynarlar.",
+          "overview": "[![common sense education](https://curriculum.code.org/static/img/common_sense_education.png)](https://www.commonsense.org)\n\nBu ders Common Sense Education tarafından oluşturulmuştur. [Daha fazla bilgi edinin.](https://www.commonsense.org/education/digital-citizenship/curriculum)\n\nÇocuklar büyüdükçe, doğal olarak daha fazla çevrimiçi iletişim kurmaya başlayacaklar. Ancak gördükleri şeylerin bazıları onları incitebilir, üzebilir, öfkelendirebilir ve hatta korkutabilir. Öğrencilerinizin başkaları için empati kurmalarına ve siber zorbalıkla karşılaştıklarında kullanacakları stratejileri öğrenmelerine yardımcı olun.",
+          "preparation": "-   Öğretim materyallerini gözden geçirin.\n-   Her öğrenci için çıktı(lar).\n-   Sınıf için uzun bir dize (veya ip) ve kağıt hazırlayın.",
+          "purpose": "Common Sense'in Dijital Vatandaşlık Müfredatı, çocuklar, medya ve teknoloji üzerine yapılan en son araştırmalara dayanan altı temel konuya değinmektedir. Bu ders Siberzorbalık, Dijital Dram ve Nefret Konuşması üzerine yoğunlaşmaktadır. Öğrenciler bu zorlu konuları ele alır ve olumlu, destekleyici çevrimiçi topluluklar oluşturmak ve çevrimiçi zulümle mücadele etmek için dik duranların aktif rolünü oynarlar.",
           "student_overview": "Zorbalık hiçbir zaman iyi değildir. Bu ders, size, çevrimiçi ortamda neyi söylemenin doğru ve neyi söylemenin yanlış olduğunu öğretecektir."
         },
         "coursef-2021/lesson-9": {
+          "name": "Boş Alan Hikayeleri",
           "overview": "Bu **bağlam belirleme** dersinde öğrenciler, bilgisayarların bir kullanıcıdan gelen girdileri nasıl alıp depoladığını anlamak için dolgu hikayelerini (Mad Libs®'e benzer) kullanacak ve daha sonra bunu programda nasıl çalıştığına bağlı olarak kullanacaktır.",
           "preparation": "6 zarf elde edin (aynı zamanda uygun: kağıt veya indeks kartları, ikiye katlanmış). \n\n-   Her zarfın önünü büyük harflerle etiketleyin: nesne, sıvı, sayı, sıfat, gövde parçası, sayı\n-   Öğrencinin kopyalarını yazdırın **\\\\ \\*çalışma sayfası** (veya dijital sürümü LMS'nize gönderin).",
           "purpose": "Bu ders, öğrenciler programlamaya geri döndüğünde değişkenlerin nasıl çalıştığını anlamaya yardımcı olacak ortak bir bağlam sağlar."
         },
         "coursef-2021/lesson-10": {
+          "name": "Metin ve Bilgi İstemleri",
           "preparation": "Seviyeleri ile oynayın ve ders slaytlarını gözden geçirin.",
           "purpose": "Bu derste değişkenler veri depolamak ve değiştirmek için kullanılacaktır. Bu noktada öğrenciler sadece değerleri değiştirmeden depolayıp geri alacaklardır. Daha sonraki derslerde öğrenciler sayısal değerleri saklar ve zamanla değiştirerek oyundaki oyuncunun puanı gibi şeyleri takip eder."
         },
@@ -4302,6 +4328,7 @@
           "student_overview": "Bu derste döngüler, Sanatçı ile daha güzel resimler yapmayı kolaylaştırır."
         },
         "coursef-2021/Variables that Change in Artist": {
+          "name": "Değişkenleri Sanatçı ile Kullanma",
           "overview": "Bu derste öğrenciler, Sanatçı çevresindeki değişkenleri kullanarak tekrar eden tasarımların oluşturulmasını tecrübe edecekler. Öğrenciler, kodların daha kolay yazılmasını ve okunması daha kolay hale getirilebilmesi için değişkenlerin nasıl kullanılacağını öğrenecek. Kılavuzlu bulmacalardan sonra, öğrenciler öğrendiklerini göstermek ve kendi tasarımlarını oluşturmak için serbest seviye seviyesinde sona ereceklerdir.",
           "preparation": "-   Sınıfınız için varsa bir potansiyel sorun alanını bulmak üzere bulmacalarla oynayın. \n-   Her öğrencinin bir düşünce günlüğü olduğundan emin olun.",
           "purpose": "Değişkenler aslında, programınızı çalıştırdığınız sırada bilinmeyen değerlere yönelik veya bir programın yürütülmesi sırasında değişebilen değerlere yönelik yer tutuculardır. Bunlar dinamik kod oluşturmak bakımından oldukça önemlidir, zira bunlar, çok sayıda potansiyel modifikasyona bağlı olarak programınızın değişmesini ve gelişmesini sağlar. Bu aşama, değişkenlerin ayarlanması ve kullanılmasına dair en temel yeterlilikleri kullanarak, değişkenleri kullanmak konusunda destek verir.",
@@ -4329,7 +4356,7 @@
           "student_overview": "`for` döngülerini öğrenmek için eğlenceli şeyler bulacaksınız!"
         },
         "coursef-2021/For Loops in Bee": {
-          "name": "Arı ile For Döngüleri",
+          "name": "Arı ile For (İçin) Döngüleri",
           "overview": "Arı özelliğiyle bu ders, döngüler ve daha karmaşık bulmacaları çözmek için artan bir değişken kullanmaya odaklanıyor. Öğrenciler önceki derslerdeki döngüleri inceleyerek başlayacak, ardından döngüleri kullanarak karmaşık problemleri daha etkili bir şekilde çözmeye başlayacak.",
           "preparation": "-   Sınıfınız için varsa bir potansiyel sorun alanını bulmak üzere bulmacalarla oynayın. \n-   Her öğrencinin bir düşünce günlüğü olduğundan emin olun.",
           "purpose": "Günümüzün kavramı, döngüler için, bilgisayar biliminde çok önemli bir konudur. Sadece yaygın olarak kullanılmakla kalmaz, döngüler için öğrenme süreci diğer önemli kavramların (değişkenler ve parametreler gibi) öğrenilmesini artırır. Öğrenciler her bir for döngüsünün başlangıç, bitiş ve basamak değerlerini belirleyerek problemler üzerinden eleştirel düşünme çalışmalarına sahip olacaklardır. Bu konsept de çok sayıda matematik kullanır, bu nedenle daha derin bir öğrenme deneyimi için matematik dersi ile eşleştirmekten çekinmeyin.",
@@ -4378,13 +4405,13 @@
         },
         "courseb-2021/Digital Trails": {
           "name": "Dijital İzler",
-          "overview": " [![sağduyu eğitimi](https://curriculum.code.org/static/img/common_sense_education.png)](https://www.commonsense.org)\n\nBu ders aslen Sağduyu Eğitimi tarafından oluşturulmuştur. [Daha fazla bilgi edinin.](https://www.commonsense.org/education/digital-citizenship/curriculum)\n\nonline ne her zaman çevrimiçi kalmak mı? Öğrenciler, çevrimiçi olarak paylaştıkları bilgilerin dijital bir ayak izi veya “iz” bıraktığını öğrenirler. Nasıl yönettiklerine bağlı olarak, bu iz büyük veya küçük, zararlı veya yararlı olabilir. Öğrenciler farklı yolları karşılaştırır ve geride bırakmak istedikleri bilgileri eleştirel düşünürler.",
-          "preparation": "-   Öğretim materyallerini gözden geçirin.\n-   Her öğrenci için baskı sadaka (ler).",
-          "purpose": "Common Sense'in Dijital Vatandaşlık Müfredatı, çocuklar, medya ve teknoloji üzerine yapılan en son araştırmalara dayanan altı temel konuya değinmektedir. Bu ders Dijital Ayak İzi ve Kimlik üzerine yoğunlaşmaktadır. Öğrenciler çevrimiçi paylaşımın yararlarını ve risklerini göz önünde bulundurur ve dijital bir kişinin kişinin kendini, itibarını ve ilişkilerini nasıl etkileyebileceğini keşfedeceklerdir.",
+          "overview": " [![sağduyu eğitimi](https://curriculum.code.org/static/img/common_sense_education.png)](https://www.commonsense.org)\n\nBu ders aslen Common Sense Education tarafından oluşturulmuştur. [Daha fazla bilgi edinin.](https://www.commonsense.org/education/digital-citizenship/curriculum)\n\nÇevrimiçi yaptığınız şey her zaman çevrimiçi mi kalıyor? Öğrenciler, çevrimiçi paylaştıkları bilgilerin dijital bir ayak izi veya \"iz\" bıraktığını öğrenirler. Nasıl yönettiklerine bağlı olarak, bu iz büyük ya da küçük, zararlı ya da yararlı olabilir. Öğrenciler farklı izleri karşılaştırır ve geride ne tür bilgiler bırakmak istedikleri konusunda eleştirel düşünürler.",
+          "preparation": "-   Öğretim materyallerini gözden geçirin.\n-   Her öğrenci için çıktı(lar) alın.",
+          "purpose": "Common Sense'in Dijital Vatandaşlık Müfredatı, çocuklar, medya ve teknoloji üzerine yapılan en son araştırmalara dayanan altı temel konuya değinmektedir. Bu ders Dijital Ayak İzi ve Kimlik üzerine yoğunlaşmaktadır. Öğrenciler, çevrimiçi paylaşımın yararlarını ve risklerini göz önünde bulundurur ve dijital bir kişinin benlik algısını, itibarını ve ilişkilerini nasıl etkileyebileceğini keşfeder.",
           "student_overview": "Dijital ayak izinizi ve web sitelerini ziyaret ederken nasıl güvenli kalacağınızı öğrenin. "
         },
         "courseb-2021/Move It, Move It": {
-          "name": "Çabuk, Çabuk Taşı",
+          "name": "Oynat, Oynat",
           "overview": "Bu ders, bu kursun süresi boyunca kodlama egzersizleri için öğrencileri zihinsel olarak hazırlamaya çalışacaktır. Öğrenciler, küçük takımlar halinde, bir hedefe ulaşılana kadar sınıf arkadaşlarının bir yerden bir yere dikkatli bir şekilde ilerlemesi için programlamak üzere fiziksel aktiviteyi kullanacaktır.",
           "preparation": "-   **\\\\ \\*Öğretmen Video**\n-   Yazdır (veya başka bir şekilde görüntülemek için hazırlanır) **\\\\ \\*Çalışma Sayfası Cevap Anahtarı**\n-   Bir yazdır **\\\\ \\*Harita Etkinliği** ve bir**\\\\ \\*Çalışma Sayfası** 2-3 öğrenci grubu başına\n-   Boş kağıtlar hazırla yürüyüş ızgarasının geri kalanını doldurmak için (grup başına 4-7 gereklidir)",
           "purpose": "Sınıf arkadaşlarını programlamak için fiziksel hareketi kullanarak, öğrenciler bir bilgisayarda kodlamaya başladıklarında hissedeceklerine benzer konular ve duygularla karşılaşacaklardır. Bu streslerle eğlenceli ve açık bir ortamda karşılaşmak, yoğunluğu hafifletmeye ve öğrencilerin kendi başlarına sorunlarla karşılaşmadan önce gerekli becerileri uygulamalarına yardımcı olacaktır.",
@@ -4398,10 +4425,10 @@
           "student_overview": "Kırmızı Angry Bird'ün yaramaz domuza giden yolu takip etmesine yardım et."
         },
         "courseb-2021/Programming in Maze": {
-          "name": "Labirentte Programlama",
+          "name": "Angry Birds ile Programlama",
           "overview": "Buz Devri oyununun karakterlerini kullanarak öğrenciler, bir Scrat'i labirentin bir tarafından diğer taraftaki meşe palamuduna ulaştırmak için sıralı algoritmalar geliştireceklerdir. Bunu yapmak için öğrenciler, lineer bir sırada kod bloklarını biraraya getirecek, böylelikle bunları ileri doğru hareket ettirecek, sola ve sağa döndürecek.",
           "preparation": "-   Sınıfınız için olası sorunlu alanları bulmak için bulmacaları oynayın.\n-   **\\\\ \\*Happy Maps** için malzemeleri bulun veya yeniden yazdırın.\n-   Her öğrencinin bir Yansıma Dergisi olduğundan emin olun.\n-   Her yön (N, S, E, W) her öğrenciye iki set vermek için yeterli **\\\\ \\* Manipülatifler** kesin (Köprüleme Seçeneği #1 seçeneğini seçerseniz).",
-          "purpose": "Bu derste öğrenciler bilgisayar platformunda programlama becerilerini geliştireceklerdir. Bu bulmacaların blok tabanlı biçimi, öğrencilerin sözdizimini mükemmelleştirme konusunda endişelenmeden diziyi ve kavramlar hakkında bilgi edinmelerine yardımcı olur.",
+          "purpose": "Bu derste öğrenciler bir bilgisayar platformunda programlama becerilerini geliştireceklerdir. Bu bulmacaların blok tabanlı formatı, öğrencilerin sözdizimini mükemmelleştirme endişesi duymadan dizi ve kavramları öğrenmelerine yardımcı olur.",
           "student_overview": "Angry Bird'ün labirentten ilerlemesine yardım etmek için programlar oluşturun."
         },
         "courseb-2021/Programming in Harvester": {
@@ -4426,14 +4453,14 @@
           "student_overview": "Döngüleri kullanarak Hasatçının daha fazla toplamasına yardım et!"
         },
         "courseb-2021/Loops in Collector": {
-          "name": "Toplayıcıda Döngüler",
+          "name": "Laurel ile Döngüler",
           "overview": "Bu derste öğrenciler, döngü kavramlarını öğrenmeye devam eder. Burada Maceracı Laurel, açık mağara alanlarında hazine toplamak için döngüleri kullanır. Yeni bir 'hazineyi al' bloğu, macerasında ona yardım etmek için getirilir.",
           "preparation": "-   Sınıfınız için olası sorunlu alanları bulmak için bulmacaları oynayın.\n-   (İsteğe bağlı) Sınıfınızla bir grup olarak yapmak için birkaç bulmaca seçin.\n-   İnceleme **\\\\ \\*CS Temelleri Ana Etkinlik İpuçları - Ders Önerileri**\n-   Her öğrencinin bir yansıma dergisi olduğundan emin olun.",
           "purpose": "Bu ders, öğrencilere döngülerle daha fazla uygulama sağlar ve mümkün olduğunca çok hazine toplamaya çalıştıkları için bir 'tekrarlama' nın içine birden fazla blok koymaya teşvik eder.",
           "student_overview": "Maceracı Laurel'in açık bir mağarada hazine toplaması için programla."
         },
         "courseb-2021/Loops in Artist": {
-          "name": "Sanatçıların Döngüleri",
+          "name": "Döngülerle Bahçeler çizmek",
           "overview": "Döngülere geri dönen öğrenciler, basit talimat dizilerini tekrarlayarak resim çizmeyi öğrenirler. Bir önceki takılı olan derste, bir labirentten geçip hazineyi toplamak için ilmekler kullanıldı. Burada, döngüler desenler yaratıyor. Bu aşamanın sonunda öğrencilere döngüler kullanarak kendi görüntülerini oluşturma imkanı verilecek.",
           "preparation": "-   Sınıfınız için potansiyel sorun alanlarını bulmak için dersten önce bulmacaları oynayın.\n-   İnceleme **\\\\ \\*CS Temelleri Ana Etkinlik İpuçları - Ders Önerileri**.\n-   Her öğrencinin bir yansıma dergisi olduğundan emin olun.",
           "purpose": "Bu ders, bu şeyleri programlamada hangi döngülerin oluşturabileceğine dair farklı bir bakış açısı verir. Öğrenciler, verilen kodu değerlendirerek ve bulmacayı çözmek için neyin eklenmesi gerektiğini belirleyerek eleştirel düşünme becerilerini test edecekler. Öğrenciler, ayrıca, 'tekrarla' döngülerinin yardımı olmadan program için gerekli olan bloklar yüzünden buradaki döngüler olmadan programlamanın etkisizliği üzerine kafa yorar.",
@@ -4454,6 +4481,7 @@
           "student_overview": "Öğretmeniniz uzaktan düğmelere bastığında hareket edin veya seslenin."
         },
         "courseb-2021/Events in Play Lab": {
+          "name": "Mini Proje: Etkinliklerle Kraliyet Savaşı",
           "overview": "Bu çevrimiçi etkinlikte, öğrenciler, Play Lab'da etkinliklerin nasıl kullanılacağını öğrenmek ve öğrendikleri bütün kodlama becerilerini hareketli bir oyun oluşturmak amacıyla uygulamak için fırsat bulacak. Yaratıcı olma ve Play Lab'da bir oyun yapma zamanı!",
           "preparation": "-   Sınıfınız için olası sorunlu alanları bulmak için bulmacaları oynayın.\n-   (İsteğe bağlı) Sınıfınızla bir grup olarak yapmak için birkaç bulmaca seçin.\n-   İnceleme **\\\\ \\*CS Temelleri Ana Etkinlik İpuçları - Ders Önerileri**.\n-   Her öğrencinin bir yansıma dergisi olduğundan emin olun.",
           "purpose": "Bu çevrimiçi aktivitede öğrenciler, Oyun Laboratuvarında olayları nasıl kullanacaklarını öğrenecekler. Bir ok anahtarına basıldığında şövalyeyi hareket etmesini öğreterek başlayacaklar, daha sonra son ücretsiz oyun bulmacasının bir kısmı olarak, dizi ve döngü sağlama dahil olmak üzere bu derste öğrendikleri becerilerin geri kalanını gösterme olanağı ile sonlanacaktır. ",
@@ -4468,14 +4496,14 @@
         },
         "coursea-2021/Safety in My Online Neighborhood": {
           "name": "Çevrimiçi Mahallemde Güvenlik",
-          "overview": "[![sağduyu eğitimi](https://curriculum.code.org/static/img/common_sense_education.png)](https://www.commonsense.org)\n\nBu ders aslen Sağduyu Eğitimi tarafından oluşturulmuştur. [Daha fazla bilgi edinin.](https://www.commonsense.org/education/digital-citizenship/curriculum)\n\nİnternetin gücü öğrencilerin bizzat göremeyecekleri yerleri deneyimlemelerine ve ziyaret etmelerine olanak tanır. Ancak, gerçek dünyada seyahat etmek gibi, çevrimiçi seyahat ederken güvende olmak önemlidir. Bu sanal saha gezisinde, çocuklar çevrimiçi maceralarda güvende kalmayı deneyebilirler.",
-          "preparation": "-   Öğretim materyallerini gözden geçirin.\n-   Her öğrenci için baskı sadaka (ler).\n-   (İsteğe Bağlı) Sınıf gösterimi için şiir posteri.",
+          "overview": "[![sağduyu eğitimi](https://curriculum.code.org/static/img/common_sense_education.png)](https://www.commonsense.org)\n\nBu ders aslen Common Sense Education tarafından oluşturulmuştur. [Daha fazla bilgi edinin.](https://www.commonsense.org/education/digital-citizenship/curriculum)\n\nİnternetin gücü öğrencilerin bizzat göremeyecekleri yerleri deneyimlemelerine ve ziyaret etmelerine olanak tanır. Ancak, gerçek dünyada seyahat etmek gibi, çevrimiçi seyahat ederken güvende olmak önemlidir. Bu sanal saha gezisinde, çocuklar çevrimiçi maceralarda güvende kalmayı deneyebilirler.",
+          "preparation": "-   Öğretim materyallerini gözden geçirin.\n-   Her öğrenci için çıktı(lar).\n-   (İsteğe Bağlı) Sınıf gösterimi için şiir posteri.",
           "purpose": "Common Sense'in Dijital Vatandaşlık Müfredatı, çocuklar, medya ve teknoloji üzerine yapılan en son araştırmalara dayanan altı temel konuya değinmektedir. Bu ders Gizlilik ve Güvenlik üzerine yoğunlaşmaktadır. Öğrenciler kişisel bilgileri nasıl koruyacaklarını öğrenirler ve veri gizliliği haklarını daha derinlemesine anlayarak kendileri ve başkalarını savunabilirler.",
           "student_overview": "Çevrimiçi bir yerlere güvenli bir şekilde nasıl gidileceğini öğrenin."
         },
         "coursea-2021/Learn to Drag and Drop": {
           "name": "Sürükleyip Bırakmayı Öğrenin",
-          "overview": "Bu ders öğrencilere bilgisayar laboratuvarında oldukları zaman beklentinin ne olduğu hakkında bir fikir verecektir. Bilgisayar laboratuvarında sergileyecekleri davranışlar hakkında kısa bir tartışma ile başlar, daha sonra bir bilgisayar kullanarak çevrim içi bulmacaları tamamlayarak ilerleyecekler.",
+          "overview": "Bu **beceri geliştirme** dersi, öğrencilere bilgisayar laboratuvarına gittiklerinde neyle karşılaşacakları konusunda bir fikir verecektir. Onlara bilgisayar laboratuvarı kurallarını tanıtan kısa bir tartışma ile başlar, ardından çevrimiçi bulmacaları tamamlamak için bilgisayar kullanmaya başlarlar.",
           "preparation": "-   Code.org - Öğretmen Video - **\\\\ \\*Sınıf Nasıl Yapılır Bölümü** izleyin. Code.org'da kendi sınıf bölümünüzü oluşturun ve her öğrencinin üzerinde parola olan bir kart olduğundan emin olun.\n-   Öğrencilerin ders 2'ye cihazlarından erişebileceklerinden emin olun. Öğrencilerin çok hızlı ilerlemelerini önlemek için gelecekteki dersleri gizlemek isteyip istemediğinizi düşünün.\n-   Okul BT kişisinin sınıf bölümünüz için bilgisayar masaüstüne hızlı bir bağlantı eklemesini sağlar.\n-   Daha fazla çevrimiçi güvenlik içeriği için Common Sense Education web sitesini inceleyin.",
           "purpose": "Bu dersin temel amacı öğrencilerin bilgisayar deneyimlerini geliştirmektir. Tıklama, sürükleme ve bırakma gibi en temel bilgisayar işlevlerini kapsayarak, gelecekteki bulmacalar için sınıfta daha eşit bir oyun alanı oluşturuyoruz. Bu ders aynı zamanda cihazlarınıza bağlı olarak “fare”, “trackpad” veya “dokunmatik ekran” da dahil olmak üzere temel bilgisayar donanımı terminolojisini tanıtmak için harika bir fırsat sunar.",
           "student_overview": "Bulmacaları tamamlamak için tıklayıp sürükleyin."
@@ -4509,7 +4537,7 @@
           "student_overview": "BB-8'e hurda metal toplamada yardım edin."
         },
         "coursea-2021/Loops: Happy Loops": {
-          "name": "Döngüler: Mutlu Döngüler",
+          "name": "Mutlu Döngüler",
           "overview": "Döngüler programlamada çok yardımcı ve güçlü birer araçtır. Döngülerin nasıl yardımcı olduğu anlamaları için öğrenciler, sıradan problemleri çözmek için en kolay yolu bulmaları gerekecek.",
           "preparation": "-   Sınıf\n    için görüntülemek için bir **\\\\ \\*Çalışma sayfası** yazdırın - 2-3 gruba her grup başına, her birini yazdırın: **\\\\ \\*Oyun parçaları,\\\\ \\*XL Çalışma Sayfası ve\\\\ \\*Bonus Paketi Manipülatifleri**.\n-   Her öğrencinin bir Yansıma Dergisi olduğundan emin olun.",
           "purpose": "Bu ders, döngülere bir giriş olarak hizmet eder. Döngüler, öğrencilerin, tekrarlanması gereken komutları gruplayarak kodlarını basitleştirmesine olanak sağlar. Öğrenciler, sınıf arkadaşlarının hareketlerindeki tekrarı fark ederek ve komutların kaç kere tekrarlandığını belirleyerek eleştirel düşünme becerilerini geliştirecektir. Tekrar \"Mutlu Haritalara\" bakarak, öğrenciler, sıralama gibi eski kavramları tekrarla döngülerinin yeni kavramı ile ilişkilendirme şansını edinecektir.",
@@ -4523,14 +4551,14 @@
           "student_overview": "Döngüleri kullanarak Scrat'in daha fazla yol katetmesine yardım edin."
         },
         "coursea-2021/Loops in Collector": {
-          "name": "Toplayıcıda Döngüler",
+          "name": "Laurel ile Döngüler",
           "overview": "Bu derste öğrenciler, döngüler kavramını öğrenmeye devam eder. Önceki derste bir labirentte hareket ederek ve mısır toplayarak öğrencilere döngüler öğretilmiştir. Burada döngüler, açık mağara alanlarında hazine toplamak için kullanılır.",
           "preparation": "-   Sınıfınız için olası sorunlu alanları bulmak için bulmacaları oynayın.\n-   (İsteğe bağlı) Sınıfınızla bir grup olarak yapmak için birkaç bulmaca seçin.\n-   İnceleme **\\\\ \\*CSF Ders Önerileri**\n-   Her öğrencinin bir yansıma dergisi olduğundan emin olun",
           "purpose": "Bu ders, öğrencilerin döngülerle daha fazla pratik yapmasını sağlar ve 'hazineyi al' olan yeni bir bloğu tanıtır. Blok, Hasatçıda 'mısırı topla' ile yapıldığı gibi işe yarar. Bu bulmacalar daha açıktır, böylelikle nihai çözümler için öğrencilere daha fazla esneklik sağlar.",
           "student_overview": "Maceracı Laurel'e yeraltındaki hazineyi toplamada yardım edin."
         },
         "coursea-2021/Ocean Scene with Loops": {
-          "name": "Sanatçıların Döngüleri",
+          "name": "Döngüler ile okyanus sahnesi",
           "overview": "Döngülere geri dönen öğrenciler, basit talimat dizilerini tekrarlayarak resim çizmeyi öğrenirler. Bir önceki takılı olan derste, bir labirentten geçip hazineyi toplamak için ilmekler kullanıldı. Burada, döngüler desenler yaratıyor. Bu aşamanın sonunda öğrencilere döngüler kullanarak kendi görüntülerini oluşturma imkanı verilecek.",
           "preparation": "-   Sınıfınız için olası sorunlu alanları bulmak için bulmacaları oynayın.\n-   İnceleme **\\\\ \\*CSF Ders Önerileri**.\n-   Her öğrencinin bir yansıma dergisi olduğundan emin olun.",
           "purpose": "Bu ders, döngülerin programlamada nasıl şeyler oluşturabileceğine dair farklı bir bakış açısı kazandırır. Öğrenciler ayrıca, programın 'tekrar' döngülerinin yardımı olmadan kaç blok gerektireceğinden dolayı döngüler olmadan programlamanın verimsizliğini de yansıtabilirler.",
@@ -4544,6 +4572,7 @@
           "student_overview": "Öğretmenleriniz uzaktan düğmelere bastığında hareket edip seslenin."
         },
         "coursea-2021/Events in Play Lab": {
+          "name": "Mini Proje: Play Lab ile Hareket halinde",
           "overview": "Bu çevrimiçi etkinlikte, öğrenciler, Play Lab' da, olayların nasıl kullanılacağını öğrenme şansına sahip olacaklar. Ve hareketli bir oyun oluşturmak için, öğrendikleri kodlama becerilerinin tamamını uygulayabilecekler. Şimdi, Play Lab' da bir hikaye oluşturmanın ve yaratıcı olmanın zamanı!",
           "preparation": "-   Sınıfınız için olası sorunlu alanları bulmak için bulmacaları oynayın.\n-   (İsteğe bağlı) Sınıfınızla bir grup olarak yapmak için birkaç bulmaca seçin.\n-   İnceleme **\\\\ \\*CSF Ders Önerileri**.\n-   Her öğrencinin bir yansıma dergisi olduğundan emin olun.",
           "purpose": "Ogrenciler bugun Play Lab i kullanarak olaylari ileri seviyede anlamalarini gelistirecekler. Olgular cogu bilgisayar programlarinda baya yaygin olarak kullanilir. Bu aktivitede, ogrenciler ekran etrafinda hareket eden, ses cikaran, ve arkaplani degistiren kullanici tarafindan baslatilan karakterler olusturmak icin olgulari kullanacaklar.",
@@ -4558,9 +4587,9 @@
         },
         "coursec-2021/Putting a STOP to Online Meanness": {
           "name": "Çevrimiçi Kötülüğe bir DUR deme",
-          "overview": " [![sağduyu eğitimi](https://curriculum.code.org/static/img/common_sense_education.png)](https://www.commonsense.org)\n\nBu ders aslen Sağduyu Eğitimi tarafından oluşturulmuştur. [Daha fazla bilgi edinin.](https://www.commonsense.org/education/digital-citizenship/curriculum)\n\nİnternet her türlü ilginç insanla doludur, ancak bazen bazıları birbirlerine acımasız olabilir. Bu rol oynama ile öğrencilerinizin neden çevrimiçi olarak ortalama olmanın yüz yüze olduğundan daha kolay olduğunu ve çevrimiçi alçaklığı gördüklerinde nasıl başa çıkacaklarını anlamalarına yardımcı olun.",
-          "preparation": "-   Öğretim materyallerini gözden geçirin.\n-   Her öğrenci için baskı sadaka (ler).\n-   Doldurulmuş bir hayvan veya oyuncak sınıfına getirin.",
-          "purpose": "Common Sense'in Dijital Vatandaşlık Müfredatı, çocuklar, medya ve teknoloji üzerine yapılan en son araştırmalara dayanan altı temel konuya değinmektedir. Bu ders Siberzorbalık, Dijital Dram ve Nefret Konuşması üzerine yoğunlaşmaktadır. Öğrenciler bu zorlu konuları ele alır ve olumlu, destekleyici çevrimiçi topluluklar oluşturmak ve çevrimiçi zulümle mücadele etmek için astarların aktif rolünü oynarlar.",
+          "overview": " [![sağduyu eğitimi](https://curriculum.code.org/static/img/common_sense_education.png)](https://www.commonsense.org)\n\nBu ders aslen Common Sense Education tarafından oluşturulmuştur. [Daha fazla bilgi edinin.](https://www.commonsense.org/education/digital-citizenship/curriculum)\n\nİnternet her türlü ilginç insanla doludur, ancak bazen bazıları birbirlerine acımasız olabilir. Bu rol oynama ile öğrencilerinizin neden çevrimiçi olarak kaba olmanın yüz yüze olduğundan daha kolay olduğunu ve çevrimiçi kabalığı gördüklerinde nasıl başa çıkacaklarını anlamalarına yardımcı olun.",
+          "preparation": "-   Öğretim materyallerini gözden geçirin.\n-   Her öğrenci için çıktı(lar) alın.\n-   Doldurulmuş bir hayvan veya oyuncak sınıfa getirin.",
+          "purpose": "Common Sense'in Dijital Vatandaşlık Müfredatı, çocuklar, medya ve teknoloji üzerine yapılan en son araştırmalara dayanan altı temel konuya değinmektedir. Bu ders Siberzorbalık, Dijital Dram ve Nefret Konuşması üzerine yoğunlaşmaktadır. Öğrenciler bu zorlu konuları ele alır ve olumlu, destekleyici çevrimiçi topluluklar oluşturmak ve çevrimiçi zulümle mücadele etmek için dik duranların aktif rolünü oynarlar.",
           "student_overview": "Bu derste, kötülüğün ne olduğunu ve bununla çevrimiçi ortamda karşılaşırsanız ne yapacağınızı öğreneceksiniz."
         },
         "coursec-2021/Programming: My Robotic Friends": {
@@ -4570,7 +4599,7 @@
           "student_overview": "Bu derste, sınıf arkadaşlarınız robotmuş gibi davranacaksınız ve istiflenmiş kupa desenleri oluşturmaları için onları programlayacaksınız."
         },
         "coursec-2021/Programming in Maze": {
-          "name": "Labirentte Programlama",
+          "name": "Angry Birds ile Programlama",
           "overview": "Angry Birds oyununun karakterlerini kullanarak öğrenciler, bir kuşu labirentin bir tarafından diğer taraftaki domuza ulaştırmak için sıralı algoritmalar geliştireceklerdir. Bunu yapmak için öğrenciler, lineer bir sırada kod bloklarını biraraya getirecek, böylelikle bunları ileri doğru hareket ettirecek, sola ve sağa döndürecek.",
           "preparation": "-   Sınıfınız için olası sorunlu alanları bulmak için bulmacaları oynayın.\n-   (İsteğe bağlı) Sınıfınızla bir grup olarak yapmak için birkaç bulmaca seçin. \n-   Her öğrencinin bir yansıma dergisi olduğundan emin olun.",
           "purpose": "Bu derste öğrenciler, bir bilgisayar platformunda programlama ve hata ayıklama becerilerini geliştirecektir. Bu bulmacaların blok temelli formatı, söz dizimini mükemmelleştirme hakkında endişe duymadan, öğrencilerin dizi ve kavramları öğrenmesine yardım eder.",
@@ -4584,14 +4613,14 @@
           "student_overview": "Bulmacalardaki problemleri bulun ve hata ayıklama becerilerinizi uygulayın."
         },
         "coursec-2021/Programming in Collector": {
-          "name": "Koleksiyoncu programlama",
+          "name": "Laurel ile Hazine Toplama",
           "overview": "Bu bulmaca serisinde öğrenciler, algoritmaları ve hata ayıklamayı daha da anlamaya devam edecektir. Yeni bir karakter, Maceracı Laurel ile öğrenciler, bir yolda yürürken Laurel'in hazine toplamasını sağlamak için sıralı algoritmalar oluşturacaktır.",
           "preparation": "-   Sınıfınız için potansiyel sorunlu alanları bulmak için bulmacaları oynayın.\n-   Her öğrencinin bir yansıma dergisi olduğundan emin olun.",
           "purpose": "Bu derste öğrenciler yeni bir karakter olan Maceracı Laurel ile programlama becerilerini uygulayacaklardır. Birisi programlamaya başladığında, bir makinenin okuyabileceği bir şeyi kullanarak talimatları belirli bir sırayla bir araya getirirler. Programlama kullanımı sayesinde öğrenciler, bir bilgisayarın talimatlar ve düzenin nasıl gezindiği konusunda bir anlayış geliştireceklerdir. Farklı bir bulmaca hedefi ile yeni bir karakter kullanmak öğrencilerin programlama sıralama ve algoritmalar ile deneyim kapsamlarını genişletmelerine yardımcı olacaktır.",
           "student_overview": "Maceracı Laurel'in bir sürü değerli taş toplamasına yardım etmek için algoritmalar yazın!"
         },
         "coursec-2021/Programming in Artist": {
-          "name": "Sanatçı Programlama",
+          "name": "Kod ile Sanat Yaratma",
           "overview": "Bu derste öğrenciler, ekrandaki çizimleri tamamlaması için Sanatçının kontrolünü ele alacaktır. Bu Sanatçı aşaması, öğrencilerin, '100 piksel ileri hareket et' ve '90 derece sağa dön' gibi yeni blokları kullanarak giderek artan karmaşıklıkta resimleri oluşturmasına olanak sağlayacaktır.",
           "preparation": "-   Sınıfınız için olası sorunlu alanları bulmak için bulmacaları oynayın.\n-   (İsteğe bağlı) Bulmacaları tamamlamak için kullanmaları gereken açıları görselleştirmek için sınıfınızın iletkenlerini edinin.\n-   Her öğrenci için bir **\\\\ \\*Öğrenci El Kitabı** yazdırın.",
           "purpose": "Öğrencilerin sıralama ile ilgili önceki deneyimlerini geliştirerek, bu ders, kodlama ile yaratıcılığa daha fazla ilham vermeye çalışacaktır. Bu dersin amacı, yeni blokları ve hedefleri tanıtarak sıralama hakkındaki bilgileri pekiştirmektir. Bu durumda öğrenciler, aynı zamanda sıralama becerilerini uygulayarak, yeni blokları kullanarak pikseller ve açılar hakkında daha fazla şey öğrenir. Ayrıca öğrenciler, bir kare çizmek için Oyuncu kodlama gibi yeni hedefleri görselleştirebilecektir.",
@@ -4618,6 +4647,7 @@
           "student_overview": "Hasatçının biraz sebze toplamasına yardım etmek için döngüleri kullanalım!"
         },
         "coursec-2021/Sticker Art with Loops": {
+          "name": "Mini proje: Etiket Sanatı",
           "overview": "Bu **mini proje** dersi, önceki derslerden gelen döngülerin anlaşılmasına dayanır. Öğrenciler Sanatçı ile benzersiz sanat eserleri yaratacaklardır.",
           "preparation": "-   Kendi tasarımını yapmak için pratik yap. Bu seviyelerin daha önce gelen her şeyden nasıl farklı olduğunu not edin.\n-   Her öğrencinin bir yansıma dergisi olduğundan emin olun.",
           "purpose": "Bu seri, yaratıcı ve kişisel tasarımların olduğu döngülerin gücünü vurgular.  \n\nProje tarafından desteklenen bir sıra olarak önerilen bu ilerleme, öğrencilerin kendi çalışmalarının üzerine inşa etmelerine ve harika eserler yaratmalarına olanak sağlayacaktır.",
@@ -4667,7 +4697,7 @@
         "coursed-2021/lesson-5": {
           "name": "Şifre Güçlendirme",
           "overview": " [![sağduyu eğitimi](https://curriculum.code.org/static/img/common_sense_education.png)](https://www.commonsense.org)\n\nBu ders başlangıçta [Common Sense Education](https://www.commonsense.org/education/digital-citizenship/curriculum)tarafından oluşturulmuştur.\n\nDaha güçlü, daha güvenli çevrimiçi şifreler herkes için iyi bir fikirdir. Ama çocuklara daha iyi şifreler oluşturmalarına ve onları hatırlamalarına nasıl yardımcı olabiliriz? Çocukların hem güvenli hem de akılda kalıcı şifreler oluşturmalarına yardımcı olmak için bu derste ipuçlarını kullanın.",
-          "preparation": "-   Öğretim materyallerini gözden geçirin.\n-   Her öğrenci için baskı sadaka (ler).\n-   Öğrenciler için yazı kağıdı veya not defteri hazırlar.",
+          "preparation": "-   Öğretim materyallerini gözden geçirin.\n-   Her öğrenci için çıktı (lar).\n-   Öğrenciler için yazı kağıdı veya not defteri hazırlar.",
           "purpose": "Common Sense'in Dijital Vatandaşlık Müfredatı, çocuklar, medya ve teknoloji üzerine yapılan en son araştırmalara dayanan altı temel konuya değinmektedir. Bu ders Gizlilik ve Güvenlik üzerine yoğunlaşmaktadır. Öğrenciler kişisel bilgileri nasıl koruyacaklarını öğrenirler ve veri gizliliği haklarını daha derinlemesine anlayarak kendileri ve başkalarını savunabilirler.",
           "student_overview": "Bu derste, şifrelerinizin bilgilerinizi nasıl koruduğunu ve nasıl iyi bir şifre oluşturulacağını öğreneceksiniz."
         },
@@ -4679,7 +4709,7 @@
           "student_overview": "Bu derste, resimleri çizmesi için sınıf arkadaşınızı programlayacaksınız!"
         },
         "coursed-2021/Introduction to Online Puzzles": {
-          "name": "Online Bulmacalara Giriş",
+          "name": "Çevrimiçi Bulmacalara Giriş",
           "overview": "Bu bulmaca setinde, öğrenciler Code.org'un çevrimiçi çalışma alanına giriş (veya sınıf tecrübesine göre inceleme) ile başlayacaklar. Çalışma alanının, \\`Çalıştır',' Sıfırla', ve 'Adım' düğmeleri gibi temel işlevselliğine işaret eden videolar olacaktır. Ayrıca bu videolarda da tartışılmıştır: Blockly bloklarını sürükleme, Blockly bloklarını silme ve Blockly bloklarını bağlama. Sonra, öğrenciler labirentte _sequencing_ ve _debug_ becerilerini uygulayacaklardır. Oradan, öğrenciler _loops_'un temellerini öğrendiğinde Koleksiyoner, Sanatçı ve Biçerdöver gibi yeni bulmaca türlerini görecekler.",
           "preparation": "-   Sınıfınız için varsa bir potansiyel sorun alanını bulmak üzere bulmacalarla oynayın. \n-   Her öğrencinin bir düşünce günlüğü olduğundan emin olun.",
           "purpose": "Her sınıfın her konu için bir anlama spektrumu olduğunu biliyoruz. Sınıfınızdaki bazı öğrenciler, bilgisayar dâhisi olabilirken, diğerleri pek de çok deneyimli olmayabilir. Eşit bir oynama (ve öğrenme) alanı oluşturmak için, Kurs D için bu \"Aşamayı Arttır\"ı geliştirdik. Bu, Code.org ve temel bilgisayar bilimi kavramlarının nasıl kullanılacağına dair bir giriş veya bir gözden geçirme olarak kullanılabilir. Bu aşama, Kurs D'ye başlamak için gereken tüm ön şartları kapsar.",
@@ -4693,14 +4723,14 @@
           "student_overview": "Kod ile çizimler yaptığınız kursun başını hatırlayın. Bu derste, çok benzer bir şey yapmak için bir takımla birlikte çalışacaksınız!"
         },
         "coursed-2021/Debugging in Collector": {
-          "name": "Toplayıcıda Hata Ayıklama",
+          "name": "Laurel ile Hata Ayıklama",
           "overview": "Bu çevirim içi etkinlikte, öğrenciler 'toplayıcı' ortamında hata ayıklama üzerinde çalışacaklar. Öğrenciler, basit algoritmalar, döngüler ve iç içe döngüler ile bulmacaları çözmek için kod okuma ve düzenleme alıştırması yapacaklar.",
           "preparation": "-   Sınıfınız için varsa bir potansiyel sorun alanını bulmak üzere bulmacalarla oynayın. \n-   Her öğrencinin bir düşünce günlüğü olduğundan emin olun.",
           "purpose": "Bu dersin amacı öğrencilere yeni bir beceri öğrenirken başarısızlığın normal olduğunu öğretmektir. Öğrencilere çalışmayan önceden yazılı programlar verilecektir. Bu programları düzeltmeleri istenecektir. Hata ayıklama adı verilen bu süreç öğrencilere temel problem çözme ve eleştirel düşünme becerilerini öğretir. Öğrenciler daha zor ve daha zor programlama projelerine devam ettikleri için bu beceriler aktarılır.",
           "student_overview": "Kodlama esnasında hiç problem yaşadınız mı? Bu ders, size, hata ayıklamanın sırlarını öğretecek. Hata ayıklama, kodunuzdaki hataları bulma ve düzeltme sürecidir."
         },
         "coursed-2021/Events in Bounce": {
-          "name": "Sıçrama Olayları",
+          "name": "Bounce'daki Etkinlikler",
           "overview": "Bu çevrim içi etkinlikte, öğrenciler, olayların ne olduğunu, bilgisayarın video oyunlar gibi programlarda olayları nasıl kullandığını öğrenirler. Öğrenciler, olaylara (yön düğmelerine basmak gibi) tepki veren program yapmak için bulmacalar üzerinde çalışırlar. Bulmacanın sonunda, öğrencilerin, oyunlarında farklı hızları ve sesleri kullanabilecekleri fırsatları olacak.",
           "preparation": "-   Her öğrencinin bir yansıma günlüğü olduğundan emin ol.\n-   Sınıfınız için herhangi bir potansiyel sorun alanları bulmak için bulmaca ile oynayın.\n-   **\\\\ \\*slayt güvertesi** okuyun (sınıf sonunda öğrencilere sunulacak).",
           "purpose": "Bilgisayar programlarında, özellikle de video oyunlarında olaylar çok yaygındır.  \n\nBu derste öğrenciler, spor temelli bir oyun yaparak olayları daha iyi anlayacaklar. Öğrenciler, paletlerini ok anahtarlarına göre hareket ettirmeyi ve nesneler çarpıştığında ses çıkarmayı öğrenecekler. En sonunda oyunlarını benzersiz yapmak için onu kişiselleştirmeyi öğrenecekler.",
@@ -4728,7 +4758,7 @@
           "student_overview": "Bu derste Scrat'in mümkün olduğunca etkili bir şekilde meşe palamuduna ulaşmasına yardım etmek için tekrar bloğunu kullanacaksınız."
         },
         "coursed-2021/Loops in Artist": {
-          "name": "Sanatçıların Döngüleri",
+          "name": "Döngüler ile Şekiller Çizme",
           "overview": "Bu ders, önceki derslerden döngülerin anlaşılmasına katkıda bulunur ve öğrenciye tam anlamıyla yaratıcı olma şansını verir. Bu aktivite, ekstra problem-çözme pratiği için bir hata ayıklama egzersizi olarak da kullanılır.",
           "preparation": "-   Sınıfınız için varsa bir potansiyel sorun alanını bulmak üzere bulmacalarla oynayın. \n-   Her öğrencinin bir düşünce günlüğü olduğundan emin olun.",
           "purpose": "Bu seri, öğrencilerin 'repeat\\` döngülerinin neden uzun boydan üstün olduğunu düşünmelerini sağlamak için bir dizi bulmacayla döngülerin gücünü vurgular.",
@@ -4749,21 +4779,21 @@
           "student_overview": "Yalnızca kesin şartlar altında puan kazanacağınız bir oyunu oynama zaman geldi!"
         },
         "coursed-2021/lesson-6": {
-          "name": "Geleceğe bakış",
+          "name": "Minecraft ile ileriye bakmak",
           "overview": "Bu ders, aslında Minecraft takımında Kod Saati için oluşturuldu. Öğrencilerin, şu ana kadar öğrendikleri fikirleri pratiğe dökme ve ayrıca koşullara şöyle bir göz atma şansı olacak!",
           "preparation": "-   Sınıfınız için olası sorunlu alanları bulmak için bu dersle ilişkili bulmacaları oynayın.\n-   Her öğrencinin bir yansıma dergisi olduğundan emin olun.",
           "purpose": "Bu bulmaca dizisi, döngüler hakkındaki bilgilerini pekiştirmeye ve arttırmaya yarayacaktır, ve koşulları tanıtacaktır. Bu iki kavramı birbiri ile eşleştirerek öğrenciler, yeni ve heyecan verici bir ortamda eğlenceli ve yenilikçi programlar oluşturma potansiyelini keşfedebilecekler.",
           "student_overview": "Lavdan Kaçının! Burada Minecraft dünyasındaki koşulları öğrenmeye başlayacaksınız."
         },
         "coursed-2021/Conditionals in Bee": {
-          "name": "Koşullar-Arı",
+          "name": "Arı ile \"Eğer/Başka\"",
           "overview": "Bu noktaya kadar öğrenciler her çalıştırıldığında aynı biçimde çalışan kod yazıyor - güvenilir, ama bu çok esnek değildir. Bu derste, sınıfınız, koşullu koşullarla kodlamaya başlayacak ve programın karşılaştığı özel koşullara bağlı olarak farklı biçimde çalışan kod yazmalarına izin verecektir.",
           "preparation": "-   Sınıfınız için varsa bir potansiyel sorun alanını bulmak üzere bulmacalarla oynayın. \n-   Her öğrencinin bir düşünce günlüğü olduğundan emin olun.",
           "purpose": "“Kartlı Şartlar” programında koşullara tanıtıldıktan sonra öğrenciler şimdi programlarında bunları kullanarak pratik yapacaklar. “if/else” blokları daha esnek bir program sağlar. Arı sadece nektar toplayacak _if_ bir çiçek var ya da bal yapmak _if_ bir petek var. ",
           "student_overview": "Şimdi koşulları anladığınıza göre, nektar ve balı toplaması için arıyı programlama zamanı. "
         },
         "coursed-2021/While Loops in Farmer": {
-          "name": "Çiftçi Döngüleri",
+          "name": "Farmer'da Süresince Döngüleri",
           "overview": "Bu **beceri geliştirme** dersinde, öğrenciler Farmer'da çukurları doldurmak ve toprak kazmak için çalışacaklar, ancak deliklerin boyutunu veya toprak yığınlarının yüksekliğini bilemeyecekler. Bu bulmacaları çözmek için öğrenciler yeni bir tür döngü kullanacaklar.",
           "preparation": "-   Sınıfınız için varsa bir potansiyel sorun alanını bulmak üzere bulmacalarla oynayın. \n-   Her öğrencinin bir düşünce günlüğü olduğundan emin olun.",
           "purpose": "Öğrencileriniz döngü bilgilerini derinleştirmeye devam ettikçe, bir komutun tekrarlanması gereken sorunlarla karşılaşacaklardır, ancak kaç kez tekrarlanması gerektiği bilinmemektedir. Bu sırada döngüler devreye giriyor. Bugünün dersinde, öğrenciler, yeni başlayanların koşullara dayalı döngüler anlayışını geliştirecek ve genel olarak döngüler bilgisini genişletecektir. ",
@@ -4784,10 +4814,10 @@
           "student_overview": "Bol kodlama için elleri hazırla! Projenizi oluşturmaya başlamanın zamanı geldi."
         },
         "express-2021/Programming with Angry Birds": {
-          "name": "Labirentte Programlama",
-          "overview": "Angry Birds oyununun karakterlerini kullanarak öğrenciler, bir kuşu labirentin bir tarafından diğer taraftaki domuza götürmek için sıralı algoritmalar geliştireceklerdir. Bunu yapmak için öğrenciler, lineer bir sırada kod bloklarını biraraya getirecek.",
+          "name": "Angry Birds ile Programlama",
+          "overview": "Bu **beceri geliştirme** dersinde öğrenciler, bir kuşu labirentin bir tarafından diğer taraftaki domuza taşımak için sıralı algoritmalar geliştirecekler. Bunu yapmak için, kod bloklarını doğrusal bir sırayla istifleyerek düz hareket etmelerini, sola dönmelerini veya sağa dönmelerini sağlayacaklar.",
           "preparation": "-   Sınıfınız için olası sorunlu alanları bulmak için bulmacaları oynayın.\n-   (İsteğe bağlı) Sınıfınızla bir grup olarak yapmak için birkaç bulmaca seçin. \n-   Her öğrencinin bir yansıma dergisi olduğundan emin olun.",
-          "purpose": "Bu derste öğrenciler bilgisayar platformunda programlama becerilerini geliştireceklerdir. Bu bulmacaların blok tabanlı biçimi, öğrencilerin sözdizimini mükemmelleştirme konusunda endişelenmeden diziyi ve kavramlar hakkında bilgi edinmelerine yardımcı olur.",
+          "purpose": "Bu derste öğrenciler bir bilgisayar platformunda programlama becerilerini geliştireceklerdir. Bu bulmacaların blok tabanlı formatı, öğrencilerin sözdizimini mükemmelleştirme endişesi duymadan dizi ve kavramları öğrenmelerine yardımcı olur.",
           "student_overview": "Angry Birds ile sıraları ve algoritmaları öğrenin."
         },
         "express-2021/Debugging with Scrat": {
@@ -4798,14 +4828,14 @@
           "student_overview": "Bulmacalardaki problemleri bulun ve hata ayıklama becerilerinizi uygulayın."
         },
         "express-2021/Collecting Treasure with Laurel": {
-          "name": "Koleksiyoncu programlama",
+          "name": "Laurel ile Hazine Toplama",
           "overview": "Bu bulmaca serisinde öğrenciler, algoritmaları ve hata ayıklamayı daha da anlamaya devam edecektir. Yeni bir karakter, Maceracı Laurel ile öğrenciler, bir yolda yürürken Laurel'in hazine toplamasını sağlamak için sıralı algoritmalar oluşturacaktır.",
           "preparation": "-   Sınıfınız için potansiyel sorunlu alanları bulmak için bulmacaları oynayın.\n-   Her öğrencinin bir Yansıma Dergisi olduğundan emin olun.",
           "purpose": "Bu derste öğrenciler programlama becerilerini yeni bir karakter kullanarak uygulayacaklardır, _Laurel the Adventurer_. Birisi programlamaya başladığında, bir makinenin okuyabileceği bir şeyi kullanarak talimatları belirli bir sırayla bir araya getirirler. Programlama kullanımı sayesinde öğrenciler, bir bilgisayarın talimatlar ve düzenin nasıl gezindiği konusunda bir anlayış geliştireceklerdir. Farklı bir bulmaca hedefi ile yeni bir karakter kullanmak öğrencilerin programlama sıralama ve algoritmalar ile deneyim kapsamlarını genişletmelerine yardımcı olacaktır.",
           "student_overview": "_Laurel Adventurer_ değerli taşlar toplamak yardımcı olmak için algoritmalar yaz!"
         },
         "express-2021/Creating Art with Code": {
-          "name": "Sanatçı Programlama",
+          "name": "Kod ile Sanat Yaratma",
           "overview": "Bu derste öğrenciler, ekrandaki çizimleri tamamlaması için Sanatçının kontrolünü ele alacaktır. Bu Sanatçı aşaması, öğrencilerin, '100 piksel ileri hareket et' ve '90 derece sağa dön' gibi yeni blokları kullanarak giderek artan karmaşıklıkta resimleri oluşturmasına olanak sağlayacaktır.",
           "preparation": "-   Sınıfınız için olası sorunlu alanları bulmak için bulmacaları oynayın.\n-   (İsteğe bağlı) Bulmacaları tamamlamak için kullanmaları gereken açıları görselleştirmek için sınıfınızın iletkenlerini edinin.\n-   Her öğrenci için bir **\\\\ \\*Öğrenci El Kitabı** yazdırın.",
           "purpose": "Öğrencilerin sıralama ile ilgili önceki deneyimlerini geliştirerek, bu ders, kodlama ile yaratıcılığa daha fazla ilham vermeye çalışacaktır. Bu dersin amacı, yeni blokları ve hedefleri tanıtarak sıralama hakkındaki bilgileri pekiştirmektir. Bu durumda öğrenciler, aynı zamanda sıralama becerilerini uygulayarak, yeni blokları kullanarak pikseller ve açılar hakkında daha fazla şey öğrenir. Ayrıca öğrenciler, bir kare çizmek için Oyuncu kodlama gibi yeni hedefleri görselleştirebilecektir.",
@@ -4854,6 +4884,7 @@
           "student_overview": "Döngüleri kullanarak BB-8'in labirentten geçmesine yardım edin! "
         },
         "express-2021/Sticker Art with Loops": {
+          "name": "Mini proje: Etiket Sanatı",
           "overview": "Az sayıda blok ve dijital etiketleri kullanarak kendi mükemmel tasarımlarını yaptıkça öğrencilerinizin ne kadar neşelendiğine bakın! Bu ders, önceki derslerden döngülerin anlaşılmasını geliştirir ve öğrencilere gerçek bir yaratıcı olma şansını verir. Bu aktivite, portföyler veya anne-baba/öğretmen konferansları için  eserler üretmek için mükemmeldir.",
           "preparation": "-   Kendi tasarımını yapmak için pratik yap. Bu seviyelerin daha önce gelen her şeyden nasıl farklı olduğunu not edin.\n-   Her öğrencinin bir Yansıma Dergisi olduğundan emin olun.",
           "purpose": "Bu seri, yaratıcı ve kişisel tasarımların olduğu döngülerin gücünü vurgular.  \n\nProje tarafından desteklenen bir sıra olarak önerilen bu ilerleme, öğrencilerin kendi çalışmalarının üzerine inşa etmelerine ve harika eserler yaratmalarına olanak sağlayacaktır.",
@@ -4874,21 +4905,21 @@
           "student_overview": "Anna ve Elsa'nın mükemmel buz pateni yapma becerileri var ancak buzda desenler oluşturmak için yardımınıza ihtiyaçları var. Süper MUHTEŞEM bir şey oluşturmak için içiçe döngüleri kullanın."
         },
         "express-2021/Looking Ahead with Minecraft ": {
-          "name": "Geleceğe bakış",
+          "name": "Minecraft ile ileriye bakmak",
           "overview": "Bu ders, aslında Minecraft takımında Kod Saati için oluşturuldu. Öğrencilerin, şu ana kadar öğrendikleri fikirleri pratiğe dökme ve ayrıca koşullara şöyle bir göz atma şansı olacak!",
           "preparation": "-   Sınıfınız için olası sorunlu alanları bulmak için bu dersle ilişkili bulmacaları oynayın.\n-   Her öğrencinin bir Yansıma Dergisi olduğundan emin olun.",
           "purpose": "Bu bulmaca dizisi, döngüler hakkındaki bilgilerini pekiştirmeye ve arttırmaya yarayacaktır, ve koşulları tanıtacaktır. Bu iki kavramı birbiri ile eşleştirerek öğrenciler, yeni ve heyecan verici bir ortamda eğlenceli ve yenilikçi programlar oluşturma potansiyelini keşfedebilecekler.",
           "student_overview": "Lavdan Kaçının! Burada Minecraft dünyasındaki koşulları öğrenmeye başlayacaksınız."
         },
         "express-2021/If/Else with Bee": {
-          "name": "Koşullar-Arı",
+          "name": "Arı ile \"Eğer/Başka\"",
           "overview": "Bu noktaya kadar öğrenciler her çalıştırıldığında aynı biçimde çalışan kod yazıyor - güvenilir, ama bu çok esnek değildir. Bu derste, sınıfınız, koşullu koşullarla kodlamaya başlayacak ve programın karşılaştığı özel koşullara bağlı olarak farklı biçimde çalışan kod yazmalarına izin verecektir.",
           "preparation": "-   Sınıfınız için olası sorunlu alanları bulmak için bulmacaları oynayın.\n-   Her öğrencinin bir Yansıma Dergisi olduğundan emin olun.",
           "purpose": "Öğrenciler programlarında şartları kullanma pratiği yapabileceklerdir. if/else blokları daha esnek bir programa izin verecektir. Arı sadece nektar toplayacak _if_ bir çiçek var ya da bal yapmak _if_ bir petek var. ",
           "student_overview": "Şimdi koşulları anladığınıza göre, nektar ve balı toplaması için arıyı programlama zamanı. "
         },
         "express-2021/While Loops with the Farmer": {
-          "name": "Çiftçi Döngüleri",
+          "name": "Farmer'da Süresince Döngüleri",
           "overview": "Bu **beceri geliştirme** dersinde, öğrenciler Farmer'da çukurları doldurmak ve toprak kazmak için çalışacaklar, ancak deliklerin boyutunu veya toprak yığınlarının yüksekliğini bilemeyecekler. Bu bulmacaları çözmek için öğrenciler yeni bir tür döngü kullanacaklar.",
           "preparation": "-   Sınıfınız için olası sorunlu alanları bulmak için bulmacaları oynayın.\n-   Her öğrencinin bir Yansıma Dergisi olduğundan emin olun.",
           "purpose": "Öğrencileriniz döngü bilgilerini derinleştirmeye devam ettikçe, bir komutun tekrarlanması gereken sorunlarla karşılaşacaklardır, ancak kaç kez tekrarlanması gerektiği bilinmemektedir. Bu sırada döngüler devreye giriyor. Bugünün dersinde, öğrenciler, yeni başlayanların koşullara dayalı döngüler anlayışını geliştirecek ve genel olarak döngüler bilgisini genişletecektir. ",
@@ -4937,10 +4968,12 @@
           "student_overview": "Çiftçiye hasadında yardımcı olduğunuz gibi fonksiyonlar da sizi işlerin çoğunda kurtarır!"
         },
         "express-2021/lesson-4": {
+          "name": "Metin ve Bilgi İstemleri",
           "preparation": "Seviyeleri ile oynayın ve ders slaytlarını gözden geçirin.",
           "purpose": "Bu derste değişkenler veri depolamak ve değiştirmek için kullanılacaktır. Bu noktada öğrenciler sadece değerleri değiştirmeden depolayıp geri alacaklardır. Daha sonraki derslerde öğrenciler sayısal değerleri saklar ve zamanla değiştirerek oyundaki oyuncunun puanı gibi şeyleri takip eder."
         },
         "express-2021/Variables with Artist": {
+          "name": "Değişkenleri Sanatçı ile Kullanma",
           "overview": "Bu derste öğrenciler, Sanatçı çevresindeki değişkenleri kullanarak tekrar eden tasarımların oluşturulmasını tecrübe edecekler. Öğrenciler, kodların daha kolay yazılmasını ve okunması daha kolay hale getirilebilmesi için değişkenlerin nasıl kullanılacağını öğrenecek. Kılavuzlu bulmacalardan sonra, öğrenciler öğrendiklerini göstermek ve kendi tasarımlarını oluşturmak için serbest seviye seviyesinde sona ereceklerdir.",
           "preparation": "-   Sınıfınız için olası sorunlu alanları bulmak için bulmacaları oynayın.\n-   Her öğrencinin bir Yansıma Dergisi olduğundan emin olun.",
           "purpose": "Değişkenler aslında, programınızı çalıştırdığınız sırada bilinmeyen değerlere yönelik veya bir programın yürütülmesi sırasında değişebilen değerlere yönelik yer tutuculardır. Bunlar dinamik kod oluşturmak bakımından oldukça önemlidir, zira bunlar, çok sayıda potansiyel modifikasyona bağlı olarak programınızın değişmesini ve gelişmesini sağlar. Bu aşama, değişkenlerin ayarlanması ve kullanılmasına dair en temel yeterlilikleri kullanarak, değişkenleri kullanmak konusunda destek verir.",
@@ -4954,7 +4987,7 @@
           "student_overview": "Bu arı, değişkenleri sever!"
         },
         "express-2021/For Loops with Bee": {
-          "name": "Arı ile For Döngüleri",
+          "name": "Arı ile For (İçin) Döngüleri",
           "overview": "Arı özelliğiyle bu ders, döngüler ve daha karmaşık bulmacaları çözmek için artan bir değişken kullanmaya odaklanıyor. Öğrenciler önceki derslerdeki döngüleri inceleyerek başlayacak, ardından döngüleri kullanarak karmaşık problemleri daha etkili bir şekilde çözmeye başlayacak.",
           "preparation": "-   Sınıfınız için olası sorunlu alanları bulmak için bulmacaları oynayın.\n-   Her öğrencinin bir Yansıma Dergisi olduğundan emin olun.",
           "purpose": "Günümüzün kavramı, döngüler için bilgisayar bilimlerinde çok önemli bir konudur. Sadece yaygın olarak kullanılmakla kalmaz, döngüler için öğrenme süreci diğer önemli kavramların (değişkenler ve parametreler gibi) öğrenilmesini artırır. Öğrenciler her bir for döngüsünün başlangıç, bitiş ve basamak değerlerini belirleyerek problemler üzerinden eleştirel düşünme çalışmalarına sahip olacaklardır. Bu konsept de çok sayıda matematik kullanır, bu nedenle daha derin bir öğrenme deneyimi için matematik dersi ile eşleştirmekten çekinmeyin.",
@@ -4976,8 +5009,8 @@
         },
         "pre-express-2021/Learn to Drag and Drop": {
           "name": "Sürükleyip Bırakmayı Öğrenin",
-          "overview": "Bu ders öğrencilere bilgisayar laboratuvarında oldukları zaman beklentinin ne olduğu hakkında bir fikir verecektir. Bilgisayar laboratuvarında sergileyecekleri davranışlar hakkında kısa bir tartışma ile başlar, daha sonra bir bilgisayar kullanarak çevrim içi bulmacaları tamamlayarak ilerleyecekler.",
-          "preparation": "-   **\\\\ \\*Code.org'da Sınıf Bölümü Nasıl Yapılır - Öğretmen videosunu izleyin. Code.org'da kendi sınıf bölümünüzü oluşturun ve her öğrencinin üzerinde \\*\\*parola** bulunan bir kart olduğundan emin olun.\n-   Öğrencilerin ders 2'ye cihazlarından erişebileceklerinden emin olun. Öğrencilerin çok hızlı ilerlemelerini önlemek için gelecekteki dersleri gizlemek isteyip istemediğinizi düşünün.\n-   Okul BT kişisinin sınıf bölümünüz için bilgisayar masaüstüne hızlı bir bağlantı eklemesini sağlar.\n-   Daha fazla çevrimiçi güvenlik içeriği için Common Sense Education web sitesini inceleyin.",
+          "overview": "Bu **beceri geliştirme** dersi, öğrencilere bilgisayar laboratuvarına gittiklerinde neyle karşılaşacakları konusunda bir fikir verecektir. Onlara bilgisayar laboratuvarı kurallarını tanıtan kısa bir tartışma ile başlar, ardından çevrimiçi bulmacaları tamamlamak için bilgisayar kullanmaya başlarlar.",
+          "preparation": "-   **\\\\ \\*Code.org'da Sınıf Bölümü Nasıl Yapılır - Öğretmen videosunu izleyin. Code.org'da kendi sınıf bölümünüzü oluşturun ve her öğrencinin üzerinde \\*\\*parola** bulunan bir kartı olduğundan emin olun.\n-   Öğrencilerin ders 2'ye cihazlarından erişebileceklerinden emin olun. Öğrencilerin çok hızlı ilerlemelerini önlemek için gelecekteki dersleri gizlemek isteyip istemediğinizi düşünün.\n-   Okul BT kişisinin sınıf bölümünüz için bilgisayar masaüstüne hızlı bir bağlantı eklemesini sağlayın.\n-   Daha fazla çevrimiçi güvenlik içeriği için Common Sense Education web sitesini inceleyin.",
           "purpose": "Bu dersin temel amacı öğrencilerin bilgisayar deneyimlerini geliştirmektir. Tıklama, sürükleme ve bırakma gibi en temel bilgisayar işlevlerini kapsayarak, gelecekteki bulmacalar için sınıfta daha eşit bir oyun alanı oluşturuyoruz. Bu ders aynı zamanda cihazlarınıza bağlı olarak “fare”, “trackpad” veya “dokunmatik ekran” da dahil olmak üzere temel bilgisayar donanımı terminolojisini tanıtmak için harika bir fırsat sunar.",
           "student_overview": "Bulmacaları tamamlamak için tıklayıp sürükleyin."
         },
@@ -4989,7 +5022,7 @@
           "student_overview": "Meşe palamuduna ulaşması için Scrat'i programlayın."
         },
         "pre-express-2021/Programming in with Angry Birds": {
-          "name": "Labirentte Programlama",
+          "name": "Angry Birds ile Programlama",
           "overview": "Buz Devri oyununun karakterlerini kullanarak öğrenciler, bir Scrat'i labirentin bir tarafından diğer taraftaki meşe palamuduna ulaştırmak için sıralı algoritmalar geliştireceklerdir. Bunu yapmak için öğrenciler, lineer bir sırada kod bloklarını biraraya getirecek, böylelikle bunları ileri doğru hareket ettirecek, sola ve sağa döndürecek.",
           "preparation": "-   Sınıfınız için olası sorunlu alanları bulmak için dersi oynayın.\n-   (İsteğe bağlı) Sınıfınızla bir grup olarak yapmak için birkaç bulmaca seçin.\n-   Her öğrencinin bir Yansıma Dergisi olduğundan emin olun.",
           "purpose": "Bu derste öğrenciler, bir bilgisayar platformunda programlama ve hata ayıklama becerilerini geliştirecektir. Bu bulmacaların blok temelli formatı, söz dizimini mükemmelleştirme hakkında endişe duymadan, öğrencilerin dizi ve kavramları öğrenmesine yardım eder."
@@ -5015,34 +5048,34 @@
           "student_overview": "Döngüleri kullanarak Scrat'in daha fazla yol katetmesine yardım edin."
         },
         "pre-express-2021/Loops with Laurel": {
-          "name": "Toplayıcıda Döngüler",
+          "name": "Laurel ile Döngüler",
           "overview": "Bu derste öğrenciler, döngü kavramlarını öğrenmeye devam eder. Burada Maceracı Laurel, açık mağara alanlarında hazine toplamak için döngüleri kullanır. Yeni bir 'hazineyi al' bloğu, macerasında ona yardım etmek için getirilir.",
           "preparation": "-   Sınıfınız için olası sorunlu alanları bulmak için bulmacaları oynayın.\n-   (İsteğe bağlı) Sınıfınızla bir grup olarak yapmak için birkaç bulmaca seçin.\n-   Her öğrencinin bir Yansıma Dergisi olduğundan emin olun.",
           "purpose": "Bu ders, öğrencilere döngülerle daha fazla uygulama sağlar ve mümkün olduğunca çok hazine toplamaya çalıştıkları için bir 'tekrarlama' nın içine birden fazla blok koymaya teşvik eder."
         },
         "pre-express-2021/Ocean Scene with Loops": {
-          "name": "Sanatçıların Döngüleri",
+          "name": "Döngüler ile okyanus sahnesi",
           "overview": "Döngülere geri dönen öğrenciler, basit talimat dizilerini tekrarlayarak resim çizmeyi öğrenirler. Bir önceki takılı olan derste, bir labirentten geçip hazineyi toplamak için ilmekler kullanıldı. Burada, döngüler desenler yaratıyor. Bu aşamanın sonunda öğrencilere döngüler kullanarak kendi görüntülerini oluşturma imkanı verilecek.",
           "preparation": "-   Sınıfınız için olası sorunlu alanları bulmak için bulmacaları oynayın.\n-   Her öğrencinin bir Yansıma Dergisi olduğundan emin olun.",
           "purpose": "Bu ders, bu şeyleri programlamada hangi döngülerin oluşturabileceğine dair farklı bir bakış açısı verir. Öğrenciler, ayrıca, 'tekrarla' döngülerinin yardımı olmadan program için gerekli olan bloklar yüzünden buradaki döngüler olmadan programlamanın etkisizliği üzerine kafa yorar.",
           "student_overview": "Resimleri tamamlamak için döngüleri ve desenleri kullanın."
         },
         "pre-express-2021/Drawing Gardens with Loops": {
-          "name": "Sanatçıların Döngüleri",
+          "name": "Döngülerle Bahçeler çizmek",
           "overview": "Döngülere geri dönen öğrenciler, basit talimat dizilerini tekrarlayarak resim çizmeyi öğrenirler. Bir önceki takılı olan derste, bir labirentten geçip hazineyi toplamak için ilmekler kullanıldı. Burada, döngüler desenler yaratıyor. Bu aşamanın sonunda öğrencilere döngüler kullanarak kendi görüntülerini oluşturma imkanı verilecek.",
           "preparation": "-   Sınıfınız için olası sorunlu alanları bulmak için dersi oynayın.\n-   Her öğrencinin bir yansıma dergisi olduğundan emin olun.",
           "purpose": "Bu ders, bu şeyleri programlamada hangi döngülerin oluşturabileceğine dair farklı bir bakış açısı verir. Öğrenciler, verilen kodu değerlendirerek ve bulmacayı çözmek için neyin eklenmesi gerektiğini belirleyerek eleştirel düşünme becerilerini test edecekler. Öğrenciler, ayrıca, 'tekrarla' döngülerinin yardımı olmadan program için gerekli olan bloklar yüzünden buradaki döngüler olmadan programlamanın etkisizliği üzerine kafa yorar.",
           "student_overview": "Resimleri bitirmek için desenleri ve döngüleri kullanın."
         },
         "pre-express-2021/On the Move with Events": {
-          "name": "Play Lab' da Olaylar",
+          "name": "Etkinliklerle Hareket halinde",
           "overview": "Bu çevrimiçi etkinlikte, öğrenciler, Play Lab' da, olayların nasıl kullanılacağını öğrenme şansına sahip olacaklar. Ve hareketli bir oyun oluşturmak için, öğrendikleri kodlama becerilerinin tamamını uygulayabilecekler. Şimdi, Play Lab' da bir hikaye oluşturmanın ve yaratıcı olmanın zamanı!",
           "preparation": "-   Sınıfınız için olası sorunlu alanları bulmak için bulmacaları oynayın.\n-   (İsteğe bağlı) Sınıfınızla bir grup olarak yapmak için birkaç bulmaca seçin.\n-   Her öğrencinin bir Yansıma Dergisi olduğundan emin olun",
           "purpose": "Ogrenciler bugun Play Lab i kullanarak olaylari ileri seviyede anlamalarini gelistirecekler. Olgular cogu bilgisayar programlarinda baya yaygin olarak kullanilir. Bu aktivitede, ogrenciler ekran etrafinda hareket eden, ses cikaran, ve arkaplani degistiren kullanici tarafindan baslatilan karakterler olusturmak icin olgulari kullanacaklar.",
           "student_overview": "Kendi oyununuzu veya hikayenizi oluşturun."
         },
         "pre-express-2021/A Royal Battle with Events": {
-          "name": "Play Lab' da Olaylar",
+          "name": "Etkinliklerle Kraliyet Savaşı",
           "overview": "Bu çevrimiçi etkinlikte, öğrenciler, Play Lab'da etkinliklerin nasıl kullanılacağını öğrenmek ve öğrendikleri bütün kodlama becerilerini hareketli bir oyun oluşturmak amacıyla uygulamak için fırsat bulacak. Yaratıcı olma ve Play Lab'da bir oyun yapma zamanı!",
           "preparation": "-   Sınıfınız için olası sorunlu alanları bulmak için bulmacaları oynayın.\n-   (İsteğe bağlı) Sınıfınızla bir grup olarak yapmak için birkaç bulmaca seçin.\n-   Her öğrencinin bir yansıma dergisi olduğundan emin olun.",
           "purpose": "Bu çevrimiçi aktivitede öğrenciler, Oyun Laboratuvarında olayları nasıl kullanacaklarını öğrenecekler. Bir ok anahtarına basıldığında şövalyeyi hareket etmesini öğreterek başlayacaklar, daha sonra son ücretsiz oyun bulmacasının bir kısmı olarak, dizi ve döngü sağlama dahil olmak üzere bu derste öğrendikleri becerilerin geri kalanını gösterme olanağı ile sonlanacaktır. ",
@@ -5070,15 +5103,15 @@
         },
         "coursee-2021/lesson-4": {
           "name": "Süper Bir Dijital Vatandaş Olun",
-          "overview": "[![common sense education](https://curriculum.code.org/static/img/common_sense_education.png)](https://www.commonsense.org)\n\nBu dersi ilk olarak Common Sense Education oluşturmuştur. [Daha fazla bilgi edinin.](https://www.commonsense.org/education/digital-citizenship/curriculum)\n\nÇevrimiçi araçlar çocuklara güç verirken büyük sorumlulukları da beraberinde getirir. Ancak çocuklar siber zorbalıkla karşılaştıklarında ne yapacaklarını her zaman biliyor mu? Karşı çıkmaktan ihtiyacı olanlara yardım etmeye kadar her şey dahil olmak üzere, öğrencilerinize hareket geçme ve çatışmaları çözmeye dair uygun yolları gösterin.",
+          "overview": "[![common sense education](https://curriculum.code.org/static/img/common_sense_education.png)](https://www.commonsense.org)\n\nBu ders Common Sense Education tarafından oluşturmuştur. [Daha fazla bilgi edinin.](https://www.commonsense.org/education/digital-citizenship/curriculum)\n\nÇevrimiçi araçlar çocuklara güç verirken büyük sorumlulukları da beraberinde getirir. Ancak çocuklar siber zorbalıkla karşılaştıklarında ne yapacaklarını her zaman biliyor mu? Öğrencilerinize, dik durmaktan ihtiyacı olanlara yardım etmeye kadar, harekete geçmenin ve çatışmaları çözmenin uygun yollarını gösterin.",
           "preparation": "-   Öğretim materyallerini gözden geçirin.\n-   Her öğrenci için çalışma kağıtlarını yazdırın.\n-   Öğrenciler için renkli kalemler veya keçeli kalemler hazırlayın.",
-          "purpose": "Common Sense'in Dijital Vatandaşlık Müfredatı, çocuklar, medya ve teknoloji üzerine yapılan en son araştırmalara dayanan altı temel konuya değinmektedir. Bu ders Siberzorbalık, Dijital Dram ve Nefret Konuşması üzerine yoğunlaşmaktadır. Öğrenciler bu zorlu konuları ele alır ve olumlu, destekleyici çevrimiçi topluluklar oluşturmak ve çevrimiçi zulümle mücadele etmek için astarların aktif rolünü oynarlar.",
+          "purpose": "Common Sense'in Dijital Vatandaşlık Müfredatı, çocuklar, medya ve teknoloji üzerine yapılan en son araştırmalara dayanan altı temel konuya değinmektedir. Bu ders Siberzorbalık, Dijital Dram ve Nefret Konuşması üzerine yoğunlaşmaktadır. Öğrenciler bu zorlu konuları ele alır ve olumlu, destekleyici çevrimiçi topluluklar oluşturmak ve çevrimiçi zulümle mücadele etmek için dik duranların aktif rolünü oynarlar.",
           "student_overview": "Siber zorbalığa şahit olduğunuzda nasıl karşı çıkabileceğinizi öğrenin."
         },
         "coursee-2021/Private and Personal Information": {
           "name": "Özel ve Kişisel Bilgiler",
           "overview": " [![common sense education](https://curriculum.code.org/static/img/common_sense_education.png)](https://www.commonsense.org)\n\nBu dersi ilk olarak Common Sense Education oluşturmuştur. [Daha fazla bilgi edinin.](https://www.commonsense.org/education/digital-citizenship/curriculum)\n\nBaşkalarıyla paylaşmak ve bağlantı kurmak öğrencilerimizin doğasında var. Ancak çevrimiçi paylaşım bazı risklerle birlikte gelir. Çocukların çevrimiçi ortamda güçlü, olumlu ve güvenli ilişkiler kurmalarına nasıl yardımcı olabiliriz? Öğrencilerinizin kişisel olan bilgiler ve gizli tutulması daha iyi olan bilgiler arasındaki farkı öğrenmelerine yardımcı olun.",
-          "preparation": "-   Öğretim materyallerini gözden geçirin.\n-   Her öğrenci için baskı sadaka (ler).",
+          "preparation": "-   Öğretim materyallerini gözden geçirin.\n-   Her öğrenci için çıktı(lar) alın.",
           "purpose": "Common Sense'in Dijital Vatandaşlık Müfredatı, çocuklar, medya ve teknoloji üzerine yapılan en son araştırmalara dayanan altı temel konuya değinmektedir. Bu ders Gizlilik ve Güvenlik üzerine yoğunlaşmaktadır. Öğrenciler kişisel bilgileri nasıl koruyacaklarını öğrenirler ve veri gizliliği haklarını daha derinlemesine anlayarak kendileri ve başkalarını savunabilirler.",
           "student_overview": "İnternet eğlenceli ve heyecanlıdır, fakat güvende kalmak da önemlidir. Bu ders size, paylaşmanın güvenli olduğu bilgi ile özel bilgi arasındaki farkı öğretecek."
         },
@@ -5111,6 +5144,7 @@
           "student_overview": "Daha iç içe döngüler! Bu sefer, iç içe geçmiş döngülerle biraz İLGİNÇ çizimler yapacaksınız."
         },
         "coursee-2021/Nested Loops in Frozen": {
+          "name": "Mini Proje: Bir Kar Tanesi Tasarlayın",
           "overview": "Şimdi, öğrenciler döngülerini nasıl kademe kademe yapacaklarını bildiklerine göre çok güzel şeyler oluşturabilirler. Bu ders, öğrencilerin Anna ve Elsa'nın mükemmel buz pateni yapma becerilerini kullanarak kendi hazır resim dosyalarını oluşturmaları için bir dizi alıştırma yapmalarını sağlayacak!",
           "preparation": "-   Sınıfınız için varsa bir potansiyel sorun alanını bulmak üzere bulmacalarla oynayın. \n-   Her öğrencinin bir düşünce günlüğü olduğundan emin olun.",
           "purpose": "Bu derste öğrenciler, paylaşmaktan heyecan duyacakları görüntüler oluşturmak için iç içe döngüleri kullanma becerilerini uygulayacaklar.",
@@ -5214,6 +5248,9 @@
         "csd4-2021/Testing the App": {
           "name": "Uygulamayı Test Etmek"
         },
+        "csd4-2021/Updating Your Prototype": {
+          "name": "Prototipinizi Güncelleme"
+        },
         "csd4-2021/Project - App Presentation": {
           "name": "Proje - Uygulama Sunumu"
         },
@@ -5236,7 +5273,7 @@
           "overview": "Uygulama Laboratuvarı ile programlamaya daha derinlemesine inme hazırlığında, öğrenciler, hem Oyun Laboratuvarında hem de Uygulama Laboratuvarında yazılan az miktardaki farklı programların kullanıcılardan girdi almayı nasıl ele aldığını keşfedecekler. Örnek uygulamalarda gördükleri yaklaşımların benzer ve farklı yönlerini kıyasladıktan sonra, öğrenciler, nasıl çalıştıklarına dair daha iyi bir anlayış kazanmak adına girdi için (sonsuz ve eş zamansız etkinliklerde koşullar) iki farklı modeli canlandırmak üzere toplanırlar."
         },
         "csd6-2021/Board Events": {
-          "name": "Kurul Etkinlikleri"
+          "name": "Devre kartı Etkinlikleri"
         },
         "csd6-2021/Getting Properties": {
           "name": "Özelikleri Alma"
@@ -5294,7 +5331,7 @@
           "name": "Numaraları temsil eden"
         },
         "csd5-2021/Combining Representations": {
-          "name": "İfadeleri birleştirme"
+          "name": "Temsillerin Birleştirilmesi"
         },
         "csd5-2021/Keeping Data Secret": {
           "name": "Verileri Gizli Tutmak"
@@ -5513,34 +5550,34 @@
           "name": "Scrat ile Döngüler"
         },
         "pre-express-2020/Loops with Laurel": {
-          "name": "Toplayıcıda Döngüler"
+          "name": "Laurel ile Döngüler"
         },
         "pre-express-2020/Ocean Scene with Loops": {
-          "name": "Sanatçıların Döngüleri"
+          "name": "Döngüler ile okyanus sahnesi"
         },
         "pre-express-2020/Drawing Gardens with Loops": {
-          "name": "Sanatçıların Döngüleri"
+          "name": "Döngülerle Bahçeler çizmek"
         },
         "pre-express-2020/On the Move with Events": {
-          "name": "Play Lab' da Olaylar"
+          "name": "Etkinliklerle Hareket halinde"
         },
         "pre-express-2020/A Royal Battle with Events": {
-          "name": "Play Lab' da Olaylar"
+          "name": "Etkinliklerle Kraliyet Savaşı"
         },
         "express-2020/Dance Party": {
           "name": "Dans Partisi"
         },
         "express-2020/Programming with Angry Birds": {
-          "name": "Labirentte Programlama"
+          "name": "Angry Birds ile Programlama"
         },
         "express-2020/Debugging with Scrat": {
           "name": "Scrat ile Hata Ayıklama"
         },
         "express-2020/Collecting Treasure with Laurel": {
-          "name": "Koleksiyoncu programlama"
+          "name": "Laurel ile Hazine Toplama"
         },
         "express-2020/Creating Art with Code": {
-          "name": "Sanatçı Programlama"
+          "name": "Kod ile Sanat Yaratma"
         },
         "express-2020/Loops with Rey and BB-8": {
           "name": "Rey ve BB-8 ile döngüler"
@@ -5558,10 +5595,10 @@
           "name": "Minecraft ile Geleceğe Bakma"
         },
         "express-2020/If/Else with Bee": {
-          "name": "Koşullar-Arı"
+          "name": "Arı ile \"Eğer/Başka\""
         },
         "express-2020/While Loops with the Farmer": {
-          "name": "Çiftçi Döngüleri"
+          "name": "Çiftçi ile While (Süresince) Döngüleri"
         },
         "express-2020/Conditionals in Minecraft: Voyage Aquatic": {
           "name": "Minecraft'ta Koşullar: Su Yolculuğu"
@@ -5591,7 +5628,7 @@
           "name": "Sanatçı ile Değişkenleri Değiştirme"
         },
         "express-2020/For Loops with Bee": {
-          "name": "Arı ile For Döngüleri"
+          "name": "Arı ile For (İçin) Döngüleri"
         },
         "express-2020/For Loops with Artist": {
           "name": "Sanatçı-Şununla say Döngüleri"
@@ -5615,13 +5652,13 @@
           "name": "Dijital İzler"
         },
         "courseb-2020/Move It, Move It": {
-          "name": "Çabuk, Çabuk Taşı"
+          "name": "Oynat, Oynat"
         },
         "courseb-2020/Sequencing in Maze": {
           "name": "Angry Birds ile Dizileme"
         },
         "courseb-2020/Programming in Maze": {
-          "name": "Labirentte Programlama"
+          "name": "Angry Birds ile Programlama"
         },
         "courseb-2020/Programming in Harvester": {
           "name": "Hasatçı ile Programlama"
@@ -5633,10 +5670,10 @@
           "name": "Hasatçı ile Döngüler"
         },
         "courseb-2020/Loops in Collector": {
-          "name": "Toplayıcıda Döngüler"
+          "name": "Laurel ile Döngüler"
         },
         "courseb-2020/Loops in Artist": {
-          "name": "Sanatçıların Döngüleri"
+          "name": "Döngülerle Bahçeler çizmek"
         },
         "courseb-2020/The Right App": {
           "name": "Doğru Uygulama"
@@ -5645,22 +5682,22 @@
           "name": "Büyük Olay Jr."
         },
         "courseb-2020/Events in Play Lab": {
-          "name": "Play Lab' da Olaylar"
+          "name": "Etkinliklerle Kraliyet Savaşı"
         },
         "coursed-2020/Algorithms: Graph Paper Programming": {
           "name": "Grafik Kağıdı Programlama"
         },
         "coursed-2020/Introduction to Online Puzzles": {
-          "name": "Online Bulmacalara Giriş"
+          "name": "Çevrimiçi Bulmacalara Giriş"
         },
         "coursed-2020/Relay Programming": {
           "name": "Röle Programlama"
         },
         "coursed-2020/Debugging in Collector": {
-          "name": "Toplayıcıda Hata Ayıklama"
+          "name": "Laurel ile Hata Ayıklama"
         },
         "coursed-2020/Events in Bounce": {
-          "name": "Sıçrama Olayları"
+          "name": "Bounce'daki Etkinlikler"
         },
         "coursed-2020/Build a Star Wars Game": {
           "name": "Star Wars oyunu oluştur"
@@ -5672,7 +5709,7 @@
           "name": "Buz Devrindeki Döngüler"
         },
         "coursed-2020/Loops in Artist": {
-          "name": "Sanatçıların Döngüleri"
+          "name": "Döngüler ile Şekiller Çizme"
         },
         "coursed-2020/Nested Loops in Bee": {
           "name": "Labirentte İçiçe Döngüler"
@@ -5681,10 +5718,10 @@
           "name": "Kartlarla Koşullu Önermeler"
         },
         "coursed-2020/Conditionals in Bee": {
-          "name": "Koşullar-Arı"
+          "name": "Arı ile \"Eğer/Başka\""
         },
         "coursed-2020/While Loops in Farmer": {
-          "name": "Çiftçi Döngüleri"
+          "name": "Farmer'da Süresince Döngüleri"
         },
         "coursed-2020/Until Loops in Maze": {
           "name": "Labirentte Bitiş Döngüleri"
@@ -5711,16 +5748,16 @@
           "name": "Şifre Güçlendirme"
         },
         "coursec-2020/Programming in Maze": {
-          "name": "Labirentte Programlama"
+          "name": "Angry Birds ile Programlama"
         },
         "coursec-2020/Debugging in Maze": {
           "name": "Labirentte Hata Ayıklama"
         },
         "coursec-2020/Programming in Collector": {
-          "name": "Koleksiyoncu programlama"
+          "name": "Laurel ile Hazine Toplama"
         },
         "coursec-2020/Programming in Artist": {
-          "name": "Sanatçı Programlama"
+          "name": "Kod ile Sanat Yaratma"
         },
         "coursec-2020/Binary Bracelets": {
           "name": "İkilik Bileklikler"
@@ -5732,7 +5769,7 @@
           "name": "Döngüler ile Ürünleri Hasat Etme"
         },
         "coursec-2020/Looking Ahead": {
-          "name": "Geleceğe bakış"
+          "name": "Minecraft ile ileriye bakmak"
         },
         "coursec-2020/Sticker Art with Loops": {
           "name": "Sanatçıların Döngüleri"
@@ -5828,22 +5865,22 @@
           "name": "Rey ve BB-8 ile programlama"
         },
         "coursea-2020/Loops: Happy Loops": {
-          "name": "Döngüler: Mutlu Döngüler"
+          "name": "Mutlu Döngüler"
         },
         "coursea-2020/Loops in Ice Age": {
           "name": "Scrat ile Döngüler"
         },
         "coursea-2020/Loops in Collector": {
-          "name": "Toplayıcıda Döngüler"
+          "name": "Laurel ile Döngüler"
         },
         "coursea-2020/Ocean Scene with Loops": {
-          "name": "Sanatçıların Döngüleri"
+          "name": "Döngüler ile okyanus sahnesi"
         },
         "coursea-2020/Events: The Big Event": {
           "name": "Büyük Olay Jr."
         },
         "coursea-2020/Events in Play Lab": {
-          "name": "Play Lab' da Olaylar"
+          "name": "Etkinliklerle Hareket halinde"
         },
         "coursef-2020/Functions in Minecraft": {
           "name": " Minecraft Fonksiyonları"
@@ -5888,7 +5925,7 @@
           "name": "Şununla Say Döngüsü Eğlencesi"
         },
         "coursef-2020/For Loops in Bee": {
-          "name": "Arı ile For Döngüleri"
+          "name": "Arı ile For (İçin) Döngüleri"
         },
         "coursef-2020/For Loops in Artist": {
           "name": "Sanatçı-Şununla say Döngüleri"

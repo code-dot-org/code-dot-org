@@ -512,6 +512,10 @@ he:
   signup_registration_closed: And every year in December, your class can join millions
     of students around the world celebrating Computer Science Education Week with
     the Hour of Code. We'll open registration for the annual celebration in October.
+  signup_registration_closed_2022_markdown: 'Registration for this year''s Hour of
+    Code event map is currently closed, but you can still [host an Hour of Code](%{hoc_activities_url})
+    and join in the celebration on social media! Post fun pictures or video of your
+    event using the #HourOfCode hashtag!'
   signup_header: ארחו אירוע "שעה של קוד" במהלך %{campaign_date}, ורישמו אותו כאן.
   signup_name_label: שמך
   signup_name_error: דרוש שם.

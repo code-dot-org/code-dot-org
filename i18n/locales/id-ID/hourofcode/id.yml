@@ -557,6 +557,10 @@ id:
     bergabung dengan jutaan siswa di seluruh dunia untuk merayakan Pekan Edukasi Ilmu
     Komputer dengan Jam Kode. Kami akan membuka pendaftaran untuk perayaan tahunan
     pada Oktober.
+  signup_registration_closed_2022_markdown: 'Registration for this year''s Hour of
+    Code event map is currently closed, but you can still [host an Hour of Code](%{hoc_activities_url})
+    and join in the celebration on social media! Post fun pictures or video of your
+    event using the #HourOfCode hashtag!'
   signup_header: Selenggarakan Hour of Code selama %{campaign_date}, dan daftar di
     sini.
   signup_name_label: Nama anda

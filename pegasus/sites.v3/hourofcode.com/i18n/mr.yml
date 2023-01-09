@@ -536,6 +536,10 @@ mr:
   signup_registration_closed: तसेच दर वर्षी डिसेंबरमध्ये तुमचा संपूर्ण वर्ग जगभरातील
     कोट्यावधी विद्यार्थ्यांसोबत कॉम्प्युटर सायंस शिक्षण सप्ताह साजरा करताना कोडचा
     तासमध्ये भाग घेऊ शकतो. या वार्षिक सोहळ्यासाठी नोंदणी आम्ही ऑक्टोबरमध्ये सुरू करू.
+  signup_registration_closed_2022_markdown: 'Registration for this year''s Hour of
+    Code event map is currently closed, but you can still [host an Hour of Code](%{hoc_activities_url})
+    and join in the celebration on social media! Post fun pictures or video of your
+    event using the #HourOfCode hashtag!'
   signup_header: Organize an Hour of Code during %{campaign_date}, and register it
     here.
   signup_name_label: तुमचे नाव
