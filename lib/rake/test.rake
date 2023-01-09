@@ -10,19 +10,21 @@ require 'cdo/lighthouse'
 require 'parallel'
 require 'aws-sdk-s3'
 require 'cdo/mysql_console_helper'
+require lib_dir 'cdo/data/logging/rake_task_event_logger'
+include TimedTaskWithLogging
 
 namespace :test do
   desc 'Runs apps tests.'
-  task :apps do
+  timed_task_with_logging :apps do
     TestRunUtils.run_apps_tests
   end
 
   desc 'Run a single eyes test locally using chromedriver.'
-  task :ui do
+  timed_task_with_logging :ui do
     TestRunUtils.run_local_ui_test
   end
 
-  task :regular_ui do
+  timed_task_with_logging :regular_ui do
     Dir.chdir(dashboard_dir('test/ui')) do
       ChatClient.log 'Running <b>dashboard</b> UI tests...'
       failed_browser_count = RakeUtils.system_with_chat_logging(
@@ -49,7 +51,7 @@ namespace :test do
     end
   end
 
-  task :eyes_ui do
+  timed_task_with_logging :eyes_ui do
     Dir.chdir(dashboard_dir('test/ui')) do
       ChatClient.log 'Running <b>dashboard</b> UI visual tests...'
       eyes_features = `find features/ -name "*.feature" | xargs grep -lr '@eyes'`.split("\n")
@@ -79,28 +81,28 @@ namespace :test do
   end
 
   desc 'Run Lighthouse audits against key pages (currently Code Studio homepage).'
-  task :lighthouse do
+  timed_task_with_logging :lighthouse do
     Lighthouse.report CDO.studio_url('', CDO.default_scheme)
   end
 
   # Run the eyes tests and ui test suites in parallel. If one of these suites
   # raises, allow the other suite to complete, then make sure this task raises.
-  task :ui_all do
+  timed_task_with_logging :ui_all do
     Parallel.each([:eyes_ui, :regular_ui], in_threads: 3) do |target|
       Rake::Task["test:#{target}"].invoke
     end
   end
 
-  task :wait_for_test_server do
+  timed_task_with_logging :wait_for_test_server do
     RakeUtils.wait_for_url CDO.studio_url('', CDO.default_scheme)
   end
 
-  task ui_live: [
+  timed_task_with_logging ui_live: [
     :wait_for_test_server,
     :ui_all
   ]
 
-  task :dashboard_ci do
+  timed_task_with_logging :dashboard_ci do
     Dir.chdir(dashboard_dir) do
       ChatClient.wrap('dashboard ruby unit tests') do
         ENV['DISABLE_SPRING'] = '1'
@@ -150,7 +152,7 @@ namespace :test do
         seed_file = Tempfile.new(['db_seed', '.sql'])
         auto_inc = 's/ AUTO_INCREMENT=[0-9]*\b//'
         writer = URI.parse(CDO.dashboard_db_writer || 'mysql://root@localhost/dashboard_test')
-        database = writer.path[1..-1]
+        database = writer.path[1..]
         writer.path = ''
         opts = MysqlConsoleHelper.options(writer)
         mysqldump_opts = "mysqldump #{opts} --skip-comments --set-gtid-purged=OFF"
@@ -205,7 +207,7 @@ namespace :test do
     end
   end
 
-  task :dashboard_legacy_ci do
+  timed_task_with_logging :dashboard_legacy_ci do
     # isolate unit tests from the pegasus_test DB
     ENV['USE_PEGASUS_UNITTEST_DB'] = '1'
     ENV['TEST_ENV_NUMBER'] = '1'
@@ -214,7 +216,7 @@ namespace :test do
     ENV.delete 'USE_PEGASUS_UNITTEST_DB'
   end
 
-  task :shared_ci do
+  timed_task_with_logging :shared_ci do
     # isolate unit tests from the pegasus_test DB
     ENV['USE_PEGASUS_UNITTEST_DB'] = '1'
     ENV['TEST_ENV_NUMBER'] = '1'
@@ -223,7 +225,7 @@ namespace :test do
     ENV.delete 'USE_PEGASUS_UNITTEST_DB'
   end
 
-  task :pegasus_ci do
+  timed_task_with_logging :pegasus_ci do
     # isolate unit tests from the pegasus_test DB
     ENV['USE_PEGASUS_UNITTEST_DB'] = '1'
     ENV['TEST_ENV_NUMBER'] = '1'
@@ -232,7 +234,7 @@ namespace :test do
     ENV.delete 'USE_PEGASUS_UNITTEST_DB'
   end
 
-  task :lib_ci do
+  timed_task_with_logging :lib_ci do
     # isolate unit tests from the pegasus_test DB
     ENV['USE_PEGASUS_UNITTEST_DB'] = '1'
     ENV['TEST_ENV_NUMBER'] = '1'
@@ -241,7 +243,7 @@ namespace :test do
     ENV.delete 'USE_PEGASUS_UNITTEST_DB'
   end
 
-  task :bin_i18n_ci do
+  timed_task_with_logging :bin_i18n_ci do
     # isolate unit tests from the pegasus_test DB
     ENV['USE_PEGASUS_UNITTEST_DB'] = '1'
     ENV['TEST_ENV_NUMBER'] = '1'
@@ -250,7 +252,7 @@ namespace :test do
     ENV.delete 'USE_PEGASUS_UNITTEST_DB'
   end
 
-  task ci: [
+  timed_task_with_logging ci: [
     :shared_ci,
     :pegasus_ci,
     :dashboard_ci,
@@ -261,38 +263,38 @@ namespace :test do
   ]
 
   desc 'Runs dashboard tests.'
-  task :dashboard do
+  timed_task_with_logging :dashboard do
     TestRunUtils.run_dashboard_tests
   end
 
   desc 'Runs dashboard legacy tests.'
-  task :dashboard_legacy do
+  timed_task_with_logging :dashboard_legacy do
     TestRunUtils.run_dashboard_legacy_tests
   end
 
   desc 'Runs pegasus tests.'
-  task :pegasus do
+  timed_task_with_logging :pegasus do
     TestRunUtils.run_pegasus_tests
   end
 
   desc 'Runs shared tests.'
-  task :shared do
+  timed_task_with_logging :shared do
     TestRunUtils.run_shared_tests
   end
 
   desc 'Runs lib tests.'
-  task :lib do
+  timed_task_with_logging :lib do
     TestRunUtils.run_lib_tests
   end
 
   desc 'Runs bin/i18n tests.'
-  task :bin_i18n do
+  timed_task_with_logging :bin_i18n do
     TestRunUtils.run_bin_i18n_tests
   end
 
   namespace :changed do
     desc 'Runs apps tests if apps might have changed from staging.'
-    task :apps do
+    timed_task_with_logging :apps do
       run_tests_if_changed(
         'apps',
         [
@@ -306,14 +308,14 @@ namespace :test do
       end
     end
 
-    task :interpreter do
+    timed_task_with_logging :interpreter do
       run_tests_if_changed('interpreter', ['apps/src/lib/tools/jsinterpreter/patchInterpreter.js']) do
         TestRunUtils.run_interpreter_tests
       end
     end
 
     desc 'Runs dashboard tests if dashboard might have changed from staging.'
-    task :dashboard do
+    timed_task_with_logging :dashboard do
       run_tests_if_changed(
         'dashboard',
         [
@@ -332,7 +334,7 @@ namespace :test do
     end
 
     desc 'Runs dashboard_legacy tests if dashboard/legacy might have changed from staging.'
-    task :dashboard_legacy do
+    timed_task_with_logging :dashboard_legacy do
       run_tests_if_changed(
         'dashboard legacy',
         [
@@ -350,7 +352,7 @@ namespace :test do
     end
 
     desc 'Runs pegasus tests if pegasus might have changed from staging.'
-    task :pegasus do
+    timed_task_with_logging :pegasus do
       run_tests_if_changed(
         'pegasus',
         [
@@ -368,7 +370,7 @@ namespace :test do
     end
 
     desc 'Runs shared tests if shared might have changed from staging.'
-    task :shared do
+    timed_task_with_logging :shared do
       run_tests_if_changed(
         'shared',
         [
@@ -385,14 +387,14 @@ namespace :test do
     end
 
     desc 'Runs lib tests if lib might have changed from staging.'
-    task :lib do
+    timed_task_with_logging :lib do
       run_tests_if_changed('lib', ['Gemfile', 'Gemfile.lock', 'deployment.rb', 'lib/**/*']) do
         TestRunUtils.run_lib_tests
       end
     end
 
     desc 'Runs lib tests if lib might have changed from staging.'
-    task :bin_i18n do
+    timed_task_with_logging :bin_i18n do
       run_tests_if_changed('bin_i18n', ['Gemfile', 'Gemfile.lock', 'deployment.rb', 'bin/i18n/**/*']) do
         TestRunUtils.run_bin_i18n_tests
       end
@@ -408,16 +410,16 @@ namespace :test do
                  :lib,
                  :bin_i18n]
 
-    task all_but_apps: all_tasks.reject {|t| t == :apps}
+    timed_task_with_logging all_but_apps: all_tasks.reject {|t| t == :apps}
 
-    task all: all_tasks
+    timed_task_with_logging all: all_tasks
   end
 
-  task changed: ['changed:all']
+  timed_task_with_logging changed: ['changed:all']
 
-  task all: [:apps, :dashboard, :dashboard_legacy, :pegasus, :shared, :lib, :bin_i18n]
+  timed_task_with_logging all: [:apps, :dashboard, :dashboard_legacy, :pegasus, :shared, :lib, :bin_i18n]
 end
-task test: ['test:changed']
+timed_task_with_logging test: ['test:changed']
 
 # Some files are so fundamental to our test runner(s) that changes to them
 # should cause us to run all tests.

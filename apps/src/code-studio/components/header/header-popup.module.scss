@@ -1,0 +1,30 @@
+@use "color.scss";
+
+.headerItem {
+  text-align: center;
+  cursor: pointer;
+  background-color: transparent;
+  padding: 2px 0 2px 0;
+  border: none;
+  color: color.$orange;
+  &:hover {
+    cursor: pointer;
+    box-shadow: none;
+    color: color.$white;
+  }
+}
+
+.headerItemLess {
+  padding: 2px;
+}
+
+.caret {
+  font-size: 40px;
+  line-height: 10px;
+}
+
+.more {
+  font-size: 10px;
+  line-height: 10px;
+  color: color.$white;
+}

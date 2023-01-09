@@ -51,8 +51,6 @@ class Ability
       :regional_partner_workshops,
       Pd::RegionalPartnerMapping,
       Pd::Application::ApplicationBase,
-      Pd::Application::Facilitator1819Application,
-      Pd::Application::Facilitator1920Application,
       Pd::Application::TeacherApplication,
       Pd::InternationalOptIn,
       :maker_discount,
@@ -106,7 +104,7 @@ class Ability
       can :read, UserPermission, user_id: user.id
       can [:show, :pull_review, :update], PeerReview, reviewer_id: user.id
       can :view_project_commits, User do |project_owner|
-        project_owner.id === user.id || can?(:code_review, project_owner)
+        project_owner.id == user.id || can?(:code_review, project_owner)
       end
 
       can :create, CodeReview do |code_review, project|
@@ -208,7 +206,6 @@ class Ability
           !script.old_professional_learning_course?
         end
         can [:read, :find], :regional_partner_workshops
-        can [:new, :create, :read], FACILITATOR_APPLICATION_CLASS, user_id: user.id
         can [:new, :create, :read, :update], TEACHER_APPLICATION_CLASS, user_id: user.id
         can :create, Pd::InternationalOptIn, user_id: user.id
         can :manage, :maker_discount
@@ -271,7 +268,6 @@ class Ability
         can :report_csv, :peer_review_submissions
         can :manage, Pd::RegionalPartnerMapping
         can :manage, Pd::Application::ApplicationBase
-        can :manage, FACILITATOR_APPLICATION_CLASS
         can :manage, TEACHER_APPLICATION_CLASS
         can :move, :workshop_enrollments
         can :update_scholarship_info, Pd::Enrollment

@@ -12,7 +12,8 @@ module Crowdin
       'hour-of-code' => 55536,
       'codeorg-markdown' => 314545,
       'codeorg-restricted' => 464582,
-      'codeorg-testing' => 346087
+      'codeorg-testing' => 346087,
+      'codeorg-markdown-testing' => 547997
     }
 
     CDO_PROJECT_SOURCE_LANGUAGES = {

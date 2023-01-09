@@ -153,15 +153,6 @@ def main
 
   generate_shared_js_file(
     generate_multiple_constants(
-      %w(SECTION_HEADERS PAGE_LABELS VALID_SCORES LABEL_OVERRIDES NUMBERED_QUESTIONS TEXT_FIELDS INTERVIEW_QUESTIONS SCOREABLE_QUESTIONS),
-      source_module: Pd::Facilitator1920ApplicationConstants,
-      transform_keys: true
-    ),
-    "#{REPO_DIR}/apps/src/generated/pd/facilitatorApplicationConstants.js"
-  )
-
-  generate_shared_js_file(
-    generate_multiple_constants(
       %w(PRINCIPAL_APPROVAL_STATE YEAR SECTION_HEADERS PAGE_LABELS VALID_SCORES LABEL_OVERRIDES TEXT_FIELDS MULTI_ANSWER_QUESTION_FIELDS SCOREABLE_QUESTIONS),
       source_module: Pd::TeacherApplicationConstants,
       transform_keys: true
