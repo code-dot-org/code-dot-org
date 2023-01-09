@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import React, {useRef} from 'react';
 import moduleStyles from './timeline.module.scss';
 import classNames from 'classnames';
-import UniqueSounds from './utils/UniqueSounds';
+import UniqueSounds from '../utils/UniqueSounds';
 
 const colorClasses = [
   moduleStyles.timelineElementPurple,
