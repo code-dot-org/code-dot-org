@@ -111,7 +111,13 @@ export const studentsFormatter = function(studentCount, {rowData}) {
         color={Button.ButtonColor.gray}
       />
     ) : (
-      <a style={tableLayoutStyles.link} href={manageStudentsUrl}>
+      <a
+        style={tableLayoutStyles.link}
+        href={manageStudentsUrl}
+        aria-label={i18n.manageStudentsAriaLabel({
+          numStudents: studentCount
+        })}
+      >
         {rowData.studentCount}
       </a>
     );

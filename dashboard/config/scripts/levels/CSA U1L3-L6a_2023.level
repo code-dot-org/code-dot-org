@@ -5,7 +5,7 @@
     "long_instructions": "✅ **TO DO:** Run the program to observe the outcome. Then, instantiate the missing `Painter`(#e7e8ea) objects in the program.\r\n\r\n💡 **TIP:** Check out the **Help & Tips** tab ⬆️ for help with instantiating objects.\r\n\r\n📝 **COMMENT:** Be sure to add comments to note what your code does.\r\n\r\n🖥️ **TEST:** Test your program to check if your code achieves the expected result.\r\n\r\n🎉 **RUN:** Run your program to see the result of your code!\r\n\r\n## 🎯 Goal\r\n\r\n![](https://images.code.org/ccd0a3d6f54aa69cee8e08745ac33bc6-image-1668481466267.gif)",
     "mini_rubric": "false",
     "submittable": "false",
-    "hide_share_and_remix": "false",
+    "hide_share_and_remix": "true",
     "csa_view_mode": "neighborhood",
     "display_name": "Painters and Food Trucks",
     "serialized_maze": [
@@ -355,13 +355,13 @@
       }
     },
     "encrypted_exemplar_sources": "kq0Pf5c4aweori7RVLPa2YdCHg6i+267r90rZwE5q3QjjBR/PpJw16UPErsZ\nOeh46nLRnIXIQXsPX/by4quC/uQzN5o786KRWjxGMnMoTN9aPFoxhU3/miek\nZ/6KE0CNiPLBcwlC+/6HY6L6vPpKIwCbCO5yGFXFoFx7N2VpcePu5LIiaMgX\nDJCbFGGp2tH89yDVOHUXCQTbSExSOhMTWEgnurJh0rII19Q1XXTNoq6+FJe0\nFrjZ+zZrGWcFCUiBgDXptE486H+UCl8YTVfs4+qYd91JJek6tVntZx1wgLMp\nBVXfrGyNHwlLreqNKHxmLjY7U7yfx0Fq/QmX6Hf1rrWh4LEOB6CC9PE4zE38\n362e4ASIFGjDhUq7gYP++2fzohCosZPnRGcjTXWfbykwMvklPnWebwY2IUSm\nWtsOBHb4np1sSwAV33MyfwAfhsDimIoaJ41Ason4BpwYKl9Mn3wTH0AeTO+T\nnHQZoF3JuDM9J7seaRvCggbebZBUZnLEJT6Hm5lYX/5XYaLTlYTth0zMmR2/\nyHC8GvFlnEVQDEuYuSfwcwCB2Gst1JGyKHpvCmtCNIVnK+xqHqEa+bvjC78d\n/9SfDzAjPLje7Rku6CIUA26lUDxQLkw8kZpSUAxv3UiWve+hEN1RfWDsykxD\n9JWGmuyYtMax13DERCD/VmtOnjMf0stsmzgtD+u6+VsLUrTYI43t1FgKgvIl\nwLN8U6zQCveEdyCdtTTzpfNe0x4ADLeZg6yG5yrG2PCi/aqoGBNQnPpeAooO\nKi+C7LmL+UFl51/VfdqB8p9C2YM/Uz2DQOkpRc3BaMINUL8XTmV0mhmAvp4z\nhFkekFaLoUO0oqYiHbWv0rkVK3+4X6+EpH9gimHTnnMSo5dipSk/wf3LrPcu\n3yl1chVxyht+zDKmdXDHZsCn6igcMivzRFUwUZdk52AgDTbzdx1779WaAmw6\nNG9BuPZpV/4kbkGlaNxkYSbcknBjGtMsm7HT9CBk6vmMHcX0KRKlegU89dhd\nIb1RycGdHmBxvlEANQFluVytlj1h3PCyScj1QXqY3f/FUnnxhnBie3t0uZAG\nvum1V/v9P9LN9lHC9URKCiKd4pc23Wtxan6Z7hOFPrUw7QUGX7DYxSE+hG+6\nb9PgOCatbbLaG1dKXPYAlLf9ZTrz0tjYza6DmTydjb7l9fazFHuJRjFocKYi\nBowxDN7ZSaDPyd1Je27YLOb80B/476C0hZTdwpfJ4XeDwDmcyInL+lesE28=\n",
-    "encrypted_examples": [
-
-    ],
     "bubble_choice_description": "Instantiate the missing `Painter` objects so they can get to each food truck.",
     "thumbnail_url": "https://images.code.org/f25ce0eed3bbc0380688fea55dec0db5-U1L4-L3a.gif",
     "reference_links": [
       "/courses/csa-2023/guides/instantiating-objects"
+    ],
+    "encrypted_examples": [
+
     ]
   },
   "game_id": 68,
@@ -369,6 +369,6 @@
   "created_at": "2022-11-08T14:39:27.000Z",
   "level_num": "custom",
   "user_id": 16889,
-  "audit_log": "[{\"changed_at\":\"2022-11-08T14:39:27.256+00:00\",\"changed\":[\"cloned from \\\"CSA U1L3-L5_2023\\\"\"],\"cloned_from\":\"CSA U1L3-L5_2023\"},{\"changed_at\":\"2022-11-08 14:39:28 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-11-14 17:45:23 +0000\",\"changed\":[\"csa_view_mode\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-11-15 02:36:35 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-11-15 02:38:59 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-11-15 02:39:43 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-11-15 02:39:51 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-11-15 02:40:01 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-11-15 02:40:38 +0000\",\"changed\":[\"long_instructions\",\"serialized_maze\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-11-15 03:05:37 +0000\",\"changed\":[\"long_instructions\",\"serialized_maze\",\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-11-15 03:06:12 +0000\",\"changed\":[\"serialized_maze\",\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-11-08T14:39:27.256+00:00\",\"changed\":[\"cloned from \\\"CSA U1L3-L5_2023\\\"\"],\"cloned_from\":\"CSA U1L3-L5_2023\"},{\"changed_at\":\"2022-11-08 14:39:28 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-11-14 17:45:23 +0000\",\"changed\":[\"csa_view_mode\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-11-15 02:36:35 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-11-15 02:38:59 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-11-15 02:39:43 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-11-15 02:39:51 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-11-15 02:40:01 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-11-15 02:40:38 +0000\",\"changed\":[\"long_instructions\",\"serialized_maze\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-11-15 03:05:37 +0000\",\"changed\":[\"long_instructions\",\"serialized_maze\",\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-11-15 03:06:12 +0000\",\"changed\":[\"serialized_maze\",\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-11-15 23:15:11 +0000\",\"changed\":[\"hide_share_and_remix\",\"serialized_maze\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>
 </Javalab>

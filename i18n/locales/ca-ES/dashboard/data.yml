@@ -161,18 +161,18 @@ ca:
         maze_3_3: Com arribo al porc? Assegura't que no acabo executat a la caixa de TNT!
         maze_3_4: Argh! Escriu-me un programa que em porti al voltant de la TNT i al porc.
         Custom_builder: Arrossega el blocs de la caixa d'eines a l'àrea de treball per a dibuixar el nivell que vulguis crear. Prem "Executa" quan estiguis a punt.
-        jigsaw_1: Fés clic en el bloc
-        jigsaw_2: Arrossegueu el bloc a l'objectiu
-        jigsaw_3: Organitzar els blocs per formar la imatge
-        jigsaw_4: Organitzar els blocs per formar la imatge
-        jigsaw_5: Organitzar els blocs per formar la imatge
-        jigsaw_6: Organitzar els blocs per formar la imatge
-        jigsaw_7: Organitzar els blocs per formar la imatge
-        jigsaw_8: Organitzar els blocs per formar la imatge
-        jigsaw_9: Organitzar els blocs per formar la imatge
-        jigsaw_10: Organitzar els blocs per formar la imatge
-        jigsaw_11: Organitzar els blocs per formar la imatge
-        jigsaw_12: Organitzar els blocs per formar la imatge
+        jigsaw_1: Fes clic al bloc
+        jigsaw_2: Arrossega el bloc a l'objectiu
+        jigsaw_3: Organitza els blocs per formar la imatge
+        jigsaw_4: Organitza els blocs per formar la imatge
+        jigsaw_5: Organitza els blocs per formar la imatge
+        jigsaw_6: Organitza els blocs per formar la imatge
+        jigsaw_7: Organitza els blocs per formar la imatge
+        jigsaw_8: Organitza els blocs per formar la imatge
+        jigsaw_9: Organitza els blocs per formar la imatge
+        jigsaw_10: Organitza els blocs per formar la imatge
+        jigsaw_11: Organitza els blocs per formar la imatge
+        jigsaw_12: Organitza els blocs per formar la imatge
         jigsaw_13: Corregeix el trencaclosques!
         mazestep_1: Descripció dels passos del laberint aquí
         mazestep_2: Descripció dels passos del laberint aquí
@@ -277,7 +277,7 @@ ca:
         C1_playlab_storytelling: 'Play Lab: Creeu una història'
         C1_planting_seed: Plantant una llavor
         C1_building_foundation: Posant les bases
-        C1_going_places_safely: Anant a llocs segurs
+        C1_going_places_safely: Anar als llocs amb precaució
         C2_maze_intro: Introducció al Laberint
         C2_artist_intro: Introducció a l'Artista
         C2_zuck_repeat_loop: 'Laberint: bucles'
@@ -330,8 +330,14 @@ ca:
         C4_unplugged_forloops: Per bucles
         C4_unplugged_parameters: Composició amb paràmetres
         C4_unplugged_binary: Binari
+        CSF_a_b_artist_loops: Bucles a l'Artista
+        CSF_collector_k1_blocks: 'Fonaments de CS: La col·leccionista'
+        CSF_collector_repeat_loops: Bucles de repetir a La col·leccionista
+        CSF_collector_text_blocks: 'Fonaments de CS: La col·leccionista'
         CSF_debugging_k1_blocks: Depuració
         CSF_debugging_text_blocks: Depuració
+        CSF_maze_intro_k1_blocks: Introducció a Code Studio
+        CSF_maze_intro_text_blocks: Introducció a Code Studio
         CSF_my_robotic_friends: Els meus amics robòtics
         frozen_intro: Introducció a l'Hora del Codi
         frozen_loops: Introducció als bucles
@@ -359,9 +365,16 @@ ca:
         mc_if_statements: Minecraft - Condicionals amb si
         mc_congrats_share: Minecraft - Enhorabona
         mc_congrats_no_share: Minecraft - Enhorabona
+        CSF_skinOverview_Harvester: La segadora
+        CSF_harvester_skinOverview_K-1: La segadora
+        CSF_scrat_loops_K1: Bucles a l'Edat de Gel
+        CSF_scrat_loops_CF: Bucles a l'Edat de Gel
         CSF_loops_AB: Bucles
+        CDEF_Video_SpritesInAction: Sprites en acció
+        CSF_SpriteLab_SpritesInAction_CDEF: Sprites en acció
         csd_pair_programming: Programació per parelles
         csd_applab_parameters: Funcions amb Paràmetres
+        CSF_SpriteLab_SpritesInAction_v2: Sprites en acció
         csd_debugging: Depuració
         playlab_2021: Introducció a Play Lab
         playlab_2021_reader: Introducció a Play Lab

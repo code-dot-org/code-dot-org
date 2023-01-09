@@ -770,8 +770,17 @@
         "a54509a7-dac6-4985-830d-91272c3de923": {
           "name": "Wrap Up"
         },
+        "4297e4f8-df09-4a0f-a1f1-6eebb5fb75b3": {
+          "name": "Isitish: Xuddi shu so'z. Turli Ma'no."
+        },
         "5d5fd9dd-ddf2-43b6-b079-90a4951fc484": {
           "name": "Ko‘ring: So‘z kuchi"
+        },
+        "a97a978a-4f85-4d03-b3aa-f9ade97cac23": {
+          "name": "Tekshiring: muammo nimada?"
+        },
+        "13324f62-aa57-47e7-a446-9f26c40da904": {
+          "name": "Yakunlash: chiziqni kesib o'tish"
         },
         "06eca5a9-6166-4def-972b-ecf15e73ee59": {
           "name": "Qo‘shimcha mashg‘ulotlar"
@@ -820,6 +829,9 @@
         },
         "5eb7bde7-0d2c-4816-b398-1c6a665cdeb9": {
           "name": "Wrap Up"
+        },
+        "39be02fb-09ad-4047-b301-1b645de2d50a": {
+          "name": "Kursikulyar imkoniyatlar"
         },
         "78530493-657f-4a50-bd1c-16933b560f2c": {
           "name": "Qizdirish"
@@ -1106,6 +1118,15 @@
         "f4c94b25-e0f0-4caa-bebd-1557f771a849": {
           "name": "5 & 6-kun - Loyihani taqdimoti"
         },
+        "5b342453-cd42-4221-8375-618cf1ddb41b": {
+          "name": "Etibor bering: Raqamli Trailni kuzatib boring"
+        },
+        "133dbbe7-859c-4ce7-a0e4-34d1212dd07b": {
+          "name": "O'yin: Hayvonlarning treklari"
+        },
+        "e0e795f5-7368-4341-ac98-2b68aa5a26a0": {
+          "name": "Qamrab olish: To'xtash & O'ylash vaqti"
+        },
         "15846b35-8b6d-4970-87a4-cc861b66e9cb": {
           "name": "Qo‘shimcha mashg‘ulotlar"
         },
@@ -1135,6 +1156,9 @@
         },
         "02613861-ab47-4a89-a8c5-12dbace2f54e": {
           "name": "Qo‘shimcha mashg‘ulotlar"
+        },
+        "c396e3fc-d4aa-4cb3-9b13-472b50b660fd": {
+          "name": "Kurslararo imkoniyatlar"
         },
         "aae8c0dc-7721-4ba9-a24d-4aaaf32e1e4a": {
           "name": "Qizdirish"
@@ -1193,6 +1217,9 @@
         "fa7408d8-1dd3-4d8b-a611-f412c92361bd": {
           "name": "Qo‘shimcha mashg‘ulotlar"
         },
+        "eb3ac5b0-7f9f-4ab5-bc88-cc7d5748b97a": {
+          "name": "Kurslararo imkoniyatlar"
+        },
         "7e002958-d294-4986-bfdb-8d5cad5312e5": {
           "name": "Qizdirish"
         },
@@ -1202,6 +1229,9 @@
         "49a16e33-3c0f-40c7-9258-75a3e5ba717c": {
           "name": "Yakun"
         },
+        "4b9fe477-9a99-4cf7-b390-6cfaf046f61d": {
+          "name": "Kurslararo imkoniyatlar"
+        },
         "81967def-358e-4733-aedd-9aa01a30d8e8": {
           "name": "Qizdirish"
         },
@@ -1210,6 +1240,9 @@
         },
         "fb19c014-becb-4f19-9669-5591aec2bd2a": {
           "name": "Wrap Up"
+        },
+        "380aca01-c1a9-44eb-978e-f896d033b45c": {
+          "name": "Kurslararo imkoniyatlar"
         },
         "bcdb311f-0e2f-4bce-8447-b935e91283d9": {
           "name": "Qizdirish"
@@ -1271,6 +1304,9 @@
         "f7d39471-7d15-4b89-bde4-6d4846004ccd": {
           "name": "Qo‘shimcha mashg‘ulotlar"
         },
+        "61a942b7-f5f6-4706-abaa-f7e05643bc93": {
+          "name": "Kursikulyar imkoniyatlar"
+        },
         "1cd41560-d425-4c55-b269-ced0b1d8d561": {
           "name": "Qizdirish"
         },
@@ -1307,6 +1343,9 @@
         "e231dcbb-0fb2-4c6b-9daa-3457e16e0f80": {
           "name": "Qo‘shimcha mashg‘ulotlar"
         },
+        "d178a54a-af69-4324-b41d-53bba0b0c945": {
+          "name": "Kursikulyar imkoniyatlar"
+        },
         "d3278419-8194-4a0a-a5ef-74eacedbfde4": {
           "name": "Qizdirish"
         },
@@ -1342,6 +1381,9 @@
         },
         "06405457-a7a2-4d06-a86e-49fcd9b68ca0": {
           "name": "Wrap Up"
+        },
+        "7d776b69-c8bc-4061-bc09-6f7d4fabadd1": {
+          "name": "Kursikulyar imkoniyatlar"
         },
         "f82ae62d-6e76-46b1-b3bd-ca643497839a": {
           "name": "Qizdirish"
@@ -1673,6 +1715,12 @@
         "4676cb43-a1fe-4d36-9f41-82d8516ac46a": {
           "name": "Tomosha qiling: Mening onlayn qo'shnim"
         },
+        "d4e86a51-c366-4b84-81b5-4b956bdb42dc": {
+          "name": "O'qing: Xavfsizlik, qoidalari!"
+        },
+        "854011f5-d6d4-4b11-85de-33e29b599c5d": {
+          "name": "Internet bilan: Sayohat qilishni organing"
+        },
         "217dee7e-80c0-40a2-b56e-e4df0c5805c6": {
           "name": "Qo‘shimcha mashg‘ulotlar"
         },
@@ -1689,22 +1737,22 @@
           "name": "Qo‘shimcha mashg‘ulotlar"
         },
         "26024df9-6e4f-4347-a9e6-2d28952f5729": {
-          "name": "Qizdirish"
+          "name": "Mashq"
         },
         "cb29d1b2-f952-4f72-a718-43126699ac32": {
           "name": "Asosiy mashg‘ulot"
         },
         "05c730d2-8b63-47f0-ba9d-d664b50fa08c": {
-          "name": "Wrap Up"
+          "name": "Yakunlash"
         },
         "7544ca1c-bed3-4846-82dd-1e4efeb05aa6": {
           "name": "Qo‘shimcha mashg‘ulotlar"
         },
         "7b5c3e7f-91ea-4159-b8c7-2346bd035d2d": {
-          "name": "Qizdirish"
+          "name": "Mashq"
         },
         "f824456e-fbbf-4107-a086-86cb2c66cdd2": {
-          "name": "O‘tish mashg‘uloti - Birini tanlash"
+          "name": "Koprik faoliyati"
         },
         "64398eb7-46ab-4f42-97ad-3e90882fe3cd": {
           "name": "Asosiy mashg‘ulot"
@@ -1727,6 +1775,9 @@
         "f4c545ed-2b8d-43da-b04e-326dbb97f16e": {
           "name": "Qo‘shimcha mashg‘ulotlar"
         },
+        "d352a834-02b6-493b-82a9-31c11a819dc8": {
+          "name": "Kurslararo imkoniyatlar"
+        },
         "239c73d7-f268-4c08-b4f4-1beea0c347cc": {
           "name": "Qizdirish"
         },
@@ -1737,7 +1788,7 @@
           "name": "Wrap Up"
         },
         "b66f054d-7a1a-4d77-b19c-6b012d2b87a1": {
-          "name": "Qizdirish"
+          "name": "Mashq"
         },
         "3cab4fd7-471c-4ad2-bdd8-e65a69c74898": {
           "name": "Asosiy mashg‘ulot"
@@ -1780,6 +1831,9 @@
         },
         "70d17a47-00c8-41f8-aed2-f5aa76a2b9fb": {
           "name": "Wrap Up"
+        },
+        "51e205c0-25de-4ff0-8333-32f10f0f6215": {
+          "name": "Kurslararo imkoniyatlar"
         },
         "e68d3049-5654-4527-9c7b-8dc1426e138d": {
           "name": "Qizdirish"

@@ -5,6 +5,8 @@ fa:
         text: حرکت به شمال/شرق/جنوب/غرب با کلیدهای جهت
       AmysBlocks_setPromptWithChoices:
         text: به کاربر برای متغیر [VAR][1] سوال [QUESTION][0] با انتخابهای [A][2][B][3][C][4] را بفرست
+      AmysBlocks_spriteSayVar:
+        text: "[SPRITE][0] میگوید: [TEXT1][1]"
       BadGuys_makeNewBadGuysSprite:
         text: یک اسپرایت جدید [ANIMATION_NAME][0] در محل [LOCATION][1] بساز
       BadGuys_setSizeAll_dropdown:
@@ -459,6 +461,8 @@ fa:
           COSTUME:
             '"ALIEN"': فضایی ها
             '"BEAR"': خرسها
+            '"CAT"': گربه ها
+            '"DOG"': سگ ها
             '"DUCK"': اردکها
             '"FROG"': قورباغه‌ها
             '"MOOSE"': گوزن بزرگ
@@ -954,6 +958,13 @@ fa:
             '"macklemore90"': ترانه Can't Hold Us از Macklemore
             '"hammer"': MC Hammer - U Can't Touch This
             '"peas"': آهنگ The Black Eyed Peas - I Got a Feeling
+      DansBlocks_getMicroscope:
+        text: میکروسکوپ [INPUT1][0] دارد
+        options:
+          INPUT1:
+            '1': آب لیمو
+            '3': جوش شیرین
+            '5': هر دو
       DansBlocks_setForegroundEffect2:
         text: اجرای افکت [EFFECT][0]
         options:
@@ -966,10 +977,43 @@ fa:
             '"starburst"': استارباست (افکت)
             '"glass"': شیشه شکسته (افکت)
             '"twinkling"': چشمک زن (افکت)
-      FunctionBlocks_representManipulative:
+      DansBlocks_setMicroscope:
+        text: میکروسکوپ را روی [0][INPUT1] تنظیم کنید
         options:
-          BEHAVIOR:
-            draggable(): قابل کشیدن باشد
+          INPUT1:
+            '1': آب لیمو
+            '3': جوش شیرین
+            '5': هر دو
+      DansBlocks_testRectangle:
+        text: 'ایجاد مستطیل x: [X][0] y: [Y][1] w: [W][2] h: [H][3] رنگ: [COLOR][4]'
+      FunctionBlocks_addEightBlock:
+        text: 8 واحد اضافه کنید
+      FunctionBlocks_addFiveBlock:
+        text: 5 واحد اضافه کنید
+      FunctionBlocks_addFourBlock:
+        text: 4 واحد اضافه کنید
+      FunctionBlocks_addNineBlock:
+        text: 9 واحد اضافه کنید
+      FunctionBlocks_addOneBlock:
+        text: 1 واحد اضافه کنید
+      FunctionBlocks_addSevenBlock:
+        text: 7 واحد اضافه کنید
+      FunctionBlocks_addSixBlock:
+        text: 6 واحد اضافه کنید
+      FunctionBlocks_addThreeBlock:
+        text: 3 واحد اضافه کنید
+      FunctionBlocks_addTwoBlock:
+        text: 2 واحد اضافه کنید
+      FunctionBlocks_communicate:
+        text: ارتباط [VAR1][0] با [SPRITE1COSTUME][1]
+      FunctionBlocks_makeManipulative2:
+        text: ایجاد [NUM][0] اسپرایت جدید که [BEHAVIOR][2]
+      FunctionBlocks_representManipulative:
+        text: نماینده [BEHAVIOR][2] [NUM][0] اسپرایت [ANIMATION_NAME][1] جدید
+      FunctionBlocks_representManipulative_test:
+        text: "[testing] نشان دهنده[0][NUM] جدید[1][ANIMATION_NAME] اسپرایتها"
+      FunctionBlocks_spriteSayVar:
+        text: "[SPRITE][0] میگوید: [TEXT1][1]"
       gamelab_addBehaviorSimple:
         text: اسپرایت [SPRITE][0] ، [BEHAVIOR][1] را شروع می‌کند
       gamelab_addTarget:
@@ -1299,14 +1343,15 @@ fa:
             "'sound://category_space/Blackhole_SFX.mp3'": صدای سیاه‌چاله
             "'sound://category_space/Bullet_cluster_SFX.mp3'": صدای شلیک
             "'sound://category_space/Carina_SFX.mp3'": صدای کارینا
-            "'sound://category_space/Cassiopeia_SFX.mp3'": صدای کاسیوپیا
+            "'sound://category_space/Cassiopeia_SFX.mp3'": صدای کاسیوپیا (cassiopeia)
             "'sound://category_space/Crab_nebula_SFX.mp3'": صدای سحابی خرچنگ
             "'sound://category_space/Galactic_center_SFX.mp3'": صدای مرکز کهکشان
             "'sound://category_space/Launch_SFX.mp3'": صدای پرتاب موشک
             "'sound://category_space/Lift_Off.mp3'": صدای بلند شدن موشک
             "'sound://category_space/Pillars_SFX.mp3'": صدای سحابی عقاب
             "'sound://category_space/Southern_ring_SFX.mp3'": صدای حلقه جنوبی (فضا)
-            "'sound://category_space/Supernova_SFX.mp3'": صدا ابرنواختر
+            "'sound://category_space/Supernova_SFX.mp3'": ابرنواختر (supernova) (صدا)
+            "'sound://category_space/Tycho_SFX.mp3'": تایکو (tycho) (صدا)
             "'sound://category_space/Whirlpool_galaxy_SFX.mp3'": صدای کهکشان مارپیچی
       gamelab_playSpeech:
         text: '[SOUND][0] را پخش کن'
@@ -1950,8 +1995,41 @@ fa:
         text: شهر هیولاها را با [COUNT][0] هیولا بساز
       Outbreak_stopMoving:
         text: هیولاها متوقف می‌شوند
+      ParticlesBlocks_getMicroscope:
+        text: میکروسکوپ [INPUT1][0] دارد
+        options:
+          INPUT1:
+            '1': آب لیمو
+            '3': جوش شیرین
+            '5': هر دو
+      ParticlesBlocks_setMicroscope:
+        text: میکروسکوپ را روی [0][INPUT1] تنظیم کنید
+        options:
+          INPUT1:
+            '1': آب لیمو
+            '3': جوش شیرین
+            '5': هر دو
       ParticlesBlocks_statesOfMatter:
         text: "[BEHAVIOR][0]"
+        options:
+          BEHAVIOR:
+            "new Behavior(solid, [])": جامد
+            "new Behavior(liquid, [])": مایع
+            "new Behavior(wandering, [])": گاز
+      ParticlesBlocks_statesOfMatter2:
+        text: رفتار [COSTUME][0] تا [BEHAVIOR][1] را تنظیم کنید
+        options:
+          BEHAVIOR:
+            '"solid"': 'ذرات جامد '
+            '"liquid"': ذرات مایع
+            '"gas"': ذرات گاز
+      ParticlesBlocks_statesOfMatter_testing:
+        text: "[Testing] تنظیم [0][COSTUME] به [1][BEHAVIOR] رفتار"
+        options:
+          BEHAVIOR:
+            '"solid"': 'ذرات جامد '
+            '"liquid"': ذرات مایع
+            '"gas"': ذرات گاز
       Poetry_addFrame:
         text: قاب را روی [BRUSH][0] تنظیم کن
         options:
@@ -2042,6 +2120,23 @@ fa:
             '"sound://category_achievements/peaceful_win_1.mp3"': برنده (صدا)
             '"sound://category_explosion/vibrant_game_arcade_game_negative_hit.mp3"': گردباد (صدا)
             '"sound://category_achievements/peaceful_win_6.mp3"': لوله‌های فلزی  (صدا)
+      Poetry_playSoundOptionsSpace:
+        text: '[SOUND][0] را پخش کن'
+        options:
+          SOUND:
+            "'sound://category_space/Blackhole_SFX.mp3'": صدای سیاه‌چاله
+            "'sound://category_space/Bullet_cluster_SFX.mp3'": صدای شلیک
+            "'sound://category_space/Carina_SFX.mp3'": صدای کارینا
+            "'sound://category_space/Cassiopeia_SFX.mp3'": صدای کاسیوپیا (cassiopeia)
+            "'sound://category_space/Crab_nebula_SFX.mp3'": صدای سحابی خرچنگ
+            "'sound://category_space/Galactic_center_SFX.mp3'": صدای مرکز کهکشان
+            "'sound://category_space/Launch_SFX.mp3'": صدای پرتاب موشک
+            "'sound://category_space/Lift_Off.mp3'": صدای بلند شدن موشک
+            "'sound://category_space/Pillars_SFX.mp3'": صدای سحابی عقاب
+            "'sound://category_space/Southern_ring_SFX.mp3'": صدای حلقه جنوبی (فضا)
+            "'sound://category_space/Supernova_SFX.mp3'": ابرنواختر (supernova) (صدا)
+            "'sound://category_space/Tycho_SFX.mp3'": تایکو (tycho) (صدا)
+            "'sound://category_space/Whirlpool_galaxy_SFX.mp3'": صدای کهکشان مارپیچی
       Poetry_setAuthor:
         text: 'نویسنده: [AUTHOR][0]'
       Poetry_setBackground:
@@ -2426,6 +2521,16 @@ fa:
             left: چپ ↺
       storylab_clearHeadings:
         text: پاک کردن عنوانها
+      storylab_setForegroundEffect2:
+        text: اجرای افکت [EFFECT][0]
+        options:
+          EFFECT:
+            '"bubbles"': حباب (افکت)
+            '"confetti"': کاغذ رنگی (افکت)
+            '"hearts"': قلب
+            '"rain"': بارانی
+            '"starburst"': استارباست (افکت)
+            '"twinkling"': چشمک زن (افکت)
       storylab_setHeading:
         text: 'عنوان را تنظیم کن: [HEADING][0]'
       storylab_setPromptWithChoice:

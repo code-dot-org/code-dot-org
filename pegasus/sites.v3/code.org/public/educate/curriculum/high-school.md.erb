@@ -3,6 +3,9 @@ title: CS Curriculum for grades 9-12
 video_player: true
 theme: responsive
 ---
+
+<link href="/css/afe-promo-box.css" rel="stylesheet">
+
 <%= view :professional_learning_marketing_banner, audience_text: 'you', link_address: '/educate/professional-learning/middle-high', button_label: 'Learn more' %>
 
 [solid-block-header]
@@ -45,7 +48,7 @@ Artificial intelligence (AI) and machine learning (ML) are shaping the world aro
 
 <div class="col-40" style="padding-right: 10px;">
 
-<img src="/images/fill-380x215/code20hr.jpg" style="max-width: 100%">
+<img src="/images/fill-380x215/code20hr.jpg" style="max-width: 100%" alt>
 
 </div>
 
@@ -79,10 +82,9 @@ In addition to our courses, we have tools and resources that you can blend into 
 [<button>App Lab</button>](/applab)
 
 <br>
-<hr>
+<%=view :afe_promo_box %>
 
 <a name="thirdparty"></a>
-
 
 # Recommended courses from 3rd parties
 

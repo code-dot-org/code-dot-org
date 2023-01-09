@@ -8,6 +8,9 @@
         "flappy/Flappy Code": {
           "name": "Flappy kôd"
         },
+        "hello-world-soccer-2022/Hello World: Food": {
+          "name": "Pozdrav svijetu: Nogomet"
+        },
         "hourofcode/Maze": {
           "name": "Labirint"
         },
@@ -23,11 +26,20 @@
         "gumball/Gumball Play Lab": {
           "name": "Gumball Play Lab"
         },
+        "hello-world-space-2022/Hello World: Food": {
+          "name": "Hello World: Prostor"
+        },
         "mc/Hour of Code 2015": {
           "name": "Minecraft Sat Kodiranja"
         },
         "playlab/Play Lab": {
           "name": "Laboratorij igara"
+        },
+        "outbreak/Outbreak": {
+          "overview": "",
+          "preparation": "",
+          "purpose": "",
+          "student_overview": ""
         },
         "infinity/Infinity": {
           "name": "Disney Infinity Laboratorij igara"

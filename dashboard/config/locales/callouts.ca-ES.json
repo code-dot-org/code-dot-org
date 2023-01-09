@@ -260,7 +260,8 @@
           "hello_world_new": "Nou bloc!"
         },
         "helloworld_animals_sizes": {
-          "hello_world_new": "Nou bloc!"
+          "hello_world_new": "Nou bloc!",
+          "hello_world_new_block": "Nou bloc!!!!"
         },
         "helloworld_animals_sounds": {
           "hello_world_new": "Nou bloc!"
@@ -369,6 +370,520 @@
         },
         "helloworld_food_sounds_space-2022": {
           "hello_world_new": "Nou bloc!"
+        },
+        "CourseF_outbreak7_-2022-2": {
+          "costumes_tab": "Feu clic aquí per afegir disfresses al vostre projecte."
+        },
+        "New Sprite Lab Project": {
+          "costumes_tab": "Feu clic aquí per afegir disfresses al vostre projecte."
+        },
+        "courseE_aboutme_22022": {
+          "": "Feu clic aquí per afegir disfresses al vostre projecte."
+        },
+        "coursee_helloworld_events": {
+          "hello_world_click_hint": "Afegiu aquest bloc d'esdeveniments al vostre espai de treball."
+        },
+        "coursee_helloworld_freeplay": {
+          "costumes_tab": "Feu clic aquí per afegir disfresses al vostre projecte."
+        },
+        "coursee_helloworld_say": {
+          "hello_world_say": "Utilitzeu aquest bloc per fer que els sprites parlin.",
+          "hello_world_make_sprite": "Utilitzeu aquest bloc per crear un sprite."
+        },
+        "helloworld_animals_backgrounds": {
+          "hw_background_location": "Utilitzeu aquest bloc per establir un nou fons."
+        },
+        "helloworld_animals_behaviors": {
+          "hello_world_behavior_blocks": "Utilitzeu aquest bloc amb un dels comportaments següents."
+        },
+        "helloworld_animals_click": {
+          "hw_Run": "Feu clic aquí per executar el codi."
+        },
+        "helloworld_animals_events": {
+          "hello_world_click_hint": "Afegiu aquest bloc d'esdeveniments al vostre espai de treball."
+        },
+        "helloworld_animals_freeplay": {
+          "costumes_tab": "Feu clic aquí per afegir disfresses al vostre projecte."
+        },
+        "helloworld_animals_location": {
+          "pin": "passador"
+        },
+        "helloworld_animals_multi": {
+          "pin": "passador"
+        },
+        "helloworld_animals_say": {
+          "hello_world_say": "Utilitzeu aquest bloc per fer que els sprites parlin.",
+          "hello_world_make_sprite": "Utilitzeu aquest bloc per crear un sprite."
+        },
+        "helloworld_emoji_backgrounds": {
+          "hw_background_location": "Utilitzeu aquest bloc per establir un nou fons."
+        },
+        "helloworld_emoji_behaviors": {
+          "hello_world_behavior_blocks": "Utilitzeu aquest bloc amb un dels comportaments següents."
+        },
+        "helloworld_emoji_click": {
+          "hw_Run": "Feu clic aquí per executar el codi."
+        },
+        "helloworld_emoji_events": {
+          "hello_world_click_hint": "Afegiu aquest bloc d'esdeveniments al vostre espai de treball."
+        },
+        "helloworld_emoji_freeplay": {
+          "costumes_tab": "Feu clic aquí per afegir disfresses al vostre projecte."
+        },
+        "helloworld_emoji_location": {
+          "pin": "passador"
+        },
+        "helloworld_emoji_multi": {
+          "pin": "passador"
+        },
+        "helloworld_emoji_say": {
+          "hello_world_say": "Utilitzeu aquest bloc per fer que els sprites parlin.",
+          "hello_world_make_sprite": "Utilitzeu aquest bloc per crear un sprite."
+        },
+        "helloworld_food_backgrounds": {
+          "hw_background_location": "Utilitzeu aquest bloc per establir un nou fons."
+        },
+        "helloworld_food_backgrounds_soccer-2022": {
+          "hw_background_location": "Utilitzeu aquest bloc per establir un nou fons."
+        },
+        "helloworld_food_backgrounds_space-2022": {
+          "hw_background_location": "Utilitzeu aquest bloc per establir un nou fons."
+        },
+        "helloworld_food_behaviors": {
+          "hello_world_behavior_blocks": "Utilitzeu aquest bloc amb un dels comportaments següents."
+        },
+        "helloworld_food_behaviors_soccer-2022": {
+          "hello_world_behavior_blocks": "Utilitzeu aquest bloc amb un dels comportaments següents."
+        },
+        "helloworld_food_behaviors_space-2022": {
+          "hello_world_behavior_blocks": "Utilitzeu aquest bloc amb un dels comportaments següents."
+        },
+        "helloworld_food_click": {
+          "hw_Run": "Feu clic aquí per executar el codi."
+        },
+        "helloworld_food_click_soccer-2022": {
+          "hw_Run": "Feu clic aquí per executar el codi."
+        },
+        "helloworld_food_click_space-2022": {
+          "hw_Run": "Feu clic aquí primer!"
+        },
+        "helloworld_food_events": {
+          "hello_world_click_hint": "Afegiu aquest bloc d'esdeveniments al vostre espai de treball."
+        },
+        "helloworld_food_events_soccer-2022": {
+          "hello_world_click_hint": "Afegiu aquest bloc d'esdeveniments al vostre espai de treball."
+        },
+        "helloworld_food_events_space-2022": {
+          "hello_world_click_hint": "Afegiu aquest bloc d'esdeveniments al vostre espai de treball."
+        },
+        "helloworld_food_freeplay": {
+          "costumes_tab": "Feu clic aquí per afegir disfresses al vostre projecte."
+        },
+        "helloworld_food_freeplay_soccer-2022": {
+          "costumes_tab": "Feu clic aquí per afegir disfresses al vostre projecte."
+        },
+        "helloworld_food_freeplay_space-2022": {
+          "costumes_tab": "Feu clic aquí per afegir disfresses al vostre projecte."
+        },
+        "helloworld_food_location": {
+          "pin": "passador"
+        },
+        "helloworld_food_location_soccer-2022": {
+          "pin": "passador"
+        },
+        "helloworld_food_location_space-2022": {
+          "pin": "passador"
+        },
+        "helloworld_food_multi": {
+          "pin": "passador"
+        },
+        "helloworld_food_multi_soccer-2022": {
+          "pin": "passador"
+        },
+        "helloworld_food_multi_space-2022": {
+          "pin": "passador"
+        },
+        "helloworld_food_say": {
+          "hello_world_say": "Utilitzeu aquest bloc per fer que els sprites parlin.",
+          "hello_world_make_sprite": "Utilitzeu aquest bloc per crear un sprite."
+        },
+        "helloworld_food_say_soccer-2022": {
+          "hello_world_say": "Utilitzeu aquest bloc per fer que els sprites parlin.",
+          "hello_world_make_sprite": "Utilitzeu aquest bloc per crear un sprite."
+        },
+        "helloworld_food_say_space-2022": {
+          "hello_world_say": "Utilitzeu aquest bloc per fer que els sprites parlin.",
+          "hello_world_make_sprite": "Utilitzeu aquest bloc per crear un sprite."
+        },
+        "helloworld_retro_backgrounds": {
+          "hw_background_location": "Utilitzeu aquest bloc per establir un nou fons."
+        },
+        "helloworld_retro_behaviors": {
+          "hello_world_behavior_blocks": "Utilitzeu aquest bloc amb un dels comportaments següents."
+        },
+        "helloworld_retro_click": {
+          "hw_Run": "Feu clic aquí per executar el codi."
+        },
+        "helloworld_retro_events": {
+          "hello_world_click_hint": "Afegiu aquest bloc d'esdeveniments al vostre espai de treball."
+        },
+        "helloworld_retro_freeplay": {
+          "costumes_tab": "Feu clic aquí per afegir disfresses al vostre projecte."
+        },
+        "helloworld_retro_location": {
+          "pin": "passador"
+        },
+        "helloworld_retro_multi": {
+          "pin": "passador"
+        },
+        "helloworld_retro_say": {
+          "hello_world_say": "Utilitzeu aquest bloc per fer que els sprites parlin.",
+          "hello_world_make_sprite": "Utilitzeu aquest bloc per crear un sprite."
+        },
+        "courseA_maze_seq1_2021": {
+          "courseA_maze_seq1_1": "Fes clic en la bombeta quan necessitis una pista!"
+        },
+        "courseB_Scrat_ramp1_2021": {
+          "grade2_CaringForNewPet_0_1": "Després de connectar tots els blocs, prem \"Executar\" per iniciar el programa."
+        },
+        "courseB_Scrat_ramp3a_2021": {
+          "courseC_maze_programming2_1": "Aquesta és la caixa d'eines. Aquí hi trobaràs blocs addicionals per completar els trencaclosques."
+        },
+        "courseB_artist_loops3_2021": {
+          "courseB_artist_loops3_1": "Només tens un d'aquests blocs a la caixa d'eines. Com el vols fer servir?"
+        },
+        "courseA_artist_loops4": {
+          "courseA_artist_loops4_1": "Aquest número t'indica quants d'aquests blocs pots fer servir en aquest trencaclosques."
+        },
+        "courseA_artist_loops42022": {
+          "courseA_artist_loops4_1": "Aquest número t'indica quants d'aquests blocs pots fer servir en aquest trencaclosques."
+        },
+        "courseA_artist_loops4_2018": {
+          "courseA_artist_loops4_1": "Aquest número t'indica quants d'aquests blocs pots fer servir en aquest trencaclosques."
+        },
+        "courseA_artist_loops4_2019": {
+          "courseA_artist_loops4_1": "Aquest número t'indica quants d'aquests blocs pots fer servir en aquest trencaclosques."
+        },
+        "courseA_artist_loops4_2020": {
+          "courseA_artist_loops4_1": "Aquest número t'indica quants d'aquests blocs pots fer servir en aquest trencaclosques."
+        },
+        "courseA_artist_loops4_2021": {
+          "courseA_artist_loops4_1": "Aquest número t'indica quants d'aquests blocs pots fer servir en aquest trencaclosques."
+        },
+        "courseA_artist_loops7": {
+          "courseA_artist_loops7_1": "Aquest número significa que només pots utilitzar un bloc d'aquest tipus a la resposta final."
+        },
+        "courseA_artist_loops72022": {
+          "courseA_artist_loops7_1": "Aquest número significa que només pots utilitzar un bloc d'aquest tipus a la resposta final."
+        },
+        "courseA_artist_loops7_2018": {
+          "courseA_artist_loops7_1": "Aquest número significa que només pots utilitzar un bloc d'aquest tipus a la resposta final."
+        },
+        "courseA_artist_loops7_2019": {
+          "courseA_artist_loops7_1": "Aquest número significa que només pots utilitzar un bloc d'aquest tipus a la resposta final."
+        },
+        "courseA_artist_loops7_2020": {
+          "courseA_artist_loops7_1": "Aquest número significa que només pots utilitzar un bloc d'aquest tipus a la resposta final."
+        },
+        "courseA_artist_loops7_2021": {
+          "courseA_artist_loops7_1": "Aquest número significa que només pots utilitzar un bloc d'aquest tipus a la resposta final."
+        },
+        "courseA_artist_loops8": {
+          "courseA_artist_loops8_1": "Sabies que pots tornar a dibuixar per sobre d'una línia si et fa falta?"
+        },
+        "courseA_artist_loops82022": {
+          "courseA_artist_loops8_1": "Sabies que pots tornar a dibuixar per sobre d'una línia si et fa falta?"
+        },
+        "courseA_artist_loops8_2018": {
+          "courseA_artist_loops8_1": "Sabies que pots tornar a dibuixar per sobre d'una línia si et fa falta?"
+        },
+        "courseA_artist_loops8_2019": {
+          "courseA_artist_loops8_1": "Sabies que pots tornar a dibuixar per sobre d'una línia si et fa falta?"
+        },
+        "courseA_artist_loops8_2020": {
+          "courseA_artist_loops8_1": "Sabies que pots tornar a dibuixar per sobre d'una línia si et fa falta?"
+        },
+        "courseA_artist_loops8_2021": {
+          "courseA_artist_loops8_1": "Sabies que pots tornar a dibuixar per sobre d'una línia si et fa falta?"
+        },
+        "courseA_collector_loops12022": {
+          "courseA_collector_loops1_1": "Fes servir aquest bloc per agafar el tresor."
+        },
+        "courseA_collector_loops1_2019": {
+          "courseA_collector_loops1_1": "Fes servir aquest bloc per agafar el tresor."
+        },
+        "courseA_collector_loops1_2020": {
+          "courseA_collector_loops1_1": "Fes servir aquest bloc per agafar el tresor."
+        },
+        "courseA_collector_loops1_2021": {
+          "courseA_collector_loops1_1": "Fes servir aquest bloc per agafar el tresor."
+        },
+        "courseA_collector_loops3": {
+          "gradek_adventurer_loops2_1": "Aquest número t'indica quants d'aquests blocs pots fer servir en aquest trencaclosques."
+        },
+        "courseA_collector_loops32022": {
+          "gradek_adventurer_loops2_1": "Aquest número t'indica quants d'aquests blocs pots fer servir en aquest trencaclosques."
+        },
+        "courseA_collector_loops3_2018": {
+          "gradek_adventurer_loops2_1": "Aquest número t'indica quants d'aquests blocs pots fer servir en aquest trencaclosques."
+        },
+        "courseA_collector_loops3_2019": {
+          "gradek_adventurer_loops2_1": "Aquest número t'indica quants d'aquests blocs pots fer servir en aquest trencaclosques."
+        },
+        "courseA_collector_loops3_2020": {
+          "gradek_adventurer_loops2_1": "Aquest número t'indica quants d'aquests blocs pots fer servir en aquest trencaclosques."
+        },
+        "courseA_collector_loops3_2021": {
+          "gradek_adventurer_loops2_1": "Aquest número t'indica quants d'aquests blocs pots fer servir en aquest trencaclosques."
+        },
+        "courseA_maze_ramp22022": {
+          "courseC_maze_programming2_1": "Aquesta és la caixa d'eines. Aquí hi trobaràs blocs addicionals per completar els trencaclosques."
+        },
+        "courseA_maze_ramp2_2019": {
+          "courseC_maze_programming2_1": "Aquesta és la caixa d'eines. Aquí hi trobaràs blocs addicionals per completar els trencaclosques."
+        },
+        "courseA_maze_ramp2_2020": {
+          "courseC_maze_programming2_1": "Aquesta és la caixa d'eines. Aquí hi trobaràs blocs addicionals per completar els trencaclosques."
+        },
+        "courseA_maze_ramp2_2021": {
+          "courseC_maze_programming2_1": "Aquesta és la caixa d'eines. Aquí hi trobaràs blocs addicionals per completar els trencaclosques."
+        },
+        "courseA_maze_ramp3a_2018": {
+          "courseC_maze_programming2_1": "Aquesta és la caixa d'eines. Aquí hi trobaràs blocs addicionals per completar els trencaclosques."
+        },
+        "courseA_maze_seq1": {
+          "courseA_maze_seq1_1": "Fes clic en la bombeta quan necessitis una pista!"
+        },
+        "courseA_maze_seq12022": {
+          "courseA_maze_seq1_1": "Fes clic en la bombeta quan necessitis una pista!"
+        },
+        "courseA_maze_seq1_2018": {
+          "courseA_maze_seq1_1": "Fes clic en la bombeta quan necessitis una pista!"
+        },
+        "courseA_maze_seq1_2019": {
+          "courseA_maze_seq1_1": "Fes clic en la bombeta quan necessitis una pista!"
+        },
+        "courseA_maze_seq1_2020": {
+          "courseA_maze_seq1_1": "Fes clic en la bombeta quan necessitis una pista!"
+        },
+        "courseA_playLab_events4": {
+          "courseA_playlab_events4_callout1": "Això és una trucada"
+        },
+        "courseA_playLab_events42022": {
+          "courseA_playlab_events4_callout1": "Això és una trucada"
+        },
+        "courseA_playLab_events4_2018": {
+          "courseA_playlab_events4_callout1": "Això és una trucada"
+        },
+        "courseA_playLab_events4_2019": {
+          "courseA_playlab_events4_callout1": "Això és una trucada"
+        },
+        "courseA_playLab_events4_2020": {
+          "courseA_playlab_events4_callout1": "Això és una trucada"
+        },
+        "courseA_playLab_events4_2021": {
+          "courseA_playlab_events4_callout1": "Això és una trucada"
+        },
+        "courseA_playLab_events5": {
+          "courseA_playLab_events5_1": "Fes clic aquí per canviar la direcció de la fletxa de l'esdeveniment."
+        },
+        "courseA_playLab_events52022": {
+          "courseA_playLab_events5_1": "Fes clic aquí per canviar la direcció de la fletxa de l'esdeveniment."
+        },
+        "courseA_playLab_events5_2018": {
+          "courseA_playLab_events5_1": "Fes clic aquí per canviar la direcció de la fletxa de l'esdeveniment."
+        },
+        "courseA_playLab_events5_2019": {
+          "courseA_playLab_events5_1": "Fes clic aquí per canviar la direcció de la fletxa de l'esdeveniment."
+        },
+        "courseA_playLab_events5_2020": {
+          "courseA_playLab_events5_1": "Fes clic aquí per canviar la direcció de la fletxa de l'esdeveniment."
+        },
+        "courseA_playLab_events5_2021": {
+          "courseA_playLab_events5_1": "Fes clic aquí per canviar la direcció de la fletxa de l'esdeveniment."
+        },
+        "courseA_playLab_events6": {
+          "courseA_playLab_events6_1": "Amb això pots triar un so \"aleatori\", és a dir, que no sabràs què sentiràs fins que soni!"
+        },
+        "courseA_playLab_events62022": {
+          "courseA_playLab_events6_1": "Amb això pots triar un so \"aleatori\", és a dir, que no sabràs què sentiràs fins que soni!"
+        },
+        "courseA_playLab_events6_2018": {
+          "courseA_playLab_events6_1": "Amb això pots triar un so \"aleatori\", és a dir, que no sabràs què sentiràs fins que soni!"
+        },
+        "courseA_playLab_events6_2019": {
+          "courseA_playLab_events6_1": "Amb això pots triar un so \"aleatori\", és a dir, que no sabràs què sentiràs fins que soni!"
+        },
+        "courseA_playLab_events6_2020": {
+          "courseA_playLab_events6_1": "Amb això pots triar un so \"aleatori\", és a dir, que no sabràs què sentiràs fins que soni!"
+        },
+        "courseA_playLab_events6_2021": {
+          "courseA_playLab_events6_1": "Amb això pots triar un so \"aleatori\", és a dir, que no sabràs què sentiràs fins que soni!"
+        },
+        "courseB_Scrat_ramp12022": {
+          "grade2_CaringForNewPet_0_1": "Després de connectar tots els blocs, prem \"Executar\" per iniciar el programa."
+        },
+        "courseB_Scrat_ramp1_2018": {
+          "grade2_CaringForNewPet_0_1": "Després de connectar tots els blocs, prem \"Executar\" per iniciar el programa."
+        },
+        "courseB_Scrat_ramp1_2019": {
+          "grade2_CaringForNewPet_0_1": "Després de connectar tots els blocs, prem \"Executar\" per iniciar el programa."
+        },
+        "courseB_Scrat_ramp1_2020": {
+          "grade2_CaringForNewPet_0_1": "Després de connectar tots els blocs, prem \"Executar\" per iniciar el programa."
+        },
+        "courseB_Scrat_ramp3a2022": {
+          "courseC_maze_programming2_1": "Aquesta és la caixa d'eines. Aquí hi trobaràs blocs addicionals per completar els trencaclosques."
+        },
+        "courseB_Scrat_ramp3a_2019": {
+          "courseC_maze_programming2_1": "Aquesta és la caixa d'eines. Aquí hi trobaràs blocs addicionals per completar els trencaclosques."
+        },
+        "courseB_Scrat_ramp3a_2020": {
+          "courseC_maze_programming2_1": "Aquesta és la caixa d'eines. Aquí hi trobaràs blocs addicionals per completar els trencaclosques."
+        },
+        "courseB_artist_loops3": {
+          "courseB_artist_loops3_1": "Només tens un d'aquests blocs a la caixa d'eines. Com el vols fer servir?"
+        },
+        "courseB_artist_loops32022": {
+          "courseB_artist_loops3_1": "Només tens un d'aquests blocs a la caixa d'eines. Com el vols fer servir?"
+        },
+        "courseB_artist_loops3_2018": {
+          "courseB_artist_loops3_1": "Només tens un d'aquests blocs a la caixa d'eines. Com el vols fer servir?"
+        },
+        "courseB_artist_loops3_2019": {
+          "courseB_artist_loops3_1": "Només tens un d'aquests blocs a la caixa d'eines. Com el vols fer servir?"
+        },
+        "courseB_artist_loops3_2020": {
+          "courseB_artist_loops3_1": "Només tens un d'aquests blocs a la caixa d'eines. Com el vols fer servir?"
+        },
+        "courseB_collector_loops12022": {
+          "courseB_collector_loops1_1": "Fes servir aquest bloc per agafar el tresor."
+        },
+        "courseB_collector_loops1_2018": {
+          "courseB_collector_loops1_1": "Fes servir aquest bloc per agafar el tresor."
+        },
+        "courseB_collector_loops1_2019": {
+          "courseB_collector_loops1_1": "Fes servir aquest bloc per agafar el tresor."
+        },
+        "courseB_collector_loops1_2020": {
+          "courseB_collector_loops1_1": "Fes servir aquest bloc per agafar el tresor."
+        },
+        "courseB_collector_loops1_2021": {
+          "courseB_collector_loops1_1": "Fes servir aquest bloc per agafar el tresor."
+        },
+        "courseB_maze_seq1": {
+          "courseB_maze_seq1": "Fes clic en la bombeta quan necessitis una pista!"
+        },
+        "courseB_maze_seq12022": {
+          "courseB_maze_seq1": "Fes clic en la bombeta quan necessitis una pista!"
+        },
+        "courseB_maze_seq1_2018": {
+          "courseB_maze_seq1": "Fes clic en la bombeta quan necessitis una pista!"
+        },
+        "courseB_maze_seq1_2019": {
+          "courseB_maze_seq1": "Fes clic en la bombeta quan necessitis una pista!"
+        },
+        "courseB_maze_seq1_2020": {
+          "courseB_maze_seq1": "Fes clic en la bombeta quan necessitis una pista!"
+        },
+        "courseB_maze_seq1_2021": {
+          "courseB_maze_seq1": "Fes clic en la bombeta quan necessitis una pista!"
+        },
+        "courseB_playlab_events6": {
+          "courseB_playlab_events6_a": "Fes servir la fletxa desplegable verda per canviar les direccions."
+        },
+        "courseB_playlab_events62022": {
+          "courseB_playlab_events6_a": "Fes servir la fletxa desplegable verda per canviar les direccions."
+        },
+        "courseB_playlab_events6_2018": {
+          "courseB_playlab_events6_a": "Fes servir la fletxa desplegable verda per canviar les direccions."
+        },
+        "courseB_playlab_events6_2019": {
+          "courseB_playlab_events6_a": "Fes servir la fletxa desplegable verda per canviar les direccions."
+        },
+        "courseB_playlab_events6_2020": {
+          "courseB_playlab_events6_a": "Fes servir la fletxa desplegable verda per canviar les direccions."
+        },
+        "courseB_playlab_events6_2021": {
+          "courseB_playlab_events6_a": "Fes servir la fletxa desplegable verda per canviar les direccions."
+        },
+        "courseC_maze_programming1": {
+          "grade2_CaringForNewPet_0_1": "Després de connectar tots els blocs, prem \"Executar\" per iniciar el programa."
+        },
+        "courseC_maze_programming12022": {
+          "grade2_CaringForNewPet_0_1": "Després de connectar tots els blocs, prem \"Executar\" per iniciar el programa."
+        },
+        "courseC_maze_programming1_2018": {
+          "grade2_CaringForNewPet_0_1": "Després de connectar tots els blocs, prem \"Executar\" per iniciar el programa."
+        },
+        "courseC_maze_programming1_2019": {
+          "grade2_CaringForNewPet_0_1": "Després de connectar tots els blocs, prem \"Executar\" per iniciar el programa."
+        },
+        "courseC_maze_programming1_2020": {
+          "grade2_CaringForNewPet_0_1": "Després de connectar tots els blocs, prem \"Executar\" per iniciar el programa."
+        },
+        "courseC_maze_programming1_2021": {
+          "grade2_CaringForNewPet_0_1": "Després de connectar tots els blocs, prem \"Executar\" per iniciar el programa."
+        },
+        "courseC_maze_programming2": {
+          "courseC_maze_programming2_1": "Aquesta és la caixa d'eines. Aquí hi trobaràs blocs addicionals per completar els trencaclosques."
+        },
+        "courseC_maze_programming22022": {
+          "courseC_maze_programming2_1": "Aquesta és la caixa d'eines. Aquí hi trobaràs blocs addicionals per completar els trencaclosques."
+        },
+        "courseC_maze_programming2_2018": {
+          "courseC_maze_programming2_1": "Aquesta és la caixa d'eines. Aquí hi trobaràs blocs addicionals per completar els trencaclosques."
+        },
+        "courseC_maze_programming2_2019": {
+          "courseC_maze_programming2_1": "Aquesta és la caixa d'eines. Aquí hi trobaràs blocs addicionals per completar els trencaclosques."
+        },
+        "courseC_maze_programming2_2020": {
+          "courseC_maze_programming2_1": "Aquesta és la caixa d'eines. Aquí hi trobaràs blocs addicionals per completar els trencaclosques."
+        },
+        "courseC_maze_programming2_2021": {
+          "courseC_maze_programming2_1": "Aquesta és la caixa d'eines. Aquí hi trobaràs blocs addicionals per completar els trencaclosques."
+        },
+        "courseD_maze_ramp1": {
+          "grade2_CaringForNewPet_0_1": "Després de connectar tots els blocs, prem \"Executar\" per iniciar el programa."
+        },
+        "courseD_maze_ramp12022": {
+          "grade2_CaringForNewPet_0_1": "Després de connectar tots els blocs, prem \"Executar\" per iniciar el programa."
+        },
+        "courseD_maze_ramp1_2018": {
+          "grade2_CaringForNewPet_0_1": "Després de connectar tots els blocs, prem \"Executar\" per iniciar el programa."
+        },
+        "courseD_maze_ramp1_2019": {
+          "grade2_CaringForNewPet_0_1": "Després de connectar tots els blocs, prem \"Executar\" per iniciar el programa."
+        },
+        "courseD_maze_ramp1_2020": {
+          "grade2_CaringForNewPet_0_1": "Després de connectar tots els blocs, prem \"Executar\" per iniciar el programa."
+        },
+        "courseD_maze_ramp1_2021": {
+          "grade2_CaringForNewPet_0_1": "Després de connectar tots els blocs, prem \"Executar\" per iniciar el programa."
+        },
+        "courseD_maze_ramp2": {
+          "courseC_maze_programming2_1": "Aquesta és la caixa d'eines. Aquí hi trobaràs blocs addicionals per completar els trencaclosques."
+        },
+        "courseD_maze_ramp22022": {
+          "courseC_maze_programming2_1": "Aquesta és la caixa d'eines. Aquí hi trobaràs blocs addicionals per completar els trencaclosques."
+        },
+        "courseD_maze_ramp2_2018": {
+          "courseC_maze_programming2_1": "Aquesta és la caixa d'eines. Aquí hi trobaràs blocs addicionals per completar els trencaclosques."
+        },
+        "courseD_maze_ramp2_2019": {
+          "courseC_maze_programming2_1": "Aquesta és la caixa d'eines. Aquí hi trobaràs blocs addicionals per completar els trencaclosques."
+        },
+        "courseD_maze_ramp2_2020": {
+          "courseC_maze_programming2_1": "Aquesta és la caixa d'eines. Aquí hi trobaràs blocs addicionals per completar els trencaclosques."
+        },
+        "courseD_maze_ramp2_2021": {
+          "courseC_maze_programming2_1": "Aquesta és la caixa d'eines. Aquí hi trobaràs blocs addicionals per completar els trencaclosques."
+        },
+        "courseD_scrat_ramp1": {
+          "grade2_CaringForNewPet_0_1": "Després de connectar tots els blocs, prem \"Executar\" per iniciar el programa."
+        },
+        "courseD_scrat_ramp2": {
+          "courseC_maze_programming2_1": "Aquesta és la caixa d'eines. Aquí hi trobaràs blocs addicionals per completar els trencaclosques."
         }
       }
     }

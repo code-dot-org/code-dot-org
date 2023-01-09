@@ -97,7 +97,7 @@
   "madlibNoSprites": "Il tuo comando sta funzionando. Se fa ciò che ti aspetti, puoi iniziare ad aggiungere dei personaggi al tuo progetto. Qual è la tua storia o poesia?",
   "madlibPrintVariable": "Sembra che il chatbot stia rispondendo, ma non ha scritto ciò che hai digitato nel comando. Assicurati che la giusta etichetta **variabile** sia collegata al tuo blocco \"stampa\".",
   "madlibPrintWhenAnswered": "Proprio adesso stai soltanto stampando un testo alla volta. Assicurati che ci sia un blocco \"stampa\" in ogni blocco \"quando c'è una risposta\". \n <xml><block type=\"gamelab_whenPromptAnswered\"><value name=\"VAR\"><block type=\"variables_get\" can_disconnect_from_parent=\"false\"><title name=\"VAR\">cibo</title></block></value></block></xml>",
-  "madlibTitleVariable": "Sembra che tu abbia aggiunto una schermata del titolo al tuo programma, ma non include il testo del comando. ",
+  "madlibTitleVariable": "Sembra che tu abbia aggiunto una schermata del titolo al tuo programma, ma non include il testo del comando.",
   "moreSprites": "È necessario creare più personaggi.",
   "moveBothWays": "Il tuo personaggio deve andare avanti in una direzione e poi nell'altra.",
   "moveSpriteByDrag": "Il tuo codice sembra fantastico\" Per trascinare il tuo personaggio, clicca su di esso durante l'esecuzione del programma.",

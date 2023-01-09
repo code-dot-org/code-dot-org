@@ -34,9 +34,9 @@ Ziyaretçilerinize katılımınız ve Hour of Code etkinlikleri hakkında bilgi 
 
 ## Hour of Code etkinliğinden sonra ne yapmalı?
 
-Kodlama Saati teknolojinin nasıl çalıştığı ve yazılım uygulamalarının nasıl yapıldığını öğrenmeye giden yolculukta sadece bir ilk adımdır. Bu yolculuğa devam etmek için:
+Hour of Code teknolojinin nasıl çalıştığı ve yazılım uygulamalarının nasıl yapıldığını öğrenmeye giden yolculukta sadece bir ilk adımdır. Bu yolculuğa devam etmek için:
 
 - Öğrencileri, [çevrimiçi öğrenmeye]({{ urls/learn_beyond }}) devam etmeye teşvik edin.
-- [Learn more](https://code.org/administrators) about implementing a computer science pathway in your district.
+- [Daha cok ogren ](https://code.org/administrators) bölgenizde bir bilgisayar bilimi yolunun uygulanması hakkında
 
 {{ signup_button }}

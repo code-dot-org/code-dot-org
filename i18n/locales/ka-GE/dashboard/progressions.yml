@@ -23,6 +23,7 @@ ka:
       Introduction to Arrays: შესავალი მასივებში
       Keyboard Input: კლავიატურიდან შეყვანილი ინფორმაცია
       Lesson Extras: გაკვეთილების დამატებითი მასალები
+      Levels: დონეები
       Linking Screens: ეკრანების დაკავშირება
       Lists: სიები
       Making Music: მუსიკის შექმნა
@@ -38,9 +39,19 @@ ka:
       The Animation Tab: ანიმაციის ტაბი
       The Draw Loop: ხატვის ციკლი
       The Harvester: მოსავლის ამღები
+      Using the Repeat Block: გამეორების ბლოკის გამოყენება
       Variables: ცვლადები
       Velocity: სიჩქარე
       Video: ვიდეო
+      'Video:  Minecraft - The Agent': 'ვიდეო: Minecraft - აგენტი'
+      'Video: Minecraft - Congratulations': 'ვიდეო: Minecraft - გილოცავთ'
+      'Video: Minecraft - Functions': 'ვიდეო: Minecraft - ფუნქციები'
+      'Video: Minecraft - Repeat Loops': 'ვიდეო: Minecraft - განმეორებითი ციკლები'
+      'Video: Minecraft - The Agent': 'ვიდეო: Minecraft - აგენტი'
+      'Video: Minecraft: Voyage Aquatic Conditionals': 'ვიდეო: Minecraft: ვოიაჟი წყალზე. პირობები'
+      'Video: Minecraft: Voyage Aquatic Congratulations': 'ვიდეო: Minecraft: ვოიაჟი წყალზე. მილოცვა'
+      'Video: Minecraft: Voyage Aquatic Introduction': 'ვიდეო: Minecraft: ვოიაჟი წყალზე. შესავალი'
+      'Video: Minecraft: Voyage Aquatic Repeat Until': 'ვიდეო: Minecraft: ვოიაჟი წყალზე. გაიმეორე სანამ'
       Warm Up: მოთელვა
       While Loops with the Farmer: While ციკლები ფერმერში
       Wrap-up: შედეგები

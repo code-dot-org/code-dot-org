@@ -332,6 +332,7 @@ es-MX:
   teacher_mailer:
     new_teacher_subject: "¡Bienvenido a Code.org!"
     delete_teacher_subject: 'Aviso de Code.org: tu cuenta ha sido eliminada'
+    verified_teacher_subject: Verificación de docentes de Code.org - Éxito
   section:
     your_section:
       one: 'Tu sección:'
@@ -1482,6 +1483,12 @@ es-MX:
       forbidden: El usuario no puede actualizar el estado bloqueable del estudiante
   reset_predict_progress_button: Borrar respuesta
   pixelation:
+    raw_format: Formato sin procesar
+    readable_format: Formato legible
     save_image: Guardar imagen
     actual_size: Tamaño real
+    image_file_format_header: Formato de archivo de imagen
+    image_file_format_width: 'Ancho: 1 byte'
+    image_file_format_height: 'Altura: 1 byte'
+    image_file_format_bits_per_pixel: 'Bits por Pixel: 1 byte'
     binary: Binario

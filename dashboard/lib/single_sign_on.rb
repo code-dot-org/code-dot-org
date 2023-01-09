@@ -18,7 +18,8 @@ class SingleSignOn
   BOOLS = [:avatar_force_update, :admin, :moderator].freeze
 
   attr_accessor(*ACCESSORS)
-  attr_accessor :sso_secret, :sso_url
+
+  attr_writer(:sso_secret, :sso_url)
 
   def self.sso_secret
     raise "sso_secret not implemented on class, be sure to set it on instance"
@@ -26,6 +27,14 @@ class SingleSignOn
 
   def self.sso_url
     raise "sso_url not implemented on class, be sure to set it on instance"
+  end
+
+  def sso_secret
+    @sso_secret || self.class.sso_secret
+  end
+
+  def sso_url
+    @sso_url || self.class.sso_url
   end
 
   def self.parse(payload, sso_secret = nil)
@@ -58,20 +67,12 @@ class SingleSignOn
       # custom.
       #
       if k[0..6] == "custom."
-        field = k[7..-1]
+        field = k[7..]
         sso.custom_fields[field] = v
       end
     end
 
     sso
-  end
-
-  def sso_secret
-    @sso_secret || self.class.sso_secret
-  end
-
-  def sso_url
-    @sso_url || self.class.sso_url
   end
 
   def custom_fields

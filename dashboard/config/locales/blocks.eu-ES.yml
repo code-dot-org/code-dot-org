@@ -903,3 +903,8 @@ eu:
         text: mugitu aurrera
       craft_placeTorch:
         text: argi-zuzia kokatu
+      storylab_setForegroundEffect2:
+        options:
+          EFFECT:
+            '"hearts"': bihotzak
+            '"rain"': euria

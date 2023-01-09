@@ -437,3 +437,7 @@ gl:
         text: avance
       craft_placeTorch:
         text: coloque a antorcha
+      storylab_setForegroundEffect2:
+        options:
+          EFFECT:
+            '"hearts"': corazóns

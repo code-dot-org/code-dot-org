@@ -19,7 +19,7 @@
   "algebrab": "Ciencias de la Computación en Álgebra: curso B",
   "algebra": "Ciencias de la computación en álgebra",
   "applab-intro": "Introducción al Laboratorio de aplicaciones",
-  "aquatic": "Minecraft: Voyage Aquatic",
+  "aquatic": "Minecraft: Viaje Acuático",
   "artist": "Artista",
   "basketball": "Elije un equipo y crea un juego de basquetbol",
   "code-break-younger": "Code Break para los alumnos más jóvenes",
@@ -80,7 +80,7 @@
   "csd6-pilot": "Computación Física - Piloto (2022)",
   "csf-pilot": "csf-piloto",
   "peru": "perú",
-  "vpl-csd": "vpl-csd",
+  "vpl-csd": "Aprendizaje Profesional Virtual de CS Discoveries",
   "vpl-csp": "Aprendizaje profesional virtual de los principios de Ciencias de la Computación (CS)",
   "tesstesting": "probandotess",
   "drafting": "borrador",
@@ -370,7 +370,9 @@
   "csa-celebrity-lab": "AP CSA Laboratorio de Opinión del Consumidor",
   "csd1": "csd1",
   "csd4": "csd4",
-  "hello-world-space": "espacio-hola-mundo",
+  "hello-world-space": "Hola Mundo: Espacio",
   "physcomp-temp": "physcomp-temp",
-  "csa-collegeboard-labs": "AP CSA Laboratorio Magpie"
+  "hello-world-soccer": "Hola Mundo: Fútbol",
+  "csa-collegeboard-labs": "AP CSA Laboratorio Magpie",
+  "playground": "Zona de juegos"
 }

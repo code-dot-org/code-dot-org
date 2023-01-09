@@ -1,7 +1,7 @@
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 import PropTypes from 'prop-types';
 import React from 'react';
-import {Button} from 'react-bootstrap';
+import {Button, Checkbox} from 'react-bootstrap';
 import _ from 'lodash';
 import ValidationStep, {Status} from '@cdo/apps/lib/ui/ValidationStep';
 import SchoolAutocompleteDropdownWithLabel from '@cdo/apps/templates/census2017/SchoolAutocompleteDropdownWithLabel';
@@ -10,6 +10,7 @@ import SingleCheckbox from '../../code-studio/pd/form_components/SingleCheckbox'
 import color from '@cdo/apps/util/color';
 import {isEmail} from '@cdo/apps/util/formatValidation';
 import {STATES} from '@cdo/apps/geographyConstants';
+import DCDO from '@cdo/apps/dcdo';
 
 const VALIDATION_STATE_ERROR = 'error';
 
@@ -45,6 +46,20 @@ const CSTA_CONSENT_BODY = (
   </span>
 );
 
+const CSTA_PROFESSIONAL_ROLES = [
+  'K-12 Teacher',
+  'Pre-Service Teacher',
+  'School Administrator',
+  'District Administrator',
+  'State Department of Education',
+  'Higher Education Faculty',
+  'Non-Profit',
+  'Corporate',
+  'Other'
+];
+
+const CSTA_GRADE_BANDS = ['K-5', '6-8', '9-12'];
+
 export default class AmazonFutureEngineerEligibilityForm extends React.Component {
   static propTypes = {
     email: PropTypes.string,
@@ -62,12 +77,24 @@ export default class AmazonFutureEngineerEligibilityForm extends React.Component
       awsEducate: false,
       consentAFE: false,
       consentCSTA: false,
+      gradeBands: [false, false, false],
+      professionalRole: '',
       errors: {}
     };
   }
 
   handleChange = change => {
     this.setState(change);
+  };
+
+  handleRoleChange = change => {
+    this.setState({professionalRole: change.target.value});
+  };
+
+  handleMultiSelectGradeBands = index => {
+    let gradeBands = [...this.state.gradeBands];
+    gradeBands[index] = !gradeBands[index];
+    this.setState({gradeBands});
   };
 
   resetSchool = () =>
@@ -100,10 +127,25 @@ export default class AmazonFutureEngineerEligibilityForm extends React.Component
       consentCSTA = {consentCSTA: this.state.consentCSTA};
     }
 
+    let roleCSTA = {};
+    if (this.state.gradeBands || this.state.professionalRole) {
+      let gradeBands = '';
+      for (let i = 0; i < CSTA_GRADE_BANDS.length; i++) {
+        if (this.state.gradeBands[i]) {
+          gradeBands += CSTA_GRADE_BANDS[i] + ', ';
+        }
+      }
+      roleCSTA = {
+        gradesTeaching: gradeBands,
+        primaryProfessionalRole: this.state.professionalRole
+      };
+    }
+
     let submitData = {
       ...requiredFormData,
       ...shippingAddress,
-      ...consentCSTA
+      ...consentCSTA,
+      ...roleCSTA
     };
 
     firehoseClient.putRecord({
@@ -112,6 +154,7 @@ export default class AmazonFutureEngineerEligibilityForm extends React.Component
       data_json: JSON.stringify(submitData)
     });
 
+    this.props.updateFormData(submitData);
     this.props.updateFormData(submitData);
   };
 
@@ -260,8 +303,10 @@ export default class AmazonFutureEngineerEligibilityForm extends React.Component
           />
           {this.state.csta && (
             <div style={styles.consentIndent}>
-              Since you checked the box above, please consent to sharing your
-              information with the CSTA.
+              <p>
+                Since you checked the box above, please consent to sharing your
+                information with the CSTA.
+              </p>
               <SingleCheckbox
                 name="consentCSTA"
                 label={CSTA_CONSENT_BODY}
@@ -273,6 +318,47 @@ export default class AmazonFutureEngineerEligibilityForm extends React.Component
                     : null
                 }
               />
+              {!!DCDO.get('csta-form-extension', true) && (
+                <div>
+                  <p>Tell CSTA a little bit about yourself:</p>
+                  <label
+                    style={styles.descriptiveText}
+                    htmlFor="professionalRoleSelect"
+                  >
+                    What is your current role?
+                  </label>
+                  <select
+                    style={styles.dropdownPadding}
+                    id="professionalRoleSelect"
+                    name="professionalRole"
+                    value={this.state.professionalRole}
+                    onChange={this.handleRoleChange}
+                  >
+                    {CSTA_PROFESSIONAL_ROLES.map(role => (
+                      <option value={role} key={role}>
+                        {role}
+                      </option>
+                    ))}
+                  </select>
+                  <fieldset className="gradebands-group">
+                    <legend style={styles.descriptiveText}>
+                      What grade bands do you teach?
+                    </legend>
+                    {CSTA_GRADE_BANDS.map((grade, index) => (
+                      <Checkbox
+                        style={styles.checkboxItem}
+                        key={index}
+                        checked={this.state.gradeBands[index]}
+                        onChange={() => this.handleMultiSelectGradeBands(index)}
+                      >
+                        <label style={styles.checkboxLabel} htmlFor={grade}>
+                          {grade}
+                        </label>
+                      </Checkbox>
+                    ))}
+                  </fieldset>
+                </div>
+              )}
             </div>
           )}
           <SingleCheckbox
@@ -325,6 +411,25 @@ const styles = {
   button: {
     backgroundColor: color.orange,
     color: color.white
+  },
+  dropdownPadding: {
+    marginTop: 10,
+    marginBottom: 10
+  },
+  descriptiveText: {
+    display: 'block',
+    fontFamily: '"Gotham 4r", sans-serif',
+    fontWeight: 'bold',
+    fontSize: 14,
+    border: 'none',
+    color: color.dimgray,
+    margin: 0
+  },
+  checkboxItem: {
+    margin: 5
+  },
+  checkboxLabel: {
+    paddingLeft: 5
   }
 };
 

@@ -1,4 +1,11 @@
 {
+  "selectDataset": "Kullanmak istediğiniz veri kümesini seçin. ",
+  "uploadedDataset": "Veri kümesini yüklediniz. ",
+  "selectedDataset": "Veri kümesini seçtiniz. ",
+  "dataDisplayLabel": "Tahmin etmek için bir sütun seçin.",
+  "dataDisplayFeatures": "Tahminin yapılmasına yardımcı olması için girdi olarak bir veya daha fazla sütun seçin.",
+  "selectedFeatureNumerical": "Az önce sayısal bir özellik seçtiniz.",
+  "selectedFeatureCategorical": "Az önce kategorik bir özellik seçtiniz.",
   "datasets": {
     "medical_priority": {
       "fields": {
@@ -32,7 +39,7 @@
           "id": "mısır"
         },
         "beans": {
-          "id": "fasülye"
+          "id": "fasulye"
         },
         "lime": {
           "id": "Misket limonu"
@@ -64,7 +71,7 @@
           "id": "renk"
         },
         "music": {
-          "id": "Müzik"
+          "id": "müzik"
         },
         "food": {
           "id": "yiyecek"
@@ -123,7 +130,7 @@
           "id": "meyve"
         },
         "beans": {
-          "id": "fasülye"
+          "id": "fasulye"
         },
         "cheese": {
           "id": "peynir\n"
@@ -159,7 +166,7 @@
           "id": "tavuk"
         },
         "lamb": {
-          "id": "Kuzu"
+          "id": "kuzu"
         },
         "onion": {
           "id": "soğan"
@@ -224,14 +231,14 @@
           "id": "Timsah"
         },
         "trees": {
-          "id": "ağaç"
+          "id": "ağaçlar "
         }
       }
     },
     "abalone": {
       "fields": {
         "Length": {
-          "id": "Boy"
+          "id": "Uzunluk"
         },
         "Height": {
           "id": "Yükseklik"

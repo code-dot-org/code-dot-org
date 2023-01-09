@@ -515,7 +515,7 @@ sk:
         C1_moveitmoveit_unplugged: Pohni sa, pohni sa
         C1_bigevent_unplugged: Veľká udalosť
         C1_getting_loopy: Cykly sa zacykľujú
-        C1_pair_programming: Programovanie v páre
+        C1_pair_programming: Párové programovanie
         C1_maze_intro_sequencing: Úvod do bludiska
         C1_maze_debugging: 'Bludisko: ladenie'
         C1_bee_level_intro: Úlohy s včelami - Úvod
@@ -742,7 +742,7 @@ sk:
         teaching_cs_pair_programming: 'Vyučujeme Základy informatiky: Párové programovanie'
         teaching_problem_solving: 'Vyučujeme Základy informatiky: Riešenie problémov'
         csd_applab_designmode: 'Objavujeme informatiku : App Lab - dizajnový mód'
-        csd_pair_programming: Programovanie v páre
+        csd_pair_programming: Párové programovanie
         csd_gamelab_functions: Volanie a definovanie funkcií
         csd_applab_parameters: Funkcie s parametrami
         csd_applab_loops: Cykly v App Labe

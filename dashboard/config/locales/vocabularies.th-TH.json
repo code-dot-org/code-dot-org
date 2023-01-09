@@ -258,6 +258,10 @@
           "word": "เหตุการณ์",
           "definition": "การกระทำที่เป็นสาเหตุให้บางสิ่งบางอย่างเกิดขึ้น"
         },
+        "models_and_simulations/outbreak/unversioned": {
+          "word": "",
+          "definition": ""
+        },
         "code/sports/unversioned": {
           "word": "โค้ด",
           "definition": "(คำกริยา) เขียนโค้ดหรือเขียนคำสั่งให้กับคอมพิวเตอร์"

@@ -487,6 +487,7 @@ pt-BR:
   homepage_banner_40k_teachers_link: Saiba mais
   homepage_slot_text_title_hoc: Hora do Código
   homepage_slot_text_blurb_hoc: Qualquer pessoa pode aprender. Comece hoje mesmo
+  homepage_slot_text_blurb_hoc_2022: Explore, jogue, crie!
   homepage_slot_text_link_hoc: Faça uma Hora do Código
   homepage_slot_text_link_about_hoc: Sobre a Hora do Código
   homepage_slot_text_link_host: Organize um evento da Hora do Código
@@ -512,6 +513,7 @@ pt-BR:
   homepage_slot_text_link_buy: Participe
   homepage_slot_text_link_donate: Fazer uma doação
   homepage_slot_text_link_shop: Camisetas, bonés e muito mais
+  homepage_slot_text_link_thebadguys: Codifique com Os Vilões
   homepage_slot_text_link_administrators: Leve a ciência da computação para sua escola
   homepage_gallery_header: Mais de %{project_count} milhão(ões) de projetos da Code.org
     criados
@@ -525,6 +527,8 @@ pt-BR:
   homepage_higher_power_body: Cria com Festa dançante, ganha a oportunidade de ver
     a banda ao vivo.
   homepage_csa_subhead: Uma nova abordagem para
+  homepage_csa_body: Capacite os alunos com projetos criativos conectados ao mundo
+    real em nosso currículo orientado pela equidade.
   contact_form_topic_student: Sou um estudante
   contact_form_topic_parent: Sou um pai
   contact_form_topic_teacher: Sou um professor/educador
@@ -710,6 +714,7 @@ pt-BR:
   video_title_marco_belinelli: Hora do Código com Marco Belinelli
   video_title_chris_bosh: Chris Bosh fala sobre Ciência da Computação
   video_title_my_name_is_aracely: Meu Nome é Aracely
+  video_title_change_face_of_cs: Mude a face da ciência da computação
   video_1min: 1 min
   video_2min: 2 min
   video_3min: 3 min
@@ -1379,6 +1384,7 @@ pt-BR:
   express-2020_name: Curso Expresso (2019)
   pre-express-2020_name: Curso Expresso de Pré-Leitor (2020)
   pre-express-2021_name: Curso Expresso de Pré-Leitor (2021)
+  pre-express-2022_name: Curso Expresso de Pré-Leitor (2022)
   csd2_name: 'Unidade 2: Desenvolvimento para Web'
   csd3_name: 'Unidade 3: Jogos e Animação'
   accelerated_name: Curso acelerado
@@ -2308,6 +2314,7 @@ pt-BR:
   header_educate_beyond: Além do Code.org
   header_educate_inspire: Inspire um Estudante
   header_educate_community: Comunidade On-Line
+  header_educate_requirements: Requisitos Técnicos
   header_educate_tools: Vídeos e ferramentas
   header_about_us: Quem Somos
   header_about_leadership: Liderança
@@ -2429,6 +2436,14 @@ pt-BR:
   hoc_overview_dance_2019_subtitle: Codifique uma Festa Dançante para compartilhar
     com seus amigos. Com participações de Katy Perry, Shawn Mendes, Panic!, At The
     Disco, Lil Nas X, Jonas Brothers, Nicki Minaj, e mais 34 convidados!
+  hoc_overview_dance_2022_subtitle: Programe uma festa dançante para compartilhar
+    com seus amigos. Com Beyoncé, Harry Styles, Lizzo, Lil Nas X, Selena Gomez, músicas
+    de “Encanto” da Disney e muito mais!
+  hoc_overview_hello_world_2022_subtitle: Escolha entre seis temas divertidos (incluindo
+    espaço e futebol!) para codificar caracteres interativos em um mundo que você
+    cria.
+  hoc_overview_hello_world_2022_alt_text: Personagens animados de astronautas e animais
+    flutuando em torno de uma ilustração da terra
   hoc_overview_title: Atividades da Hora do Código do Code.org
   hoc_overview_subtitle: A <a href="https://hourofcode.com">Hora do Código</a> é um
     movimento global que atinge dezenas de milhões de estudantes em mais de 180 países.
@@ -2504,10 +2519,19 @@ pt-BR:
     workshop grátis de Hora do Código. Para participantes de todos os níveis de habilidade,
     com idades a partir de seis anos.
   hoc2018_mc_educators_box3_button: Encontre uma oficina
+  hoc2022_mc_educators_box3_desc_markdown: 'Utilize este [curso gratuito](%{free_course_link})
+    ou inscreva sua turma inteira para participar de um workshop ao vivo da Hora do
+    Código com um professor convidado. Oferecido várias vezes durante o CSEW, de 6
+    a 11 de dezembro. '
+  hoc2022_mc_educators_box3_button: Increva-se agora
   hoc2018_mc_educators_box4_title: Acessar mais recursos de ciência da computação
   hoc2018_mc_educators_box4_desc: Crie mudanças em sua comunidade com habilidades
     digitais e recursos de educação em ciência da computação do Microsoft.
   hoc2018_mc_educators_box4_button: Conheça os recursos
+  hoc2022_mc_educators_box4_desc: Inspire a paixão por STEM em alunos do ensino fundamental
+    e médio com 200 horas de currículo de ciência da computação, do bloco ao python,
+    com suporte para desenvolvimento profissional.
+  hoc2022_mc_educators_box4_button: Continue aprendendo
   hoc2018_mc_watch_videos: Antes de começar, assista a um desses vídeos inspiradores
   hoc2018_mc_videos_more: Mais <a href='%{inspiring_videos_playlist}'>vídeos inspiradores</a>
     com modelos e celebridades
@@ -2654,10 +2678,24 @@ pt-BR:
   hoc2019_dance_previous_versions: |-
     Procurando uma versão anterior de Festa Dançante?
     Clique aqui para começar [Parte 1](%{dance_2018_link}) e [Parte 2](%{dance_extras_2018_link}) de 2018.
+  homepage_slot_text_title_at_home: Aprenda em casa
+  homepage_slot_text_blurb_at_home: Esses recursos tornam isso mais fácil
   homepage_slot_text_link_code_break: Faça uma quebra de código
   homepage_slot_text_link_do_hoc: Organize um evento da Hora do Código
+  homepage_slot_text_link_express_course: Curso Expresso
   page_not_available_title: Não Disponível
+  page_not_available_description: Desculpe, a página que você solicitou não está mais
+    disponível neste endereço. Se você ainda precisar de acesso, envie um e-mail para
+    [support@code.org](%{support_email_link}).
   page_not_available_button: Volte para a página inicial
+  hoc2020_mc_available_code_org: Disponível em Code.org
+  hoc2020_mc_available_mee: 'Disponível em Minecraft: Education Edition'
+  hoc2020_mc_mee_title: O conto de duas aldeias do Minecraft
+  hoc2020_mc_mee_description: 'O novo tutorial da Hora do Código do Minecraft já está
+    disponível no Minecraft: Education Edition para Windows, Mac, Chromebook e iPad.
+    Aprenda as noções básicas de programação e explore a diversidade e a inclusão
+    com seus alunos! Acesse recursos gratuitos, incluindo um plano de aula, vídeos,
+    currículo de ciência da computação, aulas de equidade e treinamentos de professores.'
   hoc2021_mc_mee_title: Minecraft TimeCraft
   hoc2021_mc_mee_description: 'Volte no tempo e aprenda a codificar! O novo tutorial
     de Hora do Código Minecraft já está disponível em Minecraft: Edição Educacional
@@ -2669,9 +2707,19 @@ pt-BR:
   hoc2021_mc_mee_ai_title: IA para sempre
   hoc2021_mc_mee_ai_description: 'Explore a IA com os seus alunos e aprenda a codificar
     em Minecraft: Edição Educacional.'
+  hoc2022_mc_mee_title: Status de escape do Minecraft
+  hoc2022_mc_mee_description: 'Escape da mansão misteriosa até o por do sol, e ganhe
+    um milhão de esmeraldas! O novo tutorial do Hour of Code para Minecraft está disponível
+    agora no Minecraft:Edição Educativa para Windows, Mac, Chromebook, Ipad e dispositivos
+    móveis. Comece já, com recursos, treinamento e vídeos educativos gratuitos. '
+  hoc2022_mc_mee_timecraft_description: 'Viaje no tempo para salvar o futuro nesta
+    aula de programação gratuita no Minecraft: Edição Edicativa.'
   footer_powered_by_aws: Powered by Amazon Web Services
+  footer_built_on_github: Construído no GitHub da Microsoft
   codebytes_skinny_banner_english_only: Somente inglês
+  codebytes_skinny_banner_learn: Saiba mais em [code.org/codebytes](%{code_bytes_url}).
   footer_privacy_policy: Política de Privacidade
+  footer_privacy_policy_updated: Política de Privacidade Atualizada
   footer_about: Sobre
   footer_partners: Parceiros
   footer_donate: Faça uma doação
@@ -2679,22 +2727,73 @@ pt-BR:
   footer_terms: Termos
   ai_for_oceans: IA para oceanos
   ai_for_oceans_lesson_plan: plano de aula
+  ai_for_oceans_tile_description: Ajude a IA a limpar os oceanos treinando-a para
+    detectar lixo! Saiba mais sobre dados de treinamento e preconceitos e como a IA
+    pode resolver os problemas mundiais. Visualizar
+  how_ai_works: Como funciona a IA
+  how_ai_works_tile_description: Saiba mais sobre como a IA funciona e por que ela
+    é importante com esta série de vídeos curtos. Com Satya Nadella, CEO da Microsoft,
+    e um elenco diversificado de especialistas.
+  watch_the_videos: Ver vídeos
   ai_and_ethics: IA e Ética
+  ai_and_ethics_tile_description: Os alunos refletem sobre as implicações éticas da
+    IA e, em seguida, trabalham juntos para criar um recurso de “Código de Ética da
+    IA” para criadores e legisladores de IA em todos os lugares.
   view_lesson_plan: Exibir plano de aula
   ai_in_partnership_with: Em parceria com
   ai_microsoft_thanks: Nós agradecemos à Microsoft por apoiar nossa visão e missão
     para que toda criança tenha a oportunidade de aprender ciência da computação e
     as habilidades necessárias para ter sucesso no século XXI.
+  ai_ethics_panel_header: Painel de discussão sobre a ética da IA
+  ai_ethics_panel_description_1: Aprofunde-se com alguns de nossos especialistas favoritos
+    em IA! Este painel de discussão aborda questões importantes, como o viés algorítmico
+    e o futuro do trabalho. Emparelhe-o com o nosso
+  ai_ethics_lesson_plan: Plano de aula de IA e ética
+  ai_ethics_panel_description_2: para uma ótima introdução à ética da inteligência
+    artificial!
+  cs_for_good: CS para o bem
+  cs_for_good_tile_description: Recursos para inspirar os estudantes a pensar profundamente
+    sobre o papel que a ciência da computação pode desempenhar na criação de um mundo
+    mais justo e sustentável.
   view_resources: Ver recursos
+  imagine_cup_junior_tile_description: Esse desafio global de IA for Good apresenta
+    aos alunos as iniciativas AI for Good da Microsoft, capacitando-os a resolver
+    um problema no mundo com o poder da IA.
   ai_activity: Atividade
   ai_description: Descrição
+  ai_seeing_ai: Vendo a IA
+  ai_seeing_ai_description: Um aplicativo gratuito que narra o mundo ao seu redor
+    em vários idiomas.
+  ai_quick_draw: Rápido, desenhe!
+  ai_quick_draw_description: Uma rede neural pode aprender a reconhecer rabiscos?
+  ai_teachable_machine_description: Treine um computador para reconhecer suas próprias
+    imagens, sons e poses.
+  ai_google_description: Comece a explorar o aprendizado de máquina por meio de imagens,
+    desenhos, linguagem, música e muito mais.
+  ai_zooniverse_description: Ajude a proteger a ameaçada Zebra da Montanha do Cabo
+    identificando os diferentes animais nas imagens.
+  ai_minecraft_description: Acesse recursos grátis incluindo um plano de aula, vídeos,
+    currículo de ciência da computação e treinamentos para professores.
+  ai_machine_learning_for_kids_description: Treine um modelo de aprendizado de máquina
+    com texto, números ou imagens e use-o para criar jogos no Scratch.
   ai_ibm_machine_learning_for_kids: 'IBM: Aprendizado de Máquinas para crianças'
+  ai_ecs_description: Uma nova unidade curricular alternativa para o currículo Exploring
+    Computer Science (ECS).
+  ai_aiedu_intro_description: A introdução à IA é um currículo gratuito, inovador
+    e culturalmente relevante, no qual os alunos desenvolvem conhecimento conceitual
+    sobre o que é a IA e como ela é usada no mundo real.
   ai_elements: Elementos de IA
+  ai_elements_description: Uma série de cursos on-line gratuitos criados pela Reaktor
+    e pela Universidade de Helsinque.
+  ai_cognimates_description: Uma plataforma educacional de IA para criar jogos, programar
+    robôs e treinar.
   ai_try_activity: Experimentar uma atividade
   outbreak_tile_title: Epidemia
   outbreak_tile_subtitle: Um vírus infectou a Cidade dos Monstros! Codifique um simulador
     de surtos e faça previsões sobre o que acontecerá com os vizinhos da Cidade dos
     Monstros.
+  outbreak_tile_alt: Uma simulação de como um vírus se espalha por um grupo de monstros
+    roxos.
   footer_cookie_notice: Aviso sobre Cookies
   hoc2022_banner_title: Explore, jogue, crie!
   hoc2022_banner_description: Explore o universo, marque um gol, elabore um movimento
@@ -2703,12 +2802,21 @@ pt-BR:
 
 '
   hoc2022_cta_secondary: Experimente mais atividades
+  hoc2022_landing_page_explore_title: Explorar
   hoc2022_landing_page_explore_description: Abra as portas para novos mundos com a
     ciência da computação!
-  hoc2022_landing_page_play_title: Jogue
+  hoc2022_landing_page_play_title: Jogar
   hoc2022_landing_page_play_description: Controle o campo e a pontuação!
   hoc2022_landing_page_create_title: Criar
   hoc2022_landing_page_create_description: Faça algo estranho e maravilhoso!
+  hoc2022_landing_page_banner_alt_left: Uma dança alienígena nas proximidades de Saturno,
+    em pleno espaço
+  hoc2022_landing_page_banner_alt_right: Um robô dando dribles com uma bola de futebol
+    no espaço, diante de um foguete sendo lançado
   try_it_yourself: Tente você mesmo!
   try_an_activity: Experimentar uma atividade
   see_more_activities: Ver todas as atividades
+  hoc2022_nasa_banner_heading: Junte-se à NASA para uma Hora de Código especial sobre
+    a ciência da computação no espaço!
+  hoc2022_nasa_banner_description: Premiering 10AM ET, 5 de dezembro no canal da NASA
+    STEM no YouTube.

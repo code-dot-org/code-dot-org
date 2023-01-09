@@ -60,8 +60,6 @@ class Api::V1::Pd::FitCohortViewSerializer < ActiveModel::Serializer
   def role
     if object.is_a? Pd::Application::TeacherApplication
       'Teacher'
-    elsif object.is_a? Pd::Application::Facilitator1819Application
-      'New Facilitator'
     elsif object.user.try {|user| user.regional_partners.any?}
       'Regional Partner'
     else

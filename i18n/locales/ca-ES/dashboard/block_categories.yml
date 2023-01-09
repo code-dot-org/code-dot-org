@@ -2,9 +2,11 @@ ca:
   data:
     block_categories:
       Actions: Accions
+      Category: Categoria
       Color: Color
       Conditionals: Condicionals
       Dancers: Dansaires
+      Effects: Efectes
       Events: Esdeveniments
       Functions: Funcions
       'Functions ': 'Funcions '
@@ -12,6 +14,7 @@ ca:
       Logic: Lògic
       Loops: Bucles
       Math: Matemàtiques
-      Text: text
+      Properties: Propietats
+      Text: Text
       Variables: Variables
       'Variables ': 'Variables '

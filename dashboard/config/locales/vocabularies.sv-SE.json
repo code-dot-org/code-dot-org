@@ -199,6 +199,10 @@
           "word": "Händelse",
           "definition": "En handling som gör att något händer."
         },
+        "models_and_simulations/outbreak/unversioned": {
+          "word": "",
+          "definition": ""
+        },
         "code/sports/unversioned": {
           "word": "Kod"
         },
@@ -310,6 +314,9 @@
         },
         "variable/coursef/2022": {
           "word": "Variabel"
+        },
+        "input/coursef/2022": {
+          "word": "Inmatning"
         },
         "dns/coursef/2022": {
           "word": "DNS"
@@ -516,6 +523,9 @@
         "computer/csd/2022": {
           "word": "Dator"
         },
+        "input/csd/2022": {
+          "word": "Inmatning"
+        },
         "processing/csd/2022": {
           "word": "Bearbetar"
         },
@@ -622,6 +632,9 @@
         },
         "variable/coursef/2021": {
           "word": "Variabel"
+        },
+        "input/coursef/2021": {
+          "word": "Inmatning"
         },
         "loop/coursef/2021": {
           "word": "Loop"
@@ -927,6 +940,9 @@
         },
         "computer/csd/2021": {
           "word": "Dator"
+        },
+        "input/csd/2021": {
+          "word": "Inmatning"
         },
         "processing/csd/2021": {
           "word": "Bearbetar"

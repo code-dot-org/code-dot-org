@@ -271,6 +271,7 @@ fil:
   teacher_mailer:
     new_teacher_subject: 'Maligayang pagdating sa Code.org!'
     delete_teacher_subject: 'Abiso sa Code.org: Ang iyong account ay tinanggal'
+    verified_teacher_subject: 'Code.org Pagpapatunay Ng Guro- Matagumpay'
   section:
     your_section:
       one: 'Iyong seksyon:'
@@ -1046,6 +1047,8 @@ fil:
         not_listed: 'Hindi nakalista ang gustong termino'
         none: 'Mas mabuti na hindi sagutin'
       school_country:
+        barbados: 'Barbados'
+        belize: 'Belize'
         canada: 'Canada'
         chile: 'Chile'
         colombia: 'Colombia'
@@ -1160,4 +1163,21 @@ fil:
       forbidden: "Hindi ma-update ng user ang naka-lock na estado ng mag-aaral"
   reset_predict_progress_button: "Tanggalin ang Sagot"
   pixelation:
+    raw_format: "Format Ng Raw"
+    raw_format_alt: "Tingnan ang mga bits nang walang anumang format"
+    readable_format: "Nababasa Na Format"
+    readable_format_alt: "Tingnan ang mga bits na naghiwalay sa pixel"
+    save_image: "I-save ang Imahe"
+    actual_size: "Aktwal Na Laki"
+    image_file_format_header: "Format Ng File Ng Imahe"
+    image_file_format_width: "Lapad: 1 byte"
+    image_file_format_height: "Taas: 1 byte"
+    image_file_format_bits_per_pixel: "Mga Bits sa bawat Pixel: 1 byte"
+    image_file_format_data_a: "mga piraso ng data ng pixel"
+    image_file_format_data_b: "N = Lapad * Taas * Bits sa bawat Pixel"
+    image_width: "Lapad Ng Imahe"
+    image_height: "Taas Ng Imahe"
+    bits_per_pixel_header: "Mga Piraso sa bawat Pixel"
     binary: "Binary"
+    hexadecimal: "Hexadecimal"
+    pixel_format_header: "Format Ng Pixel"

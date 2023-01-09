@@ -1249,7 +1249,8 @@ ca-ES:
         - {}
         - {}
         questions:
-        - {}
+        - text: Llegeix el codi que hi ha a continuació amb molta atenció. Què passarà
+            quan facis clic a "Executar"?
       courseC_multi_maze_programming8_predict1_2018:
         answers:
         - {}
@@ -1257,7 +1258,8 @@ ca-ES:
         - {}
         - {}
         questions:
-        - {}
+        - text: Llegeix el codi que hi ha a continuació amb molta atenció. Què passarà
+            quan facis clic a "Executar"?
       courseC_multi_maze_programming8_predict1_2018_2019:
         answers:
         - {}
@@ -1265,7 +1267,8 @@ ca-ES:
         - {}
         - {}
         questions:
-        - {}
+        - text: Llegeix el codi que hi ha a continuació amb molta atenció. Què passarà
+            quan facis clic a "Executar"?
       courseC_multi_maze_programming8_predict1_2018_2019_2020:
         answers:
         - {}
@@ -1273,7 +1276,8 @@ ca-ES:
         - {}
         - {}
         questions:
-        - {}
+        - text: Llegeix el codi que hi ha a continuació amb molta atenció. Què passarà
+            quan facis clic a "Executar"?
       courseC_multi_starWars_predict1:
         answers:
         - {}
@@ -1340,65 +1344,65 @@ ca-ES:
         - {}
       courseD_multi_artist_binary8_predict1:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: A
+        - text: B
+        - text: C
+        - text: D
         questions:
         - {}
       courseD_multi_artist_binary8_predict1_2018:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: A
+        - text: B
+        - text: C
+        - text: D
         questions:
         - {}
       courseD_multi_artist_binary8_predict1_2018_2019:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: A
+        - text: B
+        - text: C
+        - text: D
         questions:
         - {}
       courseD_multi_artist_binary8_predict1_2018_2019_2020:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: A
+        - text: B
+        - text: C
+        - text: D
         questions:
         - {}
       courseD_multi_artist_nestedLoops9_predict1:
         answers:
-        - {}
-        - {}
-        - {}
+        - text: A
+        - text: B
+        - text: C
         - {}
         questions:
         - {}
       courseD_multi_artist_nestedLoops9_predict1_2018:
         answers:
-        - {}
-        - {}
-        - {}
+        - text: A
+        - text: B
+        - text: C
         - {}
         questions:
         - {}
       courseD_multi_artist_nestedLoops9_predict1_2018_2019:
         answers:
-        - {}
-        - {}
-        - {}
+        - text: A
+        - text: B
+        - text: C
         - {}
         questions:
         - {}
       courseD_multi_artist_nestedLoops9_predict1_2018_2019_2020:
         answers:
-        - {}
-        - {}
-        - {}
+        - text: A
+        - text: B
+        - text: C
         - {}
         questions:
         - {}
@@ -2075,7 +2079,8 @@ ca-ES:
         - {}
         - {}
         questions:
-        - {}
+        - text: Llegeix el codi que hi ha a continuació amb molta atenció. Què passarà
+            quan facis clic a "Executar"?
       courseC_multi_starWars_predict1_2021:
         answers:
         - {}
@@ -2171,9 +2176,9 @@ ca-ES:
         - {}
       courseD_multi_artist_nestedLoops9_predict1_2021:
         answers:
-        - {}
-        - {}
-        - {}
+        - text: A
+        - text: B
+        - text: C
         - {}
         questions:
         - {}
@@ -4203,7 +4208,7 @@ ca-ES:
         - text: 'No'
         - {}
         questions:
-        - {}
+        - text: Ciberseguretat
       csd-post-survey-2018-topic-databases:
         answers:
         - text: Sí
@@ -9138,7 +9143,8 @@ ca-ES:
         - {}
         - {}
         questions:
-        - {}
+        - text: Llegeix el codi que hi ha a continuació amb molta atenció. Què passarà
+            quan facis clic a "Executar"?
       courseC_multi_starWars_predict12022:
         answers:
         - {}
@@ -9157,9 +9163,9 @@ ca-ES:
         - {}
       courseD_multi_artist_nestedLoops9_predict12022:
         answers:
-        - {}
-        - {}
-        - {}
+        - text: A
+        - text: B
+        - text: C
         - {}
         questions:
         - {}
@@ -9356,3 +9362,19 @@ ca-ES:
         - {}
         questions:
         - {}
+      CSD U3 drawing practice choice_2021:
+        display_name: Pràctica
+      CSD U3 drawing practice choice_2022:
+        display_name: Pràctica
+      CSD web draw loop practice choice_2021:
+        display_name: Pràctica
+      CSD web draw loop practice choice_2022:
+        display_name: Pràctica
+      CSD web movement practice choice_2021:
+        display_name: Pràctica
+      CSD web movement practice choice_2022:
+        display_name: Pràctica
+      CSD web text practice choice_2021:
+        display_name: Pràctica
+      CSD web text practice choice_2022:
+        display_name: Pràctica
