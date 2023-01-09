@@ -86,7 +86,11 @@ export default class MusicBlocklyWorkspace {
         };
       }
 
-      if ([BlockTypes.TRIGGERED_AT, BlockTypes.TRIGGERED_AT_SIMPLE].includes) {
+      if (
+        [BlockTypes.TRIGGERED_AT, BlockTypes.TRIGGERED_AT_SIMPLE].includes(
+          block.type
+        )
+      ) {
         const id = block.getFieldValue('trigger');
         events[this.triggerIdToEvent(id)] = {
           code: Blockly.JavaScript.blockToCode(block)
