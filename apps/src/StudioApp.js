@@ -93,7 +93,7 @@ var copyrightStrings;
 /**
  * The minimum width of a playable whole blockly game.
  */
-const MIN_WIDTH = 1600;
+const MIN_WIDTH = 1400;
 const DEFAULT_MOBILE_NO_PADDING_SHARE_WIDTH = 400;
 export const MAX_VISUALIZATION_WIDTH = 400;
 export const MIN_VISUALIZATION_WIDTH = 200;
