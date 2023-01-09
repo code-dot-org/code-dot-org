@@ -37,6 +37,7 @@ MONITORING_GROUPS = {
   'csc' => ['CSC Curriculum'],
   'csf' => ['CSF Curriculum'],
   'cspalooza' => ['CSP Curriculum'],
+  'edpop' => ['EdPop Alicia', 'EdPop Dana', 'EdPop Danielle', 'EdPop Desiree', 'EdPop Kristyn', 'EdPop Tawny'],
   'facilitator-things' => ['Facilitators', 'PNP Andrea'],
   'hour-of-code' => ['Hour of Code'],
   'infrastructure' => ['Infrastructure'],
@@ -44,7 +45,7 @@ MONITORING_GROUPS = {
   'marketing' => ['Media'],
   'platform-team' => ['Platform Team'],
   'programsnpartners_theluau' => ['Programs (PNP) Team'],
-  'reaching-out' => ['Adoption and Outreach Team', 'Ed Programs', 'EdPop Alicia', 'EdPop Dana', 'EdPop Danielle', 'EdPop Desiree', 'EdPop Kristyn', 'EdPop Tawny', 'PLC Teachers'],
+  'reaching-out' => ['Adoption and Outreach Team', 'Ed Programs', 'PLC Teachers'],
   'student-learning' => ['Student Learning'],
   'teacher-tools' => ['Teacher Tools']
 }
