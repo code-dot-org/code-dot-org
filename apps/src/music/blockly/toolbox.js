@@ -1,4 +1,4 @@
-import moduleStyles from './toolbox.module.scss';
+import moduleStyles from '../views/toolbox.module.scss';
 import {BlockTypes} from './blockTypes';
 import AppConfig from '../appConfig';
 
