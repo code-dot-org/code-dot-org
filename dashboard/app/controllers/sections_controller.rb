@@ -2,6 +2,9 @@ class SectionsController < ApplicationController
   include UsersHelper
   before_action :load_section_by_code, only: [:log_in, :show]
 
+  def new
+  end
+
   def show
     @secret_pictures = SecretPicture.all.shuffle
   end

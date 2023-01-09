@@ -737,6 +737,7 @@ describe('entry tests', () => {
       './src/sites/studio/pages/reference_guides/edit_all.js',
     'programming_expressions/index':
       './src/sites/studio/pages/programming_expressions/index.js',
+    'sections/new': './src/sites/studio/pages/sections/new.js',
     'scripts/edit': './src/sites/studio/pages/scripts/edit.js',
     'scripts/new': './src/sites/studio/pages/scripts/new.js',
     'shared/_check_admin': './src/sites/studio/pages/shared/_check_admin.js',
