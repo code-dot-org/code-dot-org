@@ -8,6 +8,7 @@ export const translatedCourseOfferingCategories = {
   full_course: i18n.courseOfferingFullCourse(),
   csf: i18n.courseOfferingCSF(),
   csc: i18n.courseOfferingCSC(),
+  maker: i18n.courseOfferingMaker(),
   aiml: i18n.courseOfferingAIML(),
   hoc: i18n.courseOfferingHOC(),
   csf_international: i18n.courseOfferingCSFInternational(),
