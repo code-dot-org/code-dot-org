@@ -234,7 +234,7 @@
           "description": "Définir les circonstances dans lesquelles certaines parties d'un programme doivent s'exécuter et quand elles ne le doivent pas."
         },
         "37326a7f-29b6-4ea6-9ed5-a08c2aa2dfd4": {
-          "description": "Résoudre des énigmes à l'aide d'une combinaison de séquences en boucle et de conditions."
+          "description": "Résoudre des casse-têtes à l'aide d'une combinaison de séquences en boucle et de conditions."
         },
         "b7bbc7eb-a6d3-4820-9b4b-27b64ec0b0d4": {
           "description": "Traduire des déclarations conditionnelles de langue parlée en un programme."
@@ -648,7 +648,7 @@
           "description": "Traduire des déclarations conditionnelles de langue parlée en un programme."
         },
         "da9556fa-6a34-4735-a0fe-4f61e5dfba88": {
-          "description": "Résoudre des énigmes à l'aide d'une combinaison de séquences en boucle et de conditions."
+          "description": "Résoudre des casse-têtes à l'aide d'une combinaison de séquences en boucle et de conditions."
         },
         "9a923506-c553-4734-8675-3925b4205a40": {
           "description": "Faire la distinction entre les boucles qui répètent un nombre fixe de fois et les boucles qui répètent tant qu'une condition est vraie."
@@ -738,7 +738,7 @@
           "description": "Expérimentez des actions de programmation standard, basées sur des blocs, tels que : cliquer, glisser-déposer, etc. "
         },
         "26c1a686-8627-439a-b7f9-3e42d80d4a6c": {
-          "description": "Construire un programme d'ordinateur à partir d'un ensemble d'instructions écrites"
+          "description": "Construire un programme d'ordinateur à partir d'une série d'instructions écrites"
         },
         "8f583ef0-bd0b-4e2c-81c3-11057794f7e2": {
           "description": "Construire un programme en réorganisant les mouvements séquentiels"
@@ -747,10 +747,10 @@
           "description": "Traduire les mouvements en une série de commandes."
         },
         "6856ac6b-753c-4870-bfe4-d6ee553ff409": {
-          "description": "Séquencer des commandes dans un ordre logique."
+          "description": "Séquencez les commandes dans un ordre logique."
         },
         "bbf10b3a-152d-472c-82b5-761d1be6e3b2": {
-          "description": "Reconnaître des problèmes ou « bugs », dans un programme, et élaborer un plan pour résoudre les problèmes."
+          "description": "Identifiez des problèmes ou « bugs » dans un programme et élaborez un plan pour résoudre ces problèmes."
         },
         "21d90a6a-f1ea-4d0b-ba17-f2e6a53cf78c": {
           "description": "Identifier et localiser les bugs dans un programme."
@@ -810,10 +810,10 @@
           "description": "Expliquez les règles pour voyager en toute sécurité sur Internet. "
         },
         "6ec5d1a8-13d0-43ab-a269-dc1060d0f872": {
-          "description": "Comparer le fait d'ètre en sécurité en ligne avec celui de l'être dans le monde réel. "
+          "description": "Comparez le fait qu'être en sécurité en ligne, c'est comme l'être dans le monde réel. "
         },
         "dfa4ff01-8e4b-410d-93fb-2380f70f0042": {
-          "description": "Découvrir qu'Internet peut être utilisé pour visiter des endroits lointains et apprendre de nouvelles choses. "
+          "description": "Découvrez que l'Internet peut être utilisé pour visiter des endroits lointains et apprendre de nouvelles choses. "
         },
         "9ffae8f4-4880-42db-ba40-b4379c1a5f6c": {
           "description": "Reconnaître ce qu'on attend d'eux lorsqu'ils passent au labo informatique."
@@ -840,16 +840,16 @@
           "description": "Construire un programme en réorganisant les mouvements séquentiels"
         },
         "d6d95ae8-01ab-408a-a17d-6c4813fe0991": {
-          "description": "Construire un programme d'ordinateur à partir d'un ensemble d'instructions écrites"
+          "description": "Construire un programme d'ordinateur à partir d'une série d'instructions écrites"
         },
         "f3ccc59a-2988-4ec2-994f-ae781e4e66d6": {
-          "description": "Choisir les procesus de débogage appropriés lors de la résolution de problèmes"
+          "description": "Choisir les processus de débogage adaptés lors de la résolution de problèmes"
         },
         "8fda32cd-f173-4d41-9a5c-4bb91f282534": {
-          "description": "Reconnaître des problèmes ou « bugs », dans un programme, et élaborer un plan pour résoudre les problèmes."
+          "description": "Identifiez des problèmes ou « bugs » dans un programme et élaborez un plan pour résoudre ces problèmes."
         },
         "ad2e874f-6827-4cec-bd3e-4c12a0596df5": {
-          "description": "Séquencer des commandes dans un ordre logique."
+          "description": "Séquencez les commandes dans un ordre logique."
         },
         "242ad249-b860-4727-9b98-01f0e2025d8d": {
           "description": "Interpréter un programme avec des boucles comme une série de plusieurs actions."
@@ -1293,10 +1293,10 @@
           "description": "Surmonter les obstacles tels que les contraintes de temps ou les bugs."
         },
         "a725215f-d267-47c0-b5ee-8eb6dc25e995": {
-          "description": "Découvrir qu'Internet peut être utilisé pour visiter des endroits lointains et apprendre de nouvelles choses. "
+          "description": "Découvrez que l'Internet peut être utilisé pour visiter des endroits lointains et apprendre de nouvelles choses. "
         },
         "16b11f19-6072-4fa4-ac74-d6074dd844c4": {
-          "description": "Comparer le fait d'ètre en sécurité en ligne avec celui de l'être dans le monde réel. "
+          "description": "Comparez le fait qu'être en sécurité en ligne, c'est comme l'être dans le monde réel. "
         },
         "ba49206c-c099-4994-be57-1f8744273eaf": {
           "description": "Expliquez les règles pour voyager en toute sécurité sur Internet. "
@@ -1326,16 +1326,16 @@
           "description": "Construire un programme en réorganisant les mouvements séquentiels"
         },
         "3f280431-7bc1-4f1a-aad6-708c97a92a48": {
-          "description": "Construire un programme d'ordinateur à partir d'un ensemble d'instructions écrites"
+          "description": "Construire un programme d'ordinateur à partir d'une série d'instructions écrites"
         },
         "ad752d9a-9437-4b0b-9ffd-e01b34f8cdb5": {
-          "description": "Choisir les procesus de débogage appropriés lors de la résolution de problèmes"
+          "description": "Choisir les processus de débogage adaptés lors de la résolution de problèmes"
         },
         "199aed02-347c-4892-9e98-d7571ae64c9d": {
-          "description": "Séquencer des commandes dans un ordre logique."
+          "description": "Séquencez les commandes dans un ordre logique."
         },
         "f0335d03-c7b3-4dee-9d9c-e1cd00919261": {
-          "description": "Reconnaître des problèmes ou « bugs », dans un programme, et élaborer un plan pour résoudre les problèmes."
+          "description": "Identifiez des problèmes ou « bugs » dans un programme et élaborez un plan pour résoudre ces problèmes."
         },
         "407c5a4d-9337-4218-92d5-018597e41e19": {
           "description": "Identifier un code répétitif et réduire plusieurs actions en une seule boucle."
@@ -1611,7 +1611,7 @@
           "description": "Traduire des déclarations conditionnelles de langue parlée en un programme."
         },
         "b9f29764-7d0f-4dfc-9400-9277f0ad9e4f": {
-          "description": "Résoudre des énigmes à l'aide d'une combinaison de séquences en boucle et de conditions."
+          "description": "Résoudre des casse-têtes à l'aide d'une combinaison de séquences en boucle et de conditions."
         },
         "f06bf36a-d520-4a73-b194-6d1e131a07ec": {
           "description": "Faire la distinction entre les boucles qui répètent un nombre fixe de fois et les boucles qui répètent tant qu'une condition est vraie."
@@ -1731,7 +1731,7 @@
           "description": "Traduire des déclarations conditionnelles de langue parlée en un programme."
         },
         "08f476a4-492c-47ee-8291-a435761059ac": {
-          "description": "Résoudre des énigmes à l'aide d'une combinaison de séquences en boucle et de conditions."
+          "description": "Résoudre des casse-têtes à l'aide d'une combinaison de séquences en boucle et de conditions."
         },
         "e85d8d23-86c2-4644-9449-94af8b02f763": {
           "description": "Faire la distinction entre les boucles qui répètent un nombre fixe de fois et les boucles qui répètent tant qu'une condition est vraie."
@@ -1827,13 +1827,13 @@
           "description": "Construire un programme en réorganisant les mouvements séquentiels"
         },
         "3ad309d1-5c29-4a7d-923c-9c60e6ef21b0": {
-          "description": "Construire un programme d'ordinateur à partir d'un ensemble d'instructions écrites"
+          "description": "Construire un programme d'ordinateur à partir d'une série d'instructions écrites"
         },
         "f4ccea6b-5333-454a-8b7a-e9d680967cef": {
-          "description": "Séquencer des commandes dans un ordre logique."
+          "description": "Séquencez les commandes dans un ordre logique."
         },
         "b881f284-2988-49e1-aaf2-f8baf12e5bb5": {
-          "description": "Reconnaître des problèmes ou « bugs », dans un programme, et élaborer un plan pour résoudre les problèmes."
+          "description": "Identifiez des problèmes ou « bugs » dans un programme et élaborez un plan pour résoudre ces problèmes."
         },
         "620da514-ad6e-4049-a9d3-d189a79af01e": {
           "description": "Traduire les mouvements en une série de commandes."

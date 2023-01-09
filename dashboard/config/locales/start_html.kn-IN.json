@@ -1,0 +1,1031 @@
+{
+  "kn-IN": {
+    "data": {
+      "start_html": {
+        "CSD U1 IO Pet Chooser 2_2021": {
+          "Yes": "ಹೌದು",
+          "No": "ಇಲ್ಲ",
+          "cute": "ಕ್ಯೂಟ್"
+        },
+        "CSD U1 IO Pet Chooser 2_2022": {
+          "Yes": "ಹೌದು",
+          "No": "ಇಲ್ಲ",
+          "cute": "ಕ್ಯೂಟ್"
+        },
+        "CSD U1 IO Pet Chooser_2021": {
+          "Yes": "ಹೌದು",
+          "No": "ಇಲ್ಲ",
+          "cute": "ಕ್ಯೂಟ್"
+        },
+        "CSD U1 IO Pet Chooser_2022": {
+          "Yes": "ಹೌದು",
+          "No": "ಇಲ್ಲ",
+          "cute": "ಕ್ಯೂಟ್"
+        },
+        "CSD U1 IO Story_2021": {
+          "Name": "ಹೆಸರು",
+          "Color": "ಬಣ್ಣ",
+          "Food": "ಆಹಾರ",
+          "City": "ನಗರ",
+          "text": "ಪಠ್ಯ"
+        },
+        "CSD U1 IO Story_2022": {
+          "Name": "ಹೆಸರು",
+          "Color": "ಬಣ್ಣ",
+          "Food": "ಆಹಾರ",
+          "City": "ನಗರ",
+          "text": "ಪಠ್ಯ"
+        },
+        "CSD U1 processing bday_2021": {
+          "1": "1"
+        },
+        "CSD U1 processing bday_2022": {
+          "1": "1"
+        },
+        "CSD U1 processing guess_2021": {
+          "?": "?",
+          "1": "1",
+          "text": "ಪಠ್ಯ"
+        },
+        "CSD U1 processing guess_2022": {
+          "?": "?",
+          "1": "1",
+          "text": "ಪಠ್ಯ"
+        },
+        "CSD U1 processing live_2021": {
+          "walking": "ವಾಕಿಂಗ್",
+          "bear": "ಕರಡಿ",
+          "rat": "ಇಲಿ"
+        },
+        "CSD U1 processing live_2022": {
+          "walking": "ವಾಕಿಂಗ್",
+          "bear": "ಕರಡಿ",
+          "rat": "ಇಲಿ"
+        },
+        "CSD U1 processing npark_2021": {
+          "Correct!": "ಸರಿಯಾಗಿದೆ!",
+          "Sorry!": "ಕ್ಷಮಿಸಿ!"
+        },
+        "CSD U1 processing npark_2022": {
+          "Correct!": "ಸರಿಯಾಗಿದೆ!",
+          "Sorry!": "ಕ್ಷಮಿಸಿ!"
+        },
+        "CSD U1 processing writers_2021": {
+          "1": "1"
+        },
+        "CSD U1 processing writers_2022": {
+          "1": "1"
+        },
+        "CSD U1 storage friends_2021": {
+          "Back": "ಹಿಂದೆ"
+        },
+        "CSD U1 storage friends_2022": {
+          "Back": "ಹಿಂದೆ"
+        },
+        "CSD U1 storage movies_2021": {
+          "Star Wars": "ಸ್ಟಾರ್‌ ವಾರ್ಸ್‌",
+          "Yes": "ಹೌದು",
+          "No": "ಇಲ್ಲ",
+          "text": "ಪಠ್ಯ"
+        },
+        "CSD U1 storage movies_2022": {
+          "Star Wars": "ಸ್ಟಾರ್‌ ವಾರ್ಸ್‌",
+          "Yes": "ಹೌದು",
+          "No": "ಇಲ್ಲ",
+          "text": "ಪಠ್ಯ"
+        },
+        "CSD U1 storage outfit_2021": {
+          "Clear": "ತೆರವುಗೊಳಿಸಿ",
+          "white": "ಬಿಳಿ",
+          "pink": "ಗುಲಾಬಿ",
+          "green": "ಹಸಿರು",
+          "black": "ಕಪ್ಪು",
+          "purple": "ನೇರಳೆ"
+        },
+        "CSD U1 storage outfit_2022": {
+          "Clear": "ತೆರವುಗೊಳಿಸಿ",
+          "white": "ಬಿಳಿ",
+          "pink": "ಗುಲಾಬಿ",
+          "green": "ಹಸಿರು",
+          "black": "ಕಪ್ಪು",
+          "purple": "ನೇರಳೆ"
+        },
+        "CSD U2 RGB intro": {
+          "1": "1"
+        },
+        "CSD U2 RGB intro_2018": {
+          "1": "1"
+        },
+        "CSD U2 RGB intro_2019": {
+          "1": "1"
+        },
+        "CSD U2 RGB intro_2021": {
+          "1": "1"
+        },
+        "CSD U2 RGB intro_2022": {
+          "1": "1"
+        },
+        "CSD U6 - Accelerometer - PD_2222": {
+          "You did it!": "ನೀವು ಮಾಡಿದಿರಿ!"
+        },
+        "CSD U6 - Board Inputs - SB1_2222": {
+          "Success!": "ಯಶಸ್ವಿಯಾಗಿದೆ!"
+        },
+        "CSD U6 - Board Inputs - SB2_2222": {
+          "Success!": "ಯಶಸ್ವಿಯಾಗಿದೆ!"
+        },
+        "CSD U6 - Board Inputs - SB3_2222": {
+          "Success!": "ಯಶಸ್ವಿಯಾಗಿದೆ!"
+        },
+        "CSD U6 - Board Outputs - A_2222": {
+          "Happy": "ಖುಷಿ"
+        },
+        "CSD U6 - Board Outputs - P_2222": {
+          "Success!": "ಯಶಸ್ವಿಯಾಗಿದೆ!"
+        },
+        "CSD U6 - Board Outputs - SB1_2222": {
+          "Success!": "ಯಶಸ್ವಿಯಾಗಿದೆ!"
+        },
+        "CSD U6 - Board Outputs - SB2_2222": {
+          "Success!": "ಯಶಸ್ವಿಯಾಗಿದೆ!"
+        },
+        "CSD U6 - Board Outputs - SB4_2222": {
+          "Fish": "ಮೀನು"
+        },
+        "CSD U6 - Board Outputs - Setup_2222": {
+          "Success!": "ಯಶಸ್ವಿಯಾಗಿದೆ!"
+        },
+        "CSD U6 - Color LEDs - ChalD_2222": {
+          "North": "ಉತ್ತರ",
+          "South": "ದಕ್ಷಿಣ",
+          "East": "ಪೂರ್ವ",
+          "West": "ಪಶ್ಚಿಮ"
+        },
+        "CSD U6 - Color LEDs - PracA_2222": {
+          "Success!": "ಯಶಸ್ವಿಯಾಗಿದೆ!"
+        },
+        "CSD U6 - Color LEDs - SB2_2222": {
+          "Success!": "ಯಶಸ್ವಿಯಾಗಿದೆ!"
+        },
+        "CSD U6 - Color LEDs - SB3_2222": {
+          "Success!": "ಯಶಸ್ವಿಯಾಗಿದೆ!"
+        },
+        "CSD U6 - Color LEDs - SB4_2222": {
+          "Medium": "ಮಧ್ಯಮ"
+        },
+        "CSD U6 - Combine Inputs - A_2222": {
+          "left": "ಎಡಕ್ಕೆ",
+          "right": "ಬಲಕ್ಕೆ",
+          "red": "ಕೆಂಪು",
+          "yellow": "ಹಳದಿ",
+          "green": "ಹಸಿರು",
+          "purple": "ನೇರಳೆ"
+        },
+        "CSD U6 - Combine Inputs - CA_2022": {
+          "fast": "ತ್ವರಿತ",
+          "short": "ಸಣ್ಣ",
+          "long": "ದೀರ್ಘ",
+          "low": "ಕಡಿಮೆ",
+          "high": "ಅಧಿಕ"
+        },
+        "CSD U6 - Combine Inputs - PracA_2222": {
+          "left": "ಎಡಕ್ಕೆ",
+          "right": "ಬಲಕ್ಕೆ"
+        },
+        "CSD U6 - Combine Inputs - PracC_2222": {
+          "yellow": "ಹಳದಿ",
+          "green": "ಹಸಿರು",
+          "blue": "ನೀಲಿ",
+          "orange": "ಕಿತ್ತಳೆ"
+        },
+        "CSD U6 - Combine Inputs - PracD_2222": {
+          "quiet": "ಕ್ವೈಟ್",
+          "Test": "ಟೆಸ್ಟ್‌"
+        },
+        "CSD U6 - Combine Inputs - SB2_2222": {
+          "short": "ಸಣ್ಣ",
+          "long": "ದೀರ್ಘ"
+        },
+        "CSD U6 - Combine Inputs - SB3_2222": {
+          "short": "ಸಣ್ಣ",
+          "long": "ದೀರ್ಘ",
+          "low": "ಕಡಿಮೆ",
+          "high": "ಅಧಿಕ"
+        },
+        "CSD U6 - Combine Inputs - SB4_2222": {
+          "short": "ಸಣ್ಣ",
+          "long": "ದೀರ್ಘ"
+        },
+        "CSD U6 - If Variables - ChalD_2222": {
+          "+": "+",
+          "-": "-"
+        },
+        "CSD U6 - If Variables - SB3_2222": {
+          "Name": "ಹೆಸರು"
+        },
+        "CSD U6 - Music - A_2222": {
+          "Happy": "ಖುಷಿ"
+        },
+        "CSD U6 - Music - ChalD_2222": {
+          "A": "A",
+          "B": "B",
+          "C": "c",
+          "D": "D",
+          "E": "ಇ",
+          "F": "F",
+          "G": "G"
+        },
+        "CSD U6 - Music - Piano_2222": {
+          "C": "c",
+          "D": "D",
+          "E": "ಇ",
+          "F": "F",
+          "G": "G",
+          "A": "A",
+          "B": "B",
+          "Note:": "ಸೂಚನೆ:"
+        },
+        "CSD U6 - Music - SB1_2222": {
+          "C": "c",
+          "D": "D",
+          "E": "ಇ",
+          "F": "F",
+          "G": "G",
+          "A": "A",
+          "B": "B"
+        },
+        "CSD U6 - Music - SB2.5_2222": {
+          "C": "c",
+          "D": "D",
+          "E": "ಇ",
+          "F": "F",
+          "G": "G",
+          "A": "A",
+          "B": "B"
+        },
+        "CSD U6 - Music - SB3_2222": {
+          "C": "c",
+          "D": "D",
+          "E": "ಇ",
+          "F": "F",
+          "G": "G",
+          "A": "A",
+          "B": "B"
+        },
+        "CSD U6 - Music - SB4_2222": {
+          "Success!": "ಯಶಸ್ವಿಯಾಗಿದೆ!"
+        },
+        "CSD U6 - Physical Input - A_2222": {
+          "1": "1"
+        },
+        "CSD U6 - Physical Input - ChalA_2222": {
+          "Success!": "ಯಶಸ್ವಿಯಾಗಿದೆ!"
+        },
+        "CSD U6 - Physical Input - ChalB_2222": {
+          "Success!": "ಯಶಸ್ವಿಯಾಗಿದೆ!"
+        },
+        "CSD U6 - Physical Input - ChalC_2222": {
+          "Success!": "ಯಶಸ್ವಿಯಾಗಿದೆ!"
+        },
+        "CSD U6 - Physical Input - PA_2222": {
+          "Score": "ಸ್ಕೋರ್"
+        },
+        "CSD U6 - Physical Input - PC_2222": {
+          "Success!": "ಯಶಸ್ವಿಯಾಗಿದೆ!"
+        },
+        "CSD U6 - Physical Input - PD_2222": {
+          "Success!": "ಯಶಸ್ವಿಯಾಗಿದೆ!"
+        },
+        "CSD U6 - Physical Input - SB1_2222": {
+          "Success!": "ಯಶಸ್ವಿಯಾಗಿದೆ!"
+        },
+        "CSD U6 - Physical Output - ChalA_2222": {
+          "Success!": "ಯಶಸ್ವಿಯಾಗಿದೆ!"
+        },
+        "CSD U6 - Physical Output - ChalB_2222": {
+          "Success!": "ಯಶಸ್ವಿಯಾಗಿದೆ!"
+        },
+        "CSD U6 - Physical Output - ChalC_2222": {
+          "Success!": "ಯಶಸ್ವಿಯಾಗಿದೆ!"
+        },
+        "CSD U6 - Physical Output - PB_2222": {
+          "Success!": "ಯಶಸ್ವಿಯಾಗಿದೆ!"
+        },
+        "CSD U6 - Physical Output - PC_2222": {
+          "Success!": "ಯಶಸ್ವಿಯಾಗಿದೆ!"
+        },
+        "CSD U6 - Physical Output - P_2222": {
+          "Success!": "ಯಶಸ್ವಿಯಾಗಿದೆ!"
+        },
+        "CSD U6 - Physical Output - SB1_2222": {
+          "Success!": "ಯಶಸ್ವಿಯಾಗಿದೆ!"
+        },
+        "CSD U6 - Physical Output - SB2.2_2222": {
+          "Success!": "ಯಶಸ್ವಿಯಾಗಿದೆ!"
+        },
+        "CSD U6 - Physical Output - SB2_2222": {
+          "Success!": "ಯಶಸ್ವಿಯಾಗಿದೆ!"
+        },
+        "CSD U6 - Screen Inputs - A_2222": {
+          "Name:": "ಹೆಸರು:"
+        },
+        "CSD U6 - Screen Inputs - P_2222": {
+          "Name:": "ಹೆಸರು:",
+          "Save": "ಉಳಿಸಿ"
+        },
+        "CSD U6 - Screen Inputs - SB2.1_2022": {
+          "black": "ಕಪ್ಪು",
+          "white": "ಬಿಳಿ"
+        },
+        "CSD U6 - Screen Inputs - SB2.2_2022": {
+          "black": "ಕಪ್ಪು",
+          "white": "ಬಿಳಿ"
+        },
+        "CSD U6 - Screen Outputs - ChalB_2222": {
+          "Happy": "ಖುಷಿ",
+          "?": "?"
+        },
+        "CSD U6 - Screen Outputs - P_2222": {
+          "title": "ಶೀರ್ಷಿಕೆ"
+        },
+        "CSD U6 - Screen Outputs - PracA_2222": {
+          "White": "ಬಿಳಿ"
+        },
+        "CSD U6 - Screen Outputs - PracB_2222": {
+          "up": "ಮೇಲಕ್ಕೆ",
+          "down": "ಕೆಳಕ್ಕೆ",
+          "left": "ಎಡಕ್ಕೆ",
+          "right": "ಬಲಕ್ಕೆ"
+        },
+        "CSD U6 - Screen Outputs - SB1.1_2222": {
+          "name": "ಹೆಸರು"
+        },
+        "CSD U6 - Sensors - P_2222": {
+          "text": "ಪಠ್ಯ",
+          "high": "ಅಧಿಕ",
+          "low": "ಕಡಿಮೆ"
+        },
+        "CSD U6 - Sensors - SB2_2222": {
+          "Update": "ನವೀಕರಿಸಿ"
+        },
+        "CSD U6 Driver pt 2": {
+          "You did it!": "ನೀವು ಮಾಡಿದಿರಿ!"
+        },
+        "CSD U6 Driver pt 2_2018": {
+          "You did it!": "ನೀವು ಮಾಡಿದಿರಿ!"
+        },
+        "CSD U6 Driver pt 2_2019": {
+          "You did it!": "ನೀವು ಮಾಡಿದಿರಿ!"
+        },
+        "CSD U6 Driver pt 2_2021": {
+          "You did it!": "ನೀವು ಮಾಡಿದಿರಿ!"
+        },
+        "CSD U6 Driver pt1": {
+          "You did it!": "ನೀವು ಮಾಡಿದಿರಿ!"
+        },
+        "CSD U6 Driver pt1_2018": {
+          "You did it!": "ನೀವು ಮಾಡಿದಿರಿ!"
+        },
+        "CSD U6 Driver pt1_2019": {
+          "You did it!": "ನೀವು ಮಾಡಿದಿರಿ!"
+        },
+        "CSD U6 Driver pt1_2021": {
+          "You did it!": "ನೀವು ಮಾಡಿದಿರಿ!"
+        },
+        "CSD U6 LED toggle": {
+          "Success!": "ಯಶಸ್ವಿಯಾಗಿದೆ!"
+        },
+        "CSD U6 LED toggle_2018": {
+          "Success!": "ಯಶಸ್ವಿಯಾಗಿದೆ!"
+        },
+        "CSD U6 LED toggle_2019": {
+          "Success!": "ಯಶಸ್ವಿಯಾಗಿದೆ!"
+        },
+        "CSD U6 LED toggle_2021": {
+          "Success!": "ಯಶಸ್ವಿಯಾಗಿದೆ!"
+        },
+        "CSD U6 add LED button": {
+          "Success!": "ಯಶಸ್ವಿಯಾಗಿದೆ!"
+        },
+        "CSD U6 add LED button_2018": {
+          "Success!": "ಯಶಸ್ವಿಯಾಗಿದೆ!"
+        },
+        "CSD U6 add LED button_2019": {
+          "Success!": "ಯಶಸ್ವಿಯಾಗಿದೆ!"
+        },
+        "CSD U6 add LED button_2021": {
+          "Success!": "ಯಶಸ್ವಿಯಾಗಿದೆ!"
+        },
+        "CSD U6 analog light": {
+          "Update": "ನವೀಕರಿಸಿ"
+        },
+        "CSD U6 analog light_2018": {
+          "Update": "ನವೀಕರಿಸಿ"
+        },
+        "CSD U6 analog light_2019": {
+          "Update": "ನವೀಕರಿಸಿ"
+        },
+        "CSD U6 analog light_2021": {
+          "Update": "ನವೀಕರಿಸಿ"
+        },
+        "CSD U6 array piano": {
+          "C": "c",
+          "D": "D",
+          "E": "ಇ",
+          "F": "F",
+          "G": "G",
+          "A": "A",
+          "B": "B"
+        },
+        "CSD U6 array piano_2018": {
+          "C": "c",
+          "D": "D",
+          "E": "ಇ",
+          "F": "F",
+          "G": "G",
+          "A": "A",
+          "B": "B"
+        },
+        "CSD U6 array piano_2019": {
+          "C": "c",
+          "D": "D",
+          "E": "ಇ",
+          "F": "F",
+          "G": "G",
+          "A": "A",
+          "B": "B"
+        },
+        "CSD U6 array piano_2021": {
+          "C": "c",
+          "D": "D",
+          "E": "ಇ",
+          "F": "F",
+          "G": "G",
+          "A": "A",
+          "B": "B"
+        },
+        "CSD U6 change": {
+          "short": "ಸಣ್ಣ",
+          "long": "ದೀರ್ಘ"
+        },
+        "CSD U6 change_2018": {
+          "short": "ಸಣ್ಣ",
+          "long": "ದೀರ್ಘ"
+        },
+        "CSD U6 change_2019": {
+          "short": "ಸಣ್ಣ",
+          "long": "ದೀರ್ಘ"
+        },
+        "CSD U6 change_2021": {
+          "short": "ಸಣ್ಣ",
+          "long": "ದೀರ್ಘ"
+        },
+        "CSD U6 colorLeds intensity": {
+          "Medium": "ಮಧ್ಯಮ"
+        },
+        "CSD U6 colorLeds intensity_2018": {
+          "Medium": "ಮಧ್ಯಮ"
+        },
+        "CSD U6 colorLeds intensity_2019": {
+          "Medium": "ಮಧ್ಯಮ"
+        },
+        "CSD U6 colorLeds intensity_2021": {
+          "Medium": "ಮಧ್ಯಮ"
+        },
+        "CSD U6 emotion machine example": {
+          "Happy": "ಖುಷಿ",
+          "?": "?"
+        },
+        "CSD U6 emotion machine example_2018": {
+          "Happy": "ಖುಷಿ",
+          "?": "?"
+        },
+        "CSD U6 emotion machine example_2019": {
+          "Happy": "ಖುಷಿ",
+          "?": "?"
+        },
+        "CSD U6 emotion machine example_2021": {
+          "Happy": "ಖುಷಿ",
+          "?": "?"
+        },
+        "CSD U6 frequency": {
+          "short": "ಸಣ್ಣ",
+          "long": "ದೀರ್ಘ",
+          "low": "ಕಡಿಮೆ",
+          "high": "ಅಧಿಕ"
+        },
+        "CSD U6 frequency_2018": {
+          "short": "ಸಣ್ಣ",
+          "long": "ದೀರ್ಘ",
+          "low": "ಕಡಿಮೆ",
+          "high": "ಅಧಿಕ"
+        },
+        "CSD U6 frequency_2019": {
+          "short": "ಸಣ್ಣ",
+          "long": "ದೀರ್ಘ",
+          "low": "ಕಡಿಮೆ",
+          "high": "ಅಧಿಕ"
+        },
+        "CSD U6 frequency_2021": {
+          "short": "ಸಣ್ಣ",
+          "long": "ದೀರ್ಘ",
+          "low": "ಕಡಿಮೆ",
+          "high": "ಅಧಿಕ"
+        },
+        "CSD U6 get toggle": {
+          "short": "ಸಣ್ಣ",
+          "long": "ದೀರ್ಘ",
+          "low": "ಕಡಿಮೆ",
+          "high": "ಅಧಿಕ"
+        },
+        "CSD U6 get toggle_2018": {
+          "short": "ಸಣ್ಣ",
+          "long": "ದೀರ್ಘ",
+          "low": "ಕಡಿಮೆ",
+          "high": "ಅಧಿಕ"
+        },
+        "CSD U6 get toggle_2019": {
+          "short": "ಸಣ್ಣ",
+          "long": "ದೀರ್ಘ",
+          "low": "ಕಡಿಮೆ",
+          "high": "ಅಧಿಕ"
+        },
+        "CSD U6 get toggle_2021": {
+          "short": "ಸಣ್ಣ",
+          "long": "ದೀರ್ಘ",
+          "low": "ಕಡಿಮೆ",
+          "high": "ಅಧಿಕ"
+        },
+        "CSD U6 getProperty Demo": {
+          "Name:": "ಹೆಸರು:",
+          "Save": "ಉಳಿಸಿ"
+        },
+        "CSD U6 getProperty Demo_2018": {
+          "Name:": "ಹೆಸರು:",
+          "Save": "ಉಳಿಸಿ"
+        },
+        "CSD U6 getProperty Demo_2019": {
+          "Name:": "ಹೆಸರು:",
+          "Save": "ಉಳಿಸಿ"
+        },
+        "CSD U6 getProperty Demo_2021": {
+          "Name:": "ಹೆಸರು:",
+          "Save": "ಉಳಿಸಿ"
+        },
+        "CSD U6 getProperty input": {
+          "Submit": "ಸಲ್ಲಿಸಿ"
+        },
+        "CSD U6 getProperty input_2018": {
+          "Submit": "ಸಲ್ಲಿಸಿ"
+        },
+        "CSD U6 getProperty input_2019": {
+          "Submit": "ಸಲ್ಲಿಸಿ"
+        },
+        "CSD U6 getProperty input_2021": {
+          "Submit": "ಸಲ್ಲಿಸಿ"
+        },
+        "CSD U6 getters debug": {
+          "fast": "ತ್ವರಿತ",
+          "short": "ಸಣ್ಣ",
+          "long": "ದೀರ್ಘ",
+          "low": "ಕಡಿಮೆ",
+          "high": "ಅಧಿಕ"
+        },
+        "CSD U6 getters debug_2018": {
+          "fast": "ತ್ವರಿತ",
+          "short": "ಸಣ್ಣ",
+          "long": "ದೀರ್ಘ",
+          "low": "ಕಡಿಮೆ",
+          "high": "ಅಧಿಕ"
+        },
+        "CSD U6 getters debug_2019": {
+          "fast": "ತ್ವರಿತ",
+          "short": "ಸಣ್ಣ",
+          "long": "ದೀರ್ಘ",
+          "low": "ಕಡಿಮೆ",
+          "high": "ಅಧಿಕ"
+        },
+        "CSD U6 getters debug_2021": {
+          "fast": "ತ್ವರಿತ",
+          "short": "ಸಣ್ಣ",
+          "long": "ದೀರ್ಘ",
+          "low": "ಕಡಿಮೆ",
+          "high": "ಅಧಿಕ"
+        },
+        "CSD U6 interval": {
+          "short": "ಸಣ್ಣ",
+          "long": "ದೀರ್ಘ"
+        },
+        "CSD U6 interval_2018": {
+          "short": "ಸಣ್ಣ",
+          "long": "ದೀರ್ಘ"
+        },
+        "CSD U6 interval_2019": {
+          "short": "ಸಣ್ಣ",
+          "long": "ದೀರ್ಘ"
+        },
+        "CSD U6 interval_2021": {
+          "short": "ಸಣ್ಣ",
+          "long": "ದೀರ್ಘ"
+        },
+        "CSD U6 predict LED button": {
+          "Success!": "ಯಶಸ್ವಿಯಾಗಿದೆ!"
+        },
+        "CSD U6 predict LED button_2018": {
+          "Success!": "ಯಶಸ್ವಿಯಾಗಿದೆ!"
+        },
+        "CSD U6 predict LED button_2019": {
+          "Success!": "ಯಶಸ್ವಿಯಾಗಿದೆ!"
+        },
+        "CSD U6 predict LED button_2021": {
+          "Success!": "ಯಶಸ್ವಿಯಾಗಿದೆ!"
+        },
+        "CSD U6 sensor experiment embedded": {
+          "text": "ಪಠ್ಯ",
+          "high": "ಅಧಿಕ",
+          "low": "ಕಡಿಮೆ"
+        },
+        "CSD U6 sensor experiment embedded_2018": {
+          "text": "ಪಠ್ಯ",
+          "high": "ಅಧಿಕ",
+          "low": "ಕಡಿಮೆ"
+        },
+        "CSD U6 sensor experiment embedded_2019": {
+          "text": "ಪಠ್ಯ",
+          "high": "ಅಧಿಕ",
+          "low": "ಕಡಿಮೆ"
+        },
+        "CSD U6 sensor experiment embedded_2021": {
+          "text": "ಪಠ್ಯ",
+          "high": "ಅಧಿಕ",
+          "low": "ಕಡಿಮೆ"
+        },
+        "CSD U6 setProperty predict app": {
+          "title": "ಶೀರ್ಷಿಕೆ"
+        },
+        "CSD U6 setProperty predict app_2018": {
+          "title": "ಶೀರ್ಷಿಕೆ"
+        },
+        "CSD U6 setProperty predict app_2019": {
+          "title": "ಶೀರ್ಷಿಕೆ"
+        },
+        "CSD U6 setProperty predict app_2021": {
+          "title": "ಶೀರ್ಷಿಕೆ"
+        },
+        "CSD U6 slider intro": {
+          "short": "ಸಣ್ಣ",
+          "long": "ದೀರ್ಘ"
+        },
+        "CSD U6 slider intro_2018": {
+          "short": "ಸಣ್ಣ",
+          "long": "ದೀರ್ಘ"
+        },
+        "CSD U6 slider intro_2019": {
+          "short": "ಸಣ್ಣ",
+          "long": "ದೀರ್ಘ"
+        },
+        "CSD U6 slider intro_2021": {
+          "short": "ಸಣ್ಣ",
+          "long": "ದೀರ್ಘ"
+        },
+        "CSD U6 test LED": {
+          "Success!": "ಯಶಸ್ವಿಯಾಗಿದೆ!"
+        },
+        "CSD U6 test LED_2018": {
+          "Success!": "ಯಶಸ್ವಿಯಾಗಿದೆ!"
+        },
+        "CSD U6 test LED_2019": {
+          "Success!": "ಯಶಸ್ವಿಯಾಗಿದೆ!"
+        },
+        "CSD U6 test LED_2021": {
+          "Success!": "ಯಶಸ್ವಿಯಾಗಿದೆ!"
+        },
+        "CSDU4 Crowdsource App Demo": {
+          "About": "ಬಗ್ಗೆ",
+          "About Us": "ನಮ್ಮ ಬಗ್ಗೆ",
+          "User": "ಬಳಕೆದಾರರು",
+          "Cancel": "ರದ್ದುಮಾಡಿ",
+          "Name:": "ಹೆಸರು:",
+          "Yes": "ಹೌದು",
+          "No": "ಇಲ್ಲ",
+          "Save": "ಉಳಿಸಿ"
+        },
+        "CSDU4 Crowdsource App Demo_2018": {
+          "About": "ಬಗ್ಗೆ",
+          "About Us": "ನಮ್ಮ ಬಗ್ಗೆ",
+          "User": "ಬಳಕೆದಾರರು",
+          "Cancel": "ರದ್ದುಮಾಡಿ",
+          "Name:": "ಹೆಸರು:",
+          "Yes": "ಹೌದು",
+          "No": "ಇಲ್ಲ",
+          "Save": "ಉಳಿಸಿ"
+        },
+        "CSDU4 Crowdsource App Demo_2019": {
+          "About": "ಬಗ್ಗೆ",
+          "About Us": "ನಮ್ಮ ಬಗ್ಗೆ",
+          "User": "ಬಳಕೆದಾರರು",
+          "Cancel": "ರದ್ದುಮಾಡಿ",
+          "Name:": "ಹೆಸರು:",
+          "Yes": "ಹೌದು",
+          "No": "ಇಲ್ಲ",
+          "Save": "ಉಳಿಸಿ"
+        },
+        "CSDU4 Decision App Demo": {
+          "About": "ಬಗ್ಗೆ",
+          "Why?": "ಯಾಕೆ?",
+          "I don't know": "ನನಗೆ ಗೊತ್ತಿಲ್ಲ",
+          "When?": "ಯಾವಾಗ?",
+          "About Us": "ನಮ್ಮ ಬಗ್ಗೆ"
+        },
+        "CSDU4 Decision App Demo_2018": {
+          "About": "ಬಗ್ಗೆ",
+          "Why?": "ಯಾಕೆ?",
+          "I don't know": "ನನಗೆ ಗೊತ್ತಿಲ್ಲ",
+          "When?": "ಯಾವಾಗ?",
+          "About Us": "ನಮ್ಮ ಬಗ್ಗೆ"
+        },
+        "CSDU4 Decision App Demo_2019": {
+          "About": "ಬಗ್ಗೆ",
+          "Why?": "ಯಾಕೆ?",
+          "I don't know": "ನನಗೆ ಗೊತ್ತಿಲ್ಲ",
+          "When?": "ಯಾವಾಗ?",
+          "About Us": "ನಮ್ಮ ಬಗ್ಗೆ"
+        },
+        "CSDU4 Functionality visible": {
+          "Hide": "ಮರೆಮಾಡು",
+          "Show": "ಪ್ರದರ್ಶಿಸಿ"
+        },
+        "CSDU4 List App Demo": {
+          "About": "ಬಗ್ಗೆ",
+          "About Us": "ನಮ್ಮ ಬಗ್ಗೆ",
+          "Done": "ಮುಗಿದಿದೆ",
+          "Cancel": "ರದ್ದುಮಾಡಿ"
+        },
+        "CSDU4 List App Demo_2018": {
+          "About": "ಬಗ್ಗೆ",
+          "About Us": "ನಮ್ಮ ಬಗ್ಗೆ",
+          "Done": "ಮುಗಿದಿದೆ",
+          "Cancel": "ರದ್ದುಮಾಡಿ"
+        },
+        "CSDU4 List App Demo_2019": {
+          "About": "ಬಗ್ಗೆ",
+          "About Us": "ನಮ್ಮ ಬಗ್ಗೆ",
+          "Done": "ಮುಗಿದಿದೆ",
+          "Cancel": "ರದ್ದುಮಾಡಿ"
+        },
+        "CSDU4 Quiz App Demo": {
+          "About": "ಬಗ್ಗೆ",
+          "Submit": "ಸಲ್ಲಿಸಿ",
+          "Why?": "ಯಾಕೆ?",
+          "When?": "ಯಾವಾಗ?",
+          "About Us": "ನಮ್ಮ ಬಗ್ಗೆ",
+          "Correct!": "ಸರಿಯಾಗಿದೆ!"
+        },
+        "CSDU4 Quiz App Demo_2018": {
+          "About": "ಬಗ್ಗೆ",
+          "Submit": "ಸಲ್ಲಿಸಿ",
+          "Why?": "ಯಾಕೆ?",
+          "When?": "ಯಾವಾಗ?",
+          "About Us": "ನಮ್ಮ ಬಗ್ಗೆ",
+          "Correct!": "ಸರಿಯಾಗಿದೆ!"
+        },
+        "CSDU4 Quiz App Demo_2019": {
+          "About": "ಬಗ್ಗೆ",
+          "Submit": "ಸಲ್ಲಿಸಿ",
+          "Why?": "ಯಾಕೆ?",
+          "When?": "ಯಾವಾಗ?",
+          "About Us": "ನಮ್ಮ ಬಗ್ಗೆ",
+          "Correct!": "ಸರಿಯಾಗಿದೆ!"
+        },
+        "CSDU6 - UI and Inputs - getNumber": {
+          "+": "+"
+        },
+        "CSDU6 - UI and Inputs - setScreen": {
+          "Back": "ಹಿಂದೆ"
+        },
+        "CSDU6 Circuit Playground Test": {
+          "Success!": "ಯಶಸ್ವಿಯಾಗಿದೆ!"
+        },
+        "CSDU6 Circuit Playground Test_2018": {
+          "Success!": "ಯಶಸ್ವಿಯಾಗಿದೆ!"
+        },
+        "CSDU6 Circuit Playground Test_2019": {
+          "Success!": "ಯಶಸ್ವಿಯಾಗಿದೆ!"
+        },
+        "CSDU6 Circuit Playground Test_2021": {
+          "Success!": "ಯಶಸ್ವಿಯಾಗಿದೆ!"
+        },
+        "CSDU6 Circuit Playground Test_2222": {
+          "Success!": "ಯಶಸ್ವಿಯಾಗಿದೆ!"
+        },
+        "CSDU6 circuit playground piano": {
+          "C": "c",
+          "D": "D",
+          "E": "ಇ",
+          "F": "F",
+          "G": "G",
+          "A": "A",
+          "B": "B"
+        },
+        "CSDU6 circuit playground piano_2018": {
+          "C": "c",
+          "D": "D",
+          "E": "ಇ",
+          "F": "F",
+          "G": "G",
+          "A": "A",
+          "B": "B"
+        },
+        "CSDU6 circuit playground piano_2019": {
+          "C": "c",
+          "D": "D",
+          "E": "ಇ",
+          "F": "F",
+          "G": "G",
+          "A": "A",
+          "B": "B"
+        },
+        "CSDU6 circuit playground piano_2021": {
+          "C": "c",
+          "D": "D",
+          "E": "ಇ",
+          "F": "F",
+          "G": "G",
+          "A": "A",
+          "B": "B"
+        },
+        "CSDU6 piano with notes": {
+          "C": "c",
+          "D": "D",
+          "E": "ಇ",
+          "F": "F",
+          "G": "G",
+          "A": "A",
+          "B": "B"
+        },
+        "CSDU6 piano with notes_2018": {
+          "C": "c",
+          "D": "D",
+          "E": "ಇ",
+          "F": "F",
+          "G": "G",
+          "A": "A",
+          "B": "B"
+        },
+        "CSDU6 piano with notes_2019": {
+          "C": "c",
+          "D": "D",
+          "E": "ಇ",
+          "F": "F",
+          "G": "G",
+          "A": "A",
+          "B": "B"
+        },
+        "CSDU6 piano with notes_2021": {
+          "C": "c",
+          "D": "D",
+          "E": "ಇ",
+          "F": "F",
+          "G": "G",
+          "A": "A",
+          "B": "B"
+        },
+        "allthethings design mode elements": {
+          "text": "ಪಠ್ಯ"
+        },
+        "csd u5 recommender sample": {
+          "Start": "ಪ್ರಾರಂಭಿಸಿ"
+        },
+        "csd u5 recommender sample_2019": {
+          "Start": "ಪ್ರಾರಂಭಿಸಿ"
+        },
+        "csd u5 recommender sample_2021": {
+          "Start": "ಪ್ರಾರಂಭಿಸಿ"
+        },
+        "csd u5 recommender sample_2022": {
+          "Start": "ಪ್ರಾರಂಭಿಸಿ"
+        },
+        "csd-apps for good-3": {
+          "1": "1"
+        },
+        "csd-apps for good-3_2022": {
+          "1": "1"
+        },
+        "csd-explore ui-3": {
+          "1": "1"
+        },
+        "csd-explore ui-3_2022": {
+          "1": "1"
+        },
+        "csd-explore ui-4": {
+          "Correct!": "ಸರಿಯಾಗಿದೆ!",
+          "Sorry!": "ಕ್ಷಮಿಸಿ!"
+        },
+        "csd-explore ui-4_2022": {
+          "Correct!": "ಸರಿಯಾಗಿದೆ!",
+          "Sorry!": "ಕ್ಷಮಿಸಿ!"
+        },
+        "csd-explore ui-5": {
+          "1": "1"
+        },
+        "csd-explore ui-5_2022": {
+          "1": "1"
+        },
+        "ml-intro ai lab- fruit veggie widget": {
+          "Continue": "ಮುಂದುವರೆಯಿರಿ",
+          "Loading...": "ಲೋಡ್ ಮಾಡಲಾಗುತ್ತಿದೆ..."
+        },
+        "ml-intro ai lab- fruit veggie widget_2022": {
+          "Continue": "ಮುಂದುವರೆಯಿರಿ",
+          "Loading...": "ಲೋಡ್ ಮಾಡಲಾಗುತ್ತಿದೆ..."
+        },
+        "ml-intro app lab-book recommender demo-2021": {
+          "Silly": "ಕ್ಷುಲ್ಲಕ"
+        },
+        "ml-intro app lab-book recommender demo_2022": {
+          "Silly": "ಕ್ಷುಲ್ಲಕ"
+        },
+        "ml-model card-medical app v2 2021-2": {
+          "W": "W",
+          "A": "A",
+          "head": "ತಲೆ"
+        },
+        "ml-model card-medical app v2 2021-2_2022": {
+          "W": "W",
+          "A": "A",
+          "head": "ತಲೆ"
+        },
+        "ml-model cards-book recommender model card": {
+          "Silly": "ಕ್ಷುಲ್ಲಕ"
+        },
+        "ml-model cards-book recommender model card_2022": {
+          "Silly": "ಕ್ಷುಲ್ಲಕ"
+        },
+        "ml-models in applab-choice if quotes": {
+          "1": "1"
+        },
+        "ml-models in applab-choice if quotes_2022": {
+          "1": "1"
+        },
+        "ml-models in applab-choice if wrong place": {
+          "1": "1"
+        },
+        "ml-models in applab-choice if wrong place_2022": {
+          "1": "1"
+        },
+        "ml-models in applab-choice intended warnings": {
+          "1": "1",
+          "Back": "ಹಿಂದೆ"
+        },
+        "ml-models in applab-choice intended warnings_2022": {
+          "1": "1",
+          "Back": "ಹಿಂದೆ"
+        },
+        "ml-models in applab-choice predict typos": {
+          "1": "1"
+        },
+        "ml-models in applab-choice predict typos_2022": {
+          "1": "1"
+        },
+        "ml-models in applab-zoo assessment": {
+          "Yes": "ಹೌದು",
+          "No": "ಇಲ್ಲ",
+          "B": "B"
+        },
+        "ml-models in applab-zoo assessment_2022": {
+          "Yes": "ಹೌದು",
+          "No": "ಇಲ್ಲ",
+          "B": "B"
+        },
+        "ml-models in applab-zoo model embed": {
+          "Yes": "ಹೌದು",
+          "No": "ಇಲ್ಲ"
+        },
+        "ml-models in applab-zoo model embed_2022": {
+          "Yes": "ಹೌದು",
+          "No": "ಇಲ್ಲ"
+        },
+        "ml-models-shoes decision tree-2021": {
+          "Sports": "ಸ್ಪೋರ್ಟ್ಸ್"
+        },
+        "ml-models-shoes decision tree_2022": {
+          "Sports": "ಸ್ಪೋರ್ಟ್ಸ್"
+        },
+        "ml-use model card-example3A-2021": {
+          "rain": "ಮಳೆ",
+          "snow": "ಮಂಜು",
+          "cloudy": "ಕ್ಲೌಡ್‌",
+          "night": "ರಾತ್ರಿ",
+          "dusk": "ಮುಸ್ಸಂಜೆ"
+        },
+        "ml-use model card-example3A_2022": {
+          "rain": "ಮಳೆ",
+          "snow": "ಮಂಜು",
+          "cloudy": "ಕ್ಲೌಡ್‌",
+          "night": "ರಾತ್ರಿ",
+          "dusk": "ಮುಸ್ಸಂಜೆ"
+        }
+      }
+    }
+  }
+}

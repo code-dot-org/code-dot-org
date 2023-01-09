@@ -1,6 +1,10 @@
 {
   "pages": {
-    "homepage": ["hoc2022-soon-hoc", "hoc2022-actual-hoc"]
+    "homepage": [
+      "hoc2022-soon-hoc",
+      "hoc2022-actual-hoc",
+      "pl-launch-superhero"
+    ]
   },
 
   "banners": {
@@ -65,6 +69,34 @@
           "type": "cta_button_hollow_white",
           "text": "hoc2022_cta_secondary",
           "url": "/hourofcode/overview"
+        }
+      ]
+    },
+    "pl-launch-superhero": {
+      "dcdo": "pl-launch-hero-banner",
+      "class": "pl-banner-superhero homepage",
+      "desktopImage": "/images/pl-superhero-banner-yellow-bg.svg",
+      "actions": [
+        {
+          "type": "heading",
+          "text": "pl_superhero_title"
+        },
+        {
+          "type": "heading-two",
+          "text": "pl_superhero_desc"
+        },
+        {
+          "type": "image",
+          "url": "/images/pl-superhero-girl.png"
+        },
+        {
+          "type": "image-tablet",
+          "url": "/images/pl-superhero-girl-tablet.png"
+        },
+        {
+          "type": "cta_button_solid_yellow",
+          "text": "front_join_us_learn_more",
+          "url": "/educate/professional-learning"
         }
       ]
     }

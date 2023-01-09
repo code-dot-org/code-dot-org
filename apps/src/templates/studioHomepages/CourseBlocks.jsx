@@ -74,9 +74,9 @@ class CoursesAToF extends Component {
 
 const LegacyCSFNotification = () => (
   <NotificationResponsive
-    type="bullhorn"
-    notice={i18n.courseBlocksLegacyNotificationHeading()}
-    details={i18n.courseBlocksLegacyNotificationBody()}
+    type="bullhorn_yellow"
+    notice={i18n.courseBlocksLegacyNotificationSupportEndedHeading()}
+    details={i18n.courseBlocksLegacyNotificationSupportEndedBody()}
     detailsLinkText={i18n.courseBlocksLegacyNotificationDetailsLinkText()}
     detailsLink={pegasus('/educate/curriculum/csf-transition-guide')}
     detailsLinkNewWindow={true}
@@ -84,7 +84,7 @@ const LegacyCSFNotification = () => (
     buttons={[
       {
         text: i18n.courseBlocksLegacyNotificationButtonCourses14(),
-        link: pegasus('/educate/curriculum/cs-fundamentals-international'),
+        link: pegasus('/educate/curriculum/elementary-school'),
         newWindow: true
       },
       {

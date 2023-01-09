@@ -1663,7 +1663,7 @@
           "courseA_artist_loops8_1": "Her ihtiyaç duyduğunuzda bir satırın üzerinden yeniden geçebileceğinizi biliyor muydunuz?"
         },
         "courseA_collector_loops1_2021": {
-          "courseA_collector_loops1_1": "Yeni blokları gördün mü? Merak etme daha sonraki aşamalarda bunları nasıl kullanacağını göstereceğiz."
+          "courseA_collector_loops1_1": "Hazineyi toplamak için bu bloğu kullanın."
         },
         "courseA_collector_loops3_2021": {
           "gradek_adventurer_loops2_1": "Bu sayı, bu bulmacada her bloktan kaç tane kullanabileceğinizi söyler."
@@ -1774,20 +1774,20 @@
           "courseD_farmer_while7_2018_PathAhead": "Bu bulmacayı çözmek için 'ileri doğru yol süresinde bloğunu kullanmanız gerekecek."
         },
         "courseD_maze_intro4_2021": {
-          "courseC_maze_programming4_1": "Bu senin blok limitin. Elinde kullanabileceğin kaç tane blokun kaldığını söyler."
+          "courseC_maze_programming4_1": "Bu senin blok sınırın. Size bu bloklardan kaç tanesini kullanmak için kaldığınızı söyler."
         },
         "courseD_maze_intro5a_2021": {
           "": "Bu blokların üzerinde sayılar yok. İstediğin kadar kullanabilirsin!"
         },
         "courseD_maze_ramp1_2021": {
-          "grade2_CaringForNewPet_0_1": "Tüm blokları birleştirdikten sonra, ''Çalıştır'' a bas ve programını başlat."
+          "grade2_CaringForNewPet_0_1": "Tüm blokları bağladıktan sonra, programınızı başlatmak için “Çalıştır” a basın."
         },
         "courseD_maze_ramp2_2021": {
           "courseC_maze_programming2_1": "Bu alet kutusudur. Bulmacalarını tamamlamak için bunun içinde fazladan bloklar bulabilirsin."
         },
         "courseD_maze_ramp3_2021": {
-          "courseC_maze_programming3_2": "Fazla blokları atmak için blokları alet kutusuna doğru \n sürükleyebilirsin.",
-          "stone_block_2": "Gri kareler taştan yapılmış ve atılamazlar."
+          "courseC_maze_programming3_2": "Fazla blokları atmak için blokları araç kutusuna doğru \n sürükleyebilirsin.",
+          "stone_block_2": "Gri bloklar atılamazlar."
         },
         "courseD_maze_ramp5_2021": {
           "": "Bu blokların üzerinde sayılar yok. İstediğin kadar kullanabilirsin!"
@@ -1843,7 +1843,7 @@
           "behaviors_edit": "Bu davranışın nasıl çalıştığını görmek için buraya tıklayın."
         },
         "coursea_maze_ramp1_2021": {
-          "grade2_CaringForNewPet_0_1": "Tüm blokları birleştirdikten sonra, ''Çalıştır'' a bas ve programını başlat."
+          "grade2_CaringForNewPet_0_1": "Tüm blokları bir araya getirdikten sonra programınızı başlatmak için \"Çalıştır\"a basın."
         },
         "express_maze_debugging9_2021": {
           "express_maze_debugging9_2019_1": "Araç kutusundan çalışma alanına blokları sürükleyin."

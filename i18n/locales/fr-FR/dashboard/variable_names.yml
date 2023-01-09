@@ -84,8 +84,8 @@ fr:
       screenHeight: écranHauteur
       screenWidth: écranLargeur
       set sides: mettre des côtés
-      setupSimScore1: setupSimScore1
-      setupSimScore2: setupSimScore2
+      setupSimScore1: configurerScoreSim1
+      setupSimScore2: configurerScoreSim2
       shout: hurler
       sides: côtés
       size: taille
