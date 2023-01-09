@@ -1483,7 +1483,7 @@ class Unit < ApplicationRecord
       end
 
       peer_review_lesson_info = {
-        name: I18n.t('peer_review.review_count', {review_count: peer_reviews_to_complete}),
+        name: I18n.t('peer_review.review_count', review_count: peer_reviews_to_complete),
         lesson_group_display_name: 'Peer Review',
         levels: levels,
         lockable: false

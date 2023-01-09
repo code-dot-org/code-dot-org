@@ -4,6 +4,6 @@
   "course_offering_key": "csa",
   "parent_reference_guide_key": "data-structures",
   "display_name": "One-Dimensional (1D) Arrays",
-  "content": null,
+  "content": "## What is a one-dimensional (1D) array?\n\nIn Java, a one-dimensional (1D) array is used to store a list of elements that are of the same data type.\n\n## How do I create a 1D array?\n\nA 1D array can be created using the `new`(#e7e8ea) keyword or an initializer list.\n\n## How do I access an element in a 1D array?\n\nAn **index** refers to an element's position in an array. The index values of an array start at `0`(#e7e8ea), and the last index value is one less than the length of the array.\n\n## How do I change an element's value?\n\nTo change the value of an element in an array, refer to the element using its index and use the assignment operator ( `=`(#e7e8ea) ) to assign a new value.",
   "position": 1
 }

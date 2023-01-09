@@ -202,7 +202,7 @@ class Slack
   private_class_method def self.slackify(message)
     message_copy = message.dup
     message_copy.strip!
-    message_copy = "```#{message_copy[7..-1]}```" if /^\/quote /.match?(message_copy)
+    message_copy = "```#{message_copy[7..]}```" if /^\/quote /.match?(message_copy)
     message_copy.
       gsub(/<\/?i>/, '_').
       gsub(/<\/?b>/, '*').

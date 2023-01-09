@@ -1283,6 +1283,7 @@ export const studentFromServerStudent = (serverStudent, sectionId) => ({
   name: serverStudent.name,
   sharingDisabled: serverStudent.sharing_disabled,
   secretPicturePath: serverStudent.secret_picture_path,
+  secretPictureName: serverStudent.secret_picture_name,
   secretWords: serverStudent.secret_words
 });
 

@@ -126,11 +126,6 @@ Lint/RedundantSafeNavigation:
 Lint/RescueException:
   Enabled: false
 
-# Offense count: 95
-# This cop supports safe auto-correction (--auto-correct).
-Lint/ScriptPermission:
-  Enabled: false
-
 # Offense count: 696
 # This cop supports safe auto-correction (--auto-correct).
 # Configuration parameters: EnforcedStyle.
@@ -609,11 +604,6 @@ Style/RescueModifier:
 # Configuration parameters: EnforcedStyle.
 # SupportedStyles: implicit, explicit
 Style/RescueStandardError:
-  Enabled: false
-
-# Offense count: 38
-# This cop supports unsafe auto-correction (--auto-correct-all).
-Style/SlicingWithRange:
   Enabled: false
 
 # Offense count: 38
