@@ -4,6 +4,18 @@
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
+      "announcements": [
+        {
+          "key": "26f29937-fd4e-4738-8dfe-459f286636f4",
+          "notice": "Extension Lessons with Micro:bit",
+          "details": "Interested in introducing your students to physical computing? Check out our new extension lessons from micro:bit to continue students’ learning.",
+          "link": "https://code.org/maker/csf-microbit",
+          "type": "bullhorn",
+          "visibility": "Teacher-only",
+          "dismissible": true,
+          "buttonText": "Learn more"
+        }
+      ],
       "curriculum_umbrella": "CSF",
       "has_lesson_plan": true,
       "hideable_lessons": true,
@@ -20,7 +32,7 @@
     },
     "new_name": null,
     "family_name": "coursec",
-    "serialized_at": "2022-06-29 14:54:27 UTC",
+    "serialized_at": "2023-01-09 18:46:48 UTC",
     "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -9120,6 +9132,18 @@
       }
     },
     {
+      "name": "Extension Lessons: Micro:bit",
+      "url": "https://code.org/maker/csf-microbit",
+      "key": "extension_lessons_micro_bit",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "extension_lessons_micro_bit"
+      }
+    },
+    {
       "name": "Graphing Data from Play Lab",
       "url": "https://docs.google.com/document/d/177NVkzjc--XVvd5jssO5TZolUTzz9SD5pAw1DazflQ8/edit#heading=h.v577cjs0yrx5",
       "key": "graphing_data_from_play_lab",
@@ -9862,6 +9886,12 @@
     {
       "seeding_key": {
         "resource.key": "debugging_guide_1",
+        "script.name": "coursec-2022"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "extension_lessons_micro_bit",
         "script.name": "coursec-2022"
       }
     },

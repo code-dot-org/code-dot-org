@@ -4,6 +4,18 @@
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
+      "announcements": [
+        {
+          "key": "8f212dd2-169f-4a3d-9880-f76d3372b6c1",
+          "notice": "Extension Lessons with Micro:bit",
+          "details": "Interested in introducing your students to physical computing? Check out our new extension lessons from micro:bit to continue students’ learning.",
+          "link": "https://code.org/maker/csf-microbit",
+          "type": "bullhorn",
+          "visibility": "Teacher-only",
+          "dismissible": true,
+          "buttonText": "Learn more"
+        }
+      ],
       "curriculum_umbrella": "CSF",
       "has_lesson_plan": true,
       "hideable_lessons": true,
@@ -15,7 +27,7 @@
     },
     "new_name": null,
     "family_name": "coursed",
-    "serialized_at": "2023-01-03 22:34:14 UTC",
+    "serialized_at": "2023-01-09 18:46:41 UTC",
     "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -10276,6 +10288,18 @@
       }
     },
     {
+      "name": "Extension Lessons: Micro:bit",
+      "url": "https://code.org/maker/csf-microbit",
+      "key": "extension_lessons_micro_bit",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "extension_lessons_micro_bit"
+      }
+    },
+    {
       "name": "Feeling Faces",
       "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/",
       "key": "feeling_faces",
@@ -11079,6 +11103,12 @@
     {
       "seeding_key": {
         "resource.key": "debugging_guide",
+        "script.name": "coursed-2022"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "extension_lessons_micro_bit",
         "script.name": "coursed-2022"
       }
     },
