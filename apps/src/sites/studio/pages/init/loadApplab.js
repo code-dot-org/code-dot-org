@@ -1,5 +1,6 @@
 import appMain from '@cdo/apps/appMain';
 import Applab from '@cdo/apps/applab/applab';
+console.log('assigning window.Applab to Applab in loadApplab.js');
 window.Applab = Applab;
 if (typeof global !== 'undefined') {
   global.Applab = window.Applab;

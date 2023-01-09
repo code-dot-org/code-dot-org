@@ -59,6 +59,8 @@ EventSandboxer.prototype.setTransformFromElement = function(element) {
   }
   this.xOffset_ = xOffset;
   this.yOffset_ = yOffset;
+  console.log('xOffset and yOffset computed');
+  console.log(this.xOffset_ + ' ' + this.yOffset_);
 };
 
 /**
@@ -69,6 +71,7 @@ EventSandboxer.prototype.setTransformFromElement = function(element) {
  * @throws {TypeError} if event is null or not an object
  */
 EventSandboxer.prototype.sandboxEvent = function(event) {
+  console.log('EventSandboxer.sandboxEvent');
   if (event === null || typeof event !== 'object') {
     throw new TypeError(
       'Failed to sandbox event: Expected an event object, but got ' + event
@@ -162,6 +165,9 @@ EventSandboxer.prototype.sandboxEvent = function(event) {
       newEvent[prop] = (mouseEvent[prop] - this.xOffset_) / this.xScale_;
     }
   }, this);
+  // console.log(newEvent.clientX);
+  // console.log(newEvent.pageX);
+  // console.log(newEvent.x);
   // Convert y coordinates and then pass through to applabEvent:
   ['clientY', 'pageY', 'y'].forEach(function(prop) {
     if (typeof mouseEvent[prop] !== 'undefined') {

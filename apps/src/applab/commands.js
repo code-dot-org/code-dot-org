@@ -266,6 +266,7 @@ applabCommands.hide = function(opts) {
 };
 
 applabCommands.moveTo = function(opts) {
+  console.log('moveTo called');
   apiValidateType(opts, 'moveTo', 'x', opts.x, 'number');
   apiValidateType(opts, 'moveTo', 'y', opts.y, 'number');
   var ctx = applabTurtle.getTurtleContext();
@@ -1472,8 +1473,8 @@ applabCommands.onEventFired = function(opts, e) {
 };
 
 applabCommands.onEvent = function(opts) {
-  // console.log('inside applabCommands.onEvent');
-  // console.log(opts);
+  console.log('inside applabCommands.onEvent');
+  console.log(opts);
   var divApplab = document.getElementById('divApplab');
   //console.log(divApplab);
   // Special case the id of 'body' to mean the app's container (divApplab)

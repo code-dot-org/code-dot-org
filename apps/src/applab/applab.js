@@ -1048,6 +1048,7 @@ Applab.toggleDivApplab = function(isVisible) {
  * reset and initialize the state of the turtle object
  */
 Applab.resetTurtle = function() {
+  console.log('resetTurtle in applab.js');
   Applab.turtle = {};
   Applab.turtle.heading = 0;
   Applab.turtle.x = Applab.appWidth / 2;
