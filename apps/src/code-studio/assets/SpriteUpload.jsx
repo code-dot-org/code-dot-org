@@ -5,6 +5,7 @@ import ValidationStep, {Status} from '../../lib/ui/ValidationStep';
 import {
   getManifest,
   getLevelAnimationsFiles,
+  getSourceUrlForLevelAnimation,
   uploadAnimationToAnimationLibrary,
   uploadMetadataToAnimationLibrary
 } from '@cdo/apps/assetManagement/animationLibraryApi';
@@ -16,9 +17,9 @@ const ANIMATION_EXISTS_CHECK = 'animationExistsError';
 const AnimationLocations = makeEnum('library', 'level');
 
 const initialSpriteLabLibrariesState = {
-  spriteLabLevelAnimations: [],
+  spriteLabLevelAnimations: {},
   spriteLabLibraryCategories: [],
-  spriteLabLibraryAnimations: []
+  spriteLabLibraryAnimations: {}
 };
 
 const newImageState = {
@@ -64,17 +65,18 @@ export default class AnimationUpload extends React.Component {
     uploadStatus: Status.WAITING,
     errorMessage: ''
   };
+
   componentDidMount() {
     // Get list of animations from level-specific folder
     getLevelAnimationsFiles().then(files => {
-      this.setState({spriteLabLevelAnimations: Object.keys(files)});
+      this.setState({spriteLabLevelAnimations: files});
     });
 
     // Get data from the spritelab animation library manifest
     getManifest('spritelab', 'en_us').then(data => {
       this.setState({
         spriteLabLibraryCategories: Object.keys(data.categories),
-        spriteLabLibraryAnimations: Object.keys(data.metadata)
+        spriteLabLibraryAnimations: data.metadata
       });
     });
   }
@@ -144,7 +146,8 @@ export default class AnimationUpload extends React.Component {
         filePreviewURL: URL.createObjectURL(file),
         ...imageChecksInitialState,
         ...initialGeneratedMetadata,
-        uploadStatus: Status.WAITING
+        uploadStatus: Status.WAITING,
+        replaceExistingAnimation: false
       },
       () => {
         // If the user has already completed Step 2, we can already check whether the animation exists.
@@ -212,7 +215,8 @@ export default class AnimationUpload extends React.Component {
         category: '',
         metadata: '',
         destination: '',
-        [ANIMATION_EXISTS_CHECK]: Status.WAITING
+        [ANIMATION_EXISTS_CHECK]: Status.WAITING,
+        replaceExistingAnimation: false
       },
       () => {
         if (this.state.availability === AnimationLocations.level) {
@@ -234,7 +238,8 @@ export default class AnimationUpload extends React.Component {
       {
         category: value,
         metadata: '',
-        [ANIMATION_EXISTS_CHECK]: Status.WAITING
+        [ANIMATION_EXISTS_CHECK]: Status.WAITING,
+        replaceExistingAnimation: false
       },
       () => {
         this.determineIfAnimationAlreadyExists(
@@ -265,7 +270,7 @@ export default class AnimationUpload extends React.Component {
     }
     if (availability === AnimationLocations.library && category === '') {
       this.setState({
-        [ANIMATION_EXISTS_CHECK]: Status.ALERT,
+        [ANIMATION_EXISTS_CHECK]: Status.WAITING,
         destination: 'No category selected'
       });
       return;
@@ -275,11 +280,15 @@ export default class AnimationUpload extends React.Component {
     switch (availability) {
       case AnimationLocations.level:
         destination = `level_animations/${filename}`;
-        animationExists = spriteLabLevelAnimations.includes(destination);
+        animationExists = Object.keys(spriteLabLevelAnimations).includes(
+          destination
+        );
         break;
       case AnimationLocations.library:
         destination = `category_${category}/${filename}`;
-        animationExists = spriteLabLibraryAnimations.includes(destination);
+        animationExists = Object.keys(spriteLabLibraryAnimations).includes(
+          destination
+        );
         break;
     }
     this.setState({
@@ -309,11 +318,12 @@ export default class AnimationUpload extends React.Component {
       case Status.SUCCEEDED:
         return 'This path and filename are available.';
       case Status.ALERT:
-        return 'Filename already exists at this path. Please rename and reupload, then try again.';
+        return 'Filename already exists at this path. Would you like to replace the existing animation?';
       case Status.WAITING:
         return 'Select a file and destination above.';
     }
   }
+
   uploadStatusMessage() {
     switch (this.state.uploadStatus) {
       case Status.CELEBRATING:
@@ -326,6 +336,41 @@ export default class AnimationUpload extends React.Component {
         return 'Waiting...';
     }
   }
+
+  handleReplaceExistingAnimation = event => {
+    this.setState({replaceExistingAnimation: event.target.checked});
+  };
+
+  validImage = () => {
+    const statusChecksPassed = [
+      this.state[EXTENSION_CHECK],
+      this.state[FILENAME_CHECK],
+      this.state[FILESIZE_CHECK]
+    ].every(status => status === Status.SUCCEEDED);
+    const animationExistsCheckPassed =
+      this.state[ANIMATION_EXISTS_CHECK] === Status.SUCCEEDED ||
+      (this.state[ANIMATION_EXISTS_CHECK] === Status.ALERT &&
+        this.state.replaceExistingAnimation);
+
+    return statusChecksPassed && animationExistsCheckPassed;
+  };
+
+  getExistingAnimationSrc = () => {
+    const {availability, destination} = this.state;
+
+    if (availability === AnimationLocations.level) {
+      const {filename, spriteLabLevelAnimations} = this.state;
+      const versionId = spriteLabLevelAnimations[destination]?.png.version_id;
+      return getSourceUrlForLevelAnimation(versionId, filename);
+    }
+
+    if (availability === AnimationLocations.library) {
+      const {spriteLabLibraryAnimations} = this.state;
+      return spriteLabLibraryAnimations[destination]?.sourceUrl;
+    }
+
+    return '';
+  };
 
   render() {
     const {
@@ -341,22 +386,18 @@ export default class AnimationUpload extends React.Component {
       metadata,
       uploadStatus
     } = this.state;
-    const validImage = [
-      this.state[EXTENSION_CHECK],
-      this.state[FILENAME_CHECK],
-      this.state[FILESIZE_CHECK],
-      this.state[ANIMATION_EXISTS_CHECK]
-    ].every(status => status === Status.SUCCEEDED);
+    const validImage = this.validImage();
     const validCategory =
       category !== '' || availability === AnimationLocations.level;
-    const animationExists = this.state[ANIMATION_EXISTS_CHECK];
+    const animationExistsStatus = this.state[ANIMATION_EXISTS_CHECK];
 
     const librariesLoaded =
-      spriteLabLevelAnimations.length > 0 &&
-      spriteLabLibraryAnimations.length > 0 &&
+      Object.keys(spriteLabLevelAnimations).length > 0 &&
+      Object.keys(spriteLabLibraryAnimations).length > 0 &&
       spriteLabLibraryCategories.length > 0;
     const metadataButtonDisabled = !validImage || !validCategory;
     const uploadButtonDisabled = !validImage || !validCategory || !metadata;
+
     return (
       <div>
         <a href="/sprites">Back to Asset Management</a>
@@ -502,17 +543,32 @@ export default class AnimationUpload extends React.Component {
               Animation Upload Destination:{' '}
               <span
                 style={{
-                  ...(animationExists === Status.FAILED && styles.checkFail)
+                  ...(animationExistsStatus === Status.FAILED &&
+                    styles.checkFail)
                 }}
               >
                 {destination}
               </span>
               <div style={styles.testFeedbackBox}>
                 <ValidationStep
-                  stepStatus={animationExists}
+                  stepStatus={animationExistsStatus}
                   stepName={this.animationExistsMessage()}
                   hideWaitingSteps={false}
                 />
+                {animationExistsStatus === Status.ALERT && (
+                  <div style={styles.animationReplace}>
+                    <img src={this.getExistingAnimationSrc()} />
+                    <label>
+                      <input
+                        type="checkbox"
+                        style={styles.checkbox}
+                        value={this.state.replaceExistingAnimation}
+                        onChange={this.handleReplaceExistingAnimation}
+                      />
+                      Replace animation
+                    </label>
+                  </div>
+                )}
               </div>
             </div>
           )}
@@ -584,6 +640,14 @@ const styles = {
   },
   radioButton: {
     margin: 10
+  },
+  animationReplace: {
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center'
+  },
+  checkbox: {
+    margin: '0 4px'
   },
   testFeedbackBox: {
     backgroundColor: color.almost_white_cyan,

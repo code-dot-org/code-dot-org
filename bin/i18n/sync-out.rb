@@ -181,6 +181,10 @@ def restore_redacted_files
           plugins << 'vocabularyDefinition'
         elsif original_path.starts_with? "i18n/locales/original/curriculum_content"
           plugins.push(*Services::I18n::CurriculumSyncUtils::REDACT_RESTORE_PLUGINS)
+        elsif original_path.starts_with? "i18n/locales/original/docs"
+          plugins << 'visualCodeBlock'
+          plugins << 'link'
+          plugins << 'resourceLink'
         elsif %w(applab gamelab weblab).include?(File.basename(original_path, '.json'))
           plugins << 'link'
         end
@@ -459,16 +463,22 @@ def distribute_translations(upload_manifests)
 
     ### Docs
     Dir.glob("i18n/locales/#{locale}/docs/*.json") do |loc_file|
+      # Each programming environment file gets merged into programming_environments.{locale}.json
       relative_path = loc_file.delete_prefix(locale_dir)
       next unless file_changed?(locale, relative_path)
 
-      basename = File.basename(loc_file, '.json')
-      destination = "dashboard/config/locales/#{basename}.#{locale}.json"
-
-      # JSON files in this directory need the root key to be set to the locale
       loc_data = JSON.parse(File.read(loc_file))
-      loc_data = wrap_with_locale(loc_data, locale, basename)
-      sanitize_data_and_write(loc_data, destination)
+      next if loc_data.empty?
+
+      programming_env = File.basename(loc_file, '.json')
+      destination = "dashboard/config/locales/programming_environments.#{locale}.json"
+      programming_env_data = File.exist?(destination) ?
+                               parse_file(destination).dig(locale, "data", "programming_environments") || {} :
+                               {}
+      programming_env_data[programming_env] = loc_data[programming_env]
+      # JSON files in this directory need the root key to be set to the locale
+      programming_env_data = wrap_with_locale(programming_env_data, locale, "programming_environments")
+      sanitize_data_and_write(programming_env_data, destination)
     end
 
     ### Standards

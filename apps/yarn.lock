@@ -1334,10 +1334,10 @@
   resolved "https://registry.yarnpkg.com/@code-dot-org/dance-party/-/dance-party-1.0.5.tgz#0872991761e8f4458c73ba3b7f288b2e747af240"
   integrity sha512-Wr4zQgSpBh/Pus0+91Cshl93efew051PfVM4BBzcf0hqNGMVGj8Pztgvtqew07AnMrjxBVDITSlLzCfhHmyBQw==
 
-"@code-dot-org/johnny-five@2.1.0-cdo.1":
-  version "2.1.0-cdo.1"
-  resolved "https://registry.yarnpkg.com/@code-dot-org/johnny-five/-/johnny-five-2.1.0-cdo.1.tgz#6042ea1ca0dcea42d45a620df39846946d321887"
-  integrity sha512-zaoX0bO4X6QS2X1N7LCpjpHwhrWm/37ertP0HJzibTsVSqBJRu931gYNO/3G1Gi/jpHxMGeaPJWARIFbrPJhfg==
+"@code-dot-org/johnny-five@2.1.0-cdo.3":
+  version "2.1.0-cdo.3"
+  resolved "https://registry.yarnpkg.com/@code-dot-org/johnny-five/-/johnny-five-2.1.0-cdo.3.tgz#57e3ddb006d1874903e55208bba6175733d38ee0"
+  integrity sha512-MLNqeRMMWIx1fNUDSf+XT5flqOAjekWFv/20pTYbKhtkJsBDoEjZfWv5x+YIpeHsVjiI8xGcC1+9gIw38tXoPQ==
   dependencies:
     chalk "2.1.0"
     color-convert "~1.2.2"
