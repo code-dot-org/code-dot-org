@@ -28,7 +28,9 @@ const TimelineSampleEvents = ({
   );
 
   const getVerticalOffsetForEventId = id => {
-    return getUniqueIndexForEventId(id) * getEventHeight();
+    return (
+      getUniqueIndexForEventId(id) * getEventHeight(currentUniqueSounds.length)
+    );
   };
 
   const getUniqueIndexForEventId = id => {
