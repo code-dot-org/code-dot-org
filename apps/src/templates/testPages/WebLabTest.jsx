@@ -44,7 +44,7 @@ class WebLabTest extends Component {
         },
         () => {
           this.setState({[status]: Status.FAILED});
-          return resolve(null);
+          return resolve();
         }
       );
     });
@@ -172,6 +172,7 @@ class WebLabTest extends Component {
                 </button>
               </div>
               {this.state.renderCallToAction && this.renderCallToAction()}
+              <br />
             </div>
           </div>
         </div>
