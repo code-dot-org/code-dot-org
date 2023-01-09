@@ -12,7 +12,7 @@ import AnalyticsReporter from './analytics/AnalyticsReporter';
 import {getStore} from '@cdo/apps/redux';
 import {SignInState} from '@cdo/apps/templates/currentUserRedux';
 import moduleStyles from './music.module.scss';
-import {AnalyticsContext} from './context';
+import {AnalyticsContext, PlayerUtilsContext} from './context';
 import TopButtons from './TopButtons';
 import Globals from './globals';
 import MusicBlocklyWorkspace from './blockly/MusicBlocklyWorkspace';
@@ -98,7 +98,8 @@ class UnconnectedMusicView extends React.Component {
       this.setState({library});
       this.musicBlocklyWorkspace.init(
         document.getElementById('blockly-div'),
-        this.onBlockSpaceChange
+        this.onBlockSpaceChange,
+        this.player
       );
       this.player.initialize(library);
       setInterval(this.updateTimer, 1000 / 30);
@@ -335,10 +336,6 @@ class UnconnectedMusicView extends React.Component {
   }
 
   renderTimelineArea(timelineAtTop, instructionsOnRight) {
-    const songData = {
-      events: this.player.getSoundEvents()
-    };
-
     return (
       <div
         id="timeline-area"
@@ -357,12 +354,7 @@ class UnconnectedMusicView extends React.Component {
         />
         <Timeline
           isPlaying={this.state.isPlaying}
-          songData={songData}
           currentAudioElapsedTime={this.state.currentAudioElapsedTime}
-          convertMeasureToSeconds={measure =>
-            this.player.convertMeasureToSeconds(measure)
-          }
-          currentMeasure={this.player.getCurrentMeasure()}
           sounds={this.getCurrentGroupSounds()}
         />
       </div>
@@ -375,43 +367,53 @@ class UnconnectedMusicView extends React.Component {
 
     return (
       <AnalyticsContext.Provider value={this.analyticsReporter}>
-        <div id="music-lab-container" className={moduleStyles.container}>
-          {this.state.showInstructions &&
-            instructionsPosition === InstructionsPositions.TOP &&
-            this.renderInstructions(InstructionsPositions.TOP)}
-
-          {this.state.timelineAtTop &&
-            this.renderTimelineArea(
-              true,
-              instructionsPosition === InstructionsPositions.RIGHT
-            )}
-
-          <div className={moduleStyles.middleArea}>
+        <PlayerUtilsContext.Provider
+          value={{
+            getSoundEvents: () => this.player.getSoundEvents(),
+            getCurrentMeasure: () => this.player.getCurrentMeasure(),
+            convertMeasureToSeconds: measure =>
+              this.player.convertMeasureToSeconds(measure),
+            getTracksMetadata: () => this.player.getTracksMetadata()
+          }}
+        >
+          <div id="music-lab-container" className={moduleStyles.container}>
             {this.state.showInstructions &&
-              instructionsPosition === InstructionsPositions.LEFT &&
-              this.renderInstructions(InstructionsPositions.LEFT)}
+              instructionsPosition === InstructionsPositions.TOP &&
+              this.renderInstructions(InstructionsPositions.TOP)}
 
-            <div id="blockly-area" className={moduleStyles.blocklyArea}>
-              <div className={moduleStyles.topButtonsContainer}>
-                <TopButtons
-                  clearCode={this.clearCode}
-                  uploadSound={file => this.soundUploader.uploadSound(file)}
-                />
+            {this.state.timelineAtTop &&
+              this.renderTimelineArea(
+                true,
+                instructionsPosition === InstructionsPositions.RIGHT
+              )}
+
+            <div className={moduleStyles.middleArea}>
+              {this.state.showInstructions &&
+                instructionsPosition === InstructionsPositions.LEFT &&
+                this.renderInstructions(InstructionsPositions.LEFT)}
+
+              <div id="blockly-area" className={moduleStyles.blocklyArea}>
+                <div className={moduleStyles.topButtonsContainer}>
+                  <TopButtons
+                    clearCode={this.clearCode}
+                    uploadSound={file => this.soundUploader.uploadSound(file)}
+                  />
+                </div>
+                <div id="blockly-div" />
               </div>
-              <div id="blockly-div" />
+
+              {this.state.showInstructions &&
+                instructionsPosition === InstructionsPositions.RIGHT &&
+                this.renderInstructions(InstructionsPositions.RIGHT)}
             </div>
 
-            {this.state.showInstructions &&
-              instructionsPosition === InstructionsPositions.RIGHT &&
-              this.renderInstructions(InstructionsPositions.RIGHT)}
+            {!this.state.timelineAtTop &&
+              this.renderTimelineArea(
+                false,
+                instructionsPosition === InstructionsPositions.RIGHT
+              )}
           </div>
-
-          {!this.state.timelineAtTop &&
-            this.renderTimelineArea(
-              false,
-              instructionsPosition === InstructionsPositions.RIGHT
-            )}
-        </div>
+        </PlayerUtilsContext.Provider>
       </AnalyticsContext.Provider>
     );
   }
