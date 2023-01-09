@@ -11,6 +11,7 @@
 #   code.org/prize
 #   code.org/hourofcode2022
 #   code.org/maker
+#   code.org/maker/csf-microbit
 #
 #   hourofcode.com/
 #   hourofcode.com/learn
@@ -52,6 +53,7 @@ def get_social_metadata_for_page(request)
     cs_leaders_prize: {path: "/images/social-media/cs-leaders-prize-opengraph.png", width: 1200, height: 630},
     hoc_2022_landing_page: {path: "/shared/images/social-media/hoc2022_social_landing_page.png", width: 1200, height: 630},
     maker_physical_computing: {path: "/shared/images/social-media/maker_social.png", width: 1200, height: 630},
+    csf_microbit: {path: "/shared/images/social-media/csf_microbit_social.png", width: 1200, height: 630},
   }
 
   # Important:
@@ -181,6 +183,13 @@ def get_social_metadata_for_page(request)
         image: images[:maker_physical_computing]
       }
     },
+    "csf-microbit" => {
+      "default" => {
+        title: hoc_s(:social_csf_microbit_title),
+        description: hoc_s(:social_csf_microbit_desc),
+        image: images[:csf_microbit]
+      }
+    },
   }
 
   if request.path == "/challenge" && request.site == "code.org"
@@ -209,6 +218,8 @@ def get_social_metadata_for_page(request)
     page = "hoc-2022-landing-page"
   elsif request.path == "/maker" && request.site == "code.org"
     page = "maker"
+  elsif request.path == "/maker/csf-microbit" && request.site == "code.org"
+    page = "csf-microbit"
   else
     return {}
   end
