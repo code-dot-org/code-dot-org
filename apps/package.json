@@ -286,6 +286,8 @@
     "stream-browserify": "^3.0.0",
     "survey-react": "^1.9.28",
     "timers-browserify": "^2.0.12",
+    "wavesurfer": "^1.3.4",
+    "wavesurfer.js": "^6.3.0",
     "wgxpath": "^1.2.0",
     "whatwg-fetch": "^2.0.3"
   }

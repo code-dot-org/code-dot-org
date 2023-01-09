@@ -18234,6 +18234,16 @@ watchpack@^2.2.0, watchpack@^2.4.0:
     glob-to-regexp "^0.4.1"
     graceful-fs "^4.1.2"
 
+wavesurfer.js@^6.3.0:
+  version "6.3.0"
+  resolved "https://registry.yarnpkg.com/wavesurfer.js/-/wavesurfer.js-6.3.0.tgz#b6ff4bafd537191989b2088ffc58c35ea3916608"
+  integrity sha512-x7efObHMHY3nwqWzIC0yeZTo0u/aC9T5Av6KhSdhTlsgtKdTG7JAE3mNqnYBXUjq0yGYfTB9F85/pks9830Vjw==
+
+wavesurfer@^1.3.4:
+  version "1.3.4"
+  resolved "https://registry.yarnpkg.com/wavesurfer/-/wavesurfer-1.3.4.tgz#17908abd20da11a8db460c5a176679621d519bfa"
+  integrity sha512-Td6t6x8vtBWHQu8ijX+OW5O1z3uDOmHrvOl2P7l1638Cy+8MWLM6kYYp7UDNQc3OZgukm8T6Z5+Dnvie9Rjw0w==
+
 wbuf@^1.1.0:
   version "1.7.2"
   resolved "https://registry.yarnpkg.com/wbuf/-/wbuf-1.7.2.tgz#d697b99f1f59512df2751be42769c1580b5801fe"

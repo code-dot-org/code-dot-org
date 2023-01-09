@@ -749,7 +749,9 @@ describe('entry tests', () => {
     'sprite_management/release_default_sprites_to_production':
       './src/sites/studio/pages/sprite_management/release_default_sprites_to_production.js',
     'sprite_management/select_start_animations':
-      './src/sites/studio/pages/sprite_management/select_start_animations.js'
+      './src/sites/studio/pages/sprite_management/select_start_animations.js',
+    'dance_party_management/upload_song':
+      './src/sites/studio/pages/dance_party_management/upload_song.js'
   };
 
   var pegasusEntries = {
