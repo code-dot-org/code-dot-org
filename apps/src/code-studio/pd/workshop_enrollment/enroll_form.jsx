@@ -382,10 +382,8 @@ export default class EnrollForm extends React.Component {
     ]);
 
     const roles =
-      (this.props.workshop_course === CSF &&
-        CSF_ROLES.map(r => ({value: r, label: r}))) ||
-      (this.props.workshop_course === ADMINCOUNSELOR &&
-        ADMIN_COUNSELOR_ROLES.map(r => ({value: r, label: r})));
+      (this.props.workshop_course === CSF && CSF_ROLES) ||
+      (this.props.workshop_course === ADMINCOUNSELOR && ADMIN_COUNSELOR_ROLES);
 
     return (
       <form id="enroll-form">
@@ -480,7 +478,7 @@ export default class EnrollForm extends React.Component {
                 placeholder={null}
                 value={this.state.role}
                 onChange={this.handleRoleChange}
-                options={roles}
+                options={roles.map(r => ({value: r, label: r}))}
               />
               <HelpBlock>{this.state.errors.role}</HelpBlock>
               {this.state && DESCRIBE_ROLES.includes(this.state.role) && (
