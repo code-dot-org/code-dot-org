@@ -48,6 +48,7 @@ import {
   PROGRAM_CSA,
   getProgramInfo
 } from '../application/teacher/TeacherApplicationConstants';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 
 const NA = 'N/A';
 
@@ -60,6 +61,8 @@ const PROGRAM_MAP = {
   csp: PROGRAM_CSP,
   csa: PROGRAM_CSA
 };
+
+const APP_STATUS_CHANGE_EVENT = 'Application Status Changed';
 
 export class DetailViewContents extends React.Component {
   static propTypes = {
@@ -226,6 +229,10 @@ export class DetailViewContents extends React.Component {
     } else {
       this.setState({
         status: event.target.value
+      });
+      analyticsReporter.sendEvent(APP_STATUS_CHANGE_EVENT, {
+        'application id': this.props.applicationId,
+        'application status': event.target.value
       });
     }
   };
@@ -810,6 +817,12 @@ export class DetailViewContents extends React.Component {
     this.setState({principalApproval});
     this.setState({
       principalApprovalIsRequired: !this.state.principalApprovalIsRequired
+    });
+    analyticsReporter.sendEvent(APP_STATUS_CHANGE_EVENT, {
+      'application id': this.props.applicationId,
+      'application status': this.state.principalApprovalIsRequired
+        ? 'awaiting_admin_approval'
+        : 'unreviewed'
     });
   };
 
