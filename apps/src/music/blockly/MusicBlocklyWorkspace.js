@@ -116,8 +116,20 @@ export default class MusicBlocklyWorkspace {
     return this.workspace.getAllBlocks();
   }
 
+  getLocalStorageKeyName() {
+    // Save code for each block mode in a different local storage item.
+    // This way, switching block modes will load appropriate user code.
+    // The default is "Advanced".
+
+    const blockMode = AppConfig.getValue('blocks');
+    const blockModeUpperFirst = blockMode
+      ? blockMode.replace(/^./, str => str.toUpperCase())
+      : 'Advanced';
+    return 'musicLabSavedCode' + blockModeUpperFirst;
+  }
+
   loadCode() {
-    const existingCode = localStorage.getItem('musicLabSavedCode');
+    const existingCode = localStorage.getItem(this.getLocalStorageKeyName());
     if (existingCode) {
       const exitingCodeJson = JSON.parse(existingCode);
       Blockly.blockly_.serialization.workspaces.load(
@@ -132,7 +144,7 @@ export default class MusicBlocklyWorkspace {
   saveCode() {
     const code = Blockly.blockly_.serialization.workspaces.save(this.workspace);
     const codeJson = JSON.stringify(code);
-    localStorage.setItem('musicLabSavedCode', codeJson);
+    localStorage.setItem(this.getLocalStorageKeyName(), codeJson);
   }
 
   resetCode() {
