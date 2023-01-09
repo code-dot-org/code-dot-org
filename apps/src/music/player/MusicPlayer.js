@@ -27,6 +27,7 @@ export default class MusicPlayer {
     this.library = {};
     this.groupPrefix = 'all';
     this.isInitialized = false;
+    this.tracksMetadata = {};
   }
 
   initialize(library) {
@@ -48,7 +49,7 @@ export default class MusicPlayer {
     LoadSoundFromBuffer(id, buffer);
   }
 
-  playSoundAtMeasureById(id, measure, insideWhenRun) {
+  playSoundAtMeasureById(id, measure, insideWhenRun, trackId) {
     if (!this.isInitialized) {
       console.log('MusicPlayer not initialized');
       return;
@@ -66,7 +67,8 @@ export default class MusicPlayer {
       type: EventType.PLAY,
       id,
       insideWhenRun,
-      when: measure - 1
+      when: measure - 1,
+      trackId
     };
 
     this.soundEvents.push(soundEvent);
@@ -153,16 +155,27 @@ export default class MusicPlayer {
     this.soundEvents = this.soundEvents.filter(
       soundEvent => !soundEvent.insideWhenRun
     );
+    Object.keys(this.tracksMetadata).forEach(trackId => {
+      if (this.tracksMetadata[trackId].insideWhenRun) {
+        delete this.tracksMetadata[trackId];
+      }
+    });
   }
 
   clearTriggeredEvents() {
     this.soundEvents = this.soundEvents.filter(
       soundEvent => soundEvent.insideWhenRun
     );
+    Object.keys(this.tracksMetadata).forEach(trackId => {
+      if (!this.tracksMetadata[trackId].insideWhenRun) {
+        delete this.tracksMetadata[trackId];
+      }
+    });
   }
 
   clearAllSoundEvents() {
     this.soundEvents = [];
+    this.clearTracksData();
   }
 
   stopAndCancelPreviews() {
@@ -252,5 +265,71 @@ export default class MusicPlayer {
 
   secondsPerMeasure() {
     return (60 / this.bpm) * BEATS_PER_MEASURE;
+  }
+
+  createTrack(id, name, measureStart, insideWhenRun) {
+    if (id === null) {
+      console.warn(`Invalid track ID`);
+      return;
+    }
+
+    if (this.tracksMetadata[id]) {
+      console.warn(`Track ${id}: ${name} already exists!`);
+      return;
+    }
+
+    this.tracksMetadata[id] = {
+      name,
+      insideWhenRun,
+      currentMeasure: measureStart
+    };
+  }
+
+  addSoundToTrack(trackId, soundId) {
+    if (!this.tracksMetadata[trackId]) {
+      console.warn('No track with ID: ' + trackId);
+      return;
+    }
+
+    const {currentMeasure, insideWhenRun} = this.tracksMetadata[trackId];
+
+    this.playSoundAtMeasureById(
+      soundId,
+      currentMeasure,
+      insideWhenRun,
+      trackId
+    );
+
+    this.tracksMetadata[trackId].currentMeasure += this.getLengthForId(soundId);
+  }
+
+  addRestToTrack(trackId, lengthMeasures) {
+    if (!this.tracksMetadata[trackId]) {
+      console.warn('No track with ID: ' + trackId);
+      return;
+    }
+
+    this.tracksMetadata[trackId].currentMeasure += lengthMeasures;
+  }
+
+  clearTracksData() {
+    this.tracksMetadata = {};
+  }
+
+  getTracksMetadata() {
+    return this.tracksMetadata;
+  }
+
+  getLengthForId(id) {
+    const splitId = id.split('/');
+    const path = splitId[0];
+    const src = splitId[1];
+
+    const folder = this.library.groups[0].folders.find(
+      folder => folder.path === path
+    );
+    const sound = folder.sounds.find(sound => sound.src === src);
+
+    return sound.length;
   }
 }
