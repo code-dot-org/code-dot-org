@@ -2,8 +2,8 @@ import PropTypes from 'prop-types';
 import React, {useRef, useContext} from 'react';
 import moduleStyles from './timeline.module.scss';
 import classNames from 'classnames';
-import UniqueSounds from './utils/UniqueSounds';
-import {PlayerUtilsContext} from './context';
+import UniqueSounds from '../utils/UniqueSounds';
+import {PlayerUtilsContext} from '../context';
 
 /**
  * Renders timeline events, organized by unique sample ID.
