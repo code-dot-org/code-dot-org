@@ -537,36 +537,32 @@ sv:
       body_short: "Utveckla en app, bygg den med blocks eller JavaScript. När du har fått den att fungerar som du tänkte kan du inom några sekunder dela med dig av den till andra."
       audience: 'Ålder 13+'
       cta: 'Läs mer'
-    dance:
-      title: 'Dansparty'
+    aquatic:
+      title: "Minecraft"
     dance-2019:
       title: 'Dansparty'
-    hoc:
-      title: 'Klassisk labyrint'
-      body: 'Lär dig grunderna i programmering. Miljoner har provat denna.'
+    dance:
+      title: 'Dansparty'
     flappy:
       title: 'Flappy kod'
       body: 'Vill du skriva ditt egna spel på mindre än 10 minuter? Prova vår Flappy Code övning!'
-    20-hour:
-      title: 'Snabbkurs'
-      body: 'Denna 20-timmars kurs introducerar grundläggande datavetenskap och programmeringsbegrepp. Kursen är utformad för användning i klassrummet från förskoleklass till årskurs 8, men det är roligt att lära sig i alla åldrar.'
-      body_short: 'Lär dig grundläggande datavetenskap i en snabbare version av kurser 2-4.'
-    hoc2014:
-      try_new_tutorial: 'Prova vår nya Hour of Code övning i betaversion'
-      try_frozen: 'Konstnären, med Anna och Elsa från Frost'
+    frozen:
+      title: "Frost"
     gallery:
       title: "Galleri"
       body: "Se ett galleri av app och artist bilder som skapats av våra användare"
     gamelab:
       audience: "Ålder 13+"
       cta: "Läs mer"
-    weblab:
-      audience: "Ålder 13+"
-      cta: "Läs mer"
-    frozen:
-      title: "Frost"
-    starwars:
-      title: "Star Wars"
+    hero:
+      title: "Minecraft"
+      body: "Minecraft är tillbaka för Hour of Code med en helt ny aktivitet! Res genom Minecraft via koden."
+    hoc:
+      title: 'Klassisk labyrint'
+      body: 'Lär dig grunderna i programmering. Miljoner har provat denna.'
+    hoc2014:
+      try_new_tutorial: 'Prova vår nya Hour of Code övning i betaversion'
+      try_frozen: 'Konstnären, med Anna och Elsa från Frost'
     infinity:
       title: "Infinity Play Lab"
       body: "Använd Play Lab för att skapa en berättelse eller ett spel med Disney Infinity karaktärer i huvudrollen ."
@@ -576,25 +572,29 @@ sv:
     minecraft2016:
       title: "Minecraft"
       body: "Programmera djur och andra Minecraft varelser i din egen version av Minecraft."
-    aquatic:
-      title: "Minecraft"
-    hero:
-      title: "Minecraft"
-      body: "Minecraft är tillbaka för Hour of Code med en helt ny aktivitet! Res genom Minecraft via koden."
     sports:
       title: "Sport"
+    starwars:
+      title: "Star Wars"
     text-compression:
       title: "Text komprimering"
+    weblab:
+      audience: "Ålder 13+"
+      cta: "Läs mer"
+    widgets:
+      audience: "Ålder 14+"
+      cta: "Läs mer"
+    unplugged_conditionals:
+      title: "Villkor"
     unplugged:
       title: "Lektioner där du inte behöver tillgång till en dator"
       audience: "Ålder 4+"
       body: "Vi har sammanställt en lista över lektioner som du kan använda i klassrummet där du inte behöver tillgång till en dator. Nu kan du lära grunderna i datavetenskap, om du har datorer i klassrummet eller inte! Prova att använda dessa lektioner som en fristående kurs eller som kompletterande lektioner för någon datavetenskapskurs."
       body_short: "Om du inte har några datorer tillgängliga, prova dessa \"unplugged\" lektioner i klassrummet."
-    unplugged_conditionals:
-      title: "Villkor"
-    widgets:
-      audience: "Ålder 14+"
-      cta: "Läs mer"
+    20-hour:
+      title: 'Snabbkurs'
+      body: 'Denna 20-timmars kurs introducerar grundläggande datavetenskap och programmeringsbegrepp. Kursen är utformad för användning i klassrummet från förskoleklass till årskurs 8, men det är roligt att lära sig i alla åldrar.'
+      body_short: 'Lär dig grundläggande datavetenskap i en snabbare version av kurser 2-4.'
   landing:
     report_bug: "Rapportera bugg"
     support: "Få hjälp"
