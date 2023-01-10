@@ -2170,11 +2170,11 @@ class UserTest < ActiveSupport::TestCase
       new_email: taken_email
   end
 
-  def update_primary_contact_info_fails_safely_for(user, *params)
+  def update_primary_contact_info_fails_safely_for(user, **params)
     original_primary_contact_info = user.primary_contact_info
 
     refute_creates_or_destroys AuthenticationOption do
-      refute user.update_primary_contact_info(*params)
+      refute user.update_primary_contact_info(**params)
     end
 
     user.reload

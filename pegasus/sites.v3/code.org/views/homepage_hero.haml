@@ -52,6 +52,8 @@
           = I18n.t(entry[:text])
       - elsif entry[:type] == "image"
         %img.image{src: entry[:url]}
+      - elsif entry[:type] == "image-tablet"
+        %img.image-tablet{src: entry[:url]}
       - elsif entry[:type] == "cta_link_white"
         %a.herohocbutton.herolink-white{href: entry[:href]}
           %i.fa{class: entry[:icon_class]}

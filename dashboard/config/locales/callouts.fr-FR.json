@@ -841,19 +841,19 @@
           "courseC_maze_programming7_2": "Ces blocs sont faits de pierre et ne peuvent être enlevés."
         },
         "courseC_starWars_loops2": {
-          "courseC_starWars_loops2": "Tu as seulement un de ces blocs disponible dans le puzzle."
+          "courseC_starWars_loops2": "Tu as seulement un de ces blocs disponible dans le casse-tête."
         },
         "courseC_starWars_loops2_2018": {
-          "courseC_starWars_loops2": "Tu as seulement un de ces blocs disponible dans le puzzle."
+          "courseC_starWars_loops2": "Tu as seulement un de ces blocs disponible dans le casse-tête."
         },
         "courseC_starWars_loops2_2019": {
-          "courseC_starWars_loops2": "Tu as seulement un de ces blocs disponible dans le puzzle."
+          "courseC_starWars_loops2": "Tu as seulement un de ces blocs disponible dans le casse-tête."
         },
         "courseC_starWars_loops2_2020": {
-          "courseC_starWars_loops2": "Tu as seulement un de ces blocs disponible dans le puzzle."
+          "courseC_starWars_loops2": "Tu as seulement un de ces blocs disponible dans le casse-tête."
         },
         "courseC_starWars_loops2_copy": {
-          "courseC_starWars_loops2": "Tu as seulement un de ces blocs disponible dans le puzzle."
+          "courseC_starWars_loops2": "Tu as seulement un de ces blocs disponible dans le casse-tête."
         },
         "courseD_artist_nestedLoops1a": {
           "courseD_artist_nestedLoops1a_1": "Tu n'as pas besoin d'utiliser de couleurs pour réussir ce casse-tête. Si tu le souhaites, ce bloc `couleur aléatoire` rend les choses plus faciles !"
@@ -1424,7 +1424,7 @@
           "pointerlocation": "Fais glisser un bloc sujet ici."
         },
         "CourseF_outbreak7": {
-          "costumes_callout": "Cliquez pour créer un nouveau déguisement"
+          "costumes_callout": "Clique pour créer un nouveau costume"
         },
         "Fish Tank 3-validated_2021": {
           "spritelab_comment": "Utilise ce bloc pour laisser des notes sur le fonctionnement de ton code pour toi-même ou pour ton enseignant.\n"
@@ -1565,7 +1565,7 @@
           "courseC_starWars_loops2": "Tu n'as qu'un seul de ces blocs à ta disposition dans ce casse-tête."
         },
         "courseC_starWars_loops2_dani": {
-          "courseC_starWars_loops2": "Tu as seulement un de ces blocs disponible dans le puzzle."
+          "courseC_starWars_loops2": "Tu as seulement un de ces blocs disponible dans le casse-tête."
         },
         "courseD_artist_nestedLoops1a_2021": {
           "courseD_artist_nestedLoops1a_1": "Tu n'as pas besoin d'utiliser de couleurs pour réussir ce casse-tête. Si tu le souhaites, ce bloc `couleur aléatoire` rend les choses plus faciles !"
@@ -1708,10 +1708,10 @@
           "events_category": "Clique ici pour ouvrir la catégorie Événements. "
         },
         "Virtual Pet 2_2021": {
-          "vp_costumes": "Cliquez ici pour ajouter de nouveaux déguisements à votre projet ! "
+          "vp_costumes": "Clique ici pour ajouter de nouveaux costumes à ton projet ! "
         },
         "Virtual Pet 6_2021": {
-          "vp_costumes": "Cliquez ici pour ajouter de nouveaux déguisements à votre projet ! "
+          "vp_costumes": "Clique ici pour ajouter de nouveaux costumes à ton projet ! "
         },
         "courseF_text_print": {
           "print_block": "Tu peux trouver le bloc d'impression ici !",
@@ -1727,7 +1727,7 @@
           "whenToWhile": "Essaie de remplacer quand par pendant."
         },
         "courseF_label_predict": {
-          "variablesPredict": "Regarde attentivement le code en dessous de ce point. "
+          "variablesPredict": "Regarde attentivement le code en dessous d'ici."
         },
         "courseF_variables_predict": {
           "variablesPredict": "Regarde attentivement le code en dessous de ce point. "
@@ -2027,10 +2027,10 @@
           "craft_what_is_iron": "Minez ce fer !"
         },
         "Virtual Pet 2_-2022-2": {
-          "vp_costumes": "Cliquez ici pour ajouter de nouveaux déguisements à votre projet ! "
+          "vp_costumes": "Clique ici pour ajouter de nouveaux costumes à ton projet ! "
         },
         "Virtual Pet 6_-2022-2": {
-          "vp_costumes": "Cliquez ici pour ajouter de nouveaux déguisements à votre projet ! "
+          "vp_costumes": "Clique ici pour ajouter de nouveaux costumes à ton projet ! "
         },
         "courseA_EOC_playlab_animals2022": {
           "question_mark": "?"
@@ -2146,7 +2146,7 @@
           "courseC_maze_programming7_2": "Ces blocs sont faits de pierre et ne peuvent être enlevés."
         },
         "courseC_starWars_loops22022": {
-          "courseC_starWars_loops2": "Tu as seulement un de ces blocs disponible dans le puzzle."
+          "courseC_starWars_loops2": "Tu as seulement un de ces blocs disponible dans le casse-tête."
         },
         "courseD_artist_nestedLoops1a2022": {
           "courseD_artist_nestedLoops1a_1": "Tu n'as pas besoin d'utiliser de couleurs pour réussir ce casse-tête. Si tu le souhaites, ce bloc `couleur aléatoire` rend les choses plus faciles !"

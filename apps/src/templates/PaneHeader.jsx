@@ -165,6 +165,7 @@ export const PaneButton = Radium(function(props) {
       style={style}
       onKeyDown={props.isDisabled ? () => {} : onKeyDownWrapper}
       onClick={props.isDisabled ? () => {} : props.onClick}
+      aria-label={props.ariaLabel}
     >
       <span className={moduleStyles.headerButtonSpan}>
         {props.hiddenImage}
@@ -188,7 +189,8 @@ PaneButton.propTypes = {
   hiddenImage: PropTypes.element,
   isMinecraft: PropTypes.bool,
   id: PropTypes.string,
-  style: PropTypes.object
+  style: PropTypes.object,
+  ariaLabel: PropTypes.string
 };
 
 // Continuing to wrap with radium because some usage of this component may depend on it.

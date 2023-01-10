@@ -541,6 +541,10 @@ ur:
   signup_registration_closed: اور ہر سال دسمبر، میں اپنے کلاس لاکھوں طلباء کمپیوٹر
     سائنس تعلیم ہفتہ گھنٹے کے کوڈ کے ساتھ جشن دنیا بھر کے شمولیت اختیار کر سکتا ہے
     ۔ ہم اکتوبر میں سالانہ جشن منانے کے لئے رجسٹریشن کھولیں گے ۔
+  signup_registration_closed_2022_markdown: 'Registration for this year''s Hour of
+    Code event map is currently closed, but you can still [host an Hour of Code](%{hoc_activities_url})
+    and join in the celebration on social media! Post fun pictures or video of your
+    event using the #HourOfCode hashtag!'
   signup_header: "%{campaign_date} کے دوران آور آف کوڈ کو منطم کریں، اور اسے یہاں
     رجسٹر کریں۔."
   signup_name_label: 'آپکا نام:'

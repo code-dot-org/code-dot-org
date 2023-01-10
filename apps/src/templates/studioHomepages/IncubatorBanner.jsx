@@ -1,6 +1,7 @@
 import React from 'react';
 import ContentContainer from '../ContentContainer';
 import {TwoColumnActionBlock} from './TwoColumnActionBlock';
+import i18n from '@cdo/locale';
 
 const IncubatorBanner = () => {
   return (
@@ -14,7 +15,7 @@ const IncubatorBanner = () => {
         buttons={[
           {
             url: '/incubator',
-            text: 'Learn more'
+            text: i18n.seeIncubatorProjects()
           }
         ]}
         marginBottom={0}

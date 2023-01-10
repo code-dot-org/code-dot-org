@@ -11,7 +11,7 @@ markdown <<MARKDOWN
 
 <div style="clear:both"/>
 
-## How will my students use App Lab in the Physical Computing Unit? 
+## How will my students use App Lab in the Creating Apps with Devices Unit? 
 
 ##### Students use App Lab to create apps that interact with the circuit playground - for example, pressing a button on the screen and having the Circuit Playground make a noise. This is similar to many real-world apps that use a phone to control an external device, like changing the color of an LED light bulb using an app on your phone.
 
@@ -20,7 +20,7 @@ markdown <<MARKDOWN
 ##### The fist lesson of the unit is an App Lab tutorial designed to quickly introduce the App Lab programming environment to students. This tutorial will provide students with the basic knowledge of the tool needed to be successful in this unit.
 
 * ##### If you students are already comfortable with App Lab, consider skipping Lesson 1 and beginning with Lesson 2. 
-* ##### If you are new to App Lab, consider completing the <a href="https://studio.code.org/s/applab-intro/lessons/1/levels/1" target="blank" rel="noopener noreferrer">tutorial</a> yourself before continuing on in this professional learning module. 
+* ##### If you are new to App Lab, consider completing the <a href="https://studio.code.org/s/applab-intro/lessons/1/levels/1" target="blank" rel="noopener noreferrer">tutorial</a> yourself before continuing on in this training. 
 
 <div style="clear:both"/>
 

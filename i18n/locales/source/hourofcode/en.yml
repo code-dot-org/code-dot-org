@@ -94,6 +94,9 @@
   social_coldplay_title: "Create with Coldplay & Code.org"
   social_coldplay_desc: "Show us your best moves! Code, dance, share with the world, and you could win."
 
+  social_maker_title: "I'm a Maker!"
+  social_maker_desc: "Code.org physical computing and maker resources for grades 6-12."
+
   hoc_live: 'Hour of Code Live'
   hoc_live_sign_up_title: 'Sign up for Hour of Code Live'
   hoc_live_learn_title: 'Learn with Hour of Code Live'
@@ -427,6 +430,7 @@
   signup_registration_not_required: "You don't need to register to participate! The Hour of Code activities are available year-round. <a href='%{hoc_activities_url}'>Try an activity</a> or read our <a href='%{howto_guide_url}'>How-to guide</a> to plan an event for your class."
   signup_registration_not_required_markdown: "You don't need to register to participate! The Hour of Code activities are available year-round. [Try an activity](%{hoc_activities_url}) or read our [How-to guide](%{howto_guide_url}) to plan an event for your class."
   signup_registration_closed: "And every year in December, your class can join millions of students around the world celebrating Computer Science Education Week with the Hour of Code. We'll open registration for the annual celebration in October."
+  signup_registration_closed_2022_markdown: "Registration for this year's Hour of Code event map is currently closed, but you can still [host an Hour of Code](%{hoc_activities_url}) and join in the celebration on social media! Post fun pictures or video of your event using the #HourOfCode hashtag!"
   signup_header: 'Organize an Hour of Code during %{campaign_date}, and register it here.'
   signup_name_label: 'Your name'
   signup_name_error: 'Name is required.'
@@ -713,6 +717,11 @@
   footer_menu_terms: 'Terms'
   footer_menu_privacy: 'Privacy Policy'
   footer_menu_cookie: 'Cookie Notice'
+
+  footer_menu_facebook: 'Code.org on Facebook'
+  footer_menu_twitter: 'Code.org on Twitter'
+  footer_menu_instagram: 'Code.org on Instagram'
+  footer_menu_medium: 'Code.org on Medium.com'
 
   learn_banner_heading: 'Hour of Code Activities'
   learn_banner_blurb: "Try a one-hour tutorial designed for all ages in over 45 languages.  Join millions of students and teachers in over 180 countries starting with an Hour of Code."
@@ -6701,6 +6710,12 @@
   tutorial_nasapackage_name: "NASA: Package Delivery Drone Simulation Coding Activity "
   tutorial_nasalunar_name: "NASA: Lunar Coding Challenge"
   tutorial_meeestate_name: "Escape Estate"
+  tutorial_imagipixelart_name: "Code your own pixel art!"
+  tutorial_kcjhealth_name: "The Health & Well-Being Challenge"
+  tutorial_msftwakanda_name: "Long Live Wakanda"
+  tutorial_carnegieslime_name: "Super Slime Battle"
+  tutorial_nafbrand_name: "Code your Brand"
+
   tutorial_rpccw_longdescription: "Create your own character, design a T-shirt, and create some music. Earn badges for each completed project."
   tutorial_rpledfirefly_longdescription: "Use a Raspberry Pi Pico microcontroller and basic electronic components to create a blinking LED firefly. Write MicroPython code to light your firefly and create a switch from jumper wires to mimic fireflies in the wild when the switch is closed."
   tutorial_rpcharting_longdescription: "Discover the power of lists in the Python programming language by storing Olympic medal data then use the pygal library to create an interactive chart. Use data analysis skills to uncover patterns and anomalies."
@@ -6795,6 +6810,12 @@
   tutorial_nasapackage_longdescription: "In this activity, students use Scratch, Snap!, or another programming language to create an interactive simulation of a drone navigating around a geofenced area to deliver a package. The simulation engages students in computational thinking, problem solving, and real-world application of mathematics."
   tutorial_nasalunar_longdescription: "Students learn about the Artemis 1 mission and the NASA App Development Challenge (ADC). The goal is for students to follow-along steps we've created using Code.org's App Lab to learn basic programming utilizing block code. "
   tutorial_meeestate_longdescription: "Solve puzzles to escape from Dr. Breakowski's mysterious mansion in the new Minecraft Hour of Code: Escape Estate. Use coding and computational thinking to unlock secrets, open trap doors, and reveal hidden clues. Code your way out by dawn and earn a million emeralds! With coding in blocks or Python, Hour of Code offers a learning pathway for anyone to learn the basics of code."
+  tutorial_imagipixelart_longdescription: "Learn Python and create your own colorful animations in this 1 hour crash course!"
+  tutorial_kcjhealth_longdescription: "Learn about data visualization, algorithmic art and coding, while exploring SDG #3 'Good Health and Well-Being'."
+  tutorial_msftwakanda_longdescription: "Shuri, Okoye, and Riri must band together to help Wakanda. Code your own action-packed activity inspired by Marvel Studios' 'Black Panther: Wakanda Forever'!"
+  tutorial_carnegieslime_longdescription: "Every year the Minions of Scarecorp try to steal your candy crops. Booville High's Baddest Slimeball crew have come together to protect the candy crops with slime weapons. Players play as teen monsters who program their collaborative robot (aka 'cobot') pets to help take down the Minions of Scarecorp who are after their town's candy harvest. Choose between four characters and their cobotic pets."
+  tutorial_nafbrand_longdescription: "In Code your Brand, you will be creating a virtual contact file to create a personalized QR code with your contact details. After you complete this activity, you will be equipped with a modern business card that you can share while you're networking with people who can help or guide you in your career or college journey."
+
   tutorial_rpccw_string_detail_grades: "Grades 2-5"
   tutorial_rpledfirefly_string_detail_grades: "Grades 6-8"
   tutorial_rpcharting_string_detail_grades: "Grades 9+"
@@ -6889,6 +6910,12 @@
   tutorial_nasapackage_string_detail_grades: "Grades 6-8"
   tutorial_nasalunar_string_detail_grades: "Grades 6-8"
   tutorial_meeestate_string_detail_grades: "Grades 2+"
+  tutorial_imagipixelart_string_detail_grades: "Grades 2-8"
+  tutorial_kcjhealth_string_detail_grades: "Grades 6+"
+  tutorial_msftwakanda_string_detail_grades: "Grades 6+"
+  tutorial_carnegieslime_string_detail_grades: "Grades 2-8"
+  tutorial_nafbrand_string_detail_grades: "Grades 9+"
+
   tutorial_rpccw_string_platforms: "All modern browsers, Android tablet, iPad, Windows phone, Android phone, iPhone"
   tutorial_rpledfirefly_string_platforms: "All modern browsers"
   tutorial_rpcharting_string_platforms: "All modern browsers, Android tablet, iPad"
@@ -6983,6 +7010,12 @@
   tutorial_nasapackage_string_platforms: "All modern browsers"
   tutorial_nasalunar_string_platforms: "All modern browsers, iPad, iPhone"
   tutorial_meeestate_string_platforms: "Android tablet, iPad, Windows phone, Android phone, iPhone"
+  tutorial_imagipixelart_string_platforms: "All modern browsers, iPad, Android tablets, Windows phone, Android phone, iPhone"
+  tutorial_kcjhealth_string_platforms: "All modern browsers"
+  tutorial_msftwakanda_string_platforms: "All modern browsers"
+  tutorial_carnegieslime_string_platforms: "All modern browsers"
+  tutorial_nafbrand_string_platforms: "All modern browsers, Android tablet, iPad, Windows phone, Android phone, iPhone"
+
   tutorial_rpccw_string_detail_platforms: ""
   tutorial_rpledfirefly_string_detail_platforms: "Raspberry Pi Pico"
   tutorial_rpcharting_string_detail_platforms: ""
@@ -7077,6 +7110,12 @@
   tutorial_nasapackage_string_detail_platforms: ""
   tutorial_nasalunar_string_detail_platforms: ""
   tutorial_meeestate_string_detail_platforms: ""
+  tutorial_imagipixelart_string_detail_platforms: ""
+  tutorial_kcjhealth_string_detail_platforms: ""
+  tutorial_msftwakanda_string_detail_platforms: ""
+  tutorial_carnegieslime_string_detail_platforms: ""
+  tutorial_nafbrand_string_detail_platforms: ""
+
   tutorial_rpccw_string_detail_programming_languages: "Blocks"
   tutorial_rpledfirefly_string_detail_programming_languages: "Python"
   tutorial_rpcharting_string_detail_programming_languages: "Python"
@@ -7171,30 +7210,11 @@
   tutorial_nasapackage_string_detail_programming_languages: "Blocks"
   tutorial_nasalunar_string_detail_programming_languages: "Blocks, JavaScript"
   tutorial_meeestate_string_detail_programming_languages: "Blocks, Python"
-  tutorial_imagipixelart_longdescription: "Learn Python and create your own colorful animations in this 1 hour crash course!"
-  tutorial_imagipixelart_name: "Code your own pixel art!"
-  tutorial_imagipixelart_string_detail_grades: "Grades 2-8"
-  tutorial_imagipixelart_string_detail_platforms: ""
-  tutorial_imagipixelart_string_detail_programming_languages: typing
-  tutorial_imagipixelart_string_platforms: "All modern browsers, iPad, Android tablets, Windows phone, Android phone, iPhone"
-  tutorial_kcjhealth_longdescription: "Learn about data visualization, algorithmic art and coding, while exploring SDG #3 'Good Health and Well-Being'."
-  tutorial_kcjhealth_name: "The Health & Well-Being Challenge"
-  tutorial_kcjhealth_string_detail_grades: "Grades 6+"
-  tutorial_kcjhealth_string_detail_platforms: ""
-  tutorial_kcjhealth_string_detail_programming_languages: blocks
-  tutorial_kcjhealth_string_platforms: "All modern browsers"
-  tutorial_msftwakanda_longdescription: "Shuri, Okoye, and Riri must band together to help Wakanda. Code your own action-packed activity inspired by Marvel Studios' 'Black Panther: Wakanda Forever'!"
-  tutorial_msftwakanda_name: "Long Live Wakanda"
-  tutorial_msftwakanda_string_detail_grades: "Grades 6+"
-  tutorial_msftwakanda_string_detail_platforms: ""
-  tutorial_msftwakanda_string_detail_programming_languages: blocks
-  tutorial_msftwakanda_string_platforms: "All modern browsers"
-  tutorial_carnegieslime_name: "Super Slime Battle"
-  tutorial_carnegieslime_longdescription: "Every year the Minions of Scarecorp try to steal your candy crops. Booville High's Baddest Slimeball crew have come together to protect the candy crops with slime weapons. Players play as teen monsters who program their collaborative robot (aka 'cobot') pets to help take down the Minions of Scarecorp who are after their town's candy harvest. Choose between four characters and their cobotic pets."
-  tutorial_carnegieslime_string_detail_grades: "Grades 2-8"
-  tutorial_carnegieslime_string_platforms: "All modern browsers"
-  tutorial_carnegieslime_name: "Super Slime Battle"
-  tutorial_carnegieslime_string_detail_programming_languages: "blocks"
+  tutorial_imagipixelart_string_detail_programming_languages: "Typing"
+  tutorial_kcjhealth_string_detail_programming_languages: "Blocks"
+  tutorial_msftwakanda_string_detail_programming_languages: "Blocks"
+  tutorial_carnegieslime_string_detail_programming_languages: "Blocks"
+  tutorial_nafbrand_string_detail_programming_languages: "Python"
 
   school_not_found_heading: "We couldn't find your school. Please enter more information."
   school_name: "School name"
@@ -7242,6 +7262,9 @@
   dont_know: "I don't know"
 
   language_label: "Language"
+
+  team_page_full_team_alt_text: "Nearly 100 Code.org employees in matching blue and yellow t-shirts pose in a hotel conference room for the company's summer 2022 Codechella event."
+  careers_page_code_pride_alt_text: "Two feminine-presenting employees smile while holding the ends of a Code.org-branded rainbow banner. Behind them, several people are wearing Code.org shirts and waving rainbow flags while walking alongside a multi-colored Volkswagen bug."
 
   language_code:
     ar: "Arabic"
