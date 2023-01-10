@@ -108,9 +108,11 @@ export default class MusicBlocklyWorkspace {
       }
 
       if (
-        [BlockTypes.TRIGGERED_AT, BlockTypes.TRIGGERED_AT_SIMPLE].includes(
-          block.type
-        )
+        [
+          BlockTypes.TRIGGERED_AT,
+          BlockTypes.TRIGGERED_AT_SIMPLE,
+          BlockTypes.NEW_TRACK_ON_TRIGGER
+        ].includes(block.type)
       ) {
         const id = block.getFieldValue('trigger');
         events[this.triggerIdToEvent(id)] = {

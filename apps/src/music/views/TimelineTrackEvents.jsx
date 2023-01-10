@@ -12,10 +12,16 @@ const TimelineTrackEvents = ({
   getLengthForId
 }) => {
   const playerUtils = useContext(PlayerUtilsContext);
-  const soundEvents = playerUtils.getSoundEvents();
-  const tracksMetadata = playerUtils.getTracksMetadata();
+  // useMemo() compares dependency using Object.is() comparison, which won't work correctly
+  // for arrays and objects, as it will consider object/arrays with different contents the same
+  // if they are the same object/array reference. These values are relatively small and simple
+  // so convert to JSON strings to get around this.
+  const soundEventsJson = JSON.stringify(playerUtils.getSoundEvents());
+  const tracksMetadataJson = JSON.stringify(playerUtils.getTracksMetadata());
 
-  const organizeSoundsByTracks = (soundEvents, tracksMetadata) => {
+  const organizeSoundsByTracks = (soundEventsJson, tracksMetadataJson) => {
+    const soundEvents = JSON.parse(soundEventsJson);
+    const tracksMetadata = JSON.parse(tracksMetadataJson);
     const tracksToSounds = {};
 
     soundEvents.forEach(event => {
@@ -37,8 +43,8 @@ const TimelineTrackEvents = ({
   };
 
   const tracksToSounds = useMemo(
-    () => organizeSoundsByTracks(soundEvents, tracksMetadata),
-    [soundEvents, tracksMetadata]
+    () => organizeSoundsByTracks(soundEventsJson, tracksMetadataJson),
+    [soundEventsJson, tracksMetadataJson]
   );
 
   const numTracks = Object.keys(tracksToSounds).length;
