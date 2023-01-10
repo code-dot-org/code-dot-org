@@ -1,11 +1,11 @@
 import PropTypes from 'prop-types';
 import React, {useState, useEffect, useContext} from 'react';
 import classNames from 'classnames';
-import FontAwesome from '../templates/FontAwesome';
+import FontAwesome from '../../templates/FontAwesome';
 import {Triggers} from '@cdo/apps/music/constants';
 import moduleStyles from './controls.module.scss';
 import BeatPad from './BeatPad';
-import {AnalyticsContext} from './context';
+import {AnalyticsContext} from '../context';
 
 const Controls = ({
   isPlaying,

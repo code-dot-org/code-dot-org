@@ -855,6 +855,11 @@ body.embedded_iframe {
 $default-modal-width: 640px;
 
 .modal {
+  @media screen and (max-height: 600px) {
+    max-height: 80vh;
+    overflow-y: auto;
+  }
+
   a:hover:not(.btn) {
     color: $red;
     background-color: $white;
