@@ -1306,6 +1306,10 @@
   version "2.0.2"
   resolved "https://registry.yarnpkg.com/@blockly/field-grid-dropdown/-/field-grid-dropdown-2.0.2.tgz#61c531e4082f0424a8afccd9c87ebe5286744158"
   integrity sha512-wA0nTdhgNI4xGPcODOuQhB43LcvDtwWZcorlNtyuTFJcYHidYOyTkC5i99HpiUxo4qdrt0C3OqkLp1gmJPEBXA==
+"@blockly/field-grid-dropdown@~2.0.2":
+  version "2.0.2"
+  resolved "https://registry.yarnpkg.com/@blockly/field-grid-dropdown/-/field-grid-dropdown-2.0.2.tgz#61c531e4082f0424a8afccd9c87ebe5286744158"
+  integrity sha512-wA0nTdhgNI4xGPcODOuQhB43LcvDtwWZcorlNtyuTFJcYHidYOyTkC5i99HpiUxo4qdrt0C3OqkLp1gmJPEBXA==
 
 "@blockly/plugin-scroll-options@~3.0.3":
   version "3.0.3"
@@ -1409,10 +1413,10 @@
     messageformat "^1.1.0"
     react-typist "^2.0.5"
 
-"@code-dot-org/ml-playground@0.0.41":
-  version "0.0.41"
-  resolved "https://registry.yarnpkg.com/@code-dot-org/ml-playground/-/ml-playground-0.0.41.tgz#6fb1322ca30df85934bac35b76fd6d0611f9ca73"
-  integrity sha512-Yfn5VepU+0m0Phop4nBiP4dQpicI5/tjAgQ3RQOrTvCGePoRaBNd7cCL48ClTQYspP3+22FM4V9pUXTKMHaVAw==
+"@code-dot-org/ml-playground@0.0.44":
+  version "0.0.44"
+  resolved "https://registry.yarnpkg.com/@code-dot-org/ml-playground/-/ml-playground-0.0.44.tgz#39d8bf3b1387744512fe04bf0e529fdb5737645f"
+  integrity sha512-2AhxnUGErm3Vb4x4OU389CqvgxmikAs2vEHw2hyuRaQE6zVzvTM04JKN3hLjAbtShSRxSqZzpNoVeEPrJxMeAA==
   dependencies:
     "@fortawesome/fontawesome-svg-core" "^1.2.25"
     "@fortawesome/free-solid-svg-icons" "^5.11.2"
