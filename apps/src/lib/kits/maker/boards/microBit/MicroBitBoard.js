@@ -267,6 +267,10 @@ export default class MicroBitBoard extends EventEmitter {
       false /* shouldDestroyComponents */
     );
   }
+
+  calibrateCompass() {
+    this.boardClient_.compassCalibration();
+  }
 }
 
 const delayPromise = t => new Promise(resolve => setTimeout(resolve, t));
