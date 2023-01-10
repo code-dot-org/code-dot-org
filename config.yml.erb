@@ -535,8 +535,8 @@ db_proxy_admin:
 db_writer: !Secret
 reporting_db_writer: <%=db_writer%>
 
-dashboard_db_name: <%= "dashboard_#{env}#{_test_env_num}" %>
-pegasus_db_name: <%= ENV['USE_PEGASUS_UNITTEST_DB'] ? 'pegasus_unittest' : "pegasus#{_env}" %>
+dashboard_db_name: dashboard_production
+pegasus_db_name: pegasus
 
 # Default reader endpoints to writer endpoint.
 db_reader: <%=db_writer%>
