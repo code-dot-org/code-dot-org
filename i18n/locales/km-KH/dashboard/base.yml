@@ -89,7 +89,7 @@ km:
   trophies: "ពាន​រង្វាន់"
   courses: 'វគ្គ​សិក្សា'
   courses_page:
-    title_student: "រៀននៅលើកន្លែងសម្រាប់សរសេរកូដបន្ថែម"
+    title_student: "សិក្សាវិទ្យាសាស្រ្តកុំព្យូទ័រ"
     title_teacher: "បង្រៀនជាមួយកម្មវិធីសរសេរកូដ"
   unplugged_activity: 'Unplugged Activity'
   of: "នៃ"
@@ -492,23 +492,23 @@ km:
       current: "កម្រិត​បច្ចុប្បន្ន"
       unused: "កម្រិត​ដែល​មិន​បាន​ប្រើ"
   upsell:
-    dance:
-      title: 'Dance Party'
     dance-2019:
       title: 'Dance Party'
-    hoc:
-      body: 'សាក​ល្បង​ផ្នែក​មូលដ្ឋាន​នៃ​វិទ្យាសាស្ត្រ​កុំព្យូទ័រ។ មនុស្ស​ជា​ច្រើន​លាន​នាក់​បាន​សាកល្បង​រួច​ហើយ។'
+    dance:
+      title: 'Dance Party'
     flappy:
       title: 'Flappy កូដ'
       body: 'តើ​អ្នក​ចង់​សរសេរ​ហ្គេម​របស់​អ្នក​ដោយ​ប្រើ​ពេល​តិច​ជាង 10 នាទី​ដែរ​ឬ​ទេ? សូម​សាកល្បង​មេរៀន Flappy កូដ របស់​យើង!'
-    hoc-encryption:
-      title: "ការអ៉ីនគ្រីបធម្មតា"
     hero:
       body: "Minecraft បានត្រលប់មកវិញក្នុងកម្មវិធី Hour of Code ជាមួយសកម្មភាពថ្មី‌! ដំណើរផ្សងព្រេងរបស់ Minecraft ជាមួយការសរសេរកូដ។"
-    unplugged_conditionals:
-      title: "លក្ខខណ្ឌ"
+    hoc-encryption:
+      title: "ការអ៉ីនគ្រីបធម្មតា"
+    hoc:
+      body: 'សាក​ល្បង​ផ្នែក​មូលដ្ឋាន​នៃ​វិទ្យាសាស្ត្រ​កុំព្យូទ័រ។ មនុស្ស​ជា​ច្រើន​លាន​នាក់​បាន​សាកល្បង​រួច​ហើយ។'
     widgets:
       audience: "អាយុ 14 ឆ្នាំឡើង"
+    unplugged_conditionals:
+      title: "លក្ខខណ្ឌ"
   multi:
     wrong_title: "សំណួរ​មិន​ត្រឹមត្រូវ"
     wrong_body: "សំណួរ​ដែល​អ្នក​បាន​បញ្ចូល​គឺ​មិន​ត្រឹមត្រូវ​ទេ។ សូម​ព្យាយាម​ម្ដង​ទៀត!"
