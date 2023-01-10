@@ -126,11 +126,6 @@ Lint/RedundantSafeNavigation:
 Lint/RescueException:
   Enabled: false
 
-# Offense count: 95
-# This cop supports safe auto-correction (--auto-correct).
-Lint/ScriptPermission:
-  Enabled: false
-
 # Offense count: 2
 Lint/UnreachableCode:
   Enabled: false
