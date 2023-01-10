@@ -274,8 +274,10 @@ applabCommands.moveTo = function(opts) {
     ctx.moveTo(Applab.turtle.x, Applab.turtle.y);
     Applab.turtle.x = opts.x;
     Applab.turtle.y = opts.y;
-    ctx.lineTo(Applab.turtle.x, Applab.turtle.y);
-    ctx.stroke();
+    if (Applab.turtle.penDown) {
+      ctx.lineTo(Applab.turtle.x, Applab.turtle.y);
+      ctx.stroke();
+    }
     applabTurtle.updateTurtleImage();
   }
 };
@@ -455,21 +457,11 @@ applabCommands.dot = function(opts) {
 };
 
 applabCommands.penUp = function(opts) {
-  var ctx = applabTurtle.getTurtleContext();
-  if (ctx) {
-    if (ctx.strokeStyle !== 'rgba(255, 255, 255, 0)') {
-      Applab.turtle.penUpColor = ctx.strokeStyle;
-      ctx.strokeStyle = 'rgba(255, 255, 255, 0)';
-    }
-  }
+  Applab.turtle.penDown = false;
 };
 
 applabCommands.penDown = function(opts) {
-  var ctx = applabTurtle.getTurtleContext();
-  if (ctx && Applab.turtle.penUpColor) {
-    ctx.strokeStyle = Applab.turtle.penUpColor;
-    delete Applab.turtle.penUpColor;
-  }
+  Applab.turtle.penDown = true;
 };
 
 applabCommands.penWidth = function(opts) {
@@ -490,14 +482,9 @@ applabCommands.penWidth = function(opts) {
 applabCommands.penColorInternal = function(rgbstring) {
   var ctx = applabTurtle.getTurtleContext();
   if (ctx) {
-    if (Applab.turtle.penUpColor) {
-      // pen is currently up, store this color for pen down
-      Applab.turtle.penUpColor = rgbstring;
-    } else {
-      ctx.strokeStyle = rgbstring;
-    }
-    ctx.fillStyle = rgbstring;
+    ctx.strokeStyle = rgbstring;
   }
+  ctx.fillStyle = rgbstring;
 };
 
 applabCommands.penColor = function(opts) {
