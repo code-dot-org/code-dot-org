@@ -14,7 +14,7 @@ chef_gem 'activesupport' do
   # which may or may not be compatible with our architecture. What we actually
   # want to do here is install the same version of activesupport we use for our
   # application, so we manually pin to that version.
-  version "5.2.4.4"
+  version "6.0.4.1"
 end
 
 ruby_block 'CDO config' do
