@@ -6,18 +6,18 @@ import {Provider, connect} from 'react-redux';
 import Instructions from './Instructions';
 import Controls from './Controls';
 import Timeline from './Timeline';
-import MusicPlayer from './player/MusicPlayer';
-import {Triggers} from './constants';
-import AnalyticsReporter from './analytics/AnalyticsReporter';
+import MusicPlayer from '../player/MusicPlayer';
+import {Triggers} from '../constants';
+import AnalyticsReporter from '../analytics/AnalyticsReporter';
 import {getStore} from '@cdo/apps/redux';
 import {SignInState} from '@cdo/apps/templates/currentUserRedux';
 import moduleStyles from './music.module.scss';
-import {AnalyticsContext, PlayerUtilsContext} from './context';
+import {AnalyticsContext, PlayerUtilsContext} from '../context';
 import TopButtons from './TopButtons';
-import Globals from './globals';
-import MusicBlocklyWorkspace from './blockly/MusicBlocklyWorkspace';
-import AppConfig from './appConfig';
-import SoundUploader from './utils/SoundUploader';
+import Globals from '../globals';
+import MusicBlocklyWorkspace from '../blockly/MusicBlocklyWorkspace';
+import AppConfig from '../appConfig';
+import SoundUploader from '../utils/SoundUploader';
 
 const baseUrl = 'https://curriculum.code.org/media/musiclab/';
 

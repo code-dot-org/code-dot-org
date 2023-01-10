@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import React, {useContext, useMemo} from 'react';
-import {PlayerUtilsContext} from './context';
+import {PlayerUtilsContext} from '../context';
 import moduleStyles from './timeline.module.scss';
 
 const TimelineTrackEvents = ({
