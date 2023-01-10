@@ -4317,7 +4317,7 @@ de:
         csp5-2023:
           lesson_groups:
             csp_lists:
-              display_name: Listen
+              display_name: Daten
             csp_loops:
               display_name: Schleifen
             csp_traversals:
@@ -4329,9 +4329,15 @@ de:
         csp6-2023:
           lesson_groups:
             csp_unit6_2020:
-              display_name: 'Lerneinheit 6: Algorithmen'
+              display_name: Listen
             lessonGroup-2:
               display_name: "(Post-Course Survey) Überprüfung nach dem Kurs"
+            lessonGroup-3:
+              display_name: Schleifen
+            lessonGroup-4:
+              display_name: Traversierungen
+            lessonGroup-5:
+              display_name: Projekt
         csp7-2023:
           lesson_groups:
             csp_parameters_return_values:
@@ -4378,3 +4384,5 @@ de:
             lessonGroup-4:
               display_name: 'Chapter 2: Aufbau von physischen Prototypen'
         allthevalidation: {}
+        vpl-csd5-ayw-pilot-2022: {}
+        vpl-csd6-ayw-pilot-2022: {}
