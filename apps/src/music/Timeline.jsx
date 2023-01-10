@@ -1,22 +1,28 @@
 import PropTypes from 'prop-types';
-import React from 'react';
+import React, {useContext} from 'react';
 import moduleStyles from './timeline.module.scss';
 import classNames from 'classnames';
 import TimelineSampleEvents from './TimelineSampleEvents';
+import {PlayerUtilsContext} from './context';
+import appConfig from './appConfig';
+import TimelineTrackEvents from './TimelineTrackEvents';
 
 const barWidth = 60;
 const numMeasures = 30;
 // Leave some vertical space between each event block.
 const eventVerticalSpace = 2;
 
-const Timeline = ({
-  isPlaying,
-  songData,
-  currentAudioElapsedTime,
-  convertMeasureToSeconds,
-  currentMeasure,
-  sounds
-}) => {
+const colorClasses = [
+  moduleStyles.timelineElementPurple,
+  moduleStyles.timelineElementBlue,
+  moduleStyles.timelineElementGreen,
+  moduleStyles.timelineElementYellow
+];
+
+const Timeline = ({isPlaying, currentAudioElapsedTime, sounds}) => {
+  const playerUtils = useContext(PlayerUtilsContext);
+  const currentMeasure = playerUtils.getCurrentMeasure();
+
   const getLengthForId = id => {
     const splitId = id.split('/');
     const path = splitId[0];
@@ -28,9 +34,36 @@ const Timeline = ({
     return sound.length;
   };
 
+  const getEventHeight = (numUniqueRows, availableHeight = 110) => {
+    // While we might not actually have this many rows to show,
+    // we will limit each row's height to the size that would allow
+    // this many to be shown at once.
+    const minVisible = 5;
+
+    const maxVisible = 10;
+
+    // We might not actually have this many rows to show, but
+    // we will size the bars so that this many rows would show.
+    const numSoundsToShow = Math.max(
+      Math.min(numUniqueRows, maxVisible),
+      minVisible
+    );
+
+    return Math.floor(availableHeight / numSoundsToShow);
+  };
+
   const playHeadOffset = isPlaying
-    ? (currentAudioElapsedTime * barWidth) / convertMeasureToSeconds(1)
+    ? (currentAudioElapsedTime * barWidth) /
+      playerUtils.convertMeasureToSeconds(1)
     : null;
+
+  const timelineElementProps = {
+    barWidth,
+    eventVerticalSpace,
+    getLengthForId,
+    getEventHeight,
+    colorClasses
+  };
 
   return (
     <div id="timeline" className={moduleStyles.wrapper}>
@@ -56,12 +89,11 @@ const Timeline = ({
         </div>
 
         <div className={moduleStyles.soundsArea}>
-          <TimelineSampleEvents
-            songData={songData}
-            barWidth={barWidth}
-            eventVerticalSpace={eventVerticalSpace}
-            getLengthForId={getLengthForId}
-          />
+          {appConfig.getValue('blocks') === 'tracks' ? (
+            <TimelineTrackEvents {...timelineElementProps} />
+          ) : (
+            <TimelineSampleEvents {...timelineElementProps} />
+          )}
         </div>
 
         <div className={moduleStyles.fullWidthOverlay}>
@@ -81,10 +113,7 @@ const Timeline = ({
 
 Timeline.propTypes = {
   isPlaying: PropTypes.bool.isRequired,
-  songData: PropTypes.object.isRequired,
   currentAudioElapsedTime: PropTypes.number.isRequired,
-  convertMeasureToSeconds: PropTypes.func.isRequired,
-  currentMeasure: PropTypes.number.isRequired,
   sounds: PropTypes.array
 };
 
