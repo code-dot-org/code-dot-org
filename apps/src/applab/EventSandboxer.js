@@ -59,8 +59,8 @@ EventSandboxer.prototype.setTransformFromElement = function(element) {
   }
   this.xOffset_ = xOffset;
   this.yOffset_ = yOffset;
-  console.log('xOffset and yOffset computed');
-  console.log(this.xOffset_ + ' ' + this.yOffset_);
+  // console.log('xOffset and yOffset computed');
+  // console.log(this.xOffset_ + ' ' + this.yOffset_);
 };
 
 /**
@@ -71,7 +71,7 @@ EventSandboxer.prototype.setTransformFromElement = function(element) {
  * @throws {TypeError} if event is null or not an object
  */
 EventSandboxer.prototype.sandboxEvent = function(event) {
-  console.log('EventSandboxer.sandboxEvent');
+  //console.log('EventSandboxer.sandboxEvent');
   if (event === null || typeof event !== 'object') {
     throw new TypeError(
       'Failed to sandbox event: Expected an event object, but got ' + event
@@ -120,10 +120,10 @@ EventSandboxer.prototype.sandboxEvent = function(event) {
     if (newEvent.type === 'mousedown') {
       console.log('touch event - touchstart');
       console.log(mouseEvent);
-      console.log(Applab.turtle.x + ' ' + Applab.turtle.y);
-      Applab.turtle.x = (mouseEvent.clientX - this.xOffset_) / this.xScale_;
-      Applab.turtle.y = (mouseEvent.clientY - this.yOffset_) / this.yScale_;
-      console.log(Applab.turtle.x + ' ' + Applab.turtle.y);
+      // console.log(Applab.turtle.x + ' ' + Applab.turtle.y);
+      // Applab.turtle.x = (mouseEvent.clientX - this.xOffset_) / this.xScale_;
+      // Applab.turtle.y = (mouseEvent.clientY - this.yOffset_) / this.yScale_;
+      // console.log(Applab.turtle.x + ' ' + Applab.turtle.y);
     }
     if (newEvent.type === 'mouseup') {
       console.log('touch event - touchend');
