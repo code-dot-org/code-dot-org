@@ -483,8 +483,8 @@ applabCommands.penColorInternal = function(rgbstring) {
   var ctx = applabTurtle.getTurtleContext();
   if (ctx) {
     ctx.strokeStyle = rgbstring;
+    ctx.fillStyle = rgbstring;
   }
-  ctx.fillStyle = rgbstring;
 };
 
 applabCommands.penColor = function(opts) {
