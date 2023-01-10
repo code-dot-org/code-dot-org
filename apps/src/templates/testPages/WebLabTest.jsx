@@ -1,8 +1,4 @@
-// /* global adjustScroll */
-import PropTypes from 'prop-types';
 import React, {Component} from 'react';
-import {connect} from 'react-redux';
-// import i18n from '@cdo/locale';
 import {Status} from '../../../src/lib/ui/ValidationStep';
 import testImageAccess from '../../code-studio/url_test';
 
@@ -29,10 +25,6 @@ class WebLabTest extends Component {
       renderCallToAction: false
     };
   }
-
-  static propTypes = {
-    responsiveSize: PropTypes.oneOf(['lg', 'md', 'sm', 'xs']).isRequired
-  };
 
   promisifiedTestImageAccess = ({url, status}) =>
     new Promise((resolve, _) => {
@@ -65,13 +57,16 @@ class WebLabTest extends Component {
     });
   };
 
-  renderTestStatus = test =>
-    ({
-      [Status.WAITING]: <p className="incomplete">Not complete</p>,
-      [Status.ATTEMPTING]: <p className="loading">Connecting...</p>,
-      [Status.SUCCEEDED]: <p className="succeeded">Success</p>,
-      [Status.FAILED]: <p className="failed">Failed</p>
-    }[this.state[test]]);
+  renderTestStatus = test => {
+    const statusText = {
+      [Status.WAITING]: 'Not complete',
+      [Status.ATTEMPTING]: 'Connecting...',
+      [Status.SUCCEEDED]: 'Success',
+      [Status.FAILED]: 'Failed'
+    }[this.state[test]];
+
+    return <p>{`${statusText}`}</p>;
+  };
 
   renderCallToAction = () => {
     const testFailed = [
@@ -181,6 +176,4 @@ class WebLabTest extends Component {
   }
 }
 
-export default connect(state => ({
-  responsiveSize: state.responsive.responsiveSize
-}))(WebLabTest);
+export default WebLabTest;
