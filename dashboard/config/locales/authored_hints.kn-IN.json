@@ -150,18 +150,18 @@
           "hint1": "ಈವೆಂಟ್ ಬ್ಲಾಕ್‌ನಲ್ಲಿ '+' ಬಟನ್ ಕ್ಲಿಕ್ ಮಾಡಿ. 'ಕಾಸ್ಟ್ಯೂಮ್‌ ಬದಲಿಸಿ' ಬ್ಲಾಕ್‌ನಲ್ಲಿ ಒಳಗೆ 'ವಿಷಯ' ಬ್ಲಾಕ್‌ ಜೊತೆಗೆ ಖಾಲಿ ಸ್ಪಾಟ್ ಅನ್ನು ಭರ್ತಿ ಮಾಡಿ.\n\n<xml><block type=\"gamelab_checkTouching\"><title name=\"CONDITION\">\"when\"</title><value name=\"SPRITE1\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"healthy\"</title></block></value><value name=\"SPRITE2\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"sick\"</title></block></value><next><block type=\"gamelab_setAnimation\"><title name=\"ANIMATION\">\"sick\"</title><value name=\"THIS\"><block type=\"gamelab_subjectSpritePointer\"></block></value></block></next></block></xml>"
         },
         "CourseF_outbreak3": {
-          "hint1": "ಮಾನ್‌ಸ್ಟರ್‌ಗಳಿಗೆ ಮಾಸ್ಕ್‌ಗಳನ್ನು ನೀಡಲು, 'ಕ್ಲಿಕ್ ಮಾಡಿದಾಗ' ಇವೆಂಟ್‌ನೊಂದಿಗೆ 'ಕಾಸ್ಟ್ಯೂಮ್ ಬದಲಿಸಿ' ಬ್ಲಾಕ್‌ ಅನ್ನು ಬಳಸಿ:\n\n<xml><block type=\"gamelab_spriteClicked\"><title name=\"CONDITION\">\"when\"</title><value name=\"SPRITE\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"healthy\"</title></block></value><next><block type=\"gamelab_setAnimation\"><title name=\"ANIMATION\">\"healthy\\_mask\"</title></block></next></block></xml>\n\nಸಣ್ಣ ಕೆಂಪು 'ಕ್ಲಿಕ್ ಮಾಡಿದ' ಬ್ಲಾಕ್ ಅನ್ನೂ ಎಳೆಯುವುದನ್ನು ಖಚಿತಪಡಿಸಿಕೊಳ್ಳಿ!",
-          "hint2": "ಈ ಲೆವೆಲ್‌ಗೆ ಹೊಸ ಕೋಡ್ ಈ ರೀತಿ ಕಾಣಿಸುತ್ತದೆ:\n\n<xml><block type=\"gamelab_spriteClicked\"><title name=\"CONDITION\">\"when\"</title><value name=\"SPRITE\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"healthy\"</title></block></value><next><block type=\"gamelab_setAnimation\"><title name=\"ANIMATION\">\"healthy_mask\"</title><value name=\"THIS\">\\<block type=\"gamelab_clickedSpritePointer\"></block></value></block></next></block><block type=\"gamelab_spriteClicked\"><title name=\"CONDITION\">\"when\"</title><value name=\"SPRITE\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"sick\"</title></block></value><next><block type=\"gamelab_setAnimation\"><title name=\"ANIMATION\">\"sick_mask\"</title><value name=\"THIS\">\\<block type=\"gamelab_clickedSpritePointer\"></block></value></block></next></block></xml>"
+          "hint1": "ಮಾನ್‌ಸ್ಟರ್‌ಗಳಿಗೆ ಮಾಸ್ಕ್‌ಗಳನ್ನು ನೀಡಲು, 'ಕ್ಲಿಕ್ ಮಾಡಿದಾಗ' ಇವೆಂಟ್‌ನೊಂದಿಗೆ 'ಕಾಸ್ಟ್ಯೂಮ್ ಬದಲಿಸಿ' ಬ್ಲಾಕ್‌ ಅನ್ನು ಬಳಸಿ:\n\n<xml><block type=\"gamelab_spriteClicked\"><title name=\"CONDITION\">\"when\"</title><value name=\"SPRITE\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"healthy\"</title></block></value><next><block type=\"gamelab_setAnimation\"><title name=\"ANIMATION\">\"healthy_mask\"</title></block></next></block></xml>\n\nಸಣ್ಣ ಕೆಂಪು 'ಕ್ಲಿಕ್ ಮಾಡಿದ' ಬ್ಲಾಕ್ ಅನ್ನೂ ಎಳೆಯುವುದನ್ನು ಖಚಿತಪಡಿಸಿಕೊಳ್ಳಿ!",
+          "hint2": "ಈ ಲೆವೆಲ್‌ಗೆ ಹೊಸ ಕೋಡ್ ಈ ರೀತಿ ಕಾಣಿಸುತ್ತದೆ:\n\n<xml><block type=\"gamelab_spriteClicked\"><title name=\"CONDITION\">\"when\"</title><value name=\"SPRITE\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"healthy\"</title></block></value><next><block type=\"gamelab_setAnimation\"><title name=\"ANIMATION\">\"healthy_mask\"</title><value name=\"THIS\"><block type=\"gamelab_clickedSpritePointer\"></block></value></block></next></block><block type=\"gamelab_spriteClicked\"><title name=\"CONDITION\">\"when\"</title><value name=\"SPRITE\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"sick\"</title></block></value><next><block type=\"gamelab_setAnimation\"><title name=\"ANIMATION\">\"sick_mask\"</title><value name=\"THIS\"><block type=\"gamelab_clickedSpritePointer\"></block></value></block></next></block></xml>"
         },
         "CourseF_outbreak4": {
           "challenge": "## ಹೆಚ್ಚುವರಿ ಸವಾಲನ್ನು ಹುಡುಕುತ್ತಿರುವಿರಾ?\n\nನೀವು ರಾಕ್ಷಸರನ್ನು ವೇಗವಾಗಿ ಅಥವಾ ನಿಧಾನವಾಗಿ ಚಲಿಸುವಂತೆ ಮಾಡಬಹುದು.\n\n1.  ಈ ಬ್ಲಾಕ್‌ನಲ್ಲಿ \\`ಎಡಿಟ್' ಕ್ಲಿಕ್ ಮಾಡಿ <xml><block type=\"gamelab_behavior_get\"><mutation></mutation><title name=\"VAR\">wandering</title></block></xml>\n2.  ಈ ಬ್ಲಾಕ್‌ನಲ್ಲಿ ಸಂಖ್ಯೆಯನ್ನು ಹೆಚ್ಚಿಸಿ ಅಥವಾ ಕಡಿಮೆ ಮಾಡಿ:\n\n<xml><block type=\"gamelab_moveForward\"><value name=\"SPRITE\"><block type=\"sprite_parameter_get\"><title name=\"VAR\">this sprite</title></block></value><value name=\"DISTANCE\"><block type=\"math_number\"><title name=\"NUM\">1</title></block></value></block>\n</xml>\n\nರಾಕ್ಷಸರನ್ನು ನಿಧಾನವಾಗಿ ಚಲಿಸುವಂತೆ ಮಾಡಲು, `0.5` ಅಥವಾ `0.25` ನಂತಹ ದಶಮಾಂಶ ಸಂಖ್ಯೆಯನ್ನು ಆಯ್ಕೆಮಾಡಿ. ಅವುಗಳನ್ನು ವೇಗವಾಗಿ ಚಲಿಸುವಂತೆ ಮಾಡಲು, 1 ಕ್ಕಿಂತ ಹೆಚ್ಚಿನ ಯಾವುದೇ ಸಂಖ್ಯೆಯನ್ನು ಆಯ್ಕೆಮಾಡಿ."
         },
         "CourseF_outbreak6": {
           "hint2": "'ಅವಕಾಶ ಇದ್ದರೆ' ಬ್ಲಾಕ್‌ ಒಳಗೆ ಇತರ \"ಆಕ್ಷನ್\" ಬ್ಲಾಕ್‌ಗಳನ್ನು ಸಾಗಿಸುವುದನ್ನು ಖಚಿತಪಡಿಸಿ:",
-          "hint1": "ಆರೋಗ್ಯಕರ ಮತ್ತು ಸೋಂಕಿತ ಸ್ಪ್ರೈಟ್‌ಗಳ ಮಧ್ಯೆ 'ಸ್ಪರ್ಶಗಳ' ಎಲ್ಲ ಸಂಭಾವ್ಯ ಸಂಯೋಜನೆಗಳಿಗೆ ಪರಿಶೀಲಿಸಲು ಇನ್ನೂ 3 'ಸ್ಪರ್ಶಿಸಿದಾಗ' ಈವೆಂಟ್‌ಗಳನ್ನು ನೀವು ಸೇರಿಸಬೇಕು.\n\n<xml><block type=\"gamelab_checkTouching\">\n      <title name=\"CONDITION\">\"when\"</title>\n      <value name=\"SPRITE1\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"healthy_mask\"</title>\n        </block>\n      </value>\n      <value name=\"SPRITE2\">\n        \\<block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"sick\"</title>\n        </block>\n      </value><next>\n      <block type=\"gamelab_withPercentChanceDropdown\">\n      <title name=\"NUM\">75</title>\n      <statement name=\"STATEMENT\"></statement></block></next>\n    </block><block type=\"gamelab_checkTouching\">\n      <title name=\"CONDITION\">\"when\"</title>\n      <value name=\"SPRITE1\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"healthy\"</title>\n        </block>\n      </value>\n      <value name=\"SPRITE2\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"sick_mask\"</title>\n        </block>\n      </value><next>\n      \\<block type=\"gamelab_withPercentChanceDropdown\">\n      <title name=\"NUM\">25</title>\n      <statement name=\"STATEMENT\"></statement></block></next>\n    </block><block type=\"gamelab_checkTouching\">\n      <title name=\"CONDITION\">\"when\"</title>\n      <value name=\"SPRITE1\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"healthy_mask\"</title>\n        </block>\n      </value>\n      <value name=\"SPRITE2\">\n        \\<block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"sick_mask\"</title>\n        </block>\n      </value><next>\n      \\<block type=\"gamelab_withPercentChanceDropdown\">\n      <title name=\"NUM\">10</title>\n      <statement name=\"STATEMENT\"></statement></block></next>\n    </block></xml>"
+          "hint1": "ಆರೋಗ್ಯಕರ ಮತ್ತು ಸೋಂಕಿತ ಸ್ಪ್ರೈಟ್‌ಗಳ ಮಧ್ಯೆ 'ಸ್ಪರ್ಶಗಳ' ಎಲ್ಲ ಸಂಭಾವ್ಯ ಸಂಯೋಜನೆಗಳಿಗೆ ಪರಿಶೀಲಿಸಲು ಇನ್ನೂ 3 'ಸ್ಪರ್ಶಿಸಿದಾಗ' ಈವೆಂಟ್‌ಗಳನ್ನು ನೀವು ಸೇರಿಸಬೇಕು.\n\n<xml><block type=\"gamelab_checkTouching\">\n      <title name=\"CONDITION\">\"when\"</title>\n      <value name=\"SPRITE1\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"healthy_mask\"</title>\n        </block>\n      </value>\n      <value name=\"SPRITE2\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"sick\"</title>\n        </block>\n      </value><next>\n      <block type=\"gamelab_withPercentChanceDropdown\">\n      <title name=\"NUM\">75</title>\n      <statement name=\"STATEMENT\"></statement></block></next>\n    </block><block type=\"gamelab_checkTouching\">\n      <title name=\"CONDITION\">\"when\"</title>\n      <value name=\"SPRITE1\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"healthy\"</title>\n        </block>\n      </value>\n      <value name=\"SPRITE2\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"sick_mask\"</title>\n        </block>\n      </value><next>\n      <block type=\"gamelab_withPercentChanceDropdown\">\n      <title name=\"NUM\">25</title>\n      <statement name=\"STATEMENT\"></statement></block></next>\n    </block><block type=\"gamelab_checkTouching\">\n      <title name=\"CONDITION\">\"when\"</title>\n      <value name=\"SPRITE1\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"healthy_mask\"</title>\n        </block>\n      </value>\n      <value name=\"SPRITE2\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"sick_mask\"</title>\n        </block>\n      </value><next>\n      <block type=\"gamelab_withPercentChanceDropdown\">\n      <title name=\"NUM\">10</title>\n      <statement name=\"STATEMENT\"></statement></block></next>\n    </block></xml>"
         },
         "CourseF_outbreak7": {
-          "whenclicked": "## ಲಸಿಕೆಗಳು\n\nನೀವು ರಾಕ್ಷಸರ ಮೇಲೆ ಕ್ಲಿಕ್ ಮಾಡಿದಾಗ ಲಸಿಕೆ ನೀಡುವುದನ್ನು ನೀವು ಅನುಕರಿಸಬಹುದು. ಇದನ್ನು ಮಾಡಲು, ಈ ಈವೆಂಟ್‌ನೊಂದಿಗೆ `ವೇಷಭೂಷಣ ಬದಲಿಸಿ` ಬ್ಲಾಕ್ ಅನ್ನು ಬಳಸಿ:\n\n<xml><block type=\"gamelab_spriteClicked\">\n      <title name=\"CONDITION\">\"when\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"healthy\\_mask\"</title>\n        </block>\n      </value>\n    </block></xml>",
+          "whenclicked": "## ಲಸಿಕೆಗಳು\n\nನೀವು ರಾಕ್ಷಸರ ಮೇಲೆ ಕ್ಲಿಕ್ ಮಾಡಿದಾಗ ಲಸಿಕೆ ನೀಡುವುದನ್ನು ನೀವು ಅನುಕರಿಸಬಹುದು. ಇದನ್ನು ಮಾಡಲು, ಈ ಈವೆಂಟ್‌ನೊಂದಿಗೆ `ವೇಷಭೂಷಣ ಬದಲಿಸಿ` ಬ್ಲಾಕ್ ಅನ್ನು ಬಳಸಿ:\n\n<xml><block type=\"gamelab_spriteClicked\">\n      <title name=\"CONDITION\">\"when\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"healthy_mask\"</title>\n        </block>\n      </value>\n    </block></xml>",
           "verionhistory": "ಅನಾರೋಗ್ಯದ ಭಾವ ಉಂಟಾಗುತ್ತಿದೆಯೇ? ಈ ಕೆಳಗೆ 'ವಿಷನ್ ಇತಿಹಾಸ' ಕ್ಲಿಕ್ ಮಾಡುವ ಮೂಲಕ  ನಂತರ, \"ಮೊದಲಿನಿಂದ ಆರಂಭಿಸಿ\" ಅಯ್ಕೆ ಮಾಡುವ ಮೂಲಕ ನಿಮ್ಮ ಕೋಡ್ ಅನ್ನು ನೀವು ಎಂದಿಗೂ ರಿಸೆಟ್ ಮಾಡಬಹುದು."
         },
         "Dance_2019_01": {
@@ -837,7 +837,7 @@
         },
         "courseA_harvester_seq10_2021": {
           "courseA_harvester_seq10_a": "ನೀವು ಸಿಲುಕಿಕೊಂಡಿದ್ದೀರಾ? ಮೊದಲು ಒಂದು ಕಾಗದದ ಮೇಲೆ ಹಂತಗಳನ್ನು ಬರೆಯಲು ಪ್ರಯತ್ನಿಸಿ.",
-          "courseA_harvester_seq10_b": "ನೀವು `ಮೂವ್ ಈಸ್ಟ್`, ನಂತರ `ಮೂವ್ ನಾರ್ತ್` ಮಾಡಬೇಕು. ಇದನ್ನು ಎರಡು ಬಾರಿ ಮಾಡಿ. ಎಲ್ಲಾ ಜೋಳವನ್ನು ಪಡೆಯಲು ಮರೆಯಬೇಡಿ!",
+          "courseA_harvester_seq10_b": "ನೀವು `ಪೂರ್ವಕ್ಕೆ ಸರಿಸಿ`, ನಂತರ `ಉತ್ತರಕ್ಕೆ ಸರಿಸಿ` ಮಾಡಬೇಕು. ಇದನ್ನು ಎರಡು ಬಾರಿ ಮಾಡಿ. ಎಲ್ಲಾ ಜೋಳವನ್ನು ಪಡೆಯಲು ಮರೆಯಬೇಡಿ!",
           "courseA_harvester_seq10_c": "ಎಲ್ಲಾ ಜೋಳವನ್ನು ಆಯ್ಕೆ ಮಾಡಲು ಈ ಮಾರ್ಗವನ್ನು ಬಳಸಲು ಪ್ರಯತ್ನಿಸಿ."
         },
         "courseA_harvester_seq13_2021": {
@@ -845,7 +845,7 @@
         },
         "courseA_harvester_seq1_2021": {
           "courseA_harvester_seq1_a": "ಕೊಯ್ಲುಗಾರನು ಅದನ್ನು ಕಂಡುಕೊಂಡಾಗ ಜೋಳವನ್ನು ಆರಿಸಲು ಈ ಬ್ಲಾಕ್ ಅನ್ನು ಬಳಸಿ!\n\n<xml>\n  <block type=\"harvester_corn\"/>\n</xml>",
-          "courseA_harvester_seq1_b": "ಕೊಯ್ಲುಗಾರನು ಜೋಳಕ್ಕೆ ಹೋಗಲು ಮೂರು ಬಾರಿ ಪೂರ್ವಕ್ಕೆ ಚಲಿಸಬೇಕಾಗುತ್ತದೆ. ಈ ಬ್ಲಾಕ್ ಅನ್ನು ಬಳಸಿ:\n\n<xml>\n  <block type=\"maze_moveEast\"/>\n</xml>"
+          "courseA_harvester_seq1_b": "ಕೊಯ್ಲುಗಾರನು ಜೋಳವಿದ್ದಲ್ಲಿ ಹೋಗಲು ಮೂರು ಬಾರಿ ಪೂರ್ವಕ್ಕೆ ಚಲಿಸಬೇಕಾಗುತ್ತದೆ. ಈ ಬ್ಲಾಕ್ ಅನ್ನು ಬಳಸಿ:\n\n<xml>\n  <block type=\"maze_moveEast\"/>\n</xml>"
         },
         "courseA_harvester_seq2_2021": {
           "courseA_harvester_seq2_a": "ಜೋಳವನ್ನು ಆರಿಸಲು <xml><block type=\"harvester_corn\"/></xml> ಬಳಸಲು ಮರೆಯಬೇಡಿ!",
@@ -856,11 +856,11 @@
           "courseA_harvester_seq3_b": "ಹಂತಗಳನ್ನು ಜೋರಾಗಿ ಹೇಳಿ ಮತ್ತು ಉತ್ತರವನ್ನು ಕಂಡುಹಿಡಿಯಲು ಇದು ನಿಮಗೆ ಸಹಾಯ ಮಾಡುತ್ತದೆಯೇ ಎಂದು ನೋಡಿ."
         },
         "courseA_harvester_seq4_2021": {
-          "courseA_harvester_seq4_a": "ಹಾರ್ವೆಸ್ಟರ್ ಮತ್ತು ಕಾರ್ನ್ ನಡುವೆ ಎಷ್ಟು ಜಾಗಗಳಿವೆ? ನಿಮ್ಮ ಕಾರ್ಯಕ್ಷೇತ್ರದಲ್ಲಿ ಈಗಾಗಲೇ ಎಷ್ಟು ಬ್ಲಾಕ್‌ಗಳಿವೆ?",
-          "courseA_harvester_seq4_b": "ನಿಮಗೆ ಐದು `ಮೂವ್ ಈಸ್ಟ್` ಬ್ಲಾಕ್‌ಗಳು ಮತ್ತು ಒಂದು `ಪಿಕ್ ಕಾರ್ನ್` ಬ್ಲಾಕ್ ಅಗತ್ಯವಿದೆ:\n\n<xml><block type=\"harvester_corn\"/></xml>"
+          "courseA_harvester_seq4_a": "ಕೊಯ್ಲುಗಾರ ಮತ್ತು ಜೋಳದ ನಡುವೆ ಎಷ್ಟು ಜಾಗಗಳಿವೆ? ನಿಮ್ಮ ಕಾರ್ಯಕ್ಷೇತ್ರದಲ್ಲಿ ಈಗಾಗಲೇ ಎಷ್ಟು ಬ್ಲಾಕ್‌ಗಳಿವೆ?",
+          "courseA_harvester_seq4_b": "ನಿಮಗೆ ಐದು `ಪಶ್ಚಿಮಕ್ಕೆ ಸರಿಸಿ` ಬ್ಲಾಕ್‌ಗಳು ಮತ್ತು ಒಂದು `ಜೋಳ ಆರಿಸಿ` ಬ್ಲಾಕ್ ಅಗತ್ಯವಿದೆ:\n\n<xml><block type=\"harvester_corn\"/></xml>"
         },
         "courseA_harvester_seq5_2021": {
-          "courseA_harvester_seq5_a": "ಯಾವ ಬ್ಲಾಕ್ ಹಾರ್ವೆಸ್ಟರ್ ಅನ್ನು ತಪ್ಪು ದಾರಿಯಲ್ಲಿ ಚಲಿಸುತ್ತದೆ?",
+          "courseA_harvester_seq5_a": "ಯಾವ ಬ್ಲಾಕ್ ಕೊಯ್ಲುಗಾರನನ್ನು ತಪ್ಪು ದಾರಿಯಲ್ಲಿ ಚಲಿಸುತ್ತದೆ?",
           "courseA_harvester_seq5_b": "ನೀವು ಒಂದು ಬ್ಲಾಕ್ ಅನ್ನು ತೆಗೆದುಹಾಕಬೇಕಾಗಿದೆ.",
           "courseA_harvester_seq5_c": "ಈ ಬ್ಲಾಕ್ ಅನ್ನು ಕಸದ ಬುಟ್ಟಿಗೆ ಎಸೆಯಿರಿ!\n\n<xml><block type=\"maze_moveNorth\"/></xml>"
         },
@@ -868,14 +868,14 @@
           "courseA_harvester_seq6_a": "ನೀವು ಸಿಲುಕಿಕೊಂಡರೆ, ಹಂತಗಳನ್ನು ಜೋರಾಗಿ ಹೇಳಲು ಪ್ರಯತ್ನಿಸಿ. ಇದು ಸರಿಯಾದ ಮಾರ್ಗವನ್ನು ಕಂಡುಹಿಡಿಯಲು ನಿಮಗೆ ಸಹಾಯ ಮಾಡುತ್ತದೆ."
         },
         "courseA_harvester_seq7_2021": {
-          "courseA_harvester_seq7_a": "ಪದಬಂಧವನ್ನು 2 ಭಾಗಗಳಲ್ಲಿ ಪರಿಹರಿಸಲು ಪ್ರಯತ್ನಿಸಿ, ಒಂದು ಭಾಗವು ಮೂಲೆಯ ಮೊದಲು ಮತ್ತು ಒಂದು ಭಾಗವು ಮೂಲೆಯ ನಂತರ.",
+          "courseA_harvester_seq7_a": "ಪಝಲ್‌ ಅನ್ನು 2 ಭಾಗಗಳಲ್ಲಿ ಪರಿಹರಿಸಲು ಪ್ರಯತ್ನಿಸಿ, ಒಂದು ಭಾಗವನ್ನು ಮೂಲೆಗಿಂತ ಮೊದಲು ಮತ್ತು ಒಂದು ಭಾಗವನ್ನು ಮೂಲೆಯ ನಂತರ.",
           "courseA_harvester_seq7_b": "ತೊಂದರೆ ಇದೆಯೇ? ಕೊಯ್ಲು ಮಾಡುವವರು ಅನುಸರಿಸಬೇಕಾದ ಮಾರ್ಗ ಇದು."
         },
         "courseA_harvester_seq8_2021": {
-          "courseA_harvester_seq8_a": "ನಿಮ್ಮ ಅಂತಿಮ ಕೋಡ್ **4** ಚಲನೆ ಬ್ಲಾಕ್‌ಗಳನ್ನು ಮತ್ತು **2** ಪಿಕ್ ಬ್ಲಾಕ್‌ಗಳನ್ನು ಹೊಂದಿರಬೇಕು."
+          "courseA_harvester_seq8_a": "ನಿಮ್ಮ ಅಂತಿಮ ಕೋಡ್ **4** ಚಲನೆ ಬ್ಲಾಕ್‌ಗಳನ್ನು ಮತ್ತು **2** ಆರಿಸಿ ಬ್ಲಾಕ್‌ಗಳನ್ನು ಹೊಂದಿರಬೇಕು."
         },
         "courseA_harvester_seq9_2021": {
-          "courseA_harvester_seq9_a": "ಏನಾಗುತ್ತದೆ ಎಂಬುದನ್ನು ನೋಡಲು ಕೋಡ್ ಅನ್ನು ಕೆಲವು ಬಾರಿ ರನ್ ಮಾಡಿ. ಕೊಯ್ಲುಗಾರ ಎಲ್ಲಿ ನಿಲ್ಲುತ್ತದೆ?",
+          "courseA_harvester_seq9_a": "ಏನಾಗುತ್ತದೆ ಎಂಬುದನ್ನು ನೋಡಲು ಕೋಡ್ ಅನ್ನು ಕೆಲವು ಬಾರಿ ರನ್ ಮಾಡಿ. ಕೊಯ್ಲುಗಾರನು ಎಲ್ಲಿಗೆ ನಿಲ್ಲುತ್ತಾನೆ?",
           "courseA_harvester_seq9_b": "ಎಲ್ಲಾ ಜೋಳವನ್ನು ತೆಗೆದುಕೊಳ್ಳಲು ಮರೆಯಬೇಡಿ! ನಿಮಗೆ **3** ಪಿಕ್ ಕಾರ್ನ್ ಬ್ಲಾಕ್‌ಗಳ ಅಗತ್ಯವಿದೆ.",
           "courseA_harvester_seq9_c": "ಎಲ್ಲಾ ಜೋಳವನ್ನು ಆರಿಸಲು ನೀವು ಈ ಮಾರ್ಗವನ್ನು ತೆಗೆದುಕೊಳ್ಳಬೇಕು"
         },
@@ -1603,12 +1603,12 @@
         },
         "courseC_harvester_loops1_2021": {
           "courseC_harvester_loops1_a": "ಒಮ್ಮೆ ನೀವು ಕುಂಬಳಕಾಯಿಗೆ ತೆರಳಿದ ನಂತರ, ಅದನ್ನು ಸಂಗ್ರಹಿಸಲು <xml><block type=\"harvester_pumpkin\"/></xml> ಬಳಸಿ.",
-          "courseC_harvester_loops1_b": "ಒಂದು ಚೌಕದಿಂದ ಒಂದಕ್ಕಿಂತ ಹೆಚ್ಚು ಕುಂಬಳಕಾಯಿಯನ್ನು ಆಯ್ಕೆ ಮಾಡಲು ನೀವು [ಬ್ಲಾಕ್ಲಿ ಬ್ಲಾಕ್] [0] ಬ್ಲಾಕ್‌ನೊಂದಿಗೆ ಲೂಪ್ ಅನ್ನು ಬಳಸಬಹುದು."
+          "courseC_harvester_loops1_b": "ಒಂದು ಚೌಕದಿಂದ ಒಂದಕ್ಕಿಂತ ಹೆಚ್ಚು ಕುಂಬಳಕಾಯಿಯನ್ನು ಆಯ್ಕೆ ಮಾಡಲು ನೀವು <xml><block type=\"harvester_pumpkin\"/></xml> ಬ್ಲಾಕ್‌ನೊಂದಿಗೆ ಲೂಪ್ ಅನ್ನು ಬಳಸಬಹುದು."
         },
         "courseC_harvester_loops2_2021": {
           "courseC_harvester_loops2_a": "ನೀವು ಸಿಲುಕಿಕೊಂಡರೆ, ಕಾಗದದ ಮೇಲೆ ಹಂತಗಳನ್ನು ಬರೆಯಲು ಪ್ರಯತ್ನಿಸಿ ಮತ್ತು ಪುನರಾವರ್ತಿತ ಮಾದರಿಗಳನ್ನು ನೋಡಿ.",
-          "courseC_harvester_loops2_b": "ನಿಮಗೆ ಒಂದರ ನಂತರ ಒಂದು `ರಿಪೀಟ್` ಲೂಪ್ ಅಗತ್ಯವಿದೆ.",
-          "courseC_harvester_loops2_c": "ಒಂದು ಲೂಪ್ `ಮೂವ್ ಫಾರ್ವರ್ಡ್` ಆಜ್ಞೆಯನ್ನು ಪುನರಾವರ್ತಿಸುತ್ತದೆ ಮತ್ತು ಇನ್ನೊಂದು \\`ಪಿಕ್ ಕುಂಬಳಕಾಯಿ~ ಆಜ್ಞೆಯನ್ನು ಪುನರಾವರ್ತಿಸುತ್ತದೆ."
+          "courseC_harvester_loops2_b": "ನಿಮಗೆ ಒಂದರ ನಂತರ ಒಂದು ಪುನರಾವರ್ತನೆ ಲೂಪ್ ಅಗತ್ಯವಿದೆ.",
+          "courseC_harvester_loops2_c": "ಒಂದು ಲೂಪ್ ಮುಂದೆ ಸಾಗಿ ಆಜ್ಞೆಯನ್ನು ಪುನರಾವರ್ತಿಸುತ್ತದೆ ಮತ್ತು ಇನ್ನೊಂದು ಕುಂಬಳಕಾಯಿ ಆರಿಸಿ ಆಜ್ಞೆಯನ್ನು ಪುನರಾವರ್ತಿಸುತ್ತದೆ."
         },
         "courseC_harvester_loops3_2021": {
           "courseC_harvester_loops3_a": "ತಪ್ಪು ಮಾಡಲು ಹಿಂಜರಿಯದಿರಿ! ನೀವು ಇನ್ನೂ ಒಗಟುಗಳನ್ನು ಪರಿಹರಿಸಿದ್ದೀರಿ ಎಂದು ನೀವು ಭಾವಿಸದಿದ್ದರೂ ಸಹ, ಏನಾಗುತ್ತದೆ ಎಂಬುದನ್ನು ನೋಡಲು ಬ್ಲಾಕ್‌ಗಳನ್ನು ಸೇರಿಸಲು ಮತ್ತು ಕೋಡ್ ಅನ್ನು ರನ್ ಮಾಡಲು ಪ್ರಯತ್ನಿಸಿ.",
@@ -1616,25 +1616,25 @@
           "courseC_harvester_loops3_c": "ನಿಮ್ಮ ಕೋಡ್ ಅನ್ನು ಸರಳೀಕರಿಸಲು ನೀವು ಬಯಸಿದರೆ, ನೀವು ನಿಜವಾಗಿಯೂ ಒಂದು ಲೂಪ್ ಅನ್ನು ಇನ್ನೊಂದರೊಳಗೆ ಹಾಕಬಹುದು! ಇದನ್ನು **ನೆಸ್ಟೆಡ್ ಲೂಪ್** ಎಂದು ಕರೆಯಲಾಗುತ್ತದೆ."
         },
         "courseC_harvester_loops4_2021": {
-          "courseC_harvester_loops4_a": "ಜೋಳವನ್ನು ಸಂಗ್ರಹಿಸಲು ಹೊಸ `ಪಿಕ್ ಕಾರ್ನ್` ಬ್ಲಾಕ್ ಅನ್ನು ಬಳಸಿ.",
+          "courseC_harvester_loops4_a": "ಜೋಳವನ್ನು ಸಂಗ್ರಹಿಸಲು ಹೊಸ ಜೋಳ ಆರಿಸಿ ಬ್ಲಾಕ್ ಅನ್ನು ಬಳಸಿ.",
           "courseC_harvester_loops4_b": "ನಿಮ್ಮ ಕೋಡ್‌ನಲ್ಲಿ ನೀವು ಬಹು ಪುನರಾವರ್ತಿತ ಲೂಪ್‌ಗಳನ್ನು ಬಳಸಬಹುದು, ಕೆಲವು ಜೋಳವನ್ನು ತೆಗೆದುಕೊಳ್ಳಲು ಮತ್ತು ಕೆಲವು ಕುಂಬಳಕಾಯಿಗಳನ್ನು ತೆಗೆದುಕೊಳ್ಳಲು.",
           "courseC_harvester_loops4_c": "ನಿಮ್ಮ ಕೋಡ್ ಅನ್ನು ಸರಳೀಕರಿಸಲು ನೀವು ಬಯಸಿದರೆ, ನೀವು ನಿಜವಾಗಿಯೂ ಒಂದು ಲೂಪ್ ಅನ್ನು ಇನ್ನೊಂದರೊಳಗೆ ಹಾಕಬಹುದು! ಇದನ್ನು **ನೆಸ್ಟೆಡ್ ಲೂಪ್** ಎಂದು ಕರೆಯಲಾಗುತ್ತದೆ."
         },
         "courseC_harvester_loops5_2021": {
-          "courseC_harvester_loops5_a": "ನೀವು ಸಿಲುಕಿಕೊಂಡರೆ, ಸಂಪೂರ್ಣ ಪ್ರೋಗ್ರಾಂ ಅನ್ನು ಸೆಳೆಯಲು ಪ್ರಯತ್ನಿಸಿ ಮತ್ತು ನಂತರ ಪುನರಾವರ್ತಿಸುವ ಮಾದರಿಗಳನ್ನು ನೋಡಿ.",
-          "courseC_harvester_loops5_b": "ಈ ಮೆಟ್ಟಿಲು ಹೆಜ್ಜೆ ಇತರ ಒಗಟುಗಳಿಂದ ಪರಿಚಿತವಾಗಿದೆಯೇ? ಚಲನೆಗಳು ಒಂದೇ ಆಗಿರಬೇಕು, ದಾರಿಯುದ್ದಕ್ಕೂ ಬೆಳೆಗಳನ್ನು ಸಂಗ್ರಹಿಸಲು ಮರೆಯದಿರಿ."
+          "courseC_harvester_loops5_a": "ನೀವು ಸಿಲುಕಿಕೊಂಡರೆ, ಸಂಪೂರ್ಣ ಪ್ರೋಗ್ರಾಂ ಅನ್ನು ಬರೆಯಲು ಪ್ರಯತ್ನಿಸಿ ಮತ್ತು ನಂತರ ಪುನರಾವರ್ತಿಸುವ ಮಾದರಿಗಳನ್ನು ನೋಡಿ.",
+          "courseC_harvester_loops5_b": "ಈ ಮೆಟ್ಟಿಲು ಹಂತ ಇತರ ಒಗಟುಗಳಂತೆ ಇದೆಯೇ? ಚಲನೆ ಅದೇ ರೀತಿಯಲ್ಲಿದೆ, ದಾರಿಯುದ್ದಕ್ಕೂ ಬೆಳೆಗಳನ್ನು ಸಂಗ್ರಹಿಸಲು ಮರೆಯದಿರಿ."
         },
         "courseC_harvester_loops6_2021": {
-          "courseC_harvester_loops6_a": "ಒಂದು ಪುನರಾವರ್ತಿತ ಲೂಪ್ನಲ್ಲಿ ನೀವು ಬಹು ಬ್ಲಾಕ್ಗಳನ್ನು ಹಾಕಬಹುದು ಎಂಬುದನ್ನು ನೆನಪಿಡಿ.",
+          "courseC_harvester_loops6_a": "ಒಂದು ಪುನರಾವರ್ತಿತ ಲೂಪ್‌ನಲ್ಲಿ ನೀವು ಬಹು ಬ್ಲಾಕ್‌ಗಳನ್ನು ಹಾಕಬಹುದು ಎಂಬುದನ್ನು ನೆನಪಿಡಿ.",
           "courseC_harvester_loops6_b": "ಜೋಳದ ಸಾಲಿನ ಕೊನೆಯಲ್ಲಿ ತಿರುಗಲು ಮರೆಯಬೇಡಿ."
         },
         "courseC_harvester_loops7_2021": {
           "courseC_harvester_loops7_a": "ನೀವು ಈ ಒಗಟು ಎರಡು ರೀತಿಯಲ್ಲಿ ಪರಿಹರಿಸಬಹುದು, ಮೊದಲು ಜೋಳ ಅಥವಾ ಕುಂಬಳಕಾಯಿಗಳನ್ನು ಪಡೆಯಿರಿ.",
-          "courseC_harvester_loops7_b": "ಈ ಒಗಟು ಪರಿಹರಿಸಲು ನಿಮಗೆ ಬಹು `ರಿಪೀಟ್` ಲೂಪ್‌ಗಳ ಅಗತ್ಯವಿದೆ."
+          "courseC_harvester_loops7_b": "ಈ ಒಗಟು ಪರಿಹರಿಸಲು ನಿಮಗೆ ಬಹು ಪುನರಾವರ್ತನೆ ಲೂಪ್‌ಗಳ ಅಗತ್ಯವಿದೆ."
         },
         "courseC_harvester_loops8_2021": {
           "courseC_harvester_loops8_a": "ಈ ಮೆಟ್ಟಿಲು ಹಂತವು ಹಿಂದಿನ ಒಗಟಿನಿಂದ ಪರಿಚಿತವಾಗಿದೆಯೇ? ಚಲನೆಗಳು ಒಂದೇ ಆಗಿರಬೇಕು, ದಾರಿಯುದ್ದಕ್ಕೂ ಬೆಳೆಗಳನ್ನು ಸಂಗ್ರಹಿಸಲು ಮರೆಯದಿರಿ.",
-          "courseC_harvester_loops8_b": "ನಿಮ್ಮ ಕೋಡ್ ಅನ್ನು ಹೆಚ್ಚು ಸರಳಗೊಳಿಸಲು ನೀವು ಬಯಸಿದರೆ, ನೀವು ನಿಜವಾಗಿ ಒಂದು `ರಿಪೀಟ್` ಲೂಪ್ ಅನ್ನು ಇನ್ನೊಂದರೊಳಗೆ ಹಾಕಬಹುದು! ಇದನ್ನು **ನೆಸ್ಟೆಡ್ ಲೂಪ್** ಎಂದು ಕರೆಯಲಾಗುತ್ತದೆ."
+          "courseC_harvester_loops8_b": "ನಿಮ್ಮ ಕೋಡ್ ಅನ್ನು ಹೆಚ್ಚು ಸರಳಗೊಳಿಸಲು ನೀವು ಬಯಸಿದರೆ, ನೀವು ನಿಜವಾಗಿ ಒಂದು ಪುನರಾವರ್ತನೆ ಲೂಪ್ ಅನ್ನು ಇನ್ನೊಂದರೊಳಗೆ ಹಾಕಬಹುದು! ಇದನ್ನು ನೆಸ್ಟೆಡ್ ಲೂಪ್ ಎಂದು ಕರೆಯಲಾಗುತ್ತದೆ."
         },
         "courseC_harvester_loops_challenge1a_2021": {
           "courseC_harvester_loops_challenge1_a": "ಕುಣಿಕೆಗಳಿಲ್ಲದೆ ಇದು ತುಂಬಾ ಕಷ್ಟ!",
@@ -2121,7 +2121,7 @@
           "courseD_bee_conditionals_challenge1_b": "ಈ ಒಗಟಿನಲ್ಲಿ, ಪ್ರತಿ ಜಾಗವು ಹೂವು, ಜೇನು ಬಾಚಣಿಗೆ ಅಥವಾ ಏನನ್ನೂ ಹೊಂದಿರುವುದಿಲ್ಲ. ಅಂದರೆ ನೀವು ಪ್ರತಿ ಚೌಕದಲ್ಲಿ ನಿಮ್ಮ `ಇಫ್‌/ಎಲ್ಸ್‌` ಷರತ್ತುಗಳನ್ನು ಪುನರಾವರ್ತಿಸಬಹುದು."
         },
         "courseD_bee_conditionals_challenge2_2021": {
-          "courseD_bee_conditionals_challenge1_b": "`ಇಫ್ ಅಟ್ ಫ್ಲವರ್` ಬ್ಲಾಕ್‌ಗಳಂತೆಯೇ, ಜೇನುನೊಣ ಹೂವಿನ ಬಳಿ ಇದ್ದರೆ ಮಾತ್ರ `ಮಕರಂದ > 0` ಒಳಗಿನ ಕೋಡ್ ರನ್ ಆಗುತ್ತದೆ. ವ್ಯತ್ಯಾಸವೇನೆಂದರೆ, ಅಮೃತ ಉಳಿಯುವವರೆಗೆ ಒಳಗಿನ ಕೋಡ್ ಮತ್ತೆ ಮತ್ತೆ ಓಡುತ್ತದೆ. ಈ ಮಾದರಿಯನ್ನು ಪ್ರಯತ್ನಿಸಿ:\n\n<xml>  <block type=\"bee_whileNectarAmount\">\n    <title name=\"ARG1\">nectarRemaining</title>\n    <title name=\"OP\">></title>\n    <title name=\"ARG2\">0</title>                    <statement name=\"DO\">\n                      <block type=\"maze_nectar\"/>\n                    </statement>\n  </block></xml>"
+          "courseD_bee_conditionals_challenge1_b": "`ಇಫ್ ಅಟ್ ಫ್ಲವರ್` ಬ್ಲಾಕ್‌ಗಳಂತೆಯೇ, ಜೇನುನೊಣ ಹೂವಿನ ಬಳಿ ಇದ್ದರೆ ಮಾತ್ರ `ಮಕರಂದ > 0` ಒಳಗಿನ ಕೋಡ್ ರನ್ ಆಗುತ್ತದೆ. ವ್ಯತ್ಯಾಸವೇನೆಂದರೆ, ಅಮೃತ ಉಳಿಯುವವರೆಗೆ ಒಳಗಿನ ಕೋಡ್ ಮತ್ತೆ ಮತ್ತೆ ಓಡುತ್ತದೆ. ಈ ಮಾದರಿಯನ್ನು ಪ್ರಯತ್ನಿಸಿ:\n\n<xml>  <block type=\"bee_whileNectarAmount\">\n    <title name=\"ARG1\">nectarRemaining</title>\n    <title name=\"OP\">&gt;</title>\n    <title name=\"ARG2\">0</title>                    <statement name=\"DO\">\n                      <block type=\"maze_nectar\"/>\n                    </statement>\n  </block></xml>"
         },
         "courseD_bee_nestedLoops1_2021": {
           "courseD_bee_nestedLoops1_a": "ಕೆಲಸಮಾಡುತ್ತಿಲ್ಲ? ಪ್ರತಿ ಸಾಲಿನಲ್ಲೂ ಏನಾಗುತ್ತದೆ ಎಂಬುದನ್ನು ನೋಡಲು \"ಹಂತ\" ಬಟನ್ ಅನ್ನು ಬಳಸಲು ಪ್ರಯತ್ನಿಸಿ.",
@@ -2667,7 +2667,7 @@
           "courseC_maze_programming1_b": "ತಪ್ಪು ಮಾಡಲು ಹಿಂಜರಿಯದಿರಿ! ಏನನ್ನಾದರೂ ಪ್ರಯತ್ನಿಸಿ, ಮತ್ತು ಅದು ಕೆಲಸ ಮಾಡದಿದ್ದರೆ, ಬೇರೆ ಯಾವುದನ್ನಾದರೂ ಪ್ರಯತ್ನಿಸಿ!"
         },
         "helloworld_animals_backgrounds": {
-          "hello_world_background": "'ಕ್ಲಿಕ್ ಮಾಡಿದಾಗ' ಈವೆಂಟ್ ಬ್ಲಾಕ್‌ ಅಡಿಯಲ್ಲಿ 'ಹಿನ್ನೆಲೆ ನಿಗದಿಸಿ' ಬ್ಲಾಕ್‌ ಸಂಪರ್ಕಿಸುವ ಮೂಲಕ ನೀವು ಹಿನ್ನೆಲೆ ಬದಲಿಸಬಹುದು:\n\n<xml><block type=\"gamelab_spriteClicked\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"cuteanimals_hippo\"</title>\n      </block>\n    </value>\n    <next>\n      \\<block type=\"gamelab_setBackgroundImageAs\">\n        <title name=\"IMG\">\"gradient\\_30\"</title>\n      </block>\n    </next>\n  </block>\n</xml>"
+          "hello_world_background": "'ಕ್ಲಿಕ್ ಮಾಡಿದಾಗ' ಈವೆಂಟ್ ಬ್ಲಾಕ್‌ ಅಡಿಯಲ್ಲಿ 'ಹಿನ್ನೆಲೆ ನಿಗದಿಸಿ' ಬ್ಲಾಕ್‌ ಸಂಪರ್ಕಿಸುವ ಮೂಲಕ ನೀವು ಹಿನ್ನೆಲೆ ಬದಲಿಸಬಹುದು:\n\n<xml><block type=\"gamelab_spriteClicked\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"cuteanimals_hippo\"</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_setBackgroundImageAs\">\n        <title name=\"IMG\">\"gradient_30\"</title>\n      </block>\n    </next>\n  </block>\n</xml>"
         },
         "helloworld_animals_behaviors": {
           "storyboard_behavior_example": "ಗಮನಿಸಿ:\\_ ಸ್ಪ್ರೈಟ್‌ಗೆ ವರ್ತನೆಯನ್ನು ನೀಡಲು, 'ಬಲಕ್ಕೆ ಸ್ಪಿನ್ ಮಾಡುವುದು' ರೀತಿಯ ಹಸಿರು ವರ್ತನೆ ಬ್ಲಾಕ್‌ಗಳಲ್ಲಿ ಒಂದರ ಜೊತೆಗೆ 'ಸ್ಪ್ರೈಟ್ ಆರಂಭವಾಗುತ್ತದೆ' ಬ್ಲಾಕ್ ಅನ್ನು ನೀವು ಬಳಸಬೇಕು.\n\n<xml><block type=\"gamelab_addBehaviorSimple\">\n            <value name=\"SPRITE\">\n              <block type=\"gamelab_allSpritesWithAnimation\">\n                <title name=\"ANIMATION\">\"cuteanimals_rooster_hello\"</title>\n              </block>\n            </value>\n            <value name=\"BEHAVIOR\">\n              <block type=\"gamelab_behavior_get\">\n                <mutation></mutation>\n                <title name=\"VAR\" id=\"spinning right\">spinning right</title>\n              </block>\n              </value></block></xml>"
@@ -2677,10 +2677,10 @@
           "hw_click_sprites": "ಪ್ರೋಗ್ರಾಂ ಚಾಲನೆಯಲ್ಲಿರುವಾಗ ಸ್ಪ್ರೈಟ್‌ಗಳ ಮೇಲೆ ಕ್ಲಿಕ್ ಮಾಡಿ."
         },
         "helloworld_animals_costumes": {
-          "hello_world_costumes": "'ಕ್ಲಿಕ್ ಮಾಡಿದಾಗ' ಈವೆಂಟ್ ಬ್ಲಾಕ್ ಅಡಿಯಲ್ಲಿ 'ಕಾಸ್ಟ್ಯೂಮ್ ಬದಲಿಸಿ' ಬ್ಲಾಕ್‌ ಸಂಪರ್ಕಿಸಲು ಪ್ರಯತ್ನಿಸಿ.\n\n<xml><block type=\"gamelab_spriteClicked\" deletable=\"false\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\" can_disconnect_from_parent=\"false\">\n        <title name=\"ANIMATION\">\"\"cuteanimals_sheep\"</title>\n      </block>\n    </value>\n    <next>\n      \\<block type=\"gamelab_setAnimation\">\n        <title name=\"ANIMATION\">\"\"cuteanimals_sheep\"</title>\n        <value name=\"THIS\">\n          \\<block type=\"gamelab_allSpritesWithAnimation\">\n            <title name=\"ANIMATION\">\"\"cuteanimals_goat_hello\"</title>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block>\n</xml>"
+          "hello_world_costumes": "'ಕ್ಲಿಕ್ ಮಾಡಿದಾಗ' ಈವೆಂಟ್ ಬ್ಲಾಕ್ ಅಡಿಯಲ್ಲಿ 'ಕಾಸ್ಟ್ಯೂಮ್ ಬದಲಿಸಿ' ಬ್ಲಾಕ್‌ ಸಂಪರ್ಕಿಸಲು ಪ್ರಯತ್ನಿಸಿ.\n\n<xml><block type=\"gamelab_spriteClicked\" deletable=\"false\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\" can_disconnect_from_parent=\"false\">\n        <title name=\"ANIMATION\">\"\"cuteanimals_sheep\"</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_setAnimation\">\n        <title name=\"ANIMATION\">\"\"cuteanimals_sheep\"</title>\n        <value name=\"THIS\">\n          <block type=\"gamelab_allSpritesWithAnimation\">\n            <title name=\"ANIMATION\">\"\"cuteanimals_goat_hello\"</title>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block>\n</xml>"
         },
         "helloworld_animals_events": {
-          "hello_world_click": "'ಕ್ಲಿಕ್ ಮಾಡಿದಾಗ' ಈವೆಂಟ್ ಬ್ಲಾಕ್ ಅಡಿಯಲ್ಲಿ 'ಹೇಳಿ' ಬ್ಲಾಕ್ ಸಂಪರ್ಕಿಸಿ:\n\n<xml><block type=\"gamelab_spriteClicked\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"cuteanimals_seahorse\"</title>\n      </block>\n    </value>\n    <next>\n      \\<block type=\"gamelab_spriteSay\">\n        <title name=\"SPEECH\">Hello, ocean!</title>\n        <value name=\"SPRITE\">\n          <block type=\"gamelab_allSpritesWithAnimation\">\n            <title name=\"ANIMATION\">\"cuteanimals\\_seahorse\"</title>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block></xml>"
+          "hello_world_click": "'ಕ್ಲಿಕ್ ಮಾಡಿದಾಗ' ಈವೆಂಟ್ ಬ್ಲಾಕ್ ಅಡಿಯಲ್ಲಿ 'ಹೇಳಿ' ಬ್ಲಾಕ್ ಸಂಪರ್ಕಿಸಿ:\n\n<xml><block type=\"gamelab_spriteClicked\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"cuteanimals_seahorse\"</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_spriteSay\">\n        <title name=\"SPEECH\">Hello, ocean!</title>\n        <value name=\"SPRITE\">\n          <block type=\"gamelab_allSpritesWithAnimation\">\n            <title name=\"ANIMATION\">\"cuteanimals_seahorse\"</title>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block></xml>"
         },
         "helloworld_animals_location": {
           "location_pin_hint": "ಸ್ಪ್ರೈಟ್‌ ಸ್ಥಳವನ್ನು ಬದಲಿಸಲು, ಸ್ಥಳ ಬ್ಲಾಕ್‌ನ ಮೇಲಿನ ಪಿನ್ ಕ್ಲಿಕ್ ಮಾಡಿ, ನಂತರ ಎಲ್ಲಿಗೆ ಹೋಗಬೇಕೋ ಅಲ್ಲಿ ಕ್ಲಿಕ್ ಮಾಡಿ.\n\n![](https://images.code.org/e3267d2b50f754befc63744be14287ac-image-1633360873408.gif)"
@@ -2692,7 +2692,7 @@
           "hello-world-first-solution-bear": "ಕರಡಿಯನ್ನು ಮಾಡಲು ಏನನ್ನಾದರೂ ಹೇಳಿ, ಈ ರೀತಿಯ ಕೋಡ್‌ ಬ್ಲಾಕ್‌ಗಳನ್ನು ಸಂಪರ್ಕಿಸಿ:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\"><next>  <block type=\"gamelab_makeNewSpriteAnon\">\n    <title name=\"ANIMATION_NAME\">\"cuteanimals_bear\"</title>\n    <value name=\"LOCATION\">\n      <block type=\"gamelab_location_picker\">\n        <title name=\"LOCATION\">{\"x\":200,\"y\":200}</title>\n      </block>\n    </value><next>  <block type=\"gamelab_spriteSay\">\n    <title name=\"SPEECH\">Hello, world!</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"cuteanimals_bear\"</title>\n      </block>\n    </value>\n  </block></next>\n  </block></next></block>\n</xml>"
         },
         "helloworld_animals_sizes": {
-          "storyboard_setProp": "ಕೇವಲ ಒಂದು ಬಾರಿ ಸ್ಪ್ರೈಟ್ ಗಾತ್ರವನ್ನು ನಿಗದಿಸಲು, ಈ ಬ್ಲಾಕ್ ಅನ್ನು ನೀವು ಬಳಸಬಹುದು:\n\n<xml><block type=\"gamelab_setProp\">\n      <title name=\"PROPERTY\">\"scale\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"cuteanimals_tiger\"</title>\n        </block>\n      </value>\n      <value name=\"VAL\">\n        \\<block type=\"math_number\">\n          <title name=\"NUM\">50</title>\n        </block>\n      </value>\n    </block></xml>",
+          "storyboard_setProp": "ಕೇವಲ ಒಂದು ಬಾರಿ ಸ್ಪ್ರೈಟ್ ಗಾತ್ರವನ್ನು ನಿಗದಿಸಲು, ಈ ಬ್ಲಾಕ್ ಅನ್ನು ನೀವು ಬಳಸಬಹುದು:\n\n<xml><block type=\"gamelab_setProp\">\n      <title name=\"PROPERTY\">\"scale\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"cuteanimals_tiger\"</title>\n        </block>\n      </value>\n      <value name=\"VAL\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">50</title>\n        </block>\n      </value>\n    </block></xml>",
           "storyboard_changePropBy": "ಪದೇ ಪದೇ (ಈವೆಂಟ್‌ಗಳ ಜೊತೆಗೆ) ಸ್ಪ್ರೈಟ್‌ ಗಾತ್ರವನ್ನು ನೀವು ಬದಲಿಸಲು ಬಯಸಿದರೆ, ಈ ಬ್ಲಾಕ್ ಬಳಸಿ:\n\n<xml><block type=\"gamelab_changePropBy\">\n      <title name=\"PROPERTY\">\"scale\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"cuteanimals_cheetah_hello\"</title>\n        </block>\n      </value>\n      <value name=\"VAL\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">10</title>\n        </block>\n      </value>\n    </block></xml>"
         },
         "helloworld_emoji_backgrounds": {
@@ -2754,7 +2754,7 @@
           "storyboard_changePropBy": "ಪದೇ ಪದೇ (ಈವೆಂಟ್‌ಗಳ ಜೊತೆಗೆ) ಸ್ಪ್ರೈಟ್‌ ಗಾತ್ರವನ್ನು ನೀವು ಬದಲಿಸಲು ಬಯಸಿದರೆ, ಈ ಬ್ಲಾಕ್ ಬಳಸಿ:\n\n<xml><block type=\"gamelab_changePropBy\">\n      <title name=\"PROPERTY\">\"scale\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"face_strawberry_1\"</title>\n        </block>\n      </value>\n      <value name=\"VAL\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">10</title>\n        </block>\n      </value>\n    </block></xml>"
         },
         "helloworld_retro_backgrounds": {
-          "hello_world_background": "'ಕ್ಲಿಕ್ ಮಾಡಿದಾಗ' ಈವೆಂಟ್ ಬ್ಲಾಕ್‌ ಅಡಿಯಲ್ಲಿ 'ಹಿನ್ನೆಲೆ ನಿಗದಿಸಿ' ಬ್ಲಾಕ್‌ ಸಂಪರ್ಕಿಸುವ ಮೂಲಕ ನೀವು ಹಿನ್ನೆಲೆ ಬದಲಿಸಬಹುದು:\n\n<xml><block type=\"gamelab_spriteClicked\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"retroship_21\"</title>\n      </block>\n    </value>\n    <next>\n      \\<block type=\"gamelab_setBackgroundImageAs\">\n        <title name=\"IMG\">\"background_landscape11_1\"</title>\n      </block>\n    </next>\n  </block>\n</xml>"
+          "hello_world_background": "'ಕ್ಲಿಕ್ ಮಾಡಿದಾಗ' ಈವೆಂಟ್ ಬ್ಲಾಕ್‌ ಅಡಿಯಲ್ಲಿ 'ಹಿನ್ನೆಲೆ ನಿಗದಿಸಿ' ಬ್ಲಾಕ್‌ ಸಂಪರ್ಕಿಸುವ ಮೂಲಕ ನೀವು ಹಿನ್ನೆಲೆ ಬದಲಿಸಬಹುದು:\n\n<xml><block type=\"gamelab_spriteClicked\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"retroship_21\"</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_setBackgroundImageAs\">\n        <title name=\"IMG\">\"background_landscape11_1\"</title>\n      </block>\n    </next>\n  </block>\n</xml>"
         },
         "helloworld_retro_behaviors": {
           "storyboard_behavior_example": "ಗಮನಿಸಿ:\\_ ಸ್ಪ್ರೈಟ್‌ಗೆ ವರ್ತನೆಯನ್ನು ನೀಡಲು, 'ಬಲಕ್ಕೆ ಸ್ಪಿನ್ ಮಾಡುವುದು' ರೀತಿಯ ಹಸಿರು ವರ್ತನೆ ಬ್ಲಾಕ್‌ಗಳಲ್ಲಿ ಒಂದರ ಜೊತೆಗೆ 'ಸ್ಪ್ರೈಟ್ ಆರಂಭವಾಗುತ್ತದೆ' ಬ್ಲಾಕ್ ಅನ್ನು ನೀವು ಬಳಸಬೇಕು.\n\n<xml><block type=\"gamelab_addBehaviorSimple\">\n            <value name=\"SPRITE\">\n              <block type=\"gamelab_allSpritesWithAnimation\">\n                <title name=\"ANIMATION\">\"retrocreature_09_1\"</title>\n              </block>\n            </value>\n            <value name=\"BEHAVIOR\">\n              <block type=\"gamelab_behavior_get\">\n                <mutation></mutation>\n                <title name=\"VAR\" id=\"spinning right\">spinning right</title>\n              </block>\n              </value></block></xml>"
@@ -2773,7 +2773,7 @@
           "location_pin_hint": "ಸ್ಪ್ರೈಟ್‌ ಸ್ಥಳವನ್ನು ಬದಲಿಸಲು, ಸ್ಥಳ ಬ್ಲಾಕ್‌ನ ಮೇಲಿನ ಪಿನ್ ಕ್ಲಿಕ್ ಮಾಡಿ, ನಂತರ ಎಲ್ಲಿಗೆ ಹೋಗಬೇಕೋ ಅಲ್ಲಿ ಕ್ಲಿಕ್ ಮಾಡಿ.\n\n![](https://images.code.org/e3267d2b50f754befc63744be14287ac-image-1633360873408.gif)"
         },
         "helloworld_retro_multi": {
-          "storyboard_costume": "ಪ್ರತಿ ಸ್ಪ್ರೈಟ್‌ಗೆ ಕಾಸ್ಟ್ಯೂಮ್‌ಗಳು ಹೋಲುತ್ತವೆ ಎಂಬುದನ್ನು ಖಚಿತಪಡಿಸಿ.\n<xml><block type=\"gamelab_spriteSay\">\n      <title name=\"SPEECH\">Hello!</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"retrocreature\\_16\"</title>\n        </block>\n      </value>\n    </block></xml>"
+          "storyboard_costume": "ಪ್ರತಿ ಸ್ಪ್ರೈಟ್‌ಗೆ ಕಾಸ್ಟ್ಯೂಮ್‌ಗಳು ಹೋಲುತ್ತವೆ ಎಂಬುದನ್ನು ಖಚಿತಪಡಿಸಿ.\n<xml><block type=\"gamelab_spriteSay\">\n      <title name=\"SPEECH\">Hello!</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"retrocreature_16\"</title>\n        </block>\n      </value>\n    </block></xml>"
         },
         "helloworld_retro_say": {
           "hello-world-first-solution-retrocreature": "ಜೀವಿಯು ಏನನ್ನಾದರೂ ಹೇಳುವಂತೆ ಮಾಡಲು, ಈ ರೀತಿ ಕೋಡ್ ಬ್ಲಾಕ್‌ಗಳನ್ನು ಸಂಪರ್ಕಿಸಿ:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\"><next>  <block type=\"gamelab_makeNewSpriteAnon\">\n    <title name=\"ANIMATION_NAME\">\"retrocreature_18_1\"</title>\n    <value name=\"LOCATION\">\n      <block type=\"gamelab_location_picker\">\n        <title name=\"LOCATION\">{\"x\":200,\"y\":200}</title>\n      </block>\n    </value><next>  <block type=\"gamelab_spriteSay\">\n    <title name=\"SPEECH\">Hello, world!</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"retrocreature_18_1\"</title>\n      </block>\n    </value>\n  </block></next>\n  </block></next></block>\n</xml>"
@@ -2783,8 +2783,8 @@
           "hw_retro_changePropBy": "ಪದೇ ಪದೇ (ಈವೆಂಟ್‌ಗಳ ಜೊತೆಗೆ) ಸ್ಪ್ರೈಟ್‌ ಗಾತ್ರವನ್ನು ನೀವು ಬದಲಿಸಲು ಬಯಸಿದರೆ, ಈ ಬ್ಲಾಕ್ ಬಳಸಿ:\n\n<xml><block type=\"gamelab_changePropBy\">\n      <title name=\"PROPERTY\">\"scale\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"retrocreature_11_1\"</title>\n        </block>\n      </value>\n      <value name=\"VAL\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">10</title>\n        </block>\n      </value>\n    </block></xml>"
         },
         "poetry_hoc_addSprites": {
-          "location_hint": "ಪ್ರತಿ ಸ್ಪ್ರೈಟ್‌ಗೆ ಒಂದು **ಸ್ಥಳ** ಇರುತ್ತದೆ. ಈ ಬ್ಲಾಕ್‌ನಲ್ಲಿ ಪಿನ್ ಕ್ಲಿಕ್ ಮಾಡುವ ಮೂಲಕ ನೀವು ಸ್ಥಳವನ್ನು ನಿಗದಿಸಬಹುದು: \n\n<xml><block type=\"Poetry_makeNewSpriteAnon\"><title name=\"ANIMATION_NAME\">\"twinkling\\_star\"</title><title name=\"LOCATION\">{\"x\":200,\"y\":225}</title></block></xml>\n\n-   ಸ್ಥಳ ಬ್ಲಾಕ್‌ನಲ್ಲಿ ![](<https://images.code.org/e9531e292b034feef0f176d4f97ac47f-image-1634932451913.54.05 PM.png>) ಪಿನ್ ಕ್ಲಿಕ್ ಮಾಡಿ, ನಂತರ ಸ್ಕ್ರೀನ್‌ನ ಮೇಲೆ ನಿಮ್ಮ ಸ್ಪ್ರೈಟ್‌ಗೆ ಹೊಸ ಸ್ಥಾನವನ್ನು ಆಯ್ಕೆ ಮಾಡಿ.\n-   ನಿಮ್ಮ ಕೋಡ್ ಪೂರ್ತಿಗೊಂಡಾಗ \"ರನ್\" ಬಟನ್ ಅನ್ನು ಒತ್ತಿ.",
-          "remove_hint": "ಕೆಲವು ಸಾಲು ಸಂಖ್ಯೆಯಲ್ಲಿ ಸ್ಪ್ರೈಟ್ ಅನ್ನು ನೀವು ತೆಗೆದುಹಾಕಬಹುದು. ಅದರ ಸ್ಥಳದಲ್ಲಿ ಹೊಸ ಸ್ಪ್ರೈಟ್ ಅನ್ನು ನೀವು ಸೇರಿಸಬಹುದು: \n\n<xml><block type=\"Poetry_whenLineShows\"><title name=\"N\">3</title><next><block type=\"Poetry_destroy\"><title name=\"ANIMATION_NAME\">\"twinkling_star\"</title><next>\\<block type=\"Poetry_makeNewSpriteAnon\"><title name=\"ANIMATION_NAME\">\"night\\_moon\"</title><title name=\"LOCATION\">{\"x\":200,\"y\":225}</title></block></next></block></next></block></xml>"
+          "location_hint": "ಪ್ರತಿ ಸ್ಪ್ರೈಟ್‌ಗೆ ಒಂದು **ಸ್ಥಳ** ಇರುತ್ತದೆ. ಈ ಬ್ಲಾಕ್‌ನಲ್ಲಿ ಪಿನ್ ಕ್ಲಿಕ್ ಮಾಡುವ ಮೂಲಕ ನೀವು ಸ್ಥಳವನ್ನು ನಿಗದಿಸಬಹುದು: \n\n<xml><block type=\"Poetry_makeNewSpriteAnon\"><title name=\"ANIMATION_NAME\">\"twinkling_star\"</title><title name=\"LOCATION\">{\"x\":200,\"y\":225}</title></block></xml>\n\n-   ಸ್ಥಳ ಬ್ಲಾಕ್‌ನಲ್ಲಿ ![](<https://images.code.org/e9531e292b034feef0f176d4f97ac47f-image-1634932451913.54.05 PM.png>) ಪಿನ್ ಕ್ಲಿಕ್ ಮಾಡಿ, ನಂತರ ಸ್ಕ್ರೀನ್‌ನ ಮೇಲೆ ನಿಮ್ಮ ಸ್ಪ್ರೈಟ್‌ಗೆ ಹೊಸ ಸ್ಥಾನವನ್ನು ಆಯ್ಕೆ ಮಾಡಿ.\n-   ನಿಮ್ಮ ಕೋಡ್ ಪೂರ್ತಿಗೊಂಡಾಗ \"ರನ್\" ಬಟನ್ ಅನ್ನು ಒತ್ತಿ.",
+          "remove_hint": "ಕೆಲವು ಸಾಲು ಸಂಖ್ಯೆಯಲ್ಲಿ ಸ್ಪ್ರೈಟ್ ಅನ್ನು ನೀವು ತೆಗೆದುಹಾಕಬಹುದು. ಅದರ ಸ್ಥಳದಲ್ಲಿ ಹೊಸ ಸ್ಪ್ರೈಟ್ ಅನ್ನು ನೀವು ಸೇರಿಸಬಹುದು: \n\n<xml><block type=\"Poetry_whenLineShows\"><title name=\"N\">3</title><next><block type=\"Poetry_destroy\"><title name=\"ANIMATION_NAME\">\"twinkling_star\"</title><next><block type=\"Poetry_makeNewSpriteAnon\"><title name=\"ANIMATION_NAME\">\"night_moon\"</title><title name=\"LOCATION\">{\"x\":200,\"y\":225}</title></block></next></block></next></block></xml>"
         },
         "poetry_hoc_backgroundEffects": {
           "add_background_effect": "ಈ ರೀತಿಯ ಹಿನ್ನೆಲೆ ಬ್ಲಾಕ್ ಅನ್ನು ಹುಡುಕಿ:\n<xml><block type=\"Poetry_setBackgroundEffect\"><title name=\"EFFECT\">\"colors\"</title><title name=\"PALETTE\">\"sunrise\"</title></block></xml>\n\nಮತ್ತು ಈ ರೀತಿಯ ಪಠ್ಯ ಎಫೆಕ್ಟ್‌ ಬ್ಲಾಕ್ ಅನ್ನು ಹುಡುಕಿ: \n\n<xml><block type=\"Poetry_setFontColor\"><value name=\"FILL\"><block type=\"colour_picker\"><title name=\"COLOUR\">#000099</title></block></value></block></xml>\n\nನಿಮ್ಮ ವರ್ಕ್‌ಸ್ಪೇಸ್‌ನಲ್ಲಿ 'ರನ್ ಮಾಡಿದಾಗ' ಅಡಿಯಲ್ಲಿ ಈ ಬ್ಲಾಕ್‌ಗಳನ್ನು ಸಂಪರ್ಕಿಸಿ.",
@@ -2796,14 +2796,14 @@
           "more_events_hint": "ನಿಮ್ಮ ಪ್ರೋಗ್ರಾಮ್‌ನಲ್ಲಿ ಒಂದಕ್ಕಿಂತ ಹೆಚ್ಚು ಈವೆಂಟ್ ಅನ್ನು ನೀವು ಬಳಸಬಹುದು. ಕವನದಲ್ಲಿ ಹೊಸ ಸಾಲುಗಳಿಗೆ ಹೋಲಿಕೆಯಾಗಲು ವಿಭಿನ್ನ ಎಫೆಕ್ಟ್‌ಗಳೊಂದಿಕೆ ಈವೆಂಟ್‌ಗಳನ್ನು ಬಳಸಲು ಪ್ರಯತ್ನಿಸಿ. \n\n<xml><block type=\"Poetry_whenLineShows\"><title name=\"N\">2</title><next><block type=\"Poetry_setForegroundEffect\"><title name=\"EFFECT\">\"starburst\"</title></block></next></block></xml>\n\n<xml><block type=\"Poetry_whenLineShows\"><title name=\"N\">4</title><next><block type=\"Poetry_setForegroundEffect\"><title name=\"EFFECT\">\"bubbles\"</title></block></next></block></xml>"
         },
         "poetry_hoc_sounds": {
-          "poetry_sound_hint": "ಈ ಬ್ಲಾಕ್ ಹುಡುಕಿ:\n<xml><block type=\"Poetry_playSound\"><title name=\"SOUND\">\"sound://category\\_background/typewriter.mp3\"</title></block></next></block></xml>\nಅಥವಾ ಈ ಬ್ಲಾಕ್ ಹುಡುಕಿ: \n\n<xml><block type=\"Poetry_playMusic\"><title name=\"SOUND\">\"sound://category_background/fire_burning.mp3\"</title></block></xml>\n\nನಿಮ್ಮ ವರ್ಕ್‌ಸ್ಪೇಸ್‌ನಲ್ಲಿ 'ರನ್ ಮಾಡಿದಾಗ' ಅಡಿಯಲ್ಲಿ ಸಂಪರ್ಕಿಸಿ.",
-          "more_code": "ನೀವು ಆಯ್ಕೆ ಮಾಡುವ ಧ್ವನಿಯೊಂದಿಗೆ ಸಾಗಲು ಇನ್ನಷ್ಟು ಎಫೆಕ್ಟ್‌ಗಳು ಮತ್ತು ಬಣ್ಣಗಳನ್ನು ಸೇರಿಸಿ. \n<xml><block type=\"when_run\" movable=\"false\"><next><block type=\"Poetry_playSound\"><title name=\"SOUND\">\"sound://category_loops/vibrant_game_welcome_to_heaven_loop_1.mp3\"</title><next>\\<block type=\"Poetry_setBackgroundEffect\"><title name=\"EFFECT\">\"blooming\"</title><title name=\"PALETTE\">\"sunrise\"</title><next><block type=\"Poetry_setFontColor\"><value name=\"FILL\"><block type=\"colour_picker\"><title name=\"COLOUR\">#996633</title></block></value><next><block type=\"Poetry_setTextEffect\"><title name=\"EFFECT\">\"fade\"</title></block></next></block></next></block></next></block></next></block></xml>"
+          "poetry_sound_hint": "ಈ ಬ್ಲಾಕ್ ಹುಡುಕಿ:\n<xml><block type=\"Poetry_playSound\"><title name=\"SOUND\">\"sound://category_background/typewriter.mp3\"</title></block></next></block></xml>\nಅಥವಾ ಈ ಬ್ಲಾಕ್ ಹುಡುಕಿ: \n\n<xml><block type=\"Poetry_playMusic\"><title name=\"SOUND\">\"sound://category_background/fire_burning.mp3\"</title></block></xml>\n\nನಿಮ್ಮ ವರ್ಕ್‌ಸ್ಪೇಸ್‌ನಲ್ಲಿ 'ರನ್ ಮಾಡಿದಾಗ' ಅಡಿಯಲ್ಲಿ ಸಂಪರ್ಕಿಸಿ.",
+          "more_code": "ನೀವು ಆಯ್ಕೆ ಮಾಡುವ ಧ್ವನಿಯೊಂದಿಗೆ ಸಾಗಲು ಇನ್ನಷ್ಟು ಎಫೆಕ್ಟ್‌ಗಳು ಮತ್ತು ಬಣ್ಣಗಳನ್ನು ಸೇರಿಸಿ. \n<xml><block type=\"when_run\" movable=\"false\"><next><block type=\"Poetry_playSound\"><title name=\"SOUND\">\"sound://category_loops/vibrant_game_welcome_to_heaven_loop_1.mp3\"</title><next><block type=\"Poetry_setBackgroundEffect\"><title name=\"EFFECT\">\"blooming\"</title><title name=\"PALETTE\">\"sunrise\"</title><next><block type=\"Poetry_setFontColor\"><value name=\"FILL\"><block type=\"colour_picker\"><title name=\"COLOUR\">#996633</title></block></value><next><block type=\"Poetry_setTextEffect\"><title name=\"EFFECT\">\"fade\"</title></block></next></block></next></block></next></block></next></block></xml>"
         },
         "poetry_hoc_spriteBehaviors": {
-          "add_behavior": "ನಿಮ್ಮ ಕೋಡ್‌ಗೆ 'ಸ್ಪ್ರೈಟ್ ಆರಂಭವಾಗುತ್ತದೆ' ಬ್ಲಾಕ್ ಸೇರಿಸಿ. ನೀವು ವರ್ತನೆಯನ್ನು ನೀಡುತ್ತಿರುವ ಸ್ಪ್ರೈಟ್ ಅನ್ನು ಈಗಾಗಲೇ ಮಾಡಿದ್ದೀರಿ ಎಂದು ಖಚಿತಪಡಿಸಿಕೊಳ್ಳಿ. \n\n<xml><block type=\"when_run\"><next><block type=\"Poetry_makeNewSpriteAnon\"><title name=\"ANIMATION_NAME\">\"smiling_sun\"</title><title name=\"LOCATION\">{\"x\":65,\"y\":105}</title><next>\\<block type=\"Poetry_startBehavior\"><title name=\"ANIMATION_NAME\">\"smiling_sun\"</title><title name=\"BEHAVIOR\">spinning_right</title></block></next></block></next></block></xml>"
+          "add_behavior": "ನಿಮ್ಮ ಕೋಡ್‌ಗೆ 'ಸ್ಪ್ರೈಟ್ ಆರಂಭವಾಗುತ್ತದೆ' ಬ್ಲಾಕ್ ಸೇರಿಸಿ. ನೀವು ವರ್ತನೆಯನ್ನು ನೀಡುತ್ತಿರುವ ಸ್ಪ್ರೈಟ್ ಅನ್ನು ಈಗಾಗಲೇ ಮಾಡಿದ್ದೀರಿ ಎಂದು ಖಚಿತಪಡಿಸಿಕೊಳ್ಳಿ. \n\n<xml><block type=\"when_run\"><next><block type=\"Poetry_makeNewSpriteAnon\"><title name=\"ANIMATION_NAME\">\"smiling_sun\"</title><title name=\"LOCATION\">{\"x\":65,\"y\":105}</title><next><block type=\"Poetry_startBehavior\"><title name=\"ANIMATION_NAME\">\"smiling_sun\"</title><title name=\"BEHAVIOR\">spinning_right</title></block></next></block></next></block></xml>"
         },
         "poetry_hoc_spriteSizes": {
-          "size hint": "ಈ ಬ್ಲಾಕ್ ಹುಡುಕಿ ಮತ್ತು '150' ಅನ್ನು ಕ್ಲಿಕ್ ಮಾಡಿ.\n<xml><block type=\"Poetry_setSize\"><title name=\"SPRITE\">\"ocean\\_wave\"</title><title name=\"VAL\">150</title></block></xml>\n\nಸಂಖ್ಯೆ '25' ಆದಾಗ ಏನಾಗುತ್ತದೆ? \n<xml><block type=\"Poetry_setSize\"><title name=\"SPRITE\">\"ocean\\_wave\"</title><title name=\"VAL\">25</title></block></xml>"
+          "size hint": "ಈ ಬ್ಲಾಕ್ ಹುಡುಕಿ ಮತ್ತು '150' ಅನ್ನು ಕ್ಲಿಕ್ ಮಾಡಿ.\n<xml><block type=\"Poetry_setSize\"><title name=\"SPRITE\">\"ocean_wave\"</title><title name=\"VAL\">150</title></block></xml>\n\nಸಂಖ್ಯೆ '25' ಆದಾಗ ಏನಾಗುತ್ತದೆ? \n<xml><block type=\"Poetry_setSize\"><title name=\"SPRITE\">\"ocean_wave\"</title><title name=\"VAL\">25</title></block></xml>"
         },
         "iceage_click_hello": {
           "iceage_click_hello_a": "ಈ ಒಗಟು ಪೂರ್ಣಗೊಳಿಸಲು `ಕ್ಲಿಕ್ ಮಾಡಿದಾಗ` ಈವೆಂಟ್‌ಗೆ ಒಂದು ಅಥವಾ ಹೆಚ್ಚಿನ `ನಟ 1 ಸೇ` ಬ್ಲಾಕ್‌ಗಳನ್ನು ಸೇರಿಸಿ."
@@ -3560,21 +3560,21 @@
         },
         "courseA_harvester_seq1": {
           "courseA_harvester_seq1_a": "ಕೊಯ್ಲುಗಾರನು ಅದನ್ನು ಕಂಡುಕೊಂಡಾಗ ಜೋಳವನ್ನು ಆರಿಸಲು ಈ ಬ್ಲಾಕ್ ಅನ್ನು ಬಳಸಿ!\n\n<xml>\n  <block type=\"harvester_corn\"/>\n</xml>",
-          "courseA_harvester_seq1_b": "ಕೊಯ್ಲುಗಾರನು ಜೋಳಕ್ಕೆ ಹೋಗಲು ಮೂರು ಬಾರಿ ಪೂರ್ವಕ್ಕೆ ಚಲಿಸಬೇಕಾಗುತ್ತದೆ. ಈ ಬ್ಲಾಕ್ ಅನ್ನು ಬಳಸಿ:\n\n<xml>\n  <block type=\"maze_moveEast\"/>\n</xml>"
+          "courseA_harvester_seq1_b": "ಕೊಯ್ಲುಗಾರನು ಜೋಳವಿದ್ದಲ್ಲಿ ಹೋಗಲು ಮೂರು ಬಾರಿ ಪೂರ್ವಕ್ಕೆ ಚಲಿಸಬೇಕಾಗುತ್ತದೆ. ಈ ಬ್ಲಾಕ್ ಅನ್ನು ಬಳಸಿ:\n\n<xml>\n  <block type=\"maze_moveEast\"/>\n</xml>"
         },
         "courseA_harvester_seq10": {
           "courseA_harvester_seq10_a": "ನೀವು ಸಿಲುಕಿಕೊಂಡಿದ್ದೀರಾ? ಮೊದಲು ಒಂದು ಕಾಗದದ ಮೇಲೆ ಹಂತಗಳನ್ನು ಬರೆಯಲು ಪ್ರಯತ್ನಿಸಿ.",
-          "courseA_harvester_seq10_b": "ನೀವು `ಮೂವ್ ಈಸ್ಟ್`, ನಂತರ `ಮೂವ್ ನಾರ್ತ್` ಮಾಡಬೇಕು. ಇದನ್ನು ಎರಡು ಬಾರಿ ಮಾಡಿ. ಎಲ್ಲಾ ಜೋಳವನ್ನು ಪಡೆಯಲು ಮರೆಯಬೇಡಿ!",
+          "courseA_harvester_seq10_b": "ನೀವು `ಪೂರ್ವಕ್ಕೆ ಸರಿಸಿ`, ನಂತರ `ಉತ್ತರಕ್ಕೆ ಸರಿಸಿ` ಮಾಡಬೇಕು. ಇದನ್ನು ಎರಡು ಬಾರಿ ಮಾಡಿ. ಎಲ್ಲಾ ಜೋಳವನ್ನು ಪಡೆಯಲು ಮರೆಯಬೇಡಿ!",
           "courseA_harvester_seq10_c": "ಎಲ್ಲಾ ಜೋಳವನ್ನು ಆಯ್ಕೆ ಮಾಡಲು ಈ ಮಾರ್ಗವನ್ನು ಬಳಸಲು ಪ್ರಯತ್ನಿಸಿ."
         },
         "courseA_harvester_seq10_2019": {
           "courseA_harvester_seq10_a": "ನೀವು ಸಿಲುಕಿಕೊಂಡಿದ್ದೀರಾ? ಮೊದಲು ಒಂದು ಕಾಗದದ ಮೇಲೆ ಹಂತಗಳನ್ನು ಬರೆಯಲು ಪ್ರಯತ್ನಿಸಿ.",
-          "courseA_harvester_seq10_b": "ನೀವು `ಮೂವ್ ಈಸ್ಟ್`, ನಂತರ `ಮೂವ್ ನಾರ್ತ್` ಮಾಡಬೇಕು. ಇದನ್ನು ಎರಡು ಬಾರಿ ಮಾಡಿ. ಎಲ್ಲಾ ಜೋಳವನ್ನು ಪಡೆಯಲು ಮರೆಯಬೇಡಿ!",
+          "courseA_harvester_seq10_b": "ನೀವು `ಪೂರ್ವಕ್ಕೆ ಸರಿಸಿ`, ನಂತರ `ಉತ್ತರಕ್ಕೆ ಸರಿಸಿ` ಮಾಡಬೇಕು. ಇದನ್ನು ಎರಡು ಬಾರಿ ಮಾಡಿ. ಎಲ್ಲಾ ಜೋಳವನ್ನು ಪಡೆಯಲು ಮರೆಯಬೇಡಿ!",
           "courseA_harvester_seq10_c": "ಎಲ್ಲಾ ಜೋಳವನ್ನು ಆಯ್ಕೆ ಮಾಡಲು ಈ ಮಾರ್ಗವನ್ನು ಬಳಸಲು ಪ್ರಯತ್ನಿಸಿ."
         },
         "courseA_harvester_seq10_2020": {
           "courseA_harvester_seq10_a": "ನೀವು ಸಿಲುಕಿಕೊಂಡಿದ್ದೀರಾ? ಮೊದಲು ಒಂದು ಕಾಗದದ ಮೇಲೆ ಹಂತಗಳನ್ನು ಬರೆಯಲು ಪ್ರಯತ್ನಿಸಿ.",
-          "courseA_harvester_seq10_b": "ನೀವು `ಮೂವ್ ಈಸ್ಟ್`, ನಂತರ `ಮೂವ್ ನಾರ್ತ್` ಮಾಡಬೇಕು. ಇದನ್ನು ಎರಡು ಬಾರಿ ಮಾಡಿ. ಎಲ್ಲಾ ಜೋಳವನ್ನು ಪಡೆಯಲು ಮರೆಯಬೇಡಿ!",
+          "courseA_harvester_seq10_b": "ನೀವು `ಪೂರ್ವಕ್ಕೆ ಸರಿಸಿ`, ನಂತರ `ಉತ್ತರಕ್ಕೆ ಸರಿಸಿ` ಮಾಡಬೇಕು. ಇದನ್ನು ಎರಡು ಬಾರಿ ಮಾಡಿ. ಎಲ್ಲಾ ಜೋಳವನ್ನು ಪಡೆಯಲು ಮರೆಯಬೇಡಿ!",
           "courseA_harvester_seq10_c": "ಎಲ್ಲಾ ಜೋಳವನ್ನು ಆಯ್ಕೆ ಮಾಡಲು ಈ ಮಾರ್ಗವನ್ನು ಬಳಸಲು ಪ್ರಯತ್ನಿಸಿ."
         },
         "courseA_harvester_seq13": {
@@ -3588,11 +3588,11 @@
         },
         "courseA_harvester_seq1_2019": {
           "courseA_harvester_seq1_a": "ಕೊಯ್ಲುಗಾರನು ಅದನ್ನು ಕಂಡುಕೊಂಡಾಗ ಜೋಳವನ್ನು ಆರಿಸಲು ಈ ಬ್ಲಾಕ್ ಅನ್ನು ಬಳಸಿ!\n\n<xml>\n  <block type=\"harvester_corn\"/>\n</xml>",
-          "courseA_harvester_seq1_b": "ಕೊಯ್ಲುಗಾರನು ಜೋಳಕ್ಕೆ ಹೋಗಲು ಮೂರು ಬಾರಿ ಪೂರ್ವಕ್ಕೆ ಚಲಿಸಬೇಕಾಗುತ್ತದೆ. ಈ ಬ್ಲಾಕ್ ಅನ್ನು ಬಳಸಿ:\n\n<xml>\n  <block type=\"maze_moveEast\"/>\n</xml>"
+          "courseA_harvester_seq1_b": "ಕೊಯ್ಲುಗಾರನು ಜೋಳವಿದ್ದಲ್ಲಿ ಹೋಗಲು ಮೂರು ಬಾರಿ ಪೂರ್ವಕ್ಕೆ ಚಲಿಸಬೇಕಾಗುತ್ತದೆ. ಈ ಬ್ಲಾಕ್ ಅನ್ನು ಬಳಸಿ:\n\n<xml>\n  <block type=\"maze_moveEast\"/>\n</xml>"
         },
         "courseA_harvester_seq1_2020": {
           "courseA_harvester_seq1_a": "ಕೊಯ್ಲುಗಾರನು ಅದನ್ನು ಕಂಡುಕೊಂಡಾಗ ಜೋಳವನ್ನು ಆರಿಸಲು ಈ ಬ್ಲಾಕ್ ಅನ್ನು ಬಳಸಿ!\n\n<xml>\n  <block type=\"harvester_corn\"/>\n</xml>",
-          "courseA_harvester_seq1_b": "ಕೊಯ್ಲುಗಾರನು ಜೋಳಕ್ಕೆ ಹೋಗಲು ಮೂರು ಬಾರಿ ಪೂರ್ವಕ್ಕೆ ಚಲಿಸಬೇಕಾಗುತ್ತದೆ. ಈ ಬ್ಲಾಕ್ ಅನ್ನು ಬಳಸಿ:\n\n<xml>\n  <block type=\"maze_moveEast\"/>\n</xml>"
+          "courseA_harvester_seq1_b": "ಕೊಯ್ಲುಗಾರನು ಜೋಳವಿದ್ದಲ್ಲಿ ಹೋಗಲು ಮೂರು ಬಾರಿ ಪೂರ್ವಕ್ಕೆ ಚಲಿಸಬೇಕಾಗುತ್ತದೆ. ಈ ಬ್ಲಾಕ್ ಅನ್ನು ಬಳಸಿ:\n\n<xml>\n  <block type=\"maze_moveEast\"/>\n</xml>"
         },
         "courseA_harvester_seq2": {
           "courseA_harvester_seq2_a": "ಜೋಳವನ್ನು ಆರಿಸಲು <xml><block type=\"harvester_corn\"/></xml> ಬಳಸಲು ಮರೆಯಬೇಡಿ!",
@@ -3619,29 +3619,29 @@
           "courseA_harvester_seq3_b": "ಹಂತಗಳನ್ನು ಜೋರಾಗಿ ಹೇಳಿ ಮತ್ತು ಉತ್ತರವನ್ನು ಕಂಡುಹಿಡಿಯಲು ಇದು ನಿಮಗೆ ಸಹಾಯ ಮಾಡುತ್ತದೆಯೇ ಎಂದು ನೋಡಿ."
         },
         "courseA_harvester_seq4": {
-          "courseA_harvester_seq4_a": "ಹಾರ್ವೆಸ್ಟರ್ ಮತ್ತು ಕಾರ್ನ್ ನಡುವೆ ಎಷ್ಟು ಜಾಗಗಳಿವೆ? ನಿಮ್ಮ ಕಾರ್ಯಕ್ಷೇತ್ರದಲ್ಲಿ ಈಗಾಗಲೇ ಎಷ್ಟು ಬ್ಲಾಕ್‌ಗಳಿವೆ?",
-          "courseA_harvester_seq4_b": "ನಿಮಗೆ ಐದು `ಮೂವ್ ಈಸ್ಟ್` ಬ್ಲಾಕ್‌ಗಳು ಮತ್ತು ಒಂದು `ಪಿಕ್ ಕಾರ್ನ್` ಬ್ಲಾಕ್ ಅಗತ್ಯವಿದೆ:\n\n<xml><block type=\"harvester_corn\"/></xml>"
+          "courseA_harvester_seq4_a": "ಕೊಯ್ಲುಗಾರ ಮತ್ತು ಜೋಳದ ನಡುವೆ ಎಷ್ಟು ಜಾಗಗಳಿವೆ? ನಿಮ್ಮ ಕಾರ್ಯಕ್ಷೇತ್ರದಲ್ಲಿ ಈಗಾಗಲೇ ಎಷ್ಟು ಬ್ಲಾಕ್‌ಗಳಿವೆ?",
+          "courseA_harvester_seq4_b": "ನಿಮಗೆ ಐದು `ಪಶ್ಚಿಮಕ್ಕೆ ಸರಿಸಿ` ಬ್ಲಾಕ್‌ಗಳು ಮತ್ತು ಒಂದು `ಜೋಳ ಆರಿಸಿ` ಬ್ಲಾಕ್ ಅಗತ್ಯವಿದೆ:\n\n<xml><block type=\"harvester_corn\"/></xml>"
         },
         "courseA_harvester_seq4_2019": {
-          "courseA_harvester_seq4_a": "ಹಾರ್ವೆಸ್ಟರ್ ಮತ್ತು ಕಾರ್ನ್ ನಡುವೆ ಎಷ್ಟು ಜಾಗಗಳಿವೆ? ನಿಮ್ಮ ಕಾರ್ಯಕ್ಷೇತ್ರದಲ್ಲಿ ಈಗಾಗಲೇ ಎಷ್ಟು ಬ್ಲಾಕ್‌ಗಳಿವೆ?",
-          "courseA_harvester_seq4_b": "ನಿಮಗೆ ಐದು `ಮೂವ್ ಈಸ್ಟ್` ಬ್ಲಾಕ್‌ಗಳು ಮತ್ತು ಒಂದು `ಪಿಕ್ ಕಾರ್ನ್` ಬ್ಲಾಕ್ ಅಗತ್ಯವಿದೆ:\n\n<xml><block type=\"harvester_corn\"/></xml>"
+          "courseA_harvester_seq4_a": "ಕೊಯ್ಲುಗಾರ ಮತ್ತು ಜೋಳದ ನಡುವೆ ಎಷ್ಟು ಜಾಗಗಳಿವೆ? ನಿಮ್ಮ ಕಾರ್ಯಕ್ಷೇತ್ರದಲ್ಲಿ ಈಗಾಗಲೇ ಎಷ್ಟು ಬ್ಲಾಕ್‌ಗಳಿವೆ?",
+          "courseA_harvester_seq4_b": "ನಿಮಗೆ ಐದು `ಪಶ್ಚಿಮಕ್ಕೆ ಸರಿಸಿ` ಬ್ಲಾಕ್‌ಗಳು ಮತ್ತು ಒಂದು `ಜೋಳ ಆರಿಸಿ` ಬ್ಲಾಕ್ ಅಗತ್ಯವಿದೆ:\n\n<xml><block type=\"harvester_corn\"/></xml>"
         },
         "courseA_harvester_seq4_2020": {
-          "courseA_harvester_seq4_a": "ಹಾರ್ವೆಸ್ಟರ್ ಮತ್ತು ಕಾರ್ನ್ ನಡುವೆ ಎಷ್ಟು ಜಾಗಗಳಿವೆ? ನಿಮ್ಮ ಕಾರ್ಯಕ್ಷೇತ್ರದಲ್ಲಿ ಈಗಾಗಲೇ ಎಷ್ಟು ಬ್ಲಾಕ್‌ಗಳಿವೆ?",
-          "courseA_harvester_seq4_b": "ನಿಮಗೆ ಐದು `ಮೂವ್ ಈಸ್ಟ್` ಬ್ಲಾಕ್‌ಗಳು ಮತ್ತು ಒಂದು `ಪಿಕ್ ಕಾರ್ನ್` ಬ್ಲಾಕ್ ಅಗತ್ಯವಿದೆ:\n\n<xml><block type=\"harvester_corn\"/></xml>"
+          "courseA_harvester_seq4_a": "ಕೊಯ್ಲುಗಾರ ಮತ್ತು ಜೋಳದ ನಡುವೆ ಎಷ್ಟು ಜಾಗಗಳಿವೆ? ನಿಮ್ಮ ಕಾರ್ಯಕ್ಷೇತ್ರದಲ್ಲಿ ಈಗಾಗಲೇ ಎಷ್ಟು ಬ್ಲಾಕ್‌ಗಳಿವೆ?",
+          "courseA_harvester_seq4_b": "ನಿಮಗೆ ಐದು `ಪಶ್ಚಿಮಕ್ಕೆ ಸರಿಸಿ` ಬ್ಲಾಕ್‌ಗಳು ಮತ್ತು ಒಂದು `ಜೋಳ ಆರಿಸಿ` ಬ್ಲಾಕ್ ಅಗತ್ಯವಿದೆ:\n\n<xml><block type=\"harvester_corn\"/></xml>"
         },
         "courseA_harvester_seq5": {
-          "courseA_harvester_seq5_a": "ಯಾವ ಬ್ಲಾಕ್ ಹಾರ್ವೆಸ್ಟರ್ ಅನ್ನು ತಪ್ಪು ದಾರಿಯಲ್ಲಿ ಚಲಿಸುತ್ತದೆ?",
+          "courseA_harvester_seq5_a": "ಯಾವ ಬ್ಲಾಕ್ ಕೊಯ್ಲುಗಾರನನ್ನು ತಪ್ಪು ದಾರಿಯಲ್ಲಿ ಚಲಿಸುತ್ತದೆ?",
           "courseA_harvester_seq5_b": "ನೀವು ಒಂದು ಬ್ಲಾಕ್ ಅನ್ನು ತೆಗೆದುಹಾಕಬೇಕಾಗಿದೆ.",
           "courseA_harvester_seq5_c": "ಈ ಬ್ಲಾಕ್ ಅನ್ನು ಕಸದ ಬುಟ್ಟಿಗೆ ಎಸೆಯಿರಿ!\n\n<xml><block type=\"maze_moveNorth\"/></xml>"
         },
         "courseA_harvester_seq5_2019": {
-          "courseA_harvester_seq5_a": "ಯಾವ ಬ್ಲಾಕ್ ಹಾರ್ವೆಸ್ಟರ್ ಅನ್ನು ತಪ್ಪು ದಾರಿಯಲ್ಲಿ ಚಲಿಸುತ್ತದೆ?",
+          "courseA_harvester_seq5_a": "ಯಾವ ಬ್ಲಾಕ್ ಕೊಯ್ಲುಗಾರನನ್ನು ತಪ್ಪು ದಾರಿಯಲ್ಲಿ ಚಲಿಸುತ್ತದೆ?",
           "courseA_harvester_seq5_b": "ನೀವು ಒಂದು ಬ್ಲಾಕ್ ಅನ್ನು ತೆಗೆದುಹಾಕಬೇಕಾಗಿದೆ.",
           "courseA_harvester_seq5_c": "ಈ ಬ್ಲಾಕ್ ಅನ್ನು ಕಸದ ಬುಟ್ಟಿಗೆ ಎಸೆಯಿರಿ!\n\n<xml><block type=\"maze_moveNorth\"/></xml>"
         },
         "courseA_harvester_seq5_2020": {
-          "courseA_harvester_seq5_a": "ಯಾವ ಬ್ಲಾಕ್ ಹಾರ್ವೆಸ್ಟರ್ ಅನ್ನು ತಪ್ಪು ದಾರಿಯಲ್ಲಿ ಚಲಿಸುತ್ತದೆ?",
+          "courseA_harvester_seq5_a": "ಯಾವ ಬ್ಲಾಕ್ ಕೊಯ್ಲುಗಾರನನ್ನು ತಪ್ಪು ದಾರಿಯಲ್ಲಿ ಚಲಿಸುತ್ತದೆ?",
           "courseA_harvester_seq5_b": "ನೀವು ಒಂದು ಬ್ಲಾಕ್ ಅನ್ನು ತೆಗೆದುಹಾಕಬೇಕಾಗಿದೆ.",
           "courseA_harvester_seq5_c": "ಈ ಬ್ಲಾಕ್ ಅನ್ನು ಕಸದ ಬುಟ್ಟಿಗೆ ಎಸೆಯಿರಿ!\n\n<xml><block type=\"maze_moveNorth\"/></xml>"
         },
@@ -3655,38 +3655,38 @@
           "courseA_harvester_seq6_a": "ನೀವು ಸಿಲುಕಿಕೊಂಡರೆ, ಹಂತಗಳನ್ನು ಜೋರಾಗಿ ಹೇಳಲು ಪ್ರಯತ್ನಿಸಿ. ಇದು ಸರಿಯಾದ ಮಾರ್ಗವನ್ನು ಕಂಡುಹಿಡಿಯಲು ನಿಮಗೆ ಸಹಾಯ ಮಾಡುತ್ತದೆ."
         },
         "courseA_harvester_seq7": {
-          "courseA_harvester_seq7_a": "ಪದಬಂಧವನ್ನು 2 ಭಾಗಗಳಲ್ಲಿ ಪರಿಹರಿಸಲು ಪ್ರಯತ್ನಿಸಿ, ಒಂದು ಭಾಗವು ಮೂಲೆಯ ಮೊದಲು ಮತ್ತು ಒಂದು ಭಾಗವು ಮೂಲೆಯ ನಂತರ.",
+          "courseA_harvester_seq7_a": "ಪಝಲ್‌ ಅನ್ನು 2 ಭಾಗಗಳಲ್ಲಿ ಪರಿಹರಿಸಲು ಪ್ರಯತ್ನಿಸಿ, ಒಂದು ಭಾಗವನ್ನು ಮೂಲೆಗಿಂತ ಮೊದಲು ಮತ್ತು ಒಂದು ಭಾಗವನ್ನು ಮೂಲೆಯ ನಂತರ.",
           "courseA_harvester_seq7_b": "ತೊಂದರೆ ಇದೆಯೇ? ಕೊಯ್ಲು ಮಾಡುವವರು ಅನುಸರಿಸಬೇಕಾದ ಮಾರ್ಗ ಇದು."
         },
         "courseA_harvester_seq7_2019": {
-          "courseA_harvester_seq7_a": "ಪದಬಂಧವನ್ನು 2 ಭಾಗಗಳಲ್ಲಿ ಪರಿಹರಿಸಲು ಪ್ರಯತ್ನಿಸಿ, ಒಂದು ಭಾಗವು ಮೂಲೆಯ ಮೊದಲು ಮತ್ತು ಒಂದು ಭಾಗವು ಮೂಲೆಯ ನಂತರ.",
+          "courseA_harvester_seq7_a": "ಪಝಲ್‌ ಅನ್ನು 2 ಭಾಗಗಳಲ್ಲಿ ಪರಿಹರಿಸಲು ಪ್ರಯತ್ನಿಸಿ, ಒಂದು ಭಾಗವನ್ನು ಮೂಲೆಗಿಂತ ಮೊದಲು ಮತ್ತು ಒಂದು ಭಾಗವನ್ನು ಮೂಲೆಯ ನಂತರ.",
           "courseA_harvester_seq7_b": "ತೊಂದರೆ ಇದೆಯೇ? ಕೊಯ್ಲು ಮಾಡುವವರು ಅನುಸರಿಸಬೇಕಾದ ಮಾರ್ಗ ಇದು."
         },
         "courseA_harvester_seq7_2020": {
-          "courseA_harvester_seq7_a": "ಪದಬಂಧವನ್ನು 2 ಭಾಗಗಳಲ್ಲಿ ಪರಿಹರಿಸಲು ಪ್ರಯತ್ನಿಸಿ, ಒಂದು ಭಾಗವು ಮೂಲೆಯ ಮೊದಲು ಮತ್ತು ಒಂದು ಭಾಗವು ಮೂಲೆಯ ನಂತರ.",
+          "courseA_harvester_seq7_a": "ಪಝಲ್‌ ಅನ್ನು 2 ಭಾಗಗಳಲ್ಲಿ ಪರಿಹರಿಸಲು ಪ್ರಯತ್ನಿಸಿ, ಒಂದು ಭಾಗವನ್ನು ಮೂಲೆಗಿಂತ ಮೊದಲು ಮತ್ತು ಒಂದು ಭಾಗವನ್ನು ಮೂಲೆಯ ನಂತರ.",
           "courseA_harvester_seq7_b": "ತೊಂದರೆ ಇದೆಯೇ? ಕೊಯ್ಲು ಮಾಡುವವರು ಅನುಸರಿಸಬೇಕಾದ ಮಾರ್ಗ ಇದು."
         },
         "courseA_harvester_seq8": {
-          "courseA_harvester_seq8_a": "ನಿಮ್ಮ ಅಂತಿಮ ಕೋಡ್ **4** ಚಲನೆ ಬ್ಲಾಕ್‌ಗಳನ್ನು ಮತ್ತು **2** ಪಿಕ್ ಬ್ಲಾಕ್‌ಗಳನ್ನು ಹೊಂದಿರಬೇಕು."
+          "courseA_harvester_seq8_a": "ನಿಮ್ಮ ಅಂತಿಮ ಕೋಡ್ **4** ಚಲನೆ ಬ್ಲಾಕ್‌ಗಳನ್ನು ಮತ್ತು **2** ಆರಿಸಿ ಬ್ಲಾಕ್‌ಗಳನ್ನು ಹೊಂದಿರಬೇಕು."
         },
         "courseA_harvester_seq8_2019": {
-          "courseA_harvester_seq8_a": "ನಿಮ್ಮ ಅಂತಿಮ ಕೋಡ್ **4** ಚಲನೆ ಬ್ಲಾಕ್‌ಗಳನ್ನು ಮತ್ತು **2** ಪಿಕ್ ಬ್ಲಾಕ್‌ಗಳನ್ನು ಹೊಂದಿರಬೇಕು."
+          "courseA_harvester_seq8_a": "ನಿಮ್ಮ ಅಂತಿಮ ಕೋಡ್ **4** ಚಲನೆ ಬ್ಲಾಕ್‌ಗಳನ್ನು ಮತ್ತು **2** ಆರಿಸಿ ಬ್ಲಾಕ್‌ಗಳನ್ನು ಹೊಂದಿರಬೇಕು."
         },
         "courseA_harvester_seq8_2020": {
-          "courseA_harvester_seq8_a": "ನಿಮ್ಮ ಅಂತಿಮ ಕೋಡ್ **4** ಚಲನೆ ಬ್ಲಾಕ್‌ಗಳನ್ನು ಮತ್ತು **2** ಪಿಕ್ ಬ್ಲಾಕ್‌ಗಳನ್ನು ಹೊಂದಿರಬೇಕು."
+          "courseA_harvester_seq8_a": "ನಿಮ್ಮ ಅಂತಿಮ ಕೋಡ್ **4** ಚಲನೆ ಬ್ಲಾಕ್‌ಗಳನ್ನು ಮತ್ತು **2** ಆರಿಸಿ ಬ್ಲಾಕ್‌ಗಳನ್ನು ಹೊಂದಿರಬೇಕು."
         },
         "courseA_harvester_seq9": {
-          "courseA_harvester_seq9_a": "ಏನಾಗುತ್ತದೆ ಎಂಬುದನ್ನು ನೋಡಲು ಕೋಡ್ ಅನ್ನು ಕೆಲವು ಬಾರಿ ರನ್ ಮಾಡಿ. ಕೊಯ್ಲುಗಾರ ಎಲ್ಲಿ ನಿಲ್ಲುತ್ತದೆ?",
+          "courseA_harvester_seq9_a": "ಏನಾಗುತ್ತದೆ ಎಂಬುದನ್ನು ನೋಡಲು ಕೋಡ್ ಅನ್ನು ಕೆಲವು ಬಾರಿ ರನ್ ಮಾಡಿ. ಕೊಯ್ಲುಗಾರನು ಎಲ್ಲಿಗೆ ನಿಲ್ಲುತ್ತಾನೆ?",
           "courseA_harvester_seq9_b": "ಎಲ್ಲಾ ಜೋಳವನ್ನು ತೆಗೆದುಕೊಳ್ಳಲು ಮರೆಯಬೇಡಿ! ನಿಮಗೆ **3** ಪಿಕ್ ಕಾರ್ನ್ ಬ್ಲಾಕ್‌ಗಳ ಅಗತ್ಯವಿದೆ.",
           "courseA_harvester_seq9_c": "ಎಲ್ಲಾ ಜೋಳವನ್ನು ಆರಿಸಲು ನೀವು ಈ ಮಾರ್ಗವನ್ನು ತೆಗೆದುಕೊಳ್ಳಬೇಕು"
         },
         "courseA_harvester_seq9_2019": {
-          "courseA_harvester_seq9_a": "ಏನಾಗುತ್ತದೆ ಎಂಬುದನ್ನು ನೋಡಲು ಕೋಡ್ ಅನ್ನು ಕೆಲವು ಬಾರಿ ರನ್ ಮಾಡಿ. ಕೊಯ್ಲುಗಾರ ಎಲ್ಲಿ ನಿಲ್ಲುತ್ತದೆ?",
+          "courseA_harvester_seq9_a": "ಏನಾಗುತ್ತದೆ ಎಂಬುದನ್ನು ನೋಡಲು ಕೋಡ್ ಅನ್ನು ಕೆಲವು ಬಾರಿ ರನ್ ಮಾಡಿ. ಕೊಯ್ಲುಗಾರನು ಎಲ್ಲಿಗೆ ನಿಲ್ಲುತ್ತಾನೆ?",
           "courseA_harvester_seq9_b": "ಎಲ್ಲಾ ಜೋಳವನ್ನು ತೆಗೆದುಕೊಳ್ಳಲು ಮರೆಯಬೇಡಿ! ನಿಮಗೆ **3** ಪಿಕ್ ಕಾರ್ನ್ ಬ್ಲಾಕ್‌ಗಳ ಅಗತ್ಯವಿದೆ.",
           "courseA_harvester_seq9_c": "ಎಲ್ಲಾ ಜೋಳವನ್ನು ಆರಿಸಲು ನೀವು ಈ ಮಾರ್ಗವನ್ನು ತೆಗೆದುಕೊಳ್ಳಬೇಕು"
         },
         "courseA_harvester_seq9_2020": {
-          "courseA_harvester_seq9_a": "ಏನಾಗುತ್ತದೆ ಎಂಬುದನ್ನು ನೋಡಲು ಕೋಡ್ ಅನ್ನು ಕೆಲವು ಬಾರಿ ರನ್ ಮಾಡಿ. ಕೊಯ್ಲುಗಾರ ಎಲ್ಲಿ ನಿಲ್ಲುತ್ತದೆ?",
+          "courseA_harvester_seq9_a": "ಏನಾಗುತ್ತದೆ ಎಂಬುದನ್ನು ನೋಡಲು ಕೋಡ್ ಅನ್ನು ಕೆಲವು ಬಾರಿ ರನ್ ಮಾಡಿ. ಕೊಯ್ಲುಗಾರನು ಎಲ್ಲಿಗೆ ನಿಲ್ಲುತ್ತಾನೆ?",
           "courseA_harvester_seq9_b": "ಎಲ್ಲಾ ಜೋಳವನ್ನು ತೆಗೆದುಕೊಳ್ಳಲು ಮರೆಯಬೇಡಿ! ನಿಮಗೆ **3** ಪಿಕ್ ಕಾರ್ನ್ ಬ್ಲಾಕ್‌ಗಳ ಅಗತ್ಯವಿದೆ.",
           "courseA_harvester_seq9_c": "ಎಲ್ಲಾ ಜೋಳವನ್ನು ಆರಿಸಲು ನೀವು ಈ ಮಾರ್ಗವನ್ನು ತೆಗೆದುಕೊಳ್ಳಬೇಕು"
         },
@@ -5645,39 +5645,39 @@
         },
         "courseC_harvester_loops1": {
           "courseC_harvester_loops1_a": "ಒಮ್ಮೆ ನೀವು ಕುಂಬಳಕಾಯಿಗೆ ತೆರಳಿದ ನಂತರ, ಅದನ್ನು ಸಂಗ್ರಹಿಸಲು <xml><block type=\"harvester_pumpkin\"/></xml> ಬಳಸಿ.",
-          "courseC_harvester_loops1_b": "ಒಂದು ಚೌಕದಿಂದ ಒಂದಕ್ಕಿಂತ ಹೆಚ್ಚು ಕುಂಬಳಕಾಯಿಯನ್ನು ಆಯ್ಕೆ ಮಾಡಲು ನೀವು [ಬ್ಲಾಕ್ಲಿ ಬ್ಲಾಕ್] [0] ಬ್ಲಾಕ್‌ನೊಂದಿಗೆ ಲೂಪ್ ಅನ್ನು ಬಳಸಬಹುದು."
+          "courseC_harvester_loops1_b": "ಒಂದು ಚೌಕದಿಂದ ಒಂದಕ್ಕಿಂತ ಹೆಚ್ಚು ಕುಂಬಳಕಾಯಿಯನ್ನು ಆಯ್ಕೆ ಮಾಡಲು ನೀವು <xml><block type=\"harvester_pumpkin\"/></xml> ಬ್ಲಾಕ್‌ನೊಂದಿಗೆ ಲೂಪ್ ಅನ್ನು ಬಳಸಬಹುದು."
         },
         "courseC_harvester_loops1_2018": {
           "courseC_harvester_loops1_a": "ಒಮ್ಮೆ ನೀವು ಕುಂಬಳಕಾಯಿಗೆ ತೆರಳಿದ ನಂತರ, ಅದನ್ನು ಸಂಗ್ರಹಿಸಲು <xml><block type=\"harvester_pumpkin\"/></xml> ಬಳಸಿ.",
-          "courseC_harvester_loops1_b": "ಒಂದು ಚೌಕದಿಂದ ಒಂದಕ್ಕಿಂತ ಹೆಚ್ಚು ಕುಂಬಳಕಾಯಿಯನ್ನು ಆಯ್ಕೆ ಮಾಡಲು ನೀವು [ಬ್ಲಾಕ್ಲಿ ಬ್ಲಾಕ್] [0] ಬ್ಲಾಕ್‌ನೊಂದಿಗೆ ಲೂಪ್ ಅನ್ನು ಬಳಸಬಹುದು."
+          "courseC_harvester_loops1_b": "ಒಂದು ಚೌಕದಿಂದ ಒಂದಕ್ಕಿಂತ ಹೆಚ್ಚು ಕುಂಬಳಕಾಯಿಯನ್ನು ಆಯ್ಕೆ ಮಾಡಲು ನೀವು <xml><block type=\"harvester_pumpkin\"/></xml> ಬ್ಲಾಕ್‌ನೊಂದಿಗೆ ಲೂಪ್ ಅನ್ನು ಬಳಸಬಹುದು."
         },
         "courseC_harvester_loops1_2019": {
           "courseC_harvester_loops1_a": "ಒಮ್ಮೆ ನೀವು ಕುಂಬಳಕಾಯಿಗೆ ತೆರಳಿದ ನಂತರ, ಅದನ್ನು ಸಂಗ್ರಹಿಸಲು <xml><block type=\"harvester_pumpkin\"/></xml> ಬಳಸಿ.",
-          "courseC_harvester_loops1_b": "ಒಂದು ಚೌಕದಿಂದ ಒಂದಕ್ಕಿಂತ ಹೆಚ್ಚು ಕುಂಬಳಕಾಯಿಯನ್ನು ಆಯ್ಕೆ ಮಾಡಲು ನೀವು [ಬ್ಲಾಕ್ಲಿ ಬ್ಲಾಕ್] [0] ಬ್ಲಾಕ್‌ನೊಂದಿಗೆ ಲೂಪ್ ಅನ್ನು ಬಳಸಬಹುದು."
+          "courseC_harvester_loops1_b": "ಒಂದು ಚೌಕದಿಂದ ಒಂದಕ್ಕಿಂತ ಹೆಚ್ಚು ಕುಂಬಳಕಾಯಿಯನ್ನು ಆಯ್ಕೆ ಮಾಡಲು ನೀವು <xml><block type=\"harvester_pumpkin\"/></xml> ಬ್ಲಾಕ್‌ನೊಂದಿಗೆ ಲೂಪ್ ಅನ್ನು ಬಳಸಬಹುದು."
         },
         "courseC_harvester_loops1_2020": {
           "courseC_harvester_loops1_a": "ಒಮ್ಮೆ ನೀವು ಕುಂಬಳಕಾಯಿಗೆ ತೆರಳಿದ ನಂತರ, ಅದನ್ನು ಸಂಗ್ರಹಿಸಲು <xml><block type=\"harvester_pumpkin\"/></xml> ಬಳಸಿ.",
-          "courseC_harvester_loops1_b": "ಒಂದು ಚೌಕದಿಂದ ಒಂದಕ್ಕಿಂತ ಹೆಚ್ಚು ಕುಂಬಳಕಾಯಿಯನ್ನು ಆಯ್ಕೆ ಮಾಡಲು ನೀವು [ಬ್ಲಾಕ್ಲಿ ಬ್ಲಾಕ್] [0] ಬ್ಲಾಕ್‌ನೊಂದಿಗೆ ಲೂಪ್ ಅನ್ನು ಬಳಸಬಹುದು."
+          "courseC_harvester_loops1_b": "ಒಂದು ಚೌಕದಿಂದ ಒಂದಕ್ಕಿಂತ ಹೆಚ್ಚು ಕುಂಬಳಕಾಯಿಯನ್ನು ಆಯ್ಕೆ ಮಾಡಲು ನೀವು <xml><block type=\"harvester_pumpkin\"/></xml> ಬ್ಲಾಕ್‌ನೊಂದಿಗೆ ಲೂಪ್ ಅನ್ನು ಬಳಸಬಹುದು."
         },
         "courseC_harvester_loops2": {
           "courseC_harvester_loops2_a": "ನೀವು ಸಿಲುಕಿಕೊಂಡರೆ, ಕಾಗದದ ಮೇಲೆ ಹಂತಗಳನ್ನು ಬರೆಯಲು ಪ್ರಯತ್ನಿಸಿ ಮತ್ತು ಪುನರಾವರ್ತಿತ ಮಾದರಿಗಳನ್ನು ನೋಡಿ.",
-          "courseC_harvester_loops2_b": "ನಿಮಗೆ ಒಂದರ ನಂತರ ಒಂದು `ರಿಪೀಟ್` ಲೂಪ್ ಅಗತ್ಯವಿದೆ.",
-          "courseC_harvester_loops2_c": "ಒಂದು ಲೂಪ್ `ಮೂವ್ ಫಾರ್ವರ್ಡ್` ಆಜ್ಞೆಯನ್ನು ಪುನರಾವರ್ತಿಸುತ್ತದೆ ಮತ್ತು ಇನ್ನೊಂದು \\`ಪಿಕ್ ಕುಂಬಳಕಾಯಿ~ ಆಜ್ಞೆಯನ್ನು ಪುನರಾವರ್ತಿಸುತ್ತದೆ."
+          "courseC_harvester_loops2_b": "ನಿಮಗೆ ಒಂದರ ನಂತರ ಒಂದು ಪುನರಾವರ್ತನೆ ಲೂಪ್ ಅಗತ್ಯವಿದೆ.",
+          "courseC_harvester_loops2_c": "ಒಂದು ಲೂಪ್ ಮುಂದೆ ಸಾಗಿ ಆಜ್ಞೆಯನ್ನು ಪುನರಾವರ್ತಿಸುತ್ತದೆ ಮತ್ತು ಇನ್ನೊಂದು ಕುಂಬಳಕಾಯಿ ಆರಿಸಿ ಆಜ್ಞೆಯನ್ನು ಪುನರಾವರ್ತಿಸುತ್ತದೆ."
         },
         "courseC_harvester_loops2_2018": {
           "courseC_harvester_loops2_a": "ನೀವು ಸಿಲುಕಿಕೊಂಡರೆ, ಕಾಗದದ ಮೇಲೆ ಹಂತಗಳನ್ನು ಬರೆಯಲು ಪ್ರಯತ್ನಿಸಿ ಮತ್ತು ಪುನರಾವರ್ತಿತ ಮಾದರಿಗಳನ್ನು ನೋಡಿ.",
-          "courseC_harvester_loops2_b": "ನಿಮಗೆ ಒಂದರ ನಂತರ ಒಂದು `ರಿಪೀಟ್` ಲೂಪ್ ಅಗತ್ಯವಿದೆ.",
-          "courseC_harvester_loops2_c": "ಒಂದು ಲೂಪ್ `ಮೂವ್ ಫಾರ್ವರ್ಡ್` ಆಜ್ಞೆಯನ್ನು ಪುನರಾವರ್ತಿಸುತ್ತದೆ ಮತ್ತು ಇನ್ನೊಂದು \\`ಪಿಕ್ ಕುಂಬಳಕಾಯಿ~ ಆಜ್ಞೆಯನ್ನು ಪುನರಾವರ್ತಿಸುತ್ತದೆ."
+          "courseC_harvester_loops2_b": "ನಿಮಗೆ ಒಂದರ ನಂತರ ಒಂದು ಪುನರಾವರ್ತನೆ ಲೂಪ್ ಅಗತ್ಯವಿದೆ.",
+          "courseC_harvester_loops2_c": "ಒಂದು ಲೂಪ್ ಮುಂದೆ ಸಾಗಿ ಆಜ್ಞೆಯನ್ನು ಪುನರಾವರ್ತಿಸುತ್ತದೆ ಮತ್ತು ಇನ್ನೊಂದು ಕುಂಬಳಕಾಯಿ ಆರಿಸಿ ಆಜ್ಞೆಯನ್ನು ಪುನರಾವರ್ತಿಸುತ್ತದೆ."
         },
         "courseC_harvester_loops2_2019": {
           "courseC_harvester_loops2_a": "ನೀವು ಸಿಲುಕಿಕೊಂಡರೆ, ಕಾಗದದ ಮೇಲೆ ಹಂತಗಳನ್ನು ಬರೆಯಲು ಪ್ರಯತ್ನಿಸಿ ಮತ್ತು ಪುನರಾವರ್ತಿತ ಮಾದರಿಗಳನ್ನು ನೋಡಿ.",
-          "courseC_harvester_loops2_b": "ನಿಮಗೆ ಒಂದರ ನಂತರ ಒಂದು `ರಿಪೀಟ್` ಲೂಪ್ ಅಗತ್ಯವಿದೆ.",
-          "courseC_harvester_loops2_c": "ಒಂದು ಲೂಪ್ `ಮೂವ್ ಫಾರ್ವರ್ಡ್` ಆಜ್ಞೆಯನ್ನು ಪುನರಾವರ್ತಿಸುತ್ತದೆ ಮತ್ತು ಇನ್ನೊಂದು \\`ಪಿಕ್ ಕುಂಬಳಕಾಯಿ~ ಆಜ್ಞೆಯನ್ನು ಪುನರಾವರ್ತಿಸುತ್ತದೆ."
+          "courseC_harvester_loops2_b": "ನಿಮಗೆ ಒಂದರ ನಂತರ ಒಂದು ಪುನರಾವರ್ತನೆ ಲೂಪ್ ಅಗತ್ಯವಿದೆ.",
+          "courseC_harvester_loops2_c": "ಒಂದು ಲೂಪ್ ಮುಂದೆ ಸಾಗಿ ಆಜ್ಞೆಯನ್ನು ಪುನರಾವರ್ತಿಸುತ್ತದೆ ಮತ್ತು ಇನ್ನೊಂದು ಕುಂಬಳಕಾಯಿ ಆರಿಸಿ ಆಜ್ಞೆಯನ್ನು ಪುನರಾವರ್ತಿಸುತ್ತದೆ."
         },
         "courseC_harvester_loops2_2020": {
           "courseC_harvester_loops2_a": "ನೀವು ಸಿಲುಕಿಕೊಂಡರೆ, ಕಾಗದದ ಮೇಲೆ ಹಂತಗಳನ್ನು ಬರೆಯಲು ಪ್ರಯತ್ನಿಸಿ ಮತ್ತು ಪುನರಾವರ್ತಿತ ಮಾದರಿಗಳನ್ನು ನೋಡಿ.",
-          "courseC_harvester_loops2_b": "ನಿಮಗೆ ಒಂದರ ನಂತರ ಒಂದು `ರಿಪೀಟ್` ಲೂಪ್ ಅಗತ್ಯವಿದೆ.",
-          "courseC_harvester_loops2_c": "ಒಂದು ಲೂಪ್ `ಮೂವ್ ಫಾರ್ವರ್ಡ್` ಆಜ್ಞೆಯನ್ನು ಪುನರಾವರ್ತಿಸುತ್ತದೆ ಮತ್ತು ಇನ್ನೊಂದು \\`ಪಿಕ್ ಕುಂಬಳಕಾಯಿ~ ಆಜ್ಞೆಯನ್ನು ಪುನರಾವರ್ತಿಸುತ್ತದೆ."
+          "courseC_harvester_loops2_b": "ನಿಮಗೆ ಒಂದರ ನಂತರ ಒಂದು ಪುನರಾವರ್ತನೆ ಲೂಪ್ ಅಗತ್ಯವಿದೆ.",
+          "courseC_harvester_loops2_c": "ಒಂದು ಲೂಪ್ ಮುಂದೆ ಸಾಗಿ ಆಜ್ಞೆಯನ್ನು ಪುನರಾವರ್ತಿಸುತ್ತದೆ ಮತ್ತು ಇನ್ನೊಂದು ಕುಂಬಳಕಾಯಿ ಆರಿಸಿ ಆಜ್ಞೆಯನ್ನು ಪುನರಾವರ್ತಿಸುತ್ತದೆ."
         },
         "courseC_harvester_loops3": {
           "courseC_harvester_loops3_a": "ತಪ್ಪು ಮಾಡಲು ಹಿಂಜರಿಯದಿರಿ! ನೀವು ಇನ್ನೂ ಒಗಟುಗಳನ್ನು ಪರಿಹರಿಸಿದ್ದೀರಿ ಎಂದು ನೀವು ಭಾವಿಸದಿದ್ದರೂ ಸಹ, ಏನಾಗುತ್ತದೆ ಎಂಬುದನ್ನು ನೋಡಲು ಬ್ಲಾಕ್‌ಗಳನ್ನು ಸೇರಿಸಲು ಮತ್ತು ಕೋಡ್ ಅನ್ನು ರನ್ ಮಾಡಲು ಪ್ರಯತ್ನಿಸಿ.",
@@ -5700,88 +5700,88 @@
           "courseC_harvester_loops3_c": "ನಿಮ್ಮ ಕೋಡ್ ಅನ್ನು ಸರಳೀಕರಿಸಲು ನೀವು ಬಯಸಿದರೆ, ನೀವು ನಿಜವಾಗಿಯೂ ಒಂದು ಲೂಪ್ ಅನ್ನು ಇನ್ನೊಂದರೊಳಗೆ ಹಾಕಬಹುದು! ಇದನ್ನು **ನೆಸ್ಟೆಡ್ ಲೂಪ್** ಎಂದು ಕರೆಯಲಾಗುತ್ತದೆ."
         },
         "courseC_harvester_loops4": {
-          "courseC_harvester_loops4_a": "ಜೋಳವನ್ನು ಸಂಗ್ರಹಿಸಲು ಹೊಸ `ಪಿಕ್ ಕಾರ್ನ್` ಬ್ಲಾಕ್ ಅನ್ನು ಬಳಸಿ.",
+          "courseC_harvester_loops4_a": "ಜೋಳವನ್ನು ಸಂಗ್ರಹಿಸಲು ಹೊಸ ಜೋಳ ಆರಿಸಿ ಬ್ಲಾಕ್ ಅನ್ನು ಬಳಸಿ.",
           "courseC_harvester_loops4_b": "ನಿಮ್ಮ ಕೋಡ್‌ನಲ್ಲಿ ನೀವು ಬಹು ಪುನರಾವರ್ತಿತ ಲೂಪ್‌ಗಳನ್ನು ಬಳಸಬಹುದು, ಕೆಲವು ಜೋಳವನ್ನು ತೆಗೆದುಕೊಳ್ಳಲು ಮತ್ತು ಕೆಲವು ಕುಂಬಳಕಾಯಿಗಳನ್ನು ತೆಗೆದುಕೊಳ್ಳಲು.",
           "courseC_harvester_loops4_c": "ನಿಮ್ಮ ಕೋಡ್ ಅನ್ನು ಸರಳೀಕರಿಸಲು ನೀವು ಬಯಸಿದರೆ, ನೀವು ನಿಜವಾಗಿಯೂ ಒಂದು ಲೂಪ್ ಅನ್ನು ಇನ್ನೊಂದರೊಳಗೆ ಹಾಕಬಹುದು! ಇದನ್ನು **ನೆಸ್ಟೆಡ್ ಲೂಪ್** ಎಂದು ಕರೆಯಲಾಗುತ್ತದೆ."
         },
         "courseC_harvester_loops4_2018": {
-          "courseC_harvester_loops4_a": "ಜೋಳವನ್ನು ಸಂಗ್ರಹಿಸಲು ಹೊಸ `ಪಿಕ್ ಕಾರ್ನ್` ಬ್ಲಾಕ್ ಅನ್ನು ಬಳಸಿ.",
+          "courseC_harvester_loops4_a": "ಜೋಳವನ್ನು ಸಂಗ್ರಹಿಸಲು ಹೊಸ ಜೋಳ ಆರಿಸಿ ಬ್ಲಾಕ್ ಅನ್ನು ಬಳಸಿ.",
           "courseC_harvester_loops4_b": "ನಿಮ್ಮ ಕೋಡ್‌ನಲ್ಲಿ ನೀವು ಬಹು ಪುನರಾವರ್ತಿತ ಲೂಪ್‌ಗಳನ್ನು ಬಳಸಬಹುದು, ಕೆಲವು ಜೋಳವನ್ನು ತೆಗೆದುಕೊಳ್ಳಲು ಮತ್ತು ಕೆಲವು ಕುಂಬಳಕಾಯಿಗಳನ್ನು ತೆಗೆದುಕೊಳ್ಳಲು.",
           "courseC_harvester_loops4_c": "ನಿಮ್ಮ ಕೋಡ್ ಅನ್ನು ಸರಳೀಕರಿಸಲು ನೀವು ಬಯಸಿದರೆ, ನೀವು ನಿಜವಾಗಿಯೂ ಒಂದು ಲೂಪ್ ಅನ್ನು ಇನ್ನೊಂದರೊಳಗೆ ಹಾಕಬಹುದು! ಇದನ್ನು **ನೆಸ್ಟೆಡ್ ಲೂಪ್** ಎಂದು ಕರೆಯಲಾಗುತ್ತದೆ."
         },
         "courseC_harvester_loops4_2019": {
-          "courseC_harvester_loops4_a": "ಜೋಳವನ್ನು ಸಂಗ್ರಹಿಸಲು ಹೊಸ `ಪಿಕ್ ಕಾರ್ನ್` ಬ್ಲಾಕ್ ಅನ್ನು ಬಳಸಿ.",
+          "courseC_harvester_loops4_a": "ಜೋಳವನ್ನು ಸಂಗ್ರಹಿಸಲು ಹೊಸ ಜೋಳ ಆರಿಸಿ ಬ್ಲಾಕ್ ಅನ್ನು ಬಳಸಿ.",
           "courseC_harvester_loops4_b": "ನಿಮ್ಮ ಕೋಡ್‌ನಲ್ಲಿ ನೀವು ಬಹು ಪುನರಾವರ್ತಿತ ಲೂಪ್‌ಗಳನ್ನು ಬಳಸಬಹುದು, ಕೆಲವು ಜೋಳವನ್ನು ತೆಗೆದುಕೊಳ್ಳಲು ಮತ್ತು ಕೆಲವು ಕುಂಬಳಕಾಯಿಗಳನ್ನು ತೆಗೆದುಕೊಳ್ಳಲು.",
           "courseC_harvester_loops4_c": "ನಿಮ್ಮ ಕೋಡ್ ಅನ್ನು ಸರಳೀಕರಿಸಲು ನೀವು ಬಯಸಿದರೆ, ನೀವು ನಿಜವಾಗಿಯೂ ಒಂದು ಲೂಪ್ ಅನ್ನು ಇನ್ನೊಂದರೊಳಗೆ ಹಾಕಬಹುದು! ಇದನ್ನು **ನೆಸ್ಟೆಡ್ ಲೂಪ್** ಎಂದು ಕರೆಯಲಾಗುತ್ತದೆ."
         },
         "courseC_harvester_loops4_2020": {
-          "courseC_harvester_loops4_a": "ಜೋಳವನ್ನು ಸಂಗ್ರಹಿಸಲು ಹೊಸ `ಪಿಕ್ ಕಾರ್ನ್` ಬ್ಲಾಕ್ ಅನ್ನು ಬಳಸಿ.",
+          "courseC_harvester_loops4_a": "ಜೋಳವನ್ನು ಸಂಗ್ರಹಿಸಲು ಹೊಸ ಜೋಳ ಆರಿಸಿ ಬ್ಲಾಕ್ ಅನ್ನು ಬಳಸಿ.",
           "courseC_harvester_loops4_b": "ನಿಮ್ಮ ಕೋಡ್‌ನಲ್ಲಿ ನೀವು ಬಹು ಪುನರಾವರ್ತಿತ ಲೂಪ್‌ಗಳನ್ನು ಬಳಸಬಹುದು, ಕೆಲವು ಜೋಳವನ್ನು ತೆಗೆದುಕೊಳ್ಳಲು ಮತ್ತು ಕೆಲವು ಕುಂಬಳಕಾಯಿಗಳನ್ನು ತೆಗೆದುಕೊಳ್ಳಲು.",
           "courseC_harvester_loops4_c": "ನಿಮ್ಮ ಕೋಡ್ ಅನ್ನು ಸರಳೀಕರಿಸಲು ನೀವು ಬಯಸಿದರೆ, ನೀವು ನಿಜವಾಗಿಯೂ ಒಂದು ಲೂಪ್ ಅನ್ನು ಇನ್ನೊಂದರೊಳಗೆ ಹಾಕಬಹುದು! ಇದನ್ನು **ನೆಸ್ಟೆಡ್ ಲೂಪ್** ಎಂದು ಕರೆಯಲಾಗುತ್ತದೆ."
         },
         "courseC_harvester_loops5": {
-          "courseC_harvester_loops5_a": "ನೀವು ಸಿಲುಕಿಕೊಂಡರೆ, ಸಂಪೂರ್ಣ ಪ್ರೋಗ್ರಾಂ ಅನ್ನು ಸೆಳೆಯಲು ಪ್ರಯತ್ನಿಸಿ ಮತ್ತು ನಂತರ ಪುನರಾವರ್ತಿಸುವ ಮಾದರಿಗಳನ್ನು ನೋಡಿ.",
-          "courseC_harvester_loops5_b": "ಈ ಮೆಟ್ಟಿಲು ಹೆಜ್ಜೆ ಇತರ ಒಗಟುಗಳಿಂದ ಪರಿಚಿತವಾಗಿದೆಯೇ? ಚಲನೆಗಳು ಒಂದೇ ಆಗಿರಬೇಕು, ದಾರಿಯುದ್ದಕ್ಕೂ ಬೆಳೆಗಳನ್ನು ಸಂಗ್ರಹಿಸಲು ಮರೆಯದಿರಿ."
+          "courseC_harvester_loops5_a": "ನೀವು ಸಿಲುಕಿಕೊಂಡರೆ, ಸಂಪೂರ್ಣ ಪ್ರೋಗ್ರಾಂ ಅನ್ನು ಬರೆಯಲು ಪ್ರಯತ್ನಿಸಿ ಮತ್ತು ನಂತರ ಪುನರಾವರ್ತಿಸುವ ಮಾದರಿಗಳನ್ನು ನೋಡಿ.",
+          "courseC_harvester_loops5_b": "ಈ ಮೆಟ್ಟಿಲು ಹಂತ ಇತರ ಒಗಟುಗಳಂತೆ ಇದೆಯೇ? ಚಲನೆ ಅದೇ ರೀತಿಯಲ್ಲಿದೆ, ದಾರಿಯುದ್ದಕ್ಕೂ ಬೆಳೆಗಳನ್ನು ಸಂಗ್ರಹಿಸಲು ಮರೆಯದಿರಿ."
         },
         "courseC_harvester_loops5_2018": {
-          "courseC_harvester_loops5_a": "ನೀವು ಸಿಲುಕಿಕೊಂಡರೆ, ಸಂಪೂರ್ಣ ಪ್ರೋಗ್ರಾಂ ಅನ್ನು ಸೆಳೆಯಲು ಪ್ರಯತ್ನಿಸಿ ಮತ್ತು ನಂತರ ಪುನರಾವರ್ತಿಸುವ ಮಾದರಿಗಳನ್ನು ನೋಡಿ.",
-          "courseC_harvester_loops5_b": "ಈ ಮೆಟ್ಟಿಲು ಹೆಜ್ಜೆ ಇತರ ಒಗಟುಗಳಿಂದ ಪರಿಚಿತವಾಗಿದೆಯೇ? ಚಲನೆಗಳು ಒಂದೇ ಆಗಿರಬೇಕು, ದಾರಿಯುದ್ದಕ್ಕೂ ಬೆಳೆಗಳನ್ನು ಸಂಗ್ರಹಿಸಲು ಮರೆಯದಿರಿ."
+          "courseC_harvester_loops5_a": "ನೀವು ಸಿಲುಕಿಕೊಂಡರೆ, ಸಂಪೂರ್ಣ ಪ್ರೋಗ್ರಾಂ ಅನ್ನು ಬರೆಯಲು ಪ್ರಯತ್ನಿಸಿ ಮತ್ತು ನಂತರ ಪುನರಾವರ್ತಿಸುವ ಮಾದರಿಗಳನ್ನು ನೋಡಿ.",
+          "courseC_harvester_loops5_b": "ಈ ಮೆಟ್ಟಿಲು ಹಂತ ಇತರ ಒಗಟುಗಳಂತೆ ಇದೆಯೇ? ಚಲನೆ ಅದೇ ರೀತಿಯಲ್ಲಿದೆ, ದಾರಿಯುದ್ದಕ್ಕೂ ಬೆಳೆಗಳನ್ನು ಸಂಗ್ರಹಿಸಲು ಮರೆಯದಿರಿ."
         },
         "courseC_harvester_loops5_2019": {
-          "courseC_harvester_loops5_a": "ನೀವು ಸಿಲುಕಿಕೊಂಡರೆ, ಸಂಪೂರ್ಣ ಪ್ರೋಗ್ರಾಂ ಅನ್ನು ಸೆಳೆಯಲು ಪ್ರಯತ್ನಿಸಿ ಮತ್ತು ನಂತರ ಪುನರಾವರ್ತಿಸುವ ಮಾದರಿಗಳನ್ನು ನೋಡಿ.",
-          "courseC_harvester_loops5_b": "ಈ ಮೆಟ್ಟಿಲು ಹೆಜ್ಜೆ ಇತರ ಒಗಟುಗಳಿಂದ ಪರಿಚಿತವಾಗಿದೆಯೇ? ಚಲನೆಗಳು ಒಂದೇ ಆಗಿರಬೇಕು, ದಾರಿಯುದ್ದಕ್ಕೂ ಬೆಳೆಗಳನ್ನು ಸಂಗ್ರಹಿಸಲು ಮರೆಯದಿರಿ."
+          "courseC_harvester_loops5_a": "ನೀವು ಸಿಲುಕಿಕೊಂಡರೆ, ಸಂಪೂರ್ಣ ಪ್ರೋಗ್ರಾಂ ಅನ್ನು ಬರೆಯಲು ಪ್ರಯತ್ನಿಸಿ ಮತ್ತು ನಂತರ ಪುನರಾವರ್ತಿಸುವ ಮಾದರಿಗಳನ್ನು ನೋಡಿ.",
+          "courseC_harvester_loops5_b": "ಈ ಮೆಟ್ಟಿಲು ಹಂತ ಇತರ ಒಗಟುಗಳಂತೆ ಇದೆಯೇ? ಚಲನೆ ಅದೇ ರೀತಿಯಲ್ಲಿದೆ, ದಾರಿಯುದ್ದಕ್ಕೂ ಬೆಳೆಗಳನ್ನು ಸಂಗ್ರಹಿಸಲು ಮರೆಯದಿರಿ."
         },
         "courseC_harvester_loops5_2020": {
-          "courseC_harvester_loops5_a": "ನೀವು ಸಿಲುಕಿಕೊಂಡರೆ, ಸಂಪೂರ್ಣ ಪ್ರೋಗ್ರಾಂ ಅನ್ನು ಸೆಳೆಯಲು ಪ್ರಯತ್ನಿಸಿ ಮತ್ತು ನಂತರ ಪುನರಾವರ್ತಿಸುವ ಮಾದರಿಗಳನ್ನು ನೋಡಿ.",
-          "courseC_harvester_loops5_b": "ಈ ಮೆಟ್ಟಿಲು ಹೆಜ್ಜೆ ಇತರ ಒಗಟುಗಳಿಂದ ಪರಿಚಿತವಾಗಿದೆಯೇ? ಚಲನೆಗಳು ಒಂದೇ ಆಗಿರಬೇಕು, ದಾರಿಯುದ್ದಕ್ಕೂ ಬೆಳೆಗಳನ್ನು ಸಂಗ್ರಹಿಸಲು ಮರೆಯದಿರಿ."
+          "courseC_harvester_loops5_a": "ನೀವು ಸಿಲುಕಿಕೊಂಡರೆ, ಸಂಪೂರ್ಣ ಪ್ರೋಗ್ರಾಂ ಅನ್ನು ಬರೆಯಲು ಪ್ರಯತ್ನಿಸಿ ಮತ್ತು ನಂತರ ಪುನರಾವರ್ತಿಸುವ ಮಾದರಿಗಳನ್ನು ನೋಡಿ.",
+          "courseC_harvester_loops5_b": "ಈ ಮೆಟ್ಟಿಲು ಹಂತ ಇತರ ಒಗಟುಗಳಂತೆ ಇದೆಯೇ? ಚಲನೆ ಅದೇ ರೀತಿಯಲ್ಲಿದೆ, ದಾರಿಯುದ್ದಕ್ಕೂ ಬೆಳೆಗಳನ್ನು ಸಂಗ್ರಹಿಸಲು ಮರೆಯದಿರಿ."
         },
         "courseC_harvester_loops6": {
-          "courseC_harvester_loops6_a": "ಒಂದು ಪುನರಾವರ್ತಿತ ಲೂಪ್ನಲ್ಲಿ ನೀವು ಬಹು ಬ್ಲಾಕ್ಗಳನ್ನು ಹಾಕಬಹುದು ಎಂಬುದನ್ನು ನೆನಪಿಡಿ.",
+          "courseC_harvester_loops6_a": "ಒಂದು ಪುನರಾವರ್ತಿತ ಲೂಪ್‌ನಲ್ಲಿ ನೀವು ಬಹು ಬ್ಲಾಕ್‌ಗಳನ್ನು ಹಾಕಬಹುದು ಎಂಬುದನ್ನು ನೆನಪಿಡಿ.",
           "courseC_harvester_loops6_b": "ಜೋಳದ ಸಾಲಿನ ಕೊನೆಯಲ್ಲಿ ತಿರುಗಲು ಮರೆಯಬೇಡಿ."
         },
         "courseC_harvester_loops6_2018": {
-          "courseC_harvester_loops6_a": "ಒಂದು ಪುನರಾವರ್ತಿತ ಲೂಪ್ನಲ್ಲಿ ನೀವು ಬಹು ಬ್ಲಾಕ್ಗಳನ್ನು ಹಾಕಬಹುದು ಎಂಬುದನ್ನು ನೆನಪಿಡಿ.",
+          "courseC_harvester_loops6_a": "ಒಂದು ಪುನರಾವರ್ತಿತ ಲೂಪ್‌ನಲ್ಲಿ ನೀವು ಬಹು ಬ್ಲಾಕ್‌ಗಳನ್ನು ಹಾಕಬಹುದು ಎಂಬುದನ್ನು ನೆನಪಿಡಿ.",
           "courseC_harvester_loops6_b": "ಜೋಳದ ಸಾಲಿನ ಕೊನೆಯಲ್ಲಿ ತಿರುಗಲು ಮರೆಯಬೇಡಿ."
         },
         "courseC_harvester_loops6_2019": {
-          "courseC_harvester_loops6_a": "ಒಂದು ಪುನರಾವರ್ತಿತ ಲೂಪ್ನಲ್ಲಿ ನೀವು ಬಹು ಬ್ಲಾಕ್ಗಳನ್ನು ಹಾಕಬಹುದು ಎಂಬುದನ್ನು ನೆನಪಿಡಿ.",
+          "courseC_harvester_loops6_a": "ಒಂದು ಪುನರಾವರ್ತಿತ ಲೂಪ್‌ನಲ್ಲಿ ನೀವು ಬಹು ಬ್ಲಾಕ್‌ಗಳನ್ನು ಹಾಕಬಹುದು ಎಂಬುದನ್ನು ನೆನಪಿಡಿ.",
           "courseC_harvester_loops6_b": "ಜೋಳದ ಸಾಲಿನ ಕೊನೆಯಲ್ಲಿ ತಿರುಗಲು ಮರೆಯಬೇಡಿ."
         },
         "courseC_harvester_loops6_2020": {
-          "courseC_harvester_loops6_a": "ಒಂದು ಪುನರಾವರ್ತಿತ ಲೂಪ್ನಲ್ಲಿ ನೀವು ಬಹು ಬ್ಲಾಕ್ಗಳನ್ನು ಹಾಕಬಹುದು ಎಂಬುದನ್ನು ನೆನಪಿಡಿ.",
+          "courseC_harvester_loops6_a": "ಒಂದು ಪುನರಾವರ್ತಿತ ಲೂಪ್‌ನಲ್ಲಿ ನೀವು ಬಹು ಬ್ಲಾಕ್‌ಗಳನ್ನು ಹಾಕಬಹುದು ಎಂಬುದನ್ನು ನೆನಪಿಡಿ.",
           "courseC_harvester_loops6_b": "ಜೋಳದ ಸಾಲಿನ ಕೊನೆಯಲ್ಲಿ ತಿರುಗಲು ಮರೆಯಬೇಡಿ."
         },
         "courseC_harvester_loops7": {
           "courseC_harvester_loops7_a": "ನೀವು ಈ ಒಗಟು ಎರಡು ರೀತಿಯಲ್ಲಿ ಪರಿಹರಿಸಬಹುದು, ಮೊದಲು ಜೋಳ ಅಥವಾ ಕುಂಬಳಕಾಯಿಗಳನ್ನು ಪಡೆಯಿರಿ.",
-          "courseC_harvester_loops7_b": "ಈ ಒಗಟು ಪರಿಹರಿಸಲು ನಿಮಗೆ ಬಹು `ರಿಪೀಟ್` ಲೂಪ್‌ಗಳ ಅಗತ್ಯವಿದೆ."
+          "courseC_harvester_loops7_b": "ಈ ಒಗಟು ಪರಿಹರಿಸಲು ನಿಮಗೆ ಬಹು ಪುನರಾವರ್ತನೆ ಲೂಪ್‌ಗಳ ಅಗತ್ಯವಿದೆ."
         },
         "courseC_harvester_loops7_2018": {
           "courseC_harvester_loops7_a": "ನೀವು ಈ ಒಗಟು ಎರಡು ರೀತಿಯಲ್ಲಿ ಪರಿಹರಿಸಬಹುದು, ಮೊದಲು ಜೋಳ ಅಥವಾ ಕುಂಬಳಕಾಯಿಗಳನ್ನು ಪಡೆಯಿರಿ.",
-          "courseC_harvester_loops7_b": "ಈ ಒಗಟು ಪರಿಹರಿಸಲು ನಿಮಗೆ ಬಹು `ರಿಪೀಟ್` ಲೂಪ್‌ಗಳ ಅಗತ್ಯವಿದೆ."
+          "courseC_harvester_loops7_b": "ಈ ಒಗಟು ಪರಿಹರಿಸಲು ನಿಮಗೆ ಬಹು ಪುನರಾವರ್ತನೆ ಲೂಪ್‌ಗಳ ಅಗತ್ಯವಿದೆ."
         },
         "courseC_harvester_loops7_2019": {
           "courseC_harvester_loops7_a": "ನೀವು ಈ ಒಗಟು ಎರಡು ರೀತಿಯಲ್ಲಿ ಪರಿಹರಿಸಬಹುದು, ಮೊದಲು ಜೋಳ ಅಥವಾ ಕುಂಬಳಕಾಯಿಗಳನ್ನು ಪಡೆಯಿರಿ.",
-          "courseC_harvester_loops7_b": "ಈ ಒಗಟು ಪರಿಹರಿಸಲು ನಿಮಗೆ ಬಹು `ರಿಪೀಟ್` ಲೂಪ್‌ಗಳ ಅಗತ್ಯವಿದೆ."
+          "courseC_harvester_loops7_b": "ಈ ಒಗಟು ಪರಿಹರಿಸಲು ನಿಮಗೆ ಬಹು ಪುನರಾವರ್ತನೆ ಲೂಪ್‌ಗಳ ಅಗತ್ಯವಿದೆ."
         },
         "courseC_harvester_loops7_2020": {
           "courseC_harvester_loops7_a": "ನೀವು ಈ ಒಗಟು ಎರಡು ರೀತಿಯಲ್ಲಿ ಪರಿಹರಿಸಬಹುದು, ಮೊದಲು ಜೋಳ ಅಥವಾ ಕುಂಬಳಕಾಯಿಗಳನ್ನು ಪಡೆಯಿರಿ.",
-          "courseC_harvester_loops7_b": "ಈ ಒಗಟು ಪರಿಹರಿಸಲು ನಿಮಗೆ ಬಹು `ರಿಪೀಟ್` ಲೂಪ್‌ಗಳ ಅಗತ್ಯವಿದೆ."
+          "courseC_harvester_loops7_b": "ಈ ಒಗಟು ಪರಿಹರಿಸಲು ನಿಮಗೆ ಬಹು ಪುನರಾವರ್ತನೆ ಲೂಪ್‌ಗಳ ಅಗತ್ಯವಿದೆ."
         },
         "courseC_harvester_loops8": {
           "courseC_harvester_loops8_a": "ಈ ಮೆಟ್ಟಿಲು ಹಂತವು ಹಿಂದಿನ ಒಗಟಿನಿಂದ ಪರಿಚಿತವಾಗಿದೆಯೇ? ಚಲನೆಗಳು ಒಂದೇ ಆಗಿರಬೇಕು, ದಾರಿಯುದ್ದಕ್ಕೂ ಬೆಳೆಗಳನ್ನು ಸಂಗ್ರಹಿಸಲು ಮರೆಯದಿರಿ.",
-          "courseC_harvester_loops8_b": "ನಿಮ್ಮ ಕೋಡ್ ಅನ್ನು ಹೆಚ್ಚು ಸರಳಗೊಳಿಸಲು ನೀವು ಬಯಸಿದರೆ, ನೀವು ನಿಜವಾಗಿ ಒಂದು `ರಿಪೀಟ್` ಲೂಪ್ ಅನ್ನು ಇನ್ನೊಂದರೊಳಗೆ ಹಾಕಬಹುದು! ಇದನ್ನು **ನೆಸ್ಟೆಡ್ ಲೂಪ್** ಎಂದು ಕರೆಯಲಾಗುತ್ತದೆ."
+          "courseC_harvester_loops8_b": "ನಿಮ್ಮ ಕೋಡ್ ಅನ್ನು ಹೆಚ್ಚು ಸರಳಗೊಳಿಸಲು ನೀವು ಬಯಸಿದರೆ, ನೀವು ನಿಜವಾಗಿ ಒಂದು ಪುನರಾವರ್ತನೆ ಲೂಪ್ ಅನ್ನು ಇನ್ನೊಂದರೊಳಗೆ ಹಾಕಬಹುದು! ಇದನ್ನು ನೆಸ್ಟೆಡ್ ಲೂಪ್ ಎಂದು ಕರೆಯಲಾಗುತ್ತದೆ."
         },
         "courseC_harvester_loops8_2018": {
           "courseC_harvester_loops8_a": "ಈ ಮೆಟ್ಟಿಲು ಹಂತವು ಹಿಂದಿನ ಒಗಟಿನಿಂದ ಪರಿಚಿತವಾಗಿದೆಯೇ? ಚಲನೆಗಳು ಒಂದೇ ಆಗಿರಬೇಕು, ದಾರಿಯುದ್ದಕ್ಕೂ ಬೆಳೆಗಳನ್ನು ಸಂಗ್ರಹಿಸಲು ಮರೆಯದಿರಿ.",
-          "courseC_harvester_loops8_b": "ನಿಮ್ಮ ಕೋಡ್ ಅನ್ನು ಹೆಚ್ಚು ಸರಳಗೊಳಿಸಲು ನೀವು ಬಯಸಿದರೆ, ನೀವು ನಿಜವಾಗಿ ಒಂದು `ರಿಪೀಟ್` ಲೂಪ್ ಅನ್ನು ಇನ್ನೊಂದರೊಳಗೆ ಹಾಕಬಹುದು! ಇದನ್ನು **ನೆಸ್ಟೆಡ್ ಲೂಪ್** ಎಂದು ಕರೆಯಲಾಗುತ್ತದೆ."
+          "courseC_harvester_loops8_b": "ನಿಮ್ಮ ಕೋಡ್ ಅನ್ನು ಹೆಚ್ಚು ಸರಳಗೊಳಿಸಲು ನೀವು ಬಯಸಿದರೆ, ನೀವು ನಿಜವಾಗಿ ಒಂದು ಪುನರಾವರ್ತನೆ ಲೂಪ್ ಅನ್ನು ಇನ್ನೊಂದರೊಳಗೆ ಹಾಕಬಹುದು! ಇದನ್ನು ನೆಸ್ಟೆಡ್ ಲೂಪ್ ಎಂದು ಕರೆಯಲಾಗುತ್ತದೆ."
         },
         "courseC_harvester_loops8_2019": {
           "courseC_harvester_loops8_a": "ಈ ಮೆಟ್ಟಿಲು ಹಂತವು ಹಿಂದಿನ ಒಗಟಿನಿಂದ ಪರಿಚಿತವಾಗಿದೆಯೇ? ಚಲನೆಗಳು ಒಂದೇ ಆಗಿರಬೇಕು, ದಾರಿಯುದ್ದಕ್ಕೂ ಬೆಳೆಗಳನ್ನು ಸಂಗ್ರಹಿಸಲು ಮರೆಯದಿರಿ.",
-          "courseC_harvester_loops8_b": "ನಿಮ್ಮ ಕೋಡ್ ಅನ್ನು ಹೆಚ್ಚು ಸರಳಗೊಳಿಸಲು ನೀವು ಬಯಸಿದರೆ, ನೀವು ನಿಜವಾಗಿ ಒಂದು `ರಿಪೀಟ್` ಲೂಪ್ ಅನ್ನು ಇನ್ನೊಂದರೊಳಗೆ ಹಾಕಬಹುದು! ಇದನ್ನು **ನೆಸ್ಟೆಡ್ ಲೂಪ್** ಎಂದು ಕರೆಯಲಾಗುತ್ತದೆ."
+          "courseC_harvester_loops8_b": "ನಿಮ್ಮ ಕೋಡ್ ಅನ್ನು ಹೆಚ್ಚು ಸರಳಗೊಳಿಸಲು ನೀವು ಬಯಸಿದರೆ, ನೀವು ನಿಜವಾಗಿ ಒಂದು ಪುನರಾವರ್ತನೆ ಲೂಪ್ ಅನ್ನು ಇನ್ನೊಂದರೊಳಗೆ ಹಾಕಬಹುದು! ಇದನ್ನು ನೆಸ್ಟೆಡ್ ಲೂಪ್ ಎಂದು ಕರೆಯಲಾಗುತ್ತದೆ."
         },
         "courseC_harvester_loops8_2020": {
           "courseC_harvester_loops8_a": "ಈ ಮೆಟ್ಟಿಲು ಹಂತವು ಹಿಂದಿನ ಒಗಟಿನಿಂದ ಪರಿಚಿತವಾಗಿದೆಯೇ? ಚಲನೆಗಳು ಒಂದೇ ಆಗಿರಬೇಕು, ದಾರಿಯುದ್ದಕ್ಕೂ ಬೆಳೆಗಳನ್ನು ಸಂಗ್ರಹಿಸಲು ಮರೆಯದಿರಿ.",
-          "courseC_harvester_loops8_b": "ನಿಮ್ಮ ಕೋಡ್ ಅನ್ನು ಹೆಚ್ಚು ಸರಳಗೊಳಿಸಲು ನೀವು ಬಯಸಿದರೆ, ನೀವು ನಿಜವಾಗಿ ಒಂದು `ರಿಪೀಟ್` ಲೂಪ್ ಅನ್ನು ಇನ್ನೊಂದರೊಳಗೆ ಹಾಕಬಹುದು! ಇದನ್ನು **ನೆಸ್ಟೆಡ್ ಲೂಪ್** ಎಂದು ಕರೆಯಲಾಗುತ್ತದೆ."
+          "courseC_harvester_loops8_b": "ನಿಮ್ಮ ಕೋಡ್ ಅನ್ನು ಹೆಚ್ಚು ಸರಳಗೊಳಿಸಲು ನೀವು ಬಯಸಿದರೆ, ನೀವು ನಿಜವಾಗಿ ಒಂದು ಪುನರಾವರ್ತನೆ ಲೂಪ್ ಅನ್ನು ಇನ್ನೊಂದರೊಳಗೆ ಹಾಕಬಹುದು! ಇದನ್ನು ನೆಸ್ಟೆಡ್ ಲೂಪ್ ಎಂದು ಕರೆಯಲಾಗುತ್ತದೆ."
         },
         "courseC_harvester_loops_challenge1a": {
           "courseC_harvester_loops_challenge1_a": "ಕುಣಿಕೆಗಳಿಲ್ಲದೆ ಇದು ತುಂಬಾ ಕಷ್ಟ!",
@@ -6743,16 +6743,16 @@
           "courseD_bee_conditionals_challenge1_b": "ಈ ಒಗಟಿನಲ್ಲಿ, ಪ್ರತಿ ಜಾಗವು ಹೂವು, ಜೇನು ಬಾಚಣಿಗೆ ಅಥವಾ ಏನನ್ನೂ ಹೊಂದಿರುವುದಿಲ್ಲ. ಅಂದರೆ ನೀವು ಪ್ರತಿ ಚೌಕದಲ್ಲಿ ನಿಮ್ಮ `ಇಫ್‌/ಎಲ್ಸ್‌` ಷರತ್ತುಗಳನ್ನು ಪುನರಾವರ್ತಿಸಬಹುದು."
         },
         "courseD_bee_conditionals_challenge2": {
-          "courseD_bee_conditionals_challenge1_b": "`ಇಫ್ ಅಟ್ ಫ್ಲವರ್` ಬ್ಲಾಕ್‌ಗಳಂತೆಯೇ, ಜೇನುನೊಣ ಹೂವಿನ ಬಳಿ ಇದ್ದರೆ ಮಾತ್ರ `ಮಕರಂದ > 0` ಒಳಗಿನ ಕೋಡ್ ರನ್ ಆಗುತ್ತದೆ. ವ್ಯತ್ಯಾಸವೇನೆಂದರೆ, ಅಮೃತ ಉಳಿಯುವವರೆಗೆ ಒಳಗಿನ ಕೋಡ್ ಮತ್ತೆ ಮತ್ತೆ ಓಡುತ್ತದೆ. ಈ ಮಾದರಿಯನ್ನು ಪ್ರಯತ್ನಿಸಿ:\n\n<xml>  <block type=\"bee_whileNectarAmount\">\n    <title name=\"ARG1\">nectarRemaining</title>\n    <title name=\"OP\">></title>\n    <title name=\"ARG2\">0</title>                    <statement name=\"DO\">\n                      <block type=\"maze_nectar\"/>\n                    </statement>\n  </block></xml>"
+          "courseD_bee_conditionals_challenge1_b": "`ಇಫ್ ಅಟ್ ಫ್ಲವರ್` ಬ್ಲಾಕ್‌ಗಳಂತೆಯೇ, ಜೇನುನೊಣ ಹೂವಿನ ಬಳಿ ಇದ್ದರೆ ಮಾತ್ರ `ಮಕರಂದ > 0` ಒಳಗಿನ ಕೋಡ್ ರನ್ ಆಗುತ್ತದೆ. ವ್ಯತ್ಯಾಸವೇನೆಂದರೆ, ಅಮೃತ ಉಳಿಯುವವರೆಗೆ ಒಳಗಿನ ಕೋಡ್ ಮತ್ತೆ ಮತ್ತೆ ಓಡುತ್ತದೆ. ಈ ಮಾದರಿಯನ್ನು ಪ್ರಯತ್ನಿಸಿ:\n\n<xml>  <block type=\"bee_whileNectarAmount\">\n    <title name=\"ARG1\">nectarRemaining</title>\n    <title name=\"OP\">&gt;</title>\n    <title name=\"ARG2\">0</title>                    <statement name=\"DO\">\n                      <block type=\"maze_nectar\"/>\n                    </statement>\n  </block></xml>"
         },
         "courseD_bee_conditionals_challenge2_2018": {
-          "courseD_bee_conditionals_challenge1_b": "`ಇಫ್ ಅಟ್ ಫ್ಲವರ್` ಬ್ಲಾಕ್‌ಗಳಂತೆಯೇ, ಜೇನುನೊಣ ಹೂವಿನ ಬಳಿ ಇದ್ದರೆ ಮಾತ್ರ `ಮಕರಂದ > 0` ಒಳಗಿನ ಕೋಡ್ ರನ್ ಆಗುತ್ತದೆ. ವ್ಯತ್ಯಾಸವೇನೆಂದರೆ, ಅಮೃತ ಉಳಿಯುವವರೆಗೆ ಒಳಗಿನ ಕೋಡ್ ಮತ್ತೆ ಮತ್ತೆ ಓಡುತ್ತದೆ. ಈ ಮಾದರಿಯನ್ನು ಪ್ರಯತ್ನಿಸಿ:\n\n<xml>  <block type=\"bee_whileNectarAmount\">\n    <title name=\"ARG1\">nectarRemaining</title>\n    <title name=\"OP\">></title>\n    <title name=\"ARG2\">0</title>                    <statement name=\"DO\">\n                      <block type=\"maze_nectar\"/>\n                    </statement>\n  </block></xml>"
+          "courseD_bee_conditionals_challenge1_b": "`ಇಫ್ ಅಟ್ ಫ್ಲವರ್` ಬ್ಲಾಕ್‌ಗಳಂತೆಯೇ, ಜೇನುನೊಣ ಹೂವಿನ ಬಳಿ ಇದ್ದರೆ ಮಾತ್ರ `ಮಕರಂದ > 0` ಒಳಗಿನ ಕೋಡ್ ರನ್ ಆಗುತ್ತದೆ. ವ್ಯತ್ಯಾಸವೇನೆಂದರೆ, ಅಮೃತ ಉಳಿಯುವವರೆಗೆ ಒಳಗಿನ ಕೋಡ್ ಮತ್ತೆ ಮತ್ತೆ ಓಡುತ್ತದೆ. ಈ ಮಾದರಿಯನ್ನು ಪ್ರಯತ್ನಿಸಿ:\n\n<xml>  <block type=\"bee_whileNectarAmount\">\n    <title name=\"ARG1\">nectarRemaining</title>\n    <title name=\"OP\">&gt;</title>\n    <title name=\"ARG2\">0</title>                    <statement name=\"DO\">\n                      <block type=\"maze_nectar\"/>\n                    </statement>\n  </block></xml>"
         },
         "courseD_bee_conditionals_challenge2_2019": {
-          "courseD_bee_conditionals_challenge1_b": "`ಇಫ್ ಅಟ್ ಫ್ಲವರ್` ಬ್ಲಾಕ್‌ಗಳಂತೆಯೇ, ಜೇನುನೊಣ ಹೂವಿನ ಬಳಿ ಇದ್ದರೆ ಮಾತ್ರ `ಮಕರಂದ > 0` ಒಳಗಿನ ಕೋಡ್ ರನ್ ಆಗುತ್ತದೆ. ವ್ಯತ್ಯಾಸವೇನೆಂದರೆ, ಅಮೃತ ಉಳಿಯುವವರೆಗೆ ಒಳಗಿನ ಕೋಡ್ ಮತ್ತೆ ಮತ್ತೆ ಓಡುತ್ತದೆ. ಈ ಮಾದರಿಯನ್ನು ಪ್ರಯತ್ನಿಸಿ:\n\n<xml>  <block type=\"bee_whileNectarAmount\">\n    <title name=\"ARG1\">nectarRemaining</title>\n    <title name=\"OP\">></title>\n    <title name=\"ARG2\">0</title>                    <statement name=\"DO\">\n                      <block type=\"maze_nectar\"/>\n                    </statement>\n  </block></xml>"
+          "courseD_bee_conditionals_challenge1_b": "`ಇಫ್ ಅಟ್ ಫ್ಲವರ್` ಬ್ಲಾಕ್‌ಗಳಂತೆಯೇ, ಜೇನುನೊಣ ಹೂವಿನ ಬಳಿ ಇದ್ದರೆ ಮಾತ್ರ `ಮಕರಂದ > 0` ಒಳಗಿನ ಕೋಡ್ ರನ್ ಆಗುತ್ತದೆ. ವ್ಯತ್ಯಾಸವೇನೆಂದರೆ, ಅಮೃತ ಉಳಿಯುವವರೆಗೆ ಒಳಗಿನ ಕೋಡ್ ಮತ್ತೆ ಮತ್ತೆ ಓಡುತ್ತದೆ. ಈ ಮಾದರಿಯನ್ನು ಪ್ರಯತ್ನಿಸಿ:\n\n<xml>  <block type=\"bee_whileNectarAmount\">\n    <title name=\"ARG1\">nectarRemaining</title>\n    <title name=\"OP\">&gt;</title>\n    <title name=\"ARG2\">0</title>                    <statement name=\"DO\">\n                      <block type=\"maze_nectar\"/>\n                    </statement>\n  </block></xml>"
         },
         "courseD_bee_conditionals_challenge2_2020": {
-          "courseD_bee_conditionals_challenge1_b": "`ಇಫ್ ಅಟ್ ಫ್ಲವರ್` ಬ್ಲಾಕ್‌ಗಳಂತೆಯೇ, ಜೇನುನೊಣ ಹೂವಿನ ಬಳಿ ಇದ್ದರೆ ಮಾತ್ರ `ಮಕರಂದ > 0` ಒಳಗಿನ ಕೋಡ್ ರನ್ ಆಗುತ್ತದೆ. ವ್ಯತ್ಯಾಸವೇನೆಂದರೆ, ಅಮೃತ ಉಳಿಯುವವರೆಗೆ ಒಳಗಿನ ಕೋಡ್ ಮತ್ತೆ ಮತ್ತೆ ಓಡುತ್ತದೆ. ಈ ಮಾದರಿಯನ್ನು ಪ್ರಯತ್ನಿಸಿ:\n\n<xml>  <block type=\"bee_whileNectarAmount\">\n    <title name=\"ARG1\">nectarRemaining</title>\n    <title name=\"OP\">></title>\n    <title name=\"ARG2\">0</title>                    <statement name=\"DO\">\n                      <block type=\"maze_nectar\"/>\n                    </statement>\n  </block></xml>"
+          "courseD_bee_conditionals_challenge1_b": "`ಇಫ್ ಅಟ್ ಫ್ಲವರ್` ಬ್ಲಾಕ್‌ಗಳಂತೆಯೇ, ಜೇನುನೊಣ ಹೂವಿನ ಬಳಿ ಇದ್ದರೆ ಮಾತ್ರ `ಮಕರಂದ > 0` ಒಳಗಿನ ಕೋಡ್ ರನ್ ಆಗುತ್ತದೆ. ವ್ಯತ್ಯಾಸವೇನೆಂದರೆ, ಅಮೃತ ಉಳಿಯುವವರೆಗೆ ಒಳಗಿನ ಕೋಡ್ ಮತ್ತೆ ಮತ್ತೆ ಓಡುತ್ತದೆ. ಈ ಮಾದರಿಯನ್ನು ಪ್ರಯತ್ನಿಸಿ:\n\n<xml>  <block type=\"bee_whileNectarAmount\">\n    <title name=\"ARG1\">nectarRemaining</title>\n    <title name=\"OP\">&gt;</title>\n    <title name=\"ARG2\">0</title>                    <statement name=\"DO\">\n                      <block type=\"maze_nectar\"/>\n                    </statement>\n  </block></xml>"
         },
         "courseD_bee_nestedLoops1": {
           "courseD_bee_nestedLoops1_a": "ಕೆಲಸಮಾಡುತ್ತಿಲ್ಲ? ಪ್ರತಿ ಸಾಲಿನಲ್ಲೂ ಏನಾಗುತ್ತದೆ ಎಂಬುದನ್ನು ನೋಡಲು \"ಹಂತ\" ಬಟನ್ ಅನ್ನು ಬಳಸಲು ಪ್ರಯತ್ನಿಸಿ.",
@@ -7028,7 +7028,7 @@
           "courseD_collector_nested_loops_challenge2a_a": "ನೀವು ಒಂದೇ ಆಜ್ಞೆಯನ್ನು ಅಥವಾ ದೀರ್ಘ ಮಾದರಿಯನ್ನು `ಪುನರಾವರ್ತಿಸಬಹುದು` ಎಂಬುದನ್ನು ಮರೆಯಬೇಡಿ. ನೀವು `ರಿಪೀಟ್` ಬ್ಲಾಕ್ ಅನ್ನು `ರಿಪೀಟ್` ಕೂಡ ಮಾಡಬಹುದು!"
         },
         "courseD_collector_ramp8": {
-          "courseD_collector_ramp8_b": "ನಿಮ್ಮ ಕೋಡ್ ಅನ್ನು ಹೆಚ್ಚು ಸರಳಗೊಳಿಸಲು ನೀವು ಬಯಸಿದರೆ, ನೀವು ನಿಜವಾಗಿ ಒಂದು `ರಿಪೀಟ್` ಲೂಪ್ ಅನ್ನು ಇನ್ನೊಂದರೊಳಗೆ ಹಾಕಬಹುದು! ಇದನ್ನು **ನೆಸ್ಟೆಡ್ ಲೂಪ್** ಎಂದು ಕರೆಯಲಾಗುತ್ತದೆ."
+          "courseD_collector_ramp8_b": "ನಿಮ್ಮ ಕೋಡ್ ಅನ್ನು ಹೆಚ್ಚು ಸರಳಗೊಳಿಸಲು ನೀವು ಬಯಸಿದರೆ, ನೀವು ನಿಜವಾಗಿ ಒಂದು ಪುನರಾವರ್ತನೆ ಲೂಪ್ ಅನ್ನು ಇನ್ನೊಂದರೊಳಗೆ ಹಾಕಬಹುದು! ಇದನ್ನು ನೆಸ್ಟೆಡ್ ಲೂಪ್ ಎಂದು ಕರೆಯಲಾಗುತ್ತದೆ."
         },
         "courseD_farmer_condLoops1": {
           "courseD_farmer_condLoops1_a": "ಪುನರಾವರ್ತಿತ ಲೂಪ್ ಬಳಸಿ ನೀವು 5 ಬಾರಿ ಕಾರ್ನ್ ಅನ್ನು ನೋಡಬೇಕಾಗುತ್ತದೆ.",
@@ -8868,18 +8868,18 @@
           "hint1": "ಈವೆಂಟ್ ಬ್ಲಾಕ್‌ನಲ್ಲಿ '+' ಬಟನ್ ಕ್ಲಿಕ್ ಮಾಡಿ. 'ಕಾಸ್ಟ್ಯೂಮ್‌ ಬದಲಿಸಿ' ಬ್ಲಾಕ್‌ನಲ್ಲಿ ಒಳಗೆ 'ವಿಷಯ' ಬ್ಲಾಕ್‌ ಜೊತೆಗೆ ಖಾಲಿ ಸ್ಪಾಟ್ ಅನ್ನು ಭರ್ತಿ ಮಾಡಿ.\n\n<xml><block type=\"gamelab_checkTouching\"><title name=\"CONDITION\">\"when\"</title><value name=\"SPRITE1\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"healthy\"</title></block></value><value name=\"SPRITE2\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"sick\"</title></block></value><next><block type=\"gamelab_setAnimation\"><title name=\"ANIMATION\">\"sick\"</title><value name=\"THIS\"><block type=\"gamelab_subjectSpritePointer\"></block></value></block></next></block></xml>"
         },
         "CourseF_outbreak3_-2022-2": {
-          "hint1": "ಮಾನ್‌ಸ್ಟರ್‌ಗಳಿಗೆ ಮಾಸ್ಕ್‌ಗಳನ್ನು ನೀಡಲು, 'ಕ್ಲಿಕ್ ಮಾಡಿದಾಗ' ಇವೆಂಟ್‌ನೊಂದಿಗೆ 'ಕಾಸ್ಟ್ಯೂಮ್ ಬದಲಿಸಿ' ಬ್ಲಾಕ್‌ ಅನ್ನು ಬಳಸಿ:\n\n<xml><block type=\"gamelab_spriteClicked\"><title name=\"CONDITION\">\"when\"</title><value name=\"SPRITE\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"healthy\"</title></block></value><next><block type=\"gamelab_setAnimation\"><title name=\"ANIMATION\">\"healthy\\_mask\"</title></block></next></block></xml>\n\nಸಣ್ಣ ಕೆಂಪು 'ಕ್ಲಿಕ್ ಮಾಡಿದ' ಬ್ಲಾಕ್ ಅನ್ನೂ ಎಳೆಯುವುದನ್ನು ಖಚಿತಪಡಿಸಿಕೊಳ್ಳಿ!",
-          "hint2": "ಈ ಲೆವೆಲ್‌ಗೆ ಹೊಸ ಕೋಡ್ ಈ ರೀತಿ ಕಾಣಿಸುತ್ತದೆ:\n\n<xml><block type=\"gamelab_spriteClicked\"><title name=\"CONDITION\">\"when\"</title><value name=\"SPRITE\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"healthy\"</title></block></value><next><block type=\"gamelab_setAnimation\"><title name=\"ANIMATION\">\"healthy_mask\"</title><value name=\"THIS\">\\<block type=\"gamelab_clickedSpritePointer\"></block></value></block></next></block><block type=\"gamelab_spriteClicked\"><title name=\"CONDITION\">\"when\"</title><value name=\"SPRITE\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"sick\"</title></block></value><next><block type=\"gamelab_setAnimation\"><title name=\"ANIMATION\">\"sick_mask\"</title><value name=\"THIS\">\\<block type=\"gamelab_clickedSpritePointer\"></block></value></block></next></block></xml>"
+          "hint1": "ಮಾನ್‌ಸ್ಟರ್‌ಗಳಿಗೆ ಮಾಸ್ಕ್‌ಗಳನ್ನು ನೀಡಲು, 'ಕ್ಲಿಕ್ ಮಾಡಿದಾಗ' ಇವೆಂಟ್‌ನೊಂದಿಗೆ 'ಕಾಸ್ಟ್ಯೂಮ್ ಬದಲಿಸಿ' ಬ್ಲಾಕ್‌ ಅನ್ನು ಬಳಸಿ:\n\n<xml><block type=\"gamelab_spriteClicked\"><title name=\"CONDITION\">\"when\"</title><value name=\"SPRITE\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"healthy\"</title></block></value><next><block type=\"gamelab_setAnimation\"><title name=\"ANIMATION\">\"healthy_mask\"</title></block></next></block></xml>\n\nಸಣ್ಣ ಕೆಂಪು 'ಕ್ಲಿಕ್ ಮಾಡಿದ' ಬ್ಲಾಕ್ ಅನ್ನೂ ಎಳೆಯುವುದನ್ನು ಖಚಿತಪಡಿಸಿಕೊಳ್ಳಿ!",
+          "hint2": "ಈ ಲೆವೆಲ್‌ಗೆ ಹೊಸ ಕೋಡ್ ಈ ರೀತಿ ಕಾಣಿಸುತ್ತದೆ:\n\n<xml><block type=\"gamelab_spriteClicked\"><title name=\"CONDITION\">\"when\"</title><value name=\"SPRITE\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"healthy\"</title></block></value><next><block type=\"gamelab_setAnimation\"><title name=\"ANIMATION\">\"healthy_mask\"</title><value name=\"THIS\"><block type=\"gamelab_clickedSpritePointer\"></block></value></block></next></block><block type=\"gamelab_spriteClicked\"><title name=\"CONDITION\">\"when\"</title><value name=\"SPRITE\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"sick\"</title></block></value><next><block type=\"gamelab_setAnimation\"><title name=\"ANIMATION\">\"sick_mask\"</title><value name=\"THIS\"><block type=\"gamelab_clickedSpritePointer\"></block></value></block></next></block></xml>"
         },
         "CourseF_outbreak4_-2022-2": {
           "challenge": "## ಹೆಚ್ಚುವರಿ ಸವಾಲನ್ನು ಹುಡುಕುತ್ತಿರುವಿರಾ?\n\nನೀವು ರಾಕ್ಷಸರನ್ನು ವೇಗವಾಗಿ ಅಥವಾ ನಿಧಾನವಾಗಿ ಚಲಿಸುವಂತೆ ಮಾಡಬಹುದು.\n\n1.  ಈ ಬ್ಲಾಕ್‌ನಲ್ಲಿ \\`ಎಡಿಟ್' ಕ್ಲಿಕ್ ಮಾಡಿ <xml><block type=\"gamelab_behavior_get\"><mutation></mutation><title name=\"VAR\">wandering</title></block></xml>\n2.  ಈ ಬ್ಲಾಕ್‌ನಲ್ಲಿ ಸಂಖ್ಯೆಯನ್ನು ಹೆಚ್ಚಿಸಿ ಅಥವಾ ಕಡಿಮೆ ಮಾಡಿ:\n\n<xml><block type=\"gamelab_moveForward\"><value name=\"SPRITE\"><block type=\"sprite_parameter_get\"><title name=\"VAR\">this sprite</title></block></value><value name=\"DISTANCE\"><block type=\"math_number\"><title name=\"NUM\">1</title></block></value></block>\n</xml>\n\nರಾಕ್ಷಸರನ್ನು ನಿಧಾನವಾಗಿ ಚಲಿಸುವಂತೆ ಮಾಡಲು, `0.5` ಅಥವಾ `0.25` ನಂತಹ ದಶಮಾಂಶ ಸಂಖ್ಯೆಯನ್ನು ಆಯ್ಕೆಮಾಡಿ. ಅವುಗಳನ್ನು ವೇಗವಾಗಿ ಚಲಿಸುವಂತೆ ಮಾಡಲು, 1 ಕ್ಕಿಂತ ಹೆಚ್ಚಿನ ಯಾವುದೇ ಸಂಖ್ಯೆಯನ್ನು ಆಯ್ಕೆಮಾಡಿ."
         },
         "CourseF_outbreak6_-2022-2": {
           "hint2": "'ಅವಕಾಶ ಇದ್ದರೆ' ಬ್ಲಾಕ್‌ ಒಳಗೆ ಇತರ \"ಆಕ್ಷನ್\" ಬ್ಲಾಕ್‌ಗಳನ್ನು ಸಾಗಿಸುವುದನ್ನು ಖಚಿತಪಡಿಸಿ:",
-          "hint1": "ಆರೋಗ್ಯಕರ ಮತ್ತು ಸೋಂಕಿತ ಸ್ಪ್ರೈಟ್‌ಗಳ ಮಧ್ಯೆ 'ಸ್ಪರ್ಶಗಳ' ಎಲ್ಲ ಸಂಭಾವ್ಯ ಸಂಯೋಜನೆಗಳಿಗೆ ಪರಿಶೀಲಿಸಲು ಇನ್ನೂ 3 'ಸ್ಪರ್ಶಿಸಿದಾಗ' ಈವೆಂಟ್‌ಗಳನ್ನು ನೀವು ಸೇರಿಸಬೇಕು.\n\n<xml><block type=\"gamelab_checkTouching\">\n      <title name=\"CONDITION\">\"when\"</title>\n      <value name=\"SPRITE1\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"healthy_mask\"</title>\n        </block>\n      </value>\n      <value name=\"SPRITE2\">\n        \\<block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"sick\"</title>\n        </block>\n      </value><next>\n      <block type=\"gamelab_withPercentChanceDropdown\">\n      <title name=\"NUM\">75</title>\n      <statement name=\"STATEMENT\"></statement></block></next>\n    </block><block type=\"gamelab_checkTouching\">\n      <title name=\"CONDITION\">\"when\"</title>\n      <value name=\"SPRITE1\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"healthy\"</title>\n        </block>\n      </value>\n      <value name=\"SPRITE2\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"sick_mask\"</title>\n        </block>\n      </value><next>\n      \\<block type=\"gamelab_withPercentChanceDropdown\">\n      <title name=\"NUM\">25</title>\n      <statement name=\"STATEMENT\"></statement></block></next>\n    </block><block type=\"gamelab_checkTouching\">\n      <title name=\"CONDITION\">\"when\"</title>\n      <value name=\"SPRITE1\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"healthy_mask\"</title>\n        </block>\n      </value>\n      <value name=\"SPRITE2\">\n        \\<block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"sick_mask\"</title>\n        </block>\n      </value><next>\n      \\<block type=\"gamelab_withPercentChanceDropdown\">\n      <title name=\"NUM\">10</title>\n      <statement name=\"STATEMENT\"></statement></block></next>\n    </block></xml>"
+          "hint1": "ಆರೋಗ್ಯಕರ ಮತ್ತು ಸೋಂಕಿತ ಸ್ಪ್ರೈಟ್‌ಗಳ ಮಧ್ಯೆ 'ಸ್ಪರ್ಶಗಳ' ಎಲ್ಲ ಸಂಭಾವ್ಯ ಸಂಯೋಜನೆಗಳಿಗೆ ಪರಿಶೀಲಿಸಲು ಇನ್ನೂ 3 'ಸ್ಪರ್ಶಿಸಿದಾಗ' ಈವೆಂಟ್‌ಗಳನ್ನು ನೀವು ಸೇರಿಸಬೇಕು.\n\n<xml><block type=\"gamelab_checkTouching\">\n      <title name=\"CONDITION\">\"when\"</title>\n      <value name=\"SPRITE1\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"healthy_mask\"</title>\n        </block>\n      </value>\n      <value name=\"SPRITE2\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"sick\"</title>\n        </block>\n      </value><next>\n      <block type=\"gamelab_withPercentChanceDropdown\">\n      <title name=\"NUM\">75</title>\n      <statement name=\"STATEMENT\"></statement></block></next>\n    </block><block type=\"gamelab_checkTouching\">\n      <title name=\"CONDITION\">\"when\"</title>\n      <value name=\"SPRITE1\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"healthy\"</title>\n        </block>\n      </value>\n      <value name=\"SPRITE2\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"sick_mask\"</title>\n        </block>\n      </value><next>\n      <block type=\"gamelab_withPercentChanceDropdown\">\n      <title name=\"NUM\">25</title>\n      <statement name=\"STATEMENT\"></statement></block></next>\n    </block><block type=\"gamelab_checkTouching\">\n      <title name=\"CONDITION\">\"when\"</title>\n      <value name=\"SPRITE1\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"healthy_mask\"</title>\n        </block>\n      </value>\n      <value name=\"SPRITE2\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"sick_mask\"</title>\n        </block>\n      </value><next>\n      <block type=\"gamelab_withPercentChanceDropdown\">\n      <title name=\"NUM\">10</title>\n      <statement name=\"STATEMENT\"></statement></block></next>\n    </block></xml>"
         },
         "CourseF_outbreak7_-2022-2": {
-          "whenclicked": "## ಲಸಿಕೆಗಳು\n\nನೀವು ರಾಕ್ಷಸರ ಮೇಲೆ ಕ್ಲಿಕ್ ಮಾಡಿದಾಗ ಲಸಿಕೆ ನೀಡುವುದನ್ನು ನೀವು ಅನುಕರಿಸಬಹುದು. ಇದನ್ನು ಮಾಡಲು, ಈ ಈವೆಂಟ್‌ನೊಂದಿಗೆ `ವೇಷಭೂಷಣ ಬದಲಿಸಿ` ಬ್ಲಾಕ್ ಅನ್ನು ಬಳಸಿ:\n\n<xml><block type=\"gamelab_spriteClicked\">\n      <title name=\"CONDITION\">\"when\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"healthy\\_mask\"</title>\n        </block>\n      </value>\n    </block></xml>",
+          "whenclicked": "## ಲಸಿಕೆಗಳು\n\nನೀವು ರಾಕ್ಷಸರ ಮೇಲೆ ಕ್ಲಿಕ್ ಮಾಡಿದಾಗ ಲಸಿಕೆ ನೀಡುವುದನ್ನು ನೀವು ಅನುಕರಿಸಬಹುದು. ಇದನ್ನು ಮಾಡಲು, ಈ ಈವೆಂಟ್‌ನೊಂದಿಗೆ `ವೇಷಭೂಷಣ ಬದಲಿಸಿ` ಬ್ಲಾಕ್ ಅನ್ನು ಬಳಸಿ:\n\n<xml><block type=\"gamelab_spriteClicked\">\n      <title name=\"CONDITION\">\"when\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"healthy_mask\"</title>\n        </block>\n      </value>\n    </block></xml>",
           "verionhistory": "ಅನಾರೋಗ್ಯದ ಭಾವ ಉಂಟಾಗುತ್ತಿದೆಯೇ? ಈ ಕೆಳಗೆ 'ವಿಷನ್ ಇತಿಹಾಸ' ಕ್ಲಿಕ್ ಮಾಡುವ ಮೂಲಕ  ನಂತರ, \"ಮೊದಲಿನಿಂದ ಆರಂಭಿಸಿ\" ಅಯ್ಕೆ ಮಾಡುವ ಮೂಲಕ ನಿಮ್ಮ ಕೋಡ್ ಅನ್ನು ನೀವು ಎಂದಿಗೂ ರಿಸೆಟ್ ಮಾಡಬಹುದು."
         },
         "Function intro Ryan2022": {
@@ -9128,12 +9128,12 @@
         },
         "courseA_harvester_seq102022": {
           "courseA_harvester_seq10_a": "ನೀವು ಸಿಲುಕಿಕೊಂಡಿದ್ದೀರಾ? ಮೊದಲು ಒಂದು ಕಾಗದದ ಮೇಲೆ ಹಂತಗಳನ್ನು ಬರೆಯಲು ಪ್ರಯತ್ನಿಸಿ.",
-          "courseA_harvester_seq10_b": "ನೀವು `ಮೂವ್ ಈಸ್ಟ್`, ನಂತರ `ಮೂವ್ ನಾರ್ತ್` ಮಾಡಬೇಕು. ಇದನ್ನು ಎರಡು ಬಾರಿ ಮಾಡಿ. ಎಲ್ಲಾ ಜೋಳವನ್ನು ಪಡೆಯಲು ಮರೆಯಬೇಡಿ!",
+          "courseA_harvester_seq10_b": "ನೀವು `ಪೂರ್ವಕ್ಕೆ ಸರಿಸಿ`, ನಂತರ `ಉತ್ತರಕ್ಕೆ ಸರಿಸಿ` ಮಾಡಬೇಕು. ಇದನ್ನು ಎರಡು ಬಾರಿ ಮಾಡಿ. ಎಲ್ಲಾ ಜೋಳವನ್ನು ಪಡೆಯಲು ಮರೆಯಬೇಡಿ!",
           "courseA_harvester_seq10_c": "ಎಲ್ಲಾ ಜೋಳವನ್ನು ಆಯ್ಕೆ ಮಾಡಲು ಈ ಮಾರ್ಗವನ್ನು ಬಳಸಲು ಪ್ರಯತ್ನಿಸಿ."
         },
         "courseA_harvester_seq12022": {
           "courseA_harvester_seq1_a": "ಕೊಯ್ಲುಗಾರನು ಅದನ್ನು ಕಂಡುಕೊಂಡಾಗ ಜೋಳವನ್ನು ಆರಿಸಲು ಈ ಬ್ಲಾಕ್ ಅನ್ನು ಬಳಸಿ!\n\n<xml>\n  <block type=\"harvester_corn\"/>\n</xml>",
-          "courseA_harvester_seq1_b": "ಕೊಯ್ಲುಗಾರನು ಜೋಳಕ್ಕೆ ಹೋಗಲು ಮೂರು ಬಾರಿ ಪೂರ್ವಕ್ಕೆ ಚಲಿಸಬೇಕಾಗುತ್ತದೆ. ಈ ಬ್ಲಾಕ್ ಅನ್ನು ಬಳಸಿ:\n\n<xml>\n  <block type=\"maze_moveEast\"/>\n</xml>"
+          "courseA_harvester_seq1_b": "ಕೊಯ್ಲುಗಾರನು ಜೋಳವಿದ್ದಲ್ಲಿ ಹೋಗಲು ಮೂರು ಬಾರಿ ಪೂರ್ವಕ್ಕೆ ಚಲಿಸಬೇಕಾಗುತ್ತದೆ. ಈ ಬ್ಲಾಕ್ ಅನ್ನು ಬಳಸಿ:\n\n<xml>\n  <block type=\"maze_moveEast\"/>\n</xml>"
         },
         "courseA_harvester_seq132022": {
           "courseA_bee_seq1_a": "ಕೊಯ್ಲುಗಾರನಿಗೆ ಒಮ್ಮೆ ಜೋಳವನ್ನು ಆರಿಸಲು ಈ ಬ್ಲಾಕ್ ಅನ್ನು ಬಳಸಿ.\n\n<xml>\n  <block type=\"harvester_corn\"/>\n</xml>"
@@ -9147,11 +9147,11 @@
           "courseA_harvester_seq3_b": "ಹಂತಗಳನ್ನು ಜೋರಾಗಿ ಹೇಳಿ ಮತ್ತು ಉತ್ತರವನ್ನು ಕಂಡುಹಿಡಿಯಲು ಇದು ನಿಮಗೆ ಸಹಾಯ ಮಾಡುತ್ತದೆಯೇ ಎಂದು ನೋಡಿ."
         },
         "courseA_harvester_seq42022": {
-          "courseA_harvester_seq4_a": "ಹಾರ್ವೆಸ್ಟರ್ ಮತ್ತು ಕಾರ್ನ್ ನಡುವೆ ಎಷ್ಟು ಜಾಗಗಳಿವೆ? ನಿಮ್ಮ ಕಾರ್ಯಕ್ಷೇತ್ರದಲ್ಲಿ ಈಗಾಗಲೇ ಎಷ್ಟು ಬ್ಲಾಕ್‌ಗಳಿವೆ?",
-          "courseA_harvester_seq4_b": "ನಿಮಗೆ ಐದು `ಮೂವ್ ಈಸ್ಟ್` ಬ್ಲಾಕ್‌ಗಳು ಮತ್ತು ಒಂದು `ಪಿಕ್ ಕಾರ್ನ್` ಬ್ಲಾಕ್ ಅಗತ್ಯವಿದೆ:\n\n<xml><block type=\"harvester_corn\"/></xml>"
+          "courseA_harvester_seq4_a": "ಕೊಯ್ಲುಗಾರ ಮತ್ತು ಜೋಳದ ನಡುವೆ ಎಷ್ಟು ಜಾಗಗಳಿವೆ? ನಿಮ್ಮ ಕಾರ್ಯಕ್ಷೇತ್ರದಲ್ಲಿ ಈಗಾಗಲೇ ಎಷ್ಟು ಬ್ಲಾಕ್‌ಗಳಿವೆ?",
+          "courseA_harvester_seq4_b": "ನಿಮಗೆ ಐದು `ಪಶ್ಚಿಮಕ್ಕೆ ಸರಿಸಿ` ಬ್ಲಾಕ್‌ಗಳು ಮತ್ತು ಒಂದು `ಜೋಳ ಆರಿಸಿ` ಬ್ಲಾಕ್ ಅಗತ್ಯವಿದೆ:\n\n<xml><block type=\"harvester_corn\"/></xml>"
         },
         "courseA_harvester_seq52022": {
-          "courseA_harvester_seq5_a": "ಯಾವ ಬ್ಲಾಕ್ ಹಾರ್ವೆಸ್ಟರ್ ಅನ್ನು ತಪ್ಪು ದಾರಿಯಲ್ಲಿ ಚಲಿಸುತ್ತದೆ?",
+          "courseA_harvester_seq5_a": "ಯಾವ ಬ್ಲಾಕ್ ಕೊಯ್ಲುಗಾರನನ್ನು ತಪ್ಪು ದಾರಿಯಲ್ಲಿ ಚಲಿಸುತ್ತದೆ?",
           "courseA_harvester_seq5_b": "ನೀವು ಒಂದು ಬ್ಲಾಕ್ ಅನ್ನು ತೆಗೆದುಹಾಕಬೇಕಾಗಿದೆ.",
           "courseA_harvester_seq5_c": "ಈ ಬ್ಲಾಕ್ ಅನ್ನು ಕಸದ ಬುಟ್ಟಿಗೆ ಎಸೆಯಿರಿ!\n\n<xml><block type=\"maze_moveNorth\"/></xml>"
         },
@@ -9159,14 +9159,14 @@
           "courseA_harvester_seq6_a": "ನೀವು ಸಿಲುಕಿಕೊಂಡರೆ, ಹಂತಗಳನ್ನು ಜೋರಾಗಿ ಹೇಳಲು ಪ್ರಯತ್ನಿಸಿ. ಇದು ಸರಿಯಾದ ಮಾರ್ಗವನ್ನು ಕಂಡುಹಿಡಿಯಲು ನಿಮಗೆ ಸಹಾಯ ಮಾಡುತ್ತದೆ."
         },
         "courseA_harvester_seq72022": {
-          "courseA_harvester_seq7_a": "ಪದಬಂಧವನ್ನು 2 ಭಾಗಗಳಲ್ಲಿ ಪರಿಹರಿಸಲು ಪ್ರಯತ್ನಿಸಿ, ಒಂದು ಭಾಗವು ಮೂಲೆಯ ಮೊದಲು ಮತ್ತು ಒಂದು ಭಾಗವು ಮೂಲೆಯ ನಂತರ.",
+          "courseA_harvester_seq7_a": "ಪಝಲ್‌ ಅನ್ನು 2 ಭಾಗಗಳಲ್ಲಿ ಪರಿಹರಿಸಲು ಪ್ರಯತ್ನಿಸಿ, ಒಂದು ಭಾಗವನ್ನು ಮೂಲೆಗಿಂತ ಮೊದಲು ಮತ್ತು ಒಂದು ಭಾಗವನ್ನು ಮೂಲೆಯ ನಂತರ.",
           "courseA_harvester_seq7_b": "ತೊಂದರೆ ಇದೆಯೇ? ಕೊಯ್ಲು ಮಾಡುವವರು ಅನುಸರಿಸಬೇಕಾದ ಮಾರ್ಗ ಇದು."
         },
         "courseA_harvester_seq82022": {
-          "courseA_harvester_seq8_a": "ನಿಮ್ಮ ಅಂತಿಮ ಕೋಡ್ **4** ಚಲನೆ ಬ್ಲಾಕ್‌ಗಳನ್ನು ಮತ್ತು **2** ಪಿಕ್ ಬ್ಲಾಕ್‌ಗಳನ್ನು ಹೊಂದಿರಬೇಕು."
+          "courseA_harvester_seq8_a": "ನಿಮ್ಮ ಅಂತಿಮ ಕೋಡ್ **4** ಚಲನೆ ಬ್ಲಾಕ್‌ಗಳನ್ನು ಮತ್ತು **2** ಆರಿಸಿ ಬ್ಲಾಕ್‌ಗಳನ್ನು ಹೊಂದಿರಬೇಕು."
         },
         "courseA_harvester_seq92022": {
-          "courseA_harvester_seq9_a": "ಏನಾಗುತ್ತದೆ ಎಂಬುದನ್ನು ನೋಡಲು ಕೋಡ್ ಅನ್ನು ಕೆಲವು ಬಾರಿ ರನ್ ಮಾಡಿ. ಕೊಯ್ಲುಗಾರ ಎಲ್ಲಿ ನಿಲ್ಲುತ್ತದೆ?",
+          "courseA_harvester_seq9_a": "ಏನಾಗುತ್ತದೆ ಎಂಬುದನ್ನು ನೋಡಲು ಕೋಡ್ ಅನ್ನು ಕೆಲವು ಬಾರಿ ರನ್ ಮಾಡಿ. ಕೊಯ್ಲುಗಾರನು ಎಲ್ಲಿಗೆ ನಿಲ್ಲುತ್ತಾನೆ?",
           "courseA_harvester_seq9_b": "ಎಲ್ಲಾ ಜೋಳವನ್ನು ತೆಗೆದುಕೊಳ್ಳಲು ಮರೆಯಬೇಡಿ! ನಿಮಗೆ **3** ಪಿಕ್ ಕಾರ್ನ್ ಬ್ಲಾಕ್‌ಗಳ ಅಗತ್ಯವಿದೆ.",
           "courseA_harvester_seq9_c": "ಎಲ್ಲಾ ಜೋಳವನ್ನು ಆರಿಸಲು ನೀವು ಈ ಮಾರ್ಗವನ್ನು ತೆಗೆದುಕೊಳ್ಳಬೇಕು"
         },
@@ -9737,12 +9737,12 @@
         },
         "courseC_harvester_loops12022": {
           "courseC_harvester_loops1_a": "ಒಮ್ಮೆ ನೀವು ಕುಂಬಳಕಾಯಿಗೆ ತೆರಳಿದ ನಂತರ, ಅದನ್ನು ಸಂಗ್ರಹಿಸಲು <xml><block type=\"harvester_pumpkin\"/></xml> ಬಳಸಿ.",
-          "courseC_harvester_loops1_b": "ಒಂದು ಚೌಕದಿಂದ ಒಂದಕ್ಕಿಂತ ಹೆಚ್ಚು ಕುಂಬಳಕಾಯಿಯನ್ನು ಆಯ್ಕೆ ಮಾಡಲು ನೀವು [ಬ್ಲಾಕ್ಲಿ ಬ್ಲಾಕ್] [0] ಬ್ಲಾಕ್‌ನೊಂದಿಗೆ ಲೂಪ್ ಅನ್ನು ಬಳಸಬಹುದು."
+          "courseC_harvester_loops1_b": "ಒಂದು ಚೌಕದಿಂದ ಒಂದಕ್ಕಿಂತ ಹೆಚ್ಚು ಕುಂಬಳಕಾಯಿಯನ್ನು ಆಯ್ಕೆ ಮಾಡಲು ನೀವು <xml><block type=\"harvester_pumpkin\"/></xml> ಬ್ಲಾಕ್‌ನೊಂದಿಗೆ ಲೂಪ್ ಅನ್ನು ಬಳಸಬಹುದು."
         },
         "courseC_harvester_loops22022": {
           "courseC_harvester_loops2_a": "ನೀವು ಸಿಲುಕಿಕೊಂಡರೆ, ಕಾಗದದ ಮೇಲೆ ಹಂತಗಳನ್ನು ಬರೆಯಲು ಪ್ರಯತ್ನಿಸಿ ಮತ್ತು ಪುನರಾವರ್ತಿತ ಮಾದರಿಗಳನ್ನು ನೋಡಿ.",
-          "courseC_harvester_loops2_b": "ನಿಮಗೆ ಒಂದರ ನಂತರ ಒಂದು `ರಿಪೀಟ್` ಲೂಪ್ ಅಗತ್ಯವಿದೆ.",
-          "courseC_harvester_loops2_c": "ಒಂದು ಲೂಪ್ `ಮೂವ್ ಫಾರ್ವರ್ಡ್` ಆಜ್ಞೆಯನ್ನು ಪುನರಾವರ್ತಿಸುತ್ತದೆ ಮತ್ತು ಇನ್ನೊಂದು \\`ಪಿಕ್ ಕುಂಬಳಕಾಯಿ~ ಆಜ್ಞೆಯನ್ನು ಪುನರಾವರ್ತಿಸುತ್ತದೆ."
+          "courseC_harvester_loops2_b": "ನಿಮಗೆ ಒಂದರ ನಂತರ ಒಂದು ಪುನರಾವರ್ತನೆ ಲೂಪ್ ಅಗತ್ಯವಿದೆ.",
+          "courseC_harvester_loops2_c": "ಒಂದು ಲೂಪ್ ಮುಂದೆ ಸಾಗಿ ಆಜ್ಞೆಯನ್ನು ಪುನರಾವರ್ತಿಸುತ್ತದೆ ಮತ್ತು ಇನ್ನೊಂದು ಕುಂಬಳಕಾಯಿ ಆರಿಸಿ ಆಜ್ಞೆಯನ್ನು ಪುನರಾವರ್ತಿಸುತ್ತದೆ."
         },
         "courseC_harvester_loops32022": {
           "courseC_harvester_loops3_a": "ತಪ್ಪು ಮಾಡಲು ಹಿಂಜರಿಯದಿರಿ! ನೀವು ಇನ್ನೂ ಒಗಟುಗಳನ್ನು ಪರಿಹರಿಸಿದ್ದೀರಿ ಎಂದು ನೀವು ಭಾವಿಸದಿದ್ದರೂ ಸಹ, ಏನಾಗುತ್ತದೆ ಎಂಬುದನ್ನು ನೋಡಲು ಬ್ಲಾಕ್‌ಗಳನ್ನು ಸೇರಿಸಲು ಮತ್ತು ಕೋಡ್ ಅನ್ನು ರನ್ ಮಾಡಲು ಪ್ರಯತ್ನಿಸಿ.",
@@ -9750,25 +9750,25 @@
           "courseC_harvester_loops3_c": "ನಿಮ್ಮ ಕೋಡ್ ಅನ್ನು ಸರಳೀಕರಿಸಲು ನೀವು ಬಯಸಿದರೆ, ನೀವು ನಿಜವಾಗಿಯೂ ಒಂದು ಲೂಪ್ ಅನ್ನು ಇನ್ನೊಂದರೊಳಗೆ ಹಾಕಬಹುದು! ಇದನ್ನು **ನೆಸ್ಟೆಡ್ ಲೂಪ್** ಎಂದು ಕರೆಯಲಾಗುತ್ತದೆ."
         },
         "courseC_harvester_loops42022": {
-          "courseC_harvester_loops4_a": "ಜೋಳವನ್ನು ಸಂಗ್ರಹಿಸಲು ಹೊಸ `ಪಿಕ್ ಕಾರ್ನ್` ಬ್ಲಾಕ್ ಅನ್ನು ಬಳಸಿ.",
+          "courseC_harvester_loops4_a": "ಜೋಳವನ್ನು ಸಂಗ್ರಹಿಸಲು ಹೊಸ ಜೋಳ ಆರಿಸಿ ಬ್ಲಾಕ್ ಅನ್ನು ಬಳಸಿ.",
           "courseC_harvester_loops4_b": "ನಿಮ್ಮ ಕೋಡ್‌ನಲ್ಲಿ ನೀವು ಬಹು ಪುನರಾವರ್ತಿತ ಲೂಪ್‌ಗಳನ್ನು ಬಳಸಬಹುದು, ಕೆಲವು ಜೋಳವನ್ನು ತೆಗೆದುಕೊಳ್ಳಲು ಮತ್ತು ಕೆಲವು ಕುಂಬಳಕಾಯಿಗಳನ್ನು ತೆಗೆದುಕೊಳ್ಳಲು.",
           "courseC_harvester_loops4_c": "ನಿಮ್ಮ ಕೋಡ್ ಅನ್ನು ಸರಳೀಕರಿಸಲು ನೀವು ಬಯಸಿದರೆ, ನೀವು ನಿಜವಾಗಿಯೂ ಒಂದು ಲೂಪ್ ಅನ್ನು ಇನ್ನೊಂದರೊಳಗೆ ಹಾಕಬಹುದು! ಇದನ್ನು **ನೆಸ್ಟೆಡ್ ಲೂಪ್** ಎಂದು ಕರೆಯಲಾಗುತ್ತದೆ."
         },
         "courseC_harvester_loops52022": {
-          "courseC_harvester_loops5_a": "ನೀವು ಸಿಲುಕಿಕೊಂಡರೆ, ಸಂಪೂರ್ಣ ಪ್ರೋಗ್ರಾಂ ಅನ್ನು ಸೆಳೆಯಲು ಪ್ರಯತ್ನಿಸಿ ಮತ್ತು ನಂತರ ಪುನರಾವರ್ತಿಸುವ ಮಾದರಿಗಳನ್ನು ನೋಡಿ.",
-          "courseC_harvester_loops5_b": "ಈ ಮೆಟ್ಟಿಲು ಹೆಜ್ಜೆ ಇತರ ಒಗಟುಗಳಿಂದ ಪರಿಚಿತವಾಗಿದೆಯೇ? ಚಲನೆಗಳು ಒಂದೇ ಆಗಿರಬೇಕು, ದಾರಿಯುದ್ದಕ್ಕೂ ಬೆಳೆಗಳನ್ನು ಸಂಗ್ರಹಿಸಲು ಮರೆಯದಿರಿ."
+          "courseC_harvester_loops5_a": "ನೀವು ಸಿಲುಕಿಕೊಂಡರೆ, ಸಂಪೂರ್ಣ ಪ್ರೋಗ್ರಾಂ ಅನ್ನು ಬರೆಯಲು ಪ್ರಯತ್ನಿಸಿ ಮತ್ತು ನಂತರ ಪುನರಾವರ್ತಿಸುವ ಮಾದರಿಗಳನ್ನು ನೋಡಿ.",
+          "courseC_harvester_loops5_b": "ಈ ಮೆಟ್ಟಿಲು ಹಂತ ಇತರ ಒಗಟುಗಳಂತೆ ಇದೆಯೇ? ಚಲನೆ ಅದೇ ರೀತಿಯಲ್ಲಿದೆ, ದಾರಿಯುದ್ದಕ್ಕೂ ಬೆಳೆಗಳನ್ನು ಸಂಗ್ರಹಿಸಲು ಮರೆಯದಿರಿ."
         },
         "courseC_harvester_loops62022": {
-          "courseC_harvester_loops6_a": "ಒಂದು ಪುನರಾವರ್ತಿತ ಲೂಪ್ನಲ್ಲಿ ನೀವು ಬಹು ಬ್ಲಾಕ್ಗಳನ್ನು ಹಾಕಬಹುದು ಎಂಬುದನ್ನು ನೆನಪಿಡಿ.",
+          "courseC_harvester_loops6_a": "ಒಂದು ಪುನರಾವರ್ತಿತ ಲೂಪ್‌ನಲ್ಲಿ ನೀವು ಬಹು ಬ್ಲಾಕ್‌ಗಳನ್ನು ಹಾಕಬಹುದು ಎಂಬುದನ್ನು ನೆನಪಿಡಿ.",
           "courseC_harvester_loops6_b": "ಜೋಳದ ಸಾಲಿನ ಕೊನೆಯಲ್ಲಿ ತಿರುಗಲು ಮರೆಯಬೇಡಿ."
         },
         "courseC_harvester_loops72022": {
           "courseC_harvester_loops7_a": "ನೀವು ಈ ಒಗಟು ಎರಡು ರೀತಿಯಲ್ಲಿ ಪರಿಹರಿಸಬಹುದು, ಮೊದಲು ಜೋಳ ಅಥವಾ ಕುಂಬಳಕಾಯಿಗಳನ್ನು ಪಡೆಯಿರಿ.",
-          "courseC_harvester_loops7_b": "ಈ ಒಗಟು ಪರಿಹರಿಸಲು ನಿಮಗೆ ಬಹು `ರಿಪೀಟ್` ಲೂಪ್‌ಗಳ ಅಗತ್ಯವಿದೆ."
+          "courseC_harvester_loops7_b": "ಈ ಒಗಟು ಪರಿಹರಿಸಲು ನಿಮಗೆ ಬಹು ಪುನರಾವರ್ತನೆ ಲೂಪ್‌ಗಳ ಅಗತ್ಯವಿದೆ."
         },
         "courseC_harvester_loops82022": {
           "courseC_harvester_loops8_a": "ಈ ಮೆಟ್ಟಿಲು ಹಂತವು ಹಿಂದಿನ ಒಗಟಿನಿಂದ ಪರಿಚಿತವಾಗಿದೆಯೇ? ಚಲನೆಗಳು ಒಂದೇ ಆಗಿರಬೇಕು, ದಾರಿಯುದ್ದಕ್ಕೂ ಬೆಳೆಗಳನ್ನು ಸಂಗ್ರಹಿಸಲು ಮರೆಯದಿರಿ.",
-          "courseC_harvester_loops8_b": "ನಿಮ್ಮ ಕೋಡ್ ಅನ್ನು ಹೆಚ್ಚು ಸರಳಗೊಳಿಸಲು ನೀವು ಬಯಸಿದರೆ, ನೀವು ನಿಜವಾಗಿ ಒಂದು `ರಿಪೀಟ್` ಲೂಪ್ ಅನ್ನು ಇನ್ನೊಂದರೊಳಗೆ ಹಾಕಬಹುದು! ಇದನ್ನು **ನೆಸ್ಟೆಡ್ ಲೂಪ್** ಎಂದು ಕರೆಯಲಾಗುತ್ತದೆ."
+          "courseC_harvester_loops8_b": "ನಿಮ್ಮ ಕೋಡ್ ಅನ್ನು ಹೆಚ್ಚು ಸರಳಗೊಳಿಸಲು ನೀವು ಬಯಸಿದರೆ, ನೀವು ನಿಜವಾಗಿ ಒಂದು ಪುನರಾವರ್ತನೆ ಲೂಪ್ ಅನ್ನು ಇನ್ನೊಂದರೊಳಗೆ ಹಾಕಬಹುದು! ಇದನ್ನು ನೆಸ್ಟೆಡ್ ಲೂಪ್ ಎಂದು ಕರೆಯಲಾಗುತ್ತದೆ."
         },
         "courseC_harvester_loops_challenge1a2022": {
           "courseC_harvester_loops_challenge1_a": "ಕುಣಿಕೆಗಳಿಲ್ಲದೆ ಇದು ತುಂಬಾ ಕಷ್ಟ!",
@@ -10042,7 +10042,7 @@
           "courseD_bee_conditionals_challenge1_b": "ಈ ಒಗಟಿನಲ್ಲಿ, ಪ್ರತಿ ಜಾಗವು ಹೂವು, ಜೇನು ಬಾಚಣಿಗೆ ಅಥವಾ ಏನನ್ನೂ ಹೊಂದಿರುವುದಿಲ್ಲ. ಅಂದರೆ ನೀವು ಪ್ರತಿ ಚೌಕದಲ್ಲಿ ನಿಮ್ಮ `ಇಫ್‌/ಎಲ್ಸ್‌` ಷರತ್ತುಗಳನ್ನು ಪುನರಾವರ್ತಿಸಬಹುದು."
         },
         "courseD_bee_conditionals_challenge22022": {
-          "courseD_bee_conditionals_challenge1_b": "`ಇಫ್ ಅಟ್ ಫ್ಲವರ್` ಬ್ಲಾಕ್‌ಗಳಂತೆಯೇ, ಜೇನುನೊಣ ಹೂವಿನ ಬಳಿ ಇದ್ದರೆ ಮಾತ್ರ `ಮಕರಂದ > 0` ಒಳಗಿನ ಕೋಡ್ ರನ್ ಆಗುತ್ತದೆ. ವ್ಯತ್ಯಾಸವೇನೆಂದರೆ, ಅಮೃತ ಉಳಿಯುವವರೆಗೆ ಒಳಗಿನ ಕೋಡ್ ಮತ್ತೆ ಮತ್ತೆ ಓಡುತ್ತದೆ. ಈ ಮಾದರಿಯನ್ನು ಪ್ರಯತ್ನಿಸಿ:\n\n<xml>  <block type=\"bee_whileNectarAmount\">\n    <title name=\"ARG1\">nectarRemaining</title>\n    <title name=\"OP\">></title>\n    <title name=\"ARG2\">0</title>                    <statement name=\"DO\">\n                      <block type=\"maze_nectar\"/>\n                    </statement>\n  </block></xml>"
+          "courseD_bee_conditionals_challenge1_b": "`ಇಫ್ ಅಟ್ ಫ್ಲವರ್` ಬ್ಲಾಕ್‌ಗಳಂತೆಯೇ, ಜೇನುನೊಣ ಹೂವಿನ ಬಳಿ ಇದ್ದರೆ ಮಾತ್ರ `ಮಕರಂದ > 0` ಒಳಗಿನ ಕೋಡ್ ರನ್ ಆಗುತ್ತದೆ. ವ್ಯತ್ಯಾಸವೇನೆಂದರೆ, ಅಮೃತ ಉಳಿಯುವವರೆಗೆ ಒಳಗಿನ ಕೋಡ್ ಮತ್ತೆ ಮತ್ತೆ ಓಡುತ್ತದೆ. ಈ ಮಾದರಿಯನ್ನು ಪ್ರಯತ್ನಿಸಿ:\n\n<xml>  <block type=\"bee_whileNectarAmount\">\n    <title name=\"ARG1\">nectarRemaining</title>\n    <title name=\"OP\">&gt;</title>\n    <title name=\"ARG2\">0</title>                    <statement name=\"DO\">\n                      <block type=\"maze_nectar\"/>\n                    </statement>\n  </block></xml>"
         },
         "courseD_bee_nestedLoops12022": {
           "courseD_bee_nestedLoops1_a": "ಕೆಲಸಮಾಡುತ್ತಿಲ್ಲ? ಪ್ರತಿ ಸಾಲಿನಲ್ಲೂ ಏನಾಗುತ್ತದೆ ಎಂಬುದನ್ನು ನೋಡಲು \"ಹಂತ\" ಬಟನ್ ಅನ್ನು ಬಳಸಲು ಪ್ರಯತ್ನಿಸಿ.",
@@ -10631,7 +10631,7 @@
           "location_pin_hint": "ಸ್ಪ್ರೈಟ್‌ ಸ್ಥಳವನ್ನು ಬದಲಿಸಲು, ಸ್ಥಳ ಬ್ಲಾಕ್‌ನ ಮೇಲಿನ ಪಿನ್ ಕ್ಲಿಕ್ ಮಾಡಿ, ನಂತರ ಎಲ್ಲಿಗೆ ಹೋಗಬೇಕೋ ಅಲ್ಲಿ ಕ್ಲಿಕ್ ಮಾಡಿ.\n\n![](https://images.code.org/e3267d2b50f754befc63744be14287ac-image-1633360873408.gif)"
         },
         "helloworld_food_multi_soccer-2022": {
-          "storyboard_costume": "ಪ್ರತಿ ಸ್ಪ್ರೈಟ್‌ಗೆ ಕಾಸ್ಟ್ಯೂಮ್‌ಗಳು ಹೋಲುತ್ತವೆ ಎಂಬುದನ್ನು ಖಚಿತಪಡಿಸಿ.\n<xml><block type=\"gamelab_spriteSay\">\n      <title name=\"SPEECH\">Goal!</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"soccer\\_ball\"</title>\n        </block>\n      </value>\n    </block></xml>"
+          "storyboard_costume": "ಪ್ರತಿ ಸ್ಪ್ರೈಟ್‌ಗೆ ಕಾಸ್ಟ್ಯೂಮ್‌ಗಳು ಹೋಲುತ್ತವೆ ಎಂಬುದನ್ನು ಖಚಿತಪಡಿಸಿ.\n<xml><block type=\"gamelab_spriteSay\">\n      <title name=\"SPEECH\">Goal!</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"soccer_ball\"</title>\n        </block>\n      </value>\n    </block></xml>"
         },
         "helloworld_food_multi_space-2022": {
           "storyboard_costume": "ಪ್ರತಿ ಸ್ಪ್ರೈಟ್‌ಗೆ ಕಾಸ್ಟ್ಯೂಮ್‌ಗಳು ಹೋಲುತ್ತವೆ ಎಂಬುದನ್ನು ಖಚಿತಪಡಿಸಿ.\n<xml><block type=\"gamelab_spriteSay\">\n      <title name=\"SPEECH\">Hello, alien!</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"face_carrot_1\"</title>\n        </block>\n      </value>\n    </block></xml>"
@@ -10642,7 +10642,7 @@
         },
         "helloworld_food_sizes_space-2022": {
           "storyboard_setProp": "ಕೇವಲ ಒಂದು ಬಾರಿ ಸ್ಪ್ರೈಟ್ ಗಾತ್ರವನ್ನು ನಿಗದಿಸಲು, ಈ ಬ್ಲಾಕ್ ಅನ್ನು ನೀವು ಬಳಸಬಹುದು:\n\n<xml><block type=\"gamelab_spriteClicked\">\n  <field name=\"CONDITION\">\"when\"</field>\n  <value name=\"SPRITE\">\n    <block type=\"gamelab_allSpritesWithAnimation\" can_disconnect_from_parent=\"false\">\n      <field name=\"ANIMATION\">\"space_astronaut_1\"</field>\n    </block>\n  </value>\n  <next>\n    <block type=\"gamelab_setProp\">\n      <field name=\"PROPERTY\">\"scale\"</field>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\" can_disconnect_from_parent=\"false\">\n          <field name=\"ANIMATION\">\"space_astronaut_1\"</field>\n        </block>\n      </value>\n      <value name=\"VAL\">\n        <block type=\"math_number\" can_disconnect_from_parent=\"false\">\n          <field name=\"NUM\">50</field>\n        </block>\n      </value>\n    </block>\n  </next>\n</block></xml>",
-          "storyboard_changePropBy": "ಪದೇ ಪದೇ (ಈವೆಂಟ್‌ಗಳ ಜೊತೆಗೆ) ಸ್ಪ್ರೈಟ್‌ ಗಾತ್ರವನ್ನು ನೀವು ಬದಲಿಸಲು ಬಯಸಿದರೆ, ಈ ಬ್ಲಾಕ್ ಬಳಸಿ:\n\n<xml><block type=\"gamelab_spriteClicked\">\n  <field name=\"CONDITION\">\"when\"</field>\n  <value name=\"SPRITE\">\n    <block type=\"gamelab_allSpritesWithAnimation\" can_disconnect_from_parent=\"false\">\n      <field name=\"ANIMATION\">\"space_satellite\"</field>\n    </block>\n  </value>\n  <next>\n    \\<block type=\"gamelab_changePropBy\">\n      <field name=\"PROPERTY\">\"scale\"</field>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\" can_disconnect_from_parent=\"false\">\n          <field name=\"ANIMATION\">\"space_satellite\"</field>\n        </block>\n      </value>\n      <value name=\"VAL\">\n        \\<block type=\"math_number\" can_disconnect_from\\_parent=\"false\">\n          <field name=\"NUM\">10</field>\n        </block>\n      </value>\n    </block>\n  </next>\n</block></xml>"
+          "storyboard_changePropBy": "ಪದೇ ಪದೇ (ಈವೆಂಟ್‌ಗಳ ಜೊತೆಗೆ) ಸ್ಪ್ರೈಟ್‌ ಗಾತ್ರವನ್ನು ನೀವು ಬದಲಿಸಲು ಬಯಸಿದರೆ, ಈ ಬ್ಲಾಕ್ ಬಳಸಿ:\n\n<xml><block type=\"gamelab_spriteClicked\">\n  <field name=\"CONDITION\">\"when\"</field>\n  <value name=\"SPRITE\">\n    <block type=\"gamelab_allSpritesWithAnimation\" can_disconnect_from_parent=\"false\">\n      <field name=\"ANIMATION\">\"space_satellite\"</field>\n    </block>\n  </value>\n  <next>\n    <block type=\"gamelab_changePropBy\">\n      <field name=\"PROPERTY\">\"scale\"</field>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\" can_disconnect_from_parent=\"false\">\n          <field name=\"ANIMATION\">\"space_satellite\"</field>\n        </block>\n      </value>\n      <value name=\"VAL\">\n        <block type=\"math_number\" can_disconnect_from_parent=\"false\">\n          <field name=\"NUM\">10</field>\n        </block>\n      </value>\n    </block>\n  </next>\n</block></xml>"
         },
         "helloworld_food_say_soccer-2022": {
           "hello-world-first-solution-pizza": "ಸ್ಪ್ರೈಟ್ ಏನೋ ಹೇಳಲು ಮಾಡಲು, ಈ ರೀತಿಯ ಕೋಡ್ ಬ್ಲಾಕ್ಗಳನ್ನು ಸಂಪರ್ಕ:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\"><next>  <block type=\"gamelab_makeNewSpriteAnon\">\n    <title name=\"ANIMATION_NAME\">\"soccer_player_1\"</title>\n    <value name=\"LOCATION\">\n      <block type=\"gamelab_location_picker\">\n        <title name=\"LOCATION\">{\"x\":200,\"y\":200}</title>\n      </block>\n    </value><next>  <block type=\"gamelab_spriteSay\">\n    <title name=\"SPEECH\">Hello, world!</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"soccer_player_1\"</title>\n      </block>\n    </value>\n  </block></next>\n  </block></next></block>\n</xml>"
