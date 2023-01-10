@@ -1,6 +1,7 @@
 import {
   newTrackAtMeasure,
   newTrackAtStart,
+  newTrackOnTrigger,
   playSound,
   playSoundAtCurrentLocation,
   playSoundInTrack,
@@ -21,6 +22,7 @@ const blockList = [
   forLoop,
   newTrackAtStart,
   newTrackAtMeasure,
+  newTrackOnTrigger,
   playSoundInTrack,
   restInTrack
 ];

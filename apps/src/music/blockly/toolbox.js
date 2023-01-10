@@ -1,4 +1,4 @@
-import moduleStyles from './toolbox.module.scss';
+import moduleStyles from '../views/toolbox.module.scss';
 import {BlockTypes} from './blockTypes';
 import AppConfig from '../appConfig';
 
@@ -66,6 +66,10 @@ const toolboxBlocks = {
         }
       }
     }
+  },
+  [BlockTypes.NEW_TRACK_ON_TRIGGER]: {
+    kind: 'block',
+    type: BlockTypes.NEW_TRACK_ON_TRIGGER
   },
   [BlockTypes.TRIGGERED_AT]: {
     kind: 'block',
@@ -266,7 +270,11 @@ export function getToolbox() {
 
   if (AppConfig.getValue('blocks') === 'tracks') {
     return generateToolbox({
-      Tracks: [BlockTypes.NEW_TRACK_AT_START, BlockTypes.NEW_TRACK_AT_MEASURE],
+      Tracks: [
+        BlockTypes.NEW_TRACK_AT_START,
+        BlockTypes.NEW_TRACK_AT_MEASURE,
+        BlockTypes.NEW_TRACK_ON_TRIGGER
+      ],
       Play: [BlockTypes.PLAY_SOUND_IN_TRACK, BlockTypes.REST_IN_TRACK],
       Control: ['controls_repeat_ext'],
       Math: ['math_arithmetic', 'math_random_int', 'math_modulo'],

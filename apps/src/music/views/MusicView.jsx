@@ -6,18 +6,18 @@ import {Provider, connect} from 'react-redux';
 import Instructions from './Instructions';
 import Controls from './Controls';
 import Timeline from './Timeline';
-import MusicPlayer from './player/MusicPlayer';
-import {Triggers} from './constants';
-import AnalyticsReporter from './analytics/AnalyticsReporter';
+import MusicPlayer from '../player/MusicPlayer';
+import {Triggers} from '../constants';
+import AnalyticsReporter from '../analytics/AnalyticsReporter';
 import {getStore} from '@cdo/apps/redux';
 import {SignInState} from '@cdo/apps/templates/currentUserRedux';
 import moduleStyles from './music.module.scss';
-import {AnalyticsContext, PlayerUtilsContext} from './context';
+import {AnalyticsContext, PlayerUtilsContext} from '../context';
 import TopButtons from './TopButtons';
-import Globals from './globals';
-import MusicBlocklyWorkspace from './blockly/MusicBlocklyWorkspace';
-import AppConfig from './appConfig';
-import SoundUploader from './utils/SoundUploader';
+import Globals from '../globals';
+import MusicBlocklyWorkspace from '../blockly/MusicBlocklyWorkspace';
+import AppConfig from '../appConfig';
+import SoundUploader from '../utils/SoundUploader';
 
 const baseUrl = 'https://curriculum.code.org/media/musiclab/';
 
@@ -51,6 +51,9 @@ class UnconnectedMusicView extends React.Component {
     this.codeHooks = {};
     this.musicBlocklyWorkspace = new MusicBlocklyWorkspace();
     this.soundUploader = new SoundUploader(this.player);
+    // Increments every time a trigger is pressed;
+    // used to differentiate tracks created on the same trigger
+    this.triggerCount = 0;
 
     // Set default for instructions position.
     let instructionsPosIndex = 1;
@@ -213,6 +216,7 @@ class UnconnectedMusicView extends React.Component {
     }
     this.analyticsReporter.onButtonClicked('trigger', {id});
     this.musicBlocklyWorkspace.executeTrigger(id);
+    this.triggerCount++;
   };
 
   toggleInstructions = fromKeyboardShortcut => {
@@ -227,7 +231,8 @@ class UnconnectedMusicView extends React.Component {
 
   executeSong = () => {
     this.musicBlocklyWorkspace.executeSong({
-      MusicPlayer: this.player
+      MusicPlayer: this.player,
+      getTriggerCount: () => this.triggerCount
     });
   };
 
@@ -255,6 +260,7 @@ class UnconnectedMusicView extends React.Component {
     this.player.clearTriggeredEvents();
 
     this.setState({isPlaying: false});
+    this.triggerCount = 0;
   };
 
   stopAllSoundsStillToPlay = () => {
