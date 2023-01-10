@@ -94,7 +94,9 @@ p {
       &:hover {
         background-color: $brand_secondary_dark;
         border-color: $brand_secondary_dark;
+        box-shadow: none;
       }
+
       &:focus {
         border-color: $brand_primary_default;
       }
@@ -113,6 +115,10 @@ p {
   .project_card {
     > div {
       background-color: $neutral_light !important;
+
+      &:hover {
+        border-color: $neutral_dark70 !important;
+      }
     }
 
     div {
@@ -200,6 +206,7 @@ p {
         &:hover {
           background-color: $brand_secondary_dark;
           border-color: $brand_secondary_dark;
+          box-shadow: none;
         }
 
         &:focus {
@@ -224,6 +231,7 @@ p {
 
         &:hover {
           background-color: $neutral_dark10;
+          box-shadow: none;
         }
 
         &:focus {
@@ -255,6 +263,7 @@ p {
 
       &:hover {
         background-color: $brand_primary_dark;
+        box-shadow: none;
       }
 
       &:focus {
