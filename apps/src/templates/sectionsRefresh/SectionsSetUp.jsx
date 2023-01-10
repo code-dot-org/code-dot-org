@@ -1,10 +1,31 @@
-import React from 'react';
+import React, {useState} from 'react';
 import i18n from '@cdo/locale';
 import SetUpSectionForm from './SetUpSectionForm';
 import Button from '@cdo/apps/templates/Button';
 import moduleStyles from './sections-refresh.module.scss';
 
+const useSections = () => {
+  const [sections, setSections] = useState([{}]);
+
+  const updateSection = (sectionIdx, keyToUpdate, val) => {
+    const newSections = sections.map((section, idx) => {
+      if (idx === sectionIdx) {
+        return {
+          ...section,
+          [keyToUpdate]: val
+        };
+      } else {
+        return section;
+      }
+    });
+    setSections(newSections);
+  };
+
+  return [sections, updateSection];
+};
+
 export default function SectionsSetUp() {
+  const [sections, updateSection] = useSections();
   return (
     <div>
       <h1>{i18n.setUpClassSectionsHeader()}</h1>
@@ -12,7 +33,11 @@ export default function SectionsSetUp() {
       <p>
         <a href="code.org">{i18n.setUpClassSectionsSubheaderLink()}</a>
       </p>
-      <SetUpSectionForm sectionNum={1} />
+      <SetUpSectionForm
+        sectionNum={1}
+        section={sections[0]}
+        updateSection={(key, val) => updateSection(0, key, val)}
+      />
       <div className={moduleStyles.buttonsContainer}>
         <Button
           icon="plus"
