@@ -19,7 +19,7 @@ export function getToolboxType() {
   if (!workspace) {
     return;
   }
-  if (workspace.flyout_) {
+  if (workspace.flyout) {
     return ToolboxType.UNCATEGORIZED;
   } else if (workspace.toolbox_) {
     return ToolboxType.CATEGORIZED;
