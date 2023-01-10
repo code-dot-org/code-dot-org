@@ -23,12 +23,14 @@ export default class Theater {
     this.onJavabuilderMessage = onJavabuilderMessage;
     this.loadEventsFinished = 0;
     this.prompterUploadUrl = null;
+    this.hasAudio = false;
   }
 
   handleSignal(data) {
     switch (data.value) {
       case TheaterSignalType.AUDIO_URL: {
         // Wait for the audio to load before starting playback
+        this.hasAudio = true;
         this.getAudioElement().src =
           data.detail.url + this.getCacheBustSuffix();
         this.getAudioElement().oncanplaythrough = () => this.startPlayback();
@@ -48,6 +50,7 @@ export default class Theater {
       }
       case TheaterSignalType.NO_AUDIO: {
         // there is no audio associated with the video, trigger startPlayback so we don't wait for the audio file
+        this.hasAudio = false;
         this.startPlayback();
         break;
       }
@@ -62,7 +65,9 @@ export default class Theater {
     // Wait for both to respond and load before starting playback.
     if (this.loadEventsFinished > 1) {
       this.getImgElement().style.visibility = 'visible';
-      this.getAudioElement().play();
+      if (this.hasAudio) {
+        this.getAudioElement().play();
+      }
     }
   }
 
@@ -83,6 +88,7 @@ export default class Theater {
     audioElement.pause();
     audioElement.src = '';
     this.getImgElement().src = '';
+    this.hasAudio = false;
   }
 
   getImgElement() {
