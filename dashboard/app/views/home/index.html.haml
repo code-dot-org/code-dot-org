@@ -12,7 +12,7 @@
   = render partial: 'layouts/race_interstitial'
 
 -# Teacher modals
-- if current_user && current_user.teacher? && current_user.sign_in_count <= 1
+- if InitialSectionCreationInterstitialHelper.show?(current_user)
   = render partial: 'layouts/initial_section_creation_interstitial'
 - elsif current_user && current_user.teacher? && !current_user.accepted_latest_terms?
   - current_user.update_user_tos_version_accept()
