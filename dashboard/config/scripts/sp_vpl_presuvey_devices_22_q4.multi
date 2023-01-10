@@ -1,0 +1,23 @@
+name 'SP-VPL-PreSuvey-Devices-22-Q4'
+title 'Pre-Survey'
+description ''
+question 'How confident do you feel about teaching the Creating Apps for Devices curriculum right now?'
+
+right 'Very unconfident'
+right 'Unconfident'
+right 'Somewhat unconfident'
+right 'Neutral'
+right 'Somewhat confident'
+right 'Confident'
+right 'Very confident'
+
+
+markdown <<MARKDOWN
+
+
+
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+
+MARKDOWN

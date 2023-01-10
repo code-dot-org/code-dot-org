@@ -185,7 +185,14 @@ def localize_external_sources
   puts "Preparing external sources"
   external_sources_dir = File.join(I18N_SOURCE_DIR, "external-sources")
 
-  # ml-playground files
+  # ml-playground (AI Lab) files
+
+  # Get the display names of the datasets stored in the dataset manifest file.
+  # manifest = File.join(external_sources_dir, 'ml-playground', 'datasets-manifest.json')
+  manifest = "apps/node_modules/@code-dot-org/ml-playground/public/datasets-manifest.json"
+  manifest_datasets = JSON.parse(File.read(manifest))['datasets']
+  dataset_names = manifest_datasets.map {|dataset| [dataset['id'], dataset['name']]}.to_h
+
   # These are overwritten in this format so the properties that use
   # arrays have unique identifiers for translation.
   dataset_files = File.join(external_sources_dir, 'ml-playground', 'datasets', '*')
@@ -213,6 +220,8 @@ def localize_external_sources
         }
       }
     }
+    dataset_name = dataset_names[original_dataset['name']]
+    final_dataset["name"] = dataset_name if dataset_name
 
     File.open(dataset_file, "w") do |f|
       f.write(JSON.pretty_generate(final_dataset))
