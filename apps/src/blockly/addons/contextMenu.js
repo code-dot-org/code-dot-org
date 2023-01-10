@@ -1,4 +1,5 @@
 import GoogleBlockly from 'blockly/core';
+import msg from '@cdo/locale';
 
 /**
  * Adds a copy command to the block context menu. After switching to v7,
@@ -184,6 +185,36 @@ const registerUnshadow = function() {
   GoogleBlockly.ContextMenuRegistry.registry.register(unshadowOption);
 };
 
+const registerKeyboardNavigation = function() {
+  const keyboardNavigationOption = {
+    displayText: function(scope) {
+      const displayText = scope.workspace.keyboardAccessibilityMode
+        ? msg.blocklyKBNavOff()
+        : msg.blocklyKBNavOn();
+      return displayText;
+    },
+    preconditionFn: function() {
+      if (Blockly.navigationController) {
+        return 'enabled';
+      } else {
+        console.log('navigationController not found');
+        return 'hidden';
+      }
+    },
+    callback: function(scope) {
+      if (scope.workspace.keyboardAccessibilityMode) {
+        Blockly.navigationController.disable(scope.workspace);
+      } else {
+        Blockly.navigationController.enable(scope.workspace);
+      }
+    },
+    scopeType: GoogleBlockly.ContextMenuRegistry.ScopeType.WORKSPACE,
+    id: 'keyboardNavigation',
+    weight: 11
+  };
+  GoogleBlockly.ContextMenuRegistry.registry.register(keyboardNavigationOption);
+};
+
 const registerAllContextMenuItems = function() {
   registerBlockCopyToStorage();
   registerBlockPasteFromStorage();
@@ -192,6 +223,7 @@ const registerAllContextMenuItems = function() {
   registerEditable();
   registerShadow();
   registerUnshadow();
+  registerKeyboardNavigation();
 };
 
 function canBeShadow(block) {
