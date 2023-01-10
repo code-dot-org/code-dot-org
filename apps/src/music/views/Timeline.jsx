@@ -3,8 +3,8 @@ import React, {useContext} from 'react';
 import moduleStyles from './timeline.module.scss';
 import classNames from 'classnames';
 import TimelineSampleEvents from './TimelineSampleEvents';
-import {PlayerUtilsContext} from './context';
-import appConfig from './appConfig';
+import {PlayerUtilsContext} from '../context';
+import appConfig from '../appConfig';
 import TimelineTrackEvents from './TimelineTrackEvents';
 
 const barWidth = 60;
