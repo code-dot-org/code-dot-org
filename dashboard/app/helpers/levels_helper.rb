@@ -413,6 +413,7 @@ module LevelsHelper
     use_weblab = @level.game == Game.weblab
     use_phaser = @level.game == Game.craft
     use_javalab = @level.is_a?(Javalab)
+    use_ailab = @level.is_a?(Ailab)
     use_blockly = !use_droplet && !use_netsim && !use_weblab && !use_javalab
     use_p5 = @level.is_a?(Gamelab)
     hide_source = app_options[:hideSource]
@@ -426,6 +427,7 @@ module LevelsHelper
         use_javalab: use_javalab,
         use_gamelab: use_gamelab,
         use_weblab: use_weblab,
+        use_ailab: use_ailab,
         use_phaser: use_phaser,
         use_p5: use_p5,
         hide_source: hide_source,

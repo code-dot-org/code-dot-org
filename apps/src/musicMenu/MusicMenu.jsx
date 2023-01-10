@@ -8,7 +8,8 @@ const optionsList = [
     type: 'radio',
     values: [
       {value: 'advanced', description: 'The default set of advanced blocks.'},
-      {value: 'simple', description: 'A simple set of blocks.'}
+      {value: 'simple', description: 'A simple set of blocks.'},
+      {value: 'tracks', description: 'A tracks-based model set of blocks.'}
     ]
   },
   {
