@@ -29,9 +29,9 @@ export default class Theater {
     switch (data.value) {
       case TheaterSignalType.AUDIO_URL: {
         // Wait for the audio to load before starting playback
-        this.getAudioElement().oncanplaythrough = () => this.startPlayback();
         this.getAudioElement().src =
           data.detail.url + this.getCacheBustSuffix();
+        this.getAudioElement().oncanplaythrough = () => this.startPlayback();
         break;
       }
       case TheaterSignalType.VISUAL_URL: {
@@ -57,7 +57,6 @@ export default class Theater {
   }
 
   startPlayback() {
-    console.log(`in startPlayback`);
     this.loadEventsFinished++;
     // We expect exactly 2 responses from Javabuilder. One for audio (or the NO_AUDIO signal) and one for video.
     // Wait for both to respond and load before starting playback.
