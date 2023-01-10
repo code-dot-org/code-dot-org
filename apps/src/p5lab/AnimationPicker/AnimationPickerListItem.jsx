@@ -66,6 +66,7 @@ export default class AnimationPickerListItem extends React.Component {
             animationProps && !loaded && style.none
           )}
           type="button"
+          aria-label={label}
         >
           <div>
             {animationProps && (

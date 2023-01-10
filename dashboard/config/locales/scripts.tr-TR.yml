@@ -113,12 +113,12 @@ tr:
           name: cebir
         infinity:
           title: Disney Infinity Play Laboratuarı
-          description: Bir hikaye ya da Disney Infinity karakteriyle bir oyun yaratmak
+          description: Disney Infinity karakteriyle bir hikaye ya da  bir oyun yaratmak
             için Play Lab'i kullanın.
-          description_short: Bir hikaye ya da Disney Infinity karakteriyle bir oyun
+          description_short: Disney Infinity karakteriyle bir hikaye ya da  bir oyun
             yaratmak için Play Lab'i kullanın.
-          student_description: Bir hikaye ya da Disney Infinity karakteriyle bir oyun
-            yaratmak için Play Lab'i kullanın.
+          student_description: Disney Infinity karakteriyle bir hikaye ya da  bir
+            oyun yaratmak için Play Lab'i kullanın.
           name: sonsuzluk
         algebrademo:
           title: Cebir Demo
@@ -3343,7 +3343,7 @@ tr:
             csf_data:
               display_name: Veri
             csf_for_loops:
-              display_name: For Döngüleri
+              display_name: For (İçin) Döngüleri
             csf_internet:
               display_name: İnternet
             csf_sprites:
@@ -3403,7 +3403,7 @@ tr:
             csf_digcit:
               display_name: Sayısal Vatandaşlık
             csf_impacts:
-              display_name: Bilgisayarın Etkileri
+              display_name: Bilişimin Etkileri
             csf_nested_loops:
               display_name: İç İçe Döngüler
             csf_functions:
@@ -3438,7 +3438,7 @@ tr:
             csf_variables:
               display_name: Değişkenler
             csf_for_loops:
-              display_name: For Döngüleri
+              display_name: For (İçin) Döngüleri
             csf_sprites:
               display_name: Hareketli Nesneler
           student_description: Aşağıdaki dersleri kendi hızınızda deneyerek bilgisayar
@@ -3587,7 +3587,7 @@ tr:
             csf_loops:
               display_name: Döngüler
             csf_impacts:
-              display_name: Bilgisayarın Etkileri
+              display_name: Bilişimin Etkileri
             csf_events:
               display_name: Olaylar
           student_description: Bilgisayar bilimi ve internet güvenliğinin temellerini
@@ -4510,7 +4510,7 @@ tr:
             csf_digcit:
               display_name: Sayısal Vatandaşlık
             csf_impacts:
-              display_name: Bilgisayarın Etkileri
+              display_name: Bilişimin Etkileri
             ramp_up:
               display_name: Arttır
         time4cs-experiment-unit-1:
@@ -4529,7 +4529,7 @@ tr:
             csf_digcit:
               display_name: Sayısal Vatandaşlık
             csf_impacts:
-              display_name: Bilgisayarın Etkileri
+              display_name: Bilişimin Etkileri
             ramp_up:
               display_name: Arttır
         csp7-pilot:
@@ -4824,7 +4824,7 @@ tr:
             csf_loops:
               display_name: Döngüler
             csf_impacts:
-              display_name: Bilgisayarın Etkileri
+              display_name: Bilişimin Etkileri
             csf_events:
               display_name: Olaylar
           student_description: Bilgisayar bilimi ve internet güvenliğinin temellerini
@@ -4905,7 +4905,7 @@ tr:
             csf_functions:
               display_name: Fonksiyonlar
             csf_impacts:
-              display_name: Bilgisayarın Etkileri
+              display_name: Bilişimin Etkileri
             end_of_course_project:
               display_name: Ders Projesinin Sonu
           student_description: Algoritmalar, döngüler, koşullar ve olaylarla kodlamaya
@@ -4932,7 +4932,7 @@ tr:
             csf_data:
               display_name: Veri
             csf_for_loops:
-              display_name: For Döngüleri
+              display_name: For (İçin) Döngüleri
             csf_sprites:
               display_name: Hareketli Nesneler
             end_of_course_project:
@@ -4967,7 +4967,7 @@ tr:
             csf_variables:
               display_name: Değişkenler
             csf_for_loops:
-              display_name: For Döngüleri
+              display_name: For (İçin) Döngüleri
             csf_sprites:
               display_name: Hareketli Nesneler
             end_of_course_project:
@@ -6056,7 +6056,7 @@ tr:
             csf_loops:
               display_name: Döngüler
             csf_impacts:
-              display_name: Bilgisayarın Etkileri
+              display_name: Bilişimin Etkileri
             csf_events:
               display_name: Olaylar
             lessonGroup-6:
@@ -6152,13 +6152,13 @@ tr:
             csf_functions:
               display_name: Fonksiyonlar
             csf_impacts:
-              display_name: Bilgisayarın Etkileri
+              display_name: Bilişimin Etkileri
             end_of_course_project:
               display_name: Ders Projesinin Sonu
             lessonGroup-8:
               display_name: Kaldırıldı
             lessonGroup-7:
-              display_name: Bilgisayarın Etkileri
+              display_name: Bilişimin Etkileri
           name: kurse-2021
           student_description: Algoritmalar, olaylar, döngüler, koşullar ve işlevlerle
             kodlamaya başlayın! Bu kursun sonunda arkadaşlarınız ve ailenizle paylaşabileceğiniz
@@ -6183,13 +6183,13 @@ tr:
             csf_digcit:
               display_name: Sayısal Vatandaşlık
             csf_variables:
-              display_name: For Döngüleri
+              display_name: For (İçin) Döngüleri
             csf_data:
               display_name: Veri ve simülasyonlar
             csf_for_loops:
-              display_name: For Döngüleri
+              display_name: For (İçin) Döngüleri
             csf_sprites:
-              display_name: Bilgisayarın Etkileri
+              display_name: Bilişimin Etkileri
             end_of_course_project:
               display_name: Ders Projesinin Sonu
             lessonGroup-8:
@@ -6227,7 +6227,7 @@ tr:
             csf_variables:
               display_name: Değişkenler
             csf_for_loops:
-              display_name: For Döngüleri
+              display_name: For (İçin) Döngüleri
             csf_sprites:
               display_name: Hareketli Nesneler
             end_of_course_project:
@@ -7566,7 +7566,7 @@ tr:
         coursea-2022:
           lesson_groups:
             csf_digcit:
-              display_name: Sayısal Vatandaşlık
+              display_name: Dijital Vatandaşlık
             csf_sequencing:
               display_name: Sıralama
             csf_loops:
@@ -7575,6 +7575,7 @@ tr:
               display_name: Olaylar
             lessonGroup-5:
               display_name: Ders Projesinin Sonu
+          title: Kurs A (2022)
           description: Kurs A, Anaokulu öğrencileri de dahil olmak üzere yeni başlayan
             okuyucular için bir bilgisayar bilimi müfredatı sunar. Öğrenciler, döngüler
             ve olaylar gibi komutları kullanarak programlamayı öğreneceklerdir. Bu
@@ -7604,9 +7605,10 @@ tr:
             csf_variables:
               display_name: Değişkenler
             csf_for_loops:
-              display_name: For Döngüleri
+              display_name: For (İçin) Döngüleri
             end_of_course_project:
               display_name: Ders Projesinin Sonu
+          title: Hızlandırılmış Kurs (2022)
           description: Aşağıdaki dersleri kendi hızınızda deneyerek bilgisayar bilimi
             öğrenin! Bilgisayar programları oluşturmayı, problem çözme becerileri
             geliştirmeyi ve eğlenceli zorluklarla çalışmayı öğrenin! Arkadaşlarınız,
@@ -7728,11 +7730,12 @@ tr:
             csf_loops:
               display_name: Döngüler
             csf_impacts:
-              display_name: Bilgisayarın Etkileri
+              display_name: Bilişimin Etkileri
             csf_events:
               display_name: Olaylar
             lessonGroup-6:
               display_name: Ders Projesinin Sonu
+          title: Kurs B (2022)
           description: Kurs B'yi birinci sınıf öğrencilerini düşünerek geliştirdik.
             Kurs B'deki kavramlar Kurs A'dakilerle paralel olsa da, öğrenciler daha
             karmaşık, bağlantısız etkinlikler öğrenir ve çok çeşitli bulmacalar üzerinde
@@ -7886,7 +7889,7 @@ tr:
               display_name: Koşullar
             end_of_course_project:
               display_name: Ders Projesinin Sonu
-          title: Kurs D (2021)
+          title: Kurs D (2022)
           description: Üçüncü sınıftaki öğrenciler için D kursu oluşturduk. Kurs,
             döngüler ve olaylar da dahil olmak üzere önceki kurslarda bulunan kavramların
             gözden geçirilmesiyle başlar. Daha sonra, öğrenciler algoritmalar, iç
@@ -7910,9 +7913,10 @@ tr:
             csf_nested_loops:
               display_name: Koşullar
             lessonGroup-7:
-              display_name: Bilgisayarın Etkileri
+              display_name: Bilişimin Etkileri
             end_of_course_project:
               display_name: Ders Projesinin Sonu
+          title: Kurs E (2022)
           description: Dördüncü sınıftaki öğrenciler için Kurs E'yi oluşturduk. Kurs,
             Sprite Lab programlama aracına giriş ile başlar. Öğrenciler, çevrimiçi
             güvenlik hakkında öğreneceklerini pekiştiren eğlenceli, etkileşimli projeler
@@ -7939,6 +7943,7 @@ tr:
               display_name: Veri ve simülasyonlar
             end_of_course_project:
               display_name: Ders Projesinin Sonu
+          title: Kurs F (2022)
           description_short: Bilgisayar biliminin temellerini öğrenin ve kendi oyunlarınızı,
             hikayelerinizi ve sanatınızı oluşturun.
           description_audience: 'Yaş: 9-13'
@@ -7964,6 +7969,7 @@ tr:
             csf_events:
               display_name: Olaylar
           name: ön-ekspres-2022
+          title: Okul Öncesi Çocuklar için Hızlandırılmış Kurs (2022)
           description_audience: 'Yaş: 4-8'
           description_short: 'Okul öncesi çocuklar için bilgisayar bilimlerine giriş:
             anaokulu ve birinci sınıf derslerimizin en iyisini birleştirir.'
@@ -8126,6 +8132,7 @@ tr:
             end_of_course_project:
               display_name: Ders Projesinin Sonu
           name: kursf-2022-pilot
+          title: Kurs F (2022)
           description_audience: 'Yaş: 9-13'
           description_short: Bilgisayar biliminin temellerini öğrenin ve kendi oyunlarınızı,
             hikayelerinizi ve sanatınızı oluşturun.
@@ -8539,7 +8546,7 @@ tr:
             hazırlamak için
           lessons:
             lesson-7:
-              name: Spritese Giriş
+              name: Hareketli Nesnelere Giriş
             lesson-8:
               name: Fiziksel Bilişim PSP
         csc-pilot-2022-ecosystems:

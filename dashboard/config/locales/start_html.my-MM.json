@@ -1,0 +1,585 @@
+{
+  "my-MM": {
+    "data": {
+      "start_html": {
+        "CSD U1 IO Story_2021": {
+          "Name": "အမည္",
+          "City": "မြို့",
+          "text": "text"
+        },
+        "CSD U1 IO Story_2022": {
+          "Name": "အမည္",
+          "City": "မြို့",
+          "text": "text"
+        },
+        "CSD U1 processing guess_2021": {
+          "text": "text"
+        },
+        "CSD U1 processing guess_2022": {
+          "text": "text"
+        },
+        "CSD U1 storage movies_2021": {
+          "Star Wars": "Star Wars",
+          "text": "text"
+        },
+        "CSD U1 storage movies_2022": {
+          "Star Wars": "Star Wars",
+          "text": "text"
+        },
+        "CSD U1 storage outfit_2021": {
+          "green": "အစိမ်း"
+        },
+        "CSD U1 storage outfit_2022": {
+          "green": "အစိမ်း"
+        },
+        "CSD U6 - Accelerometer - PD_2222": {
+          "You did it!": "သင်လုပ်နိုင်ခဲ့ပြီ!"
+        },
+        "CSD U6 - Board Inputs - SB1_2222": {
+          "Success!": "​အောင်မြင်ပါတယ်!"
+        },
+        "CSD U6 - Board Inputs - SB2_2222": {
+          "Success!": "​အောင်မြင်ပါတယ်!"
+        },
+        "CSD U6 - Board Inputs - SB3_2222": {
+          "Success!": "​အောင်မြင်ပါတယ်!"
+        },
+        "CSD U6 - Board Outputs - P_2222": {
+          "Success!": "​အောင်မြင်ပါတယ်!"
+        },
+        "CSD U6 - Board Outputs - SB1_2222": {
+          "Success!": "​အောင်မြင်ပါတယ်!"
+        },
+        "CSD U6 - Board Outputs - SB2_2222": {
+          "Success!": "​အောင်မြင်ပါတယ်!"
+        },
+        "CSD U6 - Board Outputs - Setup_2222": {
+          "Success!": "​အောင်မြင်ပါတယ်!"
+        },
+        "CSD U6 - Color LEDs - PracA_2222": {
+          "Success!": "​အောင်မြင်ပါတယ်!"
+        },
+        "CSD U6 - Color LEDs - SB2_2222": {
+          "Success!": "​အောင်မြင်ပါတယ်!"
+        },
+        "CSD U6 - Color LEDs - SB3_2222": {
+          "Success!": "​အောင်မြင်ပါတယ်!"
+        },
+        "CSD U6 - Color LEDs - SB4_2222": {
+          "Medium": "မခက်တခက်"
+        },
+        "CSD U6 - Combine Inputs - A_2222": {
+          "red": "အနီ",
+          "green": "အစိမ်း"
+        },
+        "CSD U6 - Combine Inputs - CA_2022": {
+          "short": "တို​သော",
+          "long": "ကြာသည်"
+        },
+        "CSD U6 - Combine Inputs - PracC_2222": {
+          "green": "အစိမ်း",
+          "blue": "အပြာရောင်"
+        },
+        "CSD U6 - Combine Inputs - SB2_2222": {
+          "short": "တို​သော",
+          "long": "ကြာသည်"
+        },
+        "CSD U6 - Combine Inputs - SB3_2222": {
+          "short": "တို​သော",
+          "long": "ကြာသည်"
+        },
+        "CSD U6 - Combine Inputs - SB4_2222": {
+          "short": "တို​သော",
+          "long": "ကြာသည်"
+        },
+        "CSD U6 - If Variables - ChalD_2222": {
+          "+": "+",
+          "-": "-"
+        },
+        "CSD U6 - If Variables - SB3_2222": {
+          "Name": "အမည္"
+        },
+        "CSD U6 - Music - ChalD_2222": {
+          "A": "က",
+          "B": "ခ",
+          "C": "ဂ",
+          "D": "ဃ",
+          "F": "င",
+          "G": "စ"
+        },
+        "CSD U6 - Music - Piano_2222": {
+          "C": "ဂ",
+          "D": "ဃ",
+          "F": "င",
+          "G": "စ",
+          "A": "က",
+          "B": "ခ"
+        },
+        "CSD U6 - Music - SB1_2222": {
+          "C": "ဂ",
+          "D": "ဃ",
+          "F": "င",
+          "G": "စ",
+          "A": "က",
+          "B": "ခ"
+        },
+        "CSD U6 - Music - SB2.5_2222": {
+          "C": "ဂ",
+          "D": "ဃ",
+          "F": "င",
+          "G": "စ",
+          "A": "က",
+          "B": "ခ"
+        },
+        "CSD U6 - Music - SB3_2222": {
+          "C": "ဂ",
+          "D": "ဃ",
+          "F": "င",
+          "G": "စ",
+          "A": "က",
+          "B": "ခ"
+        },
+        "CSD U6 - Music - SB4_2222": {
+          "Success!": "​အောင်မြင်ပါတယ်!"
+        },
+        "CSD U6 - Physical Input - ChalA_2222": {
+          "Success!": "​အောင်မြင်ပါတယ်!"
+        },
+        "CSD U6 - Physical Input - ChalB_2222": {
+          "Success!": "​အောင်မြင်ပါတယ်!"
+        },
+        "CSD U6 - Physical Input - ChalC_2222": {
+          "Success!": "​အောင်မြင်ပါတယ်!"
+        },
+        "CSD U6 - Physical Input - PA_2222": {
+          "Score": "အမှတ်"
+        },
+        "CSD U6 - Physical Input - PC_2222": {
+          "Success!": "​အောင်မြင်ပါတယ်!"
+        },
+        "CSD U6 - Physical Input - PD_2222": {
+          "Success!": "​အောင်မြင်ပါတယ်!"
+        },
+        "CSD U6 - Physical Input - SB1_2222": {
+          "Success!": "​အောင်မြင်ပါတယ်!"
+        },
+        "CSD U6 - Physical Output - ChalA_2222": {
+          "Success!": "​အောင်မြင်ပါတယ်!"
+        },
+        "CSD U6 - Physical Output - ChalB_2222": {
+          "Success!": "​အောင်မြင်ပါတယ်!"
+        },
+        "CSD U6 - Physical Output - ChalC_2222": {
+          "Success!": "​အောင်မြင်ပါတယ်!"
+        },
+        "CSD U6 - Physical Output - PB_2222": {
+          "Success!": "​အောင်မြင်ပါတယ်!"
+        },
+        "CSD U6 - Physical Output - PC_2222": {
+          "Success!": "​အောင်မြင်ပါတယ်!"
+        },
+        "CSD U6 - Physical Output - P_2222": {
+          "Success!": "​အောင်မြင်ပါတယ်!"
+        },
+        "CSD U6 - Physical Output - SB1_2222": {
+          "Success!": "​အောင်မြင်ပါတယ်!"
+        },
+        "CSD U6 - Physical Output - SB2.2_2222": {
+          "Success!": "​အောင်မြင်ပါတယ်!"
+        },
+        "CSD U6 - Physical Output - SB2_2222": {
+          "Success!": "​အောင်မြင်ပါတယ်!"
+        },
+        "CSD U6 - Sensors - P_2222": {
+          "text": "text"
+        },
+        "CSD U6 Driver pt 2": {
+          "You did it!": "သင်လုပ်နိုင်ခဲ့ပြီ!"
+        },
+        "CSD U6 Driver pt 2_2018": {
+          "You did it!": "သင်လုပ်နိုင်ခဲ့ပြီ!"
+        },
+        "CSD U6 Driver pt 2_2019": {
+          "You did it!": "သင်လုပ်နိုင်ခဲ့ပြီ!"
+        },
+        "CSD U6 Driver pt 2_2021": {
+          "You did it!": "သင်လုပ်နိုင်ခဲ့ပြီ!"
+        },
+        "CSD U6 Driver pt1": {
+          "You did it!": "သင်လုပ်နိုင်ခဲ့ပြီ!"
+        },
+        "CSD U6 Driver pt1_2018": {
+          "You did it!": "သင်လုပ်နိုင်ခဲ့ပြီ!"
+        },
+        "CSD U6 Driver pt1_2019": {
+          "You did it!": "သင်လုပ်နိုင်ခဲ့ပြီ!"
+        },
+        "CSD U6 Driver pt1_2021": {
+          "You did it!": "သင်လုပ်နိုင်ခဲ့ပြီ!"
+        },
+        "CSD U6 LED toggle": {
+          "Success!": "​အောင်မြင်ပါတယ်!"
+        },
+        "CSD U6 LED toggle_2018": {
+          "Success!": "​အောင်မြင်ပါတယ်!"
+        },
+        "CSD U6 LED toggle_2019": {
+          "Success!": "​အောင်မြင်ပါတယ်!"
+        },
+        "CSD U6 LED toggle_2021": {
+          "Success!": "​အောင်မြင်ပါတယ်!"
+        },
+        "CSD U6 add LED button": {
+          "Success!": "​အောင်မြင်ပါတယ်!"
+        },
+        "CSD U6 add LED button_2018": {
+          "Success!": "​အောင်မြင်ပါတယ်!"
+        },
+        "CSD U6 add LED button_2019": {
+          "Success!": "​အောင်မြင်ပါတယ်!"
+        },
+        "CSD U6 add LED button_2021": {
+          "Success!": "​အောင်မြင်ပါတယ်!"
+        },
+        "CSD U6 array piano": {
+          "C": "ဂ",
+          "D": "ဃ",
+          "F": "င",
+          "G": "စ",
+          "A": "က",
+          "B": "ခ"
+        },
+        "CSD U6 array piano_2018": {
+          "C": "ဂ",
+          "D": "ဃ",
+          "F": "င",
+          "G": "စ",
+          "A": "က",
+          "B": "ခ"
+        },
+        "CSD U6 array piano_2019": {
+          "C": "ဂ",
+          "D": "ဃ",
+          "F": "င",
+          "G": "စ",
+          "A": "က",
+          "B": "ခ"
+        },
+        "CSD U6 array piano_2021": {
+          "C": "ဂ",
+          "D": "ဃ",
+          "F": "င",
+          "G": "စ",
+          "A": "က",
+          "B": "ခ"
+        },
+        "CSD U6 change": {
+          "short": "တို​သော",
+          "long": "ကြာသည်"
+        },
+        "CSD U6 change_2018": {
+          "short": "တို​သော",
+          "long": "ကြာသည်"
+        },
+        "CSD U6 change_2019": {
+          "short": "တို​သော",
+          "long": "ကြာသည်"
+        },
+        "CSD U6 change_2021": {
+          "short": "တို​သော",
+          "long": "ကြာသည်"
+        },
+        "CSD U6 colorLeds intensity": {
+          "Medium": "မခက်တခက်"
+        },
+        "CSD U6 colorLeds intensity_2018": {
+          "Medium": "မခက်တခက်"
+        },
+        "CSD U6 colorLeds intensity_2019": {
+          "Medium": "မခက်တခက်"
+        },
+        "CSD U6 colorLeds intensity_2021": {
+          "Medium": "မခက်တခက်"
+        },
+        "CSD U6 frequency": {
+          "short": "တို​သော",
+          "long": "ကြာသည်"
+        },
+        "CSD U6 frequency_2018": {
+          "short": "တို​သော",
+          "long": "ကြာသည်"
+        },
+        "CSD U6 frequency_2019": {
+          "short": "တို​သော",
+          "long": "ကြာသည်"
+        },
+        "CSD U6 frequency_2021": {
+          "short": "တို​သော",
+          "long": "ကြာသည်"
+        },
+        "CSD U6 get toggle": {
+          "short": "တို​သော",
+          "long": "ကြာသည်"
+        },
+        "CSD U6 get toggle_2018": {
+          "short": "တို​သော",
+          "long": "ကြာသည်"
+        },
+        "CSD U6 get toggle_2019": {
+          "short": "တို​သော",
+          "long": "ကြာသည်"
+        },
+        "CSD U6 get toggle_2021": {
+          "short": "တို​သော",
+          "long": "ကြာသည်"
+        },
+        "CSD U6 getProperty input": {
+          "Submit": "ပေးပို့ပါ"
+        },
+        "CSD U6 getProperty input_2018": {
+          "Submit": "ပေးပို့ပါ"
+        },
+        "CSD U6 getProperty input_2019": {
+          "Submit": "ပေးပို့ပါ"
+        },
+        "CSD U6 getProperty input_2021": {
+          "Submit": "ပေးပို့ပါ"
+        },
+        "CSD U6 getters debug": {
+          "short": "တို​သော",
+          "long": "ကြာသည်"
+        },
+        "CSD U6 getters debug_2018": {
+          "short": "တို​သော",
+          "long": "ကြာသည်"
+        },
+        "CSD U6 getters debug_2019": {
+          "short": "တို​သော",
+          "long": "ကြာသည်"
+        },
+        "CSD U6 getters debug_2021": {
+          "short": "တို​သော",
+          "long": "ကြာသည်"
+        },
+        "CSD U6 interval": {
+          "short": "တို​သော",
+          "long": "ကြာသည်"
+        },
+        "CSD U6 interval_2018": {
+          "short": "တို​သော",
+          "long": "ကြာသည်"
+        },
+        "CSD U6 interval_2019": {
+          "short": "တို​သော",
+          "long": "ကြာသည်"
+        },
+        "CSD U6 interval_2021": {
+          "short": "တို​သော",
+          "long": "ကြာသည်"
+        },
+        "CSD U6 predict LED button": {
+          "Success!": "​အောင်မြင်ပါတယ်!"
+        },
+        "CSD U6 predict LED button_2018": {
+          "Success!": "​အောင်မြင်ပါတယ်!"
+        },
+        "CSD U6 predict LED button_2019": {
+          "Success!": "​အောင်မြင်ပါတယ်!"
+        },
+        "CSD U6 predict LED button_2021": {
+          "Success!": "​အောင်မြင်ပါတယ်!"
+        },
+        "CSD U6 sensor experiment embedded": {
+          "text": "text"
+        },
+        "CSD U6 sensor experiment embedded_2018": {
+          "text": "text"
+        },
+        "CSD U6 sensor experiment embedded_2019": {
+          "text": "text"
+        },
+        "CSD U6 sensor experiment embedded_2021": {
+          "text": "text"
+        },
+        "CSD U6 slider intro": {
+          "short": "တို​သော",
+          "long": "ကြာသည်"
+        },
+        "CSD U6 slider intro_2018": {
+          "short": "တို​သော",
+          "long": "ကြာသည်"
+        },
+        "CSD U6 slider intro_2019": {
+          "short": "တို​သော",
+          "long": "ကြာသည်"
+        },
+        "CSD U6 slider intro_2021": {
+          "short": "တို​သော",
+          "long": "ကြာသည်"
+        },
+        "CSD U6 test LED": {
+          "Success!": "​အောင်မြင်ပါတယ်!"
+        },
+        "CSD U6 test LED_2018": {
+          "Success!": "​အောင်မြင်ပါတယ်!"
+        },
+        "CSD U6 test LED_2019": {
+          "Success!": "​အောင်မြင်ပါတယ်!"
+        },
+        "CSD U6 test LED_2021": {
+          "Success!": "​အောင်မြင်ပါတယ်!"
+        },
+        "CSDU4 Crowdsource App Demo": {
+          "Cancel": "ပယ်ဖျတ်သည်"
+        },
+        "CSDU4 Crowdsource App Demo_2018": {
+          "Cancel": "ပယ်ဖျတ်သည်"
+        },
+        "CSDU4 Crowdsource App Demo_2019": {
+          "Cancel": "ပယ်ဖျတ်သည်"
+        },
+        "CSDU4 Decision App Demo": {
+          "I don't know": "မသိဘူး"
+        },
+        "CSDU4 Decision App Demo_2018": {
+          "I don't know": "မသိဘူး"
+        },
+        "CSDU4 Decision App Demo_2019": {
+          "I don't know": "မသိဘူး"
+        },
+        "CSDU4 Functionality visible": {
+          "Hide": "ဝှက်ပါ"
+        },
+        "CSDU4 List App Demo": {
+          "Cancel": "ပယ်ဖျတ်သည်"
+        },
+        "CSDU4 List App Demo_2018": {
+          "Cancel": "ပယ်ဖျတ်သည်"
+        },
+        "CSDU4 List App Demo_2019": {
+          "Cancel": "ပယ်ဖျတ်သည်"
+        },
+        "CSDU4 Quiz App Demo": {
+          "Submit": "ပေးပို့ပါ"
+        },
+        "CSDU4 Quiz App Demo_2018": {
+          "Submit": "ပေးပို့ပါ"
+        },
+        "CSDU4 Quiz App Demo_2019": {
+          "Submit": "ပေးပို့ပါ"
+        },
+        "CSDU6 - UI and Inputs - getNumber": {
+          "+": "+"
+        },
+        "CSDU6 Circuit Playground Test": {
+          "Success!": "​အောင်မြင်ပါတယ်!"
+        },
+        "CSDU6 Circuit Playground Test_2018": {
+          "Success!": "​အောင်မြင်ပါတယ်!"
+        },
+        "CSDU6 Circuit Playground Test_2019": {
+          "Success!": "​အောင်မြင်ပါတယ်!"
+        },
+        "CSDU6 Circuit Playground Test_2021": {
+          "Success!": "​အောင်မြင်ပါတယ်!"
+        },
+        "CSDU6 Circuit Playground Test_2222": {
+          "Success!": "​အောင်မြင်ပါတယ်!"
+        },
+        "CSDU6 circuit playground piano": {
+          "C": "ဂ",
+          "D": "ဃ",
+          "F": "င",
+          "G": "စ",
+          "A": "က",
+          "B": "ခ"
+        },
+        "CSDU6 circuit playground piano_2018": {
+          "C": "ဂ",
+          "D": "ဃ",
+          "F": "င",
+          "G": "စ",
+          "A": "က",
+          "B": "ခ"
+        },
+        "CSDU6 circuit playground piano_2019": {
+          "C": "ဂ",
+          "D": "ဃ",
+          "F": "င",
+          "G": "စ",
+          "A": "က",
+          "B": "ခ"
+        },
+        "CSDU6 circuit playground piano_2021": {
+          "C": "ဂ",
+          "D": "ဃ",
+          "F": "င",
+          "G": "စ",
+          "A": "က",
+          "B": "ခ"
+        },
+        "CSDU6 piano with notes": {
+          "C": "ဂ",
+          "D": "ဃ",
+          "F": "င",
+          "G": "စ",
+          "A": "က",
+          "B": "ခ"
+        },
+        "CSDU6 piano with notes_2018": {
+          "C": "ဂ",
+          "D": "ဃ",
+          "F": "င",
+          "G": "စ",
+          "A": "က",
+          "B": "ခ"
+        },
+        "CSDU6 piano with notes_2019": {
+          "C": "ဂ",
+          "D": "ဃ",
+          "F": "င",
+          "G": "စ",
+          "A": "က",
+          "B": "ခ"
+        },
+        "CSDU6 piano with notes_2021": {
+          "C": "ဂ",
+          "D": "ဃ",
+          "F": "င",
+          "G": "စ",
+          "A": "က",
+          "B": "ခ"
+        },
+        "allthethings design mode elements": {
+          "text": "text"
+        },
+        "ml-intro ai lab- fruit veggie widget": {
+          "Continue": "ဆက်လုပ်ပါ"
+        },
+        "ml-intro ai lab- fruit veggie widget_2022": {
+          "Continue": "ဆက်လုပ်ပါ"
+        },
+        "ml-model card-medical app v2 2021-2": {
+          "A": "က"
+        },
+        "ml-model card-medical app v2 2021-2_2022": {
+          "A": "က"
+        },
+        "ml-models in applab-zoo assessment": {
+          "B": "ခ"
+        },
+        "ml-models in applab-zoo assessment_2022": {
+          "B": "ခ"
+        },
+        "ml-use model card-example3A-2021": {
+          "rain": "မိုးရွာသည်",
+          "snow": "နှင်း"
+        },
+        "ml-use model card-example3A_2022": {
+          "rain": "မိုးရွာသည်",
+          "snow": "နှင်း"
+        }
+      }
+    }
+  }
+}
