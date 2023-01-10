@@ -80,6 +80,30 @@ $full-width: 900px;
           border-color: brown;
         }
       }
+
+      .tracksContainer {
+        display: flex;
+        position: relative;
+        flex-direction: column;
+        margin-top: 20px;
+
+        .trackRowContainer {
+          display: flex;
+          flex-direction: column;
+          margin-bottom: 2px;
+
+          .trackName {
+            font-size: 12px;
+            font-style: italic;
+            padding-left: 2px;
+          }
+
+          .trackSoundsContainer {
+            display: flex;
+            flex-direction: row;
+          }
+        }
+      }
     }
 
     .playhead {
