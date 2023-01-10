@@ -1306,10 +1306,6 @@
   version "2.0.2"
   resolved "https://registry.yarnpkg.com/@blockly/field-grid-dropdown/-/field-grid-dropdown-2.0.2.tgz#61c531e4082f0424a8afccd9c87ebe5286744158"
   integrity sha512-wA0nTdhgNI4xGPcODOuQhB43LcvDtwWZcorlNtyuTFJcYHidYOyTkC5i99HpiUxo4qdrt0C3OqkLp1gmJPEBXA==
-"@blockly/field-grid-dropdown@~2.0.2":
-  version "2.0.2"
-  resolved "https://registry.yarnpkg.com/@blockly/field-grid-dropdown/-/field-grid-dropdown-2.0.2.tgz#61c531e4082f0424a8afccd9c87ebe5286744158"
-  integrity sha512-wA0nTdhgNI4xGPcODOuQhB43LcvDtwWZcorlNtyuTFJcYHidYOyTkC5i99HpiUxo4qdrt0C3OqkLp1gmJPEBXA==
 
 "@blockly/keyboard-navigation@0.3.2":
   version "0.3.2"
