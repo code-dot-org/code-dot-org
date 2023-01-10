@@ -2212,10 +2212,18 @@ bg:
         csp5-2023:
           lesson_groups:
             csp_lists:
-              display_name: Списъци
+              display_name: Данни
             csp_loops:
               display_name: Повторения
             csp_project:
+              display_name: Проект
+        csp6-2023:
+          lesson_groups:
+            csp_unit6_2020:
+              display_name: Списъци
+            lessonGroup-3:
+              display_name: Повторения
+            lessonGroup-5:
               display_name: Проект
         csp9-2023:
           lesson_groups:
