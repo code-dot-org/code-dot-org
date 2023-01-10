@@ -5,7 +5,6 @@ abort 'Script already running' unless only_one_running?(__FILE__)
 require_relative '../config/environment'
 
 def queue_pd_reminder_emails
-  puts "Started queueing"
   # For each teacher application, queue up one reminder email if their admin
   # hasn't yet responded.
   Pd::Application::TeacherApplication.where(
@@ -16,24 +15,17 @@ def queue_pd_reminder_emails
     end
   end
 
-  puts "Reminder if no principal response"
-
   # Queue reminder emails for teachers that have been accepted but have not yet
   # registered for a workshop.
   Services::RegistrationReminder.queue_registration_reminders!
 
-  puts "Accepted reminder email"
-
   # Queue reminder emails for teachers who have started an application but
   # have not completed it
   Services::CompleteApplicationReminder.queue_complete_application_reminders!
-  puts "App reminder emails"
 end
 
 # First, add PD reminder emails to the queue.
 queue_pd_reminder_emails
-puts "Add PD reminder emails to queue"
 
 # Second, send all queued emails.
 Pd::Application::Email.send_all_queued_emails
-puts "All done!"
