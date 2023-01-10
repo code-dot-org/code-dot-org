@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import SoundsPanel from '../SoundsPanel';
+import SoundsPanel from '../views/SoundsPanel';
 import GoogleBlockly from 'blockly/core';
 
 class FieldSounds extends GoogleBlockly.Field {
