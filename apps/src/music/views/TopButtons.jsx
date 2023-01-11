@@ -1,10 +1,10 @@
 import React, {useContext, useState, useRef} from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import {AnalyticsContext} from './context';
+import {AnalyticsContext} from '../context';
 import moduleStyles from './topbuttons.module.scss';
-import FontAwesome from '../templates/FontAwesome';
-import AppConfig from './appConfig';
+import FontAwesome from '../../templates/FontAwesome';
+import AppConfig from '../appConfig';
 
 const TopButtons = ({clearCode, uploadSound}) => {
   const analyticsReporter = useContext(AnalyticsContext);
