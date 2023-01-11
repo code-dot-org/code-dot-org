@@ -126,22 +126,13 @@ export default class SetupChecklist extends Component {
 
       // Can we initialize components successfully?
       .then(() => {
-        if (this.state.boardTypeDetected !== BOARD_TYPE.MICROBIT) {
-          return this.detectStep(STATUS_BOARD_COMPONENTS, () =>
-            this.setupChecker.detectComponentsInitialize()
-          );
-        }
-        return Promise.resolve();
+        return this.detectStep(STATUS_BOARD_COMPONENTS, () =>
+          this.setupChecker.detectComponentsInitialize()
+        );
       })
 
       // Everything looks good, let's par-tay!
-      .then(() =>
-        this.thumb(
-          this.state.boardTypeDetected === BOARD_TYPE.MICROBIT
-            ? STATUS_BOARD_CONNECT
-            : STATUS_BOARD_COMPONENTS
-        )
-      )
+      .then(() => this.thumb(STATUS_BOARD_COMPONENTS))
       .then(() => this.setupChecker.celebrate())
       .then(() => this.succeed(STATUS_BOARD_COMPONENTS))
       .then(() => trackEvent('MakerSetup', 'ConnectionSuccess'))
@@ -314,7 +305,8 @@ export default class SetupChecklist extends Component {
             disabled={this.state.isDetecting}
           />
           {experiments.isEnabled('microbit') &&
-            this.state.boardTypeDetected === BOARD_TYPE.MICROBIT && (
+            this.state.boardTypeDetected === BOARD_TYPE.MICROBIT &&
+            this.state[STATUS_BOARD_CONNECT] === Status.SUCCEEDED && (
               <input
                 style={{marginLeft: 9, marginTop: -4}}
                 className="btn"
@@ -367,7 +359,7 @@ export default class SetupChecklist extends Component {
             {!linuxPermissionError && this.installFirmwareSketch()}
             {this.contactSupport()}
           </ValidationStep>
-          {this.state.boardTypeDetected !== BOARD_TYPE.MICROBIT && (
+          {
             <ValidationStep
               stepStatus={this.state[STATUS_BOARD_COMPONENTS]}
               stepName={i18n.validationStepBoardComponentsUsable()}
@@ -378,7 +370,7 @@ export default class SetupChecklist extends Component {
               {this.installFirmwareSketch()}
               {this.contactSupport()}
             </ValidationStep>
-          )}
+          }
         </div>
       </div>
     );
