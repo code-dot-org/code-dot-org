@@ -499,7 +499,6 @@ Dashboard::Application.routes.draw do
     get '/flappy/:chapter', to: 'script_levels#show', script_id: Unit::FLAPPY_NAME, as: 'flappy_chapter', format: false
     get '/jigsaw/:chapter', to: 'script_levels#show', script_id: Unit::JIGSAW_NAME, as: 'jigsaw_chapter', format: false
 
-    puts("****got here first")
     get '/weblab/host', to: 'weblab_host#index'
     get '/weblab/test', to: 'weblab_host#test'
 
