@@ -1,9 +1,5 @@
 <Gamelab>
   <config><![CDATA[{
-  "game_id": 50,
-  "created_at": "2022-09-19T22:53:39.000Z",
-  "level_num": "custom",
-  "user_id": 155,
   "properties": {
     "skin": "gamelab",
     "code_functions": {
@@ -86,17 +82,21 @@
     "show_type_hints": "false",
     "encrypted": "false",
     "mini_rubric": "false",
-    "start_blocks": "background(\"skyblue\");\r\nvar drums = createSprite(200,290);\r\ndrums.setAnimation(\"drum_set\");\r\nvar note1 = createSprite(50,50);\r\nnote1.setAnimation(\"eighth_note\");\r\nnote1.scale = 0.3;\r\nnote1.rotation = 20;\r\nvar note2 = createSprite(150,50);\r\nnote2.setAnimation(\"eighth_note\");\r\nnote2.scale = 0.7;\r\nnote2.rotation = -30;\r\nvar note3 = createSprite(250,50);\r\nnote3.setAnimation(\"eighth_note\");\r\nvar note4 = createSprite(350,50);\r\nnote4.setAnimation(\"eighth_note\");\r\ndrawSprites();",
+    "start_blocks": "//1) Run the program to see how what is different about the first two notes.\r\n//2) Use the same blocks on the last two notes to make them look different, too.\r\nbackground(\"skyblue\");\r\nvar drums = createSprite(200,290);\r\ndrums.setAnimation(\"drum_set\");\r\nvar note1 = createSprite(50,50);\r\nnote1.setAnimation(\"eighth_note\");\r\nnote1.scale = 0.3;\r\nnote1.rotation = 20;\r\nvar note2 = createSprite(150,50);\r\nnote2.setAnimation(\"eighth_note\");\r\nnote2.scale = 0.7;\r\nnote2.rotation = -30;\r\nvar note3 = createSprite(250,50);\r\nnote3.setAnimation(\"eighth_note\");\r\nvar note4 = createSprite(350,50);\r\nnote4.setAnimation(\"eighth_note\");\r\ndrawSprites();",
     "start_animations": "{\r\n  \"orderedKeys\": [\r\n    \"2330b36d-49ca-4381-a155-956045d66542\",\r\n    \"cc19c122-7a76-4867-b3d7-e5e27b56e96b\"\r\n  ],\r\n  \"propsByKey\": {\r\n    \"2330b36d-49ca-4381-a155-956045d66542\": {\r\n      \"name\": \"drum_set\",\r\n      \"sourceUrl\": \"https://levelbuilder-studio.code.org/api/v1/animation-library/_NzjQEf4sS1BOhHI.P5HrQxr7ZZbj.hA/category_music/drum_set.png\",\r\n      \"frameSize\": {\r\n        \"x\": 300,\r\n        \"y\": 229\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"_NzjQEf4sS1BOhHI.P5HrQxr7ZZbj.hA\"\r\n    },\r\n    \"cc19c122-7a76-4867-b3d7-e5e27b56e96b\": {\r\n      \"name\": \"eighth_note\",\r\n      \"sourceUrl\": \"https://levelbuilder-studio.code.org/api/v1/animation-library/3tq_IMWLQa6AvDN6b2TE8_GaDNDx7uU_/category_music/eighth_note.png\",\r\n      \"frameSize\": {\r\n        \"x\": 212,\r\n        \"y\": 300\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"3tq_IMWLQa6AvDN6b2TE8_GaDNDx7uU_\"\r\n    }\r\n  }\r\n}",
-    "long_instructions": "# New Properties\r\n\r\nSprites have lots of properties.  Check out the two new blocks in this activity and try them out for yourself.  Notice that different sprites can use the same animation, and still look different because of properties.\r\n\r\n# Do this\r\n\r\n* Run the program to see how the `rotation` and `scale` blocks make the first two notes look different.\r\n* Use the `rotation` and `scale` blocks on the last two notes to make them look different, too.",
+    "long_instructions": "# New Properties\r\n\r\nSprites have lots of properties.  Check out the two new blocks in this activity and try them out for yourself.  Notice that different sprites can use the same animation, and still look different because of properties.\r\n\r\n# Do this\r\n\r\n1) Run the program to see how what is different about the first two notes.\r\n   - Notice how the [`rotation`(#f78183)](/docs/ide/gamelab/expressions/rotation) and [`scale`(#f78183)](/docs/ide/gamelab/expressions/scale) blocks make the first two notes look different.\r\n2) Use the same blocks on the last two notes to make them look different, too.\r\n   - Use the the [`rotation`(#f78183)](/docs/ide/gamelab/expressions/rotation) and [`scale`(#f78183)](/docs/ide/gamelab/expressions/scale) blocks on the last two notes.",
     "encrypted_examples": "9mw1uOwn6CoQ6omMD7FAMVEacLcuseLWu3IU3D/XGE2vHUOlpbQGz8F32pcN\nNJa2Gcvpqv3jYvf+WXGPqmjtCw==\n",
     "libraries_enabled": "false",
     "map_reference": "/courses/csd-2022/guides/sprite-properties",
     "preload_asset_list": null
   },
+  "game_id": 50,
   "published": true,
+  "created_at": "2022-09-19T22:53:39.000Z",
+  "level_num": "custom",
+  "user_id": 155,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-09-19T22:53:39.008+00:00\",\"changed\":[\"cloned from \\\"CSD Games properties new_2022\\\"\"],\"cloned_from\":\"CSD Games properties new_2022\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-09-19T22:53:39.008+00:00\",\"changed\":[\"cloned from \\\"CSD Games properties new_2022\\\"\"],\"cloned_from\":\"CSD Games properties new_2022\"},{\"changed_at\":\"2023-01-10 23:30:42 +0000\",\"changed\":[\"code_functions\",\"start_blocks\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
 }]]></config>
   <blocks/>
 </Gamelab>
