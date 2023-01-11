@@ -570,7 +570,6 @@ function checkThisSpriteClickedThisFrame(spriteId) {
   }, "cscLandmarkBackgroundStoryteller");  // include i18n feedback string
   */
 function checkNewBackground() {
-  console.log(getBackground());
   if (getBackground() != '' && getBackground() != null) {
   	return getBackground() != validationProps.previous.background;
   }
