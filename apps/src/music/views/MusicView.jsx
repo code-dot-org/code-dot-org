@@ -51,6 +51,9 @@ class UnconnectedMusicView extends React.Component {
     this.codeHooks = {};
     this.musicBlocklyWorkspace = new MusicBlocklyWorkspace();
     this.soundUploader = new SoundUploader(this.player);
+    // Increments every time a trigger is pressed;
+    // used to differentiate tracks created on the same trigger
+    this.triggerCount = 0;
 
     // Set default for instructions position.
     let instructionsPosIndex = 1;
@@ -213,6 +216,7 @@ class UnconnectedMusicView extends React.Component {
     }
     this.analyticsReporter.onButtonClicked('trigger', {id});
     this.musicBlocklyWorkspace.executeTrigger(id);
+    this.triggerCount++;
   };
 
   toggleInstructions = fromKeyboardShortcut => {
@@ -227,7 +231,8 @@ class UnconnectedMusicView extends React.Component {
 
   executeSong = () => {
     this.musicBlocklyWorkspace.executeSong({
-      MusicPlayer: this.player
+      MusicPlayer: this.player,
+      getTriggerCount: () => this.triggerCount
     });
   };
 
@@ -255,6 +260,7 @@ class UnconnectedMusicView extends React.Component {
     this.player.clearTriggeredEvents();
 
     this.setState({isPlaying: false});
+    this.triggerCount = 0;
   };
 
   stopAllSoundsStillToPlay = () => {
