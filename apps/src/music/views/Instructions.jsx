@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import React, {useContext, useEffect, useState} from 'react';
 import classNames from 'classnames';
 import moduleStyles from './instructions.module.scss';
-import {AnalyticsContext} from './context';
+import {AnalyticsContext} from '../context';
 
 const Instructions = ({instructions, baseUrl, vertical, right}) => {
   const [currentPanel, setCurrentPanel] = useState(0);
