@@ -431,28 +431,26 @@ class Census::CensusSummary < ApplicationRecord
     ].max
     school_years = (2016..latest_year)
 
-    ActiveRecord::Base.transaction do
-      School.eager_load(school_info: :census_submissions).
-        eager_load(ap_school_code: :ap_cs_offering).
-        eager_load(ib_school_code: :ib_cs_offering).
-        eager_load(:state_cs_offering).
-        eager_load(:school_stats_by_year).
-        eager_load(:census_overrides).
-        find_each do |school|
-        summarize_school_data(
-          {
-            school: school,
-            school_years: school_years,
-            years_with_ap_data: years_with_ap_data,
-            years_with_ib_data: years_with_ib_data,
-            state_years_with_data: state_years_with_data,
-          }
-        ).each do |summary|
-          if block_given?
-            yield summary
-          else
-            summary.save!
-          end
+    School.eager_load(school_info: :census_submissions).
+      eager_load(ap_school_code: :ap_cs_offering).
+      eager_load(ib_school_code: :ib_cs_offering).
+      eager_load(:state_cs_offering).
+      eager_load(:school_stats_by_year).
+      eager_load(:census_overrides).
+      find_each do |school|
+      summarize_school_data(
+        {
+          school: school,
+          school_years: school_years,
+          years_with_ap_data: years_with_ap_data,
+          years_with_ib_data: years_with_ib_data,
+          state_years_with_data: state_years_with_data,
+        }
+      ).each do |summary|
+        if block_given?
+          yield summary
+        else
+          summary.save!
         end
       end
     end
