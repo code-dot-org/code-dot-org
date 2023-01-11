@@ -6,6 +6,10 @@ class WeblabHostController < ApplicationController
 
   def index
     @dev_mode = false; # Change to true to point to Bramble running on localhost
+
     @bramble_base_url = @dev_mode ? BRAMBLE_LOCALHOST_URL : BRAMBLE_URL
+  end
+
+  def test
   end
 end
