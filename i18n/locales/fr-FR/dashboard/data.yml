@@ -92,7 +92,7 @@ fr:
         turtle_4_2: Ajoute un bloc « Tourner à droite de 90 degrés » quelque part au milieu du programme déjà présent sur l'espace de travail pour dessiner ces triangles.
         turtle_4_3: OK, voici le code que tu as écrit pour dessiner un seul triangle. Peux-tu ajouter un bloc «Répéter» et «Tourner» pour faire une jolie fleur ?
         turtle_4_4: 'Voici le même code que le casse-tête précédent, mais en tournant seulement à 36 degrés après avoir dessiné chaque triangle. Combien de fois faut-il le répéter ? (Indice : après 360 degrés de rotation, le dessin fera un cercle complet)'
-        turtle_4_5: 'Voici le même code de l''énigme précédente, mais en répétant les virages 36 fois. De combien de degrés doivent-être les virages ? (Indice : après 360 degrés de rotation, le dessin fera un cercle complet)'
+        turtle_4_5: 'Voici le même code de l'' casse-tête précédente, mais en répétant les virages 36 fois. De combien de degrés doivent-être les virages ? (Indice : après 360 degrés de rotation, le dessin fera un cercle complet)'
         turtle_4_6: En utilisant seulement 3 blocs, peux-tu dessiner un carré avec des bords de 20 pixels?
         turtle_4_7: 'Voici le code pour dessiner le carré du dernier casse-tête. Peux-tu le répéter pour dessiner 10 carrés adjacents comme une échelle ? Indice : tu as besoin de seulement 2 blocs de plus.'
         turtle_4_8: Voici la solution du casse-tête précédent. Peux-tu ajouter seulement 2 blocs de plus pour compléter le dessin ?

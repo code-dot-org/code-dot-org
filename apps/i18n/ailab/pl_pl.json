@@ -14,20 +14,36 @@
     "medical_priority": {
       "fields": {
         "age": {
-          "id": "wiek"
+          "id": "wiek",
+          "description": "Przedziały wiekowe pacjenta."
         },
         "gender": {
           "id": "płeć",
           "description": "Płeć pacjenta."
         },
+        "race": {
+          "id": "rasa",
+          "description": "Informacje rasowe o pacjencie."
+        },
         "bleeding": {
-          "id": "krwawienie"
+          "id": "krwawienie",
+          "description": "Czy pacjent krwawił, czy nie."
+        },
+        "shortness_of_breath": {
+          "id": "shortness_of_breath",
+          "description": "Czy pacjent miał duszność."
         },
         "weight": {
-          "id": "waga"
+          "id": "waga",
+          "description": "Zakresy wagowe dla pacjenta."
+        },
+        "area_of_pain": {
+          "id": "area_of_pain",
+          "description": "Gdzie znajdował się ból."
         },
         "decision": {
-          "id": "decyzja"
+          "id": "decyzja",
+          "description": "Jak szybko pacjent otrzymał leczenie."
         }
       },
       "card": {
@@ -148,7 +164,8 @@
           "id": "indeks"
         },
         "Date": {
-          "id": "Data"
+          "id": "Data",
+          "description": "Data wykonania zapisów."
         },
         "Season": {
           "id": "Sezon",
@@ -163,11 +180,43 @@
           "description": "Miesiąc: 1 (styczeń) do 12 (grudzień)."
         },
         "Holiday": {
+          "id": "Wakacje",
           "description": "Niezależnie od tego, czy dzień jest świętem."
         },
         "Day of Week": {
           "id": "Dzień Tygodnia",
           "description": "Dzień tygodnia: 0 (niedziela) do 6 (sobota)."
+        },
+        "Workday": {
+          "id": "Dzień roboczy",
+          "description": "Niezależnie od tego, czy jest to dzień pracy, czy nie."
+        },
+        "Weather Description": {
+          "id": "Opis pogody",
+          "description": "Opis pogody w ciągu dnia, od kilku chmur po lekki śnieg lub deszcz."
+        },
+        "Average Temperature (Celsius)": {
+          "id": "Średnia temperatura (Celsjusza)"
+        },
+        "Humidity (0 - 1)": {
+          "id": "Wilgotność (0 - 1)",
+          "description": "Wilgotność, znormalizowana do 0 (0% wilgotności) do 1 (100% wilgotności)."
+        },
+        "Wind Speed": {
+          "id": "Prędkość wiatru",
+          "description": "Prędkość wiatru."
+        },
+        "Number of Casual Users": {
+          "id": "Liczba przypadkowych użytkowników",
+          "description": "Liczba użytkowników bez konta."
+        },
+        "Number of Registered Users": {
+          "id": "Liczba zarejestrowanych użytkowników",
+          "description": "Liczba użytkowników posiadających konto."
+        },
+        "Total Users": {
+          "id": "Całkowita liczba użytkowników",
+          "description": "Całkowita liczba użytkowników."
         }
       }
     },
@@ -287,7 +336,8 @@
           "description": "wiek głównego beneficjenta."
         },
         "sex": {
-          "id": "płeć"
+          "id": "płeć",
+          "description": "płeć wykonawcy ubezpieczenia: kobieta, mężczyzna."
         },
         "bmi": {
           "id": "bmi",
@@ -305,7 +355,8 @@
           "id": "region"
         },
         "charges": {
-          "id": "opłaty"
+          "id": "opłaty",
+          "description": "Indywidualne koszty leczenia rozliczane przez ubezpieczenie zdrowotne."
         }
       },
       "card": {
@@ -329,6 +380,13 @@
           "id": "Popiół",
           "description": "Zawartość popiołu reprezentuje całkowitą zawartość minerałów w żywności. Mierzone w gramach (g)."
         },
+        "Beta Carotene": {
+          "id": "Beta karoten",
+          "description": "Rodzaj cząsteczki lipidów, mierzonej w miligramach (mg)."
+        },
+        "Carbohydrate": {
+          "id": "Węglowodany"
+        },
         "Cholesterol": {
           "id": "Cholesterol"
         },
@@ -338,23 +396,50 @@
         "Kilocalories": {
           "id": "Kilokalorie"
         },
+        "Lutein and Zeaxanthin": {
+          "id": "Luteina i zeaksantyna"
+        },
+        "Lycopene": {
+          "id": "Likopen"
+        },
         "Manganese": {
           "id": "Mangan"
         },
         "Niacin": {
           "id": "Niacyna"
         },
+        "Protein": {
+          "id": "Białko"
+        },
         "Retinol": {
           "id": "Retinol"
         },
+        "Riboflavin": {
+          "id": "Ryboflawina"
+        },
         "Selenium": {
           "id": "Selen"
+        },
+        "Sugar Total": {
+          "id": "Cukier całkowity"
+        },
+        "Thiamin": {
+          "id": "Tiamina"
         },
         "Water": {
           "id": "Woda"
         },
         "Fat: Monosaturated Fat": {
           "id": "Tłuszcz: Tłuszcz monosaturowany"
+        },
+        "Fat: Polysaturated Fat": {
+          "id": "Tłuszcz: tłuszcz wielonasycony"
+        },
+        "Fat: Saturated Fat": {
+          "id": "Tłuszcz: Tłuszcz nasycony"
+        },
+        "Fat: Total Lipid": {
+          "id": "Tłuszcz: całkowity lipid"
         },
         "Major Minerals: Calcium": {
           "id": "Główne minerały: wapń"
@@ -490,22 +575,49 @@
           "id": "Pozycja"
         },
         "Year": {
-          "id": "Rok"
+          "id": "Rok",
+          "description": "Rok rankingów (1996, 2001 lub 2014)."
+        },
+        "Company Founding Year": {
+          "id": "Rok założenia firmy",
+          "description": "Rok, w którym powstała ich firma."
         },
         "Company Name": {
-          "id": "Nazwa firmy"
+          "id": "Nazwa firmy",
+          "description": "Nazwa ich firmy."
+        },
+        "Company Relationship": {
+          "description": "Ich związek z firmą: np. „założyciel”, „CEO”, „prezes”)."
+        },
+        "Company Sector": {
+          "id": "Sektor Firmy",
+          "description": "Sektor, w którym znajduje się ich firma, np. „Finanse” lub „Oprogramowanie”."
         },
         "Company Type": {
-          "id": "Rodzaj firmy"
+          "id": "Rodzaj firmy",
+          "description": "Rodzaj firmy: czy była to nowa, sprywatyzowana firma, czy firma przejęta."
         },
         "Age": {
-          "id": "Wiek"
+          "id": "Wiek",
+          "description": "Ich wiek."
         },
         "Gender": {
-          "id": "Płeć"
+          "id": "Płeć",
+          "description": "Ich płeć"
+        },
+        "Citizenship": {
+          "id": "Obywatelstwo",
+          "description": "Kraj, w którym są oficjalnym obywatelem."
+        },
+        "Country of Residence": {
+          "id": "Kraj zamieszkania",
+          "description": "Kraj, w którym mieszkają."
         },
         "Region": {
           "id": "Region"
+        },
+        "Type Of Wealth": {
+          "id": "Rodzaj bogactwa"
         }
       },
       "card": {
@@ -520,10 +632,15 @@
           "id": "szkoła"
         },
         "sex": {
-          "id": "płeć"
+          "id": "płeć",
+          "description": "Płeć ucznia (binarna)."
         },
         "age": {
-          "id": "wiek"
+          "id": "wiek",
+          "description": "Wiek ucznia."
+        },
+        "address": {
+          "id": "adres"
         },
         "health": {
           "id": "zdrowie"
@@ -572,6 +689,9 @@
         "age": {
           "id": "wiek"
         },
+        "race": {
+          "id": "rasa"
+        },
         "gender": {
           "id": "płeć"
         }
@@ -589,6 +709,54 @@
         "Loneliness": {
           "id": "Samotność",
           "description": "Czuję się samotny w życiu."
+        },
+        "Movies": {
+          "id": "Filmy",
+          "description": "Lubię oglądać filmy"
+        },
+        "Horror": {
+          "id": "Horror",
+          "description": "Lubię horrory"
+        },
+        "Thriller": {
+          "id": "Dreszczowiec",
+          "description": "Lubię dreszczowce"
+        },
+        "Comedy": {
+          "id": "Komedia",
+          "description": "Lubię filmy komediowe"
+        },
+        "Romantic": {
+          "id": "Romantyczny",
+          "description": "Lubię romantyczne filmy"
+        },
+        "Sci-fi": {
+          "id": "Sci-Fi",
+          "description": "Lubię filmy science fiction"
+        },
+        "War": {
+          "id": "Wojna",
+          "description": "Lubię filmy wojenne"
+        },
+        "Fantasy/Fairy tales": {
+          "id": "Fantasy/Bajki",
+          "description": "Lubię filmy Fantasy/Bajki"
+        },
+        "Animated": {
+          "id": "Animowane",
+          "description": "Lubię filmy animowane"
+        },
+        "Documentary": {
+          "id": "Dokumentalny",
+          "description": "Lubię filmy dokumentalne"
+        },
+        "Western": {
+          "id": "Western",
+          "description": "Lubię westerny"
+        },
+        "Action": {
+          "id": "Akcja",
+          "description": "Lubię filmy akcji"
         }
       },
       "card": {
@@ -624,14 +792,33 @@
         "Country": {
           "id": "Kraj"
         },
+        "Director": {
+          "id": "Dyrektor",
+          "description": "Reżyser filmu."
+        },
+        "Genre": {
+          "description": "Gatunek filmu."
+        },
         "Name": {
-          "id": "Imię/Nazwisko"
+          "id": "Imię/Nazwisko",
+          "description": "Nazwa filmu."
+        },
+        "Released": {
+          "description": "Miesiąc, w którym został wydany."
         },
         "Star": {
-          "id": "Star"
+          "id": "Star",
+          "description": "Główny aktor lub aktorka."
+        },
+        "Votes": {
+          "id": "Głosy"
+        },
+        "Writer": {
+          "id": "Pisarz"
         },
         "Year": {
-          "id": "Rok"
+          "id": "Rok",
+          "description": "Rok, w którym został wydany."
         }
       },
       "card": {
@@ -692,7 +879,12 @@
         "Height": {
           "id": "Wysokość"
         },
+        "Shell weight": {
+          "id": "Masa skorupy",
+          "description": "Masa skorupy po wysuszeniu, w gramach."
+        },
         "Rings": {
+          "id": "Pierścienie",
           "description": "Wiek w latach."
         }
       },
@@ -731,11 +923,24 @@
         "onion": {
           "id": "cebula"
         },
+        "masago": {
+          "id": "masago"
+        },
         "wasabi": {
           "id": "wasabi"
         },
         "ginger": {
           "id": "imbir"
+        },
+        "seaweed": {
+          "id": "wodorost",
+          "description": "Czy w worku wmieszane są wodorosty?"
+        },
+        "furikake": {
+          "id": "furikake"
+        },
+        "surimi": {
+          "id": "surimi"
         },
         "chili": {
           "id": "chili"
@@ -755,13 +960,128 @@
     "student_survey": {
       "fields": {
         "Music": {
-          "id": "Muzyka"
+          "id": "Muzyka",
+          "description": "Lubię słuchać muzyki"
+        },
+        "Slow songs or fast songs": {
+          "id": "Powolne piosenki lub szybkie piosenki",
+          "description": "Wolę szybką muzykę"
         },
         "Dance": {
-          "id": "Taniec"
+          "id": "Taniec",
+          "description": "Lubię muzykę taneczną"
+        },
+        "Folk": {
+          "id": "Folk",
+          "description": "Lubię muzykę ludową"
         },
         "Country": {
-          "id": "Kraj"
+          "id": "Kraj",
+          "description": "Lubię muzykę country"
+        },
+        "Classical music": {
+          "id": "Muzyka klasyczna",
+          "description": "Lubię muzykę klasyczną"
+        },
+        "Musical": {
+          "id": "Musical",
+          "description": "Lubię muzykę musicalową"
+        },
+        "Pop": {
+          "id": "Pop",
+          "description": "Lubię muzykę pop"
+        },
+        "Rock": {
+          "id": "Rock",
+          "description": "Lubię muzykę rockową"
+        },
+        "Metal or Hardrock": {
+          "id": "Metal lub Hardrock",
+          "description": "Lubię muzykę Metal lub Hardrock"
+        },
+        "Punk": {
+          "id": "Punk",
+          "description": "Lubię muzykę punkową"
+        },
+        "Hiphop, Rap": {
+          "id": "Hiphop, Rap",
+          "description": "Lubię muzykę hiphop lub rap"
+        },
+        "Reggae, Ska": {
+          "id": "Reggae, Ska",
+          "description": "Lubię muzykę Reggae lub Ska"
+        },
+        "Swing, Jazz": {
+          "id": "Swing, Jazz",
+          "description": "Lubię muzykę Swing lub Jazz"
+        },
+        "Rock n roll": {
+          "id": "Rock n roll",
+          "description": "Lubię muzykę rock n roll"
+        },
+        "Alternative": {
+          "id": "Alternatywa",
+          "description": "Lubię muzykę alternatywną"
+        },
+        "Latino": {
+          "id": "Latynoski",
+          "description": "Lubię muzykę latynoską"
+        },
+        "Techno, Trance": {
+          "id": "Techno, Trance",
+          "description": "Lubię muzykę Techno lub Trance"
+        },
+        "Opera": {
+          "id": "Opera",
+          "description": "Lubię muzykę operową"
+        },
+        "Movies": {
+          "id": "Filmy",
+          "description": "Lubię oglądać filmy"
+        },
+        "Horror": {
+          "id": "Horror",
+          "description": "Lubię horrory"
+        },
+        "Thriller": {
+          "id": "Dreszczowiec",
+          "description": "Lubię dreszczowce"
+        },
+        "Comedy": {
+          "id": "Komedia",
+          "description": "Lubię filmy komediowe"
+        },
+        "Romantic": {
+          "id": "Romantyczny",
+          "description": "Lubię romantyczne filmy"
+        },
+        "Sci-fi": {
+          "id": "Sci-Fi",
+          "description": "Lubię filmy science fiction"
+        },
+        "War": {
+          "id": "Wojna",
+          "description": "Lubię filmy wojenne"
+        },
+        "Fantasy/Fairy tales": {
+          "id": "Fantasy/Bajki",
+          "description": "Lubię filmy Fantasy/Bajki"
+        },
+        "Animated": {
+          "id": "Animowane",
+          "description": "Lubię filmy animowane"
+        },
+        "Documentary": {
+          "id": "Dokumentalny",
+          "description": "Lubię filmy dokumentalne"
+        },
+        "Western": {
+          "id": "Western",
+          "description": "Lubię westerny"
+        },
+        "Action": {
+          "id": "Akcja",
+          "description": "Lubię filmy akcji"
         },
         "Internet": {
           "id": "Internet"
@@ -1047,6 +1367,10 @@
           "id": "Lody",
           "description": "Niezależnie od tego, czy lody były podawane jako deser."
         },
+        "Peach cobbler": {
+          "id": "Ciasto brzoskwiniowe",
+          "description": "Niezależnie od tego, czy brzoskwiniowe ciasto było podawane jako deser."
+        },
         "US region": {
           "id": "Region US",
           "description": "Część kraju, z której pochodził uczestnik."
@@ -1064,6 +1388,12 @@
       "fields": {
         "Chicken": {
           "id": "Kurczak"
+        },
+        "Hot Sauce": {
+          "id": "Gorący sos"
+        },
+        "Sour Cream": {
+          "id": "Śmietana"
         },
         "Cheese": {
           "id": "Ser"
@@ -1084,13 +1414,80 @@
           "description": "Czuję się samotny w życiu."
         },
         "Music": {
-          "id": "Muzyka"
+          "id": "Muzyka",
+          "description": "Lubię słuchać muzyki"
+        },
+        "Slow songs or fast songs": {
+          "id": "Powolne piosenki lub szybkie piosenki",
+          "description": "Wolę szybką muzykę"
         },
         "Dance": {
-          "id": "Taniec"
+          "id": "Taniec",
+          "description": "Lubię muzykę taneczną"
+        },
+        "Folk": {
+          "id": "Folk",
+          "description": "Lubię muzykę ludową"
         },
         "Country": {
-          "id": "Kraj"
+          "id": "Kraj",
+          "description": "Lubię muzykę country"
+        },
+        "Classical music": {
+          "id": "Muzyka klasyczna",
+          "description": "Lubię muzykę klasyczną"
+        },
+        "Musical": {
+          "id": "Musical",
+          "description": "Lubię muzykę musicalową"
+        },
+        "Pop": {
+          "id": "Pop",
+          "description": "Lubię muzykę pop"
+        },
+        "Rock": {
+          "id": "Rock",
+          "description": "Lubię muzykę rockową"
+        },
+        "Metal or Hardrock": {
+          "id": "Metal lub Hardrock",
+          "description": "Lubię muzykę Metal lub Hardrock"
+        },
+        "Punk": {
+          "id": "Punk",
+          "description": "Lubię muzykę punkową"
+        },
+        "Hiphop, Rap": {
+          "id": "Hiphop, Rap",
+          "description": "Lubię muzykę hiphop lub rap"
+        },
+        "Reggae, Ska": {
+          "id": "Reggae, Ska",
+          "description": "Lubię muzykę Reggae lub Ska"
+        },
+        "Swing, Jazz": {
+          "id": "Swing, Jazz",
+          "description": "Lubię muzykę Swing lub Jazz"
+        },
+        "Rock n roll": {
+          "id": "Rock n roll",
+          "description": "Lubię muzykę rock n roll"
+        },
+        "Alternative": {
+          "id": "Alternatywa",
+          "description": "Lubię muzykę alternatywną"
+        },
+        "Latino": {
+          "id": "Latynoski",
+          "description": "Lubię muzykę latynoską"
+        },
+        "Techno, Trance": {
+          "id": "Techno, Trance",
+          "description": "Lubię muzykę Techno lub Trance"
+        },
+        "Opera": {
+          "id": "Opera",
+          "description": "Lubię muzykę operową"
         }
       },
       "card": {

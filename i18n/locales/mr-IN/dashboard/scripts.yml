@@ -1701,10 +1701,18 @@ mr:
         csp5-2023:
           lesson_groups:
             csp_lists:
-              display_name: याद्या
+              display_name: डेटा
             csp_loops:
               display_name: लूप्स
             csp_project:
+              display_name: प्रकल्प
+        csp6-2023:
+          lesson_groups:
+            csp_unit6_2020:
+              display_name: याद्या
+            lessonGroup-3:
+              display_name: लूप्स
+            lessonGroup-5:
               display_name: प्रकल्प
         csp-playground:
           description_audience: अभ्यासक्रम लेखक

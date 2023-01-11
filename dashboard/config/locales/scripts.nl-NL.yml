@@ -2820,10 +2820,18 @@ nl:
         csp5-2023:
           lesson_groups:
             csp_lists:
-              display_name: Lijsten
+              display_name: Data
             csp_loops:
               display_name: Lussen
             csp_project:
+              display_name: Project
+        csp6-2023:
+          lesson_groups:
+            csp_unit6_2020:
+              display_name: Lijsten
+            lessonGroup-3:
+              display_name: Lussen
+            lessonGroup-5:
               display_name: Project
         csp7-2023:
           lesson_groups:
