@@ -45,9 +45,16 @@ const initialState = {
   [STATUS_BOARD_COMPONENTS]: Status.WAITING
 };
 
-let setupChecker;
-
 export default class SetupChecklist extends Component {
+  constructor(props) {
+    super(props);
+    const {webSerialPort} = this.props;
+    const wrappedSerialPort = webSerialPort
+      ? new WebSerialPortWrapper(webSerialPort)
+      : null;
+    this.setupChecker = new SetupChecker(wrappedSerialPort);
+  }
+
   state = {...initialState};
 
   static propTypes = {
@@ -72,11 +79,6 @@ export default class SetupChecklist extends Component {
   }
 
   detect() {
-    const {webSerialPort} = this.props;
-    const wrappedSerialPort = webSerialPort
-      ? new WebSerialPortWrapper(webSerialPort)
-      : null;
-    setupChecker = new SetupChecker(wrappedSerialPort);
     this.setState({...initialState, isDetecting: true});
 
     Promise.resolve()
@@ -84,7 +86,7 @@ export default class SetupChecklist extends Component {
       // Are we using a compatible browser?
       .then(() =>
         this.detectStep(STATUS_SUPPORTED_BROWSER, () =>
-          setupChecker.detectSupportedBrowser()
+          this.setupChecker.detectSupportedBrowser()
         )
       )
 
@@ -95,22 +97,22 @@ export default class SetupChecklist extends Component {
           (isChromeOS() || isChrome()) &&
           !shouldUseWebSerial() &&
           this.detectStep(STATUS_APP_INSTALLED, () =>
-            setupChecker.detectChromeAppInstalled()
+            this.setupChecker.detectChromeAppInstalled()
           )
       )
 
       // Is board plugged in?
       .then(() =>
         this.detectStep(STATUS_BOARD_PLUG, () =>
-          setupChecker.detectBoardPluggedIn()
+          this.setupChecker.detectBoardPluggedIn()
         )
       )
 
       // What type of board is this?
       .then(() => {
-        this.setState({boardTypeDetected: setupChecker.detectBoardType()});
+        this.setState({boardTypeDetected: this.setupChecker.detectBoardType()});
         if (experiments.isEnabled('microbit')) {
-          console.log('Board detected: ' + setupChecker.detectBoardType());
+          console.log('Board detected: ' + this.setupChecker.detectBoardType());
         }
         Promise.resolve();
       })
@@ -118,7 +120,7 @@ export default class SetupChecklist extends Component {
       // Can we talk to the firmware?
       .then(() =>
         this.detectStep(STATUS_BOARD_CONNECT, () =>
-          setupChecker.detectCorrectFirmware(this.state.boardTypeDetected)
+          this.setupChecker.detectCorrectFirmware(this.state.boardTypeDetected)
         )
       )
 
@@ -126,7 +128,7 @@ export default class SetupChecklist extends Component {
       .then(() => {
         if (this.state.boardTypeDetected !== BOARD_TYPE.MICROBIT) {
           return this.detectStep(STATUS_BOARD_COMPONENTS, () =>
-            setupChecker.detectComponentsInitialize()
+            this.setupChecker.detectComponentsInitialize()
           );
         }
         return Promise.resolve();
@@ -140,7 +142,7 @@ export default class SetupChecklist extends Component {
             : STATUS_BOARD_COMPONENTS
         )
       )
-      .then(() => setupChecker.celebrate())
+      .then(() => this.setupChecker.celebrate())
       .then(() => this.succeed(STATUS_BOARD_COMPONENTS))
       .then(() => trackEvent('MakerSetup', 'ConnectionSuccess'))
 
@@ -157,7 +159,7 @@ export default class SetupChecklist extends Component {
 
       // Finally...
       .then(() => {
-        setupChecker.teardown();
+        this.setupChecker.teardown();
         this.setState({isDetecting: false});
       });
   }
@@ -318,7 +320,7 @@ export default class SetupChecklist extends Component {
                 className="btn"
                 type="button"
                 value={applabI18n.makerSetupCalibrateCompass()}
-                onClick={() => setupChecker.calibrateCompass()}
+                onClick={() => this.setupChecker.calibrateCompass()}
                 disabled={this.state.isDetecting}
                 title={applabI18n.makerSetupCalibrateCompassDescription()}
               />
