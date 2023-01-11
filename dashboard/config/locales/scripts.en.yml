@@ -9404,6 +9404,8 @@ en:
               name: Particles Lesson 4
             lesson-6:
               name: Katie Testing
+            lesson-7:
+              name: Maze functions
           lesson_groups: {}
           name: csc-playground
           title: CSC Playground
