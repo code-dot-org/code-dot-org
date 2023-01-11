@@ -83,13 +83,13 @@ class ManifestBuilder
             # Strip aliases from metadata - they're no longer needed since they
             #   are represented in the alias map.
             # Also sort for stable updates
-            'metadata': sound_metadata.hmap {|k, v| [k, v.omit!('aliases')]}.sort.to_h,
+            metadata: sound_metadata.hmap {|k, v| [k, v.omit!('aliases')]}.sort.to_h,
 
             # Sort category map for stable updates
-            'categories': category_map.sort.to_h,
+            categories: category_map.sort.to_h,
 
             # Sort alias map for stable updates
-            'aliases': alias_map.sort.to_h
+            aliases: alias_map.sort.to_h
           }
         )
       )
