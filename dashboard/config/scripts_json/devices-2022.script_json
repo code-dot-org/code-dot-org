@@ -17,7 +17,7 @@
     },
     "new_name": null,
     "family_name": "devices",
-    "serialized_at": "2022-12-15 21:02:40 UTC",
+    "serialized_at": "2023-01-06 22:31:07 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -79,7 +79,7 @@
       "relative_position": 1,
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "overview": "This unit assumes students are already familiar with App Lab, so we recommend starting with the App Lab Hour of Code which is included below. If your students are already familiar with App Lab, you may decide to skip this lesson. [Click here to learn more about hiding this lesson](https://support.code.org/hc/en-us/articles/115001479372-How-can-I-hide-certain-units-or-lessons-from-my-students), allowing your classes to start right away with Physical Computing\n\nThis tutorial is designed to quickly introduce the App Lab programming environment as a powerful tool for building and sharing apps. The tutorial itself teaches students to create and control buttons, text, images, sounds, and screens in JavaScript using either blocks or text. At the end of the tutorial, students are given time to either extend a project they started building into a \"Choose Your Own Adventure\", \"Greeting Card\", or \"Personality Quiz\" app. They can also continue on to build more projects featured on the code.org/applab page. ",
+        "overview": "This unit assumes students are already familiar with App Lab, so we recommend starting with the App Lab Hour of Code which is included in this lesson. If your students are already familiar with App Lab, you may decide to skip this lesson, which requires hiding it from students in the unit overview page. [Click here to learn more about hiding this lesson](https://support.code.org/hc/en-us/articles/115001479372-How-can-I-hide-certain-units-or-lessons-from-my-students), allowing your classes to start right away with Physical Computing\n\nThis tutorial is designed to quickly introduce the App Lab programming environment as a powerful tool for building and sharing apps. The tutorial itself teaches students to create and control buttons, text, images, sounds, and screens in JavaScript using either blocks or text. At the end of the tutorial, students are given time to either extend a project they started building into a \"Choose Your Own Adventure\", \"Greeting Card\", or \"Personality Quiz\" app. They can also continue on to build more projects featured on the code.org/applab page. ",
         "preparation": "- Review and complete the online tutorial yourself\n- Print one or more of the [Exit Ticket examples](https://docs.google.com/a/code.org/document/d/1ylIlO7Pppk6W3Jt58VHS5mjvnshg9URvj3iCU0Ok6qY/edit?usp=sharing) at the end of this lesson plan, or create your own. \n",
         "student_overview": "Learn about App Lab, which lets you create apps with code! You'll learn to create and control buttons, text, images, sounds, and screens. At the end of the lesson, you will be able to extend a project you started building into a \"Choose Your Own Adventure\", \"Greeting Card\", or \"Personality Quiz\" app. "
       },
@@ -1296,19 +1296,6 @@
       },
       "seeding_key": {
         "lesson_activity.key": "ceedd762-706b-4995-ab79-ed948f2255e8",
-        "lesson.key": "Physical Outputs and LEDs",
-        "lesson_group.key": "lessonGroup-4",
-        "script.name": "devices-2022"
-      }
-    },
-    {
-      "key": "a2c9d14a-d28b-4540-96bf-aa1bde5555bf",
-      "position": 4,
-      "properties": {
-        "name": "Lesson Feedback"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "a2c9d14a-d28b-4540-96bf-aa1bde5555bf",
         "lesson.key": "Physical Outputs and LEDs",
         "lesson_group.key": "lessonGroup-4",
         "script.name": "devices-2022"
@@ -4982,17 +4969,6 @@
       }
     },
     {
-      "key": "113d8eb4-336a-4bce-a38a-24c8db7638ec",
-      "position": 1,
-      "properties": {
-        "description": "Please let us know how this lesson went!\n\n- [**Report a Typo / Bug / Unclear Directions**](https://docs.google.com/forms/d/e/1FAIpQLScLFkt7rtQSeHB3AtYpYuENtiwl3kRD1qg8J02bxS0ow5l42A/viewform?usp=sf_link)\n- [**Submit General Feedback on the Lesson**](https://docs.google.com/forms/d/e/1FAIpQLSfROQdamfLnHVn11tsjHsGPElKhC5LzDfHFEqhaj0igtsqHAA/viewform?usp=sf_link)\n- [**Share Takeaways and Experiences in the Forum!**](https://forum.code.org/c/csd-unit-6-pilot/442)"
-      },
-      "seeding_key": {
-        "activity_section.key": "113d8eb4-336a-4bce-a38a-24c8db7638ec",
-        "lesson_activity.key": "a2c9d14a-d28b-4540-96bf-aa1bde5555bf"
-      }
-    },
-    {
       "key": "d9448ec7-bfa1-482c-9ba0-bd67b387e205",
       "position": 1,
       "properties": {
@@ -5708,6 +5684,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "devices-pre-survey-levelgroup_2022"
+        ],
         "progression": "Check-In Survey"
       },
       "bonus": false,
@@ -9405,6 +9384,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "devices-post-survey-levelgroup_2022"
+        ],
         "progression": "End-Of-Unit Survey"
       },
       "bonus": false,
@@ -11729,6 +11711,18 @@
       }
     },
     {
+      "name": "Exemplar-Programming and The Problem Solving Process",
+      "url": "https://docs.google.com/document/d/1kQbtzMyQyCs1Z0RQWJ1vU3tzKZ2nvFEn885wMNN3pDE/edit?usp=sharing",
+      "key": "exemplar-programming_and_the_problem_solving_process",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Exemplar"
+      },
+      "seeding_key": {
+        "resource.key": "exemplar-programming_and_the_problem_solving_process"
+      }
+    },
+    {
       "name": "Exemplar 1 - City Silhouette",
       "url": "https://docs.google.com/document/d/1uh66nCn4WxChNRU8rwmmBmTWPRCNepLFux-vinawm3Y/view",
       "key": "exemplar_1_-_city_silhouette",
@@ -13025,6 +13019,12 @@
       "seeding_key": {
         "lesson.key": "lesson-11",
         "resource.key": "_key_physical_computing_word_search"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-11",
+        "resource.key": "exemplar-programming_and_the_problem_solving_process"
       }
     },
     {

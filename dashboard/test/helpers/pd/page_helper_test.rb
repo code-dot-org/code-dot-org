@@ -13,7 +13,7 @@ class Pd::PageHelperTest < ActionView::TestCase
 
   test 'new_page_button' do
     expects(:link_to).with('<', {page: 1}, class: 'btn btn-default')
-    new_page_button '<', page: 1
+    new_page_button '<', {page: 1}
   end
 
   test 'new_page_size_button' do
