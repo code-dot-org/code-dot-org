@@ -14,13 +14,14 @@ export default function MultiSelectGroup({name, required, options}) {
   return (
     <div className={styles.multiSelectGroup}>
       <fieldset>
-        {options.map((option, index) =>
-          MultiSelectButton({
-            name: inputName,
-            value: option.value,
-            label: option.label,
-            required: required ? !values.some(v => !!v) : false,
-            onChange: event => {
+        {options.map((option, index) => (
+          <MultiSelectButton
+            name={inputName}
+            value={option.value}
+            key={option.value}
+            label={option.label}
+            required={required ? !values.some(v => !!v) : false}
+            onChange={event => {
               const newValue = event.target.checked;
               const newValues = values.map((v, i) => {
                 if (i === index) {
@@ -32,9 +33,9 @@ export default function MultiSelectGroup({name, required, options}) {
 
               // Reset validity so it gets checked again.
               event.target.setCustomValidity('');
-            }
-          })
-        )}
+            }}
+          />
+        ))}
       </fieldset>
     </div>
   );
