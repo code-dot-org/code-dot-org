@@ -45,6 +45,8 @@ const initialState = {
   [STATUS_BOARD_COMPONENTS]: Status.WAITING
 };
 
+let setupChecker;
+
 export default class SetupChecklist extends Component {
   state = {...initialState};
 
@@ -74,7 +76,7 @@ export default class SetupChecklist extends Component {
     const wrappedSerialPort = webSerialPort
       ? new WebSerialPortWrapper(webSerialPort)
       : null;
-    const setupChecker = new SetupChecker(wrappedSerialPort);
+    setupChecker = new SetupChecker(wrappedSerialPort);
     this.setState({...initialState, isDetecting: true});
 
     Promise.resolve()
@@ -309,6 +311,18 @@ export default class SetupChecklist extends Component {
             onClick={this.redetect.bind(this)}
             disabled={this.state.isDetecting}
           />
+          {experiments.isEnabled('microbit') &&
+            this.state.boardTypeDetected === BOARD_TYPE.MICROBIT && (
+              <input
+                style={{marginLeft: 9, marginTop: -4}}
+                className="btn"
+                type="button"
+                value={applabI18n.makerSetupCalibrateCompass()}
+                onClick={() => setupChecker.calibrateCompass()}
+                disabled={this.state.isDetecting}
+                title={applabI18n.makerSetupCalibrateCompassDescription()}
+              />
+            )}
         </h2>
         <div className="setup-status">
           {this.renderPlatformSpecificSteps()}
