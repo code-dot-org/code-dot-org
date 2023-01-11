@@ -188,8 +188,6 @@ class UnconnectedMusicView extends React.Component {
 
     this.executeSong();
 
-    console.log('onBlockSpaceChange', Blockly.getWorkspaceCode());
-
     this.analyticsReporter.onBlocksUpdated(
       this.musicBlocklyWorkspace.getAllBlocks()
     );
@@ -248,8 +246,6 @@ class UnconnectedMusicView extends React.Component {
     this.player.playSong();
 
     this.setState({isPlaying: true, currentAudioElapsedTime: 0});
-
-    console.log('playSong', Blockly.getWorkspaceCode());
   };
 
   stopSong = () => {
