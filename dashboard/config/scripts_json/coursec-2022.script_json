@@ -32,7 +32,7 @@
     },
     "new_name": null,
     "family_name": "coursec",
-    "serialized_at": "2023-01-09 18:46:48 UTC",
+    "serialized_at": "2023-01-11 02:37:23 UTC",
     "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -1470,6 +1470,19 @@
       },
       "seeding_key": {
         "lesson_activity.key": "74e2ce00-926c-4dff-9ffe-161c3e10e05e",
+        "lesson.key": "End of Course Project",
+        "lesson_group.key": "end_of_course_project",
+        "script.name": "coursec-2022"
+      }
+    },
+    {
+      "key": "b351a875-cdc3-4da8-a2c0-fb84cee29102",
+      "position": 4,
+      "properties": {
+        "name": "Extended Learning"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "b351a875-cdc3-4da8-a2c0-fb84cee29102",
         "lesson.key": "End of Course Project",
         "lesson_group.key": "end_of_course_project",
         "script.name": "coursec-2022"
@@ -4056,6 +4069,18 @@
       "seeding_key": {
         "activity_section.key": "5f1c9827-a478-4cf6-98b2-8834ef534cff",
         "lesson_activity.key": "74e2ce00-926c-4dff-9ffe-161c3e10e05e"
+      }
+    },
+    {
+      "key": "e79ff65f-c393-4328-8530-e40474ddbca1",
+      "position": 1,
+      "properties": {
+        "description": "To build on the skills you learned in CS Fundamentals Course C, click [here](https://code.org/maker/csf-microbit) to check out Extension Lessons with Micro:bit. These 4 micro:bit lessons cover the following topics: Meet your micro:bit, Events, Inputs and outputs, Sequencing, Loops, Data, and Variables.",
+        "name": "Micro:bit Extension Lessons"
+      },
+      "seeding_key": {
+        "activity_section.key": "e79ff65f-c393-4328-8530-e40474ddbca1",
+        "lesson_activity.key": "b351a875-cdc3-4da8-a2c0-fb84cee29102"
       }
     }
   ],

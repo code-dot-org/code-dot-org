@@ -33,7 +33,7 @@
     },
     "new_name": null,
     "family_name": "coursef",
-    "serialized_at": "2023-01-09 18:47:40 UTC",
+    "serialized_at": "2023-01-11 02:34:50 UTC",
     "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -4191,6 +4191,18 @@
       },
       "seeding_key": {
         "activity_section.key": "c3102dcc-a35a-489f-8461-06e0aa3d5125",
+        "lesson_activity.key": "6683243e-d006-4ef6-9f65-a53b80a1ecf6"
+      }
+    },
+    {
+      "key": "d7eee78e-d5fd-418e-9dce-3cb0f1be8122",
+      "position": 2,
+      "properties": {
+        "description": "To build on the skills you learned in CS Fundamentals Course F, click [here](http://code.org/maker/csf-microbit) to check out Extension Lessons with Micro:bit. These 4 micro:bit lessons cover the following topics: Meet your micro:bit, Variables, Data, Events, Simulation, Loops, and Conditionals.",
+        "name": "Micro:bit Extension Lessons"
+      },
+      "seeding_key": {
+        "activity_section.key": "d7eee78e-d5fd-418e-9dce-3cb0f1be8122",
         "lesson_activity.key": "6683243e-d006-4ef6-9f65-a53b80a1ecf6"
       }
     }

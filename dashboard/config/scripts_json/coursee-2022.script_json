@@ -32,7 +32,7 @@
     },
     "new_name": null,
     "family_name": "coursee",
-    "serialized_at": "2023-01-09 18:47:11 UTC",
+    "serialized_at": "2023-01-11 02:35:37 UTC",
     "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -1497,6 +1497,19 @@
       },
       "seeding_key": {
         "lesson_activity.key": "f4c94b25-e0f0-4caa-bebd-1557f771a849",
+        "lesson.key": "End of Course Project",
+        "lesson_group.key": "end_of_course_project",
+        "script.name": "coursee-2022"
+      }
+    },
+    {
+      "key": "07ac5b5f-997f-4ee3-bbd3-45cb1aeca6af",
+      "position": 6,
+      "properties": {
+        "name": "Extended Learning"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "07ac5b5f-997f-4ee3-bbd3-45cb1aeca6af",
         "lesson.key": "End of Course Project",
         "lesson_group.key": "end_of_course_project",
         "script.name": "coursee-2022"
@@ -3700,6 +3713,18 @@
       "seeding_key": {
         "activity_section.key": "9946dfc7-dce9-4ead-bbdc-aec0d224bbc9",
         "lesson_activity.key": "f4c94b25-e0f0-4caa-bebd-1557f771a849"
+      }
+    },
+    {
+      "key": "be35b565-6d45-46fa-ae1a-c5d1aeb2f901",
+      "position": 1,
+      "properties": {
+        "description": "To build on the skills you learned in CS Fundamentals Course E, click [here](https://code.org/maker/csf-microbit) to check out Extension Lessons with Micro:bit. These 4 micro:bit lessons cover the following topics: Meet your micro:bit, Events, Impacts of computing, Designing for\nAccessibility, Loops, Conditionals: (if...then), and Functions.\n",
+        "name": "Micro:bit Extension Lessons"
+      },
+      "seeding_key": {
+        "activity_section.key": "be35b565-6d45-46fa-ae1a-c5d1aeb2f901",
+        "lesson_activity.key": "07ac5b5f-997f-4ee3-bbd3-45cb1aeca6af"
       }
     }
   ],
