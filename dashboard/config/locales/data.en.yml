@@ -724,6 +724,7 @@ en:
         PL_CSD_CircuitPlayground_Overview_AppsWithDevices: Circuit Playground Unit Overview
         csa-day-in-pm-pl: What does a project manager do?
         csa-pl-intro-to-pm: Introduction to Project Managment
+        PL_CSD_CircuitPlayground_Setup: Circuit Playground Setup
     callout:
       text:
         drag_blocks: Drag a "move" block and snap it below the other block
