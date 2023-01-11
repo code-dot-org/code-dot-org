@@ -86,11 +86,14 @@ module Cdo
           if value.is_a?(Secret)
             begin
               # First try looking for a Stack-specific secret.
-              cdo_secrets.get!(stack_specific_secret_path)
-            rescue Aws::SecretsManager::Errors::ResourceNotFoundException => error
+              stack_specific_secret_path ? cdo_secrets.get!(stack_specific_secret_path) : cdo_secrets.get!(value.key)
+            rescue Aws::SecretsManager::Errors::ValidationException
+              # We're likely executing in an environment that's not part of a CloudFormation Stack, so the secret name was
+              # invalid (nil). Fall back to looking up the environment type secret.
+              cdo_secrets.get!(value.key)
+            rescue Aws::SecretsManager::Errors::ResourceNotFoundException
               # Fall back to looking up a secret shared by all deployments with the same environment-type
               # ('development', 'test', 'production', etc.).
-              CDO.log.info error
               cdo_secrets.get!(value.key)
             end
           else
