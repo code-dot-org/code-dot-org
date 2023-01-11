@@ -137,7 +137,7 @@ class CourseUnitModuleSelectionTest < ActionView::TestCase
     answers_data = Hash.new
 
     answers_map.each do |evaluation_multi, answer|
-      answers_data[evaluation_multi.id] = {'result': evaluation_multi.answers.find_index {|x| x['text'] == answer}.to_s}
+      answers_data[evaluation_multi.id] = {result: evaluation_multi.answers.find_index {|x| x['text'] == answer}.to_s}
     end
 
     level_source = create(:level_source, level: @evaluation, data: answers_data.to_json)
