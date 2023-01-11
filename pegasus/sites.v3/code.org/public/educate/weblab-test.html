@@ -1,0 +1,177 @@
+<div id="main-content" class="container">
+  <div class="row">
+    <div class="col-md-6">
+      <div class="form-group">
+        <h1>Web Lab Network Support Check</h1>
+        <p>
+          Use this page to test your school's network support for our Web Lab
+          modules. Web Lab communicates with domains which may be blocked by
+          some school systems’ networks or device policies. If the network check
+          is unsuccessful, you will need to reach out to your school's IT
+          department to update your school's firewall settings or device
+          policies.
+        </p>
+        <p>
+          When checking network support, try to meet as many of these criteria
+          as possible:
+        </p>
+        <li>Use your school's internet connection</li>
+        <li>Use a student computer</li>
+        <li>Log into the computer with a student account</li>
+        <br />
+        <p>
+          Note: You do not need to be logged in to Code.org for this test to be
+          successful.
+        </p>
+        <label for="connect"
+          >Click "Connect" to check whether your school's network supports the
+          Web Lab tool</label
+        >
+        <div id="status-table">
+          <table>
+            <tbody>
+              <tr>
+                <th>Check</th>
+                <th>Status</th>
+              </tr>
+              <tr>
+                <td>
+                  Connected to
+                  <code>https://downloads.computinginthecore.org</code>
+                </td>
+                <td class="computinginthecore">
+                  <p class="incomplete">Not complete</p>
+                  <p class="loading" style="display: none">Connecting...</p>
+                  <p class="succeeded" style="display: none">Success</p>
+                  <p class="failed" style="display: none">Failed</p>
+                </td>
+              </tr>
+              <tr>
+                <td>Connected to <code>https://codeprojects.org</code></td>
+                <td class="codeprojects">
+                  <p class="incomplete">Not complete</p>
+                  <p class="loading" style="display: none">Connecting...</p>
+                  <p class="succeeded" style="display: none">Success</p>
+                  <p class="failed" style="display: none">Failed</p>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div>
+          <button id="connect" class="btn btn-primary">Connect</button>
+        </div>
+        <p id="success-message" style="display: none">
+          <strong>You passed all checks! No further action is needed.</strong>
+        </p>
+        <div id="fail-message" style="display: none">
+          <p>
+            <strong>Error. One or more checks failed.</strong>
+          </p>
+          <p>
+            <strong>Action required: </strong>
+            Please contact your IT department to update your school’s firewall
+            settings or device policies. Contact our Support Team (<a
+              href="mailto:support@code.org"
+              >support@code.org</a
+            >) if you have any questions.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+  function testImageAccess(url, callback = () => {}) {
+    return new Promise((resolve, reject) => {
+      const element = new Image();
+      element.src = url;
+
+      let succeeded = false;
+      element.onerror = () => {
+        callback(new Error());
+        reject();
+      };
+      element.onload = () => {
+        succeeded = true;
+        callback();
+        resolve();
+      };
+      setTimeout(() => {
+        if (!succeeded) {
+          callback(new Error());
+          reject();
+        }
+      }, 3000);
+
+      // store a reference to the element so it doesn't get collected
+      window.testImages = window.testImages || [];
+      window.testImages.push(element);
+    });
+  }
+
+  function setAttribute(selector, obj) {
+    Array.from(document.querySelectorAll(selector)).forEach((element) =>
+      Object.keys(obj).forEach((key) => {
+        element.setAttribute(key, obj[key]);
+      })
+    );
+  }
+
+  function connect() {
+    setAttribute(
+      ".incomplete, .succeeded, .failed, #success-message, #fail-message",
+      { style: "display: none" }
+    );
+    setAttribute(".loading", { style: "display: block" });
+
+    const computingInTheCorePromise = testImageAccess(
+      "https://downloads.computinginthecore.org/favicon.ico?" + Math.random(),
+      (err) => {
+        if (!err) {
+          setAttribute(".computinginthecore > .loading", {
+            style: "display: none",
+          });
+          setAttribute(".computinginthecore > .succeeded", {
+            style: "display: block",
+          });
+        } else {
+          setAttribute(".computinginthecore > .loading", {
+            style: "display: none",
+          });
+          setAttribute(".computinginthecore > .failed", {
+            style: "display: block",
+          });
+        }
+      }
+    );
+
+    const codeProjectsPromise = testImageAccess(
+      "https://codeprojects.org/favicon.ico?" + Math.random(),
+      (err) => {
+        if (!err) {
+          setAttribute(".codeprojects > .loading", { style: "display: none" });
+          setAttribute(".codeprojects > .succeeded", {
+            style: "display: block",
+          });
+        } else {
+          setAttribute(".codeprojects > .loading", { style: "display: none" });
+          setAttribute(".codeprojects > .failed", {
+            style: "display: block",
+          });
+        }
+      }
+    );
+
+    return Promise.all([computingInTheCorePromise, codeProjectsPromise])
+      .then(() => setAttribute("#success-message", { style: "display: block" }))
+      .catch(() => {
+        setAttribute("#fail-message", { style: "display: block" });
+      });
+  }
+  $(function () {
+    $("#connect").click(function () {
+      connect();
+    });
+  });
+</script>

@@ -1,0 +1,102 @@
+---
+title: I'm a Maker | Learn about Physical Computing
+video_player: true
+theme: responsive
+style_min: true
+---
+
+{{ ai_header_stylesheets_links }}
+<link href="/css/video-responsive.css" rel="stylesheet">
+<style>html {scroll-behavior: smooth}</style>
+
+# I'm a Maker!
+## Explore your creativity with physical computing
+What is a maker?  Makers invent, explore, innovate, and create using technology like development boards, robotics, 3D printing, programming, and more. Maker education takes STEM (Science, Technology, Engineering, Mathematics) a step further by inviting hands-on experience and collaboration into the classroom to help teach problem solving and critical thinking. Code.org has previously incorporated maker education into our CS Discoveries curriculum, but we're now proud to provide new offerings for a variety of classrooms!
+
+<div style="margin-top: 3em;">
+  <div class="col-50">
+    <a href="#codeorg-devices">
+      <img src="/images/maker/codeorg-topsquare.png" alt="Creating Apps with Devices" style="width: 98%"/>
+    </a>
+  </div>
+  <div class="col-50">
+    <a href="#microbit-resources">
+      <img src="/images/maker/microbit-topsquare.png" alt="Microbit Resources" style="width: 98%"/>
+    </a>
+  </div>
+ <div class="clear"></div>
+</div>
+
+## Why physical computing?
+- Real-world applications: Physical computing can be used to teach many aspects of computer science, including sensing technologies, feedback and control mechanisms, and methods of prototyping. [Source.](https://doi.org/10.1145/2632320.2632336)
+- Learning efficacy: In one [study](https://www.iejee.com/index.php/IEJEE/article/view/1233), students who took lessons in physical computing showed an improved understanding of computational concepts.
+- Inclusion and engagement: Using a physical device can help students engage and connect the actions on a screen to their impact in the real world. Plus, according to a BBC survey, female students in particular described feeling more confident after exposure to physical computing.
+- Social and emotional learning: Physical computing encourages students to work together, fostering collaboration, interpersonal skills, and active learning. [Source.](https://www.microsoft.com/en-us/research/uploads/prod/2020/04/physical-computing.pdf)
+
+<a id="codeorg-devices"></a>
+<div style="background: url(/images/maker/pagebanner.png) top left no-repeat #00adbc;padding:10px 20px 10px; color:#ffffff; margin:2em auto">
+  <div class="col-60" style="margin-bottom:15px">
+    <h2 style="color:#ffffff; margin-top:25px">Creating Apps with Devices</h2><p>Every day, we use devices that help us accomplish tasks both big and small. When students learn to program these devices, foundational computer science comes alive! In this standalone unit, students will learn the fundamentals of programming devices.</p>
+    <a class="linktag" id="aimodule" href="https://studio.code.org/s/devices?viewAs=Instructor" target="_blank"><button>Explore the unit</button></a>
+    <a href="https://studio.code.org/maker/setup" style="margin-left: .75em" target="_blank" rel="noopener noreferrer"><button>Device setup</button></a>
+  </div>
+  <div class="col-40" style="padding: 30px 10px 0 20px;margin-bottom:15px" ><p  style="text-align:right;"><img src="/images/maker/circuitplayground-no-bg.gif" style="max-width: 60%" alt="Physical Computing"/></div>
+  <div class="clear"></div>
+</div>
+
+
+<a id="about-aimodule"></a>
+
+### What to expect
+<div>
+  <div class="col-50">
+    <p>In "Creating Apps with Devices," Code.org's new standalone unit, students explore the role of physical devices in computing. Using App Lab and Adafruit’s <a href="https://code.org/circuitplayground">Circuit Playground</a>, students develop programs that utilize the same hardware inputs and outputs that you see in smart devices, looking at how a simple prototype can lead to a finished product. Then, students explore how physical devices can be used to react to the world around them using a “maker” mindset to create prototypes with everyday materials.</p>
+    <figure class="video-responsive" style="margin: 2em auto">
+      <div>
+        <iframe src="https://www.youtube.com/embed/9_Z1hvx22us" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+      </div>
+    </figure>
+    <p>By the end of the unit, students will be able to create an app that controls a device, similar to many "smart" hardware they may experience in their day-to-day lives. They’ll also have created an interactive art project and developed a prototype for a physical device that solves a problem.</p>
+    <p><a class="linktag" id="aimodule2" href="https://studio.code.org/s/devices?viewAs=Instructor" target="_blank"><button>Explore the unit</button></a></p>
+  </div>
+  <div class="col-50" style="padding: 0 0 15px 25px"><p  style="text-align:right;"><img src="/images/maker/c-final.gif" style="max-width: 60%"/></p></div>
+  <div class="clear"></div>
+</div>
+
+
+### Why Code.org?
+- Our physical computing unit allows students to make an app connected to their device, rather than coding a device disconnected from the screen.
+- This unit is connected to Code.org's App Lab, so you can use all of your favorite App Lab features (like databases and graphics) with the physical computing device!
+
+### Professional learning
+This self-paced online unit is intended as an 150-minute introduction to our optional unit on physical computing.
+
+Through completing this online unit, participants will:
+
+- Get an introduction to Physical Computing.
+- Practice key concepts included in the unit.
+- Engage with the maker app.
+- Explore end of chapter projects.
+
+<a class="linktag" id="aimodule2" href="https://studio.code.org/s/devices?viewAs=Instructor" target="_blank"><button>Learn more</button></a>
+
+### Hour of Code
+Interested in incorporating physical computing, maker education, and/or robotics into your Hour of Code event? [Find relevant activities here](/learn?platform=robotics), and see in-classroom examples from Hour of Code 2022 below!
+
+<aside style="max-width: 500px; width:100%; margin: 2em auto;">
+  <a class="twitter-timeline" data-width="500" data-height="500" href="https://twitter.com/codeorg/timelines/1603521404896698369?ref_src=twsrc%5Etfw">Hour of Code | Maker - Curated tweets by codeorg</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+</aside>
+
+
+<a id="microbit-resources"></a>
+
+## Making in the K-5 classroom with Micro:bit
+Code.org has partnered with the Micro:bit Educational Foundation to offer teachers several resources on using the BBC micro:bit device as an extension to our CS Fundamentals curriculum.
+<p>
+With these resources — including booklets, videos, posters, and more — it will be easier than ever for classrooms to utilise the micro:bit within Code.org courses.
+
+
+
+
+
+[[Back to top]](#top)

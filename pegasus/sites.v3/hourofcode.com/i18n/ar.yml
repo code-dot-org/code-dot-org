@@ -527,6 +527,10 @@ ar:
   signup_registration_closed: وفي شهر ديسمبر من كل عام، يمكن لصفك الدراسي الانضمام
     إلى ملايين الطلاب حول العالم الذين يحتفلون بأسبوع البرمجة وعلوم الحاسوب مع ساعة
     من البرمجة. سنفتح التسجيل للاحتفال السنوي في شهر أكتوبر.
+  signup_registration_closed_2022_markdown: 'Registration for this year''s Hour of
+    Code event map is currently closed, but you can still [host an Hour of Code](%{hoc_activities_url})
+    and join in the celebration on social media! Post fun pictures or video of your
+    event using the #HourOfCode hashtag!'
   signup_header: يمكنك تنظيم حدث ساعة من البرمجة أثناء%{campaign_date}، وتسجيله هنا.
   signup_name_label: اسمك
   signup_name_error: الاسم مطلوب.

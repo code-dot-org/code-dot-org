@@ -555,6 +555,10 @@ uz:
     bo‘ylab millionlab talabalar bilan birgalikda "Informatika bo‘yicha ta'lim haftaligi"
     ni "Kod soati" bilan nishonlashi mumkin. Har yili o‘tkaziladigan bayram uchun
     ro‘yxatdan o‘tishni oktyabr oyida ochamiz. "
+  signup_registration_closed_2022_markdown: 'Registration for this year''s Hour of
+    Code event map is currently closed, but you can still [host an Hour of Code](%{hoc_activities_url})
+    and join in the celebration on social media! Post fun pictures or video of your
+    event using the #HourOfCode hashtag!'
   signup_header: "%{Promotion_date} davomida soat kodini tashkil qiling va uni shu
     yerda ro‘yxatdan o‘tkazing. '"
   signup_name_label: Ismingiz

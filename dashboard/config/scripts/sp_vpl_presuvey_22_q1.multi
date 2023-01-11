@@ -1,0 +1,19 @@
+name 'SP-VPL-PreSuvey-22-Q1'
+title 'Check for understanding'
+description ''
+question 'My main goal for this professional learning is to:'
+right 'Better understand the Creating Apps for Devices curriculum'
+right 'Learn the basics of computer programming'
+right 'Learn best strategies for teaching computer science'
+right 'Other'
+
+
+markdown <<MARKDOWN
+
+
+
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+
+MARKDOWN

@@ -538,6 +538,10 @@ te:
     అవర్ ఆఫ్ కోడ్‌తో కంప్యూటర్ సైన్స్ ఎడ్యుకేషన్ వీక్ సెలెబ్రేట్ చేసుకుంటున్న మిలియన్ల
     కొద్దీ విద్యార్థులతో చేర్చవచ్చు. వార్షిక వేడుకకు మేము రిజిస్ట్రేషన్ అక్టోబరులో
     తెరుస్తాము.
+  signup_registration_closed_2022_markdown: 'Registration for this year''s Hour of
+    Code event map is currently closed, but you can still [host an Hour of Code](%{hoc_activities_url})
+    and join in the celebration on social media! Post fun pictures or video of your
+    event using the #HourOfCode hashtag!'
   signup_header: అవర్ ఆఫ్ కోడ్‌ను %{campaign_date} లో నిర్వహించండి మరియు ఇక్కడ రిజిస్టర్
     చేసుకోండి.
   signup_name_label: మీ పేరు

@@ -9,6 +9,7 @@ import {
 } from './TwoColumnActionBlock';
 import {CourseBlocksHoc} from './CourseBlocks';
 import ProtectedStatefulDiv from '../ProtectedStatefulDiv';
+import ProfessionalLearningSkinnyBanner from '../ProfessionalLearningSkinnyBanner';
 import i18n from '@cdo/locale';
 import CourseBlocksWrapper from '@cdo/apps/templates/studioHomepages/CourseBlocksWrapper';
 import {
@@ -38,6 +39,8 @@ class CoursesTeacherEnglish extends Component {
     return (
       <div>
         <div>
+          <ProfessionalLearningSkinnyBanner />
+
           <ContentContainer
             heading={i18n.courseExplorerHeading()}
             description={i18n.courseExplorerDescription()}

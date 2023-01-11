@@ -556,6 +556,10 @@ ro:
     alătura milioanelor de studenți din întreaga lume pentru a sărbători Săptămâna
     Educației în Informatică cu Ora de Cod. Vom deschide înregistrarea pentru celebrarea
     anuală în luna octombrie.
+  signup_registration_closed_2022_markdown: 'Registration for this year''s Hour of
+    Code event map is currently closed, but you can still [host an Hour of Code](%{hoc_activities_url})
+    and join in the celebration on social media! Post fun pictures or video of your
+    event using the #HourOfCode hashtag!'
   signup_header: Organizeaza un eveniment Hour of Code in perioada %{campaign_date}
     şi înregistreaza-l aici.
   signup_name_label: Numele tău
@@ -701,12 +705,12 @@ ro:
     in fiecare in an pentru a celebra ziua in care s-a nascut un pionier important
     in domeniul tehnologiei.<a href='%{grace_hopper}'>Admirarul Grace Murray Hopper</a>(Decembrie
     9, 1906).
-  hoc_faq_when_is_hoc_a_markdown: Hour of Code are loc are loc în fiecare an în timpul
-    [Săptămâna de Educație în Informatică](%{csedweek_url}). %{campaign_date_year}
+  hoc_faq_when_is_hoc_a_markdown: Hour of Code are loc are loc în fiecare an pe parcursul
+    [Săptămânii de Educație în Informatică](%{csedweek_url}). %{campaign_date_year}
     Săptămâna de Educație în Informatică va fi %{campaign_date_full}, dar puteți găzdui
-    Hour of Code tot anul. Săptămâna de Educație în Informatică se ține anual în semn
-    de apreciere a zilei de naștere a pionierului în calculatoare [Amiral Grace Murray
-    Hopper](%{grace_hopper}) (9 decembrie 1906).
+    Hour of Code in orice perioadă a anului. Săptămâna de Educație în Informatică
+    se ține anual în semn de apreciere a zilei de naștere a pionierului în calculatoare
+    [Amiral Grace Murray Hopper](%{grace_hopper}) (9 decembrie 1906).
   hoc_faq_why_cs_q: De ce tehnologia computerelor si programare?
   hoc_faq_why_cs_a: "<i>Fiecare</i> elev ar trebui să aibă posibilitatea de a învata
     tehnologia computerelor. Ajută la dezvoltarea abilităților de rezolvare a problemelor,
@@ -730,16 +734,16 @@ ro:
     non-profit sau, de ce nu, la muncă. Sau, incearca-l chiar tu cand%{campaign_date}
     \ este organizat de altcineva."
   hoc_faq_behind_hoc_q: Cine este în spatele Hour of Code?
-  hoc_faq_behind_hoc_a: Hour of Code este coordonată de Săptămâna Hour of Code și
-    Educație în domeniul științei calculatoarelor - <a href='%{partner_url}'>Comitetele
-    de Consultanță și Analiză</a> - precum și de o coaliție de parteneri fără precedent,
-    care s-au alăturat pentru a sprijini Hour of Code - inclusiv Microsoft, Apple,
-    Amazon, Boys and Girls Clubs of America și Comisia pentru Educație.
-  hoc_faq_behind_hoc_a_markdown: Hour of Code este coordonată de Săptămâna Hour of
-    Code și Educație în domeniul științei calculatoarelor [Comitetele de Consultanță
-    și Analiză](%{partner_url}) precum și de o coaliție de parteneri fără precedent,
-    care s-au alăturat pentru a sprijini Hour of Code - inclusiv Microsoft, Apple,
-    Amazon, Boys and Girls Clubs of America și Comisia pentru Educație.
+  hoc_faq_behind_hoc_a: Hour of Code este organizată de Code.orgsi și este ținută
+    atât de Hour of Code Review Committee cât și de o grupare de  - <a href='%{partner_url}'>Comitete
+    de Consultanță și Analiză</a> - care s-a alăturat pentru a sprijini Hour of Code
+    - printre care Microsoft, Apple, Amazon, Boys and Girls Clubs of America și Comisia
+    pentru Educație.
+  hoc_faq_behind_hoc_a_markdown: Hour of Code este organizată de Code.org si ținută
+    atât de Hour of Code Review Committee[Comitetele de Consultanță și Analiză](%{partner_url})
+    precum și de o mulțime de parteneri, care s-au alăturat pentru a sprijini Hour
+    of Code - inclusiv Microsoft, Apple, Amazon, Boys and Girls Clubs of America și
+    Comisia pentru Educație.
   hoc_faq_host_q: Nu ştiu nimic despre programare. Pot să organizez un eveniment?
   hoc_faq_host_a: Desigur. Activităţile Hour of Code sunt autodidacte si pot fi realizate
     individual. Tot ce trebuie să faceţi este <a href='%{codeorg_url}/learn'> să accesaţi
@@ -748,10 +752,10 @@ ro:
     de la grădiniţă in sus. Începeți planificarea evenimentului dumneavoastră citind
     <a href='/resources/how-to'>ghidul de organizare</a>.
   hoc_faq_host_a_markdown: Bineînțeles. Activitățile Hour of Code sunt autoghidate.
-    Tot ce trebuie să faci este să [încerci tutorialele noastre actuale](%{codeorg_url}/learn),
-    alege tutorialul pe care îl dorești, alege o oră - noi avem grijă de restul. Avem
-    de asemenea opțiuni pentru fiecare vârstă și nivel de experiență, de la grădiniță
-    în sus. Începe să îți planifici evenimentul prin a citi [cum să te ghidezi](%{howto}).
+    Tot ce trebuie să faci este să [încerci tutorialele noastre prezente](%{codeorg_url}/learn),
+    alege tutorialul pe care îl dorești, alege o oră și noi vom avea  grijă de restul.
+    Avem de asemenea opțiuni pentru fiecare vârstă și nivel de experiență, de la grădiniță
+    în sus. Începe să îți planifici evenimentul prin a citi [cum să  ghidezi](%{howto}).
   hoc_faq_devices_q: Ce dispozitive ar trebui să utilizez pentru elevii mei?
   hoc_faq_devices_a: Tutorialele Code.org funcționează pe toate dispozitivele și în
     toate browserele. Puteți vedea mai multe informații referitoare la cerințele de
@@ -765,8 +769,9 @@ ro:
     și browserele. Poți vedea mai multe informații despre necesitățile tehnice ale
     tutorialelor Code.org [here](%{codeorg_url}/educate/it). Necesitățile tehnice
     ale tutorialelor non-Code.org pot fi găsite la [%{partner_url}/learn](%{codeorg_url}/learn)
-    în descrierea specifică a tutorialului. Nu uita că oferim de asemenea [activități
-    deconectate](%{unplugged_url}) dacă școala nu poate găzdui tutorialele!
+    în descrierea specifică a tutorialului. Nu uita că oferim inclusiv [activități
+    ce nu necesită conectarea la internet](%{unplugged_url}) dacă școala nu poate
+    găzdui tutorialele!
   hoc_faq_need_computers_q: Am nevoie de calculator pentru fiecare participant?
   hoc_faq_need_computers_a: Nu. Avem Tutoriale Hour of Code care funcționează pe PC-uri,
     smartphone-uri, tablete şi chiar unele care nu necesită nici un calculator! Puteţi

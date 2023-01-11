@@ -3099,7 +3099,7 @@ sv-SE:
         - {}
         - {}
         questions:
-        - {}
+        - text: Inmatning
         - {}
         - text: Lagring
         - text: Bearbetar
@@ -3110,7 +3110,7 @@ sv-SE:
         - {}
         - {}
         questions:
-        - {}
+        - text: Inmatning
         - {}
         - text: Lagring
         - text: Bearbetar
@@ -3121,7 +3121,7 @@ sv-SE:
         - {}
         - {}
         questions:
-        - {}
+        - text: Inmatning
         - {}
         - text: Lagring
         - text: Bearbetar
