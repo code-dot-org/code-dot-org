@@ -863,19 +863,23 @@
         },
         "CSD U6 change": {
           "short": "corto",
-          "long": "largo"
+          "long": "largo",
+          "Choose the blink speed with the slider, then click the left board button to turn it on.  Turn it off with the right button.": "Elige la velocidad de parpadeo con el control deslizante y, a continuación, pulsa el botón izquierdo de la placa para encenderla.  Apágala con el botón derecho."
         },
         "CSD U6 change_2018": {
           "short": "corto",
-          "long": "largo"
+          "long": "largo",
+          "Choose the blink speed with the slider, then click the left board button to turn it on.  Turn it off with the right button.": "Elige la velocidad de parpadeo con el control deslizante y, a continuación, pulsa el botón izquierdo de la placa para encenderla.  Apágala con el botón derecho."
         },
         "CSD U6 change_2019": {
           "short": "corto",
-          "long": "largo"
+          "long": "largo",
+          "Choose the blink speed with the slider, then click the left board button to turn it on.  Turn it off with the right button.": "Elige la velocidad de parpadeo con el control deslizante y, a continuación, pulsa el botón izquierdo de la placa para encenderla.  Apágala con el botón derecho."
         },
         "CSD U6 change_2021": {
           "short": "corto",
-          "long": "largo"
+          "long": "largo",
+          "Choose the blink speed with the slider, then click the left board button to turn it on.  Turn it off with the right button.": "Elige la velocidad de parpadeo con el control deslizante y, a continuación, pulsa el botón izquierdo de la placa para encenderla.  Apágala con el botón derecho."
         },
         "CSD U6 colorLeds intensity": {
           "Medium": "Mediana"
@@ -890,16 +894,36 @@
           "Medium": "Mediana"
         },
         "CSD U6 emoji race demo": {
-          "Emoji Race": "Carrera de Emoji"
+          "Emoji Race": "Carrera de Emoji",
+          "Click your button as fast as you can to get your emoji to the bottomfirst. The left player controls the red emoji, right controls the blue.": "Pulsa el botón lo más rápido que puedas para que tu emoji llegue primero al fondo. El jugador de la izquierda controla el emoji rojo, el de la derecha el azul.",
+          "Play!": "¡Juega!",
+          "wins!": "¡Gana!",
+          "Play Again!": "¡Juega otra vez!",
+          "winner": "ganador"
         },
         "CSD U6 emoji race demo_2018": {
-          "Emoji Race": "Carrera de Emoji"
+          "Emoji Race": "Carrera de Emoji",
+          "Click your button as fast as you can to get your emoji to the bottomfirst. The left player controls the red emoji, right controls the blue.": "Pulsa el botón lo más rápido que puedas para que tu emoji llegue primero al fondo. El jugador de la izquierda controla el emoji rojo, el de la derecha el azul.",
+          "Play!": "¡Juega!",
+          "wins!": "¡Gana!",
+          "Play Again!": "¡Juega otra vez!",
+          "winner": "ganador"
         },
         "CSD U6 emoji race demo_2019": {
-          "Emoji Race": "Carrera de Emoji"
+          "Emoji Race": "Carrera de Emoji",
+          "Click your button as fast as you can to get your emoji to the bottomfirst. The left player controls the red emoji, right controls the blue.": "Pulsa el botón lo más rápido que puedas para que tu emoji llegue primero al fondo. El jugador de la izquierda controla el emoji rojo, el de la derecha el azul.",
+          "Play!": "¡Juega!",
+          "wins!": "¡Gana!",
+          "Play Again!": "¡Juega otra vez!",
+          "winner": "ganador"
         },
         "CSD U6 emoji race demo_2021": {
-          "Emoji Race": "Carrera de Emoji"
+          "Emoji Race": "Carrera de Emoji",
+          "Click your button as fast as you can to get your emoji to the bottomfirst. The left player controls the red emoji, right controls the blue.": "Pulsa el botón lo más rápido que puedas para que tu emoji llegue primero al fondo. El jugador de la izquierda controla el emoji rojo, el de la derecha el azul.",
+          "Play!": "¡Juega!",
+          "wins!": "¡Gana!",
+          "Play Again!": "¡Juega otra vez!",
+          "winner": "ganador"
         },
         "CSD U6 emotion machine example": {
           "Happy": "Alegre",
@@ -925,25 +949,29 @@
           "short": "corto",
           "long": "largo",
           "low": "baja",
-          "high": "alta"
+          "high": "alta",
+          "Choose the duration and frequency of the buzz with the slider, then click the left board button to turn it on.": "Elige la duración y la frecuencia del sonido con el control deslizante y, a continuación, haz clic en el botón izquierdo de la placa para encenderla."
         },
         "CSD U6 frequency_2018": {
           "short": "corto",
           "long": "largo",
           "low": "baja",
-          "high": "alta"
+          "high": "alta",
+          "Choose the duration and frequency of the buzz with the slider, then click the left board button to turn it on.": "Elige la duración y la frecuencia del sonido con el control deslizante y, a continuación, haz clic en el botón izquierdo de la placa para encenderla."
         },
         "CSD U6 frequency_2019": {
           "short": "corto",
           "long": "largo",
           "low": "baja",
-          "high": "alta"
+          "high": "alta",
+          "Choose the duration and frequency of the buzz with the slider, then click the left board button to turn it on.": "Elige la duración y la frecuencia del sonido con el control deslizante y, a continuación, haz clic en el botón izquierdo de la placa para encenderla."
         },
         "CSD U6 frequency_2021": {
           "short": "corto",
           "long": "largo",
           "low": "baja",
-          "high": "alta"
+          "high": "alta",
+          "Choose the duration and frequency of the buzz with the slider, then click the left board button to turn it on.": "Elige la duración y la frecuencia del sonido con el control deslizante y, a continuación, haz clic en el botón izquierdo de la placa para encenderla."
         },
         "CSD U6 get toggle": {
           "short": "corto",
@@ -974,40 +1002,56 @@
           "Red": "Rojo",
           "Green": "Verde",
           "Blue": "Azul",
-          "Save": "Guardar"
+          "Save": "Guardar",
+          "Add me to the newsletter:": "Añádeme al boletín informativo:",
+          "Am I on the newsletter?": "¿Estoy en el boletín informativo?"
         },
         "CSD U6 getProperty Demo_2018": {
           "Name:": "Nombre:",
           "Red": "Rojo",
           "Green": "Verde",
           "Blue": "Azul",
-          "Save": "Guardar"
+          "Save": "Guardar",
+          "Add me to the newsletter:": "Añádeme al boletín informativo:",
+          "Am I on the newsletter?": "¿Estoy en el boletín informativo?"
         },
         "CSD U6 getProperty Demo_2019": {
           "Name:": "Nombre:",
           "Red": "Rojo",
           "Green": "Verde",
           "Blue": "Azul",
-          "Save": "Guardar"
+          "Save": "Guardar",
+          "Add me to the newsletter:": "Añádeme al boletín informativo:",
+          "Am I on the newsletter?": "¿Estoy en el boletín informativo?"
         },
         "CSD U6 getProperty Demo_2021": {
           "Name:": "Nombre:",
           "Red": "Rojo",
           "Green": "Verde",
           "Blue": "Azul",
-          "Save": "Guardar"
+          "Save": "Guardar",
+          "Add me to the newsletter:": "Añádeme al boletín informativo:",
+          "Am I on the newsletter?": "¿Estoy en el boletín informativo?"
         },
         "CSD U6 getProperty input": {
-          "Submit": "Enviar"
+          "Submit": "Enviar",
+          "What's your first name?": "¿Cómo te llamas?",
+          "What's your friend's name?": "¿Cómo se llama tu amigo?"
         },
         "CSD U6 getProperty input_2018": {
-          "Submit": "Enviar"
+          "Submit": "Enviar",
+          "What's your first name?": "¿Cómo te llamas?",
+          "What's your friend's name?": "¿Cómo se llama tu amigo?"
         },
         "CSD U6 getProperty input_2019": {
-          "Submit": "Enviar"
+          "Submit": "Enviar",
+          "What's your first name?": "¿Cómo te llamas?",
+          "What's your friend's name?": "¿Cómo se llama tu amigo?"
         },
         "CSD U6 getProperty input_2021": {
-          "Submit": "Enviar"
+          "Submit": "Enviar",
+          "What's your first name?": "¿Cómo te llamas?",
+          "What's your friend's name?": "¿Cómo se llama tu amigo?"
         },
         "CSD U6 getters debug": {
           "slow": "lento",
@@ -1015,7 +1059,10 @@
           "short": "corto",
           "long": "largo",
           "low": "baja",
-          "high": "alta"
+          "high": "alta",
+          "constant": "constante",
+          "Press board buttons to turn buzzer on and off. ": "Pulsa los botones de la placa para encender y apagar el zumbador. ",
+          "Use the toggle switch to turn the LED on and off.": "Utiliza el conmutador para encender y apagar el LED."
         },
         "CSD U6 getters debug_2018": {
           "fast": "rápido",
@@ -1023,7 +1070,10 @@
           "short": "corto",
           "long": "largo",
           "low": "baja",
-          "high": "alta"
+          "high": "alta",
+          "constant": "constante",
+          "Press board buttons to turn buzzer on and off. ": "Pulsa los botones de la placa para encender y apagar el zumbador. ",
+          "Use the toggle switch to turn the LED on and off.": "Utiliza el conmutador para encender y apagar el LED."
         },
         "CSD U6 getters debug_2019": {
           "fast": "rápido",
@@ -1031,7 +1081,10 @@
           "short": "corto",
           "long": "largo",
           "low": "baja",
-          "high": "alta"
+          "high": "alta",
+          "constant": "constante",
+          "Press board buttons to turn buzzer on and off. ": "Pulsa los botones de la placa para encender y apagar el zumbador. ",
+          "Use the toggle switch to turn the LED on and off.": "Utiliza el conmutador para encender y apagar el LED."
         },
         "CSD U6 getters debug_2021": {
           "fast": "rápido",
@@ -1039,23 +1092,30 @@
           "short": "corto",
           "long": "largo",
           "low": "baja",
-          "high": "alta"
+          "high": "alta",
+          "constant": "constante",
+          "Press board buttons to turn buzzer on and off. ": "Pulsa los botones de la placa para encender y apagar el zumbador. ",
+          "Use the toggle switch to turn the LED on and off.": "Utiliza el conmutador para encender y apagar el LED."
         },
         "CSD U6 interval": {
           "short": "corto",
-          "long": "largo"
+          "long": "largo",
+          "Choose the blink speed with the slider, then click the left board button to turn it on.  Turn it off with the right button.": "Elige la velocidad de parpadeo con el control deslizante y, a continuación, pulsa el botón izquierdo de la placa para encenderla.  Apágala con el botón derecho."
         },
         "CSD U6 interval_2018": {
           "short": "corto",
-          "long": "largo"
+          "long": "largo",
+          "Choose the blink speed with the slider, then click the left board button to turn it on.  Turn it off with the right button.": "Elige la velocidad de parpadeo con el control deslizante y, a continuación, pulsa el botón izquierdo de la placa para encenderla.  Apágala con el botón derecho."
         },
         "CSD U6 interval_2019": {
           "short": "corto",
-          "long": "largo"
+          "long": "largo",
+          "Choose the blink speed with the slider, then click the left board button to turn it on.  Turn it off with the right button.": "Elige la velocidad de parpadeo con el control deslizante y, a continuación, pulsa el botón izquierdo de la placa para encenderla.  Apágala con el botón derecho."
         },
         "CSD U6 interval_2021": {
           "short": "corto",
-          "long": "largo"
+          "long": "largo",
+          "Choose the blink speed with the slider, then click the left board button to turn it on.  Turn it off with the right button.": "Elige la velocidad de parpadeo con el control deslizante y, a continuación, pulsa el botón izquierdo de la placa para encenderla.  Apágala con el botón derecho."
         },
         "CSD U6 light show": {
           "on": "activado",
@@ -1778,6 +1838,74 @@
           "night": "noche",
           "dusk": "Atardecer",
           "Predict": "Predecir"
+        },
+        "CSD U6 Catch the Mouse": {
+          "Click on the mouse!": "¡Haz clic en el ratón!"
+        },
+        "CSD U6 Catch the Mouse_2018": {
+          "Click on the mouse!": "¡Haz clic en el ratón!"
+        },
+        "CSD U6 Catch the Mouse_2019": {
+          "Click on the mouse!": "¡Haz clic en el ratón!"
+        },
+        "CSD U6 Catch the Mouse_2021": {
+          "Click on the mouse!": "¡Haz clic en el ratón!"
+        },
+        "CSD U6 getProperty dropdown": {
+          "CadetBlue": "AzulCadete",
+          "LawnGreen": "VerdeCésped",
+          "Thistle": "Cardo",
+          "Chocolate": "Chocolate",
+          "Orchid": "Orquídea",
+          "Set Color": "Configurar color"
+        },
+        "CSD U6 getProperty dropdown_2018": {
+          "CadetBlue": "AzulCadete",
+          "LawnGreen": "VerdeCésped",
+          "Thistle": "Cardo",
+          "Chocolate": "Chocolate",
+          "Orchid": "Orquídea",
+          "Set Color": "Configurar color"
+        },
+        "CSD U6 getProperty dropdown_2019": {
+          "CadetBlue": "AzulCadete",
+          "LawnGreen": "VerdeCésped",
+          "Thistle": "Cardo",
+          "Chocolate": "Chocolate",
+          "Orchid": "Orquídea",
+          "Set Color": "Configurar color"
+        },
+        "CSD U6 getProperty dropdown_2021": {
+          "CadetBlue": "AzulCadete",
+          "LawnGreen": "VerdeCésped",
+          "Thistle": "Cardo",
+          "Chocolate": "Chocolate",
+          "Orchid": "Orquídea",
+          "Set Color": "Configurar color"
+        },
+        "CSD U6 setProperty Text": {
+          "your name here": "tu nombre aquí"
+        },
+        "CSD U6 setProperty Text_2018": {
+          "your name here": "tu nombre aquí"
+        },
+        "CSD U6 setProperty Text_2019": {
+          "your name here": "tu nombre aquí"
+        },
+        "CSD U6 setProperty Text_2021": {
+          "your name here": "tu nombre aquí"
+        },
+        "CSDU6 - toggleswitch state setProp": {
+          "?????": "?????"
+        },
+        "CSDU6 - toggleswitch state setProp_2018": {
+          "?????": "?????"
+        },
+        "CSDU6 - toggleswitch state setProp_2019": {
+          "?????": "?????"
+        },
+        "CSDU6 - toggleswitch state setProp_2021": {
+          "?????": "?????"
         }
       }
     }

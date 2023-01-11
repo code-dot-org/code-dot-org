@@ -33,10 +33,22 @@
           "text": "text"
         },
         "CSD U1 processing guess_2021": {
-          "text": "text"
+          "text": "text",
+          "?": "?",
+          "1": "1",
+          "4": "4",
+          "8": "8",
+          "10": "10",
+          "12": "12"
         },
         "CSD U1 processing guess_2022": {
-          "text": "text"
+          "text": "text",
+          "?": "?",
+          "1": "1",
+          "4": "4",
+          "8": "8",
+          "10": "10",
+          "12": "12"
         },
         "CSD U1 processing live_2021": {
           "bear": "Ós"
@@ -45,10 +57,12 @@
           "bear": "Ós"
         },
         "CSD U1 processing npark_2021": {
-          "Sorry!": "Perdó!"
+          "Sorry!": "Perdó!",
+          "Correct!": "Correcte!"
         },
         "CSD U1 processing npark_2022": {
-          "Sorry!": "Perdó!"
+          "Sorry!": "Perdó!",
+          "Correct!": "Correcte!"
         },
         "CSD U1 storage friends_2021": {
           "Back": "Torna"
@@ -445,19 +459,22 @@
           "About": "Quant a",
           "Submit": "Envia",
           "When?": "Quan?",
-          "About Us": "Sobre nosaltres"
+          "About Us": "Sobre nosaltres",
+          "Correct!": "Correcte!"
         },
         "CSDU4 Quiz App Demo_2018": {
           "About": "Quant a",
           "Submit": "Envia",
           "When?": "Quan?",
-          "About Us": "Sobre nosaltres"
+          "About Us": "Sobre nosaltres",
+          "Correct!": "Correcte!"
         },
         "CSDU4 Quiz App Demo_2019": {
           "About": "Quant a",
           "Submit": "Envia",
           "When?": "Quan?",
-          "About Us": "Sobre nosaltres"
+          "About Us": "Sobre nosaltres",
+          "Correct!": "Correcte!"
         },
         "CSDU6 - UI and Inputs - getNumber": {
           "+": "+",
@@ -560,10 +577,14 @@
           "Next": "Següent"
         },
         "csd-apps for good-3": {
-          "???": "???"
+          "???": "???",
+          "1": "1",
+          "4": "4"
         },
         "csd-apps for good-3_2022": {
-          "???": "???"
+          "???": "???",
+          "1": "1",
+          "4": "4"
         },
         "csd-explore ui-2": {
           "Next": "Següent"
@@ -572,10 +593,12 @@
           "Next": "Següent"
         },
         "csd-explore ui-4": {
-          "Sorry!": "Perdó!"
+          "Sorry!": "Perdó!",
+          "Correct!": "Correcte!"
         },
         "csd-explore ui-4_2022": {
-          "Sorry!": "Perdó!"
+          "Sorry!": "Perdó!",
+          "Correct!": "Correcte!"
         },
         "csd-explore ui-6": {
           "Next": "Següent"
@@ -618,10 +641,12 @@
           "no": "no"
         },
         "ml-models in applab-choice intended warnings": {
-          "Back": "Torna"
+          "Back": "Torna",
+          "1": "1"
         },
         "ml-models in applab-choice intended warnings_2022": {
-          "Back": "Torna"
+          "Back": "Torna",
+          "1": "1"
         },
         "ml-models in applab-zoo assessment": {
           "Yes": "Sí",
@@ -648,6 +673,121 @@
         "ml-use model card-example3A_2022": {
           "cloudy": "ennuvolat",
           "night": "nit"
+        },
+        "CSD U1 processing bday_2021": {
+          "1": "1",
+          "4": "4",
+          "8": "8",
+          "10": "10",
+          "12": "12"
+        },
+        "CSD U1 processing bday_2022": {
+          "1": "1",
+          "4": "4",
+          "8": "8",
+          "10": "10",
+          "12": "12"
+        },
+        "CSD U1 processing writers_2021": {
+          "1": "1",
+          "4": "4",
+          "8": "8",
+          "10": "10",
+          "12": "12"
+        },
+        "CSD U1 processing writers_2022": {
+          "1": "1",
+          "4": "4",
+          "8": "8",
+          "10": "10",
+          "12": "12"
+        },
+        "CSD U2 RGB intro": {
+          "1": "1",
+          "4": "4"
+        },
+        "CSD U2 RGB intro_2018": {
+          "1": "1",
+          "4": "4"
+        },
+        "CSD U2 RGB intro_2019": {
+          "1": "1",
+          "4": "4"
+        },
+        "CSD U2 RGB intro_2021": {
+          "1": "1",
+          "4": "4"
+        },
+        "CSD U2 RGB intro_2022": {
+          "1": "1",
+          "4": "4"
+        },
+        "CSD U6 - Physical Input - A_2222": {
+          "1": "1"
+        },
+        "CSD U6 - Screen Outputs - ChalB_2222": {
+          "?": "?"
+        },
+        "CSD U6 emotion machine example": {
+          "?": "?"
+        },
+        "CSD U6 emotion machine example_2018": {
+          "?": "?"
+        },
+        "CSD U6 emotion machine example_2019": {
+          "?": "?"
+        },
+        "CSD U6 emotion machine example_2021": {
+          "?": "?"
+        },
+        "csa widget test2": {
+          "8": "8"
+        },
+        "csd-explore ui-3": {
+          "1": "1",
+          "4": "4",
+          "8": "8",
+          "10": "10",
+          "12": "12"
+        },
+        "csd-explore ui-3_2022": {
+          "1": "1",
+          "4": "4",
+          "8": "8",
+          "10": "10",
+          "12": "12"
+        },
+        "csd-explore ui-5": {
+          "1": "1",
+          "4": "4",
+          "8": "8",
+          "10": "10",
+          "12": "12"
+        },
+        "csd-explore ui-5_2022": {
+          "1": "1",
+          "4": "4",
+          "8": "8",
+          "10": "10",
+          "12": "12"
+        },
+        "ml-models in applab-choice if quotes": {
+          "1": "1"
+        },
+        "ml-models in applab-choice if quotes_2022": {
+          "1": "1"
+        },
+        "ml-models in applab-choice if wrong place": {
+          "1": "1"
+        },
+        "ml-models in applab-choice if wrong place_2022": {
+          "1": "1"
+        },
+        "ml-models in applab-choice predict typos": {
+          "1": "1"
+        },
+        "ml-models in applab-choice predict typos_2022": {
+          "1": "1"
         }
       }
     }
