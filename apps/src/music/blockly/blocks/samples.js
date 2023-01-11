@@ -21,7 +21,11 @@ const getCurrentTrackId = ctx => {
         block.type
       )
     ) {
-      return block.id;
+      return `"${block.id}"`;
+    }
+
+    if (block.type === BlockTypes.NEW_TRACK_ON_TRIGGER) {
+      return `"${block.id}" + "--" + getTriggerCount()`;
     }
   }
 
@@ -172,6 +176,37 @@ export const newTrackAtMeasure = {
   }
 };
 
+export const newTrackOnTrigger = {
+  definition: {
+    type: BlockTypes.NEW_TRACK_ON_TRIGGER,
+    message0: 'new track %1 when %2 triggered',
+    args0: [
+      {
+        type: 'field_input',
+        name: 'trackName',
+        text: 'my track'
+      },
+      {
+        type: 'input_dummy',
+        name: 'trigger'
+      }
+    ],
+    inputsInline: true,
+    nextStatement: null,
+    colour: 150,
+    tooltip: 'new track',
+    helpUrl: '',
+    extensions: ['default_track_name_extension', 'dynamic_trigger_extension']
+  },
+  generator: ctx => {
+    return `MusicPlayer.createTrack("${
+      ctx.id
+    }" + "--" + getTriggerCount(), "${ctx.getFieldValue(
+      'trackName'
+    )}", Math.ceil(MusicPlayer.getPlayheadPosition()), false);\n`;
+  }
+};
+
 export const playSoundInTrack = {
   definition: {
     type: BlockTypes.PLAY_SOUND_IN_TRACK,
@@ -194,10 +229,11 @@ export const playSoundInTrack = {
     tooltip: 'play sound',
     helpUrl: ''
   },
-  generator: ctx =>
-    `MusicPlayer.addSoundToTrack("${getCurrentTrackId(
+  generator: ctx => {
+    return `MusicPlayer.addSoundToTrack(${getCurrentTrackId(
       ctx
-    )}", "${ctx.getFieldValue('sound')}");\n`
+    )}, "${ctx.getFieldValue('sound')}");\n`;
+  }
 };
 
 export const restInTrack = {
@@ -216,9 +252,9 @@ export const restInTrack = {
     colour: 50
   },
   generator: ctx =>
-    `MusicPlayer.addRestToTrack("${getCurrentTrackId(
+    `MusicPlayer.addRestToTrack(${getCurrentTrackId(
       ctx
-    )}", ${Blockly.JavaScript.valueToCode(
+    )}, ${Blockly.JavaScript.valueToCode(
       ctx,
       'measures',
       Blockly.JavaScript.ORDER_ASSIGNMENT
