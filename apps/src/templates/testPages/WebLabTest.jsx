@@ -58,14 +58,12 @@ class WebLabTest extends Component {
   };
 
   renderTestStatus = test => {
-    const statusText = {
+    return {
       [Status.WAITING]: 'Not complete',
       [Status.ATTEMPTING]: 'Connecting...',
       [Status.SUCCEEDED]: 'Success',
       [Status.FAILED]: 'Failed'
     }[this.state[test]];
-
-    return <p>{`${statusText}`}</p>;
   };
 
   renderCallToAction = () => {
