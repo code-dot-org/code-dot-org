@@ -22,13 +22,6 @@ style_min: true
     width: 75px !important;
     margin: 7px -10px;
   }
-
-  .button {
-    paddingLeft: 0;
-    paddingRight: 0;
-    width: 100%;
-    margin: 5px 0px 0px 0px
-  }
 </style>
 
 # How to Help
