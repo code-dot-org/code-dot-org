@@ -4,6 +4,7 @@ import testImageAccess from '../../code-studio/url_test';
 
 const STATUS_CODE_PROJECTS = 'statusCodeProjects';
 const STATUS_COMPUTING_IN_THE_CORE = 'statusComputingInTheCore';
+const STATUS_IFRAME = 'statusIframe';
 
 const imageAccessTests = [
   {
@@ -22,6 +23,7 @@ class WebLabTest extends Component {
     this.state = {
       [STATUS_CODE_PROJECTS]: Status.WAITING,
       [STATUS_COMPUTING_IN_THE_CORE]: Status.WAITING,
+      [STATUS_IFRAME]: Status.WAITING,
       renderCallToAction: false
     };
   }
@@ -41,6 +43,11 @@ class WebLabTest extends Component {
       );
     });
 
+  runIframeTest = () => {
+    this.setState({[STATUS_IFRAME]: Status.FAILED});
+    return Promise.resolve();
+  };
+
   runWebLabTest = () => {
     this.setState({
       [STATUS_COMPUTING_IN_THE_CORE]: Status.ATTEMPTING,
@@ -48,11 +55,15 @@ class WebLabTest extends Component {
       renderCallToAction: false
     });
 
-    const webLabTestPromise = Promise.all(
-      imageAccessTests.map(this.promisifiedTestImageAccess)
-    );
+    const webLabTestPromise = Promise.all([
+      ...imageAccessTests.map(this.promisifiedTestImageAccess),
+      this.runIframeTest()
+    ]);
 
-    webLabTestPromise.then(() => {
+    console.log('webLabTestPromise', webLabTestPromise);
+
+    webLabTestPromise.then(results => {
+      console.log('results', results);
       this.setState({renderCallToAction: true});
     });
   };
@@ -71,7 +82,8 @@ class WebLabTest extends Component {
   renderCallToAction = () => {
     const testFailed = [
       STATUS_CODE_PROJECTS,
-      STATUS_COMPUTING_IN_THE_CORE
+      STATUS_COMPUTING_IN_THE_CORE,
+      STATUS_IFRAME
     ].some(test => this.state[test] === Status.FAILED);
 
     if (testFailed) {
@@ -99,6 +111,8 @@ class WebLabTest extends Component {
   };
 
   render() {
+    const useLocal = true;
+    console.log('useLocal: ', useLocal);
     return (
       <div id="main-content" className="container">
         <div className="row">
@@ -153,6 +167,12 @@ class WebLabTest extends Component {
                         {this.renderTestStatus(STATUS_CODE_PROJECTS)}
                       </td>
                     </tr>
+                    <tr>
+                      <td>Able to render an iFrame</td>
+                      <td className="iframe">
+                        {this.renderTestStatus(STATUS_IFRAME)}
+                      </td>
+                    </tr>
                   </tbody>
                 </table>
               </div>
@@ -168,6 +188,17 @@ class WebLabTest extends Component {
               </div>
               {this.state.renderCallToAction && this.renderCallToAction()}
               <br />
+              <iframe
+                className="test-weblab-host"
+                src={'http://localhost-studio.code.org:3000/weblab/host'}
+                frameBorder="0"
+                scrolling="no"
+                style={{
+                  position: 'absolute',
+                  width: '100%',
+                  height: `100%`
+                }}
+              />
             </div>
           </div>
         </div>
