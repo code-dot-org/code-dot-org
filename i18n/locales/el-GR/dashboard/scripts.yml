@@ -1734,10 +1734,18 @@ el:
         csp5-2023:
           lesson_groups:
             csp_lists:
-              display_name: Λίστες
+              display_name: Δεδομένα
             csp_loops:
               display_name: Βρόχοι
             csp_project:
+              display_name: Έργο
+        csp6-2023:
+          lesson_groups:
+            csp_unit6_2020:
+              display_name: Λίστες
+            lessonGroup-3:
+              display_name: Βρόχοι
+            lessonGroup-5:
               display_name: Έργο
         csp7-2023:
           lesson_groups:

@@ -163,6 +163,10 @@ tr:
   social_coldplay_title: Coldplay ve Code.org ile oluşturun
   social_coldplay_desc: Bize en iyi hareketlerini göster! Kodla, dans et, dünyayla
     paylaş ve kazan.
+  social_maker_title: I'm a Maker!
+  social_maker_desc: Code.org physical computing and maker resources for grades 6-12.
+  pl_superhero_title: Help students become superheroes!
+  pl_superhero_desc: Our Professional Learning program helps you teach computer science!
   hoc_live: Kodlama Saati Canlı Yayın
   hoc_live_sign_up_title: Kodlama Saati Canlı Yayın için kayıt ol
   hoc_live_learn_title: Canlı Kodlama Saati ile öğrenin
@@ -548,10 +552,10 @@ tr:
   signup_registration_closed: Ve her yıl Aralık ayında, sınıfınız Hour of Code ile
     Bilgisayar Bilimi Eğitim Haftası'nı kutlayan milyonlarca öğrenciye katılabilir.
     Yıllık kutlama için Ekim ayında kayıt açacağız.
-  signup_registration_closed_2022_markdown: 'Registration for this year''s Hour of
-    Code event map is currently closed, but you can still [host an Hour of Code](%{hoc_activities_url})
-    and join in the celebration on social media! Post fun pictures or video of your
-    event using the #HourOfCode hashtag!'
+  signup_registration_closed_2022_markdown: 'Bu yılki Hour of Code etkinlik haritası
+    için kayıt şu anda kapalı, ancak yine de [bir Hour of Code düzenleyebilir](%{hoc_activities_url})
+    ve sosyal medyadaki kutlamaya katılabilirsiniz! #HourOfCode etiketini kullanarak
+    etkinliğinizin eğlenceli resimlerini veya videolarını yayınlayın!'
   signup_header: "%{campaign_date} tarihlerinde bir Hour of Code organize edin ve
     buradan kaydolun."
   signup_name_label: İsminiz
@@ -1074,6 +1078,10 @@ tr:
   footer_menu_terms: Şartlar
   footer_menu_privacy: Gizlilik Politikası
   footer_menu_cookie: Çerez Bildirimi
+  footer_menu_facebook: Code.org on Facebook
+  footer_menu_twitter: Code.org on Twitter
+  footer_menu_instagram: Code.org on Instagram
+  footer_menu_medium: Code.org on Medium.com
   learn_banner_heading: Hour of Code Aktiviteleri
   learn_banner_blurb: Her yaşa göre tasarlanmış 45’ten fazla dildeki bir saatlik dersleri
     deneyin.  Bir Hour of Code ile başlayarak 180’den fazla ülkedeki milyonlarca öğrenci
@@ -3103,12 +3111,12 @@ tr:
   tutorial_tynkerch_longdescription: Bilgisayarı kötü amaçlı bir virüsten kurtarın!  Virüsleri
     silerek, kapıları açarak, labirentleri çözerek ve portallar arasında gezinerek
     sistemi hacklemeniz gerekecek.  Virüslere ve hatalara dikkat edin!
-  tutorial_lightbot_longdescription: Lightbot, oyunculara bulmacaları çözmek için
-    programlama mantığı kullanmasını isteyen bir oyundur! Her seviyedeki tüm mavi
-    kiremitleri aydınlatmaya Lightbot'a rehberlik ederek temel kodlama konseptleri
-    hakkında pratik bir anlayış kazanın. Bu kendinden kılavuzlu etkinlikte, talimatları
-    nasıl sıralayacağınızı, prosedürleri yazacağınızı ve döngüleri nasıl kullanacağınızı
-    öğrenin. Her yaş ve tüm beceri düzeyleri için harika.
+  tutorial_lightbot_longdescription: Lightbot, oyunculardan bulmacaları çözmek için
+    programlama mantığını kullanmalarını isteyen bir oyundur! Lightbot'a her seviyede
+    tüm mavi karoları aydınlatması için rehberlik ederek temel kodlama kavramları
+    hakkında pratik bir anlayış kazanın. Bu kendi kendine rehberli aktivitede yönergeleri
+    nasıl sıralayacağınızı, prosedürler yazacağınızı ve yol boyunca döngüleri nasıl
+    kullanacağınızı öğrenin. Her yaş ve tüm beceri düzeyleri için harika.
   tutorial_hoc_longdescription: Yeni code.org/hoc için yer tutucu
   tutorial_code_longdescription: Sürükle-bırak programlama yöntemiyle Bilgisayar Biliminin
     temel kavramlarını öğrenin. Bu, oyun benzeri, kendi kendine yönlendirilen eğitimde
@@ -10890,6 +10898,10 @@ tr:
   tutorial_nasapackage_name: 'NASA: Paket Teslim Drone Simülasyonu Kodlama Etkinliği'
   tutorial_nasalunar_name: 'NASA: Ay Kodlama Mücadelesi'
   tutorial_meeestate_name: Emlaktan Kaçış
+  tutorial_imagipixelart_name: Kendi piksel sanatınızı kodlayın!
+  tutorial_kcjhealth_name: "'Sağlık ve Zindelik Mücadelesi"
+  tutorial_msftwakanda_name: Çok Yaşa Wakanda
+  tutorial_nafbrand_name: Code your Brand
   tutorial_rpccw_longdescription: Kendi karakterinizi yaratın, bir tişört tasarlayın
     ve biraz müzik yaratın. Tamamlanan her proje için rozet kazanın.
   tutorial_rpledfirefly_longdescription: Yanıp sönen bir LED ateş böceği oluşturmak
@@ -11247,6 +11259,18 @@ tr:
     ve hesaplamalı düşünmeyi kullanın. Şafağa kadar kodlayın ve bir milyon zümrüt
     kazanın! Bloklarda veya Python''da kodlama ile Hour of Code, herkesin kodun temellerini
     öğrenmesi için bir öğrenme yolu sunar.'
+  tutorial_imagipixelart_longdescription: Bu 1 saatlik hızlandırılmış kursta Python
+    öğrenin ve kendi renkli animasyonlarınızı yaratın!
+  tutorial_kcjhealth_longdescription: 'SDG #3 ''İyi Sağlık ve Zindelik''i keşfederken
+    veri görselleştirme, algoritmik sanat ve kodlama hakkında bilgi edinin.'
+  tutorial_msftwakanda_longdescription: 'Shuri, Okoye ve Riri, Wakanda''ya yardım
+    etmek için bir araya gelmelidir. Marvel Studios''un "Black Panther: Wakanda Forever"
+    filminden ilham alan kendi aksiyon dolu etkinliğinizi kodlayın!'
+  tutorial_nafbrand_longdescription: In Code your Brand, you will be creating a virtual
+    contact file to create a personalized QR code with your contact details. After
+    you complete this activity, you will be equipped with a modern business card that
+    you can share while you're networking with people who can help or guide you in
+    your career or college journey.
   tutorial_rpccw_string_detail_grades: Okuma öncesi- 5. Sınıf
   tutorial_rpledfirefly_string_detail_grades: 6-8. Sınıflar (11-13 yaş)
   tutorial_rpcharting_string_detail_grades: 9. ve üzeri Sınıflar
@@ -11339,6 +11363,10 @@ tr:
   tutorial_nasapackage_string_detail_grades: 6-8. Sınıflar (11-13 yaş)
   tutorial_nasalunar_string_detail_grades: 6-8. Sınıflar (11-13 yaş)
   tutorial_meeestate_string_detail_grades: 2. ve üzeri Sınıflar
+  tutorial_imagipixelart_string_detail_grades: 2-8. Sınıflar
+  tutorial_kcjhealth_string_detail_grades: 6+ Sınıflar (11 ve üzeri)
+  tutorial_msftwakanda_string_detail_grades: 6+ Sınıflar (11 ve üzeri)
+  tutorial_nafbrand_string_detail_grades: 9. ve üzeri Sınıflar
   tutorial_rpccw_string_platforms: Tüm modern tarayıcılar, Android tablet, iPad, Windows
     telefon, Android telefon, iPhone
   tutorial_rpledfirefly_string_platforms: Tüm modern tarayıcılar
@@ -11460,6 +11488,12 @@ tr:
   tutorial_nasalunar_string_platforms: Tüm modenr tarayıcılar, iPad, iPhone
   tutorial_meeestate_string_platforms: Android tablet, iPad, Windows telefon, Android
     telefon, iPhone
+  tutorial_imagipixelart_string_platforms: Tüm modern tarayıcılar, iPad, Android tabletler,
+    Windows telefon, Android telefon, iPhone
+  tutorial_kcjhealth_string_platforms: Tüm modern tarayıcılar
+  tutorial_msftwakanda_string_platforms: Tüm modern tarayıcılar
+  tutorial_nafbrand_string_platforms: Tüm modern tarayıcılar, Android tablet, iPad,
+    Windows telefon, Android telefon, iPhone
   tutorial_rpccw_string_detail_platforms: ''
   tutorial_rpledfirefly_string_detail_platforms: Raspberry Pi Pico
   tutorial_rpcharting_string_detail_platforms: ''
@@ -11553,6 +11587,10 @@ tr:
   tutorial_nasapackage_string_detail_platforms: ''
   tutorial_nasalunar_string_detail_platforms: ''
   tutorial_meeestate_string_detail_platforms: ''
+  tutorial_imagipixelart_string_detail_platforms: ''
+  tutorial_kcjhealth_string_detail_platforms: ''
+  tutorial_msftwakanda_string_detail_platforms: ''
+  tutorial_nafbrand_string_detail_platforms: ''
   tutorial_rpccw_string_detail_programming_languages: Bloklar
   tutorial_rpledfirefly_string_detail_programming_languages: Python
   tutorial_rpcharting_string_detail_programming_languages: Python
@@ -11652,29 +11690,10 @@ tr:
   tutorial_nasapackage_string_detail_programming_languages: Bloklar
   tutorial_nasalunar_string_detail_programming_languages: Bloklar, JavaScript
   tutorial_meeestate_string_detail_programming_languages: Bloklar, Python
-  tutorial_imagipixelart_longdescription: Bu 1 saatlik hızlandırılmış kursta Python
-    öğrenin ve kendi renkli animasyonlarınızı yaratın!
-  tutorial_imagipixelart_name: Kendi piksel sanatınızı kodlayın!
-  tutorial_imagipixelart_string_detail_grades: 2-8. Sınıflar
-  tutorial_imagipixelart_string_detail_platforms: ''
   tutorial_imagipixelart_string_detail_programming_languages: yazım
-  tutorial_imagipixelart_string_platforms: Tüm modern tarayıcılar, iPad, Android tabletler,
-    Windows telefon, Android telefon, iPhone
-  tutorial_kcjhealth_longdescription: 'SDG #3 ''İyi Sağlık ve Zindelik''i keşfederken
-    veri görselleştirme, algoritmik sanat ve kodlama hakkında bilgi edinin.'
-  tutorial_kcjhealth_name: "'Sağlık ve Zindelik Mücadelesi"
-  tutorial_kcjhealth_string_detail_grades: 6+ Sınıflar (11 ve üzeri)
-  tutorial_kcjhealth_string_detail_platforms: ''
   tutorial_kcjhealth_string_detail_programming_languages: bloklar
-  tutorial_kcjhealth_string_platforms: Tüm modern tarayıcılar
-  tutorial_msftwakanda_longdescription: 'Shuri, Okoye ve Riri, Wakanda''ya yardım
-    etmek için bir araya gelmelidir. Marvel Studios''un "Black Panther: Wakanda Forever"
-    filminden ilham alan kendi aksiyon dolu etkinliğinizi kodlayın!'
-  tutorial_msftwakanda_name: Çok Yaşa Wakanda
-  tutorial_msftwakanda_string_detail_grades: 6+ Sınıflar (11 ve üzeri)
-  tutorial_msftwakanda_string_detail_platforms: ''
   tutorial_msftwakanda_string_detail_programming_languages: Bloklar
-  tutorial_msftwakanda_string_platforms: Tüm modern tarayıcılar
+  tutorial_nafbrand_string_detail_programming_languages: Python
   school_not_found_heading: Okulunuzu bulamadık. Lütfen daha fazla bilgi girin.
   school_name: Okul Adı
   school_name_error: Okul Adı zorunludur.
@@ -11733,6 +11752,13 @@ tr:
   all: Hepsi
   dont_know: Bilmiyorum
   language_label: Dil
+  team_page_full_team_alt_text: Nearly 100 Code.org employees in matching blue and
+    yellow t-shirts pose in a hotel conference room for the company's summer 2022
+    Codechella event.
+  careers_page_code_pride_alt_text: Two feminine-presenting employees smile while
+    holding the ends of a Code.org-branded rainbow banner. Behind them, several people
+    are wearing Code.org shirts and waving rainbow flags while walking alongside a
+    multi-colored Volkswagen bug.
   language_code:
     ar: Arapça
     az: Azerice
