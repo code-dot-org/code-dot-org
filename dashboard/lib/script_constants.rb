@@ -261,6 +261,9 @@ module ScriptConstants
     CSD5 = "csd5".freeze,
     CSD6 = "csd6".freeze,
 
+    # Creating Apps with Devices
+    DEVICES = "devices".freeze,
+
     # AIML
     AIML = "aiml".freeze,
 
