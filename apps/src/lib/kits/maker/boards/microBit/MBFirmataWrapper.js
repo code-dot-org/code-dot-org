@@ -93,4 +93,10 @@ export default class MicrobitFirmataWrapper extends MBFirmataClient {
       callback(pin, this.digitalInput[pin] + 1);
     }
   }
+
+  compassCalibration() {
+    // Request that the micro:bit perform a compass calibration cycle
+    super.compassCalibration();
+    this.myPort.close();
+  }
 }
