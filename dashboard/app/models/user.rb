@@ -247,7 +247,15 @@ class User < ApplicationRecord
   before_destroy :soft_delete_channels
 
   before_validation on: :create, if: -> {gender.present?} do
-    # TODO DAYNE log gender to firehose
+    FirehoseClient.instance.put_record(
+      :analysis,
+      {
+        study: 'gender-input-type',
+        study_group: 'v1',
+        event: gender_input_exp,
+        data_string: gender
+      }
+    )
     CDO.log.info "DAYNE gender=#{gender} input_type=#{gender_input_exp}"
     self.gender = Policies::Gender.normalize gender
   end
