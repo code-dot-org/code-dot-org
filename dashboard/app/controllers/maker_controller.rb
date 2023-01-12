@@ -35,7 +35,7 @@ class MakerController < ApplicationController
     script_names = maker_units.map(&:name)
     progress = UserScript.lookup_hash(for_user, script_names)
     maker_units.each do |curr_maker_version|
-      return curr_maker_version.script if progress[curr_maker_version.name]
+      return curr_maker_version if progress[curr_maker_version.name]
     end
 
     # If none of the above applies, default to most recent.
