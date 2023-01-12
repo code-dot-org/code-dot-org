@@ -171,14 +171,17 @@ class ProgressLessonTeacherInfo extends React.Component {
 
 const styles = {
   buttonContainer: {
-    marginTop: 5,
-    marginLeft: 15,
-    marginRight: 15
+    margin: '10px 15px 0px 15px',
+    // Have to set line height to 0 to remove additional 5px bottom margin
+    lineHeight: '0px'
   },
+  // Setting 0px margin here intentionally to override styling
   button: {
     width: '100%',
+    margin: '0px',
     paddingLeft: 0,
-    paddingRight: 0
+    paddingRight: 0,
+    boxShadow: 'none'
   }
 };
 
