@@ -3987,7 +3987,7 @@ ja:
         csp5-2023:
           lesson_groups:
             csp_lists:
-              display_name: リスト
+              display_name: データ
             csp_loops:
               display_name: くりかえし
             csp_traversals:
@@ -3999,9 +3999,15 @@ ja:
         csp6-2023:
           lesson_groups:
             csp_unit6_2020:
-              display_name: 'ユニット6: アルゴリズム'
+              display_name: リスト
             lessonGroup-2:
               display_name: コース終了後アンケート
+            lessonGroup-3:
+              display_name: くりかえし
+            lessonGroup-4:
+              display_name: トラバーサル
+            lessonGroup-5:
+              display_name: プロジェクト
         csp7-2023:
           lesson_groups:
             csp_parameters_return_values:

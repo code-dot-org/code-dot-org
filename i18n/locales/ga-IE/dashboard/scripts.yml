@@ -2643,8 +2643,6 @@ ga:
               display_name: Tionscadal
         csp5-2023:
           lesson_groups:
-            csp_lists:
-              display_name: Liostaí
             csp_loops:
               display_name: Lúba
             csp_traversals:
@@ -2655,8 +2653,16 @@ ga:
               display_name: Suirbhé Iarchúrsa
         csp6-2023:
           lesson_groups:
+            csp_unit6_2020:
+              display_name: Liostaí
             lessonGroup-2:
               display_name: Suirbhé Iarchúrsa
+            lessonGroup-3:
+              display_name: Lúba
+            lessonGroup-4:
+              display_name: Trasnáil
+            lessonGroup-5:
+              display_name: Tionscadal
         csp7-2023:
           lesson_groups:
             csp_parameters_return_values:

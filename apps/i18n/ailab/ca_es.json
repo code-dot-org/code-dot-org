@@ -47,6 +47,9 @@
     },
     "shapes_v2_toy": {
       "fields": {
+        "sides": {
+          "id": "costats"
+        },
         "size": {
           "id": "mida"
         }
@@ -168,6 +171,9 @@
     },
     "shapes_v1_toy": {
       "fields": {
+        "sides": {
+          "id": "costats"
+        },
         "size": {
           "id": "mida"
         }
