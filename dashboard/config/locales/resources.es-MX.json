@@ -348,13 +348,16 @@
           "type": "Guía de Proyecto"
         },
         "all_resources/coursef/2022": {
-          "name": "Todos los Recursos"
+          "name": "Todos los Recursos",
+          "url": "/s/coursef-2022/resources"
         },
         "all_standards/coursef/2022": {
-          "name": "Todos los Estándares"
+          "name": "Todos los Estándares",
+          "url": "/s/coursef-2022/estándares"
         },
         "all_vocabulary/coursef/2022": {
-          "name": "Todo el Vocabulario"
+          "name": "Todo el Vocabulario",
+          "url": "/s/coursef-2022/vocab"
         },
         "common_core_and_ngss_guidance/coursef/2022": {
           "name": "Guía de Common Core y NGSS",
@@ -394,7 +397,8 @@
           "type": "Recurso"
         },
         "virtual_lesson_modifications/coursef/2022": {
-          "name": "Modificaciones de las lecciones virtuales"
+          "name": "Modificaciones de las lecciones virtuales",
+          "url": "https://docs.google.com/document/d/10v_thWkO0aJNWsCFtv_bpVbiIy-meYs_vbUiHi-ZCH0/preview"
         },
         "the_power_of_words_lesson_quiz/coursef/2022": {
           "name": "El poder de las palabras - Cuestionario",
@@ -1493,27 +1497,36 @@
           "type": "Recursos de la lección"
         },
         "csd_curriculum_guide/csd/2022": {
-          "name": "CSD Guía Curricular"
+          "name": "CSD Guía Curricular",
+          "url": "https://docs.google.com/document/d/1VUbXHxXqHj5QCb4eSb756KKc7NDzbOLZUE5bPPQmJR8/preview"
         },
         "csd_implementation_guide/csd/2022": {
-          "name": "CSD Guía de Implementación"
+          "name": "CSD Guía de Implementación",
+          "url": "https://docs.google.com/document/d/112OA3_KbicOotqopqUyvXoWPWszz3_LHeMlg0ikCabk/preview"
         },
         "teacher_forum/csd/2022": {
           "name": "Foro de profesores",
           "url": "https://forum.code.org/c/csd"
         },
         "all_resources_3/csd/2022": {
-          "name": "Todos los Recursos"
+          "name": "Todos los Recursos",
+          "url": "/s/csd5-2022/recursos"
         },
         "all_standards_3/csd/2022": {
-          "name": "Todos los Estándares"
+          "name": "Todos los Estándares",
+          "url": "/s/csd5-2022/normas"
         },
         "all_vocabulary_3/csd/2022": {
-          "name": "Todo el Vocabulario"
+          "name": "Todo el Vocabulario",
+          "url": "/s/csd5-2022/vocabulario"
         },
         "csd_guide_to_using_resources/csd/2022": {
           "name": "Guía para el uso de recursos de Descubrimientos de las Ciencias de la Computación",
           "url": "https://docs.google.com/document/d/1gDxNxGT-q3KVuroJYLpqCMnnlvRvzLCX/edit?usp=sharing&ouid=103163802033599385527&rtpof=true&sd=true"
+        },
+        "csd_learning_frameworks/csd/2022": {
+          "name": "CSD Entorno de Aprendizaje",
+          "url": "https://docs.google.com/document/d/1zA0qPfzSRZd8lQeJ5kmTNJVnTwrBgMyCKzt0nhC8oBg/preview"
         },
         "meals_data/csd/2022": {
           "name": "Datos de Comidas",
@@ -2137,16 +2150,24 @@
           "url": "https://docs.google.com/document/d/1upJqgrJ-NGBCoTyjwEQR0rIhITDWd6-w3jNZjNF2n8U/edit?usp=sharing"
         },
         "all_code_1/csd/2022": {
-          "name": "Todo el Código"
+          "name": "Todo el Código",
+          "url": "/s/csd3-2022/código"
         },
         "all_resources_1/csd/2022": {
-          "name": "Todos los Recursos"
+          "name": "Todos los Recursos",
+          "url": "/s/csd3-2022/recursos"
         },
         "all_standards_1/csd/2022": {
-          "name": "Todos los Estándares"
+          "name": "Todos los Estándares",
+          "url": "/s/csd3-2022/estándares"
         },
         "all_vocabulary_1/csd/2022": {
-          "name": "Todo el Vocabulario"
+          "name": "Todo el Vocabulario",
+          "url": "/s/csd3-2022/vocabulario"
+        },
+        "csd_programming_levels_guide/csd/2022": {
+          "name": "CSD Guía de Niveles de Programación ",
+          "url": "https://docs.google.com/document/d/1WGywQ25khB6-FB20x6wO9dGVO9_qJlWkuLVLREJS4Jo/preview"
         },
         "cs_in_entertainment/csd/2022": {
           "name": "Las Ciencias de la Computación en el Entretenimiento",
@@ -2160,6 +2181,7 @@
         },
         "programming_for_entertainment/csd/2022": {
           "name": "Programación para Entretenimiento",
+          "url": "https://docs.google.com/presentation/d/1ojnEhKkUISTCWmf6i_Y5eObbOdocNSrtAjhiWYZVSNU/template/preview",
           "type": "Diapositivas"
         },
         "drawing_shapes/csd/2022": {
@@ -2184,6 +2206,7 @@
         },
         "plotting_shapes/csd/2022": {
           "name": "Trazar Formas",
+          "url": "https://docs.google.com/presentation/d/1B64fDQpLf4iuqXIEYYTjoPsNlt4MQ7hHElllX_5y61g/template/preview",
           "type": "Diapositivas"
         },
         "drawing_in_game_lab_-_part_1/csd/2022": {
@@ -2201,6 +2224,7 @@
         },
         "drawing_in_game_lab/csd/2022": {
           "name": "Dibujar en el Game Lab",
+          "url": "https://docs.google.com/presentation/d/1Qh85JcZquHSfK2LB0-80ZH4u4e3kZ7Lrr4BiCeihtn0/template/preview",
           "type": "Diapositivas"
         },
         "shapes_and_parameters_1/csd/2022": {
@@ -2210,6 +2234,7 @@
         },
         "shapes_and_parameters_2/csd/2022": {
           "name": "Formas y parámetros",
+          "url": "https://docs.google.com/presentation/d/1vulpd2DiwK8IiBHbnNuBh-yCVuVkEA18miL8T5IO-5c/template/preview",
           "type": "Diapositivas"
         },
         "introduction_to_variables/csd/2022": {
@@ -2229,6 +2254,7 @@
         },
         "variables_3/csd/2022": {
           "name": "Variables",
+          "url": "https://docs.google.com/presentation/d/1F8sBblNjZqI-Q7XndJNuvBIWh2KeJF4rqieUMUpGArU/template/preview",
           "type": "Diapositivas"
         },
         "random_numbers/csd/2022": {
@@ -2238,6 +2264,7 @@
         },
         "random_numbers_2/csd/2022": {
           "name": "Números aleatorios",
+          "url": "https://docs.google.com/presentation/d/1t9ZZ3YGM6S1Hbsc4kR5sMnS9v1FQzXQOa4DH7Ajk8B0/template/preview",
           "type": "Diapositivas"
         },
         "animation_tab/csd/2022": {
@@ -2261,6 +2288,7 @@
         },
         "sprites_1/csd/2022": {
           "name": "Sprites",
+          "url": "https://docs.google.com/presentation/d/1F5Gj9yQ05yLciHdVkl-sCFKRAgw0bC54X8Y6AfPGW2w/template/preview",
           "type": "Diapositivas"
         },
         "sprite_properties/csd/2022": {
@@ -2270,10 +2298,12 @@
         },
         "sprite_properties_1/csd/2022": {
           "name": "Propiedades de Sprite",
+          "url": "https://docs.google.com/presentation/d/1R9Q8LGRUtlVZrF88Pp7dL9SNVH5QESkvutI8IV3gQnk/template/preview",
           "type": "Diapositivas"
         },
         "text/csd/2022": {
           "name": "Texto",
+          "url": "https://docs.google.com/presentation/d/1wsO6S1upq95nJ-3vKjaHQ1_E2JaBkoGpP4Fw2tfCu4k/template/preview",
           "type": "Diapositivas"
         },
         "captioned_scenes/csd/2022": {
@@ -2293,6 +2323,7 @@
         },
         "mini-project_-_captioned_scenes/csd/2022": {
           "name": "Mini-proyecto - Escenas Subtituladas",
+          "url": "https://docs.google.com/presentation/d/1zG2Bj7D464w9WGfERlWNC5XWHOKERckb4ukmDYTXes4/template/preview",
           "type": "Diapositivas"
         },
         "flipbook_example_-_by_marnic_bos/csd/2022": {
@@ -2319,6 +2350,7 @@
         },
         "the_draw_loop_1/csd/2022": {
           "name": "El bucle 'dibujar'",
+          "url": "https://docs.google.com/presentation/d/1RKKRxUGfN2VL9aGxL9CjG559JI1p_wVlO_mTrs4Pj2k/template/preview",
           "type": "Diapositivas"
         },
         "sprite_movement/csd/2022": {
@@ -2333,6 +2365,7 @@
         },
         "sprite_movement_1/csd/2022": {
           "name": "Movimiento de sprites",
+          "url": "https://docs.google.com/presentation/d/1GJ3WTHH0YxThk8L1MCGGmwmGy4l7MnWA1WCI7dqUO1k/template/preview",
           "type": "Diapositivas"
         },
         "animated_scene/csd/2022": {
@@ -2352,6 +2385,7 @@
         },
         "mini-project_-_animation/csd/2022": {
           "name": "Mini-proyecto - Animación",
+          "url": "https://docs.google.com/presentation/d/1B2gxt50rpnKHN-qJAq7uXEd2-kTKP0giuxOghbQDhBE/template/preview",
           "type": "Diapositivas"
         },
         "boolean_expressions/csd/2022": {
@@ -2376,10 +2410,12 @@
         },
         "conditionals/csd/2022": {
           "name": "Condicionales",
+          "url": "https://docs.google.com/presentation/d/12j4KMKOvDBSz5B5ekePOBcogSglhpK9QnDf3egXv3gc/template/preview",
           "type": "Diapositivas"
         },
         "keyboard_input/csd/2022": {
           "name": "Entrada de teclado",
+          "url": "https://docs.google.com/presentation/d/1HeJu3AlM-SdJr4uEBFewFeRCol-znx2nbiwLTyhDhA8/template/preview",
           "type": "Diapositivas"
         },
         "if-else_statements/csd/2022": {
@@ -2394,6 +2430,7 @@
         },
         "mouse_input/csd/2022": {
           "name": "Entrada de Ratón",
+          "url": "https://docs.google.com/presentation/d/1fEiGXNsuyjePx5irkx3KehMWvpM4i07EqQMfCw2DUDg/template/preview",
           "type": "Diapositivas"
         },
         "extra_code_in_challenge_levels_1/csd/2022": {
@@ -2432,6 +2469,7 @@
         },
         "project_-_interactive_card/csd/2022": {
           "name": "Proyecto - Tarjeta Interactiva",
+          "url": "https://docs.google.com/presentation/d/18rn-AvzgOqgmvH1QN7JtUCInvpVqlqUD_ZOQNivdI6E/template/preview",
           "type": "Diapositivas"
         },
         "velocity/csd/2022": {
@@ -2446,6 +2484,7 @@
         },
         "velocity_2/csd/2022": {
           "name": "Velocidad",
+          "url": "https://docs.google.com/presentation/d/1QdsutY-BjyXtBBQblLiEuiURHWGY3MYV_BkhVc7bglE/template/preview",
           "type": "Diapositivas"
         },
         "collision_detection/csd/2022": {
@@ -2470,6 +2509,7 @@
         },
         "collision_detection_2/csd/2022": {
           "name": "Detección de colisiones",
+          "url": "https://docs.google.com/presentation/d/18hXKoENm4jVJnHFYRQGtPwF6LvL-0Ag5RS1VmGY7KB4/template/preview",
           "type": "Diapositivas"
         },
         "mini-project_guide_-_side_scroller/csd/2022": {
@@ -2489,6 +2529,7 @@
         },
         "mini-project_-_side_scroller/csd/2022": {
           "name": "Mini-Proyecto - Desplazamiento Lateral",
+          "url": "https://docs.google.com/presentation/d/1yPyD4Bm81g6fskDKvVe-wI7QXbwqIlbCjjdtZVcpNQ8/template/preview",
           "type": "Diapositivas"
         },
         "velocity_and_the_counter_pattern/csd/2022": {
@@ -2498,10 +2539,12 @@
         },
         "complex_sprite_movement/csd/2022": {
           "name": "Movimiento Complejo de Sprites",
+          "url": "https://docs.google.com/presentation/d/1NzaQeQLXoFMEn_F0M0npuGCIK29pOtMhyw-pZXRM39Y/template/preview",
           "type": "Diapositivas"
         },
         "collisions/csd/2022": {
           "name": "Colisiones",
+          "url": "https://docs.google.com/presentation/d/1kV9Yh1CsEdUElUh_dxPi2zhxJ2APzLidZ4NplaLMZSY/template/preview",
           "type": "Diapositivas"
         },
         "flyer_game/csd/2022": {
@@ -2521,6 +2564,7 @@
         },
         "mini-project_-_flyer_game/csd/2022": {
           "name": "Mini-Proyecto - Juego con Objetos Voladores",
+          "url": "https://docs.google.com/presentation/d/1lxbBZRbjJ-Wf7E1huZtkmttU5JANc30Cbu9frXjZViM/template/preview",
           "type": "Diapositivas"
         },
         "functions/csd/2022": {
@@ -2535,6 +2579,7 @@
         },
         "functions_4/csd/2022": {
           "name": "Funciones",
+          "url": "https://docs.google.com/presentation/d/1-JfCo6XxlfLrZKjXJxM0Ht33upVKfD6SmpD-BRwLDH8/template/preview",
           "type": "Diapositivas"
         },
         "defender_game/csd/2022": {
@@ -2543,6 +2588,7 @@
         },
         "the_game_design_process/csd/2022": {
           "name": "El Proceso de Diseño de Juegos",
+          "url": "https://docs.google.com/presentation/d/1gpsv_LnfAgi4Y75vqtxEEhu2T_YDppwwAuykpij_q0o/template/preview",
           "type": "Diapositivas"
         },
         "planning_your_platform_game/csd/2022": {
@@ -2557,6 +2603,7 @@
         },
         "using_the_game_design_process/csd/2022": {
           "name": "Uso del Proceso de Diseño de Juegos",
+          "url": "https://docs.google.com/presentation/d/1Syp3ZczSh23DZ8kfFp_nGTRzCvnKY0cy-aQjCHMbztM/template/preview",
           "type": "Diapositivas"
         },
         "make_your_own_game/csd/2022": {
@@ -2590,6 +2637,7 @@
         },
         "project_-_design_a_game/csd/2022": {
           "name": "Proyecto - Diseñar un Juego",
+          "url": "https://docs.google.com/presentation/d/19RjrkgFvRil27D0Lx8SIt3OuJfR03THe8uwtGl6oYyE/template/preview",
           "type": "Diapositivas"
         },
         "all_code/csd/2022": {
@@ -3053,16 +3101,20 @@
           "type": "Diapositivas"
         },
         "all_code_2/csd/2022": {
-          "name": "Todo el Código"
+          "name": "Todo el Código",
+          "url": "/s/csd4-2022/código"
         },
         "all_resources_2/csd/2022": {
-          "name": "Todos los Recursos"
+          "name": "Todos los Recursos",
+          "url": "/s/csd4-2022/recursos"
         },
         "all_standards_2/csd/2022": {
-          "name": "Todos los Estándares"
+          "name": "Todos los Estándares",
+          "url": "/s/csd4-2022/normas"
         },
         "all_vocabulary_2/csd/2022": {
-          "name": "Todo el Vocabulario"
+          "name": "Todo el Vocabulario",
+          "url": "/s/csd4-2022/vocabulario"
         },
         "designing_with_empathy/csd/2022": {
           "name": "Diseñando con Empatía",
@@ -3081,6 +3133,7 @@
         },
         "designing_with_empathy_2/csd/2022": {
           "name": "Diseñando con empatía",
+          "url": "https://docs.google.com/presentation/d/1s9vpxiLYllhLWHKuc3qAdxa2sDiXXdKkvrueqt6HSOw/template/preview",
           "type": "Diapositivas"
         },
         "profile_1/csd/2022": {
@@ -3130,6 +3183,7 @@
         },
         "understanding_your_user/csd/2022": {
           "name": "Entender a tu Usuario",
+          "url": "https://docs.google.com/presentation/d/1HPHUwHJOwCaPu7ziBMgmritDV51qleFOR3xKNn-MbZs/template/preview",
           "type": "Diapositivas"
         },
         "the_design_thinking_process/csd/2022": {
@@ -3148,6 +3202,8 @@
           "type": "Guía de Actividades"
         },
         "user_centered_design_-_define_and_prepare/csd/2022": {
+          "name": "Diseño Orientado al Usuario - Definir y preparar",
+          "url": "https://docs.google.com/presentation/d/1ip41nls-8EppwUGy_MrW7zbph3phpTh_vE_0-TGkY4M/template/preview",
           "type": "Diapositivas"
         },
         "user_centered_design_try_reflect_/csd/2022": {
@@ -3161,6 +3217,8 @@
           "type": "Guía de Actividades"
         },
         "user_centered_design_-_try_and_reflect/csd/2022": {
+          "name": "Diseño Orientado al Usuario - Prueba y Reflexiona",
+          "url": "https://docs.google.com/presentation/d/1mMMkro2m6M8NDeV6ptmvWY1Zf6wJ-7EoL86bx4TKSRI/template/preview",
           "type": "Diapositivas"
         },
         "user_interface_screens/csd/2022": {
@@ -3180,6 +3238,7 @@
         },
         "user_interfaces/csd/2022": {
           "name": "Interfaces de Usuario",
+          "url": "https://docs.google.com/presentation/d/142Y1kcwN0zMRgUWgEGFdFuUzCrZceSHFamG3KiaXSbg/template/preview",
           "type": "Diapositivas"
         },
         "improve_a_screen/csd/2022": {
@@ -3199,6 +3258,7 @@
         },
         "feedback_and_testing/csd/2022": {
           "name": "Retroalimentación y Prueba",
+          "url": "https://docs.google.com/presentation/d/1ue45wTN7Pyrw7REzpWxRGEXHx5iHJufxkbXCl-AEAK4/template/preview",
           "type": "Diapositivas"
         },
         "example_user_interviews/csd/2022": {
@@ -3213,6 +3273,7 @@
         },
         "identifying_user_needs/csd/2022": {
           "name": "Identificar las Necesidades de los Usuarios",
+          "url": "https://docs.google.com/presentation/d/1uUYOtoHbyogDelyndW62CAnWbT1XfwZk5LzBilDmDcU/template/preview",
           "type": "Diapositivas"
         },
         "paper_prototype_-_student_checklist/csd/2022": {
@@ -3235,6 +3296,7 @@
         },
         "project_-_paper_prototype/csd/2022": {
           "name": "Proyecto - Prototipo de papel",
+          "url": "https://docs.google.com/presentation/d/1NL9v5Q9SMG-zBqyPcXZ45GcCOTWbe-y0tcBFh2QozfE/template/preview",
           "type": "Diapositivas"
         },
         "app_design_kickoff/csd/2022": {
@@ -3253,6 +3315,7 @@
         },
         "designing_apps_for_good/csd/2022": {
           "name": "Diseñar Aplicaciones para un Impacto Social",
+          "url": "https://docs.google.com/presentation/d/1fv2d8Yz1C6FLAbfNgkiLTUIVFA4y36LtCJPg7wEAl0g/template/preview",
           "type": "Diapositivas"
         },
         "market_research/csd/2022": {
@@ -3267,6 +3330,7 @@
         },
         "market_research_2/csd/2022": {
           "name": "Investigación de Mercado",
+          "url": "https://docs.google.com/presentation/d/1YYQ_C5g5FWaxAuObWxrjwviifT05OITJ-Qtk5kx7L7w/template/preview",
           "type": "Diapositivas"
         },
         "explore_ui_elements/csd/2022": {
@@ -3281,6 +3345,7 @@
         },
         "exploring_ui_elements/csd/2022": {
           "name": "Explorar los Elementos de la Interfaz de Usuario",
+          "url": "https://docs.google.com/presentation/d/1XzaHRhdzKoyN31BTm1YGKyqz79tqkwqTSMH0NBrjuGQ/template/preview",
           "type": "Diapositivas"
         },
         "design_mode/csd/2022": {
@@ -3309,6 +3374,7 @@
         },
         "build_a_paper_prototype/csd/2022": {
           "name": "Construir un Prototipo de Papel",
+          "url": "https://docs.google.com/presentation/d/1kIW07fEjIHYaVJMSJHzzE7t-yP28i17LMDNTDXW-_QE/template/preview",
           "type": "Diapositivas"
         },
         "paper_prototype_user_testing/csd/2022": {
@@ -3338,10 +3404,12 @@
         },
         "prototype_testing/csd/2022": {
           "name": "Prueba de Prototipos",
+          "url": "https://docs.google.com/presentation/d/1VfsZUR6ZmM7i3isylpi4SapxbdpgDNMwn2HtLShxfhM/template/preview",
           "type": "Diapositivas"
         },
         "intro_to_design_mode/csd/2022": {
           "name": "Introducción al modo de diseño",
+          "url": "https://youtu.be/jiX1dST2PCw",
           "type": "Vídeo"
         },
         "model_screen_design/csd/2022": {
@@ -3361,18 +3429,22 @@
         },
         "design_mode_in_app_lab/csd/2022": {
           "name": "Modo de Diseño en App Lab",
+          "url": "https://docs.google.com/presentation/d/1VNAMEUcb0YlIc2K55m0vDQ0pcQsyR1-qMj7KK3jEFoE/template/preview",
           "type": "Diapositivas"
         },
         "build_a_digital_prototype/csd/2022": {
           "name": "Construir un prototipo digital",
+          "url": "https://docs.google.com/presentation/d/1inVHDiAa4wJR4Qns4hrZMiYSEj52sVFu9MzyA6Ka2b4/template/preview",
           "type": "Diapositivas"
         },
         "events_in_app_lab/csd/2022": {
           "name": "Eventos en App Lab",
+          "url": "https://docs.google.com/presentation/d/14LfGwdAAFjihgzVgM7-mdcI-7vOc0t9jkx2Ye4Kxz2o/template/preview",
           "type": "Diapositivas"
         },
         "events_in_app_lab_1/csd/2022": {
           "name": "Eventos en App Lab",
+          "url": "https://youtu.be/npa2r4t6y2A",
           "type": "Vídeo"
         },
         "changing_screens/csd/2022": {
@@ -3397,6 +3469,7 @@
         },
         "linking_prototype_screens/csd/2022": {
           "name": "Vinculación de Pantallas Prototipo",
+          "url": "https://docs.google.com/presentation/d/15eMpmSL0ax0PlxR43B6f4SZnTCVMuAPYSqdF1B5pfLs/template/preview",
           "type": "Diapositivas"
         },
         "digital_prototype_user_testing/csd/2022": {
@@ -3406,6 +3479,7 @@
         },
         "testing_the_app/csd/2022": {
           "name": "Prueba de la Aplicación",
+          "url": "https://docs.google.com/presentation/d/154WuEouQoWATs6C_ntttmyiU5NkmhmIRnIPgklq0vqE/template/preview",
           "type": "Diapositivas"
         },
         "bugs_and_features/csd/2022": {
@@ -3420,6 +3494,7 @@
         },
         "bugs_and_features_2/csd/2022": {
           "name": "Errores y Características ",
+          "url": "https://docs.google.com/presentation/d/1aqSy1HsbHv96k0sohHO4QXtvc9TKXgw4RuxLxInS83c/template/preview",
           "type": "Diapositivas"
         },
         "updating_your_prototype/csd/2022": {
@@ -3429,6 +3504,7 @@
         },
         "updating_your_prototype_1/csd/2022": {
           "name": "Actualizando tu Prototipo",
+          "url": "https://docs.google.com/presentation/d/1qSXkRxs0VX1VC76b5Ligma15vMuNRfo4kwiE-q0N9IQ/template/preview",
           "type": "Diapositivas"
         },
         "app_presentation/csd/2022": {
@@ -3467,6 +3543,7 @@
         },
         "project_-_app_presentation/csd/2022": {
           "name": "Proyecto - Presentación de la Aplicación",
+          "url": "https://docs.google.com/presentation/d/1HQL-haoplogL1hsJ3HxcauxaFMEX8adHx5P_HPgofP4/template/preview",
           "type": "Diapositivas"
         },
         "all_code_4/csd/2022": {

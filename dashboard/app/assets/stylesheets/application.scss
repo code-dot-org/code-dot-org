@@ -503,7 +503,7 @@ html, body {
   min-height: $footer_min_height;
   padding-top: $footer_padding-top;
   font-size: 14px;
-  background-color: $dark_color;
+  background-color: $darkest_gray;
   color: $header_text;
   a:link, a:visited, a:hover, a:active {
     font-family: $gotham-regular;
@@ -532,7 +532,7 @@ html, body {
   }
   .dim {
     display: inline-block;
-    opacity: 0.5;
+    opacity: 0.8;
   }
 
   .container {
@@ -855,6 +855,11 @@ body.embedded_iframe {
 $default-modal-width: 640px;
 
 .modal {
+  @media screen and (max-height: 600px) {
+    max-height: 80vh;
+    overflow-y: auto;
+  }
+
   a:hover:not(.btn) {
     color: $red;
     background-color: $white;
@@ -1239,6 +1244,7 @@ input.header_input {
 
 #codeApp {
   position: relative;
+  margin: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
 
   .loading {
     height: 520px;

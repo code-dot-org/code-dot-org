@@ -2995,15 +2995,19 @@ ka:
         csp5-2023:
           lesson_groups:
             csp_lists:
-              display_name: სიები
+              display_name: მონაცემები
             csp_loops:
               display_name: ციკლები
             lessonGroup-5:
               display_name: კურსის შემდგომი გამოკითხვა
         csp6-2023:
           lesson_groups:
+            csp_unit6_2020:
+              display_name: სიები
             lessonGroup-2:
               display_name: კურსის შემდგომი გამოკითხვა
+            lessonGroup-3:
+              display_name: ციკლები
         csp7-2023:
           lesson_groups:
             lessonGroup-3:

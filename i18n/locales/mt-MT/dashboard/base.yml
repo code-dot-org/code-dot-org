@@ -314,24 +314,24 @@ mt:
       current: "Livelli kurrenti"
       unused: "Livelli mhux użati"
   upsell:
-    hoc:
-      body: 'Ipprova dan it-taghlim baziku tax-xjenza tal-kompjuter. Milljuni bhalek pprovaw diga.'
     flappy:
       title: 'Code ta'' Flappy'
       body: 'Tixtieq tibni loghba originali f''inqas minn 10 minuti? Prova il-lezzjoni ta'' Flappy Code!'
-    20-hour:
-      title: 'Kors Aċċellerat'
-      body: 'Dan il-kors ta '' 20 siegħa jintroduċi tax-xjenza tal-kompjuter u l-kunċetti tal-ipprogrammar. Il-kors huwa maħsub għal użu fil-klassijiet għall-gradi mil-primarja sas-sekondarja, iżda huwa gost li wieħed jitgħallem f''kull età.'
-    hoc2014:
-      try_new_tutorial: 'Prova il-kors gdid Hour of Code fis-sezzjoni beta'
-      try_frozen: 'Artist ma'' Anna u Elsa mil film Frozen'
+    frozen:
+      title: "Frozen"
     gallery:
       title: "Gallery"
       body: "Ara it-tpingijiet u stampi krejati mil-users taghna"
-    frozen:
-      title: "Frozen"
+    hoc:
+      body: 'Ipprova dan it-taghlim baziku tax-xjenza tal-kompjuter. Milljuni bhalek pprovaw diga.'
+    hoc2014:
+      try_new_tutorial: 'Prova il-kors gdid Hour of Code fis-sezzjoni beta'
+      try_frozen: 'Artist ma'' Anna u Elsa mil film Frozen'
     infinity:
       title: "Infinity Play Lab"
+    20-hour:
+      title: 'Kors Aċċellerat'
+      body: 'Dan il-kors ta '' 20 siegħa jintroduċi tax-xjenza tal-kompjuter u l-kunċetti tal-ipprogrammar. Il-kors huwa maħsub għal użu fil-klassijiet għall-gradi mil-primarja sas-sekondarja, iżda huwa gost li wieħed jitgħallem f''kull età.'
   landing:
     support: "Ikseb l-Għajnuna"
   multi:

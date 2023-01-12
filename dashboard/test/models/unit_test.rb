@@ -1164,10 +1164,10 @@ class UnitTest < ActiveSupport::TestCase
     unit = create :script
     announcement_key = SecureRandom.uuid
     unit.announcements = [{
-      'key': announcement_key,
-      'notice': 'Announcement notice',
-      'details': 'Announcement details',
-      'buttonText': 'Announcement button text'
+      key: announcement_key,
+      notice: 'Announcement notice',
+      details: 'Announcement details',
+      buttonText: 'Announcement button text'
     }]
     unit.save!
 

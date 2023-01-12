@@ -5,7 +5,7 @@
   "danceFeedbackTooManyDancers": "Attention ! Si tu places le bloc `créer un nouveau` dans `toutes les 2 mesures`, tu vas créer beaucoup de danseurs.",
   "danceFeedbackUseSetSize": "Utilise le bloc `Metbackup_dancer2 size` pour rendre ce danseur plus petit.",
   "danceFeedbackUseSetTint": "Utilise le bloc `définir la nuance` pour changer la nuance d'un danseur.",
-  "danceFeedbackUseStartMapping": "Essaie d’ajouter le bloc <xml><block type=\"Dancelab_startMapping\"><title name=\"SPRITE\">right_unicorn</title><title name=\"PROPERTY\"> \"scale\"</title><title name=\"RANGE\">\"bass\"</title></block></xml> à votre programme.",
+  "danceFeedbackUseStartMapping": "Essaie d’ajouter le bloc <xml><block type=\"Dancelab_startMapping\"><title name=\"SPRITE\">right_unicorn</title><title name=\"PROPERTY\"> « scale\"</title><title name=\"RANGE\">\"bass\"</title></block></xml> à votre programme.",
   "danceFeedbackStartNewMove": "Ton danseur n’effectuait pas un nouveau mouvement après la quatrième mesure.",
   "danceFeedbackNeedDifferentDance": "Tu dois utiliser une autre danse.",
   "danceFeedbackNeedEveryTwoMeasures": "Assure-toi que tu utilises le bloc  `toutes les 2 mesures`",

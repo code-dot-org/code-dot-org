@@ -163,6 +163,10 @@ tr:
   social_coldplay_title: Coldplay ve Code.org ile oluşturun
   social_coldplay_desc: Bize en iyi hareketlerini göster! Kodla, dans et, dünyayla
     paylaş ve kazan.
+  social_maker_title: I'm a Maker!
+  social_maker_desc: Code.org physical computing and maker resources for grades 6-12.
+  pl_superhero_title: Help students become superheroes!
+  pl_superhero_desc: Our Professional Learning program helps you teach computer science!
   hoc_live: Kodlama Saati Canlı Yayın
   hoc_live_sign_up_title: Kodlama Saati Canlı Yayın için kayıt ol
   hoc_live_learn_title: Canlı Kodlama Saati ile öğrenin
@@ -548,6 +552,10 @@ tr:
   signup_registration_closed: Ve her yıl Aralık ayında, sınıfınız Hour of Code ile
     Bilgisayar Bilimi Eğitim Haftası'nı kutlayan milyonlarca öğrenciye katılabilir.
     Yıllık kutlama için Ekim ayında kayıt açacağız.
+  signup_registration_closed_2022_markdown: 'Bu yılki Hour of Code etkinlik haritası
+    için kayıt şu anda kapalı, ancak yine de [bir Hour of Code düzenleyebilir](%{hoc_activities_url})
+    ve sosyal medyadaki kutlamaya katılabilirsiniz! #HourOfCode etiketini kullanarak
+    etkinliğinizin eğlenceli resimlerini veya videolarını yayınlayın!'
   signup_header: "%{campaign_date} tarihlerinde bir Hour of Code organize edin ve
     buradan kaydolun."
   signup_name_label: İsminiz
@@ -1070,6 +1078,10 @@ tr:
   footer_menu_terms: Şartlar
   footer_menu_privacy: Gizlilik Politikası
   footer_menu_cookie: Çerez Bildirimi
+  footer_menu_facebook: Code.org on Facebook
+  footer_menu_twitter: Code.org on Twitter
+  footer_menu_instagram: Code.org on Instagram
+  footer_menu_medium: Code.org on Medium.com
   learn_banner_heading: Hour of Code Aktiviteleri
   learn_banner_blurb: Her yaşa göre tasarlanmış 45’ten fazla dildeki bir saatlik dersleri
     deneyin.  Bir Hour of Code ile başlayarak 180’den fazla ülkedeki milyonlarca öğrenci
@@ -3031,24 +3043,24 @@ tr:
     olması optimal, ancak gerekli değildir.
   tutorial_highseas_longdescription: Bir ortam yaratmak için bir okyanus dalgasını
     canlandırın, sonra açık denizlerde gerçekleşen bir hikayeyi anlatın.
-  tutorial_capython_longdescription: Python öğrenmek için etkileyici ve basit bir
-    dildir. Kaplumbağalar arkadaşlarınızın yardımıyla eğlenceli görüntüler oluştururken
-    modüller, işlevler, döngüler ve listeler hakkında bilgi edinin. Geometri hiç bu
-    kadar eğlenceli olmamıştı!
+  tutorial_capython_longdescription: Python öğrenmesi ilgi çekici ve basit bir dildir.  Kaplumbağa
+    arkadaşlarınızın yardımıyla eğlenceli görüntüler oluştururken modülleri, işlevleri,
+    döngüleri ve listeleri kullanmayı öğrenin.  Geometri hiç bu kadar eğlenceli olmamıştı!
   tutorial_frzn_longdescription: Buzun sihrini ve güzelliğini keşfettikleri macerada
     Anna ve Elsa’ya katılmak için kodu kullanalım! Buzda kaydıkça kar taneleri ve
     değişik desenler oluşturup bir kış diyarı yaratabilir ve sonra arkadaşlarınızla
     paylaşabilirsiniz!
-  tutorial_cocom_longdescription: senin kahraman seçin ve Kithgard Dungeon dev devriye,
-    lav çukurları ve lazer ışınları aracılığıyla yol kodlamak. , Üst seviye taşlar
-    kazanmak ve yeni programlama güçler kilidini sihirli öğeleri yağma!
+  tutorial_cocom_longdescription: Kahramanınızı seçin ve Kithgard Dungeon'ın dev devriyeleri,
+    lav çukurları ve lazer ışınları arasında kod yazın.  Yeni programlama güçlerinin
+    kilidini açmak için seviye atlayın, değerli taşlar kazanın ve sihirli öğeleri
+    yağmalayın!
   tutorial_play-lab_longdescription: Play Lab ile bir hikaye yaratın ya da oyun yapın!
     Hayvanları, korsanları, zombileri, ninjaları ve daha fazla karakteri hareket ettirin,
     ses çıkarmalarını sağlayın, onlara puan toplatın ve hatta ateş topları attırın!
-  tutorial_boxisland_longdescription: Kutu Adası'nda seyahat edin ve tüm yıldızları
-    toplayın! Kutu Adası, heyecan verici bir ada macerasında çocukları kendine çeken
-    güzel bir mobil kodlama oyunudur. Bu yazıda, temel algoritmaları, dizileri, döngüleri
-    ve koşullu ifadeleri öğreneceksiniz!
+  tutorial_boxisland_longdescription: Box Island'da bir geziye çıkın ve tüm yıldızları
+    toplayın!  Box Island, çocukları büyüleyici adada heyecan verici bir maceraya
+    götüren güzel bir mobil kodlama oyunudur.  Bu eğitimde algoritmaların, dizilerin,
+    döngülerin ve koşullu ifadelerin temellerini öğreneceksiniz!
   tutorial_textcomp_longdescription: 'Bir noktada bitleri gönderme hızında fiziksel
     bir sınıra erişiriz ve büyük miktarda bilgiyi daha hızlı göndermek istiyorsak,
     aynı bilgiyi daha az bitle temsil etmenin bir yolunu bulmalı, yani verileri sıkıştırmalıyız.
@@ -3062,28 +3074,29 @@ tr:
     bilgi gönderirken gizliliğe duyulan ihtiyaç hakkında yeterli derecede bilgi sahibi
     olmalıdır ve güçlü bilişim araçları çağında şifreleme tekniklerinin daha sofistike
     olması gerektiğini öğrenmelidir.
-  tutorial_kanopixel_longdescription: Her yaştan yaratıcılar, gerçek bir programlama
-    dilinde kodlamayı öğrenir ve kodlarıyla birlikte 13 resim dizisi çizerek komutlarını
-    hayata geçirirler. Pong ve diğer retro oyunlardan 8-bit sanat ve Minecraft vasıtasıyla
-    video oyun sanat tarihi hakkında bilgi edinecekler, bilgisayar bilimleriyle sanat,
-    tarih ve hikaye anlatımı yapacaklar. Uygulama esnektir - bir veya birden çok oturumda
-    1 saat veya birkaç saat geçirebilirsiniz. Öğrenciler, zorluklar içerisinde Pixel
-    Hack'ı kendi başlarına kendi başlarına kullanarak tamamlayabilir veya Pixel Hack'ı
-    kapsamlı bir eğitimci kılavuzu olan önerilerle dolu bir öğretim görevlisi yolculuğuna
-    dönüştürebilirler. Öğrenciler, Pixel Hacker Sertifikası kazanmak için zorluklarımızı
-    çiğneyerek kendi yaratıcı yeteneklerini eklemeye teşvik edilecektir.
-  tutorial_foos_longdescription: Bulmaca çözmek için sevimli Foos programlayın. Daha
-    sonra oyun yapmak ve paylaşmak için Foo Studio'ya girin. Her yerde herkes, The
-    Foos ödüllü "sözcüksüz" arayüzüyle kodlamayı öğrenebilir. Şimdi oyna!
-  tutorial_tynkerdd_longdescription: Kendi özel ejderhanı tasarla, sonra eğlenceli
-    bulmacalarla hazine ve madeni paralar arayışında rehberlik etmek için programlamayı
-    kullanın! Karmaşık kaleler arasında dolaşmanız, power-up'lar bulmanız ve tüm hazineyi
-    almak için şövalyeleri ele geçirmeniz gerekecek.
-  tutorial_tynkerana_longdescription: Saniye, dakikalık ve saatli el hareketli bir
-    analog saat oluşturmak için matematik ve geometri bilgilerinizi kullanın. Her
-    elin hangi vakitte olduğuna bağlı olarak açılacağı açı hesaplamalısınız. İşiniz
-    bittiğinde, kendi çalar saatinizi hazırlamak için gün boyunca yapmanız gerekenleri
-    hatırlatıcılar ekleyebilirsiniz!
+  tutorial_kanopixel_longdescription: Her yaştan içerik oluşturucu, gerçek bir programlama
+    dilinde kodlamayı öğrenir ve kod içeren 13 resimlik bir dizi çizerek komutlarının
+    hayata geçmesini izler.  Bilgisayar bilimini sanat, tarih ve hikaye anlatımıyla
+    bir araya getirerek, 8-bit sanat ve Minecraft aracılığıyla Pong ve diğer retro
+    oyunlardan video oyun sanatı tarihini öğrenecekler.  Uygulama esnektir; bir veya
+    birden fazla oturumda 1 veya birkaç saat harcayabilirsiniz.  Öğrenciler, zorluklar
+    içinde rehberlik kullanarak Pixel Hack'i kendi başlarına tamamlayabilir veya Pixel
+    Hack'i önerilerle dolu kapsamlı bir eğitimci kılavuzuyla eğitmen liderliğindeki
+    bir yolculuğa dönüştürebilirsiniz.  Öğrenciler, Pixel Hacker Sertifikası kazanmak
+    için zorluklarımızı hackleyerek kendi yaratıcı yeteneklerini katmaya teşvik edilecek.
+  tutorial_foos_longdescription: Sıralama ve döngüler gibi temel bilgisayar bilimi
+    kavramlarını öğreten bulmacaları çözmek için sevimli Foos'u kodlayın.  CodeSpark
+    Academy'nin ödüllü "kelimesiz" arayüzü ile herkes her yerde kodlamayı öğrenebilir.  Acemi
+    kodlayıcılar ve ön okuyucular hoş geldiniz!
+  tutorial_tynkerdd_longdescription: Kendi özel ejderinizi tasarlayın, ardından ona
+    hazine ve madeni para arayışında eğlenceli bulmacalarda rehberlik etmek için programlamayı
+    kullanın!  Tüm hazineyi almak için karmaşık kalelerde gezinmeniz, güçlendiriciler
+    bulmanız ve şövalyeleri fethetmeniz gerekecek.
+  tutorial_tynkerana_longdescription: Hareket eden saniye, yelkovan ve akrep ile çalışan
+    bir analog saat oluşturmak için matematik ve geometri bilginizi kullanın.  Saatin
+    kaç olduğuna bağlı olarak her bir ibrenin göstermesi gereken açıyı hesaplamanız
+    gerekecek.  İşiniz bittiğinde, kendi çalar saatinizi yapmak için gün boyunca yapmanız
+    gerekenler hakkında hatırlatıcılar ekleyebilirsiniz!
   tutorial_vidcard_longdescription: |-
     JavaScript ile nasıl bir tebrik kartı hazırlayacağınızı öğrenin!
 
@@ -3095,16 +3108,15 @@ tr:
   tutorial_spritebox_longdescription: 'Üç farkı dünyadan yıldız toplayarak, Koş, atla
     ve yolunu kodla ve bitiş çizgisine gel! Swift, Java veya Icons ile sıralamayı,
     hata ayaklamayı, döngüleri ve kodlamayı öğren. '
-  tutorial_tynkerch_longdescription: Bilgisayarı kötü amaçlı bir virüsten kurtarın!
-    Virüsleri silerek, kapıları açarak, labirentleri çözerek ve portallar arasında
-    gezinerek sistemin içine girmeniz gerekecek. Virüslere ve aksaklıklara dikkat
-    edin!
-  tutorial_lightbot_longdescription: Lightbot, oyunculara bulmacaları çözmek için
-    programlama mantığı kullanmasını isteyen bir oyundur! Her seviyedeki tüm mavi
-    kiremitleri aydınlatmaya Lightbot'a rehberlik ederek temel kodlama konseptleri
-    hakkında pratik bir anlayış kazanın. Bu kendinden kılavuzlu etkinlikte, talimatları
-    nasıl sıralayacağınızı, prosedürleri yazacağınızı ve döngüleri nasıl kullanacağınızı
-    öğrenin. Her yaş ve tüm beceri düzeyleri için harika.
+  tutorial_tynkerch_longdescription: Bilgisayarı kötü amaçlı bir virüsten kurtarın!  Virüsleri
+    silerek, kapıları açarak, labirentleri çözerek ve portallar arasında gezinerek
+    sistemi hacklemeniz gerekecek.  Virüslere ve hatalara dikkat edin!
+  tutorial_lightbot_longdescription: Lightbot, oyunculardan bulmacaları çözmek için
+    programlama mantığını kullanmalarını isteyen bir oyundur! Lightbot'a her seviyede
+    tüm mavi karoları aydınlatması için rehberlik ederek temel kodlama kavramları
+    hakkında pratik bir anlayış kazanın. Bu kendi kendine rehberli aktivitede yönergeleri
+    nasıl sıralayacağınızı, prosedürler yazacağınızı ve yol boyunca döngüleri nasıl
+    kullanacağınızı öğrenin. Her yaş ve tüm beceri düzeyleri için harika.
   tutorial_hoc_longdescription: Yeni code.org/hoc için yer tutucu
   tutorial_code_longdescription: Sürükle-bırak programlama yöntemiyle Bilgisayar Biliminin
     temel kavramlarını öğrenin. Bu, oyun benzeri, kendi kendine yönlendirilen eğitimde
@@ -10886,6 +10898,10 @@ tr:
   tutorial_nasapackage_name: 'NASA: Paket Teslim Drone Simülasyonu Kodlama Etkinliği'
   tutorial_nasalunar_name: 'NASA: Ay Kodlama Mücadelesi'
   tutorial_meeestate_name: Emlaktan Kaçış
+  tutorial_imagipixelart_name: Kendi piksel sanatınızı kodlayın!
+  tutorial_kcjhealth_name: "'Sağlık ve Zindelik Mücadelesi"
+  tutorial_msftwakanda_name: Çok Yaşa Wakanda
+  tutorial_nafbrand_name: Code your Brand
   tutorial_rpccw_longdescription: Kendi karakterinizi yaratın, bir tişört tasarlayın
     ve biraz müzik yaratın. Tamamlanan her proje için rozet kazanın.
   tutorial_rpledfirefly_longdescription: Yanıp sönen bir LED ateş böceği oluşturmak
@@ -11243,6 +11259,18 @@ tr:
     ve hesaplamalı düşünmeyi kullanın. Şafağa kadar kodlayın ve bir milyon zümrüt
     kazanın! Bloklarda veya Python''da kodlama ile Hour of Code, herkesin kodun temellerini
     öğrenmesi için bir öğrenme yolu sunar.'
+  tutorial_imagipixelart_longdescription: Bu 1 saatlik hızlandırılmış kursta Python
+    öğrenin ve kendi renkli animasyonlarınızı yaratın!
+  tutorial_kcjhealth_longdescription: 'SDG #3 ''İyi Sağlık ve Zindelik''i keşfederken
+    veri görselleştirme, algoritmik sanat ve kodlama hakkında bilgi edinin.'
+  tutorial_msftwakanda_longdescription: 'Shuri, Okoye ve Riri, Wakanda''ya yardım
+    etmek için bir araya gelmelidir. Marvel Studios''un "Black Panther: Wakanda Forever"
+    filminden ilham alan kendi aksiyon dolu etkinliğinizi kodlayın!'
+  tutorial_nafbrand_longdescription: In Code your Brand, you will be creating a virtual
+    contact file to create a personalized QR code with your contact details. After
+    you complete this activity, you will be equipped with a modern business card that
+    you can share while you're networking with people who can help or guide you in
+    your career or college journey.
   tutorial_rpccw_string_detail_grades: Okuma öncesi- 5. Sınıf
   tutorial_rpledfirefly_string_detail_grades: 6-8. Sınıflar (11-13 yaş)
   tutorial_rpcharting_string_detail_grades: 9. ve üzeri Sınıflar
@@ -11335,6 +11363,10 @@ tr:
   tutorial_nasapackage_string_detail_grades: 6-8. Sınıflar (11-13 yaş)
   tutorial_nasalunar_string_detail_grades: 6-8. Sınıflar (11-13 yaş)
   tutorial_meeestate_string_detail_grades: 2. ve üzeri Sınıflar
+  tutorial_imagipixelart_string_detail_grades: 2-8. Sınıflar
+  tutorial_kcjhealth_string_detail_grades: 6+ Sınıflar (11 ve üzeri)
+  tutorial_msftwakanda_string_detail_grades: 6+ Sınıflar (11 ve üzeri)
+  tutorial_nafbrand_string_detail_grades: 9. ve üzeri Sınıflar
   tutorial_rpccw_string_platforms: Tüm modern tarayıcılar, Android tablet, iPad, Windows
     telefon, Android telefon, iPhone
   tutorial_rpledfirefly_string_platforms: Tüm modern tarayıcılar
@@ -11456,6 +11488,12 @@ tr:
   tutorial_nasalunar_string_platforms: Tüm modenr tarayıcılar, iPad, iPhone
   tutorial_meeestate_string_platforms: Android tablet, iPad, Windows telefon, Android
     telefon, iPhone
+  tutorial_imagipixelart_string_platforms: Tüm modern tarayıcılar, iPad, Android tabletler,
+    Windows telefon, Android telefon, iPhone
+  tutorial_kcjhealth_string_platforms: Tüm modern tarayıcılar
+  tutorial_msftwakanda_string_platforms: Tüm modern tarayıcılar
+  tutorial_nafbrand_string_platforms: Tüm modern tarayıcılar, Android tablet, iPad,
+    Windows telefon, Android telefon, iPhone
   tutorial_rpccw_string_detail_platforms: ''
   tutorial_rpledfirefly_string_detail_platforms: Raspberry Pi Pico
   tutorial_rpcharting_string_detail_platforms: ''
@@ -11549,6 +11587,10 @@ tr:
   tutorial_nasapackage_string_detail_platforms: ''
   tutorial_nasalunar_string_detail_platforms: ''
   tutorial_meeestate_string_detail_platforms: ''
+  tutorial_imagipixelart_string_detail_platforms: ''
+  tutorial_kcjhealth_string_detail_platforms: ''
+  tutorial_msftwakanda_string_detail_platforms: ''
+  tutorial_nafbrand_string_detail_platforms: ''
   tutorial_rpccw_string_detail_programming_languages: Bloklar
   tutorial_rpledfirefly_string_detail_programming_languages: Python
   tutorial_rpcharting_string_detail_programming_languages: Python
@@ -11648,29 +11690,10 @@ tr:
   tutorial_nasapackage_string_detail_programming_languages: Bloklar
   tutorial_nasalunar_string_detail_programming_languages: Bloklar, JavaScript
   tutorial_meeestate_string_detail_programming_languages: Bloklar, Python
-  tutorial_imagipixelart_longdescription: Bu 1 saatlik hızlandırılmış kursta Python
-    öğrenin ve kendi renkli animasyonlarınızı yaratın!
-  tutorial_imagipixelart_name: Kendi piksel sanatınızı kodlayın!
-  tutorial_imagipixelart_string_detail_grades: 2-8. Sınıflar
-  tutorial_imagipixelart_string_detail_platforms: ''
   tutorial_imagipixelart_string_detail_programming_languages: yazım
-  tutorial_imagipixelart_string_platforms: Tüm modern tarayıcılar, iPad, Android tabletler,
-    Windows telefon, Android telefon, iPhone
-  tutorial_kcjhealth_longdescription: 'SDG #3 ''İyi Sağlık ve Zindelik''i keşfederken
-    veri görselleştirme, algoritmik sanat ve kodlama hakkında bilgi edinin.'
-  tutorial_kcjhealth_name: "'Sağlık ve Zindelik Mücadelesi"
-  tutorial_kcjhealth_string_detail_grades: 6+ Sınıflar (11 ve üzeri)
-  tutorial_kcjhealth_string_detail_platforms: ''
   tutorial_kcjhealth_string_detail_programming_languages: bloklar
-  tutorial_kcjhealth_string_platforms: Tüm modern tarayıcılar
-  tutorial_msftwakanda_longdescription: 'Shuri, Okoye ve Riri, Wakanda''ya yardım
-    etmek için bir araya gelmelidir. Marvel Studios''un "Black Panther: Wakanda Forever"
-    filminden ilham alan kendi aksiyon dolu etkinliğinizi kodlayın!'
-  tutorial_msftwakanda_name: Çok Yaşa Wakanda
-  tutorial_msftwakanda_string_detail_grades: 6+ Sınıflar (11 ve üzeri)
-  tutorial_msftwakanda_string_detail_platforms: ''
   tutorial_msftwakanda_string_detail_programming_languages: Bloklar
-  tutorial_msftwakanda_string_platforms: Tüm modern tarayıcılar
+  tutorial_nafbrand_string_detail_programming_languages: Python
   school_not_found_heading: Okulunuzu bulamadık. Lütfen daha fazla bilgi girin.
   school_name: Okul Adı
   school_name_error: Okul Adı zorunludur.
@@ -11729,6 +11752,13 @@ tr:
   all: Hepsi
   dont_know: Bilmiyorum
   language_label: Dil
+  team_page_full_team_alt_text: Nearly 100 Code.org employees in matching blue and
+    yellow t-shirts pose in a hotel conference room for the company's summer 2022
+    Codechella event.
+  careers_page_code_pride_alt_text: Two feminine-presenting employees smile while
+    holding the ends of a Code.org-branded rainbow banner. Behind them, several people
+    are wearing Code.org shirts and waving rainbow flags while walking alongside a
+    multi-colored Volkswagen bug.
   language_code:
     ar: Arapça
     az: Azerice

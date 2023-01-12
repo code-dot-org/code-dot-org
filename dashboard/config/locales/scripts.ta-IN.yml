@@ -2084,10 +2084,18 @@ ta:
         csp5-2023:
           lesson_groups:
             csp_lists:
-              display_name: பட்டியல்கள்
+              display_name: தகவல்கள்
             csp_loops:
               display_name: சுழற்சிகள்
             csp_project:
+              display_name: திட்டம்
+        csp6-2023:
+          lesson_groups:
+            csp_unit6_2020:
+              display_name: பட்டியல்கள்
+            lessonGroup-3:
+              display_name: சுழற்சிகள்
+            lessonGroup-5:
               display_name: திட்டம்
         csp-playground:
           description_audience: பாடத்திட்ட எழுத்தாளர்கள்

@@ -287,37 +287,37 @@ bn:
         দিয়ে কোড করুন, তারপর এক সেকেন্ডের মধ্যে আপনার অ্যাপ্লিকেশন শেয়ার করুন।
       audience: বয়সের ১৩+
       cta: শিখুন কিভাবে
+    aquatic:
+      title: মাইনক্র্যাফট
     flappy:
       title: ফ্লাপি কোড
+    frozen:
+      title: হিমায়িত
     gallery:
       title: সংগ্রহশালা
     gamelab:
       audience: বয়সের ১৩+
       cta: শিখুন কিভাবে
+    hero:
+      title: মাইনক্র্যাফট
     hoc-encryption:
       title: সাধারণ এনক্রিপশন
-    weblab:
-      audience: বয়সের ১৩+
-      cta: শিখুন কিভাবে
-    frozen:
-      title: হিমায়িত
-    starwars:
-      title: স্টার ওয়ার্স
     minecraft:
       title: মাইনক্র্যাফট
     minecraft2016:
       title: মাইনক্র্যাফট
-    aquatic:
-      title: মাইনক্র্যাফট
-    hero:
-      title: মাইনক্র্যাফট
-    unplugged:
-      audience: বয়স ৬+
-    unplugged_conditionals:
-      title: শর্তযুক্ত
+    starwars:
+      title: স্টার ওয়ার্স
+    weblab:
+      audience: বয়সের ১৩+
+      cta: শিখুন কিভাবে
     widgets:
       audience: বয়স 14+
       cta: শিখুন কিভাবে
+    unplugged_conditionals:
+      title: শর্তযুক্ত
+    unplugged:
+      audience: বয়স ৬+
   landing:
     report_bug: বাগ রিপোর্ট করুন
     support: সহায়তা নিন
