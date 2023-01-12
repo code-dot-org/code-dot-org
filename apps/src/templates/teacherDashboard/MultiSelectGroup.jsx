@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import _ from 'lodash';
+import i18n from '@cdo/locale';
 import {multiSelectOptionShape} from './shapes';
 import styles from './multi-select-group.module.scss';
 
@@ -65,9 +66,7 @@ function MultiSelectButton({
           // Reset validity so it gets checked again.
           e.target.setCustomValidity('');
         }}
-        onInvalid={e =>
-          e.target.setCustomValidity('Please choose at least one option')
-        }
+        onInvalid={e => e.target.setCustomValidity(i18n.chooseAtLeastOne())}
       />
       <label htmlFor={uniqueId}>{label}</label>
     </div>
