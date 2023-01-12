@@ -20,10 +20,13 @@ import initializeGenerator from './addons/cdoGenerator';
 import CdoMetricsManager from './addons/cdoMetricsManager';
 import CdoRenderer from './addons/cdoRenderer';
 import CdoRendererZelos from './addons/cdoRendererZelos';
-import {CdoTheme} from './addons/cdoTheme';
-import {CdoDarkTheme} from './addons/cdoDarkTheme';
-import {CdoDeuteranopiaTheme, CdoTritanopiaTheme} from './addons/cdoCVDThemes';
-import {CdoHighContrastTheme} from './addons/cdoHighContrastTheme';
+import {CdoTheme} from './addons/blocklyThemes/cdoTheme';
+import {CdoDarkTheme} from './addons/blocklyThemes/cdoDarkTheme';
+import {
+  CdoDeuteranopiaTheme,
+  CdoTritanopiaTheme
+} from './addons/blocklyThemes/cdoCVDThemes';
+import {CdoHighContrastTheme} from './addons/blocklyThemes/cdoHighContrastTheme';
 import initializeTouch from './addons/cdoTouch';
 import CdoTrashcan from './addons/cdoTrashcan';
 import * as cdoUtils from './addons/cdoUtils';
