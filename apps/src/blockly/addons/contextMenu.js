@@ -62,10 +62,9 @@ const registerDeletable = function() {
     displayText: function(scope) {
       // isDeletale is a built in Blockly function that checks whether the block
       // is deletable, is not a shadow, and if the workspace is readonly.
-      const displayText = scope.block.isDeletable()
+      return scope.block.isDeletable()
         ? 'Make Undeletable to Users'
         : 'Make Deletable to Users';
-      return displayText;
     },
     preconditionFn: function() {
       if (Blockly.isStartMode) {
@@ -88,10 +87,9 @@ const registerMovable = function() {
     displayText: function(scope) {
       // isMovable is a built in Blockly function that checks whether the block
       // is movable or not.
-      const displayText = scope.block.isMovable()
+      return scope.block.isMovable()
         ? 'Make Immovable to Users'
         : 'Make Movable to Users';
-      return displayText;
     },
     preconditionFn: function() {
       if (Blockly.isStartMode) {
@@ -114,10 +112,9 @@ const registerEditable = function() {
     displayText: function(scope) {
       // isEditable is a built in Blockly function that checks whether the block
       // is editable or not.
-      const displayText = scope.block.isEditable()
+      return scope.block.isEditable()
         ? 'Make Uneditable to Users'
         : 'Make Editable to Users';
-      return displayText;
     },
     preconditionFn: function() {
       if (Blockly.isStartMode) {
@@ -188,25 +185,18 @@ const registerUnshadow = function() {
 const registerKeyboardNavigation = function() {
   const keyboardNavigationOption = {
     displayText: function(scope) {
-      const displayText = scope.workspace.keyboardAccessibilityMode
+      return scope.workspace.keyboardAccessibilityMode
         ? msg.blocklyKBNavOff()
         : msg.blocklyKBNavOn();
-      return displayText;
     },
     preconditionFn: function() {
-      if (Blockly.navigationController) {
-        return 'enabled';
-      } else {
-        console.log('navigationController not found');
-        return 'hidden';
-      }
+      return Blockly.navigationController ? 'enabled' : 'hidden';
     },
     callback: function(scope) {
-      if (scope.workspace.keyboardAccessibilityMode) {
-        Blockly.navigationController.disable(scope.workspace);
-      } else {
-        Blockly.navigationController.enable(scope.workspace);
-      }
+      const controller = Blockly.navigationController;
+      scope.workspace.keyboardAccessibilityMode
+        ? controller.disable(scope.workspace)
+        : controller.enable(scope.workspace);
     },
     scopeType: GoogleBlockly.ContextMenuRegistry.ScopeType.WORKSPACE,
     id: 'keyboardNavigation',
