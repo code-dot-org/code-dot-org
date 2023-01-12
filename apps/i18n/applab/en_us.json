@@ -355,6 +355,8 @@
   "makerSetupBoardBadResponse": "We found a board but it didn't respond properly when we tried to connect to it.",
   "makerSetupBrowserTitle": "Code.org Browser",
   "makerSetupBrowserSupported": "Using a supported browser",
+  "makerSetupCalibrateCompass": "Calibrate Compass",
+  "makerSetupCalibrateCompassDescription": "Calibrate the micro:bit for accurate readings",
   "makerSetupCheck": "Setup Check",
   "makerSetupCheckInternetConnection": "Please make sure you are connected to the internet, and [https://downloads.code.org](https://downloads.code.org/index.html) is reachable from your network.",
   "makerSetupChromebook": "Maker Toolkit works on Chromebooks without any installations or extensions. You should be able to plug in your board and get started right away!",
