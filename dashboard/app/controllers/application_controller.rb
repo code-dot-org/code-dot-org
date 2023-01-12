@@ -151,6 +151,7 @@ class ApplicationController < ActionController::Base
     :parent_email_preference_opt_in_required,
     :parent_email_preference_opt_in,
     :parent_email_preference_email,
+    :gender_input_exp,
     school_info_attributes: SCHOOL_INFO_ATTRIBUTES,
   ]
 

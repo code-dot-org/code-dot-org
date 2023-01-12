@@ -82,10 +82,12 @@
                   = t('signup_form.age')
                 = f.select :age, User::AGE_DROPDOWN_OPTIONS, include_blank: true, class: 'fieldblock'
               - if ask_gender?(request)
+                - gender_input_type = gender_input_type?(request, session.id.to_s)
+                = f.hidden_field :gender_input_exp, value: gender_input_type
                 .itemblock
                   .labelblock
                     = t('signup_form.gender')
-                  - if gender_input_type?(request, session.id.to_s) == User::GenderExperimentHelper::GENDER_INPUT_TYPE_DROPDOWN
+                  - if gender_input_type == User::GenderExperimentHelper::GENDER_INPUT_TYPE_DROPDOWN
                     = f.select :gender, gender_options
                   - else
                     = f.text_field :gender

@@ -137,7 +137,8 @@ class User < ApplicationRecord
     :share_teacher_email_reg_partner_opt_in_radio_choice,
     :data_transfer_agreement_required,
     :raw_token,
-    :child_users
+    :child_users,
+    :gender_input_exp
   )
 
   # Include default devise modules. Others available are:
@@ -246,8 +247,8 @@ class User < ApplicationRecord
   before_destroy :soft_delete_channels
 
   before_validation on: :create, if: -> {gender.present?} do
-    gender = self.gender
     # TODO DAYNE log gender to firehose
+    CDO.log.info "DAYNE gender=#{gender} input_type=#{gender_input_exp}"
     self.gender = Policies::Gender.normalize gender
   end
 

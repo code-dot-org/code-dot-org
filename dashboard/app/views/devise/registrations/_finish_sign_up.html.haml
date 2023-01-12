@@ -98,12 +98,14 @@
         = f.select :age, age_options, include_blank: true
 
     - if ask_gender?(request)
+      - gender_input_type = gender_input_type?(request, session.id.to_s)
+      = f.hidden_field :gender_input_exp, value: gender_input_type
       .row#gender-dropdown{style: "display: none;"}
         .span3.signup-field-label
           = f.label :gender, t('signup_form.gender')
         - if @user.errors[:gender].present?
           %span.error= @user.errors[:gender].join(', ')
-        - if gender_input_type?(request, session.id.to_s) == User::GenderExperimentHelper::GENDER_INPUT_TYPE_DROPDOWN
+        - if gender_input_type == User::GenderExperimentHelper::GENDER_INPUT_TYPE_DROPDOWN
           .span5
             = f.select :gender, gender_options
         - else
