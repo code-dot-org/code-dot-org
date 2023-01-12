@@ -7,13 +7,14 @@ import styles from './multi-select-group.module.scss';
 // NOTE: The `name` will show up in the DOM with an appended `[]`, so Rails
 // natively understands it as an array. Set `required` to `true` if you want
 // the user to have to select at least one of the options to proceed.
-export default function MultiSelectGroup({name, required, options}) {
+export default function MultiSelectGroup({label, name, required, options}) {
   const inputName = `${name}[]`;
   const [values, setValues] = useState(options.map(_ => false));
 
   return (
     <div className={styles.multiSelectGroup}>
       <fieldset>
+        <label>{label}</label>
         {options.map((option, index) => (
           <MultiSelectButton
             name={inputName}
@@ -53,7 +54,7 @@ function MultiSelectButton({name, value, label, required, onChange}) {
         required={required}
         onChange={onChange}
         onInvalid={e =>
-          e.target.setCustomValidity('Please choose at least one grade')
+          e.target.setCustomValidity('Please choose at least one option')
         }
       />
       <label htmlFor={uniqueId}>{label}</label>
@@ -62,6 +63,7 @@ function MultiSelectButton({name, value, label, required, onChange}) {
 }
 
 MultiSelectGroup.propTypes = {
+  label: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
   required: PropTypes.bool,
   options: PropTypes.arrayOf(multiSelectOptionShape).isRequired

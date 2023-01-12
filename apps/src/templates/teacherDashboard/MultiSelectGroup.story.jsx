@@ -10,6 +10,7 @@ const Template = args => <MultiSelectGroup {...args} />;
 
 export const NotRequired = Template.bind({});
 NotRequired.args = {
+  label: 'Pick some, if you want',
   name: 'test_name',
   options: [
     {
@@ -25,6 +26,7 @@ NotRequired.args = {
 
 export const Required = Template.bind({});
 Required.args = {
+  label: 'Pick at least one',
   name: 'test_name',
   required: true,
   options: [
