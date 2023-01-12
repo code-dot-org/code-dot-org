@@ -141,6 +141,9 @@ function updateBlockPreview() {
 }
 
 function onBlockSpaceChange() {
+  console.log(
+    `block space changed, workspace code is ${Blockly.getWorkspaceCode()}`
+  );
   document.getElementById(
     'code-preview'
   ).innerText = Blockly.getWorkspaceCode();
