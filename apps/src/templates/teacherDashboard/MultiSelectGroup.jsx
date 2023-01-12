@@ -8,6 +8,7 @@ import styles from './multi-select-group.module.scss';
 // NOTE: The `name` will show up in the DOM with an appended `[]`, so Rails
 // natively understands it as an array. Set `required` to `true` if you want
 // the user to have to select at least one of the options to proceed.
+// For an example of `values` format, see this component's storybook file.
 export default function MultiSelectGroup({
   label,
   name,
@@ -29,6 +30,11 @@ export default function MultiSelectGroup({
             value={option.value}
             key={option.value}
             checked={values[option.value]}
+            // The child's `required` prop will be set to `false` if the
+            // Group's `required` prop is falsy. It will be set to `true` if
+            // the Group's `required` prop is truthy AND none of the options
+            // are `checked`, or `false` if at least one of the options is
+            // `checked`.
             required={required ? !Object.values(values).some(v => !!v) : false}
             onCheckedChange={checked => {
               setValues({
