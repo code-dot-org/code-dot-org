@@ -92,9 +92,9 @@ export function getField(type) {
   return field;
 }
 
-const PERCENT_OF_ORIGINAL_RED = 0.6;
-const PERCENT_OF_ORIGINAL_GREEN = 0.45;
-const PERCENT_OF_ORIGINAL_BLUE = 0.6;
+const PERCENT_OF_ORIGINAL_RED = 0.7;
+const PERCENT_OF_ORIGINAL_GREEN = 0.5;
+const PERCENT_OF_ORIGINAL_BLUE = 0.7;
 
 // takes a hex rgb value such as '#5b67a5' and darkens the color by decreasing
 // each color channel by (1 - PERCENT_OF_ORIGINAL_<COLOR>)
