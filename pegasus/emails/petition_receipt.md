@@ -1,5 +1,5 @@
 ---
-from: 'Hadi Partovi (Code.org) <hadi_partovi@code.org>'
+from: 'Hadi Partovi (Code.org) <support@code.org>'
 subject: 'Thanks!'
 ---
 
