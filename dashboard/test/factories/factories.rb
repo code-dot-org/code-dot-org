@@ -110,6 +110,9 @@ FactoryGirl.define do
       trait :with_terms_of_service do
         terms_of_service_version 1
       end
+      trait :not_first_sign_in do
+        sign_in_count 2
+      end
       factory :terms_of_service_teacher do
         with_terms_of_service
       end
