@@ -57,7 +57,7 @@ export const triggeredAtSimple = {
     ],
     inputsInline: true,
     nextStatement: null,
-    colour: 230,
+    style: 'event_blocks',
     tooltip: 'at trigger',
     extensions: ['dynamic_trigger_extension']
   },
