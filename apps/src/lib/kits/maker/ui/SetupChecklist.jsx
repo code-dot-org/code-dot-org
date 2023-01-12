@@ -126,13 +126,23 @@ export default class SetupChecklist extends Component {
 
       // Can we initialize components successfully?
       .then(() => {
-        return this.detectStep(STATUS_BOARD_COMPONENTS, () =>
-          this.setupChecker.detectComponentsInitialize()
-        );
+        if (this.state.boardTypeDetected !== BOARD_TYPE.MICROBIT) {
+          return this.detectStep(STATUS_BOARD_COMPONENTS, () =>
+            this.setupChecker.detectComponentsInitialize()
+          );
+        }
+        return Promise.resolve();
       })
 
       // Everything looks good, let's par-tay!
-      .then(() => this.thumb(STATUS_BOARD_COMPONENTS))
+      .then(() =>
+        this.thumb(
+          this.state.boardTypeDetected === BOARD_TYPE.MICROBIT
+            ? STATUS_BOARD_CONNECT
+            : STATUS_BOARD_COMPONENTS
+        )
+      )
+      .then(() => this.setupChecker.celebrate())
       .then(() => this.setupChecker.celebrate())
       .then(() => this.succeed(STATUS_BOARD_COMPONENTS))
       .then(() => trackEvent('MakerSetup', 'ConnectionSuccess'))
@@ -306,14 +316,13 @@ export default class SetupChecklist extends Component {
           />
           {experiments.isEnabled('microbit') &&
             this.state.boardTypeDetected === BOARD_TYPE.MICROBIT &&
-            this.state[STATUS_BOARD_CONNECT] === Status.SUCCEEDED && (
+            this.state[STATUS_BOARD_CONNECT] === Status.CELEBRATING && (
               <input
-                style={{marginLeft: 9, marginTop: -4}}
+                style={{marginLeft: 9, marginTop: -4, outline: 'none'}}
                 className="btn"
                 type="button"
                 value={applabI18n.makerSetupCalibrateCompass()}
                 onClick={() => this.setupChecker.calibrateCompass()}
-                disabled={this.state.isDetecting}
                 title={applabI18n.makerSetupCalibrateCompassDescription()}
               />
             )}
@@ -359,7 +368,7 @@ export default class SetupChecklist extends Component {
             {!linuxPermissionError && this.installFirmwareSketch()}
             {this.contactSupport()}
           </ValidationStep>
-          {
+          {this.state.boardTypeDetected !== BOARD_TYPE.MICROBIT && (
             <ValidationStep
               stepStatus={this.state[STATUS_BOARD_COMPONENTS]}
               stepName={i18n.validationStepBoardComponentsUsable()}
@@ -370,7 +379,7 @@ export default class SetupChecklist extends Component {
               {this.installFirmwareSketch()}
               {this.contactSupport()}
             </ValidationStep>
-          }
+          )}
         </div>
       </div>
     );
