@@ -121,7 +121,6 @@ const styles = {
   headingBox: {
     paddingRight: 10,
     paddingTop: 10,
-    paddingBottom: 20,
     overflow: 'hidden',
     zIndex: 2,
     position: 'relative'

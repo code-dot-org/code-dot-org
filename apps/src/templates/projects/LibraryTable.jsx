@@ -256,9 +256,7 @@ class LibraryTable extends React.Component {
             <Table.Body rows={sortedRows} rowKey="channel" />
           </Table.Provider>
         )}
-        {!hasLibraries && (
-          <h3 style={{textAlign: 'center'}}>{i18n.noLibraries()}</h3>
-        )}
+        {!hasLibraries && <h3>{i18n.noLibraries()}</h3>}
         {unpublishFailedLibrary && (
           <BaseDialog
             isOpen

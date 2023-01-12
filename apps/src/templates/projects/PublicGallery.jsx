@@ -82,7 +82,7 @@ class PublicGallery extends Component {
 
 const styles = {
   bottomButton: {
-    marginTop: '30px',
+    marginTop: '38px',
     marginBottom: '15px',
     textAlign: 'center'
   }

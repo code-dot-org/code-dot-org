@@ -1,5 +1,5 @@
 @import 'color';
-@import 'barlow-font';
+@import 'barlowSemiCondensed-font';
 @import 'font';
 
 // This file is used only for Phase 1 style updates across the pages of dashboard and pegasus/code.org
@@ -12,7 +12,7 @@ body {
 }
 
 h1, h2, h3 {
-  font-family: $barlow-semibold;
+  font-family: $barlowSemiCondensed-semibold;
   margin-bottom: 1em;
 }
 
@@ -28,7 +28,7 @@ h2 {
 }
 
 h4 {
-  font-family: $barlow-medium;
+  font-family: $barlowSemiCondensed-medium;
   font-size: 1.5em;
   line-height: 1.2;
   margin-bottom: 1em;
@@ -123,6 +123,10 @@ p {
 
     div {
       color: $neutral_dark !important;
+
+      a:hover {
+        text-decoration: none;
+      }
     }
   }
 }
@@ -364,7 +368,7 @@ p {
 #projects-page {
   .container {
     .new-project-heading {
-      font-family: $barlow-medium !important;
+      font-family: $barlowSemiCondensed-medium !important;
       font-size: 1.5em !important;
       line-height: 1.2 !important;
     }
@@ -382,8 +386,5 @@ p {
 .newProject-button-tile {
   &:hover {
     border-color: $neutral_dark70 !important;
-    div {
-      color: $neutral_dark70 !important;
-    }
   }
 }
