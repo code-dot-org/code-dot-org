@@ -35,6 +35,7 @@ const getCurrentTrackId = ctx => {
 export const playSound = {
   definition: {
     type: BlockTypes.PLAY_SOUND,
+    style: 'music_blocks',
     message0: 'play %1 at measure %2',
     args0: [
       {
@@ -54,7 +55,6 @@ export const playSound = {
     inputsInline: true,
     previousStatement: null,
     nextStatement: null,
-    colour: 230,
     tooltip: 'play sound',
     helpUrl: ''
   },
