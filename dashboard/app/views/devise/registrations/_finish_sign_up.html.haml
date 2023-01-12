@@ -1,6 +1,7 @@
 - SignUpTracking.log_load_finish_sign_up session, (@user.provider || 'email')
 - require 'geocoder'
 - require 'country_codes'
+- require '../shared/middleware/helpers/experiments'
 - location = Geocoder.search(request.ip).try(:first)
 - us_ip = location.nil? || ['US', 'RD'].include?(location.country_code.to_s.upcase)
 
@@ -98,13 +99,14 @@
       .span5
         = f.select :age, age_options, include_blank: true
 
-    .row#gender-dropdown{style: "display: none;"}
-      .span3.signup-field-label
-        = f.label :gender, t('signup_form.gender')
-      - if @user.errors[:gender].present?
-        %span.error= @user.errors[:gender].join(', ')
-      .span5
-        = f.select :gender, gender_options
+    - if experiment_value('gender-text-input')
+      .row#gender-dropdown{style: "display: none;"}
+        .span3.signup-field-label
+          = f.label :gender, t('signup_form.gender')
+        - if @user.errors[:gender].present?
+          %span.error= @user.errors[:gender].join(', ')
+        .span5
+          = f.select :gender, gender_options
 
     .row#school-info-section{style: "display: none;"}
       .span10
