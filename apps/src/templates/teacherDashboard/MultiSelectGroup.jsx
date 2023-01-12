@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import _ from 'lodash';
 import {multiSelectOptionShape} from './shapes';
@@ -7,11 +7,15 @@ import styles from './multi-select-group.module.scss';
 // NOTE: The `name` will show up in the DOM with an appended `[]`, so Rails
 // natively understands it as an array. Set `required` to `true` if you want
 // the user to have to select at least one of the options to proceed.
-export default function MultiSelectGroup({label, name, required, options}) {
+export default function MultiSelectGroup({
+  label,
+  name,
+  required,
+  options,
+  values,
+  setValues
+}) {
   const inputName = `${name}[]`;
-  const [values, setValues] = useState(
-    Object.fromEntries(options.map(o => [o.value, false]))
-  );
 
   return (
     <div className={styles.multiSelectGroup}>
@@ -74,7 +78,9 @@ MultiSelectGroup.propTypes = {
   label: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
   required: PropTypes.bool,
-  options: PropTypes.arrayOf(multiSelectOptionShape).isRequired
+  options: PropTypes.arrayOf(multiSelectOptionShape).isRequired,
+  values: PropTypes.object.isRequired,
+  setValues: PropTypes.func.isRequired
 };
 
 MultiSelectButton.propTypes = {

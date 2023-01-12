@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import MultiSelectGroup from './MultiSelectGroup';
 
 export default {
@@ -6,7 +6,18 @@ export default {
   component: MultiSelectGroup
 };
 
-const Template = args => <MultiSelectGroup {...args} />;
+const Template = args => {
+  const [values, setValues] = useState(
+    Object.fromEntries(args.options.map(o => [o.value, false]))
+  );
+  const allArgs = {
+    ...args,
+    values: values,
+    setValues: setValues
+  };
+
+  return <MultiSelectGroup {...allArgs} />;
+};
 
 export const NotRequired = Template.bind({});
 NotRequired.args = {
