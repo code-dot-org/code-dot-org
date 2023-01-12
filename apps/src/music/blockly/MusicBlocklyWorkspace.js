@@ -57,6 +57,8 @@ export default class MusicBlocklyWorkspace {
       renderer: 'cdo_renderer_zelos'
     });
 
+    Blockly.setInfiniteLoopTrap();
+
     this.resizeBlockly();
 
     // Set initial blocks.
@@ -128,6 +130,8 @@ export default class MusicBlocklyWorkspace {
         this.codeHooks[hook.name] = hook.func;
       }
     );
+
+    console.log('executeSong', events);
 
     if (this.codeHooks.whenRunButton) {
       this.callUserGeneratedCode(this.codeHooks.whenRunButton);
