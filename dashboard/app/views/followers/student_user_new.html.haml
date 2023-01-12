@@ -83,7 +83,7 @@
                 = f.select :age, User::AGE_DROPDOWN_OPTIONS, include_blank: true, class: 'fieldblock'
               - if ask_gender?(request)
                 - gender_input_type = gender_input_type?(request, session.id.to_s)
-                = f.hidden_field :gender_input_exp, value: gender_input_type
+                = f.hidden_field :gender_input_type, value: gender_input_type
                 .itemblock
                   .labelblock
                     = t('signup_form.gender')

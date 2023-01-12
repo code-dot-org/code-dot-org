@@ -138,7 +138,7 @@ class User < ApplicationRecord
     :data_transfer_agreement_required,
     :raw_token,
     :child_users,
-    :gender_input_exp
+    :gender_input_type
   )
 
   # Include default devise modules. Others available are:
@@ -246,17 +246,16 @@ class User < ApplicationRecord
 
   before_destroy :soft_delete_channels
 
-  before_validation on: :create, if: -> {gender.present?} do
+  before_validation on: :create, if: -> {gender_input_type.present?} do
     FirehoseClient.instance.put_record(
       :analysis,
       {
         study: 'gender-input-type',
         study_group: 'v1',
-        event: gender_input_exp,
+        event: gender_input_type,
         data_string: gender
       }
     )
-    CDO.log.info "DAYNE gender=#{gender} input_type=#{gender_input_exp}"
     self.gender = Policies::Gender.normalize gender
   end
 

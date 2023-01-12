@@ -99,7 +99,7 @@
 
     - if ask_gender?(request)
       - gender_input_type = gender_input_type?(request, session.id.to_s)
-      = f.hidden_field :gender_input_exp, value: gender_input_type
+      = f.hidden_field :gender_input_type, value: gender_input_type
       .row#gender-dropdown{style: "display: none;"}
         .span3.signup-field-label
           = f.label :gender, t('signup_form.gender')
