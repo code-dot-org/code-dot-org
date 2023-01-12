@@ -9,7 +9,9 @@ import styles from './multi-select-group.module.scss';
 // the user to have to select at least one of the options to proceed.
 export default function MultiSelectGroup({label, name, required, options}) {
   const inputName = `${name}[]`;
-  const [values, setValues] = useState(options.map(_ => false));
+  const [values, setValues] = useState(
+    Object.fromEntries(options.map(o => [o.value, false]))
+  );
 
   return (
     <div className={styles.multiSelectGroup}>
@@ -17,23 +19,17 @@ export default function MultiSelectGroup({label, name, required, options}) {
         <label>{label}</label>
         {options.map((option, index) => (
           <MultiSelectButton
+            label={option.label}
             name={inputName}
             value={option.value}
             key={option.value}
-            label={option.label}
-            required={required ? !values.some(v => !!v) : false}
-            onChange={event => {
-              const newValue = event.target.checked;
-              const newValues = values.map((v, i) => {
-                if (i === index) {
-                  return newValue;
-                }
-                return v;
+            checked={values[option.value]}
+            required={required ? !Object.values(values).some(v => !!v) : false}
+            onCheckedChange={checked => {
+              setValues({
+                ...values,
+                [option.value]: checked
               });
-              setValues(newValues);
-
-              // Reset validity so it gets checked again.
-              event.target.setCustomValidity('');
             }}
           />
         ))}
@@ -42,7 +38,14 @@ export default function MultiSelectGroup({label, name, required, options}) {
   );
 }
 
-function MultiSelectButton({name, value, label, required, onChange}) {
+function MultiSelectButton({
+  label,
+  name,
+  value,
+  checked,
+  required,
+  onCheckedChange
+}) {
   const uniqueId = _.uniqueId();
   return (
     <div>
@@ -51,8 +54,13 @@ function MultiSelectButton({name, value, label, required, onChange}) {
         type="checkbox"
         name={name}
         value={value}
+        checked={checked}
         required={required}
-        onChange={onChange}
+        onChange={e => {
+          onCheckedChange(e.target.checked);
+          // Reset validity so it gets checked again.
+          e.target.setCustomValidity('');
+        }}
         onInvalid={e =>
           e.target.setCustomValidity('Please choose at least one option')
         }
@@ -70,9 +78,10 @@ MultiSelectGroup.propTypes = {
 };
 
 MultiSelectButton.propTypes = {
+  label: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
   value: PropTypes.string.isRequired,
-  label: PropTypes.string.isRequired,
+  checked: PropTypes.bool.isRequired,
   required: PropTypes.bool.isRequired,
-  onChange: PropTypes.func.isRequired
+  onCheckedChange: PropTypes.func.isRequired
 };
