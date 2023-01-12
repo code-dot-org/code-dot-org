@@ -2,13 +2,27 @@
   "ca-ES": {
     "data": {
       "vocabularies": {
+        "code/dance-extras/unversioned": {
+          "word": "Codificar o programar"
+        },
+        "event/dance-extras/unversioned": {
+          "word": "Esdeveniment",
+          "definition": "Una acció que fa que passi alguna cosa."
+        },
         "program/dance-extras/unversioned": {
           "word": "Programa",
           "definition": "Un algorisme que s'ha codificat en alguna cosa que pot ser executada per una màquina."
         },
+        "code/minecraft/unversioned": {
+          "word": "Codificar o programar"
+        },
         "debugging/minecraft/unversioned": {
           "word": "Depuració",
           "definition": "Trobar i arreglar els problemes d'un algorisme o programa."
+        },
+        "event/minecraft/unversioned": {
+          "word": "Esdeveniment",
+          "definition": "Una acció que fa que passi alguna cosa."
         },
         "loop/minecraft/unversioned": {
           "word": "Bucle",
@@ -17,6 +31,9 @@
         "program/minecraft/unversioned": {
           "word": "Programa",
           "definition": "Un algorisme que s'ha codificat en alguna cosa que pot ser executada per una màquina."
+        },
+        "code/hero/unversioned": {
+          "word": "Codificar o programar"
         },
         "debugging/hero/unversioned": {
           "word": "Depuració",
@@ -32,8 +49,15 @@
         "code/poem-art/2021": {
           "word": "ModeCodi"
         },
+        "event/poem-art/2021": {
+          "word": "Esdeveniment",
+          "definition": "Una acció que fa que passi alguna cosa."
+        },
         "program/poem-art/2021": {
           "word": "Programa"
+        },
+        "code/flappy/unversioned": {
+          "word": "Codificar o programar"
         },
         "debugging/flappy/unversioned": {
           "word": "Depuració",
@@ -43,6 +67,9 @@
           "word": "Programa",
           "definition": "Un algorisme que s'ha codificat en alguna cosa que pot ser executada per una màquina."
         },
+        "code/hourofcode/unversioned": {
+          "word": "Codificar o programar"
+        },
         "debugging/hourofcode/unversioned": {
           "word": "Depuració",
           "definition": "Trobar i arreglar els problemes d'un algorisme o programa."
@@ -51,6 +78,9 @@
           "word": "Programa",
           "definition": "Un algorisme que s'ha codificat en alguna cosa que pot ser executada per una màquina."
         },
+        "code/frozen/unversioned": {
+          "word": "Codificar o programar"
+        },
         "debugging/frozen/unversioned": {
           "word": "Depuració",
           "definition": "Trobar i arreglar els problemes d'un algorisme o programa."
@@ -58,6 +88,9 @@
         "program/frozen/unversioned": {
           "word": "Programa",
           "definition": "Un algorisme que s'ha codificat en alguna cosa que pot ser executada per una màquina."
+        },
+        "code/iceage/unversioned": {
+          "word": "Codificar o programar"
         },
         "debugging/iceage/unversioned": {
           "word": "Depuració",
@@ -78,6 +111,9 @@
           "word": "Programa",
           "definition": "Un algorisme que s'ha codificat en alguna cosa que pot ser executada per una màquina."
         },
+        "code/gumball/unversioned": {
+          "word": "Codificar o programar"
+        },
         "debugging/gumball/unversioned": {
           "word": "Depuració",
           "definition": "Trobar i arreglar els problemes d'un algorisme o programa."
@@ -86,9 +122,19 @@
           "word": "Programa",
           "definition": "Un algorisme que s'ha codificat en alguna cosa que pot ser executada per una màquina."
         },
+        "code/dance/unversioned": {
+          "word": "Codificar o programar"
+        },
+        "event/dance/unversioned": {
+          "word": "Esdeveniment",
+          "definition": "Una acció que fa que passi alguna cosa."
+        },
         "program/dance/unversioned": {
           "word": "Programa",
           "definition": "Un algorisme que s'ha codificat en alguna cosa que pot ser executada per una màquina."
+        },
+        "code/aquatic/unversioned": {
+          "word": "Codificar o programar"
         },
         "conditionals/aquatic/unversioned": {
           "word": "Condicionals"
@@ -105,6 +151,9 @@
           "word": "Programa",
           "definition": "Un algorisme que s'ha codificat en alguna cosa que pot ser executada per una màquina."
         },
+        "code/starwars/unversioned": {
+          "word": "Codificar o programar"
+        },
         "debugging/starwars/unversioned": {
           "word": "Depuració",
           "definition": "Trobar i arreglar els problemes d'un algorisme o programa."
@@ -112,6 +161,9 @@
         "program/starwars/unversioned": {
           "word": "Programa",
           "definition": "Un algorisme que s'ha codificat en alguna cosa que pot ser executada per una màquina."
+        },
+        "code/mc/unversioned": {
+          "word": "Codificar o programar"
         },
         "debugging/mc/unversioned": {
           "word": "Depuració",
@@ -121,6 +173,9 @@
           "word": "Programa",
           "definition": "Un algorisme que s'ha codificat en alguna cosa que pot ser executada per una màquina."
         },
+        "code/playlab/unversioned": {
+          "word": "Codificar o programar"
+        },
         "debugging/playlab/unversioned": {
           "word": "Depuració",
           "definition": "Trobar i arreglar els problemes d'un algorisme o programa."
@@ -128,6 +183,9 @@
         "program/playlab/unversioned": {
           "word": "Programa",
           "definition": "Un algorisme que s'ha codificat en alguna cosa que pot ser executada per una màquina."
+        },
+        "code/starwarsblocks/unversioned": {
+          "word": "Codificar o programar"
         },
         "debugging/starwarsblocks/unversioned": {
           "word": "Depuració",
@@ -138,8 +196,8 @@
           "definition": "Un algorisme que s'ha codificat en alguna cosa que pot ser executada per una màquina."
         },
         "event/outbreak/unversioned": {
-          "word": "",
-          "definition": ""
+          "word": "Esdeveniment",
+          "definition": "Una acció que fa que passi alguna cosa."
         },
         "models_and_simulations/outbreak/unversioned": {
           "word": "",
@@ -152,9 +210,16 @@
           "word": "Depuració",
           "definition": "Trobar i arreglar els problemes d'un algorisme o programa."
         },
+        "event/sports/unversioned": {
+          "word": "Esdeveniment",
+          "definition": "Una acció que fa que passi alguna cosa."
+        },
         "program/sports/unversioned": {
           "word": "Programa",
           "definition": "Un algorisme que s'ha codificat en alguna cosa que pot ser executada per una màquina."
+        },
+        "code/infinity/unversioned": {
+          "word": "Codificar o programar"
         },
         "debugging/infinity/unversioned": {
           "word": "Depuració",
@@ -164,17 +229,38 @@
           "word": "Programa",
           "definition": "Un algorisme que s'ha codificat en alguna cosa que pot ser executada per una màquina."
         },
+        "code/basketball/unversioned": {
+          "word": "Codificar o programar"
+        },
         "debugging/basketball/unversioned": {
           "word": "Depuració",
           "definition": "Trobar i arreglar els problemes d'un algorisme o programa."
+        },
+        "event/basketball/unversioned": {
+          "word": "Esdeveniment",
+          "definition": "Una acció que fa que passi alguna cosa."
         },
         "program/basketball/unversioned": {
           "word": "Programa",
           "definition": "Un algorisme que s'ha codificat en alguna cosa que pot ser executada per una màquina."
         },
+        "code/dance-extras-2019/unversioned": {
+          "word": "Codificar o programar"
+        },
+        "event/dance-extras-2019/unversioned": {
+          "word": "Esdeveniment",
+          "definition": "Una acció que fa que passi alguna cosa."
+        },
         "program/dance-extras-2019/unversioned": {
           "word": "Programa",
           "definition": "Un algorisme que s'ha codificat en alguna cosa que pot ser executada per una màquina."
+        },
+        "code/dance-2019/unversioned": {
+          "word": "Codificar o programar"
+        },
+        "event/dance-2019/unversioned": {
+          "word": "Esdeveniment",
+          "definition": "Una acció que fa que passi alguna cosa."
         },
         "program/dance-2019/unversioned": {
           "word": "Programa",
@@ -208,12 +294,26 @@
           "word": "Perseverança",
           "definition": "Intentar alguna cosa una vegada i una altra, fins i tot quan és molt difícil."
         },
+        "event/coursed/2022": {
+          "word": "Esdeveniment",
+          "definition": "Una acció que fa que passi alguna cosa."
+        },
+        "code/coursed/2022": {
+          "word": "Codificar o programar"
+        },
         "repeat/coursed/2022": {
           "word": "Repetir",
           "definition": "Tornar a fer alguna cosa."
         },
         "conditionals/coursed/2022": {
           "word": "Condicionals"
+        },
+        "until/coursed/2022": {
+          "word": "Until"
+        },
+        "sprite/coursef/2022": {
+          "word": "Sprite",
+          "definition": "Un gràfic a la pantalla amb ubicació, mida i aparença."
         },
         "algorithm/coursef/2022": {
           "word": "Algorisme"
@@ -225,6 +325,10 @@
           "word": "Programa",
           "definition": "Un algorisme que s'ha codificat en alguna cosa que pot ser executada per una màquina."
         },
+        "event/coursef/2022": {
+          "word": "Esdeveniment",
+          "definition": "Una acció que fa que passi alguna cosa."
+        },
         "variable/coursef/2022": {
           "word": "Variable"
         },
@@ -235,7 +339,12 @@
           "word": "Defineix"
         },
         "behavior/coursee/2022": {
-          "word": "Comportament"
+          "word": "Comportament",
+          "definition": "Una acció que un sprite fa sense parar fins que se li diu que pari."
+        },
+        "sprite/coursee/2022": {
+          "word": "Sprite",
+          "definition": "Un gràfic a la pantalla amb ubicació, mida i aparença."
         },
         "loop/coursee/2022": {
           "word": "Bucle",
@@ -305,6 +414,10 @@
           "word": "Repetir",
           "definition": "Tornar a fer alguna cosa."
         },
+        "event/courseb/2022": {
+          "word": "Esdeveniment",
+          "definition": "Una acció que fa que passi alguna cosa."
+        },
         "algorithm/express/2022": {
           "word": "Algorisme",
           "definition": "Llista de passos necessaris per fer una tasca."
@@ -318,7 +431,8 @@
           "definition": "Trobar i arreglar els problemes d'un algorisme o programa."
         },
         "sequencing/express/2022": {
-          "word": "Seqüenciació"
+          "word": "Seqüenciació",
+          "definition": "Col·locar les ordres en l'ordre correcte per tal que els ordinadors les puguin llegir."
         },
         "program/express/2022": {
           "word": "Programa",
@@ -329,7 +443,20 @@
           "definition": "L'art de crear un programa."
         },
         "behavior/express/2022": {
-          "word": "Comportament"
+          "word": "Comportament",
+          "definition": "Una acció que un sprite fa sense parar fins que se li diu que pari."
+        },
+        "sprite/express/2022": {
+          "word": "Sprite",
+          "definition": "Un gràfic a la pantalla amb ubicació, mida i aparença."
+        },
+        "event/express/2022": {
+          "word": "Esdeveniment",
+          "definition": "Una acció que fa que passi alguna cosa."
+        },
+        "code/express/2022": {
+          "word": "Codificar o programar",
+          "definition": "escriure un codi, o les instruccions que ha de seguir l'ordinador."
         },
         "loop/express/2022": {
           "word": "Bucle",
@@ -342,8 +469,14 @@
         "conditionals/express/2022": {
           "word": "Condicionals"
         },
+        "until/express/2022": {
+          "word": "Until"
+        },
         "function/express/2022": {
           "word": "Funció"
+        },
+        "prompt/express/2022": {
+          "word": "Indicador o pregunta"
         },
         "variable/express/2022": {
           "word": "Variable"
@@ -399,6 +532,10 @@
           "word": "Repetir",
           "definition": "Tornar a fer alguna cosa."
         },
+        "event/pre-express/2022": {
+          "word": "Esdeveniment",
+          "definition": "Una acció que fa que passi alguna cosa."
+        },
         "algorithm/coursea/2022": {
           "word": "Algorisme",
           "definition": "Llista de passos necessaris per fer una tasca."
@@ -443,6 +580,10 @@
           "word": "Repetir",
           "definition": "Tornar a fer alguna cosa."
         },
+        "event/coursea/2022": {
+          "word": "Esdeveniment",
+          "definition": "Una acció que fa que passi alguna cosa."
+        },
         "algorithm/coursec/2022": {
           "word": "Algorisme",
           "definition": "Llista de passos necessaris per fer una tasca."
@@ -460,7 +601,8 @@
           "definition": "Un algorisme que s'ha codificat en alguna cosa que pot ser executada per una màquina."
         },
         "sequencing/coursec/2022": {
-          "word": "Seqüenciació"
+          "word": "Seqüenciació",
+          "definition": "Col·locar les ordres en l'ordre correcte per tal que els ordinadors les puguin llegir."
         },
         "persistence/coursec/2022": {
           "word": "Perseverança"
@@ -476,6 +618,10 @@
         "repeat/coursec/2022": {
           "word": "Repetir",
           "definition": "Tornar a fer alguna cosa."
+        },
+        "event/coursec/2022": {
+          "word": "Esdeveniment",
+          "definition": "Una acció que fa que passi alguna cosa."
         },
         "binary/coursec/2022": {
           "word": "Binari"
@@ -495,6 +641,9 @@
         "variable/csd/2022": {
           "word": "Variable"
         },
+        "sprite/csd/2022": {
+          "word": "Sprite"
+        },
         "conditionals/csd/2022": {
           "word": "Condicionals"
         },
@@ -512,8 +661,8 @@
           "definition": ""
         },
         "event/poem-art/unversioned": {
-          "word": "",
-          "definition": ""
+          "word": "Esdeveniment",
+          "definition": "Una acció que fa que passi alguna cosa."
         },
         "program/poem-art/unversioned": {
           "word": "Programa",
@@ -527,15 +676,24 @@
           "word": "",
           "definition": ""
         },
+        "sprite/coursef/2021": {
+          "word": "Sprite",
+          "definition": "Un gràfic a la pantalla amb ubicació, mida i aparença."
+        },
         "algorithm/coursef/2021": {
           "word": "Algorisme"
         },
         "behavior/coursef/2021": {
-          "word": "Comportament"
+          "word": "Comportament",
+          "definition": "Una acció que un sprite fa sense parar fins que se li diu que pari."
         },
         "program/coursef/2021": {
           "word": "Programa",
           "definition": "Un algorisme que s'ha codificat en alguna cosa que pot ser executada per una màquina."
+        },
+        "event/coursef/2021": {
+          "word": "Esdeveniment",
+          "definition": "Una acció que fa que passi alguna cosa."
         },
         "variable/coursef/2021": {
           "word": "Variable"
@@ -602,6 +760,10 @@
           "word": "Repetir",
           "definition": "Tornar a fer alguna cosa."
         },
+        "event/courseb/2021": {
+          "word": "Esdeveniment",
+          "definition": "Una acció que fa que passi alguna cosa."
+        },
         "algorithm/coursea/2021": {
           "word": "Algorisme",
           "definition": "Llista de passos necessaris per fer una tasca."
@@ -646,6 +808,10 @@
           "word": "Repetir",
           "definition": "Tornar a fer alguna cosa."
         },
+        "event/coursea/2021": {
+          "word": "Esdeveniment",
+          "definition": "Una acció que fa que passi alguna cosa."
+        },
         "algorithm/coursec/2021": {
           "word": "Algorisme",
           "definition": "Llista de passos necessaris per fer una tasca."
@@ -663,7 +829,8 @@
           "definition": "Un algorisme que s'ha codificat en alguna cosa que pot ser executada per una màquina."
         },
         "sequencing/coursec/2021": {
-          "word": "Seqüenciació"
+          "word": "Seqüenciació",
+          "definition": "Col·locar les ordres en l'ordre correcte per tal que els ordinadors les puguin llegir."
         },
         "programming/coursec/2021": {
           "word": "Programació",
@@ -676,6 +843,10 @@
         "repeat/coursec/2021": {
           "word": "Repetir",
           "definition": "Tornar a fer alguna cosa."
+        },
+        "event/coursec/2021": {
+          "word": "Esdeveniment",
+          "definition": "Una acció que fa que passi alguna cosa."
         },
         "binary/coursec/2021": {
           "word": "Binari"
@@ -708,12 +879,22 @@
           "word": "Perseverança",
           "definition": "Intentar alguna cosa una vegada i una altra, fins i tot quan és molt difícil."
         },
+        "event/coursed/2021": {
+          "word": "Esdeveniment",
+          "definition": "Una acció que fa que passi alguna cosa."
+        },
+        "code/coursed/2021": {
+          "word": "Codificar o programar"
+        },
         "repeat/coursed/2021": {
           "word": "Repetir",
           "definition": "Tornar a fer alguna cosa."
         },
         "conditionals/coursed/2021": {
           "word": "Condicionals"
+        },
+        "until/coursed/2021": {
+          "word": "Until"
         },
         "algorithm/express/2021": {
           "word": "Algorisme",
@@ -728,7 +909,8 @@
           "definition": "Trobar i arreglar els problemes d'un algorisme o programa."
         },
         "sequencing/express/2021": {
-          "word": "Seqüenciació"
+          "word": "Seqüenciació",
+          "definition": "Col·locar les ordres en l'ordre correcte per tal que els ordinadors les puguin llegir."
         },
         "program/express/2021": {
           "word": "Programa",
@@ -739,7 +921,20 @@
           "definition": "L'art de crear un programa."
         },
         "behavior/express/2021": {
-          "word": "Comportament"
+          "word": "Comportament",
+          "definition": "Una acció que un sprite fa sense parar fins que se li diu que pari."
+        },
+        "sprite/express/2021": {
+          "word": "Sprite",
+          "definition": "Un gràfic a la pantalla amb ubicació, mida i aparença."
+        },
+        "event/express/2021": {
+          "word": "Esdeveniment",
+          "definition": "Una acció que fa que passi alguna cosa."
+        },
+        "code/express/2021": {
+          "word": "Codificar o programar",
+          "definition": "escriure un codi, o les instruccions que ha de seguir l'ordinador."
         },
         "loop/express/2021": {
           "word": "Bucle",
@@ -752,8 +947,14 @@
         "conditionals/express/2021": {
           "word": "Condicionals"
         },
+        "until/express/2021": {
+          "word": "Until"
+        },
         "function/express/2021": {
           "word": "Funció"
+        },
+        "prompt/express/2021": {
+          "word": "Indicador o pregunta"
         },
         "variable/express/2021": {
           "word": "Variable"
@@ -809,8 +1010,21 @@
           "word": "Repetir",
           "definition": "Tornar a fer alguna cosa."
         },
+        "event/pre-express/2021": {
+          "word": "Esdeveniment",
+          "definition": "Una acció que fa que passi alguna cosa."
+        },
         "behavior/coursee/2021": {
-          "word": "Comportament"
+          "word": "Comportament",
+          "definition": "Una acció que un sprite fa sense parar fins que se li diu que pari."
+        },
+        "sprite/coursee/2021": {
+          "word": "Sprite",
+          "definition": "Un gràfic a la pantalla amb ubicació, mida i aparença."
+        },
+        "event/coursee/2021": {
+          "word": "Esdeveniment",
+          "definition": "Una acció que fa que passi alguna cosa."
         },
         "copyright/coursee/2021": {
           "word": "Copyright"
@@ -846,6 +1060,9 @@
         },
         "variable/csd/2021": {
           "word": "Variable"
+        },
+        "sprite/csd/2021": {
+          "word": "Sprite"
         },
         "conditionals/csd/2021": {
           "word": "Condicionals"

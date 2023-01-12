@@ -1,5 +1,5 @@
 require 'cdo/aws/cloudfront'
-require 'google/apis/classroom_v1'
+require 'google-apis-classroom_v1'
 
 class ApiController < ApplicationController
   layout false

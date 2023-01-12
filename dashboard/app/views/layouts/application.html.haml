@@ -23,6 +23,8 @@
     -# data needed for dcdo.js. This tag is needed on every page because our translation code is
     -# making use of the dcdo feature.
     %script{data: {'dcdo': DCDO.frontend_config.to_json}}
+    -# auth key needed for amplitude analytics.
+    %script{data: {'amplitude-api-key': CDO.safe_amplitude_api_key}}
     -# webpack-runtime.js must appear exactly once on any page containing webpack entries
     %script{src: webpack_asset_path('js/webpack-runtime.js')}
     -# essential.js is ordered above application.js to filter new relic errors

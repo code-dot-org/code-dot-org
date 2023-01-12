@@ -11,6 +11,10 @@
 %br/
 = link_to 'Create a New Block', new_block_path
 %h2= 'Edit an existing block'
+- if @blocks[0][:pool] == 'Dancelab' || @blocks[0][:pool] == 'Poetry'
+  %p Block Previews rendered with Google Blockly
+- else
+  %p Block Previews rendered with CDO Blockly
 %ul
   - @blocks.each do |b|
     %li

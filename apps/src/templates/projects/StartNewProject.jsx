@@ -76,8 +76,6 @@ export default class StartNewProject extends React.Component {
 
     const PREREADER_PROJECT_TYPES = ['playlab_k1', 'artist_k1'];
 
-    const MATH_PROJECT_TYPES = ['calc', 'eval'];
-
     return (
       <div>
         <div style={styles.headingStartNew}>{i18n.projectStartNew()}</div>
@@ -85,7 +83,6 @@ export default class StartNewProject extends React.Component {
 
         {canViewFullList && (
           <Button
-            __useDeprecatedTag
             id="uitest-view-full-list"
             onClick={this.toggleShowFullList}
             color={Button.ButtonColor.gray}
@@ -129,12 +126,6 @@ export default class StartNewProject extends React.Component {
               description={i18n.projectGroupPreReader()}
               projectTypes={PREREADER_PROJECT_TYPES}
             />
-            {canViewAdvancedTools && (
-              <NewProjectButtons
-                description={i18n.projectGroupMath()}
-                projectTypes={MATH_PROJECT_TYPES}
-              />
-            )}
           </div>
         )}
         <div style={styles.spacer} />
@@ -146,7 +137,8 @@ export default class StartNewProject extends React.Component {
 const styles = {
   button: {
     float: 'right',
-    marginRight: 1
+    margin: '0 1px 0 0',
+    padding: '0 24px'
   },
   headingStartNew: {
     paddingRight: 10,

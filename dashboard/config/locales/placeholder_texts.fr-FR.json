@@ -351,8 +351,8 @@
           "34088af1fb721900963462375b3bbe23": "le robot !"
         },
         "courseF_label_predict": {
-          "f15045cb7e57652546d4a0b2c695356f": "Qu'allez-vous manger ?",
-          "937dc37c06cc5d89a7096eb048b73590": "c'est parti !"
+          "f15045cb7e57652546d4a0b2c695356f": "Qu'est-ce que tu vas manger ?",
+          "937dc37c06cc5d89a7096eb048b73590": "ça arrive tout de suite !"
         },
         "CourseF_Project_SpriteLab_2021": {
           "6e41661ddc1edd50b00b7c607cdcec1a": "choix 1",
@@ -365,8 +365,8 @@
           "c3787b1ed128fdeec3ad638c8ba547d3": "choix 3"
         },
         "CourseF_Project_SpriteLab_examples_2021": {
-          "8e7d34ed67fe4ec0910cefee2f5059cd": "Danseur étoile",
-          "78d989e01047ba7043a38650d695abaa": "Sélectionnez un joueur",
+          "8e7d34ed67fe4ec0910cefee2f5059cd": "Danseur des Cieux",
+          "78d989e01047ba7043a38650d695abaa": "Sélectionne le Joueur",
           "6e41661ddc1edd50b00b7c607cdcec1a": "choix 1",
           "7fec9998c3e5a11f435dc6f2f8e399db": "choix 2",
           "c3787b1ed128fdeec3ad638c8ba547d3": "choix 3"
@@ -675,8 +675,8 @@
           "e243ac4e74cc5a76adbecf3b4daa1906": "ma question"
         },
         "courseF_label_predict_-2022-2": {
-          "f15045cb7e57652546d4a0b2c695356f": "Qu'allez-vous manger ?",
-          "937dc37c06cc5d89a7096eb048b73590": "c'est parti !"
+          "f15045cb7e57652546d4a0b2c695356f": "Qu'est-ce que tu vas manger ?",
+          "937dc37c06cc5d89a7096eb048b73590": "ça arrive tout de suite !"
         },
         "courseF_text_answer_-2022-2": {
           "e243ac4e74cc5a76adbecf3b4daa1906": "ma question"

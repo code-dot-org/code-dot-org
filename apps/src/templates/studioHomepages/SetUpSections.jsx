@@ -4,6 +4,10 @@ import {connect} from 'react-redux';
 import i18n from '@cdo/locale';
 import {beginEditingSection} from '../teacherDashboard/teacherSectionsRedux';
 import BorderedCallToAction from './BorderedCallToAction';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+
+// Amplitude analytics events.
+const STARTED_EVENT = 'Section Setup Started';
 
 class SetUpSections extends Component {
   static propTypes = {
@@ -12,7 +16,14 @@ class SetUpSections extends Component {
   };
 
   // Wrapped to avoid passing event args
-  beginEditingSection = () => this.props.beginEditingSection();
+  beginEditingSection = () => {
+    this.recordSectionSetupStartedEvent();
+    this.props.beginEditingSection();
+  };
+
+  recordSectionSetupStartedEvent = () => {
+    analyticsReporter.sendEvent(STARTED_EVENT, {});
+  };
 
   render() {
     const headingText = this.props.hasSections

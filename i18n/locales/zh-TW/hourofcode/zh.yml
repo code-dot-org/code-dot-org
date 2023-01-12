@@ -463,6 +463,10 @@ zh:
     or read our [How-to guide](%{howto_guide_url}) to plan an event for your class.
   signup_registration_closed: 而每年的 12 月，您的班級都可以與全世界數百萬名學生一起在慶祝「電腦科學教育周」之餘參加「程式設計一小時」活動。我們將在
     10 月開放年度慶祝活動的註冊。
+  signup_registration_closed_2022_markdown: 'Registration for this year''s Hour of
+    Code event map is currently closed, but you can still [host an Hour of Code](%{hoc_activities_url})
+    and join in the celebration on social media! Post fun pictures or video of your
+    event using the #HourOfCode hashtag!'
   signup_header: 在 %{campaign_date} 舉辦一場一小時的程式設計課程活動，並在這裡註冊。
   signup_name_label: 您的姓名
   signup_name_error: 需填寫名稱
