@@ -1,11 +1,3 @@
-- require '../shared/middleware/helpers/experiments'
-- require 'geocoder'
-- require 'country_codes'
-- location = Geocoder.search(request.ip).try(:first)
-- country_code = request.params['country_code'] || location&.country_code.to_s
-- us_country = country_code && ['US', 'RD'].include?(country_code.upcase)
-- should_ask_gender = us_country && experiment_value('gender-text-input')
-
 - content_for(:head) do
   %meta{name: "robots", content: "noindex"}/
 
@@ -89,7 +81,7 @@
                 .labelblock
                   = t('signup_form.age')
                 = f.select :age, User::AGE_DROPDOWN_OPTIONS, include_blank: true, class: 'fieldblock'
-              - if should_ask_gender
+              - if ask_gender?(request)
                 .itemblock
                   .labelblock
                     = t('signup_form.gender')
