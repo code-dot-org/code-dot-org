@@ -49,7 +49,6 @@ export default class SeeMoreCourses extends Component {
         )}
         {!this.state.open && (
           <Button
-            __useDeprecatedTag
             onClick={this.showMoreCourses.bind(this)}
             color={Button.ButtonColor.gray}
             icon="caret-down"
@@ -70,6 +69,7 @@ const styles = {
   },
   button: {
     float: 'right',
+    margin: 0,
     marginBottom: 20
   }
 };
