@@ -17,4 +17,16 @@ module User::GenderExperimentHelper
     us_country = country_code && ['US', 'RD'].include?(country_code.upcase)
     us_country && experiment_value('gender-text-input')
   end
+
+  GENDER_INPUT_TYPE_TEXT = 'text'
+  GENDER_INPUT_TYPE_DROPDOWN = 'dropdown'
+  # Determines the gender input selection experience a user will get when creating an account.
+  # Uses the browser session id of the user to determine the experience so page refreshes don't
+  # change the experience.
+  # @param session_id {String} A hexadecimal number identifying the user's browser session
+  def gender_input_type?(request, session_id)
+    return request.params['gender_input'] if request.params['gender_input'].present?
+    # 50% chance for each experience.
+    session_id.to_i(16) % 2 ? GENDER_INPUT_TYPE_TEXT : GENDER_INPUT_TYPE_DROPDOWN
+  end
 end

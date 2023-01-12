@@ -103,8 +103,13 @@
           = f.label :gender, t('signup_form.gender')
         - if @user.errors[:gender].present?
           %span.error= @user.errors[:gender].join(', ')
-        .span5
-          = f.select :gender, gender_options
+        - if gender_input_type?(request, session.id.to_s) == User::GenderExperimentHelper::GENDER_INPUT_TYPE_DROPDOWN
+          .span5
+            = f.select :gender, gender_options
+        - else
+          .span5
+            = f.text_field :gender
+
 
     .row#school-info-section{style: "display: none;"}
       .span10
