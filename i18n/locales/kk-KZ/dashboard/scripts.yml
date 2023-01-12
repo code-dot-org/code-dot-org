@@ -1361,7 +1361,11 @@ kk:
               display_name: Функциялар
         csp5-2023:
           lesson_groups:
-            csp_lists:
-              display_name: Тізімдер
             csp_loops:
+              display_name: Ілмек
+        csp6-2023:
+          lesson_groups:
+            csp_unit6_2020:
+              display_name: Тізімдер
+            lessonGroup-3:
               display_name: Ілмек

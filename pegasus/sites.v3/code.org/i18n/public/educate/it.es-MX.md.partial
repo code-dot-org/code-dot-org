@@ -78,6 +78,7 @@ Con el objetivo de obtener la mejor experiencia con el contenido de Code.org, te
 | **Para usar el Simulador de Internet**                                 | `https://api.pusherapp.com`<br/>`wss://ws.pusherapp.com:443`                                         |
 | **Para usar el Web Lab**                                               | `https://downloads.computinginthecore.org`<br/>`https://codeprojects.org`                            |
 | **Para usar el botón Compartir de Google Classroom**                   | `https://apis.google.com`                                                                                  |
+| **To use App Lab datasets**                                            | `https://*.firebaseio.com`<br />`wss://*.firebaseio.com`                                             |
 
 ## Detalles de dispositivos móviles y tablets compatibles
 

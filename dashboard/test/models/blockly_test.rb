@@ -231,8 +231,8 @@ class BlocklyTest < ActiveSupport::TestCase
             "text" => "kat {TIMESTAMP} {COLOR}",
             "options" => {
               "COLOR" => {
-                "red": "rood",
-                "blue": "blauw",
+                red: "rood",
+                blue: "blauw",
               }
             }
           }
@@ -297,8 +297,8 @@ class BlocklyTest < ActiveSupport::TestCase
             "text" => "kat {TIMESTAMP} {COLOR}",
             "options" => {
               "COLOR" => {
-                "red": "rood",
-                "blue": "blauw",
+                red: "rood",
+                blue: "blauw",
               }
             }
           }
@@ -343,8 +343,8 @@ class BlocklyTest < ActiveSupport::TestCase
             "text" => "kat {TIMESTAMP} {COLOR}",
             "options" => {
               "COLOR" => {
-                "red": "red",
-                "blue": "blue",
+                red: "red",
+                blue: "blue",
               }
             }
           }
@@ -373,8 +373,8 @@ class BlocklyTest < ActiveSupport::TestCase
             "text" => "kat {TIMESTAMP} {COLOR}",
             "options" => {
               "COLOR" => {
-                "red": "rood",
-                "blue": "blauw",
+                red: "rood",
+                blue: "blauw",
               }
             }
           }
@@ -434,8 +434,8 @@ class BlocklyTest < ActiveSupport::TestCase
             "text" => "actor {TYPE} {COSTUME}",
             "options" => {
               "COSTUME" => {
-                "hat": "",
-                "shirt": "",
+                hat: "",
+                shirt: "",
               }
             }
           }
@@ -543,8 +543,8 @@ class BlocklyTest < ActiveSupport::TestCase
       'data' => {
         'authored_hints' => {
           level_name => {
-            "first": "first test markdown",
-            "second": "second test markdown",
+            first: "first test markdown",
+            second: "second test markdown",
           }
         }
       }
@@ -558,8 +558,8 @@ class BlocklyTest < ActiveSupport::TestCase
       type: 'Maze',
       authored_hints: JSON.generate(
         [
-          {"hint_markdown": "first english markdown", "hint_id": "first"},
-          {"hint_markdown": "second english markdown", "hint_id": "second"},
+          {hint_markdown: "first english markdown", hint_id: "first"},
+          {hint_markdown: "second english markdown", hint_id: "second"},
         ]
       )
     )
@@ -590,22 +590,22 @@ class BlocklyTest < ActiveSupport::TestCase
       'data' => {
         'authored_hints' => {
           level_name => {
-            "first": hint,
+            first: hint,
           }
         },
         behavior_names: {
           level_name => {
-            "wandering": "deambulando",
+            wandering: "deambulando",
           }
         }
       },
-      'behaviors': {
-        "this_sprite": "Este sprite"
+      behaviors: {
+        this_sprite: "Este sprite"
       },
     }
 
     I18n.backend.store_translations test_locale, custom_i18n
-    I18n.backend.store_translations :en, 'behaviors': {"this_sprite": "this sprite"}
+    I18n.backend.store_translations :en, behaviors: {this_sprite: "this sprite"}
 
     level = Level.create(
       name: level_name,
@@ -613,7 +613,7 @@ class BlocklyTest < ActiveSupport::TestCase
       type: 'Maze',
       authored_hints: JSON.generate(
         [
-          {"hint_markdown": hint, "hint_id": "first"},
+          {hint_markdown: hint, hint_id: "first"},
         ]
       )
     )
@@ -810,8 +810,8 @@ class BlocklyTest < ActiveSupport::TestCase
       type: 'Maze',
       authored_hints: JSON.generate(
         [
-          {"hint_markdown": "first english markdown", "hint_id": "first"},
-          {"hint_markdown": "second english markdown", "hint_id": ""},
+          {hint_markdown: "first english markdown", hint_id: "first"},
+          {hint_markdown: "second english markdown", hint_id: ""},
         ]
       )
     )

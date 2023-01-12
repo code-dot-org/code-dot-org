@@ -850,7 +850,11 @@ km:
               display_name: អនុ​គមន៍
         csp5-2023:
           lesson_groups:
-            csp_lists:
-              display_name: បញ្ជី
             csp_loops:
+              display_name: រង្វិល​ជុំ
+        csp6-2023:
+          lesson_groups:
+            csp_unit6_2020:
+              display_name: បញ្ជី
+            lessonGroup-3:
               display_name: រង្វិល​ជុំ

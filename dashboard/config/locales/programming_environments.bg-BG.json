@@ -9,22 +9,82 @@
           "name": "Играта лаборатория",
           "categories": {
             "game_lab": {
-              "name": "Играта лаборатория"
+              "name": "Играта лаборатория",
+              "expressions": {
+                "playSound": {
+                  "short_description": "Възпроизвеждане на MP3, OGG или WAV звукови файлове от зададения URL адрес."
+                }
+              }
             },
             "sprites": {
               "name": "Спрайт"
             },
             "groups": {
-              "name": "Групи"
+              "name": "Групи",
+              "expressions": {
+                "setColorEach": {
+                  "palette_params": {
+                    "color": {
+                      "type": "Цвят"
+                    }
+                  }
+                },
+                "setTintEach": {
+                  "palette_params": {
+                    "color": {
+                      "type": "Цвят"
+                    }
+                  }
+                }
+              }
             },
             "drawing": {
-              "name": "Рисуване"
+              "name": "Рисуване",
+              "expressions": {
+                "shape": {
+                  "examples": {
+                    "Star": {
+                      "name": "Ритник"
+                    }
+                  }
+                }
+              }
             },
             "math": {
-              "name": "Математика"
+              "name": "Математика",
+              "expressions": {
+                "randomNumber": {
+                  "palette_params": {
+                    "min": {
+                      "description": "Връща най-малкото число"
+                    },
+                    "max": {
+                      "description": "Връща най-голямото число"
+                    }
+                  }
+                },
+                "randomNumber_min_max": {
+                  "palette_params": {
+                    "min": {
+                      "description": "Връща най-малкото число"
+                    },
+                    "max": {
+                      "description": "Връща най-голямото число"
+                    }
+                  }
+                }
+              }
             },
             "variables": {
-              "name": "Променливи"
+              "name": "Променливи",
+              "expressions": {
+                "assign_x": {
+                  "short_description": "Задава стойност на съществуваща променлива."
+                },
+                "declareAssign_x": {
+                  "short_description": "Деклариране и присвояване на масив към променлива."
+                }
+              }
             },
             "functions": {
               "name": "Функции"
@@ -35,17 +95,88 @@
           "name": "Лаборатория за приложения",
           "description": "App Lab е програмна среда, в която създавате прости приложения. Създайте дизайн, програмирайте с блокове или JavaScript приложението си, а след това го споделете за секунди.",
           "categories": {
+            "ui_controls": {
+              "expressions": {
+                "onEvent": {
+                  "palette_params": {
+                    "callback": {
+                      "type": "Функция"
+                    }
+                  }
+                },
+                "playSound": {
+                  "short_description": "Възпроизвеждане на MP3, OGG или WAV звукови файлове от зададения URL адрес."
+                }
+              }
+            },
             "data": {
-              "name": "Данни"
+              "name": "Данни",
+              "expressions": {
+                "getPrediction": {
+                  "palette_params": {
+                    "callback": {
+                      "type": "Функция"
+                    }
+                  }
+                }
+              }
             },
             "turtle": {
               "name": "Костенурка"
             },
+            "control": {
+              "expressions": {
+                "timedLoop": {
+                  "palette_params": {
+                    "callback": {
+                      "type": "Функция"
+                    }
+                  }
+                }
+              }
+            },
             "math": {
-              "name": "Математика"
+              "name": "Математика",
+              "expressions": {
+                "randomNumber_min_max": {
+                  "palette_params": {
+                    "min": {
+                      "description": "Връща най-малкото число"
+                    },
+                    "max": {
+                      "description": "Връща най-голямото число"
+                    }
+                  }
+                },
+                "randomNumber": {
+                  "palette_params": {
+                    "min": {
+                      "description": "Връща най-малкото число"
+                    },
+                    "max": {
+                      "description": "Връща най-голямото число"
+                    }
+                  }
+                }
+              }
             },
             "variables": {
-              "name": "Променливи"
+              "name": "Променливи",
+              "expressions": {
+                "declareAssign_object": {
+                  "examples": {
+                    "Choose Your Own Adventure": {
+                      "name": "Избери Твоете Приключение"
+                    }
+                  }
+                },
+                "declareAssign_x": {
+                  "short_description": "Деклариране и присвояване на масив към променлива."
+                },
+                "addPair": {
+                  "return_value": "Без"
+                }
+              }
             },
             "functions": {
               "name": "Функции"
