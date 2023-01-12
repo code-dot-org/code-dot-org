@@ -145,7 +145,12 @@ class ProgressLessonTeacherInfo extends React.Component {
           </div>
         )}
         {lesson.lesson_feedback_url && (
-          <div style={styles.buttonContainer}>
+          <div
+            style={{
+              marginBottom: !!showHiddenForSectionToggle ? '0px' : '10px',
+              ...styles.buttonContainer
+            }}
+          >
             <Button
               __useDeprecatedTag
               href={lesson.lesson_feedback_url}
@@ -171,7 +176,9 @@ class ProgressLessonTeacherInfo extends React.Component {
 
 const styles = {
   buttonContainer: {
-    margin: '10px 15px 0px 15px',
+    marginTop: '10px',
+    marginRight: '15px',
+    marginLeft: '15px',
     // Have to set line height to 0 to remove additional 5px bottom margin
     lineHeight: '0px'
   },
