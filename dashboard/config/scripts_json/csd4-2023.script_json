@@ -14,7 +14,7 @@
     },
     "new_name": null,
     "family_name": "csd4",
-    "serialized_at": "2022-11-30 18:01:03 UTC",
+    "serialized_at": "2022-12-06 18:57:00 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -3260,13 +3260,7 @@
       "key": "2ef89bb5-8dae-4f94-947d-3c3f5467b7be",
       "position": 2,
       "properties": {
-        "description": "**Discuss:** Have students share their answers with a partner before sharing out as a full group. Keep a list of apps in the front of the room for the class to see.",
-        "tips": [
-          {
-            "type": "discussionGoal",
-            "markdown": "**Goal:** This is a brainstorming prompt, where students are encouraged to come up with a wide variety of responses. They may think of apps or pieces of technology that address accessibility issues, such as captioning apps for the deaf and hard of hearing. They may also think of apps that connect groups of people together, such as apps that help distribute food from a food bank, or give medical updates from a doctor’s office.\r\n"
-          }
-        ]
+        "description": "**Discuss:** Have students share their answers with a partner before sharing out as a full group. Keep a list of apps in the front of the room for the class to see.\n\n**Discussion Goal**: This is a brainstorming prompt, where students are encouraged to come up with a wide variety of responses. They may think of apps or pieces of technology that address accessibility issues, such as captioning apps for the deaf and hard of hearing. They may also think of apps that connect groups of people together, such as apps that help distribute food from a food bank or give medical updates from a doctor’s office.\n\n"
       },
       "seeding_key": {
         "activity_section.key": "2ef89bb5-8dae-4f94-947d-3c3f5467b7be",
@@ -3507,13 +3501,7 @@
       "key": "6bfaac98-47df-4ca6-847c-e1f09a710f5e",
       "position": 2,
       "properties": {
-        "description": "**Discuss:** Have students write in their journals first, then share with their team and then as a full class.",
-        "tips": [
-          {
-            "type": "discussionGoal",
-            "markdown": "**Goal:** Hopefully students will recall steps we’ve taken in previous lessons, specifically talking to our users and interviewing them to better understand their needs and interests. Students may also come up with ideas centered around independent research, such as looking up information online or researching similar apps. If this comes up, tell students that this is exactly what we will be doing in the next lesson - performing research to better understand our users and any existing apps on our topic.\r\n"
-          }
-        ]
+        "description": "**Discuss:** Have students write in their journals first, then share with their team and then as a full class.\n\n**Discussion Goal**: Hopefully students will recall steps we’ve taken in previous lessons, specifically talking to our users and interviewing them to better understand their needs and interests. Students may also come up with ideas centered around independent research, such as looking up information online or researching similar apps. If this comes up, tell students that this is exactly what we will be doing in the next lesson - performing research to better understand our users and any existing apps on our topic.\n\n"
       },
       "seeding_key": {
         "activity_section.key": "6bfaac98-47df-4ca6-847c-e1f09a710f5e",
@@ -3560,13 +3548,7 @@
       "key": "e1bff277-61fe-4727-a33e-61b5d4215d21",
       "position": 3,
       "properties": {
-        "description": "**Discuss:** Give groups a minute to journal individually, then brainstorm in their groups. Ask someone from each group to share with the class.",
-        "tips": [
-          {
-            "type": "discussionGoal",
-            "markdown": "**Goal:** This is a quick, low-stakes brainstorm that asks students to bring in their own experiences with apps and imagine what apps might already exist for their same topic and user. Ideally, as groups share out, heading from other groups will inspire new ideas their group hadn’t considered.\r\n"
-          }
-        ]
+        "description": "**Discuss:** Give groups a minute to journal individually, then brainstorm in their groups. Ask someone from each group to share with the class.\n\n**Discussion Goal**: This is a quick, low-stakes brainstorm that asks students to bring in their own experiences with apps and imagine what apps might already exist for their same topic and user. Ideally, as groups share out, heading from other groups will inspire new ideas their group hadn’t considered.\n\n"
       },
       "seeding_key": {
         "activity_section.key": "e1bff277-61fe-4727-a33e-61b5d4215d21",
@@ -3698,13 +3680,7 @@
       "key": "7ad36b3b-20bf-41a5-a1e1-540778ee8409",
       "position": 2,
       "properties": {
-        "description": "**Discuss:** Have students journal individually, then share in their groups. Ask one person from each group to share with the class.",
-        "tips": [
-          {
-            "type": "discussionGoal",
-            "markdown": "**Goal:** This prompt is meant to generate shared excitement for the ideas they’ve generated so far, and build momentum for the next few lessons as they begin designing their user interface for their app. There are no right or wrong answers - it’s more important for each student’s voice to be heard within their group as they share the features they’re excited for.\r\n"
-          }
-        ]
+        "description": "**Discuss:** Have students journal individually, then share in their groups. Ask one person from each group to share with the class.\n\n**Discussion Goal**: This prompt is meant to generate shared excitement for the ideas they’ve generated so far, and build momentum for the next few lessons as they begin designing their user interface for their app. There are no right or wrong answers - it’s more important for each student’s voice to be heard within their group as they share the features they’re excited about.\n\n"
       },
       "seeding_key": {
         "activity_section.key": "7ad36b3b-20bf-41a5-a1e1-540778ee8409",
@@ -3739,13 +3715,7 @@
       "key": "fea585a3-2ed9-4624-87a3-293f04bf2b47",
       "position": 3,
       "properties": {
-        "description": "**Discuss:** Have students journal individually, then invite a few students to share their ideas with the class. Keep a running list in the front of the room.",
-        "tips": [
-          {
-            "type": "discussionGoal",
-            "markdown": "**Goal:** This is a brainstorm discussion that helps connect their prior experiences to today’s lesson. Other examples may include checkboxes or dropdown menus or sliders, or even more complicated components like an interactive map or a social media feed. Use the ideas generated by the class to connect with today’s activity.\r\n"
-          }
-        ]
+        "description": "**Discuss:** Have students journal individually, then invite a few students to share their ideas with the class. Keep a running list in the front of the room.\n\n**Discussion Goal**: This is a brainstorm discussion that helps connect their prior experiences to today’s lesson. Other examples may include checkboxes or dropdown menus or sliders, or even more complicated components like an interactive map or a social media feed. Use the ideas generated by the class to connect with today’s activity.\n\n"
       },
       "seeding_key": {
         "activity_section.key": "fea585a3-2ed9-4624-87a3-293f04bf2b47",
@@ -3894,13 +3864,7 @@
       "key": "d2011fc7-a5cd-429c-bc22-d651b6c5fb74",
       "position": 2,
       "properties": {
-        "description": "**Discuss:** Have students journal individually, then invite students to share their ideas with their teams.",
-        "tips": [
-          {
-            "type": "discussionGoal",
-            "markdown": "**Goal:** This discussion helps team members share ideas for how they plan to use UI elements when creating their paper prototypes tomorrow, and continues to build excitement and momentum towards developing their app.\r\n"
-          }
-        ]
+        "description": "**Discuss:** Have students journal individually, then invite students to share their ideas with their teams.\n\n**Discussion Goal**: This discussion helps team members share ideas for how they plan to use UI elements when creating their paper prototypes tomorrow, and continues to build excitement and momentum toward developing their app.\n\n"
       },
       "seeding_key": {
         "activity_section.key": "d2011fc7-a5cd-429c-bc22-d651b6c5fb74",
@@ -3935,13 +3899,7 @@
       "key": "ee23dd2e-42f3-4d47-8388-350a7bcc51a1",
       "position": 3,
       "properties": {
-        "description": "**Discuss:** Have students share out in their teams. It is important for teams to make sure everyone has the same understanding before beginning the activity.",
-        "tips": [
-          {
-            "type": "discussionGoal",
-            "markdown": "**Goal:** This is a check-in point for teams to make sure they all have a shared understanding of the app they are making. It’s okay for teams to be unsure about some of these points - time is given at the start of the activity for teams to discuss and come to agreements.\r\n"
-          }
-        ]
+        "description": "**Discuss:** Have students share out in their teams. It is important for teams to make sure everyone has the same understanding before beginning the activity.\n\n**Discussion Goal**: This is a check-in point for teams to make sure they all have a shared understanding of the app they are making. It’s okay for teams to be unsure about some of these points - time is given at the start of the activity for teams to discuss and come to an agreement.\n\n"
       },
       "seeding_key": {
         "activity_section.key": "ee23dd2e-42f3-4d47-8388-350a7bcc51a1",
@@ -3993,13 +3951,7 @@
       "key": "ac6f5733-6fc8-4a8f-8c8d-1931db9d9efa",
       "position": 2,
       "properties": {
-        "description": "**Prompt:** Show the What’s For Lunch paper prototype. This is an example of a paper prototype you might create during class today. In what ways does this match the definition of prototype?",
-        "tips": [
-          {
-            "type": "discussionGoal",
-            "markdown": "Encourage connections to the definition of prototype, especially “first or early model” and “test assumptions before developing a final version”. Students might bring up the following features as evidence:\r\n\r\n* The screens are neat enough to read the next and have enough detail to understand what they will do, but are still not very polished.\r\n* Some areas are “placeholders”, such as the scribbled lines for text or a bubble that says “picture”\r\n* You can identify the UI features on each screen (buttons, text, images, etc)\r\n* The flow of the app is clear from the navigation arrows\r\n* Enough of the app is ready so a user could test the app and give comments on how it functions\r\n"
-          }
-        ]
+        "description": "**Prompt:** Show the What’s For Lunch paper prototype. This is an example of a paper prototype you might create during class today. In what ways does this match the definition of a prototype?\n\n**Discussion Goal**: Encourage connections to the definition of a prototype, especially “first or early model” and “test assumptions before developing a final version”. Students might bring up the following features as evidence:\n\n* The screens are neat enough to read the next and have enough detail to understand what they will do, but are still not very polished.\n* Some areas are “placeholders”, such as the scribbled lines for text or a bubble that says “picture”\n* You can identify the UI features on each screen (buttons, text, images, etc)\n* The flow of the app is clear from the navigation arrows\n* Enough of the app is ready so a user could test the app and give comments on how it functions"
       },
       "seeding_key": {
         "activity_section.key": "ac6f5733-6fc8-4a8f-8c8d-1931db9d9efa",
@@ -4103,13 +4055,7 @@
       "key": "667fa85e-3431-4ae6-a9a1-35c8d0a20139",
       "position": 3,
       "properties": {
-        "description": "**Discuss:** Have students journal individually, then share in their groups. There doesn’t need to be a full-group share out for this prompt.",
-        "tips": [
-          {
-            "type": "discussionGoal",
-            "markdown": "**Goal:** This prompt is preparation for part of today’s activity where students will be introducing themselves & their teams to their user testers, and one part of that introduction is explaining the purpose of their app. Discussing this as a team first helps rehearse these talking points before discussing with other users.\r\n"
-          }
-        ]
+        "description": "**Discuss:** Have students journal individually, then share in their groups. There doesn’t need to be a full-group share out for this prompt.\n\n**Discussion Goal**: This prompt is preparation for part of today’s activity where students will be introducing themselves & their teams to their user testers, and one part of that introduction is explaining the purpose of their app. Discussing this as a team first helps rehearse these talking points before discussing them with other users.\n\n"
       },
       "seeding_key": {
         "activity_section.key": "667fa85e-3431-4ae6-a9a1-35c8d0a20139",
@@ -4223,13 +4169,7 @@
       "key": "69c54dff-edda-47eb-88cf-b6eb081161e1",
       "position": 2,
       "properties": {
-        "description": "**Discuss:** Have students journal individually, then share in their groups. If there is time, ask groups to share their responses with the class.",
-        "tips": [
-          {
-            "type": "discussionGoal",
-            "markdown": "**Goal:** Students may notice that new users discovered new ways to use the app or encountered certain problems they never considered. This can lead to a conversation about bias - because the team was involved in the creation of the app, they may have overlooked different aspects of how the UI is designed or made assumptions about how the user would use it. This is why it’s important to have an outside user test those assumptions early and often.\r\n"
-          }
-        ]
+        "description": "**Discuss:** Have students journal individually, then share in their groups. If there is time, ask groups to share their responses with the class.\n\n**Discussion Goal**: Students may notice that new users discovered new ways to use the app or encountered certain problems they never considered. This can lead to a conversation about bias - because the team was involved in the creation of the app, they may have overlooked different aspects of how the UI is designed or made assumptions about how the user would use it. This is why it’s important to have an outside user test those assumptions early and often.\n\n"
       },
       "seeding_key": {
         "activity_section.key": "69c54dff-edda-47eb-88cf-b6eb081161e1",
@@ -4264,13 +4204,7 @@
       "key": "aff74fc8-cba2-4a9b-b0f4-1c159003564d",
       "position": 3,
       "properties": {
-        "description": "**Discuss:** Have students journal individually, then share in their groups. Encourage them to keep coming up with ideas even after everyone has shared. Then, invite one person from each group to share at least one change to their app.",
-        "tips": [
-          {
-            "type": "discussionGoal",
-            "markdown": "**Goal:** This is an opportunity for teams to remind themselves of the activity they completed yesterday, and synthesize the feedback into actionable steps. This brainstorm will lead into the activity they will complete today.\r\n"
-          }
-        ]
+        "description": "**Discuss:** Have students journal individually, then share in their groups. Encourage them to keep coming up with ideas even after everyone has shared. Then, invite one person from each group to share at least one change to their app.\n\n**Discussion Goal**: This is an opportunity for teams to remind themselves of the activity they completed yesterday, and synthesize the feedback into actionable steps. This brainstorming will lead into the activity they will complete today.\n\n"
       },
       "seeding_key": {
         "activity_section.key": "aff74fc8-cba2-4a9b-b0f4-1c159003564d",
@@ -4516,13 +4450,7 @@
       "key": "deaa31fd-36e8-4386-b9df-c9d2dce81ba6",
       "position": 3,
       "properties": {
-        "description": "**Discuss:** Students don’t need to write anything down for this prompt - they can complete it as a group via discussion.",
-        "tips": [
-          {
-            "type": "discussionGoal",
-            "markdown": "**Goal:** This is a quick task that helps transition students back into completing their Screen Design activity guides, or be prepared to jump into today’s activity of designing these screens in App Lab. This is one last check that each team is preparing their IDs for a successful implementation in App Lab.\r\n"
-          }
-        ]
+        "description": "**Discuss:** Students don’t need to write anything down for this prompt - they can complete it as a group via discussion.\n\n**Discussion Goal**: This is a quick task that helps transition students back into completing their Screen Design activity guides, or be prepared to jump into today’s activity of designing these screens in App Lab. This is one last check that each team is preparing their IDs for a successful implementation in App Lab.\n\n"
       },
       "seeding_key": {
         "activity_section.key": "deaa31fd-36e8-4386-b9df-c9d2dce81ba6",
@@ -4644,13 +4572,7 @@
       "key": "5a75df91-708d-45ab-8d74-f82537845f8e",
       "position": 3,
       "properties": {
-        "description": "**Discuss:** Have students journal individually first, then have students share with a partner before asking a few students to share with the class.",
-        "tips": [
-          {
-            "type": "discussionGoal",
-            "markdown": "**Goal:** There is no single right answer to this prompt - the goal is to reflect on the process of converting a paper prototype into App Lab. Students may notice that the elements in App Lab make certain types of designs more difficult - for example, it’s hard to have curves or wavy lines as part of the design. Students may also realize that their paper prototypes were too “compact” with too much information on one screen - when they tried to recreate in App Lab, the text or icons may have been too small to read. \r\n"
-          }
-        ]
+        "description": "**Discuss:** Have students journal individually first, then have students share with a partner before asking a few students to share with the class.\n\n**Discussion Goal**: There is no single right answer to this prompt - the goal is to reflect on the process of converting a paper prototype into App Lab. Students may notice that the elements in App Lab make certain types of designs more difficult - for example, it’s hard to have curves or wavy lines as part of the design. Students may also realize that their paper prototypes were too “compact” with too much information on one screen - when they tried to recreate them in App Lab, the text or icons may have been too small to read.\n\n"
       },
       "seeding_key": {
         "activity_section.key": "5a75df91-708d-45ab-8d74-f82537845f8e",
@@ -4685,13 +4607,7 @@
       "key": "d990f4d9-bf7c-481a-a827-96a0b4564271",
       "position": 3,
       "properties": {
-        "description": "**Discuss:** Students should journal individually, then share in pairs before asking a few students to share with the class.",
-        "tips": [
-          {
-            "type": "discussionGoal",
-            "markdown": "**Goal:** Students should remember that Game Lab uses a ‘draw’ loop that runs constantly. If they wanted to check for a user interaction, they needed to use if-statements inside the loop to constantly check what the user was doing.\r\n\r\n**Alternate Prompt:** If your students haven’t completed Game Lab, you can adjust the prompt to have them think of a game they’ve played and ask how it gets input from the user. They may brainstorm things like pressing a button on a keyboard or clicking a character on a screen, or they could consider phone interactions like tapping the screen, or swiping or pinching for an action to happen.\r\n"
-          }
-        ]
+        "description": "**Discuss:** Students should journal individually, then share in pairs before asking a few students to share with the class.\n\n**Discussion Goal**: Students should remember that Game Lab uses a ‘draw’ loop that runs constantly. If they wanted to check for user interaction, they needed to use if-statements inside the loop to constantly check what the user was doing.\n\n**Alternate Prompt**: If your students haven’t completed Game Lab, you can adjust the prompt to have them think of a game they’ve played and ask how it gets input from the user. They may brainstorm things like pressing a button on a keyboard or clicking a character on a screen, or they could consider phone interactions like tapping the screen or swiping or pinching for an action to happen."
       },
       "seeding_key": {
         "activity_section.key": "d990f4d9-bf7c-481a-a827-96a0b4564271",
@@ -4841,13 +4757,7 @@
       "key": "2deb8610-1cce-482d-89fb-7ba171dc954a",
       "position": 3,
       "properties": {
-        "description": "**Discuss:** Have students journal individually first, then have students share with a partner before asking a few students to share with the class.",
-        "tips": [
-          {
-            "type": "discussionGoal",
-            "markdown": "**Goal:** Students may predict that they may have trouble staying organized with all the different IDs, or they may make coding mistakes with the events, or they may have import errors when trying to import screens. Encourage students to consider how their teammates can be a resource, such as acting like a “thought partner” to help with debugging or by using their Screen Design Activity Guide to help stay organized with IDs.\r\n"
-          }
-        ]
+        "description": "**Discuss:** Have students journal individually first, then have students share with a partner before asking a few students to share with the class.\n\n**Discussion Goal**: Students may predict that they may have trouble staying organized with all the different IDs, or they may make coding mistakes with the events, or they may have import errors when trying to import screens. Encourage students to consider how their teammates can be a resource, such as by acting like a “thought partner” to help with debugging or by using their Screen Design Activity Guide to help stay organized with IDs.\n\n"
       },
       "seeding_key": {
         "activity_section.key": "2deb8610-1cce-482d-89fb-7ba171dc954a",
@@ -4882,13 +4792,7 @@
       "key": "450053f8-89a3-40b5-8700-461383aaf677",
       "position": 3,
       "properties": {
-        "description": "**Discuss:** Have students journal on their own, then discuss in a group then share as a class.",
-        "tips": [
-          {
-            "type": "discussionGoal",
-            "markdown": "**Goal:** This prompt is a review of yesterday’s lesson. Try to draw out that there are several steps to complete in this process:\r\n\r\n1. import the screen your teammate created\r\n2. add an event handler to your code using the button ID\r\n3. use the [`setScreen`(#fff176)](/docs/applab/setScreen/) block to change to the new screen\r\n\r\n"
-          }
-        ]
+        "description": "**Discuss:** Have students journal on their own, then discuss in a group then share as a class.\n\n**Discussion Goal**: This prompt is a review of yesterday’s lesson. Try to draw out that there are several steps to complete in this process:\n\n1) import the screen your teammate created\n2) add an event handler to your code using the button ID\n3) use the [`setScreen`(#fff176)](/docs/applab/setScreen/) block to change to the new screen"
       },
       "seeding_key": {
         "activity_section.key": "450053f8-89a3-40b5-8700-461383aaf677",
@@ -5027,13 +4931,7 @@
       "key": "6afa0ef9-f78f-4ae1-abbc-58742b955871",
       "position": 3,
       "properties": {
-        "description": "**Discuss:** Have students journal individually, then discuss in their groups before drawing out conversations as a full class.",
-        "tips": [
-          {
-            "type": "discussionGoal",
-            "markdown": "**Goal:** Students should recall the user testing process, which they’ve already completed several times throughout this unit. Discussions will vary, but they should anticipate that some people will be observers taking notes on what the user does so they can incorporate it into feedback. Students may also realize that there is no more need for a “computer” because we’ve coded all of the navigation in App Lab!\r\n"
-          }
-        ]
+        "description": "**Discuss:** Have students journal individually, then discuss in their groups before drawing out conversations as a full class.\n\n**Discussion Goal**: Students should recall the user testing process, which they’ve already completed several times throughout this unit. Discussions will vary, but they should anticipate that some people will be observers taking notes on what the user does so they can incorporate it into feedback. Students may also realize that there is no more need for a “computer” because we’ve coded all of the navigation in App Lab!\n\n"
       },
       "seeding_key": {
         "activity_section.key": "6afa0ef9-f78f-4ae1-abbc-58742b955871",
@@ -5164,13 +5062,7 @@
       "key": "1a74e56a-ea20-4d7b-8c99-04b03c6512e4",
       "position": 2,
       "properties": {
-        "description": "**Discuss:** Have students journal individually, then share in their groups. If there is time, ask groups to share their responses with the class.",
-        "tips": [
-          {
-            "type": "discussionGoal",
-            "markdown": "**Goal:** Students may notice that, once again, users may have discovered issues that challenged their assumptions. However, students may also notice that the feedback was targeted more towards cosmetic and aesthetic choices, such as the size of fonts or the color of elements on the screen. Even though these might seem like small details that are easy to fix, they can have a large negative impact on the user experience.\r\n"
-          }
-        ]
+        "description": "**Discuss:** Have students journal individually, then share in their groups. If there is time, ask groups to share their responses with the class.\n\n**Discussion Goal**: Students may notice that, once again, users may have discovered issues that challenged their assumptions. However, students may also notice that the feedback was targeted more toward cosmetic and aesthetic choices, such as the size of fonts or the color of elements on the screen. Even though these might seem like small details that are easy to fix, they can have a large negative impact on the user experience.\n\n"
       },
       "seeding_key": {
         "activity_section.key": "1a74e56a-ea20-4d7b-8c99-04b03c6512e4",
@@ -5205,13 +5097,7 @@
       "key": "4116a7a6-cfe7-4007-84c1-6a3d2594243e",
       "position": 3,
       "properties": {
-        "description": "**Discuss:** Have students journal individually first, then share in their teams.",
-        "tips": [
-          {
-            "type": "discussionGoal",
-            "markdown": "**Goal:** Students can use this prompt to remind themselves of the user feedback from yesterday and as a transition into the main activity.\r\n"
-          }
-        ]
+        "description": "**Discuss:** Have students journal individually first, then share in their teams.\n\n**Discussion Goal**: Students can use this prompt to remind themselves of the user feedback from yesterday and as a transition into the main activity.\n\n"
       },
       "seeding_key": {
         "activity_section.key": "4116a7a6-cfe7-4007-84c1-6a3d2594243e",
@@ -5355,13 +5241,7 @@
       "key": "a3534027-3e38-4acd-b935-7d65f31a4d5e",
       "position": 9,
       "properties": {
-        "description": "**Discuss:** Have students share in their teams first, then facilitate a class discussion by asking each group to share their thoughts with the class.",
-        "tips": [
-          {
-            "type": "discussionGoal",
-            "markdown": "**Goal:** Students should realize that urgent goals should be higher priority than non-urgent goals, and that easier fixes will probably get done faster than harder fixes. This means the upper-left quadrant is the first group teams will probably tackle. After that, teams may debate which quadrant is more important - urgent fixes that are harder to implement, or non-urgent fixes that are easier to implement. It’s worth discussing the pros and cons of both approaches, since teams will have to make this decision tomorrow when implementing their changes.\r\n"
-          }
-        ]
+        "description": "**Discuss:** Have students share in their teams first, then facilitate a class discussion by asking each group to share their thoughts with the class.\n\n**Discussion Goal**: Students should realize that urgent goals should be a higher priority than non-urgent goals, and that easier fixes will probably get done faster than harder fixes. This means the upper-left quadrant is the first group teams will probably tackle. After that, teams may debate which quadrant is more important - urgent fixes that are harder to implement, or non-urgent fixes that are easier to implement. It’s worth discussing the pros and cons of both approaches since teams will have to make this decision tomorrow when implementing their changes.\n\n"
       },
       "seeding_key": {
         "activity_section.key": "a3534027-3e38-4acd-b935-7d65f31a4d5e",
@@ -5407,13 +5287,7 @@
       "key": "4137b0d8-2720-4ad3-8b77-26ad21f36948",
       "position": 3,
       "properties": {
-        "description": "**Discuss:** Have students journal individually first, then have students share in their teams before asking a few students to share with the class.",
-        "tips": [
-          {
-            "type": "discussionGoal",
-            "markdown": "**Goal:** Students should make a connection between this organization process and different tasks they have outside of class. Some examples may include:\r\n\r\n* Deciding which homework assignments to prioritize\r\n* Deciding which chores to complete at home\r\n* Deciding how to plan for an event, such as a birthday party or school event\r\n\r\nIf possible, connect this process to strategies related to stress management and not being overwhelmed. When faced with a lot of work all at once, writing each piece down in bite-sized steps is a good strategy for getting started on large projects and managing stress.\r\n"
-          }
-        ]
+        "description": "**Discuss:** Have students journal individually first, then have students share in their teams before asking a few students to share with the class.\n\n**Discussion Goal**: Students should make a connection between this organization process and different tasks they have outside of class. Some examples may include:\n\n* Deciding which homework assignments to prioritize\n* Deciding which chores to complete at home\n* Deciding how to plan for an event, such as a birthday party or school event\n\nIf possible, connect this process to strategies related to stress management and not being overwhelmed. When faced with a lot of work all at once, writing each piece down in bite-sized steps is a good strategy for getting started on large projects and managing stress."
       },
       "seeding_key": {
         "activity_section.key": "4137b0d8-2720-4ad3-8b77-26ad21f36948",
@@ -5448,13 +5322,7 @@
       "key": "93760edc-deb6-4c76-a202-8c54c8044b14",
       "position": 3,
       "properties": {
-        "description": " **Discuss:** Have students journal individually first, then have students share in their teams before asking a few students to share with the class.",
-        "tips": [
-          {
-            "type": "discussionGoal",
-            "markdown": "**Goal:** This prompt previews the decisions students will make today, where they will “claim” different post-its to work on for improving their app. This also allows teams to hear different perspectives on how important certain features are to their program - some students may focus on adding new features, whereas others may focus on making the app more usable in the first place.\n"
-          }
-        ]
+        "description": " **Discuss:** Have students journal individually first, then have students share in their teams before asking a few students to share with the class.\n\n**Discussion Goal**: This prompt previews the decisions students will make today, where they will “claim” different post-its to work on for improving their app. This also allows teams to hear different perspectives on how important certain features are to their program - some students may focus on adding new features, whereas others may focus on making the app more usable in the first place.\n\n"
       },
       "seeding_key": {
         "activity_section.key": "93760edc-deb6-4c76-a202-8c54c8044b14",
@@ -5586,13 +5454,7 @@
       "key": "33bd0544-3ed0-4a35-aa3a-4aef1763e55c",
       "position": 3,
       "properties": {
-        "description": "**Discuss:** Have students write individually, then share with their team to create a team list. Ask each team to share one thing on their list with the class, keeping a class list at the front of the room. Continue to have teams share until there is nothing left on their lists.",
-        "tips": [
-          {
-            "type": "discussionGoal",
-            "markdown": "**Goal:** This has been a large project, and students may not fully realize how much they have accomplished so far. Use this as a moment to celebrate everything they’ve created, starting from their initial brainstorms to their completed app they worked on in previous lessons. Emphasize the planning steps that they completed as well, such as tracking their bugs and features or performing market research.\r\n"
-          }
-        ]
+        "description": "**Discuss:** Have students write individually, then share with their team to create a team list. Ask each team to share one thing on their list with the class, keeping a class list at the front of the room. Continue to have teams share until there is nothing left on their lists.\n\n**Discussion Goal**: This has been a large project, and students may not fully realize how much they have accomplished so far. Use this as a moment to celebrate everything they’ve created, starting from their initial brainstorms to the completed app they worked on in previous lessons. Emphasize the planning steps that they completed as well, such as tracking their bugs and features or performing market research.\n\n"
       },
       "seeding_key": {
         "activity_section.key": "33bd0544-3ed0-4a35-aa3a-4aef1763e55c",

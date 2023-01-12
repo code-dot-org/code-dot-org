@@ -64,7 +64,7 @@ class HighFrequencyReporter
   # @param [Integer] throttle
   def report!(throttle = 1)
     if Time.now.min % throttle == 0
-      alertable_events.each {|e| @chat_client.message(e, {channel: @channel})}
+      alertable_events.each {|e| @chat_client.message(e, params: {channel: @channel})}
     end
   end
 

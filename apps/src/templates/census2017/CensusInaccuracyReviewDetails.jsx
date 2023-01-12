@@ -145,7 +145,6 @@ export default class CensusInaccuracyReviewDetails extends Component {
           {school.name} ({school.city}, {school.state})
         </h2>
         <Button
-          __useDeprecatedTag
           onClick={this.returnToMainList}
           size="large"
           text="Back to main list"
@@ -222,14 +221,12 @@ export default class CensusInaccuracyReviewDetails extends Component {
           {this.state.notes && (
             <div>
               <Button
-                __useDeprecatedTag
                 onClick={this.submitInvestigationWithOverride}
                 size="large"
                 text={overrideText}
               />
               <br />
               <Button
-                __useDeprecatedTag
                 onClick={this.submitInvestigationWithoutOverride}
                 size="large"
                 text="Resolve without override"

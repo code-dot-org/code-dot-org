@@ -1,0 +1,42 @@
+@import "../../mixins.scss";
+@import "color.scss";
+
+.inlineAudioButton {
+  @include remove-button-styles(inherit, inherit, inherit);
+  margin-left: 3px;
+  margin-right: 3px;
+  display: flex;
+
+  .iconWrapper {
+    background-color: $lightest_purple;
+    cursor: pointer;
+    float: left;
+    border: none;
+    outline: none;
+    width: 33px;
+    box-sizing: border-box;
+
+    &Volume {
+      border-radius: 4px 0 0 4px;
+    }
+
+    &PlayPause {
+      border-radius: 0 4px 4px 0;
+    }
+
+    .buttonImg {
+      opacity: 1;
+      float: left;
+      padding-right: 8px;
+      padding-left: 8px;
+      color: $dark_charcoal;
+    }
+  }
+
+  &:hover,
+  &:focus {
+    .iconWrapper {
+      background-color: $cyan;
+    }
+  }
+}
