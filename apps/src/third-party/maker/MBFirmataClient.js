@@ -532,6 +532,12 @@ class MicrobitFirmataClient {
       this.SYSEX_END]);
   }
 
+  compassCalibration() {
+    // Request that the micro:bit perform a compass calibration cycle
+
+    this.myPort.write([this.SYSEX_START, this.MB_COMPASS_CALIBRATE, this.SYSEX_END]);
+  }
+
   enableLightSensor() {
     // Enable the light sensor.
     // Note: When running, the light sensor monopolizes the A/D converter, preventing
