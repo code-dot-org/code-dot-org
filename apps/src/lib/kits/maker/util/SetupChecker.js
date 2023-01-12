@@ -120,10 +120,6 @@ export default class SetupChecker {
       })
       .then(() => {
         this.boardController = new MicroBitBoard(this.port);
-        return this.boardController.checkExpectedFirmware();
-      })
-      .then(() => {
-        console.log(this.boardController.compassIsCalibrated());
         return this.boardController.calibrateCompass();
       });
   }
