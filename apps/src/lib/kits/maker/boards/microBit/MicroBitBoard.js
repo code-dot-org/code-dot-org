@@ -269,6 +269,7 @@ export default class MicroBitBoard extends EventEmitter {
   }
 
   calibrateCompass() {
+    console.log('inside calibrateCompass function in MicroBitBoard.js');
     return (
       Promise.resolve()
         .then(() => this.openSerialPort())
