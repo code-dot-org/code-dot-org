@@ -1,4 +1,4 @@
-# Continue Learning with Micro:bit Extension Lessons for CS Fundamentals
+# Continue Learning with micro:bit Extension Lessons for CS Fundamentals
 
 <div class="col-50" style="padding-right: 20px; float: left; margin-top: 10px">
 <img src="/images/microbit-hands-with-booklets.png" alt="" width="450">
