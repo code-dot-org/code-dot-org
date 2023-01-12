@@ -1,22 +1,29 @@
 import React, {useState} from 'react';
 import MultiSelectGroup from './MultiSelectGroup';
+import PropTypes from 'prop-types';
+import {multiSelectOptionShape} from './shapes';
 
 export default {
   title: 'MultiSelectGroup',
   component: MultiSelectGroup
 };
 
-const Template = args => {
+// This component is an integrated example for the <PopUpMenu>.
+// It needs to be its own component so that it adheres to React hooks
+// linting (i.e., this can't be a template or the exported story itself).
+const BasicExampleComponent = props => {
   const [values, setValues] = useState(
-    Object.fromEntries(args.options.map(o => [o.value, false]))
+    Object.fromEntries(props.options.map(o => [o.value, false]))
   );
-  const allArgs = {
-    ...args,
-    values: values,
-    setValues: setValues
-  };
 
-  return <MultiSelectGroup {...allArgs} />;
+  return <MultiSelectGroup values={values} setValues={setValues} {...props} />;
+};
+BasicExampleComponent.propTypes = {
+  options: PropTypes.arrayOf(multiSelectOptionShape).isRequired
+};
+
+const Template = args => {
+  return <BasicExampleComponent {...args} />;
 };
 
 export const NotRequired = Template.bind({});
