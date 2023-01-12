@@ -3,8 +3,10 @@
 - require 'country_codes'
 - require '../shared/middleware/helpers/experiments'
 - location = Geocoder.search(request.ip).try(:first)
-- us_ip = location.nil? || ['US', 'RD'].include?(location.country_code.to_s.upcase)
-
+- country_code = request.params['country_code'] || location&.country_code.to_s
+- us_ip = location.nil? || ['US', 'RD'].include?(country_code.upcase)
+- us_country = country_code && ['US', 'RD'].include?(country_code.upcase)
+- should_ask_gender = us_country && experiment_value('gender-text-input')
 - @page_title = t('activerecord.attributes.user.finish_sign_up_header')
 
 #signup
@@ -99,7 +101,7 @@
       .span5
         = f.select :age, age_options, include_blank: true
 
-    - if experiment_value('gender-text-input')
+    - if should_ask_gender
       .row#gender-dropdown{style: "display: none;"}
         .span3.signup-field-label
           = f.label :gender, t('signup_form.gender')
