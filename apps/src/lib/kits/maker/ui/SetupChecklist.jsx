@@ -143,7 +143,6 @@ export default class SetupChecklist extends Component {
         )
       )
       .then(() => this.setupChecker.celebrate())
-      .then(() => this.setupChecker.celebrate())
       .then(() => this.succeed(STATUS_BOARD_COMPONENTS))
       .then(() => trackEvent('MakerSetup', 'ConnectionSuccess'))
 
