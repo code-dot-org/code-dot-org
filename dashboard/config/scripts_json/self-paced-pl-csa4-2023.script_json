@@ -1,0 +1,337 @@
+{
+  "script": {
+    "name": "self-paced-pl-csa4-2023",
+    "wrapup_video_id": null,
+    "login_required": false,
+    "properties": {
+      "is_migrated": true
+    },
+    "new_name": null,
+    "family_name": null,
+    "serialized_at": "2023-01-12 02:25:12 UTC",
+    "published_state": "in_development",
+    "instruction_type": "teacher_led",
+    "instructor_audience": "facilitator",
+    "participant_audience": "teacher",
+    "seeding_key": {
+      "script.name": "self-paced-pl-csa4-2023"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "",
+      "user_facing": false,
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csa4-2023"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "lesson-1",
+      "name": "Creating and using objects",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csa4-2023"
+      }
+    }
+  ],
+  "lesson_activities": [
+    {
+      "key": "98db885c-e6d9-460d-8ce4-6eb4fa9a40c8",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "98db885c-e6d9-460d-8ce4-6eb4fa9a40c8",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csa4-2023"
+      }
+    }
+  ],
+  "activity_sections": [
+    {
+      "key": "c9fdc96f-2d50-448f-9db7-6760196b16a4",
+      "position": 1,
+      "properties": {
+        "progression_name": "Overview"
+      },
+      "seeding_key": {
+        "activity_section.key": "c9fdc96f-2d50-448f-9db7-6760196b16a4",
+        "lesson_activity.key": "98db885c-e6d9-460d-8ce4-6eb4fa9a40c8"
+      }
+    },
+    {
+      "key": "c4d2e72b-ef94-4c07-b8e8-9caebca4665a",
+      "position": 2,
+      "properties": {
+        "progression_name": "Introducing The Neighborhood"
+      },
+      "seeding_key": {
+        "activity_section.key": "c4d2e72b-ef94-4c07-b8e8-9caebca4665a",
+        "lesson_activity.key": "98db885c-e6d9-460d-8ce4-6eb4fa9a40c8"
+      }
+    },
+    {
+      "key": "bbbeb04b-7088-4e86-bbc1-5e779a389fb7",
+      "position": 3,
+      "properties": {
+        "progression_name": "Instantiating objects and calling methods"
+      },
+      "seeding_key": {
+        "activity_section.key": "bbbeb04b-7088-4e86-bbc1-5e779a389fb7",
+        "lesson_activity.key": "98db885c-e6d9-460d-8ce4-6eb4fa9a40c8"
+      }
+    }
+  ],
+  "script_levels": [
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Overview"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csa-prework-m4-overview-2023"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csa4-2023",
+        "activity_section.key": "c9fdc96f-2d50-448f-9db7-6760196b16a4"
+      },
+      "level_keys": [
+        "csa-prework-m4-overview-2023"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Introducing The Neighborhood"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csa-prework-m4-intro-to-classes-video-2023"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csa4-2023",
+        "activity_section.key": "c4d2e72b-ef94-4c07-b8e8-9caebca4665a"
+      },
+      "level_keys": [
+        "csa-prework-m4-intro-to-classes-video-2023"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 3,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Introducing The Neighborhood"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "sa-prework-m4-intro-1-JL-2023"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csa4-2023",
+        "activity_section.key": "c4d2e72b-ef94-4c07-b8e8-9caebca4665a"
+      },
+      "level_keys": [
+        "sa-prework-m4-intro-1-JL-2023"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 4,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Introducing The Neighborhood"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csa-prework-m4-intro-to-javalab-video-2023"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csa4-2023",
+        "activity_section.key": "c4d2e72b-ef94-4c07-b8e8-9caebca4665a"
+      },
+      "level_keys": [
+        "csa-prework-m4-intro-to-javalab-video-2023"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 5,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "Introducing The Neighborhood"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csa-prework-m4-intro-2-JL-2023"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csa4-2023",
+        "activity_section.key": "c4d2e72b-ef94-4c07-b8e8-9caebca4665a"
+      },
+      "level_keys": [
+        "csa-prework-m4-intro-2-JL-2023"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 6,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Instantiating objects and calling methods"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csa-prework-m4-transition-text-2023"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csa4-2023",
+        "activity_section.key": "bbbeb04b-7088-4e86-bbc1-5e779a389fb7"
+      },
+      "level_keys": [
+        "csa-prework-m4-transition-text-2023"
+      ]
+    }
+  ],
+  "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "csa-prework-m4-overview-2023",
+        "script_level.level_keys": [
+          "csa-prework-m4-overview-2023"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csa4-2023",
+        "activity_section.key": "c9fdc96f-2d50-448f-9db7-6760196b16a4"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csa-prework-m4-intro-to-classes-video-2023",
+        "script_level.level_keys": [
+          "csa-prework-m4-intro-to-classes-video-2023"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csa4-2023",
+        "activity_section.key": "c4d2e72b-ef94-4c07-b8e8-9caebca4665a"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "sa-prework-m4-intro-1-JL-2023",
+        "script_level.level_keys": [
+          "sa-prework-m4-intro-1-JL-2023"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csa4-2023",
+        "activity_section.key": "c4d2e72b-ef94-4c07-b8e8-9caebca4665a"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csa-prework-m4-intro-to-javalab-video-2023",
+        "script_level.level_keys": [
+          "csa-prework-m4-intro-to-javalab-video-2023"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csa4-2023",
+        "activity_section.key": "c4d2e72b-ef94-4c07-b8e8-9caebca4665a"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csa-prework-m4-intro-2-JL-2023",
+        "script_level.level_keys": [
+          "csa-prework-m4-intro-2-JL-2023"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csa4-2023",
+        "activity_section.key": "c4d2e72b-ef94-4c07-b8e8-9caebca4665a"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csa-prework-m4-transition-text-2023",
+        "script_level.level_keys": [
+          "csa-prework-m4-transition-text-2023"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csa4-2023",
+        "activity_section.key": "bbbeb04b-7088-4e86-bbc1-5e779a389fb7"
+      }
+    }
+  ],
+  "resources": [
+
+  ],
+  "lessons_resources": [
+
+  ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+
+  ],
+  "lessons_standards": [
+
+  ],
+  "lessons_opportunity_standards": [
+
+  ]
+}
