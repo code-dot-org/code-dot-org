@@ -13,7 +13,7 @@ sv:
             '0.75': liten
             '1.00': medel
             '2.00': stor
-            '3.00': extra large
+            '3.00': extra stor
       BadGuys_setSize_dropdown:
         options:
           SIZE:
@@ -21,7 +21,7 @@ sv:
             '0.75': liten
             '1.00': medel
             '2.00': stor
-            '3.00': extra large
+            '3.00': extra stor
       Dancelab_alternateMoves:
         text: "{GROUP} växla varje {N} takter \nmellan {MOVE1} och {MOVE2}"
         options:
@@ -367,6 +367,7 @@ sv:
             '"x"': korsvis
             '"plus"': plus
             '"spiral"': spiral
+            '"infinity"': oändlig linje
             '"random"': slumpad
       Dancelab_makeAnonymousDanceSprite:
         text: skapa en ny {COSTUME} på {LOCATION}
@@ -497,6 +498,7 @@ sv:
             '"x"': korsvis
             '"plus"': plus
             '"spiral"': spiral
+            '"infinity"': oändlig linje
             '"random"': slumpad
       Dancelab_mixColors:
         text: blanda {COLOR1} och {COLOR2}
@@ -985,6 +987,12 @@ sv:
         text: ställ in
       Dancelab_whenSetup2:
         text: ställ in
+      DansBlocks_getMicroscope:
+        options:
+          INPUT1:
+            '1': citronsaft
+            '3': bakpulver
+            '5': både
       DansBlocks_setForegroundEffect2:
         options:
           EFFECT:
@@ -993,6 +1001,33 @@ sv:
             '"hearts"': hjärtan
             '"rain"': regn
             '"starburst"': Stjärnfall
+      DansBlocks_setMicroscope:
+        text: Ställ in mikroskop på {INPUT1}
+        options:
+          INPUT1:
+            '1': citronsaft
+            '3': bakpulver
+            '5': både
+      DansBlocks_testRectangle:
+        text: 'gör rektangel x: {X} y: {Y} b: {W} h: {H} färg: {COLOR}'
+      FunctionBlocks_addEightBlock:
+        text: läggTillÅtta
+      FunctionBlocks_addFiveBlock:
+        text: läggTillFem
+      FunctionBlocks_addFourBlock:
+        text: läggTillFyra
+      FunctionBlocks_addNineBlock:
+        text: läggTillNio
+      FunctionBlocks_addOneBlock:
+        text: läggTillEtt
+      FunctionBlocks_addSevenBlock:
+        text: läggTillSju
+      FunctionBlocks_addSixBlock:
+        text: läggTillSex
+      FunctionBlocks_addThreeBlock:
+        text: läggTillTre
+      FunctionBlocks_addTwoBlock:
+        text: läggTillTvå
       gamelab_addBehaviorSimple:
         text: sprite {SPRITE} börjar {BEHAVIOR}
       gamelab_addTarget:
@@ -1308,8 +1343,18 @@ sv:
             "'sound://category_digital/jump_7.mp3'": hoppa
       gamelab_playSoundOptionsSoccer:
         text: spelljud {SOUND}
+        options:
+          SOUND:
+            "'sound://category_sports/Crowd_Applause_SFX.mp3'": applåder
+            "'sound://category_sports/Crowd_Chant_SFX.mp3'": sång
+            "'sound://category_sports/Crowd_Cheer_SFX.mp3'": jubel
+            "'sound://category_sports/Double_Whistle_SFX.mp3'": två visselpipor
       gamelab_playSoundOptionsSpace:
         text: spelljud {SOUND}
+        options:
+          SOUND:
+            "'sound://category_space/Blackhole_SFX.mp3'": svart hål
+            "'sound://category_space/Galactic_center_SFX.mp3'": galaktiskt centrum
       gamelab_playSpeech:
         text: spela tal {SOUND}
       gamelab_playerBehaviors:
@@ -1867,6 +1912,19 @@ sv:
         text: x koordinat {SPRITE}
       Mikelab_yLocationOf:
         text: y koordinat {SPRITE}
+      ParticlesBlocks_getMicroscope:
+        options:
+          INPUT1:
+            '1': citronsaft
+            '3': bakpulver
+            '5': både
+      ParticlesBlocks_setMicroscope:
+        text: Ställ in mikroskop på {INPUT1}
+        options:
+          INPUT1:
+            '1': citronsaft
+            '3': bakpulver
+            '5': både
       Poetry_addFrame:
         options:
           BRUSH:
@@ -1935,6 +1993,10 @@ sv:
             '"sound://category_achievements/peaceful_win_6.mp3"': Vindspel
       Poetry_playSoundOptionsSpace:
         text: spelljud {SOUND}
+        options:
+          SOUND:
+            "'sound://category_space/Blackhole_SFX.mp3'": svart hål
+            "'sound://category_space/Galactic_center_SFX.mp3'": galaktiskt centrum
       Poetry_setBackground:
         text: ange bakgrundsfärg {COLOR}
       Poetry_setBackgroundEffect:

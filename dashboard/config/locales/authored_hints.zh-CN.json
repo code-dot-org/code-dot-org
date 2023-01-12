@@ -12006,18 +12006,22 @@
           "courseD_artist_nestedLoops4_c": "使用嵌套循环来画4 次圆圈。"
         },
         "courseD_artist_nestedLoops52022": {
-          "courseD_artist_nestedLoops5_b": "要做一个圆圈, 你需要设置一个重复循环重复360次。在循环中, 向前移动1像素, 然后转1度。"
+          "courseD_artist_nestedLoops5_b": "要做一个圆圈, 你需要设置一个重复循环重复360次。在循环中, 向前移动1像素, 然后转1度。",
+          "courseD_artist_nestedLoops5_a": "要轻松做到这一点：\n\n-重复 4 次\n  -画一个圆圈\n  -向前跳 50 像素\n  -向右转 90 度"
         },
         "courseD_artist_nestedLoops72022": {
-          "courseD_artist_nestedLoops7_a": "你需要在这里使用嵌套循环。首先，使用循环来画一个正方形。如果内循环画一个正方形那么外循环将做什么？"
+          "courseD_artist_nestedLoops7_a": "你需要在这里使用嵌套循环。首先，使用循环来画一个正方形。如果内循环画一个正方形那么外循环将做什么？",
+          "courseD_artist_nestedLoops7_b": "使用嵌套循环，其中内部循环是画正方形的代码。\n\n-重复 6 次\n  -画正方形\n  -向前跳动 **50 像素**\n  -转 **60 度**"
         },
         "courseD_artist_nestedLoops82022": {
           "courseD_artist_nestedLoops8_a": "要画出8个六边形，你需要在每个图形之间转 **45 度**。为什么？因为360度（一整圈）除以 8（六边形的数量）是45度。",
-          "courseD_artist_nestedLoops8_b": "如果你被难住了，先看上一个关卡, 然后改变那些不一样的东西。"
+          "courseD_artist_nestedLoops8_b": "如果你被难住了，先看上一个关卡, 然后改变那些不一样的东西。",
+          "courseD_artist_nestedLoops8_c": "使用嵌套循环：\n\n  -重复 8 次\n    -画一个六边形\n    -向前跳 50 像素\n    -向右转 45 度"
         },
         "courseD_artist_nestedLoops92022": {
           "courseD_artist_nestedLoops9_a": "从之前用过嵌套循环来开始，但这次用正方形。",
-          "courseD_artist_nestedLoops9_b": "将第二组嵌套循环添加到第一组的末尾, 但这一次使用三角形。"
+          "courseD_artist_nestedLoops9_b": "将第二组嵌套循环添加到第一组的末尾, 但这一次使用三角形。",
+          "courseD_artist_nestedLoops9_c": "使用两个嵌套循环：\n  -重复 8 次\n    -画一个正方形\n    -向前跳 50 像素\n    -向右转 45 度\n  -重复 8 次\n    -画一个三角形\n    -向前跳 50 像素\n    -向右转 45 度"
         },
         "courseD_artist_nestedLoopsFP2022": {
           "courseD_artist_nestedLoopsFP_a": "<img src=\"https://images.code.org/9257cbf61f238f5a749a949059731934-image-1478732674615.02.25.png\" width=\"200px\"/>\n\n此图片是一个嵌套循环，它重复画了六边形（边长50像素）15次，每次转向48度。",

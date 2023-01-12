@@ -2575,8 +2575,6 @@ nn:
               display_name: Prosjekt
         csp5-2023:
           lesson_groups:
-            csp_lists:
-              display_name: Lister
             csp_loops:
               display_name: Løkker
             csp_traversals:
@@ -2587,8 +2585,16 @@ nn:
               display_name: Undersøking etter kurs
         csp6-2023:
           lesson_groups:
+            csp_unit6_2020:
+              display_name: Lister
             lessonGroup-2:
               display_name: Undersøking etter kurs
+            lessonGroup-3:
+              display_name: Løkker
+            lessonGroup-4:
+              display_name: Traversaler
+            lessonGroup-5:
+              display_name: Prosjekt
         csp7-2023:
           lesson_groups:
             csp_parameters_return_values:

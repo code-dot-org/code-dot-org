@@ -150,10 +150,10 @@ Feature: Professional learning Sections
     Then I create a teacher named "Teacher"
     And I sign in as "Teacher" and go home
 
-    And I wait until element "div.ui-test-join-section" is visible
-    And I scroll the "div.ui-test-join-section" element into view
+    And I wait until element "button.ui-test-join-section" is visible
+    And I scroll the "button.ui-test-join-section" element into view
     And I enter the section code into "input.ui-test-join-section"
-    And I click selector "div.ui-test-join-section"
+    And I click selector "button.ui-test-join-section"
     Then the professional learning joined sections table should have 1 row
 
   Scenario: Teacher tries to join professional learning section for facilitators
@@ -165,10 +165,10 @@ Feature: Professional learning Sections
     Then I create a teacher named "Teacher"
     And I sign in as "Teacher" and go home
 
-    And I wait until element "div.ui-test-join-section" is visible
-    And I scroll the "div.ui-test-join-section" element into view
+    And I wait until element "button.ui-test-join-section" is visible
+    And I scroll the "button.ui-test-join-section" element into view
     And I enter the section code into "input.ui-test-join-section"
-    And I click selector "div.ui-test-join-section"
+    And I click selector "button.ui-test-join-section"
     Then I wait until element ".announcement-notification" is visible
     And element ".announcement-notification" contains text matching "You do not have the permissions to join section"
 
@@ -183,10 +183,10 @@ Feature: Professional learning Sections
     And I get facilitator access
     And I reload the page
 
-    And I wait until element "div.ui-test-join-section" is visible
-    And I scroll the "div.ui-test-join-section" element into view
+    And I wait until element "button.ui-test-join-section" is visible
+    And I scroll the "button.ui-test-join-section" element into view
     And I enter the section code into "input.ui-test-join-section"
-    And I click selector "div.ui-test-join-section"
+    And I click selector "button.ui-test-join-section"
     Then the professional learning joined sections table should have 1 row
 
   Scenario: Facilitator tries to join professional learning section for facilitators
@@ -200,10 +200,10 @@ Feature: Professional learning Sections
     And I get facilitator access
     And I reload the page
 
-    And I wait until element "div.ui-test-join-section" is visible
-    And I scroll the "div.ui-test-join-section" element into view
+    And I wait until element "button.ui-test-join-section" is visible
+    And I scroll the "button.ui-test-join-section" element into view
     And I enter the section code into "input.ui-test-join-section"
-    And I click selector "div.ui-test-join-section"
+    And I click selector "button.ui-test-join-section"
     Then the professional learning joined sections table should have 1 row
 
   Scenario: Universal Instructor tries to join professional learning section for teachers
@@ -217,10 +217,10 @@ Feature: Professional learning Sections
     And I get universal instructor access
     And I reload the page
 
-    And I wait until element "div.ui-test-join-section" is visible
-    And I scroll the "div.ui-test-join-section" element into view
+    And I wait until element "button.ui-test-join-section" is visible
+    And I scroll the "button.ui-test-join-section" element into view
     And I enter the section code into "input.ui-test-join-section"
-    And I click selector "div.ui-test-join-section"
+    And I click selector "button.ui-test-join-section"
     Then the professional learning joined sections table should have 1 row
 
   Scenario: Universal Instructor tries to join professional learning section for facilitators
@@ -234,8 +234,8 @@ Feature: Professional learning Sections
     And I get universal instructor access
     And I reload the page
 
-    And I wait until element "div.ui-test-join-section" is visible
-    And I scroll the "div.ui-test-join-section" element into view
+    And I wait until element "button.ui-test-join-section" is visible
+    And I scroll the "button.ui-test-join-section" element into view
     And I enter the section code into "input.ui-test-join-section"
-    And I click selector "div.ui-test-join-section"
+    And I click selector "button.ui-test-join-section"
     Then the professional learning joined sections table should have 1 row

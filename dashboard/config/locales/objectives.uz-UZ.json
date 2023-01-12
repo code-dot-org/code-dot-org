@@ -347,11 +347,35 @@
         "bbd1a283-a817-4fd2-9335-651b698f63d2": {
           "description": "Vaqt cheklanganligi yoki xatoliklar kabi to‘siqlarni yengib o‘tish."
         },
+        "afa30921-d88a-4d96-a8d1-94de6acad10d": {
+          "description": "Qanday turdagi bayonotlarni onlayn aytish to'g'ri va qaysi biri yo'qligini aniqlang."
+        },
+        "14b788f7-6566-40f5-8b91-a8c86d6d3afa": {
+          "description": "Dizayn jarayonida foydalanuvchining ahamiyatini tasvirlab bering."
+        },
+        "6cea05e6-2733-4d09-be8f-1c02c646cb85": {
+          "description": "Ishlayotgan kompyuter dasturida spritlarni aniqlang."
+        },
         "7b9c0f1d-efa4-4397-8334-d392bb962fb7": {
           "description": "Vaqt o‘tgan voqealarga javob beradigan dasturlarni ishlab chiqish."
         },
         "8fac9b1a-450f-4d68-aa87-d7b8e1bbe873": {
           "description": "foydalanuvchi ma'lumotlariga javob beradigan dasturlarni ishlab chiqish."
+        },
+        "04ae0169-fb41-46fb-bc74-dc22c70707f7": {
+          "description": "Dasturda \"Ishga tushirish\" tugmasini bosganimizda o'zgaruvchining qanday aniqlanishi, saqlanishi va olinishi o'rtasidagi munosabatni aniqlang."
+        },
+        "8805bb75-452c-4778-9cd2-6df020a13216": {
+          "description": "O'zgaruvchini e'lon qilish"
+        },
+        "cc733f62-1646-49dc-b2b4-8b47a7c36fca": {
+          "description": "Dasturda o'zgaruvchini bir necha marta chaqirish."
+        },
+        "d059371b-b3f0-40cb-915a-586645b2f109": {
+          "description": "O'zgaruvchiga qiymat bering"
+        },
+        "4d88e11e-77b5-4060-ab3d-2f2ae6cfa8ea": {
+          "description": "O'zgaruvchilardan takliflar bilan birgalikda foydalaning."
         },
         "b155264b-806c-417e-bd5f-2fd91b6093ec": {
           "description": "So‘z va iboralarni saqlash uchun o‘zgaruvchilardan foydalaning."
@@ -359,11 +383,17 @@
         "72c8cd33-c097-48d6-9178-3b146fdc243a": {
           "description": "So‘z va iboralarni saqlash uchun o‘zgaruvchilardan foydalaning."
         },
+        "fc312ef1-6ea0-41a5-b112-b4e478cef7d3": {
+          "description": "Sprite Lab dasturlarini yarating, bu erda spritlar guruhlarda yaratiladi va voqealar yordamida alohida nazorat qilinadi."
+        },
         "29d1cbbf-aba5-45c8-ab1f-fc1ed266bb1b": {
           "description": "Sprite Lab-da ball to'plash uchun spritlarni olib tashlash mumkin bo'lgan klik o'yinini yarating"
         },
         "9da7b378-c4e9-4184-b58a-61dfdad47357": {
           "description": "Ma'lumotni saqlaydigan va vaqt o'tishi bilan o'zgarib turadigan o'zgaruvchi yarating"
+        },
+        "ac5f0f5b-6aa9-4732-930d-08d96a451b99": {
+          "description": "Sprite Lab-da o'yinchining ballini kuzatish uchun alohida boshqariladigan bir nechta spritlar va o'zgaruvchilar yordamida o'z kollektor o'yinlarini yarating."
         },
         "8a99a9c0-2079-4c7e-a39c-188f940fcfe2": {
           "description": "Sun'iy intellektni boshqarish hayotida o‘ynaydigan rolni ko‘rib chiqing."
@@ -825,7 +855,7 @@
           "description": "Ketma-ketliklar va hodisa-ishlovchilar yordamida animatsion, interaktiv hikoya yarating."
         },
         "9ffae8f4-4880-42db-ba40-b4379c1a5f6c": {
-          "description": "Talabalar kompyuter laboratoriyasiga o‘tishda nimani kutishlarini bilib oling."
+          "description": "Talabalar ni kompyuter laboratoriyasi da  nima kutilishini bilib oling."
         },
         "d386bcb1-393c-46bc-8524-7380583d6ebb": {
           "description": "Kompyuter sichqonchasi, trekpad yoki sensorli ekranga tegishli terminologiyadan foydalaning."
@@ -834,7 +864,7 @@
           "description": "Algoritmni dasturga tarjima qilish"
         },
         "4d08a4a4-7475-4257-a955-62768629b65e": {
-          "description": "Ketma-ket ko‘rsatmalardagi xato yoki xatolarni aniqlang va ularga murojaat qiling"
+          "description": "Ketma-ket ko‘rsatmalardagi xato va muammolarni aniqlang va ularga murojaat qiling"
         },
         "f28907e3-caa2-4cfa-bd01-39282b5f5f8d": {
           "description": "Dekodlash va boshqa birov tomonidan yaratilgan dasturni ishga tushirish"
@@ -907,6 +937,9 @@
         },
         "12be98ac-b495-4379-94d1-6cdd7395776a": {
           "description": "Vaqt cheklanganligi yoki xatoliklar kabi to‘siqlarni yengib o‘tish."
+        },
+        "6619f367-009a-49ca-9d78-582a2ff9ad5e": {
+          "description": "Kompyuter fanlari tushunchalarini ochiq loyihada qo'llang."
         },
         "87841dc9-5cfa-4c68-9c56-9ca76b2668f8": {
           "description": "Ko‘rsatmalar yaratishda aniqlikka rioya qiling"

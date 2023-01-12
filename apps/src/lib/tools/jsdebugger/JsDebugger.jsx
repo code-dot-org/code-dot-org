@@ -477,6 +477,9 @@ class JsDebugger extends React.Component {
               !hasFocus && styles.chevronButtonUnfocused
             )}
             onClick={this.slideToggle}
+            aria-label={i18n.debugArea()}
+            aria-expanded={this.state.open}
+            aria-controls="debug-area"
           >
             <FontAwesome
               icon={
@@ -540,6 +543,9 @@ class JsDebugger extends React.Component {
                   }
                   this.setState({watchersHidden: !this.state.watchersHidden});
                 }}
+                aria-label={i18n.debugWatchHeader()}
+                aria-expanded={!this.state.watchersHidden}
+                aria-controls="debug-watch"
               >
                 <FontAwesome
                   id="hide-watcher"

@@ -152,7 +152,7 @@ Kjo është arsyeja pse secili nga [X numër] nxënësit në [EMRI I SHKOLLES] p
 
 Po ju shkruaj për t'iu ftuar të bëheni pjesë e takimit lançues si dhe të ndiqni fëmijët teksa marrin pjesë në aktivitetin tonë më [DATE].
 
-Ora e Kodimit, e organizuar nga organizata jofitimprurëse Code.org dhe me më shumë se 100 organizata të tjera, është dëshmi se gjenerata e sotme e nxënësve janë gati t'i mësojnë aftësitë kryesore për suksesin e shekullit 21. Të lutem bashkohu edhe ti.
+Ora e Kodit, e organizuar nga organizata jofitimprurëse Code.org dhe me më shumë se 100 organizata të tjera, është dëshmi se gjenerata e sotme e nxënësve janë gati t'i mësojnë aftësitë kryesore për suksesin e shekullit 21. Të lutem bashkohu edhe ti.
 
 Kontakti: (EMRI YT), (TITLE), Cell: (212) 555-5555 Kur: [data dhe koha e eventit) Ku: [Adresa dhe direksionet]
 

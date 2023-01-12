@@ -585,6 +585,7 @@ describe('entry tests', () => {
     'lessons/student_lesson_plan':
       './src/sites/studio/pages/lessons/student_lesson_plan.js',
     'musiclab/index': './src/sites/studio/pages/musiclab/index.js',
+    'musiclab/menu': './src/sites/studio/pages/musiclab/menu.js',
     'print_certificates/batch':
       './src/sites/studio/pages/print_certificates/batch.js',
     'programming_classes/show':
@@ -795,8 +796,6 @@ describe('entry tests', () => {
   var professionalDevelopmentEntries = {
     'code.org/public/learn/local':
       './src/sites/code.org/pages/public/learn/local.js',
-    'code.org/views/professional_learning_apply_banner':
-      './src/sites/code.org/pages/views/professional_learning_apply_banner.js',
 
     'pd/_jotform_loader': './src/sites/studio/pages/pd/_jotform_loader.js',
     'pd/_jotform_embed': './src/sites/studio/pages/pd/_jotform_embed.js',

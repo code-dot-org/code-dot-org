@@ -1432,6 +1432,12 @@ sq:
         csp5-2023:
           lesson_groups:
             csp_lists:
-              display_name: Listat
+              display_name: të dhëna
             csp_loops:
+              display_name: cikle
+        csp6-2023:
+          lesson_groups:
+            csp_unit6_2020:
+              display_name: Listat
+            lessonGroup-3:
               display_name: cikle

@@ -54,8 +54,8 @@ class Services::CSTAEnrollment
         "submission[17_state]" => get_us_state_abbr(state, true),
         "submission[17_zip]" => zip,
         "submission[19]" => "Yes, I provide my consent.",
-        "submission[20]" => professional_role,
-        "submission[21]" => grades_teaching
+        "submission[25]" => professional_role,
+        "submission[22]" => grades_teaching
       }
     )
 

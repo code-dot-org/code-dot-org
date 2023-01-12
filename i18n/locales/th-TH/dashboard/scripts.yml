@@ -2239,10 +2239,18 @@ th:
         csp5-2023:
           lesson_groups:
             csp_lists:
-              display_name: รายการ
+              display_name: ข้อมูล
             csp_loops:
               display_name: ลูป
             csp_project:
+              display_name: โปรเจกต์
+        csp6-2023:
+          lesson_groups:
+            csp_unit6_2020:
+              display_name: รายการ
+            lessonGroup-3:
+              display_name: ลูป
+            lessonGroup-5:
               display_name: โปรเจกต์
         csp-playground:
           description_audience: ผู้เขียนหลักสูตร

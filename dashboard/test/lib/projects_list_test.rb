@@ -300,7 +300,7 @@ class ProjectsListTest < ActionController::TestCase
         storage_id: @storage_id,
         id: 1,
         project_type: 'applab',
-        value: {'libraryName': applab_lib_name, 'libraryDescription': description, 'hidden': true}.to_json,
+        value: {libraryName: applab_lib_name, libraryDescription: description, hidden: true}.to_json,
         state: 'active'
       },
       {
@@ -310,7 +310,7 @@ class ProjectsListTest < ActionController::TestCase
         storage_id: @storage_id,
         id: 2,
         project_type: 'gamelab',
-        value: {'libraryName': gamelab_lib_name, 'libraryDescription': description}.to_json,
+        value: {libraryName: gamelab_lib_name, libraryDescription: description}.to_json,
         state: 'active'
       }
     ]
@@ -349,7 +349,7 @@ class ProjectsListTest < ActionController::TestCase
         storage_id: @storage_id,
         id: 1,
         project_type: 'applab',
-        value: {'libraryName': applab_lib_name, 'libraryDescription': description}.to_json,
+        value: {libraryName: applab_lib_name, libraryDescription: description}.to_json,
         state: 'active'
       }
     ]
@@ -386,7 +386,7 @@ class ProjectsListTest < ActionController::TestCase
         storage_id: @storage_id,
         id: 3,
         project_type: 'applab',
-        value: {'libraryName': shared_lib_name, 'libraryDescription': description, 'sharedWith': [321]}.to_json,
+        value: {libraryName: shared_lib_name, libraryDescription: description, sharedWith: [321]}.to_json,
         state: 'active'
       },
       {
@@ -396,7 +396,7 @@ class ProjectsListTest < ActionController::TestCase
         storage_id: @storage_id,
         id: 4,
         project_type: 'applab',
-        value: {'libraryName': unshared_lib_name, 'libraryDescription': description}.to_json,
+        value: {libraryName: unshared_lib_name, libraryDescription: description}.to_json,
         state: 'active'
       }
     ]
@@ -429,11 +429,11 @@ class ProjectsListTest < ActionController::TestCase
     stub_projects = [
       {
         id: 1,
-        value: {'latestLibraryVersion': '2'}.to_json
+        value: {latestLibraryVersion: '2'}.to_json
       },
       {
         id: 2,
-        value: {'latestLibraryVersion': '1'}.to_json
+        value: {latestLibraryVersion: '1'}.to_json
       },
       {
         id: 3,

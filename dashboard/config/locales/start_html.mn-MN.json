@@ -1,0 +1,1294 @@
+{
+  "mn-MN": {
+    "data": {
+      "start_html": {
+        "CSD U1 IO Pet Chooser 2_2021": {
+          "Yes": "Тийм",
+          "No": "Үгүй"
+        },
+        "CSD U1 IO Pet Chooser 2_2022": {
+          "Yes": "Тийм",
+          "No": "Үгүй"
+        },
+        "CSD U1 IO Pet Chooser_2021": {
+          "Yes": "Тийм",
+          "No": "Үгүй"
+        },
+        "CSD U1 IO Pet Chooser_2022": {
+          "Yes": "Тийм",
+          "No": "Үгүй"
+        },
+        "CSD U1 IO Story_2021": {
+          "Name": "Нэр",
+          "Color": "Өнгө",
+          "City": "Хот",
+          "text": "текст"
+        },
+        "CSD U1 IO Story_2022": {
+          "Name": "Нэр",
+          "Color": "Өнгө",
+          "City": "Хот",
+          "text": "текст"
+        },
+        "CSD U1 processing bday_2021": {
+          "1": "1",
+          "2": "2",
+          "3": "3",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9",
+          "10": "10",
+          "11": "11",
+          "12": "12",
+          "13": "13",
+          "14": "14",
+          "15": "15",
+          "16": "16",
+          "17": "17",
+          "18": "18",
+          "19": "19",
+          "20": "20"
+        },
+        "CSD U1 processing bday_2022": {
+          "1": "1",
+          "2": "2",
+          "3": "3",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9",
+          "10": "10",
+          "11": "11",
+          "12": "12",
+          "13": "13",
+          "14": "14",
+          "15": "15",
+          "16": "16",
+          "17": "17",
+          "18": "18",
+          "19": "19",
+          "20": "20"
+        },
+        "CSD U1 processing fastest_2021": {
+          "s": "s",
+          "k": "k",
+          "0": "0"
+        },
+        "CSD U1 processing fastest_2022": {
+          "s": "s",
+          "k": "k",
+          "0": "0"
+        },
+        "CSD U1 processing guess_2021": {
+          "1": "1",
+          "2": "2",
+          "3": "3",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9",
+          "10": "10",
+          "11": "11",
+          "12": "12",
+          "13": "13",
+          "14": "14",
+          "15": "15",
+          "16": "16",
+          "17": "17",
+          "18": "18",
+          "19": "19",
+          "20": "20",
+          "text": "текст"
+        },
+        "CSD U1 processing guess_2022": {
+          "1": "1",
+          "2": "2",
+          "3": "3",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9",
+          "10": "10",
+          "11": "11",
+          "12": "12",
+          "13": "13",
+          "14": "14",
+          "15": "15",
+          "16": "16",
+          "17": "17",
+          "18": "18",
+          "19": "19",
+          "20": "20",
+          "text": "текст"
+        },
+        "CSD U1 processing live_2021": {
+          "bear": "баавгай"
+        },
+        "CSD U1 processing live_2022": {
+          "bear": "баавгай"
+        },
+        "CSD U1 processing npark_2021": {
+          "Correct!": "Зөв!",
+          "Sorry!": "Уучлаарай!"
+        },
+        "CSD U1 processing npark_2022": {
+          "Correct!": "Зөв!",
+          "Sorry!": "Уучлаарай!"
+        },
+        "CSD U1 processing writers_2021": {
+          "1": "1",
+          "2": "2",
+          "3": "3",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9",
+          "10": "10",
+          "11": "11",
+          "12": "12",
+          "13": "13",
+          "14": "14",
+          "15": "15",
+          "16": "16",
+          "17": "17",
+          "18": "18",
+          "19": "19",
+          "20": "20"
+        },
+        "CSD U1 processing writers_2022": {
+          "1": "1",
+          "2": "2",
+          "3": "3",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9",
+          "10": "10",
+          "11": "11",
+          "12": "12",
+          "13": "13",
+          "14": "14",
+          "15": "15",
+          "16": "16",
+          "17": "17",
+          "18": "18",
+          "19": "19",
+          "20": "20"
+        },
+        "CSD U1 storage friends_2021": {
+          "Back": "Буцах"
+        },
+        "CSD U1 storage friends_2022": {
+          "Back": "Буцах"
+        },
+        "CSD U1 storage movies_2021": {
+          "Star Wars": "Оддын дайн",
+          "Yes": "Тийм",
+          "No": "Үгүй",
+          "text": "текст"
+        },
+        "CSD U1 storage movies_2022": {
+          "Star Wars": "Оддын дайн",
+          "Yes": "Тийм",
+          "No": "Үгүй",
+          "text": "текст"
+        },
+        "CSD U1 storage outfit_2021": {
+          "green": "ногоон",
+          "black": "хар"
+        },
+        "CSD U1 storage outfit_2022": {
+          "green": "ногоон",
+          "black": "хар"
+        },
+        "CSD U2 RGB intro": {
+          "1": "1",
+          "2": "2",
+          "3": "3",
+          "4": "4",
+          "5": "5"
+        },
+        "CSD U2 RGB intro_2018": {
+          "1": "1",
+          "2": "2",
+          "3": "3",
+          "4": "4",
+          "5": "5"
+        },
+        "CSD U2 RGB intro_2019": {
+          "1": "1",
+          "2": "2",
+          "3": "3",
+          "4": "4",
+          "5": "5"
+        },
+        "CSD U2 RGB intro_2021": {
+          "1": "1",
+          "2": "2",
+          "3": "3",
+          "4": "4",
+          "5": "5"
+        },
+        "CSD U2 RGB intro_2022": {
+          "1": "1",
+          "2": "2",
+          "3": "3",
+          "4": "4",
+          "5": "5"
+        },
+        "CSD U6 - Accelerometer - PB_2222": {
+          "0": "0"
+        },
+        "CSD U6 - Accelerometer - PD_2222": {
+          "You did it!": "Та үүнийг хийлээ!"
+        },
+        "CSD U6 - Accelerometer - PF_2222": {
+          "0": "0"
+        },
+        "CSD U6 - Board Inputs - SB1_2222": {
+          "Success!": "Амжилт!"
+        },
+        "CSD U6 - Board Inputs - SB2_2222": {
+          "Success!": "Амжилт!"
+        },
+        "CSD U6 - Board Inputs - SB3_2222": {
+          "Success!": "Амжилт!"
+        },
+        "CSD U6 - Board Outputs - P_2222": {
+          "Success!": "Амжилт!"
+        },
+        "CSD U6 - Board Outputs - SB1_2222": {
+          "Success!": "Амжилт!"
+        },
+        "CSD U6 - Board Outputs - SB2_2222": {
+          "Success!": "Амжилт!"
+        },
+        "CSD U6 - Board Outputs - Setup_2222": {
+          "Success!": "Амжилт!"
+        },
+        "CSD U6 - Color LEDs - ChalD_2222": {
+          "North": "Хойд",
+          "South": "Өмнөд",
+          "East": "Дорнод",
+          "West": "Өрнөд"
+        },
+        "CSD U6 - Color LEDs - PracA_2222": {
+          "Success!": "Амжилт!"
+        },
+        "CSD U6 - Color LEDs - SB2_2222": {
+          "Success!": "Амжилт!"
+        },
+        "CSD U6 - Color LEDs - SB3_2222": {
+          "Success!": "Амжилт!"
+        },
+        "CSD U6 - Color LEDs - SB4_2222": {
+          "Medium": "Дундаж"
+        },
+        "CSD U6 - Combine Inputs - A_2222": {
+          "left": "зүүн",
+          "right": "баруун",
+          "red": "улаан",
+          "green": "ногоон"
+        },
+        "CSD U6 - Combine Inputs - CA_2022": {
+          "on": "асах",
+          "fast": "хурдан",
+          "slow": "удаан",
+          "short": "богино",
+          "long": "урт"
+        },
+        "CSD U6 - Combine Inputs - PracA_2222": {
+          "left": "зүүн",
+          "right": "баруун"
+        },
+        "CSD U6 - Combine Inputs - PracC_2222": {
+          "green": "ногоон",
+          "blue": "цэнхэр"
+        },
+        "CSD U6 - Combine Inputs - PracD_2222": {
+          "Test": "Test"
+        },
+        "CSD U6 - Combine Inputs - SB2_2222": {
+          "short": "богино",
+          "long": "урт"
+        },
+        "CSD U6 - Combine Inputs - SB3_2222": {
+          "short": "богино",
+          "long": "урт"
+        },
+        "CSD U6 - Combine Inputs - SB4_2222": {
+          "short": "богино",
+          "long": "урт"
+        },
+        "CSD U6 - Functions - P_2222": {
+          "0": "0"
+        },
+        "CSD U6 - Functions - SB7_2222": {
+          "0": "0"
+        },
+        "CSD U6 - If Variables - ChalD_2222": {
+          "0": "0",
+          "+": "+",
+          "-": "-"
+        },
+        "CSD U6 - If Variables - SB3_2222": {
+          "Name": "Нэр"
+        },
+        "CSD U6 - If Variables - SB4_2222": {
+          "0": "0"
+        },
+        "CSD U6 - Music - ChalD_2222": {
+          "A": "A",
+          "B": "B",
+          "C": "C",
+          "D": "D",
+          "E": "З",
+          "F": "F",
+          "G": "G"
+        },
+        "CSD U6 - Music - Piano_2222": {
+          "C": "C",
+          "D": "D",
+          "E": "З",
+          "F": "F",
+          "G": "G",
+          "A": "A",
+          "B": "B"
+        },
+        "CSD U6 - Music - SB1_2222": {
+          "C": "C",
+          "D": "D",
+          "E": "З",
+          "F": "F",
+          "G": "G",
+          "A": "A",
+          "B": "B"
+        },
+        "CSD U6 - Music - SB2.5_2222": {
+          "C": "C",
+          "D": "D",
+          "E": "З",
+          "F": "F",
+          "G": "G",
+          "A": "A",
+          "B": "B"
+        },
+        "CSD U6 - Music - SB3_2222": {
+          "C": "C",
+          "D": "D",
+          "E": "З",
+          "F": "F",
+          "G": "G",
+          "A": "A",
+          "B": "B"
+        },
+        "CSD U6 - Music - SB4_2222": {
+          "Success!": "Амжилт!"
+        },
+        "CSD U6 - Physical Input - A_2222": {
+          "1": "1",
+          "2": "2"
+        },
+        "CSD U6 - Physical Input - ChalA_2222": {
+          "Success!": "Амжилт!"
+        },
+        "CSD U6 - Physical Input - ChalB_2222": {
+          "Success!": "Амжилт!"
+        },
+        "CSD U6 - Physical Input - ChalC_2222": {
+          "Success!": "Амжилт!"
+        },
+        "CSD U6 - Physical Input - PA_2222": {
+          "Score": "Оноо",
+          "0": "0"
+        },
+        "CSD U6 - Physical Input - PC_2222": {
+          "Success!": "Амжилт!"
+        },
+        "CSD U6 - Physical Input - PD_2222": {
+          "Success!": "Амжилт!"
+        },
+        "CSD U6 - Physical Input - SB1_2222": {
+          "Success!": "Амжилт!"
+        },
+        "CSD U6 - Physical Output - ChalA_2222": {
+          "Success!": "Амжилт!"
+        },
+        "CSD U6 - Physical Output - ChalB_2222": {
+          "Success!": "Амжилт!"
+        },
+        "CSD U6 - Physical Output - ChalC_2222": {
+          "Success!": "Амжилт!"
+        },
+        "CSD U6 - Physical Output - PB_2222": {
+          "Success!": "Амжилт!"
+        },
+        "CSD U6 - Physical Output - PC_2222": {
+          "Success!": "Амжилт!"
+        },
+        "CSD U6 - Physical Output - P_2222": {
+          "Success!": "Амжилт!"
+        },
+        "CSD U6 - Physical Output - SB1_2222": {
+          "Success!": "Амжилт!"
+        },
+        "CSD U6 - Physical Output - SB2.2_2222": {
+          "Success!": "Амжилт!"
+        },
+        "CSD U6 - Physical Output - SB2_2222": {
+          "Success!": "Амжилт!"
+        },
+        "CSD U6 - Screen Inputs - A_2222": {
+          "Name:": "Нэр:"
+        },
+        "CSD U6 - Screen Inputs - P_2222": {
+          "Name:": "Нэр:",
+          "Save": "Хадгалах"
+        },
+        "CSD U6 - Screen Inputs - PracD_2222": {
+          "0": "0"
+        },
+        "CSD U6 - Screen Inputs - SB1_2222": {
+          "Welcome": "Мэндчилгээ"
+        },
+        "CSD U6 - Screen Inputs - SB2.1_2022": {
+          "black": "хар"
+        },
+        "CSD U6 - Screen Inputs - SB2.2_2022": {
+          "black": "хар"
+        },
+        "CSD U6 - Screen Outputs - P_2222": {
+          "title": "гарчиг"
+        },
+        "CSD U6 - Screen Outputs - PracA_2222": {
+          "White": "Цагаан"
+        },
+        "CSD U6 - Screen Outputs - PracB_2222": {
+          "up": "дээшээ",
+          "down": "доошоо",
+          "left": "зүүн",
+          "right": "баруун"
+        },
+        "CSD U6 - Screen Outputs - SB1.1_2222": {
+          "name": "нэр"
+        },
+        "CSD U6 - Sensors - A_2222": {
+          "0": "0"
+        },
+        "CSD U6 - Sensors - PC_2222": {
+          "off": "унтрах",
+          "on": "асах"
+        },
+        "CSD U6 - Sensors - P_2222": {
+          "text": "текст"
+        },
+        "CSD U6 - Sensors - SB2_2222": {
+          "Update": "Шинэчлэх"
+        },
+        "CSD U6 Driver pt 2": {
+          "You did it!": "Та үүнийг хийлээ!"
+        },
+        "CSD U6 Driver pt 2_2018": {
+          "You did it!": "Та үүнийг хийлээ!"
+        },
+        "CSD U6 Driver pt 2_2019": {
+          "You did it!": "Та үүнийг хийлээ!"
+        },
+        "CSD U6 Driver pt 2_2021": {
+          "You did it!": "Та үүнийг хийлээ!"
+        },
+        "CSD U6 Driver pt1": {
+          "You did it!": "Та үүнийг хийлээ!"
+        },
+        "CSD U6 Driver pt1_2018": {
+          "You did it!": "Та үүнийг хийлээ!"
+        },
+        "CSD U6 Driver pt1_2019": {
+          "You did it!": "Та үүнийг хийлээ!"
+        },
+        "CSD U6 Driver pt1_2021": {
+          "You did it!": "Та үүнийг хийлээ!"
+        },
+        "CSD U6 LED all": {
+          "on": "асах"
+        },
+        "CSD U6 LED all_2018": {
+          "on": "асах"
+        },
+        "CSD U6 LED all_2019": {
+          "on": "асах"
+        },
+        "CSD U6 LED all_2021": {
+          "on": "асах"
+        },
+        "CSD U6 LED toggle": {
+          "Success!": "Амжилт!"
+        },
+        "CSD U6 LED toggle_2018": {
+          "Success!": "Амжилт!"
+        },
+        "CSD U6 LED toggle_2019": {
+          "Success!": "Амжилт!"
+        },
+        "CSD U6 LED toggle_2021": {
+          "Success!": "Амжилт!"
+        },
+        "CSD U6 Pedometer": {
+          "0": "0"
+        },
+        "CSD U6 Pedometer_2018": {
+          "0": "0"
+        },
+        "CSD U6 Pedometer_2019": {
+          "0": "0"
+        },
+        "CSD U6 Pedometer_2021": {
+          "0": "0"
+        },
+        "CSD U6 add LED button": {
+          "Success!": "Амжилт!"
+        },
+        "CSD U6 add LED button_2018": {
+          "Success!": "Амжилт!"
+        },
+        "CSD U6 add LED button_2019": {
+          "Success!": "Амжилт!"
+        },
+        "CSD U6 add LED button_2021": {
+          "Success!": "Амжилт!"
+        },
+        "CSD U6 analog light": {
+          "Update": "Шинэчлэх"
+        },
+        "CSD U6 analog light_2018": {
+          "Update": "Шинэчлэх"
+        },
+        "CSD U6 analog light_2019": {
+          "Update": "Шинэчлэх"
+        },
+        "CSD U6 analog light_2021": {
+          "Update": "Шинэчлэх"
+        },
+        "CSD U6 array piano": {
+          "C": "C",
+          "D": "D",
+          "E": "З",
+          "F": "F",
+          "G": "G",
+          "A": "A",
+          "B": "B"
+        },
+        "CSD U6 array piano_2018": {
+          "C": "C",
+          "D": "D",
+          "E": "З",
+          "F": "F",
+          "G": "G",
+          "A": "A",
+          "B": "B"
+        },
+        "CSD U6 array piano_2019": {
+          "C": "C",
+          "D": "D",
+          "E": "З",
+          "F": "F",
+          "G": "G",
+          "A": "A",
+          "B": "B"
+        },
+        "CSD U6 array piano_2021": {
+          "C": "C",
+          "D": "D",
+          "E": "З",
+          "F": "F",
+          "G": "G",
+          "A": "A",
+          "B": "B"
+        },
+        "CSD U6 change": {
+          "short": "богино",
+          "long": "урт"
+        },
+        "CSD U6 change_2018": {
+          "short": "богино",
+          "long": "урт"
+        },
+        "CSD U6 change_2019": {
+          "short": "богино",
+          "long": "урт"
+        },
+        "CSD U6 change_2021": {
+          "short": "богино",
+          "long": "урт"
+        },
+        "CSD U6 colorLeds intensity": {
+          "Medium": "Дундаж"
+        },
+        "CSD U6 colorLeds intensity_2018": {
+          "Medium": "Дундаж"
+        },
+        "CSD U6 colorLeds intensity_2019": {
+          "Medium": "Дундаж"
+        },
+        "CSD U6 colorLeds intensity_2021": {
+          "Medium": "Дундаж"
+        },
+        "CSD U6 frequency": {
+          "short": "богино",
+          "long": "урт"
+        },
+        "CSD U6 frequency_2018": {
+          "short": "богино",
+          "long": "урт"
+        },
+        "CSD U6 frequency_2019": {
+          "short": "богино",
+          "long": "урт"
+        },
+        "CSD U6 frequency_2021": {
+          "short": "богино",
+          "long": "урт"
+        },
+        "CSD U6 get toggle": {
+          "short": "богино",
+          "long": "урт"
+        },
+        "CSD U6 get toggle_2018": {
+          "short": "богино",
+          "long": "урт"
+        },
+        "CSD U6 get toggle_2019": {
+          "short": "богино",
+          "long": "урт"
+        },
+        "CSD U6 get toggle_2021": {
+          "short": "богино",
+          "long": "урт"
+        },
+        "CSD U6 getProperty Demo": {
+          "Name:": "Нэр:",
+          "Save": "Хадгалах"
+        },
+        "CSD U6 getProperty Demo_2018": {
+          "Name:": "Нэр:",
+          "Save": "Хадгалах"
+        },
+        "CSD U6 getProperty Demo_2019": {
+          "Name:": "Нэр:",
+          "Save": "Хадгалах"
+        },
+        "CSD U6 getProperty Demo_2021": {
+          "Name:": "Нэр:",
+          "Save": "Хадгалах"
+        },
+        "CSD U6 getProperty input": {
+          "Submit": "Илгээх"
+        },
+        "CSD U6 getProperty input_2018": {
+          "Submit": "Илгээх"
+        },
+        "CSD U6 getProperty input_2019": {
+          "Submit": "Илгээх"
+        },
+        "CSD U6 getProperty input_2021": {
+          "Submit": "Илгээх"
+        },
+        "CSD U6 getters debug": {
+          "slow": "удаан",
+          "fast": "хурдан",
+          "short": "богино",
+          "long": "урт"
+        },
+        "CSD U6 getters debug_2018": {
+          "fast": "хурдан",
+          "slow": "удаан",
+          "short": "богино",
+          "long": "урт"
+        },
+        "CSD U6 getters debug_2019": {
+          "fast": "хурдан",
+          "slow": "удаан",
+          "short": "богино",
+          "long": "урт"
+        },
+        "CSD U6 getters debug_2021": {
+          "fast": "хурдан",
+          "slow": "удаан",
+          "short": "богино",
+          "long": "урт"
+        },
+        "CSD U6 interval": {
+          "short": "богино",
+          "long": "урт"
+        },
+        "CSD U6 interval_2018": {
+          "short": "богино",
+          "long": "урт"
+        },
+        "CSD U6 interval_2019": {
+          "short": "богино",
+          "long": "урт"
+        },
+        "CSD U6 interval_2021": {
+          "short": "богино",
+          "long": "урт"
+        },
+        "CSD U6 light show": {
+          "on": "асах",
+          "off": "унтрах"
+        },
+        "CSD U6 light show_2018": {
+          "on": "асах",
+          "off": "унтрах"
+        },
+        "CSD U6 light show_2019": {
+          "on": "асах",
+          "off": "унтрах"
+        },
+        "CSD U6 light show_2021": {
+          "on": "асах",
+          "off": "унтрах"
+        },
+        "CSD U6 params starchaser intro": {
+          "0": "0"
+        },
+        "CSD U6 params starchaser intro_2018": {
+          "0": "0"
+        },
+        "CSD U6 params starchaser intro_2019": {
+          "0": "0"
+        },
+        "CSD U6 params starchaser intro_2021": {
+          "0": "0"
+        },
+        "CSD U6 predict LED button": {
+          "Success!": "Амжилт!"
+        },
+        "CSD U6 predict LED button_2018": {
+          "Success!": "Амжилт!"
+        },
+        "CSD U6 predict LED button_2019": {
+          "Success!": "Амжилт!"
+        },
+        "CSD U6 predict LED button_2021": {
+          "Success!": "Амжилт!"
+        },
+        "CSD U6 sensor experiment embedded": {
+          "text": "текст"
+        },
+        "CSD U6 sensor experiment embedded_2018": {
+          "text": "текст"
+        },
+        "CSD U6 sensor experiment embedded_2019": {
+          "text": "текст"
+        },
+        "CSD U6 sensor experiment embedded_2021": {
+          "text": "текст"
+        },
+        "CSD U6 setProperty predict app": {
+          "title": "гарчиг"
+        },
+        "CSD U6 setProperty predict app_2018": {
+          "title": "гарчиг"
+        },
+        "CSD U6 setProperty predict app_2019": {
+          "title": "гарчиг"
+        },
+        "CSD U6 setProperty predict app_2021": {
+          "title": "гарчиг"
+        },
+        "CSD U6 slider intro": {
+          "short": "богино",
+          "long": "урт"
+        },
+        "CSD U6 slider intro_2018": {
+          "short": "богино",
+          "long": "урт"
+        },
+        "CSD U6 slider intro_2019": {
+          "short": "богино",
+          "long": "урт"
+        },
+        "CSD U6 slider intro_2021": {
+          "short": "богино",
+          "long": "урт"
+        },
+        "CSD U6 test LED": {
+          "Success!": "Амжилт!"
+        },
+        "CSD U6 test LED_2018": {
+          "Success!": "Амжилт!"
+        },
+        "CSD U6 test LED_2019": {
+          "Success!": "Амжилт!"
+        },
+        "CSD U6 test LED_2021": {
+          "Success!": "Амжилт!"
+        },
+        "CSDU4 Crowdsource App Demo": {
+          "About": "Тухай",
+          "About Us": "Бидний тухай",
+          "Cancel": "Цуцлах",
+          "Name:": "Нэр:",
+          "Yes": "Тийм",
+          "No": "Үгүй",
+          "Save": "Хадгалах"
+        },
+        "CSDU4 Crowdsource App Demo_2018": {
+          "About": "Тухай",
+          "About Us": "Бидний тухай",
+          "Cancel": "Цуцлах",
+          "Name:": "Нэр:",
+          "Yes": "Тийм",
+          "No": "Үгүй",
+          "Save": "Хадгалах"
+        },
+        "CSDU4 Crowdsource App Demo_2019": {
+          "About": "Тухай",
+          "About Us": "Бидний тухай",
+          "Cancel": "Цуцлах",
+          "Name:": "Нэр:",
+          "Yes": "Тийм",
+          "No": "Үгүй",
+          "Save": "Хадгалах"
+        },
+        "CSDU4 Decision App Demo": {
+          "About": "Тухай",
+          "I don't know": "Би мэдэхгүй",
+          "When?": "Хэзээ?",
+          "About Us": "Бидний тухай"
+        },
+        "CSDU4 Decision App Demo_2018": {
+          "About": "Тухай",
+          "I don't know": "Би мэдэхгүй",
+          "When?": "Хэзээ?",
+          "About Us": "Бидний тухай"
+        },
+        "CSDU4 Decision App Demo_2019": {
+          "About": "Тухай",
+          "I don't know": "Би мэдэхгүй",
+          "When?": "Хэзээ?",
+          "About Us": "Бидний тухай"
+        },
+        "CSDU4 Functionality visible": {
+          "Hide": "Нуух",
+          "Show": "Үзүүлэх"
+        },
+        "CSDU4 List App Demo": {
+          "About": "Тухай",
+          "About Us": "Бидний тухай",
+          "Done": "Дууссан",
+          "Cancel": "Цуцлах"
+        },
+        "CSDU4 List App Demo_2018": {
+          "About": "Тухай",
+          "About Us": "Бидний тухай",
+          "Done": "Дууссан",
+          "Cancel": "Цуцлах"
+        },
+        "CSDU4 List App Demo_2019": {
+          "About": "Тухай",
+          "About Us": "Бидний тухай",
+          "Done": "Дууссан",
+          "Cancel": "Цуцлах"
+        },
+        "CSDU4 Quiz App Demo": {
+          "About": "Тухай",
+          "Submit": "Илгээх",
+          "When?": "Хэзээ?",
+          "About Us": "Бидний тухай",
+          "Correct!": "Зөв!"
+        },
+        "CSDU4 Quiz App Demo_2018": {
+          "About": "Тухай",
+          "Submit": "Илгээх",
+          "When?": "Хэзээ?",
+          "About Us": "Бидний тухай",
+          "Correct!": "Зөв!"
+        },
+        "CSDU4 Quiz App Demo_2019": {
+          "About": "Тухай",
+          "Submit": "Илгээх",
+          "When?": "Хэзээ?",
+          "About Us": "Бидний тухай",
+          "Correct!": "Зөв!"
+        },
+        "CSDU6 - UI and Inputs - getNumber": {
+          "+": "+",
+          "=": "="
+        },
+        "CSDU6 - UI and Inputs - setScreen": {
+          "Back": "Буцах"
+        },
+        "CSDU6 Circuit Playground Test": {
+          "Success!": "Амжилт!"
+        },
+        "CSDU6 Circuit Playground Test_2018": {
+          "Success!": "Амжилт!"
+        },
+        "CSDU6 Circuit Playground Test_2019": {
+          "Success!": "Амжилт!"
+        },
+        "CSDU6 Circuit Playground Test_2021": {
+          "Success!": "Амжилт!"
+        },
+        "CSDU6 Circuit Playground Test_2222": {
+          "Success!": "Амжилт!"
+        },
+        "CSDU6 circuit playground piano": {
+          "C": "C",
+          "D": "D",
+          "E": "З",
+          "F": "F",
+          "G": "G",
+          "A": "A",
+          "B": "B"
+        },
+        "CSDU6 circuit playground piano_2018": {
+          "C": "C",
+          "D": "D",
+          "E": "З",
+          "F": "F",
+          "G": "G",
+          "A": "A",
+          "B": "B"
+        },
+        "CSDU6 circuit playground piano_2019": {
+          "C": "C",
+          "D": "D",
+          "E": "З",
+          "F": "F",
+          "G": "G",
+          "A": "A",
+          "B": "B"
+        },
+        "CSDU6 circuit playground piano_2021": {
+          "C": "C",
+          "D": "D",
+          "E": "З",
+          "F": "F",
+          "G": "G",
+          "A": "A",
+          "B": "B"
+        },
+        "CSDU6 piano with notes": {
+          "C": "C",
+          "D": "D",
+          "E": "З",
+          "F": "F",
+          "G": "G",
+          "A": "A",
+          "B": "B"
+        },
+        "CSDU6 piano with notes_2018": {
+          "C": "C",
+          "D": "D",
+          "E": "З",
+          "F": "F",
+          "G": "G",
+          "A": "A",
+          "B": "B"
+        },
+        "CSDU6 piano with notes_2019": {
+          "C": "C",
+          "D": "D",
+          "E": "З",
+          "F": "F",
+          "G": "G",
+          "A": "A",
+          "B": "B"
+        },
+        "CSDU6 piano with notes_2021": {
+          "C": "C",
+          "D": "D",
+          "E": "З",
+          "F": "F",
+          "G": "G",
+          "A": "A",
+          "B": "B"
+        },
+        "allthethings design mode elements": {
+          "text": "текст"
+        },
+        "csa widget test2": {
+          "8": "8"
+        },
+        "csd u5 recommender sample": {
+          "Start": "Эхлэх"
+        },
+        "csd u5 recommender sample_2019": {
+          "Start": "Эхлэх"
+        },
+        "csd u5 recommender sample_2021": {
+          "Start": "Эхлэх"
+        },
+        "csd u5 recommender sample_2022": {
+          "Start": "Эхлэх"
+        },
+        "csd-apps for good-2": {
+          "Next": "Дараагийнх",
+          "Home": "Эхлэл хуудас"
+        },
+        "csd-apps for good-2_2022": {
+          "Next": "Дараагийнх",
+          "Home": "Эхлэл хуудас"
+        },
+        "csd-apps for good-3": {
+          "1": "1",
+          "2": "2",
+          "3": "3",
+          "4": "4"
+        },
+        "csd-apps for good-3_2022": {
+          "1": "1",
+          "2": "2",
+          "3": "3",
+          "4": "4"
+        },
+        "csd-explore ui-2": {
+          "Next": "Дараагийнх",
+          "Home": "Эхлэл хуудас"
+        },
+        "csd-explore ui-2_2022": {
+          "Next": "Дараагийнх",
+          "Home": "Эхлэл хуудас"
+        },
+        "csd-explore ui-3": {
+          "1": "1",
+          "2": "2",
+          "3": "3",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9",
+          "10": "10",
+          "11": "11",
+          "12": "12",
+          "13": "13",
+          "14": "14",
+          "15": "15",
+          "16": "16",
+          "17": "17",
+          "18": "18",
+          "19": "19",
+          "20": "20"
+        },
+        "csd-explore ui-3_2022": {
+          "1": "1",
+          "2": "2",
+          "3": "3",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9",
+          "10": "10",
+          "11": "11",
+          "12": "12",
+          "13": "13",
+          "14": "14",
+          "15": "15",
+          "16": "16",
+          "17": "17",
+          "18": "18",
+          "19": "19",
+          "20": "20"
+        },
+        "csd-explore ui-4": {
+          "Correct!": "Зөв!",
+          "Sorry!": "Уучлаарай!"
+        },
+        "csd-explore ui-4_2022": {
+          "Correct!": "Зөв!",
+          "Sorry!": "Уучлаарай!"
+        },
+        "csd-explore ui-5": {
+          "1": "1",
+          "2": "2",
+          "3": "3",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9",
+          "10": "10",
+          "11": "11",
+          "12": "12",
+          "13": "13",
+          "14": "14",
+          "15": "15",
+          "16": "16",
+          "17": "17",
+          "18": "18",
+          "19": "19",
+          "20": "20"
+        },
+        "csd-explore ui-5_2022": {
+          "1": "1",
+          "2": "2",
+          "3": "3",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9",
+          "10": "10",
+          "11": "11",
+          "12": "12",
+          "13": "13",
+          "14": "14",
+          "15": "15",
+          "16": "16",
+          "17": "17",
+          "18": "18",
+          "19": "19",
+          "20": "20"
+        },
+        "csd-explore ui-6": {
+          "Next": "Дараагийнх"
+        },
+        "csd-explore ui-6_2022": {
+          "Next": "Дараагийнх"
+        },
+        "ml-L2 supervised - green glass door-2021": {
+          "Accepted": "Зөвшөөрсөн",
+          "Rejected": "Татгалзсан"
+        },
+        "ml-L2 supervised - green glass door_2022": {
+          "Accepted": "Зөвшөөрсөн",
+          "Rejected": "Татгалзсан"
+        },
+        "ml-L2 unsupervised - 1-2021": {
+          "Next": "Дараагийнх"
+        },
+        "ml-L2 unsupervised - 1_2022": {
+          "Next": "Дараагийнх"
+        },
+        "ml-customize-raspado-2021": {
+          "yes": "тийм",
+          "no": "үгүй"
+        },
+        "ml-customize-raspado_2022": {
+          "yes": "тийм",
+          "no": "үгүй"
+        },
+        "ml-intro ai lab- fruit veggie widget": {
+          "Continue": "Үргэлжлүүлэх",
+          "Loading...": "Ачааллаж байна..."
+        },
+        "ml-intro ai lab- fruit veggie widget_2022": {
+          "Continue": "Үргэлжлүүлэх",
+          "Loading...": "Ачааллаж байна..."
+        },
+        "ml-model card-medical app v2 2021-2": {
+          "W": "Б",
+          "A": "A",
+          "yes": "тийм",
+          "no": "үгүй"
+        },
+        "ml-model card-medical app v2 2021-2_2022": {
+          "W": "Б",
+          "A": "A",
+          "yes": "тийм",
+          "no": "үгүй"
+        },
+        "ml-models in applab-choice if quotes": {
+          "3": "3",
+          "2": "2",
+          "1": "1"
+        },
+        "ml-models in applab-choice if quotes_2022": {
+          "3": "3",
+          "2": "2",
+          "1": "1"
+        },
+        "ml-models in applab-choice if wrong place": {
+          "3": "3",
+          "2": "2",
+          "1": "1"
+        },
+        "ml-models in applab-choice if wrong place_2022": {
+          "3": "3",
+          "2": "2",
+          "1": "1"
+        },
+        "ml-models in applab-choice intended warnings": {
+          "3": "3",
+          "2": "2",
+          "1": "1",
+          "Back": "Буцах"
+        },
+        "ml-models in applab-choice intended warnings_2022": {
+          "3": "3",
+          "2": "2",
+          "1": "1",
+          "Back": "Буцах"
+        },
+        "ml-models in applab-choice predict typos": {
+          "3": "3",
+          "2": "2",
+          "1": "1"
+        },
+        "ml-models in applab-choice predict typos_2022": {
+          "3": "3",
+          "2": "2",
+          "1": "1"
+        },
+        "ml-models in applab-zoo assessment": {
+          "Yes": "Тийм",
+          "No": "Үгүй",
+          "B": "B"
+        },
+        "ml-models in applab-zoo assessment_2022": {
+          "Yes": "Тийм",
+          "No": "Үгүй",
+          "B": "B"
+        },
+        "ml-models in applab-zoo model embed": {
+          "Yes": "Тийм",
+          "No": "Үгүй"
+        },
+        "ml-models in applab-zoo model embed_2022": {
+          "Yes": "Тийм",
+          "No": "Үгүй"
+        },
+        "ml-models-shoes decision tree-2021": {
+          "Sports": "Спортууд"
+        },
+        "ml-models-shoes decision tree_2022": {
+          "Sports": "Спортууд"
+        },
+        "ml-use model card-example3A-2021": {
+          "rain": "бороотой",
+          "snow": "цас",
+          "cloudy": "үүлэрхэг",
+          "night": "шөнө"
+        },
+        "ml-use model card-example3A_2022": {
+          "rain": "бороотой",
+          "snow": "цас",
+          "cloudy": "үүлэрхэг",
+          "night": "шөнө"
+        }
+      }
+    }
+  }
+}

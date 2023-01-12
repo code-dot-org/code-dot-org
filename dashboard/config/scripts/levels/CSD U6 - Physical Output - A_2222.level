@@ -49,8 +49,8 @@
     "expand_debugger": "false",
     "fail_on_lint_errors": "false",
     "debugger_disabled": "false",
-    "makerlab_enabled": "true",
-    "long_instructions": "# Little Alien Friend\r\nRosie is designing a children's toy to look like an alien. it has a physical body that uses 2 LEDs as the eye, and you communicate with it via an app. Each button on the app causes the alien to respond in a different way:\r\n\r\n- Pressing “Wake Up” has the alien open their eyes\r\n- Pressing “Listen” has the alien blink slowly as it listens to a story\r\n- Pressing “Analyze” has the alien pulse its eyes as it analyzes objects in a room\r\n- Pressing “Sleep” puts the alien to sleep and closes its eyes\r\n\r\n## Do This\r\n\r\n1) Wire up two LEDs to pins `\"A0\"` and `\"A7\"`\r\n2) Create two LED variables on pins `\"A0\"` and `\"A7\"`\r\n3) Use an `on` block in the Wake Up event\r\n4) Use a `blink` block in the Listen event\r\n5) Use a `pulse` block in the Analyze event\r\n6) Use an `off` block in the Sleep event\r\n",
+    "makerlab_enabled": "circuitPlayground",
+    "long_instructions": "# Little Alien Friend\r\nRosie is designing a children's toy to look like an alien. it has a physical body that uses 2 LEDs as the eye, and you communicate with it via an app. Each button on the app causes the alien to respond in a different way:\r\n\r\n- Pressing “Wake Up” has the alien open their eyes\r\n- Pressing “Listen” has the alien blink slowly as it listens to a story\r\n- Pressing “Analyze” has the alien pulse its eyes as it analyzes objects in a room\r\n- Pressing “Sleep” puts the alien to sleep and closes its eyes\r\n\r\n## Do This\r\n\r\n1) Wire up two LEDs to pins `\"A0\"` and `\"A6\"`\r\n2) Create two LED variables on pins `\"A0\"` and `\"A6\"`\r\n3) Use an `on` block in the Wake Up event\r\n4) Use a `blink` block in the Listen event\r\n5) Use a `pulse` block in the Analyze event\r\n6) Use an `off` block in the Sleep event\r\n",
     "parent_level_id": 20595,
     "name_suffix": "_2222",
     "mini_rubric": "true",
@@ -73,13 +73,13 @@
     "encrypted_examples": "xJSdL9N5eLROaKoNDTicJGGVFCgw5G9MGuh+ib+xXW+0rXbATmjlw0/HM1LC\nICgJ1EwTjG1tkMTT2XakcqSK1A==\n",
     "preload_asset_list": null
   },
-  "level_num": "custom",
   "game_id": 41,
-  "created_at": "2022-04-08T17:11:13.000Z",
-  "user_id": 1,
   "published": true,
+  "created_at": "2022-04-08T17:11:13.000Z",
+  "level_num": "custom",
+  "user_id": 1,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-04-08T17:11:13.719+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Physical Output - A_2022\\\"\"],\"cloned_from\":\"CSD U6 - Physical Output - A_2022\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-04-08T17:11:13.719+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Physical Output - A_2022\\\"\"],\"cloned_from\":\"CSD U6 - Physical Output - A_2022\"},{\"changed_at\":\"2022-12-16 20:43:06 +0000\",\"changed\":[\"code_functions\",\"makerlab_enabled\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>
