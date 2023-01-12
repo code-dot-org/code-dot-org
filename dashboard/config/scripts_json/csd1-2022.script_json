@@ -39,7 +39,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-09-28 14:32:02 UTC",
+    "serialized_at": "2022-12-28 01:19:47 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -5804,7 +5804,7 @@
       }
     },
     {
-      "name": "Intro to Problem Solving (Paper Towels)",
+      "name": "Intro to Problem Solving (Paper Tower)",
       "url": "https://docs.google.com/presentation/d/13t_CP4Fx2s_h-PfJ2Wi4TA5ay_8IQHap4NO8Ds892cA/template/preview",
       "key": "intro_to_problem_solving_paper_towels_",
       "properties": {

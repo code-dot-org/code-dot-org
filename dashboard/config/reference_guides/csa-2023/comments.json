@@ -1,0 +1,9 @@
+{
+  "key": "comments",
+  "course_version_key": "2023",
+  "course_offering_key": "csa",
+  "parent_reference_guide_key": "basics",
+  "display_name": "Comments",
+  "content": "There are two types of comments in Java: inline and block.",
+  "position": 1
+}

@@ -29,13 +29,17 @@
         "isVisible": true,
         "tabOrder": 3
       }
-    }
+    },
+    "encrypted_examples": [
+
+    ],
+    "teacher_markdown": "Students should see the following displayed in the console after adding the code segment:\r\n\r\n```\r\nContent Year: 0\r\nContent Year Updated: 2020\r\n```\r\n\r\nStudents should realize that since the `year` is `public`, it can be accessed and modified by other classes. While this may seem to make it easier to work with variables in other classes, they should realize that there might be instances where information about an object shouldn't be as easy to access or modify."
   },
   "game_id": 68,
+  "published": true,
   "created_at": "2022-11-11T17:56:51.000Z",
   "level_num": "custom",
   "user_id": 16889,
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2022-11-11T17:56:51.347+00:00\",\"changed\":[\"cloned from \\\"CSA U2L1-L2_2023\\\"\"],\"cloned_from\":\"CSA U2L1-L2_2023\"},{\"changed_at\":\"2022-11-11 17:59:57 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-11-11 18:12:15 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-11-11 18:13:23 +0000\",\"changed\":[\"encrypted_validation\",\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-11-11T17:56:51.347+00:00\",\"changed\":[\"cloned from \\\"CSA U2L1-L2_2023\\\"\"],\"cloned_from\":\"CSA U2L1-L2_2023\"},{\"changed_at\":\"2022-11-11 17:59:57 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-11-11 18:12:15 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-11-11 18:13:23 +0000\",\"changed\":[\"encrypted_validation\",\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-12-15 19:38:21 +0000\",\"changed\":[\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>
 </Javalab>
