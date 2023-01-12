@@ -32,7 +32,7 @@
     },
     "new_name": null,
     "family_name": "coursec",
-    "serialized_at": "2023-01-11 02:37:23 UTC",
+    "serialized_at": "2023-01-12 01:56:49 UTC",
     "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -4075,7 +4075,7 @@
       "key": "e79ff65f-c393-4328-8530-e40474ddbca1",
       "position": 1,
       "properties": {
-        "description": "To build on the skills you learned in CS Fundamentals Course C, click [here](https://code.org/maker/csf-microbit) to check out Extension Lessons with Micro:bit. These 4 micro:bit lessons cover the following topics: Meet your micro:bit, Events, Inputs and outputs, Sequencing, Loops, Data, and Variables.",
+        "description": "To build on the skills you learned in CS Fundamentals Course C, click [here](https://code.org/maker/csf-microbit) to check out Extension Lessons with Micro:bit. These [4 micro:bit lessons](https://code.org/maker/assets/CSF-Booklet-Course-C-v8.pdf) cover the following topics: Meet your micro:bit, Events, Inputs and outputs, Sequencing, Loops, Data, and Variables.",
         "name": "Micro:bit Extension Lessons"
       },
       "seeding_key": {

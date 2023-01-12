@@ -32,7 +32,7 @@
     },
     "new_name": null,
     "family_name": "coursee",
-    "serialized_at": "2023-01-11 02:35:37 UTC",
+    "serialized_at": "2023-01-12 01:55:54 UTC",
     "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -3719,7 +3719,7 @@
       "key": "be35b565-6d45-46fa-ae1a-c5d1aeb2f901",
       "position": 1,
       "properties": {
-        "description": "To build on the skills you learned in CS Fundamentals Course E, click [here](https://code.org/maker/csf-microbit) to check out Extension Lessons with Micro:bit. These 4 micro:bit lessons cover the following topics: Meet your micro:bit, Events, Impacts of computing, Designing for\nAccessibility, Loops, Conditionals: (if...then), and Functions.\n",
+        "description": "To build on the skills you learned in CS Fundamentals Course E, click [here](https://code.org/maker/csf-microbit) to check out Extension Lessons with Micro:bit. These [4 micro:bit lessons](https://code.org/maker/assets/CSF-Booklet-Course-E-v5.pdf) cover the following topics: Meet your micro:bit, Events, Impacts of computing, Designing for\nAccessibility, Loops, Conditionals: (if...then), and Functions.\n",
         "name": "Micro:bit Extension Lessons"
       },
       "seeding_key": {
