@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react';
+import React, {useEffect, useState} from 'react';
 import PropTypes from 'prop-types';
 import {
   FormGroup,
@@ -24,6 +24,7 @@ import {
 import {isZipCode} from '@cdo/apps/util/formatValidation';
 import {useRegionalPartner} from '../../components/useRegionalPartner';
 import SchoolAutocompleteDropdown from '@cdo/apps/templates/SchoolAutocompleteDropdown';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 
 const PD_RESOURCES_URL =
   'https://support.code.org/hc/en-us/articles/115003865532';
@@ -31,11 +32,15 @@ const CS_TEACHERS_URL = 'https://code.org/educate/community';
 const INTERNATIONAL = 'Other country';
 const US = 'United States';
 
+const RP_FOUND_EVENT = 'Regional Partner Found';
+
 const FindYourRegion = props => {
   const {onChange, errors, data} = props;
   const hasNoProgramSelected = data.program === undefined;
   const resetCountry = () => onChange({country: US});
   const [regionalPartner] = useRegionalPartner(data);
+  const [lastRPLogged, setLastRPLogged] = useState(regionalPartner?.name);
+
   useEffect(() => {
     onChange({
       regionalPartnerId: regionalPartner?.id,
@@ -44,7 +49,13 @@ const FindYourRegion = props => {
         workshop => workshop.id
       )
     });
-  }, [regionalPartner, onChange]);
+    if (regionalPartner?.name !== lastRPLogged) {
+      setLastRPLogged(regionalPartner?.name);
+      analyticsReporter.sendEvent(RP_FOUND_EVENT, {
+        'regional partner': regionalPartner?.name || 'No Partner'
+      });
+    }
+  }, [regionalPartner, data, lastRPLogged, onChange]);
 
   const renderInternationalModal = () => {
     return (
