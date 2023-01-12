@@ -80,10 +80,11 @@ style_min: true
 
 <details>
   <summary style="font-size:18px">Do I need to have the physical micro:bit devices in order to teach this?</summary>
-  <p>Students do not need micro:bit devices to use the coding platform in the classroom, they can program the simulator in MakeCode.</p>
+  <p>Students do not need micro:bit devices to use the coding platform in the classroom, they can program the simulator in MakeCode. The simulator lets you test code and see it working on the virtual micro:bit. This is also a useful teaching device when you want to share demo with your whole class when introducing and working on code projects together.</p>
 </details>
 
 <details>
   <summary style="font-size:18px">What coding language will I be using?</summary>
-  <p>The BBC micro:bits can be programmed using any of 3 languages: JavaScript Blocks, JavaScript, and MicroPython.</p>
+  <p>All micro:bit lessons and projects for the CS Fundamentals courses are created to use with the Microsoft MakeCode blocks-based editor.</p>
+  <p>The BBC micro:bit can be programmed using 2 code editors: Microsoft MakeCode a blocks-based code editor and micro:bit Python, which offers text-based code.</p>
 </details>
