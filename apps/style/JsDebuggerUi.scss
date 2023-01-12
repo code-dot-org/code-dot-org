@@ -33,6 +33,8 @@
   &:disabled {
     cursor: not-allowed;
     &:active {
+      // We need this !important in order to overwrite !importnat styles in common.scss
+      // (apps/style/common.scss, line 628)that makes disabled active button to have a black border.
       border: none !important;
     }
   }
