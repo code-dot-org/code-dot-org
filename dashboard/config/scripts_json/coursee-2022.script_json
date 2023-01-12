@@ -7,7 +7,7 @@
       "announcements": [
         {
           "key": "9b45f4aa-6b0a-44d7-9813-8e724baca343",
-          "notice": "Extension Lessons with Micro:bit",
+          "notice": "Extension Lessons with the micro:bit",
           "details": "Interested in introducing your students to physical computing? Check out our new extension lessons from micro:bit to continue students’ learning.",
           "link": "https://code.org/maker/csf-microbit",
           "type": "bullhorn",
@@ -3719,8 +3719,8 @@
       "key": "be35b565-6d45-46fa-ae1a-c5d1aeb2f901",
       "position": 1,
       "properties": {
-        "description": "To build on the skills you learned in CS Fundamentals Course E, click [here](https://code.org/maker/csf-microbit) to check out Extension Lessons with Micro:bit. These [4 micro:bit lessons](https://code.org/maker/assets/CSF-Booklet-Course-E-v5.pdf) cover the following topics: Meet your micro:bit, Events, Impacts of computing, Designing for\nAccessibility, Loops, Conditionals: (if...then), and Functions.\n",
-        "name": "Micro:bit Extension Lessons"
+        "description": "To build on the skills you learned in CS Fundamentals Course E, click [here](https://code.org/maker/csf-microbit) to check out Extension Lessons with the micro:bit. These [4 micro:bit lessons](https://code.org/maker/assets/CSF-Booklet-Course-E-v5.pdf) cover the following topics: Meet your micro:bit, Events, Impacts of computing, Designing for\nAccessibility, Loops, Conditionals: (if...then), and Functions.\n",
+        "name": "Extension Lessons with the micro:bit"
       },
       "seeding_key": {
         "activity_section.key": "be35b565-6d45-46fa-ae1a-c5d1aeb2f901",
@@ -9041,7 +9041,7 @@
       }
     },
     {
-      "name": "Extension Lessons: Micro:bit",
+      "name": "Extension Lessons with the micro:bit",
       "url": "https://code.org/maker/csf-microbit",
       "key": "extension_lessons_micro_bit",
       "properties": {
