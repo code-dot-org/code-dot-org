@@ -537,6 +537,7 @@ class MicrobitFirmataClient {
     // Request that the micro:bit perform a compass calibration cycle
 
     this.myPort.write([this.SYSEX_START, this.MB_COMPASS_CALIBRATE, this.SYSEX_END]);
+    return this.myPort;
   }
 
   enableLightSensor() {
