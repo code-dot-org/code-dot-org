@@ -40,6 +40,10 @@
             class: 'btn btn-danger'
   .block-preview
     %h3 Block Preview
+    - if @block.pool == 'Dancelab' || @block.pool == 'Poetry'
+      %p Rendered with Google Blockly
+    - else
+      %p Rendered with CDO Blockly
     #blockly-container
     %h3 Generated Code
     %pre#code-preview

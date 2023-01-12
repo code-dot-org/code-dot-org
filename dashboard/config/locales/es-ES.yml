@@ -1481,4 +1481,8 @@ es:
       forbidden: El usuario no puede actualizar el estado bloqueable del estudiante
   reset_predict_progress_button: Borrar respuesta
   pixelation:
+    raw_format: Formato sin procesar
+    readable_format: Formato legible
+    save_image: Guardar imagen
+    actual_size: Tamaño real
     binary: Binario

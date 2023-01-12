@@ -563,6 +563,10 @@ el:
     με εκατομμύρια μαθητές σε όλο τον κόσμο στον εορτασμό της Εκπαιδευτικής Εβδομάδας
     της Επιστήμης Υπολογιστών με την Ώρα του Κώδικα. θα ανοίξουμε τις εγγραφές για
     τον ετήσιο εορτασμό τον Οκτώβριο.
+  signup_registration_closed_2022_markdown: 'Registration for this year''s Hour of
+    Code event map is currently closed, but you can still [host an Hour of Code](%{hoc_activities_url})
+    and join in the celebration on social media! Post fun pictures or video of your
+    event using the #HourOfCode hashtag!'
   signup_header: Οργανώστε μία Ώρα του Κώδικα στις %{campaign_date}, και εγγράψτε
     την εδώ.
   signup_name_label: Το όνομά σου

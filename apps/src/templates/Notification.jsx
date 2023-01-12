@@ -14,7 +14,8 @@ export const NotificationType = {
   warning: 'warning',
   course: 'course',
   bullhorn: 'bullhorn',
-  feedback: 'feedback'
+  feedback: 'feedback',
+  bullhorn_yellow: 'bullhorn_yellow'
 };
 
 const Notification = ({
@@ -100,6 +101,7 @@ const Notification = ({
     failure: 'exclamation-triangle',
     warning: 'exclamation-triangle',
     bullhorn: 'bullhorn',
+    bullhorn_yellow: 'bullhorn',
     feedback: 'envelope'
   };
 
@@ -325,6 +327,11 @@ const styles = {
       borderColor: color.teal,
       color: color.teal,
       backgroundColor: color.teal
+    },
+    [NotificationType.bullhorn_yellow]: {
+      borderColor: color.yellow,
+      color: color.yellow,
+      backgroundColor: color.yellow
     },
     [NotificationType.feedback]: {
       borderColor: color.purple,

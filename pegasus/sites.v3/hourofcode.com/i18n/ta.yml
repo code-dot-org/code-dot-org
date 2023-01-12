@@ -562,6 +562,10 @@ ta:
   signup_registration_closed: உலகமெங்கும் Hour of Code உடன் கம்ப்யூட்டர் சயின்ஸ் கல்வி
     வாரத்தை கொண்டாடுகிற பல லட்சக்கணக்கான மாணவர்களுடன் ஒவ்வொரு ஆண்டும் டிசம்பரில் உங்கள்
     வகுப்பு இணையலாம். ஆண்டு விழா கொண்டாட்டத்திற்கான பதிவை அக்டோபரில் நாங்கள் திறக்கிறோம்.
+  signup_registration_closed_2022_markdown: 'Registration for this year''s Hour of
+    Code event map is currently closed, but you can still [host an Hour of Code](%{hoc_activities_url})
+    and join in the celebration on social media! Post fun pictures or video of your
+    event using the #HourOfCode hashtag!'
   signup_header: "%{campaign_date}-ல் ஒரு Hour of Code –ஐ ஏற்பாடு செய்து, இங்கு பதிவு
     செய்யுங்கள்."
   signup_name_label: உங்கள் பெயர்

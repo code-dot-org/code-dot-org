@@ -33,9 +33,10 @@ export default class SetupGuide extends React.Component {
           id: 'microbit-description',
           title: applabI18n.makerSetupMicrobitTitle(),
           href: 'https://microbit.org/',
-          imgSrc: '../assets/maker/microbit-drawing-green.png',
+          imgSrc: '/blockly/media/maker/microbit-drawing-green.png',
           description: applabI18n.makerSetupMicrobitDescription(),
-          imgStyle: style.microbitImg
+          imgStyle: style.microbitImg,
+          alt: applabI18n.makerSetupMicrobitImageAltText()
         };
       case 'circuitPlayground':
         return {
@@ -43,9 +44,10 @@ export default class SetupGuide extends React.Component {
           title: applabI18n.makerSetupCircuitPlaygroundTitle(),
           href:
             'https://learn.adafruit.com/introducing-circuit-playground/overview',
-          imgSrc: '../assets/maker/circuit-playground-x-1.png',
+          imgSrc: '/blockly/media/maker/circuit-playground-x-1.png',
           description: applabI18n.makerSetupCircuitPlaygroundDescription(),
-          imgStyle: style.circuitPlaygroundImg
+          imgStyle: style.circuitPlaygroundImg,
+          alt: applabI18n.makerSetupCircuitPlaygroundImageAltText()
         };
     }
   };
@@ -83,7 +85,12 @@ function DescriptionCard(props) {
       <h2>{props.title}</h2>
       <center>
         <a href={props.href}>
-          <img src={props.imgSrc} width={200} style={props.imgStyle} />
+          <img
+            src={props.imgSrc}
+            width={200}
+            style={props.imgStyle}
+            alt={props.alt}
+          />
         </a>
       </center>
       <div className="description-content">
@@ -99,5 +106,6 @@ DescriptionCard.propTypes = {
   imgSrc: PropTypes.string.isRequired,
   imgStyle: PropTypes.object,
   description: PropTypes.string.isRequired,
-  divStyle: PropTypes.object
+  divStyle: PropTypes.object,
+  alt: PropTypes.string.isRequired
 };
