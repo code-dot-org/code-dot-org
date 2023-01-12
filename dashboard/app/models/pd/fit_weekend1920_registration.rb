@@ -14,7 +14,6 @@
 #  index_pd_fit_weekend_registrations_on_pd_application_id  (pd_application_id)
 #  index_pd_fit_weekend_registrations_on_registration_year  (registration_year)
 #
-# TODO [meg]: Remove or gut this model to finish deprecating facilitator applications
 
 class Pd::FitWeekend1920Registration < Pd::FitWeekendRegistrationBase
   include Pd::Application::ApplicationConstants
