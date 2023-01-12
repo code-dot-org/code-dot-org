@@ -12,7 +12,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-01-06 02:08:22 UTC",
+    "serialized_at": "2023-01-12 02:15:15 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -55,7 +55,7 @@
     },
     {
       "key": "Experiment with inputs and outputs",
-      "name": "Experiment with inputs and outputs",
+      "name": "Experiment with Inputs and Outputs",
       "absolute_position": 2,
       "lockable": false,
       "has_lesson_plan": false,
@@ -72,7 +72,7 @@
     },
     {
       "key": "Engage with prototypes",
-      "name": "Engage with prototypes",
+      "name": "Engage with Prototypes",
       "absolute_position": 3,
       "lockable": false,
       "has_lesson_plan": false,
@@ -395,6 +395,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-ModuleOverview-U6_physical-computing"
+        ],
         "progression": "Introduction"
       },
       "bonus": false,
@@ -417,6 +420,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-Devices-22-pre-survey"
+        ],
         "progression": "Introduction"
       },
       "bonus": false,
@@ -795,6 +801,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-pilot-S22-CI-Unit_PSP-U6L3_physical-computing"
+        ],
         "progression": "Practice Using the Problem Solving Process"
       },
       "bonus": false,
@@ -817,6 +826,10 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "instructor_in_training": true,
+        "level_keys": [
+          "SP-VPL-Devices-CSD U6 - ProbSolvProc_ChallB_2023"
+        ],
         "progression": "Practice Using the Problem Solving Process"
       },
       "bonus": false,
@@ -839,29 +852,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "instructor_in_training": true,
-        "progression": "Practice Using the Problem Solving Process"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "SP-VPL-Devices-CSD U6 - ProbSolvProc_ChallB1_2023"
+        "level_keys": [
+          "SP-VPL-PC-22-PSP-vid_2022"
         ],
-        "lesson.key": "Experiment with inputs and outputs",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "self-paced-pl-physical-computing2",
-        "activity_section.key": "2e29aa2d-498c-4726-9759-511ad8989be4"
-      },
-      "level_keys": [
-        "SP-VPL-Devices-CSD U6 - ProbSolvProc_ChallB1_2023"
-      ]
-    },
-    {
-      "chapter": 20,
-      "position": 12,
-      "activity_section_position": 4,
-      "assessment": false,
-      "properties": {
         "progression": "Practice Using the Problem Solving Process"
       },
       "bonus": false,
@@ -879,8 +872,8 @@
       ]
     },
     {
-      "chapter": 21,
-      "position": 13,
+      "chapter": 20,
+      "position": 12,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -905,8 +898,8 @@
       ]
     },
     {
-      "chapter": 22,
-      "position": 14,
+      "chapter": 21,
+      "position": 13,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
@@ -931,8 +924,8 @@
       ]
     },
     {
-      "chapter": 23,
-      "position": 15,
+      "chapter": 22,
+      "position": 14,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
@@ -957,8 +950,8 @@
       ]
     },
     {
-      "chapter": 24,
-      "position": 16,
+      "chapter": 23,
+      "position": 15,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -982,7 +975,7 @@
       ]
     },
     {
-      "chapter": 25,
+      "chapter": 24,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -1007,7 +1000,7 @@
       ]
     },
     {
-      "chapter": 26,
+      "chapter": 25,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -1033,7 +1026,7 @@
       ]
     },
     {
-      "chapter": 27,
+      "chapter": 26,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -1059,7 +1052,7 @@
       ]
     },
     {
-      "chapter": 28,
+      "chapter": 27,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -1085,7 +1078,7 @@
       ]
     },
     {
-      "chapter": 29,
+      "chapter": 28,
       "position": 5,
       "activity_section_position": 2,
       "assessment": false,
@@ -1111,7 +1104,7 @@
       ]
     },
     {
-      "chapter": 30,
+      "chapter": 29,
       "position": 6,
       "activity_section_position": 3,
       "assessment": false,
@@ -1136,7 +1129,7 @@
       ]
     },
     {
-      "chapter": 31,
+      "chapter": 30,
       "position": 7,
       "activity_section_position": 4,
       "assessment": false,
@@ -1161,7 +1154,7 @@
       ]
     },
     {
-      "chapter": 32,
+      "chapter": 31,
       "position": 8,
       "activity_section_position": 1,
       "assessment": false,
@@ -1186,7 +1179,7 @@
       ]
     },
     {
-      "chapter": 33,
+      "chapter": 32,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -1211,7 +1204,7 @@
       ]
     },
     {
-      "chapter": 34,
+      "chapter": 33,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -1236,7 +1229,7 @@
       ]
     },
     {
-      "chapter": 35,
+      "chapter": 34,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -1261,7 +1254,7 @@
       ]
     },
     {
-      "chapter": 36,
+      "chapter": 35,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
@@ -1286,7 +1279,7 @@
       ]
     },
     {
-      "chapter": 37,
+      "chapter": 36,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -1311,7 +1304,7 @@
       ]
     },
     {
-      "chapter": 38,
+      "chapter": 37,
       "position": 6,
       "activity_section_position": 2,
       "assessment": false,
@@ -1336,7 +1329,7 @@
       ]
     },
     {
-      "chapter": 39,
+      "chapter": 38,
       "position": 7,
       "activity_section_position": 3,
       "assessment": false,
@@ -1361,7 +1354,7 @@
       ]
     },
     {
-      "chapter": 40,
+      "chapter": 39,
       "position": 8,
       "activity_section_position": 4,
       "assessment": false,
@@ -1386,7 +1379,7 @@
       ]
     },
     {
-      "chapter": 41,
+      "chapter": 40,
       "position": 9,
       "activity_section_position": 5,
       "assessment": false,
@@ -1411,7 +1404,7 @@
       ]
     },
     {
-      "chapter": 42,
+      "chapter": 41,
       "position": 10,
       "activity_section_position": 6,
       "assessment": false,
@@ -1436,7 +1429,7 @@
       ]
     },
     {
-      "chapter": 43,
+      "chapter": 42,
       "position": 11,
       "activity_section_position": 7,
       "assessment": false,
@@ -1461,7 +1454,7 @@
       ]
     },
     {
-      "chapter": 44,
+      "chapter": 43,
       "position": 12,
       "activity_section_position": 8,
       "assessment": false,
@@ -1486,7 +1479,7 @@
       ]
     },
     {
-      "chapter": 45,
+      "chapter": 44,
       "position": 13,
       "activity_section_position": 1,
       "assessment": false,
@@ -1511,7 +1504,7 @@
       ]
     },
     {
-      "chapter": 46,
+      "chapter": 45,
       "position": 14,
       "activity_section_position": 2,
       "assessment": false,
@@ -1536,7 +1529,7 @@
       ]
     },
     {
-      "chapter": 47,
+      "chapter": 46,
       "position": 15,
       "activity_section_position": 3,
       "assessment": false,
@@ -1561,7 +1554,7 @@
       ]
     },
     {
-      "chapter": 48,
+      "chapter": 47,
       "position": 16,
       "activity_section_position": 1,
       "assessment": false,
@@ -1586,7 +1579,7 @@
       ]
     },
     {
-      "chapter": 49,
+      "chapter": 48,
       "position": 17,
       "activity_section_position": 2,
       "assessment": false,
@@ -1611,9 +1604,31 @@
       ]
     },
     {
-      "chapter": 50,
+      "chapter": 49,
       "position": 18,
       "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Wrap up"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-Devices-22-post-survey"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "self-paced-pl-physical-computing2",
+        "activity_section.key": "07353cff-eca0-4ee8-97da-cf299dfe8392"
+      },
+      "level_keys": [
+        "VPL-Devices-22-post-survey"
+      ]
+    },
+    {
+      "chapter": 50,
+      "position": 19,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1846,18 +1861,6 @@
         "level.key": "SP-VPL-Devices-CSD U6 - ProbSolvProc_ChallB_2023",
         "script_level.level_keys": [
           "SP-VPL-Devices-CSD U6 - ProbSolvProc_ChallB_2023"
-        ],
-        "lesson.key": "Experiment with inputs and outputs",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "self-paced-pl-physical-computing2",
-        "activity_section.key": "2e29aa2d-498c-4726-9759-511ad8989be4"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "SP-VPL-Devices-CSD U6 - ProbSolvProc_ChallB1_2023",
-        "script_level.level_keys": [
-          "SP-VPL-Devices-CSD U6 - ProbSolvProc_ChallB1_2023"
         ],
         "lesson.key": "Experiment with inputs and outputs",
         "lesson_group.key": "lessonGroup-2",
@@ -2223,6 +2226,18 @@
         "lesson_group.key": "lessonGroup-2",
         "script.name": "self-paced-pl-physical-computing2",
         "activity_section.key": "4820b1b1-1206-4c46-bd75-c59c145fc5d0"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-Devices-22-post-survey",
+        "script_level.level_keys": [
+          "VPL-Devices-22-post-survey"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "self-paced-pl-physical-computing2",
+        "activity_section.key": "07353cff-eca0-4ee8-97da-cf299dfe8392"
       }
     },
     {
