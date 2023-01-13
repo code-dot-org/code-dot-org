@@ -10,7 +10,7 @@
     },
     "new_name": null,
     "family_name": "emmas-playground",
-    "serialized_at": "2023-01-03 16:15:49 UTC",
+    "serialized_at": "2023-01-13 00:06:23 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -280,6 +280,27 @@
       "level_keys": [
         "csc_fm_show_input_output_test_clone"
       ]
+    },
+    {
+      "chapter": 8,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "emma_fm"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "emmas-playground",
+        "activity_section.key": "fc354211-6180-48c0-8d3a-fc3ca027c734"
+      },
+      "level_keys": [
+        "emma_fm"
+      ]
     }
   ],
   "levels_script_levels": [
@@ -365,6 +386,18 @@
         "lesson_group.key": "",
         "script.name": "emmas-playground",
         "activity_section.key": "4fe42c1d-2805-4720-8e0e-6b87bb42a1b6"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "emma_fm",
+        "script_level.level_keys": [
+          "emma_fm"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "emmas-playground",
+        "activity_section.key": "fc354211-6180-48c0-8d3a-fc3ca027c734"
       }
     }
   ],
