@@ -535,7 +535,7 @@ function initializeBlocklyWrapper(blocklyInstance) {
     blocklyWrapper.customSimpleDialog = opt_options.customSimpleDialog;
 
     // Shrink container to make room for the workspace header
-    if (!opt_options.isEditMode) {
+    if (!opt_options.isBlockEditMode) {
       container.style.height = `calc(100% - ${
         styleConstants['workspace-headers-height']
       }px)`;
@@ -543,7 +543,7 @@ function initializeBlocklyWrapper(blocklyInstance) {
     blocklyWrapper.isStartMode = !!opt_options.editBlocks;
     const workspace = blocklyWrapper.blockly_.inject(container, options);
 
-    if (!blocklyWrapper.isStartMode && !opt_options.isEditMode) {
+    if (!blocklyWrapper.isStartMode && !opt_options.isBlockEditMode) {
       workspace.addChangeListener(Blockly.Events.disableOrphans);
     }
 
