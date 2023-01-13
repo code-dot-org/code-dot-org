@@ -377,11 +377,6 @@ Style/ExplicitBlockArgument:
 Style/FetchEnvVar:
   Enabled: false
 
-# Offense count: 30
-# This cop supports safe auto-correction (--auto-correct).
-Style/FileWrite:
-  Enabled: false
-
 # Offense count: 2
 # This cop supports unsafe auto-correction (--auto-correct-all).
 # Configuration parameters: EnforcedStyle.
