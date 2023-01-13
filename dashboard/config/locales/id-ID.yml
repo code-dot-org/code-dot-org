@@ -824,34 +824,18 @@ id:
         agar dapat bekerja, lalu bagikan aplikasi tersebut dalam hitungan detik.
       audience: Usia 13+
       cta: Pelajari cara
-    dance:
-      title: Pesta Tari
+    aquatic:
+      title: Minecraft
     dance-2019:
       title: Pesta Tari
-    hello-world:
-      title: Halo Dunia
-      body: Pilih dari empat tema seru untuk membuat kode dari karakter interaktif
-        di dunia yang kamu ciptakan.
-    poem-art:
-      title: Seni Puisi
-      body: Ekspresikan dirimu! Gunakan kode untuk membuat animasi puisi.
-    hoc:
-      title: Labirin Klasik
-      body: Coba dasar-dasar ilmu komputer. Jutaan orang telah mencobanya.
+    dance:
+      title: Pesta Tari
     flappy:
       title: Flappy Code
       body: Ingin membuat game anda sendiri dalam waktu kurang dari 10 menit? Coba
         Tutorial Flappy code kami!
-    20-hour:
-      title: Kursus Akselerasi
-      body: Kursus selama 20 jam ini memperkenalkan ilmu komputer tingkat dasar dan
-        konsep-konsep pemrograman. Kursus ini dirancang untuk digunakan di ruang kelas
-        untuk sekolah dasar dan menengah, tapi tetap menyenangkan dipelajari untuk
-        semua usia.
-      body_short: Pelajari ilmu komputer dasar dalam kursus 2-4 versi akselerasi.
-    hoc2014:
-      try_new_tutorial: Coba tutorial Hour of Code baru kami dalam versi beta
-      try_frozen: Artis bersama Anna dan Elsa, dari Frozen
+    frozen:
+      title: Frozen
     gallery:
       title: Galeri
       body: Lihat galeri aplikasi dan gambar artis yang dibuat oleh pengguna kami
@@ -862,20 +846,23 @@ id:
         lain.
       audience: Usia 13+
       cta: Pelajari cara
+    hello-world:
+      title: Halo Dunia
+      body: Pilih dari empat tema seru untuk membuat kode dari karakter interaktif
+        di dunia yang kamu ciptakan.
+    hero:
+      title: Minecraft
+      body: Minecraft hadir kembali dengan aktivitas baru untuk Hour of Code! Ikuti
+        petualangan melintasi dunia Minecraft dengan code.
     hoc-encryption:
       title: Enkripsi sederhana
       body: Murid akan mempelajari teknik membuat dan mengurai pesan terenkripsi.
-    weblab:
-      title: Web Lab (beta)
-      body: Web Lab adalah lingkungan pemrograman untuk membuat halaman web sederhana
-        menggunakan HTML dan CSS. Rancang halaman web Anda dan bagikan situs Anda
-        dalam hitungan detik.
-      audience: Usia 13+
-      cta: Pelajari cara
-    frozen:
-      title: Frozen
-    starwars:
-      title: Star Wars
+    hoc:
+      title: Labirin Klasik
+      body: Coba dasar-dasar ilmu komputer. Jutaan orang telah mencobanya.
+    hoc2014:
+      try_new_tutorial: Coba tutorial Hour of Code baru kami dalam versi beta
+      try_frozen: Artis bersama Anna dan Elsa, dari Frozen
     infinity:
       title: Infinity Play Lab
       body: Gunakan Play Lab untuk membuat sebuah cerita atau permainan yang dibintangi
@@ -887,19 +874,36 @@ id:
       title: Minecraft
       body: Program binatang dan makhluk Minecraft lainnya dalam Minecraft versi Anda
         sendiri.
-    aquatic:
-      title: Minecraft
-    hero:
-      title: Minecraft
-      body: Minecraft hadir kembali dengan aktivitas baru untuk Hour of Code! Ikuti
-        petualangan melintasi dunia Minecraft dengan code.
+    poem-art:
+      title: Seni Puisi
+      body: Ekspresikan dirimu! Gunakan kode untuk membuat animasi puisi.
     sports:
       title: Olahraga
       body: Buat pertandingan basket atau padu dan padankan lintas olahraga.
+    starwars:
+      title: Star Wars
     text-compression:
       title: kompresi Teks
       body: Dalam pelajaran ini, murid akan menggunakan Text Compression Widget untuk
         melakukan kompresi teks dengan mengganti pola dengan simbol.
+    weblab:
+      title: Web Lab (beta)
+      body: Web Lab adalah lingkungan pemrograman untuk membuat halaman web sederhana
+        menggunakan HTML dan CSS. Rancang halaman web Anda dan bagikan situs Anda
+        dalam hitungan detik.
+      audience: Usia 13+
+      cta: Pelajari cara
+    widgets:
+      title: Widget
+      body: Murid dapat menjelajahi aneka konsep dari kursus Prinsip-Prinsip Ilmu
+        Komputer kami secara langsung menggunakan alat-alat digital. Gunakan widget
+        sendiri, atau buat pelajaran konsep tunggal untuk kelas Anda.
+      audience: Usia 14+
+      cta: Pelajari cara
+    unplugged_conditionals:
+      title: Kondisi
+      body: Pelajari algorithm dan pernyataan kondisional dalam aktivitas “unplugged”
+        ini menggunakan tumpukan kartu.
     unplugged:
       title: Pelajaran Unplugged
       audience: Usia 4+
@@ -910,17 +914,13 @@ id:
         kursus ilmu komputer.
       body_short: Jika Anda tidak memiliki komputer, cobalah pelajaran unplugged ini
         di kelas Anda.
-    unplugged_conditionals:
-      title: Kondisi
-      body: Pelajari algorithm dan pernyataan kondisional dalam aktivitas “unplugged”
-        ini menggunakan tumpukan kartu.
-    widgets:
-      title: Widget
-      body: Murid dapat menjelajahi aneka konsep dari kursus Prinsip-Prinsip Ilmu
-        Komputer kami secara langsung menggunakan alat-alat digital. Gunakan widget
-        sendiri, atau buat pelajaran konsep tunggal untuk kelas Anda.
-      audience: Usia 14+
-      cta: Pelajari cara
+    20-hour:
+      title: Kursus Akselerasi
+      body: Kursus selama 20 jam ini memperkenalkan ilmu komputer tingkat dasar dan
+        konsep-konsep pemrograman. Kursus ini dirancang untuk digunakan di ruang kelas
+        untuk sekolah dasar dan menengah, tapi tetap menyenangkan dipelajari untuk
+        semua usia.
+      body_short: Pelajari ilmu komputer dasar dalam kursus 2-4 versi akselerasi.
   landing:
     prerelease_tutorial: Tutorial ini dalam versi **beta**.  Tutorial ini bisa direvisi
       kapan saja saat masukan diterima dan perbaikan dibuat.

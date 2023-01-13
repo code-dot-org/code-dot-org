@@ -15,7 +15,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-10-07 12:46:00 UTC",
+    "serialized_at": "2023-01-12 01:09:06 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -26,37 +26,1689 @@
   },
   "lesson_groups": [
     {
-      "key": "",
-      "user_facing": false,
+      "key": "lessonGroup-2",
+      "user_facing": true,
       "position": 1,
       "properties": {
+        "display_name": "Content"
       },
       "seeding_key": {
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa3-2023"
+      }
+    },
+    {
+      "key": "lessonGroup-3",
+      "user_facing": true,
+      "position": 2,
+      "properties": {
+        "display_name": "Show What You Know"
+      },
+      "seeding_key": {
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa3-2023"
+      }
+    },
+    {
+      "key": "lessonGroup-4",
+      "user_facing": true,
+      "position": 3,
+      "properties": {
+        "display_name": "Alternate Lessons",
+        "description": "This section contains the one-day version of the Data for Social Good Project."
+      },
+      "seeding_key": {
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "csa3-2023"
       }
     }
   ],
   "lessons": [
-
+    {
+      "key": "lesson-1",
+      "name": "One-Dimensional (1D) Arrays",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 1,
+      "properties": {
+        "overview": "**How can I store multiple related values without creating multiple variables?**\n\nStudents have used variables to store literal values and references to objects. In this lesson, students discover the need for one-dimensional (1D) arrays to store multiple related values. Students explore the syntax and functionality of 1D arrays and learn how to declare and initialize a 1D array using the `new` keyword. They learn how to determine the length of a 1D array, then practice creating 1D arrays using the `new` keyword and accessing and returning their length.",
+        "preparation": "* Print copies of the Unit 3 Guide (one for each student)\n* Preview the *One-Dimensional (1D) Arrays* video\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-unit-3-lesson-1-one-dimensional-1d-arrays/36384/2) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
+        "student_overview": "**How can I store multiple related values without creating multiple variables?**\n\nYou have used variables to store literal values and references to objects. In this lesson, you discover the need for one-dimensional (1D) arrays to store multiple related values. You explore the syntax and functionality of 1D arrays and learn how to declare and initialize a 1D array using the `new` keyword. You learn how to determine the length of a 1D array then practice creating 1D arrays using the `new` keyword and assigning and accessing values at specific positions."
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa3-2023"
+      }
+    },
+    {
+      "key": "lesson-2",
+      "name": "Modifying Elements",
+      "absolute_position": 2,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 2,
+      "properties": {
+        "overview": "**How can I easily assign multiple elements to a one-dimensional (1D) array?**\n\nIn this lesson, students explore using initializer lists to create one-dimensional (1D) arrays and learn how to access and modify elements. They discover that the size of a 1D array cannot be changed after it is created and identify similarities and differences between assigning values to a 1D array and to a variable. Students then practice creating a 1D array using initializer lists and modifying the values stored in a 1D array.",
+        "preparation": "* Preview the *Modifying Values in a 1D Array* video\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-unit-3-lesson-2-array-elements/36383/2) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
+        "student_overview": "**How can I easily assign multiple elements to a one-dimensional (1D) array?**\n\nIn this lesson, you explore using initializer lists to create one-dimensional (1D) arrays and learn how to access and modify elements. You discover that the size of a 1D array cannot be changed after it is created and identify similarities and differences between assigning values to a 1D array and to a variable. You then practice creating a 1D array using initializer lists and modifying the values stored in a 1D array."
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa3-2023"
+      }
+    },
+    {
+      "key": "lesson-3",
+      "name": "For Loops",
+      "absolute_position": 3,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 3,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa3-2023"
+      }
+    },
+    {
+      "key": "lesson-4",
+      "name": "Preconditions and Postconditions",
+      "absolute_position": 4,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 4,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa3-2023"
+      }
+    },
+    {
+      "key": "lesson-5",
+      "name": "Enhanced For Loops",
+      "absolute_position": 5,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 5,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa3-2023"
+      }
+    },
+    {
+      "key": "lesson-6",
+      "name": "Static Variables and Constants",
+      "absolute_position": 6,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 6,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa3-2023"
+      }
+    },
+    {
+      "key": "lesson-7",
+      "name": "Polymorphism",
+      "absolute_position": 7,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 7,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa3-2023"
+      }
+    },
+    {
+      "key": "lesson-8",
+      "name": "Array Algorithms",
+      "absolute_position": 8,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 8,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa3-2023"
+      }
+    },
+    {
+      "key": "lesson-9",
+      "name": "Finding Duplicates",
+      "absolute_position": 9,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 9,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa3-2023"
+      }
+    },
+    {
+      "key": "lesson-10",
+      "name": "Data for Social Good Project",
+      "absolute_position": 10,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 10,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa3-2023"
+      }
+    },
+    {
+      "key": "lesson-11",
+      "name": "FRQ Practice",
+      "absolute_position": 11,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 11,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa3-2023"
+      }
+    },
+    {
+      "key": "lesson-12",
+      "name": "Unit 3 Assessment",
+      "absolute_position": 12,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 12,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-12",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa3-2023"
+      }
+    },
+    {
+      "key": "lesson-13",
+      "name": "Data for Social Good Project [1-Day Version]",
+      "absolute_position": 13,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 13,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-13",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa3-2023"
+      }
+    }
   ],
   "lesson_activities": [
-
+    {
+      "key": "24c031ce-48a5-4ddb-9521-84c2d7708c91",
+      "position": 1,
+      "properties": {
+        "duration": 5,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "24c031ce-48a5-4ddb-9521-84c2d7708c91",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa3-2023"
+      }
+    },
+    {
+      "key": "a222f7ce-578f-4384-a8d6-1d9114ad5d0c",
+      "position": 2,
+      "properties": {
+        "duration": 35,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "a222f7ce-578f-4384-a8d6-1d9114ad5d0c",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa3-2023"
+      }
+    },
+    {
+      "key": "d05a6ffd-d670-4a5f-bcca-57b23d497c43",
+      "position": 3,
+      "properties": {
+        "duration": 5,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "d05a6ffd-d670-4a5f-bcca-57b23d497c43",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa3-2023"
+      }
+    },
+    {
+      "key": "a959b767-1581-4260-bdfd-7772a07d382b",
+      "position": 1,
+      "properties": {
+        "duration": 5,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "a959b767-1581-4260-bdfd-7772a07d382b",
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa3-2023"
+      }
+    },
+    {
+      "key": "e84ef974-a1fe-4098-aad5-675c9a771c0d",
+      "position": 2,
+      "properties": {
+        "duration": 35,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "e84ef974-a1fe-4098-aad5-675c9a771c0d",
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa3-2023"
+      }
+    },
+    {
+      "key": "f736c7dd-453f-42ad-a91a-66d7429b8982",
+      "position": 3,
+      "properties": {
+        "duration": 5,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "f736c7dd-453f-42ad-a91a-66d7429b8982",
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa3-2023"
+      }
+    }
   ],
   "activity_sections": [
-
+    {
+      "key": "2f96aa97-17df-4acb-8be5-c199b78c5dc5",
+      "position": 1,
+      "properties": {
+        "description": "We have used variables to store a single value and represent an object's attributes. Software engineers often need to store and process multiple values in their programs.",
+        "name": "Storing Multiple Values",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "2f96aa97-17df-4acb-8be5-c199b78c5dc5",
+        "lesson_activity.key": "24c031ce-48a5-4ddb-9521-84c2d7708c91"
+      }
+    },
+    {
+      "key": "a0e68ba9-201e-496f-8e5a-1c9c151611ab",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Unit 3 Guide.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *How could we store these values in a program based on what we know about Java?*\n\n**Discussion Goal:** Students suggest creating a variable for each value. Students might realize the need for creating a list to store the values and may recall creating lists in programs in previous computer science courses.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Use the Retrieve-Pair-Share strategy to facilitate this discussion by directing students to write down their thoughts and ideas first, then pair up students to compare their answers and expand their notes. This allows time for individual processing and idea generation before sharing thoughts with others. Ask students to share the ideas they discussed with their partners as a class.\n\nAsk students additional probing questions to consider the problems that could arise with maintaining multiple variables. For example:\n* *Is this efficient?*\n* *Is this easy to work with and maintain?*\n* *What would be the ideal way to do this?*"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "a0e68ba9-201e-496f-8e5a-1c9c151611ab",
+        "lesson_activity.key": "24c031ce-48a5-4ddb-9521-84c2d7708c91"
+      }
+    },
+    {
+      "key": "7598f999-9728-4579-a9b5-bb365a3f041b",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day.",
+        "duration": "5",
+        "name": "Introduction"
+      },
+      "seeding_key": {
+        "activity_section.key": "7598f999-9728-4579-a9b5-bb365a3f041b",
+        "lesson_activity.key": "a222f7ce-578f-4384-a8d6-1d9114ad5d0c"
+      }
+    },
+    {
+      "key": "85dd3673-ab9c-4599-bf1d-e59d2fe1642e",
+      "position": 2,
+      "properties": {
+        "description": "It can be challenging to work with multiple variables in a program. When these are of the same data type and represent the same type of information, there are easier ways to store and work with these values in Java. Today, we're going to learn how we can use one-dimensional arrays to store multiple values.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "85dd3673-ab9c-4599-bf1d-e59d2fe1642e",
+        "lesson_activity.key": "a222f7ce-578f-4384-a8d6-1d9114ad5d0c"
+      }
+    },
+    {
+      "key": "1629e964-b35a-494e-9647-df00cfcfd586",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to predict the program's outcome, then run the program to compare their predictions to the actual outcome.",
+        "progression_name": "Predict and Run: Storing Multiple Values"
+      },
+      "seeding_key": {
+        "activity_section.key": "1629e964-b35a-494e-9647-df00cfcfd586",
+        "lesson_activity.key": "a222f7ce-578f-4384-a8d6-1d9114ad5d0c"
+      }
+    },
+    {
+      "key": "fb11de98-999e-46ba-8a0b-55eb7b5fcbef",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What did you notice about the code in this program?*\n* *What do you wonder about the code in this program?*\n\n**Discussion Goal:** Students notice that the program declares a variable that is assigned multiple values and the syntax for declaring and initializing the 1D array. Students may wonder what values the 1D array contains or how to assign or access values to the 1D array."
+      },
+      "seeding_key": {
+        "activity_section.key": "fb11de98-999e-46ba-8a0b-55eb7b5fcbef",
+        "lesson_activity.key": "a222f7ce-578f-4384-a8d6-1d9114ad5d0c"
+      }
+    },
+    {
+      "key": "825beff4-e963-4e36-9d5c-51e06c749c63",
+      "position": 5,
+      "properties": {
+        "description": "When we want to work with multiple related values, we can use a one-dimensional, or 1D, array to store these. A 1D array allows us to reference these values with just one variable.",
+        "duration": "15",
+        "name": "Exploring 1D Arrays",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "825beff4-e963-4e36-9d5c-51e06c749c63",
+        "lesson_activity.key": "a222f7ce-578f-4384-a8d6-1d9114ad5d0c"
+      }
+    },
+    {
+      "key": "53af8ac1-742d-43af-ba29-1d99df4b5265",
+      "position": 6,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the video – *One-Dimensional (1D) Arrays*.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Videos are used throughout the curriculum to spark discussions, supplement key concepts with additional explanations and examples, and expose students to the various roles and backgrounds of individuals in computer science.\n\nWhile interacting with the video, turn on closed captioning so students can also read along as they watch.\n\nTo encourage active engagement and reflection, use one or more of the strategies discussed in the [**Guide to Curriculum Videos**](https://docs.google.com/document/d/1FqIUpJg6MrgdtbFGLobSojOz0u1m5Jge1nMAjUqI5ZM/edit?usp=sharing)."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "53af8ac1-742d-43af-ba29-1d99df4b5265",
+        "lesson_activity.key": "a222f7ce-578f-4384-a8d6-1d9114ad5d0c"
+      }
+    },
+    {
+      "key": "41aeac3f-df09-4fff-a736-046d7877cd2f",
+      "position": 7,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to define **data structure** and **one-dimensional array**.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Explain that data structures contain zero or more elements and define ***element***.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 2 on Code Studio complete Levels 2, 3, and 4. Students investigate the program, make changes to the program as prompted, and observe the results.",
+        "progression_name": "Investigate and Modify: 1D Arrays"
+      },
+      "seeding_key": {
+        "activity_section.key": "41aeac3f-df09-4fff-a736-046d7877cd2f",
+        "lesson_activity.key": "a222f7ce-578f-4384-a8d6-1d9114ad5d0c"
+      }
+    },
+    {
+      "key": "01200482-0e73-46b8-ba1c-9b79a67e4520",
+      "position": 8,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students share what they discovered from the modifications they made to the code."
+      },
+      "seeding_key": {
+        "activity_section.key": "01200482-0e73-46b8-ba1c-9b79a67e4520",
+        "lesson_activity.key": "a222f7ce-578f-4384-a8d6-1d9114ad5d0c"
+      }
+    },
+    {
+      "key": "aea0e625-2b82-49e8-bf24-a93f254c3e44",
+      "position": 9,
+      "properties": {
+        "description": "Many of the apps and programs we use every day use large amounts of data to help us find information we are looking for, perform calculations, or recommend similar videos or products. 1D arrays give software engineers a way to store and analyze large amounts of data.",
+        "duration": "10",
+        "name": "Default Values and Length",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "aea0e625-2b82-49e8-bf24-a93f254c3e44",
+        "lesson_activity.key": "a222f7ce-578f-4384-a8d6-1d9114ad5d0c"
+      }
+    },
+    {
+      "key": "59ae0fd3-806a-487b-add8-aa1d5c2ec1df",
+      "position": 10,
+      "properties": {
+        "description": "**Do This:** Explain how 1D arrays are declared and initialized:\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Declaring a 1D array\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Initializing a 1D array\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Declaring and initializing a 1D array in one line\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Explain that a 1D array is an object and is accessed using a reference variable.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Prompt students to recall the meaning of a reference variable and how it is different from a primitive variable."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "59ae0fd3-806a-487b-add8-aa1d5c2ec1df",
+        "lesson_activity.key": "a222f7ce-578f-4384-a8d6-1d9114ad5d0c"
+      }
+    },
+    {
+      "key": "333fe011-59d5-4b6d-b3fe-a52177cc95e9",
+      "position": 11,
+      "properties": {
+        "description": "**Do This:** Click through the animated slides to demonstrate the default values that get stored in a 1D array when it is declared and initialized using the `new` keyword:\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Array of `int` values\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Array of `double` values\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Array of `boolean` values\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Array of `String` values",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Prompt students to recall the default values for each data type before showing the values.\n\nStudents will learn about storing objects in 1D arrays in an upcoming lesson."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "333fe011-59d5-4b6d-b3fe-a52177cc95e9",
+        "lesson_activity.key": "a222f7ce-578f-4384-a8d6-1d9114ad5d0c"
+      }
+    },
+    {
+      "key": "3d570756-e31c-4e86-bae0-931a1e1edec2",
+      "position": 12,
+      "properties": {
+        "description": "**Do This:** Explain how to determine the length of a 1D array:\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> The length of a 1D array is how many elements it can store.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Introduce the syntax for accessing the length of a 1D array.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> The length of a 1D array is one more than the last index."
+      },
+      "seeding_key": {
+        "activity_section.key": "3d570756-e31c-4e86-bae0-931a1e1edec2",
+        "lesson_activity.key": "a222f7ce-578f-4384-a8d6-1d9114ad5d0c"
+      }
+    },
+    {
+      "key": "605cff4f-dd17-42b6-9630-dab061951d27",
+      "position": 13,
+      "properties": {
+        "description": "Many of the apps and programs we use every day use large amounts of data to help us find information we are looking for, perform calculations, or recommend similar videos or products. 1D arrays give software engineers a way to store and analyze large amounts of data.",
+        "duration": "10",
+        "name": "Creating 1D Arrays",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "605cff4f-dd17-42b6-9630-dab061951d27",
+        "lesson_activity.key": "a222f7ce-578f-4384-a8d6-1d9114ad5d0c"
+      }
+    },
+    {
+      "key": "a3d86628-ebfb-4651-9c24-9d10130eaea8",
+      "position": 14,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce how arrays are useful for storing and analyzing data.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "The table on the slide shows a snippet of the [**Music & Mental Health Survey Results**](https://www.kaggle.com/datasets/catherinerasgaitis/mxmh-survey-results) dataset on Kaggle. Students will have opportunities to work with this and other datasets throughout the unit to practice creating 1D arrays and writing standard algorithms to find information, perform manipulations, and identify trends in preparation for the Data for Social Good Project during the Show What You Know week. You may show the full dataset on Kaggle and have students consider questions they could answer about this dataset and what problems they could solve based on information they could discover."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "a3d86628-ebfb-4651-9c24-9d10130eaea8",
+        "lesson_activity.key": "a222f7ce-578f-4384-a8d6-1d9114ad5d0c"
+      }
+    },
+    {
+      "key": "b8dd5429-2e95-4dfa-880f-72fe36518020",
+      "position": 15,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 5 on Code Studio to complete Levels 5, 6, and 7. Students complete a Check for Understanding, then continue to Level 6 to complete a choice level to return the length of a 1D array from a class. On Level 7, students complete a choice level to declare and initialize a 1D array.",
+        "progression_name": "Practice: Creating 1D Arrays",
+        "tips": [
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "The Check for Understanding and practice level can be used as a formative assessment to gauge understanding of the key terms, creating 1D arrays using the new keyword, and accessing the length of a 1D array."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "b8dd5429-2e95-4dfa-880f-72fe36518020",
+        "lesson_activity.key": "a222f7ce-578f-4384-a8d6-1d9114ad5d0c"
+      }
+    },
+    {
+      "key": "92b891a0-0115-4c3b-a814-fef30fe2352a",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What are some physical examples that are similar to a 1D array?*\n\n**Discussion Goal:** Students suggest physical items that can store multiple items, such as a storage facility, school lockers, or a bike rack.",
+        "name": "Physical Arrays",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Use the Hold That Thought strategy to allow students to write down their thoughts on paper first. Emphasize that they do not need to write complete sentences – they can write a few words, bullet points, draw a quick sketch, or anything else that will help them gather and recall their thoughts when it is time to share with the class."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "92b891a0-0115-4c3b-a814-fef30fe2352a",
+        "lesson_activity.key": "d05a6ffd-d670-4a5f-bcca-57b23d497c43"
+      }
+    },
+    {
+      "key": "84b692c9-2d9e-4744-908b-c2e202e97e3c",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "The Unit 3 Guide includes the Question of the Day and an end-of-lesson reflection prompt for students to summarize what they have learned and reflect on their progress. Have students respond to these prompts after reviewing the concepts covered in this lesson to help them process and make meaningful connections with the new content."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "84b692c9-2d9e-4744-908b-c2e202e97e3c",
+        "lesson_activity.key": "d05a6ffd-d670-4a5f-bcca-57b23d497c43"
+      }
+    },
+    {
+      "key": "31f20a22-eedf-4181-8168-e672d6073813",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary"
+      },
+      "seeding_key": {
+        "activity_section.key": "31f20a22-eedf-4181-8168-e672d6073813",
+        "lesson_activity.key": "d05a6ffd-d670-4a5f-bcca-57b23d497c43"
+      }
+    },
+    {
+      "key": "bc732005-abbe-4dbb-a4e8-0e4242bb0ee3",
+      "position": 4,
+      "properties": {
+        "description": "---"
+      },
+      "seeding_key": {
+        "activity_section.key": "bc732005-abbe-4dbb-a4e8-0e4242bb0ee3",
+        "lesson_activity.key": "d05a6ffd-d670-4a5f-bcca-57b23d497c43"
+      }
+    },
+    {
+      "key": "4dba8e79-c0da-491b-a49f-e8dd4c797284",
+      "position": 5,
+      "properties": {
+        "description": "*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*",
+        "name": "Assessment: Check for Understanding",
+        "progression_name": "Check for Understanding"
+      },
+      "seeding_key": {
+        "activity_section.key": "4dba8e79-c0da-491b-a49f-e8dd4c797284",
+        "lesson_activity.key": "d05a6ffd-d670-4a5f-bcca-57b23d497c43"
+      }
+    },
+    {
+      "key": "33327f1a-4ff9-48a5-8137-0fa428c98e76",
+      "position": 6,
+      "properties": {
+        "description": "To assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).",
+        "name": "AP Classroom Topic Questions"
+      },
+      "seeding_key": {
+        "activity_section.key": "33327f1a-4ff9-48a5-8137-0fa428c98e76",
+        "lesson_activity.key": "d05a6ffd-d670-4a5f-bcca-57b23d497c43"
+      }
+    },
+    {
+      "key": "02114e55-4866-4028-a84e-f4c3fbeb5672",
+      "position": 1,
+      "properties": {
+        "description": "Data is all around us. Companies collect and analyze data to identify trends and make decisions about new products or services to offer or make recommendations based on things we search for or like. Software engineers create programs to store and process data to identify trends and find information.",
+        "name": "Software Engineers and Data",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "02114e55-4866-4028-a84e-f4c3fbeb5672",
+        "lesson_activity.key": "a959b767-1581-4260-bdfd-7772a07d382b"
+      }
+    },
+    {
+      "key": "f0078834-19d7-45b4-8b64-c2bb8dc3c0a7",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the dataset.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What information could someone get from this data? How might they use this information?*\n\n**Discussion Goal:** Students suggest that a store could use this information to determine which candies were most popular to decide how much to stock of each type. Students might also suggest that someone might use this information to decide which candy to buy to hand out at Halloween.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Use the Hold That Thought strategy to allow students to write down their thoughts on paper first. Emphasize that they do not need to write complete sentences – they can write a few words, bullet points, draw a quick sketch, or anything else that will help them gather and recall their thoughts when it is time to share with the class."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "f0078834-19d7-45b4-8b64-c2bb8dc3c0a7",
+        "lesson_activity.key": "a959b767-1581-4260-bdfd-7772a07d382b"
+      }
+    },
+    {
+      "key": "38089c22-1e2c-4fbd-8159-6e1e7418c469",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What data would you want to collect and analyze? What would you want to find out?*\n\n**Discussion Goal:** Students share ideas of data they would want to analyze related to their personal interests, such as popular songs or movies.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Ask students about their personal interests or hobbies and the data that might be collected. You could also ask students to consider how social media services determine a topic is trending or how a company knows that a product they sell is popular."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "38089c22-1e2c-4fbd-8159-6e1e7418c469",
+        "lesson_activity.key": "a959b767-1581-4260-bdfd-7772a07d382b"
+      }
+    },
+    {
+      "key": "cb7e611d-a34e-4284-a158-c94dc773eaed",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day.",
+        "duration": "5",
+        "name": "Introduction"
+      },
+      "seeding_key": {
+        "activity_section.key": "cb7e611d-a34e-4284-a158-c94dc773eaed",
+        "lesson_activity.key": "e84ef974-a1fe-4098-aad5-675c9a771c0d"
+      }
+    },
+    {
+      "key": "38d7455b-d708-4933-bd80-f947401183d5",
+      "position": 2,
+      "properties": {
+        "description": "We have learned about using 1D arrays to store multiple related values of the same type and how to assign and access values at specific positions. When we created a 1D array using the `new` keyword, we had to assign values to specific positions one at a time. Today, we will learn another way we can create 1D arrays and explore how we access and assign values.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "38d7455b-d708-4933-bd80-f947401183d5",
+        "lesson_activity.key": "e84ef974-a1fe-4098-aad5-675c9a771c0d"
+      }
+    },
+    {
+      "key": "e72dd1ff-77c0-46ac-80db-7ee7f5b8ae4d",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to predict the program's outcome, then run the program to compare their predictions to the actual outcome.",
+        "progression_name": "Predict and Run: Initializer Lists"
+      },
+      "seeding_key": {
+        "activity_section.key": "e72dd1ff-77c0-46ac-80db-7ee7f5b8ae4d",
+        "lesson_activity.key": "e84ef974-a1fe-4098-aad5-675c9a771c0d"
+      }
+    },
+    {
+      "key": "b8815b02-e464-4afc-a308-559d65f39e10",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What did you notice about the code in this program?*\n* *What do you wonder about the code in this program?*\n\n**Discussion Goal:** Students notice that the values are assigned to each position in the 1D array in one line instead of by specifying each index. Students may wonder why they would declare and initialize a 1D array using the new keyword instead of an initializer list."
+      },
+      "seeding_key": {
+        "activity_section.key": "b8815b02-e464-4afc-a308-559d65f39e10",
+        "lesson_activity.key": "e84ef974-a1fe-4098-aad5-675c9a771c0d"
+      }
+    },
+    {
+      "key": "e828a43a-04dc-4107-91e4-c3b3ce900941",
+      "position": 5,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Recall the structure of a one-dimensional (1D) array.",
+        "duration": "10",
+        "name": "Assigning and Accessing Elements"
+      },
+      "seeding_key": {
+        "activity_section.key": "e828a43a-04dc-4107-91e4-c3b3ce900941",
+        "lesson_activity.key": "e84ef974-a1fe-4098-aad5-675c9a771c0d"
+      }
+    },
+    {
+      "key": "ac4aa275-c71d-4317-bd98-47c0fd25fe06",
+      "position": 6,
+      "properties": {
+        "description": "We have learned how to declare and initialize a 1D array using the `new` keyword. This is useful when we don't know the initial values we need to assign, but sometimes we already know what values we need to store. Java gives us another way to declare and initialize a 1D array for these scenarios.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "ac4aa275-c71d-4317-bd98-47c0fd25fe06",
+        "lesson_activity.key": "e84ef974-a1fe-4098-aad5-675c9a771c0d"
+      }
+    },
+    {
+      "key": "887e8edd-a488-4663-8cac-98f2853dec18",
+      "position": 7,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 2 on Code Studio complete Levels 2, 3, and 4. Students investigate the program, make changes to the program as prompted, and observe the results.",
+        "progression_name": "Investigate and Modify: Assigning and Accessing Elements"
+      },
+      "seeding_key": {
+        "activity_section.key": "887e8edd-a488-4663-8cac-98f2853dec18",
+        "lesson_activity.key": "e84ef974-a1fe-4098-aad5-675c9a771c0d"
+      }
+    },
+    {
+      "key": "665fb57a-8a45-4c1e-9320-08532614720e",
+      "position": 8,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students share what they discovered from the modifications they made to the code."
+      },
+      "seeding_key": {
+        "activity_section.key": "665fb57a-8a45-4c1e-9320-08532614720e",
+        "lesson_activity.key": "e84ef974-a1fe-4098-aad5-675c9a771c0d"
+      }
+    },
+    {
+      "key": "9881ee2c-14ef-4db3-997e-b549d651f1d2",
+      "position": 9,
+      "properties": {
+        "description": "We can assign and modify the values at each position in a 1D array using the assignment operator in a similar way that we can assign a value to a variable and modify its value.",
+        "duration": "10",
+        "name": "Working with Elements",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "9881ee2c-14ef-4db3-997e-b549d651f1d2",
+        "lesson_activity.key": "e84ef974-a1fe-4098-aad5-675c9a771c0d"
+      }
+    },
+    {
+      "key": "8d8f8018-490d-4a06-97d1-28ecd0081d4e",
+      "position": 10,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to define ***initializer list***.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Define ***index***.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate the syntax for accessing and assigning an element in a 1D array.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the video – *Modifying Values in a 1D Array*.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Videos are used throughout the curriculum to spark discussions, supplement key concepts with additional explanations and examples, and expose students to the various roles and backgrounds of individuals in computer science.\n\nWhile interacting with the video, turn on closed captioning so students can also read along as they watch.\n\nTo encourage active engagement and reflection, use one or more of the strategies discussed in the [**Guide to Curriculum Videos**](https://docs.google.com/document/d/1FqIUpJg6MrgdtbFGLobSojOz0u1m5Jge1nMAjUqI5ZM/edit?usp=sharing)."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "8d8f8018-490d-4a06-97d1-28ecd0081d4e",
+        "lesson_activity.key": "e84ef974-a1fe-4098-aad5-675c9a771c0d"
+      }
+    },
+    {
+      "key": "65bd717d-20e6-405d-aea3-5e54297bba0f",
+      "position": 11,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *How is assigning a value to a position in a 1D array similar to assigning a value to a variable? How is it different?*\n\n**Discussion Goal:** Students realize that they can assign a value to a position in a 1D array by first stating the name of the array variable and using the assignment operator ( `=` ) to assign a value. Students note that the syntax is slightly different than assigning a value to a variable because they need to use the square brackets ( `[ ]` ) and specify the index where the value needs to be assigned.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Use the Retrieve-Pair-Share strategy to facilitate this discussion by directing students to write down their thoughts and ideas first, then pair up students to compare their answers and expand their notes. This allows time for individual processing and idea generation before sharing thoughts with others. Ask students to share the ideas they discussed with their partners as a class."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "65bd717d-20e6-405d-aea3-5e54297bba0f",
+        "lesson_activity.key": "e84ef974-a1fe-4098-aad5-675c9a771c0d"
+      }
+    },
+    {
+      "key": "2ff91fca-8ff8-4117-a1ce-76985066c066",
+      "position": 12,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to explain that the size and data type of a 1D array is established at the time of creation and cannot be changed."
+      },
+      "seeding_key": {
+        "activity_section.key": "2ff91fca-8ff8-4117-a1ce-76985066c066",
+        "lesson_activity.key": "e84ef974-a1fe-4098-aad5-675c9a771c0d"
+      }
+    },
+    {
+      "key": "5149cabd-9c84-456f-b560-5c62163cd394",
+      "position": 13,
+      "properties": {
+        "description": "We now have another way to create 1D arrays and access the elements that are assigned to each position. Let's practice using what we have learned about 1D arrays!",
+        "duration": "10",
+        "name": "Putting It All Together",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "5149cabd-9c84-456f-b560-5c62163cd394",
+        "lesson_activity.key": "e84ef974-a1fe-4098-aad5-675c9a771c0d"
+      }
+    },
+    {
+      "key": "94d2226b-83a0-4897-9b5c-5a2691ff2949",
+      "position": 14,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 5 on Code Studio to complete Levels 5, 6, and 7. Students complete a Check for Understanding, then continue to Level 6 to complete a choice level to create a 1D array using an initializer list. On Level 7, students complete a choice level to modify the values stored in a 1D array.",
+        "progression_name": "Practice: Creating 1D Arrays",
+        "tips": [
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "The Check for Understanding and practice level can be used as a formative assessment to gauge understanding of the key terms, creating 1D arrays using an initializer list, and accessing and modifying elements."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "94d2226b-83a0-4897-9b5c-5a2691ff2949",
+        "lesson_activity.key": "e84ef974-a1fe-4098-aad5-675c9a771c0d"
+      }
+    },
+    {
+      "key": "5576ba8f-6a55-4456-8a72-cc0158c15ecc",
+      "position": 1,
+      "properties": {
+        "description": "We have learned a lot about 1D arrays so far! Let's take a moment to reflect on what we have learned and consider how we can use these with what we already know about Java to solve new problems.",
+        "name": "Revisiting Dessert Flavors",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "5576ba8f-6a55-4456-8a72-cc0158c15ecc",
+        "lesson_activity.key": "f736c7dd-453f-42ad-a91a-66d7429b8982"
+      }
+    },
+    {
+      "key": "02f56eab-f985-47d1-9361-c556c58a3fb5",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Based on what we now know about 1D arrays, how can we store these values in a program?*\n\n**Discussion Goal:** Students suggest declaring and initializing a 1D array and assigning each value to the appropriate position in the array.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate a solution.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "The Unit 3 Guide includes the Question of the Day and an end-of-lesson reflection prompt for students to summarize what they have learned and reflect on their progress. Have students respond to these prompts after reviewing the concepts covered in this lesson to help them process and make meaningful connections with the new content."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "02f56eab-f985-47d1-9361-c556c58a3fb5",
+        "lesson_activity.key": "f736c7dd-453f-42ad-a91a-66d7429b8982"
+      }
+    },
+    {
+      "key": "5d5beff9-e6f9-4ed0-9fe5-f10e03742522",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary"
+      },
+      "seeding_key": {
+        "activity_section.key": "5d5beff9-e6f9-4ed0-9fe5-f10e03742522",
+        "lesson_activity.key": "f736c7dd-453f-42ad-a91a-66d7429b8982"
+      }
+    },
+    {
+      "key": "68905b63-56e3-4da1-bca9-536790015de4",
+      "position": 4,
+      "properties": {
+        "description": "---"
+      },
+      "seeding_key": {
+        "activity_section.key": "68905b63-56e3-4da1-bca9-536790015de4",
+        "lesson_activity.key": "f736c7dd-453f-42ad-a91a-66d7429b8982"
+      }
+    },
+    {
+      "key": "0bbb3fce-f402-4a5b-9445-2aa11434ed94",
+      "position": 5,
+      "properties": {
+        "description": "*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*",
+        "name": "Assessment: Check for Understanding",
+        "progression_name": "Check for Understanding"
+      },
+      "seeding_key": {
+        "activity_section.key": "0bbb3fce-f402-4a5b-9445-2aa11434ed94",
+        "lesson_activity.key": "f736c7dd-453f-42ad-a91a-66d7429b8982"
+      }
+    },
+    {
+      "key": "d636842b-9cd5-4a5a-bc0c-a882b08e31e2",
+      "position": 6,
+      "properties": {
+        "description": "To assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\nThe following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 6.1\n\n**Note:** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*",
+        "name": "AP Classroom Topic Questions"
+      },
+      "seeding_key": {
+        "activity_section.key": "d636842b-9cd5-4a5a-bc0c-a882b08e31e2",
+        "lesson_activity.key": "f736c7dd-453f-42ad-a91a-66d7429b8982"
+      }
+    }
   ],
   "script_levels": [
-
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Predict and Run: Storing Multiple Values"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U3L1-L1_2023"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa3-2023",
+        "activity_section.key": "1629e964-b35a-494e-9647-df00cfcfd586"
+      },
+      "level_keys": [
+        "CSA U3L1-L1_2023"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Investigate and Modify: 1D Arrays"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U3L1-L2_2023"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa3-2023",
+        "activity_section.key": "41aeac3f-df09-4fff-a736-046d7877cd2f"
+      },
+      "level_keys": [
+        "CSA U3L1-L2_2023"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 3,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Investigate and Modify: 1D Arrays"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U3L1-L3_2023"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa3-2023",
+        "activity_section.key": "41aeac3f-df09-4fff-a736-046d7877cd2f"
+      },
+      "level_keys": [
+        "CSA U3L1-L3_2023"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 4,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Investigate and Modify: 1D Arrays"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U3L1-L4_2023"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa3-2023",
+        "activity_section.key": "41aeac3f-df09-4fff-a736-046d7877cd2f"
+      },
+      "level_keys": [
+        "CSA U3L1-L4_2023"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 5,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "progression": "Practice: Creating 1D Arrays"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U3L1-L5_2023"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa3-2023",
+        "activity_section.key": "b8dd5429-2e95-4dfa-880f-72fe36518020"
+      },
+      "level_keys": [
+        "CSA U3L1-L5_2023"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 6,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Practice: Creating 1D Arrays"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U3L1-L6_2023"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa3-2023",
+        "activity_section.key": "b8dd5429-2e95-4dfa-880f-72fe36518020"
+      },
+      "level_keys": [
+        "CSA U3L1-L6_2023"
+      ]
+    },
+    {
+      "chapter": 7,
+      "position": 7,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Practice: Creating 1D Arrays"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U3L1-L7_2023"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa3-2023",
+        "activity_section.key": "b8dd5429-2e95-4dfa-880f-72fe36518020"
+      },
+      "level_keys": [
+        "CSA U3L1-L7_2023"
+      ]
+    },
+    {
+      "chapter": 8,
+      "position": 8,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "progression": "Check for Understanding"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U3L1-L8_2023"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa3-2023",
+        "activity_section.key": "4dba8e79-c0da-491b-a49f-e8dd4c797284"
+      },
+      "level_keys": [
+        "CSA U3L1-L8_2023"
+      ]
+    },
+    {
+      "chapter": 9,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Predict and Run: Initializer Lists"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U3L2-L1_2023"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa3-2023",
+        "activity_section.key": "e72dd1ff-77c0-46ac-80db-7ee7f5b8ae4d"
+      },
+      "level_keys": [
+        "CSA U3L2-L1_2023"
+      ]
+    },
+    {
+      "chapter": 10,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Investigate and Modify: Assigning and Accessing Elements"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U3L2-L2_2023"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa3-2023",
+        "activity_section.key": "887e8edd-a488-4663-8cac-98f2853dec18"
+      },
+      "level_keys": [
+        "CSA U3L2-L2_2023"
+      ]
+    },
+    {
+      "chapter": 11,
+      "position": 3,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Investigate and Modify: Assigning and Accessing Elements"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U3L2-L3_2023"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa3-2023",
+        "activity_section.key": "887e8edd-a488-4663-8cac-98f2853dec18"
+      },
+      "level_keys": [
+        "CSA U3L2-L3_2023"
+      ]
+    },
+    {
+      "chapter": 12,
+      "position": 4,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Investigate and Modify: Assigning and Accessing Elements"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U3L2-L4_2023"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa3-2023",
+        "activity_section.key": "887e8edd-a488-4663-8cac-98f2853dec18"
+      },
+      "level_keys": [
+        "CSA U3L2-L4_2023"
+      ]
+    },
+    {
+      "chapter": 13,
+      "position": 5,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "progression": "Practice: Creating 1D Arrays"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U3L2-L5_2023"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa3-2023",
+        "activity_section.key": "94d2226b-83a0-4897-9b5c-5a2691ff2949"
+      },
+      "level_keys": [
+        "CSA U3L2-L5_2023"
+      ]
+    },
+    {
+      "chapter": 14,
+      "position": 6,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Practice: Creating 1D Arrays"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U3L2-L6_2023"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa3-2023",
+        "activity_section.key": "94d2226b-83a0-4897-9b5c-5a2691ff2949"
+      },
+      "level_keys": [
+        "CSA U3L2-L6_2023"
+      ]
+    },
+    {
+      "chapter": 15,
+      "position": 7,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Practice: Creating 1D Arrays"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U3L2-L7_2023"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa3-2023",
+        "activity_section.key": "94d2226b-83a0-4897-9b5c-5a2691ff2949"
+      },
+      "level_keys": [
+        "CSA U3L2-L7_2023"
+      ]
+    },
+    {
+      "chapter": 16,
+      "position": 8,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "progression": "Check for Understanding"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U3L2-L8_2023"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa3-2023",
+        "activity_section.key": "0bbb3fce-f402-4a5b-9445-2aa11434ed94"
+      },
+      "level_keys": [
+        "CSA U3L2-L8_2023"
+      ]
+    }
   ],
   "levels_script_levels": [
-
+    {
+      "seeding_key": {
+        "level.key": "CSA U3L1-L1_2023",
+        "script_level.level_keys": [
+          "CSA U3L1-L1_2023"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa3-2023",
+        "activity_section.key": "1629e964-b35a-494e-9647-df00cfcfd586"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U3L1-L2_2023",
+        "script_level.level_keys": [
+          "CSA U3L1-L2_2023"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa3-2023",
+        "activity_section.key": "41aeac3f-df09-4fff-a736-046d7877cd2f"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U3L1-L3_2023",
+        "script_level.level_keys": [
+          "CSA U3L1-L3_2023"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa3-2023",
+        "activity_section.key": "41aeac3f-df09-4fff-a736-046d7877cd2f"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U3L1-L4_2023",
+        "script_level.level_keys": [
+          "CSA U3L1-L4_2023"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa3-2023",
+        "activity_section.key": "41aeac3f-df09-4fff-a736-046d7877cd2f"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U3L1-L5_2023",
+        "script_level.level_keys": [
+          "CSA U3L1-L5_2023"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa3-2023",
+        "activity_section.key": "b8dd5429-2e95-4dfa-880f-72fe36518020"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U3L1-L6_2023",
+        "script_level.level_keys": [
+          "CSA U3L1-L6_2023"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa3-2023",
+        "activity_section.key": "b8dd5429-2e95-4dfa-880f-72fe36518020"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U3L1-L7_2023",
+        "script_level.level_keys": [
+          "CSA U3L1-L7_2023"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa3-2023",
+        "activity_section.key": "b8dd5429-2e95-4dfa-880f-72fe36518020"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U3L1-L8_2023",
+        "script_level.level_keys": [
+          "CSA U3L1-L8_2023"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa3-2023",
+        "activity_section.key": "4dba8e79-c0da-491b-a49f-e8dd4c797284"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U3L2-L1_2023",
+        "script_level.level_keys": [
+          "CSA U3L2-L1_2023"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa3-2023",
+        "activity_section.key": "e72dd1ff-77c0-46ac-80db-7ee7f5b8ae4d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U3L2-L2_2023",
+        "script_level.level_keys": [
+          "CSA U3L2-L2_2023"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa3-2023",
+        "activity_section.key": "887e8edd-a488-4663-8cac-98f2853dec18"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U3L2-L3_2023",
+        "script_level.level_keys": [
+          "CSA U3L2-L3_2023"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa3-2023",
+        "activity_section.key": "887e8edd-a488-4663-8cac-98f2853dec18"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U3L2-L4_2023",
+        "script_level.level_keys": [
+          "CSA U3L2-L4_2023"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa3-2023",
+        "activity_section.key": "887e8edd-a488-4663-8cac-98f2853dec18"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U3L2-L5_2023",
+        "script_level.level_keys": [
+          "CSA U3L2-L5_2023"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa3-2023",
+        "activity_section.key": "94d2226b-83a0-4897-9b5c-5a2691ff2949"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U3L2-L6_2023",
+        "script_level.level_keys": [
+          "CSA U3L2-L6_2023"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa3-2023",
+        "activity_section.key": "94d2226b-83a0-4897-9b5c-5a2691ff2949"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U3L2-L7_2023",
+        "script_level.level_keys": [
+          "CSA U3L2-L7_2023"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa3-2023",
+        "activity_section.key": "94d2226b-83a0-4897-9b5c-5a2691ff2949"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U3L2-L8_2023",
+        "script_level.level_keys": [
+          "CSA U3L2-L8_2023"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa3-2023",
+        "activity_section.key": "0bbb3fce-f402-4a5b-9445-2aa11434ed94"
+      }
+    }
   ],
   "resources": [
-
+    {
+      "name": "Modifying Elements",
+      "url": "https://docs.google.com/presentation/d/1E8G1t0h4bX3jnUITNVcR4IjtZI2kUA4DWezfYDy8JDU/edit?usp=sharing",
+      "key": "modifying_elements",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "modifying_elements"
+      }
+    },
+    {
+      "name": "Modifying Values in a 1D Array",
+      "url": "https://youtu.be/AGp_5hB6dBE",
+      "key": "modifying_values_in_a_1d_array",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "modifying_values_in_a_1d_array"
+      }
+    },
+    {
+      "name": "One-Dimensional (1D) Arrays",
+      "url": "https://docs.google.com/presentation/d/1ILRcTvqHwzkyKoYf9i_REBoWZQuF_ooafnmvL0mm-8k/edit?usp=sharing",
+      "key": "one-dimensional_1d_arrays",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "one-dimensional_1d_arrays"
+      }
+    },
+    {
+      "name": "One-Dimensional (1D) Arrays",
+      "url": "https://youtu.be/MgRMA_qZxZ4",
+      "key": "one-dimensional_1d_arrays_1",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "one-dimensional_1d_arrays_1"
+      }
+    },
+    {
+      "name": "U3L1 Extra Practice",
+      "url": "https://docs.google.com/document/d/1xz52naX5m67u5X-huvkElaTKKwz06uPw_Q2Qp1En5AA/edit?usp=sharing",
+      "key": "u3l1_extra_practice",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "u3l1_extra_practice"
+      }
+    },
+    {
+      "name": "U3L1 Extra Practice",
+      "url": "https://docs.google.com/document/d/1mHGQY_wjNcEM3RF72WJcBxm7x7zxp1fweTycE27miVU/edit?usp=sharing",
+      "key": "u3l1_extra_practice_1",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "u3l1_extra_practice_1"
+      }
+    },
+    {
+      "name": "U3L2 Extra Practice",
+      "url": "https://docs.google.com/document/d/1Xy9dqVtdcmaN2sMt5zpuXKiAG6nWsCDutGOtBzkRKnE/edit?usp=sharing",
+      "key": "u3l2_extra_practice",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "u3l2_extra_practice"
+      }
+    },
+    {
+      "name": "U3L2 Extra Practice",
+      "url": "https://docs.google.com/document/d/13M7L-uaed6l1O6d7461POhmp0HfnaBpmmgrh-rlD7XE/edit?usp=sharing",
+      "key": "u3l2_extra_practice_1",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "u3l2_extra_practice_1"
+      }
+    },
+    {
+      "name": "Unit 3 Guide",
+      "url": "https://docs.google.com/document/d/1dH7e3MZd4zSxKvdrzoshGiY6MP_f-BgxStgfQJtHbeo/edit?usp=sharing",
+      "key": "unit_3_guide",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "unit_3_guide"
+      }
+    }
   ],
   "lessons_resources": [
-
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "resource.key": "one-dimensional_1d_arrays"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "resource.key": "one-dimensional_1d_arrays_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "resource.key": "u3l1_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "resource.key": "u3l1_extra_practice_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "resource.key": "unit_3_guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "resource.key": "modifying_elements"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "resource.key": "modifying_values_in_a_1d_array"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "resource.key": "u3l2_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "resource.key": "u3l2_extra_practice_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "resource.key": "unit_3_guide"
+      }
+    }
   ],
   "scripts_resources": [
 
@@ -65,19 +1717,170 @@
 
   ],
   "vocabularies": [
-
+    {
+      "key": "data_structure",
+      "word": "data structure",
+      "definition": "a structure for organizing, processing, retrieving, and storing data",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "data_structure"
+      }
+    },
+    {
+      "key": "element",
+      "word": "element",
+      "definition": "a single value or object in a data structure",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "element"
+      }
+    },
+    {
+      "key": "index",
+      "word": "index",
+      "definition": "an integer value that indicates the position of a value in a data structure",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "index"
+      }
+    },
+    {
+      "key": "initializer_list",
+      "word": "initializer list",
+      "definition": "a comma-separated list of values or objects given inside curly braces ( `{ }` )",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "initializer_list"
+      }
+    },
+    {
+      "key": "one_dimensional_d_array",
+      "word": "one-dimensional (1D) array",
+      "definition": "a data structure that holds multiple values of the same data type",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "one_dimensional_d_array"
+      }
+    }
   ],
   "lessons_vocabularies": [
-
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "vocabulary.key": "data_structure"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "vocabulary.key": "element"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "vocabulary.key": "one_dimensional_d_array"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "vocabulary.key": "index"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "vocabulary.key": "initializer_list"
+      }
+    }
   ],
   "lessons_programming_expressions": [
 
   ],
   "objectives": [
-
+    {
+      "key": "4ff90ac3-7ff0-40e8-9c34-753771174d40",
+      "properties": {
+        "description": "Declare and initialize a one-dimensional (1D) array using the `new` keyword"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "objective.key": "4ff90ac3-7ff0-40e8-9c34-753771174d40"
+      }
+    },
+    {
+      "key": "b7f589ac-4e0e-4b7e-b010-601f711076de",
+      "properties": {
+        "description": "Declare and initialize a one-dimensional (1D) array using an initializer list"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "objective.key": "b7f589ac-4e0e-4b7e-b010-601f711076de"
+      }
+    },
+    {
+      "key": "e1ebba4d-5144-48b8-976a-24980da0dcc2",
+      "properties": {
+        "description": "Determine the length of a one-dimensional (1D) array"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "objective.key": "e1ebba4d-5144-48b8-976a-24980da0dcc2"
+      }
+    },
+    {
+      "key": "fe1780de-7b1a-4797-8325-2affcbebd345",
+      "properties": {
+        "description": "Access and modify an element assigned at a specific index in a one-dimensional (1D) array"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "objective.key": "fe1780de-7b1a-4797-8325-2affcbebd345"
+      }
+    }
   ],
   "lessons_standards": [
-
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "VAR-2.A.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "VAR-2.A.4"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "VAR-2.A.2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "VAR-2.A.5"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "VAR-2.A.6"
+      }
+    }
   ],
   "lessons_opportunity_standards": [
 

@@ -1267,6 +1267,10 @@ is:
             "'sound://category_digital/jump_7.mp3'": hoppa
       gamelab_playSoundOptionsSoccer:
         text: spilaHljóð {SOUND}
+        options:
+          SOUND:
+            "'sound://category_sports/Airhorn_SFX.mp3'": loftlúður
+            "'sound://category_sports/One_Whistle_SFX.mp3'": flauta
       gamelab_playSoundOptionsSpace:
         text: spilaHljóð {SOUND}
       gamelab_playerBehaviors:

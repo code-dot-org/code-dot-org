@@ -1487,8 +1487,14 @@ kn:
         csp5-2023:
           lesson_groups:
             csp_lists:
-              display_name: ಪಟ್ಟಿಗಳು
+              display_name: ಡೇಟಾ
             csp_loops:
+              display_name: ಲೂಪ್‌ಗಳು
+        csp6-2023:
+          lesson_groups:
+            csp_unit6_2020:
+              display_name: ಪಟ್ಟಿಗಳು
+            lessonGroup-3:
               display_name: ಲೂಪ್‌ಗಳು
         csp-playground:
           description_audience: ಪಠ್ಯಕ್ರಮ ಬರಹಗಾರರು

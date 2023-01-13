@@ -2728,10 +2728,18 @@ fil:
         csp5-2023:
           lesson_groups:
             csp_lists:
-              display_name: Mga listahan
+              display_name: Data
             csp_loops:
               display_name: Mga loop
             csp_project:
+              display_name: Proyekto
+        csp6-2023:
+          lesson_groups:
+            csp_unit6_2020:
+              display_name: Mga listahan
+            lessonGroup-3:
+              display_name: Mga loop
+            lessonGroup-5:
               display_name: Proyekto
         csp8-2023:
           lesson_groups:

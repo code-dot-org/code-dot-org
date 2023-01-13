@@ -209,7 +209,7 @@ fr:
           student_description: Essayez ces amusantes casse-têtes de codage. Faites
             de votre mieux !
         Tutorial Video - Code Studio Puzzle Challenge:
-          title: Tutoriel - Défi d'énigmes sur Code Studio
+          title: Tutoriel - Défi d' casse-têtes sur Code Studio
           description: Essayez ces amusantes casse-têtes de codage. Faites de votre
             mieux !
           description_short: Relevez le défi !
@@ -4256,15 +4256,15 @@ fr:
             hautement interactive et collaborative au domaine de l'informatique, dans
             le cadre plus large de la résolution de problèmes. Vous allez vous exercer
             à utiliser un processus de résolution de problèmes pour résoudre une série
-            d'énigmes, de défis et de scénarios du monde réel. Ensuite, vous apprendrez
-            comment les ordinateurs entrent, sortent, stockent et traitent les informations
-            pour aider les humains à résoudre des problèmes.  L'unité se termine par
-            un projet dans lequel vous concevez une application qui aide à résoudre
-            un problème de votre choix. \n\n\\*\\*Conseils pour la mise en œuvre de
-            l'unité 1\n\n-   Le chapitre 1 de l'unité 1 doit être terminé avant toute
-            autre unité de CS Discoveries.\n-   Des leçons alternatives sont fournies
-            pour certaines leçons de l'unité 1, selon le contexte de votre classe.\n-
-            \  Vous pouvez consulter le [Guide du programme](https://docs.google.com/document/d/1myJwrDyRlAjwVNDS3gs-3JaJNhogsGMt9Swo-bpySgE/preview)
+            d' casse-têtes, de défis et de scénarios du monde réel. Ensuite, vous
+            apprendrez comment les ordinateurs entrent, sortent, stockent et traitent
+            les informations pour aider les humains à résoudre des problèmes.  L'unité
+            se termine par un projet dans lequel vous concevez une application qui
+            aide à résoudre un problème de votre choix. \n\n\\*\\*Conseils pour la
+            mise en œuvre de l'unité 1\n\n-   Le chapitre 1 de l'unité 1 doit être
+            terminé avant toute autre unité de CS Discoveries.\n-   Des leçons alternatives
+            sont fournies pour certaines leçons de l'unité 1, selon le contexte de
+            votre classe.\n-   Vous pouvez consulter le [Guide du programme](https://docs.google.com/document/d/1myJwrDyRlAjwVNDS3gs-3JaJNhogsGMt9Swo-bpySgE/preview)
             et le [Guide de mise en œuvre](https://docs.google.com/document/d/1u-eIlB2cAwMuSckzbMWkteQIcsXgez7FTrbjP8PBB4o/preview)
             pour plus d'informations sur cette unité.\n\nTraduit avec www.DeepL.com/Translator
             (version gratuite)"
@@ -5704,7 +5704,7 @@ fr:
           description: "Résolution de problèmes et informatique est une introduction
             hautement interactive et collaborative au domaine de l'informatique, dans
             le cadre plus large de la résolution de problèmes. Vous allez appliquer
-            un processus de résolution de problèmes pour résoudre une série d'énigmes,
+            un processus de résolution de problèmes pour résoudre une série d' casse-têtes,
             de défis et de scénarios du monde réel. Ensuite, vous apprendrez comment
             les ordinateurs entrent, sortent, stockent et traitent les informations
             pour aider les humains à résoudre des problèmes.  L'unité se termine par
@@ -5957,7 +5957,7 @@ fr:
         csp5-2023:
           lesson_groups:
             csp_lists:
-              display_name: Listes
+              display_name: Données
             csp_loops:
               display_name: Boucles
             csp_traversals:
@@ -5969,9 +5969,15 @@ fr:
         csp6-2023:
           lesson_groups:
             csp_unit6_2020:
-              display_name: 'Unité 6 : Les Algorithmes'
+              display_name: Listes
             lessonGroup-2:
               display_name: Suivi d'après cours
+            lessonGroup-3:
+              display_name: Boucles
+            lessonGroup-4:
+              display_name: Parcours
+            lessonGroup-5:
+              display_name: Projet
         csp7-2023:
           lesson_groups:
             csp_parameters_return_values:
