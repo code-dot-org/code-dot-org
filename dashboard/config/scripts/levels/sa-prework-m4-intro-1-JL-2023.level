@@ -8,8 +8,9 @@
     "csa_view_mode": "neighborhood",
     "start_sources": {
       "MyNeighborhood.java": {
-        "text": "import org.code.neighborhood.Painter;\n\npublic class MyNeighborhood {\n  public static void main(String[] args) {\n\n    Painter myPainter = new Painter();\n\n    myPainter.move();\n\n    myPainter.takePaint();\n    myPainter.takePaint();\n\n    myPainter.move();\n    myPainter.paint(\"white\");\n\n    // TO DO: Use an if statement and the isOnPaint() method\n    // to move forward one square if the myPainter object is\n    // standing on paint.\n\n\n    \n  }\n}\n",
-        "isVisible": true
+        "text": "import org.code.neighborhood.Painter;\n\npublic class MyNeighborhood {\n  public static void main(String[] args) {\n\n    Painter painterPete = new Painter();\n\n    painterPete.move();\n\n    painterPete.takePaint();\n    painterPete.takePaint();\n    painterPete.takePaint();\n    painterPete.takePaint();\n\n    painterPete.move();\n    painterPete.paint(\"white\");\n\n    // TO DO: Add code to paint three more green spaces.\n\n\n    \n  }\n}\n",
+        "isVisible": true,
+        "tabOrder": 0
       }
     },
     "serialized_maze": [
@@ -350,7 +351,7 @@
         }
       ]
     ],
-    "long_instructions": "##In MyNeighborhood.java\r\n\r\n1. Use an `if`(#e7e8ea) statement and the `isOnPaint()`(#e7e8ea) method to move forward one square if the `Painter`(#e7e8ea) object is standing on paint.\r\n\r\n![](https://images.code.org/63bca5cc03088bd0239fd71603178b8b-image-1646320550379.gif)\r\n\r\n::: details [**Show Me How**]\r\nAn `if`(#e7e8ea) statement uses the following syntax:\r\n  \r\n  ```\r\n  if (condition) {\r\n     // code to execute if condition is true\r\n  }\r\n  ```\r\n:::",
+    "long_instructions": "##Context\r\n\r\nIn Code.org’s CSA course, students will use a package called “The Neighborhood” to start working with their first class - the `Painter` class. \r\n\r\nSome starter code has been provided for here you here.\r\n\r\n##Do this\r\n\r\n1. Review the code provided and predict what will happen.\r\n2. Run the program. Observe what happens.\r\n3. Add code to create three more “green” spaces.  \r\n\r\nAfter finishing, you should see the following on your screen:\r\n\r\n![](https://images.code.org/4b9ba3ec9b2e029bca3fddd7a6bea2eb-image-1673544574482.28.48 AM.png)\r\n\r\n::: details [**Show Me How**]\r\nYou will need to move and paint three times.  \r\n\r\n* To move, use `painterPete.move()`.\r\n* To paint a green space, use `painterPete.paint(\"green\")`.\r\n:::\r\n\r\n",
     "display_name": "isOnPaint()",
     "bubble_choice_description": "Use an if statement and the isOnPaint() method to move forward one square if the Painter object is standing on paint.",
     "thumbnail_url": "https://images.code.org/f8277e8ce78db1f48ca867139b42bdd3-image-1646320204617.gif",
@@ -364,6 +365,6 @@
   "created_at": "2023-01-12T02:18:52.000Z",
   "level_num": "custom",
   "user_id": 16889,
-  "audit_log": "[{\"changed_at\":\"2023-01-12T02:18:52.051+00:00\",\"changed\":[\"cloned from \\\"CSA U1L5-L3b_2022\\\"\"],\"cloned_from\":\"CSA U1L5-L3b_2022\"},{\"changed_at\":\"2023-01-12 02:19:27 +0000\",\"changed\":[\"serialized_maze\"],\"changed_by_id\":977,\"changed_by_email\":\"kaitie+teacher@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2023-01-12T02:18:52.051+00:00\",\"changed\":[\"cloned from \\\"CSA U1L5-L3b_2022\\\"\"],\"cloned_from\":\"CSA U1L5-L3b_2022\"},{\"changed_at\":\"2023-01-12 02:19:27 +0000\",\"changed\":[\"serialized_maze\"],\"changed_by_id\":977,\"changed_by_email\":\"kaitie+teacher@code.org\"},{\"changed_at\":\"2023-01-12 17:21:00 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":977,\"changed_by_email\":\"kaitie+teacher@code.org\"},{\"changed_at\":\"2023-01-12 17:21:14 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":977,\"changed_by_email\":\"kaitie+teacher@code.org\"},{\"changed_at\":\"2023-01-12 17:26:59 +0000\",\"changed\":[\"serialized_maze\",\"long_instructions\"],\"changed_by_id\":977,\"changed_by_email\":\"kaitie+teacher@code.org\"},{\"changed_at\":\"2023-01-12 17:29:46 +0000\",\"changed\":[\"serialized_maze\",\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":977,\"changed_by_email\":\"kaitie+teacher@code.org\"},{\"changed_at\":\"2023-01-12 17:46:56 +0000\",\"changed\":[\"serialized_maze\",\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":977,\"changed_by_email\":\"kaitie+teacher@code.org\"}]"
 }]]></config>
 </Javalab>
