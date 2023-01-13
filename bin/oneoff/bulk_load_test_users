@@ -61,6 +61,7 @@ def upsert_user(user_params)
       unless user.errors.blank?
         raise $dry_run_suffix + "Issues found while creating user " + user.errors.to_json
       end
+      user.permissions = UserPermission::AUTHORIZED_TEACHER
     else
       puts $dry_run_suffix + "Updating new existing user:" + user_params[:email]
     end
