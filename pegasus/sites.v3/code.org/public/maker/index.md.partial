@@ -17,6 +17,8 @@ What is a maker?  Makers invent, explore, innovate, and create using technology 
   <div class="col-60" style="margin-bottom:15px">
     <h2 style="color:#ffffff; margin-top:25px">Creating Apps with Devices</h2>
     <p>Every day, we use devices that help us accomplish tasks both big and small. When students learn to program these devices, foundational computer science comes alive! In this standalone unit, students will learn the fundamentals of programming devices.</p>
+    <p>Grades: 6-12</p>
+    <p>Duration: 25 hours</p>
     <a class="linktag" id="aimodule" href="https://studio.code.org/s/devices?viewAs=Instructor" target="_blank"><button>Explore the unit</button></a>
     <a href="https://studio.code.org/maker/setup" style="margin-left: .75em" target="_blank" rel="noopener noreferrer"><button>Device setup</button></a>
   </div>
@@ -29,25 +31,26 @@ What is a maker?  Makers invent, explore, innovate, and create using technology 
 ## Why physical computing?
 
 <div class="col-100">
+    Learning about physical computing requires time on and off the computer. As a result of this different learning dynamic, there are some unique benefits of learning computer science through physical computing.
   <ul>
-    <li><strong>Real-world applications:</strong> Physical computing can be used to teach many aspects of computer science, including sensing technologies, feedback and control mechanisms, and methods of prototyping. <a href="https://doi.org/10.1145/2632320.2632336" target="_blank" rel="noopener noreferrer">Source</a>.</li>
-    <li><strong>Learning efficacy:</strong> In one <a href="https://www.iejee.com/index.php/IEJEE/article/view/1233" target="_blank" rel="noopener noreferrer">study</a>, students who took lessons in physical computing showed an improved understanding of computational concepts.</li>
-    <li><strong>Inclusion and engagement:</strong> Using a physical device can help students engage and connect the actions on a screen to their impact in the real world. Plus, according to a BBC survey, female students in particular described feeling more confident after exposure to physical computing.</li>
+    <li><strong>Real-world applications:</strong> Using a physical device can help students engage and connect the actions on a screen to their impact in the real world.</li>
+    <li><strong>Inclusion and engagement:</strong>  According to a BBC survey, female students described feeling more confident after exposure to physical computing.</li>
     <li><strong>Social and emotional learning:</strong> Physical computing encourages students to work together, fostering collaboration, interpersonal skills, and active learning. <a href="https://www.microsoft.com/en-us/research/uploads/prod/2020/04/physical-computing.pdf" target="_blank" rel="noopener noreferrer">Source</a>.</li>
   </ul>
 </div>
 <div class="clear"></div>
 
-## Why Code.org?
+## Why Code.org's Physical Computing Unit?
 
 <div class="col-45">
+  Our physical computing unit allows students to:
   <ul>
-    <li>Our physical computing unit allows students to make an app connected to their device, rather than coding a device disconnected from the screen.</li>
-    <li>This unit is connected to Code.org's App Lab, so you can use all of your favorite App Lab features (like databases and graphics) with the physical computing device!</li>
+    <li>Make an app connected to their device, rather than coding a device disconnected from the screen.</li>
+    <li>Use all of their favorite App Lab features (like databases and graphics) with the physical computing device!</li>
   </ul>
   <h3>Professional learning</h3>
-  <p>This self-paced online unit is intended as an 150-minute introduction to our optional unit on physical computing.</p>
-  <p>Through completing this online unit, participants will:</p>
+  <p>To support teachers in getting stated with this new physical computing unit we have created a self-paced online professional learning unit. </p>
+  <p>Through completing this 100-minute online unit, participants will:</p>
   <ul>
     <li>Get an introduction to Physical Computing.</li>
     <li>Practice key concepts included in the unit.</li>
@@ -93,7 +96,7 @@ Interested in incorporating physical computing, maker education, and/or robotics
   <h2>Subscribe for the latest news</h2>
   <p>Sign up for our monthly emails, which contain the latest news about tools, videos, and other important updates for Maker.</p>
   <div class="flex-container" style="text-align: center">
-    <iframe class="col-50" src="http://go.pardot.com/l/153401/2023-01-10/pqf2sr" width="100%" height="400" type="text/html" frameborder="0" allowtransparency="true" style="overflow:hidden; float: none"></iframe>
+    <iframe class="col-50" src="http://go.pardot.com/l/153401/2023-01-10/pqf2sr" scrolling="no" width="100%" height="400" type="text/html" frameborder="0" allowtransparency="true" style="overflow:hidden; float: none"></iframe>
   </div>
 </div>
 <div style="clear: both"></div>
