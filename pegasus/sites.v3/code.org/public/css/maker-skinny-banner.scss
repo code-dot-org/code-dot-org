@@ -4,15 +4,22 @@
   box-sizing: content-box;
   height: 130px;
   overflow: hidden;
-  margin: 4em auto 2em;
   padding: 0 0 0 1em;
   background: #00736E;
   position: relative;
 
+  @media screen and (max-width: $width-md) {
+    padding: 0 1.5em;
+  }
+
   @media screen and (max-width: $width-sm) {
-    height: 140px;
-    padding: 1.5em 1.15em;
-    margin: 3em auto;
+    height: 230px;
+    padding: 1.5em 1.15em 0.5em;
+    margin: 3em auto 0;
+  }
+
+  @media screen and (max-width: $width-xs) {
+    height: 260px;
   }
 
   a:hover,
@@ -26,19 +33,47 @@
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
+    max-width: 1020px;
+    margin: 0 auto;
+
+    @media screen and (max-width: $width-md) {
+      width: 72%;
+      margin: 0;
+    }
 
     @media screen and (max-width: $width-sm) {
       justify-content: center;
-      text-align: center;
+      width: 100%;
+      margin-top: -1em;
     }
   }
 
   img.left {
     align-self: start;
+
+    @media screen and (max-width: $width-md) {
+      display: none;
+    }
+
+    @media screen and (max-width: $width-sm) {
+      display: block;
+      position: relative;
+      top: -8px;
+    }
   }
 
   img.right {
     align-self: end;
+
+    @media screen and (max-width: $width-md) {
+      position: absolute;
+      z-index: 0;
+      right: 0;
+    }
+
+    @media screen and (max-width: $width-sm) {
+      display: none;
+    }
   }
 
   // There's a mysterious <p> tag being added around
@@ -46,12 +81,32 @@
   // This aligns it correctly to the bottom of the container.
   p img {
     margin-bottom: -32px;
+
+    @media screen and (max-width: $width-md) {
+      position: absolute;
+      right: 0;
+      top: 22px;
+      z-index: 0;
+    }
+
+    @media screen and (max-width: $width-sm) {
+      display: none;
+    }
   }
 
   .text-wrapper {
     color: white;
     width: 370px;
     text-align: center;
+
+    @media screen and (max-width: $width-md) {
+      margin: 0 0 -0.5em;
+      text-align: left;
+    }
+
+    @media screen and (max-width: $width-sm) {
+      text-align: center;
+    }
 
     h1 {
       font-family: $gotham-bold;
@@ -61,10 +116,6 @@
 
       @media screen and (max-width: $width-sm) {
         font-size: 1.45em;
-      }
-
-      @media screen and (max-width: $width-xs) {
-        font-size: 1.25em;
       }
     }
 
@@ -92,6 +143,10 @@
 
     @media screen and (max-width: $width-md) {
       padding: 0.5em 1em;
+    }
+
+    @media screen and (max-width: $width-sm) {
+      margin-top: 1em;
     }
   }
 }
