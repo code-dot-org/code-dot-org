@@ -1,6 +1,6 @@
 require 'geocoder'
 require 'country_codes'
-require '../shared/middleware/helpers/experiments'
+require_relative '../../../../shared/middleware/helpers/experiments'
 
 module User::GenderExperimentHelper
   # Determines if we should ask the user what there gender is. This is an experiment to see if our
