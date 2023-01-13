@@ -4,9 +4,6 @@
     "encrypted": "false",
     "skin": "artist",
     "validation_enabled": "true",
-    "encrypted_examples": [
-
-    ],
     "embed": "false",
     "instructions_important": "false",
     "hide_share_and_remix": "false",
@@ -24,12 +21,12 @@
     "enable_download_image": "false",
     "preload_asset_list": null
   },
-  "game_id": 23,
-  "published": true,
-  "created_at": "2023-01-13T00:05:37.000Z",
   "level_num": "custom",
+  "game_id": 23,
+  "created_at": "2023-01-13T00:05:37.000Z",
   "user_id": 1196,
-  "audit_log": "[{\"changed_at\":\"2023-01-13 00:06:00 +0000\",\"changed\":[\"validation_enabled\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]",
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2023-01-13 00:06:00 +0000\",\"changed\":[\"validation_enabled\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2023-01-13 18:55:13 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2023-01-13 18:58:17 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2023-01-13 19:00:56 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2023-01-13 19:01:46 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2023-01-13 19:11:53 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2023-01-13 19:13:09 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
@@ -38,45 +35,212 @@
       <xml>
         <block type="when_run" deletable="false" movable="false" id="when_run">
           <next>
-            <block type="jump_to_xy">
-              <field name="XPOS">10</field>
-              <field name="YPOS">20</field>
+            <block type="jump_to">
+              <field name="VALUE">7</field>
               <next>
-                <block type="variables_set">
-                  <field name="VAR">columns</field>
-                  <value name="VALUE">
-                    <block type="math_number">
-                      <field name="NUM">7</field>
+                <block type="procedures_callnoreturn">
+                  <mutation name="draw grid"/>
+                  <next>
+                    <block type="jump_to_xy">
+                      <field name="XPOS">20</field>
+                      <field name="YPOS">40</field>
+                      <next>
+                        <block type="draw_turn">
+                          <field name="DIR">turnLeft</field>
+                          <value name="VALUE">
+                            <block type="math_number">
+                              <field name="NUM">90</field>
+                            </block>
+                          </value>
+                          <next>
+                            <block type="variables_set">
+                              <field name="VAR">columns</field>
+                              <value name="VALUE">
+                                <block type="math_number">
+                                  <field name="NUM">7</field>
+                                </block>
+                              </value>
+                              <next>
+                                <block type="variables_set">
+                                  <field name="VAR">rows</field>
+                                  <value name="VALUE">
+                                    <block type="math_number">
+                                      <field name="NUM">5</field>
+                                    </block>
+                                  </value>
+                                  <next>
+                                    <block type="procedures_callnoreturn">
+                                      <mutation name="collect samples"/>
+                                    </block>
+                                  </next>
+                                </block>
+                              </next>
+                            </block>
+                          </next>
+                        </block>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+        <block type="procedures_defnoreturn">
+          <mutation/>
+          <field name="NAME">collect samples</field>
+          <statement name="STACK">
+            <block type="controls_repeat_ext">
+              <value name="TIMES">
+                <block type="variables_get">
+                  <field name="VAR">rows</field>
+                </block>
+              </value>
+              <statement name="DO">
+                <block type="controls_repeat_ext">
+                  <value name="TIMES">
+                    <block type="variables_get">
+                      <field name="VAR">columns</field>
                     </block>
                   </value>
+                  <statement name="DO">
+                    <block type="turtle_sticker_with_size">
+                      <field name="VALUE">Alien</field>
+                      <value name="SIZE">
+                        <block type="math_number">
+                          <field name="NUM">30</field>
+                        </block>
+                      </value>
+                      <next>
+                        <block type="draw_turn">
+                          <field name="DIR">turnRight</field>
+                          <value name="VALUE">
+                            <block type="math_number">
+                              <field name="NUM">90</field>
+                            </block>
+                          </value>
+                          <next>
+                            <block type="jump">
+                              <field name="DIR">jumpForward</field>
+                              <value name="VALUE">
+                                <block type="math_number">
+                                  <field name="NUM">40</field>
+                                </block>
+                              </value>
+                              <next>
+                                <block type="draw_turn">
+                                  <field name="DIR">turnLeft</field>
+                                  <value name="VALUE">
+                                    <block type="math_number">
+                                      <field name="NUM">90</field>
+                                    </block>
+                                  </value>
+                                </block>
+                              </next>
+                            </block>
+                          </next>
+                        </block>
+                      </next>
+                    </block>
+                  </statement>
                   <next>
-                    <block type="variables_set">
-                      <field name="VAR">rows</field>
+                    <block type="draw_turn">
+                      <field name="DIR">turnRight</field>
                       <value name="VALUE">
                         <block type="math_number">
-                          <field name="NUM">5</field>
+                          <field name="NUM">90</field>
+                        </block>
+                      </value>
+                      <next>
+                        <block type="jump">
+                          <field name="DIR">jumpBackward</field>
+                          <value name="VALUE">
+                            <block type="math_arithmetic">
+                              <field name="OP">MULTIPLY</field>
+                              <value name="A">
+                                <block type="variables_get">
+                                  <field name="VAR">columns</field>
+                                </block>
+                              </value>
+                              <value name="B">
+                                <block type="math_number">
+                                  <field name="NUM">40</field>
+                                </block>
+                              </value>
+                            </block>
+                          </value>
+                          <next>
+                            <block type="draw_turn">
+                              <field name="DIR">turnLeft</field>
+                              <value name="VALUE">
+                                <block type="math_number">
+                                  <field name="NUM">90</field>
+                                </block>
+                              </value>
+                              <next>
+                                <block type="jump">
+                                  <field name="DIR">jumpBackward</field>
+                                  <value name="VALUE">
+                                    <block type="math_number">
+                                      <field name="NUM">40</field>
+                                    </block>
+                                  </value>
+                                </block>
+                              </next>
+                            </block>
+                          </next>
+                        </block>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </statement>
+            </block>
+          </statement>
+        </block>
+        <block type="procedures_defnoreturn">
+          <mutation/>
+          <field name="NAME">draw grid</field>
+          <statement name="STACK">
+            <block type="draw_turn">
+              <field name="DIR">turnRight</field>
+              <value name="VALUE">
+                <block type="math_number">
+                  <field name="NUM">90</field>
+                </block>
+              </value>
+              <next>
+                <block type="jump_to">
+                  <field name="VALUE">7</field>
+                  <next>
+                    <block type="draw_width">
+                      <value name="WIDTH">
+                        <block type="math_number">
+                          <field name="NUM">1</field>
                         </block>
                       </value>
                       <next>
                         <block type="controls_repeat_ext">
                           <value name="TIMES">
-                            <block type="variables_get">
-                              <field name="VAR">rows</field>
+                            <block type="math_number">
+                              <field name="NUM">10</field>
                             </block>
                           </value>
                           <statement name="DO">
                             <block type="controls_repeat_ext">
                               <value name="TIMES">
-                                <block type="variables_get">
-                                  <field name="VAR">columns</field>
+                                <block type="math_number">
+                                  <field name="NUM">10</field>
                                 </block>
                               </value>
                               <statement name="DO">
-                                <block type="turtle_sticker_with_size">
-                                  <field name="VALUE">Alien</field>
-                                  <value name="SIZE">
+                                <block type="procedures_callnoreturn">
+                                  <mutation name="draw a square">
+                                    <arg name="length"/>
+                                  </mutation>
+                                  <value name="ARG0">
                                     <block type="math_number">
-                                      <field name="NUM">30</field>
+                                      <field name="NUM">40</field>
                                     </block>
                                   </value>
                                   <next>
@@ -98,8 +262,8 @@
                                     <block type="math_arithmetic">
                                       <field name="OP">MULTIPLY</field>
                                       <value name="A">
-                                        <block type="variables_get">
-                                          <field name="VAR">columns</field>
+                                        <block type="math_number">
+                                          <field name="NUM">10</field>
                                         </block>
                                       </value>
                                       <value name="B">
@@ -143,110 +307,6 @@
                               </next>
                             </block>
                           </statement>
-                          <next>
-                            <block type="draw_width">
-                              <value name="WIDTH">
-                                <block type="math_number">
-                                  <field name="NUM">1</field>
-                                </block>
-                              </value>
-                              <next>
-                                <block type="jump_to">
-                                  <field name="VALUE">7</field>
-                                  <next>
-                                    <block type="controls_repeat_ext">
-                                      <value name="TIMES">
-                                        <block type="math_number">
-                                          <field name="NUM">10</field>
-                                        </block>
-                                      </value>
-                                      <statement name="DO">
-                                        <block type="controls_repeat_ext">
-                                          <value name="TIMES">
-                                            <block type="math_number">
-                                              <field name="NUM">10</field>
-                                            </block>
-                                          </value>
-                                          <statement name="DO">
-                                            <block type="procedures_callnoreturn">
-                                              <mutation name="draw a square">
-                                                <arg name="length"/>
-                                              </mutation>
-                                              <value name="ARG0">
-                                                <block type="math_number">
-                                                  <field name="NUM">40</field>
-                                                </block>
-                                              </value>
-                                              <next>
-                                                <block type="jump">
-                                                  <field name="DIR">jumpForward</field>
-                                                  <value name="VALUE">
-                                                    <block type="math_number">
-                                                      <field name="NUM">40</field>
-                                                    </block>
-                                                  </value>
-                                                </block>
-                                              </next>
-                                            </block>
-                                          </statement>
-                                          <next>
-                                            <block type="jump">
-                                              <field name="DIR">jumpBackward</field>
-                                              <value name="VALUE">
-                                                <block type="math_arithmetic">
-                                                  <field name="OP">MULTIPLY</field>
-                                                  <value name="A">
-                                                    <block type="math_number">
-                                                      <field name="NUM">10</field>
-                                                    </block>
-                                                  </value>
-                                                  <value name="B">
-                                                    <block type="math_number">
-                                                      <field name="NUM">40</field>
-                                                    </block>
-                                                  </value>
-                                                </block>
-                                              </value>
-                                              <next>
-                                                <block type="draw_turn">
-                                                  <field name="DIR">turnRight</field>
-                                                  <value name="VALUE">
-                                                    <block type="math_number">
-                                                      <field name="NUM">90</field>
-                                                    </block>
-                                                  </value>
-                                                  <next>
-                                                    <block type="jump">
-                                                      <field name="DIR">jumpForward</field>
-                                                      <value name="VALUE">
-                                                        <block type="math_number">
-                                                          <field name="NUM">40</field>
-                                                        </block>
-                                                      </value>
-                                                      <next>
-                                                        <block type="draw_turn">
-                                                          <field name="DIR">turnLeft</field>
-                                                          <value name="VALUE">
-                                                            <block type="math_number">
-                                                            <field name="NUM">90</field>
-                                                            </block>
-                                                          </value>
-                                                        </block>
-                                                      </next>
-                                                    </block>
-                                                  </next>
-                                                </block>
-                                              </next>
-                                            </block>
-                                          </next>
-                                        </block>
-                                      </statement>
-                                    </block>
-                                  </next>
-                                </block>
-                              </next>
-                            </block>
-                          </next>
                         </block>
                       </next>
                     </block>
@@ -254,175 +314,40 @@
                 </block>
               </next>
             </block>
-          </next>
-        </block>
-        <block type="variables_get">
-          <field name="VAR">rows</field>
-        </block>
-        <block type="variables_get">
-          <field name="VAR">columns</field>
-        </block>
-        <block type="variables_get">
-          <field name="VAR">columns</field>
-        </block>
-        <block type="procedures_callnoreturn">
-          <mutation name="draw manipulatives"/>
-        </block>
-        <block type="procedures_callnoreturn">
-          <mutation name="draw manipulatives vertical">
-            <arg name="output"/>
-          </mutation>
-          <value name="ARG0">
-            <block type="variables_get">
-              <field name="VAR">output</field>
-            </block>
-          </value>
-        </block>
-        <block type="procedures_defnoreturn" editable="false">
-          <mutation>
-            <arg name="rows"/>
-            <description>adds 10 to a given input</description>
-          </mutation>
-          <field name="NAME">add 10</field>
-          <statement name="STACK">
-            <block type="variables_set">
-              <field name="VAR">output</field>
-              <value name="VALUE">
-                <block type="math_arithmetic">
-                  <field name="OP">ADD</field>
-                  <value name="A">
-                    <block type="parameters_get">
-                      <field name="VAR">input</field>
-                    </block>
-                  </value>
-                  <value name="B">
-                    <block type="math_number">
-                      <field name="NUM">10</field>
-                    </block>
-                  </value>
-                </block>
-              </value>
-            </block>
           </statement>
         </block>
-        <block type="procedures_defnoreturn" editable="false">
+        <block type="variables_get" uservisible="false">
+          <field name="VAR">rows</field>
+        </block>
+        <block type="variables_get" uservisible="false">
+          <field name="VAR">columns</field>
+        </block>
+        <block type="procedures_defnoreturn" editable="false" uservisible="false">
           <mutation>
             <arg name="length"/>
           </mutation>
           <field name="NAME">draw a square</field>
           <statement name="STACK">
-            <block type="controls_repeat_ext">
+            <block type="controls_repeat_ext" uservisible="false">
               <value name="TIMES">
-                <block type="math_number">
+                <block type="math_number" uservisible="false">
                   <field name="NUM">4</field>
                 </block>
               </value>
               <statement name="DO">
-                <block type="draw_move">
+                <block type="draw_move" uservisible="false">
                   <field name="DIR">moveForward</field>
                   <value name="VALUE">
-                    <block type="variables_get">
+                    <block type="variables_get" uservisible="false">
                       <field name="VAR">length</field>
                     </block>
                   </value>
                   <next>
-                    <block type="draw_turn">
+                    <block type="draw_turn" uservisible="false">
                       <field name="DIR">turnRight</field>
                       <value name="VALUE">
-                        <block type="math_number">
+                        <block type="math_number" uservisible="false">
                           <field name="NUM">90</field>
-                        </block>
-                      </value>
-                    </block>
-                  </next>
-                </block>
-              </statement>
-            </block>
-          </statement>
-        </block>
-        <block type="procedures_defnoreturn" editable="false" usercreated="true">
-          <mutation>
-            <arg name="output"/>
-          </mutation>
-          <field name="NAME" id="draw manipulatives vertical">draw manipulatives vertical</field>
-          <statement name="STACK">
-            <block type="draw_move">
-              <field name="DIR">moveForward</field>
-              <value name="VALUE">
-                <block type="math_number">
-                  <field name="NUM">40</field>
-                </block>
-              </value>
-              <next>
-                <block type="draw_turn">
-                  <field name="DIR">turnRight</field>
-                  <value name="VALUE">
-                    <block type="math_number">
-                      <field name="NUM">90</field>
-                    </block>
-                  </value>
-                  <next>
-                    <block type="controls_repeat_ext">
-                      <value name="TIMES">
-                        <block type="variables_get">
-                          <field name="VAR">output</field>
-                        </block>
-                      </value>
-                      <statement name="DO">
-                        <block type="procedures_callnoreturn">
-                          <mutation name="draw a square">
-                            <arg name="length"/>
-                          </mutation>
-                          <value name="ARG0">
-                            <block type="math_number">
-                              <field name="NUM">40</field>
-                            </block>
-                          </value>
-                          <next>
-                            <block type="jump">
-                              <field name="DIR">jumpForward</field>
-                              <value name="VALUE">
-                                <block type="math_number">
-                                  <field name="NUM">40</field>
-                                </block>
-                              </value>
-                            </block>
-                          </next>
-                        </block>
-                      </statement>
-                    </block>
-                  </next>
-                </block>
-              </next>
-            </block>
-          </statement>
-        </block>
-        <block type="procedures_defnoreturn" editable="false" usercreated="true">
-          <mutation/>
-          <field name="NAME" id="draw manipulatives">draw manipulatives</field>
-          <statement name="STACK">
-            <block type="controls_repeat_ext">
-              <value name="TIMES">
-                <block type="variables_get">
-                  <field name="VAR">output</field>
-                </block>
-              </value>
-              <statement name="DO">
-                <block type="procedures_callnoreturn">
-                  <mutation name="draw a square">
-                    <arg name="length"/>
-                  </mutation>
-                  <value name="ARG0">
-                    <block type="math_number">
-                      <field name="NUM">40</field>
-                    </block>
-                  </value>
-                  <next>
-                    <block type="jump">
-                      <field name="DIR">jumpForward</field>
-                      <value name="VALUE">
-                        <block type="math_number">
-                          <field name="NUM">40</field>
                         </block>
                       </value>
                     </block>
