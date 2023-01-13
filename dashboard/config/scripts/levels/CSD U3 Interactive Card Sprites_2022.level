@@ -171,7 +171,7 @@
     },
     "edit_code": true,
     "embed": "false",
-    "long_instructions": "# Adding Sprites\r\nNow that you have the more static elements of your card layed out, it's time to add the Sprites. Your Sprites should provide the primary animations and interactions for your card - so feel free to get creative here and have fun.\r\n\r\n# Do This\r\nCheck out the Sprites table on the back of your planning sheet. For each Sprite in your table:\r\n\r\n* Initialize the Sprite at the top of your program with `createSprite()`.\r\n* Find or create the image(s) for the Sprite and set it with `setAnimation()`.\r\n* Inside the `draw()` loop update any Sprite properties that we will be constantly animating (we'll deal with conditionals in a minute).",
+    "long_instructions": "# Adding Sprites\r\nNow that you have the more static elements of your card laid out, it's time to add the Sprites. Your Sprites should provide the primary animations and interactions for your card - so feel free to get creative here and have fun.\r\n\r\n# Do This\r\nCheck out the Sprites table on the back of your planning sheet. For each Sprite in your table:\r\n\r\n* Initialize the Sprite at the top of your program with `createSprite()`.\r\n* Find or create the image(s) for the Sprite and set it with `setAnimation()`.\r\n* Inside the `draw()` loop update any Sprite properties that we will be constantly animating (we'll deal with conditionals in a minute).",
     "submittable": "false",
     "is_k1": "false",
     "skip_instructions_popup": "false",
@@ -219,13 +219,13 @@
     "libraries_enabled": "false",
     "preload_asset_list": null
   },
-  "level_num": "custom",
   "game_id": 50,
-  "created_at": "2022-03-30T23:40:38.000Z",
-  "user_id": 1,
   "published": true,
+  "created_at": "2022-03-30T23:40:38.000Z",
+  "level_num": "custom",
+  "user_id": 1,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-03-30T23:40:38.978+00:00\",\"changed\":[\"cloned from \\\"CSD U3 Interactive Card Sprites_2021\\\"\"],\"cloned_from\":\"CSD U3 Interactive Card Sprites_2021\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-03-30T23:40:38.978+00:00\",\"changed\":[\"cloned from \\\"CSD U3 Interactive Card Sprites_2021\\\"\"],\"cloned_from\":\"CSD U3 Interactive Card Sprites_2021\"},{\"changed_at\":\"2023-01-12 18:28:06 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Gamelab>
