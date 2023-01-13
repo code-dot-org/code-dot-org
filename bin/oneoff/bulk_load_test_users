@@ -57,11 +57,11 @@ def upsert_user(user_params)
     if user.nil?
       puts $dry_run_suffix + "Creating new user: " + user_params[:email]
       user = User.new(user_params)
+      user.permissions = UserPermission::AUTHORIZED_TEACHER
       user.validate_for_finish_sign_up
       unless user.errors.blank?
         raise $dry_run_suffix + "Issues found while creating user " + user.errors.to_json
       end
-      user.permissions = UserPermission::AUTHORIZED_TEACHER
     else
       puts $dry_run_suffix + "Updating new existing user:" + user_params[:email]
     end
