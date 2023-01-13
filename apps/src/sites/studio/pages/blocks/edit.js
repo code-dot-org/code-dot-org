@@ -38,7 +38,7 @@ function initializeEditPage(defaultSprites) {
     assetUrl,
     valueTypeTabShapeMap: valueTypeTabShapeMap(Blockly),
     typeHints: true,
-    isEditMode: true
+    isBlockEditMode: true
   });
 
   const blockConfigElement = document.getElementById('block_config');
