@@ -329,11 +329,11 @@ class Unit < ApplicationRecord
     Unit.get_from_cache(Unit::FLAPPY_NAME)
   end
 
-  # List of units in the CSD course offering which use the maker tools.
+  # List of all Creating Apps with Devices maker unit versions.
   # Used to determine the most recent Maker Unit to show on the Maker Homepage
   def self.maker_units(user)
-    # only units in CSD should be included in the maker units
-    @@maker_units ||= visible_units.select(&:is_maker_unit?).select {|u| u.get_course_version&.course_offering&.csd?}
+    # only versions of the Creating Apps with Devices unit should be included in the maker units
+    @@maker_units ||= visible_units.select {|u| u.family_name == 'devices'}
   end
 
   class << self
