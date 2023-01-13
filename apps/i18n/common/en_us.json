@@ -893,6 +893,7 @@
   "errorFindingClassLibraries": "Unable to load your class libraries at this time. Please check your internet connection and try again.",
   "errorIncompleteBlockInFunction": "Click \"edit\" to make sure you don't have any blocks missing inside your function definition.",
   "errorGenericLintError": "Your program contains an editor warning that needs to be corrected. Hover over the icons near the line numbers in the editor to learn more.",
+  "errorLoadingAnimation": "It looks like we are having trouble loading your animation \"{animationName}\". Make sure you have a good internet connection and try reloading the page. If this problem persists, it is possible that this animation is broken. In this case, you may need to continue by removing the animation.",
   "errorLoadingDocumentation": "An error occurred while loading documentation.",
   "errorLoadingRosteredSections": "Oops, there was a problem grabbing your sections from {type}.",
   "errorLoadingRosteredSectionsSupport": "If the problem persists, click here for troubleshooting tips.",
