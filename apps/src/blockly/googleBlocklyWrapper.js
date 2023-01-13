@@ -319,9 +319,7 @@ function initializeBlocklyWrapper(blocklyInstance) {
   };
 
   blocklyWrapper.BlockSvg.prototype.isUnused = function() {
-    const isTopBlock = this.previousConnection === null;
-    const hasParentBlock = !!this.parentBlock_;
-    return !(!this.disabled || isTopBlock || hasParentBlock);
+    return this.disabled;
   };
 
   blocklyWrapper.BlockSvg.prototype.removeUnusedBlockFrame = function() {
