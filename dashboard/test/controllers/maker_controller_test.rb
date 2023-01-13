@@ -12,7 +12,7 @@ class MakerControllerTest < ActionController::TestCase
     @school = create :school
     @school_maker_high_needs = create :school, :is_maker_high_needs_school
 
-    @devices_2022 = ensure_script 'devices-2022'
+    @devices_2022 = Unit.find_by_name('devices-2022')
 
     Unit.clear_cache
   end
@@ -392,21 +392,5 @@ class MakerControllerTest < ActionController::TestCase
     assert_equal expected, JSON.parse(@response.body)
 
     assert_equal 1, CircuitPlaygroundDiscountApplication.where(user_id: @teacher.id).length
-  end
-
-  private
-
-  def ensure_script(script_name, is_stable=true)
-    Unit.find_by_name(script_name) ||
-      create(:script, name: script_name, is_maker_unit: true, published_state: is_stable ? Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable : Curriculum::SharedCourseConstants::PUBLISHED_STATE.preview).tap do |script|
-        lesson_group = create :lesson_group, script: script
-        lesson = create :lesson, script: script, lesson_group: lesson_group
-        create :script_level, script: script, lesson: lesson
-      end
-  end
-
-  def ensure_course(course_name, version_year)
-    UnitGroup.find_by_name(course_name) ||
-      create(:unit_group, name: course_name, version_year: version_year, family_name: 'devices', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable)
   end
 end
