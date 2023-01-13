@@ -16,6 +16,7 @@ class ContactRollupsV2
   #
   # This method is used to write to the database.
   # @see +retrieve_query_results+ method to fetch data from the database.
+  # MEG: this entire method can be run against the read replica database
   def self.execute_query_in_transaction(query)
     # For long-running queries, we use Sequel connection instead of ActiveRecord connection.
     # ActiveRecord has a default 30s read_timeout that we cannot override. Sequel allows us
@@ -40,6 +41,8 @@ class ContactRollupsV2
   #
   # This method is mostly used to read data from the database.
   # @see +execute_query_in_transaction+ method to simply execute a query in the database.
+  # MEG: this entire method can be run against the read replica database
+  # MEG: maybe can do something like ActiveRecord::Base.connected_to(hander: :reading) do
   def self.retrieve_query_results(query)
     # @see comments in +execute_query_in_transaction+ method for explanation
     # why we have to use ActiveRecord connection in a test environment.
@@ -99,6 +102,7 @@ class ContactRollupsV2
     end
 
     # Extract pegasus data
+    # MEG: all of the `extract...` methods can be run against the read replica database
     unless Rails.env.test?
       @log_collector.time!('extract_pegasus_forms') {ContactRollupsRaw.extract_pegasus_forms(@limit)}
       @log_collector.time!('extract_pegasus_form_geos') {ContactRollupsRaw.extract_pegasus_form_geos(@limit)}
