@@ -2242,9 +2242,13 @@
               display_name: Funksjoner
         csp5-2023:
           lesson_groups:
-            csp_lists:
-              display_name: Lister
             csp_loops:
+              display_name: Løkker
+        csp6-2023:
+          lesson_groups:
+            csp_unit6_2020:
+              display_name: Lister
+            lessonGroup-3:
               display_name: Løkker
         csp9-2023:
           lesson_groups:

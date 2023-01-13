@@ -87,7 +87,7 @@ Dasturlash Soati bu global tadbir bo'lib, sizning oilangiz ham uni nishonlashga 
 
 - Farzandingiz oʻzining masglarini tugatganida siz unga beradigan [Dasturlash Soati sertifikatlarini](https://staging.code.org/certificates) chop eting.
 - Qo'shimcha syurpriz uchun [stikerlarni uyda chop eting](https://staging.hourofcode.com/us/promote/resources#stickers) yoki [da ularni onlayn xarid qiling](https://store.code.org/).
-- Share photos and videos of your at-home Hour of Code on social media. Sizning muvaffaqiyatingizni biz ham namoish qila olishimiz uchun <a href="https://twitter.com/hashtag/hourofcode">#HourOfCode</a> va [@codeorg](https://twitter.com/codeorg) dan foydalaning.
+- Share photos and videos of your at-home Hour of Code on social media. Sizning muvaffaqiyatingizni biz ham namoish qila olishimiz uchun [#HourOfCode](https://twitter.com/hashtag/hourofcode) va [@codeorg](https://twitter.com/codeorg) dan foydalaning.
 
 [![](/images/fit-600/Marketing/g8TUlHzF.jpeg)]({{ urls/learn }})
 

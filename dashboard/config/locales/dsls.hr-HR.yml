@@ -9437,16 +9437,9 @@ hr-HR:
       courseC_multi_maze_debugging8_predict12022:
         answers:
         - text: Scrat će doći do žira. U programskom kodu nema grešaka.
-          feedback: Netočno. Prvo, Scrat skrene u pogrešnom smjeru, a zatim se Scrat
-            ne pomakne dovoljno naprijed da dosegne žir.
         - text: Scrat neće doći do žira jer se okrenuo u krivom smjeru.
-          feedback: Točno! Prvo, Scrat skrene u pogrešnom smjeru, a zatim se Scrat
-            ne pomakne dovoljno naprijed da dosegne žir.
         - text: Scrat neće doći do žira jer nema dovoljno blokova za "pomicanje naprijed".
-          feedback: Točno! Prvo, Scrat skrene u pogrešnom smjeru, a zatim se Scrat
-            ne pomakne dovoljno naprijed da dosegne žir.
-        - feedback: U ovom su kodu dvije greške. Prvo, Scrat skrene u pogrešnom smjeru,
-            a zatim se Scrat ne pomakne dovoljno naprijed da dosegne žir.
+        - feedback: Scrat neće doći do žira jer se okrenuo u krivom smjeru.
         questions:
         - text: Potražite greške u ovom kodu. Hoće li Scrat doći do žira ili postoji
             problem?

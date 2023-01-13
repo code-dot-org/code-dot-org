@@ -1016,7 +1016,11 @@ lv:
               display_name: Funkcijas
         csp5-2023:
           lesson_groups:
-            csp_lists:
-              display_name: Saraksti
             csp_loops:
+              display_name: Cikli
+        csp6-2023:
+          lesson_groups:
+            csp_unit6_2020:
+              display_name: Saraksti
+            lessonGroup-3:
               display_name: Cikli

@@ -3061,12 +3061,22 @@ az:
         csp5-2023:
           lesson_groups:
             csp_lists:
-              display_name: Siyahılar
+              display_name: məlumat
             csp_loops:
               display_name: dövrlər
             csp_traversals:
               display_name: Keçidlər
             csp_project:
+              display_name: Layihə
+        csp6-2023:
+          lesson_groups:
+            csp_unit6_2020:
+              display_name: Siyahılar
+            lessonGroup-3:
+              display_name: dövrlər
+            lessonGroup-4:
+              display_name: Keçidlər
+            lessonGroup-5:
               display_name: Layihə
         csp7-2023:
           lesson_groups:

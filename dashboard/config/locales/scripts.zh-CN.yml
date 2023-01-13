@@ -4190,7 +4190,7 @@ zh-CN:
         csp5-2023:
           lesson_groups:
             csp_lists:
-              display_name: 列表
+              display_name: 数据
             csp_loops:
               display_name: 循环
             csp_traversals:
@@ -4202,9 +4202,15 @@ zh-CN:
         csp6-2023:
           lesson_groups:
             csp_unit6_2020:
-              display_name: '单元 6: 算法'
+              display_name: 列表
             lessonGroup-2:
               display_name: 课后问卷
+            lessonGroup-3:
+              display_name: 循环
+            lessonGroup-4:
+              display_name: 遍历
+            lessonGroup-5:
+              display_name: 项目
         csp7-2023:
           lesson_groups:
             csp_parameters_return_values:
