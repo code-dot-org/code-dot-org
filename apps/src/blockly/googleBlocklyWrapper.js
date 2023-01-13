@@ -309,7 +309,7 @@ function initializeBlocklyWrapper(blocklyInstance) {
   blocklyWrapper.BlockSvg.prototype.isUnused = function() {
     const isTopBlock = this.previousConnection === null;
     const hasParentBlock = !!this.parentBlock_;
-    return !(isTopBlock || hasParentBlock);
+    return !(!this.disabled || isTopBlock || hasParentBlock);
   };
 
   blocklyWrapper.BlockSvg.prototype.removeUnusedBlockFrame = function() {
@@ -525,13 +525,15 @@ function initializeBlocklyWrapper(blocklyInstance) {
     blocklyWrapper.customSimpleDialog = opt_options.customSimpleDialog;
 
     // Shrink container to make room for the workspace header
-    container.style.height = `calc(100% - ${
-      styleConstants['workspace-headers-height']
-    }px)`;
+    if (!opt_options.isEditMode) {
+      container.style.height = `calc(100% - ${
+        styleConstants['workspace-headers-height']
+      }px)`;
+    }
     blocklyWrapper.isStartMode = !!opt_options.editBlocks;
     const workspace = blocklyWrapper.blockly_.inject(container, options);
 
-    if (!blocklyWrapper.isStartMode) {
+    if (!blocklyWrapper.isStartMode && !opt_options.isEditMode) {
       workspace.addChangeListener(Blockly.Events.disableOrphans);
     }
 
