@@ -1793,6 +1793,7 @@ a.download-video {
 
 #code_without_signing_in {
   margin-top: 80px;
+  margin-bottom: 0;
 }
 
 #signup, #school-info-modal {
@@ -1807,7 +1808,6 @@ a.download-video {
   .oauth-links {
     display: flex;
     flex-wrap: wrap;
-    margin-bottom: 10px;
   }
 
   .more-details {

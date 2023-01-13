@@ -53,6 +53,10 @@
   border-radius: 5px;
   margin: 20px 20px 0 0;
   overflow: hidden;
+
+  &:hover {
+    border-color: $neutral_dark70;
+  }
 }
 
 .tutorial-block {
