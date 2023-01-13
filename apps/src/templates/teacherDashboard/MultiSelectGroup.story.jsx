@@ -8,7 +8,7 @@ export default {
   component: MultiSelectGroup
 };
 
-// This component is an integrated example for the <PopUpMenu>.
+// This component is an integrated example for the <MultiSelectGroup>.
 // It needs to be its own component so that it adheres to React hooks
 // linting (i.e., this can't be a template or the exported story itself).
 const BasicExampleComponent = props => {
