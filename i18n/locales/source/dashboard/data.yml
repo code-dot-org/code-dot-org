@@ -721,6 +721,7 @@ en:
         csa-pl-intro-to-strings: Introduction to Strings in Java
         csa-pl-compareTo: The compareTo() method
         csc-event-short-intro: Events Short Intro
+        PL_CSD_CircuitPlayground_Overview_AppsWithDevices: Circuit Playground Unit Overview
     callout:
       text:
         drag_blocks: Drag a "move" block and snap it below the other block

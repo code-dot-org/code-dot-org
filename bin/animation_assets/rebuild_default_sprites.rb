@@ -40,8 +40,8 @@ def main
     file.write(
       JSON.pretty_generate(
         {
-          'orderedKeys': ordered_keys,
-          'propsByKey': props_by_key
+          orderedKeys: ordered_keys,
+          propsByKey: props_by_key
         }
       )
     )

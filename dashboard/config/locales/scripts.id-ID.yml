@@ -5685,7 +5685,7 @@ id:
         csp5-2023:
           lesson_groups:
             csp_lists:
-              display_name: List
+              display_name: Data
             csp_loops:
               display_name: Loop
             csp_traversals:
@@ -5697,9 +5697,15 @@ id:
         csp6-2023:
           lesson_groups:
             csp_unit6_2020:
-              display_name: 'Unit 6: Algorithm'
+              display_name: List
             lessonGroup-2:
               display_name: Survei Pasca Kursus
+            lessonGroup-3:
+              display_name: Loop
+            lessonGroup-4:
+              display_name: Melintang
+            lessonGroup-5:
+              display_name: Proyek
         csp7-2023:
           lesson_groups:
             csp_parameters_return_values:

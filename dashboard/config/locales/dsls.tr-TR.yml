@@ -6041,8 +6041,7 @@ tr-TR:
           correct: true
           feedback: Doğru! Scrat önce yanlış yöne dönüyor, sonra da palamuda ulaşacak
             kadar yeterli sayıda ileri gitmiyor.
-        - text: Scrat palamuda ulaşmayacak çünkü yeteri kadar "ileri hareket" bloğu
-            yok.
+        - text: Scrat palamuda ulaşmayacak çünkü yeteri kadar "ilerle" bloğu yok.
           correct: true
           feedback: Doğru! Scrat önce yanlış yöne dönüyor, sonra da palamuda ulaşacak
             kadar yeterli sayıda ileri gitmiyor.
@@ -6396,8 +6395,8 @@ tr-TR:
           correct: true
           feedback: Doğru! İki davranış aynı anda olacak.
         - text: Hareketli nesne önce dönecek, sonra hareket edecek.
-          feedback: Yanlış. Hareketli Nesne Laboratuvarında bağlı bloklar, birbiri
-            ardından gerçekleşir. Dolayısıyla iki davranış aynı anda olacak.
+          feedback: Yanlış. Sprite Lab'ta bağlı bloklar, birbiri ardından gerçekleşir.
+            Dolayısıyla iki davranış aynı anda olacak.
         questions:
         - text: Kodu oku, sonra da bir tahminde bulun.
       courseF_labels_predict_multi:
@@ -6405,10 +6404,10 @@ tr-TR:
         - text: '"Bir pizza hemen geliyor!"'
           feedback: Yanlış. Değişken etiketleri eşleşmiyor.
         - text: '"Bir yemek hemen geliyor!"'
-          feedback: Yanlış. Değişkenin etkieti asla yazdırılmaz.
+          feedback: Yanlış. Değişkenin etiketi asla yazdırılmaz.
         - text: '"Bir yiyecek hemen geliyor!"'
-          feedback: Yanlış. Değişkenin etkieti asla yazdırılmaz.
-        - text: '"Bir  hemen geliyor!"'
+          feedback: Yanlış. Değişkenin etiketi asla yazdırılmaz.
+        - text: '"Biri  hemen geliyor!"'
           correct: true
           feedback: Doğru! Değişken etiketleri eşleşmiyor.
         - text: Hiçbir şey yazdırılmayacak.
@@ -6616,7 +6615,7 @@ tr-TR:
 
           Aşağıdaki açıklamaları kullanarak öğrenclerin kendi tercihlerini seçmelerine yardımcı olabilir veya kaç tane alt seviye tamamlamaları gerektiği ile ilgili beklenti oluşturabilirsiniz.
 
-          |&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |Fırlat!|Uçmayı öğrenme|Fıçı tono yap|Küçült ve Büyüt|Balığı şişir!|Penguen hareket halinde|
+          |&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |Fırlat!|Uçmayı öğrenme|Fıçı dönüşü yap|Küçült ve Büyüt|Balığı şişir!|Penguen hareket halinde|
           |-|-|-|-|-|
           | ***Tür*** |**İnceleme**|**Debug**|**Hata Ayıklama**|**Debug**|**İsteğe Bağlı İçerik**|**İsteğe Bağlı İçerik**
           | ***Kavram***|*events, behaviors*|*olaylar, davranışlar*|*events, behaviors*|*olaylar, davranışlar*|*when/while events*|*when/while olayları*|
@@ -6692,7 +6691,7 @@ tr-TR:
         display_name: Arı Alıştırması
       courseF_variables_projects:
         description: Bir tebrik kartı, bir sohbet robotu veya bir boş alan hikayesi
-          oluşturacaksınız. Projenizin \"1. Kısmını\" bitirdiyseniz \"2. Kısmına\"
+          oluşturacaksınız. Projenizin \"Kısım 1\"'i bitirdiyseniz \"Kısım 2\"'ye
           gidin.
         display_name: Proje Seç
         teacher_markdown: |-
@@ -14059,20 +14058,12 @@ tr-TR:
       courseC_multi_maze_debugging8_predict12022:
         answers:
         - text: Scrat, palamuda ulaşacak. Kodda hata yok.
-          feedback: Yanlış. Scrat önce yanlış yöne dönüyor, sonra da palamuda ulaşacak
-            kadar yeterli sayıda ileri gitmiyor.
         - text: Scrat, palamuda ulaşmayacak çünkü yanlış yöne dönüyor.
           correct: true
-          feedback: Doğru! Scrat önce yanlış yöne dönüyor, sonra da palamuda ulaşacak
-            kadar yeterli sayıda ileri gitmiyor.
         - text: Scrat palamuda ulaşmayacak çünkü yeteri kadar "ileri hareket" bloğu
             yok.
-          correct: true
-          feedback: Doğru! Scrat önce yanlış yöne dönüyor, sonra da palamuda ulaşacak
-            kadar yeterli sayıda ileri gitmiyor.
         - text: Scrat, birinci bloktan hareket etmeyecek.
-          feedback: Bu kodda iki hata var. Scrat önce yanlış yöne dönüyor, sonra da
-            palamuda ulaşacak kadar yeterli sayıda ileri gitmiyor.
+          feedback: Scrat, palamuda ulaşmayacak çünkü yanlış yöne dönüyor.
         questions:
         - text: Bu koddaki hataları bulun. Scrat, palamuda ulaşacak mı yoksa bir sorun
             mu var?
@@ -14378,8 +14369,8 @@ tr-TR:
           correct: true
           feedback: Doğru! İki davranış aynı anda olacak.
         - text: Hareketli nesne önce dönecek, sonra hareket edecek.
-          feedback: Yanlış. Hareketli Nesne Laboratuvarında bağlı bloklar, birbiri
-            ardından gerçekleşir. Dolayısıyla iki davranış aynı anda olacak.
+          feedback: Yanlış. Sprite Lab'ta bağlı bloklar, birbiri ardından gerçekleşir.
+            Dolayısıyla iki davranış aynı anda olacak.
         questions:
         - text: Kodu oku, sonra da bir tahminde bulun.
       courseF_groups_predict_multi_2022_pilot_-2022-2:
@@ -14397,10 +14388,10 @@ tr-TR:
         - text: '"Bir pizza hemen geliyor!"'
           feedback: Yanlış. Değişken etiketleri eşleşmiyor.
         - text: '"Bir yemek hemen geliyor!"'
-          feedback: Yanlış. Değişkenin etkieti asla yazdırılmaz.
+          feedback: Yanlış. Değişkenin etiketi asla yazdırılmaz.
         - text: '"Bir yiyecek hemen geliyor!"'
-          feedback: Yanlış. Değişkenin etkieti asla yazdırılmaz.
-        - text: '"Bir  hemen geliyor!"'
+          feedback: Yanlış. Değişkenin etiketi asla yazdırılmaz.
+        - text: '"Biri  hemen geliyor!"'
           correct: true
           feedback: Doğru! Değişken etiketleri eşleşmiyor.
         - text: Hiçbir şey yazdırılmayacak.
@@ -14505,7 +14496,7 @@ tr-TR:
             ne olacak?'
       courseF_variables_projects2022_2022_pilot_-2022-2:
         description: Bir tebrik kartı, bir sohbet robotu veya bir boş alan hikayesi
-          oluşturacaksınız. Projenizin \"1. Kısmını\" bitirdiyseniz \"2. Kısmına\"
+          oluşturacaksınız. Projenizin \"Kısım 1\"'i bitirdiyseniz \"Kısım 2\"'ye
           gidin.
         display_name: Proje Seç
       courseF_variables_samples2022_2022_pilot_-2022-2:

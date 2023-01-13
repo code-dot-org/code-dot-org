@@ -107,12 +107,16 @@ def upload_to_youtube(service, filename, title, upload_files)
   if !upload_files
     'youtube_code'
   else
-    properties = {'snippet': {'category_id': '22',
-                          'tags[]': '',
-                          'title': title,
-                          'embeddable': 'true'},
-              'status': {'privacy_status': 'unlisted'}}
-    params = {'upload_source': filename, 'content_type': 'video/mp4'}
+    properties = {
+      snippet: {
+        category_id: '22',
+        'tags[]': '',
+        title: title,
+        embeddable: 'true'
+      },
+      status: {privacy_status: 'unlisted'}
+    }
+    params = {upload_source: filename, content_type: 'video/mp4'}
     part = 'snippet,status'
     response = service.insert_video(part, properties, params)
     response.id

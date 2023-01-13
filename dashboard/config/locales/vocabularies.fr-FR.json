@@ -324,7 +324,7 @@
         },
         "persistence/coursed/2022": {
           "word": "Persévérance",
-          "definition": "Essayer encore et encore, même quand quelque chose est très difficile."
+          "definition": "Essayer encore et encore, même quand une chose est très difficile."
         },
         "event/coursed/2022": {
           "word": "Évènement",
@@ -514,12 +514,12 @@
           "definition": "Trouver et corriger les problèmes dans un algorithme ou un programme."
         },
         "click/courseb/2022": {
-          "word": "Cliquez",
+          "word": "Cliquer",
           "definition": "Appuie sur le bouton de la souris"
         },
         "double_click/courseb/2022": {
-          "word": "Double-Clique sur",
-          "definition": "Appuuie très rapidement sur le bouton de la souris"
+          "word": "Double-Cliquer",
+          "definition": "Appuie très rapidement sur le bouton de la souris"
         },
         "drag/courseb/2022": {
           "word": "Glisser",
@@ -539,7 +539,7 @@
         },
         "persistence/courseb/2022": {
           "word": "Persévérance",
-          "definition": "Essayer encore et encore, même quand quelque chose est très difficile."
+          "definition": "Essayer encore et encore, même quand une chose est très difficile."
         },
         "loop/courseb/2022": {
           "word": "Boucle",
@@ -648,12 +648,12 @@
           "definition": "Tenter de faire quelque chose"
         },
         "click/pre-express/2022": {
-          "word": "Cliquez",
+          "word": "Cliquer",
           "definition": "Appuie sur le bouton de la souris"
         },
         "double_click/pre-express/2022": {
-          "word": "Double-Clique sur",
-          "definition": "Appuuie très rapidement sur le bouton de la souris"
+          "word": "Double-Cliquer",
+          "definition": "Appuie très rapidement sur le bouton de la souris"
         },
         "drag/pre-express/2022": {
           "word": "Glisser",
@@ -685,7 +685,7 @@
         },
         "persistence/pre-express/2022": {
           "word": "Persévérance",
-          "definition": "Essayer encore et encore, même quand quelque chose est très difficile."
+          "definition": "Essayer encore et encore, même quand une chose est très difficile."
         },
         "loop/pre-express/2022": {
           "word": "Boucle",
@@ -712,12 +712,12 @@
           "definition": "Algorithme qui a été codé dans quelque chose qui peut être exécuté par une machine."
         },
         "click/coursea/2022": {
-          "word": "Cliquez",
+          "word": "Cliquer",
           "definition": "Appuie sur le bouton de la souris"
         },
         "double_click/coursea/2022": {
-          "word": "Double-Clique sur",
-          "definition": "Appuuie très rapidement sur le bouton de la souris"
+          "word": "Double-Cliquer",
+          "definition": "Appuie très rapidement sur le bouton de la souris"
         },
         "drag/coursea/2022": {
           "word": "Glisser",
@@ -997,12 +997,12 @@
           "definition": "Trouver et corriger les problèmes dans un algorithme ou un programme."
         },
         "click/courseb/2021": {
-          "word": "Cliquez",
+          "word": "Cliquer",
           "definition": "Appuie sur le bouton de la souris"
         },
         "double_click/courseb/2021": {
-          "word": "Double-Clique sur",
-          "definition": "Appuuie très rapidement sur le bouton de la souris"
+          "word": "Double-Cliquer",
+          "definition": "Appuie très rapidement sur le bouton de la souris"
         },
         "drag/courseb/2021": {
           "word": "Glisser",
@@ -1022,7 +1022,7 @@
         },
         "persistence/courseb/2021": {
           "word": "Persévérance",
-          "definition": "Essayer encore et encore, même quand quelque chose est très difficile."
+          "definition": "Essayer encore et encore, même quand une chose est très difficile."
         },
         "loop/courseb/2021": {
           "word": "Boucle",
@@ -1049,12 +1049,12 @@
           "definition": "Algorithme qui a été codé dans quelque chose qui peut être exécuté par une machine."
         },
         "click/coursea/2021": {
-          "word": "Cliquez",
+          "word": "Cliquer",
           "definition": "Appuie sur le bouton de la souris"
         },
         "double_click/coursea/2021": {
-          "word": "Double-Clique sur",
-          "definition": "Appuuie très rapidement sur le bouton de la souris"
+          "word": "Double-Cliquer",
+          "definition": "Appuie très rapidement sur le bouton de la souris"
         },
         "drag/coursea/2021": {
           "word": "Glisser",
@@ -1154,7 +1154,7 @@
         },
         "persistence/coursed/2021": {
           "word": "Persévérance",
-          "definition": "Essayer encore et encore, même quand quelque chose est très difficile."
+          "definition": "Essayer encore et encore, même quand une chose est très difficile."
         },
         "event/coursed/2021": {
           "word": "Évènement",
@@ -1282,12 +1282,12 @@
           "definition": "Tenter de faire quelque chose"
         },
         "click/pre-express/2021": {
-          "word": "Cliquez",
+          "word": "Cliquer",
           "definition": "Appuie sur le bouton de la souris"
         },
         "double_click/pre-express/2021": {
-          "word": "Double-Clique sur",
-          "definition": "Appuuie très rapidement sur le bouton de la souris"
+          "word": "Double-Cliquer",
+          "definition": "Appuie très rapidement sur le bouton de la souris"
         },
         "drag/pre-express/2021": {
           "word": "Glisser",
@@ -1319,7 +1319,7 @@
         },
         "persistence/pre-express/2021": {
           "word": "Persévérance",
-          "definition": "Essayer encore et encore, même quand quelque chose est très difficile."
+          "definition": "Essayer encore et encore, même quand une chose est très difficile."
         },
         "loop/pre-express/2021": {
           "word": "Boucle",
