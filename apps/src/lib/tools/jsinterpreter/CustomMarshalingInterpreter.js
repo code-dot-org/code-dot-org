@@ -3,7 +3,7 @@
 const Interpreter = require('@code-dot-org/js-interpreter');
 const CustomMarshaler = require('./CustomMarshaler');
 
-const DEFAULT_MAX_STEPS = 5e5;
+const DEFAULT_MAX_STEPS = 5e4;
 export const DEFAULT_EXECUTION_INFO = {
   ticks: DEFAULT_MAX_STEPS,
   checkTimeout: function() {
@@ -410,7 +410,7 @@ export default class CustomMarshalingInterpreter extends Interpreter {
     let interpreter, currentCallback, lastReturnValue;
     const hooks = [];
     const apis = {
-      executionInfo: DEFAULT_EXECUTION_INFO,
+      executionInfo: {...DEFAULT_EXECUTION_INFO},
       ...scope
     };
 

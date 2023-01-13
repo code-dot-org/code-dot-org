@@ -9,7 +9,7 @@ require 'psych'
 I18N_SOURCE_DIR = "i18n/locales/source"
 
 CROWDIN_PROJECTS = {
-  "codeorg": {
+  codeorg: {
     config_file: File.join(File.dirname(__FILE__), "codeorg_crowdin.yml"),
     identity_file: File.join(File.dirname(__FILE__), "crowdin_credentials.yml"),
     etags_json: File.join(File.dirname(__FILE__), "crowdin", "codeorg_etags.json"),
