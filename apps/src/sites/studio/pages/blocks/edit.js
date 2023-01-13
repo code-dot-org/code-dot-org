@@ -37,7 +37,8 @@ function initializeEditPage(defaultSprites) {
   Blockly.inject(document.getElementById('blockly-container'), {
     assetUrl,
     valueTypeTabShapeMap: valueTypeTabShapeMap(Blockly),
-    typeHints: true
+    typeHints: true,
+    isEditMode: true
   });
 
   const blockConfigElement = document.getElementById('block_config');
@@ -129,7 +130,8 @@ function updateBlockPreview() {
         pool: poolField.value,
         category: 'Custom',
         config: parsedConfig,
-        helperCode: helperEditor && helperEditor.getValue()
+        helperCode: helperEditor && helperEditor.getValue(),
+        alwaysUsed: true
       }
     ],
     customInputTypes
@@ -141,9 +143,6 @@ function updateBlockPreview() {
 }
 
 function onBlockSpaceChange() {
-  console.log(
-    `block space changed, workspace code is ${Blockly.getWorkspaceCode()}`
-  );
   document.getElementById(
     'code-preview'
   ).innerText = Blockly.getWorkspaceCode();
