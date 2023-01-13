@@ -9,10 +9,7 @@
 
 # Install gem dependencies used by Cdo::Secrets.
 chef_gem 'aws-sdk-secretsmanager'
-chef_gem 'aws-sdk-s3'
 chef_gem 'aws-sdk-ec2'
-chef_gem 'json'
-chef_gem 'highline'
 
 chef_gem 'activesupport' do
   # By default, this will install the very latest version of activesupport,

@@ -1,11 +1,31 @@
 require 'cdo/config'
 require 'cdo/lazy'
-require 'cdo/aws/cloud_formation'
+require 'aws-sdk-ec2'
 
 module Cdo
   # Prepend this module to a Cdo::Config to process lazy-loaded secrets contained in special tags.
   module SecretsConfig
     BASE_ENVS = [:staging, :test, :levelbuilder, :production]
+
+    EC2_METADATA_SERVICE = URI('http://169.254.169.254/latest/meta-data/instance-id')
+
+    # Get the CloudFormation Stack Name that the EC2 Instance this code is executing on belongs to.
+    # @return [String]
+    def self.current_stack_name
+      metadata_service_request = Net::HTTP.new(EC2_METADATA_SERVICE.host, EC2_METADATA_SERVICE.port)
+      # Set a short timeout so that when not executing on an EC2 Instance we fail fast.
+      metadata_service_request.open_timeout = metadata_service_request.read_timeout = 3
+      ec2_instance_id = metadata_service_request.request_get(EC2_METADATA_SERVICE.path).body
+      ec2_client = Aws::EC2::Client.new
+      ec2_client.
+        describe_tags({filters: [{name: "resource-id", values: [ec2_instance_id]}]}).
+        tags.
+        select {|tag| tag.key == 'aws:cloudformation:stack-name'}.
+        first.
+        value
+    rescue Net::OpenTimeout # This code is not executing on an AWS EC2 Instance nor in an ECS container or Lambda.
+      nil
+    end
 
     # Generate a standard secret path from prefix and key.
     # These secrets are specific to an environment type (adhoc, staging, development, etc.) and could potentially
@@ -17,7 +37,7 @@ module Cdo
     # Generate path to a Secret that was provisioned for a specific CloudFormation Stack. This enables
     # configuration settings to have different values for different deployments that have the same environment type.
     def self.stack_specific_secret_path(key)
-      stack = AWS::CloudFormation.current_stack_name
+      stack = current_stack_name
       stack ? "CfnStack/#{stack}/#{key}" : nil
     end
 
