@@ -75,7 +75,7 @@ class Services::CompleteApplicationReminderTest < ActiveSupport::TestCase
 
       # 6 days later, a user updates their application and saves again, and no reminder is sent
       Timecop.travel 6.days
-      application.update!(form_data: application.form_data_hash.merge("firstName": 'Simon').to_json)
+      application.update!(form_data: application.form_data_hash.merge(firstName: 'Simon').to_json)
       application.reload
       Services::CompleteApplicationReminder.queue_complete_application_reminders!
       assert_empty application.emails.where(email_type: 'complete_application_initial_reminder')
@@ -101,7 +101,7 @@ class Services::CompleteApplicationReminderTest < ActiveSupport::TestCase
 
       # 3 days later, a user updates their application, and no new reminder is sent
       Timecop.travel 3.days
-      application.update!(form_data: application.form_data_hash.merge("firstName": 'Garfunkel').to_json)
+      application.update!(form_data: application.form_data_hash.merge(firstName: 'Garfunkel').to_json)
       Services::CompleteApplicationReminder.queue_complete_application_reminders!
       assert_equal 1, application.emails.where(email_type: 'complete_application_initial_reminder').count
 

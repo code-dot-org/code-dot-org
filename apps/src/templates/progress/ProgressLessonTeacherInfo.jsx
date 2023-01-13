@@ -145,7 +145,12 @@ class ProgressLessonTeacherInfo extends React.Component {
           </div>
         )}
         {lesson.lesson_feedback_url && (
-          <div style={styles.buttonContainer}>
+          <div
+            style={{
+              marginBottom: !!showHiddenForSectionToggle ? '0px' : '10px',
+              ...styles.buttonContainer
+            }}
+          >
             <Button
               __useDeprecatedTag
               href={lesson.lesson_feedback_url}
@@ -171,14 +176,19 @@ class ProgressLessonTeacherInfo extends React.Component {
 
 const styles = {
   buttonContainer: {
-    marginTop: 5,
-    marginLeft: 15,
-    marginRight: 15
+    marginTop: '10px',
+    marginRight: '15px',
+    marginLeft: '15px',
+    // Have to set line height to 0 to remove additional 5px bottom margin
+    lineHeight: '0px'
   },
+  // Setting 0px margin here intentionally to override styling
   button: {
     width: '100%',
+    margin: '0px',
     paddingLeft: 0,
-    paddingRight: 0
+    paddingRight: 0,
+    boxShadow: 'none'
   }
 };
 

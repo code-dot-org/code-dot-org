@@ -1415,8 +1415,14 @@ si:
         csp5-2023:
           lesson_groups:
             csp_lists:
-              display_name: ලැයිස්තු
+              display_name: දත්ත
             csp_loops:
+              display_name: ලූපයන්
+        csp6-2023:
+          lesson_groups:
+            csp_unit6_2020:
+              display_name: ලැයිස්තු
+            lessonGroup-3:
               display_name: ලූපයන්
         csp9-2023:
           lesson_groups:
