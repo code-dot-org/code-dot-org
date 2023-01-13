@@ -130,8 +130,7 @@ function updateBlockPreview() {
         pool: poolField.value,
         category: 'Custom',
         config: parsedConfig,
-        helperCode: helperEditor && helperEditor.getValue(),
-        alwaysUsed: true
+        helperCode: helperEditor && helperEditor.getValue()
       }
     ],
     customInputTypes
