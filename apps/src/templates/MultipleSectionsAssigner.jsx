@@ -29,8 +29,57 @@ class MultipleSectionsAssigner extends Component {
     selectedSectionId: PropTypes.number
   };
 
+  constructor(props) {
+    super(props);
+
+    let currentSectionsAssignedToCourseList = [];
+
+    for (let i = 0; i < this.props.sections.length; i++) {
+      if (this.props.sections[i].isAssigned()) {
+        currentSectionsAssignedToCourseList.push(this.props.sections[i]);
+      }
+    }
+
+    this.state = {
+      currentSectionsAssigned: currentSectionsAssignedToCourseList
+    };
+  }
+
+  // create a state of the list of all the sections currently assigned the course.
+  // pass this as a prop to the Teacher Section Option
+
   chooseMenuItem = section => {
     console.log(section + 'was clicked');
+  };
+
+  boxChecked = () => {
+    console.log('box clicked...');
+  };
+
+  // Modeled after displayFunctions in LibraryPublisher
+  displaySections = () => {
+    // const {selectedFunctions} = this.state;
+    const {sections} = this.props;
+    return sections.map(section => {
+      // const {functionName, comment} = sourceFunction;
+      const checked = section.isAssigned || false;
+      // const functionId = _.uniqueId(`${functionName}-`);
+
+      return (
+        <div>
+          <div style={styles.functionSelector}>
+            <input
+              style={styles.largerCheckbox}
+              type="checkbox"
+              name={section.name}
+              checked={checked}
+              onChange={this.boxChecked}
+            />
+            <label style={styles.functionLabel}>{section.name}</label>
+          </div>
+        </div>
+      );
+    });
   };
 
   render() {
@@ -58,12 +107,15 @@ class MultipleSectionsAssigner extends Component {
         <div style={styles.header} className="uitest-confirm-assignment-dialog">
           {i18n.yourSectionsList()}
         </div>
-        <div>
+        <div style={styles.grid}>{this.displaySections()}</div>
+        <hr />
+        <div style={styles.grid}>
           {sections &&
             sections.map(section => (
               <TeacherSectionOption
                 section={section}
-                onClick={() => this.chooseMenuItem(section)}
+                assignedSections={this.state.currentSectionsAssigned}
+                onClick={() => this.chooseMenuItem(section)} // this fucntion should update the state of multiple secion assigner
                 editedValue={section.isAssigned}
               />
             ))}
@@ -107,6 +159,24 @@ const styles = {
     borderRightWidth: 0,
     borderStyle: 'solid',
     borderColor: color.lighter_gray
+  },
+  grid: {
+    display: 'grid',
+    gridTemplateColumns: '33% 33% 34%'
+  },
+  functionSelector: {
+    display: 'flex',
+    alignItems: 'center',
+    margin: '10px 10px 10px 0'
+  },
+  largerCheckbox: {
+    width: 20,
+    height: 20
+  },
+  selectAllFunctionsLabel: {
+    margin: 0,
+    fontSize: 20,
+    fontFamily: '"Gotham 5r", sans-serif'
   }
 };
 

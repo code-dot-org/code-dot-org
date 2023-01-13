@@ -10,6 +10,7 @@ export default class TeacherSectionOption extends Component {
   static propTypes = {
     section: sectionForDropdownShape,
     // onClick: PropTypes.func.isRequired,
+    assignedSections: PropTypes.arrayOf(sectionForDropdownShape),
     checked: PropTypes.bool
   };
 
@@ -22,6 +23,21 @@ export default class TeacherSectionOption extends Component {
   }
 
   boxChecked = () => {
+    // if the item is being checked, add it to assignedSections
+    if (this.state.isChecked) {
+      // remove it from the array
+    } else {
+      // add the item to the array
+      this.props.assignedSections.push(this.props.section);
+    }
+    // for (let i = 0; i < this.props.assignedSections.length; i++) {
+    //   if (this.props.assignedSections[i].id === this.props.section.id) {
+    //     return true;
+    //   } else {
+    //     return false;
+    //   }
+    // }
+    // return false;
     this.setState(state => {
       state.isChecked = !state.isChecked;
       return state;
