@@ -570,7 +570,6 @@ function checkThisSpriteClickedThisFrame(spriteId) {
   }, "cscLandmarkBackgroundStoryteller");  // include i18n feedback string
   */
 function checkNewBackground() {
-  console.log(getBackground());
   if (getBackground() != '' && getBackground() != null) {
   	return getBackground() != validationProps.previous.background;
   }
@@ -619,7 +618,10 @@ function checkUniqueTouchEvents(n, delayTime) {
  }, "noEvents");
  */
 function checkAtLeastNEvents(n) {
-  return eventLog.length >= n;
+  if (eventLog) {
+      return eventLog.length >= n;
+  }
+  return false;
 }
 
 //Checks if a prompt appeared with an event

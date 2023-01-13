@@ -30,7 +30,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-12-06 15:28:55 UTC",
+    "serialized_at": "2023-01-10 18:28:16 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -2570,7 +2570,7 @@
       "key": "53e2f1a8-61e3-4611-8b66-13d0e9134cfe",
       "position": 10,
       "properties": {
-        "description": "\n\n**Levels 7-8 Loops and Screen Elements:** In these levels students practice writing programs that modify screen elements with loops. Screen elements have already been designed to have repeated patterns (e.g. \"dice0\", \"dice1\", \"dice2\" ...) that make it possible to write code that modifies every screen element. This is important practice for the Make project in the next lesson.\n\n* Level 7: This level is a simple introduction to using loops to generate a sentence with random font colors and font sizes.\n* Level 8: Students must update a \"Dice Roller\" app that has some working functionality already. All of the different concepts they'll need to use are already in the starter code of this app, but they'll need to think through how to put them together to get the target code behavior."
+        "description": "\n\n**Levels 8-9 Loops and Screen Elements:** In these levels students practice writing programs that modify screen elements with loops. Screen elements have already been designed to have repeated patterns (e.g. \"dice0\", \"dice1\", \"dice2\" ...) that make it possible to write code that modifies every screen element. This is important practice for the Make project in the next lesson.\n\n* Level 8: This level is a simple introduction to using loops to generate a sentence with random font colors and font sizes.\n* Level 9: Students must update a \"Dice Roller\" app that has some working functionality already. All of the different concepts they'll need to use are already in the starter code of this app, but they'll need to think through how to put them together to get the target code behavior."
       },
       "seeding_key": {
         "activity_section.key": "53e2f1a8-61e3-4611-8b66-13d0e9134cfe",
