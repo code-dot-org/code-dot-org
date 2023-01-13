@@ -52,7 +52,7 @@ class Pd::WorkshopEnrollmentController < ApplicationController
           name: facilitator.name,
           email: facilitator.email,
           image_path: File.exist?(image_file) ? CDO.code_org_url("/images/affiliate-images/fit-150/#{facilitator.id}.jpg") : nil,
-          bio: File.exist?(bio_file) ? File.open(bio_file, "r").read : nil
+          bio: File.exist?(bio_file) ? File.read(bio_file) : nil
         }
       end
 
