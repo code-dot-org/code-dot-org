@@ -255,7 +255,10 @@ class User < ApplicationRecord
         study: 'gender-input-type',
         study_group: 'v1',
         event: gender_input_type,
-        data_string: gender
+        data_json: {
+          gender: gender,
+          locale: locale
+        }.to_json
       }
     )
     self.gender = Policies::Gender.normalize gender

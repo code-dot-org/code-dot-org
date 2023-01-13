@@ -15,7 +15,7 @@ module User::GenderExperimentHelper
     country_code = request.params['country_code'] || location&.country_code.to_s
     # This experiment is limited to the US. 'RD' is the code returned for localhost.
     us_country = country_code && ['US', 'RD'].include?(country_code.upcase)
-    us_country && experiment_value('gender_input_exp') == 'true'
+    us_country && experiment_value('gender_input_exp')
   end
 
   GENDER_INPUT_TYPE_TEXT = 'text'
