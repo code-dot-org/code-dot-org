@@ -4232,7 +4232,7 @@ ar:
         csp5-2023:
           lesson_groups:
             csp_lists:
-              display_name: القوائم
+              display_name: البيانات
             csp_loops:
               display_name: الحلقات
             csp_traversals:
@@ -4244,9 +4244,15 @@ ar:
         csp6-2023:
           lesson_groups:
             csp_unit6_2020:
-              display_name: 'الوحدة 6: الخوارزميات'
+              display_name: القوائم
             lessonGroup-2:
               display_name: استبيان ما بعد الدورة التدريبية
+            lessonGroup-3:
+              display_name: الحلقات
+            lessonGroup-4:
+              display_name: الاجتيازات
+            lessonGroup-5:
+              display_name: مشروع
         csp7-2023:
           lesson_groups:
             csp_parameters_return_values:

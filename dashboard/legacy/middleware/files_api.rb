@@ -712,7 +712,7 @@ class FilesApi < Sinatra::Base
     #     }
     #   ]
     # }
-    {"filesVersionId": result[:version_id], "files": JSON.parse(result[:body].read)}.to_json
+    {filesVersionId: result[:version_id], files: JSON.parse(result[:body].read)}.to_json
   end
 
   #
@@ -941,7 +941,7 @@ class FilesApi < Sinatra::Base
     manifest_json = manifest.to_json
     result = bucket.create_or_replace(encrypted_channel_id, FileBucket::MANIFEST_FILENAME, manifest_json, nil, abuse_score)
 
-    {"filesVersionId": result[:version_id], "files": manifest}.to_json
+    {filesVersionId: result[:version_id], files: manifest}.to_json
   end
 
   #

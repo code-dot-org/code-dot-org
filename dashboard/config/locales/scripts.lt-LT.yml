@@ -1468,7 +1468,11 @@ lt:
               display_name: Komandų kūrimas
         csp5-2023:
           lesson_groups:
-            csp_lists:
-              display_name: Sąrašai
             csp_loops:
+              display_name: Kartojimas
+        csp6-2023:
+          lesson_groups:
+            csp_unit6_2020:
+              display_name: Sąrašai
+            lessonGroup-3:
               display_name: Kartojimas

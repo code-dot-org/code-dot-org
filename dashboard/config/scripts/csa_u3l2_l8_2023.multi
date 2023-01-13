@@ -1,0 +1,8 @@
+name 'CSA U3L2-L8_2023'
+title 'Check for Understanding'
+
+wrong '`{3, 4, 6}`'
+wrong '`{1, 5, 4}`'
+wrong '`0`'
+right '`10`'
+wrong '`4`'

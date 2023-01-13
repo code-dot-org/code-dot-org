@@ -125,7 +125,6 @@ class SectionsAsStudentTable extends React.Component {
               {canLeave && (
                 <td style={{...styles.col, ...styles.leaveCol}}>
                   <Button
-                    __useDeprecatedTag
                     style={{marginLeft: 5}}
                     text={i18n.leaveSection()}
                     onClick={this.onLeave.bind(
