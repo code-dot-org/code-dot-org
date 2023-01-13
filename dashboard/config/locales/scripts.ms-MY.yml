@@ -2315,10 +2315,18 @@ ms:
         csp5-2023:
           lesson_groups:
             csp_lists:
-              display_name: Senarai
+              display_name: Data
             csp_loops:
               display_name: Gelung
             csp_project:
+              display_name: Projek
+        csp6-2023:
+          lesson_groups:
+            csp_unit6_2020:
+              display_name: Senarai
+            lessonGroup-3:
+              display_name: Gelung
+            lessonGroup-5:
               display_name: Projek
         csp-playground:
           description_audience: Penulis Kurikulum

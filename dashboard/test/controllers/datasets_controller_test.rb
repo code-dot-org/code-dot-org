@@ -9,20 +9,20 @@ class DatasetsControllerTest < ActionController::TestCase
     @test_manifest = {
       tables: [
         {
-          "current": false,
-          "description": "Information about different cat breeds",
-          "name": "cats",
-          "published": true
+          current: false,
+          description: "Information about different cat breeds",
+          name: "cats",
+          published: true
         }
       ],
       categories: [
         {
-          "datasets": [
+          datasets: [
             "cats"
           ],
-          "description": "description",
-          "name": "Animals",
-          "published": true
+          description: "description",
+          name: "Animals",
+          published: true
         }
       ]
     }

@@ -3172,10 +3172,18 @@ cs:
         csp5-2023:
           lesson_groups:
             csp_lists:
-              display_name: Seznamy
+              display_name: Data
             csp_loops:
               display_name: Cykly
             csp_project:
+              display_name: Projekt
+        csp6-2023:
+          lesson_groups:
+            csp_unit6_2020:
+              display_name: Seznamy
+            lessonGroup-3:
+              display_name: Cykly
+            lessonGroup-5:
               display_name: Projekt
         csp9-2023:
           lesson_groups:
