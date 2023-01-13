@@ -90,6 +90,7 @@ class ContactRollupsV2
   end
 
   # Collects raw contact data from multiple tables into ContactRollupsRaw.
+  # MEG: This takes over an hour to run
   def collect_contacts
     start_time = Time.now
     @log_collector.time!('Deletes intermediate content from previous runs') do
@@ -128,6 +129,7 @@ class ContactRollupsV2
 
   # Process contacts in ContactRollupsRaw table and save the results to ContactRollupsProcessed.
   # The results are then copied over to ContactRollupsFinal for further analysis.
+  # MEG: This takes over an hour to run
   def process_contacts
     start_time = Time.now
     @log_collector.time!('Processes all extracted data') do
@@ -145,6 +147,7 @@ class ContactRollupsV2
     )
   end
 
+  # MEG: This takes over 20 minutes to run
   def sync_new_contacts_with_pardot
     start_time = Time.now
     unless @is_dry_run
@@ -177,6 +180,7 @@ class ContactRollupsV2
     )
   end
 
+  # MEG: This takes over 20 minutes to run
   def sync_updated_contacts_with_pardot
     start_time = Time.now
     @log_collector.time_and_continue('Updates existing Pardot prospects') do

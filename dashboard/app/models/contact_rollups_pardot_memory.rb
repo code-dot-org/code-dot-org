@@ -167,6 +167,7 @@ class ContactRollupsPardotMemory < ApplicationRecord
     }
   end
 
+  # MEG: This takes over 20 minutes to run
   def self.update_pardot_prospects(is_dry_run: false)
     request_count = 0
     updated_prospects = 0
