@@ -1,4 +1,3 @@
-import {javascriptGenerator} from 'blockly/javascript';
 import {
   ScrollBlockDragger,
   ScrollOptions
@@ -37,6 +36,9 @@ import {FUNCTION_BLOCK} from './addons/functionBlocks.js';
 import {flyoutCategory as functionsFlyoutCategory} from './addons/functionEditor.js';
 
 const BLOCK_PADDING = 7; // Calculated from difference between block height and text height
+
+const INFINITE_LOOP_TRAP =
+  '  executionInfo.checkTimeout(); if (executionInfo.isTerminated()){return;}\n';
 
 /**
  * Wrapper class for https://github.com/google/blockly
@@ -93,9 +95,18 @@ const BlocklyWrapper = function(blocklyInstance) {
 function initializeBlocklyWrapper(blocklyInstance) {
   const blocklyWrapper = new BlocklyWrapper(blocklyInstance);
 
-  blocklyWrapper.setInfiniteLoopTrap = function() {}; // TODO
-  blocklyWrapper.clearInfiniteLoopTrap = function() {}; // TODO
-  blocklyWrapper.getInfiniteLoopTrap = function() {}; // TODO
+  blocklyWrapper.setInfiniteLoopTrap = function() {
+    Blockly.JavaScript.INFINITE_LOOP_TRAP = INFINITE_LOOP_TRAP;
+  };
+
+  blocklyWrapper.clearInfiniteLoopTrap = function() {
+    Blockly.JavaScript.INFINITE_LOOP_TRAP = '';
+  };
+
+  blocklyWrapper.getInfiniteLoopTrap = function() {
+    return Blockly.JavaScript.INFINITE_LOOP_TRAP;
+  };
+
   blocklyWrapper.loopHighlight = function() {}; // TODO
   blocklyWrapper.getWorkspaceCode = function() {
     return Blockly.JavaScript.workspaceToCode(Blockly.mainBlockSpace);
@@ -241,7 +252,6 @@ function initializeBlocklyWrapper(blocklyInstance) {
     }
   });
 
-  // Properties cannot be modified until wrapSettableProperty has been called
   blocklyWrapper.wrapSettableProperty('assetUrl');
   blocklyWrapper.wrapSettableProperty('behaviorEditor');
   blocklyWrapper.wrapSettableProperty('customSimpleDialog');
@@ -253,8 +263,6 @@ function initializeBlocklyWrapper(blocklyInstance) {
   blocklyWrapper.wrapSettableProperty('showUnusedBlocks');
   blocklyWrapper.wrapSettableProperty('typeHints');
   blocklyWrapper.wrapSettableProperty('valueTypeTabShapeMap');
-
-  blocklyWrapper.JavaScript = javascriptGenerator;
 
   // Wrap SNAP_RADIUS property, and in the setter make sure we keep SNAP_RADIUS and CONNECTING_SNAP_RADIUS in sync.
   // See https://github.com/google/blockly/issues/2217
@@ -270,6 +278,10 @@ function initializeBlocklyWrapper(blocklyInstance) {
 
   blocklyWrapper.addChangeListener = function(blockspace, handler) {
     blockspace.addChangeListener(handler);
+  };
+
+  blocklyWrapper.getWorkspaceCode = function() {
+    return Blockly.JavaScript.workspaceToCode(Blockly.mainBlockSpace);
   };
 
   const googleBlocklyMixin = blocklyWrapper.BlockSvg.prototype.mixin;

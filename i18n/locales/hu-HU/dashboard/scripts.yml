@@ -2612,7 +2612,7 @@ hu:
         csp5-2023:
           lesson_groups:
             csp_lists:
-              display_name: Listák
+              display_name: Adat
             csp_loops:
               display_name: hurkok
             csp_project:
@@ -2621,8 +2621,14 @@ hu:
               display_name: Tanfomlyam Utáni Felmérés
         csp6-2023:
           lesson_groups:
+            csp_unit6_2020:
+              display_name: Listák
             lessonGroup-2:
               display_name: Tanfomlyam Utáni Felmérés
+            lessonGroup-3:
+              display_name: hurkok
+            lessonGroup-5:
+              display_name: Projekt
         csp7-2023:
           lesson_groups:
             lessonGroup-3:

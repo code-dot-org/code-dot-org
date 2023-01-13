@@ -837,7 +837,7 @@ class ActivitiesControllerTest < ActionController::TestCase
     lesson = create :lesson, script: script
     level1a = create :maze, name: 'maze 1'
     level1b = create :maze, name: 'maze 1 new'
-    script_level = create :script_level, script: script, lesson: lesson, levels: [level1a, level1b], properties: {'maze 1': {'active': false}}
+    script_level = create :script_level, script: script, lesson: lesson, levels: [level1a, level1b], properties: {'maze 1': {active: false}}
 
     post :milestone,
       params: @milestone_params.merge(

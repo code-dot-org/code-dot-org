@@ -10741,7 +10741,7 @@ es-MX:
         csp5-2023:
           lesson_groups:
             csp_lists:
-              display_name: Listas
+              display_name: Datos
             csp_loops:
               display_name: Bucles
             csp_traversals:
@@ -10750,13 +10750,41 @@ es-MX:
               display_name: Proyecto
             lessonGroup-5:
               display_name: Encuesta de final de curso
-          title: Listas, Bucles y Recorridos ('21-'22)
+          title: Datos ('21-'22)
           description: Esta unidad describe las listas, los bucles y los recorridos,
             y explora el modo en que pueden utilizarse para crear aplicaciones que
             almacenen y procesen grandes cantidades de información. Aprende a programar
             con la biblioteca de datos en Laboratorio de Aplicaciones y completa un
             proyecto de hackatón de 5 días al final de la unidad donde puedes diseñar
             un programa sobre cualquier tema que elijas.
+          student_description: 'En esta unidad aprenderás cómo el análisis de datos
+            ayuda a convertir los datos en bruto en información útil sobre el mundo.
+            Aprendes a utilizar la visualización de datos para encontrar patrones
+            dentro de los conjuntos de datos y aprendes cómo este proceso de análisis
+            de datos se utiliza en contextos como los datos abiertos o el aprendizaje
+            automático para ayudar a tomar decisiones o aprender más sobre nuestro
+            mundo. En el proyecto de la unidad, analizarás un conjunto de datos de
+            tu elección y presentarás tus conclusiones. '
+          description_short: Aprende a crear aplicaciones que utilicen listas, bucles
+            y recorridos para almacenar y procesar grandes cantidades de información.
+        csp6-2023:
+          lesson_groups:
+            csp_unit6_2020:
+              display_name: Listas
+            lessonGroup-2:
+              display_name: Encuesta de final de curso
+            lessonGroup-3:
+              display_name: Bucles
+            lessonGroup-4:
+              display_name: Recorridos
+            lessonGroup-5:
+              display_name: Proyecto
+          title: Listas, Bucles y Recorridos ('21-'22)
+          description: Esta unidad es una rápida exploración de cómo los informáticos
+            diseñan algoritmos para resolver problemas y cómo analizan la velocidad
+            de diferentes algoritmos. Aprende sobre el concepto de eficiencia algorítmica
+            a través de una variedad de actividades prácticas y descubre cómo se está
+            aplicando en la informática moderna.
           student_description: Esta unidad describe las listas, los bucles y los recorridos,
             y explora el modo en que pueden utilizarse para crear aplicaciones que
             almacenen y procesen grandes cantidades de información. Aprende a programar
@@ -10765,25 +10793,6 @@ es-MX:
             un programa sobre cualquier tema que elijas.
           description_short: Aprende a crear aplicaciones que utilicen listas, bucles
             y recorridos para almacenar y procesar grandes cantidades de información.
-        csp6-2023:
-          lesson_groups:
-            csp_unit6_2020:
-              display_name: 'Unidad 6: Algoritmos'
-            lessonGroup-2:
-              display_name: Encuesta de final de curso
-          title: Algoritmos ('21-'22)
-          description: Esta unidad es una rápida exploración de cómo los informáticos
-            diseñan algoritmos para resolver problemas y cómo analizan la velocidad
-            de diferentes algoritmos. Aprende sobre el concepto de eficiencia algorítmica
-            a través de una variedad de actividades prácticas y descubre cómo se está
-            aplicando en la informática moderna.
-          student_description: Esta unidad es una rápida exploración de cómo los informáticos
-            diseñan algoritmos para resolver problemas y cómo analizan la velocidad
-            de diferentes algoritmos. Aprende sobre el concepto de eficiencia algorítmica
-            a través de una variedad de actividades prácticas y descubre cómo se está
-            aplicando en la informática moderna.
-          description_short: Diseñar y analizar algoritmos para entender cómo funcionan
-            y por qué algunos se consideran mejores que otros.
         csp7-2023:
           lesson_groups:
             csp_parameters_return_values:
@@ -10811,46 +10820,6 @@ es-MX:
               display_name: PT de creación
             lessonGroup-3:
               display_name: Encuesta de final de curso
-          title: Crear PT - Preparación ('21-'22)
-          description: En esta unidad se prepara y se realiza la AP Create Performance
-            Task. Cada lección contiene enlaces a documentos y actividades útiles
-            para ayudarte a entender la tarea y desarrollar un plan para completarla.
-          student_description: En esta unidad se prepara y se realiza la AP Create
-            Performance Task. Cada lección contiene enlaces a documentos y actividades
-            útiles para ayudarte a entender la tarea y desarrollar un plan para completarla.
-          description_short: Practica y completa la Create Performance Task (PT).
-        csp9-2023:
-          lesson_groups:
-            csp_unit9_2020:
-              display_name: 'Unidad 9: Datos'
-            lessonGroup-2:
-              display_name: Encuesta de final de curso
-          title: Datos ('21-'22)
-          description: 'En esta unidad aprenderás cómo el análisis de datos ayuda
-            a convertir los datos en bruto en información útil sobre el mundo. Aprendes
-            a utilizar la visualización de datos para encontrar patrones dentro de
-            los conjuntos de datos y aprendes cómo este proceso de análisis de datos
-            se utiliza en contextos como los datos abiertos o el aprendizaje automático
-            para ayudar a tomar decisiones o aprender más sobre nuestro mundo. En
-            el proyecto de la unidad, analizarás un conjunto de datos de tu elección
-            y presentarás tus conclusiones. '
-          student_description: 'En esta unidad aprenderás cómo el análisis de datos
-            ayuda a convertir los datos en bruto en información útil sobre el mundo.
-            Aprendes a utilizar la visualización de datos para encontrar patrones
-            dentro de los conjuntos de datos y aprendes cómo este proceso de análisis
-            de datos se utiliza en contextos como los datos abiertos o el aprendizaje
-            automático para ayudar a tomar decisiones o aprender más sobre nuestro
-            mundo. En el proyecto de la unidad, analizarás un conjunto de datos de
-            tu elección y presentarás tus conclusiones. '
-          description_short: Explora y visualiza conjuntos de datos de una gran variedad
-            de temas mientras buscas patrones e intentas aprender más sobre el mundo
-            que te rodea.
-        csp10-2023:
-          lesson_groups:
-            csp_unit10_2020:
-              display_name: 'Unidad 10: Ciberseguridad e impactos globales'
-            lessonGroup-2:
-              display_name: Encuesta de final de curso
           title: Ciberseguridad e Impactos Globales ('21-'22)
           description: En esta unidad aprenderás cómo las innovaciones informáticas
             han influido en nuestro mundo de forma beneficiosa y perjudicial. Aprende
@@ -10868,9 +10837,40 @@ es-MX:
             la "escuela del futuro" en la que tú y un equipo hacéis una propuesta
             sobre la mejor manera de mejorar la vida escolar con las innovaciones
             informáticas.
-          description_short: Investigar y debatir la actualidad en la intersección
-            de los datos, las políticas públicas, el derecho, la ética y el impacto
-            social.
+          description_short: Practica y completa la Create Performance Task (PT).
+        csp9-2023:
+          lesson_groups:
+            csp_unit9_2020:
+              display_name: 'Unidad 9: Datos'
+            lessonGroup-2:
+              display_name: Encuesta de final de curso
+          title: Crear PT - Preparación ('21-'22)
+          description: En esta unidad se prepara y se realiza la AP Create Performance
+            Task. Cada lección contiene enlaces a documentos y actividades útiles
+            para ayudarte a entender la tarea y desarrollar un plan para completarla.
+          student_description: En esta unidad se prepara y se realiza la AP Create
+            Performance Task. Cada lección contiene enlaces a documentos y actividades
+            útiles para ayudarte a entender la tarea y desarrollar un plan para completarla.
+          description_short: Practica y completa la Create Performance Task (PT).
+        csp10-2023:
+          lesson_groups:
+            csp_unit10_2020:
+              display_name: 'Unidad 10: Ciberseguridad e impactos globales'
+            lessonGroup-2:
+              display_name: Encuesta de final de curso
+          title: Algoritmos ('21-'22)
+          description: Esta unidad es una rápida exploración de cómo los informáticos
+            diseñan algoritmos para resolver problemas y cómo analizan la velocidad
+            de diferentes algoritmos. Aprende sobre el concepto de eficiencia algorítmica
+            a través de una variedad de actividades prácticas y descubre cómo se está
+            aplicando en la informática moderna.
+          student_description: Esta unidad es una rápida exploración de cómo los informáticos
+            diseñan algoritmos para resolver problemas y cómo analizan la velocidad
+            de diferentes algoritmos. Aprende sobre el concepto de eficiencia algorítmica
+            a través de una variedad de actividades prácticas y descubre cómo se está
+            aplicando en la informática moderna.
+          description_short: Diseñar y analizar algoritmos para entender cómo funcionan
+            y por qué algunos se consideran mejores que otros.
         csp-post-survey-2023:
           title: Encuesta de fin de curso de Principios de Ciencias de la Computación
           description: Esta unidad contiene la Encuesta Final del Curso de Principios
@@ -10949,3 +10949,29 @@ es-MX:
             un simple prototipo aproximado puede conducir a un producto terminado.
             La unidad concluye con un reto de diseño para utilizar el Circuit Playground
             como base para una innovación de su propio diseño.
+        vpl-csd5-ayw-pilot-2022:
+          lessons:
+            lesson-1:
+              name: Apertura del Taller
+            lesson-2:
+              name: Contenido del Taller
+            lesson-4:
+              name: Cerrando
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Parte 1: Sesión Sincrónica'
+            lessonGroup-3:
+              display_name: 'Parte 2: Post-Trabajo Asíncrono'
+        vpl-csd6-ayw-pilot-2022:
+          lessons:
+            lesson-1:
+              name: Apertura del Taller
+            lesson-2:
+              name: Contenido del Taller
+            lesson-4:
+              name: Cerrando
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Parte 1: Sesión Sincrónica'
+            lessonGroup-3:
+              display_name: 'Parte 2: Post-Trabajo Asíncrono'

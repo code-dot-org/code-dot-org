@@ -3908,7 +3908,7 @@ sk:
         csp5-2023:
           lesson_groups:
             csp_lists:
-              display_name: Zoznamy
+              display_name: Dáta
             csp_loops:
               display_name: Cykly
             csp_traversals:
@@ -3919,8 +3919,16 @@ sk:
               display_name: Hodnotenie kurzu
         csp6-2023:
           lesson_groups:
+            csp_unit6_2020:
+              display_name: Zoznamy
             lessonGroup-2:
               display_name: Hodnotenie kurzu
+            lessonGroup-3:
+              display_name: Cykly
+            lessonGroup-4:
+              display_name: Prechody
+            lessonGroup-5:
+              display_name: Projekt
         csp7-2023:
           lesson_groups:
             csp_parameters_return_values:
