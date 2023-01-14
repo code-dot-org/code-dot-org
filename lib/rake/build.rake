@@ -5,7 +5,7 @@ require 'cdo/git_utils'
 
 namespace :build do
   desc 'Builds apps.'
-  timed_task_with_logging :apps do
+  task :apps do
     Dir.chdir(apps_dir) do
       # Only rebuild if any of the apps_build_trigger_paths have changed since last build.
       commit_hash = apps_dir('build/commit_hash')
@@ -28,7 +28,7 @@ namespace :build do
   end
 
   desc 'Builds broken link checker.'
-  timed_task_with_logging :tools do
+  task :tools do
     Dir.chdir(File.join(tools_dir, "scripts", "brokenLinkChecker")) do
       ChatClient.log 'Installing <b>broken link checker</b> dependencies...'
       RakeUtils.npm_install
@@ -36,7 +36,7 @@ namespace :build do
   end
 
   desc 'Builds dashboard (install gems, migrate/seed db, compile assets).'
-  timed_task_with_logging dashboard: :package do
+  task dashboard: :package do
     Dir.chdir(dashboard_dir) do
       # Unless on production, serve UI test directory
       unless rack_env?(:production)
@@ -123,7 +123,7 @@ namespace :build do
   end
 
   desc 'Builds pegasus (install gems, migrate/seed db).'
-  timed_task_with_logging :pegasus do
+  task :pegasus do
     Dir.chdir(pegasus_dir) do
       ChatClient.log 'Installing <b>pegasus</b> bundle...'
       RakeUtils.bundle_install
@@ -147,11 +147,11 @@ namespace :build do
   tasks << :dashboard if CDO.build_dashboard
   tasks << :pegasus if CDO.build_pegasus
   tasks << :tools if rack_env?(:staging)
-  timed_task_with_logging all: tasks
+  task all: tasks
 end
 
 desc 'Builds everything.'
-timed_task_with_logging :build do
+task :build do
   ChatClient.wrap('build') {Rake::Task['build:all'].invoke}
 end
 

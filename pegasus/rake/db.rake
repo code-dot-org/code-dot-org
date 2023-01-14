@@ -1,6 +1,3 @@
-require lib_dir 'cdo/data/logging/rake_task_event_logger'
-include TimedTaskWithLogging
-
 Sequel.extension :migration
 
 def migrations_dir
@@ -26,7 +23,7 @@ end
 
 namespace :db do
   desc 'Prints current schema version'
-  timed_task_with_logging :version do
+  task :version do
     version =
       if DB.tables.include?(:schema_info)
         DB[:schema_info].first[:version]
@@ -36,15 +33,15 @@ namespace :db do
   end
 
   desc 'Ensures that Pegasus database is created'
-  timed_task_with_logging :ensure_created do
+  task :ensure_created do
     create_database CDO.pegasus_db_writer
   end
 
   desc 'Recreate the pegasus database (test only)'
-  timed_task_with_logging recreate: [:drop, :ensure_created, :migrate]
+  task recreate: [:drop, :ensure_created, :migrate]
 
   desc 'Drop the pegasus database (test only)'
-  timed_task_with_logging :drop do
+  task :drop do
     unless [:test].include? CDO.rack_env
       raise Exception.new 'Dropping the database is only permitted in test environment.'
     end
@@ -52,14 +49,14 @@ namespace :db do
   end
 
   desc 'Perform migration up to latest migration available'
-  timed_task_with_logging :migrate do
+  task :migrate do
     p DB
     Sequel::Migrator.run(DB, migrations_dir)
     Rake::Task['db:version'].execute
   end
 
   desc 'Perform rollback to specified target or full rollback as default'
-  timed_task_with_logging :rollback, :target do |_t, args|
+  task :rollback, :target do |_t, args|
     args.with_defaults(target: 0)
 
     Sequel::Migrator.run(DB, migrations_dir, target: args[:target].to_i)
@@ -67,7 +64,7 @@ namespace :db do
   end
 
   desc 'Perform migration reset (full rollback and migration)'
-  timed_task_with_logging :reset do
+  task :reset do
     Sequel::Migrator.run(DB, migrations_dir, target: 0)
     Sequel::Migrator.run(DB, migrations_dir)
     Rake::Task['db:version'].execute

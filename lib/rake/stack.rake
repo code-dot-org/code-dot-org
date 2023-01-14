@@ -1,8 +1,5 @@
-require lib_dir 'cdo/data/logging/rake_task_event_logger'
-include TimedTaskWithLogging
-
 namespace :stack do
-  timed_task_with_logging :environment do
+  task :environment do
     ENV['CDN_ENABLED'] ||= '1' unless rack_env?(:adhoc)
     ENV['DOMAIN'] ||= rack_env?(:adhoc) ? 'cdn-code.org' : 'code.org'
     Dir.chdir aws_dir('cloudformation')
@@ -24,14 +21,14 @@ namespace :stack do
     )
   end
 
-  timed_task_with_logging :start do
-    timed_task_with_logging default: :environment do
+  namespace :start do
+    task default: :environment do
       @cfn.create_or_update
     end
 
     desc 'Launch/update a full-stack deployment with CloudFront CDN disabled.
 Note: Consumes AWS resources until `stack:stop` is called.'
-    timed_task_with_logging no_cdn: :environment do
+    task no_cdn: :environment do
       @stack.options[:cdn_enabled] = false
       @cfn.create_or_update
     end
@@ -39,19 +36,19 @@ Note: Consumes AWS resources until `stack:stop` is called.'
 
   desc 'Launch/update a full-stack deployment.
 Note: Consumes AWS resources until `adhoc:stop` is called.'
-  timed_task_with_logging start: ['start:default']
+  task start: ['start:default']
 
   # `stop` command intentionally removed. Use AWS console to manually delete stacks.
 
   desc 'Validate CloudFormation template.'
-  timed_task_with_logging validate: :environment do
+  task validate: :environment do
     @cfn.validate
   end
 
   # Managed resource stacks other than the Code.org application.
   %I(vpc iam ami data lambda alerting).each do |stack|
     namespace stack do
-      timed_task_with_logging :environment do
+      task :environment do
         stack_name = ENV['STACK_NAME']
         stack_name ||= stack.to_s if [:lambda, :alerting].include? stack
         stack_name ||= "#{stack.upcase}#{"-#{rack_env}" if [:ami, :data].include? stack}"
@@ -72,12 +69,12 @@ Note: Consumes AWS resources until `adhoc:stop` is called.'
       end
 
       desc "Launch/update #{stack} stack component."
-      timed_task_with_logging start: :environment do
+      task start: :environment do
         @cfn.create_or_update
       end
 
       desc "Validate #{stack} stack template."
-      timed_task_with_logging validate: :environment do
+      task validate: :environment do
         @cfn.validate
       end
 

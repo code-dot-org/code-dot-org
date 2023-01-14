@@ -4,8 +4,6 @@ require 'pdf/collate'
 require 'cdo/chat_client'
 require 'cdo/rake_utils'
 require 'cdo/yaml'
-require lib_dir 'cdo/data/logging/rake_task_event_logger'
-include TimedTaskWithLogging
 
 # Given a .collate file with lines representing
 def collate_to_pdf_to_fetch_file(collate_file)
@@ -46,4 +44,4 @@ rescue Exception => e
   raise
 end
 
-timed_task_with_logging default: all_output_files
+task default: all_output_files

@@ -1,7 +1,5 @@
 require_relative '../../deployment'
 require 'cdo/chat_client'
-require lib_dir 'cdo/data/logging/rake_task_event_logger'
-include TimedTaskWithLogging
 
 if rack_env?(:development) || rack_env?(:test)
   require 'cdo/rake_utils'
@@ -27,37 +25,37 @@ def create_branch(branch)
 end
 
 namespace :eyes do
-  timed_task_with_logging :merge, [:branch, :base] do |_, args|
+  task :merge, [:branch, :base] do |_, args|
     EyesUtils.check_eyes_set
     ChatClient.log "#{MERGE_EMOJI}  Merging baselines #{args}"
     EyesUtils.merge_eyes_baselines(args[:branch], args[:base])
   end
-  timed_task_with_logging :force_merge, [:branch, :base] do |_, args|
+  task :force_merge, [:branch, :base] do |_, args|
     EyesUtils.check_eyes_set
     ChatClient.log "#{Emoji.find_by_alias('muscle').raw}  Force merging baselines #{args}"
     EyesUtils.force_merge_eyes_baselines(args[:branch], args[:base])
   end
-  timed_task_with_logging :copy, [:branch, :base] do |_, args|
+  task :copy, [:branch, :base] do |_, args|
     EyesUtils.check_eyes_set
     ChatClient.log "#{Emoji.find_by_alias('clipboard').raw}  Copying baselines #{args}"
     EyesUtils.copy_eyes_baselines(args[:branch], args[:base])
   end
-  timed_task_with_logging :force_copy, [:branch, :base] do |_, args|
+  task :force_copy, [:branch, :base] do |_, args|
     EyesUtils.check_eyes_set
     ChatClient.log "#{Emoji.find_by_alias('muscle').raw}#{Emoji.find_by_alias('clipboard').raw}  Force copying baselines #{args}"
     EyesUtils.force_copy_eyes_baselines(args[:branch], args[:base])
   end
-  timed_task_with_logging :create, [:branch] do |_, args|
+  task :create, [:branch] do |_, args|
     EyesUtils.check_eyes_set
     ChatClient.log "#{Emoji.find_by_alias('baby').raw}  Creating branch #{args}"
     create_branch(args[:branch])
   end
-  timed_task_with_logging :delete, [:branch] do |_, args|
+  task :delete, [:branch] do |_, args|
     EyesUtils.check_eyes_set
     ChatClient.log "Deleting branch #{args}"
     EyesUtils.delete_eyes_branch(args[:branch])
   end
-  timed_task_with_logging :merge_delete, [:branch, :base] do |_, args|
+  task :merge_delete, [:branch, :base] do |_, args|
     EyesUtils.check_eyes_set
     ChatClient.log "Deleting branch #{args}"
     EyesUtils.merge_delete_eyes_branch(args[:branch], args[:base])
