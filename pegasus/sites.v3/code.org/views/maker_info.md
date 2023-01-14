@@ -2,7 +2,7 @@
 
 <div class="col-40" style="padding-right: 10px;">
 
-<img src="/images/fill-473x258/maker/maker-graphic.png" style="max-width: 100%">
+<img src="/images/fill-473x258/maker/maker-graphic.png" style="max-width: 100%" alt>
 
 </div>
 
@@ -14,4 +14,4 @@ Every day, we use devices — computers, phones, and more — that help us accom
 
 [/col-60]
 
-<div style="clear: both;"></div>
+<div style="clear: both;"></div> 
