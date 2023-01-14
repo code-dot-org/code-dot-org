@@ -566,6 +566,12 @@ class UnitTest < ActiveSupport::TestCase
     assert_equal courseg_2017, Unit.latest_assigned_version('courseg', student)
   end
 
+  # test 'self.latest_version_with_progress returns nil if user has no progress in any units in family' do
+  # end
+  # test 'self.latest_version_with_progress returns newest version of unit if user has progress in it' do
+  # end
+  # test 'self.latest_version_with_progress returns most recent version of unit user has progress in if user has no progress in newest' do
+  # end
   test 'has_other_versions? makes no queries when there is one other unit group version' do
     Unit.stubs(:should_cache?).returns true
 
