@@ -2,7 +2,8 @@ require_relative '../../deployment'
 require 'cdo/chat_client'
 require 'cdo/rake_utils'
 require 'cdo/git_utils'
-
+require lib_dir 'cdo/data/logging/rake_task_event_logger'
+include TimedTaskWithLogging
 namespace :build do
   desc 'Builds apps.'
   timed_task_with_logging :apps do
