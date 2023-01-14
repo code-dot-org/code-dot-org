@@ -100,6 +100,10 @@ class RegistrationsController < Devise::RegistrationsController
   # POST /users
   #
   def create
+    gender = params[:user][:gender]
+    gender_input_type = params[:user][:gender_input_type]
+    SignUpTracking.log_gender_input_type(session, gender, gender_input_type, request.locale)
+
     Retryable.retryable on: [Mysql2::Error, ActiveRecord::RecordNotUnique], matching: /Duplicate entry/ do |retries, exception|
       if retries > 0
         Honeybadger.notify(

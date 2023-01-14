@@ -247,20 +247,6 @@ class User < ApplicationRecord
   before_destroy :soft_delete_channels
 
   before_validation on: :create, if: -> {gender_input_type.present?} do
-    # Limit the gender to 100 characters, this should be sufficient for all languages.
-    gender = self.gender&.truncate(100, omission: '')
-    FirehoseClient.instance.put_record(
-      :analysis,
-      {
-        study: 'gender-input-type',
-        study_group: 'v1',
-        event: gender_input_type,
-        data_json: {
-          gender: gender,
-          locale: locale
-        }.to_json
-      }
-    )
     self.gender = Policies::Gender.normalize gender
   end
 

@@ -146,4 +146,22 @@ module SignUpTracking
 
     end_sign_up_tracking session if user.persisted?
   end
+
+  def self.log_gender_input_type(session, gender, gender_input_type, locale)
+    # Limit the gender to 100 characters, this should be sufficient for all languages.
+    gender = gender&.truncate(100, omission: '')
+    FirehoseClient.instance.put_record(
+      :analysis,
+      {
+        study: 'gender-input-type',
+        study_group: 'v1',
+        event: gender_input_type,
+        data_string: session[:sign_up_uid],
+        data_json: {
+          gender: gender,
+          locale: locale
+        }.to_json
+      }
+    )
+  end
 end
