@@ -1,6 +1,4 @@
 require 'active_record/errors'
-require lib_dir 'cdo/data/logging/rake_task_event_logger'
-include TimedTaskWithLogging
 
 namespace :db do
   def database_exists?
@@ -12,7 +10,7 @@ namespace :db do
     true
   end
 
-  timed_task_with_logging :setup_or_migrate do
+  task :setup_or_migrate do
     db_exists = database_exists?
     Rake::Task["db:load_config"].invoke
     if db_exists
