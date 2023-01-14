@@ -1,8 +1,6 @@
 require_relative '../../deployment'
 require 'cdo/chat_client'
 require 'cdo/aws/s3_packaging'
-require lib_dir 'cdo/data/logging/rake_task_event_logger'
-include TimedTaskWithLogging
 
 # Rake tasks for asset packages (currently only 'apps').
 namespace :package do
@@ -14,7 +12,7 @@ namespace :package do
     end
 
     desc 'Update apps static asset package.'
-    timed_task_with_logging 'update' do
+    task 'update' do
       # never download if we build our own and we're not building a package ourselves.
       next if CDO.use_my_apps && !BUILD_PACKAGE
 
@@ -28,7 +26,7 @@ namespace :package do
     end
 
     desc 'Build and test apps package and upload to S3.'
-    timed_task_with_logging 'build' do
+    task 'build' do
       # Don't build apps if there are staged changes
       Rake::Task['circle:check_for_unexpected_apps_changes'].invoke
 
@@ -58,7 +56,7 @@ namespace :package do
     end
 
     desc 'Update Dashboard symlink for apps package.'
-    timed_task_with_logging 'symlink' do
+    task 'symlink' do
       Dir.chdir(apps_dir) do
         target = CDO.use_my_apps ? apps_dir('build/package') : 'apps-package'
         RakeUtils.ln_s target, dashboard_dir('public', 'blockly')
@@ -66,7 +64,7 @@ namespace :package do
     end
   end
   desc 'Update apps package and create Dashboard symlink.'
-  timed_task_with_logging apps: ['apps:update', 'apps:symlink']
+  task apps: ['apps:update', 'apps:symlink']
 end
 desc 'Update all packages (apps).'
-timed_task_with_logging package: ['package:apps']
+task package: ['package:apps']

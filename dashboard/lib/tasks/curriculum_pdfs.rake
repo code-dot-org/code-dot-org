@@ -1,9 +1,6 @@
-require lib_dir 'cdo/data/logging/rake_task_event_logger'
-include TimedTaskWithLogging
-
 namespace :curriculum_pdfs do
   desc 'Identify all content for which we expect to have a generated PDF, but don\'t.'
-  timed_task_with_logging identify_missing_pdfs: :environment do
+  task identify_missing_pdfs: :environment do
     any_missing_pdfs_found = false
     Services::CurriculumPdfs.get_pdf_enabled_scripts.each do |script|
       pdfless_lessons = Services::CurriculumPdfs.get_pdfless_lessons(script)
@@ -29,7 +26,7 @@ namespace :curriculum_pdfs do
   #   yarn install
   # on the staging machine, this is taken care of in cookbooks/cdo-apps/recipes/generate_pdf.rb
   desc 'Generate any curriculum PDFs that have not yet been generated.'
-  timed_task_with_logging generate_missing_pdfs: :environment do
+  task generate_missing_pdfs: :environment do
     exception_cb = proc do
       ChatClient.log "PDF generation failed. retrying..."
     end
