@@ -1,8 +1,6 @@
 require lib_dir 'cdo/data/csv_to_sql_table'
 require lib_dir 'cdo/data/google_sheet_to_csv'
 require lib_dir 'cdo/data/logging/rake_task_event_logger'
-include TimedTaskWithLogging
-
 $gdrive_ = nil
 include TimedTaskWithLogging
 namespace :seed do
@@ -16,16 +14,16 @@ namespace :seed do
   end
 
   desc 'drop and import all CSV files'
-  timed_task_with_logging :reset do
+  task :reset do
     Dir.glob(pegasus_dir('data/*.csv')) {|i| CsvToSqlTable.new(i, PEGASUS_DB).import!}
   end
 
   desc 'download modified Google Sheets as CSV'
-  timed_task_with_logging :sync_v3 do
+  task :sync_v3 do
     Dir.glob(pegasus_dir('data/*.gsheet')) {|i| GSheetToCsv.new(i).import}
   end
 
   desc 'download modified Google Sheets as CSV, and import any modified CSVs into the database'
-  timed_task_with_logging sync: [:sync_v3, :migrate] do
+  task sync: [:sync_v3, :migrate] do
   end
 end
