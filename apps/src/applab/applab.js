@@ -1052,7 +1052,7 @@ Applab.resetTurtle = function() {
   Applab.turtle.heading = 0;
   Applab.turtle.x = Applab.appWidth / 2;
   Applab.turtle.y = Applab.appHeight / 2;
-  Applab.turtle.penDown = true; // turtle defaults to penDown on reset
+  Applab.turtle.isPenDown = true; // turtle defaults to penDown on reset
 };
 
 /**

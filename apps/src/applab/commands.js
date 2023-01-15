@@ -274,7 +274,7 @@ applabCommands.moveTo = function(opts) {
     ctx.moveTo(Applab.turtle.x, Applab.turtle.y);
     Applab.turtle.x = opts.x;
     Applab.turtle.y = opts.y;
-    if (Applab.turtle.penDown) {
+    if (Applab.turtle.isPenDown) {
       ctx.lineTo(Applab.turtle.x, Applab.turtle.y);
       ctx.stroke();
     }
@@ -457,11 +457,11 @@ applabCommands.dot = function(opts) {
 };
 
 applabCommands.penUp = function(opts) {
-  Applab.turtle.penDown = false;
+  Applab.turtle.isPenDown = false;
 };
 
 applabCommands.penDown = function(opts) {
-  Applab.turtle.penDown = true;
+  Applab.turtle.isPenDown = true;
 };
 
 applabCommands.penWidth = function(opts) {
