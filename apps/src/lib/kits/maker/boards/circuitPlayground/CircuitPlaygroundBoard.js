@@ -24,10 +24,10 @@ import PlaygroundButton from './Button';
 import {
   detectBoardTypeFromPort,
   isWebSerialPort,
-  BOARD_TYPE
+  BOARD_TYPE,
+  SERIAL_BAUD
 } from '../../util/boardUtils';
 import {isChromeOS, serialPortType} from '../../util/browserChecks';
-import {SERIAL_BAUD} from '@cdo/apps/lib/kits/maker/util/boardUtils';
 
 // Polyfill node's process.hrtime for the browser, gets used by johnny-five.
 process.hrtime = require('browser-process-hrtime');

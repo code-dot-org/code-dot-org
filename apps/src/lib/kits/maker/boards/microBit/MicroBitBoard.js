@@ -29,7 +29,7 @@ export default class MicroBitBoard extends EventEmitter {
     /** @private {Object} Map of component controllers */
     this.prewiredComponents_ = null;
 
-    this.chromeOS = isChromeOS();
+    this.isChromeOS = isChromeOS();
 
     let portType = serialPortType(true);
 
@@ -64,10 +64,12 @@ export default class MicroBitBoard extends EventEmitter {
     const SERIAL_BAUD = 57600;
 
     let serialPort;
-    if (!this.chromeOS) {
+    if (!this.isChromeOS) {
       serialPort = new SerialPortType(portName, {baudRate: SERIAL_BAUD});
       return Promise.resolve(serialPort);
     } else {
+      // add webserial pathway
+
       // Chrome-serialport uses callback to relay when serialport initialization is complete.
       // Wrapping construction function to call promise resolution as callback.
       let constructorFunction = callback => {
@@ -95,8 +97,16 @@ export default class MicroBitBoard extends EventEmitter {
    * @returns {Promise<void>}
    */
   checkExpectedFirmware() {
+    console.log('print this.isChromeOS');
+    console.log(this.isChromeOS);
     return Promise.resolve()
-      .then(() => this.openSerialPort())
+      .then(() => {
+        if (!this.isChromeOS) {
+          return this.openSerialPort();
+        } else {
+          // weberial port
+        }
+      })
       .then(serialPort => this.boardClient_.connectBoard(serialPort))
       .then(() => {
         // Delay for 0.25 seconds to ensure we have time to receive the firmware version.
