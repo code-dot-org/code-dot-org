@@ -26,6 +26,10 @@ my:
             MOVES.Rest: ဘာမှမရှိ
           MOVE2:
             MOVES.Rest: ဘာမှမရှိ
+      Dancelab_atTimestamp:
+        options:
+          UNIT:
+            '"seconds"': စက္ကန့်ပိုင်း
       Dancelab_changeMoveEachLR:
         options:
           GROUP:
@@ -56,14 +60,26 @@ my:
         options:
           MOVE:
             MOVES.Rest: ဘာမှမရှိ
+      Dancelab_everySeconds:
+        options:
+          UNIT:
+            '"seconds"': စက္ကန့်ပိုင်း
       Dancelab_getProp:
         options:
           PROPERTY:
             '"scale"': အရွယ်အစား
+      Dancelab_getTime:
+        options:
+          UNIT:
+            '"seconds"': စက္ကန့်ပိုင်း
       Dancelab_ifDanceIs:
         options:
           DANCE:
             MOVES.Rest: ဘာမှမရှိ
+      Dancelab_ifTime:
+        options:
+          UNIT:
+            '"seconds"': စက္ကန့်ပိုင်း
       Dancelab_jumpTo:
         options:
           LOCATION:
@@ -88,6 +104,7 @@ my:
             '"ALIEN"': ဂြိုဟ်သား
             '"CAT"': ကြောင်
             '"DOG"': ခွေး
+            '"UNICORN"': ခေါင်းမှာအချောင်းတစ်ချောင်းထွက်နေတဲ့မြင်း
           LOCATION:
             "{x: 100, y: 200}": ဘယ်ဘက်သို့
             "{x: 300, y: 200}": ညာဘက်သို့
@@ -97,6 +114,7 @@ my:
             '"ALIEN"': ဂြိုဟ်သား
             '"CAT"': ကြောင်
             '"DOG"': ခွေး
+            '"UNICORN"': ခေါင်းမှာအချောင်းတစ်ချောင်းထွက်နေတဲ့မြင်း
           LOCATION:
             "{x: 100, y: 200}": ဘယ်ဘက်သို့
             "{x: 300, y: 200}": ညာဘက်သို့
@@ -217,6 +235,10 @@ my:
           EFFECT:
             '"hearts"': အသည်းနှလုံးများ
             '"rain"': မိုးရွာသည်
+      gamelab_atTime:
+        options:
+          UNIT:
+            '"seconds"': စက္ကန့်ပိုင်း
       gamelab_changePropBy:
         options:
           PROPERTY:
@@ -227,11 +249,19 @@ my:
           CONDITION:
             '"when"': အချိန်
             '"while"': စဉ်တွင်
+      gamelab_everyInterval:
+        options:
+          UNIT:
+            '"seconds"': စက္ကန့်ပိုင်း
       gamelab_getProp:
         options:
           PROPERTY:
             '"scale"': အရွယ်အစား
             '"speed"': အရှိန်
+      gamelab_getTime:
+        options:
+          UNIT:
+            '"seconds"': စက္ကန့်ပိုင်း
       gamelab_isKeyPressed:
         options:
           KEY:
@@ -442,13 +472,28 @@ my:
       Mikelab_whenKeyPressed:
         options:
           KEY:
+            '"up"': မြှားအပေါ်ဘက်သို့
+            '"down"': မြှားအောက်ဘက်သို့
+            '"left"': မြှားဘယ်ဘက်သို့
+            '"right"': မြှားညာဘက်သို့
             '"a"': က
             '"d"': ဃ
       Mikelab_whenKeyReleased:
         options:
           KEY:
+            '"up"': မြှားအပေါ်ဘက်သို့
+            '"down"': မြှားအောက်ဘက်သို့
+            '"left"': မြှားဘယ်ဘက်သို့
+            '"right"': မြှားညာဘက်သို့
             '"a"': က
             '"d"': ဃ
+      Mikelab_whileKeyPressed:
+        options:
+          KEY:
+            '"up"': မြှားအပေါ်ဘက်သို့
+            '"down"': မြှားအောက်ဘက်သို့
+            '"left"': မြှားဘယ်ဘက်သို့
+            '"right"': မြှားညာဘက်သို့
       Poetry_addFrame:
         options:
           BRUSH:
