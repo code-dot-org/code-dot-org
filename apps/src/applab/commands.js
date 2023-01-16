@@ -31,6 +31,7 @@ import i18n from '@cdo/applab/locale';
 var XHR_PROXY_PATH = '//' + location.host + '/xhr';
 
 import {ICON_PREFIX_REGEX} from './constants';
+import Applab from './applab';
 
 var applabCommands = {};
 export default applabCommands;
@@ -364,6 +365,8 @@ applabCommands.turnTo = function(opts) {
 // if opts.counterclockwise, the center point is 90 degrees counterclockwise
 
 applabCommands.arcRight = function(opts) {
+  console.log('inside arcright');
+  console.log(Applab.turtle.isPenDown);
   apiValidateType(opts, 'arcRight', 'angle', opts.degrees, 'number');
   apiValidateType(opts, 'arcRight', 'radius', opts.radius, 'number');
 
@@ -387,18 +390,18 @@ applabCommands.arcRight = function(opts) {
         (Applab.turtle.heading + (opts.counterclockwise ? 0 : 180))) /
       360;
     var endAngle = startAngle + (2 * Math.PI * clockwiseDegrees) / 360;
-
-    ctx.beginPath();
-    ctx.arc(
-      centerX,
-      centerY,
-      opts.radius,
-      startAngle,
-      endAngle,
-      opts.counterclockwise
-    );
-    ctx.stroke();
-
+    if (!Applab.turtle.isPenDown) {
+      ctx.beginPath();
+      ctx.arc(
+        centerX,
+        centerY,
+        opts.radius,
+        startAngle,
+        endAngle,
+        opts.counterclockwise
+      );
+      ctx.stroke();
+    }
     Applab.turtle.heading =
       (Applab.turtle.heading + clockwiseDegrees + 360) % 360;
     var xMovement =
@@ -436,21 +439,24 @@ applabCommands.getDirection = function(opts) {
 applabCommands.dot = function(opts) {
   apiValidateTypeAndRange(opts, 'dot', 'radius', opts.radius, 'number', 0.0001);
   var ctx = applabTurtle.getTurtleContext();
+  var isPenDown = Applab.turtle.isPenDown;
   if (ctx && opts.radius > 0) {
     ctx.beginPath();
-    if (Applab.turtle.penUpColor) {
-      // If the pen is up and the color has been changed, use that color:
-      ctx.strokeStyle = Applab.turtle.penUpColor;
+    if (!isPenDown) {
+      // If Applab.turtle pen is up, temporarily set Applab.turtle pen down to draw dot
+      Applab.turtle.isPenDown = true;
     }
     var savedLineWidth = ctx.lineWidth;
     ctx.lineWidth = 1;
     ctx.arc(Applab.turtle.x, Applab.turtle.y, opts.radius, 0, 2 * Math.PI);
     ctx.fill();
     ctx.stroke();
-    if (Applab.turtle.penUpColor) {
-      // If the pen is up, reset strokeStyle back to transparent:
-      ctx.strokeStyle = 'rgba(255, 255, 255, 0)';
+    if (!isPenDown) {
+      // If Applab.turtle pen is supposed to be up (stored in local variable isPenDown),
+      // reset pen so that Applab.turtle pen is actually up.
+      Applab.turtle.isPenDown = false;
     }
+    console.log(Applab.turtle.isPenDown);
     ctx.lineWidth = savedLineWidth;
     return true;
   }
@@ -599,7 +605,7 @@ applabCommands.line = function(opts) {
   apiValidateType(opts, 'line', 'y1', opts.y1, 'number');
   apiValidateType(opts, 'line', 'y2', opts.y2, 'number');
   var ctx = Applab.activeCanvas && Applab.activeCanvas.getContext('2d');
-  if (ctx) {
+  if (ctx && Applab.turtle.isPenDown) {
     ctx.beginPath();
     ctx.moveTo(opts.x1, opts.y1);
     ctx.lineTo(opts.x2, opts.y2);
@@ -617,7 +623,7 @@ applabCommands.circle = function(opts) {
   apiValidateType(opts, 'circle', 'centerY', opts.y, 'number');
   apiValidateType(opts, 'circle', 'radius', opts.radius, 'number');
   var ctx = Applab.activeCanvas && Applab.activeCanvas.getContext('2d');
-  if (ctx) {
+  if (ctx && Applab.turtle.isPenDown) {
     ctx.beginPath();
     ctx.arc(opts.x, opts.y, opts.radius, 0, 2 * Math.PI);
     ctx.fill();
@@ -636,7 +642,7 @@ applabCommands.rect = function(opts) {
   apiValidateType(opts, 'rect', 'width', opts.width, 'number');
   apiValidateType(opts, 'rect', 'height', opts.height, 'number');
   var ctx = Applab.activeCanvas && Applab.activeCanvas.getContext('2d');
-  if (ctx) {
+  if (ctx && Applab.turtle.isPenDown) {
     ctx.beginPath();
     ctx.rect(opts.x, opts.y, opts.width, opts.height);
     ctx.fill();
