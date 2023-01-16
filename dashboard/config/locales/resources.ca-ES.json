@@ -24,16 +24,17 @@
         "csf-artist-intro-video/artist/unversioned": {
           "name": "Introducció a l'Artista",
           "url": "https://www.youtube.com/watch?v=MUavAHn-QUg",
-          "type": "Vídeo de l'estudiant"
+          "type": "Vídeo de l'alumne"
         },
         "csf-turns-angles-doc/artist/unversioned": {
           "name": "Girs i angles",
+          "url": "https://drive.google.com/open?id=1JDeb07W7myaLu7Wjd-fPM8whSaO8aw37m9SJ_7B4Su4",
           "type": "Fitxa de l'alumne"
         },
         "csf-turns-angles-video/artist/unversioned": {
           "name": "Girs i angles",
           "url": "https://www.youtube.com/watch?v=sPKXZBL_Yvs",
-          "type": "Vídeo de l'estudiant"
+          "type": "Vídeo de l'alumne"
         },
         "dance-party-playlist/dance/unversioned": {
           "name": "Llista de reproducció d'Spotify (per totes les edats)",
@@ -142,7 +143,7 @@
         "pair_programming/coursed/2022": {
           "name": "Programació per parelles",
           "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q",
-          "type": "Vídeo de l'estudiant"
+          "type": "Vídeo de l'alumne"
         },
         "relay_programming/coursed/2022": {
           "name": "Programació en relleus"
@@ -366,7 +367,7 @@
           "type": "Diapositives"
         },
         "private_and_personal_information_private_and_personal_information/coursee/2022": {
-          "type": "Vídeo de l'estudiant"
+          "type": "Vídeo de l'alumne"
         },
         "csf_-_course_e_-_slides_2022-2023/coursee/2022": {
           "type": "Diapositives"
@@ -393,7 +394,7 @@
         "turns_angles_1/coursee/2022": {
           "name": "Girs i angles",
           "url": "https://www.youtube.com/watch?v=sPKXZBL_Yvs",
-          "type": "Vídeo de l'estudiant"
+          "type": "Vídeo de l'alumne"
         },
         "functions_unplugged_songwriting_1/coursee/2022": {
           "type": "Fitxa d'exercicis"
@@ -506,7 +507,7 @@
         "pair_programming/courseb/2022": {
           "name": "Programació per parelles",
           "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q",
-          "type": "Vídeo de l'estudiant"
+          "type": "Vídeo de l'alumne"
         },
         "unplugged_blockly_blocks_grades_k-1_/courseb/2022": {
           "name": "Blocs Blockly sense connexió (infantil-1r de primària)",
@@ -686,7 +687,7 @@
         "variables/express/2022": {
           "name": "Variables",
           "url": "https://youtu.be/DI7DprN4FtE",
-          "type": "Vídeo de l'estudiant"
+          "type": "Vídeo de l'alumne"
         },
         "csf_express_end_of_course_project_planning_guide/express/2022": {
           "name": "Guia de planificació de projectes de fi de curs de Fonaments de la Informàtica - Exprés",
@@ -719,7 +720,7 @@
         "pair_programming/pre-express/2022": {
           "name": "Programació per parelles",
           "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q",
-          "type": "Vídeo de l'estudiant"
+          "type": "Vídeo de l'alumne"
         },
         "wiggles_-_go_noodle/pre-express/2022": {
           "name": "Ganes de bellugar-se - Go Noodle",
@@ -794,7 +795,7 @@
         "pair_programming/coursea/2022": {
           "name": "Programació per parelles",
           "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q",
-          "type": "Vídeo de l'estudiant"
+          "type": "Vídeo de l'alumne"
         },
         "wiggles-go_noodle/coursea/2022": {
           "name": "Ganes de bellugar-se - Go Noodle",
@@ -1003,12 +1004,12 @@
         "artist_introduction/coursec/2022": {
           "name": "Introducció a l'Artista",
           "url": "https://www.youtube.com/watch?v=MUavAHn-QUg",
-          "type": "Vídeo de l'estudiant"
+          "type": "Vídeo de l'alumne"
         },
         "turns_angles/coursec/2022": {
           "name": "Girs i angles",
           "url": "https://www.youtube.com/watch?v=sPKXZBL_Yvs",
-          "type": "Vídeo de l'estudiant"
+          "type": "Vídeo de l'alumne"
         },
         "turns_angles_1/coursec/2022": {
           "name": "Girs i angles",
@@ -1082,7 +1083,7 @@
         "bits_versus_bytes/coursec/2022": {
           "name": "Bits vs. Bytes",
           "url": "https://www.youtube.com/watch?v=35vkaO_SgzI&feature=youtu.be",
-          "type": "Vídeo de l'estudiant"
+          "type": "Vídeo de l'alumne"
         },
         "play_lab_project_planning_guide/coursec/2022": {
           "name": "Guia de planificació de projectes al Laboratori de Jocs",
@@ -2611,7 +2612,7 @@
         "pair-programming-vid/courseb/2021": {
           "name": "Programació per parelles",
           "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q",
-          "type": "Vídeo de l'estudiant"
+          "type": "Vídeo de l'alumne"
         },
         "wiggles_-_gonoodle/courseb/2021": {
           "name": "Ganes de bellugar-se - Go Noodle",
@@ -2785,7 +2786,7 @@
         "pair-programming-vid/coursea/2021": {
           "name": "Programació per parelles",
           "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q",
-          "type": "Vídeo de l'estudiant"
+          "type": "Vídeo de l'alumne"
         },
         "wiggles-go_noodle/coursea/2021": {
           "name": "Ganes de bellugar-se - Go Noodle",
@@ -3051,7 +3052,7 @@
         "csf-artist-intro-video/coursec/2021": {
           "name": "Introducció a l'Artista",
           "url": "https://www.youtube.com/watch?v=MUavAHn-QUg",
-          "type": "Vídeo de l'estudiant"
+          "type": "Vídeo de l'alumne"
         },
         "csf-turns-angles-doc/coursec/2021": {
           "name": "Girs i angles",
@@ -3061,7 +3062,7 @@
         "csf-turns-angles-video/coursec/2021": {
           "name": "Girs i angles",
           "url": "https://www.youtube.com/watch?v=sPKXZBL_Yvs",
-          "type": "Vídeo de l'estudiant"
+          "type": "Vídeo de l'alumne"
         },
         "feeling_faces_emotion_image/coursec/2021": {
           "name": "Imatge de cares d'emoció",
@@ -3123,7 +3124,7 @@
         "csf-bit-byte-video/coursec/2021": {
           "name": "Bits vs. Bytes",
           "url": "https://www.youtube.com/watch?v=35vkaO_SgzI&feature=youtu.be",
-          "type": "Vídeo de l'estudiant"
+          "type": "Vídeo de l'alumne"
         },
         "lesson-in-action-binary-bracelets/coursec/2021": {
           "name": "Polseres binàries",
@@ -3231,7 +3232,7 @@
         "pair-programming-vid/coursed/2021": {
           "name": "Programació per parelles",
           "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q",
-          "type": "Vídeo de l'estudiant"
+          "type": "Vídeo de l'alumne"
         },
         "csf-relay-programming-activity-packet/coursed/2021": {
           "name": "Programació en relleus"
@@ -3433,7 +3434,7 @@
         "variables_video/express/2021": {
           "name": "Variables",
           "url": "https://youtu.be/DI7DprN4FtE",
-          "type": "Vídeo de l'estudiant"
+          "type": "Vídeo de l'alumne"
         },
         "csf-express-end-of-course-project-planning-guide/express/2021": {
           "name": "Guia de planificació de projectes de fi de curs de Fonaments de la Informàtica - Exprés",
@@ -3560,7 +3561,7 @@
           "type": "Diapositives"
         },
         "private-and-personal-information-private-and-personal-information/coursee/2021": {
-          "type": "Vídeo de l'estudiant"
+          "type": "Vídeo de l'alumne"
         },
         "about_me_planning_guide/coursee/2021": {
           "type": "Llibret"
@@ -3583,7 +3584,7 @@
         "csf-turns-angles-video/coursee/2021": {
           "name": "Girs i angles",
           "url": "https://www.youtube.com/watch?v=sPKXZBL_Yvs",
-          "type": "Vídeo de l'estudiant"
+          "type": "Vídeo de l'alumne"
         },
         "csf-songwriting-assessment/coursee/2021": {
           "type": "Avaluació"

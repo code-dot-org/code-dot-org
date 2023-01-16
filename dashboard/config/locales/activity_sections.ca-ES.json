@@ -354,23 +354,36 @@
           "name": "Reflexió"
         },
         "6b51b4f1-5b1d-4b29-af25-c48d716a2d22": {
+          "description": "#### Prepareu el terreny\n\nDoneu la benvinguda als alumnes i introduïu molt breument l’activitat d’avui. \n\n**Digueu:** _Avui dedicarem una hora a prendre a codificar, és a dir, programar. Coneixeu les paraules “programar” o “codificar”? Què volen dir?_\n\nÉs possible que algú digui que un “codi” és un missatge secret, o que té a veure amb els ordinadors.",
           "tips": [
-            null
+            "Una manera de presentar l'Hora del Codi si vosaltres mateixos tampoc no esteu gaire familiaritzats amb la programació es posar un dels nostres [vídeos inspiracionals](https://hourofcode.com/us/resources#videos). Trieu-ne un que creieu que agradarà als vostres alumnes. Per als alumnes més petits, us recomanem [Ja és aquí l'Hora del Codi](https://youtu.be/FC5FbmsH4fw)."
           ]
         },
         "dd7bde99-d360-4587-8d30-75383b930808": {
+          "description": "Expliqueu que, en informàtica, el “codi” és el conjunt d’instruccions que pot entendre l’ordinador. Digueu que, avui, practicaran amb la “programació”, la “codificació”, els \"esdeveniments\" i la “depuració”.\n\nDefiniu:\n\n-   Codificar significa escriure un codi, és a dir, les instruccions per un ordinador.\n-   Programar significa escriure un codi o instruccions. Avui, programarem amb blocs a l’ordinador (si feu sevir un tutorial en línia) o amb paper i llapis (si feu servir una activitat sense connexió).\n-   Depurar significa revisar el codi per trobar i arreglar errors.",
           "tips": [
-            null
+            "Convé dedicar molt poc temps a explicar o presentar l'Hora del Codi. Especialment amb els alumnes més petits, val més la pena començar com més aviat millor. Si expliquem massa al principi, ens arrisquem a avorrir-los, i el que volem és que s'ho passin d'allò més bé!"
           ]
         },
         "88489303-1952-49c3-914a-2cfa7a138778": {
-          "name": "Introducció"
+          "name": "Introducció",
+          "description": "Poseu als alumnes un dels vídeos següents, o tots dos, a tall d'introducció als angles:\n\n**Introducció a l'Artista - Vídeo de l'alumne** (1:50 minuts de duració)\n\n**Girs i angles - Vídeo de l'alumne** (2:00 minuts de duració)\n\nFeu servir **Girs i angles - Fitxa de l'alumne** per ensenyar les diferències entre els angles interiors i els exteriors de diferents figures. Podeu fer servir aquest document com a guia de treball, o imprimir-lo per penjar-lo com si fos un pòster per a què els alumnes el puguin consultar en qualsevol moment.\n\nComenteu les formes quadrada i triangular del document.\n\n-   Com programaries un ordinador per dibuixar aquesta forma?\n-   Quin ordre han de seguir les instruccions?\n\nExpliqueu que, en aquests trencaclosques, faran que un personatge es mogui i traci una línia allà on vagi. Els alumnes escriuran un codi que farà que el personatge dibuixi diverses formes, entre elles un quadrat."
         },
         "75db60fb-671b-4740-80ae-0b13f4c09897": {
-          "name": "Artista"
+          "name": "L'Artista",
+          "description": "En aquests trencaclosques, l'artista no estarà limitat a moure's només en angles de 90°. Si teniu transportadors d'angles a l'aula, els alumnes podran veure els angles que hauran de fer servir. Si no, a la pantalla veuran les imatges dels angles quan seleccionin el que volen fer servir. (Tingueu en compte que només podran triar dos angles al menú desplegable, per tal de reduir les opcions que han de provar).\n\nAbans de fer que passin als ordinadors per fer els trencaclosques, potser valdria la pena fer una breu demostració sobre com es fan servir les eines d'aquest nivell. Us recomanem el trencaclosques 5 per demostrar com fer servir el transportador en línia."
+        },
+        "8aeabd7e-dab0-4f23-827b-58d98a04085f": {
+          "description": "Animeu els alumnes a fer aquesta activitat de [L'Artista](https://studio.code.org/s/artist/lessons/1/levels/1).\n\nSegons l’edat i les habilitats dels alumnes, potser us ajudarà fer el següent:\n\n-   Per als alumnes més petits, recomanem dividir la classe en parelles i demanar a cada grup que faci el tutorial fent [programació per parelles](https://youtu.be/vgkahOzFH2Q).\n-   Per als alumnes de cursos intermedis, hem observat que fer els tutorials de manera autònoma funciona bé. De vegades ajuda deixar que triïn el tutorial que volen fer. Si no els interessa Minecraft, tindran una experiència molt semblant amb els tutorials [Programa amb l’Anna i l’Elsa](https://studio.code.org/s/frozen/stage/1/puzzle/1) o [La guerra de les galàxies](https://code.org/starwars).\n-   Per als alumnes més grans o adults, el tutorial de [L'Artista](https://studio.code.org/s/artist/lessons/1/levels/1) funciona molt bé, tant com a repte independent o com a exercici de programació per parelles."
         },
         "cce13cd7-04e3-4d93-9b74-9c3df8a7691a": {
           "description": "Si un grup o un alumne acaba abans que la resta, pot fer un altre tutorial a [code.org/learn](<>)."
+        },
+        "461e1eda-c85f-4f41-aa4d-719d6a88d8d2": {
+          "description": "#### Comentaris\n\nDemaneu als alumnes que reflexionin sobre les activitats que heu fet avui. Què han après sobre codificar? I sobre programar? I sobre la depuració?\n\n-   Quins són els angles interiors que formen un quadrat? I un triangle?\n-   Dibuixeu una forma senzilla en un full i imagineu el codi que necessiteu per dibuixar-lo. Podeu escriure el codi al costat de la forma?\n\nDesprés d’haver passat una hora descobrint la informàtica i la codificació, els agrada?\n\n#### Celebració\n\nExpliqueu que avui passareu una hora programant, perquè som a la Setmana de l'Educació en Informàtica, i milions d'alumnes d'arreu del món també han estat fent una Hora del Codi. Feliciteu-los per formar part d'aquest moviment mundial.\n\nDoneu [un certificat](https://studio.code.org/certificates/batch) a cada alumne i alumna en què hi posi el seu nom.\n\n#### Propers passos\n\nDigueu als alumnes que, si els ha agradat l'activitat d'avui, tenen moltes opcions per seguir programant. Animeu-los a visitar [code.org/learn](https://studio.code.org/certificates/batch) per trobar-les totes, o si teniu pensat fer alguna de les activitats d'ampliació, expliqueu-los què fareu el pròxim dia."
+        },
+        "532c3e19-487f-44e0-97ff-a71886e169f2": {
+          "description": "#### Després de l’Hora del Codi\n\nUn cop acabada l’Hora del Codi, hi ha moltes maneres de seguir ensenyant informàtica als alumnes de primària. Aquí teniu algunes idees:\n\n-   **Feu els cursos [Fonaments d’Informàtica de Code Studio](http://code.org/educate/k5)**. Es tracta de sis cursos dissenyats per als més petits. Els alumnes faran una sèrie de trencaclosques que els ensenyaran a programar, i els docents tindreu accés a planificacions de lliçons entretingudes que faran que els nens es diverteixin aprenent. Per aquests cursos, Code.org ofereix desenvolupament professional gratuït, tant en línia com presencial.\n-   **Visiteu [Tu també pots ensenyar informàtica](https://studio.code.org/courses?view=teacher)** per veure més propostes de cursos.\n-   **Convideu un expert en informàtica a que vingui a parlar amb la vostra classe**. No en coneixeu cap? Contacteu amb un voluntari del nostre [mapa de voluntaris](https://code.org/volunteer/local).\n\nFeu servir l’activitat següent per reforçar l’aprenentatge dels alumnes. La podeu fer com activitat fora de l’aula o com a activitat d’aprofundiment.\n\n**La fotocopiadora**\n\n-   Doneu als alumnes dos fulls de paper\n-   En un d’ells, dibuixeu una imatge senzilla, fent servir només línies rectes.\n-   En l’altre, dibuixeu instruccions per recrear les ordres d’aquesta imatge, amb moviments en línia recta i girs de diferents angles.\n-   Feu que s’intercanviïn els fulls i intentin recrear la imatge fent servir només les instruccions proporcionades."
         },
         "a2f60a17-c25f-4c4d-9f2d-384486d7a67d": {
           "name": "Prepareu el terreny"
@@ -587,7 +600,7 @@
         },
         "6fa68bdd-8f9b-4d69-b54e-28141ee6d732": {
           "tips": [
-            null
+            "Una manera de presentar l'Hora del Codi si vosaltres mateixos tampoc no esteu gaire familiaritzats amb la programació es posar un dels nostres [vídeos inspiracionals](https://hourofcode.com/us/resources#videos). Trieu-ne un que creieu que agradarà als vostres alumnes. Per als alumnes més petits, us recomanem [Ja és aquí l'Hora del Codi](https://youtu.be/FC5FbmsH4fw)."
           ]
         },
         "b17f8e8a-6b46-4f46-a4fc-894cf561bb9d": {
@@ -717,11 +730,12 @@
           "name": "Reflexió"
         },
         "00b66dcf-d546-4649-aa21-6d97981fa444": {
-          "name": "Prepareu el terreny"
+          "name": "Prepareu el terreny",
+          "description": "#### Prepareu el terreny\n\nDoneu la benvinguda als alumnes i introduïu molt breument l’activitat d’avui. \n\n**Digueu:** _Avui dedicarem una hora a prendre a codificar, és a dir, programar. Coneixeu les paraules “programar” o “codificar”? Què volen dir?_\n\nÉs possible que algú digui que un “codi” és un missatge secret, o que té a veure amb els ordinadors."
         },
         "88f6ccc1-0efa-4c60-985c-971a235d5645": {
           "tips": [
-            null
+            "Una manera de presentar l'Hora del Codi si vosaltres mateixos tampoc no esteu gaire familiaritzats amb la programació es posar un dels nostres [vídeos inspiracionals](https://hourofcode.com/us/resources#videos). Trieu-ne un que creieu que agradarà als vostres alumnes. Per als alumnes més petits, us recomanem [Ja és aquí l'Hora del Codi](https://youtu.be/FC5FbmsH4fw)."
           ]
         },
         "88879c41-12f5-4d2e-86e6-93925b83d7d0": {
@@ -798,12 +812,12 @@
         "21f43e64-dea3-4abc-8284-e055480370ce": {
           "name": "Introducció",
           "tips": [
-            null
+            "Una manera de presentar l'Hora del Codi si vosaltres mateixos tampoc no esteu gaire familiaritzats amb la programació es posar un dels nostres [vídeos inspiracionals](https://hourofcode.com/us/resources#videos). Trieu-ne un que creieu que agradarà als vostres alumnes. Per als alumnes més petits, us recomanem [Ja és aquí l'Hora del Codi](https://youtu.be/FC5FbmsH4fw)."
           ]
         },
         "e7a740e5-690b-408c-b647-fb6f47cc2d3d": {
           "tips": [
-            null
+            "Convé dedicar molt poc temps a explicar o presentar l'Hora del Codi. Especialment amb els alumnes més petits, val més la pena començar com més aviat millor. Si expliquem massa al principi, ens arrisquem a avorrir-los, i el que volem és que s'ho passin d'allò més bé!"
           ]
         },
         "5eddd5c3-23b2-453b-83fa-e0cda19ad4c3": {
@@ -853,12 +867,12 @@
         "8295d7d8-acb1-4cc1-b178-8d89613aa6b6": {
           "name": "Introducció",
           "tips": [
-            null
+            "Una manera de presentar l'Hora del Codi si vosaltres mateixos tampoc no esteu gaire familiaritzats amb la programació es posar un dels nostres [vídeos inspiracionals](https://hourofcode.com/us/resources#videos). Trieu-ne un que creieu que agradarà als vostres alumnes. Per als alumnes més petits, us recomanem [Ja és aquí l'Hora del Codi](https://youtu.be/FC5FbmsH4fw)."
           ]
         },
         "6b27ea94-da11-4c56-99c0-48e35ac5fbda": {
           "tips": [
-            null
+            "Convé dedicar molt poc temps a explicar o presentar l'Hora del Codi. Especialment amb els alumnes més petits, val més la pena començar com més aviat millor. Si expliquem massa al principi, ens arrisquem a avorrir-los, i el que volem és que s'ho passin d'allò més bé!"
           ]
         },
         "720eaa7d-2623-4fab-bd98-ee2dda7831fc": {
@@ -2198,6 +2212,9 @@
         },
         "eabe75fb-4111-49c1-900c-dd18d6ec996d": {
           "description": "Aquesta lliçó ensenyarà els alumnes a utilitzar Code.org per resoldre trencaclosques en línia.\n\nMireu el vídeo de l'alumne de **\\*Programació per parelles** amb la classe i, a continuació, poseu-los per parelles. Això els donarà un bon punt de partida."
+        },
+        "29e7cac9-8b1a-4fd2-942f-10682a04aab3": {
+          "progression_name": "Vídeo - Introducció al laberint: Programació amb blocs"
         },
         "9d92fd5d-fcda-41d3-b081-b6be47316a2b": {
           "description": "Els professors teniu un paper molt important en l'educació informàtica i en propiciar un entorn col·laboratiu i dinàmic a l'aula. Mentre fan les activitats en línia, el paper principal del professor és animar i donar suport. Les lliçons en línia estan pensades per centrar-se en l'alumne, de manera que hauríeu d'evitar intervenir quan els nens s'encallin. Aquí teniu algunes idees per fer-ho:\n\n-   Feu servir la programació per parelles sempre que sigui possible durant l'activitat.\n-   Animeu els estudiants que tinguin preguntes o problemes a que primer li preguntin al company.\n-   Les preguntes sense resposta es poden dirigir a un grup proper, que potser ja sap la solució.\n-   Recordeu als alumnes que han de fer servir el procés de depuració abans d'apropar-vos al seu ordinador.\n-   Feu que els alumnes descriguin el problema que tenen davant. Què se suposa que ha de fer? Què fa? I això què els diu?\n-   Recordeu als alumnes frustrats que la frustració és un pas més del camí d'aprenentatge i que la persistència donarà fruit.\n-   Si un alumne segueix encallat després de tot aquest procés, feu-li preguntes orientatives per tal que detecti l'error per si mateix."
@@ -10413,6 +10430,9 @@
         },
         "4784895a-ea4f-4a2f-b4ef-c392b016f01c": {
           "description": "Aquesta lliçó ensenyarà els alumnes a utilitzar Code.org per resoldre trencaclosques en línia.\n\nMireu el vídeo de l'alumne de **\\*Programació per parelles** amb la classe i, a continuació, poseu-los per parelles. Això els donarà un bon punt de partida."
+        },
+        "52466cb4-0b52-4d09-aeb9-7db1a558001e": {
+          "progression_name": "Vídeo - Introducció al laberint: Programació amb blocs"
         },
         "b9d126ca-d582-403d-a4dc-45c555d65700": {
           "description": "Els professors teniu un paper molt important en l'educació informàtica i en propiciar un entorn col·laboratiu i dinàmic a l'aula. Mentre fan les activitats en línia, el paper principal del professor és animar i donar suport. Les lliçons en línia estan pensades per centrar-se en l'alumne, de manera que hauríeu d'evitar intervenir quan els nens s'encallin. Aquí teniu algunes idees per fer-ho:\n\n-   Feu servir la programació per parelles sempre que sigui possible durant l'activitat.\n-   Animeu els estudiants que tinguin preguntes o problemes a que primer li preguntin al company.\n-   Les preguntes sense resposta es poden dirigir a un grup proper, que potser ja sap la solució.\n-   Recordeu als alumnes que han de fer servir el procés de depuració abans d'apropar-vos al seu ordinador.\n-   Feu que els alumnes descriguin el problema que tenen davant. Què se suposa que ha de fer? Què fa? I això què els diu?\n-   Recordeu als alumnes frustrats que la frustració és un pas més del camí d'aprenentatge i que la persistència donarà fruit.\n-   Si un alumne segueix encallat després de tot aquest procés, feu-li preguntes orientatives per tal que detecti l'error per si mateix."

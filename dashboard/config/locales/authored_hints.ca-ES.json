@@ -6,7 +6,7 @@
           "2-3_Artist_7_a": "La millor manera de resoldre aquest nivell és dibuixant el primer quadre deixant el personatge mirant cap avall abans de començar el segon quadre."
         },
         "CourseD_Dance_2020_01": {
-          "validation": "**Com passo aquest nivell?**\n\n-   Assegura-te'n que el ballarí aparegui a la pantalla.\n\n_Aquest nivell acaba després de quatre mesures._",
+          "validation": "**Com em passo aquest nivell?**\n\n-   Assegura't que el ballarí aparegui a la pantalla.\n\n_Aquest nivell acaba després de quatre compassos._",
           "challenges": "**Reptes opcionals**\n\n-   Reprodueix una cançó diferent.\n-   Mou el teu ballarí a una ubicació nova.\n-   Crea més d'un ballarí."
         },
         "CourseD_Dance_2020_04": {
@@ -17,7 +17,7 @@
           "challenges": "**Repte opcional**\n\n-   Canvia el fons cada vegada que els ballarins canviïn de pas de ball."
         },
         "CourseD_Dance_Party_01": {
-          "validation": "**Com passo aquest nivell?**\n\n-   Assegura-te'n que el ballarí aparegui a la pantalla.\n\n_Aquest nivell acaba després de quatre mesures._",
+          "validation": "**Com em passo aquest nivell?**\n\n-   Assegura't que el ballarí aparegui a la pantalla.\n\n_Aquest nivell acaba després de quatre compassos._",
           "challenges": "**Reptes opcionals**\n\n-   Escull una cançó diferent per reproduir.\n-   Escull-ne un de diferent que sembli un ant!\n-   Torna a posar-li nom al dansaire."
         },
         "CourseD_Dance_Party_02": {
@@ -77,7 +77,7 @@
           "challenges": "**Repte opcional**\n\n-   Canvia el fons cada vegada que els ballarins canviïn de pas de ball."
         },
         "Dance_Party_01": {
-          "validation": "**Com passo aquest nivell?**\n\n-   Assegura-te'n que el ballarí aparegui a la pantalla.\n\n_Aquest nivell acaba després de quatre mesures._",
+          "validation": "**Com em passo aquest nivell?**\n\n-   Assegura't que el ballarí aparegui a la pantalla.\n\n_Aquest nivell acaba després de quatre compassos._",
           "challenges": "**Reptes opcionals**\n\n-   Escull una cançó diferent per reproduir.\n-   Escull-ne un de diferent que sembli un ant!\n-   Torna a posar-li nom al dansaire."
         },
         "Dance_Party_02": {
@@ -137,7 +137,7 @@
           "voyage_aquatic_9a": "Veus els blocs de coral vermells i blaus? Fes-los servir de guia per girar a dreta i esquerra per l'escull."
         },
         "CourseD_Dance_2020_012022": {
-          "validation": "**Com passo aquest nivell?**\n\n-   Assegura-te'n que el ballarí aparegui a la pantalla.\n\n_Aquest nivell acaba després de quatre mesures._",
+          "validation": "**Com em passo aquest nivell?**\n\n-   Assegura't que el ballarí aparegui a la pantalla.\n\n_Aquest nivell acaba després de quatre compassos._",
           "challenges": "**Reptes opcionals**\n\n-   Reprodueix una cançó diferent.\n-   Mou el teu ballarí a una ubicació nova.\n-   Crea més d'un ballarí."
         },
         "CourseD_Dance_2020_042022": {
@@ -5255,40 +5255,64 @@
           "courseC_flappy_events1_a": "![](https://images.code.org/5f1d0edf6ebb44d98ffdce623cfe0ad4-image-1501192487040.gif)"
         },
         "courseC_harvester_loops2": {
-          "courseC_harvester_loops2_a": "Si veus que t'encalles, prova d'escriure els passos en un full i buscar-hi patrons que es repeteixin."
+          "courseC_harvester_loops2_a": "Si veus que t'encalles, prova d'escriure els passos en un full i buscar-hi patrons que es repeteixin.",
+          "courseC_harvester_loops2_b": "Et farà falta un bucle de repetició rere l'altre.",
+          "courseC_harvester_loops2_c": "Un bucle repetirà l'ordre \"avançar\", i l'altre repetirà l'ordre \"collir carabassa\"."
         },
         "courseC_harvester_loops22022": {
-          "courseC_harvester_loops2_a": "Si veus que t'encalles, prova d'escriure els passos en un full i buscar-hi patrons que es repeteixin."
+          "courseC_harvester_loops2_a": "Si veus que t'encalles, prova d'escriure els passos en un full i buscar-hi patrons que es repeteixin.",
+          "courseC_harvester_loops2_b": "Et farà falta un bucle de repetició rere l'altre.",
+          "courseC_harvester_loops2_c": "Un bucle repetirà l'ordre \"avançar\", i l'altre repetirà l'ordre \"collir carabassa\"."
         },
         "courseC_harvester_loops2_2018": {
-          "courseC_harvester_loops2_a": "Si veus que t'encalles, prova d'escriure els passos en un full i buscar-hi patrons que es repeteixin."
+          "courseC_harvester_loops2_a": "Si veus que t'encalles, prova d'escriure els passos en un full i buscar-hi patrons que es repeteixin.",
+          "courseC_harvester_loops2_b": "Et farà falta un bucle de repetició rere l'altre.",
+          "courseC_harvester_loops2_c": "Un bucle repetirà l'ordre \"avançar\", i l'altre repetirà l'ordre \"collir carabassa\"."
         },
         "courseC_harvester_loops2_2019": {
-          "courseC_harvester_loops2_a": "Si veus que t'encalles, prova d'escriure els passos en un full i buscar-hi patrons que es repeteixin."
+          "courseC_harvester_loops2_a": "Si veus que t'encalles, prova d'escriure els passos en un full i buscar-hi patrons que es repeteixin.",
+          "courseC_harvester_loops2_b": "Et farà falta un bucle de repetició rere l'altre.",
+          "courseC_harvester_loops2_c": "Un bucle repetirà l'ordre \"avançar\", i l'altre repetirà l'ordre \"collir carabassa\"."
         },
         "courseC_harvester_loops2_2020": {
-          "courseC_harvester_loops2_a": "Si veus que t'encalles, prova d'escriure els passos en un full i buscar-hi patrons que es repeteixin."
+          "courseC_harvester_loops2_a": "Si veus que t'encalles, prova d'escriure els passos en un full i buscar-hi patrons que es repeteixin.",
+          "courseC_harvester_loops2_b": "Et farà falta un bucle de repetició rere l'altre.",
+          "courseC_harvester_loops2_c": "Un bucle repetirà l'ordre \"avançar\", i l'altre repetirà l'ordre \"collir carabassa\"."
         },
         "courseC_harvester_loops2_2021": {
-          "courseC_harvester_loops2_a": "Si veus que t'encalles, prova d'escriure els passos en un full i buscar-hi patrons que es repeteixin."
+          "courseC_harvester_loops2_a": "Si veus que t'encalles, prova d'escriure els passos en un full i buscar-hi patrons que es repeteixin.",
+          "courseC_harvester_loops2_b": "Et farà falta un bucle de repetició rere l'altre.",
+          "courseC_harvester_loops2_c": "Un bucle repetirà l'ordre \"avançar\", i l'altre repetirà l'ordre \"collir carabassa\"."
         },
         "courseC_harvester_loops3": {
-          "courseC_harvester_loops3_a": "No tinguis por d'equivocar-te! Afegeix blocs i executa el codi per veure què passa, encara que no hagis resolt el trencaclosques."
+          "courseC_harvester_loops3_a": "No tinguis por d'equivocar-te! Afegeix blocs i executa el codi per veure què passa, encara que no hagis resolt el trencaclosques.",
+          "courseC_harvester_loops3_b": "Per les primeres carabasses, pots fer servir un codi molt semblant al del trencaclosques anterior. Cap on hauràs de girar després?",
+          "courseC_harvester_loops3_c": "Si vols simplificar el teu codi, pots ficar un bucle dins d'un altre! D'això se'n diu **bucle imbricat**."
         },
         "courseC_harvester_loops32022": {
-          "courseC_harvester_loops3_a": "No tinguis por d'equivocar-te! Afegeix blocs i executa el codi per veure què passa, encara que no hagis resolt el trencaclosques."
+          "courseC_harvester_loops3_a": "No tinguis por d'equivocar-te! Afegeix blocs i executa el codi per veure què passa, encara que no hagis resolt el trencaclosques.",
+          "courseC_harvester_loops3_b": "Per les primeres carabasses, pots fer servir un codi molt semblant al del trencaclosques anterior. Cap on hauràs de girar després?",
+          "courseC_harvester_loops3_c": "Si vols simplificar el teu codi, pots ficar un bucle dins d'un altre! D'això se'n diu **bucle imbricat**."
         },
         "courseC_harvester_loops3_2018": {
-          "courseC_harvester_loops3_a": "No tinguis por d'equivocar-te! Afegeix blocs i executa el codi per veure què passa, encara que no hagis resolt el trencaclosques."
+          "courseC_harvester_loops3_a": "No tinguis por d'equivocar-te! Afegeix blocs i executa el codi per veure què passa, encara que no hagis resolt el trencaclosques.",
+          "courseC_harvester_loops3_b": "Per les primeres carabasses, pots fer servir un codi molt semblant al del trencaclosques anterior. Cap on hauràs de girar després?",
+          "courseC_harvester_loops3_c": "Si vols simplificar el teu codi, pots ficar un bucle dins d'un altre! D'això se'n diu **bucle imbricat**."
         },
         "courseC_harvester_loops3_2019": {
-          "courseC_harvester_loops3_a": "No tinguis por d'equivocar-te! Afegeix blocs i executa el codi per veure què passa, encara que no hagis resolt el trencaclosques."
+          "courseC_harvester_loops3_a": "No tinguis por d'equivocar-te! Afegeix blocs i executa el codi per veure què passa, encara que no hagis resolt el trencaclosques.",
+          "courseC_harvester_loops3_b": "Per les primeres carabasses, pots fer servir un codi molt semblant al del trencaclosques anterior. Cap on hauràs de girar després?",
+          "courseC_harvester_loops3_c": "Si vols simplificar el teu codi, pots ficar un bucle dins d'un altre! D'això se'n diu **bucle imbricat**."
         },
         "courseC_harvester_loops3_2020": {
-          "courseC_harvester_loops3_a": "No tinguis por d'equivocar-te! Afegeix blocs i executa el codi per veure què passa, encara que no hagis resolt el trencaclosques."
+          "courseC_harvester_loops3_a": "No tinguis por d'equivocar-te! Afegeix blocs i executa el codi per veure què passa, encara que no hagis resolt el trencaclosques.",
+          "courseC_harvester_loops3_b": "Per les primeres carabasses, pots fer servir un codi molt semblant al del trencaclosques anterior. Cap on hauràs de girar després?",
+          "courseC_harvester_loops3_c": "Si vols simplificar el teu codi, pots ficar un bucle dins d'un altre! D'això se'n diu **bucle imbricat**."
         },
         "courseC_harvester_loops3_2021": {
-          "courseC_harvester_loops3_a": "No tinguis por d'equivocar-te! Afegeix blocs i executa el codi per veure què passa, encara que no hagis resolt el trencaclosques."
+          "courseC_harvester_loops3_a": "No tinguis por d'equivocar-te! Afegeix blocs i executa el codi per veure què passa, encara que no hagis resolt el trencaclosques.",
+          "courseC_harvester_loops3_b": "Per les primeres carabasses, pots fer servir un codi molt semblant al del trencaclosques anterior. Cap on hauràs de girar després?",
+          "courseC_harvester_loops3_c": "Si vols simplificar el teu codi, pots ficar un bucle dins d'un altre! D'això se'n diu **bucle imbricat**."
         },
         "courseC_maze_debugging1": {
           "courseC_maze_debugging1_a": "-   Funciona tot bé després del primer pas?\n-   Segueix funcionant després del segon?\n-   On comença a fallar?",
@@ -8672,6 +8696,368 @@
         },
         "courseF_text_concat_-2022-2": {
           "prompt_example": "<xml>\n  <block type=\"when_run\" deletable=\"false\">\n    <next>\n      <block type=\"gamelab_setPrompt\">\n        <value name=\"QUESTION\">\n          <block type=\"text\">\n            <title name=\"TEXT\">What is your name?</title>\n          </block>\n        </value>\n        <value name=\"VAR\">\n          <block type=\"variables_get\" can_disconnect_from_parent=\"false\">\n            <title name=\"VAR\">name</title>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block>\n  <block type=\"gamelab_whenPromptAnswered\">\n    <value name=\"VAR\">\n      <block type=\"variables_get\" can_disconnect_from_parent=\"false\">\n        <title name=\"VAR\">name</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_printText\">\n        <value name=\"TEXT\">\n          <block type=\"gamelab_textJoin\">\n            <title name=\"TEXT1\">Hello, </title>\n            <value name=\"TEXT2\">\n              <block type=\"gamelab_textVariableJoin\">\n                <title name=\"VAR\">name</title>\n                <value name=\"TEXT2\">\n                  <block type=\"gamelab_textJoin\">\n                    <title name=\"TEXT1\">!</title>\n                  </block>\n                </value>\n              </block>\n            </value>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseC_PlayLab_events4": {
+          "courseC_PlayLab_events4_a": "Hauràs d'enganxar un bloc \"l'actor \\_\\_ diu\" a l'esdeveniment \"quan l'actor toca\" per resoldre aquest esdeveniment."
+        },
+        "courseC_PlayLab_events42022": {
+          "courseC_PlayLab_events4_a": "Hauràs d'enganxar un bloc \"l'actor \\_\\_ diu\" a l'esdeveniment \"quan l'actor toca\" per resoldre aquest esdeveniment."
+        },
+        "courseC_PlayLab_events4_2018": {
+          "courseC_PlayLab_events4_a": "Hauràs d'enganxar un bloc \"l'actor \\_\\_ diu\" a l'esdeveniment \"quan l'actor toca\" per resoldre aquest esdeveniment."
+        },
+        "courseC_PlayLab_events4_2019": {
+          "courseC_PlayLab_events4_a": "Hauràs d'enganxar un bloc \"l'actor \\_\\_ diu\" a l'esdeveniment \"quan l'actor toca\" per resoldre aquest esdeveniment."
+        },
+        "courseC_PlayLab_events4_2020": {
+          "courseC_PlayLab_events4_a": "Hauràs d'enganxar un bloc \"l'actor \\_\\_ diu\" a l'esdeveniment \"quan l'actor toca\" per resoldre aquest esdeveniment."
+        },
+        "courseC_PlayLab_events4_2021": {
+          "courseC_PlayLab_events4_a": "Hauràs d'enganxar un bloc \"l'actor \\_\\_ diu\" a l'esdeveniment \"quan l'actor toca\" per resoldre aquest esdeveniment."
+        },
+        "courseC_PlayLab_events5": {
+          "courseC_PlayLab_events5_a": "Hauràs de fer clic al menú desplegable del bloc \"l'actor diu\" per trobar el text \"Com va això?\".",
+          "courseC_PlayLab_events5_b": "Fes clic a l'Octàvia quan executis el programa per comprovar que funciona!"
+        },
+        "courseC_PlayLab_events52022": {
+          "courseC_PlayLab_events5_a": "Hauràs de fer clic al menú desplegable del bloc \"l'actor diu\" per trobar el text \"Com va això?\".",
+          "courseC_PlayLab_events5_b": "Fes clic a l'Octàvia quan executis el programa per comprovar que funciona!"
+        },
+        "courseC_PlayLab_events5_2018": {
+          "courseC_PlayLab_events5_a": "Hauràs de fer clic al menú desplegable del bloc \"l'actor diu\" per trobar el text \"Com va això?\".",
+          "courseC_PlayLab_events5_b": "Fes clic a l'Octàvia quan executis el programa per comprovar que funciona!"
+        },
+        "courseC_PlayLab_events5_2019": {
+          "courseC_PlayLab_events5_a": "Hauràs de fer clic al menú desplegable del bloc \"l'actor diu\" per trobar el text \"Com va això?\".",
+          "courseC_PlayLab_events5_b": "Fes clic a l'Octàvia quan executis el programa per comprovar que funciona!"
+        },
+        "courseC_PlayLab_events5_2020": {
+          "courseC_PlayLab_events5_a": "Hauràs de fer clic al menú desplegable del bloc \"l'actor diu\" per trobar el text \"Com va això?\".",
+          "courseC_PlayLab_events5_b": "Fes clic a l'Octàvia quan executis el programa per comprovar que funciona!"
+        },
+        "courseC_PlayLab_events5_2021": {
+          "courseC_PlayLab_events5_a": "Hauràs de fer clic al menú desplegable del bloc \"l'actor diu\" per trobar el text \"Com va això?\".",
+          "courseC_PlayLab_events5_b": "Fes clic a l'Octàvia quan executis el programa per comprovar que funciona!"
+        },
+        "courseC_PlayLab_events6": {
+          "courseC_PlayLab_events6_a": "A sota de cada bloc verd \"quan la fletxa\" hi hauria d'haver una acció.",
+          "courseC_PlayLab_events6_b": "Fes servir el menú desplegable del bloc \"moure l'actor 1\" per canviar en quina direcció es mou el Waddles.",
+          "courseC_PlayLab_events6_c": "Quan acabis, hauries de poder moure el Waddles fent servir les fletxes del teclat de l'ordinador."
+        },
+        "courseC_PlayLab_events62022": {
+          "courseC_PlayLab_events6_a": "A sota de cada bloc verd \"quan la fletxa\" hi hauria d'haver una acció.",
+          "courseC_PlayLab_events6_b": "Fes servir el menú desplegable del bloc \"moure l'actor 1\" per canviar en quina direcció es mou el Waddles.",
+          "courseC_PlayLab_events6_c": "Quan acabis, hauries de poder moure el Waddles fent servir les fletxes del teclat de l'ordinador."
+        },
+        "courseC_PlayLab_events6_2018": {
+          "courseC_PlayLab_events6_a": "A sota de cada bloc verd \"quan la fletxa\" hi hauria d'haver una acció.",
+          "courseC_PlayLab_events6_b": "Fes servir el menú desplegable del bloc \"moure l'actor 1\" per canviar en quina direcció es mou el Waddles.",
+          "courseC_PlayLab_events6_c": "Quan acabis, hauries de poder moure el Waddles fent servir les fletxes del teclat de l'ordinador."
+        },
+        "courseC_PlayLab_events6_2019": {
+          "courseC_PlayLab_events6_a": "A sota de cada bloc verd \"quan la fletxa\" hi hauria d'haver una acció.",
+          "courseC_PlayLab_events6_b": "Fes servir el menú desplegable del bloc \"moure l'actor 1\" per canviar en quina direcció es mou el Waddles.",
+          "courseC_PlayLab_events6_c": "Quan acabis, hauries de poder moure el Waddles fent servir les fletxes del teclat de l'ordinador."
+        },
+        "courseC_PlayLab_events6_2020": {
+          "courseC_PlayLab_events6_a": "A sota de cada bloc verd \"quan la fletxa\" hi hauria d'haver una acció.",
+          "courseC_PlayLab_events6_b": "Fes servir el menú desplegable del bloc \"moure l'actor 1\" per canviar en quina direcció es mou el Waddles.",
+          "courseC_PlayLab_events6_c": "Quan acabis, hauries de poder moure el Waddles fent servir les fletxes del teclat de l'ordinador."
+        },
+        "courseC_PlayLab_events6_2021": {
+          "courseC_PlayLab_events6_a": "A sota de cada bloc verd \"quan la fletxa\" hi hauria d'haver una acció.",
+          "courseC_PlayLab_events6_b": "Fes servir el menú desplegable del bloc \"moure l'actor 1\" per canviar en quina direcció es mou el Waddles.",
+          "courseC_PlayLab_events6_c": "Quan acabis, hauries de poder moure el Waddles fent servir les fletxes del teclat de l'ordinador."
+        },
+        "courseC_PlayLab_events7": {
+          "courseC_PlayLab_events7_a": "Per resoldre aquest trencaclosques, fes servir el bloc \"moure l'actor 2 400 píxels cap amunt\" i el bloc \"moure l'actor 2 400 píxels cap avall\" dins del bucle \"repetir per sempre\".",
+          "courseC_PlayLab_events7_b": "No fa falta que el bucle \"repetir per sempre\" estigui enganxat a qualsevol dels altres blocs d'esdeveniments; s'executarà tot sol."
+        },
+        "courseC_PlayLab_events72022": {
+          "courseC_PlayLab_events7_a": "Per resoldre aquest trencaclosques, fes servir el bloc \"moure l'actor 2 400 píxels cap amunt\" i el bloc \"moure l'actor 2 400 píxels cap avall\" dins del bucle \"repetir per sempre\".",
+          "courseC_PlayLab_events7_b": "No fa falta que el bucle \"repetir per sempre\" estigui enganxat a qualsevol dels altres blocs d'esdeveniments; s'executarà tot sol."
+        },
+        "courseC_PlayLab_events7_2018": {
+          "courseC_PlayLab_events7_a": "Per resoldre aquest trencaclosques, fes servir el bloc \"moure l'actor 2 400 píxels cap amunt\" i el bloc \"moure l'actor 2 400 píxels cap avall\" dins del bucle \"repetir per sempre\".",
+          "courseC_PlayLab_events7_b": "No fa falta que el bucle \"repetir per sempre\" estigui enganxat a qualsevol dels altres blocs d'esdeveniments; s'executarà tot sol."
+        },
+        "courseC_PlayLab_events7_2019": {
+          "courseC_PlayLab_events7_a": "Per resoldre aquest trencaclosques, fes servir el bloc \"moure l'actor 2 400 píxels cap amunt\" i el bloc \"moure l'actor 2 400 píxels cap avall\" dins del bucle \"repetir per sempre\".",
+          "courseC_PlayLab_events7_b": "No fa falta que el bucle \"repetir per sempre\" estigui enganxat a qualsevol dels altres blocs d'esdeveniments; s'executarà tot sol."
+        },
+        "courseC_PlayLab_events7_2020": {
+          "courseC_PlayLab_events7_a": "Per resoldre aquest trencaclosques, fes servir el bloc \"moure l'actor 2 400 píxels cap amunt\" i el bloc \"moure l'actor 2 400 píxels cap avall\" dins del bucle \"repetir per sempre\".",
+          "courseC_PlayLab_events7_b": "No fa falta que el bucle \"repetir per sempre\" estigui enganxat a qualsevol dels altres blocs d'esdeveniments; s'executarà tot sol."
+        },
+        "courseC_PlayLab_events7_2021": {
+          "courseC_PlayLab_events7_a": "Per resoldre aquest trencaclosques, fes servir el bloc \"moure l'actor 2 400 píxels cap amunt\" i el bloc \"moure l'actor 2 400 píxels cap avall\" dins del bucle \"repetir per sempre\".",
+          "courseC_PlayLab_events7_b": "No fa falta que el bucle \"repetir per sempre\" estigui enganxat a qualsevol dels altres blocs d'esdeveniments; s'executarà tot sol."
+        },
+        "courseC_PlayLab_events8": {
+          "courseC_PlayLab_events8_a": "Hauràs d'enganxar blocs al bloc \"quan l'actor toca\" perquè això passi correctament.",
+          "courseC_PlayLab_events8_b": "Els blocs \"l'actor diu\" i \"reproduir so\" que hi ha a la caixa d'eines t'ajudaran!"
+        },
+        "courseC_PlayLab_events82022": {
+          "courseC_PlayLab_events8_a": "Hauràs d'enganxar blocs al bloc \"quan l'actor toca\" perquè això passi correctament.",
+          "courseC_PlayLab_events8_b": "Els blocs \"l'actor diu\" i \"reproduir so\" que hi ha a la caixa d'eines t'ajudaran!"
+        },
+        "courseC_PlayLab_events8_2018": {
+          "courseC_PlayLab_events8_a": "Hauràs d'enganxar blocs al bloc \"quan l'actor toca\" perquè això passi correctament.",
+          "courseC_PlayLab_events8_b": "Els blocs \"l'actor diu\" i \"reproduir so\" que hi ha a la caixa d'eines t'ajudaran!"
+        },
+        "courseC_PlayLab_events8_2019": {
+          "courseC_PlayLab_events8_a": "Hauràs d'enganxar blocs al bloc \"quan l'actor toca\" perquè això passi correctament.",
+          "courseC_PlayLab_events8_b": "Els blocs \"l'actor diu\" i \"reproduir so\" que hi ha a la caixa d'eines t'ajudaran!"
+        },
+        "courseC_PlayLab_events8_2020": {
+          "courseC_PlayLab_events8_a": "Hauràs d'enganxar blocs al bloc \"quan l'actor toca\" perquè això passi correctament.",
+          "courseC_PlayLab_events8_b": "Els blocs \"l'actor diu\" i \"reproduir so\" que hi ha a la caixa d'eines t'ajudaran!"
+        },
+        "courseC_PlayLab_events8_2021": {
+          "courseC_PlayLab_events8_a": "Hauràs d'enganxar blocs al bloc \"quan l'actor toca\" perquè això passi correctament.",
+          "courseC_PlayLab_events8_b": "Els blocs \"l'actor diu\" i \"reproduir so\" que hi ha a la caixa d'eines t'ajudaran!"
+        },
+        "courseC_PlayLab_events9": {
+          "courseC_PlayLab_events9_a": "El bloc \"anotar punt\" t'ajudarà a resoldre aquest trencaclosques.",
+          "courseC_PlayLab_events9_b": "Assegura't que el bloc nou \"quan l'actor toca\" digui actor **1** i actor **3**.",
+          "courseC_PlayLab_events9_c": "Pots tenir més d'un esdeveniment \"quan l'actor toca\" alhora a l'espai de treball, o sigui que no cal que n'eliminis el primer!"
+        },
+        "courseC_PlayLab_events92022": {
+          "courseC_PlayLab_events9_a": "El bloc \"anotar punt\" t'ajudarà a resoldre aquest trencaclosques.",
+          "courseC_PlayLab_events9_b": "Assegura't que el bloc nou \"quan l'actor toca\" digui actor **1** i actor **3**.",
+          "courseC_PlayLab_events9_c": "Pots tenir més d'un esdeveniment \"quan l'actor toca\" alhora a l'espai de treball, o sigui que no cal que n'eliminis el primer!"
+        },
+        "courseC_PlayLab_events9_2018": {
+          "courseC_PlayLab_events9_a": "El bloc \"anotar punt\" t'ajudarà a resoldre aquest trencaclosques.",
+          "courseC_PlayLab_events9_b": "Assegura't que el bloc nou \"quan l'actor toca\" digui actor **1** i actor **3**.",
+          "courseC_PlayLab_events9_c": "Pots tenir més d'un esdeveniment \"quan l'actor toca\" alhora a l'espai de treball, o sigui que no cal que n'eliminis el primer!"
+        },
+        "courseC_PlayLab_events9_2019": {
+          "courseC_PlayLab_events9_a": "El bloc \"anotar punt\" t'ajudarà a resoldre aquest trencaclosques.",
+          "courseC_PlayLab_events9_b": "Assegura't que el bloc nou \"quan l'actor toca\" digui actor **1** i actor **3**.",
+          "courseC_PlayLab_events9_c": "Pots tenir més d'un esdeveniment \"quan l'actor toca\" alhora a l'espai de treball, o sigui que no cal que n'eliminis el primer!"
+        },
+        "courseC_PlayLab_events9_2020": {
+          "courseC_PlayLab_events9_a": "El bloc \"anotar punt\" t'ajudarà a resoldre aquest trencaclosques.",
+          "courseC_PlayLab_events9_b": "Assegura't que el bloc nou \"quan l'actor toca\" digui actor **1** i actor **3**.",
+          "courseC_PlayLab_events9_c": "Pots tenir més d'un esdeveniment \"quan l'actor toca\" alhora a l'espai de treball, o sigui que no cal que n'eliminis el primer!"
+        },
+        "courseC_PlayLab_events9_2021": {
+          "courseC_PlayLab_events9_a": "El bloc \"anotar punt\" t'ajudarà a resoldre aquest trencaclosques.",
+          "courseC_PlayLab_events9_b": "Assegura't que el bloc nou \"quan l'actor toca\" digui actor **1** i actor **3**.",
+          "courseC_PlayLab_events9_c": "Pots tenir més d'un esdeveniment \"quan l'actor toca\" alhora a l'espai de treball, o sigui que no cal que n'eliminis el primer!"
+        },
+        "courseC_PlayLab_eventsA": {
+          "courseC_PlayLab_eventsA_a": "Fes servir el bloc \"establir fons\" i el bloc \"establir actor a velocitat de \\_\\_\\_\\_\" per resoldre aquest trencaclosques."
+        },
+        "courseC_PlayLab_eventsA2022": {
+          "courseC_PlayLab_eventsA_a": "Fes servir el bloc \"establir fons\" i el bloc \"establir actor a velocitat de \\_\\_\\_\\_\" per resoldre aquest trencaclosques."
+        },
+        "courseC_PlayLab_eventsA_2018": {
+          "courseC_PlayLab_eventsA_a": "Fes servir el bloc \"establir fons\" i el bloc \"establir actor a velocitat de \\_\\_\\_\\_\" per resoldre aquest trencaclosques."
+        },
+        "courseC_PlayLab_eventsA_2019": {
+          "courseC_PlayLab_eventsA_a": "Fes servir el bloc \"establir fons\" i el bloc \"establir actor a velocitat de \\_\\_\\_\\_\" per resoldre aquest trencaclosques."
+        },
+        "courseC_PlayLab_eventsA_2020": {
+          "courseC_PlayLab_eventsA_a": "Fes servir el bloc \"establir fons\" i el bloc \"establir actor a velocitat de \\_\\_\\_\\_\" per resoldre aquest trencaclosques."
+        },
+        "courseC_PlayLab_eventsA_2021": {
+          "courseC_PlayLab_eventsA_a": "Fes servir el bloc \"establir fons\" i el bloc \"establir actor a velocitat de \\_\\_\\_\\_\" per resoldre aquest trencaclosques."
+        },
+        "courseC_PlayLab_eventsA_embed2022": {
+          "courseC_PlayLab_eventsA_a": "Fes servir les fletxes per moure el pingüí. No cal que escriguis cap codi per acabar aquest nivell."
+        },
+        "courseC_PlayLab_eventsA_embed_2019": {
+          "courseC_PlayLab_eventsA_a": "Fes servir les fletxes per moure el pingüí. No cal que escriguis cap codi per acabar aquest nivell."
+        },
+        "courseC_PlayLab_eventsA_embed_2020": {
+          "courseC_PlayLab_eventsA_a": "Fes servir les fletxes per moure el pingüí. No cal que escriguis cap codi per acabar aquest nivell."
+        },
+        "courseC_PlayLab_eventsA_embed_2021": {
+          "courseC_PlayLab_eventsA_a": "Fes servir les fletxes per moure el pingüí. No cal que escriguis cap codi per acabar aquest nivell."
+        },
+        "courseC_harvester_loops1": {
+          "courseC_harvester_loops1_a": "Un cop t'hagis mogut fins a una carabassa, fes servir un <xml><block type=\"harvester_pumpkin\"/></xml> per collir-la.",
+          "courseC_harvester_loops1_b": "Pots fer servir un bucle amb el bloc <xml><block type=\"harvester_pumpkin\"/></xml> per collir més d'una carabassa en un quadrat."
+        },
+        "courseC_harvester_loops12022": {
+          "courseC_harvester_loops1_a": "Un cop t'hagis mogut fins a una carabassa, fes servir un <xml><block type=\"harvester_pumpkin\"/></xml> per collir-la.",
+          "courseC_harvester_loops1_b": "Pots fer servir un bucle amb el bloc <xml><block type=\"harvester_pumpkin\"/></xml> per collir més d'una carabassa en un quadrat."
+        },
+        "courseC_harvester_loops1_2018": {
+          "courseC_harvester_loops1_a": "Un cop t'hagis mogut fins a una carabassa, fes servir un <xml><block type=\"harvester_pumpkin\"/></xml> per collir-la.",
+          "courseC_harvester_loops1_b": "Pots fer servir un bucle amb el bloc <xml><block type=\"harvester_pumpkin\"/></xml> per collir més d'una carabassa en un quadrat."
+        },
+        "courseC_harvester_loops1_2019": {
+          "courseC_harvester_loops1_a": "Un cop t'hagis mogut fins a una carabassa, fes servir un <xml><block type=\"harvester_pumpkin\"/></xml> per collir-la.",
+          "courseC_harvester_loops1_b": "Pots fer servir un bucle amb el bloc <xml><block type=\"harvester_pumpkin\"/></xml> per collir més d'una carabassa en un quadrat."
+        },
+        "courseC_harvester_loops1_2020": {
+          "courseC_harvester_loops1_a": "Un cop t'hagis mogut fins a una carabassa, fes servir un <xml><block type=\"harvester_pumpkin\"/></xml> per collir-la.",
+          "courseC_harvester_loops1_b": "Pots fer servir un bucle amb el bloc <xml><block type=\"harvester_pumpkin\"/></xml> per collir més d'una carabassa en un quadrat."
+        },
+        "courseC_harvester_loops1_2021": {
+          "courseC_harvester_loops1_a": "Un cop t'hagis mogut fins a una carabassa, fes servir un <xml><block type=\"harvester_pumpkin\"/></xml> per collir-la.",
+          "courseC_harvester_loops1_b": "Pots fer servir un bucle amb el bloc <xml><block type=\"harvester_pumpkin\"/></xml> per collir més d'una carabassa en un quadrat."
+        },
+        "courseC_harvester_loops4": {
+          "courseC_harvester_loops4_a": "Fes servir el bloc nou de \"collir blat\" per recollir el blat.",
+          "courseC_harvester_loops4_b": "Pots afegir diversos bucles de repetició al teu codi, alguns per collir el blat i altres per collir les carabasses.",
+          "courseC_harvester_loops4_c": "Si vols simplificar el teu codi, pots ficar un bucle dins d'un altre! D'això se'n diu **bucle imbricat**."
+        },
+        "courseC_harvester_loops42022": {
+          "courseC_harvester_loops4_a": "Fes servir el bloc nou de \"collir blat\" per recollir el blat.",
+          "courseC_harvester_loops4_b": "Pots afegir diversos bucles de repetició al teu codi, alguns per collir el blat i altres per collir les carabasses.",
+          "courseC_harvester_loops4_c": "Si vols simplificar el teu codi, pots ficar un bucle dins d'un altre! D'això se'n diu **bucle imbricat**."
+        },
+        "courseC_harvester_loops4_2018": {
+          "courseC_harvester_loops4_a": "Fes servir el bloc nou de \"collir blat\" per recollir el blat.",
+          "courseC_harvester_loops4_b": "Pots afegir diversos bucles de repetició al teu codi, alguns per collir el blat i altres per collir les carabasses.",
+          "courseC_harvester_loops4_c": "Si vols simplificar el teu codi, pots ficar un bucle dins d'un altre! D'això se'n diu **bucle imbricat**."
+        },
+        "courseC_harvester_loops4_2019": {
+          "courseC_harvester_loops4_a": "Fes servir el bloc nou de \"collir blat\" per recollir el blat.",
+          "courseC_harvester_loops4_b": "Pots afegir diversos bucles de repetició al teu codi, alguns per collir el blat i altres per collir les carabasses.",
+          "courseC_harvester_loops4_c": "Si vols simplificar el teu codi, pots ficar un bucle dins d'un altre! D'això se'n diu **bucle imbricat**."
+        },
+        "courseC_harvester_loops4_2020": {
+          "courseC_harvester_loops4_a": "Fes servir el bloc nou de \"collir blat\" per recollir el blat.",
+          "courseC_harvester_loops4_b": "Pots afegir diversos bucles de repetició al teu codi, alguns per collir el blat i altres per collir les carabasses.",
+          "courseC_harvester_loops4_c": "Si vols simplificar el teu codi, pots ficar un bucle dins d'un altre! D'això se'n diu **bucle imbricat**."
+        },
+        "courseC_harvester_loops4_2021": {
+          "courseC_harvester_loops4_a": "Fes servir el bloc nou de \"collir blat\" per recollir el blat.",
+          "courseC_harvester_loops4_b": "Pots afegir diversos bucles de repetició al teu codi, alguns per collir el blat i altres per collir les carabasses.",
+          "courseC_harvester_loops4_c": "Si vols simplificar el teu codi, pots ficar un bucle dins d'un altre! D'això se'n diu **bucle imbricat**."
+        },
+        "courseC_harvester_loops5": {
+          "courseC_harvester_loops5_a": "Si veus que t'encalles, prova de dibuixar tot el programa i buscar-hi patrons que es repeteixin.",
+          "courseC_harvester_loops5_b": "Aquest esglaó no et recorda a algun altre trencaclosques? Els moviments que has de fer són semblants, però recorda agafar les collites pel camí."
+        },
+        "courseC_harvester_loops52022": {
+          "courseC_harvester_loops5_a": "Si veus que t'encalles, prova de dibuixar tot el programa i buscar-hi patrons que es repeteixin.",
+          "courseC_harvester_loops5_b": "Aquest esglaó no et recorda a algun altre trencaclosques? Els moviments que has de fer són semblants, però recorda agafar les collites pel camí."
+        },
+        "courseC_harvester_loops5_2018": {
+          "courseC_harvester_loops5_a": "Si veus que t'encalles, prova de dibuixar tot el programa i buscar-hi patrons que es repeteixin.",
+          "courseC_harvester_loops5_b": "Aquest esglaó no et recorda a algun altre trencaclosques? Els moviments que has de fer són semblants, però recorda agafar les collites pel camí."
+        },
+        "courseC_harvester_loops5_2019": {
+          "courseC_harvester_loops5_a": "Si veus que t'encalles, prova de dibuixar tot el programa i buscar-hi patrons que es repeteixin.",
+          "courseC_harvester_loops5_b": "Aquest esglaó no et recorda a algun altre trencaclosques? Els moviments que has de fer són semblants, però recorda agafar les collites pel camí."
+        },
+        "courseC_harvester_loops5_2020": {
+          "courseC_harvester_loops5_a": "Si veus que t'encalles, prova de dibuixar tot el programa i buscar-hi patrons que es repeteixin.",
+          "courseC_harvester_loops5_b": "Aquest esglaó no et recorda a algun altre trencaclosques? Els moviments que has de fer són semblants, però recorda agafar les collites pel camí."
+        },
+        "courseC_harvester_loops5_2021": {
+          "courseC_harvester_loops5_a": "Si veus que t'encalles, prova de dibuixar tot el programa i buscar-hi patrons que es repeteixin.",
+          "courseC_harvester_loops5_b": "Aquest esglaó no et recorda a algun altre trencaclosques? Els moviments que has de fer són semblants, però recorda agafar les collites pel camí."
+        },
+        "courseC_harvester_loops6": {
+          "courseC_harvester_loops6_a": "Recorda que pots posar diversos blocs dins d'un bucle de repetició.",
+          "courseC_harvester_loops6_b": "No t'oblidis de girar al final de la fila de blat."
+        },
+        "courseC_harvester_loops62022": {
+          "courseC_harvester_loops6_a": "Recorda que pots posar diversos blocs dins d'un bucle de repetició.",
+          "courseC_harvester_loops6_b": "No t'oblidis de girar al final de la fila de blat."
+        },
+        "courseC_harvester_loops6_2018": {
+          "courseC_harvester_loops6_a": "Recorda que pots posar diversos blocs dins d'un bucle de repetició.",
+          "courseC_harvester_loops6_b": "No t'oblidis de girar al final de la fila de blat."
+        },
+        "courseC_harvester_loops6_2019": {
+          "courseC_harvester_loops6_a": "Recorda que pots posar diversos blocs dins d'un bucle de repetició.",
+          "courseC_harvester_loops6_b": "No t'oblidis de girar al final de la fila de blat."
+        },
+        "courseC_harvester_loops6_2020": {
+          "courseC_harvester_loops6_a": "Recorda que pots posar diversos blocs dins d'un bucle de repetició.",
+          "courseC_harvester_loops6_b": "No t'oblidis de girar al final de la fila de blat."
+        },
+        "courseC_harvester_loops6_2021": {
+          "courseC_harvester_loops6_a": "Recorda que pots posar diversos blocs dins d'un bucle de repetició.",
+          "courseC_harvester_loops6_b": "No t'oblidis de girar al final de la fila de blat."
+        },
+        "courseC_harvester_loops7": {
+          "courseC_harvester_loops7_a": "Hi ha dues maneres de resoldre aquest trencaclosques: o bé culls el blat primer, o bé les carabasses.",
+          "courseC_harvester_loops7_b": "Necessitaràs diversos bucles de repetició per resoldre aquest trencaclosques."
+        },
+        "courseC_harvester_loops72022": {
+          "courseC_harvester_loops7_a": "Hi ha dues maneres de resoldre aquest trencaclosques: o bé culls el blat primer, o bé les carabasses.",
+          "courseC_harvester_loops7_b": "Necessitaràs diversos bucles de repetició per resoldre aquest trencaclosques."
+        },
+        "courseC_harvester_loops7_2018": {
+          "courseC_harvester_loops7_a": "Hi ha dues maneres de resoldre aquest trencaclosques: o bé culls el blat primer, o bé les carabasses.",
+          "courseC_harvester_loops7_b": "Necessitaràs diversos bucles de repetició per resoldre aquest trencaclosques."
+        },
+        "courseC_harvester_loops7_2019": {
+          "courseC_harvester_loops7_a": "Hi ha dues maneres de resoldre aquest trencaclosques: o bé culls el blat primer, o bé les carabasses.",
+          "courseC_harvester_loops7_b": "Necessitaràs diversos bucles de repetició per resoldre aquest trencaclosques."
+        },
+        "courseC_harvester_loops7_2020": {
+          "courseC_harvester_loops7_a": "Hi ha dues maneres de resoldre aquest trencaclosques: o bé culls el blat primer, o bé les carabasses.",
+          "courseC_harvester_loops7_b": "Necessitaràs diversos bucles de repetició per resoldre aquest trencaclosques."
+        },
+        "courseC_harvester_loops7_2021": {
+          "courseC_harvester_loops7_a": "Hi ha dues maneres de resoldre aquest trencaclosques: o bé culls el blat primer, o bé les carabasses.",
+          "courseC_harvester_loops7_b": "Necessitaràs diversos bucles de repetició per resoldre aquest trencaclosques."
+        },
+        "courseC_harvester_loops8": {
+          "courseC_harvester_loops8_a": "Aquest esglaó no et recorda al del trencaclosques anterior? Els moviments que has de fer són semblants, però recorda agafar les collites pel camí.",
+          "courseC_harvester_loops8_b": "Si vols simplificar el teu codi encara més, pots ficar un bucle de repetició dins d'un altre! D'això se'n diu **bucle imbricat**."
+        },
+        "courseC_harvester_loops82022": {
+          "courseC_harvester_loops8_a": "Aquest esglaó no et recorda al del trencaclosques anterior? Els moviments que has de fer són semblants, però recorda agafar les collites pel camí.",
+          "courseC_harvester_loops8_b": "Si vols simplificar el teu codi encara més, pots ficar un bucle de repetició dins d'un altre! D'això se'n diu **bucle imbricat**."
+        },
+        "courseC_harvester_loops8_2018": {
+          "courseC_harvester_loops8_a": "Aquest esglaó no et recorda al del trencaclosques anterior? Els moviments que has de fer són semblants, però recorda agafar les collites pel camí.",
+          "courseC_harvester_loops8_b": "Si vols simplificar el teu codi encara més, pots ficar un bucle de repetició dins d'un altre! D'això se'n diu **bucle imbricat**."
+        },
+        "courseC_harvester_loops8_2019": {
+          "courseC_harvester_loops8_a": "Aquest esglaó no et recorda al del trencaclosques anterior? Els moviments que has de fer són semblants, però recorda agafar les collites pel camí.",
+          "courseC_harvester_loops8_b": "Si vols simplificar el teu codi encara més, pots ficar un bucle de repetició dins d'un altre! D'això se'n diu **bucle imbricat**."
+        },
+        "courseC_harvester_loops8_2020": {
+          "courseC_harvester_loops8_a": "Aquest esglaó no et recorda al del trencaclosques anterior? Els moviments que has de fer són semblants, però recorda agafar les collites pel camí.",
+          "courseC_harvester_loops8_b": "Si vols simplificar el teu codi encara més, pots ficar un bucle de repetició dins d'un altre! D'això se'n diu **bucle imbricat**."
+        },
+        "courseC_harvester_loops8_2021": {
+          "courseC_harvester_loops8_a": "Aquest esglaó no et recorda al del trencaclosques anterior? Els moviments que has de fer són semblants, però recorda agafar les collites pel camí.",
+          "courseC_harvester_loops8_b": "Si vols simplificar el teu codi encara més, pots ficar un bucle de repetició dins d'un altre! D'això se'n diu **bucle imbricat**."
+        },
+        "courseC_harvester_loops_challenge1a": {
+          "courseC_harvester_loops_challenge1_a": "Això és massa difícil de fer sense cap bucle!",
+          "courseC_harvester_loops_challenge1_b": "Pots repetir \"avançar\" i \"collir blat\" tants cops com vulguis, i després \"girar cap a la dreta\" a cada cantonada.",
+          "courseC_harvester_loops_challenge1_c": "La millor manera de collir blat del mig inclou un bloc de \"repetir\" dins d'un altre bloc de \"repetir\".\n\n<xml><block type=\"controls_repeat\">\n        <title name=\"TIMES\">2</title>\n        <statement name=\"DO\">\n          <block type=\"controls_repeat\">\n            <title name=\"TIMES\">4</title>\n            <statement name=\"DO\">\n              <block type=\"maze_move\">\n                <title name=\"DIR\">moveForward</title>\n                <next>\n                  <block type=\"harvester_corn\"/>\n                </next>\n              </block>\n            </statement>\n            <next>\n              <block type=\"maze_turn\">\n                <title name=\"DIR\">turnRight</title>\n              </block>\n            </next>\n          </block>\n        </statement>\n        </block></xml>"
+        },
+        "courseC_harvester_loops_challenge1a2022": {
+          "courseC_harvester_loops_challenge1_a": "Això és massa difícil de fer sense cap bucle!",
+          "courseC_harvester_loops_challenge1_b": "Pots repetir \"avançar\" i \"collir blat\" tants cops com vulguis, i després \"girar cap a la dreta\" a cada cantonada.",
+          "courseC_harvester_loops_challenge1_c": "La millor manera de collir blat del mig inclou un bloc de \"repetir\" dins d'un altre bloc de \"repetir\".\n\n<xml><block type=\"controls_repeat\">\n        <title name=\"TIMES\">2</title>\n        <statement name=\"DO\">\n          <block type=\"controls_repeat\">\n            <title name=\"TIMES\">4</title>\n            <statement name=\"DO\">\n              <block type=\"maze_move\">\n                <title name=\"DIR\">moveForward</title>\n                <next>\n                  <block type=\"harvester_corn\"/>\n                </next>\n              </block>\n            </statement>\n            <next>\n              <block type=\"maze_turn\">\n                <title name=\"DIR\">turnRight</title>\n              </block>\n            </next>\n          </block>\n        </statement>\n        </block></xml>"
+        },
+        "courseC_harvester_loops_challenge1a_2018": {
+          "courseC_harvester_loops_challenge1_a": "Això és massa difícil de fer sense cap bucle!",
+          "courseC_harvester_loops_challenge1_b": "Pots repetir \"avançar\" i \"collir blat\" tants cops com vulguis, i després \"girar cap a la dreta\" a cada cantonada."
+        },
+        "courseC_harvester_loops_challenge1a_2019": {
+          "courseC_harvester_loops_challenge1_a": "Això és massa difícil de fer sense cap bucle!",
+          "courseC_harvester_loops_challenge1_b": "Pots repetir \"avançar\" i \"collir blat\" tants cops com vulguis, i després \"girar cap a la dreta\" a cada cantonada.",
+          "courseC_harvester_loops_challenge1_c": "La millor manera de collir blat del mig inclou un bloc de \"repetir\" dins d'un altre bloc de \"repetir\".\n\n<xml><block type=\"controls_repeat\">\n        <title name=\"TIMES\">2</title>\n        <statement name=\"DO\">\n          <block type=\"controls_repeat\">\n            <title name=\"TIMES\">4</title>\n            <statement name=\"DO\">\n              <block type=\"maze_move\">\n                <title name=\"DIR\">moveForward</title>\n                <next>\n                  <block type=\"harvester_corn\"/>\n                </next>\n              </block>\n            </statement>\n            <next>\n              <block type=\"maze_turn\">\n                <title name=\"DIR\">turnRight</title>\n              </block>\n            </next>\n          </block>\n        </statement>\n        </block></xml>"
+        },
+        "courseC_harvester_loops_challenge1a_2020": {
+          "courseC_harvester_loops_challenge1_a": "Això és massa difícil de fer sense cap bucle!",
+          "courseC_harvester_loops_challenge1_b": "Pots repetir \"avançar\" i \"collir blat\" tants cops com vulguis, i després \"girar cap a la dreta\" a cada cantonada.",
+          "courseC_harvester_loops_challenge1_c": "La millor manera de collir blat del mig inclou un bloc de \"repetir\" dins d'un altre bloc de \"repetir\".\n\n<xml><block type=\"controls_repeat\">\n        <title name=\"TIMES\">2</title>\n        <statement name=\"DO\">\n          <block type=\"controls_repeat\">\n            <title name=\"TIMES\">4</title>\n            <statement name=\"DO\">\n              <block type=\"maze_move\">\n                <title name=\"DIR\">moveForward</title>\n                <next>\n                  <block type=\"harvester_corn\"/>\n                </next>\n              </block>\n            </statement>\n            <next>\n              <block type=\"maze_turn\">\n                <title name=\"DIR\">turnRight</title>\n              </block>\n            </next>\n          </block>\n        </statement>\n        </block></xml>"
+        },
+        "courseC_harvester_loops_challenge1a_2021": {
+          "courseC_harvester_loops_challenge1_a": "Això és massa difícil de fer sense cap bucle!",
+          "courseC_harvester_loops_challenge1_b": "Pots repetir \"avançar\" i \"collir blat\" tants cops com vulguis, i després \"girar cap a la dreta\" a cada cantonada.",
+          "courseC_harvester_loops_challenge1_c": "La millor manera de collir blat del mig inclou un bloc de \"repetir\" dins d'un altre bloc de \"repetir\".\n\n<xml><block type=\"controls_repeat\">\n        <title name=\"TIMES\">2</title>\n        <statement name=\"DO\">\n          <block type=\"controls_repeat\">\n            <title name=\"TIMES\">4</title>\n            <statement name=\"DO\">\n              <block type=\"maze_move\">\n                <title name=\"DIR\">moveForward</title>\n                <next>\n                  <block type=\"harvester_corn\"/>\n                </next>\n              </block>\n            </statement>\n            <next>\n              <block type=\"maze_turn\">\n                <title name=\"DIR\">turnRight</title>\n              </block>\n            </next>\n          </block>\n        </statement>\n        </block></xml>"
+        },
+        "courseD_collector_ramp8": {
+          "courseD_collector_ramp8_b": "Si vols simplificar el teu codi encara més, pots ficar un bucle de repetició dins d'un altre! D'això se'n diu **bucle imbricat**."
         }
       }
     }
