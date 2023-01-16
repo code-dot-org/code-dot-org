@@ -24,7 +24,7 @@ namespace :stack do
     )
   end
 
-  timed_task_with_logging :start do
+  namespace :start do
     timed_task_with_logging default: :environment do
       @cfn.create_or_update
     end
