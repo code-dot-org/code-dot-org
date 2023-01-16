@@ -1973,7 +1973,10 @@
         "CourseF_Project_SpriteLab_-2022-2": "Elérted az F tanfolyam végét! Készítsd el saját Sprite Lab projektedet!",
         "U1L13 Text Compression": "Keresd meg a mintákat (ismétlődő szavakat vagy kifejezéseket) a szövegben. Írd be a megtalált mintákat a jobb oldali szótárba. Amint beírod őket a szótárba, a helyükön a szimbólumuk jelenik meg a szöveg helyett.",
         "Widget: Text Compression": "Keresd meg a mintákat (ismétlődő szavakat vagy kifejezéseket) a szövegben. Írd be a megtalált mintákat a jobb oldali szótárba. Amint beírod őket a szótárba, a helyükön a szimbólumuk jelenik meg a szöveg helyett.",
-        "courseE_artist_functions6": "Készítsd el ezt az ablakot úgy, hogy rajzolsz egy négyzetet, aztán elfordulsz 90 fokkal mielőtt a következőt megrajzolnád. A többit már sejted."
+        "courseE_artist_functions6": "Készítsd el ezt az ablakot úgy, hogy rajzolsz egy négyzetet, aztán elfordulsz 90 fokkal mielőtt a következőt megrajzolnád. A többit már sejted.",
+        "courseF_groups_behaviors_-2022-2": "Adj minden sprite-nak valamilyen viselkedést, amikor rákattintasz!",
+        "courseF_groups_costume_-2022-2": "Változtasd meg minden sprite jelmezét, amikor rákattintasz!",
+        "courseF_groups_touch_-2022-2": "Adj minden sprite-nak valamilyen viselkedést, amikor rákattintasz!"
       }
     }
   }
