@@ -148,7 +148,8 @@ const styles = {
     display: 'inline',
     position: 'absolute',
     bottom: 20,
-    right: 0
+    right: 0,
+    lineHeight: 26
   },
   linkBoxRtl: {
     display: 'inline',
@@ -156,7 +157,8 @@ const styles = {
     paddingLeft: 10,
     position: 'absolute',
     bottom: 20,
-    left: 0
+    left: 0,
+    lineHeight: 26
   },
   linkBoxBottom: {
     display: 'inline',

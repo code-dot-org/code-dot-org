@@ -256,7 +256,9 @@ class LibraryTable extends React.Component {
             <Table.Body rows={sortedRows} rowKey="channel" />
           </Table.Provider>
         )}
-        {!hasLibraries && <h3>{i18n.noLibraries()}</h3>}
+        {!hasLibraries && (
+          <div style={styles.noLibraries}>{i18n.noLibraries()}</div>
+        )}
         {unpublishFailedLibrary && (
           <BaseDialog
             isOpen
@@ -304,6 +306,10 @@ const styles = {
   dialogBody: {
     fontSize: 18,
     color: color.charcoal
+  },
+  noLibraries: {
+    fontSize: 14,
+    marginBottom: 20
   }
 };
 

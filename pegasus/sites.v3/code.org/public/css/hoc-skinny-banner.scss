@@ -60,5 +60,10 @@ aside.hoc-skinny-banner {
     border-color: $neutral_white;
     color: $neutral_dark;
     font-family: $gotham-bold;
+
+    &:hover {
+      background-color: $neutral_dark10;
+      border-color: $neutral_dark10;
+    }
   }
 }

@@ -213,6 +213,7 @@ const styles = {
     color: color.neutral_dark,
     float: 'right',
     marginTop: 35,
+    marginBottom: 16,
     cursor: 'pointer',
     fontFamily: '"Gotham 5r", sans-serif'
   },
