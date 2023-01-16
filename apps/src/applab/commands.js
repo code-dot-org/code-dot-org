@@ -365,8 +365,6 @@ applabCommands.turnTo = function(opts) {
 // if opts.counterclockwise, the center point is 90 degrees counterclockwise
 
 applabCommands.arcRight = function(opts) {
-  console.log('inside arcright');
-  console.log(Applab.turtle.isPenDown);
   apiValidateType(opts, 'arcRight', 'angle', opts.degrees, 'number');
   apiValidateType(opts, 'arcRight', 'radius', opts.radius, 'number');
 
@@ -456,7 +454,6 @@ applabCommands.dot = function(opts) {
       // reset pen so that Applab.turtle pen is actually up.
       Applab.turtle.isPenDown = false;
     }
-    console.log(Applab.turtle.isPenDown);
     ctx.lineWidth = savedLineWidth;
     return true;
   }
