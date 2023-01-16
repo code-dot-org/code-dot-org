@@ -602,7 +602,7 @@ applabCommands.line = function(opts) {
   apiValidateType(opts, 'line', 'y1', opts.y1, 'number');
   apiValidateType(opts, 'line', 'y2', opts.y2, 'number');
   var ctx = Applab.activeCanvas && Applab.activeCanvas.getContext('2d');
-  if (ctx && Applab.turtle.isPenDown) {
+  if (ctx) {
     ctx.beginPath();
     ctx.moveTo(opts.x1, opts.y1);
     ctx.lineTo(opts.x2, opts.y2);
@@ -620,7 +620,7 @@ applabCommands.circle = function(opts) {
   apiValidateType(opts, 'circle', 'centerY', opts.y, 'number');
   apiValidateType(opts, 'circle', 'radius', opts.radius, 'number');
   var ctx = Applab.activeCanvas && Applab.activeCanvas.getContext('2d');
-  if (ctx && Applab.turtle.isPenDown) {
+  if (ctx) {
     ctx.beginPath();
     ctx.arc(opts.x, opts.y, opts.radius, 0, 2 * Math.PI);
     ctx.fill();
@@ -639,7 +639,7 @@ applabCommands.rect = function(opts) {
   apiValidateType(opts, 'rect', 'width', opts.width, 'number');
   apiValidateType(opts, 'rect', 'height', opts.height, 'number');
   var ctx = Applab.activeCanvas && Applab.activeCanvas.getContext('2d');
-  if (ctx && Applab.turtle.isPenDown) {
+  if (ctx) {
     ctx.beginPath();
     ctx.rect(opts.x, opts.y, opts.width, opts.height);
     ctx.fill();
