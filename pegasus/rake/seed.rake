@@ -4,7 +4,6 @@ require lib_dir 'cdo/data/logging/rake_task_event_logger'
 include TimedTaskWithLogging
 
 $gdrive_ = nil
-include TimedTaskWithLogging
 namespace :seed do
   def gdrive
     $gdrive_ ||= Google::Drive.new
