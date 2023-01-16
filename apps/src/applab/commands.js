@@ -390,7 +390,7 @@ applabCommands.arcRight = function(opts) {
         (Applab.turtle.heading + (opts.counterclockwise ? 0 : 180))) /
       360;
     var endAngle = startAngle + (2 * Math.PI * clockwiseDegrees) / 360;
-    if (!Applab.turtle.isPenDown) {
+    if (Applab.turtle.isPenDown) {
       ctx.beginPath();
       ctx.arc(
         centerX,
