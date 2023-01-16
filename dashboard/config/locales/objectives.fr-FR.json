@@ -135,34 +135,34 @@
           "description": "Créez une animation interactive en utilisant des sprites et des événements."
         },
         "1033b638-05a5-40c2-8e29-1efe1b5f3451": {
-          "description": "Définissez le terme « mot de passe » et décrivez le but d'un mot de passe."
+          "description": "Définir le terme « mot de passe » et décrire le but d'un mot de passe."
         },
         "c14cd5a0-312f-491c-aa00-73b82dd8e628": {
-          "description": "Entraînez-vous à créer un mot de passe fort et mémorisable."
+          "description": "S'entraîner à créer un mot de passe fort et mémorisable."
         },
         "2d16e09e-308f-4fe5-b53a-bfd2a50ec736": {
-          "description": "Recadrer une séquence d'étapes comme un programme codé"
+          "description": "Réorganiser une série d'étapes en un programme encodé"
         },
         "e2eb4dfd-1b5b-4a01-aceb-1b96c49cd254": {
-          "description": "Expliquer les contraintes de la traduction des problèmes, du langage humain au langage machine"
+          "description": "Expliquer les contraintes de traduire des problèmes du langage humain vers le langage machine"
         },
         "86d6703f-6086-48c6-820f-d9d972471655": {
-          "description": "Ordonne des commandes de mouvement à l'image d'étapes séquentielles dans un programme."
+          "description": "Ordonner des commandes de déplacement sous forme d'étapes séquentielles dans un programme."
         },
         "c141459a-a5b8-41ce-ada6-33b92afb0596": {
-          "description": "Décomposer une longue séquence d'instructions en la plus grande séquence reproductible."
+          "description": "Décomposer une longue séquence d'instructions en la plus grosse séquence répétable."
         },
         "f0a49033-5a23-4b2e-b570-69fd6d678f65": {
-          "description": "Modifier un programme existant pour résoudre des erreurs."
+          "description": "Modifier un programme existant pour résoudre les erreurs."
         },
         "15927fdc-d944-4de3-89ca-f238d8014f55": {
           "description": "Définir des idées en utilisant du code et des symboles."
         },
         "55ae003d-10f1-4364-ab38-3a3360491e38": {
-          "description": "Identifiez les signes d'énervement"
+          "description": "Identifier les signes de frustration"
         },
         "d5c5bdd3-6ca6-48b2-ae3b-5aaf0c8dbb70": {
-          "description": "Vérifier le travail effectué par les coéquipiers."
+          "description": "Vérifier le travail effectué par ses coéquipiers."
         },
         "0d2e39ca-970f-40e0-b26a-84bcecf9315d": {
           "description": "Décrire et mettre en œuvre un plan pour déboguer un programme."
@@ -552,22 +552,22 @@
           "description": "Traduire les mouvements en une série de commandes."
         },
         "1fd14cce-1e61-42c8-83d4-2252ec67f9e9": {
-          "description": "Réfléchir sur le processus de débogage d'une manière adaptée à l'âge."
+          "description": "Réfléchir au processus de débogage d'une manière adaptée à l'âge."
         },
         "3e5024e3-0c8e-436c-b532-42749d6a5cf0": {
-          "description": "Prédire où un programme échouera."
+          "description": "Prévoir où un programme va échouer. "
         },
         "d219187c-ecad-4854-ba3e-b136b4511fcc": {
-          "description": "Modifier un programme existant pour résoudre des erreurs."
+          "description": "Modifier un programme existant pour résoudre les erreurs."
         },
         "5c54f1b4-f582-4b2f-8db1-396336c44a7b": {
-          "description": "Représenter un algorithme en tant que programme informatique."
+          "description": "Représenter un algorithme sous forme de programme informatique."
         },
         "87bbc4aa-8c38-4428-8a5c-e6b86bc489f5": {
-          "description": "Ordonne des commandes de mouvement à l'image d'étapes séquentielles dans un programme."
+          "description": "Ordonner des commandes de déplacement sous forme d'étapes séquentielles dans un programme."
         },
         "ff07b623-686f-4193-91c9-c427b5d780ad": {
-          "description": "Développer les compétences de résolution de problèmes et de pensée critique en revoyant les pratiques de débogage."
+          "description": "Développer des compétences de résolution de problèmes et l'esprit critique en étudiant des pratiques de débogage."
         },
         "b06566c3-55fe-4cb6-9e55-f40814d47ad8": {
           "description": "Crée un programme pour compléter une image en utilisant des étapes séquentielles."
@@ -609,7 +609,7 @@
           "description": "Employer un mélange de commandes séquentielles et en boucle pour parvenir à la fin d'un labyrinthe."
         },
         "8a54dbc1-2cc5-4fbe-a69d-1fcdeb521415": {
-          "description": "Décomposer une longue séquence d'instructions en la plus grande séquence reproductible."
+          "description": "Décomposer une longue séquence d'instructions en la plus grosse séquence répétable."
         },
         "d1a8cfa4-2a01-4cd1-bf6b-7bdb85dfbba2": {
           "description": "Identifier les avantages de l'utilisation d'une structure de boucle au lieu de la répétition manuelle."
@@ -909,7 +909,7 @@
           "description": "Comprendre à quoi peut ressembler la méchanceté en ligne et ce qu'elle peut faire aux gens. "
         },
         "87841dc9-5cfa-4c68-9c56-9ca76b2668f8": {
-          "description": "Insister sur la précision, lors de la création d'instructions"
+          "description": "Soyez attentifs à la précision en créant des instructions"
         },
         "ce7a9596-845a-4d2f-b7ce-3e27b6faa99d": {
           "description": "Identifier et corriger les bugs ou les erreurs dans les instructions séquencées"
@@ -921,22 +921,22 @@
           "description": "Traduire les mouvements en une série de commandes."
         },
         "1f6fd95f-78cb-4839-8943-ef8bf1b589e9": {
-          "description": "Prédire où un programme échouera."
+          "description": "Prévoir où un programme va échouer. "
         },
         "b3dfe6ec-41ae-4e35-92b0-aa57386cbe5d": {
-          "description": "Modifier un programme existant pour résoudre des erreurs."
+          "description": "Modifier un programme existant pour résoudre les erreurs."
         },
         "feceda1c-bb8d-4811-9f23-0594de02a6ed": {
-          "description": "Réfléchir sur le processus de débogage d'une manière adaptée à l'âge."
+          "description": "Réfléchir au processus de débogage d'une manière adaptée à l'âge."
         },
         "10c02df1-0f34-4c22-beef-7607c0b55c9a": {
-          "description": "Représenter un algorithme en tant que programme informatique."
+          "description": "Représenter un algorithme sous forme de programme informatique."
         },
         "704602b1-99ad-45e8-ac96-eba9ad885da8": {
-          "description": "Ordonne des commandes de mouvement à l'image d'étapes séquentielles dans un programme."
+          "description": "Ordonner des commandes de déplacement sous forme d'étapes séquentielles dans un programme."
         },
         "a8bc7283-57bf-460e-8f1c-f4a26035ebfc": {
-          "description": "Développer les compétences de résolution de problèmes et de pensée critique en revoyant les pratiques de débogage."
+          "description": "Développer des compétences de résolution de problèmes et l'esprit critique en étudiant des pratiques de débogage."
         },
         "30aa1d4a-8e6e-4b27-8a1a-5c5ea80d6b3f": {
           "description": "Crée un programme pour compléter une image en utilisant des étapes séquentielles."
@@ -945,28 +945,28 @@
           "description": "Casse des formes complexes en parties simples."
         },
         "81c36d87-10e0-4f7e-91f2-88b6065ab543": {
-          "description": "Identifier les modèles, répétés dans le code, qui pourraient être remplacés par une boucle"
+          "description": "Identifier des motifs récurrents dans le code qui pourraient être remplacés par une boucle"
         },
         "d96017f7-e2b0-45e1-aa9f-12055fcee5fe": {
-          "description": "Écrire des instructions qui utilisent des boucles pour répéter des modèles"
+          "description": "Écrire des instructions qui utilisent des boucles pour répéter les motifs"
         },
         "00417e59-53f6-4f10-9e17-ae69f9e5db7b": {
           "description": "Employer un mélange de commandes séquentielles et en boucle pour parvenir à la fin d'un labyrinthe."
         },
         "b2de5b75-e224-4eee-aa3a-ab51792f3dea": {
-          "description": "Décomposer une longue séquence d'instructions en la plus grande séquence reproductible."
+          "description": "Décomposer une longue séquence d'instructions en la plus grosse séquence répétable."
         },
         "be258fd0-4790-440a-99ef-bb20ce2d3c8b": {
           "description": "Identifier les avantages de l'utilisation d'une structure de boucle au lieu de la répétition manuelle."
         },
         "2998b3d3-4953-4cbf-94f2-004630893e21": {
-          "description": "Utilisez une combinaison de commandes séquentielles et en boucle pour déplacer et effectuer des actions."
+          "description": "Utiliser un mélange de commandes séquentielles et mises en boucle pour se déplacer et effectuer des actions."
         },
         "35810652-e1be-48aa-923b-1148a5c1584e": {
           "description": "Identifier quand une boucle peut être utilisée pour simplifier une action répétitive."
         },
         "5b7b74bc-4f78-4c98-b221-5233324b086e": {
-          "description": "Écrire un programme pour une tâche donnée qui boucle une seule commande."
+          "description": "Écrire un programme pour une tâche donnée qui met en boucle une seule commande."
         },
         "cf1d581f-7554-4432-a92e-3e5f57f9144e": {
           "description": "Faire la différence entre les commandes qui doivent être répétées en boucles et les commandes qui doivent être utilisées seules."
@@ -996,31 +996,31 @@
           "description": "Identifier les actions qui aux événements d'entrée."
         },
         "7263be7c-5e96-4ce0-8f3a-04cd57918643": {
-          "description": "Créez un jeu animé et interactif à l'aide de séquences et de gestionnaires d'événements."
+          "description": "Créer un jeu animé et interactif à l'aide de séquences et de gestionnaires d'événements."
         },
         "93ff4ab3-b610-4f61-aa17-c5d1dc187ebf": {
-          "description": "Créez un graphique à barres et un camembert pour représenter des données simples."
+          "description": "Créer un histogramme et un camembert pour représenter des données simples."
         },
         "b1760cb7-8bc1-4f45-85a4-f8231785ab7e": {
-          "description": "Faites des comparaisons entre les visualisations de données faites par d'autres et utilisez-les pour faire une prévision. "
+          "description": "Faire des comparaisons entre les visualisations de données faites par d'autres et les utiliser pour faire une prévision. "
         },
         "e77eca08-1bf5-47df-a660-6c5ba38d4fec": {
           "description": "Recueillir et enregistrer des données sur des quantités d'objets réels ou de personnages sur un écran"
         },
         "2579c049-c0cd-4fcc-ac9f-bdd6c561ef52": {
-          "description": "Décoder du binaire en lettres."
+          "description": "Re-décoder du binaire en lettres."
         },
         "9a7d25e3-3f39-45fb-b14d-56c90df8e06a": {
-          "description": "Encoder des lettres en binaire."
+          "description": "Encoder des lettres en code binaire."
         },
         "bf86db48-ae33-49e8-a236-883b166a81bb": {
-          "description": "Établir un lien entre l'idée de stocker des lettres sur l'idée de stocker des informations dans un ordinateur."
+          "description": "Faire le lien entre l'idée de stocker des lettres sur papier et l'idée de stocker des informations sur un ordinateur."
         },
         "06e84ef1-68ef-4bce-adfe-fcd8c7e010c7": {
           "description": "Surmonter les obstacles tels que les contraintes de temps ou les bugs."
         },
         "5feb276e-2e95-4bd6-87b8-7bb9075d0d0a": {
-          "description": "Utiliser une conception planifiée en tant que plan de création."
+          "description": "Utiliser une conception planifiée comme plan de création."
         },
         "214e78cd-feb0-4235-a076-0fe81d14d95a": {
           "description": "Se former et tester un modèle d'apprentissage automatique."
@@ -1395,7 +1395,7 @@
           "description": "Identifier comment réagir aux paroles méchantes en ligne, en utilisant S-T-O-P. "
         },
         "0adaa1bc-6086-48ba-b99b-59ef1f4b0c69": {
-          "description": "Insister sur la précision, lors de la création d'instructions"
+          "description": "Soyez attentifs à la précision en créant des instructions"
         },
         "26392005-5f64-4707-b38b-847d1f009a29": {
           "description": "Identifier et corriger les bugs ou les erreurs dans les instructions séquencées"
@@ -1407,22 +1407,22 @@
           "description": "Identifier et localiser les bugs dans un programme."
         },
         "ce53a40d-db75-451a-a901-93f93226306a": {
-          "description": "Prédire où un programme échouera."
+          "description": "Prévoir où un programme va échouer. "
         },
         "3ad547f9-c577-4953-88d5-41f7ac1ab710": {
-          "description": "Modifier un programme existant pour résoudre des erreurs."
+          "description": "Modifier un programme existant pour résoudre les erreurs."
         },
         "367c7a8a-4dea-494f-87c7-77cba03711a1": {
-          "description": "Réfléchir sur le processus de débogage d'une manière adaptée à l'âge."
+          "description": "Réfléchir au processus de débogage d'une manière adaptée à l'âge."
         },
         "991aa440-0e71-40b0-8354-da04e3ad125b": {
-          "description": "Ordonne des commandes de mouvement à l'image d'étapes séquentielles dans un programme."
+          "description": "Ordonner des commandes de déplacement sous forme d'étapes séquentielles dans un programme."
         },
         "a48e07da-5c86-4377-8738-4a6a06633e1d": {
-          "description": "Représenter un algorithme en tant que programme informatique."
+          "description": "Représenter un algorithme sous forme de programme informatique."
         },
         "d50f34e0-2613-485c-9381-7b63832dbd0a": {
-          "description": "Développer les compétences de résolution de problèmes et de pensée critique en revoyant les pratiques de débogage."
+          "description": "Développer des compétences de résolution de problèmes et l'esprit critique en étudiant des pratiques de débogage."
         },
         "6503170b-db97-4737-ae5d-5108591497a0": {
           "description": "Crée un programme pour compléter une image en utilisant des étapes séquentielles."
@@ -1431,28 +1431,28 @@
           "description": "Casse des formes complexes en parties simples."
         },
         "ffef0ecc-334c-45c7-82af-3d63bbbe3e9f": {
-          "description": "Identifier les modèles, répétés dans le code, qui pourraient être remplacés par une boucle"
+          "description": "Identifier des motifs récurrents dans le code qui pourraient être remplacés par une boucle"
         },
         "bad7a754-67f5-40db-bd28-b191d6a5b4d8": {
-          "description": "Écrire des instructions qui utilisent des boucles pour répéter des modèles"
+          "description": "Écrire des instructions qui utilisent des boucles pour répéter les motifs"
         },
         "46288097-dbab-437f-897c-4e14352ae388": {
           "description": "Identifier les avantages de l'utilisation d'une structure de boucle au lieu de la répétition manuelle."
         },
         "dea9fd7a-8b64-4d36-90a4-1eee89ea355a": {
-          "description": "Décomposer une longue séquence d'instructions en la plus grande séquence reproductible."
+          "description": "Décomposer une longue séquence d'instructions en la plus grosse séquence répétable."
         },
         "8e76410f-b4db-446b-88c0-00013d9c05bd": {
           "description": "Employer un mélange de commandes séquentielles et en boucle pour parvenir à la fin d'un labyrinthe."
         },
         "ff15ce2c-8445-442a-89f0-7a50e741850a": {
-          "description": "Écrire un programme pour une tâche donnée qui boucle une seule commande."
+          "description": "Écrire un programme pour une tâche donnée qui met en boucle une seule commande."
         },
         "757d864e-38a3-4b30-8617-b9a4174c8b08": {
           "description": "Identifier quand une boucle peut être utilisée pour simplifier une action répétitive."
         },
         "94ed661c-bf8f-41fe-866d-86f09b4ef4ad": {
-          "description": "Utilisez une combinaison de commandes séquentielles et en boucle pour déplacer et effectuer des actions."
+          "description": "Utiliser un mélange de commandes séquentielles et mises en boucle pour se déplacer et effectuer des actions."
         },
         "bf154cd9-0914-43c2-b895-030de92d1427": {
           "description": "Identifier les avantages de l'utilisation d'une structure de boucle au lieu de la répétition manuelle."
@@ -1479,7 +1479,7 @@
           "description": "Partager un artefact créatif avec d'autres élèves."
         },
         "15e9cb30-5d79-4344-a82e-a98f6f29c397": {
-          "description": "Créez un jeu animé et interactif à l'aide de séquences et de gestionnaires d'événements."
+          "description": "Créer un jeu animé et interactif à l'aide de séquences et de gestionnaires d'événements."
         },
         "c0757733-5e14-4797-9615-11b61d8d490f": {
           "description": "Identifier les actions qui aux événements d'entrée."
@@ -1488,55 +1488,55 @@
           "description": "Recueillir et enregistrer des données sur des quantités d'objets réels ou de personnages sur un écran"
         },
         "f14af7c1-5797-4c9a-bafc-5dd0d630406b": {
-          "description": "Créez un graphique à barres et un camembert pour représenter des données simples."
+          "description": "Créer un histogramme et un camembert pour représenter des données simples."
         },
         "0ca67e69-bff3-4d30-96d3-3f53299353cc": {
-          "description": "Faites des comparaisons entre les visualisations de données faites par d'autres et utilisez-les pour faire une prévision. "
+          "description": "Faire des comparaisons entre les visualisations de données faites par d'autres et les utiliser pour faire une prévision. "
         },
         "9a785141-1fe6-4728-996c-2fbb8781b62c": {
-          "description": "Encoder des lettres en binaire."
+          "description": "Encoder des lettres en code binaire."
         },
         "e972d59a-b86f-49ec-91ef-39c5ea6d9353": {
-          "description": "Décoder du binaire en lettres."
+          "description": "Re-décoder du binaire en lettres."
         },
         "ce1f4117-76f3-4359-a554-683a878f82cb": {
-          "description": "Établir un lien entre l'idée de stocker des lettres sur l'idée de stocker des informations dans un ordinateur."
+          "description": "Faire le lien entre l'idée de stocker des lettres sur papier et l'idée de stocker des informations sur un ordinateur."
         },
         "03ac24d5-21f0-45e5-b15a-3354a578b67d": {
-          "description": "Utiliser une conception planifiée en tant que plan de création."
+          "description": "Utiliser une conception planifiée comme plan de création."
         },
         "a5834224-d1d8-47e2-b203-dc8e6935aa53": {
           "description": "Surmonter les obstacles tels que les contraintes de temps ou les bugs."
         },
         "e546a87d-131a-4d75-b2c6-d5942ee4a0c0": {
-          "description": "Définissez le terme « mot de passe » et décrivez le but d'un mot de passe."
+          "description": "Définir le terme « mot de passe » et décrire le but d'un mot de passe."
         },
         "ea9adc1d-dc64-4a08-a97f-19eec1e448e6": {
-          "description": "Entraînez-vous à créer un mot de passe fort et mémorisable."
+          "description": "S'entraîner à créer un mot de passe fort et mémorisable."
         },
         "3c4b51d5-b72f-42df-a55a-86c146214424": {
-          "description": "Recadrer une séquence d'étapes comme un programme codé"
+          "description": "Réorganiser une série d'étapes en un programme encodé"
         },
         "16d1e174-7b4d-4b5e-a7be-9d4399743d19": {
-          "description": "Expliquer les contraintes de la traduction des problèmes, du langage humain au langage machine"
+          "description": "Expliquer les contraintes de traduire des problèmes du langage humain vers le langage machine"
         },
         "69023643-6dd6-4d71-b31a-d2dff7952ea7": {
-          "description": "Ordonne des commandes de mouvement à l'image d'étapes séquentielles dans un programme."
+          "description": "Ordonner des commandes de déplacement sous forme d'étapes séquentielles dans un programme."
         },
         "ca5f69c3-0626-4e28-bfcf-f4ad872ab87a": {
-          "description": "Modifier un programme existant pour résoudre des erreurs."
+          "description": "Modifier un programme existant pour résoudre les erreurs."
         },
         "14389c2c-96ea-4be1-8347-46e7d19dd1ff": {
-          "description": "Décomposer une longue séquence d'instructions en la plus grande séquence reproductible."
+          "description": "Décomposer une longue séquence d'instructions en la plus grosse séquence répétable."
         },
         "8a0addda-b47f-4551-8c82-9115be3c130d": {
           "description": "Définir des idées en utilisant du code et des symboles."
         },
         "dfde2f15-333a-4ca0-942e-eb7642ea3239": {
-          "description": "Vérifier le travail effectué par les coéquipiers."
+          "description": "Vérifier le travail effectué par ses coéquipiers."
         },
         "8dba466d-d809-49c6-8f60-218c27964411": {
-          "description": "Identifiez les signes d'énervement"
+          "description": "Identifier les signes de frustration"
         },
         "2d84b5eb-70d6-4f6d-88c5-7838a4983a78": {
           "description": "Lire et comprendre un code donné."
@@ -1635,22 +1635,22 @@
           "description": "Identifier et localiser les bugs dans un programme."
         },
         "f0852e8e-a4ab-49a6-8fc4-0c805f14999a": {
-          "description": "Prédire où un programme échouera."
+          "description": "Prévoir où un programme va échouer. "
         },
         "857073db-dcda-4868-8be6-e0fba5f981d7": {
-          "description": "Modifier un programme existant pour résoudre des erreurs."
+          "description": "Modifier un programme existant pour résoudre les erreurs."
         },
         "600f66d5-9725-4f4d-bd15-ba25f428d5cd": {
-          "description": "Réfléchir sur le processus de débogage d'une manière adaptée à l'âge."
+          "description": "Réfléchir au processus de débogage d'une manière adaptée à l'âge."
         },
         "4d4f7faa-e380-483d-b873-b04e114e077e": {
-          "description": "Ordonne des commandes de mouvement à l'image d'étapes séquentielles dans un programme."
+          "description": "Ordonner des commandes de déplacement sous forme d'étapes séquentielles dans un programme."
         },
         "6a4a4515-9250-4ad0-b943-afef3d26df68": {
-          "description": "Représenter un algorithme en tant que programme informatique."
+          "description": "Représenter un algorithme sous forme de programme informatique."
         },
         "48b6e566-4a4b-424e-b104-33ce83bd2184": {
-          "description": "Développer les compétences de résolution de problèmes et de pensée critique en revoyant les pratiques de débogage."
+          "description": "Développer des compétences de résolution de problèmes et l'esprit critique en étudiant des pratiques de débogage."
         },
         "500825a3-b44f-4b99-ab77-2271fdcbb867": {
           "description": "Crée un programme pour compléter une image en utilisant des étapes séquentielles."
@@ -1692,7 +1692,7 @@
           "description": "Identifier les avantages de l'utilisation d'une structure de boucle au lieu de la répétition manuelle."
         },
         "d41cb934-ead6-42d0-a3c6-3a692fa53626": {
-          "description": "Décomposer une longue séquence d'instructions en la plus grande séquence reproductible."
+          "description": "Décomposer une longue séquence d'instructions en la plus grosse séquence répétable."
         },
         "19dc83bf-d44c-4e6b-a7ac-c11ada6cb656": {
           "description": "Employer un mélange de commandes séquentielles et en boucle pour parvenir à la fin d'un labyrinthe."

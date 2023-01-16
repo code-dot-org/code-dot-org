@@ -588,16 +588,16 @@
           "name": "Niveaux"
         },
         "e708101d-3a86-4ff0-85a9-f5ec782683fe": {
-          "name": "Échauffement : Pssst... Qu'est-ce qu'un mot de passe ?"
+          "name": "Échauffement : Pssst... C'est quoi un mot de passe ?"
         },
         "e285d097-bd01-4c40-a00c-068a9ace8e8d": {
-          "name": "Évaluer : Uh-Oh ! Si donc ..."
+          "name": "Évaluer : Houlà ! Si ... Alors ..."
         },
         "56a66744-0946-4350-9942-07e1ed1e0d85": {
-          "name": "Créez : un mot de passe puissant"
+          "name": "Créer : Un mot de passe puissant"
         },
         "f7bf636d-a952-4d38-9eea-a4c76532eb8e": {
-          "name": "Conclusion : Conseils, notes, mot de passe"
+          "name": "Conclusion : Notes sur les astuces de mot de passe"
         },
         "dd936731-be2e-45f8-ba99-0dff9935b299": {
           "name": "Aller plus loin"
@@ -718,6 +718,9 @@
         },
         "b287fad2-713e-44c7-9f5a-969089dbbd93": {
           "name": "Conclusion"
+        },
+        "91d98159-1f12-468b-acf3-5e44b885c44b": {
+          "name": "Échauffement "
         },
         "e019b34b-4c36-4f63-9059-e7cdc4b6d36f": {
           "name": "Activité principale"
@@ -3091,6 +3094,9 @@
         },
         "5c53e3df-2b36-46c8-9cce-d849e378f4e5": {
           "name": "Conclusion"
+        },
+        "7b73b3f1-50b0-43a0-b986-6ca761f73d6f": {
+          "name": "Échauffement "
         },
         "fb244265-6cd6-459d-bc88-e056d9902b8d": {
           "name": "Activité"
@@ -6885,16 +6891,16 @@
           "name": "Conclusion"
         },
         "aebca980-e26c-4993-b001-dc20e492f04e": {
-          "name": "Échauffement : Pssst... Qu'est-ce qu'un mot de passe ?"
+          "name": "Échauffement : Pssst... C'est quoi un mot de passe ?"
         },
         "139034de-1cee-48f9-abd8-40e8c15cd439": {
-          "name": "Évaluer : Uh-Oh ! Si donc ..."
+          "name": "Évaluer : Houlà ! Si ... Alors ..."
         },
         "a992b967-f8d7-474c-a1ad-81b9b7872fbd": {
-          "name": "Créez : un mot de passe puissant"
+          "name": "Créer : Un mot de passe puissant"
         },
         "735c6b82-9219-4ef5-9313-d386dc1c52b9": {
-          "name": "Conclusion : Conseils, notes, mot de passe"
+          "name": "Conclusion : Notes sur les astuces de mot de passe"
         },
         "e735098e-abab-465e-949c-a7e92e771b84": {
           "name": "Aller plus loin"
@@ -6910,6 +6916,9 @@
         },
         "67be50b8-f120-4f1d-ad22-06b84dba994c": {
           "name": "Conclusion"
+        },
+        "4d3409a1-dc66-4033-87ad-1484af8ab342": {
+          "name": "Évaluation facultative"
         },
         "c401b0f4-97af-418d-b58b-a58493c7570c": {
           "name": "Aller plus loin"
@@ -7012,6 +7021,9 @@
         },
         "cfe48524-90b5-4f5a-89d7-58f662bfc5be": {
           "name": "Conclusion"
+        },
+        "69460e12-7295-400a-8fc1-135a17d25118": {
+          "name": "Échauffement "
         },
         "e63db04a-81d6-4b49-80b5-4afab4df2a05": {
           "name": "Activité principale"
@@ -8170,6 +8182,9 @@
         },
         "c4a019fc-d25b-486f-adec-c33a5b86ba5d": {
           "name": "Conclusion"
+        },
+        "1c6474e1-f1d7-4d13-94a0-2657589894ae": {
+          "name": "Échauffement "
         },
         "cdcd4d00-c6df-40db-a0c7-37064a6fcf40": {
           "name": "Activité"

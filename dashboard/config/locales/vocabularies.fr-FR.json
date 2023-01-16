@@ -320,7 +320,7 @@
         },
         "frustrated/coursed/2022": {
           "word": "Frustré",
-          "definition": "Te sentir agacé ou en colère parce que quelque chose n'est pas comme tu le veux."
+          "definition": "Se sentir énervé ou en colère parce qu'une chose n'est pas comme on veut qu'elle le soit."
         },
         "persistence/coursed/2022": {
           "word": "Persévérance",
@@ -356,6 +356,10 @@
         "while_loop/coursed/2022": {
           "word": "Boucle Tant Que",
           "definition": "Une boucle continue de répéter tant qu'une condition est vraie."
+        },
+        "until/coursed/2022": {
+          "word": "Jusqu'à",
+          "definition": "Une commande qui indique de faire quelque chose uniquement jusqu'à ce qu'une chose devienne vraie."
         },
         "sprite/coursef/2022": {
           "word": "Sprite",
@@ -616,6 +620,10 @@
           "word": "Boucle Tant Que",
           "definition": "Une boucle continue de répéter tant qu'une condition est vraie."
         },
+        "until/express/2022": {
+          "word": "Jusqu'à",
+          "definition": "Une commande qui indique de faire quelque chose uniquement jusqu'à ce qu'une chose devienne vraie."
+        },
         "function/express/2022": {
           "word": "Fonction",
           "definition": "Un morceau de code que tu peux facilement appeler encore et encore."
@@ -791,7 +799,7 @@
         },
         "binary/coursec/2022": {
           "word": "Binaire",
-          "definition": "Une façon de représenter l'information n'utilisant que deux options."
+          "definition": "Une manière de représenter l'information qui n'utilise que deux options."
         },
         "input/csd/2022": {
           "word": "Entrée"
@@ -1122,7 +1130,7 @@
         },
         "binary/coursec/2021": {
           "word": "Binaire",
-          "definition": "Une façon de représenter l'information n'utilisant que deux options."
+          "definition": "Une manière de représenter l'information qui n'utilise que deux options."
         },
         "algorithm/coursed/2021": {
           "word": "Algorithme",
@@ -1150,7 +1158,7 @@
         },
         "frustrated/coursed/2021": {
           "word": "Frustré",
-          "definition": "Te sentir agacé ou en colère parce que quelque chose n'est pas comme tu le veux."
+          "definition": "Se sentir énervé ou en colère parce qu'une chose n'est pas comme on veut qu'elle le soit."
         },
         "persistence/coursed/2021": {
           "word": "Persévérance",
@@ -1186,6 +1194,10 @@
         "while_loop/coursed/2021": {
           "word": "Boucle Tant Que",
           "definition": "Une boucle continue de répéter tant qu'une condition est vraie."
+        },
+        "until/coursed/2021": {
+          "word": "Jusqu'à",
+          "definition": "Une commande qui indique de faire quelque chose uniquement jusqu'à ce qu'une chose devienne vraie."
         },
         "algorithm/express/2021": {
           "word": "Algorithme",
@@ -1249,6 +1261,10 @@
         "while_loop/express/2021": {
           "word": "Boucle Tant Que",
           "definition": "Une boucle continue de répéter tant qu'une condition est vraie."
+        },
+        "until/express/2021": {
+          "word": "Jusqu'à",
+          "definition": "Une commande qui indique de faire quelque chose uniquement jusqu'à ce qu'une chose devienne vraie."
         },
         "function/express/2021": {
           "word": "Fonction",
