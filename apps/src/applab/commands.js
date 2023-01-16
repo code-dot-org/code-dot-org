@@ -439,11 +439,11 @@ applabCommands.dot = function(opts) {
   var ctx = applabTurtle.getTurtleContext();
   var isPenDown = Applab.turtle.isPenDown;
   if (ctx && opts.radius > 0) {
-    ctx.beginPath();
     if (!isPenDown) {
       // If Applab.turtle pen is up, temporarily set Applab.turtle pen down to draw dot
       Applab.turtle.isPenDown = true;
     }
+    ctx.beginPath();
     var savedLineWidth = ctx.lineWidth;
     ctx.lineWidth = 1;
     ctx.arc(Applab.turtle.x, Applab.turtle.y, opts.radius, 0, 2 * Math.PI);
