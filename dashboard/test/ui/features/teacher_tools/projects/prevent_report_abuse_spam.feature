@@ -71,7 +71,8 @@ Scenario: Abuse reports block a project for other viewers
   And I save the share URL
   Then I sign out
 
-  Given I create a student named "Spammer"
+  Given I create a teacher named "Spammer"
+  And I give user "Spammer" authorized teacher permission
   And I navigate to the last shared URL
   Then I open the small footer menu
   And element ".ui-test-report-abuse" is visible
@@ -80,7 +81,7 @@ Scenario: Abuse reports block a project for other viewers
   Then I close the current tab
   Then I sign out
 
-  Given I create a student named "Spammer2"
+  Given I create a teacher named "Spammer2"
   And I delete the cookie named "reported_abuse"
   And I navigate to the last shared URL
   Then I open the small footer menu
