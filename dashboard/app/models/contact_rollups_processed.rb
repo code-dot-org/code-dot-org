@@ -16,7 +16,8 @@
 class ContactRollupsProcessed < ApplicationRecord
   self.table_name = 'contact_rollups_processed'
 
-  DEFAULT_BATCH_SIZE = 10000
+  DEFAULT_BATCH_SIZE = 10000 # MEG: Adjust batch size (for write)
+  # MEG: Also adjust read sizes (use PR for how to batch reads)
 
   # These JSON object keys are used to compile data from a contact_rollups_raw record
   # into a JSON object. They are shorten to single characters to reduce the size of
