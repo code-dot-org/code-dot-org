@@ -665,8 +665,8 @@ describe('entry tests', () => {
       './src/sites/studio/pages/teacher_dashboard/parent_letter.js',
     'teacher_feedbacks/index':
       './src/sites/studio/pages/teacher_feedbacks/index.js',
-    'vocabularies/edit': './src/sites/studio/pages/vocabularies/edit.js',
-    'weblab_host/test': './src/sites/studio/pages/weblab_host/test.js'
+    'test_pages/weblab': './src/sites/studio/pages/test_pages/weblab.js',
+    'vocabularies/edit': './src/sites/studio/pages/vocabularies/edit.js'
   };
 
   var internalEntries = {
@@ -888,7 +888,7 @@ describe('entry tests', () => {
     var minify = options.minify;
     var watch = options.watch;
 
-    return webpackConfig.create({
+    const config = webpackConfig.create({
       outputDir: path.resolve(__dirname, OUTPUT_DIR),
       entries: _.mapValues(
         _.extend(
@@ -1140,6 +1140,19 @@ describe('entry tests', () => {
       watchNotify: grunt.option('watch-notify'),
       piskelDevMode: PISKEL_DEVELOPMENT_MODE
     });
+
+    console.log(
+      '****webpack entries: ',
+      Object.keys(config.entry).forEach(key => {
+        const containsWeblab = key.includes('weblab');
+        if (containsWeblab) {
+          console.log('entry: ', key);
+          console.log('in full: ', config.entry[key]);
+        }
+        return containsWeblab;
+      })
+    );
+    return config;
   }
 
   config.webpack = {
