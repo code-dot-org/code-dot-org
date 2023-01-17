@@ -310,7 +310,7 @@ class Pd::Enrollment < ApplicationRecord
     application_id = nil
     # Finds application from the school year of the workshop. Assumes workshops start after 6/1
     # because workshop.school_year assumes 6/1 is the start of the school year
-    Pd::Application::ApplicationBase.where(user_id: user_id, application_year: workshop&.school_year).each do |application|
+    Pd::Application::TeacherApplication.where(user_id: user_id, application_year: workshop&.school_year).each do |application|
       application_id = application.id if course_match.call(application) || pd_match.call(application)
       break if application_id
     end
@@ -319,7 +319,7 @@ class Pd::Enrollment < ApplicationRecord
 
   def application
     return nil unless application_id
-    Pd::Application::ApplicationBase.find_by(id: application_id)
+    Pd::Application::TeacherApplication.find_by(id: application_id)
   end
 
   # Removes the name and email information stored within this Pd::Enrollment.
