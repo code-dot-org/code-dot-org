@@ -1048,6 +1048,20 @@
                     }
                   }
                 },
+                "buzzer.playNotes": {
+                  "palette_params": {
+                    "tempo": {
+                      "type": "Nummer"
+                    }
+                  }
+                },
+                "buzzer.playSong": {
+                  "palette_params": {
+                    "tempo": {
+                      "type": "Nummer"
+                    }
+                  }
+                },
                 "toggleSwitch.isOpen": {
                   "return_value": "Boolean"
                 }
