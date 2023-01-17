@@ -1067,6 +1067,20 @@
                     }
                   }
                 },
+                "buzzer.playNotes": {
+                  "palette_params": {
+                    "tempo": {
+                      "type": "Szám"
+                    }
+                  }
+                },
+                "buzzer.playSong": {
+                  "palette_params": {
+                    "tempo": {
+                      "type": "Szám"
+                    }
+                  }
+                },
                 "toggleSwitch.isOpen": {
                   "return_value": "Logikai"
                 }
