@@ -77,7 +77,6 @@
   "didntMoveRight": "Dein Sprite hat sich nicht richtig bewegt.",
   "didntMoveUp": "Dein Sprite hat sich nicht nach oben bewegt.",
   "didntPressKey": "Achte darauf, dass du nach dem Drücken von \"Ausführen\" eine Pfeiltaste drückst. Du kannst auf die orangefarbenen Schaltflächen unter dem Spielbereich klicken oder die Tasten auf deiner Tastatur drücken.",
-  "errorLoadingAnimation": "Es scheint als gäb es ein Problem deine Animation \"{animationName}\" zu laden. Stelle sicher, dass du eine gute Internetverbindung hast und versuche die Seite erneut zu laden. Wenn das Problem bestehen bleibt, dann ist deine Animation vermutlich unbrauchbar. In diesem Fall müsstest du die Animation entfernen und ohne weiter machen.",
   "eventsOneChange": "Dein Sprite hat sich verändert, aber nur einmal. Teste dein Programm, indem du die Taste ein paar Mal drückst, und achte darauf, dass du den richtigen Block verwendest. <xml><block type=\"gamelab_changePropBy\"><title name=\"PROPERTY\">\"Größe verändern\"</title><value name=\"SPRITE\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"creature_10_1\"</title></block></value><value name=\"VAL\"><block type=\"math_number\"><title name=\"NUM\">10</title></block></block></xml>",
   "eventsWrongBehaviors": "Dein Sprite sollte genau 3 Verhaltensweisen haben. Versuche, den `stoppt alles` Block an eine andere Stelle in deinem Code zu verschieben.",
   "foodNotTouchPet": "Ziehe dein Futter-Sprite so, dass es dein Haustier-Sprite berührt.",
