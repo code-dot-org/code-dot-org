@@ -31,7 +31,6 @@ import i18n from '@cdo/applab/locale';
 var XHR_PROXY_PATH = '//' + location.host + '/xhr';
 
 import {ICON_PREFIX_REGEX} from './constants';
-import Applab from './applab';
 
 var applabCommands = {};
 export default applabCommands;
