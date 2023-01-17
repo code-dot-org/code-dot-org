@@ -765,6 +765,25 @@ class Unit < ApplicationRecord
       first
   end
 
+  # @param family_name [String] The family name for a unit family.
+  # @param user [User]
+  # @return [Unit|nil] Returns the latest unit version in a family that the user has progress in.
+  def self.latest_version_with_progress(family_name, user)
+    return nil unless family_name && user
+
+    family_unit_versions = Unit.where(family_name: family_name).
+        sort_by(&:version_year).
+        freeze
+    family_unit_names = family_unit_versions.map(&:name)
+    progress = UserScript.lookup_hash(user, family_unit_names)
+
+    latest_version_with_progress = nil
+    family_unit_versions.each do |version|
+      latest_version_with_progress = version if progress[version.name]
+    end
+    latest_version_with_progress
+  end
+
   def text_response_levels
     return @text_response_levels if Unit.should_cache? && @text_response_levels
     @text_response_levels = text_response_levels_without_cache
