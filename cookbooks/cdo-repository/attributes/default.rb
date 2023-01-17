@@ -5,8 +5,5 @@ default['cdo-repository'] = {
   # Sync to the default branch based on the environment.
   branch: adhoc ? 'staging' : node.chef_environment,
   # Shallow clone.
-  depth: 1,
-  # TODO DELETE THIS
-  # for testing only: force sync, since that's the codepath that's breaking
-  sync: true
+  depth: 1
 }
