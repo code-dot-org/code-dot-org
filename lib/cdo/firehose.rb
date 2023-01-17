@@ -6,6 +6,12 @@ require 'active_support/core_ext/module/attribute_accessors'
 # A wrapper client to the AWS Firehose service.
 class FirehoseClient
   include Singleton
+  # used by some tasks in test env
+  # See: https://stackoverflow.com/questions/5259398/how-can-i-mix-in-singleton-to-create-a-class-that-accepts-initialization-paramet
+  @@force_client = false
+  def self.force_client=(force_client)
+    @@force_client = force_client
+  end
 
   # :analysis
   # Used for recording events to later be analyzed by the product team.
@@ -109,7 +115,7 @@ class FirehoseClient
 
   def initialize
     self.log ||= CDO.log
-    unless [:development, :test].include? rack_env
+    if @@force_client || ![:development, :test].include?(rack_env)
       self.client = Aws::Firehose::Client.new
     end
     @buffers = Hash.new {|h, stream_name| h[stream_name] = Buffer.new(stream_name: stream_name)}
