@@ -204,11 +204,13 @@ a:visited,
   }
 
   // Phase 1 of Code.org Redesign - Colors
-  &.brand-secondary-default {
+  &.brandSecondaryDefault {
     color: $neutral_white;
     background-color: $brand_secondary_default;
     border-color: $brand_secondary_default;
     border-radius: 4px;
+    border-width: 2px;
+    line-height: 30px;
 
     &:hover {
       box-shadow: none;
@@ -228,11 +230,12 @@ a:visited,
     }
   }
 
-  &.neutral-dark {
+  &.neutralDark {
     color: $neutral_dark;
     background-color: $neutral_white;
     border: 2px solid $neutral_dark;
     border-radius: 4px;
+    line-height: 30px;
 
     &:hover {
       background-color: $neutral_dark10;
@@ -250,8 +253,8 @@ a:visited,
     }
   }
 
-  &.neutral-dark,
-  &.brand-secondary-default {
+  &.neutralDark,
+  &.brandSecondaryDefault {
     &.default {
       padding-left: 16px;
       padding-right: 16px;
@@ -298,6 +301,10 @@ a:visited,
   // Must be below sizes, since we want it to have precedence for line-height.
   &.updated {
     line-height: 12px;
+  }
+
+  &.phase1Updated {
+    line-height: 30px;
   }
 
   &.textButton {

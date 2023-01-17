@@ -200,6 +200,7 @@ p {
         background-color: $brand_secondary_default;
         border: 2px solid $brand_secondary_default;
         color: $neutral_white;
+        line-height: unset;
 
         &:hover {
           background-color: $brand_secondary_dark;
@@ -226,6 +227,7 @@ p {
         background-color: $neutral_white;
         border: 2px solid $neutral_dark;
         border-radius: 4px;
+        line-height: unset;
 
         &:hover {
           background-color: $neutral_dark10;
@@ -258,6 +260,7 @@ p {
       border-radius: 4px;
       color: $neutral_white;
       box-shadow: none;
+      line-height: 30px;
 
       &:hover {
         background-color: $brand_primary_dark;
