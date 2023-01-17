@@ -37,6 +37,7 @@ class Pd::Enrollment < ApplicationRecord
   include Pd::WorkshopSurveyConstants
   include SerializedProperties
   include Pd::Application::ActiveApplicationModels
+  include Pd::Application::ApplicationConstants
   include Pd::WorkshopSurveyFoormConstants
 
   acts_as_paranoid # Use deleted_at column instead of deleting rows.
@@ -304,7 +305,7 @@ class Pd::Enrollment < ApplicationRecord
   # workshop id
   # @return [Integer, nil] application id or nil if cannot find any application
   def set_application_id
-    course_match = ->(application) {Pd::Application::ApplicationBase::COURSE_NAME_MAP[application.try(:course)&.to_sym] == workshop.try(:course)}
+    course_match = ->(application) {COURSE_NAME_MAP[application.try(:course)&.to_sym] == workshop.try(:course)}
     pd_match = ->(application) {application.try(:pd_workshop_id) == pd_workshop_id}
 
     application_id = nil
