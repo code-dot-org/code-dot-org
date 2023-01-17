@@ -2,6 +2,9 @@ import React, {Component} from 'react';
 import {Status} from '../../../src/lib/ui/ValidationStep';
 import testImageAccess from '../../code-studio/url_test';
 
+// import WebLab from '@cdo/apps/weblab/WebLab';
+// import {singleton as studioApp} from '@cdo/apps/StudioApp';
+
 const STATUS_CODE_PROJECTS = 'statusCodeProjects';
 const STATUS_COMPUTING_IN_THE_CORE = 'statusComputingInTheCore';
 const STATUS_IFRAME = 'statusIframe';
@@ -16,6 +19,24 @@ const imageAccessTests = [
     status: STATUS_COMPUTING_IN_THE_CORE
   }
 ];
+
+if (window.addEventListener) {
+  window.addEventListener('message', window.handleIFrameMessage, false);
+} else if (window.attachEvent) {
+  window.attachEvent('onmessage', window.handleIFrameMessage);
+}
+
+window.handleIFrameMessage = event => {
+  console.log('i got an event! ', event);
+};
+
+// let webLabInstance = new WebLab();
+// webLabInstance.studioApp_ = studioApp();
+// webLabInstance.init({
+//   skin: {},
+//   level: {},
+//   containerId: 'container-id'
+// });
 
 class WebLabTest extends Component {
   constructor(props) {
@@ -111,8 +132,6 @@ class WebLabTest extends Component {
   };
 
   render() {
-    const useLocal = true;
-    console.log('useLocal: ', useLocal);
     return (
       <div id="main-content" className="container">
         <div className="row">
@@ -189,8 +208,10 @@ class WebLabTest extends Component {
               {this.state.renderCallToAction && this.renderCallToAction()}
               <br />
               <iframe
-                className="test-weblab-host"
-                src={'http://localhost-studio.code.org:3000/weblab/host'}
+                className="weblab-host"
+                // Here we just want to check that WebLab reaches a MOUNTABLE state,
+                // i.e. we want a "blank" load and will not provide a project or file paths
+                src="/weblab/host?blank_load=true"
                 frameBorder="0"
                 scrolling="no"
                 style={{
