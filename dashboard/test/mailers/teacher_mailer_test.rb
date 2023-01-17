@@ -8,7 +8,7 @@ class TeacherMailerTest < ActionMailer::TestCase
 
     assert_equal I18n.t('teacher_mailer.new_teacher_subject', locale: 'en-US'), mail.subject
     assert_equal [teacher.email], mail.to
-    assert_equal ['support@code.org'], mail.from
+    assert_equal ['hadi_partovi@code.org'], mail.from
     assert_match /Hello/, mail.body.encoded
     assert links_are_complete_urls?(mail)
   end

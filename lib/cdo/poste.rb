@@ -532,7 +532,7 @@ module Poste2
       pd@code.org
       noreply@code.org
       teacher@code.org
-      support@code.org
+      hadi_partovi@code.org
       survey@code.org
       facilitators@code.org
       volunteers@code.org
