@@ -7,7 +7,16 @@
           "description": "Editor web de HTML/CSS",
           "categories": {
             "html_tags": {
-              "name": "Etiquetas HTML"
+              "name": "Etiquetas HTML",
+              "expressions": {
+                "comment": {
+                  "examples": {
+                    "": {
+                      "description": "Usando comentarios como recordatorios3"
+                    }
+                  }
+                }
+              }
             },
             "css_properties": {
               "name": "Propiedad CSS"
@@ -1094,20 +1103,24 @@
                       "type": "objeto"
                     },
                     "x": {
-                      "type": "número"
+                      "type": "número",
+                      "description": "La posición x en píxeles a partir de la esquina superior izquierda de la imagen para colocar los datos en el lienzo."
                     },
                     "y": {
-                      "type": "número"
+                      "type": "número",
+                      "description": "La posición `y` en píxeles a partir de la esquina superior izquierda de la imagen para colocar los datos en el lienzo."
                     }
                   }
                 },
                 "rect": {
                   "palette_params": {
                     "x": {
-                      "type": "número"
+                      "type": "número",
+                      "description": "La posición `x` en píxeles de la esquina superior izquierda del rectángulo."
                     },
                     "y": {
-                      "type": "número"
+                      "type": "número",
+                      "description": "La posición `y` en píxeles de la esquina superior izquierda del rectángulo."
                     },
                     "width": {
                       "type": "número",
@@ -1133,9 +1146,11 @@
                       "description": "La posición `y` en píxeles a partir de la esquina superior izquierda de la imagen."
                     },
                     "alphaValue": {
-                      "type": "número"
+                      "type": "número",
+                      "description": "La cantidad de alfa (opacidad) (de 0 a 255) a definir en el píxel."
                     }
-                  }
+                  },
+                  "short_description": "Configura la cantidad de alfa (opacidad) (entre 0 y 255) en el color del píxel situado en la posición `x` e `y` indicada en los datos de la imagen."
                 },
                 "setBlue": {
                   "palette_params": {
@@ -1151,9 +1166,11 @@
                       "description": "La posición `y` en píxeles a partir de la esquina superior izquierda de la imagen."
                     },
                     "blueValue": {
-                      "type": "número"
+                      "type": "número",
+                      "description": "La cantidad de azul (de 0 a 255) para configurar en el píxel."
                     }
-                  }
+                  },
+                  "short_description": "Configura la cantidad de azul (de 0 a 255) en el color del píxel situado en la posición `x` e `y` de los datos de la imagen, según el valor introducido en valorAzul."
                 },
                 "setFillColor": {
                   "palette_params": {
@@ -1201,7 +1218,8 @@
                       "type": "número"
                     },
                     "blue": {
-                      "type": "número"
+                      "type": "número",
+                      "description": "La cantidad de azul (de 0 a 255) para configurar en el píxel."
                     },
                     "alpha": {
                       "type": "número",
@@ -1471,7 +1489,8 @@
                     "width": {
                       "type": "número"
                     }
-                  }
+                  },
+                  "short_description": "Configura el ancho de la línea en píxeles que la tortuga dibuja detrás de ella cuando se mueve."
                 },
                 "show": {
                   "short_description": "Hace visible a la tortuga en su ubicación actual."
@@ -1791,6 +1810,20 @@
                   }
                 },
                 "buzzer.play": {
+                  "palette_params": {
+                    "tempo": {
+                      "type": "Número"
+                    }
+                  }
+                },
+                "buzzer.playNotes": {
+                  "palette_params": {
+                    "tempo": {
+                      "type": "Número"
+                    }
+                  }
+                },
+                "buzzer.playSong": {
                   "palette_params": {
                     "tempo": {
                       "type": "Número"
