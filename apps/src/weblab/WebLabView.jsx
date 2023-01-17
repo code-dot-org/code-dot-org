@@ -12,6 +12,16 @@ import ProjectTemplateWorkspaceIcon from '../templates/ProjectTemplateWorkspaceI
 import styleConstants from '../styleConstants';
 import Meter from '@cdo/apps/templates/Meter';
 
+let webLab_ = null;
+
+/**
+ * Returns the global singleton. For use by Bramble host to get the Web Lab interface.
+ * Set on the window object so that Bramble host can get to it from inside its iframe.
+ */
+window.getWebLab = function() {
+  return webLab_;
+};
+
 // Helper for converting bytes to megabytes.
 const bytesToMegabytes = bytes => {
   return bytes * 0.000000954;
