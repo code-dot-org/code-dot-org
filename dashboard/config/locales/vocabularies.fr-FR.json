@@ -153,7 +153,7 @@
           "definition": "Quelque chose qu'un programme vérifie pour voir si c'est vrai avant d'autoriser une action."
         },
         "conditionals/aquatic/unversioned": {
-          "word": "Formules conditionnelles",
+          "word": "Instructions conditionnelles",
           "definition": "Déclarations qui s'exécutent que sous certaines conditions."
         },
         "debugging/aquatic/unversioned": {
@@ -320,7 +320,7 @@
         },
         "frustrated/coursed/2022": {
           "word": "Frustré",
-          "definition": "Te sentir agacé ou en colère parce que quelque chose n'est pas comme tu le veux."
+          "definition": "Se sentir énervé ou en colère parce qu'une chose n'est pas comme on veut qu'elle le soit."
         },
         "persistence/coursed/2022": {
           "word": "Persévérance",
@@ -339,10 +339,10 @@
         },
         "command/coursed/2022": {
           "word": "Commande",
-          "definition": "Une instruction pour l'ordinateur. De nombreuses commandes assemblées composent des algorithmes et des programmes informatiques."
+          "definition": "Une instruction pour l'ordinateur. Lorsque de nombreuses commandes sont rassemblées, cela forme des algorithmes et des programmes informatiques."
         },
         "conditionals/coursed/2022": {
-          "word": "Formules conditionnelles",
+          "word": "Instructions conditionnelles",
           "definition": "Déclarations qui s'exécutent que sous certaines conditions."
         },
         "pseudocode/coursed/2022": {
@@ -355,7 +355,11 @@
         },
         "while_loop/coursed/2022": {
           "word": "Boucle Tant Que",
-          "definition": "Une boucle continue de répéter tant qu'une condition est vraie."
+          "definition": "Une boucle qui continue de se répéter tant qu'une condition est vraie."
+        },
+        "until/coursed/2022": {
+          "word": "Jusqu'à",
+          "definition": "Une commande qui indique de faire quelque chose uniquement jusqu'à ce qu'une chose devienne vraie."
         },
         "sprite/coursef/2022": {
           "word": "Sprite",
@@ -475,12 +479,12 @@
           "word": "Condition"
         },
         "conditionals/coursee/2022": {
-          "word": "Formules conditionnelles",
+          "word": "Instructions conditionnelles",
           "definition": "Déclarations qui s'exécutent que sous certaines conditions."
         },
         "while_loop/coursee/2022": {
           "word": "Boucle Tant Que",
-          "definition": "Une boucle continue de répéter tant qu'une condition est vraie."
+          "definition": "Une boucle qui continue de se répéter tant qu'une condition est vraie."
         },
         "copyright/coursee/2022": {
           "word": "Copyright"
@@ -602,19 +606,23 @@
         },
         "command/express/2022": {
           "word": "Commande",
-          "definition": "Une instruction pour l'ordinateur. De nombreuses commandes assemblées composent des algorithmes et des programmes informatiques."
+          "definition": "Une instruction pour l'ordinateur. Lorsque de nombreuses commandes sont rassemblées, cela forme des algorithmes et des programmes informatiques."
         },
         "condition/express/2022": {
           "word": "Condition",
           "definition": "Quelque chose qu'un programme vérifie pour voir si c'est vrai avant d'autoriser une action."
         },
         "conditionals/express/2022": {
-          "word": "Formules conditionnelles",
+          "word": "Instructions conditionnelles",
           "definition": "Déclarations qui s'exécutent que sous certaines conditions."
         },
         "while_loop/express/2022": {
           "word": "Boucle Tant Que",
-          "definition": "Une boucle continue de répéter tant qu'une condition est vraie."
+          "definition": "Une boucle qui continue de se répéter tant qu'une condition est vraie."
+        },
+        "until/express/2022": {
+          "word": "Jusqu'à",
+          "definition": "Une commande qui indique de faire quelque chose uniquement jusqu'à ce qu'une chose devienne vraie."
         },
         "function/express/2022": {
           "word": "Fonction",
@@ -791,7 +799,7 @@
         },
         "binary/coursec/2022": {
           "word": "Binaire",
-          "definition": "Une façon de représenter l'information n'utilisant que deux options."
+          "definition": "Une manière de représenter l'information qui n'utilise que deux options."
         },
         "input/csd/2022": {
           "word": "Entrée"
@@ -822,7 +830,7 @@
           "word": "Condition"
         },
         "conditionals/csd/2022": {
-          "word": "Formules conditionnelles"
+          "word": "Instructions conditionnelles"
         },
         "abstraction/csd/2022": {
           "word": "Abstraction"
@@ -1122,7 +1130,7 @@
         },
         "binary/coursec/2021": {
           "word": "Binaire",
-          "definition": "Une façon de représenter l'information n'utilisant que deux options."
+          "definition": "Une manière de représenter l'information qui n'utilise que deux options."
         },
         "algorithm/coursed/2021": {
           "word": "Algorithme",
@@ -1150,7 +1158,7 @@
         },
         "frustrated/coursed/2021": {
           "word": "Frustré",
-          "definition": "Te sentir agacé ou en colère parce que quelque chose n'est pas comme tu le veux."
+          "definition": "Se sentir énervé ou en colère parce qu'une chose n'est pas comme on veut qu'elle le soit."
         },
         "persistence/coursed/2021": {
           "word": "Persévérance",
@@ -1169,10 +1177,10 @@
         },
         "command/coursed/2021": {
           "word": "Commande",
-          "definition": "Une instruction pour l'ordinateur. De nombreuses commandes assemblées composent des algorithmes et des programmes informatiques."
+          "definition": "Une instruction pour l'ordinateur. Lorsque de nombreuses commandes sont rassemblées, cela forme des algorithmes et des programmes informatiques."
         },
         "conditionals/coursed/2021": {
-          "word": "Formules conditionnelles",
+          "word": "Instructions conditionnelles",
           "definition": "Déclarations qui s'exécutent que sous certaines conditions."
         },
         "pseudocode/coursed/2021": {
@@ -1185,7 +1193,11 @@
         },
         "while_loop/coursed/2021": {
           "word": "Boucle Tant Que",
-          "definition": "Une boucle continue de répéter tant qu'une condition est vraie."
+          "definition": "Une boucle qui continue de se répéter tant qu'une condition est vraie."
+        },
+        "until/coursed/2021": {
+          "word": "Jusqu'à",
+          "definition": "Une commande qui indique de faire quelque chose uniquement jusqu'à ce qu'une chose devienne vraie."
         },
         "algorithm/express/2021": {
           "word": "Algorithme",
@@ -1236,19 +1248,23 @@
         },
         "command/express/2021": {
           "word": "Commande",
-          "definition": "Une instruction pour l'ordinateur. De nombreuses commandes assemblées composent des algorithmes et des programmes informatiques."
+          "definition": "Une instruction pour l'ordinateur. Lorsque de nombreuses commandes sont rassemblées, cela forme des algorithmes et des programmes informatiques."
         },
         "condition/express/2021": {
           "word": "Condition",
           "definition": "Quelque chose qu'un programme vérifie pour voir si c'est vrai avant d'autoriser une action."
         },
         "conditionals/express/2021": {
-          "word": "Formules conditionnelles",
+          "word": "Instructions conditionnelles",
           "definition": "Déclarations qui s'exécutent que sous certaines conditions."
         },
         "while_loop/express/2021": {
           "word": "Boucle Tant Que",
-          "definition": "Une boucle continue de répéter tant qu'une condition est vraie."
+          "definition": "Une boucle qui continue de se répéter tant qu'une condition est vraie."
+        },
+        "until/express/2021": {
+          "word": "Jusqu'à",
+          "definition": "Une commande qui indique de faire quelque chose uniquement jusqu'à ce qu'une chose devienne vraie."
         },
         "function/express/2021": {
           "word": "Fonction",
@@ -1365,12 +1381,12 @@
           "definition": "Quelque chose qu'un programme vérifie pour voir si c'est vrai avant d'autoriser une action."
         },
         "conditionals/coursee/2021": {
-          "word": "Formules conditionnelles",
+          "word": "Instructions conditionnelles",
           "definition": "Déclarations qui s'exécutent que sous certaines conditions."
         },
         "while_loop/coursee/2021": {
           "word": "Boucle Tant Que",
-          "definition": "Une boucle continue de répéter tant qu'une condition est vraie."
+          "definition": "Une boucle qui continue de se répéter tant qu'une condition est vraie."
         },
         "define/coursee/2021": {
           "word": "Définis",
@@ -1423,7 +1439,7 @@
           "word": "Condition"
         },
         "conditionals/csd/2021": {
-          "word": "Formules conditionnelles"
+          "word": "Instructions conditionnelles"
         },
         "abstraction/csd/2021": {
           "word": "Abstraction"
