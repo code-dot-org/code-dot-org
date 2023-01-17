@@ -433,26 +433,17 @@ applabCommands.getDirection = function(opts) {
   return Applab.turtle.heading;
 };
 
+// whether or not Turtle pen is down, executing command will result in drawing a 'dot'
 applabCommands.dot = function(opts) {
   apiValidateTypeAndRange(opts, 'dot', 'radius', opts.radius, 'number', 0.0001);
   var ctx = applabTurtle.getTurtleContext();
-  var isPenDown = Applab.turtle.isPenDown;
   if (ctx && opts.radius > 0) {
-    if (!isPenDown) {
-      // If Applab.turtle pen is up, temporarily set Applab.turtle pen down to draw dot
-      Applab.turtle.isPenDown = true;
-    }
     ctx.beginPath();
     var savedLineWidth = ctx.lineWidth;
     ctx.lineWidth = 1;
     ctx.arc(Applab.turtle.x, Applab.turtle.y, opts.radius, 0, 2 * Math.PI);
     ctx.fill();
     ctx.stroke();
-    if (!isPenDown) {
-      // If Applab.turtle pen is supposed to be up (stored in local variable isPenDown),
-      // reset pen so that Applab.turtle pen is actually up.
-      Applab.turtle.isPenDown = false;
-    }
     ctx.lineWidth = savedLineWidth;
     return true;
   }
