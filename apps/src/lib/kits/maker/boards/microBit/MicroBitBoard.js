@@ -97,6 +97,7 @@ export default class MicroBitBoard extends EventEmitter {
    * @returns {Promise<void>}
    */
   checkExpectedFirmware() {
+    console.log('testing change');
     console.log('print this.isChromeOS');
     console.log(this.isChromeOS);
     return Promise.resolve()
@@ -104,7 +105,7 @@ export default class MicroBitBoard extends EventEmitter {
         if (!this.isChromeOS) {
           return this.openSerialPort();
         } else {
-          // weberial port
+          // webserial port
         }
       })
       .then(serialPort => this.boardClient_.connectBoard(serialPort))
