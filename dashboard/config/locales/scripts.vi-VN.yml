@@ -3382,6 +3382,15 @@ vi:
           lesson_groups:
             lessonGroup-2:
               display_name: Nội dung
+        csa3-2023:
+          lessons:
+            lesson-1:
+              name: Mảng một chiều (1D)
+            lesson-3:
+              name: Cho vòng lặp
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Nội dung
         hello-world-space-2022:
           title: 'Xin chào Thế giới: vũ trụ'
         hello-world-soccer-2022:
