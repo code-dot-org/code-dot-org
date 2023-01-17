@@ -11,7 +11,13 @@ import classNames from 'classnames';
 import moduleStyles from './button.module.scss';
 
 // Note: Keep these constants in sync with button.module.scss.
+const Phase1ButtonColor = {
+  brandSecondaryDefault: 'brandSecondaryDefault',
+  neutralDark: 'neutralDark'
+};
+
 const ButtonColor = {
+  ...Phase1ButtonColor,
   orange: 'orange',
   gray: 'gray',
   blue: 'blue',
@@ -19,9 +25,7 @@ const ButtonColor = {
   white: 'white',
   red: 'red',
   green: 'green',
-  purple: 'purple',
-  brandSecondaryDefault: 'brand-secondary-default',
-  neutralDark: 'neutral-dark'
+  purple: 'purple'
 };
 
 const ButtonSize = {
@@ -116,7 +120,10 @@ class Button extends React.Component {
     }
 
     const sizeClassNames = __useDeprecatedTag
-      ? moduleStyles[size]
+      ? [
+          moduleStyles[size],
+          Phase1ButtonColor[color] ? moduleStyles.phase1Updated : ''
+        ]
       : [moduleStyles[size], moduleStyles.updated];
 
     // Opening links in new tabs with 'target=_blank' is inherently insecure.
