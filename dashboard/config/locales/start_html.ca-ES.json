@@ -39,7 +39,9 @@
           "4": "4",
           "8": "8",
           "10": "10",
-          "12": "12"
+          "12": "12",
+          "15": "15",
+          "20": "20"
         },
         "CSD U1 processing guess_2022": {
           "text": "text",
@@ -48,7 +50,9 @@
           "4": "4",
           "8": "8",
           "10": "10",
-          "12": "12"
+          "12": "12",
+          "15": "15",
+          "20": "20"
         },
         "CSD U1 processing live_2021": {
           "bear": "Ós"
@@ -65,10 +69,10 @@
           "Correct!": "Correcte!"
         },
         "CSD U1 storage friends_2021": {
-          "Back": "Torna"
+          "Back": "Tornar"
         },
         "CSD U1 storage friends_2022": {
-          "Back": "Torna"
+          "Back": "Tornar"
         },
         "CSD U1 storage movies_2021": {
           "Star Wars": "Star Wars",
@@ -481,7 +485,7 @@
           "???": "???"
         },
         "CSDU6 - UI and Inputs - setScreen": {
-          "Back": "Torna"
+          "Back": "Tornar"
         },
         "CSDU6 circuit playground piano": {
           "C": "C",
@@ -641,11 +645,11 @@
           "no": "no"
         },
         "ml-models in applab-choice intended warnings": {
-          "Back": "Torna",
+          "Back": "Tornar",
           "1": "1"
         },
         "ml-models in applab-choice intended warnings_2022": {
-          "Back": "Torna",
+          "Back": "Tornar",
           "1": "1"
         },
         "ml-models in applab-zoo assessment": {
@@ -679,28 +683,36 @@
           "4": "4",
           "8": "8",
           "10": "10",
-          "12": "12"
+          "12": "12",
+          "15": "15",
+          "20": "20"
         },
         "CSD U1 processing bday_2022": {
           "1": "1",
           "4": "4",
           "8": "8",
           "10": "10",
-          "12": "12"
+          "12": "12",
+          "15": "15",
+          "20": "20"
         },
         "CSD U1 processing writers_2021": {
           "1": "1",
           "4": "4",
           "8": "8",
           "10": "10",
-          "12": "12"
+          "12": "12",
+          "15": "15",
+          "20": "20"
         },
         "CSD U1 processing writers_2022": {
           "1": "1",
           "4": "4",
           "8": "8",
           "10": "10",
-          "12": "12"
+          "12": "12",
+          "15": "15",
+          "20": "20"
         },
         "CSD U2 RGB intro": {
           "1": "1",
@@ -748,28 +760,36 @@
           "4": "4",
           "8": "8",
           "10": "10",
-          "12": "12"
+          "12": "12",
+          "15": "15",
+          "20": "20"
         },
         "csd-explore ui-3_2022": {
           "1": "1",
           "4": "4",
           "8": "8",
           "10": "10",
-          "12": "12"
+          "12": "12",
+          "15": "15",
+          "20": "20"
         },
         "csd-explore ui-5": {
           "1": "1",
           "4": "4",
           "8": "8",
           "10": "10",
-          "12": "12"
+          "12": "12",
+          "15": "15",
+          "20": "20"
         },
         "csd-explore ui-5_2022": {
           "1": "1",
           "4": "4",
           "8": "8",
           "10": "10",
-          "12": "12"
+          "12": "12",
+          "15": "15",
+          "20": "20"
         },
         "ml-models in applab-choice if quotes": {
           "1": "1"
