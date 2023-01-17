@@ -1,13 +1,14 @@
 require lib_dir 'cdo/data/logging/timed_task_with_logging'
+require 'cdo/aws/metrics'
+
 class RakeTaskEventLogger
   STUDY_TABLE = 'rake_performance'.freeze
-  CURRENT_LOGGING_VERSION = 'v0'.freeze
-
+  CURRENT_LOGGING_VERSION = 'v1'.freeze
   def initialize(rake_task)
     @start_time = 0
     @end_time = 0
     @rake_task = rake_task
-    @enabled = !([:development, :test].include?(rack_env))
+    @enabled = !([:development].include?(rack_env))
   end
 
   def start_task_logging
@@ -25,9 +26,9 @@ class RakeTaskEventLogger
 
   def end_task_logging
     @end_time = Time.new
-    duration = @end_time.to_i - @start_time.to_i
+    duration_ms = (@end_time - @start_time).in_milliseconds
     event = 'end'.freeze
-    log_event(event, duration)
+    log_event(event, duration_ms)
   end
 
   def task_chain
@@ -38,11 +39,9 @@ class RakeTaskEventLogger
     return nil
   end
 
-  def log_event(event, duration = nil, exception = nil)
-    if @enabled == false
-      return
-    end
+  def log_firehose_event(event, duration_ms = nil, exception = nil)
     begin
+      FirehoseClient.force_client = @enabled
       FirehoseClient.instance.put_record(
         :analysis,
         {
@@ -50,9 +49,10 @@ class RakeTaskEventLogger
           event: event,
           data_json: {
             task_name: @rake_task.name,
+            file: __FILE__,
             pid: Process.pid,
             invocation_chain: task_chain,
-            duration: duration,
+            duration_ms: duration_ms,
             exception: exception&.to_s,
             exception_backtrace: exception&.backtrace,
             version: CURRENT_LOGGING_VERSION,
@@ -68,5 +68,12 @@ class RakeTaskEventLogger
         }
       )
     end
+  end
+
+  def log_event(event, duration = nil, exception = nil)
+    if @enabled == false
+      return
+    end
+    log_firehose_event(event, duration, exception)
   end
 end
