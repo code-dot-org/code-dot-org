@@ -13,6 +13,7 @@ import Radium from 'radium'; // eslint-disable-line no-restricted-imports
 // example of its use on studio.code.org/home.
 
 const contentWidth = styleConstants['content-width'];
+const linkBoxLineHeight = 26;
 
 class ContentContainer extends Component {
   static propTypes = {
@@ -149,7 +150,7 @@ const styles = {
     position: 'absolute',
     bottom: 20,
     right: 0,
-    lineHeight: 26
+    lineHeight: linkBoxLineHeight
   },
   linkBoxRtl: {
     display: 'inline',
@@ -158,7 +159,7 @@ const styles = {
     position: 'absolute',
     bottom: 20,
     left: 0,
-    lineHeight: 26
+    lineHeight: linkBoxLineHeight
   },
   linkBoxBottom: {
     display: 'inline',
