@@ -149,6 +149,9 @@
         "virtual_lesson_modifications/coursed/2022": {
           "name": "Änderungen der virtuellen Stunde"
         },
+        "extension_lessons_micro_bit/coursed/2022": {
+          "type": "Ressource"
+        },
         "password_power-up_if_then_scenarios/coursed/2022": {
           "name": "Passwort Power-Up: Wenn...dann...Szenarien",
           "url": "https://docs.google.com/document/d/1JeZtFU6hMFTYITAAPaA_CRmOVknvkcKZQszL6u7DRG4/edit",
@@ -373,6 +376,9 @@
         "virtual_lesson_modifications/coursef/2022": {
           "name": "Änderungen der virtuellen Stunde"
         },
+        "extension_lessons_micro_bit/coursef/2022": {
+          "type": "Ressource"
+        },
         "the_power_of_words_lesson_quiz/coursef/2022": {
           "name": "Die Macht der Worte: Unterrichtsquiz",
           "url": "https://docs.google.com/forms/d/1OKy2U3F37NSgCBUez9XMi0UJtlHKPXIe_rxy0l_KEOg/copy",
@@ -539,6 +545,9 @@
         },
         "virtual_lesson_modifications/coursee/2022": {
           "name": "Änderungen der virtuellen Stunde"
+        },
+        "extension_lessons_micro_bit/coursee/2022": {
+          "type": "Ressource"
         },
         "be_a_super_digital_citizen_lesson_slides/coursee/2022": {
           "name": "Sei ein digitaler Super-Bürger: Lektionsfolien",
@@ -1217,6 +1226,9 @@
         },
         "virtual_lesson_modifications/coursec/2022": {
           "name": "Änderungen der virtuellen Stunde"
+        },
+        "extension_lessons_micro_bit/coursec/2022": {
+          "type": "Ressource"
         },
         "putting_a_stop_to_online_meanness_lesson_slides/coursec/2022": {
           "name": "Der Online-Frechheit ein STOPP setzen: Lektionsfolien",
