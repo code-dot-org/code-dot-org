@@ -1,8 +1,8 @@
 class MakerController < ApplicationController
   authorize_resource class: :maker_discount, except: [:home, :setup, :login_code, :display_code, :confirm_login]
 
-  # Maker Toolkit is currently used in CSD units marked with is_maker_unit.
-  # Retrieves the current CSD unit with is_maker_unit true that the user is working on.
+  # Maker Toolkit is currently used in standalone Create Devices with Apps unit.
+  # Retrieves the relevant Create Devices with Apps unit version based on self.maker_script.
   def home
     # Redirect to login if not signed in
     authenticate_user!

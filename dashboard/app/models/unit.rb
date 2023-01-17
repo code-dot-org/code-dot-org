@@ -305,7 +305,6 @@ class Unit < ApplicationRecord
     include_student_lesson_plans
     is_migrated
     seeded_from
-    is_maker_unit
     use_legacy_lesson_plans
   )
 
@@ -327,13 +326,6 @@ class Unit < ApplicationRecord
 
   def self.flappy_unit
     Unit.get_from_cache(Unit::FLAPPY_NAME)
-  end
-
-  # List of all Creating Apps with Devices maker unit versions.
-  # Used to determine the most recent Maker Unit to show on the Maker Homepage
-  def self.maker_units(user)
-    # only versions of the Creating Apps with Devices unit should be included in the maker units
-    @@maker_units ||= visible_units.select {|u| u.family_name == 'devices'}
   end
 
   class << self
@@ -1560,7 +1552,6 @@ class Unit < ApplicationRecord
       curriculum_umbrella: curriculum_umbrella,
       family_name: family_name,
       version_year: version_year,
-      is_maker_unit: is_maker_unit?,
       assigned_section_id: assigned_section_id,
       hasStandards: has_standards_associations?,
       tts: tts?,
@@ -1719,7 +1710,6 @@ class Unit < ApplicationRecord
     @@level_cache = nil
     @@all_scripts = nil
     @@visible_units = nil
-    @@maker_units = nil
     Rails.cache.delete UNIT_CACHE_KEY
   end
 
@@ -1814,8 +1804,7 @@ class Unit < ApplicationRecord
       :show_calendar,
       :is_migrated,
       :include_student_lesson_plans,
-      :use_legacy_lesson_plans,
-      :is_maker_unit
+      :use_legacy_lesson_plans
     ]
 
     result = {}
