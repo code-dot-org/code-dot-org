@@ -1653,6 +1653,42 @@
           "night": "gece",
           "dusk": "Alacakaranlık",
           "Predict": "Tahmin Et"
+        },
+        "AppLab Intro 7 - Change Text 2": {
+          "Make me bigger and blue!": "Beni daha büyük ve mavi yap!"
+        },
+        "AppLab Intro 7 - Full Text": {
+          "Make me red!": "Beni kırmızı yap!",
+          "Make me blue!": "Beni mavi yap!",
+          "Write code to change my text!": "Metnimi değiştirmek için kod yaz!"
+        },
+        "AppLab Intro 7 - onEvent intro": {
+          "Green-ify!": "Yeşil-lendir!"
+        },
+        "AppLab Intro 7 - onEvent twoButtons": {
+          "Flashlight App": "El Feneri Uygulaması"
+        },
+        "AppLab Intro 7 - playSound": {
+          "Horse!": "At!",
+          "You Choose!": "Sen seç!",
+          "Animal Sound Board!!!": "Hayvan Ses Kurulu!!!",
+          "Monkey!": "Maymun!",
+          "Tiger!": "Kaplan!"
+        },
+        "AppLab Intro 7 - thisOrThatAddButton": {
+          "This!": "Bu!",
+          "This or That?!": "Bu mu, bu mu?",
+          "You clicked this!": "Bunu tıkladın!"
+        },
+        "AppLab Intro 7 - thisOrThatPersonalize": {
+          "This!": "Bu!",
+          "This or That?!": "Bu mu, bu mu?",
+          "You clicked this!": "Bunu tıkladın!"
+        },
+        "AppLab Intro 7 - thisOrThatSetScreen": {
+          "This!": "Bu!",
+          "This or That?!": "Bu mu, bu mu?",
+          "You clicked this!": "Bunu tıkladın!"
         }
       }
     }
