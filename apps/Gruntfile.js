@@ -888,7 +888,7 @@ describe('entry tests', () => {
     var minify = options.minify;
     var watch = options.watch;
 
-    const config = webpackConfig.create({
+    return webpackConfig.create({
       outputDir: path.resolve(__dirname, OUTPUT_DIR),
       entries: _.mapValues(
         _.extend(
@@ -1140,19 +1140,6 @@ describe('entry tests', () => {
       watchNotify: grunt.option('watch-notify'),
       piskelDevMode: PISKEL_DEVELOPMENT_MODE
     });
-
-    console.log(
-      '****webpack entries: ',
-      Object.keys(config.entry).forEach(key => {
-        const containsWeblab = key.includes('weblab');
-        if (containsWeblab) {
-          console.log('entry: ', key);
-          console.log('in full: ', config.entry[key]);
-        }
-        return containsWeblab;
-      })
-    );
-    return config;
   }
 
   config.webpack = {
