@@ -155,6 +155,10 @@ class AssignButton extends React.Component {
             onClose={this.onCloseDialog}
             onConfirm={this.unhideAndAssign}
             sections={sectionsForDropdown}
+            courseId={this.props.courseId}
+            courseOfferingId={this.props.courseOfferingId}
+            scriptId={this.props.scriptId}
+            courseVersionId={this.props.courseVersionId}
           />
         )}
         {confirmationDialogOpen && (

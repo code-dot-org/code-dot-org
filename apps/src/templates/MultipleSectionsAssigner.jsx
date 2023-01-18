@@ -7,6 +7,11 @@ import BaseDialog from '@cdo/apps/templates/BaseDialog';
 import Button from '@cdo/apps/templates/Button';
 import {sectionForDropdownShape} from '@cdo/apps/templates/teacherDashboard/shapes';
 import TeacherSectionOption from './TeacherSectionOption';
+import {
+  assignToSection,
+  testingFunction
+} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
+import {updateHiddenScript} from '@cdo/apps/code-studio/hiddenLessonRedux';
 // import {selectSection} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 
 /**
@@ -14,15 +19,18 @@ import TeacherSectionOption from './TeacherSectionOption';
  */
 class MultipleSectionsAssigner extends Component {
   static propTypes = {
+    courseId: PropTypes.number,
     assignmentName: PropTypes.string.isRequired,
     onClose: PropTypes.func.isRequired,
-    onConfirm: PropTypes.func.isRequired,
     forceReload: PropTypes.bool,
     courseOfferingId: PropTypes.number,
     courseVersionId: PropTypes.number,
     scriptId: PropTypes.number,
     // Redux
     sections: PropTypes.arrayOf(sectionForDropdownShape).isRequired,
+    assignToSection: PropTypes.func.isRequired,
+    updateHiddenScript: PropTypes.func.isRequired,
+    testingFunction: PropTypes.func.isRequired,
 
     // Redux and from Section Assigner
     // selectSection: PropTypes.func.isRequired,
@@ -32,16 +40,22 @@ class MultipleSectionsAssigner extends Component {
   constructor(props) {
     super(props);
 
-    let currentSectionsAssignedToCourseList = [];
+    let initialSectionsAssignedToCourseList = [];
 
     for (let i = 0; i < this.props.sections.length; i++) {
-      if (this.props.sections[i].isAssigned()) {
-        currentSectionsAssignedToCourseList.push(this.props.sections[i]);
+      if (this.props.sections[i].isAssigned) {
+        initialSectionsAssignedToCourseList.push(this.props.sections[i]);
       }
     }
 
+    console.log(
+      'initialSectionsAssignedToCourseList is ' +
+        initialSectionsAssignedToCourseList
+    );
+
     this.state = {
-      currentSectionsAssigned: currentSectionsAssignedToCourseList
+      currentSectionsAssigned: initialSectionsAssignedToCourseList,
+      initialSectionsAssigned: initialSectionsAssignedToCourseList // I am wondering if this should be passed in through props bc it never changes.
     };
   }
 
@@ -52,51 +66,90 @@ class MultipleSectionsAssigner extends Component {
     console.log(section + 'was clicked');
   };
 
-  boxChecked = () => {
-    console.log('box clicked...');
+  //currentSection, currentCheckedStatus - old params
+  handleChangedCheckbox = currentSection => {
+    console.log('The checkbox was toggled');
+    // // if it is checked, then add it to the list.
+    if (this.state.currentSectionsAssigned.includes(currentSection)) {
+      // Remove it from the list
+      this.setState(state => {
+        let newList = state.currentSectionsAssigned.filter(
+          s => s !== currentSection
+        );
+        return {currentSectionsAssigned: newList};
+      });
+    } else {
+      this.setState(state => {
+        let newList = [...state.currentSectionsAssigned];
+        newList.push(currentSection);
+        return {currentSectionsAssigned: newList};
+      });
+    }
   };
 
-  // Modeled after displayFunctions in LibraryPublisher
-  displaySections = () => {
-    // const {selectedFunctions} = this.state;
-    const {sections} = this.props;
-    return sections.map(section => {
-      // const {functionName, comment} = sourceFunction;
-      const checked = section.isAssigned || false;
-      // const functionId = _.uniqueId(`${functionName}-`);
+  reassignSections = () => {
+    // This will assign any courses that need to be assigned
+    for (let i = 0; i < this.state.currentSectionsAssigned.length; i++) {
+      if (
+        !this.state.initialSectionsAssigned.includes(
+          this.state.currentSectionsAssigned[i]
+        )
+      ) {
+        console.log(
+          this.state.currentSectionsAssigned[i].name + ' should be assigned'
+        );
+        this.unhideAndAssign(this.state.currentSectionsAssigned[i]);
+      }
+    }
 
-      return (
-        <div>
-          <div style={styles.functionSelector}>
-            <input
-              style={styles.largerCheckbox}
-              type="checkbox"
-              name={section.name}
-              checked={checked}
-              onChange={this.boxChecked}
-            />
-            <label style={styles.functionLabel}>{section.name}</label>
-          </div>
-        </div>
-      );
-    });
+    // Checks to see if any sections need to be removed from being assigned.
+    for (let i = 0; i < this.state.initialSectionsAssigned.length; i++) {
+      console.log(this.state.initialSectionsAssigned[i]);
+      console.log(this.state.currentSectionsAssigned);
+      if (
+        !this.state.currentSectionsAssigned.includes(
+          this.state.initialSectionsAssigned[i]
+        )
+      ) {
+        console.log(
+          'This section needs to be removed from this course ' +
+            this.state.initialSectionsAssigned[i].name
+        );
+      }
+    }
+  };
+
+  unhideAndAssign = section => {
+    const {
+      courseId,
+      courseOfferingId,
+      courseVersionId,
+      scriptId,
+      assignToSection,
+      updateHiddenScript,
+      testingFunction
+    } = this.props;
+    const sectionId = section.id;
+    console.log('Trying to assign the section with id ' + sectionId);
+    updateHiddenScript(sectionId, scriptId, false);
+    assignToSection(
+      sectionId,
+      courseId,
+      courseOfferingId,
+      courseVersionId,
+      scriptId
+    );
+    testingFunction(
+      sectionId,
+      courseId,
+      courseOfferingId,
+      courseVersionId,
+      scriptId
+    );
   };
 
   render() {
-    const {
-      sections,
-      assignmentName,
-      onClose,
-      onConfirm
-      //   forceReload,
-      //   courseOfferingId,
-      //   courseVersionId,
-      //   scriptId,
-      //   selectedSectionId
-    } = this.props;
-    //const selectedSection = sections.find(
-    //  section => section.id === selectedSectionId
-    //);
+    const {sections, assignmentName, onClose} = this.props;
 
     return (
       <BaseDialog isOpen={true} handleClose={onClose}>
@@ -107,15 +160,16 @@ class MultipleSectionsAssigner extends Component {
         <div style={styles.header} className="uitest-confirm-assignment-dialog">
           {i18n.yourSectionsList()}
         </div>
-        <div style={styles.grid}>{this.displaySections()}</div>
         <hr />
         <div style={styles.grid}>
           {sections &&
             sections.map(section => (
               <TeacherSectionOption
+                key={section.id}
                 section={section}
+                isChecked={this.state.currentSectionsAssigned.includes(section)}
                 assignedSections={this.state.currentSectionsAssigned}
-                onClick={() => this.chooseMenuItem(section)} // this fucntion should update the state of multiple secion assigner
+                onChange={() => this.handleChangedCheckbox(section)} // this fucntion should update the state of multiple secion assigner
                 editedValue={section.isAssigned}
               />
             ))}
@@ -132,7 +186,7 @@ class MultipleSectionsAssigner extends Component {
             id="confirm-assign"
             text={i18n.confirmAssignment()}
             style={{marginLeft: 5}}
-            onClick={onConfirm}
+            onClick={this.reassignSections}
             color={Button.ButtonColor.orange}
           />
         </div>
@@ -183,6 +237,13 @@ const styles = {
 // Export unconnected dialog for unit testing - KT note, don't know why I need this...
 export const UnconnectedMultipleSectionsAssigner = MultipleSectionsAssigner;
 
-export default connect(state => ({
-  // add code here
-}))(MultipleSectionsAssigner);
+export default connect(
+  state => ({
+    // add code here
+  }),
+  {
+    assignToSection,
+    updateHiddenScript,
+    testingFunction
+  }
+)(MultipleSectionsAssigner);
