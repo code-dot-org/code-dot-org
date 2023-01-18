@@ -11,7 +11,9 @@ Pd::Enrollment.where.not(application_id: nil).each do |enrollment|
   begin
     application = Pd::Application::ApplicationBase.find(original_app_id)
     if application.type != "Pd::Application::TeacherApplication"
-      enrollment.set_application_id
+      # The method set_application_id is triggered before a save
+      # Save the enrollment to re-compute set_application_id
+      enrollment.save!
       modified_enrollments << enrollment.id
     end
   rescue ActiveRecord::SubclassNotFound # Happens with Facilitator applications
