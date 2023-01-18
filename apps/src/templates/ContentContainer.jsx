@@ -13,7 +13,7 @@ import Radium from 'radium'; // eslint-disable-line no-restricted-imports
 // example of its use on studio.code.org/home.
 
 const contentWidth = styleConstants['content-width'];
-const linkBoxLineHeight = 26;
+const linkBoxLineHeight = '26 px';
 
 class ContentContainer extends Component {
   static propTypes = {
