@@ -9,6 +9,8 @@ class RakeTaskEventLogger
     @end_time = 0
     @rake_task = rake_task
     @enabled = !rack_env?(:development)
+    is_test_ci_env = (rack_env?(:test) && ENV['CI'])
+    @enabled = is_test_ci_env || !([:development, :test].include?(rack_env))
   end
 
   def start_task_logging
