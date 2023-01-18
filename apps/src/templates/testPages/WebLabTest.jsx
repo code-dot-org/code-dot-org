@@ -2,41 +2,20 @@ import React, {Component} from 'react';
 import {Status} from '../../../src/lib/ui/ValidationStep';
 import testImageAccess from '../../code-studio/url_test';
 
-// import WebLab from '@cdo/apps/weblab/WebLab';
-// import {singleton as studioApp} from '@cdo/apps/StudioApp';
-
 const STATUS_CODE_PROJECTS = 'statusCodeProjects';
 const STATUS_COMPUTING_IN_THE_CORE = 'statusComputingInTheCore';
-const STATUS_IFRAME = 'statusIframe';
+const STATUS_BRAMBLE_MOUNTABLE = 'statusBrambleMountable';
 
-const imageAccessTests = [
+const domainDependencies = [
   {
-    url: 'https://codeprojects.org/favicon.ico',
+    url: 'https://codeprojects.org',
     status: STATUS_CODE_PROJECTS
   },
   {
-    url: 'https://downloads.computinginthecore.org/favicon.ico',
+    url: 'https://downloads.computinginthecore.org',
     status: STATUS_COMPUTING_IN_THE_CORE
   }
 ];
-
-if (window.addEventListener) {
-  window.addEventListener('message', window.handleIFrameMessage, false);
-} else if (window.attachEvent) {
-  window.attachEvent('onmessage', window.handleIFrameMessage);
-}
-
-window.handleIFrameMessage = event => {
-  console.log('i got an event! ', event);
-};
-
-// let webLabInstance = new WebLab();
-// webLabInstance.studioApp_ = studioApp();
-// webLabInstance.init({
-//   skin: {},
-//   level: {},
-//   containerId: 'container-id'
-// });
 
 class WebLabTest extends Component {
   constructor(props) {
@@ -44,15 +23,58 @@ class WebLabTest extends Component {
     this.state = {
       [STATUS_CODE_PROJECTS]: Status.WAITING,
       [STATUS_COMPUTING_IN_THE_CORE]: Status.WAITING,
-      [STATUS_IFRAME]: Status.WAITING,
+      [STATUS_BRAMBLE_MOUNTABLE]: Status.WAITING,
       renderCallToAction: false
     };
   }
 
-  promisifiedTestImageAccess = ({url, status}) =>
+  componentDidMount = () => {
+    window.addEventListener('message', this.updateBrambleStatus);
+  };
+
+  componentWillUnmount = () => {
+    window.removeEventListener('message', this.updateBrambleStatus);
+  };
+
+  updateBrambleStatus = (event = {}) => {
+    let message;
+    try {
+      message = JSON.parse(event.data);
+    } catch (err) {
+      console.log(err);
+    }
+
+    if (
+      event.origin === 'http://localhost-studio.code.org:3000' &&
+      message.type &&
+      message.type === 'bramble:readyToMount' &&
+      this.state[STATUS_BRAMBLE_MOUNTABLE] === Status.ATTEMPTING
+    ) {
+      this.setState({[STATUS_BRAMBLE_MOUNTABLE]: Status.SUCCEEDED});
+    }
+  };
+
+  pollBrambleStatus = ({timeout, interval}) => {
+    const endTime = Number(new Date()) + timeout;
+
+    let checkStatus = (resolve, _) => {
+      if (this.state.statusBrambleMountable === Status.SUCCEEDED) {
+        return resolve();
+      } else if (Number(new Date()) < endTime) {
+        return setTimeout(checkStatus, interval, resolve);
+      } else {
+        this.setState({[STATUS_BRAMBLE_MOUNTABLE]: Status.FAILED});
+        return resolve();
+      }
+    };
+
+    return new Promise(checkStatus);
+  };
+
+  verifyDomainAccess = ({url, status}) =>
     new Promise((resolve, _) => {
       testImageAccess(
-        `${url}?${Math.random()}`,
+        `${url}/favicon.ico?${Math.random()}`,
         () => {
           this.setState({[status]: Status.SUCCEEDED});
           return resolve();
@@ -64,48 +86,52 @@ class WebLabTest extends Component {
       );
     });
 
-  runIframeTest = () => {
-    this.setState({[STATUS_IFRAME]: Status.FAILED});
-    return Promise.resolve();
+  verifyBrambleMountable = () => {
+    // Here we just want to check that WebLab reaches a MOUNTABLE state,
+    // i.e. we want a "blank" load and will not provide a project or file paths
+    document.getElementById('empty-bramble-container').src =
+      '/weblab/host?blank_load=true';
+    return this.pollBrambleStatus({timeout: 3000, interval: 500});
   };
 
   runWebLabTest = () => {
-    this.setState({
-      [STATUS_COMPUTING_IN_THE_CORE]: Status.ATTEMPTING,
-      [STATUS_CODE_PROJECTS]: Status.ATTEMPTING,
-      renderCallToAction: false
-    });
+    this.setState(
+      {
+        [STATUS_COMPUTING_IN_THE_CORE]: Status.ATTEMPTING,
+        [STATUS_CODE_PROJECTS]: Status.ATTEMPTING,
+        [STATUS_BRAMBLE_MOUNTABLE]: Status.ATTEMPTING,
+        renderCallToAction: false
+      },
+      () => {
+        const webLabChecksComplete = Promise.all([
+          ...domainDependencies.map(this.verifyDomainAccess),
+          this.verifyBrambleMountable()
+        ]);
 
-    const webLabTestPromise = Promise.all([
-      ...imageAccessTests.map(this.promisifiedTestImageAccess),
-      this.runIframeTest()
-    ]);
-
-    console.log('webLabTestPromise', webLabTestPromise);
-
-    webLabTestPromise.then(results => {
-      console.log('results', results);
-      this.setState({renderCallToAction: true});
-    });
+        webLabChecksComplete.then(() => {
+          this.setState({renderCallToAction: true});
+        });
+      }
+    );
   };
 
-  renderTestStatus = test => {
-    const statusText = {
-      [Status.WAITING]: 'Not complete',
-      [Status.ATTEMPTING]: 'Connecting...',
-      [Status.SUCCEEDED]: 'Success',
-      [Status.FAILED]: 'Failed'
-    }[this.state[test]];
-
-    return <p>{`${statusText}`}</p>;
-  };
+  renderStatusText = status => (
+    <p>{`${
+      {
+        [Status.WAITING]: 'Not complete',
+        [Status.ATTEMPTING]: 'Connecting...',
+        [Status.SUCCEEDED]: 'Success',
+        [Status.FAILED]: 'Failed'
+      }[status]
+    }`}</p>
+  );
 
   renderCallToAction = () => {
     const testFailed = [
       STATUS_CODE_PROJECTS,
       STATUS_COMPUTING_IN_THE_CORE,
-      STATUS_IFRAME
-    ].some(test => this.state[test] === Status.FAILED);
+      STATUS_BRAMBLE_MOUNTABLE
+    ].some(test => this.state[test] !== Status.SUCCEEDED);
 
     if (testFailed) {
       return (
@@ -175,7 +201,9 @@ class WebLabTest extends Component {
                         <code>https://downloads.computinginthecore.org</code>
                       </td>
                       <td className="computinginthecore">
-                        {this.renderTestStatus(STATUS_COMPUTING_IN_THE_CORE)}
+                        {this.renderStatusText(
+                          this.state[STATUS_COMPUTING_IN_THE_CORE]
+                        )}
                       </td>
                     </tr>
                     <tr>
@@ -183,13 +211,17 @@ class WebLabTest extends Component {
                         Connected to <code>https://codeprojects.org</code>
                       </td>
                       <td className="codeprojects">
-                        {this.renderTestStatus(STATUS_CODE_PROJECTS)}
+                        {this.renderStatusText(
+                          this.state[STATUS_CODE_PROJECTS]
+                        )}
                       </td>
                     </tr>
                     <tr>
                       <td>Able to render an iFrame</td>
                       <td className="iframe">
-                        {this.renderTestStatus(STATUS_IFRAME)}
+                        {this.renderStatusText(
+                          this.state[STATUS_BRAMBLE_MOUNTABLE]
+                        )}
                       </td>
                     </tr>
                   </tbody>
@@ -208,16 +240,11 @@ class WebLabTest extends Component {
               {this.state.renderCallToAction && this.renderCallToAction()}
               <br />
               <iframe
-                className="weblab-host"
-                // Here we just want to check that WebLab reaches a MOUNTABLE state,
-                // i.e. we want a "blank" load and will not provide a project or file paths
-                src="/weblab/host?blank_load=true"
+                id="empty-bramble-container"
                 frameBorder="0"
                 scrolling="no"
                 style={{
-                  position: 'absolute',
-                  width: '100%',
-                  height: `100%`
+                  display: 'none'
                 }}
               />
             </div>

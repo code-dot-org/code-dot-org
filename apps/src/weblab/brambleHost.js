@@ -18,22 +18,25 @@ if (parent.getWebLab) {
   console.error('ERROR: getWebLab() method not found on parent');
 }
 
-function loadBramble(Bramble) {
-  Bramble.load(BRAMBLE_CONTAINER, {
-    url: `${BRAMBLE_BASE_URL}/index.html`
-  });
+function load(Bramble) {
+  if (brambleConfig.blankLoad) {
+    // Special case for checking that Bramble will load
+    // without actually passing data
+    Bramble.load(BRAMBLE_CONTAINER, {
+      url: `${BRAMBLE_BASE_URL}/index.html`
+    });
+    Bramble.on('readyStateChange', (_, newState) => {
+      if (Bramble.MOUNTABLE === newState) {
+        window.parent.postMessage(
+          JSON.stringify({type: 'bramble:readyToMount'}),
+          brambleConfig.studioUrl
+        );
+      }
+    });
+    Bramble.on('error', console.log);
+    return;
+  }
 
-  Bramble.on('readyStateChange', (_, newState) => {
-    if (Bramble.MOUNTABLE === newState) {
-      console.log('mountable');
-      Bramble.postMessage('i am ready to rumble!');
-    }
-  });
-
-  Bramble.on('error', console.log);
-}
-
-function loadCdoBramble(Bramble) {
   const api = webLab_.brambleApi();
   const cdoBramble = new CdoBramble(
     Bramble,
@@ -50,17 +53,6 @@ function loadCdoBramble(Bramble) {
     .init();
 }
 
-function init(Bramble) {
-  // Special case for checking that Bramble will load
-  // without actually passing data
-  if (brambleConfig.blankLoad) {
-    loadBramble(Bramble);
-    return;
-  }
-
-  loadCdoBramble(Bramble);
-}
-
 // Load bramble.js
 const brambleClient = brambleConfig.devMode ? 'bramble/client/main' : 'bramble';
-requirejs([brambleClient], init);
+requirejs([brambleClient], load);
