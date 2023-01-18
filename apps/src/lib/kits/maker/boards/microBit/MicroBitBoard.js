@@ -278,18 +278,6 @@ export default class MicroBitBoard extends EventEmitter {
       false /* shouldDestroyComponents */
     );
   }
-
-  calibrateCompass() {
-    return (
-      Promise.resolve()
-        .then(() => this.openSerialPort())
-        .then(serialPort => this.boardClient_.connectBoard(serialPort))
-        // Delay for 0.1 seconds to ensure time to establish port with micro:bit
-        .then(() => delayPromise(100))
-        .then(() => this.boardClient_.compassCalibration())
-        .catch(err => Promise.reject(err))
-    );
-  }
 }
 
 const delayPromise = t => new Promise(resolve => setTimeout(resolve, t));

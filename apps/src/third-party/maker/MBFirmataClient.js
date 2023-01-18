@@ -112,7 +112,6 @@ class MicrobitFirmataClient {
     this.MB_SCROLL_INTEGER			= 0x05
     this.MB_SET_TOUCH_MODE			= 0x06
     this.MB_DISPLAY_ENABLE			= 0x07
-    this.MB_COMPASS_CALIBRATE   = 0x08
     // 0x08-0x0C reserved for additional micro:bit messages
     this.MB_REPORT_EVENT			= 0x0D
     this.MB_DEBUG_STRING			= 0x0E
@@ -189,18 +188,6 @@ class MicrobitFirmataClient {
       }
       return null;
     })
-  }
-
-  isConnected() {
-    // Return true or false if port connected
-
-    if (this.myPort) {
-      console.log('Is Connected True', this.myPort.path);
-      return true;
-    } else {
-      console.log('Is Connected False', this.myPort.path);
-      return false;
-    }
   }
 
   disconnect() {

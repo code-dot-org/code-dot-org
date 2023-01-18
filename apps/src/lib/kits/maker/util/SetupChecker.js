@@ -112,15 +112,4 @@ export default class SetupChecker {
       releaseRefs();
     }
   }
-
-  calibrateCompass() {
-    findPortWithViableDevice()
-      .then(port => {
-        this.port = port;
-      })
-      .then(() => {
-        this.boardController = new MicroBitBoard(this.port);
-        return this.boardController.calibrateCompass();
-      });
-  }
 }
