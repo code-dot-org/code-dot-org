@@ -122,13 +122,13 @@ const styles = {
     fontFamily: '"Barlow Semi Condensed Semibold", sans-serif',
     color: color.white,
     fontSize: 48,
-    marginBottom: 40
+    marginBottom: 0
   },
   bannerHeadingShort: {
     fontFamily: '"Barlow Semi Condensed Semibold", sans-serif',
     color: color.white,
     fontSize: 48,
-    marginBottom: 40
+    marginBottom: 0
   },
   bannerSubHeading: {
     fontFamily: '"Gotham 4r", sans-serif',
