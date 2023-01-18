@@ -10,18 +10,16 @@ import {RegionalPartnerMiniContactPopupLink} from '@cdo/apps/code-studio/pd/regi
 import {LabelsContext} from '../../form_components_func/LabeledFormComponent';
 import {LabeledRadioButtons} from '../../form_components_func/labeled/LabeledRadioButtons';
 import {FormContext} from '../../form_components_func/FormComponent';
-import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import {analyticsReporter, EVENTS} from '@cdo/apps/lib/util/AnalyticsReporter';
 
 const CSD_URL = 'https://code.org/educate/csd';
 const CSP_URL = 'https://code.org/educate/csp';
 const CSA_URL = 'https://code.org/educate/csa';
 
-const PROGRAM_PICKED_EVENT = 'Professional Learning Program Picked';
-
 const ChooseYourProgram = props => {
   const onProgramChange = newProgram => {
     props.onChange(newProgram);
-    analyticsReporter.sendEvent(PROGRAM_PICKED_EVENT, {
+    analyticsReporter.sendEvent(EVENTS.PROGRAM_PICKED_EVENT, {
       'professional learning program': getProgramInfo(newProgram.program)
         .shortName
     });

@@ -7,9 +7,7 @@ import {isEqual, omit} from 'lodash';
 import i18n from '@cdo/locale';
 import usePrevious from '@cdo/apps/util/usePrevious';
 import Spinner from '@cdo/apps/code-studio/pd/components/spinner';
-import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
-
-const PAGE_CHANGED_EVENT = 'Page Changed';
+import {analyticsReporter, EVENTS} from '@cdo/apps/lib/util/AnalyticsReporter';
 
 const defaultSubmitButtonText = i18n.submit();
 
@@ -559,7 +557,7 @@ const FormController = props => {
         validateOnSubmitOnly || validateCurrentPageRequiredFields();
       if (currentPageValid) {
         if (currentPage !== newPage) {
-          analyticsReporter.sendEvent(PAGE_CHANGED_EVENT, {
+          analyticsReporter.sendEvent(EVENTS.PAGE_CHANGED_EVENT, {
             'current application page': currentPage + 1,
             'new application page': newPage + 1
           });

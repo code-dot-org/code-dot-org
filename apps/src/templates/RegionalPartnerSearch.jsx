@@ -14,9 +14,7 @@ import {currentLocation} from '@cdo/apps/utils';
 import PropTypes from 'prop-types';
 import queryString from 'query-string';
 import $ from 'jquery';
-import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
-
-const TEACHER_APP_STARTED_EVENT = '6-12 Teacher Application Started';
+import {analyticsReporter, EVENTS} from '@cdo/apps/lib/util/AnalyticsReporter';
 
 const WorkshopCard = props => {
   return (
@@ -613,7 +611,7 @@ const StartApplicationButton = ({
     : 'Start application';
 
   const logStartApplication = () => {
-    analyticsReporter.sendEvent(TEACHER_APP_STARTED_EVENT);
+    analyticsReporter.sendEvent(EVENTS.TEACHER_APP_STARTED_EVENT);
   };
 
   let notificationHeading, notificationText;

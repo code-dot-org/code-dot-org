@@ -18,7 +18,7 @@ import {unitCalendarLesson} from '../../../templates/progress/unitCalendarLesson
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 import FontAwesome from '../../../templates/FontAwesome';
 import {PublishedState} from '@cdo/apps/generated/curriculum/sharedCourseConstants';
-import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import {analyticsReporter, EVENTS} from '@cdo/apps/lib/util/AnalyticsReporter';
 
 export const NOT_STARTED = 'NOT_STARTED';
 export const IN_PROGRESS = 'IN_PROGRESS';
@@ -29,8 +29,6 @@ const NEXT_BUTTON_TEXT = {
   [IN_PROGRESS]: i18n.continue(),
   [COMPLETED]: i18n.printCertificate()
 };
-
-const TRY_NOW_BUTTON_CLICK_EVENT = 'Try Now Button Clicked';
 
 class UnitOverviewTopRow extends React.Component {
   static propTypes = {
@@ -66,7 +64,7 @@ class UnitOverviewTopRow extends React.Component {
 
   logTryNowButtonClick = unitProgress => {
     if (unitProgress === NOT_STARTED) {
-      analyticsReporter.sendEvent(TRY_NOW_BUTTON_CLICK_EVENT, {
+      analyticsReporter.sendEvent(EVENTS.TRY_NOW_BUTTON_CLICK_EVENT, {
         'unit name': this.props.unitTitle
       });
     }

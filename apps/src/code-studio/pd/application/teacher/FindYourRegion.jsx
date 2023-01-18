@@ -24,15 +24,13 @@ import {
 import {isZipCode} from '@cdo/apps/util/formatValidation';
 import {useRegionalPartner} from '../../components/useRegionalPartner';
 import SchoolAutocompleteDropdown from '@cdo/apps/templates/SchoolAutocompleteDropdown';
-import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import {analyticsReporter, EVENTS} from '@cdo/apps/lib/util/AnalyticsReporter';
 
 const PD_RESOURCES_URL =
   'https://support.code.org/hc/en-us/articles/115003865532';
 const CS_TEACHERS_URL = 'https://code.org/educate/community';
 const INTERNATIONAL = 'Other country';
 const US = 'United States';
-
-const RP_FOUND_EVENT = 'Regional Partner Found';
 
 const FindYourRegion = props => {
   const {onChange, errors, data} = props;
@@ -51,7 +49,7 @@ const FindYourRegion = props => {
     });
     if (regionalPartner?.name !== lastRPLogged) {
       setLastRPLogged(regionalPartner?.name);
-      analyticsReporter.sendEvent(RP_FOUND_EVENT, {
+      analyticsReporter.sendEvent(EVENTS.RP_FOUND_EVENT, {
         'regional partner': regionalPartner?.name || 'No Partner'
       });
     }

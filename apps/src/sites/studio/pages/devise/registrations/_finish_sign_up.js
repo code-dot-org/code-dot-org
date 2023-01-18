@@ -6,7 +6,7 @@ import SchoolInfoInputs from '@cdo/apps/templates/SchoolInfoInputs';
 import getScriptData from '@cdo/apps/util/getScriptData';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 import experiments from '@cdo/apps/util/experiments';
-import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import {analyticsReporter, EVENTS} from '@cdo/apps/lib/util/AnalyticsReporter';
 
 const TEACHER_ONLY_FIELDS = [
   '#teacher-name-label',
@@ -21,10 +21,6 @@ const STUDENT_ONLY_FIELDS = [
   '#parent-email-container',
   '#student-gdpr'
 ];
-
-const ACCOUNT_TYPE_PICKED_EVENT = 'Account Type Picked';
-const SCHOOL_ID_CHANGED_EVENT = 'School ID Changed';
-const SIGN_UP_FINISHED_EVENT = 'Sign Up Finished';
 
 // Values loaded from scriptData are always initial values, not the latest
 // (possibly unsaved) user-edited values on the form.
@@ -100,7 +96,7 @@ $(document).ready(() => {
       }
       $('#user_age').val('21+');
     }
-    analyticsReporter.sendEvent(SIGN_UP_FINISHED_EVENT);
+    analyticsReporter.sendEvent(EVENTS.SIGN_UP_FINISHED_EVENT);
   });
 
   function cleanSchoolInfo() {
@@ -205,7 +201,7 @@ $(document).ready(() => {
       event: 'select-' + type,
       data_string: signUpUID
     });
-    analyticsReporter.sendEvent(ACCOUNT_TYPE_PICKED_EVENT, {
+    analyticsReporter.sendEvent(EVENTS.ACCOUNT_TYPE_PICKED_EVENT, {
       'account type': type
     });
   }
@@ -289,7 +285,7 @@ $(document).ready(() => {
   }
 
   function logSchoolId(schoolId) {
-    analyticsReporter.sendEvent(SCHOOL_ID_CHANGED_EVENT, {
+    analyticsReporter.sendEvent(EVENTS.SCHOOL_ID_CHANGED_EVENT, {
       school: schoolId
     });
   }
