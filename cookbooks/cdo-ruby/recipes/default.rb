@@ -20,7 +20,10 @@ execute "install ruby-build" do
 end
 
 execute "install ruby with ruby build" do
-  command 'ruby-build 2.7.7'
+  # target /usr specifically because that's where our old apt approach
+  # installed ruby; could instead consider /usr/local if we figure out a good
+  # way to clean up existing installations.
+  command 'ruby-build 2.7.7 /usr'
 end
 
 # TODO: Remove old Ruby version packages if present.
