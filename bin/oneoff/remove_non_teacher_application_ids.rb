@@ -17,7 +17,7 @@ Pd::Enrollment.where.not(application_id: nil).each do |enrollment|
       modified_enrollments << enrollment.id
     end
   rescue ActiveRecord::SubclassNotFound # Happens with Facilitator applications
-    enrollment.set_application_id
+    enrollment.save!
     modified_enrollments << enrollment.id
   end
 end
