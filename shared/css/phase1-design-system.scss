@@ -18,6 +18,7 @@ h1, h2, h3 {
 
 h1 {
   font-size: 3em;
+  line-height: 1.2;
   color: $neutral-dark;
 }
 
@@ -39,6 +40,10 @@ h6 {
   font-size: 1em;
   line-height: 1.2;
   font-family: $gotham-bold;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin-top: 0;
 }
 
 .tutorial-block, .courseblock-tall {
@@ -157,7 +162,7 @@ p {
   }
 
   .graderow {
-    background-color: $neutral_light !important;
+    background-color: $neutral_dark10 !important;
 
     &.numbered {
       color: $neutral_dark;

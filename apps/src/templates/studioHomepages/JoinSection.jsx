@@ -143,8 +143,7 @@ const styles = {
     borderStyle: 'solid',
     borderColor: color.neutral_dark20,
     width: styleConstants['content-width'],
-    backgroundColor: color.white,
-    marginTop: 25
+    backgroundColor: color.white
   },
   mainDashed: {
     borderWidth: 5,
