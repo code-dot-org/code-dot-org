@@ -433,8 +433,8 @@ applabCommands.getDirection = function(opts) {
   return Applab.turtle.heading;
 };
 
-// whether or not Turtle pen is down, executing command will result in drawing a 'dot'
-// with color stored by `penColorInternal`
+// Whether or not Turtle pen is down, executing command will result in drawing a 'dot'
+// with color stored by `penColorInternal`.
 applabCommands.dot = function(opts) {
   apiValidateTypeAndRange(opts, 'dot', 'radius', opts.radius, 'number', 0.0001);
   var ctx = applabTurtle.getTurtleContext();
@@ -473,7 +473,6 @@ applabCommands.penWidth = function(opts) {
   }
 };
 
-// the default color of ctx.strokeStyle and ctx.fillStyle is 'black'
 applabCommands.penColorInternal = function(rgbstring) {
   var ctx = applabTurtle.getTurtleContext();
   if (ctx) {
