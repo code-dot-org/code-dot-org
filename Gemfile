@@ -1,7 +1,6 @@
 source 'https://rubygems.org'
 
-# Temporarily support both Ruby 2.6 and 2.7 until we are fully transitioned
-ruby '>= 2.6', '< 2.8'
+ruby '2.7.5'
 
 # Ruby 2.7 no longer includes some libraries by default; install
 # the ones we need here
