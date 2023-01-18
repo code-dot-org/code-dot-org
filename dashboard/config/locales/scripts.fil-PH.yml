@@ -3641,6 +3641,10 @@ fil:
           lessons:
             lesson-4:
               name: Mga variable
+        csa3-2023:
+          lessons:
+            lesson-3:
+              name: For Loops
         hello-world-space-2022:
           title: 'Hello World: Puwang'
         hello-world-soccer-2022:

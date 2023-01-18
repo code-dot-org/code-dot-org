@@ -960,6 +960,10 @@ gl:
           lessons:
             lesson-4:
               name: Variables
+        csa3-2023:
+          lessons:
+            lesson-3:
+              name: Bucles "Para" (For)
         csp4-2023:
           lesson_groups:
             csp_variables:

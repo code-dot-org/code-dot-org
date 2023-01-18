@@ -699,6 +699,21 @@
           "categories": {
             "ui_controls": {
               "expressions": {
+                "button": {
+                  "examples": {
+                    "Example: Click Me Button": {
+                      "name": "Örnek: Bana tıkla butonu"
+                    },
+                    "Example: Simple Turtle Control 1": {
+                      "name": "Örnek: Basit kamplumbağa kontrolü 1",
+                      "description": "Butona her tıkladığında kaplumbağayı ileri hareket ettir. "
+                    },
+                    "Example: Simple Turtle Control 2": {
+                      "name": "Örnek: Basit kaplumbağa kontrolü 2"
+                    }
+                  },
+                  "short_description": "Varsayılan konumda (0,0) verilen kimlik tarafından sağlanan ve başvurulan metni görüntüleyen ekranda bir düğme oluşturur."
+                },
                 "getProperty": {
                   "palette_params": {
                     "id": {
@@ -783,6 +798,13 @@
             },
             "canvas": {
               "expressions": {
+                "circle": {
+                  "palette_params": {
+                    "radius": {
+                      "description": "Çemberin piksel cinsinden yarıçapı."
+                    }
+                  }
+                },
                 "getAlpha": {
                   "palette_params": {
                     "imageData": {
@@ -815,6 +837,16 @@
                   "palette_params": {
                     "imageData": {
                       "type": "nesne"
+                    }
+                  }
+                },
+                "rect": {
+                  "palette_params": {
+                    "width": {
+                      "description": "Dikdörtgenin piksel cinsinden yatay genişliği."
+                    },
+                    "height": {
+                      "description": "Dikdörtgenin piksel cinsinden dikey yüksekliği."
                     }
                   }
                 },
@@ -955,6 +987,9 @@
             },
             "turtle": {
               "expressions": {
+                "arcLeft": {
+                  "short_description": "Kaplumbağayı düz, dairesel bir yay çizerek ileri ve sola hareket ettirir."
+                },
                 "penColor": {
                   "palette_params": {
                     "color": {
@@ -973,6 +1008,13 @@
             },
             "control": {
               "expressions": {
+                "clearTimeout": {
+                  "palette_params": {
+                    "timeout": {
+                      "description": "İptal etmek için setTimeout işlevi tarafından döndürülen değer."
+                    }
+                  }
+                },
                 "stopTimedLoop": {
                   "palette_params": {
                     "loop": {
@@ -1057,6 +1099,9 @@
                 "declareAssign_x": {
                   "short_description": "'var' ifadesinden sonra belirtilen isimle bir değişken tanımlar ve değişkene eşitliğin sağ tarafındaki değeri atar"
                 },
+                "declareAssign_list_123": {
+                  "short_description": "Bir diziyi bir değişkene bildirin ve atayın"
+                },
                 "addPair": {
                   "palette_params": {
                     "key": {
@@ -1112,6 +1157,20 @@
                   "return_value": "Boolean"
                 },
                 "buzzer.play": {
+                  "palette_params": {
+                    "tempo": {
+                      "type": "Sayı"
+                    }
+                  }
+                },
+                "buzzer.playNotes": {
+                  "palette_params": {
+                    "tempo": {
+                      "type": "Sayı"
+                    }
+                  }
+                },
+                "buzzer.playSong": {
                   "palette_params": {
                     "tempo": {
                       "type": "Sayı"

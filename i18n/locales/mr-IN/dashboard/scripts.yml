@@ -1661,6 +1661,10 @@ mr:
           lessons:
             lesson-4:
               name: व्हेरीएबल्स
+        csa3-2023:
+          lessons:
+            lesson-1:
+              name: एक-आयामी (1D) अॅरेज
         hello-world-space-2022:
           title: 'हॅलो वर्ल्ड: जागा'
         hello-world-soccer-2022:

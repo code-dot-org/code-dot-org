@@ -2185,6 +2185,13 @@ bg:
           lesson_groups:
             lessonGroup-2:
               display_name: Съдържание
+        csa3-2023:
+          lessons:
+            lesson-3:
+              name: За циклите
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Съдържание
         csd1-2023:
           title: Разрешаване на Проблеми
         csd7-2023:
