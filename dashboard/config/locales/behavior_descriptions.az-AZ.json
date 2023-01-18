@@ -1,2 +1,17 @@
 {
+  "az-AZ": {
+    "data": {
+      "behavior_descriptions": {
+        "courseF_apps_collector": {
+          "randomly move the sprite up or down": "təsadüfi olaraq Sprite-i yuxarı və ya aşağı hərəkət etdirin"
+        },
+        "courseF_apps_collector2022": {
+          "randomly move the sprite up or down": "təsadüfi olaraq Sprite-i yuxarı və ya aşağı hərəkət etdirin"
+        },
+        "courseF_apps_collector_-2022-2": {
+          "randomly move the sprite up or down": "təsadüfi olaraq Sprite-i yuxarı və ya aşağı hərəkət etdirin"
+        }
+      }
+    }
+  }
 }

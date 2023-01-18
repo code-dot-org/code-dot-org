@@ -13,9 +13,11 @@ import {sectionForDropdownShape} from '@cdo/apps/templates/teacherDashboard/shap
 import {sectionsForDropdown} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import ResourcesDropdown from '@cdo/apps/code-studio/components/progress/ResourcesDropdown';
 import UnitCalendarButton from '@cdo/apps/code-studio/components/progress/UnitCalendarButton';
+import BulkLessonVisibilityToggle from '@cdo/apps/code-studio/components/progress/BulkLessonVisibilityToggle';
 import {unitCalendarLesson} from '../../../templates/progress/unitCalendarLessonShapes';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 import FontAwesome from '../../../templates/FontAwesome';
+import {PublishedState} from '@cdo/apps/generated/curriculum/sharedCourseConstants';
 
 export const NOT_STARTED = 'NOT_STARTED';
 export const IN_PROGRESS = 'IN_PROGRESS';
@@ -41,17 +43,20 @@ class UnitOverviewTopRow extends React.Component {
     scriptResourcesPdfUrl: PropTypes.string,
     courseOfferingId: PropTypes.number,
     courseVersionId: PropTypes.number,
+    isProfessionalLearningCourse: PropTypes.bool,
+    publishedState: PropTypes.oneOf(Object.values(PublishedState)),
 
     // redux provided
     sectionsForDropdown: PropTypes.arrayOf(sectionForDropdownShape).isRequired,
     selectedSectionId: PropTypes.number,
-    professionalLearningCourse: PropTypes.bool,
+    deeperLearningCourse: PropTypes.bool,
     hasPerLevelResults: PropTypes.bool.isRequired,
     unitCompleted: PropTypes.bool.isRequired,
     scriptId: PropTypes.number.isRequired,
     scriptName: PropTypes.string.isRequired,
     unitTitle: PropTypes.string.isRequired,
     currentCourseId: PropTypes.number,
+    unitAllowsHiddenLessons: PropTypes.bool,
     viewAs: PropTypes.oneOf(Object.values(ViewType)).isRequired,
     isRtl: PropTypes.bool.isRequired
   };
@@ -103,7 +108,8 @@ class UnitOverviewTopRow extends React.Component {
       sectionsForDropdown,
       selectedSectionId,
       currentCourseId,
-      professionalLearningCourse,
+      unitAllowsHiddenLessons,
+      deeperLearningCourse,
       scriptId,
       scriptName,
       unitTitle,
@@ -120,7 +126,9 @@ class UnitOverviewTopRow extends React.Component {
       unitCompleted,
       hasPerLevelResults,
       courseOfferingId,
-      courseVersionId
+      courseVersionId,
+      isProfessionalLearningCourse,
+      publishedState
     } = this.props;
 
     const pdfDropdownOptions = this.compilePdfDropdownOptions();
@@ -138,17 +146,32 @@ class UnitOverviewTopRow extends React.Component {
       unitProgress = IN_PROGRESS;
     }
 
+    /*
+     * We are turning off Printing Certificates for Professional Learning Courses
+     * until we can create a specialized certificate for PL courses.
+     * */
+    let completedProfessionalLearningCourse =
+      isProfessionalLearningCourse && unitProgress === COMPLETED;
+
+    const displayPrintingOptionsDropwdown =
+      pdfDropdownOptions.length > 0 &&
+      publishedState !== PublishedState.pilot &&
+      publishedState !== PublishedState.in_development;
+
     return (
       <div style={styles.buttonRow} className="unit-overview-top-row">
-        {!professionalLearningCourse && viewAs === ViewType.Participant && (
+        {!deeperLearningCourse && viewAs === ViewType.Participant && (
           <div style={styles.buttonsInRow}>
-            <Button
-              __useDeprecatedTag
-              href={`/s/${scriptName}/next`}
-              text={NEXT_BUTTON_TEXT[unitProgress]}
-              size={Button.ButtonSize.large}
-              style={{marginRight: 10}}
-            />
+            {!completedProfessionalLearningCourse && (
+              <Button
+                __useDeprecatedTag
+                href={`/s/${scriptName}/next`}
+                text={NEXT_BUTTON_TEXT[unitProgress]}
+                size={Button.ButtonSize.large}
+                style={{marginRight: 10}}
+              />
+            )}
+
             {studentResources.length > 0 && (
               <ResourcesDropdown
                 resources={studentResources}
@@ -169,7 +192,7 @@ class UnitOverviewTopRow extends React.Component {
         )}
 
         <div style={styles.resourcesRow}>
-          {!professionalLearningCourse &&
+          {!deeperLearningCourse &&
             viewAs === ViewType.Instructor &&
             (isMigrated && teacherResources.length > 0) && (
               <ResourcesDropdown
@@ -177,7 +200,7 @@ class UnitOverviewTopRow extends React.Component {
                 unitId={scriptId}
               />
             )}
-          {pdfDropdownOptions.length > 0 && viewAs === ViewType.Instructor && (
+          {displayPrintingOptionsDropwdown && viewAs === ViewType.Instructor && (
             <div style={{marginRight: 5}}>
               <DropdownButton
                 customText={
@@ -212,19 +235,24 @@ class UnitOverviewTopRow extends React.Component {
             />
           )}
         </div>
-        {!professionalLearningCourse && viewAs === ViewType.Instructor && (
-          <SectionAssigner
-            sections={sectionsForDropdown}
-            selectedSectionId={selectedSectionId}
-            assignmentName={unitTitle}
-            showAssignButton={showAssignButton}
-            courseId={currentCourseId}
-            courseOfferingId={courseOfferingId}
-            courseVersionId={courseVersionId}
-            scriptId={scriptId}
-            forceReload={true}
-            buttonLocationAnalytics={'unit-overview-top'}
-          />
+        {!deeperLearningCourse && viewAs === ViewType.Instructor && (
+          <div style={styles.sectionContainer}>
+            <SectionAssigner
+              sections={sectionsForDropdown}
+              selectedSectionId={selectedSectionId}
+              assignmentName={unitTitle}
+              showAssignButton={showAssignButton}
+              courseId={currentCourseId}
+              courseOfferingId={courseOfferingId}
+              courseVersionId={courseVersionId}
+              scriptId={scriptId}
+              forceReload={true}
+              buttonLocationAnalytics={'unit-overview-top'}
+            />
+            {unitAllowsHiddenLessons && (
+              <BulkLessonVisibilityToggle lessons={unitCalendarLessons} />
+            )}
+          </div>
         )}
         <div style={isRtl ? styles.left : styles.right}>
           <span>
@@ -280,6 +308,10 @@ const styles = {
   },
   buttonMarginRTL: {
     marginRight: 5
+  },
+  sectionContainer: {
+    display: 'flex',
+    justifyContent: 'space-between'
   }
 };
 
@@ -293,13 +325,14 @@ export default connect((state, ownProps) => ({
     ownProps.courseVersionId,
     state.progress.scriptId
   ),
-  professionalLearningCourse: state.progress.professionalLearningCourse,
+  deeperLearningCourse: state.progress.deeperLearningCourse,
   hasPerLevelResults: Object.keys(state.progress.levelResults).length > 0,
   unitCompleted: !!state.progress.unitCompleted,
   scriptId: state.progress.scriptId,
   scriptName: state.progress.scriptName,
   unitTitle: state.progress.unitTitle,
   currentCourseId: state.progress.courseId,
+  unitAllowsHiddenLessons: state.hiddenLesson.hideableLessonsAllowed || false,
   viewAs: state.viewAs,
   isRtl: state.isRtl
 }))(UnitOverviewTopRow);

@@ -1,0 +1,122 @@
+{
+  "es-MX": {
+    "data": {
+      "standard_categories": {
+        "AP": {
+          "description": "Algoritmos y programación"
+        },
+        "CS": {
+          "description": "Sistemas de computación"
+        },
+        "DA": {
+          "description": "Datos y Análisis"
+        },
+        "NI": {
+          "description": "Redes e Internet"
+        },
+        "DAT-1": {
+          "description": "La forma en que el ordenador representa los datos es diferente de la forma en que los datos se interpretan y se muestran al usuario. Los programas se utilizan para traducir los datos en una representación que sea más fácil de entender para las personas."
+        },
+        "IOC-2": {
+          "description": "El uso de las innovaciones informáticas puede implicar riesgos para tu seguridad personal y tu identidad."
+        },
+        "DAT-1.D": {
+          "description": "Compara los algoritmos de compresión de datos para determinar cuál es el mejor en un contexto determinado."
+        },
+        "IOC-2.B": {
+          "description": "Explica cómo se pueden proteger los recursos informáticos y cómo se puede hacer un mal uso de ellos."
+        },
+        "CD": {
+          "description": "Ordenadores y Dispositivos de Comunicación"
+        },
+        "CI": {
+          "description": "Impactos Sociales, Globales y Éticos"
+        },
+        "CL": {
+          "description": "Colaboración"
+        },
+        "CPP": {
+          "description": "Práctica de computación y programación"
+        },
+        "CT": {
+          "description": "Pensamiento computacional"
+        },
+        "L": {
+          "description": "Idioma"
+        },
+        "RI": {
+          "description": "Lectura informativa"
+        },
+        "RL": {
+          "description": "Leyendo Literatura"
+        },
+        "SL": {
+          "description": "Hablar y escuchar"
+        },
+        "W": {
+          "description": "Escribir"
+        },
+        "ETS": {
+          "description": "Ingeniería en las Ciencias"
+        },
+        "ETS1": {
+          "description": "Diseño Ingenieril"
+        },
+        "C": {
+          "description": "Túnel"
+        },
+        "F": {
+          "description": "Funciones"
+        },
+        "G": {
+          "description": "Geometría"
+        },
+        "MD": {
+          "description": "Usando Probabilidades para Tomar Decisiones"
+        },
+        "MP": {
+          "description": "Prácticas matemáticas"
+        },
+        "NBT": {
+          "description": "Números y Operaciones en Base Diez"
+        },
+        "OA": {
+          "description": "Operaciones y Pensamiento Algebraico"
+        },
+        "BI-3": {
+          "description": "Las computadoras pueden aprender de los datos"
+        },
+        "3-A-i": {
+          "description": "La naturaleza del aprendizaje - Humanos contra máquinas"
+        },
+        "3-A-ii": {
+          "description": "La naturaleza del aprendizaje - Búsqueda de patrones en los datos"
+        },
+        "3-A-iii": {
+          "description": "La naturaleza del aprendizaje - Entrenamiento de un modelo"
+        },
+        "3-A-iv": {
+          "description": "La naturaleza del aprendizaje - Construcción contra uso de un razonador"
+        },
+        "3-C-i": {
+          "description": "Conjuntos de datos - Conjuntos de características"
+        },
+        "3-C-iii": {
+          "description": "Conjuntos de datos: Sesgo"
+        },
+        "1": {
+          "description": "Los estudiantes demuestran pensamiento creativo, construyen conocimiento y desarrollan productos y procesos innovadores utilizando tecnología."
+        },
+        "2": {
+          "description": "Los estudiantes utilizan medios y entornos digitales para comunicarse y trabajar en colaboración, incluso a distancia, para apoyar el aprendizaje individual y contribuir al aprendizaje de otros."
+        },
+        "4": {
+          "description": "Los estudiantes usan habilidades de pensamiento crítico para planificar y realizar investigaciones, gestionar proyectos, resolver problemas y tomar decisiones informadas utilizando herramientas y recursos digitales apropiados."
+        },
+        "6": {
+          "description": "Los estudiantes demuestran un conocimiento sólido de conceptos, sistemas y operaciones de tecnología."
+        }
+      }
+    }
+  }
+}

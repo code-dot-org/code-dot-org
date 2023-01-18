@@ -1,0 +1,107 @@
+{
+  "sk-SK": {
+    "data": {
+      "standard_categories": {
+        "AP": {
+          "description": "Algoritmy a programovanie"
+        },
+        "CS": {
+          "description": "Výpočtové systémy"
+        },
+        "DA": {
+          "description": "Dáta a analýza"
+        },
+        "NI": {
+          "description": "Siete a internet"
+        },
+        "DAT-1": {
+          "description": "Spôsob, akým počítač vyjadruje údaje, sa líši od spôsobu, akým sa údaje interpretujú a zobrazujú používateľovi. Programy sa používajú na prevod údajov do podoby, ktorá je pre ľudí zrozumiteľnejšia."
+        },
+        "DAT-1.D": {
+          "description": "Porovnanie algoritmov kompresie údajov s cieľom určiť, ktorý je najlepší v konkrétnom kontexte."
+        },
+        "CD": {
+          "description": "Počítače a komunikačné zariadenia"
+        },
+        "CI": {
+          "description": "Komunitné, globálne a etické vplyvy"
+        },
+        "CL": {
+          "description": "Spolupráca"
+        },
+        "CPP": {
+          "description": "Výpočtové zručnosti a programovanie"
+        },
+        "CT": {
+          "description": "Algoritmické myslenie"
+        },
+        "L": {
+          "description": "Jazyk"
+        },
+        "RI": {
+          "description": "Čítanie s porozumením"
+        },
+        "RL": {
+          "description": "Čítanie literatúry"
+        },
+        "SL": {
+          "description": "Rozprávanie a počúvanie"
+        },
+        "W": {
+          "description": "Písanie"
+        },
+        "C": {
+          "description": "Kruhy"
+        },
+        "F": {
+          "description": "Funkcie"
+        },
+        "G": {
+          "description": "Geometria"
+        },
+        "MP": {
+          "description": "Matematické zručnosti"
+        },
+        "NBT": {
+          "description": "Čísla a matematické operácie v desiatkovej sústave"
+        },
+        "OA": {
+          "description": "Operácie a algebraické myslenie"
+        },
+        "BI-3": {
+          "description": "Počítače sa dokážu učiť z údajov"
+        },
+        "3-A-i": {
+          "description": "Podstata učenia – ľudia a stroje"
+        },
+        "3-A-ii": {
+          "description": "Podstata učenia – hľadanie vzorov v údajoch"
+        },
+        "3-A-iii": {
+          "description": "Podstata učenia – trénovanie modelu"
+        },
+        "3-A-iv": {
+          "description": "Podstata učenia – konštrukcia a používanie argumentov"
+        },
+        "3-C-i": {
+          "description": "Množiny údajov – množiny vlastností"
+        },
+        "3-C-iii": {
+          "description": "Množiny údajov – skreslenie"
+        },
+        "1": {
+          "description": "Žiaci preukazujú tvorivé myslenie, budujú si vedomosti a pomocou technológie vytvárajú inovatívne produkty a procesy."
+        },
+        "2": {
+          "description": "Žiaci používajú digitálne médiá a prostredia na komunikáciu a spoluprácu, a to aj na diaľku, aby podporili individuálne učenie a prispeli k učeniu ostatných."
+        },
+        "4": {
+          "description": "Žiaci využívajú svoju schopnosť kritického myslenia na plánovanie a realizáciu výskumu, spravovanie projektov, riešenie problémov a robenie informovaných rozhodnutí pomocou vhodných digitálnych nástrojov a zdrojov."
+        },
+        "6": {
+          "description": "Žiaci preukazujú solídne porozumenie technologických pojmov, systémov a operácií."
+        }
+      }
+    }
+  }
+}

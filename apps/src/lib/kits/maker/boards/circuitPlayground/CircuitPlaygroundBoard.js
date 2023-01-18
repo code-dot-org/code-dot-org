@@ -430,9 +430,8 @@ export default class CircuitPlaygroundBoard extends EventEmitter {
           return;
         }
         if (port.queue.length > 512) {
-          throw new Error(
-            'Send queue is full! More than 512 pending messages.'
-          );
+          // Send queue is full.  More than 512 pending messages.
+          return;
         }
 
         const toSend = port.queue.shift();

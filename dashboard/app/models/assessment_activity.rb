@@ -19,7 +19,7 @@
 
 class AssessmentActivity < ApplicationRecord
   belongs_to :user, optional: true
-  belongs_to :script, optional: true
+  belongs_to :script, class_name: 'Unit', optional: true
   belongs_to :level, optional: true
   belongs_to :level_source, optional: true
 end

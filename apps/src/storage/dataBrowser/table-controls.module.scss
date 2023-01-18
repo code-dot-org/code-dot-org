@@ -1,0 +1,49 @@
+.buttonWrapper {
+  display: inline-block;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+.clearfix {
+  content: "";
+  display: inline-block;
+  width: 100%;
+  height: 0;
+  font-size: 0;
+  line-height: 0px;
+}
+
+.container {
+  // subtract the height of the clearfix element
+  margin-bottom: -28px;
+  // subtract the top margin of the buttonWrapper
+  margin-top: -10px;
+  padding-top: 0;
+  padding-bottom: 10px;
+  padding-left: 0;
+  padding-right: 0;
+  // make the buttons align right usually, but align left if they
+  // are forced to wrap onto the next line by a very long table name.
+  text-align: justify;
+}
+
+.exportButton {
+  width: 120px;
+  margin-left: 10px;
+}
+
+.exportButtonRtl {
+  margin-left: 0;
+}
+
+.tableName {
+  font-size: 18px;
+}
+
+.tableNameWrapper {
+  align-items: flex-end;
+  display: inline-flex;
+  height: 30px;
+  margin-right: 10px;
+  vertical-align: middle;
+}

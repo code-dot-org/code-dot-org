@@ -36,6 +36,7 @@ cs:
       myName: mojeJméno
       name: jméno
       nectar: nektar
+      object: objekt
       planet: planeta
       points: body
       random: náhodně
@@ -53,6 +54,7 @@ cs:
       speed: rychlost
       startX: startX
       startY: startY
+      type: typ
       variable: proměnná
       width: šířka
       wizard: čaroděj

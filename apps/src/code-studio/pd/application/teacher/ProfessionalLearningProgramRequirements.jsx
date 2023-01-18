@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import PropTypes from 'prop-types';
 import {
   PageLabels,
@@ -6,7 +6,14 @@ import {
   TextFields
 } from '@cdo/apps/generated/pd/teacherApplicationConstants';
 import {FormGroup} from 'react-bootstrap';
-import {styles as defaultStyles} from './TeacherApplicationConstants';
+import {
+  PROGRAM_CSD,
+  PROGRAM_CSP,
+  PROGRAM_CSA,
+  styles as defaultStyles
+} from './TeacherApplicationConstants';
+import PrivacyDialog from '../PrivacyDialog';
+import {PrivacyDialogMode} from '../../constants';
 import Spinner from '../../components/spinner';
 import color from '@cdo/apps/util/color';
 import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
@@ -21,9 +28,23 @@ import {LabeledDynamicCheckBoxesWithAdditionalTextFields} from '../../form_compo
 import {useRegionalPartner} from '../../components/useRegionalPartner';
 import {FormContext} from '../../form_components_func/FormComponent';
 
+const getProgramName = program => {
+  switch (program) {
+    case PROGRAM_CSD:
+      return 'CS Discoveries';
+    case PROGRAM_CSP:
+      return 'CS Principles';
+    case PROGRAM_CSA:
+      return 'CSA';
+    default:
+      return 'CS Program';
+  }
+};
+
 const ProfessionalLearningProgramRequirements = props => {
   const {data} = props;
   const [regionalPartner, regionalPartnerError] = useRegionalPartner(data);
+  const [isPrivacyDialogOpen, setIsPrivacyDialogOpen] = useState(false);
   const hasNoProgramSelected = data.program === undefined;
   const hasNoSchoolInformation = !data.school;
   const hasNotLoadedRegionalPartner = regionalPartner === undefined;
@@ -35,7 +56,7 @@ const ProfessionalLearningProgramRequirements = props => {
       return (
         <p style={styles.marginBottom}>
           <strong>
-            Summer Workshop dates have not yet been finalized for your region.{' '}
+            Workshop dates have not yet been finalized for your region.{' '}
             {regionalPartner.name} will be in touch once workshop details are
             known.
           </strong>
@@ -72,8 +93,8 @@ const ProfessionalLearningProgramRequirements = props => {
     if (hasRegionalPartner) {
       return (
         <label>
-          {regionalPartner.name} may have scholarships available to cover the
-          cost of the program.{' '}
+          {regionalPartner.name} may have scholarships available to cover some
+          or all costs associated with the program.{' '}
           <a
             href={
               pegasus('/educate/professional-learning/program-information') +
@@ -92,67 +113,23 @@ const ProfessionalLearningProgramRequirements = props => {
       return (
         <label>
           When you are matched with a partner, they may have scholarships
-          available to cover the cost of the program. Let us know if your school
-          or district would be able to pay the fee or if you need to be
-          considered for a scholarship.
+          available to cover some or all costs associated with the program. Let
+          us know if your school or district would be able to pay the fee or if
+          you need to be considered for a scholarship.
         </label>
       );
     }
   };
 
-  const renderProgramRequirements = () => {
-    return (
-      <div>
-        <p>
-          Code.org’s Professional Learning Program is a yearlong program
-          starting in the summer and concluding in the spring. Workshops can be
-          held in-person, virtually, or as a combination of both throughout the
-          year.
-          {hasRegionalPartner && (
-            <span>
-              {' '}
-              Refer to {`${regionalPartner.name}'s `}
-              <a
-                href={
-                  pegasus(
-                    '/educate/professional-learning/program-information'
-                  ) + (!!data.schoolZipCode ? '?zip=' + data.schoolZipCode : '')
-                }
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                landing page
-              </a>{' '}
-              for more information about the schedule and delivery model.
-            </span>
-          )}
-        </p>
-        <LabeledRadioButtonsWithAdditionalTextFields
-          name="committed"
-          textFieldMap={{
-            [TextFields.noExplain]: 'other'
-          }}
-        />
-        {hasRegionalPartner ? (
-          renderAssignedWorkshopList()
-        ) : (
-          <p style={styles.marginBottom}>
-            <strong>
-              Once you have been matched with a partner, they will be in touch
-              regarding Summer Workshop dates.
-            </strong>
-          </p>
-        )}
-        <div>
-          {renderCostNote(hasRegionalPartner)}
-          <LabeledSingleCheckbox name="understandFee" />
-          <LabeledRadioButtons name="payFee" />
-          {data.payFee === TextFields.noPayFee && (
-            <LabeledLargeInput name="scholarshipReasons" />
-          )}
-        </div>
-      </div>
-    );
+  const openPrivacyDialog = event => {
+    // preventDefault so clicking this link inside the label doesn't
+    // also check the checkbox.
+    event.preventDefault();
+    setIsPrivacyDialogOpen(true);
+  };
+
+  const handleClosePrivacyDialog = () => {
+    setIsPrivacyDialogOpen(false);
   };
 
   const renderContents = () => {
@@ -160,7 +137,7 @@ const ProfessionalLearningProgramRequirements = props => {
       return (
         <div style={styles.error}>
           <p>
-            Please fill out Section 2 and select your program before completing
+            Please fill out Section 1 and select your program before completing
             this section.
           </p>
         </div>
@@ -169,7 +146,7 @@ const ProfessionalLearningProgramRequirements = props => {
       return (
         <div style={styles.error}>
           <p>
-            Please fill out Section 1 and select your school before completing
+            Please fill out Section 2 and select your school before completing
             this section.
           </p>
         </div>
@@ -195,6 +172,95 @@ const ProfessionalLearningProgramRequirements = props => {
     }
   };
 
+  const renderProgramRequirements = () => {
+    const programConclusion =
+      data.program === PROGRAM_CSA
+        ? 'The program concludes the following summer with a Capstone experience that ' +
+          'serves as an opportunity to prepare for the coming year and further connects ' +
+          'you with the CS Education Community.'
+        : 'The program will conclude in the spring.';
+    return (
+      <div>
+        <p>
+          Code.org’s Professional Learning Program for{' '}
+          {getProgramName(data.program)} is a yearlong program, meant to support
+          you throughout your first year teaching the course. Starting in the
+          summer, the program begins with a week-long workshop to prepare you to
+          start the year. During the school year, Academic Year Workshops will
+          reinforce your skills and provide a community to discuss questions you
+          have during the year. {programConclusion} Workshops will either be
+          held in-person, virtually, or as a combination of both throughout the
+          year.
+          {hasRegionalPartner && (
+            <span>
+              {' '}
+              Refer to {`${regionalPartner.name}'s `}
+              <a
+                href={
+                  pegasus(
+                    '/educate/professional-learning/program-information'
+                  ) + (!!data.schoolZipCode ? '?zip=' + data.schoolZipCode : '')
+                }
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                landing page
+              </a>{' '}
+              for more information about the schedule and delivery model in your
+              region.
+            </span>
+          )}
+        </p>
+
+        <LabeledRadioButtonsWithAdditionalTextFields
+          name="committed"
+          textFieldMap={{
+            [TextFields.noExplain]: 'other'
+          }}
+        />
+        {hasRegionalPartner ? (
+          renderAssignedWorkshopList()
+        ) : (
+          <p style={styles.marginBottom}>
+            <strong>
+              Once you have been matched with a partner, they will be in touch
+              regarding Summer Workshop dates.
+            </strong>
+          </p>
+        )}
+        <div>
+          {renderCostNote(hasRegionalPartner)}
+          <LabeledSingleCheckbox name="understandFee" />
+          <LabeledRadioButtons name="payFee" />
+          {data.payFee === TextFields.noPayFee && (
+            <LabeledLargeInput name="scholarshipReasons" />
+          )}
+        </div>
+
+        <label className="control-label">Submit your application</label>
+        <LabeledSingleCheckbox
+          name="agree"
+          label={
+            <span>
+              {PageLabels.professionalLearningProgramRequirements.agree.replace(
+                'my local Code.org Regional Partner',
+                regionalPartner
+                  ? regionalPartner.name
+                  : 'my local Code.org Regional Partner'
+              )}{' '}
+              <a onClick={openPrivacyDialog}>Learn more.</a>
+            </span>
+          }
+        />
+        <PrivacyDialog
+          show={isPrivacyDialogOpen}
+          onHide={handleClosePrivacyDialog}
+          mode={PrivacyDialogMode.TEACHER_APPLICATION}
+        />
+      </div>
+    );
+  };
+
   return (
     <FormContext.Provider value={props}>
       <LabelsContext.Provider
@@ -202,7 +268,7 @@ const ProfessionalLearningProgramRequirements = props => {
       >
         <FormGroup>
           <h3>
-            Section 3: {SectionHeaders.professionalLearningProgramRequirements}
+            Section 7: {SectionHeaders.professionalLearningProgramRequirements}
           </h3>
 
           {renderContents()}
@@ -245,12 +311,14 @@ ProfessionalLearningProgramRequirements.processPageData = data => {
 
   return changes;
 };
+
 ProfessionalLearningProgramRequirements.associatedFields = [
   ...Object.keys(PageLabels.professionalLearningProgramRequirements),
   'regionalPartnerId',
   'regionalPartnerGroup',
   'regionalPartnerWorkshopIds'
 ];
+
 ProfessionalLearningProgramRequirements.propTypes = {
   options: PropTypes.object.isRequired,
   errors: PropTypes.arrayOf(PropTypes.string).isRequired,

@@ -3,7 +3,7 @@
   "name": "setSize",
   "category": "UI controls",
   "category_key": "ui_controls",
-  "content": "Sets the *width* and *height* for the UI element.\n\nYour app sometimes needs to resize UI elements on a screen. All UI elements ([`button()`(#fff176)](/docs/applab/button/), [`textInput()`(#fff176)](/docs/applab/textInput/), [`textLabel()`(#fff176)](/docs/applab/textLabel/), [`dropdown()`(#fff176)](/docs/applab/dropdown/), [`checkbox()`(#fff176)](/docs/applab/checkbox/), [`radioButton()`(#fff176)](/docs/applab/radioButton/), `image()`), can be resized. It is usually easier to place UI elements in their initial positions, with initial sizes, using Design mode in App Lab. In Design mode you can also specify font size, font color and background color for UI elements.",
+  "content": "Sets the *width* and *height* for the UI element.\n\nYour app sometimes needs to resize UI elements on a screen. All UI elements ([`button()`(#fff176)](/docs/applab/button/), [`textInput()`(#fff176)](/docs/applab/textInput/), [`textLabel()`(#fff176)](/docs/applab/textLabel/), [`dropdown()`(#fff176)](/docs/applab/dropdown/), [`checkbox()`(#fff176)](/docs/applab/checkbox/), [`radioButton()`(#fff176)](/docs/applab/radioButton/), [`image()`(#fff176)](/docs/applab/image/)), can be resized. It is usually easier to place UI elements in their initial positions, with initial sizes, using Design mode in App Lab. In Design mode you can also specify font size, font color and background color for UI elements.",
   "examples": [
     {
       "name": "",
@@ -34,6 +34,11 @@
       "required": true,
       "description": "The width to set the UI element to, in pixels."
     }
+  ],
+  "parameters": [
+    "id",
+    "width",
+    "height"
   ],
   "short_description": "Sets the width and height for the UI element.",
   "syntax": "setSize(id, width, height)",

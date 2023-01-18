@@ -141,7 +141,10 @@ def download_workshop_emails(output_folder)
 
   PREVIEWS.each do |preview|
     print '.'
-    IO.copy_stream(open(base + preview + body), "#{output_folder}/#{preview}_body.html")
+    IO.copy_stream(
+      URI.parse(base + preview + body).open,
+      "#{output_folder}/#{preview}_body.html"
+    )
 
     # This file contains email header like From/To/CC and a few more things.
     # However it has DateTime field that changes, so we exclude it from the comparison.

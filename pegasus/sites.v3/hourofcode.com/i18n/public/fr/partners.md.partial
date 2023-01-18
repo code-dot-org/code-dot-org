@@ -2,13 +2,11 @@
 title: Partenaires
 ---
 
-Hour of Code est piloté par les comités consultatifs et de révision de Hour of Code et de Computer Science Education Week.
+L'Heure du code est conduite par le comité de contrôle de l'Heure du code.
 
-Le [comité consultatif]({{ urls/advisory_committee }}) est composé de représentants des écoles de la maternelle à la terminale, du monde universitaire, d'organisations à but non lucratif, d'organisations à but lucratif et d'organisations internationales. Cette commission oriente la stratégie de la campagne de Hour of Code .
+Le [Comité d'évaluation]({{ urls/review_committee }}) est composé de 12 éducateurs actuels et anciens de la maternelle à la 12e année. Ils évaluent et recommandent des activités en se basant sur une grille d'évaluation établie par un comité consultatif. Ces éducateurs évaluent les activités réalisées par les apprenants et les programmes de cours proposés par les enseignants et présentés par des centaines de participants. Ils évaluent la valeur éducative des activités, leur capacité à susciter l'intérêt des apprenants et leur attrait potentiel pour divers groupes d'élèves.
 
-Le [comité de révision]({{ urls/review_committee }}) est composé de 15 éducateurs de la maternelle à la terminale qui évaluent et recommandent des activités sur la base des critères du comité consultatif. Ces éducateurs examinent les activités dirigées par les élèves et les programmes de cours dirigés par les enseignants, proposés par des centaines de partenaires d'activités. Ils évaluent la valeur éducative des activités, leur capacité à susciter l'engagement des apprenants et leur capacité à intéresser divers groupes d'élèves.
-
-Le travail et le dévouement des deux comités ont contribué au succès de Hour of Code et à sa vision d'offrir à chaque élève une initiation à l'informatique.
+Le travail et le dévouement du comité ont contribué au succès de l'Heure du Code et à sa mission qui est de faire découvrir l'informatique à tous les élèves.
 
 # Principaux partenaires et soutiens
 

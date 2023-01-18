@@ -2,6 +2,8 @@
 hr:
   data:
     blocks:
+      AmysBlocks_spriteSayVar:
+        text: "{SPRITE}kaže{TEXT1}"
       BadGuys_setSizeAll_dropdown:
         options:
           SIZE:
@@ -268,6 +270,32 @@ hr:
             '"enter"': unesite
             '"i"': i
             '"x"': x
+      DansBlocks_getMicroscope:
+        text: Mikroskop ima {INPUT1}
+        options:
+          INPUT1:
+            '1': sok od limuna
+            '3': baking soda
+            '5': both
+      DansBlocks_setForegroundEffect2:
+        options:
+          EFFECT:
+            '"hearts"': srca
+            '"rain"': kiša
+      DansBlocks_setMicroscope:
+        options:
+          INPUT1:
+            '1': sok od limuna
+            '3': baking soda
+            '5': both
+      FunctionBlocks_communicate:
+        text: Komunikacija {VAR1} sa {SPRITE1COSTUME}
+      FunctionBlocks_makeManipulative2:
+        text: napraviti {NUM} novih {ANIMATION_NAME} sprajtova {BEHAVIOR}
+      FunctionBlocks_representManipulative:
+        text: predstavlja {NUM} novih {ANIMATION_NAME} sprajtova [BEHAVIOR][2]
+      FunctionBlocks_spriteSayVar:
+        text: "{SPRITE}kaže{TEXT1}"
       gamelab_atTime:
         options:
           UNIT:
@@ -369,6 +397,30 @@ hr:
             "'sound://category_animals/chicken.mp3'": kokoš
             "'sound://category_animals/dog.mp3'": pas
             "'sound://category_digital/jump_7.mp3'": skoči
+      gamelab_playSoundOptionsSoccer:
+        options:
+          SOUND:
+            "'sound://category_sports/Airhorn_SFX.mp3'": Zračna truba
+            "'sound://category_sports/Crowd_Applause_SFX.mp3'": pljesak
+            "'sound://category_sports/Crowd_Chant_SFX.mp3'": skandiranje
+            "'sound://category_sports/Crowd_Cheer_SFX.mp3'": klicanje
+            "'sound://category_sports/Hitting_Soccer_Ball_SFX.mp3'": udarac
+            "'sound://category_sports/Double_Whistle_SFX.mp3'": dupli zvižduk
+            "'sound://category_sports/One_Whistle_SFX.mp3'": zvižduk
+      gamelab_playSoundOptionsSpace:
+        options:
+          SOUND:
+            "'sound://category_space/Blackhole_SFX.mp3'": crna rupa
+            "'sound://category_space/Bullet_cluster_SFX.mp3'": Bullet klaster
+            "'sound://category_space/Carina_SFX.mp3'": carina
+            "'sound://category_space/Cassiopeia_SFX.mp3'": kasiopeja
+            "'sound://category_space/Crab_nebula_SFX.mp3'": rakova maglica
+            "'sound://category_space/Launch_SFX.mp3'": lansiranje
+            "'sound://category_space/Lift_Off.mp3'": polijetanje
+            "'sound://category_space/Pillars_SFX.mp3'": stupovi
+            "'sound://category_space/Southern_ring_SFX.mp3'": južni prsten
+            "'sound://category_space/Supernova_SFX.mp3'": supernova
+            "'sound://category_space/Tycho_SFX.mp3'": tycho
       gamelab_playerBehaviors:
         options:
           BEHAVIOR:
@@ -601,6 +653,38 @@ hr:
             '"down"': strelica dolje
             '"left"': strelica lijevo
             '"right"': strelica desno
+      ParticlesBlocks_getMicroscope:
+        text: Mikroskop ima {INPUT1}
+        options:
+          INPUT1:
+            '1': sok od limuna
+            '3': baking soda
+            '5': both
+      ParticlesBlocks_setMicroscope:
+        options:
+          INPUT1:
+            '1': sok od limuna
+            '3': baking soda
+            '5': both
+      ParticlesBlocks_statesOfMatter:
+        options:
+          BEHAVIOR:
+            new Behavior(solid, []): čvrsto tijelo
+            new Behavior(liquid, []): tečan
+            new Behavior(wandering, []): plin
+      ParticlesBlocks_statesOfMatter2:
+        text: Postavka {COSTUME} na {BEHAVIOR} ponašanje
+        options:
+          BEHAVIOR:
+            '"solid"': čvrsta čestica
+            '"liquid"': tekuća čestica
+            '"gas"': čestica plina
+      ParticlesBlocks_statesOfMatter_testing:
+        options:
+          BEHAVIOR:
+            '"solid"': čvrsta čestica
+            '"liquid"': tekuća čestica
+            '"gas"': čestica plina
       Poetry_addFrame:
         options:
           BRUSH:
@@ -618,6 +702,20 @@ hr:
         options:
           SOUND:
             '"sound://category_jump/vibrant_game_jumping_up_1.mp3"': skoči
+      Poetry_playSoundOptionsSpace:
+        options:
+          SOUND:
+            "'sound://category_space/Blackhole_SFX.mp3'": crna rupa
+            "'sound://category_space/Bullet_cluster_SFX.mp3'": Bullet klaster
+            "'sound://category_space/Carina_SFX.mp3'": carina
+            "'sound://category_space/Cassiopeia_SFX.mp3'": kasiopeja
+            "'sound://category_space/Crab_nebula_SFX.mp3'": rakova maglica
+            "'sound://category_space/Launch_SFX.mp3'": lansiranje
+            "'sound://category_space/Lift_Off.mp3'": polijetanje
+            "'sound://category_space/Pillars_SFX.mp3'": stupovi
+            "'sound://category_space/Southern_ring_SFX.mp3'": južni prsten
+            "'sound://category_space/Supernova_SFX.mp3'": supernova
+            "'sound://category_space/Tycho_SFX.mp3'": tycho
       Poetry_setBackgroundEffect:
         options:
           EFFECT:
@@ -668,6 +766,11 @@ hr:
             '8': '8'
             '9': '9'
             '10': '10'
+            '11': '11'
+            '12': '12'
+            '13': '13'
+            '14': '14'
+            '15': '15'
       RyanLab_moveForward:
         text: idi naprijed
       RyanLab_turnLeft:
@@ -728,3 +831,12 @@ hr:
         text: idi naprijed
       craft_placeTorch:
         text: postavi baklju
+      storylab_setForegroundEffect2:
+        options:
+          EFFECT:
+            '"hearts"': srca
+            '"rain"': kiša
+      storylab_setHeading:
+        text: postaviti naslov {HEADING}
+      storylab_setSubheading:
+        text: postaviti podnaslov {SUBHEADING}

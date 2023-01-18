@@ -1,0 +1,27 @@
+{
+  "data": {
+    "name_s": "Fake Name",
+    "email_s": "name.fake@fabricated.edu",
+    "event_type_s": "out_of_school",
+    "hoc_company_s": null,
+    "hoc_country_s": "us",
+    "nces_school_s": null,
+    "school_name_s": "Fabricated Elementary",
+    "event_location_s": "School",
+    "hoc_event_country_s": "US",
+    "organization_name_s": "Imaginary Education Org",
+    "send_posters_flag_b": "0",
+    "entire_school_flag_b": "0",
+    "special_event_flag_b": "0",
+    "match_volunteer_flag_b": "",
+    "send_posters_address_s": "",
+    "special_event_details_s": "",
+    "email_preference_opt_in_s": "yes"
+  },
+  "processed_data": {
+    "location_p": "12.3456789,-98.7654321",
+    "location_country_s": "United States",
+    "nces_school_name_s": "",
+    "location_country_code_s": "US"
+  }
+}

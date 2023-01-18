@@ -1,0 +1,17 @@
+{
+  "sq-AL": {
+    "data": {
+      "standard_categories": {
+        "CT": {
+          "description": "Te menduarit kompjuterik"
+        },
+        "L": {
+          "description": "Gjuha"
+        },
+        "F": {
+          "description": "funksione"
+        }
+      }
+    }
+  }
+}

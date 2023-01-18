@@ -71,6 +71,10 @@ body.oceans-blue {
   background-color: $oceans_deep_blue;
 }
 
+body.music-black {
+  background-color: $music_black;
+}
+
 h1 {
   font-family: $gotham-extra-bold;
   font-weight: normal;
@@ -416,9 +420,11 @@ img.video_thumbnail {
 .bannerContentContainer {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   width: 100%;
   margin: 16px;
 }
+
 #courses-container {
   #header-banner {
     background-position: 75% 40%;
@@ -497,7 +503,7 @@ html, body {
   min-height: $footer_min_height;
   padding-top: $footer_padding-top;
   font-size: 14px;
-  background-color: $dark_color;
+  background-color: $darkest_gray;
   color: $header_text;
   a:link, a:visited, a:hover, a:active {
     font-family: $gotham-regular;
@@ -526,7 +532,7 @@ html, body {
   }
   .dim {
     display: inline-block;
-    opacity: 0.5;
+    opacity: 0.8;
   }
 
   .container {
@@ -849,6 +855,11 @@ body.embedded_iframe {
 $default-modal-width: 640px;
 
 .modal {
+  @media screen and (max-height: 600px) {
+    max-height: 80vh;
+    overflow-y: auto;
+  }
+
   a:hover:not(.btn) {
     color: $red;
     background-color: $white;
@@ -1233,6 +1244,7 @@ input.header_input {
 
 #codeApp {
   position: relative;
+  margin: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
 
   .loading {
     height: 520px;
@@ -1698,7 +1710,15 @@ a.download-video {
   }
 
   #forgot-password {
-    font-family: $gotham-extra-bold-italics;
+    font-family: $gotham-extra-bold;
+  }
+
+  #password_field, #new_user {
+    margin-bottom: 0;
+  }
+
+  .password_help_link {
+    margin-bottom: 21px;
   }
 
   button {
@@ -1706,7 +1726,7 @@ a.download-video {
     background-color: $orange;
     border: 1px solid $orange;
     color: $white;
-    font-family: $gotham-extra-bold;
+    font-family: $gotham-bold;
     margin: 5px 0;
     width: $button-width;
   }
@@ -1715,6 +1735,10 @@ a.download-video {
     background-color: $blue;
     border: 1px solid $blue;
   }
+}
+
+#code_without_signing_in {
+  margin-top: 80px;
 }
 
 #signup, #school-info-modal {
@@ -2116,7 +2140,7 @@ a.download-video {
       background-color: $orange;
       border: 1px solid $orange;
       color: $white;
-      font-family: $gotham-extra-bold;
+      font-family: $gotham-bold;
       padding: 10px 20px;
       margin-right: 0;
     }
@@ -2124,7 +2148,7 @@ a.download-video {
 
   .oauth-sign-in {
     color: $white;
-    font-family: $gotham-extra-bold;
+    font-family: $gotham-bold;
     width: 100%;
     margin: 5px 0;
 
@@ -2532,6 +2556,10 @@ a.download-video {
   li {
     list-style-type: none;
   }
+}
+
+.blocklyMainBackground {
+  stroke: none;
 }
 
 #blockly-frame {
@@ -3712,6 +3740,38 @@ html[dir=rtl] {
   .mapboxgl-ctrl-geocoder--suggestion {
     color: $default_text;
     font-family: $gotham-regular, sans-serif;
+  }
+}
+
+#reset-predict-progress-button {
+  display: 'inline-block';
+  font-size: 12;
+  font-family: $gotham-regular;
+  border-width: '1px';
+  border-style: 'solid';
+  border-color: $border_gray;
+  border-bottom-left-radius: 3;
+  border-bottom-right-radius: 3;
+  border-top-left-radius: 3;
+  border-top-right-radius: 3;
+  text-decoration: 'none';
+  box-sizing: 'border-box';
+  overflow: 'hidden';
+  white-space: 'nowrap';
+  color: $white;
+  background-color: $red;
+  font-weight: 'bold';
+  box-shadow: 'inset 0 2px 0 0 rgba(255,255,255,0.40)';
+  &:hover:not(:disabled) {
+    box-shadow: 'none';
+    color: $red;
+    border-color: $red;
+    background-color: $white;
+    cursor: 'pointer';
+  }
+  &:disabled {
+    background-color: $lightest_red;
+    box-shadow: 'inset 0 2px 0 0 rgba(0,0,0,0.1)';
   }
 }
 

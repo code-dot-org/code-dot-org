@@ -445,7 +445,6 @@ da:
     popup:
       progress_for_user: "%{name}s fremskridt"
       progress: Dine fremskridt
-      lines: 'Total linjer kode: %{lines}'
       close: LUK
       mastery: Begreber
       puzzle_map: Etaper
@@ -602,6 +601,7 @@ da:
     no_primary_course: Prøv et kursusforløb på Code Studio
     choose_next_course: Prøv en Code Studio kursus ved at vælge en nedenfor
     print_certificate: Udskriv certifikat
+  certificate_hour_of_code: Hour of Code
   move_students:
     new_section_dne: Beklager, men sektionen %{new_section_code} findes ikke. Indtast
       venligst en anden sektionskode.
@@ -749,26 +749,18 @@ da:
         til at virke, og så derefter del din app på få sekunder.
       audience: Alder 13+
       cta: Lær hvordan
-    dance:
-      title: Dance Party
+    aquatic:
+      title: Minecraft
     dance-2019:
       title: Dance Party
-    hoc:
-      title: Klassisk labyrint
-      body: Prøv grundlæggende kodning. Millioner har allerede gjort det.
+    dance:
+      title: Dance Party
     flappy:
       title: Flappy kode
       body: Vil du skrive dit eget spil på mindre end 10 minutter? Prøv vores Flappy
         kode undervisning!
-    20-hour:
-      title: Accelereret kursus
-      body: Dette 20-timers kursus introducerer centrale computer videnskabs og programmering
-        begreber. Kurset er designet til brug i folkeskolens klasseværelser, men det
-        er sjovt at lære i alle aldre.
-      body_short: Lær grundlæggende datalogi i en accelereret version af kurser 2-4.
-    hoc2014:
-      try_new_tutorial: Prøv vores nye Hour of Code tutorial i beta-version
-      try_frozen: Kunstner med Anna og Elsa, fra Frozen
+    frozen:
+      title: Frozen
     gallery:
       title: Galleri
       body: Se et galleri af app og kunstnerbilleder skabt af vores brugere
@@ -778,17 +770,18 @@ da:
         og spil med genstande og figurer, der interagere med hinanden.
       audience: Alder 13+
       cta: Lær hvordan
+    hero:
+      title: Minecraft
+      body: Minecraft er tilbage med en splinterny aktivitet i En Times Kodning! En
+        rejse gennem Minecraft ved hjælp af kode.
     hoc-encryption:
       title: Enkel kryptering
-    weblab:
-      body: Web Lab er et programmeringsmiljø, hvor du kan lave simple websider ved
-        at bruge HTML og CSS. Design dine websider og del din side på få sekunder.
-      audience: Alder 13+
-      cta: Lær hvordan
-    frozen:
-      title: Frozen
-    starwars:
-      title: Star Wars
+    hoc:
+      title: Klassisk labyrint
+      body: Prøv grundlæggende kodning. Millioner har allerede gjort det.
+    hoc2014:
+      try_new_tutorial: Prøv vores nye Hour of Code tutorial i beta-version
+      try_frozen: Kunstner med Anna og Elsa, fra Frozen
     infinity:
       title: Infinity Play Lab
       body: Brug Play Lab til at skabe en historie eller et spil med karakterer fra
@@ -799,19 +792,26 @@ da:
     minecraft2016:
       title: Minecraft
       body: Programmer dyr og andre Minecraft-væsner i din egen udgave af Minecraft.
-    aquatic:
-      title: Minecraft
-    hero:
-      title: Minecraft
-      body: Minecraft er tilbage med en splinterny aktivitet i En Times Kodning! En
-        rejse gennem Minecraft ved hjælp af kode.
-    unplugged:
-      audience: Alder 4+
-    unplugged_conditionals:
-      title: Betingelser
+    starwars:
+      title: Star Wars
+    weblab:
+      body: Web Lab er et programmeringsmiljø, hvor du kan lave simple websider ved
+        at bruge HTML og CSS. Design dine websider og del din side på få sekunder.
+      audience: Alder 13+
+      cta: Lær hvordan
     widgets:
       audience: I alderen 14+
       cta: Lær hvordan
+    unplugged_conditionals:
+      title: Betingelser
+    unplugged:
+      audience: Alder 4+
+    20-hour:
+      title: Accelereret kursus
+      body: Dette 20-timers kursus introducerer centrale computer videnskabs og programmering
+        begreber. Kurset er designet til brug i folkeskolens klasseværelser, men det
+        er sjovt at lære i alle aldre.
+      body_short: Lær grundlæggende datalogi i en accelereret version af kurser 2-4.
   landing:
     report_bug: Rapporter fejl
     support: Få hjælp
@@ -1116,3 +1116,5 @@ da:
     not_now: Ikke nu
   behaviors:
     this_sprite: denne figur
+  pixelation:
+    binary: Binære

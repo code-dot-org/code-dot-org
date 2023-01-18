@@ -2,6 +2,7 @@ require 'test_helper'
 
 class Pd::Teachercon1819RegistrationTest < ActiveSupport::TestCase
   test 'required field validations' do
+    skip 'we are deprecating Teachercon1819Registration'
     registration = build(:pd_teachercon1819_registration, form_data: nil)
     refute registration.valid?
     assert_equal [
@@ -41,6 +42,7 @@ class Pd::Teachercon1819RegistrationTest < ActiveSupport::TestCase
   end
 
   test 'declined application requires fewer fields' do
+    skip 'we are deprecating Teachercon1819Registration'
     registration = create(:pd_teachercon1819_registration, hash_trait: :declined)
 
     assert registration.valid?
@@ -49,6 +51,7 @@ class Pd::Teachercon1819RegistrationTest < ActiveSupport::TestCase
   end
 
   test 'waitlisting or declining the registration will also update the application status' do
+    skip 'we are deprecating Teachercon1819Registration'
     {
       accepted: 'accepted_not_notified',
       waitlisted: 'waitlisted',

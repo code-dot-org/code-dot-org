@@ -1,0 +1,160 @@
+{
+  "si-LK": {
+    "data": {
+      "programming_environments": {
+        "gamelab": {
+          "categories": {
+            "groups": {
+              "expressions": {
+                "setColorEach": {
+                  "palette_params": {
+                    "color": {
+                      "type": "පාට"
+                    }
+                  }
+                },
+                "setTintEach": {
+                  "palette_params": {
+                    "color": {
+                      "type": "පාට"
+                    }
+                  }
+                }
+              }
+            },
+            "math": {
+              "name": "ගණිත",
+              "expressions": {
+                "randomNumber": {
+                  "palette_params": {
+                    "min": {
+                      "description": "ආපසු පැමිණි අවම සංක්‍යාව"
+                    },
+                    "max": {
+                      "description": "නැවත පැමිණි වැඩිතම සංක්‍යාව"
+                    }
+                  }
+                },
+                "randomNumber_min_max": {
+                  "palette_params": {
+                    "min": {
+                      "description": "ආපසු පැමිණි අවම සංක්‍යාව"
+                    },
+                    "max": {
+                      "description": "නැවත පැමිණි වැඩිතම සංක්‍යාව"
+                    }
+                  }
+                }
+              }
+            },
+            "variables": {
+              "name": "විචල්‍යන්"
+            },
+            "functions": {
+              "name": "ශ්‍රිතයන්"
+            }
+          }
+        },
+        "applab": {
+          "name": "මෘදුකාංග විද්‍යාගාරය",
+          "description": "App Lab යනු වැඩ සටහන් සම්පාදක පරිසරයකි. එය භාවිතා කර යෙදුම් නිර්මාණය කලහැක . යෙදුම් සැලසුම් කිරීම, JavaScript භාවිතා කර කේතනය කිරීම මෙය මගින් සිදුකල හැක. පසුව තත්පර කිහිපයකින් ඔබගේ යෙදුම බෙදාහැරීම සිදුකල හැක.",
+          "categories": {
+            "ui_controls": {
+              "expressions": {
+                "onEvent": {
+                  "palette_params": {
+                    "callback": {
+                      "type": "ශ්‍රිතය"
+                    }
+                  }
+                }
+              }
+            },
+            "data": {
+              "name": "දත්ත",
+              "expressions": {
+                "getPrediction": {
+                  "palette_params": {
+                    "callback": {
+                      "type": "ශ්‍රිතය"
+                    }
+                  }
+                }
+              }
+            },
+            "control": {
+              "expressions": {
+                "timedLoop": {
+                  "palette_params": {
+                    "callback": {
+                      "type": "ශ්‍රිතය"
+                    }
+                  }
+                }
+              }
+            },
+            "math": {
+              "name": "ගණිත",
+              "expressions": {
+                "randomNumber_min_max": {
+                  "palette_params": {
+                    "min": {
+                      "description": "ආපසු පැමිණි අවම සංක්‍යාව"
+                    },
+                    "max": {
+                      "description": "නැවත පැමිණි වැඩිතම සංක්‍යාව"
+                    }
+                  }
+                },
+                "randomNumber": {
+                  "palette_params": {
+                    "min": {
+                      "description": "ආපසු පැමිණි අවම සංක්‍යාව"
+                    },
+                    "max": {
+                      "description": "නැවත පැමිණි වැඩිතම සංක්‍යාව"
+                    }
+                  }
+                }
+              }
+            },
+            "variables": {
+              "name": "විචල්‍යන්"
+            },
+            "functions": {
+              "name": "ශ්‍රිතයන්"
+            }
+          }
+        },
+        "spritelab": {
+          "categories": {
+            "actions": {
+              "name": "ක්‍රියාවන්"
+            },
+            "events": {
+              "name": "වැඩසටහන්"
+            },
+            "loops": {
+              "name": "ලූපයන්"
+            },
+            "variables": {
+              "name": "විචල්‍යන්"
+            },
+            "math": {
+              "name": "ගණිත"
+            },
+            "logic": {
+              "name": "තර්කය"
+            },
+            "functions": {
+              "name": "ශ්‍රිතයන්"
+            },
+            "text": {
+              "name": "පෙළ"
+            }
+          }
+        }
+      }
+    }
+  }
+}

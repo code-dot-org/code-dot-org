@@ -2,7 +2,7 @@
 import $ from 'jquery';
 import PropTypes from 'prop-types';
 import React from 'react';
-import Radium from 'radium';
+import Radium from 'radium'; // eslint-disable-line no-restricted-imports
 import i18n from '@cdo/locale';
 import BaseDialog from '@cdo/apps/templates/BaseDialog';
 import Button from '@cdo/apps/templates/Button';

@@ -1,6 +1,7 @@
 require 'cdo/aws/s3'
 require 'rack/csrf'
-require_relative '../shared/middleware/helpers/storage_id'
+require_relative '../shared/middleware/helpers/core'
+require_relative '../shared/middleware/helpers/shared_auth_helpers'
 require 'cdo/asset_helper'
 require 'cdo/cookie_helpers'
 require 'cdo/language_dir'
@@ -57,11 +58,6 @@ end
 
 def form_error!(e)
   halt(400, {'Content-Type' => 'text/json'}, e.errors.to_json)
-end
-
-def have_permission?(permission)
-  return false unless dashboard_user_helper
-  dashboard_user_helper.has_permission?(permission)
 end
 
 def no_content!

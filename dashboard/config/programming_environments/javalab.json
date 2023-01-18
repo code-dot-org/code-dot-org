@@ -1,7 +1,9 @@
 {
   "name": "javalab",
   "published": true,
+  "description": "Java Lab is a programming environment where you can make Java programs using The Neighborhood, The Theater, or the console.",
   "editor_language": "java",
+  "image_url": "https://images.code.org/10b6c46871502e228a0bc375afd59679-neighborhood-01.png",
   "title": "Java Lab",
   "categories": [
     {

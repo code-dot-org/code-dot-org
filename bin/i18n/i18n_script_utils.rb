@@ -9,31 +9,27 @@ require 'psych'
 I18N_SOURCE_DIR = "i18n/locales/source"
 
 CROWDIN_PROJECTS = {
-  "codeorg": {
+  codeorg: {
     config_file: File.join(File.dirname(__FILE__), "codeorg_crowdin.yml"),
-    identity_file: File.join(File.dirname(__FILE__), "codeorg_credentials.yml"),
-    identity_file_v2: File.join(File.dirname(__FILE__), "crowdin_credentials.yml"),
+    identity_file: File.join(File.dirname(__FILE__), "crowdin_credentials.yml"),
     etags_json: File.join(File.dirname(__FILE__), "crowdin", "codeorg_etags.json"),
     files_to_sync_out_json: File.join(File.dirname(__FILE__), "crowdin", "codeorg_files_to_sync_out.json")
   },
   "codeorg-markdown": {
     config_file: File.join(File.dirname(__FILE__), "codeorg_markdown_crowdin.yml"),
-    identity_file: File.join(File.dirname(__FILE__), "codeorg_markdown_credentials.yml"),
-    identity_file_v2: File.join(File.dirname(__FILE__), "crowdin_credentials.yml"),
+    identity_file: File.join(File.dirname(__FILE__), "crowdin_credentials.yml"),
     etags_json: File.join(File.dirname(__FILE__), "crowdin", "codeorg-markdown_etags.json"),
     files_to_sync_out_json: File.join(File.dirname(__FILE__), "crowdin", "codeorg-markdown_files_to_sync_out.json")
   },
   "hour-of-code": {
     config_file: File.join(File.dirname(__FILE__), "hourofcode_crowdin.yml"),
-    identity_file: File.join(File.dirname(__FILE__), "hourofcode_credentials.yml"),
-    identity_file_v2: File.join(File.dirname(__FILE__), "crowdin_credentials.yml"),
+    identity_file: File.join(File.dirname(__FILE__), "crowdin_credentials.yml"),
     etags_json: File.join(File.dirname(__FILE__), "crowdin", "hour-of-code_etags.json"),
     files_to_sync_out_json: File.join(File.dirname(__FILE__), "crowdin", "hour-of-code_files_to_sync_out.json")
   },
   "codeorg-restricted": {
     config_file: File.join(File.dirname(__FILE__), "codeorg_restricted_crowdin.yml"),
-    identity_file: File.join(File.dirname(__FILE__), "codeorg_restricted_credentials.yml"),
-    identity_file_v2: File.join(File.dirname(__FILE__), "crowdin_credentials.yml"),
+    identity_file: File.join(File.dirname(__FILE__), "crowdin_credentials.yml"),
     etags_json: File.join(File.dirname(__FILE__), "crowdin", "codeorg-restricted_etags.json"),
     files_to_sync_out_json: File.join(File.dirname(__FILE__), "crowdin", "codeorg-restricted_files_to_sync_out.json")
   }
@@ -42,10 +38,15 @@ CROWDIN_PROJECTS = {
 CROWDIN_TEST_PROJECTS = {
   "codeorg-testing": {
     config_file: File.join(File.dirname(__FILE__), "codeorg-testing_crowdin.yml"),
-    identity_file: File.join(File.dirname(__FILE__), "codeorg-testing_credentials.yml"),
-    identity_file_v2: File.join(File.dirname(__FILE__), "crowdin_credentials.yml"),
+    identity_file: File.join(File.dirname(__FILE__), "crowdin_credentials.yml"),
     etags_json: File.join(File.dirname(__FILE__), "crowdin", "codeorg-testing_etags.json"),
     files_to_sync_out_json: File.join(File.dirname(__FILE__), "crowdin", "codeorg-testing_files_to_sync_out.json")
+  },
+  "codeorg-markdown-testing": {
+    config_file: File.join(File.dirname(__FILE__), "codeorg-testing_markdown_crowdin.yml"),
+    identity_file: File.join(File.dirname(__FILE__), "crowdin_credentials.yml"),
+    etags_json: File.join(File.dirname(__FILE__), "crowdin", "codeorg-testing_markdown_etags.json"),
+    files_to_sync_out_json: File.join(File.dirname(__FILE__), "crowdin", "codeorg-testing_markdown_files_to_sync_out.json")
   }
 }
 
@@ -168,7 +169,7 @@ class I18nScriptUtils
 
   # Used by get_level_from_url, for the script_level-specific case.
   def self.get_script_level(route_params, url)
-    script = Script.get_from_cache(route_params[:script_id])
+    script = Unit.get_from_cache(route_params[:script_id])
     unless script.present?
       error_class = 'Could not find script in get_script_level'
       error_message = "unknown script #{route_params[:script_id].inspect} for url #{url.inspect}"
@@ -185,7 +186,7 @@ class I18nScriptUtils
       uri = URI.parse(url)
       uri_params = CGI.parse(uri.query)
       if uri_params.key?('id')
-        script_level = Script.cache_find_script_level(uri_params['id'].first)
+        script_level = Unit.cache_find_script_level(uri_params['id'].first)
         script_level&.level
       elsif uri_params.key?('level_name')
         Level.find_by_name(uri_params['level_name'].first)
@@ -235,7 +236,7 @@ class I18nScriptUtils
   end
 
   def self.write_markdown_with_header(markdown, header, path)
-    open(path, 'w') do |f|
+    File.open(path, 'w') do |f|
       unless header.empty?
         f.write(I18nScriptUtils.to_crowdin_yaml(header))
         f.write("---\n\n")

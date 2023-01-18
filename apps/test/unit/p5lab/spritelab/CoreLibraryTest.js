@@ -4,6 +4,16 @@ import {stub} from 'sinon';
 import createP5Wrapper from '../../../util/gamelab/TestableP5Wrapper';
 import CoreLibrary from '@cdo/apps/p5lab/spritelab/CoreLibrary';
 import {commands as spriteCommands} from '@cdo/apps/p5lab/spritelab/commands/spriteCommands';
+import {
+  MAX_NUM_SPRITES,
+  SPRITE_WARNING_BUFFER
+} from '@cdo/apps/p5lab/spritelab/constants';
+import msg from '@cdo/locale';
+import {
+  workspaceAlertTypes,
+  displayWorkspaceAlert
+} from '@cdo/apps/code-studio/projectRedux';
+import * as redux from '@cdo/apps/redux';
 
 describe('SpriteLab Core Library', () => {
   let coreLibrary;
@@ -166,6 +176,76 @@ describe('SpriteLab Core Library', () => {
       expect(coreLibrary.getSpriteArray({name: spriteName})).to.have.members([
         coreLibrary.nativeSpriteMap[id3]
       ]);
+    });
+  });
+
+  describe('The number of sprites created is capped by MAX_NUM_SPRITES', () => {
+    it(`caps at ${MAX_NUM_SPRITES} sprites`, () => {
+      for (let i = 0; i < 50000; i++) {
+        coreLibrary.addSprite();
+      }
+      expect(coreLibrary.getNumberOfSprites()).to.equal(MAX_NUM_SPRITES);
+    });
+  });
+
+  describe('Workspace alert dispatch', () => {
+    let stubbedDispatch;
+    beforeEach(function() {
+      stubbedDispatch = stub();
+      stub(redux, 'getStore').returns({
+        dispatch: stubbedDispatch
+      });
+    });
+
+    afterEach(function() {
+      redux.getStore.restore();
+    });
+
+    // If the total number of sprites created is equal to or less than
+    // MAX_NUM_SPRITES - SPRITE_WARNING_BUFFER, then a display workspace alert
+    // should not have been dispatched
+    it(`If ${MAX_NUM_SPRITES -
+      SPRITE_WARNING_BUFFER} sprites or less are created, a workspace alert is NOT dispatched`, () => {
+      for (let i = 0; i < MAX_NUM_SPRITES - SPRITE_WARNING_BUFFER; i++) {
+        coreLibrary.addSprite();
+      }
+      expect(stubbedDispatch).to.not.have.been.calledWith(
+        displayWorkspaceAlert(
+          workspaceAlertTypes.warning,
+          msg.spriteLimitReached({limit: MAX_NUM_SPRITES}),
+          /* bottom */ true
+        )
+      );
+    });
+    // Once the total number of sprites created is equal to MAX_NUM_SPRITES, a
+    // displayWorkspaceAlert has been dispatched
+    it(`When ${MAX_NUM_SPRITES} sprites is reached, a workspace alert was dispatched`, () => {
+      for (let i = 0; i < MAX_NUM_SPRITES; i++) {
+        coreLibrary.addSprite();
+      }
+      expect(stubbedDispatch).to.have.been.calledOnceWith(
+        displayWorkspaceAlert(
+          workspaceAlertTypes.warning,
+          msg.spriteLimitReached({limit: MAX_NUM_SPRITES}),
+          /* bottom */ true
+        )
+      );
+    });
+
+    // When total number of sprites is >= MAX_NUM_SPRITES, the dispatch of
+    // displayWorkspaceAlert will occur only once due to the early return from
+    // the reachedSpriteMax function
+    it(`Even when 100 more than ${MAX_NUM_SPRITES} sprites is reached, workspace alert is dispatched only once`, () => {
+      for (let i = 0; i < MAX_NUM_SPRITES + 100; i++) {
+        coreLibrary.addSprite();
+      }
+      expect(stubbedDispatch).to.have.been.calledOnceWith(
+        displayWorkspaceAlert(
+          workspaceAlertTypes.warning,
+          msg.spriteLimitReached({limit: MAX_NUM_SPRITES}),
+          /* bottom */ true
+        )
+      );
     });
   });
 

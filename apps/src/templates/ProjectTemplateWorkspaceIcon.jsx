@@ -39,7 +39,7 @@ export default class ProjectTemplateWorkspaceIcon extends React.Component {
 
 const styles = {
   container: {
-    display: 'inline'
+    display: 'inline-block'
   },
   tooltip: {
     maxWidth: 200,

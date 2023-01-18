@@ -35,23 +35,17 @@ Chia sẻ hình ảnh về sự kiện của bạn trên Facebook và Twitter v�
 
 * * *
 
-## Tổ chức Đêm lập trình gia đình (Family Code Night) cùng Giờ lập trình và mời cha mẹ tham gia
+## Example plan for a school assembly or event
 
-Cân nhắc tổ chức một sự kiện buổi tối cho học sinh K-5 và mời phụ huynh tham gia cùng các em trong một giờ học môn khoa học máy tính. Đây là một cách tuyệt vời để thu hút cộng đồng lớn hơn và khuyến khích sự ủng hộ của phụ huynh đối với môn khoa học máy tính tại trường của bạn. Các đối tác của chúng tôi tại Family Code Night đã tạo ra một bộ sự kiện hoàn chỉnh kèm theo danh sách kiểm tra kế hoạch, kịch bản cho người thuyết trình, email mời tham dự, áp phích, powerpoint, v.v. để tổ chức sự kiện của riêng bạn. [Nhấp chuột vào đây để tải xuống Bộ công cụ sự kiện](http://www.familycodenight.org/DownloadCodeDotOrg.html).
+**Event:** School-wide Computer Science Education Week kick-off assembly
 
-* * *
+**Date:** {{ campaign_date/start_short }} (start of Computer Science Education Week)
 
-## Kế hoạch mẫu cho một buổi họp mặt hoặc sự kiện ở trường
+**Time:** During the school day. Mid-morning event preferred. Approximately 1 hour.
 
-**Sự kiện:** Lễ khai mạc Tuần lễ Giáo dục Khoa học Máy tính toàn trường
+**Location:** School assembly hall (e.g. theater, gym, cafeteria)
 
-**Ngày:** {{ campaign_date/start_short }} (bắt đầu Tuần lễ Giáo dục Khoa học Máy tính)
-
-**Thời gian:** Trong ngày đi học. Ưu tiên sự kiện vào giữa giờ buổi sáng. Khoảng 1 giờ.
-
-**Địa điểm:** Hội trường (Ví dụ: nhà hát, phòng thể chất, căn tin)
-
-## Kịch bản chương trình
+## Run of Show
 
 | Thời gian          | Hoạt động                                                                                                                                                  |
 | ------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------- |

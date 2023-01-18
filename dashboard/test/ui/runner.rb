@@ -242,11 +242,11 @@ def parse_options
       options.pegasus_db_access = true
       options.dashboard_db_access = true
     elsif rack_env?(:development)
-      options.pegasus_db_access = true if options.pegasus_domain =~ /(localhost|ngrok)/
-      options.dashboard_db_access = true if options.dashboard_domain =~ /(localhost|ngrok)/
+      options.pegasus_db_access = true if /(localhost|ngrok)/.match?(options.pegasus_domain)
+      options.dashboard_db_access = true if /(localhost|ngrok)/.match?(options.dashboard_domain)
     elsif rack_env?(:test)
-      options.pegasus_db_access = true if options.pegasus_domain =~ /test/
-      options.dashboard_db_access = true if options.dashboard_domain =~ /test/
+      options.pegasus_db_access = true if /test/.match?(options.pegasus_domain)
+      options.dashboard_db_access = true if /test/.match?(options.dashboard_domain)
     end
 
     if options.config
@@ -559,7 +559,7 @@ def output_synopsis(output_text, log_prefix)
 
   failing_scenarios = lines.rindex("Failing Scenarios:\n")
   if failing_scenarios
-    return lines[failing_scenarios..-1].map {|line| "#{log_prefix}#{line}"}.join
+    return lines[failing_scenarios..].map {|line| "#{log_prefix}#{line}"}.join
   else
     return lines.last(3).map {|line| "#{log_prefix}#{line}"}.join
   end
@@ -576,7 +576,7 @@ def how_many_reruns?(test_run_string)
     if !flakiness
       $lock.synchronize {puts "No flakiness data for #{test_run_string}".green}
       return 1
-    elsif flakiness == 0.0
+    elsif flakiness.abs < Float::EPSILON
       $lock.synchronize {puts "#{test_run_string} is not flaky".green}
       return 1
     else
@@ -728,10 +728,6 @@ def run_feature(browser, feature, options)
   run_environment['SKIP_I18N_INIT'] = 'true'
   run_environment['SKIP_DASHBOARD_ENABLE_PEGASUS'] = 'true'
 
-  # Force Applitools eyes to use a consistent host OS identifier for now
-  # BrowserStack was reporting Windows 6.0 and 6.1, causing different baselines
-  run_environment['APPLITOOLS_HOST_OS'] = browser['mobile'] ? 'iOS 11.3' : 'Windows 6x'
-
   max_reruns = how_many_reruns?(test_run_string)
 
   html_log = html_output_filename(test_run_string, options)
@@ -806,7 +802,7 @@ def run_feature(browser, feature, options)
   unless parsed_output.nil?
     scenario_count = parsed_output[:scenarios].to_i
     scenario_info = parsed_output[:info]
-    scenario_info = ", #{scenario_info}" unless scenario_info.blank?
+    scenario_info = ", #{scenario_info}" if scenario_info.present?
   end
 
   rerun_info = " with #{reruns} reruns" if reruns > 0

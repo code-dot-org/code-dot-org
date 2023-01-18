@@ -28,7 +28,7 @@
           "name": "Гъмбол- игрална лаборатория"
         },
         "dance/Dance Party": {
-          "name": "Танцово Парти"
+          "name": "Танцово Парти (2018)"
         },
         "aquatic/Aquatic": {
           "name": "Minecraft: Подводното пътешествие"
@@ -47,12 +47,21 @@
           "name": "Компресия на текста",
           "overview": "По някое време стигаме до физически лимит на колко бързо може да изпращаме битове, и ако искаме да изпратим много информация по-бързо, ние трябва да намерим начин да представим същата информация с по-малко бита - трябва да **компресираме** данните. В този урок, учениците ще използват Widget за Компресиране на Текст, за да компресират части от текст на Английски, като търсят модели и заместващи символи за по-дълги модели текст."
         },
+        "outbreak/Outbreak": {
+          "overview": "",
+          "preparation": "",
+          "purpose": "",
+          "student_overview": ""
+        },
         "infinity/Infinity": {
           "name": "Дисни Инфинити Игрална лаборатория",
           "student_overview": "В този урок, учащите получават въведение на компютърните науки и създават игра използвайки базов блоков код."
         },
         "Hour of Code/Hour of Code 2013": {
           "name": "Час на кодирането 2013"
+        },
+        "dance-2019/Dance Party": {
+          "name": "Танцово Парти"
         },
         "k5-onlinepd-2019/Loops": {
           "name": "Повторения"
@@ -116,6 +125,156 @@
         },
         "kodea-pd-2021/Next Steps": {
           "name": "Следващи стъпки"
+        },
+        "coursed-2022/Graph Paper Programming": {
+          "name": "Програмиране на милиметрова хартия"
+        },
+        "coursed-2022/Relay Programming": {
+          "name": "Повтори програмирането"
+        },
+        "coursed-2022/Dance Party": {
+          "name": "Танцово Парти"
+        },
+        "coursed-2022/Loops in Ice Age": {
+          "name": "Цикли в Ледена Епоха"
+        },
+        "coursed-2022/Conditionals with Cards": {
+          "name": "Условия с карти"
+        },
+        "coursef-2022/Introducing Sprite Lab": {
+          "name": "Въведение в Sprite Lab",
+          "purpose": "Първият урок е да ентусиазирате учениците за курса и те да свържат собствените си интереси с компютърните науки. "
+        },
+        "coursef-2022/Sprites in Action": {
+          "name": "Спрайтове в Действие",
+          "preparation": "Играйте през нивата и прегледайте слайдовете на урока."
+        },
+        "coursef-2022/Mini-Project: Virtual Pet": {
+          "name": "Мини-Проект: Виртуален Домашен Любимец"
+        },
+        "coursef-2022/Text and Prompts": {
+          "preparation": "Играйте през нивата и прегледайте слайдовете на урока."
+        },
+        "coursef-2022/Mini-Project: User Input Programs": {
+          "name": "Мини-Проект: Програми за Вход от Потребител"
+        },
+        "coursef-2022/Outbreak": {
+          "name": "Епидемия"
+        },
+        "coursef-2022/AI For Oceans": {
+          "name": "ИТ За Океани"
+        },
+        "coursef-2022/The Internet": {
+          "name": "Интернет"
+        },
+        "coursee-2022/Private and Personal Information": {
+          "name": "Лична Информация"
+        },
+        "coursee-2022/Mini-Project: About Me": {
+          "name": "Мини-Проект: За Мен"
+        },
+        "coursee-2022/Songwriting": {
+          "name": "Писане на песен"
+        },
+        "coursee-2022/Designing for Accessibility": {
+          "name": "Проектиране за Достъпност"
+        },
+        "courseb-2022/Move It, Move It": {
+          "name": "Преместете го, преместете го"
+        },
+        "courseb-2022/Getting Loopy": {
+          "name": "Да повтаряме"
+        },
+        "courseb-2022/Mini-Project: A Royal Battle with Events": {
+          "name": "Мини-Проект: Царска Битка със Събития"
+        },
+        "express-2022/Sprites in Action": {
+          "name": "Спрайтове в Действие",
+          "preparation": "Играйте през нивата и прегледайте слайдовете на урока."
+        },
+        "express-2022/Dance Party": {
+          "name": "Танцово Парти"
+        },
+        "express-2022/Mini-Project: Sticker Art": {
+          "name": "Мини-Проект: Стикер Изкуство"
+        },
+        "express-2022/Text and Prompts": {
+          "preparation": "Играйте през нивата и прегледайте слайдовете на урока."
+        },
+        "pre-express-2022/Programming with Rey and BB-8": {
+          "name": "Програмиране с Рей и BB-8"
+        },
+        "coursea-2022/Happy Maps": {
+          "name": "Щастливи карти"
+        },
+        "coursea-2022/Programming with Rey and BB-8": {
+          "name": "Програмиране с Рей и BB-8"
+        },
+        "coursec-2022/Mini-Project: Sticker Art": {
+          "name": "Мини-Проект: Стикер Изкуство"
+        },
+        "coursec-2022/The Big Event": {
+          "name": "Голямото събитие"
+        },
+        "coursec-2022/Mini-Project: Chase Game": {
+          "name": "Мини-Проект: Игра на Гоненица"
+        },
+        "coursec-2022/Binary Bracelets": {
+          "name": "Двоични гривни"
+        },
+        "csd5-2022/Representing Images": {
+          "name": "Представяне на Изображения"
+        },
+        "csd5-2022/Combining Representations": {
+          "name": "Комбиниране на Представяния"
+        },
+        "csd5-2022/Keeping Data Secret": {
+          "name": "Пазене на Тайни Данни"
+        },
+        "csd1-2022/The Problem Solving Process": {
+          "name": "Процеса за Решаване на Проблеми"
+        },
+        "csd1-2022/What is a Computer?": {
+          "name": "Какво е Компютър?"
+        },
+        "csd3-2022/Variables": {
+          "name": "Променливи"
+        },
+        "csd3-2022/Sprites": {
+          "name": "Спрайт"
+        },
+        "csd3-2022/Sprite Properties": {
+          "name": "Свойства на Спрайта"
+        },
+        "csd3-2022/Text": {
+          "name": "Текст"
+        },
+        "csd3-2022/Conditionals": {
+          "name": "Условия"
+        },
+        "csd3-2022/Keyboard Input": {
+          "name": "Въвеждане от Клавиатурата"
+        },
+        "csd3-2022/Velocity": {
+          "name": "Скорост"
+        },
+        "csd3-2022/Collisions": {
+          "name": "Сблъсъци"
+        },
+        "csd3-2022/Functions": {
+          "name": "Функции"
+        },
+        "csd2-2022/Headings": {
+          "name": "Заглавия"
+        },
+        "csd6-2022/Color LEDs": {
+          "name": "Цветни LEDs"
+        },
+        "csd6-2022/Functions": {
+          "name": "Функции"
+        },
+        "csd7-2022/Introduction to AI Lab": {
+          "name": "Въведение в AI Lab"
         },
         "courseb-2018/Move It, Move It": {
           "name": "Преместете го, преместете го"
@@ -935,6 +1094,9 @@
         },
         "allthethings/Java Lab": {
           "name": "Java (Джава) Практически Урок"
+        },
+        "allthethings/lesson-48": {
+          "name": "Поезия"
         },
         "coursef-2021/lesson-6": {
           "name": "Въведение в Sprite Lab",

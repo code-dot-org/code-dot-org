@@ -19,6 +19,7 @@ th:
       length: ความยาว
       name: ชื่อ
       nectar: น้ำหวาน
+      object: วัตถุ
       planet: ดาวเคราะห์
       points: คะแนน
       random: สุ่ม
@@ -29,6 +30,7 @@ th:
       sides: ด้านข้าง
       size: ขนาด
       speed: ความเร็ว
+      type: ชนิด
       variable: ตัวแปร
       width: ความกว้าง
       wizard: พ่อมด

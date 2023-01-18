@@ -2,6 +2,8 @@ require 'test_helper'
 
 class Pd::FitWeekend1819RegistrationTest < ActiveSupport::TestCase
   test 'required field validations' do
+    skip 'we are deprecating FitWeekend1819Registration'
+
     registration = build(:pd_fit_weekend1819_registration, form_data: nil)
     refute registration.valid?
     assert_equal [
@@ -35,6 +37,8 @@ class Pd::FitWeekend1819RegistrationTest < ActiveSupport::TestCase
   end
 
   test 'declined application requires fewer fields' do
+    skip 'we are deprecating FitWeekend1819Registration'
+
     registration = create(:pd_fit_weekend1819_registration, status: :declined)
 
     assert registration.valid?
@@ -43,6 +47,8 @@ class Pd::FitWeekend1819RegistrationTest < ActiveSupport::TestCase
   end
 
   test 'declining the registration updates the application status' do
+    skip 'we are deprecating FitWeekend1819Registration'
+
     {
       accepted: 'accepted_not_notified',
       declined: 'withdrawn'

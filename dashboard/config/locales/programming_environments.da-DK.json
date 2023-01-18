@@ -1,0 +1,234 @@
+{
+  "da-DK": {
+    "data": {
+      "programming_environments": {
+        "gamelab": {
+          "name": "Spil Laboratoriet",
+          "categories": {
+            "game_lab": {
+              "name": "Spil Laboratoriet",
+              "expressions": {
+                "mouseWentDown": {
+                  "examples": {
+                    "Black and White": {
+                      "name": "Sort og hvid"
+                    }
+                  }
+                },
+                "playSound": {
+                  "short_description": "Afspil MP3-, OGG- eller WAV-lydfil fra den angivne URL."
+                }
+              }
+            },
+            "sprites": {
+              "name": "figure",
+              "expressions": {
+                "getSpeed": {
+                  "examples": {
+                    "Spiral": {
+                      "name": "Spiral"
+                    }
+                  }
+                }
+              }
+            },
+            "groups": {
+              "name": "Grupper",
+              "expressions": {
+                "setColorEach": {
+                  "palette_params": {
+                    "color": {
+                      "type": "Farve"
+                    }
+                  }
+                },
+                "setTintEach": {
+                  "palette_params": {
+                    "color": {
+                      "type": "Farve"
+                    }
+                  }
+                }
+              }
+            },
+            "drawing": {
+              "expressions": {
+                "shape": {
+                  "examples": {
+                    "Star": {
+                      "name": "Stjerne"
+                    }
+                  }
+                }
+              }
+            },
+            "math": {
+              "name": "Matematik",
+              "expressions": {
+                "randomNumber": {
+                  "palette_params": {
+                    "min": {
+                      "description": "Det mindste tal returneret"
+                    },
+                    "max": {
+                      "description": "Det største tal returneret"
+                    }
+                  }
+                },
+                "randomNumber_min_max": {
+                  "palette_params": {
+                    "min": {
+                      "description": "Det mindste tal returneret"
+                    },
+                    "max": {
+                      "description": "Det største tal returneret"
+                    }
+                  }
+                }
+              }
+            },
+            "variables": {
+              "name": "Variabler",
+              "expressions": {
+                "declareAssign_x": {
+                  "short_description": "Erklærer en variabel med navnet efter 'var', og tildeler værdien på højre side af udtrykket"
+                }
+              }
+            },
+            "functions": {
+              "name": "Funktioner"
+            }
+          }
+        },
+        "applab": {
+          "name": "App Lab",
+          "description": "App Lab er et programmeringsmiljø, hvor du kan lave simple apps. Design en app, kod med blokke eller brug JavaScript for at få det til at virke, og så derefter del din app på få sekunder.",
+          "categories": {
+            "ui_controls": {
+              "expressions": {
+                "onEvent": {
+                  "palette_params": {
+                    "callback": {
+                      "type": "Funktion"
+                    }
+                  }
+                },
+                "playSound": {
+                  "short_description": "Afspil MP3-, OGG- eller WAV-lydfil fra den angivne URL."
+                }
+              }
+            },
+            "data": {
+              "expressions": {
+                "getPrediction": {
+                  "palette_params": {
+                    "callback": {
+                      "type": "Funktion"
+                    }
+                  }
+                }
+              }
+            },
+            "control": {
+              "expressions": {
+                "timedLoop": {
+                  "palette_params": {
+                    "callback": {
+                      "type": "Funktion"
+                    }
+                  }
+                }
+              }
+            },
+            "math": {
+              "name": "Matematik",
+              "expressions": {
+                "randomNumber_min_max": {
+                  "palette_params": {
+                    "min": {
+                      "description": "Det mindste tal returneret"
+                    },
+                    "max": {
+                      "description": "Det største tal returneret"
+                    }
+                  }
+                },
+                "randomNumber": {
+                  "palette_params": {
+                    "min": {
+                      "description": "Det mindste tal returneret"
+                    },
+                    "max": {
+                      "description": "Det største tal returneret"
+                    }
+                  }
+                }
+              }
+            },
+            "variables": {
+              "name": "Variabler",
+              "expressions": {
+                "declareAssign_x": {
+                  "short_description": "Erklærer en variabel med navnet efter 'var', og tildeler værdien på højre side af udtrykket"
+                },
+                "addPair": {
+                  "return_value": "Ingen"
+                }
+              }
+            },
+            "functions": {
+              "name": "Funktioner"
+            },
+            "advanced": {
+              "name": "Avanceret"
+            }
+          }
+        },
+        "spritelab": {
+          "name": "SpriteLab",
+          "categories": {
+            "sprites": {
+              "name": "figure"
+            },
+            "world": {
+              "name": "Verden"
+            },
+            "location": {
+              "name": "Placering"
+            },
+            "actions": {
+              "name": "Handlinger"
+            },
+            "events": {
+              "name": "Hændelser"
+            },
+            "behaviors": {
+              "name": "Opførsel"
+            },
+            "loops": {
+              "name": "Løkker"
+            },
+            "variables": {
+              "name": "Variabler"
+            },
+            "math": {
+              "name": "Matematik"
+            },
+            "logic": {
+              "name": "Logik"
+            },
+            "functions": {
+              "name": "Funktioner"
+            },
+            "text": {
+              "name": "Tekst"
+            },
+            "comments": {
+              "name": "Kommentarer"
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,6 +1,5 @@
 #!/usr/bin/env ruby
 require_relative('../config/environment')
-require 'cdo/properties'
 require 'json'
 
 LEVEL_TYPES_WITH_ILS = %w(Craft Studio Karel Eval Maze Calc Blockly StudioEC Artist).freeze

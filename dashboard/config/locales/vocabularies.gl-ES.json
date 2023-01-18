@@ -17,11 +17,90 @@
         "loops/aquatic/unversioned": {
           "word": "Bucles"
         },
+        "event/outbreak/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "models_and_simulations/outbreak/unversioned": {
+          "word": "",
+          "definition": ""
+        },
         "code/sports/unversioned": {
           "word": "Código"
         },
+        "conditionals/coursed/2022": {
+          "word": "Condicionais"
+        },
+        "variable/coursef/2022": {
+          "word": "Variábel"
+        },
+        "internet/coursef/2022": {
+          "word": "Internet"
+        },
+        "define/coursef/2022": {
+          "word": "Definir"
+        },
+        "function/coursee/2022": {
+          "word": "Función"
+        },
+        "conditionals/coursee/2022": {
+          "word": "Condicionais"
+        },
+        "copyright/coursee/2022": {
+          "word": "Dereitos de Autor"
+        },
+        "define/coursee/2022": {
+          "word": "Definir"
+        },
+        "conditionals/express/2022": {
+          "word": "Condicionais"
+        },
+        "function/express/2022": {
+          "word": "Función"
+        },
+        "variable/express/2022": {
+          "word": "Variábel"
+        },
+        "define/express/2022": {
+          "word": "Definir"
+        },
+        "binary/coursec/2022": {
+          "word": "Binario"
+        },
+        "variable/csd/2022": {
+          "word": "Variábel"
+        },
+        "conditionals/csd/2022": {
+          "word": "Condicionais"
+        },
+        "abstraction/csd/2022": {
+          "word": "Abstracción"
+        },
+        "function/csd/2022": {
+          "word": "Función"
+        },
+        "copyright/csd/2022": {
+          "word": "Dereitos de Autor"
+        },
         "code/poem-art/unversioned": {
-          "word": "Código"
+          "word": "Código",
+          "definition": ""
+        },
+        "event/poem-art/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "program/poem-art/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "mood/poem-art/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "line/poem-art/unversioned": {
+          "word": "",
+          "definition": ""
         },
         "variable/coursef/2021": {
           "word": "Variábel"

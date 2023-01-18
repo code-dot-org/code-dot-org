@@ -24,8 +24,6 @@
 #  index_levels_on_name       (name)
 #
 
-require 'cdo/script_constants'
-
 # Levels defined using a text-based ruby DSL syntax.
 # See #BaseDSL for the DSL format implementation.
 class DSLDefined < Level
@@ -41,6 +39,12 @@ class DSLDefined < Level
 
   def dsl_default
     "Enter the level definition here.\n"
+  end
+
+  def localized_teacher_markdown
+    # Overrides the normal behavior since for DSLDefined levels, the teacher
+    # markdown is part of the dsl.
+    localized_property('teacher_markdown')
   end
 
   def localized_property(property)

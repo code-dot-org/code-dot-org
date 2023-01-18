@@ -8,6 +8,7 @@ const PrincipalApprovalApplication = props => {
     firstName: props.teacherApplication.principal_first_name,
     lastName: props.teacherApplication.principal_last_name,
     title: props.teacherApplication.principal_title,
+    role: props.teacherApplication.principal_role,
     email: props.teacherApplication.principal_email,
     course: props.teacherApplication.course,
     school: props.teacherApplication.school_id,
@@ -70,6 +71,7 @@ PrincipalApprovalApplication.propTypes = {
     principal_first_name: PropTypes.string.isRequired,
     principal_last_name: PropTypes.string.isRequired,
     principal_title: PropTypes.string,
+    principal_role: PropTypes.string,
     principal_email: PropTypes.string.isRequired,
     school_id: PropTypes.string,
     school_zip_code: PropTypes.string

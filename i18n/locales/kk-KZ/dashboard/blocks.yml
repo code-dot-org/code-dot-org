@@ -144,6 +144,10 @@ kk:
             '"space"': кеңестік
             '"enter"': еңгізу
             '"x"': x
+      DansBlocks_setForegroundEffect2:
+        options:
+          EFFECT:
+            '"hearts"': жүрегтер
       gamelab_atTime:
         options:
           UNIT:
@@ -438,3 +442,7 @@ kk:
         text: алдыға қозғалу
       craft_placeTorch:
         text: Шам орнату
+      storylab_setForegroundEffect2:
+        options:
+          EFFECT:
+            '"hearts"': жүрегтер

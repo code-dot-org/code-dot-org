@@ -2,40 +2,74 @@
 title: Parceiros
 ---
 
-A Hora do Código é gerenciada pelos Comitês de Assessoria e Revisão da Semana da Educação em Ciência da Computação e da Hora do Código.
+O Hour of Code é administrado pela Comissão de Análise do Hour of Code.
 
-O [Comitê de Assessoria]({{ urls/advisory_committee }}) é composto por representantes do ensino fundamental e médio, acadêmico, organizações sem fins lucrativos, organizações privadas e organizações internacionais. Esse comitê guia as estratégias para a campanha da Hora do Código.
+A Comissão de Análise<a> é composta de 12 educadores atuais e antigos, nas séries do sistema K-12, que avaliam e recomendam atividades utilizando uma critério de avaliação estabelecido por uma comissão de consultoria. Esses educadores analisam atividades lideradas por estudantes e planos de ensino liderados por professores planos de ensino apresentados por centenas de parceiros de atividades, que avaliam o valor educacional das atividades, a capacidade de envolver os aprendizes e o apelo potencial para vários grupos de estudantes.</p> 
 
-O[Comitê de Revisão]({{ urls/review_committee }}) é composto por 15 educadores de grupos do ensino fundamental e médio que avaliam e recomendam atividades utilizando os critérios do Comitê de Assessoria. Esses educadores revisam as atividades dos alunos e os planos de aula dos professores que são enviados por centenas de parceiros, avaliando o valor educacional das atividades, sua capacidade de envolver os alunos e seu potencial atrativo para diferentes perfis de estudantes.
+<p>
+  O trabalho e a dedicação da comissão têm contribuído para o sucesso do Hour of Code e sua visão de oferecer uma introdução à ciência da computação para todos os alunos.
+</p>
 
-O trabalho e a dedicação dos dois comitês contribuíram para o sucesso da Hora do Código e sua visão de oferecer uma introdução à ciência da computação para todos os estudantes.
+<h1>
+  Principais parceiros e empresas patrocinadoras
+</h1>
 
-# Principais Parceiros e Empresas Patrocinadoras
+<p>
+  {{ partners/major_partners_corporate_supporters }}
+</p>
 
-{{ partners/major_partners_corporate_supporters }}
+<p>
+  <hr />
+  
+</p>
 
-* * *
+<h1>
+  Parceiros internacionais
+</h1>
 
-# Parceiros internacionais
+<p>
+  {{ partners/additional_partners }}
+</p>
 
-{{ partners/international_partners }}
+<p>
+  <hr />
+  
+</p>
 
-* * *
+<h1>
+  Parceria em currículos e tutoriais
+</h1>
 
-# Parceria de Currículos e Tutoriais
+<p>
+  {{ partners/curriculum_tutorial_partners }}
+</p>
 
-{{ partners/curriculum_tutorial_partners }}
+<p>
+  <hr />
+  
+</p>
 
-* * *
+<h1>
+  Parceiros em infraestrutura e ferramentas
+</h1>
 
-# Parceiros de infraestrutura e de ferramentas
+<p>
+  {{ partners/infrastructure_partners_tools }}
+</p>
 
-{{ partners/infrastructure_partners_tools }}
+<p>
+  <hr />
+  
+</p>
 
-* * *
+<h1>
+  Parceiros adicionais
+</h1>
 
-# Outros parceiros
+<p>
+  {{ partners/additional_partners }}
+</p>
 
-{{ partners/additional_partners }}
-
-{{ signup_button }}
+<p>
+  {{ signup_button }}
+</p>

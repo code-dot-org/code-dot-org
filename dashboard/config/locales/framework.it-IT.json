@@ -16,6 +16,9 @@
         },
         "iste": {
           "name": "Standard ISTE per studenti"
+        },
+        "ngss": {
+          "name": "Competenze scientifiche di ultima generazione"
         }
       }
     }

@@ -1,4 +1,4 @@
-# Script serialization and seeding. Serializes to JSON using ActiveModelSerializers,
+# Unit serialization and seeding. Serializes to JSON using ActiveModelSerializers,
 # and bulk imports to the DB using ActiveRecord-Import.
 #
 # We use serialization and seeding to synchronize curriculum data from Levelbuilder to
@@ -12,8 +12,6 @@
 
 module Services
   module ScriptSeed
-    prepend CurriculumPdfs::ScriptSeed
-
     # Holds data that we've already retrieved from the database. Used to look up
     # associations of objects without making additional queries.
     # Storing this data together in a "data object" makes it easier to pass around.
@@ -26,18 +24,18 @@ module Services
       :standards, :lessons_standards, :lessons_opportunity_standards, keyword_init: true
     )
 
-    # Produces a JSON representation of the given Script and all objects under it in its "tree", in a format specifically
+    # Produces a JSON representation of the given Unit and all objects under it in its "tree", in a format specifically
     # designed to be used for seeding.
     #
-    # Even though conceptually a Script and the objects under it (LessonGroups, Lessons, ScriptLevels, etc.) form a tree,
+    # Even though conceptually a Unit and the objects under it (LessonGroups, Lessons, ScriptLevels, etc.) form a tree,
     # the serialized JSON is "flat" - all objects for a model are stored together in an array, without nested children.
     # Instead, each object contains the necessary identifying information for their associated objects. This flatter format
     # is better suited for the bulk import logic used in seeding, where we import all objects for a model in a single insert.
     #
-    # @param [Script] script - the Script object to serialize
+    # @param [Unit] script - the Unit object to serialize
     # @return [String] the JSON representation
     def self.serialize_seeding_json(script)
-      script = Script.with_seed_models.find(script.id)
+      script = Unit.with_seed_models.find(script.id)
 
       # We need to retrieve the Levels anyway, and doing it this way makes it fast to get the Level keys for each ScriptLevel.
       my_script_levels = ScriptLevel.includes(:levels).where(script_id: script.id)
@@ -126,7 +124,7 @@ module Services
     #
     # @param [String | File] file_or_path - Can be String representing a path, relative or absolute, to the file
     #   to read from, or it can be a File object to read from.
-    # @return [Script] the Script created/updated from seeding
+    # @return [Unit] the Unit created/updated from seeding
     def self.seed_from_json_file(file_or_path)
       seed_from_json(File.read(file_or_path))
     end
@@ -134,17 +132,17 @@ module Services
     # Convenience wrapper around seed_from_hash. Parses the given content as a json string and then seeds using it.
     #
     # @param [String] json_string
-    # @return [Script] the Script created/updated from seeding
+    # @return [Unit] the Unit created/updated from seeding
     def self.seed_from_json(json_string)
       seed_from_hash(JSON.parse(json_string))
     end
 
     # Creates / updates the objects in the database described by the input hash.
     #
-    # This method is responsible for Script objects and everything "under" them logically in the curriculum data
+    # This method is responsible for Unit objects and everything "under" them logically in the curriculum data
     # hierarchy. Currently (9/23/2020), this looks like:
     #
-    # Script (has_many)-> LessonGroup (has_many)-> Lesson (has_many)-> ScriptLevel.
+    # Unit (has_many)-> LessonGroup (has_many)-> Lesson (has_many)-> ScriptLevel.
     #
     # This method is not responsible for creating/updating Levels, so it depends on level seeding running before it.
     # However, it is responsible for creating/updating the associations between ScriptLevels and Levels, which control
@@ -154,11 +152,11 @@ module Services
     #
     # An outline of the approach:
     #
-    # Go through the hierarchy top-to-bottom order, starting with Script, and do the following for each model:
+    # Go through the hierarchy top-to-bottom order, starting with Unit, and do the following for each model:
     # 1. For each object for the current model, look up and fill in the ids for their associated objects, based on their
     # seeding keys. The rest of the attributes are used as-is from the input data.
     # 2. Bulk import all of those objects using ActiveRecord-Import
-    # 3. After import, query for all objects of that model now associated with the Script. Find all of these objects which
+    # 3. After import, query for all objects of that model now associated with the Unit. Find all of these objects which
     # were not present in the input data, based on their seeding keys. Bulk-destroy those objects.
     #
     # Some important implementation details:
@@ -172,7 +170,7 @@ module Services
     # too complex or not performant, and making the repeated queries achieves decent performance empirically.
     #
     # - One way to avoid repeated queries when looking up associations is to load all objects of the associated model
-    # for the Script into the SeedContext, and do lookups against that already-loaded data.
+    # for the Unit into the SeedContext, and do lookups against that already-loaded data.
     #
     # - If a seeding_key has a corresponding unique index, we can skip looking up objects to update, and just
     # rely on the "on duplicate key update" feature instead.
@@ -180,7 +178,7 @@ module Services
     # - We try to achieve both simplicity and performance.
     #
     # @param [Hash] data - The input data to seed from.
-    # @return [Script] the Script created/updated from seeding
+    # @return [Unit] the Unit created/updated from seeding
     def self.seed_from_hash(data)
       script_data = data['script']
       lesson_groups_data = data['lesson_groups']
@@ -201,7 +199,7 @@ module Services
       lessons_opportunity_standards_data = data['lessons_opportunity_standards'] || []
       seed_context = SeedContext.new
 
-      Script.transaction do
+      Unit.transaction do
         # The order of the following import steps is important. If B belongs_to
         # A, then B holds an id field referring to A, and therefore A must be
         # imported before B. For example, LessonsResource belongs to both
@@ -257,12 +255,12 @@ module Services
     # Internal methods and classes below
 
     def self.import_script(script_data)
-      script_to_import = Script.new(script_data.except('seeding_key', 'serialized_at'))
+      script_to_import = Unit.new(script_data.except('seeding_key', 'serialized_at'))
       script_to_import.seeded_from = script_data['serialized_at']
       script_to_import.is_migrated = true
       # Needed because we already have some Scripts with invalid names
       script_to_import.skip_name_format_validation = true
-      Script.import! [script_to_import], on_duplicate_key_update: get_columns(Script)
+      Unit.import! [script_to_import], on_duplicate_key_update: get_columns(Unit)
 
       # activerecord-import doesn't trigger callbacks for imported models, and
       # Scripts rely on the after_save hook to invoke `generate_plc_objects`,
@@ -272,9 +270,9 @@ module Services
       #
       # Note that we use activerecord-import extensively in the script seeding
       # process, so we may end up needing to manually invoke these callbacks
-      # for more models than just Script, in which case we should probably
+      # for more models than just Unit, in which case we should probably
       # reassess the pattern being used here.
-      imported_script = Script.find_by!(name: script_to_import.name)
+      imported_script = Unit.find_by!(name: script_to_import.name)
       imported_script.run_callbacks(:save)
       return imported_script
     end
@@ -406,7 +404,7 @@ module Services
       LevelsScriptLevel.import! levels_script_levels_to_import, on_duplicate_key_update: get_columns(LevelsScriptLevel)
 
       # Delete any existing LevelsScriptLevels that weren't in the imported list, return remaining
-      levels_script_levels = Script.find(seed_context.script.id).levels_script_levels
+      levels_script_levels = Unit.find(seed_context.script.id).levels_script_levels
       destroy_outdated_objects(LevelsScriptLevel, levels_script_levels, levels_script_levels_to_import, seed_context)
     end
 
@@ -709,7 +707,7 @@ module Services
       # A simple field to track when the script was most recently serialized.
       # This will be set by levelbuilder whenever the script is saved, and then
       # read by the seeding process on other environments and persisted to the
-      # `seeded_from` property on Script objects. Currently used by the PDF
+      # `seeded_from` property on Unit objects. Currently used by the PDF
       # generation logic to identify when a script is actually being updated,
       # but could easily be used by other business logic that has similar
       # versioning concerns.

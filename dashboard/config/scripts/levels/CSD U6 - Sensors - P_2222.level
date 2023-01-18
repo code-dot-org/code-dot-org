@@ -234,19 +234,16 @@
     "libraries_enabled": "false",
     "validation_enabled": "false",
     "ai_enabled": "false",
-    "preload_asset_list": null,
-    "encrypted_examples": [
-
-    ],
-    "teacher_markdown": "There are three sensors on the circuit playground: a light sensor, a sound sensor, and a temperature sensor. Encourage students to relate the sensors to their own senses and interact with the circuit playground that way - for example, we have a sense of sight, what happens when we show or hide things from the circuit playground? We have a sense of hearing, what happens when the volume changes near the circuit playground?\r\n\r\nThrough experimentation, students should notice that the minimum value is 0 and the maximum value is 1023. Students may also notice that one sensor (temperature) doesn't seem to change very much."
+    "teacher_markdown": "There are three sensors on the circuit playground: a light sensor, a sound sensor, and a temperature sensor. Encourage students to relate the sensors to their own senses and interact with the circuit playground that way - for example, what happens when we show or hide things from the circuit playground? What happens when the volume changes near the circuit playground?\r\n\r\nThrough experimentation, students should notice that the minimum value is 0 and the maximum value is 1023. Students may also notice that one sensor (temperature) doesn't seem to change very much.",
+    "preload_asset_list": null
   },
-  "game_id": 41,
-  "published": true,
-  "created_at": "2022-04-08T17:05:45.000Z",
   "level_num": "custom",
+  "game_id": 41,
+  "created_at": "2022-04-08T17:05:45.000Z",
   "user_id": 1,
+  "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-04-08T17:05:45.061+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Sensors - P_2022\\\"\"],\"cloned_from\":\"CSD U6 - Sensors - P_2022\"},{\"changed_at\":\"2022-04-13 21:39:54 +0000\",\"changed\":[\"code_functions\",\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-04-14 21:57:55 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-04-08T17:05:45.061+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Sensors - P_2022\\\"\"],\"cloned_from\":\"CSD U6 - Sensors - P_2022\"},{\"changed_at\":\"2022-04-13 21:39:54 +0000\",\"changed\":[\"code_functions\",\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-04-14 21:57:55 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-08-02 23:10:10 +0000\",\"changed\":[\"code_functions\",\"teacher_markdown\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>

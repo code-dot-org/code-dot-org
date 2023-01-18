@@ -2,6 +2,9 @@
   "id-ID": {
     "data": {
       "category": {
+        "ccela/RL": {
+          "description": "Membaca Sastra"
+        },
         "ccela/SL": {
           "description": "Berbicara & Mendengarkan"
         },
@@ -29,6 +32,21 @@
         "ccela/RI": {
           "description": "Membaca Informatif"
         },
+        "ccmath/OA": {
+          "description": "Operasi & Berpikir Aljabar"
+        },
+        "csta2011/CD": {
+          "description": "Komputer & Alat Komunikasi"
+        },
+        "csta2011/CI": {
+          "description": "Dampak Komunitas, Global, dan Etis"
+        },
+        "ccmath/NBT": {
+          "description": "Bilangan Dan Operasi Berbasis Sepuluh"
+        },
+        "ccmath/G": {
+          "description": "Geometri"
+        },
         "ccela/W": {
           "description": "Menulis"
         },
@@ -40,6 +58,15 @@
         },
         "csta/IC": {
           "description": "Dampak dari Komputasi"
+        },
+        "csp2021/IOC-2.B": {
+          "description": "Jelaskan bagaimana informasi komputasi dapat dilindungi dan dapat disalahgunakan."
+        },
+        "csp2021/DAT-1.D": {
+          "description": "Membandingkan algoritma kompresi data untuk menentukan algoritma terbaik dalam konteks tertentu."
+        },
+        "csta/DA": {
+          "description": "Data & Analisis"
         }
       }
     }

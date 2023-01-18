@@ -26,32 +26,6 @@ class PosteRoutesTest < Minitest::Test
       @pegasus = Rack::Test::Session.new(Rack::MockSession.new(MockPegasus.new, "studio.code.org"))
     end
 
-    describe 'POST /v2/poste/send-message' do
-      it 'returns 403 "Forbidden" when not signed in' do
-        with_role nil
-        @pegasus.post "/v2/poste/send-message"
-        assert_response 403
-      end
-
-      it 'returns 403 "Forbidden" when signed in as a student' do
-        with_role FakeDashboard::STUDENT
-        @pegasus.post "/v2/poste/send-message"
-        assert_response 403
-      end
-
-      it 'returns 403 "Forbidden" when signed in as a teacher' do
-        with_role FakeDashboard::TEACHER
-        @pegasus.post "/v2/poste/send-message"
-        assert_response 403
-      end
-
-      it 'succeeds when signed in as an admin' do
-        with_role FakeDashboard::ADMIN
-        @pegasus.post "/v2/poste/send-message"
-        assert_response 200
-      end
-    end
-
     describe 'GET /u/:id' do
       before do
         @id = create_poste_delivery

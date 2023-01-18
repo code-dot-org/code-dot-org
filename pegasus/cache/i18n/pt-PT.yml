@@ -517,9 +517,9 @@ pt-PT:
   homepage_slot_text_link_donate: Fazer uma doação
   homepage_slot_text_link_shop: T-shirts, chapéus e muito mais
   homepage_slot_text_link_administrators: Leve a ciência da computação para sua escola
-  homepage_gallery_header: Mais de %{project_count} milhão(ões) de projetos da Code.org
-    criados
-  homepage_header_donors: A Code.org agradece a seus colaboradores
+  homepage_gallery_header: Mais de %{project_count} milhões de projetos criados no
+    Code.org
+  homepage_header_donors: 'O Code.org agradece a:'
   homepage_donors_seall: Ver todos
   homepage_donors_donate: Doar
   homepage_below_hero_announcement_text: Sua privacidade é importante para nós e estamos
@@ -2617,6 +2617,7 @@ pt-PT:
   hoc2019_dance_previous_versions: |-
     Procurando uma versão anterior de Festa Dançante?
     Clique aqui para começar [Parte 1](%{dance_2018_link}) e [Parte 2](%{dance_extras_2018_link}) de 2018.
+  homepage_slot_text_title_at_home: Aprende em casa
   page_not_available_button: Volte para a página inicial
   hoc2021_mc_mee_title: Minecraft TimeCraft
   hoc2021_mc_mee_description: 'Volte no tempo e aprenda a codificar! O novo tutorial
@@ -2650,3 +2651,5 @@ pt-PT:
   outbreak_tile_subtitle: Um vírus infectou a Cidade dos Monstros! Codifique um simulador
     de surtos e faça previsões sobre o que acontecerá com os vizinhos da Cidade dos
     Monstros.
+  hoc2022_landing_page_create_title: Criar
+  try_it_yourself: Tente você mesmo!

@@ -1,4 +1,4 @@
-require_relative 'reducer.rb'
+require_relative 'reducer'
 
 module Pd::SurveyPipeline
   class GenericMapper < SurveyPipelineWorker
@@ -32,7 +32,7 @@ module Pd::SurveyPipeline
     def process_data(context)
       self.class.check_required_input_keys REQUIRED_INPUT_KEYS, context
 
-      results = map_reduce context.slice(*REQUIRED_INPUT_KEYS)
+      results = map_reduce(**context.slice(*REQUIRED_INPUT_KEYS))
 
       OUTPUT_KEYS.each do |key|
         context[key] ||= []
@@ -68,13 +68,13 @@ module Pd::SurveyPipeline
       groups.each do |group_key, group_records|
         # Apply matched reducers on each group.
         # Add only non-empty result to the final summary.
-        map_config.each do |condition:, field:, reducers:|
-          next unless condition.call(group_key)
+        map_config.each do |rule|
+          next unless rule[:condition].call(group_key)
 
-          reducers.each do |reducer|
+          rule[:reducers].each do |reducer|
             # Only process values that are not nil
-            reducer_result = reducer.reduce group_records.pluck(field).compact
-            next unless reducer_result.present?
+            reducer_result = reducer.reduce group_records.pluck(rule[:field]).compact
+            next if reducer_result.blank?
 
             summaries << group_key.merge({reducer: reducer.name, reducer_result: reducer_result})
           rescue => e

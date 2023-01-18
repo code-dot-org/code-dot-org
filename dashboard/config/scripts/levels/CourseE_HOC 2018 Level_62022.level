@@ -1,9 +1,5 @@
 <Craft>
   <config><![CDATA[{
-  "game_id": 49,
-  "created_at": "2022-01-06T19:48:15.000Z",
-  "level_num": "custom",
-  "user_id": 837,
   "properties": {
     "skin": "craft",
     "ground_plane": "[\"snow\",\"snow\",\"snow\",\"snow\",\"snow\",\"water\",\"water\",\"water\",\"stoneBricks\",\"water\",\"snow\",\"snow\",\"snow\",\"snow\",\"snow\",\"ice\",\"water\",\"water\",\"water\",\"water\",\"snow\",\"snow\",\"snow\",\"snow\",\"ice\",\"ice\",\"water\",\"water\",\"stoneBricks\",\"stoneBricks\",\"snow\",\"snow\",\"snow\",\"water\",\"water\",\"water\",\"water\",\"water\",\"water\",\"water\",\"snow\",\"snow\",\"ice\",\"water\",\"ice\",\"ice\",\"water\",\"ice\",\"ice\",\"ice\",\"ice\",\"ice\",\"ice\",\"water\",\"ice\",\"ice\",\"water\",\"ice\",\"ice\",\"ice\",\"water\",\"water\",\"water\",\"water\",\"water\",\"water\",\"water\",\"ice\",\"ice\",\"ice\",\"water\",\"ice\",\"ice\",\"water\",\"ice\",\"ice\",\"ice\",\"ice\",\"water\",\"ice\",\"water\",\"ice\",\"ice\",\"water\",\"ice\",\"ice\",\"ice\",\"ice\",\"water\",\"ice\",\"water\",\"water\",\"water\",\"water\",\"ice\",\"ice\",\"ice\",\"water\",\"water\",\"water\"]",
@@ -45,15 +41,20 @@
     "tts_long_instructions_override": "Looks freezing out there! Catch a salmon on your way to the underwater ruins.\r\n",
     "boat": "true",
     "short_instructions": "Navigate through the ice to reach the salmon.",
-    "long_instructions": "Looks freezing out there! Catch a **salmon** ![](https://images.code.org/c66eadf25b3cdfe20bbfdc91e2c28c94-image-1538699000102.png) on your way to the underwater ruins.",
+    "long_instructions": "Looks freezing out there! Navigate through the ice to reach the salmon ![](https://images.code.org/c66eadf25b3cdfe20bbfdc91e2c28c94-image-1538699000102.png).",
     "ideal": "10",
     "name_suffix": "2022",
-    "preload_asset_list": null,
-    "contained_level_names": null
+    "encrypted": "false",
+    "hint_prompt_attempts_threshold": "1",
+    "preload_asset_list": null
   },
+  "game_id": 49,
   "published": true,
+  "created_at": "2022-01-06T19:48:15.000Z",
+  "level_num": "custom",
+  "user_id": 837,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-01-06T19:48:15.488+00:00\",\"changed\":[\"cloned from \\\"CourseE_HOC 2018 Level_6_2021\\\"\"],\"cloned_from\":\"CourseE_HOC 2018 Level_6_2021\"}]",
+  "audit_log": "[{\"changed_at\":\"2022-01-06T19:48:15.488+00:00\",\"changed\":[\"cloned from \\\"CourseE_HOC 2018 Level_6_2021\\\"\"],\"cloned_from\":\"CourseE_HOC 2018 Level_6_2021\"},{\"changed_at\":\"2022-09-09 18:18:49 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"long_instructions\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]",
   "level_concept_difficulty": {
     "sequencing": 3,
     "repeat_loops": 4,

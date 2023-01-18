@@ -12,7 +12,7 @@
 #
 class ScriptsResource < ApplicationRecord
   belongs_to :resource, optional: true
-  belongs_to :script, optional: true
+  belongs_to :script, class_name: 'Unit', optional: true
 
   # Used for seeding from JSON. Returns the full set of information needed to
   # uniquely identify this object as well as any other objects it belongs to.

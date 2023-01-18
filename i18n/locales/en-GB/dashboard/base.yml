@@ -67,6 +67,7 @@ en-GB:
       answer_viewer: 'Teacher Panel'
   home:
     trynow: 'Try now'
+  certificate_hour_of_code: "The Hour of Code"
   upsell:
     widgets:
       audience: "Ages 14+"

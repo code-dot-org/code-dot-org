@@ -21,7 +21,6 @@
 #  index_unit_groups_on_published_state       (published_state)
 #
 
-require 'cdo/script_constants'
 require 'cdo/shared_constants/curriculum/shared_course_constants'
 
 class UnitGroup < ApplicationRecord
@@ -213,10 +212,10 @@ class UnitGroup < ApplicationRecord
   def update_scripts(new_units, alternate_units = nil)
     alternate_units ||= []
     new_units = new_units.reject(&:empty?)
-    new_units_objects = new_units.map {|s| Script.find_by_name!(s)}
+    new_units_objects = new_units.map {|s| Unit.find_by_name!(s)}
     # we want to delete existing unit group units that aren't in our new list
     units_to_remove = default_unit_group_units.map(&:script) - new_units_objects
-    units_to_remove -= alternate_units.map {|hash| Script.find_by_name!(hash['alternate_script'])}
+    units_to_remove -= alternate_units.map {|hash| Unit.find_by_name!(hash['alternate_script'])}
 
     unremovable_unit_names = units_to_remove.select(&:prevent_course_version_change?).map(&:name)
     raise "Cannot remove units that have resources or vocabulary: #{unremovable_unit_names}" if unremovable_unit_names.any?
@@ -240,8 +239,8 @@ class UnitGroup < ApplicationRecord
     end
 
     alternate_units.each do |hash|
-      alternate_unit = Script.find_by_name!(hash['alternate_script'])
-      default_unit = Script.find_by_name!(hash['default_script'])
+      alternate_unit = Unit.find_by_name!(hash['alternate_script'])
+      default_unit = Unit.find_by_name!(hash['default_script'])
       # alternate units should have the same position as the unit they replace.
       position = default_unit_group_units.find_by(script: default_unit).position
       unit_group_unit = UnitGroupUnit.find_or_create_by!(unit_group: self, script: alternate_unit) do |ugu|
@@ -378,9 +377,9 @@ class UnitGroup < ApplicationRecord
   # If the unit is in development, hide it from everyone but levelbuilders.
   # @param user [User]
   def units_for_user(user)
-    # @return [Array<Script>]
+    # @return [Array<Unit>]
     units = default_unit_group_units.map do |ugu|
-      Script.get_from_cache(select_unit_group_unit(user, ugu).script_id)
+      Unit.get_from_cache(select_unit_group_unit(user, ugu).script_id)
     end
     units.compact.reject do |unit|
       unit.in_development? && !user&.permission?(UserPermission::LEVELBUILDER)
@@ -479,7 +478,7 @@ class UnitGroup < ApplicationRecord
   # @param family_name [String] The family name for a course family.
   # @return [UnitGroup] Returns the latest stable version in a course family.
   def self.latest_stable_version(family_name)
-    return nil unless family_name.present?
+    return nil if family_name.blank?
 
     all_courses.select do |course|
       course.family_name == family_name &&
@@ -544,7 +543,7 @@ class UnitGroup < ApplicationRecord
   end
 
   def self.should_cache?
-    Script.should_cache?
+    Unit.should_cache?
   end
 
   # generates our course_cache from what is in the Rails cache

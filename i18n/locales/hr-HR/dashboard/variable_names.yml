@@ -89,6 +89,7 @@ hr:
       speed: brzina
       startX: startX
       startY: startY
+      type: tip
       variable: varijabla
       width: širina
       wizard: čarobnjak

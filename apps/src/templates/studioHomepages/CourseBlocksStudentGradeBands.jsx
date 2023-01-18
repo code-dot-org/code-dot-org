@@ -14,16 +14,19 @@ class CourseBlocksStudentGradeBands extends Component {
     {
       heading: i18n.courseBlocksGradeBandsK5(),
       description: i18n.courseBlocksGradeBandsK5Description(),
+      buttonText: i18n.courseBlocksGradeBandsK5Button(),
       path: '/student/elementary'
     },
     {
       heading: i18n.courseBlocksGradeBands612(),
       description: i18n.courseBlocksGradeBands612Description(),
+      buttonText: i18n.courseBlocksGradeBands612Button(),
       path: '/student/middle-high'
     },
     {
       heading: i18n.courseBlocksGradeBandsUniversity(),
       description: i18n.courseBlocksGradeBandsUniversityDescription(),
+      buttonText: i18n.courseBlocksGradeBandsUniversityButton(),
       path: '/beyond'
     }
   ];

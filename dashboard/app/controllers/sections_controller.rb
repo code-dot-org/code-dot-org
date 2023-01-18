@@ -22,7 +22,7 @@ class SectionsController < ApplicationController
 
   def redirect_to_section_script_or_course
     if @section.script
-      redirect_to @section.script
+      redirect_to script_path(@section.script)
     elsif @section.unit_group
       redirect_to course_path(@section.unit_group)
     else

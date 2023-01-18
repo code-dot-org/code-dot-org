@@ -6,7 +6,6 @@ class Api::V1::Pd::ApplicationQuickViewSerializer < ActiveModel::Serializer
     :district_name,
     :school_name,
     :status,
-    :locked,
     :notes,
     :notes_2,
     :notes_3,
@@ -14,6 +13,7 @@ class Api::V1::Pd::ApplicationQuickViewSerializer < ActiveModel::Serializer
     :notes_5,
     :regional_partner_id,
     :principal_approval_state,
+    :principal_approval_not_required,
     :total_score,
     :meets_criteria,
     :meets_scholarship_criteria,
@@ -21,12 +21,12 @@ class Api::V1::Pd::ApplicationQuickViewSerializer < ActiveModel::Serializer
     :allow_sending_principal_email
   )
 
-  def locked
-    object.locked?
-  end
-
   def principal_approval_state
     object.try(:principal_approval_state)
+  end
+
+  def principal_approval_not_required
+    object.try(:principal_approval_not_required)
   end
 
   def meets_criteria

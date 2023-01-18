@@ -298,6 +298,73 @@
         },
         "poetry_hoc_backgroundEffects": {
           "run_button": "Tестирај своју анимацију помоћу овог дугмета."
+        },
+        "CourseD_Dance_2020_012022": {
+          "dance_callout_01": "Изабери тип плесача овде."
+        },
+        "CourseD_Dance_2020_022022": {
+          "dance_callout_11_a": "Додај овај блок у свој програм.",
+          "arrow_buttons": "Притисни тастер стрелице за контролу плесача."
+        },
+        "CourseD_Dance_2020_042022": {
+          "dance_callout_02": "Додај овај блок у свој програм!"
+        },
+        "CourseD_Dance_2020_062022": {
+          "dance_party_11_5_groups": "Нови блок!"
+        },
+        "CourseD_Dance_2020_072022": {
+          "setprop_hint": "Нови блок!"
+        },
+        "CourseD_Dance_2020_092022": {
+          "new_block_3": "Нови блок!",
+          "new_block_4": "Нови блок!"
+        },
+        "Overworld Chop Trees2022": {
+          "craft_callout_preplaced": "Неки блокови су већ постављени за почетак"
+        },
+        "Overworld House Frame Chosen2022": {
+          "craft_callout_preplaced_house": "Овај кôд ће започети изградњу твоје куће. Можеш ли га довршити?"
+        },
+        "Overworld Move to Sheep2022": {
+          "craft_run_button_callout": "Притисни \"Изврши\" дугме да покренеш програм"
+        },
+        "Overworld Place Wall2022": {
+          "craft_inside_repeat": "Понови команде постављањем блокова овде"
+        },
+        "Underground Avoiding Lava2022": {
+          "craft_callout_moveforward": "Овај кôд ће проверити да ли има лаве, можеш ли додати команду да се помери напред?"
+        },
+        "Underground Iron2022": {
+          "craft_what_is_iron": "Ископај ово гвожђе!"
+        },
+        "courseA_maze_seq12022": {
+          "courseA_maze_seq1_1": "Кликни сијалицу када ти треба савет!"
+        },
+        "courseA_playLab_events42022": {
+          "courseA_playlab_events4_callout1": "Ово је облачић"
+        },
+        "courseB_maze_seq12022": {
+          "courseB_maze_seq1": "Кликни сијалицу када ти треба савет!"
+        },
+        "helloworld_food_costumes_soccer-2022": {
+          "hello_world_new": "Нови блок!"
+        },
+        "helloworld_food_costumes_space-2022": {
+          "hello_world_new": "Нови блок!"
+        },
+        "helloworld_food_sizes_soccer-2022": {
+          "hello_world_new": "Нови блок!",
+          "hello_world_new_block": "Нови блок!"
+        },
+        "helloworld_food_sizes_space-2022": {
+          "hello_world_new": "Нови блок!",
+          "hello_world_new_block": "Нови блок!"
+        },
+        "helloworld_food_sounds_soccer-2022": {
+          "hello_world_new": "Нови блок!"
+        },
+        "helloworld_food_sounds_space-2022": {
+          "hello_world_new": "Нови блок!"
         }
       }
     }

@@ -1,0 +1,29 @@
+{
+  "de-DE": {
+    "data": {
+      "frameworks": {
+        "csta": {
+          "name": "CSTA K-12 Informatikstandards (2017)"
+        },
+        "csp2021": {
+          "name": "Grundsätze der Informatik - Konzeptioneller Rahmen"
+        },
+        "csta2011": {
+          "name": "CSTA K-12 Informatikstandards (2011)"
+        },
+        "ccela": {
+          "name": "Standards für Pflichtfächer in den englischsprachigen Geisteswissenschaften"
+        },
+        "ngss": {
+          "name": "Wissenschaftsstandards der nächste Generation"
+        },
+        "ccmath": {
+          "name": "Standards für mathematische Pflichtfächer"
+        },
+        "iste": {
+          "name": "ISTE Standards für Studenten"
+        }
+      }
+    }
+  }
+}

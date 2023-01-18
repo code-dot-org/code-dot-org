@@ -2234,16 +2234,16 @@
           "hello_world_new": "crwdns2713849:0crwdne2713849:0"
         },
         "helloworld_food_backgrounds": {
-          "hw_background_location": "crwdns2713979:0crwdne2713979:0"
+          "hw_background_location": "crwdns3141844:0crwdne3141844:0"
         },
         "helloworld_food_behaviors": {
-          "hello_world_behavior_blocks": "crwdns2714063:0crwdne2714063:0"
+          "hello_world_behavior_blocks": "crwdns3142004:0crwdne3142004:0"
         },
         "helloworld_food_click": {
-          "hw_Run": "crwdns2713933:0crwdne2713933:0"
+          "hw_Run": "crwdns3141768:0crwdne3141768:0"
         },
         "helloworld_food_costumes": {
-          "hello_world_new": "crwdns2714013:0crwdne2714013:0"
+          "hello_world_new": "crwdns3141930:0crwdne3141930:0"
         },
         "helloworld_food_events": {
           "hello_world_click_hint": "crwdns2713941:0crwdne2713941:0"
@@ -2252,21 +2252,21 @@
           "costumes_tab": "crwdns2714159:0crwdne2714159:0"
         },
         "helloworld_food_location": {
-          "pin": "crwdns2713915:0crwdne2713915:0"
+          "pin": "crwdns3141750:0crwdne3141750:0"
         },
         "helloworld_food_multi": {
-          "pin": "crwdns2713923:0crwdne2713923:0"
+          "pin": "crwdns3141758:0crwdne3141758:0"
         },
         "helloworld_food_say": {
           "hello_world_say": "crwdns2713905:0crwdne2713905:0",
           "hello_world_make_sprite": "crwdns2713907:0crwdne2713907:0"
         },
         "helloworld_food_sizes": {
-          "hello_world_new": "crwdns2714053:0crwdne2714053:0",
-          "hello_world_new_block": "crwdns2714055:0crwdne2714055:0"
+          "hello_world_new": "crwdns3141994:0crwdne3141994:0",
+          "hello_world_new_block": "crwdns3141996:0crwdne3141996:0"
         },
         "helloworld_food_sounds": {
-          "hello_world_new": "crwdns2714113:0crwdne2714113:0"
+          "hello_world_new": "crwdns3142088:0crwdne3142088:0"
         },
         "helloworld_retro_backgrounds": {
           "hw_background_location": "crwdns2714511:0crwdne2714511:0"
@@ -2625,6 +2625,742 @@
         },
         "Luigi's Pizza 1": {
           "luigi's pizza 1": "crwdns2928474:0crwdne2928474:0"
+        },
+        "CSD U3 - conditionals - transition_2022": {
+          "CSD_U3_L8_S6_C1": "crwdns2954768:0crwdne2954768:0"
+        },
+        "CSD U3 Boolean Predict_2022": {
+          "": "crwdns2954678:0crwdne2954678:0"
+        },
+        "CSD U3 Draw Loop Plugged wiggle sprite y_2022": {
+          "": "crwdns2954392:0crwdne2954392:0"
+        },
+        "CSD U3 Random add_2022": {
+          "CSD_U3_butterfly": "crwdns2953782:0crwdne2953782:0"
+        },
+        "CSD U3 Sprites anitab 1_2022": {
+          "anicallout": "crwdns2953826:0crwdne2953826:0"
+        },
+        "CSD U3 Sprites intro sprites_2022": {
+          "": "crwdns2953820:0crwdne2953820:0"
+        },
+        "CSD U3 Sprites text_2022": {
+          "": "crwdns2954182:0crwdne2954182:0"
+        },
+        "CSD U3 UP_ARROW_2022": {
+          "": "crwdns2954860:0crwdne2954860:0"
+        },
+        "CSD U3 Variables Predict Where XY_2022": {
+          "grid": "crwdns2953644:0crwdne2953644:0"
+        },
+        "CSD U3 Variables Predict Where X_2022": {
+          "CSD_U3_variables": "crwdns2953634:0crwdne2953634:0"
+        },
+        "CSD U3 abstraction accelerateX_2022": {
+          "CSD_U3_L11_S6_C1": "crwdns2955398:0crwdne2955398:0"
+        },
+        "CSD U3 abstraction accelerateY_2022": {
+          "CSD_U3_L11_S7_C1": "crwdns2955402:0crwdne2955402:0"
+        },
+        "CSD U3 abstraction jump_2022": {
+          "CSD_U3_L11_S17_C1": "crwdns2955376:0crwdne2955376:0",
+          "CSD_U3_L11_S17_C2": "crwdns2955378:0crwdne2955378:0"
+        },
+        "CSD U3 abstraction jumping_2022": {
+          "CSD_U3_L13_S8_C1": "crwdns2955550:0crwdne2955550:0"
+        },
+        "CSD U3 abstraction looping_2022": {
+          "CSD_U3_L11_S17_C1": "crwdns2955382:0crwdne2955382:0"
+        },
+        "CSD U3 abstraction rotation control_2022": {
+          "CSD_U3_L11_S5_C1": "crwdns2955234:0crwdne2955234:0"
+        },
+        "CSD U3 abstraction rotation_2022": {
+          "CSD_U3_L11_S4_C1": "crwdns2955228:0crwdne2955228:0"
+        },
+        "CSD U3 abstraction tumbleweed_2022": {
+          "CSD_U3_L11_S17_C1": "crwdns2955372:0crwdne2955372:0"
+        },
+        "CSD U3 abstraction velocityX control_2022": {
+          "CSD_U3_L11_S5_C1": "crwdns2955266:0crwdne2955266:0"
+        },
+        "CSD U3 abstraction velocityX if-statements_2022": {
+          "CSD_U3_L11_S5_C1": "crwdns2955238:0crwdne2955238:0"
+        },
+        "CSD U3 abstraction velocityX_2022": {
+          "CSD_U3_L11_S4_C1": "crwdns2955214:0crwdne2955214:0"
+        },
+        "CSD U3 abstraction velocityY control_2022": {
+          "CSD_U3_L11_S5_C1": "crwdns2955254:0crwdne2955254:0"
+        },
+        "CSD U3 abstraction velocityY_2022": {
+          "CSD_U3_L11_S5_C1": "crwdns2955224:0crwdne2955224:0"
+        },
+        "CSD U3 collisions isTouching intro_2022": {
+          "CSD_U3_L12_S2_C1": "crwdns2955306:0crwdne2955306:0"
+        },
+        "CSD U3 collisions try blocks_2022": {
+          "CSD_U3_L13_S6_C1": "crwdns2955466:0crwdne2955466:0"
+        },
+        "CSD U3 collisions types2_2022": {
+          "CSD_U3_L13_S6_C1": "crwdns2955486:0crwdne2955486:0"
+        },
+        "CSD U3 collisions types3_2022": {
+          "CSD_U3_L13_S6_C1": "crwdns2955494:0crwdne2955494:0"
+        },
+        "CSD U3 collisions types4_2022": {
+          "CSD_U3_L13_S6_C1": "crwdns2955502:0crwdne2955502:0"
+        },
+        "CSD U3 collisions types_2022": {
+          "CSD_U3_L13_S6_C1": "crwdns2955478:0crwdne2955478:0"
+        },
+        "CSD U3 debug_2022": {
+          "CSD_U3_rect_c1": "crwdns2953454:0crwdne2953454:0",
+          "CSD_U3_rect_c2": "crwdns2953456:0crwdne2953456:0"
+        },
+        "CSD U3 drawing challenge 2_2022": {
+          "CSD_U3_rect_c1": "crwdns2953480:0crwdne2953480:0",
+          "CSD_U3_rect_c2": "crwdns2953482:0crwdne2953482:0"
+        },
+        "CSD U3 drawing challenge 3_2022": {
+          "CSD_U3_rect_c1": "crwdns2953492:0crwdne2953492:0",
+          "CSD_U3_rect_c2": "crwdns2953494:0crwdne2953494:0"
+        },
+        "CSD U3 drawing practice 1_2022": {
+          "CSD_U3_rect_c1": "crwdns2953422:0crwdne2953422:0",
+          "CSD_U3_rect_c2": "crwdns2953424:0crwdne2953424:0"
+        },
+        "CSD U3 drawing practice 2_2022": {
+          "CSD_U3_rect_c1": "crwdns2953434:0crwdne2953434:0",
+          "CSD_U3_rect_c2": "crwdns2953436:0crwdne2953436:0"
+        },
+        "CSD U3 drawing practice 3_2022": {
+          "CSD_U3_rect_c1": "crwdns2953446:0crwdne2953446:0",
+          "CSD_U3_rect_c2": "crwdns2953448:0crwdne2953448:0"
+        },
+        "CSD U3 ellipse_2022": {
+          "CSD_U3_rect_c1": "crwdns2953406:0crwdne2953406:0",
+          "CSD_U3_rect_c2": "crwdns2953408:0crwdne2953408:0"
+        },
+        "CSD U3 fill_2022": {
+          "CSD_U3_rect_c1": "crwdns2953394:0crwdne2953394:0",
+          "CSD_U3_rect_c2": "crwdns2953396:0crwdne2953396:0"
+        },
+        "CSD U3 game backgrounds_2022": {
+          "CSD_U3_S18_L4_C1": "crwdns2955866:0crwdne2955866:0",
+          "CSD_U3_L18_S4_C2": "crwdns2955868:0crwdne2955868:0"
+        },
+        "CSD U3 game variables_2022": {
+          "CSD_U3_S18_L3_C1": "crwdns2955860:0crwdne2955860:0",
+          "CSD_U3_L18_S3_C2": "crwdns2955862:0crwdne2955862:0"
+        },
+        "CSD U3 keydown conditional_2022": {
+          "": "crwdns2954856:0crwdne2954856:0"
+        },
+        "CSD U3 platform background1_2022": {
+          "CSD_U3_L16_S3_C1": "crwdns2955738:0crwdne2955738:0",
+          "CSD_U3_L16_S3_C2": "crwdns2955740:0crwdne2955740:0",
+          "CSD_U3_L16_S3_C3": "crwdns2955742:0crwdne2955742:0"
+        },
+        "CSD U3 platform platform1_2022": {
+          "CSD_U3_S17_L8_C1": "crwdns2955756:0crwdne2955756:0"
+        },
+        "CSD U3 platform scoreboard_2022": {
+          "CSD_U3_L17_S7_C1": "crwdns2955752:0crwdne2955752:0"
+        },
+        "CSD U3 platform variable1_2022": {
+          "callout": "crwdns2955746:0crwdne2955746:0"
+        },
+        "CSD U3 properties depth_2022": {
+          "CSD_U3_rect_c1": "crwdns2954160:0crwdne2954160:0",
+          "CSD_U3_rect_c2": "crwdns2954164:0crwdne2954164:0"
+        },
+        "CSD U3 properties tint_2022": {
+          "CSD_U3_rect_c1": "crwdns2954142:0crwdne2954142:0",
+          "CSD_U3_rect_c2": "crwdns2954146:0crwdne2954146:0"
+        },
+        "CSD U3 rect_2022": {
+          "CSD_U3_rect_c1": "crwdns2953374:0crwdne2953374:0"
+        },
+        "CSD U3 sequence_2022": {
+          "CSD_U3_rect_c1": "crwdns2953400:0crwdne2953400:0",
+          "CSD_U3_rect_c2": "crwdns2953402:0crwdne2953402:0"
+        },
+        "CSD U3 shapes arc_2022": {
+          "CSD_U3_rect_c1": "crwdns2953620:0crwdne2953620:0",
+          "CSD_U3_rect_c2": "crwdns2953622:0crwdne2953622:0"
+        },
+        "CSD U3 shapes behind_2022": {
+          "CSD_U3_rect_c1": "crwdns2953544:0crwdne2953544:0",
+          "CSD_U3_rect_c2": "crwdns2953546:0crwdne2953546:0"
+        },
+        "CSD U3 shapes line_2022": {
+          "CSD_U3_rect_c1": "crwdns2953610:0crwdne2953610:0",
+          "CSD_U3_rect_c2": "crwdns2953612:0crwdne2953612:0"
+        },
+        "CSD U3 shapes missing_2022": {
+          "CSD_U3_rect_c1": "crwdns2953554:0crwdne2953554:0",
+          "CSD_U3_rect_c2": "crwdns2953556:0crwdne2953556:0"
+        },
+        "CSD U3 shapes polygon_2022": {
+          "CSD_U3_rect_c1": "crwdns2953590:0crwdne2953590:0",
+          "CSD_U3_rect_c2": "crwdns2953592:0crwdne2953592:0"
+        },
+        "CSD U3 shapes scene_2022": {
+          "CSD_U3_rect_c1": "crwdns2953564:0crwdne2953564:0",
+          "CSD_U3_rect_c2": "crwdns2953566:0crwdne2953566:0"
+        },
+        "CSD U3 shapes_2022": {
+          "CSD_U3_rect_c1": "crwdns2953600:0crwdne2953600:0",
+          "CSD_U3_rect_c2": "crwdns2953602:0crwdne2953602:0"
+        },
+        "CSD U6 - Accelerometer - PB_2222": {
+          "CSD U6L12.5 - shake_event": "crwdns2951636:0crwdne2951636:0",
+          "CSD U6L12.5 - increase_steps": "crwdns2951638:0crwdne2951638:0"
+        },
+        "CSD U6 - Accelerometer - PC_2222": {
+          "CSD U6L12.PB - playery": "crwdns2951628:0crwdne2951628:0",
+          "CSD U6L12.PB - pitch": "crwdns2951630:0crwdne2951630:0",
+          "CSD U6L12.PB - adding": "crwdns2951632:0crwdne2951632:0"
+        },
+        "CSD U6 - Accelerometer - SB2_2222": {
+          "CSD U6L12.3 - turn_off": "crwdns2951620:0crwdne2951620:0",
+          "CSD U6L12.3 - turn_on": "crwdns2951622:0crwdne2951622:0"
+        },
+        "CSD U6 - Color LEDs - CA_2222": {
+          "CSD U6L7.8b - toggle": "crwdns2951126:0crwdne2951126:0",
+          "CSD U6L7.8b - counter": "crwdns2951128:0crwdne2951128:0"
+        },
+        "CSD U6 - Color LEDs - SB4_2222": {
+          "CSDU6L10_rainbow": "crwdns2951072:0crwdne2951072:0"
+        },
+        "CSD U6 - Combine Inputs - A_2222": {
+          "CSD U6L10.7 - colorVar": "crwdns2951304:0crwdne2951304:0",
+          "CSD U6L10.7 - brightnessVar": "crwdns2951306:0crwdne2951306:0",
+          "CSD U6L10.7 - leftIf": "crwdns2951308:0crwdne2951308:0",
+          "CSD U6L10.7 - rightIf": "crwdns2951310:0crwdne2951310:0"
+        },
+        "CSD U6 - Combine Inputs - PracD_2222": {
+          "CSD U6L9.7 - variable": "crwdns2951290:0crwdne2951290:0",
+          "CSD U6L9.7 - if-statement": "crwdns2951292:0crwdne2951292:0"
+        },
+        "CSD U6 - Combine Inputs - SB1_2222": {
+          "CSD U6L10.2 - add_code": "crwdns2951256:0crwdne2951256:0"
+        },
+        "CSD U6 - Functions - P2A_2222": {
+          "CSD U6L14.PA - define": "crwdns2951834:0crwdne2951834:0"
+        },
+        "CSD U6 - Functions - P2C_2222": {
+          "CSD U6L14.PB - todo1": "crwdns2951842:0crwdne2951842:0",
+          "CSD U6L14.PB - todo2": "crwdns2951844:0crwdne2951844:0"
+        },
+        "CSD U6 - Functions - SB1_2222": {
+          "CSD U6L14.3 - functions": "crwdns2951786:0crwdne2951786:0",
+          "CSD U6L14.3 - examples": "crwdns2951788:0crwdne2951788:0"
+        },
+        "CSD U6 - Functions - SB2_2222": {
+          "CSD U6L14.4 - define": "crwdns2951792:0crwdne2951792:0",
+          "CSD U6L14.4 - call": "crwdns2951794:0crwdne2951794:0"
+        },
+        "CSD U6 - Functions - SB3_2222": {
+          "CSD U6L5.14B - define": "crwdns2951798:0crwdne2951798:0"
+        },
+        "CSD U6 - Functions - SB4_2222": {
+          "CSD U6L5.14B - define": "crwdns2951802:0crwdne2951802:0"
+        },
+        "CSD U6 - Functions - SB6_2222": {
+          "CSD U6L14.6 - define": "crwdns2951818:0crwdne2951818:0"
+        },
+        "CSD U6 - Functions - SB7_2222": {
+          "CSD U6L14.9 - define": "crwdns2951822:0crwdne2951822:0",
+          "CSD U6L14.9 - events": "crwdns2951824:0crwdne2951824:0"
+        },
+        "CSD U6 - Functions - SB_2222": {
+          "CSD U6L14.PD - todo1": "crwdns2951852:0crwdne2951852:0",
+          "CSD U6L14.PD - todo2": "crwdns2951854:0crwdne2951854:0",
+          "CSD U6L14.PD - todo3": "crwdns2951856:0crwdne2951856:0"
+        },
+        "CSD U6 - If Variables - A_2222": {
+          "U6L6.4 - Variable": "crwdns2951002:0crwdne2951002:0",
+          "U6L6.4 - Counter": "crwdns2951004:0crwdne2951004:0",
+          "U6L6.4 - If": "crwdns2951006:0crwdne2951006:0"
+        },
+        "CSD U6 - Music - A_2222": {
+          "CSD U6L14.8 - happySong": "crwdns2951746:0crwdne2951746:0",
+          "CSD U6L14.8 - sadSong": "crwdns2951748:0crwdne2951748:0"
+        },
+        "CSD U6 - Music - SB3_2222": {
+          "CSD U6L13.6 - sharp_notes": "crwdns2951738:0crwdne2951738:0"
+        },
+        "CSD U6 - Sensors - PB_2222": {
+          "CSD U6L11.PB - boardevent": "crwdns2951544:0crwdne2951544:0"
+        },
+        "CSD games sidescroll background_2022": {
+          "CSD_U3_L11_S17_C1": "crwdns2955368:0crwdne2955368:0"
+        },
+        "CSD games velocity bee_2022": {
+          "CSD_U3_L11_S5_C1": "crwdns2955262:0crwdne2955262:0"
+        },
+        "CSD web text explore_2022": {
+          "CSD_U3_variables": "crwdns2954176:0crwdne2954176:0"
+        },
+        "CSD web text size_2022": {
+          "": "crwdns2954186:0crwdne2954186:0"
+        },
+        "ml-customize apps-choice3_2022": {
+          "CSD_AI_L10_predict": "crwdns2967238:0crwdne2967238:0"
+        },
+        "ml-customize apps-choice5_2022": {
+          "CSD_AI_L11_top": "crwdns2967252:0crwdne2967252:0"
+        },
+        "ml-intro app lab-book recommender 5C_2022": {
+          "CSD_AI_L7_event": "crwdns2967032:0crwdne2967032:0"
+        },
+        "ml-intro app lab-book recommender 5E_2022": {
+          "CSD_AI_L7_top": "crwdns2967046:0crwdne2967046:0"
+        },
+        "ml-models in applab-screens-1_2022": {
+          "CSD_AI_L10_ifstatement": "crwdns2967098:0crwdne2967098:0"
+        },
+        "ml-models in applab-screens-3_2022": {
+          "CSD_AI_L7_ifstatement": "crwdns2967102:0crwdne2967102:0"
+        },
+        "ml-use model card-choice3_2022": {
+          "CSD_AI_L10_predict": "crwdns2967170:0crwdne2967170:0"
+        },
+        "ml-use model card-choice5_2022": {
+          "CSD_AI_L11_top": "crwdns2967184:0crwdne2967184:0"
+        },
+        "ml-use model card-example3C_2022": {
+          "CSD_AI_L11_temp": "crwdns2967210:0crwdne2967210:0"
+        },
+        "ml-use model card-example3D_2022": {
+          "CSD_AI_L11_time": "crwdns2967214:0crwdne2967214:0"
+        },
+        "ml-use model card-example3_EditB_2022": {
+          "CSD_AI_L11_cars": "crwdns2967202:0crwdne2967202:0"
+        },
+        "ml-use model card-example3_EditC_2022": {
+          "CSD_AI_L11_weather": "crwdns2967206:0crwdne2967206:0"
+        },
+        "CourseD_Dance_2020_012022": {
+          "dance_callout_01": "crwdns3134146:0crwdne3134146:0"
+        },
+        "CourseD_Dance_2020_022022": {
+          "dance_callout_11_a": "crwdns3134156:0crwdne3134156:0",
+          "arrow_buttons": "crwdns3134158:0crwdne3134158:0"
+        },
+        "CourseD_Dance_2020_042022": {
+          "dance_callout_02": "crwdns3134174:0crwdne3134174:0"
+        },
+        "CourseD_Dance_2020_052022": {
+          "dance_callout_05": "crwdns3134184:0crwdne3134184:0"
+        },
+        "CourseD_Dance_2020_062022": {
+          "dance_party_11_5_groups": "crwdns3134194:0crwdne3134194:0"
+        },
+        "CourseD_Dance_2020_072022": {
+          "setprop_hint": "crwdns3134204:0crwdne3134204:0"
+        },
+        "CourseD_Dance_2020_092022": {
+          "new_block_3": "crwdns3134224:0crwdne3134224:0",
+          "new_block_4": "crwdns3134226:0crwdne3134226:0"
+        },
+        "CourseF_outbreak2_-2022-2": {
+          "minitoolbox": "crwdns3149484:0crwdne3149484:0",
+          "pointerlocation": "crwdns3149486:0crwdne3149486:0"
+        },
+        "CourseF_outbreak7_-2022-2": {
+          "costumes_tab": "crwdns3149630:0crwdne3149630:0"
+        },
+        "Fish Tank 3-validated2022": {
+          "spritelab_comment": "crwdns3130148:0crwdne3130148:0"
+        },
+        "Function intro Ryan2022": {
+          "Function_intro_Ryan_1": "crwdns3135480:0crwdne3135480:0"
+        },
+        "MC_HOC_2017_03_Cole2022": {
+          "MC_HOC_2017_03_Cole_1": "crwdns3135424:0crwdne3135424:0"
+        },
+        "MC_HOC_2017_04_Cole2022": {
+          "MC_HOC_2017_04_Cole_a": "crwdns3135438:0crwdne3135438:0"
+        },
+        "MC_HOC_2017_06_Cole2022": {
+          "MC_HOC_2017_06_Cole_1": "crwdns3135470:0crwdne3135470:0"
+        },
+        "MC_HOC_2017_Ali2022": {
+          "MC_HOC_2017_08_RY_1": "crwdns3135524:0crwdne3135524:0"
+        },
+        "Overworld Chop Trees2022": {
+          "craft_callout_preplaced": "crwdns3134734:0crwdne3134734:0"
+        },
+        "Overworld House Frame Chosen2022": {
+          "craft_callout_preplaced_house": "crwdns3134758:0crwdne3134758:0"
+        },
+        "Overworld Move to Sheep2022": {
+          "craft_run_button_callout": "crwdns3134706:0crwdne3134706:0",
+          "craft_drag_block_callout": "crwdns3134708:0crwdne3134708:0"
+        },
+        "Overworld Place Wall2022": {
+          "craft_inside_repeat": "crwdns3134746:0crwdne3134746:0"
+        },
+        "Underground Avoiding Lava2022": {
+          "craft_callout_moveforward": "crwdns3134798:0crwdne3134798:0"
+        },
+        "Underground Iron2022": {
+          "craft_what_is_iron": "crwdns3134818:0crwdne3134818:0"
+        },
+        "Virtual Pet 2_-2022-2": {
+          "vp_costumes": "crwdns3133988:0crwdne3133988:0"
+        },
+        "Virtual Pet 6_-2022-2": {
+          "vp_costumes": "crwdns3134124:0crwdne3134124:0"
+        },
+        "courseA_EOC_playlab_animals2022": {
+          "question_mark": "crwdns3121380:0crwdne3121380:0"
+        },
+        "courseA_EOC_playlab_fantasy2022": {
+          "question_mark": "crwdns3121402:0crwdne3121402:0"
+        },
+        "courseA_EOC_playlab_people2022": {
+          "question_mark": "crwdns3121390:0crwdne3121390:0"
+        },
+        "courseA_artist_loops42022": {
+          "courseA_artist_loops4_1": "crwdns3128526:0crwdne3128526:0"
+        },
+        "courseA_artist_loops72022": {
+          "courseA_artist_loops7_1": "crwdns3128556:0crwdne3128556:0"
+        },
+        "courseA_artist_loops82022": {
+          "courseA_artist_loops8_1": "crwdns3128568:0crwdne3128568:0"
+        },
+        "courseA_collector_loops12022": {
+          "courseA_collector_loops1_1": "crwdns3128418:0crwdne3128418:0"
+        },
+        "courseA_collector_loops32022": {
+          "gradek_adventurer_loops2_1": "crwdns3128434:0crwdne3128434:0"
+        },
+        "courseA_maze_ramp22022": {
+          "courseC_maze_programming2_1": "crwdns3120448:0crwdne3120448:0"
+        },
+        "courseA_maze_seq12022": {
+          "courseA_maze_seq1_1": "crwdns3153104:0crwdne3153104:0"
+        },
+        "courseA_playLab_events42022": {
+          "courseA_playlab_events4_callout1": "crwdns3128642:0crwdne3128642:0"
+        },
+        "courseA_playLab_events52022": {
+          "courseA_playLab_events5_1": "crwdns3128652:0crwdne3128652:0"
+        },
+        "courseA_playLab_events62022": {
+          "courseA_playLab_events6_1": "crwdns3128664:0crwdne3128664:0"
+        },
+        "courseB_Scrat_ramp12022": {
+          "grade2_CaringForNewPet_0_1": "crwdns3128098:0crwdne3128098:0"
+        },
+        "courseB_Scrat_ramp3a2022": {
+          "courseC_maze_programming2_1": "crwdns3128112:0crwdne3128112:0"
+        },
+        "courseB_artist_loops32022": {
+          "courseB_artist_loops3_1": "crwdns3153680:0crwdne3153680:0"
+        },
+        "courseB_collector_loops12022": {
+          "courseB_collector_loops1_1": "crwdns3153452:0crwdne3153452:0"
+        },
+        "courseB_maze_seq12022": {
+          "courseB_maze_seq1": "crwdns3128140:0crwdne3128140:0"
+        },
+        "courseB_playlab_events62022": {
+          "courseB_playlab_events6_a": "crwdns3153884:0crwdne3153884:0"
+        },
+        "courseC19_playLab_EOC32022": {
+          "courseE_playLab_scaffold3_1": "crwdns3124814:0crwdne3124814:0"
+        },
+        "courseC_PlayLab_events82022": {
+          "courseC_PlayLab_events8_callout1": "crwdns3124500:0crwdne3124500:0"
+        },
+        "courseC_PlayLab_events_challenge12022": {
+          "courseC_PlayLab_events_challenge1_1": "crwdns3124592:0crwdne3124592:0"
+        },
+        "courseC_PlayLab_events_lesson_extras": {
+          "courseC_PlayLab_events_challenge1_1": "crwdns3124904:0crwdne3124904:0"
+        },
+        "courseC_artist_loops1a2022": {
+          "jumpto_callout": "crwdns3124028:0crwdne3124028:0"
+        },
+        "courseC_artist_loops1b2022": {
+          "sticker2": "crwdns3124054:0crwdne3124054:0"
+        },
+        "courseC_artist_prog22022": {
+          "slider": "crwdns3123228:0crwdne3123228:0"
+        },
+        "courseC_collector_prog12022": {
+          "courseC_collector_prog1_1": "crwdns3123100:0crwdne3123100:0"
+        },
+        "courseC_collector_prog72022": {
+          "courseC_collector_prog7_1": "crwdns3123160:0crwdne3123160:0"
+        },
+        "courseC_harvester_loops12022": {
+          "courseC_harvester_loops1_callout1": "crwdns3123744:0crwdne3123744:0"
+        },
+        "courseC_maze_debugging52022": {
+          "courseC_maze_debugging5_1": "crwdns3123030:0crwdne3123030:0"
+        },
+        "courseC_maze_debugging92022": {
+          "courseC_maze_debugging9_2019_1": "crwdns3123074:0crwdne3123074:0"
+        },
+        "courseC_maze_programming12022": {
+          "grade2_CaringForNewPet_0_1": "crwdns3122866:0crwdne3122866:0"
+        },
+        "courseC_maze_programming22022": {
+          "courseC_maze_programming2_1": "crwdns3122876:0crwdne3122876:0"
+        },
+        "courseC_maze_programming32022": {
+          "courseC_maze_programming3_2": "crwdns3122886:0crwdne3122886:0",
+          "courseC_maze_programming3_3": "crwdns3122888:0crwdne3122888:0"
+        },
+        "courseC_maze_programming42022": {
+          "courseC_maze_programming4_1": "crwdns3122898:0crwdne3122898:0"
+        },
+        "courseC_maze_programming52022": {
+          "": "crwdns3122910:0crwdne3122910:0"
+        },
+        "courseC_maze_programming72022": {
+          "courseC_maze_programming7_1": "crwdns3122932:0crwdne3122932:0",
+          "courseC_maze_programming7_2": "crwdns3122934:0crwdne3122934:0"
+        },
+        "courseC_starWars_loops22022": {
+          "courseC_starWars_loops2": "crwdns3123500:0crwdne3123500:0"
+        },
+        "courseD_artist_nestedLoops1a2022": {
+          "courseD_artist_nestedLoops1a_1": "crwdns3142546:0crwdne3142546:0"
+        },
+        "courseD_bee_conditionals22022": {
+          "4_5_Bee_Conditionals_2_1": "crwdns3134864:0crwdne3134864:0"
+        },
+        "courseD_bee_conditionals_challenge22022": {
+          "courseD_bee_conditionals_challenge2_1": "crwdns3134968:0crwdne3134968:0"
+        },
+        "courseD_bee_nestedLoops1a2022": {
+          "stepButton": "crwdns3134490:0crwdne3134490:0"
+        },
+        "courseD_farmer_while72022": {
+          "courseD_farmer_while7_2018_PathAhead": "crwdns3135056:0crwdne3135056:0"
+        },
+        "courseD_maze_intro42022": {
+          "courseC_maze_programming4_1": "crwdns3149874:0crwdne3149874:0"
+        },
+        "courseD_maze_intro5a2022": {
+          "": "crwdns3149898:0crwdne3149898:0"
+        },
+        "courseD_maze_ramp12022": {
+          "grade2_CaringForNewPet_0_1": "crwdns3149844:0crwdne3149844:0"
+        },
+        "courseD_maze_ramp22022": {
+          "courseC_maze_programming2_1": "crwdns3149854:0crwdne3149854:0"
+        },
+        "courseD_maze_ramp32022": {
+          "courseC_maze_programming3_2": "crwdns3149862:0crwdne3149862:0",
+          "stone_block_2": "crwdns3149864:0crwdne3149864:0"
+        },
+        "courseD_maze_ramp52022": {
+          "": "crwdns3149886:0crwdne3149886:0"
+        },
+        "courseE_aboutme_22022": {
+          "": "crwdns3142204:0crwdne3142204:0"
+        },
+        "courseE_artist_functions22022": {
+          "courseD_artist_functions2_1": "crwdns3135750:0crwdne3135750:0"
+        },
+        "courseE_artist_functions8a2022": {
+          "courseD_artist_functions8_1": "crwdns3135788:0crwdne3135788:0"
+        },
+        "courseE_artist_functions_challenge12022": {
+          "courseE_artist_functions_challenge1_callout1": "crwdns3135952:0crwdne3135952:0",
+          "courseE_artist_functions_challenge1_callout2": "crwdns3135954:0crwdne3135954:0"
+        },
+        "courseE_artist_functions_challenge22022": {
+          "courseE_artist_functions_challenge2_callout1": "crwdns3135966:0crwdne3135966:0",
+          "courseE_artist_functions_challenge2_callout2": "crwdns3135968:0crwdne3135968:0"
+        },
+        "courseE_farmer_functions12022": {
+          "courseE_farmer_functions1_2": "crwdns3135550:0crwdne3135550:0"
+        },
+        "courseE_farmer_functions132022": {
+          "courseE_farmer_functions1a_1": "crwdns3135660:0crwdne3135660:0"
+        },
+        "courseE_farmer_functions1a2022": {
+          "courseE_farmer_functions1a_1": "crwdns3135560:0crwdne3135560:0"
+        },
+        "courseE_farmer_functions2b2022": {
+          "courseE_farmer_functions1a_1": "crwdns3135574:0crwdne3135574:0"
+        },
+        "courseF_apps_aquarium2022": {
+          "run_button": "crwdns3130936:0crwdne3130936:0",
+          "visualizationResizeBar": "crwdns3130938:0crwdne3130938:0"
+        },
+        "courseF_apps_aquarium_-2022-2": {
+          "run_button": "crwdns3144180:0crwdne3144180:0",
+          "visualizationResizeBar": "crwdns3144182:0crwdne3144182:0"
+        },
+        "courseF_apps_card2022": {
+          "visualizationResizeBar": "crwdns3130470:0crwdne3130470:0"
+        },
+        "courseF_apps_card_-2022-2": {
+          "visualizationResizeBar": "crwdns3143918:0crwdne3143918:0"
+        },
+        "courseF_apps_chatbot2022": {
+          "run_button": "crwdns3130562:0crwdne3130562:0",
+          "visualizationResizeBar": "crwdns3130566:0crwdne3130566:0"
+        },
+        "courseF_apps_chatbot_-2022-2": {
+          "run_button": "crwdns3143968:0crwdne3143968:0",
+          "visualizationResizeBar": "crwdns3143970:0crwdne3143970:0"
+        },
+        "courseF_apps_collector2022": {
+          "run_button": "crwdns3131134:0crwdne3131134:0",
+          "visualizationResizeBar": "crwdns3131138:0crwdne3131138:0"
+        },
+        "courseF_apps_collector_-2022-2": {
+          "run_button": "crwdns3144288:0crwdne3144288:0",
+          "visualizationResizeBar": "crwdns3144290:0crwdne3144290:0"
+        },
+        "courseF_apps_collector_drag_-2022-2": {
+          "visualizationResizeBar": "crwdns3149252:0crwdne3149252:0"
+        },
+        "courseF_apps_collector_drive_-2022-2": {
+          "visualizationResizeBar": "crwdns3149208:0crwdne3149208:0"
+        },
+        "courseF_apps_collector_move2_-2022-2": {
+          "visualizationResizeBar": "crwdns3149296:0crwdne3149296:0"
+        },
+        "courseF_apps_collector_move_-2022-2": {
+          "visualizationResizeBar": "crwdns3149198:0crwdne3149198:0"
+        },
+        "courseF_apps_madlib2022": {
+          "visualizationResizeBar": "crwdns3130764:0crwdne3130764:0"
+        },
+        "courseF_apps_madlib_-2022-2": {
+          "visualizationResizeBar": "crwdns3144088:0crwdne3144088:0"
+        },
+        "courseF_apps_pet2022": {
+          "run_button": "crwdns3130338:0crwdne3130338:0",
+          "visualizationResizeBar": "crwdns3130340:0crwdne3130340:0"
+        },
+        "courseF_apps_pet_-2022-2": {
+          "run_button": "crwdns3143840:0crwdne3143840:0",
+          "visualizationResizeBar": "crwdns3143842:0crwdne3143842:0"
+        },
+        "courseF_artist_for12022": {
+          "courseF_artist_for1_1": "crwdns3137522:0crwdne3137522:0"
+        },
+        "courseF_bee_for42022": {
+          "courseF_bee_for4_1": "crwdns3137404:0crwdne3137404:0"
+        },
+        "courseF_bee_for92022": {
+          "courseF_bee_for9_1": "crwdns3137478:0crwdne3137478:0"
+        },
+        "courseF_bee_variables_1a2022": {
+          "courseF_bee_functions_1_2018_1": "crwdns3137300:0crwdne3137300:0"
+        },
+        "courseF_collector_items_-2022-2": {
+          "costumes_tab_callout": "crwdns3149342:0crwdne3149342:0"
+        },
+        "courseF_collector_player_move_-2022-2": {
+          "costumes_tab_callout": "crwdns3149336:0crwdne3149336:0"
+        },
+        "courseF_editable_card_-2022-2": {
+          "visualizationResizeBar": "crwdns3147958:0crwdne3147958:0"
+        },
+        "courseF_editable_chatbot_-2022-2": {
+          "visualizationResizeBar": "crwdns3148008:0crwdne3148008:0"
+        },
+        "courseF_editable_madlib_-2022-2": {
+          "visualizationResizeBar": "crwdns3148072:0crwdne3148072:0"
+        },
+        "courseF_events_choice_penguin_-2022-2": {
+          "whenToWhile": "crwdns3133488:0crwdne3133488:0"
+        },
+        "courseF_events_conflict_-2022-2": {
+          "stops_block": "crwdns3133078:0crwdne3133078:0"
+        },
+        "courseF_events_key_-2022-2": {
+          "whenKey": "crwdns3132942:0crwdne3132942:0"
+        },
+        "courseF_events_practice_reorder_-2022-2": {
+          "stopAllBug": "crwdns3133214:0crwdne3133214:0"
+        },
+        "courseF_events_predict_-2022-2": {
+          "behaviors_edit": "crwdns3132718:0crwdne3132718:0"
+        },
+        "courseF_events_time_-2022-2": {
+          "events_category": "crwdns3132870:0crwdne3132870:0"
+        },
+        "courseF_groups_size_-2022-2": {
+          "mini-toolbox-blue-button": "crwdns3148688:0crwdne3148688:0"
+        },
+        "courseF_label_predict_-2022-2": {
+          "variablesPredict": "crwdns3147856:0crwdne3147856:0"
+        },
+        "courseF_sprites_behaviors_-2022-2": {
+          "behaviors_category": "crwdns3131826:0crwdne3131826:0"
+        },
+        "courseF_sprites_make_-2022-2": {
+          "sprites_category": "crwdns3131354:0crwdne3131354:0"
+        },
+        "courseF_sprites_positioning_-2022-2": {
+          "locations_category": "crwdns3131468:0crwdne3131468:0"
+        },
+        "courseF_sprites_properties_-2022-2": {
+          "sprites_category2": "crwdns3131700:0crwdne3131700:0"
+        },
+        "courseF_text_answer_-2022-2": {
+          "answered_block": "crwdns3136332:0crwdne3136332:0"
+        },
+        "courseF_text_choice_color_-2022-2": {
+          "text_color_finish": "crwdns3136868:0crwdne3136868:0"
+        },
+        "courseF_text_choice_conversation_-2022-2": {
+          "text_generic_finish": "crwdns3136472:0crwdne3136472:0"
+        },
+        "courseF_text_choice_title_-2022-2": {
+          "title_block": "crwdns3136796:0crwdne3136796:0",
+          "text_answer_finish": "crwdns3136798:0crwdne3136798:0"
+        },
+        "courseF_text_concat_-2022-2": {
+          "join_blocks": "crwdns3136404:0crwdne3136404:0"
+        },
+        "courseF_text_events_-2022-2": {
+          "events_category": "crwdns3136200:0crwdne3136200:0"
+        },
+        "courseF_text_print_-2022-2": {
+          "print_block": "crwdns3136134:0crwdne3136134:0",
+          "text_print_finish": "crwdns3136136:0crwdne3136136:0"
+        },
+        "courseF_text_prompts_-2022-2": {
+          "prompt_block": "crwdns3136264:0crwdne3136264:0"
+        },
+        "courseF_variables2_predict_-2022-2": {
+          "variablesPredict": "crwdns3137012:0crwdne3137012:0"
+        },
+        "courseF_variables_predict_-2022-2": {
+          "variablesPredict": "crwdns3135978:0crwdne3135978:0"
+        },
+        "coursea_maze_ramp12022": {
+          "grade2_CaringForNewPet_0_1": "crwdns3120436:0crwdne3120436:0"
+        },
+        "coursee_helloworld_events": {
+          "hello_world_click_hint": "crwdns3141776:0crwdne3141776:0"
+        },
+        "coursee_helloworld_freeplay": {
+          "costumes_tab": "crwdns3142168:0crwdne3142168:0"
+        },
+        "coursee_helloworld_say": {
+          "hello_world_say": "crwdns3141740:0crwdne3141740:0",
+          "hello_world_make_sprite": "crwdns3141742:0crwdne3141742:0"
+        },
+        "express_maze_debugging92022": {
+          "express_maze_debugging9_2019_1": "crwdns3129476:0crwdne3129476:0"
         }
       }
     }

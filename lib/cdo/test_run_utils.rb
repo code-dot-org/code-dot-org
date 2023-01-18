@@ -46,6 +46,14 @@ module TestRunUtils
     end
   end
 
+  def self.run_dashboard_legacy_tests
+    Dir.chdir(dashboard_legacy_dir) do
+      ChatClient.wrap('dashboard legacy tests') do
+        RakeUtils.rake_stream_output 'test'
+      end
+    end
+  end
+
   def self.run_pegasus_tests
     Dir.chdir(pegasus_dir) do
       ChatClient.wrap('pegasus tests') do

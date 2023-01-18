@@ -37,6 +37,6 @@ Lihat [panduan cara menjalankan acara]({{ urls/how_to_events }}) untuk jadual ac
 Jam Kod ialah langkah pertama dalam perjalanan untuk mengetahui lebih lanjut tentang cara teknologi berfungsi dan cara mencipta aplikasi perisian. Untuk meneruskan perjalanan ini:
 
 - Galakkan pelajar untuk terus [belajar secara dalam talian]({{ urls/learn_beyond }}).
-- [Menghadiri]({{ urls/professional_development_workshops }}) bengkel secara langsung selama 1 hari untuk menerima arahan daripada fasilitator sains komputer yang berpengalaman. (Pendidik Amerika Syarikat sahaja)
+- [Learn more](https://code.org/administrators) about implementing a computer science pathway in your district.
 
 {{ signup_button }}

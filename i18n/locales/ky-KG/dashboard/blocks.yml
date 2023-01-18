@@ -253,6 +253,11 @@ ky:
             '"space"': космос
             '"x"': x
             '"y"': 'y'
+      DansBlocks_setForegroundEffect2:
+        options:
+          EFFECT:
+            '"hearts"': жүрөктөр
+            '"rain"': жаан
       gamelab_atTime:
         options:
           UNIT:
@@ -637,3 +642,8 @@ ky:
         text: алдыга жылдыр
       craft_placeTorch:
         text: чырак орнотуу
+      storylab_setForegroundEffect2:
+        options:
+          EFFECT:
+            '"hearts"': жүрөктөр
+            '"rain"': жаан

@@ -1,9 +1,5 @@
 <Applab>
   <config><![CDATA[{
-  "game_id": 41,
-  "created_at": "2022-04-08T17:07:37.000Z",
-  "level_num": "custom",
-  "user_id": 568,
   "properties": {
     "skin": "applab",
     "code_functions": {
@@ -110,14 +106,18 @@
     "libraries_enabled": "false",
     "ai_enabled": "false",
     "reference_links": [
-      "/docs/concepts/maker-toolkit/playing-notes/",
-      "/docs/concepts/javascript/arrays/"
+      "/courses/csd-2022/guides/playing-notes",
+      "/courses/csd-2022/guides/arrays"
     ],
     "start_html": "<div id=\"designModeViz\" class=\"appModern clip-content\" tabindex=\"1\" data-radium=\"true\" style=\"width: 320px; height: 450px; display: none;\"><div class=\"screen\" tabindex=\"1\" data-theme=\"default\" id=\"screen1\" style=\"display: block; height: 450px; width: 320px; left: 0px; top: 0px; position: absolute; z-index: 0; background-color: rgb(255, 255, 255);\"><button id=\"happyBirthdayButton\" style=\"padding: 0px; margin: 0px; border-style: solid; height: 45px; width: 165px; background-color: rgb(255, 164, 0); color: rgb(255, 255, 255); border-color: rgb(77, 87, 95); border-radius: 4px; border-width: 1px; font-family: &quot;Arial Black&quot;, Gadget, sans-serif; font-size: 15px; position: absolute; left: 75px; top: 90px;\">Happy Birthday</button><button id=\"mySongButton\" style=\"padding: 0px; margin: 0px; border-style: solid; height: 45px; width: 165px; background-color: rgb(255, 164, 0); color: rgb(255, 255, 255); border-color: rgb(77, 87, 95); border-radius: 4px; border-width: 1px; font-family: &quot;Arial Black&quot;, Gadget, sans-serif; font-size: 15px; position: absolute; left: 75px; top: 260px;\">My Song</button></div></div>",
     "start_blocks": "onEvent(\"happyBirthdayButton\", \"click\", function( ) {\r\n  buzzer.playSong([[\"D4\", 0.5], [\"D4\", 0.5], [\"E4\", 1], [\"D4\", 1], [\"G4\", 1], [\"F#4\", 2]], 120);\r\n});\r\n",
     "bubble_choice_description": "Learn to use the playSong block to play more songs!",
     "preload_asset_list": null
   },
+  "level_num": "custom",
+  "game_id": 41,
+  "created_at": "2022-04-08T17:07:37.000Z",
+  "user_id": 568,
   "published": true,
   "notes": "",
   "audit_log": "[{\"changed_at\":\"2022-04-08T17:07:37.874+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Music - ChalB_2022\\\"\"],\"cloned_from\":\"CSD U6 - Music - ChalB_2022\"}]"

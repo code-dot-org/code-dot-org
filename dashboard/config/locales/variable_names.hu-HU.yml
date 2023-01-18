@@ -24,6 +24,7 @@ hu:
       level: szint
       name: név
       nectar: nektár
+      object: objektumot
       planet: bolygó
       points: pontok
       random: véletlen
@@ -33,6 +34,7 @@ hu:
       shout: kiáltás
       size: méret
       speed: sebesség
+      type: típus
       variable: változó
       width: szélesség
       wizard: varázsló

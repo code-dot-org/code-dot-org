@@ -20,6 +20,7 @@ nl:
       level: niveau
       name: naam
       nectar: nectar
+      object: object
       planet: planeet
       points: punten
       random: willekeurig
@@ -29,6 +30,7 @@ nl:
       sides: zijden
       size: grootte
       speed: snelheid
+      type: type
       variable: variabele
       width: breedte
       wizard: tovenaar

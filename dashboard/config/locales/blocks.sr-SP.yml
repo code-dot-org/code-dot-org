@@ -430,6 +430,11 @@ sr:
             '"space"': Простор
             '"x"': x
             '"y"': у
+      DansBlocks_setForegroundEffect2:
+        options:
+          EFFECT:
+            '"hearts"': срца
+            '"rain"': киша
       gamelab_addTarget:
         options:
           OPT:
@@ -805,3 +810,8 @@ sr:
         text: помери се напред
       craft_placeTorch:
         text: постави бакљу
+      storylab_setForegroundEffect2:
+        options:
+          EFFECT:
+            '"hearts"': срца
+            '"rain"': киша

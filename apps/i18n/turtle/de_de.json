@@ -38,6 +38,8 @@
   "drawATriangle": "zeichne ein Dreieck",
   "drawUpperWave": "zeichne obere Welle",
   "drawLowerWave": "zeichne untere Welle",
+  "drawShape": "Zeichne Form",
+  "drawShapeWithSideLength": "Zeichne Form mit Seitenlänge",
   "drawSticker": "Aufkleber zeichnen",
   "drawStickerWithSize": "Aufkleber zeichnen mit Größe",
   "forward": "vorwärts",
@@ -103,5 +105,6 @@
   "turtleVisibilityTooltip": "Macht den Künstler sichtbar oder unsichtbar.",
   "widthTooltip": "Ändert die Breite des Stiftes.",
   "withSize": "mit Größe",
+  "withSideLength": "mit Seitenlänge",
   "wrongColour": "Dein Bild hat die falsche Farbe. Für diese Aufgabe musst du die Farbe auf %1 setzen."
 }

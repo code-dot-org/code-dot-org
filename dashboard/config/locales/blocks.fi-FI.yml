@@ -228,20 +228,12 @@ fi:
             MOVES.XArmsUp: Venytys
             MOVES.ThisOrThat: Sitä tai tätä
             MOVES.Rest: Ei mitään
-      Dancelab_everyMeasuresRange:
-        text: 'toista joka {N} tahdin jälkeen {START} '
       Dancelab_everySeconds:
         text: 'joka {N} {UNIT} '
         options:
           UNIT:
             '"measures"': tahdit
             '"seconds"': sekuntia
-      Dancelab_everySecondsRange:
-        text: 'joka {N} {UNIT} alusta {START} loppuun {STOP} '
-        options:
-          UNIT:
-            measures: Tahdit
-            seconds: Sekunnit
       Dancelab_everyVerseChorus:
         text: 'Joka {UNIT} '
         options:
@@ -983,6 +975,14 @@ fi:
         text: asetukset
       Dancelab_whenSetup2:
         text: asetukset
+      DansBlocks_setForegroundEffect2:
+        options:
+          EFFECT:
+            '"bubbles"': Kuplat
+            '"confetti"': Konfetti
+            '"hearts"': sydämet
+            '"rain"': sade
+            '"starburst"': Tähtisäteet
       gamelab_addBehaviorSimple:
         text: sprite {SPRITE} alkaa {BEHAVIOR}
       gamelab_addTarget:
@@ -1213,6 +1213,10 @@ fi:
             "'sound://category_animals/dolphin.mp3'": delfiini
             "'sound://category_animals/dog.mp3'": koira
             "'sound://category_digital/jump_7.mp3'": hyppää
+      gamelab_playSoundOptionsSoccer:
+        text: PlaySound {SOUND}
+      gamelab_playSoundOptionsSpace:
+        text: PlaySound {SOUND}
       gamelab_playerBehaviors:
         options:
           BEHAVIOR:
@@ -1687,6 +1691,8 @@ fi:
           SOUND:
             '"sound://category_pop/bubble_pop_cluster_2.mp3"': kupla
             '"sound://category_jump/vibrant_game_jumping_up_1.mp3"': hyppää
+      Poetry_playSoundOptionsSpace:
+        text: PlaySound {SOUND}
       Poetry_setBackground:
         text: aseta taustaväri {COLOR}
       Poetry_setBackgroundEffect:
@@ -1728,6 +1734,11 @@ fi:
             '8': '8'
             '9': '9'
             '10': '10'
+            '11': '11'
+            '12': '12'
+            '13': '13'
+            '14': '14'
+            '15': '15'
       RyanLab_moveForward:
         text: siirry eteenpäin
       RyanLab_turnLeft:
@@ -1923,5 +1934,13 @@ fi:
           DIR:
             right: oikea ↻
             left: vasen ↺
+      storylab_setForegroundEffect2:
+        options:
+          EFFECT:
+            '"bubbles"': Kuplat
+            '"confetti"': Konfetti
+            '"hearts"': sydämet
+            '"rain"': sade
+            '"starburst"': Tähtisäteet
       validation_validatedBackground:
         text: aseta tausta {IMG}

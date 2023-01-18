@@ -64,10 +64,10 @@
     "widget_mode": "false",
     "ai_enabled": "false",
     "reference_links": [
-      "/docs/concepts/maker-toolkit/circuit-playground/",
-      "/docs/concepts/maker-toolkit/physical-input/",
-      "/docs/concepts/maker-toolkit/producing-output/",
-      "/docs/concepts/maker-toolkit/board-events/"
+      "/courses/csd-2022/guides/circuit-playground",
+      "/courses/csd-2022/guides/physical-input",
+      "/courses/csd-2022/guides/producing-output",
+      "/courses/csd-2022/guides/board-events"
     ],
     "palette_category_at_start": "Circuit",
     "display_name": "Morse Code Simulator",
@@ -78,11 +78,11 @@
     "encrypted_examples": "5KyRa4FfTWmwbzUv8VxbZSyf+fOkFX5G0CgnnkAB6zmMiuNEOdsOzcR/abmM\n79o20kmi+Gwa+WxtIx6BkIGcwA==\n",
     "preload_asset_list": null
   },
-  "game_id": 41,
-  "published": true,
-  "created_at": "2022-04-08T16:53:45.000Z",
   "level_num": "custom",
+  "game_id": 41,
+  "created_at": "2022-04-08T16:53:45.000Z",
   "user_id": 1,
+  "published": true,
   "notes": "",
   "audit_log": "[{\"changed_at\":\"2022-04-08T16:53:45.658+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Board Inputs - PracD_2022\\\"\"],\"cloned_from\":\"CSD U6 - Board Inputs - PracD_2022\"},{\"changed_at\":\"2022-04-15 21:47:13 +0000\",\"changed\":[\"code_functions\",\"thumbnail_url\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>

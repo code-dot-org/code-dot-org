@@ -6,7 +6,7 @@ import i18n from '@cdo/locale';
 import {
   projectUpdatedStatuses as statuses,
   retryProjectSave
-} from '../../headerRedux';
+} from '../../projectRedux';
 import BaseDialog from '../../../templates/BaseDialog';
 import DialogFooter from '../../../templates/teacherDashboard/DialogFooter';
 import Button from '../../../templates/Button';
@@ -42,7 +42,6 @@ export class UnconnectedRetryProjectSaveDialog extends Component {
         </div>
         <DialogFooter rightAlign={true}>
           <Button
-            __useDeprecatedTag
             text={i18n.retryProjectSaveDialogButton()}
             onClick={this.handleClick}
             color={Button.ButtonColor.orange}
@@ -69,8 +68,8 @@ const styles = {
 
 export default connect(
   state => ({
-    projectUpdatedStatus: state.header.projectUpdatedStatus,
-    isOpen: state.header.showTryAgainDialog
+    projectUpdatedStatus: state.project.projectUpdatedStatus,
+    isOpen: state.project.showTryAgainDialog
   }),
   dispatch => ({
     onTryAgain() {

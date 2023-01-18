@@ -187,6 +187,7 @@ class Census::StateCsOffering < ApplicationRecord
     ME:2021
     MI:2021
     MN:2021
+    NH:2021
   ).freeze
 
   def self.infer_no(state_code, school_year)

@@ -231,12 +231,15 @@ You can include the [Hour of Code logo](https://hourofcode.com/us/promote/resour
 
 ## 한 시간 자기 주도형 튜토리얼 설계를 위한 제안사항
 
-**활동 끝 부분에 피드백 포함.** (예. “10개 레벨을 끝마쳤으며, 루프에 관해 배웠습니다! 잘 했습니다!)
+**활동 끝 부분에 피드백 포함.** (예. “10개 레벨을 끝마쳤으며, 루프에 관해 배웠습니다! 잘 했습니다!) We don't want to prevent this usage, but we want to make sure the usage falls within a few limits:
 
-1. 패션 제품에는 "아워오브코드" 라는 참조 표시를 사용해야 한다는 것은 그것이 귀사의 고유 브랜드명임을 나타내는 것이 아니라 "아워오브코드"를 풀뿌리 운동으로서 지칭하는 것입니다. 좋은 예: "ACMECorp.com에서 아워오브코드™ 에 참여하세요." 나쁜 예: "ACME Corp의 아워오브코드를 해보세요".
-2. "TM" 첨자는 웹사이트와 앱 설명 모두에서 "아워오브코드"를 언급한 가장 두드러진 위치에서 사용하세요.
-3. 페이지 (또는 꼬리말)에 아워오브코드와 CSEdWeek, Code.org 웹사이트로의 링크를 포함하여 다음과 같이 말하는 언어를 넣으세요: a. “ '[아워오브코드](http://hourofcode.com)™'는[컴퓨터 과학 교육주간](http://csedweek.org)과 [Code.org](http://code.org)에 의해 수 백만 학생에게 한 시간 동안 컴퓨터 과학과 컴퓨터 프로그래밍을 소개하기 위해 벌이는 전국적인 운동입니다.”
-4. "Hour of Code"를 앱/프로그램 이름으로 사용하지 말아주세요.
+1. Use “Hour of Code” only in connection with non-commercial CS Education activities in the context of the Hour of Code campaign, and for no other purpose.
+2. Any reference to "Hour of Code" should be used in a fashion that doesn't suggest that it's your own brand name, but that it rather references the Hour of Code as a grassroots movement. Good example: "Participate in the Hour of Code ® at ACMECorp.com". Bad example: "Try Hour of Code by ACME Corp".
+3. Use a “®” superscript in the most prominent places you mention "Hour of Code", both on your web site and in app descriptions.
+4. Include language on the page (or in the footer), including links to the Hour of Code, CSEdWeek and Code.org web sites, that discloses both the following: a. Hour of Code® and Hora del Código® are registered trademarks of Code.org; and b. “The '[Hour of Code](http://hourofcode.com/) ® is a nationwide initiative by [Code.org](http://code.org/) to introduce millions of students to one hour of computer science and computer programming.”
+5. Do not use "Hour of Code" in app names.
+6. Do not use “Hour of Code” in connection with any commercial use or purpose (e.g., placing your Hour of Code activity behind a paywall; promoting another paid service as part of your Hour of Code activity; selling Hour of Code merchandise).
+7. Do not use “Hour of Code” in connection with any activity that requires a login or account creation.
 
 [**맨 위로**](#top)
 

@@ -204,12 +204,6 @@ et:
           UNIT:
             '"measures"': ühikud
             '"seconds"': sekundit
-      Dancelab_everySecondsRange:
-        text: 'iga {N} {UNIT} alates {START} kuni {STOP} '
-        options:
-          UNIT:
-            measures: Ühikud
-            seconds: Sekundid
       Dancelab_everyVerseChorus:
         text: 'iga {UNIT} '
         options:
@@ -776,6 +770,12 @@ et:
         text: seadistus
       Dancelab_whenSetup2:
         text: seadistus
+      DansBlocks_setForegroundEffect2:
+        options:
+          EFFECT:
+            '"bubbles"': Mullid
+            '"hearts"': südamed
+            '"rain"': vihm
       gamelab_atTime:
         options:
           UNIT:
@@ -1368,3 +1368,9 @@ et:
           DIR:
             right: paremale ↻
             left: vasakule ↺
+      storylab_setForegroundEffect2:
+        options:
+          EFFECT:
+            '"bubbles"': Mullid
+            '"hearts"': südamed
+            '"rain"': vihm

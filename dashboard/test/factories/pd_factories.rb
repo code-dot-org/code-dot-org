@@ -198,46 +198,46 @@ FactoryGirl.define do
   factory :pd_teachercon_survey_hash, class: 'Hash' do
     initialize_with do
       {
-        "personalLearningNeedsMet": "Strongly Agree",
-        "haveIdeasAboutFormative": "Strongly Disagree",
-        "haveIdeasAboutSummative": "Disagree",
-        "haveConcreteIdeas": "Slightly Disagree",
-        "toolsWillHelp": "Slightly Agree",
-        "learnedEnoughToMoveForward": "Agree",
-        "feelConfidentUsingMaterials": "Strongly Agree",
-        "feelConfidentCanHelpStudents": "Agree",
-        "havePlan": "Slightly Agree",
-        "feelComfortableLeading": "Slightly Disagree",
-        "haveLessAnxiety": "Disagree",
-        "whatHelpedMost": "helped learn most",
-        "whatDetracted": "detracted",
-        "receivedClearCommunication": "Strongly Agree",
-        "venueFeedback": "venue feedback",
-        "knowWhereToGoForHelp": "Strongly Disagree",
-        "suitableForMyExperience": "Disagree",
-        "practicingTeachingHelped": "Slightly Disagree",
-        "seeingOthersTeachHelped": "Slightly Agree",
-        "facilitatorsPresentedInformationClearly": "Agree",
-        "facilitatorsProvidedFeedback": "Strongly Agree",
-        "feltComfortableAskingQuestions": "Agree",
-        "morePreparedThanBefore": "Slightly Agree",
-        "lookForwardToContinuing": "Slightly Disagree",
-        "partOfCommunity": "Disagree",
-        "allStudentsShouldTake": "Strongly Disagree",
-        "wouldRecommend": "Disagree",
-        "bestPdEver": "Slightly Disagree",
-        "howMuchParticipated": "A tremendous amount",
-        "howOftenLostTrackOfTime": "Almost always",
-        "howHappyAfter": "Extremely happy",
-        "howExcitedBefore": "Extremely excited",
-        "facilitatorsDidWell": "facilitators did well",
-        "facilitatorsCouldImprove": "facilitators could improve",
-        "likedMost": "liked most",
-        "wouldChange": "would change",
-        "givePermissionToQuote": "Yes, I give Code.org permission to quote me and use my name.",
-        "instructionFocus": "Strongly aligned with A",
-        "teacherResponsibility": "Strongly aligned with A",
-        "teacherTime": "Strongly aligned with A",
+        personalLearningNeedsMet: "Strongly Agree",
+        haveIdeasAboutFormative: "Strongly Disagree",
+        haveIdeasAboutSummative: "Disagree",
+        haveConcreteIdeas: "Slightly Disagree",
+        toolsWillHelp: "Slightly Agree",
+        learnedEnoughToMoveForward: "Agree",
+        feelConfidentUsingMaterials: "Strongly Agree",
+        feelConfidentCanHelpStudents: "Agree",
+        havePlan: "Slightly Agree",
+        feelComfortableLeading: "Slightly Disagree",
+        haveLessAnxiety: "Disagree",
+        whatHelpedMost: "helped learn most",
+        whatDetracted: "detracted",
+        receivedClearCommunication: "Strongly Agree",
+        venueFeedback: "venue feedback",
+        knowWhereToGoForHelp: "Strongly Disagree",
+        suitableForMyExperience: "Disagree",
+        practicingTeachingHelped: "Slightly Disagree",
+        seeingOthersTeachHelped: "Slightly Agree",
+        facilitatorsPresentedInformationClearly: "Agree",
+        facilitatorsProvidedFeedback: "Strongly Agree",
+        feltComfortableAskingQuestions: "Agree",
+        morePreparedThanBefore: "Slightly Agree",
+        lookForwardToContinuing: "Slightly Disagree",
+        partOfCommunity: "Disagree",
+        allStudentsShouldTake: "Strongly Disagree",
+        wouldRecommend: "Disagree",
+        bestPdEver: "Slightly Disagree",
+        howMuchParticipated: "A tremendous amount",
+        howOftenLostTrackOfTime: "Almost always",
+        howHappyAfter: "Extremely happy",
+        howExcitedBefore: "Extremely excited",
+        facilitatorsDidWell: "facilitators did well",
+        facilitatorsCouldImprove: "facilitators could improve",
+        likedMost: "liked most",
+        wouldChange: "would change",
+        givePermissionToQuote: "Yes, I give Code.org permission to quote me and use my name.",
+        instructionFocus: "Strongly aligned with A",
+        teacherResponsibility: "Strongly aligned with A",
+        teacherTime: "Strongly aligned with A",
       }.stringify_keys
     end
   end
@@ -253,46 +253,46 @@ FactoryGirl.define do
   factory :pd_workshop_survey_hash, class: 'Hash' do
     initialize_with do
       {
-        "willTeach": "Yes",
-        "reasonForAttending": [
+        willTeach: "Yes",
+        reasonForAttending: [
           "Personal interest"
         ],
-        "howHeard": [
+        howHeard: [
           "Email from Code.org"
         ],
-        "receivedClearCommunication": "Strongly Agree",
-        "schoolHasTech": "Yes",
-        "venueFeedback": "feedback about venue",
-        "howMuchLearned": "A tremendous amount",
-        "howMotivating": "Extremely motivating",
-        "howMuchParticipated": "A tremendous amount",
-        "howOftenTalkAboutIdeasOutside": "Almost always",
-        "howOftenLostTrackOfTime": "Almost always",
-        "howExcitedBefore": "Extremely excited",
-        "overallHowInterested": "Extremely interested",
-        "morePreparedThanBefore": "Strongly Agree",
-        "knowWhereToGoForHelp": "Strongly Agree",
-        "suitableForMyExperience": "Strongly Agree",
-        "wouldRecommend": "Strongly Agree",
-        "bestPdEver": "Strongly Agree",
-        "partOfCommunity": "Strongly Agree",
-        "thingsYouLiked": "liked most",
-        "thingsYouWouldChange": "would change",
-        "anythingElse": "like to tell",
-        "willingToTalk": "No",
-        "gender": "Male",
-        "race": [
+        receivedClearCommunication: "Strongly Agree",
+        schoolHasTech: "Yes",
+        venueFeedback: "feedback about venue",
+        howMuchLearned: "A tremendous amount",
+        howMotivating: "Extremely motivating",
+        howMuchParticipated: "A tremendous amount",
+        howOftenTalkAboutIdeasOutside: "Almost always",
+        howOftenLostTrackOfTime: "Almost always",
+        howExcitedBefore: "Extremely excited",
+        overallHowInterested: "Extremely interested",
+        morePreparedThanBefore: "Strongly Agree",
+        knowWhereToGoForHelp: "Strongly Agree",
+        suitableForMyExperience: "Strongly Agree",
+        wouldRecommend: "Strongly Agree",
+        bestPdEver: "Strongly Agree",
+        partOfCommunity: "Strongly Agree",
+        thingsYouLiked: "liked most",
+        thingsYouWouldChange: "would change",
+        anythingElse: "like to tell",
+        willingToTalk: "No",
+        gender: "Male",
+        race: [
           "White"
         ],
-        "age": "21 - 25",
-        "yearsTaught": "2",
-        "gradesTaught": [
+        age: "21 - 25",
+        yearsTaught: "2",
+        gradesTaught: [
           "pre-K"
         ],
-        "gradesPlanningToTeach": [
+        gradesPlanningToTeach: [
           "pre-K"
         ],
-        "subjectsTaught": [
+        subjectsTaught: [
           "English\/Language Arts"
         ]
       }.stringify_keys
@@ -349,33 +349,33 @@ FactoryGirl.define do
   factory :pd_local_summer_workshop_survey_hash, class: 'Hash' do
     initialize_with do
       {
-        "receivedClearCommunication": "Strongly Agree",
-        "venueFeedback": "venue feedback",
-        "howMuchLearned": "A tremendous amount",
-        "howMotivating": "Extremely motivating",
-        "howMuchParticipated": "A tremendous amount",
-        "howOftenTalkAboutIdeasOutside": "Almost always",
-        "howOftenLostTrackOfTime": "Almost always",
-        "howExcitedBefore": "Extremely excited",
-        "overallHowInterested": "Extremely interested",
-        "morePreparedThanBefore": "Strongly Agree",
-        "knowWhereToGoForHelp": "Strongly Agree",
-        "suitableForMyExperience": "Strongly Agree",
-        "wouldRecommend": "Strongly Agree",
-        "anticipateContinuing": "Strongly Agree",
-        "confidentCanTeach": "Strongly Agree",
-        "believeAllStudents": "Strongly Agree",
-        "bestPdEver": "Strongly Agree",
-        "partOfCommunity": "Strongly Agree",
-        "thingsYouLiked": "liked most",
-        "thingsYouWouldChange": "would change",
-        "givePermissionToQuote": "Yes, I give Code.org permission to quote me and use my name.",
-        "race": "White",
-        "highestEducation": "High school diploma",
-        "degreeField": "Education",
-        "yearsTaughtStem": "1",
-        "yearsTaughtCs": "2",
-        "haveRequiredLicenses": "Yes",
+        receivedClearCommunication: "Strongly Agree",
+        venueFeedback: "venue feedback",
+        howMuchLearned: "A tremendous amount",
+        howMotivating: "Extremely motivating",
+        howMuchParticipated: "A tremendous amount",
+        howOftenTalkAboutIdeasOutside: "Almost always",
+        howOftenLostTrackOfTime: "Almost always",
+        howExcitedBefore: "Extremely excited",
+        overallHowInterested: "Extremely interested",
+        morePreparedThanBefore: "Strongly Agree",
+        knowWhereToGoForHelp: "Strongly Agree",
+        suitableForMyExperience: "Strongly Agree",
+        wouldRecommend: "Strongly Agree",
+        anticipateContinuing: "Strongly Agree",
+        confidentCanTeach: "Strongly Agree",
+        believeAllStudents: "Strongly Agree",
+        bestPdEver: "Strongly Agree",
+        partOfCommunity: "Strongly Agree",
+        thingsYouLiked: "liked most",
+        thingsYouWouldChange: "would change",
+        givePermissionToQuote: "Yes, I give Code.org permission to quote me and use my name.",
+        race: "White",
+        highestEducation: "High school diploma",
+        degreeField: "Education",
+        yearsTaughtStem: "1",
+        yearsTaughtCs: "2",
+        haveRequiredLicenses: "Yes",
       }.stringify_keys
     end
   end
@@ -555,214 +555,6 @@ FactoryGirl.define do
 
   # ------- APPLICATIONS ------- #
 
-  # ------- Facilitator ------- #
-  # default to csf
-  factory :pd_facilitator1819_application_hash, parent: :pd_facilitator1819_application_hash_common do
-    csf
-  end
-
-  factory :pd_facilitator1819_application_hash_common, parent: :form_data_hash do
-    first_name 'Rubeus'
-    last_name 'Hagrid'
-    phone '555-555-5555'
-    address '101 Hogwarts Ave'
-    city 'Seattle'
-    state 'Washington'
-    add_attribute :zip_code, '98101'
-    gender_identity 'Male'
-    race ['Other']
-    institution_type ['Institute of higher education']
-    current_employer 'Gryffindor House'
-    job_title 'Keeper of Keys and Grounds of Hogwarts'
-    resume_link 'linkedin.com/rubeus_hagrid'
-    worked_in_cs_job 'No'
-    completed_cs_courses_and_activities ['Advanced CS in high school or college']
-    diversity_training 'No'
-    how_heard ['Code.org email']
-    plan_on_teaching ['Yes']
-    ability_to_meet_requirements '4'
-    led_cs_extracurriculars ['Hour of Code']
-    teaching_experience 'No, I do not have classroom teaching experience'
-    grades_taught ['Elementary school']
-    grades_currently_teaching ['Grade 7']
-    subjects_taught ['Computer Science']
-    years_experience 'None'
-    experience_leading ['AP CS A', 'Hour of Code']
-    completed_pd ['No, I have not participated in a Code.org Professional Learning Program for any curriculum.']
-    code_org_facilitator 'No'
-    have_led_pd 'Yes'
-    groups_led_pd ['None']
-    describe_prior_pd 'PD description'
-    who_should_have_opportunity 'all students'
-    how_support_equity 'support equity'
-    expected_teacher_needs 'teacher needs'
-    describe_adapting_lesson_plan 'adapt lesson plan'
-    describe_strategies 'strategies'
-    example_how_used_feedback 'used feedback'
-    example_how_provided_feedback 'provided feedback'
-    hope_to_learn 'many things'
-    available_during_week 'Yes'
-    weekly_availability ['10am ET / 7am PT']
-    travel_distance 'Within my city'
-    additional_info 'none'
-    agree true
-
-    trait :csf do
-      program Pd::Application::Facilitator1819Application::PROGRAMS[:csf]
-      csf_availability 'Yes'
-    end
-
-    trait :csd do
-      program Pd::Application::Facilitator1819Application::PROGRAMS[:csd]
-      with_csd_csp_specific_fields
-    end
-
-    trait :csp do
-      program Pd::Application::Facilitator1819Application::PROGRAMS[:csp]
-      with_csd_csp_specific_fields
-    end
-
-    trait :with_csf_specific_fields do
-      csf_availability Pd::Application::Facilitator1819Application::ONLY_WEEKEND
-      csf_partial_attendance_reason 'reasons'
-    end
-
-    trait :with_csd_csp_specific_fields do
-      csd_csp_fit_availability Pd::Application::Facilitator1819Application.options[:csd_csp_fit_availability].first
-      csd_csp_teachercon_availability Pd::Application::Facilitator1819Application.options[:csd_csp_teachercon_availability].first
-    end
-  end
-
-  factory :pd_facilitator1819_application, class: 'Pd::Application::Facilitator1819Application' do
-    association :user, factory: [:teacher, :with_school_info], strategy: :create
-    course 'csp'
-    transient do
-      form_data_hash {build :pd_facilitator1819_application_hash, course.to_sym}
-    end
-    form_data {form_data_hash.to_json}
-
-    trait :locked do
-      after(:create) do |application|
-        application.update!(status: 'accepted')
-        application.lock!
-      end
-    end
-  end
-
-  # default to csf
-  factory :pd_facilitator1920_application_hash, parent: :pd_facilitator1920_application_hash_common do
-    csf
-  end
-
-  factory :pd_facilitator1920_application_hash_common, parent: :form_data_hash do
-    first_name 'Rubeus'
-    last_name 'Hagrid'
-    phone '555-555-5555'
-    address '101 Hogwarts Ave'
-    city 'Seattle'
-    state 'Washington'
-    add_attribute :zip_code, '98101'
-    gender_identity 'Male'
-    race ['Other']
-    institution_type ['Institute of higher education']
-    current_employer 'Gryffindor House'
-    job_title 'Keeper of Keys and Grounds of Hogwarts'
-    resume_link 'linkedin.com/rubeus_hagrid'
-    worked_in_cs_job 'No'
-    completed_cs_courses_and_activities ['Advanced CS in high school or college']
-    diversity_training 'No'
-    how_heard ['Code.org email']
-    plan_on_teaching ['Yes']
-    ability_to_meet_requirements '4'
-    led_cs_extracurriculars ['Hour of Code']
-    teaching_experience 'No'
-    grades_taught ['Grade 1', 'Grade 2', 'Grade 3', 'Grade 4', 'Grade 5', 'Grade 6', 'Grade 7']
-    grades_currently_teaching ['Grade 7']
-    subjects_taught ['Computer Science']
-    years_experience 'None'
-    experience_leading ['AP CS A', 'Hour of Code']
-    completed_pd ['CS Fundamentals (1 day workshop)']
-    code_org_facilitator 'No'
-    have_led_pd 'Yes'
-    groups_led_pd ['None']
-    describe_prior_pd 'PD description'
-    who_should_have_opportunity 'all students'
-    how_support_equity 'support equity'
-    expected_teacher_needs 'teacher needs'
-    describe_adapting_lesson_plan 'adapt lesson plan'
-    describe_strategies 'strategies'
-    example_how_used_feedback 'used feedback'
-    example_how_provided_feedback 'provided feedback'
-    hope_to_learn 'many things'
-    available_during_week 'Yes'
-    weekly_availability ['10am ET / 7am PT']
-    travel_distance 'Within my city'
-    additional_info 'none'
-    agree true
-    have_led_adults 'Yes'
-    developmentAndPreparationRequirement 'Yes, I can commit to this requirement'
-    currentlyInvolvedInCsEducation 'I teach CS courses for credit to K-12, community college, or university students'
-    experienceTeachingThisCourse 'Yes, to elementary school students'
-    whyShouldAllHaveAccess 'Why should all'
-    skillsAreasToImprove 'Skills areas'
-    inquiryBasedLearning 'Inquiry'
-    whyInterested 'Why interested'
-    teachingExperience 'Yes, I am a current classroom teacher'
-    gradesTaught ['Elementary school']
-    facilitatorAvailability 'Weekdays during the school year'
-
-    trait :csf do
-      program Pd::Application::Facilitator1920Application::PROGRAMS[:csf]
-      with_csf_specific_fields
-    end
-
-    trait :csd do
-      program Pd::Application::Facilitator1920Application::PROGRAMS[:csd]
-      csd_training_requirement Pd::Application::Facilitator1920Application::YES_COMMIT
-      with_csd_csp_specific_fields
-    end
-
-    trait :csp do
-      program Pd::Application::Facilitator1920Application::PROGRAMS[:csp]
-      csp_training_requirement Pd::Application::Facilitator1920Application::YES_COMMIT
-      with_csd_csp_specific_fields
-    end
-
-    trait :with_csf_specific_fields do
-      csf_good_standing_requirement Pd::Application::Facilitator1920Application::YES_COMMIT
-      csf_summit_requirement Pd::Application::Facilitator1920Application::YES_COMMIT
-      csf_workshop_requirement Pd::Application::Facilitator1920Application::YES_COMMIT
-      csf_community_requirement Pd::Application::Facilitator1920Application::YES_COMMIT
-      csf_previous_workshop Pd::Application::Facilitator1920Application.options[:csf_previous_workshop].first
-    end
-
-    trait :with_csd_csp_specific_fields do
-      csd_csp_good_standing_requirement Pd::Application::Facilitator1920Application::YES_COMMIT
-      csd_csp_no_partner_summer_workshop Pd::Application::Facilitator1920Application.options[:csd_csp_no_partner_summer_workshop].first
-      csd_csp_fit_weekend_requirement Pd::Application::Facilitator1920Application::YES_COMMIT
-      csd_csp_workshop_requirement Pd::Application::Facilitator1920Application::YES_COMMIT
-      csd_csp_lead_summer_workshop_requirement Pd::Application::Facilitator1920Application::YES_COMMIT
-      csd_csp_deeper_learning_requirement Pd::Application::Facilitator1920Application::YES_COMMIT
-      csd_csp_completed_pd Pd::Application::Facilitator1920Application.options[:csd_csp_completed_pd].first
-    end
-  end
-
-  factory :pd_facilitator1920_application, class: 'Pd::Application::Facilitator1920Application' do
-    association :user, factory: [:teacher, :with_school_info], strategy: :create
-    course 'csp'
-    transient do
-      form_data_hash {build :pd_facilitator1920_application_hash, course.to_sym}
-    end
-    form_data {form_data_hash.to_json}
-
-    trait :locked do
-      after(:create) do |application|
-        application.update!(status: 'accepted')
-        application.lock!
-      end
-    end
-  end
-
   # ------- Teacher ------- #
 
   factory :pd_teacher_application_hash_common, class: 'Hash' do
@@ -778,6 +570,7 @@ FactoryGirl.define do
     state 'Washington'
     add_attribute :zip_code, '98101'
     association :school
+    principal_role 'Headmaster'
     principal_first_name 'Albus'
     principal_last_name 'Dumbledore'
     principal_title 'Dr.'
@@ -785,7 +578,6 @@ FactoryGirl.define do
     principal_confirm_email 'socks@hogwarts.edu'
     principal_phone_number '5555882300'
     current_role 'Teacher'
-    previous_used_curriculum ['Neither']
     previous_yearlong_cdo_pd ['CS in Science']
     committed 'Yes'
     willing_to_travel 'Up to 50 miles'
@@ -822,11 +614,8 @@ FactoryGirl.define do
     end
 
     pay_fee Pd::Application::TeacherApplication.options[:pay_fee].first
-    plan_to_teach Pd::Application::TeacherApplication.options[:plan_to_teach].first
+    enough_course_hours Pd::Application::TeacherApplication.options[:enough_course_hours].first
     completing_on_behalf_of_someone_else 'No'
-    cs_how_many_minutes '45'
-    cs_how_many_days_per_week '5'
-    cs_how_many_weeks_per_year '20'
     replace_existing 'No, this course will be added to the schedule in addition to an existing computer science course'
 
     trait :csp do
@@ -838,6 +627,14 @@ FactoryGirl.define do
     trait :csd do
       program Pd::Application::TeacherApplication::PROGRAMS[:csd]
       csd_which_grades ['6', '7']
+    end
+
+    trait :csa do
+      program Pd::Application::TeacherApplication::PROGRAMS[:csa]
+      csa_which_grades ['11', '12']
+      csa_how_offer 'As an AP course'
+      csa_already_know 'Yes'
+      csa_phone_screen 'Yes'
     end
   end
 
@@ -869,6 +666,7 @@ FactoryGirl.define do
     first_name 'Albus'
     last_name 'Dumbledore'
     email 'albus@hogwarts.edu'
+    can_email_you 'Yes'
     confirm_principal true
 
     trait :approved_no do
@@ -877,12 +675,10 @@ FactoryGirl.define do
 
     trait :replace_course_yes_csp do
       replace_course 'Yes'
-      replace_which_course_csp ['Beauty and Joy of Computing']
     end
 
     trait :replace_course_yes_csd do
       replace_course 'Yes'
-      replace_which_course_csd ['CodeHS']
     end
 
     trait :approved_yes do
@@ -908,7 +704,6 @@ FactoryGirl.define do
       other '10'
       committed_to_master_schedule Pd::Application::PrincipalApprovalApplication.options[:committed_to_master_schedule][0]
       replace_course Pd::Application::PrincipalApprovalApplication.options[:replace_course][1]
-      committed_to_diversity 'Yes'
       understand_fee 'Yes'
       pay_fee Pd::Application::PrincipalApprovalApplication.options[:pay_fee][0]
     end
@@ -1094,7 +889,7 @@ FactoryGirl.define do
       status :accepted
     end
 
-    association :pd_application, factory: :pd_facilitator1819_application
+    association :pd_application, factory: :pd_teacher_application
     form_data {build(:pd_fit_weekend1819_registration_hash, status).to_json}
   end
 
@@ -1141,7 +936,7 @@ FactoryGirl.define do
       status :accepted
     end
 
-    association :pd_application, factory: :pd_facilitator1920_application
+    association :pd_application, factory: :pd_teacher_application
     form_data {build(:pd_fit_weekend1920_registration_hash, status).to_json}
   end
 

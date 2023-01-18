@@ -223,6 +223,57 @@
         "poetry_hoc_spriteSizes": {
           "poetry_set_sprite": "Block အသစ်! ",
           "poetry_remove_sprite": "Block အသစ်! "
+        },
+        "CourseD_Dance_2020_042022": {
+          "dance_callout_02": "ဒီဘလော့အား သင့်ရဲ့  program (အစီအစဉ်) ထဲသို့ ထည့်လိုက်ပါ !"
+        },
+        "CourseD_Dance_2020_062022": {
+          "dance_party_11_5_groups": "Block အသစ်! "
+        },
+        "CourseD_Dance_2020_072022": {
+          "setprop_hint": "Block အသစ်! "
+        },
+        "CourseD_Dance_2020_092022": {
+          "new_block_3": "Block အသစ်! ",
+          "new_block_4": "Block အသစ်! "
+        },
+        "Function intro Ryan2022": {
+          "Function_intro_Ryan_1": "ဒီရဲ့လမ်းညွှန်ချက်သေးသေးလေးက codeတော်တော်များများကို workspaceရှိနာမည်နှင့်တူညီစွာ လုပ်ဆောင်ရန် ကွန်ပြူတာကို ခိုင်းစေပါတယ်။"
+        },
+        "MC_HOC_2017_03_Cole2022": {
+          "MC_HOC_2017_03_Cole_1": "ဒီဟာက ထပ်ခါတလဲလဲ အလုပ်လုပ်တဲ့'repeat'ပါသောအကွင်းပါ ။အဲတာကိုနှိပ်ပြီး အလုပ်လုပ်ခိုင်းမယ့်နေရာ (workspace) ထဲထည့် ပြီးတော့ ထပ်ခါတလဲလဲ အလုပ်လုပ်စေချင်တဲ့ code ရေးပါ."
+        },
+        "MC_HOC_2017_04_Cole2022": {
+          "MC_HOC_2017_04_Cole_a": "ကိုယ်စားလှယ်(agent) ကတော့ ရေပေါ်မှာပေါ်နေနိုင်ပါတယ်။ ဒါပေမယ့် ကစားသမား(player) ကမလုပ်နိုင်ပါဘူး!"
+        },
+        "MC_HOC_2017_06_Cole2022": {
+          "MC_HOC_2017_06_Cole_1": "ဒီ blockတွေကို လွှတ်ပစ်လို့မရပါဘူး ဒါပေမယ့် ပြန်ပြင်လို့တော့ ရပါတယ်!"
+        },
+        "MC_HOC_2017_Ali2022": {
+          "MC_HOC_2017_08_RY_1": "ကိုယ်စားလှယ်ကတော့ ချော်ရည်ပေါ်မှာ ပေါ်နေနိုင်ပါတယ်။ဒါပေမယ့် Steve(စတိပ်) နဲ့ Alex (အဲလက်စ်) ကတော့ မလုပ်နိုင်ပါဘူး!  "
+        },
+        "Overworld Move to Sheep2022": {
+          "craft_drag_block_callout": "'Move forward'  block တစ်ခုကို ဆွဲယူလာပြီး အခြား 'move forward' block ၏ ​အောက်တွင် ထားပါ။"
+        },
+        "helloworld_food_costumes_soccer-2022": {
+          "hello_world_new": "Block အသစ်! "
+        },
+        "helloworld_food_costumes_space-2022": {
+          "hello_world_new": "Block အသစ်! "
+        },
+        "helloworld_food_sizes_soccer-2022": {
+          "hello_world_new": "Block အသစ်! ",
+          "hello_world_new_block": "Block အသစ်! "
+        },
+        "helloworld_food_sizes_space-2022": {
+          "hello_world_new": "Block အသစ်! ",
+          "hello_world_new_block": "Block အသစ်! "
+        },
+        "helloworld_food_sounds_soccer-2022": {
+          "hello_world_new": "Block အသစ်! "
+        },
+        "helloworld_food_sounds_space-2022": {
+          "hello_world_new": "Block အသစ်! "
         }
       }
     }

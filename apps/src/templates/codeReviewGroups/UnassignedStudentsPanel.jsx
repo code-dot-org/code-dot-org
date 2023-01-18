@@ -19,7 +19,7 @@ export default function UnassignedStudentsPanel({
           onClick={onUnassignAllClick}
           icon={<FontAwesome icon="times" className="fa" />}
           text={i18n.unassignAll()}
-          style={styles.button}
+          inlineStyle={styles.button}
           isHorizontal
         />
       </div>

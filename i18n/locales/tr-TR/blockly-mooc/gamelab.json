@@ -1,4 +1,10 @@
 {
-  "foo":"foo",
-  "fooTooltip":"do foo"
+  "dropletBlock_createSprite_param2": "genişlik",
+  "dropletBlock_createSprite_param3": "Yükseklik",
+  "dropletBlock_setCollider_param0": "yaz",
+  "dropletBlock_setCollider_param4": "Yükseklik",
+  "dropletBlock_setColliderEach_param0": "yaz",
+  "dropletBlock_setColliderEach_param4": "Yükseklik",
+  "reinfFeedbackMsg": "Bitirdin!  Bir sonraki seviyeye geçmek için \"Devam\" düğmesini tıklayın.",
+  "shareGame": "Oyununu paylaş:"
 }

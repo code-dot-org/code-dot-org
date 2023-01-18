@@ -1,0 +1,414 @@
+{
+  "cs-CZ": {
+    "data": {
+      "programming_environments": {
+        "weblab": {
+          "name": "Web Lab"
+        },
+        "gamelab": {
+          "name": "Game Lab",
+          "categories": {
+            "game_lab": {
+              "name": "Game Lab",
+              "expressions": {
+                "mouseIsOver": {
+                  "palette_params": {
+                    "sprite": {
+                      "type": "Sprite"
+                    }
+                  }
+                },
+                "mousePressedOver": {
+                  "palette_params": {
+                    "sprite": {
+                      "type": "Sprite"
+                    }
+                  }
+                },
+                "mouseWentDown": {
+                  "examples": {
+                    "Black and White": {
+                      "name": "Černá a bílá"
+                    }
+                  }
+                },
+                "playSound": {
+                  "short_description": "Přehraje MP3 soubor z vybrané URL."
+                }
+              }
+            },
+            "sprites": {
+              "name": "Postavy",
+              "expressions": {
+                "getSpeed": {
+                  "examples": {
+                    "Spiral": {
+                      "name": "Spirála"
+                    }
+                  }
+                }
+              }
+            },
+            "groups": {
+              "name": "Skupiny",
+              "expressions": {
+                "add": {
+                  "palette_params": {
+                    "sprite": {
+                      "type": "Sprite"
+                    }
+                  }
+                },
+                "contains": {
+                  "palette_params": {
+                    "sprite": {
+                      "type": "Sprite"
+                    }
+                  }
+                },
+                "remove": {
+                  "palette_params": {
+                    "sprite": {
+                      "type": "Sprite"
+                    }
+                  }
+                },
+                "setColorEach": {
+                  "palette_params": {
+                    "color": {
+                      "type": "Barva"
+                    }
+                  }
+                },
+                "setTintEach": {
+                  "palette_params": {
+                    "color": {
+                      "type": "Barva"
+                    }
+                  }
+                }
+              }
+            },
+            "drawing": {
+              "name": "Kreslení",
+              "expressions": {
+                "shape": {
+                  "examples": {
+                    "Star": {
+                      "name": "Kopou"
+                    }
+                  }
+                }
+              }
+            },
+            "math": {
+              "name": "Matematické",
+              "expressions": {
+                "randomNumber": {
+                  "palette_params": {
+                    "min": {
+                      "description": "Minimální číslo vrácené"
+                    },
+                    "max": {
+                      "description": "Minimální číslo vrácené"
+                    }
+                  }
+                },
+                "randomNumber_min_max": {
+                  "palette_params": {
+                    "min": {
+                      "description": "Minimální číslo vrácené"
+                    },
+                    "max": {
+                      "description": "Minimální číslo vrácené"
+                    }
+                  }
+                }
+              }
+            },
+            "variables": {
+              "name": "Proměnné",
+              "expressions": {
+                "assign_x": {
+                  "short_description": "Přiřadí hodnotu existující proměnné. Například, x = 0;"
+                },
+                "declareNoAssign_x": {
+                  "short_description": "Deklaruje proměnnou s daným názvem."
+                },
+                "declareAssign_x": {
+                  "short_description": "Deklaruje nějakou proměnnou a přiřadí jí počáteční hodnotu."
+                }
+              }
+            },
+            "functions": {
+              "name": "Funkce"
+            }
+          }
+        },
+        "applab": {
+          "name": "App Lab",
+          "description": "App Lab je programovací prostředí, kde můžete tvořit jednoduché aplikace. Navrhni aplikaci, rozpohybuj ji kódem s bloky nebo s JavaScriptem a ve vteřině svou aplikaci nasdílej.",
+          "categories": {
+            "ui_controls": {
+              "expressions": {
+                "onEvent": {
+                  "examples": {
+                    "Shrink and Grow": {
+                      "name": "Smršťování a růst"
+                    }
+                  },
+                  "palette_params": {
+                    "callback": {
+                      "type": "Funkce"
+                    }
+                  }
+                },
+                "playSound": {
+                  "short_description": "Přehraje MP3 soubor z vybrané URL."
+                }
+              }
+            },
+            "canvas": {
+              "expressions": {
+                "getAlpha": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "objekt"
+                    }
+                  }
+                },
+                "getBlue": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "objekt"
+                    }
+                  }
+                },
+                "getGreen": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "objekt"
+                    }
+                  }
+                },
+                "getRed": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "objekt"
+                    }
+                  }
+                },
+                "putImageData": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "objekt"
+                    }
+                  }
+                },
+                "setAlpha": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "objekt"
+                    }
+                  }
+                },
+                "setBlue": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "objekt"
+                    }
+                  }
+                },
+                "setGreen": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "objekt"
+                    }
+                  }
+                },
+                "setRGB": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "objekt"
+                    }
+                  }
+                },
+                "setRed": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "objekt"
+                    }
+                  }
+                }
+              }
+            },
+            "data": {
+              "name": "Data",
+              "expressions": {
+                "createRecord": {
+                  "palette_params": {
+                    "record": {
+                      "type": "objekt"
+                    }
+                  }
+                },
+                "deleteRecord": {
+                  "palette_params": {
+                    "record": {
+                      "type": "objekt"
+                    }
+                  }
+                },
+                "drawChart": {
+                  "palette_params": {
+                    "options": {
+                      "type": "objekt"
+                    }
+                  }
+                },
+                "drawChartFromRecords": {
+                  "palette_params": {
+                    "options": {
+                      "type": "objekt"
+                    }
+                  }
+                },
+                "getPrediction": {
+                  "palette_params": {
+                    "callback": {
+                      "type": "Funkce"
+                    }
+                  }
+                },
+                "readRecords": {
+                  "palette_params": {
+                    "terms": {
+                      "type": "objekt"
+                    }
+                  }
+                },
+                "updateRecord": {
+                  "palette_params": {
+                    "record": {
+                      "type": "objekt"
+                    }
+                  }
+                }
+              }
+            },
+            "control": {
+              "expressions": {
+                "timedLoop": {
+                  "palette_params": {
+                    "callback": {
+                      "type": "Funkce"
+                    }
+                  }
+                }
+              }
+            },
+            "math": {
+              "name": "Matematické",
+              "expressions": {
+                "randomNumber_min_max": {
+                  "palette_params": {
+                    "min": {
+                      "description": "Minimální číslo vrácené"
+                    },
+                    "max": {
+                      "description": "Minimální číslo vrácené"
+                    }
+                  }
+                },
+                "randomNumber": {
+                  "palette_params": {
+                    "min": {
+                      "description": "Minimální číslo vrácené"
+                    },
+                    "max": {
+                      "description": "Minimální číslo vrácené"
+                    }
+                  }
+                }
+              }
+            },
+            "variables": {
+              "name": "Proměnné",
+              "expressions": {
+                "declareNoAssign_x": {
+                  "short_description": "Deklaruje proměnnou s daným názvem."
+                },
+                "declareAssign_object": {
+                  "examples": {
+                    "Choose Your Own Adventure": {
+                      "name": "Volba vlastního dobrodružství"
+                    }
+                  }
+                },
+                "declareAssign_x": {
+                  "short_description": "Deklaruje nějakou proměnnou a přiřadí jí počáteční hodnotu."
+                },
+                "addPair": {
+                  "return_value": "Žádný"
+                }
+              }
+            },
+            "functions": {
+              "name": "Funkce"
+            },
+            "advanced": {
+              "name": "Pokročilé"
+            }
+          }
+        },
+        "spritelab": {
+          "name": "Laboratoř Sprite",
+          "categories": {
+            "sprites": {
+              "name": "Postavy"
+            },
+            "world": {
+              "name": "Prostředí"
+            },
+            "location": {
+              "name": "Umístění"
+            },
+            "actions": {
+              "name": "Akce"
+            },
+            "events": {
+              "name": "Události"
+            },
+            "behaviors": {
+              "name": "Chování"
+            },
+            "loops": {
+              "name": "Cykly"
+            },
+            "variables": {
+              "name": "Proměnné"
+            },
+            "math": {
+              "name": "Matematické"
+            },
+            "logic": {
+              "name": "Logické"
+            },
+            "functions": {
+              "name": "Funkce"
+            },
+            "text": {
+              "name": "Text"
+            },
+            "comments": {
+              "name": "Komentáře"
+            }
+          }
+        },
+        "javalab": {
+          "name": "Java Lab"
+        }
+      }
+    }
+  }
+}

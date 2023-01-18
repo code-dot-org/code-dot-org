@@ -11,7 +11,7 @@ def main
                   'coursed-' + current_year, 'coursee-' + current_year, 'coursef-' + current_year,
                   'pre-express-' + current_year, 'express-' + current_year,
                   'aiml-' + current_year]
-  standalone_scripts = script_names.map {|name| Script.find_by(name: name)}
+  standalone_scripts = script_names.map {|name| Unit.find_by(name: name)}
 
   scripts = standalone_scripts + course_scripts
 

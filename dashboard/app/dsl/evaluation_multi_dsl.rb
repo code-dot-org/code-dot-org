@@ -8,4 +8,11 @@ class EvaluationMultiDSL < MultiDSL
     }
     @hash[:answers] << answer
   end
+
+  # @override
+  def i18n_hash
+    final_hash = super
+    final_hash['answers']&.each {|answer| answer.delete 'weight'}
+    final_hash
+  end
 end

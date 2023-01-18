@@ -1884,6 +1884,486 @@
         },
         "New Sprite Lab Project": {
           "costumes_tab": "انقر هنا لإضافة أزياء لمشروعك."
+        },
+        "CourseD_Dance_2020_012022": {
+          "dance_callout_01": "أضف هذه القطعة البرمجية إلى برنامجك!"
+        },
+        "CourseD_Dance_2020_022022": {
+          "dance_callout_11_a": "أضف هذا المربع البرمجي إلى البرنامج الخاص بك.",
+          "arrow_buttons": "اضغط أزرار الأسهم للتحكم في الراقص الخاص بك."
+        },
+        "CourseD_Dance_2020_042022": {
+          "dance_callout_02": "أضف هذا المربع البرمجي إلى برنامجك!"
+        },
+        "CourseD_Dance_2020_052022": {
+          "dance_callout_05": "إضافة حدث جديد إلى البرنامج."
+        },
+        "CourseD_Dance_2020_062022": {
+          "dance_party_11_5_groups": "قطعة برمجية جديدة!"
+        },
+        "CourseD_Dance_2020_072022": {
+          "setprop_hint": "قطعة برمجية جديدة!"
+        },
+        "CourseD_Dance_2020_092022": {
+          "new_block_3": "قطعة برمجية جديدة!",
+          "new_block_4": "قطعة برمجية جديدة!"
+        },
+        "CourseF_outbreak2_-2022-2": {
+          "minitoolbox": "انقر هنا لتوسيع الكتلة.",
+          "pointerlocation": "اسحب كتلة الموضوع هنا."
+        },
+        "CourseF_outbreak7_-2022-2": {
+          "costumes_tab": "انقر هنا لإضافة أزياء لمشروعك."
+        },
+        "Fish Tank 3-validated2022": {
+          "spritelab_comment": "استخدم القطعة البرمجية لتترك لنفسك أو للمعلم ملاحظات حول كيفية عمل أوامرك البرمجية."
+        },
+        "Function intro Ryan2022": {
+          "Function_intro_Ryan_1": "هذا الأمر الصغير يُخبر جهاز الحاسوب بتشغيل الجزء \"الكبير\" من الكود البرمجي بنفس الاسم في مساحة العمل."
+        },
+        "MC_HOC_2017_03_Cole2022": {
+          "MC_HOC_2017_03_Cole_1": "هذه هي حلقة \"التكرار\"! انقر فوقها في مساحة العمل، وأضف الكود البرمجي الذي تريد تشغيله مرارًا وتكرارًا."
+        },
+        "MC_HOC_2017_04_Cole2022": {
+          "MC_HOC_2017_04_Cole_a": "يمكن أن يمشي \"العميل\" فوق الماء، لكن اللاعب لا يمكنه فعل ذلك!"
+        },
+        "MC_HOC_2017_06_Cole2022": {
+          "MC_HOC_2017_06_Cole_1": "لا يمكنك إزالة هذه القطع البرمجية، لكن يمكنك تعديلها!"
+        },
+        "MC_HOC_2017_Ali2022": {
+          "MC_HOC_2017_08_RY_1": "يمكن أن يمشي \"العميل\" فوق الحمم البركانية، لكن \"ستيف\" و\"أليكس\" لا يمكنهما فعل ذلك!"
+        },
+        "Overworld Chop Trees2022": {
+          "craft_callout_preplaced": "وضعنا بعض الكتل هنا لنساعدك في البدء"
+        },
+        "Overworld House Frame Chosen2022": {
+          "craft_callout_preplaced_house": "ستساعدك هذه التعليمة البرمجية في البدء في بناء منزلك. هل يمكنك الانتهاء من ذلك؟"
+        },
+        "Overworld Move to Sheep2022": {
+          "craft_run_button_callout": "انقر فوق \"تشغيل\" لتجربة البرنامج الخاص بك",
+          "craft_drag_block_callout": "اسحب القطع البرمجية \"التحرك إلى الأمام\" وألصقها بالقطعة البرمجية الأخرى"
+        },
+        "Overworld Place Wall2022": {
+          "craft_inside_repeat": "كرر الإجراءات من خلال وضع الكتل هنا"
+        },
+        "Underground Avoiding Lava2022": {
+          "craft_callout_moveforward": "ستبحث هذه التعليمة البرمجية عن وجود حمم، هل يمكنك إضافة أمر للتقدم؟"
+        },
+        "Underground Iron2022": {
+          "craft_what_is_iron": "الحفر لاستخراج كتلة حديدية!"
+        },
+        "Virtual Pet 2_-2022-2": {
+          "vp_costumes": "انقر هنا لإضافة أزياء جديدة لمشروعك!"
+        },
+        "Virtual Pet 6_-2022-2": {
+          "vp_costumes": "انقر هنا لإضافة أزياء جديدة لمشروعك!"
+        },
+        "courseA_EOC_playlab_animals2022": {
+          "question_mark": "؟"
+        },
+        "courseA_EOC_playlab_fantasy2022": {
+          "question_mark": "؟"
+        },
+        "courseA_EOC_playlab_people2022": {
+          "question_mark": "؟"
+        },
+        "courseA_artist_loops42022": {
+          "courseA_artist_loops4_1": "هذا الرقم يخبرك بعدد القطع البرمجية التي يمكنك استخدامها في هذا اللغز.\n"
+        },
+        "courseA_artist_loops72022": {
+          "courseA_artist_loops7_1": "هذا العدد يعني أن نوعًا واحدًا من هذه القطع البرمجية يمكن استخدامها في الجواب الآخير."
+        },
+        "courseA_artist_loops82022": {
+          "courseA_artist_loops8_1": "هل تعلم أنه بإمكانك الرسم فوق الخطّ متى ما شئت؟\n"
+        },
+        "courseA_collector_loops12022": {
+          "courseA_collector_loops1_1": "استخدِم هذه القطع البرمجية لتجميع الكنز."
+        },
+        "courseA_collector_loops32022": {
+          "gradek_adventurer_loops2_1": "هذا الرقم يخبرك بعدد القطع البرمجية التي يمكنك استخدامها في هذا اللغز.\n"
+        },
+        "courseA_maze_ramp22022": {
+          "courseC_maze_programming2_1": "هذا هو صندوق الأدوات. حيث ستجد كل القطع البرمجية الإضافية لإكمال الألغاز."
+        },
+        "courseA_maze_seq12022": {
+          "courseA_maze_seq1_1": "انقر على المصباح عندما تحتاج إلى تلميح!\n"
+        },
+        "courseA_playLab_events42022": {
+          "courseA_playlab_events4_callout1": "هذه وسيلة شرح"
+        },
+        "courseA_playLab_events52022": {
+          "courseA_playLab_events5_1": "أنقر هنا لتغيير اتجاه سهم الحدث.\n"
+        },
+        "courseA_playLab_events62022": {
+          "courseA_playLab_events6_1": "هذا يتيح لك اختيار صوت \"عشوائي\"، مما يعني أنك لن تعرف الصوت الذي سيصدُر حتى تسمعه.\n"
+        },
+        "courseB_Scrat_ramp12022": {
+          "grade2_CaringForNewPet_0_1": "بعد توصيل كل القطع البرمجية، اضغط \"تشغيل\" لبدء برنامجك."
+        },
+        "courseB_Scrat_ramp3a2022": {
+          "courseC_maze_programming2_1": "هذا هو صندوق الأدوات. حيث ستجد كل القطع البرمجية الإضافية لإكمال الألغاز."
+        },
+        "courseB_artist_loops32022": {
+          "courseB_artist_loops3_1": "يوجد قطعة برمجية واحدة فقط من هذه القطع البرمجية في صندوق الأدوات. كيف سوف تستخدمه؟"
+        },
+        "courseB_collector_loops12022": {
+          "courseB_collector_loops1_1": "استخدِم هذه القطع البرمجية لتجميع الكنز."
+        },
+        "courseB_maze_seq12022": {
+          "courseB_maze_seq1": "انقر على المصباح عندما تحتاج إلى تلميح!\n"
+        },
+        "courseB_playlab_events62022": {
+          "courseB_playlab_events6_a": "استخدم السهم لأسفل المنسدل الأخضر لتغيير الاتجاهات."
+        },
+        "courseC19_playLab_EOC32022": {
+          "courseE_playLab_scaffold3_1": "أوصل الممثل إلى هذه الراية ليتحرك إلى المستوى التالي"
+        },
+        "courseC_PlayLab_events82022": {
+          "courseC_PlayLab_events8_callout1": "استخدم هذه القطعة البرمجية عندما يلامس البطريقُ التمساحَ!"
+        },
+        "courseC_PlayLab_events_challenge12022": {
+          "courseC_PlayLab_events_challenge1_1": "هذه القطعة البرمجية تحرك اللاعب إلى أماكن أاخرى في ساحة اللعب."
+        },
+        "courseC_PlayLab_events_lesson_extras": {
+          "courseC_PlayLab_events_challenge1_1": "هذه القطعة البرمجية تحرك اللاعب إلى أماكن أاخرى في ساحة اللعب."
+        },
+        "courseC_artist_loops1a2022": {
+          "jumpto_callout": "هذه القطعة البرمجية مهمة جداً لبرنامجك. احرص على استخدامها!"
+        },
+        "courseC_artist_loops1b2022": {
+          "sticker2": "أضف هذه في منتصف برنامجك."
+        },
+        "courseC_artist_prog22022": {
+          "slider": "باستخدام هذا، يمكنك إبطاء سرعة تشغيل برنامجك."
+        },
+        "courseC_collector_prog12022": {
+          "courseC_collector_prog1_1": "هل ترى قطعاً برمجية جديدة في صندوق الأدوات؟ لا تقلق, سنريك كيفية استخدامها في دروس قادمة."
+        },
+        "courseC_collector_prog72022": {
+          "courseC_collector_prog7_1": "يمكنك استخدام بعض من القطع البرمجية الموجودة في صندوق الأدوات في حال احتجت إليهم!"
+        },
+        "courseC_harvester_loops12022": {
+          "courseC_harvester_loops1_callout1": "الرقم 4 في اليقطين يخبرك أن هناك أربع يقطينات يمكنك جمعها."
+        },
+        "courseC_maze_debugging52022": {
+          "courseC_maze_debugging5_1": "هذه البلوكات مغلقة ولايمكن حذفها!"
+        },
+        "courseC_maze_debugging92022": {
+          "courseC_maze_debugging9_2019_1": "اسحب القطع البرمجيةمن صندوق الأدوات إلى مساحة العمل الخاصة بك."
+        },
+        "courseC_maze_programming12022": {
+          "grade2_CaringForNewPet_0_1": "بعد توصيل كل القطع البرمجية، اضغط \"تشغيل\" لبدء برنامجك."
+        },
+        "courseC_maze_programming22022": {
+          "courseC_maze_programming2_1": "هذا هو صندوق الأدوات. حيث ستجد كل القطع البرمجية الإضافية لإكمال الألغاز."
+        },
+        "courseC_maze_programming32022": {
+          "courseC_maze_programming3_2": "يمكنك سحب القطع البرمجية الإضافية إلى صندوق الأدوات لحذفها بعيداً.",
+          "courseC_maze_programming3_3": "هذي القطع البرمجي مقفلة ولا يمكن حذفها."
+        },
+        "courseC_maze_programming42022": {
+          "courseC_maze_programming4_1": "هذا هو حد القطع البرمجية. وهو يخبرك بعدد القطع البرمجية التي تبقّت لديك لاستخدامها."
+        },
+        "courseC_maze_programming52022": {
+          "": "هذه القطع لا تحتوي على أرقام. يمكنك استخدام أي عدد تريده!"
+        },
+        "courseC_maze_programming72022": {
+          "courseC_maze_programming7_1": "هذا تحدي لغزك الاول! لا تقلق من المفترض ان يكون صعباً ويحتاج العديد من المحاولات لحلها.",
+          "courseC_maze_programming7_2": "هذه القطع البرمجية ثابتة ولايمكن حذفها."
+        },
+        "courseC_starWars_loops22022": {
+          "courseC_starWars_loops2": "تستطع استخدام هذه القطعة البرمجية مرة واحدة فقط في هذا اللغز."
+        },
+        "courseD_artist_nestedLoops1a2022": {
+          "courseD_artist_nestedLoops1a_1": "لست ملزمًا باستخدام الألوان لتكملة هذا اللغز. \nوإذا أردت، فإن هذه القطعة  البرمجية \"اللون العشوائي\" تسهّل المهمة!"
+        },
+        "courseD_bee_conditionals22022": {
+          "4_5_Bee_Conditionals_2_1": "تذكّر، تحقّق ما إذا كان لكل غيمة زهرة. لست ملزمًا بفحص خلايا النحل بتاتًا."
+        },
+        "courseD_bee_conditionals_challenge22022": {
+          "courseD_bee_conditionals_challenge2_1": "استخدم هذه الحلقة لجمع كل الرحيق (أو العسل) من زهرة واحدة (أو من خلية نحل)."
+        },
+        "courseD_bee_nestedLoops1a2022": {
+          "stepButton": "جرب الكود الذي كتبته قطعة تلو الأخرى."
+        },
+        "courseD_farmer_while72022": {
+          "courseD_farmer_while7_2018_PathAhead": "ستحتاج إلى استخدام حلقة \"بينما الطريق إلى الأمام\" لحل هذا اللغز."
+        },
+        "courseD_maze_intro42022": {
+          "courseC_maze_programming4_1": "هذا هو حد القطع البرمجية. وهو يخبرك بعدد القطع البرمجية التي تبقّت لديك لاستخدامها."
+        },
+        "courseD_maze_intro5a2022": {
+          "": "هذه القطع لا تحتوي على أرقام. يمكنك استخدام أي عدد تريده!"
+        },
+        "courseD_maze_ramp12022": {
+          "grade2_CaringForNewPet_0_1": "بعد توصيل كل القطع البرمجية، اضغط \"تشغيل\" لبدء برنامجك."
+        },
+        "courseD_maze_ramp22022": {
+          "courseC_maze_programming2_1": "هذا هو صندوق الأدوات. حيث ستجد كل القطع البرمجية الإضافية لإكمال الألغاز."
+        },
+        "courseD_maze_ramp32022": {
+          "courseC_maze_programming3_2": "يمكنك سحب القطع البرمجية الإضافية إلى صندوق الأدوات لحذفها بعيداً.",
+          "stone_block_2": "القطع البرمجية الرمادية ثابتة لا يمكن حذفها."
+        },
+        "courseD_maze_ramp52022": {
+          "": "هذه القطع لا تحتوي على أرقام. يمكنك استخدام أي عدد تريده!"
+        },
+        "courseE_aboutme_22022": {
+          "": "انقر هنا لإضافة أزياء لمشروعك."
+        },
+        "courseE_artist_functions22022": {
+          "courseD_artist_functions2_1": "عند اشتغال هذا القطعة البرمجية باللون الأخضر، ستعمل جميع الأوامر البرمجية في الوظيفة. ما الذي يفعله الفنان بعد رسم المربع الأول؟"
+        },
+        "courseE_artist_functions8a2022": {
+          "courseD_artist_functions8_1": "مربعاتك الخاصة لإنشاء الوظائف تم تحريكها تحت هذه التسمية في صندوق الأدوات."
+        },
+        "courseE_artist_functions_challenge12022": {
+          "courseE_artist_functions_challenge1_callout1": "استمر في استخدام البرنامج عن طريق إضافة المزيد من الأوامر البرمجية إلى الأسفل.",
+          "courseE_artist_functions_challenge1_callout2": "إذا لم يعجبك هذا التصميم، غيره إلى أي شيء يحلو لك!"
+        },
+        "courseE_artist_functions_challenge22022": {
+          "courseE_artist_functions_challenge2_callout1": "استمر في استخدام البرنامج عن طريق إضافة المزيد من الأوامر البرمجية إلى الأسفل.",
+          "courseE_artist_functions_challenge2_callout2": "إذا لم يعجبك هذا التصميم، غيره إلى أي شيء يحلو لك!"
+        },
+        "courseE_farmer_functions12022": {
+          "courseE_farmer_functions1_2": "تم تنظيم صندوق الأدوات بصورة مختلفة هذه المرة! انقر على الفئات المختلفة لمشاهدة أي قطع برمجية لديك."
+        },
+        "courseE_farmer_functions132022": {
+          "courseE_farmer_functions1a_1": "هذا الخضار غير معروف. أنه يتغيّر في كل مرة تقوم فيها بتشغيل البرنامج."
+        },
+        "courseE_farmer_functions1a2022": {
+          "courseE_farmer_functions1a_1": "هذا الخضار غير معروف. أنه يتغيّر في كل مرة تقوم فيها بتشغيل البرنامج."
+        },
+        "courseE_farmer_functions2b2022": {
+          "courseE_farmer_functions1a_1": "هذا الخضار غير معروف. أنه يتغيّر في كل مرة تقوم فيها بتشغيل البرنامج."
+        },
+        "courseF_apps_aquarium2022": {
+          "run_button": "انقر زر التشغيل أولاً!",
+          "visualizationResizeBar": "اسحب النقاط الثلاث لتغيير حجم مساحة اللعب."
+        },
+        "courseF_apps_aquarium_-2022-2": {
+          "run_button": "انقر زر التشغيل أولاً!",
+          "visualizationResizeBar": "اسحب النقاط الثلاث لتغيير حجم مساحة اللعب."
+        },
+        "courseF_apps_card2022": {
+          "visualizationResizeBar": "اسحب النقاط الثلاث لتغيير حجم مساحة اللعب."
+        },
+        "courseF_apps_card_-2022-2": {
+          "visualizationResizeBar": "اسحب النقاط الثلاث لتغيير حجم مساحة اللعب."
+        },
+        "courseF_apps_chatbot2022": {
+          "run_button": "انقر زر التشغيل أولاً!",
+          "visualizationResizeBar": "اسحب النقاط الثلاث لتغيير حجم مساحة اللعب."
+        },
+        "courseF_apps_chatbot_-2022-2": {
+          "run_button": "انقر زر التشغيل أولاً!",
+          "visualizationResizeBar": "اسحب النقاط الثلاث لتغيير حجم مساحة اللعب."
+        },
+        "courseF_apps_collector2022": {
+          "run_button": "انقر زر التشغيل أولاً!",
+          "visualizationResizeBar": "اسحب النقاط الثلاث لتغيير حجم مساحة اللعب."
+        },
+        "courseF_apps_collector_-2022-2": {
+          "run_button": "انقر زر التشغيل أولاً!",
+          "visualizationResizeBar": "اسحب النقاط الثلاث لتغيير حجم مساحة اللعب."
+        },
+        "courseF_apps_collector_drag_-2022-2": {
+          "visualizationResizeBar": "اسحب النقاط الثلاث لتغيير حجم مساحة اللعب."
+        },
+        "courseF_apps_collector_drive_-2022-2": {
+          "visualizationResizeBar": "اسحب النقاط الثلاث لتغيير حجم مساحة اللعب."
+        },
+        "courseF_apps_collector_move2_-2022-2": {
+          "visualizationResizeBar": "اسحب النقاط الثلاث لتغيير حجم مساحة اللعب."
+        },
+        "courseF_apps_collector_move_-2022-2": {
+          "visualizationResizeBar": "اسحب النقاط الثلاث لتغيير حجم مساحة اللعب."
+        },
+        "courseF_apps_madlib2022": {
+          "visualizationResizeBar": "اسحب النقاط الثلاث لتغيير حجم مساحة اللعب."
+        },
+        "courseF_apps_madlib_-2022-2": {
+          "visualizationResizeBar": "اسحب النقاط الثلاث لتغيير حجم مساحة اللعب."
+        },
+        "courseF_apps_pet2022": {
+          "run_button": "انقر زر التشغيل أولاً!",
+          "visualizationResizeBar": "اسحب النقاط الثلاث لتغيير حجم مساحة اللعب."
+        },
+        "courseF_apps_pet_-2022-2": {
+          "run_button": "انقر زر التشغيل أولاً!",
+          "visualizationResizeBar": "اسحب النقاط الثلاث لتغيير حجم مساحة اللعب."
+        },
+        "courseF_artist_for12022": {
+          "courseF_artist_for1_1": "صندوق الأدوات في وضع \"الفئات\" يتيح توفير مساحة أكبر لأوامرك البرمجية. تكمن حلقات \"لِكَيْ\" هنا."
+        },
+        "courseF_bee_for42022": {
+          "courseF_bee_for4_1": "ستجد الحلقة \"لِكَيْ\" هنا!"
+        },
+        "courseF_bee_for92022": {
+          "courseF_bee_for9_1": "ستجد القطعة البرمجية \"رياضيات\" هنا."
+        },
+        "courseF_bee_variables_1a2022": {
+          "courseF_bee_functions_1_2018_1": "بإمكانك إيجاد المتغيرات الخاصة بك هنا!"
+        },
+        "courseF_editable_card_-2022-2": {
+          "visualizationResizeBar": "اسحب النقاط الثلاث لتغيير حجم مساحة اللعب."
+        },
+        "courseF_editable_chatbot_-2022-2": {
+          "visualizationResizeBar": "اسحب النقاط الثلاث لتغيير حجم مساحة اللعب."
+        },
+        "courseF_editable_madlib_-2022-2": {
+          "visualizationResizeBar": "اسحب النقاط الثلاث لتغيير حجم مساحة اللعب."
+        },
+        "courseF_events_choice_penguin_-2022-2": {
+          "whenToWhile": "حاول التغيير من \"عندما\" الى \"بينما\"."
+        },
+        "courseF_events_conflict_-2022-2": {
+          "stops_block": "قطع برمجية جديدة!"
+        },
+        "courseF_events_key_-2022-2": {
+          "whenKey": "استخدام قطعة الحدث البرمجي الجديدة الموجودة هنا."
+        },
+        "courseF_events_practice_reorder_-2022-2": {
+          "stopAllBug": "إن هذه القطعة البرمجية في الترتيب الخاطئ."
+        },
+        "courseF_events_predict_-2022-2": {
+          "behaviors_edit": "انقر هنا لترى أسلوب عمل هذا السلوك."
+        },
+        "courseF_events_time_-2022-2": {
+          "events_category": "انقر هنا لتفتح فئة \"الأحداث البرمجية\"."
+        },
+        "courseF_label_predict_-2022-2": {
+          "variablesPredict": "انظر عن كثب إلى الكود أسفل هذه النقطة."
+        },
+        "courseF_sprites_behaviors_-2022-2": {
+          "behaviors_category": "انقر هنا لتفتح فئة \"السلوكيات\"."
+        },
+        "courseF_sprites_make_-2022-2": {
+          "sprites_category": "انقر هنا لتفتح فئة \"الكائنات\"."
+        },
+        "courseF_sprites_positioning_-2022-2": {
+          "locations_category": "انقر هنا لتفتح فئة \"المواقع\"."
+        },
+        "courseF_sprites_properties_-2022-2": {
+          "sprites_category2": "ابحث عن قطعة برمجية جديدة هنا."
+        },
+        "courseF_text_answer_-2022-2": {
+          "answered_block": "ابحث عن قطعة برمجية جديدة هنا!"
+        },
+        "courseF_text_choice_color_-2022-2": {
+          "text_color_finish": "هل تغير لون الخلفية عندما أجبت على السؤال؟ إذا كان الأمر كذلك، فاضغط على \"إنهاء\". إذا لم يكن الوضع كذلك، فاضغط على \"إعادة تعيين\"، وقم بتغيير الكود الخاص بك، واضغط على \"تشغيل\" مرة أخرى."
+        },
+        "courseF_text_choice_conversation_-2022-2": {
+          "text_generic_finish": "هل انتهيت؟ إذا كان الأمر كذلك، فاضغط على \"إنهاء\". إذا لم يكن كذلك، فاضغط على \"إعادة تعيين\"، وقم بتغيير الكود الخاص بك، واضغط على \"تشغيل\" مرة أخرى."
+        },
+        "courseF_text_choice_title_-2022-2": {
+          "title_block": "ابحث عن قطعتين برمجيتين جديدتين هنا!",
+          "text_answer_finish": "هل ظهرت شاشة العنوان لمدة ٣ ثوان؟ إذا كان الأمر كذلك، فاضغط على \"إنهاء\". إذا لم يكن كذلك، فاضغط على \"إعادة تعيين\" ، وقم بتغيير الكود الخاص بك، واضغط على \"تشغيل\" مرة أخرى."
+        },
+        "courseF_text_concat_-2022-2": {
+          "join_blocks": "ابحث عن قطع برمجية جديدة هنا!"
+        },
+        "courseF_text_events_-2022-2": {
+          "events_category": "انقر هنا لتفتح فئة \"الأحداث البرمجية\"."
+        },
+        "courseF_text_print_-2022-2": {
+          "print_block": "اعثر على القطعة البرمجية \"اطبع\" هنا!",
+          "text_print_finish": "هل تمت طباعة رسالتك أعلاه؟ إذا كان الأمر كذلك، فاضغط على \"إنهاء\". إذا لم يكن كذلك، فاضغط على \"إعادة تعيين\" ، وقم بتغيير الكود الخاص بك، واضغط على \"تشغيل\" مرة أخرى."
+        },
+        "courseF_text_prompts_-2022-2": {
+          "prompt_block": "اعثر على القطعة البرمجية \"المحفز\" هنا!"
+        },
+        "courseF_variables2_predict_-2022-2": {
+          "variablesPredict": "انظر عن كثب إلى الكود أسفل هذه النقطة."
+        },
+        "courseF_variables_predict_-2022-2": {
+          "variablesPredict": "انظر عن كثب إلى الكود أسفل هذه النقطة."
+        },
+        "coursea_maze_ramp12022": {
+          "grade2_CaringForNewPet_0_1": "بعد تحريك جميع القطع البرمجية معًا بسرعة، اضغط على \"تشغيل\" لتبدأ برنامجك."
+        },
+        "coursee_helloworld_events": {
+          "hello_world_click_hint": "أضف هذا الحدث إلى مساحة العمل الخاصة بك."
+        },
+        "coursee_helloworld_freeplay": {
+          "costumes_tab": "انقر هنا لإضافة أزياء لمشروعك."
+        },
+        "coursee_helloworld_say": {
+          "hello_world_say": "استخدم هذه الكتلة لجعل الكائنات تتحدث.",
+          "hello_world_make_sprite": "استخدم هذه الكتلة لإنشاء كائن."
+        },
+        "express_maze_debugging92022": {
+          "express_maze_debugging9_2019_1": "اسحب القطع البرمجيةمن صندوق الأدوات إلى مساحة العمل الخاصة بك."
+        },
+        "helloworld_food_backgrounds_soccer-2022": {
+          "hw_background_location": "استخدم هذه الكتلة لضبط خلفية جديدة."
+        },
+        "helloworld_food_backgrounds_space-2022": {
+          "hw_background_location": "استخدم هذه الكتلة لضبط خلفية جديدة."
+        },
+        "helloworld_food_behaviors_soccer-2022": {
+          "hello_world_behavior_blocks": "استخدم هذه الكتلة مع أحد السلوكيات التالية."
+        },
+        "helloworld_food_behaviors_space-2022": {
+          "hello_world_behavior_blocks": "استخدم هذه الكتلة مع أحد السلوكيات التالية."
+        },
+        "helloworld_food_click_soccer-2022": {
+          "hw_Run": "انقر هنا لتشغيل الكود."
+        },
+        "helloworld_food_costumes_soccer-2022": {
+          "hello_world_new": "قطعة برمجية جديدة!"
+        },
+        "helloworld_food_costumes_space-2022": {
+          "hello_world_new": "قطعة برمجية جديدة!"
+        },
+        "helloworld_food_events_soccer-2022": {
+          "hello_world_click_hint": "أضف هذا الحدث إلى مساحة العمل الخاصة بك."
+        },
+        "helloworld_food_events_space-2022": {
+          "hello_world_click_hint": "أضف هذا الحدث إلى مساحة العمل الخاصة بك."
+        },
+        "helloworld_food_freeplay_soccer-2022": {
+          "costumes_tab": "انقر هنا لإضافة أزياء لمشروعك."
+        },
+        "helloworld_food_freeplay_space-2022": {
+          "costumes_tab": "انقر هنا لإضافة أزياء لمشروعك."
+        },
+        "helloworld_food_location_soccer-2022": {
+          "pin": "تثبيت"
+        },
+        "helloworld_food_location_space-2022": {
+          "pin": "تثبيت"
+        },
+        "helloworld_food_multi_soccer-2022": {
+          "pin": "تثبيت"
+        },
+        "helloworld_food_multi_space-2022": {
+          "pin": "تثبيت"
+        },
+        "helloworld_food_say_soccer-2022": {
+          "hello_world_say": "استخدم هذه الكتلة لجعل الكائنات تتحدث.",
+          "hello_world_make_sprite": "استخدم هذه الكتلة لإنشاء كائن."
+        },
+        "helloworld_food_say_space-2022": {
+          "hello_world_say": "استخدم هذه الكتلة لجعل الكائنات تتحدث.",
+          "hello_world_make_sprite": "استخدم هذه الكتلة لإنشاء كائن."
+        },
+        "helloworld_food_sizes_soccer-2022": {
+          "hello_world_new": "قطعة برمجية جديدة!",
+          "hello_world_new_block": "قطعة برمجية جديدة!"
+        },
+        "helloworld_food_sizes_space-2022": {
+          "hello_world_new": "قطعة برمجية جديدة!",
+          "hello_world_new_block": "قطعة برمجية جديدة!"
+        },
+        "helloworld_food_sounds_soccer-2022": {
+          "hello_world_new": "قطعة برمجية جديدة!"
+        },
+        "helloworld_food_sounds_space-2022": {
+          "hello_world_new": "قطعة برمجية جديدة!"
+        },
+        "helloworld_food_click_space-2022": {
+          "hw_Run": "انقر هنا أولاً!"
         }
       }
     }

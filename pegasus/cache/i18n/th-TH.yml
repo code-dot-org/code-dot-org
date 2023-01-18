@@ -325,6 +325,7 @@ th-TH:
   homepage_banner_40k_teachers_link: สิ่งที่น่าเรียนรู้ยังมีอีก
   homepage_slot_text_title_hoc: ช่วงเวลาของ Code
   homepage_slot_text_blurb_hoc: ทุกคนสามารถเรียนรู้ได้ เริ่มต้นวันนี้
+  homepage_slot_text_blurb_hoc_2022: สำรวจ เล่น สร้าง!
   homepage_slot_text_link_hoc: ลองใช้ Hour of Code
   homepage_slot_text_link_host: จัดงาน Hour of Code
   homepage_slot_text_link_hocserved: "# คน เข้าร่วมแล้ว"
@@ -348,6 +349,7 @@ th-TH:
   homepage_slot_text_link_stats: ดูสถิติ
   homepage_slot_text_link_buy: มาร่วมกับเราสิ
   homepage_slot_text_link_donate: ร่วมบริจาค
+  homepage_slot_text_link_thebadguys: โค้ดกับ The Bad Guys
   homepage_gallery_header: โครงงานของ Code.org ได้ถูกสร้างมาแล้วมากกว่า %{project_count}
     ล้านโครงการ
   homepage_header_donors: Code.org ขอขอบคุณพันธมิตร
@@ -1466,6 +1468,11 @@ th-TH:
   hoc_overview_dance_2019_subtitle: เขียนโค้ดให้กับเกมปาร์ตี้เต้นรำเพื่อแชร์กับเพื่อน
     ๆ ก่อนฟีเจอริ่งกับนักร้องชื่อดังไม่ว่าจะเป็น Katy Perry, Shawn Mendes Panic! At
     The Disco, Lil Nas X, Jonas Brothers, Nicki Minaj, และอีก 34 คน!
+  hoc_overview_dance_2022_subtitle: เขียนโค้ดงานเต้นรำเพื่อแบ่งปันกับเพื่อนของคุณ
+    พร้อมกับ Beyoncé, Harry Styles, Lizzo, Lil Nas X, Selena Gomez, เพลงจาก "Encanto"
+    ของดิสนีย์และอีกมากมาย!
+  hoc_overview_hello_world_2022_alt_text: ตัวละครนักบินอวกาศและสัตว์เคลื่อนไหวที่ลอยอยู่รอบๆ
+    รูปภาพองค์ประกอบของโลก
   hoc_overview_title: กิจกรรมของชั่วโมงเขียนโค้ดจาก Code.org
   hoc_overview_subtitle_markdown: '[ชั่วโมงเขียนโค้ด](https://hourofcode.com) คือความเคลื่อนไหวในทั่วโลกเพื่อเข้าถึงผู้เรียนหลายสิบล้านคนในกว่า
     180 ประเทศ ไม่ว่าจะเป็นใครหรืออยู่ที่ไหนก็สามารถจัดกิจกรรม "ชั่วโมงเขียนโค้ด"
@@ -1506,8 +1513,15 @@ th-TH:
     "ชั่วโมงของการเขียนโค้ด" ที่จัดขึ้นฟรี และเปิดรับผู้สนใจทุกระดับทักษะ อายุตั้งแต่
     6 ขวบขึ้นไป
   hoc2018_mc_educators_box3_button: ค้นหาเวิร์คช็อป
+  hoc2022_mc_educators_box3_desc_markdown: 'ใช้หลักสูตรนี้ตามความต้องการ [หลักสูตรฟรี](%{free_course_link})
+    หรือลงทะเบียนทั้งชั้นเรียนของคุณเพื่อเข้าร่วมเวิร์กช็อป Hour of Code แบบสดกับผู้สอนรับเชิญ
+    ข้อเสนอหลายครั้งในช่วง CSEW 6 – 11 ธ.ค. '
+  hoc2022_mc_educators_box3_button: สมัครเลย
   hoc2018_mc_educators_box4_title: เข้าถึงแหล่งข้อมูลอื่น ๆ ของวิทยาการคอมพิวเตอร์
   hoc2018_mc_educators_box4_button: สำรวจแหล่งข้อมูล
+  hoc2022_mc_educators_box4_desc: สร้างแรงบันดาลใจให้กับผู้เรียนแบบ STEM ในระดับ K-12
+    ด้วยหลักสูตรวิทยาการคอมพิวเตอร์ 200 ชั่วโมง ตั้งแต่บล็อกไปจนถึงไพธอน โดยได้รับการสนับสนุนจากการพัฒนาทางวิชาชีพ
+  hoc2022_mc_educators_box4_button: เรียนรู้ต่อไป
   hoc2018_mc_watch_videos: ก่อนเริ่มต้น แนะนำให้เปิดวิดีโอสร้างแรงบันดาลใจเหล่านี้ดูสักหนึ่งวิดีโอ
   hoc2018_mc_videos_more: ดู<a href='%{inspiring_videos_playlist}'>วิดีโอที่สร้างแรงบันดาลใจ</a>
     เพิ่มเติมที่รวบรวมบุคคลต้นแบบและคนดังไว้มากมาย
@@ -1611,6 +1625,13 @@ th-TH:
   hoc2021_mc_mee_ai_title: AI For Good
   hoc2021_mc_mee_ai_description: 'ดูเรื่องปัญญาประดิษฐ์ไปพร้อม ๆ กับผู้เรียนของคุณ
     และเรียนรู้วิธีเขียนโค้ดจากภายใน Minecraft: Education Edition'
+  hoc2022_mc_mee_title: Minecraft Escape Estate
+  hoc2022_mc_mee_description: 'หลบหนีคฤหาสน์ลึกลับในยามรุ่งอรุณและรับมรกตนับล้าน!
+    บทช่วยสอน Minecraft Hour of Code ใหม่พร้อมใช้งานแล้วใน Minecraft: Education Edition
+    สำหรับ Windows, Mac, Chromebook, Ipad และมือถือ เริ่มต้นใช้งานแหล่งข้อมูล การฝึกอบรม
+    และวิดีโอสำหรับนักการศึกษาฟรี'
+  hoc2022_mc_mee_timecraft_description: 'ย้อนเวลากลับไปเพื่อกอบกู้อนาคตในบทเรียนการเขียนโค้ดฟรีใน
+    Minecraft: Education Edition'
   footer_powered_by_aws: ขับเคลื่อนระบบด้วย Amazon Web Services
   codebytes_skinny_banner_english_only: ภาษาอังกฤษเท่านั้น
   footer_privacy_policy: นโยบายความเป็นส่วนตัว
@@ -1686,3 +1707,16 @@ th-TH:
   outbreak_tile_subtitle: Monster Town กำลังติดไวรัส! เขียนโค้ดเครื่องจำลองการแพร่ระบาดของไวรัส
     และคาดการณ์สิ่งที่จะเกิดขึ้นกับเมืองที่อยู่กับเมืองนี้
   footer_cookie_notice: ประกาศเกี่ยวกับคุกกี้
+  hoc2022_banner_title: สำรวจ เล่น สร้าง!
+  hoc2022_banner_description: สำรวจจักรวาล ทำคะแนนตามเป้าหมาย เคลื่อนไหว — มีหลายวิธีที่จะลองใช้วิทยาการคอมพิวเตอร์!
+  hoc2022_cta_primary: ดูว่ามีอะไรใหม่
+  hoc2022_cta_secondary: ลองกิจกรรมเพิ่มเติม
+  hoc2022_landing_page_explore_title: ค้นหา
+  hoc2022_landing_page_explore_description: เปิดประตูสู่โลกใหม่ด้วยวิทยาการคอมพิวเตอร์!
+  hoc2022_landing_page_play_title: เล่น
+  hoc2022_landing_page_play_description: ลงสนามและทำคะแนนกันเถอะ!
+  hoc2022_landing_page_create_title: สร้าง
+  hoc2022_landing_page_create_description: มาทำส่งประหลาดแต่ยอดเยี่ยมกันเถอะ!
+  hoc2022_landing_page_banner_alt_left: มนุษย์ต่างดาวเต้นข้างดาวเสาร์ในอวกาศ
+  hoc2022_landing_page_banner_alt_right: หุ่นยนต์เลี้ยงลูกฟุตบอลในอวกาศด้านหน้าจรวดที่กำลังทะยาน
+  try_it_yourself: คราวนี้คุณลองทำดู

@@ -1,0 +1,80 @@
+{
+  "pt-BR": {
+    "data": {
+      "standard_categories": {
+        "DAT-1": {
+          "description": "O método utilizado pelo computador para representar dados é diferente da forma como os dados são interpretados e exibidos para o usuário. Os programas são utilizados para traduzir dados em um representação que seja mais facilmente compreendida pelas pessoas."
+        },
+        "IOC-2": {
+          "description": "O uso de inovações em computação pode envolver riscos à segurança e identidade do seu pessoal."
+        },
+        "DAT-1.D": {
+          "description": "Compare os algoritmos de compactação de dados para determinar qual é o melhor em um contexto específico."
+        },
+        "IOC-2.B": {
+          "description": "Explique como os recursos de computação podem ser protegidos, mas podem ser utilizados indevidamente."
+        },
+        "CD": {
+          "description": "Computadores e dispositivos de comunicação"
+        },
+        "CI": {
+          "description": "Impactos na comunidade, globais e éticos"
+        },
+        "CL": {
+          "description": "Colaboração"
+        },
+        "CPP": {
+          "description": "Programação e Prática Computacional"
+        },
+        "CT": {
+          "description": "Pensamento computacional"
+        },
+        "L": {
+          "description": "Idioma"
+        },
+        "RI": {
+          "description": "Lendo Informativos"
+        },
+        "RL": {
+          "description": "Leitura de literatura"
+        },
+        "SL": {
+          "description": "Falando e Escutando"
+        },
+        "W": {
+          "description": "Escrevendo"
+        },
+        "C": {
+          "description": "Túnel"
+        },
+        "F": {
+          "description": "funções"
+        },
+        "G": {
+          "description": "Geometria"
+        },
+        "MP": {
+          "description": "Práticas Matemáticas"
+        },
+        "NBT": {
+          "description": "Números e operações na base dez"
+        },
+        "OA": {
+          "description": "Operações e raciocínio algébrico"
+        },
+        "1": {
+          "description": "Estudantes demonstram pensamento crítico, constroem conhecimento e desenvolvem produtos e processos inovadores usando a tecnologia."
+        },
+        "2": {
+          "description": "Estudantes usam mídia digital para se comunicar e trabalhar de maneira colaborativa, inclusive a distância, para apoiar o aprendizado individual e contribuir para o aprendizado de outras pessoas."
+        },
+        "4": {
+          "description": "Estudantes usam habilidades de pensamento crítico para planejar e conduzir pesquisas, gerenciar projetos, solucionar problemas e tomar decisões informadas usando recursos e ferramentas digitais apropriadas."
+        },
+        "6": {
+          "description": "Estudantes demonstram boa compreensão de conceitos, sistemas e operações tecnológicas."
+        }
+      }
+    }
+  }
+}

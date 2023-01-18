@@ -1,9 +1,5 @@
 <Pixelation>
   <config><![CDATA[{
-  "game_id": 44,
-  "created_at": "2022-03-30T23:47:11.000Z",
-  "level_num": "custom",
-  "user_id": 106,
   "properties": {
     "long_instructions": "# Do This\r\n\r\nAdd eyebrows to this smiley face. Remember to use the \"Readable Format\" if you get stuck.\r\n\r\n![](https://images.code.org/269725fa3d9d6857912fe4a20464a830-image-1491427249017.18.37 PM.png)",
     "instructions_important": "false",
@@ -19,6 +15,10 @@
     "parent_level_id": 20318,
     "name_suffix": "_2022"
   },
+  "level_num": "custom",
+  "game_id": 44,
+  "created_at": "2022-03-30T23:47:11.000Z",
+  "user_id": 106,
   "published": true,
   "notes": "",
   "audit_log": "[{\"changed_at\":\"2022-03-30T23:47:11.337+00:00\",\"changed\":[\"cloned from \\\"CSD U5 black white images pixelation 4_2021\\\"\"],\"cloned_from\":\"CSD U5 black white images pixelation 4_2021\"}]"

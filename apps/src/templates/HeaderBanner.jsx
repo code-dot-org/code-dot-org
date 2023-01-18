@@ -17,7 +17,8 @@ class HeaderBanner extends React.Component {
     children: PropTypes.node,
     short: PropTypes.bool,
     responsiveSize: PropTypes.oneOf(['lg', 'md', 'sm', 'xs']).isRequired,
-    backgroundUrl: PropTypes.string
+    backgroundUrl: PropTypes.string,
+    imageUrl: PropTypes.string
   };
 
   render() {
@@ -27,7 +28,8 @@ class HeaderBanner extends React.Component {
       subHeadingText,
       description,
       responsiveSize,
-      backgroundUrl
+      backgroundUrl,
+      imageUrl
     } = this.props;
 
     let headerBannerContainerStyle,
@@ -51,6 +53,10 @@ class HeaderBanner extends React.Component {
     const headerBannerStyle = {
       backgroundImage: `url(${backgroundUrl})`
     };
+
+    const bannerContentImageStyle = short
+      ? styles.bannerContentImageShort
+      : styles.bannerContentImage;
 
     if (isSmallScreen) {
       return (
@@ -95,6 +101,7 @@ class HeaderBanner extends React.Component {
                 <div className={'children'}>{this.props.children}</div>
               )}
             </div>
+            {imageUrl && <img style={bannerContentImageStyle} src={imageUrl} />}
           </div>
         </div>
       );
@@ -150,6 +157,12 @@ const styles = {
     fontSize: 16,
     lineHeight: '21px',
     marginTop: 16
+  },
+  bannerContentImage: {
+    maxHeight: 260
+  },
+  bannerContentImageShort: {
+    maxHeight: 140
   }
 };
 

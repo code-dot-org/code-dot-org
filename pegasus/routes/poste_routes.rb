@@ -72,35 +72,3 @@ get '/unsubscribe/:email' do |email|
   Poste.unsubscribe(email, hashed_email, ip_address: request.ip)
   halt(200, "#{email} unsubscribed.\n")
 end
-
-post '/v2/poste/send-message' do
-  forbidden! unless dashboard_user_helper&.admin?
-
-  template = params[:template].to_s
-  template = File.basename(template, '.md')
-
-  template_params = JSON.parse(params[:params]) unless params[:params].to_s.empty?
-  template_params ||= {}
-
-  recipients = params[:recipients].to_s.split(/[\n,;]/).map(&:strip)
-
-  if params[:recipients_file]
-    if params[:recipients_file][:type] == "text/csv"
-      recipients_csv = CSV.parse(params[:recipients_file][:tempfile].read, {headers: true})
-      if recipients_csv.headers.include?('email')
-        recipients += recipients_csv.map {|recipient| recipient["email"]}
-      else
-        return 'Invalid CSV. Make sure it has an "email" column'
-      end
-    else
-      return 'Invalid file. Make sure it is of type text/csv.'
-    end
-  end
-  recipients.each do |email|
-    recipient = Poste2.ensure_recipient(email, ip_address: request.ip)
-    Poste2.send_message(template, recipient, template_params)
-  end
-
-  content_type :text
-  "#{recipients.count} #{template} messages sent to:\n\n#{recipients.join("\n")}"
-end

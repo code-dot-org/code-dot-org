@@ -440,6 +440,7 @@ ka-GE:
   homepage_banner_40k_teachers_link: გაიგეთ მეტი
   homepage_slot_text_title_hoc: კოდის ერთი საათი
   homepage_slot_text_blurb_hoc: სწავლა შეუძლია ყველას. დაიწყეთ დღეს
+  homepage_slot_text_blurb_hoc_2022: აღმოაჩინე, ითამაშე, შექმენი
   homepage_slot_text_link_hoc: სცადეთ კოდის ერთი საათი
   homepage_slot_text_link_about_hoc: კოდის საათის შესახებ
   homepage_slot_text_link_host: ჩაატარეთ კოდის ერთი საათი
@@ -642,6 +643,7 @@ ka-GE:
   sports_athlete_Harrison: ჰარისონ ბარნსი, ოლიმპიური ოქროს მფლობელი და NBA ჩემპიონი,
     გუნდი Dallas Mavericks
   watch_inspirational_videos: სანამ დაიწყებთ, უყურეთ ამ ვიდეოებიდან რომელიმეს
+  video_title_cs_is_everything: კომპიუტერული მეცნიერება ცვლის ყველაფერს
   video_title_inspire_girl: შთააგონეთ გოგოს
   video_title_cs_intro: 'კომპიუტერული მეცნიერება: შესავალი'
   video_title_schools_dont_teach: რას არ ასწავლიან სკოლების უმეტესობაში
@@ -2251,6 +2253,11 @@ ka-GE:
   hoc_overview_dance_2019_subtitle: კოდი Dance Party გაუზიაროს თქვენს მეგობრებს. რომელშიც
     Katy Perry, Shawn Mendes, პანიკა! დისკო, Lil Nas X, Jonas Brothers, Nicki Minaj,
     და კიდევ 34!
+  hoc_overview_dance_2022_subtitle: შექმენით საცეკვაო საღამო, რომ გაუზიაროთ თქვენს
+    მეგობრებს. გამოიყენეთ Beyoncé, Harry Styles, Lizzo, Lil Nas X, Selena Gomez, მუსიკა
+    დისნეის "Encanto"-დან და სხვა!
+  hoc_overview_hello_world_2022_alt_text: ასტრონავტების და ცხოველების ანიმირებული
+    პერსონაჟები დაცურავენ დედამიწის ილუსტრაციის გარშემო
   hoc_overview_title: კოდის საქმიანობის საათი Code.org— დან
   hoc_overview_subtitle_markdown: "[კოდექსის საათი] (https://hourofcode.com) არის
     გლობალური მოძრაობა, რომელიც აღწევს ათობით მილიონი სტუდენტს 180+ ქვეყანაში. ყველას,
@@ -2322,10 +2329,19 @@ ka-GE:
   hoc2018_mc_educators_box3_desc: ეწვიეთ Microsoft Store- ს თქვენს ტერიტორიაზე უფასო
     კოდის სემინარის საათისთვის. მონაწილეთა ყველა უნარი დონეზე, ასაკის ექვსი და მდე.
   hoc2018_mc_educators_box3_button: იპოვეთ სემინარი
+  hoc2022_mc_educators_box3_desc_markdown: 'გამოიყენეთ ეს მოთხოვნით [უფასო კურსი]
+    (%{free_course_link}) ან დაარეგისტრირეთ თქვენი მთელი კლასი, რომ დაესწროთ კოდის
+    ერთი საათის ცოცხალ სემინარს მოწვეულ მასწავლებელთან ერთად. შეთავაზებულია რამდენჯერმე
+    CSEW-ს განმავლობაში, დეკ. 6 - 11. '
+  hoc2022_mc_educators_box3_button: დარეგისტრირდით ახლა
   hoc2018_mc_educators_box4_title: მეტი კომპიუტერული მეცნიერების რესურსების ხელმისაწვდომობა
   hoc2018_mc_educators_box4_desc: შექმენით ცვლილება თქვენს საზოგადოებაში ციფრული უნარებისა
     და კომპიუტერული მეცნიერების განათლების რესურსებით Microsoft-ისგან.
   hoc2018_mc_educators_box4_button: შეისწავლეთ რესურსები
+  hoc2022_mc_educators_box4_desc: დააინტერესეთ 1-12 კლასის მოსწავლეები STEM-ის შესწავლით
+    200-საათიანი კომპიუტერული მეცნიერების კურსის საშუალებით, ბლოკებით პროგრამირებიდან
+    პითონამდე, პროფესიული განვითარების მხარდაჭერით.
+  hoc2022_mc_educators_box4_button: სწავლის გაგრძელება
   hoc2018_mc_watch_videos: სანამ დაიწყებთ, უყურეთ ამ ვიდეოებიდან რომელიმეს
   hoc2018_mc_videos_more: მეტი <a href='%{inspiring_videos_playlist}'>შთამაგონებელი
     ვიდეო</a> ცნობადი სახეების მონაწილეობით
@@ -2337,6 +2353,7 @@ ka-GE:
   hoc2018_mc_video_5min: 5 წუთი
   hoc2018_mc_video_title_steph_curry: კოდის საათი სტეფი კურისთან
   hoc2018_mc_video_title_sports: აჯობე საკუთარ თავს. სწავლა ყველას შეუძლია.
+  hoc2018_mc_video_title_cs_is_everything: კომპიუტერული მეცნიერება ცვლის ყველაფერს
   hoc2018_mc_video_title_inspire_girl: შთააგონეთ გოგოს
   hoc2018_mc_video_title_cs_intro: 'კომპიუტერული მეცნიერება: შესავალი'
   hoc2018_mc_video_title_schools_dont_teach: რას არ ასწავლიან სკოლების უმეტესობაში
@@ -2356,6 +2373,8 @@ ka-GE:
     Minecraft კოდით.
   hoc2018_mc_teacher_guide: იხილეთ მასწავლებლის სახელმძღვანელო
   hoc2018_mc_minecraft_education: Minecraft Education
+  hoc2018_mc_continue_learning: გააგრძელე სწავლა Minecraft-თან ერთად.
+  hoc2018_mc_go_to_mc_education: შედით Minecraft Education-ში
   hoc2018_mc_short_description: გამოიყენეთ თქვენი კრეატიულობა და პრობლემის გადაჭრის
     უნარი, რათა იპოვოთ საგანძური და შეისწავლონ წყლის სამყაროს ქვეშ კოდი.
   hoc2018_mc_short_description_shorter: გამოიყენეთ თქვენი შემოქმედების და პრობლემის
@@ -2488,6 +2507,13 @@ ka-GE:
   hoc2021_mc_mee_ai_title: AI კარგი
   hoc2021_mc_mee_ai_description: 'ექსპლორ AI თქვენი სტუდენტები და ვისწავლოთ კოდი Minecraft:
     განათლება გამოცემა.'
+  hoc2022_mc_mee_title: Minecraft სასახლიდან გაქცევა
+  hoc2022_mc_mee_description: 'გაიქეცი მისტიური სასახლიდან გამთენიისას და მიიღე მილიონი
+    ზურმუხტი! ახალი Minecraft კოდის ერთი საათის ტუტორიალი ახლა ხელმისაწვდომია Minecraft-ში:
+    საგანმანათლებლო გამოცემა Windows, Mac, Chromebook, Ipad და Mobile-თვის.დაიწყე
+    უფასო საგანმანათლებლო რესურსებით, ტრენინგებით და ვიდეოებით.'
+  hoc2022_mc_mee_timecraft_description: 'იმოგზაურეთ წარსულში, რომ გადაარჩინოთ მომავალი
+    პროგრამირების ამ უფასო გაკვეთილში Minecraft-ში: სასწავლო რედაქცია.'
   footer_powered_by_aws: შექმნილია Amazon Web Services დახმარებით
   footer_built_on_github: აგებულია GitHub- ზე Microsoft- ისგან
   codebytes_skinny_banner_title: შემოგვიერთდით 7-11 დეკემბერს ჩვენი კოდების ცოცხალი
@@ -2496,6 +2522,7 @@ ka-GE:
     CodeBytes, 20 წუთი ინტერაქტიული კომპიუტერული მეცნიერების გაკვეთილები. ნაკადი ცოცხალი
     ორჯერ ყოველდღიურად, CodeBytes არის დიდი გზა სტუდენტებისთვის მონაწილეობის ვირტუალური
     #HourOfCode!'
+  codebytes_skinny_banner_english_only: მხოლოდ ინგლისური
   codebytes_skinny_banner_learn: შეიტყვეთ უფრო მეტი [code.org/codebytes] (%{code_bytes_url}).
   footer_privacy_policy: კონფიდენციალურობის პოლიტიკა
   footer_privacy_policy_updated: კონფიდენციალურობის პოლიტიკა (მხრიდან)
@@ -2579,3 +2606,20 @@ ka-GE:
   ai_try_activity: სცადეთ აქტივობა
   outbreak_tile_subtitle: ვირუსი ინფიცირებულია Monster Town! კოდექსის ეპიდემიის სიმულატორი
     და პროგნოზები, თუ რა მოხდება მეზობლები Monster Town.
+  hoc2022_banner_title: აღმოაჩინე, ითამაშე, შექმენი
+  hoc2022_banner_description: შეისწავლე სამყარო, გაიტანე გოლი, იცეკვე - ბევრი გზა
+    არის კომპიუტერული მეცნიერების გამოსაყენებლად!
+  hoc2022_cta_primary: ნახეთ, რა არის ახალი
+  hoc2022_cta_secondary: სცადეთ სხვა აქტივობები
+  hoc2022_landing_page_explore_title: სარჩევი
+  hoc2022_landing_page_explore_description: გახსენით კარი ახალ სამყაროებში კომპიუტერულ
+    მეცნიერებასთან ერთად!
+  hoc2022_landing_page_play_title: Თამაში
+  hoc2022_landing_page_play_description: გამოდით მოედანზე და გაიტანეთ გოლი!
+  hoc2022_landing_page_create_title: შექმნა
+  hoc2022_landing_page_create_description: გააკეთეთ რამე უცნაური და მშვენიერი!
+  hoc2022_landing_page_banner_alt_left: უცხოპლანეტელი ცეკვავს სატურნის ახლოს კოსმოსში
+  hoc2022_landing_page_banner_alt_right: რობოტი აკეთებს დრიბლინგს ფეხბურთის ბურთით
+    კოსმოსში რაკეტის წინ, რომელიც ფრინდება
+  try_it_yourself: სცადეთ დამოუკიდებლად!
+  try_an_activity: სცადე აქტივობა

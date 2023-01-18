@@ -1,9 +1,5 @@
 <Applab>
   <config><![CDATA[{
-  "game_id": 41,
-  "created_at": "2022-03-30T23:50:15.000Z",
-  "level_num": "custom",
-  "user_id": 106,
   "properties": {
     "skin": "applab",
     "edit_code": true,
@@ -56,10 +52,10 @@
     "ai_model_id": "z5SZPaoHHIvF",
     "ai_model_name": "Club Recommender",
     "reference_links": [
-      "/docs/concepts/app-lab/responding-to-user-input/",
-      "/docs/concepts/app-lab/design-mode/"
+      "/courses/csd-2022/guides/responding-to-user-input",
+      "/courses/csd-2022/guides/design-mode"
     ],
-    "map_reference": "/docs/concepts/app-lab/changing-screens/",
+    "map_reference": "/courses/csd-2022/guides/changing-screens",
     "rubric_key_concept": "Creating a user-friendly app that uses machine learning",
     "rubric_performance_level_1": "The model has been imported and the app works correctly. The app has a theme and the prompt for each dropdown has been edited to be a question. The app has a welcome screen and a button that correctly changes screens.",
     "rubric_performance_level_2": "The model has been imported and the app works correctly. The app has a theme and the prompt for dropdown has been edited to be a question. However, the welcome screen is incomplete or does not work correctly.",
@@ -68,6 +64,10 @@
     "name_suffix": "_2022",
     "preload_asset_list": null
   },
+  "level_num": "custom",
+  "game_id": 41,
+  "created_at": "2022-03-30T23:50:15.000Z",
+  "user_id": 106,
   "published": true,
   "notes": "",
   "audit_log": "[{\"changed_at\":\"2022-03-30T23:50:15.663+00:00\",\"changed\":[\"cloned from \\\"ml-club app-review submit\\\"\"],\"cloned_from\":\"ml-club app-review submit\"}]"

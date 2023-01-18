@@ -5,6 +5,8 @@
 #
 module InternationalOptInPeople
   facilitators = {
+    barbados: ["Code.org"],
+    belize: ["Code.org"],
     chile: ["Fundacion Kodea", "Centro de Innovación - Mineduc", "Rodrigo Fabrega"],
     paraguay: ["Paraguay Educa"],
     israel: ["Hana Zimmerman Karl"],
@@ -19,6 +21,8 @@ module InternationalOptInPeople
   end).freeze
 
   partners = {
+    barbados: ["The Trust for the Americas"],
+    belize: ["The Trust for the Americas"],
     thailand: ["Aksorn"],
     colombia: ["Computadores para Educar"],
     chile: ["Fundacion Kodea", "Mineduc"],

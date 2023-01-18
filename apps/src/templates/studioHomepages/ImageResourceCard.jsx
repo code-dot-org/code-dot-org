@@ -6,6 +6,7 @@ import color from '../../util/color';
 
 class ImageResourceCard extends Component {
   static propTypes = {
+    altText: PropTypes.string,
     title: PropTypes.string.isRequired,
     callout: PropTypes.string,
     description: PropTypes.string.isRequired,
@@ -20,7 +21,15 @@ class ImageResourceCard extends Component {
   }
 
   render() {
-    const {title, callout, description, buttonText, link, isRtl} = this.props;
+    const {
+      altText,
+      title,
+      callout,
+      description,
+      buttonText,
+      link,
+      isRtl
+    } = this.props;
 
     return (
       <div style={{...styles.card, ...(isRtl && styles.rtl)}}>
@@ -44,11 +53,15 @@ class ImageResourceCard extends Component {
             style={styles.button}
           />
         </div>
-        <img style={styles.image} src={this.getImage()} />
+        <img style={styles.image} src={this.getImage()} alt={altText} />
       </div>
     );
   }
 }
+
+ImageResourceCard.defaultProps = {
+  altText: ''
+};
 
 const styles = {
   card: {

@@ -1,0 +1,80 @@
+{
+  "id-ID": {
+    "data": {
+      "standard_categories": {
+        "DAT-1": {
+          "description": "Cara komputer dalam menyatakan data berbeda dengan cara data ditafsirkan dan ditampilkan kepada pengguna. Program digunakan untuk mengubah data menjadi pernyataan yang lebih mudah dipahami oleh pengguna."
+        },
+        "IOC-2": {
+          "description": "Penggunaan inovasi komputasi dapat melibatkan risiko terhadap keamanan dan identitas pribadi Anda."
+        },
+        "DAT-1.D": {
+          "description": "Membandingkan algoritma kompresi data untuk menentukan algoritma terbaik dalam konteks tertentu."
+        },
+        "IOC-2.B": {
+          "description": "Jelaskan bagaimana informasi komputasi dapat dilindungi dan dapat disalahgunakan."
+        },
+        "CD": {
+          "description": "Komputer & Alat Komunikasi"
+        },
+        "CI": {
+          "description": "Dampak Komunitas, Global, dan Etis"
+        },
+        "CL": {
+          "description": "Kolaborasi"
+        },
+        "CPP": {
+          "description": "Latihan Komputasi & Pemrograman"
+        },
+        "CT": {
+          "description": "Berpikir secara komputasi"
+        },
+        "L": {
+          "description": "Bahasa"
+        },
+        "RI": {
+          "description": "Membaca Informatif"
+        },
+        "RL": {
+          "description": "Membaca Sastra"
+        },
+        "SL": {
+          "description": "Berbicara & Mendengarkan"
+        },
+        "W": {
+          "description": "Menulis"
+        },
+        "C": {
+          "description": "Lingkaran"
+        },
+        "F": {
+          "description": "fungsi"
+        },
+        "G": {
+          "description": "Geometri"
+        },
+        "MP": {
+          "description": "Latihan Matematika"
+        },
+        "NBT": {
+          "description": "Bilangan Dan Operasi Berbasis Sepuluh"
+        },
+        "OA": {
+          "description": "Operasi & Berpikir Aljabar"
+        },
+        "1": {
+          "description": "Para murid menunjukkan pemikiran kreatif, membangun pengetahuan, dan mengembangkan produk dan proses inovatif menggunakan teknologi."
+        },
+        "2": {
+          "description": "Siswa menggunakan lingkungan dan media digital untuk berkomunikasi dan bekerja sama, termasuk dari jarak jauh, untuk membantu pembelajaran secara individual dan berkontribusi untuk pembelajaran siswa lain."
+        },
+        "4": {
+          "description": "Murid menggunakan pemikiran kritis untuk merencanakan dan melakukan penelitian, mengelola proyek, memecahkan masalah, dan membuat keputusan yang matang menggunakan alat dan materi pembelajaran digital yang tepat."
+        },
+        "6": {
+          "description": "Siswa mendemonstrasikan sebuah pengertian baik pada konsep, sistem, dan operasi teknologi."
+        }
+      }
+    }
+  }
+}

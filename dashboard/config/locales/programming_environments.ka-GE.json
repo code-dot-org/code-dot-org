@@ -1,0 +1,251 @@
+{
+  "ka-GE": {
+    "data": {
+      "programming_environments": {
+        "weblab": {
+          "name": "ვებ ლაბორატორია"
+        },
+        "gamelab": {
+          "name": "თამაშების ლაბი",
+          "categories": {
+            "game_lab": {
+              "name": "თამაშების ლაბი",
+              "expressions": {
+                "mouseIsOver": {
+                  "palette_params": {
+                    "sprite": {
+                      "type": "სპრაიტი"
+                    }
+                  }
+                },
+                "mousePressedOver": {
+                  "palette_params": {
+                    "sprite": {
+                      "type": "სპრაიტი"
+                    }
+                  }
+                },
+                "playSound": {
+                  "examples": {
+                    "Making Music": {
+                      "name": "მუსიკის შექმნა"
+                    }
+                  },
+                  "short_description": "უკრავს MP3 ფორმატის ხმოვან ფაილს მითითებული ბმულიდან."
+                }
+              }
+            },
+            "sprites": {
+              "name": "სპრაიტები"
+            },
+            "groups": {
+              "name": "ჯგუფები",
+              "expressions": {
+                "add": {
+                  "palette_params": {
+                    "sprite": {
+                      "type": "სპრაიტი"
+                    }
+                  }
+                },
+                "contains": {
+                  "palette_params": {
+                    "sprite": {
+                      "type": "სპრაიტი"
+                    }
+                  }
+                },
+                "remove": {
+                  "palette_params": {
+                    "sprite": {
+                      "type": "სპრაიტი"
+                    }
+                  }
+                },
+                "setColorEach": {
+                  "palette_params": {
+                    "color": {
+                      "type": "ფერი"
+                    }
+                  }
+                },
+                "setTintEach": {
+                  "palette_params": {
+                    "color": {
+                      "type": "ფერი"
+                    }
+                  }
+                }
+              }
+            },
+            "drawing": {
+              "name": "ნახატი"
+            },
+            "math": {
+              "name": "მათემატიკა",
+              "expressions": {
+                "randomNumber": {
+                  "palette_params": {
+                    "min": {
+                      "description": "მინიმალური დაბრუნებული რიცხვი"
+                    },
+                    "max": {
+                      "description": "მაქსიმალური დაბრუნებული რიცხვი"
+                    }
+                  }
+                },
+                "randomNumber_min_max": {
+                  "palette_params": {
+                    "min": {
+                      "description": "მინიმალური დაბრუნებული რიცხვი"
+                    },
+                    "max": {
+                      "description": "მაქსიმალური დაბრუნებული რიცხვი"
+                    }
+                  }
+                }
+              }
+            },
+            "variables": {
+              "name": "ცვლადები"
+            },
+            "functions": {
+              "name": "ფუნქციები"
+            }
+          }
+        },
+        "applab": {
+          "name": "App Lab",
+          "description": "აპლიკაციების ლაბორატორია არის პროგრამირების გარემო, სადაც მარტივი აპლიკაციების შექმნა შეგიძლიათ. შექმენით აპლიკაცია, დაწერეთ კოდი ბლოკებით ან JavaScript–ით შემდეგ კი გაუზიარეთ იგი სხვებს.",
+          "categories": {
+            "ui_controls": {
+              "expressions": {
+                "onEvent": {
+                  "palette_params": {
+                    "callback": {
+                      "type": "ფუნქცია"
+                    }
+                  }
+                },
+                "playSound": {
+                  "examples": {
+                    "Making Music": {
+                      "name": "მუსიკის შექმნა"
+                    }
+                  },
+                  "short_description": "უკრავს MP3 ფორმატის ხმოვან ფაილს მითითებული ბმულიდან."
+                }
+              }
+            },
+            "data": {
+              "name": "მონაცემები",
+              "expressions": {
+                "getPrediction": {
+                  "palette_params": {
+                    "callback": {
+                      "type": "ფუნქცია"
+                    }
+                  }
+                }
+              }
+            },
+            "control": {
+              "expressions": {
+                "timedLoop": {
+                  "palette_params": {
+                    "callback": {
+                      "type": "ფუნქცია"
+                    }
+                  }
+                }
+              }
+            },
+            "math": {
+              "name": "მათემატიკა",
+              "expressions": {
+                "randomNumber_min_max": {
+                  "palette_params": {
+                    "min": {
+                      "description": "მინიმალური დაბრუნებული რიცხვი"
+                    },
+                    "max": {
+                      "description": "მაქსიმალური დაბრუნებული რიცხვი"
+                    }
+                  }
+                },
+                "randomNumber": {
+                  "palette_params": {
+                    "min": {
+                      "description": "მინიმალური დაბრუნებული რიცხვი"
+                    },
+                    "max": {
+                      "description": "მაქსიმალური დაბრუნებული რიცხვი"
+                    }
+                  }
+                }
+              }
+            },
+            "variables": {
+              "name": "ცვლადები",
+              "expressions": {
+                "addPair": {
+                  "return_value": "არცერთი"
+                }
+              }
+            },
+            "functions": {
+              "name": "ფუნქციები"
+            },
+            "advanced": {
+              "name": "დამატებით"
+            }
+          }
+        },
+        "spritelab": {
+          "name": "სპრიტის ლაბორატორია",
+          "categories": {
+            "sprites": {
+              "name": "სპრაიტები"
+            },
+            "world": {
+              "name": "სამყარო"
+            },
+            "location": {
+              "name": "მდებარეობები"
+            },
+            "actions": {
+              "name": "მოქმედებები"
+            },
+            "events": {
+              "name": "მოვლენები"
+            },
+            "behaviors": {
+              "name": "ქცევა"
+            },
+            "loops": {
+              "name": "ციკლები"
+            },
+            "variables": {
+              "name": "ცვლადები"
+            },
+            "math": {
+              "name": "მათემატიკა"
+            },
+            "logic": {
+              "name": "ლოგიკა"
+            },
+            "functions": {
+              "name": "ფუნქციები"
+            },
+            "text": {
+              "name": "ტექსტი"
+            },
+            "comments": {
+              "name": "კომენტარები"
+            }
+          }
+        }
+      }
+    }
+  }
+}

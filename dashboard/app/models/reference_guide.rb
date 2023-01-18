@@ -21,7 +21,7 @@ class ReferenceGuide < ApplicationRecord
   include CurriculumHelper
 
   belongs_to :course_version, optional: true
-  validates_uniqueness_of :key, scope: :course_version_id
+  validates_uniqueness_of :key, scope: :course_version_id, case_sensitive: true
   validate :validate_key_format
 
   def course_offering_version
@@ -30,6 +30,13 @@ class ReferenceGuide < ApplicationRecord
 
   def children
     ReferenceGuide.where(course_version_id: course_version_id, parent_reference_guide_key: key)
+  end
+
+  # A simple helper function to encapsulate creating a unique key, since this
+  # model does not have a unique identifier field of its own.
+  def get_localized_property(property_name)
+    key = Services::GloballyUniqueIdentifiers.build_reference_guide_key(self)
+    Services::I18n::CurriculumSyncUtils.get_localized_property(self, property_name, key)
   end
 
   def serialize
@@ -126,8 +133,8 @@ class ReferenceGuide < ApplicationRecord
     {
       key: key,
       parent_reference_guide_key: parent_reference_guide_key,
-      display_name: display_name,
-      content: content
+      display_name: get_localized_property(:display_name),
+      content: get_localized_property(:content)
     }
   end
 

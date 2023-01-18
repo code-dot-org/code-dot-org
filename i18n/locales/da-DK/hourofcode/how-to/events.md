@@ -35,23 +35,17 @@ Share pictures of your event on Facebook and Twitter and use the hashtag **#Hour
 
 * * *
 
-## Afhold en programmeringsaften for hele familien med Hour of Code, og inviter forældrene med
-
-Consider hosting a K-5 evening event and invite parents to join their students for an hour of computer science. Dette er en fantastisk måde, at få engageret lokalsamfundet og fremme forældrenes støtte til datalogi på din skole. Our partners at Family Code Night have created an all-in-one event kit with planning checklist, presenter’s script, invitation emails, posters, powerpoints, and more to run your own event. [ Klik her for at hente arrangementspakken](http://www.familycodenight.org/DownloadCodeDotOrg.html).
-
-* * *
-
 ## Example plan for a school assembly or event
 
-**Event:** Skole med Computer Science Education Week kick-off arrangementer
+**Event:** School-wide Computer Science Education Week kick-off assembly
 
 **Date:** {{ campaign_date/start_short }} (start of Computer Science Education Week)
 
-**Tid:** I løbet af skoledagen. Formiddags begivenheder. Ca. 1 time.
+**Time:** During the school day. Mid-morning event preferred. Approximately 1 hour.
 
-**Beliggenhed:** Skolens festsal (fx teater, gym, cafeteria)
+**Location:** School assembly hall (e.g. theater, gym, cafeteria)
 
-## Kør et Show
+## Run of Show
 
 | Tidspunkt   | Hændelse                                                                                                                                                 |
 | ----------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- |

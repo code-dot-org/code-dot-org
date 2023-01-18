@@ -6,7 +6,7 @@ class FollowersControllerTest < ActionController::TestCase
     @laurel = create(:teacher)
     @laurel_section_1 = create(:section, user: @laurel)
     @laurel_section_2 = create(:section, user: @laurel)
-    @laurel_section_script = create(:section, user: @laurel, script: Script.find_by_name('course1'))
+    @laurel_section_script = create(:section, user: @laurel, script: Unit.find_by_name('course1'))
 
     # add a few students to a section
     @laurel_student_1 = create(:follower, section: @laurel_section_1)

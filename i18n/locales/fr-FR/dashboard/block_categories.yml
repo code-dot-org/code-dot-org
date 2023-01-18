@@ -12,6 +12,7 @@ fr:
       Conditionals: Instructions conditionnelles
       Dancers: Danseurs
       Default: Par défaut
+      Effects: Effets
       Events: Événements
       Functions: Fonctions
       'Functions ': 'Fonctions '
@@ -26,9 +27,9 @@ fr:
       Math: Math
       Numbers: Nombres
       Properties: Propriétés
-      Sprites: Les Lutins
+      Sprites: Sprites
       Text: Texte
-      Variables: variables
+      Variables: Variables
       'Variables ': 'Variables '
       'Variables  ': 'Variables  '
       World: Monde

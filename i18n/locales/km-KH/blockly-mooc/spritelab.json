@@ -72,7 +72,6 @@
   "didntMoveRight": "\nSprites របស់អ្នកមិនបានប្ដូទៅស្ដាំទេ។",
   "didntMoveUp": "Spritesរបស់អ្នកមិនបានរើឡើងទេ។",
   "didntPressKey": "ត្រូវប្រាកដថាចុចគ្រាប់ព្រួញបន្ទាប់ពីចុចរត់។ អ្នកអាចចុចប៊ូតុងពណ៌ទឹកក្រូចនៅក្រោមកន្លែងលេងឬចុចគ្រាប់ចុចនៅលើក្តារចុចរបស់អ្នក។",
-  "errorLoadingAnimation": "យើងកំពុងប្រឈមនឹងបញ្ហាបង្ហាញចលនា \"{animationName}\"។ ត្រូវតែច្បាស់ថាអីនធើណេតអ្នកមានសេវាល្អ និង ព្យាយាមបើកគេហទំព័រម្តងទៀត។ បើបញ្ហានេះនៅតែបន្ត, វាអាចមកពីចលនានៃ animation ខូចរួចទៅហើយ។ ក្នុងករណីនេះ, អ្នកត្រូវតែបន្តទៅមុខដោយលុបចលនាចេញ។",
   "eventsOneChange": "Spritesរបស់អ្នកបានផ្លាស់ប្តូរប៉ុន្តែមានតែមួយដងទេ។ សាកល្បងកម្មវិធីរបស់អ្នកដោយចុចគ្រាប់ចុចពីរបីដងហើយត្រូវប្រាកដថាប្រើប្លុកត្រឹមត្រូវ។\n <xml><block type=\"gamelab_changePropBy\"><title name=\"PROPERTY\">\"scale\"</title><value name=\"SPRITE\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"creature_10_1\"</title></block></value><value name=\"VAL\"><block type=\"math_number\"><title name=\"NUM\">10</title></block></value></block></xml>",
   "eventsWrongBehaviors": "\nSpritesរបស់អ្នកគួរតែមានអាកប្បកិរិយា ៣ យ៉ាង។ ព្យាយាមផ្លាស់ប្តូរប្លុក `ឈប់អ្វីៗគ្រប់យ៉ាងទៅកន្លែងផ្សេងក្នុងលេខកូដរបស់អ្នក។",
   "foodNotTouchPet": "ទាញ sprite ចំណីរបស់អ្នក ដើម្បីអោយវាប៉ះជាមួយនឹង sprite សត្វចិញ្ចឹមរបស់អ្នក",

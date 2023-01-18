@@ -234,7 +234,7 @@ class Game < ApplicationRecord
   end
 
   def has_i18n?
-    !([NETSIM, APPLAB, GAMELAB, WEBLAB].include? app)
+    !([NETSIM].include? app)
   end
 
   def use_firebase?

@@ -2,7 +2,6 @@ import $ from 'jquery';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import PropTypes from 'prop-types';
-import Radium from 'radium';
 import classNames from 'classnames';
 import {connect} from 'react-redux';
 import PromptIcon from './PromptIcon';
@@ -85,10 +84,10 @@ class InstructionsCsfLeftCol extends React.Component {
         ref={c => {
           this.leftCol = c;
         }}
-        style={[
-          commonStyles.bubble,
-          !hasAuthoredHints && styles.noAuthoredHints
-        ]}
+        style={{
+          ...commonStyles.bubble,
+          ...(!hasAuthoredHints && styles.noAuthoredHints)
+        }}
       >
         <div
           className={classNames('prompt-icon-cell', {
@@ -118,7 +117,7 @@ const styles = {
   }
 };
 
-export const UnconnectedInstructionsCsfLeftCol = Radium(InstructionsCsfLeftCol);
+export const UnconnectedInstructionsCsfLeftCol = InstructionsCsfLeftCol;
 
 export default connect(
   function propsFromStore(state) {
@@ -133,4 +132,4 @@ export default connect(
   null,
   null,
   {withRef: true}
-)(Radium(InstructionsCsfLeftCol));
+)(InstructionsCsfLeftCol);

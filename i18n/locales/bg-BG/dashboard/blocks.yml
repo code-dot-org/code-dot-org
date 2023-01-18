@@ -218,20 +218,12 @@ bg:
           DIR:
             '1': "→"
             "-1": "←"
-      Dancelab_everyMeasuresRange:
-        text: 'повтарай всеки {N} такта след {START} '
       Dancelab_everySeconds:
         text: 'всеки {N} {UNIT} '
         options:
           UNIT:
             '"measures"': мерки
             '"seconds"': секунди
-      Dancelab_everySecondsRange:
-        text: 'всеки {N} {UNIT} от [START],[2] до {STOP} '
-        options:
-          UNIT:
-            measures: Измерване
-            seconds: Секунди
       Dancelab_everyVerseChorus:
         text: 'всеки {UNIT} '
         options:
@@ -871,6 +863,12 @@ bg:
             '"macklemore90"': Macklemore - Can't Hold Us
             '"hammer"': MC Hammer - U Can't Touch This
             '"peas"': The Black Eyed Peas - I Got a Feeling
+      DansBlocks_setForegroundEffect2:
+        options:
+          EFFECT:
+            '"bubbles"': Балончета
+            '"hearts"': сърца
+            '"rain"': дъжд
       gamelab_addBehaviorSimple:
         text: спрайт {SPRITE} започва да {BEHAVIOR}
       gamelab_allSpritesWithAnimation:
@@ -1100,6 +1098,11 @@ bg:
             "'sound://category_transition/trippy_robotic_transition.mp3'": роботски преход
             "'sound://category_retro/retro_game_ui_select_6.mp3'": изберете
             "'sound://category_digital/jump_7.mp3'": скок
+      gamelab_playSoundOptionsSoccer:
+        options:
+          SOUND:
+            "'sound://category_sports/Airhorn_SFX.mp3'": сирена
+            "'sound://category_sports/One_Whistle_SFX.mp3'": свиркане
       gamelab_playerBehaviors:
         options:
           BEHAVIOR:
@@ -1508,6 +1511,11 @@ bg:
             '8': '8'
             '9': '9'
             '10': '10'
+            '11': '11'
+            '12': '12'
+            '13': '13'
+            '14': '14'
+            '15': '15'
       RyanLab_moveForward:
         text: върви напред
       RyanLab_turnLeft:
@@ -1648,3 +1656,9 @@ bg:
           DIR:
             right: дясно ↻
             left: ляво ↺
+      storylab_setForegroundEffect2:
+        options:
+          EFFECT:
+            '"bubbles"': Балончета
+            '"hearts"': сърца
+            '"rain"': дъжд

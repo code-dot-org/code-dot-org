@@ -2,7 +2,7 @@
 title: Paano-gawin na gabay para sa mga magulang
 ---
 
-# How to do an Hour of Code with your child
+# Paano gumawa ng Hour of Code kasama ang anak mo
 Isang simple at nakakatuwang paraan ang pagsubok ng Hour of Code upang ipakilala ang anak mo sa computer science, marahil sa unang pagkakataon. Hindi lamang pundasyon ang computer science sa lahat ng larangan ng pag-aaral, ngunit <a href="https://medium.com/@codeorg/cs-helps-students-outperform-in-school-college-and-workplace-66dd64a69536">ipinakikita ng mga pag-aaral kamakailan</a>: Ang mga batang nag-aaral ng computer science ay mas mahusay na gumaganap sa iba pang mga paksa, mahusay sa paglutas ng problema, at <font color="00adbc"><b>17% na mas malamang na magpatala sa kolehiyo</b></font>.
 
 Maaari kang sumali sa sampu-sampung milyong mga mag-aaral sa buong mundo sa pandaigdigang event na ito. Sama-sama, maaari nating bigyan ng inspirasyon ang mga bata na matuto, alisin ang mga stereotype, at tulungan ang mga bata na tumuklas ng bagong interes. Pinakamaganda sa lahat, nasa iyo na ang lahat ng kailangan mo upang dalhin ang Hour of Code sa iyong tahanan!

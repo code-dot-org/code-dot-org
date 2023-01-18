@@ -20,6 +20,7 @@ import {beginGoogleImportRosterFlow} from '../teacherDashboard/teacherSectionsRe
 import BorderedCallToAction from '@cdo/apps/templates/studioHomepages/BorderedCallToAction';
 import Button from '@cdo/apps/templates/Button';
 import ParticipantFeedbackNotification from '@cdo/apps/templates/feedback/ParticipantFeedbackNotification';
+import IncubatorBanner from './IncubatorBanner';
 
 export const UnconnectedTeacherHomepage = ({
   announcement,
@@ -45,7 +46,8 @@ export const UnconnectedTeacherHomepage = ({
   topCourse,
   topPlCourse,
   beginGoogleImportRosterFlow,
-  hasFeedback
+  hasFeedback,
+  showIncubatorBanner
 }) => {
   const censusBanner = useRef(null);
   const teacherReminders = useRef(null);
@@ -260,6 +262,7 @@ export const UnconnectedTeacherHomepage = ({
           />
         )}
         <TeacherResources />
+        {showIncubatorBanner && <IncubatorBanner />}
         <ProjectWidgetWithData
           canViewFullList={true}
           canViewAdvancedTools={canViewAdvancedTools}
@@ -299,7 +302,8 @@ UnconnectedTeacherHomepage.propTypes = {
   topCourse: shapes.topCourse,
   topPlCourse: shapes.topCourse,
   beginGoogleImportRosterFlow: PropTypes.func,
-  hasFeedback: PropTypes.bool
+  hasFeedback: PropTypes.bool,
+  showIncubatorBanner: PropTypes.bool
 };
 
 const styles = {

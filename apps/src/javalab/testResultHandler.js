@@ -5,7 +5,7 @@ import {getExceptionMessage} from './javabuilderExceptionHandler';
 const CHECK_MARK = '✔';
 const HEAVY_X = '✖';
 
-export function onTestResult(data, callback) {
+export function onTestResult(data, callback, miniAppType) {
   let message = '';
   const {
     status,
@@ -39,7 +39,7 @@ export function onTestResult(data, callback) {
       } else if (exceptionName) {
         message += msg.exceptionThrown({exceptionName: exceptionName});
       } else {
-        message += getExceptionMessage(data, data.detail.type);
+        message += getExceptionMessage(data, data.detail.type, miniAppType);
       }
 
       if (stackTrace) {

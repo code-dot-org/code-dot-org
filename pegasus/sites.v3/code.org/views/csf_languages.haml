@@ -1,7 +1,7 @@
 %h3 
-  %a{href: "/educate/curriculum/cs-fundamentals-international"} CS Fundamentals (Courses 1-4 and Accelerated) 
+  %a{href: "/educate/curriculum/elementary-school"} CS Fundamentals (Courses 1-4 and Accelerated)
   is supported in the following languages
 %ul
-  - Languages.get_csf_languages.each do |properties|
+  - PegasusLanguages.get_csf_languages.each do |properties|
     - if properties[:csf_b]
       %li= properties[:crowdin_name_s]

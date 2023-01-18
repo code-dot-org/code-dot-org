@@ -1,0 +1,9 @@
+{
+  "key": "instance-variables",
+  "course_version_key": "2023",
+  "course_offering_key": "csa",
+  "parent_reference_guide_key": "writing-a-class",
+  "display_name": "Instance Variables",
+  "content": "## What is an instance variable?\n\nEvery object that is created gets its own copy of the **instance variables** that are declared in the class. Values for the instance variables are assigned in a **constructor**.",
+  "position": 1
+}

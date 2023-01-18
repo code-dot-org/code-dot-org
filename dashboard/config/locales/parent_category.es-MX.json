@@ -10,6 +10,9 @@
         },
         "ngss/ETS": {
           "description": "Ingeniería en las Ciencias"
+        },
+        "ai4k12-2021/BI-3": {
+          "description": "Las computadoras pueden aprender de los datos"
         }
       }
     }

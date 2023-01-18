@@ -5,6 +5,9 @@
         "ccela": {
           "name": "Standar Seni Bahasa Inggris Common Core"
         },
+        "csta": {
+          "name": "Standar Ilmu Komputer CSTA K-12 (2017)"
+        },
         "ccmath": {
           "name": "Standar Matematika Inti Umum"
         },
@@ -13,6 +16,9 @@
         },
         "iste": {
           "name": "Standar ISTE untuk Murid"
+        },
+        "csp2021": {
+          "name": "Kerangka Konseptual CSP"
         }
       }
     }

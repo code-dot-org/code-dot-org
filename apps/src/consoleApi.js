@@ -2,9 +2,14 @@ var vsprintf = require('sprintf-js').vsprintf;
 
 var consoleApi = module.exports;
 var logMethod = function() {};
+var clearMethod = function() {};
 
 consoleApi.setLogMethod = function(newLogMethod) {
   logMethod = newLogMethod;
+};
+
+consoleApi.setClearMethod = function(newClearMethod) {
+  clearMethod = newClearMethod;
 };
 
 consoleApi.log = function() {
@@ -24,4 +29,8 @@ consoleApi.log = function() {
     }
   }
   logMethod(output);
+};
+
+consoleApi.clear = function() {
+  clearMethod();
 };

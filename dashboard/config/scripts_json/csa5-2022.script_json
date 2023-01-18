@@ -6,18 +6,14 @@
     "properties": {
       "announcements": [
         {
-          "notice": "Curriculum Videos",
-          "details": "Some lessons currently do not have links to videos in the lesson plans or slide deck. These videos are in final production and will be linked as soon as these are available.",
-          "link": "",
-          "type": "information",
-          "visibility": "Teacher-only"
-        },
-        {
           "notice": "More Opportunities for Feedback",
-          "details": "Each lesson now includes a quick 2-question survey to give insights to the curriculum team on how the lesson went in your classroom. Students also have the opportunity to leave feedback at the end of each unit, and teachers can answer a short 5-question survey to let the Code.org curriculum team know how the unit went. Some of these features will appear over the summer just before the school year starts.",
-          "link": "",
+          "details": "Each lesson now includes a quick 2-question survey to give insights to the curriculum team on how the lesson went in your classroom. Students also have the opportunity to leave feedback at the end of each unit, and teachers can answer a short survey to let the Code.org curriculum team know how the unit went.",
+          "link": "https://studio.code.org/form/teacher_end_of_unit_survey?survey_data%5Bunit_number%5D=5",
           "type": "feedback",
-          "visibility": "Teacher-only"
+          "visibility": "Teacher-only",
+          "dismissible": false,
+          "buttonText": "End of Unit Survey",
+          "key": "fb75ffba-d42e-42ef-9764-e09ab685e140"
         }
       ],
       "curriculum_umbrella": "CSA",
@@ -32,7 +28,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-06-30 14:28:04 UTC",
+    "serialized_at": "2022-10-24 17:53:16 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -6088,6 +6084,7 @@
       "key": "creating_image_filters",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -6112,6 +6109,7 @@
       "key": "cs_bingo_definitions_5",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -6124,6 +6122,7 @@
       "key": "data_collection",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -6148,6 +6147,7 @@
       "key": "enhanced_for_loops_anticipation_guide",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -6160,6 +6160,7 @@
       "key": "finding_duplicates_1",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -6172,6 +6173,7 @@
       "key": "grayscale_images",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -6196,6 +6198,7 @@
       "key": "grayscaleimage_frq_1",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -6208,10 +6211,23 @@
       "key": "grayscaleimage_frq_scoring_guidelines",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
         "resource.key": "grayscaleimage_frq_scoring_guidelines"
+      }
+    },
+    {
+      "name": "Images and Pixels",
+      "url": "https://youtu.be/eTcPLcODrk0",
+      "key": "images_and_pixels",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "images_and_pixels"
       }
     },
     {
@@ -6220,6 +6236,7 @@
       "key": "java_quick_reference",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Resource"
       },
       "seeding_key": {
@@ -6232,6 +6249,7 @@
       "key": "personal_narrative_project_planning_guide",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -6244,6 +6262,7 @@
       "key": "reversing_a_2d_array",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -6268,6 +6287,7 @@
       "key": "shifting_a_2d_array",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -6292,6 +6312,7 @@
       "key": "tracing_2d_array_traversals",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -6304,6 +6325,7 @@
       "key": "tracing_column-major_traversals",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -6316,6 +6338,7 @@
       "key": "tracing_enhanced_for_loops",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -6340,6 +6363,7 @@
       "key": "u5l10_extra_practice",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -6352,6 +6376,7 @@
       "key": "u5l1_extra_practice",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -6364,6 +6389,7 @@
       "key": "u5l2_extra_practice",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -6376,6 +6402,7 @@
       "key": "u5l3_extra_practice",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -6388,6 +6415,7 @@
       "key": "u5l4_extra_practice",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -6400,6 +6428,7 @@
       "key": "u5l5_extra_practice",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -6412,6 +6441,7 @@
       "key": "u5l6_extra_practice",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -6424,6 +6454,7 @@
       "key": "u5l7_extra_practice",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -6436,6 +6467,7 @@
       "key": "u5l8_extra_practice",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -6448,6 +6480,7 @@
       "key": "u5l9_extra_practice",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -6460,10 +6493,23 @@
       "key": "unit_5_guide",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
         "resource.key": "unit_5_guide"
+      }
+    },
+    {
+      "name": "Unit 5 Guide [Exemplar]",
+      "url": "https://docs.google.com/document/d/1m2H0g23S-c8HQ_M24nAKhH-DpyDlbeRu0AnIBqgx6G8",
+      "key": "unit_5_guide_exemplar_",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Exemplar"
+      },
+      "seeding_key": {
+        "resource.key": "unit_5_guide_exemplar_"
       }
     },
     {
@@ -6496,6 +6542,7 @@
       "key": "unit_5_study_guide",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Resource"
       },
       "seeding_key": {
@@ -6951,6 +6998,12 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-9",
+        "resource.key": "images_and_pixels"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-9",
         "resource.key": "u5l6_extra_practice"
       }
     },
@@ -6983,6 +7036,12 @@
     {
       "seeding_key": {
         "resource.key": "unit_5_guide",
+        "script.name": "csa5-2022"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "unit_5_guide_exemplar_",
         "script.name": "csa5-2022"
       }
     },

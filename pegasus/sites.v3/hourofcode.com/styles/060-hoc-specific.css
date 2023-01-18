@@ -15,7 +15,7 @@
 }
 #language-dropdown {
   float: right;
-  margin-left: 1em;
+  margin-left: 2.15em;
   width: 150px;
   text-align: left;
 }
@@ -35,18 +35,18 @@
 }
 #hoc-nav ul {
   list-style: none;
-  margin: 0;
+  margin: .2em 0;
   padding: 0;
 }
 #hoc-nav ul li {
   font-size: 18px;
   color: white;
   display: inline-block;
-  float: left;
-  padding: 0.25em 0em;
-  margin-right: 1em;
+  margin-right: 1.5em;
+  padding: 0;
   text-indent: 0;
   list-style-type: none;
+  vertical-align: top;
   max-width: 150px;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -61,16 +61,15 @@
 #hoc-nav ul li a {
   font-family: 'Gotham 4r', sans-serif;
   font-size: 18px;
-  color: white;
-  text-transform: uppercase;
+  color: #272822;
   text-decoration: none;
 }
-#hoc-nav ul li a:hover {
+#hoc-nav ul li:hover {
   border-bottom: solid 2px rgb(255, 138, 0);
 }
 #hoc-nav-hamburger {
-  font-size: 24px;
-  color: white;
+  font-size: 2em;
+  color: #272822;
   vertical-align: middle;
   text-decoration: none;
   display: none;
@@ -125,7 +124,7 @@ label.has-error {
   color: #b94a48;
 }
 
-/** Keeps content within the viewport size (especially on smaller screesn) */
+/** Keeps content within the viewport size (especially on smaller screens) */
 iframe {
   max-width: 100%;
 }
@@ -153,8 +152,7 @@ iframe {
     position: absolute;
     top: 4em;
     left: -2em;
-    background-color: rgb(0, 178, 192);   /* Needed as the opaque fallback colour for IE8 */
-    background-color: rgba(0, 178, 192, .9);
+    background-color: rgba(215, 240, 243, .95);
     z-index: 99;
   }
   #hoc-nav ul:after {   /* This is the arrow in the responsive menu */
@@ -167,8 +165,7 @@ iframe {
     position: absolute;
     pointer-events: none;
     border-color: rgba(0, 178, 192, 0);
-    border-bottom-color: rgb(0, 178, 192);  /* Needed as the opaque fallback colour for IE8 */
-    border-bottom-color: rgba(0, 178, 192, .9);
+    border-bottom-color: rgba(215, 240, 243, .95);
     border-width: 8px;
   }
   #hoc-nav ul li {

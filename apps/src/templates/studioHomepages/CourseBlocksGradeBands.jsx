@@ -2,7 +2,6 @@ import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import ResourceCard from './ResourceCard';
 import ResourceCardResponsiveContainer from './ResourceCardResponsiveContainer';
-import i18n from '@cdo/locale';
 import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
 
 class CourseBlocksGradeBands extends Component {
@@ -13,7 +12,8 @@ class CourseBlocksGradeBands extends Component {
         linkClass: PropTypes.string,
         heading: PropTypes.string.isRequired,
         description: PropTypes.string.isRequired,
-        path: PropTypes.string.isRequired
+        path: PropTypes.string.isRequired,
+        buttonText: PropTypes.string.isRequired
       })
     ).isRequired
   };
@@ -28,7 +28,7 @@ class CourseBlocksGradeBands extends Component {
             key={cardIndex}
             title={card.heading}
             description={card.description}
-            buttonText={i18n.learnMore()}
+            buttonText={card.buttonText}
             link={pegasus(card.path)}
           />
         ))}

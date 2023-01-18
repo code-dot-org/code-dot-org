@@ -71,17 +71,15 @@ function __start() {
   document.getElementsByTagName('head')[0].appendChild(script);
 }
 
-if (!config.nativeExport) {
-  document.addEventListener('DOMContentLoaded', () => {
-    if (config.exportUsesDataAPIs) {
-      shareWarnings.checkSharedAppWarnings({
-        channelId: config.channel,
-        hasDataAPIs: () => true,
-        onWarningsComplete: __start,
-        onTooYoung: () => navigateToHref('https://studio.code.org/too_young')
-      });
-    } else {
-      __start();
-    }
-  });
-}
+document.addEventListener('DOMContentLoaded', () => {
+  if (config.exportUsesDataAPIs) {
+    shareWarnings.checkSharedAppWarnings({
+      channelId: config.channel,
+      hasDataAPIs: () => true,
+      onWarningsComplete: __start,
+      onTooYoung: () => navigateToHref('https://studio.code.org/too_young')
+    });
+  } else {
+    __start();
+  }
+});

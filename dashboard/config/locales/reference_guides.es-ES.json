@@ -1,0 +1,250 @@
+{
+  "es-ES": {
+    "data": {
+      "reference_guides": {
+        "csd-2022/accelerometer-events": {
+          "display_name": "Eventos de Acelerómetro",
+          "content": "Al igual que los otros sensores, el acelerómetro tiene los eventos `datos` y `cambio`. Estos son particularmente útiles porque te permiten rastrear constantemente los valores actualizados del acelerómetro, como la orientación. \n\n| Evento   | Descripción                                                                                                                                                                                                                           |\n| -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |\n| `datos`  | Se activa cada 100 ms para comprobar los datos del acelerómetro.                                                                                                                                                                      |\n| `cambio` | Se activa cuando el acelerómetro detecta un cambio en el movimiento. Esto comprueba si los datos actuales del sensor son los mismos que hace 100ms. Si este es el caso, el evento no se activa. De lo contrario, el evento se activa. |\n| `agitar` | Se activa cada vez que se agita la placa.                                                                                                                                                                                             |\n\nA veces no nos importa la orientación de la placa, sólo nos importa que se mueva. Aquí es donde entran en juego eventos como `cambio` y `agitación`. "
+        },
+        "csd-2022/accuracy-in-ai-lab": {
+          "content": "## Precisión en el Laboratorio de Inteligencia Artificial\n\n<img style=\"margin-right: 10px; margin-left: 10px; border: 2px solid black\" src=\"https://curriculum.code.org/media/uploads/03-Evaluating-Accuracy---Categorical---a.png\"/>\n\n[diagram_nums]\n\n1.  La fila superior es la puntuación de precisión de tu modelo más reciente en el Laboratorio de Inteligencia Artificial. Consulta más abajo para obtener más información sobre cómo se calcula la precisión.\n2.  También puedes ver modelos anteriores que hayas entrenado en el Laboratorio de Inteligencia Artificial. Estos pueden ayudarte a identificar patrones y recordar qué características condujeron a los modelos más precisos. \n3.  Pulsa en el botón Detalles para ver más información sobre el rendimiento de tu modelo.\n\n[/diagram_nums]\n\n## ¿Cómo se Calcula la Precisión?\n\n<div style=\"height: 250px\">\n<img style=\"float:left; margin-right: 10px; margin-left: 10px; border: 2px solid black\" src=\"https://curriculum.code.org/media/uploads/image_81IyXga.png\" width=\"50%\" />\n<p>\nUna vez seleccionadas las etiquetas y las características, los datos se dividen automáticamente en dos secciones: los <strong>Datos de Aprendizaje</strong> y los <strong>Datos de Prueba</strong>.\n</p>\n<p>\nLos <strong>Datos de Aprendizaje</strong> son los que el Bot de Inteligencia Artificial utiliza para buscar patrones que le ayuden a tomar decisiones. Como el Bot de Inteligencia Artificial necesita muchos datos para tomar decisiones, utiliza el 90% del conjunto de datos original para entrenarse. Los <strong>Datos de Prueba</strong> se mantienen ocultos para el Bot de Inteligencia Artificial hasta que haya terminado de entrenar. \n</p>\n</div>\n\n<div style=\"height: 250px\">\n<img style=\"float:right; margin-right: 10px; margin-left: 10px; border: 2px solid black\" src=\"https://curriculum.code.org/media/uploads/image_EygFTNF.png\" width=\"50%\" />\n<p>\nUna vez que el Bot de Inteligencia Artificial ha terminado de entrenarse, mira los <strong>Datos de Prueba</strong> para poder comparar sus predicciones con los datos originales. Esto es como estudiar para un examen mirando preguntas de práctica en las que conoces las respuestas: intentas hacer las preguntas tú mismo y luego compruebas tus respuestas para ver lo bien que lo has hecho.\n</p>\n<p>\nAsí es como obtenemos nuestra puntuación de precisión: es lo bien que lo hicieron las predicciones del Bot de Inteligencia Artificial cuando las comparamos con los datos del conjunto de datos original. Si el Bot de Inteligencia Artificial acierta la mayoría de las respuestas, podemos estar seguros de que ha encontrado los patrones que coinciden con nuestros datos originales.\n</p>\n</div>\n\n## ¿Qué Importancia tiene la Precisión?\n\nLa precisión puede hacer un buen trabajo a la hora de comprobar si tu modelo de aprendizaje automático ha conseguido encontrar patrones en tus datos, pero esto no siempre significa que tu modelo esté listo para empezar a resolver problemas en el mundo real. Una puntuación de precisión alta no significa que tu modelo vaya a hacer un buen trabajo en el mundo real con usuarios reales, sólo significa que ha hecho un buen trabajo. <em>con los datos que ya tenía</em>. Si hubo problemas con tus datos, seguirá habiendo problemas con tu modelo.\n\n## Vídeo\n\n(Abre YouTube en una pestaña nueva)\n\n[![Training and Testing in AI Lab](https://curriculum.code.org/media/uploads/Capture_5J2wlZi.PNG)](https://www.youtube.com/watch?v=Pm70TO--ee4)"
+        },
+        "csd-2022/ai-lab": {
+          "display_name": "Laboratorio de Inteligencia Artificial"
+        },
+        "csd-2022/analog-sensors": {
+          "display_name": "Sensores analógicos",
+          "content": "Los botones y el interruptor de palanca se consideran entradas _binarias_, porque sólo pueden comunicar uno de dos estados (arriba/abajo para los botones, abierto/cerrado para el interruptor). Existe otra clase de entradas llamadas _entradas analógicas_. A diferencia de los botones y el interruptor, estas _entradas analógicas_ pueden comunicar un rango de valores.\n\n## Luz, Sonido y Temperatura\n\nEl Circuit Playground tiene tres sensores analógicos básicos, cada uno de los cuales recibe una entrada analógica y la convierte en un valor utilizable por el ordenador.\n\n<img src=\"https://cdo-curriculum.s3.amazonaws.com/media/uploads/cp_sensors.png\" alt=\"analog sensors\" class=\"center\" style=\"width: 500px;\">\n\n[diagram_nums]\n\n1.  El _Sensor de Luz_ (representado en código como [\\`lightSensor\\`(#f78183)](/docs/applab/lightSensor/)) se utiliza para medir la cantidad de luz ambiental. Cuando está completamente oscuro, [\\`lightSensor.value\\`(#f78183)](/docs/applab/lightSensor.value/) leerá como 0, y cuando está completamente iluminado leerá 1023.\n2.  El _Sensor de Temperatura_ (representado en código como [\\`tempSensor\\`(#f78183)](/docs/applab/tempSensor/)) mide la temperatura. En lugar de proporcionar un valor bruto (como hacen los otros dos sensores), este sensor aprovecha el hecho de que ya tenemos formas comúnmente entendidas de convertir la temperatura en un valor computable. El [\\`tempSensor.F\\`(#f78183)](/docs/applab/tempSensor.F/) y [\\`tempSensor.C\\`(#f78183)](/docs/applab/tempSensor.C/) proporcionan la lectura de la temperatura en grados Fahrenheit o Celsius, respectivamente.\n3.  El _Sensor de Sonido_ (representado en código como [\\`soundSensor\\`(#f78183)](/docs/applab/soundSensor/)) se utiliza para medir el ruido. Es importante tener en cuenta que _no_ es realmente un micrófono; no esperes grabar sonido con el sensor de sonido, sólo es capaz de medir el volumen del sonido que detecta. Al igual que el _Sensor de luz_, proporciona un valor que va de 0 a 1023.\n\n[/diagram_nums]\n\n## Lectura de Datos del Sensor\n\nLos sensores de sonido y luz tienen cada uno una propiedad llamada _valor_ que le permite leer el valor de entrada actual de un sensor (como con [\\`soundSensor.value\\`(#f78183)](/docs/applab/soundSensor.value/)). Si el rango de entrada completo de 0-1023 no satisface las necesidades de tu programa, puedes cambiar el rango de números devueltos usando el método _setScale()_. Por ejemplo, [\\`soundSensor.setScale(-50, 50)\\`(#f78183)](/docs/applab/soundSensor.setScale/) cambiará el rango del sensor de sonido para que el número más bajo sea -50 y el más alto 50. Esto no se aplica al sensor de temperatura, que tiene dos propiedades, _F_ y _C_ que informan de la temperatura en un formato que es tanto computable como legible.\n\n## Sensibilidad de los Sensores\n\nLos sensores de tus placas son instrumentos relativamente poco precisos. Aunque existen sensores más caros y consistentes para aplicaciones que requieren valores de alta fidelidad (como herramientas médicas o científicas), estos sensores sólo proporcionan una aproximación.\n\nPuedes encontrarte con que tus programas funcionan de forma diferente en las distintas placas, porque los sensores de cada placa dan lecturas diferentes. Una forma de tener esto en cuenta es escribir código que te permita _calibrar_ tus sensores para diferentes placas. Si tu aplicación tiene código que debe ejecutarse si la lectura del sensor supera un cierto valor, considera hacer de ese valor una variable que pueda cambiarse desde la interfaz de usuario. De esta manera el usuario puede modificar la variable para que funcione mejor con su placa."
+        },
+        "csd-2022/animation-tab": {
+          "display_name": "Pestaña de Animación",
+          "content": "En el Laboratorio de Juegos, las _Animaciones_ son dibujos u otras imágenes que puedes utilizar para cambiar el aspecto de tus sprites. Puedes usar el bloque `sprite.setAnimation()` para cambiar las animaciones de tu sprite a cualquiera de las animaciones que hayas añadido en la _Pestaña Animación_.\n\n## Usando la Pestaña Animación\n\nPulsando sobre el botón **Animación** encima del área de visualización accederás a la _Pestaña Animación_, donde puedes importar o dibujar animaciones para ser usadas por tus sprites.\n\n![](https://cdo-curriculum.s3.amazonaws.com/media/uploads/animation_tab.png)\n\n[diagram_nums]\n\n1.  Utiliza estos botones para cambiar entre la pestaña de animación y la pestaña de código.\n2.  Esta columna muestra todas las animaciones que has creado. Pulsa sobre una animación desde aquí para editarla.\n3.  Pulsa el signo + para añadir una nueva animación. Puedes seleccionar una animación de la biblioteca, importar una imagen de tu ordenador o dibujar una desde cero.\n4.  Las herramientas de dibujo de esta columna te permiten dibujar o modificar animaciones.\n5.  Dibuja o edita tu imagen en este lienzo.\n6.  Abre este cajón para cambiar el tamaño general de tu imagen o lienzo.\n\n[/diagram_nums]"
+        },
+        "csd-2022/app-lab": {
+          "display_name": "Laboratorio de Aplicaciones",
+          "content": "Laboratorio de Aplicaciones es una herramienta creada con [JavaScript](/concepts/javascript/) que puede utilizarse para crear aplicaciones. Más información sobre los comandos de Laboratorio de Aplicaciones en la [Documentación de App Lab](/docs/applab/)."
+        },
+        "csd-2022/applab-overview": {
+          "display_name": "Vista previa",
+          "content": "Laboratorio de Aplicaciones es una herramienta creada con [JavaScript](/concepts/javascript/) que puede utilizarse para crear aplicaciones. Más información sobre los comandos de Laboratorio de Aplicaciones en la [Documentación de App Lab](/docs/applab/)."
+        },
+        "csd-2022/arrays": {
+          "display_name": "Arreglos",
+          "content": "Un _array_ es un grupo de valores que se almacenan en un orden determinado. Por lo general, estos valores son todos del mismo tipo (como todos los números, todo el texto, o incluso todos los sprites), pero en JavaScript, los arrays también pueden contener diferentes tipos de elementos.  Puedes usar arrays para crear una lista de cosas que almacenas en una única variable.\n\n## Creación y uso de Arrays\n\nLos arrays parecen listas dentro de corchetes.  Cada valor del array debe separarse con comas.\n\n`[1,5,7,2]`\n\nCada vez que crees un array, necesitarás almacenarlo en una variable inmediatamente para poder acceder a los valores más tarde.  Como esto es tan importante, el bloque para crear un array almacena automáticamente el array en una variable.\n\n![](https://cdo-curriculum.s3.amazonaws.com/media/uploads/arrays_3FdJGsk.png)\n\nPuedes acceder a un valor dentro de tu array utilizando su número de índice.  Los números de índice empiezan en 0 y van contando hasta llegar al final del array.  Por ejemplo, en el array anterior, \"a\" está en el índice 0, \"b\" está en el índice 1 y \"c\" está en el índice 2."
+        },
+        "csd-2022/board-events": {
+          "display_name": "Eventos de la Placa",
+          "content": "El bloque [\\`onEvent()\\`(#fff176)](/docs/applab/onEvent/) se utiliza para configurar _manejadores de eventos_ que pueden estar atentos a ciertos _eventos_ que ocurren en tu aplicación, como pulsar un botón, seleccionar un elemento de un desplegable o mover el ratón. El Circuit Playground tiene un bloque similar llamado `onBoardEvent()` para vigilar los eventos que ocurren en la placa. De forma similar a [\\`onEvent()\\`(#fff176)](/docs/applab/onEvent/), necesitas especificar qué debe vigilar el manejador, qué evento debe vigilar, y cómo responder a ese evento.\n\n### onBoardEvent\n\nEs importante entender en la programación orientada a eventos que:\n\n-   **Los usuarios disparan eventos** - Los eventos ocurren cuando los usuarios interactúan con las entradas en la placa, como los botones, el interruptor, y otros.\n-   **Los eventos disparan código** - Cuando un evento ocurre o se \"dispara\" puede ser usado para disparar una función particular.\n\nEl bloque `onBoardEvent()` del Maker Toolkit es un tipo de función de manejo de eventos llamada Receptor de Eventos. Envuelve toda la configuración que necesita para hacer el manejo de eventos en un comando que tiene varias partes. Aquí hay un ejemplo con todo etiquetado:\n\n![](https://cdo-curriculum.s3.amazonaws.com/media/uploads/onBoardEvent_diagram.png){: class=\"center\", style=\"width: 700px; margin: 20px auto;\"}\n\n[diagram_nums]\n\n1.  Código a ejecutar al dispararse la función callback cuando el usuario pulsa el botón izquierdo, `buttonL`. En este caso, escribe la palabra \"click\" en la consola. Observa que estamos usando la _variable_ `buttonL` (sin comillas). Esto es diferente de [\\`onEvent\\`(#fff176)](/docs/applab/onEvent/), que utiliza una _string_ para especificar el ID de un elemento de diseño.\n\n2.  Observa que esta función, a diferencia de la mayoría de las que hemos visto, no tiene nombre. También se denomina _función de devolución de llamada_, que es un término extraño. Una función callback sólo se diferencia de una función normal en que no la llamas directamente desde tu código. En su lugar, una función callback es **llamada por el sistema** en el momento en que ocurre el evento especificado. Las funciones callback son un patrón común en mucha programación dirigida a eventos.\n\n[/diagram_nums]"
+        },
+        "csd-2022/body-styling": {
+          "display_name": "Estilo del Cuerpo (Body)",
+          "content": "El elemento `<body>` es un elemento especial que envuelve todo el contenido visible de una página web. Como todo lo que ves está dentro de esta etiqueta, cualquier conjunto de reglas que crees para el elemento body se aplicará a todos los elementos de la página, a menos que el propio elemento tenga una regla que lo contradiga. Esto es útil para establecer un estilo base para todo en tu página.\n\n## Ejemplo\n\nEste conjunto de reglas haría que todo el texto de tu página web fuera azul y estuviera centrado.\n\n    body {\n        text-align: center;\n        color: azul;\n    }"
+        },
+        "csd-2022/booleans-and-comparison-operators": {
+          "display_name": "Operadores booleanos y de comparación"
+        },
+        "csd-2022/changing-screens": {
+          "display_name": "Cambiar pantallas"
+        },
+        "csd-2022/changing-sensor-scale": {
+          "display_name": "Cambiar la escala del sensor"
+        },
+        "csd-2022/circuit-playground": {
+          "display_name": "Circuit Playground"
+        },
+        "csd-2022/circuits-and-buttons": {
+          "display_name": "Circuitos y Pulsadores"
+        },
+        "csd-2022/circuits-and-leds": {
+          "display_name": "Circuitos y LED"
+        },
+        "csd-2022/classes": {
+          "display_name": "Clases"
+        },
+        "csd-2022/collision-detection": {
+          "display_name": "Detección de colisiones"
+        },
+        "csd-2022/color-lights": {
+          "display_name": "Luces de Colores"
+        },
+        "csd-2022/creative-commons-search": {
+          "display_name": "Búsqueda de Creative Commons"
+        },
+        "csd-2022/css": {
+          "display_name": "CSS"
+        },
+        "csd-2022/css-overview": {
+          "display_name": "Vista previa"
+        },
+        "csd-2022/debugging-with-watchers": {
+          "display_name": "Depurar con observadores"
+        },
+        "csd-2022/design-mode": {
+          "display_name": "Modo de diseño"
+        },
+        "csd-2022/design-mode-elements": {
+          "display_name": "Elementos del modo de diseño"
+        },
+        "csd-2022/designing-screens-with-code": {
+          "display_name": "Diseñar pantallas a través del código"
+        },
+        "csd-2022/drawing-shapes": {
+          "display_name": "Dibujar formas"
+        },
+        "csd-2022/editing-images": {
+          "display_name": "Editar imágenes"
+        },
+        "csd-2022/for-loops": {
+          "display_name": "Bucles Para"
+        },
+        "csd-2022/formatting-html": {
+          "display_name": "Formatear HTML"
+        },
+        "csd-2022/functions": {
+          "display_name": "Funciones"
+        },
+        "csd-2022/game-lab": {
+          "display_name": "Laboratorio de Juegos"
+        },
+        "csd-2022/game-lab-overview": {
+          "display_name": "Vista previa"
+        },
+        "csd-2022/headings-and-paragraphs": {
+          "display_name": "Títulos y párrafos"
+        },
+        "csd-2022/html": {
+          "display_name": "HTML"
+        },
+        "csd-2022/html-overview": {
+          "display_name": "Vista previa"
+        },
+        "csd-2022/html-tags": {
+          "display_name": "Etiquetas HTML"
+        },
+        "csd-2022/hyperlinks": {
+          "display_name": "Hipervínculos"
+        },
+        "csd-2022/if-else-statements": {
+          "display_name": "Sentencias si-si no"
+        },
+        "csd-2022/if-statements": {
+          "display_name": "Sentencias si"
+        },
+        "csd-2022/if-statements-2": {
+          "display_name": "Sentencias si"
+        },
+        "csd-2022/images-in-html": {
+          "display_name": "Imágenes en HTML"
+        },
+        "csd-2022/importing-a-model-in-app-lab": {
+          "display_name": "Importación de un Modelo en Laboratorio de Aplicaciones"
+        },
+        "csd-2022/importing-screens": {
+          "display_name": "Importar pantallas"
+        },
+        "csd-2022/introduction-to-ai-lab": {
+          "display_name": "Introducción al Laboratorio de Inteligencia Artificial"
+        },
+        "csd-2022/javascript": {
+          "display_name": "JavaScript"
+        },
+        "csd-2022/javascript-overview": {
+          "display_name": "Vista previa"
+        },
+        "csd-2022/layout-properties": {
+          "display_name": "Propiedades de diseño"
+        },
+        "csd-2022/lists": {
+          "display_name": "Listas"
+        },
+        "csd-2022/maker-toolkit": {
+          "display_name": "Herramientas de Maker"
+        },
+        "csd-2022/maker-toolkit-overview": {
+          "display_name": "Vista previa"
+        },
+        "csd-2022/model-cards-in-ai-lab": {
+          "display_name": "Tarjetas Modelo en Laboratorio de Inteligencia Artificial"
+        },
+        "csd-2022/modifying-arrays": {
+          "display_name": "Modificar arreglos"
+        },
+        "csd-2022/multi-screen-apps": {
+          "display_name": "Aplicaciones con varias pantallas"
+        },
+        "csd-2022/naming-variables": {
+          "display_name": "Nombrar variables"
+        },
+        "csd-2022/other": {
+          "display_name": "Otros"
+        },
+        "csd-2022/other-overview": {
+          "display_name": "Vista previa"
+        },
+        "csd-2022/patterns-overview": {
+          "display_name": "Vista previa"
+        },
+        "csd-2022/physical-input": {
+          "display_name": "Entrada física"
+        },
+        "csd-2022/playing-notes": {
+          "display_name": "Sonando notas"
+        },
+        "csd-2022/producing-output": {
+          "display_name": "Generando la Salida"
+        },
+        "csd-2022/random-numbers": {
+          "display_name": "Números aleatorios"
+        },
+        "csd-2022/responding-to-user-input": {
+          "display_name": "Responder a las contribuciones de los usuarios"
+        },
+        "csd-2022/shapes-and-parameters": {
+          "display_name": "Formas y parámetros"
+        },
+        "csd-2022/sprite-interactions": {
+          "display_name": "Interacciones de sprites"
+        },
+        "csd-2022/sprite-properties": {
+          "display_name": "Propiedades de Sprite"
+        },
+        "csd-2022/sprites": {
+          "display_name": "Sprites"
+        },
+        "csd-2022/style-sheets": {
+          "display_name": "Hojas de Estilo"
+        },
+        "csd-2022/taking-input-with-getproperty": {
+          "display_name": "Obteniendo Entradas con getProperty"
+        },
+        "csd-2022/text-properties": {
+          "display_name": "Propiedades del Texto"
+        },
+        "csd-2022/the-accelerometer": {
+          "display_name": "El acelerómetro"
+        },
+        "csd-2022/the-counter-pattern": {
+          "display_name": "El patrón del contador"
+        },
+        "csd-2022/the-counter-pattern-2": {
+          "display_name": "El patrón del contador"
+        },
+        "csd-2022/the-draw-loop": {
+          "display_name": "El bucle 'dibujar'"
+        },
+        "csd-2022/variables": {
+          "display_name": "Variables"
+        },
+        "csd-2022/velocity": {
+          "display_name": "Velocidad"
+        },
+        "csd-2022/velocity-and-the-counter-pattern": {
+          "display_name": "Velocidad y patrón del contador"
+        },
+        "csd-2022/which-type-of-chart": {
+          "content": "![](https://curriculum.code.org/media/uploads/Screenshot-2020-02-27-at-10.56.17-PM.png)"
+        }
+      }
+    }
+  }
+}

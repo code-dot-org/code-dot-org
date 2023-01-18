@@ -2,6 +2,9 @@
 pt:
   data:
     blocks:
+      AmysBlocks_setPromptWithChoices:
+        text: pedir ao usuário {QUESTION} que informe a variável {VAR} com opções
+          {A}{B}{C}
       BadGuys_makeNewBadGuysSprite:
         text: criar novo {ANIMATION_NAME} elemento em {LOCATION}
       BadGuys_setSizeAll_dropdown:
@@ -228,20 +231,12 @@ pt:
             MOVES.XArmsUp: Esticar
             MOVES.ThisOrThat: Isso ou Aquilo
             MOVES.Rest: Nenhum
-      Dancelab_everyMeasuresRange:
-        text: 'repita todos os {N} compassos após {START} '
       Dancelab_everySeconds:
         text: 'a cada {N} {UNIT} '
         options:
           UNIT:
             '"measures"': compassos
             '"seconds"': segundos
-      Dancelab_everySecondsRange:
-        text: 'cada {N} {UNIT} de {START} até {STOP} '
-        options:
-          UNIT:
-            measures: Compassos
-            seconds: Segundos
       Dancelab_everyVerseChorus:
         text: 'cada {UNIT} '
         options:
@@ -997,6 +992,18 @@ pt:
             '"macklemore90"': Macklemore - Can't Hold Us
             '"hammer"': MC Hammer - U Can't Touch This
             '"peas"': The Black Eyed Peas - I Got a Feeling
+      DansBlocks_setForegroundEffect2:
+        text: criar efeito {EFFECT} efeito
+        options:
+          EFFECT:
+            '"bubbles"': Bolhas
+            '"confetti"': Confete
+            '"hearts"': corações
+            '"emojis"': Emojis felizes
+            '"rain"': chuva
+            '"starburst"': Starburst
+            '"glass"': Vidro estilhaçando
+            '"twinkling"': Cintilante
       gamelab_addBehaviorSimple:
         text: sprite {SPRITE} começa a {BEHAVIOR}
       gamelab_addTarget:
@@ -1323,6 +1330,10 @@ pt:
             "'sound://category_jump/quirky_bass_sc-fi_open_or_start.mp3'": tom grave
               peculiar
             "'sound://category_digital/jump_7.mp3'": saltar
+      gamelab_playSoundOptionsSoccer:
+        text: reproduzir som {SOUND}
+      gamelab_playSoundOptionsSpace:
+        text: reproduzir som {SOUND}
       gamelab_playSpeech:
         text: reproduzir fala {SOUND}
       gamelab_playerBehaviors:
@@ -1986,6 +1997,8 @@ pt:
             '"sound://category_achievements/peaceful_win_1.mp3"': Vitória
             '"sound://category_explosion/vibrant_game_arcade_game_negative_hit.mp3"': Redemoinho
             '"sound://category_achievements/peaceful_win_6.mp3"': Sinos de Vento
+      Poetry_playSoundOptionsSpace:
+        text: reproduzir som {SOUND}
       Poetry_setAuthor:
         text: definir o autor {AUTHOR}
       Poetry_setBackground:
@@ -2117,6 +2130,11 @@ pt:
             '8': '8'
             '9': '9'
             '10': '10'
+            '11': '11'
+            '12': '12'
+            '13': '13'
+            '14': '14'
+            '15': '15'
       Poetry_whenPromptAnswered:
         text: quando {VAR} respondida
       RyanLab_moveForward:
@@ -2342,6 +2360,16 @@ pt:
           DIR:
             right: à direita ↻
             left: à esquerda ↺
+      storylab_setForegroundEffect2:
+        text: criar efeito {EFFECT} efeito
+        options:
+          EFFECT:
+            '"bubbles"': Bolhas
+            '"confetti"': Confete
+            '"hearts"': corações
+            '"rain"': chuva
+            '"starburst"': Starburst
+            '"twinkling"': Cintilante
       validation_validatedBackground:
         text: definir plano de fundo para {IMG}
       validation_validatedSound:

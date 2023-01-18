@@ -25,15 +25,22 @@ const CodeReviewTimelineReview = ({
 }) => {
   const {id, createdAt, isOpen, version, ownerId, ownerName, comments} = review;
   const [displayCloseError, setDisplayCloseError] = useState(false);
+  const [isClosing, setIsClosing] = useState(false);
   const formattedDate = moment(createdAt).format('M/D/YYYY [at] h:mm A');
 
   const isViewingOldVersion = !!queryParams('version');
 
   const handleCloseCodeReview = () => {
+    setIsClosing(true);
     closeReview(
-      () => setDisplayCloseError(false), // on success
-      () => setDisplayCloseError(true) // on failure
+      () => handleCloseComplete(false), // on success
+      () => handleCloseComplete(true) // on failure
     );
+  };
+
+  const handleCloseComplete = requestFailed => {
+    setDisplayCloseError(requestFailed);
+    setIsClosing(false);
   };
 
   const viewingAsOwner = ownerId === currentUserId;
@@ -71,6 +78,7 @@ const CodeReviewTimelineReview = ({
                 onClick={handleCloseCodeReview}
                 text={javalabMsg.closeReview()}
                 color={Button.ButtonColor.blue}
+                disabled={isClosing}
               />
               {displayCloseError && <CodeReviewError />}
             </div>

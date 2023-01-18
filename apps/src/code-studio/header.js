@@ -5,14 +5,16 @@ import {
   showProjectHeader,
   showMinimalProjectHeader,
   showProjectBackedHeader,
-  showLevelBuilderSaveButton,
+  showLevelBuilderSaveButton
+} from './headerRedux';
+import {
   setProjectUpdatedError,
   setProjectUpdatedSaving,
   showProjectUpdatedAt,
   setProjectUpdatedAt,
   refreshProjectName,
   setShowTryAgainDialog
-} from './headerRedux';
+} from './projectRedux';
 import React from 'react';
 import ReactDOM from 'react-dom';
 
@@ -246,17 +248,17 @@ header.showLevelBuilderSaveButton = function(
  */
 header.showHeaderForProjectBacked = function(options) {
   if (options.showShareAndRemix) {
-    getStore().dispatch(showProjectBackedHeader(options.showExport));
+    getStore().dispatch(showProjectBackedHeader());
   }
 
   getStore().dispatch(showProjectUpdatedAt());
   header.updateTimestamp();
 };
 
-header.showProjectHeader = function(options) {
+header.showProjectHeader = function() {
   header.updateTimestamp();
   getStore().dispatch(refreshProjectName());
-  getStore().dispatch(showProjectHeader(options.showExport));
+  getStore().dispatch(showProjectHeader());
 };
 
 header.updateTimestamp = function() {

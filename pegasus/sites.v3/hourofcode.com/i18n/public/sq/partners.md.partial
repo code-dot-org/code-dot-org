@@ -2,13 +2,11 @@
 title: Partnerët
 ---
 
-Ora e Kodimit udhëhiqet nga Ora e Kodimit dhe komunitetet këshilluese dhe shqyrtuese të Javës së Edukimit në shkencat Kompjuterike.
+Ora e Kodit është e udhëhequr nga Komiteti për Rishikimin e Orës së Kodit. 
 
-[Komuniteti këshillues](%= resolve_url('/advisory-committee') %) përbëhet nga përfaqësues të K-12, akademi, organizata ndërkombëtare fitimprurëse dhe jo-fitimprurëse. Komuniteti udhëheq strategjitë për fushatën e Orës së Kodimit.
+[Komuniteti shqyrtues](%= resolve_url('/review-committee') %) përbëhet nga 15 edukatorë të të gjitha niveleve të shkollimit që kanë akses dhe rekomandojnë aktivitete duke përdorur rubrikën e Komunitetit Këshillues. These educators review student-led activities and teacher-led lesson plans submitted by hundreds of activity partners, evaluating the activities' educational value, ability to engage learners, and potential appeal to diverse sets of students.
 
-[Komuniteti shqyrtues](%= resolve_url('/review-committee') %) përbëhet nga 15 edukatorë të të gjitha niveleve të shkollimit që kanë akses dhe rekomandojnë aktivitete duke përdorur rubrikën e Komunitetit Këshillues. Këta edukatorë rishikojnë aktivitetet e drejtuara nga studentët dhe planet mësimore të drejtuara nga mësuesit të paraqitura nga qindra partnerë të aktiviteteve, duke vlerësuar vlerën arsimore të aktiviteteve, aftësinë për të angazhuar nxënës dhe tërheqjen e mundshme të grupeve të ndryshme të studentëve.
-
-Puna dhe përkushtimi i komuniteteve kanë kontribuar në suksesin e Orës së Kodimit dhe vizionin e saj për të ofruar një hyrje në shkencat kompjuterike për çdo nxënës.
+The committee's work and dedication have contributed to the success of the Hour of Code and its vision of offering an introduction to computer science for every student.
 
 # Partnerët kryesorë dhe mbështetësit e korporatave
 
@@ -18,7 +16,7 @@ Puna dhe përkushtimi i komuniteteve kanë kontribuar në suksesin e Orës së K
 
 # Partnerët Ndërkombëtarë
 
-{{ partners/major_partners_corporate_supporters }}
+{{ partners/international_partners }}
 
 * * *
 
@@ -34,7 +32,7 @@ Puna dhe përkushtimi i komuniteteve kanë kontribuar në suksesin e Orës së K
 
 * * *
 
-# Additional Partners
+# Partnerët Plotësues
 
 {{ partners/additional_partners }}
 

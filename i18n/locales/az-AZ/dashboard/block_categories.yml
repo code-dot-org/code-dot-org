@@ -4,6 +4,8 @@ az:
       Actions: Əmrlər
       Advanced: Qabaqcıl
       Behaviors: Rəftar
+      'Behaviors ': 'Davranışlar'
+      Boolean: Boolean
       Brushes: Fırçalar
       Category: Bölüm
       Color: Rəng
@@ -24,9 +26,13 @@ az:
       Logic: Məntiq
       Loops: dövrlər
       Math: Riyaziyyat
+      Number: Nömrə
       Numbers: Rəqəmlər
+      Picker: Seçici
+      Prebuilt: Əvvəlcədən qurulmuş
       Properties: Xassələri
       Sprites: Spraytlar
+      String: Simli
       Text: mətn
       Variables: dəyişənlər
       'Variables ': 'Dəyişənlər'

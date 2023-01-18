@@ -1920,6 +1920,212 @@
               "length": "lonxitude"
             }
           }
+        },
+        "Course E: Frozen Project_examples2022": {
+          "draw a star": {
+            "name": "debuxar unha estrela",
+            "parameters": {
+              "points": "puntos",
+              "length": "lonxitude"
+            }
+          },
+          "draw a circle": {
+            "name": "debuxar un círculo"
+          },
+          "draw a pinwheel": {
+            "parameters": {
+              "length": "lonxitude",
+              "repeat": "repetir"
+            }
+          },
+          "draw a triangle": {
+            "name": "debuxar un triángulo",
+            "parameters": {
+              "length": "lonxitude"
+            }
+          },
+          "draw a shape": {
+            "parameters": {
+              "length": "lonxitude"
+            }
+          },
+          "draw a house": {
+            "name": "debuxar unha casa",
+            "parameters": {
+              "length": "lonxitude"
+            }
+          },
+          "draw a square": {
+            "name": "debuxar un cadrado",
+            "parameters": {
+              "length": "lonxitude"
+            }
+          }
+        },
+        "CourseD_EOC_artist2022": {
+          "draw a star": {
+            "name": "debuxar unha estrela",
+            "parameters": {
+              "points": "puntos",
+              "length": "lonxitude"
+            }
+          },
+          "draw a circle": {
+            "name": "debuxar un círculo"
+          },
+          "draw a pinwheel": {
+            "parameters": {
+              "length": "lonxitude",
+              "repeat": "repetir"
+            }
+          },
+          "draw a triangle": {
+            "name": "debuxar un triángulo",
+            "parameters": {
+              "length": "lonxitude"
+            }
+          },
+          "draw a shape": {
+            "parameters": {
+              "length": "lonxitude"
+            }
+          },
+          "draw a house": {
+            "name": "debuxar unha casa",
+            "parameters": {
+              "length": "lonxitude"
+            }
+          },
+          "draw a square": {
+            "name": "debuxar un cadrado",
+            "parameters": {
+              "length": "lonxitude"
+            }
+          }
+        },
+        "CourseD_EOC_artist_example20212022": {
+          "draw a star": {
+            "name": "debuxar unha estrela",
+            "parameters": {
+              "points": "puntos",
+              "length": "lonxitude"
+            }
+          },
+          "draw a circle": {
+            "name": "debuxar un círculo"
+          },
+          "draw a pinwheel": {
+            "parameters": {
+              "length": "lonxitude",
+              "repeat": "repetir"
+            }
+          },
+          "draw a triangle": {
+            "name": "debuxar un triángulo",
+            "parameters": {
+              "length": "lonxitude"
+            }
+          },
+          "draw a shape": {
+            "parameters": {
+              "length": "lonxitude"
+            }
+          },
+          "draw a house": {
+            "name": "debuxar unha casa",
+            "parameters": {
+              "length": "lonxitude"
+            }
+          },
+          "draw a square": {
+            "name": "debuxar un cadrado",
+            "parameters": {
+              "length": "lonxitude"
+            }
+          }
+        },
+        "courseC_data wizard2022": {
+          "do something": {
+            "name": "facer algo"
+          }
+        },
+        "courseE_artist_functions102022": {
+          "do something": {
+            "name": "facer algo"
+          }
+        },
+        "courseE_artist_functions22022": {
+          "draw a square": {
+            "name": "debuxar un cadrado"
+          }
+        },
+        "courseE_artist_functions32022": {
+          "draw a star": {
+            "name": "debuxar unha estrela"
+          }
+        },
+        "courseE_artist_functions52022": {
+          "draw a star": {
+            "name": "debuxar unha estrela"
+          }
+        },
+        "courseE_artist_functions82022": {
+          "do something": {
+            "name": "facer algo"
+          }
+        },
+        "courseE_artist_functions8a2022": {
+          "draw a square": {
+            "name": "debuxar un cadrado"
+          },
+          "do something": {
+            "name": "facer algo"
+          }
+        },
+        "courseE_artist_functions8b2022": {
+          "do something": {
+            "name": "facer algo"
+          }
+        },
+        "courseE_artist_functions8c2022": {
+          "do something": {
+            "name": "facer algo"
+          }
+        },
+        "courseE_artist_functions92022": {
+          "do something": {
+            "name": "facer algo"
+          }
+        },
+        "courseE_artist_functions_challenge12022": {
+          "do something": {
+            "name": "facer algo"
+          }
+        },
+        "courseE_artist_functions_challenge22022": {
+          "do something": {
+            "name": "facer algo"
+          }
+        },
+        "courseE_artist_functions_predict12022": {
+          "draw a square": {
+            "name": "debuxar un cadrado"
+          }
+        },
+        "courseE_artist_functions_predict22022": {
+          "do something": {
+            "name": "facer algo"
+          }
+        },
+        "courseF_apps_collector2022": {
+          "end game": {
+            "name": "final de xogo"
+          }
+        },
+        "courseF_apps_collector_-2022-2": {
+          "end game": {
+            "name": "final de xogo"
+          }
         }
       }
     }

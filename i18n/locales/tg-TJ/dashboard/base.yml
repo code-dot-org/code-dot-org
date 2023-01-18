@@ -103,7 +103,6 @@ tg:
       create: 'Сохтан'
     popup:
       progress: 'Муваффақияти шумо'
-      lines: 'Хатҳои умумии рамз: %{lines}'
       close: 'ПӮШИДАН'
       puzzle_map: 'Давраҳо'
       prizes_link: 'маълумоти бештар'
@@ -121,6 +120,7 @@ tg:
     online: онлайн
     view_course: Намоиш додани дарс
     trynow: 'Маълумоти бештар'
+  certificate_hour_of_code: "Соати рамз"
   gender:
     male: 'Мард'
     female: 'Зан'

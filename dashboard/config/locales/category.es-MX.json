@@ -82,6 +82,24 @@
         },
         "ngss/ETS1": {
           "description": "Diseño Ingenieril"
+        },
+        "ai4k12-2021/3-A-ii": {
+          "description": "La naturaleza del aprendizaje - Búsqueda de patrones en los datos"
+        },
+        "ai4k12-2021/3-A-iv": {
+          "description": "La naturaleza del aprendizaje - Construcción contra uso de un razonador"
+        },
+        "ai4k12-2021/3-A-i": {
+          "description": "La naturaleza del aprendizaje - Humanos contra máquinas"
+        },
+        "ai4k12-2021/3-C-i": {
+          "description": "Conjuntos de datos - Conjuntos de características"
+        },
+        "ai4k12-2021/3-A-iii": {
+          "description": "La naturaleza del aprendizaje - Entrenamiento de un modelo"
+        },
+        "ai4k12-2021/3-C-iii": {
+          "description": "Conjuntos de datos: Sesgo"
         }
       }
     }

@@ -4,7 +4,7 @@ import i18n from '@cdo/locale';
 import styleConstants from '../../styleConstants';
 import color from '../../util/color';
 import PropTypes from 'prop-types';
-import Radium from 'radium';
+import Radium from 'radium'; // eslint-disable-line no-restricted-imports
 import _ from 'lodash';
 
 const PROJECT_INFO = {
@@ -150,7 +150,7 @@ class NewProjectButtons extends React.Component {
                     <img
                       style={thumbnailStyle}
                       src={PROJECT_INFO[projectType].thumbnail}
-                      alt={PROJECT_INFO[projectType].label}
+                      alt=""
                     />
                     <div style={styles.label}>
                       {PROJECT_INFO[projectType].label}

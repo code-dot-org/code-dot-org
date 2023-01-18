@@ -2,6 +2,8 @@
 nl:
   data:
     blocks:
+      AmysBlocks_setPromptWithChoices:
+        text: vraag gebruiker {QUESTION} om variabele {VAR} met de opties {A}{B}{C}
       BadGuys_makeNewBadGuysSprite:
         text: nieuwe {ANIMATION_NAME} sprite maken op {LOCATION}
       BadGuys_setSizeAll_dropdown:
@@ -230,20 +232,12 @@ nl:
             MOVES.XArmsUp: Rek
             MOVES.ThisOrThat: Dit of dat.
             MOVES.Rest: Geen
-      Dancelab_everyMeasuresRange:
-        text: 'herhaal om om de {N} maten na {START} '
       Dancelab_everySeconds:
         text: 'elke {N} {UNIT} '
         options:
           UNIT:
             '"measures"': maten
             '"seconds"': seconden
-      Dancelab_everySecondsRange:
-        text: 'elke {N} {UNIT} van {START} tot {STOP} '
-        options:
-          UNIT:
-            measures: Maten
-            seconds: Seconden
       Dancelab_everyVerseChorus:
         text: 'elke {UNIT} '
         options:
@@ -979,6 +973,18 @@ nl:
         text: setup
       Dancelab_whenSetup2:
         text: setup
+      DansBlocks_setForegroundEffect2:
+        text: Effect {EFFECT} uitvoeren
+        options:
+          EFFECT:
+            '"bubbles"': Bubbels
+            '"confetti"': Confetti
+            '"hearts"': hartjes
+            '"emojis"': Vrolijke emojis
+            '"rain"': regen
+            '"starburst"': Sterrenvorming
+            '"glass"': Brekend glas
+            '"twinkling"': Fonkeling
       gamelab_addBehaviorSimple:
         text: sprite {SPRITE} begint {BEHAVIOR}
       gamelab_addTarget:
@@ -1288,6 +1294,10 @@ nl:
             "'sound://category_jump/quirky_bass_sc-fi_open_or_start.mp3'": Eigenzinnige
               bass
             "'sound://category_digital/jump_7.mp3'": spring
+      gamelab_playSoundOptionsSoccer:
+        text: PlaySound {SOUND}
+      gamelab_playSoundOptionsSpace:
+        text: PlaySound {SOUND}
       gamelab_playSpeech:
         text: Spraak afspelen {SOUND}
       gamelab_playerBehaviors:
@@ -1908,6 +1918,8 @@ nl:
             '"sound://category_achievements/peaceful_win_1.mp3"': Win
             '"sound://category_explosion/vibrant_game_arcade_game_negative_hit.mp3"': Kolk
             '"sound://category_achievements/peaceful_win_6.mp3"': Windklokken
+      Poetry_playSoundOptionsSpace:
+        text: PlaySound {SOUND}
       Poetry_setAuthor:
         text: Auteur {AUTHOR} instellen
       Poetry_setBackground:
@@ -2018,6 +2030,11 @@ nl:
             '8': '8'
             '9': '9'
             '10': '10'
+            '11': '11'
+            '12': '12'
+            '13': '13'
+            '14': '14'
+            '15': '15'
       Poetry_whenPromptAnswered:
         text: als {VAR} is beantwoord
       RyanLab_moveForward:
@@ -2217,5 +2234,15 @@ nl:
           DIR:
             right: rechtsom ↻
             left: linksom ↺
+      storylab_setForegroundEffect2:
+        text: Effect {EFFECT} uitvoeren
+        options:
+          EFFECT:
+            '"bubbles"': Bubbels
+            '"confetti"': Confetti
+            '"hearts"': hartjes
+            '"rain"': regen
+            '"starburst"': Sterrenvorming
+            '"twinkling"': Fonkeling
       validation_validatedBackground:
         text: set achtergrond naar {IMG}

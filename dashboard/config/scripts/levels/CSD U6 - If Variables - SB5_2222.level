@@ -1,9 +1,5 @@
 <Applab>
   <config><![CDATA[{
-  "game_id": 41,
-  "created_at": "2022-04-08T17:01:34.000Z",
-  "level_num": "custom",
-  "user_id": 1,
   "properties": {
     "skin": "applab",
     "code_functions": {
@@ -63,15 +59,19 @@
     "widget_mode": "false",
     "ai_enabled": "false",
     "reference_links": [
-      "/docs/concepts/maker-toolkit/physical-input/",
-      "/docs/concepts/javascript/variables/",
-      "/docs/concepts/patterns/counter-patterns-with-event/"
+      "/courses/csd-2022/guides/physical-input",
+      "/courses/csd-2022/guides/variables",
+      "/courses/csd-2022/guides/counter-patterns-with-event"
     ],
     "start_blocks": "var yPosition = 170;\r\n\r\nonBoardEvent(buttonL, \"down\", function() {\r\n  //1) Subtract one from the `yPosition` variable\r\n  \r\n  setProperty(\"birdIcon\", \"y\", yPosition);\r\n});\r\n\r\nonBoardEvent(buttonR, \"down\", function() {\r\n  //2) Add one to the `yPosition` variable\r\n  \r\n  setProperty(\"birdIcon\", \"y\", yPosition);\r\n});\r\n",
     "start_html": "<div id=\"designModeViz\" class=\"appModern\" tabindex=\"1\" data-radium=\"true\" style=\"display: none; width: 320px; height: 450px;\"><div class=\"screen\" tabindex=\"1\" data-theme=\"default\" id=\"screen1\" style=\"display: block; height: 450px; width: 320px; left: 0px; top: 0px; position: absolute; z-index: 0; background-color: rgb(255, 255, 255);\"><img data-canonical-image-url=\"icon://fa-twitter\" data-image-type=\"icon\" data-object-fit=\"contain\" id=\"birdIcon\" style=\"height: 125px; width: 125px; border-style: solid; border-width: 0px; border-color: rgb(0, 0, 0); border-radius: 0px; position: absolute; left: 100px; top: 170px; margin: 0px;\" data-icon-color=\"#01cbff\"></div></div>",
     "encrypted_examples": "FZUyzjVp4Qb9kmE0yiBfpw1o2AwtKHzcYoCyLZB12TT2VHdXbY1cHcC2/3Y7\nAMOau4Uj61PUbjGbYPM9HxF+mA==\n",
     "preload_asset_list": null
   },
+  "level_num": "custom",
+  "game_id": 41,
+  "created_at": "2022-04-08T17:01:34.000Z",
+  "user_id": 1,
   "published": true,
   "notes": "",
   "audit_log": "[{\"changed_at\":\"2022-04-08T17:01:33.999+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - If Variables - SB5_2022\\\"\"],\"cloned_from\":\"CSD U6 - If Variables - SB5_2022\"}]"

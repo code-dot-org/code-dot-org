@@ -28,6 +28,7 @@ zh-TW:
       name: 名稱
       nectar: 花蜜
       nectars: 花蜜
+      object: 對象
       planet: 行星
       points: 分
       random: 隨機
@@ -37,6 +38,7 @@ zh-TW:
       sides: 邊
       size: 尺寸
       speed: 速度
+      type: 類型
       variable: 變數
       width: 寬度
       wizard: 巫師

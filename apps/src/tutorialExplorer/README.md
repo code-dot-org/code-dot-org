@@ -16,8 +16,6 @@ Above and beside the tiles are a variety of filters to help refine the set of tu
 
 It's also possible to change the sort order, either by "Most popular" or "Recommended".  See the discussion below about Variables for information on the default sort order.
 
-Note that a variant of this page is available at `/learn/robotics`, which pre-filters down to robotics-specific activities but is otherwise very similar to `/learn`.
-
 On particuarly narrow screens, the filters are no longer shown at the same time as the tiles.  Instead, only tiles are shown at first, and the filters can be toggled to show in their place with a "Filters" button, or dismissed with an "Apply" button.  We show the actual count of filtered tutorials in this situation, mainly because the changing set of tutorials isn't visible when only the filters are showing; the count helps indicate when changing a filter is making a difference.
 
 When visiting the page in a non-en language, it first shows a set of tiles for "Activities in your language", that is tutorials that we know have explicit support for that language.  Below this set of tiles is a button which, when pressed, reveals the larger set of tutorials and filter options.
@@ -54,14 +52,12 @@ Here are some notable components, and their hierarchy:
 
 - `TutorialExplorer`
 	- `FilterHeader`: the set of filters at the top
-		- `BackButton`: a link to `/learn` from `/learn/robotics`
 		- `FilterGroupHeaderSelection`: used for two filters
 	- `FilterSet`: the set of filters on the left side
 		- `FilterGroupSortBy`: the "Sort by" dropdown
 		- `FilterGroupOrgNames`: the "Organization" dropdown
 		- `FilterGroup`: a variety of filter groups
 			- `FilterChoice`: a variety of filter options with checkboxes
-		- `RoboticsButton`: a link to `/learn/robotics` from `/learn`
   	- `TutorialSet`: the tutorial tiles
   		- `Tutorial`: an individual tile
   		- `TutorialDetail`: a popup with information about a tutorial
@@ -117,5 +113,3 @@ programming_language: blocks, typing, other
 For example, do not specify: https://hourofcode.com/learn?subject=science&platform=computers
 
 Instead, specify: https://hourofcode.com/learn?platform=computers&subject=science
-
-Finally, note that this technique can also be used by https://hourofcode.com/learn/robotics, but `activity_type` can not be specified, and the page shows robotics tutorials only.

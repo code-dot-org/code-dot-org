@@ -2,6 +2,12 @@
   "fil-PH": {
     "data": {
       "objectives": {
+        "1232eb04-9ab1-4fe2-87f9-61c6d94d770e": {
+          "description": "Gumawa ng mga bagong tiyanak at magtalaga sa kanila ng mga kasuotan at lokasyon."
+        },
+        "3bbfb468-a89a-4720-a7ff-bccbd44369f2": {
+          "description": "Gumawa ng interactive na animation gamit ang mga tiyanak at event."
+        },
         "53df251f-a20a-47a9-ae13-ede6e36df59d": {
           "description": "Gumawa ng interactive na animation gamit ang mga tiyanak at event."
         },
@@ -21,6 +27,12 @@
           "description": "Gumawa ng mga bagong tiyanak at magtalaga sa kanila ng mga kasuotan at lokasyon."
         },
         "255c15f5-cba0-41e4-979b-8bcf7f7548fa": {
+          "description": "Gumawa ng interactive na animation gamit ang mga tiyanak at event."
+        },
+        "7da72bfe-23c8-479f-8797-7dcfcf175ab0": {
+          "description": "Gumawa ng mga bagong tiyanak at magtalaga sa kanila ng mga kasuotan at lokasyon."
+        },
+        "fa4bb1b0-8232-4b87-b825-abe69255d1e1": {
           "description": "Gumawa ng interactive na animation gamit ang mga tiyanak at event."
         },
         "cde35a90-2d01-4014-9c06-fdfc221bca4a": {
@@ -49,6 +61,51 @@
         },
         "e0fb758b-907c-45e4-8f27-b18701ed39c5": {
           "description": "Gumawa ng interactive na animation gamit ang mga tiyanak at event."
+        },
+        "4ed9cede-cc9a-409d-b433-781185b454b6": {
+          "description": "Lumikha ng mga animation ng sayaw gamit ang code"
+        },
+        "4fa04785-108a-4cea-831b-8078658ea413": {
+          "description": "Bumuo ng mga programa na tumutugon sa input ng user"
+        },
+        "7728246b-7582-4624-a2b1-229b998fc2ae": {
+          "description": "Bumuo ng mga programa na tumutugon sa inoorasang mga event"
+        },
+        "0601569e-2f95-4d2f-a3a9-0aea3df102ed": {
+          "description": "Gumawa ng mga bagong tiyanak at magtalaga sa kanila ng mga kasuotan at lokasyon."
+        },
+        "884d4f4c-abd4-493c-8029-cde7399519f4": {
+          "description": "Gumawa ng interactive na animation gamit ang mga tiyanak at event."
+        },
+        "9f0d4053-b0bb-4213-bb8a-b07433bb84cf": {
+          "description": "Bumuo ng mga programa na tumutugon sa inoorasang mga event"
+        },
+        "f4427747-3b3f-43ac-b124-2ed1856ab5be": {
+          "description": "Lumikha ng mga animation ng sayaw gamit ang code"
+        },
+        "f6a45c87-6f01-4df0-8020-0a9be77f0d10": {
+          "description": "Bumuo ng mga programa na tumutugon sa input ng user"
+        },
+        "8d8fffd3-6411-4778-95f5-76953d066786": {
+          "description": "Kilalanin kung ano ang inaasahan kapag lumipat ang mga mag-aaral sa computer lab."
+        },
+        "d62cb1ce-6c5d-4893-ba48-3f8a844f0670": {
+          "description": "Gumamit ng naaangkop na terminolohiya kapag tumutukoy sa isang computer mouse, trackpad, o touchscreen."
+        },
+        "9ffae8f4-4880-42db-ba40-b4379c1a5f6c": {
+          "description": "Kilalanin kung ano ang inaasahan kapag lumipat ang mga mag-aaral sa computer lab."
+        },
+        "d386bcb1-393c-46bc-8524-7380583d6ebb": {
+          "description": "Gumamit ng naaangkop na terminolohiya kapag tumutukoy sa isang computer mouse, trackpad, o touchscreen."
+        },
+        "ba0eef71-97bc-4525-824e-3abc2087dbaf": {
+          "description": ""
+        },
+        "1e1c0724-7d86-4304-a73b-6f083be036fc": {
+          "description": ""
+        },
+        "08ca334f-bc69-46fb-b4ae-0b4b63ec4f7f": {
+          "description": ""
         },
         "cdbe73f5-f16f-475f-b896-e9acdb885a23": {
           "description": "Kilalanin kung ano ang inaasahan kapag lumipat ang mga mag-aaral sa computer lab."
