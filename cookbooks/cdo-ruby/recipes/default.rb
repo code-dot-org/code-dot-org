@@ -1,16 +1,26 @@
-# Install Ruby, based on documentation at https://www.ruby-lang.org/en/documentation/installation/#building-from-source
-ruby_snapshot = "snapshot-ruby_#{node['cdo-ruby']['version'].tr('.', '_')}"
-remote_file "/tmp/#{ruby_snapshot}.tar.gz" do
-  source "https://cache.ruby-lang.org/pub/ruby/snapshot/#{ruby_snapshot}.tar.gz"
+# Install Ruby via ruby-build, as recommended by Ruby docs
+#
+# https://www.ruby-lang.org/en/documentation/installation/#ruby-build
+# https://github.com/rbenv/ruby-build#readme
+
+# Arbitrarily use the latest version of ruby build at time this code was written
+RUBY_BUILD_VERSION = "20221225".freeze
+
+remote_file "/tmp/ruby-build.tar.gz" do
+  source "https://github.com/rbenv/ruby-build/archive/refs/tags/v#{RUBY_BUILD_VERSION}.tar.gz"
 end
 
-archive_file "/tmp/#{ruby_snapshot}.tar.gz" do
-  destination '/tmp/ruby_snapshot'
+archive_file "/tmp/ruby-build.tar.gz" do
+  destination '/tmp/ruby-build'
 end
 
-execute "Build Ruby #{node['cdo-ruby']['version']} from Source" do
-  cwd "/tmp/ruby_snapshot/#{ruby_snapshot}"
-  command './configure && make && make install'
+execute "install ruby-build" do
+  cwd "/tmp/ruby-build/ruby-build-#{RUBY_BUILD_VERSION}"
+  command './install.sh'
+end
+
+execute "install ruby with ruby build" do
+  command 'ruby-build 2.7.7'
 end
 
 # TODO: Remove old Ruby version packages if present.
