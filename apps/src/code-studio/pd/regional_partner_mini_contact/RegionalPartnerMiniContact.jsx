@@ -8,6 +8,7 @@ import FieldGroup from '../form_components/FieldGroup';
 import ButtonList from '../form_components/ButtonList';
 import color from '@cdo/apps/util/color';
 import $ from 'jquery';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 
 const ROLES = [
   'Teacher',
@@ -23,6 +24,8 @@ const ROLE_MAP = ROLES.map(v => ({value: v, label: v}));
 ROLE_MAP.unshift({value: '', label: '-'});
 
 const GRADE_LEVEL = ['K-5', '6-8', '9-12'];
+
+const SUBMIT_RP_CONTACT_FORM_EVENT = 'Submit Regional Partner Contact Form';
 
 export class RegionalPartnerMiniContact extends React.Component {
   static propTypes = {
@@ -101,6 +104,9 @@ export class RegionalPartnerMiniContact extends React.Component {
       }
     } else if (results.responseJSON) {
       this.setState({submitted: true, submitting: false});
+      analyticsReporter.sendEvent(SUBMIT_RP_CONTACT_FORM_EVENT, {
+        'source page id': this.props.sourcePageId
+      });
     } else {
       this.setState({submitted: false, submitting: false});
     }
