@@ -177,15 +177,20 @@
           "progression_name": "Joc lliure"
         },
         "6109d6c2-4d7c-479f-a269-ef2f0a046141": {
-          "name": "Prepareu el terreny"
+          "name": "Prepareu el terreny",
+          "description": "Doneu la benvinguda als alumnes i introduïu molt breument l’activitat d’avui. \n\n_Digueu: “Avui dedicarem una hora a prendre a codificar, és a dir, programar. Coneixeu les paraules “programar” o “codificar”? Què volen dir?”_\n\nÉs possible que algú digui que un “codi” és un missatge secret, o que té a veure amb els ordinadors."
         },
         "aced2726-6ed1-4645-9fd2-eccfe982584f": {
           "tips": [
-            null
+            "Una manera de presentar l'Hora del Codi, si vosaltres mateixos tampoc no esteu gaire familiaritzats amb la programació, és posar un dels nostres [vídeos d'inspiració](https://hourofcode.com/us/resources#videos). Trieu-ne un que creieu que agradarà als vostres alumnes. Per als alumnes més petits, us recomanem \"[Tothom pot aprendre](https://youtu.be/qYZF6oIZtfc).”"
           ]
         },
+        "a0692bbb-9e61-49d2-ac85-96bd4a922f5a": {
+          "description": "Expliqueu que, en informàtica, un “codi” és un conjunt d’instruccions que pot entendre un ordinador. Digueu-los que avui practicaran la “codificació”, la “programació” i la “depuració”.\n\nDefiniu:\n\n-   **Codificar** significa escriure codi, o un conjunt d’instruccions per un ordinador.\n-   **Programar** és similar: vol dir escriure codi o instruccions. Avui, programareu amb blocs a l’ordinador (si feu servir un tutorial en línia) o amb paper i llapis (si feu servir una activitat sense connexió).\n-   **Depurar** significa revisar el codi per trobar-hi errors i provar de solucionar-los.\n\nPregunteu als alumnes què els agradaria fer després d’acabar la secundària. Feu que aixequin la mà si creuen que aquesta opció requerirà que facin servir un ordinador. Tots haurien d’aixecar la mà, perquè els ordinadors estan per tot arreu: als mòbils, als cotxes, fins i tot als microones i rentavaixelles!\n\nPregunteu als alumnes quants instituts creuen que hi ha als Estats Units. La resposta és que uns 100.000. Ara, demaneu-los que esbrinin quants d’aquests centres fan l’assignatura d’informàtica. La resposta és menys d’un de cada quatre. Això vol dir que menys del 25% de la població d’Estats Units té l’oportunitat d’aprendre informàtica a l’escola.\n\nPregunteu: com creieu que això afecta a la capacitat dels joves per aconseguir la seva feina ideal o per accedir a la universitat a la qual volen anar, si tenen molt poca o cap experiència fent servir els ordinadors? Aquest problema no el trobem només als Estats Units, sinó arreu del món.\n\nExpliqueu que hi ha alumnes d’arreu del món que, igual que ells, estan fent l’Hora del Codi per conscienciar sobre aquesta injustícia, és a dir, la manca d’accés a la formació en informàtica. La vostra classe hi participarà no només per aprendre els fonaments de la ciència de la computació i divertir-se una estona, sinó també per posicionar-se i alçar la veu sobre com d’important és que tothom pugui aprendre informàtica."
+        },
         "8af57fdb-d7be-4cc2-9964-8f7eed4102f9": {
-          "name": "Codi Flappy"
+          "name": "Codi Flappy",
+          "description": "Animeu els vostres alumnes a fer el tutorial [Crea un joc amb el Flappy](https://studio.code.org/flappy/1).\n\nEn funció de l’edat i les habilitats dels vostres alumnes, podeu fer el següent:\n\n-   En el cas d’alumnes de primària i secundària, us recomanem que opteu per fer els tutorials en què hi ha joc lliure i amb els quals poden crear aplicacions o jocs. També podeu fer que treballin de manera autònoma o en parelles o grups reduïts. A [code.org/learn](http://code.org/learn) hi trobareu molts tutorials que faciliten la creació lliure, com ara [Playlab](https://studio.code.org/s/playlab/stage/1/puzzle/1) i la nostra eina beta nova [AppLab](https://code.org/educate/applab).\n-   En el cas dels alumnes més petits, us recomanem que dividiu la classe en parelles o grups molt reduïts (de tres o quatre alumnes) i que demaneu a cada grup que treballin junts per fer el tutorial fent servir la [programació per parelles](https://youtu.be/vgkahOzFH2Q).\n-   En el cas dels alumnes adults, el tutorial [Escriu el teu primer programa informàtic](https://studio.code.org/hoc/1) funciona molt bé, tant com a activitat autònoma com per parelles."
         },
         "47fe47af-9de3-4ba5-8193-1f489bef9544": {
           "tips": [
@@ -196,17 +201,24 @@
           "description": "Si un grup o un alumne acaba abans que la resta, pot fer un altre tutorial a [code.org/learn](http://code.org/learn)."
         },
         "cd649101-5c1f-4bcb-9258-3cabf2bfccb6": {
-          "name": "Comentaris"
+          "name": "Comentaris",
+          "description": "Feu l’activitat de “Girar i parlar”. Demaneu als alumnes que comparteixin el seu joc, aplicació o projecte acabat amb el company del costat perquè els digui què en pensa. Després, seran ells qui provin l’aplicació o el joc del company. Demaneu a alguns grups que comparteixin la seva experiència: què heu après sobre com funcionen les aplicacions i els jocs? Què us sembla tenir l’oportunitat d’aprendre informàtica?"
         },
         "ca7d5e61-0396-4885-934c-0d70ab63b072": {
-          "name": "Celebració"
+          "name": "Celebració",
+          "description": "Expliqueu que avui passareu una hora programant, perquè som a la Setmana de l'Educació en Informàtica, i milions d'alumnes d'arreu del món també han estat fent una Hora del Codi. Feliciteu-los per formar part d'aquest moviment mundial.\n\nDoneu un [certificat](http://code.org/certificates) a cada alumne i alumna en què hi posi el seu nom."
         },
         "d4bf5db5-6884-4166-ae90-3a5cd01b9695": {
           "name": "Propers passos",
           "description": "Digueu als alumnes que, si els ha agradat l'activitat d'avui, tenen moltes opcions per seguir programant. Animeu-los a visitar code.org/learn per trobar-les totes, o si teniu pensat fer alguna de les activitats d'ampliació, expliqueu-los què fareu el pròxim dia."
         },
+        "5d6f31b4-6919-4b24-b4c3-2c93d827aa52": {
+          "name": "Alça la veu",
+          "description": "Animeu els alumnes a compartir algun aspecte de la seva experiència amb l'Hora del Codi a les xarxes socials amb l'etiqueta #hourofcode per alçar la veu i donar visibilitat a aquest moviment mundial. Poden compartir els seus jocs, imatges, vídeos o reflexions."
+        },
         "f7c11887-da26-4c7b-be7a-1b84d330ed30": {
-          "name": "Després d'una Hora del Codi"
+          "name": "Després d'una Hora del Codi",
+          "description": "Un cop acabada l’Hora del Codi, hi ha moltes maneres de seguir ensenyant informàtica als alumnes de primària. Aquí teniu algunes idees:\n\n-   **Feu els cursos [Fonaments d’Informàtica de Code Studio](http://code.org/educate/k5)**. Es tracta de sis cursos dissenyats per als més petits. Els alumnes faran una sèrie de trencaclosques que els ensenyaran a programar, i els educadors tindreu accés a planificacions de lliçons entretingudes que faran que els nens es diverteixin aprenent. Per aquests cursos, Code.org ofereix desenvolupament professional gratuït, tant en línia com presencial.\n-   **Convideu un expert en informàtica a que vingui a parlar amb la vostra classe**. Si no en coneixeu cap, contacteu amb alguns voluntaris del [mapa de voluntaris](https://code.org/volunteer/local)."
         },
         "6c387b78-14b7-4209-919a-97dbf64b9bc2": {
           "name": "Prepareu el terreny",
@@ -297,7 +309,8 @@
           "name": "Comentaris"
         },
         "e9751fff-a71d-4d90-b401-0ccbf3356c44": {
-          "name": "Celebració"
+          "name": "Celebració",
+          "description": "Expliqueu que avui passareu una hora programant, perquè som a la Setmana de l'Educació en Informàtica, i milions d'alumnes d'arreu del món també han estat fent una Hora del Codi. Feliciteu-los per formar part d'aquest moviment mundial.\n\nDoneu un [certificat](http://code.org/certificates) a cada alumne i alumna en què hi posi el seu nom."
         },
         "3596cc47-e661-4d00-943e-ed858c4f6f5d": {
           "name": "Propers passos",
@@ -314,8 +327,11 @@
         },
         "fc04ef5f-0d78-418b-9311-e12201106453": {
           "tips": [
-            null
+            "Una manera de presentar l'Hora del Codi, si vosaltres mateixos tampoc no esteu gaire familiaritzats amb la programació, és posar un dels nostres [vídeos d'inspiració](https://hourofcode.com/us/resources#videos). Trieu-ne un que creieu que agradarà als vostres alumnes. Per als alumnes més petits, us recomanem \"[Tothom pot aprendre](https://youtu.be/qYZF6oIZtfc).”"
           ]
+        },
+        "ea8a3bf2-1425-482a-9f98-a5b30d6ee809": {
+          "description": "Expliqueu que, en informàtica, un “codi” és un conjunt d’instruccions que pot entendre un ordinador. Digueu-los que avui practicaran la “codificació”, la “programació” i la “depuració”.\n\nDefiniu:\n\n-   **Codificar** significa escriure codi, o un conjunt d’instruccions per un ordinador.\n-   **Programar** és similar: vol dir escriure codi o instruccions. Avui, programareu amb blocs a l’ordinador (si feu servir un tutorial en línia) o amb paper i llapis (si feu servir una activitat sense connexió).\n-   **Depurar** significa revisar el codi per trobar-hi errors i provar de solucionar-los.\n\nPregunteu als alumnes què els agradaria fer després d’acabar la secundària. Feu que aixequin la mà si creuen que aquesta opció requerirà que facin servir un ordinador. Tots haurien d’aixecar la mà, perquè els ordinadors estan per tot arreu: als mòbils, als cotxes, fins i tot als microones i rentavaixelles!\n\nPregunteu als alumnes quants instituts creuen que hi ha als Estats Units. La resposta és que uns 100.000. Ara, demaneu-los que esbrinin quants d’aquests centres fan l’assignatura d’informàtica. La resposta és menys d’un de cada quatre. Això vol dir que menys del 25% de la població d’Estats Units té l’oportunitat d’aprendre informàtica a l’escola.\n\nPregunteu: com creieu que això afecta a la capacitat dels joves per aconseguir la seva feina ideal o per accedir a la universitat a la qual volen anar, si tenen molt poca o cap experiència fent servir els ordinadors? Aquest problema no el trobem només als Estats Units, sinó arreu del món.\n\nExpliqueu que hi ha alumnes d’arreu del món que, igual que ells, estan fent l’Hora del Codi per conscienciar sobre aquesta injustícia, és a dir, la manca d’accés a la formació en informàtica. La vostra classe hi participarà no només per aprendre els fonaments de la ciència de la computació i divertir-se una estona, sinó també per posicionar-se i alçar la veu sobre com d’important és que tothom pugui aprendre informàtica."
         },
         "548dc37b-f338-4a52-a77e-7380794c64f2": {
           "tips": [
@@ -326,14 +342,20 @@
           "description": "Si un grup o un alumne acaba abans que la resta, pot fer un altre tutorial a [code.org/learn](http://code.org/learn)."
         },
         "d8b92f56-a741-43ac-9d6f-3fdf1c452001": {
-          "name": "Comentaris"
+          "name": "Comentaris",
+          "description": "Feu l’activitat de “Girar i parlar”. Demaneu als alumnes que comparteixin el seu joc, aplicació o projecte acabat amb el company del costat perquè els digui què en pensa. Després, seran ells qui provin l’aplicació o el joc del company. Demaneu a alguns grups que comparteixin la seva experiència: què heu après sobre com funcionen les aplicacions i els jocs? Què us sembla tenir l’oportunitat d’aprendre informàtica?"
         },
         "3d63393a-9146-4027-8783-247e19637d25": {
-          "name": "Celebració"
+          "name": "Celebració",
+          "description": "Expliqueu que avui passareu una hora programant, perquè som a la Setmana de l'Educació en Informàtica, i milions d'alumnes d'arreu del món també han estat fent una Hora del Codi. Feliciteu-los per formar part d'aquest moviment mundial.\n\nDoneu un [certificat](http://code.org/certificates) a cada alumne i alumna en què hi posi el seu nom."
         },
         "4ae122fa-da6f-4aaf-b2f8-c68fd0bb68af": {
           "name": "Propers passos",
           "description": "Digueu als alumnes que, si els ha agradat l'activitat d'avui, tenen moltes opcions per seguir programant. Animeu-los a visitar code.org/learn per trobar-les totes, o si teniu pensat fer alguna de les activitats d'ampliació, expliqueu-los què fareu el pròxim dia."
+        },
+        "6d1e12d2-9d95-4b3d-b7cc-3fee11148439": {
+          "name": "Alça la veu",
+          "description": "Animeu els alumnes a compartir algun aspecte de la seva experiència amb l'Hora del Codi a les xarxes socials amb l'etiqueta #hourofcode per alçar la veu i donar visibilitat a aquest moviment mundial. Poden compartir els seus jocs, imatges, vídeos o reflexions."
         },
         "4ae8bc68-25be-4eaa-ae1e-b9bfe8623a23": {
           "name": "Després d'una Hora del Codi"
@@ -354,31 +376,47 @@
           "name": "Reflexió"
         },
         "6b51b4f1-5b1d-4b29-af25-c48d716a2d22": {
+          "description": "#### Prepareu el terreny\n\nDoneu la benvinguda als alumnes i introduïu molt breument l’activitat d’avui. \n\n**Digueu:** _Avui dedicarem una hora a prendre a codificar, és a dir, programar. Coneixeu les paraules “programar” o “codificar”? Què volen dir?_\n\nÉs possible que algú digui que un “codi” és un missatge secret, o que té a veure amb els ordinadors.",
           "tips": [
-            null
+            "Una manera de presentar l'Hora del Codi, si vosaltres mateixos tampoc no esteu gaire familiaritzats amb la programació, és posar un dels nostres [vídeos d'inspiració](https://hourofcode.com/us/resources#videos). Trieu-ne un que creieu que agradarà als vostres alumnes. Per als alumnes més petits, us recomanem [Ja és aquí l'Hora del Codi](https://youtu.be/FC5FbmsH4fw)."
           ]
         },
         "dd7bde99-d360-4587-8d30-75383b930808": {
+          "description": "Expliqueu que, en informàtica, el “codi” és el conjunt d’instruccions que pot entendre l’ordinador. Digueu que, avui, practicaran amb la “programació”, la “codificació”, els \"esdeveniments\" i la “depuració”.\n\nDefiniu:\n\n-   Codificar significa escriure un codi, és a dir, les instruccions per un ordinador.\n-   Programar significa escriure un codi o instruccions. Avui, programarem amb blocs a l’ordinador (si feu sevir un tutorial en línia) o amb paper i llapis (si feu servir una activitat sense connexió).\n-   Depurar significa revisar el codi per trobar i arreglar errors.",
           "tips": [
-            null
+            "Convé dedicar molt poc temps a explicar o presentar l'Hora del Codi. Especialment amb els alumnes més petits, val més la pena començar com més aviat millor. Si expliquem massa al principi, ens arrisquem a avorrir-los, i el que volem és que s'ho passin d'allò més bé!"
           ]
         },
         "88489303-1952-49c3-914a-2cfa7a138778": {
-          "name": "Introducció"
+          "name": "Introducció",
+          "description": "Poseu als alumnes un dels vídeos següents, o tots dos, a tall d'introducció als angles:\n\n**Introducció a l'Artista - Vídeo de l'alumne** (1:50 minuts de duració)\n\n**Girs i angles - Vídeo de l'alumne** (2:00 minuts de duració)\n\nFeu servir **Girs i angles - Fitxa de l'alumne** per ensenyar les diferències entre els angles interiors i els exteriors de diferents figures. Podeu fer servir aquest document com a guia de treball, o imprimir-lo per penjar-lo com si fos un pòster per a què els alumnes el puguin consultar en qualsevol moment.\n\nComenteu les formes quadrada i triangular del document.\n\n-   Com programaries un ordinador per dibuixar aquesta forma?\n-   Quin ordre han de seguir les instruccions?\n\nExpliqueu que, en aquests trencaclosques, faran que un personatge es mogui i traci una línia allà on vagi. Els alumnes escriuran un codi que farà que el personatge dibuixi diverses formes, entre elles un quadrat."
         },
         "75db60fb-671b-4740-80ae-0b13f4c09897": {
-          "name": "Artista"
+          "name": "L'Artista",
+          "description": "En aquests trencaclosques, l'artista no estarà limitat a moure's només en angles de 90°. Si teniu transportadors d'angles a l'aula, els alumnes podran veure els angles que hauran de fer servir. Si no, a la pantalla veuran les imatges dels angles quan seleccionin el que volen fer servir. (Tingueu en compte que només podran triar dos angles al menú desplegable, per tal de reduir les opcions que han de provar).\n\nAbans de fer que passin als ordinadors per fer els trencaclosques, potser valdria la pena fer una breu demostració sobre com es fan servir les eines d'aquest nivell. Us recomanem el trencaclosques 5 per demostrar com fer servir el transportador en línia."
+        },
+        "8aeabd7e-dab0-4f23-827b-58d98a04085f": {
+          "description": "Animeu els alumnes a fer aquesta activitat de [L'Artista](https://studio.code.org/s/artist/lessons/1/levels/1).\n\nSegons l’edat i les habilitats dels alumnes, potser us ajudarà fer el següent:\n\n-   Per als alumnes més petits, recomanem dividir la classe en parelles i demanar a cada grup que faci el tutorial fent [programació per parelles](https://youtu.be/vgkahOzFH2Q).\n-   Per als alumnes de cursos intermedis, hem observat que fer els tutorials de manera autònoma funciona bé. De vegades ajuda deixar que triïn el tutorial que volen fer. Si no els interessa Minecraft, tindran una experiència molt semblant amb els tutorials [Programa amb l’Anna i l’Elsa](https://studio.code.org/s/frozen/stage/1/puzzle/1) o [La guerra de les galàxies](https://code.org/starwars).\n-   Per als alumnes més grans o adults, el tutorial de [L'Artista](https://studio.code.org/s/artist/lessons/1/levels/1) funciona molt bé, tant com a repte independent o com a exercici de programació per parelles."
         },
         "cce13cd7-04e3-4d93-9b74-9c3df8a7691a": {
           "description": "Si un grup o un alumne acaba abans que la resta, pot fer un altre tutorial a [code.org/learn](<>)."
+        },
+        "461e1eda-c85f-4f41-aa4d-719d6a88d8d2": {
+          "description": "#### Comentaris\n\nDemaneu als alumnes que reflexionin sobre les activitats que heu fet avui. Què han après sobre codificar? I sobre programar? I sobre la depuració?\n\n-   Quins són els angles interiors que formen un quadrat? I un triangle?\n-   Dibuixeu una forma senzilla en un full i imagineu el codi que necessiteu per dibuixar-lo. Podeu escriure el codi al costat de la forma?\n\nDesprés d’haver passat una hora descobrint la informàtica i la codificació, els agrada?\n\n#### Celebració\n\nExpliqueu que avui passareu una hora programant, perquè som a la Setmana de l'Educació en Informàtica, i milions d'alumnes d'arreu del món també han estat fent una Hora del Codi. Feliciteu-los per formar part d'aquest moviment mundial.\n\nDoneu [un certificat](https://studio.code.org/certificates/batch) a cada alumne i alumna en què hi posi el seu nom.\n\n#### Propers passos\n\nDigueu als alumnes que, si els ha agradat l'activitat d'avui, tenen moltes opcions per seguir programant. Animeu-los a visitar [code.org/learn](https://studio.code.org/certificates/batch) per trobar-les totes, o si teniu pensat fer alguna de les activitats d'ampliació, expliqueu-los què fareu el pròxim dia."
+        },
+        "532c3e19-487f-44e0-97ff-a71886e169f2": {
+          "description": "#### Després de l’Hora del Codi\n\nUn cop acabada l’Hora del Codi, hi ha moltes maneres de seguir ensenyant informàtica als alumnes de primària. Aquí teniu algunes idees:\n\n-   **Feu els cursos [Fonaments d’Informàtica de Code Studio](http://code.org/educate/k5)**. Es tracta de sis cursos dissenyats per als més petits. Els alumnes faran una sèrie de trencaclosques que els ensenyaran a programar, i els docents tindreu accés a planificacions de lliçons entretingudes que faran que els nens es diverteixin aprenent. Per aquests cursos, Code.org ofereix desenvolupament professional gratuït, tant en línia com presencial.\n-   **Visiteu [Tu també pots ensenyar informàtica](https://studio.code.org/courses?view=teacher)** per veure més propostes de cursos.\n-   **Convideu un expert en informàtica a que vingui a parlar amb la vostra classe**. No en coneixeu cap? Contacteu amb un voluntari del nostre [mapa de voluntaris](https://code.org/volunteer/local).\n\nFeu servir l’activitat següent per reforçar l’aprenentatge dels alumnes. La podeu fer com activitat fora de l’aula o com a activitat d’aprofundiment.\n\n**La fotocopiadora**\n\n-   Doneu als alumnes dos fulls de paper\n-   En un d’ells, dibuixeu una imatge senzilla, fent servir només línies rectes.\n-   En l’altre, dibuixeu instruccions per recrear les ordres d’aquesta imatge, amb moviments en línia recta i girs de diferents angles.\n-   Feu que s’intercanviïn els fulls i intentin recrear la imatge fent servir només les instruccions proporcionades."
         },
         "a2f60a17-c25f-4c4d-9f2d-384486d7a67d": {
           "name": "Prepareu el terreny"
         },
         "c857d03e-91e3-4949-8ccc-79a2aec463c8": {
           "tips": [
-            null
+            "Una manera de presentar l'Hora del Codi, si vosaltres mateixos tampoc no esteu gaire familiaritzats amb la programació, és posar un dels nostres [vídeos d'inspiració](https://hourofcode.com/us/resources#videos). Trieu-ne un que creieu que agradarà als vostres alumnes. Per als alumnes més petits, us recomanem \"[Tothom pot aprendre](https://youtu.be/qYZF6oIZtfc).”"
           ]
+        },
+        "8ad0974f-b2ad-4632-bfe5-8c8760cd2e45": {
+          "description": "Expliqueu que, en informàtica, un “codi” és un conjunt d’instruccions que pot entendre un ordinador. Digueu-los que avui practicaran la “codificació”, la “programació” i la “depuració”.\n\nDefiniu:\n\n-   **Codificar** significa escriure codi, o un conjunt d’instruccions per un ordinador.\n-   **Programar** és similar: vol dir escriure codi o instruccions. Avui, programareu amb blocs a l’ordinador (si feu servir un tutorial en línia) o amb paper i llapis (si feu servir una activitat sense connexió).\n-   **Depurar** significa revisar el codi per trobar-hi errors i provar de solucionar-los.\n\nPregunteu als alumnes què els agradaria fer després d’acabar la secundària. Feu que aixequin la mà si creuen que aquesta opció requerirà que facin servir un ordinador. Tots haurien d’aixecar la mà, perquè els ordinadors estan per tot arreu: als mòbils, als cotxes, fins i tot als microones i rentavaixelles!\n\nPregunteu als alumnes quants instituts creuen que hi ha als Estats Units. La resposta és que uns 100.000. Ara, demaneu-los que esbrinin quants d’aquests centres fan l’assignatura d’informàtica. La resposta és menys d’un de cada quatre. Això vol dir que menys del 25% de la població d’Estats Units té l’oportunitat d’aprendre informàtica a l’escola.\n\nPregunteu: com creieu que això afecta a la capacitat dels joves per aconseguir la seva feina ideal o per accedir a la universitat a la qual volen anar, si tenen molt poca o cap experiència fent servir els ordinadors? Aquest problema no el trobem només als Estats Units, sinó arreu del món.\n\nExpliqueu que hi ha alumnes d’arreu del món que, igual que ells, estan fent l’Hora del Codi per conscienciar sobre aquesta injustícia, és a dir, la manca d’accés a la formació en informàtica. La vostra classe hi participarà no només per aprendre els fonaments de la ciència de la computació i divertir-se una estona, sinó també per posicionar-se i alçar la veu sobre com d’important és que tothom pugui aprendre informàtica."
         },
         "eea63453-59c2-4c48-8d04-d6612d379584": {
           "tips": [
@@ -389,14 +427,20 @@
           "description": "Si un grup o un alumne acaba abans que la resta, pot fer un altre tutorial a [code.org/learn](http://code.org/learn)."
         },
         "0815f2e7-8336-48ae-8ac0-5d0af1f956d9": {
-          "name": "Comentaris"
+          "name": "Comentaris",
+          "description": "Feu l’activitat de “Girar i parlar”. Demaneu als alumnes que comparteixin el seu joc, aplicació o projecte acabat amb el company del costat perquè els digui què en pensa. Després, seran ells qui provin l’aplicació o el joc del company. Demaneu a alguns grups que comparteixin la seva experiència: què heu après sobre com funcionen les aplicacions i els jocs? Què us sembla tenir l’oportunitat d’aprendre informàtica?"
         },
         "3b92bb05-ac4c-4717-afce-ed3d10f54527": {
-          "name": "Celebració"
+          "name": "Celebració",
+          "description": "Expliqueu que avui passareu una hora programant, perquè som a la Setmana de l'Educació en Informàtica, i milions d'alumnes d'arreu del món també han estat fent una Hora del Codi. Feliciteu-los per formar part d'aquest moviment mundial.\n\nDoneu un [certificat](http://code.org/certificates) a cada alumne i alumna en què hi posi el seu nom."
         },
         "59cd05df-cb4d-4280-8700-840826c01845": {
           "name": "Propers passos",
           "description": "Digueu als alumnes que, si els ha agradat l'activitat d'avui, tenen moltes opcions per seguir programant. Animeu-los a visitar code.org/learn per trobar-les totes, o si teniu pensat fer alguna de les activitats d'ampliació, expliqueu-los què fareu el pròxim dia."
+        },
+        "94661bb9-f6c1-40ac-ba26-15a09e2eece7": {
+          "name": "Alça la veu",
+          "description": "Animeu els alumnes a compartir algun aspecte de la seva experiència amb l'Hora del Codi a les xarxes socials amb l'etiqueta #hourofcode per alçar la veu i donar visibilitat a aquest moviment mundial. Poden compartir els seus jocs, imatges, vídeos o reflexions."
         },
         "2836d5f0-0808-4868-bc34-bbd3cf8b631f": {
           "name": "Després d'una Hora del Codi"
@@ -418,7 +462,7 @@
         },
         "c5d3d108-b29a-4955-a63b-e8a35d2b57a1": {
           "tips": [
-            "Una manera de presentar l'Hora del Codi si vosaltres mateixos tampoc no esteu gaire familiaritzats amb la programació es posar un dels nostres [vídeos inspiracionals](https://hourofcode.com/promote/resources#videos). Trieu-ne un que creieu que agradarà als vostres alumnes. Per alumnes de cursos intermedis, us recomanem [Ja és aquí l'Hora del Codi](https://youtu.be/FC5FbmsH4fw)."
+            null
           ]
         },
         "3d2ec9d2-ed62-4db0-99ca-ddf8e012d75a": {
@@ -475,7 +519,7 @@
         },
         "63df0c6e-ae3d-4724-9c1d-2ecd5bf8986a": {
           "tips": [
-            "Una manera de presentar l'Hora del Codi si vosaltres mateixos tampoc no esteu gaire familiaritzats amb la programació es posar un dels nostres [vídeos inspiracionals](https://hourofcode.com/us/resources#videos). Trieu-ne un que creieu que agradarà als vostres alumnes. Per als alumnes més petits, us recomanem \"[Ja és aquí l'Hora del Codi](https://youtu.be/FC5FbmsH4fw).”"
+            "Una manera de presentar l'Hora del Codi, si vosaltres mateixos tampoc no esteu gaire familiaritzats amb la programació, és posar un dels nostres [vídeos d'inspiració](https://hourofcode.com/us/resources#videos). Trieu-ne un que creieu que agradarà als vostres alumnes. Per als alumnes més petits, us recomanem \"[Ja és aquí l'Hora del Codi](https://youtu.be/FC5FbmsH4fw).”"
           ]
         },
         "f96053ea-387e-47d5-a018-65619ec093b0": {
@@ -587,7 +631,7 @@
         },
         "6fa68bdd-8f9b-4d69-b54e-28141ee6d732": {
           "tips": [
-            null
+            "Una manera de presentar l'Hora del Codi, si vosaltres mateixos tampoc no esteu gaire familiaritzats amb la programació, és posar un dels nostres [vídeos d'inspiració](https://hourofcode.com/us/resources#videos). Trieu-ne un que creieu que agradarà als vostres alumnes. Per als alumnes més petits, us recomanem [Ja és aquí l'Hora del Codi](https://youtu.be/FC5FbmsH4fw)."
           ]
         },
         "b17f8e8a-6b46-4f46-a4fc-894cf561bb9d": {
@@ -599,7 +643,8 @@
           "name": "Comentaris"
         },
         "4cb35c62-404e-42b9-9eaf-09ec2f485a2b": {
-          "name": "Celebració"
+          "name": "Celebració",
+          "description": "Expliqueu que avui passareu una hora programant, perquè som a la Setmana de l'Educació en Informàtica, i milions d'alumnes d'arreu del món també han estat fent una Hora del Codi. Feliciteu-los per formar part d'aquest moviment mundial.\n\nDoneu un [certificat](http://code.org/certificates) a cada alumne i alumna en què hi posi el seu nom."
         },
         "80ff32c9-0373-4125-a65e-bef5f0e21cba": {
           "name": "Propers passos",
@@ -662,8 +707,11 @@
         },
         "2c9a4cbc-51ba-45a3-80f6-cb27e681f4ba": {
           "tips": [
-            null
+            "Una manera de presentar l'Hora del Codi, si vosaltres mateixos tampoc no esteu gaire familiaritzats amb la programació, és posar un dels nostres [vídeos d'inspiració](https://hourofcode.com/us/resources#videos). Trieu-ne un que creieu que agradarà als vostres alumnes. Per als alumnes més petits, us recomanem \"[Tothom pot aprendre](https://youtu.be/qYZF6oIZtfc).”"
           ]
+        },
+        "2d643de7-7994-4220-8bd4-095aab85e9ec": {
+          "description": "Expliqueu que, en informàtica, un “codi” és un conjunt d’instruccions que pot entendre un ordinador. Digueu-los que avui practicaran la “codificació”, la “programació” i la “depuració”.\n\nDefiniu:\n\n-   **Codificar** significa escriure codi, o un conjunt d’instruccions per un ordinador.\n-   **Programar** és similar: vol dir escriure codi o instruccions. Avui, programareu amb blocs a l’ordinador (si feu servir un tutorial en línia) o amb paper i llapis (si feu servir una activitat sense connexió).\n-   **Depurar** significa revisar el codi per trobar-hi errors i provar de solucionar-los.\n\nPregunteu als alumnes què els agradaria fer després d’acabar la secundària. Feu que aixequin la mà si creuen que aquesta opció requerirà que facin servir un ordinador. Tots haurien d’aixecar la mà, perquè els ordinadors estan per tot arreu: als mòbils, als cotxes, fins i tot als microones i rentavaixelles!\n\nPregunteu als alumnes quants instituts creuen que hi ha als Estats Units. La resposta és que uns 100.000. Ara, demaneu-los que esbrinin quants d’aquests centres fan l’assignatura d’informàtica. La resposta és menys d’un de cada quatre. Això vol dir que menys del 25% de la població d’Estats Units té l’oportunitat d’aprendre informàtica a l’escola.\n\nPregunteu: com creieu que això afecta a la capacitat dels joves per aconseguir la seva feina ideal o per accedir a la universitat a la qual volen anar, si tenen molt poca o cap experiència fent servir els ordinadors? Aquest problema no el trobem només als Estats Units, sinó arreu del món.\n\nExpliqueu que hi ha alumnes d’arreu del món que, igual que ells, estan fent l’Hora del Codi per conscienciar sobre aquesta injustícia, és a dir, la manca d’accés a la formació en informàtica. La vostra classe hi participarà no només per aprendre els fonaments de la ciència de la computació i divertir-se una estona, sinó també per posicionar-se i alçar la veu sobre com d’important és que tothom pugui aprendre informàtica."
         },
         "64df1a91-0ed0-44d3-a04d-ea8d2fee7dd2": {
           "name": "Play Lab"
@@ -677,7 +725,8 @@
           "description": "Si un grup o un alumne acaba abans que la resta, pot fer un altre tutorial a [code.org/learn](http://code.org/learn)."
         },
         "1b1218b0-776f-47eb-8a9d-f4c48a41ed5e": {
-          "name": "Comentaris"
+          "name": "Comentaris",
+          "description": "Feu l’activitat de “Girar i parlar”. Demaneu als alumnes que comparteixin el seu joc, aplicació o projecte acabat amb el company del costat perquè els digui què en pensa. Després, seran ells qui provin l’aplicació o el joc del company. Demaneu a alguns grups que comparteixin la seva experiència: què heu après sobre com funcionen les aplicacions i els jocs? Què us sembla tenir l’oportunitat d’aprendre informàtica?"
         },
         "cd90d1b3-60ef-4236-a8a3-3c7701224f98": {
           "name": "Celebració",
@@ -687,8 +736,13 @@
           "name": "Propers passos",
           "description": "Digueu als alumnes que, si els ha agradat l'activitat d'avui, tenen moltes opcions per seguir programant. Animeu-los a visitar code.org/learn per trobar-les totes, o si teniu pensat fer alguna de les activitats d'ampliació, expliqueu-los què fareu el pròxim dia."
         },
+        "513a07e1-551a-45d3-bd35-7e1de49293a2": {
+          "name": "Alça la veu",
+          "description": "Animeu els alumnes a compartir algun aspecte de la seva experiència amb l'Hora del Codi a les xarxes socials amb l'etiqueta #hourofcode per alçar la veu i donar visibilitat a aquest moviment mundial. Poden compartir els seus jocs, imatges, vídeos o reflexions."
+        },
         "8531cf05-6363-4654-b20a-455e85fa16a0": {
-          "name": "Després d'una Hora del Codi"
+          "name": "Després d'una Hora del Codi",
+          "description": "Un cop acabada l’Hora del Codi, hi ha moltes maneres de seguir ensenyant informàtica als alumnes de primària. Aquí teniu algunes idees:\n\n-   **Feu els cursos [Fonaments d’Informàtica de Code Studio](http://code.org/educate/k5)**. Es tracta de sis cursos dissenyats per als més petits. Els alumnes faran una sèrie de trencaclosques que els ensenyaran a programar, i els educadors tindreu accés a planificacions de lliçons entretingudes que faran que els nens es diverteixin aprenent. Per aquests cursos, Code.org ofereix desenvolupament professional gratuït, tant en línia com presencial.\n-   **Convideu un expert en informàtica a que vingui a parlar amb la vostra classe**. Si no en coneixeu cap, contacteu amb alguns voluntaris del [mapa de voluntaris](https://code.org/volunteer/local)."
         },
         "bdbf2184-a699-461e-b766-8b3e35e1a5e8": {
           "name": "Introducció"
@@ -717,11 +771,12 @@
           "name": "Reflexió"
         },
         "00b66dcf-d546-4649-aa21-6d97981fa444": {
-          "name": "Prepareu el terreny"
+          "name": "Prepareu el terreny",
+          "description": "#### Prepareu el terreny\n\nDoneu la benvinguda als alumnes i introduïu molt breument l’activitat d’avui. \n\n**Digueu:** _Avui dedicarem una hora a prendre a codificar, és a dir, programar. Coneixeu les paraules “programar” o “codificar”? Què volen dir?_\n\nÉs possible que algú digui que un “codi” és un missatge secret, o que té a veure amb els ordinadors."
         },
         "88f6ccc1-0efa-4c60-985c-971a235d5645": {
           "tips": [
-            null
+            "Una manera de presentar l'Hora del Codi, si vosaltres mateixos tampoc no esteu gaire familiaritzats amb la programació, és posar un dels nostres [vídeos d'inspiració](https://hourofcode.com/us/resources#videos). Trieu-ne un que creieu que agradarà als vostres alumnes. Per als alumnes més petits, us recomanem [Ja és aquí l'Hora del Codi](https://youtu.be/FC5FbmsH4fw)."
           ]
         },
         "88879c41-12f5-4d2e-86e6-93925b83d7d0": {
@@ -733,7 +788,8 @@
           "name": "Comentaris"
         },
         "16a6a4db-d853-478e-9945-3f0d17865e80": {
-          "name": "Celebració"
+          "name": "Celebració",
+          "description": "Expliqueu que avui passareu una hora programant, perquè som a la Setmana de l'Educació en Informàtica, i milions d'alumnes d'arreu del món també han estat fent una Hora del Codi. Feliciteu-los per formar part d'aquest moviment mundial.\n\nDoneu un [certificat](http://code.org/certificates) a cada alumne i alumna en què hi posi el seu nom."
         },
         "450db873-f55e-4f30-bbb9-5dfde5bf47e4": {
           "name": "Propers passos",
@@ -797,16 +853,22 @@
         },
         "21f43e64-dea3-4abc-8284-e055480370ce": {
           "name": "Introducció",
+          "description": "#### Prepareu el terreny\n\nDoneu la benvinguda als alumnes i introduïu molt breument l’activitat d’avui. \n\nDigueu: _Avui dedicarem una hora a prendre a codificar, és a dir, programar. Coneixeu les paraules “programar” o “codificar”? Què volen dir?_\n\nÉs possible que algú digui que un “codi” és un missatge secret, o que té a veure amb els ordinadors.",
           "tips": [
-            null
+            "Una manera de presentar l'Hora del Codi, si vosaltres mateixos tampoc no esteu gaire familiaritzats amb la programació, és posar un dels nostres [vídeos d'inspiració](https://hourofcode.com/us/resources#videos). Trieu-ne un que creieu que agradarà als vostres alumnes. Per als alumnes més petits, us recomanem [Ja és aquí l'Hora del Codi](https://youtu.be/FC5FbmsH4fw)."
           ]
         },
         "e7a740e5-690b-408c-b647-fb6f47cc2d3d": {
+          "description": "Expliqueu que, en informàtica, el “codi” és el conjunt d’instruccions que pot entendre l’ordinador. Digueu que, avui, practicaran amb la “programació”, la “codificació”, els \"esdeveniments\" i la “depuració”.\nDefiniu:\n\n-   Codificar significa escriure un codi, és a dir, les instruccions per un ordinador.\n-   Programar significa escriure un codi o instruccions. Avui, programarem amb blocs a l’ordinador (si feu sevir un tutorial en línia) o amb paper i llapis (si feu servir una activitat sense connexió).\n-   Un esdeveniment és una acció que fa que passi alguna cosa.\n-   Depurar significa revisar el codi per trobar i arreglar errors.",
           "tips": [
-            null
+            "Convé dedicar molt poc temps a explicar o presentar l'Hora del Codi. Especialment amb els alumnes més petits, val més la pena començar com més aviat millor. Si expliquem massa al principi, ens arrisquem a avorrir-los, i el que volem és que s'ho passin d'allò més bé!"
           ]
         },
+        "821aeaeb-2dd7-4e84-a7e0-0cdfdaeaff28": {
+          "description": "Demaneu als alumnes que vinguin a seure a prop vostre. Ara, digueu-los que es posin de peu!\nDigueu-los que el que acabeu de fer és declarar un esdeveniment i una acció. Quan els dieu que s’asseguin, és un esdeveniment. L’acció que respon a aquest esdeveniment és que tots s’han assegut. És el mateix que quan els heu dit que es posessin de peu. Els esdeveniments i les accions són fàcils d’identificar en la vida diària.\n\nAlguns esdeveniments i accions podrien ser:\n\n-   Tenir gana i menjar alguna cosa\n-   Donar-se un cop al peu i cridar “Ai!”\n-   Agafar la pilota en un partit de bàsquet i anotar!\n\nDemaneu a la classe que pensin un parell més d’esdeveniments. Digueu-los que crearan un joc en què hi haurà accions associades als esdeveniments que programin!"
+        },
         "5eddd5c3-23b2-453b-83fa-e0cda19ad4c3": {
+          "description": "Al final d'aquesta sèrie de trencaclosques, els alumnes podran fer que el seu joc sigui únic. Feu que els alumnes provin maneres noves de fer que el joc sigui més difícil. Per exemple, poden provar de jugar amb moltes pilotes alhora, o fer que cada vegada que la pilota reboti a la paret, apareguin més pilotes.\n\nSi un grup o alumne acaba abans de temps, poden provar de fer un altre tutorial a [code.org/learn](<>).",
           "tips": [
             null
           ]
@@ -817,13 +879,23 @@
             null
           ]
         },
+        "95cc8163-fcee-44bd-95c8-606999d2c378": {
+          "description": "**Ordre correcte: D, B, A, C**"
+        },
+        "11b82689-57e5-404f-8846-51e10f2642d0": {
+          "description": "#### Comentaris\n\nDemaneu als alumnes que reflexionin sobre les activitats que heu fet avui. Què han après sobre codificar? I sobre programar? I sobre la depuració? I sobre els esdeveniments? Després d’haver passat una hora descobrint la informàtica i la codificació, els agrada?\n\n#### Celebració\n\nExpliqueu que avui passareu una hora programant, perquè som a la Setmana de l'Educació en Informàtica, i milions d'alumnes d'arreu del món també han estat fent una Hora del Codi. Feliciteu-los per formar part d'aquest moviment mundial.\n\nDoneu [un certificat](https://studio.code.org/certificates/batch) a cada alumne i alumna en què hi posi el seu nom.\n\n#### Propers passos\n\nDigueu als alumnes que, si els ha agradat l'activitat d'avui, tenen moltes opcions per seguir programant. Animeu-los a visitar code.org/learn per trobar-les totes, o si teniu pensat fer alguna de les activitats d'ampliació, expliqueu-los què fareu el pròxim dia."
+        },
         "88079aec-5c42-4f3f-bbb6-cba4f8866c92": {
-          "name": "Prepareu el terreny"
+          "name": "Prepareu el terreny",
+          "description": "Doneu la benvinguda als alumnes i introduïu molt breument l’activitat d’avui. \n\n_Digueu: “Avui dedicarem una hora a prendre a codificar, és a dir, programar. Coneixeu les paraules “programar” o “codificar”? Què volen dir?”_\n\nÉs possible que algú digui que un “codi” és un missatge secret, o que té a veure amb els ordinadors."
         },
         "6874de98-8778-447b-8453-0138809b2c7e": {
           "tips": [
-            null
+            "Una manera de presentar l'Hora del Codi, si vosaltres mateixos tampoc no esteu gaire familiaritzats amb la programació, és posar un dels nostres [vídeos d'inspiració](https://hourofcode.com/us/resources#videos). Trieu-ne un que creieu que agradarà als vostres alumnes. Per als alumnes més petits, us recomanem \"[Tothom pot aprendre](https://youtu.be/qYZF6oIZtfc).”"
           ]
+        },
+        "82e4a494-65fb-40ac-b2c2-323044e15b77": {
+          "description": "Expliqueu que, en informàtica, un “codi” és un conjunt d’instruccions que pot entendre un ordinador. Digueu-los que avui practicaran la “codificació”, la “programació” i la “depuració”.\n\nDefiniu:\n\n-   **Codificar** significa escriure codi, o un conjunt d’instruccions per un ordinador.\n-   **Programar** és similar: vol dir escriure codi o instruccions. Avui, programareu amb blocs a l’ordinador (si feu servir un tutorial en línia) o amb paper i llapis (si feu servir una activitat sense connexió).\n-   **Depurar** significa revisar el codi per trobar-hi errors i provar de solucionar-los.\n\nPregunteu als alumnes què els agradaria fer després d’acabar la secundària. Feu que aixequin la mà si creuen que aquesta opció requerirà que facin servir un ordinador. Tots haurien d’aixecar la mà, perquè els ordinadors estan per tot arreu: als mòbils, als cotxes, fins i tot als microones i rentavaixelles!\n\nPregunteu als alumnes quants instituts creuen que hi ha als Estats Units. La resposta és que uns 100.000. Ara, demaneu-los que esbrinin quants d’aquests centres fan l’assignatura d’informàtica. La resposta és menys d’un de cada quatre. Això vol dir que menys del 25% de la població d’Estats Units té l’oportunitat d’aprendre informàtica a l’escola.\n\nPregunteu: com creieu que això afecta a la capacitat dels joves per aconseguir la seva feina ideal o per accedir a la universitat a la qual volen anar, si tenen molt poca o cap experiència fent servir els ordinadors? Aquest problema no el trobem només als Estats Units, sinó arreu del món.\n\nExpliqueu que hi ha alumnes d’arreu del món que, igual que ells, estan fent l’Hora del Codi per conscienciar sobre aquesta injustícia, és a dir, la manca d’accés a la formació en informàtica. La vostra classe hi participarà no només per aprendre els fonaments de la ciència de la computació i divertir-se una estona, sinó també per posicionar-se i alçar la veu sobre com d’important és que tothom pugui aprendre informàtica."
         },
         "bd5d11f4-9c4c-4f24-bb9f-482392bd65aa": {
           "name": "Disney infinit Play Lab"
@@ -837,7 +909,8 @@
           "description": "Si un grup o un alumne acaba abans que la resta, pot fer un altre tutorial a [code.org/learn](http://code.org/learn)."
         },
         "a0530acf-3bce-4de9-b392-fe8725044086": {
-          "name": "Comentaris"
+          "name": "Comentaris",
+          "description": "Feu l’activitat de “Girar i parlar”. Demaneu als alumnes que comparteixin el seu joc, aplicació o projecte acabat amb el company del costat perquè els digui què en pensa. Després, seran ells qui provin l’aplicació o el joc del company. Demaneu a alguns grups que comparteixin la seva experiència: què heu après sobre com funcionen les aplicacions i els jocs? Què us sembla tenir l’oportunitat d’aprendre informàtica?"
         },
         "ceaf9d96-e806-48e1-9a95-30566999264e": {
           "name": "Celebració",
@@ -847,30 +920,54 @@
           "name": "Propers passos",
           "description": "Digueu als alumnes que, si els ha agradat l'activitat d'avui, tenen moltes opcions per seguir programant. Animeu-los a visitar code.org/learn per trobar-les totes, o si teniu pensat fer alguna de les activitats d'ampliació, expliqueu-los què fareu el pròxim dia."
         },
+        "2742e426-46e4-46d9-8e04-314c3469f15e": {
+          "name": "Alça la veu",
+          "description": "Animeu els alumnes a compartir algun aspecte de la seva experiència amb l'Hora del Codi a les xarxes socials amb l'etiqueta #hourofcode per alçar la veu i donar visibilitat a aquest moviment mundial. Poden compartir els seus jocs, imatges, vídeos o reflexions."
+        },
         "38f15942-4a08-48f7-a0c4-e04232bc9bdc": {
           "name": "Després d'una Hora del Codi"
         },
         "8295d7d8-acb1-4cc1-b178-8d89613aa6b6": {
           "name": "Introducció",
+          "description": "#### Prepareu el terreny\n\nDoneu la benvinguda als alumnes i introduïu molt breument l’activitat d’avui. \n\nDigueu: _Avui dedicarem una hora a prendre a codificar, és a dir, programar. Coneixeu les paraules “programar” o “codificar”? Què volen dir?_\n\nÉs possible que algú digui que un “codi” és un missatge secret, o que té a veure amb els ordinadors.",
           "tips": [
-            null
+            "Una manera de presentar l'Hora del Codi, si vosaltres mateixos tampoc no esteu gaire familiaritzats amb la programació, és posar un dels nostres [vídeos d'inspiració](https://hourofcode.com/us/resources#videos). Trieu-ne un que creieu que agradarà als vostres alumnes. Per als alumnes més petits, us recomanem [Ja és aquí l'Hora del Codi](https://youtu.be/FC5FbmsH4fw)."
           ]
         },
         "6b27ea94-da11-4c56-99c0-48e35ac5fbda": {
+          "description": "Expliqueu que, en informàtica, el “codi” és el conjunt d’instruccions que pot entendre l’ordinador. Digueu que, avui, practicaran amb la “programació”, la “codificació”, els \"esdeveniments\" i la “depuració”.\nDefiniu:\n\n-   Codificar significa escriure un codi, és a dir, les instruccions per un ordinador.\n-   Programar significa escriure un codi o instruccions. Avui, programarem amb blocs a l’ordinador (si feu sevir un tutorial en línia) o amb paper i llapis (si feu servir una activitat sense connexió).\n-   Un esdeveniment és una acció que fa que passi alguna cosa.\n-   Depurar significa revisar el codi per trobar i arreglar errors.",
           "tips": [
-            null
+            "Convé dedicar molt poc temps a explicar o presentar l'Hora del Codi. Especialment amb els alumnes més petits, val més la pena començar com més aviat millor. Si expliquem massa al principi, ens arrisquem a avorrir-los, i el que volem és que s'ho passin d'allò més bé!"
           ]
         },
+        "94273f25-07f7-401b-85f9-13bc82c64695": {
+          "description": "Demaneu als alumnes que vinguin a seure a prop vostre. Ara, digueu-los que es posin de peu!\nDigueu-los que el que acabeu de fer és declarar un esdeveniment i una acció. Quan els dieu que s’asseguin, és un esdeveniment. L’acció que respon a aquest esdeveniment és que tots s’han assegut. És el mateix que quan els heu dit que es posessin de peu. Els esdeveniments i les accions són fàcils d’identificar en la vida diària.\n\nAlguns esdeveniments i accions podrien ser:\n\n-   Tenir gana i menjar alguna cosa\n-   Donar-se un cop al peu i cridar “Ai!”\n-   Agafar la pilota en un partit de bàsquet i anotar!\n\nDemaneu a la classe que pensin un parell més d’esdeveniments. Digueu-los que crearan un joc en què hi haurà accions associades als esdeveniments que programin!"
+        },
+        "41a58fa3-ee0d-46ca-be76-89def06d2062": {
+          "name": "Programa el teu propi joc de bàsquet",
+          "description": "Animeu els alumnes a fer l'activitat [Programa el teu joc de bàsquet](https://studio.code.org/s/basketball/lessons/1/levels/1).\n\nSegons l’edat i les habilitats dels alumnes, potser us ajudarà fer el següent:\n\n-   Per als alumnes més petits, recomanem dividir la classe en parelles i demanar a cada grup que faci el tutorial fent [programació per parelles](https://youtu.be/vgkahOzFH2Q).\n-   Per als alumnes de cursos intermedis, hem observat que fer els tutorials de manera autònoma funciona bé. De vegades ajuda deixar que triïn el tutorial que volen fer. Si no els interessa Minecraft, tindran una experiència molt semblant amb els tutorials [Programa amb l’Anna i l’Elsa](https://studio.code.org/s/frozen/stage/1/puzzle/1) o [La guerra de les galàxies](https://code.org/starwars).\n-   Per als alumnes més grans o adults, el tutorial de [Programa el teu joc de bàsquet](https://studio.code.org/s/basketball/lessons/1/levels/1) funciona molt bé, tant com a repte independent o com a exercici de programació per parelles."
+        },
         "720eaa7d-2623-4fab-bd98-ee2dda7831fc": {
+          "description": "Al final d'aquesta sèrie de trencaclosques, els alumnes podran fer que el seu joc sigui únic. Feu que els alumnes provin maneres noves de fer que el joc sigui més difícil. Per exemple, poden provar de jugar amb moltes pilotes alhora, o fer que cada vegada que la pilota reboti a la paret, apareguin més pilotes.\n\nSi un grup o alumne acaba abans de temps, poden provar de fer un altre tutorial a [code.org/learn](<>).",
           "tips": [
-            null
+            "Recordeu als alumnes que només comparteixin la seva feina amb els amics propers o la família. Per a més informació, mireu o ensenyeu a la classe el vídeo [Pause and think online (A les xarxes, para't a pensar)](https://www.youtube.com/watch?v=rgbZAWnOWOo)."
           ]
         },
         "3d7a5e6b-1a14-4091-98a1-c2bc45e970b0": {
           "name": "Avaluació",
+          "description": "Presenteu les diapositives **Esdeveniments de rebot – Com passen?** als alumnes. Feu que posin els esdeveniments de la segona diapositiva en l’ordre correcte a les seves llibretes. Després, demaneu a alguns alumnes que comparteixin les seves respostes abans d’ensenyar-los la tercera diapositiva. Comenteu la seqüència correcta amb la classe.",
           "tips": [
-            null
+            "Tot i que s’introdueix en aquesta lliçó, les diapositives “Esdeveniments de rebot – Com passen?” es poden aplicar de manera més general per expressar les relacions entre el maquinari i el programari. Més concretament, la diapositiva final simplifica la seqüència d’entrada-sortida i es pot fer servir com a pòster per penjar a l’aula."
           ]
+        },
+        "2754bec9-70a7-46db-8991-16bbf01adbe7": {
+          "description": "**Ordre correcte: D, B, A, C**"
+        },
+        "efd26bf1-c977-4fc3-883d-a37bb3e68a75": {
+          "description": "#### Comentaris\n\nDemaneu als alumnes que reflexionin sobre les activitats que heu fet avui. Què han après sobre codificar? I sobre programar? I sobre la depuració? I sobre els esdeveniments? Després d’haver passat una hora descobrint la informàtica i la codificació, els agrada?\n\n#### Celebració\n\nExpliqueu que avui passareu una hora programant, perquè som a la Setmana de l'Educació en Informàtica, i milions d'alumnes d'arreu del món també han estat fent una Hora del Codi. Feliciteu-los per formar part d'aquest moviment mundial.\n\nDoneu [un certificat](https://studio.code.org/certificates/batch) a cada alumne i alumna en què hi posi el seu nom.\n\n#### Propers passos\n\nDigueu als alumnes que, si els ha agradat l'activitat d'avui, tenen moltes opcions per seguir programant. Animeu-los a visitar code.org/learn per trobar-les totes, o si teniu pensat fer alguna de les activitats d'ampliació, expliqueu-los què fareu el pròxim dia."
+        },
+        "0eade685-f4a5-4d81-bc38-4371a06fbb06": {
+          "description": "#### Després de l’Hora del Codi\n\nUn cop acabada l’Hora del Codi, hi ha moltes maneres de seguir ensenyant informàtica als alumnes de primària. Aquí teniu algunes idees:\n\n-   **Feu els cursos [Fonaments d’Informàtica de Code Studio](http://code.org/educate/k5)**. Es tracta de sis cursos dissenyats per als més petits. Els alumnes faran una sèrie de trencaclosques que els ensenyaran a programar, i els docents tindreu accés a planificacions de lliçons entretingudes que faran que els nens es diverteixin aprenent. Per aquests cursos, Code.org ofereix desenvolupament professional gratuït, tant en línia com presencial.\n-   **Visiteu [Tu també pots ensenyar informàtica](https://studio.code.org/courses?view=teacher)** per veure més propostes de cursos.\n-   **Convideu un expert en informàtica a que vingui a parlar amb la vostra classe**. No en coneixeu cap? Contacteu amb un voluntari del nostre [mapa de voluntaris](https://code.org/volunteer/local).\n\n#### Juguem un partit!\n\nPorteu els alumnes al pati per jugar a algun joc de pilota. Feu seguiment dels esdeveniments i de les accions. Per exemple, si jugueu a bàsquet, si no fan regats, faran una falta de desplaçament i l’altre equip es quedarà la pilota. Si jugueu a futbol, enviar la pilota fora dels límits del camp farà que l’altre equip tregui. Ficar la pilota a la porteria farà que guanyin un punt. Si veieu que s’ho passen bé, podeu inventar regles noves. Feu que tots els alumnes cridin “Hurra!” quan el capità d’un equip marqui o anoti. Feu que tots es tirin al terra i facin la croqueta si un alumne marca dos gols o anota dues cistelles seguides."
         },
         "1f9abc1c-6217-4fb4-a348-e0293042dc7a": {
           "name": "Prepareu el terreny",
@@ -963,7 +1060,7 @@
         },
         "e1243ccf-be45-4f8e-a138-54953ea12f92": {
           "tips": [
-            "Una manera de presentar l'Hora del Codi si vosaltres mateixos tampoc no esteu gaire familiaritzats amb la programació es posar un dels nostres [vídeos inspiracionals](https://hourofcode.com/promote/resources#videos). Trieu-ne un que creieu que agradarà als vostres alumnes. Per alumnes de cursos intermedis, us recomanem [Ja és aquí l'Hora del Codi](https://youtu.be/FC5FbmsH4fw)."
+            "Una manera de presentar l'Hora del Codi, si vosaltres mateixos tampoc no esteu gaire familiaritzats amb la programació, és posar un dels nostres [vídeos d'inspiració](https://hourofcode.com/promote/resources#videos). Trieu-ne un que creieu que agradarà als vostres alumnes. Per als alumnes més petits, us recomanem [Ja és aquí l'Hora del Codi](https://youtu.be/FC5FbmsH4fw)."
           ]
         },
         "468ba876-6a73-42cb-94c6-a8dfa5bff320": {
@@ -2198,6 +2295,9 @@
         },
         "eabe75fb-4111-49c1-900c-dd18d6ec996d": {
           "description": "Aquesta lliçó ensenyarà els alumnes a utilitzar Code.org per resoldre trencaclosques en línia.\n\nMireu el vídeo de l'alumne de **\\*Programació per parelles** amb la classe i, a continuació, poseu-los per parelles. Això els donarà un bon punt de partida."
+        },
+        "29e7cac9-8b1a-4fd2-942f-10682a04aab3": {
+          "progression_name": "Vídeo - Introducció al laberint: Programació amb blocs"
         },
         "9d92fd5d-fcda-41d3-b081-b6be47316a2b": {
           "description": "Els professors teniu un paper molt important en l'educació informàtica i en propiciar un entorn col·laboratiu i dinàmic a l'aula. Mentre fan les activitats en línia, el paper principal del professor és animar i donar suport. Les lliçons en línia estan pensades per centrar-se en l'alumne, de manera que hauríeu d'evitar intervenir quan els nens s'encallin. Aquí teniu algunes idees per fer-ho:\n\n-   Feu servir la programació per parelles sempre que sigui possible durant l'activitat.\n-   Animeu els estudiants que tinguin preguntes o problemes a que primer li preguntin al company.\n-   Les preguntes sense resposta es poden dirigir a un grup proper, que potser ja sap la solució.\n-   Recordeu als alumnes que han de fer servir el procés de depuració abans d'apropar-vos al seu ordinador.\n-   Feu que els alumnes descriguin el problema que tenen davant. Què se suposa que ha de fer? Què fa? I això què els diu?\n-   Recordeu als alumnes frustrats que la frustració és un pas més del camí d'aprenentatge i que la persistència donarà fruit.\n-   Si un alumne segueix encallat després de tot aquest procés, feu-li preguntes orientatives per tal que detecti l'error per si mateix."
@@ -4774,6 +4874,10 @@
         },
         "d7a9e0cd-a7e6-46de-910f-3f0e1216f055": {
           "name": "Introducció"
+        },
+        "7416084b-fb76-4855-aabe-eeaf20181d79": {
+          "name": "Dades en imatges",
+          "progression_name": "Dades en imatges"
         },
         "4a782ed3-3443-4139-a1bd-88f562c4386e": {
           "tips": [
@@ -10414,6 +10518,9 @@
         "4784895a-ea4f-4a2f-b4ef-c392b016f01c": {
           "description": "Aquesta lliçó ensenyarà els alumnes a utilitzar Code.org per resoldre trencaclosques en línia.\n\nMireu el vídeo de l'alumne de **\\*Programació per parelles** amb la classe i, a continuació, poseu-los per parelles. Això els donarà un bon punt de partida."
         },
+        "52466cb4-0b52-4d09-aeb9-7db1a558001e": {
+          "progression_name": "Vídeo - Introducció al laberint: Programació amb blocs"
+        },
         "b9d126ca-d582-403d-a4dc-45c555d65700": {
           "description": "Els professors teniu un paper molt important en l'educació informàtica i en propiciar un entorn col·laboratiu i dinàmic a l'aula. Mentre fan les activitats en línia, el paper principal del professor és animar i donar suport. Les lliçons en línia estan pensades per centrar-se en l'alumne, de manera que hauríeu d'evitar intervenir quan els nens s'encallin. Aquí teniu algunes idees per fer-ho:\n\n-   Feu servir la programació per parelles sempre que sigui possible durant l'activitat.\n-   Animeu els estudiants que tinguin preguntes o problemes a que primer li preguntin al company.\n-   Les preguntes sense resposta es poden dirigir a un grup proper, que potser ja sap la solució.\n-   Recordeu als alumnes que han de fer servir el procés de depuració abans d'apropar-vos al seu ordinador.\n-   Feu que els alumnes descriguin el problema que tenen davant. Què se suposa que ha de fer? Què fa? I això què els diu?\n-   Recordeu als alumnes frustrats que la frustració és un pas més del camí d'aprenentatge i que la persistència donarà fruit.\n-   Si un alumne segueix encallat després de tot aquest procés, feu-li preguntes orientatives per tal que detecti l'error per si mateix."
         },
@@ -11646,7 +11753,8 @@
           ]
         },
         "0e769463-817e-4432-be93-87047256d015": {
-          "description": "#### Miniprojecte: Disseny d'adhesius"
+          "description": "#### Miniprojecte: Disseny d'adhesius",
+          "progression_name": "Miniprojecte: Art amb adhesius"
         },
         "9af30f82-82cd-4807-9609-900519e17c43": {
           "progression_name": "Joc lliure"
@@ -11772,6 +11880,10 @@
         },
         "b4d7372a-86cd-4d90-855d-0c241617237f": {
           "description": "_Aquestes ratlles ens ajuden a tenir en compte les respostes de tots, i això és molt útil, però encara hem de dedicar un temps a comptar quines opcions han rebut més o menys vots de totes. Imagineu que algú ens ensenyés les ratlles de tota l'escola. Trigaríem una bona estona a comptar-les totes!_"
+        },
+        "7a3d8d3f-1c95-475e-b752-5df39bf0f024": {
+          "name": "Dades en imatges",
+          "progression_name": "Dades en imatges"
         },
         "f0e7a0a5-69e8-44a7-a74a-e7bab3f36647": {
           "description": "**Repartiu:** Repartiu la **\\*fitxa de treball** amb llapis i colors. Dirigiu els alumnes cap a Code Studio o projecteu el nivell a la pissarra.",

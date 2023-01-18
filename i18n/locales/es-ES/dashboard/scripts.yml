@@ -6287,6 +6287,18 @@ es:
               display_name: Lecciones alternativas
           title: Estructura y Diseño de la Clase
         csa3-2023:
+          lessons:
+            lesson-1:
+              name: Arrays Unidimensionales (1D)
+            lesson-3:
+              name: Bucles Para
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Contenido
+            lessonGroup-3:
+              display_name: "¡Demuestra lo que sabes!"
+            lessonGroup-4:
+              display_name: Lecciones alternativas
           title: Arrays y Algoritmos
         csa4-2023:
           title: Condiciones y Lógica
