@@ -34,6 +34,7 @@ import GetVerifiedBanner from './GetVerifiedBanner';
 
 const COMPLETED_EVENT = 'Section Setup Completed';
 const CANCELLED_EVENT = 'Section Setup Cancelled';
+const CURRICULUM_ASSIGNED = 'Section Curriculum Assigned';
 
 /**
  * UI for editing section details: Name, grade, assigned course, etc.
@@ -81,6 +82,7 @@ class EditSectionForm extends Component {
     const scriptId = section.unitId;
 
     this.recordSectionSetupExitEvent(COMPLETED_EVENT);
+    this.recordCurriculumChangeEvent;
 
     const isScriptHidden =
       sectionId &&
@@ -140,6 +142,29 @@ class EditSectionForm extends Component {
     );
   };
 
+  recordCurriculumChangeEvent = () => {
+    const {
+      section,
+      courseOfferings,
+      initialCourseId,
+      initialUnitId
+    } = this.props;
+    // Are there times when a course is assigned without a unit assigned?
+    if (section.unitId && section.unitId !== initialUnitId) {
+      analyticsReporter.sendEvent(CURRICULUM_ASSIGNED),
+        {
+          previousUnitId: initialUnitId,
+          previousCourseId: initialCourseId,
+          newUnitId: section.unitId,
+          newCourseId: section.courseId,
+          newVersionYear:
+            courseOfferings[section.courseOfferingId].courseVersions[
+              section.courseVersionId
+            ].key
+        };
+    }
+  };
+
   // valid event names: 'Section Setup Complete', 'Section Setup Cancelled'.
   recordSectionSetupExitEvent = eventName => {
     const {section, courseOfferings, isNewSection} = this.props;
@@ -152,8 +177,13 @@ class EditSectionForm extends Component {
 
     if (isNewSection) {
       analyticsReporter.sendEvent(eventName, {
+        sectionUnitId: section.unitId,
         sectionCurriculumLocalizedName: courseName,
-        sectionCurriculum: courseId,
+        sectionCurriculum: courseId, //this is course Offering id
+        sectionCurriculumVersionYear:
+          courseOfferings[section.courseOfferingId].courseVersions[
+            section.courseVersionId
+          ].key,
         sectionGrade: section.grade,
         sectionLockSelection: section.restrictSection,
         sectionName: section.name,
