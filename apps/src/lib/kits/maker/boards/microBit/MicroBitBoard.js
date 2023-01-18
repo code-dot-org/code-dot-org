@@ -12,6 +12,7 @@ import ExternalButton from './ExternalButton';
 import CapacitiveTouchSensor from './CapacitiveTouchSensor';
 import {isChromeOS, serialPortType} from '../../util/browserChecks';
 import {MICROBIT_FIRMWARE_VERSION} from './MicroBitConstants';
+import {isWebSerialPort, SERIAL_BAUD} from '../../util/boardUtils';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 
 /**
@@ -59,33 +60,19 @@ export default class MicroBitBoard extends EventEmitter {
   openSerialPort() {
     const portName = this.port ? this.port.comName : undefined;
     const SerialPortType = serialPortType(false);
+    const serialPort = new SerialPortType(portName, {baudRate: SERIAL_BAUD});
+    return Promise.resolve(serialPort);
+  }
 
-    /** @const {number} serial port transfer rate */
-    const SERIAL_BAUD = 57600;
-
-    let serialPort;
-    if (!this.isChromeOS) {
-      serialPort = new SerialPortType(portName, {baudRate: SERIAL_BAUD});
-      return Promise.resolve(serialPort);
-    } else {
-      // add webserial pathway
-
-      // Chrome-serialport uses callback to relay when serialport initialization is complete.
-      // Wrapping construction function to call promise resolution as callback.
-      let constructorFunction = callback => {
-        serialPort = new SerialPortType(
-          portName,
-          {
-            baudRate: SERIAL_BAUD
-          },
-          true,
-          callback
-        );
-      };
-      return new Promise(resolve => constructorFunction(resolve)).then(() =>
-        Promise.resolve(serialPort)
-      );
-    }
+  /**
+   * Create a serial port controller and open the Web Serial port immediately.
+   * @param {Object} port
+   * @return {Promise<SerialPort>}
+   */
+  openSerialPortWebSerial(port) {
+    return port.open().then(() => {
+      return port;
+    });
   }
 
   /**
@@ -97,18 +84,19 @@ export default class MicroBitBoard extends EventEmitter {
    * @returns {Promise<void>}
    */
   checkExpectedFirmware() {
-    console.log('testing change');
-    console.log('print this.isChromeOS');
+    console.log(
+      'inside checkExpectedFirmware in MicroBitBoard.js - print this.isChromeOS'
+    );
     console.log(this.isChromeOS);
     return Promise.resolve()
       .then(() => {
-        if (!this.isChromeOS) {
-          return this.openSerialPort();
+        if (isWebSerialPort(this.port)) {
+          return this.openSerialPortWebSerial(this.port);
         } else {
-          // webserial port
+          return this.openSerialPort();
         }
       })
-      .then(serialPort => this.boardClient_.connectBoard(serialPort))
+      .then(port => this.boardClient_.connectBoard(port))
       .then(() => {
         // Delay for 0.25 seconds to ensure we have time to receive the firmware version.
         return delayPromise(250);
