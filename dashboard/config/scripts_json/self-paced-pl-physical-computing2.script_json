@@ -8,11 +8,12 @@
       "has_verified_resources": true,
       "hideable_lessons": true,
       "is_migrated": true,
-      "student_detail_progress_view": true
+      "student_detail_progress_view": true,
+      "tts": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-01-12 02:15:15 UTC",
+    "serialized_at": "2023-01-13 00:17:42 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -417,31 +418,6 @@
     {
       "chapter": 2,
       "position": 2,
-      "activity_section_position": 2,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "VPL-Devices-22-pre-survey"
-        ],
-        "progression": "Introduction"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "VPL-Devices-22-pre-survey"
-        ],
-        "lesson.key": "Introduction to Physical Computing",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "self-paced-pl-physical-computing2",
-        "activity_section.key": "9b52c112-9bca-499f-8e74-663fdacf6ed6"
-      },
-      "level_keys": [
-        "VPL-Devices-22-pre-survey"
-      ]
-    },
-    {
-      "chapter": 3,
-      "position": 3,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -465,8 +441,8 @@
       ]
     },
     {
-      "chapter": 4,
-      "position": 4,
+      "chapter": 3,
+      "position": 3,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
@@ -490,9 +466,31 @@
       ]
     },
     {
+      "chapter": 4,
+      "position": 4,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Unit Overview"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-Devices-22-pre-survey"
+        ],
+        "lesson.key": "Introduction to Physical Computing",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "self-paced-pl-physical-computing2",
+        "activity_section.key": "8c236b71-186f-44cd-b24e-4420360543a0"
+      },
+      "level_keys": [
+        "VPL-Devices-22-pre-survey"
+      ]
+    },
+    {
       "chapter": 5,
       "position": 5,
-      "activity_section_position": 3,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1609,6 +1607,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-Devices-22-post-survey"
+        ],
         "progression": "Wrap up"
       },
       "bonus": false,
@@ -1666,18 +1667,6 @@
     },
     {
       "seeding_key": {
-        "level.key": "VPL-Devices-22-pre-survey",
-        "script_level.level_keys": [
-          "VPL-Devices-22-pre-survey"
-        ],
-        "lesson.key": "Introduction to Physical Computing",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "self-paced-pl-physical-computing2",
-        "activity_section.key": "9b52c112-9bca-499f-8e74-663fdacf6ed6"
-      }
-    },
-    {
-      "seeding_key": {
         "level.key": "VPL-CSD-PILOT-S22-CI-CP-Overview-Video_physical-computing",
         "script_level.level_keys": [
           "VPL-CSD-PILOT-S22-CI-CP-Overview-Video_physical-computing"
@@ -1693,6 +1682,18 @@
         "level.key": "VPL-CSD-pilot-S22-CI-Unit_Overview_U6L2_physical-computing",
         "script_level.level_keys": [
           "VPL-CSD-pilot-S22-CI-Unit_Overview_U6L2_physical-computing"
+        ],
+        "lesson.key": "Introduction to Physical Computing",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "self-paced-pl-physical-computing2",
+        "activity_section.key": "8c236b71-186f-44cd-b24e-4420360543a0"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-Devices-22-pre-survey",
+        "script_level.level_keys": [
+          "VPL-Devices-22-pre-survey"
         ],
         "lesson.key": "Introduction to Physical Computing",
         "lesson_group.key": "lessonGroup-2",

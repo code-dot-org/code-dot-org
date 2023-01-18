@@ -8,11 +8,11 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-01-12 02:25:12 UTC",
-    "published_state": "in_development",
-    "instruction_type": "teacher_led",
-    "instructor_audience": "facilitator",
-    "participant_audience": "teacher",
+    "serialized_at": "2023-01-12 18:56:15 UTC",
+    "published_state": null,
+    "instruction_type": null,
+    "instructor_audience": null,
+    "participant_audience": null,
     "seeding_key": {
       "script.name": "self-paced-pl-csa4-2023"
     }
@@ -103,6 +103,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csa-prework-m4-overview-2023"
+        ],
         "progression": "Overview"
       },
       "bonus": false,
@@ -125,6 +128,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csa-prework-m4-intro-to-classes-video-2023"
+        ],
         "progression": "Introducing The Neighborhood"
       },
       "bonus": false,
@@ -147,6 +153,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "sa-prework-m4-intro-1-JL-2023"
+        ],
         "progression": "Introducing The Neighborhood"
       },
       "bonus": false,
@@ -169,6 +178,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csa-prework-m4-intro-to-javalab-video-2023"
+        ],
         "progression": "Introducing The Neighborhood"
       },
       "bonus": false,
@@ -191,6 +203,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csa-prework-m4-intro-2-JL-2023"
+        ],
         "progression": "Introducing The Neighborhood"
       },
       "bonus": false,
@@ -213,6 +228,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csa-prework-m4-transition-text-2023"
+        ],
         "progression": "Instantiating objects and calling methods"
       },
       "bonus": false,
@@ -227,6 +245,50 @@
       },
       "level_keys": [
         "csa-prework-m4-transition-text-2023"
+      ]
+    },
+    {
+      "chapter": 7,
+      "position": 7,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Instantiating objects and calling methods"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csa-prework-m4-calling-methods-video-2023"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csa4-2023",
+        "activity_section.key": "bbbeb04b-7088-4e86-bbc1-5e779a389fb7"
+      },
+      "level_keys": [
+        "csa-prework-m4-calling-methods-video-2023"
+      ]
+    },
+    {
+      "chapter": 8,
+      "position": 8,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Instantiating objects and calling methods"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csa-prework-m4-instantiating-video-2023"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csa4-2023",
+        "activity_section.key": "bbbeb04b-7088-4e86-bbc1-5e779a389fb7"
+      },
+      "level_keys": [
+        "csa-prework-m4-instantiating-video-2023"
       ]
     }
   ],
@@ -296,6 +358,30 @@
         "level.key": "csa-prework-m4-transition-text-2023",
         "script_level.level_keys": [
           "csa-prework-m4-transition-text-2023"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csa4-2023",
+        "activity_section.key": "bbbeb04b-7088-4e86-bbc1-5e779a389fb7"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csa-prework-m4-calling-methods-video-2023",
+        "script_level.level_keys": [
+          "csa-prework-m4-calling-methods-video-2023"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csa4-2023",
+        "activity_section.key": "bbbeb04b-7088-4e86-bbc1-5e779a389fb7"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csa-prework-m4-instantiating-video-2023",
+        "script_level.level_keys": [
+          "csa-prework-m4-instantiating-video-2023"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
