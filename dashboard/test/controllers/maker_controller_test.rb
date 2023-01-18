@@ -17,9 +17,9 @@ class MakerControllerTest < ActionController::TestCase
     # is the most recent version (for testing that MakerController.maker_script
     # prioritizes an assigned unit version over a unit the user has progress in
     # over the newest version).
-    @assigned_devices_version = ensure_script 'devices-assigned'
-    @recent_progress_devices_version = ensure_script 'devices-progress'
-    @most_recent_devices_version = Unit.latest_stable_version('devices')
+    @assigned_devices_version = ensure_script 'devices-assigned', '2020'
+    @recent_progress_devices_version = ensure_script 'devices-progress', '2021'
+    @most_recent_devices_version = ensure_script 'devices-recent', '2022'
 
     Unit.clear_cache
   end
@@ -421,9 +421,9 @@ class MakerControllerTest < ActionController::TestCase
 
   private
 
-  def ensure_script(script_name, is_stable=true)
+  def ensure_script(script_name, version_year='2000', is_stable=true)
     Unit.find_by_name(script_name) ||
-      create(:script, name: script_name, family_name: 'devices', published_state: is_stable ? Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable : Curriculum::SharedCourseConstants::PUBLISHED_STATE.preview).tap do |script|
+      create(:script, name: script_name, family_name: 'devices', version_year: version_year, published_state: is_stable ? Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable : Curriculum::SharedCourseConstants::PUBLISHED_STATE.preview).tap do |script|
         lesson_group = create :lesson_group, script: script
         lesson = create :lesson, script: script, lesson_group: lesson_group
         create :script_level, script: script, lesson: lesson

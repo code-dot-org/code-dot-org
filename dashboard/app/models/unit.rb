@@ -763,9 +763,8 @@ class Unit < ApplicationRecord
   def self.latest_version_with_progress(family_name, user)
     return nil unless family_name && user
 
-    family_unit_versions = Unit.where(family_name: family_name).
-        sort_by(&:version_year).
-        freeze
+    family_unit_versions = Unit.get_family_from_cache(family_name).
+      sort_by(&:version_year).freeze
     family_unit_names = family_unit_versions.map(&:name)
     progress = UserScript.lookup_hash(user, family_unit_names)
 
