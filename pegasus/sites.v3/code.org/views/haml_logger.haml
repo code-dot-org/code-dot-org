@@ -1,0 +1,6 @@
+%script{src: webpack_asset_path('js/code.org/views/hamlLogger.js')}
+
+:javascript
+  $(document).ready(window.hamlLog);
+
+#haml-logger{"data-page-visited" => page_visited}
