@@ -1,5 +1,7 @@
 #!/usr/bin/env ruby
 
+require_relative '../../dashboard/config/environment'
+
 puts "Removing application ids that are not teacher applications ..."
 modified_enrollments = []
 
