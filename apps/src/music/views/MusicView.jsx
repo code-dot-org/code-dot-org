@@ -157,7 +157,7 @@ class UnconnectedMusicView extends React.Component {
     const instructionsFilename =
       !blockMode || blockMode === 'advanced'
         ? 'music-instructions.json'
-        : `'music-instructions-${blockMode}.json'`;
+        : `music-instructions-${blockMode}.json`;
     const response = await fetch(baseUrl + instructionsFilename);
     let instructions;
     try {
