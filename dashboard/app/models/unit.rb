@@ -329,13 +329,6 @@ class Unit < ApplicationRecord
     Unit.get_from_cache(Unit::FLAPPY_NAME)
   end
 
-  # List of all Creating Apps with Devices maker unit versions.
-  # Used to determine the most recent Maker Unit to show on the Maker Homepage
-  def self.maker_units(user)
-    # only versions of the Creating Apps with Devices unit should be included in the maker units
-    @@maker_units ||= visible_units.select {|u| u.family_name == 'devices'}
-  end
-
   class << self
     def all_scripts
       return all.to_a unless should_cache?
@@ -763,6 +756,22 @@ class Unit < ApplicationRecord
       # it's just a hardcoded string, so it's safe to wrap in Arel.sql
       order(Arel.sql("properties -> '$.version_year' DESC"))&.
       first
+  end
+
+  # @param family_name [String] The family name for a unit family.
+  # @param user [User]
+  # @return [Unit|nil] Returns the latest version in a family that the user has progress in.
+  def self.latest_version_with_progress(family_name, user)
+    return nil unless family_name && user
+
+    unit_versions = Unit.get_family_from_cache(family_name).
+      sort_by(&:version_year).reverse
+    unit_names = unit_versions.map(&:name)
+    progress = UserScript.lookup_hash(user, unit_names)
+
+    unit_versions.each do |version|
+      return version if progress[version.name]
+    end
   end
 
   def text_response_levels
@@ -1700,7 +1709,6 @@ class Unit < ApplicationRecord
     @@level_cache = nil
     @@all_scripts = nil
     @@visible_units = nil
-    @@maker_units = nil
     Rails.cache.delete UNIT_CACHE_KEY
   end
 

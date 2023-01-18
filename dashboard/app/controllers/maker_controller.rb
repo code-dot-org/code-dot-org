@@ -17,29 +17,14 @@ class MakerController < ApplicationController
     }
   end
 
+  # Get which maker script should be shown to the given user:
+  #   Assigned script should take precedence - show most recent version that's been assigned.
+  #   Otherwise, show the most recent version with progress.
+  #   If none of the above applies, default to most recent.
   def self.maker_script(for_user)
-    maker_units = Unit.maker_units(for_user).
-        sort_by(&:version_year).
-        reverse.
-        freeze
-
-    # Assigned script should take precedence - show most recent version that's been assigned.
-    assigned = for_user.section_scripts
-    maker_units.each do |curr_maker_version|
-      if assigned.include?(curr_maker_version)
-        return curr_maker_version
-      end
-    end
-
-    # Otherwise, show the most recent version with progress.
-    script_names = maker_units.map(&:name)
-    progress = UserScript.lookup_hash(for_user, script_names)
-    maker_units.each do |curr_maker_version|
-      return curr_maker_version if progress[curr_maker_version.name]
-    end
-
-    # If none of the above applies, default to most recent.
-    maker_units.find(&:stable?)
+    Unit.latest_assigned_version('devices', for_user) ||
+    Unit.latest_version_with_progress('devices', for_user) ||
+    Unit.latest_stable_version('devices')
   end
 
   def setup
