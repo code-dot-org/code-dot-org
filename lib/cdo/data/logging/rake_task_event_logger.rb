@@ -8,7 +8,7 @@ class RakeTaskEventLogger
     @start_time = 0
     @end_time = 0
     @rake_task = rake_task
-    @enabled = !([:development].include?(rack_env))
+    @enabled = !rack_env?(:development)
   end
 
   def start_task_logging
@@ -19,14 +19,14 @@ class RakeTaskEventLogger
 
   def exception_task_logging(exception)
     @end_time = Time.new
-    duration = @end_time.to_i - @start_time.to_i
+    duration_ms = ((@end_time - @start_time).to_f * 1000).to_i
     event = 'exception'.freeze
-    log_event(event, duration, exception)
+    log_event(event, duration_ms, exception)
   end
 
   def end_task_logging
     @end_time = Time.new
-    duration_ms = (@end_time - @start_time).in_milliseconds
+    duration_ms = ((@end_time - @start_time).to_f * 1000).to_i
     event = 'end'.freeze
     log_event(event, duration_ms)
   end
@@ -70,10 +70,10 @@ class RakeTaskEventLogger
     end
   end
 
-  def log_event(event, duration = nil, exception = nil)
+  def log_event(event, duration_ms = nil, exception = nil)
     if @enabled == false
       return
     end
-    log_firehose_event(event, duration, exception)
+    log_firehose_event(event, duration_ms, exception)
   end
 end
