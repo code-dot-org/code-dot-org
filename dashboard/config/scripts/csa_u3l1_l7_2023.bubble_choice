@@ -1,6 +1,6 @@
 name 'CSA U3L1-L7_2023'
-display_name 'Practice: Assigning Values to a 1D Array'
-description 'Practice assigning values to specific positions in one-dimensional (1D) arrays.'
+display_name 'Practice: Creating 1D Arrays'
+description 'Practice declaring and initializing one-dimensional (1D) arrays to store multiple values of a specific data type.'
 
 sublevels
 level 'CSA U3L1-L7a_2023'

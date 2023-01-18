@@ -1,15 +1,11 @@
 <Gamelab>
   <config><![CDATA[{
-  "game_id": 50,
-  "created_at": "2022-09-19T22:57:37.000Z",
-  "level_num": "custom",
-  "user_id": 1,
   "properties": {
     "skin": "gamelab",
     "edit_code": true,
     "embed": "false",
     "short_instructions": "Modify the code so that all of the console.log commands print true",
-    "start_blocks": "// Modify these sprites so that all of the\r\n// console.log() commands print true\r\nvar sprite1 = createSprite(100, 200);\r\nsprite1.setAnimation(\"apple\");\r\nsprite1.rotation = 30;\r\nsprite1.scale = 1.5;\r\n\r\nvar sprite2 = createSprite(300, 200);\r\nsprite2.setAnimation(\"carrot\");\r\nsprite2.rotation = 60;\r\nsprite2.scale = 0.5;\r\n\r\n// Don't edit the following (I'm serious!!!)\r\nconsole.log(\"Comparison 1: \" + (sprite2.x == sprite2.y));\r\nconsole.log(\"Comparison 2: \" + (sprite2.rotation < 40));\r\nconsole.log(\"Comparison 3: \" + (sprite1.scale == sprite2.scale));\r\nconsole.log(\"Comparison 4: \" + (sprite1.x > 150));\r\nconsole.log(\"Comparison 5: \" + (sprite2.y < 200));\r\n\r\ndrawSprites();\r\n",
+    "start_blocks": "// Modify these sprite properties so that all of the\r\n// boolean commands print true on the screen\r\nvar sprite1 = createSprite(100, 200);\r\nsprite1.setAnimation(\"apple\");\r\nsprite1.rotation = 30;\r\nsprite1.scale = 1.5;\r\n\r\nvar sprite2 = createSprite(300, 200);\r\nsprite2.setAnimation(\"carrot\");\r\nsprite2.rotation = 60;\r\nsprite2.scale = 0.5;\r\n\r\n// Do NOT edit the following (I'm serious!!!)\r\ntextSize(20);\r\nfill(\"blue\");\r\ntext(\"Comparison 1: \" + (sprite2.x == sprite2.y), 0, 15);\r\ntext(\"Comparison 2: \" + (sprite2.rotation < 40), 0, 40);\r\ntext(\"Comparison 3: \" + (sprite1.scale == sprite2.scale), 0, 65);\r\ntext(\"Comparison 4: \" + (sprite1.x > 150), 0, 90);\r\ntext(\"Comparison 5: \" + (sprite2.y < 200), 0, 115);\r\n\r\ndrawSprites();\r\n",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
@@ -32,7 +28,7 @@
     "submittable": "false",
     "hide_view_data_button": "true",
     "debugger_disabled": "true",
-    "long_instructions": "# Boolean Expressions\r\n\r\nThe simplest Boolean expressions are questions that the computer can answer with true or false. \r\nAnother way to say this is that Boolean expressions **evaluate** to `true` or `false`.\r\n\r\n# Do This\r\nCan you modify the values of the sprite properties so that each of the Boolean expressions evaluates to `true`?\r\n\r\n- Read through the entire program to see how `sprite1` and `sprite2` are being created and which properties are compared.\r\n- For each of the Boolean expressions, identify the sprite properties being compared.\r\n- Change the code _in the first **11** lines only_ so that each of the `console.log()` statements print `true`.\r\n",
+    "long_instructions": "# Boolean Expressions\r\n\r\nThe simplest Boolean expressions are questions that the computer can answer with true or false. \r\nAnother way to say this is that Boolean expressions **evaluate** to **true** or **false**.\r\n\r\n# Do This\r\n\r\n1) ::: details [Modify **ONLY** the values of the sprite properties in the **first 11 lines of code** so that each of the Boolean expressions evaluates to **true**.]\r\n\r\n   - Look at the first 11 lines of code to see which properties of [`sprite1`(#f78183)](/docs/ide/gamelab/expressions/createSprite) and [`sprite2`(#f78183)](/docs/ide/gamelab/expressions/createSprite) are being used and their values. \r\n   - For each of the Boolean expressions on lines 16-20 identify the sprite properties being compared.\r\n   - Change the code **in the first _11_ lines only** so that each of the comparison statements will print **true** on the screen.\r\n:::\r\n",
     "callout_json": "[]",
     "instructions_important": "false",
     "hide_animation_mode": "false",
@@ -113,11 +109,16 @@
       "/courses/csd-2022/guides/variables",
       "/courses/csd-2022/guides/naming-variables"
     ],
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "validation_enabled": "false"
   },
+  "game_id": 50,
   "published": true,
+  "created_at": "2022-09-19T22:57:37.000Z",
+  "level_num": "custom",
+  "user_id": 1,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-09-19T22:57:37.342+00:00\",\"changed\":[\"cloned from \\\"CSD U3 Boolean Modify_2022\\\"\"],\"cloned_from\":\"CSD U3 Boolean Modify_2022\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-09-19T22:57:37.342+00:00\",\"changed\":[\"cloned from \\\"CSD U3 Boolean Modify_2022\\\"\"],\"cloned_from\":\"CSD U3 Boolean Modify_2022\"},{\"changed_at\":\"2023-01-14 00:33:50 +0000\",\"changed\":[\"start_blocks\",\"long_instructions\",\"code_functions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2023-01-14 00:36:50 +0000\",\"changed\":[\"long_instructions\",\"code_functions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
 }]]></config>
   <blocks/>
 </Gamelab>
