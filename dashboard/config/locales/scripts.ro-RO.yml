@@ -3400,6 +3400,15 @@ ro:
           lesson_groups:
             lessonGroup-2:
               display_name: Conţinut
+        csa3-2023:
+          lessons:
+            lesson-1:
+              name: Matrice Uni-Dimensionale (1D)
+            lesson-3:
+              name: Bucle Pentru
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Conţinut
         hello-world-space-2022:
           title: 'Bunā Lume: Spațiu'
         hello-world-soccer-2022:

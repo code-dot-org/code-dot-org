@@ -25379,10 +25379,16 @@ es-MX:
       courseC_multi_maze_debugging8_predict12022:
         answers:
         - text: Scrat llegará a la bellota. No hay errores en el código.
+          feedback: Incorrecto. Scrat no llegará a la bellota porque gira hacia el
+            lado equivocado.
         - text: Scrat no llegará a la bellota porque gira en la dirección equivocada.
           correct: true
+          feedback: "¡Correcto! Scrat gira en la dirección equivocada y no alcanzará
+            la bellota."
         - text: Scrat no llegará a la bellota porque no hay suficientes bloques de
             "avanzar".
+          feedback: Incorrecto. Scrat no llegará a la bellota porque gira hacia el
+            lado equivocado.
         - text: Scrat no se moverá del primer bloque.
           feedback: Scrat no llegará a la bellota porque gira en la dirección equivocada.
         questions:

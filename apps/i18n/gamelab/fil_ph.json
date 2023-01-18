@@ -5,7 +5,6 @@
   "dropletBlock_setCollider_param4": "taas",
   "dropletBlock_setColliderEach_param0": "tipo",
   "dropletBlock_setColliderEach_param4": "taas",
-  "errorLoadingAnimation": "Mukhang nahihirapan kaming i-load ang animation mo na \"{animationName}\". Tiyaking mayroon kang magandang koneksyon sa internet at subukang i-reload ang page. Kung magpapatuloy ang problemang ito, posibleng sira ang animation. Sa kasong ito, kailanganin mong magpatuloy sa pamamagitan ng pag-alis ng animation.",
   "reinfFeedbackMsg": "Tapos kana! I-click ang \"Magpatuloy\" upang magpatuloy sa susunod na antas.",
   "shareGame": "Ibahagi ang iyong laro:"
 }
