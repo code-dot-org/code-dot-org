@@ -41,6 +41,16 @@ h6 {
   font-family: $gotham-bold;
 }
 
+a {
+  color: $brand_secondary_default;
+  text-decoration: underline;
+
+  &:hover {
+    color: $brand_secondary_dark;
+    text-decoration: underline;
+  }
+}
+
 .tutorial-block, .courseblock-tall {
   background-color: $neutral_light;
 }
@@ -60,7 +70,6 @@ p {
   a {
     font-family: $gotham-bold;
     font-size:  1em;
-    color: $brand_secondary_dark;
   }
 
   .signup {
@@ -188,6 +197,10 @@ p {
         a {
           font-family: $gotham-extra-bold;
           text-decoration: underline;
+          color: $brand_secondary_default;
+          &:hover {
+            color: $brand_secondary_dark;
+          }
         }
       }
 
