@@ -185,11 +185,6 @@ Performance/Detect:
 Performance/MethodObjectAsBlock:
   Enabled: false
 
-# Offense count: 20
-# This cop supports safe auto-correction (--auto-correct).
-Performance/TimesMap:
-  Enabled: false
-
 # Offense count: 7
 # This cop supports safe auto-correction (--auto-correct).
 Rails/ApplicationMailer:

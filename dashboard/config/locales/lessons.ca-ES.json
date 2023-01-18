@@ -22,7 +22,10 @@
         },
         "flappy/Flappy Code": {
           "name": "Codi Flappy",
-          "purpose": "Aquesta lliçó introdueix els conceptes informàtics principals de la programació i la codificació (amb blocs), així com tècniques senzilles de depuració."
+          "overview": "En aquesta lliçó, els alumnes tindran un primer contacte amb la informàtica i crearan un joc a partir d'un codi senzill basat en blocs. Aquesta lliçó està pensada per alumnes de cursos intermedis, des dels 10 als 16 anys, però es pot adaptar per alumnes de menys o més edat amb les propostes alternatives proporcionades.",
+          "preparation": "### Una setmana abans de l’Hora del Codi\n\n-   Reviseu la [Guia del professor de l’Hora del Codi](http://hourofcode.com/resources/how-to/) i les [Millors pràctiques de professors efectius](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) per començar a planificar l’esdeveniment de l’Hora del Codi.\n-   [Registreu l’esdeveniment de l’Hora del Codi](http://hourofcode.com) si voleu rebre obsequis o suport per la classe.\n-   Reviseu i completeu el tutorial en línia: [Crea un joc amb el Flappy](https://studio.code.org/flappy/1) \n-   Assegureu-vos de provar-lo abans de demanar als alumnes que el facin. Comproveu els vostres equips i decidiu si us cal resoldre alguna incidència abans de fer l’Hora del Codi.\n\n### Un dia abans de l’Hora del Codi\n\n-   Escriviu les paraules \"codificació\", \"programació\" i \"depuració\" a la pissarra o afegiu-les al mural de vocabulari, si en teniu.\n-   Cada alumne que acabi l’activitat rebrà un certificat. [Imprimiu-ne un](http://code.org/certificates) per tots perquè us sigui més fàcil repartir-los al final de l’Hora del Codi.",
+          "purpose": "Aquesta lliçó introdueix els conceptes informàtics principals de la programació i la codificació (amb blocs), així com tècniques senzilles de depuració.",
+          "student_overview": "En aquesta lliçó, els alumnes tindran un primer contacte amb la informàtica i crearan un joc a partir d'un codi senzill basat en blocs. Aquesta lliçó està pensada per alumnes de cursos intermedis, des dels 10 als 16 anys, però es pot adaptar per alumnes de menys o més edat amb les propostes alternatives proporcionades."
         },
         "hourofcode/Maze": {
           "name": "Laberint",
@@ -33,14 +36,20 @@
           "purpose": "Aquesta lliçó introdueix els conceptes informàtics principals de la programació i la codificació (amb blocs), així com tècniques senzilles de depuració."
         },
         "iceage/Ice Age Play Lab": {
+          "overview": "En aquesta lliçó, els alumnes tindran un primer contacte amb la informàtica i crearan un joc a partir d'un codi senzill basat en blocs. Aquesta lliçó està pensada per alumnes de cursos intermedis, des dels 10 als 16 anys, però es pot adaptar per alumnes de menys o més edat amb les propostes alternatives proporcionades.",
           "purpose": "Aquesta lliçó introdueix els conceptes informàtics principals de la programació i la codificació (amb blocs), així com tècniques senzilles de depuració."
         },
         "artist/Artist": {
           "name": "Artista",
+          "overview": "En aquesta lliçó, els alumnes controlaran l'Artista per fer dibuixos a la pantalla. Aquesta etapa de l'Artista permet els alumnes crear imatges cada vegada més complexes fent servir blocs de programació com ara \"avançar 100 píxels\" i \"girar 90° cap a la dreta\".",
+          "preparation": "### Una setmana abans de l’Hora del Codi\n\n-   Reviseu la [Guia del professor de l’Hora del Codi](http://hourofcode.com/resources/how-to/) i les [Millors pràctiques de professors efectius](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) per començar a planificar l’esdeveniment de l’Hora del Codi.\n-   [Registreu l’esdeveniment de l’Hora del Codi](http://hourofcode.com) si voleu rebre obsequis o suport per la classe.\n-   Reviseu i completeu el tutorial en línia: [L’Artista](https://studio.code.org/s/artist/lessons/1/levels/1) \n-   Assegureu-vos de provar-lo abans de demanar als alumnes que el facin. Comproveu els vostres equips i decidiu si us cal resoldre alguna incidència abans de fer l’Hora del Codi.\n\n### Un dia abans de l’Hora del Codi\n\n-   Imprimiu un o més [Exemples de tiquets de sortida](https://docs.google.com/a/code.org/document/d/1ylIlO7Pppk6W3Jt58VHS5mjvnshg9URvj3iCU0Ok6qY/edit?usp=sharing) al final d’aquesta planificació, o dissenyeu-los vosaltres mateixos.\n\n-   Cada alumne que acabi l’activitat rebrà [un certificat](https://studio.code.org/certificates/batch). Imprimiu-ne un per tots perquè us sigui més fàcil repartir-los al final de l’Hora del Codi.\n\n-   Repasseu els trencaclosques per veure si trobeu alguna cosa que pugui suposar un problema per la clase.\n\n-   (Opcional) Porteu transportadors d’angles perquè els nens puguin visualitzar els angles que han de fer servir per completar els trencaclosques.\n\n-   Imprimiu una còpia de **Girs i angles - Fitxa de l’alumne** per cada nen i nena.",
+          "purpose": "Aquesta lliçó servirà per despertar més creativitat en els alumnes mentre codifiquen. L'objectiu d'aquesta lliçó és augmentar els coneixements sobre seqüenciació mitjançant la introducció de nous blocs i objectius. En aquest cas, els alumnes aprendran sobre píxels i angles mentre fan servir els blocs de programació, alhora que adquireixen habilitats de seqüenciació. A més, podran visualitzar els nous objectius, per exemple quan programin l'Artista per dibuixar un quadrat.",
           "student_overview": "Progamar l'Artista per crear unes imatges precioses."
         },
         "gumball/Gumball Play Lab": {
-          "purpose": "Aquesta lliçó introdueix els conceptes informàtics principals de la programació i la codificació (amb blocs), així com tècniques senzilles de depuració."
+          "overview": "En aquesta lliçó, els alumnes tindran un primer contacte amb la informàtica i crearan un joc a partir d'un codi senzill basat en blocs. Aquesta lliçó està pensada per alumnes de cursos intermedis, des dels 10 als 16 anys, però es pot adaptar per alumnes de menys o més edat amb les propostes alternatives proporcionades.",
+          "purpose": "Aquesta lliçó introdueix els conceptes informàtics principals de la programació i la codificació (amb blocs), així com tècniques senzilles de depuració.",
+          "student_overview": "En aquesta lliçó, els alumnes tindran un primer contacte amb la informàtica i crearan un joc a partir d'un codi senzill basat en blocs. Aquesta lliçó està pensada per alumnes de cursos intermedis, des dels 10 als 16 anys, però es pot adaptar per alumnes de menys o més edat amb les propostes alternatives proporcionades."
         },
         "dance/Dance Party": {
           "overview": "En aquesta lliçó, els alumnes de totes les edats s’iniciaran en la programació i la informàtica en un ambient segur i de suport. Aquesta lliçó s’ha dissenyat per alumnes de totes les edats, però per fer-la cal llegir. Per fer aquesta activitat, fa falta so, ja que l’eina está dissenyada per reaccionar a la música.",
@@ -66,6 +75,7 @@
         },
         "playlab/Play Lab": {
           "name": "Play Lab",
+          "overview": "En aquesta lliçó, els alumnes tindran un primer contacte amb la informàtica i crearan un joc a partir d'un codi senzill basat en blocs. Aquesta lliçó està pensada per alumnes de cursos intermedis, des dels 10 als 16 anys, però es pot adaptar per alumnes de menys o més edat amb les propostes alternatives proporcionades.",
           "purpose": "Aquesta lliçó introdueix els conceptes informàtics principals de la programació i la codificació (amb blocs), així com tècniques senzilles de depuració."
         },
         "outbreak/Outbreak": {
@@ -74,9 +84,21 @@
           "purpose": "",
           "student_overview": ""
         },
+        "sports/Sports": {
+          "overview": "En aquesta activitat en línia, els alumnes aprendran què són els esdeveniments i com els ordinadors els fan servir en programes com ara els videojocs. Mentre fan els trencaclosques, faran que el programa reaccioni als esdeveniments (com ara quan es premen les fletxes). Al final del trencaclosques, els alumnes tindran l'oportunitat de personalitzar el seu joc amb diferents velocitats i sons.",
+          "student_overview": "Algun cop has pensat que t'agradaria jugar a videojocs a l'escola? Doncs en aquesta lliçó, en crearàs un!"
+        },
         "infinity/Infinity": {
           "name": "Disney infinit Play Lab",
+          "overview": "En aquesta lliçó, els alumnes tindran un primer contacte amb la informàtica i crearan un joc a partir d'un codi senzill basat en blocs. Aquesta lliçó està pensada per alumnes de cursos intermedis, des dels 10 als 16 anys, però es pot adaptar per alumnes de menys o més edat amb les propostes alternatives proporcionades.",
           "purpose": "Aquesta lliçó introdueix els conceptes informàtics principals de la programació i la codificació (amb blocs), així com tècniques senzilles de depuració."
+        },
+        "basketball/Bounce": {
+          "name": "Programa el teu propi joc de bàsquet",
+          "overview": "En aquesta activitat en línia, els alumnes aprendran què són els esdeveniments i com els ordinadors els fan servir en programes com ara els videojocs. Mentre fan els trencaclosques, faran que el programa reaccioni als esdeveniments (com ara quan es premen les fletxes). Al final del trencaclosques, els alumnes tindran l'oportunitat de personalitzar el seu joc amb diferents velocitats i sons.",
+          "preparation": "### Una setmana abans de l’Hora del Codi\n\n-   Reviseu la [Guia del professor de l’Hora del Codi](http://hourofcode.com/resources/how-to/) i les [Millors pràctiques de professors efectius](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) per començar a planificar l’esdeveniment de l’Hora del Codi.\n-   [Registreu l’esdeveniment de l’Hora del Codi](http://hourofcode.com) si voleu rebre obsequis o suport per la classe.\n-   Reviseu i completeu el tutorial en línia: [Programa el teu propi joc de bàsquet](https://studio.code.org/s/basketball/lessons/1/levels/1) \n-   Assegureu-vos de provar-lo abans de demanar als alumnes que el facin. Comproveu els vostres equips i decidiu si us cal resoldre alguna incidència abans de fer l’Hora del Codi.\n\n### Un dia abans de l’Hora del Codi\n\n-   Imprimiu un o més [Exemples de tiquets de sortida](https://docs.google.com/a/code.org/document/d/1ylIlO7Pppk6W3Jt58VHS5mjvnshg9URvj3iCU0Ok6qY/edit?usp=sharing) al final d’aquesta planificació, o dissenyeu-los vosaltres mateixos.\n\n-   Cada alumne que acabi l’activitat rebrà [un certificat](https://studio.code.org/certificates/batch). Imprimiu-ne un per tots perquè us sigui més fàcil repartir-los al final de l’Hora del Codi.\n\n-   Llegiu les diapositives \"Esdeveniments de rebot - Com passen?\" (els quals presentareu als alumnes al final de la classe).",
+          "purpose": "Aquesta lliçó introdueix els alumnes als conceptes bàsics de la informàtica en matèria de codificació i programació (amb blocs) i a tècniques de depuració senzilles. Aprendran que els esdeveniments es fan servir molt habitualment en els programes informàtics, i en especial en els videojocs.\n\nEls alumnes desenvoluparan la seva comprensió dels esdeveniments mentre creen un joc de bàsquet. Aprendran a fer que una mà es mogui fent servir les fletxes, i a fer sorolls quan els objectes xoquin entre ells. Al final, podran personalitzar el seu joc per fer-lo més especial!",
+          "student_overview": "Algun cop has pensat que t'agradaria jugar a videojocs a l'escola? Doncs en aquesta lliçó, en crearàs un!"
         },
         "dance-extras-2019/Dance Party - Go Further": {
           "overview": "En aquesta lliçó, els alumnes de totes les edats seguiran aprenent sobre programació i informàtica en un ambient segur i de suport. Aquesta lliçó s’ha dissenyat per alumnes de totes les edats, però per fer-la cal llegir. Per fer aquesta activitat, fa falta so, ja que l’eina está dissenyada per reaccionar a la música.",
@@ -144,6 +166,9 @@
         },
         "coursed-2022/Relay Programming": {
           "name": "Programació en relleus"
+        },
+        "coursed-2022/Events in Bounce": {
+          "student_overview": "Algun cop has pensat que t'agradaria jugar a videojocs a l'escola? Doncs en aquesta lliçó, en crearàs un!"
         },
         "coursed-2022/Dance Party": {
           "name": "Festa de ball",
@@ -245,6 +270,7 @@
           "name": "Projecte de final de curs"
         },
         "courseb-2022/Digital Trails": {
+          "name": "Rastres digitals",
           "overview": "[![Common sense education](https://curriculum.code.org/static/img/common_sense_education.png)](https://www.commonsense.org)\n\nAquesta lliçó ha estat desenvolupada originalment per Common Sense Education. [Més informació].[2]\n\nEl que fas a internet sempre es queda a internet? Els alumnes aprendran que la informació que comparteixen a internet deixa una petjada digital o “rastre”. Segons com el gestionin, aquest rastre podrà ser gran o petit, útil o perjudicial. Els alumnes compraran diversos rastres i aplicaran el pensament crític per reflexionar sobre quins tipus d’informació volen deixar pel camí.",
           "preparation": "-   Reviseu els materials didàctics.\n-   Imprimiu fitxes per cada alumne.",
           "purpose": "El pla d'estudis de Ciutadania Digital de Common Sense toca sis temes centrals fonamentats en els estudis més recents sobre infants, mitjans i teconogia. Aquesta lliçó se centra en la petjada digital i la identitat. Els alumnes reflexionaran sobre els beneficis i els riscos de compartir informació per internet i veuran com el perfil digital pot afectar el concepte de la identitat, la reputació i les relacions de les persones.",
@@ -307,12 +333,14 @@
           "student_overview": "Fes servir patrons i bucles per acabar les imatges."
         },
         "courseb-2022/The Right App": {
+          "name": "L'aplicació correcta",
           "overview": "En aquesta lliçó **d'exploració**, els alumnes empatitzen amb diversos usuaris de telèfons intel·ligents ficticis per ajudar-los a trobar \"l'aplicació adequada\" per allò que necessiten.",
           "preparation": "-   Llegiu les notes del ponent al **\\*mòdul de diapositives**.\n-   Prepareu materials de dibuix suficients per tots els alumnes.\n-   Assegureu-vos que cada alumne tingui el seu diari de reflexió.",
           "purpose": "Avui, la informàtica és més accessible que mai. Tot tipus de persones fan servir programes en molts dispositius diferents, especialment telèfons intel·ligents, per trobar informació, comunicar-se i divertir-se. Les experiències i les necessitats són tan diverses que és important que els joves programadors empatitzin amb les persones i identifiquin solucions tenint-los presents.",
           "student_overview": "Dibuixa la teva pròpia aplicació pel mòbil."
         },
         "courseb-2022/The Big Event Jr": {
+          "name": "El gran esdeveniment Jr.",
           "overview": "En aquesta lliçó de **definició de context**, la classe experimentarà amb el concepte dels esdeveniments a través d'un joc en què es mouen o criden quan algú prem els botons d'un comandament enorme.",
           "preparation": "-   Prepareu-vos per projectar la **\\*Imatge del comandament**.\n-   Imprimiu una **\\*Avaluació** per alumne.\n-   Assegureu-vos que cada alumne tingui un diari de reflexió.",
           "purpose": "Avui, els alumnes aprendran a distingir els esdeveniments de les accions. Veuran com prémer un \"botó\" un comandament de paper interromp certes activitats. En veure aquest esdeveniment, la classe reaccionarà amb una acció única. Els esdeveniments s'utilitzen molt en programació, i al final d'aquesta lliçó, els alumnes haurien de saber reconèixer-los fàcilment.",
@@ -650,6 +678,7 @@
           "student_overview": "Fes servir bucles i patrons per acabar les imatges."
         },
         "coursea-2022/The Big Event Jr": {
+          "name": "El gran esdeveniment Jr.",
           "overview": "En aquesta lliçó de **definició de context**, la classe experimentarà amb el concepte dels esdeveniments a través d'un joc en què es mouen o criden quan algú prem els botons d'un comandament enorme.",
           "preparation": "-   Prepareu-vos per projectar la **\\*Imatge del comandament**.\n-   Imprimiu una **\\*Avaluació** per alumne.\n-   Assegureu-vos que cada alumne tingui un diari de reflexió.",
           "purpose": "Avui, els alumnes aprendran a distingir els esdeveniments de les accions. Veuran com prémer un \"botó\" un comandament de paper interromp certes activitats. En veure aquest esdeveniment, la classe reaccionarà amb una acció única. Els esdeveniments s'utilitzen molt en programació, i al final d'aquesta lliçó, els alumnes haurien de saber reconèixer-los fàcilment.",
@@ -676,6 +705,7 @@
           "student_overview": "En aquesta lliçó, aprendreu què és la crueltat i què podeu fer quan us la trobeu a internet."
         },
         "coursec-2022/My Robotic Friends Jr": {
+          "name": "Els meus amics robòtics Jr.",
           "purpose": "En aquesta lliçó sense connexió, la classe forma un únic equip per dur a terme una tasca: fer que el \"robot\" apili gots per crear un disseny concret. Aquesta activitat posa les bases per la programació que els alumnes faran durant el curs, ja que aquí aprendran la importància de definir un algorisme ben comunicat.",
           "student_overview": "En aquesta lliçó, fareu veure que els companys són robots i els programareu per construir patrons de gots apilats."
         },
@@ -705,6 +735,7 @@
           "student_overview": "Progamar l'Artista per crear unes imatges precioses."
         },
         "coursec-2022/My Loopy Robotic Friends Jr": {
+          "name": "Els meus amics robòtics amb bucles Jr.",
           "overview": "Aquesta lliçó de **definició de context** es desenvolupa a partir de l'activitat \"Els meus amics robòtics\" i ofereix uns dissenys més grans i complicats. ",
           "purpose": "Aquesta lliçó serveix per tornar a introduir els bucles, i per fer-ho fa servir les instruccions de programació de \"robots\" ja conegudes. Els alumnes desenvoluparan el pensament crític mentre busquen patrons de repetició en els moviments dels seus companys i determinen com simplificar els patrons repetits per mitjà dels bucles.",
           "student_overview": "En aquesta lliçó, tornaràs a programar els seuse companys, però ara que faràs servir bucles, podràs resoldre problemes més grans i complicats."
@@ -746,6 +777,7 @@
           "student_overview": "Fem servir la creativitat per crear un joc al Laboratori de Jocs!"
         },
         "coursec-2022/Picturing Data": {
+          "name": "Dades en imatges",
           "overview": "En aquesta lliçó **d'exploració**, els alumnes recolliran dades d'un projecte del Laboratori de Joc i les visualitzaran servint-se diferents gràfics.",
           "purpose": "Els ordinadors es van crear per ajudar-nos a processar dades. Al món cada vegada hi ha més dades, i per això és important que puguem llegir-les i analitzar-les.  En aquesta lliçó, els alumnes treballaran amb un conjunt senzill de dades en un exercici bàsic de recopilació, visualització i anàlisi.",
           "student_overview": "Les dades ens poden servir per entendre el món i respondre preguntes interessants. "
@@ -790,11 +822,17 @@
         "courseb-2018/Your Digital Footprint": {
           "name": "La vostra empremta digital"
         },
+        "courseb-2018/Programming: My Robotic Friends": {
+          "name": "Els meus amics robòtics Jr."
+        },
         "courseb-2018/Programming in Ice Age": {
           "name": "Programació amb l'Scrat"
         },
         "courseb-2018/Programming with Rey and BB-8": {
           "name": "Programació amb la Rey i el BB-8"
+        },
+        "courseb-2018/Loops: My Loopy Robotic Friends": {
+          "name": "Els meus amics robòtics amb bucles Jr."
         },
         "courseb-2018/Loops in Ice Age": {
           "name": "Bucles amb l'Scrat"
@@ -804,6 +842,9 @@
         },
         "courseb-2018/Loops in Artist": {
           "name": "Dibuixar jardins amb bucles"
+        },
+        "courseb-2018/Events: The Big Event": {
+          "name": "El gran esdeveniment Jr."
         },
         "courseb-2018/Events in Play Lab": {
           "name": "Una batalla real amb esdeveniments"
@@ -834,6 +875,9 @@
         },
         "coursea-2018/Loops in Artist": {
           "name": "Escena de l'oceà amb bucles"
+        },
+        "coursea-2018/Events: The Big Event": {
+          "name": "El gran esdeveniment Jr."
         },
         "coursea-2018/Events in Play Lab": {
           "name": "Moviments amb esdeveniments"
@@ -1051,11 +1095,17 @@
         "pre-express-2018/Your Digital Footprint": {
           "name": "La vostra empremta digital"
         },
+        "pre-express-2018/Programming: My Robotic Friends": {
+          "name": "Els meus amics robòtics Jr."
+        },
         "pre-express-2018/Programming in Ice Age": {
           "name": "Programació amb l'Scrat"
         },
         "pre-express-2018/Programming with Rey and BB-8": {
           "name": "Programació amb la Rey i el BB-8"
+        },
+        "pre-express-2018/Loops: My Loopy Robotic Friends": {
+          "name": "Els meus amics robòtics amb bucles Jr."
         },
         "pre-express-2018/Loops in Ice Age": {
           "name": "Bucles amb l'Scrat"
@@ -1065,6 +1115,9 @@
         },
         "pre-express-2018/Loops in Artist": {
           "name": "Dibuixar jardins amb bucles"
+        },
+        "pre-express-2018/Events: The Big Event": {
+          "name": "El gran esdeveniment Jr."
         },
         "pre-express-2018/Events in Play Lab": {
           "name": "Una batalla real amb esdeveniments"
@@ -1117,6 +1170,9 @@
         "coursea-2019/Ocean Scene with Loops": {
           "name": "Escena de l'oceà amb bucles"
         },
+        "coursea-2019/Events: The Big Event": {
+          "name": "El gran esdeveniment Jr."
+        },
         "coursea-2019/Events in Play Lab": {
           "name": "Moviments amb esdeveniments"
         },
@@ -1146,6 +1202,12 @@
         },
         "courseb-2019/Loops in Artist": {
           "name": "Dibuixar jardins amb bucles"
+        },
+        "courseb-2019/The Right App": {
+          "name": "L'aplicació correcta"
+        },
+        "courseb-2019/Events: The Big Event": {
+          "name": "El gran esdeveniment Jr."
         },
         "courseb-2019/Events in Play Lab": {
           "name": "Una batalla real amb esdeveniments"
@@ -1303,6 +1365,9 @@
         "express-2019/Build A Project": {
           "name": "Projecte de final de curs"
         },
+        "coursec-2019/Programming: My Robotic Friends": {
+          "name": "Els meus amics robòtics Jr."
+        },
         "coursec-2019/Programming in Maze": {
           "name": "Programació amb Angry Birds"
         },
@@ -1317,6 +1382,9 @@
         },
         "coursec-2019/Binary Bracelets": {
           "name": "Polseres binàries"
+        },
+        "coursec-2019/Loops: My Loopy Robotic Friends": {
+          "name": "Els meus amics robòtics amb bucles Jr."
         },
         "coursec-2019/Loops with Rey and BB-8": {
           "name": "Bucles amb la Rey i el BB-8"
@@ -1338,6 +1406,9 @@
         },
         "coursec-2019/Events in Play Lab": {
           "name": "Joc de persecució amb esdeveniments"
+        },
+        "coursec-2019/Picturing Data": {
+          "name": "Dades en imatges"
         },
         "coursec-2019/End of Course Project: Create a Play Lab Game": {
           "name": "Projecte de final de curs"
@@ -1867,13 +1938,14 @@
           "name": "Projecte de final de curs"
         },
         "courseb-2021/Digital Trails": {
+          "name": "Rastres digitals",
           "overview": "[![Common sense education](https://curriculum.code.org/static/img/common_sense_education.png)](https://www.commonsense.org)\n\nAquesta lliçó ha estat desenvolupada originalment per Common Sense Education. [Més informació].[2]\n\nEl que fas a internet sempre es queda a internet? Els alumnes aprendran que la informació que comparteixen a internet deixa una petjada digital o “rastre”. Segons com el gestionin, aquest rastre podrà ser gran o petit, útil o perjudicial. Els alumnes compraran diversos rastres i aplicaran el pensament crític per reflexionar sobre quins tipus d’informació volen deixar pel camí.",
           "preparation": "-   Reviseu els materials didàctics.\n-   Imprimiu fitxes per cada alumne.",
           "purpose": "El pla d'estudis de Ciutadania Digital de Common Sense toca sis temes centrals fonamentats en els estudis més recents sobre infants, mitjans i teconogia. Aquesta lliçó se centra en la petjada digital i la identitat. Els alumnes reflexionaran sobre els beneficis i els riscos de compartir informació per internet i veuran com el perfil digital pot afectar el concepte de la identitat, la reputació i les relacions de les persones.",
           "student_overview": "Descobreix la teva petjada digital i com visitar pàgines web de manera segura. "
         },
         "courseb-2021/Move It, Move It": {
-          "name": "Mou-lo, Mou-lo",
+          "name": "A moure's!",
           "overview": "En aquesta lliçó de **definició de context**, els alumnes programaran els seus companys perquè avancin amb cura per una gran quadrícula feta a terra.",
           "preparation": "-   Mireu el **\\*Vídeo del professor**\n-   Imprimiu (o prepareu-vos per mostrar) una **\\*Fitxa de treball amb respostes**\n-   Imprimiu una **\\*Activitat amb mapa**i una **\\*Fitxa de treball** per cada grup de 2-3 alumnes\n-   Prepareu papers en blanc per completar la resta de la quadrícula a terra (en necessitareu entre 4 i 7 per grup)",
           "purpose": "Els alumnes faran servir el moviment físic per programar els seus companys de classe, i en fer-ho es trobaran amb problemes i emocions semblants als que sentiran quan comencin a programar a l’ordinador. Trobar-se amb aquestes pressions en un entorn divertit i obert ajudarà a rebaixar-ne la intensitat i els permetrà posar en pràctica les habilitats necessàries abans de trobar-se amb problemes tots sols.",
@@ -1929,12 +2001,14 @@
           "student_overview": "Fes servir patrons i bucles per acabar les imatges."
         },
         "courseb-2021/The Right App": {
+          "name": "L'aplicació correcta",
           "overview": "En aquesta lliçó **d'exploració**, els alumnes empatitzen amb diversos usuaris de telèfons intel·ligents ficticis per ajudar-los a trobar \"l'aplicació adequada\" per allò que necessiten.",
           "preparation": "-   Llegiu les notes del ponent al **\\*mòdul de diapositives**.\n-   Prepareu materials de dibuix suficients per tots els alumnes.\n-   Assegureu-vos que cada alumne tingui el seu diari de reflexió.",
           "purpose": "Avui, la informàtica és més accessible que mai. Tot tipus de persones fan servir programes en molts dispositius diferents, especialment telèfons intel·ligents, per trobar informació, comunicar-se i divertir-se. Les experiències i les necessitats són tan diverses que és important que els joves programadors empatitzin amb les persones i identifiquin solucions tenint-los presents.",
           "student_overview": "Dibuixa la teva pròpia aplicació pel mòbil."
         },
         "courseb-2021/Events: The Big Event": {
+          "name": "El gran esdeveniment Jr.",
           "overview": "En aquesta lliçó de **definició de context**, la classe experimentarà amb el concepte dels esdeveniments a través d'un joc en què es mouen o criden quan algú prem els botons d'un comandament enorme.",
           "preparation": "-   Prepareu-vos per projectar la **\\*Imatge del comandament**.\n-   Imprimiu una **\\*Avaluació** per alumne.\n-   Assegureu-vos que cada alumne tingui un diari de reflexió.",
           "purpose": "Avui, els alumnes aprendran a distingir els esdeveniments de les accions. Veuran com prémer un \"botó\" un comandament de paper interromp certes activitats. En veure aquest esdeveniment, la classe reaccionarà amb una acció única. Els esdeveniments s'utilitzen molt en programació, i al final d'aquesta lliçó, els alumnes haurien de saber reconèixer-los fàcilment.",
@@ -2025,6 +2099,7 @@
           "student_overview": "Fes servir bucles i patrons per acabar les imatges."
         },
         "coursea-2021/Events: The Big Event": {
+          "name": "El gran esdeveniment Jr.",
           "overview": "En aquesta lliçó de **definició de context**, la classe experimentarà amb el concepte dels esdeveniments a través d'un joc en què es mouen o criden quan algú prem els botons d'un comandament enorme.",
           "preparation": "-   Prepareu-vos per projectar la **\\*Imatge del comandament**.\n-   Imprimiu una **\\*Avaluació** per alumne.\n-   Assegureu-vos que cada alumne tingui un diari de reflexió.",
           "purpose": "Avui, els alumnes aprendran a distingir els esdeveniments de les accions. Veuran com prémer un \"botó\" un comandament de paper interromp certes activitats. En veure aquest esdeveniment, la classe reaccionarà amb una acció única. Els esdeveniments s'utilitzen molt en programació, i al final d'aquesta lliçó, els alumnes haurien de saber reconèixer-los fàcilment.",
@@ -2051,6 +2126,7 @@
           "student_overview": "En aquesta lliçó, aprendreu què és la crueltat i què podeu fer quan us la trobeu a internet."
         },
         "coursec-2021/Programming: My Robotic Friends": {
+          "name": "Els meus amics robòtics Jr.",
           "overview": "En aquestes lliçons de **definició de context**, els alumnes faran servir una sèrie de símbols per donar instruccions a un \"robot\" perquè apili gots fent diferents patrons. Els alumnes faran torns per fer de robot, i respondran només a l'algorisme definit pels seus companys.",
           "preparation": "-   Prepareu una pila de 20 gots de paper (o trapezoides de paper) per cada grup de 2-3 alumnes.\n-   Ensenyeu-los els símbols de la **\\*Fitxa de símbols**, la qual podran consultar durant la lliçó.\n-   (Opcional) Imprimiu una còpia de les **\\*Idees per apilar gots** per cada grup de 2-3 alumnes.\n-   Assegureu-vos que cada alumne tingui el seu diari de reflexió.",
           "purpose": "En aquesta lliçó sense connexió, la classe forma un únic equip per dur a terme una tasca: fer que el \"robot\" apili gots per crear un disseny concret. Aquesta activitat posa les bases per la programació que els alumnes faran durant el curs, ja que aquí aprendran la importància de definir un algorisme ben comunicat.",
@@ -2085,6 +2161,7 @@
           "student_overview": "Progamar l'Artista per crear unes imatges precioses."
         },
         "coursec-2021/Loops: My Loopy Robotic Friends": {
+          "name": "Els meus amics robòtics amb bucles Jr.",
           "overview": "Aquesta lliçó de **definició de context** es desenvolupa a partir de l'activitat \"Els meus amics robòtics\" i ofereix uns dissenys més grans i complicats. ",
           "preparation": "-   Assegureu-vos que cada alumne tingui una llibreta.\n-   Prepareu una pila de 0 gots de paper (o **\\*trapezoides de paper**) per cada grup de 4 alumnes.\n-   Ensenyeu-los els **\\*símbols** que podran consultar durant la lliçó.\n-   (Opcional) Imprimiu una còpia de les **\\*Idees per apilar gots** per cada grup de 4 alumnes.",
           "purpose": "Aquesta lliçó serveix per tornar a introduir els bucles, i per fer-ho fa servir les instruccions de programació de \"robots\" ja conegudes. Els alumnes desenvoluparan el pensament crític mentre busquen patrons de repetició en els moviments dels seus companys i determinen com simplificar els patrons repetits per mitjà dels bucles.",
@@ -2130,6 +2207,7 @@
           "student_overview": "Fem servir la creativitat per crear un joc al Laboratori de Jocs!"
         },
         "coursec-2021/Picturing Data": {
+          "name": "Dades en imatges",
           "overview": "En aquesta lliçó **d'exploració**, els alumnes recolliran dades d'un projecte del Laboratori de Joc i les visualitzaran servint-se diferents gràfics.",
           "preparation": "-   Imprimiu una **\\*fitxa de treball** per cada alumne.\n-   Proveu la lliçó d'avui a Code Studio.  Això us servirà com a eina per l'activitat d'avui. Tingueu-la llesta per projectar-la davant de la classe, o deixeu que els alumnes hi accedeixin des dels seus ordinadors.\n-   Assegureu-vos que cada alumne tingui el seu diari de reflexió.",
           "purpose": "Els ordinadors es van crear per ajudar-nos a processar dades. Al món cada vegada hi ha més dades, i per això és important que puguem llegir-les i analitzar-les.  En aquesta lliçó, els alumnes treballaran amb un conjunt senzill de dades en un exercici bàsic de recopilació, visualització i anàlisi.",
@@ -2157,6 +2235,9 @@
         },
         "coursed-2021/Relay Programming": {
           "name": "Programació en relleus"
+        },
+        "coursed-2021/Events in Bounce": {
+          "student_overview": "Algun cop has pensat que t'agradaria jugar a videojocs a l'escola? Doncs en aquesta lliçó, en crearàs un!"
         },
         "coursed-2021/Dance Party": {
           "name": "Festa de ball",
@@ -2589,6 +2670,9 @@
         "express-2020/End of Course Project": {
           "name": "Projecte de final de curs"
         },
+        "courseb-2020/Digital Trails": {
+          "name": "Rastres digitals"
+        },
         "courseb-2020/Move It, Move It": {
           "name": "Mou-lo, Mou-lo"
         },
@@ -2612,6 +2696,12 @@
         },
         "courseb-2020/Loops in Artist": {
           "name": "Dibuixar jardins amb bucles"
+        },
+        "courseb-2020/The Right App": {
+          "name": "L'aplicació correcta"
+        },
+        "courseb-2020/Events: The Big Event": {
+          "name": "El gran esdeveniment Jr."
         },
         "courseb-2020/Events in Play Lab": {
           "name": "Una batalla real amb esdeveniments"
@@ -2655,6 +2745,9 @@
         "coursec-2020/Putting a STOP to Online Meanness": {
           "name": "Aturem la crueltat a internet"
         },
+        "coursec-2020/Programming: My Robotic Friends": {
+          "name": "Els meus amics robòtics Jr."
+        },
         "coursec-2020/Programming in Maze": {
           "name": "Programació amb Angry Birds"
         },
@@ -2669,6 +2762,9 @@
         },
         "coursec-2020/Binary Bracelets": {
           "name": "Polseres binàries"
+        },
+        "coursec-2020/Loops: My Loopy Robotic Friends": {
+          "name": "Els meus amics robòtics amb bucles Jr."
         },
         "coursec-2020/Loops with Rey and BB-8": {
           "name": "Bucles amb la Rey i el BB-8"
@@ -2690,6 +2786,9 @@
         },
         "coursec-2020/Events in Play Lab": {
           "name": "Joc de persecució amb esdeveniments"
+        },
+        "coursec-2020/Picturing Data": {
+          "name": "Dades en imatges"
         },
         "coursec-2020/End of Course Project: Create a Play Lab Game": {
           "name": "Projecte de final de curs"
@@ -2747,6 +2846,9 @@
         },
         "coursea-2020/Ocean Scene with Loops": {
           "name": "Escena de l'oceà amb bucles"
+        },
+        "coursea-2020/Events: The Big Event": {
+          "name": "El gran esdeveniment Jr."
         },
         "coursea-2020/Events in Play Lab": {
           "name": "Moviments amb esdeveniments"

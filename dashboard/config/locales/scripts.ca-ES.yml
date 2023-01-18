@@ -297,6 +297,14 @@ ca:
           description_audience: De 6 a 10 anys
           description_short: Apreneu els conceptes bàsics de la informàtica i creeu
             el vostre propi art, històries i jocs.
+          description: Crea programes amb seqüenciació, bucles i esdeveniments. Tradueix
+            les teves inicials al codi binari, investiga diferents tècniques per resoldre
+            problemes, i aprèn com cal actuar en situacions de ciberassetjament. Al
+            final del curs, crearàs el teu propi joc o història, i podràs compartir-los!
+          student_description: Crea programes amb seqüenciació, bucles i esdeveniments.
+            Tradueix les teves inicials al codi binari, investiga diferents tècniques
+            per resoldre problemes, i aprèn com cal actuar en situacions de ciberassetjament.
+            Al final del curs, crearàs el teu propi joc o història, i podràs compartir-los!
         coursed-2017:
           title: Curs D
           assignment_family_title: Curs D
@@ -457,9 +465,17 @@ ca:
           description_audience: De 7 a 11 anys
         coursec-2018:
           assignment_family_title: Curs C
+          description: Crea programes amb seqüenciació, bucles i esdeveniments. Tradueix
+            les teves inicials al codi binari, investiga diferents tècniques per resoldre
+            problemes, i aprèn com cal actuar en situacions de ciberassetjament. Al
+            final del curs, crearàs el teu propi joc o història, i podràs compartir-los!
           description_short: Apreneu els conceptes bàsics de la informàtica i creeu
             el vostre propi art, històries i jocs.
           description_audience: De 6 a 10 anys
+          student_description: Crea programes amb seqüenciació, bucles i esdeveniments.
+            Tradueix les teves inicials al codi binari, investiga diferents tècniques
+            per resoldre problemes, i aprèn com cal actuar en situacions de ciberassetjament.
+            Al final del curs, crearàs el teu propi joc o història, i podràs compartir-los!
         coursee-2018:
           assignment_family_title: Curs E
           description_audience: De 8 a 12 anys
@@ -662,6 +678,10 @@ ca:
           student_description: Anar més enllà de la primera hora amb idees desenvolupades
             del projecte.
         coursec-2019:
+          description: Crea programes amb seqüenciació, bucles i esdeveniments. Tradueix
+            les teves inicials al codi binari, investiga diferents tècniques per resoldre
+            problemes, i aprèn com cal actuar en situacions de ciberassetjament. Al
+            final del curs, crearàs el teu propi joc o història, i podràs compartir-los!
           description_short: Apreneu els conceptes bàsics de la informàtica i creeu
             el vostre propi art, històries i jocs.
           description_audience: De 6 a 10 anys
@@ -678,6 +698,10 @@ ca:
               display_name: Esdeveniments
             end_of_course_project:
               display_name: Projecte de final de curs
+          student_description: Crea programes amb seqüenciació, bucles i esdeveniments.
+            Tradueix les teves inicials al codi binari, investiga diferents tècniques
+            per resoldre problemes, i aprèn com cal actuar en situacions de ciberassetjament.
+            Al final del curs, crearàs el teu propi joc o història, i podràs compartir-los!
         gamelab:
           title: Laboratori de jocs
         coursea-2019:
@@ -1003,6 +1027,10 @@ ca:
             a internet. Al final del curs, podràs crear el teu propi joc o història
             i compartir-los.
         coursec-2020:
+          description: Crea programes amb seqüenciació, bucles i esdeveniments. Tradueix
+            les teves inicials al codi binari, investiga diferents tècniques per resoldre
+            problemes, i aprèn com cal actuar en situacions de ciberassetjament. Al
+            final del curs, crearàs el teu propi joc o història, i podràs compartir-los!
           description_short: Apreneu els conceptes bàsics de la informàtica i creeu
             el vostre propi art, històries i jocs.
           description_audience: De 6 a 10 anys
@@ -1019,6 +1047,10 @@ ca:
               display_name: Esdeveniments
             end_of_course_project:
               display_name: Projecte de final de curs
+          student_description: Crea programes amb seqüenciació, bucles i esdeveniments.
+            Tradueix les teves inicials al codi binari, investiga diferents tècniques
+            per resoldre problemes, i aprèn com cal actuar en situacions de ciberassetjament.
+            Al final del curs, crearàs el teu propi joc o història, i podràs compartir-los!
         coursed-2020:
           description_audience: De 7 a 11 anys
           lesson_groups:
@@ -1161,6 +1193,7 @@ ca:
             a internet. Al final del curs, podràs crear el teu propi joc o història
             i compartir-los.
         courseb-2021:
+          title: Curs B (2021)
           description_audience: De 5 a 8 anys
           lesson_groups:
             csf_digcit:
@@ -1194,6 +1227,10 @@ ca:
               display_name: Esdeveniments
             end_of_course_project:
               display_name: Projecte de final de curs
+          student_description: Crea programes amb seqüenciació, bucles i esdeveniments.
+            Tradueix les teves inicials al codi binari, investiga diferents tècniques
+            per resoldre problemes, i aprèn com cal actuar en situacions de ciberassetjament.
+            Al final del curs, crearàs el teu propi joc o història, i podràs compartir-los!
         coursed-2021:
           description_audience: De 7 a 11 anys
           lesson_groups:
@@ -1443,6 +1480,10 @@ ca:
               display_name: Esdeveniments
             end_of_course_project:
               display_name: Projecte de final de curs
+          student_description: Crea programes amb seqüenciació, bucles i esdeveniments.
+            Tradueix les teves inicials al codi binari, investiga diferents tècniques
+            per resoldre problemes, i aprèn com cal actuar en situacions de ciberassetjament.
+            Al final del curs, crearàs el teu propi joc o història, i podràs compartir-los!
           description_short: Apreneu els conceptes bàsics de la informàtica i creeu
             el vostre propi art, històries i jocs.
           description_audience: De 6 a 10 anys
@@ -1542,6 +1583,10 @@ ca:
           lessons:
             lesson-4:
               name: Variables
+        csa3-2023:
+          lessons:
+            lesson-3:
+              name: Bucles "for"
         hello-world-space-2022:
           title: 'Hola Món: Espai'
         csc-function-machines-pilot:

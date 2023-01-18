@@ -12,6 +12,10 @@ import {
   isRosterDialogOpen
 } from './teacherSectionsRedux';
 import RailsAuthenticityToken from '../../lib/util/RailsAuthenticityToken';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+
+const COMPLETED_EVENT = 'Section Setup Completed';
+const CANCELLED_EVENT = 'Section Setup Cancelled';
 
 const ctaButtonStyle = {
   background: color.orange,
@@ -152,6 +156,7 @@ class RosterDialog extends React.Component {
   state = {selectedId: null};
 
   importClassroom = () => {
+    this.recordSectionSetupExitEvent(COMPLETED_EVENT);
     const classrooms = this.props.classrooms;
     const selectedName =
       classrooms &&
@@ -164,11 +169,21 @@ class RosterDialog extends React.Component {
   };
 
   cancel = () => {
+    this.recordSectionSetupExitEvent(CANCELLED_EVENT);
     this.props.handleCancel();
   };
 
   onClassroomSelected = id => {
     this.setState({selectedId: id});
+  };
+
+  // valid event names: 'Section Setup Complete', 'Section Setup Cancelled'.
+  recordSectionSetupExitEvent = eventName => {
+    const {rosterProvider} = this.props;
+
+    analyticsReporter.sendEvent(eventName, {
+      oauthSource: rosterProvider
+    });
   };
 
   render() {
