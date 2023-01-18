@@ -24,7 +24,7 @@ execute 'install ruby with ruby build' do
   # target /usr specifically because that's where our old apt approach
   # installed ruby; could instead consider /usr/local if we figure out a good
   # way to clean up existing installations.
-  command "ruby-build #{node['cdo-ruby']['rubygems_version']} /usr"
+  command "ruby-build #{node['cdo-ruby']['version']} /usr"
 end
 
 # TODO: Remove old Ruby version packages if present.
