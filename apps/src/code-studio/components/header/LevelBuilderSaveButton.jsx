@@ -7,7 +7,7 @@ import {
   setProjectUpdatedError,
   setProjectUpdatedSaving,
   setProjectUpdatedSaved
-} from '../../headerRedux';
+} from '../../projectRedux';
 
 // Levelbuilder-only UI for saving changes to a level.
 class LevelBuilderSaveButton extends React.Component {

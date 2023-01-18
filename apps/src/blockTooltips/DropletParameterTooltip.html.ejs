@@ -1,3 +1,4 @@
+<% var i18n = require('@cdo/locale'); %>
 <div class="function-name">
   <% if (signatureOverride) { -%>
     <%= signatureOverride %>
@@ -13,11 +14,11 @@
 <% if (parameters[currentParameterIndex] && parameters[currentParameterIndex].description) { %><div><%= parameters[currentParameterIndex].description %></div><% } %>
 <% if (parameters[currentParameterIndex] && parameters[currentParameterIndex].assetTooltip) { %>
   <div class="tooltip-choose-link">
-    <a href="#">Choose...</a>
+    <a href="#"><%= i18n.choosePrefix() %></a>
   </div>
 <% } %>
 <% if (showExamplesLink) { %>
   <div class="tooltip-example-link">
-    <a href="#">See examples</a>
+    <a href="#"><%= i18n.examples() %></a>
   </div>
 <% } %>

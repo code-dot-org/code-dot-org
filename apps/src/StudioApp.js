@@ -86,13 +86,14 @@ import {userAlreadyReportedAbuse} from '@cdo/apps/reportAbuse';
 import {setArrowButtonDisabled} from '@cdo/apps/templates/arrowDisplayRedux';
 import {workspace_running_background, white} from '@cdo/apps/util/color';
 import WorkspaceAlert from '@cdo/apps/code-studio/components/WorkspaceAlert';
+import {closeWorkspaceAlert} from './code-studio/projectRedux';
 
 var copyrightStrings;
 
 /**
  * The minimum width of a playable whole blockly game.
  */
-const MIN_WIDTH = 1200;
+const MIN_WIDTH = 1400;
 const DEFAULT_MOBILE_NO_PADDING_SHARE_WIDTH = 400;
 export const MAX_VISUALIZATION_WIDTH = 400;
 export const MIN_VISUALIZATION_WIDTH = 200;
@@ -941,6 +942,11 @@ export function makeFooterMenuItems() {
       text: msg.privacyPolicy(),
       link: 'https://code.org/privacy',
       newWindow: true
+    },
+    {
+      text: msg.cookieNotice(),
+      link: 'https://code.org/cookies',
+      newWindow: true
     }
   ];
 
@@ -1190,6 +1196,11 @@ StudioApp.prototype.inject = function(div, options) {
     trashcan: true,
     customSimpleDialog: this.feedback_.showSimpleDialog.bind(this.feedback_)
   };
+
+  // Allows Google Blockly labs to use the Zelos renderer instead of the default.
+  if (experiments.isEnabled('zelos')) {
+    options.renderer = 'cdo_renderer_zelos';
+  }
   Blockly.inject(div, utils.extend(defaults, options), Sounds.getSingleton());
 };
 
@@ -2432,7 +2443,7 @@ StudioApp.prototype.handleEditCode_ = function(config) {
         this.editor.enablePalette(!this.editor.session.paletteEnabled);
         showToolboxHeader.style.display = this.editor.session.paletteEnabled
           ? 'none'
-          : 'inline-block';
+          : 'flex';
         hideToolboxIcon.style.display = !this.editor.session.paletteEnabled
           ? 'none'
           : 'inline-block';
@@ -3112,6 +3123,8 @@ StudioApp.prototype.displayWorkspaceAlert = function(
   bottom = false,
   onClose = () => {}
 ) {
+  // close currently any open workspace alert from CodeWorkspace.jsx
+  getStore().dispatch(closeWorkspaceAlert());
   var parent = $(bottom && this.editCode ? '#codeTextbox' : '#codeWorkspace');
   var container = $('<div/>');
   parent.append(container);
@@ -3188,7 +3201,11 @@ StudioApp.prototype.alertIfAbusiveProject = function() {
       <AbuseError
         i18n={{
           tos: msg.tosLong({url: 'http://code.org/tos'}),
-          contact_us: msg.contactUs({url: 'https://code.org/contact'})
+          contact_us: msg.contactUs({
+            url: `https://support.code.org/hc/en-us/requests/new?&description=${encodeURIComponent(
+              `Abuse error for project at url: ${window.location.toString()}`
+            )}`
+          })
         }}
       />
     );
@@ -3206,7 +3223,11 @@ StudioApp.prototype.alertIfProfaneOrPrivacyViolatingProject = function() {
       <AbuseError
         i18n={{
           tos: msg.policyViolation(),
-          contact_us: msg.contactUs({url: 'https://code.org/contact'})
+          contact_us: msg.contactUs({
+            url: `https://support.code.org/hc/en-us/requests/new?&description=${encodeURIComponent(
+              `Abuse error for project at url: ${window.location.toString()}`
+            )}`
+          })
         }}
       />
     );

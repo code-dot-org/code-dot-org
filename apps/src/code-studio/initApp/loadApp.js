@@ -3,10 +3,7 @@ import $ from 'jquery';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import {getStore} from '../redux';
-import {
-  setAppLoadStarted,
-  setAppLoaded
-} from '@cdo/apps/code-studio/headerRedux';
+import {setAppLoadStarted, setAppLoaded} from '@cdo/apps/code-studio/appRedux';
 import {files} from '@cdo/apps/clientApi';
 var renderAbusive = require('./renderAbusive');
 import renderProjectNotFound from './renderProjectNotFound';
@@ -47,7 +44,7 @@ export function setupApp(appOptions) {
       // Lock the contained levels if this is a teacher viewing student work:
       lockContainedLevelAnswers();
     }
-    if (!appOptions.level.edit_blocks) {
+    if (!(appOptions.level.edit_blocks || appOptions.level.editBlocks)) {
       // Always mark the workspace as readonly when we have contained levels,
       // unless editing:
       appOptions.readonlyWorkspace = true;
@@ -489,13 +486,6 @@ const sourceHandler = {
     } else {
       callback({});
     }
-  },
-  setInitialGeneratedProperties(generatedProperties) {
-    getAppOptions().initialGeneratedProperties = generatedProperties;
-  },
-  getGeneratedProperties() {
-    const {getGeneratedProperties} = getAppOptions();
-    return getGeneratedProperties && getGeneratedProperties();
   },
   prepareForRemix() {
     const {prepareForRemix} = getAppOptions();

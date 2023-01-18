@@ -4,7 +4,6 @@ import * as color from '../util/color';
 import {getAppWidth, APP_HEIGHT} from './constants';
 import React from 'react';
 import PropTypes from 'prop-types';
-import Radium from 'radium';
 import Visualization from './Visualization';
 import CompletionButton from '../templates/CompletionButton';
 import PlaySpaceHeader from './PlaySpaceHeader';
@@ -36,6 +35,30 @@ class ApplabVisualizationColumn extends React.Component {
     isPaused: PropTypes.bool,
     awaitingContainedResponse: PropTypes.bool.isRequired,
     widgetMode: PropTypes.bool
+  };
+
+  componentDidMount() {
+    this.visualizationColumn.addEventListener(
+      'touchmove',
+      this.preventBehavior,
+      {
+        passive: false
+      }
+    );
+  }
+
+  componentWillUnmount() {
+    this.visualizationColumn.removeEventListener(
+      'touchmove',
+      this.preventBehavior,
+      {
+        passive: false
+      }
+    );
+  }
+
+  preventBehavior = e => {
+    e.preventDefault();
   };
 
   getClassNames() {
@@ -86,6 +109,8 @@ class ApplabVisualizationColumn extends React.Component {
       widgetMode
     } = this.props;
 
+    const maxWidth = !isResponsive ? {maxWidth: nonResponsiveWidth} : {};
+
     let visualization = [
       <Visualization key="1" />,
       isIframeEmbed && !isRunning && (
@@ -118,7 +143,10 @@ class ApplabVisualizationColumn extends React.Component {
       <div
         id="visualizationColumn"
         className={this.getClassNames()}
-        style={[!isResponsive && {maxWidth: nonResponsiveWidth}]}
+        style={maxWidth}
+        ref={el => {
+          this.visualizationColumn = el;
+        }}
       >
         {!isReadOnlyWorkspace && (
           <PlaySpaceHeader
@@ -133,7 +161,9 @@ class ApplabVisualizationColumn extends React.Component {
             <ResetButton hideText style={styles.resetButton} />
           </div>
         )}
-        <GameButtons>
+        {/* The playspace phone frame has a run/reset button, so we don't need to render and hide
+            run/reset in GameButtons */}
+        <GameButtons noRunResetButton={playspacePhoneFrame}>
           {/* This div is used to control whether or not our finish button is centered*/}
           <div style={this.getCompletionButtonSyle()}>
             <CompletionButton />
@@ -197,4 +227,4 @@ export default connect(state => ({
   playspacePhoneFrame: state.pageConstants.playspacePhoneFrame,
   pinWorkspaceToBottom: state.pageConstants.pinWorkspaceToBottom,
   widgetMode: state.pageConstants.widgetMode
-}))(Radium(ApplabVisualizationColumn));
+}))(ApplabVisualizationColumn);

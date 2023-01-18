@@ -1,7 +1,7 @@
 import * as color from '../util/color';
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
-import Radium from 'radium';
+import Radium from 'radium'; // eslint-disable-line no-restricted-imports
 import {singleton as studioApp} from '../StudioApp';
 import msg from '@cdo/locale';
 

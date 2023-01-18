@@ -48,7 +48,8 @@ export default function NewCourseFields(props) {
             The family name is used to group together courses that are different
             version years of the same course so that users can be redirected
             between different version years. Family names should only contain
-            letters, numbers, and dashes.
+            letters, numbers, and dashes. Family names should NOT contain a
+            year.
           </p>
         </HelpTip>
       </label>

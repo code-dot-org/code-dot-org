@@ -1,0 +1,434 @@
+{
+  "script": {
+    "name": "emmas-playground",
+    "wrapup_video_id": null,
+    "login_required": false,
+    "properties": {
+      "is_course": true,
+      "is_migrated": true,
+      "version_year": "unversioned"
+    },
+    "new_name": null,
+    "family_name": "emmas-playground",
+    "serialized_at": "2023-01-13 00:06:23 UTC",
+    "published_state": "in_development",
+    "instruction_type": "teacher_led",
+    "instructor_audience": "teacher",
+    "participant_audience": "student",
+    "seeding_key": {
+      "script.name": "emmas-playground"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "",
+      "user_facing": false,
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_group.key": "",
+        "script.name": "emmas-playground"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "lesson-1",
+      "name": "Emma's Stuff",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "emmas-playground"
+      }
+    },
+    {
+      "key": "lesson-2",
+      "name": "NEW- Function Machines",
+      "absolute_position": 2,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "emmas-playground"
+      }
+    }
+  ],
+  "lesson_activities": [
+    {
+      "key": "1b63a389-4467-4ab2-bb9d-7e9530d8c527",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "1b63a389-4467-4ab2-bb9d-7e9530d8c527",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "emmas-playground"
+      }
+    },
+    {
+      "key": "d759c825-683d-4798-abb9-41ec3e009687",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "d759c825-683d-4798-abb9-41ec3e009687",
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "emmas-playground"
+      }
+    }
+  ],
+  "activity_sections": [
+    {
+      "key": "4fe42c1d-2805-4720-8e0e-6b87bb42a1b6",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "4fe42c1d-2805-4720-8e0e-6b87bb42a1b6",
+        "lesson_activity.key": "1b63a389-4467-4ab2-bb9d-7e9530d8c527"
+      }
+    },
+    {
+      "key": "fc354211-6180-48c0-8d3a-fc3ca027c734",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "fc354211-6180-48c0-8d3a-fc3ca027c734",
+        "lesson_activity.key": "d759c825-683d-4798-abb9-41ec3e009687"
+      }
+    }
+  ],
+  "script_levels": [
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "csc_bookcover_freeplay"
+        ]
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csc_bookcover_freeplay"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "emmas-playground",
+        "activity_section.key": "4fe42c1d-2805-4720-8e0e-6b87bb42a1b6"
+      },
+      "level_keys": [
+        "csc_bookcover_freeplay"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "csc_bookcover_freeplay_holes"
+        ]
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csc_bookcover_freeplay_holes"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "emmas-playground",
+        "activity_section.key": "4fe42c1d-2805-4720-8e0e-6b87bb42a1b6"
+      },
+      "level_keys": [
+        "csc_bookcover_freeplay_holes"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 3,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "csc_bookcover_freeplay_blended"
+        ]
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csc_bookcover_freeplay_blended"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "emmas-playground",
+        "activity_section.key": "4fe42c1d-2805-4720-8e0e-6b87bb42a1b6"
+      },
+      "level_keys": [
+        "csc_bookcover_freeplay_blended"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 4,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "csc_bookcover_freeplay_frontdesk"
+        ]
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csc_bookcover_freeplay_frontdesk"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "emmas-playground",
+        "activity_section.key": "4fe42c1d-2805-4720-8e0e-6b87bb42a1b6"
+      },
+      "level_keys": [
+        "csc_bookcover_freeplay_frontdesk"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 5,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "csc_bookcover_freeplay_refugee"
+        ]
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csc_bookcover_freeplay_refugee"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "emmas-playground",
+        "activity_section.key": "4fe42c1d-2805-4720-8e0e-6b87bb42a1b6"
+      },
+      "level_keys": [
+        "csc_bookcover_freeplay_refugee"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 6,
+      "activity_section_position": 6,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "csc_bookcover_freeplay_newkid"
+        ]
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csc_bookcover_freeplay_newkid"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "emmas-playground",
+        "activity_section.key": "4fe42c1d-2805-4720-8e0e-6b87bb42a1b6"
+      },
+      "level_keys": [
+        "csc_bookcover_freeplay_newkid"
+      ]
+    },
+    {
+      "chapter": 7,
+      "position": 7,
+      "activity_section_position": 7,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "csc_fm_show_input_output_test_clone"
+        ]
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csc_fm_show_input_output_test_clone"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "emmas-playground",
+        "activity_section.key": "4fe42c1d-2805-4720-8e0e-6b87bb42a1b6"
+      },
+      "level_keys": [
+        "csc_fm_show_input_output_test_clone"
+      ]
+    },
+    {
+      "chapter": 8,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "emma_fm"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "emmas-playground",
+        "activity_section.key": "fc354211-6180-48c0-8d3a-fc3ca027c734"
+      },
+      "level_keys": [
+        "emma_fm"
+      ]
+    }
+  ],
+  "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "csc_bookcover_freeplay",
+        "script_level.level_keys": [
+          "csc_bookcover_freeplay"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "emmas-playground",
+        "activity_section.key": "4fe42c1d-2805-4720-8e0e-6b87bb42a1b6"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csc_bookcover_freeplay_holes",
+        "script_level.level_keys": [
+          "csc_bookcover_freeplay_holes"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "emmas-playground",
+        "activity_section.key": "4fe42c1d-2805-4720-8e0e-6b87bb42a1b6"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csc_bookcover_freeplay_blended",
+        "script_level.level_keys": [
+          "csc_bookcover_freeplay_blended"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "emmas-playground",
+        "activity_section.key": "4fe42c1d-2805-4720-8e0e-6b87bb42a1b6"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csc_bookcover_freeplay_frontdesk",
+        "script_level.level_keys": [
+          "csc_bookcover_freeplay_frontdesk"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "emmas-playground",
+        "activity_section.key": "4fe42c1d-2805-4720-8e0e-6b87bb42a1b6"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csc_bookcover_freeplay_refugee",
+        "script_level.level_keys": [
+          "csc_bookcover_freeplay_refugee"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "emmas-playground",
+        "activity_section.key": "4fe42c1d-2805-4720-8e0e-6b87bb42a1b6"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csc_bookcover_freeplay_newkid",
+        "script_level.level_keys": [
+          "csc_bookcover_freeplay_newkid"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "emmas-playground",
+        "activity_section.key": "4fe42c1d-2805-4720-8e0e-6b87bb42a1b6"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csc_fm_show_input_output_test_clone",
+        "script_level.level_keys": [
+          "csc_fm_show_input_output_test_clone"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "emmas-playground",
+        "activity_section.key": "4fe42c1d-2805-4720-8e0e-6b87bb42a1b6"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "emma_fm",
+        "script_level.level_keys": [
+          "emma_fm"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "emmas-playground",
+        "activity_section.key": "fc354211-6180-48c0-8d3a-fc3ca027c734"
+      }
+    }
+  ],
+  "resources": [
+
+  ],
+  "lessons_resources": [
+
+  ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+
+  ],
+  "lessons_standards": [
+
+  ],
+  "lessons_opportunity_standards": [
+
+  ]
+}

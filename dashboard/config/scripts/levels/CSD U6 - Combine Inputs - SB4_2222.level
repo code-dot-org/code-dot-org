@@ -1,9 +1,5 @@
 <Applab>
   <config><![CDATA[{
-  "game_id": 41,
-  "created_at": "2022-04-08T17:04:01.000Z",
-  "level_num": "custom",
-  "user_id": 1,
   "properties": {
     "skin": "applab",
     "code_functions": {
@@ -69,9 +65,9 @@
     "encrypted_examples": "04eC4RCQF6pNU/wepe1TOzxGrNviFEci0zK+6atQ7/G2zbCU1M7YJPJgcKjJ\nGUDwmfxwFsBC14Wokofr3RXJsA==\n",
     "text_mode_at_start": "false",
     "reference_links": [
-      "/docs/concepts/app-lab/taking-input-with-getproperty/"
+      "/courses/csd-2022/guides/taking-input-with-getproperty"
     ],
-    "map_reference": "/docs/concepts/maker-toolkit/physical-input/",
+    "map_reference": "/courses/csd-2022/guides/physical-input",
     "mini_rubric": "false",
     "encrypted": "false",
     "widget_mode": "false",
@@ -79,6 +75,10 @@
     "ai_enabled": "false",
     "preload_asset_list": null
   },
+  "level_num": "custom",
+  "game_id": 41,
+  "created_at": "2022-04-08T17:04:01.000Z",
+  "user_id": 1,
   "published": true,
   "notes": "",
   "audit_log": "[{\"changed_at\":\"2022-04-08T17:04:01.598+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Combine Inputs - SB4_2022\\\"\"],\"cloned_from\":\"CSD U6 - Combine Inputs - SB4_2022\"}]"

@@ -24,7 +24,7 @@ theme: responsive
           Przeglądarka
         </th>
         <tr>
-          <td>Chrome 87.x</td>
+          <td>Chrome 96.x</td>
         </tr>
         <tr>
           <td>Safari 13.x</td>
@@ -33,12 +33,12 @@ theme: responsive
           <td>Mobilne Safari 11.x</td>
         </tr>
         <tr>
-          <td>Edge 87.x</td>
+          <td>Edge 94.x</td>
         </tr>
         <tr>
           <td>Firefox 91.x</td>
         </tr>
-      </table>    
+      </table>
   </td>
   <td style="vertical-align: top; border-color: transparent; padding: 0px 0px 0px 0px;">
       <table>
@@ -69,16 +69,16 @@ theme: responsive
 
 Aby uzyskać jak najlepsze doświadczenia z całą zawartością Code.org, zalecamy skonsultowanie się z działem IT szkoły lub okręgu, aby upewnić się, że następujące witryny są dozwolone i nie są blokowane.
 
-| Priorytet                                                                                                                     | URL                                                                                                                                                                                |
-| ----------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Wymagane**                                                                                                                  | `https://code.org`<br/>`https://*.code.org`                                                                                                                                  |
-| **Opcjonalnie**                                                                                                               | `https://cdn.optimizely.com`<br/>`https://www.google-analytics.com`<br/>`https://www.googleoptimize.com`                                                               |
-| ** Aby korzystać z filmów hostowanych w YouTube** <br/>(Ulepszony tryb prywatności – dostępny pod koniec lipca 2018 r.) | `https://youtube-nocookie.com/*`<br/>`https://*.googlevideo.com/*`<br/>`https://*.ytimg.com/*`                                                                         |
-| **Aby korzystać z filmów hostowanych w YouTube** <br/> (Wycofane pod koniec lipca 2018 r.)                              | `https://s.youtube.com/*`<br/>`https://www.youtube.com/*`<br/>`https://*.googlevideo.com/*`<br/>`https://*.ytimg.com/*`                                          |
-| **Aby korzystać z filmów hostowanych na Code.org**                                                                            | **Odblokuj:**<br/>`https://videos.code.org`<br/>**Zablokuj:**<br/>`https://www.youtube.com/favicon.ico`<br/>`https://www.youtube-nocookie.com/favicon.ico` |
-| **Aby korzystać z internetowego symulatora**                                                                                  | `https://api.pusherapp.com`<br/>`wss://ws.pusherapp.com:443`                                                                                                                 |
-| **Aby korzystać z Web Lab**                                                                                                   | `https://downloads.computinginthecore.org`<br/>`https://codeprojects.org`                                                                                                    |
-| **Aby korzystać z Google Classroom Share Button**                                                                             | `https://apis.google.com`                                                                                                                                                          |
+| Priorytet                                                                                    | URL                                                                                                        |
+| -------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
+| **Wymagane**                                                                                 | `https://code.org`<br/>`https://*.code.org`                                                          |
+| **Opcjonalnie**                                                                              | `https://www.google-analytics.com`<br/>`https://www.googleoptimize.com`                              |
+| **Korzystanie z filmów wideo hostowanych w serwisie YouTube (rozszerzony tryb prywatności)** | `https://youtube-nocookie.com/*`<br/>`https://*.googlevideo.com/*`<br/>`https://*.ytimg.com/*` |
+| **Aby korzystać z filmów hostowanych na Code.org**                                           | `https://videos.code.org`                                                                                  |
+| **Aby korzystać z internetowego symulatora**                                                 | `https://api.pusherapp.com`<br/>`wss://ws.pusherapp.com:443`                                         |
+| **Aby korzystać z Web Lab**                                                                  | `https://downloads.computinginthecore.org`<br/>`https://codeprojects.org`                            |
+| **Aby korzystać z Google Classroom Share Button**                                            | `https://apis.google.com`                                                                                  |
+| **Aby używać zestawów danych App Lab**                                                       | `https://*.firebaseio.com`<br />`wss://*.firebaseio.com`                                             |
 
 ## Szczegóły wsparcia telefonów komórkowych i tabletów
 

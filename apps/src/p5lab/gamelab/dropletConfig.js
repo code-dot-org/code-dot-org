@@ -1922,6 +1922,13 @@ draw() - USEFUL?
     paletteParams: ['message'],
     params: ['"message"']
   },
+
+  {
+    func: 'console.clear',
+    parent: consoleApi,
+    category: 'Variables'
+  },
+
   ...dropletStringBlocks,
   ...dropletArrayBlocks,
   {

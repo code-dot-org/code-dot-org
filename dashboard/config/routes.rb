@@ -7,11 +7,9 @@ Dashboard::Application.routes.draw do
   constraints host: CDO.codeprojects_hostname do
     # Routes needed for the footer on weblab share links on codeprojects
     get '/weblab/footer', to: 'projects#weblab_footer'
-    get '/scripts/hosted.js', to: redirect('/weblab/footer.js')
-    get '/style.css', to: redirect('/weblab/footer.css')
   end
 
-  constraints host: /.*code.org.*/ do
+  constraints host: /.*code.org.*|.*hourofcode.com.*/ do
     # React-router will handle sub-routes on the client.
     get 'teacher_dashboard/sections/:section_id/parent_letter', to: 'teacher_dashboard#parent_letter'
     get 'teacher_dashboard/sections/:section_id/*path', to: 'teacher_dashboard#show', via: :all
@@ -22,6 +20,8 @@ Dashboard::Application.routes.draw do
     resource :pairing, only: [:show, :update]
 
     resources :user_levels, only: [:update, :destroy]
+    post '/delete_predict_level_progress', to: 'user_levels#delete_predict_level_progress'
+    get '/user_levels/get_token', to: 'user_levels#get_token'
 
     patch '/api/v1/user_scripts/:script_id', to: 'api/v1/user_scripts#update'
 
@@ -35,6 +35,11 @@ Dashboard::Application.routes.draw do
     get "/home", to: "home#home"
 
     get "/congrats", to: "congrats#index"
+
+    get "/incubator", to: "incubator#index"
+    get "/musiclab", to: "musiclab#index"
+    get "/musiclab/menu", to: "musiclab#menu"
+    get "/musiclab/analytics_key", to: "musiclab#get_analytics_key"
 
     resources :activity_hints, only: [:update]
 
@@ -70,12 +75,7 @@ Dashboard::Application.routes.draw do
 
     get 'redirected_url', to: 'redirect_proxy#get', format: false
 
-    # We moved code docs off of curriculum builder in spring 2022.
-    # In that move, we wanted to preserve the previous /docs routes for these
-    # pages. However, there are a lot of other /docs URLs that did not move over
-    # so we're allow-listing the four IDEs that lived on curriculum builder to be
-    # served by ProgrammingEnvironmentsController and ProgrammingExpressionsController,
-    # with the rest falling back to the old proxying logic.
+    # Code docs are off of curriculum builder as of spring 2022.
     get 'docs/', to: 'programming_environments#docs_index'
     get 'docs/:programming_environment_name', to: 'programming_environments#docs_show', constraints: {programming_environment_name: /(applab|gamelab|spritelab|weblab)/}
     get 'docs/:programming_environment_name/:programming_expression_key', constraints: {programming_environment_name: /(applab|gamelab|spritelab|weblab)/, programming_expression_key: /#{CurriculumHelper::KEY_CHAR_RE}+/o}, to: 'programming_expressions#docs_show'
@@ -94,6 +94,13 @@ Dashboard::Application.routes.draw do
       end
     end
 
+    # Data docs are off of curriculum builder as of fall 2022.
+    get 'docs/concepts/data-library', to: 'data_docs#index'
+    get 'docs/concepts/data-library/:key', param: :key, constraints: {data_doc_key: /#{CurriculumHelper::KEY_CHAR_RE}+/o}, to: 'data_docs#show'
+
+    # There are still old curricula that live on curriculum.code.org.
+    # There are also old levels that point to docs on curriculum.code.org.
+    # For both, fall back to old proxying logic.
     get 'docs/*path', to: 'curriculum_proxy#get_doc'
     get 'curriculum/*path', to: 'curriculum_proxy#get_curriculum'
 
@@ -276,6 +283,8 @@ Dashboard::Application.routes.draw do
     end
     resources :shared_blockly_functions, path: '/functions'
 
+    get 'helpful_links', to: 'helpful_links#index', as: 'helpful_links'
+
     resources :libraries do
       collection do
         get '/get_updates', to: 'libraries#get_updates'
@@ -346,6 +355,12 @@ Dashboard::Application.routes.draw do
     get '/s/csp7-2020/lockable/1(*all)', to: redirect(path: '/s/csp7-2020/lessons/11%{all}')
     get '/s/csp9-2020/lockable/1(*all)', to: redirect(path: '/s/csp9-2020/lessons/9%{all}')
     get '/s/csp10-2020/lockable/1(*all)', to: redirect(path: '/s/csp10-2020/lessons/14%{all}')
+
+    resources :data_docs, param: :key do
+      collection do
+        get '/edit', to: 'data_docs#edit_all'
+      end
+    end
 
     resources :lessons, only: [:edit, :update] do
       member do
@@ -468,17 +483,21 @@ Dashboard::Application.routes.draw do
 
     get '/certificate_images/:filename', to: 'certificate_images#show'
 
+    post '/print_certificates/batch'
     get '/print_certificates/:encoded_params', to: 'print_certificates#show'
 
+    get '/certificates/blank'
+    get '/certificates/batch'
+    post '/certificates/batch'
     get '/certificates/:encoded_params', to: 'certificates#show'
 
     get '/beta', to: redirect('/')
 
-    get '/hoc/reset', to: 'script_levels#reset', script_id: Script::HOC_NAME, as: 'hoc_reset'
-    get '/hoc/:chapter', to: 'script_levels#show', script_id: Script::HOC_NAME, as: 'hoc_chapter', format: false
+    get '/hoc/reset', to: 'script_levels#reset', script_id: Unit::HOC_NAME, as: 'hoc_reset'
+    get '/hoc/:chapter', to: 'script_levels#show', script_id: Unit::HOC_NAME, as: 'hoc_chapter', format: false
 
-    get '/flappy/:chapter', to: 'script_levels#show', script_id: Script::FLAPPY_NAME, as: 'flappy_chapter', format: false
-    get '/jigsaw/:chapter', to: 'script_levels#show', script_id: Script::JIGSAW_NAME, as: 'jigsaw_chapter', format: false
+    get '/flappy/:chapter', to: 'script_levels#show', script_id: Unit::FLAPPY_NAME, as: 'flappy_chapter', format: false
+    get '/jigsaw/:chapter', to: 'script_levels#show', script_id: Unit::JIGSAW_NAME, as: 'jigsaw_chapter', format: false
 
     get '/weblab/host', to: 'weblab_host#index'
 
@@ -497,9 +516,6 @@ Dashboard::Application.routes.draw do
     get 'regional_partners/:id/remove_mapping/:id', controller: 'regional_partners', action: 'remove_mapping'
     post 'regional_partners/:id/replace_mappings',  controller: 'regional_partners', action: 'replace_mappings'
 
-    # HOC dashboards.
-    get '/admin/hoc/students_served', to: 'admin_hoc#students_served', as: 'hoc_students_served'
-
     # NPS dashboards
     get '/admin/nps/nps_form', to: 'admin_nps#nps_form', as: 'nps_form'
     post '/admin/nps/nps_update', to: 'admin_nps#nps_update', as: 'nps_update'
@@ -507,7 +523,6 @@ Dashboard::Application.routes.draw do
     # internal report dashboards
     get '/admin/levels', to: 'admin_reports#level_completions', as: 'level_completions'
     get '/admin/level_answers(.:format)', to: 'admin_reports#level_answers', as: 'level_answers'
-    get '/admin/pd_progress(/:script)', to: 'admin_reports#pd_progress', as: 'pd_progress'
     get '/admin/debug', to: 'admin_reports#debug'
 
     # internal search tools
@@ -566,7 +581,6 @@ Dashboard::Application.routes.draw do
     get '/too_young', to: 'too_young#index'
 
     post '/sms/send', to: 'sms#send_to_phone', as: 'send_to_phone'
-    post '/sms/send_download', to: 'sms#send_download_url_to_phone', as: 'send_download_url_to_phone'
 
     # Experiments are get requests so that a user can click on a link to join or leave an experiment
     get '/experiments/set_course_experiment/:experiment_name', to: 'experiments#set_course_experiment'
@@ -656,7 +670,7 @@ Dashboard::Application.routes.draw do
           resources :teacher, controller: 'teacher_applications', only: [:create, :update] do
             member do
               post :send_principal_approval
-              post :principal_approval_not_required
+              post :change_principal_approval_requirement
             end
           end
           post :principal_approval, to: 'principal_approval_applications#create'
@@ -842,6 +856,7 @@ Dashboard::Application.routes.draw do
         get 'users/:user_id/mute_music', to: 'users#get_mute_music'
         get 'users/:user_id/contact_details', to: 'users#get_contact_details'
         get 'users/current', to: 'users#current'
+        get 'users/netsim_signed_in', to: 'users#netsim_signed_in'
         get 'users/:user_id/school_name', to: 'users#get_school_name'
         get 'users/:user_id/school_donor_name', to: 'users#get_school_donor_name'
         get 'users/:user_id/tos_version', to: 'users#get_tos_version'
@@ -954,6 +969,7 @@ Dashboard::Application.routes.draw do
       collection do
         get 'sprite_upload'
         get 'default_sprites_editor'
+        get 'release_default_sprites_to_production'
         get 'select_start_animations'
       end
     end
@@ -992,22 +1008,13 @@ Dashboard::Application.routes.draw do
       get :peers_with_open_reviews, on: :collection
     end
 
-    resources :code_review_notes, only: [:create, :update, :destroy]
-
-    resources :code_review_comments, only: [:create, :destroy] do
-      patch :toggle_resolved, on: :member
-      get :project_comments, on: :collection
-    end
+    resources :code_review_comments, only: [:create, :update, :destroy]
 
     get '/backpacks/channel', to: 'backpacks#get_channel'
 
     resources :project_commits, only: [:create]
     get 'project_commits/get_token', to: 'project_commits#get_token'
     get 'project_commits/:channel_id', to: 'project_commits#project_commits'
-
-    resources :reviewable_projects, only: [:create, :destroy]
-    get 'reviewable_projects/for_level', to: 'reviewable_projects#for_level'
-    get 'reviewable_projects/reviewable_status', to: 'reviewable_projects#reviewable_status'
 
     # offline-service-worker*.js needs to be loaded the the root level of the
     # domain('studio.code.org/').

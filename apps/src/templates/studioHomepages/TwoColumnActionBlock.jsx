@@ -233,7 +233,7 @@ const styles = {
     paddingBottom: 20,
     fontSize: 24,
     lineHeight: '26px',
-    fontFamily: 'Gotham 3r',
+    fontFamily: 'Gotham 4r',
     color: color.charcoal
   },
   textItem: {

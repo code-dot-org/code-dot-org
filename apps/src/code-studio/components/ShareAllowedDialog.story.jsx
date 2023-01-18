@@ -19,7 +19,6 @@ export default storybook => {
         story: () => {
           return (
             <ShareAllowedDialog
-              allowExportExpo={false}
               isOpen={true}
               canPublish={false}
               isPublished={false}
@@ -44,7 +43,6 @@ export default storybook => {
         story: () => {
           return (
             <ShareAllowedDialog
-              allowExportExpo={false}
               isOpen={true}
               canPrint={true}
               canPublish={false}
@@ -72,7 +70,6 @@ export default storybook => {
         story: () => {
           return (
             <ShareAllowedDialog
-              allowExportExpo={false}
               isOpen={true}
               canPublish={false}
               isPublished={false}
@@ -98,34 +95,6 @@ export default storybook => {
         story: () => {
           return (
             <ShareAllowedDialog
-              allowExportExpo={false}
-              isOpen={true}
-              canPublish={false}
-              isPublished={false}
-              isUnpublishPending={false}
-              onClose={action('close')}
-              onShowPublishDialog={action('show publish dialog')}
-              onUnpublish={action('unpublish')}
-              openLibraryCreationDialog={action('open library creation dialog')}
-              hideBackdrop={true}
-              shareUrl="https://studio.code.org/projects/applab/GmBgH7e811sZP7-5bALAxQ"
-              isAbusive={false}
-              channelId="some-id"
-              appType="applab"
-              canShareSocial={true}
-              onClickPopup={action('onClickPopup')}
-              exportApp={action('onClickExport')}
-            />
-          );
-        }
-      },
-      {
-        name: 'with export for expo',
-        description: `The Run Natively section appears in advanced options with two buttons.`,
-        story: () => {
-          return (
-            <ShareAllowedDialog
-              allowExportExpo={true}
               isOpen={true}
               canPublish={false}
               isPublished={false}
@@ -152,7 +121,6 @@ export default storybook => {
         story: () => {
           return (
             <ShareAllowedDialog
-              allowExportExpo={false}
               isOpen={true}
               canPublish={false}
               isPublished={false}
@@ -178,7 +146,6 @@ export default storybook => {
         story: () => {
           return (
             <ShareAllowedDialog
-              allowExportExpo={false}
               isOpen={true}
               canPublish={false}
               isPublished={false}
@@ -204,7 +171,6 @@ export default storybook => {
         story: () => {
           return (
             <ShareAllowedDialog
-              allowExportExpo={false}
               isOpen={true}
               canPublish={false}
               isPublished={false}
@@ -230,7 +196,6 @@ export default storybook => {
         story: () => {
           return (
             <ShareAllowedDialog
-              allowExportExpo={false}
               isOpen={true}
               canPublish={true}
               isPublished={false}
@@ -256,7 +221,6 @@ export default storybook => {
         story: () => {
           return (
             <ShareAllowedDialog
-              allowExportExpo={false}
               isOpen={true}
               canPublish={true}
               isPublished={false}
@@ -281,7 +245,6 @@ export default storybook => {
         story: () => {
           return (
             <ShareAllowedDialog
-              allowExportExpo={false}
               isOpen={true}
               canPublish={true}
               isPublished={true}
@@ -306,7 +269,6 @@ export default storybook => {
         story: () => {
           return (
             <ShareAllowedDialog
-              allowExportExpo={false}
               isOpen={true}
               canPublish={true}
               isPublished={true}
@@ -331,7 +293,6 @@ export default storybook => {
         story: () => {
           return (
             <ShareAllowedDialog
-              allowExportExpo={false}
               isOpen={true}
               canPublish={true}
               isPublished={true}

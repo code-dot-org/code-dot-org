@@ -18,12 +18,11 @@ import TopInstructions, {
 } from '@cdo/apps/templates/instructions/TopInstructions';
 import javalabMsg from '@cdo/javalab/locale';
 import {hasInstructions} from '@cdo/apps/templates/instructions/utils';
-import {VIEWING_CODE_REVIEW_URL_PARAM} from '@cdo/apps/templates/instructions/ReviewTab';
+import {VIEWING_CODE_REVIEW_URL_PARAM} from '@cdo/apps/templates/instructions/CommitsAndReviewTab';
 import ControlButtons from './ControlButtons';
 import {CsaViewMode} from './constants';
 import styleConstants from '../styleConstants';
 import {queryParams} from '@cdo/apps/code-studio/utils';
-import experiments from '@cdo/apps/util/experiments';
 
 class JavalabView extends React.Component {
   static propTypes = {
@@ -62,7 +61,8 @@ class JavalabView extends React.Component {
     isSubmitted: PropTypes.bool,
     validationPassed: PropTypes.bool,
     hasRunOrTestedCode: PropTypes.bool,
-    hasOpenCodeReview: PropTypes.bool
+    hasOpenCodeReview: PropTypes.bool,
+    isJavabuilderConnecting: PropTypes.bool
   };
 
   componentDidMount() {
@@ -72,31 +72,6 @@ class JavalabView extends React.Component {
   compile = () => {
     this.props.appendOutputLog(javalabMsg.compilingProgram());
     this.props.appendOutputLog(javalabMsg.compiled());
-  };
-
-  // Sends redux call to update dark mode, which handles user preferences
-  renderSettings = () => {
-    const {displayTheme, setDisplayTheme} = this.props;
-    const displayThemeString =
-      displayTheme === DisplayTheme.DARK
-        ? javalabMsg.displayThemeLightMode()
-        : javalabMsg.displayThemeDarkMode();
-
-    return [
-      <button
-        onClick={() =>
-          setDisplayTheme(
-            displayTheme === DisplayTheme.DARK
-              ? DisplayTheme.LIGHT
-              : DisplayTheme.DARK
-          )
-        }
-        key="theme-setting"
-        type="button"
-      >
-        {javalabMsg.switchToDisplayTheme({displayTheme: displayThemeString})}
-      </button>
-    ];
   };
 
   // This controls the 'run' button state
@@ -190,7 +165,8 @@ class JavalabView extends React.Component {
       isCodeReviewing,
       validationPassed,
       hasRunOrTestedCode,
-      hasOpenCodeReview
+      hasOpenCodeReview,
+      isJavabuilderConnecting
     } = this.props;
 
     if (displayTheme === DisplayTheme.DARK) {
@@ -233,9 +209,7 @@ class JavalabView extends React.Component {
                 displayReviewTab
                 initialSelectedTab={
                   queryParams(VIEWING_CODE_REVIEW_URL_PARAM) === 'true'
-                    ? experiments.isEnabled('code_review_v2')
-                      ? TabType.REVIEW_V2
-                      : TabType.REVIEW
+                    ? TabType.REVIEW
                     : null
                 }
                 explicitHeight={height}
@@ -268,10 +242,17 @@ class JavalabView extends React.Component {
                     toggleTest={this.toggleTest}
                     isEditingStartSources={isEditingStartSources}
                     disableFinishButton={disableFinishButton}
-                    disableRunButton={awaitingContainedResponse || !canRun}
-                    disableTestButton={awaitingContainedResponse || !canTest}
+                    disableRunButton={
+                      awaitingContainedResponse ||
+                      !canRun ||
+                      isJavabuilderConnecting
+                    }
+                    disableTestButton={
+                      awaitingContainedResponse ||
+                      !canTest ||
+                      isJavabuilderConnecting
+                    }
                     onContinue={() => onContinue(isSubmittable)}
-                    renderSettings={this.renderSettings}
                     showTestButton={true}
                     isSubmittable={isSubmittable}
                     isSubmitted={isSubmitted}
@@ -353,7 +334,8 @@ export default connect(
     isCodeReviewing: state.pageConstants.isCodeReviewing,
     validationPassed: state.javalab.validationPassed,
     hasRunOrTestedCode: state.javalab.hasRunOrTestedCode,
-    hasOpenCodeReview: state.javalab.hasOpenCodeReview
+    hasOpenCodeReview: state.javalab.hasOpenCodeReview,
+    isJavabuilderConnecting: state.javalab.isJavabuilderConnecting
   }),
   dispatch => ({
     appendOutputLog: log => dispatch(appendOutputLog(log)),

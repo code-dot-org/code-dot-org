@@ -8,7 +8,7 @@ And(/^I create a new (student|teacher|facilitator) section( and go home)?$/) do 
   navigate_to replace_hostname('http://studio.code.org') if home
 end
 
-And /^I create a new student section named "([^"]*)" assigned to "([^"]*)" version "([^"]*)"(?: and unit "([^"]*)")?$/ do |section_name, assignment_family, version_year, secondary|
+And /^I create a new student section named "([^"]*)" assigned to "([^"]*)"(?: version "([^"]*)")?(?: and unit "([^"]*)")?$/ do |section_name, assignment_family, version_year, secondary|
   individual_steps %Q{
     When I see the section set up box
     When I press the new section button
@@ -18,10 +18,14 @@ And /^I create a new student section named "([^"]*)" assigned to "([^"]*)" versi
     And I press keys "#{section_name}" for element "#uitest-section-name"
     Then I wait to see "#uitest-assignment-family"
     When I select the "#{assignment_family}" option in dropdown "uitest-assignment-family"
-
-    And I click selector "#assignment-version-year" once I see it
-    And I click selector ".assignment-version-title:contains(#{version_year})" once I see it
   }
+
+  if version_year
+    individual_steps %Q{
+      And I click selector "#assignment-version-year" once I see it
+      And I click selector ".assignment-version-title:contains(#{version_year})" once I see it
+    }
+  end
 
   if secondary
     individual_steps %Q{

@@ -15,7 +15,8 @@ import {
   finishEditingSection,
   cancelEditingSection,
   reloadAfterEditingSection,
-  assignedUnitLessonExtrasAvailable
+  assignedUnitLessonExtrasAvailable,
+  assignedUnitRequiresVerifiedInstructor
 } from './teacherSectionsRedux';
 import {
   isScriptHiddenForSection,
@@ -27,7 +28,12 @@ import {
   StudentGradeLevels
 } from '@cdo/apps/util/sharedConstants';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import {ParticipantAudience} from '../../generated/curriculum/sharedCourseConstants';
+import GetVerifiedBanner from './GetVerifiedBanner';
+
+const COMPLETED_EVENT = 'Section Setup Completed';
+const CANCELLED_EVENT = 'Section Setup Cancelled';
 
 /**
  * UI for editing section details: Name, grade, assigned course, etc.
@@ -54,6 +60,8 @@ class EditSectionForm extends Component {
     assignedUnitTextToSpeechEnabled: PropTypes.bool.isRequired,
     updateHiddenScript: PropTypes.func.isRequired,
     localeCode: PropTypes.string,
+    assignedUnitRequiresVerifiedInstructor: PropTypes.bool,
+    isVerifiedInstructor: PropTypes.bool,
     showLockSectionField: PropTypes.bool // DCDO Flag - show/hide Lock Section field
   };
 
@@ -61,10 +69,18 @@ class EditSectionForm extends Component {
     showHiddenUnitWarning: false
   };
 
+  onCloseClick = () => {
+    const {handleClose} = this.props;
+    this.recordSectionSetupExitEvent(CANCELLED_EVENT);
+    handleClose();
+  };
+
   onSaveClick = () => {
     const {section, hiddenLessonState} = this.props;
     const sectionId = section.id;
     const scriptId = section.unitId;
+
+    this.recordSectionSetupExitEvent(COMPLETED_EVENT);
 
     const isScriptHidden =
       sectionId &&
@@ -95,13 +111,6 @@ class EditSectionForm extends Component {
     });
   };
 
-  isOauthType(loginType) {
-    return [
-      SectionLoginType.google_classroom,
-      SectionLoginType.clever
-    ].includes(loginType);
-  }
-
   recordAutoplayToggleEvent = ttsAutoplayEnabled => {
     firehoseClient.putRecord(
       {
@@ -131,6 +140,28 @@ class EditSectionForm extends Component {
     );
   };
 
+  // valid event names: 'Section Setup Complete', 'Section Setup Cancelled'.
+  recordSectionSetupExitEvent = eventName => {
+    const {section, courseOfferings, isNewSection} = this.props;
+
+    const course = courseOfferings.hasOwnProperty(section.courseOfferingId)
+      ? courseOfferings[section.courseOfferingId]
+      : null;
+    const courseName = course ? course.display_name : null;
+    const courseId = course ? course.id : null;
+
+    if (isNewSection) {
+      analyticsReporter.sendEvent(eventName, {
+        sectionCurriculumLocalizedName: courseName,
+        sectionCurriculum: courseId,
+        sectionGrade: section.grade,
+        sectionLockSelection: section.restrictSection,
+        sectionName: section.name,
+        sectionPairProgramSelection: section.pairingAllowed
+      });
+    }
+  };
+
   render() {
     const {
       section,
@@ -141,11 +172,17 @@ class EditSectionForm extends Component {
       handleClose,
       assignedUnitLessonExtrasAvailable,
       assignedUnitTextToSpeechEnabled,
+      assignedUnitRequiresVerifiedInstructor,
       assignedUnitName,
       localeCode,
       isNewSection,
-      showLockSectionField // DCDO Flag - show/hide Lock Section field
+      showLockSectionField,
+      isVerifiedInstructor // DCDO Flag - show/hide Lock Section field
     } = this.props;
+
+    const courseDisplayName = section.courseOfferingId
+      ? courseOfferings[section.courseOfferingId].display_name
+      : '';
 
     /**
     OAuth and personal email login types can not be changed.
@@ -215,6 +252,11 @@ class EditSectionForm extends Component {
             disabled={isSaveInProgress}
             isNewSection={isNewSection}
           />
+          {!isVerifiedInstructor &&
+            assignedUnitRequiresVerifiedInstructor &&
+            courseDisplayName && (
+              <GetVerifiedBanner courseName={courseDisplayName} />
+            )}
           {assignedUnitLessonExtrasAvailable && (
             <LessonExtrasField
               value={section.lessonExtras}
@@ -252,21 +294,21 @@ class EditSectionForm extends Component {
         </div>
         <DialogFooter>
           <Button
-            __useDeprecatedTag
-            onClick={handleClose}
+            onClick={this.onCloseClick}
             text={i18n.dialogCancel()}
             size={Button.ButtonSize.large}
             color={Button.ButtonColor.gray}
             disabled={isSaveInProgress}
+            style={{margin: 0}}
           />
           <Button
-            __useDeprecatedTag
             className="uitest-saveButton"
             onClick={this.onSaveClick}
             text={i18n.save()}
             size={Button.ButtonSize.large}
             color={Button.ButtonColor.orange}
             disabled={isSaveInProgress}
+            style={{margin: 0}}
           />
         </DialogFooter>
         {this.state.showHiddenUnitWarning && (
@@ -551,6 +593,10 @@ let defaultPropsFromState = state => ({
   assignedUnitName: assignedUnitName(state),
   assignedUnitTextToSpeechEnabled: assignedUnitTextToSpeechEnabled(state),
   localeCode: state.locales.localeCode,
+  assignedUnitRequiresVerifiedInstructor: assignedUnitRequiresVerifiedInstructor(
+    state
+  ),
+  isVerifiedInstructor: state.verifiedInstructor.isVerified,
 
   // DCDO Flag - show/hide Lock Section field
   showLockSectionField: state.teacherSections.showLockSectionField

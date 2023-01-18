@@ -3,8 +3,7 @@ source 'https://supermarket.chef.io'
 metadata
 instance_eval File.read('../local_cookbooks.rb'), __FILE__
 
-# Ref: https://github.com/chef-cookbooks/chef_client_updater/pull/93
-cookbook 'chef_client_updater', github: 'wjordan/chef_client_updater', branch: 'update_rubygems_fix'
+cookbook 'chef_client_updater', '>= 3.3.2' # 3.3.2 fixed https://github.com/chef-cookbooks/chef_client_updater/pull/93
 
 cookbook 'cdo-github-access', path: '../cdo-github-access'
 cookbook 'cdo-awscli', path: '../cdo-awscli'

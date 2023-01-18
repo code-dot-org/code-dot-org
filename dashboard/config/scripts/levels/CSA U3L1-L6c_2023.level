@@ -1,0 +1,34 @@
+<Javalab>
+  <config><![CDATA[{
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "The `SolarSystem`(#e7e8ea) class declares an instance variable for a 1D array of `String`(#e7e8ea) values to store the names of planets in the solar system. The constructor initializes the 1D array to store the number of values specified by the parameter `numPlanets`(#e7e8ea).\r\n\r\n✅ **TO DO #1:** In `SolarSystem.java`(#e7e8ea), write the `getNumPlanets()`(#e7e8ea) method to return the length of the 1D array `planets`(#e7e8ea).\r\n\r\n✅ **TO DO #2:** In `SolarSystemRunner.java`(#e7e8ea), call the `getNumPlanets()`(#e7e8ea) method and print the result.\r\n\r\n💡 **TIP:** Check out the **Help & Tips** tab ⬆️ for help with accessing the length of a 1D array.\r\n\r\n## ***Don't forget to . . .***\r\n\r\n![](https://images.code.org/eb2c8910ae2e150019b8e2177405d4af-image-1668191576873.png)",
+    "mini_rubric": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "csa_view_mode": "console",
+    "start_sources": {
+      "Runner.java": {
+        "text": "public class Runner {\n  public static void main(String[] args) {\n\n    /* ----------------------------------- TO DO -----------------------------------\n     * ✅ instructions for the student to complete\n     * -----------------------------------------------------------------------------\n     */\n\n\n\n    /* ----------------------------------- TO DO -----------------------------------\n     * ✅ instructions for the student to complete\n     * -----------------------------------------------------------------------------\n     *\n     * description of method to write\n     */\n\n    \n\n    \n    /* ---- 🔎 ADD YOUR CODE BELOW THIS LINE ---- */\n\n\n    \n    \n    \n  }\n}",
+        "isVisible": true,
+        "tabOrder": 0
+      }
+    },
+    "encrypted_examples": [
+
+    ],
+    "reference_links": [
+      "/courses/csa-2023/guides/one-dimensional-arrays"
+    ],
+    "display_name": "Planets",
+    "bubble_choice_description": "Get the length of a 1D array that stores the names of planets in the solar system.",
+    "thumbnail_url": "https://images.code.org/b14b689d1a8b4f73a3d4be532dc96adb-solar-system.png"
+  },
+  "game_id": 68,
+  "published": true,
+  "created_at": "2023-01-11T21:15:59.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
+  "audit_log": "[{\"changed_at\":\"2023-01-11T21:15:59.206+00:00\",\"changed\":[\"cloned from \\\"CSA U3L1-L6b_2023\\\"\"],\"cloned_from\":\"CSA U3L1-L6b_2023\"},{\"changed_at\":\"2023-01-11 21:16:00 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-01-13 19:21:56 +0000\",\"changed\":[\"long_instructions\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+}]]></config>
+</Javalab>

@@ -21,7 +21,7 @@
   "level_num": "custom",
   "user_id": 155,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-05-18T15:25:55.996+00:00\",\"changed\":[\"cloned from \\\"dlp21-csp-general-prep\\\"\"],\"cloned_from\":\"dlp21-csp-general-prep\"},{\"changed_at\":\"2022-07-05 01:11:17 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":838,\"changed_by_email\":\"andrea@code.org\"},{\"changed_at\":\"2022-07-07 19:12:05 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":838,\"changed_by_email\":\"andrea@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2022-05-18T15:25:55.996+00:00\",\"changed\":[\"cloned from \\\"dlp21-csp-general-prep\\\"\"],\"cloned_from\":\"dlp21-csp-general-prep\"},{\"changed_at\":\"2022-07-05 01:11:17 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":838,\"changed_by_email\":\"andrea@code.org\"},{\"changed_at\":\"2022-07-07 19:12:05 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":838,\"changed_by_email\":\"andrea@code.org\"},{\"changed_at\":\"2022-10-19 14:54:18 +0000\",\"changed\":[],\"changed_by_id\":838,\"changed_by_email\":\"andrea@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

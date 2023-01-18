@@ -8,9 +8,9 @@ nav: how_to_nav
 
 # Sådan griber du en times kodning an i fritidsordninger og klubber
 
-### Join the movement and introduce your students to computer science with these steps.
+### Tilslut dig bevægelsen og indfør en gruppe elever i deres første time med datalogi ved at bruge disse trin.
 
-Computational thinking helps nurture problem-solving skills, logic, and creativity. And technology is transforming every industry on the planet. Students today should learn how to create technology, not just use it. By starting early, they’ll have a foundation for success in any 21st-century career path.
+Datalogisk tankegang styrker evnen til problemløsning samt de logiske og kreative evner. And technology is transforming every industry on the planet. Students today should learn how to create technology, not just use it. By starting early, they’ll have a foundation for success in any 21st-century career path.
 
 Trying an Hour of Code is a simple and fun way to introduce students to computer science, perhaps for the very first time. Hvis du gerne vil have et par ekstra hænder til hjælp, kan du finde en [lokal frivillig](%= codeorg_url('/volunteer/local') %) til at hjælpe med at køre en Hour of Code i din fritidsordning eller klub.
 
@@ -18,7 +18,7 @@ Trying an Hour of Code is a simple and fun way to introduce students to computer
 
 * * *
 
-## 1) Se vejledningsvideoen <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
+## 1) Se vejledningsvideoen <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe> 
 
 ## 3) Vælg en øvelse
 

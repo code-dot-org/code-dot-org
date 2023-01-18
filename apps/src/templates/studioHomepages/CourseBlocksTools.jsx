@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
-import Radium from 'radium';
+import Radium from 'radium'; // eslint-disable-line no-restricted-imports
 import ContentContainer from '../ContentContainer';
 import ResourceCard from './ResourceCard';
 import ResourceCardResponsiveContainer from './ResourceCardResponsiveContainer';
@@ -19,27 +19,32 @@ class CourseBlocksTools extends Component {
       {
         heading: i18n.courseBlocksToolsAppLab(),
         description: i18n.courseBlocksToolsAppLabDescription(),
+        buttonText: i18n.learnMoreApplab(),
         link: pegasus('/applab')
       },
       {
         heading: i18n.courseBlocksToolsGameLab(),
         description: i18n.courseBlocksToolsGameLabDescription(),
+        buttonText: i18n.learnMoreGamelab(),
         link: pegasus('/gamelab')
       },
       {
         heading: i18n.courseBlocksToolsWebLab(),
         description: i18n.courseBlocksToolsWebLabDescription(),
+        buttonText: i18n.learnMoreWeblab(),
         link: pegasus('/weblab')
       },
       {
         heading: i18n.csJourneys(),
         callout: i18n.newExclame(),
         description: i18n.csJourneysDescription(),
+        buttonText: i18n.learnMoreCsJourneys(),
         link: pegasus('/csjourneys')
       },
       {
         heading: i18n.courseBlocksToolsVideo(),
         description: i18n.courseBlocksToolsVideoDescription(),
+        buttonText: i18n.learnMoreToolsVideos(),
         link: pegasus('/videos')
       }
     ];
@@ -48,12 +53,14 @@ class CourseBlocksTools extends Component {
         heading: i18n.courseBlocksToolsAi(),
         callout: i18n.newExclame(),
         description: i18n.courseBlocksToolsAiDescription(),
+        buttonText: i18n.learnMoreAilab(),
         link: studio('/s/aiml')
       });
     } else {
       this.cards.push({
         heading: i18n.courseBlocksToolsWidgets(),
         description: i18n.courseBlocksToolsWidgetsDescription(),
+        buttonText: i18n.learnMoreWidgets(),
         link: pegasus('/widgets')
       });
     }
@@ -77,7 +84,7 @@ class CourseBlocksTools extends Component {
                 title={card.heading}
                 callout={card.callout}
                 description={card.description}
-                buttonText={i18n.learnMore()}
+                buttonText={card.buttonText}
                 link={card.link}
               />
             ))}

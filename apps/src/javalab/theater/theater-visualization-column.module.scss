@@ -1,0 +1,39 @@
+@use "../constants.module.scss";
+@use "color.scss";
+
+.container {
+  width: constants.$visualization-width;
+  height: constants.$visualization-height;
+  background-color: none;
+  opacity: 1;
+
+  &.overlay {
+    background-color: color.$dark_charcoal;
+    opacity: 0.2;
+
+    &:hover {
+      cursor: crosshair;
+    }
+  }
+}
+
+.image {
+  // Start hidden so we can start the audio and gif at the same time.
+  visibility: hidden;
+  width: constants.$visualization-width;
+  height: constants.$visualization-height;
+}
+
+.previewBackground {
+  // TODO (madelynkasula 09/28/2022): Use background styles below once SCSS modules
+  // are able to load webpack assets. Remove styles object from <TheaterVisualizationColumn> as well.
+  // background-image: url("/blockly/media/javalab/Theater.png");
+  // background-repeat: no-repeat;
+  // background-size: cover;
+  // background-position: top;
+  opacity: 1;
+
+  &.collapsed {
+    opacity: 0;
+  }
+}

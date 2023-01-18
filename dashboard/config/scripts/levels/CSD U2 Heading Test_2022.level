@@ -11,9 +11,9 @@
     "parent_level_id": 20012,
     "name_suffix": "_2022",
     "reference_links": [
-      "/docs/concepts/html/html-tags/"
+      "/courses/csd-2022/guides/html-tags"
     ],
-    "map_reference": "/docs/concepts/html/headings-and-paragraphs/",
+    "map_reference": "/courses/csd-2022/guides/headings-and-paragraphs",
     "rubric_key_concept": "Use HTML to create a web page that includes hierarchical headings, paragraphs, lists, and images.\r\n\r\nUnderstand the need for precision when using computer languages and use appropriate syntax.\r\n",
     "mini_rubric": "true",
     "validation_enabled": "true",
@@ -23,11 +23,11 @@
     "rubric_performance_level_3": "Most content is contained in tags.  At least one heading tag is used.",
     "rubric_performance_level_4": "Little or no content is contained in tags."
   },
-  "game_id": 58,
-  "published": true,
-  "created_at": "2022-03-30T23:32:05.000Z",
   "level_num": "custom",
+  "game_id": 58,
+  "created_at": "2022-03-30T23:32:05.000Z",
   "user_id": 324,
+  "published": true,
   "notes": "",
   "audit_log": "[{\"changed_at\":\"2022-03-30T23:32:05.845+00:00\",\"changed\":[\"cloned from \\\"CSD U2 Heading Test_2021\\\"\"],\"cloned_from\":\"CSD U2 Heading Test_2021\"},{\"changed_at\":\"2022-06-09 16:27:33 +0000\",\"changed\":[\"hide_share_and_remix\",\"encrypted_examples\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>

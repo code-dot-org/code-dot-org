@@ -76,7 +76,7 @@ export const POEMS = {
       'over and over again.',
       'When I go to a new city',
       'with different smells, sounds, and feelings,',
-      'I’ll still remember everything my city had.'
+      "I'll still remember everything my city had."
     ]
   },
   rusinek1: {
@@ -171,6 +171,114 @@ export const POEMS = {
       'może odkręcić jedną zakrętkę:',
       'wtedy ze środka uleci wokół',
       'trochę powietrza – z zeszłego roku!'
+    ]
+  },
+  quasimodo: {
+    locales: ['it_it'],
+    author: 'Salvatore Quasimodo',
+    title: 'Specchio',
+    linesSplit: [
+      'Ed ecco sul tronco',
+      'si rompono gemme:',
+      "un verde più nuovo dell'erba",
+      'che il cuore riposa:',
+      'il tronco pareva già morto,',
+      'piegato sul botro.',
+      '  ',
+      'E tutto mi sa di miracolo;',
+      "e sono quell'acqua di nube",
+      'che oggi rispecchia nei fossi',
+      'più azzurro il suo pezzo di cielo,',
+      'quel verde che spacca la scorza',
+      "che pure stanotte non c'era."
+    ]
+  },
+  pascoli: {
+    locales: ['it_it'],
+    author: 'Giovanni Pascoli',
+    title: 'Mare',
+    linesSplit: [
+      "M'affaccio alla finestra, e vedo il mare:",
+      "vanno le stelle, tremolano l'onde.",
+      'Vedo stelle passare, onde passare:',
+      'un guizzo chiama, un palpito risponde.',
+      '  ',
+      "Ecco sospira l'acqua, alita il vento:",
+      "sul mare è apparso un bel ponte d'argento.",
+      '  ',
+      'Ponte gettato sui laghi sereni,',
+      'per chi dunque sei fatto e dove meni?'
+    ]
+  },
+  rodari: {
+    locales: ['it_it'],
+    author: 'Gianni Rodari',
+    title: 'Como nel comò',
+    linesSplit: [
+      'Una volta un accento per distrazione cascò',
+      'sulla città di Como mutandola in comò.',
+      '  ',
+      'Figuratevi i cittadini comaschi, poveretti:',
+      'detto e fatto si trovarono rinchiusi nei cassetti.',
+      '  ',
+      'Per fortuna uno scolaro rilesse il componimento',
+      "e liberò i prigionieri cancellando l'accento.",
+      '  ',
+      'Ora ai giardini pubblici han dedicato un busto',
+      '"A colui che sa mettere gli accenti al posto giusto".'
+    ]
+  },
+  ungaretti: {
+    locales: ['it_it'],
+    author: 'Giuseppe Ungaretti',
+    title: 'Sereno',
+    linesSplit: [
+      'Dopo tanta nebbia',
+      'a una a una',
+      'si svelano le stelle',
+      '  ',
+      'Respiro il fresco',
+      'che mi lascia il colore del cielo',
+      '  ',
+      'Mi riconosco',
+      'immagine passeggera',
+      '  ',
+      'Presa in un giro immortale.'
+    ]
+  },
+  carducci1: {
+    locales: ['it_it'],
+    author: 'Giosuè Carducci',
+    title: 'Il bove',
+    linesSplit: [
+      "T'amo pio bove; e mite un sentimento",
+      "Di vigore e di pace al cor m'infondi,",
+      'O che solenne come un monumento',
+      'Tu guardi i campi liberi e fecondi,',
+      '  ',
+      'O che al giogo inchinandoti contento',
+      "L'agil opra de l'uom grave secondi:",
+      "Ei t'esorta e ti punge, e tu co 'l lento",
+      'Giro dè pazienti occhi rispondi.',
+      '  ',
+      "E del grave occhio glauco entro l'austera",
+      'Dolcezza si rispecchia ampio e quieto',
+      'Il divino del pian silenzio verde.'
+    ]
+  },
+  carducci2: {
+    locales: ['it_it'],
+    author: 'Giosuè Carducci',
+    title: 'San Martino',
+    linesSplit: [
+      "La nebbia a gl'irti colli piovigginando sale,",
+      'e sotto il maestrale urla e biancheggia il mar;',
+      "ma per le vie del borgo dal ribollir de' tini",
+      "va l'aspro odor de i vini l'anime a rallegrar.",
+      "Gira su' ceppi accesi lo spiedo scoppiettando:",
+      "sta il cacciator fischiando sull'uscio a rimirar",
+      "tra le rossastre nubi stormi d'uccelli neri,",
+      "com'esuli pensieri, nel vespero migrar."
     ]
   }
 };

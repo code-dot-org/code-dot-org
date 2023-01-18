@@ -69,7 +69,7 @@ class Section < ApplicationRecord
 
   validates :name, presence: true, unless: -> {deleted?}
 
-  belongs_to :script, optional: true
+  belongs_to :script, class_name: 'Unit', optional: true
   belongs_to :unit_group, foreign_key: 'course_id', optional: true
 
   has_many :section_hidden_lessons
@@ -152,7 +152,7 @@ class Section < ApplicationRecord
   end
 
   def self.valid_participant_type?(type)
-    Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.to_h.values.include? type
+    Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.to_h.value?(type)
   end
 
   def self.valid_grade?(grade)
@@ -161,7 +161,7 @@ class Section < ApplicationRecord
 
   # Override default script accessor to use our cache
   def script
-    Script.get_from_cache(script_id) if script_id
+    Unit.get_from_cache(script_id) if script_id
   end
 
   def unit_group
@@ -304,7 +304,7 @@ class Section < ApplicationRecord
 
   # Figures out the default script for this section. If the section is assigned to
   # a course rather than a script, it returns the first script in that course.
-  # @return [Script, nil]
+  # @return [Unit, nil]
   def default_script
     return script if script
     return unit_group.try(:default_unit_group_units).try(:first).try(:script)
@@ -323,10 +323,12 @@ class Section < ApplicationRecord
     link_to_assigned = base_url
     title_of_current_unit = ''
     link_to_current_unit = ''
+    course_version_name = nil
 
     if unit_group
       title = unit_group.localized_title
       link_to_assigned = course_path(unit_group)
+      course_version_name = unit_group.name
       if script_id
         title_of_current_unit = script.title_for_display
         link_to_current_unit = script_path(script)
@@ -334,6 +336,7 @@ class Section < ApplicationRecord
     elsif script_id
       title = script.title_for_display
       link_to_assigned = script_path(script)
+      course_version_name = script.name
     end
 
     # Remove ordering from scope when not including full
@@ -353,6 +356,7 @@ class Section < ApplicationRecord
       linkToAssigned: link_to_assigned,
       currentUnitTitle: title_of_current_unit,
       linkToCurrentUnit: link_to_current_unit,
+      courseVersionName: course_version_name,
       numberOfStudents: num_students,
       linkToStudents: "#{base_url}#{id}/manage_students",
       code: code,
@@ -441,8 +445,8 @@ class Section < ApplicationRecord
   # once such a thing exists
   def has_sufficient_discount_code_progress?
     return false if students.length < 10
-    csd2 = Script.get_from_cache('csd2-2019')
-    csd3 = Script.get_from_cache('csd3-2019')
+    csd2 = Unit.get_from_cache('csd2-2019')
+    csd3 = Unit.get_from_cache('csd3-2019')
     raise 'Missing scripts' unless csd2 && csd3
 
     csd2_programming_level_ids = csd2.levels.select {|level| level.is_a?(Weblab)}.map(&:id)
@@ -470,7 +474,7 @@ class Section < ApplicationRecord
   def participant_unit_ids
     # This performs two queries, but could be optimized to perform only one by
     # doing additional joins.
-    Script.joins(:user_scripts).where(user_scripts: {user_id: students.pluck(:id)}).distinct.select {|s| s.course_assignable?(user)}.pluck(:id)
+    Unit.joins(:user_scripts).where(user_scripts: {user_id: students.pluck(:id)}).distinct.select {|s| s.course_assignable?(user)}.pluck(:id)
   end
 
   def code_review_enabled?
@@ -515,13 +519,13 @@ class Section < ApplicationRecord
   # We can remove this once our database has utf8mb4 support everywhere.
   def strip_emoji_from_name
     # We don't want to fill in a default name if the caller intentionally tried to clear it.
-    return unless name.present?
+    return if name.blank?
 
     # Drop emoji and other unsupported characters
     self.name = name&.strip_utf8mb4&.strip
 
     # If dropping emoji resulted in a blank name, use a default
-    self.name = I18n.t('sections.default_name', default: 'Untitled Section') unless name.present?
+    self.name = I18n.t('sections.default_name', default: 'Untitled Section') if name.blank?
   end
   before_validation :strip_emoji_from_name
 end

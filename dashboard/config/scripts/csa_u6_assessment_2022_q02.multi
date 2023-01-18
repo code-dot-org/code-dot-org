@@ -3,8 +3,8 @@ name 'CSA U6 Assessment 2022 q02'
 wrong '`[4, 5, 3, 6]`'
 wrong '`[6, 3, 5, 4]`'
 wrong '`[4, 3, 4]`'
-right '`[4, 6]`'
-wrong '`[4, 6, 3, 5]`'
+wrong '`[4, 6]`'
+right '`[4, 6, 3, 5]`'
 
 markdown <<MARKDOWN
 Consider the following code segment.

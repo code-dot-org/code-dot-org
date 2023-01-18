@@ -7,6 +7,7 @@ import {UnconnectedUnitOverviewTopRow as UnitOverviewTopRow} from '@cdo/apps/cod
 import Button from '@cdo/apps/templates/Button';
 import DropdownButton from '@cdo/apps/templates/DropdownButton';
 import SectionAssigner from '@cdo/apps/templates/teacherDashboard/SectionAssigner';
+import BulkLessonVisibilityToggle from '@cdo/apps/code-studio/components/progress/BulkLessonVisibilityToggle';
 import ProgressDetailToggle from '@cdo/apps/templates/progress/ProgressDetailToggle';
 import ResourcesDropdown from '@cdo/apps/code-studio/components/progress/ResourcesDropdown';
 import UnitCalendarButton from '@cdo/apps/code-studio/components/progress/UnitCalendarButton';
@@ -17,13 +18,16 @@ const defaultProps = {
   scriptId: 42,
   scriptName: 'test-script',
   unitTitle: 'Unit test script title',
+  unitAllowsHiddenLessons: true,
   viewAs: ViewType.Participant,
   isRtl: false,
   studentResources: [],
   showAssignButton: true,
   isMigrated: false,
   unitCompleted: false,
-  hasPerLevelResults: false
+  hasPerLevelResults: false,
+  isProfessionalLearningCourse: false,
+  publishedState: 'stable'
 };
 
 describe('UnitOverviewTopRow', () => {
@@ -109,6 +113,28 @@ describe('UnitOverviewTopRow', () => {
     ).to.be.true;
   });
 
+  it('does not render "Print Certificate" button for participant in professional learning course', () => {
+    const wrapper = shallow(
+      <UnitOverviewTopRow
+        {...defaultProps}
+        viewAs={ViewType.Participant}
+        unitCompleted={true}
+        isProfessionalLearningCourse={true}
+      />
+    );
+
+    expect(
+      wrapper.containsMatchingElement(
+        <Button
+          __useDeprecatedTag
+          href="/s/test-script/next"
+          text={i18n.printCertificate()}
+          size={Button.ButtonSize.large}
+        />
+      )
+    ).to.be.false;
+  });
+
   it('renders SectionAssigner for instructor', () => {
     const wrapper = shallow(
       <UnitOverviewTopRow {...defaultProps} viewAs={ViewType.Instructor} />
@@ -116,20 +142,26 @@ describe('UnitOverviewTopRow', () => {
 
     expect(
       wrapper.containsMatchingElement(
-        <div>
-          <div />
-          <SectionAssigner
-            sections={defaultProps.sectionsForDropdown}
-            courseId={defaultProps.currentCourseId}
-            scriptId={defaultProps.scriptId}
-            showAssignButton={defaultProps.showAssignButton}
-          />
-          <div>
-            <span>
-              <ProgressDetailToggle />
-            </span>
-          </div>
-        </div>
+        <SectionAssigner
+          sections={defaultProps.sectionsForDropdown}
+          courseId={defaultProps.currentCourseId}
+          scriptId={defaultProps.scriptId}
+          showAssignButton={defaultProps.showAssignButton}
+        />
+      )
+    ).to.be.true;
+  });
+
+  it('renders BulkLessonVisibilityToggle for instructor', () => {
+    const wrapper = shallow(
+      <UnitOverviewTopRow {...defaultProps} viewAs={ViewType.Instructor} />
+    );
+
+    expect(
+      wrapper.containsMatchingElement(
+        <BulkLessonVisibilityToggle
+          lessons={defaultProps.unitCalendarLessons}
+        />
       )
     ).to.be.true;
   });
@@ -282,5 +314,31 @@ describe('UnitOverviewTopRow', () => {
     expect(() => {
       shallow(<UnitOverviewTopRow {...defaultProps} isRtl={true} />);
     }).not.to.throw();
+  });
+
+  it('does not render the printing options drop down if the course is in pilot', () => {
+    const wrapper = shallow(
+      <UnitOverviewTopRow
+        {...defaultProps}
+        publishedState="pilot"
+        scriptOverviewPdfUrl="/link/to/script_overview.pdf"
+        scriptResourcesPdfUrl="/link/to/script_resources.pdf"
+        viewAs={ViewType.Instructor}
+      />
+    );
+    expect(wrapper.find(DropdownButton).length).to.equal(0);
+  });
+
+  it('does not render the printing options drop down if the course is in development', () => {
+    const wrapper = shallow(
+      <UnitOverviewTopRow
+        {...defaultProps}
+        publishedState="in_development"
+        scriptOverviewPdfUrl="/link/to/script_overview.pdf"
+        scriptResourcesPdfUrl="/link/to/script_resources.pdf"
+        viewAs={ViewType.Instructor}
+      />
+    );
+    expect(wrapper.find(DropdownButton).length).to.equal(0);
   });
 });

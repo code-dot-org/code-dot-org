@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import i18n from '@cdo/locale';
 import color from '../../util/color';
 import PropTypes from 'prop-types';
-import Radium from 'radium';
+import Radium from 'radium'; // eslint-disable-line no-restricted-imports
 import {selectGallery} from './projectsRedux';
 import {connect} from 'react-redux';
 import {Galleries} from './projectConstants';

@@ -2,7 +2,7 @@ import $ from 'jquery';
 import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
 import PropTypes from 'prop-types';
-import Radium from 'radium';
+import Radium from 'radium'; // eslint-disable-line no-restricted-imports
 import classNames from 'classnames';
 import {connect} from 'react-redux';
 import _ from 'lodash';
@@ -12,7 +12,6 @@ import ContainedLevel from '../ContainedLevel';
 import ContainedLevelAnswer from '../ContainedLevelAnswer';
 import HelpTabContents from './HelpTabContents';
 import DocumentationTab from './DocumentationTab';
-import ReviewTab from './ReviewTab';
 import CommitsAndReviewTab from './CommitsAndReviewTab';
 import {
   toggleInstructionsCollapsed,
@@ -37,7 +36,8 @@ import TopInstructionsHeader from './TopInstructionsHeader';
 import {Z_INDEX as OVERLAY_Z_INDEX} from '../Overlay';
 import Button from '../Button';
 import i18n from '@cdo/locale';
-import experiments from '@cdo/apps/util/experiments';
+import ContainedLevelResetButton from './ContainedLevelResetButton';
+import {queryParams} from '@cdo/apps/code-studio/utils';
 
 const HEADER_HEIGHT = styleConstants['workspace-headers-height'];
 const RESIZER_HEIGHT = styleConstants['resize-bar-width'];
@@ -50,8 +50,7 @@ export const TabType = {
   COMMENTS: 'comments',
   DOCUMENTATION: 'documentation',
   REVIEW: 'review',
-  TEACHER_ONLY: 'teacher-only',
-  REVIEW_V2: 'review-v2'
+  TEACHER_ONLY: 'teacher-only'
 };
 
 // Minecraft-specific styles
@@ -117,12 +116,14 @@ class TopInstructions extends Component {
     standalone: PropTypes.bool,
     // Use this if the caller wants to set an explicit height for the instructions rather
     // than allowing this component to manage its own height.
-    explicitHeight: PropTypes.number
+    explicitHeight: PropTypes.number,
+    inLessonPlan: PropTypes.bool
   };
 
   static defaultProps = {
     resizable: true,
-    collapsible: true
+    collapsible: true,
+    inLessonPlan: false
   };
 
   constructor(props) {
@@ -133,22 +134,19 @@ class TopInstructions extends Component {
     this.isViewingAsStudent = this.props.viewAs === ViewType.Participant;
     this.isViewingAsTeacher = this.props.viewAs === ViewType.Instructor;
 
+    const studentUserIdIncluded = !!queryParams('user_id');
+
     const teacherViewingStudentWork =
       this.isViewingAsTeacher &&
       this.props.readOnlyWorkspace &&
-      window.location.search.includes('user_id');
-
-    const teacherViewingStudentTab =
-      this.props.displayReviewTab && !experiments.isEnabled('code_review_v2')
-        ? TabType.REVIEW
-        : TabType.COMMENTS;
+      studentUserIdIncluded;
 
     this.state = {
       // We don't want to start in the comments tab for CSF since its hidden
       tabSelected:
         this.props.initialSelectedTab ||
         (teacherViewingStudentWork && this.props.noInstructionsWhenCollapsed
-          ? teacherViewingStudentTab
+          ? TabType.COMMENTS
           : TabType.INSTRUCTIONS),
       latestFeedback: null,
       rubric: null,
@@ -511,6 +509,11 @@ class TopInstructions extends Component {
             ref={ref => this.setInstructionsRef(ref)}
             hidden={tabSelected !== TabType.INSTRUCTIONS}
           />
+          {!this.props.inLessonPlan && tabSelected === TabType.INSTRUCTIONS && (
+            <ContainedLevelResetButton
+              teacherViewingStudentWork={this.state.teacherViewingStudentWork}
+            />
+          )}
         </div>
       );
     } else if (isCSF && tabSelected === TabType.INSTRUCTIONS) {
@@ -617,7 +620,7 @@ class TopInstructions extends Component {
         ? styles.csfBody
         : containerStyle || styles.body,
       isMinecraft && craftStyles.instructionsBody,
-      tabSelected === TabType.REVIEW_V2 && styles.commitAndReview
+      tabSelected === TabType.REVIEW && styles.commitAndReview
     ];
 
     // Only display the help tab when there are one or more videos or
@@ -628,18 +631,9 @@ class TopInstructions extends Component {
     const displayHelpTab =
       (levelVideos && levelVideos.length > 0) || levelResourcesAvailable;
 
-    const displayReviewV1Tab =
-      displayReviewTab && !experiments.isEnabled('code_review_v2');
-
-    const displayReviewV2Tab =
-      displayReviewTab && experiments.isEnabled('code_review_v2');
-
-    // If we're displaying the v1 review tab (for CSA peer review) the teacher can leave feedback in that tab,
-    // in that case we hide the feedback tab (unless there's a rubric) to avoid confusion about
-    // where the teacher should leave feedback
     const displayFeedbackTab =
       !!rubric ||
-      (!displayReviewV1Tab && teacherViewingStudentWork) ||
+      teacherViewingStudentWork ||
       (this.isViewingAsStudent && !!latestFeedback);
 
     // Teacher is viewing students work and in the Feedback Tab
@@ -687,8 +681,7 @@ class TopInstructions extends Component {
           displayFeedback={displayFeedbackTab}
           levelHasRubric={!!rubric}
           displayDocumentationTab={displayDocumentationTab}
-          displayReviewTab={displayReviewV1Tab}
-          displayReviewV2Tab={displayReviewV2Tab}
+          displayReviewTab={displayReviewTab}
           isViewingAsTeacher={this.isViewingAsTeacher}
           hasBackgroundMusic={hasBackgroundMusic}
           fetchingData={fetchingData}
@@ -702,7 +695,6 @@ class TopInstructions extends Component {
             this.handleTabClick(TabType.DOCUMENTATION)
           }
           handleReviewTabClick={() => this.handleTabClick(TabType.REVIEW)}
-          handleReviewV2TabClick={() => this.handleTabClick(TabType.REVIEW_V2)}
           handleTeacherOnlyTabClick={this.handleTeacherOnlyTabClick}
           collapsible={this.props.collapsible}
           handleClickCollapser={this.handleClickCollapser}
@@ -725,7 +717,6 @@ class TopInstructions extends Component {
             {!fetchingData && (
               <TeacherFeedbackTab
                 teacherViewingStudentWork={teacherViewingStudentWork}
-                displayReviewTab={displayReviewV1Tab}
                 visible={tabSelected === TabType.COMMENTS}
                 rubric={rubric}
                 innerRef={ref => (this.commentTab = ref)}
@@ -740,11 +731,8 @@ class TopInstructions extends Component {
               <DocumentationTab ref={ref => (this.documentationTab = ref)} />
             )}
             {tabSelected === TabType.REVIEW && (
-              <ReviewTab ref={ref => (this.reviewTab = ref)} />
-            )}
-            {tabSelected === TabType.REVIEW_V2 && (
               <CommitsAndReviewTab
-                ref={ref => (this.commitsAndReviewTab = ref)}
+                ref={ref => (this.reviewTab = ref)}
                 onLoadComplete={this.forceTabResizeToMaxOrAvailableHeight}
               />
             )}

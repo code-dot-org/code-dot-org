@@ -1,0 +1,34 @@
+{
+  "category": "Experimental",
+  "config": {
+    "func": "getMicroscope",
+    "blockText": "Microscope has {INPUT1}",
+    "eventBlock": false,
+    "inline": true,
+    "args": [
+      {
+        "name": "INPUT1",
+        "options": [
+          [
+            "lemon juice",
+            "1"
+          ],
+          [
+            "baking soda",
+            "3"
+          ],
+          [
+            "both",
+            "5"
+          ]
+        ]
+      }
+    ],
+    "returnType": "Boolean",
+    "color": [
+      39,
+      1,
+      0.99
+    ]
+  }
+}

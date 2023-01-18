@@ -14,7 +14,7 @@
     },
     "new_name": null,
     "family_name": "vpl-csp",
-    "serialized_at": "2022-07-12 17:26:09 UTC",
+    "serialized_at": "2022-10-31 21:19:28 UTC",
     "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "facilitator",
@@ -627,7 +627,7 @@
       "key": "4ed1c2db-38f7-42aa-b8e4-2dd889cdb144",
       "position": 3,
       "properties": {
-        "progression_name": "Using the Google Trends Tool (~20 minutes)"
+        "progression_name": "Using the NYT Resource (~20 minutes)"
       },
       "seeding_key": {
         "activity_section.key": "4ed1c2db-38f7-42aa-b8e4-2dd889cdb144",
@@ -2313,7 +2313,7 @@
         "level_keys": [
           "CSP-PL M7 - Google Trends_2022"
         ],
-        "progression": "Using the Google Trends Tool (~20 minutes)"
+        "progression": "Using the NYT Resource (~20 minutes)"
       },
       "bonus": false,
       "seeding_key": {

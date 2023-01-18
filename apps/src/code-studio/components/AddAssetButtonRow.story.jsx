@@ -1,5 +1,6 @@
 import React from 'react';
 import AddAssetButtonRow from './AddAssetButtonRow';
+import {action} from '@storybook/addon-actions';
 
 const mockApi = {
   getUploadUrl: () => {
@@ -13,40 +14,32 @@ const mockApi = {
   }
 };
 
-export default storybook =>
-  storybook.storiesOf('AddAssetButtonRow', module).addStoryTable([
-    {
-      name: 'Just Buttons',
-      story: () => (
-        <div>
-          <AddAssetButtonRow
-            uploadsEnabled={true}
-            allowedExtensions=""
-            api={mockApi}
-            onUploadStart={() => console.log('onUploadStart')}
-            onUploadDone={() => console.log('onUploadDone')}
-            onUploadError={() => console.log('onUploadError')}
-            onSelectRecord={() => console.log('onSelectRecord')}
-            statusMessage=""
-          />
-        </div>
-      )
-    },
-    {
-      name: 'Buttons and status message',
-      story: () => (
-        <div>
-          <AddAssetButtonRow
-            uploadsEnabled={true}
-            allowedExtensions=""
-            api={mockApi}
-            onUploadStart={() => console.log('onUploadStart')}
-            onUploadDone={() => console.log('onUploadDone')}
-            onUploadError={() => console.log('onUploadError')}
-            onSelectRecord={() => console.log('onSelectRecord')}
-            statusMessage="This is a status message"
-          />
-        </div>
-      )
-    }
-  ]);
+export default {
+  title: 'AddAssetButtonRow',
+  component: AddAssetButtonRow
+};
+
+// Template
+const Template = args => (
+  <AddAssetButtonRow
+    uploadsEnabled={true}
+    allowedExtensions=""
+    api={mockApi}
+    onUploadStart={action('onUploadStart')}
+    onUploadDone={action('onUploadDone')}
+    onUploadError={action('onUploadError')}
+    onSelectRecord={action('onSelectRecord')}
+    {...args}
+  />
+);
+
+// Stories
+export const JustButtons = Template.bind({});
+JustButtons.args = {
+  statusMessage: ''
+};
+
+export const ButtonsWithStatus = Template.bind({});
+ButtonsWithStatus.args = {
+  statusMessage: 'This is a status message'
+};

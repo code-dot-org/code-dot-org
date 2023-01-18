@@ -27,9 +27,7 @@ class CodeReview < ApplicationRecord
   acts_as_paranoid
 
   belongs_to :owner, class_name: 'User', foreign_key: :user_id, optional: true
-  # TODO: Once all the renaming has settled, the following association should be:
-  # has_many :comments, class_name: 'CodeReviewComment', dependent:  :destroy
-  has_many :comments, class_name: 'CodeReviewNote', foreign_key: 'code_review_request_id', dependent:  :destroy, inverse_of: 'code_review'
+  has_many :comments, class_name: 'CodeReviewComment', dependent:  :destroy
 
   # Enforce that each student can only have one open code review per script and
   # level. (This is also enforced at the database level with a unique index.)

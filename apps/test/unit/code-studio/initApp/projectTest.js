@@ -447,7 +447,7 @@ describe('project.js', () => {
         });
 
         CODEPROJECTS_APP_TYPES.forEach(appType => {
-          const expected = `${codeProjectsOrigin}/${fakeProjectId}`;
+          const expected = `${codeProjectsOrigin}/projects/weblab/${fakeProjectId}`;
           describe(`${appType} projects share to ${expected}`, () => {
             beforeEach(() => project.getStandaloneApp.returns(appType));
 
@@ -1238,8 +1238,6 @@ function createStubSourceHandler() {
     getLevelSource: sinon.stub().resolves(),
     setInitialAnimationList: sinon.stub(),
     getAnimationList: sinon.stub().callsFake(cb => cb({})),
-    setInitialGeneratedProperties: sinon.stub(),
-    getGeneratedProperties: sinon.stub(),
     setMakerAPIsEnabled: sinon.stub(),
     getMakerAPIsEnabled: sinon.stub(),
     setSelectedSong: sinon.stub(),

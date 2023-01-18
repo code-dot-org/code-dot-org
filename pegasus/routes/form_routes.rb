@@ -2,7 +2,7 @@ get '/forms/uploads/*' do |uri|
   cache_file = cache_dir('fetch', request.site, request.path_info)
   unless File.file?(cache_file) && File.mtime(cache_file) > settings.launched_at
     FileUtils.mkdir_p File.dirname(cache_file)
-    IO.write(cache_file, AWS::S3.download_from_bucket('cdo-form-uploads', uri))
+    File.write(cache_file, AWS::S3.download_from_bucket('cdo-form-uploads', uri))
   end
   pass unless File.file?(cache_file)
 

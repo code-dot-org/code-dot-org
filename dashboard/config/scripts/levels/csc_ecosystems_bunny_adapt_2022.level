@@ -1,9 +1,5 @@
 <GamelabJr>
   <config><![CDATA[{
-  "game_id": 64,
-  "created_at": "2022-06-13T21:00:29.000Z",
-  "level_num": "custom",
-  "user_id": 182,
   "properties": {
     "skin": "gamelab",
     "show_debug_watch": "true",
@@ -70,11 +66,18 @@
     "display_name": "Timed Events",
     "thumbnail_url": "https://images.code.org/a61f638ee2ea76dc54236483324d7fbc-image-1648496940150.48.45 PM.png",
     "project_template_level_name": "csc_ecosystems_bunny_template_2022",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "encrypted_examples": [
+
+    ]
   },
+  "game_id": 64,
   "published": true,
+  "created_at": "2022-06-13T21:00:29.000Z",
+  "level_num": "custom",
+  "user_id": 182,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-06-13T21:00:29.896+00:00\",\"changed\":[\"cloned from \\\"csc_ecosystems_bunny_adapt\\\"\"],\"cloned_from\":\"csc_ecosystems_bunny_adapt\"}]",
+  "audit_log": "[{\"changed_at\":\"2022-06-13T21:00:29.896+00:00\",\"changed\":[\"cloned from \\\"csc_ecosystems_bunny_adapt\\\"\"],\"cloned_from\":\"csc_ecosystems_bunny_adapt\"},{\"changed_at\":\"2022-08-09 19:14:58 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

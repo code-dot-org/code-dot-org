@@ -1,8 +1,8 @@
-require 'pd/survey_pipeline/daily_survey_retriever.rb'
-require 'pd/survey_pipeline/daily_survey_parser.rb'
-require 'pd/survey_pipeline/daily_survey_joiner.rb'
-require 'pd/survey_pipeline/generic_mapper.rb'
-require 'pd/survey_pipeline/daily_survey_decorator.rb'
+require 'pd/survey_pipeline/daily_survey_retriever'
+require 'pd/survey_pipeline/daily_survey_parser'
+require 'pd/survey_pipeline/daily_survey_joiner'
+require 'pd/survey_pipeline/generic_mapper'
+require 'pd/survey_pipeline/daily_survey_decorator'
 
 module Pd::SurveyPipeline::Helper
   include Pd::JotForm::Constants
@@ -156,9 +156,9 @@ module Pd::SurveyPipeline::Helper
 
     # Rules to map groups of survey answers to reducers
     is_single_select_answer =
-      lambda {|hash| [ANSWER_SINGLE_SELECT, ANSWER_SCALE].include? hash.dig(:answer_type)}
+      lambda {|hash| [ANSWER_SINGLE_SELECT, ANSWER_SCALE].include? hash[:answer_type]}
     not_single_select_answer =
-      lambda {|hash| ![ANSWER_SINGLE_SELECT, ANSWER_SCALE].include?(hash.dig(:answer_type))}
+      lambda {|hash| ![ANSWER_SINGLE_SELECT, ANSWER_SCALE].include?(hash[:answer_type])}
 
     map_config = [
       {condition: is_single_select_answer, field: :answer, reducers: [Pd::SurveyPipeline::Reducer::Histogram]},

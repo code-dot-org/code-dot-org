@@ -21,7 +21,7 @@ social:
 # تعلَّم عن الذكاء الاصطناعي
 <div style="background: url(/images/ai/ai-bg.png) top left no-repeat #00adbc;padding:10px 20px 10px; color:#ffffff; margin-bottom:15px">
 <div class="col-40" style="margin-bottom:15px">
-<h2 style="color:#ffffff; margin-top:25px">وحدة جديدة عن التعلُّم الآلي والذكاء الاصطناعي</h2><p>تركز وحدة منهجنا الجديدة على أخلاقيات الذكاء الاصطناعي وتدرس مشكلات الانحياز وتستكشف وتشرح المفاهيم الأساسية خلال عدد من الأنشطة على الإنترنت والأنشطة غير الموصولة بالإنترنت ومناقشات المجموعة الكاملة.</p><a  href="#about-aimodule"><button>Learn more</button></a>&nbsp;&nbsp;<a class="linktag" id="aimodule" href="https://studio.code.org/s/aiml-2021?viewAs=Teacher" target="_blank"><button>استكشف الوحدة</button></a></div>
+<h2 style="color:#ffffff; margin-top:25px">وحدة جديدة عن التعلُّم الآلي والذكاء الاصطناعي</h2><p>تركز وحدة منهجنا الجديدة على أخلاقيات الذكاء الاصطناعي وتدرس مشكلات الانحياز وتستكشف وتشرح المفاهيم الأساسية خلال عدد من الأنشطة على الإنترنت والأنشطة غير الموصولة بالإنترنت ومناقشات المجموعة الكاملة.</p><a  href="#about-aimodule"><button>Learn more</button></a>&nbsp;&nbsp;<a class="linktag" id="aimodule" href="https://studio.code.org/s/aiml?viewAs=Instructor" target="_blank"><button>Explore the module</button></a></div>
 <div class="col-60" style="padding: 30px 10px 0 20px;margin-bottom:15px" ><img src="/images/ai/ailab.gif" style="max-width: 100%" alt="معمل الذكاء الاصطناعي"/></div>
 <div class="clear"></div>
 </div>
@@ -42,20 +42,19 @@ social:
 
 {{ ai_microsoft_block }}
 
-{{ ai_videos_link }}
-
 <a id="about-aimodule"></a>
 
 ## وحدة جديدة عن التعلُّم الآلي والذكاء الاصطناعي
 <div>
-<div class="col-50">
-<p>وحدة التعلم الآلي والذكاء الاصطناعي هي وحدة منهج مكون تقريبًا من خمسة أسابيع يمكن تدريسها كـ<a href="https://studio.code.org/s/aiml-2021?viewAs=Teacher" >وحدة قائمة بذاتها</a>أو كوحدة اختيارية في اكتشافات علوم الكمبيوتر<a href="https://studio.code.org/s/csd7-2021" </a>. تركز على أخلاقيات الذكاء الاصطناعي وتدريس قضايا الانحياز وتستكشف وتشرح المفاهيم الأساسية</p><p>يعتمد التعلم الآلي على مجموعات كبيرة من البيانات لذلك تتضمن الوحدة الجديدة مجموعات من البيانات من الحياة الواقعية عن الرعاية الصحية والتركيبات السكانية والمزيد لإشراك الدارسين في العملية التعليمية إذ يستكشفون أسئلة مثل: "ما هي المشكلة التي يمكن أن يساعد التعلم الآلي في حلها؟" "كيف يمكن للذكاء الاصطناعي مساعدة المجتمع؟" "من المستفيد من الذكاء الاصطناعي؟" "من المتضرر؟" "من المشتَرِك؟" "من الغائب؟"  </p>
-<p>ستكون الاعتبارات الأخلاقية في طليعة هذه المناقشات مع وجود دروس ونقاط نقاشية متكررة حول تأثيرات هذه التكنولوجيا. سيساعد هذا الطلاب على تكوين فهم عميق وشامل عن هذه التكنولوجيا عندما يتعلمون الركائز الأساسية الفنية عن كيفية عمل التكنولوجيا.</p>
-</div>
-<div class="col-50" style="padding: 0 0 15px 25px"><p  style="text-align:right;"><img src="؟" style="max-width: 100%"/></p><a class="linktag" id="aimodule2" href="https://studio.code.org/s/aiml-2021" target="_blank"><button>استكشف الوحدة</button></a></div>
-<div class="clear"></div>
+  <div class="col-50">
+    <p>The AI and Machine Learning Module is roughly a five week curriculum module that can be taught as a <a href="https://studio.code.org/s/aiml?viewAs=Instructor" >standalone module</a> or as an optional <a href="https://studio.code.org/s/csd7-2022">unit in CS Discoveries</a>. تركز على أخلاقيات الذكاء الاصطناعي وتدريس قضايا الانحياز وتستكشف وتشرح المفاهيم الأساسية</p><p>يعتمد التعلم الآلي على مجموعات كبيرة من البيانات لذلك تتضمن الوحدة الجديدة مجموعات من البيانات من الحياة الواقعية عن الرعاية الصحية والتركيبات السكانية والمزيد لإشراك الدارسين في العملية التعليمية إذ يستكشفون أسئلة مثل: "ما هي المشكلة التي يمكن أن يساعد التعلم الآلي في حلها؟" "كيف يمكن للذكاء الاصطناعي مساعدة المجتمع؟" "من المستفيد من الذكاء الاصطناعي؟" "من المتضرر؟" "من المشتَرِك؟" "من الغائب؟"  </p>
+    <p>ستكون الاعتبارات الأخلاقية في طليعة هذه المناقشات مع وجود دروس ونقاط نقاشية متكررة حول تأثيرات هذه التكنولوجيا. سيساعد هذا الطلاب على تكوين فهم عميق وشامل عن هذه التكنولوجيا عندما يتعلمون الركائز الأساسية الفنية عن كيفية عمل التكنولوجيا.</p>
+  </div>
+  <div class="col-50" style="padding: 0 0 15px 25px"><p  style="text-align:right;"><img src="؟" style="max-width: 100%"/></p><a class="linktag" id="aimodule2" href="https://studio.code.org/s/aiml?viewAs=Instructor" target="_blank"><button>Explore the module</button></a></div>
+  <div class="clear"></div>
 </div>
 
+{{ ai_videos_link }}
 ## كيف يعمل الذكاء الاصطناعي
 
 إذ يعطي ساتيا ناديلا، المدير التنفيذي لميكروسوفت، مقدمة تمهيدية، ستقدم لكم هذه السلسلة من مقاطع الفيديو القصيرة كيفية عمل الذكاء الاصطناعي وأسباب أهميته. تعلَّم عن الشبكات العصبية وكيف يتعلم الذكاء الاصطناعي ويخوض في قضايا مثل الانحياز الحسابي وأخلاقيات صناعة قرار الذكاء الاصطناعي.

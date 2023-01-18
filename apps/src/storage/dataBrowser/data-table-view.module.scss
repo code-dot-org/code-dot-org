@@ -1,0 +1,46 @@
+@import "color.scss";
+
+$min-table-width: 600px;
+
+.container {
+  flex-direction: column;
+  height: 99%;
+  min-width: $min-table-width;
+  max-width: 99%;
+  padding-left: 8px;
+  padding-right: 8px;
+  display: inline-flex;
+  &Hidden {
+    display: none;
+  }
+}
+
+.backLink {
+  font-size: 24px;
+}
+
+.debugLink {
+  float: right;
+}
+
+.debugLinkRtl {
+  float: left;
+}
+
+.debugData {
+  background-color: $lightest_gray;
+  border-radius: 10px;
+  border: 1px solid $light_gray;
+  flex-grow: 1;
+  font-family: monospace;
+  overflow: scroll;
+  padding: 10px;
+  white-space: pre-wrap;
+}
+
+.viewHeader {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 0;
+  margin-right: 0;
+}

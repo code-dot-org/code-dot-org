@@ -1,9 +1,5 @@
 <Applab>
   <config><![CDATA[{
-  "game_id": 41,
-  "created_at": "2022-04-08T17:03:40.000Z",
-  "level_num": "custom",
-  "user_id": 1,
   "properties": {
     "skin": "applab",
     "code_functions": {
@@ -78,11 +74,11 @@
     "widget_mode": "false",
     "ai_enabled": "false",
     "reference_links": [
-      "/docs/concepts/javascript/variables/",
-      "/docs/concepts/app-lab/taking-input-with-getproperty/",
-      "/docs/concepts/app-lab/designing-screens-with-code/",
-      "/docs/concepts/javascript/if-statements/",
-      "/docs/concepts/javascript/booleans-and-comparison-operators/"
+      "/courses/csd-2022/guides/variables",
+      "/courses/csd-2022/guides/taking-input-with-getproperty",
+      "/courses/csd-2022/guides/designing-screens-with-code",
+      "/courses/csd-2022/guides/if-statements",
+      "/courses/csd-2022/guides/booleans-and-comparison-operators"
     ],
     "starter_assets": {
       "menu.jpg": "85e3c75f-5277-496c-9e17-cf9e7e7f2f19.jpg",
@@ -96,6 +92,10 @@
     "encrypted_examples": "HITcDKIbfTH0fcGa+cwVx/k2wnrNqzenplfbLxny72RUCwyEnCajUAkCWeFa\nTysbU64T1jUcFS6A2A5EDWitDA==\n",
     "preload_asset_list": null
   },
+  "level_num": "custom",
+  "game_id": 41,
+  "created_at": "2022-04-08T17:03:40.000Z",
+  "user_id": 1,
   "published": true,
   "notes": "",
   "audit_log": "[{\"changed_at\":\"2022-04-08T17:03:40.652+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Screen Inputs - PracB_2022\\\"\"],\"cloned_from\":\"CSD U6 - Screen Inputs - PracB_2022\"}]"

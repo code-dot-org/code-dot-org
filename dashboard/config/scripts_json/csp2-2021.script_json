@@ -10,7 +10,8 @@
           "details": "Empower students with creative projects connected to the real world.  Check out our equity-driven curriculum and find summer professional learning opportunities that will prepare you to teach AP CSA this coming fall.",
           "link": "https://code.org/educate/csa",
           "type": "bullhorn",
-          "visibility": "Teacher-only"
+          "visibility": "Teacher-only",
+          "key": "9642d0d0-39ab-46b0-8d55-203ebcca4c7a"
         }
       ],
       "curriculum_umbrella": "CSP",
@@ -26,7 +27,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-05-20 16:05:28 UTC",
+    "serialized_at": "2022-09-28 14:31:41 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,

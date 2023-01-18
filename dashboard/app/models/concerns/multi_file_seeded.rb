@@ -29,7 +29,7 @@ module MultiFileSeeded
     before_save :write_file
     before_destroy :delete_file
     validates_presence_of :name
-    validates_uniqueness_of :name
+    validates_uniqueness_of :name, case_sensitive: true
   end
 
   def directory(old=false)

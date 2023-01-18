@@ -742,30 +742,30 @@ class LessonTest < ActiveSupport::TestCase
   test 'lesson_plan_pdf_url supports new lesson plan PDFs' do
     old_lesson = create :lesson
     assert_equal(
-      old_lesson.lesson_plan_pdf_url,
-      "//test.code.org/curriculum/#{old_lesson.script.name}/1/Teacher.pdf"
+      "//test.code.org/curriculum/#{old_lesson.script.name}/1/Teacher.pdf",
+      old_lesson.lesson_plan_pdf_url
     )
 
     script = create :script, is_migrated: true
-    new_lesson = create :lesson, script: script, key: 'Some Verbose Lesson Name', has_lesson_plan: true
+    new_lesson = create :lesson, script: script, name: 'Some Verbose Lesson Name', has_lesson_plan: true
     assert_nil(new_lesson.lesson_plan_pdf_url)
 
     script.seeded_from = Time.now.to_s
     assert_equal(
-      new_lesson.lesson_plan_pdf_url,
-      "https://lesson-plans.code.org/#{script.name}/#{Time.parse(script.seeded_from).to_s(:number)}/teacher-lesson-plans/Some+Verbose+Lesson+Name.pdf"
+      "https://lesson-plans.code.org/#{script.name}/#{Time.parse(script.seeded_from).to_s(:number)}/teacher-lesson-plans/Some-Verbose-Lesson-Name.pdf",
+      new_lesson.lesson_plan_pdf_url
     )
   end
 
   test 'student_lesson_plan_pdf_url gets url for migrated script with student lesson plans' do
     script = create :script, is_migrated: true, include_student_lesson_plans: true
-    new_lesson = create :lesson, script: script, key: 'Some Verbose Lesson Name', has_lesson_plan: true
+    new_lesson = create :lesson, script: script, name: 'Some Verbose Lesson Name', has_lesson_plan: true
     assert_nil(new_lesson.student_lesson_plan_pdf_url)
 
     script.seeded_from = Time.now.to_s
     assert_equal(
-      new_lesson.student_lesson_plan_pdf_url,
-      "https://lesson-plans.code.org/#{script.name}/#{Time.parse(script.seeded_from).to_s(:number)}/student-lesson-plans/Some+Verbose+Lesson+Name.pdf"
+      "https://lesson-plans.code.org/#{script.name}/#{Time.parse(script.seeded_from).to_s(:number)}/student-lesson-plans/Some-Verbose-Lesson-Name-Student.pdf",
+      new_lesson.student_lesson_plan_pdf_url
     )
   end
 
@@ -900,8 +900,8 @@ class LessonTest < ActiveSupport::TestCase
 
   class LessonCopyTests < ActiveSupport::TestCase
     setup do
-      Script.any_instance.stubs(:write_script_json)
-      Script.stubs(:merge_and_write_i18n)
+      Unit.any_instance.stubs(:write_script_json)
+      Unit.stubs(:merge_and_write_i18n)
 
       @original_script = create :script, is_migrated: true
       @original_script.expects(:write_script_json).never
@@ -999,7 +999,7 @@ class LessonTest < ActiveSupport::TestCase
 
       lesson_activity = create :lesson_activity, lesson: @original_lesson
       create :activity_section, lesson_activity: lesson_activity, description: "Resource 1: [r #{Services::GloballyUniqueIdentifiers.build_resource_key(resource_in_lesson)}]. Resource 2: [r #{Services::GloballyUniqueIdentifiers.build_resource_key(resource_not_in_lesson)}]."
-      create :activity_section, lesson_activity: lesson_activity, tips: [{'markdown': "Resource 1: [r #{Services::GloballyUniqueIdentifiers.build_resource_key(resource_in_lesson)}]"}, {markdown: "description without resource"}]
+      create :activity_section, lesson_activity: lesson_activity, tips: [{markdown: "Resource 1: [r #{Services::GloballyUniqueIdentifiers.build_resource_key(resource_in_lesson)}]"}, {markdown: "description without resource"}]
 
       @destination_script.expects(:write_script_json).once
       copied_lesson = @original_lesson.copy_to_unit(@destination_script)
@@ -1281,7 +1281,7 @@ class LessonTest < ActiveSupport::TestCase
       @destination_script.lesson_groups = []
 
       @destination_script.expects(:write_script_json).once
-      Script.expects(:merge_and_write_i18n).once
+      Unit.expects(:merge_and_write_i18n).once
       copied_lesson = @original_lesson.copy_to_unit(@destination_script)
       assert_equal 1, @destination_script.lesson_groups.count
       assert_equal 1, @destination_script.lessons.count

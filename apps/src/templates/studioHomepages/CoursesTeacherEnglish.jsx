@@ -11,7 +11,7 @@ import {CourseBlocksHoc} from './CourseBlocks';
 import CourseBlocksTools from './CourseBlocksTools';
 import CourseBlocksTeacherGradeBands from './CourseBlocksTeacherGradeBands';
 import ProtectedStatefulDiv from '../ProtectedStatefulDiv';
-import CsaSkinnyBanner from '../CsaSkinnyBanner';
+import ProfessionalLearningSkinnyBanner from '../ProfessionalLearningSkinnyBanner';
 import i18n from '@cdo/locale';
 
 /**
@@ -34,7 +34,7 @@ class CoursesTeacherEnglish extends Component {
     return (
       <div>
         <div>
-          <CsaSkinnyBanner />
+          <ProfessionalLearningSkinnyBanner />
 
           <ContentContainer
             heading={i18n.courseExplorerHeading()}

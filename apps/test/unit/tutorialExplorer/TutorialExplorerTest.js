@@ -50,7 +50,6 @@ describe('TutorialExplorer filterTutorials tests', function() {
       languages_supported: 'en,fr,gr-gr',
       tags_platform: 'browser,ipad,android',
       tags_subject: 'english,history',
-      tags_activity_type: 'robotics',
       displayweight: 5,
       popularityrank: 1
     },
@@ -83,7 +82,6 @@ describe('TutorialExplorer filterTutorials tests', function() {
       languages_supported: 'en,fr',
       tags_platform: 'browser,ipad',
       tags_subject: 'english,history,science',
-      tags_activity_type: 'robotics',
       displayweight: 5,
       popularityrank: 7
     },
@@ -105,7 +103,6 @@ describe('TutorialExplorer filterTutorials tests', function() {
       languages_supported: 'en,fr',
       tags_platform: 'browser,ipad',
       tags_subject: '',
-      tags_activity_type: 'robotics',
       displayweight: 5,
       popularityrank: 9
     }
@@ -292,7 +289,6 @@ describe('TutorialExplorer filterTutorials tests', function() {
         languages_supported: 'en,fr',
         tags_platform: 'browser,ipad',
         tags_subject: '',
-        tags_activity_type: 'robotics',
         displayweight: 5,
         popularityrank: 9
       }
@@ -314,21 +310,9 @@ describe('TutorialExplorer filterTutorials tests', function() {
     assert.equal(filtered[0].name, 'minecraft');
   });
 
-  it('get unique orgnames for non-robotics', function() {
+  it('get unique orgnames', function() {
     const uniqueOrgNames = TutorialExplorer.getUniqueOrgNamesFromTutorials(
-      tutorials,
-      false
-    );
-
-    assert.equal(uniqueOrgNames.length, 2);
-    assert.equal(uniqueOrgNames[0], 'code');
-    assert.equal(uniqueOrgNames[1], longOrgName);
-  });
-
-  it('get unique orgnames for robotics', function() {
-    const uniqueOrgNames = TutorialExplorer.getUniqueOrgNamesFromTutorials(
-      tutorials,
-      true
+      tutorials
     );
 
     assert.equal(uniqueOrgNames.length, 3);

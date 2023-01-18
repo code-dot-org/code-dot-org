@@ -1,9 +1,5 @@
 <Gamelab>
   <config><![CDATA[{
-  "game_id": 50,
-  "created_at": "2022-03-30T23:39:30.000Z",
-  "level_num": "custom",
-  "user_id": 155,
   "properties": {
     "skin": "gamelab",
     "edit_code": true,
@@ -71,14 +67,14 @@
     "top_level_procedure_autopopulate": "false",
     "show_type_hints": "false",
     "reference_links": [
-      "/docs/concepts/game-lab/sprites/",
-      "/docs/concepts/game-lab/animation-tab/",
-      "/docs/concepts/game-lab/sprites/sprite-properties/",
-      "/docs/concepts/javascript/random-numbers/",
-      "/docs/concepts/javascript/variables/",
-      "/docs/concepts/javascript/naming-variables/",
-      "/docs/concepts/game-lab/drawing-shapes/",
-      "/docs/concepts/game-lab/shapes-and-parameters/"
+      "/courses/csd-2022/guides/sprites",
+      "/courses/csd-2022/guides/animation-tab",
+      "/courses/csd-2022/guides/sprite-properties",
+      "/courses/csd-2022/guides/random-numbers",
+      "/courses/csd-2022/guides/variables",
+      "/courses/csd-2022/guides/naming-variables",
+      "/courses/csd-2022/guides/drawing-shapes",
+      "/courses/csd-2022/guides/shapes-and-parameters"
     ],
     "long_instructions": "# White Text on White Background\r\n\r\nYou can add a border to your text using the `stroke()` command, shown below. Like other shapes, you can also use the `strokeWeight()` command to change the thickness of the stroke. By running the code below, you'll notice that the normal stroke weight for text doesn't give it much contrast when the background is the same color.\r\n\r\n# Do This\r\n\r\n* Read the code to see how it works.\r\n* Add a `strokeWeight()` command to make the text stand out more.\r\n",
     "encrypted": "false",
@@ -91,6 +87,10 @@
     "thumbnail_url": "https://images.code.org/d27e571192cc8129d4b1899d0198a229-image-1592427201253.png",
     "preload_asset_list": null
   },
+  "level_num": "custom",
+  "game_id": 50,
+  "created_at": "2022-03-30T23:39:30.000Z",
+  "user_id": 155,
   "published": true,
   "notes": "",
   "audit_log": "[{\"changed_at\":\"2022-03-30T23:39:30.253+00:00\",\"changed\":[\"cloned from \\\"CSD web challenge stroke_2021\\\"\"],\"cloned_from\":\"CSD web challenge stroke_2021\"}]"

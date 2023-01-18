@@ -41,11 +41,6 @@
                   %p.slide-longdescription!= tutorial[:longdescription]
                   %p.slide-shortdescription= tutorial[:shortdescription]
                   .slide-tags= tags
-                  .slide-participants-count<
-                    %b{:class=>"participants_string_#{key}", :style=>'display: none'}
-                      %span{:class=>"participants_value_#{key}"}
-                        3
-                      = I18n.t(:participants)
                   -unless tutorial[:teachers_notes].nil_or_empty?
                     .slide-teachers-notes-link<
                       %a{:href=>tutorial[:teachers_notes], :target=>'blank'}<

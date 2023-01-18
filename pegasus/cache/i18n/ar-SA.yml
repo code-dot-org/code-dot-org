@@ -420,6 +420,7 @@ ar-SA:
   homepage_banner_40k_teachers_link: اعرف المزيد
   homepage_slot_text_title_hoc: ساعة من البرمجة
   homepage_slot_text_blurb_hoc: بإمكان أي شخص أن يتعلم. ابدأ اليوم
+  homepage_slot_text_blurb_hoc_2022: استكشف، العب، ابتكِر!
   homepage_slot_text_link_hoc: جرب ساعة من البرمجة - "Hour of Code"
   homepage_slot_text_link_about_hoc: عن ساعة من البرمحة
   homepage_slot_text_link_host: استضافة ساعة البرمجة
@@ -445,6 +446,7 @@ ar-SA:
   homepage_slot_text_link_buy: شارك
   homepage_slot_text_link_donate: تبرع
   homepage_slot_text_link_shop: القمصان, القبعات, و المزيد
+  homepage_slot_text_link_thebadguys: برمجة فيلم "The Bad Guys"
   homepage_slot_text_link_administrators: وفر علم الحاسوب لمدرستك
   homepage_gallery_header: تم إنشاء %{project_count} مليون مشروع Code.org.
   homepage_header_donors: موقع code.org  يشكر الداعمين له
@@ -1225,15 +1227,17 @@ ar-SA:
   coursee-2020_name: الدورة "هـ" (2020)
   coursef-2020_name: الدورة "و" (2020)
   coursea-2021_name: الدورة "أ" (2021)
-  courseb-2021_name: الدورة "ب" (2020)
-  coursec-2021_name: الدورة "ج" (2020)
-  coursed-2021_name: الدورة "د" (2020)
-  coursee-2021_name: الدورة "هـ" (2020)
+  courseb-2021_name: الدورة "ب" (2021)
+  coursec-2021_name: الدورة "ج" (2021)
+  coursed-2021_name: الدورة "د" (2021)
+  coursee-2021_name: الدورة "هـ" (2021)
   coursef-2021_name: الدورة F (2021)
-  coursea-2022_name: الدورة "أ" (2020)
-  courseb-2022_name: الدورة "ب" (2020)
-  coursec-2022_name: الدورة "ج" (2020)
-  coursed-2022_name: الدورة "د" (2020)
+  coursea-2022_name: الدورة "أ" (2022)
+  courseb-2022_name: الدورة "ب" (2022)
+  coursec-2022_name: الدورة "ج" (2022)
+  coursed-2022_name: الدورة "د" (2022)
+  coursee-2022_name: الدورة "هـ" (2022)
+  coursef-2022_name: الدورة "و" (2022)
   express-2018_name: دورة سريعة (2018)
   pre-express-2018_name: دورة سريعة لمستوى ما قبل القراءة (2018)
   express-2019_name: دورة سريعة (2019)
@@ -1242,7 +1246,8 @@ ar-SA:
   pre-express-2020_name: دورة سريعة لمستوى ما قبل القراءة (2020)
   express-2021_name: دورة سريعة (2020)
   pre-express-2021_name: دورة سريعة لمستوى ما قبل القراءة (2021)
-  express-2022_name: دورة سريعة (2020)
+  express-2022_name: دورة سريعة (2022)
+  pre-express-2022_name: دورة سريعة لمستوى ما قبل القراءة (2022)
   csd2_name: 'الوحدة 2: تطوير الويب'
   csd3_name: 'الوحدة 3: الرسوم المتحركة والألعاب'
   accelerated_name: دورة تدريبية مسرّعة
@@ -2032,6 +2037,7 @@ ar-SA:
   header_educate_beyond: ما بعد Code.org
   header_educate_inspire: ألهم طالب
   header_educate_community: المجتمع الإلكتروني
+  header_educate_requirements: المتطلبات التقنية
   header_educate_tools: الأدوات ومقاطع الفيديو
   header_about_us: نبذة عنا
   header_about_leadership: القيادة
@@ -2148,6 +2154,13 @@ ar-SA:
   hoc_overview_dance_2019_subtitle: أنشئ حفلة رقص لمشاركتها مع أصدقائك. بمشاركة كاتي
     بيري وشون مينديز وبانيك! في The Disco و Lil Nas X و Jonas Brothers و Nicki Minaj
     و 34 آخرين!
+  hoc_overview_dance_2022_subtitle: قم ببرمجة حفلة رقص لمشاركتها مع أصدقائك. تضم الحفلة
+    بيونسيه وهاري ستايلز وليزو وليل ناس إكس وسيلينا غوميز وموسيقى من ديزني "إنكانتو"
+    والمزيد!
+  hoc_overview_hello_world_2022_subtitle: اختر من بين ستة مواضيع ممتعة (بما في ذلك
+    الفضاء وكرة القدم!) لترميز الأحرف التفاعلية في عالم تقوم بإنشائه.
+  hoc_overview_hello_world_2022_alt_text: شخصيات متحركة من رواد الفضاء والحيوانات
+    تدور حول رسم توضيحي للأرض
   hoc_overview_title: أنشطة ساعة من البرمجة من Code.org
   hoc_overview_subtitle: إن <a href="https://hourofcode.com">ساعة من برمجة </a> هي
     حركة عالمية تصل إلى عشرات ملايين الطلاب في 180+ بلد. وباستطاعة أي شخص أن ينظم
@@ -2216,10 +2229,18 @@ ar-SA:
   hoc2018_mc_educators_box3_desc: تفضل بزيارة مخزن مايكروسوفت في منطقة مجاورة لك لورشة
     عمل مجانية في مجال ساعة برمجة.
   hoc2018_mc_educators_box3_button: اعثر على ورشة عمل
+  hoc2022_mc_educators_box3_desc_markdown: 'استخدم هذا عند الطلب [دورة مجانية] (%{free_course_link})
+    أو سجل فصلك بأكمله لحضور ورشة عمل "ساعة من البرمجة" المباشرة مع معلم ضيف. يتم
+    عرض الدورة في عدة مرات خلال أسبوع تعليم علوم الكمبيوتر، من 6 إلى 11 ديسمبر. '
+  hoc2022_mc_educators_box3_button: سجل الآن
   hoc2018_mc_educators_box4_title: الوصول إلى المزيد من مصادر علم الحاسوب
   hoc2018_mc_educators_box4_desc: قم بإحداث تغيير في مجتمعك باستخدام المهارات الرقمية
     ومصادر تعليم علم الحاسوب من مايكروسوفت.
   hoc2018_mc_educators_box4_button: استكشف المصادر
+  hoc2022_mc_educators_box4_desc: ألهم الشغف بالعلوم والتكنولوجيا والهندسة والرياضيات
+    لدى متعلمي رياض الأطفال وحتى الصف 12 من خلال 200 ساعة من منهج علوم الكمبيوتر،
+    من لغة البلوك إلى البايثون، بدعم من التطوير المهني.
+  hoc2022_mc_educators_box4_button: مواصلة التعلم
   hoc2018_mc_watch_videos: 'قبلَ أنْ تبدأ، شَاهِد أَحَدّ الفِيديُوهات الملهمة هَذِه '
   hoc2018_mc_videos_more: المزيد من <a href='%{inspiring_videos_playlist}'>الفيديوات
     الملهمة</a> تعرض نماذج من القدوات والمشاهير
@@ -2380,6 +2401,13 @@ ar-SA:
   hoc2021_mc_mee_ai_title: منظمة العفو الدولية للخير
   hoc2021_mc_mee_ai_description: 'استكشف الذكاء الاصطناعي مع طلابك وتعلم البرمجة في
     Minecraft: Education Edition.'
+  hoc2022_mc_mee_title: لعبة Minecraft Escape Estate
+  hoc2022_mc_mee_description: 'اهرب من القصر الغامض قبل الفجر واكسب مليون جوهرة زمرد!
+    برنامج ماينكرافت الجديد من "ساعة من البرمجة" متاح الآن في ماينكرافت: الإصدار التعليمي
+    لأنظمة التشغيل Windows وMac وChromebook وiPad والهواتف المحمولة. ابدأ باستخدام
+    مصادر المعلم المجانية والدورات التدريبية ومقاطع الفيديو.'
+  hoc2022_mc_mee_timecraft_description: 'سافر عبر الزمن لإنقاذ المستقبل في درس البرمجة
+    المجاني هذا في ماينكرافت: الإصدار التعليمي.'
   footer_powered_by_aws: تُعد Amazon Web Services وشعار "Powered by AWS" علامتين تجاريتين
     لشركة Amazon.com، Inc. أو الشركات التابعة لها في الولايات المتحدة و / أو البلدان
     الأخرى.
@@ -2466,6 +2494,24 @@ ar-SA:
   ai_cognimates_description: منصة تعليمية للذكاء الاصطناعي لبناء الألعاب وبرمجة الروبوتات
     والتدريب.
   ai_try_activity: جرب النشاط
+  outbreak_tile_title: تفشي المرض
   outbreak_tile_subtitle: لقد أصاب فيروس مونستر تاون! قم بترميز جهاز محاكاة تفشي المرض
     وقم بعمل تنبؤات حول ما سيحدث لجيران Monster Town.
+  outbreak_tile_alt: محاكاة لكيفية انتشار الفيروس من خلال مجموعة من الوحوش الأرجوانية.
   footer_cookie_notice: إشعار ملفات تعريف الارتباط
+  hoc2022_banner_title: استكشف، العب، ابتكِر!
+  hoc2022_banner_description: استكشف الكون، وسجل هدفًا، وقم بإيقاف الحركة - هناك العديد
+    من الطرق لتجربة علوم الكمبيوتر!
+  hoc2022_cta_primary: شاهد ما هو جديد
+  hoc2022_cta_secondary: جرب أنشطة أكثر
+  hoc2022_landing_page_explore_title: البحـث
+  hoc2022_landing_page_explore_description: افتح الأبواب لعوالم جديدة مع علوم الكمبيوتر!
+  hoc2022_landing_page_play_title: العب
+  hoc2022_landing_page_play_description: خذ الملعب وسجل!
+  hoc2022_landing_page_create_title: إنشاء
+  hoc2022_landing_page_create_description: اصنع شيئًا غريبًا ورائعًا!
+  hoc2022_landing_page_banner_alt_left: كائن فضائي يرقص بجانب كوكب زحل في الفضاء
+  hoc2022_landing_page_banner_alt_right: روبوت يركل كرة قدم في الفضاء أمام صاروخ يقلع
+  try_it_yourself: جرِّب بنفسك!
+  try_an_activity: جرب نشاطًا
+  see_more_activities: جرب أنشطة أكثر

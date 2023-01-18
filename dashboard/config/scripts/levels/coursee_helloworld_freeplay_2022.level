@@ -55,7 +55,7 @@
     "callout_json": "[\r\n {\r\n  \"localization_key\": \"costumes_tab\",\r\n  \"callout_text\": \"Click here to add costumes to your project.\",\r\n  \"element_id\": \"[id=\\\"animationMode\\\"]\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"codeStudio\": {\r\n    \"canReappear\": true,\r\n    \"dropletPaletteCategory\": \"\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"top left\",\r\n    \"at\": \"bottom center\",\r\n    \"adjust\": {\r\n     \"x\": 0,\r\n     \"y\": 0\r\n    }\r\n   }\r\n  }\r\n }\r\n]",
     "video_key": "hello_world_congrats",
     "skip_autosave": true,
-    "encrypted_examples": "WNbw/L2bHm21vqyYxd/S1ez3SBbhJEgMIxWCBziMWNsoCGQMTIy11pR5tnZv\nhJqfTadSL4wpavw5BnQd4zA6tw==\n",
+    "encrypted_examples": "pQIKspUpmHVg3juN+WPsTTl9ZFegkkboYJj8QV5ayUJEFDkvNtktW4bL+7DR\nQw4xKZwQ9k8rKr3UQQ++YMkaQw==\n",
     "preload_asset_list": null
   },
   "game_id": 64,
@@ -64,7 +64,7 @@
   "level_num": "custom",
   "user_id": 833,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-06-13T20:59:53.630+00:00\",\"changed\":[\"cloned from \\\"coursee_helloworld_freeplay_ecosystems\\\"\"],\"cloned_from\":\"coursee_helloworld_freeplay_ecosystems\"},{\"changed_at\":\"2022-06-16 21:06:59 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"instructions_icon\",\"start_animations\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2022-06-13T20:59:53.630+00:00\",\"changed\":[\"cloned from \\\"coursee_helloworld_freeplay_ecosystems\\\"\"],\"cloned_from\":\"coursee_helloworld_freeplay_ecosystems\"},{\"changed_at\":\"2022-06-16 21:06:59 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"instructions_icon\",\"start_animations\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-08-24 19:22:52 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

@@ -18,7 +18,7 @@ class TransfersController < ApplicationController
     end
 
     student_ids = params[:student_ids].try(:map, &:to_i)
-    if student_ids.nil? || student_ids.empty?
+    if student_ids.blank?
       render json: {
         error: I18n.t('move_students.student_ids_not_entered')
       }, status: :bad_request

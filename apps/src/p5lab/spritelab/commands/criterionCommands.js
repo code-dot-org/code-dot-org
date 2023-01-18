@@ -85,9 +85,9 @@ export const commands = {
       : Object.values(currentVariables);
     for (let i = 0; i < spriteIds.length; i++) {
       values.forEach(value => {
-        let speechText = this.getLastSpeechBubbleForSpriteId(spriteIds[i])
+        const speechText = this.getLastSpeechBubbleForSpriteId(spriteIds[i])
           ?.text;
-        let type = typeof speechText;
+        const type = typeof speechText;
         // We only want to set result to true here, so that any positive test
         // allows the overall criterion to pass.
         switch (type) {
@@ -506,16 +506,23 @@ export const commands = {
     return result;
   },
 
-  // Returns true text was printed this frame.
+  // Returns true if text was printed this frame.
   printedText() {
     const previousPrintLogLength = this.previous.printLogLength || 0;
-    let result = previousPrintLogLength < this.printLog.length;
+    const result = previousPrintLogLength < this.printLog.length;
+    return result;
+  },
+
+  // Returns true if a sound began playing this frame.
+  playedSound() {
+    const previousSoundLogLength = this.previous.soundLogLength || 0;
+    const result = previousSoundLogLength < this.soundLog.length;
     return result;
   },
 
   // Returns true if the student set a variable to any number, string, or boolean.
   variableCreated() {
-    let result = this.studentVars.length >= 1;
+    const result = this.studentVars.length >= 1;
     return result;
   }
 };

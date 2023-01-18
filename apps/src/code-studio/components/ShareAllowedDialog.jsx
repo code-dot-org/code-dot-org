@@ -68,7 +68,6 @@ function checkImageReachability(imageUrl, callback) {
  */
 class ShareAllowedDialog extends React.Component {
   static propTypes = {
-    allowExportExpo: PropTypes.bool.isRequired,
     exportApp: PropTypes.func,
     icon: PropTypes.string,
     shareUrl: PropTypes.string.isRequired,
@@ -277,7 +276,11 @@ class ShareAllowedDialog extends React.Component {
                     i18n={{
                       tos: i18n.tosLong({url: 'http://code.org/tos'}),
                       contact_us: i18n.contactUs({
-                        url: 'https://code.org/contact'
+                        url: `https://support.code.org/hc/en-us/requests/new?&description=${encodeURIComponent(
+                          `Abuse error for project at url: ${
+                            this.props.shareUrl
+                          }`
+                        )}`
                       })
                     }}
                     className="alert-error"
@@ -429,7 +432,6 @@ class ShareAllowedDialog extends React.Component {
                 <div style={{clear: 'both', marginTop: 40}}>
                   {isDroplet && (
                     <AdvancedShareOptions
-                      allowExportExpo={this.props.allowExportExpo}
                       shareUrl={this.props.shareUrl}
                       exportApp={this.props.exportApp}
                       expanded={this.state.showAdvancedOptions}
@@ -549,7 +551,6 @@ export const UnconnectedShareAllowedDialog = ShareAllowedDialog;
 
 export default connect(
   state => ({
-    allowExportExpo: state.pageConstants.allowExportExpo || false,
     exportApp: state.pageConstants.exportApp,
     isOpen: state.shareDialog.isOpen,
     isUnpublishPending: state.shareDialog.isUnpublishPending

@@ -57,20 +57,20 @@
     "ai_model_id": "OV8kuQzp3Yuh",
     "ai_model_name": "Class Book Recommender",
     "reference_links": [
-      "/docs/concepts/app-lab/responding-to-user-input/"
+      "/courses/csd-2022/guides/responding-to-user-input"
     ],
-    "map_reference": "/docs/concepts/app-lab/changing-screens/",
+    "map_reference": "/courses/csd-2022/guides/changing-screens",
     "video_key": "applab_intro_events",
     "teacher_markdown": "**Rubrics and Feedback:** This level uses a mini-rubric as a way to provide feedback to students. [Click here to read a support article](https://support.code.org/hc/en-us/articles/360027667832-Rubrics-in-Code-org-courses) with more information about how to use this tool and provide feedback to students.",
     "encrypted_examples": "Il4qMYOAAnGWvsS6ZLOIN7n6S6prSiOZu0/gCQ5hUgXpyTWetYvZ1Jz+yzxs\nJZiGjcSMA11eJTySc8JLoU3xZA==\n",
     "name_suffix": "_2022",
     "preload_asset_list": null
   },
-  "game_id": 41,
-  "published": true,
-  "created_at": "2022-03-30T23:49:00.000Z",
   "level_num": "custom",
+  "game_id": 41,
+  "created_at": "2022-03-30T23:49:00.000Z",
   "user_id": 106,
+  "published": true,
   "notes": "",
   "audit_log": "[{\"changed_at\":\"2022-03-30T23:49:00.873+00:00\",\"changed\":[\"cloned from \\\"ml-intro app lab-book recommender 4-2021\\\"\"],\"cloned_from\":\"ml-intro app lab-book recommender 4-2021\"},{\"changed_at\":\"2022-05-11 16:53:57 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>

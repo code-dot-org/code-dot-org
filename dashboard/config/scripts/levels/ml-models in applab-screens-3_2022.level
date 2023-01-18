@@ -51,8 +51,8 @@
     "ai_enabled": "true",
     "callout_json": "[\r\n {\r\n  \"localization_key\": \"CSD_AI_L7_ifstatement\",\r\n  \"callout_text\": \"Add your if-statement here\",\r\n  \"element_id\": \"\",\r\n  \"on\": \"if_statement\",\r\n  \"qtip_config\": {\r\n   \"codeStudio\": {\r\n    \"canReappear\": true,\r\n    \"dropletPaletteCategory\": \"\",\r\n     \"codeString\": \"getPrediction\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"right center\",\r\n    \"at\": \"left center\",\r\n    \"adjust\": {\r\n     \"x\": 0,\r\n     \"y\": 0\r\n    }\r\n   }\r\n  }\r\n }\r\n]",
     "reference_links": [
-      "/docs/concepts/app-lab/changing-screens/",
-      "/docs/concepts/app-lab/if-statements/"
+      "/courses/csd-2022/guides/changing-screens",
+      "/courses/csd-2022/guides/if-statements-2"
     ],
     "video_key": "csp_applab_conditionals_2A",
     "ai_model_id": "j5MH8AtyV1sw",
@@ -61,11 +61,11 @@
     "name_suffix": "_2022",
     "preload_asset_list": null
   },
-  "game_id": 41,
-  "published": true,
-  "created_at": "2022-03-30T23:49:15.000Z",
   "level_num": "custom",
+  "game_id": 41,
+  "created_at": "2022-03-30T23:49:15.000Z",
   "user_id": 106,
+  "published": true,
   "notes": "",
   "audit_log": "[{\"changed_at\":\"2022-03-30T23:49:15.851+00:00\",\"changed\":[\"cloned from \\\"ml-models in applab-screens-3-2021\\\"\"],\"cloned_from\":\"ml-models in applab-screens-3-2021\"},{\"changed_at\":\"2022-05-11 17:05:54 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>

@@ -77,7 +77,7 @@ class ProgressTable extends React.Component {
 
 export const UnconnectedProgressTable = ProgressTable;
 export default connect(state => ({
-  isPlc: state.progress.professionalLearningCourse,
+  isPlc: state.progress.deeperLearningCourse,
   isSummaryView: state.progress.isSummaryView,
   groupedLessons: groupedLessons(state.progress)
 }))(ProgressTable);

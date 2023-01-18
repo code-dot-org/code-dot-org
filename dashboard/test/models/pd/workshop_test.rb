@@ -219,7 +219,7 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
 
   test 'sessions must start and end on the same day' do
     workshop = create :workshop, num_sessions: 0
-    session = build :pd_session, start: Time.zone.now, end: Time.zone.now + 1.day
+    session = build :pd_session, start: Time.zone.now, end: 1.day.from_now
     workshop.sessions << session
 
     refute workshop.valid?
@@ -229,7 +229,7 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
 
   test 'sessions must start before they end' do
     workshop = create :workshop, num_sessions: 0
-    session = build :pd_session, start: Time.zone.now, end: Time.zone.now - 2.hours
+    session = build :pd_session, start: Time.zone.now, end: 2.hours.ago
     workshop.sessions << session
 
     refute workshop.valid?
@@ -277,18 +277,18 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
   test 'should have ended' do
     workshop_recently_started = create :workshop, num_sessions: 0
     workshop_recently_started.started_at = Time.now
-    workshop_recently_started.sessions << (build :pd_session, start: Time.zone.now - 13.hours, end: Time.zone.now - 12.hours)
+    workshop_recently_started.sessions << (build :pd_session, start: 13.hours.ago, end: 12.hours.ago)
     workshop_recently_started.save!
 
     workshop_should_have_ended = create :workshop, num_sessions: 0
     workshop_should_have_ended.started_at = Time.now
-    workshop_should_have_ended.sessions << (build :pd_session, start: Time.zone.now - 51.hours, end: Time.zone.now - 50.hours)
+    workshop_should_have_ended.sessions << (build :pd_session, start: 51.hours.ago, end: 50.hours.ago)
     workshop_should_have_ended.save!
 
     workshop_already_ended = create :workshop, num_sessions: 0
     workshop_already_ended.started_at = Time.now
     workshop_already_ended.ended_at = Time.now - 1.hour
-    workshop_already_ended.sessions << (build :pd_session, start: Time.zone.now - 51.hours, end: Time.zone.now - 50.hours)
+    workshop_already_ended.sessions << (build :pd_session, start: 51.hours.ago, end: 50.hours.ago)
     workshop_already_ended.save!
 
     assert_equal [workshop_should_have_ended.id], Pd::Workshop.should_have_ended.pluck(:id)
@@ -583,7 +583,7 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
 
   test 'order_by_start' do
     # 5 workshops in date order, each with 1-5 sessions (only the first matters)
-    workshops = 5.times.map do |i|
+    workshops = Array.new(5) do |i|
       build :workshop, num_sessions: rand(1..5), sessions_from: Date.today + i.days
     end
     # save out of order
@@ -883,7 +883,7 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     end
 
     # 2 enrollments without attendance
-    enrollments = 2.times.map do
+    enrollments = Array.new(2) do
       create :pd_enrollment, workshop: @workshop
     end
 

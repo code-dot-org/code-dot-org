@@ -1,0 +1,97 @@
+@use "color.scss";
+@use "style-constants.scss";
+
+.debugAreaHeader {
+  position: absolute;
+  top: style-constants.$resize-bar-width;
+  left: 0;
+  right: 0;
+  text-align: center;
+  line-height: 30px;
+}
+
+.noPadding {
+  padding: 0;
+}
+
+.noUserSelect {
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.showHideIcon {
+  position: absolute;
+  top: 0;
+  left: 8px;
+  margin: 0;
+  line-height: style-constants.$workspace-headers-height;
+  font-size: 18px;
+  :hover {
+    cursor: pointer;
+    color: color.$white;
+  }
+}
+
+.showDebugWatchIcon {
+  position: absolute;
+  top: 0;
+  right: 6px;
+  width: 18px;
+  margin: 0;
+  line-height: style-constants.$workspace-headers-height;
+  font-size: 18px;
+  &:hover {
+    cursor: pointer;
+    color: color.$white;
+  }
+}
+
+.hidden {
+  display: none;
+}
+
+$debug-watch-max-column-width: 200px;
+$debug-header-border-width: 1px;
+
+.debugWatchHeader {
+  width: $debug-watch-max-column-width + $debug-header-border-width;
+  float: right;
+  border-left: $debug-header-border-width solid gray;
+}
+
+.watchersHidden {
+  border-left: none;
+  text-align: right;
+  margin-right: 30px;
+}
+
+.sliderDebug {
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.slider {
+  margin-left: 45px;
+  margin-right: 5px;
+}
+
+.displayInitial {
+  display: initial;
+}
+
+.chevronButton {
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  color: color.$white;
+
+  &:hover {
+    box-shadow: none;
+  }
+
+  &Unfocused {
+    color: color.$dark-charcoal;
+  }
+}

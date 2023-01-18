@@ -17,7 +17,7 @@ public class MysteryClass {
   }
 
   public void mystery() {
-    System.out.print("a");
+    System.out.print("a ");
     mystery(1);
   }
 }

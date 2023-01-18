@@ -1,72 +1,45 @@
 import React from 'react';
 import AssetThumbnail from './AssetThumbnail';
 
-export default storybook => {
-  return storybook.storiesOf('AssetThumbnail', module).addStoryTable([
-    {
-      name: 'image',
-      story: () => (
-        <div style={{width: 800}}>
-          <AssetThumbnail
-            name="AudioTest"
-            type="image"
-            useFilesApi={true}
-            projectId="123"
-          />
-        </div>
-      )
-    },
-    {
-      name: 'audio',
-      story: () => (
-        <div style={{width: 800}}>
-          <AssetThumbnail
-            name="AudioTest"
-            type="audio"
-            useFilesApi={true}
-            projectId="123"
-          />
-        </div>
-      )
-    },
-    {
-      name: 'video',
-      story: () => (
-        <div style={{width: 800}}>
-          <AssetThumbnail
-            name="AudioTest"
-            type="video"
-            useFilesApi={true}
-            projectId="123"
-          />
-        </div>
-      )
-    },
-    {
-      name: 'doc',
-      story: () => (
-        <div style={{width: 800}}>
-          <AssetThumbnail
-            name="AudioTest"
-            type="doc"
-            useFilesApi={true}
-            projectId="123"
-          />
-        </div>
-      )
-    },
-    {
-      name: 'pdf',
-      story: () => (
-        <div style={{width: 800}}>
-          <AssetThumbnail
-            name="AudioTest"
-            type="pdf"
-            useFilesApi={true}
-            projectId="123"
-          />
-        </div>
-      )
-    }
-  ]);
+export default {
+  title: 'AssetThumbnail',
+  component: AssetThumbnail
+};
+
+// Template
+const Template = args => (
+  <div style={{width: 800}}>
+    <AssetThumbnail
+      name="AudioTest"
+      useFilesApi={true}
+      projectId="123"
+      {...args}
+    />
+  </div>
+);
+
+// Stories
+export const ImageThumbnail = Template.bind({});
+ImageThumbnail.args = {
+  type: 'image'
+};
+
+export const AudioThumbnail = Template.bind({});
+AudioThumbnail.args = {
+  type: 'audio'
+};
+
+export const VideoThumbnail = Template.bind({});
+VideoThumbnail.args = {
+  type: 'video'
+};
+
+export const DocThumbnail = Template.bind({});
+DocThumbnail.args = {
+  type: 'doc'
+};
+
+export const PDFThumbnail = Template.bind({});
+PDFThumbnail.args = {
+  type: 'pdf'
 };

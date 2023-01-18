@@ -1,9 +1,5 @@
 <Poetry>
   <config><![CDATA[{
-  "game_id": 69,
-  "created_at": "2022-06-13T21:01:48.000Z",
-  "level_num": "custom",
-  "user_id": 13468,
   "properties": {
     "encrypted": "false",
     "skin": "gamelab",
@@ -17,14 +13,14 @@
     "use_default_sprites": "false",
     "hide_animation_mode": "false",
     "show_type_hints": true,
-    "use_modal_function_editor": "true",
+    "use_modal_function_editor": "false",
     "embed": "false",
     "callout_json": "[\r\n {\r\n  \"localization_key\": \"poetry_new_block\",\r\n  \"callout_text\": \"New block!\",\r\n  \"element_id\": \".svgFlyoutGroup [block-id=\\\"7\\\"]\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"codeStudio\": {\r\n    \"canReappear\": true,\r\n    \"dropletPaletteCategory\": \"\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"left center\",\r\n    \"at\": \"right center\",\r\n    \"adjust\": {\r\n     \"x\": 0,\r\n     \"y\": 0\r\n    }\r\n   }\r\n  }\r\n },\r\n {\r\n  \"localization_key\": \"poetry_new_block\",\r\n  \"callout_text\": \"New block!\",\r\n  \"element_id\": \".svgFlyoutGroup [block-id=\\\"8\\\"]\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"codeStudio\": {\r\n    \"canReappear\": true,\r\n    \"dropletPaletteCategory\": \"\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"left center\",\r\n    \"at\": \"right center\",\r\n    \"adjust\": {\r\n     \"x\": 0,\r\n     \"y\": 0\r\n    }\r\n   }\r\n  }\r\n },\r\n {\r\n  \"localization_key\": \"poetry_selector\",\r\n  \"callout_text\": \"Select any poem, or enter your own!\",\r\n  \"element_id\": \"#poemSelector\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"codeStudio\": {\r\n    \"canReappear\": false,\r\n    \"dropletPaletteCategory\": \"\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"left center\",\r\n    \"at\": \"right center\",\r\n    \"adjust\": {\r\n     \"x\": 0,\r\n     \"y\": 0\r\n    }\r\n   }\r\n  }\r\n }\r\n]",
     "instructions_important": "false",
-    "long_instructions": "The freedom of a blank page! Illustrate a poem however you'd like and share it with your friends.\r\n",
+    "long_instructions": "The freedom of a blank page! Illustrate a time capsule however you'd like and share it with your friends.\r\n",
     "submittable": "false",
     "hide_share_and_remix": "false",
-    "never_autoplay_video": "false",
+    "never_autoplay_video": "true",
     "disable_param_editing": "true",
     "disable_if_else_editing": "false",
     "include_shared_functions": "false",
@@ -41,12 +37,16 @@
     "standalone_app_name": "poetry_hoc",
     "skip_autosave": true,
     "video_key": "poemart_celebration",
-    "encrypted_examples": "txek4jklMWvLsEBTTFs4XKc9J9kwLqhvfk2wBLp0MOKAUZTGQv4Pe0ZBUpyy\nF4RtlHCazCbczMeveB67DLj01Q==\n",
+    "encrypted_examples": "h9vMu4ya20M37Yate7xB9X+GN+hquw1n6msX5f8nQY/hLo/MEwDpdygNNAvj\nOmTAz7CKz9v+P0rK0GISODNBmeeynK3K0EDGONWgyanVgEv3puOAFTum8qsm\nrbFutDj4LJtx5dVyyxhWYK+YjwS0llR8yza+j4zAif7S71K1rr5dBjaCzMzB\nahvhHSWNrLoB9tO6Z3+QVBFkfWUjd5DaXw==\n",
     "name_suffix": "_2022",
     "preload_asset_list": null
   },
+  "game_id": 69,
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2022-06-13T21:01:48.044+00:00\",\"changed\":[\"cloned from \\\"poetry_hoc_freeplay_timecapsule-\\\"\"],\"cloned_from\":\"poetry_hoc_freeplay_timecapsule-\"}]",
+  "created_at": "2022-06-13T21:01:48.000Z",
+  "level_num": "custom",
+  "user_id": 13468,
+  "audit_log": "[{\"changed_at\":\"2022-06-13T21:01:48.044+00:00\",\"changed\":[\"cloned from \\\"poetry_hoc_freeplay_timecapsule-\\\"\"],\"cloned_from\":\"poetry_hoc_freeplay_timecapsule-\"},{\"changed_at\":\"2022-08-23 17:21:12 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"never_autoplay_video\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2022-08-30 17:38:50 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2022-08-30 17:43:26 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2022-08-30 17:49:14 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2022-08-30 17:51:21 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

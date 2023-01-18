@@ -66,6 +66,8 @@ const SET_SECTIONS = 'teacherDashboard/SET_SECTIONS';
 export const SELECT_SECTION = 'teacherDashboard/SELECT_SECTION';
 const REMOVE_SECTION = 'teacherDashboard/REMOVE_SECTION';
 const TOGGLE_SECTION_HIDDEN = 'teacherSections/TOGGLE_SECTION_HIDDEN';
+/** Opens add section UI */
+const CREATE_SECION_BEGIN = 'teacherDashboard/CREATE_SECION_BEGIN';
 /** Opens section edit UI, might load existing section info */
 const EDIT_SECTION_BEGIN = 'teacherDashboard/EDIT_SECTION_BEGIN';
 /** Makes staged changes to section being edited */
@@ -293,6 +295,19 @@ export const unassignSection = (sectionId, location) => (
   );
   return dispatch(finishEditingSection());
 };
+
+export const beginCreatingSection = (
+  courseOfferingId,
+  courseVersionId,
+  unitId,
+  participantType
+) => ({
+  type: CREATE_SECION_BEGIN,
+  courseOfferingId,
+  courseVersionId,
+  unitId,
+  participantType
+});
 
 /**
  * Opens the UI for editing the specified section.
@@ -790,6 +805,28 @@ export default function teacherSections(state = initialState, action) {
     };
   }
 
+  if (action.type === CREATE_SECION_BEGIN) {
+    const initialSectionData = newSectionData(action.participantType);
+    if (action.courseOfferingId) {
+      initialSectionData.courseOfferingId = action.courseOfferingId;
+    }
+    if (action.courseVersionId) {
+      initialSectionData.courseVersionId = action.courseVersionId;
+    }
+    if (action.unitId) {
+      initialSectionData.unitId = action.unitId;
+    }
+    return {
+      ...state,
+      initialCourseId: initialSectionData.courseId,
+      initialUnitId: initialSectionData.unitId,
+      initialCourseOfferingId: initialSectionData.courseOfferingId,
+      initialCourseVersionId: initialSectionData.courseVersionId,
+      initialLoginType: initialSectionData.loginType,
+      sectionBeingEdited: initialSectionData
+    };
+  }
+
   if (action.type === EDIT_SECTION_BEGIN) {
     const initialParticipantType =
       state.availableParticipantTypes.length === 1
@@ -1115,6 +1152,12 @@ export function isSaveInProgress(state) {
   return getRoot(state).saveInProgress;
 }
 
+export function assignedCourseOffering(state) {
+  const {sectionBeingEdited, courseOfferings} = getRoot(state);
+
+  return courseOfferings[(sectionBeingEdited?.courseOfferingId)];
+}
+
 function assignedUnit(state) {
   const {sectionBeingEdited, courseOfferings} = getRoot(state);
 
@@ -1127,7 +1170,7 @@ function assignedUnit(state) {
   if (courseVersion) {
     if (sectionBeingEdited.unitId) {
       assignedUnit = courseVersion.units[sectionBeingEdited.unitId];
-    } else if (courseVersion.type === 'Script') {
+    } else if (courseVersion.type === 'Unit') {
       assignedUnit = Object.values(courseVersion.units)[0];
     }
   }
@@ -1158,6 +1201,11 @@ export function assignedUnitTextToSpeechEnabled(state) {
   return assignment ? assignment.text_to_speech_enabled : false;
 }
 
+export function assignedUnitRequiresVerifiedInstructor(state) {
+  const assignment = assignedUnit(state);
+  return assignment ? assignment.requires_verified_instructor : false;
+}
+
 export function getVisibleSections(state) {
   const allSections = Object.values(getRoot(state).sections);
   return sortSectionsList(allSections || []).filter(section => !section.hidden);
@@ -1174,6 +1222,7 @@ export function getSectionRows(state, sectionIds) {
     ..._.pick(sections[id], [
       'id',
       'name',
+      'courseVersionName',
       'loginType',
       'studentCount',
       'code',
@@ -1198,6 +1247,7 @@ export function getAssignmentName(state, sectionId) {
 export const sectionFromServerSection = serverSection => ({
   id: serverSection.id,
   name: serverSection.name,
+  courseVersionName: serverSection.courseVersionName,
   createdAt: serverSection.createdAt,
   loginType: serverSection.login_type,
   grade: serverSection.grade,
@@ -1233,6 +1283,7 @@ export const studentFromServerStudent = (serverStudent, sectionId) => ({
   name: serverStudent.name,
   sharingDisabled: serverStudent.sharing_disabled,
   secretPicturePath: serverStudent.secret_picture_path,
+  secretPictureName: serverStudent.secret_picture_name,
   secretWords: serverStudent.secret_words
 });
 

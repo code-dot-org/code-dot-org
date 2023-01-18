@@ -21,7 +21,7 @@ class Announcements
     return nil unless banner_id_for_page
 
     banner = banners[banner_id_for_page]
-    banner ? banner.merge({"id": banner_id_for_page}) : nil
+    banner ? banner.merge({id: banner_id_for_page}) : nil
   end
 
   def self.load_announcements
@@ -34,7 +34,7 @@ class Announcements
       end
       begin
         @@announcements_data = JSON.parse(
-          IO.read(@@json_path),
+          File.read(@@json_path),
           symbolize_names: true,
           object_class: HashWithIndifferentAccess
         )

@@ -1,9 +1,5 @@
 <Applab>
   <config><![CDATA[{
-  "game_id": 41,
-  "created_at": "2022-04-08T17:06:53.000Z",
-  "level_num": "custom",
-  "user_id": 324,
   "properties": {
     "skin": "applab",
     "code_functions": {
@@ -102,12 +98,16 @@
     "thumbnail_url": "https://images.code.org/0db6bb16d146712de1c1472ff868c163-image-1648868077754.png",
     "encrypted_examples": "ab3qS9owPQhNFFMfa1qW6X48oyTRh8lT85dAwJFWVFcnAXVeDUazYRliWTCY\n4zpaHvq004z42rpl1VjHTM+Nzg==\n",
     "reference_links": [
-      "/docs/concepts/maker-toolkit/accelerometer-events/",
-      "/docs/concepts/maker-toolkit/the-accelerometer/",
-      "/docs/concepts/maker-toolkit/board-events/"
+      "/courses/csd-2022/guides/accelerometer-events",
+      "/courses/csd-2022/guides/the-accelerometer",
+      "/courses/csd-2022/guides/board-events"
     ],
     "preload_asset_list": null
   },
+  "level_num": "custom",
+  "game_id": 41,
+  "created_at": "2022-04-08T17:06:53.000Z",
+  "user_id": 324,
   "published": true,
   "notes": "",
   "audit_log": "[{\"changed_at\":\"2022-04-08T17:06:53.504+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Accelerometer - CA_2022\\\"\"],\"cloned_from\":\"CSD U6 - Accelerometer - CA_2022\"}]"

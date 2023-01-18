@@ -24,6 +24,10 @@ This is the best option for rapid iteration while writing a new test. ChromeDriv
 
 If you get the error `unknown error: cannot get automation extension`, follow the [chromedriver-helper instructions](https://github.com/flavorjones/chromedriver-helper#updating-to-latest-chromedriver) to upgrade to latest chromedriver.
 
+If you get the error `session not created: Chrome version must be between 71 and 75`, you may need a newer version of `chromedriver`. Download a version of chromedriver that matches your current version of Chrome [here]([url](https://chromedriver.chromium.org/downloads)), unzip it, and reference the file path of your new version of chromedriver [here](https://github.com/code-dot-org/code-dot-org/blob/d7b3ba84adf30ef2844c538e7206ca4bd3565ea9/dashboard/test/ui/utils/selenium_browser.rb#L9) as follows:
+
+`Selenium::WebDriver::Chrome.driver_path = [path to your chromedriver]`
+
 ### With remote browsers: Sauce Labs
 
 Running tests remotely on [Sauce Labs](https://saucelabs.com) lets you review results, view visual logs of test runs and even watch live video of your tests running on different browsers in real-time.
@@ -65,7 +69,7 @@ You can now watch your tests run at the [Sauce Labs dashboard](https://saucelabs
 
 Here are some example command line options. Run `./runner.rb --help` for a full list.
 
-Run all UI tests on all browsers against your local host (by default, tests point to staging.code.org). Takes some around 45 minutes to run depending on your setup. If you are testing browsers against your localhost other than Chrome, you need to setup SauceConnect - instructions are here https://wiki.saucelabs.com/display/DOCS/Setting+Up+Sauce+Connect.
+Run all UI tests on all browsers against your local host (by default, tests point to test.code.org). Takes some around 45 minutes to run depending on your setup. If you are testing browsers against your localhost other than Chrome, you need to setup SauceConnect - instructions are here https://wiki.saucelabs.com/display/DOCS/Setting+Up+Sauce+Connect.
 
 `./runner.rb -d localhost-studio.code.org:3000`
 Alternatively, `./runner.rb -d localhost-studio.code.org:3000 -n <some number>` will run "some number" of tests in parallel - it might be faster though too high a number will overwhelm your host. 5 seems to work well.

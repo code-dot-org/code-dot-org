@@ -14,6 +14,7 @@ import reducer, {
   setSections,
   selectSection,
   removeSection,
+  beginCreatingSection,
   beginEditingSection,
   editSectionProperties,
   cancelEditingSection,
@@ -57,6 +58,7 @@ const sections = [
     id: 11,
     location: '/v2/sections/11',
     name: 'My Section',
+    courseVersionName: 'csd-2017',
     login_type: 'picture',
     participant_type: 'student',
     grade: '2',
@@ -78,6 +80,7 @@ const sections = [
     id: 12,
     location: '/v2/sections/12',
     name: 'My Other Section',
+    courseVersionName: 'coursea-2017',
     login_type: 'picture',
     participant_type: 'student',
     grade: '11',
@@ -99,6 +102,7 @@ const sections = [
     id: 307,
     location: '/v2/sections/307',
     name: 'My Third Section',
+    courseVersionName: undefined,
     login_type: 'email',
     participant_type: 'student',
     grade: '10',
@@ -299,6 +303,66 @@ describe('teacherSectionsRedux', () => {
     });
   });
 
+  describe('beginCreatingSection', () => {
+    it('populates sectionBeingEdited if no course provided', () => {
+      assert.isNull(initialState.sectionBeingEdited);
+      const state = reducer(initialState, beginCreatingSection());
+      assert.deepEqual(state.sectionBeingEdited, {
+        id: PENDING_NEW_SECTION_ID,
+        name: '',
+        loginType: undefined,
+        grade: '',
+        participantType: undefined,
+        providerManaged: false,
+        lessonExtras: true,
+        ttsAutoplayEnabled: false,
+        pairingAllowed: true,
+        sharingDisabled: false,
+        studentCount: 0,
+        code: '',
+        courseId: null,
+        courseOfferingId: null,
+        courseVersionId: null,
+        unitId: null,
+        hidden: false,
+        isAssigned: undefined,
+        restrictSection: false
+      });
+    });
+
+    it('populates sectionBeingEdited with provided course', () => {
+      assert.isNull(initialState.sectionBeingEdited);
+      const courseOfferingId = 1;
+      const courseVersionId = 2;
+      const unitId = 3;
+      const state = reducer(
+        initialState,
+        beginCreatingSection(courseOfferingId, courseVersionId, unitId)
+      );
+      assert.deepEqual(state.sectionBeingEdited, {
+        id: PENDING_NEW_SECTION_ID,
+        name: '',
+        loginType: undefined,
+        grade: '',
+        participantType: undefined,
+        providerManaged: false,
+        lessonExtras: true,
+        ttsAutoplayEnabled: false,
+        pairingAllowed: true,
+        sharingDisabled: false,
+        studentCount: 0,
+        code: '',
+        courseId: null,
+        courseOfferingId: courseOfferingId,
+        courseVersionId: courseVersionId,
+        unitId: unitId,
+        hidden: false,
+        isAssigned: undefined,
+        restrictSection: false
+      });
+    });
+  });
+
   describe('beginEditingSection', () => {
     it('populates sectionBeingEdited if no section provided', () => {
       assert.isNull(initialState.sectionBeingEdited);
@@ -333,6 +397,7 @@ describe('teacherSectionsRedux', () => {
       assert.deepEqual(state.sectionBeingEdited, {
         id: 12,
         name: 'My Other Section',
+        courseVersionName: 'coursea-2017',
         loginType: 'picture',
         grade: '11',
         participantType: 'student',
@@ -648,6 +713,7 @@ describe('teacherSectionsRedux', () => {
         [13]: {
           id: 13,
           name: 'Aquarius PM Block 2',
+          courseVersionName: undefined,
           loginType: 'picture',
           grade: '3',
           participantType: 'student',
@@ -1587,6 +1653,7 @@ describe('teacherSectionsRedux', () => {
         {
           id: 11,
           name: 'My Section',
+          courseVersionName: 'csd-2017',
           loginType: 'picture',
           studentCount: 10,
           code: 'PMTKVH',
@@ -1600,6 +1667,7 @@ describe('teacherSectionsRedux', () => {
         {
           id: 12,
           name: 'My Other Section',
+          courseVersionName: 'coursea-2017',
           loginType: 'picture',
           studentCount: 1,
           code: 'DWGMFX',

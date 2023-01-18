@@ -489,10 +489,13 @@ module HttpCacheTest
         end
       end
 
-      it 'Strips cookies from dance levels' do
-        assert strips_session_specific_cookies_from_request? '/s/dance-2019/lessons/1/levels/1'
-        assert strips_session_specific_cookies_from_request? '/s/dance-2019/lessons/1/levels/5'
-        assert strips_session_specific_cookies_from_request? '/s/dance-2019/lessons/1/levels/10'
+      it 'Strips cookies from penultimate dance level' do
+        assert strips_session_specific_cookies_from_request? '/s/dance/lessons/1/levels/12'
+        assert strips_session_specific_cookies_from_request? '/s/dance-2019/lessons/1/levels/9'
+      end
+
+      it 'Does not strip cookies from the last dance level' do
+        refute strips_session_specific_cookies_from_request? '/s/dance-2019/lessons/1/levels/10'
       end
 
       it 'Does not strip cookies from poem art prediction levels' do

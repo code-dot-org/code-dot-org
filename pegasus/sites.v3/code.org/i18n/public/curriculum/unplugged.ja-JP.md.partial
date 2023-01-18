@@ -21,8 +21,9 @@ theme: responsive
 <div style="clear: both;"></div>
 
 ***
-## CSファンダメンタルズ2021～22年のアンプラグドレッスン
-次のレッスンは <a href="https://docs.google.com/document/d/19BIaGVliOZCciSDmuezFFUhhCjhrB2oXpVLn0cJAibc/preview" target="_blank">CS の基礎2021～22</a>にございます。 <br><br>
+## CSファンダメンタルズ2022～23年のアンプラグドレッスン
+
+<a href="https://docs.google.com/document/d/12j5IkeGEWeAmWnZY9krbNSo8oKOKT5nIQGUH5J7Si80/preview" target="_blank" rel="noopener noreferrer">CSファンダメンタルズ2022～23年では、次のような教訓を得ることができます</a>。 <br><br>
 
 <style>
 table, th, td {
@@ -31,7 +32,7 @@ table, th, td {
 }
 th, td {
   padding: 5px;
-  text-align: left;    
+  text-align: left;
 }
 #t01 {
   width: 10%;
@@ -60,73 +61,74 @@ th, td {
 </style>
 <table style="width:100%">
   <tr>
-    <th><center><big>
+    <th><center><big>Course</th>
+    <th><center><big>Lesson Plan</th>
+    <th width=10%><center><big>Concept</th>
+    <th width=20%><center><big>Video</th>
+     <tr>
+    <th rowspan="3" id="t01">Course A</th>
+    <td width=40%><a href="https://studio.code.org/s/coursea-2022/lessons/3">A.3 - Happy Maps</a><br><small>This unplugged lesson brings together teams with a simple task: get the "flurb" to the fruit. 学生は指示を提供される記号に変換する作業を行いながら正確な指示を書く練習をします。 If problems arise in the code, students should also work together to recognize bugs and build solutions.</td><td>Sequencing</td> <td>{{ curriculum/unplugged/coursea_one_video_thumbnail }}</td>
+  </tr>
+  <tr>
+    <td width=40%><a href="https://studio.code.org/s/coursea-2022/lessons/7">A.7 - Happy Loops</a><br><small>This activity revisits Happy Maps. This time, student will be solving bigger, longer puzzles with their code, leading them to see utility in structures that let them write longer code in an easier way.</td><td>Loops</td> <td><img src="/images/a7.png" width="90%"></td>
+  <tr>
+    <td width=40%><a href="https://studio.code.org/s/coursea-2022/lessons/11">A.11 - The Big Event Jr.</a><br><small>Events are a great way to add variety to a pre-written algorithm. 時々ユーザーが望む際は、自分のプログラムが ユーザーに正確に応答することができることを望みます。 That is what events are for.</td><td>Events</td> <td>{{ curriculum/unplugged/coursea_three_video_thumbnail }}</td>
+  </tr>
+       <tr>
+    <th rowspan="3" id="t02">Course B</th>
+    <td><a href="https://studio.code.org/s/courseb-2022/lessons/2">B.2 - Move It, Move It</a><br><small>This lesson will work to prepare students mentally for the coding exercises that they will encounter over the length of this course. In small teams, students will use physical activity to program their classmates to step carefully from place to place until a goal is achieved.</td><td>Sequencing</td> <td>{{ curriculum/unplugged/courseb_one_video_thumbnail }}</td>
+  </tr>
+  <tr>
+    <td><a href="https://studio.code.org/s/courseb-2022/lessons/6">B.6 - Getting Loopy</a><br><small>As we start to write longer and more interesting programs, our code often contains a lot of repetition. In this lesson, students will learn about how loops can be used to more easily communicate instructions that have a lot of repetition by looking at the repeated patterns of movement in a dance.</td><td>Loops</td> <td>{{ curriculum/unplugged/courseb_two_video_thumbnail }}</td>
+  <tr>
+    <td><a href="https://studio.code.org/s/courseb-2022/lessons/10">B.10 - The Right App</a><br><small>This lesson has students recognize that computer science can help people in real life. まず、学生はいくつかの架空のスマートフォンユーザーにより彼らのニーズに対処する「適切なアプリ」を見つける手助けをすることを強調します。 Then, students exercise empathy and creativity to sketch their own smartphone app that addresses the needs of one additional user.</td><td>Impacts of Computing</td> <td><img src="/images/b10.png" width="90%"></td>
+  </tr>
+       <tr>
+    <th rowspan="4" id="t03">Course C</th>
+    <td><a href="https://studio.code.org/s/coursec-2022/lessons/2">C.2 - My Robotic Friends Jr.</a><br><i>*Supplies: Plastic cups (10/group of 2-3)</i><br><small>Using a set of symbols in place of code, students will design algorithms to instruct a "robot" to stack cups in different patterns. 学生は 順番にロボットとして参加し、同級生により定義されたアルゴリズムのみに応答をします。 This segment teaches students the connection between symbols and actions, the difference between an algorithm and a program, and the valuable skill of debugging.</td><td>Sequencing</td><td>{{ curriculum/unplugged/coursec_one_video_thumbnail }}</td>
+  </tr>
+  <tr>
+   <td><a href="https://studio.code.org/s/coursec-2022/lessons/7">C.7 - My Loopy Robotic Friend Jr</a><br><i>*Supplies: Paper cups (20/group of 4)</i><br><small>Overview
+Building on the initial "My Robotic Friends" activity, students tackle larger and more complicated designs. In order to program their "robots" to complete these bigger designs, students will need to identify repeated patterns in their instructions that could be replaced with a loop.</td><td>Loops</td><td>{{ curriculum/unplugged/coursec_three_video_thumbnail }}</td>
+  </tr>
+      <tr>
+   <td><a href="https://studio.code.org/s/coursec-2022/lessons/11">C.11 - The Big Event</a><br><small>Students will soon learn that events are a great way to add flexibility to a pre-written algorithm. 時々ユーザーが望む際は、自分のプログラムが ユーザーに正確に応答することができることを望みます。 Events can make your program more interesting and interactive.</td><td>Events</td><td>{{ curriculum/unplugged/coursec_four_video_thumbnail }}</td>
+   </tr>
+       </tr>
+     <td><a href="https://studio.code.org/s/coursec-2022/lessons/15">C.15 - Binary Bracelets</a><br><i>*Supplies: Markers. オプション – 18黒/18白のビーズ、パイプクリーナー 1人の学生につき1本</i><br><small>バイナリーはコンピューターの世界では極めて重要です。 バイナリーはコンピューターの世界では極めて重要です。 This lesson helps demonstrate how it is possible to take something from real life and translate it into a series of ons and offs.</td><td>Binary</td><td>{{ curriculum/unplugged/coursec_two_video_thumbnail }}</td>
+  </tr>
+         <tr>
+    <th rowspan="3" id="t04">Course D</th>
+    <td><a href="https://studio.code.org/s/coursed-2022/lessons/2">D.2 - Graph Paper Programming<br></a><small>By "programming" one another to draw pictures, students get an opportunity to experience some of the core concepts of programming in a fun and accessible way. このクラスは既存の絵を複写するために学生に記号を使用させて、それぞれにグラフペーパーの四角形に色を塗るよう指示することにより始めます。 If there’s time, the lesson can conclude with images that the students create themselves.</td><td>Sequencing</td><td>{{ curriculum/unplugged/coursed_one_video_thumbnail }}</td>
+  </tr>
+  <tr>
+    <td><a href="https://studio.code.org/s/coursed-2022/lessons/4">D.4 - Relay Programming<br></a><small>This activity will begin with a short lesson on debugging and persistence, then will quickly move to a race against the clock as students break into teams and work together to write a program one instruction at a time.</td><td>Sequencing</td><td>{{ curriculum/unplugged/coursed_two_video_thumbnail }}</td>
+      </tr>
+  <tr>
+    <td><a href="https://studio.code.org/s/coursed-2022/lessons/12">D.12 - Conditionals with Cards</a><br><small>This lesson demonstrates how conditionals can be used to tailor a program to specific information. 私たちはいつもプログラムを書くときに必要な 全ての情報を持っているわけではありません。 あなたがコードを実行する際、どのような状況が 正しいかどうかを知らなくても、もうひとつの異なることをやりたくなる場合があります。 これが IF 文が使われるところです。 条件付きでは、コードが実行されたときにいつでも当てはまる情報に基づいて、コンピュータが判断できます。+</td><td>条件付き</td><td>{{ curriculum/unplugged/coursed_three_video_thumbnail }}</td>
 
-
-
-
-
-コース</th>    <th><center><big>レッスンプラン</th>     <th width=10%><center><big>コンセプト</th>    <th width=20%><center><big>動画</th>     <tr>    <th rowspan="3" id="t01">コース A</th>    <td width=40%><a href="https://studio.code.org/s/coursea-2021/lessons/3">A.3 - ハッピーマップ</a><br><small>このアンプラグドレッスンはチームをシンプルなタスクと合わせます：「フラーブ」を成果に換えましょう。 学生は指示を提供される記号に変換する作業を行いながら正確な指示を書く練習をします。 
-
-
-コードに問題が起こる場合、学生は共に作業を行ってバグを認識しソリューションを構築してください。</td><td>シークエンシング</td> <td>{{ curriculum/unplugged/coursea_one_video_thumbnail }}</td>  </tr>  <tr>    <td width=40%><a href="https://studio.code.org/s/coursea-2021/lessons/7">A.7 - Happy Loops</a><br><small>このアクティビティはハッピーマップに再び移動します。 
-
-今回学生はコードを使用してより大きくより長いパズルを解き、より簡単な方法でより長いコードを書く構造 内のユーティリティを 見ることに導きます。</td><td>ループ</td> <td><img src="/images/a7.png" width="90%"></td>  <tr>    <td width=40%><a href="https://studio.code.org/s/coursea-2021/lessons/11">A.11 - ビッグイベント Jr.</a><br><small>イベントは 事前に書かれたアルゴリズムに 多様性を加える素晴らしい方法です。 時々ユーザーが望む際は、自分のプログラムが ユーザーに正確に応答することができることを望みます。 
-
-
-
-これがイベントの目的です。</td><td>イベント</td> <td>{{ curriculum/unplugged/coursea_three_video_thumbnail }}</td>  </tr>       <tr>    <th rowspan="3" id="t02">コース B</th>    <td><a href="https://studio.code.org/s/courseb-2021/lessons/2">B.2 - それを動かす、それを動かす</a><br><small>このレッスンは学生が本コースの課程の中で遭遇するコーディングのために精神的に準備をする作業を行います。 
-
-
-小さなチームで 学生は物理的なアクティビティを使用してクラスメイトが ゴールにたどり着くまで、ある場所から他の場所へ 注意深く歩くことをプログラムします。</td><td>シークエンシング</td> <td>{{ curriculum/unplugged/courseb_one_video_thumbnail }}</td>  </tr>  <tr>    <td><a href="https://studio.code.org/s/courseb-2021/lessons/6">B.6 - 繰り返しになる</a><br><small>私たちがより長くさらに面白いプログラムを書き始めるにつれ、私たちの行動はしばしば多くの繰り返しを含みます。 
-
-このレッスンで学生はダンスの中の動きの繰り返されるパターンを見ることにより、ループがどのように使用されるかを学びます。</td><td>Loops</td> <td>{{ curriculum/unplugged/courseb_two_video_thumbnail }}</td>  <tr>    <td><a href="https://studio.code.org/s/courseb-2021/lessons/10">B.10 - 適切なアプリ</a><br><small>このレッスンは学生にコンピューターサイエンスは世界の人々を助けることができると認識させます。 まず、学生はいくつかの架空のスマートフォンユーザーにより彼らのニーズに対処する「適切なアプリ」を見つける手助けをすることを強調します。 
-
-
-
-その後学生は共感と創造性を行使して一つの追加のユーザーのニーズに対処する自身のスマートフォンアプリをスケッチします。</td><td>コンピューティングの影響</td> <td><img src="/images/b10.png" width="90%"></td>  </tr>       <tr>    <th rowspan="4" id="t03">コース C</th>    <td><a href="https://studio.code.org/s/coursec-2021/lessons/2">C.2 - 私のロボットの友達Jr.</a><br><i>*供給物: プラスチックカップ (10/2～3人のグループ)</i><br><small>コード内に一組の記号を使用して学生はアルゴリズムをデザインし、ロボットが 異なるパターンでカップを積み重ねるように指示します。 学生は 順番にロボットとして参加し、同級生により定義されたアルゴリズムのみに応答をします。 
-
-
-
-このセグメントは学生に 記号およびアクションの間のつながり、アルゴリズムとプログラムの間の違い、およびデバギングの価値のあるスキルを教えます。</td><td>シークエンシング</td><td>{{ curriculum/unplugged/coursec_one_video_thumbnail }}</td>  </tr>   <tr>   <td><a href="https://studio.code.org/s/coursec-2021/lessons/7">C.7 - 私の繰り返すロボットの友達Jr</a><br><i>*供給品: 紙コップ (20/4人グループ)</i><br><small>概要最初の 「私のロボットの友達」アクティビティを構築して学生はより大きくさらに複雑なデザインに取り組みます。  
-
-
-ロボットが これらのより大きなデザインを完了するプログラムを書くために、学生は ループと代替することができる指示で繰り返しのパターンを識別する必要があります。 </td><td>ループ</td><td>{{ curriculum/unplugged/coursec_three_video_thumbnail }}</td>  </tr>       <tr>   <td><a href="https://studio.code.org/s/coursec-2021/lessons/11">C.11 - 大きなイベント</a><br><small>学生はイベントが 事前に書かれたアルゴリズムに柔軟性を追加するための素晴らしい方法であることをすぐに学びます。 時々ユーザーが望む際は、自分のプログラムが ユーザーに正確に応答することができることを望みます。 
-
-
-イベントはあなたのプログラムをさらに面白くインターアクティブにできます。 </td><td>Events</td><td>{{ curriculum/unplugged/coursec_four_video_thumbnail }}</td>   </tr>        </tr>      <td><a href="https://studio.code.org/s/coursec-2021/lessons/15">C.15 - バイナリーブレスレット</a><br><i>*供給物: マーカー。 オプション – 18黒/18白のビーズ、パイプクリーナー 1人の学生につき1本</i><br><small>バイナリーはコンピューターの世界では極めて重要です。 バイナリーはコンピューターの世界では極めて重要です。 
-
-
-
-このレッスンはそれが実生活からどのように取り込み、一連のオンおよび オフに変換するかを 実証するのに役立ちます。 </td><td>Binary</td><td>{{ curriculum/unplugged/coursec_two_video_thumbnail }}</td>  </tr>         <tr>    <th rowspan="3" id="t04">Course D</th>    <td><a href="https://studio.code.org/s/coursed-2021/lessons/2">D.2 - グラフペーパープログラミング <br></a><small>もう一つを「プログラミング」して絵を書くため、学生は 楽しくアクセス可能な方法でプログラミングの中枢コンセプトの一部を体験する機会を得ます。 このクラスは既存の絵を複写するために学生に記号を使用させて、それぞれにグラフペーパーの四角形に色を塗るよう指示することにより始めます。 
-
-
-
-
-
-時間がある場合はこのレッスンは学生が自身で作成した 画像で締めくくります。</td><td>シークエンシング</td><td>{{ curriculum/unplugged/coursed_one_video_thumbnail }}</td>  </tr>  <tr>    <td><a href="https://studio.code.org/s/coursed-2021/lessons/4">D.4 - リレープログラミング<br></a><small>このアクティビティは デバギングおよび 持続性に関する短いレッスンで始め、その後素早く 学生をチーム分けし一度に一つの 指示 を出すプログラムを 書くために共同作業します。</td><td>シークエンシング</td><td>{{ curriculum/unplugged/coursed_two_video_thumbnail }}</td>      </tr>  <tr>    <td><a href="https://studio.code.org/s/coursed-2021/lessons/12">D.12 - カードによる IF 文</a><br><small>このレッスンは IF 文がプログラムが具体的な情報を仕立てるためにどのように使用されるかを実践します。 私たちはいつもプログラムを書くときに必要な 全ての情報を持っているわけではありません。 あなたがコードを実行する際、どのような状況が 正しいかどうかを知らなくても、もうひとつの異なることをやりたくなる場合があります。 これが IF 文が使われるところです。 
-
-
-
-
-IF 文によりコンピューターは あなたのコードが実行されている時にいつでも正しい情報に基づいて 意思決定をできるようになります。+</td><td>IF 文</td><td>{{ curriculum/unplugged/coursed_three_video_thumbnail }}</td>    </tr>         <tr>    <th rowspan="3" id="t05">Course E</th>    <td><a href="https://studio.code.org/s/coursee-2021/lessons/7">E.7 - デジタルシェアリング</a><br><i>*供給物: スマートフォンまたはタブレット</i><br><small>著作権および創造性によりチームによりコンピューターサイエンスファンダメンタルズに貸し出され、このレッスンは学生が 特にデジタルの環境で所有権および著作権を尊重することの課題および恩恵を理解する手助けをするために存在します。 
-
-
-学生はアーティストの権利を倫理的なデジタルシチズンであることの重要な部分として尊重することが奨励されます。</td><td>デジタルシチズン</td><td>{{ curriculum/unplugged/coursee_one_video_thumbnail }}</td>  </tr>  <tr>    <td><a href="https://studio.code.org/s/coursee-2021/lessons/11">E.11 - ソングライティング</a><br><small>この機能においてコンピューターサイエンスの最も重大な構造の一つ。 関数（時々 手順とも呼ばれる）はあなたのより大きなプログラムの中で何度も繰り返し使用できるミニプログラムです。 
-
-
-
-
-
-
-このレッスンは学生が一塊のコードを関数と組み合わせることが なぜそのように役立つのかを直感的に理解する手助けをします。</td><td>関数</td><td>{{ curriculum/unplugged/coursee_two_video_thumbnail }}</td>  <tr>    <td><a href="https://studio.code.org/s/coursee-2021/lessons/17">E.17 - アクセシビリティのためのデザイン</a><br><small>このレッスンで学生はブレインストーミングおよび仮設のアプリ向けのアクセス可能なソリューションをデザインすることによりアクセシビリティおよび共感の価値を学びます。</td><td>コンピューティングの影響</td><td><img src="/images/e18.png" width="90%"></td>  </tr>    </tr>         <tr>    <th rowspan="3" id="t06">Course F</th>           <td><a href= "https://studio.code.org/s/coursef-2021/lessons/6">F.6 -ブラックスペースストーリー</a><br><i>*共有物 : 封筒6枚 （または適切： 二つ折りにされた紙または 索引カード ） 学生はコンピューターがどのように ユーザーから入力を取り込んで 保存し、プログラムを実行するにつれ後で使用するかを理解するための脈絡として 穴埋めのストーリー （ Mad Libs® に似ている） を使用します。
-   
-
-
-</td><td>変数</td><td>{{ curriculum/unplugged/coursef_one_video_thumbnail }}</td>    </tr>        <tr>    <td><a href="https://studio.code.org/s/coursef-2021/lessons/13">F.13 - For Loop Fun</a><br><i>*供給物: サイコロ (3 個/2～4人のグループ)</i><br><small>私たちはループにより物事を繰り返し行えることを知っていますが、 私たちは内蔵された追加の構造を持つループをどのように使用するかを学びます。 
-
-
-これらの新しい構造により学生はさらに力強くダイナミックなコードを作成できます。</td><td>For ループ</td><td>{{ curriculum/unplugged/coursef_three_video_thumbnail }}</td>  </tr>  <tr>    <td><a href="https://studio.code.org/s/coursef-2021/lessons/19">F.19 - The Internet</a><br><small>多くの人々はインターネットを毎日使用しますがそれがどのように機能するかを知っている人は多くありません。 
+</tr>
+<tr>
+<th rowspan="3" id="t05">コースE</th>
+<td><a href="https://studio.code.org/s/coursee-2022/lessons/9">E.9 - 
+作詞</a><br><small>コンピューター科学の世界で最も壮大な構造の一つは機能です。 関数（時々 手順とも呼ばれる）はあなたのより大きなプログラムの中で何度も繰り返し使用できるミニプログラムです。 このレッスンは、コードの塊を関数に結合することがなぜこのように役立つのかを直感的に理解するのに役立ちます。</td><td>機能</td><td>{{ curriculum/unplugged/coursee_two_video_thumbnail }}</td>
+</tr>
+<tr>
+<td><a href="https://studio.code.org/s/coursee-2022/lessons/15">E.15 - アクセシビリティのための設計</a><br><small>このレッスンでは、ブレインストーミングと仮想アプリのアクセシビリティソリューションの設計を通じて、アクセシビリティと共感の価値について学習します。</td><td>コンピューティングの影響</td><td><img src="/images/e18.png" width="90%"></td>
+<tr>
+<td><a href="https://studio.code.org/s/coursee-2022/lessons/16">E.16 - デジタル共有</a><br><i>*付属品：スマートフォンまたはタブレット</i><br><small>著作権と創造性のチームによってコンピュータサイエンスの基礎に貸し出されたこのレッスンは、特にデジタル環境における所有権と著作権を尊重することの課題と利点を学生が理解できるようにするために存在します。 学生は、倫理的デジタル市民としての重要な部分としてアーティストの権利を尊重するよう奨励されるべきです。</td><td>デジタル市民権</td><td>{{ curriculum/unplugged/coursee_one_video_thumbnail }}</td>
+</tr>
+</tr>
+<tr>
+<th rowspan="3" id="t06">コースF</th>
+<td><a href= "https://studio.code.org/s/coursef-2022/lessons/6">F.6 -ブランクスペースの記事</a><br><i>*付属品：封筒（用紙またはインデックスカード、半分に折りたたむことも可能）</i><br><small>学生は、ユーザーからの入力をコンピュータがどのように取り込み、保存するかを理解するためのコンテキストとして、空欄のストーリー(MadLibs®と同じ)を使用し、後でプログラムが実行されるときに使用します。
+   </td><td>Variables</td><td>{{ curriculum/unplugged/coursef_one_video_thumbnail }}</td>
+  </tr>
+        <tr>
+    <td><a href="https://studio.code.org/s/coursef-2021/lessons/13">F.13 - For Loop Fun</a><br><i>*Supplies: Dice (3 dice/group of 2-4)</i><br><small>We know that loops allow us to do things over and over again, but now we’re going to learn how to use loops that have extra structures built right in. これらの新しい構造により学生はさらに力強くダイナミックなコードを作成できます。</td><td>ループの場合</td><td>{{ curriculum/unplugged/coursef_three_video_thumbnail }}</td>
+</tr>
+<tr>
+<td><a href="https://studio.code.org/s/coursef-2022/lessons/15">F.15 - インターネット</a><br><small>多くの人々はインターネットを毎日使用しますがそれがどのように機能するかを知っている人は多くありません。 
 このレッスンで、学生はインターネットを通して流れるふりをし、その間接続、URL、IP アドレスおよび DNS について学びます。</td><td>Data</td><td>{{ curriculum/unplugged/coursef_two_video_thumbnail }}</td>  </tr>
 </table>
 
@@ -149,7 +151,7 @@ table, th, td {
 }
 th, td {
   padding: 5px;
-  text-align: left;    
+  text-align: left;
 }
 #t07 {
   width: 10%;
@@ -162,17 +164,17 @@ th, td {
     <th><center><big>
 
 コンセプト</th>    <th width=65%><center><big>Lesson Plan <br><small> レッスンプランには追加のリソースが含まれます (スライド、動画、アンサーキーなど)。
-
-
-
-
-
-
-
-
-
-
-</th>     <th><center><big>リソース</th>     <tr>    <th rowspan="2" id=t07 width=5%>デジタルシチズンシップ</th>    <td><a href="https://curriculum.code.org/csf-19/coursef/18">Crowdsourcing</a></td> <td>{{ curriculum/unplugged/archive_one_video_thumbnail }}</td>  </tr>  <tr>      <td colspan="2">*常識教育には多くのアンプラグドアクティビティを含む <a href="https://www.commonsense.org/education/digital-citizenship/curriculum">完全なデジタルプログラム</a> を含んでいます。</td>    <tr>    <th id=t07>バイナリー</th>        <td><a href="https://curriculum.code.org/csf-20/coursed/16/">バイナリー画像 </a><br><small>*供給品:オプション - 学生に表示する逆の項目のグループ分け。 多くの人々はバイナリーは厳密にお0と1であると思っていますが、学生はアイデアを情報が様々なバイナリーオプションで表示できることが導入されます。 
+</th>
+    <th><center><big>Resources</th>
+     <tr>
+    <th rowspan="2" id=t07 width=5%>Digital Citizenship</th>
+    <td><a href="https://curriculum.code.org/csf-19/coursef/18">Crowdsourcing</a></td> <td>{{ curriculum/unplugged/archive_one_video_thumbnail }}</td>
+  </tr>
+  <tr>
+      <td colspan="2">*Common Sense Education has a <a href="https://www.commonsense.org/education/digital-citizenship/curriculum">full Digital Citizenship Curriculum</a> that includes many unplugged activities.</td>
+    <tr>
+    <th id=t07>Binary</th>
+        <td><a href="https://curriculum.code.org/csf-20/coursed/16/">Binary Images </a><br><small>*Supplies:Optional - Groupings of opposite items to display to students. 多くの人々はバイナリーは厳密にお0と1であると思っていますが、学生はアイデアを情報が様々なバイナリーオプションで表示できることが導入されます。 
 
 
 

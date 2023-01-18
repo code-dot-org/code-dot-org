@@ -107,10 +107,7 @@ use_my_apps: true
 
 
 # Specify `use_mailcatcher: true` if you are running mailcatcher on localhost.
-# You should have also run this once:
-#   `gem install mailcatcher`
-# And this each time you need to start mailcatcher in the background again:
-#   `mailcatcher --ip=0.0.0.0`
+# See development.rb file for information about how to use mailcatcher.
 #use_mailcatcher: true
 
 
@@ -124,3 +121,10 @@ use_my_apps: true
 # imm_reader_client_id:     ''
 # imm_reader_client_secret: ''
 # imm_reader_subdomain:     'cdo-immersive-reader-staging'
+
+# Local Javabuilder configuration. Set 'use_localhost_javabuilder: true' to point to
+# your Javabuilder WebSocket server running on localhost.
+# Set 'local_javabuilder_stack_name: "your stack name"' to point to a deployed development
+# instance of Javabuilder. This will likely be 'javabuilder-dev-<your_branch_name>'
+# use_localhost_javabuilder: true
+# local_javabuilder_stack_name: javabuilder-dev-<your_branch_name>

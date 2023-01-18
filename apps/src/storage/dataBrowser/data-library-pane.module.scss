@@ -1,0 +1,18 @@
+@import "color.scss";
+
+.container {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 270px;
+  box-sizing: border-box;
+  border-right: 1px solid gray;
+  overflow-y: auto;
+  padding: 10px;
+}
+
+.divider {
+  border-color: $light_gray;
+  margin: 5px 0 10px 0;
+}

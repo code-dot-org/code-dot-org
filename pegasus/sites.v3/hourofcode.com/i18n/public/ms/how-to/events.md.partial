@@ -37,23 +37,17 @@ Kongsikan gambar acara anda di dalam Facebook dan Twitter, serta gunakan tanda p
 
 * * *
 
-## Menganjurkan acara Malam Kod Keluarga dengan Hour of Code dan menjemput ibu bapa untuk menyertainya
+## Example plan for a school assembly or event
 
-Mempertimbang untuk menganjurkan acara K-5 pada waktu malam dan menjemput ibu bapa menyertai pelajar mereka untuk sains komputer selama sejam. Ini ialah cara yang sangat baik untuk menarik minat komuniti yang lebih besar dan menggalakkan sokongan ibu bapa untuk sains komputer di sekolah anda. Rakan kongsi kita di majlis Malam Kod Keluarga telah mencipta kit acara semua dalam satu dengan senarai semak perancangan, skrip penyampai ucapan, e-mel jemputan, poster, slaid powerpoint dan banyak lagi untuk menjalankan acara anda sendiri. [Klik di sini untuk memuat turun Kit Acara](http://www.familycodenight.org/DownloadCodeDotOrg.html).
+**Event:** School-wide Computer Science Education Week kick-off assembly
 
-* * *
+**Date:** {{ campaign_date/start_short }} (start of Computer Science Education Week)
 
-## Contoh rancangan untuk perhimpunan atau acara sekolah
+**Time:** During the school day. Mid-morning event preferred. Approximately 1 hour.
 
-**Acara:** Perhimpunan pelancaran Minggu Pendidikan Sains Komputer Seluruh Sekolah
+**Location:** School assembly hall (e.g. theater, gym, cafeteria)
 
-**Tarikh:** {{ campaign_date/start_short }} (bermula Minggu Pendidikan Sains Komputer)
-
-**Masa:** Semasa hari persekolahan. Acara pertengahan pagi lebih diutamakan. Kira-kira 1 jam.
-
-**Lokasi:** Dewan perhimpunan sekolah (misalnya teater, gimnasium, kafeteria)
-
-## Jadual Acara
+## Run of Show
 
 | Masa             | Tindakan                                                                                                                                                |
 | ---------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------- |
