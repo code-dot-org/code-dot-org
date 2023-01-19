@@ -70,7 +70,7 @@ cron:
 - dashboard.census_summaries
 - dashboard.ib_school_codes
 - dashboard.ap_school_codes
-- dashboard.census_submissions
+- dashboard.census_submissions:
     remove_column:
     - submitter_email_address
     - submitter_name
