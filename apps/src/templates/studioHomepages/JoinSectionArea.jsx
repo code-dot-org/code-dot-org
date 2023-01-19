@@ -58,7 +58,9 @@ export default function JoinSectionArea({
         sectionCapacity={sectionResults.sectionCapacity}
       />
       <JoinSection
-        enrolledInASection={true}
+        enrolledInASection={
+          joinedStudentSections?.length > 0 || joinedPlSections?.length > 0
+        }
         updateSections={updateSections}
         updateSectionsResult={updateSectionsResult}
         isTeacher={isTeacher}

@@ -6,8 +6,6 @@ import color from '../util/color';
 import PropTypes from 'prop-types';
 import Radium from 'radium'; // eslint-disable-line no-restricted-imports
 
-import moduleStyles from './content-container.module.scss';
-
 // ContentContainer provides a full-width container which will render whatever
 // children are passed to it. The component is useful for creating clear,
 // sub-sections on a page because it was built to reuse the styling and
@@ -15,7 +13,6 @@ import moduleStyles from './content-container.module.scss';
 // example of its use on studio.code.org/home.
 
 const contentWidth = styleConstants['content-width'];
-const linkBoxLineHeight = '26 px';
 
 class ContentContainer extends Component {
   static propTypes = {
@@ -51,13 +48,10 @@ class ContentContainer extends Component {
     return (
       <div style={[boxStyles, bottomMargin]}>
         {(heading || (link && linkText)) && (
-          <div
-            className={moduleStyles.contentContainerHeading}
-            style={styles.headingBox}
-          >
-            <h4 style={isRtl ? styles.headingTextRtl : styles.headingText}>
+          <div style={styles.headingBox}>
+            <div style={isRtl ? styles.headingTextRtl : styles.headingText}>
               {heading}
-            </h4>
+            </div>
             {showLinkTop && (
               <Link link={link} linkText={linkText} isRtl={isRtl} />
             )}
@@ -100,7 +94,7 @@ class Link extends Component {
 
     return (
       <div style={linkBoxStyle}>
-        <a style={styles.linkTag} href={link}>
+        <a href={link}>
           <span style={{display: 'inline-block'}}>
             {isRtl && <FontAwesome icon={icon} style={styles.chevronRtl} />}
           </span>
@@ -127,21 +121,24 @@ const styles = {
   headingBox: {
     paddingRight: 10,
     paddingTop: 10,
+    paddingBottom: 20,
     overflow: 'hidden',
     zIndex: 2,
     position: 'relative'
   },
   headingText: {
+    fontFamily: 'Gotham 4r',
     fontSize: 24,
     lineHeight: '26px',
-    color: color.neutral_dark,
+    color: color.charcoal,
     float: 'left',
     paddingRight: 20
   },
   headingTextRtl: {
+    fontFamily: 'Gotham 4r',
     fontSize: 24,
     lineHeight: '26px',
-    color: color.neutral_dark,
+    color: color.charcoal,
     float: 'right',
     paddingLeft: 20
   },
@@ -154,8 +151,7 @@ const styles = {
     display: 'inline',
     position: 'absolute',
     bottom: 20,
-    right: 0,
-    lineHeight: linkBoxLineHeight
+    right: 0
   },
   linkBoxRtl: {
     display: 'inline',
@@ -163,8 +159,7 @@ const styles = {
     paddingLeft: 10,
     position: 'absolute',
     bottom: 20,
-    left: 0,
-    lineHeight: linkBoxLineHeight
+    left: 0
   },
   linkBoxBottom: {
     display: 'inline',
@@ -179,30 +174,29 @@ const styles = {
     lineHeight: '22px',
     fontFamily: 'Gotham 4r',
     zIndex: 2,
-    color: color.neutral_dark,
+    color: color.charcoal,
     width: '100%',
     marginTop: -10,
     marginBottom: 10,
     clear: 'both'
   },
-  linkTag: {
-    textDecoration: 'none'
-  },
   linkToViewAll: {
+    color: color.teal,
     fontSize: 14,
-    fontFamily: `'Gotham 5r', sans-serif`,
+    fontFamily: 'Gotham 4r',
     marginTop: -2,
     display: 'inline'
   },
   chevron: {
     display: 'inline',
+    color: color.teal,
     fontSize: 10,
     fontWeight: 'bold',
     marginLeft: 15
   },
   chevronRtl: {
     display: 'inline',
-    color: color.neutral_dark,
+    color: color.teal,
     fontSize: 10,
     fontWeight: 'bold',
     marginRight: 15
