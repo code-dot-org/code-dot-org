@@ -62,7 +62,9 @@ module.exports = function(testCollection, testData, dataItem, done) {
   // Validate successful solution.
   var validateResult = async function(report) {
     try {
-      console.log(`in validateResult ${new Date()}`);
+      console.log(
+        `in validateResult ${new Date()} for '${testData.description}'`
+      );
       assert(testData.expected, 'Have expectations');
       var expected;
       if (Array.isArray(testData.expected)) {
@@ -89,13 +91,21 @@ module.exports = function(testCollection, testData, dataItem, done) {
         // Increase the timer below if things start failing here.
         await new Promise(resolve =>
           setTimeout(() => {
-            console.log(`in validateResult setTimeout ${new Date()}`);
+            console.log(
+              `in validateResult setTimeout ${new Date()} for '${
+                testData.description
+              }'`
+            );
             assert(testData.customValidator(assert), 'Custom validator failed');
             resolve();
-          }, 500)
+          }, 2500)
         );
       }
-      console.log(`in validateResult after customValidator ${new Date()}`);
+      console.log(
+        `in validateResult after customValidator ${new Date()} for '${
+          testData.description
+        }'`
+      );
 
       // Notify the app that the report operation is complete
       // (important to do this asynchronously to simulate a service call or else
@@ -107,7 +117,9 @@ module.exports = function(testCollection, testData, dataItem, done) {
     } catch (e) {
       done(e);
     }
-    console.log(`end of validateResult ${new Date()}`);
+    console.log(
+      `end of validateResult ${new Date()} for '${testData.description}'`
+    );
   };
 
   runLevel(app, skinId, level, validateResult, finished, testData);
