@@ -134,7 +134,6 @@ export const EVENTS = {
   SIGN_UP_FINISHED_EVENT: 'Sign Up Finished',
 
   // Course/Unit info
-  LOGIN_TYPE_SELECTED_EVENT: 'Login Type Selected',
   COURSE_OVERVIEW_PAGE_VISITED_EVENT: 'Course Overview Page Visited',
   UNIT_OVERVIEW_PAGE_VISITED_EVENT: 'Unit Overview Page Visited',
   TRY_NOW_BUTTON_CLICK_EVENT: 'Try Now Button Clicked',

@@ -14,8 +14,9 @@ import LoginTypeCard from './LoginTypeCard';
 import Button from '../Button';
 import {OAuthSectionTypes} from '@cdo/apps/lib/ui/accounts/constants';
 import styleConstants from '../../styleConstants';
-import {analyticsReporter, EVENTS} from '@cdo/apps/lib/util/AnalyticsReporter';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 
+const LOGIN_TYPE_SELECTED_EVENT = 'Login Type Selected';
 const CANCELLED_EVENT = 'Section Setup Cancelled';
 const SELECT_LOGIN_TYPE = 'Login Type Selection';
 
@@ -36,7 +37,7 @@ class LoginTypePicker extends Component {
   };
 
   reportLoginTypeSelection = provider => {
-    analyticsReporter.sendEvent(EVENTS.LOGIN_TYPE_SELECTED_EVENT, {
+    analyticsReporter.sendEvent(LOGIN_TYPE_SELECTED_EVENT, {
       loginType: provider
     });
   };
