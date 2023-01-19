@@ -2,6 +2,7 @@ require 'cdo/firehose'
 require 'cdo/honeybadger'
 
 class RegistrationsController < Devise::RegistrationsController
+  include User::GenderExperimentHelper
   respond_to :json
   prepend_before_action :authenticate_scope!, only: [
     :edit, :update, :destroy, :upgrade, :set_email, :set_user_type,
@@ -101,7 +102,7 @@ class RegistrationsController < Devise::RegistrationsController
   #
   def create
     gender = params[:user][:gender]
-    gender_input_type = params[:user][:gender_input_type]
+    gender_input_type = gender_input_type?(request, session.id.to_s)
     SignUpTracking.log_gender_input_type(session, gender, gender_input_type, request.locale)
 
     Retryable.retryable on: [Mysql2::Error, ActiveRecord::RecordNotUnique], matching: /Duplicate entry/ do |retries, exception|

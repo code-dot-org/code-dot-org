@@ -137,8 +137,7 @@ class User < ApplicationRecord
     :share_teacher_email_reg_partner_opt_in_radio_choice,
     :data_transfer_agreement_required,
     :raw_token,
-    :child_users,
-    :gender_input_type
+    :child_users
   )
 
   # Include default devise modules. Others available are:
@@ -246,7 +245,7 @@ class User < ApplicationRecord
 
   before_destroy :soft_delete_channels
 
-  before_validation on: :create, if: -> {gender_input_type.present?} do
+  before_validation on: :create, if: -> {gender.present?} do
     self.gender = Policies::Gender.normalize gender
   end
 

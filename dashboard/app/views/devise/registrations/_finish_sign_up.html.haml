@@ -97,9 +97,8 @@
       .span5
         = f.select :age, age_options, include_blank: true
 
-    - if ask_gender?(request)
+    - if ask_gender?(request, session.id.to_s)
       - gender_input_type = gender_input_type?(request, session.id.to_s)
-      = f.hidden_field :gender_input_type, value: gender_input_type
       .row#gender-dropdown{style: "display: none;"}
         .span3.signup-field-label
           = f.label :gender, t('signup_form.gender')
