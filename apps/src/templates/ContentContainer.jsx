@@ -16,6 +16,7 @@ import moduleStyles from './content-container.module.scss';
 // example of its use on studio.code.org/home.
 
 const contentWidth = styleConstants['content-width'];
+const linkBoxLineHeight = '26 px';
 
 class ContentContainer extends Component {
   static propTypes = {
@@ -154,7 +155,8 @@ const styles = {
     display: 'inline',
     position: 'absolute',
     bottom: 20,
-    right: 0
+    right: 0,
+    lineHeight: linkBoxLineHeight
   },
   linkBoxRtl: {
     display: 'inline',
@@ -162,7 +164,8 @@ const styles = {
     paddingLeft: 10,
     position: 'absolute',
     bottom: 20,
-    left: 0
+    left: 0,
+    lineHeight: linkBoxLineHeight
   },
   linkBoxBottom: {
     display: 'inline',

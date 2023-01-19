@@ -87,6 +87,7 @@ export class UnconnectedTwoColumnActionBlock extends Component {
                     color={
                       button.color || Button.ButtonColor.brandSecondaryDefault
                     }
+                    style={{marginBottom: 16}}
                     text={button.text}
                     target={button.target}
                     id={button.id}
@@ -235,6 +236,7 @@ const styles = {
     paddingRight: 5,
     paddingTop: 10,
     paddingBottom: 20,
+    marginBottom: 0,
     fontSize: 24,
     lineHeight: '26px',
     fontFamily: 'Gotham 4r',
