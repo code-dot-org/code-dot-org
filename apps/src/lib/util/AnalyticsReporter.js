@@ -109,7 +109,7 @@ class AnalyticsReporter {
     if (hostname.includes('localhost') || hostname.includes('127.0.0.1')) {
       return Environments.development;
     }
-    if (hostname.includes('code.org')) {
+    if (hostname === 'code.org' || hostname === 'studio.code.org') {
       return Environments.production;
     }
     return Environments.unknown;
