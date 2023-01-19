@@ -67,7 +67,7 @@ class HeaderBanner extends React.Component {
               style={headerBannerContainerStyle}
             >
               <div className={'bannerContent'}>
-                <h1 style={headingStyle}>{headingText}</h1>
+                <div style={headingStyle}>{headingText}</div>
               </div>
             </div>
           </div>
@@ -92,7 +92,7 @@ class HeaderBanner extends React.Component {
             style={headerBannerContainerStyle}
           >
             <div className={'bannerContent'}>
-              <h1 style={headingStyle}>{headingText}</h1>
+              <div style={headingStyle}>{headingText}</div>
               {subHeadingText && (
                 <div style={subHeadingStyle}>{subHeadingText}</div>
               )}
@@ -119,16 +119,16 @@ const styles = {
     maxWidth: styleConstants['content-width']
   },
   bannerHeading: {
-    fontFamily: '"Barlow Semi Condensed Semibold", sans-serif',
+    fontFamily: '"Gotham 7r", sans-serif',
     color: color.white,
-    fontSize: 48,
-    marginBottom: 0
+    fontSize: 32,
+    lineHeight: '40px'
   },
   bannerHeadingShort: {
-    fontFamily: '"Barlow Semi Condensed Semibold", sans-serif',
+    fontFamily: '"Gotham 7r", sans-serif',
     color: color.white,
-    fontSize: 48,
-    marginBottom: 0
+    fontSize: 32,
+    lineHeight: '40px'
   },
   bannerSubHeading: {
     fontFamily: '"Gotham 4r", sans-serif',

@@ -54,6 +54,7 @@ export default class RecentCourses extends Component {
               lessonName={topCourse.lessonName}
               linkToOverview={topCourse.linkToOverview}
               linkToLesson={topCourse.linkToLesson}
+              isProfessionalLearningCourse={isProfessionalLearningCourse}
             />
           )}
           {topFourCourses.length > 0 && (
@@ -64,6 +65,7 @@ export default class RecentCourses extends Component {
                     title={course.title}
                     description={course.description}
                     link={course.link}
+                    isProfessionalLearningCourse={isProfessionalLearningCourse}
                   />
                 </div>
               ))}

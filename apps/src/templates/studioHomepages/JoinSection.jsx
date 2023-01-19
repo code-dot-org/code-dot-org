@@ -124,7 +124,7 @@ class JoinSection extends React.Component {
           <Button
             onClick={this.joinSection}
             className="ui-test-join-section"
-            color={Button.ButtonColor.brandSecondaryDefault}
+            color={Button.ButtonColor.gray}
             disabled={this.state.sectionCode.length === 0}
             text={i18n.joinSection()}
             style={styles.button}
@@ -141,9 +141,10 @@ const styles = {
     display: 'flex',
     borderWidth: 1,
     borderStyle: 'solid',
-    borderColor: color.neutral_dark20,
+    borderColor: color.border_gray,
     width: styleConstants['content-width'],
-    backgroundColor: color.white
+    backgroundColor: color.white,
+    marginTop: 25
   },
   mainDashed: {
     borderWidth: 5,
@@ -156,13 +157,13 @@ const styles = {
     fontSize: 20,
     fontWeight: 'bold',
     backgroundColor: color.white,
-    color: color.neutral_dark
+    color: color.teal
   },
   details: {
     fontFamily: '"Gotham 4r", sans-serif',
     fontSize: 14,
     marginTop: 5,
-    color: color.neutral_dark
+    color: color.charcoal
   },
   wordBox: {
     width: styleConstants['content-width'] - 475,
