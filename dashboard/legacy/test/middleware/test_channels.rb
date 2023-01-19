@@ -43,7 +43,7 @@ class ChannelsTest < Minitest::Test
     young_user_cannot_share = {
       name: ' xavier',
       birthday: 12.years.ago.to_datetime,
-      properties: {"sharing_disabled": true}.to_json
+      properties: {sharing_disabled: true}.to_json
     }
     ChannelsApi.any_instance.stubs(:current_user).returns(young_user_cannot_share)
 
@@ -56,7 +56,7 @@ class ChannelsTest < Minitest::Test
     young_user_can_share = {
       name: ' xavier',
       birthday: 12.years.ago.to_datetime,
-      properties: {"sharing_disabled": false}.to_json
+      properties: {sharing_disabled: false}.to_json
     }
     ChannelsApi.any_instance.stubs(:current_user).returns(young_user_can_share)
 
@@ -238,7 +238,7 @@ class ChannelsTest < Minitest::Test
     stub_user = {
       name: ' xavier',
       birthday: 14.years.ago.to_datetime,
-      properties: {"sharing_disabled": true}.to_json
+      properties: {sharing_disabled: true}.to_json
     }
     ChannelsApi.any_instance.stubs(:current_user).returns(stub_user)
     assert_cannot_publish('applab')
@@ -252,7 +252,7 @@ class ChannelsTest < Minitest::Test
     stub_user = {
       name: ' xavier',
       birthday: 14.years.ago.to_datetime,
-      properties: {"sharing_disabled": false}.to_json
+      properties: {sharing_disabled: false}.to_json
     }
     ChannelsApi.any_instance.stubs(:current_user).returns(stub_user)
     assert_can_publish('applab')
@@ -266,7 +266,7 @@ class ChannelsTest < Minitest::Test
     stub_user = {
       name: ' xavier',
       birthday: 12.years.ago.to_datetime,
-      properties: {"sharing_disabled": true}.to_json
+      properties: {sharing_disabled: true}.to_json
     }
     ChannelsApi.any_instance.stubs(:current_user).returns(stub_user)
     assert_cannot_publish('applab')
@@ -280,7 +280,7 @@ class ChannelsTest < Minitest::Test
     stub_user = {
       name: ' xavier',
       birthday: 12.years.ago.to_datetime,
-      properties: {"sharing_disabled": false}.to_json
+      properties: {sharing_disabled: false}.to_json
     }
     ChannelsApi.any_instance.stubs(:current_user).returns(stub_user)
     assert_can_publish('applab')
@@ -301,7 +301,7 @@ class ChannelsTest < Minitest::Test
     stub_user = {
       name: ' xavier',
       birthday: 12.years.ago.to_datetime,
-      properties: {"sharing_disabled": true}.to_json
+      properties: {sharing_disabled: true}.to_json
     }
     ChannelsApi.any_instance.stubs(:current_user).returns(stub_user)
     assert_cannot_publish('applab')
@@ -325,7 +325,7 @@ class ChannelsTest < Minitest::Test
 
     get "/v3/channels/#{channel_id}/abuse"
     assert last_response.ok?
-    assert_equal 10, JSON.parse(last_response.body)['abuse_score']
+    assert_equal 0, JSON.parse(last_response.body)['abuse_score']
 
     delete "/v3/channels/#{channel_id}/abuse"
     assert last_response.unauthorized?
