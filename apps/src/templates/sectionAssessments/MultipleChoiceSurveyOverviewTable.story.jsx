@@ -2,6 +2,13 @@ import React from 'react';
 import MultipleChoiceSurveyOverviewTable from './MultipleChoiceSurveyOverviewTable';
 import i18n from '@cdo/locale';
 
+export default {
+  title: 'MultipleChoiceSurveyOverviewTable',
+  component: MultipleChoiceSurveyOverviewTable
+};
+
+const Template = args => <MultipleChoiceSurveyOverviewTable {...args} />;
+
 const multipleChoiceSurveyData = [
   {
     id: 1,
@@ -64,32 +71,17 @@ const multipleChoiceSurveyData = [
   }
 ];
 
-export default storybook => {
-  return storybook
-    .storiesOf('SectionAssessments/MultipleChoiceSurveyOverviewTable', module)
-    .addStoryTable([
-      {
-        name: 'Assessment multiple choice with 7 answers',
-        description: 'Ability to see assessment overview for a section',
-        story: () => (
-          <MultipleChoiceSurveyOverviewTable
-            multipleChoiceSurveyData={multipleChoiceSurveyData}
-          />
-        )
-      },
-      {
-        name: 'Assessment multiple choice with 3 answers',
-        description: 'Ability to see assessment overview for a section',
-        story: () => (
-          <MultipleChoiceSurveyOverviewTable
-            multipleChoiceSurveyData={multipleChoiceSurveyData.map(question => {
-              return {
-                ...question,
-                answers: question.answers.slice(0, 2)
-              };
-            })}
-          />
-        )
-      }
-    ]);
+export const AssessmentWith7Answers = Template.bind({});
+AssessmentWith7Answers.args = {
+  multipleChoiceSurveyData: multipleChoiceSurveyData
+};
+
+export const AssessmentWith3Answers = Template.bind({});
+AssessmentWith3Answers.args = {
+  multipleChoiceSurveyData: multipleChoiceSurveyData.map(question => {
+    return {
+      ...question,
+      answers: question.answers.slice(0, 2)
+    };
+  })
 };
