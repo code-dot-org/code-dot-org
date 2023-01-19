@@ -16,6 +16,9 @@ import {OAuthSectionTypes} from '@cdo/apps/lib/ui/accounts/constants';
 import styleConstants from '../../styleConstants';
 import {analyticsReporter, EVENTS} from '@cdo/apps/lib/util/AnalyticsReporter';
 
+const CANCELLED_EVENT = 'Section Setup Cancelled';
+const SELECT_LOGIN_TYPE = 'Login Type Selection';
+
 /**
  * UI for selecting the login type of a class section:
  * Word, picture, or email logins, or one of several third-party integrations.
