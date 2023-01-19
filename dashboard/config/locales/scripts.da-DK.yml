@@ -1168,6 +1168,10 @@ da:
           lessons:
             lesson-4:
               name: Variabler
+        csa3-2023:
+          lessons:
+            lesson-3:
+              name: For Loops
         csp4-2023:
           lesson_groups:
             csp_variables:

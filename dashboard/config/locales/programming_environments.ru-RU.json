@@ -1624,6 +1624,20 @@
                     }
                   }
                 },
+                "buzzer.playNotes": {
+                  "palette_params": {
+                    "tempo": {
+                      "type": "Число"
+                    }
+                  }
+                },
+                "buzzer.playSong": {
+                  "palette_params": {
+                    "tempo": {
+                      "type": "Число"
+                    }
+                  }
+                },
                 "blink": {
                   "palette_params": {
                     "interval": {

@@ -1625,6 +1625,20 @@
                     }
                   }
                 },
+                "buzzer.playNotes": {
+                  "palette_params": {
+                    "tempo": {
+                      "type": "Nömrə"
+                    }
+                  }
+                },
+                "buzzer.playSong": {
+                  "palette_params": {
+                    "tempo": {
+                      "type": "Nömrə"
+                    }
+                  }
+                },
                 "blink": {
                   "palette_params": {
                     "interval": {
