@@ -127,10 +127,11 @@ const styles = {
     boxSizing: 'content-box'
   },
   titleLink: {
-    color: color.neutral_dark
+    color: color.neutral_dark,
+    textDecoration: 'none'
   },
   lastEdit: {
-    paddingLeft: 30,
+    paddingLeft: 15,
     paddingRight: 10,
     paddingBottom: 10,
     fontSize: 11,

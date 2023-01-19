@@ -45,6 +45,28 @@ h1, h2, h3, h4, h5, h6 {
   margin-top: 0;
 }
 
+a {
+  color: $brand_secondary_default;
+  text-decoration: underline;
+
+  &:hover {
+    color: $brand_secondary_dark;
+    text-decoration: underline;
+  }
+}
+
+.professional-learning-banner {
+  a {
+    text-decoration: none;
+  }
+}
+
+.header_right {
+  a {
+    text-decoration: none;
+  }
+}
+
 .tutorial-block, .courseblock-tall {
   background-color: $neutral_light;
 }
@@ -64,7 +86,6 @@ p {
   a {
     font-family: $gotham-bold;
     font-size:  1em;
-    color: $brand_secondary_dark;
   }
 
   .signup {
@@ -192,6 +213,10 @@ p {
         a {
           font-family: $gotham-extra-bold;
           text-decoration: underline;
+          color: $brand_secondary_default;
+          &:hover {
+            color: $brand_secondary_dark;
+          }
         }
       }
 

@@ -6,6 +6,8 @@ import color from '../util/color';
 import PropTypes from 'prop-types';
 import Radium from 'radium'; // eslint-disable-line no-restricted-imports
 
+import moduleStyles from './content-container.module.scss';
+
 // ContentContainer provides a full-width container which will render whatever
 // children are passed to it. The component is useful for creating clear,
 // sub-sections on a page because it was built to reuse the styling and
@@ -49,7 +51,10 @@ class ContentContainer extends Component {
     return (
       <div style={[boxStyles, bottomMargin]}>
         {(heading || (link && linkText)) && (
-          <div style={styles.headingBox}>
+          <div
+            className={moduleStyles.contentContainerHeading}
+            style={styles.headingBox}
+          >
             <h4 style={isRtl ? styles.headingTextRtl : styles.headingText}>
               {heading}
             </h4>
@@ -181,10 +186,9 @@ const styles = {
     clear: 'both'
   },
   linkTag: {
-    color: color.neutral_dark
+    textDecoration: 'none'
   },
   linkToViewAll: {
-    color: color.neutral_dark,
     fontSize: 14,
     fontFamily: `'Gotham 5r', sans-serif`,
     marginTop: -2,
@@ -192,7 +196,6 @@ const styles = {
   },
   chevron: {
     display: 'inline',
-    color: color.neutral_dark,
     fontSize: 10,
     fontWeight: 'bold',
     marginLeft: 15
