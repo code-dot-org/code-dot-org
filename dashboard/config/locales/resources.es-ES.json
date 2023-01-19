@@ -160,6 +160,9 @@
         "virtual_lesson_modifications/coursed/2022": {
           "name": "Modificaciones de lecciones virtuales"
         },
+        "extension_lessons_micro_bit/coursed/2022": {
+          "type": "Recurso"
+        },
         "password_power-up_if_then_scenarios/coursed/2022": {
           "name": "Contraseña Potente: Escenarios Si... Entonces...",
           "url": "https://docs.google.com/document/d/1JeZtFU6hMFTYITAAPaA_CRmOVknvkcKZQszL6u7DRG4/edit",
@@ -398,6 +401,9 @@
           "name": "Modificaciones de lecciones virtuales",
           "url": "https://docs.google.com/document/d/10v_thWkO0aJNWsCFtv_bpVbiIy-meYs_vbUiHi-ZCH0/preview"
         },
+        "extension_lessons_micro_bit/coursef/2022": {
+          "type": "Recurso"
+        },
         "the_power_of_words_lesson_quiz/coursef/2022": {
           "name": "El poder de las palabras: Cuestionario de lección",
           "url": "https://docs.google.com/forms/d/1OKy2U3F37NSgCBUez9XMi0UJtlHKPXIe_rxy0l_KEOg/copy",
@@ -578,6 +584,9 @@
         },
         "virtual_lesson_modifications/coursee/2022": {
           "name": "Modificaciones de lecciones virtuales"
+        },
+        "extension_lessons_micro_bit/coursee/2022": {
+          "type": "Recurso"
         },
         "be_a_super_digital_citizen_lesson_slides/coursee/2022": {
           "name": "Ser un Super Ciudadano Digital: Diapositivas de la lección",
@@ -1322,6 +1331,9 @@
         "virtual_lesson_modifications/coursec/2022": {
           "name": "Modificaciones de lecciones virtuales",
           "url": "https://docs.google.com/document/d/1p71nZ3SqyNNVIJtQwPA_LTdcnL9RDsxIo5mQe9Gd-hQ/view"
+        },
+        "extension_lessons_micro_bit/coursec/2022": {
+          "type": "Recurso"
         },
         "putting_a_stop_to_online_meanness_lesson_slides/coursec/2022": {
           "name": "Poner un STOP a la Maldad en Línea: Diapositivas de la Lección",

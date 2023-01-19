@@ -1,0 +1,139 @@
+<GamelabJr>
+  <config><![CDATA[{
+  "properties": {
+    "encrypted": "false",
+    "skin": "gamelab",
+    "show_debug_watch": "true",
+    "block_pools": [
+      "GamelabJr"
+    ],
+    "helper_libraries": [
+      "NativeSpriteLab"
+    ],
+    "use_default_sprites": "false",
+    "hide_animation_mode": "true",
+    "show_type_hints": true,
+    "hide_custom_blocks": true,
+    "all_animations_single_frame": "true",
+    "use_modal_function_editor": "true",
+    "preload_asset_list": null,
+    "encrypted_examples": [
+
+    ],
+    "embed": "false",
+    "instructions_important": "false",
+    "submittable": "false",
+    "never_autoplay_video": "false",
+    "disable_param_editing": "true",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
+    "include_shared_functions": "false",
+    "free_play": "false",
+    "start_in_animation_tab": "false",
+    "expand_debugger": "false",
+    "debugger_disabled": "false",
+    "start_animations": "{\r\n  \"orderedKeys\": [\r\n    \"0908ab87-82e2-45e6-a7cc-603248a81812\",\r\n    \"beb27ef5-b114-4b7e-b666-f92d5c965ceb\",\r\n    \"00719502-ddbf-42cd-b096-b0b14cd8f561\"\r\n  ],\r\n  \"propsByKey\": {\r\n    \"0908ab87-82e2-45e6-a7cc-603248a81812\": {\r\n      \"name\": \"green_shirt_wave2\",\r\n      \"sourceUrl\": \"https://levelbuilder-studio.code.org/media?u=https%3A%2F%2Fstudio.code.org%2Fapi%2Fv1%2Fanimation-library%2Fspritelab%2FOD.oTW5ofxMQq6oWdZk7qmP5hO09yeTJ%2Fcategory_people%2Fgreen_shirt_wave2.png\",\r\n      \"frameSize\": {\r\n        \"x\": 157,\r\n        \"y\": 392\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"OD.oTW5ofxMQq6oWdZk7qmP5hO09yeTJ\",\r\n      \"categories\": [\r\n        \"people\"\r\n      ]\r\n    },\r\n    \"beb27ef5-b114-4b7e-b666-f92d5c965ceb\": {\r\n      \"name\": \"man-gray-hair\",\r\n      \"sourceUrl\": \"https://levelbuilder-studio.code.org/media?u=https%3A%2F%2Fstudio.code.org%2Fapi%2Fv1%2Fanimation-library%2Flevel_animations%2Fj3Rf7No.fdJ7iJlMpqauDd.54MYfumwp%2Fman-gray-hair.png\",\r\n      \"frameSize\": {\r\n        \"x\": 124,\r\n        \"y\": 399\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"j3Rf7No.fdJ7iJlMpqauDd.54MYfumwp\",\r\n      \"categories\": [\r\n        \"\"\r\n      ]\r\n    },\r\n    \"00719502-ddbf-42cd-b096-b0b14cd8f561\": {\r\n      \"name\": \"black_abaya_hand_on_hip\",\r\n      \"sourceUrl\": \"https://levelbuilder-studio.code.org/media?u=https%3A%2F%2Fstudio.code.org%2Fapi%2Fv1%2Fanimation-library%2Fspritelab%2F0HNqeoBcBCRjBvUcdwDQ1uPsiOcYvY2r%2Fcategory_people%2Fblack_abaya_hand_on_hip.png\",\r\n      \"frameSize\": {\r\n        \"x\": 130,\r\n        \"y\": 400\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"0HNqeoBcBCRjBvUcdwDQ1uPsiOcYvY2r\",\r\n      \"categories\": [\r\n        \"people\"\r\n      ]\r\n    }\r\n  }\r\n}",
+    "validation_enabled": "false",
+    "mini_toolbox": "false",
+    "hide_pause_button": "false"
+  },
+  "game_id": 64,
+  "published": true,
+  "created_at": "2023-01-18T19:43:57.000Z",
+  "level_num": "custom",
+  "user_id": 18825,
+  "audit_log": "[{\"changed_at\":\"2023-01-18 19:46:41 +0000\",\"changed\":[\"show_debug_watch\",\"use_default_sprites\",\"hide_animation_mode\",\"all_animations_single_frame\",\"use_modal_function_editor\",\"preload_asset_list\"],\"changed_by_id\":18825,\"changed_by_email\":\"erin+lb@code.org\"},{\"changed_at\":\"2023-01-18 19:48:43 +0000\",\"changed\":[\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18825,\"changed_by_email\":\"erin+lb@code.org\"},{\"changed_at\":\"2023-01-18 19:51:48 +0000\",\"changed\":[\"preload_asset_list\",\"encrypted_examples\",\"start_blocks\"],\"changed_by_id\":18825,\"changed_by_email\":\"erin+lb@code.org\"},{\"changed_at\":\"2023-01-18 22:41:39 +0000\",\"changed\":[\"preload_asset_list\",\"encrypted_examples\",\"start_animations\",\"start_blocks\"],\"changed_by_id\":18825,\"changed_by_email\":\"erin+lb@code.org\"},{\"changed_at\":\"2023-01-18 22:52:31 +0000\",\"changed\":[\"use_default_sprites\",\"preload_asset_list\",\"encrypted_examples\",\"start_blocks\"],\"changed_by_id\":18825,\"changed_by_email\":\"erin+lb@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+  <blocks>
+    <start_blocks>
+      <xml>
+        <block type="when_run" deletable="false" movable="false">
+          <next>
+            <block type="gamelab_printText">
+              <value name="TEXT">
+                <block type="text">
+                  <field name="TEXT">Click on Mia and Hank to see their conversation!</field>
+                </block>
+              </value>
+              <next>
+                <block type="storylab_setHeading">
+                  <value name="HEADING">
+                    <block type="text">
+                      <field name="TEXT">Front Desk</field>
+                    </block>
+                  </value>
+                  <next>
+                    <block type="storylab_setSubheading">
+                      <value name="SUBHEADING">
+                        <block type="text">
+                          <field name="TEXT">Kelly Yang</field>
+                        </block>
+                      </value>
+                      <next>
+                        <block type="gamelab_setBackgroundImageAs">
+                          <field name="IMG">"desk"</field>
+                          <next>
+                            <block type="gamelab_makeNewSpriteAnon">
+                              <field name="ANIMATION_NAME">"blue_shirt_backpack"</field>
+                              <value name="LOCATION">
+                                <block type="gamelab_location_picker" can_disconnect_from_parent="false">
+                                  <field name="LOCATION">{"x":90,"y":270}</field>
+                                </block>
+                              </value>
+                              <next>
+                                <block type="gamelab_setProp">
+                                  <field name="PROPERTY">"scale"</field>
+                                  <value name="SPRITE">
+                                    <block type="gamelab_allSpritesWithAnimation" can_disconnect_from_parent="false">
+                                      <field name="ANIMATION">"blue_shirt_backpack"</field>
+                                    </block>
+                                  </value>
+                                  <value name="VAL">
+                                    <block type="math_number" can_disconnect_from_parent="false">
+                                      <field name="NUM">250</field>
+                                    </block>
+                                  </value>
+                                  <next>
+                                    <block type="gamelab_makeNewSpriteAnon">
+                                      <field name="ANIMATION_NAME">"man-gray-hair"</field>
+                                      <value name="LOCATION">
+                                        <block type="gamelab_location_picker" can_disconnect_from_parent="false">
+                                          <field name="LOCATION">{"x":300,"y":270}</field>
+                                        </block>
+                                      </value>
+                                      <next>
+                                        <block type="gamelab_setProp">
+                                          <field name="PROPERTY">"scale"</field>
+                                          <value name="SPRITE">
+                                            <block type="gamelab_allSpritesWithAnimation" can_disconnect_from_parent="false">
+                                              <field name="ANIMATION">"man-gray-hair"</field>
+                                            </block>
+                                          </value>
+                                          <value name="VAL">
+                                            <block type="math_number" can_disconnect_from_parent="false">
+                                              <field name="NUM">250</field>
+                                            </block>
+                                          </value>
+                                        </block>
+                                      </next>
+                                    </block>
+                                  </next>
+                                </block>
+                              </next>
+                            </block>
+                          </next>
+                        </block>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+      </xml>
+    </start_blocks>
+  </blocks>
+</GamelabJr>

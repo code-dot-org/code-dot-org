@@ -58,11 +58,11 @@ export default class ParticipantTypePicker extends Component {
         </div>
         <div style={style.footer}>
           <Button
-            __useDeprecatedTag
             onClick={handleCancel}
             text={i18n.dialogCancel()}
             size={Button.ButtonSize.large}
             color={Button.ButtonColor.gray}
+            style={{margin: 0}}
           />
         </div>
       </div>
