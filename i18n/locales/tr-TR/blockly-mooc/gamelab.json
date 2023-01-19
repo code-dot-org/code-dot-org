@@ -5,7 +5,6 @@
   "dropletBlock_setCollider_param4": "Yükseklik",
   "dropletBlock_setColliderEach_param0": "yaz",
   "dropletBlock_setColliderEach_param4": "Yükseklik",
-  "errorLoadingAnimation": "Görünüşe bakılırsa ''{animationName}'' adlı animasyonunuzu yüklerken sorun yaşıyoruz. İnternet bağlantı kalitenizin yüksek olduğundan emin olun ve sayfayı yeniden yüklemeyi deneyin. Eğer sorun devam ediyorsa, animasyonun bozuk olması muhtemel. Böyle bir durumda, animasyonu kaldırarak devam etmeniz gerekebilir.",
-  "reinfFeedbackMsg": "Başardın! Sonraki bölüme geçmek için ''Devam et''e tıkla.",
+  "reinfFeedbackMsg": "Bitirdin!  Bir sonraki seviyeye geçmek için \"Devam\" düğmesini tıklayın.",
   "shareGame": "Oyununu paylaş:"
 }
