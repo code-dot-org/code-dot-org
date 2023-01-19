@@ -5,7 +5,6 @@ import FontAwesome from './FontAwesome';
 import color from '../util/color';
 import PropTypes from 'prop-types';
 import Radium from 'radium'; // eslint-disable-line no-restricted-imports
-import classNames from 'classnames';
 
 import moduleStyles from './content-container.module.scss';
 
@@ -53,7 +52,7 @@ class ContentContainer extends Component {
       <div style={[boxStyles, bottomMargin]}>
         {(heading || (link && linkText)) && (
           <div
-            className={classNames(moduleStyles.contentContainerHeading)}
+            className={moduleStyles.contentContainerHeading}
             style={styles.headingBox}
           >
             <h4 style={isRtl ? styles.headingTextRtl : styles.headingText}>
