@@ -3113,6 +3113,7 @@ Studio.onReportCompleteNoFeedback = function(response) {
   Studio.response = response;
   Studio.waitingForReport = false;
   studioApp().onReportComplete(response);
+  studioApp().onFeedback();
 };
 
 var registerEventHandler = function(handlers, name, func) {
