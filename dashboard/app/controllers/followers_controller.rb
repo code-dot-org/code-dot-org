@@ -40,7 +40,7 @@ class FollowersController < ApplicationController
       redirect_to redirection
       return
     else
-      gender = params[:user][:gender]
+      gender = params.dig(:user, :gender)
       gender_input_type = gender_input_type?(request, session.id.to_s)
       Retryable.retryable on: [Mysql2::Error, ActiveRecord::RecordNotUnique], matching: /Duplicate entry/ do
         if @user.save && @section&.add_student(@user)
