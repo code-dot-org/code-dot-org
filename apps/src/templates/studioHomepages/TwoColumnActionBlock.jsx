@@ -23,8 +23,7 @@ export class UnconnectedTwoColumnActionBlock extends Component {
         url: PropTypes.string.isRequired,
         text: PropTypes.string.isRequired,
         target: PropTypes.string,
-        id: PropTypes.string,
-        color: PropTypes.oneOf(Object.values(Button.ButtonColor))
+        id: PropTypes.string
       })
     ),
     backgroundColor: PropTypes.string,
@@ -56,7 +55,7 @@ export class UnconnectedTwoColumnActionBlock extends Component {
 
     return (
       <div id={id} style={styles.container}>
-        {heading && <h4 style={styles.heading}>{heading}</h4>}
+        {heading && <div style={styles.heading}>{heading}</div>}
         <div style={styles.container}>
           {responsiveSize === 'lg' && (
             <div style={{float, width}}>
@@ -84,10 +83,7 @@ export class UnconnectedTwoColumnActionBlock extends Component {
                   <Button
                     __useDeprecatedTag
                     href={button.url}
-                    color={
-                      button.color || Button.ButtonColor.brandSecondaryDefault
-                    }
-                    style={{marginBottom: 16}}
+                    color={Button.ButtonColor.gray}
                     text={button.text}
                     target={button.target}
                     id={button.id}
@@ -156,8 +152,7 @@ export class AdministratorResourcesActionBlock extends Component {
           {
             id: 'your_school_administrators',
             url: pegasus('/administrators'),
-            text: i18n.yourSchoolAdminButton(),
-            color: Button.ButtonColor.neutralDark
+            text: i18n.yourSchoolAdminButton()
           }
         ]}
       />
@@ -236,15 +231,13 @@ const styles = {
     paddingRight: 5,
     paddingTop: 10,
     paddingBottom: 20,
-    marginBottom: 0,
     fontSize: 24,
     lineHeight: '26px',
     fontFamily: 'Gotham 4r',
-    color: color.neutral_dark
+    color: color.charcoal
   },
   textItem: {
-    border: `1px solid ${color.neutral_dark20}`,
-    backgroundColor: color.neutral_light,
+    backgroundColor: color.teal,
     padding: 25,
     minHeight: 281,
     boxSizing: 'border-box'
@@ -255,7 +248,7 @@ const styles = {
     fontSize: 27,
     lineHeight: 1.2,
     fontFamily: '"Gotham 7r", sans-serif',
-    color: color.neutral_dark
+    color: color.white
   },
   subHeadingSmallFont: {
     paddingRight: 0,
@@ -263,13 +256,12 @@ const styles = {
     fontSize: 25,
     lineHeight: 1.2,
     fontFamily: '"Gotham 7r", sans-serif',
-    color: color.neutral_dark
+    color: color.white
   },
   image: {
     width: 485,
     minHeight: 260,
-    height: 279,
-    border: `1px solid ${color.neutral_dark20}`
+    height: 281
   },
   description: {
     paddingRight: 10,
@@ -277,7 +269,7 @@ const styles = {
     fontSize: 14,
     fontFamily: 'Gotham 4r',
     lineHeight: '22px',
-    color: color.neutral_dark
+    color: color.white
   },
   clear: {
     clear: 'both'

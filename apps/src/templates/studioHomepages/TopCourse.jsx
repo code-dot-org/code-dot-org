@@ -6,6 +6,8 @@ import i18n from '@cdo/locale';
 import color from '../../util/color';
 import styleConstants from '../../styleConstants';
 import Button from '../Button';
+import BlueHeader from '@cdo/static/small_blue_icons_fullwidth.png';
+import PurpleHeader from '@cdo/static/small_purple_icons_fullwidth.png';
 
 // While this is named TopCourse, it really refers to the most recent course
 // or script in which the student or teacher has progress.
@@ -16,7 +18,8 @@ class TopCourse extends Component {
     assignableName: PropTypes.string.isRequired,
     lessonName: PropTypes.string.isRequired,
     linkToOverview: PropTypes.string.isRequired,
-    linkToLesson: PropTypes.string.isRequired
+    linkToLesson: PropTypes.string.isRequired,
+    isProfessionalLearningCourse: PropTypes.bool
   };
 
   render() {
@@ -25,13 +28,18 @@ class TopCourse extends Component {
       lessonName,
       linkToOverview,
       linkToLesson,
-      isRtl
+      isRtl,
+      isProfessionalLearningCourse
     } = this.props;
     const localeStyle = isRtl ? styles.ltr : styles.rtl;
 
     return (
       <div style={styles.card}>
-        <div style={styles.header} />
+        <img
+          src={isProfessionalLearningCourse ? BlueHeader : PurpleHeader}
+          style={styles.image}
+          alt=""
+        />
         <div style={styles.name}>{assignableName}</div>
         <div style={styles.description}>
           <div>{i18n.topCourseLessonIntro({lessonName})}</div>
@@ -41,13 +49,13 @@ class TopCourse extends Component {
           <Button
             __useDeprecatedTag
             href={linkToOverview}
-            color={Button.ButtonColor.neutralDark}
+            color={Button.ButtonColor.gray}
             text={i18n.viewCourse()}
           />
           <Button
             __useDeprecatedTag
             href={linkToLesson}
-            color={Button.ButtonColor.brandSecondaryDefault}
+            color={Button.ButtonColor.orange}
             text={i18n.continueLesson()}
             style={styles.lessonButton}
           />
@@ -62,18 +70,17 @@ const styles = {
     overflow: 'hidden',
     borderWidth: 1,
     borderStyle: 'solid',
-    borderColor: color.neutral_dark20,
+    borderColor: color.border_gray,
     position: 'relative',
     height: 200,
     width: styleConstants['content-width'],
     marginBottom: 20,
-    backgroundColor: color.neutral_light
+    background: color.white
   },
-  header: {
+  image: {
     position: 'absolute',
     width: styleConstants['content-width'],
-    height: 80,
-    backgroundColor: color.brand_primary_default
+    height: 80
   },
   name: {
     paddingTop: 10,
@@ -83,7 +90,7 @@ const styles = {
     marginTop: 15,
     fontSize: 30,
     fontFamily: '"Gotham 4r", sans-serif',
-    color: color.neutral_white,
+    color: color.white,
     width: styleConstants['content-width'] - 35,
     zIndex: 2,
     position: 'absolute',
@@ -101,7 +108,8 @@ const styles = {
     fontSize: 14,
     lineHeight: 1.5,
     fontFamily: '"Gotham 4r", sans-serif',
-    color: color.neutral_dark,
+    color: color.charcoal,
+    background: color.white,
     width: '65%',
     boxSizing: 'border-box',
     position: 'absolute',

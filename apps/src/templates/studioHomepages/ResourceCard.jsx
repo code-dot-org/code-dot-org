@@ -82,7 +82,7 @@ class ResourceCard extends Component {
           id={linkId}
           className={linkClass}
           href={link}
-          color={Button.ButtonColor.brandSecondaryDefault}
+          color={Button.ButtonColor.gray}
           text={buttonText}
           style={buttonStyles}
         />
@@ -94,9 +94,8 @@ class ResourceCard extends Component {
 const styles = {
   card: {
     height: 250,
-    width: 308,
-    background: color.neutral_light,
-    border: `1px solid ${color.neutral_dark20}`
+    width: 310,
+    background: color.teal
   },
   cardSmall: {
     width: '100%'
@@ -107,7 +106,7 @@ const styles = {
   text: {
     paddingLeft: 20,
     paddingRight: 20,
-    color: color.neutral_dark
+    color: color.white
   },
   titleContainer: {
     display: 'flex',
@@ -115,7 +114,7 @@ const styles = {
     padding: '14px 20px 10px 20px'
   },
   title: {
-    color: color.neutral_dark,
+    color: color.white,
     fontFamily: '"Gotham 7r", sans-serif',
     fontSize: 27,
     lineHeight: '29px',
@@ -137,7 +136,7 @@ const styles = {
     fontSize: 14,
     margin: '0px 8px',
     fontFamily: '"Gotham 5r", sans-serif',
-    color: color.brand_accent_default
+    color: color.white
   },
   description: {
     fontFamily: '"Gotham 4r", sans-serif',
