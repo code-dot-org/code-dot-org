@@ -91,9 +91,6 @@ $(document).ready(() => {
     // Clean up school data, log if school was not specified, and set age for teachers.
     if (user_type === 'teacher') {
       cleanSchoolInfo();
-      if (!schoolData.ncesSchoolId) {
-        logSchoolId('');
-      }
       $('#user_age').val('21+');
     }
     analyticsReporter.sendEvent(EVENTS.SIGN_UP_FINISHED_EVENT);
@@ -271,7 +268,6 @@ $(document).ready(() => {
   function onSchoolChange(_, event) {
     schoolData.ncesSchoolId = event ? event.value : '';
     renderSchoolInfo();
-    logSchoolId(schoolData.ncesSchoolId);
   }
 
   function onSchoolNotFoundChange(field, event) {
@@ -282,11 +278,5 @@ $(document).ready(() => {
       };
     }
     renderSchoolInfo();
-  }
-
-  function logSchoolId(schoolId) {
-    analyticsReporter.sendEvent(EVENTS.SCHOOL_ID_CHANGED_EVENT, {
-      school: schoolId
-    });
   }
 });
