@@ -47,13 +47,27 @@ const FindYourRegion = props => {
         workshop => workshop.id
       )
     });
-    if (regionalPartner?.name !== lastRPLogged) {
-      setLastRPLogged(regionalPartner?.name);
-      analyticsReporter.sendEvent(EVENTS.RP_FOUND_EVENT, {
-        'regional partner': regionalPartner?.name || 'No Partner'
-      });
+
+    // If Regional Partner changes, log their name:
+    if (!regionalPartner?.name && lastRPLogged !== 'No Partner') {
+      // Before school data is modified, log that they are not yet associated
+      // with a Regional Partner.
+      logRegionalPartnerFound('No Partner');
+    } else if (
+      regionalPartner?.name &&
+      regionalPartner?.name !== lastRPLogged
+    ) {
+      // On a Regional Partner change, log the new Regional Partner's name.
+      logRegionalPartnerFound(regionalPartner?.name);
     }
   }, [regionalPartner, data, lastRPLogged, onChange]);
+
+  const logRegionalPartnerFound = name => {
+    setLastRPLogged(name);
+    analyticsReporter.sendEvent(EVENTS.RP_FOUND_EVENT, {
+      'regional partner': name
+    });
+  };
 
   const renderInternationalModal = () => {
     return (
