@@ -274,8 +274,10 @@ applabCommands.moveTo = function(opts) {
     ctx.moveTo(Applab.turtle.x, Applab.turtle.y);
     Applab.turtle.x = opts.x;
     Applab.turtle.y = opts.y;
-    ctx.lineTo(Applab.turtle.x, Applab.turtle.y);
-    ctx.stroke();
+    if (Applab.turtle.isPenDown) {
+      ctx.lineTo(Applab.turtle.x, Applab.turtle.y);
+      ctx.stroke();
+    }
     applabTurtle.updateTurtleImage();
   }
 };
@@ -385,18 +387,18 @@ applabCommands.arcRight = function(opts) {
         (Applab.turtle.heading + (opts.counterclockwise ? 0 : 180))) /
       360;
     var endAngle = startAngle + (2 * Math.PI * clockwiseDegrees) / 360;
-
-    ctx.beginPath();
-    ctx.arc(
-      centerX,
-      centerY,
-      opts.radius,
-      startAngle,
-      endAngle,
-      opts.counterclockwise
-    );
-    ctx.stroke();
-
+    if (Applab.turtle.isPenDown) {
+      ctx.beginPath();
+      ctx.arc(
+        centerX,
+        centerY,
+        opts.radius,
+        startAngle,
+        endAngle,
+        opts.counterclockwise
+      );
+      ctx.stroke();
+    }
     Applab.turtle.heading =
       (Applab.turtle.heading + clockwiseDegrees + 360) % 360;
     var xMovement =
@@ -431,45 +433,29 @@ applabCommands.getDirection = function(opts) {
   return Applab.turtle.heading;
 };
 
+// Whether or not Turtle pen is down, executing command will result in drawing a 'dot'
+// with color stored by `penColorInternal`.
 applabCommands.dot = function(opts) {
   apiValidateTypeAndRange(opts, 'dot', 'radius', opts.radius, 'number', 0.0001);
   var ctx = applabTurtle.getTurtleContext();
   if (ctx && opts.radius > 0) {
     ctx.beginPath();
-    if (Applab.turtle.penUpColor) {
-      // If the pen is up and the color has been changed, use that color:
-      ctx.strokeStyle = Applab.turtle.penUpColor;
-    }
     var savedLineWidth = ctx.lineWidth;
     ctx.lineWidth = 1;
     ctx.arc(Applab.turtle.x, Applab.turtle.y, opts.radius, 0, 2 * Math.PI);
     ctx.fill();
     ctx.stroke();
-    if (Applab.turtle.penUpColor) {
-      // If the pen is up, reset strokeStyle back to transparent:
-      ctx.strokeStyle = 'rgba(255, 255, 255, 0)';
-    }
     ctx.lineWidth = savedLineWidth;
     return true;
   }
 };
 
 applabCommands.penUp = function(opts) {
-  var ctx = applabTurtle.getTurtleContext();
-  if (ctx) {
-    if (ctx.strokeStyle !== 'rgba(255, 255, 255, 0)') {
-      Applab.turtle.penUpColor = ctx.strokeStyle;
-      ctx.strokeStyle = 'rgba(255, 255, 255, 0)';
-    }
-  }
+  Applab.turtle.isPenDown = false;
 };
 
 applabCommands.penDown = function(opts) {
-  var ctx = applabTurtle.getTurtleContext();
-  if (ctx && Applab.turtle.penUpColor) {
-    ctx.strokeStyle = Applab.turtle.penUpColor;
-    delete Applab.turtle.penUpColor;
-  }
+  Applab.turtle.isPenDown = true;
 };
 
 applabCommands.penWidth = function(opts) {
@@ -490,12 +476,7 @@ applabCommands.penWidth = function(opts) {
 applabCommands.penColorInternal = function(rgbstring) {
   var ctx = applabTurtle.getTurtleContext();
   if (ctx) {
-    if (Applab.turtle.penUpColor) {
-      // pen is currently up, store this color for pen down
-      Applab.turtle.penUpColor = rgbstring;
-    } else {
-      ctx.strokeStyle = rgbstring;
-    }
+    ctx.strokeStyle = rgbstring;
     ctx.fillStyle = rgbstring;
   }
 };
