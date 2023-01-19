@@ -627,6 +627,7 @@ en:
     store: 'Store'
     cookie_notice: 'Cookie Notice'
     view_code: 'View Code'
+    locale_select: "Select language"
   reference_area:
     title: 'Need help?'
     subtitle: 'See these videos and hints'
@@ -651,6 +652,8 @@ en:
       applab_unsupported_tablet: "App Lab works best on a desktop or laptop computer with a mouse and keyboard. You may experience issues using this tool on your current device."
       gamelab_unsupported_tablet: "Game Lab works best on a desktop or laptop computer with a mouse and keyboard. You may experience issues using this tool on your current device."
       weblab_unsupported_locale_storage: "You may experience issues using Web Lab in Private Browsing mode. Please reload your project in normal mode. Sorry for the inconvenience."
+  deprecation:
+    algebra_lab: "CS in Algebra curriculum and content is being deprecated.  Within the next few months, this lab will no longer be available.  Please check out [Bootstrap: Algebra](%{bootstrap_algebra_url}) instead. [Learn More](%{cs_algebra_url})."
   slow_loading: 'This is taking longer than usual...'
   try_reloading: 'Try reloading the page'
   next_stage: 'Finished! Continue to next lesson'
@@ -689,82 +692,156 @@ en:
       body_short: "Design an app, code with blocks or JavaScript to make it work, then share your app in seconds."
       audience: 'Ages 13+'
       cta: 'Learn how'
-    dance:
-      title: 'Dance Party'
+      image_alt: 'A purple bunny wearing a rocket powered backpack.'
+    applab-intro:
+      image_alt: 'A hand is tapping the center of a smartphone screen. Light and sparkles are coming out of the screen.'
+    aquatic:
+      title: "Minecraft"
+      image_alt: 'Steve and Alex from Minecraft are looking at you.'
+    artist:
+      image_alt: 'A cartoonish person holding a huge pencil and drawing a triangle.'
+    conditionals:
+      image_alt: 'Two hands shuffling a deck of playing cards.'
+    course1:
+      image_alt: 'The Code.org bumble bee and orange fish standing in front of some code.'
+    course2:
+      image_alt: 'A collage of Code.org puzzles showing a green wizard, artist, and orange fish.'
+    course3:
+      image_alt: 'A collage of Code.org puzzles showing a game, zombie, and ninja.'
+    course4:
+      image_alt: 'A collage of Code.org puzzles showing soccer, pets, and an artist.'
+    coursea:
+      image_alt: 'A collage of Code.org puzzles showing an elephant and a squirrel.'
+    courseb:
+      image_alt: 'A collage of Code.org puzzles showing an explorer, gems, and a flower.'
+    coursec:
+      image_alt: 'A collage of Code.org puzzles showing a squirrel, binary numbers, and a red bird from the game Angry Birds.'
+    coursed:
+      image_alt: 'A collage of Code.org puzzles showing a bee, flowers, honey, and a green pig from the game Angry Birds.'
+    coursee:
+      image_alt: 'A collage of Code.org puzzles showing a person holding a shovel, pumpkin, orchard, and cow.'
+    coursef:
+      image_alt: 'A collage of Code.org puzzles showing colorful geometric shapes, a red pirate, and an artist.'
     dance-2019:
       title: 'Dance Party'
-    hello-world:
-      title: 'Hello World'
-      body: 'Choose from four fun themes to code interactive characters in a world you create.'
-    poem-art:
-      title: 'Poem Art'
-      body: 'Express yourself! Use code to create animated poems.'
-    hoc:
-      title: 'Classic Maze'
-      body: 'Try the basics of computer science. Millions have given it a shot.'
+      image_alt: 'A happy cat, sloth, and shark dancing.'
+    dance-2022:
+      image_alt: 'A green alien and robot dancing with Saturn in the background.'
+    dance:
+      title: 'Dance Party'
+      image_alt: 'A cool cat and happy shark dancing at a party.'
+    donate:
+      image_alt: 'A child pointing at a laptop screen showing a Code.org puzzle.'
+    elementary:
+      image_alt: 'A bumble bee and squirrel standing in a field in front of a rainbow.'
+    express:
+      image_alt: 'Plants vs Zombies zombie and plant standing next to Flappy Bird.'
     flappy:
       title: 'Flappy Code'
       body: 'Wanna write your own game in less than 10 minutes? Try our Flappy Code tutorial!'
-    20-hour:
-      title: 'Accelerated Course'
-      body: 'This 20-hour course covers the core computer science and programming concepts in courses 2-4. The course is designed for use with ages 10-18. Check out courses 2-4 for a more complete experience!'
-      body_short: 'Learn basic computer science in an accelerated version of courses 2-4.'
-    hoc2014:
-      try_new_tutorial: 'Try our new Hour of Code tutorial in beta'
-      try_frozen: 'Artist with Anna and Elsa, from Frozen'
+      image_alt: 'A yellow bird flying between green pipes.'
+    frozen:
+      title: "Frozen"
+      image_alt: 'Anna and Elsa from the movie Frozen. Between them is an image of Anna drawing a pretty shape in the ice using her ice skates.'
     gallery:
       title: "Gallery"
       body: "View a gallery of app and artist images created by our users"
+      image_alt: 'An artist drawing a lot of circles and a cat, bat, and ghost standing in a winter holiday land.'
     gamelab:
       title: "Game Lab"
       body: "Game Lab is a programming environment where you can make simple animations and games with objects and characters that interact with each other."
       audience: "Ages 13+"
       cta: "Learn how"
+      image_alt: 'Many cartoon people and animals standing on a sidewalk and smiling.'
+    hello-world-food:
+      image_alt: 'Many animals, aliens and emojis orbiting the Earth.'
+    hello-world:
+      title: 'Hello World'
+      body: 'Choose from four fun themes to code interactive characters in a world you create.'
+    hero:
+      title: "Minecraft"
+      body: "Minecraft is back for the Hour of Code with a brand new activity! Journey through Minecraft with code."
+      image_alt: 'An Iron Golem from Minecraft standing in front of an overhead view of Anna solving a puzzle.'
     hoc-encryption:
       title: "Simple Encryption"
       body: "Students will learn techniques to create and crack encrypted messages."
+      image_alt: 'A bar graph of letter frequencies in the English language.'
+    hoc:
+      title: 'Classic Maze'
+      body: 'Try the basics of computer science. Millions have given it a shot.'
+      image_alt: 'A collage of images showing code, Mark Zuckerberg, and Angry Birds.'
+    hourofcode:
+      image_alt: 'A collage of images showing code, Mark Zuckerberg, and Angry Birds.'
+    hoc2014:
+      try_new_tutorial: 'Try our new Hour of Code tutorial in beta'
+      try_frozen: 'Artist with Anna and Elsa, from Frozen'
+    infinity:
+      title: "Infinity Play Lab"
+      body: "Use Play Lab to create a story or game starring Disney Infinity characters."
+      image_alt: 'Five characters from the Froze, Tangled, and Big Hero 6 standing together.'
+    map:
+      image_alt: 'A grey image of the United States with about 20 states highlighted in purple.'
+    mc_escape:
+      image_alt: 'A Minecraft character wearing a top hat and monocle while opening a treasure chest full of emeralds.'
+    mc:
+      image_alt: 'Anna and Steve from Minecraft standing in front of a Code.org Minecraft puzzle.'
+    minecraft:
+      title: "Minecraft"
+      body: "Explore a Minecraft world through code."
+      image_alt: 'Anna and Steve from Minecraft standing in front of a Code.org Minecraft puzzle.'
+    minecraft2016:
+      title: "Minecraft"
+      body: "Program animals and other Minecraft creatures in your own version of Minecraft."
+    oceans:
+      image_alt: 'A robot in the ocean scanning various sea creatures.'
+    playlab:
+      image_alt: 'An image collage showing a blue cat, goofy dog, and prehistoric weasel.'
+    poem-art:
+      title: 'Poem Art'
+      body: 'Express yourself! Use code to create animated poems.'
+      image_alt: 'A hipster squid performing on a stage.'
+    pre-express-2017:
+      image_alt: 'A dog and unicorn standing in front of a tree made of puzzle pieces.'
+    pre-express-2018:
+      image_alt: 'A dog and unicorn standing in front of a tree made of puzzle pieces.'
+    pre-express-2019:
+      image_alt: 'A dog and unicorn standing in front of a tree made of puzzle pieces.'
+    pre-express:
+      image_alt: 'A dog and unicorn standing in front of a tree made of puzzle pieces.'
+    sports:
+      title: "Sports"
+      body: "Make a basketball game or mix and match across sports."
+      image_alt: 'The NBA and WNBA logos displayed next to a football, soccer ball, hockey puck, and basketball.'
+    starwars:
+      title: "Star Wars"
+      image_alt: 'R2-D2, Leia, Rey, and BB-8 standing in a desert.'
+    text-compression:
+      title: "Text Compression"
+      body: "In this lesson, students will use the Text Compression Widget to compress text by substituting patterns with symbols."
+      image_alt: 'Text being compressed by replacing whole words with a single symbol.'
     weblab:
       title: "Web Lab (beta)"
       body: "Web Lab is a programming environment where you can make simple web pages using HTML and CSS. Design your web pages and share your site in seconds."
       audience: "Ages 13+"
       cta: "Learn how"
-    frozen:
-      title: "Frozen"
-    starwars:
-      title: "Star Wars"
-    infinity:
-      title: "Infinity Play Lab"
-      body: "Use Play Lab to create a story or game starring Disney Infinity characters."
-    minecraft:
-      title: "Minecraft"
-      body: "Explore a Minecraft world through code."
-    minecraft2016:
-      title: "Minecraft"
-      body: "Program animals and other Minecraft creatures in your own version of Minecraft."
-    aquatic:
-      title: "Minecraft"
-    hero:
-      title: "Minecraft"
-      body: "Minecraft is back for the Hour of Code with a brand new activity! Journey through Minecraft with code."
-    sports:
-      title: "Sports"
-      body: "Make a basketball game or mix and match across sports."
-    text-compression:
-      title: "Text Compression"
-      body: "In this lesson, students will use the Text Compression Widget to compress text by substituting patterns with symbols."
-    unplugged:
-      title: "Unplugged Lessons"
-      audience: "Ages 4+"
-      body: "We've compiled a list of unplugged lessons for you to use in your classroom. Now you can teach the fundamentals of computer science, whether you have computers in your classroom or not! Try using these lessons as a stand-alone course or as complementary lessons for any computer science course."
-      body_short: "If you don't have computers, try these unplugged lessons in your classroom."
-    unplugged_conditionals:
-      title: "Conditionals"
-      body: "Learn about algorithms and conditional statements in this “unplugged” activity using a deck of cards."
+      image_alt: 'A computer screen displaying HTML code.'
     widgets:
       title: "Widgets"
       body: "Students can explore concepts from our Computer Science Principles course hands-on using these digital tools. Use the widgets on their own, or create a single-concept lesson for your class."
       audience: "Ages 14+"
       cta: "Learn how"
+    unplugged_conditionals:
+      title: "Conditionals"
+      body: "Learn about algorithms and conditional statements in this “unplugged” activity using a deck of cards."
+    unplugged:
+      title: "Unplugged Lessons"
+      audience: "Ages 4+"
+      body: "We've compiled a list of unplugged lessons for you to use in your classroom. Now you can teach the fundamentals of computer science, whether you have computers in your classroom or not! Try using these lessons as a stand-alone course or as complementary lessons for any computer science course."
+      body_short: "If you don't have computers, try these unplugged lessons in your classroom."
+    20-hour:
+      title: 'Accelerated Course'
+      body: 'This 20-hour course covers the core computer science and programming concepts in courses 2-4. The course is designed for use with ages 10-18. Check out courses 2-4 for a more complete experience!'
+      body_short: 'Learn basic computer science in an accelerated version of courses 2-4.'
   landing:
     prerelease_tutorial: "This tutorial is in **beta**.  It is subject to revision as feedback is received and improvements are made."
     report_bug: "Report Bug"

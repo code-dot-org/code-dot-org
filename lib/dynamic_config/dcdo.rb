@@ -41,7 +41,7 @@ class DCDOBase < DynamicConfigBase
     # 'my-new-feature': DCDO.get('my-new-feature', false)
     {
       'frontend-i18n-tracking': DCDO.get('frontend-i18n-tracking', false),
-      'clearerSignUpUserType': DCDO.get('clearerSignUpUserType', false),
+      clearerSignUpUserType: DCDO.get('clearerSignUpUserType', false),
       'thebadguys-promotion': DCDO.get('thebadguys-promotion', false),
       'thebadguys-projects-page': DCDO.get('thebadguys-projects-page', false),
       'csa-homepage-banner-2022': DCDO.get('csa-homepage-banner-2022', false),
@@ -50,7 +50,8 @@ class DCDOBase < DynamicConfigBase
       'ceos-for-cs-banner-govs': DCDO.get('ceos-for-cs-banner-govs', false),
       'webserial-on-chromeos': DCDO.get('webserial-on-chromeos', true),
       'cs-leaders-prize': DCDO.get('cs-leaders-prize', false),
-      'csta-form-extension': DCDO.get('csta-form-extension', false)
+      'csta-form-extension': DCDO.get('csta-form-extension', false),
+      'pl-launch-hero-banner': DCDO.get('pl-launch-hero-banner', false)
     }
   end
 end

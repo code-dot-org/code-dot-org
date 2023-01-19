@@ -1,6 +1,11 @@
 import {
+  newTrackAtMeasure,
+  newTrackAtStart,
+  newTrackOnTrigger,
   playSound,
   playSoundAtCurrentLocation,
+  playSoundInTrack,
+  restInTrack,
   setCurrentLocationNextMeasure
 } from './blocks/samples';
 import {forLoop} from './blocks/control';
@@ -14,7 +19,12 @@ const blockList = [
   playSound,
   playSoundAtCurrentLocation,
   setCurrentLocationNextMeasure,
-  forLoop
+  forLoop,
+  newTrackAtStart,
+  newTrackAtMeasure,
+  newTrackOnTrigger,
+  playSoundInTrack,
+  restInTrack
 ];
 
 const MUSIC_BLOCKS = {};

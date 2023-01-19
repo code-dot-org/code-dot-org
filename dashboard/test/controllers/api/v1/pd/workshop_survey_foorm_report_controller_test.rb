@@ -33,7 +33,7 @@ module Api::V1::Pd
       assert_equal 'CS Discoveries', response[:course_name]
       assert_not_empty response[:questions]
       assert_not_empty response[:this_workshop]
-      assert_equal 4, response[:this_workshop]['Day 5'.to_sym][:general][:response_count]
+      assert_equal 4, response[:this_workshop][:"Day 5"][:general][:response_count]
 
       assert_not_empty response[:workshop_rollups]
       general_rollup = response[:workshop_rollups][:general]
@@ -210,7 +210,7 @@ module Api::V1::Pd
 
       assert_equal 7, response[:this_workshop]['Post Workshop'][:facilitator][:response_count][facilitator_1_id]
 
-      overall_facilitator = response[:this_workshop]['Post Workshop'][:facilitator]['surveys/pd/workshop_csf_intro_post_test.0'.to_sym]
+      overall_facilitator = response[:this_workshop]['Post Workshop'][:facilitator][:"surveys/pd/workshop_csf_intro_post_test.0"]
       facilitator_effectiveness = overall_facilitator[:facilitator_effectiveness]
       # Verify see results for facilitator 1
       assert_not_nil facilitator_effectiveness[facilitator_1_id][:on_track]

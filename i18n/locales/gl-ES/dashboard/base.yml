@@ -533,26 +533,24 @@ gl:
   upsell:
     applab:
       title: 'Laboratorio de aplicacións'
-    hoc:
-      title: 'Labirinto clásico'
-      body: 'Experimente as nocións básicas da informática. Millóns de persoas xa as experimentaron.'
+    aquatic:
+      title: "Minecraft"
     flappy:
       title: 'Código do Flappy bird'
       body: 'Queer crear o seu proprio xogo en menos de 10 minutos? Experimente o noso titorial sobre o Código do Flappy bird!'
-    20-hour:
-      title: 'Curso acelerado'
-      body: 'Este curso de 20 horas introduce o núcleo da informática e os conceptos da programación. O curso está deseñado para o seu uso en clase para os cursos de primaria pero é divertido aprender con calquera idade!'
-      body_short: 'Aprenda os fundamentos da informática en unha versión acelerada dos cursos 2 a 4.'
-    hoc2014:
-      try_new_tutorial: 'Experimente o noso novo titorial da Hora do Código na versión beta'
-      try_frozen: 'O Artista con Anna e Elsa, do filme Frozen'
+    frozen:
+      title: "Frozen"
     gallery:
       title: "Galería"
       body: "Vexa unha galería de aplicacións e imaxes artísticas creadas polos nosos usuarios"
-    frozen:
-      title: "Frozen"
-    starwars:
-      title: "Star Wars"
+    hero:
+      title: "Minecraft"
+    hoc:
+      title: 'Labirinto clásico'
+      body: 'Experimente as nocións básicas da informática. Millóns de persoas xa as experimentaron.'
+    hoc2014:
+      try_new_tutorial: 'Experimente o noso novo titorial da Hora do Código na versión beta'
+      try_frozen: 'O Artista con Anna e Elsa, do filme Frozen'
     infinity:
       title: "Laboratorio infinito"
       body: "Utiliza o laboratorio de xogos para crear unha historia ou xogo protagonizada por personaxes de Disney Infinity."
@@ -561,14 +559,16 @@ gl:
       body: "Explora o mundo de Minecraft a través do código"
     minecraft2016:
       title: "Minecraft"
-    aquatic:
-      title: "Minecraft"
-    hero:
-      title: "Minecraft"
-    unplugged_conditionals:
-      title: "Condicionais"
+    starwars:
+      title: "Star Wars"
     widgets:
       audience: "A partir de 14 anos"
+    unplugged_conditionals:
+      title: "Condicionais"
+    20-hour:
+      title: 'Curso acelerado'
+      body: 'Este curso de 20 horas introduce o núcleo da informática e os conceptos da programación. O curso está deseñado para o seu uso en clase para os cursos de primaria pero é divertido aprender con calquera idade!'
+      body_short: 'Aprenda os fundamentos da informática en unha versión acelerada dos cursos 2 a 4.'
   landing:
     report_bug: "Comunicar erro"
     support: "Obter axuda"
