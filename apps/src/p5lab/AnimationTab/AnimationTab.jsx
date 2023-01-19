@@ -12,6 +12,7 @@ import PiskelEditor from './PiskelEditor';
 import * as shapes from '../shapes';
 import {P5LabType} from '@cdo/apps/p5lab/constants';
 import i18n from '@cdo/locale';
+import {P5LabInterfaceMode} from '../constants.js';
 
 /**
  * Root of the animation editor interface mode for GameLab
@@ -24,12 +25,19 @@ class AnimationTab extends React.Component {
     hideUploadOption: PropTypes.bool.isRequired,
     hideAnimationNames: PropTypes.bool.isRequired,
     hideBackgrounds: PropTypes.bool.isRequired,
+    hideCostumes: PropTypes.bool.isRequired,
     labType: PropTypes.oneOf(Object.keys(P5LabType)).isRequired,
     pickerType: PropTypes.oneOf(Object.values(PICKER_TYPE)).isRequired,
+    interfaceMode: PropTypes.oneOf([
+      P5LabInterfaceMode.CODE,
+      P5LabInterfaceMode.ANIMATION,
+      P5LabInterfaceMode.BACKGROUND
+    ]).isRequired,
 
     // Provided by Redux
     columnSizes: PropTypes.arrayOf(PropTypes.number).isRequired,
-    selectedAnimation: shapes.AnimationKey
+    selectedAnimation: shapes.AnimationKey,
+    defaultQuery: PropTypes.object
   };
 
   render() {
@@ -37,6 +45,8 @@ class AnimationTab extends React.Component {
     if (this.props.selectedAnimation) {
       hidePiskelStyle = {visibility: 'hidden'};
     }
+    const hideCostumes =
+      this.props.interfaceMode === P5LabInterfaceMode.BACKGROUND;
     return (
       <div>
         <ResizablePanes
@@ -48,6 +58,7 @@ class AnimationTab extends React.Component {
             <P5LabVisualizationHeader labType={this.props.labType} />
             <AnimationList
               hideBackgrounds={this.props.hideBackgrounds}
+              hideCostumes={hideCostumes}
               labType={this.props.labType}
             />
           </div>
@@ -64,10 +75,11 @@ class AnimationTab extends React.Component {
             libraryManifest={this.props.libraryManifest}
             hideUploadOption={this.props.hideUploadOption}
             hideAnimationNames={this.props.hideAnimationNames}
-            navigable={true}
-            canDraw={true}
+            navigable={!this.props.hideCostumes}
             hideBackgrounds={this.props.hideBackgrounds}
+            hideCostumes={hideCostumes}
             pickerType={this.props.pickerType}
+            defaultQuery={this.props.defaultQuery}
           />
         )}
       </div>
@@ -86,7 +98,7 @@ const styles = {
   animationsColumn: {
     display: 'flex',
     flexDirection: 'column',
-    minWidth: 190,
+    minWidth: 240,
     maxWidth: 300
   },
   editorColumn: {
