@@ -147,7 +147,7 @@ module SignUpTracking
     end_sign_up_tracking session if user.persisted?
   end
 
-  def self.log_gender_input_type_started(session, gender_input_type, locale, page)
+  def self.log_gender_input_type_started(session, gender_input_type, locale, flow)
     # We don't need new tracking events if they user has already started the flow recently.
     return if session[:gender_input_uid_expiration]&.future?
     # Identifier for tracking events for a single user.
@@ -163,13 +163,13 @@ module SignUpTracking
         data_json: {
           input_type: gender_input_type,
           locale: locale,
-          page: page
+          flow: flow
         }.to_json
       }
     )
   end
 
-  def self.log_gender_input_type_account_created(session, gender, gender_input_type, locale, page)
+  def self.log_gender_input_type_account_created(session, gender, gender_input_type, locale, flow, user_type)
     # Limit the gender to 100 characters, this should be sufficient for all languages.
     gender = gender&.truncate(100, omission: '')
     FirehoseClient.instance.put_record(
@@ -183,7 +183,8 @@ module SignUpTracking
           input_type: gender_input_type,
           gender: gender,
           locale: locale,
-          page: page
+          flow: flow,
+          user_type: user_type
         }.to_json
       }
     )
