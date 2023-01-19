@@ -17,14 +17,10 @@ document.addEventListener('DOMContentLoaded', () => {
   const mountPoint = document.createElement('div');
   document.body.appendChild(mountPoint);
   const store = getStore();
-  function unmount() {
-    ReactDOM.unmountComponentAtNode(mountPoint);
-    document.body.removeChild(mountPoint);
-  }
 
   ReactDOM.render(
     <Provider store={store}>
-      <InitialSectionCreationInterstitial onClose={unmount} />
+      <InitialSectionCreationInterstitial />
     </Provider>,
     mountPoint
   );

@@ -10,8 +10,6 @@ import {beginEditingSection} from '@cdo/apps/templates/teacherDashboard/teacherS
 
 class InitialSectionCreationInterstitial extends Component {
   static propTypes = {
-    onClose: PropTypes.func,
-    isOpen: PropTypes.bool,
     // Connected to Redux
     beginEditingSection: PropTypes.func.isRequired
   };
@@ -20,18 +18,13 @@ class InitialSectionCreationInterstitial extends Component {
     super(props);
 
     this.state = {
-      isOpen: props.isOpen || true
+      isOpen: true
     };
   }
 
   beginEditingSection = () => {
-    this.closeModal();
-    this.props.beginEditingSection();
-  };
-
-  closeModal = () => {
     this.setState({isOpen: false});
-    this.props.onClose();
+    this.props.beginEditingSection();
   };
 
   render() {
@@ -40,7 +33,7 @@ class InitialSectionCreationInterstitial extends Component {
     return (
       <BaseDialog
         useUpdatedStyles
-        handleClose={this.closeModal}
+        handleClose={() => this.setState({isOpen: false})}
         isOpen={isOpen}
       >
         <PadAndCenter>
@@ -55,7 +48,7 @@ class InitialSectionCreationInterstitial extends Component {
               <Button
                 text={i18n.goToMyDashboard()}
                 color={Button.ButtonColor.gray}
-                onClick={this.closeModal}
+                onClick={() => this.setState({isOpen: false})}
               />
               <Button
                 text={i18n.createClassSections()}
