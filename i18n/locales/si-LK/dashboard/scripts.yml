@@ -1396,6 +1396,13 @@ si:
           lesson_groups:
             lessonGroup-2:
               display_name: අන්තර්ගතය
+        csa3-2023:
+          lessons:
+            lesson-3:
+              name: ලූපයන් සඳහා
+          lesson_groups:
+            lessonGroup-2:
+              display_name: අන්තර්ගතය
         csp1-2023:
           lesson_groups:
             csp_unit1_2020:

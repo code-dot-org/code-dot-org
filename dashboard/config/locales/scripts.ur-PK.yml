@@ -982,6 +982,10 @@ ur:
           lessons:
             lesson-4:
               name: متغیرات
+        csa3-2023:
+          lessons:
+            lesson-1:
+              name: ایک جہتی (1D) صفیں
         hello-world-space-2022:
           title: 'ہیلو ورلڈ: خلائی'
         hello-world-soccer-2022:

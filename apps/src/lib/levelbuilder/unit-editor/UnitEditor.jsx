@@ -78,7 +78,6 @@ class UnitEditor extends React.Component {
     ),
     initialFamilyName: PropTypes.string,
     initialVersionYear: PropTypes.string,
-    initialIsMakerUnit: PropTypes.bool,
     unitFamilies: PropTypes.arrayOf(PropTypes.string).isRequired,
     versionYearOptions: PropTypes.arrayOf(PropTypes.string).isRequired,
     isLevelbuilder: PropTypes.bool,
@@ -141,7 +140,6 @@ class UnitEditor extends React.Component {
       curriculumUmbrella: this.props.initialCurriculumUmbrella,
       versionYear: this.props.initialVersionYear,
       savedVersionYear: this.props.initialVersionYear,
-      isMakerUnit: this.props.initialIsMakerUnit,
       tts: this.props.initialTts,
       title: this.props.i18nData.title || '',
       descriptionAudience: this.props.i18nData.descriptionAudience || '',
@@ -355,8 +353,7 @@ class UnitEditor extends React.Component {
       ),
       is_migrated: this.props.isMigrated,
       include_student_lesson_plans: this.state.includeStudentLessonPlans,
-      use_legacy_lesson_plans: this.state.useLegacyLessonPlans,
-      is_maker_unit: this.state.isMakerUnit
+      use_legacy_lesson_plans: this.state.useLegacyLessonPlans
     };
 
     $.ajax({
@@ -568,27 +565,6 @@ class UnitEditor extends React.Component {
                 this.setState({ttsDialogOpen: false, tts: !this.state.tts});
               }}
             />
-          )}
-          {this.props.isCSDCourseOffering && (
-            <label>
-              Is a Maker Unit
-              <input
-                className="maker-unit-checkbox"
-                type="checkbox"
-                checked={this.state.isMakerUnit}
-                style={styles.checkbox}
-                onChange={() =>
-                  this.setState({isMakerUnit: !this.state.isMakerUnit})
-                }
-              />
-              <HelpTip>
-                <p>
-                  If checked, this unit is in CSD and uses the maker toolkit.
-                  Checking this will add this unit to the list of units that can
-                  show up on the maker homepage.
-                </p>
-              </HelpTip>
-            </label>
           )}
           <label>
             Supported locales

@@ -2741,6 +2741,15 @@ ga:
               display_name: Ábhar
             lessonGroup-4:
               display_name: Ceachtanna Malartacha
+        csa3-2023:
+          lessons:
+            lesson-3:
+              name: Lúba "Do Gach"
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Ábhar
+            lessonGroup-4:
+              display_name: Ceachtanna Malartacha
         csd4-2023:
           lesson_groups:
             lessonGroup-2:
