@@ -92,7 +92,7 @@ module.exports = function(testCollection, testData, dataItem, done) {
             console.log(`in validateResult setTimeout ${new Date()}`);
             assert(testData.customValidator(assert), 'Custom validator failed');
             resolve();
-          }, 5500)
+          }, 500)
         );
       }
       console.log(`in validateResult after customValidator ${new Date()}`);
