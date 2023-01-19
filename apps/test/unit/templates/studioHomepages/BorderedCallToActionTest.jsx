@@ -34,7 +34,7 @@ describe('BorderedCallToAction', () => {
     it('renders a gray button with text', () => {
       const button = borderedCtA.findOne('Button');
       expect(button.props.text).to.equal(buttonText);
-      expect(button.props.color).to.equal('brandSecondaryDefault');
+      expect(button.props.color).to.equal('gray');
     });
 
     it('has a dashed border', () => {
