@@ -9,7 +9,7 @@
   fieldset div label {
     display: inline-block;
     background-color: $white;
-    border: 2px solid $black;
+    border: 1px solid $black;
     color: $black;
     border-radius: 25px;
     white-space: nowrap;
@@ -29,13 +29,28 @@
     opacity: 0;
   }
 
+  fieldset div input[type="checkbox"]:hover + label {
+    background-color: $lightest_gray; // FIXME
+  }
+
+  fieldset div input[type="checkbox"]:focus + label {
+    border: 1px solid #e9a1ff; // FIXME
+    background-color: $lightest_gray; // FIXME
+    outline: 2px solid #e9a1ff; // FIXME
+  }
+
   fieldset div input[type="checkbox"]:checked + label {
-    border: 2px solid $teal;
+    border: 1px solid transparent;
     background-color: $teal;
     color: #fff;
   }
 
-  fieldset div input[type="checkbox"]:focus + label {
-    border: 2px solid #e9a1ff; // FIXME
+  fieldset div input[type="checkbox"]:checked:hover + label {
+    background-color: $dark_teal; // FIXME
+  }
+
+  fieldset div input[type="checkbox"]:checked:focus + label {
+    border: 1px solid #e9a1ff; // FIXME
+    background-color: $dark_teal; // FIXME
   }
 }
