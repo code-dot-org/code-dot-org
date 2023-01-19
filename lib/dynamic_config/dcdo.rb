@@ -42,8 +42,6 @@ class DCDOBase < DynamicConfigBase
     {
       'frontend-i18n-tracking': DCDO.get('frontend-i18n-tracking', false),
       clearerSignUpUserType: DCDO.get('clearerSignUpUserType', false),
-      'thebadguys-promotion': DCDO.get('thebadguys-promotion', false),
-      'thebadguys-projects-page': DCDO.get('thebadguys-projects-page', false),
       'csa-homepage-banner-2022': DCDO.get('csa-homepage-banner-2022', false),
       'csa-skinny-banner': DCDO.get('csa-skinny-banner', false),
       'webserial-on-chromeos': DCDO.get('webserial-on-chromeos', true),
