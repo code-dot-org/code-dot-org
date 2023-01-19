@@ -77,8 +77,11 @@ FIRST_BOOT=/etc/chef/first-boot.json
 mkdir -p $(dirname $FIRST_BOOT)
 cat <<JSON > $FIRST_BOOT
 {
-<% unless load_balancer -%>
+
   "cdo-nginx": {
+    "dashboard_hostname": '<%=studio_subdomain%>',
+    "pegasus_hostname": '<%=subdomain%>',
+<% unless load_balancer -%>
     "ssl_cert": {
       "content": "$CERT"
     },
@@ -88,8 +91,9 @@ cat <<JSON > $FIRST_BOOT
     "ssl_key": {
       "content": "$KEY"
     }
-  },
 <% end -%>
+  },
+
   "cdo-repository": {
     <% if commit %>
       "revision": "<%=commit%>",
