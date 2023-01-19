@@ -10,7 +10,7 @@ import {RegionalPartnerMiniContactPopupLink} from '@cdo/apps/code-studio/pd/regi
 import {LabelsContext} from '../../form_components_func/LabeledFormComponent';
 import {LabeledRadioButtons} from '../../form_components_func/labeled/LabeledRadioButtons';
 import {FormContext} from '../../form_components_func/FormComponent';
-import {analyticsReporter, EVENTS} from '@cdo/apps/lib/util/AnalyticsReporter';
+import analyticsReporter, {EVENTS} from '@cdo/apps/lib/util/AnalyticsReporter';
 
 const CSD_URL = 'https://code.org/educate/csd';
 const CSP_URL = 'https://code.org/educate/csp';

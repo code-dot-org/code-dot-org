@@ -14,7 +14,7 @@ import {currentLocation} from '@cdo/apps/utils';
 import PropTypes from 'prop-types';
 import queryString from 'query-string';
 import $ from 'jquery';
-import {analyticsReporter, EVENTS} from '@cdo/apps/lib/util/AnalyticsReporter';
+import analyticsReporter, {EVENTS} from '@cdo/apps/lib/util/AnalyticsReporter';
 
 const WorkshopCard = props => {
   return (

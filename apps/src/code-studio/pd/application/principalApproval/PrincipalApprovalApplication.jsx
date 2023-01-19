@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import FormController from '../../form_components_func/FormController';
 import PrincipalApprovalComponent from './PrincipalApprovalComponent';
-import {analyticsReporter, EVENTS} from '@cdo/apps/lib/util/AnalyticsReporter';
+import analyticsReporter, {EVENTS} from '@cdo/apps/lib/util/AnalyticsReporter';
 
 const PrincipalApprovalApplication = props => {
   const getInitialData = () => ({

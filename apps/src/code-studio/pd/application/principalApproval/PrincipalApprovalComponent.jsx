@@ -28,7 +28,7 @@ import {
 } from '../../form_components_func/labeled/LabeledRadioButtons';
 import {LabelsContext} from '../../form_components_func/LabeledFormComponent';
 import {useRegionalPartner} from '../../components/useRegionalPartner';
-import {analyticsReporter, EVENTS} from '@cdo/apps/lib/util/AnalyticsReporter';
+import analyticsReporter, {EVENTS} from '@cdo/apps/lib/util/AnalyticsReporter';
 
 const MANUAL_SCHOOL_FIELDS = [
   'schoolName',

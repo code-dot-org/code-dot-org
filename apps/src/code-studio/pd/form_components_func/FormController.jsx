@@ -7,7 +7,7 @@ import {isEqual, omit} from 'lodash';
 import i18n from '@cdo/locale';
 import usePrevious from '@cdo/apps/util/usePrevious';
 import Spinner from '@cdo/apps/code-studio/pd/components/spinner';
-import {analyticsReporter, EVENTS} from '@cdo/apps/lib/util/AnalyticsReporter';
+import analyticsReporter, {EVENTS} from '@cdo/apps/lib/util/AnalyticsReporter';
 
 const defaultSubmitButtonText = i18n.submit();
 

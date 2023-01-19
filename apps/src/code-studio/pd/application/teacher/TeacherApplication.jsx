@@ -12,7 +12,7 @@ import ImplementationPlan from './ImplementationPlan';
 import ProfessionalLearningProgramRequirements from './ProfessionalLearningProgramRequirements';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 import {reload} from '@cdo/apps/utils';
-import {analyticsReporter, EVENTS} from '@cdo/apps/lib/util/AnalyticsReporter';
+import analyticsReporter, {EVENTS} from '@cdo/apps/lib/util/AnalyticsReporter';
 /* global ga */
 
 const submitButtonText = 'Complete and Send';
