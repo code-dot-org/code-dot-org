@@ -89,8 +89,10 @@ module.exports = function(testCollection, testData, dataItem, done) {
       if (testData.customValidator) {
         // Wait some amount of time for long-running code to complete. (E.g. k1_6.js).
         // Increase the timer below if things start failing here.
-        await new Promise(resolve =>
-          setTimeout(() => {
+        console.log(`customValidator was set for '${testData.description}'`);
+        await new Promise(resolve => {
+          console.log(`in promise for '${testData.description}'`);
+          return setTimeout(() => {
             console.log(
               `in validateResult setTimeout ${new Date()} for '${
                 testData.description
@@ -98,8 +100,8 @@ module.exports = function(testCollection, testData, dataItem, done) {
             );
             assert(testData.customValidator(assert), 'Custom validator failed');
             resolve();
-          }, 2500)
-        );
+          }, 2500);
+        });
       }
       console.log(
         `in validateResult after customValidator ${new Date()} for '${
