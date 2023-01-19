@@ -21,7 +21,8 @@ class P5LabVisualizationHeader extends React.Component {
     labType: PropTypes.oneOf(Object.keys(P5LabType)).isRequired,
     interfaceMode: PropTypes.oneOf([
       P5LabInterfaceMode.CODE,
-      P5LabInterfaceMode.ANIMATION
+      P5LabInterfaceMode.ANIMATION,
+      P5LabInterfaceMode.BACKGROUND
     ]).isRequired,
     allowAnimationMode: PropTypes.bool.isRequired,
     onInterfaceModeChange: PropTypes.func.isRequired,
@@ -41,7 +42,10 @@ class P5LabVisualizationHeader extends React.Component {
         // Fire a window resize event to tell Game Lab (Droplet) to rerender.
         setTimeout(() => utils.fireResizeEvent(), 0);
       }
-    } else if (mode === P5LabInterfaceMode.ANIMATION) {
+    } else if (
+      mode === P5LabInterfaceMode.ANIMATION ||
+      mode === P5LabInterfaceMode.BACKGROUND
+    ) {
       if (this.props.isBlockly) {
         Blockly.WidgetDiv.hide();
         Blockly.DropDownDiv?.hide();
@@ -96,6 +100,16 @@ class P5LabVisualizationHeader extends React.Component {
                   {this.props.isBlockly
                     ? msg.costumeMode()
                     : msg.animationMode()}
+                </button>
+              )}
+              {allowAnimationMode && this.props.isBlockly && (
+                <button
+                  style={styles.buttonFocus}
+                  type="button"
+                  value={P5LabInterfaceMode.BACKGROUND}
+                  id="backgroundMode"
+                >
+                  {msg.backgroundMode()}
                 </button>
               )}
             </ToggleGroup>

@@ -8,10 +8,9 @@ import {APP_HEIGHT, P5LabInterfaceMode} from '../constants';
 import {TOOLBOX_EDIT_MODE} from '../../constants';
 import {animationSourceUrl} from '../redux/animationList';
 import {changeInterfaceMode} from '../actions';
-import {Goal, showBackground} from '../redux/animationPicker';
 import i18n from '@cdo/locale';
 import spritelabMsg from '@cdo/spritelab/locale';
-function animations(areBackgrounds) {
+function animations(includeBackgrounds) {
   const animationList = getStore().getState().animationList;
   if (!animationList || animationList.orderedKeys.length === 0) {
     console.warn('No sprites available');
@@ -20,8 +19,12 @@ function animations(areBackgrounds) {
   let results = animationList.orderedKeys
     .filter(key => {
       const animation = animationList.propsByKey[key];
-      const isBackground = (animation.categories || []).includes('backgrounds');
-      return areBackgrounds ? isBackground : !isBackground;
+      const animationIsBackground = (animation.categories || []).includes(
+        'backgrounds'
+      );
+      return includeBackgrounds
+        ? animationIsBackground
+        : !animationIsBackground;
     })
     .map(key => {
       const animation = animationList.propsByKey[key];
@@ -36,16 +39,16 @@ function animations(areBackgrounds) {
         return [url, `"${animation.name}"`];
       }
     });
-  // In case either all backgrounds or all costumes are missing and we request them, this allows the "create
-  // new sprite" and "set background as" blocks to continue working without crashing.
-  // When they are used without sprites being set, the image dropdown for those blocks will be empty except
-  // for the "More" button. The user will have to add sprites/backgrounds to this dropdown one by one using the "More" button.
+  // In case either all backgrounds or all costumes are missing and we request them, this allows blocks
+  // with backgroundPicker or costumePicker custom input types to continue working without crashing.
+  // When they are used without animations, the image dropdown for those blocks will be empty except
+  // for the "Costumes" or "Backgrounds" button
   if (results.length === 0) {
     return [['sprites missing', 'null']];
   }
   return results;
 }
-function sprites() {
+function costumeList() {
   return animations(false);
 }
 function backgroundList() {
@@ -195,7 +198,7 @@ const customInputTypes = {
       currentInputRow
         .appendField(inputConfig.label)
         .appendField(
-          new Blockly.FieldImageDropdown(sprites, 32, 32, buttons),
+          new Blockly.FieldImageDropdown(costumeList, 32, 32, buttons),
           inputConfig.name
         );
     },
@@ -212,9 +215,11 @@ const customInputTypes = {
       ) {
         buttons = [
           {
-            text: i18n.more(),
+            text: i18n.backgroundMode(),
             action: () => {
-              getStore().dispatch(showBackground(Goal.NEW_ANIMATION));
+              getStore().dispatch(
+                changeInterfaceMode(P5LabInterfaceMode.BACKGROUND)
+              );
             }
           }
         ];
@@ -373,7 +378,7 @@ const customInputTypes = {
 };
 
 export default {
-  sprites,
+  costumeList,
   customInputTypes,
   install(blockly, blockInstallOptions) {
     // Legacy style block definitions :(

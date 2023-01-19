@@ -19,7 +19,7 @@ import firehoseClient from '@cdo/apps/lib/util/firehose';
  * @enum {string} Export possible targets for animation picker for consumers
  *       to use when calling show().
  */
-export const Goal = makeEnum('NEW_ANIMATION', 'NEW_FRAME');
+export const Goal = makeEnum('NEW_ANIMATION', 'NEW_FRAME', 'NEW_BACKGROUND');
 
 const SHOW = 'AnimationPicker/SHOW';
 const SHOW_BACKGROUND = 'AnimationPicker/SHOW_BACKGROUND';

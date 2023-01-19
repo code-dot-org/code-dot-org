@@ -11,7 +11,7 @@ import AnimationPickerListItem, {
 import SearchBar from '@cdo/apps/templates/SearchBar';
 import {
   searchAssets,
-  filterOutBackgrounds
+  filterAnimations
 } from '@cdo/apps/code-studio/assets/searchAssets';
 import Button from '@cdo/apps/templates/Button';
 import {AnimationProps} from '@cdo/apps/p5lab/shapes';
@@ -35,7 +35,7 @@ export default class AnimationPickerBody extends React.Component {
     navigable: PropTypes.bool.isRequired,
     defaultQuery: PropTypes.object,
     hideBackgrounds: PropTypes.bool.isRequired,
-    canDraw: PropTypes.bool.isRequired,
+    hideCostumes: PropTypes.bool.isRequired,
     selectedAnimations: PropTypes.arrayOf(AnimationProps).isRequired,
     pickerType: PropTypes.string.isRequired
   };
@@ -48,16 +48,13 @@ export default class AnimationPickerBody extends React.Component {
 
   componentDidMount() {
     this.scrollListContainer = React.createRef();
-  }
-
-  UNSAFE_componentWillReceiveProps(nextProps) {
-    if (this.props.defaultQuery !== nextProps.defaultQuery) {
+    if (this.props.defaultQuery) {
       const currentPage = 0;
       const {results, pageCount} = this.searchAssetsWrapper(
         currentPage,
-        nextProps.defaultQuery
+        this.props.defaultQuery
       );
-      let nextQuery = nextProps.defaultQuery || {
+      let nextQuery = this.props.defaultQuery || {
         categoryQuery: '',
         searchQuery: ''
       };
@@ -105,9 +102,7 @@ export default class AnimationPickerBody extends React.Component {
       (!pageCount || nextPage <= pageCount)
     ) {
       let {results: newResults, pageCount} = this.searchAssetsWrapper(nextPage);
-      if (this.props.hideBackgrounds) {
-        newResults = filterOutBackgrounds(newResults);
-      }
+      newResults = filterAnimations(newResults, this.props);
 
       this.setState({
         results: [...(results || []), ...newResults],
@@ -122,9 +117,7 @@ export default class AnimationPickerBody extends React.Component {
     let {results, pageCount} = this.searchAssetsWrapper(currentPage, {
       searchQuery
     });
-    if (this.props.hideBackgrounds) {
-      results = filterOutBackgrounds(results);
-    }
+    results = filterAnimations(results, this.props);
     this.setState({searchQuery, currentPage, results, pageCount});
   };
 
@@ -134,9 +127,7 @@ export default class AnimationPickerBody extends React.Component {
     let {results, pageCount} = this.searchAssetsWrapper(currentPage, {
       categoryQuery
     });
-    if (this.props.hideBackgrounds) {
-      results = filterOutBackgrounds(results);
-    }
+    results = filterAnimations(results, this.props);
     this.setState({categoryQuery, currentPage, results, pageCount});
   };
 
@@ -263,7 +254,7 @@ export default class AnimationPickerBody extends React.Component {
                 </div>
               )}
             {((searchQuery === '' && categoryQuery === '') ||
-              (results.length === 0 && this.props.canDraw)) && (
+              results.length === 0) && (
               <div>
                 <AnimationPickerListItem
                   label={msg.animationPicker_drawYourOwn()}
