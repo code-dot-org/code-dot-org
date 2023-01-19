@@ -41,11 +41,7 @@ describe('The ScreenSelector component', () => {
         hasDesignMode: true
       })
     );
-    expect(
-      render()
-        .find('select')
-        .props().style.display
-    ).not.to.equal('none');
+    expect(render().find('select')).to.have.length(1);
   });
 
   it('will be hidden on pages without design mode', () => {
@@ -54,11 +50,7 @@ describe('The ScreenSelector component', () => {
         hasDesignMode: false
       })
     );
-    expect(
-      render()
-        .find('select')
-        .props().style.display
-    ).to.equal('none');
+    expect(render().find('select')).to.have.length(0);
   });
 
   it('will not be hidden on readonly pages', () => {
@@ -68,10 +60,6 @@ describe('The ScreenSelector component', () => {
         isReadOnlyWorkspace: true
       })
     );
-    expect(
-      render()
-        .find('select')
-        .props().style.display
-    ).not.to.equal('none');
+    expect(render().find('select')).to.have.length(1);
   });
 });

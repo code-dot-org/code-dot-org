@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import * as constants from './constants';
 import {connect} from 'react-redux';
-import classNames from 'classnames';
 import style from './screen-selector.module.scss';
 import * as elementUtils from './designElements/elementUtils';
 import * as screens from './redux/screens';
@@ -40,6 +39,10 @@ class ScreenSelector extends React.Component {
   };
 
   render() {
+    if (!this.props.hasDesignMode) {
+      return null;
+    }
+
     const options = this.props.screenIds.map(function(item) {
       return (
         <option key={item} value={item}>
@@ -70,10 +73,7 @@ class ScreenSelector extends React.Component {
     return (
       <select
         id="screenSelector"
-        className={classNames(
-          style.dropdown,
-          !this.props.hasDesignMode && style.hidden
-        )}
+        className={style.dropdown}
         value={this.props.currentScreenId || ''}
         onChange={this.handleChange}
         disabled={this.props.isRunning}
