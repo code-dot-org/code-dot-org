@@ -2,6 +2,8 @@ require_relative '../../deployment'
 require 'cdo/chat_client'
 require 'cdo/rake_utils'
 require 'cdo/db'
+require lib_dir 'cdo/data/logging/rake_task_event_logger'
+include TimedTaskWithLogging
 
 PDFConversionInfo = Struct.new(:url_path, :src_files, :output_pdf_path)
 
@@ -50,7 +52,7 @@ def generate_pdf_file(base_url, pdf_conversion_info, fetchfile_for_pdf)
 end
 
 desc 'Generate PDFs for *.makepdf files and all state-facts pages.'
-task :generate_pdfs do
+timed_task_with_logging :generate_pdfs do
   require_relative '../../pegasus/src/env'
   all_outfiles = []
   # Generate pdf for files that are appended with .makepdf

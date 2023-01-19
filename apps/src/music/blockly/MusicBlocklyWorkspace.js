@@ -57,6 +57,8 @@ export default class MusicBlocklyWorkspace {
       renderer: 'cdo_renderer_zelos'
     });
 
+    Blockly.setInfiniteLoopTrap();
+
     this.resizeBlockly();
 
     // Set initial blocks.
@@ -108,9 +110,11 @@ export default class MusicBlocklyWorkspace {
       }
 
       if (
-        [BlockTypes.TRIGGERED_AT, BlockTypes.TRIGGERED_AT_SIMPLE].includes(
-          block.type
-        )
+        [
+          BlockTypes.TRIGGERED_AT,
+          BlockTypes.TRIGGERED_AT_SIMPLE,
+          BlockTypes.NEW_TRACK_ON_TRIGGER
+        ].includes(block.type)
       ) {
         const id = block.getFieldValue('trigger');
         events[this.triggerIdToEvent(id)] = {
@@ -126,6 +130,8 @@ export default class MusicBlocklyWorkspace {
         this.codeHooks[hook.name] = hook.func;
       }
     );
+
+    console.log('executeSong', events);
 
     if (this.codeHooks.whenRunButton) {
       this.callUserGeneratedCode(this.codeHooks.whenRunButton);

@@ -51,6 +51,9 @@ class UnconnectedMusicView extends React.Component {
     this.codeHooks = {};
     this.musicBlocklyWorkspace = new MusicBlocklyWorkspace();
     this.soundUploader = new SoundUploader(this.player);
+    // Increments every time a trigger is pressed;
+    // used to differentiate tracks created on the same trigger
+    this.triggerCount = 0;
 
     // Set default for instructions position.
     let instructionsPosIndex = 1;
@@ -109,7 +112,10 @@ class UnconnectedMusicView extends React.Component {
     });
 
     this.loadInstructions().then(instructions => {
-      this.setState({instructions});
+      this.setState({
+        instructions: instructions,
+        showInstructions: !!instructions
+      });
     });
   }
 
@@ -147,10 +153,19 @@ class UnconnectedMusicView extends React.Component {
   };
 
   loadInstructions = async () => {
-    const libraryFilename = 'music-instructions.json';
-    const response = await fetch(baseUrl + libraryFilename);
-    const library = await response.json();
-    return library;
+    const blockMode = AppConfig.getValue('blocks');
+    const instructionsFilename =
+      !blockMode || blockMode === 'advanced'
+        ? 'music-instructions.json'
+        : `music-instructions-${blockMode}.json`;
+    const response = await fetch(baseUrl + instructionsFilename);
+    let instructions;
+    try {
+      instructions = await response.json();
+    } catch (error) {
+      instructions = null;
+    }
+    return instructions;
   };
 
   clearCode = () => {
@@ -185,8 +200,6 @@ class UnconnectedMusicView extends React.Component {
 
     this.executeSong();
 
-    console.log('onBlockSpaceChange', Blockly.getWorkspaceCode());
-
     this.analyticsReporter.onBlocksUpdated(
       this.musicBlocklyWorkspace.getAllBlocks()
     );
@@ -213,6 +226,7 @@ class UnconnectedMusicView extends React.Component {
     }
     this.analyticsReporter.onButtonClicked('trigger', {id});
     this.musicBlocklyWorkspace.executeTrigger(id);
+    this.triggerCount++;
   };
 
   toggleInstructions = fromKeyboardShortcut => {
@@ -227,7 +241,8 @@ class UnconnectedMusicView extends React.Component {
 
   executeSong = () => {
     this.musicBlocklyWorkspace.executeSong({
-      MusicPlayer: this.player
+      MusicPlayer: this.player,
+      getTriggerCount: () => this.triggerCount
     });
   };
 
@@ -243,8 +258,6 @@ class UnconnectedMusicView extends React.Component {
     this.player.playSong();
 
     this.setState({isPlaying: true, currentAudioElapsedTime: 0});
-
-    console.log('playSong', Blockly.getWorkspaceCode());
   };
 
   stopSong = () => {
@@ -255,6 +268,7 @@ class UnconnectedMusicView extends React.Component {
     this.player.clearTriggeredEvents();
 
     this.setState({isPlaying: false});
+    this.triggerCount = 0;
   };
 
   stopAllSoundsStillToPlay = () => {
