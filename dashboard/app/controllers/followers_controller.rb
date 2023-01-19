@@ -4,6 +4,7 @@
 # models).
 
 class FollowersController < ApplicationController
+  include User::GenderExperimentHelper
   before_action :load_section
 
   # Add custom flash types:
@@ -39,8 +40,11 @@ class FollowersController < ApplicationController
       redirect_to redirection
       return
     else
+      gender = params[:user][:gender]
+      gender_input_type = gender_input_type?(request, session.id.to_s)
       Retryable.retryable on: [Mysql2::Error, ActiveRecord::RecordNotUnique], matching: /Duplicate entry/ do
         if @user.save && @section&.add_student(@user)
+          SignUpTracking.log_gender_input_type_account_created(session, gender, gender_input_type, request.locale, 'section_signup')
           sign_in(:user, @user)
           @user.increment_section_attempts
           # Check for an exiting user, and redirect to course if found

@@ -3,14 +3,14 @@ require 'country_codes'
 require_relative '../../../../shared/middleware/helpers/experiments'
 
 module User::GenderExperimentHelper
-  # Determines if we should ask the user what there gender is. This is an experiment to see if our
-  # new gender questions get valuable responses from users.
+  # Determines if we should run the experiment of asking the user what there gender is. This is an
+  # experiment to see if our new gender questions get valuable responses from users.
   # When testing in the browser, you can use the query string param `?country_code=US` to test out
   # the US or another country experience.
   # When testing in the browser, you can use hte query string param `?gender_input_exp=true` to
   # test out the experience of the experiment being enabled. Leave the value empty if you want to
   # test the experience of having the experiment turned off.
-  def ask_gender?(request, session_id)
+  def ask_gender_experiment?(request, session_id)
     location = Geocoder.search(request.ip).try(:first)
     country_code = request.params['country_code'] || location&.country_code.to_s
     # This experiment is limited to the US. 'RD' is the code returned for localhost.

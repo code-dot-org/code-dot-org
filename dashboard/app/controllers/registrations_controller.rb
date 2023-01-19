@@ -103,7 +103,6 @@ class RegistrationsController < Devise::RegistrationsController
   def create
     gender = params[:user][:gender]
     gender_input_type = gender_input_type?(request, session.id.to_s)
-    SignUpTracking.log_gender_input_type(session, gender, gender_input_type, request.locale)
 
     Retryable.retryable on: [Mysql2::Error, ActiveRecord::RecordNotUnique], matching: /Duplicate entry/ do |retries, exception|
       if retries > 0
@@ -124,6 +123,7 @@ class RegistrationsController < Devise::RegistrationsController
       storage_id = take_storage_id_ownership_from_cookie(current_user.id)
       current_user.generate_progress_from_storage_id(storage_id) if storage_id
       PartialRegistration.delete session
+      SignUpTracking.log_gender_input_type_account_created(session, gender, gender_input_type, request.locale, 'email_signup')
     end
 
     SignUpTracking.log_sign_up_result resource, session

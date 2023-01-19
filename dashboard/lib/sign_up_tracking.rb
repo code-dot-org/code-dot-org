@@ -147,7 +147,29 @@ module SignUpTracking
     end_sign_up_tracking session if user.persisted?
   end
 
-  def self.log_gender_input_type(session, gender, gender_input_type, locale)
+  def self.log_gender_input_type_started(session, gender_input_type, locale, page)
+    # We don't need new tracking events if they user has already started the flow recently.
+    return if session[:gender_input_uid_expiration]&.future?
+    # Identifier for tracking events for a single user.
+    session[:gender_input_uid] = SecureRandom.uuid.to_s
+    session[:gender_input_uid_expiration] = 30.minutes.from_now
+    FirehoseClient.instance.put_record(
+      :analysis,
+      {
+        study: 'gender-input-type',
+        study_group: 'v1',
+        event: 'input_seen',
+        data_string: session[:gender_input_uid],
+        data_json: {
+          input_type: gender_input_type,
+          locale: locale,
+          page: page
+        }.to_json
+      }
+    )
+  end
+
+  def self.log_gender_input_type_account_created(session, gender, gender_input_type, locale, page)
     # Limit the gender to 100 characters, this should be sufficient for all languages.
     gender = gender&.truncate(100, omission: '')
     FirehoseClient.instance.put_record(
@@ -155,13 +177,18 @@ module SignUpTracking
       {
         study: 'gender-input-type',
         study_group: 'v1',
-        event: gender_input_type,
-        data_string: session[:sign_up_uid],
+        event: 'account_created',
+        data_string: session[:gender_input_uid],
         data_json: {
+          input_type: gender_input_type,
           gender: gender,
-          locale: locale
+          locale: locale,
+          page: page
         }.to_json
       }
     )
+    # This is the last event for creating an account, so delete the tracking information.
+    session.delete(:gender_input_uid)
+    session.delete(:gender_input_uid_expiration)
   end
 end
