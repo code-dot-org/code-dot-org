@@ -1288,6 +1288,10 @@ kn:
           lessons:
             lesson-4:
               name: ವೇರಿಯಬಲ್‌ಗಳು
+        csa3-2023:
+          lessons:
+            lesson-1:
+              name: ಒಂದು ಆಯಾಮದ (1D) ಅರೇಗಳು
         hello-world-space-2022:
           title: 'ಹಲೋ ವರ್ಲ್ಡ್: ಬಾಹ್ಯಾಕಾಶ'
         hello-world-soccer-2022:

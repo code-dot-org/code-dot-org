@@ -143,6 +143,9 @@
         "virtual_lesson_modifications/coursed/2022": {
           "name": "Modifiche alla lezione virtuale"
         },
+        "extension_lessons_micro_bit/coursed/2022": {
+          "type": "Risorse"
+        },
         "password_power-up_if_then_scenarios/coursed/2022": {
           "name": "Potenziare le password: scenari - Se... Allora...",
           "url": "https://docs.google.com/document/d/1JeZtFU6hMFTYITAAPaA_CRmOVknvkcKZQszL6u7DRG4/edit",
@@ -368,6 +371,9 @@
         "virtual_lesson_modifications/coursef/2022": {
           "name": "Modifiche alla lezione virtuale"
         },
+        "extension_lessons_micro_bit/coursef/2022": {
+          "type": "Risorse"
+        },
         "the_power_of_words_lesson_quiz/coursef/2022": {
           "name": "Il potere delle parole: quiz della lezione",
           "url": "https://docs.google.com/forms/d/1OKy2U3F37NSgCBUez9XMi0UJtlHKPXIe_rxy0l_KEOg/copy",
@@ -539,6 +545,9 @@
         },
         "virtual_lesson_modifications/coursee/2022": {
           "name": "Modifiche alla lezione virtuale"
+        },
+        "extension_lessons_micro_bit/coursee/2022": {
+          "type": "Risorse"
         },
         "be_a_super_digital_citizen_lesson_slides/coursee/2022": {
           "name": "Diventa un super cittadino digitale - Diapositive delle lezioni",
@@ -1223,6 +1232,9 @@
         },
         "virtual_lesson_modifications/coursec/2022": {
           "name": "Modifiche alla lezione virtuale"
+        },
+        "extension_lessons_micro_bit/coursec/2022": {
+          "type": "Risorse"
         },
         "putting_a_stop_to_online_meanness_lesson_slides/coursec/2022": {
           "name": "Dire STOP alla cattiveria online: diapositive della lezione",

@@ -1,6 +1,6 @@
 name 'CSA U3L3-L6_2023'
-display_name 'level display_name here'
-description 'level description here'
+display_name 'Practice: Traverse a 1D Array'
+description 'Use a `while` loop to traverse a 1D array and return a `String` containing the values it stores.'
 
 sublevels
 level 'CSA U3L3-L6a_2023'

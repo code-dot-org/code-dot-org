@@ -2271,6 +2271,20 @@
                     }
                   }
                 },
+                "buzzer.playNotes": {
+                  "palette_params": {
+                    "tempo": {
+                      "type": "Liczba"
+                    }
+                  }
+                },
+                "buzzer.playSong": {
+                  "palette_params": {
+                    "tempo": {
+                      "type": "Liczba"
+                    }
+                  }
+                },
                 "blink": {
                   "palette_params": {
                     "interval": {

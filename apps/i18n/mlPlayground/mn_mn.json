@@ -1,0 +1,215 @@
+{
+  "navigateForward": "Үргэлжлүүлэх",
+  "navigateBack": "Буцах",
+  "tryAgain": "Дахиж оролдох",
+  "navigateDone": "Дуусгах",
+  "saveProgress": "Хадгалах",
+  "correctAnswer": "Зөв",
+  "incorrectAnswer": "Буруу",
+  "modelCardPossibleValuesMinimum": "хамгийн бага",
+  "modelCardPossibleValuesMaximum": "хамгийн их",
+  "columnInspectorDescription": "Тайлбар",
+  "columnDetailsMinimumValue": "хамгийн бага",
+  "columnDetailsMaximumValue": "хамгийн их",
+  "dataCardLastUpdated": "Сүүлд шинэчлэгдсэн",
+  "datasets": {
+    "medical_priority": {
+      "fields": {
+        "age": {
+          "id": "нас"
+        }
+      }
+    },
+    "shoe_survey_toy": {
+      "fields": {
+        "weather": {
+          "id": "цаг агаар"
+        },
+        "day": {
+          "id": "өдөр"
+        }
+      }
+    },
+    "salsa_toy": {
+      "fields": {
+        "corn": {
+          "id": "эрдэнэ шиш"
+        }
+      }
+    },
+    "club_random_toy": {
+      "fields": {
+        "color": {
+          "id": "өнгө"
+        }
+      }
+    },
+    "insurance_cost": {
+      "fields": {
+        "age": {
+          "id": "нас"
+        }
+      }
+    },
+    "nutrition": {
+      "fields": {
+        "Description": {
+          "id": "Тайлбар"
+        }
+      }
+    },
+    "shapes_v2_toy": {
+      "fields": {
+        "size": {
+          "id": "хэмжээ"
+        }
+      }
+    },
+    "salad_toy": {
+      "fields": {
+        "chicken": {
+          "id": "тахиа"
+        }
+      }
+    },
+    "billionaires": {
+      "fields": {
+        "Age": {
+          "id": "Нас"
+        },
+        "Gender": {
+          "id": "Жендер"
+        }
+      }
+    },
+    "student_alcohol_consumption": {
+      "fields": {
+        "age": {
+          "id": "нас"
+        }
+      }
+    },
+    "naan_toy": {
+      "fields": {
+        "chicken": {
+          "id": "тахиа"
+        }
+      }
+    },
+    "census_part": {
+      "fields": {
+        "age": {
+          "id": "нас"
+        }
+      }
+    },
+    "loneliness_interests": {
+      "fields": {
+        "Internet": {
+          "id": "Интернэт"
+        }
+      }
+    },
+    "movies": {
+      "fields": {
+        "Score": {
+          "id": "Оноо"
+        },
+        "Country": {
+          "id": "Улс"
+        },
+        "Name": {
+          "id": "Нэр"
+        },
+        "Star": {
+          "id": "Од"
+        }
+      }
+    },
+    "songs": {
+      "fields": {
+        "Artist": {
+          "id": "Зураач"
+        }
+      }
+    },
+    "safari_toy": {
+      "name": "Сафари"
+    },
+    "abalone": {
+      "fields": {
+        "Length": {
+          "id": "Урт"
+        }
+      }
+    },
+    "zoo": {
+      "fields": {
+        "Aquatic": {
+          "id": "Усны"
+        }
+      }
+    },
+    "student_survey": {
+      "fields": {
+        "Music": {
+          "id": "Хөгжим"
+        },
+        "Dance": {
+          "id": "Бүжиг"
+        },
+        "Country": {
+          "id": "Улс"
+        },
+        "Internet": {
+          "id": "Интернэт"
+        },
+        "Achievements": {
+          "id": "Амжилт"
+        },
+        "Age": {
+          "id": "Нас",
+          "description": "Нас"
+        },
+        "Gender": {
+          "id": "Жендер",
+          "description": "Жендер"
+        }
+      }
+    },
+    "boba_toy": {
+      "fields": {
+        "banana": {
+          "id": "гадил"
+        }
+      }
+    },
+    "heart": {
+      "fields": {
+        "Age": {
+          "id": "Нас"
+        }
+      }
+    },
+    "shapes_v1_toy": {
+      "fields": {
+        "size": {
+          "id": "хэмжээ"
+        }
+      }
+    },
+    "loneliness_music": {
+      "fields": {
+        "Music": {
+          "id": "Хөгжим"
+        },
+        "Dance": {
+          "id": "Бүжиг"
+        },
+        "Country": {
+          "id": "Улс"
+        }
+      }
+    }
+  }
+}
