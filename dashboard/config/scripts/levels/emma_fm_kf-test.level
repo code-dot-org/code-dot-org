@@ -1,0 +1,97 @@
+<Artist>
+  <config><![CDATA[{
+  "properties": {
+    "encrypted": "false",
+    "skin": "anna",
+    "validation_enabled": "true",
+    "embed": "false",
+    "instructions_important": "false",
+    "hide_share_and_remix": "false",
+    "is_k1": "true",
+    "never_autoplay_video": "false",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "true",
+    "disable_if_else_editing": "false",
+    "show_type_hints": "true",
+    "free_play": "false",
+    "impressive": "false",
+    "discard_background": "false",
+    "disable_sharing": "false",
+    "enable_download_image": "false",
+    "long_instructions": "1. Move the rover to the first location \r\n2. `Draw a camera sticker` to mark the first photo\r\n\r\n('camera' = robot) ",
+    "solution_image_url": "https://d3p74s6bwmy6t9.cloudfront.net/6bb48093811cda4800531dc114c87c64=levelbuilder/212691.png",
+    "name_suffix": "_kf-test",
+    "encrypted_examples": [
+
+    ],
+    "preload_asset_list": null
+  },
+  "game_id": 23,
+  "published": true,
+  "created_at": "2023-01-18T22:51:43.000Z",
+  "level_num": "custom",
+  "user_id": 1196,
+  "audit_log": "[{\"changed_at\":\"2023-01-18T22:51:43.195+00:00\",\"changed\":[\"cloned from \\\"emma_fm\\\"\"],\"cloned_from\":\"emma_fm\"},{\"changed_at\":\"2023-01-18 23:01:10 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-01-18 23:01:26 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-01-18 23:01:40 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-01-18 23:04:55 +0000\",\"changed\":[\"start_blocks\",\"skin\",\"is_k1\",\"use_modal_function_editor\",\"predraw_blocks\",\"solution_blocks\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-01-18 23:05:27 +0000\",\"changed\":[\"start_blocks\",\"skin\",\"predraw_blocks\",\"solution_blocks\",\"encrypted_examples\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-01-18 23:06:21 +0000\",\"changed\":[\"start_blocks\",\"skin\",\"predraw_blocks\",\"solution_blocks\",\"encrypted_examples\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-01-18 23:13:40 +0000\",\"changed\":[\"start_blocks\",\"skin\",\"show_type_hints\",\"predraw_blocks\",\"solution_blocks\",\"encrypted_examples\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-01-18 23:18:09 +0000\",\"changed\":[\"start_blocks\",\"long_instructions\",\"predraw_blocks\",\"solution_blocks\",\"encrypted_examples\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-01-18 23:20:59 +0000\",\"changed\":[\"solution_image_url\",\"solution_blocks\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-01-18 23:21:37 +0000\",\"changed\":[\"solution_image_url\",\"solution_blocks\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-01-18 23:23:32 +0000\",\"changed\":[\"start_blocks\",\"long_instructions\",\"predraw_blocks\",\"solution_blocks\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+  <blocks>
+    <start_blocks>
+      <xml>
+        <block type="when_run" deletable="false" movable="false" id="when_run">
+          <next>
+            <block type="simple_move_up">
+              <next>
+                <block type="draw_line_style_pattern">
+                  <field name="VALUE">smokeLine</field>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+        <block type="turtle_sticker_with_size">
+          <field name="VALUE">Alien</field>
+          <value name="SIZE">
+            <block type="math_number">
+              <field name="NUM">30</field>
+            </block>
+          </value>
+        </block>
+      </xml>
+    </start_blocks>
+    <solution_blocks>
+      <xml>
+        <block type="when_run" deletable="false" movable="false">
+          <next>
+            <block type="simple_move_up">
+              <next>
+                <block type="simple_move_up">
+                  <next>
+                    <block type="simple_move_up">
+                      <next>
+                        <block type="turtle_sticker_with_size">
+                          <field name="VALUE">Robot</field>
+                          <value name="SIZE">
+                            <block type="math_number">
+                              <field name="NUM">30</field>
+                            </block>
+                          </value>
+                        </block>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+      </xml>
+    </solution_blocks>
+    <predraw_blocks>
+      <xml>
+        <block type="when_run" deletable="false" movable="false"/>
+      </xml>
+    </predraw_blocks>
+  </blocks>
+</Artist>

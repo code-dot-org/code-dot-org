@@ -9464,6 +9464,12 @@ en:
               name: Emma's Stuff
             lesson-2:
               name: NEW- Function Machines
+            lesson-3:
+              name: NEW- Function Machines - Lesson 2
+            lesson-4:
+              name: NEW- Function Machines - Lesson 3
+            lesson-5:
+              name: NEW- Function Machines - Lesson 4
           lesson_groups: {}
           name: emmas-playground
           title: ''
@@ -9951,3 +9957,14 @@ en:
 
 
             **Estimated Time:** ~2 hours
+        katies-playground:
+          lessons:
+            lesson-1:
+              name: FM Ideas
+          lesson_groups: {}
+          name: katies-playground
+          title: Katie's Place To Do Stuff
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
