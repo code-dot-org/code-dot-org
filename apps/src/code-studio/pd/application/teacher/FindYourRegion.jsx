@@ -91,6 +91,11 @@ const FindYourRegion = props => {
       school: selectedSchool?.value,
       schoolZipCode: selectedSchool?.school?.zip
     });
+    if (selectedSchool) {
+      analyticsReporter.sendEvent(EVENTS.SCHOOL_ID_CHANGED_EVENT, {
+        'school id': selectedSchool.value
+      });
+    }
   };
 
   const renderRegionalPartnerInfo = () => {
