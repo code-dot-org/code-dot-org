@@ -500,8 +500,7 @@ Dashboard::Application.routes.draw do
     get '/jigsaw/:chapter', to: 'script_levels#show', script_id: Unit::JIGSAW_NAME, as: 'jigsaw_chapter', format: false
 
     get '/weblab/host', to: 'weblab_host#index'
-
-    get '/test_pages/weblab', to: 'test_pages#weblab'
+    get '/weblab/test', to: 'weblab_host#test'
 
     get '/join(/:section_code)', to: 'followers#student_user_new', as: 'student_user_new'
     post '/join(/:section_code)', to: 'followers#student_register', as: 'student_register'
