@@ -35,7 +35,9 @@ export const PROJECT_TYPE_MAP = {
   javalab: i18n.projectTypeJavalab(),
   poetry: i18n.projectTypePoetry(),
   poetry_hoc: i18n.projectTypePoetry(),
-  thebadguys: i18n.projectTypeThebadguys()
+  thebadguys: i18n.projectTypeThebadguys(),
+  particles: i18n.projectTypeParticles(),
+  bookCovers: i18n.projectTypeBookCovers()
 };
 
 export const FEATURED_PROJECT_TYPE_MAP = {
