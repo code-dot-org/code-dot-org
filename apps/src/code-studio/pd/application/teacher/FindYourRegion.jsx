@@ -24,7 +24,8 @@ import {
 import {isZipCode} from '@cdo/apps/util/formatValidation';
 import {useRegionalPartner} from '../../components/useRegionalPartner';
 import SchoolAutocompleteDropdown from '@cdo/apps/templates/SchoolAutocompleteDropdown';
-import analyticsReporter, {EVENTS} from '@cdo/apps/lib/util/AnalyticsReporter';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 
 const PD_RESOURCES_URL =
   'https://support.code.org/hc/en-us/articles/115003865532';

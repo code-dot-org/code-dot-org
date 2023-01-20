@@ -48,7 +48,8 @@ import {
   PROGRAM_CSA,
   getProgramInfo
 } from '../application/teacher/TeacherApplicationConstants';
-import analyticsReporter, {EVENTS} from '@cdo/apps/lib/util/AnalyticsReporter';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 
 const NA = 'N/A';
 

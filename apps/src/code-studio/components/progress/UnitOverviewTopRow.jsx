@@ -18,7 +18,8 @@ import {unitCalendarLesson} from '../../../templates/progress/unitCalendarLesson
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 import FontAwesome from '../../../templates/FontAwesome';
 import {PublishedState} from '@cdo/apps/generated/curriculum/sharedCourseConstants';
-import analyticsReporter, {EVENTS} from '@cdo/apps/lib/util/AnalyticsReporter';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 
 export const NOT_STARTED = 'NOT_STARTED';
 export const IN_PROGRESS = 'IN_PROGRESS';

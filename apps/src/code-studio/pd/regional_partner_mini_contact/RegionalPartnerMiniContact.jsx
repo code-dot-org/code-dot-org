@@ -8,7 +8,8 @@ import FieldGroup from '../form_components/FieldGroup';
 import ButtonList from '../form_components/ButtonList';
 import color from '@cdo/apps/util/color';
 import $ from 'jquery';
-import analyticsReporter, {EVENTS} from '@cdo/apps/lib/util/AnalyticsReporter';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 
 const ROLES = [
   'Teacher',

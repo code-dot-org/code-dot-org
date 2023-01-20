@@ -23,7 +23,8 @@ import UnitCalendar from './UnitCalendar';
 import color from '@cdo/apps/util/color';
 import EndOfLessonDialog from '@cdo/apps/templates/EndOfLessonDialog';
 import {PublishedState} from '@cdo/apps/generated/curriculum/sharedCourseConstants';
-import analyticsReporter, {EVENTS} from '@cdo/apps/lib/util/AnalyticsReporter';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 
 /**
  * Lesson progress component used in level header and script overview.

@@ -7,7 +7,8 @@ import WorkshopDetails from './workshop_details';
 import FacilitatorBio from './facilitator_bio';
 import EnrollForm from './enroll_form';
 import {WorkshopPropType, FacilitatorPropType} from './enrollmentConstants';
-import analyticsReporter, {EVENTS} from '@cdo/apps/lib/util/AnalyticsReporter';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 
 const SUBMISSION_STATUSES = {
   UNSUBMITTED: 'unsubmitted',
