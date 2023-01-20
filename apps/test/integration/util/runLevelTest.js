@@ -92,7 +92,7 @@ module.exports = function(testCollection, testData, dataItem, done) {
         console.log(`customValidator was set for '${testData.description}'`);
         await new Promise(resolve => {
           console.log(`in promise for '${testData.description}'`);
-          return setTimeout(() => {
+          setTimeout(() => {
             console.log(
               `in validateResult setTimeout ${new Date()} for '${
                 testData.description
