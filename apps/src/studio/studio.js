@@ -3002,6 +3002,12 @@ Studio.runButtonClick = function() {
   Studio.execute();
   Studio.gameState = Studio.GameStates.ACTIVE;
 
+  // We want to save progress any time a student clicks the Run button on a
+  // Free Play level, because they don't have a "success" state like other
+  // level types that would handle this. Since the Run button is already
+  // overloaded in "edit_blocks" mode (when a content editor is making
+  // changes to the level) to act as a "save" button, we don't want to call
+  // this if we're in "edit_blocks" mode.
   if (!level.edit_blocks && level.freePlay) {
     // Save progress. Don't display feedback.
     Studio.sendPuzzleReport(Studio.onReportCompleteNoFeedback);
