@@ -25,7 +25,7 @@
     "disable_examples": "false",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
-    "free_play": "true",
+    "free_play": "false",
     "hide_animation_mode": "false",
     "start_in_animation_tab": "false",
     "all_animations_single_frame": "true",
@@ -75,7 +75,7 @@
   "level_num": "custom",
   "user_id": 9,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2023-01-20T11:02:42.609-08:00\",\"changed\":[\"cloned from \\\"New Sprite Lab Project\\\"\"],\"cloned_from\":\"New Sprite Lab Project\"},{\"changed_at\":\"2023-01-20 11:03:26 -0800\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"free_play\",\"helper_libraries\",\"block_pools\",\"preload_asset_list\"],\"changed_by_id\":6959,\"changed_by_email\":\"molly+levelbuilder@code.org\"},{\"changed_at\":\"2023-01-20 11:06:58 -0800\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"helper_libraries\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":6959,\"changed_by_email\":\"molly+levelbuilder@code.org\"},{\"changed_at\":\"2023-01-20 11:16:01 -0800\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":6959,\"changed_by_email\":\"molly+levelbuilder@code.org\"},{\"changed_at\":\"2023-01-20 14:46:13 -0800\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\"],\"changed_by_id\":6959,\"changed_by_email\":\"molly+levelbuilder@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2023-01-20T11:02:42.609-08:00\",\"changed\":[\"cloned from \\\"New Sprite Lab Project\\\"\"],\"cloned_from\":\"New Sprite Lab Project\"},{\"changed_at\":\"2023-01-20 11:03:26 -0800\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"free_play\",\"helper_libraries\",\"block_pools\",\"preload_asset_list\"],\"changed_by_id\":6959,\"changed_by_email\":\"molly+levelbuilder@code.org\"},{\"changed_at\":\"2023-01-20 11:06:58 -0800\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"helper_libraries\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":6959,\"changed_by_email\":\"molly+levelbuilder@code.org\"},{\"changed_at\":\"2023-01-20 11:16:01 -0800\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":6959,\"changed_by_email\":\"molly+levelbuilder@code.org\"},{\"changed_at\":\"2023-01-20 14:46:13 -0800\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\"],\"changed_by_id\":6959,\"changed_by_email\":\"molly+levelbuilder@code.org\"},{\"changed_at\":\"2023-01-20 15:10:28 -0800\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"free_play\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":6959,\"changed_by_email\":\"molly+levelbuilder@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
