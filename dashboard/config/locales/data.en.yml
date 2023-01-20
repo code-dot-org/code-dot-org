@@ -735,6 +735,10 @@ en:
         csa_conditional_statements: 'CSA: Conditional Statements'
         csa_printing_in_java: 'CSA: Printing in Java'
         csa_two_way_selection_and_not: 'CSA: Two-Way Selection and NOT'
+        csa-pl-intro-to-oop: Introduction to Object-Oriented Programming
+        csa-pl-welcome-to-Neighborhood: Welcome to The Neighborhood
+        csa-pl-calling-methods: Calling Methods in Java
+        csa-pl-creating-objects: Creating Objects
     callout:
       text:
         drag_blocks: Drag a "move" block and snap it below the other block

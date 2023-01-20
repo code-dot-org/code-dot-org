@@ -1,6 +1,6 @@
 name 'CSA U3L4-L7_2023'
-display_name 'level display_name here'
-description 'level description here'
+display_name 'Practice: Using for Loops'
+description 'Use a `for` loop to traverse 1D arrays to work with data in the console or paint colors in The Neighborhood.'
 
 sublevels
 level 'CSA U3L4-L7a_2023'
