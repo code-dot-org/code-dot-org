@@ -202,7 +202,6 @@ class LibraryTable extends React.Component {
   actionsFormatter = (_, {rowData}) => {
     return (
       <Button
-        __useDeprecatedTag
         text={i18n.unpublish()}
         color={Button.ButtonColor.orange}
         onClick={() => {
