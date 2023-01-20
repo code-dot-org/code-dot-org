@@ -117,12 +117,8 @@ module.exports = {
         testResult: TestResults.LEVEL_INCOMPLETE_FAIL
       },
       customValidator: function() {
-        console.log(`in customValidator ${new Date()}`);
         // Don't run all 10,000 steps...
         Maze.executionInfo.steps_.length = 0;
-        console.log('in maze harvester infinite loop customValidator');
-        console.log(Maze.executionInfo);
-        console.log(Maze.executionInfo.terminationValue());
         return (
           Maze.executionInfo.terminationValue() ===
           constants.BeeTerminationValue.INFINITE_LOOP

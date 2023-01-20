@@ -62,9 +62,6 @@ module.exports = function(testCollection, testData, dataItem, done) {
   // Validate successful solution.
   var validateResult = async function(report) {
     try {
-      console.log(
-        `in validateResult ${new Date()} for '${testData.description}'`
-      );
       assert(testData.expected, 'Have expectations');
       var expected;
       if (Array.isArray(testData.expected)) {
@@ -81,44 +78,29 @@ module.exports = function(testCollection, testData, dataItem, done) {
           assert(false, failureMsg);
         }
       });
-      console.log(`in validateResult after result check ${new Date()}`);
 
       // define a customValidator to run/validate arbitrary code at the point when
       // StudioApp.report gets called. Allows us to access some things that
       // aren't on the options object passed into report
       if (testData.customValidator) {
         // Wait some amount of time for long-running code to complete. (E.g. k1_6.js).
-        // Increase the timer below if things start failing here.
+        // Increase the timer below if things start failing here. It's important that
+        // we ONLY do this for studio tests, which depend on timing.
         if (app === 'studio') {
-          console.log(`customValidator was set for '${testData.description}'`);
           await new Promise(resolve => {
-            console.log(`in promise for '${testData.description}'`);
             setTimeout(() => {
-              console.log(
-                `in validateResult setTimeout ${new Date()} for '${
-                  testData.description
-                }'`
+              assert(
+                testData.customValidator(assert),
+                'Custom validator failed'
               );
               resolve();
             }, 2500);
           });
-          console.log(
-            `after await ${new Date()} for '${testData.description}'`
-          );
-          assert(testData.customValidator(assert), 'Custom validator failed');
         } else {
-          console.log(`no await ${new Date()} for '${testData.description}'`);
+          // For non-studio tests, run without waiting.
           assert(testData.customValidator(assert), 'Custom validator failed');
-          console.log(
-            `after assert ${new Date()} for '${testData.description}'`
-          );
         }
       }
-      console.log(
-        `in validateResult after customValidator ${new Date()} for '${
-          testData.description
-        }'`
-      );
 
       // Notify the app that the report operation is complete
       // (important to do this asynchronously to simulate a service call or else
@@ -130,9 +112,6 @@ module.exports = function(testCollection, testData, dataItem, done) {
     } catch (e) {
       done(e);
     }
-    console.log(
-      `end of validateResult ${new Date()} for '${testData.description}'`
-    );
   };
 
   runLevel(app, skinId, level, validateResult, finished, testData);
