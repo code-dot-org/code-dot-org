@@ -81,10 +81,10 @@ class AnalyticsReporter {
     if (alwaysPut) {
       return true;
     }
-    if (this.isTestEnvironment() || this.isDevelopmentEnvironment()) {
-      return false;
+    if (this.isProductionEnvironment() || this.isStagingEnvironment()) {
+      return true;
     }
-    return true;
+    return false;
   }
 
   /**
@@ -115,12 +115,8 @@ class AnalyticsReporter {
     return Environments.unknown;
   }
 
-  isTestEnvironment() {
-    return this.getEnvironment() === Environments.test;
-  }
-
-  isDevelopmentEnvironment() {
-    return this.getEnvironment() === Environments.development;
+  isStagingEnvironment() {
+    return this.getEnvironment() === Environments.staging;
   }
 
   isProductionEnvironment() {
