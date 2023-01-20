@@ -1,7 +1,9 @@
 import React, {Component} from 'react';
-
 import ValidationStep, {Status} from '../../../src/lib/ui/ValidationStep';
 import testImageAccess from '../../code-studio/url_test';
+
+const scriptData = document.querySelector('script[data-bramble]');
+const brambleConfig = JSON.parse(scriptData.dataset.bramble);
 
 const STATUS_CODE_PROJECTS = 'statusCodeProjects';
 const STATUS_COMPUTING_IN_THE_CORE = 'statusComputingInTheCore';
@@ -46,7 +48,7 @@ class WebLabTest extends Component {
     }
 
     if (
-      event.origin === 'http://localhost-studio.code.org:3000' &&
+      event.origin === brambleConfig.studioUrl &&
       message.type &&
       message.type === 'bramble:readyToMount' &&
       this.state[STATUS_BRAMBLE_MOUNTABLE] === Status.ATTEMPTING
