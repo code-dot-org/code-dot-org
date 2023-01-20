@@ -21,7 +21,10 @@ const EVENTS = {
   APPLICATION_SUBMITTED_EVENT: 'Application Submitted',
   APP_STATUS_CHANGE_EVENT: 'Application Status Changed',
   ADMIN_APPROVAL_RECEIVED_EVENT: 'Administrator Approval Received',
-  SUBMIT_RP_CONTACT_FORM_EVENT: 'Submit Regional Partner Contact Form'
+  SUBMIT_RP_CONTACT_FORM_EVENT: 'Submit Regional Partner Contact Form',
+
+  // Marketing site pages
+  ADMIN_PAGE_VISITED_EVENT: 'Administrator Page Visited'
 };
 
 export {EVENTS};
