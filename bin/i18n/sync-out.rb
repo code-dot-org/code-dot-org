@@ -167,9 +167,7 @@ def restore_redacted_files
         # data doesn't get lost
         restored_data = RedactRestoreUtils.restore_file(original_path, translated_path, ['blockly'])
         translated_data = JSON.parse(File.read(translated_path))
-        File.open(translated_path, "w") do |file|
-          file.write(JSON.pretty_generate(translated_data.deep_merge(restored_data)))
-        end
+        File.write(translated_path, JSON.pretty_generate(translated_data.deep_merge(restored_data)))
       else
         # Everything else is differentiated only by the plugins used
         plugins = []
@@ -252,9 +250,7 @@ def sanitize_data_and_write(data, dest_path)
     end
 
   FileUtils.mkdir_p(File.dirname(dest_path))
-  File.open(dest_path, 'w+') do |f|
-    f.write(dest_data)
-  end
+  File.write(dest_path, dest_data)
 end
 
 # Wraps hash in correct format to be loaded by our i18n backend.

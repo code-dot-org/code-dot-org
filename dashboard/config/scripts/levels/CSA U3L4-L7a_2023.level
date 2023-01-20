@@ -1,0 +1,36 @@
+<Javalab>
+  <config><![CDATA[{
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "The `Flowers`(#e7e8ea) class declares instance variables for a 1D array of `String`(#e7e8ea) values that stores the names of flowers and a 1D array of `String`(#e7e8ea) values that stores the <a href=\"https://www.kaggle.com/datasets/marshuu/flowers\" target=\"_blank\">**typical colors**</a> for each flower.\r\n\r\n✅ **TO DO #1:** In `Flowers.java`(#e7e8ea), write the `toString()`(#e7e8ea) method to return a `String`(#e7e8ea) containing the name and typical colors of each flower. The `toString()`(#e7e8ea) method should:\r\n\r\n1. Traverse the 1D arrays `flowerNames`(#e7e8ea) and `flowerColors`(#e7e8ea) using a `for`(#e7e8ea) loop.\r\n\r\n2. Concatenate the flower name from the 1D array `flowerNames`(#e7e8ea) followed by `\" - Typical Colors: \"`(#e7e8ea) and its typical colors at the same index from the 1D array `flowerColors`(#e7e8ea).\r\n\r\n3. Add a new line after each flower's information.\r\n\r\nFor example:\r\n\r\n```\r\nsample output\r\n```\r\n\r\n::: details [**🔦 Need help with your algorithm?**]\r\n  \r\nHere is one approach to solving this problem.\r\n\r\n```\r\nfor each value in flowerNames\r\n  result += flowerNames[index] + \" - Typical Colors: \" + flowerColors[index] + \"\\n\"\r\n\r\nreturn result\r\n```\r\n:::\r\n&nbsp;\r\n\r\n✅ **TO DO #2:** In `FlowerRunner.java`(#e7e8ea), instantiate a `Flowers`(#e7e8ea) with the 1D arrays containing the flower names and typical colors and print the `Flowers`(#e7e8ea) object.\r\n\r\n💡 **TIP:** Check out the **Help & Tips** tab ⬆️ for help with traversing a 1D array with a `for`(#e7e8ea) loop.\r\n\r\n## ***Don't forget to . . .***\r\n\r\n![](https://images.code.org/eb2c8910ae2e150019b8e2177405d4af-image-1668191576873.png)",
+    "mini_rubric": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "csa_view_mode": "console",
+    "start_sources": {
+      "FlowersRunner.java": {
+        "text": "public class FlowersRunner {\n  public static void main(String[] args) {\n\n    String[] flowers = {\"rose\", \"tulip\", \"daisy\", \"sunflower\", \"orchid\", \"jasmine\", \"lavender\", \"marigold\"};\n    \n    String[] colors = {\"red, pink, white\", \"red, pink, white\", \"white, yellow\", \"yellow, orange\", \"purple, pink, white\",\n                       \"white, yellow\", \"purple\", \"orange, yellow\"};\n    \n    /* ----------------------------------- TO DO -----------------------------------\n     * ✅ Instantiate a Flowers object with the 1D arrays flowers and colors\n     * then print the Flowers object.\n     * -----------------------------------------------------------------------------\n     */\n\n\n\n    \n\n\n    \n  }\n}",
+        "isVisible": true,
+        "tabOrder": 0
+      },
+      "Flowers.java": {
+        "text": "/*\n * Manages data about flowers\n */\npublic class Flowers {\n\n  private String[] flowerNames;    // The 1D array of flower names\n  private String[] flowerColors;   // The 1D array of typical colors for each flower\n\n  /*\n   * Initializes flowerNames to the specified 1D array of flower names and\n   * flowerColors to the specified 1D array of typical colors for each flower\n   */\n  public Flowers(String[] flowerNames, String[] flowerColors) {\n    this.flowerNames = flowerNames;\n    this.flowerColors = flowerColors;\n  }\n\n  /*\n   * Returns a String containing the name and typical colors for each flower\n   */\n  public String toString() {\n    String result = \"\";\n\n    /* ----------------------------------- TO DO -----------------------------------\n     * ✅ Concatenate each flower name from flowerNames and its typical colors from\n     * flowerColors to result. For example: \"Rose - Typical Colors: red, pink, white\"\n     * -----------------------------------------------------------------------------\n     */\n    \n\n    return result;\n  }\n  \n}",
+        "isVisible": true,
+        "tabOrder": 1
+      }
+    },
+    "reference_links": [
+      "/courses/csa-2023/guides/for-loops"
+    ],
+    "display_name": "Flowers",
+    "bubble_choice_description": "Traverse 1D arrays of flower names and their typical colors to return a `String` containing information about each flower.",
+    "thumbnail_url": "https://images.code.org/b7472b8722111dba8bc892412bbf34b0-flowers.png"
+  },
+  "game_id": 68,
+  "created_at": "2023-01-12T16:10:26.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2023-01-12T16:10:26.192+00:00\",\"changed\":[\"cloned from \\\"CSA U3L4-L6d_2023\\\"\"],\"cloned_from\":\"CSA U3L4-L6d_2023\"},{\"changed_at\":\"2023-01-12 16:10:28 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-01-19 19:14:47 +0000\",\"changed\":[\"long_instructions\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-01-19 21:23:59 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-01-19 21:29:01 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-01-19 22:50:27 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-01-19 22:52:50 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+}]]></config>
+</Javalab>

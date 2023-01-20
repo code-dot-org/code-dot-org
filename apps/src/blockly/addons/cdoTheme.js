@@ -3,6 +3,9 @@ import GoogleBlockly from 'blockly/core';
 export default GoogleBlockly.Theme.defineTheme('modern', {
   base: GoogleBlockly.Themes.Classic,
   blockStyles: {
+    default: {
+      colourPrimary: '00b0bc'
+    },
     colour_blocks: {
       colourPrimary: '#0093c9'
     },

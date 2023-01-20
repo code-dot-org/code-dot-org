@@ -333,7 +333,10 @@ class ChannelsApi < Sinatra::Base
     # Reports of abuse from verified teachers are more reliable than reports
     # from students so we increase the abuse score enough to block the project
     # with only one report from a verified teacher.
-    amount = verified_teacher? ? 20 : 10
+    #
+    # Temporarily ignore anonymous reports and only allow verified teachers to report.
+    # TODO: come up with a better long-term solution here.
+    amount = verified_teacher? ? 20 : 0
     begin
       value = Projects.new(get_storage_id).increment_abuse(id, amount)
     rescue ArgumentError, OpenSSL::Cipher::CipherError

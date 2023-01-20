@@ -44,7 +44,7 @@ class NewRelicClient
       end
     end
 
-    body = {'alert_policy': policy}.to_json
+    body = {alert_policy: policy}.to_json
     call_newrelic_rest("alert_policies/#{policy_id}.json", 'PUT', body)
   end
 

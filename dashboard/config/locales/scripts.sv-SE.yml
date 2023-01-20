@@ -1995,6 +1995,13 @@ sv:
           lesson_groups:
             lessonGroup-2:
               display_name: Innehåll
+        csa3-2023:
+          lessons:
+            lesson-3:
+              name: "'För' loopar"
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Innehåll
         csd1-2023:
           lesson_groups:
             lessonGroup-2:
@@ -2032,10 +2039,18 @@ sv:
         csp5-2023:
           lesson_groups:
             csp_lists:
-              display_name: Listor
+              display_name: Data
             csp_loops:
               display_name: loopar
             csp_project:
+              display_name: Projekt
+        csp6-2023:
+          lesson_groups:
+            csp_unit6_2020:
+              display_name: Listor
+            lessonGroup-3:
+              display_name: loopar
+            lessonGroup-5:
               display_name: Projekt
         csp7-2023:
           lesson_groups:

@@ -648,6 +648,10 @@ zh-TW:
         CSA-PL-debugging-22: 在 Java Lab 中除錯
         CSD_Unit6_InteractiveArtExemplar: 互動藝術範例
         CS_Changing_Everything: 計算機科學改變了一切
+        csa-equals-video: equals() 方法
+        csa-user-stories: 軟件工程中的使用者故事
+        csa-pl-vpl-m1-unit-3: 單元 3 中的軟件工程
+        csa-pl-intro-to-equals-method: .equals() 方法簡介
     callout:
       text:
         drag_blocks: 拖曳一個「移動」積木並將它放到其他積木下方

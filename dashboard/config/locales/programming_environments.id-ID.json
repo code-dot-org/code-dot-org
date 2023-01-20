@@ -14,22 +14,138 @@
           "name": "Game Lab",
           "categories": {
             "game_lab": {
-              "name": "Game Lab"
+              "name": "Game Lab",
+              "expressions": {
+                "mouseIsOver": {
+                  "palette_params": {
+                    "sprite": {
+                      "type": "Sprite"
+                    }
+                  }
+                },
+                "mousePressedOver": {
+                  "palette_params": {
+                    "sprite": {
+                      "type": "Sprite"
+                    }
+                  }
+                },
+                "mouseWentDown": {
+                  "examples": {
+                    "Black and White": {
+                      "name": "Hitam dan Putih"
+                    }
+                  }
+                },
+                "playSound": {
+                  "examples": {
+                    "Making Music": {
+                      "name": "Membuat musik"
+                    }
+                  },
+                  "short_description": "Memutar file suara MP3 dari URL tertentu."
+                }
+              }
             },
             "sprites": {
-              "name": "Sprites"
+              "name": "Sprites",
+              "expressions": {
+                "getSpeed": {
+                  "examples": {
+                    "Spiral": {
+                      "name": "Spiral"
+                    }
+                  }
+                }
+              }
             },
             "groups": {
-              "name": "Grup"
+              "name": "Grup",
+              "expressions": {
+                "add": {
+                  "palette_params": {
+                    "sprite": {
+                      "type": "Sprite"
+                    }
+                  }
+                },
+                "contains": {
+                  "palette_params": {
+                    "sprite": {
+                      "type": "Sprite"
+                    }
+                  }
+                },
+                "remove": {
+                  "palette_params": {
+                    "sprite": {
+                      "type": "Sprite"
+                    }
+                  }
+                },
+                "setColorEach": {
+                  "palette_params": {
+                    "color": {
+                      "type": "Warna"
+                    }
+                  }
+                },
+                "setTintEach": {
+                  "palette_params": {
+                    "color": {
+                      "type": "Warna"
+                    }
+                  }
+                }
+              }
             },
             "drawing": {
-              "name": "Menggambar"
+              "name": "Menggambar",
+              "expressions": {
+                "shape": {
+                  "examples": {
+                    "Star": {
+                      "name": "Bintang"
+                    }
+                  }
+                }
+              }
             },
             "math": {
-              "name": "Matematika"
+              "name": "Matematika",
+              "expressions": {
+                "randomNumber": {
+                  "palette_params": {
+                    "min": {
+                      "description": "Jumlah minimal angka yang dikembalikan"
+                    },
+                    "max": {
+                      "description": "Jumlah maksimum yang kembali"
+                    }
+                  }
+                },
+                "randomNumber_min_max": {
+                  "palette_params": {
+                    "min": {
+                      "description": "Jumlah minimal angka yang dikembalikan"
+                    },
+                    "max": {
+                      "description": "Jumlah maksimum yang kembali"
+                    }
+                  }
+                }
+              }
             },
             "variables": {
-              "name": "variabel"
+              "name": "variabel",
+              "expressions": {
+                "assign_x": {
+                  "short_description": "Menetapkan nilai ke variabel yang ada. Sebagai contoh, x = 0;"
+                },
+                "declareAssign_x": {
+                  "short_description": "Menyatakan sebuah variabel dengan nama yang telah diberikan setelah 'var', dan menetapkannya kepada nilai di sisi kanan dari ekspresi"
+                }
+              }
             },
             "functions": {
               "name": "fungsi"
@@ -40,14 +156,211 @@
           "name": "Laboratorium Aplikasi",
           "description": "App Lab adalah sebuah lingkungan pemrograman untuk membuat berbagai aplikasi sederhana. Buat desain sebuah aplikasi, tulis codenya dengan blok atau JavaScript agar dapat bekerja, lalu bagikan aplikasi tersebut dalam hitungan detik.",
           "categories": {
+            "ui_controls": {
+              "expressions": {
+                "onEvent": {
+                  "examples": {
+                    "Shrink and Grow": {
+                      "name": "Mengecil dan Membesar"
+                    }
+                  },
+                  "palette_params": {
+                    "callback": {
+                      "type": "Fungsi"
+                    }
+                  }
+                },
+                "playSound": {
+                  "examples": {
+                    "Making Music": {
+                      "name": "Membuat musik"
+                    }
+                  },
+                  "short_description": "Memutar file suara MP3 dari URL tertentu."
+                }
+              }
+            },
+            "canvas": {
+              "expressions": {
+                "getAlpha": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "objek"
+                    }
+                  }
+                },
+                "getBlue": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "objek"
+                    }
+                  }
+                },
+                "getGreen": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "objek"
+                    }
+                  }
+                },
+                "getRed": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "objek"
+                    }
+                  }
+                },
+                "putImageData": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "objek"
+                    }
+                  }
+                },
+                "setAlpha": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "objek"
+                    }
+                  }
+                },
+                "setBlue": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "objek"
+                    }
+                  }
+                },
+                "setGreen": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "objek"
+                    }
+                  }
+                },
+                "setRGB": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "objek"
+                    }
+                  }
+                },
+                "setRed": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "objek"
+                    }
+                  }
+                }
+              }
+            },
             "data": {
-              "name": "Data"
+              "name": "Data",
+              "expressions": {
+                "createRecord": {
+                  "palette_params": {
+                    "record": {
+                      "type": "objek"
+                    }
+                  }
+                },
+                "deleteRecord": {
+                  "palette_params": {
+                    "record": {
+                      "type": "objek"
+                    }
+                  }
+                },
+                "drawChart": {
+                  "palette_params": {
+                    "options": {
+                      "type": "objek"
+                    }
+                  }
+                },
+                "drawChartFromRecords": {
+                  "palette_params": {
+                    "options": {
+                      "type": "objek"
+                    }
+                  }
+                },
+                "getPrediction": {
+                  "palette_params": {
+                    "callback": {
+                      "type": "Fungsi"
+                    }
+                  }
+                },
+                "readRecords": {
+                  "palette_params": {
+                    "terms": {
+                      "type": "objek"
+                    }
+                  }
+                },
+                "updateRecord": {
+                  "palette_params": {
+                    "record": {
+                      "type": "objek"
+                    }
+                  }
+                }
+              }
+            },
+            "control": {
+              "expressions": {
+                "timedLoop": {
+                  "palette_params": {
+                    "callback": {
+                      "type": "Fungsi"
+                    }
+                  }
+                }
+              }
             },
             "math": {
-              "name": "Matematika"
+              "name": "Matematika",
+              "expressions": {
+                "randomNumber_min_max": {
+                  "palette_params": {
+                    "min": {
+                      "description": "Jumlah minimal angka yang dikembalikan"
+                    },
+                    "max": {
+                      "description": "Jumlah maksimum yang kembali"
+                    }
+                  }
+                },
+                "randomNumber": {
+                  "palette_params": {
+                    "min": {
+                      "description": "Jumlah minimal angka yang dikembalikan"
+                    },
+                    "max": {
+                      "description": "Jumlah maksimum yang kembali"
+                    }
+                  }
+                }
+              }
             },
             "variables": {
-              "name": "variabel"
+              "name": "variabel",
+              "expressions": {
+                "declareAssign_object": {
+                  "examples": {
+                    "Choose Your Own Adventure": {
+                      "name": "Pilih Petualangan Anda Sendiri"
+                    }
+                  }
+                },
+                "declareAssign_x": {
+                  "short_description": "Menyatakan sebuah variabel dengan nama yang telah diberikan setelah 'var', dan menetapkannya kepada nilai di sisi kanan dari ekspresi"
+                },
+                "addPair": {
+                  "return_value": "Tidak Ada"
+                }
+              }
             },
             "functions": {
               "name": "fungsi"
