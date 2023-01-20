@@ -146,7 +146,7 @@ class ProjectAppTypeArea extends React.Component {
           <Button
             __useDeprecatedTag
             onClick={this.loadMore}
-            color={Button.ButtonColor.gray}
+            color={Button.ButtonColor.neutralDark}
             icon="plus-circle"
             text={i18n.viewMore()}
             style={styles.buttonRightMargin}
@@ -155,7 +155,7 @@ class ProjectAppTypeArea extends React.Component {
         <Button
           __useDeprecatedTag
           href="#top"
-          color={Button.ButtonColor.gray}
+          color={Button.ButtonColor.neutralDark}
           icon="chevron-circle-up"
           text={i18n.backToTop()}
         />
@@ -203,16 +203,17 @@ const styles = {
   labHeading: {
     textAlign: 'left',
     fontSize: 24,
-    color: color.charcoal,
+    color: color.neutral_dark,
     marginBottom: 0,
     paddingBottom: 0,
     paddingTop: 0,
     float: 'left'
   },
   viewMore: {
-    color: color.teal,
+    color: color.neutral_dark,
     float: 'right',
     marginTop: 35,
+    marginBottom: 16,
     cursor: 'pointer',
     fontFamily: '"Gotham 5r", sans-serif'
   },
