@@ -89,20 +89,30 @@ module.exports = function(testCollection, testData, dataItem, done) {
       if (testData.customValidator) {
         // Wait some amount of time for long-running code to complete. (E.g. k1_6.js).
         // Increase the timer below if things start failing here.
-        console.log(`customValidator was set for '${testData.description}'`);
-        await new Promise(resolve => {
-          console.log(`in promise for '${testData.description}'`);
-          setTimeout(() => {
-            console.log(
-              `in validateResult setTimeout ${new Date()} for '${
-                testData.description
-              }'`
-            );
-            resolve();
-          }, 2500);
-        });
-        console.log(`after await ${new Date()} for '${testData.description}'`);
-        assert(testData.customValidator(assert), 'Custom validator failed');
+        if (app === 'studio') {
+          console.log(`customValidator was set for '${testData.description}'`);
+          await new Promise(resolve => {
+            console.log(`in promise for '${testData.description}'`);
+            setTimeout(() => {
+              console.log(
+                `in validateResult setTimeout ${new Date()} for '${
+                  testData.description
+                }'`
+              );
+              resolve();
+            }, 2500);
+          });
+          console.log(
+            `after await ${new Date()} for '${testData.description}'`
+          );
+          assert(testData.customValidator(assert), 'Custom validator failed');
+        } else {
+          console.log(`no await ${new Date()} for '${testData.description}'`);
+          assert(testData.customValidator(assert), 'Custom validator failed');
+          console.log(
+            `after assert ${new Date()} for '${testData.description}'`
+          );
+        }
       }
       console.log(
         `in validateResult after customValidator ${new Date()} for '${
