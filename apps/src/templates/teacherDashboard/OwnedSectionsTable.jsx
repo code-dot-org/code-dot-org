@@ -72,7 +72,7 @@ export const courseLinkFormatter = function(course, {rowData}) {
           __useDeprecatedTag
           text={i18n.coursesCardAction()}
           href={'/courses'}
-          color={Button.ButtonColor.gray}
+          color={Button.ButtonColor.neutralDark}
         />
       )}
     </div>
@@ -108,7 +108,7 @@ export const studentsFormatter = function(studentCount, {rowData}) {
         __useDeprecatedTag
         text={i18n.addStudents()}
         href={manageStudentsUrl}
-        color={Button.ButtonColor.gray}
+        color={Button.ButtonColor.neutralDark}
       />
     ) : (
       <a

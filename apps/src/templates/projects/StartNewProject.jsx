@@ -78,14 +78,16 @@ export default class StartNewProject extends React.Component {
 
     return (
       <div>
-        <div style={styles.headingStartNew}>{i18n.projectStartNew()}</div>
+        <h4 className="new-project-heading" style={styles.headingStartNew}>
+          {i18n.projectStartNew()}
+        </h4>
         <NewProjectButtons projectTypes={defaultProjectTypes} />
 
         {canViewFullList && (
           <Button
             id="uitest-view-full-list"
             onClick={this.toggleShowFullList}
-            color={Button.ButtonColor.gray}
+            color={Button.ButtonColor.neutralDark}
             icon={showFullList ? 'caret-up' : 'caret-down'}
             text={showFullList ? i18n.hideFullList() : i18n.viewFullList()}
             style={styles.button}
@@ -138,14 +140,14 @@ const styles = {
   button: {
     float: 'right',
     margin: '0 1px 0 0',
-    padding: '0 24px'
+    padding: '0 16px'
   },
   headingStartNew: {
     paddingRight: 10,
     paddingBottom: 10,
     fontSize: 16,
     fontFamily: '"Gotham 4r"',
-    color: color.charcoal,
+    color: color.neutral_dark,
     marginBottom: -10
   },
   spacer: {
