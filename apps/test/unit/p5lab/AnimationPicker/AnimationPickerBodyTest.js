@@ -24,6 +24,7 @@ describe('AnimationPickerBody', function() {
     hideAnimationNames: false,
     navigable: true,
     hideBackgrounds: false,
+    hideCostumes: false,
     canDraw: true,
     defaultQuery: {
       categoryQuery: '',
