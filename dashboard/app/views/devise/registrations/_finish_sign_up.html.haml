@@ -2,7 +2,7 @@
 - require 'geocoder'
 - require 'country_codes'
 - location = Geocoder.search(request.ip).try(:first)
-- us_ip = location.nil? || ['US', 'RD'].include?(location.country_code.upcase)
+- us_ip = location.nil? || ['US', 'RD'].include?(location.country_code.to_s.upcase)
 - @page_title = t('activerecord.attributes.user.finish_sign_up_header')
 
 #signup

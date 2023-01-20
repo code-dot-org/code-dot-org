@@ -101,7 +101,7 @@ class RegistrationsController < Devise::RegistrationsController
   # POST /users
   #
   def create
-    gender = params[:user][:gender]
+    gender = params.dig(:user, :gender)
     gender_input_type = gender_input_type?(request, session.id.to_s)
 
     Retryable.retryable on: [Mysql2::Error, ActiveRecord::RecordNotUnique], matching: /Duplicate entry/ do |retries, exception|
