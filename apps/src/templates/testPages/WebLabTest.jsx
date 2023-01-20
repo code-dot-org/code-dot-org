@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
-import {Status} from '../../../src/lib/ui/ValidationStep';
+
+import ValidationStep, {Status} from '../../../src/lib/ui/ValidationStep';
 import testImageAccess from '../../code-studio/url_test';
 
 const STATUS_CODE_PROJECTS = 'statusCodeProjects';
@@ -159,100 +160,81 @@ class WebLabTest extends Component {
 
   render() {
     return (
-      <div id="main-content" className="container">
-        <div className="row">
-          <div className="col-md-6">
-            <div className="form-group">
-              <h1>Web Lab Network Support Check</h1>
-              <p>
-                Use this page to test your school's network support for our Web
-                Lab modules. Web Lab communicates with domains which may be
-                blocked by some school systems’ networks or device policies. If
-                the network check is unsuccessful, you will need to reach out to
-                your school's IT department to update your school's firewall
-                settings or device policies.
-              </p>
-              <p>
-                When checking network support, try to meet as many of these
-                criteria as possible:
-              </p>
-              <li>Use your school's internet connection</li>
-              <li>Use a student computer</li>
-              <li>Log into the computer with a student account</li>
-              <br />
-              <p>
-                Note: You do not need to be logged in to Code.org for this test
-                to be successful.
-              </p>
-              <label htmlFor="connect">
-                Click "Connect" to check whether your school's network supports
-                the Web Lab tool
-              </label>
-              <div id="status-table">
-                <table>
-                  <tbody>
-                    <tr>
-                      <th>Check</th>
-                      <th>Status</th>
-                    </tr>
-                    <tr>
-                      <td>
-                        Connected to
-                        <code>https://downloads.computinginthecore.org</code>
-                      </td>
-                      <td className="computinginthecore">
-                        {this.renderStatusText(
-                          this.state[STATUS_COMPUTING_IN_THE_CORE]
-                        )}
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>
-                        Connected to <code>https://codeprojects.org</code>
-                      </td>
-                      <td className="codeprojects">
-                        {this.renderStatusText(
-                          this.state[STATUS_CODE_PROJECTS]
-                        )}
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>Able to render an iFrame</td>
-                      <td className="iframe">
-                        {this.renderStatusText(
-                          this.state[STATUS_BRAMBLE_MOUNTABLE]
-                        )}
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-              <div>
-                <button
-                  type="submit"
-                  id="connect"
-                  className="btn btn-primary"
-                  onClick={this.runWebLabTest}
-                >
-                  Connect
-                </button>
-              </div>
-              {this.state.renderCallToAction && this.renderCallToAction()}
-              <br />
-              <iframe
-                id="empty-bramble-container"
-                frameBorder="0"
-                scrolling="no"
-                style={{
-                  display: 'none'
-                }}
-              />
-            </div>
+      <div className={'contentContainer'}>
+        <div className={'content'} style={styles.content}>
+          <h1>Web Lab Network Support Check</h1>
+          <p>
+            Use this page to test your school's network support for our Web Lab
+            modules. Web Lab communicates with domains which may be blocked by
+            some school systems’ networks or device policies. If the network
+            check is unsuccessful, you will need to reach out to your school's
+            IT department to update your school's firewall settings or device
+            policies.
+          </p>
+          <p>
+            When checking network support, try to meet as many of these criteria
+            as possible:
+          </p>
+          <li>Use your school's internet connection</li>
+          <li>Use a student computer</li>
+          <li>Log into the computer with a student account</li>
+          <br />
+          <p>
+            Note: You do not need to be logged in to Code.org for this test to
+            be successful.
+          </p>
+          <label htmlFor="connect">
+            Click "Connect" to check whether your school's network supports the
+            Web Lab tool
+          </label>
+          <button
+            type="submit"
+            id="connect"
+            className="btn btn-primary"
+            onClick={this.runWebLabTest}
+          >
+            Connect
+          </button>
+          <div id="weblab-validation-steps">
+            <ValidationStep
+              stepStatus={this.state[STATUS_COMPUTING_IN_THE_CORE]}
+              stepName={
+                'Connected to `https://downloads.computinginthecore.org`'
+              }
+              hideWaitingSteps={false}
+            />
+            <ValidationStep
+              stepStatus={this.state[STATUS_CODE_PROJECTS]}
+              stepName={'Connected to `https://codeprojects.org`'}
+              hideWaitingSteps={false}
+            />
+            <ValidationStep
+              stepStatus={this.state[STATUS_BRAMBLE_MOUNTABLE]}
+              stepName={'Connected to Web Lab editor'}
+              hideWaitingSteps={false}
+            />
           </div>
+          {this.state.renderCallToAction && this.renderCallToAction()}
+          <br />
+          <iframe
+            id="empty-bramble-container"
+            frameBorder="0"
+            scrolling="no"
+            style={styles.iframe}
+          />
         </div>
       </div>
     );
   }
 }
+
+const styles = {
+  content: {
+    marginTop: '30px'
+  },
+  iframe: {
+    display: 'none'
+  }
+};
 
 export default WebLabTest;
