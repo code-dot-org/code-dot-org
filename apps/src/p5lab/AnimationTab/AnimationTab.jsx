@@ -10,9 +10,8 @@ import AnimationList from './AnimationList';
 import ResizablePanes from '@cdo/apps/templates/ResizablePanes';
 import PiskelEditor from './PiskelEditor';
 import * as shapes from '../shapes';
-import {P5LabType} from '@cdo/apps/p5lab/constants';
 import i18n from '@cdo/locale';
-import {P5LabInterfaceMode} from '../constants.js';
+import {P5LabInterfaceMode, P5LabType} from '../constants.js';
 
 /**
  * Root of the animation editor interface mode for GameLab
