@@ -98,10 +98,11 @@ module.exports = function(testCollection, testData, dataItem, done) {
                 testData.description
               }'`
             );
-            assert(testData.customValidator(assert), 'Custom validator failed');
             resolve();
           }, 2500);
         });
+        console.log(`after await ${new Date()} for '${testData.description}'`);
+        assert(testData.customValidator(assert), 'Custom validator failed');
       }
       console.log(
         `in validateResult after customValidator ${new Date()} for '${
