@@ -26,7 +26,8 @@ const EVENTS = {
   // Marketing site pages
   ADMIN_PAGE_VISITED_EVENT: 'Administrator Page Visited',
   CSA_CURRICULUM_PAGE_VISITED_EVENT: 'CSA Curriculum Page Visited',
-  CSD_CURRICULUM_PAGE_VISITED_EVENT: 'CSD Curriculum Page Visited'
+  CSD_CURRICULUM_PAGE_VISITED_EVENT: 'CSD Curriculum Page Visited',
+  CSF_CURRICULUM_PAGE_VISITED_EVENT: 'CSF Curriculum Page Visited'
 };
 
 export {EVENTS};
