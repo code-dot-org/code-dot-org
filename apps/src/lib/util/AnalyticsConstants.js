@@ -36,7 +36,8 @@ const EVENTS = {
   HIGH_SCHOOL_CURRICULUM_PAGE_VISITED_EVENT:
     'High School Curriculum Page Visited',
   MIDDLE_AND_HIGH_SCHOOL_PL_PAGE_VISITED_EVENT:
-    'Middle And High School Professional Learning Page Visited'
+    'Middle And High School Professional Learning Page Visited',
+  PICK_PL_PAGE_VISITED_EVENT: 'Pick Your Professional Learning Page Visited'
 };
 
 export {EVENTS};
