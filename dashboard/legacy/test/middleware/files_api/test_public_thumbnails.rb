@@ -25,10 +25,10 @@ class PublicThumbnailsTest < FilesApiTestBase
       # Response is cached for an hour
       assert_equal 'public, max-age=3600, s-maxage=1800', last_response['Cache-Control']
 
+      # Abuse score functionality moved to Rails.
       # Flags the project as abusive.
-      get "/v3/channels/#{channel_id}/abuse"
-      assert successful?
-      assert_equal 15, JSON.parse(last_response.body)['abuse_score']
+      value = Projects.get_abuse(channel_id)
+      assert_equal 15, value
 
       # Flags the thumbnail as abusive
       thumbnail = FileBucket.new.get(channel_id, @thumbnail_filename)
@@ -53,10 +53,10 @@ class PublicThumbnailsTest < FilesApiTestBase
       # Response is cached for an hour
       assert_equal 'public, max-age=3600, s-maxage=1800', last_response['Cache-Control']
 
+      # Abuse score functionality moved to Rails.
       # Flags the project as abusive.
-      get "/v3/channels/#{channel_id}/abuse"
-      assert successful?
-      assert_equal 15, JSON.parse(last_response.body)['abuse_score']
+      value = Projects.get_abuse(channel_id)
+      assert_equal 15, value
 
       # Flags the thumbnail as abusive
       thumbnail = FileBucket.new.get(channel_id, @thumbnail_filename)
@@ -83,10 +83,10 @@ class PublicThumbnailsTest < FilesApiTestBase
       assert_equal 'public, max-age=3600, s-maxage=1800', last_response['Cache-Control']
       assert_equal @thumbnail_body, last_response.body
 
+      # Abuse score functionality moved to Rails.
       # Does not flag the project as abusive
-      get "/v3/channels/#{channel_id}/abuse"
-      assert successful?
-      assert_equal 0, JSON.parse(last_response.body)['abuse_score']
+      value = Projects.get_abuse(channel_id)
+      assert_equal 0, value
 
       # Does not flag the thumbnail as abusive
       thumbnail = FileBucket.new.get(channel_id, @thumbnail_filename)
@@ -113,10 +113,10 @@ class PublicThumbnailsTest < FilesApiTestBase
       # Returns project_default.png instead of the actual image
       refute_equal @thumbnail_body, last_response.body
 
+      # Abuse score functionality moved to Rails.
       # Does not flag the project as abusive
-      get "/v3/channels/#{channel_id}/abuse"
-      assert successful?
-      assert_equal 0, JSON.parse(last_response.body)['abuse_score']
+      value = Projects.get_abuse(channel_id)
+      assert_equal 0, value
 
       # Does not flag the thumbnail as abusive
       thumbnail = FileBucket.new.get(channel_id, @thumbnail_filename)
