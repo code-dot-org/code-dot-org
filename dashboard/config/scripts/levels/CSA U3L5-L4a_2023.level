@@ -2,7 +2,7 @@
   <config><![CDATA[{
   "properties": {
     "encrypted": "false",
-    "long_instructions": "**Short one-sentence description of problem to solve.**\r\n\r\n🎒 **IMPORT:** Import your `PainterPlus`(#e7e8ea) class from your **Backpack**.\r\n\r\n*Don't have it, or it doesn't work? That's ok! Copy the code from* ***here*** *and paste it into a new file in your project.*\r\n\r\n✅ **TO DO:** Overview of the steps to take.\r\n\r\n1. More specific step\r\n\r\n2. More specific step\r\n\r\n::: details [**🔦 Need help with your algorithm?**]\r\n  \r\nHere is one approach to solving this problem.\r\n\r\n```\r\nalgorithm for method to write\r\n```\r\n:::\r\n&nbsp;\r\n\r\n💡 **TIP:** Check out the documentation for the `ClassName`(#e7e8ea) class in the **Documentation** tab ⬆️ for a thing to look for!\r\n\r\n📝 **COMMENT:** Be sure to add comments to note what your code does.\r\n\r\n🖥️ **TEST:** Test your program to check if your code achieves the expected result.\r\n\r\n🎉 **RUN:** Run your program to see the result of your code!\r\n\r\n## ***Don't forget to . . .***\r\n\r\n![](https://images.code.org/eb2c8910ae2e150019b8e2177405d4af-image-1668191576873.png)\r\n\r\n## 🎯 Goal\r\n\r\nimage/gif or console output",
+    "long_instructions": "The <a href=\"https://code.org/promote/ap\" target=\"_blank\">**AP Computer Science Exams dataset**</a> includes the number of exams taken in each state in 2021. The number of exams taken in each state is stored in an `int`(#e7e8ea) array called `csExams`(#e7e8ea).\r\n\r\n✅ **TO DO #1:** In `APExams.java`(#e7e8ea), write the `calcAverageExams()`(#e7e8ea) method to calculate and return the average number of AP Computer Science exams taken in each state.\r\n\r\n::: details [**🔦 Need help with your algorithm?**]\r\n  \r\nThe average is found by dividing the sum by the number of values. You already have a way to get the sum of the values in the 1D array `csExams`(#e7e8ea)! Use the `calcTotalExams()`(#e7e8ea) method to get the sum and divide the result by the length of the 1D array to find the average. **Don't forget to declare any variables you use with the appropriate data types.**\r\n\r\n```\r\ntotalExams = calcTotalExams()\r\naverageExams = totalExams / csExams.length\r\n```\r\n:::\r\n&nbsp;\r\n\r\n✅ **TO DO #2:** In `DataRunner.java`(#e7e8ea), call the `calcAverageExams()`(#e7e8ea) method and print the result.\r\n\r\n💡 **TIP:** Check out the **Help & Tips** tab ⬆️ for help with traversing a 1D array using a `for`(#e7e8ea) loop.\r\n\r\n## ***Don't forget to . . .***\r\n\r\n![](https://images.code.org/eb2c8910ae2e150019b8e2177405d4af-image-1668191576873.png)",
     "mini_rubric": "false",
     "submittable": "false",
     "hide_share_and_remix": "false",
@@ -16,13 +16,20 @@
     },
     "encrypted_examples": [
 
-    ]
+    ],
+    "display_name": "AP Computer Science Exams",
+    "bubble_choice_description": "The AP Computer Science Exams dataset includes the number of exams taken in each state in 2021. Write the `calcAverageExams()` method to calculate and return the **average** number of AP Computer Science exams taken in each state.",
+    "thumbnail_url": "https://images.code.org/8e9cc77f4b543315fed9a4302b93a3e3-exam.png",
+    "reference_links": [
+      "/courses/csa-2023/guides/for-loops"
+    ],
+    "project_template_level_name": "CSA U3L5-ChoiceA_2023"
   },
   "game_id": 68,
   "published": true,
   "created_at": "2023-01-12T17:53:54.000Z",
   "level_num": "custom",
   "user_id": 16889,
-  "audit_log": "[{\"changed_at\":\"2023-01-12T17:53:54.964+00:00\",\"changed\":[\"cloned from \\\"CSA U3L5-L3d_2023\\\"\"],\"cloned_from\":\"CSA U3L5-L3d_2023\"},{\"changed_at\":\"2023-01-12 17:53:56 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2023-01-12T17:53:54.964+00:00\",\"changed\":[\"cloned from \\\"CSA U3L5-L3d_2023\\\"\"],\"cloned_from\":\"CSA U3L5-L3d_2023\"},{\"changed_at\":\"2023-01-12 17:53:56 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-01-22 23:57:58 +0000\",\"changed\":[\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-01-23 00:51:14 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-01-23 01:19:56 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-01-23 02:02:49 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>
 </Javalab>
