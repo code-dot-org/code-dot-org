@@ -109,7 +109,6 @@ class DeleteAccountsHelper
     Pd::Attendance.with_deleted.where(teacher_id: user_id).update_all(teacher_id: nil, deleted_at: Time.now)
     Pd::Attendance.with_deleted.where(marked_by_user_id: user_id).update_all(marked_by_user_id: nil)
 
-    Pd::FacilitatorProgramRegistration.where(user_id: user_id).update_all(form_data: '{}')
     Pd::RegionalPartnerProgramRegistration.where(user_id: user_id).update_all(form_data: '{}', teachercon: 0)
     Pd::Teachercon1819Registration.where(user_id: user_id).update_all(form_data: '{}', user_id: nil)
     Pd::RegionalPartnerContact.where(user_id: user_id).update_all(form_data: '{}')
@@ -125,6 +124,16 @@ class DeleteAccountsHelper
         WHERE `pd_teacher_applications`.`user_id` = #{user_id}
       SQL
     )
+
+    # SQL query to anonymize Pd::FacilitatorProgramRegistration because the model no longer exists
+    ActiveRecord::Base.connection.exec_query(
+      <<-SQL
+        UPDATE `pd_facilitator_program_registrations`
+        SET `pd_facilitator_program_registrations`.`form_data` = ''
+        WHERE `pd_facilitator_program_registrations`.`user_id` = #{user_id}
+    SQL
+    )
+
     # Peer reviews might be associated with a purged submitter or viewer
     PeerReview.where(submitter_id: user_id).update_all(submitter_id: nil, audit_trail: nil)
     PeerReview.where(reviewer_id: user_id).update_all(reviewer_id: nil, data: nil, audit_trail: nil)

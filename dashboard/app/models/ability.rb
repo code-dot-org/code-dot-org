@@ -217,7 +217,6 @@ class Ability
         can [:read, :start, :end, :workshop_survey_report, :summary, :filter], Pd::Workshop, facilitators: {id: user.id}
         can [:read, :update], Pd::Workshop, organizer_id: user.id
         can :manage_attendance, Pd::Workshop, facilitators: {id: user.id}, ended_at: nil
-        can :create, Pd::FacilitatorProgramRegistration, user_id: user.id
         can :read, Pd::CourseFacilitator, facilitator_id: user.id
 
         if Pd::CourseFacilitator.exists?(facilitator: user, course: Pd::Workshop::COURSE_CSF)

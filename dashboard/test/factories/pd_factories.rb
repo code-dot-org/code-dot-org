@@ -74,46 +74,6 @@ FactoryGirl.define do
     fixed_payment 50
   end
 
-  factory :pd_facilitator_program_registration, class: 'Pd::FacilitatorProgramRegistration' do
-    transient do
-      form_data_hash {build :pd_facilitator_program_registration_hash}
-    end
-    association :user, factory: :facilitator, strategy: :create
-    teachercon 1
-    form_data {form_data_hash.to_json}
-  end
-
-  # The raw attributes as returned by the teacher application form, and saved in Pd::FacilitatorProgramRegistration.form_data.
-  factory :pd_facilitator_program_registration_hash, class: 'Hash' do
-    initialize_with do
-      {
-        confirmTeacherconDate: "Yes",
-        addressStreet: "123 Main st",
-        addressCity: "Anywhere",
-        addressState: "AK",
-        addressZip: "12345",
-        contactName: "Fred",
-        contactRelationship: "Imaginary Friend",
-        contactPhone: "123-456-7890",
-        liveFarAway: "Yes",
-        dietaryNeeds: ["Gluten Free"],
-        howTraveling: "Flying",
-        needHotel: "Yes",
-        needAda: "Yes",
-        photoRelease: ["Yes"],
-        gender: "Female",
-        race: ["Hispanic or Latino"],
-        age: "26-30",
-        yearsTaught: "1",
-        gradesTaught: ["Middle School/Junior High"],
-        gradesPlanningToTeach: ["Middle School/Junior High"],
-        subjectsTaught: ["Science"],
-        csYearsTaught: "1",
-        liabilityWaiver: ["Yes"]
-      }.stringify_keys
-    end
-  end
-
   factory :pd_regional_partner_program_registration, class: 'Pd::RegionalPartnerProgramRegistration' do
     transient do
       form_data_hash {build :pd_regional_partner_program_registration_hash}
