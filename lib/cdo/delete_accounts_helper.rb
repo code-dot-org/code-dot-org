@@ -159,8 +159,16 @@ class DeleteAccountsHelper
     Pd::Application::Email.where(to: user_email).destroy_all if user_email.present?
 
     unless application_ids.empty?
-      # Pd::FitWeekend1819Registration does not inherit from Pd::FitWeekendRegistrationBase so both are needed here
-      Pd::FitWeekend1819Registration.where(pd_application_id: application_ids).update_all(form_data: '{}')
+      # SQL query to anonymize Pd::FitWeekend1819Registration because the model no longer exists
+      application_ids.each do |app_id|
+        ActiveRecord::Base.connection.exec_query(
+          <<-SQL
+          UPDATE `pd_fit_weekend1819_registrations`
+          SET `pd_fit_weekend1819_registrations`.`form_data` = ''
+          WHERE `pd_fit_weekend1819_registrations`.`pd_application_id` = #{app_id}
+        SQL
+        )
+      end
       Pd::FitWeekendRegistrationBase.where(pd_application_id: application_ids).update_all(form_data: '{}')
       Pd::Application::ApplicationBase.with_deleted.where(id: application_ids).update_all(form_data: '{}', notes: nil)
     end
