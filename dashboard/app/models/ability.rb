@@ -145,7 +145,6 @@ class Ability
           (user.teacher? && user.id == code_review_comment.code_review.user_id)
       end
 
-      can :create, Pd::RegionalPartnerProgramRegistration, user_id: user.id
       can :read, Pd::Session
       can :manage, Pd::Enrollment, user_id: user.id
       can :workshops_user_enrolled_in, Pd::Workshop

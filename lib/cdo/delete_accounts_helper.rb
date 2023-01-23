@@ -109,7 +109,6 @@ class DeleteAccountsHelper
     Pd::Attendance.with_deleted.where(teacher_id: user_id).update_all(teacher_id: nil, deleted_at: Time.now)
     Pd::Attendance.with_deleted.where(marked_by_user_id: user_id).update_all(marked_by_user_id: nil)
 
-    Pd::RegionalPartnerProgramRegistration.where(user_id: user_id).update_all(form_data: '{}', teachercon: 0)
     Pd::Teachercon1819Registration.where(user_id: user_id).update_all(form_data: '{}', user_id: nil)
     Pd::RegionalPartnerContact.where(user_id: user_id).update_all(form_data: '{}')
     Pd::RegionalPartnerMiniContact.where(user_id: user_id).update_all(form_data: '{}')
@@ -131,6 +130,16 @@ class DeleteAccountsHelper
         UPDATE `pd_facilitator_program_registrations`
         SET `pd_facilitator_program_registrations`.`form_data` = ''
         WHERE `pd_facilitator_program_registrations`.`user_id` = #{user_id}
+    SQL
+    )
+
+    # SQL query to anonymize Pd::RegionalPartnerProgramRegistration because the model no longer exists
+    ActiveRecord::Base.connection.exec_query(
+      <<-SQL
+        UPDATE `pd_regional_partner_program_registrations`
+        SET `pd_regional_partner_program_registrations`.`form_data` = '',
+        `pd_regional_partner_program_registrations`.`teachercon` = 0
+        WHERE `pd_regional_partner_program_registrations`.`user_id` = #{user_id}
     SQL
     )
 
