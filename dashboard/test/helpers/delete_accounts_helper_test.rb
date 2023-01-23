@@ -1027,13 +1027,25 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   #
 
   test "clears form_data from pd_fit_weekend_registrations" do
-    registration = create :pd_fit_weekend1920_registration
-    refute_equal '{}', registration.form_data
+    application = create :pd_teacher_application
+    ActiveRecord::Base.connection.exec_query(
+      <<-SQL
+        INSERT INTO `pd_fit_weekend_registrations` (pd_application_id, registration_year, form_data, created_at, updated_at)
+        VALUES (#{application.id}, '2019-2020', '{\"country\": \"USA\"}', '#{Time.now.to_s(:db)}', '#{Time.now.to_s(:db)}')
+    SQL
+    )
 
-    purge_user registration.pd_application.user
+    registration = ActiveRecord::Base.connection.exec_query(
+      "SELECT * from `pd_fit_weekend_registrations` WHERE `pd_fit_weekend_registrations`.`pd_application_id` = #{application.id}"
+    ).first
+    refute_empty registration["form_data"]
 
-    registration.reload
-    assert_equal '{}', registration.form_data
+    purge_user application.user
+
+    registration = ActiveRecord::Base.connection.exec_query(
+      "SELECT * from `pd_fit_weekend_registrations` WHERE `pd_fit_weekend_registrations`.`pd_application_id` = #{application.id}"
+    ).first
+    assert_empty registration["form_data"]
   end
 
   #

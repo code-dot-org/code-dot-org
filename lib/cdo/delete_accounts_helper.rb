@@ -168,8 +168,16 @@ class DeleteAccountsHelper
           WHERE `pd_fit_weekend1819_registrations`.`pd_application_id` = #{app_id}
         SQL
         )
+
+        # SQL query to anonymize Pd::FitWeekendRegistrationBase because the model no longer exists
+        ActiveRecord::Base.connection.exec_query(
+          <<-SQL
+          UPDATE `pd_fit_weekend_registrations`
+          SET `pd_fit_weekend_registrations`.`form_data` = ''
+          WHERE `pd_fit_weekend_registrations`.`pd_application_id` = #{app_id}
+        SQL
+        )
       end
-      Pd::FitWeekendRegistrationBase.where(pd_application_id: application_ids).update_all(form_data: '{}')
       Pd::Application::ApplicationBase.with_deleted.where(id: application_ids).update_all(form_data: '{}', notes: nil)
     end
 
