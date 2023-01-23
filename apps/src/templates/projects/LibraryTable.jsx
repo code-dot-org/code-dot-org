@@ -257,7 +257,7 @@ class LibraryTable extends React.Component {
           </Table.Provider>
         )}
         {!hasLibraries && (
-          <h3 style={{textAlign: 'center'}}>{i18n.noLibraries()}</h3>
+          <div style={styles.noLibraries}>{i18n.noLibraries()}</div>
         )}
         {unpublishFailedLibrary && (
           <BaseDialog
@@ -306,6 +306,10 @@ const styles = {
   dialogBody: {
     fontSize: 18,
     color: color.charcoal
+  },
+  noLibraries: {
+    fontSize: 14,
+    marginBottom: 20
   }
 };
 
