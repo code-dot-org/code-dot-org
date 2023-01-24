@@ -1,6 +1,6 @@
 class CreateProjectStateAndStorageIdIndex < ActiveRecord::Migration[6.0]
   def up
-    add_index :projects, [:storage_id, :state], name: "index_project_on_storage_id_and_state"
+    add_index :projects, [:storage_id, :state], name: "storage_apps_storage_id_state_index"
   end
 
   def down
