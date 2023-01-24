@@ -1130,13 +1130,24 @@ class DeleteAccountsHelperTest < ActionView::TestCase
 
   test "sets invalid teachercon from pd_regional_partner_program_registrations" do
     teacher = create :teacher
-    registration = create :pd_regional_partner_program_registration, user: teacher
-    assert_includes 1..3, registration.teachercon
+    ActiveRecord::Base.connection.exec_query(
+      <<-SQL
+        INSERT INTO `pd_regional_partner_program_registrations` (user_id, form_data, teachercon, created_at, updated_at)
+        VALUES (#{teacher.id}, '{\"country\": \"USA\"}', 1, '#{Time.now.to_s(:db)}', '#{Time.now.to_s(:db)}')
+    SQL
+    )
 
-    purge_user registration.user
+    registration = ActiveRecord::Base.connection.exec_query(
+      "SELECT * from `pd_regional_partner_program_registrations` WHERE `pd_regional_partner_program_registrations`.`user_id` = #{teacher.id}"
+    ).first
+    refute_equal 0, registration["teachercon"]
 
-    registration.reload
-    assert_equal 0, registration.teachercon
+    purge_user teacher
+
+    registration = ActiveRecord::Base.connection.exec_query(
+      "SELECT * from `pd_regional_partner_program_registrations` WHERE `pd_regional_partner_program_registrations`.`user_id` = #{teacher.id}"
+    ).first
+    assert_equal 0, registration["teachercon"]
   end
 
   #
