@@ -1,13 +1,14 @@
 # API routes ported from legacy/middleware/files_api.rb
-require 'cdo/aws/s3'
 
 class FilesApiController < ApplicationController
   # PATCH /v3/(animations|assets|sources|files|libraries)/:channel_id?abuse_score=<abuse_score>
   # Update all assets for the given channelId to have the provided abuse score
   def update
+    endpoint = params[:endpoint]
+    encrypted_channel_id = params[:encrypted_channel_id]
+
     abuse_score = params[:abuse_score]
     not_modified if abuse_score.nil?
-    endpoint = params[:endpoint]
 
     buckets = get_bucket_impl(endpoint).new
 
@@ -17,7 +18,7 @@ class FilesApiController < ApplicationController
       raise ActionController::BadRequest.new, "Bad channel_id"
     end
     files.each do |file|
-      not_authorized unless can_update_abuse_score?(endpoint, encrypted_channel_id, file[:filename], abuse_score)
+      return head :unauthorized unless can_update_abuse_score?(endpoint, encrypted_channel_id, file[:filename], abuse_score)
       buckets.replace_abuse_score(encrypted_channel_id, file[:filename], abuse_score)
     end
 
@@ -44,8 +45,14 @@ class FilesApiController < ApplicationController
   end
 
   def can_update_abuse_score?(endpoint, encrypted_channel_id, filename, new_score)
-    return true if has_permission?('project_validator') || new_score.nil?
+    return true if project_validator? || new_score.nil?
 
     get_bucket_impl(endpoint).new.get_abuse_score(encrypted_channel_id, filename) <= new_score.to_i
+  end
+
+  def project_validator?
+    return false unless current_user
+    return true if current_user.permission?(UserPermission::PROJECT_VALIDATOR)
+    false
   end
 end
