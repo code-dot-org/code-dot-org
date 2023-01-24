@@ -18,11 +18,11 @@
 #
 # Indexes
 #
-#  index_project_on_storage_id_and_state  (storage_id,state)
-#  storage_apps_project_type_index        (project_type)
-#  storage_apps_published_at_index        (published_at)
-#  storage_apps_standalone_index          (standalone)
-#  storage_apps_storage_id_index          (storage_id)
+#  storage_apps_project_type_index      (project_type)
+#  storage_apps_published_at_index      (published_at)
+#  storage_apps_standalone_index        (standalone)
+#  storage_apps_storage_id_index        (storage_id)
+#  storage_apps_storage_id_state_index  (storage_id,state)
 #
 class Project < ApplicationRecord
   belongs_to :project_storage, foreign_key: 'storage_id', optional: true
