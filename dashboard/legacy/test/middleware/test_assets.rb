@@ -143,6 +143,127 @@ class AssetsTest < FilesApiTestBase
     )
   end
 
+  def test_set_abuse_score
+    skip "Abuse score functionality moved to Rails"
+    asset_bucket = AssetBucket.new
+
+    # create a couple assets without an abuse score
+    _, first_asset = post_asset_file(@api, 'asset1.jpg', 'stub-image-contents', 'image/jpeg')
+    _, second_asset = post_asset_file(@api, 'asset2.jpg', 'stub-image-contents', 'image/jpeg')
+
+    result = @api.get_object(first_asset)
+    assert_equal 'stub-image-contents', result
+
+    assert_equal 0, asset_bucket.get_abuse_score(@channel_id, first_asset)
+    assert_equal 0, asset_bucket.get_abuse_score(@channel_id, second_asset)
+
+    # set abuse score
+    @api.patch_abuse(10)
+    assert_equal 10, asset_bucket.get_abuse_score(@channel_id, first_asset)
+    assert_equal 10, asset_bucket.get_abuse_score(@channel_id, second_asset)
+
+    # make sure we didnt blow away contents
+    result = @api.get_object(first_asset)
+    assert_equal 'stub-image-contents', result
+
+    # increment
+    @api.patch_abuse(20)
+    assert_equal 20, asset_bucket.get_abuse_score(@channel_id, first_asset)
+    assert_equal 20, asset_bucket.get_abuse_score(@channel_id, second_asset)
+
+    # set to be the same
+    @api.patch_abuse(20)
+    assert successful?
+    assert_equal 20, asset_bucket.get_abuse_score(@channel_id, first_asset)
+    assert_equal 20, asset_bucket.get_abuse_score(@channel_id, second_asset)
+
+    # non-permissions can't decrement
+    @api.patch_abuse(0)
+    refute successful?
+    assert_equal 20, asset_bucket.get_abuse_score(@channel_id, first_asset)
+    assert_equal 20, asset_bucket.get_abuse_score(@channel_id, second_asset)
+
+    # reset_abuse can decrement
+    FilesApi.any_instance.stubs(:has_permission?).with('project_validator').returns(true)
+    @api.patch_abuse(0)
+    assert successful?
+    assert_equal 0, asset_bucket.get_abuse_score(@channel_id, first_asset)
+    assert_equal 0, asset_bucket.get_abuse_score(@channel_id, second_asset)
+
+    # make sure we didnt blow away contents
+    result = @api.get_object(first_asset)
+    assert_equal 'stub-image-contents', result
+    FilesApi.any_instance.unstub(:has_permission?)
+
+    @api.delete_object(first_asset)
+    @api.delete_object(second_asset)
+
+    assert_newrelic_metrics %w(
+      Custom/ListRequests/AssetBucket/BucketHelper.app_size
+      Custom/ListRequests/AssetBucket/BucketHelper.app_size
+      Custom/ListRequests/AssetBucket/BucketHelper.list
+      Custom/ListRequests/AssetBucket/BucketHelper.list
+      Custom/ListRequests/AssetBucket/BucketHelper.list
+      Custom/ListRequests/AssetBucket/BucketHelper.list
+      Custom/ListRequests/AssetBucket/BucketHelper.list
+    )
+  end
+
+  def test_viewing_abusive_assets
+    skip "Abuse score functionality moved to Rails"
+    _, asset_name = post_asset_file(@api, 'abusive_asset.jpg', 'stub-image-contents', 'image/jpeg')
+
+    # owner can view
+    @api.get_object(asset_name)
+    assert successful?
+
+    # non-owner can view
+    with_session(:non_owner) do
+      non_owner_api = FilesApiTestHelper.new(current_session, 'assets', @channel_id)
+      non_owner_api.get_object(asset_name)
+      assert successful?
+    end
+
+    # set abuse
+    @api.patch_abuse(15)
+
+    # owner can view
+    @api.get_object(asset_name)
+    assert successful?
+
+    # non-owner cannot view
+    with_session(:non_owner) do
+      non_owner_api = FilesApiTestHelper.new(current_session, 'assets', @channel_id)
+      non_owner_api.get_object(asset_name)
+      refute successful?
+    end
+
+    # admin can view
+    with_session(:admin) do
+      admin_api = FilesApiTestHelper.new(current_session, 'assets', @channel_id)
+      FilesApi.any_instance.stubs(:admin?).returns(true)
+      admin_api.get_object(asset_name)
+      assert successful?
+      FilesApi.any_instance.unstub(:admin?)
+    end
+
+    # teacher can view
+    with_session(:teacher) do
+      teacher_api = FilesApiTestHelper.new(current_session, 'assets', @channel_id)
+      FilesApi.any_instance.stubs(:teaches_student?).returns(true)
+      teacher_api.get_object(asset_name)
+      assert successful?
+      FilesApi.any_instance.unstub(:teaches_student?)
+    end
+
+    @api.delete_object(asset_name)
+
+    assert_newrelic_metrics %w(
+      Custom/ListRequests/AssetBucket/BucketHelper.app_size
+      Custom/ListRequests/AssetBucket/BucketHelper.list
+    )
+  end
+
   def test_assets_copy_some
     delete_all_assets('assets_test/1/2')
     dest_channel_id = create_channel
