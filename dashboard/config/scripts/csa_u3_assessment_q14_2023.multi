@@ -12,8 +12,12 @@ What is printed to the console based on the code below?
 ```
 String[] animals = {"cat", "puppy", "hippo", "rabbit", "kangaroo"};
 
-for(int i = animals.length - 1; i >= 0; i--) {
-  System.out.print(animals[i] + " ");
+for (int index = animals.length - 1; index >= 0; index--) {
+  System.out.print(animals[index] + " ");
 }
 ```
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+The loop control variable `index` in this `for` loop is initialized to `animals.length - 1`, or the last index of the 1D array `animals`. The variable `index` is decreased by `1` until it reaches `0`, or the first element in `animals`. For each iteration of the `for` loop, the value is printed using a `print` statement instead of a `println` statement. This means that each element in `animals` is printed on one line in reverse order with a space in between each element.
 MARKDOWN
