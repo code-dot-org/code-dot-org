@@ -7,15 +7,31 @@ right '`{-10, 0, 8, 7, 19}`'
 wrong '`{-15, 5, 3, 12, 14}`'
 
 markdown <<MARKDOWN
-Given the following array `myArray` and the method `addFive()`, what will the values of `myArray` be after `addFive()` is executed?
+Consider the following `addFive` method.
 
 ```
-private int[] myArray = {-15, 0, 3, 7, 14};
+public class Calculator {
 
-public void addFive() {
-  for(int i = 0; i < myArray.length; i = i + 2) {
-    myArray[i] = myArray[i] + 5;
+  public void addFive(int[] numbers) {
+    for (int index = 0; index < numbers.length; index += 2) {
+      numbers[index] += 5;
+    }
   }
+
 }
 ```
+
+What values will be stored in `values` after the following code segment is executed?
+
+```
+int[] values = {-15, 0, 3, 7, 14};
+Calculator calc = new Calculator();
+calc.addFive(values);
+```
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+The loop control variable in the `for` loop is initialized to `0` and incremented by `2` on each iteration. In the body of the `for` loop, the value is increased by `5`. This means that every other element in the 1D array `numbers` is increased by `5`.
+
+![](https://images.code.org/f22f6ae4d554b8f1eca89ee51b1a793e-image-1674542016302.gif)
 MARKDOWN
