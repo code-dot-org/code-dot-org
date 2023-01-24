@@ -313,6 +313,7 @@ class ChannelsTest < Minitest::Test
   end
 
   def test_abuse
+    skip "Abuse functionality moved to Rails"
     post '/v3/channels', {}.to_json, 'CONTENT_TYPE' => 'application/json;charset=utf-8'
     channel_id = last_response.location.split('/').last
 
@@ -340,6 +341,7 @@ class ChannelsTest < Minitest::Test
   end
 
   def test_signed_in_abuse
+    skip "Abuse functionality moved to Rails"
     post '/v3/channels', {}.to_json, 'CONTENT_TYPE' => 'application/json;charset=utf-8'
     channel_id = last_response.location.split('/').last
 
@@ -416,6 +418,7 @@ class ChannelsTest < Minitest::Test
   end
 
   def test_abuse_frozen
+    skip "Abuse functionality moved to Rails"
     post '/v3/channels', {frozen: true}.to_json, 'CONTENT_TYPE' => 'application/json;charset=utf-8'
     channel_id = last_response.location.split('/').last
 
