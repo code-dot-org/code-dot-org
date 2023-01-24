@@ -1117,7 +1117,6 @@ class DeleteAccountsHelperTest < ActionView::TestCase
       "SELECT * from `pd_regional_partner_program_registrations` WHERE `pd_regional_partner_program_registrations`.`user_id` = #{teacher.id}"
     ).first
     refute_empty registration["form_data"]
-    refute_equal 0, registration["teachercon"]
 
     purge_user teacher
 
@@ -1125,7 +1124,6 @@ class DeleteAccountsHelperTest < ActionView::TestCase
       "SELECT * from `pd_regional_partner_program_registrations` WHERE `pd_regional_partner_program_registrations`.`user_id` = #{teacher.id}"
     ).first
     assert_empty registration["form_data"]
-    assert_equal 0, registration["teachercon"]
   end
 
   test "sets invalid teachercon from pd_regional_partner_program_registrations" do
