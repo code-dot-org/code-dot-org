@@ -11,6 +11,10 @@ class ChannelsApiControllerTest < ActionController::TestCase
     ChannelsApiController.any_instance.stubs(:get_storage_id).returns(@storage_id)
   end
 
+  teardown do
+    ChannelsApiController.any_instance.unstub(:get_storage_id)
+  end
+
   test "get abuse score" do
     response = get :show_abuse, params: {channel_id: @channel_id}
     assert response.ok?
@@ -53,6 +57,8 @@ class ChannelsApiControllerTest < ActionController::TestCase
     post :update_abuse, params: {channel_id: @channel_id}
     assert response.ok?
     assert_equal 10, JSON.parse(response.body)['abuse_score']
+
+    DCDO.unstub(:get)
   end
 
   test "abuse frozen" do
