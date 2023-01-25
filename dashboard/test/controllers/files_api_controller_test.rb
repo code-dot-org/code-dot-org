@@ -9,6 +9,11 @@ class FilesApiControllerTest < ActionController::TestCase
     FileBucket.any_instance.stubs(:list).returns([{filename: 'test.file'}])
   end
 
+  teardown do
+    FileBucket.any_instance.unstub(:list)
+    FileBucket.any_instance.unstub(:get_abuse_score)
+  end
+
   test "set abuse score" do
     FileBucket.any_instance.stubs(:get_abuse_score).returns(0)
     FileBucket.any_instance.expects(:replace_abuse_score).once
