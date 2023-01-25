@@ -346,22 +346,8 @@ class ChannelsApi < Sinatra::Base
   #
   # Clear an abuse score. Requires project_validator permission
   #
-  delete %r{/v3/channels/([^/]+)/abuse$} do |id|
-    # UserPermission::PROJECT_VALIDATOR
-    not_authorized unless project_validator?
-
-    dont_cache
-    content_type :json
-    begin
-      value = Projects.new(get_storage_id).reset_abuse(id)
-    rescue ArgumentError, OpenSSL::Cipher::CipherError
-      bad_request
-    end
-    {abuse_score: value}.to_json
-  end
-  post %r{/v3/channels/([^/]+)/abuse/delete$} do |_id|
-    call(env.merge('REQUEST_METHOD' => 'DELETE', 'PATH_INFO' => File.dirname(request.path_info)))
-  end
+  # Moved to ChannelsApiController.
+  #
 
   # This method is included here so that it can be stubbed in tests.
   def project_validator?
