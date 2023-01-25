@@ -31,6 +31,12 @@ class DeleteAccountsHelperTest < ActionView::TestCase
     end
   end
 
+  def get_record_with_sql(select_attribute, table_name, selector)
+    ActiveRecord::Base.connection.exec_query(
+      "SELECT #{select_attribute} from `#{table_name}` WHERE `#{table_name}`.`#{selector.keys[0]}` = #{selector.values[0]}"
+    ).first
+  end
+
   setup do
     # Skip security logging to Slack in test
     ChatClient.stubs(:message)
@@ -981,16 +987,12 @@ class DeleteAccountsHelperTest < ActionView::TestCase
     SQL
     )
 
-    application = ActiveRecord::Base.connection.exec_query(
-      "SELECT form_data from `pd_facilitator_program_registrations` WHERE `pd_facilitator_program_registrations`.`user_id` = #{teacher.id}"
-    ).first
+    application = get_record_with_sql("form_data", "pd_facilitator_program_registrations", {'user_id' => teacher.id})
     refute_empty application["form_data"]
 
     purge_user teacher
 
-    application = ActiveRecord::Base.connection.exec_query(
-      "SELECT form_data from `pd_facilitator_program_registrations` WHERE `pd_facilitator_program_registrations`.`user_id` = #{teacher.id}"
-    ).first
+    application = get_record_with_sql("form_data", "pd_facilitator_program_registrations", {'user_id' => teacher.id})
     assert_empty application["form_data"]
   end
 
@@ -1008,16 +1010,12 @@ class DeleteAccountsHelperTest < ActionView::TestCase
     SQL
     )
 
-    registration = ActiveRecord::Base.connection.exec_query(
-      "SELECT form_data from `pd_fit_weekend1819_registrations` WHERE `pd_fit_weekend1819_registrations`.`pd_application_id` = #{application.id}"
-    ).first
+    registration = get_record_with_sql("form_data", "pd_fit_weekend1819_registrations", {'pd_application_id' => application.id})
     refute_empty registration["form_data"]
 
     purge_user application.user
 
-    registration = ActiveRecord::Base.connection.exec_query(
-      "SELECT form_data from `pd_fit_weekend1819_registrations` WHERE `pd_fit_weekend1819_registrations`.`pd_application_id` = #{application.id}"
-    ).first
+    registration = get_record_with_sql("form_data", "pd_fit_weekend1819_registrations", {'pd_application_id' => application.id})
     assert_empty registration["form_data"]
   end
 
@@ -1035,16 +1033,12 @@ class DeleteAccountsHelperTest < ActionView::TestCase
     SQL
     )
 
-    registration = ActiveRecord::Base.connection.exec_query(
-      "SELECT form_data from `pd_fit_weekend_registrations` WHERE `pd_fit_weekend_registrations`.`pd_application_id` = #{application.id}"
-    ).first
+    registration = get_record_with_sql("form_data", "pd_fit_weekend_registrations", {'pd_application_id' => application.id})
     refute_empty registration["form_data"]
 
     purge_user application.user
 
-    registration = ActiveRecord::Base.connection.exec_query(
-      "SELECT form_data from `pd_fit_weekend_registrations` WHERE `pd_fit_weekend_registrations`.`pd_application_id` = #{application.id}"
-    ).first
+    registration = get_record_with_sql("form_data", "pd_fit_weekend_registrations", {'pd_application_id' => application.id})
     assert_empty registration["form_data"]
   end
 
@@ -1113,16 +1107,12 @@ class DeleteAccountsHelperTest < ActionView::TestCase
     SQL
     )
 
-    registration = ActiveRecord::Base.connection.exec_query(
-      "SELECT form_data from `pd_regional_partner_program_registrations` WHERE `pd_regional_partner_program_registrations`.`user_id` = #{teacher.id}"
-    ).first
+    registration = get_record_with_sql("form_data", "pd_regional_partner_program_registrations", {'user_id' => teacher.id})
     refute_empty registration["form_data"]
 
     purge_user teacher
 
-    registration = ActiveRecord::Base.connection.exec_query(
-      "SELECT form_data from `pd_regional_partner_program_registrations` WHERE `pd_regional_partner_program_registrations`.`user_id` = #{teacher.id}"
-    ).first
+    registration = get_record_with_sql("form_data", "pd_regional_partner_program_registrations", {'user_id' => teacher.id})
     assert_empty registration["form_data"]
   end
 
@@ -1135,16 +1125,12 @@ class DeleteAccountsHelperTest < ActionView::TestCase
     SQL
     )
 
-    registration = ActiveRecord::Base.connection.exec_query(
-      "SELECT teachercon from `pd_regional_partner_program_registrations` WHERE `pd_regional_partner_program_registrations`.`user_id` = #{teacher.id}"
-    ).first
+    registration = get_record_with_sql("teachercon", "pd_regional_partner_program_registrations", {'user_id' => teacher.id})
     refute_equal 0, registration["teachercon"]
 
     purge_user teacher
 
-    registration = ActiveRecord::Base.connection.exec_query(
-      "SELECT teachercon from `pd_regional_partner_program_registrations` WHERE `pd_regional_partner_program_registrations`.`user_id` = #{teacher.id}"
-    ).first
+    registration = get_record_with_sql("teachercon", "pd_regional_partner_program_registrations", {'user_id' => teacher.id})
     assert_equal 0, registration["teachercon"]
   end
 
@@ -1203,18 +1189,12 @@ class DeleteAccountsHelperTest < ActionView::TestCase
       SQL
     )
 
-    application = ActiveRecord::Base.connection.exec_query(
-      "SELECT primary_email from `pd_teacher_applications` WHERE `pd_teacher_applications`.`user_id` = #{user.id}"
-    ).first
-
+    application = get_record_with_sql("primary_email", "pd_teacher_applications", {'user_id' => user.id})
     refute_empty application["primary_email"]
 
     purge_user user
 
-    application = ActiveRecord::Base.connection.exec_query(
-      "SELECT primary_email from `pd_teacher_applications` WHERE `pd_teacher_applications`.`user_id` = #{user.id}"
-    ).first
-
+    application = get_record_with_sql("primary_email", "pd_teacher_applications", {'user_id' => user.id})
     assert_empty application["primary_email"]
   end
 
@@ -1229,18 +1209,12 @@ class DeleteAccountsHelperTest < ActionView::TestCase
       SQL
     )
 
-    application = ActiveRecord::Base.connection.exec_query(
-      "SELECT secondary_email from `pd_teacher_applications` WHERE `pd_teacher_applications`.`user_id` = #{user.id}"
-    ).first
-
+    application = get_record_with_sql("secondary_email", "pd_teacher_applications", {'user_id' => user.id})
     refute_empty application["secondary_email"]
 
     purge_user user
 
-    application = ActiveRecord::Base.connection.exec_query(
-      "SELECT secondary_email from `pd_teacher_applications` WHERE `pd_teacher_applications`.`user_id` = #{user.id}"
-    ).first
-
+    application = get_record_with_sql("secondary_email", "pd_teacher_applications", {'user_id' => user.id})
     assert_empty application["secondary_email"]
   end
 
@@ -1255,17 +1229,12 @@ class DeleteAccountsHelperTest < ActionView::TestCase
       SQL
     )
 
-    application = ActiveRecord::Base.connection.exec_query(
-      "SELECT application from `pd_teacher_applications` WHERE `pd_teacher_applications`.`user_id` = #{user.id}"
-    ).first
-
+    application = get_record_with_sql("application", "pd_teacher_applications", {'user_id' => user.id})
     refute_empty application["application"]
 
     purge_user user
 
-    application = ActiveRecord::Base.connection.exec_query(
-      "SELECT application from `pd_teacher_applications` WHERE `pd_teacher_applications`.`user_id` = #{user.id}"
-    ).first
+    application = get_record_with_sql("application", "pd_teacher_applications", {'user_id' => user.id})
     assert_empty application["application"]
   end
 
