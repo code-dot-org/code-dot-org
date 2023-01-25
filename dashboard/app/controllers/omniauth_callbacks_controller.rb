@@ -352,8 +352,8 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
   # expect it to be in the AuthHash. Example attributes: gender, date of birth.
   def inject_clever_data(auth)
     return if auth.nil?
-    dob = auth.dig(:extra, :raw_info, :canonical, :data, :dob)
-    gender = auth.dig(:extra, :raw_info, :canonical, :data, :gender)
+    dob = auth[:dob] || auth.dig(:extra, :raw_info, :canonical, :data, :dob)
+    gender = auth[:gender] || auth.dig(:extra, :raw_info, :canonical, :data, :gender)
     clever_data = OmniAuth::AuthHash.new(dob: dob, gender: gender)
     auth.info&.merge!(clever_data)
     auth
