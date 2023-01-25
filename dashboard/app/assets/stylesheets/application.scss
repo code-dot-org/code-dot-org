@@ -2249,6 +2249,23 @@ a.download-video {
       @include box-shadow(none);
       cursor: not-allowed;
     }
+
+    &.with-google_oauth2 {
+      background-color: $google_brand_color;
+      border-color: $google_brand_color;
+      color: $neutral_white;
+    }
+
+    &.with-facebook {
+      background-color: $facebook_brand_color;
+      border-color: $facebook_brand_color;
+      color: $neutral_white;
+    }
+
+    &.with-microsoft_v2_auth {
+      background-color: $microsoft_brand_color;
+      border: 1px solid $microsoft_brand_color;
+    }
   }
 }
 
