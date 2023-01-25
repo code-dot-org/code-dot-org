@@ -8,11 +8,14 @@ class ChannelsApiControllerTest < ActionController::TestCase
     @storage_id = @storage.id
     @projects = Projects.new(@storage_id)
     @channel_id = @projects.create({}, ip: '10.0.0.1')
-    ChannelsApiController.any_instance.stubs(:get_storage_id).returns(@storage_id)
+    #ChannelsApiController.any_instance.stubs(:get_storage_id).returns(@storage_id)
+    @controller.stubs(:get_storage_id).returns(@storage_id)
   end
 
   teardown do
-    ChannelsApiController.any_instance.unstub(:get_storage_id)
+    #ChannelsApiController.any_instance.unstub(:get_storage_id)
+    @controller.unstub(:get_storage_id)
+    mocha_teardown
   end
 
   test "get abuse score" do
@@ -40,6 +43,8 @@ class ChannelsApiControllerTest < ActionController::TestCase
     response = delete :destroy_abuse, params: {channel_id: @channel_id}
     assert response.ok?
     assert_equal 0, JSON.parse(response.body)['abuse_score']
+
+    sign_out user
   end
 
   test "signed in abuse" do
@@ -59,6 +64,7 @@ class ChannelsApiControllerTest < ActionController::TestCase
     assert_equal 10, JSON.parse(response.body)['abuse_score']
 
     DCDO.unstub(:get)
+    sign_out user
   end
 
   test "abuse frozen" do
@@ -78,6 +84,8 @@ class ChannelsApiControllerTest < ActionController::TestCase
     get :show_abuse, params: {channel_id: @channel_id}
     assert response.ok?
     assert_equal 0, JSON.parse(response.body)['abuse_score']
+
+    sign_out user
   end
 
   test "base64 error" do

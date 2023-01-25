@@ -2,6 +2,7 @@ require 'base64'
 
 # Create a storage id without an associated user id and track it using a cookie.
 def create_storage_id_cookie
+  puts 'in create_storage_id_cookie'
   storage_id = create_storage_id_for_user(nil)
 
   response.set_cookie(
@@ -92,6 +93,8 @@ def storage_encrypt_channel_id(storage_id, project_id)
 end
 
 def get_storage_id
+  puts 'in get_storage_id'
+  puts @user_storage_id.inspect
   @user_storage_id ||= storage_id_for_current_user || storage_id_from_cookie || create_storage_id_cookie
 end
 
@@ -102,6 +105,7 @@ def storage_id_cookie_name
 end
 
 def storage_id_for_user_id(user_id)
+  puts "in storage_id_for_user_id=#{user_id}"
   row = get_user_storage_id({user_id: user_id})
   row[:id] if row
 end
@@ -112,16 +116,23 @@ def user_id_for_storage_id(storage_id)
 end
 
 def storage_id_for_current_user
+  puts "in storage_id_for_current_user"
   user_id = request.user_id
+  puts "user_id=#{user_id}"
   return nil unless user_id
 
   # Return the user's storage-id, if it exists.
+  puts 'here1'
   user_storage_id = storage_id_for_user_id(user_id)
+  puts 'here2'
   return user_storage_id unless user_storage_id.nil?
 
+  puts 'here3'
   user_storage_id = take_storage_id_ownership_from_cookie(user_id)
+  puts 'here4'
   return user_storage_id unless user_storage_id.nil?
 
+  puts 'here5'
   create_storage_id_for_user(user_id)
 end
 
@@ -146,6 +157,7 @@ def take_storage_id_ownership_from_cookie(user_id)
 end
 
 def storage_id_from_cookie
+  puts 'in storage_id_from_cookie'
   encrypted = CGI.unescape(request.cookies[storage_id_cookie_name].to_s)
   return nil if encrypted.empty?
   storage_id = storage_decrypt_id(encrypted)
@@ -186,9 +198,15 @@ def update_annoymous_user_storage_id(storage_id, user_id)
 end
 
 def create_storage_id_for_user(user_id)
+  puts "in create_storage_id_for_user=#{user_id}"
   # We don't have any existing storage id we can associate with this user, so create a new one
-  user_storage_ids_table.insert(user_id: user_id)
+  old_logger = ActiveRecord::Base.logger
+  ActiveRecord::Base.logger = Logger.new(STDOUT)
+  ret = user_storage_ids_table.insert(user_id: user_id)
+  ActiveRecord::Base.logger = old_logger
+  ret
 rescue Sequel::UniqueConstraintViolation
+  puts "in rescue"
   # We lost a race against someone performing the same operation. The row
   # we're looking for should now be in the database.
   user_storage_id = storage_id_for_user_id(user_id)
