@@ -11,9 +11,7 @@ class ProjectsControllerTest < ActionController::TestCase
   end
 
   setup do
-    user = create :user
-    puts "user.id=#{user.id}"
-    sign_in_with_request user
+    sign_in_with_request create :user
     Geocoder.stubs(:search).returns([OpenStruct.new(country_code: 'US')])
     AzureTextToSpeech.stubs(:get_voices).returns({})
   end
@@ -40,7 +38,6 @@ class ProjectsControllerTest < ActionController::TestCase
 
   teardown do
     AzureTextToSpeech.unstub(:get_voices)
-    ActionDispatch::TestRequest.any_instance.unstub(:user_id)
   end
 
   test "index" do
