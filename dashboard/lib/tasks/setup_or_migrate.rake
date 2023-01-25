@@ -14,6 +14,7 @@ namespace :db do
 
   timed_task_with_logging :setup_or_migrate do
     db_exists = database_exists?
+    ENV['db_read_timeout'] = 30
     Rake::Task["db:load_config"].invoke
     if db_exists
       Rake::Task["db:migrate"].invoke
