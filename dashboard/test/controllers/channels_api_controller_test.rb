@@ -73,4 +73,17 @@ class ChannelsApiControllerTest < ActionController::TestCase
     assert response.ok?
     assert_equal 0, JSON.parse(response.body)['abuse_score']
   end
+
+  test "base64 error" do
+    causes_argumenterror = "bT0zAyBvk"
+    causes_ciphererror = "IMALITTLETEAPOTSHORTANDSTOUT"
+
+    assert_raises(ActionController::BadRequest) do
+      get :show_abuse, params: {channel_id: causes_argumenterror}
+    end
+
+    assert_raises(ActionController::BadRequest) do
+      get :show_abuse, params: {channel_id: causes_ciphererror}
+    end
+  end
 end
