@@ -12,6 +12,15 @@ class DeleteAccountsHelper
     Weblab
   ).freeze
 
+  def sql_query_to_anonymize_field(table_name, new_attribute_values, selector)
+    set = "SET " + new_attribute_values.map {|k, v| "`#{table_name}`.`#{k}` = #{v}"}.join(', ')
+    new_attribute_values.each do |k, v|
+      set << ", `#{table_name}`.`#{k}` = #{v}"
+    end
+    where = "WHERE `#{table_name}`.`#{selector.keys[0]}` = #{selector.values[0]}"
+    "UPDATE `#{table_name}` #{set} #{where}"
+  end
+
   # @param [IO|StringIO] log to record granular activity while deleting accounts.
   # @param [Boolean] bypass_safety_constraints to purge accounts without the
   #   usual checks on account type, row limits, etc.  For use only when an
@@ -115,32 +124,29 @@ class DeleteAccountsHelper
 
     # SQL query to anonymize Pd::TeacherApplication (2017-18 application) because the model no longer exists
     ActiveRecord::Base.connection.exec_query(
-      <<-SQL
-        UPDATE `pd_teacher_applications`
-        SET `pd_teacher_applications`.`primary_email` = '',
-          `pd_teacher_applications`.`secondary_email` = '',
-          `pd_teacher_applications`.`application` = ''
-        WHERE `pd_teacher_applications`.`user_id` = #{user_id}
-      SQL
+      sql_query_to_anonymize_field(
+        "pd_teacher_applications",
+        {'primary_email' => '""', 'secondary_email' => '""', 'application' => '""'},
+        {'user_id' => user_id}
+      )
     )
 
     # SQL query to anonymize Pd::FacilitatorProgramRegistration because the model no longer exists
     ActiveRecord::Base.connection.exec_query(
-      <<-SQL
-        UPDATE `pd_facilitator_program_registrations`
-        SET `pd_facilitator_program_registrations`.`form_data` = ''
-        WHERE `pd_facilitator_program_registrations`.`user_id` = #{user_id}
-    SQL
+      sql_query_to_anonymize_field(
+        "pd_facilitator_program_registrations",
+        {'form_data' => '""'},
+        {'user_id' => user_id}
+      )
     )
 
     # SQL query to anonymize Pd::RegionalPartnerProgramRegistration because the model no longer exists
     ActiveRecord::Base.connection.exec_query(
-      <<-SQL
-        UPDATE `pd_regional_partner_program_registrations`
-        SET `pd_regional_partner_program_registrations`.`form_data` = '',
-        `pd_regional_partner_program_registrations`.`teachercon` = 0
-        WHERE `pd_regional_partner_program_registrations`.`user_id` = #{user_id}
-    SQL
+      sql_query_to_anonymize_field(
+        "pd_regional_partner_program_registrations",
+        {'form_data' => '""', 'teachercon' => 0},
+        {'user_id' => user_id}
+      )
     )
 
     # Peer reviews might be associated with a purged submitter or viewer
@@ -159,23 +165,23 @@ class DeleteAccountsHelper
     Pd::Application::Email.where(to: user_email).destroy_all if user_email.present?
 
     unless application_ids.empty?
-      # SQL query to anonymize Pd::FitWeekend1819Registration because the model no longer exists
       application_ids.each do |app_id|
+        # SQL query to anonymize Pd::FitWeekend1819Registration because the model no longer exists
         ActiveRecord::Base.connection.exec_query(
-          <<-SQL
-          UPDATE `pd_fit_weekend1819_registrations`
-          SET `pd_fit_weekend1819_registrations`.`form_data` = ''
-          WHERE `pd_fit_weekend1819_registrations`.`pd_application_id` = #{app_id}
-        SQL
+          sql_query_to_anonymize_field(
+            "pd_fit_weekend1819_registrations",
+            {'form_data' => '""'},
+            {'pd_application_id' => app_id}
+          )
         )
 
         # SQL query to anonymize Pd::FitWeekendRegistrationBase because the model no longer exists
         ActiveRecord::Base.connection.exec_query(
-          <<-SQL
-          UPDATE `pd_fit_weekend_registrations`
-          SET `pd_fit_weekend_registrations`.`form_data` = ''
-          WHERE `pd_fit_weekend_registrations`.`pd_application_id` = #{app_id}
-        SQL
+          sql_query_to_anonymize_field(
+            "pd_fit_weekend_registrations",
+            {'form_data' => '""'},
+            {'pd_application_id' => app_id}
+          )
         )
       end
       Pd::Application::ApplicationBase.with_deleted.where(id: application_ids).update_all(form_data: '{}', notes: nil)
