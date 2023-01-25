@@ -252,6 +252,10 @@ class ProjectsController < ApplicationController
   def load
     return if redirect_under_13_without_tos_teacher(@level)
     if current_user
+      puts 'before storage_id_for_current_user'
+      puts current_user.inspect
+      puts storage_id_for_current_user.inspect
+      puts 'after 249 bug'
       channel = Projects.new(storage_id_for_current_user).most_recent(params[:key])
       if channel
         redirect_to action: 'edit', channel_id: channel
@@ -264,6 +268,28 @@ class ProjectsController < ApplicationController
 
   def create_new
     return if redirect_under_13_without_tos_teacher(@level)
+    puts 'here'
+    begin
+      puts get_storage_id.inspect
+    rescue Sequel::DatabaseError => e
+      puts e.inspect
+      puts e.cause
+      puts e.wrapped_exception.inspect
+      puts e.wrapped_exception.instance_variable_get(:@sequel_error_sql)
+      puts e.to_s
+      puts e.exception.inspect
+      puts e.message.inspect
+      puts e.full_message.inspect
+      puts e.backtrace
+      puts e.backtrace.inspect
+      raise
+    rescue Mysql2::Error::TimeoutError => e
+      puts e.inspect
+      puts e.sql_state.inspect
+      puts e.msg.inspect
+      raise
+    end
+    puts '/here'
     channel = ChannelToken.create_channel(
       request.ip,
       Projects.new(get_storage_id),

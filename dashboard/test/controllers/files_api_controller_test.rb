@@ -65,5 +65,6 @@ class FilesApiControllerTest < ActionController::TestCase
       abuse_score: 0,
       encrypted_channel_id: 'test'
     }
+    sign_out user
   end
 end
