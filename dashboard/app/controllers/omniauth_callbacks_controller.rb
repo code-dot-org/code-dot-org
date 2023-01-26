@@ -176,6 +176,10 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
       auth_hash = extract_microsoft_data(auth_hash)
     end
 
+    if provider == AuthenticationOption::CLEVER
+      auth_hash = inject_clever_data(auth_hash)
+    end
+
     user = User.from_omniauth(auth_hash, auth_params, session)
 
     prepare_locale_cookie user
@@ -257,6 +261,7 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
     SignUpTracking.begin_sign_up_tracking(session, split_test: false)
     SignUpTracking.log_oauth_callback AuthenticationOption::CLEVER, session
 
+    auth_hash = inject_clever_data(auth_hash())
     user = User.from_omniauth(auth_hash, auth_params, session)
     prepare_locale_cookie user
 
@@ -340,6 +345,17 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
     )
 
     auth.info.merge!(microsoft_data)
+    auth
+  end
+
+  # Moves non-standard attributes from the extra Clever OAuth data and puts it in the location we
+  # expect it to be in the AuthHash. Example attributes: gender, date of birth.
+  def inject_clever_data(auth)
+    return if auth.nil?
+    dob = auth[:dob] || auth.dig(:extra, :raw_info, :canonical, :data, :dob)
+    gender = auth[:gender] || auth.dig(:extra, :raw_info, :canonical, :data, :gender)
+    clever_data = OmniAuth::AuthHash.new(dob: dob, gender: gender)
+    auth.info&.merge!(clever_data)
     auth
   end
 
