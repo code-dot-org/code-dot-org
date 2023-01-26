@@ -85,7 +85,10 @@ class ReportAbuseController < ApplicationController
     }
   end
 
+  # TODO: clean up comments below
   # MOVED ABUSE API STUFF
+  # The methods below are in this controller because they depend on the
+  # storage_id helper, which has dependencies on current_user.
 
   # POST /v3/channels/:channel_id/abuse
   # Increment an abuse score.
