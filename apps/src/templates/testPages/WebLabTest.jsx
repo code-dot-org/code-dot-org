@@ -27,6 +27,7 @@ class WebLabTest extends Component {
       [STATUS_CODE_PROJECTS]: Status.WAITING,
       [STATUS_COMPUTING_IN_THE_CORE]: Status.WAITING,
       [STATUS_BRAMBLE_MOUNTABLE]: Status.WAITING,
+      runButtonDisabled: false,
       renderCallToAction: false
     };
   }
@@ -64,7 +65,7 @@ class WebLabTest extends Component {
       if (this.state.statusBrambleMountable === Status.SUCCEEDED) {
         return resolve();
       } else if (Number(new Date()) < endTime) {
-        return setTimeout(checkStatus, interval, resolve);
+        setTimeout(checkStatus, interval, resolve);
       } else {
         this.setState({[STATUS_BRAMBLE_MOUNTABLE]: Status.FAILED});
         return resolve();
@@ -103,6 +104,7 @@ class WebLabTest extends Component {
         [STATUS_COMPUTING_IN_THE_CORE]: Status.ATTEMPTING,
         [STATUS_CODE_PROJECTS]: Status.ATTEMPTING,
         [STATUS_BRAMBLE_MOUNTABLE]: Status.ATTEMPTING,
+        runButtonDisabled: true,
         renderCallToAction: false
       },
       () => {
@@ -112,7 +114,7 @@ class WebLabTest extends Component {
         ]);
 
         webLabChecksComplete.then(() => {
-          this.setState({renderCallToAction: true});
+          this.setState({renderCallToAction: true, runButtonDisabled: false});
         });
       }
     );
@@ -194,6 +196,7 @@ class WebLabTest extends Component {
             id="connect"
             className="btn btn-primary"
             onClick={this.runWebLabTest}
+            disabled={this.state.runButtonDisabled}
           >
             Connect
           </button>
