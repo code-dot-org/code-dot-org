@@ -498,9 +498,14 @@ module HttpCacheTest
         refute strips_session_specific_cookies_from_request? '/s/dance-2019/lessons/1/levels/10'
       end
 
-      it 'Does not strip cookies from poem art prediction levels' do
-        refute strips_session_specific_cookies_from_request? '/s/poem-art-2021/lessons/1/levels/2'
+      # This is a bit weird; we need to check these two routes in two separate
+      # tests, or we leak state from one to the other. See the PR description
+      # at https://github.com/code-dot-org/code-dot-org/pull/49390 for more
+      it 'Does not strip cookies from poem art prediction levels (1/2)' do
         refute strips_session_specific_cookies_from_request? '/s/poem-art-2021/lessons/1/levels/5'
+      end
+      it 'Does not strip cookies from poem art prediction levels (2/2)' do
+        refute strips_session_specific_cookies_from_request? '/s/poem-art-2021/lessons/1/levels/2'
       end
 
       it 'Strips cookies from an aquatic level' do
