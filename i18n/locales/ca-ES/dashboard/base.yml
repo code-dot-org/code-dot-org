@@ -233,7 +233,7 @@ ca:
     update: 'Actualitza'
     submit: 'Envia'
     destroy: 'Destrueix'
-    back: 'Torna'
+    back: 'Tornar'
     confirm: 'Estàs segur?'
     created: '%{model} s''ha creat correctament.'
     updated: '%{model} s''ha actualitzat correctament.'

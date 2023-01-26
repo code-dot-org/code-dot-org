@@ -554,7 +554,8 @@
           "courseA_maze_seq_challenge2_a": "Próbáld megszámolni az ujjaiddal a lépéseket. Emlékezz rá, hogy az a hely, ahol állsz, nem számít a lépések közé!"
         },
         "course1_maze_seq_challenge2": {
-          "courseB_maze_seq_challenge1_b": "Próbálj meg elindulni nyugatra."
+          "courseB_maze_seq_challenge1_b": "Próbálj meg elindulni nyugatra.",
+          "courseB_maze_seq_challenge1_a": "A legrövidebb út ezúttal nem jó megoldás."
         },
         "course1_playlab_events_challenge1": {
           "courseA_playlab_events_challenge1_a": "Waddles, a pingvin előbújik, ha Robinra kattintasz.\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">2</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">3</title>\n      </block>\n    </next>\n  </block></xml>",
@@ -574,7 +575,8 @@
           "courseC_artist_prog_challenge2_a": "Tegyél blokkokat a ciklusba, hogy többször végrehajtsa. Próbáld ki! \n\n<xml>\n  \n          <block type=\"controls_repeat\">\n            <title name=\"TIMES\">6</title>\n            <statement name=\"DO\">\n              <block type=\"draw_move_by_constant_dropdown\">\n                <title name=\"DIR\">moveForward</title>\n                <title name=\"VALUE\" config=\"25,50,100,150,200,300\">25</title>\n                <next>\n                  <block type=\"jump_by_constant_dropdown\">\n                    <title name=\"DIR\">jumpForward</title>\n                    <title name=\"VALUE\" config=\"25,50,100,150,200,300\">25</title>\n                  </block>\n                </next>\n              </block>\n              </statement></block></xml>"
         },
         "course2_collector_loops_challenge2": {
-          "courseC_maze_loops_challenge2_a": "Az eredeti kód remekül működne - ha csak egy kincs lenne mindenhol!"
+          "courseC_maze_loops_challenge2_a": "Az eredeti kód remekül működne - ha csak egy kincs lenne mindenhol!",
+          "courseC_maze_loops_challenge2_b": "Ha ciklusokat használsz, nem fogynak el a `begyűjtés` blokkjaid!"
         },
         "course2_collector_prog_challenge1": {
           "courseC_collector_prog_challenge1_a": "Használhatod többször is a `begyűjtés` parancsot, hogy extra kincseket gyűjts."
@@ -2872,7 +2874,8 @@
           "Course_4_Artist_Vars_8_a": "Az oldalak hosszának az összegét hívhatjuk akár kerületnek is. Ha ezt elosztod az oldalak számával, akkor észreveheted, hogy minél több oldala van a sokszögnek, az oldalak hossza annál rövidebb lesz."
         },
         "course2_bee_conditionals_challenge1": {
-          "courseD_bee_conditionals_challenge1_a": "Találj egy utat, ami minden virágot és méhsejtet érint és nem megy neki se fának, se világos színű blokknak. A legjobb út egy spirál lehet.\n\n**Megoldhatod anélkül a feladatot, hogy akár egyszer is balra fordulnál.**"
+          "courseD_bee_conditionals_challenge1_a": "Találj egy utat, ami minden virágot és méhsejtet érint és nem megy neki se fának, se világos színű blokknak. A legjobb út egy spirál lehet.\n\n**Megoldhatod anélkül a feladatot, hogy akár egyszer is balra fordulnál.**",
+          "courseD_bee_conditionals_challenge1_b": "A feladatban minden négyzetet meg kell vizsgálni, hogy mi található ott - lehet nektár vagy méhsejt, de akár lehet üres is a cella."
         },
         "course2_bee_conditionals_challenge2": {
           "courseD_bee_conditionals_challenge1_b": "Ahogy a `ha a virágnál` blokk esetén, úgy az `amíg nektár > 0` blokkon belüli parancsokat is csak akkor hajtjuk végre, ha a méh épp egy virágnál van. A fő különbség az, hogy az `amíg`-cikluson belüli kódot addig ismételjük, amíg elfogy a nektár. Próbáld ki ezt a megoldást:\n\n<xml>  <block type=\"bee_whileNectarAmount\">\n    <title name=\"ARG1\">nectarRemaining</title>\n    <title name=\"OP\">&gt;</title>\n    <title name=\"ARG2\">0</title>                    <statement name=\"DO\">\n                      <block type=\"maze_nectar\"/>\n                    </statement>\n  </block></xml>"
@@ -5025,13 +5028,16 @@
           "courseD_artist_nestedLoops9_c": "Két beágyazott ciklust használj:\n  - Ismételd 8 alkalommal\n    - rajzolj négyzetet\n    - ugorj előre 50 képpontot\n    - fordulj jobbra 45 fokot\n  - Ismételd 8 alkalommal\n    - rajzolj háromszöget\n    - ugorj előre 50 képpontot\n    - fordulj jobbra 45 fokot"
         },
         "courseF_groups_behaviors_-2022-2": {
-          "groups_click_hint": "Szükséged lesz egy eseményblokkra. A \"Futtatás\" gomb megnyomása után kattints rá a sprite-ra, hogy meggyőződj a helyes működésről!\n\n<xml>\n  <block type=\"gamelab_spriteClicked\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\" can_disconnect_from_parent=\"false\">\n        <title name=\"ANIMATION\">\"face_croissant_1\"</title>\n      </block>\n    </value>\n  </block>\n</xml>"
+          "groups_click_hint": "Szükséged lesz egy eseményblokkra. A \"Futtatás\" gomb megnyomása után kattints rá a sprite-ra, hogy meggyőződj a helyes működésről!\n\n<xml>\n  <block type=\"gamelab_spriteClicked\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\" can_disconnect_from_parent=\"false\">\n        <title name=\"ANIMATION\">\"face_croissant_1\"</title>\n      </block>\n    </value>\n  </block>\n</xml>",
+          "groups_behavior_hint": "Add az `amikor... kattintás` blokkhoz egy `szereplő elkezd` blokkot! Ne felejts el hozzáadni egy viselkedést!\n\n<xml>\n\n</xml>"
         },
         "courseF_groups_costume_-2022-2": {
-          "groups_click_hint": "Szükséged lesz egy eseményblokkra. A \"Futtatás\" gomb megnyomása után kattints rá a sprite-ra, hogy meggyőződj a helyes működésről!\n\n<xml>\n  <block type=\"gamelab_spriteClicked\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\" can_disconnect_from_parent=\"false\">\n        <title name=\"ANIMATION\">\"face_cupcake_1\"</title>\n      </block>\n    </value>\n  </block>\n</xml>"
+          "groups_click_hint": "Szükséged lesz egy eseményblokkra. A \"Futtatás\" gomb megnyomása után kattints rá a sprite-ra, hogy meggyőződj a helyes működésről!\n\n<xml>\n  <block type=\"gamelab_spriteClicked\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\" can_disconnect_from_parent=\"false\">\n        <title name=\"ANIMATION\">\"face_cupcake_1\"</title>\n      </block>\n    </value>\n  </block>\n</xml>",
+          "groups_costume_hint": "Adj egy `rákattintva` blokkot a `jelmez` blokkhoz. Az esemény blokkon belül találhatod meg!\n\n<xml>\n  <block type=\"gamelab_setAnimation\">\n      <title name=\"ANIMATION\">\"face_birthdaycake_1\"</title>\n    </block>\n</xml>"
         },
         "courseF_groups_say_-2022-2": {
-          "groups_click_hint": "Szükséged lesz egy eseményblokkra. A \"Futtatás\" gomb megnyomása után kattints rá a sprite-ra, hogy meggyőződj a helyes működésről!\n\n<xml>\n  <block type=\"gamelab_spriteClicked\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\" can_disconnect_from_parent=\"false\">\n        <title name=\"ANIMATION\">\"face_avocado_1\"</title>\n      </block>\n    </value>\n  </block>\n</xml>"
+          "groups_click_hint": "Szükséged lesz egy eseményblokkra. A \"Futtatás\" gomb megnyomása után kattints rá a sprite-ra, hogy meggyőződj a helyes működésről!\n\n<xml>\n  <block type=\"gamelab_spriteClicked\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\" can_disconnect_from_parent=\"false\">\n        <title name=\"ANIMATION\">\"face_avocado_1\"</title>\n      </block>\n    </value>\n  </block>\n</xml>",
+          "groups_say_hint": "Adj egy `amikor... kattintás` blokkot a `mondja` blokkhoz. Az eseményen blokkon belül fogod megtalálni!\n\n<xml>\n  <block type=\"gamelab_spriteSay\">\n    <title name=\"SPEECH\">Wow!</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_clickedSpritePointer\"></block>\n    </value>\n  </block>\n</xml>"
         },
         "courseF_groups_size_-2022-2": {
           "expand_click_event": "Kattints a `+` gombra az esemény blokkon. Használd a belső gombot, hogy befejezd a programot.\n\n<xml>\n  <block type=\"gamelab_spriteClicked\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"face_strawberry_1\"</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_changePropBy\">\n        <title name=\"PROPERTY\">\"scale\"</title>\n        <value name=\"SPRITE\">\n          <block type=\"gamelab_clickedSpritePointer\"></block>\n        </value>\n        <value name=\"VAL\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">10</title>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block>\n</xml>"
@@ -5192,6 +5198,157 @@
         },
         "helloworld_food_say_space-2022": {
           "hello-world-first-solution-pizza": "Ahhoz, hogy a sprite mondjon valamit, kösd össze a kódblokkokat a következőképpen:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\"><next>  <block type=\"gamelab_makeNewSpriteAnon\">\n    <title name=\"ANIMATION_NAME\">\"face_pizza_1\"</title>\n    <value name=\"LOCATION\">\n      <block type=\"gamelab_location_picker\">\n        <title name=\"LOCATION\">{\"x\":200,\"y\":200}</title>\n      </block>\n    </value><next>  <block type=\"gamelab_spriteSay\">\n    <title name=\"SPEECH\">Hello, world!</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"face_pizza_1\"</title>\n      </block>\n    </value>\n  </block></next>\n  </block></next></block>\n</xml>"
+        },
+        "course1_maze_debugging_challenge1": {
+          "courseA_maze_seq_challenge1_a": "Ha elég messzire mész a starttól, találhatsz olyan utat, ami nem vezet TNT-hez."
+        },
+        "course1_maze_debugging_challenge2": {
+          "courseB_maze_seq_challenge2_a": "A feladat megoldásához nem kell blokkokat hozzáadni, és eltávolítani sem.",
+          "courseB_maze_seq_challenge2_b": "Rendezd át a blokkokat, hogy eljuss a másik sarokban lévő malacig!"
+        },
+        "course2_artist_nestedLoops_challenge1": {
+          "courseD_artist_nestedLoops_challenge1_a": "Érdemes úgy kezdeni, hogy egy beágyazott ciklustt készítesz a négy darab nyolcszög rajzolásához. 45 fokot kell fordulni a nyolcszög rajzolásához. Aztán ugorj a megfelelő helyre, majd fordulj 90 fokot, és jöhet a következő nyolcszög.",
+          "courseD_artist_nestedLoops_challenge1_b": "Adj hozzá egy kódot, ami egy beágyazott ciklus segítségével háromszögeket rajzol - ehhez 120 fokot kell fordulni minden csúcsnál.",
+          "courseD_artist_nestedLoops_challenge1_c": "Beágyazott ciklust használj:\n\n-   Ismételd 8-szor\n    -   rajzolj egy nyolcszöget \n    -   rajzolj egy háromszöget\n    -   ugorj előre 50 képpontot\n    -   fordulj jobbra 90 fokot"
+        },
+        "course2_artist_nestedLoops_challenge2": {
+          "courseD_artist_nestedLoops_challenge2_a": "Szabályos nyolcszög rajzolásához a művésznek 8 alkalommal kell 45 fokot fordulnia.",
+          "courseD_artist_nestedLoops_challenge2_b": "A négyzet rajzolásához a sarkoknál 90 fokkal kell elfordulni."
+        },
+        "course2_harvester_loops_challenge2": {
+          "courseC_harvester_loops_challenge2_a": "Az egyik megoldás cikkcakkban halad, a másik pedig csigavonalszerűen. Több megoldása is van az ilyen feladványoknak. Légy kitartó!",
+          "courseC_harvester_loops_challenge2_b": "Ismételd az `előrelépés` és a `felszed saláta` blokkokat, ahányszor csak kell, aztán fordulj el minden saroknál.",
+          "courseC_harvester_loops_challenge2_c": "Kétszer kell ismételni ezt a cikkcakk mintát, hogy 20 blokk használatával teljesítsd ezt a feladványt!\n\n![](<https://images.code.org/26cfaf6fe4a275e266b51e9ef3711171-image-1493502306380.18.52 PM copy.png>)",
+          "courseC_harvester_loops_challenge2_d": "Ez a csigavonal 18 blokkal megoldja a feladatot!\n\n![](<https://images.code.org/0bfc0a0ed6783fae908368a6e6d12c02-image-1493501358990.18.52 PM.png>)"
+        },
+        "courseB_maze_seq_challenge1": {
+          "courseB_maze_seq_challenge1_a": "A legrövidebb út ezúttal nem jó megoldás."
+        },
+        "courseB_maze_seq_challenge12022": {
+          "courseB_maze_seq_challenge1_a": "A legrövidebb út ezúttal nem jó megoldás."
+        },
+        "courseB_maze_seq_challenge1_2018": {
+          "courseB_maze_seq_challenge1_a": "A legrövidebb út ezúttal nem jó megoldás."
+        },
+        "courseB_maze_seq_challenge1_2019": {
+          "courseB_maze_seq_challenge1_a": "A legrövidebb út ezúttal nem jó megoldás."
+        },
+        "courseB_maze_seq_challenge1_2020": {
+          "courseB_maze_seq_challenge1_a": "A legrövidebb út ezúttal nem jó megoldás."
+        },
+        "courseB_maze_seq_challenge2": {
+          "courseB_maze_seq_challenge2_a": "A feladat megoldásához nem kell blokkokat hozzáadni, és eltávolítani sem."
+        },
+        "courseB_maze_seq_challenge22022": {
+          "courseB_maze_seq_challenge2_a": "A feladat megoldásához nem kell blokkokat hozzáadni, és eltávolítani sem."
+        },
+        "courseB_maze_seq_challenge2_2018": {
+          "courseB_maze_seq_challenge2_a": "A feladat megoldásához nem kell blokkokat hozzáadni, és eltávolítani sem."
+        },
+        "courseB_maze_seq_challenge2_2019": {
+          "courseB_maze_seq_challenge2_a": "A feladat megoldásához nem kell blokkokat hozzáadni, és eltávolítani sem."
+        },
+        "courseB_maze_seq_challenge2_2020": {
+          "courseB_maze_seq_challenge2_a": "A feladat megoldásához nem kell blokkokat hozzáadni, és eltávolítani sem."
+        },
+        "courseC_collector_loops_challenge2": {
+          "courseC_maze_loops_challenge2_b": "Ha ciklusokat használsz, nem fogynak el a `begyűjtés` blokkjaid!"
+        },
+        "courseC_collector_loops_challenge22022": {
+          "courseC_maze_loops_challenge2_b": "Ha ciklusokat használsz, nem fogynak el a `begyűjtés` blokkjaid!"
+        },
+        "courseC_collector_loops_challenge2_2018": {
+          "courseC_maze_loops_challenge2_b": "Ha ciklusokat használsz, nem fogynak el a `begyűjtés` blokkjaid!"
+        },
+        "courseC_collector_loops_challenge2_2019": {
+          "courseC_maze_loops_challenge2_b": "Ha ciklusokat használsz, nem fogynak el a `begyűjtés` blokkjaid!"
+        },
+        "courseC_collector_loops_challenge2_2020": {
+          "courseC_maze_loops_challenge2_b": "Ha ciklusokat használsz, nem fogynak el a `begyűjtés` blokkjaid!"
+        },
+        "courseC_collector_loops_challenge2_2021": {
+          "courseC_maze_loops_challenge2_b": "Ha ciklusokat használsz, nem fogynak el a `begyűjtés` blokkjaid!"
+        },
+        "courseC_harvester_loops_challenge2": {
+          "courseC_harvester_loops_challenge2_a": "Az egyik megoldás cikkcakkban halad, a másik pedig csigavonalszerűen. Több megoldása is van az ilyen feladványoknak. Légy kitartó!",
+          "courseC_harvester_loops_challenge2_b": "Ismételd az `előrelépés` és a `felszed saláta` blokkokat, ahányszor csak kell, aztán fordulj el minden saroknál.",
+          "courseC_harvester_loops_challenge2_c": "Kétszer kell ismételni ezt a cikkcakk mintát, hogy 20 blokk használatával teljesítsd ezt a feladványt!\n\n![](<https://images.code.org/26cfaf6fe4a275e266b51e9ef3711171-image-1493502306380.18.52 PM copy.png>)",
+          "courseC_harvester_loops_challenge2_d": "Ez a csigavonal 18 blokkal megoldja a feladatot!\n\n![](<https://images.code.org/0bfc0a0ed6783fae908368a6e6d12c02-image-1493501358990.18.52 PM.png>)"
+        },
+        "courseC_harvester_loops_challenge22022": {
+          "courseC_harvester_loops_challenge2_a": "Az egyik megoldás cikkcakkban halad, a másik pedig csigavonalszerűen. Több megoldása is van az ilyen feladványoknak. Légy kitartó!",
+          "courseC_harvester_loops_challenge2_b": "Ismételd az `előrelépés` és a `felszed saláta` blokkokat, ahányszor csak kell, aztán fordulj el minden saroknál.",
+          "courseC_harvester_loops_challenge2_c": "Kétszer kell ismételni ezt a cikkcakk mintát, hogy 20 blokk használatával teljesítsd ezt a feladványt!\n\n![](<https://images.code.org/26cfaf6fe4a275e266b51e9ef3711171-image-1493502306380.18.52 PM copy.png>)",
+          "courseC_harvester_loops_challenge2_d": "Ez a csigavonal 18 blokkal megoldja a feladatot!\n\n![](<https://images.code.org/0bfc0a0ed6783fae908368a6e6d12c02-image-1493501358990.18.52 PM.png>)"
+        },
+        "courseC_harvester_loops_challenge2_2018": {
+          "courseC_harvester_loops_challenge2_a": "Az egyik megoldás cikkcakkban halad, a másik pedig csigavonalszerűen. Több megoldása is van az ilyen feladványoknak. Légy kitartó!",
+          "courseC_harvester_loops_challenge2_b": "Ismételd az `előrelépés` és a `felszed saláta` blokkokat, ahányszor csak kell, aztán fordulj el minden saroknál.",
+          "courseC_harvester_loops_challenge2_c": "Kétszer kell ismételni ezt a cikkcakk mintát, hogy 20 blokk használatával teljesítsd ezt a feladványt!\n\n![](<https://images.code.org/26cfaf6fe4a275e266b51e9ef3711171-image-1493502306380.18.52 PM copy.png>)",
+          "courseC_harvester_loops_challenge2_d": "Ez a csigavonal 18 blokkal megoldja a feladatot!\n\n![](<https://images.code.org/0bfc0a0ed6783fae908368a6e6d12c02-image-1493501358990.18.52 PM.png>)"
+        },
+        "courseC_harvester_loops_challenge2_2019": {
+          "courseC_harvester_loops_challenge2_a": "Az egyik megoldás cikkcakkban halad, a másik pedig csigavonalszerűen. Több megoldása is van az ilyen feladványoknak. Légy kitartó!",
+          "courseC_harvester_loops_challenge2_b": "Ismételd az `előrelépés` és a `felszed saláta` blokkokat, ahányszor csak kell, aztán fordulj el minden saroknál.",
+          "courseC_harvester_loops_challenge2_c": "Kétszer kell ismételni ezt a cikkcakk mintát, hogy 20 blokk használatával teljesítsd ezt a feladványt!\n\n![](<https://images.code.org/26cfaf6fe4a275e266b51e9ef3711171-image-1493502306380.18.52 PM copy.png>)",
+          "courseC_harvester_loops_challenge2_d": "Ez a csigavonal 18 blokkal megoldja a feladatot!\n\n![](<https://images.code.org/0bfc0a0ed6783fae908368a6e6d12c02-image-1493501358990.18.52 PM.png>)"
+        },
+        "courseC_harvester_loops_challenge2_2020": {
+          "courseC_harvester_loops_challenge2_a": "Az egyik megoldás cikkcakkban halad, a másik pedig csigavonalszerűen. Több megoldása is van az ilyen feladványoknak. Légy kitartó!",
+          "courseC_harvester_loops_challenge2_b": "Ismételd az `előrelépés` és a `felszed saláta` blokkokat, ahányszor csak kell, aztán fordulj el minden saroknál.",
+          "courseC_harvester_loops_challenge2_c": "Kétszer kell ismételni ezt a cikkcakk mintát, hogy 20 blokk használatával teljesítsd ezt a feladványt!\n\n![](<https://images.code.org/26cfaf6fe4a275e266b51e9ef3711171-image-1493502306380.18.52 PM copy.png>)",
+          "courseC_harvester_loops_challenge2_d": "Ez a csigavonal 18 blokkal megoldja a feladatot!\n\n![](<https://images.code.org/0bfc0a0ed6783fae908368a6e6d12c02-image-1493501358990.18.52 PM.png>)"
+        },
+        "courseC_harvester_loops_challenge2_2021": {
+          "courseC_harvester_loops_challenge2_a": "Az egyik megoldás cikkcakkban halad, a másik pedig csigavonalszerűen. Több megoldása is van az ilyen feladványoknak. Légy kitartó!",
+          "courseC_harvester_loops_challenge2_b": "Ismételd az `előrelépés` és a `felszed saláta` blokkokat, ahányszor csak kell, aztán fordulj el minden saroknál.",
+          "courseC_harvester_loops_challenge2_c": "Kétszer kell ismételni ezt a cikkcakk mintát, hogy 20 blokk használatával teljesítsd ezt a feladványt!\n\n![](<https://images.code.org/26cfaf6fe4a275e266b51e9ef3711171-image-1493502306380.18.52 PM copy.png>)",
+          "courseC_harvester_loops_challenge2_d": "Ez a csigavonal 18 blokkal megoldja a feladatot!\n\n![](<https://images.code.org/0bfc0a0ed6783fae908368a6e6d12c02-image-1493501358990.18.52 PM.png>)"
+        },
+        "courseD_artist_nestedLoops_challenge2": {
+          "courseD_artist_nestedLoops_challenge2_a": "Szabályos nyolcszög rajzolásához a művésznek 8 alkalommal kell 45 fokot fordulnia.",
+          "courseD_artist_nestedLoops_challenge2_b": "A négyzet rajzolásához a sarkoknál 90 fokkal kell elfordulni."
+        },
+        "courseD_artist_nestedLoops_challenge22022": {
+          "courseD_artist_nestedLoops_challenge2_a": "Szabályos nyolcszög rajzolásához a művésznek 8 alkalommal kell 45 fokot fordulnia.",
+          "courseD_artist_nestedLoops_challenge2_b": "A négyzet rajzolásához a sarkoknál 90 fokkal kell elfordulni."
+        },
+        "courseD_artist_nestedLoops_challenge2_2018": {
+          "courseD_artist_nestedLoops_challenge2_a": "Szabályos nyolcszög rajzolásához a művésznek 8 alkalommal kell 45 fokot fordulnia.",
+          "courseD_artist_nestedLoops_challenge2_b": "A négyzet rajzolásához a sarkoknál 90 fokkal kell elfordulni."
+        },
+        "courseD_artist_nestedLoops_challenge2_2019": {
+          "courseD_artist_nestedLoops_challenge2_a": "Szabályos nyolcszög rajzolásához a művésznek 8 alkalommal kell 45 fokot fordulnia.",
+          "courseD_artist_nestedLoops_challenge2_b": "A négyzet rajzolásához a sarkoknál 90 fokkal kell elfordulni."
+        },
+        "courseD_artist_nestedLoops_challenge2_2020": {
+          "courseD_artist_nestedLoops_challenge2_a": "Szabályos nyolcszög rajzolásához a művésznek 8 alkalommal kell 45 fokot fordulnia.",
+          "courseD_artist_nestedLoops_challenge2_b": "A négyzet rajzolásához a sarkoknál 90 fokkal kell elfordulni."
+        },
+        "courseD_artist_nestedLoops_challenge2_2021": {
+          "courseD_artist_nestedLoops_challenge2_a": "Szabályos nyolcszög rajzolásához a művésznek 8 alkalommal kell 45 fokot fordulnia.",
+          "courseD_artist_nestedLoops_challenge2_b": "A négyzet rajzolásához a sarkoknál 90 fokkal kell elfordulni."
+        },
+        "courseD_bee_conditionals_challenge1": {
+          "courseD_bee_conditionals_challenge1_b": "A feladatban minden négyzetet meg kell vizsgálni, hogy mi található ott - lehet nektár vagy méhsejt, de akár lehet üres is a cella."
+        },
+        "courseD_bee_conditionals_challenge12022": {
+          "courseD_bee_conditionals_challenge1_b": "A feladatban minden négyzetet meg kell vizsgálni, hogy mi található ott - lehet nektár vagy méhsejt, de akár lehet üres is a cella."
+        },
+        "courseD_bee_conditionals_challenge1_2018": {
+          "courseD_bee_conditionals_challenge1_b": "A feladatban minden négyzetet meg kell vizsgálni, hogy mi található ott - lehet nektár vagy méhsejt, de akár lehet üres is a cella."
+        },
+        "courseD_bee_conditionals_challenge1_2019": {
+          "courseD_bee_conditionals_challenge1_b": "A feladatban minden négyzetet meg kell vizsgálni, hogy mi található ott - lehet nektár vagy méhsejt, de akár lehet üres is a cella."
+        },
+        "courseD_bee_conditionals_challenge1_2020": {
+          "courseD_bee_conditionals_challenge1_b": "A feladatban minden négyzetet meg kell vizsgálni, hogy mi található ott - lehet nektár vagy méhsejt, de akár lehet üres is a cella."
+        },
+        "courseD_bee_conditionals_challenge1_2021": {
+          "courseD_bee_conditionals_challenge1_b": "A feladatban minden négyzetet meg kell vizsgálni, hogy mi található ott - lehet nektár vagy méhsejt, de akár lehet üres is a cella."
+        },
+        "courseF_groups_touch_-2022-2": {
+          "groups_touch_hint": "Szükséged lesz egy esemény blokkra. Miután megnyomtad a \"Futtatás\"gombot, várj, amíg a sprite-ok megérintik egymást!\n\n<xml><block type=\"gamelab_checkTouching\" miniflyout=\"open\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE1\">\n      <block type=\"gamelab_allSpritesWithAnimation\" can_disconnect_from_parent=\"false\">\n        <title name=\"ANIMATION\">\"face_salad_1\"</title>\n      </block>\n    </value>\n    <value name=\"SPRITE2\">\n      <block type=\"gamelab_allSpritesWithAnimation\" can_disconnect_from_parent=\"false\">\n        <title name=\"ANIMATION\">\"face_ramen_1\"</title>\n      </block>\n    </value>\n  </block></xml>"
         }
       }
     }

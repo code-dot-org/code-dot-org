@@ -2692,6 +2692,15 @@ cs:
           lesson_groups:
             lessonGroup-2:
               display_name: Obsah
+        csa3-2023:
+          lessons:
+            lesson-1:
+              name: Jednorozměnrá (1D) pole
+            lesson-3:
+              name: Cykly "For"
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Obsah
         hello-world-space-2022:
           title: 'Hello World: Prostora'
         hello-world-soccer-2022:

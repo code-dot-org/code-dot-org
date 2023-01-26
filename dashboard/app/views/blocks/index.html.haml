@@ -1,5 +1,5 @@
 - content_for(:head) do
-  - @pool = @blocks[0][:pool]
+  - @pool = @blocks && @blocks[0] ? @blocks[0][:pool] : ''
   = render partial: 'load_blockly'
   %script{src: webpack_asset_path('js/blocks/index.js')}
 
