@@ -160,7 +160,7 @@ export const newTrackAtMeasure = {
     ],
     inputsInline: true,
     nextStatement: null,
-    style: 'event_blocks',
+    style: 'setup_blocks',
     tooltip: 'new track',
     helpUrl: '',
     extensions: ['default_track_name_extension']
