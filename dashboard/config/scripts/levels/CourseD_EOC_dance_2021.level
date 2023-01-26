@@ -59,7 +59,7 @@
   <blocks>
     <start_blocks>
       <xml>
-        <block type="Dancelab_whenSetup" deletable="false">
+        <block type="Dancelab_whenSetup" deletable="false" movable="false">
   </block>
       </xml>
     </start_blocks>
