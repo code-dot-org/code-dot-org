@@ -51,25 +51,25 @@ You can do Code.org development using OSX, Ubuntu, or Windows (running Ubuntu in
       - If you have issue `"rake aborted! FrozenError: can't modify frozen String...Aws::Errors::MissingCredentialsError: unable to sign request without credentials set"`, or similar `Aws::SecretsManager` errors, you are missing configuration or credentials for access to our AWS Account. Staff should see instructions for AWS account access in our "Getting Started As A Developer" doc. External contributors can supply alternative values for secrets normally retrieved from AWS Secrets Manager by modifying ["locals.yml"](locals.yml) (generated in the next step, or via `bundle exec rake install:locals_yml`)
     </details>
 
-2. `bundle exec rake install`
+1. `bundle exec rake install`
     - This can take a long time, ~30 minutes or more. The most expensive are the "seeding" tasks, where your local DB is populated from data in the repository. Some of the seeding rake tasks can take several minutes. The longest one, `seed:scripts`, can take > 10 minutes, but it should at least print out progress as it goes.
 
-3. fix your database charset and collation to match our servers
+1. fix your database charset and collation to match our servers
     - `bin/dashboard-sql`
     - `ALTER DATABASE dashboard_development CHARACTER SET utf8 COLLATE utf8_unicode_ci;`
     - `ALTER DATABASE dashboard_test CHARACTER SET utf8 COLLATE utf8_unicode_ci;`
 
-4. `bundle exec rake build`
+1. `bundle exec rake build`
     - This may fail if your are on a Mac and your OSX XCode Command Line Tools were not installed properly. See [Bundle Install Tips](#bundle-install-tips) for more information.
 
-5. (Optional, Code.org engineers only) Setup AWS - Ask a Code.org engineer how to complete this step
+1. (Optional, Code.org engineers only) Setup AWS - Ask a Code.org engineer how to complete this step
     - Some functionality will not work on your local site without this, for example, some project-backed level types such as <https://studio.code.org/projects/gamelab>. This setup is only available to Code.org engineers for now, but it is recommended for Code.org engineers.
 
-6. Run the website `bin/dashboard-server`
+1. Run the website `bin/dashboard-server`
 
-7. Visit <http://localhost-studio.code.org:3000/> to verify it is running.
+1. Visit <http://localhost-studio.code.org:3000/> to verify it is running.
 
-8. Install necessary plugins described in the [Editor configuration](#editor-configuration) section below.
+1. Install necessary plugins described in the [Editor configuration](#editor-configuration) section below.
 
 After setup, read about our [code styleguide](./STYLEGUIDE.md), our [test suites](./TESTING.md), or find more docs on [the wiki](https://github.com/code-dot-org/code-dot-org/wiki/For-Developers).
 
