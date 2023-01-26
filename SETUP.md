@@ -48,7 +48,7 @@ You can do Code.org development using OSX, Ubuntu, or Windows (running Ubuntu in
     <details>
       <summary>Troubleshoot: `FrozenError: can't modify frozen String...Aws::Errors::MissingCredentialsError` </summary>
 
-      - If you have issue `"rake aborted! FrozenError: can't modify frozen String...Aws::Errors::MissingCredentialsError: unable to sign request without credentials set"`, or similar `Aws::SecretsManager` errors, you are missing configuration or credentials for access to our AWS Account. Staff should see instructions for i) [AWS Account Login - Getting AWS access for a new user](https://docs.google.com/document/d/1dDfEOhyyNYI2zIv4LI--ErJj6OVEJopFLqPxcI0RXOA/edit#heading=h.nbv3dv2smmks) and ii) [Install AWS Command Line Interface v2](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html). External contributors should examine "locals.yml" to supply alternate values for certain secrets that are normally retrieved from AWS Secrets Manager.
+      - If you have issue `"rake aborted! FrozenError: can't modify frozen String...Aws::Errors::MissingCredentialsError: unable to sign request without credentials set"`, or similar `Aws::SecretsManager` errors, you are missing configuration or credentials for access to our AWS Account. Staff should see instructions for AWS account access in our "Getting Started As A Developer" doc. External contributors can supply alternative values for secrets normally retrieved from AWS Secrets Manager by modifying ["locals.yml"](locals.yml) (generated in the next step, or via `bundle exec rake install:locals_yml`)
     </details>
 
 2. `bundle exec rake install`
