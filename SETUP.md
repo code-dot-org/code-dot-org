@@ -48,28 +48,28 @@ You can do Code.org development using OSX, Ubuntu, or Windows (running Ubuntu in
     <details>
       <summary>Troubleshoot: `FrozenError: can't modify frozen String...Aws::Errors::MissingCredentialsError` </summary>
 
-      - If you have issue `"rake aborted! FrozenError: can't modify frozen String...Aws::Errors::MissingCredentialsError: unable to sign request without credentials set"`, see instructions for i) [AWS Account Login - Getting AWS access for a new user](https://docs.google.com/document/d/1dDfEOhyyNYI2zIv4LI--ErJj6OVEJopFLqPxcI0RXOA/edit#heading=h.nbv3dv2smmks) and ii) [Install AWS Command Line Interface v2](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html)      
+      - If you have issue `"rake aborted! FrozenError: can't modify frozen String...Aws::Errors::MissingCredentialsError: unable to sign request without credentials set"`, or similar `Aws::SecretsManager` errors, you are missing configuration or credentials for access to our AWS Account. Staff should see instructions for i) [AWS Account Login - Getting AWS access for a new user](https://docs.google.com/document/d/1dDfEOhyyNYI2zIv4LI--ErJj6OVEJopFLqPxcI0RXOA/edit#heading=h.nbv3dv2smmks) and ii) [Install AWS Command Line Interface v2](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html). External contributors should examine "locals.yml" to supply alternate values for certain secrets that are normally retrieved from AWS Secrets Manager.
     </details>
 
-1. `bundle exec rake install`
+2. `bundle exec rake install`
     - This can take a long time, ~30 minutes or more. The most expensive are the "seeding" tasks, where your local DB is populated from data in the repository. Some of the seeding rake tasks can take several minutes. The longest one, `seed:scripts`, can take > 10 minutes, but it should at least print out progress as it goes.
 
-1. fix your database charset and collation to match our servers
+3. fix your database charset and collation to match our servers
     - `bin/dashboard-sql`
     - `ALTER DATABASE dashboard_development CHARACTER SET utf8 COLLATE utf8_unicode_ci;`
     - `ALTER DATABASE dashboard_test CHARACTER SET utf8 COLLATE utf8_unicode_ci;`
 
-1. `bundle exec rake build`
+4. `bundle exec rake build`
     - This may fail if your are on a Mac and your OSX XCode Command Line Tools were not installed properly. See [Bundle Install Tips](#bundle-install-tips) for more information.
 
-1. (Optional, Code.org engineers only) Setup AWS - Ask a Code.org engineer how to complete this step
+5. (Optional, Code.org engineers only) Setup AWS - Ask a Code.org engineer how to complete this step
     - Some functionality will not work on your local site without this, for example, some project-backed level types such as <https://studio.code.org/projects/gamelab>. This setup is only available to Code.org engineers for now, but it is recommended for Code.org engineers.
 
-1. Run the website `bin/dashboard-server`
+6. Run the website `bin/dashboard-server`
 
-1. Visit <http://localhost-studio.code.org:3000/> to verify it is running.
+7. Visit <http://localhost-studio.code.org:3000/> to verify it is running.
 
-1. Install necessary plugins described in the [Editor configuration](#editor-configuration) section below.
+8. Install necessary plugins described in the [Editor configuration](#editor-configuration) section below.
 
 After setup, read about our [code styleguide](./STYLEGUIDE.md), our [test suites](./TESTING.md), or find more docs on [the wiki](https://github.com/code-dot-org/code-dot-org/wiki/For-Developers).
 
