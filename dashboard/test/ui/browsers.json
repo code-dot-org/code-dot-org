@@ -1,4 +1,4 @@
-/* saucelabs browser configurator: https://saucelabs.com/platform/platform-configurator */
+/* saucelabs browser configurator: https://docs.saucelabs.com/reference/platforms-configurator/#/ */
 
 [
   {
@@ -12,8 +12,8 @@
   {
     "name": "Safari",
     "browserName": "Safari",
-    "platform": "macOS 10.15",
-    "version": "13",
+    "platform": "macOS 10.14",
+    "version": "12.0",
     "w3c": true
   },
   {
