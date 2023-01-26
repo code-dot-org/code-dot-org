@@ -30,6 +30,50 @@ export default class ReportAbuseForm extends React.Component {
     age: PropTypes.oneOfType([PropTypes.string, PropTypes.number])
   };
 
+  constructor(props) {
+    super(props);
+    this.state = {
+      submitButtonEnabled: false,
+      loadedCaptcha: false
+    };
+    this.token = '';
+    this.onCaptchaVerification = this.onCaptchaVerification.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
+    this.onCaptchaExpiration = this.onCaptchaExpiration.bind(this);
+  }
+
+  componentDidMount() {
+    //Add reCaptcha and associated callbacks.
+    const script = document.createElement('script');
+    script.src = 'https://www.google.com/recaptcha/api.js';
+    script.id = 'captcha';
+    window.onCaptchaSubmit = token => this.onCaptchaVerification(token);
+    window.onCaptchaExpired = () => this.onCaptchaExpiration();
+    script.onload = () => this.setState({loadedCaptcha: true});
+    document.body.appendChild(script);
+  }
+
+  componentWillUnmount() {
+    const captchaScript = document.getElementById('captcha');
+    captchaScript.remove();
+  }
+
+  onCaptchaVerification(token) {
+    this.setState({submitButtonEnabled: true});
+    this.token = token;
+  }
+
+  onCaptchaExpiration() {
+    this.setState({submitButtonEnabled: false});
+  }
+
+  // Function passed as props must then send token to the Rails backend immediately
+  // for verification.
+  // Must submit a POST request per documentation here: https://developers.google.com/recaptcha/docs/verify
+  handleSubmit() {
+    return; //this.props.handleSubmit(this.token);
+  }
+
   /**
    * Extracts a channel id from the given abuse url
    * @returns {string} Channel id, or undefined if we can't get one.
@@ -148,7 +192,13 @@ export default class ReportAbuseForm extends React.Component {
             ref="abuse_detail"
             id="uitest-abuse-detail"
           />
-
+          <p>{msg.verifyNotBot()}</p>
+          <div
+            className="g-recaptcha"
+            data-sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI"
+            data-callback="onCaptchaSubmit"
+            data-expired-callback="onCaptchaExpired"
+          />
           <div>
             <SafeMarkdown
               markdown={msg.abuseFormAcknowledge({

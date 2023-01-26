@@ -33,6 +33,13 @@ class ReportAbuseController < ApplicationController
 
   def report_abuse
     unless protected_project?
+
+      unless verify_recaptcha
+        flash[:alert] = I18n.t('password.reset_errors.captcha_required')
+        redirect_to report_abuse_path
+        return
+      end
+
       unless Rails.env.development? || Rails.env.test?
         subject = FeaturedProject.featured_channel_id?(params[:channel_id]) ?
           'Featured Project: Abuse Reported' :
