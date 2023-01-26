@@ -1017,13 +1017,6 @@ Dashboard::Application.routes.draw do
     get 'project_commits/get_token', to: 'project_commits#get_token'
     get 'project_commits/:channel_id', to: 'project_commits#project_commits'
 
-    # partial ports of legacy v3 APIs
-    get '/v3/channels/:channel_id/abuse', to: 'channels_api#show_abuse'
-    post '/v3/channels/:channel_id/abuse', to: 'channels_api#update_abuse'
-    delete '/v3/channels/:channel_id/abuse', to: 'channels_api#destroy_abuse'
-    post '/v3/channels/:channel_id/abuse/delete', to: 'channels_api#destroy_abuse'
-    patch '/v3/(:endpoint)/:encrypted_channel_id', constraints: {endpoint: /(animations|assets|sources|files|libraries)/}, to: 'files_api#update'
-
     # offline-service-worker*.js needs to be loaded the the root level of the
     # domain('studio.code.org/').
     # Matches on ".js" or ".map" in order to serve source-map files for the service worker javascript.
