@@ -8,7 +8,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-01-19 22:51:23 UTC",
+    "serialized_at": "2023-01-20 21:52:27 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -377,6 +377,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-CSA-23-mod4-UML-text"
+        ],
         "progression": "Introduction to UML diagrams"
       },
       "bonus": false,
@@ -399,6 +402,31 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "progression": "Using methods that return information"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "P-VPL-CSA-23-mod4-retrun-text"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csa4-2023",
+        "activity_section.key": "d9010375-437f-411f-8b4b-3be7f8c31f21"
+      },
+      "level_keys": [
+        "P-VPL-CSA-23-mod4-retrun-text"
+      ]
+    },
+    {
+      "chapter": 12,
+      "position": 4,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "csa-prework-m4-predict-2023"
+        ],
         "progression": "Using methods that return information"
       },
       "bonus": false,
@@ -535,6 +563,18 @@
         "lesson_group.key": "",
         "script.name": "self-paced-pl-csa4-2023",
         "activity_section.key": "442395bd-5141-4f85-b9ac-31f09275705a"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "P-VPL-CSA-23-mod4-retrun-text",
+        "script_level.level_keys": [
+          "P-VPL-CSA-23-mod4-retrun-text"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csa4-2023",
+        "activity_section.key": "d9010375-437f-411f-8b4b-3be7f8c31f21"
       }
     },
     {

@@ -11,9 +11,9 @@ Consider the following method.
 
 ```
 public static void doubleEverything(int[] numbers) {
-   for (int j = 0; j < numbers.length; j++) {
-      numbers[j] =  numbers[j] * 2;
-   }
+  for (int index = 0; index < numbers.length; index++) {
+    numbers[index] =  numbers[index] * 2;
+  }
 }
 ```
 
@@ -21,22 +21,26 @@ Which of the following code segments, if any, can be used to replace the body of
 
 I.
 ```
-for (int num: numbers) {
+for (int num : numbers) {
   num = num * 2;
 }
 ```
 
 II.
 ```
-for (int num: numbers) {
-  num[j] = num[j] * 2;
+for (int num : numbers) {
+  num[index] = num[index] * 2;
 }
 ```
 
 III.
 ```
-for (int num: numbers) {
-  numbers[j] = numbers[j] * 2;
+for (int num : numbers) {
+  numbers[index] = numbers[index] * 2;
 }
 ```
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Each code segment uses an enhanced `for` loop to traverse the 1D array `numbers`. They all attempt to modify the values in the 1D array, however an enhanced `for` loop cannot be used to modify elements. This is because the enhanced `for` loop variable gets a copy of each value, so if the 1D array contains primitive values, it gets a copy of the value. Changes that are made only affect the enhanced `for` loop variable and not the original value in the 1D array.
 MARKDOWN
