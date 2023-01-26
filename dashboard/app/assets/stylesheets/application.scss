@@ -2238,6 +2238,12 @@ a.download-video {
       box-shadow: none;
     }
 
+    img {
+      opacity: unset;
+      float: left;
+      margin-left: 24px;
+    }
+
     &:focus {
       border-color: $brand_primary_default;
     }
