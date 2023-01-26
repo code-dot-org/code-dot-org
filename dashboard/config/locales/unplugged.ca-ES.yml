@@ -63,7 +63,7 @@ ca:
           els passos següents que han de prendre si estan interessats a continuar
           l'odissea informàtica.
       UnplugHappyMaps:
-        title: Mapes feliços
+        title: Mapes Feliços
         desc: Els alumnes creen algoritmes senzills (conjunts d'instruccions) per
           moure un personatge a través d'un laberint utilitzant tant sols una ordre.
       MoveIt:
@@ -185,7 +185,7 @@ ca:
           centra en un marc més ampli de la informàtica i com els algoritmes hi juguen
           un rol important.
       courseA_unplugged_happyMaps:
-        title: Mapes feliços
+        title: Mapes Feliços
         desc: Els alumnes creen algoritmes senzills (conjunts d'instruccions) per
           moure un personatge a través d'un laberint utilitzant tant sols una ordre.
       courseA_unplugged_goingPlacesSafely:
@@ -276,7 +276,7 @@ ca:
           centra en un marc més ampli de la informàtica i com els algoritmes hi juguen
           un rol important.
       UnplugHappyMaps_2018:
-        title: Mapes feliços
+        title: Mapes Feliços
         desc: Els alumnes creen algoritmes senzills (conjunts d'instruccions) per
           moure un personatge a través d'un laberint utilitzant tant sols una ordre.
       GoingPlacesSafely_2018:
@@ -386,7 +386,7 @@ ca:
           centra en un marc més ampli de la informàtica i com els algoritmes hi juguen
           un rol important.
       UnplugHappyMaps_2019:
-        title: Mapes feliços
+        title: Mapes Feliços
         desc: Els alumnes creen algoritmes senzills (conjunts d'instruccions) per
           moure un personatge a través d'un laberint utilitzant tant sols una ordre.
       GoingPlacesSafely_2019:
@@ -397,6 +397,8 @@ ca:
         title: Mou-lo, Mou-lo
       DigitalFootprint_2019:
         title: La vostra empremta digital
+      GraphingData_2019:
+        title: Dades en imatges
       timeforcs_demo_crowdsourcing:
         title: Col·laboració oberta
       timeforcs_demo_conditionals:

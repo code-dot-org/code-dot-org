@@ -1423,6 +1423,13 @@ kk:
           lesson_groups:
             lessonGroup-2:
               display_name: Контент
+        csa3-2023:
+          lessons:
+            lesson-3:
+              name: For ілмектері
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Контент
         csp4-2023:
           lesson_groups:
             csp_variables:
@@ -1433,7 +1440,11 @@ kk:
               display_name: Функциялар
         csp5-2023:
           lesson_groups:
-            csp_lists:
-              display_name: Тізімдер
             csp_loops:
+              display_name: Ілмек
+        csp6-2023:
+          lesson_groups:
+            csp_unit6_2020:
+              display_name: Тізімдер
+            lessonGroup-3:
               display_name: Ілмек

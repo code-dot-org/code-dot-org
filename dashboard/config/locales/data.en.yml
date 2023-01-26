@@ -722,6 +722,23 @@ en:
         csa-pl-compareTo: The compareTo() method
         csc-event-short-intro: Events Short Intro
         PL_CSD_CircuitPlayground_Overview_AppsWithDevices: Circuit Playground Unit Overview
+        csa-day-in-pm-pl: What does a project manager do?
+        csa-pl-intro-to-pm: Introduction to Project Managment
+        PL_CSD_CircuitPlayground_Setup: Circuit Playground Setup
+        csa_object_oriented_programming: 'CSA: Object-Oriented Programming'
+        csa_creating_objects: 'CSA: Creating Objects'
+        csa_calling_methods: 'CSA: Calling Methods'
+        csa_while_loops: 'CSA: While Loops'
+        csa_inheritance: 'CSA: Inheritance'
+        csa_writing_a_method: 'CSA: Writing a Method'
+        csa_software_engineering_code_reviews: 'CSA: Software Engineering - Code Reviews'
+        csa_conditional_statements: 'CSA: Conditional Statements'
+        csa_printing_in_java: 'CSA: Printing in Java'
+        csa_two_way_selection_and_not: 'CSA: Two-Way Selection and NOT'
+        csa-pl-intro-to-oop: Introduction to Object-Oriented Programming
+        csa-pl-welcome-to-Neighborhood: Welcome to The Neighborhood
+        csa-pl-calling-methods: Calling Methods in Java
+        csa-pl-creating-objects: Creating Objects
     callout:
       text:
         drag_blocks: Drag a "move" block and snap it below the other block

@@ -217,22 +217,22 @@
             {
               "text": "Scrat will reach the acorn. There are no bugs in the code.",
               "correct": false,
-              "feedback": "Incorrect. First, Scrat turns the wrong direction, then Scrat doesn't move forward enough times to reach the acorn."
+              "feedback": "Incorrect. Scrat will not reach the acorn because he turns the wrong way."
             },
             {
               "text": "Scrat will not reach the acorn because he turns the wrong way.",
               "correct": true,
-              "feedback": "Correct! First, Scrat turns the wrong direction, then Scrat doesn't move forward enough times to reach the acorn."
+              "feedback": "Correct! Scrat turns the wrong direction and will not reach the acorn."
             },
             {
               "text": "Scrat will not reach the acorn because there are not enough `move forward` blocks.",
-              "correct": true,
-              "feedback": "Correct! First, Scrat turns the wrong direction, then Scrat doesn't move forward enough times to reach the acorn."
+              "correct": false,
+              "feedback": "Incorrect. Scrat will not reach the acorn because he turns the wrong way."
             },
             {
               "text": "Scrat will not move from the first block.",
               "correct": false,
-              "feedback": "There are two bugs in this code. First, Scrat turns the wrong direction, then Scrat doesn't move forward enough times to reach the acorn."
+              "feedback": "Scrat will not reach the acorn because he turns the wrong way."
             }
           ],
           "questions": [

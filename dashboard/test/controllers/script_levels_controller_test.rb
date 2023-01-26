@@ -1525,7 +1525,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
         lesson: lesson,
         script: script,
         levels: [level, level2],
-        properties: {variants: {'maze 2': {'active': false}}}
+        properties: {variants: {'maze 2': {active: false}}}
       )
     )
     assert_equal assigns(:level), level
@@ -1543,7 +1543,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
         lesson: lesson,
         script: script,
         levels: [level, level2],
-        properties: {'variants': {'maze 1': {'active': false}}}
+        properties: {variants: {'maze 1': {active: false}}}
       )
     )
     assert_equal assigns(:level), level2
@@ -1562,7 +1562,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
           lesson: lesson,
           script: script,
           levels: [level, level2],
-          properties: {'variants': {'maze 1': {'active': false}, 'maze 2': {'active': false}}}
+          properties: {variants: {'maze 1': {active: false}, 'maze 2': {active: false}}}
         )
       )
     end
@@ -1585,7 +1585,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
         lesson: lesson,
         script: script,
         levels: [level, level2],
-        properties: {'variants': {'maze 1': {'active': false}}}
+        properties: {variants: {'maze 1': {active: false}}}
       )
     )
     assert_equal assigns(:level), level
@@ -1611,7 +1611,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
         lesson: lesson,
         script: script,
         levels: [level, level2],
-        properties: {'variants': {'maze 1': {'active': false}}}
+        properties: {variants: {'maze 1': {active: false}}}
       )
     )
     assert_equal assigns(:level), level
@@ -1631,7 +1631,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
         lesson: lesson,
         script: script,
         levels: [level, level2],
-        properties: {'variants': {'maze 1': {'active': false, 'experiments': [experiment.name]}}}
+        properties: {variants: {'maze 1': {active: false, experiments: [experiment.name]}}}
       )
     )
     assert_equal assigns(:level), level
@@ -1652,7 +1652,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
         lesson: lesson,
         script: script,
         levels: [level, level2],
-        properties: {'variants': {'maze 1': {'active': false, 'experiments': [experiment.name]}}}
+        properties: {variants: {'maze 1': {active: false, experiments: [experiment.name]}}}
       )
     )
     assert_equal assigns(:level), level
@@ -1674,7 +1674,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
         lesson: lesson,
         script: script,
         levels: [level, level2],
-        properties: {'variants': {'maze 1': {'active': false, 'experiments': [experiment1.name, experiment2.name]}}}
+        properties: {variants: {'maze 1': {active: false, experiments: [experiment1.name, experiment2.name]}}}
       )
     )
     assert_equal assigns(:level), level
@@ -1696,7 +1696,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
         lesson: lesson,
         script: script,
         levels: [level, level2],
-        properties: {'variants': {'maze 1': {'active': false, 'experiments': [experiment.name]}}}
+        properties: {variants: {'maze 1': {active: false, experiments: [experiment.name]}}}
       )
     )
     assert_equal assigns(:level), level2

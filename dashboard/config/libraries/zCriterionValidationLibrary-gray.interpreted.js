@@ -570,7 +570,6 @@ function checkThisSpriteClickedThisFrame(spriteId) {
   }, "cscLandmarkBackgroundStoryteller");  // include i18n feedback string
   */
 function checkNewBackground() {
-  console.log(getBackground());
   if (getBackground() != '' && getBackground() != null) {
   	return getBackground() != validationProps.previous.background;
   }
@@ -1105,4 +1104,11 @@ function checkInteractiveSpriteMovement() {
 
 function checkUsedWhenRun() {
 	console.log(getEventLog());
+}
+
+function checkSpriteHasBehavior(spriteId, behaviorString) {
+  if (spriteId == undefined) { console.log("No sprite ID supplied to checkSpriteHasBehavior"); return; }
+  if (behaviorString == undefined) { console.log("No behavior string supplied to checkSpriteHasBehavior"); return; }
+
+  return member(behaviorString, getBehaviorsForSpriteId(spriteId));
 }
