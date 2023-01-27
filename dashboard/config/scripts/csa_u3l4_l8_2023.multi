@@ -16,3 +16,11 @@ for (int count = 6; count > 0; count -= 2) {
 }
 ```
 MARKDOWN
+
+teacher_markdown <<MARKDOWN
+The `for` loop executes 3 times. The loop control variable `count` is initialized to `6` and is decreased by `2`. Since the condition checks if `count` is greater than (but not equal to `0`), the body of the loop will execute when `count` is `6`, `4`, and `2`.
+
+The following demonstrates tracing this `for` loop:
+
+![](https://images.code.org/4f9d4d9a697b6fe6f7c585d11286d96c-image-1674143991558.gif)
+MARKDOWN
