@@ -33,6 +33,7 @@ export default class DesignModeHeaders extends React.Component {
       top: 0,
       left: 8,
       border: 'none',
+      boxShadow: 'none',
       backgroundColor: 'transparent',
       lineHeight: styleConstants['workspace-headers-height'] + 'px',
       fontSize: 18,
