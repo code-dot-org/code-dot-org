@@ -410,6 +410,11 @@ img.video_thumbnail {
 
 #header-banner-overflow {
   margin: 16px;
+
+  .bannerContentButton {
+    // !important is used here to overwrite inline styles of button.
+    border-color: $neutral_dark !important;
+  }
 }
 
 #header-banner, #header-banner-overflow {

@@ -1,6 +1,6 @@
 name 'CSA U3L7-L6_2023'
 display_name 'Practice: Converting Loops'
-description 'Convert a while or for loop to an enhanced for loop.'
+description 'Convert a `while` or `for` loop to an enhanced `for` loop.'
 
 sublevels
 level 'CSA U3L7-L6a_2023'
