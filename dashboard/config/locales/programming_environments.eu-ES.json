@@ -9,19 +9,78 @@
           "name": "Jolas laborategia",
           "categories": {
             "game_lab": {
-              "name": "Jolas laborategia"
+              "name": "Jolas laborategia",
+              "expressions": {
+                "playSound": {
+                  "short_description": "Zehaztutako URL batetik MP3 soinu fitxategia erreproduzitzen du."
+                }
+              }
             },
             "sprites": {
               "name": "Pertsonaiak"
             },
             "groups": {
-              "name": "Taldeak"
+              "name": "Taldeak",
+              "expressions": {
+                "setColorEach": {
+                  "palette_params": {
+                    "color": {
+                      "type": "Kolorea"
+                    }
+                  }
+                },
+                "setTintEach": {
+                  "palette_params": {
+                    "color": {
+                      "type": "Kolorea"
+                    }
+                  }
+                }
+              }
+            },
+            "drawing": {
+              "expressions": {
+                "shape": {
+                  "examples": {
+                    "Star": {
+                      "name": "Bota"
+                    }
+                  }
+                }
+              }
             },
             "math": {
-              "name": "Matematika"
+              "name": "Matematika",
+              "expressions": {
+                "randomNumber": {
+                  "palette_params": {
+                    "min": {
+                      "description": "Itzulitako balio minimoa"
+                    },
+                    "max": {
+                      "description": "Itzulitako zenbaki maximoa"
+                    }
+                  }
+                },
+                "randomNumber_min_max": {
+                  "palette_params": {
+                    "min": {
+                      "description": "Itzulitako balio minimoa"
+                    },
+                    "max": {
+                      "description": "Itzulitako zenbaki maximoa"
+                    }
+                  }
+                }
+              }
             },
             "variables": {
-              "name": "Aldagaiak"
+              "name": "Aldagaiak",
+              "expressions": {
+                "assign_x": {
+                  "short_description": "Lehenago erazagututako aldagai bati balio bat esleitzen dio."
+                }
+              }
             },
             "functions": {
               "name": "Funtzioak"
@@ -31,11 +90,67 @@
         "applab": {
           "name": "App laborategia",
           "categories": {
+            "ui_controls": {
+              "expressions": {
+                "onEvent": {
+                  "palette_params": {
+                    "callback": {
+                      "type": "Funtzioa"
+                    }
+                  }
+                },
+                "playSound": {
+                  "short_description": "Zehaztutako URL batetik MP3 soinu fitxategia erreproduzitzen du."
+                }
+              }
+            },
             "data": {
-              "name": "Datu"
+              "name": "Datu",
+              "expressions": {
+                "getPrediction": {
+                  "palette_params": {
+                    "callback": {
+                      "type": "Funtzioa"
+                    }
+                  }
+                }
+              }
+            },
+            "control": {
+              "expressions": {
+                "timedLoop": {
+                  "palette_params": {
+                    "callback": {
+                      "type": "Funtzioa"
+                    }
+                  }
+                }
+              }
             },
             "math": {
-              "name": "Matematika"
+              "name": "Matematika",
+              "expressions": {
+                "randomNumber_min_max": {
+                  "palette_params": {
+                    "min": {
+                      "description": "Itzulitako balio minimoa"
+                    },
+                    "max": {
+                      "description": "Itzulitako zenbaki maximoa"
+                    }
+                  }
+                },
+                "randomNumber": {
+                  "palette_params": {
+                    "min": {
+                      "description": "Itzulitako balio minimoa"
+                    },
+                    "max": {
+                      "description": "Itzulitako zenbaki maximoa"
+                    }
+                  }
+                }
+              }
             },
             "variables": {
               "name": "Aldagaiak"

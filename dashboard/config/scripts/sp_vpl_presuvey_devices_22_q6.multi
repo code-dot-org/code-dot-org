@@ -4,14 +4,18 @@ description ''
 question 'Which best describes you?'
 
 right 'Classroom teacher'
-right 'STEM / Tech teacher'
+right 'STEM/Tech teacher'
 right 'Other specialist teacher'
-right 'Librarian / school media specialist'
+right 'Librarian/school media specialist'
 right 'Paraprofessional/aide'
+right 'School level coach/specialist'
 right 'District level coach/specialist'
 right 'Out-of-school educator (e.g. tutor, after school teacher)'
-right 'Administrator'
-right 'Other'
+right 'School level administrator'
+right 'District level administrator'
+right 'Other school level role'
+right 'Other district level role'
+right 'Other out-of-school role'
 
 
 

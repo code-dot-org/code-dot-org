@@ -3245,6 +3245,15 @@ it:
           lesson_groups:
             lessonGroup-2:
               display_name: Contenuto
+        csa3-2023:
+          lessons:
+            lesson-1:
+              name: Array unidimensionale (1D)
+            lesson-3:
+              name: Cicli con contatore
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Contenuto
         hello-world-space-2022:
           title: Ciao mondo - Spazio
         hello-world-soccer-2022:
@@ -3317,7 +3326,7 @@ it:
         csp5-2023:
           lesson_groups:
             csp_lists:
-              display_name: Liste
+              display_name: Dati
             csp_loops:
               display_name: Cicli
             csp_traversals:
@@ -3326,10 +3335,19 @@ it:
               display_name: Progetto
             lessonGroup-5:
               display_name: Sondaggio Post-corso
+          title: Dati ('22-'23)
         csp6-2023:
           lesson_groups:
+            csp_unit6_2020:
+              display_name: Liste
             lessonGroup-2:
               display_name: Sondaggio Post-corso
+            lessonGroup-3:
+              display_name: Cicli
+            lessonGroup-4:
+              display_name: Traversali
+            lessonGroup-5:
+              display_name: Progetto
         csp7-2023:
           lesson_groups:
             csp_parameters_return_values:
@@ -3348,7 +3366,6 @@ it:
               display_name: Princìpi dell'Informatica - Unità 9
             lessonGroup-2:
               display_name: Sondaggio Post-corso
-          title: Dati ('22-'23)
         csp10-2023:
           lesson_groups:
             lessonGroup-2:
