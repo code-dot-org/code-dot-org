@@ -557,6 +557,7 @@ const styles = {
     marginBottom: 0
   },
   updateSchoolLink: {
-    cursor: 'pointer'
+    cursor: 'pointer',
+    fontFamily: '"Gotham 5r", sans-serif'
   }
 };
