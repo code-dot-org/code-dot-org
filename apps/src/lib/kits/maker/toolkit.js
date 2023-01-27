@@ -165,7 +165,7 @@ function confirmSupportedBrowser() {
  */
 function getBoard() {
   const boardConstructor =
-    project.getMakerAPIs === MB_API ? MicroBitBoard : CircuitPlaygroundBoard;
+    project.getMakerAPIs() === MB_API ? MicroBitBoard : CircuitPlaygroundBoard;
 
   if (shouldRunWithFakeBoard()) {
     return Promise.resolve(new FakeBoard());
