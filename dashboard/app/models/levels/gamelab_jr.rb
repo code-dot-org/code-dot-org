@@ -43,7 +43,7 @@ class GamelabJr < Gamelab
   end
 
   def self.standalone_app_names
-    [['Sprite Lab', 'sprite_lab'], ['Book Covers', 'book_covers'], ['Particles', 'particles']]
+    [['Sprite Lab', 'sprite_lab'], ['Story', 'story'], ['Science', 'science']]
   end
 
   def self.create_from_level_builder(params, level_params)

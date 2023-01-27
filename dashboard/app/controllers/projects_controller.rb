@@ -156,11 +156,11 @@ class ProjectsController < ApplicationController
     thebadguys: {
       name: 'New The Bad Guys Project'
     },
-    book_covers: {
-      name: 'New Book Covers Project'
+    story: {
+      name: 'New Story Project'
     },
-    particles: {
-      name: 'New Particles Project'
+    science: {
+      name: 'New Science Project'
     },
   }.with_indifferent_access.freeze
 

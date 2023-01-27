@@ -36,8 +36,8 @@ export const PROJECT_TYPE_MAP = {
   poetry: i18n.projectTypePoetry(),
   poetry_hoc: i18n.projectTypePoetry(),
   thebadguys: i18n.projectTypeThebadguys(),
-  particles: i18n.projectTypeParticles(),
-  bookCovers: i18n.projectTypeBookCovers()
+  science: i18n.projectTypeScience(),
+  story: i18n.projectTypeStory()
 };
 
 export const FEATURED_PROJECT_TYPE_MAP = {
