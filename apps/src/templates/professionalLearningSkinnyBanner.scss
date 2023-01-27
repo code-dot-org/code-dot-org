@@ -82,6 +82,7 @@ $width-sm: 640px; // Mobile
     position: relative;
     font-family: "Gotham 4r", sans-serif;
     font-size: 18px;
+    line-height: 40px;
     margin: 0;
 
     @media screen and (max-width: $width-md) {

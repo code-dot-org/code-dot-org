@@ -12,13 +12,14 @@
       "project_sharing": true,
       "show_calendar": true,
       "student_detail_progress_view": true,
+      "tts": true,
       "version_year": "2022",
       "weekly_instructional_minutes": 225
     },
     "new_name": null,
     "family_name": "devices",
-    "serialized_at": "2023-01-10 21:02:10 UTC",
-    "published_state": "in_development",
+    "serialized_at": "2023-01-13 19:50:12 UTC",
+    "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
     "participant_audience": "student",
@@ -197,7 +198,7 @@
       "relative_position": 7,
       "properties": {
         "overview": "This lesson introduces the problem-solving process that students will use over the course of the unit, Define - Prepare - Try - Reflect. After introducing the steps of the problem-solving process with a simple word search, students are guided through the process of applying each step to different programming challenges. Students will use this process to help create an app from from scratch with no starter code provided, similar to the Mini-Project in the next lesson.\n\n**Question of the Day: How can we use the Problem Solving Process to help us write code for challenging programs?**",
-        "preparation": "* Print the Problem Solving Process Handout for each student\n* Print the activity guide for each student\n* Prepare a board and USB cable for each student or pair of students\n* Check the \"Teacher's Lounge\" forum for verified teachers to find additional strategies or resources shared by fellow teachers\n",
+        "preparation": "* Print the Problem Solving Process Handout for each student\n* Print the activity guide for each student\n* If using Warm Up Option 1: Print a Word Search for each student\n* Review the exemplars for the two programming challenges in this lesson\n* Prepare a board and USB cable for each student or pair of students\n* Check the \"Teacher's Lounge\" forum for verified teachers to find additional strategies or resources shared by fellow teachers\n",
         "student_overview": "You will learn about the Problem Solving Process we use in Computer Science and dive into a few strategies to implement each step when programming.\n\n**Question of the Day: How can we use the Problem Solving Process to help us write code for challenging programs?**"
       },
       "seeding_key": {
@@ -802,7 +803,7 @@
       "position": 4,
       "properties": {
         "duration": 5,
-        "name": "Warm Up"
+        "name": "Wrap Up"
       },
       "seeding_key": {
         "lesson_activity.key": "e7eac17f-c14d-4a9f-a382-29dc3dddf4a7",
@@ -2705,7 +2706,7 @@
       "key": "4ecc46ab-3b97-4e88-8a93-16cd6bcca110",
       "position": 4,
       "properties": {
-        "progression_name": "The Clicker Game Problem - \"Define\""
+        "progression_name": "Create a Clicker Game"
       },
       "seeding_key": {
         "activity_section.key": "4ecc46ab-3b97-4e88-8a93-16cd6bcca110",
@@ -2752,7 +2753,7 @@
       "position": 7,
       "properties": {
         "description": "**Do This:** Direct students to move on to the **Try** step on their activity guide where they will pick which ideas they want to implement. Direct students to use the Problem-Solving Process Handout’s “Try” step bullet points as a guide on what to do during this step. \n\nOnce students have decided on which idea they are going to attempt for the Try step, direct them to Code Studio, Level 2 to “try” solving the problem.",
-        "progression_name": "The Clicker Game Problem - Try\""
+        "progression_name": "Create a Clicker Game"
       },
       "seeding_key": {
         "activity_section.key": "03a22a2c-248c-4859-b57f-b25028392e62",
@@ -2854,7 +2855,7 @@
       "key": "0ef8cb1a-510d-46ab-8c17-51359fa032ae",
       "position": 14,
       "properties": {
-        "progression_name": "The Trivia Game Challenge"
+        "progression_name": "Create a Trivia Game"
       },
       "seeding_key": {
         "activity_section.key": "0ef8cb1a-510d-46ab-8c17-51359fa032ae",
@@ -6759,7 +6760,7 @@
         "level_keys": [
           "CSD U6 - ProbSolvProc_ChallB_2023"
         ],
-        "progression": "The Clicker Game Problem - \"Define\""
+        "progression": "Create a Clicker Game"
       },
       "bonus": false,
       "seeding_key": {
@@ -6784,7 +6785,7 @@
         "level_keys": [
           "CSD U6 - ProbSolvProc_ChallB1_2023"
         ],
-        "progression": "The Clicker Game Problem - Try\""
+        "progression": "Create a Clicker Game"
       },
       "bonus": false,
       "seeding_key": {
@@ -6809,7 +6810,7 @@
         "level_keys": [
           "CSD U6 - ProbSolvProc_ChallC_2023"
         ],
-        "progression": "The Trivia Game Challenge"
+        "progression": "Create a Trivia Game"
       },
       "bonus": false,
       "seeding_key": {
@@ -6834,7 +6835,7 @@
         "level_keys": [
           "CSD U6 - ProbSolvProc_ChallC1_2023"
         ],
-        "progression": "The Trivia Game Challenge"
+        "progression": "Create a Trivia Game"
       },
       "bonus": false,
       "seeding_key": {
