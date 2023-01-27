@@ -29,7 +29,6 @@ export default class WebSerialPortWrapper extends EventEmitter {
     if (this.portOpen) {
       throw new Error(`Requested port is already open.`);
     }
-    console.log('calling openMBPort');
     return this.port
       .open({baudRate: SERIAL_BAUD})
       .then(() => {
@@ -39,7 +38,6 @@ export default class WebSerialPortWrapper extends EventEmitter {
       .then(() => {
         this.portOpen = true;
         this.emit('open');
-        console.log('after open', this);
       })
       .catch(error => Promise.reject('Failure to open port: ' + error));
   }
