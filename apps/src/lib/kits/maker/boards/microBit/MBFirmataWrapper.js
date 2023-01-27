@@ -1,12 +1,12 @@
 import MBFirmataClient from '../../../../../third-party/maker/MBFirmataClient';
 import {SAMPLE_INTERVAL} from './MicroBitConstants';
-import {isChromeOS} from '@cdo/apps/lib/kits/maker/util/browserChecks';
+import {isWebSerialPort} from '../../util/boardUtils';
 
 export const ACCEL_EVENT_ID = 13;
 
 export default class MicrobitFirmataWrapper extends MBFirmataClient {
-  constructor(SerialPort) {
-    super(SerialPort);
+  constructor(portType) {
+    super(portType);
     this.digitalCallbacks = [];
   }
 
@@ -14,7 +14,10 @@ export default class MicrobitFirmataWrapper extends MBFirmataClient {
     return Promise.resolve()
       .then(() => this.setSerialPort(port))
       .then(() => {
-        return this.setAnalogSamplingInterval(SAMPLE_INTERVAL);
+        // webserial pathway - only opening/closing port for now
+        if (!isWebSerialPort(port)) {
+          return this.setAnalogSamplingInterval(SAMPLE_INTERVAL);
+        }
       })
       .catch(() => {
         return Promise.reject("Couldn't connect to board");
@@ -32,24 +35,15 @@ export default class MicrobitFirmataWrapper extends MBFirmataClient {
   }
 
   setSerialPort(port) {
-    if (!isChromeOS()) {
+    if (!isWebSerialPort(port)) {
+      // maker app pathway
       return super.setSerialPort(port);
     } else {
       // Use the given port. Assume the port has been opened by the caller.
-
+      // webserial pathway - only opening/closing port for now
       this.myPort = port;
       this.myPort.on('data', this.dataReceived.bind(this));
-      this.requestFirmataVersion();
-      this.requestFirmwareVersion();
 
-      // get the board serial number (used to determine board version)
-      this.boardVersion = '';
-
-      // Above code is directly from setSerialPort in MBFirmataClient.
-      // Returning an empty promise below because Chrome Serial Port doesn't return
-      // .list() as a promise, as expected in MBFirmataClient. Because of the empty
-      // promise we don't set this.boardVersion. As of this edit, we do not use the
-      // boardVersion in our MB integration so no impact.
       return Promise.resolve();
     }
   }

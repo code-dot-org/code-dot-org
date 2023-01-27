@@ -12,6 +12,10 @@ import ExternalButton from './ExternalButton';
 import CapacitiveTouchSensor from './CapacitiveTouchSensor';
 import {isChromeOS, serialPortType} from '../../util/browserChecks';
 import {MICROBIT_FIRMWARE_VERSION} from './MicroBitConstants';
+import {
+  SERIAL_BAUD,
+  isWebSerialPort
+} from '@cdo/apps/lib/kits/maker/util/boardUtils';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 
 /**
@@ -31,7 +35,9 @@ export default class MicroBitBoard extends EventEmitter {
 
     this.chromeOS = isChromeOS();
 
-    let portType = serialPortType(true);
+    const portType = isWebSerialPort(port)
+      ? navigator.serial
+      : serialPortType();
 
     /** @private {MicrobitFirmataClient} serial port controller */
     this.boardClient_ = new MBFirmataWrapper(portType);
@@ -58,32 +64,20 @@ export default class MicroBitBoard extends EventEmitter {
    */
   openSerialPort() {
     const portName = this.port ? this.port.comName : undefined;
-    const SerialPortType = serialPortType(false);
+    const SerialPortType = serialPortType();
+    const serialPort = new SerialPortType(portName, {baudRate: SERIAL_BAUD});
+    return Promise.resolve(serialPort);
+  }
 
-    /** @const {number} serial port transfer rate */
-    const SERIAL_BAUD = 57600;
-
-    let serialPort;
-    if (!this.chromeOS) {
-      serialPort = new SerialPortType(portName, {baudRate: SERIAL_BAUD});
-      return Promise.resolve(serialPort);
-    } else {
-      // Chrome-serialport uses callback to relay when serialport initialization is complete.
-      // Wrapping construction function to call promise resolution as callback.
-      let constructorFunction = callback => {
-        serialPort = new SerialPortType(
-          portName,
-          {
-            baudRate: SERIAL_BAUD
-          },
-          true,
-          callback
-        );
-      };
-      return new Promise(resolve => constructorFunction(resolve)).then(() =>
-        Promise.resolve(serialPort)
-      );
-    }
+  /**
+   * Create a serial port controller and open the Web Serial port immediately.
+   * @param {Object} port
+   * @return {Promise<SerialPort>}
+   */
+  openSerialPortWebSerial(port) {
+    return port.openMBPort().then(() => {
+      return port;
+    });
   }
 
   /**
@@ -95,34 +89,46 @@ export default class MicroBitBoard extends EventEmitter {
    * @returns {Promise<void>}
    */
   checkExpectedFirmware() {
-    return Promise.resolve()
-      .then(() => this.openSerialPort())
-      .then(serialPort => this.boardClient_.connectBoard(serialPort))
-      .then(() => {
-        // Delay for 0.25 seconds to ensure we have time to receive the firmware version.
-        return delayPromise(250);
-      })
-      .then(() => {
-        if (
-          this.boardClient_.firmwareVersion.includes(MICROBIT_FIRMWARE_VERSION)
-        ) {
-          return Promise.resolve();
-        } else {
-          if (this.boardClient_.firmwareVersion === '') {
-            // Log if we were not able to determine the firmware version in time.
-            firehoseClient.putRecord({
-              study: 'maker-toolkit',
-              study_group: 'microbit',
-              event: 'firmwareVersionTimeout'
-            });
-            console.warn(
-              'Firmware version not detected in time. Try refreshing the page.'
-            );
+    if (!isWebSerialPort(this.port)) {
+      // maker app pathway
+      return Promise.resolve()
+        .then(() => this.openSerialPort())
+        .then(serialPort => this.boardClient_.connectBoard(serialPort))
+        .then(() => {
+          // Delay for 0.25 seconds to ensure we have time to receive the firmware version.
+          return delayPromise(250);
+        })
+        .then(() => {
+          if (
+            this.boardClient_.firmwareVersion.includes(
+              MICROBIT_FIRMWARE_VERSION
+            )
+          ) {
+            return Promise.resolve();
+          } else {
+            if (this.boardClient_.firmwareVersion === '') {
+              // Log if we were not able to determine the firmware version in time.
+              firehoseClient.putRecord({
+                study: 'maker-toolkit',
+                study_group: 'microbit',
+                event: 'firmwareVersionTimeout'
+              });
+              console.warn(
+                'Firmware version not detected in time. Try refreshing the page.'
+              );
+            }
+            return Promise.reject('Incorrect firmware detected');
           }
-          return Promise.reject('Incorrect firmware detected');
-        }
-      })
-      .catch(err => Promise.reject(err));
+        })
+        .catch(err => Promise.reject(err));
+    } else {
+      // webserial pathway
+      return this.openSerialPortWebSerial(this.port)
+        .then(serialPort => {
+          this.boardClient_.connectBoard(serialPort);
+        })
+        .catch(err => Promise.reject(err));
+    }
   }
 
   /**
