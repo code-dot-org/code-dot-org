@@ -14805,22 +14805,12 @@ uz-UZ:
       courseC_multi_maze_debugging8_predict12022:
         answers:
         - text: Skrat daraxtga yetib boradi. Kodda hech qanday xatolik yo'q.
-          feedback: Noto'g'ri. Birinchidan, Skrat noto'g'ri yo'nalishga buriladi,
-            keyin Skrat eman yong'og'iga yetib borish uchun yetarlicha vaqt oldinga
-            siljimaydi.
         - text: Skrat yong'oqqa yetib bormaydi, chunki u noto'g'ri tomonga buriladi.
           correct: true
-          feedback: To'g'ri. Birinchidan, Skrat noto'g'ri yo'nalishga buriladi, keyin
-            Skrat eman yong'og'iga yetib borish uchun yetarlicha vaqt oldinga siljimaydi.
         - text: Skrat yong'oqqa yetib bormaydi, chunki "oldinga siljish" bloklari
             yetarli emas.
-          correct: true
-          feedback: To'g'ri. Birinchidan, Skrat noto'g'ri yo'nalishga buriladi, keyin
-            Skrat eman yong'og'iga yetib borish uchun yetarlicha vaqt oldinga siljimaydi.
         - text: Scrat birinchi blokdan qimirlamaydi.
-          feedback: Ushbu kodda ikkita xato mavjud. Birinchidan, Skrat noto'g'ri yo'nalishga
-            buriladi, keyin Skrat shoxga yetib borish uchun yetarlicha vaqt oldinga
-            siljimaydi.
+          feedback: Skrat yong'oqqa yetib bormaydi, chunki u noto'g'ri tomonga buriladi.
         questions:
         - text: Ushbu koddagi xatolarni qidirib toping. Skrat eman yong'og'iga yetib
             boradimi yoki biror nosozlik bormi?

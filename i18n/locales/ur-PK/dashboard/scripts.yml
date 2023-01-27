@@ -937,6 +937,10 @@ ur:
           lessons:
             lesson-4:
               name: متغیرات
+        csa3-2023:
+          lessons:
+            lesson-1:
+              name: ایک جہتی (1D) صفیں
         hello-world-space-2022:
           title: 'ہیلو ورلڈ: خلائی'
         hello-world-soccer-2022:
@@ -972,8 +976,14 @@ ur:
         csp5-2023:
           lesson_groups:
             csp_lists:
-              display_name: فہرستیں
+              display_name: ڈیٹا
             csp_loops:
+              display_name: لوپس
+        csp6-2023:
+          lesson_groups:
+            csp_unit6_2020:
+              display_name: فہرستیں
+            lessonGroup-3:
               display_name: لوپس
         csp-playground:
           description_audience: نصاب کے مصنفین

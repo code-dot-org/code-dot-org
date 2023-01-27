@@ -5,7 +5,6 @@
   "dropletBlock_setCollider_param4": "højde",
   "dropletBlock_setColliderEach_param0": "type",
   "dropletBlock_setColliderEach_param4": "højde",
-  "errorLoadingAnimation": "Det ser ud til, at vi har problemer med at loade din animation \"{animationName}\". Undersøg om du har en god internet forbindelse og prøv igen at loade siden. Hvis dette problem fortsætter, så kan det være fordi din animation er i stykker. Hvis dette er tilfældet må du slette animationen.",
   "reinfFeedbackMsg": "Du er færdig. Klik på fortsætte til næste level.",
   "shareGame": "Del dit spil:"
 }

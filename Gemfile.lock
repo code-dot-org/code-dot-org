@@ -1,11 +1,4 @@
 GIT
-  remote: https://github.com/Clever/omniauth-clever.git
-  revision: 586c2ed1e308a6d563e00a85f24e3c87b0e58788
-  specs:
-    omniauth-clever (1.2.2)
-      omniauth-oauth2 (>= 1.1, <= 1.5)
-
-GIT
   remote: https://github.com/code-dot-org/petit.git
   revision: bbe411d61d3f78fff59d9fa79d21c14b1c635750
   specs:
@@ -38,6 +31,14 @@ GIT
       sprockets (> 3.0)
       sprockets-rails
       tilt
+
+GIT
+  remote: https://github.com/daynew/omniauth-clever.git
+  revision: d217eb5d44ad4d68c52beb9b0b1929cb109e190a
+  branch: clever-v2.1-upgrade
+  specs:
+    omniauth-clever (2.0.0)
+      omniauth-oauth2 (>= 1.1, <= 1.5)
 
 GIT
   remote: https://github.com/dooly-ai/omniauth-microsoft_v2_auth.git
@@ -94,16 +95,6 @@ GIT
     image_optim_pack (0.5.0)
       fspath (>= 2.1, < 4)
       image_optim (~> 0.19)
-
-GIT
-  remote: https://github.com/wjordan/image_optim_rails.git
-  revision: 4d4a346e4879886973a9d7e5709e343b1867e0a9
-  ref: rails_root_config_path
-  specs:
-    image_optim_rails (0.3.0)
-      image_optim (~> 0.24.0)
-      rails
-      sprockets
 
 GIT
   remote: https://github.com/wjordan/ims-lti.git
@@ -325,7 +316,7 @@ GEM
       sass (~> 3.2)
     brakeman (4.5.0)
     builder (3.2.4)
-    cancancan (3.0.2)
+    cancancan (3.1.0)
     case_transform (0.2)
       activesupport
     childprocess (0.9.0)
@@ -529,6 +520,10 @@ GEM
     httpclient (2.8.3)
     i18n (1.12.0)
       concurrent-ruby (~> 1.0)
+    image_optim_rails (0.4.3)
+      image_optim (~> 0.24)
+      rails
+      sprockets
     image_size (1.5.0)
     in_threads (1.4.0)
     jmespath (1.6.2)
@@ -573,12 +568,12 @@ GEM
     mime-types (3.3.1)
       mime-types-data (~> 3.2015)
     mime-types-data (3.2020.0512)
-    mini_magick (4.9.5)
+    mini_magick (4.12.0)
     mini_mime (1.1.2)
     mini_portile2 (2.6.1)
     mini_racer (0.3.1)
       libv8 (~> 8.4.255)
-    minitest (5.15.0)
+    minitest (5.16.3)
     minitest-around (0.5.0)
       minitest (~> 5.0)
     minitest-reporters (1.2.0)
@@ -703,8 +698,8 @@ GEM
     rack-protection (2.1.0)
       rack
     rack-ssl-enforcer (0.2.9)
-    rack-test (1.1.0)
-      rack (>= 1.0, < 3)
+    rack-test (2.0.2)
+      rack (>= 1.3)
     rack_csrf (2.5.0)
       rack (>= 1.1.0)
     rails (6.0.4.1)
@@ -850,9 +845,9 @@ GEM
       activesupport (>= 4.2)
     spring-commands-testunit (1.0.1)
       spring (>= 0.9.1)
-    sprockets-rails (3.2.2)
-      actionpack (>= 4.0)
-      activesupport (>= 4.0)
+    sprockets-rails (3.3.0)
+      actionpack (>= 5.2)
+      activesupport (>= 5.2)
       sprockets (>= 3.0.0)
     sqlite3 (1.3.11)
     sshkit (1.20.0)
@@ -971,7 +966,7 @@ DEPENDENCIES
   binding_of_caller
   bootstrap-sass (~> 2.3.2.2)
   brakeman
-  cancancan (~> 3.0.0)
+  cancancan (~> 3.1.0)
   chronic (~> 0.10.2)
   cld
   colorize
@@ -1011,7 +1006,7 @@ DEPENDENCIES
   httparty
   image_optim!
   image_optim_pack (~> 0.5.0)!
-  image_optim_rails!
+  image_optim_rails (~> 0.4.0)
   image_size
   ims-lti!
   jquery-rails
@@ -1022,7 +1017,7 @@ DEPENDENCIES
   lograge!
   loofah (~> 2.2.1)
   memory_profiler
-  mini_magick (>= 4.9.4)
+  mini_magick (>= 4.10.0)
   mini_racer
   minitest (~> 5.15)
   minitest-around
@@ -1038,7 +1033,7 @@ DEPENDENCIES
   nokogiri (>= 1.10.0)
   octokit
   oj
-  omniauth-clever (~> 1.2.1)!
+  omniauth-clever (~> 2.0.0)!
   omniauth-facebook (~> 4.0.0)
   omniauth-google-oauth2 (~> 0.6.0)
   omniauth-microsoft_v2_auth!
@@ -1098,7 +1093,7 @@ DEPENDENCIES
   spring
   spring-commands-testunit
   sprockets!
-  sprockets-rails
+  sprockets-rails (= 3.3.0)
   sqlite3
   sshkit
   stringex (~> 2.5.2)
