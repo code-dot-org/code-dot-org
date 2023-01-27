@@ -51,6 +51,16 @@ export function setupApp(appOptions) {
     }
   }
 
+  // if this level has a template level and we are in edit mode, the workspace should
+  // be read only. The start blocks for a level with a project template are the start blocks
+  // of the template.
+  if (
+    appOptions.level.editBlocks &&
+    appOptions.level.projectTemplateLevelName
+  ) {
+    appOptions.readonlyWorkspace = true;
+  }
+
   // Sets up default options and initializes blockly
   var baseOptions = {
     containerId: 'codeApp',

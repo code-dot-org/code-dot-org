@@ -3313,11 +3313,16 @@ StudioApp.prototype.isResponsiveFromConfig = function(config) {
  * Checks if the level a teacher is viewing of a students has
  * not been started.
  * For contained levels and project levels don't show the banner ever.
+ * Also don't show the banner if we are in edit blocks mode.
  * Otherwise check if the teacher is viewing (readonlyWorkspace) and if
  * the level has been started.
  */
 StudioApp.prototype.displayNotStartedBanner = function(config) {
-  if (config.hasContainedLevels || config.level.isProjectLevel) {
+  if (
+    config.hasContainedLevels ||
+    config.level.isProjectLevel ||
+    config.level.edit_blocks
+  ) {
     return false;
   } else {
     return config.readonlyWorkspace && !config.level.isStarted;
