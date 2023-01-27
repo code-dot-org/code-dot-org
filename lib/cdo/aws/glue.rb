@@ -46,7 +46,7 @@ module Cdo
     # @return [Array<Aws::Glue::Types::Partition>]
     def self.get_partitions(database, table)
       self.glue_client ||= Aws::Glue::Client.new
-      GET_PARTITION_SEGMENTS.times.map do |i|
+      Array.new(GET_PARTITION_SEGMENTS) do |i|
         Concurrent::Future.execute do
           glue_client.get_partitions(
             database_name: database,

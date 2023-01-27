@@ -334,8 +334,8 @@ class LevelsController < ApplicationController
     # Set some defaults.
     params[:level][:skin] ||= type_class.skins.first if type_class <= Blockly
     if type_class <= Grid
-      default_tile = type_class == Karel ? {"tileType": 0} : 0
-      start_tile = type_class == Karel ? {"tileType": 2} : 2
+      default_tile = type_class == Karel ? {tileType: 0} : 0
+      start_tile = type_class == Karel ? {tileType: 2} : 2
       params[:level][:maze_data] = Array.new(8) {Array.new(8) {default_tile}}
       params[:level][:maze_data][0][0] = start_tile
     end

@@ -28,7 +28,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-11-08 16:49:47 UTC",
+    "serialized_at": "2023-01-20 14:54:19 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -6165,11 +6165,9 @@
     },
     {
       "name": "Unit 6 Guide",
-      "url": "https://docs.google.com/document/d/1adl-rqpAW8FvKofCVfMt997IVLzvzhnDW87Q3bG3t_k/edit?usp=sharing",
+      "url": "https://docs.google.com/document/d/1-Kwx3qvUpaTit5A1e69GrfnSPnoluupyJf1HdnRs_iM/edit?usp=sharing",
       "key": "unit_6_guide",
       "properties": {
-        "audience": "Student",
-        "type": "Handout"
       },
       "seeding_key": {
         "resource.key": "unit_6_guide"

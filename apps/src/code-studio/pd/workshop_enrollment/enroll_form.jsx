@@ -23,6 +23,7 @@ const DISTRICT = SubjectNames.SUBJECT_CSF_DISTRICT;
 const DEEP_DIVE = SubjectNames.SUBJECT_CSF_201;
 
 const CSP = 'CS Principles';
+const ADMINCOUNSELOR = 'Admin/Counselor Workshop';
 
 const VALIDATION_STATE_ERROR = 'error';
 
@@ -40,12 +41,14 @@ const DESCRIBE_ROLES = [
   'Other'
 ];
 
-const ROLES = [
+const CSF_ROLES = [
   'Classroom Teacher',
   'Media Specialist',
   'Tech Teacher',
   'Librarian'
 ].concat(DESCRIBE_ROLES);
+
+const ADMIN_COUNSELOR_ROLES = ['Administrator', 'Counselor', 'Other'];
 
 const GRADES_TEACHING = [
   'Pre-K',
@@ -378,6 +381,10 @@ export default class EnrollForm extends React.Component {
       'I don’t have experience teaching any of these courses'
     ]);
 
+    const roles =
+      (this.props.workshop_course === CSF && CSF_ROLES) ||
+      (this.props.workshop_course === ADMINCOUNSELOR && ADMIN_COUNSELOR_ROLES);
+
     return (
       <form id="enroll-form">
         <p>
@@ -451,7 +458,8 @@ export default class EnrollForm extends React.Component {
           school_info={this.state.school_info}
           errors={this.state.errors}
         />
-        {this.props.workshop_course === CSF && (
+        {(this.props.workshop_course === CSF ||
+          this.props.workshop_course === ADMINCOUNSELOR) && (
           <FormGroup>
             <FormGroup
               validationState={
@@ -470,7 +478,7 @@ export default class EnrollForm extends React.Component {
                 placeholder={null}
                 value={this.state.role}
                 onChange={this.handleRoleChange}
-                options={ROLES.map(r => ({value: r, label: r}))}
+                options={roles.map(r => ({value: r, label: r}))}
               />
               <HelpBlock>{this.state.errors.role}</HelpBlock>
               {this.state && DESCRIBE_ROLES.includes(this.state.role) && (
