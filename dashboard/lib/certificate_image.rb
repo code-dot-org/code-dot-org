@@ -59,9 +59,9 @@ class CertificateImage
       text_overlay = Magick::Image.read("pango:#{text}") do |img|
         # pango:markup is set to false in order to easily prevent pango markup
         # injection from user input.
-        define('pango', 'markup', false)
+        img.define('pango', 'markup', false)
         # If the text doesn't fit the bounding box, then put a '...' at the end.
-        define('pango', 'ellipsize', 'end')
+        img.define('pango', 'ellipsize', 'end')
         img.background_color = 'none'
         img.pointsize = pointsize
         img.font = font
