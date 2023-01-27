@@ -171,11 +171,10 @@ class EditSectionForm extends Component {
         sectionPairProgramSelection: section.pairingAllowed
       });
     }
-    // Are there times when a unit is assigned without a course?
     if (
       eventName === COMPLETED_EVENT &&
-      section.courseId &&
-      section.courseId !== initialCourseId
+      ((section.courseId && section.courseId !== initialCourseId) ||
+        (section.unitId && section.unitId !== initialUnitId))
     ) {
       analyticsReporter.sendEvent(CURRICULUM_ASSIGNED, {
         previousUnitId: initialUnitId,
