@@ -12,7 +12,10 @@ theme: responsive
 - js_locale = request.locale.to_s.downcase.tr('-', '_')
 %script{src: webpack_asset_path("js/#{js_locale}/common_locale.js")}
 
-%div{dir: language_dir_class}
+%link{href: "/shared/css/barlow-semi-condensed-font.css", rel: "stylesheet"}
+%link{href: "/shared/css/phase1-design-system.css", rel: "stylesheet"}
+
+%div.hoc-overview-page{dir: language_dir_class}
 
   %h1= I18n.t(:hoc_overview_title)
   %aside.hoc-skinny-banner
@@ -31,7 +34,7 @@ theme: responsive
           %img.tutorial-tile-img{src: "/images/fill-473x258/dance_party_2019.gif", alt: I18n.t(:hoc_danceparty_alt_text)}
         .tutorial-info
           %span
-            %h3.tutorial-info-h= I18n.t(:hoc_overview_dance_title)
+            %h2.tutorial-info-h= I18n.t(:hoc_overview_dance_title)
             .smalltext= I18n.t(:hoc_overview_dance_2022_subtitle)
           %span
             %a{href: "/dance"}
@@ -46,7 +49,7 @@ theme: responsive
           %img.tutorial-tile-img{src: "/images/hello-world-2022.png", alt: I18n.t(:hoc_overview_hello_world_2022_alt_text)}
         .tutorial-info
           %span
-            %h3.tutorial-info-h{style: "text-transform: capitalize"}= I18n.t(:hello)
+            %h2.tutorial-info-h{style: "text-transform: capitalize"}= I18n.t(:hello)
             .smalltext= I18n.t(:hoc_overview_hello_world_2022_subtitle)
           %span
             %a{href: "/helloworld"}
