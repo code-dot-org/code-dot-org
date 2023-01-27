@@ -33,7 +33,6 @@ export const tableLayoutStyles = {
     textAlign: 'inherit'
   },
   link: {
-    color: color.teal,
     fontFamily: '"Gotham 5r", sans-serif',
     fontSize: 14,
     textDecoration: 'none'
