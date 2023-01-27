@@ -3,6 +3,7 @@ import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 
 const page_to_event_map = {
+  Homepage: EVENTS.HOMEPAGE_VISITED_EVENT,
   Administrators: EVENTS.ADMIN_PAGE_VISITED_EVENT,
   CSA_Curriculum: EVENTS.CSA_CURRICULUM_PAGE_VISITED_EVENT,
   CSD_Curriculum: EVENTS.CSD_CURRICULUM_PAGE_VISITED_EVENT,
@@ -19,7 +20,7 @@ const page_to_event_map = {
 };
 
 $(document).ready(e => {
-  const haml_logger = $('#haml-logger');
-  const sourcePageId = haml_logger.data('page-visited');
+  const haml_logger = document.getElementById('haml-logger');
+  const sourcePageId = haml_logger.dataset.pageVisited;
   analyticsReporter.sendEvent(page_to_event_map[sourcePageId]);
 });
