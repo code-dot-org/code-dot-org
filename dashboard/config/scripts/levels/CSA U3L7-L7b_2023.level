@@ -2,7 +2,7 @@
   <config><![CDATA[{
   "properties": {
     "encrypted": "false",
-    "long_instructions": "**Short one-sentence description of problem to solve.**\r\n\r\n🎒 **IMPORT:** Import your `PainterPlus`(#e7e8ea) class from your **Backpack**.\r\n\r\n*Don't have it, or it doesn't work? That's ok! Copy the code from* ***here*** *and paste it into a new file in your project.*\r\n\r\n✅ **TO DO:** Overview of the steps to take.\r\n\r\n1. More specific step\r\n\r\n2. More specific step\r\n\r\n::: details [**🔦 Need help with your algorithm?**]\r\n  \r\nHere is one approach to solving this problem.\r\n\r\n```\r\nalgorithm for method to write\r\n```\r\n:::\r\n&nbsp;\r\n\r\n💡 **TIP:** Check out the documentation for the `ClassName`(#e7e8ea) class in the **Documentation** tab ⬆️ for a thing to look for!\r\n\r\n📝 **COMMENT:** Be sure to add comments to note what your code does.\r\n\r\n🖥️ **TEST:** Test your program to check if your code achieves the expected result.\r\n\r\n🎉 **RUN:** Run your program to see the result of your code!\r\n\r\n## ***Don't forget to . . .***\r\n\r\n![](https://images.code.org/eb2c8910ae2e150019b8e2177405d4af-image-1668191576873.png)\r\n\r\n## 🎯 Goal\r\n\r\nimage/gif or console output",
+    "long_instructions": "The <a href=\"https://www.kaggle.com/datasets/devrimtuner/most-crowded-countries-in-the-world-top-100\" target=\"_blank\">**Most Crowded Countries in the World dataset**</a> includes the population of the top 100 countries. The population of each country is stored in a 1D array of `int`(#e7e8ea) values called `populations`(#e7e8ea).\r\n\r\n✅ **TO DO #1:** In `Countries.java`(#e7e8ea), write the `calcAveragePopulation()`(#e7e8ea) method to calculate and return the average population using an enhanced `for`(#e7e8ea) loop.\r\n\r\n::: details [**🔦 Need help with your algorithm?**]\r\n  \r\nHere is one approach to solving this problem.\r\n\r\n```\r\ntotalPopulation = 0\r\n\r\nfor each value in populations\r\n  totalPopulation += value\r\n\r\nreturn totalPopulation / populations.length\r\n```\r\n:::\r\n&nbsp;\r\n\r\n✅ **TO DO #2:** In `DataRunner.java`(#e7e8ea),\r\n\r\n1. Instantiate a `Countries`(#e7e8ea) object with the `\"populations.txt\"`(#e7e8ea) file containing the population data.\r\n\r\n2. Call the `calcAveragePopulation()`(#e7e8ea) method and print the result.\r\n\r\n💡 **TIP:** Check out the **Help & Tips** tab ⬆️ for help with traversing a 1D array with an enhanced `for`(#e7e8ea) loop.\r\n\r\n## ***Don't forget to . . .***\r\n\r\n![](https://images.code.org/eb2c8910ae2e150019b8e2177405d4af-image-1668191576873.png)",
     "mini_rubric": "false",
     "submittable": "false",
     "hide_share_and_remix": "false",
@@ -16,13 +16,19 @@
     },
     "encrypted_examples": [
 
-    ]
+    ],
+    "reference_links": [
+      "/courses/csa-2023/guides/enhanced-for-loops"
+    ],
+    "display_name": "Populations",
+    "bubble_choice_description": "Find the average population of the top 100 most crowded countries in the world.",
+    "thumbnail_url": "https://images.code.org/8dd87ed2b22e1b679e3d9151bac0ce28-world.png"
   },
   "game_id": 68,
   "published": true,
   "created_at": "2023-01-12T21:53:45.000Z",
   "level_num": "custom",
   "user_id": 16889,
-  "audit_log": "[{\"changed_at\":\"2023-01-12T21:53:45.100+00:00\",\"changed\":[\"cloned from \\\"CSA U3L7-L7a_2023\\\"\"],\"cloned_from\":\"CSA U3L7-L7a_2023\"},{\"changed_at\":\"2023-01-12 21:53:46 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2023-01-12T21:53:45.100+00:00\",\"changed\":[\"cloned from \\\"CSA U3L7-L7a_2023\\\"\"],\"cloned_from\":\"CSA U3L7-L7a_2023\"},{\"changed_at\":\"2023-01-12 21:53:46 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-01-26 14:25:43 +0000\",\"changed\":[\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-01-26 16:14:17 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-01-27 04:56:55 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>
 </Javalab>
