@@ -96,6 +96,7 @@ class Courses extends Component {
             <Button
               __useDeprecatedTag
               href="/users/sign_up"
+              className="bannerContentButton"
               color={Button.ButtonColor.gray}
               style={styles.headerButton}
               text={buttonText}
