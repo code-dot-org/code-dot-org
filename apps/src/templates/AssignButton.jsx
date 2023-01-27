@@ -6,10 +6,11 @@ import i18n from '@cdo/locale';
 import {
   assignToSection,
   testingFunction,
+  unassignSection,
   sectionsForDropdown
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 // KT added function ^^
-import ConfirmHiddenAssignment from '@cdo/apps/templates/courseOverview/ConfirmHiddenAssignment';
+// import ConfirmHiddenAssignment from '@cdo/apps/templates/courseOverview/ConfirmHiddenAssignment';
 import MultipleSectionsAssigner from '@cdo/apps/templates/MultipleSectionsAssigner';
 import {
   isScriptHiddenForSection,
@@ -47,45 +48,36 @@ class AssignButton extends React.Component {
     });
   };
 
-  unhideAndAssign = () => {
-    const {
-      sectionId,
-      courseId,
-      courseOfferingId,
-      courseVersionId,
-      scriptId,
-      assignToSection,
-      updateHiddenScript,
-      testingFunction
-    } = this.props;
-    updateHiddenScript(sectionId, scriptId, false);
-    assignToSection(
-      sectionId,
-      courseId,
-      courseOfferingId,
-      courseVersionId,
-      scriptId
-    );
-    testingFunction(
-      sectionId,
-      courseId,
-      courseOfferingId,
-      courseVersionId,
-      scriptId
-    );
-  };
+  // unhideAndAssign = () => {
+  //   const {
+  //     sectionId,
+  //     courseId,
+  //     courseOfferingId,
+  //     courseVersionId,
+  //     scriptId,
+  //     assignToSection,
+  //     updateHiddenScript,
+  //     testingFunction
+  //   } = this.props;
+  //   updateHiddenScript(sectionId, scriptId, false);
+  //   assignToSection(
+  //     sectionId,
+  //     courseId,
+  //     courseOfferingId,
+  //     courseVersionId,
+  //     scriptId
+  //   );
+  //   testingFunction(
+  //     sectionId,
+  //     courseId,
+  //     courseOfferingId,
+  //     courseVersionId,
+  //     scriptId
+  //   );
+  // };
 
   handleClick = () => {
-    const {
-      scriptId,
-      // courseId, - commented to avoid errors
-      // courseOfferingId,
-      // courseVersionId,
-      sectionId,
-      hiddenLessonState
-      // assignToSection,
-      // testingFunction
-    } = this.props;
+    const {scriptId, sectionId, hiddenLessonState} = this.props;
     const isHiddenFromSection =
       sectionId &&
       scriptId &&
@@ -103,30 +95,15 @@ class AssignButton extends React.Component {
       console.log(
         'assignmentChoiceDialog ' + this.state.assignmentChoiceDialogOpen
       );
-      // Commented this out because it was making the popup close.
-      // assignToSection(
-      //   sectionId,
-      //   courseId,
-      //   courseOfferingId,
-      //   courseVersionId,
-      //   scriptId
-      // );
-      // testingFunction(
-      //   sectionId,
-      //   courseId,
-      //   courseOfferingId,
-      //   courseVersionId,
-      //   scriptId
-      // );
     }
   };
 
   render() {
-    const {confirmationDialogOpen} = this.state;
+    // const {confirmationDialogOpen} = this.state;
     const {assignmentChoiceDialogOpen} = this.state;
     const {
       assignmentName,
-      sectionName,
+      // sectionName,
       isRtl,
       sectionsForDropdown
     } = this.props;
@@ -150,10 +127,8 @@ class AssignButton extends React.Component {
         </div>
         {assignmentChoiceDialogOpen && (
           <MultipleSectionsAssigner
-            // sectionName={sectionName}
             assignmentName={assignmentName}
             onClose={this.onCloseDialog}
-            onConfirm={this.unhideAndAssign}
             sections={sectionsForDropdown}
             courseId={this.props.courseId}
             courseOfferingId={this.props.courseOfferingId}
@@ -161,14 +136,14 @@ class AssignButton extends React.Component {
             courseVersionId={this.props.courseVersionId}
           />
         )}
-        {confirmationDialogOpen && (
+        {/* {confirmationDialogOpen && (
           <ConfirmHiddenAssignment
             sectionName={sectionName}
             assignmentName={assignmentName}
             onClose={this.onCloseDialog}
             onConfirm={this.unhideAndAssign}
           />
-        )}
+        )} */}
       </div>
     );
   }
@@ -203,6 +178,7 @@ export default connect(
   {
     assignToSection,
     updateHiddenScript,
-    testingFunction
+    testingFunction,
+    unassignSection
   }
 )(AssignButton);

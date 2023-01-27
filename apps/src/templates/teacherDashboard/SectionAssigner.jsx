@@ -5,7 +5,6 @@ import i18n from '@cdo/locale';
 import {sectionForDropdownShape} from './shapes';
 import TeacherSectionSelector from './TeacherSectionSelector';
 import AssignButton from '@cdo/apps/templates/AssignButton';
-import UnassignSectionButton from '@cdo/apps/templates/UnassignSectionButton';
 import {selectSection} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 
 class SectionAssigner extends Component {
@@ -38,8 +37,7 @@ class SectionAssigner extends Component {
       scriptId,
       selectedSectionId,
       forceReload,
-      assignmentName,
-      buttonLocationAnalytics
+      assignmentName
     } = this.props;
     const selectedSection = sections.find(
       section => section.id === selectedSectionId
@@ -58,26 +56,17 @@ class SectionAssigner extends Component {
             courseVersionId={courseVersionId}
             unitId={scriptId}
           />
-          {selectedSection && selectedSection.isAssigned && (
-            <UnassignSectionButton
-              courseName={assignmentName}
+          {selectedSection && showAssignButton && (
+            <AssignButton
               sectionId={selectedSection.id}
-              buttonLocationAnalytics={buttonLocationAnalytics}
+              courseOfferingId={courseOfferingId}
+              courseVersionId={courseVersionId}
+              courseId={courseId}
+              scriptId={scriptId}
+              assignmentName={assignmentName}
+              sectionName={selectedSection.name}
             />
           )}
-          {selectedSection &&
-            !selectedSection.isAssigned &&
-            showAssignButton && (
-              <AssignButton
-                sectionId={selectedSection.id}
-                courseOfferingId={courseOfferingId}
-                courseVersionId={courseVersionId}
-                courseId={courseId}
-                scriptId={scriptId}
-                assignmentName={assignmentName}
-                sectionName={selectedSection.name}
-              />
-            )}
         </div>
       </div>
     );

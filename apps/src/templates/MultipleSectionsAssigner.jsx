@@ -9,7 +9,8 @@ import {sectionForDropdownShape} from '@cdo/apps/templates/teacherDashboard/shap
 import TeacherSectionOption from './TeacherSectionOption';
 import {
   assignToSection,
-  testingFunction
+  testingFunction,
+  unassignSection
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import {updateHiddenScript} from '@cdo/apps/code-studio/hiddenLessonRedux';
 // import {selectSection} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
@@ -28,6 +29,7 @@ class MultipleSectionsAssigner extends Component {
     scriptId: PropTypes.number,
     // Redux
     sections: PropTypes.arrayOf(sectionForDropdownShape).isRequired,
+    unassignSection: PropTypes.func.isRequired,
     assignToSection: PropTypes.func.isRequired,
     updateHiddenScript: PropTypes.func.isRequired,
     testingFunction: PropTypes.func.isRequired,
@@ -111,12 +113,18 @@ class MultipleSectionsAssigner extends Component {
           this.state.initialSectionsAssigned[i]
         )
       ) {
+        this.props.unassignSection(
+          this.state.initialSectionsAssigned[i].id,
+          ''
+        );
         console.log(
           'This section needs to be removed from this course ' +
             this.state.initialSectionsAssigned[i].name
         );
       }
     }
+    // close dialogue
+    this.props.onClose();
   };
 
   unhideAndAssign = section => {
@@ -148,6 +156,23 @@ class MultipleSectionsAssigner extends Component {
     );
   };
 
+  selectAllHandler = () => {
+    for (let i = 0; i < this.props.sections.length; i++) {
+      // if the section is NOT in currentSections assigned, assign it
+      if (
+        !this.state.currentSectionsAssigned.includes(
+          s => s.code === this.props.sections[i].code
+        )
+      ) {
+        this.setState(state => {
+          let newList = [...state.currentSectionsAssigned];
+          newList.push(this.props.sections[i]);
+          return {currentSectionsAssigned: newList};
+        });
+      }
+    }
+  };
+
   render() {
     const {sections, assignmentName, onClose} = this.props;
 
@@ -167,13 +192,23 @@ class MultipleSectionsAssigner extends Component {
               <TeacherSectionOption
                 key={section.id}
                 section={section}
-                isChecked={this.state.currentSectionsAssigned.includes(section)}
+                isChecked={
+                  !!this.state.currentSectionsAssigned.some(
+                    s => s.code === section.code
+                  )
+                }
                 assignedSections={this.state.currentSectionsAssigned}
                 onChange={() => this.handleChangedCheckbox(section)} // this fucntion should update the state of multiple secion assigner
                 editedValue={section.isAssigned}
               />
             ))}
         </div>
+        <a
+          style={styles.selectAllSectionsLabel}
+          onClick={this.selectAllHandler}
+        >
+          Select All
+        </a>
         <div style={{textAlign: 'right'}}>
           <Button
             __useDeprecatedTag
@@ -231,6 +266,15 @@ const styles = {
     margin: 0,
     fontSize: 20,
     fontFamily: '"Gotham 5r", sans-serif'
+  },
+  selectAllSectionsLabel: {
+    fontFamily: "'Gotham 5r', sans-serif",
+    fontSize: 16,
+    cursor: 'pointer',
+    color: color.link_color,
+    ':hover': {
+      color: color.link_color
+    }
   }
 };
 
@@ -244,6 +288,7 @@ export default connect(
   {
     assignToSection,
     updateHiddenScript,
-    testingFunction
+    testingFunction,
+    unassignSection
   }
 )(MultipleSectionsAssigner);
