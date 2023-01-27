@@ -17,6 +17,7 @@ const TEACHER_ONLY_FIELDS = [
 ];
 const STUDENT_ONLY_FIELDS = [
   '#student-name-label',
+  '#gender-dropdown',
   '#age-dropdown',
   '#student-consent',
   '#parent-email-container',

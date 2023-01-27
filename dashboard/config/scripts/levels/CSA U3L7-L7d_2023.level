@@ -2,7 +2,7 @@
   <config><![CDATA[{
   "properties": {
     "encrypted": "false",
-    "long_instructions": "**Short one-sentence description of problem to solve.**\r\n\r\n🎒 **IMPORT:** Import your `PainterPlus`(#e7e8ea) class from your **Backpack**.\r\n\r\n*Don't have it, or it doesn't work? That's ok! Copy the code from* ***here*** *and paste it into a new file in your project.*\r\n\r\n✅ **TO DO:** Overview of the steps to take.\r\n\r\n1. More specific step\r\n\r\n2. More specific step\r\n\r\n::: details [**🔦 Need help with your algorithm?**]\r\n  \r\nHere is one approach to solving this problem.\r\n\r\n```\r\nalgorithm for method to write\r\n```\r\n:::\r\n&nbsp;\r\n\r\n💡 **TIP:** Check out the documentation for the `ClassName`(#e7e8ea) class in the **Documentation** tab ⬆️ for a thing to look for!\r\n\r\n📝 **COMMENT:** Be sure to add comments to note what your code does.\r\n\r\n🖥️ **TEST:** Test your program to check if your code achieves the expected result.\r\n\r\n🎉 **RUN:** Run your program to see the result of your code!\r\n\r\n## ***Don't forget to . . .***\r\n\r\n![](https://images.code.org/eb2c8910ae2e150019b8e2177405d4af-image-1668191576873.png)\r\n\r\n## 🎯 Goal\r\n\r\nimage/gif or console output",
+    "long_instructions": "The <a href=\"https://www.kaggle.com/datasets/thedevastator/fundraising-by-members-of-the-117th-congress\" target=\"_blank\">**Fundraising by Members of the 117th Congress dataset**</a> includes the total funds each congressperson raised. The total funds raised for each congressperson is stored in a 1D array of `double`(#e7e8ea) values called `fundsRaised`(#e7e8ea).\r\n\r\n✅ **TO DO #1:** In `Congress.java`(#e7e8ea), write the `calcAverageFundsRaised()`(#e7e8ea) method to calculate and return the average funds raised using an enhanced `for`(#e7e8ea) loop.\r\n\r\n::: details [**🔦 Need help with your algorithm?**]\r\n  \r\nHere is one approach to solving this problem.\r\n\r\n```\r\ntotalFunds = 0\r\n\r\nfor each amount in fundsRaised\r\n  totalFunds += amount\r\n\r\nreturn totalFunds / fundsRaised.length\r\n```\r\n:::\r\n&nbsp;\r\n\r\n✅ **TO DO #2:** In `DataRunner.java`(#e7e8ea),\r\n\r\n1. Instantiate a `Congress`(#e7e8ea) object with the `\"funds.txt\"`(#e7e8ea) file containing the funds raised data.\r\n\r\n2. Call the `calcAverageFundsRaised()`(#e7e8ea) method and print the result.\r\n\r\n💡 **TIP:** Check out the **Help & Tips** tab ⬆️ for help with traversing a 1D array with an enhanced `for`(#e7e8ea) loop.\r\n\r\n## ***Don't forget to . . .***\r\n\r\n![](https://images.code.org/eb2c8910ae2e150019b8e2177405d4af-image-1668191576873.png)",
     "mini_rubric": "false",
     "submittable": "false",
     "hide_share_and_remix": "false",
@@ -16,13 +16,19 @@
     },
     "encrypted_examples": [
 
-    ]
+    ],
+    "reference_links": [
+      "/courses/csa-2023/guides/enhanced-for-loops"
+    ],
+    "display_name": "Congress Fundraising",
+    "bubble_choice_description": "Find the average funds raised by each member of the 117th Congress.",
+    "thumbnail_url": "https://images.code.org/71ce4ea770ffef19ac6ee8e9ab21f921-congress.png"
   },
   "game_id": 68,
   "published": true,
   "created_at": "2023-01-12T21:54:06.000Z",
   "level_num": "custom",
   "user_id": 16889,
-  "audit_log": "[{\"changed_at\":\"2023-01-12T21:54:06.743+00:00\",\"changed\":[\"cloned from \\\"CSA U3L7-L7c_2023\\\"\"],\"cloned_from\":\"CSA U3L7-L7c_2023\"},{\"changed_at\":\"2023-01-12 21:54:08 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2023-01-12T21:54:06.743+00:00\",\"changed\":[\"cloned from \\\"CSA U3L7-L7c_2023\\\"\"],\"cloned_from\":\"CSA U3L7-L7c_2023\"},{\"changed_at\":\"2023-01-12 21:54:08 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-01-26 14:26:03 +0000\",\"changed\":[\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-01-26 16:20:17 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-01-27 04:57:17 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>
 </Javalab>
