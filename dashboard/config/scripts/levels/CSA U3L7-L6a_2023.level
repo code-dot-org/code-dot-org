@@ -1,0 +1,46 @@
+<Javalab>
+  <config><![CDATA[{
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "The <a href=\"https://www.kaggle.com/datasets/city-of-seattle/seattle-fremont-bridge-hourly-bicycle-counts\" target=\"_blank\">**Seattle Fremont Bridge Hourly Bicycle Counts dataset**</a> includes the number of bicycles that crossed the bridge each hour. The number of bicycles each hour is stored in a 1D array of `int`(#e7e8ea) values called `bicycleCounts`(#e7e8ea).\r\n\r\n✅ **TO DO:** In `Bicycle.java`(#e7e8ea), convert the `for`(#e7e8ea) loop in the `calcTotalBicycles()`(#e7e8ea) method to use an enhanced `for`(#e7e8ea) loop.\r\n\r\n💡 **TIP:** Check out the **Help & Tips** tab ⬆️ for help with traversing a 1D array using an enhanced `for`(#e7e8ea) loop.\r\n\r\n## ***Don't forget to . . .***\r\n\r\n![](https://images.code.org/eb2c8910ae2e150019b8e2177405d4af-image-1668191576873.png)",
+    "mini_rubric": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "csa_view_mode": "console",
+    "start_sources": {
+      "BicycleRunner.java": {
+        "text": "public class BicycleRunner {\n  public static void main(String[] args) {\n\n    // Creates a Bicycle object\n    Bicycle fremontBridge = new Bicycle(\"counts.txt\");\n\n    // Calls the calcTotalBicycles() method and prints the result\n    System.out.println(\"Total Bicycles: \" + fremontBridge.calcTotalBicycles());\n    \n  }\n}",
+        "isVisible": true,
+        "tabOrder": 0
+      },
+      "Bicycle.java": {
+        "text": "/*\n * Manages data about bicycles that cross the Seattle Fremont Bridge\n */\npublic class Bicycle {\n\n  // The 1D array of the number of bicycles that crossed the bridge each hour\n  private int[] bicycleCounts;\n\n  /*\n   * Reads the data from the specified filename to initialize bicycleCounts\n   */\n  public Bicycle(String filename) {\n    this.bicycleCounts = FileReader.toIntArray(filename);\n  }\n\n  /*\n   * Calculates and returns the total bicycles that crossed the bridge\n   */\n  public int calcTotalBicycles() {\n    int total = 0;\n\n    /* ----------------------------------- TO DO -----------------------------------\n     * ✅ Convert this for loop to use an enhanced for loop.\n     * -----------------------------------------------------------------------------\n     */\n\n    for (int index = 0; index < bicycleCounts.length; index++) {\n      total += bicycleCounts[index];\n    }\n\n    return total;\n  }\n}",
+        "isVisible": true,
+        "tabOrder": 1
+      },
+      "counts.txt": {
+        "text": "26\n20\n4\n10\n14\n62\n310\n704\n874\n552\n236\n84\n152\n180\n256\n328\n630\n1166\n760\n256\n160\n126\n98\n34\n36\n6\n18\n6\n16\n52\n284\n638\n836\n482\n240\n216\n208\n252\n238\n294\n550\n1014\n756\n328\n166\n140\n92\n82",
+        "isVisible": true,
+        "tabOrder": 2
+      },
+      "FileReader.java": {
+        "text": "import java.util.Scanner;\nimport java.util.ArrayList;\nimport java.io.File;\nimport java.io.FileNotFoundException;\n\npublic class FileReader {\n\n  public static String[] toStringArray(String filename) {\n    ArrayList<String> temp = readDataFromFile(filename);\n    String[] data = new String[temp.size()];\n\n    for (int index = 0; index < data.length; index++) {\n      String currentValue = temp.get(index);\n      data[index] = currentValue;\n    }\n\n    return data;\n  }\n\n  public static int[] toIntArray(String filename) {\n    ArrayList<String> temp = readDataFromFile(filename);\n    int[] data = new int[temp.size()];\n\n    for (int index = 0; index < data.length; index++) {\n      String currentValue = temp.get(index);\n      data[index] = Integer.parseInt(currentValue);\n    }\n\n    return data;\n  }\n\n  public static double[] toDoubleArray(String filename) {\n    ArrayList<String> temp = readDataFromFile(filename);\n    double[] data = new double[temp.size()];\n\n    for (int index = 0; index < data.length; index++) {\n      String currentValue = temp.get(index);\n      data[index] = Double.parseDouble(currentValue);\n    }\n\n    return data;\n  }\n\n  private static Scanner createScanner(File theFile) {\n    Scanner tempScanner = null;\n\n    try {\n      tempScanner = new Scanner(theFile);\n    } catch(FileNotFoundException error) {\n      System.out.println(\"File not found.\");\n    }\n\n    return tempScanner;\n  }\n\n  private static ArrayList<String> readDataFromFile(String filename) {\n    File dataFile = new File(filename);\n    Scanner reader = createScanner(dataFile);\n    ArrayList<String> temp = new ArrayList<String>();\n\n    while (reader.hasNextLine()) {\n      String currentLine = reader.nextLine().trim();\n      temp.add(currentLine);\n    }\n\n    reader.close();\n    return temp;\n  }\n  \n}",
+        "isVisible": false,
+        "tabOrder": 3
+      }
+    },
+    "reference_links": [
+      "/courses/csa-2023/guides/enhanced-for-loops"
+    ],
+    "display_name": "Bicycle Counts",
+    "bubble_choice_description": "Convert the `for` loop to an enhanced `for` loop to return the total number of bicycles that have crossed the Seattle Fremont Bridge.",
+    "thumbnail_url": "https://images.code.org/a58dc78eac515745d70438b7e748709e-bicycle.png"
+  },
+  "game_id": 68,
+  "created_at": "2023-01-12T21:51:51.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2023-01-12T21:51:51.614+00:00\",\"changed\":[\"cloned from \\\"CSA Practice Level Template\\\"\"],\"cloned_from\":\"CSA Practice Level Template\"},{\"changed_at\":\"2023-01-12 21:51:53 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-01-26 14:28:25 +0000\",\"changed\":[\"long_instructions\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-01-26 14:31:14 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-01-27 05:10:13 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+}]]></config>
+</Javalab>

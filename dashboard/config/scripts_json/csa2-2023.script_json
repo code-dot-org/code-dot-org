@@ -15,7 +15,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-12-15 15:35:50 UTC",
+    "serialized_at": "2023-01-16 12:18:52 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -73,7 +73,7 @@
       "relative_position": 1,
       "properties": {
         "overview": "**How can I represent the attributes an object should have in a class?**\n\nIn this lesson, students expand on what they learned about classes in the previous unit to declare instance variables to represent an object's attributes. As students learn about instance variables, they discover the difference between `public` and `private` access and identify the need for encapsulation. Students also revisit inheritance to recall that subclasses share the attributes and behaviors of a class and practice declaring instance variables in a single class and in a superclass and subclass.",
-        "preparation": "* Preview the *Instance Variables and Attributes* video\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-unit-2-lesson-3-attributes/36395/2) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
+        "preparation": "* Print copies of the Unit 2 Guide (one for each student)\n* Preview the *Instance Variables and Attributes* video\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-unit-2-lesson-3-attributes/36395/2) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
         "student_overview": "**How can I represent the attributes an object should have in a class?**\n\nYou previously learned that a class is a blueprint that defines the attributes and behaviors an object should have. In this lesson, you expand on what you learned about classes in the previous unit to declare instance variables to represent an object's attributes. As you learn about instance variables, you discover the difference between `public` and `private` access and identify the need for encapsulation. You also revisit inheritance to recall that subclasses share the attributes and behaviors of a class and practice declaring instance variables in a single class and in a superclass and subclass."
       },
       "seeding_key": {
@@ -235,7 +235,7 @@
       "relative_position": 10,
       "properties": {
         "overview": "**How can I easily display information about an object?**\n\nStudents have learned to use accessor methods to obtain information about the state of an object. In this lesson, students explore how to print an object reference and the `toString()` method to easily obtain information about an object. Students revisit the `Object` class and learn how to override its `toString()` method and practice writing a `toString()` method in a class using escape sequences to format output. Students then write a `toString()` method in the `Dessert` class and subclass.",
-        "preparation": "* Preview *The toString() Method* video\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-unit-2-lesson-4-constructors/36394/2) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teacher",
+        "preparation": "* Preview *The toString() Method* video\n* Print copies of the Unit 2 Study Guide (one for each student)\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-unit-2-lesson-4-constructors/36394/2) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teacher",
         "student_overview": "**How can I easily display information about an object?**\n\nYou have learned to use accessor methods to obtain information about the state of an object. In this lesson, you explore how to print an object reference and the `toString()` method to easily obtain information about an object. You revisit the `Object` class and learn how to override its `toString()` method and practice writing a `toString()` method in a class using escape sequences to format output. You then write a `toString()` method in the `Dessert` class and subclass."
       },
       "seeding_key": {
@@ -943,7 +943,7 @@
       "key": "c24a5b38-344b-46f6-b70c-8206917b3cd5",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives and the Question of the Day.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day.",
         "duration": "5",
         "name": "Introduction"
       },
@@ -980,7 +980,7 @@
       "key": "1e589149-8d89-49cd-b3c0-1b91e8ca0eea",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What do you notice about the code in this program?*\n* *What do you wonder about the code in this program?*\n\n**Discussion Goal:** Students notice that the classes in the program have `private` variables and that the tester class attempts to access and print the values for these variables. Students also notice the error that is caused by trying to access and print these values and may wonder why these variables are `private`.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What did you notice about the code in this program?*\n* *What do you wonder about the code in this program?*\n\n**Discussion Goal:** Students notice that the classes in the program have `private` variables and that the tester class attempts to access and print the values for these variables. Students also notice the error that is caused by trying to access and print these values and may wonder why these variables are `private`.",
         "tips": [
           {
             "type": "teachingTip",
@@ -1025,10 +1025,27 @@
       }
     },
     {
-      "key": "e934c8ba-8daf-4a74-a389-e91045d9f780",
+      "key": "6997652d-26af-4622-88e3-801230207ce5",
       "position": 7,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the video – *Instance Variables and Attributes*.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Define ***instance variable***.\n\n**Do This:** Explain the syntax for declaring an instance variable:\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> The instance variable is `private`\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> The data type for the instance variable and introduce the `double` data type\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> The name of the instance variable\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Why do you think these are called instance variables instead of just variables?*\n\n**Discussion Goal:** Students recall that when they create an object, they are creating an instance of a class. An object then gets its own copy of the attributes and methods defined in the class. They realize that these are called instance variables because they define the attributes an object should have, so each object gets its own copy of these variables.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the video – *Instance Variables and Attributes*.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Videos are used throughout the curriculum to spark discussions, supplement key concepts with additional explanations and examples, and expose students to the various roles and backgrounds of individuals in computer science.\n\nWhile interacting with the video, turn on closed captioning so students can also read along as they watch.\n\nTo encourage active engagement and reflection, use one or more of the strategies discussed in the [**Guide to Curriculum Videos**](https://docs.google.com/document/d/1FqIUpJg6MrgdtbFGLobSojOz0u1m5Jge1nMAjUqI5ZM/edit?usp=sharing)."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "6997652d-26af-4622-88e3-801230207ce5",
+        "lesson_activity.key": "fec0b4f6-7115-43e4-97a9-ecaa891e9795"
+      }
+    },
+    {
+      "key": "e934c8ba-8daf-4a74-a389-e91045d9f780",
+      "position": 8,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Define ***instance variable***.\n\n**Do This:** Explain the syntax for declaring an instance variable:\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> The instance variable is `private`\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> The data type for the instance variable and introduce the `double` data type\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> The name of the instance variable\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Why do you think these are called instance variables instead of just variables?*\n\n**Discussion Goal:** Students recall that when they create an object, they are creating an instance of a class. An object then gets its own copy of the attributes and methods defined in the class. They realize that these are called instance variables because they define the attributes an object should have, so each object gets its own copy of these variables.",
         "tips": [
           {
             "type": "teachingTip",
@@ -1043,7 +1060,7 @@
     },
     {
       "key": "e4b874a6-cf68-4156-8638-4926b0a3ab9c",
-      "position": 8,
+      "position": 9,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to explain that an object gets a copy of the instance variables that are defined in the class when it is instantiated.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 5 on Code Studio to practice writing instance variables in a class.",
         "progression_name": "Skill Building: Declaring Instance Variables"
@@ -1055,7 +1072,7 @@
     },
     {
       "key": "a8869e54-15ed-475f-bb2b-ba8afe251d83",
-      "position": 9,
+      "position": 10,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Recall the definition of *inheritance* and how a subclass shares the attributes and behaviors of the superclass.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 6 to complete Levels 6 and 7 on Code Studio. Students investigate the program, make changes to the program as prompted, and observe the results.",
         "duration": "15",
@@ -1069,7 +1086,7 @@
     },
     {
       "key": "8694fb8d-462c-4bab-89b0-b13307332bae",
-      "position": 10,
+      "position": 11,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students share what they discovered from the modifications they made to the code.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to define ***access modifier*** and ***encapsulation***.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *When would encapsulation be useful?*\n\n**Discussion Goal:** Students share that encapsulation protects the attributes of a class and ensures that only the class can control what is stored. They might also suggest that this prevents accidental or direct access to the attributes, especially in programs where some attributes should not be accessed or modified without some form of verification.",
         "tips": [
@@ -1086,7 +1103,7 @@
     },
     {
       "key": "204ba9c1-7850-409e-b1ef-2bbb7a8f4822",
-      "position": 11,
+      "position": 12,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Define ***DRY principle***.",
         "tips": [
@@ -1103,7 +1120,7 @@
     },
     {
       "key": "0bdfa41d-7494-441a-b566-bdaedafe2ff0",
-      "position": 12,
+      "position": 13,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Define ***refactor***.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 8 to complete Levels 8 and 9. Students complete a Check for Understanding on Level 8, then continue to Level 9 to create the `Dessert` class and a `Dessert` subclass.",
         "progression_name": "Practice: The Food Truck",
@@ -1121,7 +1138,7 @@
     },
     {
       "key": "918a48c6-ee63-4aae-890f-0849880cc978",
-      "position": 13,
+      "position": 14,
       "properties": {
         "description": "This is a good time to commit our code and save our `Dessert` classes to the Backpack. We will be adding to the classes throughout the unit as we learn more about designing classes and their components.",
         "remarks": true
@@ -1133,7 +1150,7 @@
     },
     {
       "key": "fd413801-af64-4209-9569-e70dedec7b5e",
-      "position": 14,
+      "position": 15,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Play the music clip to cue committing their code and saving their `Dessert` classes to the Backpack.",
         "tips": [
@@ -1165,11 +1182,11 @@
       "key": "ef92120f-308e-42a6-b1f4-a7a4f01969e5",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What did we learn today?*\n* *So what?*\n* *Now what?*\n\n**Discussion Goal:** Students highlight the concepts and vocabulary they learned in this lesson, such as instance variables and encapsulation. Students also recall the difference between `public` and `private` access and might also make connections with the attributes in the `Painter` class. They should realize that they now have the knowledge to start designing their own classes from scratch instead of depending only on existing classes.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson and the Question of the Day.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What did we learn today?*\n* *So what?*\n* *Now what?*\n\n**Discussion Goal:** Students highlight the concepts and vocabulary they learned in this lesson, such as instance variables and encapsulation. Students also recall the difference between `public` and `private` access and might also make connections with the attributes in the `Painter` class. They should realize that they now have the knowledge to start designing their own classes from scratch instead of depending only on existing classes.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.",
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "The Unit 2 Guide includes an end-of-lesson reflection prompt for students to reflect on the lesson and the progress they made in developing their software engineering skills and characteristics. Have students respond to the reflection prompt after reviewing the concepts covered in this lesson to help them process and reflect on their personal growth."
+            "markdown": "The Unit 2 Guide includes the Question of the Day and an end-of-lesson reflection prompt for students to summarize what they have learned and reflect on their progress. Have students respond to these prompts after reviewing the concepts covered in this lesson to help them process and make meaningful connections with the new content."
           }
         ]
       },
@@ -1287,7 +1304,7 @@
       "key": "d43c5902-08f0-4a95-86b7-dcc187374ab5",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives and the Question of the Day.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day.",
         "duration": "5",
         "name": "Introduction"
       },
@@ -1324,7 +1341,7 @@
       "key": "034c8111-0cbc-43dc-84eb-15317b562e16",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What do you notice about the code in this program?*\n* *What do you wonder about the code in this program?*\n\n**Discussion Goal:** Students notice the constructor that assigns values to each of the instance variables. Students might wonder how these values are determined."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What did you notice about the code in this program?*\n* *What do you wonder about the code in this program?*\n\n**Discussion Goal:** Students notice the constructor that assigns values to each of the instance variables. Students might wonder how these values are determined."
       },
       "seeding_key": {
         "activity_section.key": "034c8111-0cbc-43dc-84eb-15317b562e16",
@@ -1363,10 +1380,27 @@
       }
     },
     {
-      "key": "a099b41e-800a-4dee-b92a-5826454d8f5a",
+      "key": "e2cafc91-796f-49b5-bd69-adf57a25953f",
       "position": 7,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the video – *Constructors*.\n\n**Do This:** Explain the components of a constructor:\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> The access modifier\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> The name of the constructor is the same as the class\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Empty parentheses since there are no parameters\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Define ***constructor signature***\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Assign values to the instance variables\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 5 on Code Studio to practice writing a no-argument constructor in a class.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the video – *Constructors*.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Videos are used throughout the curriculum to spark discussions, supplement key concepts with additional explanations and examples, and expose students to the various roles and backgrounds of individuals in computer science.\n\nWhile interacting with the video, turn on closed captioning so students can also read along as they watch.\n\nTo encourage active engagement and reflection, use one or more of the strategies discussed in the [**Guide to Curriculum Videos**](https://docs.google.com/document/d/1FqIUpJg6MrgdtbFGLobSojOz0u1m5Jge1nMAjUqI5ZM/edit?usp=sharing)."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "e2cafc91-796f-49b5-bd69-adf57a25953f",
+        "lesson_activity.key": "83ba7039-7de8-4a47-b7c8-d7f88b3dba9b"
+      }
+    },
+    {
+      "key": "a099b41e-800a-4dee-b92a-5826454d8f5a",
+      "position": 8,
+      "properties": {
+        "description": "**Do This:** Explain the components of a constructor:\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> The access modifier\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> The name of the constructor is the same as the class\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Empty parentheses since there are no parameters\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Define ***constructor signature***\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Assign values to the instance variables\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 5 on Code Studio to practice writing a no-argument constructor in a class.",
         "progression_name": "Skill Building: Writing a Constructor"
       },
       "seeding_key": {
@@ -1376,7 +1410,7 @@
     },
     {
       "key": "d986798d-656c-4ddd-922c-7f4803753ed6",
-      "position": 8,
+      "position": 9,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Define ***default value***.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to explain that if a no-argument constructor is not written in the class, Java will automatically provide one and assign the default values for the data type.",
         "tips": [
@@ -1393,7 +1427,7 @@
     },
     {
       "key": "43d0a74b-39ca-4e16-95e8-547bc692864c",
-      "position": 9,
+      "position": 10,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *How should we decide what the default values should be for an object's instance variables?*\n\n**Discussion Goal:** Students share suggestions for making these decisions and may share examples to support their suggestions. Students should realize that they should establish values for what they would consider a \"default object\" if the user does not specify values, such as the `Painter` object starting at (0, 0) or a new profile page on a social media app starting with a default profile image.",
         "tips": [
@@ -1410,7 +1444,7 @@
     },
     {
       "key": "f53a472b-d657-479c-a352-26904584aa3e",
-      "position": 10,
+      "position": 11,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What was useful about the no-argument constructor in the `Painter` class? What was NOT useful about it?*\n\n**Discussion Goal:** Students suggest that creating `Painter` objects with the no-argument constructor meant that they always knew where the object was going to start, what direction it would be facing, and that it had no paint. Students may make connections with achieving consistency and reliability in their programs since they could trust that an object would always be created the same way. They share how a different approach would have been more useful if they wanted the `Painter` object to start at a specific location or with a certain amount of paint.",
         "duration": "10",
@@ -1429,7 +1463,7 @@
     },
     {
       "key": "24fd5b6c-5778-4946-a023-a1285cb60c26",
-      "position": 11,
+      "position": 12,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 6 on Code Studio to complete Levels 6, 7, and 8. Students complete a Check for Understanding on Level 6, then continue to Level 7 to write a new class with instance variables and a no-argument constructor. On Level 8, students write a no-argument constructor in the `Dessert` class.",
         "progression_name": "Practice: Writing a Class"
@@ -1441,7 +1475,7 @@
     },
     {
       "key": "f7579bbb-cef6-4691-b8ef-4ac5f8e56767",
-      "position": 12,
+      "position": 13,
       "properties": {
         "progression_name": "Practice: The Food Truck",
         "tips": [
@@ -1458,7 +1492,7 @@
     },
     {
       "key": "bd2dde87-f83a-4596-b3e6-4ae4cfde9130",
-      "position": 13,
+      "position": 14,
       "properties": {
         "description": "This is a good time to commit our code and save our `Dessert` class to the Backpack. We will be adding to the classes throughout the unit as we learn more about designing classes and their components.",
         "remarks": true
@@ -1470,7 +1504,7 @@
     },
     {
       "key": "dd80693e-756d-44ff-ac2a-adcf7cee7fd8",
-      "position": 14,
+      "position": 15,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Play the music clip to cue committing their code and saving their `Dessert` class to the Backpack.",
         "tips": [
@@ -1502,11 +1536,11 @@
       "key": "97ba1afe-03ff-4493-88d2-652c5a51a8ae",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student an index card or piece of scrap paper.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to write a question on their index card using one of the question stems. Have students turn to a neighbor and take turns asking and answering their questions.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson and the Question of the Day.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student an index card or piece of scrap paper.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to write a question on their index card using one of the question stems. Have students turn to a neighbor and take turns asking and answering their questions.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.",
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "The Unit 2 Guide includes an end-of-lesson reflection prompt for students to reflect on the lesson and the progress they made in developing their software engineering skills and characteristics. Have students respond to the reflection prompt after reviewing the concepts covered in this lesson to help them process and reflect on their personal growth."
+            "markdown": "The Unit 2 Guide includes the Question of the Day and an end-of-lesson reflection prompt for students to summarize what they have learned and reflect on their progress. Have students respond to these prompts after reviewing the concepts covered in this lesson to help them process and make meaningful connections with the new content."
           }
         ]
       },
@@ -1596,7 +1630,7 @@
       "key": "0045c972-767a-49b2-a046-f1a1b27d539d",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives and the Question of the Day.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day.",
         "duration": "5",
         "name": "Introduction"
       },
@@ -1686,13 +1720,13 @@
       "key": "55f42faf-3944-429f-b8a2-d28d0ca0dbbb",
       "position": 8,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Define ***parameterized constructor*** and introduce the parameterized constructor in the `Painter` class.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Define ***overloading***.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the video – *Overloaded Constructors*.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What are the similarities and differences between a no-argument constructor and a parameterized constructor?*\n\n**Discussion Goal:** Students note that both constructors set the starting values for the instance variables when an object is instantiated. They note that these are different because the no-argument constructor sets default values for the instance variables, while the parameterized constructor sets user-specified values.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Define ***parameterized constructor*** and introduce the parameterized constructor in the `Painter` class.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Define ***overloading***.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the video – *Overloaded Constructors*.",
         "duration": "15",
         "name": "Writing and Using Constructors",
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "Use the Retrieve-Pair-Share strategy to facilitate this discussion by directing students to write down their thoughts and ideas first, then pair up students to compare their answers and expand their notes. This allows time for individual processing and idea generation before sharing thoughts with others. Ask students to share the ideas they discussed with their partners as a class."
+            "markdown": "Videos are used throughout the curriculum to spark discussions, supplement key concepts with additional explanations and examples, and expose students to the various roles and backgrounds of individuals in computer science.\n\nWhile interacting with the video, turn on closed captioning so students can also read along as they watch.\n\nTo encourage active engagement and reflection, use one or more of the strategies discussed in the [**Guide to Curriculum Videos**](https://docs.google.com/document/d/1FqIUpJg6MrgdtbFGLobSojOz0u1m5Jge1nMAjUqI5ZM/edit?usp=sharing)."
           }
         ]
       },
@@ -1702,8 +1736,25 @@
       }
     },
     {
-      "key": "8073cb28-205a-459f-9418-8bf21bc9087f",
+      "key": "c5531adc-51d3-4935-b443-603b1dbdb724",
       "position": 9,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What are the similarities and differences between a no-argument constructor and a parameterized constructor?*\n\n**Discussion Goal:** Students note that both constructors set the starting values for the instance variables when an object is instantiated. They note that these are different because the no-argument constructor sets default values for the instance variables, while the parameterized constructor sets user-specified values.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Use the Retrieve-Pair-Share strategy to facilitate this discussion by directing students to write down their thoughts and ideas first, then pair up students to compare their answers and expand their notes. This allows time for individual processing and idea generation before sharing thoughts with others. Ask students to share the ideas they discussed with their partners as a class."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "c5531adc-51d3-4935-b443-603b1dbdb724",
+        "lesson_activity.key": "d0a3f243-3b74-4984-ba89-14f699602749"
+      }
+    },
+    {
+      "key": "8073cb28-205a-459f-9418-8bf21bc9087f",
+      "position": 10,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *When do you think it's best to use a no-argument constructor? What about a parameterized constructor?*\n\n**Discussion Goal:** Students suggest using a no-argument constructor when a default object is needed because the user has not given specific values. They note that a parameterized constructor is best when the user needs an object to be instantiated with specific starting values.",
         "tips": [
@@ -1720,7 +1771,7 @@
     },
     {
       "key": "2ea99a83-d8ea-4cdc-956b-36db847cb6be",
-      "position": 10,
+      "position": 11,
       "properties": {
         "description": "**Do This:** Explain the components of a parameterized constructor:\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Define ***formal parameter***\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Define ***local variable***\n\n**Do This:** Explain how parameterized constructors are called:\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Define ***actual parameter***\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Click through the animated slide to demonstrate ***call by value***\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 5 on Code Studio to complete Levels 5, 6, and 7. Students complete a Check for Understanding on Level 5, then continue to Level 6 to practice writing a parameterized constructor in a class. On Level 7, students practice writing multiple parameterized constructors in a class.",
         "progression_name": "Practice: Parameterized Constructors"
@@ -1734,12 +1785,12 @@
       "key": "120a47f4-35b0-4e30-a2e2-7a4db27cc534",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What did we learn today?*\n* *So what?*\n* *Now what?*\n\n**Discussion Goal:** Students highlight the concepts and vocabulary they learned in this lesson, such as parameterized constructor, formal parameter, and actual parameter. Students also recall that formal parameters are local variables and explain how the values of the actual parameters are copied to the formal parameters. They should realize that parameterized constructors can provide multiple options for instantiating objects based on the needs of the program.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson and the Question of the Day.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What did we learn today?*\n* *So what?*\n* *Now what?*\n\n**Discussion Goal:** Students highlight the concepts and vocabulary they learned in this lesson, such as parameterized constructor, formal parameter, and actual parameter. Students also recall that formal parameters are local variables and explain how the values of the actual parameters are copied to the formal parameters. They should realize that parameterized constructors can provide multiple options for instantiating objects based on the needs of the program.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.",
         "name": "Three W's",
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "The Unit 2 Guide includes an end-of-lesson reflection prompt for students to reflect on the lesson and the progress they made in developing their software engineering skills and characteristics. Have students respond to the reflection prompt after reviewing the concepts covered in this lesson to help them process and reflect on their personal growth."
+            "markdown": "The Unit 2 Guide includes the Question of the Day and an end-of-lesson reflection prompt for students to summarize what they have learned and reflect on their progress. Have students respond to these prompts after reviewing the concepts covered in this lesson to help them process and make meaningful connections with the new content."
           }
         ]
       },
@@ -1829,7 +1880,7 @@
       "key": "501aa0e3-9c5d-4e21-971b-59d88f854707",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives and the Question of the Day.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day.",
         "duration": "5",
         "name": "Introduction"
       },
@@ -2010,11 +2061,11 @@
       "key": "55a8e3b9-c07f-4e8b-8565-ba0c9ffadf34",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson and the Question of the Day.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.",
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "The Unit 2 Guide includes an end-of-lesson reflection prompt for students to reflect on the lesson and the progress they made in developing their software engineering skills and characteristics. Have students respond to the reflection prompt after reviewing the concepts covered in this lesson to help them process and reflect on their personal growth."
+            "markdown": "The Unit 2 Guide includes the Question of the Day and an end-of-lesson reflection prompt for students to summarize what they have learned and reflect on their progress. Have students respond to these prompts after reviewing the concepts covered in this lesson to help them process and make meaningful connections with the new content."
           }
         ]
       },
@@ -2092,7 +2143,7 @@
       "key": "53e34144-2d9b-4e4d-ade9-4f26ace37806",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives and the Question of the Day.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day.",
         "duration": "5",
         "name": "Introduction"
       },
@@ -2243,12 +2294,12 @@
       "key": "adb4cbae-e597-4302-baca-bb4704ed4c8c",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Designate four corners or areas in the classroom for each constructor signature. Have students go to the corner they think is the correct constructor for the constructor call.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Explain the correct constructor signature. Have students work with the students at their corner to develop an explanation for why their corner is correct or incorrect. Ask students to share their explanations with the class.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson and the Question of the Day.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Designate four corners or areas in the classroom for each constructor signature. Have students go to the corner they think is the correct constructor for the constructor call.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Explain the correct constructor signature. Have students work with the students at their corner to develop an explanation for why their corner is correct or incorrect. Ask students to share their explanations with the class.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.",
         "name": "Constructor Corners",
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "The Unit 2 Guide includes an end-of-lesson reflection prompt for students to reflect on the lesson and the progress they made in developing their software engineering skills and characteristics. Have students respond to the reflection prompt after reviewing the concepts covered in this lesson to help them process and reflect on their personal growth."
+            "markdown": "The Unit 2 Guide includes the Question of the Day and an end-of-lesson reflection prompt for students to summarize what they have learned and reflect on their progress. Have students respond to these prompts after reviewing the concepts covered in this lesson to help them process and make meaningful connections with the new content."
           }
         ]
       },
@@ -2327,7 +2378,7 @@
       "key": "9e3430f7-9a20-4d45-9c60-c4019aa11c0b",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives and the Question of the Day.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day.",
         "duration": "5",
         "name": "Introduction"
       },
@@ -2417,10 +2468,27 @@
       }
     },
     {
-      "key": "6dc90fd1-6a64-4185-b28e-bb9219ca54f7",
+      "key": "55751bb9-9093-4747-a64f-5ce3601bb556",
       "position": 8,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the video – *Creating Variables*.\n\n**Do This:** Explain how to declare and initialize a variable:\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Recall declaring a variable\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Define ***assignment*** and introduce the assignment operator ( `=` )\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Define ***initialization***\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Define ***literal***",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the video – *Creating Variables*.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Videos are used throughout the curriculum to spark discussions, supplement key concepts with additional explanations and examples, and expose students to the various roles and backgrounds of individuals in computer science.\n\nWhile interacting with the video, turn on closed captioning so students can also read along as they watch.\n\nTo encourage active engagement and reflection, use one or more of the strategies discussed in the [**Guide to Curriculum Videos**](https://docs.google.com/document/d/1FqIUpJg6MrgdtbFGLobSojOz0u1m5Jge1nMAjUqI5ZM/edit?usp=sharing)."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "55751bb9-9093-4747-a64f-5ce3601bb556",
+        "lesson_activity.key": "5b63f8b2-305f-4362-82ab-af06dabd048e"
+      }
+    },
+    {
+      "key": "6dc90fd1-6a64-4185-b28e-bb9219ca54f7",
+      "position": 9,
+      "properties": {
+        "description": "**Do This:** Explain how to declare and initialize a variable:\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Recall declaring a variable\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Define ***assignment*** and introduce the assignment operator ( `=` )\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Define ***initialization***\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Define ***literal***",
         "tips": [
           {
             "type": "teachingTip",
@@ -2435,7 +2503,7 @@
     },
     {
       "key": "a129d156-3e43-4f03-85bf-e8577bf16817",
-      "position": 9,
+      "position": 10,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Define ***primitive type***.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Define ***reference type***.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *When have we used primitive variables in our programs? What about reference variables?*\n\n**Discussion Goal:** Students recall using primitive variables to store the current x and y location and amount of paint for a `Painter` object and to represent the price of a `Dessert` object. Students recall using reference variables for objects they have created so far, such as `Painter` and `Dessert` objects.",
         "tips": [
@@ -2452,7 +2520,7 @@
     },
     {
       "key": "9996a7f6-b763-49cb-9b9d-d4709ab1fe8f",
-      "position": 10,
+      "position": 11,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Explain that a `String` is an object, or an instance of the `String` class.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to introduce the `String` class and demonstrate creating `String` objects using the `new` keyword.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate tracing the code segment to identify the current values stored in each variable.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students trace the code segment to identify the current values stored in each variable.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the solution as a class."
       },
@@ -2465,12 +2533,12 @@
       "key": "84541318-6c68-4609-9f45-81f1989170b7",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *This code segment is supposed to swap the values in variables `firstNumber` and `secondNumber`, but it has an error. What do we need to add, remove, or change to correct this code segment?*\n\n**Discussion Goal:** Students suggest adding a temporary variable to perform the swap. The value stored in `firstNumber` should be copied to the temporary variable. The value stored in `secondNumber` can then be copied to the `firstNumber` variable, and then the value stored in the temporary variable can be copied to the `secondNumber` variable.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson and the Question of the Day.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *This code segment is supposed to swap the values in variables `firstNumber` and `secondNumber`, but it has an error. What do we need to add, remove, or change to correct this code segment?*\n\n**Discussion Goal:** Students suggest adding a temporary variable to perform the swap. The value stored in `firstNumber` should be copied to the temporary variable. The value stored in `secondNumber` can then be copied to the `firstNumber` variable, and then the value stored in the temporary variable can be copied to the `secondNumber` variable.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.",
         "name": "Swapping Values",
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "The Unit 2 Guide includes an end-of-lesson reflection prompt for students to reflect on the lesson and the progress they made in developing their software engineering skills and characteristics. Have students respond to the reflection prompt after reviewing the concepts covered in this lesson to help them process and reflect on their personal growth."
+            "markdown": "The Unit 2 Guide includes the Question of the Day and an end-of-lesson reflection prompt for students to summarize what they have learned and reflect on their progress. Have students respond to these prompts after reviewing the concepts covered in this lesson to help them process and make meaningful connections with the new content."
           }
         ]
       },
@@ -2540,10 +2608,27 @@
       }
     },
     {
-      "key": "4daed3f0-48e9-4e91-a754-bed233e10502",
+      "key": "6426ea59-55c7-47c5-b10e-545b5842a0e3",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Define ***application programming interface (API)*** and ***library***.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the Java API.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the video – *Creating a Scanner Object*.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to introduce the `java.util` package and the `Scanner` class.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Define ***application programming interface (API)*** and ***library***.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the Java API.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the video – *Creating a Scanner Object*.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Videos are used throughout the curriculum to spark discussions, supplement key concepts with additional explanations and examples, and expose students to the various roles and backgrounds of individuals in computer science.\n\nWhile interacting with the video, turn on closed captioning so students can also read along as they watch.\n\nTo encourage active engagement and reflection, use one or more of the strategies discussed in the [**Guide to Curriculum Videos**](https://docs.google.com/document/d/1FqIUpJg6MrgdtbFGLobSojOz0u1m5Jge1nMAjUqI5ZM/edit?usp=sharing)."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "6426ea59-55c7-47c5-b10e-545b5842a0e3",
+        "lesson_activity.key": "a39d179a-a327-4954-a30d-b7ee91ea50d4"
+      }
+    },
+    {
+      "key": "4daed3f0-48e9-4e91-a754-bed233e10502",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to introduce the `java.util` package and the `Scanner` class.",
         "tips": [
           {
             "type": "teachingTip",
@@ -2558,7 +2643,7 @@
     },
     {
       "key": "d7bfddfe-2156-4475-9e27-cd3a8ee9a463",
-      "position": 3,
+      "position": 4,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *How could you use the `Scanner` class in the programs you have written so far?*\n\n**Discussion Goal:** Students suggest using the `Scanner` class to prompt the user for starting values to create `Painter` or `Dessert` objects or to enter numbers to perform calculations. Students might also suggest asking users for their name or to enter login information and make connections to apps and programs they use.",
         "tips": [
@@ -2577,7 +2662,7 @@
       "key": "d218c9c0-e29b-497e-bcee-dae6adb153a2",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives and the Question of the Day.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day.",
         "duration": "5",
         "name": "Introduction"
       },
@@ -2622,10 +2707,27 @@
       }
     },
     {
-      "key": "29a6cfce-b141-477c-9075-7244fef42a68",
+      "key": "a07d4cc3-2022-45b8-aeab-9e1823a63b02",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to recall method signatures and return type.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the video – *Accessor Methods*.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 2 on Code Studio to complete Levels 2, 3, and 4. Students investigate the program, make changes to the program as prompted, and observe the results then practice writing an accessor method in a class.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to recall method signatures and return type.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the video – *Accessor Methods*.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Videos are used throughout the curriculum to spark discussions, supplement key concepts with additional explanations and examples, and expose students to the various roles and backgrounds of individuals in computer science.\n\nWhile interacting with the video, turn on closed captioning so students can also read along as they watch.\n\nTo encourage active engagement and reflection, use one or more of the strategies discussed in the [**Guide to Curriculum Videos**](https://docs.google.com/document/d/1FqIUpJg6MrgdtbFGLobSojOz0u1m5Jge1nMAjUqI5ZM/edit?usp=sharing)."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "a07d4cc3-2022-45b8-aeab-9e1823a63b02",
+        "lesson_activity.key": "4d718b6a-cbc9-4f7d-906b-93256c706fa9"
+      }
+    },
+    {
+      "key": "29a6cfce-b141-477c-9075-7244fef42a68",
+      "position": 6,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 2 on Code Studio to complete Levels 2, 3, and 4. Students investigate the program, make changes to the program as prompted, and observe the results then practice writing an accessor method in a class.",
         "duration": "10",
         "name": "Exploring Accessor Methods",
         "progression_name": "Investigate and Modify: Accessor Methods"
@@ -2637,7 +2739,7 @@
     },
     {
       "key": "da5d0c51-f9f0-45dc-bf64-a6f23657d6e7",
-      "position": 6,
+      "position": 7,
       "properties": {
         "progression_name": "Skill Building: Accessor Methods"
       },
@@ -2648,7 +2750,7 @@
     },
     {
       "key": "43665dbb-2396-4c35-8f6c-5d9c790765db",
-      "position": 7,
+      "position": 8,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students share what they discovered from the modifications they made to the code."
       },
@@ -2659,7 +2761,7 @@
     },
     {
       "key": "0960b9c3-da57-474d-9d6b-c545fe485350",
-      "position": 8,
+      "position": 9,
       "properties": {
         "description": "We have written methods that performed a task and did not return any information. We have also used methods in the `Painter` class that did return information, such as the value of its `xLocation` or `yLocation` instance variable. These methods are useful when we want to get information about the state of an object.",
         "duration": "10",
@@ -2673,7 +2775,7 @@
     },
     {
       "key": "d8ebaee1-1ff7-402b-88ba-611ff7d0adee",
-      "position": 9,
+      "position": 10,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to define ***accessor method*** and recall the methods in the `Painter` class.\n\n**Do This:** Explain the syntax for writing an accessor method:\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> The method is `public` so it can be accessed from outside of the class\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> The return type matches the data type of the instance variable\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> The name of the method is typically `get` followed by the name of the instance variable\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> The `return` keyword exits the method and provides the value to where the method is called\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Then we specify the instance variable we want to return\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Define ***return by value***.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Why are accessor methods more useful than printing the values in a method in the class?*\n\n**Discussion Goal:** Students suggest that accessor methods make it easier to obtain a specific value when they need it. They might also realize that these methods also allow them to use the values to perform calculations in other parts of their program.",
         "tips": [
@@ -2690,7 +2792,7 @@
     },
     {
       "key": "520fb6c9-1cba-4c54-bb8d-df98d79f27a3",
-      "position": 10,
+      "position": 11,
       "properties": {
         "description": "Software engineers often have to make decisions about which instance variables should have an accessor method and which should not. In some cases, we might have data in a class that we don't want other classes to have access to or know about.",
         "duration": "10",
@@ -2704,7 +2806,7 @@
     },
     {
       "key": "ccfb3738-4a25-4bba-b443-238b6e4ad11d",
-      "position": 11,
+      "position": 12,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *How do you think we should decide when to write an access method for an instance variable?*\n\n**Discussion Goal:** Students suggest providing accessor methods when they want other classes to have access to the values stored in an instance variable. Values stored in instance variables that should not be accessible by other classes should not have an accessor method.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 5 on Code Studio to complete Levels 5, 6, and 7. Students complete a Check for Understanding on Level 5, then continue to Level 6 to write accessor methods in the `Dessert` class. On Level 7, students write accessor methods in the `Dessert` subclass (`Cookie`, `Pie`, `Cupcake`, or `Donut`).",
         "progression_name": "Practice: Accessor Methods",
@@ -2722,7 +2824,7 @@
     },
     {
       "key": "7c560e7d-967d-4347-9cb2-cc75ef3fc15d",
-      "position": 12,
+      "position": 13,
       "properties": {
         "description": "This is a good time to commit our code and save our `Dessert` class and subclass to the Backpack. We will be adding to the classes throughout the unit as we learn more about designing classes and their components.",
         "remarks": true
@@ -2734,7 +2836,7 @@
     },
     {
       "key": "ec9847cb-c0dd-48ec-abf4-33ea980f086d",
-      "position": 13,
+      "position": 14,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Play the music clip to cue committing their code and saving their `Dessert` class and subclass to the Backpack.",
         "tips": [
@@ -2771,11 +2873,11 @@
       "key": "f9fdec5e-76d9-43d4-ae2b-e31d56b4f231",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson and the Question of the Day.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.",
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "The Unit 2 Guide includes an end-of-lesson reflection prompt for students to reflect on the lesson and the progress they made in developing their software engineering skills and characteristics. Have students respond to the reflection prompt after reviewing the concepts covered in this lesson to help them process and reflect on their personal growth."
+            "markdown": "The Unit 2 Guide includes the Question of the Day and an end-of-lesson reflection prompt for students to summarize what they have learned and reflect on their progress. Have students respond to these prompts after reviewing the concepts covered in this lesson to help them process and make meaningful connections with the new content."
           }
         ]
       },
@@ -2882,7 +2984,7 @@
       "key": "c6bda1ca-04e9-4912-a11d-d0d98c8c2d07",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives and the Question of the Day.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day.",
         "duration": "5",
         "name": "Introduction"
       },
@@ -3076,11 +3178,11 @@
       "key": "db64fbf6-2a93-4935-8e9c-116c7e23e90b",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What did we learn today?*\n* *So what?*\n* *Now what?*\n\n**Discussion Goal:** Students highlight the concepts and vocabulary they learned in this lesson, such as the mod ( `%` ) operator and compound assignment operator. Students also recall the result of dividing two `int` values and the difference between dividing an `int` and a `double` value by `0`.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson and the Question of the Day.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What did we learn today?*\n* *So what?*\n* *Now what?*\n\n**Discussion Goal:** Students highlight the concepts and vocabulary they learned in this lesson, such as the mod ( `%` ) operator and compound assignment operator. Students also recall the result of dividing two `int` values and the difference between dividing an `int` and a `double` value by `0`.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.",
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "The Unit 2 Guide includes an end-of-lesson reflection prompt for students to reflect on the lesson and the progress they made in developing their software engineering skills and characteristics. Have students respond to the reflection prompt after reviewing the concepts covered in this lesson to help them process and reflect on their personal growth."
+            "markdown": "The Unit 2 Guide includes the Question of the Day and an end-of-lesson reflection prompt for students to summarize what they have learned and reflect on their progress. Have students respond to these prompts after reviewing the concepts covered in this lesson to help them process and make meaningful connections with the new content."
           }
         ]
       },
@@ -3150,10 +3252,27 @@
       }
     },
     {
-      "key": "af375970-47e8-4861-8ff1-204f2c91ff22",
+      "key": "8f791640-d8b3-4a80-b670-64b593caf81c",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the video – *Scanner Class Methods*.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What kind of information might you ask the user for in your programs? Which method would you use to get this information?*\n\n**Discussion Goal:** Students suggest getting values for a starting price for a `Dessert` object or asking the user for their name. Students share the methods they would use, such as `nextDouble()` to get the price and `next()` or `nextLine()` to get the user's name.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the video – *Scanner Class Methods*.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Videos are used throughout the curriculum to spark discussions, supplement key concepts with additional explanations and examples, and expose students to the various roles and backgrounds of individuals in computer science.\n\nWhile interacting with the video, turn on closed captioning so students can also read along as they watch.\n\nTo encourage active engagement and reflection, use one or more of the strategies discussed in the [**Guide to Curriculum Videos**](https://docs.google.com/document/d/1FqIUpJg6MrgdtbFGLobSojOz0u1m5Jge1nMAjUqI5ZM/edit?usp=sharing)."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "8f791640-d8b3-4a80-b670-64b593caf81c",
+        "lesson_activity.key": "5c2c7b95-c61d-47b3-94ad-1ae2fcc826c6"
+      }
+    },
+    {
+      "key": "af375970-47e8-4861-8ff1-204f2c91ff22",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What kind of information might you ask the user for in your programs? Which method would you use to get this information?*\n\n**Discussion Goal:** Students suggest getting values for a starting price for a `Dessert` object or asking the user for their name. Students share the methods they would use, such as `nextDouble()` to get the price and `next()` or `nextLine()` to get the user's name.",
         "tips": [
           {
             "type": "teachingTip",
@@ -3170,7 +3289,7 @@
       "key": "3f35677c-f05e-47d0-b19e-27030840dfdc",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives and the Question of the Day.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day.",
         "duration": "5",
         "name": "Introduction"
       },
@@ -3229,10 +3348,27 @@
       }
     },
     {
-      "key": "c8fb8593-e6a7-4528-bdb5-1889f5dfd602",
+      "key": "907aba3f-cbc9-4b85-bf29-db7bd811a021",
       "position": 6,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the video – *Mutator Methods*.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 2 on Code Studio to complete Levels 2, 3, and 4. Students investigate the program, make changes to the program as prompted, and observe the results then practice writing a mutator method in a class.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the video – *Mutator Methods*.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Videos are used throughout the curriculum to spark discussions, supplement key concepts with additional explanations and examples, and expose students to the various roles and backgrounds of individuals in computer science.\n\nWhile interacting with the video, turn on closed captioning so students can also read along as they watch.\n\nTo encourage active engagement and reflection, use one or more of the strategies discussed in the [**Guide to Curriculum Videos**](https://docs.google.com/document/d/1FqIUpJg6MrgdtbFGLobSojOz0u1m5Jge1nMAjUqI5ZM/edit?usp=sharing)."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "907aba3f-cbc9-4b85-bf29-db7bd811a021",
+        "lesson_activity.key": "26fd3ae4-95fd-436a-86b9-f4dbb209a606"
+      }
+    },
+    {
+      "key": "c8fb8593-e6a7-4528-bdb5-1889f5dfd602",
+      "position": 7,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 2 on Code Studio to complete Levels 2, 3, and 4. Students investigate the program, make changes to the program as prompted, and observe the results then practice writing a mutator method in a class.",
         "progression_name": "Investigate and Modify: Mutator Methods"
       },
       "seeding_key": {
@@ -3242,7 +3378,7 @@
     },
     {
       "key": "a34dde22-9ef2-441f-8f88-b16e2adaf4dd",
-      "position": 7,
+      "position": 8,
       "properties": {
         "progression_name": "Skill Building: Mutator Methods"
       },
@@ -3253,7 +3389,7 @@
     },
     {
       "key": "09c07bc5-2888-4b9d-a5a7-6e566ab3177b",
-      "position": 8,
+      "position": 9,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students share what they discovered from the modifications they made to the code.",
         "tips": [
@@ -3270,7 +3406,7 @@
     },
     {
       "key": "33a5e0cc-8e2a-4ad9-a581-e34e0a010ec3",
-      "position": 9,
+      "position": 10,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Define ***mutator method***.\n\n**Do This:** Explain the syntax for writing a mutator method:\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Method is `public`\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Return type is `void`\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Name of the method is typically `set` followed by the name of the instance variable\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Specify a parameter that matches the type of the instance variable\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Assign the value passed to the parameter to the instance variable\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Explain the syntax for calling a mutator method.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Should all instance variables have mutator methods? When would we not want an instance variable to be modified?*\n\n**Discussion Goal:** Students share examples of instance variables that might not have mutator methods because those values should not be changed, such as a student ID or social security number.",
         "tips": [
@@ -3287,7 +3423,7 @@
     },
     {
       "key": "bc7ab270-7869-488a-a198-765ada408fd3",
-      "position": 10,
+      "position": 11,
       "properties": {
         "description": "We also saw how we can use methods in the `Scanner` class to obtain values from a user and use these in our programs. However, we have to be careful how we obtain information because of the way some of these methods function in Java.",
         "remarks": true
@@ -3299,7 +3435,7 @@
     },
     {
       "key": "8c1d456c-c779-46cf-9a25-d0b889306ec0",
-      "position": 11,
+      "position": 12,
       "properties": {
         "description": "**Do This:** Explain common errors using the `nextInt()` method in the `Scanner` class:\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> The `nextInt()` method only reads the `int` value and not the new line read from pressing the Enter key\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> The following call to the `nextLine()` method captures the new line from pressing the Enter key after providing the `int` value\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> To skip the new line received from pressing Enter after providing the `int` value, we have to add another call to the `nextLine()` method"
       },
@@ -3310,7 +3446,7 @@
     },
     {
       "key": "96e23d8f-d8c1-4410-b5e0-953c9f107bde",
-      "position": 12,
+      "position": 13,
       "properties": {
         "description": "There are times when we want to make sure that the value is valid before it is assigned to an instance variable. Software engineers have to consider possible values that might be invalid for an instance variable so that these are not accidentally used and cause problems in their programs.",
         "duration": "15",
@@ -3324,7 +3460,7 @@
     },
     {
       "key": "023af887-e040-4e12-bb9f-e5706dd87ff6",
-      "position": 13,
+      "position": 14,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Are there values that should be considered invalid for certain instance variables?*\n\n**Discussion Goal:** Students share examples of invalid values, such as a negative x or y location for a `Painter` object or a negative price for a `Dessert` object.",
         "tips": [
@@ -3341,7 +3477,7 @@
     },
     {
       "key": "2138d590-2a60-4c95-b8bc-64290faf71d3",
-      "position": 14,
+      "position": 15,
       "properties": {
         "description": "We have used `if` statements to check if a `Painter` object was facing a specific direction or could move forward. We can also use an `if` statement to check for invalid values. For example, we may want to make sure that a user doesn't enter a negative value for a price or a quantity.",
         "remarks": true
@@ -3353,7 +3489,7 @@
     },
     {
       "key": "95648d42-81e6-4553-a73f-40d641bb2ff6",
-      "position": 15,
+      "position": 16,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Where have you used operators like less than, greater than, or equal?*\n\n**Discussion Goal:** Students recall using these operators in math class or a previous computer science class.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Define ***relational operator*** and introduce the operators.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to define ***Boolean expression*** and demonstrate the examples.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 5 on Code Studio to complete Levels 5 through 7. Students complete a Check for Understanding on Level 5, then continue to Level 6 to write mutator methods in the `Dessert` class. On Level 7, students write mutator methods in the `Dessert` subclass (`Cookie`, `Pie`, `Cupcake`, or `Donut`).",
         "progression_name": "Practice: Mutator Methods",
@@ -3371,7 +3507,7 @@
     },
     {
       "key": "832c97d3-f4ca-4e54-b82d-2427e719bd0a",
-      "position": 16,
+      "position": 17,
       "properties": {
         "description": "This is a good time to commit our code and save our `Dessert` class and subclass to the Backpack. We will be adding to the classes throughout the unit as we learn more about designing classes and their components.",
         "remarks": true
@@ -3383,7 +3519,7 @@
     },
     {
       "key": "deff108d-f699-4afa-82f1-eb8e8a4a4f47",
-      "position": 17,
+      "position": 18,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Play the music clip to cue committing their code and saving their `Dessert` class and subclass to the Backpack.",
         "tips": [
@@ -3432,11 +3568,11 @@
       "key": "f83b1951-da92-4539-b5f7-0df361e15bca",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson and the Question of the Day.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.",
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "The Unit 2 Guide includes an end-of-lesson reflection prompt for students to reflect on the lesson and the progress they made in developing their software engineering skills and characteristics. Have students respond to the reflection prompt after reviewing the concepts covered in this lesson to help them process and reflect on their personal growth."
+            "markdown": "The Unit 2 Guide includes the Question of the Day and an end-of-lesson reflection prompt for students to summarize what they have learned and reflect on their progress. Have students respond to these prompts after reviewing the concepts covered in this lesson to help them process and make meaningful connections with the new content."
           }
         ]
       },
@@ -3526,7 +3662,7 @@
       "key": "f87ee452-1189-4f0f-8d24-37d7150f8549",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives and the Question of the Day.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day.",
         "duration": "5",
         "name": "Introduction"
       },
@@ -3571,12 +3707,29 @@
       }
     },
     {
-      "key": "86300023-cf8f-4fdb-9a96-995087244fc6",
+      "key": "faac893a-36bf-413d-8011-c1a032ecb3e7",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the video – *The toString() Method*.\n\n**Do This:** Recall the `Object` class and introduce its `toString()` method:\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> When printing an object, the `toString()` method of the `Object` class is called\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> The `toString()` method returns a `String` consisting of the name of the class, the `@` symbol, and the hash code of the object\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Why do you think the `toString()` method in the `Object` class doesn't print the values stored in the instance variables?*\n\n**Discussion Goal:** Students realize that since the `Object` class is the superclass of all classes, it doesn't know about or have access to the instance variables of any of its subclasses.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the video – *The toString() Method*.",
         "duration": "15",
         "name": "Printing Objects",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Videos are used throughout the curriculum to spark discussions, supplement key concepts with additional explanations and examples, and expose students to the various roles and backgrounds of individuals in computer science.\n\nWhile interacting with the video, turn on closed captioning so students can also read along as they watch.\n\nTo encourage active engagement and reflection, use one or more of the strategies discussed in the [**Guide to Curriculum Videos**](https://docs.google.com/document/d/1FqIUpJg6MrgdtbFGLobSojOz0u1m5Jge1nMAjUqI5ZM/edit?usp=sharing)."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "faac893a-36bf-413d-8011-c1a032ecb3e7",
+        "lesson_activity.key": "27834fa8-7dc3-4dd1-b7fa-7ec83fdef7d8"
+      }
+    },
+    {
+      "key": "86300023-cf8f-4fdb-9a96-995087244fc6",
+      "position": 6,
+      "properties": {
+        "description": "**Do This:** Recall the `Object` class and introduce its `toString()` method:\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> When printing an object, the `toString()` method of the `Object` class is called\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> The `toString()` method returns a `String` consisting of the name of the class, the `@` symbol, and the hash code of the object\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Why do you think the `toString()` method in the `Object` class doesn't print the values stored in the instance variables?*\n\n**Discussion Goal:** Students realize that since the `Object` class is the superclass of all classes, it doesn't know about or have access to the instance variables of any of its subclasses.",
         "tips": [
           {
             "type": "teachingTip",
@@ -3591,7 +3744,7 @@
     },
     {
       "key": "1f118d47-ea04-45ad-b1f2-589db9d38b7f",
-      "position": 6,
+      "position": 7,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 2 on Code Studio to complete Levels 2 and 3. Students investigate the program, make changes to the program as prompted, and observe the results.",
         "progression_name": "Investigate and Modify: Printing Objects"
@@ -3603,7 +3756,7 @@
     },
     {
       "key": "4d8c7965-791d-410f-a1a6-7ea0a3a3ae0c",
-      "position": 7,
+      "position": 8,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students share what they discovered from the modifications they made to the code.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What did you notice about the way the `toString()` method is called?*\n\n**Discussion Goal:** Students realize that the `toString()` method is not explicitly called, but they note that it is used when an object reference is printed.",
         "tips": [
@@ -3620,7 +3773,7 @@
     },
     {
       "key": "7a042cbe-d326-47f9-9510-b09f9d60f82f",
-      "position": 8,
+      "position": 9,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Explain that the `toString()` method is automatically called when an object reference is passed to a print statement or when an object reference is concatenated with a `String`."
       },
@@ -3631,7 +3784,7 @@
     },
     {
       "key": "143e4984-4abf-4523-b1bc-caeed484e3c6",
-      "position": 9,
+      "position": 10,
       "properties": {
         "description": "The `toString()` method in the `Object` class isn't very useful when we want to print information about an object. We can write our own version of the `toString()` method so we can print the values stored in the instance variables when we print an object.",
         "duration": "15",
@@ -3645,7 +3798,7 @@
     },
     {
       "key": "02072084-3a4c-4b8b-881f-e661431983d3",
-      "position": 10,
+      "position": 11,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Define ***overriding***.\n\n**Do This:** Explain the syntax for overriding the `toString()` method in a class:\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> The method signature is the same as the `toString()` method in the `Object` class\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Return a `String` containing the information about the object\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *How could we include the information in the superclass `toString()` method in a subclass `toString()` method?*\n\n**Discussion Goal:** Students suggest calling the superclass `toString()` method in the subclass `toString()` method.",
         "tips": [
@@ -3662,7 +3815,7 @@
     },
     {
       "key": "43aad906-82b6-4f44-b573-bac932a37015",
-      "position": 11,
+      "position": 12,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Explain that the `super` keyword can be used to call the superclass method.\n\n**Do This:** Introduce escape sequences:\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Define ***escape sequence***\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Printing a quotation mark ( `\\\"` )\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Printing a new line ( `\\n` )\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Printing a backslash ( `\\\\` )\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 4 on Code Studio to complete Levels 4 through 7. Students complete a Check for Understanding on Level 4, then continue to Level 5 to write a `toString()` method in a class. On Level 6, students write a `toString()` method in the `Dessert` class. On Level 7, students write a `toString()` method in the `Dessert` subclass (`Cookie`, `Pie`, `Cupcake`, or `Donut`).",
         "progression_name": "Practice: The toString() Method",
@@ -3680,7 +3833,7 @@
     },
     {
       "key": "142132a1-cdb8-4f9e-a5ad-f0bdb8f7bc33",
-      "position": 12,
+      "position": 13,
       "properties": {
         "description": "This is a good time to commit our code and save our `Dessert` class and subclass to the Backpack. We will be adding to the classes throughout the unit as we learn more about designing classes and their components.",
         "remarks": true
@@ -3692,7 +3845,7 @@
     },
     {
       "key": "d9543907-5e5c-488d-a5b7-cb1afdce3842",
-      "position": 13,
+      "position": 14,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Play the music clip to cue committing their code and saving their `Dessert` class and subclass to the Backpack.",
         "tips": [
@@ -3711,12 +3864,12 @@
       "key": "c76006eb-1e85-4016-af70-7959ced94a44",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson and the Question of the Day.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.",
         "name": "Show What You Know Week",
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "The Unit 2 Guide includes an end-of-lesson reflection prompt for students to reflect on the lesson and the progress they made in developing their software engineering skills and characteristics. Have students respond to the reflection prompt after reviewing the concepts covered in this lesson to help them process and reflect on their personal growth."
+            "markdown": "The Unit 2 Guide includes the Question of the Day and an end-of-lesson reflection prompt for students to summarize what they have learned and reflect on their progress. Have students respond to these prompts after reviewing the concepts covered in this lesson to help them process and make meaningful connections with the new content."
           }
         ]
       },
@@ -4199,12 +4352,23 @@
       }
     },
     {
-      "key": "ab5e9b98-fbaa-469e-947d-2bde3e894489",
+      "key": "28e37522-0266-469d-a38c-661ad44ea0a5",
       "position": 3,
       "properties": {
-        "description": "You will finish developing your store management program. Be sure to consider the feedback you received from your code review as you work on your program. First, let's revisit the Store Management Project Planning Guide to make sure you have included everything you need to meet the project requirements.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the steps for Day 3 of the project.",
         "duration": "15",
-        "name": "Development",
+        "name": "Development"
+      },
+      "seeding_key": {
+        "activity_section.key": "28e37522-0266-469d-a38c-661ad44ea0a5",
+        "lesson_activity.key": "bc95c947-5bc8-4378-bb56-681e0be23009"
+      }
+    },
+    {
+      "key": "ab5e9b98-fbaa-469e-947d-2bde3e894489",
+      "position": 4,
+      "properties": {
+        "description": "You will finish developing your store management program. Be sure to consider the feedback you received from your code review as you work on your program. First, let's revisit the Store Management Project Planning Guide to make sure you have included everything you need to meet the project requirements.",
         "remarks": true
       },
       "seeding_key": {
@@ -4214,7 +4378,7 @@
     },
     {
       "key": "0a03bd6f-0b08-4f22-8b26-e553b1a8e32c",
-      "position": 4,
+      "position": 5,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students self-assess their project using the project requirements and rubric on the Store Management Project Planning Guide."
       },
@@ -4225,7 +4389,7 @@
     },
     {
       "key": "d4a0c612-74b5-401f-bc57-e929ac07d4d8",
-      "position": 5,
+      "position": 6,
       "properties": {
         "description": "Use the feedback you received from your code review and self-assessment to finalize your Store Management Project.",
         "remarks": true
@@ -4237,7 +4401,7 @@
     },
     {
       "key": "80bcc478-d255-4cb8-9288-db22ef558c20",
-      "position": 6,
+      "position": 7,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to finish developing their Store Management Project. Have students submit their projects at the end of the allotted time."
       },
@@ -4248,7 +4412,7 @@
     },
     {
       "key": "dc32f08c-df87-4f57-8684-aa637133a1e4",
-      "position": 7,
+      "position": 8,
       "properties": {
         "description": "Congratulations! You have completed your Store Management Project. Let's show off our work through a Gallery Walk so you can share your work with your classmates.",
         "duration": "15",
@@ -4262,7 +4426,7 @@
     },
     {
       "key": "4a4955e5-51ad-45cd-af59-d4395df65f63",
-      "position": 8,
+      "position": 9,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student several sticky notes.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students participate in a Gallery Walk to view each other's programs and leave sticky notes noting what they like about the program."
       },
@@ -4273,7 +4437,7 @@
     },
     {
       "key": "618d928c-29e6-4dbe-8954-0cc472ef987f",
-      "position": 9,
+      "position": 10,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to respond to the End of Project Reflection prompt on the Store Management Project Planning Guide.",
         "duration": "10",
@@ -4292,7 +4456,7 @@
     },
     {
       "key": "9ad4cce1-3623-4811-a3bd-adb77f601f99",
-      "position": 10,
+      "position": 11,
       "properties": {
         "description": "---"
       },
@@ -4303,7 +4467,7 @@
     },
     {
       "key": "2cea9c10-620a-45f9-a082-7401f5a52820",
-      "position": 11,
+      "position": 12,
       "properties": {
         "description": "**Store Management Project:** Use the rubric in the Store Management Project Planning Guide to assess the projects.",
         "name": "Assessment: Grading the Project"
@@ -4524,6 +4688,8 @@
       "position": 2,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to develop their Store Management Project.",
+        "duration": "20",
+        "name": "Development",
         "progression_name": "Store Management Project"
       },
       "seeding_key": {
@@ -6484,6 +6650,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L10-L7 Practice"
+        ],
         "progression": "Practice: The toString() Method"
       },
       "bonus": false,
@@ -8253,6 +8422,32 @@
       }
     },
     {
+      "name": "Unit 2 Guide",
+      "url": "https://docs.google.com/document/d/1-S72OY0oA4-p2c4jwqdYl4pGX7j-lf5g86toG9gqxdI/edit?usp=sharing",
+      "key": "unit_2_guide",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "unit_2_guide"
+      }
+    },
+    {
+      "name": "Unit 2 Study Guide",
+      "url": "https://docs.google.com/document/d/1k2hoP7Zjy0Z1LYYqjNTM4_MIYXAeeVlw-abhc93B72g/edit?usp=sharing",
+      "key": "unit_2_study_guide",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "unit_2_study_guide"
+      }
+    },
+    {
       "name": "Unlocking Assessments",
       "url": "https://support.code.org/hc/en-us/articles/115001331951-Using-lock-settings-for-assessments-and-surveys",
       "key": "unlocking_assessments",
@@ -8300,6 +8495,12 @@
       "seeding_key": {
         "lesson.key": "lesson-1",
         "resource.key": "u2l1_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "resource.key": "unit_2_guide"
       }
     },
     {
@@ -8424,6 +8625,12 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "lesson-14",
+        "resource.key": "unit_2_guide"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "lesson-2",
         "resource.key": "_key_u2l2_extra_practice"
       }
@@ -8448,6 +8655,12 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "lesson-2",
+        "resource.key": "unit_2_guide"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "lesson-3",
         "resource.key": "_key_u2l3_extra_practice"
       }
@@ -8468,6 +8681,12 @@
       "seeding_key": {
         "lesson.key": "lesson-3",
         "resource.key": "u2l3_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "resource.key": "unit_2_guide"
       }
     },
     {
@@ -8498,6 +8717,12 @@
       "seeding_key": {
         "lesson.key": "lesson-4",
         "resource.key": "u2l6_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "resource.key": "unit_2_guide"
       }
     },
     {
@@ -8538,6 +8763,12 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "lesson-5",
+        "resource.key": "unit_2_guide"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "lesson-6",
         "resource.key": "_key_u2l5_extra_practice"
       }
@@ -8556,6 +8787,12 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "lesson-6",
+        "resource.key": "unit_2_guide"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "lesson-7",
         "resource.key": "_key_u2l8_extra_practice"
       }
@@ -8570,6 +8807,12 @@
       "seeding_key": {
         "lesson.key": "lesson-7",
         "resource.key": "u2l8_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-7",
+        "resource.key": "unit_2_guide"
       }
     },
     {
@@ -8604,6 +8847,12 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "lesson-8",
+        "resource.key": "unit_2_guide"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "lesson-9",
         "resource.key": "_key_u2l10_extra_practice"
       }
@@ -8624,6 +8873,18 @@
       "seeding_key": {
         "lesson.key": "lesson-9",
         "resource.key": "u2l10_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-9",
+        "resource.key": "unit_2_guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-9",
+        "resource.key": "unit_2_study_guide"
       }
     }
   ],
@@ -9258,6 +9519,16 @@
       }
     },
     {
+      "key": "16a64b6a-0437-4e6f-b695-8fe34895c85c",
+      "properties": {
+        "description": "Plan a project to meet specifications"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-13",
+        "objective.key": "16a64b6a-0437-4e6f-b695-8fe34895c85c"
+      }
+    },
+    {
       "key": "2ad8d674-18a2-4b7f-9aff-03eba4c29333",
       "properties": {
         "description": "Use the `this` keyword to refer to the current object"
@@ -9368,16 +9639,6 @@
       }
     },
     {
-      "key": "b5e44d0b-53c9-4880-9f83-e89cc8863e42",
-      "properties": {
-        "description": "Incorporate user interaction with a program using the `Scanner` class"
-      },
-      "seeding_key": {
-        "lesson.key": "lesson-10",
-        "objective.key": "b5e44d0b-53c9-4880-9f83-e89cc8863e42"
-      }
-    },
-    {
       "key": "bb7743fd-e1b0-47c3-88dd-8b7eabf2339f",
       "properties": {
         "description": "Write a parameterized constructor in a subclass that calls the superclass constructor"
@@ -9405,6 +9666,16 @@
       "seeding_key": {
         "lesson.key": "lesson-11",
         "objective.key": "c0db592c-652a-46b4-b65f-eaaaf38898c9"
+      }
+    },
+    {
+      "key": "c954385d-8c0e-4903-8b4b-8b4fc1a50b30",
+      "properties": {
+        "description": "Design superclasses and subclasses that include accessor, mutator, and `toString()` methods"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-13",
+        "objective.key": "c954385d-8c0e-4903-8b4b-8b4fc1a50b30"
       }
     },
     {

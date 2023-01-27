@@ -1,0 +1,56 @@
+<Javalab>
+  <config><![CDATA[{
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "The <a href=\"https://www.kaggle.com/datasets/kabhishm/best-selling-nintendo-switch-video-games\" target=\"_blank\">**Best Selling Nintendo Switch Video Games dataset**</a> includes the titles of best selling video games and the number of copies of each video game that were sold. Each `Game`(#e7e8ea) object is stored in a 1D array called `bestSellingGames`(#e7e8ea).\r\n\r\n✅ **TO DO:** In `Nintendo.java`(#e7e8ea), convert the `for`(#e7e8ea) loop in the `toString()`(#e7e8ea) method to use an enhanced `for`(#e7e8ea) loop.\r\n\r\n💡 **TIP:** Check out the **Help & Tips** tab ⬆️ for help with traversing a 1D array using an enhanced `for`(#e7e8ea) loop.\r\n\r\n## ***Don't forget to . . .***\r\n\r\n![](https://images.code.org/eb2c8910ae2e150019b8e2177405d4af-image-1668191576873.png)",
+    "mini_rubric": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "csa_view_mode": "console",
+    "start_sources": {
+      "GamesRunner.java": {
+        "text": "public class GamesRunner {\n  public static void main(String[] args) {\n\n    // Creates a Nintendo object\n    Nintendo topGames = new Nintendo(\"titles.txt\", \"copies.txt\");\n\n    // Prints the Nintendo object\n    System.out.println(topGames);\n    \n  }\n}",
+        "isVisible": true,
+        "tabOrder": 0
+      },
+      "Nintendo.java": {
+        "text": "/*\n * Manages data about best selling video games\n */\npublic class Nintendo {\n\n  private Game[] bestSellingGames;   // The 1D array of best selling video games\n\n  /*\n   * Reads the data from titlesFile and copiesFile to initialize bestSellingGames\n   */\n  public Nintendo(String titlesFile, String copiesFile) {\n    bestSellingGames = createGames(titlesFile, copiesFile);\n  }\n\n  /*\n   * Returns a 1D array of Game objects using the data from titlesFile and copiesFile\n   */\n  public Game[] createGames(String titlesFile, String copiesFile) {\n    String[] titlesData = FileReader.toStringArray(titlesFile);\n    int[] copiesData = FileReader.toIntArray(copiesFile);\n    Game[] tempGames = new Game[titlesData.length];\n\n    for (int index = 0; index < tempGames.length; index++) {\n      tempGames[index] = new Game(titlesData[index], copiesData[index]);\n    }\n\n    return tempGames;\n  }\n\n  /*\n   * Returns a String containing the information about each Game object\n   */\n  public String toString() {\n    String result = \"\";\n\n    /* ----------------------------------- TO DO -----------------------------------\n     * ✅ Convert this for loop to an enhanced for loop.\n     * -----------------------------------------------------------------------------\n     */\n\n    for (int index = 0; index < bestSellingGames.length; index++) {\n      result += bestSellingGames[index] + \"\\n\";\n    }\n\n    return result;\n  }\n  \n}",
+        "isVisible": true,
+        "tabOrder": 1
+      },
+      "Game.java": {
+        "text": "/*\n * Represents a video game\n */\npublic class Game {\n\n  private String title;    // The title of a game\n  private int copies;      // The number of copies sold\n\n  /*\n   * Sets title and copies to the specified values\n   */\n  public Game(String title, int copies) {\n    this.title = title;\n    this.copies = copies;\n  }\n\n  /*\n   * Returns the title of the game\n   */\n  public String getTitle() {\n    return title;\n  }\n\n  /*\n   * Returns the number of copies sold\n   */\n  public int getCopies() {\n    return copies;\n  }\n\n  /*\n   * Returns a String containing the title and number of copies sold\n   */\n  public String toString() {\n    return title + \": \" + copies + \" copies sold\";\n  }\n  \n}",
+        "isVisible": true,
+        "tabOrder": 2
+      },
+      "titles.txt": {
+        "text": "Mario Kart 8 Deluxe\nAnimal Crossing: New Horizons\nSuper Smash Bros. Ultimate\nThe Legend of Zelda: Breath of the Wild\nPokemon Sword and Shield\nSuper Mario Odyssey\nSuper Mario Party\nPokemon Brilliant Diamond and Shining Pearl\nRing Fit Adventure\nPokemon: Let's Go, Pikachu! and Let's Go, Eevee!\nPokemon Legends: Arceus\nNew Super Mario Bros. U Deluxe\nSplatoon 2\nLuigi's Mansion 3\nPokemon Scarlet and Violet\nSuper Mario 3D World + Bowser's Fury\nSuper Mario 3D All-Stars\nMario Party Superstars\nSplatoon 3\nSuper Mario Maker 2\nMonster Hunter Rise\nNintendo Switch Sports\nThe Legend of Zelda: Link's Awakening\nKirby and the Forgotten Land\nMario Tennis Aces\nClubhouse Games: 51 Worldwide Classics\nDonkey Kong Country: Tropical Freeze\nHyrule Warriors: Age of Calamity\nKirby Star Allies\nThe Legend of Zelda: Skyward Sword HD\nFire Emblem: Three Houses\n1-2-Switch\nMomotaro Dentetsu: Showa, Heisei, Reiwa Mo Teiban!\nPaper Mario: The Origami King\nMinecraft\nAmong Us\nYoshi's Crafted World\nMetroid Dread\nNew Pokemon Snap\nArms\nXenoblade Chronicles 2\nMario Golf: Super Rush\nPikmin 3 Deluxe\nMario Strikers: Battle League\nOctopath Traveler\nCaptain Toad: Treasure Tracker\nDragon Ball FighterZ\nMario + Rabbids Kingdom Battle\nPokemon Mystery Dungeon: Rescue Team DX\nTaiko no Tatsujin: Drum 'n' Fun!\nXenoblade Chronicles 3\nMiitopia\nXenoblade Chronicles: Definitive Edition\nBig Brain Academy: Brain vs. Brain\nMario Kart Live: Home Circuit\nDragon Ball Xenoverse 2\nPokken Tournament DX\nMarvel Ultimate Alliance 3: The Black Order\nNintendo Labo Toy-Con 01: Variety Kit\nAstral Chain\nWarioWare: Get It Together!\nNaruto Shippudden: Ultimate Ninja Storm Trilogy\nDr Kawashima's Brain Training for Nintendo Switch\nResident Evil: Revelations Collection\nGame Builder Garage\nBayonetta 2\nEnter the Gungeon\nFire Emblem Warriors: Three Hopes\nFitness Boxing\nFitness Boxing 2: Rhythm and Exercise\nShin Megami Tensei V\nStory of Seasons: Pioneers of Olive Town\nThief Simulator",
+        "isVisible": true,
+        "tabOrder": 3
+      },
+      "copies.txt": {
+        "text": "48410000\n40170000\n29530000\n27790000\n25370000\n24400000\n18350000\n14920000\n14870000\n14810000\n13910000\n13310000\n13300000\n11430000\n10000000\n9430000\n9070000\n8070000\n7900000\n7890000\n7700000\n6150000\n6080000\n5270000\n4280000\n4220000\n4120000\n4000000\n3980000\n3910000\n3820000\n3630000\n3500000\n3340000\n3310000\n3200000\n3010000\n2900000\n2740000\n2660000\n2440000\n2350000\n2230000\n2170000\n2160000\n2130000\n2010000\n2000000\n1890000\n1890000\n1720000\n1680000\n1680000\n1590000\n1580000\n1550000\n1540000\n1500000\n1420000\n1280000\n1270000\n1260000\n1200000\n1200000\n1060000\n1040000\n1000000\n1000000\n1000000\n1000000\n1000000\n1000000\n1000000",
+        "isVisible": true,
+        "tabOrder": 4
+      },
+      "FileReader.java": {
+        "text": "import java.util.Scanner;\nimport java.util.ArrayList;\nimport java.io.File;\nimport java.io.FileNotFoundException;\n\npublic class FileReader {\n\n  public static String[] toStringArray(String filename) {\n    ArrayList<String> temp = readDataFromFile(filename);\n    String[] data = new String[temp.size()];\n\n    for (int index = 0; index < data.length; index++) {\n      String currentValue = temp.get(index);\n      data[index] = currentValue;\n    }\n\n    return data;\n  }\n\n  public static int[] toIntArray(String filename) {\n    ArrayList<String> temp = readDataFromFile(filename);\n    int[] data = new int[temp.size()];\n\n    for (int index = 0; index < data.length; index++) {\n      String currentValue = temp.get(index);\n      data[index] = Integer.parseInt(currentValue);\n    }\n\n    return data;\n  }\n\n  public static double[] toDoubleArray(String filename) {\n    ArrayList<String> temp = readDataFromFile(filename);\n    double[] data = new double[temp.size()];\n\n    for (int index = 0; index < data.length; index++) {\n      String currentValue = temp.get(index);\n      data[index] = Double.parseDouble(currentValue);\n    }\n\n    return data;\n  }\n\n  private static Scanner createScanner(File theFile) {\n    Scanner tempScanner = null;\n\n    try {\n      tempScanner = new Scanner(theFile);\n    } catch(FileNotFoundException error) {\n      System.out.println(\"File not found.\");\n    }\n\n    return tempScanner;\n  }\n\n  private static ArrayList<String> readDataFromFile(String filename) {\n    File dataFile = new File(filename);\n    Scanner reader = createScanner(dataFile);\n    ArrayList<String> temp = new ArrayList<String>();\n\n    while (reader.hasNextLine()) {\n      String currentLine = reader.nextLine().trim();\n      temp.add(currentLine);\n    }\n\n    reader.close();\n    return temp;\n  }\n  \n}",
+        "isVisible": false,
+        "tabOrder": 5
+      }
+    },
+    "reference_links": [
+      "/courses/csa-2023/guides/enhanced-for-loops"
+    ],
+    "display_name": "Video Games",
+    "bubble_choice_description": "Convert the `for` loop to an enhanced `for` loop to return a `String` containing the titles of the best selling Nintendo Switch games.",
+    "thumbnail_url": "https://images.code.org/515e683ccee6dc400eaabb1bb5a98303-console.png"
+  },
+  "game_id": 68,
+  "created_at": "2023-01-12T21:52:03.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2023-01-12T21:52:03.753+00:00\",\"changed\":[\"cloned from \\\"CSA U3L7-L6a_2023\\\"\"],\"cloned_from\":\"CSA U3L7-L6a_2023\"},{\"changed_at\":\"2023-01-12 21:52:05 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-01-26 14:30:44 +0000\",\"changed\":[\"long_instructions\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-01-26 14:34:19 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-01-27 05:26:35 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-01-27 05:28:07 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-01-27 05:30:42 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-01-27 05:30:54 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+}]]></config>
+</Javalab>

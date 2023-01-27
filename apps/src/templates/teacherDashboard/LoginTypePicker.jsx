@@ -17,6 +17,8 @@ import styleConstants from '../../styleConstants';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 
 const LOGIN_TYPE_SELECTED_EVENT = 'Login Type Selected';
+const CANCELLED_EVENT = 'Section Setup Cancelled';
+const SELECT_LOGIN_TYPE = 'Login Type Selection';
 
 /**
  * UI for selecting the login type of a class section:
@@ -40,6 +42,12 @@ class LoginTypePicker extends Component {
     });
   };
 
+  recordSectionSetupExitEvent = eventName => {
+    analyticsReporter.sendEvent(eventName, {
+      source: SELECT_LOGIN_TYPE
+    });
+  };
+
   openImportDialog = provider => {
     this.reportLoginTypeSelection(provider);
     this.props.setRosterProvider(provider);
@@ -52,8 +60,13 @@ class LoginTypePicker extends Component {
     this.props.setLoginType(provider);
   };
 
+  cancel = () => {
+    this.recordSectionSetupExitEvent(CANCELLED_EVENT);
+    this.props.handleCancel();
+  };
+
   render() {
-    const {title, providers, handleCancel, disabled} = this.props;
+    const {title, providers, disabled} = this.props;
     const withGoogle =
       providers && providers.includes(OAuthSectionTypes.google_classroom);
     const withMicrosoft =
@@ -133,7 +146,7 @@ class LoginTypePicker extends Component {
             </a>
           </div>
           <Button
-            onClick={handleCancel}
+            onClick={this.cancel}
             text={i18n.dialogCancel()}
             size={Button.ButtonSize.large}
             color={Button.ButtonColor.gray}

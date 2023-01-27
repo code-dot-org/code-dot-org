@@ -1,5 +1,7 @@
 import React from 'react';
-import {mount} from 'enzyme';
+import {mount, shallow} from 'enzyme';
+import sinon from 'sinon';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import {assert} from '../../../util/reconfiguredChai';
 import {UnconnectedEditSectionForm as EditSectionForm} from '@cdo/apps/templates/teacherDashboard/EditSectionForm';
 import {
@@ -405,5 +407,81 @@ describe('EditSectionForm', () => {
     );
     const lessonExtrasField = wrapper.find('LessonExtrasField');
     assert.equal(lessonExtrasField.length, 1);
+  });
+
+  it('sends completed event when save is clicked', () => {
+    const wrapper = shallow(
+      <EditSectionForm
+        isNewSection={true}
+        title="Create a new section"
+        handleSave={async () => {}}
+        handleClose={() => {}}
+        editSectionProperties={() => {}}
+        courseOfferings={courseOfferings}
+        sections={{}}
+        section={testSection}
+        isSaveInProgress={false}
+        hiddenLessonState={{}}
+        updateHiddenScript={() => {}}
+        assignedUnitName="script name"
+        assignedUnitLessonExtrasAvailable={false}
+        assignedUnitTextToSpeechEnabled={false}
+      />
+    );
+
+    const analyticsSpy = sinon.spy(analyticsReporter, 'sendEvent');
+
+    wrapper.find('Button[text="Save"]').simulate('click');
+    assert(analyticsSpy.calledOnce);
+    assert.equal(analyticsSpy.getCall(0).firstArg, 'Section Setup Completed');
+    assert.deepEqual(analyticsSpy.getCall(0).lastArg, {
+      sectionCurriculum: courseOfferings[testSection.courseOfferingId].id,
+      sectionCurriculumLocalizedName:
+        courseOfferings[testSection.courseOfferingId].display_name,
+      sectionGrade: testSection.grade,
+      sectionLockSelection: testSection.restrictSection,
+      sectionName: testSection.name,
+      sectionPairProgramSelection: testSection.pairingAllowed
+    });
+
+    analyticsSpy.restore();
+  });
+
+  it('sends cancelled event when cancel is clicked', () => {
+    const wrapper = shallow(
+      <EditSectionForm
+        isNewSection={true}
+        title="Create a new section"
+        handleSave={async () => {}}
+        handleClose={() => {}}
+        editSectionProperties={() => {}}
+        courseOfferings={courseOfferings}
+        sections={{}}
+        section={testSection}
+        isSaveInProgress={false}
+        hiddenLessonState={{}}
+        updateHiddenScript={() => {}}
+        assignedUnitName="script name"
+        assignedUnitLessonExtrasAvailable={false}
+        assignedUnitTextToSpeechEnabled={false}
+      />
+    );
+
+    const analyticsSpy = sinon.spy(analyticsReporter, 'sendEvent');
+
+    wrapper.find('Button[text="Cancel"]').simulate('click');
+    assert(analyticsSpy.calledOnce);
+    assert.equal(analyticsSpy.getCall(0).firstArg, 'Section Setup Cancelled');
+    assert.deepEqual(analyticsSpy.getCall(0).lastArg, {
+      sectionCurriculum: courseOfferings[testSection.courseOfferingId].id,
+      sectionCurriculumLocalizedName:
+        courseOfferings[testSection.courseOfferingId].display_name,
+      sectionGrade: testSection.grade,
+      sectionLockSelection: testSection.restrictSection,
+      sectionName: testSection.name,
+      sectionPairProgramSelection: testSection.pairingAllowed
+    });
+
+    analyticsSpy.restore();
   });
 });

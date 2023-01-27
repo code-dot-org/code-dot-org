@@ -66,7 +66,7 @@ To write and run programs, first close this editor.</description>
           </mutation>
           <title name="NAME">take screenshots here</title>
         </block>
-        <block type="Dancelab_whenSetup" movable="false">
+        <block type="Dancelab_whenSetup" deletable="false" movable="false">
           <statement name="DO">
             <block type="procedures_callnoreturn">
               <mutation name="take screenshots here"/>

@@ -633,8 +633,8 @@ class LevelTest < ActiveSupport::TestCase
       'data' => {
         'callouts' => {
           level_name => {
-            "first": "first test markdown",
-            "second": "second test markdown",
+            first: "first test markdown",
+            second: "second test markdown",
           }
         }
       }
@@ -647,8 +647,8 @@ class LevelTest < ActiveSupport::TestCase
       level_num: 'custom',
       callout_json: JSON.generate(
         [
-          {"callout_text": "first english markdown", "localization_key": "first"},
-          {"callout_text": "second english markdown", "localization_key": "second"},
+          {callout_text: "first english markdown", localization_key: "first"},
+          {callout_text: "second english markdown", localization_key: "second"},
         ]
       )
     )
@@ -669,8 +669,8 @@ class LevelTest < ActiveSupport::TestCase
       level_num: 'custom',
       callout_json: JSON.generate(
         [
-          {"callout_text": "first english markdown", "localization_key": "first"},
-          {"callout_text": "second english markdown", "localization_key": "second"},
+          {callout_text: "first english markdown", localization_key: "first"},
+          {callout_text: "second english markdown", localization_key: "second"},
         ]
       )
     )
@@ -717,11 +717,11 @@ class LevelTest < ActiveSupport::TestCase
       'data' => {
         'mini_rubric' => {
           level_name => {
-            "rubric_key_concept": "first test markdown",
-            "rubric_performance_level_1": "second test markdown",
-            "rubric_performance_level_2": "third test markdown",
-            "rubric_performance_level_3": "fourth test markdown",
-            "rubric_performance_level_4": "fifth test markdown"
+            rubric_key_concept: "first test markdown",
+            rubric_performance_level_1: "second test markdown",
+            rubric_performance_level_2: "third test markdown",
+            rubric_performance_level_3: "fourth test markdown",
+            rubric_performance_level_4: "fifth test markdown"
           }
         }
       }
@@ -756,8 +756,8 @@ class LevelTest < ActiveSupport::TestCase
       'data' => {
         'mini_rubric' => {
           level_name => {
-            "rubric_key_concept": nil,
-            "rubric_performance_level_1": nil
+            rubric_key_concept: nil,
+            rubric_performance_level_1: nil
           }
         }
       }
