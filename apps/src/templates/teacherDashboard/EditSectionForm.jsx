@@ -82,7 +82,6 @@ class EditSectionForm extends Component {
     const scriptId = section.unitId;
 
     this.recordSectionSetupExitEvent(COMPLETED_EVENT);
-    this.recordCurriculumChangeEvent;
 
     const isScriptHidden =
       sectionId &&
@@ -142,52 +141,48 @@ class EditSectionForm extends Component {
     );
   };
 
-  recordCurriculumChangeEvent = () => {
+  // valid event names: 'Section Setup Complete', 'Section Setup Cancelled'.
+  recordSectionSetupExitEvent = eventName => {
     const {
       section,
       courseOfferings,
+      isNewSection,
       initialCourseId,
       initialUnitId
     } = this.props;
-    // Are there times when a course is assigned without a unit assigned?
-    if (section.unitId && section.unitId !== initialUnitId) {
-      analyticsReporter.sendEvent(CURRICULUM_ASSIGNED),
-        {
-          previousUnitId: initialUnitId,
-          previousCourseId: initialCourseId,
-          newUnitId: section.unitId,
-          newCourseId: section.courseId,
-          newVersionYear:
-            courseOfferings[section.courseOfferingId].courseVersions[
-              section.courseVersionId
-            ].key
-        };
-    }
-  };
-
-  // valid event names: 'Section Setup Complete', 'Section Setup Cancelled'.
-  recordSectionSetupExitEvent = eventName => {
-    const {section, courseOfferings, isNewSection} = this.props;
-
+    const versionYear =
+      courseOfferings[section.courseOfferingId].course_versions[
+        section.courseVersionId
+      ].key;
     const course = courseOfferings.hasOwnProperty(section.courseOfferingId)
       ? courseOfferings[section.courseOfferingId]
       : null;
     const courseName = course ? course.display_name : null;
     const courseId = course ? course.id : null;
-
     if (isNewSection) {
       analyticsReporter.sendEvent(eventName, {
         sectionUnitId: section.unitId,
         sectionCurriculumLocalizedName: courseName,
         sectionCurriculum: courseId, //this is course Offering id
-        sectionCurriculumVersionYear:
-          courseOfferings[section.courseOfferingId].courseVersions[
-            section.courseVersionId
-          ].key,
+        sectionCurriculumVersionYear: versionYear,
         sectionGrade: section.grade,
         sectionLockSelection: section.restrictSection,
         sectionName: section.name,
         sectionPairProgramSelection: section.pairingAllowed
+      });
+    }
+    // Are there times when a unit is assigned without a course?
+    if (
+      eventName === COMPLETED_EVENT &&
+      section.courseId &&
+      section.courseId !== initialCourseId
+    ) {
+      analyticsReporter.sendEvent(CURRICULUM_ASSIGNED, {
+        previousUnitId: initialUnitId,
+        previousCourseId: initialCourseId,
+        newUnitId: section.unitId,
+        newCourseId: section.courseOfferingId,
+        newVersionYear: versionYear
       });
     }
   };
