@@ -63,7 +63,7 @@
   <blocks>
     <start_blocks>
       <xml>
-        <block type="Dancelab_whenSetup" deletable="true" movable="true" editable="true">
+        <block type="Dancelab_whenSetup" deletable="false" movable="false" editable="true">
           <statement name="DO">
             <block type="Dancelab_makeAnonymousDanceSprite" deletable="true" movable="true" editable="true">
               <title name="COSTUME">"BEAR"</title>
