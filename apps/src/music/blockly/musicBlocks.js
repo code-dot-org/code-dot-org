@@ -4,6 +4,7 @@ import {
   newTrackOnTrigger,
   playSound,
   playSoundAtCurrentLocation,
+  playSoundsTogether,
   playSoundInTrack,
   restInTrack,
   setCurrentLocationNextMeasure
@@ -19,6 +20,7 @@ const blockList = [
   playSound,
   playSoundAtCurrentLocation,
   setCurrentLocationNextMeasure,
+  playSoundsTogether,
   forLoop,
   newTrackAtStart,
   newTrackAtMeasure,

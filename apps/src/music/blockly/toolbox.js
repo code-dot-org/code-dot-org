@@ -31,6 +31,10 @@ const toolboxBlocks = {
     kind: 'block',
     type: BlockTypes.SET_CURRENT_LOCATION_NEXT_MEASURE
   },
+  [BlockTypes.PLAY_SOUNDS_TOGETHER]: {
+    kind: 'block',
+    type: BlockTypes.PLAY_SOUNDS_TOGETHER
+  },
   [BlockTypes.PLAY_SOUND_IN_TRACK]: {
     kind: 'block',
     type: BlockTypes.PLAY_SOUND_IN_TRACK
@@ -263,7 +267,8 @@ export function getToolbox() {
       Simple: [
         BlockTypes.PLAY_SOUND_AT_CURRENT_LOCATION,
         BlockTypes.SET_CURRENT_LOCATION_NEXT_MEASURE,
-        'controls_repeat_ext'
+        'controls_repeat_ext',
+        BlockTypes.PLAY_SOUNDS_TOGETHER
       ]
     });
   }

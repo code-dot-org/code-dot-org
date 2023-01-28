@@ -1,5 +1,6 @@
 import {BlockTypes} from '../blockTypes';
 import Globals from '../../globals';
+const DEFAULT_GROUP_NAME = 'all';
 
 // Examine chain of parents to see if one is 'when_run'.
 const isBlockInsideWhenRun = ctx => {
@@ -72,6 +73,32 @@ export const playSound = {
     ');\n'
 };
 
+const getCurrentGroup = () => {
+  const library = Globals.getLibrary();
+
+  const currentGroup = library?.groups.find(
+    group => group.id === DEFAULT_GROUP_NAME
+  );
+
+  return currentGroup;
+};
+
+const getCurrentGroupSounds = () => {
+  return getCurrentGroup()?.folders;
+};
+
+const getLengthForId = id => {
+  const splitId = id.split('/');
+  const path = splitId[0];
+  const src = splitId[1];
+
+  const sounds = getCurrentGroupSounds();
+  const folder = sounds.find(folder => folder.path === path);
+  const sound = folder.sounds.find(sound => sound.src === src);
+
+  return sound.length;
+};
+
 export const playSoundAtCurrentLocation = {
   definition: {
     type: BlockTypes.PLAY_SOUND_AT_CURRENT_LOCATION,
@@ -98,10 +125,45 @@ export const playSoundAtCurrentLocation = {
     'MusicPlayer.playSoundAtMeasureById("' +
     ctx.getFieldValue('sound') +
     '", ' +
-    'currentMeasureLocation' +
+    'stack.length == 0 ? currentMeasureLocation : stack[stack.length-1].measure' +
     ', ' +
     (isBlockInsideWhenRun(ctx) ? 'true' : 'false') +
-    ');\n'
+    ');\n' +
+    'if (stack.length > 0) {' +
+    'stack[stack.length-1].lastMeasures.push(currentMeasureLocation + ' +
+    getLengthForId(ctx.getFieldValue('sound')) +
+    ');\n' +
+    ' } ' +
+    ' else { currentMeasureLocation +=' +
+    getLengthForId(ctx.getFieldValue('sound')) +
+    '; }\n'
+};
+
+export const playSoundsTogether = {
+  definition: {
+    type: BlockTypes.PLAY_SOUNDS_TOGETHER,
+    message0: 'play together',
+    args0: [],
+    message1: '%1',
+    args1: [
+      {
+        type: 'input_statement',
+        name: 'code'
+      }
+    ],
+    inputsInline: true,
+    previousStatement: null,
+    nextStatement: null,
+    colour: 230,
+    tooltip: 'play sounds together',
+    helpUrl: ''
+  },
+  generator: ctx =>
+    'stack.push({measure: currentMeasureLocation, lastMeasures: []});\n' +
+    Blockly.JavaScript.statementToCode(ctx, 'code') +
+    '\n' +
+    'currentMeasureLocation = Math.max.apply(Math, stack[stack.length-1].lastMeasures); \n' +
+    'stack.pop(); \n'
 };
 
 export const setCurrentLocationNextMeasure = {
