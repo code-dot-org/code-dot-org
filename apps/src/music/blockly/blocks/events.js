@@ -10,7 +10,7 @@ export const whenRun = {
     tooltip: 'when run',
     helpUrl: ''
   },
-  generator: () => 'var currentMeasureLocation = 1;\n'
+  generator: () => 'var currentMeasureLocation = 1; var stack = [];\n'
 };
 
 export const triggeredAt = {
