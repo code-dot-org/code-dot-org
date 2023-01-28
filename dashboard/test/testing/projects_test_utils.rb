@@ -22,9 +22,7 @@ module ProjectsTestUtils
 
     storage_id = storage_id_for_user_id(user_id)
     unless storage_id
-      project_storage = create :project_storage, user_id: user_id
-      storage_id = project_storage.id
-      #storage_id = create_storage_id_for_user(user_id)
+      storage_id = create_storage_id_for_user(user_id)
       owns_storage_id = true
     end
 
