@@ -1,8 +1,15 @@
 require 'webmock/minitest'
 require 'test_helper'
 
+module LevelsHelper
+  def get_storage_id
+    return 1
+  end
+end
+
 class ProjectsControllerTest < ActionController::TestCase
   include Devise::Test::ControllerHelpers
+  include LevelsHelper
 
   # Sign in, and stub request.user_id to return the signed in user's id
   def sign_in_with_request(user)

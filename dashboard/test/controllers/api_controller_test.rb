@@ -1,5 +1,11 @@
 require 'test_helper'
 
+module LevelsHelper
+  def get_storage_id
+    return 1
+  end
+end
+
 class ApiControllerTest < ActionController::TestCase
   include Devise::Test::ControllerHelpers
 
