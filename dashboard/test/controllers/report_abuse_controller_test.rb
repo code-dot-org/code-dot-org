@@ -6,12 +6,15 @@ class ReportAbuseControllerTest < ActionController::TestCase
 
   self.use_transactional_test_case = true
 
-  setup do
-    # channels
+  setup_all do
     @storage = create(:project_storage)
     @storage_id = @storage.id
     @projects = Projects.new(@storage_id)
     @channel_id = @projects.create({}, ip: '10.0.0.1')
+  end
+
+  setup do
+    # channels
     #@controller.stubs(:get_storage_id).returns(@storage_id)
 
     # files
