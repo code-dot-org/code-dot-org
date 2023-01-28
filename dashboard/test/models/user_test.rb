@@ -3,6 +3,12 @@ require 'testing/includes_metrics'
 require 'testing/projects_test_utils'
 require 'timecop'
 
+module ProjectTestUtils
+  def create_storage_id_for_user(user_id)
+    fake_storage_id_for_user_id(user_id)
+  end
+end
+
 class UserTest < ActiveSupport::TestCase
   include ProjectsTestUtils
   self.use_transactional_test_case = true
@@ -50,6 +56,9 @@ class UserTest < ActiveSupport::TestCase
     @universal_instructor = create :universal_instructor
     @plc_reviewer = create :plc_reviewer
     @levelbuilder = create :levelbuilder
+
+    stub_get_storage_id
+    stub_storage_id_for_user_id
   end
 
   test 'from_identifier finds user by id' do
