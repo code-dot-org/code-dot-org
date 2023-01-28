@@ -10,7 +10,7 @@ class ReportAbuseControllerTest < ActionController::TestCase
     @storage = create(:project_storage)
     @storage_id = @storage.id
     @projects = Projects.new(@storage_id)
-    @channel_id = @projects.create({}, ip: '10.0.0.1')
+    #@channel_id = @projects.create({}, ip: '10.0.0.1')
   end
 
   setup do
@@ -34,6 +34,7 @@ class ReportAbuseControllerTest < ActionController::TestCase
   test "post abuse score" do
     DASHBOARD_DB.transaction(rollback: :always) do
       @controller.stubs(:get_storage_id).returns(@storage_id)
+      @channel_id = @projects.create({}, ip: '10.0.0.1')
       assert_equal 0, @controller.update_channel_abuse_score(@channel_id)
     end
   end
@@ -42,6 +43,7 @@ class ReportAbuseControllerTest < ActionController::TestCase
     DASHBOARD_DB.transaction(rollback: :always) do
       @controller.stubs(:get_storage_id).returns(@storage_id)
       DCDO.stubs(:get).with('restrict-abuse-reporting-to-verified', true).returns(false)
+      @channel_id = @projects.create({}, ip: '10.0.0.1')
 
       user = create(:student)
       sign_in user
@@ -60,6 +62,7 @@ class ReportAbuseControllerTest < ActionController::TestCase
   test "abuse frozen" do
     DASHBOARD_DB.transaction(rollback: :always) do
       @controller.stubs(:get_storage_id).returns(@storage_id)
+      @channel_id = @projects.create({}, ip: '10.0.0.1')
       # freeze the project
       @projects.update(@channel_id, {frozen: true}, '10.0.0.1')
 
