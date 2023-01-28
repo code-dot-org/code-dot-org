@@ -4,18 +4,14 @@ require 'cdo/aws/s3'
 class ReportAbuseControllerTest < ActionController::TestCase
   include Devise::Test::ControllerHelpers
 
-  self.use_transactional_test_case = true
-
-  setup_all do
-    @storage = create(:project_storage)
-    @storage_id = @storage.id
-    @projects = Projects.new(@storage_id)
-    #@channel_id = @projects.create({}, ip: '10.0.0.1')
-  end
-
   setup do
     # channels
-    #@controller.stubs(:get_storage_id).returns(@storage_id)
+    # Use a fake storage ID, because if you use the project_storage factory,
+    # everything breaks.
+    storage_id = 1
+    @projects = Projects.new(storage_id)
+    @channel_id = @projects.create({}, ip: '10.0.0.1')
+    @controller.stubs(:get_storage_id).returns(@storage_id)
 
     # files
     AWS::S3.stubs :create_client # Don't actually talk to S3
@@ -32,49 +28,37 @@ class ReportAbuseControllerTest < ActionController::TestCase
   # channels
 
   test "post abuse score" do
-    DASHBOARD_DB.transaction(rollback: :always) do
-      @controller.stubs(:get_storage_id).returns(@storage_id)
-      @channel_id = @projects.create({}, ip: '10.0.0.1')
-      assert_equal 0, @controller.update_channel_abuse_score(@channel_id)
-    end
+    assert_equal 0, @controller.update_channel_abuse_score(@channel_id)
   end
 
   test "signed in abuse" do
-    DASHBOARD_DB.transaction(rollback: :always) do
-      @controller.stubs(:get_storage_id).returns(@storage_id)
-      DCDO.stubs(:get).with('restrict-abuse-reporting-to-verified', true).returns(false)
-      @channel_id = @projects.create({}, ip: '10.0.0.1')
+    DCDO.stubs(:get).with('restrict-abuse-reporting-to-verified', true).returns(false)
 
-      user = create(:student)
-      sign_in user
+    user = create(:student)
+    sign_in user
 
-      # check initial state
-      assert_equal 0, Projects.get_abuse(@channel_id)
+    # check initial state
+    assert_equal 0, Projects.get_abuse(@channel_id)
 
-      # authenticated non-teacher should get a score of 10
-      assert_equal 10, @controller.update_channel_abuse_score(@channel_id)
-      assert_equal 10, Projects.get_abuse(@channel_id)
+    # authenticated non-teacher should get a score of 10
+    assert_equal 10, @controller.update_channel_abuse_score(@channel_id)
+    assert_equal 10, Projects.get_abuse(@channel_id)
 
-      DCDO.unstub(:get)
-    end
+    DCDO.unstub(:get)
   end
 
   test "abuse frozen" do
-    DASHBOARD_DB.transaction(rollback: :always) do
-      @controller.stubs(:get_storage_id).returns(@storage_id)
-      @channel_id = @projects.create({}, ip: '10.0.0.1')
-      # freeze the project
-      @projects.update(@channel_id, {frozen: true}, '10.0.0.1')
+    # freeze the project
+    @projects.update(@channel_id, {frozen: true}, '10.0.0.1')
 
-      # check initial state
-      assert_equal 0, Projects.get_abuse(@channel_id)
+    # check initial state
+    assert_equal 0, Projects.get_abuse(@channel_id)
 
-      user = create(:student)
-      sign_in user
+    user = create(:student)
+    sign_in user
 
-      assert_equal 0, @controller.update_channel_abuse_score(@channel_id)
-      assert_equal 0, Projects.get_abuse(@channel_id)
-    end
+    assert_equal 0, @controller.update_channel_abuse_score(@channel_id)
+    assert_equal 0, Projects.get_abuse(@channel_id)
   end
 
   # files
