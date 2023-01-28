@@ -1,8 +1,15 @@
 require 'webmock/minitest'
 require 'test_helper'
 
+module LevelsHelper
+  def get_storage_id
+    return 1
+  end
+end
+
 class ProjectsControllerTest < ActionController::TestCase
   include Devise::Test::ControllerHelpers
+  include LevelsHelper
 
   # Sign in, and stub request.user_id to return the signed in user's id
   def sign_in_with_request(user)
@@ -11,6 +18,11 @@ class ProjectsControllerTest < ActionController::TestCase
   end
 
   setup do
+    @storage = create(:project_storage)
+    @storage_id = @storage.id
+    @controller.stubs(:get_storage_id).returns(@storage_id)
+    @controller.stubs(:storage_id_for_current_user).returns(@storage_id)
+
     sign_in_with_request create :user
     Geocoder.stubs(:search).returns([OpenStruct.new(country_code: 'US')])
     AzureTextToSpeech.stubs(:get_voices).returns({})
