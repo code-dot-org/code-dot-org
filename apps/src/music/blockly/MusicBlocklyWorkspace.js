@@ -125,13 +125,13 @@ export default class MusicBlocklyWorkspace {
 
     this.codeHooks = {};
 
+    console.log('executeSong', events);
+
     CustomMarshalingInterpreter.evalWithEvents(scope, events).hooks.forEach(
       hook => {
         this.codeHooks[hook.name] = hook.func;
       }
     );
-
-    console.log('executeSong', events);
 
     if (this.codeHooks.whenRunButton) {
       this.callUserGeneratedCode(this.codeHooks.whenRunButton);
