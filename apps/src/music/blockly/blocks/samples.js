@@ -122,21 +122,21 @@ export const playSoundAtCurrentLocation = {
     helpUrl: ''
   },
   generator: ctx =>
-    'MusicPlayer.playSoundAtMeasureById("' +
-    ctx.getFieldValue('sound') +
-    '", ' +
-    'stack.length == 0 ? currentMeasureLocation : stack[stack.length-1].measure' +
-    ', ' +
-    (isBlockInsideWhenRun(ctx) ? 'true' : 'false') +
-    ');\n' +
-    'if (stack.length > 0) {' +
-    'stack[stack.length-1].lastMeasures.push(currentMeasureLocation + ' +
-    getLengthForId(ctx.getFieldValue('sound')) +
-    ');\n' +
-    ' } ' +
-    ' else { currentMeasureLocation +=' +
-    getLengthForId(ctx.getFieldValue('sound')) +
-    '; }\n'
+    `MusicPlayer.playSoundAtMeasureById(
+      "${ctx.getFieldValue('sound')}",
+      stack.length == 0
+        ? currentMeasureLocation
+        : stack[stack.length - 1].measure,
+      ${isBlockInsideWhenRun(ctx) ? 'true' : 'false'}
+    );
+    if (stack.length > 0) {
+      stack[stack.length-1].lastMeasures.push(
+        currentMeasureLocation +
+        ${getLengthForId(ctx.getFieldValue('sound'))}
+      );
+    } else {
+      currentMeasureLocation += ${getLengthForId(ctx.getFieldValue('sound'))};
+    }`
 };
 
 export const playSoundsTogether = {
@@ -159,11 +159,10 @@ export const playSoundsTogether = {
     helpUrl: ''
   },
   generator: ctx =>
-    'stack.push({measure: currentMeasureLocation, lastMeasures: []});\n' +
-    Blockly.JavaScript.statementToCode(ctx, 'code') +
-    '\n' +
-    'currentMeasureLocation = Math.max.apply(Math, stack[stack.length-1].lastMeasures); \n' +
-    'stack.pop(); \n'
+    `stack.push({measure: currentMeasureLocation, lastMeasures: []});
+    ${Blockly.JavaScript.statementToCode(ctx, 'code')}
+    currentMeasureLocation = Math.max.apply(Math, stack[stack.length-1].lastMeasures);
+    stack.pop();`
 };
 
 export const setCurrentLocationNextMeasure = {
