@@ -12,8 +12,8 @@
   {
     "name": "Safari",
     "browserName": "Safari",
-    "platform": "macOS 10.15",
-    "version": "13",
+    "platform": "macOS 11.00",
+    "version": "14",
     "w3c": true
   },
   {
