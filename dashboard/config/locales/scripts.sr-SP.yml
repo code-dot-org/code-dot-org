@@ -997,6 +997,10 @@ sr:
           lessons:
             lesson-4:
               name: Променљиве
+        csa3-2023:
+          lessons:
+            lesson-3:
+              name: Бројачке петље
         csp4-2023:
           lesson_groups:
             csp_variables:

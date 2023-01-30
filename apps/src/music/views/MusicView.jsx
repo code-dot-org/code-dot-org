@@ -112,7 +112,10 @@ class UnconnectedMusicView extends React.Component {
     });
 
     this.loadInstructions().then(instructions => {
-      this.setState({instructions});
+      this.setState({
+        instructions: instructions,
+        showInstructions: !!instructions
+      });
     });
   }
 
@@ -150,10 +153,19 @@ class UnconnectedMusicView extends React.Component {
   };
 
   loadInstructions = async () => {
-    const libraryFilename = 'music-instructions.json';
-    const response = await fetch(baseUrl + libraryFilename);
-    const library = await response.json();
-    return library;
+    const blockMode = AppConfig.getValue('blocks');
+    const instructionsFilename =
+      !blockMode || blockMode === 'advanced'
+        ? 'music-instructions.json'
+        : `music-instructions-${blockMode}.json`;
+    const response = await fetch(baseUrl + instructionsFilename);
+    let instructions;
+    try {
+      instructions = await response.json();
+    } catch (error) {
+      instructions = null;
+    }
+    return instructions;
   };
 
   clearCode = () => {

@@ -634,6 +634,7 @@
   coursef-draft_name: Curs F
   coursef_name: "Curs F"
   coursea-2021_name: Curs A (2021)
+  courseb-2021_name: Curs B (2021)
   coursec-2021_name: Curs C (2021)
   express-2021_name: Curs exprés (2021)
   accelerated_name: "Curs accelerat"
@@ -852,10 +853,13 @@
   coursef-2019_shortdescription_congrats: Apreneu tots els conceptes dels Fonaments de la informàtica i creeu el vostre propi art, històries i jocs.
   coursea-2020_shortdescription_congrats: Aprèn els fonaments de la informàtica i de la seguretat a internet. Al final del curs, podràs crear el teu propi joc o història i compartir-los.
   courseb-2020_shortdescription_congrats: Aprèn els fonaments de la informàtica i de la seguretat a internet. Al final del curs, podràs crear el teu propi joc o història i compartir-los.
+  coursec-2020_shortdescription_congrats: Crea programes amb seqüenciació, bucles i esdeveniments. Tradueix les teves inicials al codi binari, investiga diferents tècniques per resoldre problemes, i aprèn com cal actuar en situacions de ciberassetjament. Al final del curs, crearàs el teu propi joc o història, i podràs compartir-los!
   coursea-2021_shortdescription_congrats: Aprèn els fonaments de la informàtica i de la seguretat a internet. Al final del curs, podràs crear el teu propi joc o història i compartir-los.
   courseb-2021_shortdescription_congrats: Aprèn els fonaments de la informàtica i de la seguretat a internet. Al final del curs, podràs crear el teu propi joc o història i compartir-los.
+  coursec-2021_shortdescription_congrats: Crea programes amb seqüenciació, bucles i esdeveniments. Tradueix les teves inicials al codi binari, investiga diferents tècniques per resoldre problemes, i aprèn com cal actuar en situacions de ciberassetjament. Al final del curs, crearàs el teu propi joc o història, i podràs compartir-los!
   coursea-2022_shortdescription_congrats: Aprèn els fonaments de la informàtica i de la seguretat a internet. Al final del curs, podràs crear el teu propi joc o història i compartir-los.
   courseb-2022_shortdescription_congrats: Aprèn els fonaments de la informàtica i de la seguretat a internet. Al final del curs, podràs crear el teu propi joc o història i compartir-los.
+  coursec-2022_shortdescription_congrats: Crea programes amb seqüenciació, bucles i esdeveniments. Tradueix les teves inicials al codi binari, investiga diferents tècniques per resoldre problemes, i aprèn com cal actuar en situacions de ciberassetjament. Al final del curs, crearàs el teu propi joc o història, i podràs compartir-los!
   codeorg_longdescription: "Aprèn els conceptes bàsics de la Informàtica mitjançant la programació arrossega i deixa anar. Aquest és un tutorial amb vídeo conferencies protagonitzades per Bill Gates, Mark Zuckerberg, Angry Birds i Plants vs. Zombies. Aprèn bucles, condicionals i algorismes bàsics. Disponible en 34 idiomes."
   codeintl_longdescription: "Aprèn els conceptes bàsics de la Informàtica mitjançant la programació arrossega i deixa anar. Aquest és un tutorial amb vídeo conferencies protagonitzades per Bill Gates, Mark Zuckerberg, Angry Birds i Plants vs. Zombies. Aprèn bucles, condicionals i algorismes bàsics. Disponible en 34 idiomes."
   thinkersmithspanish_longdescription: "Mediante el uso de un \"Vocabulario Robot\" predefinido, los estudiantes descubrir&aacute;n como guiarse de modo tal de llevar a cabo tareas espec&iacute;ficas sin ser estas discutidas previamente. Este segmento ense&ntilde;a a los estudiantes la conexi&oacute;n entre s&iacute;mbolos y acciones as&iacute; como la valiosa habilidad de depuraci&oacute;n."

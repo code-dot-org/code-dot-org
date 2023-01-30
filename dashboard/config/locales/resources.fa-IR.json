@@ -171,6 +171,11 @@
           "name": "اصلاحات درس مجازی ",
           "url": ""
         },
+        "extension_lessons_micro_bit/coursed/2022": {
+          "name": "",
+          "url": "",
+          "type": "منبع"
+        },
         "password_power-up_if_then_scenarios/coursed/2022": {
           "name": "بخش Password Power-Up: سناریوهای ...If...Then",
           "url": "https://docs.google.com/document/d/1JeZtFU6hMFTYITAAPaA_CRmOVknvkcKZQszL6u7DRG4/edit",
@@ -419,6 +424,11 @@
           "name": "اصلاحات درس مجازی ",
           "url": ""
         },
+        "extension_lessons_micro_bit/coursef/2022": {
+          "name": "",
+          "url": "",
+          "type": "منبع"
+        },
         "the_power_of_words_lesson_quiz/coursef/2022": {
           "name": "قدرت کلمات: امتحان درس",
           "url": "https://docs.google.com/forms/d/1OKy2U3F37NSgCBUez9XMi0UJtlHKPXIe_rxy0l_KEOg/copy",
@@ -612,6 +622,11 @@
         "virtual_lesson_modifications/coursee/2022": {
           "name": "اصلاحات درس مجازی ",
           "url": ""
+        },
+        "extension_lessons_micro_bit/coursee/2022": {
+          "name": "",
+          "url": "",
+          "type": "منبع"
         },
         "be_a_super_digital_citizen_lesson_slides/coursee/2022": {
           "name": "یک شهروند فوق دیجیتال باشید: اسلایدهای درس",
@@ -1381,6 +1396,11 @@
         "virtual_lesson_modifications/coursec/2022": {
           "name": "اصلاحات درس مجازی ",
           "url": ""
+        },
+        "extension_lessons_micro_bit/coursec/2022": {
+          "name": "",
+          "url": "",
+          "type": "منبع"
         },
         "putting_a_stop_to_online_meanness_lesson_slides/coursec/2022": {
           "name": "قرار دادن توقفی برای پستی برخط: اسلایدهای درس",

@@ -184,7 +184,7 @@ fr:
         title: Programmation sur papier quadrillé
         desc: Les élèves écrivent un algorithme (un ensemble d'instructions) utilisant un ensemble de commandes prédéfinies pour diriger leurs camarades dans la reproduction d’un dessin.
       courseD_unplugged_relayProgramming:
-        title: Programmation de relais
+        title: Programmation en relais
         desc: Les élèves effectuent une course de relais, où ils traversent rapidement le jardin pour aller écrire un algorithme, basé sur une image de « Programmation sur Papier Millimétré». Ils ne peuvent écrire qu’une seule instruction à la fois et, s'il y a une erreur quelque part, ils doivent tout effacer pour retourner à ce point.
       courseD_unplugged_conditionalsCards:
         title: Les instructions conditionnelles avec des cartes
@@ -247,7 +247,7 @@ fr:
         title: Activité Déconnectée
         desc: Aujourd'hui, tu apprendras ce qu’il faut faire si quelqu'un devient méchant en ligne.
       Conditionals_2018:
-        title: Formules conditionnelles
+        title: Instructions conditionnelles
         desc: Pour mieux comprendre les déclarations conditionnelles, les élèves jouent à un jeu de cartes et créent des règles comme « Si je tire une carte rouge, je gagne un point », et « Si je tire une carte noire, tu gagnes un point ».
       DigitalFootprint_2018:
         title: Ton Empreinte Numérique
@@ -273,7 +273,7 @@ fr:
         title: Partage Numérique
         desc: Prêtée aux Notions Fondamentales de l’Informatique par l'équipe de Copyright and Creativity, cette leçon a pour but d'aider les élèves à comprendre les défis et les avantages du respect de la propriété et du droit d'auteur, en particulier dans les environnements numériques. Les élèves devraient être encouragés à respecter les droits des artistes, qui constituent un élément important de leur citoyenneté numérique.
       RelayProgramming_2018:
-        title: Programmation de relais
+        title: Programmation en relais
         desc: Cette activité débutera par une brève leçon sur le débogage et la persévérance, puis passera rapidement à une course contre la montre, pendant laquelle les élèves formeront des équipes et travailleront ensemble à la rédaction d'un programme, instruction par instruction.
       courseB_unplugged_MRF_2019:
         title: Mes amis les robots
@@ -285,7 +285,7 @@ fr:
         title: 'traduction manquante : en-US.data.unplugged.courseB_unplugged_loopyMRF_2018.title'
         desc: 'traduction manquante : en-US.data.unplugged.courseB_unplugged_loopyMRF_2018.desc'
       Conditionals_2019:
-        title: Formules conditionnelles
+        title: Instructions conditionnelles
         desc: Pour mieux comprendre les déclarations conditionnelles, les élèves jouent à un jeu de cartes et créent des règles comme « Si je tire une carte rouge, je gagne un point », et « Si je tire une carte noire, tu gagnes un point ».
       courseF_unplugged_powerOfWords_2019:
         title: 'traduction manquante : en-US.data.unplugged.courseF_unplugged_powerOfWords_2018.title'
@@ -300,7 +300,7 @@ fr:
         title: Programmation sur papier quadrillé
         desc: Les élèves écrivent un algorithme (un ensemble d'instructions) utilisant un ensemble de commandes prédéfinies pour diriger leurs camarades dans la reproduction d’un dessin.
       RelayProgramming_2018_2019:
-        title: Programmation de relais
+        title: Programmation en relais
         desc: Cette activité débutera par une brève leçon sur le débogage et la persévérance, puis passera rapidement à une course contre la montre, pendant laquelle les élèves formeront des équipes et travailleront ensemble à la rédaction d'un programme, instruction par instruction.
       courseD_unplugged_digitalCitizenship_2019:
         title: Activité Déconnectée
@@ -374,5 +374,5 @@ fr:
         title: Production Participative
         desc: '_Note de Josh : contrairement à la première leçon, j’ai formaté celle-ci, simplement, comme une leçon débranchée typique.'
       timeforcs_demo_conditionals:
-        title: Formules conditionnelles
+        title: Instructions conditionnelles
         desc: Pour mieux comprendre les déclarations conditionnelles, les élèves jouent à un jeu de cartes et créent des règles comme « Si je tire une carte rouge, je gagne un point », et « Si je tire une carte noire, tu gagnes un point ».
