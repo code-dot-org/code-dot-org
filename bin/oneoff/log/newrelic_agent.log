@@ -1,0 +1,151 @@
+# Logfile created on 2023-01-12 16:21:52 -0800 by logger.rb/v1.4.2
+[2023-01-12 16:21:52 -0800 pablos-air.lan (25362)] INFO : Starting the New Relic agent version 6.14.0 in "development" environment.
+[2023-01-12 16:21:52 -0800 pablos-air.lan (25362)] INFO : To prevent agent startup add a NEW_RELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[2023-01-12 16:21:52 -0800 pablos-air.lan (25362)] WARN : No configuration file found. Working directory = /Users/pablomanuelmejiaminaya/code-dot-org/bin/oneoff
+[2023-01-12 16:21:52 -0800 pablos-air.lan (25362)] WARN : Looked in these locations (based on defaults): /Users/pablomanuelmejiaminaya/code-dot-org/bin/oneoff/config/newrelic.yml, /Users/pablomanuelmejiaminaya/code-dot-org/bin/oneoff/newrelic.yml, /Users/pablomanuelmejiaminaya/code-dot-org/bin/oneoff/config/newrelic.yml.erb, /Users/pablomanuelmejiaminaya/code-dot-org/bin/oneoff/newrelic.yml.erb, /Users/pablomanuelmejiaminaya/code-dot-org/dashboard/config/newrelic.yml, /Users/pablomanuelmejiaminaya/code-dot-org/dashboard/newrelic.yml, /Users/pablomanuelmejiaminaya/code-dot-org/dashboard/config/newrelic.yml.erb, /Users/pablomanuelmejiaminaya/code-dot-org/dashboard/newrelic.yml.erb, /Users/pablomanuelmejiaminaya/.newrelic/newrelic.yml, /Users/pablomanuelmejiaminaya/newrelic.yml, /Users/pablomanuelmejiaminaya/.newrelic/newrelic.yml.erb, /Users/pablomanuelmejiaminaya/newrelic.yml.erb
+[2023-01-12 16:21:52 -0800 pablos-air.lan (25362)] INFO : Environment: development
+[2023-01-12 16:21:52 -0800 pablos-air.lan (25362)] INFO : No known dispatcher detected.
+[2023-01-12 16:21:52 -0800 pablos-air.lan (25362)] INFO : Application: development
+[2023-01-12 16:21:52 -0800 pablos-air.lan (25362)] WARN : No license key found. This often means your newrelic.yml file was not found, or it lacks a section for the running environment, 'development'. You may also want to try linting your newrelic.yml to ensure it is valid YML.
+[2023-01-12 16:21:52 -0800 pablos-air.lan (25362)] INFO : Installing Sinatra instrumentation
+[2023-01-12 16:21:52 -0800 pablos-air.lan (25362)] INFO : Installing ActiveStorage 5 instrumentation
+[2023-01-12 16:21:52 -0800 pablos-air.lan (25362)] INFO : Installing Redis Instrumentation
+[2023-01-12 16:21:52 -0800 pablos-air.lan (25362)] INFO : Installing Memcache instrumentation for dalli gem
+[2023-01-12 16:21:52 -0800 pablos-air.lan (25362)] INFO : Installing notifications based Active Record instrumentation
+[2023-01-12 16:21:52 -0800 pablos-air.lan (25362)] INFO : Installing Sequel instrumentation
+[2023-01-12 16:21:52 -0800 pablos-air.lan (25362)] INFO : Installing Rails 3+ middleware instrumentation
+[2023-01-12 16:21:52 -0800 pablos-air.lan (25362)] INFO : Installing Net instrumentation
+[2023-01-12 16:21:52 -0800 pablos-air.lan (25362)] INFO : Installing HTTPClient instrumentation
+[2023-01-12 16:21:52 -0800 pablos-air.lan (25362)] INFO : Installing deferred Rack::Builder instrumentation
+[2023-01-12 16:21:52 -0800 pablos-air.lan (25362)] INFO : Installing Rack::Builder middleware instrumentation
+[2023-01-12 16:21:52 -0800 pablos-air.lan (25362)] INFO : Installing ActiveJob instrumentation
+[2023-01-12 16:21:52 -0800 pablos-air.lan (25362)] INFO : Installing notifications based Action Controller instrumentation
+[2023-01-12 16:21:52 -0800 pablos-air.lan (25362)] INFO : Installing notification based Action View instrumentation
+[2023-01-12 16:21:52 -0800 pablos-air.lan (25362)] INFO : Installing notifications based Action Cable instrumentation
+[2023-01-12 16:21:52 -0800 pablos-air.lan (25362)] INFO : Finished instrumentation
+[2023-01-12 16:21:53 -0800 pablos-air.lan (25362)] INFO : Doing deferred dependency-detection before Rack startup
+[2023-01-12 16:23:06 -0800 pablos-air.lan (25546)] INFO : Starting the New Relic agent version 6.14.0 in "development" environment.
+[2023-01-12 16:23:06 -0800 pablos-air.lan (25546)] INFO : To prevent agent startup add a NEW_RELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[2023-01-12 16:23:06 -0800 pablos-air.lan (25546)] WARN : No configuration file found. Working directory = /Users/pablomanuelmejiaminaya/code-dot-org/bin/oneoff
+[2023-01-12 16:23:06 -0800 pablos-air.lan (25546)] WARN : Looked in these locations (based on defaults): /Users/pablomanuelmejiaminaya/code-dot-org/bin/oneoff/config/newrelic.yml, /Users/pablomanuelmejiaminaya/code-dot-org/bin/oneoff/newrelic.yml, /Users/pablomanuelmejiaminaya/code-dot-org/bin/oneoff/config/newrelic.yml.erb, /Users/pablomanuelmejiaminaya/code-dot-org/bin/oneoff/newrelic.yml.erb, /Users/pablomanuelmejiaminaya/code-dot-org/dashboard/config/newrelic.yml, /Users/pablomanuelmejiaminaya/code-dot-org/dashboard/newrelic.yml, /Users/pablomanuelmejiaminaya/code-dot-org/dashboard/config/newrelic.yml.erb, /Users/pablomanuelmejiaminaya/code-dot-org/dashboard/newrelic.yml.erb, /Users/pablomanuelmejiaminaya/.newrelic/newrelic.yml, /Users/pablomanuelmejiaminaya/newrelic.yml, /Users/pablomanuelmejiaminaya/.newrelic/newrelic.yml.erb, /Users/pablomanuelmejiaminaya/newrelic.yml.erb
+[2023-01-12 16:23:06 -0800 pablos-air.lan (25546)] INFO : Environment: development
+[2023-01-12 16:23:06 -0800 pablos-air.lan (25546)] INFO : No known dispatcher detected.
+[2023-01-12 16:23:06 -0800 pablos-air.lan (25546)] INFO : Application: development
+[2023-01-12 16:23:06 -0800 pablos-air.lan (25546)] WARN : No license key found. This often means your newrelic.yml file was not found, or it lacks a section for the running environment, 'development'. You may also want to try linting your newrelic.yml to ensure it is valid YML.
+[2023-01-12 16:23:06 -0800 pablos-air.lan (25546)] INFO : Installing Sinatra instrumentation
+[2023-01-12 16:23:06 -0800 pablos-air.lan (25546)] INFO : Installing ActiveStorage 5 instrumentation
+[2023-01-12 16:23:06 -0800 pablos-air.lan (25546)] INFO : Installing Redis Instrumentation
+[2023-01-12 16:23:06 -0800 pablos-air.lan (25546)] INFO : Installing Memcache instrumentation for dalli gem
+[2023-01-12 16:23:06 -0800 pablos-air.lan (25546)] INFO : Installing notifications based Active Record instrumentation
+[2023-01-12 16:23:06 -0800 pablos-air.lan (25546)] INFO : Installing Sequel instrumentation
+[2023-01-12 16:23:06 -0800 pablos-air.lan (25546)] INFO : Installing Rails 3+ middleware instrumentation
+[2023-01-12 16:23:06 -0800 pablos-air.lan (25546)] INFO : Installing Net instrumentation
+[2023-01-12 16:23:06 -0800 pablos-air.lan (25546)] INFO : Installing HTTPClient instrumentation
+[2023-01-12 16:23:06 -0800 pablos-air.lan (25546)] INFO : Installing deferred Rack::Builder instrumentation
+[2023-01-12 16:23:06 -0800 pablos-air.lan (25546)] INFO : Installing Rack::Builder middleware instrumentation
+[2023-01-12 16:23:06 -0800 pablos-air.lan (25546)] INFO : Installing ActiveJob instrumentation
+[2023-01-12 16:23:06 -0800 pablos-air.lan (25546)] INFO : Installing notifications based Action Controller instrumentation
+[2023-01-12 16:23:06 -0800 pablos-air.lan (25546)] INFO : Installing notification based Action View instrumentation
+[2023-01-12 16:23:06 -0800 pablos-air.lan (25546)] INFO : Installing notifications based Action Cable instrumentation
+[2023-01-12 16:23:06 -0800 pablos-air.lan (25546)] INFO : Finished instrumentation
+[2023-01-12 16:23:07 -0800 pablos-air.lan (25546)] INFO : Doing deferred dependency-detection before Rack startup
+[2023-01-13 10:38:43 -0800 pablos-air.lan (58659)] INFO : Starting the New Relic agent version 6.14.0 in "development" environment.
+[2023-01-13 10:38:43 -0800 pablos-air.lan (58659)] INFO : To prevent agent startup add a NEW_RELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[2023-01-13 10:38:43 -0800 pablos-air.lan (58659)] WARN : No configuration file found. Working directory = /Users/pablomanuelmejiaminaya/code-dot-org/bin/oneoff
+[2023-01-13 10:38:43 -0800 pablos-air.lan (58659)] WARN : Looked in these locations (based on defaults): /Users/pablomanuelmejiaminaya/code-dot-org/bin/oneoff/config/newrelic.yml, /Users/pablomanuelmejiaminaya/code-dot-org/bin/oneoff/newrelic.yml, /Users/pablomanuelmejiaminaya/code-dot-org/bin/oneoff/config/newrelic.yml.erb, /Users/pablomanuelmejiaminaya/code-dot-org/bin/oneoff/newrelic.yml.erb, /Users/pablomanuelmejiaminaya/code-dot-org/dashboard/config/newrelic.yml, /Users/pablomanuelmejiaminaya/code-dot-org/dashboard/newrelic.yml, /Users/pablomanuelmejiaminaya/code-dot-org/dashboard/config/newrelic.yml.erb, /Users/pablomanuelmejiaminaya/code-dot-org/dashboard/newrelic.yml.erb, /Users/pablomanuelmejiaminaya/.newrelic/newrelic.yml, /Users/pablomanuelmejiaminaya/newrelic.yml, /Users/pablomanuelmejiaminaya/.newrelic/newrelic.yml.erb, /Users/pablomanuelmejiaminaya/newrelic.yml.erb
+[2023-01-13 10:38:43 -0800 pablos-air.lan (58659)] INFO : Environment: development
+[2023-01-13 10:38:43 -0800 pablos-air.lan (58659)] INFO : No known dispatcher detected.
+[2023-01-13 10:38:43 -0800 pablos-air.lan (58659)] INFO : Application: development
+[2023-01-13 10:38:43 -0800 pablos-air.lan (58659)] WARN : No license key found. This often means your newrelic.yml file was not found, or it lacks a section for the running environment, 'development'. You may also want to try linting your newrelic.yml to ensure it is valid YML.
+[2023-01-13 10:38:43 -0800 pablos-air.lan (58659)] INFO : Installing Sinatra instrumentation
+[2023-01-13 10:38:43 -0800 pablos-air.lan (58659)] INFO : Installing ActiveStorage 5 instrumentation
+[2023-01-13 10:38:43 -0800 pablos-air.lan (58659)] INFO : Installing Redis Instrumentation
+[2023-01-13 10:38:43 -0800 pablos-air.lan (58659)] INFO : Installing Memcache instrumentation for dalli gem
+[2023-01-13 10:38:43 -0800 pablos-air.lan (58659)] INFO : Installing notifications based Active Record instrumentation
+[2023-01-13 10:38:43 -0800 pablos-air.lan (58659)] INFO : Installing Sequel instrumentation
+[2023-01-13 10:38:43 -0800 pablos-air.lan (58659)] INFO : Installing Rails 3+ middleware instrumentation
+[2023-01-13 10:38:43 -0800 pablos-air.lan (58659)] INFO : Installing Net instrumentation
+[2023-01-13 10:38:43 -0800 pablos-air.lan (58659)] INFO : Installing HTTPClient instrumentation
+[2023-01-13 10:38:43 -0800 pablos-air.lan (58659)] INFO : Installing deferred Rack::Builder instrumentation
+[2023-01-13 10:38:43 -0800 pablos-air.lan (58659)] INFO : Installing Rack::Builder middleware instrumentation
+[2023-01-13 10:38:43 -0800 pablos-air.lan (58659)] INFO : Installing ActiveJob instrumentation
+[2023-01-13 10:38:43 -0800 pablos-air.lan (58659)] INFO : Installing notifications based Action Controller instrumentation
+[2023-01-13 10:38:43 -0800 pablos-air.lan (58659)] INFO : Installing notification based Action View instrumentation
+[2023-01-13 10:38:43 -0800 pablos-air.lan (58659)] INFO : Installing notifications based Action Cable instrumentation
+[2023-01-13 10:38:43 -0800 pablos-air.lan (58659)] INFO : Finished instrumentation
+[2023-01-13 10:38:44 -0800 pablos-air.lan (58659)] INFO : Doing deferred dependency-detection before Rack startup
+[2023-01-13 10:39:08 -0800 pablos-air.lan (58824)] INFO : Starting the New Relic agent version 6.14.0 in "development" environment.
+[2023-01-13 10:39:08 -0800 pablos-air.lan (58824)] INFO : To prevent agent startup add a NEW_RELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[2023-01-13 10:39:08 -0800 pablos-air.lan (58824)] WARN : No configuration file found. Working directory = /Users/pablomanuelmejiaminaya/code-dot-org/bin/oneoff
+[2023-01-13 10:39:08 -0800 pablos-air.lan (58824)] WARN : Looked in these locations (based on defaults): /Users/pablomanuelmejiaminaya/code-dot-org/bin/oneoff/config/newrelic.yml, /Users/pablomanuelmejiaminaya/code-dot-org/bin/oneoff/newrelic.yml, /Users/pablomanuelmejiaminaya/code-dot-org/bin/oneoff/config/newrelic.yml.erb, /Users/pablomanuelmejiaminaya/code-dot-org/bin/oneoff/newrelic.yml.erb, /Users/pablomanuelmejiaminaya/code-dot-org/dashboard/config/newrelic.yml, /Users/pablomanuelmejiaminaya/code-dot-org/dashboard/newrelic.yml, /Users/pablomanuelmejiaminaya/code-dot-org/dashboard/config/newrelic.yml.erb, /Users/pablomanuelmejiaminaya/code-dot-org/dashboard/newrelic.yml.erb, /Users/pablomanuelmejiaminaya/.newrelic/newrelic.yml, /Users/pablomanuelmejiaminaya/newrelic.yml, /Users/pablomanuelmejiaminaya/.newrelic/newrelic.yml.erb, /Users/pablomanuelmejiaminaya/newrelic.yml.erb
+[2023-01-13 10:39:08 -0800 pablos-air.lan (58824)] INFO : Environment: development
+[2023-01-13 10:39:08 -0800 pablos-air.lan (58824)] INFO : No known dispatcher detected.
+[2023-01-13 10:39:08 -0800 pablos-air.lan (58824)] INFO : Application: development
+[2023-01-13 10:39:08 -0800 pablos-air.lan (58824)] WARN : No license key found. This often means your newrelic.yml file was not found, or it lacks a section for the running environment, 'development'. You may also want to try linting your newrelic.yml to ensure it is valid YML.
+[2023-01-13 10:39:08 -0800 pablos-air.lan (58824)] INFO : Installing Sinatra instrumentation
+[2023-01-13 10:39:08 -0800 pablos-air.lan (58824)] INFO : Installing ActiveStorage 5 instrumentation
+[2023-01-13 10:39:08 -0800 pablos-air.lan (58824)] INFO : Installing Redis Instrumentation
+[2023-01-13 10:39:08 -0800 pablos-air.lan (58824)] INFO : Installing Memcache instrumentation for dalli gem
+[2023-01-13 10:39:08 -0800 pablos-air.lan (58824)] INFO : Installing notifications based Active Record instrumentation
+[2023-01-13 10:39:08 -0800 pablos-air.lan (58824)] INFO : Installing Sequel instrumentation
+[2023-01-13 10:39:08 -0800 pablos-air.lan (58824)] INFO : Installing Rails 3+ middleware instrumentation
+[2023-01-13 10:39:08 -0800 pablos-air.lan (58824)] INFO : Installing Net instrumentation
+[2023-01-13 10:39:08 -0800 pablos-air.lan (58824)] INFO : Installing HTTPClient instrumentation
+[2023-01-13 10:39:08 -0800 pablos-air.lan (58824)] INFO : Installing deferred Rack::Builder instrumentation
+[2023-01-13 10:39:08 -0800 pablos-air.lan (58824)] INFO : Installing Rack::Builder middleware instrumentation
+[2023-01-13 10:39:08 -0800 pablos-air.lan (58824)] INFO : Installing ActiveJob instrumentation
+[2023-01-13 10:39:08 -0800 pablos-air.lan (58824)] INFO : Installing notifications based Action Controller instrumentation
+[2023-01-13 10:39:08 -0800 pablos-air.lan (58824)] INFO : Installing notification based Action View instrumentation
+[2023-01-13 10:39:08 -0800 pablos-air.lan (58824)] INFO : Installing notifications based Action Cable instrumentation
+[2023-01-13 10:39:08 -0800 pablos-air.lan (58824)] INFO : Finished instrumentation
+[2023-01-13 10:39:08 -0800 pablos-air.lan (58824)] INFO : Doing deferred dependency-detection before Rack startup
+[2023-01-13 10:39:49 -0800 pablos-air.lan (58957)] INFO : Starting the New Relic agent version 6.14.0 in "development" environment.
+[2023-01-13 10:39:49 -0800 pablos-air.lan (58957)] INFO : To prevent agent startup add a NEW_RELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[2023-01-13 10:39:49 -0800 pablos-air.lan (58957)] WARN : No configuration file found. Working directory = /Users/pablomanuelmejiaminaya/code-dot-org/bin/oneoff
+[2023-01-13 10:39:49 -0800 pablos-air.lan (58957)] WARN : Looked in these locations (based on defaults): /Users/pablomanuelmejiaminaya/code-dot-org/bin/oneoff/config/newrelic.yml, /Users/pablomanuelmejiaminaya/code-dot-org/bin/oneoff/newrelic.yml, /Users/pablomanuelmejiaminaya/code-dot-org/bin/oneoff/config/newrelic.yml.erb, /Users/pablomanuelmejiaminaya/code-dot-org/bin/oneoff/newrelic.yml.erb, /Users/pablomanuelmejiaminaya/code-dot-org/dashboard/config/newrelic.yml, /Users/pablomanuelmejiaminaya/code-dot-org/dashboard/newrelic.yml, /Users/pablomanuelmejiaminaya/code-dot-org/dashboard/config/newrelic.yml.erb, /Users/pablomanuelmejiaminaya/code-dot-org/dashboard/newrelic.yml.erb, /Users/pablomanuelmejiaminaya/.newrelic/newrelic.yml, /Users/pablomanuelmejiaminaya/newrelic.yml, /Users/pablomanuelmejiaminaya/.newrelic/newrelic.yml.erb, /Users/pablomanuelmejiaminaya/newrelic.yml.erb
+[2023-01-13 10:39:49 -0800 pablos-air.lan (58957)] INFO : Environment: development
+[2023-01-13 10:39:49 -0800 pablos-air.lan (58957)] INFO : No known dispatcher detected.
+[2023-01-13 10:39:49 -0800 pablos-air.lan (58957)] INFO : Application: development
+[2023-01-13 10:39:49 -0800 pablos-air.lan (58957)] WARN : No license key found. This often means your newrelic.yml file was not found, or it lacks a section for the running environment, 'development'. You may also want to try linting your newrelic.yml to ensure it is valid YML.
+[2023-01-13 10:39:49 -0800 pablos-air.lan (58957)] INFO : Installing Sinatra instrumentation
+[2023-01-13 10:39:49 -0800 pablos-air.lan (58957)] INFO : Installing ActiveStorage 5 instrumentation
+[2023-01-13 10:39:49 -0800 pablos-air.lan (58957)] INFO : Installing Redis Instrumentation
+[2023-01-13 10:39:49 -0800 pablos-air.lan (58957)] INFO : Installing Memcache instrumentation for dalli gem
+[2023-01-13 10:39:49 -0800 pablos-air.lan (58957)] INFO : Installing notifications based Active Record instrumentation
+[2023-01-13 10:39:49 -0800 pablos-air.lan (58957)] INFO : Installing Sequel instrumentation
+[2023-01-13 10:39:49 -0800 pablos-air.lan (58957)] INFO : Installing Rails 3+ middleware instrumentation
+[2023-01-13 10:39:49 -0800 pablos-air.lan (58957)] INFO : Installing Net instrumentation
+[2023-01-13 10:39:49 -0800 pablos-air.lan (58957)] INFO : Installing HTTPClient instrumentation
+[2023-01-13 10:39:49 -0800 pablos-air.lan (58957)] INFO : Installing deferred Rack::Builder instrumentation
+[2023-01-13 10:39:49 -0800 pablos-air.lan (58957)] INFO : Installing Rack::Builder middleware instrumentation
+[2023-01-13 10:39:49 -0800 pablos-air.lan (58957)] INFO : Installing ActiveJob instrumentation
+[2023-01-13 10:39:49 -0800 pablos-air.lan (58957)] INFO : Installing notifications based Action Controller instrumentation
+[2023-01-13 10:39:49 -0800 pablos-air.lan (58957)] INFO : Installing notification based Action View instrumentation
+[2023-01-13 10:39:49 -0800 pablos-air.lan (58957)] INFO : Installing notifications based Action Cable instrumentation
+[2023-01-13 10:39:49 -0800 pablos-air.lan (58957)] INFO : Finished instrumentation
+[2023-01-13 10:39:49 -0800 pablos-air.lan (58957)] INFO : Doing deferred dependency-detection before Rack startup
+[2023-01-13 10:41:13 -0800 pablos-air.lan (59266)] INFO : Starting the New Relic agent version 6.14.0 in "development" environment.
+[2023-01-13 10:41:13 -0800 pablos-air.lan (59266)] INFO : To prevent agent startup add a NEW_RELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[2023-01-13 10:41:13 -0800 pablos-air.lan (59266)] WARN : No configuration file found. Working directory = /Users/pablomanuelmejiaminaya/code-dot-org/bin/oneoff
+[2023-01-13 10:41:13 -0800 pablos-air.lan (59266)] WARN : Looked in these locations (based on defaults): /Users/pablomanuelmejiaminaya/code-dot-org/bin/oneoff/config/newrelic.yml, /Users/pablomanuelmejiaminaya/code-dot-org/bin/oneoff/newrelic.yml, /Users/pablomanuelmejiaminaya/code-dot-org/bin/oneoff/config/newrelic.yml.erb, /Users/pablomanuelmejiaminaya/code-dot-org/bin/oneoff/newrelic.yml.erb, /Users/pablomanuelmejiaminaya/code-dot-org/dashboard/config/newrelic.yml, /Users/pablomanuelmejiaminaya/code-dot-org/dashboard/newrelic.yml, /Users/pablomanuelmejiaminaya/code-dot-org/dashboard/config/newrelic.yml.erb, /Users/pablomanuelmejiaminaya/code-dot-org/dashboard/newrelic.yml.erb, /Users/pablomanuelmejiaminaya/.newrelic/newrelic.yml, /Users/pablomanuelmejiaminaya/newrelic.yml, /Users/pablomanuelmejiaminaya/.newrelic/newrelic.yml.erb, /Users/pablomanuelmejiaminaya/newrelic.yml.erb
+[2023-01-13 10:41:13 -0800 pablos-air.lan (59266)] INFO : Environment: development
+[2023-01-13 10:41:13 -0800 pablos-air.lan (59266)] INFO : No known dispatcher detected.
+[2023-01-13 10:41:13 -0800 pablos-air.lan (59266)] INFO : Application: development
+[2023-01-13 10:41:13 -0800 pablos-air.lan (59266)] WARN : No license key found. This often means your newrelic.yml file was not found, or it lacks a section for the running environment, 'development'. You may also want to try linting your newrelic.yml to ensure it is valid YML.
+[2023-01-13 10:41:13 -0800 pablos-air.lan (59266)] INFO : Installing Sinatra instrumentation
+[2023-01-13 10:41:13 -0800 pablos-air.lan (59266)] INFO : Installing ActiveStorage 5 instrumentation
+[2023-01-13 10:41:13 -0800 pablos-air.lan (59266)] INFO : Installing Redis Instrumentation
+[2023-01-13 10:41:13 -0800 pablos-air.lan (59266)] INFO : Installing Memcache instrumentation for dalli gem
+[2023-01-13 10:41:13 -0800 pablos-air.lan (59266)] INFO : Installing notifications based Active Record instrumentation
+[2023-01-13 10:41:13 -0800 pablos-air.lan (59266)] INFO : Installing Sequel instrumentation
+[2023-01-13 10:41:13 -0800 pablos-air.lan (59266)] INFO : Installing Rails 3+ middleware instrumentation
+[2023-01-13 10:41:13 -0800 pablos-air.lan (59266)] INFO : Installing Net instrumentation
+[2023-01-13 10:41:13 -0800 pablos-air.lan (59266)] INFO : Installing HTTPClient instrumentation
+[2023-01-13 10:41:13 -0800 pablos-air.lan (59266)] INFO : Installing deferred Rack::Builder instrumentation
+[2023-01-13 10:41:13 -0800 pablos-air.lan (59266)] INFO : Installing Rack::Builder middleware instrumentation
+[2023-01-13 10:41:13 -0800 pablos-air.lan (59266)] INFO : Installing ActiveJob instrumentation
+[2023-01-13 10:41:13 -0800 pablos-air.lan (59266)] INFO : Installing notifications based Action Controller instrumentation
+[2023-01-13 10:41:13 -0800 pablos-air.lan (59266)] INFO : Installing notification based Action View instrumentation
+[2023-01-13 10:41:13 -0800 pablos-air.lan (59266)] INFO : Installing notifications based Action Cable instrumentation
+[2023-01-13 10:41:13 -0800 pablos-air.lan (59266)] INFO : Finished instrumentation
+[2023-01-13 10:41:13 -0800 pablos-air.lan (59266)] INFO : Doing deferred dependency-detection before Rack startup

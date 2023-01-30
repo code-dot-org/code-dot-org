@@ -1,0 +1,107 @@
+GetSecretValue: development/cdo/slack_bot_token
+BEGINING___-******
+Finished seed:check_migrations (less than 1 second)
+HELOOO--------------------------
+BEGINING___-******
+Finished seed:videos (less than 1 second)
+HELOOO--------------------------
+BEGINING___-******
+Finished seed:concepts (less than 1 second)
+HELOOO--------------------------
+BEGINING___-******
+Finished seed:games (less than 1 second)
+HELOOO--------------------------
+BEGINING___-******
+Finished seed:deprecated_blockly_levels (less than 1 second)
+HELOOO--------------------------
+BEGINING___-******
+GetSecretValue: development/cdo/properties_encryption_key
+Finished seed:custom_levels (less than 1 second)
+HELOOO--------------------------
+BEGINING___-******
+Finished seed:dsls (less than 1 second)
+HELOOO--------------------------
+BEGINING___-******
+Finished seed:code_docs (less than 1 second)
+HELOOO--------------------------
+BEGINING___-******
+Finished seed:blocks (less than 1 second)
+HELOOO--------------------------
+BEGINING___-******
+Finished seed:standards (less than 1 second)
+HELOOO--------------------------
+BEGINING___-******
+Finished seed:shared_blockly_functions (less than 1 second)
+HELOOO--------------------------
+BEGINING___-******
+Finished seed:libraries (less than 1 second)
+HELOOO--------------------------
+BEGINING___-******
+Finished seed:course_offerings (less than 1 second)
+HELOOO--------------------------
+BEGINING___-******
+Finished seed:scripts (less than 1 second)
+HELOOO--------------------------
+BEGINING___-******
+Finished seed:courses (less than 1 second)
+HELOOO--------------------------
+BEGINING___-******
+Finished seed:reference_guides (less than 1 second)
+HELOOO--------------------------
+BEGINING___-******
+Finished seed:data_docs (less than 1 second)
+HELOOO--------------------------
+BEGINING___-******
+Error finding script level with search conditions: {"scripts.name"=>"iceage", "levels.level_num"=>"iceage_hello1", "games.name"=>"Studio"}
+Error finding script level with search conditions: {"scripts.name"=>"iceage", "levels.level_num"=>"iceage_hello2", "games.name"=>"Studio"}
+Error finding script level with search conditions: {"scripts.name"=>"iceage", "levels.level_num"=>"iceage_move_to_actor", "games.name"=>"Studio"}
+Error finding script level with search conditions: {"scripts.name"=>"iceage", "levels.level_num"=>"iceage_move_events", "games.name"=>"Studio"}
+Error finding script level with search conditions: {"scripts.name"=>"iceage", "levels.level_num"=>"iceage_repeat", "games.name"=>"Studio"}
+Error finding script level with search conditions: {"scripts.name"=>"iceage", "levels.level_num"=>"iceage_sound_and_points", "games.name"=>"Studio"}
+Error finding script level with search conditions: {"scripts.name"=>"iceage", "levels.level_num"=>"iceage_warn_ice_age", "games.name"=>"Studio"}
+Finished seed:callouts (less than 1 second)
+HELOOO--------------------------
+BEGINING___-******
+Finished seed:school_districts (less than 1 second)
+HELOOO--------------------------
+BEGINING___-******
+Finished seed:schools (less than 1 second)
+HELOOO--------------------------
+BEGINING___-******
+done
+Finished seed:secret_words (less than 1 second)
+HELOOO--------------------------
+BEGINING___-******
+done
+Finished seed:secret_pictures (less than 1 second)
+HELOOO--------------------------
+BEGINING___-******
+Finished seed:ap_school_codes (less than 1 second)
+HELOOO--------------------------
+BEGINING___-******
+Finished seed:ap_cs_offerings (less than 1 second)
+HELOOO--------------------------
+BEGINING___-******
+Finished seed:ib_school_codes (less than 1 second)
+HELOOO--------------------------
+BEGINING___-******
+Finished seed:ib_cs_offerings (less than 1 second)
+HELOOO--------------------------
+BEGINING___-******
+Finished seed:state_cs_offerings (less than 1 second)
+HELOOO--------------------------
+BEGINING___-******
+Finished seed:donors (less than 1 second)
+HELOOO--------------------------
+BEGINING___-******
+Finished seed:donor_schools (less than 1 second)
+HELOOO--------------------------
+BEGINING___-******
+Finished seed:foorms (less than 1 second)
+HELOOO--------------------------
+BEGINING___-******
+Finished seed:import_pegasus_data (less than 1 second)
+HELOOO--------------------------
+BEGINING___-******
+Finished seed:all (less than 1 second)
+HELOOO--------------------------

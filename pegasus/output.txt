@@ -1,0 +1,1 @@
+GetSecretValue: development/cdo/slack_bot_token

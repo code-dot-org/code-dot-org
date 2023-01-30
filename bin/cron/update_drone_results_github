@@ -1,0 +1,53 @@
+#!/usr/bin/env ruby
+require_relative 'only_one'
+abort 'Script already running' unless only_one_running?(__FILE__)
+
+# This script updates the "DTS" check on PRs
+require 'aws-sdk-s3'
+require 'parallel'
+require 'octokit'
+require_relative '../../deployment'
+require 'cdo/github'
+require 'cdo/developers_topic'
+
+class CucumberTests
+  def initialize(bucket_name, prefix)
+    bucket = Aws::S3::Bucket.new(bucket_name)
+    objects = bucket.objects({prefix: prefix})
+    @@tests = []
+    Parallel.map(objects, in_threads: Parallel.processor_count) do |aws_summary|
+      puts aws_summary
+      @@tests.append(CucumberTest.new(aws_summary, bucket))
+
+    end
+  end
+
+  def print_tests
+    @@tests.each do |test|
+      puts test
+    end
+  end
+end
+
+class CucumberTest
+  def initialize(aws_summary, bucket)
+    @summary_key = aws_summary.key
+    @last_modified = aws_summary.last_modified
+    object = bucket.object(aws_summary.key)
+    @commit = object.metadata['commit']
+    @attempt = object.metadata['attempt']
+    @is_successful = object.metadata['success']
+    @duration = object.metadata['duration']
+    @is_eyes_test = aws_summary.key.include? '_eyes_'
+    @commits = Octokit.commit(GitHub::REPO, @commit)
+    puts @commits.to_string
+  end
+end
+
+def main
+  t = CucumberTests.new('cucumber-logs', 'circle/23873')
+    t.print_tests
+
+end
+
+main
