@@ -1,8 +1,11 @@
 :ruby
   warnings = {
-    level_type: "Example solutions are dependent on this field for generating solution URLs. If you change the level subtype, any existing example solution URLs will break.",
-    encrypted_examples: "For Sprite Lab levels, the project URL for example solutions depends on the level subtype (Sprite Lab, Science or Story). Any existing example solutions will break if you change the level subtype without updating the channel tokens here.",
-    project_template: "For Sprite Lab levels, you may get unexpected behavior if the template has a different level subtype (Sprite Lab, Science, or Story) than this level. Make sure the level subtypes match."
+    level_type: "Example solutions are dependent on this field for generating solution URLs. If you change the level subtype,
+      any existing example solution URLs will break. In addition, you may experience unexpected behavior if you use a project template with a different subtype",
+    encrypted_examples: "For Sprite Lab levels, the project URL for example solutions depends on the level subtype (Sprite Lab, Science or Story).
+      Any existing example solutions will break if you change the level subtype without updating the channel tokens here.",
+    project_template: "For Sprite Lab levels, you may get unexpected behavior if the template has a different level subtype (Sprite Lab, Science, or Story)
+      than this level. Make sure the level subtypes match."
   }
 
 = render partial: 'levels/editors/fields/instructions_area', locals: {f: f}
