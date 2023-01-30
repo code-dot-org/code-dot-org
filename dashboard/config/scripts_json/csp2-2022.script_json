@@ -30,7 +30,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-01-04 04:33:13 UTC",
+    "serialized_at": "2023-01-27 20:25:57 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -1310,7 +1310,7 @@
       "key": "567b1934-5b7f-4e7a-8497-72f11290fbf0",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What are the similarities and differences between Internet Protocol (IP) and the addressing rules our class made?  Would rules like ours or IP work if they were secret?* \n\nHave students share their responses with a neighbor before discussing with the whole class.\n\n**Discussion Goal:** Students should walk away with an understanding that both the class rules and IP are shared, open protocols.  Key points:\n\n* All devices and computers on the Internet use IP to connect and communicate with each other.\n* Devices are assigned unique numbers (converted to binary sequences) called IP addresses.\n* All devices format the sender and receiver information the same way so that devices on different networks can still communicate.\n* These shared rules are called protocols. The Internet as we know it is actually these sets of protocols that are used to communiate over networks.\n"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What are the similarities and differences between Internet Protocol (IP) and the addressing rules our class made?  Would rules like ours or IP work if they were secret?* \n\nHave students share their responses with a neighbor before discussing with the whole class.\n\n**Discussion Goal:** Students should walk away with an understanding that both the class rules and IP are shared, open protocols.  Key points:\n\n* All devices and computers on the Internet use IP to connect and communicate with each other.\n* Devices are assigned unique numbers (converted to binary sequences) called IP addresses.\n* All devices format the sender and receiver information the same way so that devices on different networks can still communicate.\n* These shared rules are called protocols. The Internet as we know it is actually these sets of protocols that are used to communicate over networks.\n"
       },
       "seeding_key": {
         "activity_section.key": "567b1934-5b7f-4e7a-8497-72f11290fbf0",
