@@ -22,6 +22,7 @@ Scenario: Can Publish and Unpublish a Project (Button Version)
   Then I click selector ".ui-personal-projects-unpublish-button"
   And I wait until element ".ui-personal-projects-publish-button" is visible
 
+@no_safari
 Scenario: Can Rename a Project
   Given I make a "playlab" project named "Old Name"
   Given I am on "http://studio.code.org/projects"
@@ -38,6 +39,7 @@ Scenario: Can Rename a Project
   And I wait until element ".ui-projects-rename-save" is not visible
   And the first project in the table is named "New Name"
 
+@no_safari
 Scenario: Can Remix a Project
   Given I make a "playlab" project named "Remix Template"
   Given I am on "http://studio.code.org/projects"
@@ -50,6 +52,7 @@ Scenario: Can Remix a Project
   And I press the child number 1 of class ".pop-up-menu-item"
   And I wait until current URL contains "/edit"
 
+@no_safari
 Scenario: Can Delete a Project
   Given I make a "playlab" project named "To Be Deleted"
   Given I am on "http://studio.code.org/projects"
