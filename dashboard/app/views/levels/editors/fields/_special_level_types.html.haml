@@ -56,8 +56,8 @@
       #plusAnswerContainedLevel
         %i.fa.fa-plus-circle
 
-  -# Only show subtype for basic Sprite Lab, not Dance or Poetry. Poetry has a separate selector, and Dance does not
-  -# have a subtype concept.
+  -# Only show subtype for basic Sprite Lab, not Dance or Poetry. Poetry has a separate selector,
+  -# and Dance does not have a subtype concept.
   - if @level.is_a?(GamelabJr) && !(@level.is_a?(Dancelab) || @level.is_a?(Poetry))
     .field
       = f.label :standalone_app_name, 'Level Subtype'
