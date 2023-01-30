@@ -720,6 +720,11 @@ en:
         csc-sprite-lab-pixel-editor: Draw Your Own Sprite
         csa-pl-intro-to-strings: Introduction to Strings in Java
         csa-pl-compareTo: The compareTo() method
+        csc-event-short-intro: Events Short Intro
+        PL_CSD_CircuitPlayground_Overview_AppsWithDevices: Circuit Playground Unit Overview
+        csa-day-in-pm-pl: What does a project manager do?
+        csa-pl-intro-to-pm: Introduction to Project Managment
+        PL_CSD_CircuitPlayground_Setup: Circuit Playground Setup
     callout:
       text:
         drag_blocks: Drag a "move" block and snap it below the other block

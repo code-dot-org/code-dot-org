@@ -72,7 +72,11 @@ export default class HeaderPopup extends Component {
         {!this.state.open && (
           <button
             type="button"
-            className={classNames('header_popup_link', styles.headerItem)}
+            className={classNames(
+              'no-mc',
+              'header_popup_link',
+              styles.headerItem
+            )}
             onClick={this.handleClickOpen}
           >
             <i className={classNames('fa fa-caret-down', styles.caret)} />
@@ -84,7 +88,11 @@ export default class HeaderPopup extends Component {
           <div>
             <button
               type="button"
-              className={styles.headerItem}
+              className={classNames(
+                'no-mc',
+                styles.headerItem,
+                styles.headerItemLess
+              )}
               onClick={this.handleClickClose}
             >
               <i className={classNames('fa fa-caret-up', styles.caret)} />

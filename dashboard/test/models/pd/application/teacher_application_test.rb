@@ -207,7 +207,7 @@ module Pd::Application
         regional_partner_workshop_ids: workshops.map(&:id),
         able_to_attend_multiple: (
         # Select all but the first. Expect the first selected to be returned below
-        workshops[1..-1].map do |workshop|
+        workshops[1..].map do |workshop|
           "#{workshop.friendly_date_range} in #{workshop.location_address} hosted by Code.org"
         end
         )
@@ -292,17 +292,6 @@ module Pd::Application
       )
 
       assert_equal workshop_1, application_2.get_first_selected_workshop
-    end
-
-    test 'can_see_locked_status? is always false' do
-      teacher = create :teacher
-      g1_program_manager = create :program_manager, regional_partner: create(:regional_partner, group: 1)
-      g3_program_manager = create :program_manager, regional_partner: create(:regional_partner, group: 3)
-      workshop_admin = create :workshop_admin
-
-      [teacher, g1_program_manager, g3_program_manager, workshop_admin].each do |user|
-        refute TeacherApplication.can_see_locked_status?(user)
-      end
     end
 
     test 'columns_to_remove' do
@@ -423,7 +412,7 @@ module Pd::Application
 
       # update related field
       Timecop.freeze 1
-      application.update!(form_data: application.form_data_hash.merge("firstName": 'Garfunkel').to_json)
+      application.update!(form_data: application.form_data_hash.merge(firstName: 'Garfunkel').to_json)
       assert_status_log(
         [
           {status: 'incomplete', at: 1.second.ago},

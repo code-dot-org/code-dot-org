@@ -37,6 +37,9 @@ import {flyoutCategory as functionsFlyoutCategory} from './addons/functionEditor
 
 const BLOCK_PADDING = 7; // Calculated from difference between block height and text height
 
+const INFINITE_LOOP_TRAP =
+  '  executionInfo.checkTimeout(); if (executionInfo.isTerminated()){return;}\n';
+
 /**
  * Wrapper class for https://github.com/google/blockly
  * This wrapper will facilitate migrating from CDO Blockly to Google Blockly
@@ -92,9 +95,18 @@ const BlocklyWrapper = function(blocklyInstance) {
 function initializeBlocklyWrapper(blocklyInstance) {
   const blocklyWrapper = new BlocklyWrapper(blocklyInstance);
 
-  blocklyWrapper.setInfiniteLoopTrap = function() {}; // TODO
-  blocklyWrapper.clearInfiniteLoopTrap = function() {}; // TODO
-  blocklyWrapper.getInfiniteLoopTrap = function() {}; // TODO
+  blocklyWrapper.setInfiniteLoopTrap = function() {
+    Blockly.JavaScript.INFINITE_LOOP_TRAP = INFINITE_LOOP_TRAP;
+  };
+
+  blocklyWrapper.clearInfiniteLoopTrap = function() {
+    Blockly.JavaScript.INFINITE_LOOP_TRAP = '';
+  };
+
+  blocklyWrapper.getInfiniteLoopTrap = function() {
+    return Blockly.JavaScript.INFINITE_LOOP_TRAP;
+  };
+
   blocklyWrapper.loopHighlight = function() {}; // TODO
   blocklyWrapper.getWorkspaceCode = function() {
     return Blockly.JavaScript.workspaceToCode(Blockly.mainBlockSpace);
@@ -226,12 +238,12 @@ function initializeBlocklyWrapper(blocklyInstance) {
   // because the alias name is not the same as the underlying property name.
   Object.defineProperty(blocklyWrapper, 'mainBlockSpace', {
     get: function() {
-      return this.blockly_.mainWorkspace;
+      return this.blockly_.getMainWorkspace();
     }
   });
   Object.defineProperty(blocklyWrapper, 'mainBlockSpaceEditor', {
     get: function() {
-      return this.blockly_.mainWorkspace;
+      return this.blockly_.getMainWorkspace();
     }
   });
   Object.defineProperty(blocklyWrapper, 'SVG_NS', {
@@ -307,9 +319,7 @@ function initializeBlocklyWrapper(blocklyInstance) {
   };
 
   blocklyWrapper.BlockSvg.prototype.isUnused = function() {
-    const isTopBlock = this.previousConnection === null;
-    const hasParentBlock = !!this.parentBlock_;
-    return !(isTopBlock || hasParentBlock);
+    return this.disabled;
   };
 
   blocklyWrapper.BlockSvg.prototype.removeUnusedBlockFrame = function() {
@@ -525,13 +535,15 @@ function initializeBlocklyWrapper(blocklyInstance) {
     blocklyWrapper.customSimpleDialog = opt_options.customSimpleDialog;
 
     // Shrink container to make room for the workspace header
-    container.style.height = `calc(100% - ${
-      styleConstants['workspace-headers-height']
-    }px)`;
+    if (!opt_options.isBlockEditMode) {
+      container.style.height = `calc(100% - ${
+        styleConstants['workspace-headers-height']
+      }px)`;
+    }
     blocklyWrapper.isStartMode = !!opt_options.editBlocks;
     const workspace = blocklyWrapper.blockly_.inject(container, options);
 
-    if (!blocklyWrapper.isStartMode) {
+    if (!blocklyWrapper.isStartMode && !opt_options.isBlockEditMode) {
       workspace.addChangeListener(Blockly.Events.disableOrphans);
     }
 

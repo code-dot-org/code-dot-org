@@ -1,0 +1,61 @@
+<Javalab>
+  <config><![CDATA[{
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "The <a href=\"https://www.kaggle.com/datasets/successikuku/tmbd-movie-dataset\" target=\"_blank\">**TMBD Movie dataset**</a> includes the names of movies, the runtime of each movie in minutes, and the year each movie was released.\r\n\r\n✅ **TO DO #1:** In `Movie.java`(#e7e8ea), write the `checkForDuplicates()`(#e7e8ea) method to determine if the parameter `movieData`(#e7e8ea) has duplicate values.\r\n\r\n1. Traverse the 1D array `movieData`(#e7e8ea).\r\n\r\n2. If the current value appears in `movieData`(#e7e8ea) more than once, return `true`(#e7e8ea).\r\n\r\n3. If none of the values appear in `movieData`(#e7e8ea) more than once, return `false`(#e7e8ea).\r\n\r\n::: details [**🔦 Need help with your algorithm?**]\r\n  \r\nHere is one approach to solving this problem.\r\n\r\n```\r\nloop from 0 to movieData.length\r\n  loop from next position to movieData.length\r\n    if movieData[start] == movieData[next]\r\n      return true\r\n\r\nreturn false\r\n```\r\n:::\r\n&nbsp;\r\n\r\n✅ **TO DO #2:** In `MovieRunner.java`(#e7e8ea), call the `checkForDuplicates()`(#e7e8ea) method and print the result.\r\n\r\n💡 **TIP:** Check out the **Help & Tips** tab ⬆️ for help with writing a nested `for`(#e7e8ea) loop.\r\n\r\n## ***Don't forget to . . .***\r\n\r\n![](https://images.code.org/eb2c8910ae2e150019b8e2177405d4af-image-1668191576873.png)",
+    "mini_rubric": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "csa_view_mode": "console",
+    "start_sources": {
+      "MovieRunner.java": {
+        "text": "public class MovieRunner {\n  public static void main(String[] args) {\n\n    /* ----------------------------------- TO DO -----------------------------------\n     * ✅ instructions for the student to complete\n     * -----------------------------------------------------------------------------\n     */\n\n\n\n\n    \n    \n    \n  }\n}",
+        "isVisible": true,
+        "tabOrder": 0
+      },
+      "MovieDatabase.java": {
+        "text": "/*\n * Manages data about movies from The Movie Database\n */\npublic class MovieDatabase {\n\n  private String nameFile;      // The name of the file containing the names data\n  private String runtimeFile;   // The name of the file containing the runtime data\n  private String ratingFile;    // The name of the file containing the ratings data\n  private Movie[] movieData;    // The 1D array of Movie objects\n\n  /*\n   * Reads the data from nameFile, runtimeFile, and\n   * ratingFile to initialize movieData\n   */\n  public MovieDatabase(String nameFile, String runtimeFile, String ratingFile) {\n    this.nameFile = nameFile;\n    this.runtimeFile = runtimeFile;\n    this.ratingFile = ratingFile;\n    movieData = createMovies();\n  }\n\n  /*\n   * Returns a 1D array of Movie objects using the\n   * data from nameFile, runtimeFile, and ratingFile\n   */\n  public Movie[] createMovies() {\n    String[] namesData = FileReader.toStringArray(nameFile);\n    int[] runtimeData = FileReader.toIntArray(runtimeFile);\n    double[] ratingsData = FileReader.toIntArray(ratingFile);\n\n    Movie[] tempMovies = new Movie[namesData.length];\n\n    for (int index = 0; index < tempMovies.length; index++) {\n      tempMovies[index] = new Movie(namesData[index], runtimeData[index], ratingsData[index]);\n    }\n\n    return tempMovies;\n  }\n\n  /*\n   * Returns true if any movie in movieData was released\n   * the same year, otherwise returns false\n   */\n  public boolean checkForDuplicates() {\n    /* ----------------------------------- TO DO -----------------------------------\n     * ✅ instructions for the student to complete\n     * -----------------------------------------------------------------------------\n     */\n\n    \n\n    return false;\n  }\n\n  /*\n   * Returns a String containing each movie's information\n   */\n  public String toString() {\n    String result = \"\";\n\n    for (Movie theMovie : movieData) {\n      result += theMovie + \"\\n\";\n    }\n\n    return result;\n  }\n}",
+        "isVisible": true,
+        "tabOrder": 1
+      },
+      "names.txt": {
+        "text": "Jurassic World\nMad Max: Fury Road\nInsurgent\nStar Wars: The Force Awakens\nFurious 7\nThe Revenant\nTerminator Genisys\nThe Martian\nMinions\nInside Out\nSpectre\nJupiter Ascending\nEx Machina\nPixels\nAvengers: Age of Ultron\nThe Hateful Eight\nTaken 3\nAnt-Man\nThe Hunger Games: Mockingjay - Part 2\nTomorrowland\nSan Andreas\nThe Big Short\nMission: Impossible - Rogue Nation\nKingsman: The Secret Service\nSpotlight\nMaze Runner: The Scorch Trials\nChappie\nGoosebumps\nRoom\nThe Good Dinosaur\nBrooklyn\nStraight Outta Compton\nThe Last Witch Hunter\nThe Age of Adaline\nHardcore Henry\nHome\nThe Lobster\nCarol\nThe Intern\nEverest\nPoint Break\nBurnt\nSelf/less\nMortdecai\nBlackhat\nFantastic Four\nThe Witch\nSpy\nFocus\nHitman: Agent 47",
+        "isVisible": true,
+        "tabOrder": 3
+      },
+      "runtimes.txt": {
+        "text": "124\n120\n119\n136\n137\n156\n125\n141\n91\n94\n148\n124\n108\n105\n141\n167\n109\n115\n136\n130\n114\n130\n131\n130\n128\n132\n120\n103\n117\n93\n111\n147\n106\n112\n97\n94\n118\n118\n121\n121\n114\n100\n116\n106\n133\n100\n92\n120\n105\n96",
+        "isVisible": true,
+        "tabOrder": 4
+      },
+      "ratings.txt": {
+        "text": "6.5\n7.1\n6.3\n7.5\n7.3\n7.2\n5.8\n7.6\n6.5\n8\n6.2\n5.2\n7.6\n5.8\n7.4\n7.4\n6.1\n7\n6.5\n6.2\n6.1\n7.3\n7.1\n7.6\n7.8\n6.4\n6.6\n6.2\n8\n6.6\n7.3\n7.7\n5.6\n7.3\n5.9\n6.9\n6.6\n7.1\n7.1\n6.7\n5.5\n6.3\n6.2\n5.3\n5\n4.4\n5.8\n6.9\n6.7\n5.5",
+        "isVisible": true,
+        "tabOrder": 5
+      },
+      "FileReader.java": {
+        "text": "import java.util.Scanner;\nimport java.util.ArrayList;\nimport java.io.File;\nimport java.io.FileNotFoundException;\n\npublic class FileReader {\n\n  public static String[] toStringArray(String filename) {\n    ArrayList<String> temp = readDataFromFile(filename);\n    String[] data = new String[temp.size()];\n\n    for (int index = 0; index < data.length; index++) {\n      String currentValue = temp.get(index);\n      data[index] = currentValue;\n    }\n\n    return data;\n  }\n\n  public static int[] toIntArray(String filename) {\n    ArrayList<String> temp = readDataFromFile(filename);\n    int[] data = new int[temp.size()];\n\n    for (int index = 0; index < data.length; index++) {\n      String currentValue = temp.get(index);\n      data[index] = Integer.parseInt(currentValue);\n    }\n\n    return data;\n  }\n\n  public static double[] toDoubleArray(String filename) {\n    ArrayList<String> temp = readDataFromFile(filename);\n    double[] data = new double[temp.size()];\n\n    for (int index = 0; index < data.length; index++) {\n      String currentValue = temp.get(index);\n      data[index] = Double.parseDouble(currentValue);\n    }\n\n    return data;\n  }\n\n  private static Scanner createScanner(File theFile) {\n    Scanner tempScanner = null;\n\n    try {\n      tempScanner = new Scanner(theFile);\n    } catch(FileNotFoundException error) {\n      System.out.println(\"File not found.\");\n    }\n\n    return tempScanner;\n  }\n\n  private static ArrayList<String> readDataFromFile(String filename) {\n    File dataFile = new File(filename);\n    Scanner reader = createScanner(dataFile);\n    ArrayList<String> temp = new ArrayList<String>();\n\n    while (reader.hasNextLine()) {\n      String currentLine = reader.nextLine().trim();\n      temp.add(currentLine);\n    }\n\n    reader.close();\n    return temp;\n  }\n  \n}",
+        "isVisible": false,
+        "tabOrder": 6
+      },
+      "Movie.java": {
+        "text": "/*\n * Represents a movie\n */\npublic class Movie {\n\n  private String name;    // The name of a movie\n  private int runtime;    // The length of a movie in minutes\n  private int year;       // The year a movie was released\n\n  /*\n   * Sets name, runtime, and year to the specified values\n   */\n  public Movie(String name, int runtime, int year) {\n    this.name = name;\n    this.runtime = runtime;\n    this.year = year;\n  }\n\n  /*\n   * Returns the name of the movie\n   */\n  public String getName() {\n    return name;\n  }\n\n  /*\n   * Returns the runtime of the movie\n   */\n  public int getRuntime() {\n    return runtime;\n  }\n\n  /*\n   * Returns the year the movie was released\n   */\n  public int getYear() {\n    return year;\n  }\n\n  /*\n   * Returns a String containing the name, runtime, and year of the movie\n   */\n  public String toString() {\n    return name + \"(\" + year + \"): \" + runtime + \" minutes\";\n  }\n}",
+        "isVisible": true,
+        "tabOrder": 2
+      }
+    },
+    "reference_links": [
+      "/courses/csa-2023/guides/nested-loops"
+    ],
+    "display_name": "Movies",
+    "bubble_choice_description": "Determine whether the TMBD Movie dataset contains duplicate values.",
+    "thumbnail_url": "https://images.code.org/b80d7cc047016f7179b76b585bf15e6c-tv.png"
+  },
+  "game_id": 68,
+  "created_at": "2023-01-12T22:23:10.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2023-01-12T22:23:10.582+00:00\",\"changed\":[\"cloned from \\\"CSA U3L9-L6a_2023\\\"\"],\"cloned_from\":\"CSA U3L9-L6a_2023\"},{\"changed_at\":\"2023-01-12 22:23:11 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-01-29 23:26:08 +0000\",\"changed\":[\"long_instructions\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-01-30 01:25:40 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-01-30 01:32:14 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-01-30 01:36:47 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+}]]></config>
+</Javalab>

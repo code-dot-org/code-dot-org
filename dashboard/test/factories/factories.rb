@@ -110,6 +110,9 @@ FactoryGirl.define do
       trait :with_terms_of_service do
         terms_of_service_version 1
       end
+      trait :not_first_sign_in do
+        sign_in_count 2
+      end
       factory :terms_of_service_teacher do
         with_terms_of_service
       end
@@ -952,7 +955,7 @@ FactoryGirl.define do
       props = {}
       # If multiple levels are specified, mark all but the first as inactive
       if script_level.levels.length > 1
-        script_level.levels[1..-1].each do |level|
+        script_level.levels[1..].each do |level|
           props[level.name] = {active: false}
         end
       end

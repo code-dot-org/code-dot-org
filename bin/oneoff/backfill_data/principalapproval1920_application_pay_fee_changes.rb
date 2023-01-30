@@ -19,7 +19,7 @@ ActiveRecord::Base.transaction do
       next
     end
 
-    application.update_form_data_hash({"payFee": new_pay_fee})
+    application.update_form_data_hash({payFee: new_pay_fee})
     if application.save
       total_updated += 1
     else

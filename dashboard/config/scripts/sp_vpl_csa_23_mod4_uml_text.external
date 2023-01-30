@@ -1,0 +1,38 @@
+name 'SP-VPL-CSA-23-mod4-UML-text'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# UML diagrams and documentation
+
+In Java, there are lots of classes written by other programmers!  While we cannot always see the actual code from those programmers, that is OK because we have resources to help us understand how to use classes.  
+
+One tool we use in Java to represent classes is a **UML diagram**.  A UML diagram is a standard way to visualize the design of a program in software engineering.  UML stands for "Unified Modeling Language", but no one really calls it that - we just know you were curious!  UML diagrams help software engineers understand the structure and identify the components of a class. 
+
+## UML diagram of the Painter class
+
+Below is an image of the UML diagram for the `Painter` class.
+
+<img src="https://images.code.org/d28de0e1613b52f90478eaa014e1f5e7-image-1674169693284.56.27 PM.png" style="width:50%" alt="Unit 3 Project Rubric">
+
+Some things to notice in the UML diagram:
+
+1. The name of the class (`Painter`) is at the top of the UML diagram.  
+2. Then we list the attributes in the class.
+3. Below the attributes are the behaviors, or methods, in the class.  
+
+As you review the UML diagram, can you find the methods we have used so far in the Painter class?  Which methods do you want to know more about?
+
+## Documentation
+The UML diagram can be a good place to get an overview of a class, but sometimes we need more information.  This is when the documentation comes in helpful.
+
+At the top of a programming window in Code.org you will see a “Documentation” tab.  This tab includes documentation for JavaLab, including documentation for the `Painter` class.  
+
+<img src="https://images.code.org/e50ce0decfe4183f79e5a84d5b5e9ff8-image-1674170119889.14.51 PM.png" style="width:50%" alt="Unit 3 Project Rubric">
+
+<hr>
+
+**Up next:** We will use the documentation tab to navigate `Painter` objects
+
+![]()
+MARKDOWN

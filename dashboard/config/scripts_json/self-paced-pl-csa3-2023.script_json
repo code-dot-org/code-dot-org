@@ -10,7 +10,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-10-21 19:01:56 UTC",
+    "serialized_at": "2023-01-09 23:45:16 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -116,6 +116,21 @@
         "lesson_group.key": "",
         "script.name": "self-paced-pl-csa3-2023"
       }
+    },
+    {
+      "key": "Module 7 post-work: The Unit 7 project",
+      "name": "Module 7 post-work: The Unit 7 project",
+      "absolute_position": 6,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 6,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Module 7 post-work: The Unit 7 project",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csa3-2023"
+      }
     }
   ],
   "lesson_activities": [
@@ -177,6 +192,18 @@
       "seeding_key": {
         "lesson_activity.key": "21f71655-121a-4ecd-bee1-072002ff906c",
         "lesson.key": "Arrays in Java",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csa3-2023"
+      }
+    },
+    {
+      "key": "7664ec73-1084-4247-80c4-75657b24241d",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "7664ec73-1084-4247-80c4-75657b24241d",
+        "lesson.key": "Module 7 post-work: The Unit 7 project",
         "lesson_group.key": "",
         "script.name": "self-paced-pl-csa3-2023"
       }
@@ -449,6 +476,61 @@
         "activity_section.key": "a6141d80-a129-4987-a7c8-da15d4a23d40",
         "lesson_activity.key": "21f71655-121a-4ecd-bee1-072002ff906c"
       }
+    },
+    {
+      "key": "93647e0c-84c1-4345-9a5a-cb8026642fb1",
+      "position": 1,
+      "properties": {
+        "progression_name": "Module 7 Overview (~5 minutes)"
+      },
+      "seeding_key": {
+        "activity_section.key": "93647e0c-84c1-4345-9a5a-cb8026642fb1",
+        "lesson_activity.key": "7664ec73-1084-4247-80c4-75657b24241d"
+      }
+    },
+    {
+      "key": "a276c323-5631-4a57-846e-cd0cfa7b9402",
+      "position": 2,
+      "properties": {
+        "progression_name": "Project Managment"
+      },
+      "seeding_key": {
+        "activity_section.key": "a276c323-5631-4a57-846e-cd0cfa7b9402",
+        "lesson_activity.key": "7664ec73-1084-4247-80c4-75657b24241d"
+      }
+    },
+    {
+      "key": "a42d7004-c6eb-4b41-81b1-0d1034ad7e6f",
+      "position": 3,
+      "properties": {
+        "progression_name": "The Unit 7 Project"
+      },
+      "seeding_key": {
+        "activity_section.key": "a42d7004-c6eb-4b41-81b1-0d1034ad7e6f",
+        "lesson_activity.key": "7664ec73-1084-4247-80c4-75657b24241d"
+      }
+    },
+    {
+      "key": "04d54f36-5b95-4f42-9072-83c1ad2182d3",
+      "position": 4,
+      "properties": {
+        "progression_name": "Building Project Management Skills"
+      },
+      "seeding_key": {
+        "activity_section.key": "04d54f36-5b95-4f42-9072-83c1ad2182d3",
+        "lesson_activity.key": "7664ec73-1084-4247-80c4-75657b24241d"
+      }
+    },
+    {
+      "key": "f88ce6c8-1edd-46fc-b644-55fd401a080e",
+      "position": 5,
+      "properties": {
+        "progression_name": "Wrap-up (~5 minutes)"
+      },
+      "seeding_key": {
+        "activity_section.key": "f88ce6c8-1edd-46fc-b644-55fd401a080e",
+        "lesson_activity.key": "7664ec73-1084-4247-80c4-75657b24241d"
+      }
     }
   ],
   "script_levels": [
@@ -458,6 +540,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Introduction to Module 3_2023"
+        ],
         "progression": "Overview"
       },
       "bonus": false,
@@ -480,6 +565,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-CSA-22-mod3-java-lab-intro-video_2023"
+        ],
         "progression": "Introduction to Java Lab"
       },
       "bonus": false,
@@ -502,6 +590,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-CSA-22-mod3-java-lab-intro-main-method-video_2023"
+        ],
         "progression": "Introduction to Java Lab"
       },
       "bonus": false,
@@ -524,6 +615,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Intro to Java Lab - debugging 1_2023"
+        ],
         "progression": "Introduction to Java Lab"
       },
       "bonus": false,
@@ -546,6 +640,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-CSA-22-printing-in-java-video_2023"
+        ],
         "progression": "Printing to the console"
       },
       "bonus": false,
@@ -568,6 +665,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Intro to Java Lab - System_2023"
+        ],
         "progression": "Printing to the console"
       },
       "bonus": false,
@@ -590,6 +690,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-CSA-22-mod3-how-to-debug-using-the-console-video_2023"
+        ],
         "progression": "Debugging"
       },
       "bonus": false,
@@ -612,6 +715,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSAPL3-1-SyntaxDebugging1_2023"
+        ],
         "progression": "Debugging"
       },
       "bonus": false,
@@ -634,6 +740,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSAPL3-1-SyntaxDebugging2_2023"
+        ],
         "progression": "Debugging"
       },
       "bonus": false,
@@ -656,6 +765,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSAPL3-1-SyntaxDebugging3_2023"
+        ],
         "progression": "Debugging"
       },
       "bonus": false,
@@ -678,6 +790,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-CSA-22-mod3-Vocab-lesson-1-matching_2023"
+        ],
         "progression": "Vocabulary"
       },
       "bonus": false,
@@ -700,6 +815,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-CSA-22-mod3-Intro-to-Lesson-2_2023"
+        ],
         "progression": "Overview"
       },
       "bonus": false,
@@ -722,6 +840,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-CSA-22-L2-variables-video_2023"
+        ],
         "progression": "Introduction to variables"
       },
       "bonus": false,
@@ -744,6 +865,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-CSA-22-mod3-data-types-matching_2023"
+        ],
         "progression": "Introduction to variables"
       },
       "bonus": false,
@@ -766,6 +890,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-CSA-22-mod3-variables-practice-1_2023"
+        ],
         "progression": "Introduction to variables"
       },
       "bonus": false,
@@ -788,6 +915,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-CSA-22-mod3-variables-practice-2_2023"
+        ],
         "progression": "Introduction to variables"
       },
       "bonus": false,
@@ -810,6 +940,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-CSA-22-mod3-updating-variables-math-map_2023"
+        ],
         "progression": "Updating variables"
       },
       "bonus": false,
@@ -832,6 +965,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-CSA-22-mod3-modifying-variables-mc_2023"
+        ],
         "progression": "Updating variables"
       },
       "bonus": false,
@@ -854,6 +990,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-CSA-22-mod3-variables-practice-3_2023"
+        ],
         "progression": "Updating variables"
       },
       "bonus": false,
@@ -876,6 +1015,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-CSA-22-mod3-updating-variables-strings-map_2023"
+        ],
         "progression": "Updating variables"
       },
       "bonus": false,
@@ -898,6 +1040,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-CSA-22-mod3-modify-variables-practice-1_2023"
+        ],
         "progression": "Updating variables"
       },
       "bonus": false,
@@ -920,6 +1065,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-CSA-22-mod3-compound-assignment-map_2023"
+        ],
         "progression": "Compound assignment operators"
       },
       "bonus": false,
@@ -942,6 +1090,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-CSA-22-mod3-compound-assignment-mc_2023"
+        ],
         "progression": "Compound assignment operators"
       },
       "bonus": false,
@@ -964,6 +1115,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-CSA-22-mod3-increment-op-map_2023"
+        ],
         "progression": "Compound assignment operators"
       },
       "bonus": false,
@@ -986,6 +1140,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-CSA-22-mod3-variables-increment-practice-1_2023"
+        ],
         "progression": "Compound assignment operators"
       },
       "bonus": false,
@@ -1008,6 +1165,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-CSA-22-mod3-increment-mc_2023"
+        ],
         "progression": "Compound assignment operators"
       },
       "bonus": false,
@@ -1030,6 +1190,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-CSA-22-mod3-Vocab-lesson-2-matching_2023"
+        ],
         "progression": "Vocabulary"
       },
       "bonus": false,
@@ -1052,6 +1215,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-CSA-22-mod3-L3-Overview_2023"
+        ],
         "progression": "Overview"
       },
       "bonus": false,
@@ -1074,6 +1240,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-CSA-22-mod3-L3-boolean-expressions-map_2023"
+        ],
         "progression": "Boolean expressions"
       },
       "bonus": false,
@@ -1096,6 +1265,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-CSA-22-mod3-L3-boolean-matching_2023"
+        ],
         "progression": "Boolean expressions"
       },
       "bonus": false,
@@ -1118,6 +1290,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-CSA-22-mod3-L3-if-statements-video_2023"
+        ],
         "progression": "If statements"
       },
       "bonus": false,
@@ -1140,6 +1315,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-CSA-22-mod3-L3-if-statement-practice-1_2023"
+        ],
         "progression": "If statements"
       },
       "bonus": false,
@@ -1162,6 +1340,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-CSA-22-mod3-L3-if-statements-other-languages_2023"
+        ],
         "progression": "If statements"
       },
       "bonus": false,
@@ -1184,6 +1365,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-CSA-22-mod3-L3-variables-predict-1_2023"
+        ],
         "progression": "If statements"
       },
       "bonus": false,
@@ -1206,6 +1390,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-CSA-22-mod3-L3-variables-practice-2_2023"
+        ],
         "progression": "If statements"
       },
       "bonus": false,
@@ -1228,6 +1415,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-CSA-22-mod3-L3-if-statements-mc_2023"
+        ],
         "progression": "If statements"
       },
       "bonus": false,
@@ -1250,6 +1440,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-CSA-22-mod3-L3-if-else-statements-video_2023"
+        ],
         "progression": "If-else statements"
       },
       "bonus": false,
@@ -1272,6 +1465,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-CSA-22-mod3-L3-if-else-practice-.5_2023"
+        ],
         "progression": "If-else statements"
       },
       "bonus": false,
@@ -1294,6 +1490,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-CSA-22-mod3-L3-if-else-practice-1_2023"
+        ],
         "progression": "If-else statements"
       },
       "bonus": false,
@@ -1316,6 +1515,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-CSA-22-mod3-L3-if-else-statements-mc_2023"
+        ],
         "progression": "If-else statements"
       },
       "bonus": false,
@@ -1338,6 +1540,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-CSA-22-mod3-L3-else-if-statements-video_2023"
+        ],
         "progression": "Else-if statements"
       },
       "bonus": false,
@@ -1360,6 +1565,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-CSA-22-mod3-L3-else-if-practice-1_2023"
+        ],
         "progression": "Else-if statements"
       },
       "bonus": false,
@@ -1382,6 +1590,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-CSA-22-mod3-L3-else-if-practice-2_2023"
+        ],
         "progression": "Else-if statements"
       },
       "bonus": false,
@@ -1404,6 +1615,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-CSA-22-mod3-L3-matching_2023"
+        ],
         "progression": "Vocabulary"
       },
       "bonus": false,
@@ -1426,6 +1640,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-CSA-22-mod3-L4-Overview_2023"
+        ],
         "progression": "Overview"
       },
       "bonus": false,
@@ -1448,6 +1665,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-CSA-22-L4-for-loops-video_2023"
+        ],
         "progression": "For loops"
       },
       "bonus": false,
@@ -1470,6 +1690,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-CSA-22-L4-for-loops-matching_2023"
+        ],
         "progression": "For loops"
       },
       "bonus": false,
@@ -1492,6 +1715,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-CSA-22-mod3-L4-for-loop-practice-1_2023"
+        ],
         "progression": "For loops"
       },
       "bonus": false,
@@ -1514,6 +1740,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-CSA-22-mod3-L4-for-loop-practice-2_2023"
+        ],
         "progression": "For loops"
       },
       "bonus": false,
@@ -1536,6 +1765,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-CSA-22-mod3-L4-for-loop-practice-3_2023"
+        ],
         "progression": "For loops"
       },
       "bonus": false,
@@ -1558,6 +1790,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-CSA-22-mod3-L4-for-loop-practice-4_2023"
+        ],
         "progression": "For loops"
       },
       "bonus": false,
@@ -1580,6 +1815,9 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-CSA-22-mod3-L4-for-loop-practice-5_2023"
+        ],
         "progression": "For loops"
       },
       "bonus": false,
@@ -1602,6 +1840,9 @@
       "activity_section_position": 8,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-CSA-22-mod3-L4-for-loop-practice-6_2023"
+        ],
         "progression": "For loops"
       },
       "bonus": false,
@@ -1624,6 +1865,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-CSA-22-mod3-L5-Overview_2023"
+        ],
         "progression": "Overview"
       },
       "bonus": false,
@@ -1646,6 +1890,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-CSA-22-L5-array-video-1_2023"
+        ],
         "progression": "Declaring and initializing arrays"
       },
       "bonus": false,
@@ -1668,6 +1915,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-CSA-22-L5-array-video-2_2023"
+        ],
         "progression": "Declaring and initializing arrays"
       },
       "bonus": false,
@@ -1690,6 +1940,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-CSA-22-mod3-L5-declaring-arrays-mc_2023"
+        ],
         "progression": "Declaring and initializing arrays"
       },
       "bonus": false,
@@ -1712,6 +1965,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-CSA-22-mod3-L5-indices-map_2023"
+        ],
         "progression": "Declaring and initializing arrays"
       },
       "bonus": false,
@@ -1734,6 +1990,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-CSA-22-mod3-L5-length-of-array-mc_2023"
+        ],
         "progression": "Declaring and initializing arrays"
       },
       "bonus": false,
@@ -1756,6 +2015,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-CSA-22-mod3-L5-accessing-mutating-mc_2023"
+        ],
         "progression": "Declaring and initializing arrays"
       },
       "bonus": false,
@@ -1778,6 +2040,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-CSA-22-mod3-L5-accessing-mutating-map_2023"
+        ],
         "progression": "Accessing and updating elements in an array"
       },
       "bonus": false,
@@ -1800,6 +2065,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-CSA-22-mod3-L5-acessing-mutating-practice-1_2023"
+        ],
         "progression": "Accessing and updating elements in an array"
       },
       "bonus": false,
@@ -1822,6 +2090,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-CSA-22-mod3-L5-acessing-mutating-practice-2_2023"
+        ],
         "progression": "Accessing and updating elements in an array"
       },
       "bonus": false,
@@ -1844,6 +2115,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-CSA-22-L5-array-traverse-video-1_2023"
+        ],
         "progression": "Traversing arrays"
       },
       "bonus": false,
@@ -1866,6 +2140,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-CSA-22-mod3-L5-traversing-mc_2023"
+        ],
         "progression": "Traversing arrays"
       },
       "bonus": false,
@@ -1888,6 +2165,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-CSA-22-L5-traverse-practice-1_2023"
+        ],
         "progression": "Traversing arrays"
       },
       "bonus": false,
@@ -1910,6 +2190,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-CSA-22-L5-traverse-practice-3_2023"
+        ],
         "progression": "Traversing arrays"
       },
       "bonus": false,
@@ -1932,6 +2215,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-CSA-22-L5-traverse-practice-2_2023"
+        ],
         "progression": "Traversing arrays"
       },
       "bonus": false,
@@ -1954,6 +2240,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-CSA-22-mod3-L5-acessing-mutating-practice-3_2023"
+        ],
         "progression": "Traversing arrays"
       },
       "bonus": false,
@@ -1976,6 +2265,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-CSA-22-mod3-Vocab-lesson-5-matching_2023"
+        ],
         "progression": "Vocabulary"
       },
       "bonus": false,
@@ -1998,6 +2290,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-CSA-22-Navigation-Mod3_2023"
+        ],
         "progression": "Wrap up"
       },
       "bonus": false,
@@ -2012,6 +2307,226 @@
       },
       "level_keys": [
         "SP-VPL-CSA-22-Navigation-Mod3_2023"
+      ]
+    },
+    {
+      "chapter": 72,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Module 7 Overview (~5 minutes)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "vpl-csa-module-7-overview_-t"
+        ],
+        "lesson.key": "Module 7 post-work: The Unit 7 project",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csa3-2023",
+        "activity_section.key": "93647e0c-84c1-4345-9a5a-cb8026642fb1"
+      },
+      "level_keys": [
+        "vpl-csa-module-7-overview_-t"
+      ]
+    },
+    {
+      "chapter": 73,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Project Managment"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "vpl-csa-module-7-2022-what-is-pm-video_-t"
+        ],
+        "lesson.key": "Module 7 post-work: The Unit 7 project",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csa3-2023",
+        "activity_section.key": "a276c323-5631-4a57-846e-cd0cfa7b9402"
+      },
+      "level_keys": [
+        "vpl-csa-module-7-2022-what-is-pm-video_-t"
+      ]
+    },
+    {
+      "chapter": 74,
+      "position": 3,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Project Managment"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "vpl-csa-module-7-2022-day-in-the-life-of-pm-video_-t"
+        ],
+        "lesson.key": "Module 7 post-work: The Unit 7 project",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csa3-2023",
+        "activity_section.key": "a276c323-5631-4a57-846e-cd0cfa7b9402"
+      },
+      "level_keys": [
+        "vpl-csa-module-7-2022-day-in-the-life-of-pm-video_-t"
+      ]
+    },
+    {
+      "chapter": 75,
+      "position": 4,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "The Unit 7 Project"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "vpl-csa-module-7-unit-7-project-text_-t"
+        ],
+        "lesson.key": "Module 7 post-work: The Unit 7 project",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csa3-2023",
+        "activity_section.key": "a42d7004-c6eb-4b41-81b1-0d1034ad7e6f"
+      },
+      "level_keys": [
+        "vpl-csa-module-7-unit-7-project-text_-t"
+      ]
+    },
+    {
+      "chapter": 76,
+      "position": 5,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "The Unit 7 Project"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "vpl-csa-module-7-clone-projects-level_-t"
+        ],
+        "lesson.key": "Module 7 post-work: The Unit 7 project",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csa3-2023",
+        "activity_section.key": "a42d7004-c6eb-4b41-81b1-0d1034ad7e6f"
+      },
+      "level_keys": [
+        "vpl-csa-module-7-clone-projects-level_-t"
+      ]
+    },
+    {
+      "chapter": 77,
+      "position": 6,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "The Unit 7 Project"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "vpl-csa-module-7-unit-7-project-structure-2022-text_-t"
+        ],
+        "lesson.key": "Module 7 post-work: The Unit 7 project",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csa3-2023",
+        "activity_section.key": "a42d7004-c6eb-4b41-81b1-0d1034ad7e6f"
+      },
+      "level_keys": [
+        "vpl-csa-module-7-unit-7-project-structure-2022-text_-t"
+      ]
+    },
+    {
+      "chapter": 78,
+      "position": 7,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "The Unit 7 Project"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "vpl-csa-module-7-2022-project-planning-reflection_-t"
+        ],
+        "lesson.key": "Module 7 post-work: The Unit 7 project",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csa3-2023",
+        "activity_section.key": "a42d7004-c6eb-4b41-81b1-0d1034ad7e6f"
+      },
+      "level_keys": [
+        "vpl-csa-module-7-2022-project-planning-reflection_-t"
+      ]
+    },
+    {
+      "chapter": 79,
+      "position": 8,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Building Project Management Skills"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "vpl-csa-module-7-2022-vocabulary-of-pm-video_-t"
+        ],
+        "lesson.key": "Module 7 post-work: The Unit 7 project",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csa3-2023",
+        "activity_section.key": "04d54f36-5b95-4f42-9072-83c1ad2182d3"
+      },
+      "level_keys": [
+        "vpl-csa-module-7-2022-vocabulary-of-pm-video_-t"
+      ]
+    },
+    {
+      "chapter": 80,
+      "position": 9,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Building Project Management Skills"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "vpl-csa-module-7-2022-putting-it-all-together-reflection_-t"
+        ],
+        "lesson.key": "Module 7 post-work: The Unit 7 project",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csa3-2023",
+        "activity_section.key": "04d54f36-5b95-4f42-9072-83c1ad2182d3"
+      },
+      "level_keys": [
+        "vpl-csa-module-7-2022-putting-it-all-together-reflection_-t"
+      ]
+    },
+    {
+      "chapter": 81,
+      "position": 10,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Wrap-up (~5 minutes)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "vpl-csa-module-7-wrap-up_-t"
+        ],
+        "lesson.key": "Module 7 post-work: The Unit 7 project",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csa3-2023",
+        "activity_section.key": "f88ce6c8-1edd-46fc-b644-55fd401a080e"
+      },
+      "level_keys": [
+        "vpl-csa-module-7-wrap-up_-t"
       ]
     }
   ],
@@ -2866,6 +3381,126 @@
         "lesson_group.key": "",
         "script.name": "self-paced-pl-csa3-2023",
         "activity_section.key": "a6141d80-a129-4987-a7c8-da15d4a23d40"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "vpl-csa-module-7-overview_-t",
+        "script_level.level_keys": [
+          "vpl-csa-module-7-overview_-t"
+        ],
+        "lesson.key": "Module 7 post-work: The Unit 7 project",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csa3-2023",
+        "activity_section.key": "93647e0c-84c1-4345-9a5a-cb8026642fb1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "vpl-csa-module-7-2022-what-is-pm-video_-t",
+        "script_level.level_keys": [
+          "vpl-csa-module-7-2022-what-is-pm-video_-t"
+        ],
+        "lesson.key": "Module 7 post-work: The Unit 7 project",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csa3-2023",
+        "activity_section.key": "a276c323-5631-4a57-846e-cd0cfa7b9402"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "vpl-csa-module-7-2022-day-in-the-life-of-pm-video_-t",
+        "script_level.level_keys": [
+          "vpl-csa-module-7-2022-day-in-the-life-of-pm-video_-t"
+        ],
+        "lesson.key": "Module 7 post-work: The Unit 7 project",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csa3-2023",
+        "activity_section.key": "a276c323-5631-4a57-846e-cd0cfa7b9402"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "vpl-csa-module-7-unit-7-project-text_-t",
+        "script_level.level_keys": [
+          "vpl-csa-module-7-unit-7-project-text_-t"
+        ],
+        "lesson.key": "Module 7 post-work: The Unit 7 project",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csa3-2023",
+        "activity_section.key": "a42d7004-c6eb-4b41-81b1-0d1034ad7e6f"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "vpl-csa-module-7-clone-projects-level_-t",
+        "script_level.level_keys": [
+          "vpl-csa-module-7-clone-projects-level_-t"
+        ],
+        "lesson.key": "Module 7 post-work: The Unit 7 project",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csa3-2023",
+        "activity_section.key": "a42d7004-c6eb-4b41-81b1-0d1034ad7e6f"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "vpl-csa-module-7-unit-7-project-structure-2022-text_-t",
+        "script_level.level_keys": [
+          "vpl-csa-module-7-unit-7-project-structure-2022-text_-t"
+        ],
+        "lesson.key": "Module 7 post-work: The Unit 7 project",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csa3-2023",
+        "activity_section.key": "a42d7004-c6eb-4b41-81b1-0d1034ad7e6f"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "vpl-csa-module-7-2022-project-planning-reflection_-t",
+        "script_level.level_keys": [
+          "vpl-csa-module-7-2022-project-planning-reflection_-t"
+        ],
+        "lesson.key": "Module 7 post-work: The Unit 7 project",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csa3-2023",
+        "activity_section.key": "a42d7004-c6eb-4b41-81b1-0d1034ad7e6f"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "vpl-csa-module-7-2022-vocabulary-of-pm-video_-t",
+        "script_level.level_keys": [
+          "vpl-csa-module-7-2022-vocabulary-of-pm-video_-t"
+        ],
+        "lesson.key": "Module 7 post-work: The Unit 7 project",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csa3-2023",
+        "activity_section.key": "04d54f36-5b95-4f42-9072-83c1ad2182d3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "vpl-csa-module-7-2022-putting-it-all-together-reflection_-t",
+        "script_level.level_keys": [
+          "vpl-csa-module-7-2022-putting-it-all-together-reflection_-t"
+        ],
+        "lesson.key": "Module 7 post-work: The Unit 7 project",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csa3-2023",
+        "activity_section.key": "04d54f36-5b95-4f42-9072-83c1ad2182d3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "vpl-csa-module-7-wrap-up_-t",
+        "script_level.level_keys": [
+          "vpl-csa-module-7-wrap-up_-t"
+        ],
+        "lesson.key": "Module 7 post-work: The Unit 7 project",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csa3-2023",
+        "activity_section.key": "f88ce6c8-1edd-46fc-b644-55fd401a080e"
       }
     }
   ],

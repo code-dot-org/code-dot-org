@@ -51,7 +51,7 @@ class CsvToSqlTable
     (0..keys.count - 1).each do |i|
       key_name = keys[i].to_s
       value =
-        case key_name[key_name.rindex('_')..-1]
+        case key_name[key_name.rindex('_')..]
         when '_b'
           values[i].to_bool
         when '_f'
@@ -92,11 +92,11 @@ class CsvToSqlTable
     end
 
     if name.ends_with?('!') || name.ends_with?('*')
-      type_flag = name[-1..-1]
+      type_flag = name[-1..]
       name = name[0..-2]
     end
 
-    type_info = name[i..-1]
+    type_info = name[i..]
 
     type = {
       '_b' => {type: 'boolean'},
