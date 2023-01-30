@@ -168,7 +168,6 @@ export default class MicroBitBoard extends EventEmitter {
       const led = new LedScreen({
         mb: this.boardClient_
       });
-      console.log(led);
       return Promise.resolve().then(() => led.scrollString('yes'));
     });
   }
