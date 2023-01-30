@@ -23,6 +23,7 @@ var ALLOWED_KEYS = new Set([
   'isCodeReviewing',
   'isViewingOwnProject',
   'hasBackgroundMusic',
+  'displayStartBlocksBanner',
   'displayNotStartedBanner',
   'displayOldVersionBanner',
   'isShareView',

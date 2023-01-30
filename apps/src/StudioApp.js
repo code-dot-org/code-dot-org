@@ -43,7 +43,8 @@ import {
   KeyCodes,
   TestResults,
   TOOLBOX_EDIT_MODE,
-  NOTIFICATION_ALERT_TYPE
+  NOTIFICATION_ALERT_TYPE,
+  START_BLOCKS
 } from './constants';
 import {assets as assetsApi} from './clientApi';
 import {
@@ -3324,6 +3325,10 @@ StudioApp.prototype.displayNotStartedBanner = function(config) {
   }
 };
 
+StudioApp.prototype.displayStartBlocksBanner = function(config) {
+  return config.level.edit_blocks === START_BLOCKS;
+};
+
 /**
  * Sets a bunch of common page constants used by all of our apps in our redux
  * store based on our app options config.
@@ -3353,6 +3358,7 @@ StudioApp.prototype.setPageConstants = function(config, appSpecificConstants) {
       isChallengeLevel: !!config.isChallengeLevel,
       isEmbedView: !!config.embed,
       isResponsive: this.isResponsiveFromConfig(config),
+      displayStartBlocksBanner: this.displayStartBlocksBanner(config),
       displayNotStartedBanner: this.displayNotStartedBanner(config),
       displayOldVersionBanner: !!queryParams('version'),
       isShareView: !!config.share,

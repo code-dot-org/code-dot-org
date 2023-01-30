@@ -22,6 +22,7 @@ import styleConstants from '@cdo/apps/styleConstants';
 
 class CodeWorkspace extends React.Component {
   static propTypes = {
+    displayStartBlocksBanner: PropTypes.bool,
     displayNotStartedBanner: PropTypes.bool,
     displayOldVersionBanner: PropTypes.bool,
     isRtl: PropTypes.bool.isRequired,
@@ -261,6 +262,11 @@ class CodeWorkspace extends React.Component {
             {i18n.levelNotStartedWarning()}
           </div>
         )}
+        {this.props.displayStartBlocksBanner && (
+          <div id="startBlocksBanner" style={styles.startBlocksBanner}>
+            {i18n.inStartBlocksMode()}
+          </div>
+        )}
         {this.props.displayOldVersionBanner && (
           <div id="oldVersionBanner" style={styles.oldVersionWarning}>
             {i18n.oldVersionWarning()}
@@ -304,6 +310,14 @@ const styles = {
     opacity: 0.9,
     position: 'relative'
   },
+  startBlocksBanner: {
+    zIndex: 99,
+    backgroundColor: color.lighter_yellow,
+    height: 20,
+    padding: 5,
+    opacity: 0.9,
+    position: 'relative'
+  },
   chevronButton: {
     padding: 0,
     margin: 0,
@@ -328,6 +342,7 @@ const styles = {
 export const UnconnectedCodeWorkspace = Radium(CodeWorkspace);
 export default connect(
   state => ({
+    displayStartBlocksBanner: state.pageConstants.displayStartBlocksBanner,
     displayNotStartedBanner: state.pageConstants.displayNotStartedBanner,
     displayOldVersionBanner: state.pageConstants.displayOldVersionBanner,
     editCode: state.pageConstants.isDroplet,
