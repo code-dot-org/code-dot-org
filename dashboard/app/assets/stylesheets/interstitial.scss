@@ -19,6 +19,12 @@
   font-size: 12px;
   color: $default_text;
 }
+
+#race-modal .modal-content p {
+  font-size: 15px;
+  line-height: 20px;
+}
+
 #terms-modal .left,
 #school-info-modal .left,
 #race-modal .left {
