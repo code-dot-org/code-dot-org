@@ -43,7 +43,7 @@ class GamelabJr < Gamelab
   end
 
   def self.standalone_app_names
-    [['Sprite Lab', 'sprite_lab'], ['Story', 'story'], ['Science', 'science']]
+    [['Sprite Lab', 'spritelab'], ['Story', 'story'], ['Science', 'science']]
   end
 
   def self.create_from_level_builder(params, level_params)
@@ -68,7 +68,7 @@ class GamelabJr < Gamelab
           use_modal_function_editor: true,
           mini_toolbox: false,
           hide_pause_button: false,
-          standalone_app_name: 'sprite_lab'
+          standalone_app_name: 'spritelab'
         }
       )
     )
