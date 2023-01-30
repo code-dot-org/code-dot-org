@@ -4,6 +4,10 @@ import SetUpSectionForm from './SetUpSectionForm';
 import Button from '@cdo/apps/templates/Button';
 import moduleStyles from './sections-refresh.module.scss';
 
+// Custom hook to update the list of sections to create
+// Currently, this hook returns two things:
+//   - sections: list of objects that represent the sections to create
+//   - updateSection: function to update the section at the given index
 const useSections = () => {
   const [sections, setSections] = useState([{}]);
 
@@ -31,7 +35,9 @@ export default function SectionsSetUp() {
       <h1>{i18n.setUpClassSectionsHeader()}</h1>
       <p>{i18n.setUpClassSectionsSubheader()}</p>
       <p>
-        <a href="code.org">{i18n.setUpClassSectionsSubheaderLink()}</a>
+        <a href="https://www.youtube.com/watch?v=4Wugxc80fNU">
+          {i18n.setUpClassSectionsSubheaderLink()}
+        </a>
       </p>
       <SetUpSectionForm
         sectionNum={1}
