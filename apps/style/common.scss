@@ -390,6 +390,20 @@ html[dir="rtl"] .editor-column {
   background-position: 2px 2px;
 }
 
+html[dir="rtl"] {
+  // !Important is used to overwrite droplet.min styling for RTL languages support.
+  #codeTextbox {
+    .droplet-wrapper-div {
+      left: 0 !important;
+    }
+    .droplet-palette-wrapper {
+      right: 0 !important;
+      left: unset !important;
+      z-index: 1;
+    }
+  }
+}
+
 #visualizationResizeBar {
   position: absolute;
   top: 0;
