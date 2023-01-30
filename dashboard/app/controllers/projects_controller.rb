@@ -155,7 +155,13 @@ class ProjectsController < ApplicationController
     },
     thebadguys: {
       name: 'New The Bad Guys Project'
-    }
+    },
+    story: {
+      name: 'New Story Project'
+    },
+    science: {
+      name: 'New Science Project'
+    },
   }.with_indifferent_access.freeze
 
   @@project_level_cache = {}
