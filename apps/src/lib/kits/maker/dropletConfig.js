@@ -559,12 +559,6 @@ const microBitBlocks = [
     type: 'property'
   },
   {
-    func: 'compass.getHeading',
-    category: MICROBIT_CATEGORY,
-    type: 'value'
-  },
-
-  {
     func: 'tempSensor.F',
     category: MICROBIT_CATEGORY,
     type: 'readonlyproperty'

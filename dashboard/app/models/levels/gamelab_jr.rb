@@ -72,7 +72,7 @@ class GamelabJr < Gamelab
           use_modal_function_editor: true,
           mini_toolbox: false,
           hide_pause_button: false,
-          standalone_app_name: 'sprite_lab'
+          standalone_app_name: 'spritelab'
         }
       )
     )

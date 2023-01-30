@@ -2,27 +2,55 @@
   <config><![CDATA[{
   "properties": {
     "encrypted": "false",
-    "long_instructions": "**Short one-sentence description of problem to solve.**\r\n\r\n🎒 **IMPORT:** Import your `PainterPlus`(#e7e8ea) class from your **Backpack**.\r\n\r\n*Don't have it, or it doesn't work? That's ok! Copy the code from* ***here*** *and paste it into a new file in your project.*\r\n\r\n✅ **TO DO:** Overview of the steps to take.\r\n\r\n1. More specific step\r\n\r\n2. More specific step\r\n\r\n::: details [**🔦 Need help with your algorithm?**]\r\n  \r\nHere is one approach to solving this problem.\r\n\r\n```\r\nalgorithm for method to write\r\n```\r\n:::\r\n&nbsp;\r\n\r\n💡 **TIP:** Check out the documentation for the `ClassName`(#e7e8ea) class in the **Documentation** tab ⬆️ for a thing to look for!\r\n\r\n📝 **COMMENT:** Be sure to add comments to note what your code does.\r\n\r\n🖥️ **TEST:** Test your program to check if your code achieves the expected result.\r\n\r\n🎉 **RUN:** Run your program to see the result of your code!\r\n\r\n## ***Don't forget to . . .***\r\n\r\n![](https://images.code.org/eb2c8910ae2e150019b8e2177405d4af-image-1668191576873.png)\r\n\r\n## 🎯 Goal\r\n\r\nimage/gif or console output",
+    "long_instructions": "The <a href=\"https://www.kaggle.com/datasets/lavagod/super-heroes\" target=\"_blank\">**Super Heroes dataset**</a> includes the names of superheroes and the name of the publisher for each superhero.\r\n\r\n✅ **TO DO #1:** In `Superhero.java`(#e7e8ea), write the `checkForDuplicates()`(#e7e8ea) method to determine if the parameter `heroData`(#e7e8ea) has duplicate values.\r\n\r\n1. Traverse the 1D array `heroData`(#e7e8ea).\r\n\r\n2. If the current value appears in `heroData`(#e7e8ea) more than once, return `true`(#e7e8ea).\r\n\r\n3. If none of the values appear in `heroData`(#e7e8ea) more than once, return `false`(#e7e8ea).\r\n\r\n::: details [**🔦 Need help with your algorithm?**]\r\n  \r\nHere is one approach to solving this problem.\r\n\r\n```\r\nloop from 0 to heroData.length\r\n  loop from next position to heroData.length\r\n    if heroData[start] equals heroData[next]\r\n      return true\r\n\r\nreturn false\r\n```\r\n:::\r\n&nbsp;\r\n\r\n✅ **TO DO #2:** In `SuperheroRunner.java`(#e7e8ea), call the `checkForDuplicates()`(#e7e8ea) method and print the result.\r\n\r\n💡 **TIP:** Check out the **Help & Tips** tab ⬆️ for help with writing a nested `for`(#e7e8ea) loop.\r\n\r\n## ***Don't forget to . . .***\r\n\r\n![](https://images.code.org/eb2c8910ae2e150019b8e2177405d4af-image-1668191576873.png)",
     "mini_rubric": "false",
     "submittable": "false",
     "hide_share_and_remix": "false",
     "csa_view_mode": "console",
     "start_sources": {
-      "Runner.java": {
-        "text": "public class Runner {\n  public static void main(String[] args) {\n\n    /* ----------------------------------- TO DO -----------------------------------\n     * ✅ instructions for the student to complete\n     * -----------------------------------------------------------------------------\n     */\n\n\n\n    /* ----------------------------------- TO DO -----------------------------------\n     * ✅ instructions for the student to complete\n     * -----------------------------------------------------------------------------\n     *\n     * description of method to write\n     */\n\n    \n\n    \n    /* ---- 🔎 ADD YOUR CODE BELOW THIS LINE ---- */\n\n\n    \n    \n    \n  }\n}",
+      "SuperheroRunner.java": {
+        "text": "public class SuperheroRunner {\n  public static void main(String[] args) {\n\n    /* ----------------------------------- TO DO -----------------------------------\n     * ✅ instructions for the student to complete\n     * -----------------------------------------------------------------------------\n     */\n\n\n\n\n    \n    \n    \n  }\n}",
         "isVisible": true,
         "tabOrder": 0
+      },
+      "HeroManager.java": {
+        "text": "/*\n * Manages data about superheros\n */\npublic class HeroManager {\n\n  private String namesFile;        // The name of the file containing the names data\n  private String publisherFile;    // The name of the file containing the publishers data\n  private Superhero[] heroData;    // The 1D array of Superhero objects\n\n  /*\n   * Reads the data from namesFile and\n   * publisherFile to initialize heroData\n   */\n  public HeroManager(String namesFile, String publisherFile) {\n    this.namesFile = namesFile;\n    this.publisherFile = publisherFile;\n    heroData = createSuperheroes();\n  }\n\n  /*\n   * Returns a 1D array of Superhero objects using\n   * the data from namesFile and publisherFile\n   */\n  public Superhero[] createSuperheroes() {\n    String[] namesData = FileReader.toStringArray(namesFile);\n    String[] publisherData = FileReader.toStringArray(publisherFile);\n\n    Superhero[] tempHeroes = new Superhero[namesData.length];\n\n    for (int index = 0; index < tempHeroes.length; index++) {\n      tempHeroes[index] = new Superhero(namesData[index], publisherData[index]);\n    }\n\n    return tempHeroes;\n  }\n\n  /*\n   * Returns true if more than one superhero has the same publisher, otherwise returns false\n   */\n  public boolean checkForDuplicates() {\n    /* ----------------------------------- TO DO -----------------------------------\n     * ✅ instructions for the student to complete\n     * -----------------------------------------------------------------------------\n     */\n\n    \n    \n    return false;\n  }\n\n  /*\n   * Returns a String containing each hero's information\n   */\n  public String toString() {\n    String result = \"\";\n\n    for (Superhero hero : heroData) {\n      result += hero + \"\\n\";\n    }\n\n    return result;\n  }\n}",
+        "isVisible": true,
+        "tabOrder": 1
+      },
+      "Superhero.java": {
+        "text": "/*\n * Represents a superhero\n */\npublic class Superhero {\n\n  private String name;        // The name of a superhero\n  private String publisher;   // The name of the publisher of a superhero\n\n  /*\n   * Sets name and publisher to the specified values\n   */\n  public Superhero(String name, String publisher) {\n    this.name = name;\n    this.publisher = publisher;\n  }\n\n  /*\n   * Returns the name of the superhero\n   */\n  public String getName() {\n    return name;\n  }\n\n  /*\n   * Returns the publisher of the superhero\n   */\n  public String getPublisher() {\n    return publisher;\n  }\n\n  /*\n   * Returns a String containing the name and publisher\n   */\n  public String toString() {\n    return name + \" (\" + publisher + \")\";\n  }\n  \n}",
+        "isVisible": true,
+        "tabOrder": 2
+      },
+      "names.txt": {
+        "text": "Alien\nKiller Frost\nMystique\nNebula\nAbe Sapien\nDr Manhattan\nShadow Lass\nBeast\nArchangel\nCopycat\nLobo\nNova\nArdina\nLiving Tribunal\nK-2SO\nPoison Ivy\nBrainiac\nSwamp Thing\nKiller Croc\nGreedo\nEvilhawk\nMartian Manhunter\nBeast Boy\nYoda\nDonatello\nLeonardo\nRaphael\nMichelangelo\nDrax the Destroyer\nTriton\nFin Fang Foom\nMan-Thing\nHulk\nMantis\nGamora\nToad\nDarkseid\nTiger Shark\nApocalypse\nGodzilla\nCentury\nStarfire\nJar Jar Binks\nKilowog\nBlink\nPurple Man\nThanos\nGladiator\nTrigon\nKlaw",
+        "isVisible": true,
+        "tabOrder": 3
+      },
+      "publishers.txt": {
+        "text": "Dark Horse Comics\nDC Comics\nMarvel Comics\nMarvel Comics\nDark Horse Comics\nDC Comics\nDC Comics\nMarvel Comics\nMarvel Comics\nMarvel Comics\nDC Comics\nMarvel Comics\nMarvel Comics\nMarvel Comics\nGeorge Lucas\nDC Comics\nDC Comics\nDC Comics\nDC Comics\nGeorge Lucas\nMarvel Comics\nDC Comics\nDC Comics\nGeorge Lucas\nIDW Publishing\nIDW Publishing\nIDW Publishing\nIDW Publishing\nMarvel Comics\nMarvel Comics\nMarvel Comics\nMarvel Comics\nMarvel Comics\nMarvel Comics\nMarvel Comics\nMarvel Comics\nDC Comics\nMarvel Comics\nMarvel Comics\nunknown\nMarvel Comics\nDC Comics\nGeorge Lucas\nDC Comics\nMarvel Comics\nMarvel Comics\nMarvel Comics\nMarvel Comics\nDC Comics\nMarvel Comics",
+        "isVisible": true,
+        "tabOrder": 4
+      },
+      "FileReader.java": {
+        "text": "import java.util.Scanner;\nimport java.util.ArrayList;\nimport java.io.File;\nimport java.io.FileNotFoundException;\n\npublic class FileReader {\n\n  public static String[] toStringArray(String filename) {\n    ArrayList<String> temp = readDataFromFile(filename);\n    String[] data = new String[temp.size()];\n\n    for (int index = 0; index < data.length; index++) {\n      String currentValue = temp.get(index);\n      data[index] = currentValue;\n    }\n\n    return data;\n  }\n\n  public static int[] toIntArray(String filename) {\n    ArrayList<String> temp = readDataFromFile(filename);\n    int[] data = new int[temp.size()];\n\n    for (int index = 0; index < data.length; index++) {\n      String currentValue = temp.get(index);\n      data[index] = Integer.parseInt(currentValue);\n    }\n\n    return data;\n  }\n\n  public static double[] toDoubleArray(String filename) {\n    ArrayList<String> temp = readDataFromFile(filename);\n    double[] data = new double[temp.size()];\n\n    for (int index = 0; index < data.length; index++) {\n      String currentValue = temp.get(index);\n      data[index] = Double.parseDouble(currentValue);\n    }\n\n    return data;\n  }\n\n  private static Scanner createScanner(File theFile) {\n    Scanner tempScanner = null;\n\n    try {\n      tempScanner = new Scanner(theFile);\n    } catch(FileNotFoundException error) {\n      System.out.println(\"File not found.\");\n    }\n\n    return tempScanner;\n  }\n\n  private static ArrayList<String> readDataFromFile(String filename) {\n    File dataFile = new File(filename);\n    Scanner reader = createScanner(dataFile);\n    ArrayList<String> temp = new ArrayList<String>();\n\n    while (reader.hasNextLine()) {\n      String currentLine = reader.nextLine().trim();\n      temp.add(currentLine);\n    }\n\n    reader.close();\n    return temp;\n  }\n  \n}",
+        "isVisible": true,
+        "tabOrder": 5
       }
     },
-    "encrypted_examples": [
-
-    ]
+    "reference_links": [
+      "/courses/csa-2023/guides/nested-loops"
+    ],
+    "display_name": "Superheroes",
+    "bubble_choice_description": "Determine whether the Super Heroes dataset contains duplicate values.",
+    "thumbnail_url": "https://images.code.org/cd87777083acc29db9afe6f4c0552e4b-superhero.png"
   },
   "game_id": 68,
-  "published": true,
   "created_at": "2023-01-12T22:23:31.000Z",
   "level_num": "custom",
   "user_id": 16889,
-  "audit_log": "[{\"changed_at\":\"2023-01-12T22:23:31.130+00:00\",\"changed\":[\"cloned from \\\"CSA U3L9-L6c_2023\\\"\"],\"cloned_from\":\"CSA U3L9-L6c_2023\"},{\"changed_at\":\"2023-01-12 22:23:32 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2023-01-12T22:23:31.130+00:00\",\"changed\":[\"cloned from \\\"CSA U3L9-L6c_2023\\\"\"],\"cloned_from\":\"CSA U3L9-L6c_2023\"},{\"changed_at\":\"2023-01-12 22:23:32 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-01-30 00:02:51 +0000\",\"changed\":[\"long_instructions\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-01-30 01:56:34 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-01-30 01:57:35 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-01-30 01:58:31 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-01-30 01:58:36 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>
 </Javalab>
