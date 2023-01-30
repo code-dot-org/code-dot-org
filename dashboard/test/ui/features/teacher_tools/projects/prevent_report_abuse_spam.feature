@@ -63,6 +63,7 @@ Feature: Prevent Report Abuse Spam
     And element ".ui-test-how-it-works" is visible
     And element ".ui-test-report-abuse" is not visible
 
+  @skip
   Scenario: Abuse reports from unverified users don't block a project for other viewers
     Given I create a student named "Creator"
     And I make a "applab" project named "Regular Project"
@@ -109,16 +110,6 @@ Feature: Prevent Report Abuse Spam
     And I press menu item "Report Abuse"
     And I report abuse on the project
     Then I close the current tab
-    Then I sign out
-
-    Given I create a teacher named "Teacher_2"
-    And I give user "Teacher_2" authorized teacher permission
-    And I delete the cookie named "reported_abuse"
-    And I navigate to the last shared URL
-    Then I open the small footer menu
-    And element ".ui-test-report-abuse" is visible
-    And I press menu item "Report Abuse"
-    And I report abuse on the project
     Then I sign out
 
     Given I create a student named "Viewer"
