@@ -543,6 +543,17 @@ When /^I type '([^']*)' into "([^"]*)"$/ do |input_text, selector|
   type_into_selector("\'#{input_text}\'", selector)
 end
 
+When /^I type "([^"]*)" into "([^"]*)" if I see it$/ do |input_text, selector|
+  type_into_selector("\"#{input_text}\"", selector)
+
+  wait_until(5) do
+    @browser.execute_script("return $(\"#{selector}:visible\").length != 0;")
+  end
+  type_into_selector("\"#{input_text}\"", selector)
+rescue Selenium::WebDriver::Error::TimeOutError
+  # Element never appeared, ignore it
+end
+
 # The selector should be wrapped in appropriate quotes when passed into here.
 def type_into_selector(input_text, selector)
   wait_for_jquery
