@@ -2,27 +2,55 @@
   <config><![CDATA[{
   "properties": {
     "encrypted": "false",
-    "long_instructions": "**Short one-sentence description of problem to solve.**\r\n\r\n🎒 **IMPORT:** Import your `PainterPlus`(#e7e8ea) class from your **Backpack**.\r\n\r\n*Don't have it, or it doesn't work? That's ok! Copy the code from* ***here*** *and paste it into a new file in your project.*\r\n\r\n✅ **TO DO:** Overview of the steps to take.\r\n\r\n1. More specific step\r\n\r\n2. More specific step\r\n\r\n::: details [**🔦 Need help with your algorithm?**]\r\n  \r\nHere is one approach to solving this problem.\r\n\r\n```\r\nalgorithm for method to write\r\n```\r\n:::\r\n&nbsp;\r\n\r\n💡 **TIP:** Check out the documentation for the `ClassName`(#e7e8ea) class in the **Documentation** tab ⬆️ for a thing to look for!\r\n\r\n📝 **COMMENT:** Be sure to add comments to note what your code does.\r\n\r\n🖥️ **TEST:** Test your program to check if your code achieves the expected result.\r\n\r\n🎉 **RUN:** Run your program to see the result of your code!\r\n\r\n## ***Don't forget to . . .***\r\n\r\n![](https://images.code.org/eb2c8910ae2e150019b8e2177405d4af-image-1668191576873.png)\r\n\r\n## 🎯 Goal\r\n\r\nimage/gif or console output",
+    "long_instructions": "The <a href=\"https://www.kaggle.com/datasets/rakkesharv/forbes-2000-global-companies\" target=\"_blank\">**Forbes 2000 Global Companies dataset**</a> includes the names of organizations, the year each organization was founded, and the number of employees at each organization.\r\n\r\n✅ **TO DO #1:** In `Forbes.java`(#e7e8ea), write the `checkForDuplicates()`(#e7e8ea) method to determine if the parameter `companyData`(#e7e8ea) has duplicate values.\r\n\r\n1. Traverse the 1D array `companyData`(#e7e8ea).\r\n\r\n2. If the current value appears in `companyData`(#e7e8ea) more than once, return `true`(#e7e8ea).\r\n\r\n3. If none of the values appear in `companyData`(#e7e8ea) more than once, return `false`(#e7e8ea).\r\n\r\n::: details [**🔦 Need help with your algorithm?**]\r\n  \r\nHere is one approach to solving this problem.\r\n\r\n```\r\nloop from 0 to companyData.length\r\n  loop from next position to companyData.length\r\n    if companyData[start] == companyData[next]\r\n      return true\r\n\r\nreturn false\r\n```\r\n:::\r\n&nbsp;\r\n\r\n✅ **TO DO #2:** In `ForbesRunner.java`(#e7e8ea), call the `checkForDuplicates()`(#e7e8ea) method and print the result.\r\n\r\n💡 **TIP:** Check out the **Help & Tips** tab ⬆️ for help with writing a nested `for`(#e7e8ea) loop.\r\n\r\n## ***Don't forget to . . .***\r\n\r\n![](https://images.code.org/eb2c8910ae2e150019b8e2177405d4af-image-1668191576873.png)",
     "mini_rubric": "false",
     "submittable": "false",
     "hide_share_and_remix": "false",
     "csa_view_mode": "console",
     "start_sources": {
-      "Runner.java": {
-        "text": "public class Runner {\n  public static void main(String[] args) {\n\n    /* ----------------------------------- TO DO -----------------------------------\n     * ✅ instructions for the student to complete\n     * -----------------------------------------------------------------------------\n     */\n\n\n\n    /* ----------------------------------- TO DO -----------------------------------\n     * ✅ instructions for the student to complete\n     * -----------------------------------------------------------------------------\n     *\n     * description of method to write\n     */\n\n    \n\n    \n    /* ---- 🔎 ADD YOUR CODE BELOW THIS LINE ---- */\n\n\n    \n    \n    \n  }\n}",
+      "ForbesRunner.java": {
+        "text": "public class ForbesRunner {\n  public static void main(String[] args) {\n\n    /* ----------------------------------- TO DO -----------------------------------\n     * ✅ instructions for the student to complete\n     * -----------------------------------------------------------------------------\n     */\n\n\n\n\n    \n    \n    \n  }\n}",
         "isVisible": true,
         "tabOrder": 0
+      },
+      "Forbes.java": {
+        "text": "/*\n * Manages data about Forbes 2000 Global Companies\n */\npublic class Forbes {\n\n  private String namesFile;         // The name of the file containing the names data\n  private String yearsFile;         // The name of the file containing the years data\n  private Company[] companyData;    // The 1D array of Company objects\n\n  /*\n   * Reads the data from namesFile and\n   * yearsFile to initialize companyData\n   */\n  public Forbes(String namesFile, String yearsFile) {\n    this.namesFile = namesFile;\n    this.yearsFile = yearsFile;\n    companyData = createCompanies();\n  }\n\n  /*\n   * Returns a 1D array of Company objects using\n   * the data from namesFile and yearsFile\n   */\n  public Company[] createCompanies() {\n    String[] namesData = FileReader.toStringArray(namesFile);\n    int[] yearsData = FileReader.toIntArray(yearsFile);\n\n    Company[] tempCompanies = new Company[namesData.length];\n\n    for (int index = 0; index < tempCompanies.length; index++) {\n      tempCompanies[index] = new Company(namesData[index], yearsData[index]);\n    }\n\n    return tempCompanies;\n  }\n\n  /*\n   * Returns true if any companies in companyData were\n   * founded the same year, otherwise returns false\n   */\n  public boolean checkForDuplicates() {\n    /* ----------------------------------- TO DO -----------------------------------\n     * ✅ instructions for the student to complete\n     * -----------------------------------------------------------------------------\n     */\n\n    \n    \n    return false;\n  }\n\n  /*\n   * Returns a String containing each company's information\n   */\n  public String toString() {\n    String result = \"\";\n\n    for (Company org : companyData) {\n      result += org + \"\\n\";\n    }\n\n    return result;\n  }\n}",
+        "isVisible": true,
+        "tabOrder": 1
+      },
+      "Company.java": {
+        "text": "/*\n * Represents a company\n */\npublic class Company {\n\n  private String name;        // The name of a company\n  private int yearFounded;    // The year a company was founded\n\n  /*\n   * Sets name and yearFounded to the specified values\n   */\n  public Company(String name, int yearFounded) {\n    this.name = name;\n    this.yearFounded = yearFounded;\n  }\n\n  /*\n   * Returns the name of the company\n   */\n  public String getName() {\n    return name;\n  }\n\n  /*\n   * Returns the year the company was founded\n   */\n  public int getYearFounded() {\n    return yearFounded;\n  }\n\n  /*\n   * Returns a String containing the name of the\n   * company and the year it was founded\n   */\n  public String toString() {\n    return name + \" - Founded in \" + yearFounded;\n  }\n  \n}",
+        "isVisible": true,
+        "tabOrder": 2
+      },
+      "names.txt": {
+        "text": "Berkshire Hathaway\nJPMorgan Chase\nAmazon\nApple\nBank of America\nAlphabet\nMicrosoft\nExxonMobil\nWells Fargo\nVerizon Communications\nAT&T\nUnitedHealth Group\nWalmart\nChevron\nCitigroup\nComcast\nMeta Platforms\nMorgan Stanley\nGoldman Sachs Group\nJohnson & Johnson\nCVS Health\nPfizer\nIntel\nProcter & Gamble\nAbbVie\nGeneral Motors\nMetLife\nAmerican Express\nCigna\nPrudential Financial\nPepsiCo\nMerck & Co.\nElevance Health\nAmerican International Group\nCisco Systems\nWalt Disney\nIBM\nUnited Parcel Service\nRaytheon Technologies\nCapital One\nBristol Myers Squibb\nCoca-Cola\nOracle\nThermo Fisher Scientific\nCostco Wholesale\nCharter Communications\nConocoPhillips\nUS Bancorp\nAbbott Laboratories\nCaterpillar",
+        "isVisible": true,
+        "tabOrder": 3
+      },
+      "years.txt": {
+        "text": "1939\n2000\n1994\n1976\n1998\n1998\n1975\n1999\n1852\n1983\n1876\n1977\n1962\n1879\n1998\n1963\n2004\n1924\n1869\n1886\n1963\n1849\n1968\n1837\n2013\n1908\n1868\n1850\n1792\n1875\n1965\n1891\n2004\n1919\n1984\n1923\n1911\n1907\n2020\n1994\n1933\n1892\n1977\n1956\n1983\n1993\n1875\n1929\n1888\n1925",
+        "isVisible": true,
+        "tabOrder": 4
+      },
+      "FileReader.java": {
+        "text": "import java.util.Scanner;\nimport java.util.ArrayList;\nimport java.io.File;\nimport java.io.FileNotFoundException;\n\npublic class FileReader {\n\n  public static String[] toStringArray(String filename) {\n    ArrayList<String> temp = readDataFromFile(filename);\n    String[] data = new String[temp.size()];\n\n    for (int index = 0; index < data.length; index++) {\n      String currentValue = temp.get(index);\n      data[index] = currentValue;\n    }\n\n    return data;\n  }\n\n  public static int[] toIntArray(String filename) {\n    ArrayList<String> temp = readDataFromFile(filename);\n    int[] data = new int[temp.size()];\n\n    for (int index = 0; index < data.length; index++) {\n      String currentValue = temp.get(index);\n      data[index] = Integer.parseInt(currentValue);\n    }\n\n    return data;\n  }\n\n  public static double[] toDoubleArray(String filename) {\n    ArrayList<String> temp = readDataFromFile(filename);\n    double[] data = new double[temp.size()];\n\n    for (int index = 0; index < data.length; index++) {\n      String currentValue = temp.get(index);\n      data[index] = Double.parseDouble(currentValue);\n    }\n\n    return data;\n  }\n\n  private static Scanner createScanner(File theFile) {\n    Scanner tempScanner = null;\n\n    try {\n      tempScanner = new Scanner(theFile);\n    } catch(FileNotFoundException error) {\n      System.out.println(\"File not found.\");\n    }\n\n    return tempScanner;\n  }\n\n  private static ArrayList<String> readDataFromFile(String filename) {\n    File dataFile = new File(filename);\n    Scanner reader = createScanner(dataFile);\n    ArrayList<String> temp = new ArrayList<String>();\n\n    while (reader.hasNextLine()) {\n      String currentLine = reader.nextLine().trim();\n      temp.add(currentLine);\n    }\n\n    reader.close();\n    return temp;\n  }\n  \n}",
+        "isVisible": false,
+        "tabOrder": 5
       }
     },
-    "encrypted_examples": [
-
-    ]
+    "reference_links": [
+      "/courses/csa-2023/guides/nested-loops"
+    ],
+    "display_name": "Forbes Global Companies",
+    "bubble_choice_description": "Determine whether the Forbes 2000 Global Companies dataset contains duplicate values.",
+    "thumbnail_url": "https://images.code.org/daaaad222a20d7f0b936aea0ae4127e1-teamwork.png"
   },
   "game_id": 68,
-  "published": true,
   "created_at": "2023-01-12T22:23:01.000Z",
   "level_num": "custom",
   "user_id": 16889,
-  "audit_log": "[{\"changed_at\":\"2023-01-12T22:23:01.090+00:00\",\"changed\":[\"cloned from \\\"CSA Practice Level Template\\\"\"],\"cloned_from\":\"CSA Practice Level Template\"},{\"changed_at\":\"2023-01-12 22:23:02 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2023-01-12T22:23:01.090+00:00\",\"changed\":[\"cloned from \\\"CSA Practice Level Template\\\"\"],\"cloned_from\":\"CSA Practice Level Template\"},{\"changed_at\":\"2023-01-12 22:23:02 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-01-29 23:22:31 +0000\",\"changed\":[\"long_instructions\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-01-30 01:05:44 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-01-30 01:06:15 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-01-30 01:26:13 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>
 </Javalab>
