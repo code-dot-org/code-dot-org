@@ -1,9 +1,9 @@
 import React, {Component} from 'react';
+import PropTypes from 'prop-types';
 import ValidationStep, {Status} from '../../../src/lib/ui/ValidationStep';
 import testImageAccess from '../../code-studio/url_test';
 
-const scriptData = document.querySelector('script[data-bramble]');
-const brambleConfig = JSON.parse(scriptData.dataset.bramble);
+const WEBLAB_URL = '/weblab/host?skip_files=true';
 
 const STATUS_CODE_PROJECTS = 'statusCodeProjects';
 const STATUS_COMPUTING_IN_THE_CORE = 'statusComputingInTheCore';
@@ -28,9 +28,16 @@ class WebLabTest extends Component {
       [STATUS_COMPUTING_IN_THE_CORE]: Status.WAITING,
       [STATUS_BRAMBLE_MOUNTABLE]: Status.WAITING,
       runButtonDisabled: false,
-      renderCallToAction: false
+      renderCallToAction: false,
+      iframeSrc: 'about:blank'
     };
   }
+
+  static propTypes = {
+    brambleConfig: PropTypes.shape({
+      studioUrl: PropTypes.string.isRequired
+    }).isRequired
+  };
 
   componentDidMount = () => {
     window.addEventListener('message', this.updateBrambleStatus);
@@ -49,16 +56,15 @@ class WebLabTest extends Component {
     }
 
     if (
-      event.origin === brambleConfig.studioUrl &&
-      message.type &&
-      message.type === 'bramble:readyToMount' &&
+      event.origin === this.props.brambleConfig?.studioUrl &&
+      message?.type === 'bramble:readyToMount' &&
       this.state[STATUS_BRAMBLE_MOUNTABLE] === Status.ATTEMPTING
     ) {
       this.setState({[STATUS_BRAMBLE_MOUNTABLE]: Status.SUCCEEDED});
     }
   };
 
-  pollBrambleStatus = ({timeout, interval}) => {
+  verifyBrambleMountable = ({timeout, interval}) => {
     const endTime = Number(new Date()) + timeout;
 
     let checkStatus = (resolve, _) => {
@@ -90,14 +96,6 @@ class WebLabTest extends Component {
       );
     });
 
-  verifyBrambleMountable = () => {
-    // Here we just want to check that WebLab reaches a MOUNTABLE state,
-    // i.e. we want a "blank" load and will not provide a project or file paths
-    document.getElementById('empty-bramble-container').src =
-      '/weblab/host?blank_load=true';
-    return this.pollBrambleStatus({timeout: 3000, interval: 500});
-  };
-
   runWebLabTest = () => {
     this.setState(
       {
@@ -105,16 +103,21 @@ class WebLabTest extends Component {
         [STATUS_CODE_PROJECTS]: Status.ATTEMPTING,
         [STATUS_BRAMBLE_MOUNTABLE]: Status.ATTEMPTING,
         runButtonDisabled: true,
-        renderCallToAction: false
+        renderCallToAction: false,
+        iframeSrc: WEBLAB_URL
       },
       () => {
         const webLabChecksComplete = Promise.all([
           ...domainDependencies.map(this.verifyDomainAccess),
-          this.verifyBrambleMountable()
+          this.verifyBrambleMountable({timeout: 3000, interval: 500})
         ]);
 
         webLabChecksComplete.then(() => {
-          this.setState({renderCallToAction: true, runButtonDisabled: false});
+          this.setState({
+            renderCallToAction: true,
+            runButtonDisabled: false,
+            iframeSrc: 'about:blank'
+          });
         });
       }
     );
@@ -226,6 +229,7 @@ class WebLabTest extends Component {
             frameBorder="0"
             scrolling="no"
             style={styles.iframe}
+            src={this.state.iframeSrc}
           />
         </div>
       </div>
