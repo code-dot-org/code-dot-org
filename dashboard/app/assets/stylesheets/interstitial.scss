@@ -75,11 +75,25 @@
   background-image: none;
   margin-top: 10px;
 }
-#terms-modal .disabled-button,
-#race-modal .disabled-button {
+
+#race-modal .primary-button {
+  background-color: $brand_secondary_default;
+  border-color: $brand_secondary_default;
+  color: $neutral_white;
+  font-family: $gotham-bold;
+}
+
+#terms-modal .disabled-button {
   background-color: $lighter_gray;
   border-color: $lighter_gray;
   color: $dark_charcoal;
+}
+
+#race-modal .disabled-button {
+  color: $neutral_white;
+  border-color: $neutral_dark20;
+  background-color: $neutral_dark20;
+  cursor: not-allowed;
 }
 #terms-modal .custom-h1,
 #race-modal .custom-h1 {
