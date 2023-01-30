@@ -12578,11 +12578,13 @@
           ]
         },
         "b626621f-f9fb-4b33-90cf-2038de093678": {
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribuir:** Reparte una copia de la Guía de Actividad de Tipos de Aprendizaje Automático a cada alumno. Los alumnos utilizarán esta guía de actividad mientras trabajan a través de los niveles en Code Studio.",
           "tips": [
             null
           ]
         },
         "057c9015-057e-489e-a76f-820db91f0985": {
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Code Studio:** Pide a los alumnos que se conecten a Code Studio. Los alumnos seguirán las instrucciones del nivel, pulsando y arrastrando para agrupar los rectángulos de la forma que les parezca más lógica. Tras completar esto y pulsar el botón \"Siguiente\", los alumnos verán que han creado agrupaciones de colores. Recuerde a los alumnos que deben completar la guía de actividades a medida que avanzan en este nivel.",
           "tips": [
             null
           ],
@@ -12684,7 +12686,8 @@
           ]
         },
         "5a99a50f-2c76-4914-a466-2e8c07b1156b": {
-          "name": "Diario"
+          "name": "Diario",
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Pregunta:** _Si tuvieras que desglosar el proceso que hemos seguido hoy para crear un modelo y utilizarlo en pasos para que los siga un ordenador, ¿cómo describirías esos pasos?_\n\n**Objetivo del Debate:** Esta pregunta sirve de puente entre la lección de hoy y la de mañana, en la que un ordenador realizará la mayor parte del trabajo entre bastidores. Lee las respuestas de los alumnos para ver si han entendido bien el proceso de hoy. Las respuestas pueden ser tan sencillas como:\n\n-   Representar gráficamente los datos\n-   Trazar una línea para separar los datos en zonas\n-   Cuando aparezcan nuevos datos, ver en qué zona caen para tomar una decisión."
         },
         "7c4a44a2-de2a-4f2f-834e-e41d9d40a989": {
           "name": "Diario"
@@ -12706,6 +12709,7 @@
           "name": "Reconocimiento de Formas"
         },
         "5f3fc63f-1b69-4c63-9503-69acceb95d5f": {
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Vídeo:** Ver el vídeo (5:25) como clase.\n[r introduction_to_ai_lab_1/csd/2022]",
           "tips": [
             null
           ]
@@ -12715,8 +12719,11 @@
         },
         "a9e96adb-531c-4cc1-a706-4d3994fd5e57": {
           "tips": [
-            null
+            "**Fluidez con los Widgets:** Por ahora, concéntrate en ayudar a los alumnos a adquirir fluidez con el Laboratorio de Inteligencia Artificial asegurándote de que pueden pulsar en columnas y botones, centrarse en los paneles apropiados y navegar entre pantallas. Los alumnos también pueden obtener ayuda leyendo las instrucciones, que se actualizan con cada panel, o utilizando la sección Ayuda y Consejos para leer documentos de ayuda o volver a ver el vídeo.\n\n**Iteración en Características:** Los alumnos deben permanecer en este mismo nivel y no pulsar el botón Continuar hasta que se les indique. Esto representa la forma en que los estudiantes suelen utilizar el Laboratorio de Inteligencia Artificial con conjuntos de datos más complejos: entrenando varios modelos en el mismo nivel y comparando la precisión, en lugar de entrenar un modelo una sola vez y continuar.\n\n**¿Realmente necesitamos Inteligencia Artificial para esto?** No, probablemente no para este problema en particular. Sin embargo, este ejercicio ayuda a los estudiantes a familiarizarse con el flujo de Laboratorio de Inteligencia Artificial, sin dejar de hacer referencias cruzadas con un conjunto de datos visuales para confirmar su comprensión. Este ejercicio también pone de manifiesto algunos problemas que serán importantes a lo largo de la unidad, como cuando demasiados datos contradictorios pueden confundir al Bot de Inteligencia Artificial y reducir su precisión o cuando el Bot de Inteligencia Artificial _piensa_ que sabe algo con gran precisión pero con características que no son prácticas en el mundo real."
           ]
+        },
+        "812574f8-99f1-4fd6-92dd-4af47a78efb7": {
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Debate:** _Este modelo está entrenado sólo en colores y tiene una precisión del 90%. ¿Qué pasaría si intentáramos utilizar este modelo en el mundo real? ¿Crees que sería igual de preciso?_"
         },
         "82beb962-01b6-48fc-b6e8-5783a1f65d1b": {
           "tips": [

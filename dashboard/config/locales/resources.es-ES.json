@@ -484,7 +484,6 @@
         },
         "running_simulations/coursef/2022": {
           "name": "Ejecutar simulaciones",
-          "url": "https://docs.google.com/document/d/1sgUd9UcthM3M-A1EKX1m3AwsgLrivx0jF0i-e_79kk8/edit",
           "type": "Hoja de Trabajo"
         },
         "ai_impact_on_society/coursef/2022": {
@@ -3609,16 +3608,20 @@
           "type": "Ejemplo"
         },
         "all_code_3/csd/2022": {
-          "name": "Todos los Códigos"
+          "name": "Todos los Códigos",
+          "url": "/s/csd7-2022/código"
         },
         "all_resources_4/csd/2022": {
-          "name": "Todos los Recursos"
+          "name": "Todos los Recursos",
+          "url": "/s/csd7-2022/recursos"
         },
         "all_standards_4/csd/2022": {
-          "name": "Todos los Estándares"
+          "name": "Todos los Estándares",
+          "url": "/s/csd7-2022/normas"
         },
         "all_vocabulary_4/csd/2022": {
-          "name": "Todo el Vocabulario"
+          "name": "Todo el Vocabulario",
+          "url": "/s/csd7-2022/vocabulario"
         },
         "ai_what_is_machine_learning_/csd/2022": {
           "url": "https://www.youtube.com/watch?v=OeU5m6vRyCk",
@@ -3629,10 +3632,12 @@
         },
         "introduction_to_machine_learning/csd/2022": {
           "name": "Introducción al aprendizaje automático (Machine Learning)",
+          "url": "https://docs.google.com/presentation/d/1uT4weLbovBliCfxnkCERfjXWlWWRAYiJQ7brwfYP22U/template/preview",
           "type": "Diapositivas"
         },
         "types_of_machine_learning/csd/2022": {
           "name": "Tipos de Aprendizaje Automático",
+          "url": "https://docs.google.com/presentation/d/1FwOsAQW3y0eQ7NwdUitWwXbj74egitdSdrHGnSxXuOg/template/preview",
           "type": "Diapositivas"
         },
         "types_of_machine_learning_1/csd/2022": {
@@ -3645,6 +3650,7 @@
         },
         "innovations_in_ai/csd/2022": {
           "name": "Innovaciones en Inteligencia Artificial",
+          "url": "https://docs.google.com/presentation/d/1JqvABbuAj3LiCxZQw91KuesvIxlJdXxU5iOabI-FjrM/template/preview",
           "type": "Diapositivas"
         },
         "seeing_ai/csd/2022": {
@@ -3655,10 +3661,12 @@
           "type": "Clave de Respuesta"
         },
         "finding_patterns_in_data/csd/2022": {
+          "url": "https://www.youtube.com/watch?v=edFO0bdpoHY",
           "type": "Vídeo"
         },
         "patterns_in_data/csd/2022": {
           "name": "Patrones en los Datos",
+          "url": "https://docs.google.com/presentation/d/1FabWi7tB1SI-YjqiPPfgU3Yljb3lJpoD1mFRmzUJiI8/template/preview",
           "type": "Diapositivas"
         },
         "patterns_in_data_1/csd/2022": {
@@ -3677,6 +3685,7 @@
         },
         "classification_models_1/csd/2022": {
           "name": "Modelos de Clasificación",
+          "url": "https://docs.google.com/presentation/d/1f5PG9ASPlRlXNM7gBMOribyQaYpVAaVW9EXWjtrqk1c/template/preview",
           "type": "Diapositivas"
         },
         "fruit_veggie_cards/csd/2022": {
@@ -3690,10 +3699,12 @@
         },
         "introduction_to_ai_lab/csd/2022": {
           "name": "Introducción al Laboratorio de Inteligencia Artificial",
+          "url": "https://docs.google.com/presentation/d/1lxgUDjozD9CF0Nv5n9sWmdguEp3lFX9k90cN-NGQnms/template/preview",
           "type": "Diapositivas"
         },
         "introduction_to_ai_lab_1/csd/2022": {
           "name": "Introducción al Laboratorio de Inteligencia Artificial",
+          "url": "https://www.youtube.com/watch?v=bGJ05vdI3xA",
           "type": "Vídeo"
         },
         "selecting_features/csd/2022": {
@@ -3704,6 +3715,7 @@
         },
         "training_and_testing_in_ai_lab/csd/2022": {
           "name": "Entrenamiento y Pruebas en Laboratorio de Inteligencia Artificial",
+          "url": "https://www.youtube.com/watch?v=HcCtdaiMWPQ",
           "type": "Vídeo"
         },
         "using_data_with_categorical_features/csd/2022": {
@@ -4633,7 +4645,6 @@
         },
         "running-simulations/coursef/2021": {
           "name": "Ejecutar simulaciones",
-          "url": "https://docs.google.com/document/d/1sgUd9UcthM3M-A1EKX1m3AwsgLrivx0jF0i-e_79kk8/edit",
           "type": "Hoja de Trabajo"
         },
         "ai-ml/coursef/2021": {
