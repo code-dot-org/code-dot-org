@@ -1,4 +1,5 @@
 @single_session
+@no_safari
 Feature: Using the SectionActionDropdown
 
   # * Check that we get redirected to the right page

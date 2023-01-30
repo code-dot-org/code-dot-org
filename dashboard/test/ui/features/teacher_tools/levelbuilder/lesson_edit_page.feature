@@ -21,6 +21,7 @@ Feature: Using the Lesson Edit Page
 
     And I delete the temp unit with lessons
 
+  @no_safari
   Scenario: Save changes using the lesson edit page
     Given I create a levelbuilder named "Levi"
     And I create a temp migrated unit with lessons

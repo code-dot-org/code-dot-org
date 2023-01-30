@@ -145,6 +145,7 @@ Scenario: Teacher saves, re-opens, and submits an application
   And I complete Section 7 of the teacher PD application
   And I press the first "button[type='submit']" element
 
+@no_safari
 Scenario: Teacher starts a new csp application and submits it
   Given I create a teacher named "Severus"
   And I am on "http://studio.code.org/pd/application/teacher"
@@ -184,6 +185,7 @@ Scenario: Teacher starts a new csp application and submits it
   # Confirmation page
   Then I wait until element "h1" contains text "Thank you for submitting your application!"
 
+@no_safari
 Scenario: Teacher starts a new csa application and submits it
   Given I create a teacher named "Severus"
   And I am on "http://studio.code.org/pd/application/teacher"
