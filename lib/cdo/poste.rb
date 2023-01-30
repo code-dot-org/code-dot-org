@@ -112,7 +112,7 @@ module Poste
   class Template
     def initialize(path)
       @path = path
-      @template_type = File.extname(path)[1..-1]
+      @template_type = File.extname(path)[1..]
       @header, @html, @text = parse_template(File.read(path))
     end
 
@@ -482,7 +482,7 @@ module Poste2
         # Prevent saving certificates - they are unecessarily filling storage.
         next if name.include?('certificate')
         filename = File.expand_path "#{attachment_dir}/#{timestamp}-#{name}"
-        File.open(filename, 'w+b') {|f| f.write content}
+        File.binwrite(filename, content)
         saved[name] = filename
       end
     end

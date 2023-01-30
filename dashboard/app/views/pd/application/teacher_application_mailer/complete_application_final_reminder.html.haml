@@ -1,8 +1,11 @@
 - registration_url = "https://studio.code.org/pd/application/teacher"
 
 %p
-  Hello
-  = @application.first_name + ","
+  - if !!@application.first_name&.present?
+    Hello
+    = @application.first_name + ","
+  - else
+    Hello,
 
 %p
   We noticed that you still have not completed your application. We just wanted to check in

@@ -1,0 +1,303 @@
+{
+  "navigateForward": "جاری رکھیے",
+  "tryAgain": "دوبارہ کوشش کریں",
+  "navigateDone": "اختتام",
+  "saveProgress": "محفوظ کریں",
+  "modelCardPossibleValuesMinimum": "کم سے کم",
+  "modelCardPossibleValuesMaximum": "زیادہ سے زیادہ",
+  "columnInspectorDescription": "تفصیل",
+  "columnDetailsMinimumValue": "کم سے کم",
+  "columnDetailsMaximumValue": "زیادہ سے زیادہ",
+  "dataCardLastUpdated": "آخری تازہ کاری",
+  "datasets": {
+    "medical_priority": {
+      "fields": {
+        "age": {
+          "id": "عمر"
+        }
+      }
+    },
+    "shoe_survey_toy": {
+      "fields": {
+        "weather": {
+          "id": "موسم"
+        },
+        "shoe": {
+          "id": "جوتا"
+        }
+      }
+    },
+    "salsa_toy": {
+      "fields": {
+        "onion": {
+          "id": "پیاز"
+        },
+        "avocado": {
+          "id": "آووکادو"
+        },
+        "corn": {
+          "id": "مکئی"
+        },
+        "beans": {
+          "id": "پھلیاں"
+        },
+        "lime": {
+          "id": "لیموں"
+        }
+      }
+    },
+    "poutine_toy": {
+      "fields": {
+        "mushrooms": {
+          "id": "مشرومیں"
+        },
+        "lobster": {
+          "id": "جھینگا کیکڑا"
+        },
+        "bacon": {
+          "id": "سور کی پٹھ کا گوشت"
+        },
+        "cheese": {
+          "id": "پنیر"
+        },
+        "meat": {
+          "id": "گوشت"
+        }
+      }
+    },
+    "club_random_toy": {
+      "fields": {
+        "color": {
+          "id": "رنگ"
+        },
+        "music": {
+          "id": "موسیقی"
+        },
+        "food": {
+          "id": "خوراک"
+        }
+      }
+    },
+    "insurance_cost": {
+      "fields": {
+        "age": {
+          "id": "عمر"
+        }
+      }
+    },
+    "nutrition": {
+      "fields": {
+        "Category": {
+          "id": "زمرہ"
+        },
+        "Description": {
+          "id": "تفصیل"
+        }
+      }
+    },
+    "raspado_toy": {
+      "fields": {
+        "strawberry": {
+          "id": "سٹرابری"
+        },
+        "lime": {
+          "id": "لیموں"
+        }
+      }
+    },
+    "shapes_v2_toy": {
+      "fields": {
+        "size": {
+          "id": "سائز"
+        }
+      }
+    },
+    "salad_toy": {
+      "fields": {
+        "tomato": {
+          "id": "ٹماٹر"
+        },
+        "avocado": {
+          "id": "آووکادو"
+        },
+        "chicken": {
+          "id": "چکن"
+        },
+        "fruit": {
+          "id": "پھل"
+        },
+        "beans": {
+          "id": "پھلیاں"
+        },
+        "cheese": {
+          "id": "پنیر"
+        }
+      }
+    },
+    "billionaires": {
+      "fields": {
+        "Age": {
+          "id": "عمر"
+        },
+        "Gender": {
+          "id": "Jinss"
+        }
+      }
+    },
+    "student_alcohol_consumption": {
+      "fields": {
+        "school": {
+          "id": "سکول"
+        },
+        "age": {
+          "id": "عمر"
+        },
+        "health": {
+          "id": "صحت"
+        }
+      }
+    },
+    "naan_toy": {
+      "fields": {
+        "chicken": {
+          "id": "چکن"
+        },
+        "lamb": {
+          "id": "بھیڑ کا بچہ"
+        },
+        "onion": {
+          "id": "پیاز"
+        },
+        "cheese": {
+          "id": "پنیر"
+        }
+      }
+    },
+    "census_part": {
+      "fields": {
+        "age": {
+          "id": "عمر"
+        }
+      }
+    },
+    "loneliness_interests": {
+      "fields": {
+        "Writing": {
+          "id": "لکھنا"
+        }
+      }
+    },
+    "movies": {
+      "fields": {
+        "Score": {
+          "id": "سکور"
+        },
+        "Country": {
+          "id": "Mulk"
+        },
+        "Name": {
+          "id": "نام"
+        },
+        "Star": {
+          "id": "ستارہ"
+        }
+      }
+    },
+    "safari_toy": {
+      "fields": {
+        "people": {
+          "id": "لوگ"
+        },
+        "rhino": {
+          "id": "گینڈا"
+        },
+        "elephant": {
+          "id": "ہاتھی"
+        },
+        "alligator": {
+          "id": "مگرمچھ"
+        },
+        "trees": {
+          "id": "درختیں"
+        }
+      },
+      "name": "سفاری"
+    },
+    "abalone": {
+      "fields": {
+        "Length": {
+          "id": "لمبائی"
+        },
+        "Height": {
+          "id": "لمبائی"
+        }
+      }
+    },
+    "poke_toy": {
+      "fields": {
+        "avocado": {
+          "id": "آووکادو"
+        },
+        "onion": {
+          "id": "پیاز"
+        },
+        "ginger": {
+          "id": "ادرک"
+        }
+      }
+    },
+    "student_survey": {
+      "fields": {
+        "Country": {
+          "id": "Mulk"
+        },
+        "Writing": {
+          "id": "لکھنا"
+        },
+        "Achievements": {
+          "id": "کامیابیوں"
+        },
+        "Age": {
+          "id": "عمر",
+          "description": "عمر"
+        },
+        "Height": {
+          "id": "لمبائی",
+          "description": "لمبائی"
+        },
+        "Gender": {
+          "id": "Jinss",
+          "description": "Jinss"
+        }
+      }
+    },
+    "boba_toy": {
+      "fields": {
+        "banana": {
+          "id": "کیلا"
+        }
+      }
+    },
+    "heart": {
+      "fields": {
+        "Age": {
+          "id": "عمر"
+        }
+      }
+    },
+    "shapes_v1_toy": {
+      "fields": {
+        "size": {
+          "id": "سائز"
+        }
+      }
+    },
+    "loneliness_music": {
+      "fields": {
+        "Country": {
+          "id": "Mulk"
+        }
+      }
+    }
+  }
+}

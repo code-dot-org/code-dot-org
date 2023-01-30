@@ -163,6 +163,12 @@ tr:
   social_coldplay_title: Coldplay ve Code.org ile oluşturun
   social_coldplay_desc: Bize en iyi hareketlerini göster! Kodla, dans et, dünyayla
     paylaş ve kazan.
+  social_maker_title: Ben bir Maker'ım
+  social_maker_desc: 6-12. sınıflar için Code.org fiziksel bilgi işlem ve oluşturucu
+    kaynakları.
+  pl_superhero_title: Öğrencilerin süper kahraman olmalarına yardım edin!
+  pl_superhero_desc: Profesyonel Öğrenme programımız, bilgisayar bilimi öğretmenize
+    yardımcı olur!
   hoc_live: Kodlama Saati Canlı Yayın
   hoc_live_sign_up_title: Kodlama Saati Canlı Yayın için kayıt ol
   hoc_live_learn_title: Canlı Kodlama Saati ile öğrenin
@@ -548,6 +554,10 @@ tr:
   signup_registration_closed: Ve her yıl Aralık ayında, sınıfınız Hour of Code ile
     Bilgisayar Bilimi Eğitim Haftası'nı kutlayan milyonlarca öğrenciye katılabilir.
     Yıllık kutlama için Ekim ayında kayıt açacağız.
+  signup_registration_closed_2022_markdown: 'Bu yılki Hour of Code etkinlik haritası
+    için kayıt şu anda kapalı, ancak yine de [bir Hour of Code düzenleyebilir](%{hoc_activities_url})
+    ve sosyal medyadaki kutlamaya katılabilirsiniz! #HourOfCode etiketini kullanarak
+    etkinliğinizin eğlenceli resimlerini veya videolarını yayınlayın!'
   signup_header: "%{campaign_date} tarihlerinde bir Hour of Code organize edin ve
     buradan kaydolun."
   signup_name_label: İsminiz
@@ -1070,6 +1080,10 @@ tr:
   footer_menu_terms: Şartlar
   footer_menu_privacy: Gizlilik Politikası
   footer_menu_cookie: Çerez Bildirimi
+  footer_menu_facebook: Facebook'ta Code.org
+  footer_menu_twitter: Twitter'da Code.org
+  footer_menu_instagram: Instagram'da Code.org
+  footer_menu_medium: Medium.com'da Code.org
   learn_banner_heading: Hour of Code Aktiviteleri
   learn_banner_blurb: Her yaşa göre tasarlanmış 45’ten fazla dildeki bir saatlik dersleri
     deneyin.  Bir Hour of Code ile başlayarak 180’den fazla ülkedeki milyonlarca öğrenci
@@ -3031,24 +3045,24 @@ tr:
     olması optimal, ancak gerekli değildir.
   tutorial_highseas_longdescription: Bir ortam yaratmak için bir okyanus dalgasını
     canlandırın, sonra açık denizlerde gerçekleşen bir hikayeyi anlatın.
-  tutorial_capython_longdescription: Python öğrenmek için etkileyici ve basit bir
-    dildir. Kaplumbağalar arkadaşlarınızın yardımıyla eğlenceli görüntüler oluştururken
-    modüller, işlevler, döngüler ve listeler hakkında bilgi edinin. Geometri hiç bu
-    kadar eğlenceli olmamıştı!
+  tutorial_capython_longdescription: Python öğrenmesi ilgi çekici ve basit bir dildir.  Kaplumbağa
+    arkadaşlarınızın yardımıyla eğlenceli görüntüler oluştururken modülleri, işlevleri,
+    döngüleri ve listeleri kullanmayı öğrenin.  Geometri hiç bu kadar eğlenceli olmamıştı!
   tutorial_frzn_longdescription: Buzun sihrini ve güzelliğini keşfettikleri macerada
     Anna ve Elsa’ya katılmak için kodu kullanalım! Buzda kaydıkça kar taneleri ve
     değişik desenler oluşturup bir kış diyarı yaratabilir ve sonra arkadaşlarınızla
     paylaşabilirsiniz!
-  tutorial_cocom_longdescription: senin kahraman seçin ve Kithgard Dungeon dev devriye,
-    lav çukurları ve lazer ışınları aracılığıyla yol kodlamak. , Üst seviye taşlar
-    kazanmak ve yeni programlama güçler kilidini sihirli öğeleri yağma!
+  tutorial_cocom_longdescription: Kahramanınızı seçin ve Kithgard Dungeon'ın dev devriyeleri,
+    lav çukurları ve lazer ışınları arasında kod yazın.  Yeni programlama güçlerinin
+    kilidini açmak için seviye atlayın, değerli taşlar kazanın ve sihirli öğeleri
+    yağmalayın!
   tutorial_play-lab_longdescription: Play Lab ile bir hikaye yaratın ya da oyun yapın!
     Hayvanları, korsanları, zombileri, ninjaları ve daha fazla karakteri hareket ettirin,
     ses çıkarmalarını sağlayın, onlara puan toplatın ve hatta ateş topları attırın!
-  tutorial_boxisland_longdescription: Kutu Adası'nda seyahat edin ve tüm yıldızları
-    toplayın! Kutu Adası, heyecan verici bir ada macerasında çocukları kendine çeken
-    güzel bir mobil kodlama oyunudur. Bu yazıda, temel algoritmaları, dizileri, döngüleri
-    ve koşullu ifadeleri öğreneceksiniz!
+  tutorial_boxisland_longdescription: Box Island'da bir geziye çıkın ve tüm yıldızları
+    toplayın!  Box Island, çocukları büyüleyici adada heyecan verici bir maceraya
+    götüren güzel bir mobil kodlama oyunudur.  Bu eğitimde algoritmaların, dizilerin,
+    döngülerin ve koşullu ifadelerin temellerini öğreneceksiniz!
   tutorial_textcomp_longdescription: 'Bir noktada bitleri gönderme hızında fiziksel
     bir sınıra erişiriz ve büyük miktarda bilgiyi daha hızlı göndermek istiyorsak,
     aynı bilgiyi daha az bitle temsil etmenin bir yolunu bulmalı, yani verileri sıkıştırmalıyız.
@@ -3062,28 +3076,29 @@ tr:
     bilgi gönderirken gizliliğe duyulan ihtiyaç hakkında yeterli derecede bilgi sahibi
     olmalıdır ve güçlü bilişim araçları çağında şifreleme tekniklerinin daha sofistike
     olması gerektiğini öğrenmelidir.
-  tutorial_kanopixel_longdescription: Her yaştan yaratıcılar, gerçek bir programlama
-    dilinde kodlamayı öğrenir ve kodlarıyla birlikte 13 resim dizisi çizerek komutlarını
-    hayata geçirirler. Pong ve diğer retro oyunlardan 8-bit sanat ve Minecraft vasıtasıyla
-    video oyun sanat tarihi hakkında bilgi edinecekler, bilgisayar bilimleriyle sanat,
-    tarih ve hikaye anlatımı yapacaklar. Uygulama esnektir - bir veya birden çok oturumda
-    1 saat veya birkaç saat geçirebilirsiniz. Öğrenciler, zorluklar içerisinde Pixel
-    Hack'ı kendi başlarına kendi başlarına kullanarak tamamlayabilir veya Pixel Hack'ı
-    kapsamlı bir eğitimci kılavuzu olan önerilerle dolu bir öğretim görevlisi yolculuğuna
-    dönüştürebilirler. Öğrenciler, Pixel Hacker Sertifikası kazanmak için zorluklarımızı
-    çiğneyerek kendi yaratıcı yeteneklerini eklemeye teşvik edilecektir.
-  tutorial_foos_longdescription: Bulmaca çözmek için sevimli Foos programlayın. Daha
-    sonra oyun yapmak ve paylaşmak için Foo Studio'ya girin. Her yerde herkes, The
-    Foos ödüllü "sözcüksüz" arayüzüyle kodlamayı öğrenebilir. Şimdi oyna!
-  tutorial_tynkerdd_longdescription: Kendi özel ejderhanı tasarla, sonra eğlenceli
-    bulmacalarla hazine ve madeni paralar arayışında rehberlik etmek için programlamayı
-    kullanın! Karmaşık kaleler arasında dolaşmanız, power-up'lar bulmanız ve tüm hazineyi
-    almak için şövalyeleri ele geçirmeniz gerekecek.
-  tutorial_tynkerana_longdescription: Saniye, dakikalık ve saatli el hareketli bir
-    analog saat oluşturmak için matematik ve geometri bilgilerinizi kullanın. Her
-    elin hangi vakitte olduğuna bağlı olarak açılacağı açı hesaplamalısınız. İşiniz
-    bittiğinde, kendi çalar saatinizi hazırlamak için gün boyunca yapmanız gerekenleri
-    hatırlatıcılar ekleyebilirsiniz!
+  tutorial_kanopixel_longdescription: Her yaştan içerik oluşturucu, gerçek bir programlama
+    dilinde kodlamayı öğrenir ve kod içeren 13 resimlik bir dizi çizerek komutlarının
+    hayata geçmesini izler.  Bilgisayar bilimini sanat, tarih ve hikaye anlatımıyla
+    bir araya getirerek, 8-bit sanat ve Minecraft aracılığıyla Pong ve diğer retro
+    oyunlardan video oyun sanatı tarihini öğrenecekler.  Uygulama esnektir; bir veya
+    birden fazla oturumda 1 veya birkaç saat harcayabilirsiniz.  Öğrenciler, zorluklar
+    içinde rehberlik kullanarak Pixel Hack'i kendi başlarına tamamlayabilir veya Pixel
+    Hack'i önerilerle dolu kapsamlı bir eğitimci kılavuzuyla eğitmen liderliğindeki
+    bir yolculuğa dönüştürebilirsiniz.  Öğrenciler, Pixel Hacker Sertifikası kazanmak
+    için zorluklarımızı hackleyerek kendi yaratıcı yeteneklerini katmaya teşvik edilecek.
+  tutorial_foos_longdescription: Sıralama ve döngüler gibi temel bilgisayar bilimi
+    kavramlarını öğreten bulmacaları çözmek için sevimli Foos'u kodlayın.  CodeSpark
+    Academy'nin ödüllü "kelimesiz" arayüzü ile herkes her yerde kodlamayı öğrenebilir.  Acemi
+    kodlayıcılar ve ön okuyucular hoş geldiniz!
+  tutorial_tynkerdd_longdescription: Kendi özel ejderinizi tasarlayın, ardından ona
+    hazine ve madeni para arayışında eğlenceli bulmacalarda rehberlik etmek için programlamayı
+    kullanın!  Tüm hazineyi almak için karmaşık kalelerde gezinmeniz, güçlendiriciler
+    bulmanız ve şövalyeleri fethetmeniz gerekecek.
+  tutorial_tynkerana_longdescription: Hareket eden saniye, yelkovan ve akrep ile çalışan
+    bir analog saat oluşturmak için matematik ve geometri bilginizi kullanın.  Saatin
+    kaç olduğuna bağlı olarak her bir ibrenin göstermesi gereken açıyı hesaplamanız
+    gerekecek.  İşiniz bittiğinde, kendi çalar saatinizi yapmak için gün boyunca yapmanız
+    gerekenler hakkında hatırlatıcılar ekleyebilirsiniz!
   tutorial_vidcard_longdescription: |-
     JavaScript ile nasıl bir tebrik kartı hazırlayacağınızı öğrenin!
 
@@ -3095,68 +3110,63 @@ tr:
   tutorial_spritebox_longdescription: 'Üç farkı dünyadan yıldız toplayarak, Koş, atla
     ve yolunu kodla ve bitiş çizgisine gel! Swift, Java veya Icons ile sıralamayı,
     hata ayaklamayı, döngüleri ve kodlamayı öğren. '
-  tutorial_tynkerch_longdescription: Bilgisayarı kötü amaçlı bir virüsten kurtarın!
-    Virüsleri silerek, kapıları açarak, labirentleri çözerek ve portallar arasında
-    gezinerek sistemin içine girmeniz gerekecek. Virüslere ve aksaklıklara dikkat
-    edin!
-  tutorial_lightbot_longdescription: Lightbot, oyunculara bulmacaları çözmek için
-    programlama mantığı kullanmasını isteyen bir oyundur! Her seviyedeki tüm mavi
-    kiremitleri aydınlatmaya Lightbot'a rehberlik ederek temel kodlama konseptleri
-    hakkında pratik bir anlayış kazanın. Bu kendinden kılavuzlu etkinlikte, talimatları
-    nasıl sıralayacağınızı, prosedürleri yazacağınızı ve döngüleri nasıl kullanacağınızı
-    öğrenin. Her yaş ve tüm beceri düzeyleri için harika.
+  tutorial_tynkerch_longdescription: Bilgisayarı kötü amaçlı bir virüsten kurtarın!  Virüsleri
+    silerek, kapıları açarak, labirentleri çözerek ve portallar arasında gezinerek
+    sistemi hacklemeniz gerekecek.  Virüslere ve hatalara dikkat edin!
+  tutorial_lightbot_longdescription: Lightbot, oyunculardan bulmacaları çözmek için
+    programlama mantığını kullanmalarını isteyen bir oyundur! Lightbot'a her seviyede
+    tüm mavi karoları aydınlatması için rehberlik ederek temel kodlama kavramları
+    hakkında pratik bir anlayış kazanın. Bu kendi kendine rehberli aktivitede yönergeleri
+    nasıl sıralayacağınızı, prosedürler yazacağınızı ve yol boyunca döngüleri nasıl
+    kullanacağınızı öğrenin. Her yaş ve tüm beceri düzeyleri için harika.
   tutorial_hoc_longdescription: Yeni code.org/hoc için yer tutucu
   tutorial_code_longdescription: Sürükle-bırak programlama yöntemiyle Bilgisayar Biliminin
     temel kavramlarını öğrenin. Bu, oyun benzeri, kendi kendine yönlendirilen eğitimde
     Bil Gates, Mark Zuckerberg, Angry Birds ve Plants vs. Zombies tarafından verilen
     video dersler yer alır. Tekrar döngülerini, koşullandırmaları ve temel algoritmaları
     öğrenin. 37 dilde kullanılabilir.
-  tutorial_tinspire_longdescription: Öğrencileri, sırt çantalarında her gün taşıdıkları
-    TI teknolojisini kullanarak, kodlamanın temellerini sadece birer birer 10 dakika
-    içinde tanıtın. Bu dersler, öğrencilere kodlamaya ve bilgisayar bilimlerine olan
-    ilgisini artırmaya yardımcı olabilecek programlamaya kolay giriş imkanı verir.
-    Öğrenciler, matematik kavramlarını, TI-Nspire el bilgisayarlarında kullanıma hazır
-    olan TI Basic dilini kullanarak güçlendirecek programlar yazacaklardır.
+  tutorial_tinspire_longdescription: Her gün sırt çantalarında taşıdıkları TI teknolojisini
+    kullanarak öğrencileri kodlamanın temelleriyle tanıştırın - her seferinde sadece
+    10 dakika içinde.  Bu dersler, öğrencilerin kodlama ve bilgisayar bilimlerine
+    olan ilgilerini artırmaya yardımcı olabilecek programlamaya kolay bir giriş sağlar.  Öğrenciler,
+    TI-Nspire el bilgisayarlarında kullanıma hazır olan TI Basic dilini kullanarak
+    matematik kavramlarını güçlendirebilecek programlar yazacaklar.
   tutorial_itchbounceball_longdescription: |-
-    Scratch görsel programlama dilini kullanarak, Itch'a bir giriş yapmanızı sağlarız.
+    Size Scratch görsel programlama dilini kullanarak Itch'e bir giriş yapacağız.
 
-    Bu ders, öğrencilerin ekranda zanily zıplama yapan bir top alması için eklemeleri gereken kod için bir video ve metin talimatları sağlar.
+     Bu ders, öğrencilerin ekranda çılgınca zıplayan bir top elde etmek için eklemeleri gereken kod için bir video ve metin yönergeleri sağlar.
 
-    Öğrenciler bu aktiviteyi tamamladığında, yapılabilecek diğer değişiklikler ve etkinlikler için fikirlerle keşfetmek için bir fırsat vardır. Açık bir öğrenme ortamı olduğu için belirli bir hedef veya sonuç yoktur, ancak sadece başlangıç koduyla öğrenciler şaşırtıcı projeler üretirler!
+     Öğrenciler bu aktiviteyi tamamladıktan sonra, yapılabilecek diğer değişiklikler ve aktiviteler için fikirlerle keşfetme fırsatı vardır.  Açık bir öğrenme ortamı olduğu için belirlenmiş bir hedef veya sonuç yoktur, ancak sadece bu başlangıç ​​koduyla öğrenciler harika projeler ortaya çıkarır!
 
-    Tüm talimatlar Itch çevresindendir, bu nedenle projeyle birlikte izlenecek ekranların değiştirilmesine gerek yoktur. Kulaklık önerilir.
-  tutorial_vidclim_longdescription: |-
-    Öğrenciler iklim değişikliğine tepki olarak bilim insanlarının ve sanatçıların çalışmalarıyla ilgilenen Dünya iklimiyle ilgili bir gerçeği araştırırlar. Öğrenciler araştırmalarını tamamlar ve gerçekleri paylaşan bir video planlar.
-
-    Videolar aşağıdakilerden biri hakkında olabilir;
-    İklim değişikliklerini ve etkilerini anlama
-    İklim değişikliğine etkilere yönelik kamuoyu yanıtları
-    İklim değişikliği günlük yaşamı nasıl etkiler?
-    Fark yaratmak için ne tür önlemler alabilirim
-  tutorial_matlab_longdescription: Kod Öğrenme, kodlamayı öğrendiğiniz ilgi çekici,
-    çevrimiçi, etkileşimli bir öğreticidir. Arkadaşlarınızla en yakın buluşma yerini
-    sinema, alışveriş merkezi veya kafeterya olup olmadığını öğrenmek için MATLAB
-    kullanın. Sorunu daha küçük parçalara bölün ve yol boyunca temel programlama kavramlarını
-    öğrenin. Saat sonuna kadar, arkadaşlarınızın en kısa yolunu bulmak için bir algoritma
-    oluşturun!
+     Tüm talimatlar Itch ortamında yer alır, bu nedenle projeyle birlikte takip etmek için ekranları değiştirmeye gerek yoktur.  Kulaklık tavsiye edilir.
+  tutorial_vidclim_longdescription: Öğrenciler, iklim değişikliğine yanıt olarak bilim
+    adamlarının ve sanatçıların çalışmalarıyla ilgilenerek Dünya'nın iklimi hakkında
+    bir gerçeği araştırırlar.  Öğrenciler araştırmalarını alır ve gerçeklerini paylaşan
+    bir video planlar.  Videolar, iklim değişikliklerini ve etkilerini, halkın iklim
+    değişikliğine tepkilerini, iklim değişikliğinin günlük hayatı nasıl etkilediğini
+    ve bir fark yaratmak için yapabileceğiniz eylemleri anlamakla ilgili olabilir.
+  tutorial_matlab_longdescription: Kodlamayı Öğrenin, kodlamayı öğrendiğiniz ilgi
+    çekici, çevrimiçi, etkileşimli bir eğitimdir.  Arkadaşlarınızla en yakın buluşma
+    yerinin sinema mı, alışveriş merkezi mi yoksa kafe mi olduğunu öğrenmek için MATLAB'ı
+    kullanın.  Problemi daha küçük parçalara ayırın ve yol boyunca temel programlama
+    kavramlarını öğrenin.  Bir saatin sonunda arkadaşlarınıza giden en kısa yolu bulmak
+    için bir algoritma oluşturun!
   tutorial_flap_longdescription: Kendi Flappy Bird oyununuzu yapmak ve onu farklı
     görünecek şekilde özelleştirmek için sürükle-bırak programlama yöntemini kullanın
     (Flappy Köpekbalığı, Flappy Santa ya da başka herhangi bir şey) Oyunu telefonunuza
     tek tıklamayla ekleyin.
   tutorial_galaxy_longdescription: 'Android akıllı telefonunuzu alın ve uzak galaksileri
-    keşfedin! #GalaxyGameJam''de çok kendi Android uygulamanızı oluşturabilirsiniz.
-    Ücretsiz Pocket Code uygulaması ile tasarlayın ve uzayın misyonunun bir parçası
-    haline gelin. Cep Koduyla çocuklara, gençlere ve genç yetişkinlere, kendi oyunlarını,
-    animasyonlarını ve etkileşimli hikayelerini doğrudan akıllı telefonlarında yaratmalarını
-    amaçlıyoruz.
-
-'
+    keşfedin!  #GalaxyGameJam''de kendi Android uygulamanızı oluşturabilirsiniz.  Ücretsiz
+    Pocket Code uygulamamızla tasarlayın ve uzaya çıkma görevimizin bir parçası olun.  Pocket
+    Code ile çocuklara, gençlere ve genç yetişkinlere kendi oyunlarını, animasyonlarını
+    ve etkileşimli hikayelerini doğrudan akıllı telefonlarında yaratmaları için ilham
+    vermeyi amaçlıyoruz.'
   tutorial_inf_longdescription: Play Lab ile Disney Infinity karakterlerinin oynadığı
     bir hikaye veya oyun yaratın.
-  tutorial_tynkersol_longdescription: Güneş Sistemimizin interaktif bir modeli programlayın.
-    Bu proje, Güneş'le gezegen gezegenleri ile bir simülasyon oluşturmada size rehberlik
-    eden adım adım talimatlarla birlikte gelir. Ardından, tıklandığında açılan her
-    gezegen hakkında gerçekler ekleyin.
+  tutorial_tynkersol_longdescription: Güneş Sistemimizin etkileşimli bir modelini
+    programlayın.  Bu proje, Güneş'in yörüngesinde dönen gezegenlerle bir simülasyon
+    oluşturmanızda size rehberlik edecek adım adım talimatlarla birlikte gelir.  Ardından,
+    tıklandığında açılan her gezegen hakkında gerçekleri ekleyin.
   tutorial_itchg_longdescription: |-
     Name-IT, size bir tanımlama oyunu yarattırır!
 
@@ -3167,26 +3177,27 @@ tr:
     Kodlama tarafında, değişkenler, koşullar, listeler, dizgileri birleştiren ve çok daha fazlasını öğreneceksiniz. Bunlar, yeni kodlama becerilerinizi geliştirmeye devam ederken diğer projelerde tekrar kullanabileceğiniz kodlama teknikleridir!
 
     Kendi resminizi ve etiketlerinizi ekleyerek etkinliği daha da ileri götürebilirsiniz (bircok ekstra proje seçenekleri ile eğlenceli bitmez). Kulaklık önerilir.
-  tutorial_como_longdescription: 200 Öykü Modu ve Beceri Oyunlarında, katılımcılar
-    kodlama öğrenerek maymunların muz yakalamasına yardım ediyor.  Kod Macerası 1.
-    Bölümde objeler, döngüler, değişkenler, dizin endeklemesi ve fonksiyonlar yer
-    alıyor. 2. Bölümde ise fare ve klavyeyi kullanarak Boolean Mantığı, karşılaştırmalar,
-    işlev dönüş değerleri ve tetikleyici olaylar öğretiliyor. Kişiselleştirilmis ipuçları
-    ve yardımlar bütün adımlarda mevcut. 8-16 yaş arası için.
-  tutorial_processfound_longdescription: Sıklıkla ellerinizle yapacağınız işleri kağıtla,
-    kalem ile boya kullanarak yapıyorken yazılım yazmak ne demektir? Çizimler oluşturmak
-    için bilgisayar kullanabilir misin? Ya Animasyon oluşturmak için? Peki Resim yapmak
-    için?
-  tutorial_tynkerhomo_longdescription: Etkileşimli bir hikayeyi içinde homofonanlarla
-    dolaşmak için adım adım talimatları takip edeceksiniz! Bir karakterin homofondaki
-    bir kelimeyi her söylediğinde, oyuncuya hangi homofonoğun bu bağlam için doğru
-    sözcük olduğunu sorun. Müzikçalar homofonalarını daha iyi bilirler, yoksa diyaloglar
-    mantıklı gelmez!
+  tutorial_como_longdescription: '30 eğlence dolu kodlama mücadelesinde sevimli bir
+    maymunun muz yakalamasına yardım edin! Oynarken, yol boyunca size rehberlik edecek
+    farklı hayvanlarla tanışacaksınız. Mümkün olduğu kadar çok yıldız kazanmak için
+    kodu kullanacak ve kutunun dışında düşüneceksiniz. İyi şanslar!
+
+'
+  tutorial_processfound_longdescription: Ellerinizle, kağıtla, kalemle, boyayla sık
+    sık yaptığınız şeyleri yapmak için yazılım yazmak ne demektir?  Çizimler oluşturmak
+    için bir bilgisayar kullanabilir misiniz?  Animasyonlar oluşturmak için mi?  Görüntüler
+    oluşturmak için mi?
+  tutorial_tynkerhomo_longdescription: İçinde çok sayıda sesteş ses bulunan etkileşimli
+    bir hikayeyi canlandırmak için adım adım talimatları izleyeceksiniz!  Bir karakter
+    eşsesli sözcük olan bir kelimeyi her söylediğinde, oyuncuya o bağlam için hangi
+    eşsesli sözcüğün doğru olduğunu sorun.  Oyuncu sesteş seslerini daha iyi bilir,
+    yoksa diyalog hiçbir anlam ifade etmez!
   tutorial_art_longdescription: Artist ile güzel resimler ve tasarımlar çizin!
-  tutorial_tynkerbrick_longdescription: Bu klasik atari oyununun kendi kişisel sürümünü
-    oluşturmak için Tynker'in fizik motorunu kullanın. Başlat ok tuşlarına basıldığında
-    hareket etmek için kürek programlayarak başlayın, sonra bir top ve bazı tuğla
-    ekleyin. Oyunu, top, tuğla ve kürek için özel öğeler ekleyerek kişiselleştireceksiniz.
+  tutorial_tynkerbrick_longdescription: Bu klasik atari oyununun kendi kişiselleştirilmiş
+    versiyonunu oluşturmak için Tynker'ın fizik motorunu kullanın.  Raketi ok tuşlarına
+    basıldığında hareket edecek şekilde programlayarak başlayın, ardından bir top
+    ve biraz tuğla ekleyin.  Top, tuğlalar ve raket için özel varlıklar ekleyerek
+    oyunu kişiselleştireceksiniz.
   tutorial_itchbio_longdescription: |-
     İsim-BT, size bir tanıma oyunu yarattırır!
 
@@ -3242,270 +3253,267 @@ tr:
     ama onu arabaya bindirmeyi unuttular ve onsuz gittiler! Pixel'i eve dönmek için
     programlayabilir misin? Her bulmacada, ailesine geri dönebilmesi için engellerden
     kaçınarak Pixel'le gezineceksiniz.
-  tutorial_livecode_longdescription: Kodlama Saati için LiveCode öğreticimizi kullandığınızda,
-    öğrencileriniz kendi soundboard'larını yaratırlar. Hayvan ve piyano sesleriyle
-    sesli tahta oluşturduktan sonra, öğrenciler kendi görüntü ve müzik seçimleriyle
-    kendi özelleştirilmiş ses tahtalarını yapabilirler!
+  tutorial_livecode_longdescription: Hour of Code için LiveCode eğitimimizi kullandığınızda,
+    öğrencileriniz kendi ses tahtalarını oluşturabilirler.  Hayvan ve piyano sesleriyle
+    ses tahtaları oluşturduktan sonra, öğrenciler kendi görüntü ve müzik seçimleriyle
+    kendi özelleştirilmiş ses tahtalarını yapmakta özgür olacaklar!
   tutorial_cocomgame_longdescription: Birincisi, tehlikeden uzak yolunuzu kodlama
     ve tatlı yağma kapma ederek Python veya JavaScript programlama becerilerinizi.
     O zaman kendi oyun kurmak ve arkadaşları yenebilir olmadığını görmek için programlama
     yetkileri kullanmak!
-  tutorial_tynkerspin_longdescription: Bu projede harika bir özelleştirilebilir çizim
-    aracı yaratacaksınız. Kaleminizi programlayın, bir resim seçin (veya kendi fotoğraflarınızı
-    yükleyin) ve o görüntünün dönen bir halini çizebileceksiniz.
-  tutorial_code-avengers_longdescription: 10 kısa görevde JavaScript ile 2 oyuncu
-    2D üstü oyun oluşturun. Ardından, arkadaşlarınızla paylaşmak için bir Sınav oluştururken
-    programlamanın bazı temellerini (değişkenler ve if ifadeleri) öğrenmeye devam
-    edin. Sınıf liderliğinin tepesine ulaşmak için rekabet ederken yol boyunca puan
-    ve rozet kazan.
-  tutorial_tynkercq_longdescription: Kendi şeker troll karakterinizi tasarlayın ve
-    karakterinizin eve dönüş yolunu bulmasına yardımcı olmak için şekerlemeye yönelik
-    çok düzeyli bir maceraya girin. Engellerden kaçınarak ve çerezleri ve naneleri
-    toplayıp karakteriniz arasında insan dünyasında gezinmek için kodlama bulmacalarını
-    çözeceksiniz.
-  tutorial_cmgame_longdescription: Maymunlarla kendi oyununu yarat! Bu, CodeMonkey'in
-    yaratıcılarından yeni bir çevrimiçi derstir. Gerçek dünyadaki bir programlama
-    dili olan CoffeeScript'i kullanarak baştan sona kendi çevrimiçi oyununuzu nasıl
-    oluşturacağınızı öğrenin. Sprite eklemeyi, klavyenizi kullanarak onları kontrol
-    etmeyi, düşmanları önlemeyi, puan ekleme ve çıkarma, engeller oluşturma ve kaplan
-    tarafından yenilmeyi öğrenin. Önceden tecrübe gerektirmez. Bitirdikten sonra oyununuzu
-    arkadaşlarınızla paylaşın!
-  tutorial_codesters_longdescription: 'Python''u kullanarak kendi oyunlarınızı, animasyonlarınızı
-    ve eserinizi yaratın. İşiniz bitince bunları arkadaşlarınızla paylaşın! Python
-    programı, şirketlerin her gün kullandığı gerçek bir programlama dilidir - sürükle
-    bırak araç takımımız öğrenmeyi kolaylaştırır! Bir basketbol oyunu kurmayı, bir
-    dansa koreograf yapmayı ya da animasyonlu bir kart tasarlamayı deneyin! '
-  tutorial_qrm_longdescription: Biyolojide hafif yürekli ve eğlenceli bir yolculuğun
-    parçası olarak Quorum Programlama dilini öğrenirken Mary'ye katılın. Etkinlikler
-    öğrencilerin rehberliğinde, çevrimiçi örneklerle ve kör ve görme engelli kişiler
-    tarafından erişilebilir durumdadır.
-  tutorial_texas-instruments_longdescription: '10 Dakikalık Kod etkinlikleri, öğrencilerin
-    sırt çantalarında her gün taşıdıkları TI teknolojisi ile kodlamaya olan ilgisini
-    artırmak için sınıf içinde kullanılabilir. TI-84 ™ Plus ile kodlamanın temellerini
-    öğrenin ve sadece 10 dakika içinde programlamaya başlayın - tecrübeye gerek yok!  '
+  tutorial_tynkerspin_longdescription: Bu projede, harika bir özelleştirilebilir çizim
+    aracı yaratacaksınız.  Kaleminizi programlayın, bir resim seçin (veya kendi resminizi
+    yükleyin) ve o resmin dönen bir versiyonunu çizebileceksiniz.
+  tutorial_code-avengers_longdescription: 10 kısa görevde JavaScript ile 2 oyunculu
+    2B yukarıdan aşağıya bir oyun oluşturun.  Ardından, arkadaşlarınızla paylaşmak
+    üzere bir Sınav oluştururken programlamanın bazı temellerini (değişkenler ve if
+    ifadeleri) öğrenmeye devam edin.  Yol boyunca, sınıfın liderlik tablosunun zirvesine
+    ulaşmak için yarışırken puanlar ve rozetler kazanın.
+  tutorial_tynkercq_longdescription: Kendi şeker trol karakterinizi tasarlayın ve
+    karakterinizin eve dönüş yolunu bulmasına yardımcı olmak için çok seviyeli bir
+    şeker arayışına çıkın.  Engellerden kaçarken ve sakız ve nane şekeri toplarken
+    karakterinizle insan dünyasında gezinmek için kodlama bulmacalarını çözeceksiniz.
+  tutorial_cmgame_longdescription: Kendi oyunlarınızı oluşturmayı öğrenerek kodlama
+    becerilerinizi bir sonraki seviyeye taşıyın.  Bu kursta, Super Mario™ tarzı bir
+    oyun oluştururken klavye kullanıcı arabirimini ve oyun mekaniğini öğreneceksiniz.  Daha
+    sonra oyununuzu paylaşabileceksiniz!
+  tutorial_codesters_longdescription: Python kullanarak kendi oyunlarınızı, animasyonlarınızı
+    ve resimlerinizi oluşturun.  İşiniz bittiğinde, bunları arkadaşlarınızla paylaşın!  Şirketlerde
+    her gün kullanılan gerçek bir programlama dili olan Python'da program yapın -
+    sürükle ve bırak araç setimiz öğrenmeyi kolaylaştırır!  Bir basketbol oyunu oluşturmayı,
+    bir dansın koreografisini yapmayı veya animasyonlu bir kart tasarlamayı deneyin!
+  tutorial_qrm_longdescription: Biyolojide kaygısız ve eğlenceli bir yolculuğun parçası
+    olarak Quorum programlama dilini öğrenmek için Mary'ye katılın.  Aktiviteler,
+    çevrimiçi örneklerle öğrenci rehberliğindedir ve görme engelliler ve görme engelliler
+    için erişilebilirdir.
+  tutorial_texas-instruments_longdescription: 10 Dakikada Kodlama etkinlikleri, öğrencilerin
+    her gün sırt çantalarında taşıdıkları TI teknolojisi ile kodlamaya olan ilgilerini
+    artırmanın bir yolu olarak sınıfta kullanılabilir.  TI-84™ Plus kullanarak kodlamanın
+    temellerini öğrenin ve sadece 10 dakikada programlamaya başlayın - deneyim gerekmez!
   tutorial_cajava_longdescription: JavaScript ile çizim yapmak düşündüğünüzden daha
-    kolaydır. Her seviyede karmaşıklığı artıran bayraklar çizerken dünyanın bayrakları
-    hakkında daha fazla bilgi edinin. Şekillerde, koordinatlarda ve renklerde ve kodlamada
-    dizinin önemini öğrenin.
-  tutorial_codehs_longdescription: Programlamayla ilgili olan bir bilgisayara komutlar
-    vermek, aynen bir köpeğe emir vermek gibidir. Köpek Karel ile nasıl başlayacağınızı
-    öğrenin - yeni başlayanlara komutlar ve işlevler gibi temel kavramları öğreten
-    metin tabanlı programlamaya eğlenceli, erişilebilir ve görsel bir giriş. Daha
-    önceden zaten tecrübeniz var mı? Onun yerine JavaScript Grafikler öğreticimizi
-    deneyin!
+    kolaydır.  Karmaşıklığı artan her seviye için bayraklar çizerken dünyanın bayrakları
+    hakkında daha fazla bilgi edinin.  Kodlamada sıranın öneminin yanı sıra şekiller,
+    koordinatlar ve renkler hakkında bilgi edinin.
+  tutorial_codehs_longdescription: Bir bilgisayara komut vermek, ki programlama da
+    bundan ibarettir, tıpkı bir köpeğe komut vermeye benzer.  Yeni başlayanlara komutlar
+    ve işlevler gibi temel kavramları öğreten metin tabanlı programlamaya eğlenceli,
+    erişilebilir ve görsel bir giriş olan Köpek Karel ile nasıl kod yazılacağını öğrenin.  Zaten
+    biraz deneyiminiz var mı?  Bunun yerine JavaScript Grafikleri eğitimimizi deneyin!
   tutorial_hopemo_longdescription: |-
-    En sevdiğiniz emojilerinizi içeren güzel, etkileşimli bir resim oluşturan bir çizim uygulaması oluşturun.
+    En sevdiğiniz emojileri içeren güzel, etkileşimli sanat yaratan bir çizim uygulaması oluşturun.
 
-    Kodlamanın yaratıcı tarafını keşfedin, böylece arkadaşlarınızın kendilerini ifade etmek için kullanabilecekleri bir uygulama oluşturabilirsiniz. Bu süreçte, dizi, olaylar, döngüler ve değişkenler hakkında bilgi edinin.
+     Arkadaşların kendilerini ifade etmek için kullanabilecekleri bir uygulama yaparak kodlamanın yaratıcı yönünü keşfedin.  Bu süreçte sıralama, olaylar, döngüler ve değişkenler hakkında bilgi edinin.
 
-    Bu faaliyeti tamamlamak veya kolaylaştırmak için önceden tecrübeye gerek yoktur; bir uygulama içi video öğreticisi ve adım adım kolaylaştırma kılavuzu içerir.
+     Bu aktiviteyi tamamlamak veya kolaylaştırmak için herhangi bir ön deneyime gerek yoktur;  bir uygulama içi video eğitimi ve adım adım kolaylaştırma kılavuzu içerir.
   tutorial_tynkercm_longdescription: Canavarları yakalamak için büyülü ormanı keşfedin
-    ve kodlama bulmacalarını tamamlayarak onları nasıl programlayacaklarını öğrenin.
-    Tüm benzersiz canavarları toplayın, kodlayın ve gelişin. Canavarların yeteneklerine
-    dayalı stratejiler geliştirin böylece çok oyunculu alanda savaşın. Kimin kodu
-    kazanacak?
-  tutorial_codesterswintergreet_longdescription: 'Bu etkinlikte, öğrenciler Python''da
-    programlamaya hemen başlamak için metne sürükle araç takımımızı kullanıyor! Kış
-    Tebrikleri, öğretmen öğrencilere temel söz dizimi, karakterler ve nokta notasyonu
-    ve olaylar hakkında bilgi verir. Öğrenciler kaydedip paylaşacakları bir kış tebrik
-    kartı oluşturarak öğrenirler! '
-  tutorial_codestersc_longdescription: 'Bu derste öğrenciler koordinat düzleminin
-    dört kadranını da keşfederler! Sahnede çeşitli yerlere karakterleri göndermek
-    için Python ve metne-sürükle araç setini kullanırlar! Öğrencilerin koordinat düzleminde
-    gezinme konusunda rahat olmalarına yardımcı olmak için gösterim ve hata ayıklama
-    etkinlikleri bulunmaktadır. '
-  tutorial_codestersturtle_longdescription: 'Öğrenciler, sürükleyip metin araç setine
-    ve yönlendirilmiş talimatlarımıza bakarak Python''da programlamaya hemen başlıyor!
-    Bu etkinlikte, öğrenciler bir labirentten kaplumbağa çıkarmak için bir dizi zorlukla
-    tamamlayarak kodlamayı öğrenirler! Öğrenciler, kaplumbağa ile çizmeyi öğrenirler
-    ve kendi kaplumbağa sanatını yaratarak bitirirler! '
-  tutorial_penjee_longdescription: 'Öğrencilerin ilk dile başlamasına görsel bir yol.
-    Öğrenciler bir Penguen''i bir buz dünyasında taşımak için Python kodunu yazarlar.
-    Editörümüz, çalıştırdığı her bir kod satırını vurgulamakta ve çocukların kodlarını
-    Penguin dünyasındaki değişikliklere bağlamalarına yardımcı olmaktadır. Müfredatımız,
-    öğrencilerin hazır olma durumuna göre farklılaştırılır ve her öğrencinin ihtiyaçlarına
-    göre kalıplanır. '
+    ve kodlama bulmacalarını tamamlayarak canavarları nasıl programlayacağınızı öğrenin.  Tüm
+    benzersiz canavarları toplayın, kodlayın ve geliştirin.  Çok oyunculu arenada
+    savaşabilmeleri için canavarlarınızın yeteneklerine dayalı stratejiler geliştirin.  Kimin
+    kodu kazanacak?
+  tutorial_codesterswintergreet_longdescription: Bu aktivitede, öğrenciler Python'da
+    programlamaya hemen başlamak için metne sürükleyin araç setimizi kullanıyor!  Kış
+    Selamları, öğrencilere olayların yanı sıra temel sözdizimi, hareketli karakterler
+    ve nokta gösterimi hakkında bilgi verir.  Öğrenciler kaydedip paylaşabilecekleri
+    bir kış tebrik kartı oluşturarak öğrenirler!
+  tutorial_codestersc_longdescription: Bu derste öğrenciler koordinat düzleminin dört
+    çeyreğini de keşfederler!  Sahnede çeşitli konumlara bir karakter göndermek için
+    Python'u ve metne sürükleme araç setimizi kullanıyorlar!  Öğrencilerin koordinat
+    düzleminde gezinme konusunda rahat olmalarına yardımcı olmak için dahil edilen
+    gösteri ve hata ayıklama etkinlikleri vardır.
+  tutorial_codestersturtle_longdescription: Kendi kaplumbağa geçiş oyununuzu yaratırken
+    Python'da kodlamanın temellerini öğrenin!  Oyununuzu kurmak için listeleri ve
+    döngüleri, arabalar oluşturmak ve kaplumbağayı kontrol etmek için olayları kullanın!  Yolu
+    güvenle geçebilir misin?
+  tutorial_penjee_longdescription: Öğrencilerin ilk dillerine başlamaları için görsel
+    bir yol.  Öğrenciler, bir buz dünyasında bir Pengueni hareket ettirmek için Python
+    kodu yazarlar.  Editörümüz yürütülürken her bir kod satırını vurgulayarak çocukların
+    kodlarını Penguen'in dünyasındaki değişikliklere bağlamasına yardımcı olur.  Müfredatımız,
+    öğrencinin hazırbulunuşluğuna göre farklılaştırılır ve her öğrencinin ihtiyaçlarına
+    göre şekillenir.
   tutorial_trinket_longdescription: |-
-    Python programlama dili ile ilgili dersler, zorluklar ve öğreticiler arasından seçim yapın. Bu güçlü dildeki temelleri öğrenirken, kaplumbağa tabanlı animasyonları yapın ve bulmacaları çözün.
+    Python programlama diliyle ilgili dersler, zorluklar ve eğitimler arasından seçim yapın.  Bu güçlü dilin temellerini öğrenirken kaplumbağa tabanlı animasyonlar yapın ve bulmacaları çözün.
 
-    Faaliyetler, blok tabanlı programlamadan gerçek Python koduna, çoğu yaş seviyesine uygun aktivitelere kadar değişir. İspanyolca, Korece ve Çince dilinde seçmeli dersler!
-  tutorial_frogger_longdescription: Hesaplamalı Bir Düşünür Olun. Şaşırtıcı 3D şekillere
-    dönüştüğünüz 2D görüntüleri çizerek 3B Nesneler oluşturun. Heyecan verici dünyalara
-    yeni eklediğiniz şekilleri birleştirerek 3D Dünyalar oluşturun. Dünyanı yönet!
-    Basit sürükleme ve bırakma kurallarını kullanarak programlama yaparak dünyanızı
-    canlandırabilirsiniz. Bilgisayarlarda, tabletlerde ve akıllı telefonlarda oynayın.
-    E-posta ve Facebook aracılığıyla 3D oyununuzu arkadaşlarınızla paylaşın.
-  tutorial_tynkereco_longdescription: Ekosistemde enerjinin nasıl aktığını izlemek
-    için interaktif bir ekolojik piramit oluşturun! Bu proje, tıklandığında piramidin
-    doğru yerinde kayan hayvanlar ve bitkilerle birlikte herhangi bir ekosistem için
-    ekolojik bir piramit oluşturmak yoluyla size yol gösterecek adım adım talimatlarla
+     Faaliyetler, blok tabanlı programlamadan gerçek Python koduna kadar uzanır ve çoğu yaş düzeyine uygun faaliyetler içerir.  İspanyolca, Korece ve Çince dillerinde sunulan dersleri seçin!
+  tutorial_frogger_longdescription: Hesaplamalı Düşünür Olun.  Harika 3B şekillere
+    dönüştürdüğünüz 2B görüntüleri çizerek 3B Nesneler oluşturun.  Az önce oluşturduğunuz
+    şekilleri heyecan verici dünyalarda birleştirerek 3B Dünyalar yaratın.  Dünyanıza
+    hükmedin!  Basit sürükle ve bırak kurallarını kullanarak programlama yaparak dünyanızı
+    hayata geçirin.  Bilgisayarlarda, tabletlerde ve akıllı telefonlarda oynayın.  3D
+    oyununuzu e-posta ve Facebook aracılığıyla arkadaşlarınızla paylaşın.
+  tutorial_tynkereco_longdescription: Enerjinin bir ekosistemde nasıl aktığını izlemek
+    için etkileşimli bir ekolojik piramit oluşturun!  Bu proje, tıklandığında piramit
+    içinde uygun konuma süzülen hayvanlar ve bitkiler içeren herhangi bir ekosistem
+    için ekolojik bir piramit oluşturma konusunda size rehberlik eden adım adım talimatlarla
     birlikte gelir.
   tutorial_mitedarc_longdescription: Hareketli grafiklerine para toplattır ve puan
     kazan.
   tutorial_khan_longdescription: Kendi kardan adamınızı tasarlayarak JavaScript kullanarak
-    çizimleri nasıl programlayacağınızı öğrenin. Kendi başınıza veya sınıfınızla deneyin!
+    çizimleri nasıl programlayacağınızı öğrenin.  Kendi başınıza veya sınıfınızla
+    deneyin!
   tutorial_tynkerd_longdescription: Özel bir kahraman tasarlayın ve bu çok seviyeli
-    macera oyunu aracılığıyla o karakter olarak oynayın. Bulmacaları çözmek, böceklerle
-    savaşmak ve anakartı kurtarmak için kodlama becerilerinizi kullanmanız gerekecek!
-  tutorial_cdmy_longdescription: Codecademy, bugünün işleri için kritik olan STEM
-    becerilerini öğrenmek için interaktif bir platformdur. Milyonlarca Codecademy
-    öğrencisine katılın ve eğlenceli saatler program derslerimizi alarak kodlama ve
-    bilgisayar bilimleri temellerini öğrenin. Her dersin sonunda, arkadaşlarınıza
-    ve ailenize gösterebileceğiniz gerçek bir projeniz olacak.
-  tutorial_codestersdance_longdescription: 'Öğrenciler, Python''da hemen kodlamaya
-    başlamalarını sağlayan bir sürükle-bırak metni araç seti kullanıyor! Öğrenciler,
-    çeşitli programlama komutlarını nasıl kullanacaklarını ve değiştireceğini öğrendiği
-    bir rehberli uygulama aktiviteleri grubunu tamamlarlar. Ardından, kendi dans rutini
-    yaratmak için bu becerileri uyguluyorlar! '
-  tutorial_codestersbasketball_longdescription: 'Öğrenciler, Python''da hemen kodlamaya
-    başlamak için metne-sürükle araç takımımızı kullanırlar! Bu kendinden kılavuzlu
-    etkinlikte, öğrenciler, bir çek-at basketbol oyunu gibi, doğrudan öğretim faaliyetleri
-    dizisini, tamamlarlar! Öğrenciler değişkenleri, olayları, temel söz dizimini keşfederler,
-    rastgele koordinatlar oluştururlar. '
-  tutorial_nclkarel_longdescription: Bu kısa ders, Karel the Robot için 18 eğlenceli
-    programlama bulmacasından oluşuyor. Tamamlama Sertifikası almak için bir saatten
-    fazla zaman harcamamanız gerekmektedir. Karel'i seviyorsanız, NCLab'daki tam Karel
-    programlama dersini almaya dikkat edin!
-  tutorial_buildpong_longdescription: Pong, ilk atari video oyunlarından ve ilk spor
-    atari video oyunlarından biridir. Basit bir iki boyutlu grafik içeren bir masa
-    tenisi spor oyunudur. Oyunun amacı, OYUNUN kendi HEDEFİNİ savunurken BİLGİSAYARA
-    karşı puan kazanmasıdır. Bu projede, BİLGİSAYAR, temel yapay zeka ile programlanarak
-    OYUNCUya tepki verebilir.
-  tutorial_tynkerdrones_longdescription: Engelleri kullanarak sanal sürücülerle robotları
-    gezdiğiniz "Crash Course" bulmacalarını çözerek bağlı cihazları programlamayı
-    öğrenin. Sonra gerçek dronları ve robotları kontrol etmek için programlar oluşturmaya
-    hazırsınız. Ipad veya Android tableti ve desteklenen bir oyuncak gerekir.
+    macera oyununda o karakter olarak oynayın.  Bulmacaları çözmek, böceklerle savaşmak
+    ve anakartı kurtarmak için kodlama becerilerinizi kullanmanız gerekecek!
+  tutorial_cdmy_longdescription: Codecademy, günümüzün işleri için kritik olan STEM
+    becerilerini öğrenmek için etkileşimli bir platformdur.  Milyonlarca Codecademy
+    öğrencisine katılın ve eğlenceli Hour of Code kurslarımızı alarak kodlamanın ve
+    bilgisayar biliminin temellerini öğrenin.  Her kursun sonunda arkadaşlarınıza
+    ve ailenize hava atabileceğiniz gerçek bir projeniz olacak.
+  tutorial_codestersdance_longdescription: Öğrenciler, Python'da hemen kodlamaya başlamalarını
+    sağlayan bir metne sürükleme araç setini kullanır!  Öğrenciler, çeşitli programlama
+    komutlarını nasıl kullanacaklarını ve değiştireceklerini öğrendikleri bir dizi
+    rehberli alıştırma faaliyetini tamamlarlar.  Ardından, kendi dans rutinlerini
+    oluşturmak için bu becerileri uygularlar!
+  tutorial_codestersbasketball_longdescription: Öğrenciler, Python'da kodlamaya hemen
+    başlamak için metne sürükleme araç setimizi kullanır!  Bu kendi kendine rehberli
+    aktivitede, öğrenciler bir çek ve şut basketbol oyunu inşa ettikleri bir dizi
+    doğrudan talimat aktivitelerini tamamlarlar!  Öğrenciler rastgele koordinatlar
+    oluşturarak değişkenleri, olayları, temel sözdizimini keşfederler.
+  tutorial_nclkarel_longdescription: Robot Karel'e ormanlarda, dağlarda ve çöllerde
+    rehberlik ederek kodlamayı ve sorunları çözmeyi öğrenin.  Karel, tıpkı gerçek
+    bir robot gibi talimatlarınızı yerine getirir.  Git, al ve koy gibi basit komutlarla
+    programlamaya başlayın.  Daha sonra, programlarınıza tekrar döngüleri ve koşulları
+    nasıl oluşturacağınızı öğreneceksiniz.  Son olarak Karel için özel komutlar tanımlayın.  NCLab'in
+    uygulamasıyla kendi oyunlarınızı oluşturabilirsiniz!  Herhangi bir programlama
+    dilinde kullanabileceğiniz becerileri öğrenirken eğlenin.
+  tutorial_buildpong_longdescription: Pong, en eski arcade video oyunlarından biridir
+    ve ilk spor arcade video oyunudur.  Basit iki boyutlu grafiklere sahip bir masa
+    tenisi spor oyunudur.  Oyunun amacı, OYUNCU'nun HEDEFİNİ savunurken BİLGİSAYAR
+    üzerinde gol atmasıdır.  Bu projede BİLGİSAYAR, OYUNCU'ya yanıt verebilmesi için
+    temel yapay zeka ile programlanmıştır.
+  tutorial_tynkerdrones_longdescription: Engellerin üzerinden sanal dronlar ve robotlar
+    arasında gezindiğiniz "Hızlandırılmış Kurs" bulmacalarını çözerek bağlı cihazları
+    programlamayı öğrenin.  O zaman gerçek dronları ve robotları kontrol etmek için
+    programlar oluşturmaya hazırsınız.  Bir iPad veya Android tablet ve desteklenen
+    bir oyuncak gerektirir.
   tutorial_carla_longdescription: '"Carla ile Programlama", öğrencilere değişkenler
-    ve koşullar gibi temel kavramları öğrenirken basit bir chatbot oluşturarak yol
-    gösteren kısa bir dizi etkinliktir. Faaliyetler, yeni programcıların uygulamada
-    birçok fırsat sunarak, hedef ipuçları ve geribildirimler sunarak, yeni programcıların
-    sahip oldukları yaygın yanlış anlamaları gidermek için dikkatli bir şekilde tasarlanmıştır.
-
-'
+    ve koşullu ifadeler gibi temel kavramları öğrenirken basit bir sohbet robotu oluşturma
+    konusunda rehberlik eden bir dizi kısa etkinliktir.  Faaliyetler, hedeflenen ipuçları
+    ve geri bildirimin yanı sıra pratik yapmak için birçok fırsat sunarak yeni programcıların
+    bu konularda sahip olduğu yaygın yanlış anlamaları gidermek için dikkatlice tasarlanmıştır.'
   tutorial_zulama_longdescription: Bu aktivitede, eğlenceli bir aksiyon oyunu ile
     JavaScript kodunu düzenlemeyi öğrenir ve değişkenler ve fonksiyonlar gibi bilgisayar
     bilimi kavramlarında ustalaşırsınız. Mevcut oyun kodunu yeniden mixleyerek ve
     genişleterek Sandbox'ta kendi oyununuzu oluşturun. Ardından oyununuzu yayımlayın,
     arkadaşlarınızla ve ailenizle paylaşın.
-  tutorial_capost_longdescription: Bu dijital posta kartıyla HTML ve CSS öğrenmeye
-    başlamak kolay ve eğlenceli. Arkadaşlarınızla ve ailenizle paylaşmak için bir
+  tutorial_capost_longdescription: Bu dijital kartpostal ile HTML ve CSS öğrenmeye
+    başlamak kolay ve eğlenceli.  Arkadaşlarınız ve ailenizle paylaşmak üzere bir
     tatil kartı veya doğum günü kutlaması oluşturmak için başlıklar, paragraflar,
     resimler ve bağlantılar ekleme hakkında bilgi edinin.
   tutorial_marco_longdescription: Öğrenciler orijinal bir hikayeye dayalı bir macera
-    oyunu oynarlar. Ona Kodlama Saatine kullanılan görsel programlama dili biçiminde
-    adım adım talimatlar vererek, ana karakter olan Marco'ya her seviyede rehberlik
-    ediyorlar. Komutları, yinelemeleri ve koşulları komut dizilerini fark etmeden
-    öğreniyorlar.
-  tutorial_codestersflappybike_longdescription: 'Bu etkinlikte öğrenciler, Python''da
-    kodlamaya hemen başlamak için yazıya sürükle araç takımını kullanıyor! Öğrencilere,
-    komple bir oyun kurmalarını öğreten bir dizi öğrenme etkinliğiyle yönlendirilirler!
-    Bitirdikten sonra, yeni bir oyun oluşturmak için sözdizimi, nokta işareti, olaylar,
-    değişkenler, parametreler ve oyun mekaniği konusunda öğrendiklerini kullanmaya
-    meydan okunurlar. '
-  tutorial_kanopong_longdescription: Bir saat içinde bu klasik atari oyununu oluşturarak
+    oyunu oynarlar.  Ana karakter Marco'ya her seviyede rehberlik ederler ve ona Hour
+    of Code tarafından kullanılan görsel programlama dili biçiminde adım adım talimatlar
+    verirler.  Farkına bile varmadan sıralama komutları, yineleme ve koşullarla tanışırlar.
+  tutorial_codestersflappybike_longdescription: Bu aktivitede, öğrenciler Python'da
+    kodlamaya hemen başlamak için metne sürükleme araç setimizi kullanıyor!  Öğrenciler,
+    onlara eksiksiz bir oyun oluşturmayı öğreten bir dizi öğrenme etkinliğiyle yönlendirilir!  Bitirdikten
+    sonra, yeni bir oyun oluşturmak için sözdizimi, nokta gösterimi, olaylar, değişkenler,
+    parametreler ve oyun mekaniği hakkında öğrendiklerini kullanmaları istenir.
+  tutorial_kanopong_longdescription: Bu klasik atari oyununu bir saat içinde yaparak
     kodlamayı öğrenin!
-  tutorial_tynkerright_longdescription: 'Kendine ait Bill of Rights projenizi oluşturun:
-    arka planı değiştirin, daha fazla soru ekleyin, skor tutun, animasyonlar ekleyin.'
-  tutorial_touchdevelop_longdescription: 'Dokunmaya-dost düzenleyici, piksel sanatı
-    oluşturma, ayı bulmacası çözme veya kendine ait atlayan kuş oyunu yapma konusunda
-    size rehberlik edecektir. '
-  tutorial_tynkercc_longdescription: Ordunu savaşa hazırla! Düşmanınızın zayıf yönlerini
-    kullanmak ve zafer kazanan savaşlardan ortaya çıkmak için ordudaki her bir üyesinin
-    saldırı mantığını kodlayın. Öğrenirken, programlayabildiğiniz yeni karakterlerin
-    kilidini açarsınız. Ordunuzu kurun, ardından arkadaşlarınızla savaşın. Kimin kodu
-    en iyisi?
-  tutorial_bamboo_longdescription: 'Bambu JS, öğrencilere temel Javascript kavramlarını
-    öğretmek için Codemoji''nin hazırladığı bir etkinlik dizaynıdır. Bambu panda ve
-    onun müthiş tost arkadaşları temel komutlar ve yapısı olsa da öğrencilere yol
-    gösterecektir. Bamboo JS etkinliği, kodlamasında biraz daha fazla animasyon ve
-    daha fazla sanat ve tasarım isteyen öğrenciler için tasarımdır. Bambu etkinliği
-    her yaştan öğrenci için mükemmeldir. '
-  tutorial_robojav_longdescription: Bir saat içinde Java programlamanın temellerini
-    öğrenirken simüle robotlar ve özelleştirilmiş yaratıklar için ekranınızda küçük
-    bir dünya oluşturun. Daha önce programlama deneyimi gerekmemektedir. Kapsanan
-    konular nesneler, yöntemler, parametreler ve basit grafiklerdir.
-  tutorial_roboba_longdescription: |
-    RoboBlockly, yeni başlayanların Blockly içindeki robotlarla matematik öğrenmesi için tasarlanmıştır. Cebir 1 çalışmaları kendine güdümlüdür.
-    RoboBlockly öğrencileri C / C ++ programlamaya hazır hale getirir.
+  tutorial_tynkerright_longdescription: 'Kendi Haklar Bildirgesi projenizi oluşturun:
+    arka planı değiştirin, daha fazla soru ekleyin, puanı tutun, animasyonlar ekleyin.'
+  tutorial_touchdevelop_longdescription: Dokunmaya duyarlı düzenleyici, piksel sanatı
+    oluşturma, ayı bulmacasını çözme veya kendi zıplayan kuş oyununuzu yapma konusunda
+    size rehberlik edecek.
+  tutorial_tynkercc_longdescription: Ordunu savaşa hazırla!  Düşmanınızın zayıflıklarından
+    yararlanmak ve muharebelerden galip çıkmak için ordunuzun her bir üyesinin saldırı
+    mantığını kodlayın.  Öğrendikçe, programlayabileceğiniz yeni karakterlerin kilidini
+    açarsınız.  Ordunu kur, sonra arkadaşlarınla ​​savaş.  Kimin kodu en iyisidir?
+  tutorial_bamboo_longdescription: Bamboo JS, öğrencilere temel Javascript kavramlarını
+    öğretmek için Codemoji tarafından tasarlanmış bir etkinlik tasarımıdır.  Bambu
+    panda ve harika tost arkadaşları, öğrencilere temel komutlar ve yapı hakkında
+    bilgi verecek.  Bamboo JS etkinliği, kodlamalarında biraz daha fazla animasyon
+    ve daha fazla sanat ve tasarım isteyen öğrenciler için tasarlanmıştır.  Bambu
+    etkinliği her yaştan öğrenci için harikadır.
+  tutorial_robojav_longdescription: Simüle edilmiş robotlar ve özelleştirilmiş yaratıklar
+    için ekranınızda küçük bir dünya oluştururken Java programlamanın temellerini
+    bir saat içinde öğrenin.  Önceden programlama deneyimi gerekmez.  İşlenen konular
+    nesneleri, yöntemleri, parametreleri ve basit grafikleri içerir.
+  tutorial_roboba_longdescription: |-
+    RoboBlockly, yeni başlayanların Blockly'de robotlarla matematik öğrenmesi için tasarlanmıştır.  Cebir 1 etkinlikleri kendi kendine yönlendirilir.
+     RoboBlockly, öğrencileri C/C++ ile programlamaya hazır hale getirir.
   tutorial_knodsnake_longdescription: 'JavaScript''de Snake oyunu oluşturmayı öğrenin! '
-  tutorial_soccharater_longdescription: Kendi piksel karakterinizi kodlayın! Karakterinizi
-    oluşturmak için HTML'yi, stillemek için CSS'yi ve sevimli piksel kişinizi canlandırmak
-    için JavaScript'i kullanın. Kendi kendine kodunuzu yazabilir veya ekip kodlama
-    oyunumuzla birlikte bir arkadaşınızı birlikte kodlamaya davet edebilirsiniz.
+  tutorial_soccharater_longdescription: Kendi piksel karakterinizi kodlayın!  Karakterinizi
+    oluşturmak için HTML'yi, stil vermek için CSS'yi ve sevimli piksel kişinizi canlandırmak
+    için JavaScript'i kullanın.  Kendi başınıza kodlayın veya bir arkadaşınızı davet
+    edin ve takım kodlama oyunumuzla birlikte kodlayın.
   tutorial_silent_longdescription: |-
-    Herhangi bir kelime veya açıklama olmaksızın programlamanın temel kavramlarını keşfedin.
-    Sessiz öğretmenimiz sizi bazı kuralları tahmin etmenize ve kendi hatalarınızdan ötürü yönlendirmeye yönlendiren birkaç soru soracaktır.
-    Oyunda metin olmadığından, hangi dili konuştuğuna bakılmaksızın herhangi bir oyuncu tarafından erişilebilir.
-  tutorial_robomesh_longdescription: Öğrenciler popüler VEX IQ robotlarını kontrol
-    etmek için Google Blockly kodunu yazar. Sanal bir robot veya gerçek VEX IQ robotları
-    için kendileri kurmuş oldukları kodu yazmayı seçebilirler ve her iki seçenek de
-    aynı web tabanlı geliştirme arayüzünde bulunur. Öğrenciler, temel robot hareketi
-    ve bir sensörün ve bir çıkış cihazının nasıl kullanılacağı hakkında bilgi sahibi
-    olurlar. Bu çok kolay ve eğlenceli.
-  tutorial_amaze_longdescription: Bu projede, bir KARAKTER MERKEZ'de başlar ve bir
-    ÖDÜLÜ almak için ENGELLER'den kaçınırken bir YOL izler. Kazanmak için karakter,
-    ödülü MERKEZ'e döndürür. Karakterin ENGELLERİ dokunması yasaktır. Dokunursa "biter"
-    ve YENİDEN MERKEZDEN başlar. Ekstra kredi için, oyuncunun oyunu tamamlamak için
-    sınırlı bir süre vardır.
-  tutorial_codestersds_longdescription: 'Bu Ortak Çekirdek ELA hizalı dersinde öğrenci,
-    kullanıcılara uygun geçiş kelimeleri isteyen bir hikaye anlatmak için programlama
-    kullanır. Öğrenciler temel söz dizimi, dizeler, değişkenler ve kullanıcı girişi
-    hakkında bilgi sahibi olacaklardır. Bir öykü anlatmak ve kullanıcıyı çeşitli sahne
-    değişiklikleri ile yönetmek için platformu ve sprite''ı kullanacaklardır. '
+    Herhangi bir kelime veya açıklama olmadan programlamanın temel kavramlarını keşfedin.
+     Sessiz öğretmenimiz, bazı kuralları tahmin etmenize ve kendi hatalarınızdan ders almanıza yol açacak bir dizi soru soracaktır.
+     Oyunda metin olmadığı için, dili ne olursa olsun herhangi bir oyuncu tarafından erişilebilir.
+  tutorial_robomesh_longdescription: Öğrenciler, popüler VEX IQ robotlarını kontrol
+    etmek için Google Blockly kodunu yazarlar.  Sanal bir robot veya kendi inşa ettikleri
+    gerçek bir VEX IQ robotu için kod yazmayı seçebilirler ve her iki seçenek de aynı
+    web tabanlı geliştirme arayüzünde mevcuttur.  Öğrenciler temel robot hareketini
+    ve bir sensörün ve bir çıkış cihazının nasıl kullanılacağını öğrenirler.  Kolay
+    ve eğlenceli.
+  tutorial_amaze_longdescription: Bu projede bir KARAKTER, ANA ÜSTE başlar ve ÖDÜL
+    almak için ENGELLERDEN kaçarken bir YOL izler.  Karakter kazanmak için ödülü ana
+    üsse geri getirir.  Karakterin ENGELLERE dokunmasına izin verilmez.  Olursa, "zaplanır"
+    ve ANA ÜSTEN baştan başlar.  Ekstra kredi için, oyuncunun oyunu tamamlamak için
+    sınırlı bir süresi vardır.
+  tutorial_codestersds_longdescription: Bu Ortak Çekirdek ELA ile uyumlu derste, öğrenciler,
+    kullanıcıları uygun geçiş sözcüklerine yönlendiren bir hikaye anlatmak için programlamayı
+    kullanır.  Öğrenciler temel sözdizimi, diziler, değişkenler ve kullanıcı girişi
+    hakkında bilgi edinecekler.  Bir hikaye anlatmak ve kullanıcıyı çeşitli sahne
+    değişikliklerinde yönlendirmek için platformu ve bir hareketli grafiği kullanacaklar.
   tutorial_knodtext_longdescription: Python'da bir metin macera oyunu yapmayı öğrenin!
-  tutorial_alicegar_longdescription: 'Film şeridinden Alice ve Garfield''la programlamaya
-    kadar olan animasyon üretim sürecini takip edin. Yaratıcılığın ve öykü anlatmanın,
-    sürükleyip bırakarak kodlama ortamında öğrenmenizi sağlayın. Proje, bir hikaye
-    panosu nedir, bir hikaye tahtasını programlanabilir bir betik haline çevirme ve
-    kısa bir 3D animasyonun nasıl programlanacağı konusunda size rehberlik edecektir. '
-  tutorial_codesterstransform_longdescription: 'Bu etkinlikte, öğrenciler koordinat
-    düzleminde dönüşüm gerçekleştirmek için Python kullanıyor! Ders, öğrencilerin
-    çeşitli statik dönüşümleri programlamalarını ve tanımlamalarını isteyen gösteriler,
-    doğrudan talimatlar ve zorlukları içerir! '
-  tutorial_flexfrog_longdescription: Froggy'ye ve arkadaşlarınıza kendi zambak pedlerine
-    hazırlanmalarına yardımcı olan bu eğitim oyunu ile biraz web geliştirmeyi öğrenin.
-    Oyunun sonunda, flexbox adı verilen yeni CSS özelliklerini kullanarak yazma kodunun
-    nasıl kullanılacağını öğreneceksiniz. Önceden kodlama deneyimi gerekmez!
-  tutorial_codemoji_longdescription: Codemoji etkinliği, Emoji kullanarak temel kodlama
-    kavramlarını öğrenmek için 1-6. Sınıf öğrencileri için web tabanlı bir etkinliktir.
-    Öğrenciler, temel HTML etiketleri ve kavramları hakkında öğrendikleri etkinlikleri
-    yaptıktan sonra. Bu, öğrencinin basit bir web sitesi oluşturduğu kodlama projesini
-    yalnızca birkaç adımda yapmalarına yardımcı olur. Öğrenciler Codemoji etkinliklerini
-    yaptıktan sonra öğrenciler gerçek kodlama becerilerine kapılırlar.
-  tutorial_robobii_longdescription: |
-    RoboBlockly yeni başlayanların Blockly içindeki robotlarla kodlamayı öğrenmesi için tasarlanmıştır. Kodlama etkinlikleri öğretici videolarla kendiliğinden yönlendirilir.
-    RoboBlockly öğrencileri C / C ++ programlamaya hazır hale getirir.
-  tutorial_robobm_longdescription: |
-    RoboBlockly, yeni başlayanların Blockly içindeki robotlarla matematik öğrenmesi için tasarlanmıştır. Matematik faaliyetleri kendine güdümlüdür.
-    RoboBlockly öğrencileri C / C ++ programlamaya hazır hale getirir.
-  tutorial_codingrobots_longdescription: |
-    RoboBlockly, yeni başlayanlar için robotlarla kodlama ve matematik öğrenmek üzere tasarlanmıştır. Etkinlikler öğretici videoları ile birlikte öğrenci rehberliğindedir.
-    RoboBlockly öğrencileri C / C ++ programlamaya hazır hale getirir.
-  tutorial_robob_longdescription: |
-    RoboBlockly, yeni başlayanların Blockly'de kodlama yaparak robotik öğrenmesi için tasarlanmıştır. Robotik faaliyetleri öğretici videolarla kendiliğinden yönlendirilmektedir.
-    RoboBlockly öğrencileri C / C ++ programlamaya hazır hale getirir.
-  tutorial_coders_longdescription: "Bu adım adım bulmaca oyunu, bot programlamaya
-    kolay bir giriş sağlar.\n\nAmaç diğer oyunculara karşı bir yıldız gemisi yarışması
-    kazanmaktır.\n\nOyun başlatmak kolaydır ve yalnızca bir geminin hareket etmesi
-    için birkaç satırlık kod gerektirir, ancak daha sofistike botlar oluşturmak için
-    sonsuz olasılıklar vardır. "
+  tutorial_alicegar_longdescription: Alice ve Garfield ile storyboard oluşturmadan
+    programlamaya kadar animasyon yapım sürecini takip edin.  Sürükle ve bırak kodlama
+    ortamında öğrenmenizi yaratıcılığın ve hikaye anlatımının yönlendirmesine izin
+    verin.  Proje, storyboard'un ne olduğu, storyboard'un programlanabilir bir senaryoya
+    dönüştürülmesi ve kısa bir 3D animasyonun nasıl programlanacağı konusunda size
+    rehberlik edecek.
+  tutorial_codesterstransform_longdescription: Bu aktivitede öğrenciler, koordinat
+    düzleminde dönüşümler gerçekleştirme pratiği yapmak için Python'u kullanır!  Ders,
+    öğrencilerden çeşitli statik dönüşümleri programlamalarını ve tanımlamalarını
+    isteyen gösteriler, doğrudan öğretim ve meydan okumalar içerir!
+  tutorial_flexfrog_longdescription: Froggy ve arkadaşlarının nilüfer yapraklarına
+    ulaşmalarına yardımcı olduğunuz bu eğitici oyunla biraz web geliştirme öğrenin.  Oyunun
+    sonunda, flexbox adı verilen yeni CSS özelliklerini kullanarak yazma kodunu nasıl
+    kullanacağınızı öğreneceksiniz.  Önceden kodlama deneyimi gerekmez!
+  tutorial_codemoji_longdescription: Codemoji etkinliği, 1-6. sınıf öğrencilerinin
+    Emoji'leri kullanarak temel kodlama kavramlarını öğrenmeleri için web tabanlı
+    bir etkinliktir.  Öğrenciler etkinliği yaptıktan sonra temel HTML etiketlerini
+    ve kavramlarını öğrendiler.  Bu, öğrencinin yalnızca birkaç adımda temel bir web
+    sitesi oluşturduğu kodlama projesini yapmalarına yardımcı olur.  Öğrenciler Codemoji
+    etkinliğini yaptıktan sonra gerçek kodlama becerileri ile uzaklaşırlar.
+  tutorial_robobii_longdescription: |-
+    RoboBlockly, yeni başlayanlar için Blockly'de robotlarla kodlamayı öğrenmeleri için tasarlanmıştır.  Kodlama etkinlikleri öğretici videolar ile kendi kendine yönlendirilir.
+     RoboBlockly, öğrencileri C/C++ ile programlamaya hazır hale getirir.
+  tutorial_robobm_longdescription: |-
+    RoboBlockly, yeni başlayanların Blockly'de robotlarla matematik öğrenmesi için tasarlanmıştır.  Matematik etkinlikleri kendi kendine yönlendirilir.
+     RoboBlockly, öğrencileri C/C++ ile programlamaya hazır hale getirir.
+  tutorial_codingrobots_longdescription: |-
+    RoboBlockly, yeni başlayanların robotlarla kodlama ve matematik öğrenmesi için tasarlanmıştır.  Etkinlikler, öğretici videolar ile öğrenci rehberliğindedir.
+     RoboBlockly, öğrencileri C/C++ ile programlamaya hazır hale getirir.
+  tutorial_robob_longdescription: |-
+    RoboBlockly, yeni başlayanlar için Blockly'de kodlama ile robot bilimi öğrenmeleri için tasarlanmıştır.  Robotik aktiviteler, öğretici videolar ile kendi kendine yönlendirilir.
+     RoboBlockly, öğrencileri C/C++ ile programlamaya hazır hale getirir.
+  tutorial_coders_longdescription: |-
+    Bu adım adım bulmaca oyunu, bot programlamaya kolay bir giriş sağlar.
+
+     Amaç, diğer oyunculara karşı bir yıldız gemisi yarışını kazanmaktır.
+
+     Oyunun başlaması basittir ve bir geminin hareket etmesi için yalnızca birkaç satırlık kod gerektirir, ancak daha karmaşık botlar oluşturmak için neredeyse sonsuz iyileştirme olasılığı vardır.
   tutorial_tynkerhw_longdescription: Bu yüksek oktanlı yarış oyununda Hot Wheels ile
-    programlamayı öğrenin! Geniş bir otomobil arasından seçim yapın, ardından karmaşık
-    yarış pistlerinde gezinirken programı öğrenin. Engelleri atlayın, köşelerden savrulun
-    ve yarışı kazanın. Kendi yarış pistlerini bile programlayabilir ve arkadaşlarınızı
-    onlarla yarışmaya davet edebilirsiniz.
-  tutorial_tynkermh_longdescription: Monster High bir çöpçü avına ev sahipliği yapıyor!
-    Frankie, Draculaura, Clawdeen, Cleo ve Ghoulia'ya yardımcı olmak için sürükleyip
-    bırakma bloklarıyla kodlama bulmacalarını çözün. Monster High salonlarıyla arayışınızda
-    engellerden kaçının ve tüm okul armalarını bulun. Sonra kendi dans partisi müzik
-    videonuzu ghouls ile programlayın ve arkadaşlarınızla paylaşın.
+    programlamayı öğrenin!  Çok çeşitli arabalardan birini seçin, ardından karmaşık
+    yarış pistlerinde gezinirken programlamayı öğrenin.  Engellerin üzerinden atlayın,
+    köşelerde kayın ve yarışı kazanın.  Hatta kendi yarış pistlerinizi programlayabilir
+    ve arkadaşlarınıza bu pistlerde yarışmaları için meydan okuyabilirsiniz.
+  tutorial_tynkermh_longdescription: Monster High bir çöpçü avına ev sahipliği yapıyor!  Frankie,
+    Draculaura, Clawdeen, Cleo ve Ghoulia'ya yardım etmek için sürükle ve bırak bloklarıyla
+    kodlama bulmacalarını çözün.  Monster High koridorlarında görev yaparken engellerden
+    kaçının ve tüm okul armalarını bulun.  Ardından hortlaklarla kendi dans partisi
+    müzik videonuzu programlayın ve arkadaşlarınızla paylaşın.
   tutorial_caphoto_longdescription: Bu zorlu ve heyecan verici proje size bir Photo
-    Booth uygulaması oluşturmayı öğretecektir. JavaScript, CSS ve HTML kullanarak,
-    bir kamera kullanmanıza, resimleri yüklemenize ve çıkartmalar ekleyerek ve filtreler
-    uygulayarak fotoğraflarınızı kişiselleştirmenize izin veren düğmeleri bağlayacaksınız.
-  tutorial_mozillahw_longdescription: Öğrenciler bir web sitesinde kelimeleri değiştirmek,
-    web için dizgi yapmak, JavaScript değerlerini kodlamak ve Web içeriğini yeniden
-    yaratmak için JavaScript kodunu yeniden biçimlendirir.
+    Booth uygulamasını nasıl oluşturacağınızı öğretecek.  JavaScript, CSS ve HTML
+    kullanarak, kamera kullanmanıza, resim yüklemenize ve çıkartmalar ekleyerek ve
+    filtreler uygulayarak fotoğraflarınızı özelleştirmenize olanak tanıyan düğmeleri
+    birbirine bağlayacaksınız.
+  tutorial_mozillahw_longdescription: Öğrenciler bir web sitesindeki kelimeleri değiştirmek
+    için JavaScript kodunu yeniden düzenleyecek, web için oluşturmayı, JavaScript
+    değerlerini kodlamayı ve Web içeriğini yeniden karıştırmayı öğrenecekler.
   tutorial_ticklep_longdescription: |-
     Neleri başarabilirsin
     Tickle uygulamasıyla uyumlu Parrot drone, mükemmel uçuş performansı ile ünlüdür. Tickle uygulamasını kullanarak onları yenilikçi yollarla uçurabilir ve muhteşem hava gösterileri yapabilirsiniz. Aynı zamanda, hedefe ulaşmaya çalışırken programlama konseptlerini de öğrenebilirsiniz.
@@ -3527,53 +3535,42 @@ tr:
     - Başlık açılarını (0 ila 360 derece) anlayın.
     - "Dış açılar" geometrisi konsepti hakkında bilgi edinin.
     - "Olay odaklı programlamanın" programlama konseptini anlayın
-  tutorial_bbot_longdescription: "Bu 3 saatlik kodlama etkinlikleriyle, öğrencilerinize
-    programla öğretmek için herhangi bir programlama bilgisi veya deneyiminiz olması
-    gerekmez! Programlamayı eğlenceli ve kolay bir şekilde öğretebilirsiniz. Etkinlikler
-    üzerine gidin ve sunum slaytları, bağlantı gerektirmeyen malzemeler ve çözüm kılavuzları
-    da dahil olmak üzere ders materyallerimizi indirin ve kendinizi ilk dersinizi
-    20 ila 40 dakika içinde öğretmeye hazır bulacaksınız!\n\nFaaliyetlerimiz, döngüler
-    ve algoritmalar gibi programlama ve temel programlama kavramları hakkında öğrencilerinize
-    (7 yaş ve üstü) öğretmek için çevrimdışı ve çevrimiçi egzersizleri içerir. Öğrenciler
-    bilgi ve becerilerini, mantık tabanlı bulmacaları en etkin biçimde çözmek için
-    robotlarını programlayacakları Bomberbot çevrimiçi oyununda uygulayacaklardır. "
-  tutorial_scratchg_longdescription: Çocuklar, telefonlarında ve bilgisayarlarda oynamayı
-    sever. Ama nasıl programlanmışlar? Bu etkinlik Scratch programlama diline öğrencileri
-    tanıtmakta ve onlara farklı stil oyunlarını nasıl programlayacaklarını göstermektedir.
-    Oyunlar için gerekli tüm sanatlar sağlanır ve öğrenciler işleyen bir oyun yapmak
-    için her şeyi birbirine nasıl bağlayacaklarını öğrenmek zorunda kalacaklardır.
-  tutorial_sjforest_longdescription: '"Korkunç bir orman yapabilir miyim?", anaokulundan
-    ikinci sınıfa kadar olan ve ScratchJr''nin daha gelişmiş özelliklerini öğrenmek
-    ve öğrenmek için programlamayla daha önce deneyim sahibi olan çocuklar için yapılan
-    bir ara faaliyettir. Lager, çocuklar bu aktiviteyi yaparken öğrendikleri becerileri
-    kendi benzersiz projelerini oluşturmak için kullanabilir ya da daha önce yaptıkları
-    "Korkunç Bir Orman Yapabilir miyim?" programı üzerine yeni birşeyler ekleyebilirler.
-    Bu etkinlik ve ScratchJr''te ki bu etkinlik ve süre boyunca, öğrenciler yaratıcı
-    düşünme, hikaye anlatıcıları olma ve matematiksel akıl yürütme ve sıralama becerilerini
-    geliştirme fırsatına sahip olacaklar.'
-  tutorial_sjgreet_longdescription: '"Birbirlerini Selamlayan Karakterler Yapabilir
-    miyim?" ScratchJr''nin daha gelişmiş özelliklerine sahip olan ve programlamada
-    önceden tecrübeye sahip olan anaokulundan 2. sınıfa kadar çocuklar için geliştirilmiş
-    bir etkinliktir. Çocuklar daha sonra, bu faaliyeti yaparken öğrendikleri becerileri
-    kendi benzersiz projelerini oluşturmak için kullanabilir veya "Birbirlerini Selamlayan
-    Karakterler Yapabilir miyim?" programı üzerine yeni birşeyler ekleyebilirler.
-    ScratchJr''deki bu etkinlik ve süre boyunca, öğrenciler yaratıcı düşünme, öykü
-    anlatanlar haline gelme ve matematiksel akıl yürütme ve sıralama becerilerini
-    geliştirme fırsatı bulacaklar.'
-  tutorial_sjsunset_longdescription: '"Güneş Batımı Yapabilir miyim?" anaokulundan
-    ikinci sınıflara kadar olan çocuklara yönelik bir tanıtım etkinliği olup, ScratchJr''nin
-    temel özelliklerini ve kodlamanın temel kavramlarını öğrenmek için çok az veya
-    hiç programlama deneyimi gerektirmeyen bir başlangıç aktivitesidir. ScratchJr''deki
-    bu etkinlik ve süre boyunca,, öğrenciler yaratıcı düşünme, hikaye anlatıcıları
-    olma ve matematiksel akıl yürütme ve sıralama becerilerini geliştirme fırsatına
-    sahip olacaklar. Daha sonra çocuklar, öğrendiklerini kendi benzersiz projelerini
-    oluşturmak için kullanabilirler.'
-  tutorial_fufafrenz_longdescription: Dizi Üzerinde Başlangıç Dersleri (K-5). Bu,
-    en temel programlama konseptine, diziye giriş niteliğindedir. Bu, üçüncü sınıf
-    örneğidir, K-5 için iskele edilen bu konsepte ilişkin ders planlarımız var.
-  tutorial_bbcgeo_longdescription: K-5 sınıfları için standartlara dayalı ders planı.
-    Çocuğunuzu eldeki çalışma yapraklarıyla birlikte bilgisayar laboratuvarına götürün
-    ve geometri içeren uygulamalar oluşturun.
+  tutorial_bbot_longdescription: Birer saatlik bu 3 kodlama aktivitesi ile öğrencilerinize
+    programlamayı öğretmek için herhangi bir programlama bilgisine veya deneyimine
+    ihtiyacınız yok!  Programlamayı eğlenceli ve kolay bir şekilde öğretebilirsiniz.  Etkinlikleri
+    gözden geçirin ve sunum slaytları, bağlantısız materyaller ve çözüm kılavuzları
+    dahil olmak üzere ders materyallerimizi indirin ve 20 - 40 dakika içinde kendinizi
+    ilk dersinizi vermeye hazır bulacaksınız!
+  tutorial_scratchg_longdescription: Çocuklar telefonlarında ve bilgisayarlarında
+    oyun oynamayı severler.  Ama nasıl programlanırlar?  Bu etkinlik, öğrencilere
+    Scratch programlama dilini tanıtır ve ardından onlara farklı oyun stillerini nasıl
+    programlayacaklarını gösterir.  Oyunlar için gerekli tüm görseller sağlanır ve
+    öğrencilerin işleyen bir oyun yapmak için her şeyi nasıl birbirine bağlayacaklarını
+    öğrenmeleri gerekir.
+  tutorial_sjforest_longdescription: |-
+    Ürkütücü Bir Orman Yapabilir miyim?", anaokulundan ikinci sınıfa kadar olan ve ScratchJr'ın daha gelişmiş özellikleri hakkında bilgi edinmek ve bu özelliklerde ustalaşmak için önceden programlama deneyimi olan çocuklara yönelik bir ara etkinliktir. Daha sonra, çocuklar yaparken öğrendikleri becerileri kullanabilirler.  Bu aktivite kendi benzersiz projelerini yaratmak veya "Ürkütücü Bir Orman Yapabilir miyim?" programında oluşturduklarını geliştirmek için. Bu aktivite ve ScratchJr ile devam eden zaman sayesinde, öğrenciler yaratıcı düşünme, hikaye anlatıcısı olma ve  matematiksel muhakeme ve sıralama becerilerini geliştirmek.
+     BAĞLAM İSTEĞİ
+  tutorial_sjgreet_longdescription: Karakterlerimin Birbirlerini Selamlamasını Sağlayabilir
+    miyim?", ScratchJr'ın daha gelişmiş özelliklerinde ustalaşmak için önceden programlama
+    deneyimi olan anaokulundan ikinci sınıfa kadar olan çocuklara yönelik ileri düzey
+    bir aktivitedir. Çocuklar daha sonra bu aktiviteyi yaparken öğrendikleri becerileri
+    kullanabilirler.  kendi benzersiz projelerini yaratmak veya "Karakterlerimi Birbirleriyle
+    Selamlaştırabilir miyim?" programında oluşturduklarını geliştirmek. Bu etkinlik
+    ve ScratchJr'de devam eden süre boyunca öğrenciler yaratıcı düşünme, hikaye anlatıcısı
+    olma ve  matematiksel muhakeme ve sıralama becerilerini geliştirmek.
+  tutorial_sjsunset_longdescription: '"Güneşin Batmasını Sağlayabilir miyim?"  ScratchJr''ın
+    temel özelliklerini ve temel kodlama kavramlarını öğrenmek için programlama deneyimi
+    çok az olan veya hiç olmayan anaokulundan ikinci sınıfa kadar çocuklara yönelik
+    bir giriş etkinliğidir.  Bu aktivite ve ScratchJr ile devam eden zaman sayesinde,
+    öğrenciler yaratıcı düşünme, hikaye anlatıcıları olma ve matematiksel muhakeme
+    ve sıralama becerilerini geliştirme fırsatına sahip olacaklar.  Daha sonra çocuklar
+    öğrendikleri becerileri kendi benzersiz projelerini oluşturmak için kullanabilirler.'
+  tutorial_fufafrenz_longdescription: |-
+    Dizi (K-5) ile ilgili başlangıç ​​dersleri.  Bu, en temel programlama konsepti olan diziye giriş niteliğindedir.  Bu üçüncü sınıf örneği, K-5 için bu kavramla ilgili iskeleli ders planlarımız var.
+     BAĞLAM İSTEĞİ
+  tutorial_bbcgeo_longdescription: K-5 sınıfları için standartlara dayalı ders planı.  Çocuklarınızı
+    ellerinde çalışma sayfaları ile bilgisayar laboratuvarına götürün ve geometri
+    içeren uygulamalar oluşturun.
   tutorial_chspixel_longdescription: Grafikler nasıl işlediğini öğrendikten sonra,
     öğrenciler Pixel programlarıyla kendi Renklerini yaratacaktır. Ders planı, her
     biri belirli bir konuyu kapsayan dört bölümden oluşur. Pixel tarafından hazırlanan
@@ -10886,6 +10883,10 @@ tr:
   tutorial_nasapackage_name: 'NASA: Paket Teslim Drone Simülasyonu Kodlama Etkinliği'
   tutorial_nasalunar_name: 'NASA: Ay Kodlama Mücadelesi'
   tutorial_meeestate_name: Emlaktan Kaçış
+  tutorial_imagipixelart_name: Kendi piksel sanatınızı kodlayın!
+  tutorial_kcjhealth_name: "'Sağlık ve Zindelik Mücadelesi"
+  tutorial_msftwakanda_name: Çok Yaşa Wakanda
+  tutorial_nafbrand_name: Markanızı Kodlayın
   tutorial_rpccw_longdescription: Kendi karakterinizi yaratın, bir tişört tasarlayın
     ve biraz müzik yaratın. Tamamlanan her proje için rozet kazanın.
   tutorial_rpledfirefly_longdescription: Yanıp sönen bir LED ateş böceği oluşturmak
@@ -11243,6 +11244,18 @@ tr:
     ve hesaplamalı düşünmeyi kullanın. Şafağa kadar kodlayın ve bir milyon zümrüt
     kazanın! Bloklarda veya Python''da kodlama ile Hour of Code, herkesin kodun temellerini
     öğrenmesi için bir öğrenme yolu sunar.'
+  tutorial_imagipixelart_longdescription: Bu 1 saatlik hızlandırılmış kursta Python
+    öğrenin ve kendi renkli animasyonlarınızı yaratın!
+  tutorial_kcjhealth_longdescription: 'SDG #3 ''İyi Sağlık ve Zindelik''i keşfederken
+    veri görselleştirme, algoritmik sanat ve kodlama hakkında bilgi edinin.'
+  tutorial_msftwakanda_longdescription: 'Shuri, Okoye ve Riri, Wakanda''ya yardım
+    etmek için bir araya gelmelidir. Marvel Studios''un "Black Panther: Wakanda Forever"
+    filminden ilham alan kendi aksiyon dolu etkinliğinizi kodlayın!'
+  tutorial_nafbrand_longdescription: Code your Brand'de, iletişim bilgilerinizle kişiselleştirilmiş
+    bir QR kodu oluşturmak için sanal bir iletişim dosyası oluşturacaksınız. Bu aktiviteyi
+    tamamladıktan sonra, kariyer ya da üniversite yolculuğunuzda size yardımcı olabilecek
+    ya da rehberlik edebilecek insanlarla iletişim kurarken paylaşabileceğiniz modern
+    bir kartvizite sahip olacaksınız.
   tutorial_rpccw_string_detail_grades: Okuma öncesi- 5. Sınıf
   tutorial_rpledfirefly_string_detail_grades: 6-8. Sınıflar (11-13 yaş)
   tutorial_rpcharting_string_detail_grades: 9. ve üzeri Sınıflar
@@ -11335,6 +11348,10 @@ tr:
   tutorial_nasapackage_string_detail_grades: 6-8. Sınıflar (11-13 yaş)
   tutorial_nasalunar_string_detail_grades: 6-8. Sınıflar (11-13 yaş)
   tutorial_meeestate_string_detail_grades: 2. ve üzeri Sınıflar
+  tutorial_imagipixelart_string_detail_grades: 2-8. Sınıflar
+  tutorial_kcjhealth_string_detail_grades: 6+ Sınıflar (11 ve üzeri)
+  tutorial_msftwakanda_string_detail_grades: 6+ Sınıflar (11 ve üzeri)
+  tutorial_nafbrand_string_detail_grades: 9. ve üzeri Sınıflar
   tutorial_rpccw_string_platforms: Tüm modern tarayıcılar, Android tablet, iPad, Windows
     telefon, Android telefon, iPhone
   tutorial_rpledfirefly_string_platforms: Tüm modern tarayıcılar
@@ -11456,6 +11473,12 @@ tr:
   tutorial_nasalunar_string_platforms: Tüm modenr tarayıcılar, iPad, iPhone
   tutorial_meeestate_string_platforms: Android tablet, iPad, Windows telefon, Android
     telefon, iPhone
+  tutorial_imagipixelart_string_platforms: Tüm modern tarayıcılar, iPad, Android tabletler,
+    Windows telefon, Android telefon, iPhone
+  tutorial_kcjhealth_string_platforms: Tüm modern tarayıcılar
+  tutorial_msftwakanda_string_platforms: Tüm modern tarayıcılar
+  tutorial_nafbrand_string_platforms: Tüm modern tarayıcılar, Android tablet, iPad,
+    Windows telefon, Android telefon, iPhone
   tutorial_rpccw_string_detail_platforms: ''
   tutorial_rpledfirefly_string_detail_platforms: Raspberry Pi Pico
   tutorial_rpcharting_string_detail_platforms: ''
@@ -11549,6 +11572,10 @@ tr:
   tutorial_nasapackage_string_detail_platforms: ''
   tutorial_nasalunar_string_detail_platforms: ''
   tutorial_meeestate_string_detail_platforms: ''
+  tutorial_imagipixelart_string_detail_platforms: ''
+  tutorial_kcjhealth_string_detail_platforms: ''
+  tutorial_msftwakanda_string_detail_platforms: ''
+  tutorial_nafbrand_string_detail_platforms: ''
   tutorial_rpccw_string_detail_programming_languages: Bloklar
   tutorial_rpledfirefly_string_detail_programming_languages: Python
   tutorial_rpcharting_string_detail_programming_languages: Python
@@ -11648,29 +11675,10 @@ tr:
   tutorial_nasapackage_string_detail_programming_languages: Bloklar
   tutorial_nasalunar_string_detail_programming_languages: Bloklar, JavaScript
   tutorial_meeestate_string_detail_programming_languages: Bloklar, Python
-  tutorial_imagipixelart_longdescription: Bu 1 saatlik hızlandırılmış kursta Python
-    öğrenin ve kendi renkli animasyonlarınızı yaratın!
-  tutorial_imagipixelart_name: Kendi piksel sanatınızı kodlayın!
-  tutorial_imagipixelart_string_detail_grades: 2-8. Sınıflar
-  tutorial_imagipixelart_string_detail_platforms: ''
   tutorial_imagipixelart_string_detail_programming_languages: yazım
-  tutorial_imagipixelart_string_platforms: Tüm modern tarayıcılar, iPad, Android tabletler,
-    Windows telefon, Android telefon, iPhone
-  tutorial_kcjhealth_longdescription: 'SDG #3 ''İyi Sağlık ve Zindelik''i keşfederken
-    veri görselleştirme, algoritmik sanat ve kodlama hakkında bilgi edinin.'
-  tutorial_kcjhealth_name: "'Sağlık ve Zindelik Mücadelesi"
-  tutorial_kcjhealth_string_detail_grades: 6+ Sınıflar (11 ve üzeri)
-  tutorial_kcjhealth_string_detail_platforms: ''
   tutorial_kcjhealth_string_detail_programming_languages: bloklar
-  tutorial_kcjhealth_string_platforms: Tüm modern tarayıcılar
-  tutorial_msftwakanda_longdescription: 'Shuri, Okoye ve Riri, Wakanda''ya yardım
-    etmek için bir araya gelmelidir. Marvel Studios''un "Black Panther: Wakanda Forever"
-    filminden ilham alan kendi aksiyon dolu etkinliğinizi kodlayın!'
-  tutorial_msftwakanda_name: Çok Yaşa Wakanda
-  tutorial_msftwakanda_string_detail_grades: 6+ Sınıflar (11 ve üzeri)
-  tutorial_msftwakanda_string_detail_platforms: ''
   tutorial_msftwakanda_string_detail_programming_languages: Bloklar
-  tutorial_msftwakanda_string_platforms: Tüm modern tarayıcılar
+  tutorial_nafbrand_string_detail_programming_languages: Python
   school_not_found_heading: Okulunuzu bulamadık. Lütfen daha fazla bilgi girin.
   school_name: Okul Adı
   school_name_error: Okul Adı zorunludur.
@@ -11729,6 +11737,13 @@ tr:
   all: Hepsi
   dont_know: Bilmiyorum
   language_label: Dil
+  team_page_full_team_alt_text: Eşleşen mavi ve sarı tişörtler giyen yaklaşık 100
+    Code.org çalışanı, şirketin 2022 yaz Codechella etkinliği için bir otelin konferans
+    salonunda poz veriyor.
+  careers_page_code_pride_alt_text: Sunum yapan iki çalışan, Code.org markalı gökkuşağı
+    bayrağının uçlarını tutarken gülümsüyor. Arkalarında, çok renkli bir Volkswagen
+    arabanın yanında yürürken Code.org tişörtleri giyen ve gökkuşağı bayrakları sallayan
+    birkaç kişi var.
   language_code:
     ar: Arapça
     az: Azerice

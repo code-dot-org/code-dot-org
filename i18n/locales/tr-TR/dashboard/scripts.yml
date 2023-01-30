@@ -66,9 +66,9 @@ tr:
           name: cebir
         infinity:
           title: Disney Infinity Play Laboratuarı
-          description: Bir hikaye ya da Disney Infinity karakteriyle bir oyun yaratmak için Play Lab'i kullanın.
-          description_short: Bir hikaye ya da Disney Infinity karakteriyle bir oyun yaratmak için Play Lab'i kullanın.
-          student_description: Bir hikaye ya da Disney Infinity karakteriyle bir oyun yaratmak için Play Lab'i kullanın.
+          description: Disney Infinity karakteriyle bir hikaye ya da  bir oyun yaratmak için Play Lab'i kullanın.
+          description_short: Disney Infinity karakteriyle bir hikaye ya da  bir oyun yaratmak için Play Lab'i kullanın.
+          student_description: Disney Infinity karakteriyle bir hikaye ya da  bir oyun yaratmak için Play Lab'i kullanın.
           name: sonsuzluk
         algebrademo:
           title: Cebir Demo
@@ -2161,7 +2161,7 @@ tr:
             csf_data:
               display_name: Veri
             csf_for_loops:
-              display_name: For Döngüleri
+              display_name: For (İçin) Döngüleri
             csf_internet:
               display_name: İnternet
             csf_sprites:
@@ -2208,7 +2208,7 @@ tr:
             csf_digcit:
               display_name: Sayısal Vatandaşlık
             csf_impacts:
-              display_name: Bilgisayarın Etkileri
+              display_name: Bilişimin Etkileri
             csf_nested_loops:
               display_name: İç İçe Döngüler
             csf_functions:
@@ -2235,7 +2235,7 @@ tr:
             csf_variables:
               display_name: Değişkenler
             csf_for_loops:
-              display_name: For Döngüleri
+              display_name: For (İçin) Döngüleri
             csf_sprites:
               display_name: Hareketli Nesneler
           student_description: Aşağıdaki dersleri kendi hızınızda deneyerek bilgisayar bilimi öğrenin! Bilgisayar programları oluşturmayı, problem çözme becerileri geliştirmeyi ve eğlenceli zorluklarla çalışmayı öğrenin! Arkadaşlarınız, aileniz ve öğretmenlerinizle paylaşmak için oyunlar ve yaratıcı projeler yapın.
@@ -2332,7 +2332,7 @@ tr:
             csf_loops:
               display_name: Döngüler
             csf_impacts:
-              display_name: Bilgisayarın Etkileri
+              display_name: Bilişimin Etkileri
             csf_events:
               display_name: Olaylar
           student_description: Bilgisayar bilimi ve internet güvenliğinin temellerini öğren. Kursun sonunda, kendine ait ve paylaşabileceğin bir oyun ya da hikaye oluştur.
@@ -2994,7 +2994,7 @@ tr:
             csf_digcit:
               display_name: Sayısal Vatandaşlık
             csf_impacts:
-              display_name: Bilgisayarın Etkileri
+              display_name: Bilişimin Etkileri
             ramp_up:
               display_name: Arttır
         time4cs-experiment-unit-1:
@@ -3013,7 +3013,7 @@ tr:
             csf_digcit:
               display_name: Sayısal Vatandaşlık
             csf_impacts:
-              display_name: Bilgisayarın Etkileri
+              display_name: Bilişimin Etkileri
             ramp_up:
               display_name: Arttır
         csp7-pilot:
@@ -3193,7 +3193,7 @@ tr:
             csf_loops:
               display_name: Döngüler
             csf_impacts:
-              display_name: Bilgisayarın Etkileri
+              display_name: Bilişimin Etkileri
             csf_events:
               display_name: Olaylar
           student_description: Bilgisayar bilimi ve internet güvenliğinin temellerini öğren. Kursun sonunda, kendine ait ve paylaşabileceğin bir oyun ya da hikaye oluştur.
@@ -3256,7 +3256,7 @@ tr:
             csf_functions:
               display_name: Fonksiyonlar
             csf_impacts:
-              display_name: Bilgisayarın Etkileri
+              display_name: Bilişimin Etkileri
             end_of_course_project:
               display_name: Ders Projesinin Sonu
           student_description: Algoritmalar, döngüler, koşullar ve olaylarla kodlamaya başlayın ve daha sonra fonksiyonlara geçin. Bu kursun ikinci kısmında, arkadaşlarınız ve ailenizle paylaşabileceğiniz bir bitirme projesi tasarlayın ve oluşturun.
@@ -3275,7 +3275,7 @@ tr:
             csf_data:
               display_name: Veri
             csf_for_loops:
-              display_name: For Döngüleri
+              display_name: For (İçin) Döngüleri
             csf_sprites:
               display_name: Hareketli Nesneler
             end_of_course_project:
@@ -3301,7 +3301,7 @@ tr:
             csf_variables:
               display_name: Değişkenler
             csf_for_loops:
-              display_name: For Döngüleri
+              display_name: For (İçin) Döngüleri
             csf_sprites:
               display_name: Hareketli Nesneler
             end_of_course_project:
@@ -3806,7 +3806,7 @@ tr:
             csf_loops:
               display_name: Döngüler
             csf_impacts:
-              display_name: Bilgisayarın Etkileri
+              display_name: Bilişimin Etkileri
             csf_events:
               display_name: Olaylar
             lessonGroup-6:
@@ -3877,13 +3877,13 @@ tr:
             csf_functions:
               display_name: Fonksiyonlar
             csf_impacts:
-              display_name: Bilgisayarın Etkileri
+              display_name: Bilişimin Etkileri
             end_of_course_project:
               display_name: Ders Projesinin Sonu
             lessonGroup-8:
               display_name: Kaldırıldı
             lessonGroup-7:
-              display_name: Bilgisayarın Etkileri
+              display_name: Bilişimin Etkileri
           name: kurse-2021
           student_description: Algoritmalar, olaylar, döngüler, koşullar ve işlevlerle kodlamaya başlayın! Bu kursun sonunda arkadaşlarınız ve ailenizle paylaşabileceğiniz bir oyun veya çizim tasarlayın ve oluşturun.
         coursef-2021:
@@ -3897,13 +3897,13 @@ tr:
             csf_digcit:
               display_name: Sayısal Vatandaşlık
             csf_variables:
-              display_name: For Döngüleri
+              display_name: For (İçin) Döngüleri
             csf_data:
               display_name: Veri ve simülasyonlar
             csf_for_loops:
-              display_name: For Döngüleri
+              display_name: For (İçin) Döngüleri
             csf_sprites:
-              display_name: Bilgisayarın Etkileri
+              display_name: Bilişimin Etkileri
             end_of_course_project:
               display_name: Ders Projesinin Sonu
             lessonGroup-8:
@@ -3933,7 +3933,7 @@ tr:
             csf_variables:
               display_name: Değişkenler
             csf_for_loops:
-              display_name: For Döngüleri
+              display_name: For (İçin) Döngüleri
             csf_sprites:
               display_name: Hareketli Nesneler
             end_of_course_project:
@@ -4937,7 +4937,7 @@ tr:
         coursea-2022:
           lesson_groups:
             csf_digcit:
-              display_name: Sayısal Vatandaşlık
+              display_name: Dijital Vatandaşlık
             csf_sequencing:
               display_name: Sıralama
             csf_loops:
@@ -4946,6 +4946,7 @@ tr:
               display_name: Olaylar
             lessonGroup-5:
               display_name: Ders Projesinin Sonu
+          title: Kurs A (2022)
           description: Kurs A, Anaokulu öğrencileri de dahil olmak üzere yeni başlayan okuyucular için bir bilgisayar bilimi müfredatı sunar. Öğrenciler, döngüler ve olaylar gibi komutları kullanarak programlamayı öğreneceklerdir. Bu kursta yer alan dersler ayrıca öğrencilere başkalarıyla anlamlı bir şekilde işbirliği yapmayı, farklı problem çözme tekniklerini araştırmayı, zorlu görevler karşısında ısrar etmeyi ve internet güvenliği hakkında bilgi edinmeyi öğretir.
           student_description: Bilgisayar bilimi ve internet güvenliğinin temellerini öğren. Kursun sonunda, kendine ait ve paylaşabileceğin bir oyun ya da hikaye oluştur.
           description_short: Okumaya yeni başlayanlar için bilgisayar bilimine giriş.
@@ -4967,9 +4968,10 @@ tr:
             csf_variables:
               display_name: Değişkenler
             csf_for_loops:
-              display_name: For Döngüleri
+              display_name: For (İçin) Döngüleri
             end_of_course_project:
               display_name: Ders Projesinin Sonu
+          title: Hızlandırılmış Kurs (2022)
           description: Aşağıdaki dersleri kendi hızınızda deneyerek bilgisayar bilimi öğrenin! Bilgisayar programları oluşturmayı, problem çözme becerileri geliştirmeyi ve eğlenceli zorluklarla çalışmayı öğrenin! Arkadaşlarınız, aileniz ve öğretmenlerinizle paylaşmak için oyunlar ve yaratıcı projeler yapın.
           student_description: Aşağıdaki dersleri kendi hızınızda deneyerek bilgisayar bilimi öğrenin! Bilgisayar programları oluşturmayı, problem çözme becerileri geliştirmeyi ve eğlenceli zorluklarla çalışmayı öğrenin! Arkadaşlarınız, aileniz ve öğretmenlerinizle paylaşmak için oyunlar ve yaratıcı projeler yapın.
           description_short: 'Bilgisayar bilimlerine giriş: ilköğretim müfredatımızın en iyilerini daha eski öğrenciler için birleştirir.'
@@ -5035,11 +5037,12 @@ tr:
             csf_loops:
               display_name: Döngüler
             csf_impacts:
-              display_name: Bilgisayarın Etkileri
+              display_name: Bilişimin Etkileri
             csf_events:
               display_name: Olaylar
             lessonGroup-6:
               display_name: Ders Projesinin Sonu
+          title: Kurs B (2022)
           description: Kurs B'yi birinci sınıf öğrencilerini düşünerek geliştirdik. Kurs B'deki kavramlar Kurs A'dakilerle paralel olsa da, öğrenciler daha karmaşık, bağlantısız etkinlikler öğrenir ve çok çeşitli bulmacalar üzerinde çalışır. Öğrenciler programlamanın temellerini, işbirliği tekniklerini, araştırma ve eleştirel düşünme becerilerini, zorluklar karşısında direnmeyi ve internet güvenliğini öğreneceklerdir. Bu dersin sonunda öğrenciler Play Lab programlama ortamında oyunlar oluştururlar.
           student_description: Bilgisayar bilimi ve internet güvenliğinin temellerini öğren. Kursun sonunda, kendine ait ve paylaşabileceğin bir oyun ya da hikaye oluştur.
           description_short: Okul öncesi çocuklar için bilgisayar bilimine giriş. Kurs A ile benzer ancak ilave kavram derinliği vardır.
@@ -5123,7 +5126,7 @@ tr:
               display_name: Koşullar
             end_of_course_project:
               display_name: Ders Projesinin Sonu
-          title: Kurs D (2021)
+          title: Kurs D (2022)
           description: Üçüncü sınıftaki öğrenciler için D kursu oluşturduk. Kurs, döngüler ve olaylar da dahil olmak üzere önceki kurslarda bulunan kavramların gözden geçirilmesiyle başlar. Daha sonra, öğrenciler algoritmalar, iç içe döngüler, while döngüleri, koşullu ifadeler ve daha fazlası hakkındaki anlayışlarını geliştireceklerdir.
           student_description: Döngüler, şartlar, ve olaylar hakkında bilgi edinin. Kodlamanın ötesinde, dijital vatandaşlık hakkında bilgi edinin.
           description_short: Koşullu ifadeleri öğrenin. Kendi sanatını, oyunlarını ve hatta bir dans partisi oluştur.
@@ -5141,9 +5144,10 @@ tr:
             csf_nested_loops:
               display_name: Koşullar
             lessonGroup-7:
-              display_name: Bilgisayarın Etkileri
+              display_name: Bilişimin Etkileri
             end_of_course_project:
               display_name: Ders Projesinin Sonu
+          title: Kurs E (2022)
           description: Dördüncü sınıftaki öğrenciler için Kurs E'yi oluşturduk. Kurs, Sprite Lab programlama aracına giriş ile başlar. Öğrenciler, çevrimiçi güvenlik hakkında öğreneceklerini pekiştiren eğlenceli, etkileşimli projeler yapmayı öğrenecekler. Bu derslerin ardından, öğrenciler daha karmaşık kodlama ile meşgul olacaklar. Öğrenciler iç içe döngüler, işlevler ve koşullu ifadeler hakkında bilgi edinecekler. Kursun sonunda öğrenciler zorlu bulmacaları çözmek için bu kavramları birleştirecekler. Kurs, öğrencilerin bir oyun veya çizim yaptıkları açık uçlu bir proje ile sona erer.
           student_description: Algoritmalar, olaylar, döngüler, koşullar ve işlevlerle kodlamaya başlayın! Bu kursun sonunda arkadaşlarınız ve ailenizle paylaşabileceğiniz bir oyun veya çizim tasarlayın ve oluşturun.
           description_short: Hareketli nesne, iç içe döngüler, ve fonksiyonların temellerini öğrenin.
@@ -5160,6 +5164,7 @@ tr:
               display_name: Veri ve simülasyonlar
             end_of_course_project:
               display_name: Ders Projesinin Sonu
+          title: Kurs F (2022)
           description_short: Bilgisayar biliminin temellerini öğrenin ve kendi oyunlarınızı, hikayelerinizi ve sanatınızı oluşturun.
           description_audience: 'Yaş: 9-13'
         csp-post-survey-2021:
@@ -5184,6 +5189,7 @@ tr:
             csf_events:
               display_name: Olaylar
           name: ön-ekspres-2022
+          title: Okul Öncesi Çocuklar için Hızlandırılmış Kurs (2022)
           description_audience: 'Yaş: 4-8'
           description_short: 'Okul öncesi çocuklar için bilgisayar bilimlerine giriş: anaokulu ve birinci sınıf derslerimizin en iyisini birleştirir.'
           description: Aşağıdaki dersleri kendi hızınızda deneyerek bilgisayar bilimi öğrenin! Bilgisayar programları oluşturmayı, problem çözme becerileri geliştirmeyi ve eğlenceli zorluklarla çalışmayı öğrenin! Arkadaşlarınız, aileniz ve öğretmenlerinizle paylaşmak için oyunlar ve yaratıcı projeler yapın.
@@ -5333,6 +5339,7 @@ tr:
             end_of_course_project:
               display_name: Ders Projesinin Sonu
           name: kursf-2022-pilot
+          title: Kurs F (2022)
           description_audience: 'Yaş: 9-13'
           description_short: Bilgisayar biliminin temellerini öğrenin ve kendi oyunlarınızı, hikayelerinizi ve sanatınızı oluşturun.
           description: "Beşinci sınıftaki öğrenciler için Kurs F'yi oluşturduk. Kurs, kullanıcıların kullandıkları uygulamalarda nasıl seçim yaptıklarına bakarak başlar. Öğrenciler daha sonra kullanıcı için seçenekler de sunan çeşitli Sprite Lab uygulamaları yapmayı öğrenirler. Kursun sonraki derslerinde, öğrenciler çeşitli bağlamlardaki değişkenleri öğreneceklerdir. Öğrencilere bu kurs boyunca daha fazla özerklik ve daha fazla seçenek verilir. Kursun sonunda öğrenciler, arkadaşları ve aileleri ile paylaşmak üzere etkileşimli projeler oluşturmuş olacaklardır.\n\n## İlkbahar 2022 Açık Önizleme\n\nKurs F'nin bu yeni versiyonu üç yeni ders içeriyor ve geri bildiriminize ihtiyacımız var! Yeni dersler şunlardır:\n\n-   Ders 9 - Çok Sayıda Karakter - [geri bildirimde bulunun](https://docs.google.com/forms/d/e/1FAIpQLSdgGilUP1l2i7Cie_kojOBjq_UMVDA8O1NFX4hLt4Ts4IMvnQ/viewform)\n-   Ders 10 - Değişkenlerle Sayma - [geri bildirimde bulun](https://docs.google.com/forms/d/e/1FAIpQLSeuqnSbdJEgUY9paU2HNLN0RymYogBIRYrAtttTg826QXjK0w/viewform)\n-   Ders 11 - Mini Proje: Koleksiyoncu Oyunu - [geri bildirimde bulunun](https://docs.google.com/forms/d/e/1FAIpQLSe5IU4p57sowVOUuJyk_1Nv_R8XwELRwto75zPdre50aYy9DA/viewform)\n\nLütfen bu yeni derslerin bugün ile Temmuz 2022 arasında değişebileceğini unutmayın. Her türlü geri bildirim için teşekkür ederiz. A-E of CS Fundamentals (2022) Kursları Temmuz 2022'de başlayacaktır.\n\nAyrıca Kurs F'deki tüm dersleri kapsayan eksiksiz bir slayt destesi ekledik. Ders slaytlarıyla ilgili [geri bildirimlerinizi](https://docs.google.com/forms/d/e/1FAIpQLScDJ_UUYW1fw36uCiupsB96F8O8zoiSuppGQ7YrQfVn0ma_5w/viewform) de bekliyoruz!"
@@ -5650,7 +5657,7 @@ tr:
           description: Müfredat sürümleri değişirken derslerin veya seviyelerin güncellemelerini hazırlamak için
           lessons:
             lesson-7:
-              name: Spritese Giriş
+              name: Hareketli Nesnelere Giriş
             lesson-8:
               name: Fiziksel Bilişim PSP
         csc-pilot-2022-ecosystems:
@@ -5937,6 +5944,19 @@ tr:
               display_name: Bildiklerini Göster
             lessonGroup-4:
               display_name: Alternatif Dersler
+        csa3-2023:
+          lessons:
+            lesson-1:
+              name: Bir Boyutlu (1D) Diziler
+            lesson-3:
+              name: For (İçin) Döngüleri
+          lesson_groups:
+            lessonGroup-2:
+              display_name: İçerik
+            lessonGroup-3:
+              display_name: Bildiklerini Göster
+            lessonGroup-4:
+              display_name: Alternatif Dersler
         csa6-2023:
           description: "Bu ünite, öğrencilere 'ArrayList' sınıfını kullanarak liste oluşturmayı öğretmek için veri yapılarını genişletmeye devam ediyor. Bu süreçte öğrenciler \"Tamsayı\" ve \"Double\" sınıflarını öğrenirler ve yöntemlerini metin dosyalarından verileri ayrıştırmak ve tamsayı değerlerinin sınırlarını keşfetmek için kullanırlar. Öğrenciler, bir \"ArrayList\"in yapısını ve işlevselliğini öğrenirken, her bir veri yapısının ne zaman kullanılacağını ayırt eder. Öğrenciler, sayısal ve nesne verilerinden oluşan bir \"ArrayList\" içindeki verileri bulmak ve işlemek için standart algoritmaları uygular. Ünite boyunca öğrenciler, temel doğal dil işleme tekniklerini ve uygulamalarını öğrenirken, bir kullanıcıdan ve dosya girişinden elde edilen metni analiz etmek ve işlemek için 'String' sınıfını kullanmayı öğrenirler. Ayrıca öğrenciler, programları için API belgeleri oluşturmak üzere Javadoc yorumları yazarak yazılım mühendisliği becerilerini daha da geliştirirler.\n\n### AP Classroom Kişisel İlerleme Kontrolleri\n\nAP Classroom Soru Bankasından bu üniteyle uyumlu sorular atamak için, ünitenin [\\*\\*Standartlar\\*\\*](https://studio.code.org/s/csa6-2022/standards) sayfasındaki Temel Bilgi ifadeleri için Soru Bankasında arama yaparak AP Classroom'da özel bir sınav oluşturun. [\\*\\*AP Central\\*\\*](https://apcentral.collegeboard.org/instructional-resources/ap-classroom)'da bunu yapmak için talimatlar ve video gösterileri bulabilirsiniz.\n\nAP Classroom'da aşağıdaki Kişisel İlerleme Kontrolleri, Bildiğinizi Gösterin haftasında atanabilir:\n\n-   Kişisel İlerleme Kontrolü 2\n-   Kişisel İlerleme Kontrolü 7\n\n**_Not:_** _Önerilen Kişisel İlerleme Kontrollerindeki Bazı Öğrenme Hedefleri ve Temel Bilgi ifadeleri sonraki ünitelerde ele alınmaktadır._\n\n## Bu Üniteyi Öğretmeyi Bitirdiniz mi?\n\nCode.org müfredat ekibinin ünitenin nasıl gittiğini öğrenmesi için bu [\\*\\*kısa anketi\\*\\*](https://studio.code.org/form/teacher_end_of_unit_survey?survey_data%5Bunit_number%5D=6) yanıtlayın."
           student_description: Bu ünite, sizi 'ArrayList' sınıfını kullanarak listeler oluşturmaya alıştırmak için veri yapılarını genişletmeye devam ediyor. Bu süreçte, "Tamsayı" ve "Duble" sınıflarını öğrenir ve metin dosyalarından verileri ayrıştırmak için yöntemlerini kullanır ve tamsayı değerlerinin sınırlarını keşfedersiniz. Bir "ArrayList"in yapısı ve işlevselliği hakkında bilgi edinirken, her tür veri yapısının ne zaman kullanılacağını ayırt edersiniz. Sayısal ve nesne verilerinden oluşan bir "ArrayList" içindeki verileri bulmak ve işlemek için standart algoritmalar uygularsınız. Ünite boyunca, temel doğal dil işleme tekniklerini ve uygulamalarını öğrenirken, bir kullanıcıdan ve dosya girişinden elde edilen metni analiz etmek ve işlemek için 'String' sınıfını kullanmayı öğrenirsiniz. Ayrıca, programlarınız için API belgeleri oluşturmak üzere Javadoc yorumları yazarak yazılım mühendisliği becerilerinizi daha da geliştirirsiniz.
@@ -6044,7 +6064,7 @@ tr:
         csp5-2023:
           lesson_groups:
             csp_lists:
-              display_name: Listeler
+              display_name: Veri
             csp_loops:
               display_name: Döngüler
             csp_traversals:
@@ -6054,17 +6074,23 @@ tr:
             lessonGroup-5:
               display_name: Kurs-Sonrası Anketi
           description: Bu birim listeleri, döngüleri ve geçişleri tanıtır ve bunların büyük miktarda bilgi depolayan ve işleyen uygulamalar oluşturmak için nasıl kullanılabileceğini araştırır. App Lab'deki veri kitaplığıyla programlamayı öğrenin ve ünite sonunda, seçtiğiniz herhangi bir konuda bir program tasarlayabileceğiniz 5 günlük bir hackathon projesini tamamlayın.
-          student_description: Bu birim listeleri, döngüleri ve geçişleri tanıtır ve bunların büyük miktarda bilgi depolayan ve işleyen uygulamalar oluşturmak için nasıl kullanılabileceğini araştırır. App Lab'deki veri kitaplığıyla programlamayı öğrenin ve ünite sonunda, seçtiğiniz herhangi bir konuda bir program tasarlayabileceğiniz 5 günlük bir hackathon projesini tamamlayın.
+          student_description: Bu ünitede, veri analizinin ham verileri dünya hakkında yararlı bilgilere dönüştürmeye nasıl yardımcı olduğunu öğrenin. Veri kümelerinin içindeki kalıpları bulmak için veri görselleştirmeyi nasıl kullanacağınızı öğrenin ve bu veri analizi sürecinin, karar vermeye yardımcı olmak veya dünyamız hakkında daha fazla bilgi edinmek için açık veri veya makine öğrenimi gibi bağlamlarda nasıl kullanıldığını öğrenin. Ünite projesinde, seçtiğiniz bir veri setini analiz edecek ve bulgularınızı sunacaksınız.
           description_short: Büyük miktarda bilgiyi depolamak ve işlemek için listeleri, döngüleri ve geçişleri kullanan uygulamaları nasıl oluşturacağınızı öğrenin.
         csp6-2023:
           lesson_groups:
             csp_unit6_2020:
-              display_name: 'Ünite 6: Algoritmalar'
+              display_name: Listeler
             lessonGroup-2:
               display_name: Kurs-Sonrası Anketi
+            lessonGroup-3:
+              display_name: Döngüler
+            lessonGroup-4:
+              display_name: Gezinmeler
+            lessonGroup-5:
+              display_name: Proje
           description: Bu ünite, bilgisayar bilimcilerinin sorunları çözmek için algoritmaları nasıl tasarladıklarına ve farklı algoritmaların hızlarını nasıl analiz ettiklerine dair hızlı bir keşiftir. Çeşitli uygulamalı etkinlikler aracılığıyla algoritmik verimlilik kavramı hakkında bilgi edinin ve bunun modern bilgi işlemde nasıl uygulandığını öğrenin.
-          student_description: Bu ünite, bilgisayar bilimcilerinin sorunları çözmek için algoritmaları nasıl tasarladıklarına ve farklı algoritmaların hızlarını nasıl analiz ettiklerine dair hızlı bir keşiftir. Çeşitli uygulamalı etkinlikler aracılığıyla algoritmik verimlilik kavramı hakkında bilgi edinin ve bunun modern bilgi işlemde nasıl uygulandığını öğrenin.
-          description_short: Nasıl çalıştıklarını ve neden bazılarının diğerlerinden daha iyi kabul edildiğini anlamak için algoritmalar tasarlayın ve analiz edin.
+          student_description: Bu birim listeleri, döngüleri ve geçişleri tanıtır ve bunların büyük miktarda bilgi depolayan ve işleyen uygulamalar oluşturmak için nasıl kullanılabileceğini araştırır. App Lab'deki veri kitaplığıyla programlamayı öğrenin ve ünite sonunda, seçtiğiniz herhangi bir konuda bir program tasarlayabileceğiniz 5 günlük bir hackathon projesini tamamlayın.
+          description_short: Büyük miktarda bilgiyi depolamak ve işlemek için listeleri, döngüleri ve geçişleri kullanan uygulamaları nasıl oluşturacağınızı öğrenin.
         csp7-2023:
           lesson_groups:
             csp_parameters_return_values:
@@ -6082,8 +6108,8 @@ tr:
               display_name: Performans Görevi Oluştur
             lessonGroup-3:
               display_name: Kurs-Sonrası Anketi
-          description: Bu ünitede AP Oluşturma Performansı Görevine hazırlanın ve gerçekleştirin. Her ders, görevi anlamanıza ve görevi tamamlamak için bir plan geliştirmenize yardımcı olacak faydalı belgelere ve etkinliklere bağlantılar içerir.
-          student_description: Bu ünitede AP Oluşturma Performansı Görevine hazırlanın ve gerçekleştirin. Her ders, görevi anlamanıza ve görevi tamamlamak için bir plan geliştirmenize yardımcı olacak faydalı belgelere ve etkinliklere bağlantılar içerir.
+          description: Bu ünitede bilgi işlem yeniliklerinin dünyamızı nasıl yararlı ve zararlı şekillerde etkilediğini öğrenin. Verilerin gizliliğimize ve güvenliğimize nasıl tehdit oluşturabileceğini ve bunları korumak için şifreleme ve diğer tekniklerin nasıl kullanıldığını öğrenin. Ünite boyunca, sizin ve bir ekibin bilgi işlem yenilikleriyle okul yaşamını en iyi şekilde nasıl geliştirebileceğinize dair bir öneride bulunduğunuz bir "geleceğin okulu" konferansına katılın.
+          student_description: Bu ünitede bilgi işlem yeniliklerinin dünyamızı nasıl yararlı ve zararlı şekillerde etkilediğini öğrenin. Verilerin gizliliğimize ve güvenliğimize nasıl tehdit oluşturabileceğini ve bunları korumak için şifreleme ve diğer tekniklerin nasıl kullanıldığını öğrenin. Ünite boyunca, sizin ve bir ekibin bilgi işlem yenilikleriyle okul yaşamını en iyi şekilde nasıl geliştirebileceğinize dair bir öneride bulunduğunuz bir "geleceğin okulu" konferansına katılın.
           description_short: Performans Görevi Oluştur (PT) alıştırması yapın ve tamamlayın.
         csp9-2023:
           lesson_groups:
@@ -6091,18 +6117,18 @@ tr:
               display_name: 'Ünite 9: Veriler'
             lessonGroup-2:
               display_name: Kurs-Sonrası Anketi
-          description: Bu ünitede, veri analizinin ham verileri dünya hakkında yararlı bilgilere dönüştürmeye nasıl yardımcı olduğunu öğrenin. Veri kümelerinin içindeki kalıpları bulmak için veri görselleştirmeyi nasıl kullanacağınızı öğrenin ve bu veri analizi sürecinin, karar vermeye yardımcı olmak veya dünyamız hakkında daha fazla bilgi edinmek için açık veri veya makine öğrenimi gibi bağlamlarda nasıl kullanıldığını öğrenin. Ünite projesinde, seçtiğiniz bir veri setini analiz edecek ve bulgularınızı sunacaksınız.
-          student_description: Bu ünitede, veri analizinin ham verileri dünya hakkında yararlı bilgilere dönüştürmeye nasıl yardımcı olduğunu öğrenin. Veri kümelerinin içindeki kalıpları bulmak için veri görselleştirmeyi nasıl kullanacağınızı öğrenin ve bu veri analizi sürecinin, karar vermeye yardımcı olmak veya dünyamız hakkında daha fazla bilgi edinmek için açık veri veya makine öğrenimi gibi bağlamlarda nasıl kullanıldığını öğrenin. Ünite projesinde, seçtiğiniz bir veri setini analiz edecek ve bulgularınızı sunacaksınız.
-          description_short: Kalıpları ararken ve çevrenizdeki dünya hakkında daha fazla şey öğrenmeye çalışırken çok çeşitli konulardaki veri kümelerini keşfedin ve görselleştirin.
+          description: Bu ünitede AP Oluşturma Performansı Görevine hazırlanın ve gerçekleştirin. Her ders, görevi anlamanıza ve görevi tamamlamak için bir plan geliştirmenize yardımcı olacak faydalı belgelere ve etkinliklere bağlantılar içerir.
+          student_description: Bu ünitede AP Oluşturma Performansı Görevine hazırlanın ve gerçekleştirin. Her ders, görevi anlamanıza ve görevi tamamlamak için bir plan geliştirmenize yardımcı olacak faydalı belgelere ve etkinliklere bağlantılar içerir.
+          description_short: Performans Görevi Oluştur (PT) alıştırması yapın ve tamamlayın.
         csp10-2023:
           lesson_groups:
             csp_unit10_2020:
               display_name: Ünite 10 - Siber güvenlik ve Küresel Etkiler
             lessonGroup-2:
               display_name: Kurs-Sonrası Anketi
-          description: Bu ünitede bilgi işlem yeniliklerinin dünyamızı nasıl yararlı ve zararlı şekillerde etkilediğini öğrenin. Verilerin gizliliğimize ve güvenliğimize nasıl tehdit oluşturabileceğini ve bunları korumak için şifreleme ve diğer tekniklerin nasıl kullanıldığını öğrenin. Ünite boyunca, sizin ve bir ekibin bilgi işlem yenilikleriyle okul yaşamını en iyi şekilde nasıl geliştirebileceğinize dair bir öneride bulunduğunuz bir "geleceğin okulu" konferansına katılın.
-          student_description: Bu ünitede bilgi işlem yeniliklerinin dünyamızı nasıl yararlı ve zararlı şekillerde etkilediğini öğrenin. Verilerin gizliliğimize ve güvenliğimize nasıl tehdit oluşturabileceğini ve bunları korumak için şifreleme ve diğer tekniklerin nasıl kullanıldığını öğrenin. Ünite boyunca, sizin ve bir ekibin bilgi işlem yenilikleriyle okul yaşamını en iyi şekilde nasıl geliştirebileceğinize dair bir öneride bulunduğunuz bir "geleceğin okulu" konferansına katılın.
-          description_short: Veri, kamu politikası, hukuk, etik ve toplumsal etkinin kesiştiği noktada güncel olayları araştırın ve tartışın.
+          description: Bu ünite, bilgisayar bilimcilerinin sorunları çözmek için algoritmaları nasıl tasarladıklarına ve farklı algoritmaların hızlarını nasıl analiz ettiklerine dair hızlı bir keşiftir. Çeşitli uygulamalı etkinlikler aracılığıyla algoritmik verimlilik kavramı hakkında bilgi edinin ve bunun modern bilgi işlemde nasıl uygulandığını öğrenin.
+          student_description: Bu ünite, bilgisayar bilimcilerinin sorunları çözmek için algoritmaları nasıl tasarladıklarına ve farklı algoritmaların hızlarını nasıl analiz ettiklerine dair hızlı bir keşiftir. Çeşitli uygulamalı etkinlikler aracılığıyla algoritmik verimlilik kavramı hakkında bilgi edinin ve bunun modern bilgi işlemde nasıl uygulandığını öğrenin.
+          description_short: Nasıl çalıştıklarını ve neden bazılarının diğerlerinden daha iyi kabul edildiğini anlamak için algoritmalar tasarlayın ve analiz edin.
         csp-post-survey-2023:
           title: Bilgisayar Bilimi İlkeleri Kurs Sonrası Anketi
         self-paced-pl-csa1-2023:

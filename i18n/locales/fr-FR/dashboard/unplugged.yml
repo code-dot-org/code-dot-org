@@ -6,10 +6,10 @@ fr:
         desc: Cette leçon vise à introduire le concept de l’informatique et expliquer ce que fait un informaticien. Elle donnera également aux élèves l'occasion d'assumer le rôle d'un informaticien. À la fin de l'activité, chaque élève repartira à la maison avec un résumé de ce qu'il ou elle aura appris. Vous pourriez être tenté d’omettre l’enseignement aux jeunes enfants des mots de vocabulaire qui sont associés aux leçons qui suivent. Cependant, les leur présenter de manière amusante et ludique à ce stade est beaucoup plus productif que d'attendre des occasions plus avancées futures.
       Unplug2:
         title: Algorithmique
-        desc: Seulement munis de papier et de feutres, les étudiants vont apprendre les quatre étapes de la pensée computationnelle. Après une brève introduction, ils seront séparées en groupes pour créer des instructions à partir desquelles d'autres étudiants devront dessiner un monstre précis (extrait d'un catalogue de monstres pré-établis). L'intégralité de cette tâche doit être décomposée, puis les équipes étudieront les monstres du catalogue pour trouver un schéma, s'écarter des détails des différents monstres, puis utiliser ces informations pour créer un algorithme (des instructions) pour qu'une autre équipe dessine un monstre choisi. Les groupes échangeront alors leurs algorithmes entre eux et dessineront le monstre sur les indications de l'algorithme. Le dessin représente-t-il ce que la première équipe avait prévu ?
+        desc: Seulement munis de papier et de feutres, les élèves vont apprendre les quatre étapes de la pensée computationnelle. Après une brève introduction, ils seront séparées en groupes pour créer des instructions à partir desquelles d'autres élèves devront dessiner un monstre précis (extrait d'un catalogue de monstres pré-établis). L'intégralité de cette tâche doit être décomposée, puis les équipes étudieront les monstres du catalogue pour trouver un schéma, s'écarter des détails des différents monstres, puis utiliser ces informations pour créer un algorithme (des instructions) pour qu'une autre équipe dessine un monstre choisi. Les groupes échangeront alors leurs algorithmes entre eux et dessineront le monstre sur les indications de l'algorithme. Le dessin représente-t-il ce que la première équipe avait prévu ?
       Unplug3:
         title: Programmation sur papier quadrillé
-        desc: En se programmant les uns les autres pour créer des images, les étudiants commenceront à comprendre ce qu'est réellement la programmation. Au début du cours, les élèves devront échanger des instructions pour colorier chaque carré d'une feuille de papier quadrillé, afin de reproduire une image existante. Si il reste du temps à la fin du cours, les élèves pourront alors inventer leurs propres images.
+        desc: En se programmant les uns les autres pour créer des images, les élèves commenceront à comprendre ce qu'est réellement la programmation. Au début du cours, les élèves devront échanger des instructions pour colorier chaque carré d'une feuille de papier quadrillé, afin de reproduire une image existante. Si il reste du temps à la fin du cours, les élèves pourront alors inventer leurs propres images.
       Unplug4:
         title: Algorithmes
         desc: Cette leçon traite des algorithmes. Le premier exercice se fait à l'aide de formes de tangram et de papier millimétré. Il sert à démontrer combien il est important de rendre chaque instruction aussi claire et la moins équivoque possible. Par la suite, la classe explorera les différentes façons de plier un morceau de papier en rectangle, en notant comment certaines méthodes peuvent requérir plus ou moins de plis que d'autres.
@@ -104,7 +104,7 @@ fr:
         title: Mad Glibs
         desc: L’abstraction est l'une des compétences les plus importantes que doit comprendre un informaticien. Vos élèves analyseront des histoires, en particulier leurs différences, afin de pouvoir en faire abstraction. Ces histoires abrégées deviennent des modèles pour de nouvelles histoires folles et amusantes.
       ForLoopFun:
-        title: Jouer avec les Boucles « Pour »
+        title: '« Pour » s''amuser en boucle'
         desc: Nous savons que les boucles nous permettent de répéter des choses encore et encore, mais désormais nous allons apprendre à utiliser les boucles avec des structures supplémentaires intégrées.
       SongwritingWithParameters:
         title: Composition de chansons avec des paramètres
@@ -135,7 +135,7 @@ fr:
         desc: Dans cette leçon, tu découvriras les boucles!
       courseB_unplugged_MRF:
         title: Activité Déconnectée
-        desc: Dans cette leçon, tu "programmeras" tes amis!
+        desc: Dans cette leçon, tu « programmeras » tes amis!
       courseB_unplugged_loopyMRF:
         title: Activité Déconnectée
         desc: Tout comme dans « Mes Amis Robotisés », tu vas « programmer » tes amis mais, cette fois, avec des boucles !
@@ -184,7 +184,7 @@ fr:
         title: Programmation sur papier quadrillé
         desc: Les élèves écrivent un algorithme (un ensemble d'instructions) utilisant un ensemble de commandes prédéfinies pour diriger leurs camarades dans la reproduction d’un dessin.
       courseD_unplugged_relayProgramming:
-        title: Programmation de relais
+        title: Programmation en relais
         desc: Les élèves effectuent une course de relais, où ils traversent rapidement le jardin pour aller écrire un algorithme, basé sur une image de « Programmation sur Papier Millimétré». Ils ne peuvent écrire qu’une seule instruction à la fois et, s'il y a une erreur quelque part, ils doivent tout effacer pour retourner à ce point.
       courseD_unplugged_conditionalsCards:
         title: Les instructions conditionnelles avec des cartes
@@ -214,7 +214,7 @@ fr:
         title: Variables de l'Enveloppe
         desc: Les variables offrent une grande liberté en informatique. Cette leçon permet d'expliquer ce que sont les variables et les différentes manières dont nous pouvons les utiliser. Utilisez cette activité avant (ou avec) la leçon sur l'abstraction pour vraiment permettre aux élèves de comprendre le concept.
       courseF_unplugged_forLoopFun:
-        title: Jouer avec les Boucles « Pour »
+        title: '« Pour » s''amuser en boucle'
         desc: Nous savons que les boucles nous permettent de répéter des choses encore et encore, mais désormais nous allons apprendre à utiliser les boucles avec des structures supplémentaires intégrées.
       courseF_unplugged_songwritingParameters:
         title: Composition de chansons avec des paramètres
@@ -247,7 +247,7 @@ fr:
         title: Activité Déconnectée
         desc: Aujourd'hui, tu apprendras ce qu’il faut faire si quelqu'un devient méchant en ligne.
       Conditionals_2018:
-        title: Formules conditionnelles
+        title: Instructions conditionnelles
         desc: Pour mieux comprendre les déclarations conditionnelles, les élèves jouent à un jeu de cartes et créent des règles comme « Si je tire une carte rouge, je gagne un point », et « Si je tire une carte noire, tu gagnes un point ».
       DigitalFootprint_2018:
         title: Ton Empreinte Numérique
@@ -271,9 +271,9 @@ fr:
         desc: Prêtée aux Notions Fondamentales de l’Informatique par l'équipe de Copyright and Creativity, cette leçon a pour but d'aider les élèves à comprendre le processus créatif de partage et d'inspiration. Parallèlement à cela vient la promotion de l'expression créative et le besoin d'être juste avec le travail créatif.
       courseE_unplugged_CnC_2018:
         title: Partage Numérique
-        desc: Prêtée aux Notions Fondamentales de l’Informatique par l'équipe de Copyright and Creativity, cette leçon a pour but d'aider les élèves à comprendre les défis et les avantages du respect de la propriété et du droit d'auteur, en particulier dans les environnements numériques. Les étudiants devraient être encouragés à respecter les droits des artistes, qui constituent un élément important de leur citoyenneté numérique.
+        desc: Prêtée aux Notions Fondamentales de l’Informatique par l'équipe de Copyright and Creativity, cette leçon a pour but d'aider les élèves à comprendre les défis et les avantages du respect de la propriété et du droit d'auteur, en particulier dans les environnements numériques. Les élèves devraient être encouragés à respecter les droits des artistes, qui constituent un élément important de leur citoyenneté numérique.
       RelayProgramming_2018:
-        title: Programmation de relais
+        title: Programmation en relais
         desc: Cette activité débutera par une brève leçon sur le débogage et la persévérance, puis passera rapidement à une course contre la montre, pendant laquelle les élèves formeront des équipes et travailleront ensemble à la rédaction d'un programme, instruction par instruction.
       courseB_unplugged_MRF_2019:
         title: Mes amis les robots
@@ -285,7 +285,7 @@ fr:
         title: 'traduction manquante : en-US.data.unplugged.courseB_unplugged_loopyMRF_2018.title'
         desc: 'traduction manquante : en-US.data.unplugged.courseB_unplugged_loopyMRF_2018.desc'
       Conditionals_2019:
-        title: Formules conditionnelles
+        title: Instructions conditionnelles
         desc: Pour mieux comprendre les déclarations conditionnelles, les élèves jouent à un jeu de cartes et créent des règles comme « Si je tire une carte rouge, je gagne un point », et « Si je tire une carte noire, tu gagnes un point ».
       courseF_unplugged_powerOfWords_2019:
         title: 'traduction manquante : en-US.data.unplugged.courseF_unplugged_powerOfWords_2018.title'
@@ -300,7 +300,7 @@ fr:
         title: Programmation sur papier quadrillé
         desc: Les élèves écrivent un algorithme (un ensemble d'instructions) utilisant un ensemble de commandes prédéfinies pour diriger leurs camarades dans la reproduction d’un dessin.
       RelayProgramming_2018_2019:
-        title: Programmation de relais
+        title: Programmation en relais
         desc: Cette activité débutera par une brève leçon sur le débogage et la persévérance, puis passera rapidement à une course contre la montre, pendant laquelle les élèves formeront des équipes et travailleront ensemble à la rédaction d'un programme, instruction par instruction.
       courseD_unplugged_digitalCitizenship_2019:
         title: Activité Déconnectée
@@ -316,7 +316,7 @@ fr:
         desc: 'traduction manquante : en-US.data.unplugged.SongwritingParameters_2018.desc'
       courseE_unplugged_CnC_2019:
         title: Partage Numérique
-        desc: Prêtée aux Notions Fondamentales de l’Informatique par l'équipe de Copyright and Creativity, cette leçon a pour but d'aider les élèves à comprendre les défis et les avantages du respect de la propriété et du droit d'auteur, en particulier dans les environnements numériques. Les étudiants devraient être encouragés à respecter les droits des artistes, qui constituent un élément important de leur citoyenneté numérique.
+        desc: Prêtée aux Notions Fondamentales de l’Informatique par l'équipe de Copyright and Creativity, cette leçon a pour but d'aider les élèves à comprendre les défis et les avantages du respect de la propriété et du droit d'auteur, en particulier dans les environnements numériques. Les élèves devraient être encouragés à respecter les droits des artistes, qui constituent un élément important de leur citoyenneté numérique.
       Internet_2019:
         title: 'traduction manquante : en-US.data.unplugged.Internet_2018.title'
         desc: 'traduction manquante : en-US.data.unplugged.Internet_2018.desc'
@@ -360,7 +360,7 @@ fr:
         desc: Prêtée aux Notions Fondamentales de l’Informatique par l'équipe de Copyright and Creativity, cette leçon a pour but d'aider les élèves à comprendre le processus créatif de partage et d'inspiration. Parallèlement à cela vient la promotion de l'expression créative et le besoin d'être juste avec le travail créatif.
       GraphingData_2019:
         title: Se représenter les Données
-        desc: Dans cette leçon, les élèves collecteront des données à partir d’un projet du Labo du Jeu ou d’un scénario réel, et les utiliseront pour faire des prédictions.
+        desc: Dans cette leçon, les élèves collecteront des données à partir d’un projet du Labo du Jeu ou d’un scénario réel, et les utiliseront pour faire des prévisions.
       courseE_unplugged_accessAbility_2019:
         title: "Capacité d'Accès\n"
         desc: Découvre l’accessibilité et la valeur de l’empathie, grâce à une réflexion en groupes et à la conception de solutions accessibles pour les applications hypothétiques
@@ -374,5 +374,5 @@ fr:
         title: Production Participative
         desc: '_Note de Josh : contrairement à la première leçon, j’ai formaté celle-ci, simplement, comme une leçon débranchée typique.'
       timeforcs_demo_conditionals:
-        title: Formules conditionnelles
+        title: Instructions conditionnelles
         desc: Pour mieux comprendre les déclarations conditionnelles, les élèves jouent à un jeu de cartes et créent des règles comme « Si je tire une carte rouge, je gagne un point », et « Si je tire une carte noire, tu gagnes un point ».

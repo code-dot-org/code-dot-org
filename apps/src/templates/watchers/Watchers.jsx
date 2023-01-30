@@ -2,10 +2,13 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import Immutable from 'immutable';
 import {connect} from 'react-redux';
+import TetherComponent from 'react-tether';
+
 import i18n from '@cdo/locale';
 import {add, update, remove} from '../../redux/watchedExpressions';
-import TetherComponent from 'react-tether';
 import AutocompleteSelector from './AutocompleteSelector';
+
+import escapeSpecialCharactersForRegExp from '@cdo/apps/util/escapeSpecialCharactersForRegExp';
 
 const WATCH_VALUE_NOT_RUNNING = 'undefined';
 const OPTIONS_GAMELAB = [
@@ -276,9 +279,10 @@ class Watchers extends React.Component {
   }
 
   filterOptions = () => {
-    const text = this.state.text;
+    const text = escapeSpecialCharactersForRegExp(this.state.text);
+    const regexpToCheck = new RegExp(text, 'i');
     const filteredOptions = this.defaultAutocompleteOptions.filter(option =>
-      option.match(new RegExp(text, 'i'))
+      option.match(regexpToCheck)
     );
     const completeMatch =
       filteredOptions.length === 1 && filteredOptions[0] === text;

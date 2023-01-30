@@ -117,7 +117,6 @@ class PasswordReset extends Component {
         {!this.state.isResetting && (
           <span data-for={tooltipId} data-tip>
             <Button
-              __useDeprecatedTag
               onClick={this.reset}
               color={Button.ButtonColor.white}
               text={i18n.resetPassword()}
@@ -139,14 +138,12 @@ class PasswordReset extends Component {
               onChange={this.updateInput}
             />
             <Button
-              __useDeprecatedTag
               onClick={this.save}
               color={Button.ButtonColor.blue}
               text={i18n.save()}
               style={styles.button}
             />
             <Button
-              __useDeprecatedTag
               onClick={this.cancel}
               color={Button.ButtonColor.white}
               text={i18n.cancel()}

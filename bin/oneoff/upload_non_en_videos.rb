@@ -3,7 +3,7 @@
 # and S3 as well as added to videos.csv.
 
 require 'google/apis'
-require 'google/apis/youtube_v3'
+require 'google-apis-youtube_v3'
 require 'google/api_client/client_secrets'
 require 'googleauth'
 require 'googleauth/stores/file_token_store'
@@ -107,12 +107,16 @@ def upload_to_youtube(service, filename, title, upload_files)
   if !upload_files
     'youtube_code'
   else
-    properties = {'snippet': {'category_id': '22',
-                          'tags[]': '',
-                          'title': title,
-                          'embeddable': 'true'},
-              'status': {'privacy_status': 'unlisted'}}
-    params = {'upload_source': filename, 'content_type': 'video/mp4'}
+    properties = {
+      snippet: {
+        category_id: '22',
+        'tags[]': '',
+        title: title,
+        embeddable: 'true'
+      },
+      status: {privacy_status: 'unlisted'}
+    }
+    params = {upload_source: filename, content_type: 'video/mp4'}
     part = 'snippet,status'
     response = service.insert_video(part, properties, params)
     response.id

@@ -3,6 +3,7 @@ ca:
     progressions:
       'Artist: Variables': 'Artista: Variables'
       Assessment: Avaluació
+      Back and Forth: Anada i tornada
       Bass, Mid, and Treble: Greus, mitjans i aguts
       Challenge: Repte
       Dance Crews: Grups de dansa
@@ -11,36 +12,67 @@ ca:
       Drawing: Dibuix
       Events: Esdeveniments
       Example: Exemple
-      For Loops: Per bucles
+      Exploration: Exploració
+      For Loops: Bucles "for"
       Free Play: Joc lliure
+      'Free Play: Make a Scene': 'Joc lliure: Fem una escena'
+      'Free Play: Make an Interactive Scene': 'Joc lliure: Fem una escena interactiva'
       Functions: Funcions
       Functions with Parameters: Funcions amb Paràmetres
-      Get In Formation: Posa't en formació
+      Get In Formation: Tothom al seu lloc
+      How to Make a Sprite: Com crear un sprite
+      Keep On Dancing!: Que el ritme no pari!
       Lesson Extras: Lliçons addicionals
+      Levels: Nivells
       Lists: Llistes
-      Measures: Mesures
+      Measures: Compassos
+      'Minecraft: Hero''s Journey': 'Minecraft: El viatge de l''heroi'
+      'Mini-Project: Create a Virtual Pet': 'Mini-Projecte: Fem una mascota virtual'
       'Mini-Project: Royal Battle': 'Miniprojecte: Batalla real'
+      'Mini-Project: Sticker Art': 'Miniprojecte: Art amb adhesius'
       'Mini-project: Jorge the Dog': 'Miniprojecte: El gosset Jorge'
+      'Mini-project: Sticker Art': 'Miniprojecte: Art amb adhesius'
+      'Mini-project: Sticker Design': 'Miniprojecte: Disseny d''adhesius'
+      More Buttons: Més botons
+      My Online Neighborhood: El meu barri d'internet
       Overview: Vista general
       Pair Programming: Programació per parelles
+      Picturing Data: Dades en imatges
       Practice: Pràctica
+      Prediction: Predicció
       Programming with Rey and BB-8: Programació amb la Rey i el BB-8
+      Properties: Propietats
       Quarter Notes: Notes negres
       Reflection: Reflexió
       Skill Building: Desenvolupament d'habilitats
-      Speed it Up, Slow it Down: Vés més ràpid, vés més lent
-      The Harvester: La segadora
+      Speed it Up, Slow it Down: Ara ràpid, ara lent
+      Sprite Properties: Propietats de l'sprite
+      The Harvester: L'agricultora
       Variables: Variables
       Video: Vídeo
+      'Video - Maze Intro: Programming with Blocks': 'Vídeo - Introducció al laberint: Programació amb blocs'
+      'Video: Artist Intro with JR Hildebrand': 'Vídeo: Introducció a l''Artista amb J. R. Hildebrand'
+      'Video: Dance Party Events': 'Vídeo: Festa de ball - Esdeveniments'
+      'Video: Dance Party Measures': 'Vídeo: Festa de ball - Compassos'
+      'Video: Dance Party Party On!': 'Vídeo: Festa de ball - Que comenci la festa!'
+      'Video: Dance Party Properties': 'Vídeo: Festa de ball - Propietats'
+      'Video: Dance Party Warm Up': 'Vídeo: Festa de ball - Escalfament'
+      'Video: Debugging with Scrat ': 'Vídeo: Depuració amb l''Scrat '
       'Video: Debugging with the Step Button': 'Vídeo: Depurar amb el botó de pas'
+      'Video: How to Make a Sprite': 'Vídeo: Com fer un sprite'
       'Video: Ice Age Loops': 'Vídeo: Bucles a l''Edat de gel'
+      'Video: Introducing Sprite Lab': 'Vídeo: Introducció al Laboratori d''Sprites'
       'Video: Introduction to Play Lab': 'Vïdeo: Introducció al Laboratori de Jocs'
       'Video: Loops in Artist': 'Vídeo: Bucles a l''Artista'
+      'Video: Maze Intro - Programming with Blocks': 'Vídeo: Introducció al laberint - Programació amb blocs'
+      'Video: Nested Loops with the Bee': 'Vídeo: Bucles imbricats amb l''abella'
       'Video: Programming with Blocks': 'Vídeo: Programació amb blocs'
       'Video: Programming with Rey and BB-8': 'Vídeo: Programació amb la Rey i el BB-8'
+      'Video: Repeat Blocks with BB-8': 'Vídeo: Blocs de repetició amb el BB-8'
+      'Video: Sprites in Action': 'Vídeo: Sprites en acció'
       'Video: The Artist in Code Studio': 'Vídeo: L''artista a Code Studio'
       'Video: The Collector': 'Vídeo: La col·leccionista'
-      'Video: The Harvester': 'Vídeo: La segadora'
+      'Video: The Harvester': 'Vídeo: L''agricultora'
       'Video: Using the Repeat Block': 'Vídeo: El bloc de repetició'
       Warm Up: Escalfament
       Where'd They Go?: A on han anat?

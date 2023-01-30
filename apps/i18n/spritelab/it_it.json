@@ -77,7 +77,6 @@
   "didntMoveRight": "Il tuo personaggio non si è mosso verso destra.",
   "didntMoveUp": "Il tuo personaggio non si è mosso verso l'alto.",
   "didntPressKey": "Assicurati di premere un tasto freccia dopo aver premuto *\"Esegui\"*. Puoi cliccare sui pulsanti arancione sotto l'area di gioco oppure premi i tasti sulla tastiera.",
-  "errorLoadingAnimation": "Sembra ci siano dei problemi a caricare l'animazione \"{animationName}\". Assicurati di avere una buona connessione ad Internet e prova a ricaricare la pagina. Se il problema persiste, è possibile che questa animazione sia guasta. In questo caso, dovresti rimuovere l'animazione.",
   "eventsOneChange": "Il tuo personaggio è cambiato, ma solo una volta. Prova il tuo programma premnendo il tasto poche volte e assicurati di usare il blocco corretto. \n <xml><block type=\"gamelab_changePropBy\"><title name=\"PROPERTY\">\"ridimensiona\"</title><value name=\"SPRITE\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"creatura_10_1\"</title></block></value><value name=\"VAL\"><block type=\"math_number\"><title name=\"NUM\">10</title></block></value></block></xml>",
   "eventsWrongBehaviors": "Il tuo personaggio deve avere esattamente 3 comportamenti. Prova a spostare il blocco \"interrompe tutto\" in un posto diverso del tuo codice.",
   "foodNotTouchPet": "Trascin ail personaggio del cibo in modo che tocchi il personaggio dell'animale.",
