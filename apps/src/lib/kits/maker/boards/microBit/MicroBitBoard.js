@@ -10,8 +10,10 @@ import MBFirmataWrapper from './MBFirmataWrapper';
 import ExternalLed from './ExternalLed';
 import ExternalButton from './ExternalButton';
 import CapacitiveTouchSensor from './CapacitiveTouchSensor';
+import LedScreen from './LedScreen';
 import {isChromeOS, serialPortType} from '../../util/browserChecks';
 import {MICROBIT_FIRMWARE_VERSION} from './MicroBitConstants';
+import {delayPromise} from '../../util/boardUtils';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 
 /**
@@ -156,6 +158,21 @@ export default class MicroBitBoard extends EventEmitter {
     return !!this.boardClient_.myPort;
   }
 
+  /**
+   * Scroll 'yes' to demonstrate successful connection
+   * to the board.
+   * @returns {Promise} resolved when the song and animation are done.
+   */
+  celebrateSuccessfulConnection() {
+    this.initializeComponents().then(() => {
+      const led = new LedScreen({
+        mb: this.boardClient_
+      });
+      console.log(led);
+      return Promise.resolve().then(() => led.scrollString('yes'));
+    });
+  }
+
   pinMode(pin, modeConstant) {
     this.boardClient_.setPinMode(pin, modeConstant);
   }
@@ -268,5 +285,3 @@ export default class MicroBitBoard extends EventEmitter {
     );
   }
 }
-
-const delayPromise = t => new Promise(resolve => setTimeout(resolve, t));
