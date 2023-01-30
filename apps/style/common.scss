@@ -393,7 +393,6 @@ html[dir="rtl"] .editor-column {
 html[dir="rtl"] {
   // !Important is used to overwrite droplet.min styling for RTL languages support.
   #codeTextbox {
-    background-color: red;
     .droplet-wrapper-div {
       left: 0 !important;
     }
