@@ -14,12 +14,12 @@ window.requirejs.config({baseUrl: BRAMBLE_BASE_URL});
 let webLab_;
 if (parent.getWebLab) {
   webLab_ = parent.getWebLab();
-} else if (!brambleConfig.blankLoad) {
+} else if (!brambleConfig.skipFiles) {
   console.error('ERROR: getWebLab() method not found on parent');
 }
 
 function load(Bramble) {
-  if (brambleConfig.blankLoad) {
+  if (brambleConfig.skipFiles) {
     // Special case for checking that Bramble will load
     // without actually passing data
     Bramble.load(BRAMBLE_CONTAINER, {
