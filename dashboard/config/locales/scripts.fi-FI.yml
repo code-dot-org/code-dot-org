@@ -1705,6 +1705,10 @@ fi:
           lessons:
             lesson-4:
               name: Muuttujat
+        csa3-2023:
+          lessons:
+            lesson-3:
+              name: Silmukat
         csd4-2023:
           lesson_groups:
             lessonGroup-2:

@@ -444,6 +444,8 @@ kn:
               display_name: ವೇರಿಯಬಲ್‌ಗಳು
             csf_data:
               display_name: ಡೇಟಾ
+            csf_for_loops:
+              display_name: ಲೂಪ್ಸಗಾಗಿ
             csf_internet:
               display_name: ಇಂಟರ್ನೆಟ್
             csf_digcit:
@@ -478,6 +480,8 @@ kn:
               display_name: ಕಂಡೀಷನಲ್ಸ್‌
             csf_variables:
               display_name: ವೇರಿಯಬಲ್‌ಗಳು
+            csf_for_loops:
+              display_name: ಲೂಪ್ಸಗಾಗಿ
         andrea-test:
           lesson_groups:
             required:
@@ -781,6 +785,8 @@ kn:
               display_name: ವೇರಿಯಬಲ್‌ಗಳು
             csf_data:
               display_name: ಡೇಟಾ
+            csf_for_loops:
+              display_name: ಲೂಪ್ಸಗಾಗಿ
             end_of_course_project:
               display_name: ಕೋರ್ಸ್ ಯೋಜನೆಯ ಅಂತ್ಯ
         express-2020:
@@ -791,6 +797,8 @@ kn:
               display_name: ಕಂಡೀಷನಲ್ಸ್‌
             csf_variables:
               display_name: ವೇರಿಯಬಲ್‌ಗಳು
+            csf_for_loops:
+              display_name: ಲೂಪ್ಸಗಾಗಿ
             end_of_course_project:
               display_name: ಕೋರ್ಸ್ ಯೋಜನೆಯ ಅಂತ್ಯ
         pre-express-2020:
@@ -901,6 +909,10 @@ kn:
           lesson_groups:
             csf_digcit:
               display_name: ಡಿಜಿಟಲ್ ಪೌರತ್ವ
+            csf_variables:
+              display_name: ಲೂಪ್ಸಗಾಗಿ
+            csf_for_loops:
+              display_name: ಲೂಪ್ಸಗಾಗಿ
             end_of_course_project:
               display_name: ಕೋರ್ಸ್ ಯೋಜನೆಯ ಅಂತ್ಯ
             lessonGroup-8:
@@ -915,6 +927,8 @@ kn:
               display_name: ಕಂಡೀಷನಲ್ಸ್‌
             csf_variables:
               display_name: ವೇರಿಯಬಲ್‌ಗಳು
+            csf_for_loops:
+              display_name: ಲೂಪ್ಸಗಾಗಿ
             end_of_course_project:
               display_name: ಕೋರ್ಸ್ ಯೋಜನೆಯ ಅಂತ್ಯ
             lessonGroup-9:
@@ -1178,6 +1192,8 @@ kn:
               display_name: ಕಂಡೀಷನಲ್ಸ್‌
             csf_variables:
               display_name: ವೇರಿಯಬಲ್‌ಗಳು
+            csf_for_loops:
+              display_name: ಲೂಪ್ಸಗಾಗಿ
             end_of_course_project:
               display_name: ಕೋರ್ಸ್ ಯೋಜನೆಯ ಅಂತ್ಯ
         csp4-2022:
@@ -1450,6 +1466,12 @@ kn:
           lessons:
             lesson-4:
               name: ವೇರಿಯಬಲ್‌ಗಳು
+        csa3-2023:
+          lessons:
+            lesson-1:
+              name: ಒಂದು ಆಯಾಮದ (1D) ಅರೇಗಳು
+            lesson-3:
+              name: ಲೂಪ್ಸಗಾಗಿ
         hello-world-space-2022:
           title: 'ಹಲೋ ವರ್ಲ್ಡ್: ಬಾಹ್ಯಾಕಾಶ'
         hello-world-soccer-2022:

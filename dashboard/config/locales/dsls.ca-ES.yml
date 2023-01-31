@@ -1205,43 +1205,63 @@ ca-ES:
       courseC_multi_harvester_loops11_predict1:
         answers:
         - text: '4'
+          feedback: Incorrecte. L'agricultora collirà 4 carabasses en cadascun dels
+            3 bucles.  4 vegades 3 fan 12!
         - text: '12'
           correct: true
           feedback: Correcte!
-        - {}
+        - text: '15'
+          feedback: Incorrecte. L'agricultora collirà 4 carabasses en cadascun dels
+            3 bucles.  4 vegades 3 fan 12!
         - {}
         questions:
-        - {}
+        - text: Fixa't bé en el codi que hi ha a continuació. Quantes carabasses collirà
+            l'agricultora quan facis clic a "Executar"?
       courseC_multi_harvester_loops11_predict1_2018:
         answers:
         - text: '4'
+          feedback: Incorrecte. L'agricultora collirà 4 carabasses en cadascun dels
+            3 bucles.  4 vegades 3 fan 12!
         - text: '12'
           correct: true
           feedback: Correcte!
-        - {}
+        - text: '15'
+          feedback: Incorrecte. L'agricultora collirà 4 carabasses en cadascun dels
+            3 bucles.  4 vegades 3 fan 12!
         - {}
         questions:
-        - {}
+        - text: Fixa't bé en el codi que hi ha a continuació. Quantes carabasses collirà
+            l'agricultora quan facis clic a "Executar"?
       courseC_multi_harvester_loops11_predict1_2018_2019:
         answers:
         - text: '4'
+          feedback: Incorrecte. L'agricultora collirà 4 carabasses en cadascun dels
+            3 bucles.  4 vegades 3 fan 12!
         - text: '12'
           correct: true
           feedback: Correcte!
-        - {}
+        - text: '15'
+          feedback: Incorrecte. L'agricultora collirà 4 carabasses en cadascun dels
+            3 bucles.  4 vegades 3 fan 12!
         - {}
         questions:
-        - {}
+        - text: Fixa't bé en el codi que hi ha a continuació. Quantes carabasses collirà
+            l'agricultora quan facis clic a "Executar"?
       courseC_multi_harvester_loops11_predict1_2018_2019_2020:
         answers:
         - text: '4'
+          feedback: Incorrecte. L'agricultora collirà 4 carabasses en cadascun dels
+            3 bucles.  4 vegades 3 fan 12!
         - text: '12'
           correct: true
           feedback: Correcte!
-        - {}
+        - text: '15'
+          feedback: Incorrecte. L'agricultora collirà 4 carabasses en cadascun dels
+            3 bucles.  4 vegades 3 fan 12!
         - {}
         questions:
-        - {}
+        - text: Fixa't bé en el codi que hi ha a continuació. Quantes carabasses collirà
+            l'agricultora quan facis clic a "Executar"?
       courseC_multi_maze_debugging8_predict1:
         answers:
         - {}
@@ -2608,6 +2628,17 @@ ca-ES:
         content1: Descripció aquí
       csf_putting_a_stop_to_online_meanness:
         content1: Descripció aquí
+        markdown: |-
+          # Aturem la crueltat
+
+          ## Què hem de fer si algú ens tracta de manera cruel a internet?
+
+          * **S**ortir de la situació.
+          * **T**riar un adult que ens pugui ajudar.
+          * **O**K: si ens donen permís, podem seguir a la pàgina web.
+          * **P**arar-nos a pensar sobre la situació.
+
+          ![](https://images.code.org/f3e4987a130b27f7b589d7829b753aac-image-1584750971069.png)
       grade2_multi_collector_A_predict1:
         answers:
         - text: Amb aquest codi, la Laurel agafarà 4 tresors.
@@ -2700,13 +2731,20 @@ ca-ES:
       courseC_multi_harvester_loops11_predict1_2021:
         answers:
         - text: '4'
+          feedback: Incorrecte. L'agricultora collirà 4 carabasses en cadascun dels
+            3 bucles.  4 vegades 3 fan 12!
         - text: '12'
           correct: true
           feedback: Correcte!
-        - {}
-        - {}
+        - text: '15'
+          feedback: Incorrecte. L'agricultora collirà 4 carabasses en cadascun dels
+            3 bucles.  4 vegades 3 fan 12!
+        - text: '20'
+          feedback: Incorrecte. L'agricultora collirà 4 carabasses en cadascun dels
+            3 bucles.  4 vegades 3 fan 12!
         questions:
-        - {}
+        - text: Fixa't bé en el codi que hi ha a continuació. Quantes carabasses collirà
+            l'agricultora quan facis clic a "Executar"?
       courseC_multi_maze_debugging8_predict1_2021:
         answers:
         - text: L'Scrat arribarà a la gla. Aquest codi no conté errors.
@@ -2906,6 +2944,17 @@ ca-ES:
         content1: Descripció aquí
       csf_putting_a_stop_to_online_meanness_2021:
         content1: Descripció aquí
+        markdown: |-
+          # Aturem la crueltat
+
+          ## Què hem de fer si algú ens tracta de manera cruel a internet?
+
+          * **S**ortir de la situació.
+          * **T**riar un adult que ens pugui ajudar.
+          * **O**K: si ens donen permís, podem seguir a la pàgina web.
+          * **P**arar-nos a pensar sobre la situació.
+
+          ![](https://images.code.org/f3e4987a130b27f7b589d7829b753aac-image-1584750971069.png)
       grade2_multi_collector_A_predict1_2021:
         answers:
         - text: Amb aquest codi, la Laurel agafarà 4 tresors.
@@ -3855,7 +3904,7 @@ ca-ES:
         - {}
       CSD U3 Test variables:
         answers:
-        - {}
+        - text: '20'
         - correct: true
         - {}
         - {}
@@ -3864,7 +3913,7 @@ ca-ES:
         - {}
       CSD U3 Test variables_pilot_2021:
         answers:
-        - {}
+        - text: '20'
         - correct: true
         - {}
         - {}
@@ -3873,7 +3922,7 @@ ca-ES:
         - {}
       CSD U3 Test variables_pilot_2022:
         answers:
-        - {}
+        - text: '20'
         - correct: true
         - {}
         - {}
@@ -10082,13 +10131,20 @@ ca-ES:
       courseC_multi_harvester_loops11_predict12022:
         answers:
         - text: '4'
+          feedback: Incorrecte. L'agricultora collirà 4 carabasses en cadascun dels
+            3 bucles.  4 vegades 3 fan 12!
         - text: '12'
           correct: true
           feedback: Correcte!
-        - {}
-        - {}
+        - text: '15'
+          feedback: Incorrecte. L'agricultora collirà 4 carabasses en cadascun dels
+            3 bucles.  4 vegades 3 fan 12!
+        - text: '20'
+          feedback: Incorrecte. L'agricultora collirà 4 carabasses en cadascun dels
+            3 bucles.  4 vegades 3 fan 12!
         questions:
-        - {}
+        - text: Fixa't bé en el codi que hi ha a continuació. Quantes carabasses collirà
+            l'agricultora quan facis clic a "Executar"?
       courseC_multi_maze_debugging8_predict12022:
         answers:
         - text: L'Scrat arribarà a la gla. Aquest codi no conté errors.
@@ -10502,6 +10558,17 @@ ca-ES:
         content1: Descripció aquí
       csf_putting_a_stop_to_online_meanness2022:
         content1: Descripció aquí
+        markdown: |-
+          # Aturem la crueltat
+
+          ## Què hem de fer si algú ens tracta de manera cruel a internet?
+
+          * **S**ortir de la situació.
+          * **T**riar un adult que ens pugui ajudar.
+          * **O**K: si ens donen permís, podem seguir a la pàgina web.
+          * **P**arar-nos a pensar sobre la situació.
+
+          ![](https://images.code.org/f3e4987a130b27f7b589d7829b753aac-image-1584750971069.png)
       grade2_multi_collector_A_predict12022:
         answers:
         - text: Amb aquest codi, la Laurel agafarà 4 tresors.
@@ -10673,25 +10740,25 @@ ca-ES:
           i especialment telèfons intel·ligents. \n* Les aplicacions per a mòbil ens
           ajuden a fer coses com ara parlar amb els amics, escoltar música, comprar
           o navegar per internet.\n* És important que els programadors entenguin les
-          necessitats dels usuarios i les tinguin presents quan dissenyen les aplicacions.\n\n![](https://images.code.org/fb17eeb9238d2f26c6ab40c9841517a7-image-1555611687284.png)"
+          necessitats dels usuaris i les tinguin presents quan dissenyen les aplicacions.\n\n![](https://images.code.org/fb17eeb9238d2f26c6ab40c9841517a7-image-1555611687284.png)"
       TheRightAppMarkdownLevel_2019:
         markdown: "# L'aplicació correcta\n\n* Avui dia, tothom fa sevir ordinadors,
           i especialment telèfons intel·ligents. \n* Les aplicacions per a mòbil ens
           ajuden a fer coses com ara parlar amb els amics, escoltar música, comprar
           o navegar per internet.\n* És important que els programadors entenguin les
-          necessitats dels usuarios i les tinguin presents quan dissenyen les aplicacions.\n\n![](https://images.code.org/fb17eeb9238d2f26c6ab40c9841517a7-image-1555611687284.png)"
+          necessitats dels usuaris i les tinguin presents quan dissenyen les aplicacions.\n\n![](https://images.code.org/fb17eeb9238d2f26c6ab40c9841517a7-image-1555611687284.png)"
       TheRightAppMarkdownLevel_2019_2020:
         markdown: "# L'aplicació correcta\n\n* Avui dia, tothom fa sevir ordinadors,
           i especialment telèfons intel·ligents. \n* Les aplicacions per a mòbil ens
           ajuden a fer coses com ara parlar amb els amics, escoltar música, comprar
           o navegar per internet.\n* És important que els programadors entenguin les
-          necessitats dels usuarios i les tinguin presents quan dissenyen les aplicacions.\n\n![](https://images.code.org/fb17eeb9238d2f26c6ab40c9841517a7-image-1555611687284.png)"
+          necessitats dels usuaris i les tinguin presents quan dissenyen les aplicacions.\n\n![](https://images.code.org/fb17eeb9238d2f26c6ab40c9841517a7-image-1555611687284.png)"
       TheRightAppMarkdownLevel_2021:
         markdown: "# L'aplicació correcta\n\n* Avui dia, tothom fa sevir ordinadors,
           i especialment telèfons intel·ligents. \n* Les aplicacions per a mòbil ens
           ajuden a fer coses com ara parlar amb els amics, escoltar música, comprar
           o navegar per internet.\n* És important que els programadors entenguin les
-          necessitats dels usuarios i les tinguin presents quan dissenyen les aplicacions.\n\n![](https://images.code.org/fb17eeb9238d2f26c6ab40c9841517a7-image-1555611687284.png)"
+          necessitats dels usuaris i les tinguin presents quan dissenyen les aplicacions.\n\n![](https://images.code.org/fb17eeb9238d2f26c6ab40c9841517a7-image-1555611687284.png)"
       courseAB_EOC2022:
         description: Has arribat a la darrera lliçó! Tria quin projecte vols crear.
         display_name: Projecte de final de curs
@@ -10795,3 +10862,71 @@ ca-ES:
         description: Estàs a punt de començar el projecte final. Abans de posar-t'hi,
           dona un cop d'ulls als projectes d'exemple.
         display_name: Projectes d'exemple
+      BinaryBracelets-Unplugged:
+        markdown: |-
+          # Polseres binàries
+
+          Fes una polsera que representi el teu nom en un sistema que entenguin els ordinadors!
+
+          ![](https://images.code.org/ed15a484276c0989e4adb5daf480f68a-image-1557870226222.png)
+      BinaryBracelets-Unplugged2022:
+        markdown: |-
+          # Polseres binàries
+
+          Fes una polsera que representi el teu nom en un sistema que entenguin els ordinadors!
+
+          ![](https://images.code.org/ed15a484276c0989e4adb5daf480f68a-image-1557870226222.png)
+      BinaryBracelets-Unplugged_2020:
+        markdown: |-
+          # Polseres binàries
+
+          Fes una polsera que representi el teu nom en un sistema que entenguin els ordinadors!
+
+          ![](https://images.code.org/ed15a484276c0989e4adb5daf480f68a-image-1557870226222.png)
+      BinaryBracelets-Unplugged_2021:
+        markdown: |-
+          # Polseres binàries
+
+          Fes una polsera que representi el teu nom en un sistema que entenguin els ordinadors!
+
+          ![](https://images.code.org/ed15a484276c0989e4adb5daf480f68a-image-1557870226222.png)
+      MyLoopyRoboticFriends-Unplugged:
+        markdown: |-
+          # Els meus amics robòtics amb bucles
+
+          Fes servir bucles per escurçar els teus programes!
+      MyLoopyRoboticFriends-Unplugged2022:
+        markdown: |-
+          # Els meus amics robòtics amb bucles
+
+          Fes servir bucles per escurçar els teus programes!
+      MyLoopyRoboticFriends-Unplugged_2020:
+        markdown: |-
+          # Els meus amics robòtics amb bucles
+
+          Fes servir bucles per escurçar els teus programes!
+      MyLoopyRoboticFriends-Unplugged_2021:
+        markdown: |-
+          # Els meus amics robòtics amb bucles
+
+          Fes servir bucles per escurçar els teus programes!
+      MyRoboticFriends-Unplugged:
+        markdown: |
+          # Els meus amics robòtics
+
+          Aprèn a programar escrivint codi per als teus amics!
+      MyRoboticFriends-Unplugged2022:
+        markdown: |
+          # Els meus amics robòtics
+
+          Aprèn a programar escrivint codi per als teus amics!
+      MyRoboticFriends-Unplugged_2020:
+        markdown: |
+          # Els meus amics robòtics
+
+          Aprèn a programar escrivint codi per als teus amics!
+      MyRoboticFriends-Unplugged_2021:
+        markdown: |
+          # Els meus amics robòtics
+
+          Aprèn a programar escrivint codi per als teus amics!

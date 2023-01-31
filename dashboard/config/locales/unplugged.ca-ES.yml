@@ -329,11 +329,13 @@ ca:
           lletra del seu nom. Els alumnes aprenen que les dades poden ser representades
           i emmagatzemades de diferents maneres.
       MoveItMoveIt_2018:
-        title: Mou-lo, Mou-lo
+        title: A moure's!
       RelayProgramming_2018:
         title: Programació en relleus
       courseB_unplugged_MRF_2019:
         title: Els meus amics robòtics
+      courseB_unplugged_loopyMRF_2019:
+        title: Els meus amics robòtics amb bucles
       Conditionals_2019:
         title: Condicionals
         desc: Per aprendre de les declaracions de condicionals, els alumnes juguen
@@ -394,9 +396,11 @@ ca:
         desc: Internet és una eina potent, però a vegades també és un lloc perillós.
           Els mestres t'expliquen com navegar amb seguretat per internet.
       MoveItMoveIt_2019:
-        title: Mou-lo, Mou-lo
+        title: A moure's!
       DigitalFootprint_2019:
         title: La vostra empremta digital
+      GraphingData_2019:
+        title: Dades en imatges
       timeforcs_demo_crowdsourcing:
         title: Col·laboració oberta
       timeforcs_demo_conditionals:
