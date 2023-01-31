@@ -1,4 +1,5 @@
 {
+  "trainModelButtonText": "Pociąg",
   "navigateForward": "Kontynuuj",
   "navigateBack": "Wstecz",
   "tryAgain": "Spróbuj ponownie",
@@ -6,15 +7,81 @@
   "saveProgress": "Zapisz",
   "correctAnswer": "Poprawnie",
   "incorrectAnswer": "Nieprawidłowe",
+  "potentialUsesLabel": "Zamierzone użycie",
+  "potentialUsesPlaceholder": "Napisz krótki opis.",
   "potentialMisusesLabel": "Ograniczenia i ostrzeżenia",
+  "potentialMisusesDescriptionRepresent": "Czy dane reprezentują wszystkich możliwych użytkowników i scenariusze?",
+  "potentialMisusesDescriptionEnough": "Czy zebrałeś wystarczającą ilość danych, aby mieć pewność co do dokładności modelu?",
+  "potentialMisusesDescriptionSituations": "Czy są sytuacje, w których ten model zdecydowanie nie powinien być używany?",
+  "potentialMisusesPlaceholder": "Napisz krótki opis.",
+  "modelNameLabel": "Nazwa modelu",
+  "datasetDescriptionLabel": "Informacje o danych",
+  "datasetDescriptionPlaceholder": "W jaki sposób zbierano dane? Kto je zebrał? Kiedy zostały zebrane?",
+  "saveModelColumnCountLabel": "Opisy kolumn",
+  "saveModelFieldRequired": "wymagane",
+  "saveModelColumnTypeLabel": "marka",
+  "saveModelColumnTypeFeature": "funkcja",
+  "modelCardAccuracy": "Dokładność",
+  "modelCardIntendedUse": "Zamierzone użycie",
   "modelCardLimitations": "Ograniczenia i ostrzeżenia",
+  "modelCardDatasetDetails": "Informacje o danych",
+  "modelCardDatasetDetailsSize": "Rozmiar zestawu danych",
+  "modelCardDatasetDetailsSizeCount": "{rowCount} wierszy",
+  "modelCardFeaturesAndLabel": "Funkcje i etykieta",
+  "modelCardPossibleValues": "Możliwe wartości",
   "modelCardPossibleValuesMinimum": "min",
   "modelCardPossibleValuesMaximum": "max",
+  "dataDisplayRowCount": "Istnieje {rowCount} wierszy danych.",
+  "dataDisplayRowCountTruncated": "Istnieje {rowCount} wierszy danych. (Wyświetlanie pierwszych {rowLimit} wierszy)",
+  "columnInspectorDataType": "Typ danych",
   "columnInspectorDescription": "Opis",
+  "columnDetailsInformation": "Informacje o kolumnach",
+  "columnDetailsNumericalTypeError": "Kolumny numeryczne nie mogą zawierać łańcuchów.",
   "columnDetailsMinimumValue": "min",
   "columnDetailsMaximumValue": "max",
+  "columnDetailsValueRange": "zakres",
+  "columnDetailsTooManyLabels": "W tej kolumnie znaleziono {labelCount} wartości. Wykres jest wyświetlany tylko wtedy, gdy jest {maxLabelCount} lub mniej.",
+  "selectLabelButton": "Wybierz etykietę",
+  "scatterPlotLabel": "Informacje o związku",
+  "addFeatureButton": "Dodaj funkcję",
+  "columnType_numerical": "numeryczny",
+  "columnType_categorical": "kategoryczny",
+  "selectDatasetUploadFileButton": "Prześlij {fileType}",
+  "selectDatasetErrorTooFewRows": "Psześlij {fileType} z co najmniej {count} wierszami.",
+  "selectDatasetErrorTooFewColumns": "Prześlij {fileType} z co najmniej {count} kolumnami.",
+  "dataCardWarningLargeDataset": "Ostrzeżenie: Zbiór danych z więcej niż {rowCount} wierszach spowolni działanie użytkownika.",
+  "dataCardRemovedRows": "{rowCount} {rowCount, plural, one {wiersz} few {wiersze} many {wiersze} other {wiersze}} usunięte, ponieważ {rowCount, plural, one {} few {} many {} other {}} zawierały puste komórki.",
+  "dataCardDefaultHeader": "Szczegóły",
+  "dataCardSource": "Źródło",
+  "dataCardRowCount": "Wiersze danych",
   "dataCardLastUpdated": "Ostatnia aktualizacja",
+  "dataCardPotentialUses": "Potencjalne zastosowania",
+  "dataCardPotentialMisuses": "Potencjalne nadużycia",
+  "saveStatus_success": "Twój model został uratowany!",
+  "saveStatus_failure": "Wystąpił błąd. Twój model nie został zachowany. Proszę, spróbuj ponownie.",
+  "saveStatus_piiProfanity": "Twój model nie mógł zostać zapisany, ponieważ zawiera wulgaryzmy lub dane osobowe (np. e-mail, adres, numer telefonu).",
+  "aiBotAltText": "Bot A.I. ",
+  "aiBotHeadAltText": "Głowa bota A.I.",
+  "aiBotBodyAltText": "Ciało bota A.I.",
+  "aiBotBeamAltText": "Wiązka światłą skanera bota A.I.",
+  "animationDescriptionsHeader": "Opis animacji",
+  "animationDescriptionsTraining": "Oznaczone wiersze ze zbioru danych treningowych trafiają do otwartej głowy bota A.I.",
+  "animationDescriptionsTesting": "Bot A.I. skanuje przychodzące wiersze nieoznakowanych danych ze zbioru danych testowych. Gdy każdy wiersz przesuwa się pod wiązką światłą bota A.I., dokonuje on prognozy, dodając wartość do oznaczonej kolumny.",
+  "generateResultsHeader": "Testowanie modelu",
+  "resultsHeader": "Wynik",
+  "resultsAccuracy": "Dokładność",
+  "resultsDetailsButton": "Szczegóły",
+  "resultsPreviousResults": "Poprzednie wyniki",
+  "resultsTableActualValueHeader": "Rzeczywisty",
+  "resultsTablePredictedValueHeader": "Prognozy A.I.",
+  "resultsTablePredictionRange": "Prognozy wynoszą +/- {percentage}% zakresu",
+  "predictHeader": "Wypróbuj to!",
+  "predictAIBotPredicts": "A.I. przewiduje",
+  "predictPlaceholder": "min. {minimum}, maks. {maximum}",
+  "crossTabRelationshipHeader": "Informacje o związku",
+  "crossTabTooMuchData": "Aktualnie wybrane dane są zbyt duże, aby można było je wyświetlić w tabeli.",
   "uniqueOptionsWarningNotice": "Uwaga",
+  "predictionStatement": "Przewiduj {output} na podstawie {inputs}",
   "datasets": {
     "medical_priority": {
       "fields": {
@@ -74,7 +141,8 @@
           "potentialUses": "Oszacuj rozmiar lub masę egzoplanety na podstawie rozmiaru, wieku lub innych aspektów gwiazdy, na których krąży.",
           "potentialMisuses": "Próbuje zgadnąć, czy na planecie może istnieć życie."
         }
-      }
+      },
+      "name": "Egzoplanety"
     },
     "shoe_survey_toy": {
       "fields": {
@@ -104,7 +172,8 @@
           "potentialUses": "Poleć parę butów na podstawie osobistych pytań.",
           "potentialMisuses": "Cokolwiek innego niż zamierzone zastosowania."
         }
-      }
+      },
+      "name": "Ankieta dotycząca butów"
     },
     "salsa_toy": {
       "fields": {
@@ -155,7 +224,8 @@
           "potentialUses": "Pomóż w rekomendowaniu, jaki rodzaj salsy powinien zamówić nowy klient.",
           "potentialMisuses": "Cokolwiek innego niż zalecenia dotyczące salsy."
         }
-      }
+      },
+      "name": "Salsa"
     },
     "auto_mpg": {
       "fields": {
@@ -224,7 +294,8 @@
           "id": "Całkowita liczba użytkowników",
           "description": "Całkowita liczba użytkowników."
         }
-      }
+      },
+      "name": "Udostępnianie rowerów"
     },
     "poutine_toy": {
       "fields": {
@@ -253,7 +324,8 @@
           "potentialUses": "Pomóż w rekomendowaniu, jaki rodzaj poutine powinien zamówić nowy klient.",
           "potentialMisuses": "Cokolwiek innego niż zalecenia."
         }
-      }
+      },
+      "name": "Poutine"
     },
     "loneliness_phobias": {
       "fields": {
@@ -307,7 +379,8 @@
         "context": {
           "potentialUses": "Na przykład, przewidzieć czyjeś cechy osobowości na podstawie innych cech."
         }
-      }
+      },
+      "name": "Ankieta studencka - Fobie"
     },
     "cookies_toy": {
       "fields": {
@@ -498,7 +571,8 @@
         "context": {
           "potentialUses": "Na przykład określ, ile kalorii ma żywność na podstawie zawartości składników odżywczych."
         }
-      }
+      },
+      "name": "Odżywianie"
     },
     "raspado_toy": {
       "fields": {
@@ -518,7 +592,8 @@
           "potentialUses": "Pomóż w rekomendowaniu, jaki rodzaj raspado powinien zamówić nowy klient.",
           "potentialMisuses": "Cokolwiek innego niż zalecenia."
         }
-      }
+      },
+      "name": "Raspado"
     },
     "shapes_v2_toy": {
       "fields": {
@@ -542,7 +617,8 @@
         "size": {
           "id": "rozmiar"
         }
-      }
+      },
+      "name": "Kształty V2"
     },
     "salad_toy": {
       "fields": {
@@ -574,7 +650,8 @@
           "potentialUses": "Pomóż w rekomendowaniu, jaki rodzaj sałaty powinien zamówić nowy klient.",
           "potentialMisuses": "Cokolwiek innego niż zalecenia."
         }
-      }
+      },
+      "name": "Sałatka"
     },
     "billionaires": {
       "fields": {
@@ -631,7 +708,8 @@
         "context": {
           "potentialUses": "Przewiduj rodzaj bogactwa miliardera na podstawie innych funkcji."
         }
-      }
+      },
+      "name": "Miliarderzy"
     },
     "student_alcohol_consumption": {
       "fields": {
@@ -689,7 +767,8 @@
           "potentialUses": "Pomóż w rekomendowaniu, jaki rodzaj naan powinien zamówić nowy klient.",
           "potentialMisuses": "Cokolwiek innego niż zalecenia."
         }
-      }
+      },
+      "name": "Naan"
     },
     "census_part": {
       "fields": {
@@ -770,7 +849,8 @@
         "context": {
           "potentialUses": "Na przykład, przewidzieć czyjeś cechy osobowości na podstawie innych cech."
         }
-      }
+      },
+      "name": "Ankieta studencka - Filmy"
     },
     "loneliness_interests": {
       "fields": {
@@ -789,7 +869,8 @@
         "context": {
           "potentialUses": "Na przykład, przewidzieć czyjeś cechy osobowości na podstawie innych cech."
         }
-      }
+      },
+      "name": "Ankieta studencka - Osobiste zainteresowania"
     },
     "movies": {
       "fields": {
@@ -833,7 +914,8 @@
         "context": {
           "potentialUses": "Na przykład, określ kasę filmu według jego budżetu lub gatunku."
         }
-      }
+      },
+      "name": "Statystyki Filmów"
     },
     "songs": {
       "fields": {
@@ -843,7 +925,8 @@
         "Year": {
           "id": "Rok"
         }
-      }
+      },
+      "name": "Najlepsze piosenki"
     },
     "safari_toy": {
       "fields": {
@@ -900,7 +983,8 @@
         "context": {
           "potentialUses": "Określ wiek uchowca."
         }
-      }
+      },
+      "name": "Uchowiec"
     },
     "basketball_shots": {
       "card": {
@@ -908,7 +992,8 @@
         "context": {
           "potentialUses": "Przewiduj, czy 3-punktowy strzał został wykonany, czy pominięty."
         }
-      }
+      },
+      "name": "Próby 3-punktowe NCAA"
     },
     "zoo": {
       "fields": {
@@ -921,7 +1006,8 @@
           "potentialUses": "Jest tu wiele potencjalnych etykiet, ale jednym łatwym dochodzeniem na początek jest próba znalezienia cech, które zwykle odnoszą się do jadowitego zwierzęcia.",
           "potentialMisuses": "Jest to zbiór danych tylko 100 zwierząt, więc może być wiele zwierząt, które nie są odzwierciedlone w danych. Weź to z przymrużeniem oka!"
         }
-      }
+      },
+      "name": "Zoo"
     },
     "poke_toy": {
       "fields": {
@@ -963,7 +1049,8 @@
           "potentialUses": "Pomóż w rekomendowaniu, jaki rodzaj poke powinien kupić nowy klient.",
           "potentialMisuses": "Cokolwiek innego niż zalecenia."
         }
-      }
+      },
+      "name": "Poke"
     },
     "student_survey": {
       "fields": {
@@ -1159,7 +1246,8 @@
           "id": "Płeć",
           "description": "Płeć"
         }
-      }
+      },
+      "name": "Ankieta dotycząca stylu życia uczniów"
     },
     "boba_toy": {
       "fields": {
@@ -1196,7 +1284,8 @@
         "Cholesterol": {
           "id": "Cholesterol"
         }
-      }
+      },
+      "name": "Kondycja serca"
     },
     "shapes_v1_toy": {
       "fields": {
@@ -1206,7 +1295,8 @@
         "size": {
           "id": "rozmiar"
         }
-      }
+      },
+      "name": "Kształty V1"
     },
     "pizza_toppings_toy": {
       "card": {
@@ -1215,6 +1305,9 @@
           "potentialMisuses": "Cokolwiek innego niż rekomendacje pizzy."
         }
       }
+    },
+    "car_evaluation": {
+      "name": "Ocena samochodu"
     },
     "loneliness_personality": {
       "fields": {
@@ -1228,7 +1321,8 @@
         "context": {
           "potentialUses": "Na przykład, przewidzieć czyjeś cechy osobowości na podstawie innych cech."
         }
-      }
+      },
+      "name": "Ankieta uczniowska - Osobowość"
     },
     "thanksgiving": {
       "fields": {
@@ -1390,7 +1484,8 @@
           "potentialUses": "Przewiduj, czy ktoś będzie miał konkretne jedzenie na Święto Dziękczynienia, w oparciu o region kraju, z którego pochodzą.",
           "potentialMisuses": "Próbuję odgadnąć, z jakiego regionu ktoś pochodzi, tylko na podstawie pokarmów, jakie je w Święto Dziękczynienia."
         }
-      }
+      },
+      "name": "Regionalne badanie żywności na Święto Dziękczynienia"
     },
     "taco_toppings_toy": {
       "fields": {
@@ -1503,7 +1598,8 @@
         "context": {
           "potentialUses": "Na przykład, przewidzieć czyjeś cechy osobowości na podstawie innych cech."
         }
-      }
+      },
+      "name": "Ankieta studencka - Muzyka"
     }
   }
 }

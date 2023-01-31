@@ -3137,7 +3137,11 @@
           "type": "ವೀಡಿಯೊ"
         },
         "loops_in_app_lab/csd/2021": {
+          "name": "ಲೂಪ್ಸಗಾಗಿ",
           "type": "ವೀಡಿಯೊ"
+        },
+        "for_loops/csd/2021": {
+          "name": "ಲೂಪ್ಸಗಾಗಿ"
         },
         "accelerometer_events/csd/2021": {
           "name": "ಅಕ್ಸೆಲೆರೊಮೀಟರ್ ಕ್ರಿಯೆಗಳು"
