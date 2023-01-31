@@ -7308,7 +7308,7 @@ ko-KR:
         - correct: true
         - correct: true
         questions:
-        - {}
+        - text: 문제를 해결하거나 내 관심사에 맞는 앱을 만드는 방법을 알고 있습니다.
       aiml-ch1-pulse-survey-q2_2022:
         answers:
         - correct: true
@@ -7319,7 +7319,7 @@ ko-KR:
         - correct: true
         - correct: true
         questions:
-        - {}
+        - text: 문제를 해결하거나 내 관심사에 맞는 앱을 만드는 방법을 알고 있습니다.
       aiml-ch1-pulse-survey-q3_2021:
         answers:
         - correct: true
@@ -7458,7 +7458,7 @@ ko-KR:
         - correct: true
         - correct: true
         questions:
-        - {}
+        - text: 문제를 해결하거나 내 관심사에 맞는 앱을 만드는 방법을 알고 있습니다.
       aiml-intro-pulse-survey-q4_2022:
         answers:
         - correct: true
@@ -7469,7 +7469,7 @@ ko-KR:
         - correct: true
         - correct: true
         questions:
-        - {}
+        - text: 문제를 해결하거나 내 관심사에 맞는 앱을 만드는 방법을 알고 있습니다.
       aiml-intro-pulse-survey-q5_2021:
         answers:
         - correct: true
