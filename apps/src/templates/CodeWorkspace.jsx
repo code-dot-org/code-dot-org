@@ -262,14 +262,14 @@ class CodeWorkspace extends React.Component {
             {i18n.levelNotStartedWarning()}
           </div>
         )}
-        {this.props.displayStartBlocksBanner && (
-          <div id="startBlocksBanner" style={styles.startBlocksBanner}>
-            {i18n.inStartBlocksMode()}
-          </div>
-        )}
         {this.props.displayOldVersionBanner && (
           <div id="oldVersionBanner" style={styles.oldVersionWarning}>
             {i18n.oldVersionWarning()}
+          </div>
+        )}
+        {!this.props.editCode && this.props.displayStartBlocksBanner && (
+          <div id="startBlocksBanner" style={styles.startBlocksBanner}>
+            {i18n.inStartBlocksMode()}
           </div>
         )}
         {props.showDebugger && (
