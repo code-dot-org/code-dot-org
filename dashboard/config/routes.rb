@@ -674,6 +674,7 @@ Dashboard::Application.routes.draw do
             end
           end
           post :principal_approval, to: 'principal_approval_applications#create'
+          get 'principal_approval/get_app_by_guid/:application_guid', to: 'principal_approval_applications#get_app_by_guid'
         end
 
         resources :applications, controller: 'applications', only: [:index, :show, :update, :destroy] do
@@ -750,6 +751,7 @@ Dashboard::Application.routes.draw do
         get 'facilitator', to: 'facilitator_application#new'
         get 'teacher', to: 'teacher_application#new'
         get 'principal_approval/:application_guid', to: 'principal_approval_application#new', as: 'principal_approval'
+        get 'principal_approval/get_app_by_guid/:application_guid', to: 'principal_approval#get_app_by_guid'
       end
 
       # persistent namespace for Teachercon and FiT Weekend registrations, can be updated/replaced each year

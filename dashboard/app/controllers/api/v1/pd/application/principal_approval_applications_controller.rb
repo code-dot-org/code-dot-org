@@ -8,6 +8,10 @@ module Api::V1::Pd::Application
       )
     end
 
+    def get_app_by_guid
+      render json: TEACHER_APPLICATION_CLASS.find_by(application_guid: params[:application_guid])
+    end
+
     protected
 
     def on_successful_create

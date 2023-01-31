@@ -46,8 +46,28 @@ const PrincipalApprovalApplication = props => {
   };
 
   const onSuccessfulSubmit = () => {
-    analyticsReporter.sendEvent(EVENTS.ADMIN_APPROVAL_RECEIVED_EVENT);
+    logSuccessfulApprovalSubmission();
     window.location.reload(true);
+  };
+
+  const logSuccessfulApprovalSubmission = () => {
+    // Log admin approval received
+    analyticsReporter.sendEvent(EVENTS.ADMIN_APPROVAL_RECEIVED_EVENT);
+
+    // Log application status change to 'unreviewed'
+    const url = `/api/v1/pd/application/principal_approval/get_app_by_guid/${
+      props.teacherApplication.application_guid
+    }`;
+    $.ajax({
+      method: 'GET',
+      url: url,
+      dataType: 'json'
+    }).done(teacherApplication => {
+      analyticsReporter.sendEvent(EVENTS.APP_STATUS_CHANGE_EVENT, {
+        'application id': teacherApplication.id,
+        'application status': 'unreviewed'
+      });
+    });
   };
 
   return (
