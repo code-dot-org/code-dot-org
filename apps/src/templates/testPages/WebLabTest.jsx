@@ -34,9 +34,7 @@ class WebLabTest extends Component {
   }
 
   static propTypes = {
-    brambleConfig: PropTypes.shape({
-      studioUrl: PropTypes.string.isRequired
-    }).isRequired
+    studioUrl: PropTypes.string.isRequired
   };
 
   componentDidMount = () => {
@@ -56,7 +54,7 @@ class WebLabTest extends Component {
     }
 
     if (
-      event.origin === this.props.brambleConfig?.studioUrl &&
+      event.origin === this.props.studioUrl &&
       message?.type === 'bramble:readyToMount' &&
       this.state[STATUS_BRAMBLE_MOUNTABLE] === Status.ATTEMPTING
     ) {
