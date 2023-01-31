@@ -6,11 +6,14 @@ export default {
   component: InputPrompt
 };
 
-export const Default = (
+const Template = args => (
   <InputPrompt
     question="What is your quest?"
     onInputReceived={() => {
       console.log('user input received');
     }}
+    {...args}
   />
 );
+
+export const Default = Template.bind({});
