@@ -55,3 +55,9 @@
         = text_field_tag 'level[contained_level_names][]', level_name, placeholder: 'name of contained level'
       #plusAnswerContainedLevel
         %i.fa.fa-plus-circle
+
+  - if (@level.is_a?(GamelabJr))
+    .field
+      = f.label :standalone_app_name, 'Level Subtype'
+      %p Select the subtype for the level. This will determine which blocks are available in the share/remix version of the level.
+      = f.select :standalone_app_name, options_for_select(@level.class.standalone_app_names, @level.standalone_app_name)

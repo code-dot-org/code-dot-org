@@ -632,6 +632,13 @@ Then /^I wait to see a dialog containing text "((?:[^"\\]|\\.)*)"$/ do |expected
   }
 end
 
+Then /^I wait to see a modal containing text "((?:[^"\\]|\\.)*)"$/ do |expected_text|
+  steps %{
+    Then I wait to see a ".modal"
+    And element ".modal" contains text "#{expected_text}"
+  }
+end
+
 Then /^I wait to see a congrats dialog with title containing "((?:[^"\\]|\\.)*)"$/ do |expected_text|
   steps %{
     Then I wait to see a ".congrats"
