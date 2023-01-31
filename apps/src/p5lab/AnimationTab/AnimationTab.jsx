@@ -46,6 +46,10 @@ class AnimationTab extends React.Component {
     }
     const hideCostumes =
       this.props.interfaceMode === P5LabInterfaceMode.BACKGROUND;
+    const animationsColumnStyle =
+      this.props.labType === 'SPRITELAB'
+        ? styles.animationsColumnSpritelab
+        : styles.animationsColumnGamelab;
     return (
       <div>
         <ResizablePanes
@@ -53,7 +57,7 @@ class AnimationTab extends React.Component {
           columnSizes={this.props.columnSizes}
           onChange={this.props.onColumnWidthsChange}
         >
-          <div style={styles.animationsColumn}>
+          <div style={animationsColumnStyle}>
             <P5LabVisualizationHeader labType={this.props.labType} />
             <AnimationList
               hideBackgrounds={this.props.hideBackgrounds}
@@ -94,7 +98,13 @@ const styles = {
     left: 0,
     right: 0
   },
-  animationsColumn: {
+  animationsColumnGamelab: {
+    display: 'flex',
+    flexDirection: 'column',
+    minWidth: 190,
+    maxWidth: 300
+  },
+  animationsColumnSpritelab: {
     display: 'flex',
     flexDirection: 'column',
     minWidth: 240,
