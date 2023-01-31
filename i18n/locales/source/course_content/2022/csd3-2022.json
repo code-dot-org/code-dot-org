@@ -1299,7 +1299,7 @@
   },
   "https://studio.code.org/s/csd3-2022/lessons/16/levels/7": {
     "dsls": {
-      "description": "Practice keyboard input and using the if/else block with these activities.",
+      "description": "Practice keyboard input and using conditional statements with these activities.",
       "display_name": "Mouse Input and If/else Practice"
     },
     "sublevels": {
@@ -1364,7 +1364,7 @@
   },
   "https://studio.code.org/s/csd3-2022/lessons/17/levels/2": {
     "dsls": {
-      "description": "In the next few levels, you'll be completing your own interactive card. Here are some examples to give you some ideas. Don't forget to look at the code to see how they work.",
+      "description": "In the next few levels, you'll be completing your own interactive card. Here are some examples to give you some ideas.",
       "display_name": "Your Interactive Card"
     },
     "sublevels": {
