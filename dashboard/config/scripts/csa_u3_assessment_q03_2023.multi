@@ -12,15 +12,21 @@ Consider the following code segment.
 ```
 int[] arr = {5, 3, 9, 7, 1};
 
-for (int j : arr) {
-   j = j + 15;
-   System.out.print(j + " ");
+for (int value : arr) {
+   value = value + 15;
+   System.out.print(value + " ");
 }
 
-for (int j : arr) {
-   System.out.print(j + " ");
+for (int value : arr) {
+   System.out.print(value + " ");
 }
 ```
 
 What is printed as a result of executing the code segment?
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+The first enhanced `for` loop will add `15` to the value assigned to the enhanced `for` loop variable then print its value.
+
+Since an enhanced `for` loop does not change the values stored in a 1D array, the second enhanced `for` loop will print the values that are stored in the 1D array.
 MARKDOWN

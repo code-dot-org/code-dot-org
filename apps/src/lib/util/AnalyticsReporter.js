@@ -81,10 +81,10 @@ class AnalyticsReporter {
     if (alwaysPut) {
       return true;
     }
-    if (this.isTestEnvironment() || this.isDevelopmentEnvironment()) {
-      return false;
+    if (this.isProductionEnvironment() || this.isStagingEnvironment()) {
+      return true;
     }
-    return true;
+    return false;
   }
 
   /**
@@ -106,21 +106,17 @@ class AnalyticsReporter {
     if (hostname.includes('staging')) {
       return Environments.staging;
     }
-    if (hostname.includes('localhost')) {
+    if (hostname.includes('localhost') || hostname.includes('127.0.0.1')) {
       return Environments.development;
     }
-    if (hostname.includes('code.org')) {
+    if (hostname === 'code.org' || hostname === 'studio.code.org') {
       return Environments.production;
     }
     return Environments.unknown;
   }
 
-  isTestEnvironment() {
-    return this.getEnvironment() === Environments.test;
-  }
-
-  isDevelopmentEnvironment() {
-    return this.getEnvironment() === Environments.development;
+  isStagingEnvironment() {
+    return this.getEnvironment() === Environments.staging;
   }
 
   isProductionEnvironment() {

@@ -1,8 +1,11 @@
 - registration_url = "https://studio.code.org/pd/application/teacher"
 
 %p
-  Hello
-  = @application.first_name + ","
+  - if !!@application.first_name&.present?
+    Hello
+    = @application.first_name + ","
+  - else
+    Hello,
 
 %p
   We are excited you are interested in the Code.org Professional Learning Program!
