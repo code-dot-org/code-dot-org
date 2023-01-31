@@ -124,19 +124,20 @@ export const playSoundAtCurrentLocation = {
   generator: ctx =>
     `MusicPlayer.playSoundAtMeasureById(
       "${ctx.getFieldValue('sound')}",
-      stack.length == 0
-        ? currentMeasureLocation
-        : stack[stack.length - 1].measure,
+      stack[stack.length - 1].measure,
       ${isBlockInsideWhenRun(ctx) ? 'true' : 'false'}
     );
-    if (stack.length > 0) {
+    if (stack[stack.length-1].together) {
       stack[stack.length-1].lastMeasures.push(
-        currentMeasureLocation +
+        stack[stack.length-1].measure +
         ${getLengthForId(ctx.getFieldValue('sound'))}
       );
     } else {
-      currentMeasureLocation += ${getLengthForId(ctx.getFieldValue('sound'))};
-    }`
+      stack[stack.length-1].measure += ${getLengthForId(
+        ctx.getFieldValue('sound')
+      )};
+    }
+    `
 };
 
 export const playSoundsTogether = {
@@ -159,10 +160,36 @@ export const playSoundsTogether = {
     helpUrl: ''
   },
   generator: ctx =>
-    `stack.push({measure: currentMeasureLocation, lastMeasures: []});
+    `play_together();
     ${Blockly.JavaScript.statementToCode(ctx, 'code')}
-    currentMeasureLocation = Math.max.apply(Math, stack[stack.length-1].lastMeasures);
-    stack.pop();`
+    end_together();
+    `
+};
+
+export const playSoundsSeparate = {
+  definition: {
+    type: BlockTypes.PLAY_SOUNDS_SEPARATE,
+    message0: 'play separate',
+    args0: [],
+    message1: '%1',
+    args1: [
+      {
+        type: 'input_statement',
+        name: 'code'
+      }
+    ],
+    inputsInline: true,
+    previousStatement: null,
+    nextStatement: null,
+    colour: 230,
+    tooltip: 'play sounds separately',
+    helpUrl: ''
+  },
+  generator: ctx =>
+    `play_sequential();
+    ${Blockly.JavaScript.statementToCode(ctx, 'code')}
+    end_sequential();
+    `
 };
 
 export const setCurrentLocationNextMeasure = {

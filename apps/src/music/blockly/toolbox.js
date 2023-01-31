@@ -35,6 +35,10 @@ const toolboxBlocks = {
     kind: 'block',
     type: BlockTypes.PLAY_SOUNDS_TOGETHER
   },
+  [BlockTypes.PLAY_SOUNDS_SEPARATE]: {
+    kind: 'block',
+    type: BlockTypes.PLAY_SOUNDS_SEPARATE
+  },
   [BlockTypes.PLAY_SOUND_IN_TRACK]: {
     kind: 'block',
     type: BlockTypes.PLAY_SOUND_IN_TRACK
@@ -224,6 +228,15 @@ const toolboxBlocks = {
         }
       }
     }
+  },
+  ['procedures_defnoreturn']: {
+    kind: 'block',
+    type: 'procedures_defnoreturn'
+  },
+  ['procedures_callnoreturn']: {
+    kind: 'block',
+    type: 'procedures_callnoreturn',
+    titles: {name: 'blah'}
   }
 };
 
@@ -268,7 +281,10 @@ export function getToolbox() {
         BlockTypes.PLAY_SOUND_AT_CURRENT_LOCATION,
         BlockTypes.SET_CURRENT_LOCATION_NEXT_MEASURE,
         'controls_repeat_ext',
-        BlockTypes.PLAY_SOUNDS_TOGETHER
+        BlockTypes.PLAY_SOUNDS_TOGETHER,
+        BlockTypes.PLAY_SOUNDS_SEPARATE,
+        'procedures_defnoreturn',
+        'procedures_callnoreturn'
       ]
     });
   }
