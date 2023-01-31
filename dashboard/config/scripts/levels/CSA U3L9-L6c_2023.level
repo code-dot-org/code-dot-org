@@ -2,27 +2,55 @@
   <config><![CDATA[{
   "properties": {
     "encrypted": "false",
-    "long_instructions": "**Short one-sentence description of problem to solve.**\r\n\r\n🎒 **IMPORT:** Import your `PainterPlus`(#e7e8ea) class from your **Backpack**.\r\n\r\n*Don't have it, or it doesn't work? That's ok! Copy the code from* ***here*** *and paste it into a new file in your project.*\r\n\r\n✅ **TO DO:** Overview of the steps to take.\r\n\r\n1. More specific step\r\n\r\n2. More specific step\r\n\r\n::: details [**🔦 Need help with your algorithm?**]\r\n  \r\nHere is one approach to solving this problem.\r\n\r\n```\r\nalgorithm for method to write\r\n```\r\n:::\r\n&nbsp;\r\n\r\n💡 **TIP:** Check out the documentation for the `ClassName`(#e7e8ea) class in the **Documentation** tab ⬆️ for a thing to look for!\r\n\r\n📝 **COMMENT:** Be sure to add comments to note what your code does.\r\n\r\n🖥️ **TEST:** Test your program to check if your code achieves the expected result.\r\n\r\n🎉 **RUN:** Run your program to see the result of your code!\r\n\r\n## ***Don't forget to . . .***\r\n\r\n![](https://images.code.org/eb2c8910ae2e150019b8e2177405d4af-image-1668191576873.png)\r\n\r\n## 🎯 Goal\r\n\r\nimage/gif or console output",
+    "long_instructions": "The <a href=\"https://www.kaggle.com/datasets/shubhamrathi15/all-pokemon-database\" target=\"_blank\">**Pokemon Encyclopedia dataset**</a> includes the names of Pokemon and the type of each Pokemon.\r\n\r\n✅ **TO DO #1:** In `Pokemon.java`(#e7e8ea), write the `checkForDuplicates()`(#e7e8ea) method to determine if the parameter `pokemonData`(#e7e8ea) has duplicate values.\r\n\r\n1. Traverse the 1D array `pokemonData`(#e7e8ea).\r\n\r\n2. If the current value appears in `pokemonData`(#e7e8ea) more than once, return `true`(#e7e8ea).\r\n\r\n3. If none of the values appear in `pokemonData`(#e7e8ea) more than once, return `false`(#e7e8ea).\r\n\r\n::: details [**🔦 Need help with your algorithm?**]\r\n  \r\nHere is one approach to solving this problem.\r\n\r\n```\r\nloop from 0 to pokemonData.length\r\n  loop from next position to pokemonData.length\r\n    if pokemonData[start] equals pokemonData[next]\r\n      return true\r\n\r\nreturn false\r\n```\r\n:::\r\n&nbsp;\r\n\r\n✅ **TO DO #2:** In `PokemonRunner.java`(#e7e8ea), call the `checkForDuplicates()`(#e7e8ea) method and print the result.\r\n\r\n💡 **TIP:** Check out the **Help & Tips** tab ⬆️ for help with writing a nested `for`(#e7e8ea) loop.\r\n\r\n## ***Don't forget to . . .***\r\n\r\n![](https://images.code.org/eb2c8910ae2e150019b8e2177405d4af-image-1668191576873.png)",
     "mini_rubric": "false",
     "submittable": "false",
     "hide_share_and_remix": "false",
     "csa_view_mode": "console",
     "start_sources": {
-      "Runner.java": {
-        "text": "public class Runner {\n  public static void main(String[] args) {\n\n    /* ----------------------------------- TO DO -----------------------------------\n     * ✅ instructions for the student to complete\n     * -----------------------------------------------------------------------------\n     */\n\n\n\n    /* ----------------------------------- TO DO -----------------------------------\n     * ✅ instructions for the student to complete\n     * -----------------------------------------------------------------------------\n     *\n     * description of method to write\n     */\n\n    \n\n    \n    /* ---- 🔎 ADD YOUR CODE BELOW THIS LINE ---- */\n\n\n    \n    \n    \n  }\n}",
+      "PokemonRunner.java": {
+        "text": "public class PokemonRunner {\n  public static void main(String[] args) {\n\n    /* ----------------------------------- TO DO -----------------------------------\n     * ✅ instructions for the student to complete\n     * -----------------------------------------------------------------------------\n     */\n\n\n\n\n    \n    \n    \n  }\n}",
         "isVisible": true,
         "tabOrder": 0
+      },
+      "Pokedex.java": {
+        "text": "/*\n * Manages data about Pokemon\n */\npublic class Pokedex {\n\n  private String namesFile;        // The name of the file containing the names data\n  private String attackFile;       // The name of the file containing the attack data\n  private Pokemon[] pokemonData;   // The 1D array of Pokemon objects\n\n  /*\n   * Reads the data from namesFile and attackFile\n   * to initialize pokemonData\n   */\n  public Pokedex(String namesFile, String attackFile) {\n    this.namesFile = namesFile;\n    this.attackFile = attackFile;\n    pokemonData = createPokemon();\n  }\n\n  /*\n   * Returns a 1D array of Pokemon objects using\n   * the data from namesFile and attackFile\n   */\n  public Pokemon[] createPokemon() {\n    String[] namesData = FileReader.toStringArray(namesFile);\n    String[] attackData = FileReader.toStringArray(attackFile);\n\n    Pokemon[] tempPokemon = new Pokemon[namesData.length];\n\n    for (int index = 0; index < tempPokemon.length; index++) {\n      tempPokemon[index] = new Pokemon(namesData[index], attackData[index]);\n    }\n\n    return tempPokemon;\n  }\n\n  /*\n   * Returns true if more than one Pokemon have the same type, otherwise returns false\n   */\n  public boolean checkForDuplicates() {\n    /* ----------------------------------- TO DO -----------------------------------\n     * ✅ instructions for the student to complete\n     * -----------------------------------------------------------------------------\n     */\n\n    \n    \n    return false;\n  }\n\n  /*\n   * Returns a String containing each Pokemon's information\n   */\n  public String toString() {\n    String result = \"\";\n\n    for (Pokemon thePokemon : pokemonData) {\n      result += thePokemon + \"\\n\";\n    }\n\n    return result;\n  }\n  \n}",
+        "isVisible": true,
+        "tabOrder": 1
+      },
+      "Pokemon.java": {
+        "text": "/*\n * Represents a Pokemon\n */\npublic class Pokemon {\n\n  private String name;    // The name of a Pokemon\n  private int attack;     // The attack of a Pokemon\n\n  /*\n   * Sets name and attack to the specified values\n   */\n  public Pokemon(String name, int attack) {\n    this.name = name;\n    this.attack = attack;\n  }\n\n  /*\n   * Returns the name of the Pokemon\n   */\n  public String getName() {\n    return name;\n  }\n\n  /*\n   * Returns the attack of the Pokemon\n   */\n  public int getAttack() {\n    return attack;\n  }\n\n  /*\n   * Returns a String containing the name and attack of the Pokemon\n   */\n  public String toString() {\n    return name + \": \" + attack;\n  }\n  \n}",
+        "isVisible": true,
+        "tabOrder": 2
+      },
+      "names.txt": {
+        "text": "Bulbasaur\nIvysaur\nVenusaur\nMega Venusaur\nCharmander\nCharmeleon\nCharizard\nMega Charizard Y\nMega Charizard X\nSquirtle\nWartortle\nBlastoise\nMega Blastoise\nCaterpie\nMetapod\nButterfree\nWeedle\nKakuna\nBeedrill\nMega Beedrill\nPidgey\nPidgeotto\nPidgeot\nMega Pidgeot\nRattata\nAlolan Rattata\nRaticate\nAlolan Raticate\nSpearow\nFearow\nEkans\nArbok\nPikachu\nRaichu\nAlolan Raichu\nSandshrew\nAlolan Sandshrew\nSandslash\nAlolan Sandslash\nNidoran Female\nNidorina\nNidoqueen\nNidoran Male\nNidorino\nNidoking\nClefairy\nClefable\nVulpix\nAlolan Vulpix\nNinetales\nAlolan Ninetales\nJigglypuff\nWigglytuff\nZubat\nGolbat\nOddish\nGloom\nVileplume\nParas\nParasect\nVenonat\nVenomoth\nDiglett\nAlolan Diglett",
+        "isVisible": true,
+        "tabOrder": 3
+      },
+      "attacks.txt": {
+        "text": "49\n62\n82\n100\n52\n64\n84\n104\n130\n48\n63\n83\n103\n30\n20\n45\n35\n25\n90\n150\n45\n60\n80\n80\n56\n56\n81\n71\n60\n90\n60\n95\n55\n90\n85\n75\n75\n100\n100\n47\n62\n92\n57\n72\n102\n45\n70\n41\n41\n76\n67\n45\n70\n45\n80\n50\n65\n80\n70\n95\n55\n65\n55\n55",
+        "isVisible": true,
+        "tabOrder": 4
+      },
+      "FileReader.java": {
+        "text": "import java.util.Scanner;\nimport java.util.ArrayList;\nimport java.io.File;\nimport java.io.FileNotFoundException;\n\npublic class FileReader {\n\n  public static String[] toStringArray(String filename) {\n    ArrayList<String> temp = readDataFromFile(filename);\n    String[] data = new String[temp.size()];\n\n    for (int index = 0; index < data.length; index++) {\n      String currentValue = temp.get(index);\n      data[index] = currentValue;\n    }\n\n    return data;\n  }\n\n  public static int[] toIntArray(String filename) {\n    ArrayList<String> temp = readDataFromFile(filename);\n    int[] data = new int[temp.size()];\n\n    for (int index = 0; index < data.length; index++) {\n      String currentValue = temp.get(index);\n      data[index] = Integer.parseInt(currentValue);\n    }\n\n    return data;\n  }\n\n  public static double[] toDoubleArray(String filename) {\n    ArrayList<String> temp = readDataFromFile(filename);\n    double[] data = new double[temp.size()];\n\n    for (int index = 0; index < data.length; index++) {\n      String currentValue = temp.get(index);\n      data[index] = Double.parseDouble(currentValue);\n    }\n\n    return data;\n  }\n\n  private static Scanner createScanner(File theFile) {\n    Scanner tempScanner = null;\n\n    try {\n      tempScanner = new Scanner(theFile);\n    } catch(FileNotFoundException error) {\n      System.out.println(\"File not found.\");\n    }\n\n    return tempScanner;\n  }\n\n  private static ArrayList<String> readDataFromFile(String filename) {\n    File dataFile = new File(filename);\n    Scanner reader = createScanner(dataFile);\n    ArrayList<String> temp = new ArrayList<String>();\n\n    while (reader.hasNextLine()) {\n      String currentLine = reader.nextLine().trim();\n      temp.add(currentLine);\n    }\n\n    reader.close();\n    return temp;\n  }\n  \n}",
+        "isVisible": false,
+        "tabOrder": 5
       }
     },
-    "encrypted_examples": [
-
-    ]
+    "reference_links": [
+      "/courses/csa-2023/guides/nested-loops"
+    ],
+    "display_name": "Pokemon",
+    "bubble_choice_description": "Determine whether the Pokemon Encyclopedia dataset contains duplicate values.",
+    "thumbnail_url": "https://images.code.org/0fb791bc0a8a00eaf33e72f401a9e3d1-pokeball.png"
   },
   "game_id": 68,
-  "published": true,
   "created_at": "2023-01-12T22:23:20.000Z",
   "level_num": "custom",
   "user_id": 16889,
-  "audit_log": "[{\"changed_at\":\"2023-01-12T22:23:20.983+00:00\",\"changed\":[\"cloned from \\\"CSA U3L9-L6b_2023\\\"\"],\"cloned_from\":\"CSA U3L9-L6b_2023\"},{\"changed_at\":\"2023-01-12 22:23:22 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2023-01-12T22:23:20.983+00:00\",\"changed\":[\"cloned from \\\"CSA U3L9-L6b_2023\\\"\"],\"cloned_from\":\"CSA U3L9-L6b_2023\"},{\"changed_at\":\"2023-01-12 22:23:22 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-01-29 23:59:20 +0000\",\"changed\":[\"long_instructions\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-01-30 01:33:05 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-01-30 01:38:40 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-01-30 01:43:09 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-01-30 01:44:36 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-01-30 01:45:43 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-01-30 01:45:48 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-01-30 01:58:08 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-01-30 01:58:51 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>
 </Javalab>
