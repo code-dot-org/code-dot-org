@@ -138,7 +138,7 @@ export default class WorkshopEnrollment extends React.Component {
 
   renderSuccess() {
     analyticsReporter.sendEvent(EVENTS.WORKSHOP_ENROLLMENT_COMPLETED_EVENT, {
-      'regional partner': this.props.workshop.regional_partner.name,
+      'regional partner': this.props.workshop.regional_partner?.name,
       'workshop course': this.props.workshop.course,
       'workshop subject': this.props.workshop.subject
     });

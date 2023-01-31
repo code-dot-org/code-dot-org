@@ -3571,144 +3571,140 @@ tr:
   tutorial_bbcgeo_longdescription: K-5 sınıfları için standartlara dayalı ders planı.  Çocuklarınızı
     ellerinde çalışma sayfaları ile bilgisayar laboratuvarına götürün ve geometri
     içeren uygulamalar oluşturun.
-  tutorial_chspixel_longdescription: Grafikler nasıl işlediğini öğrendikten sonra,
-    öğrenciler Pixel programlarıyla kendi Renklerini yaratacaktır. Ders planı, her
-    biri belirli bir konuyu kapsayan dört bölümden oluşur. Pixel tarafından hazırlanan
-    beş bölümlü Renkli dersin tamamı yaklaşık bir saat çalışacak şekilde tasarlanmıştır.
-  tutorial_hummingbird_longdescription: Bu etkinlikte, kendi oyununuzu yaratacaksınız!
-    Oyuncunun ne zaman bir kutu içine top attığını algılamak için bir Sinek kuşu tahtası
-    ve bir algılayıcı kullanacaksınız. Oyuncunu basket attığında, skor tutmak ve ışıkları
-    yakması için bir program yazacaksın. O zaman oyunu benzersiz kılmak için özelleştirebilirsiniz!
-    Bu etkinlik için bir dizüstü bilgisayar veya bir Chromebook kullanabilirsiniz;
-    önceden programlama deneyimine ihtiyacınız yoktur.
-  tutorial_recoloring_longdescription: 'Önceden kodlama deneyimi olmayan öğrenciler,
-    görüntü oluşturmak ve astronomik verileri anlamak için bilgisayarları nasıl kullanacaklarını
-    öğrenebilirler. Katılımcılar, şekil ve renk gibi tanıdık kavramlardan başlayıp
-    astronomik nesnelerle mezun olabilecek temel kodlamayı öğrenirler. Bir takım aktivite
-    dizini izleyerek ve patlayan yıldızlardan kara deliklere kadar olan yerlerde NASA''nın
-    yörüngedeki teleskoplarından gelen verilerle çalışan öğrenciler, bilim, teknoloji
-    ve sanatın gerçek dünya uygulamalarını deneyimleyebilirler.        '
-  tutorial_bbcchem_longdescription: K-5 sınıfları için standartlara dayalı ders planı.
-    Çocuğunuzu eldeki çalışma yapraklarıyla bilgisayar laboratuvarına götürün ve kimyayı
-    içeren uygulamaları oluşturun.
+  tutorial_chspixel_longdescription: Grafiklerin nasıl çalıştığını öğrendikten sonra,
+    öğrenciler kendi Color by Pixel programlarını oluşturacaklar.  Ders planı, her
+    biri belirli bir konuyu kapsayan dört bölümden oluşur.  Beş bölümden oluşan Color
+    by Pixel dersinin tamamı, yaklaşık bir saat çalışacak şekilde tasarlanmıştır.
+  tutorial_hummingbird_longdescription: Bu aktivitede kendi oyununuzu yaratacaksınız!  Oyuncunun
+    bir kutuya top attığını algılamak için bir Sinek Kuşu tahtası ve bir sensör kullanacaksınız.  Oyuncu
+    basket attığında skor tutmak ve ışıkları yakmak için bir program yazacaksınız.  Ardından
+    oyununuzu benzersiz kılmak için özelleştirebilirsiniz!  Bu etkinlik için bir dizüstü
+    bilgisayar veya Chromebook kullanabilirsiniz;  önceden herhangi bir programlama
+    deneyimine ihtiyacınız yok.
+  tutorial_recoloring_longdescription: Önceden kodlama deneyimi olmayan öğrenciler,
+    görüntüleri oluşturmak ve astronomik verileri anlamak için bilgisayarları nasıl
+    kullanacaklarını öğrenebilirler.  Katılımcılar, şekil ve renk gibi tanıdık kavramlarla
+    başlayarak ve astronomik nesnelere doğru derecelenerek temel kodlamayı öğrenirler.  Bir
+    dizi aktivitenin ardından ve patlamış yıldızlardan karadeliklere kadar NASA yörüngesindeki
+    teleskoplardan gelen verilerle çalışan öğrenciler, bilim, teknoloji ve sanatın
+    gerçek dünyadaki uygulamalarını deneyimleyebilirler.
+  tutorial_bbcchem_longdescription: K-5 sınıfları için standartlara dayalı ders planı.  Çocuklarınızı
+    ellerinde çalışma sayfaları ile bilgisayar laboratuvarına götürün ve kimya içeren
+    uygulamalar geliştirin.
   tutorial_floalgo_longdescription: Bu derste öğrenciler, bilgisayar programcılarının
-    problemleri çözmesine olanak tanıyan anahtar bir kavram olan algoritmaları keşfedeceklerdir.
-    Görevleri tamamlamak ve sorunları çözmek için etkili, İngilizce kesin algoritmalar
-    ve sahte kod yazacaklardır. Ayrıca, rakip algoritmaları verimlilik ve diğer etkenlere
-    göre değerlendirecekler.
-  tutorial_flocond_longdescription: Bu, öğrencilerin koşullu ifadeleri, yani kodlama
-    dillerinde kullanılan bir kavramı araştırdığı bir ders planıdır. Öğrenciler şartlar
-    hakkında eğitsel bir hip-hop videosu izleyecek ve tartışma sorularını cevaplayacaklardır.
-    Ardından, şartların doğru olup olmadığını belirleme ve buna göre hareket etme
-    pratiği yapacaklardır. Sonunda, kendi şartlı ifadelerini yazacak ve programların
-    sonucunu tahmin etmek için ifadeleri değerlendireceklerdir.
-  tutorial_floloops_longdescription: Bu, öğrencilerin döngüler keşfedebileceği, programcıların
-    kodları kolayca tekrar edebilmelerini sağlayan programlama dillerinde kullanılan
-    bir kavram olan bir ders planıdır. Öğrenciler, döngüler hakkında eğitsel bir hip-hop
-    videosu izleyecek ve programlamadaki kullanımlarıyla ilgili tartışma sorularını
-    cevaplayacak. Ardından anahtar sözcük dağarcığını uygulayacaklar ve döngüler yazdıkları
-    ve sonuçlarını üretmek için verilen döngüleri yorumlayan bir etkinlik dizisini
-    tamamlayacaklardır.
-  tutorial_pgts_longdescription: Bu "bağlantı gerektirmeyen" etkinlik, bir grup öğrencinin
-    Taş / Kağıt / Makas oyununun farklı sürümlerini oynayarak modelleme ve simülasyonun
-    nasıl çalıştığını öğrenmesine yardımcı olur ve sonuçları farklı modelleme denemeleri
-    olarak görür.
-  tutorial_ozo_longdescription: |-
-    Öğretmen liderliğindeki bu öğretici, küçük bir programlanabilir robot olan Ozobot'un yardımıyla kodlama konseptini öğrencilere tanıtmaktadır. Öğrenciler Shape Tracer Games adlı Ozobot oyunlarını oynayarak kodlamayı öğrenecekler. Bir Ozobot Bit veya Evo robotuna sahip olmamasına rağmen halen oyunların simüle edilmiş halini oynayabilirler. Ozobot oyunları, öğrencilere Blockly tabanlı bir görsel programlama dili olan OzoBlockly ile nasıl kodlanacağını öğretir.
-
-    Oyunlar, Kodlama Saati'nin ötesinde yapılabilecek bir proje fikri tarafından izleniyor. Bu proje, öğrencilerin öğrendikleri her şeyi almasına ve Ozobot için bir aksiyon sahnesi tasarlamaya ve programlamaya itiliyor.
-
-    Bu öğretici için hiçbir programlama tecrübesi veya Ozobot bilgisi gerekmemektedir. Bununla birlikte, programlama deneyimine sahip öğrenciler bile Ozobot oyunlarıyla meşgul olacaklar. Öğretici, 1-12. Sınıflar için tasarlanmıştır ve öğrencilerin yeteneklerine göre uyarlanabilir.
-  tutorial_bbcla_longdescription: K-5 sınıfları için standartlara dayalı ders planı.
-    Çocuğunuzu eldeki çalışma yapraklarıyla bilgisayar laboratuvarına götürün ve dil
-    sanatlarını içeren uygulamaları oluşturun.
-  tutorial_bbcsci_longdescription: K-5 sınıfları için standartlara dayalı ders planı.
-    Çocuğunuzu eldeki çalışma yapraklarıyla birlikte bilgisayar laboratuvarına götürün
-    ve genel bilim içeren uygulamaları oluşturun.
+    sorunları çözmesine olanak sağlayan anahtar bir kavram olan algoritmaları keşfedecekler.  Görevleri
+    tamamlamak ve sorunları çözmek için İngilizce olarak verimli, kesin algoritmalar
+    ve sözde kod yazacaklar.  Ayrıca verimlilik ve diğer faktörlere dayalı olarak
+    rakip algoritmaları değerlendireceklerdir.
+  tutorial_flocond_longdescription: Bu, öğrencilerin kodlama dillerinde kullanılan
+    bir kavram olan koşullu ifadeleri keşfettikleri bir ders planıdır.  Öğrenciler
+    koşullu ifadeler hakkında eğitici bir hip-hop videosu izleyecek ve tartışma sorularını
+    cevaplayacak.  Daha sonra koşulların doğru olup olmadığını belirleme ve buna göre
+    eylemler gerçekleştirme alıştırması yapacaklardır.  Son olarak, programların sonucunu
+    tahmin etmek için kendi koşullu ifadelerini yazacak ve ifadeleri değerlendireceklerdir.
+  tutorial_floloops_longdescription: Bu, öğrencilerin programlama dillerinde kullanılan
+    ve programcıların kodu kolayca tekrar etmesine olanak tanıyan bir kavram olan
+    döngüleri keşfettiği bir ders planıdır.  Öğrenciler, döngüler hakkında eğitici
+    bir hip-hop videosu izleyecek ve programlamada kullanımlarıyla ilgili tartışma
+    sorularını yanıtlayacak.  Daha sonra anahtar kelime pratiği yapacaklar ve döngüler
+    yazdıkları ve çıktılarını oluşturmak için verilen döngüleri yorumladıkları bir
+    etkinlik dizisini tamamlayacaklar.
+  tutorial_pgts_longdescription: Bu "bağlantısız" aktivite, öğrencilerin bir grup
+    öğrenciye Taş / Kağıt / Makas oyununun farklı versiyonlarını oynamalarını sağlayarak
+    modelleme ve simülasyonun nasıl çalıştığını öğrenmelerine ve sonuçları farklı
+    modelleme deneyleri olarak görmelerine yardımcı olur.
+  tutorial_ozo_longdescription: |
+    Öğretmen liderliğindeki bu eğitim, öğrencilere küçük bir programlanabilir robot olan Ozobot'un yardımıyla kodlama kavramını tanıtır.  Öğrenciler, Shape Tracer Games adlı Ozobot oyunlarını oynayarak kodlamayı öğrenecekler.  Ozobot Bit veya Evo robotları olmasa bile oyunların simüle edilmiş versiyonunu oynamaya devam edebilirler. Ozobot oyunları, öğrencilere Blockly tabanlı görsel bir programlama dili olan OzoBlockly ile nasıl kod yazılacağını öğretecek.
+    Oyunların ardından Hour of Code'un ötesinde yapılabilecek bir proje fikri gelir. Proje, öğrencileri öğrendikleri her şeyi alıp Ozobot için bir aksiyon sahnesi tasarlayıp programlamaya davet eder.
+    Bu eğitim için programlama deneyimi veya Ozobot bilgisi gerekmez.  Ancak, biraz programlama deneyimi olan öğrenciler bile Ozobot oyunlarıyla meşgul olacak.  Öğretici, 1-12. sınıflar için tasarlanmıştır ve öğrencilerinizin becerilerine göre özelleştirilebilir.
+  tutorial_bbcla_longdescription: K-5 sınıfları için standartlara dayalı ders planı.  Çocuklarınızı
+    ellerinde çalışma sayfaları ile bilgisayar laboratuvarına götürün ve dil sanatlarını
+    içeren uygulamalar oluşturun.
+  tutorial_bbcsci_longdescription: K-5 sınıfları için standartlara dayalı ders planı.  Çocuklarınızı
+    ellerinde çalışma sayfaları ile bilgisayar laboratuvarına götürün ve genel bilim
+    içeren uygulamalar oluşturun.
   tutorial_tlctour_longdescription: Bu etkinlik, sırayla yapılacak basit bir talimat
-    dizisi olan bir algoritma oluşturmanın bir örneğidir. Soruna bir çözüm olarak
-    bir algoritma biçiminde yazarsak, sıfırdan tekrar tekrar uğraşmadan adımları izleyerek
-    gelecekte turlar yapabileceğimizi gösterir. Ayrıca, algoritmayı yazarsak, kağıt
-    üzerinde adım adım takip ederek bunun kesinlikle çalıştığını kontrol edebiliriz.
-    Bu etkinlik Şövalye Turu etkinliğine liderlik eder.
-  tutorial_codesterstj_longdescription: 'Bu çok dersli projede öğrencileri dijital
-    vatandaşlık hakkında bilgi edinin ve seçtikleri bir sorunu çözmek için bir tasarım
-    düşünce modeli izleyin! Öğrenciler, kullanıcılara sorumlu dijital vatandaşlık
-    hakkında ders vermeyi amaçlayan bir oyun yaratacak. Tüm kaynaklar platformda bulunur. '
-  tutorial_tlclocked_longdescription: Bu aktivite, algoritmanın ne olduğunu, doğrusal
-    aramanın ne olduğunu ve algoritmaların verimlilik temelinde karşılaştırılmasını
-    sağlayan bir hesaplamaya dayalı hesaplamalı düşünce tabanlı problem çözmeyi tanıtmayı
-    amaçlamaktadır. Aynı zamanda hesaplamalı düşüncenin bilgisayar tabanlı çözümler
-    üretmenin ötesinde nasıl olduğunu da göstermektedir. Bilgi işlem, insanlar için
-    problem çözmeye yöneliktir.
-  tutorial_baubles_longdescription: Öğrenciler, mektupları ikili olarak temsil etme
-    ve saklama hakkında, açma ve kapatma işlevleri hakkında bilgi edinebilirler. Sonunda,
-    sınıf kendi markasını şifreleyerek, onlarla eve dönerler.
-  tutorial_bbcart_longdescription: K-5 sınıfları için standartlara dayalı ders planı.
-    Çocuklarınızı elinizin altında olan çalışma gruplarıyla birlikte bilgisayar laboratuvarına
-    götürüp görsel sanatlar içeren uygulamalar oluşturun.
-  tutorial_tlcknight_longdescription: Bu etkinlik, iki farklı gösterimi kullanarak
-    bir bulmaca çözmeye çalışmayı içerir. Bununla başlamak oldukça zor, ama tahtanın
-    ve hareketlerin gösterilmesi değiştiğinde gerçekten kolaylaşıyor. Sorunu göstermek
-    için grafikler oluşturun. Soyutlamayı kullanma gücünü ve temsilin seçilmesinin
-    bir sorunu nasıl daha kolay hale getireceğini görün. Bu etkinlik, Tur Rehberliği
-    etkinliğinden sonra gelmektedir.
-  tutorial_fufafit_longdescription: Öğrenciler ileri programlama kavramlarını (fonksiyonları)
-    bir ders ve kinestetik etkinlik yoluyla öğreneceklerdir. Öğrenciler bir programı
-    çalıştırmak için ekrandaki işlevleri öğrenirler. Bu ders, sıra, koşullar, döngüler
-    veya diğer temel programlama kavramlarıyla ilgili bazı deneyime sahip öğrenciler
-    ve öğretmenler içindir.
+    dizisi olan bir algoritma oluşturmaya bir örnektir.  Problemin çözümünü bir algoritma
+    şeklinde yazdıysak, tekrar sıfırdan çalışmak zorunda kalmadan sadece adımları
+    takip ederek gelecekte turlar yapabileceğimizi gösteriyor.  Ayrıca algoritmayı
+    yazarsak, kağıt üzerinde adım adım takip ederek kesinlikle çalışıp çalışmadığını
+    kontrol edebiliriz.  Bu aktivite Knight's Tour aktivitesine götürür.
+  tutorial_codesterstj_longdescription: Bu çok dersli projede öğrenciler dijital vatandaşlığı
+    öğrenirler ve seçtikleri bir sorunu çözmek için bir tasarım odaklı düşünme modelini
+    takip ederler!  Öğrenciler, kullanıcılara sorumlu dijital vatandaşlık hakkında
+    bir ders vermeyi amaçlayan bir oyun oluşturacaklar.  Tüm kaynaklar platformda
+    bulunur.
+  tutorial_tlclocked_longdescription: Bu aktivite, algoritmanın ne olduğu, doğrusal
+    aramanın ne olduğu ve algoritmaların verimlilik temelinde nasıl karşılaştırılabileceği
+    konusunda bir anlayışa yol açan hesaplamalı düşünmeye dayalı problem çözmeyi tanıtmayı
+    amaçlamaktadır.  Ayrıca hesaplamalı düşünmenin sadece bilgisayar tabanlı çözümler
+    yaratmaktan daha fazlası olduğunu da gösteriyor.  Bilgisayar, insanlar için problem
+    çözmekle ilgilidir.
+  tutorial_baubles_longdescription: Öğrenciler, açık ve kapalı fonksiyonları olarak
+    harfleri ikili olarak temsil etmeyi ve saklamayı öğrenirler.  Sonunda sınıf, eve
+    yanlarında götürmek için kendi baş harflerini kodlar.
+  tutorial_bbcart_longdescription: K-5 sınıfları için standartlara dayalı ders planı.  Çocuklarınızı
+    ellerinde çalışma sayfaları ile bilgisayar laboratuvarına götürün ve görsel sanatlar
+    içeren uygulamalar geliştirin.
+  tutorial_tlcknight_longdescription: Bu etkinlik, iki farklı temsil kullanarak bir
+    bulmacayı çözmeye çalışmayı içerir.  Başlamak oldukça zor ama tahtanın ve hamlelerin
+    temsili değiştirildiğinde gerçekten kolaylaşıyor.  Sorunu temsil etmek için grafikler
+    oluşturun.  Soyutlamayı kullanmanın gücünü ve temsil seçiminin bir sorunu nasıl
+    daha kolay hale getirebileceğini görün.  Bu aktivite, Tur Rehberi aktivitesinden
+    kaynaklanmaktadır.
+  tutorial_fufafit_longdescription: Öğrenciler, bir ders ve kinestetik aktivite yoluyla
+    ileri programlama kavramlarını (işlevlerini) öğreneceklerdir.  Öğrenciler, bir
+    programı çalıştırmak için ekrandaki işlev bilgilerini uygulayacaktır.  Bu ders,
+    sıralama, koşullar, döngüler veya diğer temel programlama kavramları konusunda
+    biraz deneyimi olan öğrenciler ve öğretmenler içindir.
   tutorial_ozodance_longdescription: |-
-    Öğretmen liderliğindeki bu öğretici, küçük bir programlanabilir robot olan Ozobot'un yardımıyla kodlama konseptini öğrencilere tanıtmaktadır. Öğrenciler Ozobot için bir dans rutini oluşturup programlayarak kodlamayı öğrenecekler! Blockly'ye dayanan görsel bir programlama dili olan OzoBlockly'yi kullanarak, dansı programlayacaklar ve daha sonra yaptıkları koreografilerinin Ozobot tarafından canlandığını görünce eğlenecekler.
+    Öğretmen liderliğindeki bu eğitim, öğrencilere küçük bir programlanabilir robot olan Ozobot'un yardımıyla kodlama kavramını tanıtır.  Öğrenciler, Ozobot için bir dans rutini oluşturup programlayarak kodlamayı öğrenecekler!  Dansı programlamak için Blockly tabanlı görsel bir programlama dili olan OzoBlockly'yi kullanacaklar ve ardından Ozobot danslarını sergilediğinde koreografilerinin canlandığını görerek eğlenecekler.
 
-    Bu öğretici için hiçbir programlama tecrübesi veya Ozobot bilgisi gerekmemektedir. Bununla birlikte, programlama deneyimine sahip öğrenciler bile Ozobot oyunlarıyla meşgul olacaklar. Öğretici, 1-12. Sınıflar için tasarlanmıştır ve öğrencilerin yeteneklerine göre özelleştirilebilir.
+     Bu eğitim için programlama deneyimi veya Ozobot bilgisi gerekmez.  Ancak, biraz programlama deneyimi olan öğrenciler bile Ozobot oyunlarıyla meşgul olacak.  Öğretici, 1-12. sınıflar için tasarlanmıştır ve öğrencilerinizin becerilerine göre özelleştirilebilir.
   tutorial_codingrobotics_longdescription: Öğrenciler temel programlama kavramlarını
-    öğrenecek ve robotiklere yeni bilgiler uygulayacaklardır. Hem Kodable hem de Wonder
-    Workshop ile birlikte çalışarak, öğrenciler Path uygulamasındaki robotun "Dash"
-    komutunu vermek için programlama bilgisi kullanacaklar.
-  tutorial_box_longdescription: Box Island'da gezinin ve Hiro'nun vahşi doğada dağılmış
-    saatleri toplamasına yardımcı olun! Bu yazıda algoritmaların, dizilerin, döngüler
-    ve koşulların temellerini öğreneceksiniz!
-  tutorial_hopgame_longdescription: "Bunları yapın;\n1. Cross the Road\n2. Geometry
-    Jumper\n3. Quiz Creator\n4. Falling Bird \n5. Subway Skaters\n6. Escape the Room\n\nHer
-    biri, tartışma sorularını, farklılaşmayı ve bir video dersini içerir.\n\nÖğrenciler,
-    oyunlarını özelleştirmek için talimatlarınızı çıkarabilirler. Daha önce herhangi
-    bir deneyim gerekmiyor."
-  tutorial_icontrol_longdescription: "Bu öğretmen tarafından kolaylaştırılmış ve Kodlama
-    Saatine uyarlanmış ders, öğrencilere robotik-Sphero aracılığıyla fiziksel programlamayı
-    keşfetme fırsatı sunmuştur. \n\nÖğrenciler, sürükle-bırak programlama ortamı ve
-    programlanabilir bir robot küresi kullanarak, fiziksel sistemlerin programlanabileceğini
-    ve kontrol edilebileceğini öğreneceklerdir."
-  tutorial_cocomteach_longdescription: Bilgisayar Bilimi ders CodeCombat ücretsiz,
-    bir saatlik Introduction Python veya JavaScript Öğrencilerinize tanıtın. Size
-    mücevher dolu zindan labirentine ve kahraman-vs-devle kullanarak, temel cümle,
-    dizeleri, argümanlar, döngüler, değişkenler ve x ve y koordinatlarının dahil olmak
-    üzere, öğrencilere kavramları açıklamak için için özel bir ders planı var savaşlar.
-  tutorial_bbcmathii_longdescription: K-2 sınıfları için standartlara dayalı ders
-    planı. Çocuğunuzu eldeki çalışma yapraklarıyla birlikte bilgisayar laboratuvarına
-    götürün ve aritmetik, görselleştirilmiş sayılar ve geometrik şekiller içeren uygulamalar
-    oluşturun.
-  tutorial_bbcphys_longdescription: K-5 sınıfları için standartlara dayalı ders planı.
-    Çocuğunuzu eldeki çalışma yapraklarıyla birlikte bilgisayar laboratuvarına götürün
-    ve fizik içeren uygulamaları oluşturun.
-  tutorial_bitsbox_longdescription: 'Gerçek, yazılmış Javascript''i kullanarak beş
-    eğlenceli mini uygulamayı kodlamak için yönergeleri izleyin. ''Food Fight'' ta
-    pastayı havaya uçurmaktan, '' So Long, Homework! de bir dizüstü bilgisayarı kara
-    delikten aşağıya atmaya değişkenleri, yöntemleri ve daha fazlasını gösteren her
-    uygulama, çocukları memnun etmek için tasarlandı. Bu uygulamalar da tamamen açık
-    uçludur; Çocuklar bunları kendi uygulama kreasyonları için bir başlangıç noktası
-    olarak kullanabilir. Yeni başlayanlar hoş geldiniz!
+    öğrenecek ve yeni bilgileri robot bilimine uygulayacaktır.  Hem Kodable hem de
+    Wonder Workshop ile çalışan öğrenciler, Path uygulamasında robota "Dash" komutu
+    vermek için programlama bilgilerini kullanacaklar.
+  tutorial_box_longdescription: Box Island'da bir geziye çıkın ve Hiro'nun vahşi doğaya
+    dağılmış tüm saatleri toplamasına yardım edin!  Bu eğitimde algoritmaların, dizilerin,
+    döngülerin ve koşullu ifadelerin temellerini öğreneceksiniz!
+  tutorial_hopgame_longdescription: |-
+    Eğlenceye devam edin!  Bir oyun tasarım atölyesini, hackathon'u veya sınıf içi serileri kolaylaştırmak için bu proje tabanlı kılavuzu kullanın.  Yolu Geç, Geometry Jumper, Quiz Creator, Falling Bird, Subway Skaters ve Escape the Room yapın.  Her biri tartışma soruları, farklılaştırma ve bir video eğitimi içerir.
 
-'
-  tutorial_tlcemo_longdescription: Öğrenciler farklı duyguları göstermek için karttan
-    yapılmış bir 2D robot oluşturur ve programlarlar. Duyguları (yüksek seviye komutları)
-    düşük seviye makine talimatlarına çevirmek için kullanılabilecek bir tablo oluştururlar.
-  tutorial_crd_longdescription: Bu "bağlantı gerektirmeyen" etkinlikte bir kart destesi
-    kullanarak algoritmalar ve koşullu ifadeler hakkında bilgi edinin. Öğrenciler
-    bu etkinliği ekip olarak yapar ve takım başına bir deste karta ihtiyaç duyarlar.
-  tutorial_bbcbio_longdescription: K-5 sınıfları için standartlara dayalı ders planı.
-    Çocuğunuzu elinizin altında olan çalışma masalarıyla birlikte bilgisayar laboratuvarına
-    götürün ve büyüme, tür çeşitliliği ve tozlaşma hakkında bilgi edinin.
+     Öğrenciler, oyunlarını özelleştirmek için talimatlarınızı oluşturabilir.  Önceden deneyim gerekmez.
+  tutorial_icontrol_longdescription: |-
+    Hour of Code için uyarlanan bu öğretmen destekli ders, öğrencilere robotik - Sphero aracılığıyla fiziksel programlamayı keşfetme fırsatı sunar.
+
+     Sürükle ve bırak programlama ortamı ve programlanabilir bir robotik küre kullanarak, öğrenciler fiziksel sistemlerin programlanabileceğini ve kontrol edilebileceğini öğrenecekler.
+  tutorial_cocomteach_longdescription: 'CodeCombat''ın ücretsiz, bir saatlik Bilgisayar
+    Bilimine Giriş kursunda öğrencilerinizi Python veya JavaScript ile tanıştırın.  Mücevherlerle
+    dolu zindan labirentleri ve kahramana karşı ogre kullanarak temel sözdizimi, diziler,
+    bağımsız değişkenler, döngüler, değişkenler ve x ve y koordinatları dahil olmak
+    üzere kavramları öğrencilerinize açıklamanıza yardımcı olacak özel bir ders planımız
+    var.  '
+  tutorial_bbcmathii_longdescription: K-2 sınıfları için standartlara dayalı ders
+    planı.  Çocuklarınızı ellerinde çalışma sayfaları ile bilgisayar laboratuvarına
+    götürün ve aritmetik, sayıların görselleştirilmesi ve geometrik şekiller içeren
+    uygulamalar oluşturun.
+  tutorial_bbcphys_longdescription: K-5 sınıfları için standartlara dayalı ders planı.  Çocuklarınızı
+    ellerinde çalışma sayfaları ile bilgisayar laboratuvarına götürün ve fizik içeren
+    uygulamalar oluşturun.
+  tutorial_bitsbox_longdescription: Gerçek, yazılı Javascript kullanarak beş eğlenceli
+    mini uygulamayı kodlamak için yönergeleri izleyin.  "Yiyecek Dövüşü"nde pastayı
+    patlatmaktan "Elveda, Ödev!"de bir defteri kara deliğe gömmeye kadar her uygulama,
+    değişkenleri, yöntemleri ve daha fazlasını gösterirken çocukları memnun etmek
+    için tasarlandı.  Bu uygulamalar aynı zamanda tamamen açık uçludur;  çocuklar
+    bunları kendi uygulama oluşturmaları için bir başlangıç ​​noktası olarak kullanabilir.  Yeni
+    başlayanlar hoş geldiniz!
+  tutorial_tlcemo_longdescription: Öğrenciler, farklı duyguları göstermek için karttan
+    yapılmış bir 2D robot yaratır ve programlar.  Duyguları (yüksek seviyeli komutlar)
+    düşük seviyeli makine talimatlarına çevirmek için kullanılabilecek bir tablo oluştururlar.
+  tutorial_crd_longdescription: Bir deste kart kullanarak bu "bağlantısız" aktivitede
+    algoritmalar ve koşullu ifadeler hakkında bilgi edinin.  Öğrenciler bu aktiviteyi
+    takımlar halinde yaparlar ve takım başına bir deste karta ihtiyaç duyarlar.
+  tutorial_bbcbio_longdescription: K-5 sınıfları için standartlara dayalı ders planı.  Çocuklarınızı
+    ellerinde çalışma kağıtları ile bilgisayar laboratuvarına götürün ve büyüme, tür
+    çeşitliliği ve tozlaşma hakkında bilgi edinin.
   tutorial_ticklebb8_longdescription: "Neleri başarabilirsin\nTüm Starwars taraftarlarının
     en iyi şirketi olan BB-8 şimdi en iyi kodlama eğitim arkadaşınız olabilir! Tickle
     uygulamasının gücü ile, BB-8 ile iyi bir dönüş sağlamak,  belirli yol güzergahlarında
@@ -3727,22 +3723,21 @@ tr:
     değişkenler nasıl oluşturulacağını öğrenin.\n- \"Olay odaklı programlamanın\"
     programlama konseptini anlayın.\n- Hareket olaylarını (eğ ve salla) BB-8 pilotuna
     algılamak için hareket sensörleri kullanın."
-  tutorial_grok_longdescription: 'Dünyanın dört bir yanından bayraklar çizmek, fantastik
-    kar taneleri oluşturmak veya "Eliza" adlı bir chatbot oluşturmak için sürükleyip
-    bırakılan blokları veya metin tabanlı bir dil olan Python kullanın. '
-  tutorial_ijournalist_longdescription: |+
-    Bu öğretmen tarafından kolaştırılan ders, bilgisayar bilimi ve dil sanatlarını öğretir. Öğrenciler, okuyucunun ilgisini çekmek için ve çevrimiçi bir haber hikayesi yaratman için bilgi sunmayı düşünen bir gazetecilik tarzı geliştirmeye başlarlar. Öğrenciler kurgusal bir okul soygunuyla ilgili bir çevrimiçi haber hikayesi hazırlamak ve sunmak için temel HTML ve CSS'yi kullanırlar.
+  tutorial_grok_longdescription: Dünyanın dört bir yanından bayraklar çizmek, harika
+    kar taneleri oluşturmak veya "Eliza" adlı bir sohbet robotu oluşturmak için sürükle
+    ve bırak bloklarını veya metin tabanlı Python dilini kullanın.
+  tutorial_ijournalist_longdescription: |-
+    Bu öğretmen destekli ders, Bilgisayar Bilimi ve Dil Sanatlarını öğretir.  Öğrenciler, okuyucunun ilgisini ve çevrimiçi bir haber için bilgi sunumunu dikkate alan bir gazetecilik tarzı geliştirmeye başlar.  Öğrenciler, kurgusal bir okul soygunu hakkında çevrimiçi bir haber öyküsü oluşturmak ve sunmak için temel HTML ve CSS'yi kullanır.
 
-    Bu, bilgisayar bilimini, çocukların diğer alanlardaki bilgisayar bilgisinin değerini anlamasını sağlayan anlamlı bir bağlam içinde ayarlar.
-
-  tutorial_bbcmusic_longdescription: K-5 sınıfları için standartlara dayalı ders planı.
-    Çocuğunuzu eldeki çalışma yapraklarıyla bilgisayar laboratuvarına götürün ve müzik
-    içeren uygulamaları oluşturun.
+     Bilgisayar bilimini anlamlı bir bağlam içine oturtarak çocukların diğer konu alanlarında bilgisayar biliminin değerini anlamalarını sağlar.
+  tutorial_bbcmusic_longdescription: K-5 sınıfları için standartlara dayalı ders planı.  Çocuklarınızı
+    ellerinde çalışma sayfaları ile bilgisayar laboratuvarına götürün ve müzik içeren
+    uygulamalar oluşturun.
   tutorial_secretcodes_longdescription: Dünyayı kurtarmaya yardımcı olmak için bilgisayarların
     oynadığı rol hakkında bilgi edinin.
-  tutorial_tlchex_longdescription: Çok renkli bir kağıt şeridini özel bir şekilde
-    katlayıp yapıştırarak kırmızı ve sarı bir altıgen oluşturun. Bir kere yaptıktan
-    sonra onu keşfetmeye başlıyorsun. Katlayın ve açtığınızda, efekt renkleri değiştikçe
+  tutorial_tlchex_longdescription: Çok renkli bir kağıt şeridi özel bir şekilde katlayıp
+    yapıştırarak kırmızı ve sarı bir hexahexa exagon yapıyorsunuz.  Bir kez yaptıktan
+    sonra onu keşfetmeye başlarsınız.  Katlayıp açtıkça, dışgen renk değiştirirken
     sihirli bir şekilde yeni tarafları ortaya çıkarırsınız.
   tutorial_tickles_longdescription: |-
     Neleri başarabilirsin
@@ -3762,73 +3757,73 @@ tr:
     - Daha az kod bloğu ile aynı kalıpta hareket etmek için tekrar halkaları kullanın.
     - Bir üçgen modelinde düzgün hareket edebilmek için hareketi birleştiren ve blokları döndürerek bir Sphero programlayın. - "Olay odaklı programlamanın" programlama konseptini anlayın
   tutorial_ozogame_longdescription: |-
-    Öğretmen liderliğindeki bu öğretici, küçük bir programlanabilir robot olan Ozobot'un yardımıyla kodlama konseptini öğrencilere tanıtmaktadır. Öğrenciler Shape Tracer Games adlı Ozobot oyunlarını oynayarak kodlamayı öğrenecekler. Bir Ozobot Bit veya Evo robotuna sahip olmamasına rağmen halen oyunların simüle edilmiş halini oynayabilirler. Ozobot oyunları, öğrencilere Blockly tabanlı bir görsel programlama dili olan OzoBlockly ile nasıl kodlanacağını öğretir.
+    Öğretmen liderliğindeki bu eğitim, öğrencilere küçük bir programlanabilir robot olan Ozobot'un yardımıyla kodlama kavramını tanıtır.  Öğrenciler, Shape Tracer Games adlı Ozobot oyunlarını oynayarak kodlamayı öğrenecekler.  Ozobot Bit veya Evo robotları olmasa bile oyunların simüle edilmiş versiyonunu oynamaya devam edebilirler. Ozobot oyunları, öğrencilere Blockly tabanlı görsel bir programlama dili olan OzoBlockly ile nasıl kod yazılacağını öğretecek.
 
-    Öğrenciler Şekil İzleyici Oyunlarının tüm on seviyesini çözdükten sonra, öğrendikleri her şeyi almaya, kendi oyun seviyelerini tasarlamaya ve programlamaya zorlanmaktadırlar 11.
+     Öğrenciler, Shape Tracer Games'in on seviyesinin tamamını çözdükten sonra, öğrendikleri her şeyi alıp kendi oyun seviye 11'ini tasarlamaya ve programlamaya davet edilir.
 
-    Bu öğretici için hiçbir programlama tecrübesi veya Ozobot bilgisi gerekmemektedir. Bununla birlikte, programlama deneyimine sahip öğrenciler bile Ozobot oyunlarıyla meşgul olacaklar. Öğretici, 2-12. Sınıflar için tasarlanmıştır ve öğrencilerin yeteneklerine göre uyarlanabilir.
-  tutorial_vidcodeio_longdescription: Bu alıştırmada, programlamayla bir matematik
-    denklemi çözerek öğrencilerinizle matematik hakkında zaten bildiklerini nasıl
-    ilişkilendirdiklerini göreceksiniz.
-  tutorial_tlcbrain_longdescription: Bu aktivite, hesaplama modellemenin (hesaplamalı
-    düşüncenin önemli bir parçası) biyolojik sistemleri (buradaki nöronları) anlamaya
-    yardımcı olmak için nasıl kullanıldığını araştırıyor. Beynimizin çalışma şekli
-    de bilgisayar programlamadır ve böylece onlara akıllı yetenek kazandırmanın yeni
-    bir yolunun ilham kaynağı olduğunu görüyoruz.
-  tutorial_hopquiz_longdescription: 'Bu ders planı, herhangi bir konuda (Bilim, Dil
-    Edebiyatları, Dünya Dilleri veya Tarih) adapte olabileceğiniz ve kullanabileceğiniz
-    bir şablondur. Öğrencilerinizin çoktan seçmeli testleri kodlamasına yardımcı olmak
-    için kullanabileceğiniz adım adım talimatlar ve açıklamalar içerir. İşlem sırasında,
-    sıra, döngüler, değişkenler ve koşullar gibi çekirdek kodlama kavramlarını uygulayacak
-    ve keşfedeceklerdir. '
-  tutorial_unfortunate_longdescription: Hepimiz, çevremizdeki olaylara tepki veriyoruz;
-    okul ekibi kazandığında tezahürat yapıyoruz, üzücü bir filmde ağlıyoruz veya müzik
-    duyduğumuzda dans ediyoruz. Bu derste öğrenciler, Dash ve Dot'un çevrelerindeki
-    olaylara yanıt vermelerini öğretmeyi öğreneceklerdir!
-  tutorial_cha_longdescription: Bilgisayarların tarihi büyüleyici. Daha fazla öğrenme
-    için şansınız budur.
-  tutorial_elaseq_longdescription: Öğrenciler, okuma ve yazma bağlamında dizim kavramını
-    inceleyeceklerdir. Sınıf düzeyi hizalı ELA dersleri vasıtasıyla öğrenciler, programlamadaki
-    rol dizisi rolünü anlamaları için dizilim bilgilerini uygulayacaklardır.
-  tutorial_bbcmathi_longdescription: 3-5 Sınıflar için standartlara dayalı ders planı.
-    Çocuğunuzu eldeki çalışma yapraklarıyla birlikte bilgisayar laboratuvarına götürün
-    ve kesirler, değişkenler ve formülleri içeren uygulamaları oluşturun.
-  tutorial_tlcpixel_longdescription: Piksel bulmacaları, görüntülerin pikselleri bulmaca
-    haline getiren bir dizi sayı olarak temsil edilmesini sağlar. Renklerin sayısının
-    basit bir varyasyonundan, resimlerin daha az sayıyla gösterildiği sıkıştırmaya
-    dayalı daha karmaşık bulmaca, yani daha az depolama alanına kadar çeşitli şekillerde
-    gelirler - ancak onları geri aldırabilirsiniz! Her gösterim, görüntüyü geri getirmek
-    için takip etmesi gereken kendi algoritmasına ihtiyaç duyar.
-  tutorial_introrobo_longdescription: 'Bu derste öğrenciler Robotik ve Programlama
-    fikirleri tanıtılırken Dash ve Dot''u tanırlar. Öğrenciler, bir robotun ne olduğunu,
-    çevrelerindeki dünyayı nasıl hissettiklerini ve programların robotları nasıl kontrol
-    edebileceklerini anlamayı öğrenirler. '
+     Bu eğitim için programlama deneyimi veya Ozobot bilgisi gerekmez.  Ancak, biraz programlama deneyimi olan öğrenciler bile Ozobot oyunlarıyla meşgul olacak.  Öğretici, 2-12. sınıflar için tasarlanmıştır ve öğrencilerinizin becerilerine göre özelleştirilebilir.
+  tutorial_vidcodeio_longdescription: Bu alıştırmada, bir matematik denklemini programlama
+    ile çözerek, öğrencilerinizle bunun matematik hakkında halihazırda bildikleriyle
+    nasıl bir ilişkisi olduğunu gözden geçireceksiniz.
+  tutorial_tlcbrain_longdescription: Bu aktivite, hesaplamalı modellemenin (hesaplamalı
+    düşünmenin önemli bir parçası) biyolojik sistemleri - burada nöronları - anlamaya
+    yardımcı olmak için nasıl kullanılabileceğini araştırıyor.  Beynimizin çalışma
+    şeklinin, bilgisayarları programlamanın ve böylece onlara akıllı yetenekler vermenin
+    yeni bir yolu için nasıl ilham kaynağı olduğunu görüyoruz.
+  tutorial_hopquiz_longdescription: Bu ders planı, herhangi bir konuda (Bilim, Dil
+    Sanatları, Dünya Dilleri veya Tarih) uyarlayıp kullanabileceğiniz bir şablondur.  Öğrencilerinizin
+    çoktan seçmeli sınavları kodlamasına yardımcı olmak için kullanabileceğiniz adım
+    adım talimatlar ve açıklamalar içerir.  Süreç boyunca, dizi, döngüler, değişkenler
+    ve koşullu ifadeler gibi temel kodlama kavramlarını uygulayacak ve keşfedecekler.
+  tutorial_unfortunate_longdescription: Okul takımı kazandığında tezahürat yapmak,
+    hüzünlü bir filmde ağlamak veya müzik duyduğumuzda dans etmek gibi, çevremizde
+    olup biten olaylara hepimiz tepki veririz.  Bu derste öğrenciler, Dash ve Dot'a
+    etraflarında olup biten olaylara yanıt vermeyi nasıl öğreteceklerini öğrenecekler!
+  tutorial_cha_longdescription: Bilgisayarların tarihi büyüleyici.  Bu, daha fazla
+    bilgi edinme şansınız.
+  tutorial_elaseq_longdescription: Öğrenciler sıra kavramını okuma ve yazma bağlamında
+    inceleyeceklerdir.  Öğrenciler, sınıf düzeyine uygun ELA dersleri aracılığıyla,
+    programlamada sıranın oynadığı rolü anlamalarını ilerletmek için dizi bilgilerini
+    uygulayacaklardır.
+  tutorial_bbcmathi_longdescription: 3-5. sınıflar için standartlara dayalı ders planı.  Çocuklarınızı
+    ellerinde çalışma sayfaları ile bilgisayar laboratuvarına götürün ve kesirler,
+    değişkenler ve formüller içeren uygulamalar oluşturun.
+  tutorial_tlcpixel_longdescription: Piksel bulmacaları, görüntülerin pikselleri temsil
+    eden bir dizi sayı olarak temsil edilme biçimlerini bulmacalara dönüştürür.  Sayılara
+    göre renklerin basit bir varyantından görüntülerin daha az sayı ile temsil edildiği,
+    dolayısıyla daha az depolama alanı kapladığı sıkıştırmaya dayalı daha karmaşık
+    bulmacalara kadar çeşitli biçimlerde gelirler - ancak onları geri alabilir misiniz?  Her
+    temsil, görüntüyü geri almak için kendi algoritmasına ihtiyaç duyar.
+  tutorial_introrobo_longdescription: Bu derste öğrenciler Robotik ve Programlama
+    fikirleriyle tanıştırılırken Dash ve Dot'u tanıyacaklar.  Öğrenciler robotun ne
+    olduğunu, çevrelerindeki dünyayı nasıl algıladıklarını ve programların robotları
+    nasıl kontrol edebildiğini anlayacaklardır.
   tutorial_tlcinvis_longdescription: Bu, bir algoritmanın ve bir bilgisayar programının
-    ne olduğunu anlatır. Aynı zamanda, insan bilgisayarının etkileşimini ve geri dönütün
-    önemini keşfetmek ve doğru zihinsel modeli oluşturmak için kullanılabilir.
-  tutorial_tlcjflap_longdescription: Sonlu durum makinaları (SDM) bilişimsel düşünmenin
-    en önemli araçlarındandır. SDM'ler çesitli simülasyonlar oluşturmamiza olanak
-    vererek bilgisayar sistemlerinin nasıl çalıştığını anlamamızı sağlar. JFLAP, sonlu
-    durum makinası üretmek için kullanabileceğiniz, kullanımı oldukça kolay ve erişimi
-    ücretsiz olan bir araçtır. Bu etkinlikte öncelikle basit bir SDM yaratıp bu SDM'yi
-    simüle edeceğiz. Ardından puzzle, gadget, web sayfası ve oyun gibi daha karmaşık
-    yapıların SDM'lerini oluşturup daha karmaşık simülasyonlar yapacağız.
+    ne olduğunu tanıtır.  Ayrıca, insan bilgisayar etkileşimini ve geri bildirimin
+    önemini ve doğru bir zihinsel model oluşturmayı keşfetmek için de kullanılabilir.
+  tutorial_tlcjflap_longdescription: Sonlu durum makinesi, hesaplamalı düşünme araç
+    kutusunda çok kullanışlı bir araçtır.  Bilgisayar sistemlerinin ne yaptığını açıklamanın
+    ve gerçek dünyadaki şeyleri simüle etmenin önemli bir yoludur.  JFLAP, sonlu durum
+    makineleri oluşturmak için kullanımı kolay ve ücretsiz bir araçtır.  Bu aktivite,
+    basit bir sonlu durum makinesi oluşturmayı ve onu simüle etmeyi, ardından bulmacaları,
+    gadget'ları, web sayfalarını ve oyunları temsil eden daha karmaşık sonlu durum
+    makineleri yaratmayı içerir.
   tutorial_procolor_longdescription: |-
-    Öğretmen liderliğindeki bu öğretici, öğrencilerinizi programlama ve hesaplama düşüncesine tanıtmakta ve ayrıca Ozobot'un ne tür bir robot olduğunu açıklamaktadır. Bu etkinlik "bağlantısızdır", yani kodlamanın bir bilgisayar veya tablet üzerinde yapılmadığı, işaretli bir kağıt parçası üzerinde yapıldığı anlamına gelir. Öğrenciler özel renk dizileri olan OzoCodes kullanarak Ozobot'a emir verecekler. Ozobot'u belirteçler ve kağıtlarla nasıl programlayacağınızı öğrendikten sonra, öğrenciler bir labirenti çözmeye ve Ozobot'un okula giden yolu bulmasına yardım etmeye meyillidir.
+    Öğretmen liderliğindeki bu eğitim, öğrencilerinizi programlama ve hesaplamalı düşünme ile tanıştırır ve ayrıca Ozobot'un ne tür bir robot olduğunu açıklar.  Bu aktivite "fişten çıkarılmıştır", yani kodlama bir bilgisayarda veya tablette değil, işaretli bir kağıt parçasında yapılır.  Öğrenciler, özel renk dizileri olan OzoCode'ları kullanarak Ozobot'a komutlar verecekler.  Ozobot'u keçeli kalemler ve kağıtla nasıl programlayacaklarını öğrendikten sonra öğrencilerden bir labirenti çözmeleri ve Ozobot'un okula giden yolu bulmasına yardım etmeleri isteniyor.
 
-    Bu öğretici için hiçbir programlama tecrübesi veya Ozobot bilgisi gerekmemektedir. Bununla birlikte, programlama deneyimine sahip öğrenciler bile Ozobot'un programlanmasıyla meşgul olacaklar. Öğretici, K-12 sınıfları için tasarlanmıştır ve öğrencilerin yeteneklerine göre özelleştirilebilir.
-  tutorial_spiralsfinch_longdescription: 'Finch, bilgisayar bilgisini öğrenen öğrencilere
-    kodlarının somut ve fiziksel bir gösterimini sunarak ilham vermek ve onları eğlendirmek
-    için tasarlanmış küçük bir robottur. Bu etkinlikte Finch''i hareket ettiren ve
-    döndüren programlar yazmayı öğreneceksiniz. O zaman robotu spiral bir desende
-    hareket ettirecek şekilde programlamak için bir değişken kullanacaksınız. Bu etkinlik
-    için, dizüstü bilgisayarları veya Chromebook''ları kullanarak, Finch''i Scratch
-    veya Snap! ile programlayabilirsiniz. Daha önce programlama deneyimine ihtiyaç
-    duyulmamaktadır. '
+     Bu eğitim için programlama deneyimi veya Ozobot bilgisi gerekmez.  Bununla birlikte, biraz programlama deneyimi olan öğrenciler bile Ozobot'u programlayarak meşgul olacaklardır.  Öğretici, K-12 sınıfları için tasarlanmıştır ve öğrencilerinizin becerilerine göre özelleştirilebilir.
+  tutorial_spiralsfinch_longdescription: Finch, kodlarının somut ve fiziksel bir temsilini
+    sağlayarak bilgisayar bilimi öğrenen öğrencilere ilham vermek ve onları memnun
+    etmek için tasarlanmış küçük bir robottur.  Bu etkinlikte Finch'i hareket ettiren
+    ve döndüren programlar yazmayı öğreneceksiniz.  Ardından, robotu spiral bir düzende
+    hareket etmesi için programlamak için bir değişken kullanacaksınız.  Bu aktivite
+    için Finch'i Scratch veya Snap! ile programlayabilirsiniz.  dizüstü bilgisayarları
+    veya Chromebook'ları kullanarak.  Önceden herhangi bir programlama deneyimine
+    ihtiyacınız yoktur.
   tutorial_ozoi_longdescription: |-
-    Bu ders, öğrencilere programlama ve hesaplama düşüncesini tanıtmakta ve Ozobot'un ne tür bir robot olduğunu açıklamaktadır. Bu etkinlik "bağlantısız", yani kodlamanın bir bilgisayar veya tablet üzerinde yapılmadığı, işaretli bir kağıt parçası üzerinde yapıldığı anlamına gelir. Öğrenciler, robotun nasıl çalıştığını öğrenecek ve özel renk dizileri olan OzoCodes'u kullanarak Ozobot'a komutlar vereceklerdir. Ozobot'u işaretleyiciler ve kağıtlarla nasıl programlayacağınızı öğrendikten sonra, öğrenciler bir labirenti çözmeye ve Ozobot'un mağazanın yolunu bulmasına yardımcı olmakla yükümlüdürler.
+    Bu eğitim, öğrencilere programlama ve hesaplamalı düşünmeyi tanıtır ve ayrıca Ozobot'un ne tür bir robot olduğunu açıklar.  Bu aktivite "fişten çıkarılmıştır", yani kodlama bir bilgisayarda veya tablette değil, işaretli bir kağıt parçasında yapılır.  Öğrenciler robotun nasıl çalıştığını öğrenecek ve ardından özel renk dizileri olan OzoCode'ları kullanarak Ozobot'a komutlar verecekler.  Ozobot'un keçeli kalemler ve kağıtla nasıl programlanacağını öğrendikten sonra öğrencilerden bir labirenti çözmeleri ve Ozobot'un mağazaya giden yolu bulmasına yardım etmeleri isteniyor.
 
-    Bu öğretici için hiçbir programlama tecrübesi veya Ozobot bilgisi gerekmemektedir. Bununla birlikte, programlama deneyimine sahip öğrenciler bile Ozobot'un programlanmasıyla meşgul olacaklar. Öğretici, K-12 sınıfları için tasarlanmıştır ve öğrencilerin yeteneklerine göre özelleştirilebilir.
+     Bu eğitim için programlama deneyimi veya Ozobot bilgisi gerekmez.  Bununla birlikte, biraz programlama deneyimi olan öğrenciler bile Ozobot'u programlayarak meşgul olacaklardır.  Öğretici, K-12 sınıfları için tasarlanmıştır ve öğrencilerinizin becerilerine göre özelleştirilebilir.
   tutorial_ticklel_longdescription: |-
     Neleri başarabilirsin
     LEGO WeDo 2.0 herkesin tanıdık tuğla oyun setidir, ancak dahice olarak programlama olanaklarıyla birleştirilmiştir. Bazı komutlar oluşturmak için Tickle uygulamasını kullanarak, LEGO WeDo 2.0 daha sonra birtakım akıllı hamleler gerçekleştirebilir. Aynı zamanda, egzersizleri temizlemeye çalışırken programlama konseptlerini de öğrenebilirsiniz. (Gerekli cihazlar: LEGO WeDo 2.0)
@@ -3842,96 +3837,94 @@ tr:
     - Temel hareket komutlarını kullanarak eylemler gerçekleştirmek için LEGO WeDo 2.0 programını yapın.
     - "Olaya dayalı programlama" programlama konseptini öğrenin ve anlayın. - Değişkenlerin ve koşulların kullanımı hakkında bilgi sahibi olun (if-then-else).
   tutorial_spiralsdash_longdescription: Sanat yaratmak için bir robot kullanırken
-    bir programda değişken kullanmanın temellerini öğrenin! Bir Dash robotunun tekerlek
-    hızlarını dinamik olarak kontrol etmek için Bloklu değişkenleri kullanın. Dersi
-    tamamladıktan sonra, bir değişkeni nasıl atayacağınızı, bir değişkene nasıl erişeceğinizi
-    ve bir döngüyü kullanarak bir değişkeni dinamik olarak nasıl değiştireceğinizi
-    anlayacaksınız. Bir değişkenin değerini zamanla değiştirerek, Dash'ın muhteşem
-    bir spiral oluşturmasını sağlayabilirsiniz!
+    bir programda değişken kullanmanın temellerini öğrenin!  Bir Dash robotunun tekerlek
+    hızlarını dinamik olarak kontrol etmek için Blockly'deki değişkenleri kullanın.  Dersi
+    tamamladıktan sonra, bir değişken atamayı, bir değişkene erişmeyi ve bir döngü
+    kullanarak bir değişkeni dinamik olarak değiştirmeyi öğreneceksiniz.  Bir değişkenin
+    değerini zaman içinde değiştirerek Dash'in muhteşem bir spiral çizmesini sağlayabilirsiniz!
   tutorial_ghdebug_longdescription: Öğrencilerinize Grace Hopper'ı ve bu haftanın
     neden bilgisayar bilimleri eğitim haftasi olduğunu anlatın.
-  tutorial_tlckk_longdescription: Kriss-kross bulmaca kelime tutkusunu mantık sevgisiyle
-    birleştirir. Farklı uzunluklara sahip bir sözcük listesi verildiğinde hepsini
-    ızgaraya sığdırmanız gerekir.
-  tutorial_firstcomp_longdescription: Bilgisayarlar kadar heyecan verici olan pek
-    az şey vardır. Artık kendi bilgisayarını tasarlama vakti geldi, fakat şimdilik
-    kağıttan. işe CPU, RAM ve ROM, Mass Storage ve GPU kavramları ile tanışarak başlayalım.
-    Kağıt, kalem ve makaslar hazır mı?
-  tutorial_mazefinch_longdescription: 'Bu etkinlikte, Finch robotunu hareket ettirmek
-    ve çevirmek için çok basit bir programlama dili kullanacaksınız. Daha sonra robotun
-    bir labirent tamamlamasına yardımcı olmak için programlar yazacaksınız! Daha önce
-    herhangi bir programlama tecrübesine ihtiyacınız yoktur ve bir dizüstü bilgisayar
-    veya Chromebook kullanabilirsiniz. '
-  tutorial_tlccc_longdescription: Bilgisayardaki veriler, uzun karakter dizileri olarak
-    saklanır- en sonunda, ikili şekilde 1'ler ve 0'lar olarak. Sıkıştırma fikri, bilginin
-    gösterilme şeklini değiştirmek için bir algoritma kullanmamız ve böylece tam olarak
-    aynı bilgiyi depolamak için daha az karakter gerektiğidir.
+  tutorial_tlckk_longdescription: Kriss-kross bulmacaları, kelime sevgisini mantık
+    sevgisiyle birleştirir.  Farklı uzunluklarda kelimelerin bir listesi verildiğinde,
+    hepsini ızgaraya sığdırmanız gerekir.
+  tutorial_firstcomp_longdescription: Çok az şey bilgisayarlar kadar heyecan vericidir.  Ve
+    şimdi kendi tasarımınızı yapacaksınız - bu sefer kağıt kalmadı.  CPU, RAM ve ROM,
+    Yığın Depolama ve GPU'yu tanıyın.  İlk uygulamanızı çizin.  Makasınızı, kalemlerinizi
+    ve kağıtlarınızı çıkarın!
+  tutorial_mazefinch_longdescription: Bu aktivitede Finch robotunun hareket etmesini
+    ve dönmesini sağlamak için çok basit bir programlama dili kullanacaksınız.  Ardından,
+    robotun bir labirenti tamamlamasına yardımcı olacak programlar yazacaksınız!  Önceden
+    herhangi bir programlama deneyimine ihtiyacınız yoktur ve bir dizüstü bilgisayar
+    veya Chromebook kullanabilirsiniz.
+  tutorial_tlccc_longdescription: Bilgisayarlardaki veriler, uzun karakter dizileri
+    olarak depolanır - sonuçta ikili 1'ler ve 0'lar.  Sıkıştırma ile ilgili fikir,
+    bilginin temsil edilme şeklini değiştirmek için bir algoritma kullanmamızdır,
+    böylece tam olarak aynı bilgiyi depolamak için daha az karaktere ihtiyaç duyulur.
   tutorial_tlcdoodle_longdescription: 'Filmlerdeki sahne genellikle bilgisayar tarafından
-    üretilir. Nasıl yaptıklarını merak ettiniz mi? Bir daha ki sefere kendinizi, karalama
-    çizim yaparken, algoritmik bir karalama çizim yaparken ve doğayı çizmek için algoritmaları
-    keşfederken bulacaksınız. Algoritmalar tekrarlanabilir: öyle ki bir adım tanımladıktan
-    sonra, sana, algoritmayı baştan izleyerek sadece bir sonraki adımın aynı şekilde
-    çizilmesini söylerler.'
-  tutorial_tlcpunch_longdescription: Bilgisayarların, delikli kartlarda depolanan
-    verileri nasıl bulabildiklerini gösterin ve bunun 'Avustralya Sihirbazının Rüyası'
-    etkinliğindeki sihir hüneriyle aynı algoritma olduğunu gösterin. Bu aktivite,
-    bir arama algoritmasının nasıl çalıştığını görsel bir şekilde göstermeyi amaçlamaktadır.
-    Bunu yaparken, ikili sayıların pratik bir şekilde kullanılmasını, arama için bir
-    bölme ve başarma algoritmasını sergilediğinizi ve sorunlu alanlar arasında çözümlerin
-    çevrilmesinde hesaplamalı düşünme hilesini keşfedeceksiniz.
-  tutorial_finchfract_longdescription: Bu etkinlik Finch robotuyla Koch fraktallarını
-    çizmek için yinelemeyi kullanır. Öğrencilerin yineleme fikrini kullandıklarını
-    varsayar, ancak bu aktiviteyi tamamlamak, yinelemenin fiziksel bir gösterimi yoluyla
-    bu kavram hakkında daha derin bir anlayış geliştirmelerine yardımcı olacaktır
-    Bu etkinlik, Python veya Java kullanan tanıtım veya ileri bilgisayar bilimleri
-    derslerini alan öğrenciler için uygundur.
-  tutorial_tlcmind_longdescription: Bu, bir algoritmanın daima çalıştığını kanıtlamak
-    için cebir kullanımı yoluyla mantıksal akıl yürütmeyi kullanmayı anlatır. Soyutlama
-    ve mantıksal akıl yürütmenin algoritmaları değerlendirmek için nasıl kullanılabileceğini
+    oluşturulur.  Bunu nasıl yaptıklarını hiç merak ettiniz mi?  Bir dahaki sefere
+    kendinizi karalamalar çizerken bulursanız, algoritmik bir karalama çizin ve doğayı
+    çizmek için algoritmaları keşfedin.  Algoritmalar özyinelemelidir: yani bir adımı
+    tanımlarlar ve ardından size bir sonraki adımı aynı şekilde, algoritmayı en baştan
+    takip ederek çizmenizi söylerler.'
+  tutorial_tlcpunch_longdescription: Bilgisayarların delikli kartlarda saklanan verileri
+    nasıl erken bulabildiklerini gösterin ve bunun 'Avustralyalı Sihirbazın Rüyası'
+    Etkinliğindeki sihir numarasıyla aynı algoritma olduğunu gösterin.  Bir arama
+    algoritmasının nasıl çalıştığını görsel olarak göstermeyi amaçlar.  Bunu yaparken,
+    ikili sayıların pratik kullanımını, sorunlu alanlar arasında çözümleri çevirmenin
+    hesaplamalı düşünme hilesini aramak ve keşfetmek için bir böl ve fethet algoritmasını
+    gösterirsiniz.
+  tutorial_finchfract_longdescription: Bu etkinlik, Finch robotuyla Koch fraktalları
+    çizmek için özyinelemeyi kullanır.  Öğrencilerin özyineleme fikriyle tanıştırıldığını
+    varsayar, ancak bu aktiviteyi tamamlamak, özyinelemenin fiziksel temsili aracılığıyla
+    bu kavramı daha derinden anlamalarına yardımcı olacaktır.  Bu aktivite, Python
+    veya Java kullanan giriş seviyesi veya ileri düzey bilgisayar bilimi dersleri
+    alan öğrenciler için uygundur.
+  tutorial_tlcmind_longdescription: Bu, bir algoritmanın her zaman çalıştığını kanıtlamak
+    için cebir kullanımı yoluyla mantıksal akıl yürütmenin kullanımını tanıtır.  Algoritmaları
+    değerlendirmek için soyutlama ve mantıksal akıl yürütmenin nasıl kullanılabileceğini
     gösterir.
-  tutorial_tlctelebot_longdescription: Bu püf noktası, görünüşte basit şeylerin beynimizin
-    algılaması için çok karmaşık olabileceğini göstermektedir. Önemli bir tasarım
-    ilkesi, arayüzler anlaşılır ve basit olmalı, karışık olmamalıdır. Aynı zamanda
-    hesaplama düşüncesinin, problemi basitleştirme ve insanları anlamanın önemini
-    gibi yönlerini de gösterir.
-  tutorial_tlcaus_longdescription: Bu etkinlik unutulmaz bir şekilde bir dizi hesaplama
-    konsepti sunar. Sihirli bir numarayı tanıtır ve algoritma çalışmalarını kontrol
-    etmek için soyutlama, mantıksal akıl yürütme ve hesaplama modellemenin nasıl kullanılacağını
-    gösterir. 'Delikli Kart Arama' etkinliği ile birlikte, önceki bilgisayarlar tarafından
-    kullanılan bir bölme ve başarma algoritmasını tanıtır.
+  tutorial_tlctelebot_longdescription: Bu hile, görünüşte basit olan şeylerin beynimiz
+    için ne kadar karmaşık olabileceğini gösteriyor. Önemli bir tasarım ilkesi, arayüzlerin
+    karmaşık değil, açık ve basit olması gerektiğidir.  Ayrıca, sorunu basitleştirme
+    ve insanları anlamanın önemi gibi hesaplamalı düşünmenin yönlerini de gösterir.
+  tutorial_tlcaus_longdescription: Bu etkinlik, bir dizi bilgi işlem kavramını akılda
+    kalıcı bir şekilde tanıtır.  Sihirli bir numara sunar ve algoritmanın çalıştığını
+    kontrol etmek için soyutlama, mantıksal akıl yürütme ve hesaplamalı modellemenin
+    nasıl kullanılabileceğini gösterir.  'Delikli kart arama' etkinliği ile birleştiğinde,
+    ilk bilgisayarlar tarafından kullanılan bir böl ve fethet algoritması sunar.
   tutorial_tlcmicro_longdescription: Bu video, insan bilgisayar etkileşimine (HCI)
-    genel bir giriş olarak ve özellikle neden bu kadar çok aygıtın ihtiyaç duyulandan
-    daha fazla kullanıldığını anlatmak için kullanılır. Tasarım bir fark yaratır ve
-    ara birimlerin kullanımının kolay olup olmadığını kontrol etmek için değerlendirilmesi
+    genel bir giriş ve özellikle de bu kadar çok aygıtın kullanılmasının olması gerekenden
+    daha zor olmasının nedeni olarak kullanılabilir.  Tasarım bir fark yaratır ve
+    arayüzlerin kullanımlarının kolay olup olmadığını kontrol etmek için değerlendirilmesi
     önemlidir.
-  tutorial_imathematician_longdescription: |
-    Bu, öğretmen liderliğindeki aktivite, öğrencilere bilgisayar bilimleri ve matematiğe yönelik müfredat dışı bir yaklaşım kullanma fırsatı sağlar.
+  tutorial_imathematician_longdescription: |-
+    Öğretmen liderliğindeki bu etkinlik, öğrencilere bilgisayar bilimi ve matematiğe müfredatlar arası bir yaklaşım kullanma fırsatı sağlar.
 
-    Öğrenciler, Tutsak İkilemi adlı, Matematik dalında (Oyun Teorisi) ünlü bir sorunun varyasyonunu çözmek için bir bilgisayar programı oluştururlar.
-  tutorial_tlcmagic_longdescription: Sihrin nasıl çalıştığını keşfederken, hesaplama
-    düşüncesini, özellikle de algoritmik düşüncenin değerlendirilmesinin önemini öğreneceksiniz.
-    Hem test hem de tehlike analizini keşfedersiniz. Bu sihir, bilgisayar bilimcilerinin,
-    mühendislerin (ve sihirbazların) algoritmalarını nasıl titizlikle kontrol ettiklerini
-    gösterir. Onlar, işlerin nasıl doğru gittiği gibi yanlış gidebileceğini de kontrol
-    etmeleri konusunda dikkatle düşünmek zorundalar.
-  tutorial_scratchmus_longdescription: Scratch ile, kendi etkileşimli oyunlarınızı,
-    hikayelerinizi ve animasyonlarınızı yaratabilir ve bunları arkadaşlarınızla paylaşabilirsiniz.
-    Başlamak için etkileşimli bir müzik projesi yapın. Etkinlik kartları ve atölye
-    rehberi ayrıca scratch.mit.edu'da ücretsiz olarak mevcuttur
-  tutorial_scratchanim_longdescription: Scratch ile, kendi etkileşimli oyunlarınızı,
-    hikayelerinizi ve animasyonlarınızı yaratabilir ve bunları arkadaşlarınızla paylaşabilirsiniz.
-    Başlamak için adınızda ki harfleri, harf başlıklarını veya en sevdiğiniz kelimelerin
-    harflerini animasyon yapın. Scratch.mit.edu'da etkinlik kartları ve atölye kılavuzu
-    da ücretsiz olarak mevcuttur.
+     Öğrenciler,The Prisoner's Dilemma     adlı, Matematiğin bir dalındaki (Oyun Teorisi) ünlü bir problemin bir varyasyonunu çözmek için bir bilgisayar programı yaratacaklar.
+  tutorial_tlcmagic_longdescription: 'Sihirin nasıl çalıştığını keşfederken, hesaplamalı
+    düşünme hakkında bilgi edinirsiniz: özellikle algoritmik düşünme için değerlendirmenin
+    önemi.  Hem testi hem de tehlike analizini keşfedersiniz.  Sihir numarası, bilgisayar
+    bilimcilerinin, mühendislerin (ve sihirbazların) algoritmalarını nasıl kapsamlı
+    bir şekilde kontrol etmeleri gerektiğini gösterir.  İşlerin yolunda gidip gitmediğini
+    kontrol etmenin yanı sıra, işlerin nasıl ters gidebileceğini de dikkatlice düşünmeleri
+    gerekir.'
+  tutorial_scratchmus_longdescription: Scratch ile kendi etkileşimli oyunlarınızı,
+    hikayelerinizi, animasyonlarınızı oluşturabilir ve bunları arkadaşlarınızla paylaşabilirsiniz.  Başlamak
+    için etkileşimli bir müzik projesi yapın.  Etkinlik kartları ve bir atölye kılavuzu
+    da scrap.mit.edu'da ücretsiz olarak mevcuttur.
+  tutorial_scratchanim_longdescription: Scratch ile kendi etkileşimli oyunlarınızı,
+    hikayelerinizi, animasyonlarınızı oluşturabilir ve bunları arkadaşlarınızla paylaşabilirsiniz.  Başlamak
+    için adınızın harflerini, baş harflerini veya favori bir kelimeyi canlandırın.  Etkinlik
+    kartları ve atölye kılavuzu da scratch.mit.edu'da ücretsiz olarak mevcuttur.
   tutorial_scratchfly_longdescription: 'Scratch ile, kendi etkileşimli oyunlarınızı,
     hikayelerinizi ve animasyonlarınızı yaratabilir ve bunları arkadaşlarınızla paylaşabilirsiniz.
     Başlamak için kendi uçan karakterinizi nasıl oluşturacağınızı öğrenin. Scratch.mit.edu''da
     etkinlik kartları ve bir atölye kılavuzu da ücretsiz olarak mevcuttur. '
-  tutorial_tynkerarc_longdescription: Kendi aşağı-yukarı atari atış oyunu yapın. Ok
-    tuşlarına basıldığında balıkları yukarı ve aşağı hareket ettirmek için programlayarak
-    başlayın, ardından köpek balıklarını ekran üzerinde yüzmeleri için kodlayın. Oyunu,
-    kahraman, kötü adam ve arka plan için özel öğeler ekleyerek kişiselleştireceksiniz.
-    Oyun sahilde, ormandaki veya hatta uzayda olacak şekilde ayarlanabilir!
+  tutorial_tynkerarc_longdescription: Kendi yukarıdan aşağıya arcade shooter oyununuzu
+    yapın.  Ok tuşlarına basıldığında balıkları yukarı ve aşağı hareket edecek şekilde
+    programlayarak başlayın, ardından köpekbalıklarını ekranda yüzmeleri için kodlayın.  Kahraman,
+    kötü adam ve arka plan için özel varlıklar ekleyerek oyunu kişiselleştireceksiniz.  Oyununuz
+    sahilde, ormanda ve hatta uzayda geçebilir!
   tutorial_grokffpython_longdescription: 'Bu etkinlik, ilk programlama deneyiminizi
     sunmak üzere planlanmıştır ve Kodlama Saati için özel olarak tasarlanmıştır. Python
     programlama dilini kullanın ve bir kaplumbağayı, kod ile fantastik kar taneleri
@@ -3948,65 +3941,70 @@ tr:
     bu nedenle sol topu programlamanız gerekiyor. İki top atışını yaptıktan sonra,
     devrilecek platformlar ve diğer öğeleri ayarlarsınız. Ekstra özellikler ekleyerek
     ve temayı özelleştirerek kendinize özel hale getirebilirsin!
-  tutorial_grokflags_longdescription: Bu etkinlik, ilk programlama deneyiminizi sunmak
-    üzere planlanmıştır ve Kodlama Saati için özel olarak tasarlanmıştır. Dünyanın
-    değişik yerlerinden bayrak çizmesi için Python programlama dilini ve kaplumbağa
+  tutorial_grokflags_longdescription: Bu etkinlik size ilk programlama deneyiminizi
+    yaşatmak için tasarlanmıştır ve Hour of Code için özel olarak tasarlanmıştır.  Dünyanın
+    dört bir yanından bayraklar çizmek için programlama dili Python'u ve onun kaplumbağa
     modülünü kullanın!
   tutorial_robomind_longdescription: 'Öğrenciler kendi sanal robotlarını kontrol ederek
     programlamanın temellerini öğrenirler. Online kurs, program sunumlarıyla yardımcı
     olmak için kısa sunumlar, filmler, sınavlar ve otomatik rehberlik / ipuçları ile
     tamamen kendi içindedir. '
-  tutorial_adventureq_longdescription: 'Q ile serüven, öğretmenlerin (veya herhangi
-    birinin) bir grup ayarında programlama mantığını tanıtmak için kullanacağı bir
-    ders planıdır. Etkinlik, çocukların tamamlanması için farklı görevlerden oluşur.
-    Çocuklar, orman macerasında uzaylı Q''ya yardım ederek temel komutları öğrenirler. '
-  tutorial_khan-es_longdescription: Kodunuzla eğlenceli çizimler oluştururken, JavaScript
-    programlamanın temellerini öğrenin. Kendi başınıza veya sınıfınızla yapın!
-  tutorial_kpt_longdescription: Kodunuzla eğlenceli çizimler oluştururken, JavaScript
-    programlamanın temellerini öğrenin. Kendi başınıza veya sınıfınızla yapın!
-  tutorial_kpl_longdescription: Kodunuzla eğlenceli çizimler oluştururken, JavaScript
-    programlamanın temellerini öğrenin. Kendi başınıza veya sınıfınızla yapın!
-  tutorial_khe_longdescription: Kodunuzla eğlenceli çizimler oluştururken, JavaScript
-    programlamanın temellerini öğrenin. Kendi başınıza veya sınıfınızla yapın!
-  tutorial_kfr_longdescription: Kodunuzla eğlenceli çizimler oluştururken, JavaScript
-    programlamanın temellerini öğrenin. Kendi başınıza veya sınıfınızla yapın!
+  tutorial_adventureq_longdescription: Q ile Macera, öğretmenlerin (veya herhangi
+    birinin) bir grup ortamında programlama mantığını tanıtmak için kullanabileceği
+    bir ders planıdır.  Etkinlik, çocukların tamamlaması için farklı görevlerden oluşur.  Çocuklar,
+    orman macerasında Q'ya yardım ederek temel komutları öğrenirler.
+  tutorial_khan-es_longdescription: Kodunuzla eğlenceli çizimler oluştururken JavaScript
+    programlamanın temellerini öğrenin.  Kendi başınıza veya sınıfınızla birlikte
+    yapın!
+  tutorial_kpt_longdescription: Kodunuzla eğlenceli çizimler oluştururken JavaScript
+    programlamanın temellerini öğrenin.  Kendi başınıza veya sınıfınızla birlikte
+    yapın!
+  tutorial_kpl_longdescription: Kodunuzla eğlenceli çizimler oluştururken JavaScript
+    programlamanın temellerini öğrenin.  Kendi başınıza veya sınıfınızla birlikte
+    yapın!
+  tutorial_khe_longdescription: Kodunuzla eğlenceli çizimler oluştururken JavaScript
+    programlamanın temellerini öğrenin.  Kendi başınıza veya sınıfınızla birlikte
+    yapın!
+  tutorial_kfr_longdescription: Kodunuzla eğlenceli çizimler oluştururken JavaScript
+    programlamanın temellerini öğrenin.  Kendi başınıza veya sınıfınızla birlikte
+    yapın!
   tutorial_app-inventor_longdescription: Eğlenceli, hızlı video eğitimleri, Android
-    telefonunuz veya tabletiniz için üç basit uygulama oluşturmanıza yardımcı olur.
-    Acemi ve uzmanlar için tasarlanan bu saatlik kod, kendi uygulamalarınızı bilmeden
-    önce oluşturmaya hazır olmanızı sağlar. Kendi uygulama kreasyonlarınızı arkadaşlarınızla
-    paylaşmayı hayal edin! Bu faaliyetler bireyler ve sınıflarına liderlik eden öğretmen
-    için uygundur.
-  tutorial_blockly_longdescription: Yavaş (veya var olmayan) internet erişimli bilgisayarınız
-    mı var? Code.org öğreticilerinin öncüsü olan Blockly öğreticilerini indirin -
-    tek bir 3MB ZIP dosyası herhangi bir bilgisayara yüklenebilir veya taşınabilir
-    bellekle kullanılabilir
+    telefonunuz veya tabletiniz için üç basit uygulama oluştururken size yol gösterir.  Hem
+    acemiler hem de uzmanlar için tasarlanan bu kod saati, siz farkına bile varmadan
+    kendi uygulamalarınızı oluşturmaya başlamanız için sizi hazırlayacaktır.  Kendi
+    uygulama kreasyonlarınızı arkadaşlarınızla paylaştığınızı hayal edin!  Bu etkinlikler
+    bireyler ve sınıfları yöneten öğretmenler için uygundur.
+  tutorial_blockly_longdescription: Yavaş (veya hiç olmayan) İnternet erişimi olan
+    bilgisayarlarınız mı var?  Blockly Games'in çevrimdışı sürümünü indirin - tek
+    bir 3MB ZIP dosyası herhangi bir bilgisayara yüklenebilir veya bir bellek çubuğundan
+    kullanılabilir.
   tutorial_tynker_longdescription: Kodlamayı öğrenmek için eğlenceli kodlama oyunları
-    oynayın. Spooktacular Monster High scavenger avını tamamlamak, Hot Wheels araba
-    programlamak, savaş planınızı istila eden goblinlere karşı planlamak ve hatta
-    canavarlarla savaşmak için programlama kullanın. Anahtar programlama kavramlarını
-    ve hesaplama düşünme becerilerini oynarken öğrenin. Sonra kendi oyunlarınızı oluşturun
-    ve onları arkadaşlarınızla paylaşın!
+    oynayın.  Ürkütücü bir Monster High çöpçü avını tamamlamak, bir Hot Wheels arabası
+    programlamak, istilacı goblinlere karşı savaş stratejinizi planlamak ve hatta
+    canavarlarla savaşmak için programlamayı kullanın.  Oynarken temel programlama
+    kavramlarını ve hesaplamalı düşünme becerilerini öğrenin.  Ardından kendi oyunlarınızı
+    oluşturun ve arkadaşlarınızla paylaşın!
   tutorial_baypt_longdescription: Kod Baymax
   tutorial_code-combat_longdescription: Python ve JavaScript öğrenmek için bu eski
     zaman programlama oyununda canavarları yen!
-  tutorial_mky_longdescription: Gerçek dünyadaki bir programlama dili olan CoffeeScript'te
-    kodlama öğrenin ve öğretin. CodeMonkey, herkese uygun, herhangi bir kodlama tecrübesi
-    olsun veya olmasın, eğlenceli, ödüllü bir oyundur. CodeMonkey'nin uyarlanabilir
-    platformu size ihtiyacınız olan tüm talimatları ve ipuçlarını verecek ve size
-    yıldız puanı ödüllendirecektir. Kod yaz. Muz yakala. Dünyayı kurtar.
-  tutorial_pirates_longdescription: 'Kaptan Hack, hazine arayan bir korsandır. Ayrıca
-    hazine haritaları yazıyor ve kod yazma gibi şeyler yapıyor. O (oyuncu) bunun için
-    "korsan kodu" kullanıyor. Talimatlar ve hatta AI davranışları için kullanılan
-    sembol temelli bir programlama dilidir. Hareketler, döngüler, GO-TO''lar, doğru
-    / yanlış ifadeler oyunun temel parçalarındandır. Oyunculara bir öğretici tarafından
-    rehberlik ediliyor ve olasılıklar adım adım anlatılıyor. Öğretici düzeyleri için
-    doğru bir çözüm bulunmamaktadır, böylece kullanıcı istediği çözümü seçebilir. '
-  tutorial_csfirst_longdescription: Denizdeki iki karakter hakkında bir öykü hazırlayın.
-    Suyun canlandırın ve kendi yetenek eklemek için sahne özelleştirin. Söylemek istediğiniz
-    hikayeyi anlatmak için kodu kullanın!
-  tutorial_loopedy_longdescription: İyi bir programcının amacı, mümkün olduğunca kısa,
-    açık ve etkili bir program yazmaktır. Bu derste öğrenciler, döngüler kullanan
-    programların nasıl yazıldığını öğreneceklerdir.
+  tutorial_mky_longdescription: Gerçek dünyadan bir programlama dili olan CoffeeScript'te
+    kodlamayı öğrenin ve öğretin.  CodeMonkey, kodlama deneyimi olan veya olmayan
+    herkese uygun, eğlenceli, ödüllü bir oyundur.  CodeMonkey'nin uyarlanabilir platformu
+    size ihtiyacınız olan tüm talimatları ve ipuçlarını verecek ve sizi yıldız puanlarıyla
+    ödüllendirecektir.  Kod yaz.  Muz yakala.  Dünyayı kurtar.
+  tutorial_pirates_longdescription: Kaptan Hack, hazine arayan bir korsandır.  Ayrıca
+    hazine haritaları yazıyor ve kod yazmak gibi şeyler yazıyor.  O (oyuncu) bunun
+    için "korsan kod" kullanır.  Talimatlar ve hatta AI davranışları için kullanılan
+    sembol tabanlı bir programlama dilidir.  hareketler, döngüler, GO-TO'lar, doğru/yanlış
+    ifadeleri oyunun temel parçalarıdır.  Oyuncular bir öğretici aracılığıyla yönlendirilir
+    ve olasılıklar için adım adım sunulur.  Eğitim seviyeleri için doğru bir çözüm
+    yoktur, bu nedenle kullanıcı istediği çözümü seçebilir.
+  tutorial_csfirst_longdescription: Denizde iki karakter hakkında bir hikaye oluşturun.  Suyu
+    canlandırın ve kendi yeteneğinizi eklemek için manzarayı özelleştirin.  Anlatmak
+    istediğiniz hikayeyi anlatmak için kodu kullanın!
+  tutorial_loopedy_longdescription: İyi bir programcının amacı olabildiğince kısa,
+    anlaşılır ve etkili bir program yazmaktır.  Bu derste öğrenciler döngüleri kullanarak
+    program yazmayı öğrenecekler.
   tutorial_dsw_longdescription: Droid programlamayı öğrenin ve uzak bir galakside
     kendi Star Wars oyununuzu yazın.
   tutorial_dswb_longdescription: Droid programlamayı öğrenin ve uzak bir galakside
@@ -4015,18 +4013,18 @@ tr:
     kendi Star Wars oyununuzu yazın.
   tutorial_sswb_longdescription: Droid programlamayı öğrenin ve uzak bir galakside
     kendi Star Wars oyununuzu yazın.
-  tutorial_kodable-unplugged_longdescription: 'Düz kağıtla kullanılmak üzere tasarlanan
-    fuzzFamily Frenzy, 5 yaş ve üstü çocuklar için programlama mantığına giriş niteliğindedir.
-    Öğretmen oyunu açıklar, daha sonra öğrenciler bir iş ortağına basit bir engel
-    dersi hazırlamalarını programlarlar. '
-  tutorial_scratch_longdescription: Scratch ile, kendi etkileşimli oyunlarınızı, hikayelerinizi
-    ve animasyonlarınızı yaratabilir ve bunları arkadaşlarınızla paylaşabilirsiniz.
-    Başlamak için, adınızı hareketlendirin, bir dans sahnesi oluşturun veya Cartoon
-    Network'ün We Bare Bears'ı içeren saklambaç oyununu yaratın!
+  tutorial_kodable-unplugged_longdescription: Düz kağıtla kullanılmak üzere tasarlanan
+    fuzzFamily Frenzy, 5 yaş ve üzeri çocuklar için programlama mantığına bir giriş
+    niteliğindedir.  Bir öğretmen oyunu açıklamalı, ardından öğrenciler bir partneri
+    basit bir engelli kursu tamamlaması için programlamalıdır.
+  tutorial_scratch_longdescription: Scratch ile kendi etkileşimli oyunlarınızı, hikayelerinizi,
+    animasyonlarınızı oluşturabilir ve bunları arkadaşlarınızla paylaşabilirsiniz.  Başlamak
+    için isminizi canlandırın, bir dans sahnesi yaratın ya da Cartoon Network'ün We
+    Bare Bears'ını içeren bir saklambaç oyunu yapın!
   tutorial_bayes_longdescription: Grandes kahramanları
-  tutorial_gumball_longdescription: Play Lab ile bir hikaye hazırlayın veya bir oyun
-    yapın! Gumball karakterleri hareket ettirin, ses çıkarın, puanlar kazanın ve hatta
-    muz atın!
+  tutorial_gumball_longdescription: Play Lab ile bir hikaye oluşturun veya bir oyun
+    yapın!  Gumball karakterlerini hareket ettirin, ses çıkarın, puan kazanın ve hatta
+    fırlatın
   tutorial_hrm_longdescription: |-
     İnsan Kaynakları Makinesi bir bulmaca oyunudur. Her seviyede, patronunuz size bir iş verir. Küçük ofis çalışanını programlayarak, onu otomatikleştirin! Başarılı olursanız, geniş bir ofis binasında bir yıl daha çalışmak için bir sonraki seviyeye terfi edeceksiniz. Tebrik ederiz!
 
@@ -4034,9 +4032,9 @@ tr:
   tutorial_ice-age_longdescription: Play Lab ile bir hikaye hazırlayın veya bir oyun
     yapın! Buz Devri karakterlerini hareket ettirin, ses çıkarın, puanlar kazanın
     ve kar pullarını atın!
-  tutorial_koapp_longdescription: Kodable, çocuklara 5+ programlama temelleri getiren,
-    kendinden güdümlü bir iPad oyunudur. Yakınında bir öğretmenin veya ebeveynin olması
-    optimal, ancak gerekli değildir.
+  tutorial_koapp_longdescription: Kodable, 5 yaş ve üzeri çocukları programlamanın
+    temelleriyle tanıştıran, kendi kendine yönlendirilen bir iPad oyunudur.  Yakınlarda
+    bir öğretmenin veya ebeveynin olması idealdir, ancak gerekli değildir.
   tutorial_lightbot-intl_longdescription: 4 ve üzeri için temel programlama mantığını
     süper temel programlamadan başlayarak , iOS veya Android (veya Web tarayıcısı)
     öğrenin. Komutları sıralamanın, kalıpları tanımlamanın, prosedürlerin nasıl kullanılacağını
@@ -7522,8 +7520,7 @@ tr:
   tutorial_irobotphone_string_platforms: Tüm modern tarayıcılar
   tutorial_codeguppydraw_string_platforms: Tüm modern tarayıcılar
   tutorial_codejumper_string_platforms: Bilgisayarsız, Ekran okuyucu
-  tutorial_meeempathy_string_platforms: Bütün modern tarayıcılar, Android tablet,
-    Ipad
+  tutorial_meeempathy_string_platforms: Windows, iPad, MacOS
   tutorial_dance2019_string_detail_platforms: ''
   tutorial_danceparty_string_detail_platforms: ''
   tutorial_chibitronics_string_detail_platforms: Chibitronics Chibi Chip ve Devre
@@ -11471,8 +11468,7 @@ tr:
   tutorial_nasaorbit_string_platforms: Tüm modern tarayıcılar
   tutorial_nasapackage_string_platforms: Tüm modern tarayıcılar
   tutorial_nasalunar_string_platforms: Tüm modenr tarayıcılar, iPad, iPhone
-  tutorial_meeestate_string_platforms: Android tablet, iPad, Windows telefon, Android
-    telefon, iPhone
+  tutorial_meeestate_string_platforms: Windows, iPad, MacOS
   tutorial_imagipixelart_string_platforms: Tüm modern tarayıcılar, iPad, Android tabletler,
     Windows telefon, Android telefon, iPhone
   tutorial_kcjhealth_string_platforms: Tüm modern tarayıcılar
