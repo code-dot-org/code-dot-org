@@ -1148,12 +1148,12 @@ class DeleteAccountsHelperTest < ActionView::TestCase
     SQL
     )
 
-    registration = get_record_with_sql("*", "pd_teachercon1819_registrations", {'created_at' => "'#{created_at}'"})
+    registration = get_record_with_sql("form_data", "pd_teachercon1819_registrations", {'created_at' => "'#{created_at}'"})
     refute_empty registration["form_data"]
 
     purge_user teacher
 
-    registration = get_record_with_sql("*", "pd_teachercon1819_registrations", {'created_at' => "'#{created_at}'"})
+    registration = get_record_with_sql("form_data", "pd_teachercon1819_registrations", {'created_at' => "'#{created_at}'"})
     assert_empty registration["form_data"]
   end
 
@@ -1167,12 +1167,12 @@ class DeleteAccountsHelperTest < ActionView::TestCase
     SQL
     )
 
-    registration = get_record_with_sql("*", "pd_teachercon1819_registrations", {'created_at' => "'#{created_at}'"})
+    registration = get_record_with_sql("user_id", "pd_teachercon1819_registrations", {'created_at' => "'#{created_at}'"})
     refute_nil registration["user_id"]
 
     purge_user teacher
 
-    registration = get_record_with_sql("*", "pd_teachercon1819_registrations", {'created_at' => "'#{created_at}'"})
+    registration = get_record_with_sql("user_id", "pd_teachercon1819_registrations", {'created_at' => "'#{created_at}'"})
     assert_nil registration["user_id"]
   end
 
