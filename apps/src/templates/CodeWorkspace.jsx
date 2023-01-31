@@ -187,6 +187,10 @@ class CodeWorkspace extends React.Component {
     // is enabled, remove focus while running.
     const hasFocus = !(props.runModeIndicators && props.isRunning);
     const isRtl = this.props.isRtl;
+    const showEditingStartBlocksBanner =
+      !this.props.editCode && this.props.inStartBlocksMode;
+    const showReadonlyStartBlocksBanner =
+      this.props.inStartBlocksMode && this.props.readonlyWorkspace;
 
     //TODO: When CSF example solutions are no longer rendered with solution=true in url remove this
     const inCsfExampleSolution = queryParams('solution') === 'true';
@@ -267,9 +271,11 @@ class CodeWorkspace extends React.Component {
             {i18n.oldVersionWarning()}
           </div>
         )}
-        {!this.props.editCode && this.props.inStartBlocksMode && (
+        {(showEditingStartBlocksBanner || showReadonlyStartBlocksBanner) && (
           <div id="startBlocksBanner" style={styles.startBlocksBanner}>
-            {i18n.inStartBlocksMode()}
+            {showReadonlyStartBlocksBanner
+              ? i18n.inReadonlyStartBlocksMode()
+              : i18n.inStartBlocksMode()}
           </div>
         )}
         {props.showDebugger && (
