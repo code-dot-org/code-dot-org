@@ -789,16 +789,16 @@
           "name": "Aller plus loin"
         },
         "4297e4f8-df09-4a0f-a1f1-6eebb5fb75b3": {
-          "name": "Échauffement (\"warm up ») : un seul mot. Plusieurs sens."
+          "name": "Échauffement : Un seul mot. Plusieurs sens."
         },
         "5d5fd9dd-ddf2-43b6-b079-90a4951fc484": {
-          "name": " Le Pouvoir des Mots"
+          "name": "Visionner : Le Pouvoir des Mots"
         },
         "a97a978a-4f85-4d03-b3aa-f9ade97cac23": {
-          "name": "Enquêter : quel est le problème ? "
+          "name": "Enquêter : C'est quoi, le problème ?"
         },
         "13324f62-aa57-47e7-a446-9f26c40da904": {
-          "name": "Conclusion : franchir la ligne "
+          "name": "Conclusion : Dépasser les limites"
         },
         "06eca5a9-6166-4def-972b-ecf15e73ee59": {
           "name": "Aller plus loin"
@@ -959,8 +959,32 @@
         "6683243e-d006-4ef6-9f65-a53b80a1ecf6": {
           "name": "Aller plus loin"
         },
+        "457f5ed8-0041-4bd5-b6e6-800291ae5cf5": {
+          "name": "Échauffement : Super-héros secret"
+        },
+        "0ead3881-08bc-4d6c-9fda-5bd889adbb5f": {
+          "name": "Apprendre : Être acteur de la citoyenneté numérique"
+        },
+        "069f8d26-8e31-484a-9e8c-3d67add0197d": {
+          "name": "Créer : Ton super héros citoyen numérique"
+        },
+        "da7bb20b-3692-45ca-a939-6b44411eea77": {
+          "name": "Conclusion : Bande dessinée « Sauve la situation ! »"
+        },
         "02ff6b22-0825-41c1-9e77-721f5801fede": {
           "name": "Aller plus loin"
+        },
+        "01746bcd-3c02-43f5-8a35-0a775acc2095": {
+          "name": "Échauffement : Debout, assis"
+        },
+        "6114e1af-1c83-4f1f-add9-a97c2523b343": {
+          "name": "Analyser : Pourquoi les gens parlent-ils d'eux-mêmes ?"
+        },
+        "d1c5ae68-dd15-4aec-aff6-44d0ea484781": {
+          "name": "Analyser : Privé ou Personnel ?"
+        },
+        "776101b2-57fc-4032-b1b3-1ec318adfbb2": {
+          "name": "Conclusion :  Fiche de sortie de cours"
         },
         "74025568-d2f7-4ad1-8196-55a2955dd2f8": {
           "name": "Aller plus loin"
@@ -1123,6 +1147,9 @@
         },
         "52ef41bf-9fcf-4c7d-8fec-dbf7d244859b": {
           "name": "Conclusion"
+        },
+        "74d92853-37dc-4cd5-9d69-087420e81160": {
+          "name": "Échauffement (facultatif)"
         },
         "3df49bdd-03d3-4d4e-aa6a-7df0588bb582": {
           "name": "Activité principale"
@@ -2811,7 +2838,7 @@
           "name": "Warm-up (Séance d’échauffement)"
         },
         "cb6bf053-345c-47af-a7b9-39a67a9c70fa": {
-          "name": "Exemple"
+          "name": "Présenter"
         },
         "554b4180-2899-4be8-a390-3e108705d899": {
           "name": "Warm-up (Séance d’échauffement)"
@@ -6153,16 +6180,16 @@
           "name": "Opportunité interdisciplinaire "
         },
         "424b80fc-8e8d-4dbd-bed3-4890da24b145": {
-          "name": "Échauffement (\"warm up ») : un seul mot. Plusieurs sens."
+          "name": "Échauffement : Un seul mot. Plusieurs sens."
         },
         "fdbc31b6-5f12-49c6-be6a-3183aec2bfa6": {
-          "name": " Le Pouvoir des Mots"
+          "name": "Visionner : Le Pouvoir des Mots"
         },
         "fbda7646-9395-471f-8749-694fd9cd30da": {
-          "name": "Enquêter : quel est le problème ? "
+          "name": "Enquêter : C'est quoi, le problème ?"
         },
         "f747c55f-efbf-41df-809a-2f2620917e1f": {
-          "name": "Conclusion : franchir la ligne "
+          "name": "Conclusion : Dépasser les limites"
         },
         "86dafe20-4778-4665-94eb-cf837951259b": {
           "name": "Aller plus loin"
@@ -7541,8 +7568,32 @@
         "e43d59a9-ac3a-460a-8344-1ae4a3ca26f8": {
           "name": "Conclusion"
         },
+        "1a64d92c-82ce-45e6-a188-a7d88086efd8": {
+          "name": "Échauffement : Super-héros secret"
+        },
+        "f642093a-def9-467e-a8cc-8950b21d62c8": {
+          "name": "Apprendre : Être acteur de la citoyenneté numérique"
+        },
+        "80d3bd1c-5d30-4abd-85d9-38e445a6068b": {
+          "name": "Créer : Ton super héros citoyen numérique"
+        },
+        "7d491d29-d496-450c-aece-a776f7fbd3d3": {
+          "name": "Conclusion : Bande dessinée « Sauve la situation ! »"
+        },
         "8335f8cb-a189-4f98-bb1c-817ac9264bd5": {
           "name": "Aller plus loin"
+        },
+        "14b61eaf-26c8-46d2-8538-06fe223a04c0": {
+          "name": "Échauffement : Debout, assis"
+        },
+        "3d33781b-194e-4311-b493-e6cd3bf140ac": {
+          "name": "Analyser : Pourquoi les gens parlent-ils d'eux-mêmes ?"
+        },
+        "202398a5-6b48-4360-9ed8-10db2039b064": {
+          "name": "Analyser : Privé ou Personnel ?"
+        },
+        "d7df338d-c42c-4fce-aa60-ec516fd2d48d": {
+          "name": "Conclusion :  Fiche de sortie de cours"
         },
         "02429a22-ab18-4df6-9062-d88960fe9ae8": {
           "name": "Aller plus loin"
@@ -7561,6 +7612,9 @@
         },
         "54992eb5-cb3f-40b5-9f19-07eeda83e000": {
           "name": "Opportunité interdisciplinaire "
+        },
+        "077242ad-8c8a-4b24-a139-a5e198abd405": {
+          "name": "Échauffement (facultatif)"
         },
         "7ccdedb5-15bf-4d75-9efb-e65349644266": {
           "name": "Activité principale"
@@ -7701,7 +7755,7 @@
           "name": "Jour 3 - Construire votre projet"
         },
         "e8be4727-c687-43bb-a1be-e1b3da780020": {
-          "name": "Jour 4 et 5 - Présentez votre projet"
+          "name": "Jour 4 et 5 - Présenter son projet"
         },
         "070a6c7f-86b0-4bd2-b220-99469d1f1169": {
           "name": "Aller plus loin"
@@ -8901,7 +8955,7 @@
           "name": "Warm-up (Séance d’échauffement)"
         },
         "bb408703-11ec-4822-a86b-b8625a121f6f": {
-          "name": "Exemple"
+          "name": "Présenter"
         },
         "1840d382-40db-43dd-b6cd-4f002ec7eb04": {
           "name": "Test Post-Projet"

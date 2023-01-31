@@ -124,7 +124,8 @@
           "type": "자료"
         },
         "curriculum_guide/coursed/2022": {
-          "name": "커리큘럼 가이드"
+          "name": "커리큘럼 가이드",
+          "url": "https://docs.google.com/document/d/1ePwtwiZw0fcxYiwndkfFpRPAOtUm-mz6GTVCop0girM/view"
         },
         "debugging_guide/coursed/2022": {
           "name": "디버깅 가이드",
@@ -348,6 +349,7 @@
         },
         "curriculum_guide/coursef/2022": {
           "name": "커리큘럼 가이드",
+          "url": "https://docs.google.com/document/d/1ePwtwiZw0fcxYiwndkfFpRPAOtUm-mz6GTVCop0girM/view",
           "type": "자료"
         },
         "debugging_guide/coursef/2022": {
@@ -516,7 +518,8 @@
           "type": "자료"
         },
         "curriculum_guide/coursee/2022": {
-          "name": "커리큘럼 가이드"
+          "name": "커리큘럼 가이드",
+          "url": "https://docs.google.com/document/d/1ePwtwiZw0fcxYiwndkfFpRPAOtUm-mz6GTVCop0girM/view"
         },
         "debugging_guide/coursee/2022": {
           "name": "디버깅 가이드",
@@ -675,7 +678,8 @@
           "type": "자료"
         },
         "curriculum_guide/courseb/2022": {
-          "name": "커리큘럼 가이드"
+          "name": "커리큘럼 가이드",
+          "url": "https://docs.google.com/document/d/1ePwtwiZw0fcxYiwndkfFpRPAOtUm-mz6GTVCop0girM/view"
         },
         "debugging_guide/courseb/2022": {
           "name": "디버깅 가이드",
@@ -1014,7 +1018,8 @@
           "type": "자료"
         },
         "curriculum_guide/coursea/2022": {
-          "name": "커리큘럼 가이드"
+          "name": "커리큘럼 가이드",
+          "url": "https://docs.google.com/document/d/1ePwtwiZw0fcxYiwndkfFpRPAOtUm-mz6GTVCop0girM/view"
         },
         "debugging_guide/coursea/2022": {
           "name": "디버깅 가이드",
@@ -1203,7 +1208,8 @@
           "type": "자료"
         },
         "curriculum_guide/coursec/2022": {
-          "name": "커리큘럼 가이드"
+          "name": "커리큘럼 가이드",
+          "url": "https://docs.google.com/document/d/1ePwtwiZw0fcxYiwndkfFpRPAOtUm-mz6GTVCop0girM/view"
         },
         "debugging_guide_1/coursec/2022": {
           "name": "디버깅 가이드",
@@ -2482,8 +2488,13 @@
           "type": "채점판"
         },
         "ai_what_is_machine_learning_/csd/2022": {
+          "name": "AI: 머신 러닝이란?",
           "url": "https://www.youtube.com/watch?v=OeU5m6vRyCk",
           "type": "비디오"
+        },
+        "classifying_fish/csd/2022": {
+          "name": "물고기 분류하기",
+          "url": "https://docs.google.com/document/d/1Vfp8rokk4JzTGhkUw3LkhyHAD5gLm0hct5N6CDjkNSI/view"
         },
         "introduction_to_machine_learning/csd/2022": {
           "name": "머신 러닝 소개",
@@ -4667,11 +4678,17 @@
         "csd_implementation_guide/csd/2021": {
           "type": "자료"
         },
+        "classifying_fish/csd/2021": {
+          "name": "물고기 분류하기",
+          "url": "https://docs.google.com/document/d/1Vfp8rokk4JzTGhkUw3LkhyHAD5gLm0hct5N6CDjkNSI/view"
+        },
         "introduction_to_machine_learning/csd/2021": {
           "name": "머신 러닝 소개",
+          "url": "https://docs.google.com/presentation/d/1uT4weLbovBliCfxnkCERfjXWlWWRAYiJQ7brwfYP22U/copy",
           "type": "슬라이드"
         },
         "ai_what_is_machine_learning_/csd/2021": {
+          "name": "AI: 머신 러닝이란?",
           "url": "https://www.youtube.com/watch?v=OeU5m6vRyCk",
           "type": "비디오"
         },
