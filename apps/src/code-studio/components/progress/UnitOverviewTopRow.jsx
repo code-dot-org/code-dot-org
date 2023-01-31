@@ -179,7 +179,7 @@ class UnitOverviewTopRow extends React.Component {
                 text={NEXT_BUTTON_TEXT[unitProgress]}
                 size={Button.ButtonSize.large}
                 style={{marginRight: 10}}
-                onClick={e => this.logTryNowButtonClick(unitProgress)}
+                onClick={() => this.logTryNowButtonClick(unitProgress)}
               />
             )}
 
