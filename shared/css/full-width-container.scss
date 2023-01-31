@@ -1,0 +1,18 @@
+// Allows for full-width banner and sections on Pegasus pages
+#pageheader-wrapper #pageheader {
+  margin-bottom: 0;
+}
+
+.container_responsive {
+  width: unset;
+  padding: unset;
+}
+
+section {
+  width: 100%;
+
+  .wrapper {
+    max-width: 960px;
+    margin: 0 auto;
+  }
+}
