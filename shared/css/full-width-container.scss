@@ -4,15 +4,18 @@
 }
 
 .container_responsive {
-  width: unset;
+  width: 100%;
   padding: unset;
 }
 
 section {
   width: 100%;
+  padding: 3em 1em;
+  clear: both;
 
   .wrapper {
     max-width: 960px;
     margin: 0 auto;
+    clear: both;
   }
 }

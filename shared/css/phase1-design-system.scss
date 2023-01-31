@@ -46,7 +46,16 @@ h1, h2, h3, h4, h5, h6 {
   margin-top: 0;
 }
 
-a {
+p {
+  color: $neutral_dark;
+}
+
+p a,
+p a:visited,
+p a:link,
+a,
+a:visited,
+a:link {
   color: $brand_secondary_default;
   text-decoration: underline;
 
@@ -72,9 +81,7 @@ a {
   background-color: $neutral_light;
 }
 
-p {
-  color: $neutral_dark;
-}
+
 
 #signin {
   flex-grow: unset;
