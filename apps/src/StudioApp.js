@@ -3325,10 +3325,6 @@ StudioApp.prototype.displayNotStartedBanner = function(config) {
   }
 };
 
-StudioApp.prototype.displayStartBlocksBanner = function(config) {
-  return config.level.edit_blocks === START_BLOCKS;
-};
-
 /**
  * Sets a bunch of common page constants used by all of our apps in our redux
  * store based on our app options config.
