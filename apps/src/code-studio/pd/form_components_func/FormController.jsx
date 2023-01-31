@@ -448,7 +448,7 @@ const FormController = props => {
           regionalPartner.applications_principal_approval ===
           'all_teachers_required';
         analyticsReporter.sendEvent(EVENTS.APP_STATUS_CHANGE_EVENT, {
-          'application id': updatedApplicationId,
+          'application id': data.id,
           'application status': rp_requires_admin_approval
             ? 'awaiting_admin_approval'
             : 'unreviewed'
