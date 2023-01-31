@@ -71,7 +71,7 @@ class PublicGallery extends Component {
           <Button
             __useDeprecatedTag
             href="https://support.code.org/hc/en-us/articles/360001143952"
-            color={Button.ButtonColor.gray}
+            color={Button.ButtonColor.neutralDark}
             text={i18n.reportAbuse()}
           />
         </div>
@@ -82,7 +82,7 @@ class PublicGallery extends Component {
 
 const styles = {
   bottomButton: {
-    marginTop: '30px',
+    marginTop: '38px',
     marginBottom: '15px',
     textAlign: 'center'
   }

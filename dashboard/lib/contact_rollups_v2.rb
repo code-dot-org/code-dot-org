@@ -130,7 +130,7 @@ class ContactRollupsV2
   # The results are then copied over to ContactRollupsFinal for further analysis.
   def process_contacts
     start_time = Time.now
-    @log_collector.time!('Processes all extracted data') do
+    @log_collector.time!("Processes all extracted data with batch size #{ContactRollupsProcessed::BATCH_SIZE}") do
       results = ContactRollupsProcessed.import_from_raw_table
       @log_collector.record_metrics({ContactsWithInvalidData: results[:invalid_contacts]})
     end
