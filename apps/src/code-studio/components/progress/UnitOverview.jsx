@@ -61,7 +61,6 @@ class UnitOverview extends React.Component {
     publishedState: PropTypes.oneOf(Object.values(PublishedState)),
 
     // redux provided
-    unitTitle: PropTypes.string.isRequired,
     scriptId: PropTypes.number.isRequired,
     scriptName: PropTypes.string.isRequired,
     viewAs: PropTypes.oneOf(Object.values(ViewType)).isRequired,
@@ -77,7 +76,7 @@ class UnitOverview extends React.Component {
     this.state = {showRedirectDialog};
 
     analyticsReporter.sendEvent(EVENTS.UNIT_OVERVIEW_PAGE_VISITED_EVENT, {
-      'unit name': props.unitTitle
+      'unit name': props.scriptName
     });
   }
 
@@ -220,7 +219,6 @@ const styles = {
 
 export const UnconnectedUnitOverview = Radium(UnitOverview);
 export default connect((state, ownProps) => ({
-  unitTitle: state.progress.unitTitle,
   scriptId: state.progress.scriptId,
   scriptName: state.progress.scriptName,
   viewAs: state.viewAs,
