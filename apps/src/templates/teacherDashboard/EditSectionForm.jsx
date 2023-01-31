@@ -48,6 +48,8 @@ class EditSectionForm extends Component {
     //Comes from redux
     initialUnitId: PropTypes.number,
     initialCourseId: PropTypes.number,
+    initialCourseOfferingId: PropTypes.number,
+    initialCourseVersionId: PropTypes.number,
     courseOfferings: PropTypes.objectOf(assignmentCourseOfferingShape)
       .isRequired,
     section: sectionShape.isRequired,
@@ -147,12 +149,17 @@ class EditSectionForm extends Component {
       section,
       courseOfferings,
       isNewSection,
-      initialCourseId,
-      initialUnitId
+      initialUnitId,
+      initialCourseOfferingId,
+      initialCourseVersionId
     } = this.props;
     const versionYear =
       courseOfferings[section.courseOfferingId].course_versions[
         section.courseVersionId
+      ].key;
+    const initialVersionYear =
+      courseOfferings[initialCourseOfferingId].course_versions[
+        initialCourseVersionId
       ].key;
     const course = courseOfferings.hasOwnProperty(section.courseOfferingId)
       ? courseOfferings[section.courseOfferingId]
@@ -173,12 +180,14 @@ class EditSectionForm extends Component {
     }
     if (
       eventName === COMPLETED_EVENT &&
-      ((section.courseId && section.courseId !== initialCourseId) ||
+      ((section.courseOfferingId &&
+        section.courseOfferingId !== initialCourseOfferingId) ||
         (section.unitId && section.unitId !== initialUnitId))
     ) {
       analyticsReporter.sendEvent(CURRICULUM_ASSIGNED, {
         previousUnitId: initialUnitId,
-        previousCourseId: initialCourseId,
+        previousCourseId: initialCourseOfferingId,
+        previousVersionYear: initialVersionYear,
         newUnitId: section.unitId,
         newCourseId: section.courseOfferingId,
         newVersionYear: versionYear
@@ -609,6 +618,8 @@ YesNoDropdown.propTypes = FieldProps;
 let defaultPropsFromState = state => ({
   initialCourseId: state.teacherSections.initialCourseId,
   initialUnitId: state.teacherSections.initialUnitId,
+  initialCourseOfferingId: state.teacherSections.initialCourseOfferingId,
+  initialCourseVersionId: state.teacherSections.initialCourseVersionId,
   courseOfferings: state.teacherSections.courseOfferings,
   section: state.teacherSections.sectionBeingEdited,
   isSaveInProgress: state.teacherSections.saveInProgress,

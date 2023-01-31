@@ -413,6 +413,9 @@ describe('EditSectionForm', () => {
     const wrapper = shallow(
       <EditSectionForm
         isNewSection={true}
+        initialUnitId={7}
+        initialCourseVersionId={5}
+        initialCourseOfferingId={3}
         title="Create a new section"
         handleSave={async () => {}}
         handleClose={() => {}}
@@ -451,8 +454,9 @@ describe('EditSectionForm', () => {
       'Section Curriculum Assigned'
     );
     assert.deepEqual(analyticsSpy.getCall(1).lastArg, {
-      previousUnitId: undefined,
-      previousCourseId: undefined,
+      previousUnitId: 7,
+      previousCourseId: 3,
+      previousVersionYear: '2022',
       newUnitId: null,
       newCourseId: courseOfferings[testSection.courseOfferingId].id,
       newVersionYear: '2017'
@@ -465,6 +469,9 @@ describe('EditSectionForm', () => {
     const wrapper = shallow(
       <EditSectionForm
         isNewSection={true}
+        initialUnitId={7}
+        initialCourseVersionId={5}
+        initialCourseOfferingId={3}
         title="Create a new section"
         handleSave={async () => {}}
         handleClose={() => {}}
