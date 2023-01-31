@@ -665,6 +665,8 @@ class JavalabEditor extends React.Component {
 
     const showOpenCodeReviewWarning =
       isReadOnlyWorkspace && hasOpenCodeReview && !hasQueryParam('version');
+    const showReadonlyStartCodeWarning =
+      isReadOnlyWorkspace && isEditingStartSources;
 
     let menuStyle = {
       display: this.state.showMenu ? 'block' : 'none',
@@ -764,13 +766,21 @@ class JavalabEditor extends React.Component {
               {showOpenCodeReviewWarning && (
                 <div
                   id="openCodeReviewWarningBanner"
-                  className={style.openCodeReviewWarningBanner}
+                  className={style.warningBanner}
                 >
                   {isViewingOwnProject
                     ? javalabMsg.editingDisabledUnderReview()
                     : javalabMsg.codeReviewingPeer({
                         peerName: codeOwnersName
                       })}
+                </div>
+              )}
+              {showReadonlyStartCodeWarning && (
+                <div
+                  id="readonlyStartCodeWarning"
+                  className={style.warningBanner}
+                >
+                  {javalabMsg.readonlyStartCode()}
                 </div>
               )}
               {orderedTabKeys.map(tabKey => {

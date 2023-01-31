@@ -121,6 +121,7 @@
   "openedDate": "opened {date}",
   "programCompleted": "Program completed.",
   "programStopped": "Program stopped.",
+  "readonlyStartCode": "You cannot edit start code because this level has a project template. Edit code on the template level instead.",
   "refresh": "Refresh",
   "rename": "Rename",
   "renameFile": "Rename the file",
