@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import SectionsSetUp from '@cdo/apps/templates/sectionsRefresh/SectionsSetUp';
+import SectionsSetUpContainer from '@cdo/apps/templates/sectionsRefresh/SectionsSetUpContainer';
 
 $(document).ready(() => {
-  ReactDOM.render(<SectionsSetUp />, document.getElementById('form'));
+  ReactDOM.render(<SectionsSetUpContainer />, document.getElementById('form'));
 });

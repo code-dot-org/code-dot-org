@@ -1,17 +1,17 @@
 import React from 'react';
 import {shallow} from 'enzyme';
 import {expect} from '../../../util/reconfiguredChai';
-import SectionsSetUp from '@cdo/apps/templates/sectionsRefresh/SectionsSetUp';
+import SectionsSetUpContainer from '@cdo/apps/templates/sectionsRefresh/SectionsSetUpContainer';
 
-describe('SectionsSetUp', () => {
+describe('SectionsSetUpContainer', () => {
   it('renders an initial set up section form', () => {
-    const wrapper = shallow(<SectionsSetUp />);
+    const wrapper = shallow(<SectionsSetUpContainer />);
 
-    expect(wrapper.find('SetUpSectionForm').length).to.equal(1);
+    expect(wrapper.find('SingleSectionSetUp').length).to.equal(1);
   });
 
   it('renders headers and button', () => {
-    const wrapper = shallow(<SectionsSetUp />);
+    const wrapper = shallow(<SectionsSetUpContainer />);
 
     expect(wrapper.find('h1').length).to.equal(1);
     expect(wrapper.find('Button').length).to.equal(2);

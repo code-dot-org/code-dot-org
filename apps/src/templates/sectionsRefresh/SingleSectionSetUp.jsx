@@ -3,7 +3,11 @@ import PropTypes from 'prop-types';
 import moduleStyles from './sections-refresh.module.scss';
 import i18n from '@cdo/locale';
 
-export default function SetUpSectionForm({sectionNum, section, updateSection}) {
+export default function SingleSectionSetUp({
+  sectionNum,
+  section,
+  updateSection
+}) {
   return (
     <div>
       <h2>{i18n.classSectionNum({num: sectionNum})}</h2>
@@ -21,7 +25,7 @@ export default function SetUpSectionForm({sectionNum, section, updateSection}) {
   );
 }
 
-SetUpSectionForm.propTypes = {
+SingleSectionSetUp.propTypes = {
   sectionNum: PropTypes.number.isRequired,
   section: PropTypes.object.isRequired,
   updateSection: PropTypes.func.isRequired

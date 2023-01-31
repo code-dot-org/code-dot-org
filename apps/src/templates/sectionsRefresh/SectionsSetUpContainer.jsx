@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import i18n from '@cdo/locale';
-import SetUpSectionForm from './SetUpSectionForm';
+import SingleSectionSetUp from './SingleSectionSetUp';
 import Button from '@cdo/apps/templates/Button';
 import moduleStyles from './sections-refresh.module.scss';
 
@@ -28,7 +28,7 @@ const useSections = () => {
   return [sections, updateSection];
 };
 
-export default function SectionsSetUp() {
+export default function SectionsSetUpContainer() {
   const [sections, updateSection] = useSections();
   return (
     <div>
@@ -39,7 +39,7 @@ export default function SectionsSetUp() {
           {i18n.setUpClassSectionsSubheaderLink()}
         </a>
       </p>
-      <SetUpSectionForm
+      <SingleSectionSetUp
         sectionNum={1}
         section={sections[0]}
         updateSection={(key, val) => updateSection(0, key, val)}

@@ -1,14 +1,14 @@
 import React from 'react';
 import {shallow} from 'enzyme';
 import {expect} from '../../../util/reconfiguredChai';
-import SetUpSectionForm from '@cdo/apps/templates/sectionsRefresh/SetUpSectionForm';
+import SingleSectionSetUp from '@cdo/apps/templates/sectionsRefresh/SingleSectionSetUp';
 import sinon from 'sinon';
 
-describe('SetUpSectionForm', () => {
+describe('SingleSectionSetUp', () => {
   it('calls updateSection when name is updated', () => {
     const updateSectionSpy = sinon.spy();
     const wrapper = shallow(
-      <SetUpSectionForm
+      <SingleSectionSetUp
         sectionNum={1}
         section={{}}
         updateSection={updateSectionSpy}
