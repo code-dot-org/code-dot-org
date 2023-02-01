@@ -41,30 +41,42 @@ class AnimationTab extends React.Component {
   };
 
   render() {
+    const {
+      channelId,
+      columnSizes,
+      defaultQuery,
+      hideAnimationNames,
+      hideBackgrounds,
+      hideUploadOption,
+      interfaceMode,
+      labType,
+      libraryManifest,
+      onColumnWidthsChange,
+      pickerType,
+      selectedAnimation
+    } = this.props;
     let hidePiskelStyle = {visibility: 'visible'};
-    if (this.props.selectedAnimation) {
+    if (selectedAnimation) {
       hidePiskelStyle = {visibility: 'hidden'};
     }
-    const hideCostumes =
-      this.props.interfaceMode === P5LabInterfaceMode.BACKGROUND;
+    const hideCostumes = interfaceMode === P5LabInterfaceMode.BACKGROUND;
     const animationsColumnStyle =
-      this.props.labType === 'SPRITELAB' &&
-      experiments.isEnabled('backgroundsTab')
+      labType === 'SPRITELAB' && experiments.isEnabled('backgroundsTab')
         ? styles.animationsColumnSpritelab
         : styles.animationsColumnGamelab;
     return (
       <div>
         <ResizablePanes
           style={styles.root}
-          columnSizes={this.props.columnSizes}
-          onChange={this.props.onColumnWidthsChange}
+          columnSizes={columnSizes}
+          onChange={onColumnWidthsChange}
         >
           <div style={animationsColumnStyle}>
-            <P5LabVisualizationHeader labType={this.props.labType} />
+            <P5LabVisualizationHeader labType={labType} />
             <AnimationList
-              hideBackgrounds={this.props.hideBackgrounds}
+              hideBackgrounds={hideBackgrounds}
               hideCostumes={hideCostumes}
-              labType={this.props.labType}
+              labType={labType}
             />
           </div>
           <div style={styles.editorColumn}>
@@ -74,17 +86,17 @@ class AnimationTab extends React.Component {
             </div>
           </div>
         </ResizablePanes>
-        {this.props.channelId && (
+        {channelId && (
           <AnimationPicker
-            channelId={this.props.channelId}
-            libraryManifest={this.props.libraryManifest}
-            hideUploadOption={this.props.hideUploadOption}
-            hideAnimationNames={this.props.hideAnimationNames}
-            navigable={!this.props.hideCostumes}
-            hideBackgrounds={this.props.hideBackgrounds}
+            channelId={channelId}
+            libraryManifest={libraryManifest}
+            hideUploadOption={hideUploadOption}
+            hideAnimationNames={hideAnimationNames}
+            navigable={!hideCostumes}
+            hideBackgrounds={hideBackgrounds}
             hideCostumes={hideCostumes}
-            pickerType={this.props.pickerType}
-            defaultQuery={this.props.defaultQuery}
+            pickerType={pickerType}
+            defaultQuery={defaultQuery}
           />
         )}
       </div>
