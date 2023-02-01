@@ -4,13 +4,19 @@ const SELECT_ANIMATION = 'AnimationTab/SELECT_ANIMATION';
 const SET_COLUMN_SIZES = 'AnimationTab/SET_COLUMN_SIZES';
 
 const initialState = {
-  selectedAnimation: '',
+  currentAnimations: {default: '', background: ''},
   columnSizes: [150, undefined]
 };
 
 export default (state = initialState, action) => {
   if (action.type === SELECT_ANIMATION) {
-    return {...state, selectedAnimation: action.animationKey};
+    return {
+      ...state,
+      currentAnimations: {
+        ...state.currentAnimations,
+        default: action.animationKey
+      }
+    };
   }
   if (action.type === SET_COLUMN_SIZES) {
     return {...state, columnSizes: action.sizes};
@@ -23,7 +29,7 @@ export default (state = initialState, action) => {
  * @param {AnimationKey} animationKey
  * @returns {{type: string, animationKey: AnimationKey}}
  */
-export function selectAnimation(animationKey) {
+export function selectAnimation(animationKey, isBackground) {
   return {type: SELECT_ANIMATION, animationKey};
 }
 

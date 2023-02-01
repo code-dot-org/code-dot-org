@@ -36,7 +36,7 @@ class AnimationTab extends React.Component {
 
     // Provided by Redux
     columnSizes: PropTypes.arrayOf(PropTypes.number).isRequired,
-    selectedAnimation: shapes.AnimationKey,
+    currentAnimations: shapes.CurrentAnimations,
     defaultQuery: PropTypes.object
   };
 
@@ -53,10 +53,10 @@ class AnimationTab extends React.Component {
       libraryManifest,
       onColumnWidthsChange,
       pickerType,
-      selectedAnimation
+      currentAnimations
     } = this.props;
     let hidePiskelStyle = {visibility: 'visible'};
-    if (selectedAnimation) {
+    if (currentAnimations.default) {
       hidePiskelStyle = {visibility: 'hidden'};
     }
     const hideCostumes = interfaceMode === P5LabInterfaceMode.BACKGROUND;
@@ -155,7 +155,7 @@ const styles = {
 export default connect(
   state => ({
     columnSizes: state.animationTab.columnSizes,
-    selectedAnimation: state.animationTab.selectedAnimation
+    currentAnimations: state.animationTab.currentAnimations
   }),
   dispatch => ({
     onColumnWidthsChange(widths) {
