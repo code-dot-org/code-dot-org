@@ -3,9 +3,11 @@ import $ from 'jquery';
 import {reload} from '@cdo/apps/utils';
 import {OAuthSectionTypes} from '@cdo/apps/lib/ui/accounts/constants';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import PropTypes from 'prop-types';
 import {SectionLoginType, PlGradeValue} from '../../util/sharedConstants';
 import {ParticipantAudience} from '@cdo/apps/generated/curriculum/sharedCourseConstants';
+import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 
 /**
  * @const {string[]} The only properties that can be updated by the user
@@ -244,6 +246,21 @@ export const assignToSection = (
     {includeUserId: true}
   );
   return (dispatch, getState) => {
+    const section = getState().teacherSections.sections[sectionId];
+    // Only log if the assignment is changing.
+    // We need an OR here because unitId will be null for standalone units
+    if (
+      section.courseOfferingId !== courseOfferingId ||
+      section.unitId !== unitId
+    ) {
+      analyticsReporter.sendEvent(EVENTS.CURRICULUM_ASSIGNED, {
+        previousUnitId: section.unitId,
+        previousCourseId: section.courseOfferingId,
+        newUnitId: unitId,
+        newCourseId: courseOfferingId
+      });
+    }
+
     dispatch(beginEditingSection(sectionId, true));
     dispatch(
       editSectionProperties({
@@ -267,7 +284,18 @@ export const unassignSection = (sectionId, location) => (
   getState
 ) => {
   dispatch(beginEditingSection(sectionId, true));
-  const {initialCourseId, initialUnitId} = getState().teacherSections;
+  const {initialCourseId, initialUnitId, sections} = getState().teacherSections;
+  const section = sections[sectionId];
+  // Only log if the section had something assigned
+  if (!!section.courseOfferingId) {
+    analyticsReporter.sendEvent(EVENTS.CURRICULUM_ASSIGNED, {
+      previousUnitId: section.unitId,
+      previousCourseId: section.courseOfferingId,
+      newUnitId: null,
+      newCourseId: null
+    });
+  }
+
   dispatch(
     editSectionProperties({
       courseId: null,

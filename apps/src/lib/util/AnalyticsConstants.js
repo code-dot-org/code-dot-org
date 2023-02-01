@@ -20,7 +20,10 @@ const EVENTS = {
   APPLICATION_SAVED_EVENT: 'Application Saved',
   APPLICATION_SUBMITTED_EVENT: 'Application Submitted',
   ADMIN_APPROVAL_RECEIVED_EVENT: 'Administrator Approval Received',
-  SUBMIT_RP_CONTACT_FORM_EVENT: 'Submit Regional Partner Contact Form'
+  SUBMIT_RP_CONTACT_FORM_EVENT: 'Submit Regional Partner Contact Form',
+
+  // Sections
+  CURRICULUM_ASSIGNED: 'Section Curriculum Assigned'
 };
 
 export {EVENTS};
