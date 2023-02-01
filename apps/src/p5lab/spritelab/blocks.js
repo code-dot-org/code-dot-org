@@ -8,8 +8,11 @@ import {APP_HEIGHT, P5LabInterfaceMode} from '../constants';
 import {TOOLBOX_EDIT_MODE} from '../../constants';
 import {animationSourceUrl} from '../redux/animationList';
 import {changeInterfaceMode} from '../actions';
+import {Goal, showBackground} from '../redux/animationPicker';
 import i18n from '@cdo/locale';
 import spritelabMsg from '@cdo/spritelab/locale';
+import experiments from '@cdo/apps/util/experiments';
+
 function animations(includeBackgrounds) {
   const animationList = getStore().getState().animationList;
   if (!animationList || animationList.orderedKeys.length === 0) {
@@ -213,16 +216,25 @@ const customInputTypes = {
         getStore().getState().pageConstants &&
         getStore().getState().pageConstants.showAnimationMode
       ) {
-        buttons = [
-          {
-            text: i18n.backgroundMode(),
-            action: () => {
-              getStore().dispatch(
-                changeInterfaceMode(P5LabInterfaceMode.BACKGROUND)
-              );
-            }
-          }
-        ];
+        buttons = experiments.isEnabled('backgroundsTab')
+          ? [
+              {
+                text: i18n.backgroundMode(),
+                action: () => {
+                  getStore().dispatch(
+                    changeInterfaceMode(P5LabInterfaceMode.BACKGROUND)
+                  );
+                }
+              }
+            ]
+          : [
+              {
+                text: i18n.more(),
+                action: () => {
+                  getStore().dispatch(showBackground(Goal.NEW_ANIMATION));
+                }
+              }
+            ];
       }
       currentInputRow
         .appendField(inputConfig.label)
