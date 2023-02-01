@@ -12,7 +12,12 @@ import ExternalButton from './ExternalButton';
 import CapacitiveTouchSensor from './CapacitiveTouchSensor';
 import LedScreen from './LedScreen';
 import {isChromeOS, serialPortType} from '../../util/browserChecks';
-import {MICROBIT_FIRMWARE_VERSION} from './MicroBitConstants';
+import {
+  MICROBIT_FIRMWARE_VERSION,
+  SQUARE_LEDS,
+  CHECKMARK_LEDS,
+  ALL_LEDS
+} from './MicroBitConstants';
 import {delayPromise} from '../../util/boardUtils';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 
@@ -164,11 +169,52 @@ export default class MicroBitBoard extends EventEmitter {
    * @returns {Promise} resolved when the song and animation are done.
    */
   celebrateSuccessfulConnection() {
+    function makeSquare(ledScreen, delay, timeInterval) {
+      return new Promise(resolve => {
+        SQUARE_LEDS.forEach((ledPair, i) => {
+          setTimeout(
+            () => ledScreen.on(ledPair[0], ledPair[1]),
+            delay * (i + 1)
+          );
+        });
+        setTimeout(resolve, delay * SQUARE_LEDS.length + timeInterval);
+      });
+    }
+
+    function makeCheckMark(ledScreen, delay) {
+      return new Promise(resolve => {
+        CHECKMARK_LEDS.forEach(ledPair => {
+          setTimeout(() => ledScreen.on(ledPair[0], ledPair[1]));
+        });
+        setTimeout(resolve, delay);
+      });
+    }
+
+    function turnOffAllLeds(ledScreen, delay) {
+      return new Promise(resolve => {
+        ALL_LEDS.forEach(ledPair => {
+          setTimeout(() => ledScreen.off(ledPair[0], ledPair[1]));
+        });
+        setTimeout(resolve, delay);
+      });
+    }
+
     this.initializeComponents().then(() => {
-      const led = new LedScreen({
+      const ledScreen = new LedScreen({
         mb: this.boardClient_
       });
-      return Promise.resolve().then(() => led.scrollString('yes'));
+
+      const timeInterval = 200;
+      const squareTimeInterval = 70;
+
+      return Promise.resolve()
+        .then(() => makeSquare(ledScreen, squareTimeInterval, timeInterval))
+        .then(() => turnOffAllLeds(ledScreen, timeInterval))
+        .then(() => makeCheckMark(ledScreen, timeInterval))
+        .then(() => turnOffAllLeds(ledScreen, timeInterval))
+        .then(() => makeCheckMark(ledScreen, timeInterval))
+        .then(() => turnOffAllLeds(ledScreen, timeInterval))
+        .then(() => makeCheckMark(ledScreen, timeInterval));
     });
   }
 

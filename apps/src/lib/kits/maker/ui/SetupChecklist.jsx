@@ -139,7 +139,7 @@ export default class SetupChecklist extends Component {
         )
       )
       .then(() => setupChecker.celebrate())
-      .then(() => delayPromise(3000)) // allow 3 seconds for 'yes' to scroll on Micro:Bit before disconnecting
+      .then(() => delayPromise(3000)) // allow 3 seconds for 'celebrate' on Micro:Bit before disconnecting
       .then(() => this.succeed(STATUS_BOARD_COMPONENTS))
       .then(() => trackEvent('MakerSetup', 'ConnectionSuccess'))
 
