@@ -147,6 +147,7 @@ export class DetailViewContents extends React.Component {
     return {
       editing: false,
       status: this.props.applicationData.status,
+      last_logged_status: this.props.applicationData.status,
       locked: this.props.applicationData.locked,
       notes: this.props.applicationData.notes,
       notes_2: this.props.applicationData.notes_2,
@@ -228,10 +229,6 @@ export class DetailViewContents extends React.Component {
     } else {
       this.setState({
         status: event.target.value
-      });
-      analyticsReporter.sendEvent(EVENTS.APP_STATUS_CHANGE_EVENT, {
-        'application id': this.props.applicationId,
-        'application status': event.target.value
       });
     }
   };
@@ -332,6 +329,17 @@ export class DetailViewContents extends React.Component {
       // The parent is responsible for passing it back in as props.
       if (this.props.onUpdate) {
         this.props.onUpdate(applicationData);
+      }
+
+      // Log if the application status changed
+      if (this.state.status !== this.state.last_logged_status) {
+        analyticsReporter.sendEvent(EVENTS.APP_STATUS_CHANGE_EVENT, {
+          'application id': this.props.applicationId,
+          'application status': this.state.status
+        });
+        this.setState({
+          last_logged_status: this.state.status
+        });
       }
     });
   };
