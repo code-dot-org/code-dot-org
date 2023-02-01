@@ -11,11 +11,16 @@ import ExternalLed from './ExternalLed';
 import ExternalButton from './ExternalButton';
 import CapacitiveTouchSensor from './CapacitiveTouchSensor';
 import {isChromeOS, serialPortType} from '../../util/browserChecks';
-import {MICROBIT_FIRMWARE_VERSION} from './MicroBitConstants';
+import {
+  MICROBIT,
+  MICROBIT_FIRMWARE_VERSION,
+  FIRMWARE_VERSION_TIMEOUT
+} from './MicroBitConstants';
 import {
   SERIAL_BAUD,
   isWebSerialPort
 } from '@cdo/apps/lib/kits/maker/util/boardUtils';
+import {MAKER_TOOLKIT} from '@cdo/apps/lib/kits/maker/util/makerConstants';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 
 /**
@@ -75,9 +80,7 @@ export default class MicroBitBoard extends EventEmitter {
    * @return {Promise<SerialPort>}
    */
   openSerialPortWebSerial(port) {
-    return port.openMBPort().then(() => {
-      return port;
-    });
+    return port.openMBPort().then(() => port);
   }
 
   /**
@@ -109,9 +112,9 @@ export default class MicroBitBoard extends EventEmitter {
             if (this.boardClient_.firmwareVersion === '') {
               // Log if we were not able to determine the firmware version in time.
               firehoseClient.putRecord({
-                study: 'maker-toolkit',
-                study_group: 'microbit',
-                event: 'firmwareVersionTimeout'
+                study: MAKER_TOOLKIT,
+                study_group: MICROBIT,
+                event: FIRMWARE_VERSION_TIMEOUT
               });
               console.warn(
                 'Firmware version not detected in time. Try refreshing the page.'
