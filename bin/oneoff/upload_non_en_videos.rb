@@ -1,6 +1,7 @@
 # This script is used to batch upload non-EN videos, with the assumption that
 # we will frequently get these in batches. They will be uploaded to YouTube
 # and S3 as well as added to videos.csv.
+# This script is currently deprecated and archived, to serve as a reference.
 
 require 'google/apis'
 require 'google-apis-youtube_v3'
@@ -14,7 +15,8 @@ require 'optparse'
 
 APPLICATION_NAME = 'Dubbed Video Batch Upload'
 
-# This is the URI so that we can authorize from a browser. Don't change this.
+# This is the URI so that we can authorize from a browser. Out Of Band flow is not supported by Google anymore. A new
+# authentication method would need to be implemented. Calls to this API will return an Error 400: invalid_request
 REDIRECT_URI = 'urn:ietf:wg:oauth:2.0:oob'
 
 SCOPE = Google::Apis::YoutubeV3::AUTH_YOUTUBE_UPLOAD
@@ -146,7 +148,13 @@ def main(options)
   puts "uploaded #{uploaded_videos} videos"
 end
 
+def deprecation_message(options)
+  puts "DEPRECATION MESSAGE: This script is currently deprecated and archived to serve as reference.
+  This script uses OAuth out-of-band (OOB) flow, OOB requests to Google’s OAuth 2.0 authorization endpoint for existing clients are blocked, and will return an Error 400: invalid_request."
+end
+
 options = parse_options(ARGV)
 # Move this after parse_options so that --help is fast
 require_relative '../../dashboard/config/environment'
-main(options)
+# main(options)
+deprecation_message(options)
