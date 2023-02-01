@@ -1,4 +1,6 @@
 /** @file Board controller for BBC micro:bit */
+/* global SerialPort */ // Provided by the Code.org Browser
+
 import {EventEmitter} from 'events'; // provided by webpack's node-libs-browser
 import {
   createMicroBitComponents,
@@ -10,7 +12,6 @@ import MBFirmataWrapper from './MBFirmataWrapper';
 import ExternalLed from './ExternalLed';
 import ExternalButton from './ExternalButton';
 import CapacitiveTouchSensor from './CapacitiveTouchSensor';
-import {isChromeOS, serialPortType} from '../../util/browserChecks';
 import {
   MICROBIT,
   MICROBIT_FIRMWARE_VERSION,
@@ -38,11 +39,7 @@ export default class MicroBitBoard extends EventEmitter {
     /** @private {Object} Map of component controllers */
     this.prewiredComponents_ = null;
 
-    this.chromeOS = isChromeOS();
-
-    const portType = isWebSerialPort(port)
-      ? navigator.serial
-      : serialPortType();
+    const portType = isWebSerialPort(port) ? navigator.serial : SerialPort;
 
     /** @private {MicrobitFirmataClient} serial port controller */
     this.boardClient_ = new MBFirmataWrapper(portType);
@@ -69,8 +66,7 @@ export default class MicroBitBoard extends EventEmitter {
    */
   openSerialPort() {
     const portName = this.port ? this.port.comName : undefined;
-    const SerialPortType = serialPortType();
-    const serialPort = new SerialPortType(portName, {baudRate: SERIAL_BAUD});
+    const serialPort = new SerialPort(portName, {baudRate: SERIAL_BAUD});
     return Promise.resolve(serialPort);
   }
 

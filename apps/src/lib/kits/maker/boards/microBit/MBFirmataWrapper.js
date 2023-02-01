@@ -14,8 +14,9 @@ export default class MicrobitFirmataWrapper extends MBFirmataClient {
     return Promise.resolve()
       .then(() => this.setSerialPort(port))
       .then(() => {
-        // webserial pathway - only opening/closing port for now
         if (!isWebSerialPort(port)) {
+          // For now, we are NOT reading or writing to the port if in the WebSerial pathway.
+          // Only opening/closing the port.
           return this.setAnalogSamplingInterval(SAMPLE_INTERVAL);
         }
       })
@@ -36,11 +37,11 @@ export default class MicrobitFirmataWrapper extends MBFirmataClient {
 
   setSerialPort(port) {
     if (!isWebSerialPort(port)) {
-      // maker app pathway
+      // This branch is for Maker app pathway.
       return super.setSerialPort(port);
     } else {
       // Use the given port. Assume the port has been opened by the caller.
-      // webserial pathway - only opening/closing port for now
+      // This branch is for WebSerial pathway - only opening/closing port for now.
       this.myPort = port;
       this.myPort.on('data', this.dataReceived.bind(this));
 
