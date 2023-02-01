@@ -45,6 +45,7 @@ km:
         personal_email_markdown: "អាស័យដ្ឋានសារអេឡិចត្រូនិចផ្ទាល់ខ្លួនរបស់អ្នក[(សូមចុចនៅទីនេះ បើសិនជាអត់ទាន់មានអាស័យដ្ឋានសារអេឡិចត្រូនិច)](%{url})"
         username: 'ឈ្មោះ​អ្នកប្រើ'
         password: 'ពាក្យ​សម្ងាត់'
+        verified_teacher: 'គ្រូដែលបានផ្ទៀងផ្ទាត់'
         password_confirmation: 'ការ​បញ្ជាក់​ពាក្យ​សម្ងាត់'
         current_password: 'ពាក្យ​សម្ងាត់​បច្ចុប្បន្ន'
         locale: 'ភាសា'
@@ -68,6 +69,7 @@ km:
   previous_page: ទំព័រមុន
   next_page: ទំព័របន្ទាប់
   next_resource: ឯកសារបន្ទាប់
+  done_with_module: បានបញ្ចប់វគ្គសិក្សានេះ
   cancel: "បោះបង់"
   okay: "អូខេ"
   or: "ឬ"
@@ -117,6 +119,7 @@ km:
     windowslive: 'គណនី Microsoft'
     microsoft_v2_auth: 'គណនី Microsoft'
     clever: 'គណនេយ្យមានលក្ខណៈពេញលេញ'
+    powerschool: 'សាលាផោវឹ'
     forgot_password: 'បាន​ភ្លេច​ពាក្យ​សម្ងាត់​របស់​អ្នក?'
     migration_success: 'ជោគជ័យ! អ្នកបានធ្វើបច្ចុប្បន្នភាពបទពិសោធន៍គណនីថ្មីរបស់យើង។'
     demigration_success: 'បទពិសោធន៍គណនីថ្មី គឺត្រូវបានបិទនៅលើគណនីរបស់អ្នក។'

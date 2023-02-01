@@ -164,6 +164,10 @@ ca:
             required:
               display_name: Vista general
         basketball:
+          title: Escull el teu equip i fes un partit de bàsquet
+          description_short: Escull el teu equip i fes un partit de bàsquet
+          description: Escull el teu equip i fes un partit de bàsquet
+          student_description: Escull el teu equip i fes un partit de bàsquet
           name: bàsquet
         csp2-support:
           lesson_groups:
@@ -476,6 +480,8 @@ ca:
               display_name: Condicionals
             csp_functions:
               display_name: Funcions
+            csp_project:
+              display_name: Projecte
         dance-extras:
           description: Anar més enllà de la primera hora amb idees desenvolupades del projecte.
           student_description: Anar més enllà de la primera hora amb idees desenvolupades del projecte.
@@ -614,6 +620,8 @@ ca:
               display_name: Condicionals
             csp_functions:
               display_name: Funcions
+            csp_project:
+              display_name: Projecte
             required:
               display_name: Vista general
         csp1-pilot:
@@ -628,6 +636,8 @@ ca:
               display_name: Condicionals
             csp_functions:
               display_name: Funcions
+            csp_project:
+              display_name: Projecte
         csp2-pilot-staging:
           lesson_groups:
             csp_variables:
@@ -636,6 +646,8 @@ ca:
               display_name: Condicionals
             csp_functions:
               display_name: Funcions
+            csp_project:
+              display_name: Projecte
         csp4-pilot-staging:
           lesson_groups:
             csp_variables:
@@ -644,12 +656,16 @@ ca:
               display_name: Condicionals
             csp_functions:
               display_name: Funcions
+            csp_project:
+              display_name: Projecte
         csp5-pilot-staging:
           lesson_groups:
             csp_lists:
               display_name: Llistes
             csp_loops:
               display_name: Bucles
+            csp_project:
+              display_name: Projecte
         csp6-pilot-staging:
           lesson_groups:
             csp_variables:
@@ -658,6 +674,8 @@ ca:
               display_name: Condicionals
             csp_functions:
               display_name: Funcions
+            csp_project:
+              display_name: Projecte
         csp8-pilot-staging:
           lesson_groups:
             csp_variables:
@@ -666,6 +684,8 @@ ca:
               display_name: Condicionals
             csp_functions:
               display_name: Funcions
+            csp_project:
+              display_name: Projecte
         csp9-pilot-staging:
           lesson_groups:
             csp_variables:
@@ -674,6 +694,8 @@ ca:
               display_name: Condicionals
             csp_functions:
               display_name: Funcions
+            csp_project:
+              display_name: Projecte
         csp10-pilot-staging:
           lesson_groups:
             csp_variables:
@@ -682,12 +704,16 @@ ca:
               display_name: Condicionals
             csp_functions:
               display_name: Funcions
+            csp_project:
+              display_name: Projecte
         csp5-pilot:
           lesson_groups:
             csp_lists:
               display_name: Llistes
             csp_loops:
               display_name: Bucles
+            csp_project:
+              display_name: Projecte
             required:
               display_name: Vista general
         fit2019-novice:
@@ -781,6 +807,8 @@ ca:
               display_name: Condicionals
             csp_functions:
               display_name: Funcions
+            csp_project:
+              display_name: Projecte
         time4cs-control-unit-2:
           lesson_groups:
             csf_digcit:
@@ -829,12 +857,16 @@ ca:
               display_name: Condicionals
             csp_functions:
               display_name: Funcions
+            csp_project:
+              display_name: Projecte
         csp5-2020:
           lesson_groups:
             csp_lists:
               display_name: Llistes
             csp_loops:
               display_name: Bucles
+            csp_project:
+              display_name: Projecte
         coursea-2020:
           description: Aprèn els fonaments de la informàtica i de la seguretat a internet. Al final del curs, podràs crear el teu propi joc o història i compartir-los.
           description_short: Una introducció a la informàtica per prelectors.
@@ -974,12 +1006,16 @@ ca:
               display_name: Condicionals
             csp_functions:
               display_name: Funcions
+            csp_project:
+              display_name: Projecte
         csp5-2021:
           lesson_groups:
             csp_lists:
               display_name: Llistes
             csp_loops:
               display_name: Bucles
+            csp_project:
+              display_name: Projecte
         csp6-2021:
           lesson_groups:
             csp_unit6_2020:
@@ -1159,6 +1195,14 @@ ca:
           lesson_groups:
             lessonGroup-2:
               description: prova
+        csa-u6-dev:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Projecte
+        csa-u7-dev:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Projecte
         spelling-bee:
           title: Abella ortogràfica
         ai-ethics-2021:
@@ -1218,12 +1262,16 @@ ca:
               display_name: Condicionals
             csp_functions:
               display_name: Funcions
+            csp_project:
+              display_name: Projecte
         csp5-2022:
           lesson_groups:
             csp_lists:
               display_name: Llistes
             csp_loops:
               display_name: Bucles
+            csp_project:
+              display_name: Projecte
         courseb-2022:
           lesson_groups:
             csf_digcit:
@@ -1356,13 +1404,19 @@ ca:
               display_name: Condicionals
             csp_functions:
               display_name: Funcions
+            csp_project:
+              display_name: Projecte
         csp5-2023:
           lesson_groups:
             csp_loops:
               display_name: Bucles
+            csp_project:
+              display_name: Projecte
         csp6-2023:
           lesson_groups:
             csp_unit6_2020:
               display_name: Llistes
             lessonGroup-3:
               display_name: Bucles
+            lessonGroup-5:
+              display_name: Projecte
