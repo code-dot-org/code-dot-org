@@ -46,28 +46,12 @@ const PrincipalApprovalApplication = props => {
   };
 
   const onSuccessfulSubmit = () => {
-    logSuccessfulApprovalSubmission();
-    window.location.reload(true);
-  };
-
-  const logSuccessfulApprovalSubmission = () => {
-    // Log admin approval received
     analyticsReporter.sendEvent(EVENTS.ADMIN_APPROVAL_RECEIVED_EVENT);
-
-    // Log application status change to 'unreviewed'
-    const url = `/api/v1/pd/application/principal_approval/get_app_by_guid/${
-      props.teacherApplication.application_guid
-    }`;
-    $.ajax({
-      method: 'GET',
-      url: url,
-      dataType: 'json'
-    }).done(teacherApplication => {
-      analyticsReporter.sendEvent(EVENTS.APP_STATUS_CHANGE_EVENT, {
-        'application id': teacherApplication.id,
-        'application status': 'unreviewed'
-      });
+    analyticsReporter.sendEvent(EVENTS.APP_STATUS_CHANGE_EVENT, {
+      'application id': props.teacherApplication.id,
+      'application status': 'unreviewed'
     });
+    window.location.reload(true);
   };
 
   return (
@@ -88,6 +72,7 @@ PrincipalApprovalApplication.propTypes = {
   options: PropTypes.object.isRequired,
   requiredFields: PropTypes.arrayOf(PropTypes.string).isRequired,
   teacherApplication: PropTypes.shape({
+    id: PropTypes.string.isRequired,
     course: PropTypes.string.isRequired,
     name: PropTypes.string.isRequired,
     application_guid: PropTypes.string.isRequired,
