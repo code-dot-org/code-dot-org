@@ -157,12 +157,12 @@ class EditSectionForm extends Component {
       ? courseOfferings[section.courseOfferingId].course_versions[
           section.courseVersionId
         ].key
-      : '';
+      : null;
     const initialVersionYear = initialCourseOfferingId
       ? courseOfferings[initialCourseOfferingId].course_versions[
           initialCourseVersionId
         ].key
-      : '';
+      : null;
     const course = courseOfferings.hasOwnProperty(section.courseOfferingId)
       ? courseOfferings[section.courseOfferingId]
       : null;
