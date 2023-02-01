@@ -29,7 +29,7 @@ style_min: true
 ## Make a generous donation
 We're working to give every student the opportunity to learn computer science — online and in schools where we’ll establish permanent courses and train teachers. For every dollar you donate, one child will be introduced to computer science.
 
-<a class="button" href=https://donate.code.org/give/172233/#!/donation/checkout>Donate now</a> <a class="button" href="https://donate.code.org/campaign/computer-science-education/c142257">Start a fundraiser</a>
+<a class="link-button" href=https://donate.code.org/give/172233/#!/donation/checkout>Donate now</a> <a class="link-button" href="https://donate.code.org/campaign/computer-science-education/c142257">Start a fundraiser</a>
 
 
 
