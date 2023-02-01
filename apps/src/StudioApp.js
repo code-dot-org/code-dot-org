@@ -1524,15 +1524,21 @@ StudioApp.prototype.resizeVisualization = function(width) {
  */
 StudioApp.prototype.resizeToolboxHeader = function() {
   var toolboxWidth = 0;
-  if (
-    this.editCode &&
-    this.editor &&
-    this.editor.session &&
-    this.editor.session.paletteEnabled
-  ) {
-    // If in the droplet editor, set toolboxWidth based on the block palette width:
-    var categories = document.querySelector('.droplet-palette-wrapper');
-    toolboxWidth = categories.getBoundingClientRect().width;
+  if (this.editCode && this.editor && this.editor.session) {
+    const isRtl = getStore().getState().isRtl;
+    const categories = document.querySelector('.droplet-palette-wrapper');
+
+    if (this.editor.session.paletteEnabled) {
+      // If in the droplet editor, set toolboxWidth based on the block palette width:
+      toolboxWidth = categories.getBoundingClientRect().width;
+    }
+
+    if (isRtl) {
+      // If Rtl - handle show/hide toolbox functionality
+      categories.style.zIndex = this.editor.session.paletteEnabled
+        ? 'inherit'
+        : '0';
+    }
   } else if (this.isUsingBlockly()) {
     toolboxWidth = Blockly.cdoUtils.getToolboxWidth();
   }
