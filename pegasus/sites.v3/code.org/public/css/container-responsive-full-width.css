@@ -17,7 +17,8 @@ section {
 }
 
 /* Use class="wrapper" to house a section's content */
-/* This will be centered on the page */
+/* Content will be centered on the page while allowing
+  for a full-width background color or image */
 section .wrapper {
   max-width: 960px;
   margin: 0 auto;
