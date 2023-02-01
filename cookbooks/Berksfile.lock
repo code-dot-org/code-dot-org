@@ -86,7 +86,6 @@ GRAPH
     cdo-secrets (>= 0.0.0)
     cdo-syslog (>= 0.0.0)
     cdo-tippecanoe (>= 0.0.0)
-    cdo-varnish (>= 0.0.0)
     chef_client_updater (>= 0.0.0)
     sudo-user (>= 0.0.0)
     yarn (>= 0.0.0)
