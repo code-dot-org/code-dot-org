@@ -164,9 +164,10 @@ export default class MicroBitBoard extends EventEmitter {
   }
 
   /**
-   * Scroll 'yes' to demonstrate successful connection
-   * to the board.
-   * @returns {Promise} resolved when the song and animation are done.
+   * Displays  to demonstrate successful connection
+   * A square is drawn in a spiral and then a checkmark flashes 3 times
+   * on the board.
+   * @returns {Promise} resolved when the animation is done.
    */
   celebrateSuccessfulConnection() {
     function makeSquare(ledScreen, delay, timeInterval) {
