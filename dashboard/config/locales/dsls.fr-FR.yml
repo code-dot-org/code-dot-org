@@ -9266,7 +9266,7 @@ fr-FR:
         - text: Préparer
         - text: Réfléchir
         - text: Essayer
-        - text: Définis
+        - text: Définir
       CSD U1 Test PSP match_2021:
         answers:
         - {}
@@ -9277,7 +9277,7 @@ fr-FR:
         - text: Préparer
         - text: Réfléchir
         - text: Essayer
-        - text: Définis
+        - text: Définir
       CSD U1 Test PSP match_2022:
         answers:
         - {}
@@ -9288,7 +9288,7 @@ fr-FR:
         - text: Préparer
         - text: Réfléchir
         - text: Essayer
-        - text: Définis
+        - text: Définir
       CSD U1 Test define a computer:
         answers:
         - correct: true

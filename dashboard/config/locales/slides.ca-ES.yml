@@ -213,11 +213,7 @@ ca:
         text: La definició resta en l'àrea de treball, però el nostre agricultor no
           executarà la funció fins que haguem arrossegat el nostre bloc funció "omplir
           5" fora de la categoria de funcions.
-      5:
-        text: Let's put the "fun" back in "FUNction!"
     loop_while:
-      1:
-        text: Hi, I'm Makinde! Let's learn about the "while block."
       2:
         text: El "bloc mentre" farà tot el que posem a l'interior durant l'estona
           que l'expressió que l'encapçala sigui certa.
