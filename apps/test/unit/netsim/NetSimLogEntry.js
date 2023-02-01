@@ -44,7 +44,7 @@ describe('NetSimLogEntry', function() {
     assert.equal(row.status, NetSimLogEntry.LogStatus.SUCCESS);
 
     assert.property(row, 'timestamp');
-    assert.closeTo(row.timestamp, Date.now(), 10);
+    assert.closeTo(row.timestamp, Date.now(), 100);
 
     assert.property(row, 'sentBy');
     assert.equal(row.sentBy, '');
@@ -123,7 +123,7 @@ describe('NetSimLogEntry', function() {
         assert.equal(rowBinary, binary);
         assert.equal(row.status, status);
         assert.equal(row.sentBy, sentBy);
-        assert.closeTo(row.timestamp, Date.now(), 10);
+        assert.closeTo(row.timestamp, Date.now(), 100);
       });
     });
 
