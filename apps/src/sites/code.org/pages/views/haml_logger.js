@@ -18,7 +18,7 @@ const page_to_event_map = {
   RP_Landing: EVENTS.RP_LANDING_PAGE_VISITED_EVENT
 };
 
-$(document).ready(e => {
+$(document).ready(() => {
   const haml_logger = $('#haml-logger');
   const sourcePageId = haml_logger.data('page-visited');
   analyticsReporter.sendEvent(page_to_event_map[sourcePageId]);
