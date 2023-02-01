@@ -123,24 +123,24 @@ kn:
           ಫೋನ್‌ನಲ್ಲಿ ನಿಮ್ಮ ಗೇಮ್ ಟ್ರೈ ಮಾಡಲು ಫಿನಿಶ್ ಕ್ಲಿಕ್ ಮಾಡಿ.
     video:
       name:
-        artist_intro: ಆರ್ಟಿಸ್ಟ್‌ ಪರಿಚಯ
+        artist_intro: ಕಲಾವಿದನ ಪರಿಚಯ
         Unplug6: ಕಂಡೀಷನಲ್ಸ್‌
         Unplug7: ಹಾಡು ಬರೆಯವುದು
         Unplug10: ಇಂಟರ್ನೆಟ್
         C1_happy_maps_unplugged: ಸಂತೋಷದ ನಕ್ಷೆಗಳು
         C1_bigevent_unplugged: ದೊಡ್ಡ ಘಟನೆ
         C1_getting_loopy: ಲೂಪಿ ಆಗುವುದು
-        C1_artist_intro: ಆರ್ಟಿಸ್ಟ್‌ ಪರಿಚಯ
+        C1_artist_intro: ಕಲಾವಿದನ ಪರಿಚಯ
         C1_building_foundation: ಅಡಿಪಾಯವನ್ನು ನಿರ್ಮಿಸುವುದು
         C1_going_places_safely: ಸುರಕ್ಷಿತವಾಗಿ ಸ್ಥಳಗಳಿಗೆ ಹೋಗುವುದು
-        C2_artist_intro: ಆರ್ಟಿಸ್ಟ್‌ ಪರಿಚಯ
-        C2_artist_loops: ಆರ್ಟಿಸ್ಟ್‌ ಲೂಪ್‌ಗಳು
+        C2_artist_intro: ಕಲಾವಿದನ ಪರಿಚಯ
+        C2_artist_loops: ಕಲಾವಿದನ ಲೂಪ್‌ಗಳು
         C2_artist_debugging: ಆರ್ಟಿಸ್ಟ್ ಡಿಬಗ್ಗಿಂಗ್‌
         C2_conditionals_with_cards: ಕಂಡೀಷನಲ್ಸ್‌
         C2_binary_bracelets: ಬೈನರಿ ಕಡಗಗಳು
         C2_digital_footprint: ನಿಮ್ಮ ಡಿಜಿಟಲ್ ಹೆಜ್ಜೆಗುರುತು
         C2_digital_footprint_v2: ನಿಮ್ಮ ಡಿಜಿಟಲ್ ಹೆಜ್ಜೆಗುರುತು
-        C3_artist_intro: ಆರ್ಟಿಸ್ಟ್‌ ಪರಿಚಯ
+        C3_artist_intro: ಕಲಾವಿದನ ಪರಿಚಯ
         C3_artist_functions: ಆರ್ಟಿಸ್ಟ್ ಫಂಕ್ಷನ್‌ಗಳು
         C3_artist_nested_loops: ನೆಸ್ಟೆಡ್ ಲೂಪ್‌ಗಳು
         C3_bee_nested_loops: ನೆಸ್ಟೆಡ್ ಲೂಪ್‌ಗಳು
@@ -149,8 +149,12 @@ kn:
         C3_functional_suncatchers: ಕ್ರಿಯಾತ್ಮಕ ಸನ್‌ಕ್ಯಾಚರ್‌ಗಳು
         C4_loops_zombie: ಲೂಪ್‌ಗಳು
         C4_variables_artist: ವೇರಿಯಬಲ್ಸ್‌ - ಆರ್ಟಿಸ್ಟ್
+        C4_for_loops: ಲೂಪ್ಸಗಾಗಿ
+        C4_for_loops_bee: ಲೂಪ್ಸಗಾಗಿ
+        C4_for_loops_no_bee: ಲೂಪ್ಸಗಾಗಿ
         C4_math_artist: ಗಣಿತದೊಂದಿಎಗ ಆರ್ಟಿಸ್ಟ್‌ ಪ್ರೋಗ್ರಾಮ್ ಮಾಡುವುದು
         C4_conditionals: ಕಂಡೀಷನಲ್ಸ್‌
+        C4_unplugged_forloops: ಲೂಪ್ಸಗಾಗಿ
         CSF_a_b_artist_loops: ಆರ್ಟಿಸ್ಟ್‌ನಲ್ಲಿ ಲೂಪ್ಸ್
         CSF_artist_angles: ಆರ್ಟಿಸ್ಟ್‌ನಲ್ಲಿ ಆಂಗಲ್ಸ್
         CSF_collector_k1_blocks: 'CS ಫಂಡಮೆಂಟಲ್ಸ್‌: ಕಲೆಕ್ಟರ್'
