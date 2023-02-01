@@ -454,6 +454,9 @@ describe('EditSectionForm', () => {
       'Section Curriculum Assigned'
     );
     assert.deepEqual(analyticsSpy.getCall(1).lastArg, {
+      sectionName: testSection.name,
+      sectionId: testSection.id,
+      sectionLoginType: testSection.loginType,
       previousUnitId: 7,
       previousCourseId: 3,
       previousVersionYear: '2022',
