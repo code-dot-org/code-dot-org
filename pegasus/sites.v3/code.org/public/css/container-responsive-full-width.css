@@ -9,7 +9,7 @@
   padding: 0;
 }
 
-/* Use semantic <section> element instead of <div> */
+/* Use semantic <section> elements instead of <div>s */
 /* This is better for accessibility */
 section {
   width: 100%;

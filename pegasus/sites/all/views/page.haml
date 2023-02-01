@@ -87,7 +87,7 @@
 
         %div{:class=>containerClass}
 
-          -if header['responsive']
+          -if header['responsive'] || 'responsive_full_width'
             =body
 
             #clearboth{:style=>"clear:both"}
@@ -126,7 +126,7 @@
             %br/
         .push
 
-      -if header['responsive']
+      -if header['responsive'] || 'responsive_full_width'
         .desktop-feature
           = partial('page_footer')
         .mobile-headers.mobile-feature

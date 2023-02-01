@@ -30,7 +30,7 @@
 
   %div{:class=>containerClass}
 
-    -if @header['theme'] == 'responsive'
+    -if @header['theme'] == 'responsive' || 'responsive_full_width'
       -if @header['nav']
         %div
           .col-80-right
@@ -80,7 +80,7 @@
       %br/
   .push
 
--if @header['theme'] == 'responsive'
+-if @header['theme'] == 'responsive' || 'responsive_full_width'
   .desktop-feature
     -if @header['footer'] == 'donor_footer'
       = view :donor_slider
