@@ -226,7 +226,8 @@ class Api::V1::UsersControllerTest < ActionController::TestCase
     get :get_school_name, params: {user_id: @user.id}
     assert_response :success
     response = JSON.parse(@response.body)
-    assert_equal @user.school, response["school_name"]
+    assert_nil @user.school
+    assert_nil response["school_name"]
   end
 
   test "school name is not returned for a user that is not signed in" do

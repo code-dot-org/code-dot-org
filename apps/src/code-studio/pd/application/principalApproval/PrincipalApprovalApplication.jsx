@@ -2,6 +2,8 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import FormController from '../../form_components_func/FormController';
 import PrincipalApprovalComponent from './PrincipalApprovalComponent';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 
 const PrincipalApprovalApplication = props => {
   const getInitialData = () => ({
@@ -44,6 +46,7 @@ const PrincipalApprovalApplication = props => {
   };
 
   const onSuccessfulSubmit = () => {
+    analyticsReporter.sendEvent(EVENTS.ADMIN_APPROVAL_RECEIVED_EVENT);
     window.location.reload(true);
   };
 
