@@ -3,8 +3,7 @@ require 'rack/test'
 ENV['RACK_ENV'] = 'test'
 require_relative '../../deployment'
 require 'cdo/rack/allowlist'
-
-require_relative '../../cookbooks/cdo-varnish/libraries/http_cache'
+require 'cdo/http_cache'
 
 module Cdo
   module RackMockServer
