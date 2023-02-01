@@ -17,7 +17,7 @@
       -containerClass = "container_responsive mobile-pad-edge"
     -else
       -containerClass = "container_responsive"
-  -if @header['theme'] == 'responsive_full_width'
+  -elsif @header['theme'] == 'responsive_full_width'
     -containerClass = 'container_responsive_full_width'
   -else
     -containerClass = "container_nonresponsive"
