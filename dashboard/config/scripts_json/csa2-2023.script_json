@@ -15,7 +15,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-12-28 13:28:50 UTC",
+    "serialized_at": "2023-01-16 12:18:52 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -4352,12 +4352,23 @@
       }
     },
     {
-      "key": "ab5e9b98-fbaa-469e-947d-2bde3e894489",
+      "key": "28e37522-0266-469d-a38c-661ad44ea0a5",
       "position": 3,
       "properties": {
-        "description": "You will finish developing your store management program. Be sure to consider the feedback you received from your code review as you work on your program. First, let's revisit the Store Management Project Planning Guide to make sure you have included everything you need to meet the project requirements.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the steps for Day 3 of the project.",
         "duration": "15",
-        "name": "Development",
+        "name": "Development"
+      },
+      "seeding_key": {
+        "activity_section.key": "28e37522-0266-469d-a38c-661ad44ea0a5",
+        "lesson_activity.key": "bc95c947-5bc8-4378-bb56-681e0be23009"
+      }
+    },
+    {
+      "key": "ab5e9b98-fbaa-469e-947d-2bde3e894489",
+      "position": 4,
+      "properties": {
+        "description": "You will finish developing your store management program. Be sure to consider the feedback you received from your code review as you work on your program. First, let's revisit the Store Management Project Planning Guide to make sure you have included everything you need to meet the project requirements.",
         "remarks": true
       },
       "seeding_key": {
@@ -4367,7 +4378,7 @@
     },
     {
       "key": "0a03bd6f-0b08-4f22-8b26-e553b1a8e32c",
-      "position": 4,
+      "position": 5,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students self-assess their project using the project requirements and rubric on the Store Management Project Planning Guide."
       },
@@ -4378,7 +4389,7 @@
     },
     {
       "key": "d4a0c612-74b5-401f-bc57-e929ac07d4d8",
-      "position": 5,
+      "position": 6,
       "properties": {
         "description": "Use the feedback you received from your code review and self-assessment to finalize your Store Management Project.",
         "remarks": true
@@ -4390,7 +4401,7 @@
     },
     {
       "key": "80bcc478-d255-4cb8-9288-db22ef558c20",
-      "position": 6,
+      "position": 7,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to finish developing their Store Management Project. Have students submit their projects at the end of the allotted time."
       },
@@ -4401,7 +4412,7 @@
     },
     {
       "key": "dc32f08c-df87-4f57-8684-aa637133a1e4",
-      "position": 7,
+      "position": 8,
       "properties": {
         "description": "Congratulations! You have completed your Store Management Project. Let's show off our work through a Gallery Walk so you can share your work with your classmates.",
         "duration": "15",
@@ -4415,7 +4426,7 @@
     },
     {
       "key": "4a4955e5-51ad-45cd-af59-d4395df65f63",
-      "position": 8,
+      "position": 9,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student several sticky notes.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students participate in a Gallery Walk to view each other's programs and leave sticky notes noting what they like about the program."
       },
@@ -4426,7 +4437,7 @@
     },
     {
       "key": "618d928c-29e6-4dbe-8954-0cc472ef987f",
-      "position": 9,
+      "position": 10,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to respond to the End of Project Reflection prompt on the Store Management Project Planning Guide.",
         "duration": "10",
@@ -4445,7 +4456,7 @@
     },
     {
       "key": "9ad4cce1-3623-4811-a3bd-adb77f601f99",
-      "position": 10,
+      "position": 11,
       "properties": {
         "description": "---"
       },
@@ -4456,7 +4467,7 @@
     },
     {
       "key": "2cea9c10-620a-45f9-a082-7401f5a52820",
-      "position": 11,
+      "position": 12,
       "properties": {
         "description": "**Store Management Project:** Use the rubric in the Store Management Project Planning Guide to assess the projects.",
         "name": "Assessment: Grading the Project"
@@ -4677,6 +4688,8 @@
       "position": 2,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to develop their Store Management Project.",
+        "duration": "20",
+        "name": "Development",
         "progression_name": "Store Management Project"
       },
       "seeding_key": {
@@ -9506,6 +9519,16 @@
       }
     },
     {
+      "key": "16a64b6a-0437-4e6f-b695-8fe34895c85c",
+      "properties": {
+        "description": "Plan a project to meet specifications"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-13",
+        "objective.key": "16a64b6a-0437-4e6f-b695-8fe34895c85c"
+      }
+    },
+    {
       "key": "2ad8d674-18a2-4b7f-9aff-03eba4c29333",
       "properties": {
         "description": "Use the `this` keyword to refer to the current object"
@@ -9616,16 +9639,6 @@
       }
     },
     {
-      "key": "b5e44d0b-53c9-4880-9f83-e89cc8863e42",
-      "properties": {
-        "description": "Incorporate user interaction with a program using the `Scanner` class"
-      },
-      "seeding_key": {
-        "lesson.key": "lesson-10",
-        "objective.key": "b5e44d0b-53c9-4880-9f83-e89cc8863e42"
-      }
-    },
-    {
       "key": "bb7743fd-e1b0-47c3-88dd-8b7eabf2339f",
       "properties": {
         "description": "Write a parameterized constructor in a subclass that calls the superclass constructor"
@@ -9653,6 +9666,16 @@
       "seeding_key": {
         "lesson.key": "lesson-11",
         "objective.key": "c0db592c-652a-46b4-b65f-eaaaf38898c9"
+      }
+    },
+    {
+      "key": "c954385d-8c0e-4903-8b4b-8b4fc1a50b30",
+      "properties": {
+        "description": "Design superclasses and subclasses that include accessor, mutator, and `toString()` methods"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-13",
+        "objective.key": "c954385d-8c0e-4903-8b4b-8b4fc1a50b30"
       }
     },
     {

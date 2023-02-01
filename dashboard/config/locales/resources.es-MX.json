@@ -162,6 +162,9 @@
         "virtual_lesson_modifications/coursed/2022": {
           "name": "Modificaciones de las lecciones virtuales"
         },
+        "extension_lessons_micro_bit/coursed/2022": {
+          "type": "Recurso"
+        },
         "password_power-up_if_then_scenarios/coursed/2022": {
           "name": "Contraseña reforzada: Escenarios si… entonces…",
           "url": "https://docs.google.com/document/d/1JeZtFU6hMFTYITAAPaA_CRmOVknvkcKZQszL6u7DRG4/edit",
@@ -400,6 +403,9 @@
           "name": "Modificaciones de las lecciones virtuales",
           "url": "https://docs.google.com/document/d/10v_thWkO0aJNWsCFtv_bpVbiIy-meYs_vbUiHi-ZCH0/preview"
         },
+        "extension_lessons_micro_bit/coursef/2022": {
+          "type": "Recurso"
+        },
         "the_power_of_words_lesson_quiz/coursef/2022": {
           "name": "El poder de las palabras - Cuestionario",
           "url": "https://docs.google.com/forms/d/1OKy2U3F37NSgCBUez9XMi0UJtlHKPXIe_rxy0l_KEOg/copy",
@@ -580,6 +586,9 @@
         },
         "virtual_lesson_modifications/coursee/2022": {
           "name": "Modificaciones de las lecciones virtuales"
+        },
+        "extension_lessons_micro_bit/coursee/2022": {
+          "type": "Recurso"
         },
         "be_a_super_digital_citizen_lesson_slides/coursee/2022": {
           "name": "Ser un Superciudadano Digital: Diapositivas de la lección",
@@ -1328,6 +1337,9 @@
         "virtual_lesson_modifications/coursec/2022": {
           "name": "Modificaciones de las lecciones virtuales",
           "url": "https://docs.google.com/document/d/1p71nZ3SqyNNVIJtQwPA_LTdcnL9RDsxIo5mQe9Gd-hQ/view"
+        },
+        "extension_lessons_micro_bit/coursec/2022": {
+          "type": "Recurso"
         },
         "putting_a_stop_to_online_meanness_lesson_slides/coursec/2022": {
           "name": "Basta de maltrato en línea: diapositivas",
@@ -3854,16 +3866,20 @@
           "type": "Ejemplo"
         },
         "all_code_3/csd/2022": {
-          "name": "Todo el Código"
+          "name": "Todo el Código",
+          "url": "/s/csd7-2022/código"
         },
         "all_resources_4/csd/2022": {
-          "name": "Todos los Recursos"
+          "name": "Todos los Recursos",
+          "url": "/s/csd7-2022/recursos"
         },
         "all_standards_4/csd/2022": {
-          "name": "Todos los Estándares"
+          "name": "Todos los Estándares",
+          "url": "/s/csd7-2022/normas"
         },
         "all_vocabulary_4/csd/2022": {
-          "name": "Todo el Vocabulario"
+          "name": "Todo el Vocabulario",
+          "url": "/s/csd7-2022/vocabulario"
         },
         "ai_what_is_machine_learning_/csd/2022": {
           "name": "IA: ¿Qué es el Aprendizaje Automático?",
@@ -3877,10 +3893,12 @@
         },
         "introduction_to_machine_learning/csd/2022": {
           "name": "Introducción al Aprendizaje Automático",
+          "url": "https://docs.google.com/presentation/d/1uT4weLbovBliCfxnkCERfjXWlWWRAYiJQ7brwfYP22U/template/preview",
           "type": "Diapositivas"
         },
         "types_of_machine_learning/csd/2022": {
           "name": "Tipos de Aprendizaje Automático",
+          "url": "https://docs.google.com/presentation/d/1FwOsAQW3y0eQ7NwdUitWwXbj74egitdSdrHGnSxXuOg/template/preview",
           "type": "Diapositivas"
         },
         "types_of_machine_learning_1/csd/2022": {
@@ -3895,6 +3913,7 @@
         },
         "innovations_in_ai/csd/2022": {
           "name": "Innovaciones en IA (Inteligencia Artificial)",
+          "url": "https://docs.google.com/presentation/d/1JqvABbuAj3LiCxZQw91KuesvIxlJdXxU5iOabI-FjrM/template/preview",
           "type": "Diapositivas"
         },
         "innovations_in_ai_-_activity_guide/csd/2022": {
@@ -3917,10 +3936,12 @@
         },
         "finding_patterns_in_data/csd/2022": {
           "name": "Hallazgo de Patrones en Datos",
+          "url": "https://www.youtube.com/watch?v=edFO0bdpoHY",
           "type": "Vídeo"
         },
         "patterns_in_data/csd/2022": {
           "name": "Patrones en Datos",
+          "url": "https://docs.google.com/presentation/d/1FabWi7tB1SI-YjqiPPfgU3Yljb3lJpoD1mFRmzUJiI8/template/preview",
           "type": "Diapositivas"
         },
         "patterns_in_data_1/csd/2022": {
@@ -3945,6 +3966,7 @@
         },
         "classification_models_1/csd/2022": {
           "name": "Modelos de Clasificación",
+          "url": "https://docs.google.com/presentation/d/1f5PG9ASPlRlXNM7gBMOribyQaYpVAaVW9EXWjtrqk1c/template/preview",
           "type": "Diapositivas"
         },
         "fruit_veggie_cards/csd/2022": {
@@ -3964,10 +3986,12 @@
         },
         "introduction_to_ai_lab/csd/2022": {
           "name": "Introducción al Laboratorio de Inteligencia Artificial",
+          "url": "https://docs.google.com/presentation/d/1lxgUDjozD9CF0Nv5n9sWmdguEp3lFX9k90cN-NGQnms/template/preview",
           "type": "Diapositivas"
         },
         "introduction_to_ai_lab_1/csd/2022": {
           "name": "Introducción al Laboratorio de Inteligencia Artificial",
+          "url": "https://www.youtube.com/watch?v=bGJ05vdI3xA",
           "type": "Vídeo"
         },
         "selecting_features/csd/2022": {
@@ -3982,6 +4006,7 @@
         },
         "training_and_testing_in_ai_lab/csd/2022": {
           "name": "Entrenamiento y Pruebas en Laboratorio de Inteligencia Artificial",
+          "url": "https://www.youtube.com/watch?v=HcCtdaiMWPQ",
           "type": "Vídeo"
         },
         "using_data_with_categorical_features/csd/2022": {

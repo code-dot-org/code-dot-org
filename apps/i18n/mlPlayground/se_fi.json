@@ -1,0 +1,128 @@
+{
+  "navigateBack": "Ruovttoluotta",
+  "correctAnswer": "Riekta",
+  "datasets": {
+    "medical_priority": {
+      "fields": {
+        "age": {
+          "id": "ahki"
+        }
+      }
+    },
+    "shoe_survey_toy": {
+      "fields": {
+        "day": {
+          "id": "beaivi"
+        }
+      }
+    },
+    "club_random_toy": {
+      "fields": {
+        "color": {
+          "id": "ivdni"
+        }
+      }
+    },
+    "insurance_cost": {
+      "fields": {
+        "age": {
+          "id": "ahki"
+        }
+      }
+    },
+    "shapes_v2_toy": {
+      "fields": {
+        "sides": {
+          "id": "siiddut"
+        }
+      }
+    },
+    "billionaires": {
+      "fields": {
+        "Age": {
+          "id": "Ahki"
+        },
+        "Gender": {
+          "id": "Sohkabealli"
+        }
+      }
+    },
+    "student_alcohol_consumption": {
+      "fields": {
+        "age": {
+          "id": "ahki"
+        }
+      }
+    },
+    "census_part": {
+      "fields": {
+        "age": {
+          "id": "ahki"
+        }
+      }
+    },
+    "loneliness_interests": {
+      "fields": {
+        "Internet": {
+          "id": "Interneahtta"
+        }
+      }
+    },
+    "movies": {
+      "fields": {
+        "Star": {
+          "id": "Násti"
+        }
+      }
+    },
+    "songs": {
+      "fields": {
+        "Artist": {
+          "id": "Dáiddár"
+        }
+      }
+    },
+    "safari_toy": {
+      "name": "Safári"
+    },
+    "student_survey": {
+      "fields": {
+        "Music": {
+          "id": "Musihkka"
+        },
+        "Internet": {
+          "id": "Interneahtta"
+        },
+        "Age": {
+          "id": "Ahki",
+          "description": "Ahki"
+        },
+        "Gender": {
+          "id": "Sohkabealli",
+          "description": "Sohkabealli"
+        }
+      }
+    },
+    "heart": {
+      "fields": {
+        "Age": {
+          "id": "Ahki"
+        }
+      }
+    },
+    "shapes_v1_toy": {
+      "fields": {
+        "sides": {
+          "id": "siiddut"
+        }
+      }
+    },
+    "loneliness_music": {
+      "fields": {
+        "Music": {
+          "id": "Musihkka"
+        }
+      }
+    }
+  }
+}

@@ -4072,6 +4072,15 @@ pt:
           lesson_groups:
             lessonGroup-2:
               display_name: Conteúdo
+        csa3-2023:
+          lessons:
+            lesson-1:
+              name: Arrays Unidimensionais (1D)
+            lesson-3:
+              name: Ciclos "for"
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Conteúdo
         csd1-2023:
           lesson_groups:
             lessonGroup-2:

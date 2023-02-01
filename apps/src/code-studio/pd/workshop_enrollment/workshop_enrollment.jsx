@@ -7,6 +7,8 @@ import WorkshopDetails from './workshop_details';
 import FacilitatorBio from './facilitator_bio';
 import EnrollForm from './enroll_form';
 import {WorkshopPropType, FacilitatorPropType} from './enrollmentConstants';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 
 const SUBMISSION_STATUSES = {
   UNSUBMITTED: 'unsubmitted',
@@ -135,6 +137,11 @@ export default class WorkshopEnrollment extends React.Component {
   }
 
   renderSuccess() {
+    analyticsReporter.sendEvent(EVENTS.WORKSHOP_ENROLLMENT_COMPLETED_EVENT, {
+      'regional partner': this.props.workshop.regional_partner?.name,
+      'workshop course': this.props.workshop.course,
+      'workshop subject': this.props.workshop.subject
+    });
     return (
       <div>
         <h1>Thank you for registering</h1>
