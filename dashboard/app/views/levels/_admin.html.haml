@@ -10,11 +10,13 @@
         %li= link_to 'view animation JSON', '', onclick: 'window.viewExportableAnimationList(); return false'
       - if Rails.application.config.levelbuilder_mode
         - if can? :edit, @level
+          - project_template_level_name = @level.properties['project_template_level_name']
           %li
             = link_to '[E]dit', edit_level_path(@level), { accesskey: 'e', title: "Edit this level. Can use the browser-dependent accesskey shortcut for quick access." }
             - if @level.is_a? Blockly
               %ul
-                %li= link_to "[s]tart (#{Blockly.count_xml_blocks(@level.start_blocks)})", edit_blocks_level_path(@level, :start_blocks), { accesskey: 's' }
+                - unless project_template_level_name
+                  %li= link_to "[s]tart (#{Blockly.count_xml_blocks(@level.start_blocks)})", edit_blocks_level_path(@level, :start_blocks), { accesskey: 's' }
                 - unless @level.uses_droplet?
                   %li= link_to 's[o]lution', edit_blocks_level_path(@level, :solution_blocks), { accesskey: 'o' }
                   %li= link_to '[t]oolbox', edit_blocks_level_path(@level, :toolbox_blocks), { accesskey: 't' }
@@ -31,7 +33,8 @@
                   Copy selected block to clipboard
             - elsif @level.is_a? Javalab
               %ul
-                %li= link_to "[s]tart", edit_blocks_level_path(@level, :start_sources), { accesskey: 's' }
+                - unless project_template_level_name
+                  %li= link_to "[s]tart", edit_blocks_level_path(@level, :start_sources), { accesskey: 's' }
                 %li= link_to "e[x]emplar", edit_exemplar_level_path(@level), { accesskey: 'x'}
         - else
           %li (Cannot edit)
@@ -66,7 +69,7 @@
                 %li
                   = link_to contained_level_name, level_path(contained_level)
                   = link_to '[E]', edit_level_path(contained_level)
-        - if project_template_level_name = @level.properties['project_template_level_name']
+        - if project_template_level_name
           - project_template_level = Level.find_by_name(project_template_level_name)
           %li
             = 'template: '
