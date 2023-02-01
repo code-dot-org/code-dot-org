@@ -417,8 +417,9 @@ export function addBlankAnimation() {
  */
 export function appendBlankFrame() {
   return (dispatch, getState) => {
-    const selectedAnimationKey = getState().animationTab.selectedAnimation;
-    dispatch(setPendingFramesAction(selectedAnimationKey, {blankFrame: true}));
+    const currentAnimationKey = getState().animationTab.currentAnimations
+      .default;
+    dispatch(setPendingFramesAction(currentAnimationKey, {blankFrame: true}));
     projectChanged();
   };
 }
@@ -454,9 +455,10 @@ export function addAnimation(key, props) {
  */
 export function appendCustomFrames(props) {
   return (dispatch, getState) => {
-    const selectedAnimationKey = getState().animationTab.selectedAnimation;
-    dispatch(setPendingFramesAction(selectedAnimationKey, props));
-    dispatch(loadPendingFramesFromSource(selectedAnimationKey, props));
+    const currentAnimationKey = getState().animationTab.currentAnimations
+      .default;
+    dispatch(setPendingFramesAction(currentAnimationKey, props));
+    dispatch(loadPendingFramesFromSource(currentAnimationKey, props));
     projectChanged();
   };
 }
@@ -501,9 +503,10 @@ export function addLibraryAnimation(props, skipBackground) {
  */
 export function appendLibraryFrames(props) {
   return (dispatch, getState) => {
-    const selectedAnimationKey = getState().animationTab.selectedAnimation;
-    dispatch(setPendingFramesAction(selectedAnimationKey, props));
-    dispatch(loadPendingFramesFromSource(selectedAnimationKey, props));
+    const currentAnimationKey = getState().animationTab.currentAnimations
+      .default;
+    dispatch(setPendingFramesAction(currentAnimationKey, props));
+    dispatch(loadPendingFramesFromSource(currentAnimationKey, props));
     projectChanged();
   };
 }
