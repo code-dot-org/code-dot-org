@@ -24,7 +24,9 @@ const EVENTS = {
   SUBMIT_RP_CONTACT_FORM_EVENT: 'Submit Regional Partner Contact Form',
 
   // Marketing site pages
+  HOMEPAGE_VISITED_EVENT: 'Homepage Visited',
   ADMIN_PAGE_VISITED_EVENT: 'Administrator Page Visited',
+  TEACH_PAGE_VISITED_EVENT: 'Teach Page Visited',
   CSA_CURRICULUM_PAGE_VISITED_EVENT: 'CSA Curriculum Page Visited',
   CSD_CURRICULUM_PAGE_VISITED_EVENT: 'CSD Curriculum Page Visited',
   CSF_CURRICULUM_PAGE_VISITED_EVENT: 'CSF Curriculum Page Visited',
