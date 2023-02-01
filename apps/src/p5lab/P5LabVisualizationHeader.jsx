@@ -12,6 +12,7 @@ import {allowAnimationMode, countAllowedModes} from './stateQueries';
 import PoemSelector from './poetry/PoemSelector';
 import * as utils from '../utils';
 import color from '@cdo/apps/util/color';
+import experiments from '@cdo/apps/util/experiments';
 
 /**
  * Controls above the visualization header, including the code/animation toggle.
@@ -102,16 +103,18 @@ class P5LabVisualizationHeader extends React.Component {
                     : msg.animationMode()}
                 </button>
               )}
-              {allowAnimationMode && this.props.isBlockly && (
-                <button
-                  style={styles.buttonFocus}
-                  type="button"
-                  value={P5LabInterfaceMode.BACKGROUND}
-                  id="backgroundMode"
-                >
-                  {msg.backgroundMode()}
-                </button>
-              )}
+              {allowAnimationMode &&
+                this.props.isBlockly &&
+                experiments.isEnabled('backgroundsTab') && (
+                  <button
+                    style={styles.buttonFocus}
+                    type="button"
+                    value={P5LabInterfaceMode.BACKGROUND}
+                    id="backgroundMode"
+                  >
+                    {msg.backgroundMode()}
+                  </button>
+                )}
             </ToggleGroup>
           </div>
         )}

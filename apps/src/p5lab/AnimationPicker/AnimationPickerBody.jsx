@@ -67,6 +67,26 @@ export default class AnimationPickerBody extends React.Component {
     }
   }
 
+  // Can be safely removed once the 'backgroundsTab' experiment is removed.
+  UNSAFE_componentWillReceiveProps(nextProps) {
+    if (this.props.defaultQuery !== nextProps.defaultQuery) {
+      const currentPage = 0;
+      const {results, pageCount} = this.searchAssetsWrapper(
+        currentPage,
+        nextProps.defaultQuery
+      );
+      let nextQuery = nextProps.defaultQuery || {
+        categoryQuery: '',
+        searchQuery: ''
+      };
+      this.setState({
+        ...nextQuery,
+        currentPage,
+        results,
+        pageCount
+      });
+    }
+  }
   searchAssetsWrapper = (page, config = {}) => {
     let {searchQuery, categoryQuery, libraryManifest} = config;
 

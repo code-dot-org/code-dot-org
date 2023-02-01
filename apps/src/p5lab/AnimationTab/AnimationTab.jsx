@@ -12,6 +12,7 @@ import PiskelEditor from './PiskelEditor';
 import * as shapes from '../shapes';
 import i18n from '@cdo/locale';
 import {P5LabInterfaceMode, P5LabType} from '../constants.js';
+import experiments from '@cdo/apps/util/experiments';
 
 /**
  * Root of the animation editor interface mode for GameLab
@@ -47,7 +48,8 @@ class AnimationTab extends React.Component {
     const hideCostumes =
       this.props.interfaceMode === P5LabInterfaceMode.BACKGROUND;
     const animationsColumnStyle =
-      this.props.labType === 'SPRITELAB'
+      this.props.labType === 'SPRITELAB' &&
+      experiments.isEnabled('backgroundsTab')
         ? styles.animationsColumnSpritelab
         : styles.animationsColumnGamelab;
     return (
