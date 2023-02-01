@@ -80,14 +80,12 @@
             -containerClass = "container_responsive mobile-pad-edge"
           -else
             -containerClass = "container_responsive"
-        -if @header['theme'] == 'responsive_full_width'
-          -containerClass = 'container_responsive_full_width'
         -else
           -containerClass = "container_nonresponsive"
 
         %div{:class=>containerClass}
 
-          -if header['responsive'] || 'responsive_full_width'
+          -if header['responsive']
             =body
 
             #clearboth{:style=>"clear:both"}
@@ -126,7 +124,7 @@
             %br/
         .push
 
-      -if header['responsive'] || 'responsive_full_width'
+      -if header['responsive']
         .desktop-feature
           = partial('page_footer')
         .mobile-headers.mobile-feature
