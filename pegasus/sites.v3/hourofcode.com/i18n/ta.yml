@@ -7882,8 +7882,7 @@ ta:
   tutorial_irobotphone_string_platforms: அனைத்து நவீன உலாவிகளும்
   tutorial_codeguppydraw_string_platforms: அனைத்து நவீன உலாவிகளும்
   tutorial_codejumper_string_platforms: அன்ப்ளுக்ட்,ஸ்கிரீன் ரீடர்
-  tutorial_meeempathy_string_platforms: 'அனைத்து நவீன உலாவிகளும்,ஆண்ட்ராய்டு டேப்லெட்
-    ,ஐபாட் '
+  tutorial_meeempathy_string_platforms: ஐபாட், கணினிகள் (விண்டோஸ் பிசி, மேக்)
   tutorial_dance2019_string_detail_platforms: ''
   tutorial_danceparty_string_detail_platforms: ''
   tutorial_chibitronics_string_detail_platforms: சிபிட்ரோனிக்ஸ் சிபி சிப் மற்றும்
@@ -10866,8 +10865,7 @@ ta:
   tutorial_microsoftforest_string_platforms: அனைத்து நவீன உலாவிகளும்
   tutorial_blackbirdscreen_string_platforms: குரோம்
   tutorial_toxicodecompute2_string_platforms: அனைத்து நவீன உலாவிகளும்
-  tutorial_minecrafttimecraft_string_platforms: iPad, Computers (Windows PC, Mac),
-    Android (Chromebooks), iPad, Screen reader
+  tutorial_minecrafttimecraft_string_platforms: ஐபாட், கணினிகள் (விண்டோஸ் பிசி, மேக்)
   tutorial_blackbirdtether_string_platforms: குரோம்
   tutorial_ob_string_platforms: அனைத்து நவீன உலாவிகள், ஸ்க்ரீன் ரீடர்
   tutorial_codeartportrait_string_platforms: 'அனைத்து நவீன உலாவிகளும்,ஆண்ட்ராய்டு
@@ -11834,8 +11832,7 @@ ta:
   tutorial_nasaorbit_string_platforms: அனைத்து நவீன உலாவிகளும்
   tutorial_nasapackage_string_platforms: அனைத்து நவீன உலாவிகளும்
   tutorial_nasalunar_string_platforms: அனைத்து நவீன உலாவிகளும், ஐபாட், ஐபோன்
-  tutorial_meeestate_string_platforms: Android tablet, iPad, Windows phone, Android
-    phone, iPhone
+  tutorial_meeestate_string_platforms: ஐபாட், கணினிகள் (விண்டோஸ் பிசி, மேக்)
   tutorial_imagipixelart_string_platforms: All modern browsers, iPad, Android tablets,
     Windows phone, Android phone, iPhone
   tutorial_kcjhealth_string_platforms: அனைத்து நவீன உலாவிகளும்
