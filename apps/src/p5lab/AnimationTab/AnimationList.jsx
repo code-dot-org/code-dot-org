@@ -25,58 +25,62 @@ class AnimationList extends React.Component {
   };
 
   render() {
-    let buttonLabelNewAnimation;
-    if (this.props.spriteLab) {
-      buttonLabelNewAnimation = this.props.hideBackgrounds
+    const {
+      animationList,
+      hideBackgrounds,
+      hideCostumes,
+      labType,
+      onNewItemClick,
+      spriteLab,
+      selectedAnimation
+    } = this.props;
+    let newAnimationLabel;
+    if (spriteLab) {
+      newAnimationLabel = hideBackgrounds
         ? i18n.newCostume()
         : i18n.newBackground();
     } else {
-      buttonLabelNewAnimation = i18n.newAnimation();
+      newAnimationLabel = i18n.newAnimation();
     }
     let addAnimation = (
       <NewListItem
         key="new_animation"
-        label={buttonLabelNewAnimation}
-        onClick={() =>
-          this.props.onNewItemClick(
-            this.props.spriteLab,
-            this.props.hideCostumes
-          )
-        }
+        label={newAnimationLabel}
+        onClick={() => onNewItemClick(spriteLab, hideCostumes)}
       />
     );
-    let animationListKeys = this.props.animationList.orderedKeys;
-    if (this.props.hideBackgrounds) {
+    let animationListKeys = animationList.orderedKeys;
+    if (hideBackgrounds) {
       animationListKeys = animationListKeys.filter(key => {
         return !this.backgroundCategoryAnimations(key);
       });
-    } else if (this.props.hideCostumes) {
+    } else if (hideCostumes) {
       animationListKeys = animationListKeys.filter(key => {
         return this.backgroundCategoryAnimations(key);
       });
     }
     return (
       <ScrollableList style={styles.root} className="animationList">
-        {this.props.spriteLab && addAnimation}
+        {spriteLab && addAnimation}
         {animationListKeys.map(key => (
           <AnimationListItem
             key={key}
             animationKey={key}
-            animationProps={this.props.animationList.propsByKey[key]}
-            isSelected={key === this.props.selectedAnimation}
-            animationList={this.props.animationList}
-            labType={this.props.labType}
+            animationProps={animationList.propsByKey[key]}
+            isSelected={key === selectedAnimation}
+            animationList={animationList}
+            labType={labType}
           />
         ))}
-        {!this.props.spriteLab && addAnimation}
+        {!spriteLab && addAnimation}
       </ScrollableList>
     );
   }
 
   backgroundCategoryAnimations(key) {
-    return (this.props.animationList.propsByKey[key].categories || []).includes(
-      'backgrounds'
-    );
+    return (
+      this.props.animationList.propsByKey?.[key]?.categories || []
+    ).includes('backgrounds');
   }
 }
 
