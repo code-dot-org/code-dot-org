@@ -147,12 +147,15 @@ module SignUpTracking
     end_sign_up_tracking session if user.persisted?
   end
 
+  # @param flow [String] The account signup flow the user is starting e.g. "email_signup",
+  # "section_signup"
   def self.log_gender_input_type_started(session, gender_input_type, locale, flow)
     # We don't need new tracking events if they user has already started the flow recently.
-    return if session[:gender_input_uid_expiration]&.future?
+    return if session[:gender_input_flow] == flow && session[:gender_input_uid_expiration]&.future?
     # Identifier for tracking events for a single user.
     session[:gender_input_uid] = SecureRandom.uuid.to_s
     session[:gender_input_uid_expiration] = 30.minutes.from_now
+    session[:gender_input_flow] = flow
     FirehoseClient.instance.put_record(
       :analysis,
       {
@@ -194,5 +197,6 @@ module SignUpTracking
     session.delete(:gender_input_uid)
     session.delete(:gender_input_uid_expiration)
     session.delete(:gender_input_type)
+    session.delete(:gender_input_flow)
   end
 end
