@@ -254,6 +254,9 @@ export const assignToSection = (
       section.unitId !== unitId
     ) {
       analyticsReporter.sendEvent(EVENTS.CURRICULUM_ASSIGNED, {
+        sectionName: section.name,
+        sectionId,
+        sectionLoginType: section.loginType,
         previousUnitId: section.unitId,
         previousCourseId: section.courseOfferingId,
         newUnitId: unitId,
@@ -289,6 +292,9 @@ export const unassignSection = (sectionId, location) => (
   // Only log if the section had something assigned
   if (!!section.courseOfferingId) {
     analyticsReporter.sendEvent(EVENTS.CURRICULUM_ASSIGNED, {
+      sectionName: section.name,
+      sectionId,
+      sectionLoginType: section.loginType,
       previousUnitId: section.unitId,
       previousCourseId: section.courseOfferingId,
       newUnitId: null,
