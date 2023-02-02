@@ -1,32 +1,33 @@
 ---
 title: Professional Learning Program Details
-video_player: true
-theme: responsive
+theme: responsive_full_width
 ---
 
 %link{href: "/shared/css/phase1-design-system.css", rel: "stylesheet"}
-%link{href: "/css/video-responsive.css", rel: "stylesheet"}
 %link{href: "/css/generated/middle-high.css", rel: "stylesheet"}
 
 %section
   .wrapper
-    %h1 Code.org Professional Learning</h1>
-    %h2 Help today's students become tomorrow's superheroes.</p>
-    %p Find your local professional learning workshops for middle and high school and apply today!</p>
+    %h1 Code.org Professional Learning
+    %p Help today's students become tomorrow's superheroes.
+    %p Find your local professional learning workshops for middle and high school and apply today!
 
 %section
   .wrapper
-    .text-wrapper.col-50
+    %div.col-50
       %h2 Why Code.org professional learning?
       %p Our engaging workshops are for new and experienced computer science teachers! In this program, you will:
       %ul
         %li Explore the curriculum and learning tools
         %li Experience the course as a teacher and a learner
         %li Collaborate with fellow teachers
-      %a{href: CDO.hourofcode_url('/pd/application/teacher'), class: 'button'} Apply
-    %figure.video-responsive
-      %div
-        %iframe{src: 'https://www.youtube.com/embed/dScOdk0yY38', title: 'YouTube video player', allowfullscreen: 'true'}
+      %a{href: CDO.hourofcode_url('/pd/application/teacher')}
+        %button Apply now
+    %div.col-50
+      %figure.video-responsive
+        %div
+          %iframe{src: 'https://www.youtube.com/embed/dScOdk0yY38', title: 'YouTube video player', allowfullscreen: 'true'}
+    .clear
 
 %section
   .wrapper
@@ -74,6 +75,8 @@ theme: responsive
         %span 4
         %h5 Enroll
         %p Sign up for the summer workshop in your region and get ready to start the yearlong program!
+    %a{href: CDO.hourofcode_url('/pd/application/teacher')}
+      %button Apply now
 
 %section
   .wrapper
@@ -81,7 +84,8 @@ theme: responsive
     .text-wrapper
       %h2 What does the program cost?
       %p The cost of the program varies by region. You may be eligible for a scholarship to cover the cost of your program.
-      %a{href: '/educate/professional-learning/program-information', class:'button'} Learn more about the program in your region
+      %a{href: '/educate/professional-learning/program-information'}
+        %button Learn more about the program in your region
 
 %section
   .wrapper
@@ -93,4 +97,6 @@ theme: responsive
   .wrapper
     %h2 Have questions?
     %p Your local Code.org Regional Partner provides high quality Code.org professional learning to teachers, and can help guide your school or district on implementation, certification, funding, and more. They are happy to answer any questions you may have about the program!
-    %a{href: '', class: 'button'}
+    = view :professional_development_workshops_regional_partner_search
+    %a{href: 'https://support.code.org/'}
+      %button Visit our support center

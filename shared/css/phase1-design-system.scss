@@ -1,6 +1,5 @@
 @import 'color';
 @import 'font';
-@import 'breakpoints';
 
 // This file is used only for Phase 1 style updates across the pages of dashboard and pegasus/code.org
 // It should be imported to the pages that are listed in Phase 1 updates.
@@ -9,6 +8,7 @@
 
 body {
   font-size: 100%;
+  color: $neutral-dark;
 }
 
 h1, h2, h3 {
@@ -46,10 +46,6 @@ h1, h2, h3, h4, h5, h6 {
   margin-top: 0;
 }
 
-p {
-  color: $neutral_dark;
-}
-
 p a,
 p a:visited,
 p a:link,
@@ -63,6 +59,10 @@ a:link {
     color: $brand_secondary_dark;
     text-decoration: underline;
   }
+}
+
+ul li:before {
+  color: $neutral-dark;
 }
 
 .professional-learning-banner {
