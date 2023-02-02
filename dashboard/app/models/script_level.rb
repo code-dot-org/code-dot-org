@@ -706,7 +706,7 @@ class ScriptLevel < ApplicationRecord
         elsif level.is_a?(Poetry)
           send("#{level.standalone_app_name}_project_view_projects_url".to_sym, channel_id: example, host: 'studio.code.org', port: 443, protocol: :https)
         elsif level.is_a?(GamelabJr)
-          send("#{'spritelab'}_project_view_projects_url".to_sym, channel_id: example, host: 'studio.code.org', port: 443, protocol: :https)
+          send("#{level.standalone_app_name_or_default}_project_view_projects_url".to_sym, channel_id: example, host: 'studio.code.org', port: 443, protocol: :https)
         elsif level.is_a?(Artist)
           artist_type = ['elsa', 'anna'].include?(level.skin) ? 'frozen' : 'artist'
           send("#{artist_type}_project_view_projects_url".to_sym, channel_id: example, host: 'studio.code.org', port: 443, protocol: :https)
