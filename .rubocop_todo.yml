@@ -296,11 +296,6 @@ Security/MarshalLoad:
 Style/AccessModifierDeclarations:
   Enabled: false
 
-# Offense count: 62
-# This cop supports unsafe auto-correction (--auto-correct-all).
-Style/CaseLikeIf:
-  Enabled: false
-
 # Offense count: 27
 # This cop supports safe auto-correction (--auto-correct).
 # Configuration parameters: IgnoredMethods.
