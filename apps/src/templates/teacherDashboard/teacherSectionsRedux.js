@@ -3,9 +3,11 @@ import $ from 'jquery';
 import {reload} from '@cdo/apps/utils';
 import {OAuthSectionTypes} from '@cdo/apps/lib/ui/accounts/constants';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import PropTypes from 'prop-types';
 import {SectionLoginType, PlGradeValue} from '../../util/sharedConstants';
 import {ParticipantAudience} from '@cdo/apps/generated/curriculum/sharedCourseConstants';
+import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 
 /**
  * @const {string[]} The only properties that can be updated by the user
@@ -244,6 +246,24 @@ export const assignToSection = (
     {includeUserId: true}
   );
   return (dispatch, getState) => {
+    const section = getState().teacherSections.sections[sectionId];
+    // Only log if the assignment is changing.
+    // We need an OR here because unitId will be null for standalone units
+    if (
+      (courseOfferingId && section.courseOfferingId !== courseOfferingId) ||
+      (unitId && section.unitId !== unitId)
+    ) {
+      analyticsReporter.sendEvent(EVENTS.CURRICULUM_ASSIGNED, {
+        sectionName: section.name,
+        sectionId,
+        sectionLoginType: section.loginType,
+        previousUnitId: section.unitId,
+        previousCourseId: section.courseOfferingId,
+        newUnitId: unitId,
+        newCourseId: courseOfferingId
+      });
+    }
+
     dispatch(beginEditingSection(sectionId, true));
     dispatch(
       editSectionProperties({
@@ -268,6 +288,7 @@ export const unassignSection = (sectionId, location) => (
 ) => {
   dispatch(beginEditingSection(sectionId, true));
   const {initialCourseId, initialUnitId} = getState().teacherSections;
+
   dispatch(
     editSectionProperties({
       courseId: null,
