@@ -186,12 +186,13 @@ class RegistrationsController < Devise::RegistrationsController
 
   def sign_up_params
     super.tap do |params|
-      if params[:user_type] == "teacher"
+      case params[:user_type]
+      when 'teacher'
         params[:email_preference_opt_in_required] = true
         params[:email_preference_request_ip] = request.ip
         params[:email_preference_source] = EmailPreference::ACCOUNT_SIGN_UP
         params[:email_preference_form_kind] = "0"
-      elsif params[:user_type] == "student"
+      when 'student'
         params[:parent_email_preference_request_ip] = request.ip
         params[:parent_email_preference_source] = EmailPreference::ACCOUNT_SIGN_UP
       end

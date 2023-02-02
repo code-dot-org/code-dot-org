@@ -29,9 +29,10 @@ def main
       }]
     }
 
-    if level.type == "Artist"
+    case level.type
+    when "Artist"
       level_hash[:app] = "turtle"
-    elsif level.type == "Karel"
+    when "Karel"
       level_hash[:app] = "maze"
       level_hash[:skinId] = level_hash[:levelDefinition]['skin']
     else
