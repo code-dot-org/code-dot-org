@@ -8,7 +8,6 @@
 
 body {
   font-size: 100%;
-  color: $neutral-dark;
 }
 
 h1, h2, h3 {
@@ -46,12 +45,7 @@ h1, h2, h3, h4, h5, h6 {
   margin-top: 0;
 }
 
-p a,
-p a:visited,
-p a:link,
-a,
-a:visited,
-a:link {
+a {
   color: $brand_secondary_default;
   text-decoration: underline;
 
@@ -59,10 +53,6 @@ a:link {
     color: $brand_secondary_dark;
     text-decoration: underline;
   }
-}
-
-ul li:before {
-  color: $neutral-dark;
 }
 
 .professional-learning-banner {
@@ -81,7 +71,9 @@ ul li:before {
   background-color: $neutral_light;
 }
 
-
+p {
+  color: $neutral_dark;
+}
 
 #signin {
   flex-grow: unset;
