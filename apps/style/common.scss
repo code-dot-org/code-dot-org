@@ -406,6 +406,11 @@ html[dir="rtl"] {
       left: unset !important;
       z-index: 1;
     }
+
+    .droplet-palette-header,
+    .droplet-palette-scroller {
+      border-left: 2px solid #ddd;
+    }
   }
 }
 
