@@ -60,15 +60,17 @@ class CoursesTeacherEnglish extends Component {
 
           <CourseBlocksHoc />
 
-          <CourseBlocksWrapper
-            heading={i18n.courseBlocksToolsTitleTeacher()}
-            description={i18n.standaloneToolsDescription()}
-            cards={
-              this.props.showAiCard
-                ? ToolsCards.concat(ToolsAIExtrasCard)
-                : ToolsCards.concat(ToolsWidgetsCard)
-            }
-          />
+          <div id="uitest-course-blocks-tools">
+            <CourseBlocksWrapper
+              heading={i18n.courseBlocksToolsTitleTeacher()}
+              description={i18n.standaloneToolsDescription()}
+              cards={
+                this.props.showAiCard
+                  ? ToolsCards.concat(ToolsAIExtrasCard)
+                  : ToolsCards.concat(ToolsWidgetsCard)
+              }
+            />
+          </div>
 
           <AdministratorResourcesActionBlock />
         </div>

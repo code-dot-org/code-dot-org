@@ -247,15 +247,17 @@ export class CourseBlocksIntl extends Component {
 
         <CourseBlocksWrapper
           heading={i18n.courseBlocksInternationalGradeBandsContainerHeading()}
-          descripton={i18n.courseBlocksInternationalGradeBandsContainerDescription()}
+          description={i18n.courseBlocksInternationalGradeBandsContainerDescription()}
           cards={InternationalGradeBandCards}
         />
 
-        <CourseBlocksWrapper
-          heading={i18n.courseBlocksToolsTitleNonEn()}
-          description={i18n.standaloneToolsDescription()}
-          cards={ToolsCards.concat(ToolsWidgetsCard)}
-        />
+        <div id="uitest-course-blocks-tools">
+          <CourseBlocksWrapper
+            heading={i18n.courseBlocksToolsTitleNonEn()}
+            description={i18n.standaloneToolsDescription()}
+            cards={ToolsCards.concat(ToolsWidgetsCard)}
+          />
+        </div>
       </div>
     );
   }
