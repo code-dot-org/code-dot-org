@@ -105,6 +105,7 @@ class RakeTaskEventLogger
       puts duration_ms.nil? ? 1 : duration_ms
     rescue => e
       ChatClient.log 'Exception', color: 'green'
+      ChatClient.log exception&.to_s, color: 'green'
       puts "Exception"
       puts e
       Honeybadger.notify(
