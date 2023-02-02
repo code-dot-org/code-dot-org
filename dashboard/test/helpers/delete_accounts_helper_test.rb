@@ -1139,23 +1139,21 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   #
 
   test "clears form_data from pd_teachercon1819_registrations" do
-    registration = create :pd_teachercon1819_registration
-    refute_equal '{}', registration.form_data
+    teacher = create :teacher
+    ActiveRecord::Base.connection.exec_query(
+      <<-SQL
+        INSERT INTO `pd_teachercon1819_registrations` (user_id, form_data, created_at, updated_at)
+        VALUES (#{teacher.id}, '{\"country\": \"USA\"}', '#{Time.now.to_s(:db)}', '#{Time.now.to_s(:db)}')
+    SQL
+    )
 
-    purge_user registration.user
+    registration = get_record_with_sql("form_data", "pd_teachercon1819_registrations", {'user_id' => teacher.id})
+    refute_empty registration["form_data"]
 
-    registration.reload
-    assert_equal '{}', registration.form_data
-  end
+    purge_user teacher
 
-  test "clears user_id from pd_teachercon1819_registrations" do
-    registration = create :pd_teachercon1819_registration
-    refute_nil registration.user_id
-
-    purge_user registration.user
-
-    registration.reload
-    assert_nil registration.user_id
+    registration = get_record_with_sql("form_data", "pd_teachercon1819_registrations", {'user_id' => teacher.id})
+    assert_empty registration["form_data"]
   end
 
   #

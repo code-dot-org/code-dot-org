@@ -35,6 +35,7 @@ class XhrProxyController < ApplicationController
     api.duckduckgo.com
     api.energidataservice.dk
     api.exchangeratesapi.io
+    api.fda.gov
     api.football-data.org
     api.foursquare.com
     api.github.com

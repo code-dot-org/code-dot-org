@@ -39,7 +39,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-09-28 14:32:07 UTC",
+    "serialized_at": "2023-02-01 18:12:11 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -2463,7 +2463,7 @@
       "key": "d71ca7f6-e0f5-496b-b25b-a9ba0f086ee7",
       "position": 7,
       "properties": {
-        "description": "**Group:** Put students into pairs.\n\n**Distribute:** Give a copy of the activity guide and Binary to ASCII Tabkle. Ensure each group has access to the 8-bit binary widget in Code Studio\n\n\n\n#### Pet Records Activity Guide"
+        "description": "**Group:** Put students into pairs.\n\n**Distribute:** Give a copy of the activity guide and Binary to ASCII Table. Ensure each group has access to the 8-bit binary widget in Code Studio\n\n\n\n#### Pet Records Activity Guide"
       },
       "seeding_key": {
         "activity_section.key": "d71ca7f6-e0f5-496b-b25b-a9ba0f086ee7",
