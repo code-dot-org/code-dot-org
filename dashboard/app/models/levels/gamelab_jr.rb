@@ -46,6 +46,10 @@ class GamelabJr < Gamelab
     [['Sprite Lab', 'spritelab'], ['Story', 'story'], ['Science', 'science']]
   end
 
+  def standalone_app_name_or_default
+    return standalone_app_name || 'spritelab'
+  end
+
   def self.create_from_level_builder(params, level_params)
     create!(
       level_params.merge(
