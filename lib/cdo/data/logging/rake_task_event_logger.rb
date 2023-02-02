@@ -84,7 +84,6 @@ class RakeTaskEventLogger
         value: duration_ms.nil? ? 1 : duration_ms,
         dimensions: {name: "Environment",
                      task_name: @rake_task.name,
-                     file_name: __FILE__,
                      pid: Process.pid,
                      invocation_chain: task_chain,
                      duration_ms: duration_ms,
