@@ -94,11 +94,15 @@ class RakeTaskEventLogger
       Cdo::Metrics.push(STUDY_TABLE, metrics)
       ChatClient.log 'Metrics logged', color: 'green'
       ChatClient.log event, color: 'green'
+      ChatClient.log @rake_task.name, color: 'green'
       ChatClient.log (duration_ms.nil? ? 1 : duration_ms), color: 'green'
+
       puts "Metrics logged"
       puts event
+
       puts duration_ms.nil? ? 1 : duration_ms
     rescue => e
+      ChatClient.log 'Exception', color: 'green'
       puts "Exception"
       puts e
       Honeybadger.notify(
